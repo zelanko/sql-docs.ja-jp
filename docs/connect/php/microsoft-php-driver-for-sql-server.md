@@ -11,10 +11,10 @@ ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ee38cc22ec2834060396b696acb900eb8c7f8831
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78866522"
 ---
 # <a name="microsoft-drivers-for-php-for-sql-server"></a>Microsoft SQL Server 用 Drivers for PHP
@@ -24,10 +24,10 @@ ms.locfileid: "78866522"
 Microsoft Drivers for PHP for SQL Server を使用すると、PHP アプリケーション用に SQL Server を統合することができます。 このドライバーは、PHP スクリプト内から SQL Server データの読み取りと書き込みを可能にする PHP 拡張機能であり、 Azure SQL Database 内のデータおよび SQL Server 2005 以降のすべてのエディション (Express Edition を含む) 内のデータにアクセスするためのインターフェイスを提供します。 このドライバーは、PHP ストリームなどの PHP 機能を使用して、ラージ オブジェクトの読み取りと書き込みを行います。  
   
 ## <a name="getting-started"></a>作業の開始  
-* [ステップ 1:PHP 開発用に開発環境を構成する](step-1-configure-development-environment-for-php-development.md)  
-* [手順 2:PHP 開発用のデータベースを作成する](step-2-create-a-sql-database-for-php-development.md)  
-* [ステップ 3:PHP を使用した SQL への接続を概念実証する](step-3-proof-of-concept-connecting-to-sql-using-php.md)  
-* [手順 4:PHP を使用して SQL に弾性的に接続する](step-4-connect-resiliently-to-sql-with-php.md)  
+* [ステップ 1: PHP 開発用に開発環境を構成する](step-1-configure-development-environment-for-php-development.md)  
+* [ステップ 2: PHP 開発用のデータベースを作成する](step-2-create-a-sql-database-for-php-development.md)  
+* [ステップ 3: PHP を使用した SQL への接続を概念実証する](step-3-proof-of-concept-connecting-to-sql-using-php.md)  
+* [ステップ 4: PHP で SQL に弾性的に接続する](step-4-connect-resiliently-to-sql-with-php.md)  
   
 ## <a name="documentation"></a>ドキュメント  
 * [作業の開始](getting-started-with-the-php-sql-driver.md)

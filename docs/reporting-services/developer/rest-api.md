@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/12/2018
 ms.openlocfilehash: 90ccb4084f9dc2a2a2cd1da4f51281df147524c6
-ms.sourcegitcommit: fc99fdd586eabc2d60f33056123398f263d5913d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78937677"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>Reporting Services の REST API による開発
@@ -32,10 +32,10 @@ REST API の要求/応答ペアは、次の 5 つのコンポーネントに分�
 
 * **要求 URI**。`{URI-scheme} :// {URI-host} / {resource-path} ? {query-string}` で構成されます。 要求 URI は要求メッセージ ヘッダーに含まれていますが、ほとんどの言語やフレームワークでは要求メッセージとは別に渡す必要があるため、ここでは独立した項目にしてあります。
 
-    * URI スキーム:要求の送信に使用されるプロトコルを示します。 たとえば、`http` または `https` です。
-    * URI ホスト:`myserver.contoso.com` など、REST サービス エンドポイントがホストされているサーバーのドメイン名または IP アドレスを指定します。
-    * リソース パス:リソースまたはリソース コレクションを指定します。リソースの選択を決定するときにサービスによって使用される複数のセグメントを含むことができます。 たとえば、`CatalogItems(01234567-89ab-cdef-0123-456789abcdef)/Properties` を使用して、CatalogItem の指定したプロパティを取得できます。
-    * クエリ文字列 (省略可能):API のバージョンやリソースの選択条件など、簡単な追加パラメーターを提供します。
+    * URI スキーム: 要求の送信に使用されるプロトコルを示します。 たとえば、`http` または `https` です。
+    * URI ホスト: `myserver.contoso.com` など、REST サービス エンドポイントがホストされているサーバーのドメイン名または IP アドレスを指定します。
+    * リソース パス: リソースまたはリソース コレクションを指定します。リソースの選択を決定するときにサービスによって使用される複数のセグメントを含むことができます。 たとえば、`CatalogItems(01234567-89ab-cdef-0123-456789abcdef)/Properties` を使用して、CatalogItem の指定したプロパティを取得できます。
+    * クエリ文字列 (省略可能): API のバージョンやリソースの選択条件など、簡単な追加パラメーターを提供します。
 
 * HTTP 要求メッセージ ヘッダーのフィールド:
 

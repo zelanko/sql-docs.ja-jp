@@ -11,10 +11,10 @@ ms.assetid: 71ad1932-cab3-4c29-8950-f5e82547d3b5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 118a473e3e1675b81b732eb76f0271bbbe9d2e15
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67936012"
 ---
 # <a name="pdostatementfetchobject"></a>PDOStatement::fetchObject
@@ -30,9 +30,9 @@ mixed PDOStatement::fetchObject([ $class_name[,$ctor_args ]] )
 ```  
   
 #### <a name="parameters"></a>パラメーター  
-$*class_name*: 作成するクラスの名前を指定する文字列 (省略可能)。 既定値は、stdClass です。  
+$*class_name*: 作成するクラスの名前を指定する省略可能な文字列。 既定値は、stdClass です。  
   
-$*ctor_args*: カスタム クラスのコンストラクターの引数と省略可能な配列。  
+$*ctor_args*: カスタム クラスのコンストラクターの引数と省略可能な配列です。  
   
 ## <a name="return-value"></a>戻り値  
 成功した場合、クラスのインスタンスを持つオブジェクトを返します。 プロパティは、列にマップします。 失敗した場合、false を返します。  

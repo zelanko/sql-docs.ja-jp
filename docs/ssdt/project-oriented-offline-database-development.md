@@ -14,10 +14,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 395465b9f07c9927a2a0ed1a277cde9f9e37f587
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75243739"
 ---
 # <a name="project-oriented-offline-database-development"></a>プロジェクト指向のオフライン データベース開発
@@ -31,7 +31,7 @@ SSDT を使用すると、サーバー インスタンスに接続しなくて�
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |---------|---------------|  
 |[データベース プロジェクトへのインポート](../ssdt/import-into-a-database-project.md)|ライブ データベース、.dacpac、またはスクリプトからのオブジェクトのインポートについて説明します。|  
 |[[データベース参照の追加] ダイアログ ボックス](../ssdt/add-database-reference-dialog-box.md)|データベース参照を追加するさまざまな方法について説明します。|  

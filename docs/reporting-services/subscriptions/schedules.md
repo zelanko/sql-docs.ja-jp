@@ -16,10 +16,10 @@ ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e73ce189b38f3610468993999df172d778f30026
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65578092"
 ---
 # <a name="schedules"></a>スケジュール
@@ -34,7 +34,7 @@ ms.locfileid: "65578092"
  共有スケジュールは管理が容易であり、スケジュールされている操作をより柔軟に管理できます。 たとえば、共有スケジュールを一時停止したり再開したりできます。 また、同時に実行される操作が多数スケジュールされていることに気付いた場合は、異なるタイミングで実行される複数の共有スケジュールを作成して、スケジュール情報を調整し、処理負荷をレポート サーバーに対して均等に配分することも可能です。  
   
   
-##  <a name="bkmk_whatyoucando"></a> スケジュールに対して実行できる操作  
+##  <a name="what-you-can-do-with-schedules"></a><a name="bkmk_whatyoucando"></a> スケジュールに対して実行できる操作  
  ネイティブ モードの [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Web ポータルおよび [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] と、SharePoint モードの SharePoint サイト管理ページを使用して、スケジュールの作成と管理を行うことができます。 次のようにすることができます。  
   
 -   標準のサブスクリプションまたはデータ ドリブン サブスクリプションでのレポート配信スケジュール  
@@ -56,7 +56,7 @@ ms.locfileid: "65578092"
 > [!NOTE]  
 >  スケジュール操作は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[SQL Server 2017 の各エディションとサポートされている機能](../../sql-server/editions-and-components-of-sql-server-2017.md)」をご覧ください。  
   
-##  <a name="bkmk_compare"></a> 共有スケジュールとレポート固有スケジュールの比較  
+##  <a name="comparing-shared-and-report-specific-schedules"></a><a name="bkmk_compare"></a> 共有スケジュールとレポート固有スケジュールの比較  
  どちらの種類のスケジュールも同じ出力を返します。  
   
 -   **共有スケジュール** は、すぐに使用できる状態のスケジュール情報を含む、移植可能で多目的に使用できるアイテムです。 共有スケジュールは、システムレベルのアイテムなので、共有スケジュールを作成するにはシステムレベルの権限が必要です。 そのため、通常、レポート サーバー管理者またはコンテンツ管理者がレポート サーバー上で使用可能な共有スケジュールを作成します。 共有スケジュールは、Web ポータルまたは SharePoint サイトの設定を使用して、レポート サーバー上に格納して管理します。  
@@ -71,14 +71,14 @@ ms.locfileid: "65578092"
   
 -   **レポート固有スケジュール** は、各レポート、サブスクリプション、またはレポート実行操作のコンテキスト内で定義され、キャッシュの有効期限やスナップショットの更新を決定します。 これらのスケジュールは、サブスクリプションを定義するとき、またはレポート実行のプロパティを設定するときに、インラインで作成されます。 共有スケジュールで必要な頻度または反復パターンが指定されていない場合に、レポート固有スケジュールを作成することができます。 レポートを実行しないようにするには、レポート固有スケジュールを手動で編集する必要があります。 レポート固有スケジュールは、各ユーザーが作成できます。  
   
-##  <a name="bkmk_configuredatasources"></a> データ ソースの構成  
+##  <a name="configure-the-data-sources"></a><a name="bkmk_configuredatasources"></a> データ ソースの構成  
  レポートのデータ処理またはサブスクリプション処理のスケジュールを設定するには、保存された資格情報または自動レポート処理アカウントが使用されるようにレポートのデータ ソースを構成しておく必要があります。 保存されている資格情報を使用する場合、保存できる資格情報は 1 組のみです。レポートを実行するすべてのユーザーに対してこの資格情報が使用されます。 資格情報には、Windows ユーザー アカウントまたはデータベース ユーザー アカウントを指定できます。  
   
  自動レポート処理アカウントは、レポート サーバーで構成する特別な目的のアカウントです。 このアカウントは、スケジュール設定された操作が外部のファイルや処理を必要とする場合に、リモート コンピューターに接続するために使用されます。 このアカウントを構成すれば、レポートにデータを提供する外部データ ソースへの接続に使用できます。  
   
  保存されている資格情報または自動レポート処理アカウントを指定するには、レポートのデータ ソース プロパティを編集します。 共有データ ソースがレポートに使用されている場合は、共有データ ソースを編集します。  
   
-##  <a name="bkmk_credentials"></a> 資格情報と処理アカウントの保存  
+##  <a name="store-credentials-and-processing-accounts"></a><a name="bkmk_credentials"></a> 資格情報と処理アカウントの保存  
  スケジュールを使った作業を行う方法は、ロールの割り当ての一部であるタスクによって異なります。 既定のロールを使用する場合、スケジュールを作成および管理できるユーザーはコンテンツ マネージャーとシステム管理者です。 カスタム ロールの割り当てを使用する場合、そのロールの割り当てにはスケジュールが設定された操作をサポートするタスクが含まれている必要があります。  
   
 |目的|必要なタスク|ネイティブ モードの定義済みロール|SharePoint モードのグループ|  
@@ -90,7 +90,7 @@ ms.locfileid: "65578092"
   
  ネイティブ モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]のセキュリティの詳細については、「 [定義済みロール](../../reporting-services/security/role-definitions-predefined-roles.md)」、「 [ネイティブ モードのレポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md) 」、および「 [タスクと権限](../../reporting-services/security/tasks-and-permissions.md)」を参照してください。 SharePoint モードについては、「 [Reporting Services のロールおよびタスクと SharePoint のグループおよび権限の比較](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)」を参照してください。  
   
-##  <a name="bkmk_how_scheduling_works"></a> スケジュール処理および配信処理のしくみ  
+##  <a name="how-scheduling-and-delivery-processing-works"></a><a name="bkmk_how_scheduling_works"></a> スケジュール処理および配信処理のしくみ  
  スケジュールおよび配信のプロセッサは、次の機能を提供します。  
   
 -   レポート サーバー データベース内のイベントおよび通知のキューを管理します。 スケールアウト配置では、キューは配置しているすべてのレポート サーバーで共有されます。  
@@ -115,19 +115,19 @@ ms.locfileid: "65578092"
   
  Reporting Services では、すべてのスケジュールされた操作のイベント キューを管理します。 定期的にキューをポーリングし、新しいイベントがないかどうかを確認します。 既定では、10 秒間隔でキューがスキャンされます。 間隔を変更するには、RSReportServer.config ファイルで **PollingInterval**、 **IsNotificationService**、および **IsEventService** の構成設定を変更します。 また、SharePoint モードでは、これらの設定に RSreporserver.config を使用するため、値はすべての [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションに適用されます。 詳細については、「 [RsReportServer.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)」を参照してください。  
   
-##  <a name="bkmk_serverdependencies"></a> サーバーの依存関係  
+##  <a name="server-dependencies"></a><a name="bkmk_serverdependencies"></a> サーバーの依存関係  
  スケジュールおよび配信のプロセッサでは、レポート サーバー サービスと SQL Server エージェントが開始されている必要があります。 ポリシー ベースの管理の **[Reporting Services のセキュリティ構成]** ファセットの **ScheduleEventsAndReportDeliveryEnabled** プロパティにより、スケジュールおよび配信処理機能を有効にする必要があります。 スケジュールされた操作を実行するには、SQL Server エージェントおよびレポート サーバー サービスの両方が実行されている必要があります。  
   
 > [!NOTE]  
 >  **[Reporting Services のセキュリティ構成]** ファセットを使用して、一時的または永続的に、スケジュールされた操作を停止させることができます。 カスタム配信拡張機能を作成して配置することはできますが、それだけではスケジュールおよび配信のプロセッサを拡張できません。 イベントおよび通知の管理方法を変更することはできません。 機能を無効にするには、「 **Turn Reporting Services Features On or Off** 」の「 [定期的なイベントおよび配信](../../reporting-services/report-server/turn-reporting-services-features-on-or-off.md)」を参照してください。  
   
-###  <a name="bkmk_stoppingagent"></a> SQL Server エージェントの停止の影響  
+###  <a name="effects-of-stopping-the-sql-server-agent"></a><a name="bkmk_stoppingagent"></a> SQL Server エージェントの停止の影響  
  スケジュールされたレポート処理では、既定で SQL Server エージェントを使用します。 サービスを停止すると、 <xref:ReportService2010.ReportingService2010.FireEvent%2A> メソッドによりプログラムで追加しない限り、新しい処理要求はキューに追加されません。 サービスを再開すると、レポート処理要求を作成するジョブが再開されます。 SQL Server エージェントがオフラインの間、レポート サーバーは、過去に発生する可能性のあったレポート処理ジョブを再作成しません。 SQL Server エージェントを 1 週間停止する場合、その週のすべてのスケジュールされた操作は失われます。  
   
 > [!NOTE]  
 >  SQL Server エージェントが Reporting Services に提供する機能を、 <xref:ReportService2010.ReportingService2010.FireEvent%2A> メソッドを使用するカスタム コードに置き換え、キューにスケジュール イベントを追加することができます。  
   
-###  <a name="bkmk_stoppingservice"></a> レポート サーバー サービスの停止の影響  
+###  <a name="effects-of-stopping-the-report-server-service"></a><a name="bkmk_stoppingservice"></a> レポート サーバー サービスの停止の影響  
  レポート サーバー サービスを停止しても、SQL Server エージェントは引き続きレポート処理要求をキューに追加します。 SQL Server エージェントからの状態情報は、ジョブが成功したことを示します。 ただし、レポート サーバー サービスが停止しているため、実際にはレポート処理は実行されません。 レポート サーバー サービスを再起動するまで、要求はキューに蓄積され続けます。 レポート サーバー サービスを再起動すると、キューにあるすべてのレポート処理要求が順番に処理されます。  
   
 ## <a name="see-also"></a>参照  

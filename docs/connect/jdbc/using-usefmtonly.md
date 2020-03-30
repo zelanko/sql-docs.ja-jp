@@ -15,10 +15,10 @@ author: rene-ye
 ms.author: v-reye
 manager: kenvh
 ms.openlocfilehash: 6877a6421622ab52a92b89502c68f47c4c315d93
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69025503"
 ---
 # <a name="retrieving-parametermetadata-via-usefmtonly"></a>UseFmtOnly を使用した ParameterMetaData の取得
@@ -34,7 +34,7 @@ ms.locfileid: "69025503"
   
 -   ビューに対して 
   
-  これらのユース ケースに対する提案ソリューションは、ユーザーの SQL クエリでパラメーターとテーブル ターゲットを解析し、`FMTONLY` が有効になっている `SELECT` クエリを実行することです。 次のスニペットを使用すると、機能を視覚化できます。
+  これらのユース ケースに対する提案ソリューションは、ユーザーの SQL クエリでパラメーターとテーブル ターゲットを解析し、`SELECT` が有効になっている `FMTONLY` クエリを実行することです。 次のスニペットを使用すると、機能を視覚化できます。
   
 ```sql
 --create a normal table 'Foo' and a temporary table 'Bar'
@@ -53,7 +53,7 @@ SET FMTONLY OFF;
 ```
  
 ## <a name="turning-the-feature-onoff"></a>機能のオン/オフの切り替え 
- **useFmtOnly** 機能は既定ではオフになっています。 ユーザーは、`useFmtOnly=true` を指定すると、接続文字列を使用してこの機能を有効にできます  (例: `jdbc:sqlserver://<server>:<port>;databaseName=<databaseName>;user=<user>;password=<password>;useFmtOnly=true;`)。
+ **useFmtOnly** 機能は既定ではオフになっています。 ユーザーは、`useFmtOnly=true` を指定すると、接続文字列を使用してこの機能を有効にできます (例: `jdbc:sqlserver://<server>:<port>;databaseName=<databaseName>;user=<user>;password=<password>;useFmtOnly=true;`)。
  
  または、`SQLServerDataSource` から機能を使用することができます。
  ```java

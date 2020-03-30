@@ -18,10 +18,10 @@ ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
 ms.openlocfilehash: faebe8539698fbe605035dff737065864c70929b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75241841"
 ---
 # <a name="understand-database-diagram-ownership-visual-database-tools"></a>データベース ダイアグラムの所有権について (Visual Database Tools)
@@ -40,5 +40,5 @@ ms.locfileid: "75241841"
   
 ## <a name="see-also"></a>参照
 
-[データベース ダイアグラムを操作する](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
-[データベース ダイアグラム デザイナーを設定する](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)
+[データベース ダイアグラムの操作](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+[データベース ダイアグラム デザイナーの設定](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)

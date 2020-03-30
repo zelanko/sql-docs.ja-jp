@@ -17,10 +17,10 @@ ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3c84997d8ec11a4eb620daf7bf34af7adf3e8de1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71293237"
 ---
 # <a name="comparing-string-data"></a>比較、文字列データ
@@ -71,7 +71,7 @@ ms.locfileid: "71293237"
   
  次の表では、比較オプションと並べ替えスタイルについて説明します。  
   
-|比較オプション|[説明]|  
+|比較オプション|説明|  
 |-----------------------|-----------------|  
 |大文字と小文字を区別しない|比較時に、大文字と小文字を区別するかどうかを示します。 このオプションを設定した場合、文字列比較で大文字と小文字は区別されません。 たとえば、"ABC" は "abc" と同一になります。|  
 |カタカナを区別しない|日本語の比較で、2 種類のかな文字である、ひらがなとカタカナを区別するかどうかを指定します。 このオプションを設定した場合、文字列比較でひらがなとカタカナは区別されません。|  

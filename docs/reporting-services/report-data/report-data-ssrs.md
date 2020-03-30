@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 11/18/2019
 ms.openlocfilehash: 6317e8161871d7094486ed8b6178847549d8ab96
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74190729"
 ---
 # <a name="intro-to-report-data-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) でのレポート データの概要
@@ -39,7 +39,7 @@ ms.locfileid: "74190729"
 6.  **外部データ ソース** リレーショナル データベース、多次元データベース、SharePoint リスト、または Web サービスからデータを取得します。  
 
 
-##  <a name="BkMk_ReportDataTerms"></a> 用語の定義  
+##  <a name="defining-terms"></a><a name="BkMk_ReportDataTerms"></a> 用語の定義  
   
 - **データ接続:** " *データ ソース*" とも呼ばれます。 データ接続には、名前と、接続の種類に依存する接続のプロパティが含まれます。 仕様上、データ接続に資格情報は含まれません。 データ接続では、どのデータを外部データ ソースから取得するかは指定されません。 これを行うには、データセットを作成するときにクエリを指定します。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "74190729"
   
 - **資格情報:** 資格情報は、外部データにアクセスするために指定する必要がある認証情報です。  
   
-##  <a name="BkMk_ReportDataTips"></a> レポート データの指定に関するヒント
+##  <a name="tips-for-specifying-report-data"></a><a name="BkMk_ReportDataTips"></a> レポート データの指定に関するヒント
 
  次の情報を使用して、レポート データの戦略を計画します。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "74190729"
 |||  
 |-|-|  
 |**一般的なタスク**|**リンク**|  
-|データ接続の作成|[データ接続文字列を作成する - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|  
+|データ接続の作成|[データ接続文字列の作成 - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|  
 |データセットとクエリの作成|[レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|  
 |パブリッシュ後のデータ ソースの管理|[レポート データ ソースを管理する](../../reporting-services/report-data/manage-report-data-sources.md)|  
 |パブリッシュ後の共有データセットの管理|[共有データセットを管理する](../../reporting-services/report-data/manage-shared-datasets.md)|  

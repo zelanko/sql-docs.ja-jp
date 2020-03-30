@@ -9,10 +9,10 @@ ms.assetid: a705d103-85b1-49b5-b27f-332b1040d029
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5217684ab98bd70a996f0a8a0bb50170daf57bf0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65573876"
 ---
 # <a name="troubleshoot--reporting-services-report-issues"></a>Reporting Services レポートの問題のトラブルシューティング
@@ -34,7 +34,7 @@ ms.locfileid: "65573876"
   
 呼び出し履歴を表示するには、レポート サーバーにローカル管理者の資格情報を使ってログオンし、レポート マネージャーのページを右クリックして **[ソースの表示]** をクリックします。 呼び出し履歴には、エラー メッセージの詳細なコンテキストが示されます。  
   
-## <a name="use-includessmanstudiofullincludesssmanstudiofullmd-to-verify-queries-and-credentials"></a>[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] を使用してクエリと資格情報を検証する  
+## <a name="use-ssmanstudiofull-to-verify-queries-and-credentials"></a>[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] を使用してクエリと資格情報を検証する  
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] を使用すると、複雑なクエリをレポートに含める前に検証できます。   
   
 詳細については、「 [データベース エンジン クエリ エディター](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md) 」と「 [オブジェクト エクスプローラーを使用したオブジェクトの管理](~/ssms/object/manage-objects-by-using-object-explorer.md)」を参照してください。  

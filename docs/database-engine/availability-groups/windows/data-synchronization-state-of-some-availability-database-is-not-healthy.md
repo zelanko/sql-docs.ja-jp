@@ -15,10 +15,10 @@ ms.assetid: 89f95d15-33c6-4768-bccd-9dbf8c4f49a9
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b2c42ee67fe0c01570eadd6e3aa1d23019672172
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67968334"
 ---
 # <a name="data-synchronization-state-of-some-availability-database-is-not-healthy"></a>一部の可用性データベースのデータ同期状態が正常ではない
@@ -33,7 +33,7 @@ ms.locfileid: "67968334"
 |**カテゴリ**|**警告**|  
 |**ファセット**|可用性レプリカ|  
   
-## <a name="description"></a>[説明]  
+## <a name="description"></a>説明  
  このポリシーは、可用性データベース ("データベース レプリカ" とも呼ばれます) のデータの同期状態をチェックします。 データの同期状態が NOT SYNCHRONIZING である (同期コミット データベース レプリカでは、状態が SYNCHRONIZED 以外である) 場合、ポリシーは異常な状態です。  
   
 > [!NOTE]  

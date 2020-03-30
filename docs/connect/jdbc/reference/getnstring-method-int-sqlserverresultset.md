@@ -11,10 +11,10 @@ ms.assetid: c8cc4636-01e9-4dc8-a40c-728337ca08f5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 336192ffefd750ba3e817ba1b961fd3726d9a6e6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67981412"
 ---
 # <a name="getnstring-method-int-sqlserverresultset"></a>getNString (int) メソッド (SQLServerResultSet)
@@ -43,7 +43,7 @@ public java.lang.String getNString(int columnIndex)
 ## <a name="remarks"></a>解説  
  この getNString メソッドは、java.sql.SQLServerResultSet インターフェイスの getNString メソッドで規定されています。  
   
- このメソッドは、[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある**nvarchar**、**nchar**、**nvarchar(max)** 、**ntext**、または **xml** 列の値を取得するために使用できます。 このメソッドを使用して他のデータ型の値を取得しようとすると、例外がスローされます。  
+ このメソッドは、**SQLServerResultSet** オブジェクトの現在の行にある**nvarchar**、**nchar**、**nvarchar(max)** 、**ntext**、または [xml](../../../connect/jdbc/reference/sqlserverresultset-class.md) 列の値を取得するために使用できます。 このメソッドを使用して他のデータ型の値を取得しようとすると、例外がスローされます。  
   
 ## <a name="see-also"></a>参照  
  [getNString メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getnstring-method-sqlserverresultset.md)   

@@ -17,10 +17,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6c05f4e2739b2683ecb74a1aa65e98de85e36bb4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75246342"
 ---
 # <a name="delete-a-sql-server-agent-proxy"></a>Delete a SQL Server Agent Proxy
@@ -31,9 +31,9 @@ ms.locfileid: "75246342"
 
 このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で [!INCLUDE[tsql](../../includes/tsql-md.md)]エージェント プロキシ アカウントを削除する方法について説明します。  
   
-## <a name="BeforeYouBegin"></a>はじめに  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>はじめに  
   
-### <a name="Restrictions"></a>制限事項と制約事項  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>制限事項と制約事項  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのプロキシ アカウントを削除する場合は、そのプロキシがアクティブなジョブ ステップを参照していないことを確認してください。 プロキシを参照しているジョブ ステップを確認するには、プロキシを右クリックし、 **[プロパティ]** をクリックします。[_proxy\_name_ **プロキシ アカウントのプロパティ]** ダイアログ ボックスで、 **[参照]** ページをクリックします。 プロキシを削除すると、そのプロキシを使用するすべてのジョブ ステップを再割り当てするためのオプションが **[オブジェクトの削除]** ダイアログ ボックスに表示されます。  
   
@@ -43,12 +43,12 @@ ms.locfileid: "75246342"
   
 -   ユーザーのログインにプロキシへのアクセス許可がある場合、またはプロキシへのアクセス許可のあるロールにユーザーが属している場合、このユーザーはジョブ ステップでプロキシを使用できます。  
   
-### <a name="Security"></a>セキュリティ  
+### <a name="security"></a><a name="Security"></a>セキュリティ  
   
-#### <a name="Permissions"></a>アクセス許可  
+#### <a name="permissions"></a><a name="Permissions"></a>アクセス許可  
 プロキシ アカウントを作成、変更、または削除できるのは、 **sysadmin** 固定サーバー ロールのメンバーだけです。  
   
-## <a name="SSMSProcedure"></a>SQL Server Management Studio の使用  
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>SQL Server Management Studio の使用  
   
 #### <a name="to-delete-a-sql-server-agent-proxy-account"></a>SQL Server エージェント プロキシ アカウントを削除するには  
   
@@ -66,7 +66,7 @@ ms.locfileid: "75246342"
   
 7.  **[OK]** をクリックします。  
   
-## <a name="TsqlProcedure"></a>Transact-SQL の使用  
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a>Transact-SQL の使用  
   
 #### <a name="to-delete-a-sql-server-agent-proxy-account"></a>SQL Server エージェント プロキシ アカウントを削除するには  
   

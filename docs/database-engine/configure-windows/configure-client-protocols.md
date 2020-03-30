@@ -22,10 +22,10 @@ ms.assetid: 3dfa2702-ba65-43b4-a777-6727846e133a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2fa898451638503b2f91c97026158e7331a25e90
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68012811"
 ---
 # <a name="configure-client-protocols"></a>クライアント プロトコルの構成
@@ -38,9 +38,9 @@ ms.locfileid: "68012811"
   
 -   sqlcmd.exe など、一部のクライアント アプリケーションでは、接続文字列の一部としてプロトコルを指定できます。 詳細については、「[sqlcmd によるデータベース エンジンへの接続](../../relational-databases/scripting/sqlcmd-connect-to-the-database-engine.md)」を参照してください。  
   
-##  <a name="SSMSProcedure"></a> SQL Server 構成マネージャーの使用  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> SQL Server 構成マネージャーの使用  
   
-###  <a name="EnableDisable"></a> クライアント プロトコルを有効または無効にするには  
+###  <a name="to-enable-or-disable-a-client-protocol"></a><a name="EnableDisable"></a> クライアント プロトコルを有効または無効にするには  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーで、 **[SQL Server Native Client の構成]** を展開し、 **[クライアント プロトコル]** を右クリックして、 **[プロパティ]** をクリックします。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68012811"
   
 3.  プロトコルを無効にするには、 **[有効なプロトコル]** ボックスでプロトコルをクリックし、 **[無効化]** をクリックします。  
   
-###  <a name="ChangeDefault"></a> 既定のプロトコル、またはクライアント コンピューターのプロトコルの順序を変更するには  
+###  <a name="to-change-the-default-protocol-or-the-protocol-order-for-client-computers"></a><a name="ChangeDefault"></a> 既定のプロトコル、またはクライアント コンピューターのプロトコルの順序を変更するには  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーで、 **[SQL Server Native Client の構成]** を展開し、 **[クライアント プロトコル]** を右クリックして、 **[プロパティ]** をクリックします。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "68012811"
     > [!IMPORTANT]  
     >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーにより、サーバーの別名の構成や既定のクライアント ネットワーク ライブラリのレジストリ エントリが作成されます。 ただし、このアプリケーションでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアント ネットワーク ライブラリもネットワーク プロトコルもインストールされません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアント ネットワーク ライブラリは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ中にインストールされます。また、ネットワーク プロトコルは、Microsoft Windows セットアップの一部として (または**コントロール パネル**の **[ネットワーク接続]** を使用して) インストールされます。 特定のネットワーク プロトコルは、Windows のセットアップ時にインストールされないことがあります。 そのようなネットワーク プロトコルのインストールの詳細については、製造元のマニュアルを参照してください。  
   
-###  <a name="Configure"></a> TCP/IP を使用するようにクライアントを構成するには  
+###  <a name="to-configure-a-client-to-use-tcpip"></a><a name="Configure"></a> TCP/IP を使用するようにクライアントを構成するには  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーで、 **[SQL Server Native Client の構成]** を展開し、 **[クライアント プロトコル]** を右クリックして、 **[プロパティ]** をクリックします。  
   

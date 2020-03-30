@@ -11,24 +11,23 @@ helpviewer_keywords:
 ms.assetid: 9a4aabe5-dbdc-4884-b999-1200983fee47
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5442980dd2f67cf72e301a82ae3730f90a173116
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 10633ef2ed778a7b7c3d5bcd64ee006cefe24752
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "70911329"
 ---
 # <a name="pdf-device-information-settings"></a>PDF デバイス情報の設定
   次の表は、PDF 形式のレポートを表示するデバイス情報の設定を示しています。  
   
-|設定|Value|  
+|設定|値|  
 |-------------|-----------|  
 | **AccessiblePDF** | サイズは大きいが、読み上げと移動のためのスクリーン リーダーやその他の支援技術で使いやすい、アクセシブル/タグ付き PDF をレンダリングするかどうかを示します。 既定値は **false** です。 [Power BI Report Server (2018 年 3 月) 以降で使用可能です] |
 |**[列]**|レポートに設定する列の数。 この値により、レポートの元の設定はオーバーライドされます。|  
 |**ColumnSpacing**|レポートに設定する列の間隔。 この値により、レポートの元の設定はオーバーライドされます。|  
 |**DpiX**|出力デバイスの x 方向の解像度。|  
 |**DpiY**|出力デバイスの y 方向の解像度。|  
-|**EmbedFonts**|PDF ファイルにフォントを埋め込むかどうかを示します。サイズは大きくなりますが、レポートのフォントはすべてのクライアントで正しく表示されます。 値 **None** を指定すると、フォントの埋め込みが無効になります。|  
 |**EndPage**|表示するレポートの最後のページ。 既定値は **StartPage**の値です。|  
 |**HumanReadablePDF**|サイズは大きいが、プレーンテキスト エディターで人間が読みやすい、未圧縮の PDF ファイルをレンダリングするかどうかを示します。 既定値は **false**です。|  
 |**MarginBottom**|レポートに設定する下余白の値 (インチ単位)。 整数または小数の値の後に "in" を付ける必要があります (たとえば、1in)。 この値により、レポートの元の設定はオーバーライドされます。|  

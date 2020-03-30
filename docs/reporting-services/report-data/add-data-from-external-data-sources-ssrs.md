@@ -10,10 +10,10 @@ reviewer: ''
 ms.custom: ''
 ms.date: 03/17/2017
 ms.openlocfilehash: c6d5ebdcc4866c30b9fda3967304cda747a13a83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081838"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>外部データ ソースのデータを追加する (SSRS)
@@ -21,7 +21,7 @@ ms.locfileid: "77081838"
   
  データ ソースの種類の詳細については、「 [トピックの内容](#InThisSection)」を参照してください。  
   
-##  <a name="DataAccess"></a> データ アクセス テクノロジについて  
+##  <a name="understanding-data-access-technology"></a><a name="DataAccess"></a> データ アクセス テクノロジについて  
  レポート データセットのデータを取得するには、複数のレイヤーにわたるデータ アクセス ソフトウェアが必要です。 以下に、データ アクセス テクノロジによるレポートのしくみを簡単に説明します。  
   
 -   **アプリケーションとユーザー インターフェイス** データ ソースの作成、共有データ ソースへの参照の追加、共有データセットの追加、依存先のデータ ソースおよびデータセットを含むレポート パーツの追加などに使用する、レポート ビルダー アプリケーションです。  
@@ -41,7 +41,7 @@ ms.locfileid: "77081838"
 > [!NOTE]  
 >  レポート サーバーに接続していないときは、レポート ビルダーと共にインストールされたデータ拡張機能を選択できます。 データには、使用しているコンピューターの資格情報を使用して、シングル ユーザーとしてアクセスします。 レポート サーバーに接続しているときは、レポート サーバーにインストールされているデータ拡張機能を選択できます。 データには、レポートを実行する複数のユーザーの 1 人としてアクセスし、レポート サーバー上の資格情報を使用します。 詳細については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](specify-credential-and-connection-information-for-report-data-sources.md)」をご覧ください。  
   
-##  <a name="ReportData"></a> レポート データについて  
+##  <a name="understanding-report-data"></a><a name="ReportData"></a> レポート データについて  
  簡単に言うと、レポートでは、レポート データセットのデータがレポート ページのデータ領域に表示されます。このデータ領域は、単一のテーブル、グラフ、マトリックス、またはその他の種類のレポート データ領域です。 レポート データセットのデータは、外部データ ソースに読み取り専用アクセスを実行する単一のクエリ コマンドから返された最初の結果セットから取得されます。 各データ領域は、データセットのすべてのデータを表示するために、必要に応じて拡張されます。  
   
  データセットのデータは、必然的に表形式になります。 列は、データセット クエリのフィールドです。 行は、結果セットの行です。 次の一般化されたデータの種類をレポートで使用できます。  
@@ -59,11 +59,11 @@ ms.locfileid: "77081838"
 -   再帰型データはサポートされます。 再帰型データ階層を含む結果セットは、階層構造に関するすべての情報を四角形の結果セット内に含みます。 たとえば、会社内の上司/部下構造は、2 つの列 (従業員とマネージャー) を含むテーブルで表すことができます。 各マネージャーは、マネージャーがいる従業員でもあります。 最上位のマネージャーは、通常、その従業員にマネージャーがいないことを示す NULL または他の識別子を含みます。  
   
   
-##  <a name="DataTypes"></a> データ型の処理  
+##  <a name="working-with-data-types"></a><a name="DataTypes"></a> データ型の処理  
  データセットを作成すると、フィールドのデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]の共通言語ランタイム (CLR) データ型のサブセットにマップされます。 明示的にマップできないデータ型は、文字列として返されます。 フィールドのデータ型の操作の詳細については、「 [データセット フィールド コレクション &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)」を参照してください。 パラメーターを作成する場合、データ型は、サポートされているレポート定義のデータ型であることが必要です。 データ プロバイダーからレポート パラメーターへデータ型をマップする方法の詳細については、「[式で使用されるデータ型 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)」を参照してください。  
   
   
-##  <a name="HowTo"></a> 操作方法に関するトピック  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> 操作方法に関するトピック  
  データ接続、データ ソース、およびデータセットを操作する手順について説明します。  
   
  [データ接続を追加および確認する (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
@@ -73,7 +73,7 @@ ms.locfileid: "77081838"
  [データセットへのフィルターの追加 (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
-##  <a name="InThisSection"></a> トピックの内容  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> トピックの内容  
  次のトピックでは、各組み込みデータ拡張機能について説明します。  
   
 |トピック|データ ソースの種類|  
@@ -90,14 +90,14 @@ ms.locfileid: "77081838"
 |[ODBC の接続の種類 &#40;SSRS&#41;](../../reporting-services/report-data/odbc-connection-type-ssrs.md)|ODBC|  
 |[XML の接続の種類 &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)|XML|  
   
-##  <a name="Related"></a> 関連項目
+##  <a name="related-sections"></a><a name="Related"></a> 関連項目
 
  次に示すセクションでは、レポート データの概念が詳細に説明されているほか、データに関連するレポートのパーツを定義し、カスタマイズし、使用する方法が説明されています。  
   
 |トピック|説明|  
 |-----------|-----------------|  
 |[レポート データセット (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)|レポートのデータへのアクセスの概要について説明します。|  
-|[データ接続文字列を作成する - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|データ接続とデータ ソースについて説明します。|  
+|[データ接続文字列の作成 - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|データ接続とデータ ソースについて説明します。|  
 |[レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|埋め込みデータセットと共有データセットについて説明します。|  
 |[データセット フィールド コレクション (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)|クエリによって生成されるデータセット フィールド コレクションについて説明します。|  
 |[Reporting Services でサポートされるデータ ソース (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)|各データ拡張機能のプラットフォームおよびバージョン サポートに関する詳細な情報です。|  

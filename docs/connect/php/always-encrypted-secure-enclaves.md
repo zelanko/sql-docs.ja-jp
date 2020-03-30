@@ -11,10 +11,10 @@ ms.author: v-dapugl
 author: david-puglielli
 manager: v-mabarw
 ms.openlocfilehash: 796a77f3be0e1d15609f91ee1c36c2769a541cc5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76941085"
 ---
 # <a name="using-always-encrypted-with-secure-enclaves-with-the-php-drivers-for-sql-server"></a>セキュリティで保護されたエンクレーブが設定された Always Encrypted を SQL Server 用 PHP ドライバーと共に使用する
@@ -46,9 +46,9 @@ ColumnEncryption=VBS-HGS,http://attestationserver.mydomain/Attestation
 
 - `ALTER TABLE` を使用してテーブルを暗号化する場合、`ALTER TABLE` の呼び出しごとに 1 つの列しか暗号化できないため、複数の列を暗号化するには複数回の呼び出しが必要になります。
 - char 型と nchar 型を比較する場合にパラメーターとして比較のしきい値を渡すときは、対応する `SQLSRV_SQLTYPE_*` 内に列幅を指定する必要があります。そうしないと、エラー `HY104`、`Invalid precision value` が返されます。
-- パターン マッチングでは、`COLLATE` 句を使用して、照合順序が `Latin1_General_BIN2` として指定される必要があります。
-- char 型と nchar 型では文字列の末尾が空白で埋められるので、char 型と nchar 型を照合するためにパターン マッチングの文字列をパラメーターとして渡すときは、`sqlsrv_query` または `sqlsrv_prepare` に渡される `SQLSRV_SQLTYPE_*` には、列のサイズではなく、照合される文字列の長さを指定する必要があります。 たとえば、文字列 `%abc%` を char(10) 列に対して照合する場合は、`SQLSRV_SQLTYPE_CHAR(5)` を指定します。 代わりに `SQLSRV_SQLTYPE_CHAR(10)` を指定すると、クエリでは `%abc%     ` (5 つのスペースが追加されている状態) と照合して、5 個未満のスペースが追加されている列のデータはすべて、一致しなくなります (つまり、`abcdef` には 4つのスペースが埋め込まれているため、`%abc%` とは一致しません)。 Unicode 文字列の場合は、`mb_strlen` 関数または `iconv_strlen` 関数を使用して、文字数を取得します。
-- PDO インターフェイスでは、パラメーターの長さを指定することはできません。 代わりに、`PDOStatement::bindParam` に長さ 0 または `null` を指定します。 長さに明示的に別の数値が設定されている場合、パラメーターは出力パラメーターとして処理されます。
+- パターン マッチングでは、`Latin1_General_BIN2` 句を使用して、照合順序が `COLLATE` として指定される必要があります。
+- char 型と nchar 型では文字列の末尾が空白で埋められるので、char 型と nchar 型を照合するためにパターン マッチングの文字列をパラメーターとして渡すときは、`SQLSRV_SQLTYPE_*` または `sqlsrv_query` に渡される `sqlsrv_prepare` には、列のサイズではなく、照合される文字列の長さを指定する必要があります。 たとえば、文字列 `%abc%` を char(10) 列に対して照合する場合は、`SQLSRV_SQLTYPE_CHAR(5)` を指定します。 代わりに `SQLSRV_SQLTYPE_CHAR(10)` を指定すると、クエリでは `%abc%     ` (5 つのスペースが追加されている状態) と照合して、5 個未満のスペースが追加されている列のデータはすべて、一致しなくなります (つまり、`abcdef` には 4つのスペースが埋め込まれているため、`%abc%` とは一致しません)。 Unicode 文字列の場合は、`mb_strlen` 関数または `iconv_strlen` 関数を使用して、文字数を取得します。
+- PDO インターフェイスでは、パラメーターの長さを指定することはできません。 代わりに、`null` に長さ 0 または `PDOStatement::bindParam` を指定します。 長さに明示的に別の数値が設定されている場合、パラメーターは出力パラメーターとして処理されます。
 - Always Encrypted での文字列以外の型に対しては、パターン マッチングは機能しません。
 - わかりやすくするために、エラー チェックは除外されています。 
 

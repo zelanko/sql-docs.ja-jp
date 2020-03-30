@@ -27,10 +27,10 @@ ms.assetid: 2c4f3fc8-ff2c-4790-8b74-e7e8ef58f9a6
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 7dc31f0a7fde3e4ff73dbf6d1a927275a68f65d3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67941662"
 ---
 # <a name="set-showplan_text-transact-sql"></a>SET SHOWPLAN_TEXT (Transact-SQL)
@@ -58,7 +58,7 @@ SET SHOWPLAN_TEXT { ON | OFF }
   
  SET SHOWPLAN_TEXT では情報が行セットとして返されます。これは階層構造になっており、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ プロセッサで各ステートメントが実行されるときのステップを表しています。 出力結果には、ステートメントごとに、ステートメントのテキストを示す 1 行と、実行ステップの詳細を示す複数行が含まれます。 次の表に、出力に含まれる列を示します。  
   
-|列名|[説明]|  
+|列名|説明|  
 |-----------------|-----------------|  
 |**StmtText**|PLAN_ROW 型でない行の場合、この列には [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのテキストが含まれます。 PLAN_ROW 型の行の場合、この列には操作の説明が含まれます。 またこの列には物理操作と、必要に応じて論理操作が含まれます。 場合によっては、この列の後に説明が含まれます。説明が後に続くかどうかは、物理操作によって決まります。 物理操作の詳細については、「**SET SHOWPLAN_ALL &#40;Transact-SQL&#41;** 」の「[Argument](../../t-sql/statements/set-showplan-all-transact-sql.md)」列を参照してください。|  
   

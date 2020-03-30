@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 5e51dddb7635ba0f50dfdd7566722b170be9f48a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242683"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>チュートリアル: 配置計画を分析するためのデータベース プロジェクトの配置の拡張
@@ -41,7 +41,7 @@ ms.locfileid: "75242683"
 > [!NOTE]  
 > このチュートリアルは、既に SSDT の SQL 機能を使い慣れているユーザーを対象としています。 また、クラス ライブラリの作成方法、コード エディターを使用してクラスにコードを追加する方法など、Visual Studio の基本的な概念を理解している必要があります。  
   
-## <a name="CreateDeploymentContributor"></a>配置コントリビューターの作成  
+## <a name="create-a-deployment-contributor"></a><a name="CreateDeploymentContributor"></a>配置コントリビューターの作成  
 配置コントリビューターを作成するには、次のタスクを実行する必要があります。  
   
 -   クラス ライブラリ プロジェクトを作成し、必要な参照を追加する。  
@@ -554,7 +554,7 @@ ms.locfileid: "75242683"
   
 次に、アセンブリをインストールし、SQL プロジェクトをビルドして配置するときに読み込まれるようにします。  
   
-## <a name="InstallDeploymentContributor"></a>配置コントリビューターのインストール  
+## <a name="install-a-deployment-contributor"></a><a name="InstallDeploymentContributor"></a>配置コントリビューターのインストール  
 配置コントリビューターをインストールするには、アセンブリおよび関連付けられた .pdb ファイルを Extensions フォルダーにコピーする必要があります。  
   
 #### <a name="to-install-the-mydeploymentcontributor-assembly"></a>MyDeploymentContributor アセンブリをインストールするには  
@@ -563,7 +563,7 @@ ms.locfileid: "75242683"
   
 -   **MyDeploymentContributor.dll** アセンブリ ファイルを出力ディレクトリから %Program Files%\Microsoft SQL Server\110\DAC\Bin\Extensions ディレクトリにコピーします。 既定では、コンパイル済みの .dll ファイルのパスは YourSolutionPath\YourProjectPath\bin\Debug または YourSolutionPath\YourProjectPath\bin\Release です。  
   
-## <a name="TestDeploymentContributor"></a>配置コントリビューターのテスト  
+## <a name="test-your-deployment-contributor"></a><a name="TestDeploymentContributor"></a>配置コントリビューターのテスト  
 配置コントリビューターをテストするには、次のタスクを実行する必要があります。  
   
 -   配置する予定の .sqlproj ファイルにプロパティを追加する。  

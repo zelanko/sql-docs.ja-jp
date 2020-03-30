@@ -9,10 +9,10 @@ ms.assetid: 1fe86481-9c41-4535-a4b7-c7c4d780cab6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a06344a119dfba635a07d0050a61f561065a2984
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571195"
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>レポート ビルダーのレポート パーツおよびデータセット
@@ -23,14 +23,14 @@ ms.locfileid: "65571195"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Adding"></a> 依存データセットを持つレポート パーツのレポートへの追加  
+##  <a name="adding-a-report-part-with-dependent-datasets-to-your-report"></a><a name="Adding"></a> 依存データセットを持つレポート パーツのレポートへの追加  
  レポート パーツをレポートに追加すると、そのレポート パーツに含まれている依存データセットもレポートに追加されます。 レポート パーツ内の四角形に、その他の多くのレポート アイテムが含まれている場合があるため、複数の依存データセットがレポートに追加される場合もあります。 各共有データセットは独立参照であるため、依存先の共有データ ソースはレポートに追加されません。 また、各埋め込みデータセットでは、依存先の埋め込みデータ ソースまたは共有データ ソースが追加されます。  
   
  埋め込みデータ ソースの資格情報は、レポート パーツの一部として保存されません。 埋め込みデータ ソースがレポートに追加されると、レポートの実行時に資格情報が要求されます。 資格情報の指定手順を省略するには、資格情報が保存されている共有データ ソースに基づいたレポート パーツを使用します。  
   
  レポート パーツをレポートに追加した後は、追加したデータセットと作成した埋め込みデータセットまたは共有データセットに違いはありません。 追加したデータセットはレポート データ ペインに表示されます。 埋め込みデータセットは対応する共有データ ソースに表示され、共有データセットは Shared Datasets フォルダーに表示されます。  
   
-##  <a name="Customizing"></a> 依存データセットのカスタマイズ  
+##  <a name="customizing-dependent-datasets"></a><a name="Customizing"></a> 依存データセットのカスタマイズ  
  レポート パーツをレポートに追加した後、プレビューして、データを一部変更することができます。 変更できる内容は、操作対象のデータセットの種類によって異なります。  
   
  埋め込みデータセットのデータおよびデータ オプションを変更するには、データセットを作成した場合と同様に、クエリなどのデータセット プロパティを編集します。  
@@ -39,7 +39,7 @@ ms.locfileid: "65571195"
   
  共有データセットの定義を変更する方法、またはレポート内の共有データセットに対する最新のデータ変更内容を表示する方法の詳細については、「[共有データセットまたは埋め込みデータセットの作成 (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)」および「[レポート データ ペインでのフィールドの追加、編集、更新 (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)」を参照してください。  
   
-##  <a name="Publishing"></a> 共有データセットとしての依存データセットのパブリッシュ  
+##  <a name="publishing-dependent-datasets-as-shared-datasets"></a><a name="Publishing"></a> 共有データセットとしての依存データセットのパブリッシュ  
  依存データセットを持つレポート アイテムをパブリッシュする場合は、共有データセットとして、またはレポート アイテムに埋め込まれたままの埋め込みデータセットとして各データセットをパブリッシュできます。  
   
  共有データセット オプションを選択した場合、データセットは共有データセット定義としてレポート サーバーに保存されます。 レポートでは、そのデータセットを使用するすべてのレポート アイテムが、現在レポート サーバー上に存在する共有データセットを指すように更新されます。 その結果、次の 2 つの処理が行われます。  

@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: b01c63e74ee26cea327a01e3bf9a3595bc5012d8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015451"
 ---
 # <a name="irowsetfastloadinsertrow-ole-db"></a>IRowsetFastLoad::InsertRow (OLE DB)
@@ -27,7 +27,7 @@ ms.locfileid: "68015451"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  一括コピー行セットに行を追加します。 サンプルについては、「[IRowsetFastLoad を使用したデータの一括コピー (OLE DB)](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md)」と「[IROWSETFASTLOAD と ISEQUENTIALSTREAM を使用した SQL SERVER への BLOB データの送信 (OLE DB)](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)」を参照してください。  
+  一括コピー行セットに行を追加します。 サンプルについては、「[IRowsetFastLoad を使用したデータの一括コピー (OLE DB)](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md)」と「[IROWSETFASTLOAD と ISEQUENTIALSTREAM を使用した SQL SERVER への BLOB データの送信 &#40;OLE DB&#41;](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)」を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -68,9 +68,9 @@ HRESULT InsertRow(
  指定されたアクセサーが行アクセサーではなかったか、コンシューマー所有のメモリが指定されませんでした。  
   
 ## <a name="remarks"></a>解説  
- コンシューマー データを列の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型に変換するときにエラーが発生すると、OLE DB Driver for SQL Server プロバイダーから E_FAIL が返されます。 **InsertRow** メソッドを使用するか、**Commit** メソッドのみを使用して、データを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に転送できます。 **InsertRow** メソッドを使用する場合、コンシューマー アプリケーションは、データ型変換エラーの通知を受け取るまで、誤ったデータを使用してこのメソッドを何回も呼び出す可能性があります。 **Commit** メソッドでは、すべてのデータがコンシューマーにより正しく指定されたことが保証されるので、コンシューマーは適切に **Commit** を使用することで、必要に応じてデータを検証できます。  
+ コンシューマー データを列の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型に変換するときにエラーが発生すると、OLE DB Driver for SQL Server プロバイダーから E_FAIL が返されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]InsertRow **メソッドを使用するか、** Commit**メソッドのみを使用して、データを** に転送できます。 **InsertRow** メソッドを使用する場合、コンシューマー アプリケーションは、データ型変換エラーの通知を受け取るまで、誤ったデータを使用してこのメソッドを何回も呼び出す可能性があります。 **Commit** メソッドでは、すべてのデータがコンシューマーにより正しく指定されたことが保証されるので、コンシューマーは適切に **Commit** を使用することで、必要に応じてデータを検証できます。  
   
- OLE DB Driver for SQL Server の一括コピー行セットは書き込み専用です。 OLE DB Driver for SQL Server では、コンシューマーから行セットをクエリできるメソッドは公開していません。 処理を終了する場合、コンシューマーは **Commit** メソッドを呼び出さずに、[IRowsetFastLoad](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md) インターフェイスの参照を解放できます。 コンシューマーが行セットに挿入した行にアクセスして値を変更する機能や、そのような行を行セットから個別に削除する機能はありません。  
+ OLE DB Driver for SQL Server の一括コピー行セットは書き込み専用です。 OLE DB Driver for SQL Server では、コンシューマーから行セットをクエリできるメソッドは公開していません。 処理を終了する場合、コンシューマーは [Commit](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md) メソッドを呼び出さずに、**IRowsetFastLoad** インターフェイスの参照を解放できます。 コンシューマーが行セットに挿入した行にアクセスして値を変更する機能や、そのような行を行セットから個別に削除する機能はありません。  
   
  一括コピーされる行は、サーバー上で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用に形式が設定されます。 行の形式は、ANSI_PADDING など、接続やセッションに設定されたオプションの影響を受けます。 このオプションは、OLE DB Driver for SQL Server により確立された接続に対して既定で設定されます。  
   

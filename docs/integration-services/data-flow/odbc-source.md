@@ -16,10 +16,10 @@ ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 19a234b8c2939730a6c5a815885606dac15d0a0a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298165"
 ---
 # <a name="odbc-source"></a>ODBC 入力元
@@ -110,7 +110,7 @@ ms.locfileid: "71298165"
 #### <a name="data-access-mode"></a>[データ アクセス モード]  
  入力元のデータを選択する方法を選択します。 次の表に示すオプションがあります。  
   
-|オプション|[説明]|  
+|オプション|説明|  
 |------------|-----------------|  
 |テーブル名|ODBC データ ソースのテーブルまたはビューからデータを取得します。 このオプションを選択する場合は、以下の一覧から値を選択します。|  
 ||**[テーブル名またはビュー名]** : 使用できるテーブルまたはビューを一覧から選択するか、正規表現を入力してテーブルを特定します。|  
@@ -174,7 +174,7 @@ ms.locfileid: "71298165"
 #### <a name="truncation"></a>切り捨て  
  ODBC 入力元でフローの切り捨てを処理する方法 (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を選択します。  
   
-#### <a name="description"></a>[説明]  
+#### <a name="description"></a>説明  
  使用されていません。  
   
 #### <a name="set-this-value-to-selected-cells"></a>[選択したセルに設定する値]  

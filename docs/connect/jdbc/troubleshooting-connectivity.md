@@ -11,10 +11,10 @@ ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d6a64589b44de50328aa3384a51e29e0c2cc9a6e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027619"
 ---
 # <a name="troubleshooting-connectivity"></a>接続性のトラブルシューティング
@@ -26,13 +26,13 @@ ms.locfileid: "69027619"
   
 -   TCP/IP が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で有効になっていません、または指定されたサーバーやポート番号が間違っています。 指定されたサーバーとポート上の TCP/IP で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が待機していることを確認します。 このようなエラーは、次のような例外で報告されることがあります。"ログインに失敗しました。 ホストに TCP/IP 接続できませんでした。" これは、次のいずれかの原因を示します。  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はインストールされていますが、TCP/IP が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用のネットワーク プロトコルとして、[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ネットワーク ユーティリティ、または [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して、インストールされていません。  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はインストールされていますが、TCP/IP が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用のネットワーク プロトコルとして、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ネットワーク ユーティリティ、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以降の [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 構成マネージャーを使用して、インストールされていません。  
   
     -   TCP/IP は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロトコルとしてインストールされていますが、JDBC 接続 URL で指定されたポートでリッスンしていません。 既定のポートは 1433 ですが、製品のインストール時に任意のポートで待機するように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を構成することができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がポート 1433 でリッスンしていることを確認します。 または、ポートが変更されている場合は、JDBC 接続 URL で指定するポートを、変更されたポートと一致させます。 JDBC 接続 URL の詳細については、「[接続 URL の構築](../../connect/jdbc/building-the-connection-url.md)」を参照してください。  
   
     -   JDBC 接続 URL で指定されたコンピューターのアドレスが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がインストールおよび起動されたサーバーを参照していません。  
   
-    -   クライアントと、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているサーバーとの間で、TCP/IP のネットワークが動作していません。 telnet を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への TCP/IP 接続を確認できます。 たとえば、コマンド プロンプトに「`telnet 192.168.0.0 1433`」と入力します。192.168.0.0 は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているコンピューターのアドレス、1433 はリッスンしているポートを示します。 "Telnet が接続できません" というメッセージを受け取る場合、TCP/IP はそのポートで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続をリッスンしていません。 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ネットワーク ユーティリティ、または [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がポート 1433 で TCP/IP を使用するように構成されていることを確認します。  
+    -   クライアントと、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているサーバーとの間で、TCP/IP のネットワークが動作していません。 telnet を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への TCP/IP 接続を確認できます。 たとえば、コマンド プロンプトに「`telnet 192.168.0.0 1433`」と入力します。192.168.0.0 は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているコンピューターのアドレス、1433 はリッスンしているポートを示します。 "Telnet が接続できません" というメッセージを受け取る場合、TCP/IP はそのポートで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続をリッスンしていません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ネットワーク ユーティリティ、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以降の [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 構成マネージャーを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がポート 1433 で TCP/IP を使用するように構成されていることを確認します。  
   
     -   サーバーで使用されるポートがファイアウォールで開かれていない。 これには、サーバーが使用するポート、またはオプションで、サーバーの名前付きインスタンスに関連付けられたポートが含まれます。  
   

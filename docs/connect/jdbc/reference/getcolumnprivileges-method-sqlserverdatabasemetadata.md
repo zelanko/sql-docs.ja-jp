@@ -16,10 +16,10 @@ ms.assetid: 4ab6a671-9573-4b95-8c23-364306c60d25
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ae80a8c33f68ad2f3d2c85b1343a5cc0f2b423c5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67952874"
 ---
 # <a name="getcolumnprivileges-method-sqlserverdatabasemetadata"></a>getColumnPrivileges メソッド (SQLServerDatabaseMetaData)
@@ -65,7 +65,7 @@ public java.sql.ResultSet getColumnPrivileges(java.lang.String catalog,
   
  getColumnPrivileges メソッドによって返される結果セットには、次の情報が含まれます。  
   
-|Name|Type|説明|  
+|Name|種類|説明|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|カタログ名。|  
 |TABLE_SCHEM|**String**|テーブル スキーマ名です。|  

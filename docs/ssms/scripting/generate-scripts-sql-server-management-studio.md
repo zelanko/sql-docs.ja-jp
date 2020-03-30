@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: abdbbd7659221fb27df12ff03995b2d246241463
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75253856"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>スクリプトの生成 (SQL Server Management Studio)
@@ -28,13 +28,13 @@ SQL Server Management Studio (SSMS) を使用してさまざまなオブジェ�
 ## <a name="before-you-begin"></a>はじめに  
  要件に最も適したメカニズムを選択します。  
   
-###  <a name="GenPubScriptWiz"></a> スクリプトの生成とパブリッシュ ウィザード  
+###  <a name="generate-and-publish-scripts-wizard"></a><a name="GenPubScriptWiz"></a> スクリプトの生成とパブリッシュ ウィザード  
  **スクリプトの生成とパブリッシュ ウィザード** を使用し、多数のオブジェクトの [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを作成できます。 このウィザードでは、データベース内の全オブジェクトのスクリプトを生成することも、選択したオブジェクトのサブセットのスクリプトを生成することもできます。 ウィザードには、権限、照合順序、制約、その他を含めるかどうかなど、スクリプトのさまざまなオプションがあります。 ウィザードの使用方法の詳細については、「 [スクリプトの生成とパブリッシュ ウィザード](../../relational-databases/scripting/generate-and-publish-scripts-wizard.md)」を参照してください。  
   
-###  <a name="OEScriptAsMenu"></a> オブジェクト エクスプローラーの [スクリプト化] メニュー  
+###  <a name="object-explorer-script-as-menu"></a><a name="OEScriptAsMenu"></a> オブジェクト エクスプローラーの [スクリプト化] メニュー  
  **オブジェクト エクスプローラーの [スクリプト化]** メニューを使用し、単一オブジェクト、複数オブジェクト、または単一オブジェクトの複数のステートメントのスクリプトを作成できます。 いずれか 1 つのスクリプト タイプを選択できます。たとえば、オブジェクトの作成、変更、削除を選択できます。 スクリプトは、クエリ エディター ウィンドウ、ファイル、またはクリップボードに保存できます。 スクリプトは Unicode 形式で作成されます。  
   
-##  <a name="ScriptSingleObject"></a> 単一のオブジェクトのスクリプトを生成するには  
+##  <a name="to-generate-a-script-of-a-single-object"></a><a name="ScriptSingleObject"></a> 単一のオブジェクトのスクリプトを生成するには  
  **単一のオブジェクトのスクリプトを生成するには**  
   
 1.  オブジェクト エクスプローラーで、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  

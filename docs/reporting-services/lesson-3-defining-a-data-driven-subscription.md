@@ -1,5 +1,5 @@
 ---
-title: レッスン 3:データ ドリブン サブスクリプションの定義 | Microsoft Docs
+title: 'レッスン 3 : データ ドリブン サブスクリプションの定義 | Microsoft Docs'
 ms.date: 06/06/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,20 +9,20 @@ ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fafd591e4b29f9b8beb1639ff64f4e2d43b65c2d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66826857"
 ---
-# <a name="lesson-3-defining-a-data-driven-subscription"></a>レッスン 3:データ ドリブン サブスクリプションの定義
+# <a name="lesson-3-defining-a-data-driven-subscription"></a>レッスン 3: データ ドリブン サブスクリプションの定義
 この [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] チュートリアル レッスンでは、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Web ポータルのデータ ドリブン サブスクリプション ページを使って、サブスクリプション データ ソースへの接続、サブスクリプション データを取得するクエリの作成、レポートと配信オプションへの結果セットのマッピングを行います。  
   
 > [!NOTE]  
 > 開始する前に、 **[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェント** サービスが実行されていることを確認します。 実行されていない場合は、サブスクリプションを保存できません。  検証する方法の 1 つは、[SQL Server 構成マネージャー](../relational-databases/sql-server-configuration-manager.md)を起動することです。
-このレッスンを行うには、レッスン 1 とレッスン 2 を完了していることと、レポート データ ソースに、保存された資格情報が使用されていることが必要です。  詳細については、「[レッスン 2: レポート データ ソースのプロパティの変更](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)」を参照してください  
+このレッスンを行うには、レッスン 1 とレッスン 2 を完了していることと、レポート データ ソースに、保存された資格情報が使用されていることが必要です。  詳細については、「 [レッスン 2: レポート データ ソースのプロパティの変更](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)」を参照してください。  
   
-## <a name="bkmk_startwizard"></a>データ ドリブン サブスクリプション ウィザードの開始  
+## <a name="start-the-data-driven-subscription-wizard"></a><a name="bkmk_startwizard"></a>データ ドリブン サブスクリプション ウィザードの開始  
   
 1.  [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web ポータルで **[ホーム]** をクリックして、 **Sales Orders** レポートのあるフォルダーに移動します。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "66826857"
 ## <a name="define-a-description"></a>説明の定義  
 1.  説明に「 **Sales Order delivery** 」と入力します。
 
-## <a name="type"></a>Type
+## <a name="type"></a>種類
 1.  **[データ ドリブン サブスクリプション]** をクリックします。  
 
 ## <a name="schedule"></a>スケジュール

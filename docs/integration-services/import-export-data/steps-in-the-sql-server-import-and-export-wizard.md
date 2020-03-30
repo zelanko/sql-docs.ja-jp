@@ -10,10 +10,10 @@ ms.assetid: 816fb1bd-7bb9-450d-ad65-e4c2d02eaff8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0a6fb370c80af6221812b88d3694a230dc206f7b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296204"
 ---
 # <a name="steps-in-the-sql-server-import-and-export-wizard"></a>SQL Server インポートおよびエクスポート ウィザードの手順
@@ -43,7 +43,7 @@ ms.locfileid: "71296204"
 > [!TIP]
 > ウィザードのページまたはダイアログ ボックスで F1 キーをタップすると、現在のページの文書が表示されます。
 
-## <a name="related"></a> 関連タスクとコンテンツ  
+## <a name="related-tasks-and-content"></a><a name="related"></a> 関連タスクとコンテンツ  
 その他の基本的なタスクは次のとおりです。
 -   **ウィザードのしくみの簡単な例を参照してください。**
 

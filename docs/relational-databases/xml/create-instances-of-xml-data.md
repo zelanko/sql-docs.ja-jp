@@ -20,10 +20,10 @@ ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bbdae019d2b4903bcebb0339df0ef243d6974766
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68112922"
 ---
 # <a name="create-instances-of-xml-data"></a>XML データのインスタンスの作成
@@ -210,7 +210,7 @@ INSERT INTO T VALUES (3, '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[XML データの取得および XML データに対するクエリの実行](../../relational-databases/xml/retrieve-and-query-xml-data.md)|XML インスタンスをデータベースに格納するときに保持されない部分について説明します。|  
   

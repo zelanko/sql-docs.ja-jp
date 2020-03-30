@@ -17,10 +17,10 @@ ms.assetid: 2280fff6-3de7-44b1-87da-5db0ec975928
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ae971989342ca6d3fda121b0559bebb681f07fb0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63193315"
 ---
 # <a name="using-reporting-services-security-policy-files"></a>Reporting Services セキュリティ ポリシー ファイルの使用
@@ -34,7 +34,7 @@ ms.locfileid: "63193315"
 ## <a name="policy-files-in-reporting-services"></a>Reporting Services のポリシー ファイル  
  次の表は、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のポリシー構成ファイル、既定インストールでの場所、および各機能を示しています。  
   
-|ファイル名|場所 (既定インストール)|[説明]|  
+|ファイル名|場所 (既定インストール)|説明|  
 |---------------|---------------------------------------|-----------------|  
 |rssrvpolicy.config|C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer|レポート サーバーのポリシー構成ファイル。 これらのセキュリティ ポリシーは、レポートがレポート サーバーに配置された後のレポートの式とカスタム アセンブリに主に影響します。 このポリシー ファイルは、カスタム データ、配信、表示、およびレポート サーバーに配置されるセキュリティ拡張機能にも影響します。|  
 |rsmgrpolicy.config|C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager|レポート マネージャーのポリシー構成ファイル。 これらのセキュリティ ポリシーは、カスタム配信用のサブスクリプション ユーザー インターフェイス拡張機能など、レポート マネージャーを拡張するすべてのアセンブリに影響します。|  

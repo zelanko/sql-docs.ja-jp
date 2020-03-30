@@ -16,10 +16,10 @@ ms.assetid: 55b5b7d0-448f-4b8a-9ca7-563f674d6b81
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ffbc28bd432e310e23427a46946abd9a47036bc2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67983472"
 ---
 # <a name="getdouble-method-sqlserverresultset"></a>getDouble メソッド (SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67983472"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|Name|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[getDouble (int)](../../../connect/jdbc/reference/getdouble-method-int-sqlserverresultset.md)|この [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列インデックスの値を、Java プログラミング言語の **double** として取得します。|  
 |[getDouble (java.lang.String)](../../../connect/jdbc/reference/getdouble-method-java-lang-string-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列名の値が、Java プログラミング言語の **double** として取得されます。|  

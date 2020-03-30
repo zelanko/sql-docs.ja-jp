@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 954302809c01769f6d3869e7762917e91cfd8f98
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68892223"
 ---
 # <a name="performance-counters-msrs-2011-sharepoint-mode-performance-objects"></a>パフォーマンス カウンター MSRS 2011 SharePoint モード パフォーマンス オブジェクト
@@ -41,7 +41,7 @@ ms.locfileid: "68892223"
   
 -   [PowerShell コマンドレットを使用して一覧を取得する](#bkmk_powershell)  
   
-##  <a name="bkmk_webservice"></a> MSRS 2011 Web Service SharePoint Mode のパフォーマンス カウンター  
+##  <a name="msrs-2011-web-service-sharepoint-mode-performance-counters"></a><a name="bkmk_webservice"></a> MSRS 2011 Web Service SharePoint Mode のパフォーマンス カウンター  
  **MSRS 2011 Web Service SharePoint Mode** パフォーマンス オブジェクトは、レポート サーバーのパフォーマンスを監視します。 このパフォーマンス オブジェクトには複数のカウンターが含まれ、主に対話的なレポート表示操作によって開始されるレポート サーバー処理の追跡に使用されます。 設定したカウンターは [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のすべてのインスタンスに適用することも、特定のインスタンスにだけ適用することもできます。 これらのカウンターは、 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] がレポート サーバー Web サービスを停止した時点でリセットされます。  
   
  次の表は、 **MSRS 2011 Web Service SharePoint Mode** パフォーマンス オブジェクトに含まれているカウンターの一覧です。  
@@ -71,7 +71,7 @@ ms.locfileid: "68892223"
 |**Total Reports Executed**|サービスの開始後に、正常に実行されたレポートの総数。 このカウンターは、 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] によってレポート サーバー Web サービスが停止すると必ずリセットされます。|  
 |**要求の合計数**|サービスの開始後、レポート サーバーに対して行われたすべての要求の総数。 このカウンターは、 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] によってレポート サーバー Web サービスが停止すると必ずリセットされます。|  
   
-##  <a name="bkmk_windowsservice"></a> MSRS 2011 Windows Service SharePoint モードのパフォーマンス カウンター  
+##  <a name="msrs-2011-windows-service-sharepoint-mode-performance-counters"></a><a name="bkmk_windowsservice"></a> MSRS 2011 Windows Service SharePoint モードのパフォーマンス カウンター  
  **MSRS 2011 Windows Service SharePoint Mode** パフォーマンス オブジェクトを使用して、レポート サーバー Windows サービスを監視します。 このパフォーマンス オブジェクトには複数のカウンターが含まれ、スケジュールされた操作を介して開始されるレポート処理の追跡に使用されます。 スケジュールされた操作には、サブスクリプションと配信、レポート実行スナップショット、およびレポート履歴を含めることができます。 設定したカウンターは [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のすべてのインスタンスに適用することも、特定のインスタンスにだけ適用することもできます。  
   
  次の表は、 **MSRS 2011 Windows Service SharePoint mode** パフォーマンス オブジェクトに含まれているカウンターの一覧です。  
@@ -118,7 +118,7 @@ ms.locfileid: "68892223"
 |**要求の合計数**|サービスの開始後に、正常に実行されたレポートの総数。 このカウンターは、アプリケーション ドメインが再利用される際にリセットされます。|  
 |**Total Snapshot Updates**|レポート実行スナップショットの更新回数の合計。|  
   
-##  <a name="bkmk_powershell"></a> PowerShell コマンドレットを使用して一覧を取得する  
+##  <a name="use-powershell-cmdlets-to-return-lists"></a><a name="bkmk_powershell"></a> PowerShell コマンドレットを使用して一覧を取得する  
  ![PowerShell 関連コンテンツ](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")次の Windows PowerShell スクリプトは、CounterSetName が "msr" で始まるカウンター セットを返します。  
   
 ```  

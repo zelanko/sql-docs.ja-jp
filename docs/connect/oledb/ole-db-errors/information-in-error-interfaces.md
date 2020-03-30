@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 4ff18864e37575f78d129abb1569b0ffe83d4685
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67994935"
 ---
 # <a name="information-in-error-interfaces"></a>エラー インターフェイス内の情報
@@ -56,7 +56,7 @@ ms.locfileid: "67994935"
 |パラメーター|説明|  
 |---------------|-----------------|  
 |*pbstrSQLState*|エラーの SQLSTATE 値を返します。 SQLSTATE 値は、SQL-92、ODBC と ISO SQL、および API の各仕様で定義されています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] または OLE DB Driver for SQL Server でも、実装固有の SQLSTATE 値は定義されません。|  
-|*plNativeError*|該当する場合は、**master.dbo.sysmessages** から [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のエラー番号を返します。 OLE DB Driver for SQL Server のデータ ソースの初期化の試行が成功すると、ネイティブ エラーが使用できるようになります。 この試行の前は、OLE DB Driver for SQL Server では常に 0 が返されます。|  
+|*plNativeError*|該当する場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]master.dbo.sysmessages**から** のエラー番号を返します。 OLE DB Driver for SQL Server のデータ ソースの初期化の試行が成功すると、ネイティブ エラーが使用できるようになります。 この試行の前は、OLE DB Driver for SQL Server では常に 0 が返されます。|  
   
 ## <a name="see-also"></a>参照  
  [エラー](../../oledb/ole-db-errors/errors.md)  

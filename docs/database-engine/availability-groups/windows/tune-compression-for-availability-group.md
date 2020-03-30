@@ -9,10 +9,10 @@ ms.assetid: 7632769c-b246-4766-886f-7c60ec540be8
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3891d30ef5bfffb19ca1d4bfcaab290e3903816b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68013667"
 ---
 # <a name="tune-compression-for-availability-group"></a>可用性グループの圧縮の調整
@@ -31,7 +31,7 @@ ms.locfileid: "68013667"
 
 次の表は、SQL Server の既定の圧縮動作を変更するトレース フラグを示します。 
 
-トレース フラグ | [説明]
+トレース フラグ | 説明
 ------------- | -------------
 1462          | 同期レプリカを使用した可用性グループのログ ストリーム圧縮を無効にします。 この機能は、非同期レプリカでは既定で有効にされており、ネットワーク帯域幅が最適化されます。
 9567          | 自動シード処理時の可用性グループのデータ ストリーム圧縮を有効にします。 自動シードの処理中、圧縮によって転送時間が大幅に短縮され、プロセッサの負荷が増大します。

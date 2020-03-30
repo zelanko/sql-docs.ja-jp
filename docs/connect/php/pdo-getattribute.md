@@ -11,10 +11,10 @@ ms.assetid: c81833ea-8b8a-459d-8f24-920098da994d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c25e68d0e03442cc8cb493aea91c9ae09b175def
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76916377"
 ---
 # <a name="pdogetattribute"></a>PDO::getAttribute
@@ -30,7 +30,7 @@ mixed PDO::getAttribute ( $attribute )
 ```  
   
 #### <a name="parameters"></a>パラメーター  
-*$attribute*:サポートされる属性のいずれか。 サポートされる属性の一覧については、「解説」セクションを参照してください。  
+*$attribute*: サポートされる属性のいずれか。 サポートされる属性の一覧については、「解説」セクションを参照してください。  
   
 ## <a name="return-value"></a>戻り値  
 成功した場合、接続オプション、定義済み PDO 属性、またはカスタム ドライバー属性の値を返します。 エラーが発生した場合は null を返します。  
@@ -41,7 +41,7 @@ mixed PDO::getAttribute ( $attribute )
 |Attribute|処理を行った機能|サポートされる値|説明|  
 |-------------|----------------|--------------------|---------------|  
 |PDO::ATTR_CASE|PDO|PDO::CASE_LOWER<br /><br />PDO::CASE_NATURAL<br /><br />PDO::CASE_UPPER|列名に必要な大文字/小文字の使い分けを指定します。 PDO::CASE_LOWER は、列名を強制的に小文字にします。PDO::CASE_NATURAL は、列名をデータベースによって返されたままの状態にします。PDO::CASE_UPPER は、列名を強制的に大文字にします。<br /><br />既定値は、PDO::CASE_NATURAL です。<br /><br />この属性は、PDO::setAttribute を使用して設定することもできます。|  
-|PDO::ATTR_CLIENT_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|文字列の配列|ドライバーおよび関連するライブラリのバージョンを記述します。 次の要素を含む配列を返します。ODBC のバージョン (*MajorVer*.*MinorVer*)、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client DLL の名前とバージョン、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] バージョン (*MajorVer*.*MinorVer*.*BuildNumber*.*Revision*)|  
+|PDO::ATTR_CLIENT_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|文字列の配列|ドライバーおよび関連するライブラリのバージョンを記述します。 次の要素の配列を返します: ODBC のバージョン (*MajorVer*.*MinorVer*)、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ネイティブ クライアント DLL の名前とバージョン、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] のバージョン (*MajorVer*.*MinorVer*.*BuildNumber*.*Revision*)|  
 |PDO::ATTR_DEFAULT_STR_PARAM|PDO|PDO::PARAM_STR_CHAR<br /><br />PDO::PARAM_STR_NATL|PDO::PARAM_STR_CHAR に設定されていない場合、PDO::PARAM_STR_NATL が返されます。|
 |PDO::ATTR_DRIVER_NAME|PDO|String|常に "sqlsrv" を返します。|  
 |PDO::ATTR_DRIVER_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|String|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] のバージョンを示します (*MajorVer*.*MinorVer*.*BuildNumber*.*Revision*)|  

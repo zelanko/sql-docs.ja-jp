@@ -16,10 +16,10 @@ ms.assetid: 6d1e0e37-29ea-408a-a055-384984d884be
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c2d431fd1b04f046fb00f131a1a77a146570b50f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558155"
 ---
 # <a name="configure-the-general-properties-of-policy-based-management"></a>ポリシー ベースの管理の全般プロパティの構成
@@ -38,14 +38,14 @@ ms.locfileid: "75558155"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  PolicyAdministratorRole 固定データベース ロールのメンバーシップが必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-configure-policy-based-management"></a>ポリシー ベースの管理を構成するには  
   
@@ -72,7 +72,7 @@ ms.locfileid: "75558155"
   
 4.  完了したら、 **[OK]** をクリックします。  
 
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-configure-policy-based-management"></a>ポリシー ベースの管理を構成するには  
   

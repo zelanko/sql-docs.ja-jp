@@ -1,5 +1,5 @@
 ---
-title: チュートリアル:書式文字列 (レポート ビルダー) | Microsoft Docs
+title: 'チュートリアル: 書式文字列 (レポート ビルダー) | Microsoft Docs'
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,13 +9,13 @@ ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 090729625991e3a1aaa6fb1ada3012a15ff20dce
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63043046"
 ---
-# <a name="tutorial-format-text-report-builder"></a>チュートリアル:テキストを書式設定する (レポート ビルダー)
+# <a name="tutorial-format-text-report-builder"></a>チュートリアル: テキストの書式設定 (レポート ビルダー)
 
 このチュートリアルでは、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポートで、さまざまなテキストの書式設定方法を実習します。 さまざまな書式を実験できます。 
 
@@ -25,12 +25,12 @@ ms.locfileid: "63043046"
   
 途中の手順で一度わざと正しくない方法を試し、それがなぜ問題なのかを確認します。 その後、必要な効果が得られるように問題を修正します。  
     
-このチュートリアルの推定所要時間:20 分  
+このチュートリアルの推定所要時間 : 20 分  
   
 ## <a name="requirements"></a>必要条件  
 要件の詳細については、[「チュートリアルの前提条件 (レポート ビルダー)」](../reporting-services/prerequisites-for-tutorials-report-builder.md) を参照してください。  
   
-## <a name="CreateReport"></a>空のレポートとデータ ソースおよびデータセットを作成する  
+## <a name="create-a-blank-report-with-a-data-source-and-dataset"></a><a name="CreateReport"></a>空のレポートとデータ ソースおよびデータセットを作成する  
   
 ### <a name="to-create-a-blank-report"></a>空のレポートを作成するには  
   
@@ -50,7 +50,7 @@ ms.locfileid: "63043046"
 
     **[レポート データ]** ペインが表示されていない場合は、 **[表示]** タブの **[レポート データ]** をオンにします。
   
-2.  **[名前]** ボックスに、「**TextDataSource**」と入力します。  
+2.  **[名前]** ボックスに「 **TextDataSource**」と入力します。  
   
 3.  **[レポートに埋め込まれた接続を使用する]** をクリックします。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "63043046"
   
 2.  データ ソースが **TextDataSource**であることを確認します。  
   
-3.  **[名前]** ボックスに、「**TextDataset**」と入力します。  
+3.  **[名前]** ボックスに「 **TextDataset**」と入力します。  
   
 4.  クエリの種類に **[テキスト]** が選択されていることを確認してから、 **[クエリ デザイナー]** をクリックします。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "63043046"
 
 9.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="AddField"></a>レポート デザイン画面にフィールドを追加する  
+## <a name="add-a-field-to-the-report-design-surface"></a><a name="AddField"></a>レポート デザイン画面にフィールドを追加する  
 レポート内にデータセットのフィールドを表示する場合、まず、デザイン画面に直接フィールドをドラッグしたくなるかもしれません。 ここでは、その方法がうまくいかない理由と、正しい方法について学びます。  
   
 ### <a name="to-add-a-field-to-the-report-and-get-the-wrong-result"></a>レポートにフィールドを追加する (うまくいかない方法を試す) には  
@@ -174,7 +174,7 @@ ms.locfileid: "63043046"
   
 7.  リスト ボックスを選択し、<localizedText>Del</localizedText> キーを押します。  
   
-## <a name="AddTable"></a>レポート デザイン画面にテーブルを追加する  
+## <a name="add-a-table-to-the-report-design-surface"></a><a name="AddTable"></a>レポート デザイン画面にテーブルを追加する  
 このテーブルは、ハイパーリンクと回転したテキストを配置する場所を用意するために作成します。   
   
 1.  **[挿入]** タブの **[テーブル]**  >  **[テーブル ウィザード]** をクリックします。  
@@ -197,7 +197,7 @@ ms.locfileid: "63043046"
   
 8.  **[デザイン]** をクリックしてデザイン ビューに戻ります。  
   
-9. **[LinkText]** 列の **[合計]** セルを選択し、Shift キーを押しながらこのセルの右にある 2 つのセル ( **[Product]** 列の空のセルと **[Sales]** 列の [`[Sum(Sales)]`] セル) を選択します。  
+9. **[LinkText]** 列の **[合計]** セルを選択し、Shift キーを押しながらこのセルの右にある 2 つのセル ( **[Product]** 列の空のセルと `[Sum(Sales)]`[Sales] **列の [** ] セル) を選択します。  
   
 11. これらの 3 つのセルが選択された状態で、3 つのうちのいずれか 1 つのセルを右クリックして、 **[行の削除]** をクリックします。  
 
@@ -209,7 +209,7 @@ ms.locfileid: "63043046"
     
     ![report-builder-format-one-total](../reporting-services/media/report-builder-format-one-total.png)
   
-## <a name="AddHyperlink"></a>レポートにハイパーリンクを追加する  
+## <a name="add-a-hyperlink-to-the-report"></a><a name="AddHyperlink"></a>レポートにハイパーリンクを追加する  
 ここでは、前のセクションで作成したテーブルのテキストに、ハイパーリンクを追加します。  
   
 1.  **[デザイン]** をクリックしてデザイン ビューに戻ります。  
@@ -234,7 +234,7 @@ ms.locfileid: "63043046"
   
 10. リンクをクリックします。 コンピューターがインターネットに接続している場合は、レポート ビルダー ヘルプのトピックが表示されたブラウザーが開きます。  
   
-## <a name="RotateText"></a>レポート内のテキストを回転する  
+## <a name="rotate-text-in-the-report"></a><a name="RotateText"></a>レポート内のテキストを回転する  
 ここでは、前のセクションで使用したテーブル内のテキストの一部を回転します。  
  
 1.  **[デザイン]** をクリックしてデザイン ビューに戻ります。  
@@ -260,7 +260,7 @@ ms.locfileid: "63043046"
 
 ![report-builder-format-rotate-270](../reporting-services/media/report-builder-format-rotate-270.png)
 
-## <a name="FormatCurrency"></a>通貨の書式設定  
+## <a name="format-currency"></a><a name="FormatCurrency"></a>通貨の書式設定  
   
 1.  **[デザイン]** をクリックしてデザイン ビューに切り替えます。  
   
@@ -280,7 +280,7 @@ ms.locfileid: "63043046"
 
 ![report-build-format-report](../reporting-services/media/report-build-format-report.png)
     
-## <a name="FormatHTML"></a>HTML 形式のテキストの表示  
+## <a name="displaying-text-with-html-formatting"></a><a name="FormatHTML"></a>HTML 形式のテキストの表示  
   
 1.  **[デザイン]** をクリックしてデザイン ビューに切り替えます。  
   
@@ -322,7 +322,7 @@ ms.locfileid: "63043046"
   
 ![report-builder-format-html](../reporting-services/media/report-builder-format-html.png)
 
-## <a name="Save"></a>レポートを保存する  
+## <a name="save-the-report"></a><a name="Save"></a>レポートを保存する  
 レポートは、レポート サーバー、SharePoint ライブラリ、またはコンピューターに保存することができます。  
   
 このチュートリアルでは、レポートをレポート サーバーに保存します。 レポート サーバーにアクセスできない場合は、レポートをコンピューターに保存してください。  
@@ -355,7 +355,7 @@ ms.locfileid: "63043046"
 
 ## <a name="next-steps"></a>次の手順
 
-レポート ビルダーでは、さまざまな方法でテキストの書式を設定できます。 [チュートリアル:自由形式のレポートの作成](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)」にはその他の例が紹介されています。  
+レポート ビルダーでは、さまざまな方法でテキストの書式を設定できます。 詳細な例については、「[チュートリアル: 自由形式のレポートの作成](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)」を参照してください。  
 
 [レポート ビルダー チュートリアル](../reporting-services/report-builder-tutorials.md) 
 [レポート アイテムの書式設定](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  

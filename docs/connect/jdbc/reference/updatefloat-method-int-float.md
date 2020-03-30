@@ -16,10 +16,10 @@ ms.assetid: c9ddcd7d-1dd4-491a-99ff-6cce7f67a73b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c1257ced0c69a461913d9c3a9ae147fffcf72cea
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67998959"
 ---
 # <a name="updatefloat-method-int-float"></a>updateFloat (int, float) メソッド
@@ -42,7 +42,7 @@ public void updateFloat(int index,
   
  *x*  
   
- **float** 値。  
+ **float** 値です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

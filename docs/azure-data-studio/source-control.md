@@ -11,18 +11,18 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: c278bcf6cff451396b3d677b203f207b68fd6dc5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67959286"
 ---
-#  <a name="using-source-control-in-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] でのソース管理の使用
+#  <a name="using-source-control-in-name-sos"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] でのソース管理の使用
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] は、バージョン管理/ソース管理用の Git をサポートします。
 
 
-## <a name="git-support-in-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] での Git のサポート
+## <a name="git-support-in-name-sos"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] での Git のサポート
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] には、Git ソース管理マネージャー (SCM) が付属していますが、これらの機能を使用できるようにする前に [Git (バージョン 2.0.0 以降) をインストールする](https://git-scm.com/download)必要があります。 
 

@@ -11,10 +11,10 @@ ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7fb733325b09c189221729a3edc0dd12cf33b283
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67140462"
 ---
 # <a name="report-server-http-log"></a>レポート サーバーの HTTP ログ
@@ -54,7 +54,7 @@ ms.locfileid: "67140462"
 ## <a name="log-file-fields"></a>ログ ファイル フィールド  
  次の表は、ログで利用できるフィールドの一覧です。 ログに含めるフィールドは、 **HTTPTraceSwitches** 構成設定で指定できます。 **既定** 列は、 **HTTPTraceSwitches**を指定しなかった場合に、対応するフィールドがログ ファイルに自動的に追加されるかどうかを示しています。  
   
-|フィールド|[説明]|Default|  
+|フィールド|説明|Default|  
 |-----------|-----------------|-------------|  
 |HttpTraceFileName|この値は省略可能です。 既定値は ReportServerServiceHTTP_ です。 別のファイル名前付け規則 (ログ ファイルを一元管理する場合はサーバー名など) を使用する場合は、異なる値を指定できます。|はい|  
 |HTTPTraceSwitches|この値は省略可能です。 指定した場合、ログ ファイルに使用するフィールドをコンマ区切り形式で構成できます。|いいえ|  

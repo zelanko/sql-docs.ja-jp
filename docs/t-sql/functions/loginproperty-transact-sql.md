@@ -33,10 +33,10 @@ ms.assetid: b34df777-79b0-49a5-88db-b99998479a5d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 7fb31db6e9b438fbab74a8b23462d8c7dc897d46
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68059763"
 ---
 # <a name="loginproperty-transact-sql"></a>LOGINPROPERTY (Transact-SQL)
@@ -60,7 +60,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
  *propertyname*  
  ログインに返されるプロパティ情報を含む式を指定します。 *propertyname* 値は次のいずれかを指定することができます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**BadPasswordCount**|正しくないパスワードで連続してログインが試行された回数を返します。|  
 |**BadPasswordTime**|正しくないパスワードで最後にログインが試行された時刻を返します。|  

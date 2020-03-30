@@ -10,10 +10,10 @@ ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: a124b3a82c75f3da5f7abbdec3b519c86ec7c1c5
-ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79090516"
 ---
 # <a name="configure-master-instance-of-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] のマスター インスタンスの構成
@@ -43,7 +43,7 @@ ms.locfileid: "79090516"
    traceflag0 = 1204
    ```
 
-1. `mssql-custom.conf` ファイルを `master-0` ポッドの `mssql-server` コンテナー内の `/var/opt/mssql` にコピーします。 `<namespaceName>` をビッグ データ クラスター名に置き換えます。
+1. `mssql-custom.conf` ファイルを `/var/opt/mssql` ポッドの `mssql-server` コンテナー内の `master-0` にコピーします。 `<namespaceName>` をビッグ データ クラスター名に置き換えます。
 
    ```bash
    kubectl cp mssql-custom.conf master-0:/var/opt/mssql/mssql-custom.conf -c mssql-server -n <namespaceName>
@@ -58,7 +58,7 @@ ms.locfileid: "79090516"
    ```
 
 > [!IMPORTANT]
-> SQL Server マスター インスタンスが可用性グループ構成内にある場合は、すべての `master` ポッドに `mssql-custom.conf` ファイルをコピーします。 再起動のたびにフェールオーバーが発生するので、このアクティビティのタイミングをダウンタイム期間中にする必要があることに注意してください。
+> SQL Server マスター インスタンスが可用性グループ構成内にある場合は、すべての `mssql-custom.conf` ポッドに `master` ファイルをコピーします。 再起動のたびにフェールオーバーが発生するので、このアクティビティのタイミングをダウンタイム期間中にする必要があることに注意してください。
 
 ## <a name="known-limitations"></a>既知の制限事項
 

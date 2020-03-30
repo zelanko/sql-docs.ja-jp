@@ -16,10 +16,10 @@ ms.assetid: 5eeb41bd-b25b-4d3b-a005-a7d9e4b5978e
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: ebc0f4a5ca2be46e607ccd8d18399b7fe0ef6814
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75243928"
 ---
 # <a name="connect-to-any-sql-server-component-from-sql-server-management-studio"></a>SQL Server Management Studio から SQL Server コンポーネントへの接続
@@ -28,11 +28,11 @@ ms.locfileid: "75243928"
   
 -   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]のインスタンス。  
   
--   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]  
+-   [https://login.microsoftonline.com/consumers/]([!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)])  
   
--   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
+-   [https://login.microsoftonline.com/consumers/]([!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)])  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
+-   [https://login.microsoftonline.com/consumers/]([!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)])  
   
 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] では、データ ソースへの接続を確立していなくてもクエリの編集は行えますが、他のほとんどのタスクの場合には接続が必要です。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] では **[サーバーへの接続]** ダイアログ ボックスを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントへの接続プロパティを設定できます。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の起動時には **[サーバーへの接続]** ダイアログ ボックスが表示され、サーバーへの接続を求められます。 **[サーバーへの接続]** ダイアログ ボックスには最後に使用したときの接続設定が保持されます。  
   

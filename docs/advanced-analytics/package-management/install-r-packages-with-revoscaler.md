@@ -10,10 +10,10 @@ ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
 ms.openlocfilehash: 1d5d832d41f6bd087c6e9b334ebeac03728f97b1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74485287"
 ---
 # <a name="use-revoscaler-to-install-r-packages"></a>RevoScaleR を使用して R パッケージをインストールする
@@ -111,7 +111,7 @@ connStr <- "Driver=SQL Server;Server=myserver.financeweb.contoso.com;Database=Fi
 
 ### <a name="get-package-path-on-a-remote-sql-server-compute-context"></a>リモート SQL Server 計算コンテキストにあるパッケージ パスを取得する
 
-この例では、計算コンテキスト `sqlcc` にある **RevoScaleR** パッケージのパスを取得します。
+この例では、計算コンテキスト **にある**RevoScaleR`sqlcc` パッケージのパスを取得します。
 
 ```R
 sqlPackagePaths <- rxFindPackage(package = "RevoScaleR", computeContext = sqlcc)
@@ -127,7 +127,7 @@ print(sqlPackagePaths)
 
 ### <a name="get-locations-for-multiple-packages"></a>複数のパッケージの場所を取得する
 
-次の例では、計算コンテキスト `sqlcc` にある **RevoScaleR** および **lattice** パッケージのパスを取得します。 複数のパッケージに関する情報を取得するには、パッケージ名を含む文字列ベクトルを渡します。
+次の例では、計算コンテキスト **にある**RevoScaleR**および**lattice`sqlcc` パッケージのパスを取得します。 複数のパッケージに関する情報を取得するには、パッケージ名を含む文字列ベクトルを渡します。
 
 ```R
 packagePaths <- rxFindPackage(package = c("RevoScaleR", "lattice"), computeContext = sqlcc)

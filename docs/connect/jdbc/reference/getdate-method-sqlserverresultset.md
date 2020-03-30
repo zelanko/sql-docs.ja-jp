@@ -16,10 +16,10 @@ ms.assetid: efb17208-4cd3-4aa8-a39b-e169b414758c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f284c3287527a94b859414f67ac02a1097da9e7f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67983877"
 ---
 # <a name="getdate-method-sqlserverresultset"></a>getDate メソッド (SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67983877"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|Name|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[getDate (int) メソッド](../../../connect/jdbc/reference/getdate-method-int-sqlserverresultset.md)|この [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列インデックスの値を、Java プログラミング言語の java.sql.Date オブジェクトとして取得します。|  
 |[getDate (int, java.util.Calendar)](../../../connect/jdbc/reference/getdate-method-int-java-util-calendar-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列インデックスの値を、渡された Calendar オブジェクトを使用し、Java プログラミング言語の java.sql.Date オブジェクトとして取得します。|  

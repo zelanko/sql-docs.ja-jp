@@ -11,10 +11,10 @@ ms.assetid: 8e3ec950-3ac1-4c28-9e97-ddce3bd46578
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 81e533e32504df219155259e9639c83c3be4c647
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67985592"
 ---
 # <a name="unwrap-method-sqlserverpreparedstatement"></a>unwrap メソッド (SQLServerPreparedStatement)
@@ -45,7 +45,7 @@ public <T> T unwrap(Class<T> iface)
   
  アプリケーションは [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] に固有の JDBC API 拡張機能にアクセスする必要がある場合があります。 unwrap メソッドは、クラスがベンダー拡張を公開する場合、このオブジェクトが拡張するパブリック クラスへのアンラッピングをサポートします。  
   
- このメソッドが呼び出されると、オブジェクトは次のクラスにラップ解除されます。[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) および [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)。  
+ このメソッドが呼び出されると、オブジェクトは [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) クラスおよび [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) クラスにアンラップされます。  
   
  コードの例については、「[unwrap メソッド (SQLServerCallableStatement)](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)」を参照してください。  
   

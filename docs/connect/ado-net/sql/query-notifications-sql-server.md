@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 57222c852ac2ba8c1aedf42075b69587a4b3843d
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896574"
 ---
 # <a name="query-notifications-in-sql-server"></a>SQL Server でのクエリ通知
@@ -35,7 +35,7 @@ ADO.NET を使用してクエリ通知を実装する方法には、次の 3 つ
   
 通知は、SELECT および EXECUTE ステートメントに対して設定できます。 EXECUTE ステートメントを使用している場合、SQL Server はその EXECUTE ステートメント自体ではなく、実行されるコマンドについて通知を登録します。 コマンドは、SELECT ステートメントの要件と制限を満たしている必要があります。 通知を登録するコマンドに複数のステートメントが含まれている場合、Database Engine によりバッチ内のステートメントごとに通知が作成されます。  
   
-データ変更時に、信頼できる即時の通知が必要なアプリケーションを開発している場合は、SQL Server オンライン ブックの「[通知の計画](https://go.microsoft.com/fwlink/?LinkId=211984)」の「**効率的なクエリ通知方法の計画**」および「**クエリ通知に代わる方法**」を参照してください。 クエリ通知と SQL Server Service Broker の詳細については、SQL Server オンライン ブックのトピックへの次のリンクを参照してください。  
+データ変更時に、信頼できる即時の通知が必要なアプリケーションを開発している場合は、SQL Server オンライン ブックの「**通知の計画**」の「**効率的なクエリ通知方法の計画**」および「[クエリ通知に代わる方法](https://go.microsoft.com/fwlink/?LinkId=211984)」を参照してください。 クエリ通知と SQL Server Service Broker の詳細については、SQL Server オンライン ブックのトピックへの次のリンクを参照してください。  
   
 **SQL Server のドキュメント**  
   
@@ -57,7 +57,7 @@ ADO.NET を使用してクエリ通知を実装する方法には、次の 3 つ
 ASP.NET アプリケーションからクエリ通知を使用する方法を示します。  
   
 [SqlDependency を使用した変更の検出](detect-changes-sqldependency.md)  
-クエリの結果が、最初に受信されたものと異なったときに検出する方法を示します。  
+クエリの結果が、最初に受け取ったものと異なるタイミングを検出する方法を示します。  
   
 [SqlCommand の実行と SqlNotificationRequest](sqlcommand-execution-sqlnotificationrequest.md)  
 クエリ通知と連携するように <xref:Microsoft.Data.SqlClient.SqlCommand> オブジェクトを構成する方法を示します。  

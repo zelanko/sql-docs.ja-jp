@@ -18,10 +18,10 @@ ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a47e3c79bacbd75ca6761bdb250b05084caf2832
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67991732"
 ---
 # <a name="types-of-client-connections-to-replicas-within-an-always-on-availability-group"></a>Always On 可用性グループ内のレプリカに対するクライアント接続の種類
@@ -35,7 +35,7 @@ ms.locfileid: "67991732"
 > [!NOTE]  
 >  クライアント接続要求を処理する可用性グループ リスナーの詳細については、「 [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)」をご参照ください。  
   
-##  <a name="ConnectAccessForSecondary"></a> セカンダリ ロールでサポートされる接続アクセスの種類  
+##  <a name="types-of-connection-access-supported-by-the-secondary-role"></a><a name="ConnectAccessForSecondary"></a> セカンダリ ロールでサポートされる接続アクセスの種類  
  セカンダリ ロールは、次に示すように 3 種類のクライアント接続をサポートします。  
   
  接続不可  
@@ -51,7 +51,7 @@ ms.locfileid: "67991732"
   
  詳細については、「 [可用性レプリカでの読み取り専用アクセスの構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)が存在する必要があります。  
   
-##  <a name="ConnectAccessForPrimary"></a> プライマリ ロールでサポートされる接続アクセスの種類  
+##  <a name="types-of-connection-access-supported-by-the-primary-role"></a><a name="ConnectAccessForPrimary"></a> プライマリ ロールでサポートされる接続アクセスの種類  
  プライマリ ロールは、次に示すように 2 種類のクライアント接続をサポートします。  
   
  すべての接続を許可する  
@@ -64,7 +64,7 @@ ms.locfileid: "67991732"
   
  詳細については、「 [可用性レプリカでの読み取り専用アクセスの構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)が存在する必要があります。  
   
-##  <a name="HowConnectionAccessAffectsConnectivity"></a> 接続アクセス構成がクライアント接続に与える影響  
+##  <a name="how-the-connection-access-configuration-affects-client-connectivity"></a><a name="HowConnectionAccessAffectsConnectivity"></a> 接続アクセス構成がクライアント接続に与える影響  
  レプリカの接続アクセス設定によって、接続試行が失敗するか成功するかが決まります。 次の表に、特定の接続試行が成功するか失敗するかを接続アクセス設定別に示します。  
   
 |レプリカのロール|レプリカでサポートされる接続アクセス|接続の目的|接続の試行の結果|  
@@ -93,7 +93,7 @@ ms.locfileid: "67991732"
   
  一般的に、この例のシナリオでは、フェールオーバーは同期コミット レプリカ間でのみ実行され、フェールオーバーの直後に、読み取り目的のアプリケーションが非同期コミット セカンダリ レプリカの 1 つに再接続できます。 ただし、メインのコンピューティング センターで障害が発生した場合は両方の同期コミット レプリカが失われます。 サテライト サイトのデータベース管理者が、非同期コミット セカンダリ レプリカへの強制フェールオーバーを手動で実行して対処します。 残りのセカンダリ レプリカのセカンダリ データベースは強制フェールオーバーによって中断されるため、読み取り専用のワークロードで使用できなくなります。 読み取り/書き込み接続が構成されている新しいプライマリ レプリカでは、読み取り目的のワークロードと読み取り/書き込みワークロードが競合しません。 つまり、データベース管理者が残りの非同期コミット セカンダリ レプリカのセカンダリ データベースを再開するまでは、読み取り目的のクライアントはどの可用性レプリカにも接続できません。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [可用性レプリカでの読み取り専用アクセスの構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
@@ -105,7 +105,7 @@ ms.locfileid: "67991732"
   
 -   [[新しい可用性グループ] ダイアログ ボックスの使用 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
-##  <a name="RelatedContent"></a> 関連コンテンツ  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 関連コンテンツ  
   
 -   [高可用性と災害復旧のための Microsoft SQL Server AlwaysOn ソリューション ガイド](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

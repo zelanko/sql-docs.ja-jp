@@ -18,10 +18,10 @@ ms.assetid: 9fa7c4c8-4da8-4299-9893-f61815055aa3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8ce7a12b3964e3e0c2407521978df03af9d88f63
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68014973"
 ---
 # <a name="sqlsrv_query"></a>sqlsrv_query
@@ -55,7 +55,7 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
   
     次の表で配列の各要素を説明します。  
   
-    |要素|[説明]|  
+    |要素|説明|  
     |-----------|---------------|  
     |*$value*|リテラル値、PHP 変数、または PHP by-reference 変数。|  
     |*$direction*[オプション]|パラメーターの方向を示すために使用する **SQLSRV_PARAM_\*** 定数 (**SQLSRV_PARAM_IN**、**SQLSRV_PARAM_OUT**、**SQLSRV_PARAM_INOUT**) のいずれか。 既定値は **SQLSRV_PARAM_IN** です。<br /><br />PHP 定数の詳細については、「[定数 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)」を参照してください。|  

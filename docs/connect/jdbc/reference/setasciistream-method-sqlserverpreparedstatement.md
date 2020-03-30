@@ -11,10 +11,10 @@ ms.assetid: 91df14fb-ff92-457f-ad51-50da7a254630
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b26eee3bcb7a182cd6ce3d71a013fc44d61c3137
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67975366"
 ---
 # <a name="setasciistream-method-sqlserverpreparedstatement"></a>setAsciiStream メソッド (SQLServerPreparedStatement)
@@ -24,7 +24,7 @@ ms.locfileid: "67975366"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|Name|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[setAsciiStream メソッド &#40;int, java.io.InputStream&#41;](../../../connect/jdbc/reference/setasciistream-method-int-java-io-inputstream.md)|指定したパラメーターの番号を、指定した java.io.InputStream オブジェクトに設定します。|  
 |[setAsciiStream メソッド &#40;int, java.io.InputStream, int&#41;](../../../connect/jdbc/reference/setasciistream-method-int-java-io-inputstream-int.md)|指定されたパラメーターの番号を、指定されたバイト数を持つ指定された java.io.InputStream オブジェクトに設定します。|  

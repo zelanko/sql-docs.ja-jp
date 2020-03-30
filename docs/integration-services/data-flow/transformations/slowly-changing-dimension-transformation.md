@@ -18,10 +18,10 @@ ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1fd5584a5c43762c4d732c677de225436e191a7e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297811"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>緩やかに変化するディメンション変換
@@ -68,7 +68,7 @@ ms.locfileid: "71297811"
   
  次の表では、変換出力および後続のデータ フローの要件について説明します。 要件では、緩やかに変化するディメンション ウィザードが作成するデータ フローについて説明します。  
   
-|Output|[説明]|データ フロー要件|  
+|Output|説明|データ フロー要件|  
 |------------|-----------------|----------------------------|  
 |**[変化する属性更新の出力]**|参照テーブル内のレコードが更新されます。 この出力は、変化する属性の行に使用されます。|OLE DB コマンド変換は、UPDATE ステートメントを使用してレコードを更新します。|  
 |**[固定属性の出力]**|変更できない行の値と、参照テーブルの値が一致しない場合の出力です。 この出力は、固定属性の行に使用されます。|既定のデータ フローは作成されません。 この変換が、固定属性の列への変更を検出した後も続行するように構成されている場合、これらの行をキャプチャするデータ フローを作成する必要があります。|  

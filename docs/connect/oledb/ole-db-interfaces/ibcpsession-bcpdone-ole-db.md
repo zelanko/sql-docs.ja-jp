@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 9df2726898fdbd3d877296d4da67738c3f792234
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67994561"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
@@ -37,7 +37,7 @@ HRESULT BCPDone(void);
 ```  
   
 ## <a name="remarks"></a>解説  
- **BCPDone** メソッドを呼び出すと、それ以後は [IBCPSession](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md) インターフェイスの他の操作を呼び出すことはできません。 ただし、一括コピー操作を新しく開始する [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) メソッドだけは呼び出すことができます。 これは [IRowsetFastLoad::Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md) メソッドを呼び出した後の状態と同様です。  
+ [BCPDone](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md) メソッドを呼び出すと、それ以後は **IBCPSession** インターフェイスの他の操作を呼び出すことはできません。 ただし、一括コピー操作を新しく開始する [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) メソッドだけは呼び出すことができます。 これは [IRowsetFastLoad::Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md) メソッドを呼び出した後の状態と同様です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  S_OK  

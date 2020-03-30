@@ -10,10 +10,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: a9fc49d1d84fc714fca13519abad4fd92c21f08a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571554"
 ---
 # <a name="data-alert-messages"></a>データ警告メッセージ
@@ -22,14 +22,14 @@ ms.locfileid: "65571554"
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-SQL Server Reporting Services のデータ警告では、電子メールでデータ警告の結果を含むメッセージとエラーの説明を含むメッセージの 2 種類のデータ警告を送信します。 結果を含むメッセージは、すべての受信者に共通して関係し、かつ業務意思決定にとって重要なレポート データの変更について情報を提供します。 何かの理由でエラーが発生し、結果情報が取得できない場合は、代わりにエラー メッセージが送信されます。
+SQL Server Reporting Services データ警告は、2 種類のデータ警告メッセージ (データ警告結果を含むメッセージと、エラー説明を含むメッセージ) を電子メールで配信します。 結果を含むメッセージは、すべての受信者に共通して関係し、かつ業務意思決定にとって重要なレポート データの変更について情報を提供します。 何かの理由でエラーが発生し、結果情報が取得できない場合は、代わりにエラー メッセージが送信されます。
 
 データ警告定義の所有者は、データ警告マネージャーで、データ警告インスタンスに関する情報を参照することもできます。 詳細については、「 [SharePoint ユーザー用のデータ警告マネージャー](../reporting-services/data-alert-manager-for-sharepoint-users.md)」を参照してください。  
 
 > [!NOTE]
 > SharePoint と Reporting Services の統合は、SQL Server 2016 以降では使用できません。
   
-##  <a name="DataAlertMessages"></a> データ警告メッセージ  
+##  <a name="data-alert-messages"></a><a name="DataAlertMessages"></a> データ警告メッセージ  
  次に示すのは、結果を含むデータ警告メッセージと、エラー説明を含む警告メッセージのスクリーン ショットです。  
   
  **結果メッセージ**  
@@ -59,7 +59,7 @@ SQL Server Reporting Services のデータ警告では、電子メールでデ�
  2 つのメッセージ型の間で唯一異なるのは、項目 5 ( **警告結果**) です。 データ警告インスタンスまたはデータ警告メッセージの作成時にエラーが発生した場合は、問題を説明するエラー メッセージが **[警告結果]** に表示されます。 エラー メッセージ (すべての受信者に送信される) は、業務上の意思決定に有効または必要な警告結果が利用できないことを受信者に知らせます。  
   
   
-##  <a name="HowTo"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="HowTo"></a> 関連タスク  
  データ警告メッセージ内に表示される情報の多くを提供する、データ警告定義を作成および編集するための手順を紹介しているトピックの一覧を次に示します。  
   
 -   [警告デザイナーでのデータ警告の作成](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  

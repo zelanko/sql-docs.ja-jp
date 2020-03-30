@@ -11,10 +11,10 @@ ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 18bfd63a8cf3255a62b6aef5c4c31573c60e76b0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027594"
 ---
 # <a name="tracing-driver-operation"></a>ドライバー操作のトレース
@@ -59,8 +59,8 @@ ms.locfileid: "69027594"
 |WARNING|問題が発生する可能性があることを示します。|  
 |INFO|情報としてのメッセージを提供します。|  
 |FINE|基本的なオブジェクトの作成と破棄など、各種のトレース情報を提供します。 パブリック メソッドによってスローされるすべての例外も含まれます。|  
-|FINER|パブリック メソッドのすべての開始ポイントと終了ポイント、関連するパラメーターのデータ型、パブリック クラスのすべてのパブリック プロパティなど、詳細なトレース情報を提供します。 入力パラメーター、出力パラメーター、メソッドの戻り値も含まれますが、CLOB、BLOB、NCLOB、Reader、\<stream> の戻り値の型は除きます。<br /><br /> バージョン 1.2 の JDBC Driver には、次のログ記録カテゴリが存在し、FINE のログ記録レベルが割り当てられていました。[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)、[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)、XA、および [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md)。 これらは、バージョン 2.0 リリース以降で FINER レベルにアップグレードされています。|  
-|FINEST|より詳細なトレース情報を提供します。 これは最低レベルのログ記録です。<br /><br /> バージョン 1.2 の JDBC Driver には、次のログ記録カテゴリが存在し、FINEST のログ記録レベルが割り当てられていました。TDS.DATA および TDS.TOKEN。 バージョン 2.0 リリース以降でも、ログ記録レベルは FINEST から変更されていません。|  
+|FINER|パブリック メソッドのすべての開始ポイントと終了ポイント、関連するパラメーターのデータ型、パブリック クラスのすべてのパブリック プロパティなど、詳細なトレース情報を提供します。 入力パラメーター、出力パラメーター、メソッドの戻り値も含まれますが、CLOB、BLOB、NCLOB、Reader、\<stream> の戻り値の型は除きます。<br /><br /> バージョン 1.2 の JDBC Driver には、[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)、[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)、XA、[SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) の各ログ記録カテゴリが存在し、いずれも FINE のログ記録レベルが割り当てられていました。 これらは、バージョン 2.0 リリース以降で FINER レベルにアップグレードされています。|  
+|FINEST|より詳細なトレース情報を提供します。 これは最低レベルのログ記録です。<br /><br /> バージョン 1.2 の JDBC Driver には、TDS.DATA および TDS.TOKEN というログ記録カテゴリが存在し、いずれも FINEST のログ記録レベルが割り当てられていました。 バージョン 2.0 リリース以降でも、ログ記録レベルは FINEST から変更されていません。|  
 |OFF|ログ記録をオフにします。|  
 |ALL|すべてのメッセージのログ記録を有効にします。|  
   

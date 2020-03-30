@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 51dc2ba27e346dea75f1bd347491d4932695fd43
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68077532"
 ---
 # <a name="configure-sql-server-integration-services-on-linux-with-ssis-conf"></a>ssis-conf を使用して Linux で SQL Server Integration Services を構成する
@@ -23,7 +23,7 @@ Red Hat Enterprise Linux および Ubuntu 用の SQL Server Integration Services
 
 `ssis-conf` ユーティリティを使用して、次のプロパティを構成することもできます。
 
-| command | [説明] |
+| command | 説明 |
 |-------------|---------------------------------------------------------------------|
 | set-edition | SQL Server のエディションを設定します。                                       |
 | telemetry   | SQL Server Integration Services のテレメトリ サービスを有効または無効にします。 |

@@ -20,10 +20,10 @@ ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d9dacd09604661f9880533fcdcafd2fb7ab9ab12
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67914591"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
@@ -51,7 +51,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  *flags*  
  XML データとリレーショナル行セットとの間で使用するマッピング、およびオーバーフローした列の処理方法を指定します。 *flags* は省略可能な入力パラメーターで、次のいずれかの値を指定できます。  
   
-|バイト値|[説明]|  
+|バイト値|説明|  
 |----------------|-----------------|  
 |**0**|既定では、**属性中心**のマッピングが使用されます。|  
 |**1**|**属性中心**のマッピングを使用します。 XML_ELEMENTS と組み合わせることができます。 この場合、最初に**属性中心**のマッピングが適用されます。 次に、**要素中心**のマッピングが残りの列に適用されます。|  
@@ -85,7 +85,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
   
  次の表で、**エッジ** テーブルの構造について説明します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|ドキュメント ノードの一意の ID。<br /><br /> ルート要素の ID 値は 0 です。 負の ID 値は予約済みです。|  
 |**parentid**|**bigint**|ノードの親の識別子。 この ID によって識別される親は、必ずしも親要素ではなく、ノードの NodeType に依存します。その親は、この ID によって識別されます。 たとえば、ノードがテキスト ノードである場合、その親は属性ノードである場合もあります。<br /><br /> ノードが XML ドキュメントの最上位にある場合、その **ParentID** は NULL になります。|  

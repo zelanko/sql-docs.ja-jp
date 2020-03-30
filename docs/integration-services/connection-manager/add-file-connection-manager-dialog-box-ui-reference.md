@@ -15,10 +15,10 @@ ms.assetid: 9370bfb5-5993-4ad8-a9cd-2de53f320f34
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dc0df82879f835428640b403a5d9b2befa66e34a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294495"
 ---
 # <a name="add-file-connection-manager-dialog-box-ui-reference"></a>[ファイル接続マネージャーの追加] ダイアログ ボックスの UI リファレンス
@@ -37,7 +37,7 @@ ms.locfileid: "71294495"
  **[使用法の種類]**  
  複数のファイルの接続マネージャーに使用するファイルの種類を指定します。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**[ファイルの作成]**|接続マネージャーはファイルを作成します。|  
 |**[既存のファイル]**|接続マネージャーは既存のファイルを使用します。|  

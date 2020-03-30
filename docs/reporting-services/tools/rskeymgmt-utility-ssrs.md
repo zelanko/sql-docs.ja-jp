@@ -20,10 +20,10 @@ ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5ebbda456c402372e7505968414bc044eec87ec4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082146"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt ユーティリティ (SSRS)

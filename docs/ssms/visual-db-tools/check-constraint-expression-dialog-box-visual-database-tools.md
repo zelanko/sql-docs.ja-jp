@@ -14,10 +14,10 @@ ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
 ms.openlocfilehash: fcd0eacf11390947248208310eba3ddec40089ce
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75255496"
 ---
 # <a name="check-constraint-expression-dialog-box-visual-database-tools"></a>[制約式の確認] ダイアログ ボックス (Visual Database Tools)
@@ -56,7 +56,7 @@ NOT (payment_method = 'credit card') OR
   
 SQL 構文は、次のパラメーターで構成されています。  
   
-|パラメーター|[説明]|  
+|パラメーター|説明|  
 |-------------|---------------|  
 |定数 (constant)|数値データ、文字データなどのリテラル値です。 文字データは単一引用符 (') で囲む必要があります。|  
 |column_name|列を指定します。|  

@@ -30,10 +30,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 84271c14e5768728c877b78b63b599d5ef352ecd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74909028"
 ---
 # <a name="revoke-transact-sql"></a>REVOKE (Transact-SQL)
@@ -159,7 +159,7 @@ REVOKE
   
  sysadmin 固定サーバー ロールのメンバーなど、CONTROL SERVER 権限が許可されているユーザーは、サーバー内のセキュリティ保護可能なリソースに対する権限を取り消すことができます。 db_owner 固定データベース ロールのメンバーなど、データベースに対する CONTROL 権限が許可されているユーザーは、データベース内のセキュリティ保護可能なリソースに対する権限を取り消すことができます。 スキーマに対する CONTROL 権限が許可されているユーザーは、スキーマ内のオブジェクトに対する権限を取り消すことができます。  
   
-##  <a name="securable"></a> セキュリティ保護可能なリソース別の構文  
+##  <a name="securable-specific-syntax"></a><a name="securable"></a> セキュリティ保護可能なリソース別の構文  
  次の表は、セキュリティ保護可能なリソースと、セキュリティ保護可能なリソース固有の構文について説明しているトピックの一覧です。  
   
 |セキュリティ保護可能|トピック|  

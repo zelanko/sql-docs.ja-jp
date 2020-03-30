@@ -11,10 +11,10 @@ ms.assetid: 9d5481d5-13bc-4388-b3aa-78676c0fc709
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fe0f0cc2ec15fcdb871f290f03565482a8477995
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67936268"
 ---
 # <a name="pdoerrorinfo"></a>PDO::errorInfo
@@ -46,7 +46,7 @@ PDO::errorInfo は、データベースで直接実行された操作のエラ�
 PDO のサポートは [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 2.0 で追加されました。  
   
 ## <a name="example"></a>例  
-この例では、列の名前が間違っており (`City` ではなく `Cityx`)、エラーが発生します。そのエラーは報告されます。  
+この例では、列の名前が間違っており (`Cityx` ではなく `City`)、エラーが発生します。そのエラーは報告されます。  
   
 ```  
 <?php  

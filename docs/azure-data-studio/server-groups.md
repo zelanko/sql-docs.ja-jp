@@ -11,13 +11,13 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: a1edfb7566d47b8c02dbd53fcccbd7441239a949
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67959308"
 ---
-# <a name="server-groups-in-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] のサーバー グループ
+# <a name="server-groups-in-name-sos"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] のサーバー グループ
 
 サーバー グループを使用すると、使用するサーバーやデータベースへの接続を整理することができます。 サーバー グループを作成すると、構成の詳細が*ユーザー設定*に保存されます。
 

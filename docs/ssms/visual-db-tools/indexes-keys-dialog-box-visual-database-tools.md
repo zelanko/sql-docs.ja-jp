@@ -15,10 +15,10 @@ ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
 ms.openlocfilehash: 7043ec4173bf1a14ca80b915e1ea6ac10fd0d72d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75224920"
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>[インデックス/キー] ダイアログ ボックス (Visual Database Tools)
@@ -116,6 +116,6 @@ ms.locfileid: "75224920"
 該当するインデックスで行レベルのロックを許可するかどうかを指定します。 行レベル ロックの許可、非許可はデータベースのパフォーマンスに影響を与えます。 推奨設定値は **[はい]** です。  
   
 ## <a name="see-also"></a>参照  
-[制約の使用(https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
+[制約の使用 (https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
 [キーの操作(https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd)  
   

@@ -9,10 +9,10 @@ ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 14496cc4e46118b5421f4d061136f7b1c5b16850
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080493"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>ページ番号またはその他のレポート プロパティの表示 (レポート ビルダーおよび SSRS)
@@ -32,7 +32,7 @@ ms.locfileid: "77080493"
   
 -   User ID  
   
--   Language  
+-   言語  
   
  ページ番号については、番号の前に "ページ" という語を追加したり、 総ページ数を表示したりすることもできます。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "77080493"
   
 1.  [&PageNumber] が含まれているテキスト ボックスを右クリックし、 **[式]** をクリックします。  
   
-     **[式の設定:値]** テキスト ボックスに、=Globals!PageNumber という式が含まれています。  
+     **[式の設定: 値]** テキスト ボックスに、=Globals!PageNumber という式が含まれています。  
   
 2.  = (等号) の後ろにカーソルを置き、「 **"ページ " &** 」と入力します。  
   

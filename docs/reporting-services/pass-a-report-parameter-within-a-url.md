@@ -12,10 +12,10 @@ ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 551fc19b3d39ef6cf12c5fdd4e77196b0abbb9fe
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65580835"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>URL 内でレポート パラメーターを渡す
@@ -81,7 +81,7 @@ SalesOrderNumber:isnull=true
 > [!NOTE]  
 >  既定値を持つレポート パラメーターがレポートに含まれており、 **Prompt** プロパティの値が **false** である場合 (つまりレポート マネージャーで Prompt User プロパティが選択されていない場合)、URL 内でそのレポート パラメーターに値を渡すことはできません。 管理者はこの方法を使用して、エンド ユーザーが特定のレポート パラメーターの値を追加したり変更したりすることを禁止できます。  
   
-##  <a name="bkmk_examples"></a> その他の例  
+##  <a name="additional-examples"></a><a name="bkmk_examples"></a> その他の例  
  次の URL の例には、空白や複数のパラメーターが含まれています。  
   
 -   "SQL Server User Education Team" のフォルダー名には空白が含まれているため、各空白が "+" に置き換わります。  

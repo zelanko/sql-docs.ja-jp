@@ -11,10 +11,10 @@ ms.assetid: abe8ff37-72e5-4ec1-a226-6b68dbf2c1b4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ac6e2d368e39bc5a40cc40f7509fbf0b715e4f94
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67998258"
 ---
 # <a name="updatesqlxml-method-sqlserverresultset"></a>updateSQLXML メソッド (SQLServerResultSet)
@@ -24,7 +24,7 @@ ms.locfileid: "67998258"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|Name|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[updateSQLXML メソッド &#40;int, java.sql.SQLXML&#41;](../../../connect/jdbc/reference/updatesqlxml-method-int-java-sql-sqlxml.md)|指定された列を **SQLXML** 値で更新します。|  
 |[updateSQLXML メソッド &#40;java.lang.String, java.sql.SQLXML&#41;](../../../connect/jdbc/reference/updatesqlxml-method-java-lang-string-java-sql-sqlxml.md)|指定された列を **SQLXML** 値で更新します。|  

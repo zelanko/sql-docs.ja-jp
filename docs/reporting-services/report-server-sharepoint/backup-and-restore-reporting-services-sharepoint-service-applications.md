@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 93f3eb7db9c00f98d1d4270e9febc105eb6ef6b3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65574344"
 ---
 # <a name="back-up-and-restore-reporting-services-sharepoint-service-applications"></a>Reporting Services SharePoint サービス アプリケーションのバックアップと復元
@@ -31,7 +31,7 @@ ms.locfileid: "65574344"
 ### <a name="limitations-and-restrictions"></a>制限事項と制約事項
 
 > [!NOTE]
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションは、SharePoint のバックアップおよび復元機能を使用して、部分的にバックアップおよび復元できます。 これには**追加の手順が必要** であり、その手順はこのトピック内に記載されています。 現在、バックアップ プロセスでは、自動実行アカウント (UEA) または Windows 認証用の暗号化キーと資格情報は [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データベースにバックアップ**されません**。
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションは、SharePoint のバックアップおよび復元機能を使用して、部分的にバックアップおよび復元できます。 これには**追加の手順が必要** であり、その手順はこのトピック内に記載されています。 現在、バックアップ プロセスでは、自動実行アカウント (UEA) または Windows 認証用の暗号化キーと資格情報は  **データベースにバックアップ**されません[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。
 
 ### <a name="recommendations"></a>Recommendations
   
@@ -77,7 +77,7 @@ ms.locfileid: "65574344"
   
 ### <a name="verify-execution-account-and-database-authentication"></a>実行アカウントとデータベース認証の確認
 
- **実行アカウント:** サービス アプリケーションが実行アカウントを使用しているかどうかを確認するには、次の手順を行います。  
+ **実行アカウント** : サービス アプリケーションが実行アカウントを使用しているかどうかを確認するには、次の手順を実行します。  
   
 1.  SharePoint サーバーの全体管理で、 **[アプリケーション管理]** グループの **[サービス アプリケーションの管理]** を選びます。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "65574344"
   
 4.  実行アカウントが構成されている場合は、サービス アプリケーションのバックアップを復元する際に資格情報が必要になります。 必ず、正しい資格情報を確認してからバックアップおよび復元の手順に進んでください。  
   
- **データベース認証:** サービス アプリケーションがデータベース認証用に Windows 認証を使用しているかどうかを確認するには、次の手順を行います。  
+ **データベース認証** : サービス アプリケーションがデータベース認証用に Windows 認証を使用しているかどうかを確認するには、次の手順を実行します。  
   
 1.  SharePoint サーバーの全体管理で、 **[アプリケーション管理]** グループの **[サービス アプリケーションの管理]** を選びます。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "65574344"
 
 ### <a name="configure-the-execution-account-and-database-authentication"></a>実行アカウントとデータベース認証の構成
 
- **実行アカウント:** サービス アプリケーションが実行アカウントを使用していた場合は、次の手順を実行して実行アカウントを構成します。  
+ **実行アカウント** : サービス アプリケーションが実行アカウントを使用していた場合は、次の手順を実行して実行アカウントを構成します。  
   
 1.  SharePoint サーバーの全体管理で、 **[アプリケーション管理]** グループの **[サービス アプリケーションの管理]** を選びます。  
   
@@ -147,7 +147,7 @@ ms.locfileid: "65574344"
   
 5.  **[OK]** を選択します。  
   
- **データベース認証:** サービス アプリケーションがデータベース認証用に Windows 認証を使用していた場合は、次の手順を行います。  
+ **データベース認証** : サービス アプリケーションがデータベース認証用に Windows 認証を使用していた場合は、次の手順を実行します。  
   
 1.  SharePoint サーバーの全体管理で、 **[アプリケーション管理]** グループの **[サービス アプリケーションの管理]** を選びます。  
   

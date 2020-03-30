@@ -16,10 +16,10 @@ ms.assetid: c19e9ca6-2a53-4a0c-91ab-80090c3f7229
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9a19bd01a8ebf54eb3e819bd4a82400b8107e382
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67954024"
 ---
 # <a name="getbestrowidentifier-method-sqlserverdatabasemetadata"></a>getBestRowIdentifier メソッド (SQLServerDatabaseMetaData)
@@ -76,7 +76,7 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
   
  getBestRowIdentifier メソッドによって返される結果セットには、次の情報が含まれます。  
   
-|Name|Type|説明|  
+|Name|種類|説明|  
 |----------|----------|-----------------|  
 |SCOPE|short|返される結果のスコープです。 次のいずれかの値を指定できます。<br /><br /> bestRowTemporary (0)<br /><br /> bestRowTransaction (1)<br /><br /> bestRowSession (2)|  
 |COLUMN_NAME|String|列の名前です。|  

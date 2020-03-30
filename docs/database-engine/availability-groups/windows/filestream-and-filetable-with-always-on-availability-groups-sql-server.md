@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 6398c949f5cccbd6c437eaddba04ab5bb32aae12
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68008411"
 ---
 # <a name="use-filestream-and-filetable-with-always-on-availability-groups"></a>Always On 可用性グループで FILESTREAM と FileTable を使用する
@@ -32,11 +32,11 @@ ms.locfileid: "68008411"
   
  FileTable 機能は部分的にサポートされています。 フェールオーバー後、FileTable データはプライマリ レプリカ上でアクセスできますが、読み取り可能なセカンダリ レプリカ上ではアクセスできません。  
   
-##  <a name="Prerequisites"></a> 前提条件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
   
 -   FileTable を使用するかどうかにかかわらず、FILESTREAM を使用するデータベースを可用性グループに追加する前に、その可用性グループの可用性レプリカをホストするすべてのサーバー インスタンスで FILESTREAM が有効になっていることを確認してください。 詳細については、「 [Enable and Configure FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)」をご覧ください。  
   
-##  <a name="vnn"></a> FILESTREAM および FileTable アクセスでの仮想ネットワーク名 (VNN) の使用  
+##  <a name="using-virtual-network-names-vnns-for-filestream-and-filetable-access"></a><a name="vnn"></a> FILESTREAM および FileTable アクセスでの仮想ネットワーク名 (VNN) の使用  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスで FILESTREAM を有効にすると、インスタンス レベルでの共有が作成され、FILESTREAM データにアクセスできるようになります。 この共有にアクセスするには、次の形式でコンピューター名を使用します。  
   
  `\\<computer_name>\<filestream_share_name>`  
@@ -69,13 +69,13 @@ ms.locfileid: "68008411"
   
  データベースが可用性グループの一部ではない場合、アプリケーションで VNN スコープのパスを使用して共有にアクセスしようとすると、要求が正常に終了します。 この場合、仮想ネットワーク名は、コンピューター名に解決されます。 ただし、可用性グループが削除されると VNN スコープのパスの動作が停止するため、この使用法はお勧めしません。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [FILESTREAM の有効化と構成](../../../relational-databases/blob/enable-and-configure-filestream.md)  
   
 -   [FileTable の前提条件の有効化](../../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)  
   
-##  <a name="RelatedContent"></a> 関連コンテンツ  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 関連コンテンツ  
  [なし] :  
   
 ## <a name="see-also"></a>参照  

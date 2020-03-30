@@ -17,10 +17,10 @@ ms.assetid: c02f6942-0484-4567-a78e-fe8aa2053536
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8ef4bd58d352216cd4c64fe6c18a9ffd6dd3b13a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76939574"
 ---
 # <a name="sqlsrv_field_metadata"></a>sqlsrv_field_metadata
@@ -36,7 +36,7 @@ sqlsrv_field_metadata( resource $stmt)
 ```  
   
 #### <a name="parameters"></a>パラメーター  
-*$stmt*:フィールドのメタデータを要求するステートメント リソース。  
+*$stmt*: フィールドのメタデータを要求するステートメント リソース。  
   
 ## <a name="return-value"></a>戻り値  
 配列の **array** 、または **false**。 array は、結果セット内のフィールドごとに 1 つの配列で構成されます。 各サブ配列には、次の表で示すようなキーがあります。 フィールド メタデータの取得中にエラーが発生した場合は、 **false** が返されます。  
@@ -44,7 +44,7 @@ sqlsrv_field_metadata( resource $stmt)
 |Key|説明|  
 |-------|---------------|  
 |Name|フィールドが対応する列の名前。|  
-|Type|SQL 型に対応する数値。|  
+|種類|SQL 型に対応する数値。|  
 |Size|文字型 (char(n)、varchar(n)、nchar(n)、nvarchar(n)、XML) のフィールドの文字数。 バイナリ型 (binary(n)、varbinary(n)、UDT) のフィールドのバイト数。 他の SQL Server データ型の場合は**NULL** 。|  
 |Precision|可変精度の型 (real、numeric、decimal、datetime2、datetimeoffset、time) の有効桁数。 他の SQL Server データ型の場合は**NULL** 。|  
 |スケール|可変スケールの型 (numeric、decimal、datetime2、datetimeoffset、time) のスケール。 他の SQL Server データ型の場合は**NULL** 。|  
@@ -52,7 +52,7 @@ sqlsrv_field_metadata( resource $stmt)
   
 次の表では、各サブ配列のキーについての詳細を示します (これらの型の詳細については、SQL Server のマニュアルを参照してください)。  
   
-|SQL Server 2008 のデータ型|Type|最小/最大有効桁数|最小/最大スケール|Size|  
+|SQL Server 2008 のデータ型|種類|最小/最大有効桁数|最小/最大スケール|Size|  
 |-----------------------------|--------|----------------------|------------------|--------|  
 |bigint|SQL_BIGINT (-5)|||8|  
 |binary|SQL_BINARY (-2)|||0 < *n* < 8000 <sup>1</sup>|  
@@ -128,7 +128,7 @@ sqlsrv_close($conn);
 
 ## <a name="sensitivity-data-classification-metadata"></a>秘密度データ分類のメタデータ
 
-バージョン5.8.0 では、Microsoft SQL Server 2019 上で `sqlsrv_field_metadata` を使用して、ユーザーが[秘密度データ分類のメタデータ](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4)にアクセスするために、新しいオプション `DataClassification` が導入されています。Microsoft ODBC Driver 17.4.2 以降が必要になります。
+バージョン5.8.0 では、Microsoft SQL Server 2019 上で `DataClassification` を使用して、ユーザーが[秘密度データ分類のメタデータ](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4)にアクセスするために、新しいオプション `sqlsrv_field_metadata` が導入されています。Microsoft ODBC Driver 17.4.2 以降が必要になります。
 
 既定で、オプション `DataClassification` は `false` になっていますが、`true` に設定されると、秘密度データ分類のメタデータがある場合には、`sqlsrv_field_metadata` によって返された配列には、そのデータが入力されます。 
 
@@ -213,7 +213,7 @@ Array
 )
 ```
 
-`sqlsrv_prepare` ではなく `sqlsrv_query` を使用する場合、上記のスニペットは次のように変更できます。
+`sqlsrv_query` ではなく `sqlsrv_prepare` を使用する場合、上記のスニペットは次のように変更できます。
 
 ```
 $tableName = 'Patients';

@@ -16,10 +16,10 @@ ms.assetid: 134f1455-c98c-4112-ab2d-9205a0db73df
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 21664ab5f612689949f65ffb237a50c8747d1cd4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67956007"
 ---
 # <a name="addbatch-method-sqlserverpreparedstatement"></a>addBatch メソッド (SQLServerPreparedStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67956007"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|Name|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[addBatch ()](../../../connect/jdbc/reference/addbatch-method.md)|[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) オブジェクトへのコマンド バッチにパラメーターのセットを追加します。|  
 |[addBatch (java.lang.String)](../../../connect/jdbc/reference/addbatch-method-java-lang-string.md)|渡された SQL コマンドを、[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) オブジェクトの現在のコマンド一覧に追加します。|  

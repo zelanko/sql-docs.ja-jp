@@ -18,10 +18,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.openlocfilehash: 673cde844a678e54ccb5622a55e2d546cf7e9bc9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75246525"
 ---
 # <a name="export-registered-server-information-sql-server-management-studio"></a>登録済みサーバー情報のエクスポート (SQL Server Management Studio)

@@ -16,10 +16,10 @@ ms.assetid: f70971d5-34cc-4f70-8a91-5d46356b24ae
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 15617e1d5dda6315547228e07853c373f9eb1a37
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67999034"
 ---
 # <a name="updatedouble-method-javalangstring-double"></a>updateDouble (java.lang.String, double) メソッド
@@ -42,7 +42,7 @@ public void updateDouble(java.lang.String columnName,
   
  *x*  
   
- **double** 値。  
+ **double** 値です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

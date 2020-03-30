@@ -9,10 +9,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4b53e333802af9bd70e51ad320300c6f868dea43
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73843769"
 ---
 # <a name="restore-stretch-enabled-databases-stretch-database"></a>Stretch 対応データベースの復元 (Stretch Database)
@@ -58,7 +58,7 @@ Azure ポータルを使用して、削除された Azure データベースを�
 5. 新しい **データベース名** を指定し、 **[作成]** をクリックします。
 6. データベースの復元処理が開始され、 **[通知]** を使用して監視できます。
 
-## <a name="reconnect"></a>SQL Server データベースと Azure リモート データベース間の接続を復元する
+## <a name="restore-the-connection-between-the-sql-server-database-and-the-remote-azure-database"></a><a name="reconnect"></a>SQL Server データベースと Azure リモート データベース間の接続を復元する
 
 1.  異なる名前または異なるリージョンの復元された Azure データベースに接続するには、ストアド プロシージャ [sys.sp_rda_deauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md) を実行して、以前の Azure データベースから切断します。  
   

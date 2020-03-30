@@ -26,10 +26,10 @@ ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6eeec8517b9b55e30eb51abc25fefed0b36b2a79
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65579003"
 ---
 # <a name="manage-a-running-process"></a>Manage a Running Process
@@ -64,7 +64,7 @@ ms.locfileid: "65579003"
   
 -   [プログラムによるジョブの管理](#bkmk_programmatically)  
   
-##  <a name="bkmk_native"></a> ジョブの表示とキャンセル (ネイティブ モード)  
+##  <a name="view-and-cancel-jobs-native-mode"></a><a name="bkmk_native"></a> ジョブの表示とキャンセル (ネイティブ モード)  
  レポート サーバーで実行中のジョブは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用して表示したり取り消したりできます。 現在実行中のジョブの一覧を取得したり、最新のジョブ ステータスをレポート サーバー データベースから取得したりするには、ページを更新する必要があります。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]からレポート サーバーに接続する際、[ジョブ] フォルダーを開くと、現在レポート サーバー コンピューターで処理中のレポートを一覧表示できます。 [ジョブのプロパティ] ページに、各ジョブのステータス情報が表示されます。 [レポート サーバー ジョブのキャンセル] ダイアログ ボックスを開くことによって、すべてのジョブのステータス情報を確認できます。  
   
  レポート サーバーで実行中のジョブは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用して表示したり取り消したりできます。 現在実行中のジョブの一覧を取得したり、最新のジョブ ステータスをレポート サーバー データベースから取得したりするには、ページを更新する必要があります。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]からレポート サーバーに接続する際、[ジョブ] フォルダーを開くと、現在レポート サーバー コンピューターで処理中のレポートを一覧表示できます。 [ジョブのプロパティ] ページに、各ジョブのステータス情報が表示されます。 [レポート サーバー ジョブのキャンセル] ダイアログ ボックスを開くことによって、すべてのジョブのステータス情報を確認できます。  
@@ -98,7 +98,7 @@ ms.locfileid: "65579003"
 ### <a name="configuring-frequency-settings-for-retrieving-job-status"></a>ジョブ ステータスの取得間隔の設定  
  実行中のジョブは、レポート サーバーの一時データベースに格納されます。 RSReportServer.config ファイルで構成設定を変更し、レポート サーバーによる実行中のジョブをスキャンする頻度と実行ジョブの状態を新規から実行中に変更するまでの間隔を制御できます。 **RunningRequestsDbCycle** 設定では、レポート サーバーによって実行中である処理のスキャンの頻度を指定します。 既定では、状態情報は 60 秒ごとに記録されます。 **RunningRequestsAge** 設定では、ジョブが新規から実行中に遷移するまでの間隔を指定します。  
   
-##  <a name="bkmk_sharepoint"></a> ジョブの表示とキャンセル (SharePoint モード)  
+##  <a name="view-and-cancel-jobs-sharepoint-mode"></a><a name="bkmk_sharepoint"></a> ジョブの表示とキャンセル (SharePoint モード)  
  SharePoint モードでの配置のジョブの管理は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションごとに、SharePoint サーバーの全体管理を使用して行います。  
   
 #### <a name="to-manage-jobs-in-sharepoint-mode"></a>SharePoint モードでジョブを管理するには  
@@ -113,7 +113,7 @@ ms.locfileid: "65579003"
   
 5.  または、ジョブのボックスをクリックして **[削除]** をクリックし、ジョブをキャンセルします。 ジョブを削除しても、サブスクリプションは削除されません。  
   
-##  <a name="bkmk_programmatically"></a> プログラムによるジョブの管理  
+##  <a name="managing-jobs-programmatically"></a><a name="bkmk_programmatically"></a> プログラムによるジョブの管理  
  ジョブは、プログラムまたはスクリプトを使用して管理できます。 詳細については、「 <xref:ReportService2010.ReportingService2010.ListJobs%2A>」と「 <xref:ReportService2010.ReportingService2010.CancelJob%2A>の両方を管理できます。  
   
 ## <a name="see-also"></a>参照  

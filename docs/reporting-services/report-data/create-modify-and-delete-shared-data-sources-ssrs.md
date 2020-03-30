@@ -17,10 +17,10 @@ ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3cb8f79b892b639e618143fd138920650fb5cfda
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081818"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>共有データ ソースを作成、変更、および削除する (SSRS)
@@ -32,7 +32,7 @@ ms.locfileid: "77081818"
   
 |要素|説明|  
 |----------|-----------------|  
-|名前|レポート サーバーのフォルダー階層内にあるアイテムを識別する名前。|  
+|Name|レポート サーバーのフォルダー階層内にあるアイテムを識別する名前。|  
 |説明|Web ポータルでフォルダーの内容を参照したときに、アイテムと共に表示される説明です。|  
 |接続の種類|データ ソースで使用するデータ処理拡張機能です。 レポート サーバーに配置されているデータ処理拡張機能のみ使用できます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に含まれているデータ処理拡張機能については、「[Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)」を参照してください。|  
 |接続文字列|データベースの接続文字列です。 よく使われるデータ ソースの接続文字列の詳細と例を確認するには、「[データ接続文字列を作成する - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」を参照してください。|  

@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: be9653d66ef541ebf27cb31c8092b79c2e1bf612
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65579875"
 ---
 # <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer"></a>レポート ビューアーでのローカル モードと接続モードのレポート
@@ -36,7 +36,7 @@ ms.locfileid: "65579875"
   
  ローカル モード レポートをサポートしているデータ処理拡張機能の一覧を次に示します。  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access 2010 レポート拡張機能。 Access Services の詳細については、「[Access Services と SQL Reporting Services の併用:SQL Server 2008 R2 Reporting Services アドインのインストール (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?LinkId=192686)」を参照してください。  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access 2010 レポート拡張機能。 Access Services の詳細については、「 [Access Services と SQL Reporting Services の併用: SQL Server 2008 R2 Reporting Services アドインのインストール (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?LinkId=192686)」を参照してください。  
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint リスト データ拡張機能。 SharePoint リスト データ拡張機能の詳細については、「 [Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
   
@@ -75,7 +75,7 @@ ms.locfileid: "65579875"
   
 4.  IIS リセットを実行します。  
   
- 詳細については、「[Access Services と SQL Reporting Services の併用:SQL Server 2008 R2 Reporting Services アドインのインストール (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?LinkId=192686)」および「[Enable-SPSessionStateService](https://technet.microsoft.com/library/ff607857\(v=office.15\).aspx)」を参照してください。  
+ 詳細については、「 [Access Services と SQL Reporting Services の併用: SQL Server 2008 R2 Reporting Services アドインのインストール (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?LinkId=192686) 」および「 [Enable-SPSessionStateService](https://technet.microsoft.com/library/ff607857\(v=office.15\).aspx)」を参照してください。  
   
 ## <a name="connected-mode"></a>接続モード
 

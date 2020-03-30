@@ -13,20 +13,20 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 76fc14c112d47f04fc790df118eea77f1bec42cb
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896602"
 ---
 # <a name="provider-statistics-for-sql-server"></a>SQL Server のプロバイダー統計情報
 
 [!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
-.NET Framework バージョン 2.0 および .NET Core バージョン 1.0 以降、Microsoft SqlClient Data Provider for SQL Server では実行時の統計情報がサポートされています。 有効な接続オブジェクトが作成されたら、<xref:Microsoft.Data.SqlClient.SqlConnection> オブジェクトの <xref:Microsoft.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> プロパティを `True` に設定して、統計を有効にする必要があります。 統計情報が有効になったら、<xref:Microsoft.Data.SqlClient.SqlConnection> オブジェクトの <xref:Microsoft.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> メソッドを使用して、<xref:System.Collections.IDictionary> 参照を取得することにより、それらを "特定の時点のスナップショット" として確認できます。 名前と値のペアの辞書エントリのセットとしてリストを列挙します。 これらの名前と値のペアは順不同です。 カウンターはいつでも、<xref:Microsoft.Data.SqlClient.SqlConnection> オブジェクトの <xref:Microsoft.Data.SqlClient.SqlConnection.ResetStatistics%2A> メソッドを呼び出してリセットできます。 統計情報の収集が有効にされていない場合、例外は生成されません。 さらに、最初に <xref:Microsoft.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> を呼び出すことなく <xref:Microsoft.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> が呼び出された場合、取得される値は各エントリの初期値になります。 統計を有効にし、アプリケーションをしばらく実行してから統計を無効にした場合、取得される値には、統計を無効にした時点までに収集された値が反映されます。 すべての統計値は接続ごとに収集されます。  
+.NET Framework バージョン 2.0 および .NET Core バージョン 1.0 以降、Microsoft SqlClient Data Provider for SQL Server では実行時の統計情報がサポートされています。 有効な接続オブジェクトが作成されたら、<xref:Microsoft.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> オブジェクトの <xref:Microsoft.Data.SqlClient.SqlConnection> プロパティを `True` に設定して、統計を有効にする必要があります。 統計情報が有効になったら、<xref:System.Collections.IDictionary> オブジェクトの <xref:Microsoft.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> メソッドを使用して、<xref:Microsoft.Data.SqlClient.SqlConnection> 参照を取得することにより、それらを "特定の時点のスナップショット" として確認できます。 名前と値のペアの辞書エントリのセットとしてリストを列挙します。 これらの名前と値のペアは順不同です。 カウンターはいつでも、<xref:Microsoft.Data.SqlClient.SqlConnection.ResetStatistics%2A> オブジェクトの <xref:Microsoft.Data.SqlClient.SqlConnection> メソッドを呼び出してリセットできます。 統計情報の収集が有効にされていない場合、例外は生成されません。 さらに、最初に <xref:Microsoft.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> を呼び出すことなく <xref:Microsoft.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> が呼び出された場合、取得される値は各エントリの初期値になります。 統計を有効にし、アプリケーションをしばらく実行してから統計を無効にした場合、取得される値には、統計を無効にした時点までに収集された値が反映されます。 すべての統計値は接続ごとに収集されます。  
   
 ## <a name="statistical-values-available"></a>使用可能な統計値  
-現在、Microsoft SQL Server プロバイダーから 18 種類の項目を使用できます。 使用できる項目の数を確認するには、<xref:Microsoft.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> により返される <xref:System.Collections.IDictionary> インターフェイス参照の **Count** プロパティを使用します。 プロバイダーの統計情報のカウンターはすべて、64 ビット幅である共通言語ランタイムの <xref:System.Int64> 型 (C# と Visual Basic の場合は **long**) を使用します。 **int64** データ型の最大値は、**int64.MaxValue** フィールドにより定義されているように、((2^63)-1)) です。 カウンターの値がこの最大値に達すると、正確であると見なされなくなります。 つまり、**int64.MaxValue**-1((2^63)-2) は、事実上、すべての統計情報について有効な値の最大値になります。  
+現在、Microsoft SQL Server プロバイダーから 18 種類の項目を使用できます。 使用できる項目の数を確認するには、**により返される** インターフェイス参照の <xref:System.Collections.IDictionary>Count<xref:Microsoft.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> プロパティを使用します。 プロバイダーの統計情報のカウンターはすべて、64 ビット幅である共通言語ランタイムの <xref:System.Int64> 型 (C# と Visual Basic の場合は **long**) を使用します。 **int64** データ型の最大値は、**int64.MaxValue** フィールドにより定義されているように、((2^63)-1)) です。 カウンターの値がこの最大値に達すると、正確であると見なされなくなります。 つまり、**int64.MaxValue**-1((2^63)-2) は、事実上、すべての統計情報について有効な値の最大値になります。  
   
 > [!NOTE]
 >  返される統計の数、名前、および順序は将来変更される可能性があるため、プロバイダー統計情報を返す場合には、辞書を使用します。 アプリケーションでは、辞書にある特定の値に依存しないようにする必要がありますが、その値が存在するかどうかを確認し、それに応じて分岐する必要があります。  
@@ -58,7 +58,7 @@ ms.locfileid: "78896602"
 次のコンソール アプリケーションでは、接続についての統計を有効にし、4 つの各統計値を取得して、それらをコンソール ウィンドウに書き込む方法を示しています。  
   
 > [!NOTE]
->  次の例では、SQL Server に含まれるサンプルの **AdventureWorks** データベースを使用します。 サンプル コードに示されている接続文字列は、データベースがローカル コンピューターにインストールされ、使用可能であることを前提としています。 実際の環境の必要に応じて接続文字列を変更してください。  
+>  次の例では、SQL Server に含まれるサンプルの **AdventureWorks** データベースを使用します。 サンプル コードに示されている接続文字列は、データベースがローカル コンピューターにインストールされ、使用可能であることを前提としています。 実際の環境では必要に応じて接続文字列を変更してください。  
   
 ```csharp  
 using System;  
@@ -143,7 +143,7 @@ namespace CS_Stats_Console_GetValue
 次のコンソール アプリケーションでは、接続についての統計を有効にし、列挙子を使用して使用可能なすべての統計値を取得して、それらをコンソール ウィンドウに書き込む方法を示しています。  
   
 > [!NOTE]
->  次の例では、SQL Server に含まれるサンプルの **AdventureWorks** データベースを使用します。 サンプル コードに示されている接続文字列は、データベースがローカル コンピューターにインストールされ、使用可能であることを前提としています。 実際の環境の必要に応じて接続文字列を変更してください。  
+>  次の例では、SQL Server に含まれるサンプルの **AdventureWorks** データベースを使用します。 サンプル コードに示されている接続文字列は、データベースがローカル コンピューターにインストールされ、使用可能であることを前提としています。 実際の環境では必要に応じて接続文字列を変更してください。  
   
 ```csharp  
 using System;  

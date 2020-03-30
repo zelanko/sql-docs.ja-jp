@@ -25,10 +25,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 21445e5a736159123c797e18d4dae3ece58c6a02
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75255712"
 ---
 # <a name="change-an-operator39s-availability"></a>オペレーターの可用性の変更
@@ -39,14 +39,14 @@ ms.locfileid: "75255712"
 
 このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、オペレーターの警告通知受信スケジュールを変更する方法について説明します。  
   
-## <a name="BeforeYouBegin"></a>はじめに  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>はじめに  
   
-### <a name="Security"></a>セキュリティ  
+### <a name="security"></a><a name="Security"></a>セキュリティ  
   
-#### <a name="Permissions"></a>アクセス許可  
+#### <a name="permissions"></a><a name="Permissions"></a>アクセス許可  
 オペレーターを編集できるのは、 **sysadmin** 固定サーバー ロールのメンバーだけです。  
   
-## <a name="SSMSProcedure"></a>SQL Server Management Studio の使用  
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>SQL Server Management Studio の使用  
   
 #### <a name="to-change-an-operators-availability"></a>オペレーターが通知を受信できるかどうかを設定するには  
   
@@ -62,7 +62,7 @@ ms.locfileid: "75255712"
   
 6.  **[OK]** をクリックします。  
   
-## <a name="TsqlProcedure"></a>Transact-SQL の使用  
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a>Transact-SQL の使用  
   
 #### <a name="to-change-an-operators-availability"></a>オペレーターが通知を受信できるかどうかを設定するには  
   

@@ -11,10 +11,10 @@ ms.assetid: c92a21cc-8e53-43d0-a4bf-542c77c100c9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cb7e9e37d568659a71917df66016f2333ed4be46
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76918800"
 ---
 # <a name="pdostatementgetcolumnmeta"></a>PDOStatement::getColumnMeta
@@ -30,7 +30,7 @@ array PDOStatement::getColumnMeta ( $column );
 ```  
   
 #### <a name="parameters"></a>パラメーター  
-*$conn*:(整数) メタデータを取得する列の 0 から始まる番号。  
+*$conn*: (整数) メタデータを取得する列を示す 0 から始まる番号。  
   
 ## <a name="return-value"></a>戻り値  
 列のメタデータを格納している連想配列 (キーと値)。 配列内のフィールドの詳細については「解説」セクションを参照してください。  
@@ -71,7 +71,7 @@ print $metadata['name'];
   
 ## <a name="sensitivity-data-classification-metadata"></a>秘密度データ分類のメタデータ
 
-バージョン5.8.0 以降では、Microsoft SQL Server 2019 上で `PDOStatement::getColumnMeta` を使用して、ユーザーが[秘密度データ分類のメタデータ](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4)にアクセスするために、新しいステートメント属性 `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION` を利用できます。Microsoft ODBC Driver 17.4.2 以降が必要になります。
+バージョン5.8.0 以降では、Microsoft SQL Server 2019 上で `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION` を使用して、ユーザーが[秘密度データ分類のメタデータ](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4)にアクセスするために、新しいステートメント属性 `PDOStatement::getColumnMeta` を利用できます。Microsoft ODBC Driver 17.4.2 以降が必要になります。
 
 属性 `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION` は既定で `false` になっていますが、`true` に設定されると、秘密度データ分類のメタデータがある場合には、前述の配列フィールド `flags` にはそのデータが入力されます。 
 
@@ -93,7 +93,7 @@ ADD SENSITIVITY CLASSIFICATION TO [Patients].SSN WITH (LABEL = 'Highly Confident
 ADD SENSITIVITY CLASSIFICATION TO [Patients].BirthDate WITH (LABEL = 'Confidential Personal Data', INFORMATION_TYPE = 'Birthdays')
 ```
 
-メタデータにアクセスするには、次のスニペットに示すように、`PDO::SQLSRV_ATTR_DATA_CLASSIFICATION` を true に設定した後に `PDOStatement::getColumnMeta` を使用します。
+メタデータにアクセスするには、次のスニペットに示すように、`PDOStatement::getColumnMeta` を true に設定した後に `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION` を使用します。
 
 ```
 $options = array(PDO::SQLSRV_ATTR_DATA_CLASSIFICATION => true);

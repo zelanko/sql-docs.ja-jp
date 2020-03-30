@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: b614373ee8517c0b0aa369c9793dec323a137044
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286046"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>高可用性を使用して SQL Server ビッグ データ クラスターを展開する
@@ -76,7 +76,7 @@ SQL Server ビッグ データ クラスターは、コンテナー化アプリ�
 }
 ```
 
-次の手順では、`aks-dev-test-ha` プロファイルから開始し、ビッグ データ クラスターの展開構成をカスタマイズする方法の例について説明します。 `kubeadm` クラスターでの展開でも、同様の手順が適用されますが、`endpoints` セクションの `serviceType` には必ず `NodePort` を使用するようにしてください。
+次の手順では、`aks-dev-test-ha` プロファイルから開始し、ビッグ データ クラスターの展開構成をカスタマイズする方法の例について説明します。 `kubeadm` クラスターでの展開でも、同様の手順が適用されますが、`NodePort` セクションの `serviceType` には必ず `endpoints` を使用するようにしてください。
 
 1. ターゲットとなるプロファイルを複製します
 
@@ -132,7 +132,7 @@ SQL Server Master Readable Secondary Replicas  11.11.111.11,11111  sql-server-ma
 サーバー レベルの構成を設定する、または可用性グループにデータベースを手動で追加するなどの特定の操作では、SQL Server インスタンスに接続する必要があります。 SQL Server 2019 CU2 よりも前のバージョンでは、`sp_configure`、`RESTORE DATABASE`、または任意の可用性グループの DDL などの操作には、この種類の接続が必要になります。 既定では、ビッグ データ クラスターにインスタンス接続を有効にするエンドポイントが含まれていないため、このエンドポイントを手動で公開する必要があります。 
 
 > [!IMPORTANT]
-> SQL Server インスタンス接続用に公開されたエンドポイントでは、Active Directory が有効になっているクラスターであっても、サポートされるのは SQL 認証のみとなります。 既定では、ビッグ データ クラスターの展開中に、`sa` ログインが無効になり、`AZDATA_USERNAME` および `AZDATA_PASSWORD` 環境変数の展開時に指定された値に基づいて、新しい `sysadmin` ログインがプロビジョニングされます。
+> SQL Server インスタンス接続用に公開されたエンドポイントでは、Active Directory が有効になっているクラスターであっても、サポートされるのは SQL 認証のみとなります。 既定では、ビッグ データ クラスターの展開中に、`sa` ログインが無効になり、`sysadmin` および `AZDATA_USERNAME` 環境変数の展開時に指定された値に基づいて、新しい `AZDATA_PASSWORD` ログインがプロビジョニングされます。
 
 このエンドポイントを公開してから、復元ワークフローで作成されたデータベースを可用性グループに追加する方法の例を以下に示します。 `sp_configure` でサーバー構成を変更する場合は、SQL Server マスター インスタンスへの接続を設定するための同様の手順が適用されます。
 

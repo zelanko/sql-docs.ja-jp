@@ -18,10 +18,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.openlocfilehash: 0f7ca7c3a99165d15b7d5ac38450a3eb7e49d3a3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75241226"
 ---
 # <a name="combine-conditions-when-and-has-precedence-visual-database-tools"></a>AND が優先する場合の条件を結合する (Visual Database Tools)
@@ -63,7 +63,7 @@ AND で条件を結合するには、クエリに対して列を 2 回 (各条�
   
 ## <a name="see-also"></a>参照
 
-[OR が優先する場合に条件を結合する](../../ssms/visual-db-tools/combine-conditions-when-or-has-precedence-visual-database-tools.md)  
+[OR が優先する場合の条件の結合](../../ssms/visual-db-tools/combine-conditions-when-or-has-precedence-visual-database-tools.md)  
 [抽出条件ペインで検索条件を組み合わせる場合の規則](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
 [検索値を入力するときのルール](../../ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools.md)  
 [検索条件を指定する](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)

@@ -11,10 +11,10 @@ ms.author: maghan
 manager: jroth
 ms.reviewer: “”
 ms.openlocfilehash: fbe44c84b2a1974981dff5173015ecf0fc5e74b5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75256992"
 ---
 # <a name="required-permissions-for-sql-server-data-tools"></a>SQL Server Data Tools に必要な権限
@@ -35,7 +35,7 @@ Visual Studio でデータベースに対してアクションを実行する前
   
 -   [SQL Server 共通言語ランタイム (SQL CLR) プロジェクトに対する権限](#SQLCLRPermissions)  
   
-## <a name="DatabaseCreationAndDeploymentPermissions"></a>データベースを作成または配置する権限  
+## <a name="permissions-to-create-or-deploy-a-database"></a><a name="DatabaseCreationAndDeploymentPermissions"></a>データベースを作成または配置する権限  
 データベースを作成または配置するには、次の権限が必要です。  
   
 |||  
@@ -51,10 +51,10 @@ Visual Studio でデータベースに対してアクションを実行する前
   
 詳しくは、SQL Server オンライン ブックをご覧ください。  
   
-## <a name="DatabaseRefactoringPermissions"></a>データベースをリファクタリングする権限  
+## <a name="permissions-to-refactor-a-database"></a><a name="DatabaseRefactoringPermissions"></a>データベースをリファクタリングする権限  
 *データベース リファクタリング*は、データベース プロジェクト内でのみ行われます。 データベース プロジェクトを使用する権限が必要です。 変更をターゲット データベースに配置するまで、ターゲット データベースに対する権限は不要です。  
   
-## <a name="DatabaseUnitTestingPermissions"></a>SQL Server データベースで単体テストを実行する権限  
+## <a name="permissions-to-perform-unit-testing-on-a-sql-server-database"></a><a name="DatabaseUnitTestingPermissions"></a>SQL Server データベースで単体テストを実行する権限  
 データベースで単体テストを実行するには、次の権限が必要です。  
   
 |||  
@@ -66,10 +66,10 @@ Visual Studio でデータベースに対してアクションを実行する前
 |テストの実行前にデータベースの変更を配置する|特権コンテキストのデータベース接続を使用する必要があります。 詳細については、「[SQL Server の単体テストの実行を構成する方法](../ssdt/how-to-configure-sql-server-unit-test-execution.md)」を参照してください。|  
 |テストの実行前にデータを生成する|特権コンテキストのデータベース接続を使用する必要があります。 詳細については、「[SQL Server の単体テストの実行を構成する方法](../ssdt/how-to-configure-sql-server-unit-test-execution.md)」を参照してください。|  
   
-## <a name="DataGenerationPermissions"></a>データを生成する権限  
+## <a name="permissions-to-generate-data"></a><a name="DataGenerationPermissions"></a>データを生成する権限  
 データ ジェネレーターを使用してテスト データを生成するには、ターゲット データベース内のオブジェクトに対する **INSERT** 権限と **SELECT** 権限が必要です。 データを生成する前にデータを消去する場合は、ターゲット データベース内のオブジェクトに対する **DELETE** 権限も必要です。 テーブルの **IDENTITY** 列を再設定するには、そのテーブルを所有しているか、db_owner ロールまたは db_ddladmin ロールのメンバーである必要があります。  
   
-## <a name="SchemaAndDataComparePermissions"></a>スキーマとデータを比較する権限  
+## <a name="permissions-to-compare-schemas-and-data"></a><a name="SchemaAndDataComparePermissions"></a>スキーマとデータを比較する権限  
 スキーマまたはデータを比較するには、次の権限が必要です。  
   
 |||  
@@ -82,10 +82,10 @@ Visual Studio でデータベースに対してアクションを実行する前
   
 詳しくは、SQL Server オンライン ブックをご覧ください。  
   
-## <a name="Transact-SQLEditorPermissions"></a>Transact\-SQL エディターを実行する権限  
+## <a name="permissions-to-run-the-transact-sql-editor"></a><a name="Transact-SQLEditorPermissions"></a>Transact\-SQL エディターを実行する権限  
 Transact\-SQL エディター内で実行できる操作は、ターゲット データベースへの実行コンテキストによって決まります。  
   
-## <a name="SQLCLRPermissions"></a>SQL Server 共通言語ランタイム (SQL CLR) プロジェクトに対する権限  
+## <a name="permissions-for-sql-server-common-language-run-time-projects"></a><a name="SQLCLRPermissions"></a>SQL Server 共通言語ランタイム (SQL CLR) プロジェクトに対する権限  
 CLR プロジェクトを配置またはデバッグするために必要な権限を次の表に示します。  
   
 |アクション|必要なアクセス許可|  

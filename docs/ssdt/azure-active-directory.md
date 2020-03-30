@@ -11,10 +11,10 @@ ms.custom: seo-lt-2019
 ms.date: 10/28/2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: ed7bc77b48881351a144ed5d217454518abafcc2
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286206"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) での Azure Active Directory のサポート
@@ -29,7 +29,7 @@ Visual Studio で **[SQL Server オブジェクト エクスプローラー]** (
 
 #### <a name="which-azure-sql-products"></a>対象となる Azure SQL 製品
 
-この記事では、[Azure クラウド](https://azure.microsoft.com/)の次の *Azure SQL 製品*を対象に Azure AD について説明します。
+この記事では、*Azure クラウド*の次の [Azure SQL 製品](https://azure.microsoft.com/)を対象に Azure AD について説明します。
 
 - Azure SQL データベース
 - Azure SQL Data Warehouse

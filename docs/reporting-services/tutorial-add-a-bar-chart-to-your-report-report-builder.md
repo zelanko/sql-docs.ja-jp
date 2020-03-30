@@ -1,5 +1,5 @@
 ---
-title: チュートリアル:レポートへの横棒グラフの追加 (レポート ビルダー) | Microsoft Docs
+title: 'チュートリアル: レポートへの横棒グラフの追加 (レポート ビルダー) | Microsoft Docs'
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,13 +9,13 @@ ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8e6855a7a6a47021a635e12b2c53515ed20aa6f4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041185"
 ---
-# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>チュートリアル:レポートへの横棒グラフの追加 (レポート ビルダー)
+# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>チュートリアル: レポートへの横棒グラフの追加 (レポート ビルダー)
 このチュートリアルでは、ウィザードを使用して、[!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] で [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポートに横棒グラフを作成します。 次にフィルターを追加してグラフを強化します。 
 
 横棒グラフでは、カテゴリ データが水平方向に表示されます。 これは、次のようなことに役立ちます。  
@@ -30,14 +30,14 @@ ms.locfileid: "63041185"
   
  
 > [!NOTE]  
-> このチュートリアルでは、ウィザードに関する複数の手順を 1 つにまとめて示します。 レポート サーバーの参照、データセットの作成、およびデータ ソースの選択に関する詳細な手順については、このシリーズの最初のチュートリアルである「[チュートリアル:基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」を参照してください。  
+> このチュートリアルでは、ウィザードに関する複数の手順を 1 つにまとめて示します。 レポート サーバーの参照、データセットの作成、データ ソースの選択に関する詳細な手順については、このシリーズの最初のチュートリアル (「[チュートリアル: 基本的な表レポートの作成 (レポート ビルダー)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」) を参照してください。  
   
-このチュートリアルの推定所要時間:15 分。  
+このチュートリアルの推定所要時間: 15 分  
   
 ## <a name="requirements"></a>必要条件  
 要件に関する詳細については、「[チュートリアルの前提条件 (レポート ビルダー)](../reporting-services/prerequisites-for-tutorials-report-builder.md)」を参照してください。  
   
-## <a name="Chart"></a>1.グラフ ウィザードからグラフ レポートを作成する  
+## <a name="1-create-a-chart-report-from-the-chart-wizard"></a><a name="Chart"></a>1.グラフ ウィザードからグラフ レポートを作成する  
 埋め込みデータセットを作成し、共有データ ソースを選択します。グラフ ウィザードを使用して横棒グラフを作成します。  
   
 > [!NOTE]  
@@ -87,13 +87,13 @@ ms.locfileid: "63041185"
   
 9. **[次へ]** をクリックします。  
   
-## <a name="ChartType"></a>2.横棒グラフを作成する  
+## <a name="2-create-a-bar-chart"></a><a name="ChartType"></a>2.横棒グラフを作成する  
  
 1.  **[グラフの種類の選択]** ページでは、縦棒グラフが既定のグラフの種類です。  
   
 2.  **[横棒]** をクリックし、 **[次へ]** をクリックします。  
   
-    **[グラフのフィールドの配置]** ページでは、 **[使用できるフィールド]** ペインに 4 つのフィールドFirstName、LastName、SalesYear2015、SalesYear2014 があります。  
+    **[グラフのフィールドの配置]** ページでは、 **使用できるフィールド** ペインに、FirstName、LastName、SalesYear2015、および SalesYear2014 の 4 つのフィールドがあります。  
   
 3.  LastName をカテゴリ ペインにドラッグします。  
   
@@ -113,7 +113,7 @@ ms.locfileid: "63041185"
   
 2014 年と 2015 年の各販売員の売上を示す横棒グラフが表示されます。 横棒の長さは、売上総額に対応します。  
   
-## <a name="AllValues"></a>3.縦軸にすべての名前を表示する  
+## <a name="3-display-all-the-names-on-the-vertical-axis"></a><a name="AllValues"></a>3.縦軸にすべての名前を表示する  
 既定では、縦軸の値の一部のみが表示されます。 すべてのカテゴリを表示するようにグラフを変更できます。  
   
 1.  レポート デザイン ビューに切り替えます。  
@@ -129,7 +129,7 @@ ms.locfileid: "63041185"
 > [!NOTE]  
 > 縦軸に表示される販売員の名前が読みにくい場合は、グラフを縦方向に大きくするか、軸ラベルの形式オプションを変更します。  
   
-### <a name="CategoryExpression"></a>縦軸に姓と名を表示する  
+### <a name="display-last-name-and-first-name-on-vertical-axis"></a><a name="CategoryExpression"></a>縦軸に姓と名を表示する  
 各販売員の姓と名を含むように、カテゴリ式を変更できます。  
   
 1.  レポート デザイン ビューに切り替えます。  
@@ -155,7 +155,7 @@ ms.locfileid: "63041185"
 > [!NOTE]  
 > 縦軸に表示される販売員の名前が読みにくい場合は、グラフを縦方向に大きくするか、軸ラベルの形式オプションを変更します。  
   
-## <a name="Sort"></a>4.縦軸に表示される並べ替え順序を変更する  
+## <a name="4-change-the-sort-order-on-the-vertical-axis"></a><a name="Sort"></a>4.縦軸に表示される並べ替え順序を変更する  
 グラフのデータを並べ替えると、カテゴリ軸の値の順序が変更されます。  
   
 1.  レポート デザイン ビューに切り替えます。  
@@ -176,7 +176,7 @@ ms.locfileid: "63041185"
   
 横軸の名前は 2015 年の売上が高い順に並べ替えられ、 **Zeng** が先頭になります。  
   
-## <a name="Legend"></a>5.凡例を移動する  
+## <a name="5-move-the-legend"></a><a name="Legend"></a>5.凡例を移動する  
 グラフの凡例を移動することで、グラフの値を読みやすくすることができます。 たとえば、バーが横方向に表示される横棒グラフでは、グラフ領域の上または下に来るように凡例の位置を変更します。 こうすることで、バーの水平方向のスペースを広げることができます。  
   
 #### <a name="to-display-the-legend-below-the-chart-area-of-a-bar-chart"></a>凡例を横棒グラフのグラフ領域の下に表示するには  
@@ -195,17 +195,17 @@ ms.locfileid: "63041185"
   
 6.  **[実行]** をクリックして、レポートをプレビューします。  
   
-## <a name="ChartTitle"></a>6.グラフのタイトルを設定する  
+## <a name="6-title-the-chart"></a><a name="ChartTitle"></a>6.グラフのタイトルを設定する  
   
 1.  レポート デザイン ビューに切り替えます。  
   
-2.  グラフ上部の **[グラフのタイトル]** というテキストを選択し、「**Sales for 2014 and 2015**」と入力します。  
+2.  グラフ上部の **[グラフのタイトル]** というテキストを選択し、「 **Sales for 2014 and 2015**」と入力します。  
   
 3.  [プロパティ] ペインで、タイトルを選択した状態で **[色]** を **[黒]** に、 **[フォント サイズ]** を **[12 ポイント]** に変更します。 
   
 4.  **[実行]** をクリックして、レポートをプレビューします。  
   
-## <a name="Horizontal"></a>7.横軸の形式とラベルを設定する  
+## <a name="7-format-and-label-the-horizontal-axis"></a><a name="Horizontal"></a>7.横軸の形式とラベルを設定する  
 既定では、横軸の値が一般的な形式で表示されます。この場合、グラフのサイズに合わせて自動的にスケーリングされます。 この形式を通貨形式に変更できます。  
    
 1.  レポート デザイン ビューに切り替えます。  
@@ -232,7 +232,7 @@ ms.locfileid: "63041185"
   
 レポートの横軸に売上高が千単位の通貨で表示され、小数点以下の桁が省略されます。  
   
-## <a name="Filter"></a>8.フィルターを追加して上位 5 件の値を表示する  
+## <a name="8-add-a-filter-to-display-the-top-five-values"></a><a name="Filter"></a>8.フィルターを追加して上位 5 件の値を表示する  
 グラフにフィルターを追加して、データセットのどのデータをグラフに含め、どのデータをグラフに含めないかを指定できます。   
   
 1.  レポート デザイン ビューに切り替えます。  
@@ -261,7 +261,7 @@ ms.locfileid: "63041185"
   
 グラフに、2015 年の売上データから取得された上位 5 人の販売員の名前が表示されます。  
   
-## <a name="Title"></a>9.レポート タイトルを追加する  
+## <a name="9-add-a-report-title"></a><a name="Title"></a>9.レポート タイトルを追加する  
   
 1.  デザイン画面で、 **[クリックしてタイトルを追加]** をクリックします。  
   
@@ -281,7 +281,7 @@ ms.locfileid: "63041185"
   
 6.  **[実行]** をクリックして、レポートをプレビューします。  
   
-## <a name="Save"></a>10.レポートを保存する  
+## <a name="10-save-the-report"></a><a name="Save"></a>10.レポートを保存する  
   
 1.  レポート デザイン ビューに切り替えます。  
   

@@ -16,17 +16,17 @@ ms.assetid: 73f3d994-bbd7-43d2-8b64-50057e278983
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: aef2ebd78b1aed2d03ba56ef3371d7f0dbfade31
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67955129"
 ---
 # <a name="deletesaredetected-method-sqlserverdatabasemetadata"></a>deletesAreDetected メソッド (SQLServerDatabaseMetaData)
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) クラスの [rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md) メソッドを呼び出すことで可視の行が削除されたことを検出できるかどうかを取得します。  
+  [SQLServerResultSet](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md) クラスの [rowDeleted](../../../connect/jdbc/reference/sqlserverresultset-class.md) メソッドを呼び出すことで可視の行が削除されたことを検出できるかどうかを取得します。  
   
 ## <a name="syntax"></a>構文  
   

@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 3469a162645816a3b90657b0c2a3b81b37e6cade
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68054627"
 ---
 # <a name="run-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Azure でデプロイされている SQL Server Integration Services (SSIS) パッケージを実行する
@@ -42,11 +42,11 @@ ms.locfileid: "68054627"
 > [!NOTE]
 > `dtexec.exe` によるパッケージの実行は、Azure にデプロイされているパッケージではテストされていません。
 
-## <a name="ssms"></a> SSMS でのパッケージの実行
+## <a name="run-a-package-with-ssms"></a><a name="ssms"></a> SSMS でのパッケージの実行
 
 SQL Server Management Studio (SSMS) では、SSIS カタログ データベース SSISDB にデプロイされたパッケージを右クリックして **[実行]** を選択することで、 **[パッケージの実行]** ダイアログ ボックスを開くことができます。 詳細については、「[SQL Server Management Studio (SSMS) を使用して SSIS プロジェクトを配置する](../ssis-quickstart-run-ssms.md)」を参照してください。
 
-## <a name="sproc"></a> ストアド プロシージャでパッケージを実行する
+## <a name="run-a-package-with-stored-procedures"></a><a name="sproc"></a> ストアド プロシージャでパッケージを実行する
 
 Azure SQL Database に接続し、Transact-SQL コードを実行できるあらゆる環境で、次のストアド プロシージャを呼び出すことでパッケージを実行できます。
 
@@ -62,7 +62,7 @@ Azure SQL Database に接続し、Transact-SQL コードを実行できるあら
 
 - [Transact-SQL を使用して Visual Studio Code から SSIS パッケージを実行する](../ssis-quickstart-run-tsql-vscode.md)
 
-## <a name="script"></a> スクリプトまたはコードでパッケージを実行する
+## <a name="run-a-package-with-script-or-code"></a><a name="script"></a> スクリプトまたはコードでパッケージを実行する
 
 マネージド API を呼び出すことができるあらゆる開発環境で、`Execute` 名前空間で `Package` オブジェクトの `Microsoft.SQLServer.Management.IntegrationServices` メソッドを呼び出すことでパッケージを実行できます。
 
@@ -72,11 +72,11 @@ Azure SQL Database に接続し、Transact-SQL コードを実行できるあら
 
 - [.NET アプリで C# コードを使用して SSIS パッケージを実行する](../ssis-quickstart-run-dotnet.md)
 
-## <a name="exec_activity"></a> SSIS パッケージの実行アクティビティを使用してパッケージを実行する
+## <a name="run-a-package-with-the-execute-ssis-package-activity"></a><a name="exec_activity"></a> SSIS パッケージの実行アクティビティを使用してパッケージを実行する
 
 詳細については、[Azure Data Factory で SSIS パッケージの実行アクティビティを使用して SSIS パッケージを実行する](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)方法に関するページを参照してください。
 
-## <a name="sproc_activity"></a> ストアド プロシージャ アクティビティを使用してパッケージを実行する
+## <a name="run-a-package-with-the-stored-procedure-activity"></a><a name="sproc_activity"></a> ストアド プロシージャ アクティビティを使用してパッケージを実行する
 
 詳細については、「[Azure Data Factory のストアド プロシージャ アクティビティを使用して SSIS パッケージを実行する](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)」をご覧ください。
 

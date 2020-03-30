@@ -19,10 +19,10 @@ ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: c0f87bca3404505e82c903bd868e9b5c2da00bed
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75306959"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint ユーティリティ
@@ -81,7 +81,7 @@ number[minutes | hours | days | weeks | months]
  **sqlmaint** の構文ダイアグラムが返されます。 このパラメーターは単独で使用する必要があります。  
   
  **-S** _server_name_[ **\\** _instance\_name_]  
- [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のターゲット インスタンスを指定します。 サーバー上の [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]の既定のインスタンスに接続するには、_server\_name_ を指定します。 サーバー上の [!INCLUDE[ssDE](../includes/ssde-md.md)] の名前付きインスタンスに接続するには、_server\_name_ **\\** _instance\_name_ を指定します。 サーバーを指定しない場合、 **sqlmaint** は、ローカル コンピューター上にある [!INCLUDE[ssDE](../includes/ssde-md.md)] の既定のインスタンスに接続します。  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のターゲット インスタンスを指定します。 サーバー上の _の既定のインスタンスに接続するには、\_server_name[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] を指定します。 サーバー上の  _の名前付きインスタンスに接続するには、\_server_name **\\** _\_instance_name[!INCLUDE[ssDE](../includes/ssde-md.md)] を指定します。 サーバーを指定しない場合、 **sqlmaint** は、ローカル コンピューター上にある [!INCLUDE[ssDE](../includes/ssde-md.md)] の既定のインスタンスに接続します。  
   
  **-U** _login_ID_  
  サーバーに接続するときに使用するログイン ID を指定します。 指定しない場合、 **sqlmaint** は [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 認証の使用を試みます。 *login_ID* に特殊文字が含まれる場合、特殊文字を二重引用符 (") で囲む必要があります。特殊文字が含まれない場合は、二重引用符は省略可能です。  

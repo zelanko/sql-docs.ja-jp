@@ -17,10 +17,10 @@ ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5d277089fded73524e55d05bbc21078d5df426e3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67412656"
 ---
 # <a name="monitoring-report-server-performance"></a>レポート サーバーのパフォーマンスの監視
@@ -68,9 +68,9 @@ SQL Server Reporting Services (SSRS) 2016 以降には、次のパフォーマ�
  1 台のコンピューターに複数のレポート サーバー インスタンスが存在する場合、インスタンスをまとめて監視することも個別に監視することもできます。 カウンターを追加する場合は、監視対象に含めるインスタンスを選択してください。 パフォーマンス コンソール (perfmon.msc) の使用およびカウンターの追加に関する詳細については、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows の製品マニュアルを参照してください。  
   
 ## <a name="other-performance-counters"></a>その他のパフォーマンス カウンター  
- **MSRS 2008 Web Service**、**MSRS 2008 Windows Service**、および **ReportServer サービス**専用に、カスタムの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] パフォーマンス カウンターが用意されています。 次のパフォーマンス オブジェクトにより、レポート サーバーに関する補足的なパフォーマンス監視データが提供されます。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]MSRS 2008 Web Service **、** MSRS 2008 Windows Service **、および** ReportServer サービス**専用に、カスタムの**  パフォーマンス カウンターが用意されています。 次のパフォーマンス オブジェクトにより、レポート サーバーに関する補足的なパフォーマンス監視データが提供されます。  
   
-|パフォーマンス オブジェクト|Notes|  
+|パフォーマンス オブジェクト|メモ|  
 |------------------------|-----------|  
 |**.NET CLR データ** および **.NET CLR メモリ**|Web ポータルでは、[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] パフォーマンス カウンターが使用されます。 詳細については、MSDN の「Improving .NET Application Performance and Scalability」を参照してください。|  
 |**[処理]**|ReportingServicesService のインスタンスでプロセス ID ごとの稼働時間を追跡するための **Elapsed Time** および **ID Process** パフォーマンス カウンターを追加します。|  

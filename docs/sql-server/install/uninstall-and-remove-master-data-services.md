@@ -10,10 +10,10 @@ ms.assetid: efc2431c-588b-42e7-b23b-c875145a33f6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a0ed3134e26bc2ed0f581a722de50526a49fb9e3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68126037"
 ---
 # <a name="uninstall-and-remove-master-data-services"></a>マスター データ サービスのアンインストールと削除
@@ -23,7 +23,7 @@ ms.locfileid: "68126037"
   
  データの損失またはシステム内の他のコンピューターへの影響を回避するために、削除されない項目、またはアンインストール プロセスによって変更される項目もあります。 次の表を参考にして、項目を残すか削除するかを決定します。  
   
-|アイテム|[説明]|  
+|アイテム|説明|  
 |----------|-----------------|  
 |フォルダーとファイル|アンインストール プロセスによって、ほとんどのフォルダーとファイルがインストール パスから削除されます。<br /><br /> アンインストール プロセスでは、Master Data Services フォルダーおよび MDSTempDir フォルダーはインストール場所から削除されません。 これらのフォルダーのファイル システムからの削除は、アンインストール プロセスの完了後に手動で実行できます。 詳細については、「[フォルダーとファイルの権限 &#40;マスター データ サービス&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md)」を参照してください。|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] アセンブリ|アンインストール プロセスによって、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] アセンブリがグローバル アセンブリ キャッシュ (GAC) から削除されます。|  

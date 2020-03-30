@@ -14,10 +14,10 @@ ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
 ms.openlocfilehash: 3056ebfc960b26dd3035f1aefd1932151bad207a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75247263"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>[フルテキスト インデックス] ダイアログ ボックス (Visual Database Tools)
@@ -55,7 +55,7 @@ ms.locfileid: "75247263"
 **[IDENTITY] カテゴリ**  
 展開してインデックスの名前フィールドを表示します。  
   
-**名前**  
+**Name**  
 システムが指定したフルテキスト インデックスの名前を表示します。  
   
 **[テーブル デザイナー] カテゴリ**  

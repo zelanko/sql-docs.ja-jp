@@ -9,10 +9,10 @@ ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 55a74bcd165fd06d55eccd6afa718ccd775c7faf
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041400"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>チュートリアル: レポートへの縦棒グラフの追加 (レポート ビルダー)
@@ -35,7 +35,7 @@ ms.locfileid: "63041400"
 ## <a name="requirements"></a>必要条件  
 要件の詳細については、[「チュートリアルの前提条件 (レポート ビルダー)」](../reporting-services/prerequisites-for-tutorials-report-builder.md) を参照してください。  
   
-## <a name="Chart"></a>1.グラフ ウィザードからグラフ レポートを作成する  
+## <a name="1-create-a-chart-report-from-the-chart-wizard"></a><a name="Chart"></a>1.グラフ ウィザードからグラフ レポートを作成する  
 このセクションでは、グラフ ウィザードを使用して埋め込みデータセットを作成し、共有データ ソースを選択して、縦棒グラフを作成します。  
   
 > [!NOTE]  
@@ -87,7 +87,7 @@ ms.locfileid: "63041400"
   
 9. **[次へ]** をクリックします。  
   
-## <a name="ChartType"></a>2.グラフの種類を選択する  
+## <a name="2-choose-the-chart-type"></a><a name="ChartType"></a>2.グラフの種類を選択する  
 事前定義されたグラフの種類から選択し、ウィザードの完了後にグラフを修正できます。  
   
 ### <a name="to-add-a-column-chart"></a>縦棒グラフを追加するには  
@@ -114,7 +114,7 @@ ms.locfileid: "63041400"
 
 グラフの横軸を見ると、すべてのカテゴリに対してラベルが表示されているわけではないことがわかります。 既定では、軸の横に収まるラベルだけが表示されます。 
   
-## <a name="Horizontal"></a>3.横軸に表示される日付の書式を変更する  
+## <a name="3-format-a-date-on-the-horizontal-axis"></a><a name="Horizontal"></a>3.横軸に表示される日付の書式を変更する  
 既定では、横軸の値が一般的な形式で表示されます。この場合、グラフのサイズに合わせて自動的にスケーリングされます。  
   
 1.  レポート デザイン ビューに切り替えます。  
@@ -159,7 +159,7 @@ ms.locfileid: "63041400"
 
 ![report-builder-column-chart-rotate-x-axis-preview](../reporting-services/media/report-builder-column-chart-rotate-x-axis-preview.png)
   
-## <a name="Legend"></a>5.凡例を移動する  
+## <a name="5-move-the-legend"></a><a name="Legend"></a>5.凡例を移動する  
 凡例は、カテゴリと系列データから自動的に作成されます。 凡例を縦棒グラフのグラフ領域の下に移動できます。  
   
 1.  レポート デザイン ビューに切り替えます。  
@@ -176,7 +176,7 @@ ms.locfileid: "63041400"
   
 6.  **[実行]** をクリックして、レポートをプレビューします。  
   
-## <a name="ChartTitle"></a>6.グラフのタイトルを設定する  
+## <a name="6-title-the-chart"></a><a name="ChartTitle"></a>6.グラフのタイトルを設定する  
     
 1.  レポート デザイン ビューに切り替えます。  
   
@@ -184,7 +184,7 @@ ms.locfileid: "63041400"
   
 3.  **[実行]** をクリックして、レポートをプレビューします。  
   
-## <a name="Vertical"></a>7.縦軸の形式とラベルを設定する  
+## <a name="7-format-and-label-the-vertical-axis"></a><a name="Vertical"></a>7.縦軸の形式とラベルを設定する  
 既定では、縦軸の値が一般的な形式で表示されます。この場合、グラフのサイズに合わせて自動的にスケーリングされます。   
   
 1.  レポート デザイン ビューに切り替えます。  
@@ -235,7 +235,7 @@ x 軸では一部のラベルのみが表示されています。 このセク�
     
     これでグラフにすべてのラベルが表示されました。
   
-## <a name="Average"></a>9.計算系列で移動平均を追加する  
+## <a name="9-add-a-moving-average-with-a-calculated-series"></a><a name="Average"></a>9.計算系列で移動平均を追加する  
 
 移動平均は、一定期間にわたって計算される、系列内のデータの平均です。 移動平均で傾向を特定できます。
   
@@ -261,7 +261,7 @@ x 軸では一部のラベルのみが表示されています。 このセク�
 
 ![report-builder-column-chart-moving-average](../reporting-services/media/report-builder-column-chart-moving-average.png)
   
-## <a name="Title"></a>10.レポート タイトルを追加する  
+## <a name="10-add-a-report-title"></a><a name="Title"></a>10.レポート タイトルを追加する  
   
 1.  レポート デザイン ビューに切り替えます。  
   
@@ -283,7 +283,7 @@ x 軸では一部のラベルのみが表示されています。 このセク�
   
 7.  **[実行]** をクリックして、レポートをプレビューします。  
   
-## <a name="Save"></a>11.レポートを保存する  
+## <a name="11-save-the-report"></a><a name="Save"></a>11.レポートを保存する  
   
 ### <a name="to-save-the-report"></a>レポートを保存するには  
   

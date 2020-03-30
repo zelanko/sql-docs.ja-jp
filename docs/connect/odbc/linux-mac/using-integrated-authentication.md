@@ -13,10 +13,10 @@ ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 034df879dc79f920219a43e2faaaf0e3ac4fc17b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68008702"
 ---
 # <a name="using-integrated-authentication"></a>統合認証を使用する
@@ -32,9 +32,9 @@ Linux および macOS での [!INCLUDE[msCoName](../../../includes/msconame_md.m
 Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes  
 ```
   
-DSN と接続するときに、`odbc.ini` の DSN エントリに **Trusted_Connection=yes** を追加することもできます。
+DSN と接続するときに、**の DSN エントリに**Trusted_Connection=yes`odbc.ini` を追加することもできます。
   
-統合認証を指定するには、`-E` の `sqlcmd` オプションと `bcp` の `-T` オプションを使用することもできます。詳細については、「[Connecting with **sqlcmd**](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)」 (sqlcmd との接続) と「[Connecting with **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md)」 (bcp との接続) を参照してください。
+統合認証を指定するには、`-E` の `sqlcmd` オプションと `-T` の `bcp` オプションを使用することもできます。詳細については、「[Connecting with **sqlcmd**](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)」 (sqlcmd との接続) と「[Connecting with **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md)」 (bcp との接続) を参照してください。
 
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に接続するクライアント プリンシパルが、Kerberos KDC で既に認証されていることを確認します。
   
@@ -87,10 +87,10 @@ DSN と接続するときに、`odbc.ini` の DSN エントリに **Trusted_Conn
 統合認証を構成すると、資格情報がリンク サーバーに渡されます。  
   
 ## <a name="integrated-authentication-and-sqlcmd"></a>統合認証 と sqlcmd
-統合認証を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] にアクセスするには、`sqlcmd` の `-E` オプションを使用します。 `sqlcmd` を実行するアカウントが既定の Kerberos クライアント プリンシパルに関連付けられていることを確認します。
+統合認証を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] にアクセスするには、`-E` の `sqlcmd` オプションを使用します。 `sqlcmd` を実行するアカウントが既定の Kerberos クライアント プリンシパルに関連付けられていることを確認します。
 
 ## <a name="integrated-authentication-and-bcp"></a>統合認証 と bcp
-統合認証を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] にアクセスするには、`bcp` の `-T` オプションを使用します。 `bcp` を実行するアカウントが既定の Kerberos クライアント プリンシパルに関連付けられていることを確認します。 
+統合認証を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] にアクセスするには、`-T` の `bcp` オプションを使用します。 `bcp` を実行するアカウントが既定の Kerberos クライアント プリンシパルに関連付けられていることを確認します。 
   
 `-T` を `-U` または `-P` オプションとともに使用すると、エラーになります。
   

@@ -23,10 +23,10 @@ ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1d3caeed2e7c57dfd4a3e993872034b066f56737
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70874519"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
@@ -186,7 +186,7 @@ ALTER AVAILABILITY GROUP group_name
 >  AUTOMATED_BACKUP_PREFERENCE 設定の適用はありません。 この優先設定の解釈は、特定の可用性グループのデータベースに対するバックアップ ジョブのスクリプトでのロジックに依存します (ある場合)。 自動バックアップ設定はアドホック バックアップには影響しません。 詳細については、「[可用性レプリカでのバックアップの構成 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)」を参照してください。  
   
 > [!NOTE]  
->  既存の可用性グループの自動バックアップ設定を確認するには、[sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) カタログ ビューの **automated_backup_preference** 列または **automated_backup_preference_desc** 列を選択します。 さらに、[sys.fn_hadr_backup_is_preferred_replica  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) を使用して、優先されるバックアップ レプリカを決定することができます。  `AUTOMATED_BACKUP_PREFERENCE = NONE` の場合でも、この関数は常に、少なくとも 1 つのレプリカに対して 1 を返します。  
+>  既存の可用性グループの自動バックアップ設定を確認するには、**sys.availability_groups** カタログ ビューの **automated_backup_preference** 列または [automated_backup_preference_desc](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) 列を選択します。 さらに、[sys.fn_hadr_backup_is_preferred_replica  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) を使用して、優先されるバックアップ レプリカを決定することができます。  `AUTOMATED_BACKUP_PREFERENCE = NONE` の場合でも、この関数は常に、少なくとも 1 つのレプリカに対して 1 を返します。  
   
  FAILURE_CONDITION_LEVEL **=** { 1 | 2 | **3** | 4 | 5 }  
  この可用性グループの自動フェールオーバーをトリガーするエラー状態を指定します。 FAILURE_CONDITION_LEVEL はグループ レベルで設定されますが、同期コミット可用性モードに構成されている (AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT) 可用性レプリカにのみ適用されます。 さらに、エラー状態が自動フェールオーバーをトリガーできるのは、プライマリとセカンダリの両方のレプリカが自動フェールオーバー モードに構成されていて (FAILOVER_MODE **=** AUTOMATIC)、セカンダリ レプリカが現在プライマリ レプリカと同期されている場合だけです。  
@@ -197,7 +197,7 @@ ALTER AVAILABILITY GROUP group_name
   
 |Level|エラー状態|  
 |-----------|-----------------------|  
-|1|次のいずれかが発生した場合に自動フェールオーバーを開始する必要があることを指定します。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスがダウンした。<br /><br /> WSFC クラスターに接続するための可用性グループのリースが、サーバー インスタンスから ACK を受信しないために期限切れになった。 詳細については、「[How It Works:SQL Server Always On Lease Timeout](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx)」 (動作方法: SQL Server Always On のリース タイムアウト) を参照してください。|  
+|1|次のいずれかが発生した場合に自動フェールオーバーを開始する必要があることを指定します。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスがダウンした。<br /><br /> WSFC クラスターに接続するための可用性グループのリースが、サーバー インスタンスから ACK を受信しないために期限切れになった。 詳細については、「 [動作方法: SQL Server Always On のリース タイムアウト](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx)」を参照してください。|  
 |2|次のいずれかが発生した場合に自動フェールオーバーを開始する必要があることを指定します。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスがクラスターに接続しておらず、可用性グループのユーザー指定の HEALTH_CHECK_TIMEOUT しきい値を超えた。<br /><br /> 可用性レプリカがエラー状態である。|  
 |3|孤立したスピンロック、重大な書き込みアクセス違反、ダンプが多すぎるなどの重大な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部エラーが発生した場合に自動フェールオーバーを開始する必要があることを指定します。<br /><br /> これは既定の動作です。|  
 |4|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部リソース プールに永続的なメモリ不足の状態があるなど、中程度の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部エラーが発生した場合に自動フェールオーバーを開始する必要があることを指定します。|  
@@ -233,7 +233,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
  SQL Server 2017 で導入されました。 コミットに必要な同期セカンダリ レプリカの最小数を設定するために使用します。この数を超えると、プライマリがトランザクションをコミットします。 SQL Server トランザクションは、セカンダリ レプリカの最小数の最新情報がトランザクション ログに与えられるまで待機することになります。 既定値は 0 であり、SQL Server 2016 と同じように動作します。 最小値は 0 です。 最大値はレプリカの数から 1 を引いた値になります。 このオプションは、同期コミット モードのレプリカに関連しています。 レプリカが同期コミット モードのとき、セカンダリ同期レプリカに対する書き込みがレプリカ データベース トランザクション ログにコミットされるまで、プライマリ レプリカへの書き込みは待機します。 セカンダリ同期レプリカをホストする SQL Server が応答を停止した場合、プライマリ レプリカをホストする SQL Server はそのセカンダリ レプリカを同期未実行としてマークし、続行します。 応答のないデータベースがオンラインに復帰すると、"未同期" 状態になります。プライマリが再度同期可能になるまで、レプリカに異常のマークが付きます。 この設定により、レプリカの最小数で各トランザクションがコミットされるまで、プライマリ レプリカは続行しません。 レプリカの最小数が利用できない場合、プライマリのコミットは失敗します。 クラスター タイプ `EXTERNAL` の場合、可用性グループがクラスター リソースに追加されると、設定が変更されます。 「[可用性グループの構成の高可用性とデータの保護](../../linux/sql-server-linux-availability-group-ha.md)」を参照してください。
   
  ADD DATABASE *database_name*  
- 可用性グループに追加する 1 つ以上のユーザー データベースのリストを指定します。 これらのデータベースは、現在のプライマリ レプリカをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス上にある必要があります。 1 つの可用性グループに対して複数のデータベースを指定できますが、各データベースが所属できる可用性グループは 1 つだけです。 可用性グループでサポートできるデータベースの種類については、「[Always On 可用性グループの前提条件、制限事項、推奨事項 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)」を参照してください。 可用性グループに既に属しているローカル データベースを確認する場合は、[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューで **replica_id** 列を参照してください。  
+ 可用性グループに追加する 1 つ以上のユーザー データベースのリストを指定します。 これらのデータベースは、現在のプライマリ レプリカをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス上にある必要があります。 1 つの可用性グループに対して複数のデータベースを指定できますが、各データベースが所属できる可用性グループは 1 つだけです。 可用性グループでサポートできるデータベースの種類については、「[Always On 可用性グループの前提条件、制限事項、推奨事項 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)」を参照してください。 可用性グループに既に属しているローカル データベースを確認する場合は、**sys.databases** カタログ ビューで [replica_id](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 列を参照してください。  
   
  プライマリ レプリカでのみサポートされます。  
   
@@ -266,7 +266,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターにアクセスするために使用されるネットワーク名です。 サーバー インスタンスが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー パートナーとして参加している場合に使用します。 FCI サーバー インスタンスで SELECT [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) を実行すると、'*FCI_network_name*[\\*instance_name*]' という文字列全体 (完全なレプリカ名) が返されます。  
   
  *instance_name*  
- *system_name* または *FCI_network_name* によってホストされ、AlwaysOn が有効になっている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前です。 既定のサーバー インスタンスの場合、 *instance_name* は省略可能です。 インスタンス名では大文字と小文字が区別されません。 スタンドアロン サーバー インスタンスでは、この名前の値は SELECT [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) を実行したときに返される値と同じです。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]system_name*または*FCI_network_name*によってホストされ、AlwaysOn が有効になっている* のインスタンスの名前です。 既定のサーバー インスタンスの場合、 *instance_name* は省略可能です。 インスタンス名では大文字と小文字が区別されません。 スタンドアロン サーバー インスタンスでは、この名前の値は SELECT [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) を実行したときに返される値と同じです。  
   
  \  
  *system_name* または *FCI_network_name* と区別するために、*instance_name* を指定するときにのみ使用される区切り記号です。  
@@ -274,7 +274,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
  WSFC ノードとサーバーのインスタンスの前提条件については、「[AlwaysOn 可用性グループの前提条件、制限事項、推奨事項 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)」を参照してください。  
   
  ENDPOINT_URL ='TCP://*system-address*:*port*'  
- 追加または変更している可用性レプリカをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス上の[データベース ミラーリング エンドポイント](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)の URL パスを指定します。  
+ 追加または変更している可用性レプリカをホストする [ のインスタンス上の](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)データベース ミラーリング エンドポイント[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の URL パスを指定します。  
   
  ENDPOINT_URL は、ADD REPLICA ON 句では必須で、MODIFY REPLICA ON 句では省略可能です。  詳細については、「 [可用性レプリカを追加または変更する場合のエンドポイント URL の指定 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)の構成に関する一般的な問題のトラブルシューティングに役立つ情報を提供します。  
   
@@ -343,7 +343,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
   
 -   0 は、その可用性レプリカがバックアップの実行に対して選択されないことを示します。 これは、たとえば、バックアップをフェールオーバーすることがないリモート可用性レプリカのような場合に便利です。  
   
- 詳細については、「[アクティブなセカンダリ:セカンダリ レプリカでのバックアップ &#40;Always On 可用性グループ&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
+ 詳細については、「 [アクティブなセカンダリ: セカンダリ レプリカでのバックアップ &#40;Always On 可用性グループ&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
   
  SECONDARY_ROLE **(** ... **)**  
  この可用性レプリカによって現在セカンダリ ロールが所有されている場合に (つまり、セカンダリ レプリカである場合は常に) 有効な、ロール固有の設定を指定します。 かっこの中では、いずれか一方または両方のセカンダリ ロール オプションを指定します。 両方を指定する場合は、コンマ区切りのリストを使用します。  
@@ -362,12 +362,12 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
  ALL  
  読み取り専用アクセスに限り、セカンダリ レプリカのデータベースに対するすべての接続が許可されます。  
   
- 詳細については、「[アクティブなセカンダリ:読み取り可能なセカンダリ レプリカ &#40;Always On 可用性グループ&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
+ 詳細については、「[アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ &#40;Always On 可用性グループ&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
   
  READ_ONLY_ROUTING_URL **='** TCP **://** _system-address_ **:** _port_ **'**  
  読み取りを目的とした接続要求をこの可用性レプリカにルーティングするために使用する URL を指定します。 これは、SQL Server データベース エンジンがリッスンしている URL です。 通常、SQL Server データベース エンジンの既定のインスタンスは、TCP ポート 1433 でリッスンします。  
   
- 名前付きインスタンスの場合は、[sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md) 動的管理ビューの **port** 列と **type_desc** 列をクエリすることで、ポート番号を取得できます。 サーバー インスタンスでは Transact-SQL リスナーを使用します (**type_desc='TSQL'** )。  
+ 名前付きインスタンスの場合は、**sys.dm_tcp_listener_states** 動的管理ビューの **port** 列と [type_desc](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md) 列をクエリすることで、ポート番号を取得できます。 サーバー インスタンスでは Transact-SQL リスナーを使用します (**type_desc='TSQL'** )。  
   
  可用性レプリカの読み取り専用ルーティングの URL の計算の詳細については、「[AlwaysOn の read_only_routing_url の計算](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)」を参照してください。  
   
@@ -612,7 +612,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
   
 ## <a name="examples"></a>例  
   
-###  <a name="Join_Secondary_Replica"></a> A. セカンダリ レプリカを可用性グループに参加させる  
+###  <a name="a-joining-a-secondary-replica-to-an-availability-group"></a><a name="Join_Secondary_Replica"></a> A. セカンダリ レプリカを可用性グループに参加させる  
  次の例では、接続しているセカンダリ レプリカを `AccountsAG` 可用性グループに参加させます。  
   
 ```SQL  
@@ -620,7 +620,7 @@ ALTER AVAILABILITY GROUP AccountsAG JOIN;
 GO  
 ```  
   
-###  <a name="Force_Failover"></a> B. 可用性グループを強制的にフェールオーバーする  
+###  <a name="b-forcing-failover-of-an-availability-group"></a><a name="Force_Failover"></a> B. 可用性グループを強制的にフェールオーバーする  
  次の例では、`AccountsAG` 可用性グループを、接続されているセカンダリ レプリカに強制的にフェールオーバーします。  
   
 ```SQL

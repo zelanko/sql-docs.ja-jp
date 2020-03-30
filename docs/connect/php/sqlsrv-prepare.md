@@ -18,10 +18,10 @@ ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b16e58b8535d91fd29281aa986ab5ba26875dc38
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286546"
 ---
 # <a name="sqlsrv_prepare"></a>sqlsrv_prepare
@@ -37,11 +37,11 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
 ```  
   
 #### <a name="parameters"></a>パラメーター  
-*$conn*:作成したステートメントに関連付けられた接続リソースです。  
+*$conn*: 作成したステートメントに関連付けられた接続リソースです。  
   
 *$tsql*: 作成されたステートメントに対応する Transact-SQL 式です。  
   
-*$params* [省略可能]: パラメーター化されたクエリのパラメーターに対応する値の**配列**です。 配列の各要素には、次のいずれかを指定できます。
+*$params* (省略可能): パラメーター化されたクエリのパラメーターに対応する値の**配列**です。 配列の各要素には、次のいずれかを指定できます。
   
 -   リテラル値。  
   
@@ -61,11 +61,11 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
     |要素|説明|  
     |-----------|---------------|  
     |*&$value*|リテラル値または PHP の変数への参照。|  
-    |*$direction*[オプション]|パラメーターの方向を示すために使用する次の **SQLSRV_PARAM_\*** 定数のいずれか: **SQLSRV_PARAM_IN**、**SQLSRV_PARAM_OUT**、**SQLSRV_PARAM_INOUT**。 既定値は **SQLSRV_PARAM_IN** です。<br /><br />PHP 定数の詳細については、「[定数 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)」を参照してください。|  
+    |*$direction*[オプション]|パラメーターの方向を示すために使用する **SQLSRV_PARAM_\*** 定数 (**SQLSRV_PARAM_IN**、**SQLSRV_PARAM_OUT**、**SQLSRV_PARAM_INOUT**) のいずれか。 既定値は **SQLSRV_PARAM_IN** です。<br /><br />PHP 定数の詳細については、「[定数 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)」を参照してください。|  
     |*$phpType*[オプション]|戻り値の PHP データ型を指定する **SQLSRV_PHPTYPE_\*** 定数。|  
     |*$sqlType*[オプション]|入力値の SQL Server データ型を指定する **SQLSRV_SQLTYPE_\*** 定数。|  
   
-*$options* [省略可能]: <a name="properties">クエリのプロパティ</a>を設定する連想配列。 次の表に、サポートされているキーと対応する値を示します。
+*$options* (省略可能): <a name="properties">クエリのプロパティ</a>を設定する連想配列。 次の表に、サポートされているキーと対応する値を示します。
 
 |Key|サポートされている値|説明|  
 |-------|--------------------|---------------|  
@@ -73,7 +73,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
 |小数点以下表示桁数|0 から 4 までの整数|フェッチされた通貨値の書式設定時に、小数点以下の桁数を指定します。<br /><br />負の整数値または 4 を超える値は無視されます。<br /><br />このオプションは、FormatDecimals が **true** 場合にのみ機能します。|
 |FormatDecimals|**true** または **false**<br /><br />既定値は **false** です。|該当する場合に 10 進文字列の前にゼロを追加するかどうかを指定し、通貨型を書式設定するための `DecimalPlaces` オプションを有効にします。<br /><br />詳細については、「[Formatting Decimal Strings and Money Values (SQLSRV Driver) (10 進数文字列と通貨値の書式設定 (SQLSRV ドライバー))](../../connect/php/formatting-decimals-sqlsrv-driver.md)」を参照してください。|
 |QueryTimeout|正の整数|クエリのタイムアウト (秒単位) を設定します。 既定で、ドライバーは、結果を無制限に待機します。|  
-|ReturnDatesAsStrings|**true** または **false**<br /><br />既定値は **false** です。|日付/時刻型を文字列として取得するようにステートメントを構成します (**true**)。 詳細については、「[方法: SQLSRV ドライバーを使用して日付/時刻型を文字列として取得する](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)」を参照してください。
+|ReturnDatesAsStrings|**true** または **false**<br /><br />既定値は **false** です。|日付/時刻型を文字列として取得するようにステートメントを構成します (**true**)。 詳細については、「[方法: SQLSRV ドライバーを使用して日付/時刻型を文字列として取得する](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)」をご覧ください。
 |スクロール可能|SQLSRV_CURSOR_FORWARD<br /><br />SQLSRV_CURSOR_STATIC<br /><br />SQLSRV_CURSOR_DYNAMIC<br /><br />SQLSRV_CURSOR_KEYSET<br /><br />SQLSRV_CURSOR_CLIENT_BUFFERED|これらの値の詳細については、「 [カーソルの種類を指定し、行を選択する](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)」を参照してください。|  
 |SendStreamParamsAtExec|**true** または **false**<br /><br />既定値は **true** です。|実行時にすべてのストリーム データを送信する (**true**)、またはストリーム データをチャンク単位で送信する (**false**) ように、ドライバーを構成します。 既定では、この値は **true**に設定されています。 詳細については、「 [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md)」を参照してください。|  
   
@@ -87,7 +87,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
 大量の情報の書き込みと読み取りを行う別の手法については、「 [Batches of SQL Statements (SQL ステートメントのバッチ)](../../odbc/reference/develop-app/batches-of-sql-statements.md) 」と「 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)」を参照してください。  
   
-詳細については、「[SQLSRV ドライバーを使用して出力パラメーターを取得する](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)」を参照してください。  
+詳細については、「 [方法: SQLSRV ドライバーを使用して出力パラメーターを取得する](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)」を参照してください。  
   
 ## <a name="example"></a>例  
 次の例では、ステートメントを準備して実行します。 このステートメントを実行すると (「[sqlsrv_execute](../../connect/php/sqlsrv-execute.md)」を参照)、AdventureWorks データベースの *Sales.SalesOrderDetail* テーブルのフィールドが更新されます。 この例では、ローカル コンピューターに SQL Server および [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースがインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
@@ -252,7 +252,7 @@ sqlsrv_close($conn);
 ## <a name="see-also"></a>参照  
 [SQLSRV ドライバー API リファレンス](../../connect/php/sqlsrv-driver-api-reference.md)
 
-[方法: パラメーター化クエリを実行する](../../connect/php/how-to-perform-parameterized-queries.md)」を参照してください。
+[方法: パラメーター化クエリを実行する](../../connect/php/how-to-perform-parameterized-queries.md)
 
 [ドキュメントのコード例について](../../connect/php/about-code-examples-in-the-documentation.md)
 

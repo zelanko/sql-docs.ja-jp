@@ -11,26 +11,26 @@ ms.assetid: 4704199b-c0ae-4c77-8a2e-6963715b4ffb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a9de31bad8ef2980e7322b529a6a2b68a12355c2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69026751"
 ---
 # <a name="using-an-sql-statement-to-modify-data"></a>SQL ステートメントを使用したデータの変更
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに含まれるデータを SQL ステートメントを使用して変更するには、[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) クラスの [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md) メソッドを使用できます。 executeUpdate メソッドは、SQL ステートメントをデータベースに渡して処理し、影響を受けた行数を示す値を返します。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに含まれるデータを SQL ステートメントを使用して変更するには、[SQLServerStatement](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md) クラスの [executeUpdate](../../connect/jdbc/reference/sqlserverstatement-class.md) メソッドを使用できます。 executeUpdate メソッドは、SQL ステートメントをデータベースに渡して処理し、影響を受けた行数を示す値を返します。
 
-この場合、最初に [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) クラスの [createStatement](../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) メソッドを使用して、SQLServerStatement オブジェクトを作成する必要があります。
+この場合、最初に [SQLServerConnection](../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) クラスの [createStatement](../../connect/jdbc/reference/sqlserverconnection-class.md) メソッドを使用して、SQLServerStatement オブジェクトを作成する必要があります。
 
 次の例は、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] サンプル データベースに対して開いている接続を関数に渡して、テーブルにデータを追加する SQL ステートメントを作成および実行し、戻り値を出力します。
 
 [!code[JDBC#UsingSQLToModifyData1](../../connect/jdbc/codesnippet/Java/using-an-sql-statement-t_1_1.java)]
 
 > [!NOTE]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのデータを変更するためのパラメーターを含む SQL ステートメントを使用する必要がある場合は、[SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) クラスの [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverpreparedstatement.md) メソッドを使用する必要があります。
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのデータを変更するためのパラメーターを含む SQL ステートメントを使用する必要がある場合は、[SQLServerPreparedStatement](../../connect/jdbc/reference/executeupdate-method-sqlserverpreparedstatement.md) クラスの [executeUpdate](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) メソッドを使用する必要があります。
 >
 > データの挿入先の列にスペースなどの特殊文字が含まれる場合は、それが既定値である場合を含め、挿入する値を指定する必要があります。 ここで指定しないと、挿入操作が失敗します。
 >

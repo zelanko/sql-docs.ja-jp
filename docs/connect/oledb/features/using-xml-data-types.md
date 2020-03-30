@@ -31,10 +31,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 0d3554363e4813dfb4b3f6cbeefec00214d5a2d6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67988790"
 ---
 # <a name="using-xml-data-types"></a>XML データ型の使用
@@ -139,7 +139,7 @@ ms.locfileid: "67988790"
 #### <a name="the-columns-and-procedure_parameters-schema-rowsets"></a>COLUMNS スキーマ行セットと PARAMETERS スキーマ行セット  
  COLUMNS スキーマ行セットと PROCEDURE_PARAMETERS スキーマ行セットに次の列が追加されました。  
   
-|列名|Type|説明|  
+|列名|種類|説明|  
 |-----------------|----------|-----------------|  
 |SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|XML スキーマ コレクションを定義しているカタログの名前。 XML 型以外の列または型指定されていない XML 列の場合は NULL です。|  
 |SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|XML スキーマ コレクションを定義しているスキーマの名前。 XML 型以外の列または型指定されていない XML 列の場合は NULL です。|  
@@ -151,7 +151,7 @@ ms.locfileid: "67988790"
 #### <a name="the-ss_xmlschema-schema-rowset"></a>SS_XMLSCHEMA スキーマ行セット  
  クライアントで XML スキーマ情報を取得できるように、新しいスキーマ行セット SS_XMLSCHEMA が導入されました。 SS_XMLSCHEMA 行セットには、次の列が含まれています。  
   
-|列名|Type|説明|  
+|列名|種類|説明|  
 |-----------------|----------|-----------------|  
 |SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|XML コレクションが属するカタログ。|  
 |SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|XML コレクションが属するスキーマ。|  
@@ -171,7 +171,7 @@ ms.locfileid: "67988790"
 #### <a name="the-dbpropset_sqlserverparameter-property-set"></a>DBPROPSET_SQLSERVERPARAMETER プロパティ セット  
  OLE DB で **xml** データ型をサポートするため、OLE DB Driver for SQL Server では、次の値を含む新しい DBPROPSET_SQLSERVERPARAMETER プロパティ セットが実装されました。  
   
-|Name|Type|説明|  
+|Name|種類|説明|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|XML スキーマ コレクションを定義しているカタログ (データベース) の名前。 SQL の 3 部構成による名前の識別子の一部になります。|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|スキーマ コレクションに含まれている XML スキーマの名前。 SQL の 3 部構成による名前の識別子の一部になります。|  
@@ -180,7 +180,7 @@ ms.locfileid: "67988790"
 #### <a name="the-dbpropset_sqlservercolumn-property-set"></a>DBPROPSET_SQLSERVERCOLUMN プロパティ セット  
  **ITableDefinition** インターフェイスでのテーブルの作成をサポートするため、OLE DB Driver for SQL Server では、DBPROPSET_SQLSERVERCOLUMN プロパティ セットに次の 3 つの新しい列が追加されました。  
   
-|Name|Type|説明|  
+|Name|種類|説明|  
 |----------|----------|-----------------|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME|VT_BSTR|型指定された XML 列の場合、このプロパティは XML スキーマが格納されているカタログ名を指定する文字列です。 他の列の型の場合、このプロパティでは空文字列が返されます。|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME|VT_BSTR|型指定された XML 列の場合、このプロパティはこの列を定義している XML スキーマ名を指定する文字列です。|  
@@ -200,7 +200,7 @@ ms.locfileid: "67988790"
 #### <a name="the-icolumnsrowset-interface"></a>IColumnsRowset インターフェイス  
  OLE DB Driver for SQL Server では、次の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 固有の列が **IColumnRowset::GetColumnsRowset** メソッドで返される行セットに追加されました。 これらの列には、XML スキーマ コレクションの 3 部構成の名前が含まれます。 XML 以外の列または型指定されていない XML 列の場合、これら 3 列の既定値はすべて NULL になります。  
   
-|列名|Type|説明|  
+|列名|種類|説明|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|XML スキーマ コレクションが属するカタログ。<br /><br /> それ以外の場合は、NULL です。|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|XML スキーマ コレクションが属するスキーマ。 それ以外の場合は、NULL です。|  
@@ -226,7 +226,7 @@ ms.locfileid: "67988790"
  **IRowsetUpdate** インターフェイスには遅延更新のための機能が用意されています。 行セットで使用できるデータは、コンシューマーが **IRowsetUpdate::Update** メソッドを呼び出すまで他のトランザクションで使用できません。  
   
 #### <a name="the-irowsetfind-interface"></a>IRowsetFind インターフェイス  
- **IRowsetFind::FindNextRow** メソッドでは、**xml** データ型を処理できません。 *hAccessor* 引数に DBTYPE_XML の列を指定して **IRowsetFind::FindNextRow** を呼び出すと、DB_E_BADBINDINFO が返されます。 この動作は、検索対象の列の型とは無関係に行われます。 その他のバインドの型では、検索対象の列が **xml** データ型の場合、**FindNextRow** が DB_E_BADCOMPAREOP を返して失敗します。  
+ **IRowsetFind::FindNextRow** メソッドでは、**xml** データ型を処理できません。 **hAccessor** 引数に DBTYPE_XML の列を指定して *IRowsetFind::FindNextRow* を呼び出すと、DB_E_BADBINDINFO が返されます。 この動作は、検索対象の列の型とは無関係に行われます。 その他のバインドの型では、検索対象の列が **xml** データ型の場合、**FindNextRow** が DB_E_BADCOMPAREOP を返して失敗します。  
  
   
 ## <a name="see-also"></a>参照  

@@ -9,10 +9,10 @@ ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b25a2f955ddd630c7093a1dc82a22c2cd0ba41b0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041262"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>チュートリアル: レポートへの円グラフの追加 (レポート ビルダー)
@@ -34,7 +34,7 @@ ms.locfileid: "63041262"
 ## <a name="requirements"></a>必要条件  
 要件の詳細については、[「チュートリアルの前提条件 (レポート ビルダー)」](../reporting-services/prerequisites-for-tutorials-report-builder.md) を参照してください。  
   
-## <a name="Chart"></a>1.グラフ ウィザードから円グラフを作成する  
+## <a name="1-create-a-pie-chart-from-the-chart-wizard"></a><a name="Chart"></a>1.グラフ ウィザードから円グラフを作成する  
 このセクションでは、グラフ ウィザードを使用して埋め込みデータセットを作成し、共有データ ソースを選択して、円グラフを作成します。  
 
   
@@ -77,7 +77,7 @@ ms.locfileid: "63041262"
   
 9. **[次へ]** をクリックします。  
   
-## <a name="ChartType"></a>2.グラフの種類を選択する  
+## <a name="2-choose-the-chart-type"></a><a name="ChartType"></a>2.グラフの種類を選択する  
 あらかじめ定義されているさまざまなグラフの種類から選択できます。  
 
   
@@ -103,7 +103,7 @@ ms.locfileid: "63041262"
 
 ![report-builder-pie-chart-first-preview](../reporting-services/media/report-builder-pie-chart-first-preview.png)
   
-## <a name="Percentages"></a>3.各スライスにパーセンテージを表示する  
+## <a name="3-display-percentages-in-each-slice"></a><a name="Percentages"></a>3.各スライスにパーセンテージを表示する  
 円グラフの各スライスには、そのスライスの全体に占めるパーセンテージを表示できます。  
 
   
@@ -130,7 +130,7 @@ ms.locfileid: "63041262"
 
 ![report-builder-pie-chart-preview-percents](../reporting-services/media/report-builder-pie-chart-preview-percents.png)
   
-## <a name="CombineSlices"></a>4.小さな複数のスライスを 1 つのスライスにまとめる  
+## <a name="4-combine-small-slices-into-one-slice"></a><a name="CombineSlices"></a>4.小さな複数のスライスを 1 つのスライスにまとめる  
 円グラフ内の 3 つのスライスは、非常に小さくなります。 この 3 つの小さなスライスをまとめて、"その他" という 1 つの大きなスライスで表すことができます。  
 
 1.  レポート デザイン ビューに切り替えます。  
@@ -155,7 +155,7 @@ ms.locfileid: "63041262"
 
 ![report-builder-pie-chart-start-at-90](../reporting-services/media/report-builder-pie-chart-start-at-90.png)
  
-## <a name="DrawingEffect"></a>5.円グラフの値の開始位置を円の最上部にする 
+## <a name="5-start-pie-chart-values-at-the-top"></a><a name="DrawingEffect"></a>5.円グラフの値の開始位置を円の最上部にする 
 
 円グラフでは、既定でデータセットの最初の値が円の最上部から 90 度の位置から開始されます。 前のセクションの円グラフでこれを確認できます。
 
@@ -173,7 +173,7 @@ ms.locfileid: "63041262"
 
 ![report-builder-pie-chart-start-at-top](../reporting-services/media/report-builder-pie-chart-start-at-top.png)
   
-## <a name="Title"></a>6.レポート タイトルを追加する  
+## <a name="6-add-a-report-title"></a><a name="Title"></a>6.レポート タイトルを追加する  
   
 円グラフはレポート内のみの視覚エフェクトであるため、グラフには独自のタイトルは必要ありません。 レポート タイトルが使用されます。
   
@@ -197,7 +197,7 @@ ms.locfileid: "63041262"
   
 6.  **[実行]** をクリックして、レポートをプレビューします。  
   
-## <a name="Save"></a>7.レポートを保存する  
+## <a name="7-save-the-report"></a><a name="Save"></a>7.レポートを保存する  
   
 ### <a name="to-save-the-report"></a>レポートを保存するには  
   

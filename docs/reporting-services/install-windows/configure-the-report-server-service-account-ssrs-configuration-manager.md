@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.custom: seo-lt-2019, seo-mmd-2019
 ms.date: 12/04/2019
 ms.openlocfilehash: 49a5f8e19db65691fe8e521d7ca6a65e828fe6bd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74866025"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>レポート サーバー サービス アカウントの構成 (SSRS 構成マネージャー)
@@ -78,7 +78,7 @@ ms.locfileid: "74866025"
 |**Local Service**|**ローカル サービス** は、認証済みのローカル Windows ユーザー アカウントに似たビルトイン アカウントです。 **ローカル サービス** アカウントとして実行されるサービスは、資格情報を使用せずに NULL セッションとしてネットワーク リソースにアクセスします。 イントラネットに配置するシナリオでは、レポート サーバーがレポートを開いたりサブスクリプションを処理したりする前に、リモートのレポート サーバー データベースまたはネットワーク ドメイン コントローラーに接続してユーザーを認証する必要があるため、このアカウントは適していません。|  
 |**Local System**|**ローカル システム** は、レポート サーバーの実行には必要のない高い特権のアカウントです。 レポート サーバーのインストールにこのアカウントを使用することは避けてください。 代わりに、ドメイン アカウントまたは **ネットワーク サービス** を使用してください。|  
   
-## <a name="localaccounts"></a> ローカル アカウントの使用に関する注意点
+## <a name="considerations-for-using-local-accounts"></a><a name="localaccounts"></a> ローカル アカウントの使用に関する注意点
 
  ローカル アカウントを使用する場合の主な注意点は、レポート サーバーがリモートのデータベース サーバー、メール サーバー、およびドメイン コントローラーにアクセスする必要があるかどうかということです。 レポート サーバーをローカル Windows ユーザー アカウント、ローカル サービス、またはローカル システムとして実行されるように構成する場合は、他の構成の設定方法やサブスクリプションの作成と配信に関して次の点を考慮する必要があります。  
   

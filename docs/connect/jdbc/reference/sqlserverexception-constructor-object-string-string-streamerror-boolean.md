@@ -14,16 +14,16 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c1cc42a09e455fa42d3f89b05903a22afc945424
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67971125"
 ---
 # <a name="sqlserverexception-constructor-javalangobject-javalangstring-javalangstring-streamerror-boolean"></a>SQLServerException コンストラクター (java.lang.Object, java.lang.String, java.lang.String, StreamError, boolean)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  **object**、**string** オブジェクト、**string** オブジェクト、**StreamError** オブジェクト、および **boolean** が渡されたときに、[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) クラスの新しいインスタンスが初期化されます。
+  [object](../../../connect/jdbc/reference/sqlserverexception-class.md)、**string** オブジェクト、**string** オブジェクト、**StreamError** オブジェクト、および **boolean** が渡されたときに、**SQLServerException** クラスの新しいインスタンスが初期化されます。
 
 ## <a name="syntax"></a>構文  
   

@@ -21,10 +21,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: f168153317bc7800d32191bfe37b6fcc118b8816
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242506"
 ---
 # <a name="delete-an-alert"></a>Delete an Alert
@@ -33,19 +33,19 @@ ms.locfileid: "75242506"
 > [!IMPORTANT]  
 > [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
 
-このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの警告を削除する方法について説明します。  
+このトピックでは、[!INCLUDE[msCoName](../../includes/msconame_md.md)] で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] エージェントの警告を削除する方法について説明します。  
   
-## <a name="BeforeYouBegin"></a>はじめに  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>はじめに  
   
-### <a name="Restrictions"></a>制限事項と制約事項  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>制限事項と制約事項  
 警告を削除すると、この警告に関連するすべての通知も削除されます。  
   
-### <a name="Security"></a>セキュリティ  
+### <a name="security"></a><a name="Security"></a>セキュリティ  
   
-#### <a name="Permissions"></a>アクセス許可  
+#### <a name="permissions"></a><a name="Permissions"></a>アクセス許可  
 既定では、警告を削除できるのは、 **sysadmin** 固定サーバー ロールのメンバーだけです。  
   
-## <a name="SSMSProcedure"></a>SQL Server Management Studio の使用  
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>SQL Server Management Studio の使用  
   
 #### <a name="to-delete-an-alert"></a>警告を削除するには  
   
@@ -59,7 +59,7 @@ ms.locfileid: "75242506"
   
 5.  **[オブジェクトの削除]** ダイアログ ボックスで、正しい警告が選択されていることを確認し、 **[OK]** をクリックします。  
   
-## <a name="TsqlProcedure"></a>Transact-SQL の使用  
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a>Transact-SQL の使用  
   
 #### <a name="to-delete-an-alert"></a>警告を削除するには  
   

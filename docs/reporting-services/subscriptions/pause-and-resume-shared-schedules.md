@@ -17,10 +17,10 @@ ms.assetid: e416be75-5234-4aa6-a3de-77f60f25169a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7ec4c97ad3627ae91fd01cf0d8d73a2569a0c41a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65578179"
 ---
 # <a name="pause-and-resume-shared-schedules"></a>Pause and Resume Shared Schedules
@@ -36,7 +36,7 @@ ms.locfileid: "65578179"
   
 -   [共有スケジュールの一時停止と再開 (SharePoint モード)](#bkmk_sharepoint)  
   
-##  <a name="bkmk_native"></a> 共有スケジュールの一時停止と再開 (ネイティブ モード)  
+##  <a name="pause-and-resume-shared-schedules-native-mode"></a><a name="bkmk_native"></a> 共有スケジュールの一時停止と再開 (ネイティブ モード)  
  共有スケジュールを一時停止または再開するには、レポート マネージャーの [スケジュール] ページを使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] は使用できません。これには、スケジュールを一時停止または再開するためのオプションは用意されていません。 詳細については、「 [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)」をご覧ください。  
   
 #### <a name="to-pause-or-resume-a-shared-schedule"></a>共有スケジュールを一時停止または再開するには  
@@ -47,7 +47,7 @@ ms.locfileid: "65578179"
   
 3.  スケジュールを選択し、リボンで **[一時停止]** または **[再開]** をクリックします。 スケジュールが現在一時停止している場合は、 **[状態]** 列に **[一時停止]** が表示されます。  
   
-##  <a name="bkmk_sharepoint"></a> 共有スケジュールの一時停止と再開 (SharePoint モード)  
+##  <a name="pause-and-resume-shared-schedules-sharepoint-mode"></a><a name="bkmk_sharepoint"></a> 共有スケジュールの一時停止と再開 (SharePoint モード)  
  共有スケジュールを一時停止または再開するには、[サイトの設定] ページまたは PowerShell を使用します。 スケジュールは SharePoint サイトごとに管理されます。  
   
 #### <a name="to-pause-or-resume-a-shared-schedule"></a>共有スケジュールを一時停止または再開するには  

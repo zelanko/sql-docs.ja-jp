@@ -11,10 +11,10 @@ ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58a0b6f11fa28dca0e8aae98cb1794b12e3fc227
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "70155108"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Azure SQL Database への接続
@@ -25,14 +25,14 @@ ms.locfileid: "70155108"
   
 - [SQL Azure データベース](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)  
   
-- [方法: JDBC を使用して SQL Azure に接続する](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
+- [JDBC を使用して SQL Azure に接続する方法](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
 
 - [Azure Active Directory 認証を利用した接続](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)  
   
 ## <a name="details"></a>詳細
 
 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] に接続する際には、master データベースに接続して **SQLServerDatabaseMetaData.getCatalogs** を呼び出す必要があります。  
-[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] では、ユーザー データベースからカタログ全体を返すことがサポートされていません。 **SQLServerDatabaseMetaData.getCatalogs** は sys.databases ビューを使用してカタログを取得します。 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] での **SQLServerDatabaseMetaData.getCatalogs** の動作を 理解するには、[sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) の権限に関する説明を参照してください。  
+[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] では、ユーザー データベースからカタログ全体を返すことがサポートされていません。 **SQLServerDatabaseMetaData.getCatalogs** は sys.databases ビューを使用してカタログを取得します。 [ での ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)SQLServerDatabaseMetaData.getCatalogs **の動作を 理解するには、** sys.databases (Transact-SQL)[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] の権限に関する説明を参照してください。  
   
 ## <a name="connections-dropped"></a>接続のドロップ
 
@@ -80,7 +80,7 @@ Version 4.0 より前の [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_m
 
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>暗号化の使用に必要な hostNameInCertificate の設定
 
-バージョン 7.2 より前の [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では、**encrypt=true** を指定した場合、[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] に接続する際に **hostNameInCertificate** を指定する必要がありました (接続文字列のサーバー名が *shortName*.*domainName* の場合、**hostNameInCertificate** プロパティを \*.*domainName* に設定します)。 バージョン 7.2 以降のドライバーでは、このプロパティは省略可能です。
+バージョン 7.2 より前の [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では、[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]encrypt=true **を指定した場合、** に接続する際に **hostNameInCertificate** を指定する必要がありました (接続文字列のサーバー名が *shortName*.*domainName* の場合、**hostNameInCertificate** プロパティを \*.*domainName* に設定します)。 バージョン 7.2 以降のドライバーでは、このプロパティは省略可能です。
 
 次に例を示します。
 

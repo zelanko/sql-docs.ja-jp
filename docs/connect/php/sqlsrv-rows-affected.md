@@ -17,10 +17,10 @@ ms.assetid: 6f43fbfc-fc92-449b-82d0-33fa780e8f09
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 93c7ec396d3388a2de6c0d6518fc516de7156f35
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68014954"
 ---
 # <a name="sqlsrv_rows_affected"></a>sqlsrv_rows_affected
@@ -36,7 +36,7 @@ sqlsrv_rows_affected( resource $stmt)
 ```  
   
 #### <a name="parameters"></a>パラメーター  
-*$stmt*: 実行されたステートメントに対応するステートメント リソース。  
+*$stmt*: 実行されたステートメントに対応するステートメント リソースです。  
   
 ## <a name="return-value"></a>戻り値  
 直前に実行されたステートメントによって変更された行数を示す整数です。 変更された行がない場合は、ゼロ (0) が返されます。 変更された行数に関する情報が使用できない場合は、マイナス 1 (-1) が返されます。 変更された行数の取得中にエラーが発生した場合は、 **false** が返されます。  

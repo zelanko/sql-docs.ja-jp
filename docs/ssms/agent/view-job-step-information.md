@@ -18,10 +18,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 353f9924a93e14d0617deb143ec2cbe080a465ad
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75241895"
 ---
 # <a name="view-job-step-information"></a>View Job Step Information
@@ -42,17 +42,17 @@ ms.locfileid: "75241895"
   
     [SQL Server Management Studio](#SSMS)  
   
-## <a name="BeforeYouBegin"></a>はじめに  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>はじめに  
   
-### <a name="Restrictions"></a>制限事項と制約事項  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>制限事項と制約事項  
 テーブルまたはファイルに出力を書き込むようにジョブ ステップが構成され、ジョブが 1 回でも実行されている場合は、 **[ジョブ ステップのプロパティ]** ダイアログ ボックスの **[詳細設定]** ページでジョブ ステップの出力を表示できます。 ジョブまたはジョブ ステップが削除されると、出力ログは自動的に削除されます。  
   
-### <a name="Security"></a>セキュリティ  
+### <a name="security"></a><a name="Security"></a>セキュリティ  
   
-#### <a name="Permissions"></a>アクセス許可  
+#### <a name="permissions"></a><a name="Permissions"></a>アクセス許可  
 **sysadmin** 固定サーバー ロールのメンバー以外は、所有するジョブしか表示できません。 このロールのメンバーは、すべてのジョブとジョブ ステップの詳細を表示できます。  
   
-## <a name="SSMS"></a>SQL Server Management Studio の使用  
+## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>SQL Server Management Studio の使用  
   
 #### <a name="to-view-job-step-information"></a>ジョブ ステップの情報を表示するには  
   

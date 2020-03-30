@@ -11,10 +11,10 @@ ms.reviewer: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: c7fa36db48a7912951f0232136945798caf6f7f7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727599"
 ---
 # <a name="loopback-connection-to-sql-server-from-a-python-or-r-script"></a>Python または R スクリプトからの SQL Server へのループバック接続
@@ -56,7 +56,7 @@ Python スクリプトでループバック接続用の正しい接続文字列�
 
 これは、次の引数を受け取ります。
 
-| 引数 | [説明] |
+| 引数 | 説明 |
 |-|-|
 | name_of_database | 接続する先のデータベースの名前 |
 | odbc_driver | ODBC ドライバーの名前 |
@@ -104,7 +104,7 @@ R スクリプトでループバック接続用の正しい接続文字列を生
 
 これは、次の引数を受け取ります。
 
-| 引数 | [説明] |
+| 引数 | 説明 |
 |-|-|
 | nameOfDatabase | 接続する先のデータベースの名前 |
 | odbcDriver | ODBC ドライバーの名前 |

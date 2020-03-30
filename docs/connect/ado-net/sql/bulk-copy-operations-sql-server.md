@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: c827ae70d9aa344f52de1d76c482beaef90c09aa
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78897035"
 ---
 # <a name="bulk-copy-operations-in-sql-server"></a>SQL Server での一括コピー操作
@@ -32,7 +32,7 @@ Microsoft SQL Server には、SQL Server データベースのテーブルまた
 - トランザクション内での一括コピー操作  
   
 > [!NOTE]
->  <xref:Microsoft.Data.SqlClient.SqlBulkCopy> クラスがサポートされていない、バージョン 1.1 以前の .NET Framework では、<xref:Microsoft.Data.SqlClient.SqlCommand> オブジェクトを使用して、SQL Server Transact-SQL **BULK INSERT** ステートメントを実行できます。  
+>  <xref:Microsoft.Data.SqlClient.SqlBulkCopy> クラスがサポートされていない、バージョン 1.1 以前の .NET Framework では、**オブジェクトを使用して、SQL Server Transact-SQL**BULK INSERT<xref:Microsoft.Data.SqlClient.SqlCommand> ステートメントを実行できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
 [一括コピーのセットアップ例](bulk-copy-example-setup.md)  

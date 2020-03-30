@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 2c9f3a7cd06f801555ab373e7e54fbf1b620d894
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993974"
 ---
 # <a name="isolation-levels-ole-db"></a>分離レベル (OLE DB)
@@ -33,9 +33,9 @@ ms.locfileid: "67993974"
   
      OLE DB Driver for SQL Server の既定のレベルは、DBPROPVAL_TI_READCOMMITTED です。  
   
--   ローカルの手動コミット トランザクションには、**ITransactionLocal::StartTransaction** メソッドの *isoLevel* パラメーター。  
+-   ローカルの手動コミット トランザクションには、*ITransactionLocal::StartTransaction* メソッドの **isoLevel** パラメーター。  
   
--   MS DTC でコーディネートされる分散トランザクションには、**ITransactionDispenser::BeginTransaction** メソッドの *isoLevel* パラメーター。  
+-   MS DTC でコーディネートされる分散トランザクションには、*ITransactionDispenser::BeginTransaction* メソッドの **isoLevel** パラメーター。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、ダーティ リード分離レベルでの読み取り専用アクセスを許可します。 他のすべてのレベルでは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オブジェクトにロックをかけることによってコンカレンシーを制限します。 クライアントがより高度なコンカレンシー レベルを要求すると、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] はデータへのコンカレント アクセスに対してより厳密な制限を適用します。 データへの最高レベルのコンカレント アクセスを維持するには、OLE DB Driver for SQL Server のコンシューマーで、特定のコンカレンシー レベルの要求を適切に制御する必要があります。  
   

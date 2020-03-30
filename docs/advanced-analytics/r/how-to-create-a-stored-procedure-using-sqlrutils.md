@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: e0846442abce6dd598c6318e4ba7cf9e74685066
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727471"
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>sqlrutils を使用してストアド プロシージャを作成する
@@ -21,7 +21,7 @@ ms.locfileid: "73727471"
 
 この記事では、T-SQL ストアド プロシージャとして実行する R コードを変換するための手順について説明します。 考えられる最良の結果を得るために、コードを少し変更し、すべての入力をパラメーター化できるようにする必要がある場合があります。
 
-## <a name="bkmk_rewrite"></a>手順 1. R スクリプトを再生成する
+## <a name="step-1-rewrite-r-script"></a><a name="bkmk_rewrite"></a>手順 1. R スクリプトを再生成する
 
 最良の結果を得るには、R コードを再生成して、それを 1 つの関数としてカプセル化する必要があります。
 
@@ -145,7 +145,7 @@ SQL Server ではなく R コードからストアド プロシージャを実�
 2. `$query` を定義するか、入力パラメーターごとに `$value` を設定します。
 3. `executeStoredProcedure` を使用して、設定した入力パラメーター オブジェクトのリストを渡し、R 開発環境からストアド プロシージャを実行します。
 
-## <a name = "samples"></a>例
+## <a name="example"></a><a name = "samples"></a>例
 
 次の例は、SQL Server データベースからデータを取得し、そのデータに対して何らかの変換を実行して、別のデータベースに保存する R スクリプトの準備前と準備後のバージョンを示しています。
 

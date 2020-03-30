@@ -13,10 +13,10 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.openlocfilehash: 2ad58a10987050bcd89e17e2a3dbef4fd39586d1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75251934"
 ---
 # <a name="create-a-project"></a>プロジェクトを作成する
@@ -35,7 +35,7 @@ ms.locfileid: "75251934"
     **テンプレート**  
     **[テンプレート]** ボックスで、テンプレートを選択します。 **[テンプレート]** ボックスの下に、選択したプロジェクト テンプレートの簡単な説明が表示されます。  
   
-    **名前**  
+    **Name**  
     作成するスクリプト プロジェクトの名前を入力します。 **[場所]** フィールドに表示された場所に、プロジェクトと同じ名前のフォルダーも作成されます。 プロジェクトによっては、ソース ファイルなどのサポート ファイルが [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] によって作成され、新しいプロジェクト フォルダーに追加されます。  
   
     > [!NOTE]  

@@ -16,16 +16,16 @@ ms.assetid: 260da35f-ddf6-4111-8519-69956ea3072e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7a0293a48a354bba911a11ecf91a17211a9f8a12
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67980299"
 ---
 # <a name="getresultsettype-method-sqlserverstatement"></a>getResultSetType メソッド (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトによって生成された [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの結果セットの種類を取得します。  
+  [SQLServerStatement](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトによって生成された [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトの結果セットの種類を取得します。  
   
 ## <a name="syntax"></a>構文  
   

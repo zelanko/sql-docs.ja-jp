@@ -9,10 +9,10 @@ ms.assetid: f951a4aa-da55-4e43-8579-4a5d4480d11f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2f65020a094258e4d6ee4a3906d29d33438b0783
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081456"
 ---
 # <a name="built-in-collections---datasources-and-datasets-references-report-builder"></a>組み込みコレクション - DataSources と DataSets の参照 (レポート ビルダー)
@@ -26,7 +26,7 @@ ms.locfileid: "77081456"
   
 |**変数**|**Type**|**説明**|  
 |------------------|--------------|---------------------|  
-|**DataSourceReference**|**String**|レポート サーバー上のデータ ソース定義の完全パスです。 たとえば、レポートでレポート履歴の一部として使用されたすべてのデータ ソースの一覧を含める場合があります。 次の例では、AdventureWorks2012 という名前のデータ ソースの完全パスを示します。<br /><br /> `/DataSources/AdventureWorks2012`|  
+|**DataSourceReference**|**String**|レポート サーバー上のデータ ソース定義の完全パスです。 たとえば、レポートでレポート履歴の一部として使用されたすべてのデータ ソースの一覧を含める場合があります。 次の例では、AdventureWorks2012 という名前のデータ ソースの完全パスを示します。<br /><br /> [https://login.microsoftonline.com/consumers/](`/DataSources/AdventureWorks2012`)|  
 |**Type**|**String**|データ ソースのデータ プロバイダーの種類です。 たとえば、「 `SQL` 」のように入力します。|  
   
 ## <a name="datasets"></a>DataSets  
