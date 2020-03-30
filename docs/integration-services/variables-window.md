@@ -16,10 +16,10 @@ ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ef2e4b408dabf7b054465149b2489e07fbdefef8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295026"
 ---
 # <a name="variables-window"></a>[変数] ウィンドウ
@@ -51,7 +51,7 @@ ms.locfileid: "71295026"
  **グリッドのオプション**  
  クリックすると **[可変グリッドのオプション]** ダイアログ ボックスが開きます。このダイアログ ボックスで、列の選択を変更したり、 **[変数]** ウィンドウにフィルターを適用したりできます。 詳細については、「 [可変グリッドのオプション](../integration-services/variable-grid-options.md)」を参照してください。  
   
- **名前**  
+ **Name**  
  変数名を表示します。 ユーザー定義変数の名前を更新できます。  
   
  **スコープ**  

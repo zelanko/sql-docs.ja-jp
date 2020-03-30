@@ -20,10 +20,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: cb12cc164490e249dae13ef22cdd5279a0427102
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75304804"
 ---
 # <a name="tablediff-utility"></a>tablediff ユーティリティ
@@ -166,7 +166,7 @@ tablediff
   
 ## <a name="return-value"></a>戻り値  
   
-|Value|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**0**|Success|  
 |**1**|重大なエラー|  
@@ -187,10 +187,10 @@ tablediff
 |**timestamp**|**varbinary**|  
 |**varchar(max)**|**text**|  
 |**nvarchar(max)**|**ntext**|  
-|**varbinary(max)**|**image**|  
+|**varbinary(max)**|**画像**|  
 |**text**|**varchar(max)**|  
 |**ntext**|**nvarchar(max)**|  
-|**image**|**varbinary(max)**|  
+|**画像**|**varbinary(max)**|  
   
  これらのマッピングを行わず、厳密な検証を行う場合は、 **-strict** オプションを使用します。  
   
@@ -212,7 +212,7 @@ tablediff
   
 -   **ntext**  
   
--   **image**  
+-   **画像**  
   
 ## <a name="permissions"></a>アクセス許可  
  テーブルを比較するには、比較するテーブル オブジェクトに対する SELECT ALL 権限が必要です。  

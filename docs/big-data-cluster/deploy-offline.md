@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 15af041e94ac0abfdae13635345de62262a4b086
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73531983"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>SQL Server ビッグ データ クラスターのオフライン展開を実行する
@@ -55,7 +55,7 @@ ms.locfileid: "73531983"
    docker push <TARGET_DOCKER_REGISTRY>/<TARGET_DOCKER_REPOSITORY>/<SOURCE_IMAGE_NAME>:<TARGET_DOCKER_TAG>
    ```
 
-### <a id="images"></a> ビッグ データ クラスター コンテナー イメージ
+### <a name="big-data-cluster-container-images"></a><a id="images"></a> ビッグ データ クラスター コンテナー イメージ
 
 オフライン インストールには、次のビッグ データ クラスター コンテナー イメージが必要です。
 - **mssql-app-service-proxy**
@@ -85,7 +85,7 @@ ms.locfileid: "73531983"
 - **mssql-ssis-app-runtime**
 
 
-## <a id="automated"></a> 自動スクリプト
+## <a name="automated-script"></a><a id="automated"></a> 自動スクリプト
 
 自動的にすべての必要なコンテナー イメージをプルし、それらをプライベート リポジトリにプッシュする、自動化された Python スクリプトを使用できます。
 
@@ -120,7 +120,7 @@ ms.locfileid: "73531983"
 
 ビッグ データ クラスターの展開には、**Python**、`azdata`、および **kubectl** など、いくつかのツールが必要です。 これらのツールをオフライン サーバーにインストールするには、次の手順に従います。
 
-### <a id="python"></a> Python をオフラインでインストールする
+### <a name="install-python-offline"></a><a id="python"></a> Python をオフラインでインストールする
 
 1. インターネットにアクセスできるコンピューターで、Python が含まれる次のいずれかの圧縮ファイルをダウンロードします。
 
@@ -138,7 +138,7 @@ ms.locfileid: "73531983"
    installLocalPythonPackages.bat "C:\python-3.6.6-win-x64-0.0.1-offline\0.0.1"
    ```
 
-### <a id="azdata"></a> azdata をオフラインでインストールする
+### <a name="install-azdata-offline"></a><a id="azdata"></a> azdata をオフラインでインストールする
 
 1. インターネットにアクセスでき、[Python](https://wiki.python.org/moin/BeginnersGuide/Download) があるコンピューターで、次のコマンドを実行し、すべての `azdata` パッケージを現在のフォルダーにダウンロードします。
 
@@ -154,7 +154,7 @@ ms.locfileid: "73531983"
    pip install --no-index --find-links <path-to-packages> -r <path-to-requirements.txt>
    ```
 
-### <a id="kubectl"></a> kubectl をオフラインでインストールする
+### <a name="install-kubectl-offline"></a><a id="kubectl"></a> kubectl をオフラインでインストールする
 
 オフライン コンピューターに **kubectl** をインストールするには、次の手順を実行します。
 

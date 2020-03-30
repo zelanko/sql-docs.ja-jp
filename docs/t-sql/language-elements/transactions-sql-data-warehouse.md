@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 21e6d25305bd6abf4a3dc4555f2148a2fe385187
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68121587"
 ---
 # <a name="transactions-sql-data-warehouse"></a>トランザクション (SQL Data Warehouse)
@@ -99,7 +99,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
 ## <a name="locking-behavior"></a>ロック動作  
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] では、複数のユーザーが同時にアクセスしたときにトランザクションの整合性を保証し、データベースの一貫性を保つため、ロックを使用します。 ロックは、暗黙的および明示的なトランザクションで使用されます。 各トランザクションでは、トランザクションが依存するテーブルやデータベースなど、リソースに対してさまざまな種類のロックが要求されます。 すべての [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ロックはテーブル レベル以上です。 ロックをかけると、ロックを要求したトランザクションにとって問題になるようなリソースの変更が行われないように、他のトランザクションがブロックされます。 各トランザクションでは、ロックされたリソースに依存関係がなくなると、ロックが解除されます。明示的なトランザクションでは、コミット時またはロールバック時にトランザクションが完了するまでロックが保持されます。  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-using-an-explicit-transaction"></a>A. 明示的なトランザクションを使用します。  
   

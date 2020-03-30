@@ -16,10 +16,10 @@ ms.assetid: 5dd39c40-e7cc-4ff9-8491-7e20e25a9d17
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9136c379793f4f66fcc4c69b11da9a0ea49d294d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67979763"
 ---
 # <a name="getshort-method-sqlserverresultset"></a>getShort メソッド (SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67979763"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|Name|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[getShort (int)](../../../connect/jdbc/reference/getshort-method-int-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列インデックスの値が、Java プログラミング言語の **short** として取得されます。|  
 |[getShort (java.lang.String)](../../../connect/jdbc/reference/getshort-method-java-lang-string-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列名の値を、Java プログラミング言語の **short** として取得します。|  

@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8640da8c6363b25342b210043763433a74835691
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68056142"
 ---
 # <a name="delete-or-disable-dml-triggers"></a>DML トリガーの削除または無効化
@@ -42,9 +42,9 @@ ms.locfileid: "68056142"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Recommendations"></a> 推奨事項  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
   
 -   トリガーを削除すると、現在のデータベースから削除されます。 トリガーの基になっているテーブルとデータは影響を受けません。 テーブルを削除すると、そのテーブルについて設定されたトリガーはすべて自動的に削除されます。  
   
@@ -52,14 +52,14 @@ ms.locfileid: "68056142"
   
 -   トリガーを無効にしてもトリガーは削除されず、 オブジェクトとして現在のデータベースに残りますが、 ただし、トリガーを起動するようにプログラミングされている INSERT、UPDATE、DELETE のいずれかのステートメントを実行してもトリガーは起動されません。 無効になったトリガーは、再度有効にできます。 トリガーを有効化しても、トリガーが再作成されるわけではありません。 トリガーは、最初に作成したときと同じ動作で起動されます。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  DML トリガーを削除するには、そのトリガーが定義されているテーブルまたはビューに対する ALTER 権限が必要です。  
   
  DML トリガーを無効または有効にするには、少なくともトリガーが作成されたテーブルまたはビューに対する ALTER 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-delete-a-dml-trigger"></a>DML トリガーを削除するには  
   
@@ -81,7 +81,7 @@ ms.locfileid: "68056142"
   
 4.  トリガーを有効にするには、 **[有効化]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-delete-a-dml-trigger"></a>DML トリガーを削除するには  
   

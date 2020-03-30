@@ -16,10 +16,10 @@ ms.assetid: daa3cff7-2481-4089-a41e-81fe9af1a462
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: edb8443da58baba0207425a67d5c92810c5e17dc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67998930"
 ---
 # <a name="updatefloat-method-sqlserverresultset"></a>updateFloat メソッド (SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67998930"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|Name|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[updateFloat (int, float)](../../../connect/jdbc/reference/updatefloat-method-int-float.md)|渡された列インデックスを使用して、指定された列を **float** 値で更新します。|  
 |[updateFloat (java.lang.String, float)](../../../connect/jdbc/reference/updatefloat-method-java-lang-string-float.md)|渡された列名を使用して、指定された列を **float** 値で更新します。|  

@@ -24,10 +24,10 @@ ms.assetid: 3222a1ed-83eb-421c-b299-a53b67bba740
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 45e97657bf70bdf023388f97497f9c2a8c5dd0f4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294944"
 ---
 # <a name="enabling-logging-programmatically"></a>プログラムによるログ記録の有効化
@@ -47,7 +47,7 @@ ms.locfileid: "71294944"
   
  次の表に、使用可能なログ プロバイダー、説明、および <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider.ConfigString%2A> 情報を示します。  
   
-|プロバイダー|[説明]|ConfigString プロパティ|  
+|プロバイダー|説明|ConfigString プロパティ|  
 |--------------|-----------------|---------------------------|  
 |SQL Server プロファイラー|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler でキャプチャおよび表示される SQL トレースを生成します。 このプロバイダーで使用されるファイル名の既定の拡張子は、.trc です。|構成は必要ありません。|  
 |SQL Server|イベント ログ エントリを **データベースの**sysssislog[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルに書き込みます。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロバイダーの場合は、データベースへの接続と対象データベースの名前を指定する必要があります。|  

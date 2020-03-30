@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 02a05f99919bbd35b1064d14c82dec9fba6cee78
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67994569"
 ---
 # <a name="ibcpsessionbcpinit-ole-db"></a>IBCPSession::BCPInit (OLE DB)
@@ -58,7 +58,7 @@ HRESULT BCPInit(
 > [!NOTE]  
 >  データ ファイルに指定したデータ形式値を変更するには、[IBCPSession::BCPColumns](../../oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) メソッドと [IBCPSession::BCPColFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) メソッドを使用します。  
   
- テーブルにインデックスが含まれていない場合は、データベース オプション **select into/bulkcopy** を設定することにより、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] への一括コピーを最適化できます。  
+ テーブルにインデックスが含まれていない場合は、データベース オプション [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]select into/bulkcopy **を設定することにより、** への一括コピーを最適化できます。  
   
 ## <a name="arguments"></a>引数  
  *pwszTable*[in]  

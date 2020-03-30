@@ -18,10 +18,10 @@ ms.assetid: bfff5b25-cfe1-449b-8e07-38cd511ac307
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bb6f782de8d271edf005f5adb69e8c3e6b8945d3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296239"
 ---
 # <a name="integration-services-backward-compatibility"></a>Integration Services の旧バージョンとの互換性
@@ -33,13 +33,13 @@ ms.locfileid: "71296239"
   
 ## <a name="deprecated-integration-services-features-in-sql-server-2016"></a>SQL Server 2016 の非推奨 Integration Services 機能
 
-このトピックでは、現在のリリースの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で引き続き使用できる [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の非推奨の機能について説明します。 これらの機能は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の今後のリリースで削除される予定です。 非推奨の機能を新しいアプリケーションで使用しないでください。  
+このトピックでは、現在のリリースの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で引き続き使用できる [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の非推奨の機能について説明します。 これらの機能は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の今後のリリースで削除される予定です。 非推奨の機能を新しいアプリケーションで使用しないでください。  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、非推奨の [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]機能はありません。  
 
 ## <a name="discontinued-integration-services-functionality-in-sql-server-2016"></a>SQL Server 2016 で提供が中止された Integration Services の機能
 
-このトピックでは、現在のリリースの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で使用できなくなった [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の機能について説明します。  
+このトピックでは、現在のリリースの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で使用できなくなった [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の機能について説明します。  
   
  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]では、提供が中止された Integration Services の機能はありません。  
 

@@ -14,10 +14,10 @@ ms.assetid: 13c3da04-6690-439f-85b0-18b4439ac9c1
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 35fbe42c60a6e3455f53aab1a09624f9eff45c4d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75557987"
 ---
 # <a name="facet-properties-dialog-box-dependent-policies-page"></a>[ファセットのプロパティ] ダイアログ ボックスの [依存ポリシー] ページ
@@ -25,7 +25,7 @@ ms.locfileid: "75557987"
   このダイアログ ボックスを使用すると、このポリシー ベースの管理ファセットを現在参照しているポリシーの一覧を表示できます。  
   
 ## <a name="options"></a>オプション  
- **名前**  
+ **Name**  
  現在のファセットを参照している各ポリシーの名前を一覧表示します。  
   
  **有効**  

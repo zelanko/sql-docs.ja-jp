@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e6d4f387317da407d74f90fb7280639851cf6aaa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68087632"
 ---
 # <a name="user-configurable-event-category"></a>ユーザー構成可能イベント カテゴリ
@@ -27,7 +27,7 @@ ms.locfileid: "68087632"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[ユーザー構成可能イベント クラス](../../relational-databases/event-classes/user-configurable-event-class.md)|他のイベント カテゴリにあるシステム提供のイベントでは監視できないユーザー定義イベントを監視するために使用します。|  
   

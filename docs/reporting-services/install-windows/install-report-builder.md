@@ -9,10 +9,10 @@ ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d256ac7cc7f7925ad307c527378abcca5b6d121f
-ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76971381"
 ---
 # <a name="install-report-builder"></a>レポート ビルダーをインストールする
@@ -31,7 +31,7 @@ ms.locfileid: "76971381"
 > [!NOTE]
 > SharePoint と Reporting Services の統合は、SQL Server 2016 以降では使用できません。
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web ポータル、または [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] と統合された SharePoint サイトから [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] を起動できます。 詳細については、「 [レポート ビルダーの起動](../../reporting-services/report-builder/start-report-builder.md)」を参照してください。  
+ [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] Web ポータル、または [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] と統合された SharePoint サイトから [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を起動できます。 詳細については、「 [レポート ビルダーの起動](../../reporting-services/report-builder/start-report-builder.md)」を参照してください。  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
@@ -52,7 +52,7 @@ ms.locfileid: "76971381"
   
  Microsoft ダウンロード センターの **レポート ビルダーのダウンロード ページ** で、「 [システム要件](https://go.microsoft.com/fwlink/?LinkID=734968) 」セクションを参照してください。
   
-##  <a name="download"></a> ダウンロード サイトから [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] をインストールするには  
+##  <a name="to-install-ssrbnoversion-from-the-download-site"></a><a name="download"></a> ダウンロード サイトから [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] をインストールするには  
   
 1.  [Microsoft ダウンロード センターのレポート ビルダー ページ](https://go.microsoft.com/fwlink/?LinkID=734968) で、 **[ダウンロード]** をクリックします。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "76971381"
 4.  **[既定のターゲット サーバー]** ページで、必要に応じて対象レポート サーバーの URL を指定します (既定の URL と異なる場合)。 **[次へ]** をクリックします。  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] をレポート サーバーに接続して使用する場合は、ここでサーバーの URL を指定すると便利です。 また、[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] の **[オプション]** ダイアログ ボックスからも実行できます。  
+    >  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] をレポート サーバーに接続して使用する場合は、ここでサーバーの URL を指定すると便利です。 また、**の**[オプション][!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] ダイアログ ボックスからも実行できます。  
   
 5.  **[インストール]** をクリックして [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] のインストールを完了します。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "76971381"
   
 ## <a name="to-install-ssrbnoversion-from-the-command-line"></a>コマンド ラインから [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] をインストールするには 
 
- [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] のインストールをコマンド ラインから実行し、引数を指定してインストールをカスタマイズすることもできます。 標準の MSI 固有パラメーターに加えて、[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] に用意されている使用できるカスタム パラメーターはRBINSTALLDIR と REPORTSERVERURL です。 RBINSTALLDIR では、[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 用のルート インストール フォルダーを指定します。 REPORTSERVERURL では、[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] でサーバーにレポートを保存するときに使用される既定のレポート サーバーを指定します。  
+ [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] のインストールをコマンド ラインから実行し、引数を指定してインストールをカスタマイズすることもできます。 標準の MSI 固有パラメーターに加えて、[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] に用意されているカスタム パラメーターの RBINSTALLDIR と REPORTSERVERURL も使用できます。 RBINSTALLDIR では、[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 用のルート インストール フォルダーを指定します。 REPORTSERVERURL では、[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] でサーバーにレポートを保存するときに使用される既定のレポート サーバーを指定します。  
   
  ユーザー インターフェイスをまったく操作しない完全なサイレント インストールを実行する場合は、 **/quiet** オプションを指定します。 quiet オプション フラグを使用するとインストール エラーが抑制されるように設計されています。 そのため、quiet オプションを使用する場合は、ログ記録を指定する **/l** オプションを含めることをお勧めします。   
   
@@ -99,7 +99,7 @@ ms.locfileid: "76971381"
   
      `msiexec/i ReportBuilder.msi /option [value] [/option [value]]`  
   
-     [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] のインストールに固有の 2 つのオプションは、RBINSTALLDIR と REPORTSERVERURL です。 コマンド ラインにこれらの引数を含める必要はありません。 標準的なコマンド ラインは次のとおりです。  
+     [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] のインストールに固有のオプションは、RBINSTALLDIR と REPORTSERVERURL の 2 つです。 コマンド ラインにこれらの引数を含める必要はありません。 標準的なコマンド ラインは次のとおりです。  
   
      `msiexec /i ReportBuilder3_x86.msi /quiet`  
   
@@ -113,7 +113,7 @@ ms.locfileid: "76971381"
   
 -   **[レポート ビルダー]** をクリックします。  
   
-     既存のサーバーのリストにレポート サーバーが表示されない場合は、 **[レポートを開く]** ダイアログ ボックスを閉じ、[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] の下部の **[接続]** をクリックしてサーバーに接続します。  
+     既存のサーバーのリストにレポート サーバーが表示されない場合は、 **[レポートを開く]** ダイアログ ボックスを閉じ、**の下部の**[接続][!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] をクリックしてサーバーに接続します。  
   
 ## <a name="see-also"></a>参照  
  [レポート ビルダーの起動](../../reporting-services/report-builder/start-report-builder.md)   

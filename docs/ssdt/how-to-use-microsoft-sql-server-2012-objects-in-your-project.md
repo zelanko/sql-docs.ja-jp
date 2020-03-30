@@ -11,13 +11,13 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: c9ea326bc37d4843b6cb7e3bc4e21fa356af5435
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75244250"
 ---
-# <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>方法:プロジェクトで Microsoft SQL Server 2012 のオブジェクトを使用する
+# <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>プロジェクトで Microsoft SQL Server 2012 のオブジェクトを使用する方法
 
 この例では、Microsoft SQL Server 2012 をターゲットとするデータベース プロジェクトに、シーケンス オブジェクトを追加します。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "75244250"
     CACHE 10  
     ```  
   
-4.  プロジェクトのターゲット プラットフォームが Microsoft SQL Server 2012 に設定されていない場合は、`CREATE SEQUENCE` ステートメントに対する構文エラーが **[エラー一覧]** に表示されます。 これを修正するには、「[ターゲット プラットフォームを変更し、データベース プロジェクトを公開する方法](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)」の手順に従ってターゲット プラットフォームを変更します。  
+4.  プロジェクトのターゲット プラットフォームが Microsoft SQL Server 2012 に設定されていない場合は、**ステートメントに対する構文エラーが**[エラー一覧]`CREATE SEQUENCE` に表示されます。 これを修正するには、「[ターゲット プラットフォームを変更し、データベース プロジェクトを公開する方法](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)」の手順に従ってターゲット プラットフォームを変更します。  
   
 5.  「[ターゲット プラットフォームを変更し、データベース プロジェクトを公開する方法](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)」の手順に従って、接続された Microsoft SQL Server 2012 サーバーにあるデータベースにプロジェクトを公開します。  
   

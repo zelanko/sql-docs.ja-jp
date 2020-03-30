@@ -11,10 +11,10 @@ ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f6edf465f5b853008c9bdc8c420f6e862e360593
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67936600"
 ---
 # <a name="data-source-wizard-screen-1"></a>データ ソース ウィザード画面 1
@@ -43,11 +43,11 @@ SQL Server と同じコンピューターを使用している場合は、[サ�
 
 ### <a name="finish"></a>[完了]
 
-SQL Server への接続に必要なすべての情報がこの画面で指定されると、**[完了]** をクリックすることができます。 ウィザードの他の画面で指定するすべての属性には既定値が使用されます。
+SQL Server への接続に必要なすべての情報がこの画面で指定されると、 **[完了]** をクリックすることができます。 ウィザードの他の画面で指定するすべての属性には既定値が使用されます。
 
 ### <a name="next"></a>Next
 
-ウィザードの次の画面に進むには、**[Next]** をクリックします。
+ウィザードの次の画面に進むには、 **[Next]** をクリックします。
 
 ## <a name="next-steps"></a>次のステップ
 

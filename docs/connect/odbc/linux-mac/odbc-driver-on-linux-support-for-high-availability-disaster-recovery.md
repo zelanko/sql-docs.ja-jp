@@ -11,10 +11,10 @@ ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 08fb8cc6e54fff4b315a0a98ace046a49b2673a3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68008767"
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Linux と macOS の ODBC ドライバーでの高可用性とディザスター リカバリーのサポート
@@ -93,7 +93,7 @@ ODBC 接続プロパティの詳細については、「[SQLSetConnectAttr](../.
   
 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]を使用する ODBC アプリケーションでは、2 つの関数のいずれかを使用して接続できます。  
   
-|Function|[説明]|  
+|Function|説明|  
 |------------|---------------|  
 |[SQLConnect 関数](../../../odbc/reference/syntax/sqlconnect-function.md)|**SQLConnect** では、データ ソース名 (DSN) または接続属性を介して、**ApplicationIntent** と **MultiSubnetFailover** の両方がサポートされています。|  
 |[SQLDriverConnect 関数](../../../odbc/reference/syntax/sqldriverconnect-function.md)|**SQLDriverConnect** では、DSN、接続文字列キーワード、または接続属性を介して、**ApplicationIntent** と **MultiSubnetFailover** がサポートされています。|
