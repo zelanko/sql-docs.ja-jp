@@ -33,10 +33,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 327992369ca07d77eb349cb83fb74c4ecd4e622e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73982224"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
@@ -411,7 +411,7 @@ Parallel Data Warehouse では、ORDER BY 句は、TOP も一緒に指定しな�
   
  OPENROWSET 関数の BULK オプションで INSERT を実行するには、**sysadmin** 固定サーバー ロールまたは **bulkadmin** 固定サーバー ロールのメンバーであることが必要です。  
   
-##  <a name="InsertExamples"></a> 使用例  
+##  <a name="examples"></a><a name="InsertExamples"></a> 使用例  
   
 |カテゴリ|主な構文要素|  
 |--------------|------------------------------|  
@@ -424,7 +424,7 @@ Parallel Data Warehouse では、ORDER BY 句は、TOP も一緒に指定しな�
 |[ヒントを使用してクエリ オプティマイザーの既定の動作をオーバーライドする](#TableHints)|テーブル ヒント|  
 |[INSERT ステートメントの結果をキャプチャする](#CaptureResults)|OUTPUT 句|  
   
-###  <a name="BasicSyntax"></a> 基本構文  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> 基本構文  
  このセクションの例では、最低限必要な構文を使用して INSERT ステートメントの基本機能を示します。  
   
 #### <a name="a-inserting-a-single-row-of-data"></a>A. 1 行のデータを挿入する  
@@ -453,7 +453,7 @@ INSERT INTO Production.UnitMeasure (Name, UnitMeasureCode,
 VALUES (N'Square Yards', N'Y2', GETDATE());  
 ```  
   
-###  <a name="ColumnValues"></a> 列の値を処理する  
+###  <a name="handling-column-values"></a><a name="ColumnValues"></a> 列の値を処理する  
  このセクションの例では、IDENTITY プロパティ、DEFAULT 値、または **uniqueidentifer** 列やユーザー定義型の列などのデータ型で定義された列に値を挿入する方法を示します。  
   
 #### <a name="d-inserting-data-into-a-table-with-columns-that-have-default-values"></a>D. 列が既定値に設定されているテーブルにデータを挿入する  
@@ -529,7 +529,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '1,5'));
 INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));  
 ```  
   
-###  <a name="OtherTables"></a> 他のテーブルのデータを挿入する  
+###  <a name="inserting-data-from-other-tables"></a><a name="OtherTables"></a> 他のテーブルのデータを挿入する  
  このセクションの例では、あるテーブルの行を別のテーブルに挿入する方法を示します。  
   
 #### <a name="h-using-the-select-and-execute-options-to-insert-data-from-other-tables"></a>H. SELECT および EXECUTE オプションを使用して他のテーブルのデータを挿入する  
@@ -666,7 +666,7 @@ INSERT INTO dbo.EmployeeSales
     ORDER BY sp.SalesYTD DESC;  
 ```  
   
-###  <a name="TargetObjects"></a> 標準的なテーブル以外の対象オブジェクトを指定する  
+###  <a name="specifying-target-objects-other-than-standard-tables"></a><a name="TargetObjects"></a> 標準的なテーブル以外の対象オブジェクトを指定する  
  このセクションの例では、ビューまたはテーブル変数を指定して行を挿入する方法を示します。  
   
 #### <a name="k-inserting-data-by-specifying-a-view"></a>K. ビューを指定してデータを挿入する  
@@ -712,7 +712,7 @@ SELECT * FROM @MyTableVar;
 GO  
 ```  
   
-###  <a name="RemoteTables"></a> リモート テーブルに行を挿入する  
+###  <a name="inserting-rows-into-a-remote-table"></a><a name="RemoteTables"></a> リモート テーブルに行を挿入する  
  このセクションの例では、[リンク サーバー](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)または[行セット関数](../../t-sql/functions/rowset-functions-transact-sql.md)を使用してリモート テーブルを参照し、リモートの対象テーブルに行を挿入する方法を示します。  
   
 #### <a name="m-inserting-data-into-a-remote-table-by-using-a-linked-server"></a>M. リンク サーバーを使用してリモート テーブルにデータを挿入する  
@@ -804,7 +804,7 @@ ON (T1.CustomerKey = T2.CustomerKey)
 WHERE T2.YearMeasured = 2009 and T2.Speed > 40;  
 ```  
   
-###  <a name="BulkLoad"></a> テーブルまたはデータ ファイルのデータを一括読み込みする  
+###  <a name="bulk-loading-data-from-tables-or-data-files"></a><a name="BulkLoad"></a> テーブルまたはデータ ファイルのデータを一括読み込みする  
  このセクションの例では、INSERT ステートメントを使用してテーブルにデータを一括読み込みする 2 つの方法を示します。  
   
 #### <a name="q-inserting-data-into-a-heap-with-minimal-logging"></a>Q. 最小ログ記録を行ってヒープにデータを挿入する  
@@ -864,7 +864,7 @@ FROM OPENROWSET (
     ROWS_PER_BATCH = 15000)AS b ;  
 ```  
   
-###  <a name="TableHints"></a> ヒントを使用してクエリ オプティマイザーの既定の動作をオーバーライドする  
+###  <a name="overriding-the-default-behavior-of-the-query-optimizer-by-using-hints"></a><a name="TableHints"></a> ヒントを使用してクエリ オプティマイザーの既定の動作をオーバーライドする  
  このセクションの例では、[テーブル ヒント](../../t-sql/queries/hints-transact-sql-table.md)を使用して、INSERT ステートメントを処理する際のクエリ オプティマイザーの既定の動作を一時的にオーバーライドする方法を示します。  
   
 > [!CAUTION]  
@@ -881,7 +881,7 @@ INSERT INTO Production.Location WITH (XLOCK)
 VALUES ( N'Final Inventory', 15.00, 80.00);  
 ```  
   
-###  <a name="CaptureResults"></a> INSERT ステートメントの結果をキャプチャする  
+###  <a name="capturing-the-results-of-the-insert-statement"></a><a name="CaptureResults"></a> INSERT ステートメントの結果をキャプチャする  
  このセクションの例では、[OUTPUT 句](../../t-sql/queries/output-clause-transact-sql.md)を使用して、INSERT ステートメントの影響を受ける各行の情報や、それらに基づく式を返す方法を示します。 これらの結果は処理アプリケーションに返され、確認メッセージの表示、アーカイブ化、その他のアプリケーション要件で使用することができます。  
   
 #### <a name="t-using-output-with-an-insert-statement"></a>T. OUTPUT を INSERT ステートメントで使用する  

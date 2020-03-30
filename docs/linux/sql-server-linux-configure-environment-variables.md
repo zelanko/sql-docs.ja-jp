@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 ms.openlocfilehash: f768a79512059025ebd6dfe6a6f339175b6149f3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558374"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Linux 上で環境変数を使って SQL Server の設定を構成する
@@ -44,7 +44,7 @@ Linux では、いくつかの異なる環境変数を使って SQL Server 2019 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-| 環境変数 | [説明] |
+| 環境変数 | 説明 |
 |-----|-----|
 | **ACCEPT_EULA** | **ACCEPT_EULA** 変数を任意の値に設定し、[使用許諾契約書](https://go.microsoft.com/fwlink/?LinkId=746388)の承諾を確定します。 SQL Server イメージの設定が必要です。 |
 | **MSSQL_SA_PASSWORD** | SA ユーザーのパスワードを構成します。 |
@@ -68,7 +68,7 @@ Linux では、いくつかの異なる環境変数を使って SQL Server 2019 
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-| 環境変数 | [説明] |
+| 環境変数 | 説明 |
 |-----|-----|
 | **ACCEPT_EULA** | **ACCEPT_EULA** 変数を任意の値に設定し、[使用許諾契約書](https://go.microsoft.com/fwlink/?LinkId=746388)の承諾を確定します。 SQL Server イメージの設定が必要です。 |
 | **MSSQL_SA_PASSWORD** | SA ユーザーのパスワードを構成します。 |

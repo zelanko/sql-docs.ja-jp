@@ -15,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2e2a794a7e5bdafe4e07b5e7deb9a1007e4a7e73
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 5f1920374f62f98eed81323eca05ce1e45e66fc6
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75235390"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79433759"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>レプリケーション、変更の追跡、変更データ キャプチャ - Always On 可用性グループ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]のレプリケーション、変更データ キャプチャ (CDC)、および変更の追跡 (CT) がサポートされています。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] は、高可用性と追加のデータベース復旧機能を提供します。  
   
-##  <a name="Overview"></a> 可用性グループによるレプリケーションの概要  
+##  <a name="overview-of-replication-with-availability-groups"></a><a name="Overview"></a> 可用性グループによるレプリケーションの概要  
   
-###  <a name="PublisherRedirect"></a> パブリッシャー リダイレクト  
+###  <a name="publisher-redirection"></a><a name="PublisherRedirect"></a> パブリッシャー リダイレクト  
  パブリッシュされたデータベースが [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]に対応している場合、パブリッシング データベースへのエージェント アクセス権を提供するディストリビューターは、redirected_publishers エントリで構成されます。 これらのエントリは、パブリッシャーとパブリッシング データベースへの接続に可用性グループ リスナー名を使用して、最初に構成されていたパブリッシャー/データベース ペアをリダイレクトします。 可用性グループ リスナー名を介して確立された接続は、フェールオーバーに失敗します。 フェールオーバー後にレプリケーション エージェントを再起動すると、接続は自動的に新しいプライマリにリダイレクトされます。  
   
  可用性グループでセカンダリ データベースをパブリッシャーにすることはできません。 トランザクション レプリケーションを [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]と組み合わせている場合にのみ、再パブリッシュがサポートされます。  
@@ -39,7 +39,7 @@ ms.locfileid: "75235390"
 > [!NOTE]  
 >  セカンダリ レプリカにフェールオーバーした後、レプリケーション モニターは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のパブリッシング インスタンスの名前を調整できないため、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の元のプライマリ インスタンスの名前を引き続き使ってレプリケーション情報が表示されます。 フェールオーバー後は、トレーサー トークンはレプリケーション モニターを使用して入力できませんが、新しいパブリッシャーで [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して入力されたトレース トークンがレプリケーション モニターに表示されます。  
   
-###  <a name="Changes"></a> 可用性グループをサポートするためのレプリケーション エージェントへの一般的な変更  
+###  <a name="general-changes-to-replication-agents-to-support-availability-groups"></a><a name="Changes"></a> 可用性グループをサポートするためのレプリケーション エージェントへの一般的な変更  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]をサポートするために、3 つのレプリケーション エージェントが変更されました。 ログ リーダー、スナップショット、およびマージ エージェントは、リダイレクトされたパブリッシャーについてディストリビューション データベースにクエリを実行し、リダイレクトされたパブリッシャーが宣言されていた場合は、返された可用性グループ リスナー名を使用してデータベース パブリッシャーに接続するように変更されました。  
   
  既定では、エージェントがディストリビューターにクエリを実行して、元のパブリッシャーがリダイレクトされたかどうかを判断する場合、リダイレクトされたホストがエージェントに戻る前に、現在のターゲットまたはリダイレクトの適合性が検証されます。 これは推奨される動作です。 ただし、エージェントの起動が非常に頻繁に行われる場合、検証ストアド プロシージャに関連するオーバーヘッドのコストが高くなる可能性があります。 新しいコマンド ライン スイッチ *BypassPublisherValidation* が、ログ リーダー、スナップショット、およびマージ エージェントに追加されました。 スイッチが使用される場合、リダイレクトされたパブリッシャーはエージェントに即時に戻り、検証ストアド プロシージャの実行が省略されます。  
@@ -59,7 +59,7 @@ ms.locfileid: "75235390"
   
      トレース フラグ 1448 は、非同期セカンダリ レプリカで変更の受信が確認されていない場合でも、レプリケーション ログ リーダーが前へ進めるようにします。 このトレース フラグが有効でも、ログ リーダーは常に同期セカンダリ レプリカを待機します。 ログ リーダーは同期セカンダリ レプリカの最小 ack を超えることはありません。 このトレース フラグは、可用性グループ、可用性データベース、またはログ リーダー インスタンスだけでなく、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスにも適用されます。 再起動しなくても、トレース フラグはすぐに有効になります。 このトレース フラグは、事前にアクティブにすることも、非同期セカンダリ レプリカで障害が発生したときにアクティブにすることもできます。  
   
-###  <a name="StoredProcs"></a> 可用性グループをサポートするストアド プロシージャ  
+###  <a name="stored-procedures-supporting-availability-groups"></a><a name="StoredProcs"></a> 可用性グループをサポートするストアド プロシージャ  
   
 -   **sp_redirect_publisher**  
   
@@ -81,7 +81,7 @@ ms.locfileid: "75235390"
   
      このストアド プロシージャは、常に手動で実行されます。 呼び出し元は、ディストリビューターでの **sysadmin** であるか、ディストリビューション データベースの **dbowner** であるか、またはパブリッシャー データベースのパブリケーションの **パブリケーション アクセス リスト** のメンバーである必要があります。 また、呼び出し元のログインは、すべての可用性レプリカ ホストに対して有効なログインであり、パブリッシャー データベースに関連付けられている可用性データベースに対する select 特権を持っている必要があります。  
   
-###  <a name="CDC"></a> 変更データ キャプチャ  
+###  <a name="change-data-capture"></a><a name="CDC"></a> 変更データ キャプチャ  
  障害が発生してもデータベースを引き続き使用できるだけでなく、データベース テーブルへの変更も引き続き監視され、CDC 変更テーブルに格納されることを保証するために、変更データ キャプチャ (CDC) が有効になっているデータベースで [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] を利用できます。 CDC と [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の構成順序は重要ではありません。 CDC 対応データベースは [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]に追加でき、Always On 可用性グループのメンバーであるデータベースでは CDC を有効にできます。 ただし、どちらの場合も、CDC 構成は常に現在または目的のプライマリ レプリカで実行されます。 CDC はログ リーダー エージェントを使用するため、このトピックの「 **ログ リーダー エージェントの変更** 」に記載されているのと同じ制限事項があります。  
   
 -   **レプリケーションなしでの変更データ キャプチャの変更の取得**  
@@ -123,7 +123,7 @@ ms.locfileid: "75235390"
   
     -   接続要求が読み取り専用セカンダリ レプリカに送られることを保証します。  
   
-     読み取り専用セカンダリ レプリカの検索にルーティング リストを使用する場合は、可用性グループの読み取り専用ルーティング リストも定義する必要があります。 読み取り可能セカンダリへのルーティングアクセスの詳細については、「 [読み取り専用ルーティングの可用性レプリカを構成するには](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md#ConfigureARsForROR)」を参照してください。  
+     読み取り専用セカンダリ レプリカの検索にルーティング リストを使用する場合は、可用性グループの読み取り専用ルーティング リストも定義する必要があります。 読み取り可能セカンダリへのルーティングアクセスの詳細については、「 [読み取り専用ルーティングの可用性レプリカを構成するには](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)」を参照してください。  
   
     > [!NOTE]  
     >  可用性グループ データベース レプリカにアクセスするには、可用性グループ リスナー名の作成およびクライアント アプリケーションによる可用性グループ リスナー名の使用に関連するいくらかの伝達の遅延があります。  
@@ -177,7 +177,7 @@ Always On 可用性グループに含まれるデータベースで変更デー�
     - すべてのセカンダリ レプリカ インスタンスで SQL Server サービスを再起動する
     - あるいは、可用性グループのすべてのセカンダリ レプリカ インスタンスからデータベースを削除し、自動または手動シード処理を利用して可用性グループ レプリカ インスタンスに追加する
   
-###  <a name="CT"></a> 変更の追跡  
+###  <a name="change-tracking"></a><a name="CT"></a> 変更の追跡  
  変更の追跡 (CT) が有効になっているデータベースは、Always On 可用性グループに含めることができます。 追加の構成は必要ありません。 変更データにアクセスするために CDC テーブル値関数 (TVF) を使用する変更の追跡クライアント アプリケーションには、フェールオーバー後にプライマリ レプリカを検索する機能が必要です。 クライアント アプリケーションが可用性グループ リスナー名を通じて接続する場合、接続要求は常に現在のプライマリ レプリカに適切に送られます。  
   
 > [!NOTE]  
@@ -187,7 +187,7 @@ Always On 可用性グループに含まれるデータベースで変更デー�
 >   
 >  セカンダリ レプリカのメンバーであるデータベース (セカンダリ データベース) では、変更の追跡はサポートされていません。 変更の追跡クエリをプライマリ レプリカのデータベースに対して実行します。  
   
-##  <a name="Prereqs"></a> レプリケーションの使用に関する前提条件、制限、および考慮事項  
+##  <a name="prerequisites-restrictions-and-considerations-for-using-replication"></a><a name="Prereqs"></a> レプリケーションの使用に関する前提条件、制限、および考慮事項  
  ここでは、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]でレプリケーションを配置する際の前提条件、制限、推奨などの考慮事項について説明します。  
   
 ### <a name="prerequisites"></a>前提条件  
@@ -223,7 +223,7 @@ Always On 可用性グループに含まれるデータベースで変更デー�
   
 -   ログイン、ジョブ、リンク サーバーなど、データベースの外部に存在するメタデータやオブジェクトはセカンダリ レプリカに反映されません。 フェールオーバー後に新しいプライマリ データベースでこれらのメタデータやオブジェクトが必要な場合は、手動でコピーする必要があります。 詳細については、「 [可用性グループのデータベースのためのログインとジョブの管理 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/logins-and-jobs-for-availability-group-databases.md)と呼ばれるプロセスで交換されることがあります。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
  **レプリケーション**  
   
 -   [AlwaysOn 可用性グループ用のレプリケーションの構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)  

@@ -10,10 +10,10 @@ ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: craigg-msft
 ms.author: craigg
 ms.openlocfilehash: 6b6870e6b958b2ce7a7c5d050000bd190ef345df
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68893080"
 ---
 # <a name="tutorials-for-sql-server"></a>SQL Server チュートリアル
@@ -27,7 +27,7 @@ ms.locfileid: "68893080"
  
 ## <a name="current-tutorials"></a>現在のチュートリアル  
   
-|テクノロジ|[説明]|  
+|テクノロジ|説明|  
 |--------------|---------------|  
 |[Analysis Services チュートリアル (SSAS)](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] テーブルまたは多次元モデルを開発および配置する方法について説明します。 また、PowerPivot などのツールを使用して、モデル内のデータを分析する方法についても説明します。|  
 |[データベース エンジンのチュートリアル](../relational-databases/database-engine-tutorials.md)|データベース エンジンのインスタンスに接続してから、Transact-SQL ステートメントを構築および実行する方法について説明します。|  

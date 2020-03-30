@@ -18,10 +18,10 @@ ms.assetid: 20e9147b-e985-4caa-910e-fc4b38dbf9a1
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 64a0bf6fff2869834f30a9e0e7a6694088550c8e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822607"
 ---
 # <a name="resume-an-availability-database-sql-server"></a>可用性データベースの再開 (SQL Server)
@@ -36,19 +36,19 @@ ms.locfileid: "74822607"
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
  RESUME コマンドは、対象のデータベースをホストするレプリカによって受け付けられるとすぐに戻りますが、実際にはデータベースの再開が非同期に行われます。  
   
-##  <a name="Prerequisites"></a> 前提条件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
   
 -   再開するデータベースをホストするサーバー インスタンスに接続している。    
 -   可用性グループがオンラインになっている。    
 -   プライマリ データベースがオンラインであり、使用できる状態である。  
   
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  データベースに対する ALTER 権限が必要です。  
   
  可用性グループの ALTER AVAILABILITY GROUP 権限、CONTROL AVAILABILITY GROUP 権限、ALTER ANY AVAILABILITY GROUP 権限、または CONTROL SERVER 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  **セカンダリ データベースを再開するには**  
   
 1.  オブジェクト エクスプローラーで、データベースを再開する可用性レプリカをホストするサーバー インスタンスに接続し、サーバー ツリーを展開します。  
@@ -64,7 +64,7 @@ ms.locfileid: "74822607"
 > [!NOTE]  
 >  このレプリカの場所で他のデータベースを再開するには、データベースごとに手順 4. と手順 5. を繰り返します。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  **ローカルで中断されたセカンダリ データベースを再開するには**  
   
 1.  再開するデータベースが含まれるセカンダリ レプリカがホストされているサーバー インスタンスに接続します。  
@@ -73,7 +73,7 @@ ms.locfileid: "74822607"
 
      ALTER DATABASE *database_name* SET HADR RESUME;
   
-##  <a name="PowerShellProcedure"></a> PowerShell の使用  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell の使用  
  **セカンダリ データベースを再開するには**  
   
 1.  再開するデータベースが含まれるレプリカがホストされているサーバー インスタンスに、ディレクトリを変更 (**cd**) します。 詳細については、このトピックの「 [前提条件](#Prerequisites)」をご覧ください。  
@@ -94,7 +94,7 @@ ms.locfileid: "74822607"
   
 -   [SQL Server PowerShell プロバイダー](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [可用性データベースの中断 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/suspend-an-availability-database-sql-server.md)  
   

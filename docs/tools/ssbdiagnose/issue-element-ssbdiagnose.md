@@ -16,10 +16,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.openlocfilehash: 3a91cf0575cb84a744925b7b60be0146a4d9ec5f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75254188"
 ---
 # <a name="issue-element-ssbdiagnose"></a>Issue 要素 (ssbdiagnose)
@@ -44,7 +44,7 @@ ms.locfileid: "75254188"
   
 ## <a name="element-attributes"></a>要素の属性  
   
-|Attribute|[説明]|  
+|Attribute|説明|  
 |---------------|-----------------|  
 |**type**|Issue 要素で報告する問題のカテゴリを次に示します。<br /><br /> **"Diagnosis"** では、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] の構成の分析時に検出された構成の問題を報告します。<br /><br /> **"Problem"** では、 **ssbdiagnose** で分析を完了できない場合の原因となった問題を報告します。 問題を修正して、 **ssbdiagnose**を再実行します。<br /><br /> **"Event"** では、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] -RUNTIME **チェックの実行時に検出された** イベントを報告します。 イベントが報告されるのは、 **-SHOWEVENTS** が指定されている場合のみです。|  
 |**code**|メッセージのエラー番号を示します。|  
@@ -54,7 +54,7 @@ ms.locfileid: "75254188"
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特徴|[説明]|  
+|特徴|説明|  
 |--------------------|-----------------|  
 |**データ型と長さ**|**string**、長さは無制限です。|  
 |**Value**|エラー メッセージのテキストを返します。|  

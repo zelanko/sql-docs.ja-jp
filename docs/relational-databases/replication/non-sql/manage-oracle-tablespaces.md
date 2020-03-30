@@ -14,10 +14,10 @@ ms.assetid: b8ea6c3b-01d6-4efc-bbfb-03b264530bbd
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6320d7192d2493486779a1b6ac433f78a45114ca
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70276540"
 ---
 # <a name="manage-oracle-tablespaces"></a>Oracle テーブルスペースの管理
@@ -43,7 +43,7 @@ ms.locfileid: "70276540"
     -   パラメーター **\@value** に、テーブルスペース名を指定する。  
   
 ## <a name="see-also"></a>参照  
- [Oracle パブリッシャーの構成](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
+ [Configure an Oracle Publisher (Oracle パブリッシャーの構成)](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Oracle パブリッシャー上で作成されたオブジェクト](../../../relational-databases/replication/non-sql/objects-created-on-the-oracle-publisher.md)  
   
   

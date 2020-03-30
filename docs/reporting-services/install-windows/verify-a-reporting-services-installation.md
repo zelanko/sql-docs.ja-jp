@@ -15,10 +15,10 @@ ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0628f715be90586e851fee55301e8c82032739c3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73593929"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
@@ -29,7 +29,7 @@ ms.locfileid: "73593929"
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
-##  <a name="bkmk_sharepointmode"></a> SharePoint モードのインストールの確認  
+##  <a name="verify-sharepoint-mode-installation"></a><a name="bkmk_sharepointmode"></a> SharePoint モードのインストールの確認  
   
 ### <a name="to-verify-the-reporting-services-service"></a>Reporting Services サービスを確認するには  
   
@@ -79,7 +79,7 @@ ms.locfileid: "73593929"
 
 ::: moniker-end
   
-##  <a name="bkmk_nativemode"></a> ネイティブ モードのインストールの確認  
+##  <a name="verify-a-native-mode-installation"></a><a name="bkmk_nativemode"></a> ネイティブ モードのインストールの確認  
  既定の構成を使用してネイティブ モードでレポート サーバーをインストールする場合、セットアップでサーバーをインストールし、配置します。 いくつかの簡単なテストを行うことで、レポート サーバーが正常に配置されたかどうかを確認できます。 これらの手順を実行するには、ローカル管理者である必要があります。 他のユーザーがテストを実行する場合は、そのユーザーがレポート サーバーにアクセスできるように構成する必要があります。  
   
 ### <a name="to-verify-that-the-report-server-is-installed-and-running"></a>レポート サーバーが正常にインストールされ、実行されていることを確認するには  
@@ -92,7 +92,7 @@ ms.locfileid: "73593929"
   
 4.  レポートを実行して、レポート サーバーの動作をテストします。 この手順では、チュートリアルからサンプル レポートを作成できます。 詳細については、「[基本的なテーブル レポートの作成 (SSRS チュートリアル)](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)」を参照してください。  
   
-### <a name="to-verify-that-the-includessrswebportalincludesssrswebportalmd-is-installed-and-running"></a>[!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] が正常にインストールされ、実行されていることを確認するには  
+### <a name="to-verify-that-the-ssrswebportal-is-installed-and-running"></a>[!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] が正常にインストールされ、実行されていることを確認するには  
   
 1.  ブラウザーを開き、アドレス バーに Web ポータルの URL を入力します。 このアドレスは、セットアップ時または Reporting Services 構成ツールの [Web ポータル URL] ページで [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] に対して指定したサーバー名と仮想ディレクトリ名で構成されます。 既定では、 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] の仮想ディレクトリは **Reports**です。 次の URL を使用して、 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] のインストール状態を確認できます。  
   

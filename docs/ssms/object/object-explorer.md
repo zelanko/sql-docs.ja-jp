@@ -27,10 +27,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.openlocfilehash: 575c8d2ec6e6397f7a3444bcc718988b070e783d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75257139"
 ---
 # <a name="object-explorer"></a>オブジェクト エクスプローラー
@@ -43,7 +43,7 @@ ms.locfileid: "75257139"
   
 ## <a name="object-explorer-tasks"></a>オブジェクト エクスプローラーのタスク  
   
-|[説明]|トピック|  
+|説明|トピック|  
 |---------------|---------|  
 |オブジェクト エクスプローラーを開いて、その動作を定義するオプションを構成する方法について説明します。|[オブジェクト エクスプローラーを開き、構成する](../../ssms/object/open-and-configure-object-explorer.md)|  
 |[!INCLUDE[ssDE](../../includes/ssde_md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、および [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]のインスタンスにオブジェクト エクスプローラーを接続する方法について説明します。|[オブジェクト エクスプローラーからインスタンスへの接続](../../ssms/object/connect-to-an-instance-from-object-explorer.md)|  

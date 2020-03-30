@@ -16,10 +16,10 @@ ms.assetid: e329de08-7624-4cf6-9da7-350584e87011
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 47a1bccc2e47d0ef8265554374c8ea492e704373
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67972650"
 ---
 # <a name="setstring-method-sqlserverclob"></a>setString メソッド (SQLServerClob)
@@ -29,7 +29,7 @@ ms.locfileid: "67972650"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|Name|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[setString (long, java.lang.String)](../../../connect/jdbc/reference/setstring-method-long-java-lang-string.md)|渡された文字列をCLOB の指定された位置から書き込みます。|  
 |[setString (long, java.lang.String, int, int)](../../../connect/jdbc/reference/setstring-method-long-java-lang-string-int-int.md)|渡された文字列を、渡されたオフセットと長さに基づいて CLOB の指定された位置から書き込みます。|  
