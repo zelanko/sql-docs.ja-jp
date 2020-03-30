@@ -11,10 +11,10 @@ ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1a6856b2bf297293fcf26c73885cbd46e68b3b1f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68133243"
 ---
 # <a name="sql-trace"></a>SQL トレース (SQL Trace)
@@ -37,7 +37,7 @@ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、 [!
 ## <a name="sql-trace-terminology"></a>SQL トレースの用語  
 次の用語は SQL トレースの主要な概念を示したものです。  
   
- **イベント**  
+ **Event**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンス内での操作により発生します。  
   
  **データ列**  
@@ -82,7 +82,7 @@ SQL トレースでは、トレース出力のデータ列を使用して、ト�
 |**ClientProcessID**|9|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターによって割り当てられた ID。 クライアントでクライアント プロセス ID が指定されると、このデータ列が作成されます。|  
 |**ColumnPermissions**|44|列権限が設定されていたかどうかを示します。 ステートメントのテキストを解析して、どの権限がどの列に適用されていたかを判断できます。|  
 |**CPU**|18|イベントで使用された CPU 時間 (ミリ秒)。|  
-|**[データベース ID]**|3|USE *database_name* ステートメントで指定されたデータベースの ID、または特定のインスタンスについて USE *database_name*ステートメントが実行されていない場合は既定のデータベースの ID となります。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、 **ServerName** データ列がトレースにキャプチャされ、そのサーバーが利用可能な場合、データベースの名前が表示されます。 データベースに対応する値は、DB_ID 関数を使用して特定します。|  
+|**データベース ID**|3|USE *database_name* ステートメントで指定されたデータベースの ID、または特定のインスタンスについて USE *database_name*ステートメントが実行されていない場合は既定のデータベースの ID となります。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、 **ServerName** データ列がトレースにキャプチャされ、そのサーバーが利用可能な場合、データベースの名前が表示されます。 データベースに対応する値は、DB_ID 関数を使用して特定します。|  
 |**DatabaseName**|35|ユーザーのステートメントが実行されているデータベースの名前。|  
 |**DBUserName**|40|クライアントの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザー名。|  
 |**Duration**|13|イベントの期間 (ミリ秒)。<br /><br /> サーバーはマイクロ秒 (100 万分の 1 (10<sup>-6</sup>) 秒) 単位でのイベント期間、およびイベントにより使用されるミリ秒 (10<sup>-3</sup>秒) 単位での CPU 時間をレポートします。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] のグラフィカル ユーザー インターフェイスに、既定ではミリ秒単位で **Duration** 列が表示されますが、トレースがファイルまたはデータベース テーブルに保存されると、 **Duration** 列の値はマイクロ秒単位で記述されます。|  

@@ -11,17 +11,17 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 ms.openlocfilehash: ee462efca08173d6571fe5a3b3971b8f0460988a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258370"
 ---
 # <a name="create-alter-and-drop-secondary-selective-xml-indexes"></a>選択的セカンダリ XML インデックスの作成、変更、および削除
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   新しい選択的セカンダリ XML インデックスの作成や、既存の選択的セカンダリ XML インデックスの変更または削除を行う方法について説明します。  
   
-##  <a name="create"></a> 選択的セカンダリ XML インデックスの作成  
+##  <a name="creating-a-secondary-selective-xml-index"></a><a name="create"></a> 選択的セカンダリ XML インデックスの作成  
   
 ### <a name="how-to-create-a-secondary-selective-xml-index"></a>選択的セカンダリ XML インデックスを作成する方法  
  **Transact-SQL を使用して選択的セカンダリ XML インデックスを作成する**  
@@ -42,7 +42,7 @@ FOR
 ```  
   
   
-##  <a name="alter"></a> 選択的セカンダリ XML インデックスの変更  
+##  <a name="altering-a-secondary-selective-xml-index"></a><a name="alter"></a> 選択的セカンダリ XML インデックスの変更  
  ALTER ステートメントは、選択的セカンダリ XML インデックスではサポートされません。 選択的セカンダリ XML インデックスを変更するには、既存のインデックスを削除し、再作成します。  
   
 ### <a name="how-to-alter-a-secondary-selective-xml-index"></a>選択的セカンダリ XML インデックスを変更する方法  
@@ -68,7 +68,7 @@ FOR
 ```  
   
   
-##  <a name="drop"></a> 選択的セカンダリ XML インデックスの削除  
+##  <a name="dropping-a-secondary-selective-xml-index"></a><a name="drop"></a> 選択的セカンダリ XML インデックスの削除  
   
 ### <a name="how-to-drop-a-secondary-selective-xml-index"></a>選択的セカンダリ XML インデックスを削除する方法  
  **Transact-SQL を使用して選択的セカンダリ XML インデックスを削除する**  
