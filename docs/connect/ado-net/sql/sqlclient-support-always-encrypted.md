@@ -10,10 +10,10 @@ author: cheenamalhotra
 ms.author: v-chmalh
 ms.reviewer: v-kaywon
 ms.openlocfilehash: dc70690bfe3d3d95171c885707b5a195c31b2fc1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75233923"
 ---
 # <a name="using-always-encrypted-with-the-microsoft-net-data-provider-for-sql-server"></a>Always Encrypted と Microsoft .NET Data Provider for SQL Server を使用する
@@ -539,7 +539,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 **アセンブリ:** Microsoft.Data.SqlClient.dll
 
-|Name|説明|
+|名前|説明|
 |:---|:---|
 |[SqlColumnEncryptionCertificateStoreProvider クラス](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider)|Windows 証明書ストアのキー ストア プロバイダー。|
 |[SqlColumnEncryptionCngProvider クラス](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncngprovider)|Microsoft Cryptography API: Next Generation (CNG) のキー ストア プロバイダー。|
@@ -556,7 +556,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 |[SqlParameter.ForceColumnEncryption プロパティ](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.forcecolumnencryption)|パラメーターの暗号化を強制的に適用します。 パラメーターの暗号化が不要であることが SQL Server からドライバーに通知された場合、このパラメーターを使用するクエリは失敗します。 攻撃を受けた SQL Server がクライアントに不正な暗号化メタデータを提供すると、データ漏えいが引き起こされる可能性がありますが、このプロパティは、そのようなセキュリティ攻撃に対する保護を強化します。|
 |[接続文字列](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring)のキーワード: `Column Encryption Setting=enabled`|接続に対して Always Encrypted 機能を有効または無効にします。|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [常に暗号化](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted 関連のブログ](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)

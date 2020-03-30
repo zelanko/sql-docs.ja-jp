@@ -28,10 +28,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 413d8fffc505c8b2cfb5404e70cdd9f64cd150de
-ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77544935"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd ユーティリティ
@@ -867,7 +867,7 @@ Enter キーを押すと、次の情報メッセージが出力されます。"�
   
  `BusinessEntityID` 列には 4 文字分の幅しかありませんが、長い列名に合わせるため拡張されています。 既定では、出力は 80 文字で終了します。 この設定は、 **-w** オプションを使用するか、SQLCMDCOLWIDTH スクリプト変数を設定することで変更できます。  
   
-###  <a name="OutputXML"></a> XML 出力形式  
+###  <a name="xml-output-format"></a><a name="OutputXML"></a> XML 出力形式  
  FOR XML 句からの結果である XML 出力は、連続するストリームでフォーマットされずに出力されます。  
   
  XML 出力を行うには、 `:XML ON`コマンドを使用します。  
@@ -884,7 +884,7 @@ Enter キーを押すと、次の情報メッセージが出力されます。"�
 > [!NOTE]  
 >  `:XML` コマンドは SET STATISTICS XML ステートメントをサポートしません。  
   
-###  <a name="OutputJSON"></a> JSON 出力形式  
+###  <a name="json-output-format"></a><a name="OutputJSON"></a> JSON 出力形式  
  JSON 出力を行うには、 `:XML ON`コマンドを使用します。 これを使用しないと、出力には、列名と JSON テキストの両方が含まれます。 この出力は、有効な JSON ではありません。  
   
  XML モードをオフにするには、`:XML OFF` コマンドを使用します。  

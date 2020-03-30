@@ -1,4 +1,4 @@
-## <a name="info_tipmediainfo-tippng-get-help"></a>![info_tip](../media/info-tip.png) ヘルプの参照
+## <a name="info_tip-get-help"></a>![info_tip](../media/info-tip.png) ヘルプの参照
 
 - [UserVoice:SQL Server の向上についてご提案がある場合](https://feedback.azure.com/forums/908035-sql-server)
 - [設定とアップグレード:MSDN フォーラム](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc)

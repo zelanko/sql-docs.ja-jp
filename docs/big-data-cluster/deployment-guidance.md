@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 9e2204000400c06ea0fd884dbf4db6c08085d495
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286066"
 ---
 # <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>Kubernetes 上に [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を展開する方法
@@ -35,14 +35,14 @@ SQL Server 2019 ビッグ データ クラスターを展開する前に、ま�
 - Azure Data Studio
 - Azure Data Studio 用の[データ仮想化の拡張機能](../azure-data-studio/data-virtualization-extension.md)
 
-## <a id="prereqs"></a> Kubernetes の前提条件
+## <a name="kubernetes-prerequisites"></a><a id="prereqs"></a> Kubernetes の前提条件
 
 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]では、サーバーとクライアント (kubectl) の両方に、最小の Kubernetes バージョンとして v1.13 以上が必要です。
 
 > [!NOTE]
 > クライアントとサーバーでの Kubernetes のバージョンは、マイナー バージョンが +1 または -1 の範囲内になっている必要があることに注意してください。 詳細については、[Kubernetes のリリース ノートとバージョン スキューの SKU ポリシー](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew)に関するページを参照してください。
 
-### <a id="kubernetes"></a> Kubernetes クラスターの設定
+### <a name="kubernetes-cluster-setup"></a><a id="kubernetes"></a> Kubernetes クラスターの設定
 
 上記の前提条件を満たす Kubernetes クラスターを既にお持ちの場合は、[展開の手順](#deploy)に直接進むことができます。 このセクションでは、Kubernetes の概念の基本的な理解を前提としています。  Kubernetes の詳細については、[Kubernetes のドキュメント](https://kubernetes.io/docs/home)を参照してください。
 
@@ -75,13 +75,13 @@ Kubernetes クラスターを構成したら、新しい SQL Server ビッグ �
 
 AKS で展開する場合、ストレージ セットアップは必要ありません。 AKS には、動的にプロビジョニングするためのストレージ クラスが組み込まれています。 ストレージクラス (`default` または `managed-premium`) は、展開構成ファイルでカスタマイズできます。 組み込みプロファイルでは、`default` ストレージ クラスが使用されます。 `kubeadm` を使用して展開した Kubernetes クラスターで展開する場合、望ましいスケールのクラスターのために十分なストレージがあることを確認し、使用できるように構成しておく必要があります。 ストレージの使用方法をカスタマイズする場合、続行前にそれを行ってください。 「[Kubernetes 上の SQL Server ビッグ データ クラスターでのデータ永続化](concept-data-persistence.md)」を参照してください。
 
-## <a id="deploy"></a> 展開の概要
+## <a name="deployment-overview"></a><a id="deploy"></a> 展開の概要
 
 ほとんどのビッグ データ クラスター設定は、JSON 展開構成ファイルに定義されています。 AKS および `kubeadm` によって作成された Kubernetes クラスター用の既定の展開プロファイルを使用しても、セットアップ中に使用する独自の展開構成ファイルをカスタマイズしてもかまいません。 セキュリティ上の理由から、認証設定は環境変数を介して渡されます。
 
 以降のセクションでは、ビッグ データ クラスターの展開を構成する方法と、一般的なカスタマイズの例について詳しく説明します。 また、たとえば VS Code のようなエディターを使用して、カスタムの展開構成ファイルをいつでも編集できます。
 
-## <a id="configfile"></a> 既定の構成
+## <a name="default-configurations"></a><a id="configfile"></a> 既定の構成
 
 ビッグ データ クラスターの展開オプションは、JSON 構成ファイルに定義されています。 `azdata` に用意されている組み込みの展開プロファイルから、クラスター展開のカスタマイズを開始できます。 
 
@@ -125,7 +125,7 @@ azdata bdc create --accept-eula=yes
 > [!IMPORTANT]
 > ビッグ データ クラスターの既定の名前は `mssql-cluster` です。 `-n` パラメーターを使用して Kubernetes 名前空間を指定する任意の `kubectl` コマンドを実行するために、このことを知っておくことは重要です。
 
-## <a id="customconfig"></a> カスタムの構成
+## <a name="custom-configurations"></a><a id="customconfig"></a> カスタムの構成
 
 実行する予定のワークロードに合わせて展開をカスタマイズすることもできます。 展開後にビッグ データ クラスター サービスのスケール (レプリカの数) またはストレージ設定を変更することはできないため、展開構成を慎重に計画して容量の問題を回避する必要があることに注意してください。 展開をカスタマイズするには、次の手順に従います。
 
@@ -165,7 +165,7 @@ azdata bdc create --accept-eula=yes
 
 > 展開構成ファイルの構造の詳細については、[展開構成ファイルのリファレンス](reference-deployment-config.md)に関するページを参照してください。 他の構成例については、「[ビッグ データ クラスターの展開設定を構成する](deployment-custom-configuration.md)」を参照してください。
 
-## <a id="env"></a> 環境変数
+## <a name="environment-variables"></a><a id="env"></a> 環境変数
 
 次の環境変数は、展開構成ファイルに保存されないセキュリティ設定に使用されます。 資格情報以外の Docker 設定は、構成ファイル内で設定できることに注意してください。
 
@@ -208,11 +208,11 @@ azdata bdc create --config-profile custom --accept-eula yes
 - 特殊文字が含まれている場合は、必ずパスワードを二重引用符で囲みます。 `AZDATA_PASSWORD` は自由に設定できますが、必ずパスワードを十分に複雑にして、`!`、`&`、`'` 文字は使用しないでください。 二重引用符の区切り記号は bash コマンドでしか機能しないことに注意してください。
 - `AZDATA_USERNAME` ログインは、セットアップ時に作成される SQL Server マスター インスタンス上でのシステム管理者です。 SQL Server のコンテナーを作成した後、そのコンテナーで `echo $AZDATA_PASSWORD` を実行すると、指定した環境変数 `AZDATA_PASSWORD` が検索できるようになります。 セキュリティ上の理由から、ベスト プラクティスとしてパスワードを変更してください。
 
-## <a id="unattended"></a> 自動実行インストール
+## <a name="unattended-install"></a><a id="unattended"></a> 自動実行インストール
 
 無人展開の場合は、必要なすべての環境変数を設定して、構成ファイルを使用し、`--accept-eula yes` パラメーターを指定して `azdata bdc create` コマンドを呼び出す必要があります。 前のセクションの例では、無人インストールに対応した構文を示しています。
 
-## <a id="monitor"></a> 展開を監視する
+## <a name="monitor-the-deployment"></a><a id="monitor"></a> 展開を監視する
 
 クラスターのブートストラップ中に、クライアントのコマンド ウィンドウに展開の状態が返されます。 展開プロセス中に、コントローラー ポッドを待機している一連のメッセージが表示されます。
 
@@ -239,7 +239,7 @@ Cluster deployed successfully.
 > [!TIP]
 > カスタム構成によって変更されない限り、展開されたビッグ データ クラスターの既定の名前は `mssql-cluster` になります。
 
-## <a id="endpoints"></a> エンドポイントを取得する
+## <a name="retrieve-endpoints"></a><a id="endpoints"></a> エンドポイントを取得する
 
 展開スクリプトが正常に完了したら、次の手順を使用して、ビッグ データ クラスターに対応する外部エンドポイントのアドレスを取得できます。
 
@@ -293,7 +293,7 @@ Cluster deployed successfully.
 kubectl get svc -n <your-big-data-cluster-name>
 ```
 
-## <a id="status"></a> クラスターの状態を確認する
+## <a name="verify-the-cluster-status"></a><a id="status"></a> クラスターの状態を確認する
 
 展開後に、[azdata bdc status show](reference-azdata-bdc-status.md) コマンドを使用して、クラスターの状態を確認できます。
 
@@ -423,7 +423,7 @@ Sql: ready                                                                      
 
 `azdata` を使用するほかに、Azure Data Studio を利用してエンドポイントと状態情報の両方を検索することもできます。 `azdata` および Azure Data Studio を利用したクラスターの状態の表示に関する詳細については、「[ビッグ データ クラスターの状態を表示する方法](view-cluster-status.md)」を参照してください。
 
-## <a id="connect"></a> クラスターに接続する
+## <a name="connect-to-the-cluster"></a><a id="connect"></a> クラスターに接続する
 
 ビッグ データ クラスターに接続する方法の詳細については、「[Azure Data Studio を利用して SQL Server ビッグ データ クラスターに接続する](connect-to-big-data-cluster.md)」を参照してください。
 

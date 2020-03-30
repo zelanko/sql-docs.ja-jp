@@ -11,10 +11,10 @@ ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ccd3be3203aae382cda239ed6d7bdc2fa224923b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296052"
 ---
 # <a name="lesson-2-add-looping-with-ssis"></a>レッスン 2: SSIS でのループの追加
@@ -68,7 +68,7 @@ ms.locfileid: "71296052"
 ## <a name="start-the-lesson"></a>レッスンの開始  
 [ステップ 1:レッスン 1 のパッケージをコピーする](../integration-services/lesson-2-1-copying-the-lesson-1-package.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [For ループ コンテナー](../integration-services/control-flow/for-loop-container.md)  
   
   

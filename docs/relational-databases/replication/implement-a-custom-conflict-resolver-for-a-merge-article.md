@@ -18,10 +18,10 @@ ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a71c7c83afe2fcb8b0192f6dfd12c8072ccdc392
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75322162"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>マージ アーティクルのカスタム競合回避モジュールを実装する
@@ -36,7 +36,7 @@ ms.locfileid: "75322162"
   
      [COM ベースの競合回避モジュール](#COM)  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  各パブリッシャーで、固有のカスタム競合回避モジュールを [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャとして記述できます。 同期中に、競合回避モジュールが登録されたアーティクルで競合が発生すると、このストアド プロシージャが呼び出されます。 マージ エージェントによって、競合している行に関する情報が、プロシージャの必須パラメーターに渡されます。 ストアド プロシージャ ベースのカスタム競合回避モジュールは、常にパブリッシャーで作成されます。  
   
 > [!NOTE]  
@@ -75,7 +75,7 @@ ms.locfileid: "75322162"
   
 2.  **\@publication** と **\@article** を指定し、 **\@property** に **resolver_info** の値を、 **\@value** に競合回避ロジックを実装するストアド プロシージャの名前を指定して、[sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) を実行します。  
   
-##  <a name="COM"></a> COM ベースのカスタム競合回避モジュールの使用  
+##  <a name="using-a-com-based-custom-resolver"></a><a name="COM"></a> COM ベースのカスタム競合回避モジュールの使用  
  <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> 名前空間で実装されるインターフェイスを利用して、イベントを処理し、マージ レプリケーション同期処理で発生する競合を回避するための複雑なビジネス ロジックを作成できます。 詳細については、「[マージ アーティクルのビジネス ロジック ハンドラーの実装](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)」を参照してください。 また、ネイティブ コード ベースのカスタム ビジネス ロジックを独自に作成して、競合を回避することもできます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++ などの製品を使用して、このロジックを COM コンポーネントとしてビルドし、ダイナミック リンク ライブラリ (DLL) にコンパイルします。 この種の COM ベースのカスタム競合回避モジュールには、競合回避専用に設計されている **ICustomResolver** インターフェイスを実装する必要があります。  
   
 #### <a name="to-create-and-register-a-com-based-custom-conflict-resolver"></a>COM ベース カスタム競合回避モジュールを作成して登録するには  
@@ -123,7 +123,7 @@ ms.locfileid: "75322162"
 2.  [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) を実行し、 **\@publication**、 **\@article** を指定し、 **\@property** に **article_resolver** 値、 **\@value** に手順 1 のアーティクル競合回避モジュールの表示名を指定します。  
   
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マージ レプリケーションの競合検出および解決の詳細](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [COM ベースのカスタム競合回避モジュール](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)   
  [レプリケーション セキュリティの推奨事項](../../relational-databases/replication/security/replication-security-best-practices.md)  

@@ -20,10 +20,10 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dcd1e0912f1bf0adcbae79da1f1d34f92233f467
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294187"
 ---
 # <a name="execute-package-task"></a>パッケージ実行タスク
@@ -137,14 +137,14 @@ ms.locfileid: "71294187"
   
 -   [[パラメーター バインド] ページのオプションを設定する](#parameter)  
   
-###  <a name="open"></a> パッケージ実行タスク エディターを開く  
+###  <a name="open-the-execute-package-task-editor"></a><a name="open"></a> パッケージ実行タスク エディターを開く  
   
 1.  パッケージ実行タスクが含まれる [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] で開きます。  
   
 2.  SSIS デザイナーでタスクを右クリックし、 **[編集]** をクリックします。  
   
-###  <a name="general"></a> [全般] ページのオプションを設定する  
- **Name**  
+###  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> [全般] ページのオプションを設定する  
+ **名前**  
  パッケージ実行タスクの一意な名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
 > [!NOTE]  
@@ -153,7 +153,7 @@ ms.locfileid: "71294187"
  **説明**  
  パッケージ実行タスクの説明を入力します。  
   
-###  <a name="package"></a> [パッケージ] ページのオプションを設定する  
+###  <a name="set-the-options-on-the-package-page"></a><a name="package"></a> [パッケージ] ページのオプションを設定する  
  **ReferenceType**  
  プロジェクト内の子パッケージの場合は **[プロジェクト参照]** をクリックします。 パッケージの外部にある子パッケージの場合は **[外部参照]** をクリックします。  
   
@@ -169,15 +169,15 @@ ms.locfileid: "71294187"
 #### <a name="referencetype-dynamic-options"></a>[ReferenceType] の動的オプション  
   
 ##### <a name="referencetype--external-reference"></a>ReferenceType = 外部参照  
- **地域**  
+ **場所**  
  子パッケージの場所を選択します。 このプロパティのオプションを次の表に示します。  
   
-|Value|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**SQL Server**|場所を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに設定します。|  
 |**ファイル システム**|場所をファイル システムに設定します。|  
   
- **[接続]**  
+ **接続**  
  子パッケージの格納場所の種類を選択します。  
   
  **PackageNameReadOnly**  
@@ -190,7 +190,7 @@ ms.locfileid: "71294187"
 #### <a name="location-dynamic-options"></a>[Location] の動的オプション  
   
 ##### <a name="location--sql-server"></a>Location = SQL Server  
- **[接続]**  
+ **接続**  
  OLE DB 接続マネージャーを一覧から選択するか、[\<**新しい接続...>** ] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [OLE DB 接続マネージャー](../../integration-services/connection-manager/ole-db-connection-manager.md)  
@@ -199,7 +199,7 @@ ms.locfileid: "71294187"
  子パッケージの名前を入力するか、[...] をクリックし、パッケージを指定します。  
   
 ##### <a name="location--file-system"></a>Location = ファイル システム  
- **[接続]**  
+ **接続**  
  ファイル接続マネージャーを一覧から選択するか、\< **[新しい接続...]** をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)  
@@ -207,7 +207,7 @@ ms.locfileid: "71294187"
  **PackageNameReadOnly**  
  パッケージ名が表示されます。  
   
-###  <a name="parameter"></a> [パラメーター バインド] ページのオプションを設定する  
+###  <a name="set-the-options-on-the-parameter-bindings-page"></a><a name="parameter"></a> [パラメーター バインド] ページのオプションを設定する  
  親パッケージまたはプロジェクトから子パッケージに値を渡すことができます。 プロジェクトはプロジェクト配置モデルを使用し、子パッケージが親パッケージと同じプロジェクトに含まれている必要があります。  
   
  プロジェクト配置モデルへのプロジェクトの変換に関する詳細については、「[Integration Services (SSIS) プロジェクトとパッケージの配置](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  

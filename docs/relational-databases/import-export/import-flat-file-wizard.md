@@ -13,10 +13,10 @@ ms.author: alayu
 ms.reviewer: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 792cb1bcef1097c3eddaa325519b43a229bcccb4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74190799"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>SQL のフラット ファイルのインポート ウィザード
@@ -37,7 +37,7 @@ PROSE は、入力ファイルのデータ パターンを分析し、列の名�
 ## <a name="prerequisites"></a>前提条件
 この機能は、SQL Server Management Studio (SSMS) v17.3 以降でのみ使用できます。 最新バージョンを使用していることを確認してください。 最新バージョンは[こちら](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)で入手できます。
  
-## <a id="started"></a>はじめに
+## <a name="getting-started"></a><a id="started"></a>はじめに
 フラット ファイルのインポート ウィザードにアクセスするには、次の手順を実行します。
 
 1. **SQL Server Management Studio** を開きます。
@@ -84,7 +84,7 @@ PROSE は、入力ファイルのデータ パターンを分析し、列の名�
 
 ![ウィザードの概要](media/import-flat-file-wizard/importffsummary.png)
 
-### <a name="step-6-results"></a>手順 6:[結果]
+### <a name="step-6-results"></a>手順 6:結果
 このページには、インポートが成功したかどうかが表示されます。 緑のチェック マークが表示される場合は成功です。それ以外の場合は、構成や入力ファイルに誤りがないか確認する必要があります。
 
 ![ウィザードの結果](media/import-flat-file-wizard/importffresults.png)

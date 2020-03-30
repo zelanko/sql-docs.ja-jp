@@ -16,10 +16,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 349e00b7734ed8e8176585c55018b7565649cc1f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72903824"
 ---
 # <a name="get-started-with-full-text-search"></a>フルテキスト検索の概要
@@ -77,7 +77,7 @@ SQL Server データベースでは、フルテキストが既定で有効にな
 
     詳細については、「[Create and Manage Full-Text Indexes](../../relational-databases/search/create-and-manage-full-text-indexes.md)」 (フルテキスト インデックスの作成と管理) を参照してください。
 
-##  <a name="options"></a> フルテキスト インデックスのオプションの選択 
+##  <a name="choose-options-for-a-full-text-index"></a><a name="options"></a> フルテキスト インデックスのオプションの選択 
   
 ### <a name="choose-a-language"></a>言語の選択  
  列の言語の選択については、「 [フルテキスト インデックス作成時の言語の選択](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)」をご覧ください。  

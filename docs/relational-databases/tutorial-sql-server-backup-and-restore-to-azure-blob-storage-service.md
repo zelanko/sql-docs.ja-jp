@@ -11,10 +11,10 @@ ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 24847d7b14341e9a1d5a4d874eb0046f53261fea
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74165526"
 ---
 # <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>クイック スタート:Azure Blob Storage サービスへの SQL のバックアップと復元
@@ -122,7 +122,7 @@ GO
 ## <a name="back-up-database"></a>データベースをバックアップする
 このステップでは、SQL Server Management Studio の GUI または Transact-SQL (T-SQL) を使用して、データベース `SQLTestDB` を Azure Blob ストレージ アカウントにバックアップします。 
 
-# <a name="ssmstabssms"></a>[SSMS](#tab/SSMS)
+# <a name="ssms"></a>[SSMS](#tab/SSMS)
 
 1. **データベースのバックアップ** ウィザードを閉じた場合は、[SQL Server Management Studio(SSMS)](../ssms/download-sql-server-management-studio-ssms.md) の**オブジェクト エクスプローラー**で、 **[データベース]** ノードを展開します。
 1. 新しい `SQLTestDB` データベースを右クリックして、 **[タスク]** をポイントし、 **[バックアップ...]** を選択して、**データベースのバックアップ** ウィザードを起動します。 
@@ -141,7 +141,7 @@ GO
    > **データベースのバックアップ** ウィザードの上部にある **[スクリプト]** を選択して、このコマンドの背後にある Transact-SQL をスクリプト化できます。![[スクリプト] コマンド](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/script-backup-command.png)
 
 
-# <a name="transact-sqltabtsql"></a>[Transact-SQL](#tab/tsql)
+# <a name="transact-sql"></a>[Transact-SQL](#tab/tsql)
 
 Transact-SQL を使用し、次のコマンドを実行して、データベースをバックアップします。 
 
@@ -160,12 +160,12 @@ GO
 ## <a name="delete-database"></a>データベースの削除
 このステップでは、復元を実行する前にデータベースを削除します。 このステップは、このチュートリアルの目的でのみ必要であり、通常のデータベース管理手順では使用されない可能性があります。 このステップは省略できますが、その場合、オンプレミスのデータベースを正常に復元するには、マネージド インスタンスでの復元中にデータベースの名前を変更するか、復元コマンド `WITH REPLACE` を実行する必要があります。 
 
-# <a name="ssmstabssms"></a>[SSMS](#tab/SSMS)
+# <a name="ssms"></a>[SSMS](#tab/SSMS)
 
 1. **オブジェクト エクスプローラー**で **[データベース]** ノードを展開し、`SQLTestDB` データベースを右クリックして [削除] を選択し、**オブジェクトの削除**ウィザードを起動します。 
 1. マネージド インスタンスで **[OK]** を選択して、データベースを削除します。 オンプレミスの場合は、 **[既存の接続を閉じる]** の横のチェック ボックスをオンにしてから **[OK]** を選択して、データベースを削除します。 
 
-# <a name="transact-sqltabtsql"></a>[Transact-SQL](#tab/tsql)
+# <a name="transact-sql"></a>[Transact-SQL](#tab/tsql)
 
 次の Transact-SQL コマンドを実行して、データベースを削除します。
 
@@ -192,7 +192,7 @@ GO
 ## <a name="restore-database"></a>ダイアログ ボックスの 
 このステップでは、SQL Server Management Studio の GUI または Transact-SQL を使用して、データベースを復元します。 
 
-# <a name="ssmstabssms"></a>[SSMS](#tab/SSMS)
+# <a name="ssms"></a>[SSMS](#tab/SSMS)
 
 1. SQL Server Management Studio の**オブジェクト エクスプローラー**で **[データベース]** ノードを右クリックし、 **[データベースの復元]** を選択します。 
 1. **[デバイス]** を選択し、省略記号 [...] を選択してデバイスを選択します。 
@@ -216,7 +216,7 @@ GO
 1. **[OK]** を選択すると **[バックアップ デバイスの選択]** ダイアログ ボックスが閉じます。 
 1. **[OK]** を選択してデータベースを復元します。 
 
-# <a name="transact-sqltabtsql"></a>[Transact-SQL](#tab/tsql)
+# <a name="transact-sql"></a>[Transact-SQL](#tab/tsql)
 
 Azure Blob Storage からオンプレミスのデータベースを復元するには、独自のストレージ アカウントを使用するように次の Transact-SQL コマンドを変更した後、新しいクエリ ウィンドウで実行します。 
 
@@ -229,7 +229,7 @@ URL = N'https://msftutorialstorage.blob.core.windows.net/sql-backup/sqltestdb_ba
 ---
 
 
-## <a name="see-also"></a>参照 
+## <a name="see-also"></a>関連項目 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] バックアップに Azure Blob Storage サービスを使用する場合の概念やベスト プラクティスについて、次の推奨トピックで説明しています。  
   
 -   [Microsoft Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   

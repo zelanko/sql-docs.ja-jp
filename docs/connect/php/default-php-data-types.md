@@ -14,10 +14,10 @@ ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 11026bcb372759f62aa0b0d5f406a6721b65c135
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993668"
 ---
 # <a name="default-php-data-types"></a>既定の PHP データ型
@@ -35,7 +35,7 @@ PDO_SQLSRV ドライバーを使用してデータが返される場合、デー
 |-------------------|--------------------|--------------------|  
 |bigint|String|8 ビット文字<sup>1</sup>|  
 |binary|Stream<sup>2</sup>|バイナリ<sup>3</sup>|  
-|bit|整数|8 ビット文字<sup>1</sup>|  
+|bit|Integer|8 ビット文字<sup>1</sup>|  
 |char|String|8 ビット文字<sup>1</sup>|  
 |date<sup>4</sup>|Datetime|適用なし|  
 |datetime<sup>4</sup>|Datetime|適用なし|  
@@ -43,10 +43,10 @@ PDO_SQLSRV ドライバーを使用してデータが返される場合、デー
 |datetimeoffset<sup>4</sup>|Datetime|適用なし|  
 |decimal|String|8 ビット文字<sup>1</sup>|  
 |float|Float|8 ビット文字<sup>1</sup>|  
-|地理|Stream|バイナリ<sup>3</sup>|  
+|geography|Stream|バイナリ<sup>3</sup>|  
 |geometry|Stream|バイナリ<sup>3</sup>|  
 |image<sup>5</sup>|Stream<sup>2</sup>|バイナリ<sup>3</sup>|  
-|INT|整数|8 ビット文字<sup>1</sup>|  
+|INT|Integer|8 ビット文字<sup>1</sup>|  
 |money|String|8 ビット文字<sup>1</sup>|  
 |nchar|String|8 ビット文字<sup>1</sup>|  
 |numeric|String|8 ビット文字<sup>1</sup>|  
@@ -55,13 +55,13 @@ PDO_SQLSRV ドライバーを使用してデータが返される場合、デー
 |ntext<sup>6</sup>|Stream<sup>2</sup>|8 ビット文字<sup>1</sup>|  
 |real|Float|8 ビット文字<sup>1</sup>|  
 |smalldatetime|Datetime|8 ビット文字<sup>1</sup>|  
-|smallint|整数|8 ビット文字<sup>1</sup>|  
+|smallint|Integer|8 ビット文字<sup>1</sup>|  
 |smallmoney|String|8 ビット文字<sup>1</sup>|  
 |sql_variant<sup>7</sup>|String|8 ビット文字<sup>1</sup>|  
 |text<sup>8</sup>|Stream<sup>2</sup>|8 ビット文字<sup>1</sup>|  
 |time<sup>4</sup>|Datetime|適用なし|  
 |timestamp|String|8 ビット文字<sup>1</sup>|  
-|tinyint|整数|8 ビット文字<sup>1</sup>|  
+|tinyint|Integer|8 ビット文字<sup>1</sup>|  
 |UDT|Stream<sup>2</sup>|バイナリ<sup>3</sup>|  
 |UNIQUEIDENTIFIER|String<sup>9</sup>|8 ビット文字<sup>1</sup>|  
 |varbinary|Stream<sup>2</sup>|バイナリ<sup>3</sup>|  

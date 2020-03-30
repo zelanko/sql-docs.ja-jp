@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6d87fbbb60f70292075d4f24080798d017ee5288
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74947282"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>データ サイエンスのシナリオとソリューション テンプレート
@@ -96,7 +96,7 @@ ms.locfileid: "74947282"
 **方法:** このテンプレートは、SQL Server R Services を使用して電力需要を予測します。 予測に使用されるモデルは、Microsoft R Server に含まれる高パフォーマンス機械学習アルゴリズムである **rxDForest**に基づくランダム フォレスト回帰モデルです。 このソリューションには、需要シミュレーター、モデルのトレーニングに必要なすべての R コードと T-SQL コード、予測の生成とレポートに使用できるストアド プロシージャが含まれています。 
 
 
-## <a name="bkmk_HowTo"></a>テンプレートの使用方法
+## <a name="how-to-use-the-templates"></a><a name="bkmk_HowTo"></a>テンプレートの使用方法
 
 各テンプレートに含まれるファイルをダウンロードするには、GitHub コマンドを使用するか、リンクを開いて **[Download Zip (Zip ファイルをダウンロード)]** をクリックし、すべてのファイルをコンピューターに保存します。  通常、ダウンロードしたソリューションには次のフォルダーが含まれています。
   

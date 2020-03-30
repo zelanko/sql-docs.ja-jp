@@ -9,12 +9,12 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 9ce47719415c97f7e9e6cecb27768717710537d4
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: ee706d160ac94c80fc826ce6d199fd66bc37d1fa
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79286116"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216491"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Windows に SQL Server Machine Learning Services (Python と R) をインストールする
 
@@ -22,7 +22,7 @@ ms.locfileid: "79286116"
 
 Windows に SQL Server Machine Learning Services をインストールする方法について説明します。 Machine Learning Services を使用して、データベース内で Python または R スクリプトを実行できます。
 
-## <a name="bkmk_prereqs"> </a> インストール前のチェックリスト
+## <a name="pre-install-checklist"></a><a name="bkmk_prereqs"> </a> インストール前のチェックリスト
 
 + データベース エンジンのインスタンスが必要です。 Python または R の機能だけをインストールすることはできませんが、既存のインスタンスにそれらを段階的に追加することはできます。
 
@@ -59,7 +59,7 @@ Python および R と Machine Learning Services との統合をサポートす�
 Python および R と Machine Learning Services との統合をサポートする SQL Server エディションの詳細については、「[SQL Server 2019 (15.x) のエディションとサポートされる機能](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-version-15)」を参照してください。
 ::: moniker-end
 
-## <a name="run-setup"></a>セットアップの実行
+## <a name="run-setup"></a>セットアップを実行する
 
 ローカルでのインストールの場合、管理者としてセットアップを実行する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をリモート共有からインストールする場合は、そのリモート共有に対する読み取り権限と実行権限を持つドメイン アカウントを使用する必要があります。
 

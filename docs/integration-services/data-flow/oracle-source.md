@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4444236d19c9d7c67aba5a36ba079e1dfa9189b0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74542206"
 ---
 # <a name="oracle-source"></a>Oracle ソース
@@ -52,9 +52,9 @@ Oracle ソースのカスタム プロパティは次のとおりです。 す�
 |プロパティ名|データ型|説明|
 |:-|:-|:-|
 |AccessMode|Integer (列挙)|データベースへのアクセスに使用するモード。 指定できる値は、 **[テーブル名]** と **[SQL コマンド]** です。 既定値は **[テーブル名]** です。|
-|BatchSize|整数|一括読み込みのバッチのサイズ。 これは、配列として抽出されるレコード数です。 <br>このプロパティは、**詳細エディター**によってのみ設定されます|
-|DefaultCodePage|整数|データ ソースにコード ページ情報がない場合に使用されるコード ページ。 <br>このプロパティは、**詳細エディター**によってのみ設定されます。|
-|PreFetchCount|整数|プリフェッチされた行の数。 <br>このプロパティは、**詳細エディター**によってのみ設定されます。|
+|BatchSize|Integer|一括読み込みのバッチのサイズ。 これは、配列として抽出されるレコード数です。 <br>このプロパティは、**詳細エディター**によってのみ設定されます|
+|DefaultCodePage|Integer|データ ソースにコード ページ情報がない場合に使用されるコード ページ。 <br>このプロパティは、**詳細エディター**によってのみ設定されます。|
+|PreFetchCount|Integer|プリフェッチされた行の数。 <br>このプロパティは、**詳細エディター**によってのみ設定されます。|
 |SqlCommand|String|AccessMode が SQL コマンドに設定されている場合に実行される SQL コマンド。|
 |TableName|String|AccessMode がテーブル名に設定されている場合に使用されるデータを含んだテーブルの名前。|
 
@@ -89,7 +89,7 @@ Oracle ソース エディターを次の図に示します。 これには、[�
 - SQL Server Data Tools で、Oracle ソースを含む SQL Server Integration Services (SSIS) パッケージを開きます。
 
 - [データ フロー] タブで、Oracle ソースをダブルクリックします。
-### <a name="options"></a>オプション
+### <a name="options"></a>Options
 
 **Connection manager**
 
@@ -124,7 +124,7 @@ Oracle ソース エディターを次の図に示します。 これには、[�
 
 - [Oracle ソース エディター] で、[列] をクリックします。
 
-### <a name="options"></a>オプション
+### <a name="options"></a>Options
 
 **使用できる外部列**
 
@@ -156,7 +156,7 @@ Oracle ソース エディターを次の図に示します。 これには、[�
 
 - [Oracle ソース エディター] で、[エラー出力] をクリックします。
 
-### <a name="options"></a>オプション
+### <a name="options"></a>Options
 
 **エラー動作**
 

@@ -12,10 +12,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 48188e98d992f45ca282c3687bf56e255d15a40a
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79190622"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 の新機能
@@ -76,7 +76,7 @@ SQL Server 2017 には多くの新しいデータベース エンジン機能、
 - モデル アクセス許可を割り当てる**グループの管理**ページの、**エンティティ**フォルダーを展開するときのパフォーマンスが改善されました。 **グループの管理**ページは、Web アプリケーションの**セキュリティ**セクション内にあります。 パフォーマンスの改善の詳細については、こちら ([https://support.microsoft.com/help/4023865?preview](https://support.microsoft.com/help/4023865?preview)) を参照してください。 権限の割り当ての詳細については、「[Assign Model Object Permissions (Master Data Services) (モデル オブジェクト権限を割り当てる (マスター データ サービス))](../master-data-services/assign-model-object-permissions-master-data-services.md)」を参照してください。
 
 ## <a name="sql-server-2017-analysis-services-ssas"></a>SQL Server 2017 Analysis Services (SSAS) 
-SQL Server Analysis Services 2017 には、表形式モデルの多くの機能強化が導入されています。 チェックの内容は次のとおりです
+SQL Server Analysis Services 2017 には、表形式モデルの多くの機能強化が導入されています。 これには以下が含まれます。
 - Analysis Services の既定のインストール オプションとしての表形式モード。 (CTP 2.0)
 - 表形式モデルのメタデータをセキュリティで保護する、オブジェクト レベルのセキュリティ。 (CTP 2.0)
 - 日付フィールドに基づくリレーションシップを簡単に作成する、日付リレーションシップ。 (CTP 2.0)

@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: e55076a539cb2a932c2f1e0c432daf774899518f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74908921"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>SQL Server Python および R チュートリアル用の NYC タクシー のデモ データ
@@ -58,7 +58,7 @@ ms.locfileid: "74908921"
 
 |**オブジェクト名です。**|**オブジェクトの種類**|**説明**|
 |----------|------------------------|---------------|
-|**NYCTaxi_Sample** | [データベース] | データベースと 2 つのテーブルを作成します。<br /><br />dbo. nyctaxi_sample テーブル:メインの NYC タクシー データセットを格納します。 ストレージとクエリのパフォーマンスを向上させるために、クラスター化列ストア インデックスをテーブルに追加します。 NYC タクシー データセットの 1% のサンプルが、このテーブルに挿入されます。<br /><br />dbo.nyc_taxi_models テーブル:トレーニング済みの Advanced Analytics モデルを保持するために使用します。|
+|**NYCTaxi_Sample** | database | データベースと 2 つのテーブルを作成します。<br /><br />dbo. nyctaxi_sample テーブル:メインの NYC タクシー データセットを格納します。 ストレージとクエリのパフォーマンスを向上させるために、クラスター化列ストア インデックスをテーブルに追加します。 NYC タクシー データセットの 1% のサンプルが、このテーブルに挿入されます。<br /><br />dbo.nyc_taxi_models テーブル:トレーニング済みの Advanced Analytics モデルを保持するために使用します。|
 |**fnCalculateDistance** |スカラー値関数 (scalar-valued function) | 乗車と降車の場所間の直線距離を計算します。 この関数は、[データ機能の作成](sqldev-create-data-features-using-t-sql.md)、[モデルのトレーニングと保存](sqldev-train-and-save-a-model-using-t-sql.md)、[R モデルの運用](sqldev-operationalize-the-model.md)に使用されます。|
 |**fnEngineerFeatures** |テーブル値関数 (table-valued function) | モデル トレーニング用の新しいデータ機能を作成します。 この関数は、[データ機能の作成](sqldev-create-data-features-using-t-sql.md)、[モデルのトレーニングと保存](sqldev-operationalize-the-model.md)、R モデルの運用に使用されます。|
 
