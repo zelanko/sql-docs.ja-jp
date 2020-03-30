@@ -17,16 +17,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 69ce1c16013b9ad27e390ddd91b0655aee2986d5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75253676"
 ---
 # <a name="search-text-with-regular-expressions"></a>正規表現によるテキストの検索
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-正規表現は、文字列のパターンの検索や置換のための、正確で柔軟性の高い表記方法です。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[検索と置換]** ダイアログ ボックスの **[検索する文字列]** フィールドでは、特定のセットの正規表現を使用できます。  
+正規表現は、文字列のパターンの検索や置換のための、正確で柔軟性の高い表記方法です。 **の**[検索と置換][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ダイアログ ボックスの **[検索する文字列]** フィールドでは、特定のセットの正規表現を使用できます。  
   
 ## <a name="find-using-regular-expressions"></a>正規表現を使用して検索を行う  
   

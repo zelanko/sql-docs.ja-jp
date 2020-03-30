@@ -9,10 +9,10 @@ ms.prod: sql
 ms.author: mikeray
 author: MikeRayMSFT
 ms.openlocfilehash: 4d01deaf94e18fcf277e11e4a880f99a70693ead
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75656947"
 ---
 # <a name="sql-server-high-availability-and-disaster-recovery-partners"></a>SQL Server の高可用性とディザスター リカバリーのパートナー
@@ -21,7 +21,7 @@ SQL Server サービスの高可用性とディザスター リカバリーを�
 
 ## <a name="high-availability-and-disaster-recovery-partners"></a>高可用性とディザスター リカバリーのパートナー
 
-| Partner | [説明] | リンク | 
+| Partner | 説明 | リンク | 
 | --- | --- | --- |
 |![Azure][5] |**Azure Site Recovery**<br>Site Recovery は、ワークロードをレプリケートすることで、仮想マシンまたは物理サーバーで実行中のワークロードがプライマリ サイトを使用できない場合に、2 番目の場所で引き続き使用できるようにします。 SQL Server 仮想マシンをオンプレミスのデータ センターから Azure またはその他のオンプレミスのデータ センター、もしくはある Azure データ センターから別の Azure データ センターにレプリケートしてフェールオーバーすることができます。<br><br> SQL Server 2008 R2 - SQL Server 2016 の Enterprise および Standard エディション|[Web サイト][azure_website]<br>[Marketplace][azure_marketplace]<br>[データシート][azure_datasheet]<br>[Twitter][azure_twitter]<br>[ビデオ][azure_youtube]|
 |![DH2i][2] |**DH2i**<br>DxEnterprise は、計画/計画外のダウンタイムをほぼゼロに抑え、大幅なコスト削減を実現し、管理を著しく簡素化し、物理と論理の両方を統合するために役立つ、Windows、Linux、Docker 向けのスマート可用性ソフトウェアです。<br><br>SQL Server 2005 以降、Windows Server 2008 R2 以降、Ubuntu 16 以降、RHEL 7 以降、CentOS 7 以降|[Web サイト][dh2i_website]<br>[データシート][dh2i_datasheet]<br>[Twitter][dh2i_twitter]<br>[ビデオ][dh2i_youtube]|

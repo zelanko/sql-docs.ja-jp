@@ -11,10 +11,10 @@ ms.assetid: 76ecc05f-a77d-40a2-bab9-91a7fcf17347
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1bd284f6fb8021164aa3edf6aa31761b7483406e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028264"
 ---
 # <a name="updating-large-data-sample"></a>大きなデータを更新するサンプル
@@ -40,13 +40,13 @@ ms.locfileid: "69028264"
 
 次の例のサンプル コードでは、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] データベースへの接続を行います。 さらに、Statement オブジェクトを作成し、[isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) メソッドを使用して、Statement オブジェクトが、指定された [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) クラスのラッパーであるかどうかをチェックします。 ドライバー固有の応答バッファリング メソッドにアクセスするために、[unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) メソッドが使用されています。
 
-次に、[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) クラスの [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) メソッドを使用して、応答バッファリング モードを "**adaptive**" に設定します。サンプル コードを見ると、アダプティブ バッファリング モードの取得方法も確認できます。
+次に、**SQLServerStatement** クラスの [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) メソッドを使用して、応答バッファリング モードを "[adaptive](../../../connect/jdbc/reference/sqlserverstatement-class.md)" に設定します。サンプル コードを見ると、アダプティブ バッファリング モードの取得方法も確認できます。
 
 さらに、SQL ステートメントを実行し、返されたデータを更新可能な [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトに設定しています。
 
 最後に、結果セット内のデータ行を繰り返し処理します。 空のドキュメント概要が見つかった場合、[updateString](../../../connect/jdbc/reference/updatestring-method-sqlserverresultset.md) メソッドと [updateRow](../../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) メソッドを組み合わせて使用して、データの行を更新し、再度データベースに格納します。 既にデータが存在する場合は、[getString](../../../connect/jdbc/reference/getstring-method-sqlserverresultset.md) メソッドを使用して、データの一部が表示されます。
 
-ドライバーの既定の動作は "**adaptive**" です。 ただし、順方向専用の更新可能な結果セットの場合で、なおかつ、結果セットのデータのサイズが、アプリケーションのメモリ容量を超える場合は、[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) クラスの [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) メソッドを使用して、アプリケーションからアダプティブ バッファリング モードを明示的に設定する必要があります。
+ドライバーの既定の動作は "**adaptive**" です。 ただし、順方向専用の更新可能な結果セットの場合で、なおかつ、結果セットのデータのサイズが、アプリケーションのメモリ容量を超える場合は、[SQLServerStatement](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) クラスの [setResponseBuffering](../../../connect/jdbc/reference/sqlserverstatement-class.md) メソッドを使用して、アプリケーションからアダプティブ バッファリング モードを明示的に設定する必要があります。
 
 [!code[JDBC#UsingAdaptiveBuffering3](../../../connect/jdbc/codesnippet/Java/updating-large-data-sample_1.java)]
 

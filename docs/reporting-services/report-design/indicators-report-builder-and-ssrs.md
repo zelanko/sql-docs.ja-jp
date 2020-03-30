@@ -16,10 +16,10 @@ ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c2e62ec26c0019e82b3f0e37dbdd9c1539332212
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082071"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>インジケーター (レポート ビルダーおよび SSRS)
@@ -41,12 +41,12 @@ ms.locfileid: "77082071"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] そのまま使用できるインジケーター セットとインジケーター アイコンが組み込まれていますが、必要に応じて、個々のインジケーター アイコンとインジケーター セットをカスタマイズできます。  
   
- インジケーターを KPI として使用する方法の詳細については、「[チュートリアル:レポートへの KPI の追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)」を参照してください。  
+ インジケーターを KPI として使用する方法の詳細については、「[チュートリアル: レポートへの KPI の追加 (レポート ビルダー)](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)」を参照してください。  
   
 > [!NOTE]  
 >  インジケーターは、レポート パーツとしてレポートとは別にパブリッシュできます。 [レポート パーツ](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)の詳細を参照してください。  
   
-##  <a name="ComparingIndicatorsToGauges"></a> インジケーターとゲージの比較  
+##  <a name="comparing-indicators-to-gauges"></a><a name="ComparingIndicatorsToGauges"></a> インジケーターとゲージの比較  
  インジケーターとゲージは非常に異なるように見えますが、インジケーターはゲージを単純にしたものとも言えます。 インジケーターとゲージには 1 つのデータ値が表示されます。 大きな違いは、ゲージにはフレームやポインターなどの要素が含まれていることです。 インジケーターには、状態、アイコン、ラベル (オプション) のみが含まれています。 インジケーターの状態は、ゲージの範囲に似ています。  
   
  ゲージと同様に、インジケーターはゲージ パネル内に配置されます。 **[インジケーターのプロパティ]** ダイアログ ボックスまたはプロパティ ペインを使用してインジケーターを構成するには、パネルの代わりにインジケーターを選択する必要があります。 それ以外の場合、使用可能なオプションがゲージ パネル オプションに適用されるため、インジケーターを構成することができません。 次の図は、ゲージ パネルで選択されたインジケーターを示します。  
@@ -55,7 +55,7 @@ ms.locfileid: "77082071"
   
  データ値を示す方法によっては、インジケーターではなくゲージを使用した方がより適切な場合もあります。 詳しくは、「 [ゲージ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)」をご覧ください。  
   
-##  <a name="ChoosingIndicatorTypes"></a> 使用するインジケーター タイプの選択  
+##  <a name="choosing-the-indicator-type-to-use"></a><a name="ChoosingIndicatorTypes"></a> 使用するインジケーター タイプの選択  
  データがテーブルまたはマトリックスの詳細行、行グループ、列グループのいずれにある場合も、単独でレポート本文またはダッシュボードにある場合も、適切なインジケーター セットを使用することで、データの意味をすばやく伝えることができます。 組み込みのインジケーター セットには 3 つ以上のアイコンがあります。 アイコンの形や色はさまざまです。 各アイコンは、異なるデータ状態を示します。  
   
  次の表に、組み込みインジケーター セットの一覧と、その一般的な使用方法を示します。  
@@ -69,7 +69,7 @@ ms.locfileid: "77082071"
   
  インジケーター セットを選択したら、インジケーターのダイアログ ボックスまたはプロパティ ペインでプロパティを設定して、そのセット内の各インジケーター アイコンの外観をカスタマイズできます。 組み込みの色、アイコン、サイズ、または式を使用して、インジケーターを構成できます。  
   
-##  <a name="CustomizingIndicators"></a> インジケーターのカスタマイズ  
+##  <a name="customizing-indicators"></a><a name="CustomizingIndicators"></a> インジケーターのカスタマイズ  
  インジケーターは、必要に応じてカスタマイズできます。 インジケーター セットとそのセット内の各インジケーター アイコンは、以下の方法で変更できます。  
   
 -   インジケーター アイコンの色を変更する。 たとえば、インジケーター セットの配色を単色に変更したり、既定の色以外の色を使用したりできます。  
@@ -84,7 +84,7 @@ ms.locfileid: "77082071"
   
  詳細については、「 [インジケーター アイコンとインジケーター セットの変更 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)」を参照してください。  
   
-##  <a name="UsingIndicatorsInTablesMatrices"></a> テーブルおよびマトリックスでのインジケーターの使用  
+##  <a name="using-indicators-in-tables-and-matrices"></a><a name="UsingIndicatorsInTablesMatrices"></a> テーブルおよびマトリックスでのインジケーターの使用  
  インジケーターをテーブルおよびマトリックスで使用する場合、単純な図形が理想的です。 インジケーターは、サイズが小さくても効果があります。 そのため、レポートの詳細やグループの行で使用できます。  
   
  次の図は、売上を示すために方向インジケーター セット **[4 つの矢印 (色付き)]** を使用するテーブルを含むレポートを示しています。 レポートのインジケーター アイコンは、既定の赤、黄、緑の代わりに青の網掛けを使用するように構成されています。  
@@ -103,14 +103,14 @@ ms.locfileid: "77082071"
   
  インジケーターでは、1 つの値のみを使用します。 複数のデータ値を表示する必要がある場合は、インジケーターではなくスパークラインやデータ バーを使用します。 スパークラインやデータ バーは、複数のデータ値を表示できますが、小さなサイズでも単純で理解しやすく、テーブルやマトリックスでも適切に機能します。 詳細については、「 [スパークラインとデータ バー (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)」を参照してください。  
   
-##  <a name="SizingIndicatators"></a> 視覚的効果を高めるためのインジケーターのサイズ変更  
+##  <a name="sizing-indicators-to-maximize-visual-impact"></a><a name="SizingIndicatators"></a> 視覚的効果を高めるためのインジケーターのサイズ変更  
  インジケーターは、色、方向、形状のほか、サイズを変更して、視覚的効果を高めることができます。 あるレポートで、さまざまな種類の自転車に関する顧客満足度を示すインジケーターを使用するとします。 インジケーターで使用するアイコンを、顧客満足度に応じて異なるサイズになるように構成します。 顧客満足度が大きくなるほど、レポートに表示されるアイコンのサイズも大きくなります。 次の図は、自転車の売上のレポートを示し、アイコンのサイズは売上高に対応しています。  
   
  式を使用することで、星形のサイズを、インジケーターで使用されるフィールドの値に基づいて動的に設定できます。 詳細については、「 [式を使用したインジケーターのサイズの指定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)」を参照してください。  
   
  式の記述と使用の詳細については、「[式 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)」を参照してください。  
   
-##  <a name="IncludingIndicatorsInGauges"></a> ゲージ パネルへのインジケーターおよびゲージの配置  
+##  <a name="including-indicators-and-gauges-in-gauge-panels"></a><a name="IncludingIndicatorsInGauges"></a> ゲージ パネルへのインジケーターおよびゲージの配置  
  インジケーターは常にゲージ パネル内に配置されます。 ゲージ パネルは、1 つまたは複数のゲージと状態インジケーターが含まれる最上位のコンテナーです。 ゲージ パネルには、子または隣接のゲージまたはインジケーターを含めることができます。 インジケーターをゲージの子として使用する場合、ゲージに表示されるデータ値の状態を示すことによって、データを詳細に視覚化できます。 たとえば、ゲージ内のインジケーターでは、ゲージの値が値の範囲の上限 33% を指していることを示す緑の円を表示できます。 ゲージとインジケーターを同時に使用することによって、データをさまざまな方法で表すことができます。 いずれの場合も、インジケーターとゲージは同じデータ フィールドまたは異なるデータ フィールドを使用できます。  
   
  次の図は、インジケーターとゲージを同時に使用した場合およびインジケーターをゲージ内に配置した場合を示しています。  
@@ -121,7 +121,7 @@ ms.locfileid: "77082071"
   
  ゲージの使用の詳細については、「 [ゲージ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)」を参照してください。  
   
-##  <a name="SequenceIndicatorStates"></a> インジケーターの状態のシーケンス  
+##  <a name="sequence-of-indicator-states"></a><a name="SequenceIndicatorStates"></a> インジケーターの状態のシーケンス  
  **[インジケーターのプロパティ]** ダイアログ ボックスの **[値と状態]** タブのインジケーターの状態のシーケンスは、インジケーターの状態の開始値と終了値が一致する場合にデータ値に対して表示されるインジケーター アイコンに影響します。  
   
  これは、パーセントまたは数値の状態測定単位を使用する場合に発生します。 特に、数値の状態測定単位を使用する場合は、この測定単位に特定の値を指定するため、発生する可能性が高くなります。 また、レポートのデータ値を丸める場合も、値の個別性が低くなる傾向があるため、発生する可能性が高くなります。  
@@ -172,7 +172,7 @@ ms.locfileid: "77082071"
   
  要約すると、評価はインジケーターの状態リストの先頭から開始され、データが値の範囲に含まれる最初のインジケーターの状態に関連付けられているインジケーター アイコンがレポートに表示されます。 このため、インジケーターの状態のシーケンスを変更することによって、データ値の視覚エフェクトに影響があります。  
   
-##  <a name="HowTo"></a> 操作方法に関するトピック  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> 操作方法に関するトピック  
  インジケーターの追加、変更、および削除方法、インジケーターの構成およびカスタマイズ方法、ゲージ内でのインジケーターの使用方法について説明しているトピックの一覧を次に示します。  
   
 -   [インジケーターの追加または削除 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add-or-delete-an-indicator-report-builder-and-ssrs.md)  

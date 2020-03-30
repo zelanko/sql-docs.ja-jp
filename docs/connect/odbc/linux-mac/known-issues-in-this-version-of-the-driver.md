@@ -10,10 +10,10 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9746456a4a38f2a19e485d1e17786073b97b243e
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286436"
 ---
 # <a name="known-issues-for-the-odbc-driver-on-linux-and-macos"></a>Linux および macOS での ODBC ドライバーに関する既知の問題
@@ -32,9 +32,9 @@ ms.locfileid: "79286436"
 
 - クライアント エンコードが UTF-8 の場合、ドライバー マネージャーは、UTF-8 から UTF-16 へ常に正しく変換するとは限りません。 現時点では、文字列内の 1 つ以上の文字が有効な UTF-8 文字でない場合、データの破損が発生します。 ASCII 文字は正しくマップされます。 SQLCHAR バージョンの ODBC API (たとえば、SQLDriverConnectA) を呼び出すときに、ドライバー マネージャーはこの変換を試行します。 SQLWCHAR バージョンの ODBC API (たとえば、SQLDriverConnectW) を呼び出す際には、ドライバー マネージャーはこの変換を試行しません。  
 
-- **SQLBindParameter** の *ColumnSize* パラメーターは SQL 型の文字数を示し、*BufferLength* はアプリケーションのバッファー内のバイト数を示します。 ただし、SQL データ型が `varchar(n)` または `char(n)` で、アプリケーションがパラメーターを SQL_C_CHAR または SQL_C_VARCHAR としてバインドし、クライアントの文字エン コードが UTF-8 の場合は、*ColumnSize* の値がサーバー上のデータ型のサイズに揃っていても、ドライバーから "文字列データの右側が切り捨てられました" というエラーを受け取る可能性があります。 このエラーは、文字エンコード間の変換によってデータの長さが変更された場合に発生します。 たとえば、正しいアポストロフィ文字 (U+2019) が CP-1252 では半角の 0x92 としてエンコードされたが、UTF-8 では 3 バイトのシーケンス 0xe2 0x80 0x99 としてエンコードされた場合です。
+- *SQLBindParameter* の **ColumnSize** パラメーターは SQL 型の文字数を示し、*BufferLength* はアプリケーションのバッファー内のバイト数を示します。 ただし、SQL データ型が `varchar(n)` または `char(n)` で、アプリケーションがパラメーターを SQL_C_CHAR または SQL_C_VARCHAR としてバインドし、クライアントの文字エン コードが UTF-8 の場合は、*ColumnSize* の値がサーバー上のデータ型のサイズに揃っていても、ドライバーから "文字列データの右側が切り捨てられました" というエラーを受け取る可能性があります。 このエラーは、文字エンコード間の変換によってデータの長さが変更された場合に発生します。 たとえば、正しいアポストロフィ文字 (U+2019) が CP-1252 では半角の 0x92 としてエンコードされたが、UTF-8 では 3 バイトのシーケンス 0xe2 0x80 0x99 としてエンコードされた場合です。
 
-たとえば、エンコードが UTF-8 の場合に、out パラメーターに対して **SQLBindParameter** の *BufferLength* と *ColumnSize* の両方に 1 を指定してから、(CP-1252 を使用して) サーバー上の `char(1)` 列に格納されている前の文字を取得しようとすると、ドライバーはこの文字を 3 バイトの UTF-8 エンコードに変換しようとしますが、結果は 1 バイトのバッファーに収まりません。 逆方向では、クライアントとサーバー上の異なるコード ページ間で変換を行う前に、ドライバーは *ColumnSize* を **SQLBindParameter** の *BufferLength* と比較します。 *ColumnSize* 1 が *BufferLength* (たとえば) 3 より小さいので、ドライバーはエラーを生成します。 このエラーを回避するには、変換後のデータの長さが、指定したバッファーまたは列に適合することを確認します。 `varchar(n)` 型では、*ColumnSize* を 8000 よりも大きくすることはできません。
+たとえば、エンコードが UTF-8 の場合に、out パラメーターに対して *SQLBindParameter* の *BufferLength* と **ColumnSize** の両方に 1 を指定してから、(CP-1252 を使用して) サーバー上の `char(1)` 列に格納されている前の文字を取得しようとすると、ドライバーはこの文字を 3 バイトの UTF-8 エンコードに変換しようとしますが、結果は 1 バイトのバッファーに収まりません。 逆方向では、クライアントとサーバー上の異なるコード ページ間で変換を行う前に、ドライバーは *ColumnSize* を *SQLBindParameter* の **BufferLength** と比較します。 *ColumnSize* 1 が *BufferLength* (たとえば) 3 より小さいので、ドライバーはエラーを生成します。 このエラーを回避するには、変換後のデータの長さが、指定したバッファーまたは列に適合することを確認します。 *型では、* ColumnSize`varchar(n)` を 8000 よりも大きくすることはできません。
 
 ## <a name="troubleshooting-connection-problems"></a><a id="connectivity"></a>接続の問題のトラブルシューティング  
 
@@ -87,7 +87,7 @@ UNICODE Using encoding ASCII 'ISO8859-1' and UNICODE 'UCS-2LE'
 
 ODBC ドライバーのインストール手順については、次の記事を参照してください。
 
-- [Linux に Microsoft ODBC Driver for SQL Server をインストールする](installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [Linux に SQL Server 用 Microsoft ODBC Driver をインストールする](installing-the-microsoft-odbc-driver-for-sql-server.md)
 - [macOS に Microsoft ODBC Driver for SQL Server をインストールする](install-microsoft-odbc-driver-sql-server-macos.md)
 
 詳細については、「[プログラミング ガイドライン](programming-guidelines.md)」と[リリースノート](release-notes-odbc-sql-server-linux-mac.md)に関するページを参照してください。  

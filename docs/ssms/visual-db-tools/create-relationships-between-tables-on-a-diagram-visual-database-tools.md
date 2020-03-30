@@ -14,10 +14,10 @@ ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
 ms.openlocfilehash: eb0d82c1693c452462b8bef2e55cd4e41b13689b
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79198391"
 ---
 # <a name="create-relationships-between-tables-on-a-diagram-visual-database-tools"></a>ダイアグラムでテーブル間のリレーションシップを作成する方法 (Visual Database Tools)
@@ -30,7 +30,7 @@ ms.locfileid: "79198391"
   
 2.  選択した列を関連テーブルにドラッグします。  
   
-3.  2 つのダイアログ ボックス、 **[外部キーのリレーションシップ]** と **[テーブルと列]** が表示されます。後者のダイアログ ボックスが手前に表示されます。  
+3.  **[外部キーのリレーションシップ]** ダイアログ ボックスと **[テーブルと列]** ダイアログ ボックスが表示されます。後者のダイアログ ボックスが手前に表示されます。  
   
 4.  **[リレーションシップ名]** には、FK_*localtable*\_*foreigntable* という形式の名前が表示されます。 この値は変更できます。  
   

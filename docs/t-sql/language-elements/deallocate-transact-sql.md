@@ -22,10 +22,10 @@ ms.assetid: c75cf73d-0268-4c57-973d-b8a84ff801fa
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 92153155be5761e804c6d62cece4d392b40a1412
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67894898"
 ---
 # <a name="deallocate-transact-sql"></a>DEALLOCATE (Transact-SQL)
@@ -43,7 +43,7 @@ DEALLOCATE { { [ GLOBAL ] cursor_name } | @cursor_variable_name }
   
 ## <a name="arguments"></a>引数  
  *cursor_name*  
- 宣言済みのカーソル名を指定します。 *cursor_name* という名前のカーソルとして、グローバル カーソルとローカル カーソルの両方がある場合は、`GLOBAL` を指定すると *cursor_name* ではグローバル カーソルが参照され、`GLOBAL` を指定しないとローカル カーソルが参照されます。  
+ 宣言済みのカーソル名を指定します。 *cursor_name* という名前のカーソルとして、グローバル カーソルとローカル カーソルの両方がある場合は、*を指定すると*cursor_name`GLOBAL` ではグローバル カーソルが参照され、`GLOBAL` を指定しないとローカル カーソルが参照されます。  
   
  @*cursor_variable_name*  
  **cursor** 変数の名前を指定します。 @*cursor_variable_name* は **cursor** 型である必要があります。  

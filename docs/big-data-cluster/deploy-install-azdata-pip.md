@@ -10,21 +10,21 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 5360e7aa9718fef0d17bf73b9064c2d1a61a4577
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75726949"
 ---
 # <a name="install-azdata-with-pip"></a>`azdata` の `pip` でのインストール
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-この記事では、`pip` を使用して Windows または Linux 用の `azdata` ツールをインストールする方法について説明します。
+この記事では、`azdata` を使用して Windows または Linux 用の `pip` ツールをインストールする方法について説明します。
 
 Windows および Linux (Ubuntu ディストリビューション) の場合は、[パッケージ マネージャー](./deploy-install-azdata-installer.md)を使用してインストールすると、操作が簡単になります。
 
-## <a id="prerequisites"></a> 前提条件
+## <a name="prerequisites"></a><a id="prerequisites"></a> 前提条件
 
 `azdata` は Python で記述されたコマンドライン ユーティリティです。クラスター管理者はこれを使用すると、REST API 経由でビッグ データ クラスターをブートストラップし、管理できるようになります。 最低限必要な Python バージョンは v3.5 です。 `pip` は、`azdata` ツールをダウンロードしてインストールするために必要です。 以下の手順は、Windows と Ubuntu の例です。 他のプラットフォームに Python をインストールする方法については、[Python のドキュメント](https://wiki.python.org/moin/BeginnersGuide/Download)を参照してください。
 さらに、最新バージョンの `requests` Python パッケージをインストールして更新します。
@@ -36,7 +36,7 @@ pip3 install -U requests
 > [!IMPORTANT]
 > 新しいバージョンのビッグ データ クラスターをインストールする場合は、データをバックアップして以前のクラスターを削除し、`azdata` をアップグレードして新しいリリースをインストールします。 詳細については、[新しいリリースへのアップグレード](deployment-upgrade.md)に関するページを参照してください。
 
-## <a id="windows"></a> Windows `azdata` のインストール
+## <a name="windows-azdata-installation"></a><a id="windows"></a> Windows `azdata` のインストール
 
 1. Windows クライアントで、[https://www.python.org/downloads/](https://www.python.org/downloads/) から必要な Python パッケージをダウンロードします。 Python 3.5.3 以降では、Python をインストールするときに pip3 もインストールされます。 
 
@@ -63,7 +63,7 @@ pip3 install -U requests
    pip3 install -r https://aka.ms/azdata
    ```
 
-## <a id="linux"></a> Linux `azdata` のインストール
+## <a name="linux-azdata-installation"></a><a id="linux"></a> Linux `azdata` のインストール
 
 Linux では、Python 3.5 をインストールしてから、pip をアップグレードする必要があります。 次の例は、Ubuntu で動作するコマンドを示しています。 その他の Linux プラットフォームについては、[Python のドキュメント](https://wiki.python.org/moin/BeginnersGuide/Download)を参照してください。
 
@@ -105,7 +105,7 @@ Linux では、Python 3.5 をインストールしてから、pip をアップ�
    > [!NOTE]
    > `--user` スイッチを指定すると、`azdata` が Python ユーザー インストール ディレクトリにインストールされます。 通常、Linux 上ではこれは `~/.local/bin` です。 このディレクトリをパスに追加するか、ユーザー インストール ディレクトリに移動して、そこから `./azdata` を実行します。
 
-## <a id="macOSX"></a> macOS または OS X に `azdata` をインストールする
+## <a name="install-azdata-on-macos-or-os-x"></a><a id="macOSX"></a> macOS または OS X に `azdata` をインストールする
 
 macOS または OS X に `azdata` をインストールするには、次の手順を実行します。 各ステップでは、ターミナルで例を実行します。
 

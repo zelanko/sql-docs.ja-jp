@@ -22,10 +22,10 @@ ms.assetid: e82f6bee-6cf6-4061-be22-9ad2e8e9d3d6
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: f666a327db29468c5bbd91bf7106d7c6e4f61f64
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67929047"
 ---
 # <a name="set-fips_flagger-transact-sql"></a>SET FIPS_FLAGGER (Transact-SQL)
@@ -47,7 +47,7 @@ SET FIPS_FLAGGER ( 'level' |  OFF )
   
  *level* の値には次のいずれかを指定します。  
   
-|Value|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |ENTRY|ISO エントリレベルの準拠性の標準チェック。|  
 |FULL|ISO 完全準拠性の標準チェック|  
@@ -55,7 +55,7 @@ SET FIPS_FLAGGER ( 'level' |  OFF )
 |OFF|標準チェックなし。|  
   
 ## <a name="remarks"></a>解説  
- `SET FIPS_FLAGGER` は、実行時ではなく解析時に設定されます。 解析時に設定されるということは、SET ステートメントがバッチまたはストアド プロシージャ内に指定されている場合は、コードが実際にその場所まで実行されるかどうかに関係なく、設定が有効になることを意味します。つまり他のどのステートメントが実行されるよりも前に、`SET` ステートメントは有効になります。 たとえば、絶対に実行されることのない `IF...ELSE` ステートメント ブロックに `SET` ステートメントが指定されていたとしても、`IF...ELSE` ステートメント ブロックは解析されるので、`SET` ステートメントは有効になります。  
+ `SET FIPS_FLAGGER` は、実行時ではなく解析時に設定されます。 解析時に設定されるということは、SET ステートメントがバッチまたはストアド プロシージャ内に指定されている場合は、コードが実際にその場所まで実行されるかどうかに関係なく、設定が有効になることを意味します。つまり他のどのステートメントが実行されるよりも前に、`SET` ステートメントは有効になります。 たとえば、絶対に実行されることのない `SET` ステートメント ブロックに `IF...ELSE` ステートメントが指定されていたとしても、`SET` ステートメント ブロックは解析されるので、`IF...ELSE` ステートメントは有効になります。  
   
  `SET FIPS_FLAGGER` がストアド プロシージャで設定された場合、`SET FIPS_FLAGGER` の値は、制御がストアド プロシージャから返された後、元に戻されます。 したがって、動的 SQL に指定されている `SET FIPS_FLAGGER` ステートメントは、動的 SQL ステートメントの後にあるステートメントにまったく影響しません。  
   

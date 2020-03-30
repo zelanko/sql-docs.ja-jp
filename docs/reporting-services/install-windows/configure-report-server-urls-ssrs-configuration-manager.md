@@ -12,10 +12,10 @@ ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: da3f7c0f0385ddfd8bdb61ab7009a6503acfb80a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080250"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>レポート サーバー URL の構成 (SSRS 構成マネージャー)
@@ -44,7 +44,7 @@ ms.locfileid: "77080250"
   
  上記の URL の使用を可能にする設定を次の表に示します。 この表の既定値を使用することで、ホスト名を含んだ URL を通じてレポート サーバーに接続できるようになります。  
   
-|要素|Value|説明|  
+|要素|値|説明|  
 |----------|-----------|-----------------|  
 |IP アドレス|すべて割り当て|ネットワーク上のドメイン ネーム サービスによって、URL のホスト名がコンピューターの IP アドレスに解決されます。 定義した URL に IP アドレスが指定されていれば、特定のホストに送られる要求は目的の宛先に届きます。|  
 |Port|80|ポート 80 は、コンピューターにおける TCP/IP 接続の既定のポートです。 レポート サーバーはポート 80 でリッスンしているため、URL ではポート番号を省略できます。 別のポートを指定する場合は、URL 内でそのポートを指定する必要があります。|  

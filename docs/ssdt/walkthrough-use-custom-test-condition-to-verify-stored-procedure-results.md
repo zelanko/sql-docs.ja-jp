@@ -11,15 +11,15 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 60160fe3f36d61364b8bf4385fa53b744f9a3475
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286596"
 ---
-# <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>チュートリアル:カスタム テスト条件を使用してストアド プロシージャの結果を検証する
+# <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>チュートリアル: カスタム テスト条件を使用してストアド プロシージャの結果を検証する
 
-機能の拡張に関するこのチュートリアルでは、テスト条件を作成し、SQL Server の単体テストを作成して機能を検証します。 これには、テスト条件のクラス ライブラリ プロジェクトの作成およびクラス ライブラリ プロジェクトの署名とインストールが含まれます。 更新するテスト条件が既にある場合は、「[Visual Studio 2010 のカスタム テスト条件を、以前のリリースから SQL Server Data Tools にアップグレードする方法](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md)」を参照してください。  
+機能の拡張に関するこのチュートリアルでは、テスト条件を作成し、SQL Server の単体テストを作成して機能を検証します。 これには、テスト条件のクラス ライブラリ プロジェクトの作成およびクラス ライブラリ プロジェクトの署名とインストールが含まれます。 更新するテスト条件が既にある場合は、「[Visual Studio 2010 のカスタム テスト条件を、以前のリリースから SQL Server Data Tools にアップグレードする方法](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md)」をご覧ください。  
   
 このチュートリアルでは、次の作業について説明します。  
   
@@ -344,7 +344,7 @@ namespace ColumnCountCondition
   
 次に、プロジェクトをビルドします。  
   
-## <a name="xxx"></a>プロジェクトをコンパイルしてテスト条件をインストールする  
+## <a name="compiling-the-project-and-installing-your-test-condition"></a><a name="xxx"></a>プロジェクトをコンパイルしてテスト条件をインストールする  
 **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。  
   
 次に、アセンブリ情報を Extensions ディレクトリにコピーします。 Visual Studio が起動すると、%Program Files%\Microsoft Visual Studio <Version>\Common7\IDE\Extensions\Microsoft\SQLDB\TestConditions ディレクトリとサブディレクトリ内のすべての機能拡張を識別し、使用できる状態にします。  
@@ -381,7 +381,7 @@ namespace ColumnCountCondition
   
 6.  **[キャンセル]** をクリックして、データベース接続を使用するテスト プロジェクトを構成せずに単体テストを作成します。 SQL Server 単体テスト デザイナーに、空白のテストが表示されます。 テスト プロジェクトに Visual C\# のソース コード ファイルが追加されます。  
   
-    データベース接続が関連付けられたデータベース単体テストの作成および構成の詳細については、「[空の SQL Server の単体テストを作成する方法](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)」を参照してください。  
+    データベース接続が関連付けられたデータベース単体テストの作成および構成について詳しくは、「[空の SQL Server の単体テストを作成する方法](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)」をご覧ください。  
   
 7.  **[作成するにはここをクリックしてください]** をクリックし、単体テストの作成を完了します。 SQL Server プロジェクトに新しいテスト条件が表示されます。  
   
@@ -400,7 +400,7 @@ namespace ColumnCountCondition
   
 5.  **[プロパティ]** ウィンドウで、Count プロパティ、Enabled プロパティ、および ResultSet プロパティを構成します。  
   
-    詳細については、「[SQL Server の単体テストにテスト条件を追加する方法](../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md)」を参照してください。  
+    詳しくは、「[SQL Server の単体テストにテスト条件を追加する方法](../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
 [SQL Server の単体テストのカスタム テスト条件](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)  

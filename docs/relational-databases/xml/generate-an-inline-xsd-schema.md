@@ -19,10 +19,10 @@ ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a0902765a96f68acf811bd3583a41a8e8198d5ca
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67943157"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>インライン XSD スキーマの生成
@@ -222,7 +222,7 @@ FOR XML RAW, XMLSCHEMA, ELEMENTS
 ## <a name="element-name-clashes"></a>要素名の競合  
  FOR XML では、同じ名前で 2 つのサブ要素を示すことができます。 たとえば、次のクエリでは製品の ListPrice と DealerPrice の値が取得されますが、これら 2 つの列に Price という同じ別名が指定されます。 したがって、返される行セットには同じ名前の列が 2 つ含まれます。  
   
-### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>ケース 1: 2 つのサブ要素が同じ型の非キー列でどちらも NULL 値が許容される場合  
+### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>ケース 1 : 2 つのサブ要素が同じ型の非キー列でどちらも NULL 値が許容される場合  
  次のクエリの 2 つのサブ要素は同じ型の非キー列で、どちらも NULL 値が許容されます。  
   
 ```  
@@ -274,9 +274,9 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  このインライン XSD スキーマでは、次の点に注意してください。  
   
--   ListPrice と DealerPrice は `money`という同じ型で、テーブルではどちらも NULL 値が許容されます。 したがって、これらの要素は返される XML に含まれないので、<`row`> 要素の複合型の宣言には、minOccurs が 0、maxOccurs が 2 に指定された 1 つの <`Price`> 子要素のみが含まれます。  
+-   ListPrice と DealerPrice は `money`という同じ型で、テーブルではどちらも NULL 値が許容されます。 したがって、これらの要素は返される XML に含まれないので、<`Price`> 要素の複合型の宣言には、minOccurs が 0、maxOccurs が 2 に指定された 1 つの <`row`> 子要素のみが含まれます。  
   
--   テーブルの `DealerPrice` の値が NULL なので、クエリ結果には、`ListPrice` のみが <`Price`> 要素として返されます。 `XSINIL` パラメーターを ELEMENTS ディレクティブに追加すると、返される両方の要素で、DealerPrice に対応する <`Price`> 要素の `xsi:nil` の値が TRUE に設定されます。 また、インライン XSD スキーマの <`row`> の複合型の定義として 2 つの <`Price`> 子要素が返されます。どちらの要素でも `nillable` 属性が TRUE に設定されます。 結果の一部を次に示します。  
+-   テーブルの `DealerPrice` の値が NULL なので、クエリ結果には、`ListPrice` のみが <`Price`> 要素として返されます。 `XSINIL` パラメーターを ELEMENTS ディレクティブに追加すると、返される両方の要素で、DealerPrice に対応する <`xsi:nil`> 要素の `Price` の値が TRUE に設定されます。 また、インライン XSD スキーマの <`Price`> の複合型の定義として 2 つの <`row`> 子要素が返されます。どちらの要素でも `nillable` 属性が TRUE に設定されます。 結果の一部を次に示します。  
   
  `...`  
   
@@ -314,7 +314,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  `</row>`  
   
-### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>ケース 2: 同じ型でも一方がキー列で他方が非キー列の場合  
+### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>ケース 2 : 同じ型でも一方がキー列で他方が非キー列の場合  
  次のクエリでは、型が同じ型でも一方がキー列で他方が非キー列の場合について説明します。  
   
 ```  
@@ -392,7 +392,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  インライン XSD スキーマで、Col2 に対応する <`Col`> 要素の minOccurs が 0 に設定されていることに注意してください。  
   
-### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>ケース 3: 2 つの要素の型が異なり、対応する列で NULL 値が許容される場合  
+### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>ケース 3 : 2 つの要素の型が異なり、対応する列で NULL 値が許容される場合  
  ケース 2 で示したサンプル テーブルに対して、次のクエリを指定します。  
   
 ```  

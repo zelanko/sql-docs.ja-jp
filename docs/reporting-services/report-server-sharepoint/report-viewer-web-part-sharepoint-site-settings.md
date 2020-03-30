@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: jt000
 ms.author: jasontre
 ms.openlocfilehash: 8eadb83c35f69dc2a1dba108e83df93bf614be3e
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77256812"
 ---
 # <a name="sharepoint-site-settings-for-the-report-viewer-web-part---reporting-services"></a>レポート ビューアー Web パーツに関する SharePoint サイト設定
@@ -24,11 +24,11 @@ ms.locfileid: "77256812"
 
 サイトの設定には、次の方法でアクセスできます。
 
-1. SharePoint サイトで、左上にある**歯車**アイコンを選び、**[サイトの設定]** を選びます。
+1. SharePoint サイトで、左上にある**歯車**アイコンを選び、 **[サイトの設定]** を選びます。
 
     ![歯車アイコンを使用したサイトの設定。](media/sharepoint-site-settings.png)
 
-2. **Reporting Services** のサイトの設定グループで、**[レポート ビューアー Web パーツの設定]** をクリックします。
+2. **Reporting Services** のサイトの設定グループで、 **[レポート ビューアー Web パーツの設定]** をクリックします。
 
     > [!NOTE]
     > `<site>/_layouts/15/ReportViewerWebPart/ReportViewerWebPartSettings.aspx` に直接移動して、サイトの設定にアクセスすることもできます。

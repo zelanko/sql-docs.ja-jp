@@ -12,10 +12,10 @@ author: rothja
 ms.author: v-jizho2
 manager: jroth
 ms.openlocfilehash: 934bd563af82c5fb8ca1d08ae7dc1b17160e3284
-ms.sourcegitcommit: 577e7467821895f530ec2f97a33a965fca808579
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79058836"
 ---
 # <a name="install-the-microsoft-odbc-driver-for-sql-server-linux"></a>Microsoft ODBC Driver for SQL Server をインストールする (Linux)
@@ -428,7 +428,7 @@ ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 - Red Hat: ```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
 - SUSE: ```glibc, libuuid1, krb5, openssl, unixODBC```
 
-これらの各パッケージにはそれぞれ独自の依存関係があり、システムに存在する場合と存在しない場合があります。 この問題の一般的な解決策については、ディストリビューションのパッケージ マネージャーの[Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos)、[Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian)、および [SUSE](https://en.opensuse.org/Portal:Zypper) に関するドキュメントを参照してください。
+これらの各パッケージにはそれぞれ独自の依存関係があり、システムに存在する場合と存在しない場合があります。 この問題の一般的な解決策については、ディストリビューションのパッケージ マネージャーの [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos)、[Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian)、および [SUSE](https://en.opensuse.org/Portal:Zypper) に関するドキュメントを参照してください。
 
 また、すべての従属パッケージを手動でダウンロードし、インストール コンピューターにまとめて配置してから、各パッケージを順に手動でインストールし、[!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 パッケージを終了する方法も一般的です。
 
@@ -519,7 +519,7 @@ Linux 上の ODBC ドライバーは、次のコンポーネントで構成さ�
 |---------------|-----------------|  
 |libmsodbcsql-17.X.so.X.X または libmsodbcsql-13.X.so.X.X|ドライバーのすべての機能を含む共有オブジェクト (`so`) ダイナミック ライブラリ ファイル。 このファイルは、Driver 17 では `/opt/microsoft/msodbcsql17/lib64/`、Driver 13 では `/opt/microsoft/msodbcsql/lib64/` にインストールされます。|  
 |`msodbcsqlr17.rll` または `msodbcsqlr13.rll`|ドライバー ライブラリに付随するリソース ファイル。 このファイルは `[driver .so directory]../share/resources/en_US/` にインストールされます| 
-|msodbcsql.h|ドライバーを使用するために必要な新しい定義がすべて含まれているヘッダー ファイル。<br /><br /> **注:** msodbcsql.h と odbcss.h を同じプログラムで参照することはできません。<br /><br /> msodbcsql.h は、Driver 17 では `/opt/microsoft/msodbcsql17/include/`、Driver 13 では `/opt/microsoft/msodbcsql/include/` にインストールされます。 |
+|msodbcsql.h|ドライバーを使用するために必要な新しい定義がすべて含まれているヘッダー ファイル。<br /><br /> **注:**  msodbcsql.h と odbcss.h を同じプログラムで参照することはできません。<br /><br /> msodbcsql.h は、Driver 17 では `/opt/microsoft/msodbcsql17/include/`、Driver 13 では `/opt/microsoft/msodbcsql/include/` にインストールされます。 |
 |LICENSE.txt|使用許諾契約書の条項を含むテキスト ファイル。 このファイルは、Driver 17 では `/usr/share/doc/msodbcsql17/`、Driver 13 では `/usr/share/doc/msodbcsql/` に配置されます。|
 |RELEASE_NOTES|リリース ノートを含むテキスト ファイル。 このファイルは、Driver 17 では `/usr/share/doc/msodbcsql17/`、Driver 13 では `/usr/share/doc/msodbcsql/` に配置されます。|
 

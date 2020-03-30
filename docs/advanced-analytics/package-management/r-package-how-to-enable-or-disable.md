@@ -10,10 +10,10 @@ ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
 ms.openlocfilehash: 250be5c8a4207a43d2e4194c78377bd87880a99c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74485237"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>SQL Server のパッケージのリモート管理を有効または無効にする
@@ -31,7 +31,7 @@ SQL Server でパッケージ管理を有効または無効にするには、コ
 
 パッケージ管理機能を[無効にする](#bkmk_disable)場合も、複数の手順が必要です。まず、データベースレベルのパッケージとアクセス許可を削除し (データベースごとに 1 回)、次にサーバーからロールを削除します (インスタンスごとに 1 回)。
 
-## <a name="bkmk_enable"></a> パッケージ管理を有効にする
+## <a name="enable-package-management"></a><a name="bkmk_enable"></a> パッケージ管理を有効にする
 
 1. SQL Server で、管理者特権でコマンド プロンプトを開き、RegisterRExt.exe ユーティリティが格納されているフォルダーに移動します。 既定の場所は `<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExe.exe` です。
 
@@ -76,7 +76,7 @@ SQL Server でパッケージ管理を有効または無効にするには、コ
 
 この機能を有効にしたら、リモートの R クライアントから RevoScaleR 関数を使用して、パッケージをインストールまたはアンインストールすることができます。
 
-## <a name="bkmk_disable"></a> パッケージ管理を無効にする
+## <a name="disable-package-management"></a><a name="bkmk_disable"></a> パッケージ管理を無効にする
 
 1. 管理者特権のコマンド プロンプトから、RegisterRExt ユーティリティを再度実行して、データベース レベルでパッケージ管理を無効にします。
 

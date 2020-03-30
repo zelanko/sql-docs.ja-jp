@@ -11,10 +11,10 @@ ms.assetid: 07eb00dd-621a-46f9-a5a5-8cab4d6058b5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8fe6969d51834d0798a530b9cc9926af1b27fec2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028235"
 ---
 # <a name="configuring-how-javasqltime-values-are-sent-to-the-server"></a>java.sql.Time の値をサーバーに送信する方法の構成
@@ -40,7 +40,7 @@ ms.locfileid: "69028235"
   
  **sendTimeAsDatetime** 接続プロパティの値は、[SQLServerDataSource.setSendTimeAsDatetime](../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md) を使用してプログラムから変更できます。  
   
- [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] より前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、**time** データ型がサポートされていないため、java.sql.Time を使用するアプリケーションでは通常、java.sql.Time 値が **datetime** または **smalldatetime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型として格納されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] では、**time** データ型がサポートされていないため、java.sql.Time を使用するアプリケーションでは通常、java.sql.Time 値が **datetime** または **smalldatetime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型として格納されます。  
   
  **Smalldatetime** 値を使用するときに**datetime**データ型と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型を使用する場合は、 **sendTimeAsDatetime**接続プロパティを**true**に設定する必要があります。 java.sql.Time 値を操作するときに **time** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型を使用する場合は、**sendTimeAsDatetime** 接続プロパティを **false** に設定する必要があります。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "69028235"
   
  アプリケーションの動作が **sendTimeAsDatetime** 接続プロパティの既定値に左右されないようにするための対策としては、次のような方法があります。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **time** データ型を使用する場合は java.sql.Time を使用する。  
+-   **の**time[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型を使用する場合は java.sql.Time を使用する。  
   
 -   **datetime**、**smalldatetime**、および **datetime2**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型を操作する場合は、java.sql.Timestamp を使用する。  
   

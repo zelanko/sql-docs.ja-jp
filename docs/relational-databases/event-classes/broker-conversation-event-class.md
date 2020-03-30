@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3330b9b44f2794daf8e9cd45e9806991a6a815de
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67999771"
 ---
 # <a name="brokerconversation-event-class"></a>Broker:Conversation イベント クラス
@@ -27,7 +27,7 @@ ms.locfileid: "67999771"
   
 ## <a name="brokerconversation-event-class-data-columns"></a>Broker:Conversation イベント クラスのデータ列  
   
-|データ列|種類|[説明]|列番号|フィルターの適用|  
+|データ列|種類|説明|列番号|フィルターの適用|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |**ClientProcessID**|**int**|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターによって割り当てられた ID。 クライアントでクライアント プロセス ID が指定されると、このデータ列が作成されます。|9|はい|  
@@ -61,7 +61,7 @@ ms.locfileid: "67999771"
   
  次の表は、このイベント クラスのサブクラス値の一覧です。  
   
-|id|サブクラス|[説明]|  
+|id|サブクラス|説明|  
 |--------|--------------|-----------------|  
 |1|SEND Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **で SEND ステートメントが実行されるときに、** SEND Message [!INCLUDE[ssDE](../../includes/ssde-md.md)] イベントが生成されます。|  
 |2|END CONVERSATION|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **で WITH ERROR 句を指定しない END CONVERSATION ステートメントが実行されるときに、** END CONVERSATION [!INCLUDE[ssDE](../../includes/ssde-md.md)] イベントが生成されます。|  

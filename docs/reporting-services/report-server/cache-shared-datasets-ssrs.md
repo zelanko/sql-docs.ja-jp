@@ -9,10 +9,10 @@ ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9436fd4963c5c9af86f3ea4ede200952fb6deb59
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082552"
 ---
 # <a name="cache-shared-datasets-ssrs"></a>複数の共有データセットのキャッシュ (SSRS)
@@ -93,7 +93,7 @@ ms.locfileid: "77082552"
   
  共有データセットのキャッシュ更新計画を更新しても、既に処理中のレポートには影響がありません。 キャッシュ更新計画の更新は、共有データセットを参照する、これから起動されるレポートにのみ影響があります。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
   
  [共有データセットを管理する](../../reporting-services/report-data/manage-shared-datasets.md)  
   

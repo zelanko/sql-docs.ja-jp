@@ -10,10 +10,10 @@ author: ulvii
 ms.author: v-ulibra
 manager: v-mabarw
 ms.openlocfilehash: 913b6d95a7bb9a690f0a8cdd7d8c88b29782f876
-ms.sourcegitcommit: 577e7467821895f530ec2f97a33a965fca808579
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79058576"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server の Linux および macOS インストール チュートリアル
@@ -123,7 +123,7 @@ sudo apt-get update
 sudo apt-get install nginx
 sudo systemctl status nginx
 ```
-nginx を構成するには、`/etc/nginx/sites-available/default` ファイルを編集する必要があります。 `# Add index.php to the list if you are using PHP` というセクションの下にある一覧に `index.php` を追加します。
+nginx を構成するには、`/etc/nginx/sites-available/default` ファイルを編集する必要があります。 `index.php` というセクションの下にある一覧に `# Add index.php to the list if you are using PHP` を追加します。
 ```
 # Add index.php to the list if you are using PHP
 index index.html index.htm index.nginx-debian.html index.php;
@@ -230,7 +230,7 @@ sudo su
 sed -i 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/g' /etc/locale.gen
 locale-gen
 ```
-`$PATH` への `/usr/sbin` の追加が必要になる場合があります。これは `locale-gen` 実行可能ファイルがその場所に配置されるためです。
+`/usr/sbin` への `$PATH` の追加が必要になる場合があります。これは `locale-gen` 実行可能ファイルがその場所に配置されるためです。
 
 ### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>手順 3. Microsoft SQL Server 用 PHP ドライバーのインストール
 ```
@@ -314,7 +314,7 @@ sudo systemctl restart apache2
 > PHP の既定のバージョンは 7.3 です。 Alpine 3.11 の他のリポジトリから別のバージョンの PHP を入手することはできません。 代わりに、ソースから PHP をコンパイルできます。
 
 ### <a name="step-1-install-php"></a>手順 1. PHP のインストール
-Alpine 用の PHP パッケージは、`edge/community` リポジトリにあります。 次の行の `<mirror>` を Alpine リポジトリ ミラーの URL に置き換えて、`/etc/apt/repositories` に追加します。
+Alpine 用の PHP パッケージは、`edge/community` リポジトリにあります。 次の行の `/etc/apt/repositories` を Alpine リポジトリ ミラーの URL に置き換えて、`<mirror>` に追加します。
 ```
 http://<mirror>/alpine/edge/community
 ```
@@ -406,7 +406,7 @@ sudo apachectl restart
 
 ## <a name="testing-your-installation"></a>インストールのテスト
 
-このサンプル スクリプトをテストするには、システムのドキュメント ルートに testsql.php というファイルを作成します。 これは、Ubuntu、Debian、および Redhat では `/var/www/html/`、SUSE では `/srv/www/htdocs`、Alpine では `/var/www/localhost/htdocs`、macOS では `/usr/local/var/www` です。 次のスクリプトをそれにコピーし、該当する場合にサーバー、データベース、ユーザー名、およびパスワードを置き換えます。 Alpine 3.11 では、`$connectionOptions` 配列に **CharacterSet** を 'UTF-8' として指定することも必要になる場合があります。
+このサンプル スクリプトをテストするには、システムのドキュメント ルートに testsql.php というファイルを作成します。 これは、Ubuntu、Debian、および Redhat では `/var/www/html/`、SUSE では `/srv/www/htdocs`、Alpine では `/var/www/localhost/htdocs`、macOS では `/usr/local/var/www` です。 次のスクリプトをそれにコピーし、該当する場合にサーバー、データベース、ユーザー名、およびパスワードを置き換えます。 Alpine 3.11 では、**配列に**CharacterSet`$connectionOptions` を 'UTF-8' として指定することも必要になる場合があります。
 ```
 <?php
 $serverName = "yourServername";

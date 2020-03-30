@@ -1,5 +1,6 @@
 ---
 title: レポート サーバー名前空間管理メソッド | Microsoft Docs
+description: レポート サーバー管理 Web サービスには、レポート サーバー データベースのレポート、フォルダー、およびリソースの管理に使用できるメソッドが含まれています。
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 2aa43ce9-f51e-408a-8ce0-b40d3dd62561
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7639cd7ce7cd33f59fbc65116264a8b887879b77
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1ed5267303ad37d76b571c676b2010e8f04c8a09
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "72278296"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509809"
 ---
 # <a name="report-server-namespace-management-methods"></a>レポート サーバー名前空間管理メソッド
   レポート サーバー管理 Web サービスには、レポート サーバー データベースのレポート、フォルダー、およびリソースの管理に使用できるメソッドが含まれています。  
   
-|Method|アクション|  
+|方法|アクション|  
 |------------|------------|  
 |<xref:ReportService2010.ReportingService2010.CancelJob%2A>|ジョブの実行を取り消します。|  
 |<xref:ReportService2010.ReportingService2010.CreateFolder%2A>|レポート サーバー データベースまたは SharePoint ライブラリにフォルダーを追加します。|  

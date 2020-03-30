@@ -11,10 +11,10 @@ ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: reneye
 ms.author: v-reye
 ms.openlocfilehash: 441adf8e3623f06bfa98718ebc6c01c314c94828
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77004711"
 ---
 # <a name="using-always-encrypted-with-the-secure-enclaves"></a>セキュア エンクレーブがある Always Encrypted の使用
@@ -40,7 +40,7 @@ ms.locfileid: "77004711"
 
 **enclaveAttestationProtocol:** 構成証明サービスのプロトコルです。 現在唯一サポートされている値は **HGS** (ホスト ガーディアン サービス) です。
 
-セキュア エンクレーブを使用する Always Encrypted をユーザーが [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] から有効にするためには、**columnEncryptionSetting** を有効にし、上記の接続文字列プロパティの**両方**を正しく設定する必要があります。
+セキュア エンクレーブを使用する Always Encrypted をユーザーが  **から有効にするためには、** columnEncryptionSetting **を有効にし、上記の接続文字列プロパティの**両方[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]を正しく設定する必要があります。
 
 ## <a name="working-with-secure-enclaves"></a>セキュア エンクレーブの使用
 エンクレーブ接続プロパティが適切に設定されている場合、この機能の動作は透過的です。 セキュア エンクレーブをクエリに使用する必要があるかどうかが、ドライバーによって自動的に判断されます。 エンクレーブの計算をトリガーするクエリの例を次に示します。 データベースとテーブルの設定については [Always Encrypted エンクレーブの概要](../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md)に関するページを参照してください。
@@ -80,5 +80,5 @@ try (Connection c = DriverManager.getConnection(URL);Statement s = c.createState
 ## <a name="java-8-users"></a>Java 8 ユーザー
 この機能には、RSASSA-PSA 署名アルゴリズムが必要です。 このアルゴリズムは JDK 11 で追加されましたが、JDK 8 へのバックポートはされていません。 JDK 8 バージョンの [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] でこの機能を使用する場合は、RSASSA-PSA 署名アルゴリズムをサポートする独自のプロバイダーを読み込むか、BouncyCastleProvider のオプションの依存関係を含める必要があります。 今後、JDK 8 に署名アルゴリズムがバックポートされるか、JDK 8 のサポート ライフサイクルが終了した場合は、依存関係は削除されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 [JDBC ドライバーでの Always Encrypted の使用](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)  

@@ -13,10 +13,10 @@ ms.assetid: 488ff55e-173f-43f6-9bdb-67b35e7cebfe
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 01336bc87411fec167a3f78dfd3bf397a93b6d2c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67947797"
 ---
 # <a name="sql-server-xtp-databases"></a>SQL Server XTP Databases
@@ -29,7 +29,7 @@ ms.locfileid: "67947797"
 
 次の表では、 **SQL Server XTP Databases** カウンターについて説明します。
 
-|カウンター|[説明]| 
+|カウンター|説明| 
 |-------------|-----------------|  
 |**Avg Transaction Segment Large Data Size**|トランザクション セグメントの大きいデータ ペイロードの平均サイズ。 これは非常に低レベルのカウンターであり、お客様による使用は想定されていません。|
 |**Avg Transaction Segment Size**|トランザクション セグメントのペイロードの平均サイズ。 この値がゼロになると、バックエンド アロケーターからより多くのページが割り当てられます。 これは非常に低レベルのカウンターであり、お客様による使用は想定されていません。|

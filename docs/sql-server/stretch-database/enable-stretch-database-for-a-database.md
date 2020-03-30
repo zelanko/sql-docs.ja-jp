@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: db08d84dd1619d8c9e2e4d8e796abdd0c9d202fc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73844590"
 ---
 # <a name="enable-stretch-database-for-a-database"></a>Enable Stretch Database for a database
@@ -41,7 +41,7 @@ ms.locfileid: "73844590"
   
 -   新しい Azure サーバーを作成する、または既存の Azure サーバーを選択するために必要な接続およびログイン情報を入手します。  
   
-##  <a name="EnableTSQLServer"></a> 前提条件: サーバーで Stretch Database を有効にする  
+##  <a name="prerequisite-enable-stretch-database-on-the-server"></a><a name="EnableTSQLServer"></a> 前提条件: サーバーで Stretch Database を有効にする  
  データベースまたはテーブルで Stretch Database を有効にする前に、ローカル サーバーで有効にする必要があります。 この操作には、sysadmin または serveradmin のアクセス許可が必要です。  
   
 -   必要な管理アクセス許可がある場合、 **データベースのストレッチの有効化** ウィザードは Stretch 用にサーバーを構成します。  
@@ -60,10 +60,10 @@ GO
   
  詳細については、「[remote data archive サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-remote-data-archive-server-configuration-option.md)」と「[sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)」をご覧ください。  
   
-##  <a name="Wizard"></a> ウィザードを使用してデータベースで Stretch Database を有効にする  
+##  <a name="use-the-wizard-to-enable-stretch-database-on-a-database"></a><a name="Wizard"></a> ウィザードを使用してデータベースで Stretch Database を有効にする  
  入力する必要がある情報や選択など、データベースのストレッチの有効化ウィザードの詳細については、「 [Get started by running the Enable Database for Stretch Wizard](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md)」 (データベースのストレッチの有効化ウィザードの実行から開始する) をご覧ください。  
   
-##  <a name="EnableTSQLDatabase"></a> Transact-SQL を使用してデータベースで Stretch Database を有効にする  
+##  <a name="use-transact-sql-to-enable-stretch-database-on-a-database"></a><a name="EnableTSQLDatabase"></a> Transact-SQL を使用してデータベースで Stretch Database を有効にする  
  個別のテーブルで Stretch Database を有効にする前に、データベースで有効にする必要があります。  
   
  データベースまたはテーブルで Stretch Database を有効にするには、db_owner アクセス許可が必要です。 データベースで Stretch Database を有効にするには、CONTROL DATABASE アクセス許可も必要です。  

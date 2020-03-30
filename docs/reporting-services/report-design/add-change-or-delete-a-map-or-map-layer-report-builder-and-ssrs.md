@@ -26,10 +26,10 @@ ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: acd4bd2641296301449138322e0b4d4e15f7ffb4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080651"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>マップまたはマップ レイヤーの追加、変更、または削除 (レポート ビルダーおよび SSRS)
@@ -59,23 +59,23 @@ ms.locfileid: "77080651"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="AddLayer"></a> マップ レイヤー ウィザードを使用してレイヤーを追加するには  
+##  <a name="to-add-a-layer-from-the-map-layer-wizard"></a><a name="AddLayer"></a> マップ レイヤー ウィザードを使用してレイヤーを追加するには  
   
 -   リボンで **[挿入]** メニューの **[マップ]** をクリックしてから、 **[マップ] Wizard.** をクリックします。 このウィザードを使用すると、既存のマップにレイヤーを追加できます。 マップ ウィザードとマップ レイヤー ウィザードに含まれるページはほとんど同じです。  
   
      詳細については、「 [マップ ウィザードおよびマップ レイヤー ウィザードのページ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)」を参照してください。  
   
-##  <a name="ChangeLayer"></a> マップ レイヤー ウィザードを使用してレイヤーのオプションを変更するには  
+##  <a name="to-change-options-for-a-layer-by-using-the-map-layer-wizard"></a><a name="ChangeLayer"></a> マップ レイヤー ウィザードを使用してレイヤーのオプションを変更するには  
   
 -   マップ レイヤー ウィザードを実行します。 このウィザードを使用すると、マップ レイヤー ウィザードを使用して作成したレイヤーのオプションを変更できます。 マップ ペインでレイヤーを右クリックし、ツール バーの [レイヤー ウィザード] ボタンをクリックします (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"))。  
   
      詳細については、「 [マップ ウィザードおよびマップ レイヤー ウィザードのページ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)」を参照してください。  
   
-##  <a name="AddVectorLayer"></a> マップ ペインのツール バーを使用してポイント レイヤー、線レイヤー、または多角形レイヤーを追加するには  
+##  <a name="to-add-a-point-line-or-polygon-layer-from-the-map-pane-toolbar"></a><a name="AddVectorLayer"></a> マップ ペインのツール バーを使用してポイント レイヤー、線レイヤー、または多角形レイヤーを追加するには  
   
 1.  マップ ペインが表示されるまでマップをクリックします。  
   
-2.  ツール バーの **[レイヤーの追加]** をクリックし、ドロップダウン リストで、追加するレイヤーの種類( **[ポイント]** 、 **[線]** 、または **[多角形]** ) をクリックします。  
+2.  ツール バーの **[レイヤーの追加]** をクリックし、ドロップダウン リストで、追加するレイヤーの種類 ( **[ポイント]** 、 **[線]** 、または **[多角形]** ) をクリックします。  
   
     > [!NOTE]  
     >  マップ レイヤーを追加してから手動で構成することもできますが、新規レイヤーの追加にはマップ レイヤー ウィザードを使用することをお勧めします。 マップ ペインのツール バーからこのウィザードを起動するには、[レイヤー ウィザード] ボタンをクリックします (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"))。  
@@ -100,7 +100,7 @@ ms.locfileid: "77080651"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="FilterAnalyticalData"></a> レイヤーの分析データをフィルター処理するには  
+##  <a name="to-filter-analytical-data-for-the-layer"></a><a name="FilterAnalyticalData"></a> レイヤーの分析データをフィルター処理するには  
   
 1.  マップ ペインが表示されるまでマップをクリックします。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "77080651"
   
 4.  マップ表示で使用される分析データを制限するフィルター式を定義します。 詳細については、「[フィルター式の例 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)」を参照してください。  
   
-##  <a name="PointProperties"></a> ポイント レイヤーまたは多角形の中心点のポイント プロパティを制御するには  
+##  <a name="to-control-point-properties-for-a-point-layer-or-for-polygon-center-points"></a><a name="PointProperties"></a> ポイント レイヤーまたは多角形の中心点のポイント プロパティを制御するには  
   
 1.  **[マップ ポイントのプロパティ]** ダイアログ ボックスの **[全般]** を選択すると、次のマップ要素のラベル、ツールヒント、およびマーカーの種類に関するオプションを変更できます。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "77080651"
   
     -   多角形レイヤー上のすべての動的多角形または埋め込み多角形の中心点。 中心点の色ルール、サイズ ルール、およびマーカーの種類ルールは、これらのオプションをオーバーライドします。 特定の中心点のオプションをオーバーライドするには、「 [[マーカー] ([マップの埋め込みポイントのプロパティ] ダイアログ ボックス)](https://msdn.microsoft.com/library/3c5eb1c5-d40a-424f-aa7c-43b112f42dec) 」ページを使用します。  
   
-##  <a name="Embedded"></a> 空間データのソースとして埋め込みデータを指定するには  
+##  <a name="to-specify-embedded-data-as-a-source-of-spatial-data"></a><a name="Embedded"></a> 空間データのソースとして埋め込みデータを指定するには  
   
 1.  マップ ペインが表示されるまでマップをクリックします。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "77080651"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="ESRI"></a> 空間データのソースとして ESRI シェープファイルを指定するには  
+##  <a name="to-specify-an-esri-shapefile-as-a-source-of-spatial-data"></a><a name="ESRI"></a> 空間データのソースとして ESRI シェープファイルを指定するには  
   
 1.  マップ ペインが表示されるまでマップをクリックします。  
   
@@ -150,7 +150,7 @@ ms.locfileid: "77080651"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="DatasetField"></a> 空間データのソースとしてレポート データセット フィールドを指定するには  
+##  <a name="to-specify-a-report-dataset-field-as-a-source-of-spatial-data"></a><a name="DatasetField"></a> 空間データのソースとしてレポート データセット フィールドを指定するには  
   
 1.  マップ ペインが表示されるまでマップをクリックします。  
   
@@ -164,7 +164,7 @@ ms.locfileid: "77080651"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TileLayer"></a> タイル レイヤーを追加するには  
+##  <a name="to-add-a-tile-layer"></a><a name="TileLayer"></a> タイル レイヤーを追加するには  
   
 1.  マップ ペインが表示されるまでマップをクリックします。  
   
@@ -180,7 +180,7 @@ ms.locfileid: "77080651"
     > [!NOTE]  
     >  マップまたはマップ レイヤー ウィザード内で多角形レイヤー、線レイヤー、またはポイント レイヤーを追加するときに、タイル レイヤーを追加することもできます。 **[空間データとマップ ビューのオプションを選択]** ページで、 **[このマップ ビューに Bing Maps の背景を追加する]** オプションを選択します。  
   
-##  <a name="DrawingOrder"></a> レイヤーの描画順を変更するには  
+##  <a name="to-change-the-drawing-order-of-a-layer"></a><a name="DrawingOrder"></a> レイヤーの描画順を変更するには  
   
 1.  マップ ペインが表示されるまでマップをクリックします。  
   
@@ -188,7 +188,7 @@ ms.locfileid: "77080651"
   
 3.  マップ ペインのツール バーの上矢印または下矢印をクリックし、各レイヤーの描画順を変更します。  
   
-##  <a name="Transparency"></a> 多角形レイヤー、線レイヤー、またはポイント レイヤーの透明度を変更するには  
+##  <a name="to-change-the-transparency-of-a-polygon-line-or-point-layer"></a><a name="Transparency"></a> 多角形レイヤー、線レイヤー、またはポイント レイヤーの透明度を変更するには  
   
 1.  マップ ペインが表示されるまでマップをクリックします。  
   
@@ -200,7 +200,7 @@ ms.locfileid: "77080651"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TileTransparency"></a> タイル レイヤーの透明度を変更するには  
+##  <a name="to-change-the-transparency-of-a-tile-layer"></a><a name="TileTransparency"></a> タイル レイヤーの透明度を変更するには  
   
 1.  マップ ペインが表示されるまでマップをクリックします。  
   
@@ -212,7 +212,7 @@ ms.locfileid: "77080651"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="Secure"></a> タイル レイヤーにセキュリティで保護された接続を指定するには  
+##  <a name="to-specify-a-secure-connection-for-a-tile-layer"></a><a name="Secure"></a> タイル レイヤーにセキュリティで保護された接続を指定するには  
   
 1.  マップ ペインが表示されるまでマップをクリックします。  
   
@@ -222,7 +222,7 @@ ms.locfileid: "77080651"
   
  Bing Maps Web サービスの接続は、HTTP SSL (Secure Sockets Layer) サービスを使用してこのレイヤーの Bing マップ タイルを取得します。  
   
-##  <a name="Language"></a> タイル ラベルの言語を指定するには  
+##  <a name="to-specify-the-language-for-tile-labels"></a><a name="Language"></a> タイル ラベルの言語を指定するには  
   
 1.  既定では、ラベルを表示するタイル スタイルには、レポート ビルダー用に既定ロケールとして指定されている言語が使用されます。 次の方法でタイル ラベルの言語設定をカスタマイズできます。  
   
@@ -232,7 +232,7 @@ ms.locfileid: "77080651"
   
      タイル ラベルの言語設定の優先順位は、レポート プロパティ Language、レポート ビルダーの既定ロケール、マップ プロパティ TileLanguage の順です。  
   
-##  <a name="ConditionalHide"></a> ビューポートのズーム レベルに基づいてレイヤーを条件付きで非表示にするには  
+##  <a name="to-conditionally-hide-a-layer-based-on-viewport-zoom-level"></a><a name="ConditionalHide"></a> ビューポートのズーム レベルに基づいてレイヤーを条件付きで非表示にするには  
   
 1.  **[表示]** オプションを設定すると、マップ レイヤーの表示を制御できます。  
   

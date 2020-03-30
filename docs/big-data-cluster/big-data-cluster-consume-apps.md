@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 305080d5c3b0a1c517d757c1f6f2bd07fefb216c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75721407"
 ---
 # <a name="consume-an-app-deployed-on-big-data-clusters-2019-using-a-restful-web-service"></a>RESTful Web サービスを使用して [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]に展開されたアプリを使用する
@@ -115,7 +115,7 @@ azdata app describe --name add-app --version v1
 ## <a name="execute-the-app-using-the-restful-web-service"></a>RESTful Web サービスを使用してアプリを実行する
 
 > [!NOTE]
-> 必要に応じて、ブラウザーで `azdata app describe --name [appname] --version [version]` を実行したときに返された `swagger` の URL を開くことができます。これは、`https://[IP]:[PORT]/app/[appname]/[version]/swagger.json` のようになります。 `azdata login` に使用したものと同じ資格情報を使用してログインする必要があります。 `swagger.json` の内容を [Swagger エディター](https://editor.swagger.io)に貼り付けることができます。 Web サービスで `run` メソッドが公開されていることがわかります。 また、上部に表示されているベース URL にも注意してください。
+> 必要に応じて、ブラウザーで `swagger` を実行したときに返された `azdata app describe --name [appname] --version [version]` の URL を開くことができます。これは、`https://[IP]:[PORT]/app/[appname]/[version]/swagger.json` のようになります。 `azdata login` に使用したものと同じ資格情報を使用してログインする必要があります。 `swagger.json` の内容を [Swagger エディター](https://editor.swagger.io)に貼り付けることができます。 Web サービスで `run` メソッドが公開されていることがわかります。 また、上部に表示されているベース URL にも注意してください。
 
 任意のツールを使用して `run` メソッド (`https://[IP]:30778/api/app/[appname]/[version]/run`) を呼び出し、json として POST 要求の本文でパラメーターを渡すことができます。 この例では、[Postman](https://www.getpostman.com/) を使用します。 呼び出しを行う前に、`Authorization` を `Bearer Token` に設定し、前の手順で取得したトークンを貼り付ける必要があります。 これにより、要求にヘッダーが設定されます。 次のスクリーンショットを見てください。
 

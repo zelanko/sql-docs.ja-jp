@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d77321058cbe0a45bfa9ab168cf92ed9b1c3e8ca
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67897601"
 ---
 # <a name="audit-fulltext-event-class"></a>Audit Fulltext イベント クラス
@@ -23,7 +23,7 @@ ms.locfileid: "67897601"
   
 ## <a name="audit-fulltext-event-class-data-columns"></a>Audit Fulltext イベント クラスのデータ列  
   
-|データ列名|データ型|[説明]|列 ID|フィルターの適用|  
+|データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**Error**|**int**|(このイベントによってエラーが報告された場合) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー番号。|31|はい|  
 |**EventSequence**|**int**|要求内の特定のイベントのシーケンス。|51|いいえ|  

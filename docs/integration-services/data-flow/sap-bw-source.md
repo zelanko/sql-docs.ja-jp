@@ -11,10 +11,10 @@ ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6f510f17f6a03320e8a20bf8a39e0452bfbeb718
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298066"
 ---
 # <a name="sap-bw-source"></a>SAP BW 転送元
@@ -40,7 +40,7 @@ ms.locfileid: "71298066"
   
 -   [SAP BW 変換元を構成する](#bkmk_Configure_Source)  
   
-##  <a name="bkmk_Prepare_Objects"></a> 変換元に必要な SAP Netweaver BW オブジェクトの準備  
+##  <a name="preparing-the-sap-netweaver-bw-objects-that-the-source-requires"></a><a name="bkmk_Prepare_Objects"></a> 変換元に必要な SAP Netweaver BW オブジェクトの準備  
  SAP BW 変換元を使用する前に、特定のオブジェクトを SAP Netweaver BW システムに含める必要があります。 これらのオブジェクトがまだ存在しない場合は、これらの手順に従って SAP Netweaver BW システムで作成および構成する必要があります。  
   
 > [!NOTE]  
@@ -84,12 +84,12 @@ ms.locfileid: "71298066"
   
      SAP BW 変換元は、データ転送プロセスをアクティブにするプロセス チェーンを呼び出すことができます。  
   
-##  <a name="bkmk_Connect_Database"></a> SAP Netweaver BW システムへの接続  
+##  <a name="connecting-to-the-sap-netweaver-bw-system"></a><a name="bkmk_Connect_Database"></a> SAP Netweaver BW システムへの接続  
  SAP Netweaver BW Version 7 システムに接続するため、SAP BW 変換元は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW パッケージの一部である SAP BW 接続マネージャーを使用します。 SAP BW 接続マネージャーは、SAP BW 変換元が使用できる唯一の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 接続マネージャーです。  
   
  SAP BW 接続マネージャーの詳細については、「 [SAP BW Connection Manager](../../integration-services/connection-manager/sap-bw-connection-manager.md)」を参照してください。  
   
-##  <a name="bkmk_Configure_Source"></a> SAP BW 変換元の構成  
+##  <a name="configuring-the-sap-bw-source"></a><a name="bkmk_Configure_Source"></a> SAP BW 変換元の構成  
  SAP BW 変換元は、次の方法で構成できます。  
   
 -   データを抽出するためのオープン ハブ サービス (OHS) 転送先を探して選択します。  
@@ -114,7 +114,7 @@ ms.locfileid: "71298066"
   
 -   選択したオプションを使用して、抽出するデータをプレビューします。  
   
- 変換元が呼び出す RFC 関数のログを有効にすることもできます (このログは、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージで有効にできる、省略可能なログとは異なります)。変換元が使用する SAP BW 接続マネージャーを構成する際に、RFC 関数呼び出しのログ記録を有効にします。 SAP BW 接続マネージャーを構成する方法の詳細については、「 [SAP BW Connection Manager](../../integration-services/connection-manager/sap-bw-connection-manager.md)」を参照してください。  
+ 変換元が呼び出す RFC 関数のログを有効にすることもできます (このログは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージで有効にできる、省略可能なログとは異なります)。変換元が使用する SAP BW 接続マネージャーを構成する際に、RFC 関数呼び出しのログ記録を有効にします。 SAP BW 接続マネージャーを構成する方法の詳細については、「 [SAP BW Connection Manager](../../integration-services/connection-manager/sap-bw-connection-manager.md)」を参照してください。  
   
  変換元を構成するために必要な値がわからない場合は、SAP 管理者に確認してください。  
   

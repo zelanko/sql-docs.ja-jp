@@ -20,10 +20,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 4080e8147c4d2a05916f23051f61a9dbe3697b1b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67989018"
 ---
 # <a name="performing-asynchronous-operations"></a>非同期操作の実行
@@ -64,7 +64,7 @@ ms.locfileid: "67989018"
   
  その結果、**QueryInterface** を使用して複数の結果のインターフェイスをクエリすることで、**IDBAsynchStatus** および **ISSAsynchStatus** インターフェイスを取得できるようになります。  
   
- コマンドの実行が完了したら、**IMultipleResults** を通常どおりに使用できます。ただし、同期の場合は 1 つの例外があります。DB_S_ASYNCHRONOUS が返される場合があります。この場合、**IDBAsynchStatus** または **ISSAsynchStatus** を使用して、操作がいつ完了したかを判断できます。  
+ コマンドの実行が完了すると、**IMultipleResults** を通常どおり使用できます。ただし、非同期処理の場合は 1 つだけ例外があり、DB_S_ASYNCHRONOUS が返される可能性があります。この場合、**IDBAsynchStatus** または **ISSAsynchStatus** を使用して、操作が完了しているかどうかを確認できます。  
   
 ## <a name="examples"></a>例  
  次の例では、アプリケーションが非ブロッキング メソッドを呼び出し、いくつか他の処理を実行し、制御を戻して結果を処理します。 **ISSAsynchStatus::WaitForAsynchCompletion** は、非同期実行操作が完了するか、*dwMilisecTimeOut* により指定された時間が経過するまで、内部イベント オブジェクト上で待機します。  

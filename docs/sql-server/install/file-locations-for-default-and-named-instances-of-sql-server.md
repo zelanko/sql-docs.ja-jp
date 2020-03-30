@@ -10,10 +10,10 @@ ms.assetid: 463c570e-9f75-4653-b3b8-4d61753b0013
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: da7f187cc388e08f4d1f0307ba6fae78c58e6489
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75253480"
 ---
 # <a name="file-locations-for-default-and-named-instances-of-sql-server"></a>SQL Server の既定のインスタンスおよび名前付きインスタンスのファイルの場所
@@ -28,7 +28,7 @@ ms.locfileid: "75253480"
 > [!IMPORTANT]  
 >  リムーバブル ディスク ドライブ、圧縮を使用するファイル システム、システム ファイルが存在するディレクトリ、およびフェールオーバー クラスター インスタンス上の共有ドライブには、プログラム ファイルとデータ ファイルをインストールすることができません。  
 >  
->  SQL Server のフォルダーおよびファイルの種類を除外するように、ウイルス対策アプリケーションやスパイウェア対策アプリケーションなどのスキャン ソフトウェアを構成することが必要な場合があります。 詳細については、「[SQL Server を実行しているコンピューター上で実行するウイルス対策ソフトウェア](https://support.microsoft.com/kb/309422)」のサポート記事を参照してください。
+>  SQL Server のフォルダーおよびファイルの種類を除外するように、ウイルス対策アプリケーションやスパイウェア対策アプリケーションなどのスキャン ソフトウェアを構成することが必要な場合があります。 詳細については、[SQL Server を実行するコンピューターでのウイルス対策ソフトウェア](https://support.microsoft.com/kb/309422)に関するサポート記事を参照してください。
 > 
 >  システム データベース (master、model、MSDB、および tempdb) と [!INCLUDE[ssDE](../../includes/ssde-md.md)] のユーザー データベースは、ストレージ オプションとしてサーバー メッセージ ブロック (SMB) ファイル サーバーを指定してインストールできます。 これは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スタンドアロン インストールと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インストール (FCI) の両方に当てはまります。 詳細については、「 [SQL Server をストレージ オプションとして SMB ファイル共有にインストールする](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md)」を参照してください。  
 >   
@@ -58,11 +58,11 @@ ms.locfileid: "75253480"
   
  このリリースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] における既定のインスタンス ID の例を次に示します。  
   
--   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の既定のインスタンスの場合: MSSQL\{nn}.MSSQLSERVER。  
+-   \{ の既定のインスタンスの場合: MSSQL[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]nn}.MSSQLSERVER。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services の既定のインスタンスの場合: MSAS\{nn}.MSSQLSERVER。  
+-   \{ Analysis Services の既定のインスタンスの場合: MSAS[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nn}.MSSQLSERVER。  
   
--   "MyInstance" という名前の [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インスタンスの場合: MSSQL\{nn}.MyInstance。  
+-   "MyInstance" という名前の \{ インスタンスの場合: MSSQL[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]nn}.MyInstance。  
   
 
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssDE](../../includes/ssde-md.md)] を含み、名前が "MyInstance" で、インストール先が既定のディレクトリである [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の名前付きインスタンスの場合、ディレクトリ構造は次のようになります。  

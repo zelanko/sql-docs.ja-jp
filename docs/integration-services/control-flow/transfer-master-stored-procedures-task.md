@@ -17,10 +17,10 @@ ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: cee2dfed374c3f479e32b8d81602eff924287356
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71293847"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>Master ストアド プロシージャ転送タスク
@@ -90,7 +90,7 @@ ms.locfileid: "71293847"
 >  このタスクは、コピー元のサーバーの **master** データベースからコピー先のサーバーの **master** データベースに、 **dbo** が所有しているユーザー定義のストアド プロシージャのみを転送します。 コピー先のサーバーでストアド プロシージャを作成するには、そのサーバーの **master** データベースの CREATE PROCEDURE 権限を取得するか、そのサーバーの **sysadmin** 固定サーバー ロールのメンバーである必要があります。  
   
 ### <a name="options"></a>オプション  
- **名前**  
+ **Name**  
  Master ストアド プロシージャ転送タスクの一意な名前を入力します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
 > [!NOTE]  
@@ -117,7 +117,7 @@ ms.locfileid: "71293847"
   
  このプロパティには、次の表に示すオプションがあります。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**[FailTask]**|ストアド プロシージャがコピー先のサーバーの **master** データベースに既に存在する名前と同じ名前を持つ場合、タスクは失敗します。|  
 |**Overwrite**|コピー先のサーバーの **master** データベースにある同じ名前のストアド プロシージャを上書きします。|  
@@ -126,7 +126,7 @@ ms.locfileid: "71293847"
  **[TransferAllStoredProcedures]**  
  コピー元のサーバーの **master** データベースのすべてのユーザー定義ストアド プロシージャをコピー先のサーバーにコピーするかどうかを選択します。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**True** にします|**master** データベースのユーザー定義ストアド プロシージャをすべてコピーします。|  
 |**False**|指定したストアド プロシージャのみをコピーします。|  

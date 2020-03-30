@@ -11,10 +11,10 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f133fa066ef2c486cf7bb40c5b653c99e077bc46
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69026942"
 ---
 # <a name="using-spatial-datatypes"></a>空間データ型の使用
@@ -87,14 +87,14 @@ Geography 列と **getGeography()** メソッドを使用して、対応する G
 
 ### <a name="sqlserverpreparedstatement"></a>SQLServerPreparedStatement
 
-|Method|説明|
+|方法|説明|
 |:------|:----------|
 |void setGeometry(int n, Geometry x)| 指定されたパラメーターを、所定の microsoft.sql.Geometry クラス オブジェクトに設定します。
 |void setGeography(int n, Geography x)| 指定されたパラメーターを、所定の microsoft.sql.Geography クラス オブジェクトに設定します。
 
 ### <a name="sqlserverresultset"></a>SQLServerResultSet
 
-|Method|説明|
+|方法|説明|
 |:------|:----------|
 |Geometry getGeometry(int colunIndex)| この ResultSet オブジェクトの現在の行にある指定された列の値を、Java プログラミング言語の com.microsoft.sqlserver.jdbc.Geometry オブジェクトとして返します。
 |Geometry getGeometry(String columnName)| この ResultSet オブジェクトの現在の行にある指定された列の値を、Java プログラミング言語の com.microsoft.sqlserver.jdbc.Geometry オブジェクトとして返します。
@@ -103,7 +103,7 @@ Geography 列と **getGeography()** メソッドを使用して、対応する G
 
 ### <a name="geometry"></a>ジオメトリ
 
-|Method|説明|
+|方法|説明|
 |:------|:----------|
 |Geometry STGeomFromText(String wkt, int SRID)| インスタンスに格納されている Z (標高) 値と M (メジャー) 値で補完された、Open Geospatial Consortium (OGC) の Well-Known Text (WKT) 表現からの Geometry インスタンス用のコンストラクター。
 |Geometry STGeomFromWKB(byte[] wkb)| Open Geospatial Consortium (OGC) の Well-Known Binary (WKB) 表現からの Geometry インスタンス用のコンストラクター。
@@ -128,7 +128,7 @@ Geography 列と **getGeography()** メソッドを使用して、対応する G
 
 ### <a name="geography"></a>[地理的な場所]
 
-|Method|説明|
+|方法|説明|
 |:------|:----------|
 |Geography STGeomFromText(String wkt, int SRID)| インスタンスに格納されている Z (標高) 値と M (メジャー) 値で補完された、Open Geospatial Consortium (OGC) の Well-Known Text (WKT) 表現からの Geography インスタンス用のコンストラクター。
 |Geography STGeomFromWKB(byte[] wkb)| Open Geospatial Consortium (OGC) の Well-Known Binary (WKB) 表現からの Geography インスタンス用のコンストラクター。

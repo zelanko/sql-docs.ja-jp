@@ -13,10 +13,10 @@ ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8ae42ea326af05bd715b9380b794384d6690fdb7
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79198444"
 ---
 # <a name="use-the-winforms-reportviewer-control"></a>WinForms ReportViewer コントロールの使用
@@ -40,7 +40,7 @@ ms.locfileid: "79198444"
   
  コントロールがフォームに追加されると、 **[ReportViewer タスク]** スマート タグが表示され、レポートの選択を求めるメッセージが表示されます。  
   
- 表示するレポートがレポート サーバーに配置されている場合は、 **[レポートの選択]** ドロップダウン リストから **[\<サーバー レポート>]** を選択します。 **[\<サーバー レポート>]** オプションを選択すると、 **[レポート サーバー URL]** および **[レポートのパス]** という 2 つの追加プロパティが表示されます。 **[レポート サーバー URL]** はレポート サーバーのアドレスで、 **[レポートのパス]** は表示するレポートへの完全なパスです。  
+ 表示するレポートがレポート サーバーに配置されている場合は、 **[レポートの選択]\< ドロップダウン リストから** [**サーバー レポート>]** を選択します。 **[\<サーバー レポート>]** オプションを選択すると、 **[レポート サーバー URL]** および **[レポートのパス]** という 2 つの追加プロパティが表示されます。 **[レポート サーバー URL]** はレポート サーバーのアドレスで、 **[レポートのパス]** は表示するレポートへの完全なパスです。  
   
  ![サーバー レポートの選択](../../reporting-services/application-integration/media/windowsapp-serverreportsettings.png "サーバー レポートの選択")  
   

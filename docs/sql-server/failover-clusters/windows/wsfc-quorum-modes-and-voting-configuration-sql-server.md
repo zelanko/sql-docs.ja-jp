@@ -15,10 +15,10 @@ ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 448d3679530c689befa59e2b8a70d409d93f6dd4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74822176"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>WSFC クォーラム モードと投票の構成 (SQL Server)
@@ -26,7 +26,7 @@ ms.locfileid: "74822176"
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] と Always On フェールオーバー クラスター インスタンス (FCI) のどちらも、Windows Server フェールオーバー クラスタリング (WSFC) をプラットフォーム テクノロジとして使用します。  WSFC は、クォーラム ベースのアプローチを使用してクラスターの全体的な正常性を監視し、ノード レベルのフォールト トレランスを最大限に高めます。 WSFC クォーラム モードおよびノード投票構成の基本について理解することは、Always On 高可用性およびディザスター リカバリー ソリューションの設計、運用、トラブルシューティングのために非常に重要です。  
   
   
-##  <a name="ClusterHealthDetectionbyQuorum"></a> クォーラムによるクラスター状態検出  
+##  <a name="cluster-health-detection-by-quorum"></a><a name="ClusterHealthDetectionbyQuorum"></a> クォーラムによるクラスター状態検出  
  WSFC クラスター内の各ノードは、定期的なハートビート通信に参加し、ノードの正常性状態を他のノードと共有します。 応答しないノードは、エラー状態であると見なされます。  
   
  *クォーラム* ノード セットは、WSFC クラスター内の大多数の投票ノードおよび監視サーバーです。 WSFC クラスターの全体的な正常性と状態は、定期的な *クォーラムの投票*によって決定されます。  クォーラムの存在は、クラスターが正常であり、ノード レベルのフォールト トレランスを提供できることを表します。  
@@ -36,9 +36,9 @@ ms.locfileid: "74822176"
 > [!IMPORTANT]  
 >  クォーラム障害のために WSFC クラスターがオフラインに設定されると、オンラインに戻すために手動介入が必要です。  
 >   
->  詳細については、次を参照してください。[WSFC の強制クォーラムによる災害復旧 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
+>  詳細については、「 [WSFC の強制クォーラムによる災害復旧 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)によって決定されます。  
   
-##  <a name="QuorumModes"></a> クォーラム モード  
+##  <a name="quorum-modes"></a><a name="QuorumModes"></a> クォーラム モード  
  *クォーラム モード* は、WSFC クラスター レベルで構成され、クォーラム投票の方法を指定します。  フェールオーバー クラスター マネージャー ユーティリティは、クラスター内のノード数に基づいて、クォーラム モードを推奨します。  
   
  投票クォーラムの構成を決定するために、次のクォーラム モードを使用できます。  
@@ -56,7 +56,7 @@ ms.locfileid: "74822176"
 > [!TIP]  
 >  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]の非対称的なストレージ構成を使用する際には、通常、投票ノード数が奇数の場合はノード マジョリティ クォーラム モード、投票ノード数が偶数の場合はノードおよびファイル共有マジョリティ クォーラム モードを使用してください。  
   
-##  <a name="VotingandNonVotingNodes"></a> 投票と非投票ノード  
+##  <a name="voting-and-non-voting-nodes"></a><a name="VotingandNonVotingNodes"></a> 投票と非投票ノード  
  既定では、WSFC クラスター内の各ノードがクラスター クォーラムのメンバーとして含まれます。各ノードはクラスターの全体的な正常性の決定において 1 つの投票を持ちます。また、各ノードはクォーラムの構築を試行し続けます。  クォーラムに関するここまでの説明では、クラスター状態について投票する WSFC クラスター ノードのセットを *投票ノード*として注意深く限定してきました。  
   
  WSFC クラスター内のノードは、クラスターが全体として正常であるまたは正常でないと明確に決定することはできません。  特定の時点で、各ノードからは、他のノードの一部はオフラインに見えるか、フェールオーバー中であるか、またはネットワーク通信のエラーにより応答不能に見えます。  クォーラム投票の主な機能は、WSFC クラスターの各ノードの外観の状態が、本当にそれらのノードの実際の状態であるかどうかを判断することです。  
@@ -75,9 +75,9 @@ ms.locfileid: "74822176"
 > [!IMPORTANT]  
 >  NodeWeight 設定を使用するには、次の修正プログラムが WSFC クラスターのすべてのサーバーに適用されている必要があります。  
 >   
->  [KB2494036](https://support.microsoft.com/kb/2494036):この修正プログラムを使用すると、[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] および [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] でクォーラムの投票のないクラスター ノードを構成することができます。  
+>  [KB2494036](https://support.microsoft.com/kb/2494036): この修正プログラムを使用すると、クォーラムの投票のないクラスター ノードを [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] および [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
   
-##  <a name="RecommendedAdjustmentstoQuorumVoting"></a> クォーラム投票に推奨される調整  
+##  <a name="recommended-adjustments-to-quorum-voting"></a><a name="RecommendedAdjustmentstoQuorumVoting"></a> クォーラム投票に推奨される調整  
  特定の WSFC ノードの投票を有効または無効にする場合は、次のガイドラインに従ってください。  
   
 -   **既定では、投票は行いません。** 各ノードは明白な正当性がなければ投票しないものとします。  
@@ -104,21 +104,21 @@ ms.locfileid: "74822176"
 > 
 >  詳細については、  [sys.dm_hadr_cluster](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md), [sys.dm_hadr_cluster_members](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md), [sys.dm_os_cluster_nodes](../../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md), [sys.dm_hadr_cluster_networks](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-networks-transact-sql.md)を参照してください。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [クラスター クォーラムの NodeWeight 設定を表示](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  
   
 -   [クラスター クォーラムの NodeWeight の設定の構成](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
   
-##  <a name="RelatedContent"></a> 関連コンテンツ  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 関連コンテンツ  
   
 -   [高可用性と災害復旧のための Microsoft SQL Server AlwaysOn ソリューション ガイド](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [Always On 可用性グループ ウィザードでのクォーラムの投票の構成のチェック](https://blogs.msdn.microsoft.com/sqlalwayson/2012/03/13/quorum-vote-configuration-check-in-alwayson-availability-group-wizards-andy-jing/)  
   
--   [Windows Server テクノロジ:フェールオーバー クラスター](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
+-   [Windows Server テクノロジ: フェールオーバー クラスター](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
   
--   [フェールオーバー クラスターのステップ バイ ステップ ガイド:フェールオーバー クラスターのクォーラムの構成](https://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
+-   [フェールオーバー クラスターのステップ バイ ステップ ガイド: フェールオーバー クラスターのクォーラムの構成](https://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
   
 ## <a name="see-also"></a>参照  
  [WSFC の強制クォーラムによる災害復旧 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   

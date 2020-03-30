@@ -23,10 +23,10 @@ ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: a4a35081f52ddc6f6e75c4bfa8ff56e1020cb0c6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75305786"
 ---
 # <a name="sqlservr-application"></a>sqlservr アプリケーション
@@ -67,7 +67,7 @@ sqlservr [-s instance_name] [-c] [-d master_path] [-f]
 
 **-n**: [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の名前付きインスタンスの起動を可能にします。 **-s** パラメーターを設定しない場合、既定のインスタンスが起動します。 **sqlservr.exe**を開始する前に、コマンド プロンプトで、インスタンスの適切な BINN ディレクトリに移動する必要があります。 たとえば、Instance1 がバイナリ用に \mssql$Instance1 を使用する場合、ユーザーは \mssql$Instance1\binn ディレクトリで **sqlservr.exe -s instance1**を起動する必要があります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -n **オプションで** のインスタンスを起動する場合は、 **-e** オプションも使用してください。このオプションを指定しないと、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のイベントは記録されません。
 
-**-T** *trace#* : 指定された、有効なトレース フラグ (*trace#* ) を使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスを起動します。 トレース フラグを使用してサーバーが起動すると、標準的な動作とは異なります。 詳細については、「[トレース フラグ &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)」を参照してください。
+**-T** *trace#* : 指定された、有効なトレース フラグ ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]trace# *) を使用して*  のインスタンスを起動します。 トレース フラグを使用してサーバーが起動すると、標準的な動作とは異なります。 詳細については、「[トレース フラグ &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)」を参照してください。
 
 >[!IMPORTANT]
 >トレース フラグを指定するときは、 **-T** を使用してトレース フラグ番号を渡してください。 **では小文字の t (** -t [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]) も入力できますが、 **-t** では、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のサポート エンジニアが必要とする他の内部トレース フラグが設定されます。

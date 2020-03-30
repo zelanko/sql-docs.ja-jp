@@ -16,10 +16,10 @@ ms.assetid: 6a9a1389-df8d-4cfc-928b-eccbf884a22d
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 44110ee4d46cbd0ef25544b3cf410a1c8312d460
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75257591"
 ---
 # <a name="properties-window-management-studio"></a>[プロパティ] ウィンドウ (Management Studio)
@@ -30,7 +30,7 @@ ms.locfileid: "75257591"
   
 ## <a name="options"></a>オプション  
   
-|要素|[説明]|  
+|要素|説明|  
 |-----------|---------------|  
 |**オブジェクト名です。**|現在選択している 1 つまたは複数のオブジェクトを一覧に表示します。 アクティブなエディターまたはデザイナーのオブジェクトのみが表示されます。|  
 |**項目別**|選択したオブジェクトのすべてのプロパティおよびプロパティ値を項目別に表示します。 項目を折りたたんで、表示するプロパティの数を少なくすることができます。 カテゴリの展開または折りたたみを行うと、各カテゴリ名の左側に正符号 (+) または負符号 (-) が表示されます。 項目はアルファベット順に表示されます。|  

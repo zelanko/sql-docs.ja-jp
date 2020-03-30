@@ -15,13 +15,13 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 924a48ffe75c043385043f02125c8e07cfe3fbbc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75226834"
 ---
-# <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>方法:テーブル デザイナーを使用してテーブルおよびリレーションシップを管理する
+# <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>テーブル デザイナーを使用してテーブルおよびリレーションシップを管理する方法
 
 Transact\-SQL エディターと同様に、テーブル デザイナーを使用すると、テーブル固有のプログラミング オブジェクトを含め、SQL Server データベースのテーブル構造を視覚的に作成および編集できます。  接続されているデータベースまたはプロジェクトに対して新しいテーブルを作成するときや、SQL Server オブジェクト エクスプローラーまたはソリューション エクスプローラーでテーブルを編集するためにダブルクリックしたときに、テーブル デザイナーが起動します。  
   
@@ -57,5 +57,5 @@ Transact\-SQL エディターと同様に、テーブル デザイナーを使�
     オフライン プロジェクトでデータベース エンティティを作成および編集する操作は、接続されているデータベースに対して行うタスクと同じである点に注意してください。  
   
 ## <a name="see-also"></a>参照  
-[方法:  テーブル デザイナーを使用してデータベース オブジェクトを作成する](../ssdt/how-to-create-database-objects-using-table-designer.md)  
+[テーブル デザイナーを使用してデータベース オブジェクトを作成する方法](../ssdt/how-to-create-database-objects-using-table-designer.md)  
   

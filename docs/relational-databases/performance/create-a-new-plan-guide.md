@@ -15,10 +15,10 @@ ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 5f37f0189df126054626fdd4820368911b1fa5cc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67946965"
 ---
 # <a name="create-a-new-plan-guide"></a>新しいプラン ガイドの作成
@@ -27,7 +27,7 @@ ms.locfileid: "67946965"
 
 プラン ガイドは固定クエリ プランまたはクエリ ヒントをクエリに適用します。
   
-##  <a name="Restrictions"></a> 制限事項と制約事項  
+##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
 -   sp_create_plan_guide の引数は、表示される順序で指定する必要があります。 **sp_create_plan_guide**のパラメーターに値を指定する場合、パラメーター名はすべて明示的に指定するか、すべて指定しないかのいずれかにする必要があります。 たとえば、 **@name =** を指定する場合は、 **@stmt =** 、 **@type =** なども指定する必要があります。 同様に、 **@name =** を省略してパラメーター値だけを指定する場合は、その他のパラメーター名も省略し、値だけを指定する必要があります。 引数の名前は、構文を理解しやすくするための説明目的のものです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、指定したパラメーター名と、その名前が使用されている位置にあるパラメーターの名前が一致しているかどうかは確認されません。  
   
 -   同一のクエリとバッチまたはモジュールに対し、複数の OBJECT または SQL プラン ガイドを作成できます。 ただし、有効にできるプラン ガイドは常に 1 つだけです。  
@@ -36,10 +36,10 @@ ms.locfileid: "67946965"
   
 -   有効、無効にする場合のどちらでも、そのプラン ガイドで参照されている関数、ストアド プロシージャ、または DML トリガーを削除または変更しようとすると、エラーが発生します。 プラン ガイドで参照され、トリガーが定義されているテーブルを削除しようとする場合もエラーが発生します。  
 
-##  <a name="Permissions"></a> Permissions  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  OBJECT 型のプラン ガイドを作成するには、参照先オブジェクトに対する ALTER 権限が必要です。 SQL または TEMPLATE タイプのプラン ガイドを作成するには、現在のデータベースに対する ALTER 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SSMS を使用してプラン ガイドを作成する  
+##  <a name="create-a-plan-guide-using-ssms"></a><a name="SSMSProcedure"></a> SSMS を使用してプラン ガイドを作成する  
 1.  プラス記号をクリックして、作成するプラン ガイドのあるデータベースを展開し、プラス記号をクリックして **[プログラミング]** フォルダーを展開します。  
   
 2.  **[プラン ガイド]** フォルダーを右クリックし、 **[新しいプラン ガイド...]** をクリックします。 ![select_plan_guide](../../relational-databases/performance/media/select-plan-guide.png)
@@ -70,7 +70,7 @@ ms.locfileid: "67946965"
 
 ![plan_guide](../../relational-databases/performance/media/plan-guide.png)  
 
-##  <a name="TsqlProcedure"></a> T-SQL を使用してプラン ガイドを作成する  
+##  <a name="create-a-plan-guide-using-t-sql"></a><a name="TsqlProcedure"></a> T-SQL を使用してプラン ガイドを作成する  
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  

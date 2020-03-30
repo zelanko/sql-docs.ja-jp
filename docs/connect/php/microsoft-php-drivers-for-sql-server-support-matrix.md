@@ -11,10 +11,10 @@ author: David-Engel
 ms.author: genemi
 manager: ''
 ms.openlocfilehash: c542a77c3a7cfbbe9c54786116e3e9e800a3dda0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76917808"
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>SQL Server 用 Microsoft PHP Drivers のサポート マトリックス
@@ -55,7 +55,7 @@ ms.locfileid: "76917808"
 ## <a name="sql-server-version-certified-compatibility"></a>SQL Server バージョンの認定済み互換性
  次のマトリックスは、対応するドライバー バージョンと互換性があることをテストおよび認定済みの SQL Server バージョンを示しています。 Microsoft は、以前のバージョンのドライバーとの下位互換性を維持することに努めていますが、サポートされている最新のドライバーのみが、SQL Server のリリース時に新しい SQL Server バージョンでテストおよび認定されます。
 
-|SQL Server 用 PHP ドライバー バージョン &#8594;<br />&#8595; SQL Server のバージョン|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
+|PHP for SQL Server ドライバーのバージョン &#8594;<br />&#8595; SQL Server のバージョン|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |Azure SQL Managed Instance|Y|Y|Y|Y|Y| | |
 |Azure SQL Data Warehouse|Y|Y|Y|Y|Y| | |
@@ -72,7 +72,7 @@ ms.locfileid: "76917808"
 
 次のバージョンの PHP は、Microsoft PHP ドライバーの一覧に示したバージョンでサポートされています。
 
-|SQL Server 用 PHP ドライバー バージョン &#8594;<br />&#8595; PHP バージョン|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
+|PHP for SQL Server ドライバーのバージョン &#8594;<br />&#8595; PHP バージョン|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |:---:|---|---|---|---|---|---|---|
 |7.4|7.4.0+          |                |                |                |       |        |        |
 |7.3|7.3.0+          |7.3.0+          |                |                |       |        |        |
@@ -90,7 +90,7 @@ ms.locfileid: "76917808"
 
 次のバージョンの Windows オペレーティング システムは、Microsoft PHP ドライバーの一覧に示したバージョンでサポートされています。
 
-|SQL Server 用 PHP ドライバー バージョン &#8594;<br />&#8595; オペレーティング システム|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
+|PHP for SQL Server ドライバーのバージョン &#8594;<br />&#8595; オペレーティング システム|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |Windows Server 2019                 |Y  |Y  |   |   |   |   |   |
 |Windows Server 2016                 |Y  |Y  |Y  |Y  |Y  |   |   |
@@ -108,7 +108,7 @@ ms.locfileid: "76917808"
 
 次のバージョンの Linux および Mac オペレーティング システム (64 ビットのみ) は、Microsoft PHP ドライバーの一覧に示したバージョンでサポートされています。
 
-|SQL Server 用 PHP ドライバー バージョン &#8594;<br />&#8595; オペレーティング システム|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
+|PHP for SQL Server ドライバーのバージョン &#8594;<br />&#8595; オペレーティング システム|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |--|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |Ubuntu 19.10 (64 ビット)               |Y  |   |   |   |   |   |   |
 |Ubuntu 18.10 (64 ビット)               |   |Y  |   |   |   |   |   |

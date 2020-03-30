@@ -15,10 +15,10 @@ ms.assetid: 861d4ec4-1085-412c-9a82-68869a77bd55
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 264159f4c892cc688b15293c0e4283fc46520720
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080830"
 ---
 # <a name="ssrs-encryption-keys---initialize-a-report-server"></a>SSRS の暗号化キー - レポート サーバーの初期化
@@ -26,7 +26,7 @@ ms.locfileid: "77080830"
   
  暗号化キーは、レポート サーバー サービスのプロファイル情報に一部基づいています。 レポート サーバー サービスの実行に使用されるユーザー ID を変更する場合は、それに応じてキーを更新する必要があります。 Reporting Services 構成ツールを使用して ID を変更すると、この手順が自動的に実行されます。  
   
- 何らかの理由で初期化が失敗すると、ユーザーおよびサービスからの要求に応じて、レポート サーバーから **RSReportServerNotActivated** エラーが返されます。 この場合、システムまたはサーバーの構成のトラブルシューティングが必要になります。 詳細については、「[SSRS: Reporting Services での問題とエラーのトラブルシューティング](https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx)」(Technet Wiki の https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) ) を参照してください。  
+ 何らかの理由で初期化が失敗すると、ユーザーおよびサービスからの要求に応じて、レポート サーバーから **RSReportServerNotActivated** エラーが返されます。 この場合、システムまたはサーバーの構成のトラブルシューティングが必要になります。 詳細については、TechNet Wiki ([ の「](https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx)SSRS: Troubleshoot Issues and Errors with Reporting Services https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) 」(SSRS: Reporting Services での問題とエラーのトラブルシューティング) を参照してください。  
   
 ## <a name="overview-of-the-initialization-process"></a>初期化処理の概要  
  初期化処理では、暗号化に使用する対称キーが作成され、格納されます。 対称キーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Cryptographic Services で作成された後、レポート サーバー サービスで暗号化と暗号化解除に使用されます。 対称キー自体も、非対称キーを使って暗号化されます。  

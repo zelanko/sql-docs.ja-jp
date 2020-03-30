@@ -15,10 +15,10 @@ ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f352c393f1386dae1839a76a4fd6e5a2553a54c3
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79198559"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>カスタム アプリケーション内での RSClientPrint コントロールの使用
@@ -40,7 +40,7 @@ ms.locfileid: "79198559"
     
   
 ## <a name="rsprintclient-overview"></a>RSPrintClient の概要  
- このコントロールによって表示されるカスタム印刷ダイアログ ボックスでは、印刷プレビュー、特定のページや範囲を指定するためのページ選択、ページ余白、ページの向きなど、一般的な印刷ダイアログ ボックスの機能がサポートされています。 コントロールは CAB ファイルとしてパッケージ化されています。 **[印刷]** ダイアログ ボックス内のテキストは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] がサポートするすべての言語に向けてローカライズされています。 **RSPrintClient** ActiveX コントロールでは、画像表示拡張機能 (EMF) を使用してレポートが印刷されます。 次の EMF デバイス情報が使用されます: StartPage、EndPage、MarginBottom、MarginLeft、MarginTop、MarginRight、PageHeight、および PageWidth。 画像表示に対するその他のデバイス情報の設定はサポートされません。  
+ このコントロールによって表示されるカスタム印刷ダイアログ ボックスでは、印刷プレビュー、特定のページや範囲を指定するためのページ選択、ページ余白、ページの向きなど、一般的な印刷ダイアログ ボックスの機能がサポートされています。 コントロールは CAB ファイルとしてパッケージ化されています。 **[印刷]** ダイアログ ボックス内のテキストは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] がサポートするすべての言語に向けてローカライズされています。 **RSPrintClient** ActiveX コントロールでは、画像表示拡張機能 (EMF) を使用してレポートが印刷されます。 EMF デバイス情報として StartPage、EndPage、MarginBottom、MarginLeft、MarginTop、MarginRight、PageHeight、および PageWidth が使用されます。 画像表示に対するその他のデバイス情報の設定はサポートされません。  
   
 ### <a name="language-support"></a>言語サポート  
  印刷コントロールでは、ユーザー インターフェイスのテキストがさまざまな言語で表示され、異なる測定系を使用した入力値を受け付けます。 使われる言語と測定系は、**Culture** プロパティと **UICulture** プロパティで決まります。 どちらのプロパティも LCID 値を受け付けます。 サポートされている言語から派生した言語の LCID を指定すると、最も近い言語が選択されます。 サポート対象外で、近い言語もない LCID を指定すると、英語 (U.S.) となります。  
@@ -63,7 +63,7 @@ ms.locfileid: "79198559"
   
 ### <a name="rsclientprint-properties"></a>RSClientPrint プロパティ  
   
-|プロパティ|Type|RW|Default|説明|  
+|プロパティ|種類|RW|Default|説明|  
 |--------------|----------|--------|-------------|-----------------|  
 |MarginLeft|Double|RW|レポートにより設定|左余白を取得または設定します。 開発者が設定せず、レポートにも指定がない場合の既定値は 12.2 mm です。|  
 |MarginRight|Double|RW|レポートにより設定|右余白を取得または設定します。 開発者が設定せず、レポートにも指定がない場合の既定値は 12.2 mm です。|  
@@ -71,8 +71,8 @@ ms.locfileid: "79198559"
 |MarginBottom|Double|RW|レポートにより設定|下余白を取得または設定します。 開発者が設定せず、レポートにも指定がない場合の既定値は 12.2 mm です。|  
 |PageWidth|Double|RW|レポートにより設定|ページの幅を取得または設定します。 開発者が設定せず、レポートにも定義がない場合の既定値は 215.9 mm です。|  
 |PageHeight|Double|RW|レポートにより設定|ページの高さを取得または設定します。 開発者が設定せず、レポートにも定義がない場合の既定値は 279.4 mm です。|  
-|カルチャ|Int32|RW|ブラウザーのロケール|ロケール ID (LCID) を指定します。 この値によりユーザー入力の測定単位が決まります。 たとえば、ユーザーが「**3**」と入力した場合、言語がフランス語の場合には mm、英語 (米国) の場合にはインチを単位とします。 有効な値は、次のとおりです。1028、1031、1033、1036、1040、1041、1042、2052、3082。|  
-|UICulture|String|RW|クライアントのカルチャ|ダイアログ ボックスの文字列のローカライズを指定します。 [印刷] ダイアログのテキストは、次の言語にローカライズされています。中国語 (簡体字)、中国語 (繁体字)、英語、フランス語、ドイツ語、イタリア語、日本語、韓国語、およびスペイン語。 有効な値は、次のとおりです。1028、1031、1033、1036、1040、1041、1042、2052、3082。|  
+|カルチャ|Int32|RW|ブラウザーのロケール|ロケール ID (LCID) を指定します。 この値によりユーザー入力の測定単位が決まります。 たとえば、ユーザーが「**3**」と入力した場合、言語がフランス語の場合には mm、英語 (米国) の場合にはインチを単位とします。 有効な値は、1028、1031、1033、1036、1040、1041、1042、2052、3082 です。|  
+|UICulture|String|RW|クライアントのカルチャ|ダイアログ ボックスの文字列のローカライズを指定します。 [印刷] ダイアログ内のテキストは、簡体中国語、繁体中国語、英語、フランス語、ドイツ語、イタリア語、日本語、韓国語、スペイン語にローカライズされています。 有効な値は、1028、1031、1033、1036、1040、1041、1042、2052、3082 です。|  
 |Authenticate|Boolean|RW|False|セッション外印刷の接続を開始するためにコントロールからレポート サーバーに GET コマンドを発行するかどうかを指定します。|  
   
 ### <a name="when-to-set-the-authenticate-property"></a>Authenticate プロパティを設定する状況  
@@ -100,7 +100,7 @@ ms.locfileid: "79198559"
 ### <a name="rsprintclient-support-for-the-print-method"></a>RSPrintClient による Print メソッドのサポート  
  **RSClientPrint** オブジェクトは、[印刷] ダイアログ ボックスを表示するための **Print** メソッドをサポートしています。 **Print** メソッドには、以下の引数があります。  
   
-|引数|I/O|Type|説明|  
+|引数|I/O|種類|説明|  
 |--------------|----------|----------|-----------------|  
 |ServerPath|場所|String|レポート サーバーの仮想ディレクトリを指定します (`https://adventure-works/reportserver` など)。|  
 |ReportPathParameters|場所|String|パラメーターを含む、レポート サーバー フォルダー名前空間内のレポートの完全な名前を指定します。 レポートは、URL にアクセスすることによって取得されます。 例: "/AdventureWorks Sample Reports/Employee Sales Summary&EmpID=1234"|  

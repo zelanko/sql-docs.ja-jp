@@ -17,10 +17,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: dac1ce3e62ad1a6b11212273df9cf21d6fbbce19
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242295"
 ---
 # <a name="job-categories---manage-job-categories"></a>[ジョブ カテゴリ] - [ジョブ カテゴリの管理]
@@ -32,7 +32,7 @@ ms.locfileid: "75242295"
 **[ジョブ カテゴリ]** ダイアログ ボックスを使用すると、ジョブ カテゴリを追加したり削除したりできます。 組み込みジョブ カテゴリは削除できません。  
   
 ## <a name="options"></a>オプション  
-**名前**  
+**Name**  
 ジョブ カテゴリの名前です。  
   
 **[カテゴリ内のジョブの数]**  

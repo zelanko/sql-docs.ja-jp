@@ -21,10 +21,10 @@ ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4919a5df6c7036cce13a2d0218af1727f3ec9d0b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71292177"
 ---
 # <a name="raw-file-destination"></a>RAW ファイル変換先 (Raw File destination)
@@ -59,7 +59,7 @@ ms.locfileid: "71292177"
   
  次の表では、WriteOption プロパティで使用できるオプションについて説明します。  
   
-|オプション|[説明]|  
+|オプション|説明|  
 |------------|-----------------|  
 |Append|既存のファイルにデータを追加します。 追加するデータのメタデータは、ファイル形式と一致している必要があります。|  
 |常に作成する|常に新しいファイルを作成します。|  
@@ -149,13 +149,13 @@ ms.locfileid: "71292177"
   
 -   [[列] タブのオプションの設定](#mapping)  
   
-###  <a name="open"></a> RAW ファイル変換先エディターを開く  
+###  <a name="open-the-raw-file-destination-editor"></a><a name="open"></a> RAW ファイル変換先エディターを開く  
   
 1.  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]パッケージに RAW ファイル変換先を追加します。  
   
 2.  コンポーネントを右クリックし、 **[編集]** をクリックします。  
   
-###  <a name="connection"></a> [接続マネージャー] タブのオプションの設定  
+###  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> [接続マネージャー] タブのオプションの設定  
  **アクセス モード**  
  ファイル名の指定方法を選択します。 ファイル名とパスを直接入力するには **[ファイル名]** を選択します。ファイル名を含んでいる変数を指定するには、 **[変数からのファイル名]** を選択します。  
   
@@ -170,7 +170,7 @@ ms.locfileid: "71292177"
   
  **[初期 RAW ファイルの生成]** をクリックすると、メッセージ ボックスが表示されます。 ファイルの作成を続行するには、 **[OK]** をクリックします。 **[列]** ページで別の列の一覧を選択するには、 **[キャンセル]** をクリックします。  
   
-###  <a name="mapping"></a> [列] タブのオプションの設定  
+###  <a name="set-options-on-the-columns-tab"></a><a name="mapping"></a> [列] タブのオプションの設定  
  **使用できる入力列**  
  RAW ファイルに書き込む 1 つ以上の入力列を選択します。  
   
@@ -191,13 +191,13 @@ ms.locfileid: "71292177"
   
 -   [[列] タブのオプションの設定](#mapping)  
   
-###  <a name="open"></a> RAW ファイル変換先エディターを開く  
+###  <a name="open-the-raw-file-destination-editor"></a><a name="open"></a> RAW ファイル変換先エディターを開く  
   
 1.  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]パッケージに RAW ファイル変換先を追加します。  
   
 2.  コンポーネントを右クリックし、 **[編集]** をクリックします。  
   
-###  <a name="connection"></a> [接続マネージャー] タブのオプションの設定  
+###  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> [接続マネージャー] タブのオプションの設定  
  **アクセス モード**  
  ファイル名の指定方法を選択します。 ファイル名とパスを直接入力するには **[ファイル名]** を選択します。ファイル名を含んでいる変数を指定するには、 **[変数からのファイル名]** を選択します。  
   
@@ -212,7 +212,7 @@ ms.locfileid: "71292177"
   
  このボタンをクリックすると、列の一覧が表示されます。 [キャンセル] をクリックして列を変更するか、[OK] をクリックしてファイルの作成を続行することができます。  
   
-###  <a name="mapping"></a> [列] タブのオプションの設定  
+###  <a name="set-options-on-the-columns-tab"></a><a name="mapping"></a> [列] タブのオプションの設定  
  **使用できる入力列**  
  RAW ファイルに書き込む 1 つ以上の入力列を選択します。  
   

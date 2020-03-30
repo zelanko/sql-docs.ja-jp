@@ -15,17 +15,17 @@ ms.assetid: f7b9ca05-fc4c-4b30-8e5d-172dd0f4a832
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 112db971dd632b5114c8a05f9642b740335de03f
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79198549"
 ---
 # <a name="supplying-web-service-method-arguments"></a>Web サービス メソッドの引数の指定
   レポート サーバー Web サービスのメソッドは、SOAP を使用し、HTTP 経由で特定の URL のサービスに対して要求を送信します。 サービスでは、要求を受信し、処理した後、応答を返します。 これらの要求と応答は XML ドキュメント形式です。  
   
 ## <a name="optional-parameters"></a>省略可能なパラメーター  
- 場合によっては、Web サービス メソッドに省略可能な入力パラメーターがあります。 Web サービス メソッドの入力パラメーターが省略可能である場合でも、そのパラメーターを含め、パラメーター値を **null** ([!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] の場合は **Nothing**) に設定する必要があります。 パラメーター値を **null** に設定すると、SOAP 要求でそのパラメーターの要素値は **null** に設定されます。  
+ 場合によっては、Web サービス メソッドに省略可能な入力パラメーターがあります。 Web サービス メソッドの入力パラメーターが省略可能である場合でも、そのパラメーターを含め、パラメーター値を **null** (**の場合は**Nothing[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) に設定する必要があります。 パラメーター値を **null** に設定すると、SOAP 要求でそのパラメーターの要素値は **null** に設定されます。  
   
  次の例では、<xref:ReportService2010.ReportingService2010.CreateFolder%2A> メソッドを使用して、Sales フォルダーに Product Sales という新しいフォルダーを作成します。 フォルダー プロパティに **null** 値を指定することで、フォルダーにユーザー固有のプロパティは指定されません。  
   

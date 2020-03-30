@@ -9,10 +9,10 @@ ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b33041f7debc2ad75268973867c72e073459f1de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77077780"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>データセット フィールド コレクション (レポート ビルダーおよび SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "77077780"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Fields"></a> データセット フィールドとクエリ  
+##  <a name="dataset-fields-and-queries"></a><a name="Fields"></a> データセット フィールドとクエリ  
  データセット フィールドは、データセット クエリ コマンドおよびユーザー定義の計算フィールドによって指定されます。 レポートに表示されるフィールド コレクションは、データセットの型に依存します。  
   
 -   **共有データセット :** フィールド コレクションは、共有データセットをレポートに直接追加したときや、共有データセットを含むレポート パーツを追加したときの、共有データセット定義内のクエリのフィールドの一覧です。 レポート サーバー上で共有データセット定義が変更されても、ローカル フィールド コレクションは変化しません。 ローカル フィールド コレクションを更新するには、ローカル共有データセットの一覧を更新する必要があります。  
@@ -59,7 +59,7 @@ ms.locfileid: "77077780"
 >  すべての **Field** プロパティをすべてのデータ ソースに使用できるわけではありません。 **Value** と **IsMissing** プロパティは、すべてのデータ ソースで定義されます。 その他の定義済みプロパティ (多次元データ ソースの **Key**、 **UniqueName**、 **ParentUniqueName** など) は、データ ソースがそれらのプロパティを提供している場合にのみサポートされます。 一部のデータ プロバイダーでは、カスタム プロパティがサポートされます。 詳細については、「 [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)」を参照してください。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースの場合は、「[Analysis Services Database データベースに対する拡張フィールド プロパティ&#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)」を参照してください。  
   
   
-##  <a name="Defaults"></a> フィールドの既定式について  
+##  <a name="understanding-default-expressions-for-fields"></a><a name="Defaults"></a> フィールドの既定式について  
  テキスト ボックスは、レポート本文のテキスト ボックス レポート アイテム、または Tablix データ領域のセル内のテキスト ボックスです。 フィールドをテキスト ボックスにリンクするとき、テキスト ボックスの位置によって、フィールド参照の既定式が決定されます。 レポート本文のテキスト ボックス値の式は、集計およびデータセットを指定する必要があります。 レポートに 1 つのデータセットしか存在しない場合、この既定式が作成されます。 数値を表すフィールドの場合、既定の集計関数は Sum です。 数値以外の値を表すフィールドの場合、既定の集計は First です。  
   
  Tablix データ領域では、既定のフィールド式は、フィールドを追加するテキスト ボックスの行およびグループ メンバーシップに依存します。 テーブルの詳細行のテキスト ボックスに追加した場合、フィールド Sales のフィールド式は、 `[Sales]`です。 同じフィールドをグループ ヘッダー内のテキスト ボックスに追加した場合、グループ ヘッダーには詳細値ではなくグループの集計値が表示されるので、既定の式は `(Sum[Sales])`です。 レポートの実行時に、レポート プロセッサによって各式が評価され、レポート内の結果が置き換えられます。  
@@ -67,7 +67,7 @@ ms.locfileid: "77077780"
  式の詳細については、「[式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)」を参照してください。  
   
   
-##  <a name="DataTypes"></a> フィールド データ型  
+##  <a name="field-data-types"></a><a name="DataTypes"></a> フィールド データ型  
  データセットを作成したとき、データ ソースのフィールドのデータ型がレポートで使用される正確なデータ型ではない場合があります。 データ型は、1 つまたは 2 つのマッピング レイヤーを通過することがあります。 データ処理拡張機能またはデータ プロバイダーが、データ ソースのデータ型を共通言語ランタイム (CLR) データ型にマップすることがあります。 データ処理拡張機能によって返されるデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]の共通言語ランタイム (CLR) データ型のサブセットにマップされます。  
   
  データ ソースでは、データは、データ ソースでサポートされるデータ型に格納されます。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのデータは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nvarchar **や** datetime **などのサポートされている**データ型である必要があります。 データ ソースからデータを取得するとき、データは、データ ソースの種類に関連付けられているデータ処理拡張機能またはデータ プロバイダーを通過します。 データ処理拡張機能によっては、データは、データ ソースで使用されるデータ型からデータ処理拡張機能でサポートされるデータ型に変換されることがあります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]と共にインストールされる共通言語ランタイム (CLR) バージョンでサポートされるデータ型を使用します。 データ プロバイダーは、ネイティブ データ型の結果セットの各列を [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 共通言語ランタイム (CLR) データ型にマップします。  
@@ -101,7 +101,7 @@ ms.locfileid: "77077780"
  式のデータセット フィールドへの参照を含める方法については、「[式で使用されるデータ型 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)」を参照してください。  
   
   
-##  <a name="MissingFields"></a> 実行時に存在しないフィールドの検出  
+##  <a name="detecting-missing-fields-at-run-time"></a><a name="MissingFields"></a> 実行時に存在しないフィールドの検出  
  レポートを処理したときに、データ ソースに列が存在しないために、データセットの結果セットに指定されたすべての列の値が含まれていないことがあります。 フィールド プロパティの IsMissing を使用して、フィールドの値が実行時に返されたかどうかを検出できます。 詳細については、「[データセット フィールド コレクションの参照 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)」を参照してください。  
   
   

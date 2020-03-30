@@ -1,5 +1,5 @@
 ---
-title: 手順 3:ADO.NET を使用した SQL への接続を概念実証する | Microsoft Docs
+title: 'ステップ 3: ADO.NET を使用した SQL への接続を概念実証する | Microsoft Docs'
 description: SQL Server に接続し、クエリを実行し、行を挿入するための C# コードの例を示します。
 ms.custom: ''
 ms.date: 08/15/2019
@@ -12,23 +12,23 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: e3e062aa9c0418bb76209e5e8f45c973b7a0f816
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78895974"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>手順 3:ADO.NET を使用した SQL への接続を概念実証する
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>ステップ 3: ADO.NET を使用した SQL への接続を概念実証する
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
-- 前の記事:&nbsp;&nbsp;&nbsp;[手順 2: ADO.NET 開発用の SQL データベースを作成する](step-2-create-sql-database-ado-net-development.md)  
-- 次の記事:&nbsp;&nbsp;&nbsp;[手順 4: ADO.NET を使用して SQL に弾性的に接続する](step-4-connect-resiliently-sql-ado-net.md)  
+- 前の記事:&nbsp;&nbsp;&nbsp;[ステップ 2: ADO.NET 開発用の SQL データベースを作成する](step-2-create-sql-database-ado-net-development.md)  
+- 次の記事:&nbsp;&nbsp;&nbsp;[ステップ 4: ADO.NET で SQL に弾性的に接続する](step-4-connect-resiliently-sql-ado-net.md)  
 
   
 この C# コードの例は、概念実証としてのみ検討してください。 わかりやすさのためにサンプル コードは簡略化されており、Microsoft が推奨するベスト プラクティスを表しているとは限りません。  
   
-## <a name="step-1-connect"></a>手順 1:接続する
+## <a name="step-1-connect"></a>手順 1: 接続する
   
 **SqlConnection.Open** メソッドを使用して、ご自身の SQL データベースに接続します。  
 
@@ -67,7 +67,7 @@ Press any key to finish...
 ```  
 
 
-## <a name="step-2-execute-a-query"></a>手順 2:クエリを実行する  
+## <a name="step-2-execute-a-query"></a>手順 2: クエリの実行  
   
 SqlCommand.ExecuteReader メソッドでは次の処理が実行されます。  
   
@@ -153,7 +153,7 @@ Press any key to finish...
   
   
   
-## <a name="step-3-insert-a-row"></a>手順 3:行を挿入する  
+## <a name="step-3-insert-a-row"></a>手順 3: 行を挿入する  
   
   
 この例では、次の方法を示します。  

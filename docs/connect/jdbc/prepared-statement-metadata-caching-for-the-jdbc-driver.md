@@ -11,10 +11,10 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 97224f53bb716abe3b79dd00df12d0eed4a63cec
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027837"
 ---
 # <a name="prepared-statement-metadata-caching-for-the-jdbc-driver"></a>JDBC ドライバーの準備されたステートメント メタデータ キャッシュ
@@ -43,7 +43,7 @@ ms.locfileid: "69027837"
 |void closeUnreferencedPreparedStatementHandles()|破棄された未処理の準備されたステートメントに対する準備解除要求を強制的に実行します。|
 |boolean getEnablePrepareOnFirstPreparedStatementCall()|特定の接続インスタンスの動作を返します。 false の場合、最初の実行で sp_executesql が呼び出され、ステートメントは準備されません。2 回目が実行されると、sp_prepexec が呼び出され、準備されたステートメントのハンドルが実際に設定されます。 以降の実行では、sp_execute が呼び出されます。 そのため、ステートメントの実行が 1 回のみの場合、準備されたステートメントを閉じるときに sp_unprepare を行う必要はなくなります。 このオプションの既定値は、setDefaultEnablePrepareOnFirstPreparedStatementCall() を呼び出して変更することができます。|
 |void setEnablePrepareOnFirstPreparedStatementCall(boolean value)|特定の接続インスタンスの動作を指定します。 値が false の場合、最初の実行で sp_executesql が呼び出され、ステートメントは準備されません。2 回目が実行されると、sp_prepexec が呼び出され、準備されたステートメントのハンドルが実際に設定されます。 以降の実行では、sp_execute が呼び出されます。 そのため、ステートメントの実行が 1 回のみの場合、準備されたステートメントを閉じるときに sp_unprepare を行う必要はなくなります。|
-|int getServerPreparedStatementDiscardThreshold()|特定の接続インスタンスの動作を返します。 この設定では、サーバー上の未処理のハンドルをクリーンアップする呼び出しが実行される前に 1 回の接続あたりに未処理にできる、未処理の準備されたステートメントの破棄アクション (sp_unprepare) の数を制御できます。 設定が 1 以下の場合、準備解除アクションは、準備されたステートメントの終了時に直ちに実行されます。 {@literal >} 1 に設定すると、これらの呼び出しはバッチ処理され、sp_unprepare が頻繁に呼び出されることによるオーバーヘッドを回避します。 このオプションの既定値は、getDefaultServerPreparedStatementDiscardThreshold() を呼び出して変更することができます。|
+|int getServerPreparedStatementDiscardThreshold()|特定の接続インスタンスの動作を返します。 この設定では、サーバー上の未処理のハンドルをクリーンアップする呼び出しが実行される前に 1 回の接続あたりに未処理にできる、未処理の準備されたステートメントの破棄アクション (sp_unprepare) の数を制御できます。 設定が 1 以下の場合、準備解除アクションは、準備されたステートメントの終了時にただちに実行されます。 {@literal >} 1 に設定すると、これらの呼び出しはバッチ処理され、sp_unprepare が頻繁に呼び出されることによるオーバーヘッドを回避します。 このオプションの既定値は、getDefaultServerPreparedStatementDiscardThreshold() を呼び出して変更することができます。|
 |void setServerPreparedStatementDiscardThreshold(int value)|特定の接続インスタンスの動作を指定します。 この設定では、サーバー上の未処理のハンドルをクリーンアップする呼び出しが実行される前に 1 回の接続あたりに未処理にできる、未処理の準備されたステートメントの破棄アクション (sp_unprepare) の数を制御できます。 設定が 1 以下の場合、準備解除アクションは、準備されたステートメントの終了時に直ちに実行されます。 1 より大きい値に設定すると、これらの呼び出しはバッチ処理され、sp_unprepare が頻繁に呼び出されることによるオーバーヘッドを回避します。|
 
  **SQLServerDataSource**

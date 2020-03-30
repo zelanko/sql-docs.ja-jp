@@ -10,10 +10,10 @@ ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
 ms.openlocfilehash: 5d7c610f887de137c44f97ca8809e70c548a51db
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74485317"
 ---
 # <a name="install-packages-with-r-tools"></a>R ツールを使用してパッケージをインストールする
@@ -75,7 +75,7 @@ SQL Server からインターネットにアクセスできる場合は、標準
 
 SQL Server のサイド バイ サイド インスタンスが複数ある場合は、パッケージを使用するインスタンスごとに個別にインストールを実行します。 パッケージをインスタンス間で共有することはできません。
 
-## <a name = "bkmk_offlineInstall"></a> オフライン インストール (インターネット アクセスなし)
+## <a name="offline-installation-no-internet-access"></a><a name = "bkmk_offlineInstall"></a> オフライン インストール (インターネット アクセスなし)
 
 多くの場合、実稼働データベースをホストするサーバーにはインターネット接続がありません。 そのような環境に R パッケージをインストールするには、あらかじめパッケージと依存関係を (ZIP ファイルとして) ダウンロードして準備し、ファイルをサーバー上のフォルダーにコピーします。 ファイルが配置されたら、パッケージをオフラインでインストールできます。
 

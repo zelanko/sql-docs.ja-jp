@@ -11,10 +11,10 @@ ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d5ec94bb96832574cec663d38690bec8078db6ff
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028895"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server モバイル レポート: エンド ツー エンドのチュートリアル
@@ -63,7 +63,7 @@ Reporting Services でサポートされるデータ ソースのいずれもか
   
 [Reporting Services の共有データ ソース](../report-data/create-modify-and-delete-shared-data-sources-ssrs.md)の詳細を参照してください。  
    
-## <a name="shared-dataset">共有データセットを作成する</a>  
+## <a name=""></a><a name="shared-dataset">共有データセットを作成する</a>  
   
 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] のレポート デザイナーなど、既存の [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]クライアント ツールを使用して、共有データセットを作成します。  このチュートリアルでは [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]を使用します。 [レポート ビルダーをインストールする](../install-windows/install-report-builder.md)か、Web ポータルから起動します。 3 つのデータセットを Reporting Services モバイル レポートの KPI の値、KPI のトレンド、および詳細フィールド用に 1 つずつ作成します。     
   
@@ -93,7 +93,7 @@ Reporting Services でサポートされるデータ ソースのいずれもか
    
 これで、KPI とモバイル レポートの基準としてデータセットを使用できます。  同じデータ ソースに対して複数のデータセットを作成できます。 さらに、これらの共有データセットに対して複数の KPI とモバイル レポートを作成できます。   
   
-## <a name="create-KPI">KPI の作成</a>  
+## <a name=""></a><a name="create-KPI">KPI の作成</a>  
 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web ポータルで KPI の権限を作成します。    
   
 1. Web ポータルの右上隅で **[新規作成]**  >  **[新しい KPI]** をクリックします。   
@@ -133,7 +133,7 @@ Reporting Services でサポートされるデータ ソースのいずれもか
    
     ![PBI_SSMRP_NewKPI](../../reporting-services/mobile-reports/media/pbi-ssmrp-newkpi.png)  
     
-## <a name="create-mobile-report">Reporting Services モバイル レポートの作成</a>  
+## <a name=""></a><a name="create-mobile-report">Reporting Services モバイル レポートの作成</a>  
    
 Reporting Services モバイル レポートを作成するには、 [SQL Server Mobile Report Publisher をインストールする](https://go.microsoft.com/fwlink/?LinkId=717766)か、 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Web ポータルから起動します。 
 

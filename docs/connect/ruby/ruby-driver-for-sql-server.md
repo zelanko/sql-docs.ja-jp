@@ -11,10 +11,10 @@ ms.assetid: 45d1b1b6-363d-4924-bcb1-b2582b60f76b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d35336d1414df78e5d24c3133a176d3d232deadb
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78866545"
 ---
 # <a name="ruby-driver-for-sql-server"></a>Ruby Driver for SQL Server
@@ -24,9 +24,9 @@ ms.locfileid: "78866545"
 Windows、Linux、または Mac では、Ruby を使用して SQL Database に接続できます。   
   
 ## <a name="getting-started"></a>作業の開始  
-* [ステップ 1:Ruby 開発用に開発環境を構成する](step-1-configure-development-environment-for-ruby-development.md)  
-* [手順 2:Ruby 開発用の SQL データベースを作成する](step-2-create-a-sql-database-for-ruby-development.md)  
-* [ステップ 3:Ruby を使用した SQL への接続を概念実証する](step-3-proof-of-concept-connecting-to-sql-using-ruby.md)  
+* [ステップ 1: Ruby 開発用に開発環境を構成する](step-1-configure-development-environment-for-ruby-development.md)  
+* [ステップ 2: Ruby 開発用の SQL データベースを作成する](step-2-create-a-sql-database-for-ruby-development.md)  
+* [ステップ 3: Ruby を使用した SQL への接続を概念実証する](step-3-proof-of-concept-connecting-to-sql-using-ruby.md)  
   
 ## <a name="documentation"></a>ドキュメント  
 [ruby-lang.org のドキュメント](https://www.ruby-lang.org/en/documentation/)  

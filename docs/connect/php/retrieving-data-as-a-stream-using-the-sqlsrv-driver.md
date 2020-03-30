@@ -11,10 +11,10 @@ ms.assetid: 17dc9129-04cd-430c-b5b3-82824116425d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b83188359489759f50b2929de769721d627c15d8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67992899"
 ---
 # <a name="retrieving-data-as-a-stream-using-the-sqlsrv-driver"></a>SQLSRV ドライバーを使用してデータをストリームとして取得する
@@ -32,7 +32,7 @@ ms.locfileid: "67992899"
   
 3.  [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) を使用して、行からフィールドを取得します。 関数呼び出しの 3 番目のパラメーターとして **SQLSRV_PHPTYPE_STREAM(<encoding>)** を使用して、データをストリームとして取得することを指定します。 次の表は、エンコーディングおよびそれらの記述を指定するために使用する定数を示しています。  
   
-    |SQLSRV 定数|[説明]|  
+    |SQLSRV 定数|説明|  
     |-------------------|---------------|  
     |SQLSRV_ENC_BINARY|データは、エンコードまたは変換されず、生のバイト ストリームとしてサーバーから返されます。|  
     |SQLSRV_ENC_CHAR|データは、システムの Windows ロケール設定のコード ページで指定されている 8 ビット文字で返されます。 任意のマルチバイト文字またはこのコード ページにマップされていない文字は、1 バイトの疑問符 (?) 文字に置き換えられます。|  
@@ -42,7 +42,7 @@ ms.locfileid: "67992899"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |---------|---------------|  
 |[SQLSRV ドライバーを使用したストリームでのデータ型のサポート](../../connect/php/data-types-with-stream-support-using-the-sqlsrv-driver.md)|ストリームとして取得できる SQL Server データ型を一覧表示します。|  
 |[方法: SQLSRV ドライバーを使用したストリームとしての文字データの取得](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)|文字データをストリームとして取得する方法を説明します。|  

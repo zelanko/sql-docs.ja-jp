@@ -16,10 +16,10 @@ ms.assetid: 5281e1b8-19b8-4fe5-83be-929d1987e25d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e52ff3e9bc9da36d3874382341a1f46eb722ad3c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67953544"
 ---
 # <a name="getcharacterstream-javalangstring"></a>getCharacterStream (java.lang.String)
@@ -40,7 +40,7 @@ public final java.io.Reader getCharacterStream(java.lang.String paramName)
  パラメーターの名前を示す **String** です。  
   
 ## <a name="return-value"></a>戻り値  
- Reader オブジェクトです。  
+ Reader オブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

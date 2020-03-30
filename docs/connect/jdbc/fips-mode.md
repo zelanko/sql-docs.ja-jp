@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: kenvh
 ms.openlocfilehash: 63681ee474d4993e248bf02dcabd9065317ffa39
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028064"
 ---
 # <a name="fips-mode"></a>FIPS モード
@@ -85,7 +85,7 @@ JDBC ドライバーを FIPS 準拠モードで実行するには、次の表に
 
 #### <a name="properties"></a>Properties 
 
-|プロパティ|Type|Default|説明|Notes|
+|プロパティ|種類|Default|説明|メモ|
 |---|---|---|---|---|
 |encrypt|boolean ["true / false"]|"false"|FIPS 対応 JVM の場合、暗号化プロパティを **true** にする必要があります。||
 |TrustServerCertificate|boolean ["true / false"]|"false"|FIPS の場合、ユーザーは、証明書チェーンを検証する必要があるため、このプロパティには値 **"false"** を使用する必要があります。 ||

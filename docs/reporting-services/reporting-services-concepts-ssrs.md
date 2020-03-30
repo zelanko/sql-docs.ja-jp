@@ -9,18 +9,18 @@ ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4679ed954ac7f422a0f3caa0c59c24e5012c927f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77078184"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Reporting Services の概念 (SSRS)
   このトピックでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の概念を簡単に説明します。  
   
- **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ネイティブ モード | [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint モード   
+ **[!INCLUDE[applies](../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ネイティブ モード | [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint モード   
   
-##  <a name="bkmk_ReportServerConcepts"></a> レポート サーバーの概念  
+##  <a name="report-server-concepts"></a><a name="bkmk_ReportServerConcepts"></a> レポート サーバーの概念  
  レポート サーバーは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のインスタンスがインストールされているコンピューターです。 レポート サーバーには、改ページ調整されたレポートおよびモバイル レポート、レポート関連のアイテムやリソース、スケジュール、サブスクリプションなどのアイテムが内部的に保存されます。 レポート サーバーは、スタンドアロンの単一サーバーまたはスケールアウト ファームとして構成したり、SharePoint Server と統合したりすることができます。 レポート サーバーのアイテムは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Web サービス、WMI プロバイダー、URL アクセス、またはプログラムからスクリプトを使用して操作します。 レポート サーバーを操作する方法は、配置トポロジと構成によって異なります。  
   
 ### <a name="native-mode-report-servers"></a>ネイティブ モードのレポート サーバー
@@ -59,7 +59,7 @@ ms.locfileid: "77078184"
  レポート サーバーの操作に使用するツールの一覧については、「 [Reporting Services ツール](../reporting-services/tools/reporting-services-tools.md)」を参照してください。  
   
   
-##  <a name="bkmk_ReportsandRelatedItemConcepts"></a> レポートと関連アイテムの概念  
+##  <a name="reports-and-related-item-concepts"></a><a name="bkmk_ReportsandRelatedItemConcepts"></a> レポートと関連アイテムの概念  
 ### <a name="reports-and-report-definitions"></a>レポートとレポート定義
 
 
@@ -145,7 +145,7 @@ SQL Server Mobile Report Publisher では、Reporting Services モバイル レ�
  データ警告は、警告データベースに内部的に格納されるアイテムです。 データ警告定義には、既存のレポート データ フィードから使用するデータ、満たす条件、スケジュール、警告の受信者が含まれています。 データ警告は、SharePoint Server と統合されたレポート サーバーにパブリッシュされたレポートでのみ使用できます。 データ警告は、ネイティブのレポート サーバー インストールでは使用できません。 詳細については、「 [Reporting Services のデータ警告](../reporting-services/reporting-services-data-alerts.md)」を参照してください。  
   
   
-##  <a name="bkmk_TypesofReports"></a> Reporting Services の改ページ調整されたレポートの型  
+##  <a name="types-of-reporting-services-paginated-reports"></a><a name="bkmk_TypesofReports"></a> Reporting Services の改ページ調整されたレポートの型  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]では、 *レポート* は特殊なレポート サーバー アイテム、レイアウト デザイン、またはソリューション デザインに適用できます。 1 つの Reporting Services の改ページ調整されたレポートには、複数の種類のレポートの特性を持たせることができます。たとえば、あるレポートを同時にスタンドアロン レポートにしたり、メイン レポートによって参照されるサブレポートにしたり、別のメイン レポート内の詳細レポートの対象にしたりすることができます。  
   
 ### <a name="drilldown-reports"></a>ドリルダウン レポート 
@@ -183,7 +183,7 @@ SQL Server Mobile Report Publisher では、Reporting Services モバイル レ�
  アップグレードされたレポートは、レポート サーバーを [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のあるバージョンからそれ以降のバージョンにアップグレードするときに、より新しいスキーマに変換されるパブリッシュされたレポート定義です。 元のレポート定義は保持されます。 レポートはメモリ内でアップグレードされ、コンパイルされてから、コンパイル済みのバージョンが内部に保存されます。 詳細については、 [Reporting Services レポートのアップグレード](../reporting-services/install-windows/upgrade-reports.md)に関するページを参照してください。  
   
   
-##  <a name="bkmk_StagesofReports"></a> Reporting Services の改ページ調整されたレポートの段階  
+##  <a name="stages-of-reporting-services-paginated-reports"></a><a name="bkmk_StagesofReports"></a> Reporting Services の改ページ調整されたレポートの段階  
  レポート定義は、作成、パブリッシュまたは保存、コンパイル、処理、キャッシュ、レンダリング、表示、エクスポート、および履歴として保存できます。 レポートの実行時に、レポート サーバーはレポート処理、データ処理、およびレンダリングの 3 つの工程でレポートを処理します。 レポート定義に基づいてデータ処理およびレポート処理が実行され、結果は内部の中間形式になります。 中間形式のレポートは、後から特定の表示形式でレンダリングされます。 次の図は、レポート処理の各段階と要素を示しています。  
   
  ![report processing diagram](../reporting-services/media/report-execution.gif "レポートの処理の図")  

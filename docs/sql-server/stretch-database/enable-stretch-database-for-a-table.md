@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 49d3f7fa266be69c767b0fb0450cc6898351f39b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73843806"
 ---
 # <a name="enable-stretch-database-for-a-table"></a>Enable Stretch Database for a table
@@ -35,7 +35,7 @@ ms.locfileid: "73843806"
  > [!NOTE]
  > 後で、Stretch Database を無効にする場合は、テーブルまたはデータベースで Stretch Database を無効にしてもリモート オブジェクトは削除されないことに注意してください。 リモート テーブルまたはリモート データベースを削除する場合は、Azure 管理ポータルを使用して削除する必要があります。 リモート オブジェクトを手動で削除するまで、引き続き Azure ストレージのコストが発生します。
  
-##  <a name="EnableWizardTable"></a> ウィザードを使用してテーブルで Stretch Database を有効にする  
+##  <a name="use-the-wizard-to-enable-stretch-database-on-a-table"></a><a name="EnableWizardTable"></a> ウィザードを使用してテーブルで Stretch Database を有効にする  
  **ウィザードを起動する**  
  1.  SQL Server Management Studio のオブジェクト エクスプローラーで、ストレッチを有効にするテーブルを選択します。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "73843806"
  **結果**  
  結果を確認します。  
   
-##  <a name="EnableTSQLTable"></a> Transact-SQL を使用してテーブルで Stretch Database を有効にする  
+##  <a name="use-transact-sql-to-enable-stretch-database-on-a-table"></a><a name="EnableTSQLTable"></a> Transact-SQL を使用してテーブルで Stretch Database を有効にする  
  Transact-SQL を使用して、既存のテーブルで Stretch Database を有効にしたり、Stretch Database が有効になっている新しいテーブルを作成したりできます。  
   
 ### <a name="options"></a>オプション  

@@ -19,10 +19,10 @@ ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bc2a48d56c5d603714353974b0a775b93140fd7a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080592"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>グラフ (レポート ビルダーおよび SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "77080592"
  グラフは、*レポート パーツ*としてレポートとは別にパブリッシュできます。 詳細については、「[レポート パーツ](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)」を参照してください。
   
  
-##  <a name="DesigningChart"></a> グラフのデザイン  
+##  <a name="designing-a-chart"></a><a name="DesigningChart"></a> グラフのデザイン  
  グラフ データ領域をデザイン画面に追加したら、グラフのグラフ データ ペインに数値データおよび非数値データのレポート データセット フィールドをドラッグします。 デザイン画面でグラフをクリックすると、カテゴリ グループ、系列グループ、および値の 3 つの領域を持つグラフ データ ペインが表示されます。 レポートに共有データセットまたは埋め込みデータセットが含まれている場合、データセットのフィールドがレポート データ ペインに表示されます。 データセットからフィールドをグラフ データ ペインの適切な領域にドラッグします。 既定では、フィールドがグラフのいずれかの領域に追加されると、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] によってフィールドの集計が計算されます。 系列グループを使用して系列を動的に生成することもできます。 グラフは[マトリックスのように](#SimilarMatrix)まとめられます。  
   
  ![rs_chartwSeriesCategories](../../reporting-services/report-design/media/rs-chartwseriescategories.gif "rs_chartwSeriesCategories")  
@@ -45,7 +45,7 @@ ms.locfileid: "77080592"
 > [!NOTE]  
 >  デザイン時のグラフ内のデータは、レポートが処理されるときのグラフ内のデータとは異なります。 デザイン時のデータは、実際のデータではありません。 デザイン時に作成されるデータは、グラフの概要を把握してグラフを設計するために追加された生成データです。  
   
-##  <a name="SimilarMatrix"></a> マトリックスとグラフの類似点  
+##  <a name="how-a-chart-is-like-a-matrix"></a><a name="SimilarMatrix"></a> マトリックスとグラフの類似点  
  グラフがどのように動作するかについての考え方の 1 つは、グラフをマトリックスと比較することです。  
   
  ![ツールボックスから追加された新しいマトリックス、選択済み](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "ツールボックスから追加された新しいマトリックス、選択済み")  
@@ -59,7 +59,7 @@ ms.locfileid: "77080592"
 -   マトリックスの [データ] 領域は、グラフの [値] 領域と似ています。  
   
  
-##  <a name="AddingData"></a> グラフへのデータの追加  
+##  <a name="adding-data-to-the-chart"></a><a name="AddingData"></a> グラフへのデータの追加  
  名前別売上を示すレポートがあるとします。 氏名フィールドを [カテゴリ グループ] 領域にドロップし、売上フィールドを [値] 領域にドロップします。  
   
  売上フィールドを [値] 領域に追加すると、データ フィールドのテキストが凡例に表示され、この数値フィールドのデータが 1 つの値に集計されます。 既定では、合計組み込み関数 SUM を使用して値が集計されます。 グラフ データ ペインには、フィールドの単純式が含まれます。 この例では、フィールド式 `[Sum(Sales)]` として、 `=Sum(Fields!Sales.Value)`が表示されます。 グループが指定されない場合、グラフで表示されるデータ ポイントは 1 つのみです。 複数のデータ ポイントを表示するには、グループ化したフィールドを追加してデータをグループ化する必要があります。 名前フィールドを [カテゴリ グループ] 領域に追加すると、フィールドの名前と同じ名前のグループ化フィールドがグラフに自動的に追加されます。 x 軸および y 軸に従って値を定義するフィールドが追加されると、データを正しくプロットするのに十分な情報がグラフに含まれることになります。  
@@ -69,7 +69,7 @@ ms.locfileid: "77080592"
  [系列グループ] 領域が空のままの場合、系列の数はデザイン時に固定されます。 この例では、売上は、グラフに表示される唯一の系列です。  
   
  
-##  <a name="GroupsInChart"></a> グラフのカテゴリ グループと系列グループ  
+##  <a name="category-and-series-groups-in-a-chart"></a><a name="GroupsInChart"></a> グラフのカテゴリ グループと系列グループ  
  グラフでは、入れ子になったカテゴリ グループと系列グループがサポートされています。 グラフには詳細データは表示されません。 選択したグラフのカテゴリ ドロップ ゾーン、および系列ドロップ ゾーンにデータセット フィールドをドラッグして、グラフにグループを追加します。  
   
  円グラフなどの図形グラフでは、カテゴリ グループと入れ子になったカテゴリ グループがサポートされています。 棒グラフなどその他のグラフでは、カテゴリ グループと系列グループがサポートされています。 グループは入れ子にできますが、カテゴリまたは系列の数のためにグラフの情報の表示が見えにくくならないように確認してください。  
@@ -77,14 +77,14 @@ ms.locfileid: "77080592"
 ### <a name="adding-series-grouping-to-a-chart"></a>グラフへの系列グループの追加  
  フィールドを [系列グループ] 領域に追加する場合、系列の数は、フィールドに格納されているデータに応じて決定します。 前述の例で、年フィールドを [系列グループ] 領域に追加するとします。 年フィールドの数値によって、グラフに表示される系列の数が決定します。 年フィールドに 2004 年、2005 年、および 2006 年が含まれている場合、グラフでは [値] 領域のフィールドごとに 3 つの系列が表示されます。  
   
-##  <a name="DatasetConsiderations"></a> グラフを作成する前のデータセットに関する注意点  
+##  <a name="dataset-considerations-before-creating-a-chart"></a><a name="DatasetConsiderations"></a> グラフを作成する前のデータセットに関する注意点  
  グラフを使用すると、データの概要を表示できます。 ただし、大きなデータセットの場合、グラフの情報がわかりにくくなったり、読み取れなくなったりする可能性があります。 存在しないデータ ポイントや NULL データ ポイント、グラフの種類に適さないデータ型、およびグラフとテーブルの組み合わせなどの詳細設定の適用はすべて、グラフの読みやすさに影響します。 グラフをデザインする前に、データを慎重に準備し、理解しておく必要があります。これにより、短時間で効率的にグラフをデザインできます。  
   
  レポートには、必要な数だけグラフを作成することができます。 グラフは、マトリックスやテーブルなど他のデータ領域と同様に、1 つのデータセットにバインドされます。 複数のデータセットを同じグラフに表示する場合は、SQL クエリで JOIN ステートメントまたは UNION ステートメントを使用する追加のデータセットを作成した後、データをグラフに追加します。  
   
  詳細データが不要な場合や有用ではない場合は、データセット クエリでデータを事前に集計することを検討してください。 各データ ポイントをより明確に表示するには、データセット内のカテゴリの数を減らします。 データセットをフィルター選択したり、返される行数を少なくする条件をクエリに追加したりすることができます。 
   
-##  <a name="BestPractices"></a> グラフにデータを表示する際の推奨事項  
+##  <a name="best-practices-when-displaying-data-in-a-chart"></a><a name="BestPractices"></a> グラフにデータを表示する際の推奨事項  
  グラフが最も効果を発揮するのは、表示される要素の数によって、基になっている情報のイメージが明確に表現できる場合です。 散布図など一部のグラフはデータ ポイントの数が多い場合に効果的ですが、円グラフなどの他のグラフはデータ ポイントが少ない場合に効果的です。 データセット内の値とその情報の表示方法に基づいて、慎重にグラフの種類を選択してください。 詳細については、「 [グラフの種類 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)」を参照してください。  
   
  グラフ上のデータを整理するには、いくつかの方法があります。  
@@ -97,14 +97,14 @@ ms.locfileid: "77080592"
   
 -   テーブルやマトリックスのテンプレートに比率データを表示する場合は、横棒グラフではなく線形ゲージの使用を検討してください。 セル内にある 1 つの値を表示するには、ゲージの方が適しています。 詳細については、「 [入れ子になったデータ領域 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)」を参照してください。  
    
-##  <a name="AggregateValues"></a> グラフのデータ フィールドの値の集計  
+##  <a name="aggregating-values-from-a-data-field-on-the-chart"></a><a name="AggregateValues"></a> グラフのデータ フィールドの値の集計  
  既定では、フィールドがグラフの [値] 領域に追加されると、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] によってフィールドの集計が計算されます。 フィールドを特定の領域にドロップせずにグラフ上にドラッグすると、グラフでは、フィールドのデータ型に基づいて、このフィールドがカテゴリ軸 (x 軸) または値軸 (y 軸) のいずれに属するかが判断されます。 [値] 領域にドロップされた数値フィールドは、SUM 関数を使用して集計されます。 [値] 領域で値フィールドのデータ型が String の場合、フィールドに数値が存在する場合でも、グラフに数値は表示されず、COUNT 関数が表示されます。 この動作を回避するには、フィールドに、書式設定された数値を格納した文字列ではなく、数値データ型を設定してください。 Visual Basic の式を使用して文字列値を数値データ型に変換するには、 **CDbl** 定数または **CInt** 定数を使用します。 たとえば、次の複合式を使用すると、文字列として書式設定された数値を格納する `MyField` という名前のフィールドを変換できます。  
   
  `=Sum(CDbl(Fields!MyField.Value))`  
   
  集計式の詳細については、「[集計関数リファレンス &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)」を参照してください。  
    
-##  <a name="InThisSection"></a> トピックの内容  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> トピックの内容  
  [レポートへのグラフの追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md)  
  レポートにグラフを追加する最初の手順について説明します。  
   
@@ -139,8 +139,8 @@ ms.locfileid: "77080592"
  [画像、テキスト ボックス、四角形、および罫線 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)   
  [対話的な並べ替え、ドキュメント マップ、およびリンク &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [入れ子になったデータ領域 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
- [チュートリアル:レポートへの縦棒グラフの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)   
- [チュートリアル:レポートへの円グラフの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
- [チュートリアル:レポートへの横棒グラフの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
+ [チュートリアル: レポートへの縦棒グラフの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)   
+ [チュートリアル: レポートへの円グラフの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [チュートリアル: レポートへの横棒グラフの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
   
   

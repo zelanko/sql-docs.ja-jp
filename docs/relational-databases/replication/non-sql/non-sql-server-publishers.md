@@ -16,16 +16,16 @@ ms.assetid: 08a160a6-33be-46b5-bc7b-d53180d8bdf1
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2cb88a880db13fa8b7582e917d4b599b13709069
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67940436"
 ---
 # <a name="non-sql-server-publishers"></a>SQL Server 以外のパブリッシャー  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のソースからパブリッシュされたデータは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に統合できます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、Oracle データベースからパブリッシュされたスナップショット データまたはトランザクション データをサブスクライブできます。 Oracle からのパブリッシュの詳細については、「[Oracle パブリッシングの概要](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)」(Oracle パブリッシングの概要)を参照してください。  
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のソースからパブリッシュされたデータは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に統合できます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、Oracle データベースからパブリッシュされたスナップショット データまたはトランザクション データをサブスクライブできます。 Oracle からのパブリッシュの詳細については、「[Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)」 (Oracle パブリッシングの概要) を参照してください。  
   
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、トランザクション レプリケーションとスナップショット レプリケーションに対する次の異種シナリオをサポートします。  
   

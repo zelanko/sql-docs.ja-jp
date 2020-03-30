@@ -12,10 +12,10 @@ ms.assetid: ac7ab037-300c-499d-89d4-756f8d8e99f6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d7cbcb0b2cd0da8bd13d28620261c2e9894463db
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67564024"
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>レポート サーバー アプリケーションで利用可能なメモリの構成
@@ -86,7 +86,7 @@ ms.locfileid: "67564024"
 ```  
   
 #### <a name="about-aspnet-memory-configuration-settings"></a>ASP.NET のメモリの構成設定について  
- 2016 以降のレポート サーバー Web サービスと Web ポータルは HTML5 アプリケーションで、以前のアプリケーションは [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] アプリケーションですが、いずれのアプリケーションも、IIS 5.0 互換モードで実行される [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] アプリケーションの machine.config の **processModel** に指定するメモリ構成設定は参照しません。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、メモリの構成設定を RSReportServer.config ファイルからのみ読み取ります。  
+ 2016 以降のレポート サーバー Web サービスと Web ポータルは HTML5 アプリケーションで、以前のアプリケーションは [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] アプリケーションですが、いずれのアプリケーションも、IIS 5.0 互換モードで実行される **アプリケーションの machine.config の**processModel[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] に指定するメモリ構成設定は参照しません。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、メモリの構成設定を RSReportServer.config ファイルからのみ読み取ります。  
   
 ## <a name="see-also"></a>参照  
  [RsReportServer.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   

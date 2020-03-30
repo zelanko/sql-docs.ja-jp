@@ -16,10 +16,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/18/2016
 ms.openlocfilehash: 89e6e64f4e4dc5f3ae7c8f9adf1db3a392530989
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75246558"
 ---
 # <a name="execute-statements-against-multiple-servers-simultaneously"></a>複数のサーバーに対するステートメントの同時実行
@@ -33,7 +33,7 @@ ms.locfileid: "75246558"
 > **注:** 次の手順を実行する前に、中央管理サーバーとサーバー グループを作成する必要があります。 詳細については、「[中央管理サーバーとサーバー グループの作成 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-a-central-management-server-and-server-group.md)」を参照してください。  
 
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  中央管理サーバーによって保持される接続は、ユーザーのコンテキスト内で Windows 認証を使用して実行されるため、登録済みサーバーでの有効な権限が変わることがあります。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A のインスタンスでは sysadmin 固定サーバー ロールのメンバーであるユーザーでも、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] B のインスタンスでは権限が限られていることがあります。  
   
  ## <a name="execute-statements-against-multiple-configuration-targets-simultaneously"></a>複数の構成対象に対してステートメントを同時に実行する  

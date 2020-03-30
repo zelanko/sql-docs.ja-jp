@@ -22,10 +22,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 29aaab523b3a754c65b1b7a0312ceb5ea122f2d3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68419319"
 ---
 # <a name="working-with-query-notifications"></a>クエリ通知の操作
@@ -79,7 +79,7 @@ OLE DB Driver for SQL Server では、行セットが変更されたときのコ
 
 OLE DB によるクエリ通知をサポートするために、次の新しいプロパティが OLE DB Driver for SQL Server の `DBPROPSET_SQLSERVERROWSET` プロパティ セットに追加されました。
 
-|Name|Type|説明|
+|Name|種類|説明|
 |----------|----------|-----------------|
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|クエリ通知をアクティブのままにしておく秒数。<br /><br /> 既定値は 432,000 秒 (5 日) です。 最小値は 1 秒であり、最大値は 2^31-1 秒です。|
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|通知のメッセージ テキスト。 このテキストはユーザーが定義するため、定義済みの書式はありません。<br /><br /> 既定では、文字列は空です。 1 から 2000 文字を使用してメッセージを指定します。|
@@ -104,7 +104,7 @@ RECEIVE * FROM MyQueue
 
 キューが空の場合、このステートメントでは空の結果セットが直ちに返されます。 それ以外の場合は、すべてのキュー通知が返されます。
 
-`SSPROP_QP_NOTIFICATION_MSGTEXT` と `SSPROP_QP_NOTIFICATION_OPTIONS` が null でも空でもない場合は、上で定義されている 3 つのプロパティが含まれるクエリ通知 TDS ヘッダーがサーバーに送信されます。 これは、コマンドが実行されるたびに行われます。 それらのいずれかが null (または空) の場合、ヘッダーは送信されず、`DB_E_ERRORSOCCURRED` が発生します (または、プロパティが両方ともオプションとしてマークされている場合は、`DB_S_ERRORSOCCURRED` が発生します)。 その後、状態の値は `DBPROPSTATUS_BADVALUE` に設定されます。 実行と準備の時点で検証が行われます。 同様に、クエリ通知プロパティが [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] より前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] への接続に対して設定されている場合は、`DB_S_ERRORSOCCURED` が発生します。 この場合、状態の値は `DBPROPSTATUS_NOTSUPPORTED` です。
+`SSPROP_QP_NOTIFICATION_MSGTEXT` と `SSPROP_QP_NOTIFICATION_OPTIONS` が null でも空でもない場合は、上で定義されている 3 つのプロパティが含まれるクエリ通知 TDS ヘッダーがサーバーに送信されます。 これは、コマンドが実行されるたびに行われます。 それらのいずれかが null (または空) の場合、ヘッダーは送信されず、`DB_E_ERRORSOCCURRED` が発生します (または、プロパティが両方ともオプションとしてマークされている場合は、`DB_S_ERRORSOCCURRED` が発生します)。 その後、状態の値は `DBPROPSTATUS_BADVALUE` に設定されます。 実行と準備の時点で検証が行われます。 同様に、クエリ通知プロパティが `DB_S_ERRORSOCCURED` より前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] への接続に対して設定されている場合は、[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] が発生します。 この場合、状態の値は `DBPROPSTATUS_NOTSUPPORTED` です。
 
 サブスクリプションが開始されても、後続のメッセージが正常に配信されるかどうかは保証されません。 指定されたサーバー名の妥当性に関するチェックも行われません。
 

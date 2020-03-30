@@ -15,10 +15,10 @@ ms.assetid: ba797203-24d0-4922-9b97-8ab483f1db14
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: deeb0a237d1982a92e08c056375fca277f095017
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75245029"
 ---
 # <a name="external-tools-dialog-box"></a>[外部ツール] ダイアログ ボックス
@@ -68,7 +68,7 @@ ms.locfileid: "75245029"
 ## <a name="example"></a>例  
 **[外部ツール]** ダイアログ ボックスに次の値を入力すると、"DAC" というラベルが付いたメニュー項目が作成されます。このメニュー項目を選択すると、コマンド プロンプトが開き、専用管理者接続を使用して **sqlcmd** ユーティリティが実行されます。  
   
-|ボックス|Value|  
+|ボックス|値|  
 |-------|---------|  
 |**Title**|DAC (DAC)|  
 |**コマンド**|[!INCLUDE[ssInstallPath](../includes/ssinstallpath-md.md)]Tools\Binn\SQLCMD.exe|  

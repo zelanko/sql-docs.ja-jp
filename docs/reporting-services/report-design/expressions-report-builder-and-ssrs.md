@@ -9,10 +9,10 @@ ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8cff1f3e79c383dbcbfe365ab36d9fa6912d6e28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080362"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>式 (レポート ビルダーおよび SSRS)
@@ -35,7 +35,7 @@ ms.locfileid: "77080362"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Types"></a> 単純式と複合式について  
+##  <a name="understanding-simple-and-complex-expressions"></a><a name="Types"></a> 単純式と複合式について  
  式は等号 (=) で始まり、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] に書き込まれます。 式には、定数、演算子、および組み込みの値 (フィールド、コレクション、および関数) への参照、拡張またはカスタム コードへの参照の組み合わせを含むことができます。  
   
  式を使用すると、多くのレポート アイテム プロパティの値を指定できます。 最も一般的なプロパティは、テキスト ボックスとプレースホルダーのテキストの値です。 通常、テキスト ボックスに 1 つの式しか含まれていない場合、その式がテキスト ボックス プロパティの値となります。 テキスト ボックスに複数の式が含まれている場合は、各式がテキスト ボックス内のプレースホルダー テキストの値となります。  
@@ -56,18 +56,18 @@ ms.locfileid: "77080362"
   
  詳細については、「 [テキストとプレースホルダーの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)」を参照してください。  
   
-## <a name="DisplayText"></a> 単純式でのプレフィックス記号について  
+## <a name="understanding-prefix-symbols-in-simple-expressions"></a><a name="DisplayText"></a> 単純式でのプレフィックス記号について  
 
 単純式では、記号を使用して、参照先 (フィールド、パラメーター、組み込みコレクション、または ReportItems コレクション) を示します。 表示テキストおよび式のテキストの例を次の表に示します。  
   
-|Item|表示テキストの例|式のテキストの例|  
+|アイテム|表示テキストの例|式のテキストの例|  
 |----------|--------------------------|-----------------------------|  
 |データセット フィールド|`[Sales]`<br /><br /> `[SUM(Sales)]`<br /><br /> `[FIRST(Store)]`|`=Fields!Sales.Value`<br /><br /> `=Sum(Fields!Sales.Value)`<br /><br /> `=First(Fields!Store.Value)`|  
 |レポート パラメーター|`[@Param]`<br /><br /> `[@Param.Label]`|`=Parameters!Param.Value`<br /><br /> `=Parameters!Param.Label`|  
 |組み込みフィールド|`[&ReportName]`|`=Globals!ReportName.Value`|  
 |表示テキストに使用されるリテラル文字|`\[Sales\]`|`[Sales]`|  
   
-##  <a name="References"></a> 複合式の作成  
+##  <a name="writing-complex-expressions"></a><a name="References"></a> 複合式の作成  
  式には、関数、演算子、定数、フィールド、パラメーター、組み込みコレクションのアイテム、および埋め込みのカスタム コードまたはカスタム アセンブリへの参照を含めることができます。  
   
 > [!NOTE]
@@ -83,7 +83,7 @@ ms.locfileid: "77080362"
 |[組み込みのレポート関数と集計関数](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)|式からアクセスできる、 `Sum` や `Previous`などの組み込み関数について説明します。|`=Previous(Sum(Fields!Sales.Value))`|  
 |[レポート デザイナーでカスタム コードやアセンブリを式から参照する (SSRS)](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)|組み込みの CLR クラス <xref:System.Math> と <xref:System.Convert>、その他の CLR クラス、 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] ランタイム ライブラリ関数、または外部アセンブリのメソッドにアクセスする方法について説明します。<br /><br /> レポート内に埋め込まれているカスタム コード、またはレポート クライアントとレポート サーバーの両方でカスタム アセンブリとしてコンパイルしてインストールするカスタム コードへのアクセス方法について説明します。|`=Sum(Fields!Sales.Value)`<br /><br /> `=CDate(Fields!SalesDate.Value)`<br /><br /> `=DateAdd("d",3,Fields!BirthDate.Value)`<br /><br /> `=Code.ToUSD(Fields!StandardCost.Value)`|  
    
-##  <a name="Valid"></a> 式の検証  
+##  <a name="validating-expressions"></a><a name="Valid"></a> 式の検証  
  特定のレポート アイテム プロパティの式を作成する場合、式に含めることのできる参照は、レポート アイテム プロパティで受け入れられる値と、プロパティの評価のスコープによって異なります。 次に例を示します。  
   
 -   既定では、式 [Sum] は式の評価時のスコープ内のデータの合計を計算します。 テーブル セルの場合、スコープは行と列のグループ メンバーシップによって異なります。 詳細については、「 [合計、集計、および組み込みコレクションの式のスコープ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)を表しています。  
@@ -94,7 +94,7 @@ ms.locfileid: "77080362"
   
  詳細については、「 [式のリファレンス (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expression-reference-report-builder-and-ssrs.md)を表しています。  
   
-##  <a name="Section"></a> トピックの内容  
+##  <a name="in-this-section"></a><a name="Section"></a> トピックの内容  
  [式の追加 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)  
   
  [レポートでの式の使用 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  
@@ -110,6 +110,6 @@ ms.locfileid: "77080362"
 -   [式の例 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
 -   [フィルター式の例 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)  
 -   [グループ式の例 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)  
--   [チュートリアル:式の概要](Tutorial:%20Introducing%20Expressions.md)
+-   [チュートリアル: 式の概要](Tutorial:%20Introducing%20Expressions.md)
 -   [レポート サンプル (レポート ビルダーおよび SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   

@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: d23ae15a277c866c62f3e9be9e2eab19c5255c10
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77173606"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>SQL Server ビッグ データ クラスターの展開のために Azure Kubernetes Service を構成する
@@ -76,7 +76,7 @@ Azure リソース グループは、Azure リソースが展開され管理さ�
    az account list-locations -o table
    ```
 
-1. **az group create** コマンドを使用して、リソース グループを作成します。 次の例では、`westus2` の場所に `sqlbdcgroup` という名前のリソース グループを作成します。
+1. **az group create** コマンドを使用して、リソース グループを作成します。 次の例では、`sqlbdcgroup` の場所に `westus2` という名前のリソース グループを作成します。
 
    ```azurecli
    az group create --name sqlbdcgroup --location westus2
@@ -110,7 +110,7 @@ Azure リソース グループは、Azure リソースが展開され管理さ�
 
 ## <a name="create-a-kubernetes-cluster"></a>Kubernetes クラスターを作成する
 
-1. [az aks create](https://docs.microsoft.com/cli/azure/aks) コマンドを利用して、AKS に Kubernetes クラスターを作成します。 次の例では、サイズが **Standard_L8s** の Linux エージェント ノードを 1 つ備えた *kubcluster* という名前の Kubernetes クラスターを作成します。
+1. [az aks create](https://docs.microsoft.com/cli/azure/aks) コマンドを利用して、AKS に Kubernetes クラスターを作成します。 次の例では、サイズが *Standard_L8s* の Linux エージェント ノードを 1 つ備えた **kubcluster** という名前の Kubernetes クラスターを作成します。
 
    スクリプトを実行する前に、`<version number>` を前の手順で特定したバージョン番号に置き換えます。
 
@@ -161,7 +161,7 @@ Azure リソース グループは、Azure リソースが展開され管理さ�
    kubectl get nodes
    ```
 
-## <a id="troubleshoot"></a> トラブルシューティング
+## <a name="troubleshooting"></a><a id="troubleshoot"></a> トラブルシューティング
 
 上記のコマンドを利用して Azure Kubernetes サービスを作成する際に問題が発生した場合は、次の解決策を試してください。
 

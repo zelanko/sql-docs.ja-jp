@@ -14,10 +14,10 @@ ms.assetid: b8aeb87f-9cce-40e2-a47c-2dc1460548af
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e420937a61f55905d4d373a7a4f52f585b5c0e2e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67943247"
 ---
 # <a name="for-xml-support-for-various-sql-server-data-types"></a>各種 SQL Server データ型の FOR XML サポート
@@ -26,7 +26,7 @@ ms.locfileid: "67943247"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[XML データ型に対する FOR XML サポート](../../relational-databases/xml/for-xml-support-for-the-xml-data-type.md)|FOR XML が **xml** データ型でどのように機能するのかを説明します。|  
 |[文字列データ型の FOR XML のサポート](../../relational-databases/xml/for-xml-support-for-string-data-types.md)|FOR XML が文字列データ型 ( **varchar** や **nvarchar**など) でどのように機能するのかを説明します。|  

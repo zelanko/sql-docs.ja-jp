@@ -9,10 +9,10 @@ ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ed53800a1b45dd79548c59aaab57f71bd700d94d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63294670"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>チュートリアル: マトリックス レポートの作成 (レポート ビルダー)
@@ -27,7 +27,7 @@ ms.locfileid: "63294670"
 ## <a name="requirements"></a>必要条件  
 要件については、「 [チュートリアルの前提条件](../reporting-services/prerequisites-for-tutorials-report-builder.md)」を参照してください。 
   
-## <a name="CreateMatrix"></a>1.テーブルまたはマトリックスの新規作成ウィザードを使用してマトリックス レポートとデータセットを作成する  
+## <a name="1-create-a-matrix-report-and-dataset-from-the-new-table-or-matrix-wizard"></a><a name="CreateMatrix"></a>1.テーブルまたはマトリックスの新規作成ウィザードを使用してマトリックス レポートとデータセットを作成する  
 このセクションでは、共有データ ソースを選択し、埋め込みデータセットを作成して、データをマトリックスに表示します。  
   
 > [!NOTE]  
@@ -94,7 +94,7 @@ ms.locfileid: "63294670"
 
 11. **[次へ]** をクリックします。  
   
-## <a name="Groups"></a>2.テーブルまたはマトリックスの新規作成ウィザードを使用してデータを整理し、レイアウトを選択する  
+## <a name="2-organize-data-and-choose-layout-from-the-new-table-or-matrix-wizard"></a><a name="Groups"></a>2.テーブルまたはマトリックスの新規作成ウィザードを使用してデータを整理し、レイアウトを選択する  
 ウィザードを使用して、データを表示する最初のデザインを作成します。 ウィザードのプレビュー ペインでは、マトリックスのデザインを完了する前にデータのグループ化の結果を表示できます。  
   
 1.  **[フィールドの配置]** ページで、 **[使用できるフィールド]** から Territory を **[行グループ]** にドラッグします。  
@@ -145,7 +145,7 @@ ms.locfileid: "63294670"
 
 ![report-builder-expand-matrix](../reporting-services/media/report-builder-expand-matrix.png)
   
-## <a name="FormatData"></a>3.データの書式を設定する  
+## <a name="3-format-data"></a><a name="FormatData"></a>3.データの書式を設定する  
 既定では Sales フィールドの概要データでは通常の数値が、SalesDate フィールドには日付と時刻の両方の情報が表示されます。 このセクションでは、書式を設定して Sales フィールドでは数値が通貨として表示されるようにし、SalesDate フィールドでは日付のみが表示されるようにします。 書式設定したテキスト ボックスおよびプレースホルダー テキストのサンプル値を表示するには、 **[プレースホルダーのスタイル]** の設定を切り替えます。  
   
 ### <a name="to-format-fields"></a>フィールドの書式を設定するには  
@@ -170,7 +170,7 @@ ms.locfileid: "63294670"
   
 日付値には日付のみが表示され、売上の値は通貨として表示されます。  
   
-## <a name="AdjacentGroup"></a>4.隣接する列グループを追加する  
+## <a name="4-add-adjacent-column-group"></a><a name="AdjacentGroup"></a>4.隣接する列グループを追加する  
 行グループと列グループは親子リレーションシップを使用して入れ子にしたり、兄弟リレーションシップを使用して隣接させたりすることができます。  
   
 このセクションでは、Subcategory 列グループに隣接する列グループを追加し、セルをコピーして新しい列グループに値を設定し、式を使用して列グループ ヘッダーの値を作成します。  
@@ -216,7 +216,7 @@ ms.locfileid: "63294670"
 > [!NOTE]  
 > 他の曜日のデータが含まれている場合は、レポートにそれらの曜日の列も表示されます。 各列には **Sales**という列ヘッダーと、販売区域ごとの売上合計が表示されます。  
   
-## <a name="Width"></a>5.列幅を変更する  
+## <a name="5-change-column-widths"></a><a name="Width"></a>5.列幅を変更する  
 通常、マトリックスを含むレポートは、実行すると、水平方向と垂直方向に拡張されます。 水平方向の拡張の制御は、印刷レポートに使用される Microsoft Word や Adobe PDF などの形式にレポートをエクスポートする場合、特に重要です。 レポートが複数のページにまたがって水平方向に拡張される場合、印刷レポートは理解しにくくなります。 水平方向の拡張を最小限に抑えるには、列のサイズを変更して、折り返しをしないでデータを表示できるだけの幅にします。 また、列の名前を変更して、タイトルがデータの表示に必要な幅に収まるようにすることもできます。  
   
 ### <a name="to-rename-and-resize-the-columns"></a>列の名前とサイズを変更するには  
@@ -245,7 +245,7 @@ ms.locfileid: "63294670"
   
 数量を含む列は幅が狭くなり、名前が QTY になりました。  
   
-## <a name="MergeCells"></a>6.マトリックス セルを結合する  
+## <a name="6-merge-matrix-cells"></a><a name="MergeCells"></a>6.マトリックス セルを結合する  
 コーナー領域は、マトリックスの左上隅にあります。 マトリックス内の行グループと列グループの数に応じて、コーナー領域にセル数は変わります。 このチュートリアルで作成するマトリックスには、コーナー領域に 4 つのセルがあります。 これらのセルは、行グループと列グループの階層の深さに対応して、2 行 2 列で表示されています。 これらの 4 つのセルはこのレポートでは使用されないので、結合して 1 つのセルにします。  
   
 ### <a name="to-merge-matrix-cells"></a>マトリックス セルを結合するには  
@@ -268,7 +268,7 @@ ms.locfileid: "63294670"
   
 マトリックスの上隅のセルは表示されなくなりました。 
   
-## <a name="HeaderTitle"></a>7.レポート ヘッダーおよびレポート タイトルを追加する  
+## <a name="7-add-a-report-header-and-report-title"></a><a name="HeaderTitle"></a>7.レポート ヘッダーおよびレポート タイトルを追加する  
 レポート タイトルは、レポートの最上部に表示されます。 レポート ヘッダーがあれば、そこにレポート タイトルを配置します。レポート ヘッダーを使用しない場合は、レポート本文の一番上のテキスト ボックスに配置します。 このチュートリアルでは、レポートの一番上に配置されているテキスト ボックスを削除し、ヘッダーにタイトルを追加します。  
   
 ### <a name="to-add-a-report-header-and-report-title"></a>レポート ヘッダーおよびレポート タイトルを追加するには  
@@ -293,7 +293,7 @@ ms.locfileid: "63294670"
   
 レポートのレポート ヘッダーにレポート タイトルが表示されます。  
   
-## <a name="Save"></a>8.レポートを保存する  
+## <a name="8-save-the-report"></a><a name="Save"></a>8.レポートを保存する  
 レポートは、レポート サーバー、SharePoint ライブラリ、またはコンピューターに保存することができます。  
   
 このチュートリアルでは、レポートをレポート サーバーに保存します。 レポート サーバーにアクセスできない場合は、レポートをコンピューターに保存してください。  
@@ -324,7 +324,7 @@ ms.locfileid: "63294670"
   
 4.  **[保存]** をクリックします。  
   
-## <a name="RotateTextBox"></a>9.(省略可) テキスト ボックスを 270 度回転させる  
+## <a name="9-optional-rotate-text-box-270-degrees"></a><a name="RotateTextBox"></a>9.(省略可) テキスト ボックスを 270 度回転させる  
 マトリックスを含むレポートは、実行すると、水平方向と垂直方向に拡張されます。 テキストボックスを垂直方向に、つまり 270 度回転させると、水平方向のスペースを節約できます。 表示レポートの幅は狭くなり、Microsoft Word などの形式にエクスポートした場合は、印刷ページ内に収まる可能性が高くなります。  
   
 テキスト ボックスでも、テキストを水平方向または垂直方向 (上から下) に表示できます。 詳細については、「[テキスト ボックス (レポート ビルダーおよび SSRS)](../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)」を参照してください。  

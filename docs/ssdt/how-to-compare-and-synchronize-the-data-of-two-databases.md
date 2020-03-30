@@ -15,10 +15,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: c53dc1e11d242d6864525aba677e78c67671277c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75241580"
 ---
 # <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>2 つのデータベースのデータを比較および同期する方法
@@ -41,7 +41,7 @@ ms.locfileid: "75241580"
 > [!NOTE]  
 > 2 つのデータベース、または同一データベースの 2 つのバージョンの*スキーマ*も比較できます。 詳しくは、「[スキーマ比較を使用して各種のデータベース定義を比較する方法](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)」をご覧ください。  
   
-## <a name="CompareDatabaseData"></a>データベース データの比較  
+## <a name="comparing-database-data"></a><a name="CompareDatabaseData"></a>データベース データの比較  
   
 #### <a name="to-compare-data-by-using-the-new-data-comparison-wizard"></a>新しいデータの比較ウィザードを使用してデータを比較するには  
   
@@ -87,7 +87,7 @@ ms.locfileid: "75241580"
   
     指定したソース データベースとターゲット データベースのデータが比較されます。 結果が [データ比較] セッションに表示されます。 結果の表示方法またはデータの同期方法について詳しくは、「[データの差異の表示](#ViewDifferences)」および「[データベース データの同期](#Synchronize)」をご覧ください。  
   
-## <a name="ViewDifferences"></a>データの差異の表示  
+## <a name="viewing-data-differences"></a><a name="ViewDifferences"></a>データの差異の表示  
 2 つのデータベースのデータを比較すると、[データ比較] ボックスには、比較した各*データベース オブジェクト*とその状態が一覧表示されます。 各オブジェクト内のレコードの結果を状態別にグループ化して表示することもできます。 状態の指定について詳しくは、「[1 つ以上のテーブルのデータを参照データベースのデータと比較して同期する](../ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md)」をご覧ください。  
   
 差異を表示した後、異なる、欠落している、または新しいオブジェクトまたはレコードの一部またはすべてについて、ソースと一致するようにターゲットを更新できます。 詳しくは、「[データベース データの同期](#Synchronize)」をご覧ください。  
@@ -102,7 +102,7 @@ ms.locfileid: "75241580"
   
     -   特定のオブジェクト内のレコードの結果を表示するには、メインの結果ペインでオブジェクトをクリックし、レコード ビュー ペインでタブをクリックします。 各タブには、そのオブジェクト内で特定の状態 (不一致、ソースのみに存在、ターゲットのみに存在、または一致) にあるすべてのレコードが表示されます。 データは、レコードおよび列ごとに表示されます。  
   
-## <a name="Synchronize"></a>データベース データの同期  
+## <a name="synchronizing-database-data"></a><a name="Synchronize"></a>データベース データの同期  
 2 つのデータベースのデータを比較した後、ソースと一致するようにターゲットの全体または一部を更新して、2 つのデータベースを同期できます。 テーブルとビューという 2 種類のデータベース オブジェクトのデータを比較できます。  
   
 #### <a name="to-update-target-data-by-using-the-write-updates-command"></a>[更新の書き込み] コマンドを使用してターゲット データを更新するには  

@@ -10,10 +10,10 @@ ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
 ms.openlocfilehash: 4e55f9ba41036a5bd0ee806b8b45ee1fde8dc49f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76542127"
 ---
 # <a name="install-packages-with-python-tools-on-sql-server"></a>Python ツールを使用して SQL Server 上にパッケージをインストールする
@@ -58,7 +58,7 @@ ms.locfileid: "76542127"
 
 インターネットにアクセスできないサーバーに Python パッケージをインストールする場合は、インターネットにアクセスできるコンピューターから WHL ファイルをダウンロードしてから、そのファイルをサーバーにコピーする必要があります。
 
-たとえば、インターネットに接続されたコンピューターには、サイト [https://cntk.ai/PythonWheel/CPU-Only](https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl) からファイル `cntk-2.1-cp35-cp35m-win_amd64.whl` をダウンロードし、そのファイルを SQL Server コンピューターのローカル フォルダーにコピーできます。
+たとえば、インターネットに接続されたコンピューターには、サイト `cntk-2.1-cp35-cp35m-win_amd64.whl`[https://cntk.ai/PythonWheel/CPU-Only からファイル ](https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl) をダウンロードし、そのファイルを SQL Server コンピューターのローカル フォルダーにコピーできます。
 
 > [!IMPORTANT]
 > 必ず Windows バージョンのパッケージを入手します。 ファイルの末尾が .gz の場合は、正しいバージョンではない可能性があります。
@@ -80,10 +80,10 @@ cd "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES"
 
 ### <a name="install-the-package-using-pip"></a>pip を使用してパッケージをインストールする
 
-**pip** インストーラーを使用して、新しいパッケージをインストールします。 `PYTHON_SERVICES` フォルダーの `Scripts` サブフォルダーに `pip.exe` があります。 SQL Server のセットアップでは、システム パスに `Scripts` サブフォルダーは追加されないため、完全なパスを指定するか、Windows で PATH 変数に Scripts フォルダーを追加できます。
+**pip** インストーラーを使用して、新しいパッケージをインストールします。 `pip.exe` フォルダーの `Scripts` サブフォルダーに `PYTHON_SERVICES` があります。 SQL Server のセットアップでは、システム パスに `Scripts` サブフォルダーは追加されないため、完全なパスを指定するか、Windows で PATH 変数に Scripts フォルダーを追加できます。
 
 > [!NOTE]
-> Visual Studio 2017 を使用している場合、または Python 拡張機能と共に Visual Studio 2015 を使用している場合は、 **[Python 環境]** ウィンドウから `pip install` を実行できます。 **[パッケージ]** をクリックし、インストールするパッケージの名前または場所をテキスト ボックスに入力します。 「`pip install`」と入力する必要はありません。自動的に入力されます。
+> Visual Studio 2017 を使用している場合、または Python 拡張機能と共に Visual Studio 2015 を使用している場合は、`pip install`[Python 環境]**ウィンドウから** を実行できます。 **[パッケージ]** をクリックし、インストールするパッケージの名前または場所をテキスト ボックスに入力します。 「`pip install`」と入力する必要はありません。自動的に入力されます。
 
 + コンピューターからインターネットにアクセスできる場合は、パッケージの名前を指定します。
 

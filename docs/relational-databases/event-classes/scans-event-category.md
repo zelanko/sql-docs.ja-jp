@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4aad7f741d5a2a509c9be67cea7636942204399b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67911239"
 ---
 # <a name="scans-event-category"></a>Scans イベント カテゴリ
@@ -27,7 +27,7 @@ ms.locfileid: "67911239"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[Scan:Started イベント クラス](../../relational-databases/event-classes/scan-started-event-class.md)|テーブル スキャンまたはインデックス スキャンが開始したことを示します。|  
 |[Scan:Stopped イベント クラス](../../relational-databases/event-classes/scan-stopped-event-class.md)|テーブル スキャンまたはインデックス スキャンが停止したことを示します。|  

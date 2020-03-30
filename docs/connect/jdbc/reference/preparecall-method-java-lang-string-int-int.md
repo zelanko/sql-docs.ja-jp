@@ -16,16 +16,16 @@ ms.assetid: 04d36a25-7f95-4675-9690-4462671b3d67
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7b51cbe470169459469959448208b3aa53b18cce
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67976256"
 ---
 # <a name="preparecall-method-javalangstring-int-int"></a>prepareCall (java.lang.String, int, int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  渡された結果セットの種類およびコンカレンシーの [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトを生成する [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) オブジェクトを作成します。  
+  渡された結果セットの種類およびコンカレンシーの [SQLServerResultSet](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) オブジェクトを生成する [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトを作成します。  
   
 ## <a name="syntax"></a>構文  
   

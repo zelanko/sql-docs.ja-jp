@@ -10,10 +10,10 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1352a7f469e72100f7a2e0573c87cbb8422fe413
-ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77608489"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>SQL Server のオフライン ヘルプとヘルプ ビューアー
@@ -49,7 +49,7 @@ Microsoft ヘルプ ビューアーには 2 つのメジャー バージョン�
 
 ## <a name="use-help-viewer-v2x"></a>ヘルプ ビューアー v2.x を使用する
 
-この方法では、ヘルプ ビューアー 2.3 以降が推奨されます。 [最新バージョンの SSMS.exe](../ssms/download-sql-server-management-studio-ssms.md) の **[ヘルプ]** メニューで、2.3 以降が提供されています。
+この方法では、ヘルプ ビューアー 2.3 以降が推奨されます。 **最新バージョンの SSMS.exe** の [[ヘルプ]](../ssms/download-sql-server-management-studio-ssms.md) メニューで、2.3 以降が提供されています。
 
 ### <a name="to-download-and-install-offline-help-content-with-help-viewer-v2x"></a>ヘルプ ビューアー v2.x を使用してオフライン ヘルプ コンテンツをダウンロードしてインストールするには
 

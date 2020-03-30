@@ -9,10 +9,10 @@ ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fb4fe31bfddb1c2312ae7e99e8a53609b5e5d70c
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79112356"
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Power Pivot の接続の種類 (SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "79112356"
 ## <a name="connection-string"></a>接続文字列  
  接続文字列は、SharePoint の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーまたはその他のライブラリにパブリッシュされた [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックの URL です (例: `https://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx`)。  
   
-## <a name="credentials"></a>資格情報  
+## <a name="credentials"></a>[資格情報]  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックおよび SharePoint サイトへのアクセスに必要な資格情報を指定します (Windows 認証 (統合セキュリティ) など)。 詳細については、「[データ接続文字列を作成する - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」または「[レポート データ ソースに関する資格情報と接続情報を指定する](specify-credential-and-connection-information-for-report-data-sources.md)」を参照してください。  
   
 ## <a name="queries"></a>クエリ  

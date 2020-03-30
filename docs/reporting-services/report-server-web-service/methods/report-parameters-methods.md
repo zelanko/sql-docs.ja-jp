@@ -13,16 +13,16 @@ ms.assetid: cedf68af-646a-47e4-9fbb-39b5dc3de235
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e510bb9509d8c643eab4240f66af44c457e19a7f
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79198349"
 ---
 # <a name="report-parameters-methods"></a>レポート パラメーターのメソッド
   これらのメソッドを使用して、レポートのパラメーターを設定および取得できます。  
   
-|Method|アクション|  
+|方法|アクション|  
 |------------|------------|  
 |<xref:ReportService2010.ReportingService2010.GetItemParameters%2A>|指定したアイテムのアイテム パラメーター プロパティを返します。 このメソッドは、アイテムのパラメーターで指定したパラメーター値を検証するために使用することもできます。|  
 |<xref:ReportService2010.ReportingService2010.ListParameterStates%2A>|サポートされているパラメーターの状態の一覧を返します。|  

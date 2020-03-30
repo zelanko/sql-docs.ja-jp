@@ -11,10 +11,10 @@ ms.assetid: e136b87c-a138-45d6-8c3e-bcef94b7e483
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d4021211b212ace43257637dad348a0da1e82f21
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76910736"
 ---
 # <a name="sample-jdbc-driver-applications"></a>サンプル JDBC ドライバー アプリケーション
@@ -39,7 +39,7 @@ ms.locfileid: "76910736"
 | [データ型の処理 &#40;JDBC&#41;](../../../connect/jdbc/code-samples/working-with-data-types-jdbc.md)                        | これらのサンプル アプリケーションは、JDBC ドライバーのデータ型のメソッドを使用して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベース内のデータを処理する方法を示します。                                                                                              |
 | [結果セットの処理](../../../connect/jdbc/code-samples/working-with-result-sets.md)                                          | これらのサンプル アプリケーションは、結果セットを使用して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースに含まれるデータを処理する方法を示します。                                                                                                            |
 | [大きなデータの処理](../../../connect/jdbc/code-samples/working-with-large-data.md)                                            | これらのサンプル アプリケーションは、アダプティブ バッファリングを使用して、サーバー カーソルのオーバーヘッドを発生させることなく、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースから大きな値のデータを取得する方法を示します。                                                         |
-| [SQL データの検出と分類](../../jdbc/code-samples/data-discovery-and-classification-sample.md) | このサンプル アプリケーションでは、JDBC Driver を使用して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースに格納されているデータの検出と分類の情報を ResultSet オブジェクトから取得する方法を示します。                                            |
+| [SQL データの検出と分類](../../jdbc/code-samples/data-discovery-and-classification-sample.md) | このサンプル アプリケーションでは、JDBC ドライバーを使用して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースに格納されているデータの検出と分類の情報を ResultSet オブジェクトから取得する方法を示します。                                            |
   
 ## <a name="see-also"></a>参照
 

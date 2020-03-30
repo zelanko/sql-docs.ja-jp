@@ -14,10 +14,10 @@ ms.assetid: cb70d0cd-707b-4de5-b39f-e4eb57d316aa
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d0a096fd9dcb292f1a71b74aaf853abcbd7c02ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082308"
 ---
 # <a name="commonly-used-filters-report-builder-and-ssrs"></a>一般的に使用されるフィルター (レポート ビルダーおよび SSRS)
@@ -29,7 +29,7 @@ ms.locfileid: "77082308"
 ## <a name="filter-examples"></a>フィルターの例  
  次の表は、さまざまなデータ型と演算子を使用するフィルター式の例を示します。 比較のスコープは、フィルターが定義されたレポート アイテムによって決まります。 たとえば、データセットに定義されたフィルターの場合、 **[上位 10%]** はデータセットの値の上位 10% になります。グループに定義されたフィルターの場合、 **[上位 10%]** はグループの値の上位 10% になります。  
   
-|単純式|データ型|演算子|Value|説明|  
+|単純式|データ型|演算子|値|説明|  
 |-----------------------|---------------|--------------|-----------|-----------------|  
 |`[SUM(Quantity)]`|**整数**|**>**|`7`|7 より大きいデータ値が含まれます。|  
 |`[SUM(Quantity)]`|**整数**|**TOP N**|`10`|上位 10 データ値が含まれます。|  
@@ -44,7 +44,7 @@ ms.locfileid: "77082308"
 ## <a name="examples-with-report-parameters"></a>レポート パラメーターの例  
  次の表は、単一値か複数値のパラメーター参照を含むフィルター式の例を示します。  
   
-|パラメーターのタイプ|(フィルター) 式|演算子|Value|データ型|  
+|パラメーターのタイプ|(フィルター) 式|演算子|値|データ型|  
 |--------------------|---------------------------|--------------|-----------|---------------|  
 |単一値|`[EmployeeID]`|=|`[@EmployeeID]`|整数|  
 |MultiValue|`[EmployeeID]`|IN|`[@EmployeeID]`|整数|  

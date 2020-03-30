@@ -11,10 +11,10 @@ ms.assetid: 1c006f27-7e99-43d5-974c-7b782659290c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: efafaa709666620e7237f2481c392aba25dfd5f8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69026832"
 ---
 # <a name="using-a-stored-procedure-with-output-parameters"></a>出力パラメーターがあるストアド プロシージャの使用
@@ -23,14 +23,14 @@ ms.locfileid: "69026832"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ストアド プロシージャのうち、呼び出すことができるのは、OUT パラメーター (呼び出し元のアプリケーションにデータを返す目的で使用されるパラメーター) を少なくとも 1 つ返すストアド プロシージャです。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] が提供する [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) クラスを使用することで、この種類のストアド プロシージャを呼び出し、返されるデータを処理することができます。
 
-JDBC ドライバーを使用してこの種類のストアド プロシージャを呼び出す場合は、`call` SQL エスケープ シーケンスを、[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) クラスの [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) メソッドと一緒に使用する必要があります。 OUT パラメーターを持つ `call` エスケープ シーケンスの構文は次のとおりです。
+JDBC ドライバーを使用してこの種類のストアド プロシージャを呼び出す場合は、`call` SQL エスケープ シーケンスを、[SQLServerConnection](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) クラスの [prepareCall](../../connect/jdbc/reference/sqlserverconnection-class.md) メソッドと一緒に使用する必要があります。 OUT パラメーターを持つ `call` エスケープ シーケンスの構文は次のとおりです。
 
 `{call procedure-name[([parameter][,[parameter]]...)]}`
 
 > [!NOTE]  
 > SQL エスケープ シーケンスの詳細については、「[SQL エスケープシーケンスの使用](../../connect/jdbc/using-sql-escape-sequences.md)」を参照してください。
 
-`call` エスケープ シーケンスを作成する場合、OUT パラメーターは ?  (疑問符) 文字で指定します。 この文字は、ストアド プロシージャから返されるパラメーター値のプレースホルダーになります。 OUT パラメーターの値を指定するには、ストアド プロシージャを実行する前に、SQLServerCallableStatement クラスの [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) メソッドを使用して、各パラメーターのデータ型を指定する必要があります。
+`call` エスケープ シーケンスを作成する場合、OUT パラメーターは ? (疑問符) 文字で指定します。 この文字は、ストアド プロシージャから返されるパラメーター値のプレースホルダーになります。 OUT パラメーターの値を指定するには、ストアド プロシージャを実行する前に、SQLServerCallableStatement クラスの [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) メソッドを使用して、各パラメーターのデータ型を指定する必要があります。
 
 registerOutParameter メソッドで OUT パラメーターに指定する値は、java.sql.Types に含まれる JDBC データ型のいずれかである必要があります。この値は、ネイティブの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型の 1 つに順にマップされます。 JDBC データ型と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型の詳細については、「[JDBC ドライバーのデータ型について](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)」を参照してください。
 

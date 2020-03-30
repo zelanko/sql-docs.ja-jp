@@ -9,10 +9,10 @@ ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9355ac713c502acbbd319ec7bdc9cb035079ca34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081685"
 ---
 # <a name="xml-connection-type-ssrs"></a>XML の接続の種類 (SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "77081685"
   
  このトピックの情報を使用して、データ ソースを構築してください。 手順については、「 [データ接続を追加および確認する (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)」を参照してください。  
   
-##  <a name="Connection"></a> 接続文字列  
+##  <a name="connection-string"></a><a name="Connection"></a> 接続文字列  
  接続文字列を、HTTP 経由でアクセス可能な Web サービス、Web ベース アプリケーション、または XML ドキュメントを指す URL に設定する必要があります。 XML ドキュメントの拡張子は XML にする必要があります。 データセット クエリに埋め込まれた XML データに対し、空の接続文字列を使用することもできます。  
   
  次の例に、それぞれ Web サービスと XML ドキュメントに対する接続文字列の構文を示します。 `file://` プロトコルはサポートされません。  
@@ -35,7 +35,7 @@ ms.locfileid: "77081685"
   
  接続文字列の例について詳しくは、「 [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」をご覧ください。  
   
-##  <a name="Credentials"></a> [資格情報]  
+##  <a name="credentials"></a><a name="Credentials"></a> [資格情報]  
  クエリの実行、ローカルでのレポートのプレビュー、およびレポート サーバーからのレポートのプレビューには、資格情報が必要です。  
   
  レポートをパブリッシュした後、レポートをレポート サーバーで実行するときに、データを取得するための権限が有効な状態になるように、データ ソースの資格情報を変更する必要が生じる場合があります。  
@@ -50,7 +50,7 @@ ms.locfileid: "77081685"
   
  詳細については、「[データ接続文字列を作成する - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」または「[レポート データ ソースに関する資格情報と接続情報を指定する](specify-credential-and-connection-information-for-report-data-sources.md)」を参照してください。  
   
-##  <a name="Query"></a> クエリ  
+##  <a name="queries"></a><a name="Query"></a> クエリ  
  クエリでは、レポート データセット用に取得するデータを指定します。 クエリの結果セットの列には、データセットのフィールド コレクションが設定されます。 レポートによって処理されるのは、クエリから取得された最初の結果セットだけです。  
   
  クエリを作成するにはテキスト ベースのクエリ デザイナーを使用する必要があります。 クエリでは XML データを返す必要があります。  
@@ -79,7 +79,7 @@ ms.locfileid: "77081685"
   
          `-- or --`  
   
-         `<SoapAction>`*SOAP アクション*`</SoapAction>`  
+         `<SoapAction>` *SOAP アクション* `</SoapAction>`  
   
          省略可能な XML 要素:  
   
@@ -93,7 +93,7 @@ ms.locfileid: "77081685"
   
     -   **XML データ ソースが XML ドキュメント**  
   
-         必須の XML 要素:なし  
+         必須の XML 要素: なし  
   
          省略可能な XML 要素:  
   
@@ -115,7 +115,7 @@ ms.locfileid: "77081685"
   
  クエリ構文の詳細については、「[XML レポート データの XML クエリ構文 &#40;SSRS&#41;](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md)」を参照してください。  
   
- 例については、「[Reporting Services:XML および Web サービス データ ソースを使用する](https://go.microsoft.com/fwlink/?LinkId=81654)」を参照してください。  
+ 例については、「 [Reporting Services: XML と Web サービス データ ソースの使用](https://go.microsoft.com/fwlink/?LinkId=81654)」を参照してください。  
   
 ### <a name="requirements-for-retrieving-xml-web-service-data"></a>XML Web サービスのデータを取得するための要件  
  これらは XML データ処理拡張機能では検出されません。 そのため、必要なデータを取得する SOAP メソッドを検索するための、なんらかの手段が必要です。 また、Web サービスがそのデータに対して使用するアドレス指定スキームや名前空間を把握しておく必要もあります。  
@@ -131,17 +131,17 @@ ms.locfileid: "77081685"
   
  詳細については、「[XML レポート データの要素パス構文 &#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md)」を参照してください。  
   
-##  <a name="Parameters"></a> パラメーター  
+##  <a name="parameters"></a><a name="Parameters"></a> パラメーター  
  クエリの解析時にパラメーターは識別されません。  
   
  パラメーターを追加するには、 **[データセットのプロパティ]** ダイアログ ボックスの [[パラメーター]](https://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda) ページを使用して手動で作成する必要があります。  
   
-##  <a name="Remarks"></a> 解説  
+##  <a name="remarks"></a><a name="Remarks"></a> 解説  
  XML データ拡張機能は、階層構造でない表形式の XML データからのレポート作成をサポートしています。 詳細については、「[外部データ ソースのデータを追加する (SSRS)](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)」を参照してください。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースから XML ドキュメントを取得するためのサポートは組み込まれていません。  
   
-##  <a name="HowTo"></a> 操作方法に関するトピック  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> 操作方法に関するトピック  
  データ接続、データ ソース、およびデータセットを操作する手順について説明します。  
   
  [データ接続を追加および確認する (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
@@ -150,13 +150,13 @@ ms.locfileid: "77081685"
   
  [データセットへのフィルターの追加 (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
-##  <a name="Related"></a> 関連項目  
+##  <a name="related-sections"></a><a name="Related"></a> 関連項目  
  次に示すセクションでは、レポート データの概念が詳細に説明されているほか、データに関連するレポートのパーツを定義し、カスタマイズし、使用する方法が説明されています。  
   
  [レポート データセット (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
  レポートのデータへのアクセスの概要について説明します。  
   
- [データ接続文字列を作成する - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [データ接続文字列の作成 - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  データ接続とデータ ソースについて説明します。  
   
  [レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

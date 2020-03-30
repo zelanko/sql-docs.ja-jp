@@ -16,10 +16,10 @@ ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2654fba3904788e1eefa2aaa17d4defbad4039a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082627"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) とは
@@ -83,7 +83,7 @@ Reporting Services は "従来の" ページ分割されたレポートと関連
 
 ネイティブ モードの Reporting Services のエンド ユーザーにとっての入り口は、最新のブラウザーで表示できる最新の Web ポータルです。 新しいポータルからは、Reporting Services のモバイル レポート、ページ分割されたレポート、KPI のすべてにアクセスできます。 KPI を使うと、レポートを開かなくても、主要なビジネス指標をブラウザーで簡単に見ることができます。
 
-新しい Web サイトは、レポート マネージャーを完全に書き直したものです。 単一ページで標準ベースの HTML5 アプリであり、すべての主要な最新ブラウザーが最適化されています。具体的には、Microsoft Edge、Internet Explorer 10 と 11、Chrome、Firefox、Safari などのすべての主要ブラウザーです。
+新しい Web サイトは、レポート マネージャーを完全に書き直したものです。 それは、単一ページで標準ベースの HTML5 アプリであり、その最新ブラウザーは、Microsoft Edge、Internet Explorer 10 と 11、Chrome、Firefox、Safari、およびすべての主要なブラウザー用に最適化されています。
 
 Web ポータルのコンテンツは、種類別に整理されます。つまり、
 

@@ -10,10 +10,10 @@ ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 64799766b8b9d69a5577fd589c8f610be75ebb8f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74479402"
 ---
 # <a name="tips-for-using-r-packages"></a>R パッケージを使用するためのヒント
@@ -34,7 +34,7 @@ R パッケージは、他の複数のパッケージに依存していること
 
 ### <a name="package-sources-versions-and-formats"></a>パッケージのソース、バージョン、および形式
 
-[CRAN](https://cran.r-project.org/) や [Bioconductor](https://www.bioconductor.org/) など、R パッケージには複数のソースがあります。 R 言語の公式サイト (<https://www.r-project.org/>) には、このようなリソースの多くが掲載されています。 Microsoft は、オープンソース R ([MRO](https://mran.microsoft.com/open)) やその他のパッケージの配布用に [MRAN](https://mran.microsoft.com/) を提供しています。 多くのパッケージは GitHub に公開されており、開発者はそこでソース コードを入手できます。
+[CRAN](https://cran.r-project.org/) や [Bioconductor](https://www.bioconductor.org/) など、R パッケージには複数のソースがあります。 R 言語の公式サイト (<https://www.r-project.org/>) には、このようなリソースの多くが掲載されています。 Microsoft は、オープンソース R ([MRO](https://mran.microsoft.com/)) やその他のパッケージの配布用に [MRAN](https://mran.microsoft.com/open) を提供しています。 多くのパッケージは GitHub に公開されており、開発者はそこでソース コードを入手できます。
 
 ::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 R パッケージは複数のコンピューティング プラットフォームで動作します。 インストールするバージョンが Windows バイナリであることを確認してください。

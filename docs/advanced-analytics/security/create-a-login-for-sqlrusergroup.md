@@ -9,16 +9,16 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: a5194f251b7ea47e0d9485446b8957e96037ded0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68714960"
 ---
 # <a name="create-a-login-for-sqlrusergroup"></a>SQLRUserGroup のログインｎ作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-スクリプト内の[ループ バック接続](../../advanced-analytics/concepts/security.md#implied-authentication)が*信頼関係接続*を指定するとき、[SQLRUserGroup](../concepts/security.md#sqlrusergroup) のための [SQL Server へのログイン](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/create-a-login)を作成すると、あなたのコードを含むオブジェクトの実行に使用される ID は Windows のユーザー アカウントです。
+スクリプト内の[ループ バック接続](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/create-a-login)が[信頼関係接続](../concepts/security.md#sqlrusergroup)を指定するとき、[SQLRUserGroup](../../advanced-analytics/concepts/security.md#implied-authentication) のための *SQL Server へのログイン*を作成すると、あなたのコードを含むオブジェクトの実行に使用される ID は Windows のユーザー アカウントです。
 
 信頼関係接続とは、接続文字列に `Trusted_Connection=True` を持つ接続のことです。 SQL Server が信頼関係接続を指定する要求を受信すると、現在の Windows ユーザーの ID にログインがあるかどうかを確認します。 ワーカー アカウント (**SQLRUserGroup** からの MSSQLSERVER01 など) として実行されている外部プロセスの場合、既定ではこれらのアカウントにはログインがないため、要求は失敗します。
 
@@ -31,19 +31,19 @@ ms.locfileid: "68714960"
 
 1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のオブジェクト エクスプローラーで、 **[セキュリティ]** を展開し、 **[ログイン]** を右クリックして、 **[新しいログイン]** を選択します。
 
-2. **[ログイン - 新規作成]** ダイアログ ボックスで、**[検索]** をクリックします。 (まだボックスに何も入力しないでください)。
+2. **[ログイン - 新規作成]** ダイアログ ボックスで、 **[検索]** をクリックします。 (まだボックスに何も入力しないでください)。
     
      ![[検索] をクリックして機械学習用の新しいログインを追加する](media/implied-auth-login1.png "[検索] をクリックして機械学習用の新しいログインを追加する")
 
-3. **[ユーザーまたはグループの選択]** ボックスで、**[オブジェクトの種類]** ボタンをクリックします。
+3. **[ユーザーまたはグループの選択]** ボックスで、 **[オブジェクトの種類]** ボタンをクリックします。
 
      ![[オブジェクトの種類] を検索して機械学習用の新しいログインを追加する](media/implied-auth-login2.png "[オブジェクトの種類] を検索して機械学習用の新しいログインを追加する")
 
-4. **[オブジェクトの種類]** ダイアログ ボックスで、**[グループ]** を選択します。 他のチェック ボックスはすべてオフにします。
+4. **[オブジェクトの種類]** ダイアログ ボックスで、 **[グループ]** を選択します。 他のチェック ボックスはすべてオフにします。
 
      ![[オブジェクトの種類] ダイアログ ボックスでグループを選択する](media/implied-auth-login3.png "[オブジェクトの種類] ダイアログ ボックスでグループを選択する")
 
-4. **[詳細]** をクリックして、検索する場所が現在のコンピューターであることを確認し、**[検索開始]** をクリックします。
+4. **[詳細]** をクリックして、検索する場所が現在のコンピューターであることを確認し、 **[検索開始]** をクリックします。
 
      ![[検索開始] をクリックしてグループの一覧を取得する](media/implied-auth-login4.png "[検索開始] をクリックしてグループの一覧を取得する")
 
@@ -59,9 +59,9 @@ ms.locfileid: "68714960"
     > [!IMPORTANT]
     > インスタンスに適切なアカウントを選択していることを確認してください。 各インスタンスは、独自の Launchpad サービスと、そのサービス用に作成されたグループのみを使用できます。 インスタンスは、Launchpad サービスまたはワーカー アカウントを共有できません。
 
-6. **[OK]** をもう一度クリックして、**[ユーザーまたはグループの選択]** ダイアログ ボックスを閉じます。
+6. **[OK]** をもう一度クリックして、 **[ユーザーまたはグループの選択]** ダイアログ ボックスを閉じます。
 
-7. **[ログイン - 新規作成]** ダイアログ ボックスで、**[OK]** をクリックします。 既定では、ログインは **Public** ロールに割り当てられ、データベース エンジンに接続するためのアクセス許可を与えられます。
+7. **[ログイン - 新規作成]** ダイアログ ボックスで、 **[OK]** をクリックします。 既定では、ログインは **Public** ロールに割り当てられ、データベース エンジンに接続するためのアクセス許可を与えられます。
 
 ## <a name="next-steps"></a>次のステップ
 

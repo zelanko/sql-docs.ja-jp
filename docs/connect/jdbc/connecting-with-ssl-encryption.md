@@ -11,10 +11,10 @@ ms.assetid: ec91fa8a-ab7e-4c1e-a05a-d7951ddf33b1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cff4228404690147d97a44f6f5dd43b1a180153c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "71713294"
 ---
 # <a name="connecting-with-encryption"></a>暗号化を使用した接続
@@ -61,7 +61,7 @@ String connectionUrl =
 ```  
   
 > [!NOTE]  
->  または、[SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) クラスによって提供される適切な **setter** メソッドを使用して、接続プロパティの値を設定することもできます。  
+>  または、**SQLServerDataSource** クラスによって提供される適切な [setter](../../connect/jdbc/reference/sqlserverdatasource-class.md) メソッドを使用して、接続プロパティの値を設定することもできます。  
   
  **encrypt** プロパティが **true** に設定され、**trustServerCertificate** プロパティが **false** に設定され、接続文字列のサーバー名が TLS 証明書のサーバー名に一致しない場合は、次のエラーが発行されます: `The driver couldn't establish a secure connection to SQL Server by using Secure Sockets Layer (SSL) encryption. Error: "java.security.cert.CertificateException: Failed to validate the server name in a certificate during Secure Sockets Layer (SSL) initialization."`。 バージョン 7.2 では、ドライバーにより、TLS 証明書のサーバー名の左端のラベルでのワイルドカードのパターン マッチングがサポートされます。
 

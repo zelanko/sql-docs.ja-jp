@@ -9,10 +9,10 @@ ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d5ef615a05648e2a5873e48371b1f1edaf754664
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081317"
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>レポート ビルダー関数 - 集計関数リファレンス
@@ -47,7 +47,7 @@ ms.locfileid: "77081317"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="CalculatingAggregates"></a> 組み込み集計関数  
+##  <a name="built-in-aggregate-functions"></a><a name="CalculatingAggregates"></a> 組み込み集計関数  
  次の組み込み関数は、既定のスコープまたは名前付きスコープ内の NULL 以外の一連の数値データの集約値を計算します。  
   
 |**Function**|**説明**|  
@@ -66,7 +66,7 @@ ms.locfileid: "77081317"
   
  ![[トップに戻る] リンクで使用される矢印アイコン](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン")トップに戻る  
   
-##  <a name="Restrictions"></a> 組み込みフィールド、コレクション、および集計関数に関する制限  
+##  <a name="restrictions-on-built-in-fields-collections-and-aggregate-functions"></a><a name="Restrictions"></a> 組み込みフィールド、コレクション、および集計関数に関する制限  
  以下の表には、グローバル組み込みコレクションの参照を含む式を追加できるレポートの場所に関する制限をまとめています。  
   
 |レポート内の場所|フィールド|パラメーター|ReportItems|PageNumber<br /><br /> TotalPages|DataSource<br /><br /> DataSet|変数:|RenderFormat|  
@@ -103,7 +103,7 @@ ms.locfileid: "77081317"
   
  ![[トップに戻る] リンクで使用される矢印アイコン](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン")トップに戻る  
   
-##  <a name="NestedRestrictions"></a> 入れ子集計に関する制限  
+##  <a name="restrictions-on-nested-aggregates"></a><a name="NestedRestrictions"></a> 入れ子集計に関する制限  
  以下の表には、集計関数に入れ子集計として別の集計関数を指定する際の制限をまとめています。  
   
 |Context|RunningValue|RowNumber|First (先頭へ)<br /><br /> Last (最後へ)|Previous|Sum およびその他の事前並べ替え関数|ReportItem の集計|参照関数|集計関数|  
@@ -120,7 +120,7 @@ ms.locfileid: "77081317"
   
  ![[トップに戻る] リンクで使用される矢印アイコン](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン")トップに戻る  
   
-##  <a name="CalculatingRunningValues"></a> 実行中の値の計算  
+##  <a name="calculating-running-values"></a><a name="CalculatingRunningValues"></a> 実行中の値の計算  
  次の組み込み関数は、データのセットの実行中の値を計算します。 **RowNumber** は、コンテナー スコープ内の行ごとに増加するカウントの実行中の値を返す点で、 **RunningValue** に似ています。 これらの関数のスコープのパラメーターでは、カウントが再開されるタイミングを制御するコンテナー スコープを指定する必要があります。  
   
 |**Function**|**説明**|  
@@ -130,7 +130,7 @@ ms.locfileid: "77081317"
   
  ![[トップに戻る] リンクで使用される矢印アイコン](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン")トップに戻る  
   
-##  <a name="RetrievingRowCounts"></a> 行数の取得  
+##  <a name="retrieving-row-counts"></a><a name="RetrievingRowCounts"></a> 行数の取得  
  次の組み込み関数は、指定されたスコープの行数を計算します。 この関数を使用すると、NULL 値の行を含め、すべての行がカウントされます。  
   
 |**Function**|**説明**|  
@@ -139,7 +139,7 @@ ms.locfileid: "77081317"
   
  ![[トップに戻る] リンクで使用される矢印アイコン](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン")トップに戻る  
   
-##  <a name="LookupFunctions"></a> 別のデータセットの値の参照  
+##  <a name="looking-up-values-from-another-dataset"></a><a name="LookupFunctions"></a> 別のデータセットの値の参照  
  次の参照関数では、指定されたデータセットから値を取得します。  
   
 |**Function**|**説明**|  
@@ -150,7 +150,7 @@ ms.locfileid: "77081317"
   
  ![[トップに戻る] リンクで使用される矢印アイコン](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン")トップに戻る  
   
-##  <a name="RetrievingPostsortValues"></a> 並べ替え依存の値の取得  
+##  <a name="retrieving-sort-dependent-values"></a><a name="RetrievingPostsortValues"></a> 並べ替え依存の値の取得  
  次の組み込み関数は、指定されたスコープ内の最初、最後、または前の値を返します。 これらの関数は、データ値の並べ替え順序に依存します。 たとえば、これらの関数を使用すると、ページの最初の値と最後の値を検出して、辞書形式のページ ヘッダーを作成することができます。 また、 **Previous** を使用すると、特定のスコープ内のある行の値と前の行の値を比較し、テーブルの前年比の比率を検出する処理などを行うことができます。  
   
 |**Function**|**説明**|  
@@ -161,7 +161,7 @@ ms.locfileid: "77081317"
   
  ![[トップに戻る] リンクで使用される矢印アイコン](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン")トップに戻る  
   
-##  <a name="RetrievingServerAggregates"></a> サーバー集計値の取得  
+##  <a name="retrieving-server-aggregates"></a><a name="RetrievingServerAggregates"></a> サーバー集計値の取得  
  次の組み込み関数は、データ プロバイダーからカスタム集計を取得します。 たとえば、データ ソースの種類に [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を使用すると、グループ ヘッダーで使用するために、データ ソース サーバーで計算された集計を取得することができます。  
   
 |**Function**|**説明**|  
@@ -170,7 +170,7 @@ ms.locfileid: "77081317"
   
  ![[トップに戻る] リンクで使用される矢印アイコン](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン")トップに戻る  
   
-##  <a name="TestingforScope"></a> スコープのテスト  
+##  <a name="testing-for-scope"></a><a name="TestingforScope"></a> スコープのテスト  
  次の組み込み関数は、レポート アイテムの現在のコンテキストをテストし、それが特定のスコープのメンバーかどうかを確認します。  
   
 |Function|説明|  
@@ -179,7 +179,7 @@ ms.locfileid: "77081317"
   
  ![[トップに戻る] リンクで使用される矢印アイコン](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン")トップに戻る  
   
-##  <a name="RetrievingRecursiveLevel"></a> 再帰レベルの取得  
+##  <a name="retrieving-recursive-level"></a><a name="RetrievingRecursiveLevel"></a> 再帰レベルの取得  
  次の組み込み関数は、再帰型階層が処理されたときの現在のレベルを取得します。 テキスト ボックスの **Padding** プロパティに対してこの関数の結果を使用して、再帰グループの階層構造のインデント レベルを制御できます。 詳細については、「[複数の再帰型階層グループの作成 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)」を参照してください。  
   
 |Function|説明|  

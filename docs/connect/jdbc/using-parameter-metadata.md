@@ -11,10 +11,10 @@ ms.assetid: db2c1957-91c6-4989-a07b-9f8be6d2033a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 80ff8cebcc4141e8363c25f83821cb4924e6c46a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69026077"
 ---
 # <a name="using-parameter-metadata"></a>パラメーターのメタデータの使用
@@ -32,8 +32,8 @@ SQLServerParameterMetaData オブジェクトを作成するには、SQLServerPr
 > [!NOTE]  
 > 準備されたステートメントで SQLServerParameterMetaData クラスを使用する場合は、いくつかの制限があります。
 >
-> **6.0 (またはそれ以降) の Microsoft JDBC Driver for SQL Server の場合**:SELECT、DELETE、INSERT、UPDATE にサブクエリや結合が含まれていなければ、SQL Server 2008 または 2008 R2 を使用するとき、JDBC ドライバーはこれらのステートメントをサポートします。
+> **SQL Server 向け Microsoft JDBC Driver 6.0 (以上) を使用する場合**: SELECT、DELETE、INSERT、UPDATE にサブクエリや結合が含まれていなければ、SQL Server 2008 または 2008 R2 を使用するとき、JDBC ドライバーはこれらのステートメントをサポートします。
 
 SQL Server 2008 または 2008 R2 を使用するとき、SQLServerParameterMetaData クラスでは、MERGE クエリもサポートされません。 SQL Server 2012 以降のバージョンの場合、複雑なクエリを持つパラメーター メタデータがサポートされます。
 
-暗号化された列に対するパラメーターのメタデータの取得はサポートされていません。 **4.1 または 4.2 の Microsoft JDBC Driver for SQL Server の場合**:SELECT、DELETE、INSERT、UPDATE にサブクエリや結合が含まれていなければ、JDBC ドライバーはこれらのステートメントをサポートします。 SQLServerParameterMetaData クラスでは、MERGE クエリもサポートされません。
+暗号化された列に対するパラメーターのメタデータの取得はサポートされていません。 **SQL Server 向け Microsoft JDBC Driver 4.1 または 4.2 を使用する場合**: SELECT、DELETE、INSERT、UPDATE にサブクエリや結合が含まれていなければ、JDBC ドライバーはこれらのステートメントをサポートします。 SQLServerParameterMetaData クラスでは、MERGE クエリもサポートされません。

@@ -12,10 +12,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: f86af60001deb0991983fe17c3cf1cf9ba3f2552
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68893438"
 ---
 # <a name="performance-counters---reportserver-service--performance-objects"></a>パフォーマンス カウンター - ReportServer サービス、パフォーマンス オブジェクト
@@ -24,7 +24,7 @@ ms.locfileid: "68893438"
 > [!NOTE]  
 >  このパフォーマンス オブジェクトを使用して、ローカル レポート サーバー上のイベントを監視します。 スケールアウト配置でレポート サーバーを実行している場合、カウントはスケールアウト配置全体ではなく、現在のサーバーに適用されます。  
   
- パフォーマンス オブジェクトは、Windows パフォーマンス モニター (**Perfmon.exe**) で利用できます。 詳細については、Windows のマニュアルを参照してください。 [ランタイム プロファイリング](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx)。  
+ パフォーマンス オブジェクトは、Windows パフォーマンス モニター (**Perfmon.exe**) で利用できます。 詳細については、Windows のマニュアルを参照してください。 [ランタイム プロファイリング](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx) 。  
   
  このトピックの内容:  
   
@@ -36,10 +36,10 @@ ms.locfileid: "68893438"
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。  
   
-##  <a name="bkmk_ReportServer"></a> ReportServer:Service パフォーマンス カウンター (ネイティブ モードのレポート サーバー)  
+##  <a name="reportserverservice-performance-counters-native-mode-report-server"></a><a name="bkmk_ReportServer"></a> ReportServer:Service パフォーマンス カウンター (ネイティブ モードのレポート サーバー)  
  **ReportServer:Service** パフォーマンス オブジェクトには複数のカウンターが含まれおり、レポート サーバー インスタンスの HTTP 関連のイベントやメモリ関連のイベントの追跡に使用されます。 このパフォーマンス オブジェクトは、コンピューター上の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インスタンスごとに 1 つ存在します。各インスタンスのパフォーマンス オブジェクトに対して、カウンターを追加したり削除したりできます。 既定のインスタンスのカウンターは、 **ReportServer:Service**という形式で表示されます。 名前付きインスタンスのカウンターは、**ReportServer$\<***インスタンス名***>:Service** という形式で表示されます。  
   
- **ReportServer:Service** パフォーマンス オブジェクトは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の新機能で、以前のバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] でインターネット インフォメーション サービス (IIS) と [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] に含まれていたカウンターのサブセットを備えています。 これらは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]に固有の新しいカウンターです。要求、接続、ログオン試行など、レポート サーバーにおける HTTP 関連のイベントが追跡されます。 さらに、このパフォーマンス オブジェクトには、メモリ管理イベントを追跡するカウンターも含まれています。  
+ **ReportServer:Service** パフォーマンス オブジェクトは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の新機能で、以前のバージョンの [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] でインターネット インフォメーション サービス (IIS) と [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に含まれていたカウンターのサブセットを備えています。 これらは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]に固有の新しいカウンターです。要求、接続、ログオン試行など、レポート サーバーにおける HTTP 関連のイベントが追跡されます。 さらに、このパフォーマンス オブジェクトには、メモリ管理イベントを追跡するカウンターも含まれています。  
   
  次の表は、 **ReportServer:Service** パフォーマンス オブジェクトに含まれているカウンターの一覧です。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "68893438"
 |**Logon Attempts/sec**|ログオン試行の割合。|  
 |**Logon Successes Total**|RSWindows 認証タイプのログオンに成功した回数。 RSWindows 認証タイプには、RSWindowsNegotiate、RSWindowsNTLM、RSWindowsKerberos、RSWindowsBasic などがあります。 ゼロ (0) はカスタム認証を表します。|  
 |**Logon Successes/sec**|成功したログオンの割合。|  
-|**Memory Pressure State**|サーバーの現在のメモリの状態を示す 1 ～ 5 の数値。<br /><br /> 1:負荷なし<br /><br /> 2:低負荷<br /><br /> 3:中負荷<br /><br /> 4:高負荷<br /><br /> 5:負荷が限度を超えている|  
+|**Memory Pressure State**|サーバーの現在のメモリの状態を示す 1 ～ 5 の数値。<br /><br /> 1: 負荷なし<br /><br /> 2: 低負荷<br /><br /> 3: 中負荷<br /><br /> 4: 高負荷<br /><br /> 5: 負荷が限度を超えている|  
 |**Memory Shrink Amount**|使用メモリ量を縮小するためにサーバーが要求したバイト数。|  
 |**Memory Shrink Notifications/sec**|使用メモリ量を縮小するために、サーバーが直前の 1 秒間に送信した通知の数。 この値は、サーバーでメモリ不足が何回発生しているかを示しています。|  
 |**Requests Disconnected**|通信エラーのために切断された要求の数。|  
@@ -73,7 +73,7 @@ ms.locfileid: "68893438"
 |**要求数/秒**|1 秒あたりに処理された要求の数。 この値はアプリケーションの現在のスループットを表します。|  
 |**Tasks Queued**|スレッドが使用可能になるのを待機しているタスクの数。 レポート サーバーに対する要求は、それぞれ、1 つまたは複数のタスクと対応します。 このカウンターによって表されるのは、処理の準備が整っているタスクの数だけです。現在実行中のタスクの数は含まれません。|  
   
-##  <a name="bkmk_ReportServerSharePoint"></a> ReportServerSharePoint:Service (SharePoint モードのレポート サーバー)  
+##  <a name="reportserversharepointservice-sharepoint-mode-report-server"></a><a name="bkmk_ReportServerSharePoint"></a> ReportServerSharePoint:Service (SharePoint モードのレポート サーバー)  
  **ReportServerSharePoint:Service** パフォーマンス オブジェクトは、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] で追加されました。  
   
  ![PowerShell 関連コンテンツ](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ") 次の Windows PowerShell スクリプトは CounterSetName のパフォーマンス カウンターの一覧を返します  
@@ -88,7 +88,7 @@ ms.locfileid: "68893438"
 |**Memory Shrink Amount**||  
 |**Memory Shrink Notifications/Sec**||  
   
-##  <a name="bkmk_powershell"></a> PowerShell コマンドレットを使用して一覧を取得する  
+##  <a name="use-powershell-cmdlets-to-return-lists"></a><a name="bkmk_powershell"></a> PowerShell コマンドレットを使用して一覧を取得する  
  ![PowerShell 関連コンテンツ](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ") 次の Windows PowerShell スクリプトは CounterSetName "ReportServerSharePoint:Service" のパフォーマンス カウンターの一覧を返します。  
   
 ```  

@@ -12,10 +12,10 @@ ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e3b27070e3edb81f548e37f76459b6ac828f2646
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "72278229"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Reporting Services でのファイル共有の配信
@@ -37,7 +37,7 @@ ms.locfileid: "72278229"
   
 -   [ファイル オプション](#bkmk_file_options)  
   
-##  <a name="bkmk_Characteristics"></a> 共有フォルダーに配信されるレポートの特性  
+##  <a name="characteristics-reports-delivered-to-shared-folders"></a><a name="bkmk_Characteristics"></a> 共有フォルダーに配信されるレポートの特性  
   
 -   レポート サーバーによってホストおよび管理されるレポートとは異なり、共有フォルダーに配信されるレポートは静的なファイルです。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "72278229"
   
 -   配信したレポートで対話機能を保持するには、代わりに電子メール配信を使用します。 電子メールには、レポート サーバー上のレポートへのリンクが含まれます。これにより、ユーザーは、対話機能を使用できます。 詳細については、「 [Reporting Services の電子メール配信](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)」を参照してください。  
   
-##  <a name="bkmk_target_folders"></a> 対象フォルダー  
+##  <a name="target-folders"></a><a name="bkmk_target_folders"></a> 対象フォルダー  
  ファイル共有の配信を使用するサブスクリプションを定義する場合には、対象フォルダーとして既存のフォルダーを指定する必要があります。 レポート サーバーでは、ファイル システムにフォルダーを作成しません。 指定するフォルダーは、ネットワーク接続を使用してアクセス可能である必要があります。  
   
  共有フォルダーでレポートを **表示** するユーザーに読み取り権限があることを確認します。  
@@ -60,12 +60,12 @@ ms.locfileid: "72278229"
   
  フォルダーを作成するときに、必要な接続の上限を検討します。 レポート サーバーに必要な接続数は 2 つですが、共有フォルダーでレポートを開く追加のユーザーに対応できるように、十分な接続数を指定する必要があります。  
   
-##  <a name="bkmk_file_formats"></a> ファイル形式  
+##  <a name="file-formats"></a><a name="bkmk_file_formats"></a> ファイル形式  
  レポートは、HTML、DOCX、Excel などさまざまなファイル形式で表示されます。 レポートを特定の形式で保存するには、サブスクリプションの作成時に表示形式を選択します。 たとえば **Excel** を選択すると、レポートは [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] ファイルとして保存されます。 サポートされている任意の表示形式を選択できますが、一部の形式はファイルの生成で他の形式より優れています。  
   
  ファイル共有配信を使用する場合は、すべての画像および関連するコンテンツが含まれているレポートを、単一のファイルで配信する形式を選択します。 適切な形式は、Web アーカイブ、PDF、TIFF、Excel などです。 HTML4.0 は避けてください。 レポートに画像が含まれている場合、HTML 4.0 形式のファイルにその画像が含まれるようには処理されません。  
   
-##  <a name="bkmk_file_options"></a> ファイル オプション  
+##  <a name="file-options"></a><a name="bkmk_file_options"></a> ファイル オプション  
  ファイル共有サブスクリプションを作成するときに、ファイル名の作成方法と、レポートの以前のバージョンをファイルで上書きするかどうかを構成できます。 完全修飾ファイル名は、名前、拡張子、およびファイルに付加されるテキストや数値という 3 つの要素で構成されて一意のファイル名が形成されます。  
   
  **ファイル名:** 既定のファイル名はソース レポート名に基づいて生成されますが、サブスクリプションでは独自の名前を指定することもできます。 拡張子は省略可能です。拡張子を使用する場合は、表示形式に対応する拡張子がレポート サーバーによって生成されます。  

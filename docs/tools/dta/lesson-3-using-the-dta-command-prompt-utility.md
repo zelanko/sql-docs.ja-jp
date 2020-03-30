@@ -14,17 +14,17 @@ ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
 ms.openlocfilehash: 1c97122d6181470ded13a57c54b0c6d44f830ed6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75306976"
 ---
-# <a name="lesson-3-using-the-dta-command-prompt-utility"></a>レッスン 3:DTA コマンド プロンプト ユーティリティの使用
+# <a name="lesson-3-using-the-dta-command-prompt-utility"></a>レッスン 3 : dta コマンド プロンプト ユーティリティの使用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 **dta** コマンド プロンプト ユーティリティは、データベース エンジン チューニング アドバイザーの機能以外にも機能があります。  
   
-データベース エンジン チューニング アドバイザーの XML スキーマを使用すれば、使い慣れた XML ツールで、このユーティリティへの入力ファイルを作成できます。 このスキーマは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール時にインストールされ、次の場所にあります。C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
+データベース エンジン チューニング アドバイザーの XML スキーマを使用すれば、使い慣れた XML ツールで、このユーティリティへの入力ファイルを作成できます。 このスキーマは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール時にインストールされ、C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd に格納されます。  
   
 データベース エンジン チューニング アドバイザーの XML スキーマは、 [Microsoft Web サイト](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)から入手することもできます。  
   
@@ -93,7 +93,7 @@ SSMS でデータベースを復元する手順については、[データベ�
 -   このツールを使用した作業の実行方法の説明については、「[Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md) 」を参照してください。 
 -   コマンド プロンプト ユーティリティおよびユーティリティの動作の制御に使用できるオプションの XML ファイルに関するリファレンス情報については、「[dta Utility](../../tools/dta/dta-utility.md) 」を参照してください。  
   
-チュートリアルの先頭へ戻るには、「[チュートリアル:データベース エンジン チューニング アドバイザー](../../tools/dta/tutorial-database-engine-tuning-advisor.md)」を参照してください。  
+チュートリアルの開始に戻るには、「 [チュートリアル:データベース エンジン チューニング アドバイザー](../../tools/dta/tutorial-database-engine-tuning-advisor.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
 [データベース エンジンのチュートリアル](../../relational-databases/database-engine-tutorials.md)  

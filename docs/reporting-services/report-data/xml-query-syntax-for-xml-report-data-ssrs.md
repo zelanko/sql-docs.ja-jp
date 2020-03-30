@@ -14,10 +14,10 @@ ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: dd1bccb6bff8f19e9abb779310033f4685b31f67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081351"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>XML レポート データの XML クエリ構文 (SSRS)
@@ -61,7 +61,7 @@ ms.locfileid: "77081351"
 |XML ドキュメント (既定)|*クエリなし*。<br /><br /> 要素パスは XML ドキュメントそのものから取得され、名前空間には依存しません。|  
   
 > [!NOTE]  
->  最初に挙げた Web サービスの例では、 <xref:ReportService2006.ReportingService2006.ListChildren%2A> メソッドから) このクエリを実行するには、新しいデータ ソースを作成し、接続文字列を `https://localhost/reportserver/reportservice2006.asmx` に設定する必要があります。 <xref:ReportService2006.ReportingService2006.ListChildren%2A> メソッドは 2 つのパラメーター**Item** と **Recursive** を受け取ります。 **Item** の既定値は **/** に、 **Recursive** の既定値は **1**に設定されます。  
+>  最初に挙げた Web サービスの例では、 <xref:ReportService2006.ReportingService2006.ListChildren%2A> メソッドから) このクエリを実行するには、新しいデータ ソースを作成し、接続文字列を `https://localhost/reportserver/reportservice2006.asmx` に設定する必要があります。 <xref:ReportService2006.ReportingService2006.ListChildren%2A> メソッドは、**Item** と **Recursive** の 2 つのパラメーターを受け取ります。 **Item** の既定値は **/** に、 **Recursive** の既定値は **1**に設定されます。  
   
 ## <a name="specifying-namespaces"></a>名前空間の指定  
  データ ソースから取得された XML データに使用する名前空間を指定するには、XML **Query** 要素を使用します。 次の XML クエリには、名前空間 **sales**が使用されています。 **および** の XML `sales:LineItems` ElementPath `sales:LineItem` ノードには、名前空間 **sales**が使用されています。  
@@ -88,7 +88,7 @@ ms.locfileid: "77081351"
 |\<Query/>|Value A: `https://schemas.microsoft.com/...`<br /><br /> Value B: `https://schemas.microsoft.com/...`<br /><br /> Value C: `https://schemas.microsoft.com/...`|  
 |`<xmldp:Query xmlns:xmldp="https://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns:ns="https://schemas.microsoft.com/...">`<br /><br /> `<xmldp:ElementPath>Root {}/ns:Element2/Node</xmldp:ElementPath>`<br /><br /> `</xmldp:Query>`|Value D<br /><br /> Value E<br /><br /> Value F|  
   
-#### <a name="xml-document-dpnamespacexml"></a>XML ドキュメント:DPNamespace.xml  
+#### <a name="xml-document-dpnamespacexml"></a>XML document: DPNamespace.xml  
  この XML をコピーして、レポート デザイナーからアクセスできる URL (https://localhost/DPNamespace.xml など) に保存すると、XML データ ソースとして使用できます。  
   
 ```  

@@ -12,10 +12,10 @@ ms.assetid: 12c1096f-d120-439b-85f3-f794859503c9
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 493513f21fbf61dd516160e61a7afb9e71e477fc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67908432"
 ---
 # <a name="mssqlserver_33128"></a>MSSQLSERVER_33128
@@ -42,7 +42,7 @@ ms.locfileid: "67908432"
 > [!NOTE]  
 > リング バッファーは完全には文書にまとめられていない内部コンポーネントであり、ユーザーが使用するためのものではありません。 リング バッファーからのメッセージは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] カスタマー サポートに問い合わせる際に役立ちます。 リング バッファーを表示するには、sys.dm_os_ring_buffers 動的管理ビューに対してクエリを実行します。  
   
-|State|[説明]|  
+|State|説明|  
 |---------|---------------|  
 |1|RC4 キーは、encryptbykey() 組み込み関数で使用されます。 組み込み関数は NULL を返します。 このメッセージは、リング バッファーにのみ表示されます。|  
 |2|RC4 キーは、decryptbykey() 組み込み関数で使用されます。 このメッセージは、リング バッファーにのみ表示されます。|  

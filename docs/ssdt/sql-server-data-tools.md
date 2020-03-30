@@ -13,10 +13,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 2049550374569d10631239419cd380c115022ff2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75256339"
 ---
 # <a name="sql-server-data-tools"></a>SQL Server Data Tools
@@ -29,7 +29,7 @@ Visual Studio の SQL Server オブジェクト エクスプローラーには�
   
 次のトピックやセクションでは、データベース開発で SSDT がどのように役立つかを説明します。 方法を説明するトピックは、データベース プロジェクトで遭遇する一連のタスクを完了できるように案内します。 これらのタスクは、Northwind Traders という食料品を輸出入する架空の会社を使って、チュートリアルのように記述されており、順番に従って実行します。  
   
-|トピック/セクション|[説明]|  
+|トピック/セクション|説明|  
 |-------------------|---------------|  
 |[プロジェクト指向のオフライン データベース開発](../ssdt/project-oriented-offline-database-development.md)|このセクションのトピックでは、データベース プロジェクトの作成、ビルド、デバッグ、および発行を行うための SQL Server Data Tools の機能について説明します。|  
 |[コマンド ライン ツールを使用したプロジェクト指向のデータベース開発](../ssdt/project-oriented-database-development-using-command-line-tools.md)|このセクションのトピックでは、プロジェクト指向の各種データベース開発シナリオを実現に導くコマンド ライン ツールについて説明します。|  

@@ -10,10 +10,10 @@ ms.assetid: 4be6e836-158e-4bc9-8870-7f394d7c7e11
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ce25cfe5d8d84926cb9bc993d075372e3a81d336
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75245363"
 ---
 # <a name="control-row--column-headings-report-builder--ssrs"></a>行見出しと列見出しを制御する (レポート ビルダーおよび SSRS)
@@ -45,7 +45,7 @@ ms.locfileid: "75245363"
   
  行グループ領域または列グループ領域を持つ Tablix データ領域では、それに関連付けられている行および列を、Tablix データ領域のプロパティを設定することによって制御します。 それ以外の場合は、選択した Tablix メンバーのプロパティ ペインで、必要なプロパティを設定することにより、行および列を制御することになります。 段階的な手順については、「[複数のページへの行および列ヘッダーの表示 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)」と「[レポートのスクロール時にヘッダーを表示したままにする (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)」を参照してください。  
   
-##  <a name="Top"></a> 使用例  
+##  <a name="examples"></a><a name="Top"></a> 使用例  
  Tablix データ領域に表示される内容として最も一般的な例としては、マトリックス、グループを持たないテーブル、行グループと行グループ ヘッダーを持つテーブル、行グループはあるが行グループ ヘッダーは持たないテーブルなどがあります。 ヘッダーの繰り返しまたは固定を制御するには、制御の対象となる行または列が、その行グループ領域または列グループ領域でグループ ヘッダーに関連付けられているかどうかを見極める必要があります。  
   
  次のセクションでは、Tablix データ領域の一般的なレイアウトの例を紹介します。  
@@ -58,7 +58,7 @@ ms.locfileid: "75245363"
   
 -   [行グループはあるが行グループ領域を持たないテーブル](#TableRowGroupsNoGroupHeader)  
   
-###  <a name="Matrix"></a> マトリックス  
+###  <a name="matrix"></a><a name="Matrix"></a> マトリックス  
  既定では、単純なマトリックスには、行グループと列グループが 1 つずつ含まれています。 次の図は、Category (カテゴリ) に基づく行グループと、Geography (地理) に基づく列グループを持つマトリックスを示しています。  
   
  ![Matrix、Category 行および Geography 列グループ](../../reporting-services/report-design/media/rs-basicmatrixdesign.gif "Matrix、Category 行および Geography 列グループ")  
@@ -73,7 +73,7 @@ ms.locfileid: "75245363"
   
  [トップに戻る](#Top)  
   
-###  <a name="TableNoGroups"></a> 行グループを持たないテーブル  
+###  <a name="table-with-no-row-groups"></a><a name="TableNoGroups"></a> 行グループを持たないテーブル  
  既定では、グループを持たない単純なテーブルには、詳細グループが含まれます。 次の図は、カテゴリ、注文番号、および売上データを表示するテーブルを示したものです。  
   
  ![デザイン、1 つの静的行と 1 つの動的行があるテーブル](../../reporting-services/report-design/media/rs-tableheaderstaticdesign.gif "デザイン、1 つの静的行と 1 つの動的行があるテーブル")  
@@ -94,7 +94,7 @@ ms.locfileid: "75245363"
   
  [トップに戻る](#Top)  
   
-###  <a name="TableRowGroupsGroupHeader"></a> 行グループおよび行グループ領域を持つテーブル  
+###  <a name="table-with-row-groups-and-a-row-group-area"></a><a name="TableRowGroupsGroupHeader"></a> 行グループおよび行グループ領域を持つテーブル  
  単純なテーブルに行グループを追加した場合、デザイン画面のテーブルに行グループ領域が追加されます。 次の図は、Category に基づいた行グループを持つテーブルを示しています。  
   
  ![デザイン、1 つの行グループと詳細があるテーブル](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelldesign.gif "デザイン、1 つの行グループと詳細があるテーブル")  
@@ -111,11 +111,11 @@ ms.locfileid: "75245363"
   
  ![行グループ、詳細設定モードで静的メンバー](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelladvanced.gif "行グループ、詳細設定モードで静的メンバー")  
   
- tablix の場合、次のメンバーが一覧表示されます:**Static**、(**Static**)、Category、(**Details**)。 かっこ () 付きの Tablix メンバーは、対応するグループ ヘッダーがないことを表します。 列見出しを繰り返し表示するか固定するには、一番上の静的な Tablix メンバーを選択し、プロパティ ペインでプロパティを設定します。  
+ **Static**、(**Static**)、Category、(**Details**) という一連の Tablix メンバーが並んでいます。 かっこ () 付きの Tablix メンバーは、対応するグループ ヘッダーがないことを表します。 列見出しを繰り返し表示するか固定するには、一番上の静的な Tablix メンバーを選択し、プロパティ ペインでプロパティを設定します。  
   
  [トップに戻る](#Top)  
   
-###  <a name="TableRowGroupsNoGroupHeader"></a> 行グループはあるが行グループ領域を持たないテーブル  
+###  <a name="table-with-row-groups-and-no-row-group-area"></a><a name="TableRowGroupsNoGroupHeader"></a> 行グループはあるが行グループ領域を持たないテーブル  
  テーブルに行グループがあるにもかかわらず、行グループ領域が存在しない場合があります。 その原因として、次の 2 点が考えられます。  
   
 -   当初は、行グループと行グループ領域を持つテーブルとして作成したが、後でその行グループ領域から列を削除した (列だけを削除し、グループを削除しなかった)。 たとえば、テーブルを単純なグリッド形式に変更しようとした場合などに起こります。  
@@ -138,7 +138,7 @@ ms.locfileid: "75245363"
   
  ![行グループ、詳細設定、グループ ヘッダーなし。](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercelladvanced.gif "行グループ、詳細設定、グループ ヘッダーなし。")  
   
- [行グループ] ウィンドウには、次の Tablix メンバーが一覧表示されます:(**Static**)、(Category)、(**Static**)、および (**Details**)。 列見出しを繰り返し表示するか固定するには、一番上の (**Static**) という Tablix メンバーを選択し、プロパティ ペインでプロパティを設定します。  
+ [行グループ] ペインには、(**Static**)、(Category)、(**Static**)、および (**Details**) の各 Tablix メンバーが一覧表示されます。 列見出しを繰り返し表示するか固定するには、一番上の (**Static**) という Tablix メンバーを選択し、プロパティ ペインでプロパティを設定します。  
   
  [トップに戻る](#Top)  
   

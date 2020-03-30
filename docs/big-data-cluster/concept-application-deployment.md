@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 4b647ab4d03d110ce303388a8b62461f28033b6c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76831575"
 ---
 # <a name="what-is-application-deployment-on-a-big-data-cluster"></a>ビッグ データ クラスターへのアプリケーション展開とは
@@ -43,13 +43,13 @@ output: #output parameter the app expects and the type
   result: int
 ```
 
-コントローラーは、`spec.yaml` ファイル内で指定された `runtime` を検査し、対応するランタイム ハンドラーを呼び出します。 ランタイム ハンドラーによってアプリケーションが作成されます。 まず、Kubernetes ReplicaSet が作成されます。これには、それぞれに展開するアプリケーションが含まれた 1 つ以上のポッドが含まれます。 ポッドの数は、アプリケーションの `spec.yaml` ファイルで設定された `replicas` パラメーターによって定義されます。 各ポッドには、1 つ以上のプールを含めることができます。 プールの数は、`spec.yaml` ファイルの `poolsize` パラメーター セットによって定義されます。
+コントローラーは、`runtime` ファイル内で指定された `spec.yaml` を検査し、対応するランタイム ハンドラーを呼び出します。 ランタイム ハンドラーによってアプリケーションが作成されます。 まず、Kubernetes ReplicaSet が作成されます。これには、それぞれに展開するアプリケーションが含まれた 1 つ以上のポッドが含まれます。 ポッドの数は、アプリケーションの `replicas` ファイルで設定された `spec.yaml` パラメーターによって定義されます。 各ポッドには、1 つ以上のプールを含めることができます。 プールの数は、`poolsize` ファイルの `spec.yaml` パラメーター セットによって定義されます。
 
 これらの設定は、展開が並列で処理できる要求の量に影響します。 指定された時間内の要求の最大数は、`replicas` に `poolsize` を掛けた数と等しくなります。 5 つのレプリカがあり、レプリカあたり 2 つのプールがある場合、展開では 10 個の要求を並行して処理できます。 次の図は、`replicas` と `poolsize` をグラフィカルに表現したものです。
 
 ![Poolsize と replicas](media/big-data-cluster-create-apps/poolsize-vs-replicas.png)
 
-ReplicaSet が作成され、ポッドが開始されると、`spec.yaml` ファイルで `schedule` が設定されている場合は、cron ジョブが作成されます。 最後に、アプリケーションの管理と実行に使用できる Kubernetes サービスが作成されます (以下を参照)。
+ReplicaSet が作成され、ポッドが開始されると、`schedule` ファイルで `spec.yaml` が設定されている場合は、cron ジョブが作成されます。 最後に、アプリケーションの管理と実行に使用できる Kubernetes サービスが作成されます (以下を参照)。
 
 アプリケーションが実行されると、アプリケーションの Kubernetes サービスによって、レプリカに対する要求がプロキシされ、結果が返されます。
 

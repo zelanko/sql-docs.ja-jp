@@ -20,10 +20,10 @@ ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 261f22847c8b397d57ff5f732ea4d97091895daa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67939202"
 ---
 # <a name="enhance-merge-replication-performance"></a>マージ レプリケーション パフォーマンスの向上
@@ -141,7 +141,7 @@ ms.locfileid: "67939202"
   
 -   必要な場合、マージ レプリケーションのシステム テーブルのインデックスを再度作成する。  
   
-     マージ レプリケーションのメンテナンスの一環として、マージ レプリケーションと関連するシステム テーブルが拡大しているかを時々確認してください(**MSmerge_contents**、**MSmerge_genhistory**、**MSmerge_tombstone**、**MSmerge_current_partition_mappings**、および **MSmerge_past_partition_mappings**)。 定期的にこれらのテーブルのインデックスを再設定します。 詳細については、「 [インデックスの再編成と再構築](../../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)」を参照してください。  
+     マージ レプリケーションのメンテナンスの一環として、マージ レプリケーションに関連付けられたシステム テーブル **MSmerge_contents**、 **MSmerge_genhistory**、 **MSmerge_tombstone**、 **MSmerge_current_partition_mappings**、および **MSmerge_past_partition_mappings**の増大を必要に応じて確認します。 定期的にこれらのテーブルのインデックスを再設定します。 詳細については、「 [インデックスの再編成と再構築](../../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)」を参照してください。  
   
 -   レプリケーション モニターの **[同期の履歴]** タブを使用して、同期のパフォーマンスを監視する。  
   

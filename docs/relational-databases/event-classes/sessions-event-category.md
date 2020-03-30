@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9c8c9685865bc3430bd3b991e5cf8f4dd0bd99bf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67911145"
 ---
 # <a name="sessions-event-category"></a>Sessions イベント カテゴリ
@@ -27,7 +27,7 @@ ms.locfileid: "67911145"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[ExistingConnection イベント クラス](../../relational-databases/event-classes/existingconnection-event-class.md)|トレースが開始されたときの既存のユーザー接続のプロパティを示します。|  
   

@@ -9,10 +9,10 @@ ms.prod: sql
 ms.author: mikeray
 author: MikeRayMSFT
 ms.openlocfilehash: 8012c6a4fecf4155615460da8bd568eb4007aa48
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75656957"
 ---
 # <a name="sql-server-monitoring-partners"></a>SQL Server 監視パートナー
@@ -21,7 +21,7 @@ SQL Server サービスを監視するためのツールを、業界をリード
 
 ## <a name="microsoft-monitoring-partners"></a>Microsoft の監視パートナー
 
-| Partner | [説明] | リンク |
+| Partner | 説明 | リンク |
 | --- | --- | --- | --- |
 |[![idera][1]][idera_website] |**IDERA**<br>SQL の診断マネージャーは、SQL Server 環境内の正常性、パフォーマンス、可用性の問題を中央コンソールから管理者に事前に通知する、強力なパフォーマンス監視と診断ソリューションです。<br><br>[システム要件][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Web サイト][idera_website]<br>[Twitter][idera_twitter]<br>[ビデオ][idera_youtube] | |
 |[![quest][3]][quest_website] |**Quest**<br>Spotlight on SQL Server Enterprise - SQL Server 環境の他に類を見ない監視、診断、最適化により、常にピーク パフォーマンスを確保します。 Spotlight は、SQL Server データベースの最適な適合性に必要な詳細情報へのアクセスを提供します。 正常性とパフォーマンス、自動化されたアラートとアクション、モバイル デバイス サポートの概要が直感的にわかります。|[Marketplace][quest_marketplace]<br>[Web サイト][quest_website]<br>[ビデオ][quest_video] | |

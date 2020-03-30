@@ -11,10 +11,10 @@ ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: v-makouz
 ms.author: genemi
 ms.openlocfilehash: 6e3f7929c17b161d3534474d3d9ad99e559714d2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69653804"
 ---
 # <a name="features-of-the-microsoft-odbc-driver-for-sql-server-on-windows"></a>Microsoft ODBC Driver for SQL Server on Windows の機能
@@ -51,7 +51,7 @@ ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の
   
 ### <a name="bcpexe--l-option-for-specifying-a-login-timeout"></a>ログイン タイムアウトを指定するための bcp.exe -l オプション
  
-\- l オプションでは、サーバーへの接続の試行時に、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] への `bcp.exe` のログインがタイムアウトするまでの秒数を指定します。 既定のログイン タイムアウトは 15 秒です。 ログイン タイムアウトは、0 から 65,534 の数値にする必要があります。 指定した値が数値以外の場合、または範囲外の場合、`bcp.exe` はエラー メッセージを生成します。 0 の値は、無期限のタイムアウトを指定します。 (約) 10 秒未満のログイン タイムアウトは信頼できません。  
+\- l オプションでは、サーバーへの接続の試行時に、`bcp.exe` への [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のログインがタイムアウトするまでの秒数を指定します。 既定のタイムアウトは 15 秒です。 ログイン タイムアウトは、0 から 65,534 の数値にする必要があります。 指定した値が数値以外の場合、または範囲外の場合、`bcp.exe` はエラー メッセージを生成します。 0 の値は、無期限のタイムアウトを指定します。 (約) 10 秒未満のログイン タイムアウトは信頼できません。  
   
 ### <a name="driver-aware-connection-pooling"></a>ドライバー対応接続プール  
 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、[ドライバー対応の接続プール](https://msdn.microsoft.com/library/hh405031(VS.85).aspx)をサポートしています。 詳細については、「 [ODBC Driver for SQL Server のドライバー対応接続プール | Microsoft Docs](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)」を参照してください。  
@@ -64,7 +64,7 @@ ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は
   
 ## <a name="behavior-changes"></a>動作の変更
 
-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client では、表示幅が 0 だった場合、`sqlcmd.exe` の `-y0` オプションを使用すると、出力が 1 MB で切り捨てられました。
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client では、表示幅が 0 だった場合、`-y0` の `sqlcmd.exe` オプションを使用すると、出力が 1 MB で切り捨てられました。
   
 ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以降では、`-y0` を指定したときに、1 つの列で取得できるデータの量に制限がなくなりました。 `sqlcmd.exe` は、最大 2 GB ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のデータ型の最大値) の列をストリームするようになりました。  
   

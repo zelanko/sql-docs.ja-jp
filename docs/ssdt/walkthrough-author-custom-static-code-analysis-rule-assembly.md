@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: d11446e3ef8fade0c4cfe6ec885c40754861fc26
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75257029"
 ---
 # <a name="walkthrough-authoring-a-custom-static-code-analysis-rule-assembly-for-sql-server"></a>チュートリアル: SQL Server のカスタムの静的コード分析ルール アセンブリを作成する
@@ -252,12 +252,12 @@ ms.locfileid: "75257029"
   
 6. 次のように、4 つのリソース文字列を定義します。  
   
-    |Name|Value|  
+    |Name|値|  
     |--------|---------|  
     |AvoidWaitForDelay_ProblemDescription|WAITFOR DELAY ステートメントは {0} にありました。|  
     |AvoidWaitForDelay_RuleName|ストアド プロシージャ、関数、およびトリガーで WaitFor Delay ステートメントの使用を回避します。|  
     |CategorySamples|SamplesCategory|  
-    |CannotCreateResourceManager|{1} から {0} の ResourceManager は作成できません。|  
+    |CannotCreateResourceManager|{0} から {1} の ResourceManager は作成できません。|  
   
 7. **[ファイル]** メニューで、 **[RuleResources.resx の保存]** をクリックします。  
   
@@ -544,7 +544,7 @@ Visual Studio 2012 の場合、通常、<Visual Studio Install Dir> は C:\Progr
   
 3. **[コード分析]** をクリックします。 RuleSamples.CategorySamples という新しいカテゴリが表示されます。  
   
-4. RuleSamples .CategorySamples を展開します。 "SR1004:Avoid WAITFOR DELAY statement in stored procedures, triggers, and functions" (SR1004: ストアド プロシージャ、関数、トリガーで WaitFor Delay ステートメントを使用しないでください) と表示されます。  
+4. RuleSamples .CategorySamples を展開します。 "SR1004: Avoid WAITFOR DELAY statement in stored procedures, triggers, and functions" と表示されます。  
   
 ## <a name="see-also"></a>参照
 
