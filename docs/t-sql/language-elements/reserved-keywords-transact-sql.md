@@ -19,16 +19,16 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cc0390a01bec10b58ed29d1824e8d0b482e78358
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68091773"
 ---
 # <a name="reserved-keywords-transact-sql"></a>予約済みキーワード (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、データベースの定義、操作、アクセスに予約済みキーワードが使用されます。 予約済みキーワードは [!INCLUDE[tsql](../../includes/tsql-md.md)] 言語の文法の一部です。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこの予約済みキーワードによって [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントとバッチが解析され、理解されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の予約済みキーワードを識別子およびオブジェクト名として使用することは構文的に可能ですが、これは識別子を区切って使用するときに限られます。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、データベースの定義、操作、アクセスに予約済みキーワードが使用されます。 予約済みキーワードは [!INCLUDE[tsql](../../includes/tsql-md.md)] 言語の文法の一部です。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこの予約済みキーワードによって [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントとバッチが解析され、理解されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スクリプトで、[!INCLUDE[tsql](../../includes/tsql-md.md)] の予約済みキーワードを識別子およびオブジェクト名として使用することは構文的に可能ですが、これは識別子を区切って使用するときに限られます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と Azure SQL Data Warehouse の予約済みキーワードの一覧を次の表に示します。  
   

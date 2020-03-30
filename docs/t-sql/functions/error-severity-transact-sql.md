@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0a5df90640dc9ebdd2d59593c4b2a82a0f7daa00
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68094651"
 ---
 # <a name="error_severity-transact-sql"></a>ERROR_SEVERITY (Transact-SQL)
@@ -57,7 +57,7 @@ ERROR_SEVERITY ( )
   
 通常、`ERROR_SEVERITY` は入れ子になった `CATCH` ブロック内で動作します。 `ERROR_SEVERITY` は、`CATCH` ブロックを参照した `CATCH` ブロックのスコープに固有のエラー重大度を返します。 たとえば、外側の TRY...CATCH 構造の `CATCH` ブロックの中に `TRY...CATCH` 構造が含まれることがあります。 その内側の `CATCH` ブロック内では、`ERROR_SEVERITY` は内側の `CATCH` ブロックを呼び出したエラーの重大度を返します。 `ERROR_SEVERITY` が外側の `CATCH` ブロック内で実行される場合、外側の `CATCH` ブロックを呼び出したエラーの重大度を返します。  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-using-error_severity-in-a-catch-block"></a>A. CATCH ブロックで ERROR_SEVERITY を使用する  
 この例では、0 除算エラーを生成したストアド プロシージャを示します。 `ERROR_SEVERITY` はそのエラーの重大度を返します。  

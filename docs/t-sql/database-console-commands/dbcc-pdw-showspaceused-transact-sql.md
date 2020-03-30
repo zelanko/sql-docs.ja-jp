@@ -13,10 +13,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: f8c5d7ac822546d8334f1a174684f35733d9571b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68116489"
 ---
 # <a name="dbcc-pdw_showspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
@@ -48,7 +48,7 @@ VIEW SERVER STATE 権限が必要です。
 ## <a name="result-sets"></a>結果セット  
 これは、すべてのテーブルの結果セットです。
   
-|列|データ型|[説明]|  
+|列|データ型|説明|  
 |------------|---------------|-----------------|  
 |reserved_space|bigint|データベースに使用されている合計領域 (KB 単位)。|  
 |data_space|bigint|データに使用されている領域 (KB 単位)。|  
@@ -58,7 +58,7 @@ VIEW SERVER STATE 権限が必要です。
   
 これは、1 つのテーブルの結果セットです。
   
-|列|データ型|[説明]|Range|  
+|列|データ型|説明|Range|  
 |------------|---------------|-----------------|-----------|  
 |rows|bigint|行の数。||  
 |reserved_space|bigint|オブジェクトに予約されている合計領域 (KB 単位)。||  
@@ -68,7 +68,7 @@ VIEW SERVER STATE 権限が必要です。
 |pdw_node_id|INT|領域の使用状況の報告に使用されるコンピューティング ノード。||  
 |distribution_id|INT|領域の使用状況の報告に使用されるディストリビューション。|レプリケートされたテーブルの場合、値は -1 です。|  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdw-and-sspdw"></a>例: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### <a name="a-dbcc-pdw_showspaceused-basic-syntax"></a>A. DBCC PDW_SHOWSPACEUSED の基本的な構文  
 次の例では、[!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] データベースの FactInternetSales テーブルの行数、予約済みのディスク領域、使用済みのディスク領域を表示する複数の方法を示します。
   

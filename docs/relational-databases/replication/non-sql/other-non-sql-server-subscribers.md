@@ -13,15 +13,15 @@ ms.assetid: 96b8beb9-38e8-4ce4-97ca-c0f8656b73b4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: dce8d383ca01fd205645a18f7aa181d12cff4675
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68110949"
 ---
 # <a name="other-non-sql-server-subscribers"></a>その他の SQL Server 以外のサブスクライバー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] がサポートしている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーの一覧については、「[SQL Server 以外のサブスクライバー](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)」を参照してください。 ここでは、ODBC ドライバーと OLE DB プロバイダーの要件について説明します。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] がサポートしている [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 以外のサブスクライバーの一覧については、「[SQL Server 以外のサブスクライバー](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)」を参照してください。 ここでは、ODBC ドライバーと OLE DB プロバイダーの要件について説明します。  
   
 ## <a name="odbc-driver-requirements"></a>ODBC ドライバーの要件  
  ODBC ドライバーは、以下の要件を満たす必要があります。  

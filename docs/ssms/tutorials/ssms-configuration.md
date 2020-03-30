@@ -11,10 +11,10 @@ ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 ms.openlocfilehash: fe7518959f62328e038e7afb619b79cf2acbda86
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75247291"
 ---
 # <a name="sql-server-management-studio-components-and-configuration"></a>SQL Server Management Studio のコンポーネントと構成
@@ -44,22 +44,22 @@ ms.locfileid: "75247291"
 
     ![[表示] メニュー](media/ssms-configuration/viewmenu.png)
 
-* **オブジェクト エクスプローラー** (F8):オブジェクト エクスプローラーには、サーバー上のすべてのデータベース オブジェクトがツリー形式で表示されます。 このビューには、SQL Server Database Engine、SQL Server Analysis Services、SQL Server Reporting Services、SQL Server Integration Services のデータベースが含まれています。 オブジェクト エクスプローラーには、それに接続されているすべてのサーバーの情報が含まれています。 
+* **[オブジェクト エクスプローラー]** (F8): オブジェクト エクスプローラーには、サーバー上のすべてのデータベース オブジェクトがツリー形式で表示されます。 このビューには、SQL Server Database Engine、SQL Server Analysis Services、SQL Server Reporting Services、SQL Server Integration Services のデータベースが含まれています。 オブジェクト エクスプローラーには、それに接続されているすべてのサーバーの情報が含まれています。 
 
     ![オブジェクト エクスプローラー](media/ssms-configuration/objectexplorer.png)
-* **クエリ ウィンドウ** (Ctrl + N): **[新しいクエリ]** を選択したら、このウィンドウに Transact-SQL (T-SQL) クエリを入力します。 クエリの結果もここに表示されます。
+* **クエリ ウィンドウ** (Ctrl+N): **[新しいクエリ]** を選択したら、このウィンドウに Transact-SQL (T-SQL) クエリを入力します。 クエリの結果もここに表示されます。
 
     ![[新しいクエリ] ウィンドウ](media/ssms-configuration/newquery.png)
 
-* **プロパティ** (F4):クエリ ウィンドウが開くと、[プロパティ] ビューが表示されます。 このビューには、クエリの基本的なプロパティが表示されます。 たとえば、クエリの開始時刻、返された行数、接続の詳細などが表示されます。  
+* **プロパティ** (F4): クエリ ウィンドウが開くと、[プロパティ] ビューが表示されます。 このビューには、クエリの基本的なプロパティが表示されます。 たとえば、クエリの開始時刻、返された行数、接続の詳細などが表示されます。  
 
     ![Properties](media/ssms-configuration/properties.png)
 
-* **テンプレート ブラウザー** (Ctrl + Alt + T):テンプレート ブラウザーには、さまざまな既成 T-SQL テンプレートが含まれています。 これらのテンプレートを使うと、データベースの作成やバックアップなど、さまざまな機能を実行できます。 
+* **テンプレート ブラウザー** (Ctrl + Alt + T): テンプレート ブラウザーには、さまざまな既成 T-SQL テンプレートが含まれています。 これらのテンプレートを使うと、データベースの作成やバックアップなど、さまざまな機能を実行できます。 
 
     ![テンプレート ブラウザー](media/ssms-configuration/templates.png)
 
-* **オブジェクト エクスプローラーの詳細** (F7):このビューは、オブジェクト エクスプローラーのビューより詳しくなっています。 オブジェクト エクスプローラーの詳細を使用し、複数のオブジェクトを同時に操作できます。 たとえば、このウィンドウで、複数のデータベースを選択し、その後、全部同時に削除するか、スクリプト化できます。 
+* **オブジェクト エクスプローラーの詳細** (F7): このビューは、オブジェクト エクスプローラーのビューより詳しくなっています。 オブジェクト エクスプローラーの詳細を使用し、複数のオブジェクトを同時に操作できます。 たとえば、このウィンドウで、複数のデータベースを選択し、その後、全部同時に削除するか、スクリプト化できます。 
 
     ![[オブジェクト エクスプローラーの詳細]](media/ssms-configuration/objectexplorerdetails.PNG) 
 

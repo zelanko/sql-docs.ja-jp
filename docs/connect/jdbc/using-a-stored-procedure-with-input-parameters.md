@@ -11,10 +11,10 @@ ms.assetid: 8f491b70-7d1b-42bd-964f-9a8b86af5eaa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6c84e4081b9369d504d173387c6944b06d927c9c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69026904"
 ---
 # <a name="using-a-stored-procedure-with-input-parameters"></a>入力パラメーターがあるストアド プロシージャの使用
@@ -23,14 +23,14 @@ ms.locfileid: "69026904"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ストアド プロシージャのうち、呼び出すことができるのは、IN パラメーター (ストアド プロシージャにデータを渡す際に使用できるパラメーター) を少なくとも 1 つ持つストアド プロシージャです。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] が提供する [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) クラスを使用することで、この種類のストアド プロシージャを呼び出し、返されるデータを処理することができます。
 
-JDBC ドライバーを使用して IN パラメーターがあるストアド プロシージャを呼び出す場合は、`call` SQL エスケープ シーケンスを、[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) クラスの [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) メソッドと一緒に使用する必要があります。 IN パラメーターを持つ `call` エスケープ シーケンスの構文は次のとおりです。
+JDBC ドライバーを使用して IN パラメーターがあるストアド プロシージャを呼び出す場合は、`call` SQL エスケープ シーケンスを、[SQLServerConnection](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) クラスの [prepareCall](../../connect/jdbc/reference/sqlserverconnection-class.md) メソッドと一緒に使用する必要があります。 IN パラメーターを持つ `call` エスケープ シーケンスの構文は次のとおりです。
 
 `{call procedure-name[([parameter][,[parameter]]...)]}`
 
 > [!NOTE]  
 > SQL エスケープ シーケンスの詳細については、「[SQL エスケープシーケンスの使用](../../connect/jdbc/using-sql-escape-sequences.md)」を参照してください。
 
-`call` エスケープ シーケンスを作成する場合、IN パラメーターは?  (疑問符) 文字で指定します。 この文字は、ストアド プロシージャに渡されるパラメーター値のプレースホルダーになります。 パラメーターの値を指定するには、SQLServerPreparedStatement クラスの setter メソッドの 1 つを使用できます。 使用できる setter メソッドは、IN パラメーターのデータ型で決まります。
+`call` エスケープ シーケンスを作成する場合、IN パラメーターは? (疑問符) 文字で指定します。 この文字は、ストアド プロシージャに渡されるパラメーター値のプレースホルダーになります。 パラメーターの値を指定するには、SQLServerPreparedStatement クラスの setter メソッドの 1 つを使用できます。 使用できる setter メソッドは、IN パラメーターのデータ型で決まります。
 
 setter メソッドに値を渡す場合は、パラメーターで使用する実際の値だけでなく、ストアド プロシージャ内のパラメーターの順序も指定する必要があります。 たとえば、ストアド プロシージャに IN パラメーターが 1 つ存在する場合、その序数値は 1 になります。 ストアド プロシージャに 2 つのパラメーターが存在する場合、1 つ目の序数値は 1 に、2 つ目の序数値は 2 になります。
 

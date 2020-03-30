@@ -11,10 +11,10 @@ ms.assetid: 00bfa716-5390-48e3-b30c-d954d5e0be47
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3ce06430094825bf3268836657661930fea058e4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296631"
 ---
 # <a name="catalogmaster_properties-ssisdb-database"></a>catalog.master_properties (SSISDB データベース)
@@ -26,7 +26,7 @@ ms.locfileid: "71296631"
 
 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out Master のプロパティを表示します。
 
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |property_name|**nvarchar (256)**|Scale Out Master のプロパティの名前。|  
 |property_value|**nvarchar(max)**|Scale Out Master のプロパティの値。|
@@ -34,7 +34,7 @@ ms.locfileid: "71296631"
 ## <a name="remarks"></a>解説
 このビューは、各 Scale Out Master のプロパティの行を表示します。 このビューで表示されるプロパティは、次のとおりです。
 
-|プロパティ名|[説明]|  
+|プロパティ名|説明|  
 |-------------------|-----------------| 
 |**CLUSTER_LOGDB_SERVER**|ログ データベースのある SQL Server。|
 |**LAST_ONLINE_TIME**|Scale Out Master がオンラインになった最後の時刻。|

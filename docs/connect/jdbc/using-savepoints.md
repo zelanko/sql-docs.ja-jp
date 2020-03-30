@@ -11,10 +11,10 @@ ms.assetid: 3b48eb13-32ef-4fb3-8e95-dbc9468c9a44
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9d860e368fe66ce926687fd343fe9f23704cfc7d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69026129"
 ---
 # <a name="using-savepoints"></a>セーブポイントの使用
@@ -25,7 +25,7 @@ ms.locfileid: "69026129"
 
 セーブポイントは、エラーが発生する可能性が小さい状況で役立ちます。 エラーの頻度が低い場合には、セーブポイントを使用してトランザクションの一部をロールバックする方法は、更新が有効であるかどうかを更新を行う前にトランザクションごとにテストするよりも効率的です。 更新とロールバックは負荷の大きい処理です。そのため、セーブポイントが効果を発揮するのは、エラーの発生確率が低く、なおかつ更新の有効性を事前にチェックするコストの方が高い場合に限られます。
 
-[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] は、[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) クラスの [setSavepoint](../../connect/jdbc/reference/setsavepoint-method-sqlserverconnection.md) メソッドを通じてセーブポイントの使用をサポートします。 setSavepoint メソッドを使用することで、名前付きセーブポイントまたは名前を割り当てられていないセーブポイントを、現在のトランザクションに作成できます。またこのメソッドによって [SQLServerSavepoint](../../connect/jdbc/reference/sqlserversavepoint-class.md) オブジェクトが返されます。 セーブポイントは 1 つのトランザクションに複数作成できます。 特定のセーブポイントまでトランザクションをロールバックするには、SQLServerSavepoint オブジェクトを [rollback (java.sql.Savepoint)](../../connect/jdbc/reference/rollback-method-java-sql-savepoint.md) メソッドに渡します。
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] は、[SQLServerConnection](../../connect/jdbc/reference/setsavepoint-method-sqlserverconnection.md) クラスの [setSavepoint](../../connect/jdbc/reference/sqlserverconnection-class.md) メソッドを通じてセーブポイントの使用をサポートします。 setSavepoint メソッドを使用することで、名前付きセーブポイントまたは名前を割り当てられていないセーブポイントを、現在のトランザクションに作成できます。またこのメソッドによって [SQLServerSavepoint](../../connect/jdbc/reference/sqlserversavepoint-class.md) オブジェクトが返されます。 セーブポイントは 1 つのトランザクションに複数作成できます。 特定のセーブポイントまでトランザクションをロールバックするには、SQLServerSavepoint オブジェクトを [rollback (java.sql.Savepoint)](../../connect/jdbc/reference/rollback-method-java-sql-savepoint.md) メソッドに渡します。
 
 次の例では、`try` ブロック内の 2 つの個別のステートメントで構成されるローカル トランザクションの実行時にセーブポイントが使用されます。 ステートメントは [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] サンプル データベースの Production.ScrapReason テーブルに対して実行され、2 番目のステートメントのロールバックにセーブポイントが使用されています。 この結果、最初のステートメントのみがデータベースにコミットされます。
 

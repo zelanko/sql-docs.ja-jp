@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 12b3fae80a7bf2c46c8d1d10ad5c45d74212eef0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73843792"
 ---
 # <a name="limitations-for-stretch-database"></a>Stretch Database の制限事項
@@ -26,7 +26,7 @@ ms.locfileid: "73843792"
 
   Stretch に対応するテーブルの制限事項について、さらに、テーブルの Stretch の有効化を現在阻止している制限事項について説明します。  
   
-##  <a name="Caveats"></a> Stretch に対応するテーブルの制限事項  
+##  <a name="limitations-for-stretch-enabled-tables"></a><a name="Caveats"></a> Stretch に対応するテーブルの制限事項  
   
 Stretch に対応するテーブルには次の制限事項があります。  
   
@@ -43,7 +43,7 @@ Stretch に対応するテーブルには次の制限事項があります。
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インデックスのフィルターは、リモート テーブルには反映されません。  
   
-##  <a name="Limitations"></a> テーブルの Stretch の有効化を現在妨げている制限事項  
+##  <a name="limitations-that-currently-prevent-you-from-enabling-stretch-for-a-table"></a><a name="Limitations"></a> テーブルの Stretch の有効化を現在妨げている制限事項  
    
  現在のところ、次のアイテムによって、テーブルの Stretch の有効化は妨げられています。  
   

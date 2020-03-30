@@ -14,10 +14,10 @@ ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
 ms.openlocfilehash: 8c1eb1ef3959052fb285c713bf172521b74bc46b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75255350"
 ---
 # <a name="print-dialog-box"></a>[印刷] ダイアログ ボックス
@@ -25,7 +25,7 @@ ms.locfileid: "75255350"
 **[印刷]** ダイアログ ボックスのオプションを選択すると、ドキュメントの印刷方法を指定できます。  
   
 ## <a name="printer"></a>[プリンター]  
-**名前**  
+**Name**  
 プリンターを指定します。 一覧からプリンターを選択します。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を閉じるか別のプリンターを選択するまで、選択したプリンターが既定のプリンターになります。 一覧の下のフィールドに表示される情報が、選択したプリンターに適用されます。  
   
 **状態**  

@@ -16,10 +16,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.openlocfilehash: 419420c9d1ecec501ca8a7d92ef6a23a658db713
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75307859"
 ---
 # <a name="table-element-for-schema-dta"></a>Schema の Table 要素 (DTA)
@@ -39,13 +39,13 @@ ms.locfileid: "75307859"
   
 ## <a name="element-attributes"></a>要素の属性  
   
-|Attribute|[説明]|  
+|Attribute|説明|  
 |---------------|-----------------|  
 |**NumberOfRows**|省略可能。 さまざまなサイズのテーブルのシミュレーションを行うための整数です。|  
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特徴|[説明]|  
+|特徴|説明|  
 |--------------------|-----------------|  
 |**データ型と長さ**|**string**、1 ～ 255 文字。|  
 |**既定値**|[なし] :|  

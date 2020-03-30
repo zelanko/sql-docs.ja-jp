@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 73bf9e24ffb42ef93547097c53b5838a22292fda
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74190915"
 ---
 # <a name="create-data-connection-strings---report-builder--ssrs"></a>データ接続文字列の作成 - レポート ビルダーおよび SSRS
@@ -20,10 +20,10 @@ ms.locfileid: "74190915"
 
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]および [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートにデータを含めるには、最初に "*データ ソース*" への "*接続文字列*" を作成する必要があります。 この記事では、データの接続文字列の作成方法と、データ ソースの資格情報に関連する重要な情報について説明します。 データ ソースには、データ ソースの種類、接続情報、および使用する資格情報の種類が含まれています。 詳しい背景情報については、「[SQL Server Reporting Services (SSRS) でのレポート データの概要](report-data-ssrs.md)」を参照してください。
   
-##  <a name="bkmk_DataConnections"></a> 組み込みデータ拡張機能  
+##  <a name="built-in-data-extensions"></a><a name="bkmk_DataConnections"></a> 組み込みデータ拡張機能  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の既定のデータ拡張機能には、Microsoft SQL Server、Microsoft Azure SQL Database、Microsoft SQL Server Analysis Services が含まれます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] でサポートされるデータ ソースおよびバージョンの一覧については、「[Reporting Services でサポートされるデータ ソース (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)」を参照してください。  
   
-##  <a name="bkmk_connection_examples"></a> 一般的な接続文字列の例  
+##  <a name="common-connection-string-examples"></a><a name="bkmk_connection_examples"></a> 一般的な接続文字列の例  
  接続文字列は、データ プロバイダーの接続プロパティのテキスト表現です。 次の表に、さまざまなデータ接続に使用される接続文字列の例を示します。  
  
  > [!NOTE]  
@@ -53,10 +53,10 @@ ms.locfileid: "74190915"
   
  これらの種類のデータ ソースへの接続に必要な設定の詳細については、「[外部データ ソースのデータを追加する (SSRS)](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)」または「[Reporting Services でサポートされるデータ ソース (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)」で、目的のデータ接続の記事を参照してください。  
   
-##  <a name="bkmk_special_password_characters"></a> パスワードの特殊文字  
- パスワードを要求したり、接続文字列にパスワードを含めるように ODBC データ ソースや SQL データ ソースを構成し、ユーザーが句読点のような特殊文字を使用してパスワードを入力した場合、基になるデータ ソースのドライバーによってはその特殊文字を検証することができません。 レポートを処理する際に、この問題によって、"パスワードが無効です" というメッセージが表示される場合があります。 パスワードを変更できない場合は、データベース管理者と連携して、適切な資格情報をシステム ODBC データ ソース名 (DSN) の一部としてサーバーに格納することができます。 詳細については、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ドキュメントの [OdbcConnection.ConnectionString](https://docs.microsoft.com/dotnet/api/system.data.odbc.odbcconnection.connectionstring) に関する記事を参照してください。  
+##  <a name="special-characters-in-a-password"></a><a name="bkmk_special_password_characters"></a> パスワードの特殊文字  
+ パスワードを要求したり、接続文字列にパスワードを含めるように ODBC データ ソースや SQL データ ソースを構成し、ユーザーが句読点のような特殊文字を使用してパスワードを入力した場合、基になるデータ ソースのドライバーによってはその特殊文字を検証することができません。 レポートを処理する際に、この問題によって、"パスワードが無効です" というメッセージが表示される場合があります。 パスワードを変更できない場合は、データベース管理者と連携して、適切な資格情報をシステム ODBC データ ソース名 (DSN) の一部としてサーバーに格納することができます。 詳細については、[ ドキュメントの ](https://docs.microsoft.com/dotnet/api/system.data.odbc.odbcconnection.connectionstring)OdbcConnection.ConnectionString[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] に関する記事を参照してください。  
   
-##  <a name="bkmk_Expressions_in_connection_strings"></a> 式に基づく接続文字列  
+##  <a name="expression-based-connection-strings"></a><a name="bkmk_Expressions_in_connection_strings"></a> 式に基づく接続文字列  
  式に基づく接続文字列は実行時に評価されます。 たとえば、データ ソースをパラメーターとして指定し、接続文字列にパラメーター参照を含めて、ユーザーがレポートのデータ ソースを選択できるようにすることができます。 たとえば、多国籍企業がいくつもの国にデータ サーバーを持っていると仮定します。 式ベースの接続文字列を使用すると、販売レポートを実行するユーザーは、レポートの実行前に特定の国のデータ ソースを選択することができます。  
   
  次の例では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の接続文字列でデータ ソースの式を使用する方法を示します。 この例では、 `ServerName`というレポート パラメーターが作成されているものとします。  

@@ -11,10 +11,10 @@ ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 64f1b991d0978e45cbfa9dbf19ba796cc824bf5c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71292940"
 ---
 # <a name="define-a-state-variable"></a>状態変数の定義
@@ -30,7 +30,7 @@ ms.locfileid: "71292940"
   
  次の表に、CDC 状態変数値の各要素の概要を示します。  
   
-|コンポーネント|[説明]|  
+|コンポーネント|説明|  
 |---------------|-----------------|  
 |**\<state-name>**|現在の CDC 状態の名前です。|  
 |**CS**|現在の処理範囲の始点 (Current Start) を示します。|  
@@ -49,7 +49,7 @@ ms.locfileid: "71292940"
   
  次の表に、使用可能な CDC 状態値を示します。  
   
-|State|[説明]|  
+|State|説明|  
 |-----------|-----------------|  
 |(INITIAL)|現在の CDC グループでパッケージが実行される前の初期状態です。 CDC 状態が空のときの状態でもあります。|  
 |ILSTART (Initial Load Started)|CDC 制御タスクに対する **MarkInitialLoadStart** 操作の呼び出し後、初期読み込みパッケージが開始したときの状態です。|  

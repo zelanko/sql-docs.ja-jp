@@ -24,12 +24,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8baf9a3ab87f53bf1e193f680e5977dc9631c4b3
-ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
+ms.openlocfilehash: 666b10f91db9fa5cdf53dd2a826b38752708e3cd
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77608477"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80217001"
 ---
 # <a name="alerts"></a>警告
 
@@ -108,7 +108,9 @@ ms.locfileid: "77608477"
     > [!NOTE]  
     > サーバー名を格納するイベント ログ変数は、32 文字までに制限されています。 したがって、ホスト名とインスタンス名の合計サイズが 32 文字を超えると、次のエラーが表示されることがあります。
     
-    警告、[466] パフォーマンス カウンターの警告の生成中に、サーバー名 LONGNAMESQLSERV\LONGINSTANCENAME をコピーできませんでした。
+   ``` 
+   Warning,[466] Failed to copy server name LONGNAMESQLSERV\LONGINSTANCENAME while generating performance counter alerts.
+   ```
   
   
 ## <a name="selecting-a-wmi-event"></a>WMI イベントの選択  

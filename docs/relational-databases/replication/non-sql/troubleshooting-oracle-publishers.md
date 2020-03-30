@@ -14,10 +14,10 @@ ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c0bb4dfc3a0ac9109b210cfe02fb6a2e743f0ce5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72907961"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Oracle パブリッシャーのトラブルシューティング
@@ -56,20 +56,20 @@ ms.locfileid: "72907961"
   
 -   Oracle データベースがオンラインになっており、SQL*Plus などのツールを使用して Oracle データベースに接続できるかどうか。  
   
--   レプリケーションが Oracle パブリッシャーに接続する際に使用するログインに十分な権限があるかどうか。 詳細については、「[Oracle パブリッシャーの構成](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)」をご覧ください。  
+-   レプリケーションが Oracle パブリッシャーに接続する際に使用するログインに十分な権限があるかどうか。 詳細については、「[Configure an Oracle Publisher](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)」(Oracle パブリッシャーの構成) をご覧ください。  
   
 -   Oracle パブリッシャーの構成中に定義された TNS 名が tnsnames.ora ファイルに記載されているかどうか。  
   
 -   正しい Oracle ホームおよびパスが使用されているかどうか。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターに Oracle バイナリのセットが 1 つしかインストールされていない場合でも、Oracle ホーム関連の環境変数が正しく設定されていることを確認してください。 環境変数の値を変更した場合は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を停止してから再起動して、変更を有効にする必要があります。  
   
- 接続の構成とテストの詳細については、「[Configure an Oracle Publisher (Oracle パブリッシャーの構成)](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)」の「Installing and Configuring Oracle Client Networking Software on the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributor (SQL Server ディストリビューターへの Oracle クライアント ネットワーク ソフトウェアのインストールと構成)」を参照してください。  
+ 接続の構成とテストの詳細については、「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Configure an Oracle Publisher (Oracle パブリッシャーの構成)[」の「Installing and Configuring Oracle Client Networking Software on the ](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md) Distributor (SQL Server ディストリビューターへの Oracle クライアント ネットワーク ソフトウェアのインストールと構成)」を参照してください。  
   
 ## <a name="the-oracle-publisher-is-associated-with-another-distributor"></a>Oracle パブリッシャーが別のディストリビューターに関連付けられている  
  Oracle パブリッシャーは、1 つの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターにのみ関連付けることができます。 別のディストリビューターを Oracle パブリッシャーに関連付ける場合は、関連付けられているディストリビューターを削除してから、別のディストリビューターを使用する必要があります。 ディストリビューターを最初に削除しない場合、次のエラー メッセージのいずれかが表示されます。  
   
 -   "Oracle サーバー インスタンス '\<*OraclePublisherName*>' は、'\<*SQLServerDistributorName*>' をディストリビューターとして使用するように構成されています。 '\<*NewSQLServerDistributorName*>' をディストリビューターとして使用するためには、Oracle サーバー インスタンスの現在のレプリケーション構成を削除する必要があります。その場合、サーバー インスタンス上のすべてのパブリケーションが削除されます。"  
   
--   "Oracle サーバー '\<*OracleServerName*>' は、既にディストリビューター '\<*SQLServerDistributorName*>. *\<DistributionDatabaseName>* ' のパブリッシャー '\<*OraclePublisherName*>' として定義されています。 パブリッシャーを削除するか、パブリック シノニム ' *\<SynonymName>* ' を削除して、再作成してください。"  
+-   "Oracle サーバー '\<*OracleServerName*>' は、既にディストリビューター '\<*SQLServerDistributorName*>.\<*DistributionDatabaseName>* ' のパブリッシャー ' *\<OraclePublisherName*>' として定義されています。 パブリッシャーを削除するか、パブリック シノニム ' *\<SynonymName>* ' を削除して、再作成してください。"  
   
  Oracle パブリッシャーが削除されると、Oracle データベース内のレプリケーション オブジェクトが自動的にクリーンアップされます。 ただし、Oracle レプリケーション オブジェクトを手動でクリーンアップすることが必要な場合もあります。 レプリケーションで作成した Oracle レプリケーション オブジェクトを手動でクリーン アップするには、次の手順を実行します。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "72907961"
   
  "ソース テーブル [\<*TableOwner*>].[\<*TableName*>] に有効な主キーが見つかりません。"  
   
- 主キーの要件の詳細については、トピック「[Oracle パブリッシャーの設計上の注意点および制限](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)」の「一意のインデックスおよび制約」を参照してください。  
+ 主キーの要件の詳細については、トピック「 [Design Considerations and Limitations for Oracle Publishers](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)」の「一意のインデックスおよび制約」を参照してください。  
   
 ## <a name="sql-server-error-21642-is-raised-regarding-a-duplicate-linked-server-login"></a>リンク サーバー ログインの重複に関する SQL Server エラー 21642 が発生する  
  Oracle パブリッシャーを最初に構成するときに、パブリッシャーとディストリビューター間の接続用にリンク サーバー エントリが作成されます。 リンク サーバーには、Oracle TNS サービスと同じ名前が付けられます。 同じ名前でリンク サーバーを作成しようとすると、次のエラー メッセージが表示されます。  
@@ -112,7 +112,7 @@ ms.locfileid: "72907961"
   
 5.  開いている各ダイアログ ボックスで **[OK]** をクリックして作業を終了し、変更を保存します。  
   
- ディストリビューターで sqlplus.exe が見つからない場合は、Oracle クライアント ソフトウェアの現在のバージョンをディストリビューターにインストールします。 詳細については、「[Oracle パブリッシャーの構成](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)」をご覧ください。  
+ ディストリビューターで sqlplus.exe が見つからない場合は、Oracle クライアント ソフトウェアの現在のバージョンをディストリビューターにインストールします。 詳細については、「[Configure an Oracle Publisher](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)」(Oracle パブリッシャーの構成) をご覧ください。  
   
 ## <a name="sql-server-error-21620-is-raised"></a>SQL Server エラー 21620 が発生する  
  Oracle データベースのバージョン 8.1 よりも前のバージョンに接続している場合、Oracle パブリッシングでは、ディストリビューターにインストールされている Oracle クライアント ソフトウェアが、バージョン 9 からのものである必要があります。 Oracle データベースのバージョン 8.1 以降に接続している場合は、Oracle クライアント ソフトウェアのバージョン 10 以降を使用することをお勧めします。  
@@ -130,7 +130,7 @@ ms.locfileid: "72907961"
   
 -   "Oracle 用の Oracle OLEDB プロバイダー OraOLEDB.Oracle が登録されていることを示す CLSID レジストリ キーがディストリビューターに存在しません。 ディストリビューターに Oracle OLEDB プロバイダーがインストールおよび登録されていることを確認してください。"  
   
- Oracle クライアント ソフトウェア バージョン 10g を使用している場合、プロバイダーは OraOLEDB10.dll です。バージョン 9i の場合、プロバイダーは OraOLEDB.dll です。 プロバイダーは %ORACLE_HOME%\BIN (たとえば、C:\oracle\product\10.1.0\Client_1\bin) にインストールされます。 ディストリビューターに Oracle OLEDB プロバイダーがインストールされていない場合は、Oracle が提供する Oracle クライアント ソフトウェア インストール ディスクからインストールしてください。 詳細については、「[Oracle パブリッシャーの構成](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)」をご覧ください。  
+ Oracle クライアント ソフトウェア バージョン 10g を使用している場合、プロバイダーは OraOLEDB10.dll です。バージョン 9i の場合、プロバイダーは OraOLEDB.dll です。 プロバイダーは %ORACLE_HOME%\BIN (たとえば、C:\oracle\product\10.1.0\Client_1\bin) にインストールされます。 ディストリビューターに Oracle OLEDB プロバイダーがインストールされていない場合は、Oracle が提供する Oracle クライアント ソフトウェア インストール ディスクからインストールしてください。 詳細については、「[Configure an Oracle Publisher](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)」(Oracle パブリッシャーの構成) をご覧ください。  
   
  Oracle OLEDB プロバイダーがインストールされている場合は、そのプロバイダーが登録されていることを確認してください。 プロバイダーの DLL を登録するには、DLL がインストールされているディレクトリから次のコマンドを実行し、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスを停止して再起動します。  
   
@@ -194,7 +194,7 @@ ms.locfileid: "72907961"
  `CREATE TRIGGER`  
   
 ## <a name="you-encounter-permissions-issues-for-the-replication-user-schema"></a>レプリケーション ユーザー スキーマの権限に関する問題が発生する  
- レプリケーション ユーザー スキーマには、「[Oracle パブリッシャーの構成](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)」の「手動によるユーザー スキーマの作成」で説明されている権限が必要です。  
+ レプリケーション ユーザー スキーマには、「[Configure an Oracle Publisher (Oracle パブリッシャーの構成)](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)」の「Creating the User Schema Manually (手動によるユーザー スキーマの作成)」で説明されている権限が必要です。  
   
 ## <a name="oracle-error-ora-01000"></a>Oracle エラー ORA-01000  
  パブリケーションへアーティクルを追加処理中に、レプリケーションは Oracle パブリッシャーでカーソルを使用します。 この処理中にパブリッシャーで使用できるカーソルの最大数を超える可能性があります。 最大数を超えると、次のエラーが発生します。  
@@ -206,7 +206,7 @@ ms.locfileid: "72907961"
 ## <a name="oracle-error-ora-01555"></a>Oracle エラー ORA-01555  
  次の Oracle データベース エラーは、スナップショット レプリケーションに関連するものではありません。このエラーは、Oracle でのデータの読み取り一貫性ビューの構築方法に関連します。  
   
- "ORA-01555:Snapshot too old (ORA-01555: スナップショットが古すぎます)"  
+ "ORA-01555: Snapshot too old"  
   
  Oracle では、ロールバック セグメントと呼ばれるオブジェクトを使用して、SQL ステートメントの発行時点のデータの読み取り一貫性ビューを構築します。 "Snapshot too old" エラーは、ロールバック情報が他の同時接続セッションによって上書きされた場合に発生する可能性があります。 Oracle 9i よりも前のバージョンでは、このエラーの発生頻度を減らす方法として、ロールバック セグメントのサイズや数を増やしたり、大きいトランザクションを特定のロールバック セグメントに割り当てる方法が推奨されていました。  
   
@@ -230,7 +230,7 @@ ms.locfileid: "72907961"
  "ORA-22285: non-existent directory or file for FILEOPEN operation"  
   
 ## <a name="changes-are-made-that-require-reconfiguration-of-the-publisher"></a>パブリッシャーの再構成が必要になる変更  
- レプリケーション メタデータ テーブルまたはプロシージャを変更した場合は、パブリッシャーを削除して再構成する必要があります。 パブリッシャーを再構成するには、パブリッシャーを削除し、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、Transact-SQL、または RMO を使用してパブリッシャーを再構成する必要があります。 パブリッシャーの構成の詳細については、「[Oracle パブリッシャーの構成](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)」を参照してください。  
+ レプリケーション メタデータ テーブルまたはプロシージャを変更した場合は、パブリッシャーを削除して再構成する必要があります。 パブリッシャーを再構成するには、パブリッシャーを削除し、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、Transact-SQL、または RMO を使用してパブリッシャーを再構成する必要があります。 パブリッシャーの構成の詳細については、「[Configure an Oracle Publisher (Oracle パブリッシャーの構成)](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)」を参照してください。  
   
  **Oracle パブリッシャーを削除するには (** SQL Server Management Studio **)**  
   
@@ -247,7 +247,7 @@ ms.locfileid: "72907961"
 -   **sp_dropdistpublisher**を実行します。 詳細については、「[sp_dropdistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Oracle パブリッシャーの構成](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
+ [Configure an Oracle Publisher (Oracle パブリッシャーの構成)](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Oracle パブリッシングの概要](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

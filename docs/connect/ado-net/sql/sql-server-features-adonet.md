@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: ed7fa07959715ac6c08b8799c5579e90939f87c2
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896264"
 ---
 # <a name="sql-server-features-and-adonet"></a>SQL Server の機能と ADO.NET
@@ -42,13 +42,13 @@ SQL Server Express のユーザー インスタンスのサポートについて
 コンテキスト接続について説明します。  
   
 [SQL Server でのクエリ通知](query-notifications-sql-server.md)  
-データが変更されたときに、.NET アプリケーションが SQL Server に通知を要求する方法について説明します。  
+データが変更されたときに .NET アプリケーションが SQL Server に通知を要求する方法について説明します。  
   
 [SQL Server でのスナップショット分離](snapshot-isolation-sql-server.md)  
 トランザクション アプリケーションでのブロックを減らすための行のバージョン管理メカニズム、スナップショット分離のサポートについて説明します。  
   
 [高可用性、ディザスター リカバリーのための SqlClient のサポート](sqlclient-support-high-availability-disaster-recovery.md)  
-高可用性、ディザスター リカバリー (Always On) 可用性グループのための SqlClient サポートについて説明します。  
+高可用性、ディザスター リカバリー (AlwaysOn) 可用性グループのための SqlClient のサポートについて説明します。  
   
 [SqlClient による LocalDB のサポート](sqlclient-support-localdb.md)  
 SqlClient による LocalDB データベースのサポートについて説明します。

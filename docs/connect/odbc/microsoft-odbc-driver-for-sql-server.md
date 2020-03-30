@@ -11,10 +11,10 @@ ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f953d3b36818ce4d44d80ddb1c67033fa468f093
-ms.sourcegitcommit: 577e7467821895f530ec2f97a33a965fca808579
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79058736"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft SQL Server 用 ODBC Driver
@@ -39,7 +39,7 @@ ODBC ドライバーには、[**sqlcmd**](../../tools/sqlcmd-utility.md) や [**
 
 ## <a name="documentation"></a>ドキュメント
 
-### <a name="features"></a>機能
+### <a name="features"></a>[機能]
 
 - [カスタム キーストア プロバイダー](../../connect/odbc/custom-keystore-providers.md)
 - [データ分類](../../connect/odbc/data-classification.md)

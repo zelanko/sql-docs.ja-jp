@@ -24,10 +24,10 @@ ms.assetid: 5440cbb8-3403-4d27-a2f9-8e1f5a1bc12b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e838729d064a6101d4efb8fc57c7cd7b9910ad8e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68117282"
 ---
 # <a name="create-search-property-list-transact-sql"></a>CREATE SEARCH PROPERTY LIST (Transact-SQL)
@@ -87,7 +87,7 @@ CREATE SEARCH PROPERTY LIST new_list_name
   
 -   [DROP SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/drop-search-property-list-transact-sql.md)  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  現在のデータベースには CREATE FULLTEXT CATALOG 権限が必要であり、ソース プロパティ リストのコピー元のデータベースには REFERENCES 権限が必要です。  
   
 > [!NOTE]  

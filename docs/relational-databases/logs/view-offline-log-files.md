@@ -14,10 +14,10 @@ ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 814bfdd9c44170cc25f8dbd7eabcfd78ebde2a7d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908554"
 ---
 # <a name="view-offline-log-files"></a>オフライン ログ ファイルの表示
@@ -46,7 +46,7 @@ ms.locfileid: "72908554"
   
 -   [SqlErrorLogFile Class](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogfile-class.md) (このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の指定されたインスタンス上のすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログ ファイルに関する情報を取得する方法について説明しています。)  
   
-##  <a name="BeforeYouBegin"></a> Permissions  
+##  <a name="permissions"></a><a name="BeforeYouBegin"></a> Permissions  
  オフラインのログ ファイルに接続するには、ローカルおよびリモートの両方のコンピューターで次の権限が必要です。  
   
 -   **Root\Microsoft\SqlServer\ComputerManagement12** WMI 名前空間への読み取りアクセス。 既定では、すべてのユーザーがアカウントの有効化権限による読み取りアクセスを持ちます。 詳細については、このセクションで後述する「WMI 権限を確認するには」を参照してください。  

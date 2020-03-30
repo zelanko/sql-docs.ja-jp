@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 786ebc0529d9af47c34840e0e2cb11bf2a448fec
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79285776"
 ---
 # <a name="manage-and-troubleshoot-stretch-database"></a>Stretch Database の管理とトラブルシューティング
@@ -27,7 +27,7 @@ ms.locfileid: "79285776"
   Stretch Database の管理とトラブルシューティングには、この記事で説明するツールとメソッドを使います。  
 ## <a name="manage-local-data"></a>ローカル データの管理  
   
-###  <a name="LocalInfo"></a> Stretch Database が有効なローカル データベースとテーブルに関する情報を取得する  
+###  <a name="get-info-about-local-databases-and-tables-enabled-for-stretch-database"></a><a name="LocalInfo"></a> Stretch Database が有効なローカル データベースとテーブルに関する情報を取得する  
  カタログ ビュー **sys.databases** と **sys.tables** を開き、Stretch 対応の SQL Server データベースとテーブルに関する情報を確認します。 詳細については、「[sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)」と「[sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)」を参照してください。  
  
  SQL Server で Stretch 対応テーブルが使用する領域の量を表示するには、次のステートメントを実行します。
@@ -44,17 +44,17 @@ GO
 ### <a name="check-the-filter-function-applied-to-a-table"></a>テーブルに適用されたフィルター関数の確認  
  カタログ ビュー **sys.remote_data_archive_tables** を開き、 **filter_predicate** 列の値を確認し、移行する行を選択するために Strech Database が使用する関数を識別します。 値が null の場合、テーブル全体が移行の対象になります。 詳細については、「[sys.remote_data_archive_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md)」と「[フィルター関数を使用して、移行する行を選択する](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)」を参照してください。  
   
-###  <a name="Migration"></a> データ移行の状態を確認する  
+###  <a name="check-the-status-of-data-migration"></a><a name="Migration"></a> データ移行の状態を確認する  
  Stretch Database モニターでデータ移行を監視するには、SQL Server Management Studio のデータベースで、 **[タスク]、[Stretch]、[モニター]** の順に選択します。 詳細については、「 [データ移行の監視とトラブルシューティング &#40;Stretch Database&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)」を参照してください。  
   
  または、動的管理ビュー **sys.dm_db_rda_migration_status** を開いて、移行されたバッチ数とデータ行数を確認します。  
   
-###  <a name="Firewall"></a> データ移行のトラブルシューティング  
+###  <a name="troubleshoot-data-migration"></a><a name="Firewall"></a> データ移行のトラブルシューティング  
  トラブルシューティングの提案については、「 [データ移行の監視とトラブルシューティング &#40;Stretch Database&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)」を参照してください。  
   
 ## <a name="manage-remote-data"></a>リモート データの管理  
   
-###  <a name="RemoteInfo"></a> Stretch Database に使用されるリモート データベースとテーブルに関する情報を取得する  
+###  <a name="get-info-about-remote-databases-and-tables-used-by-stretch-database"></a><a name="RemoteInfo"></a> Stretch Database に使用されるリモート データベースとテーブルに関する情報を取得する  
  カタログ ビュー **sys.remote_data_archive_databases** と **sys.remote_data_archive_tables** を開いて、移行されたデータが格納されているリモートのデータベースとテーブルに関する情報を参照します。 詳細については、「[sys.remote_data_archive_databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-databases.md)」と「[sys.remote_data_archive_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md)」を参照してください。  
  
 Azure で Stretch 対応テーブルが使用する領域の量を表示するには、次のステートメントを実行します。
@@ -103,7 +103,7 @@ GO
  ### <a name="change-the-scope-of-queries-for-all-queries-by-all-users"></a>すべてのユーザーによるすべてのクエリのクエリ スコープの変更  
  すべてのユーザーによるすべてのクエリ スコープを変更するには、ストアド プロシージャ **sys.sp_rda_set_query_mode**を実行します。 スコープを縮小して、ローカル データだけをクエリするか、すべてのクエリを無効にするか、または既定の設定を復元することができます。 詳細については、「 [sys.sp_rda_set_query_mode](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md)」を参照してください。  
    
- ### <a name="queryHints"></a>管理者による 1 つのクエリに対するクエリ スコープの変更  
+ ### <a name="change-the-scope-of-queries-for-a-single-query-by-an-administrator"></a><a name="queryHints"></a>管理者による 1 つのクエリに対するクエリ スコープの変更  
  db_owner ロールのメンバーが 1 つのクエリ スコープを変更するためには、**WITH (REMOTE_DATA_ARCHIVE_OVERRIDE = *value*)** クエリ ヒントを SELECT ステートメントに追加します。 REMOTE_DATA_ARCHIVE_OVERRIDE クエリ ヒントには次の値を指定できます。  
  -   **LOCAL_ONLY**。 ローカル データだけをクエリします。  
    
@@ -120,7 +120,7 @@ SELECT * FROM <Stretch_enabled table name> WITH (REMOTE_DATA_ARCHIVE_OVERRIDE = 
 GO
 ```  
    
- ## <a name="adminHints"></a>管理者用の更新と削除を行う  
+ ## <a name="make-administrative-updates-and-deletes"></a><a name="adminHints"></a>管理者用の更新と削除を行う  
  既定では、Stretch 対応テーブルで、移行対象の行または既に移行された行に対して、UPDATE 操作または DELETE 操作を実行することはできません。 問題を修正する必要がある場合、**WITH (REMOTE_DATA_ARCHIVE_OVERRIDE = *値*)** クエリ ヒントをステートメントに追加することにより、db_owner ロールのメンバーが UPDATE 操作または DELETE 操作を実行できます。 REMOTE_DATA_ARCHIVE_OVERRIDE クエリ ヒントには次の値を指定できます。  
  -   **LOCAL_ONLY**。 ローカルのデータのみを更新または削除します。  
    

@@ -18,10 +18,10 @@ ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 02b4311348ebbd52e5e8382048449072c84d2e46
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015035"
 ---
 # <a name="sqlsrv_fetch_array"></a>sqlsrv_fetch_array
@@ -37,11 +37,11 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
 ```  
   
 #### <a name="parameters"></a>パラメーター  
-*$stmt*: 実行されたステートメントに対応するステートメント リソース。  
+*$stmt*: 実行されたステートメントに対応するステートメント リソースです。  
   
 *$fetchType* [省略可能]: 定義済みの定数。 このパラメーターには、次の表に示すいずれかの値を指定できます。  
   
-|Value|説明|  
+|値|説明|  
 |---------|---------------|  
 |SQLSRV_FETCH_NUMERIC|次のデータ行は数値の配列として返されます。|  
 |SQLSRV_FETCH_ASSOC|次のデータ行は連想配列として返されます。 配列キーは、結果セットの列名です。|  
@@ -58,7 +58,7 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
   
 これらの値の詳細については、「 [カーソルの種類を指定し、行を選択する](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)」を参照してください。 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 1.1 に、スクロール可能なカーソルのサポートが追加されました。  
   
-*offset* [省略可能]: SQLSRV_SCROLL_ABSOLUTE および SQLSRV_SCROLL_RELATIVE と共に使用して、取得する行を指定します。 結果セットの最初のレコードは 0 です。  
+*offset* [省略可能]: SQLSRV_SCROLL_ABSOLUTE と SQLSRV_SCROLL_RELATIVE と共に使用し、取得する行を指定します。 結果セットの最初のレコードは 0 です。  
   
 ## <a name="return-value"></a>戻り値  
 データ行が取得された場合は、 **配列** が返されます。 取得する行がなくなった場合、 **null** が返されます。 エラーが発生した場合は、 **false** が返されます。  
@@ -176,7 +176,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-**sqlsrv_fetch_array** 関数は、常に [Default PHP Data Types](../../connect/php/default-php-data-types.md) パラメーターに基づいてデータを返します。 PHP データ型を指定する方法については、「[方法: PHP データ型を指定する](../../connect/php/how-to-specify-php-data-types.md)」を参照してください。  
+**sqlsrv_fetch_array** 関数は、常に [Default PHP Data Types](../../connect/php/default-php-data-types.md) パラメーターに基づいてデータを返します。 PHP データ型を指定する方法については、「 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)」を参照してください。  
   
 名前のないフィールドが取得された場合、配列要素の連想キーは空の文字列 ("") になります。 詳細については、「 [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md)」を参照してください。  
   
