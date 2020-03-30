@@ -11,10 +11,10 @@ ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 49016b1b4ff391c1b1f533a2bf716f39a40b4dbe
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75245432"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure への SQL Server マネージド バックアップ
@@ -34,10 +34,10 @@ ms.locfileid: "75245432"
   
  また、セキュリティ強化のためにバックアップを暗号化することができ、バックアップのタイミングを制御するためのカスタム スケジュールをセットアップすることができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップに Microsoft Azure BLOB ストレージを使用する利点の詳細については、「 [Microsoft Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」を参照してください。  
   
-##  <a name="Prereqs"></a> 前提条件  
+##  <a name="prerequisites"></a><a name="Prereqs"></a> 前提条件  
  Microsoft Azure Storage は、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] がバックアップ ファイルを格納するために使用されます。 以下の前提条件が必要です。  
   
-|前提条件|[説明]|  
+|前提条件|説明|  
 |------------------|-----------------|  
 |**Microsoft Azure アカウント**|[購入オプション](https://azure.microsoft.com/pricing/free-trial/) を調べる前に、 [無料評価版](https://azure.microsoft.com/pricing/purchase-options/)で Azure を使用することができます。|  
 |**Azure Storage アカウント**|バックアップは、Azure ストレージ アカウントに関連付けられている Azure BLOB ストレージに格納されます。 ストレージ アカウントの詳しい作成手順については、「 [Azure ストレージ アカウントについて](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)」を参照してください。|  
@@ -52,7 +52,7 @@ ms.locfileid: "75245432"
   
 |||  
 |-|-|  
-|システム オブジェクト|[説明]|  
+|システム オブジェクト|説明|  
 |**MSDB**|[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]によって作成されたすべてのバックアップに対するメタデータとバックアップ履歴を格納します。|  
 |[managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)|[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を有効にします。|  
 |[managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)|暗号化など、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]の詳細設定を構成します。|  
@@ -112,7 +112,7 @@ ms.locfileid: "75245432"
 > プロキシ サーバーでは、SQL Server マネージド バックアップはサポートされていません。
 >
   
-##  <a name="support_limits"></a> サポート性  
+##  <a name="supportability"></a><a name="support_limits"></a> サポート性  
  次のサポートの制限事項と考慮事項は [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]に固有のものです。  
   
 -   **master**、 **model**、 **msdb** の各システム データベースのバックアップがサポートされます。 **tempdb** のバックアップはサポートされません。 

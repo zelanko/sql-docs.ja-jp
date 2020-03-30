@@ -14,10 +14,10 @@ ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
 author: Lingxi-Li
 ms.author: lingxl
 ms.openlocfilehash: 584bd3a22c24dfccf8fab562202d66ce8689b55b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67947195"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Azure SQL DW アップロード タスク
@@ -46,7 +46,7 @@ ms.locfileid: "67947195"
 
 ### <a name="filesystem"></a>FileSystem (ファイル システム)
 
-フィールド|[説明]
+フィールド|説明
 -----|-----------
 LocalDirectory|アップロードするデータ ファイルを含むローカル ディレクトリを指定します。
 Recursively|サブディレクトリを再帰的に検索するかどうかを指定します。
@@ -67,7 +67,7 @@ HashColumnName|ハッシュ テーブル配分に使用される列を指定し�
 
 ### <a name="blobstorage"></a>BlobStorage
 
-フィールド|[説明]
+フィールド|説明
 -----|-----------
 AzureStorageConnection|Azure Storage 接続マネージャーを指定します。
 BlobContainer|ソース データが存在する BLOB コンテナーの名前を指定します。

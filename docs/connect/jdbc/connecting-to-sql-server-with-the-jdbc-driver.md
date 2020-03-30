@@ -11,10 +11,10 @@ ms.assetid: 94bcfbe3-f00e-4774-bda8-bb7577518fec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c8dbf7a415d413e0a9fad431013255ff48417687
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028177"
 ---
 # <a name="connecting-to-sql-server-with-the-jdbc-driver"></a>JDBC ドライバーによる SQL Server への接続
@@ -32,7 +32,7 @@ System.setProperty("java.net.preferIPv6Addresses", "true");
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[接続 URL の構築](../../connect/jdbc/building-the-connection-url.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに接続するための接続 URL の作成方法について説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの名前付きインスタンスへの接続についても説明します。|  
 |[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)|さまざまな接続プロパティについて、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに接続する際にそれらをどのように使用するかについて説明します。|  

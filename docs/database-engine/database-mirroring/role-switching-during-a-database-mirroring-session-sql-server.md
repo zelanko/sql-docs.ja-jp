@@ -21,10 +21,10 @@ ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b310083d3317c9099532b8d08f2482efe193d95c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75252791"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>データベース ミラーリング セッション中の役割の交代 (SQL Server)
@@ -77,7 +77,7 @@ ms.locfileid: "75252791"
   
  役割の交代中、データベース ミラーリングが使用できなくなる時間の長さは、役割の交代の形式、および原因によって異なります。 詳しくは、「 [役割の交代中に発生するサービスの中断時間の算出 &#40;データベース ミラーリング&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)という処理により、一般的にプリンシパルとミラーの役割を相互交換できます。  
   
-##  <a name="ManualFailover"></a> Manual Failover  
+##  <a name="manual-failover"></a><a name="ManualFailover"></a> Manual Failover  
  手動フェールオーバーによりデータベースからクライアントが切断され、パートナーの役割が元に戻ります。 手動フェールオーバーがサポートされているのは、高い安全性モードのみです。  
   
  **このセクションの内容**  
@@ -88,7 +88,7 @@ ms.locfileid: "75252791"
   
 -   [手動フェールオーバーの動作](#HowManualFoWorks)  
   
-###  <a name="AvailabilityDuringUpgrades"></a> アップグレード中の可用性の維持  
+###  <a name="maintaining-availability-during-upgrades"></a><a name="AvailabilityDuringUpgrades"></a> アップグレード中の可用性の維持  
  データベース管理者は、可用性を損なうことなくハードウェアやソフトウェアをアップグレードするために、手動フェールオーバーを行うことができます。 ソフトウェアをアップグレードするためにデータベース ミラーリングを使用する場合、ミラー サーバーのソフトウェア、ハードウェアのアップグレードを先に行う必要があります。  
   
 > [!NOTE]  
@@ -98,10 +98,10 @@ ms.locfileid: "75252791"
   
  ![計画的な手動フェールオーバー](../../database-engine/database-mirroring/media/dbm-failovmanuplanned.gif "計画的な手動フェールオーバー")  
   
-###  <a name="ConditionsForManualFo"></a> 手動フェールオーバーに必要な条件  
+###  <a name="conditions-required-for-a-manual-failover"></a><a name="ConditionsForManualFo"></a> 手動フェールオーバーに必要な条件  
  手動フェールオーバーでは、トランザクションの安全性が FULL (高い安全性モード) に設定されている必要があります。 パートナーが接続され、データベースが既に同期されている場合、手動フェールオーバーがサポートされます。  
   
-###  <a name="HowManualFoWorks"></a> 手動フェールオーバーの動作  
+###  <a name="how-manual-failover-works"></a><a name="HowManualFoWorks"></a> 手動フェールオーバーの動作  
  手動フェールオーバーにより、次の一連の操作が開始されます。  
   
 1.  プリンシパル サーバーでは、プリンシパル データベースからクライアントが切断され、ログの末尾がミラー サーバーに送信されます。また、ミラー ロールへの切り替えの準備として、ミラーリングの状態が SYNCHRONIZING に設定されます。  
@@ -133,7 +133,7 @@ ms.locfileid: "75252791"
   
 -   [データベース ミラーリング セッションを手動でフェールオーバーする方法 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/manually-fail-over-a-database-mirroring-session-transact-sql.md)。  
   
-##  <a name="AutomaticFailover"></a> Automatic Failover  
+##  <a name="automatic-failover"></a><a name="AutomaticFailover"></a> Automatic Failover  
  自動フェールオーバーは、ミラーリング監視サーバーを使用して高い安全性モードで実行されているデータベース ミラーリング セッション (*自動フェールオーバーを伴う高い安全性モード*) でのみサポートされます。 自動フェールオーバーを伴う高い安全性モードでは、一度データベースが同期されると、プリンシパル データベースが使用できなくなった場合に自動フェールオーバーが行われます。 自動フェールオーバーが発生すると、ミラー サーバーがプリンシパル サーバーの役割を引き継ぎ、ミラー サーバーのデータベースのコピーがプリンシパル データベースとしてオンラインになります。 データベースが同期していることを要件とすることで、プリンシパル データベースでコミットされたすべてのトランザクションがミラー データベースでもコミットされるため、フェールオーバーの間のデータの損失を防ぐことができます。  
   
 > [!IMPORTANT]  
@@ -149,7 +149,7 @@ ms.locfileid: "75252791"
   
 -   [自動フェールオーバーを無効化するには (Transact-SQL の使用)](#DisableAutoTsql)  
   
-###  <a name="ConditionsForAutoFo"></a> 自動フェールオーバーに必要な条件  
+###  <a name="conditions-required-for-an-automatic-failover"></a><a name="ConditionsForAutoFo"></a> 自動フェールオーバーに必要な条件  
  自動フェールオーバーを行うには以下の条件を満たしている必要があります。  
   
 -   データベース ミラーリング セッションを高い安全性モードで実行し、ミラーリング監視サーバーを配置している。 詳しくは、「 [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)」をご覧ください。  
@@ -165,7 +165,7 @@ ms.locfileid: "75252791"
   
      ミラー サーバーによってプリンシパル サーバーの障害がどのように検出されるかは、ハードウェアに関する障害とソフトウェアに関する障害とで異なります。 詳細については、「 [データベース ミラーリング中に発生する可能性のあるエラー](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)」を参照してください。  
   
-###  <a name="HowAutoFoWorks"></a> 自動フェールオーバーの動作  
+###  <a name="how-automatic-failover-works"></a><a name="HowAutoFoWorks"></a> 自動フェールオーバーの動作  
  上記の条件を満たしている場合、以下の順序で自動フェールオーバーの動作が開始されます。  
   
 1.  プリンシパル サーバーがまだ実行中の場合は、プリンシパル データベースの状態が DISCONNECTED に変更され、プリンシパル データベースからすべてのクライアントが切断されます。  
@@ -192,7 +192,7 @@ ms.locfileid: "75252791"
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散トランザクション コーディネーターを使用して準備したトランザクションのうち、フェールオーバーの発生時点ではコミットされていなかったトランザクションは、データベースのフェールオーバー後に中断したと見なされます。  
   
-###  <a name="DisableAutoSSMS"></a> 自動フェールオーバーを無効化するには (SQL Server Management Studio)  
+###  <a name="to-disable-automatic-failover-sql-server-management-studio"></a><a name="DisableAutoSSMS"></a> 自動フェールオーバーを無効化するには (SQL Server Management Studio)  
  **[データベースのプロパティ] の [ミラーリング]** ページを開き、次のいずれかのオプションを選択して動作モードを変更します。  
   
 -   **[自動フェールオーバーを伴わない高い安全性 (同期)]**  
@@ -203,7 +203,7 @@ ms.locfileid: "75252791"
   
      このモードでは、ミラー データベースでプリンシパル データベースに対する多少の遅延が発生するため、手動フェールオーバーを実行できません。  
   
-###  <a name="DisableAutoTsql"></a> 自動フェールオーバーを無効化するには (Transact-SQL の使用)  
+###  <a name="to-disable-automatic-failover-using-transact-sql"></a><a name="DisableAutoTsql"></a> 自動フェールオーバーを無効化するには (Transact-SQL の使用)  
  データベース ミラーリング セッションの任意の時点で、データベース所有者はミラーリング監視サーバーを無効にすることで、自動フェールオーバーを無効にできます。  
   
  **ミラーリング監視サーバーを無効にするには**  
@@ -213,7 +213,7 @@ ms.locfileid: "75252791"
     > [!NOTE]  
     >  トランザクションの安全性を FULL に保ったままミラーリング監視サーバーを無効にすると、セッションは自動フェールオーバーを伴わない高い安全性モードになります。  
   
-##  <a name="ForcedService"></a> Forced Service (with Possible Data Loss)  
+##  <a name="forced-service-with-possible-data-loss"></a><a name="ForcedService"></a> Forced Service (with Possible Data Loss)  
  データベース ミラーリングには、ディザスター リカバリー方法としてサービスの強制 (データ損失の可能性あり) を利用でき、ミラー サーバーをウォーム スタンバイ サーバーとして使用できます。 サービスを強制できるのは、プリンシパル サーバーが、ミラーリング セッションでミラー サーバーから切断された場合だけです。 サービスを強制するとデータを損失する可能性があるので、サービスの強制は注意深く慎重に使用してください。  
   
  強制的なサービスの起動がサポートされるかどうかは、次に示すように、動作モードとセッションの状態によって異なります。  
@@ -239,7 +239,7 @@ ms.locfileid: "75252791"
   
 -   [強制フェールオーバーを管理するための関連タスク](#RelatedTasksForFS)  
   
-###  <a name="TypicalCaseFS"></a> 強制的なサービスの起動の一般的な事例  
+###  <a name="typical-case-of-forced-service"></a><a name="TypicalCaseFS"></a> 強制的なサービスの起動の一般的な事例  
  次の図は、強制的なサービスの起動 (データ損失の可能性あり) の一般的な事例を示しています。  
   
  ![データ損失の可能性があるサービスの強制](../../database-engine/database-mirroring/media/dbm-forced-service.gif "データ損失の可能性があるサービスの強制")  
@@ -251,7 +251,7 @@ ms.locfileid: "75252791"
 > [!NOTE]  
 >  高パフォーマンス モードにはミラーリング監視サーバーは必要ありませんが、構成されている場合は、ミラーリング監視サーバーが現在ミラー サーバーに接続されている場合のみサービスの強制が可能です。  
   
-###  <a name="FSrisks"></a> サービスの強制のリスク  
+###  <a name="risks-of-forcing-service"></a><a name="FSrisks"></a> サービスの強制のリスク  
  サービスの強制によってデータが失われる可能性があることを理解しておく必要があります。 ミラー サーバーがプリンシパル サーバーと通信できなくなり、そのために 2 つのデータベースが必ずしも同期されなくなることが原因で、データが失われる可能性があります。 サービスを強制すると、新しい復旧分岐が始まります。 元のプリンシパル データベースとミラー データベースは別の復旧分岐に存在するので、それぞれのデータベースにはもう一方のデータベースには含まれていないデータが含まれることになります。つまり元のプリンシパル データベースには、その送信キューから以前のミラー データベースに送信されなかったすべての変更 (未送信ログ) が含まれ、以前のミラー データベースには、サービスの強制後に行われたすべての変更が含まれます。  
   
  プリンシパル サーバーで障害が発生したためにサービスが強制された場合、データが損失するかどうかは、障害発生前にミラー サーバーに送信されなかったトランザクション ログがあるかどうかによって異なります。 高い安全性モードの場合、データが損失するのは、ミラー データベースが同期された状態になるまでの間だけです。 高パフォーマンス モードの場合、蓄積された未送信ログがある場合は常にデータ損失の可能性があります。  
@@ -264,7 +264,7 @@ ms.locfileid: "75252791"
   
  詳細については、このトピックの「 [データ損失の可能性への対処](#ManageDataLoss)」を参照してください。  
   
-###  <a name="ManageDataLoss"></a> データ損失の可能性への対処  
+###  <a name="managing-the-potential-data-loss"></a><a name="ManageDataLoss"></a> データ損失の可能性への対処  
  サービスの強制後、以前のプリンシパル サーバーが使用可能になると、そのデータベースは破損していないと想定されるので、データ損失の可能性に対処できます。 データ損失の可能性に対処するために使用できる方法は、元のプリンシパル サーバーがそのパートナーに再接続され、ミラーリング セッションにもう一度参加したかどうかによって異なります。 元のプリンシパル サーバーが新しいプリンシパル インスタンスにアクセスできる場合、自動的に再接続されます。  
   
 #### <a name="the-original-principal-server-has-reconnected"></a>元のプリンシパル サーバーが再接続された場合  
@@ -293,7 +293,7 @@ ms.locfileid: "75252791"
   
      更新されたデータベースを最初のプリンシパル データベースとするミラーリングを再確立するには、このバックアップ (およびそれ以降のログ バックアップ 1 つ以上) を使用して、新しいミラー データベースを作成します。 ミラーリングの削除後に実行したログ バックアップをすべて適用する必要があります。 そのため、新しいミラーリング セッションが開始されるまで、プリンシパル データベースで追加のログ バックアップを作成しないことをお勧めします。  
   
-###  <a name="RelatedTasksForFS"></a> 強制フェールオーバーを管理するための関連タスク  
+###  <a name="related-tasks-for-managing-a-forced-failover"></a><a name="RelatedTasksForFS"></a> 強制フェールオーバーを管理するための関連タスク  
  **サービスを強制するには**  
   
 -   [データベース ミラーリング セッションでのサービスを強制する &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/force-service-in-a-database-mirroring-session-transact-sql.md)。  

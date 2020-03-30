@@ -14,10 +14,10 @@ ms.assetid: b4a04acd-0b66-44a5-b72d-1a45b49e13e6
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 08cc5200801b99442c8973583f4ab7caa9ea9fb5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68140727"
 ---
 # <a name="sql-server-query-store-object"></a>SQL Server, クエリ ストア オブジェクト
@@ -27,7 +27,7 @@ ms.locfileid: "68140727"
   
  次の表では、 **SQLServer:Query Store**カウンターについて説明します。  
   
-|SQL Server のクエリ ストア カウンター|[説明]|  
+|SQL Server のクエリ ストア カウンター|説明|  
 |-------------------------------------|-----------------|  
 |**Query Store CPU usage (クエリ ストアの CPU 使用率)**|クエリ ストアの CPU の使用率を示します。|  
 |**Query Store logical reads (クエリ ストアの論理読み取り数)**|クエリ ストアによって行われた論理読み取りの数を示します。|  
@@ -36,7 +36,7 @@ ms.locfileid: "68140727"
   
  オブジェクトの各カウンターには、次のインスタンスが含まれています。  
   
-|クエリ ストアのインスタンス|[説明]|  
+|クエリ ストアのインスタンス|説明|  
 |--------------------------|-----------------|  
 |**_Total**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のこのインスタンスのクエリ ストアの情報です。|  
 |\<データベース名>|このデータベースのクエリ ストアの情報です。|  

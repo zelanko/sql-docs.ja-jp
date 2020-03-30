@@ -14,10 +14,10 @@ author: v-makouz
 ms.author: v-makouz
 manager: kenvh
 ms.openlocfilehash: 8f0f821890cabe25a9abb572e453c9846c75ec94
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "72041132"
 ---
 # <a name="data-classification"></a>データ分類
@@ -243,10 +243,10 @@ int main(int argc, char **argv)
 }
 ```
 
-## <a name="bkmk-version"></a>サポートされているバージョン
-Microsoft ODBC Driver 17.2 では、`FieldIdentifier` が `SQL_CA_SS_DATA_CLASSIFICATION` (1237) に設定されている場合、`SQLGetDescField` を使用してデータの分類情報を取得できます。 
+## <a name="supported-version"></a><a name="bkmk-version"></a>サポートされているバージョン
+Microsoft ODBC Driver 17.2 では、`SQLGetDescField` が `FieldIdentifier` (1237) に設定されている場合、`SQL_CA_SS_DATA_CLASSIFICATION` を使用してデータの分類情報を取得できます。 
 
-Microsoft ODBC Driver 17.4.1.1 からは、サーバーでサポートされているデータ分類のバージョンを、`SQL_CA_SS_DATA_CLASSIFICATION_VERSION` (1238) フィールド識別子を使用して `SQLGetDescField` を介して取得できるようになりました。 17.4.1.1 では、サポートされているデータ分類のバージョンは "2" に設定されています。
+Microsoft ODBC Driver 17.4.1.1 からは、サーバーでサポートされているデータ分類のバージョンを、`SQLGetDescField` (1238) フィールド識別子を使用して `SQL_CA_SS_DATA_CLASSIFICATION_VERSION` を介して取得できるようになりました。 17.4.1.1 では、サポートされているデータ分類のバージョンは "2" に設定されています。
 
  
 

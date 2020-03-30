@@ -13,23 +13,23 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 4fd63ceb329fd6e6f7768425a1ccf43afa27dd21
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896254"
 ---
 # <a name="sql-xml-column-values"></a>SQL XML 列の値
 
 [!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
-SQL Server では、`xml` データ型をサポートしています。開発者は、<xref:Microsoft.Data.SqlClient.SqlCommand> クラスの標準動作を使用し、この型を含む結果セットを取得できます。 任意の列が (<xref:Microsoft.Data.SqlClient.SqlDataReader> などに) 取得されるように、`xml` 列を取得できますが、列のコンテンツを XML として操作する必要がある場合は、<xref:System.Xml.XmlReader> を使用する必要があります。  
+SQL Server では、`xml` データ型をサポートしています。開発者は、<xref:Microsoft.Data.SqlClient.SqlCommand> クラスの標準動作を使用し、この型を含む結果セットを取得できます。 任意の列が (`xml` などに) 取得されるように、<xref:Microsoft.Data.SqlClient.SqlDataReader> 列を取得できますが、列のコンテンツを XML として操作する必要がある場合は、<xref:System.Xml.XmlReader> を使用する必要があります。  
   
 ## <a name="example"></a>例  
-次のコンソール アプリケーションでは、**AdventureWorks** データベースの **Sales.Store** テーブルから 2 行を選択し、この行の `xml` 列を <xref:Microsoft.Data.SqlClient.SqlDataReader> インスタンスに格納します。 行ごとに、<xref:Microsoft.Data.SqlClient.SqlDataReader> の <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlXml%2A> メソッドを使用して `xml` 列の値が読み取られます。 この値は <xref:System.Xml.XmlReader> に格納されます。 コンテンツを <xref:System.Data.SqlTypes.SqlXml> 変数に設定する場合は、<xref:System.Data.IDataRecord.GetValue%2A> メソッドではなく <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlXml%2A> を使用する必要があることに注意してください。<xref:System.Data.IDataRecord.GetValue%2A> は、`xml` 列の値を文字列として返します。  
+次のコンソール アプリケーションでは、`xml`AdventureWorks**データベースの**Sales.Store**テーブルから 2 行を選択し、この行の** 列を <xref:Microsoft.Data.SqlClient.SqlDataReader> インスタンスに格納します。 行ごとに、`xml` の <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlXml%2A> メソッドを使用して <xref:Microsoft.Data.SqlClient.SqlDataReader> 列の値が読み取られます。 この値は <xref:System.Xml.XmlReader> に格納されます。 コンテンツを <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlXml%2A> 変数に設定する場合は、<xref:System.Data.IDataRecord.GetValue%2A> メソッドではなく <xref:System.Data.SqlTypes.SqlXml> を使用する必要があることに注意してください。<xref:System.Data.IDataRecord.GetValue%2A> は、`xml` 列の値を文字列として返します。  
   
 > [!NOTE]
->  **AdventureWorks** サンプル データベースは、既定では SQL Server のインストール時にはインストールされません。 それをインストールするには、SQL Server Setup を実行します。  
+>  **AdventureWorks** サンプル データベースは、既定では SQL Server のインストール時にはインストールされません。 インストールするには、SQL Server Setup を実行します。  
   
 [!code-csharp [SqlDataReader_GetSqlXml#1](~/../sqlclient/doc/samples/SqlDataReader_GetSqlXml.cs#1)]
   

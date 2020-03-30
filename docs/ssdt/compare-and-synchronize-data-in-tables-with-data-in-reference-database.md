@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: e30ec27733885521f8d6e5b487fde40afafca4dd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75241696"
 ---
 # <a name="compare-and-synchronize-data-in-one-or-more-tables-with-data-in-a-reference-database"></a>1 つ以上のテーブルのデータを参照データベースのデータと比較して同期する
@@ -27,9 +27,9 @@ ms.locfileid: "75241696"
   
 このセクションのトピックは次のとおりです。  
   
--   [方法: 2 つのデータベースのデータを比較および同期する](../ssdt/how-to-compare-and-synchronize-the-data-of-two-databases.md)  
+-   [2 つのデータベースのデータを比較および同期する方法](../ssdt/how-to-compare-and-synchronize-the-data-of-two-databases.md)  
   
--   [方法: データの差異を表示する](../ssdt/how-to-view-data-differences.md)  
+-   [データの差異を表示する方法](../ssdt/how-to-view-data-differences.md)  
   
 ## <a name="requirements"></a>必要条件  
 テーブルまたはビューのデータを比較する場合、ソース データベースのテーブルまたはビューは、ターゲット データベースのテーブルまたはビューといくつかの属性を共有している必要があります。 次の条件を満たしていないテーブルとビューは比較されないため、**新しいデータの比較**ウィザードの 2 ページ目に表示されません。  
@@ -53,10 +53,10 @@ ms.locfileid: "75241696"
   
 **テーブルのデータを比較し、必要に応じてターゲットをソースと一致するように更新する:** 比較するソース データベースとターゲット データベースを指定して比較を実行した後、 **[データ比較]** ウィンドウで結果を確認できます。 差異の詳細だけでなく、データの同期に使用できる更新スクリプトも確認できます。 2 つのデータベース間の差異を特定したら、それぞれの差異に対するアクションを指定できます。 その後、ターゲットを更新するか、Transact\-SQL エディターまたはファイルに更新スクリプトをエクスポートすることができます。 スクリプトをエクスポートすると、変更を適用する前にすべてのユーザーが確認できるようにすることができます。  
   
-## <a name="UnderstandingDataCompareResults"></a>比較結果について  
+## <a name="understanding-comparison-results"></a><a name="UnderstandingDataCompareResults"></a>比較結果について  
 次の表では、 **[データ比較]** ウィンドウの 5 つの列について説明します。  
   
-|列|Notes|  
+|列|メモ|  
 |----------|---------|  
 |Object|テーブルまたはビューの名前、および更新を書き込む場合または更新スクリプトをエクスポートする場合にターゲットを同期する必要があるかどうかを示すチェック ボックスが表示されます。 このチェック ボックスは、データが含まれていないテーブルまたはビューでは使用できません。|  
 |異なるレコード|ターゲットのレコードのうち、キーがソースと同じで、データがソースと異なるレコードの数が表示されます。 かっこ内には、更新を書き込む場合または更新スクリプトをエクスポートする場合に更新対象としてマークされているレコードの数が示されます。|  
@@ -69,5 +69,5 @@ ms.locfileid: "75241696"
   
 ## <a name="see-also"></a>参照  
 [SQL Server Data Tools](../ssdt/sql-server-data-tools.md)  
-[方法:  スキーマ比較を使用して各種のデータベース定義を比較する](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
+[スキーマ比較を使用して各種のデータベース定義を比較する方法](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   

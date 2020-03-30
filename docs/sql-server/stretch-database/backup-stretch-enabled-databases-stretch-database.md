@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 897f748c5aeab43c7e3ef98f6dbfff84b9da69d7
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286306"
 ---
 # <a name="backup-stretch-enabled-databases-stretch-database"></a>Stretch 対応データベースのバックアップ (Stretch Database)
@@ -35,7 +35,7 @@ ms.locfileid: "79286306"
   
 Stretch 対応の SQL Server データベースをバックアップするには、現在使用している SQL Server のバックアップ方法を引き続き使用できます。 詳細については、「 [SQL Server データベースのバックアップと復元](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)」を参照してください。
   
- Stretch 対応の SQL Server データベースのバックアップには、ローカル データと、バックアップを実行した時点での移行対象データのみが含まれています (対象データとは、まだ移動されていないが、テーブルの移行設定に基づいて Azure に移行される予定のデータです)。これは**浅い**バックアップと呼ばれ、既に Azure に移行されたデータは含まれません。  
+ Stretch 対応の SQL Server データベースのバックアップには、ローカル データと、バックアップを実行した時点での移行対象データのみが含まれています (対象データとは、まだ移動されていないが、テーブルの移行設定に基づいて Azure に移行される予定のデータです)。これは **浅い** バックアップと呼ばれ、既に Azure に移行されたデータは含まれません。  
   
 ## <a name="back-up-your-remote-azure-data"></a>リモートの Azure データのバックアップ   
   
@@ -46,7 +46,7 @@ Azure の SQL Server Stretch Database サービスは、少なくとも 8 時間
 ### <a name="azure-reduces-the-risk-of-data-loss-with-geo-redundancy"></a>Azure は地理冗長によりデータ損失のリスクを軽減  
 Azure のデータベース バックアップは、地理冗長の Azure Storage (RA-GRS) に格納されるため、既定で地理冗長になっています。 地理冗長ストレージは、プライマリ リージョンから数百マイル離れたセカンダリ リージョンにデータをレプリケートします。 プライマリ リージョンとセカンダリ リージョンの両方で、データは別々のフォールト ドメインとアップグレード ドメイン間でそれぞれ 3 回レプリケートされます。 これにより、いずれかの Azure リージョンが利用不能状態になるような局所的な停電や災害が発生した場合でも、データの持続性が保証されます。
 
-### <a name="stretchRPO"></a>Stretch Database は、移行済みの行を一時的に保持することで、Azure データのデータ損失リスクを軽減
+### <a name="stretch-database-reduces-the-risk-of-data-loss-for-your-azure-data-by-retaining-migrated-rows-temporarily"></a><a name="stretchRPO"></a>Stretch Database は、移行済みの行を一時的に保持することで、Azure データのデータ損失リスクを軽減
 Stretch Database は SQL Server から Azure に対象となる行を移行した後、これらの行をステージング テーブルに 8 時間以上保持します。 Azure データベースのバックアップを復元する場合、Stretch Database はステージング テーブルに保存されている行を使用して、SQL Server と Azure データベースを調整します。
 
 Azure データのバックアップを復元した後に、ストアド プロシージャ [sys.sp_rda_reauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) を実行して、Stretch 対応の SQL Server データベースをリモートの Azure データベースに再接続する必要があります。 **sys.sp_rda_reauthorize_db**を実行すると、Stretch Database は SQL Server と Azure データベースを自動的に調整します。

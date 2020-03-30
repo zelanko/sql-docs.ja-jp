@@ -15,17 +15,17 @@ ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ff886f2eea70b010a2e64513cd561cf7f78d8dee
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68084019"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>トランザクション ログ ファイルのサイズの管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 このトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のトランザクション ログ サイズの監視、トランザクション ログの圧縮、トランザクション ログ ファイルの追加と拡大、**tempdb** トランザクション ログ増加率の最適化、トランザクション ログ ファイルのサイズ拡大の管理の方法について説明します。  
 
-##  <a name="MonitorSpaceUse"></a>ログ領域の使用量の監視  
+##  <a name="monitor-log-space-use"></a><a name="MonitorSpaceUse"></a>ログ領域の使用量の監視  
 [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md) を利用し、ログ領域の使用量を監視します。 この DMV は、現在使用されているログ領域の量に関する情報を返し、いつトランザクション ログを切り捨てる必要があるかを示します。 
 
 ログ ファイルの現在のサイズ、最大サイズ、およびファイルの自動拡張オプションについては、**sys.database_files** にある、そのログ ファイルに関する **size**、**max_size**、[growth](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) の各列も使用できます。  
@@ -33,7 +33,7 @@ ms.locfileid: "68084019"
 > [!IMPORTANT]
 > ログ ディスクの過負荷を避けてください。 ログ ストレージがトランザクション負荷の [IOPS](https://wikipedia.org/wiki/IOPS) 要件と短い待ち時間要件に対応できることを確認してください。 
   
-##  <a name="ShrinkSize"></a> ログ ファイルのサイズを圧縮する  
+##  <a name="shrink-log-file-size"></a><a name="ShrinkSize"></a> ログ ファイルのサイズを圧縮する  
  物理ログ ファイルの物理サイズを削減するには、ログ ファイルを圧縮する必要があります。 トランザクション ログ ファイルに未使用領域が含まれていることがわかっている場合にはこの方法が有効です。 ログ ファイルの圧縮を実行できるのは、データベースがオンラインで、1 つ以上の[仮想ログ ファイル (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) が解放されている間だけです。 場合によっては、次のログの切り捨てまでログを圧縮できないことがあります。  
   
 > [!NOTE]
@@ -60,7 +60,7 @@ ms.locfileid: "68084019"
   
 -   [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) (ログ ファイルまたはファイルの **size**、**max_size**、**growth** 列を参照してください。)  
   
-##  <a name="AddOrEnlarge"></a> ログ ファイルの追加または拡大  
+##  <a name="add-or-enlarge-a-log-file"></a><a name="AddOrEnlarge"></a> ログ ファイルの追加または拡大  
 既存のログ ファイルを拡大するか (ディスク領域が十分にある場合)、通常、別のディスク上にあるデータベースにログ ファイルを追加することによって、領域を確保することができます。 ログ領域が不足し、さらにログ ファイルが保存されているボリュームでディスク容量が不足しない限り、トランザクション ログ ファイルは 1 つで十分です。   
   
 -   データベースにログ ファイルを追加するには、`ADD LOG FILE` ステートメントの `ALTER DATABASE` 句を使用します。 ログ ファイルを追加すると、ログを大きくすることができます。  
@@ -68,12 +68,12 @@ ms.locfileid: "68084019"
 
 詳細については、このトピックの「[推奨事項](#Recommendations)」を参照してください。
     
-##  <a name="tempdbOptimize"></a> tempdb トランザクション ログのサイズの最適化  
+##  <a name="optimize-tempdb-transaction-log-size"></a><a name="tempdbOptimize"></a> tempdb トランザクション ログのサイズの最適化  
  サーバー インスタンスを再起動すると、 **tempdb** データベースのトランザクション ログのサイズが、元の自動拡張前のサイズに変更されます。 これにより、 **tempdb** のトランザクション ログのパフォーマンスが低下することがあります。 
  
  このオーバーヘッドは、サーバー インスタンスを起動または再起動した後、 **tempdb** のトランザクション ログのサイズを増やすことで回避できます。 詳細については、「 [tempdb Database](../../relational-databases/databases/tempdb-database.md)」をご覧ください。  
   
-##  <a name="ControlGrowth"></a> トランザクション ログ ファイルのサイズ拡大の管理  
+##  <a name="control-transaction-log-file-growth"></a><a name="ControlGrowth"></a> トランザクション ログ ファイルのサイズ拡大の管理  
  トランザクション ログ ファイルのサイズ拡大を管理するには、[ALTER DATABASE &#40;Transact-SQL&#41; の File および Filegroup オプション](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md) ステートメントを使用します。 次のことを考慮してください。  
   
 -   現在のサイズを KB、MB、GB、TB 単位で変更するには、`SIZE` オプションを使用します。  
@@ -82,7 +82,7 @@ ms.locfileid: "68084019"
 
 詳細については、このトピックの「[推奨事項](#Recommendations)」を参照してください。
 
-## <a name="Recommendations"></a> 推奨事項
+## <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項
 トランザクション ログ ファイルを使用して作業するときの一般的な推奨事項を次に示します。
 
 -   トランザクション ログの自動拡張 (autogrow) の増分は `FILEGROWTH` オプションで設定されますが、トランザクションの作業負荷に対して常に余裕を持たせられるよう、十分な量にする必要があります。 ログ ファイルの拡張増分値は、拡張を頻繁に行わなくても済むように十分な大きさにする必要があります。 トランザクション ログのサイズは、次の時間のログ量を監視することで正しく判断できます。

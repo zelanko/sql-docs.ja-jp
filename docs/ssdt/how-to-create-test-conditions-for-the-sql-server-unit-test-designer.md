@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 75d65bb7b30a8a48a35ada0c929ddf4698ad8408
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75241481"
 ---
 # <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>SQL Server 単体テスト デザイナーのテスト条件を作成する方法
@@ -176,7 +176,7 @@ namespace Ssdt.Samples.SqlUnitTesting
   
 [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx) を拡張したクラスに [ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) を追加する必要があります。 この属性により、このクラスは SQL Server Data Tools で探索可能になり、単体テストの設計および実行中に使用できるようになります。 この属性は、次の 2 つのパラメーターを受け取ります。  
   
-|属性パラメーター|[位置]|[説明]|  
+|属性パラメーター|[位置]|説明|  
 |-----------------------|------------|---------------|  
 |DisplayName|1|[テスト条件] ボックスの文字列を識別します。 この名前は一意である必要があります。 2 つの条件に同じ表示名が付いている場合、ユーザーには最初に検出された条件が表示され、Visual Studio エラー マネージャーに警告が表示されます。|  
 |ImplementingType|2|拡張型を一意に識別するために使用されます。 属性を配置する型に一致するように、このパラメーターを変更する必要があります。 この例では、**ResultSetColumnCountCondition** 型を使用しているため、**typeof(ResultSetColumnCountCondition)** を使用します。 型が **NewTestCondition** である場合は、**typeof(NewTestCondition)** を使用します。|  

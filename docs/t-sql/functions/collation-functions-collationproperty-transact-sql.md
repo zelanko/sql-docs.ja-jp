@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 842c70125c5d311f36df50afa72feae47c47bd55
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68064714"
 ---
 # <a name="collation-functions---collationproperty-transact-sql"></a>照合順序関数 - COLLATIONPROPERTY (Transact-SQL)
@@ -46,7 +46,7 @@ COLLATIONPROPERTY( collation_name , property )
 *property*  
 collation プロパティ。 *property* 引数は、**varchar (128)** データ型で、次のいずれかの値を持つことができます。
   
-|プロパティ名|[説明]|  
+|プロパティ名|説明|  
 |---|---|
 |**CodePage**|照合順序の Unicode 以外のコード ページ。 これは、**varchar** データで使用される文字セットです。 これらの値を変換してその文字マッピングを確認するには、「[Appendix G Mapping Tables](https://msdn.microsoft.com/library/cc194886.aspx)」(付録 G: DBCS/Unicode マッピングテーブル) と「[Appendix H Code Pages](https://msdn.microsoft.com/library/cc195051.aspx)」(付録H: コード ページ) を参照してください。<br /><br />基本データ型: **int**|  
 |**LCID**|照合順序の Windows ロケール ID。 これは、並べ替えおよび比較規則に使用されるカルチャです。 これらの値を変換するには、「[LCID Structure](https://msdn.microsoft.com/library/cc233968.aspx)」(LCID 構造) を参照してください (最初に **varbinary** に変換する必要があります)。<br /><br />基本データ型: **int**|  

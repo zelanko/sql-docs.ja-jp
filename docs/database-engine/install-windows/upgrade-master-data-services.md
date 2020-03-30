@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: d1b9131442160969e7511f42b91ed09a3b4001e1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67934823"
 ---
 # <a name="upgrade-master-data-services"></a>マスター データ サービスのアップグレード
@@ -38,7 +38,7 @@ ms.locfileid: "67934823"
 > -   モデル配置パッケージは作成されたエディションの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のみで使用できます。 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] で作成されたモデル配置パッケージを [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]に配置することはできません。  
 > -   Data Quality Services およびマスター データ サービスを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にアップグレードした後は、以前のバージョンの Excel 用マスター データ サービス アドインは機能しなくなります。 Excel 用の [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] マスター データ サービス アドインは、「[Microsoft Excel 用マスター データ サービス アドイン](../../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)」からダウンロードできます。  
   
-##  <a name="fileLocation"></a> ファイルの場所  
+##  <a name="file-location"></a><a name="fileLocation"></a> ファイルの場所  
   
 -   [!INCLUDE[ss2017](../../includes/sssqlv14-md.md)]では、既定で、ファイルが *drive*:\Program Files\Microsoft SQL Server\140\Master Data Services にインストールされます。  
 
@@ -50,7 +50,7 @@ ms.locfileid: "67934823"
   
 -   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]では、既定で、ファイルが *drive*:\Program Files\Microsoft SQL Server\Master Data Services にインストールされます。  
   
-##  <a name="noengine"></a> データベース エンジンのアップグレードを伴わないアップグレード  
+##  <a name="upgrade-without-database-engine-upgrade"></a><a name="noengine"></a> データベース エンジンのアップグレードを伴わないアップグレード  
  このシナリオでは、引き続き [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、または [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] を使用して、MDS データベースをホストします。 ただし、MDS データベースのスキーマをアップグレードしてから、現在の [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] Web アプリケーションを作成して MDS データベースにアクセスする必要があります。 アップグレード後、以前の Web アプリケーションからは MDS データベースにアクセスできなくなります。  
   
  現在の [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] と以前のバージョンの [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] を同じコンピューターにインストールできます。 ファイルは、 [ファイルの場所](#fileLocation)に示すように、異なる場所にインストールされます。  
@@ -107,7 +107,7 @@ ms.locfileid: "67934823"
   
     3.  **[Apply]** をクリックします。  
   
-##  <a name="engine"></a> データベース エンジンのアップグレードを伴うアップグレード  
+##  <a name="upgrade-with-database-engine-upgrade"></a><a name="engine"></a> データベース エンジンのアップグレードを伴うアップグレード  
  このシナリオでは、データベース エンジンと[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] アプリケーションの両方を、以前のバージョンから [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] または [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] のいずれかにアップグレードします。  
   
  **データベース エンジンをアップグレードしてアップグレードするには**  
@@ -118,7 +118,7 @@ ms.locfileid: "67934823"
   
 3.  「 [データベース エンジンのアップグレードを伴わないアップグレード](#noengine) 」のすべての手順を完了します。  
   
-##  <a name="twocomputer"></a> 2 台のコンピューターのシナリオでのアップグレード  
+##  <a name="upgrade-in-two-computer-scenario"></a><a name="twocomputer"></a> 2 台のコンピューターのシナリオでのアップグレード  
  このシナリオでは、SQL Server が 2 台のコンピューターにインストールされているシステムをアップグレードします。1 台は [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] または [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)]、もう 1 台は以前のバージョンの [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] です。  
   
  以前のバージョンの [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] がインストールされている場合は、引き続き以前のバージョンを使用して、1 台のコンピューターで MDS データベースをホストします。 ただし、MDS データベースのスキーマをアップグレードしてから、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] または [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] Web アプリケーションをそれぞれ使用して、MDS データベースにアクセスする必要があります。 以前のバージョンの Web アプリケーションからは、MDS データベースにアクセスできなくなります。  
@@ -127,7 +127,7 @@ ms.locfileid: "67934823"
   
 -   「 [データベース エンジンのアップグレードを伴わないアップグレード](#noengine)」のすべての手順を完了します。  
   
-##  <a name="restore"></a> アップグレードおよびバックアップからのデータベースの復元  
+##  <a name="upgrade-with-restoring-a-database-from-backup"></a><a name="restore"></a> アップグレードおよびバックアップからのデータベースの復元  
  このシナリオでは、1 台の同じコンピューターまたは 2 台の異なるコンピューターに、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] または [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] が、以前のバージョンと共にインストールされています。 アップグレードの前に、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] または [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] リリースより前のバージョンでデータベースがバックアップされており、そのデータベースを復元する必要があります。  
   
  **バックアップからのデータベースを復元してアップグレードするには**  

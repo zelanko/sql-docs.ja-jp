@@ -15,10 +15,10 @@ ms.assetid: 3426fd32-cad2-4f2f-8ca9-e0296cc12703
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6bfdee182770e24896796bc3837d5c17d3d73da9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67998048"
 ---
 # <a name="in-doubt-xact-resolution-server-configuration-option"></a>in-doubt xact resolution サーバー構成オプション
@@ -28,7 +28,7 @@ ms.locfileid: "67998048"
   
  次の表は、状態が不明なトランザクションの解決について考えられる結果の値を示しています。  
   
-|結果の値|[説明]|  
+|結果の値|説明|  
 |-------------------|-----------------|  
 |0|推測しません。 状態が不明なトランザクションを MS DTC で解決できない場合、復旧は失敗します。|  
 |1|コミットを推測します。 MS DTC の状態が不明なトランザクションは、コミットされたと見なされます。|  

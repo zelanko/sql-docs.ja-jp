@@ -13,10 +13,10 @@ ms.assetid: a6bf0ce7-7e5e-4a07-8917-ee526c9d0a05
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8e2a9ede7817eb504a5926ee1a7bb6be2019f0b1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68041235"
 ---
 # <a name="access-filestream-data-with-transact-sql"></a>Transact-SQL による FILESTREAM データへのアクセス
@@ -26,7 +26,7 @@ ms.locfileid: "68041235"
 > [!NOTE]  
 >  このトピックの例を実行するには、「 [FILESTREAM が有効なデータベースを作成する方法](../../relational-databases/blob/create-a-filestream-enabled-database.md) 」および「 [FILESTREAM データを格納するテーブルを作成する方法](../../relational-databases/blob/create-a-table-for-storing-filestream-data.md)」に基づいて、FILESTREAM が有効なデータベースとテーブルを作成する必要があります。  
   
-##  <a name="ins"></a> FILESTREAM データを含む行の挿入  
+##  <a name="inserting-a-row-that-contains-filestream-data"></a><a name="ins"></a> FILESTREAM データを含む行の挿入  
  FILESTREAM データをサポートするテーブルに行を追加するには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT ステートメントを使用します。 データを FILESTREAM 列に挿入するときは、NULL または **varbinary(max)** 値を挿入できます。  
   
 ### <a name="inserting-null"></a>NULL の挿入  
@@ -53,7 +53,7 @@ ms.locfileid: "68041235"
 |`7F680840-B7A4-45D4-8CD5-527C44D35B3F`|`3`|`0x536569736D69632044617461`|  
   
   
-##  <a name="upd"></a> FILESTREAM データを更新する  
+##  <a name="updating-filestream-data"></a><a name="upd"></a> FILESTREAM データを更新する  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用すると、ファイル システムのファイルのデータを更新できます。ただし、大量のデータをファイルにストリーミングする必要があるときには、この操作は適していません。  
   
  ファイル レコード内の任意のテキストを、 `Xray 1`というテキストに置換する例を次に示します。  
@@ -61,7 +61,7 @@ ms.locfileid: "68041235"
  [!code-sql[FILESTREAM#FS_UpdateData](../../relational-databases/blob/codesnippet/tsql/access-filestream-data-w_1_4.sql)]  
   
   
-##  <a name="del"></a> FILESTREAM データの削除  
+##  <a name="deleting-filestream-data"></a><a name="del"></a> FILESTREAM データの削除  
  FILESTREAM フィールドを含む行を削除すると、その基となるファイル システム ファイルも削除されます。 行、したがってファイルを削除する唯一の方法は、 [!INCLUDE[tsql](../../includes/tsql-md.md)] DELETE ステートメントを使用する方法です。  
   
  行およびそれに関連付けられているファイル システム ファイルを削除する方法を次の例に示します。  

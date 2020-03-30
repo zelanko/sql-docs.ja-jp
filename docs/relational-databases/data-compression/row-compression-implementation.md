@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2127b9164537afca99b8bd556458137d6713001c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68030518"
 ---
 # <a name="row-compression-implementation"></a>「行の圧縮の実装」
@@ -40,7 +40,7 @@ ms.locfileid: "68030518"
 ## <a name="how-row-compression-affects-storage"></a>行の圧縮によるストレージへの影響  
  次の表では、行の圧縮が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]の既存の型に与える影響について説明します。 この表では、ページの圧縮を使用して実現可能な節約は示されていません。  
   
-|データ型|ストレージへの影響の有無|[説明]|  
+|データ型|ストレージへの影響の有無|説明|  
 |---------------|--------------------------|-----------------|  
 |**tinyint**|いいえ|1 バイトの最小ストレージが必要です。|  
 |**smallint**|はい|値が 1 バイトに収まる場合は、1 バイトしか使用されません。|  

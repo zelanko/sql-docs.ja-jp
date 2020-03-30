@@ -11,13 +11,13 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 333ef282fe4e1f9d7af53cd3569371e88018a03f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75251073"
 ---
-# <a name="how-to-upgrade-a-visual-studio-2010-custom-test-condition-from-a-previous-release-to-sql-server-data-tools"></a>方法:Visual Studio 2010 のカスタム テスト条件を、以前のリリースから SQL Server Data Tools にアップグレードする
+# <a name="how-to-upgrade-a-visual-studio-2010-custom-test-condition-from-a-previous-release-to-sql-server-data-tools"></a>Visual Studio 2010 のカスタム テスト条件を、以前のリリースから SQL Server Data Tools にアップグレードする方法
 
 SQL Server Data Tools より前のバージョンで作成したテスト条件を使用するには、次のようにアップグレードする必要があります。  
   
@@ -27,7 +27,7 @@ SQL Server Data Tools より前のバージョンで作成したテスト条件�
   
 -   [アップグレード済みのテスト条件をインストールする](#ApplytheNewRegistrationProcess)  
   
-## <a name="UpdateReferences"></a>参照を更新する  
+## <a name="update-references"></a><a name="UpdateReferences"></a>参照を更新する  
 プロジェクトの参照を更新するには、次の手順を実行します。  
   
 1.  Visual Basic のみで、**ソリューション エクスプローラー**で、 **[すべてのファイルを表示]** をクリックします。  
@@ -81,7 +81,7 @@ SQL Server Data Tools より前のバージョンで作成したテスト条件�
   
 これで、テスト条件では SQL Server 単体テストのアセンブリ参照を使用するようになりました。  
   
-## <a name="UpdateClassAttributesandTypeReference"></a>クラス属性と型参照を更新する  
+## <a name="update-class-attributes-and-type-references"></a><a name="UpdateClassAttributesandTypeReference"></a>クラス属性と型参照を更新する  
 古い単体テストのクラス属性を新しい属性に置き換えます。 SQL Server 単体テストの機能拡張は、Managed Extensibility Framework (MEF) に基づいて作成されるようになりました。 また、いくつかの型参照も更新する必要があります。  
   
 ### <a name="update-class-attributes"></a>クラス属性を更新する  
@@ -128,7 +128,7 @@ SQL Server 単体テスト フレームワークでは、いくつかの型名�
 |-----------------|-----------------|  
 |`ExecutionResult`|`SqlExecutionResult`|  
   
-## <a name="ApplytheNewRegistrationProcess"></a>アップグレード済みのテスト条件をインストールする  
+## <a name="install-the-upgraded-test-condition"></a><a name="ApplytheNewRegistrationProcess"></a>アップグレード済みのテスト条件をインストールする  
 以前のバージョンのデータベース単体テストでは、テスト条件の情報をグローバル アセンブリ キャッシュにインストールするか、アセンブリ情報を含む XML ファイルを作成することが要求される場合がありました。 SQL Server 単体テストでは、この追加の処理が必要なくなりました (詳しくは、「[プロジェクトをコンパイルしてテスト条件をインストールする](../ssdt/walkthrough-use-custom-test-condition-to-verify-stored-procedure-results.md#xxx)」をご覧ください。  
   
 参照を更新したら、アセンブリが署名され、コンパイルされていることを確認します。  

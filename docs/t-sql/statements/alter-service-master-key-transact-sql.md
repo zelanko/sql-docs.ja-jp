@@ -25,10 +25,10 @@ ms.assetid: a1e9be0e-4115-47d8-9d3a-3316d876a35e
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 29a30f6b8d65cf1b821c93de0f051925b3cb6626
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68112857"
 ---
 # <a name="alter-service-master-key-transact-sql"></a>ALTER SERVICE MASTER KEY (Transact-SQL)
@@ -90,7 +90,7 @@ ALTER SERVICE MASTER KEY
   
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] AES 暗号化アルゴリズムを使用してサービス マスター キー (SMK) とデータベース マスター キー (DMK) を保護します。 AES は、以前のバージョンで使用されていた 3DES よりも新しい暗号化アルゴリズムです。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスを [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] にアップグレードした後で、マスター キーを AES にアップグレードするために SMK と DMK を再度生成する必要があります。 DMK を再作成する方法については、「[ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)」を参照してください。  
   
-##  <a name="_changing"></a> SQL Server サービス アカウントの変更  
+##  <a name="changing-the-sql-server-service-account"></a><a name="_changing"></a> SQL Server サービス アカウントの変更  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントを変更するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、サービス アカウントの変更を管理するために、サービス マスター キーの冗長なコピーが保存されます。このコピーは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス グループに与えられる必要な権限を持つコンピューター アカウントによって保護されます。 コンピューターを再構築した場合、以前にサービス アカウントによって使用されていたのと同じドメイン ユーザーがサービス マスター キーを復元できますが、 ローカル アカウントや、Local System、Local Service、Network Service の各アカウントでは復元できません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を別のコンピューターに移動する場合は、バックアップと復元を使用してサービス マスター キーを移行してください。  
   
  REGENERATE 句では、サービス マスター キーが再生成されます。 サービス マスター キーが再生成されると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では古いサービス マスター キーで暗号化されていたすべてのキーの暗号化が解除され、それらのキーが新しいマスター キーで暗号化されます。 ただし、この操作はリソースを大量に消費するため、 キーのセキュリティに問題がある場合を除き、リソース要求が少ないときに実行するように考慮してください。 暗号化解除が 1 つでも失敗した場合は、ステートメント全体が失敗します。  
