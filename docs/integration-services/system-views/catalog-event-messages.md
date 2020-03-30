@@ -11,10 +11,10 @@ ms.assetid: a31a654f-31e9-4da1-aabf-182b07848e36
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ebd5c1cc320426ea0ae3ff1b0b9832fb2ca76f1b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296649"
 ---
 # <a name="catalogevent_messages"></a>catalog.event_messages 
@@ -26,7 +26,7 @@ ms.locfileid: "71296649"
 
   操作中にログに記録されたメッセージに関する情報を表示します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |Event_message_ID|bigint|イベント メッセージの一意の ID。|  
 |Operation_id|bigint|操作の種類。<br /><br /> 操作の種類の一覧については、「[catalog.operations &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)」を参照してください。|  
@@ -48,7 +48,7 @@ ms.locfileid: "71296649"
 ## <a name="remarks"></a>解説  
  このビューに表示されるメッセージ ソースの種類は次のとおりです。  
   
-|**message_source_type**|[説明]|  
+|**message_source_type**|説明|  
 |-------------------------------|-----------------|  
 |10|T-SQL や CLR ストアド プロシージャのようなエントリの API|  
 |20|パッケージ (ISServerExec.exe) を実行するために使用する外部プロセス|  

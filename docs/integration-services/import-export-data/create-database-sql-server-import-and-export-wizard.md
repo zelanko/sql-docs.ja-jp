@@ -12,10 +12,10 @@ ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4900f90f4044b32aea673106ad0a7a2a14a8f5cb
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296286"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>[データベースの作成] (SQL Server インポートおよびエクスポート ウィザード)
@@ -28,7 +28,7 @@ ms.locfileid: "71296286"
 ウィザードの **[データベースの作成]** ダイアログ ボックスでは、新しい SQL Server データベースを作成するために使用できる基本的なオプションのみが提供されます。 新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのすべてのオプションを表示および構成するには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してデータベースを作成するか、ウィザードでデータベースを作成してから構成します。 
 
 > [!NOTE]
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードの **[データベースの作成]** ダイアログ ボックスではなく、[!INCLUDE[tsql](../../includes/tsql-md.md)] の CREATE DATABASE ステートメントに関する情報をお探しの場合は、「[CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)」をご覧ください。  
+> [!INCLUDE[tsql](../../includes/tsql-md.md)] インポートおよびエクスポート ウィザードの **[データベースの作成]** ダイアログ ボックスではなく、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の CREATE DATABASE ステートメントに関する情報をお探しの場合は、「[CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)」をご覧ください。  
 
 ## <a name="screen-shot-of-the-create-database-page"></a>[データベースの作成] ページのスクリーン ショット  
 以下のスクリーンショットでは、ウィザードの **[データベースの作成]** ダイアログ ボックスを示します。  

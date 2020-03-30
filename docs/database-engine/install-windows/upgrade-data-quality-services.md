@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: fab545b34f257563466ec2f64911cdfaceca9456
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67934856"
 ---
 # <a name="upgrade-data-quality-services"></a>Data Quality Services のアップグレード
@@ -28,13 +28,13 @@ ms.locfileid: "67934856"
 > -   データ品質タスクを実行するために、現在または以前のバージョンの Data Quality クライアントか、Integration Services 内の [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]DQS クレンジング変換[を使用して、](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md) Data Quality サーバーに接続できます。  
 > -   Data Quality Services およびマスター データ サービスをアップグレードした後は、以前のバージョンの Excel 用マスター データ サービス アドインは機能しなくなります。 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] ここ [から、](https://go.microsoft.com/fwlink/?LinkID=506665)バージョンの Excel 用マスター データ サービス アドインをダウンロードできます。  
   
-##  <a name="Prerequisites"></a> 前提条件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
   
 -   [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] コンピューターの Administrators グループのメンバーとしてログオンする必要があります。  
   
 -   Windows ユーザー アカウントが、 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] がインストールされている SQL Server インスタンスの sysadmin 固定サーバー ロールのメンバーであることが必要です。  
   
-##  <a name="Upgrade"></a> DQS のアップグレード  
+##  <a name="upgrading-dqs"></a><a name="Upgrade"></a> DQS のアップグレード  
  DQS をアップグレードするには:  
   
 1.  スキーマのアップグレードを開始する前に、DQS データベースをバックアップします。 DQS データベースのバックアップの詳細については、「 [DQS データベースのバックアップと復元](../../data-quality-services/backing-up-and-restoring-dqs-databases.md)」を参照してください。  
@@ -77,7 +77,7 @@ ms.locfileid: "67934856"
   
     5.  DQS データベース スキーマのアップグレードが正常に完了すると、完了のメッセージが表示されます。  
   
-##  <a name="Verify"></a> DQS データベース スキーマのアップグレードの確認  
+##  <a name="verifying-the-dqs-databases-schema-upgrade"></a><a name="Verify"></a> DQS データベース スキーマのアップグレードの確認  
  DQS データベース スキーマが正常にアップグレードされたことを確認するために、各データベース内の A_DB_VERSION テーブルに対してクエリを実行し、DQS_MAIN データベースと DQS_PROJECTS データベースの現在のバージョンを確認することができます。 そのためには次を行います。  
   
 1.  SQL Server Management Studio を起動し、アップグレード後の DQS データベース スキーマを含む SQL Server インスタンスに接続します。  

@@ -14,17 +14,17 @@ ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d199ba6ad64f3b259d7b94ac6180d12e83a311e1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75252711"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>FileTable と他の SQL Server 機能との互換性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   FileTable と他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]機能との連携について説明します。  
   
-##  <a name="alwayson"></a> AlwaysOn 可用性グループと FileTable  
+##  <a name="alwayson-availability-groups-and-filetables"></a><a name="alwayson"></a> AlwaysOn 可用性グループと FileTable  
  FILESTREAM データまたは FileTable データを格納するデータベースが AlwaysOn 可用性グループに属する場合、次の処理が行われます。  
   
 -   FileTable 機能は [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]で部分的にサポートされています。 フェールオーバー後、FileTable データはプライマリ レプリカ上でアクセスできますが、読み取り可能なセカンダリ レプリカ上ではアクセスできません。  
@@ -35,26 +35,26 @@ ms.locfileid: "75252711"
   
 -   ファイル システム API を介した FILESTREAM または FileTable データへのすべてのアクセスでは、コンピューター名ではなく VNN を使用する必要があります。 詳細については、「[FILESTREAM および FileTable と AlwaysOn 可用性グループ &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md)」を参照してください。  
   
-##  <a name="OtherPartitioning"></a> パーティション分割と FileTable  
+##  <a name="partitioning-and-filetables"></a><a name="OtherPartitioning"></a> パーティション分割と FileTable  
  FileTable ではパーティション分割はサポートされていません。 複数の FILESTREAM ファイル グループのサポートにより、ほとんどのシナリオにおいて、(SQL 2008 FILESTREAM とは異なり) パーティション分割に頼ることなく純粋なスケールアップに関する問題を処理できます。  
   
-##  <a name="OtherRepl"></a> レプリケーションと FileTable  
+##  <a name="replication-and-filetables"></a><a name="OtherRepl"></a> レプリケーションと FileTable  
  FileTable では、レプリケーションおよび関連機能 (トランザクション レプリケーション、マージ レプリケーション、変更データ キャプチャ、および変更の追跡) はサポートされていません。  
   
-##  <a name="OtherIsolation"></a> トランザクション セマンティクスと FileTable  
+##  <a name="transaction-semantics-and-filetables"></a><a name="OtherIsolation"></a> トランザクション セマンティクスと FileTable  
  **Windows アプリケーション**  
  Windows アプリケーションはデータベース トランザクションを理解しないため、Windows 書き込み操作ではデータベース トランザクションの ACID プロパティが提供されません。 このため、Windows の更新操作ではトランザクションのロールバックと復旧は不可能です。  
   
  **Transact-SQL アプリケーション**  
  FileTable の FILESTREAM (file_stream) 列を操作する TSQL アプリケーションの分離セマンティクスは、通常のユーザー テーブル内の FILESTREAM データ型の場合と同じです。  
   
-##  <a name="OtherQueryNot"></a> クエリ通知と FileTable  
+##  <a name="query-notifications-and-filetables"></a><a name="OtherQueryNot"></a> クエリ通知と FileTable  
  クエリでは、WHERE 句またはクエリのその他の部分に FileTable 内の FILESTREAM 列への参照を含めることはできません。  
   
-##  <a name="OtherSelectInto"></a> SELECT INTO と FileTable  
+##  <a name="select-into-and-filetables"></a><a name="OtherSelectInto"></a> SELECT INTO と FileTable  
  FileTable から SELECT INTO ステートメントを使用すると、(通常のテーブルの FILESTREAM 列と同様に) FileTable のセマンティクスはターゲット テーブルに反映されません。 ターゲット テーブルのすべての列が通常の列と同じように動作します。 FileTable のセマンティクスはターゲット テーブルの列に関連付けられません。  
   
-##  <a name="OtherTriggers"></a> トリガーと FileTable  
+##  <a name="triggers-and-filetables"></a><a name="OtherTriggers"></a> トリガーと FileTable  
  **DDL (データ定義言語) トリガー**  
  DDL トリガーと FileTable の使用については、特別な注意事項はありません。 FileTable に対する CREATE/ALTER TABLE 操作だけでなく、データベースの作成/変更操作でも、通常の DDL トリガーが起動されます。 トリガーは、EVENTDATA() 関数を呼び出すことによって、DDL コマンド テキストやその他の情報などの実際のイベント データを取得できます。 新しいイベントや既存の Eventdata スキーマに対する変更はありません。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "75252711"
   
 -   Win32 ハンドルの異常終了 (管理者による Win32 ハンドルの明示的な終了、データベースのクラッシュなど) が生じた場合、異常終了した Win32 アプリケーションによって FILESTREAM の内容が変更されていた可能性がありますが、復旧操作中にユーザー トリガーは実行されません。  
   
-##  <a name="OtherViews"></a> ビューと FileTable  
+##  <a name="views-and-filetables"></a><a name="OtherViews"></a> ビューと FileTable  
  **ビュー**  
  他のテーブルの場合と同様に、FileTable にもビューを作成できます。 ただし、FileTable にビューを作成する場合は、次の点に注意してください。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "75252711"
  **インデックス付きビュー**  
  現在インデックス付きのビューには、FILESTREAM 列に依存する FILESTREAM 列、計算列、または保存される計算列を含めることはできません。 この動作は、FileTable に定義されているビューでも同じです。  
   
-##  <a name="OtherSnapshots"></a> スナップショット分離と FileTable  
+##  <a name="snapshot-isolation-and-filetables"></a><a name="OtherSnapshots"></a> スナップショット分離と FileTable  
  Read Committed スナップショット分離 (RCSI) およびスナップショット分離 (SI) は、データの更新操作が行われているときでもリーダーによるデータのスナップショットの利用を可能にする機能に依存します。 ただし、FileTable では、Filestream データに対する非トランザクション書き込みアクセスが可能です。 その結果、FileTable を含むデータベースでのこれらの機能の使用に関して、次の制限が適用されます。  
   
 -   FileTable を含むデータベースは、RCSI/SI を有効にするように変更できます。  
@@ -112,10 +112,10 @@ ms.locfileid: "75252711"
   
     -   フルテキスト インデックス作成は、どのデータベース オプション (READ_COMMITTED_SNAPSHOT または ALLOW_SNAPSHOT_ISOLATION) が指定された場合でも常に正常に実行されます。  
   
-##  <a name="readsec"></a> 読み取り可能なセカンダリ データベース  
+##  <a name="readable-secondary-databases"></a><a name="readsec"></a> 読み取り可能なセカンダリ データベース  
  前のセクション「 [スナップショット分離と FileTable](#OtherSnapshots)」で説明したとおり、読み取り可能なデータベースには、スナップショットに対するのと同じ考慮事項が適用されます。  
   
-##  <a name="CDB"></a> 包含データベースと FileTable  
+##  <a name="contained-databases-and-filetables"></a><a name="CDB"></a> 包含データベースと FileTable  
  FileTable 機能が依存する FILESTREAM 機能では、データベースの外部での構成が一部必要となります。 そのため、FILESTREAM または FileTable を使用するデータベースは完全包含ではありません。  
   
  包含データベースの特定の機能 (包含ユーザーなど) を使用する場合は、データベースの包含を PARTIAL に設定します。 ただし、この場合、一部のデータベース設定はデータベースに含まれないため、データベースを移動するときに自動的には移動されないことに注意してください。  

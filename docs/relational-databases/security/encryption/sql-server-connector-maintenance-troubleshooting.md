@@ -13,10 +13,10 @@ ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 050b6ba215d9dc4db433ad81dd8fa48bed212803
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75557937"
 ---
 # <a name="sql-server-connector-maintenance--troubleshooting"></a>SQL Server コネクタのメンテナンスとトラブルシューティング
@@ -25,7 +25,7 @@ ms.locfileid: "75557937"
   このトピックでは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタに関する補足情報を取り上げます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタの詳細については、「[Azure Key Vault を使用する拡張キー管理 &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)」、「[Azure Key Vault を使用した拡張キー管理のセットアップ手順](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)」、「[SQL 暗号化機能への SQL Server コネクタの使用](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)」を参照してください。  
   
   
-##  <a name="AppendixA"></a> A. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタのメンテナンス手順  
+##  <a name="a-maintenance-instructions-for-ssnoversion-connector"></a><a name="AppendixA"></a> A. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタのメンテナンス手順  
   
 ### <a name="key-rollover"></a>キーのロールオーバー  
   
@@ -94,7 +94,7 @@ ms.locfileid: "75557937"
     GO  
     ```  
   
-### <a name="upgrade-of-includessnoversionincludesssnoversion-mdmd-connector"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタのアップグレード  
+### <a name="upgrade-of-ssnoversion-connector"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタのアップグレード  
 
 1\.0.0.440 以前のバージョンは置き換えられ、実稼働環境ではサポートされなくなりました。 バージョン 1.0.1.0 以降は実稼働環境でサポートされます。 以下の手順を使用して、[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=45344)で利用可能な最新バージョンにアップグレードしてください。
 
@@ -138,7 +138,7 @@ ms.locfileid: "75557937"
   
 8.  更新が正常に行われたことを確認したら、古い [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタ フォルダーは削除してかまいません (手順 3. で、アンインストールの代わりに名前を変更した場合)。  
   
-### <a name="rolling-the-includessnoversionincludesssnoversion-mdmd-service-principal"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service プリンシパルのローリング  
+### <a name="rolling-the-ssnoversion-service-principal"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service プリンシパルのローリング  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、Azure Active Directory で作成されたサービス プリンシパルを資格情報に使用して、Key Vault にアクセスします。  サービス プリンシパルにはクライアント ID と認証キーが含まれます。  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の資格情報は **VaultName**、 **クライアント ID**、 **認証キー**で設定されます。  **認証キー**は一定期間 (1 年または 2 年) 有効です。   期限が切れる前に Azure AD でサービス プリンシパルの新しいキーを生成する必要があります。  その後、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]で資格情報を変更する必要があります。    [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] では現在のセッションで資格情報のキャッシュを保持するため、資格情報に変更があった場合は [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] を再起動する必要があります。  
   
 ### <a name="key-backup-and-recovery"></a>キーのバックアップと回復  
@@ -156,7 +156,7 @@ Key Vault は定期的にバックアップする必要があります。 資格
 キーのバックアップは、クラウドの地理的領域または国 (米国、カナダ、日本、オーストラリア、インド、APAC、ヨーロッパ、ブラジル、中国、米国政府、ドイツ) が一致していれば、異なる Azure リージョン間で復元することができます。  
   
   
-##  <a name="AppendixB"></a> B. よく寄せられる質問  
+##  <a name="b-frequently-asked-questions"></a><a name="AppendixB"></a> B. よく寄せられる質問  
 ### <a name="on-azure-key-vault"></a>Azure Key Vault について  
   
 **Azure Key Vault との間でキーの処理はどのように行われますか。**  
@@ -165,7 +165,7 @@ Key Vault は定期的にバックアップする必要があります。 資格
  **キーの URI とは何ですか。**  
  Azure Key Vault 内のすべてのキーに、Uniform Resource Identifier (URI) が割り当てられます。アプリケーションからこの URI を使用してキーを参照できます。 常に最新のバージョンを取得するには `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey` の形式、特定のバージョンを取得するには `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87` の形式を使用します。  
   
-### <a name="on-configuring-includessnoversionincludesssnoversion-mdmd"></a>構成について [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+### <a name="on-configuring-ssnoversion"></a>構成について [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 
 **SQL Server コネクタがアクセスする必要のあるエンドポイントは何ですか。** コネクタは 2 つのエンドポイントと通信し、これらをホワイトリストに登録する必要があります。 これらの他のサービスへの送信通信に必要な唯一のポートは、Https 用の 443 です。
 -  login.microsoftonline.com/*:443
@@ -203,10 +203,10 @@ Key Vault は定期的にバックアップする必要があります。 資格
 
 Active Directory の詳細については、「 [Azure サブスクリプションを Azure Active Directory に関連付ける方法](https://azure.microsoft.com/documentation/articles/active-directory-how-subscriptions-associated-directory/)」を参照してください。
   
-##  <a name="AppendixC"></a> C. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタのエラー コードの説明  
+##  <a name="c-error-code-explanations-for-ssnoversion-connector"></a><a name="AppendixC"></a> C. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタのエラー コードの説明  
  **プロバイダーのエラー コード:**  
   
-エラー コード  |Symbol  |[説明]    
+エラー コード  |Symbol  |説明    
 ---------|---------|---------  
 0 | scp_err_Success | 操作は成功しました。    
 1 | scp_err_Failure | 操作は失敗しました。    

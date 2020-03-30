@@ -14,10 +14,10 @@ ms.assetid: 0b3cbe38-ce24-47ca-83ef-6538a5299d1a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bfad11f3bcba41160fcb46ede37f6e7ea3c5ece4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295160"
 ---
 # <a name="catalogoperation_messages-ssisdb-database"></a>catalog.operation_messages (SSISDB データベース)
@@ -29,7 +29,7 @@ ms.locfileid: "71295160"
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログでの操作中に記録されるメッセージを表示します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |operation_message_id|**bigint**|メッセージの一意識別子 (ID)。|  
 |operation_id|**bigint**|操作の一意の ID。|  
@@ -44,7 +44,7 @@ ms.locfileid: "71295160"
   
  このビューに表示されるメッセージの種類は次のとおりです。  
   
-|**message_type** 値|[説明]|  
+|**message_type** 値|説明|  
 |-----------------------------|-----------------|  
 |-1|Unknown|  
 |120|エラー|  
@@ -66,7 +66,7 @@ ms.locfileid: "71295160"
   
  このビューに表示されるメッセージ ソースの種類は次のとおりです。  
   
-|**message_source_type**|[説明]|  
+|**message_source_type**|説明|  
 |-------------------------------|-----------------|  
 |10|T-SQL や CLR ストアド プロシージャのようなエントリの API|  
 |20|パッケージ (ISServerExec.exe) を実行するために使用する外部プロセス|  

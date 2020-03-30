@@ -18,10 +18,10 @@ ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a6226a080a7d831694e5d5978460c2e6d6016ead
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822405"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Always On 可用性グループのセカンダリ レプリカに読み取り専用の負荷を移す
@@ -36,7 +36,7 @@ ms.locfileid: "74822405"
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] また、読み取り可能なセカンダリ レプリカへの読み取りを目的とした接続要求の再ルーティング (*読み取り専用ルーティング*) もサポートしています。 読み取り専用ルーティングについては、「 [リスナーを使用した読み取り専用セカンダリ レプリカ (読み取り専用ルーティング) への接続](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md#ConnectToSecondary)」を参照してください。  
   
-##  <a name="bkmk_Benefits"></a> 利点  
+##  <a name="benefits"></a><a name="bkmk_Benefits"></a> 利点  
  読み取り可能なセカンダリ レプリカに読み取り専用接続を割り当てることには、次の利点があります。  
   
 -   プライマリ レプリカを読み取り専用ワークロードから解放することができ、リソースをミッション クリティカルなワークロード用に保護できます。 ミッション クリティカルな読み取りワークロードまたは待機時間が許容できないワークロードは、プライマリ上で実行する必要があります。  
@@ -53,7 +53,7 @@ ms.locfileid: "74822405"
   
 -   セカンダリ レプリカ上では、ディスク ベースおよびメモリ最適化テーブル型の両方について、テーブル変数に対する DML 操作が許可されます。  
   
-##  <a name="bkmk_Prerequisites"></a> 可用性グループの前提条件  
+##  <a name="prerequisites-for-the-availability-group"></a><a name="bkmk_Prerequisites"></a> 可用性グループの前提条件  
   
 -   **読み取り可能なセカンダリ レプリカ (必須)**  
   
@@ -84,7 +84,7 @@ ms.locfileid: "74822405"
 > [!NOTE]  
 >  可用性グループ リスナーと読み取り専用ルーティングの詳細については、「 [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)が存在する必要があります。  
   
-##  <a name="bkmk_LimitationsRestrictions"></a> 制限事項と制約事項  
+##  <a name="limitations-and-restrictions"></a><a name="bkmk_LimitationsRestrictions"></a> 制限事項と制約事項  
  次に示すように、一部の操作は完全にはサポートされていません。  
   
 -   読み取り可能なレプリカは、読み取り用に有効になるとすぐに、セカンダリ データベースへの接続の受け入れを開始できます。 ただし、プライマリ データベースにアクティブなトランザクションが存在する場合、行のバージョンは、対応するセカンダリ データベースで完全に使用可能にはなりません。 セカンダリ レプリカの構成時にプライマリ レプリカ上に存在していたアクティブなトランザクションは、コミットまたはロールバックする必要があります。 このプロセスが完了するまでは、セカンダリ データベースでのトランザクションの分離レベルのマッピングは完了せず、クエリは一時的にブロックされます。  
@@ -109,7 +109,7 @@ ms.locfileid: "74822405"
 > [!NOTE]  
 >  読み取り可能なセカンダリ レプリカをホストしているサーバー インスタンスで、 [sys.dm_db_index_physical_stats](../../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) 動的管理ビューに対してクエリを実行すると、再実行のブロックという問題が発生する可能性があります。 これは、この動的管理ビューが、指定したユーザー テーブルまたはビューで IS ロックを獲得することが原因です。IS ロックは、そのユーザー テーブルまたはビューの X ロックに関して REDO スレッドの要求をブロックする可能性があります。  
   
-##  <a name="bkmk_Performance"></a> パフォーマンスに関する考慮事項  
+##  <a name="performance-considerations"></a><a name="bkmk_Performance"></a> パフォーマンスに関する考慮事項  
  このセクションでは、読み取り可能なセカンダリ データベースのパフォーマンスに関するいくつかの考慮事項について説明します。  
   
  **このセクションの内容**  
@@ -122,17 +122,17 @@ ms.locfileid: "74822405"
   
 -   [読み取り専用アクセス データベースの統計](#Read-OnlyStats)  
   
-###  <a name="DataLatency"></a> データ待機時間  
+###  <a name="data-latency"></a><a name="DataLatency"></a> データ待機時間  
  セカンダリ レプリカへの読み取り専用アクセスの実装が役立つのは、読み取り専用ワークロードである程度のデータ待機時間を許容できる場合です。 データ待機時間が許容できない場合は、読み取り専用ワークロードをプライマリ レプリカに対して実行することを検討してください。  
   
  プライマリ レプリカは、プライマリ データベースでの変更のログ レコードをセカンダリ レプリカに送信します。 それぞれのセカンダリ データベースで、専用の再実行スレッドがログ レコードに適用されます。 読み取りアクセス セカンダリ データベースでは、その変更を含むログ レコードがセカンダリ データベースに適用され、トランザクションがプライマリ データベース上でコミットされない限り、特定のデータの変更はクエリ結果に反映されません。  
   
  つまり、プライマリ レプリカとセカンダリ レプリカの間には待機時間 (通常は数秒程度) が発生します。 ただし、ネットワークの問題のためにスループットが低下するなどの特殊なケースでは、待機時間が長くなることがあります。 I/O ボトルネックが生じた場合やデータの移動が中断された場合は、待機時間が増加します。 データ移動の中断を監視するには、 [Always On ダッシュボード](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) または [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) 動的管理ビューを使用できます。  
   
-####  <a name="bkmk_LatencyWithInMemOLTP"></a> メモリ最適化テーブルが含まれるデータベースでのデータ待機時間  
+####  <a name="data-latency-on-databases-with-memory-optimized-tables"></a><a name="bkmk_LatencyWithInMemOLTP"></a> メモリ最適化テーブルが含まれるデータベースでのデータ待機時間  
  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] では、アクティブなセカンダリでのデータ待機時間に関して、特別な考慮事項がありました。「[[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx)」を参照してください。 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 以降では、メモリ最適化テーブルのデータ待機時間に関する特別な考慮事項はありません。 メモリ最適化テーブルの予想されるデータ待機時間は、ディスク ベース テーブルの待機時間に相当します。  
   
-###  <a name="ReadOnlyWorkloadImpact"></a> 読み取り専用ワークロードの影響  
+###  <a name="read-only-workload-impact"></a><a name="ReadOnlyWorkloadImpact"></a> 読み取り専用ワークロードの影響  
  セカンダリ レプリカを読み取り専用アクセス用に構成した場合、セカンダリ データベースに対する読み取り専用ワークロードによって (ディスク ベース テーブルに対する読み取り専用ワークロードで大量の I/O が発生する場合には特に)、再実行スレッドの CPU や (ディスク ベース テーブルに対する) I/O などのシステム リソースが消費されます。 すべての行がメモリ内にあるため、メモリ最適化テーブルにアクセスしても IO の影響はありません。  
   
  また、セカンダリ レプリカの読み取り専用ワークロードによって、ログ レコードを介して適用されるデータ定義言語 (DDL) による変更がブロックされることもあります。  
@@ -146,12 +146,12 @@ ms.locfileid: "74822405"
 > [!NOTE]  
 >  セカンダリ レプリカに対するクエリによって再実行スレッドがブロックされると、 **sqlserver.lock_redo_blocked** XEvent が発生します。  
   
-###  <a name="bkmk_Indexing"></a> インデックス作成  
+###  <a name="indexing"></a><a name="bkmk_Indexing"></a> インデックス作成  
  読み取り可能なセカンダリ レプリカでの読み取り専用ワークロードを最適化するには、セカンダリ データベースのテーブルにインデックスを作成できます。 セカンダリ データベースではスキーマやデータの変更を行えないため、プライマリ データベースでインデックスを作成し、再実行プロセスによってセカンダリ データベースに変更を転送できるようにします。  
   
  セカンダリ レプリカでのインデックス使用状況を監視するには、 **sys.dm_db_index_usage_stats**動的管理ビューの **user_seeks**列、 **user_scans** 列、および [user_lookups](../../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md) 列を照会します。  
   
-###  <a name="Read-OnlyStats"></a> 読み取り専用アクセス データベースの統計  
+###  <a name="statistics-for-read-only-access-databases"></a><a name="Read-OnlyStats"></a> 読み取り専用アクセス データベースの統計  
  テーブルとインデックス付きビューの列の統計情報を使用して、クエリ プランを最適化します。 可用性グループの場合、プライマリ データベースで作成および管理される統計は、トランザクション ログ レコードの適用の一部としてセカンダリ データベースに自動的に保存されます。 ただし、セカンダリ データベースの読み取り専用ワークロードについて、プライマリ データベースで作成される統計とは別の統計が必要になることがあります。 しかし、セカンダリ データベースは読み取り専用アクセスに制限されているため、セカンダリ データベースで統計を作成することはできません。  
   
  この問題に対処するために、セカンダリ レプリカでは、セカンダリ データベースの一時的な統計を、 **tempdb**に作成して管理します。 一時的な統計と、(プライマリ データベースで作成されてセカンダリ データベースに保存される) 永続的な統計とを区別するために、サフィックス _readonly_database_statistic が一時的な統計の名前に付加されます。  
@@ -172,20 +172,20 @@ ms.locfileid: "74822405"
   
 -   [制限事項と制約事項](#StatsLimitationsRestrictions)  
   
-####  <a name="StalePermStats"></a> セカンダリ データベースの古い永続的な統計  
+####  <a name="stale-permanent-statistics-on-secondary-databases"></a><a name="StalePermStats"></a> セカンダリ データベースの古い永続的な統計  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] によって検出されます。 しかし、プライマリ データベースで変更する以外は、永続的な統計に変更を加えることはできません。 クエリの最適化のために、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] はセカンダリ データベースのディスク ベース テーブルに一時的な統計を作成し、古い永続的な統計の代わりにこの統計を使用します。  
   
  永続的な統計がプライマリ データベースで更新されると、統計は自動的にセカンダリ データベースに永続化されます。 次に、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、一時的な統計よりも新しい、更新された永続的な統計を使用します。  
   
  可用性グループのフェールオーバーが発生すると、すべてのセカンダリ レプリカで一時的な統計が削除されます。  
   
-####  <a name="StatsLimitationsRestrictions"></a> 制限事項と制約事項  
+####  <a name="limitations-and-restrictions"></a><a name="StatsLimitationsRestrictions"></a> 制限事項と制約事項  
   
 -   一時的な統計は **tempdb**に格納されるので、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスを再起動すると、一時的な統計はすべてなくなります。  
   
 -   サフィックス _readonly_database_statistic は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]によって生成される統計用に予約されています。 このサフィックスは、プライマリ データベースで統計を作成するときには使用できません。 詳細については、[統計](../../../relational-databases/statistics/statistics.md)に関する記事を参照してください。  
   
-##  <a name="bkmk_AccessInMemTables"></a> セカンダリ レプリカ上でのメモリ最適化テーブルへのアクセス  
+##  <a name="accessing-memory-optimized-tables-on-a-secondary-replica"></a><a name="bkmk_AccessInMemTables"></a> セカンダリ レプリカ上でのメモリ最適化テーブルへのアクセス  
  セカンダリ レプリカ上でメモリ最適化テーブルとともに使用できるトランザクション分離レベルは、プライマリ レプリカでのレベルと同じです。 セッション レベルの分離レベルを READ COMMITTED に、またデータベース レベル オプション MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT を ON に設定することをお勧めします。 次に例を示します。  
   
 ```sql  
@@ -199,7 +199,7 @@ GO
   
 ```  
   
-##  <a name="bkmk_CapacityPlanning"></a> キャパシティ プランニングの注意点  
+##  <a name="capacity-planning-considerations"></a><a name="bkmk_CapacityPlanning"></a> キャパシティ プランニングの注意点  
   
 -   ディスク ベース テーブルの場合、読み取り可能なセカンダリ レプリカでは、2 つの理由から **tempdb** に領域が必要になることがあります。  
   
@@ -220,7 +220,7 @@ GO
     |はい|いいえ|行のバージョンはないが、14 バイトのオーバーヘッドあり|行のバージョンおよび 14 バイトのオーバーヘッド|  
     |はい|はい|行のバージョンおよび 14 バイトのオーバーヘッド|行のバージョンおよび 14 バイトのオーバーヘッド|  
   
-##  <a name="bkmk_RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="bkmk_RelatedTasks"></a> 関連タスク  
   
 -   [可用性レプリカでの読み取り専用アクセスの構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
@@ -234,7 +234,7 @@ GO
   
 -   [[新しい可用性グループ] ダイアログ ボックスの使用 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
-##  <a name="RelatedContent"></a> 関連コンテンツ  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 関連コンテンツ  
   
 -   [SQL Server AlwaysOn チームのブログ: SQL Server AlwaysOn チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   

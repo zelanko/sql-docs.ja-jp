@@ -15,10 +15,10 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8a6bd6207df7d0e93c1b6d360643a9d549e90af9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295042"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 の Integration Services の新機能
@@ -153,7 +153,7 @@ ms.locfileid: "71295042"
 
 ### <a name="better-deployment"></a>配置の強化
 
-####  <a name="ssisdbupgrwiz"></a> SSISDB アップグレード ウィザード  
+####  <a name="ssisdb-upgrade-wizard"></a><a name="ssisdbupgrwiz"></a> SSISDB アップグレード ウィザード  
  データベースが SQL Server インスタンスの現在のバージョンよりも古い場合、SSISDB アップグレード ウィザードを実行して、SSIS カタログ データベース (SSISDB) をアップグレードしてください。 この状況は、次のいずれかの条件が該当した場合に発生します。  
   
 -   古いバージョンの SQL Server からデータベースを復元した場合。  
@@ -162,14 +162,14 @@ ms.locfileid: "71295042"
   
  詳細については、[SSIS カタログ &#40;SSISDB&#41;](../integration-services/catalog/ssis-catalog.md) に関するページを参照してください。 
 
-####  <a name="AlwaysOn"></a> SSIS カタログでの Always On 機能のサポート  
+####  <a name="support-for-always-on-in-the-ssis-catalog"></a><a name="AlwaysOn"></a> SSIS カタログでの Always On 機能のサポート  
  Always On 可用性グループ機能は、データベース ミラーリングに代わる、高可用性と災害復旧のためのエンタープライズ レベルのソリューションです。 可用性グループは、可用性データベースとして知られる、ひとまとまりでフェールオーバーされる別々のユーザー データベース セットのためのフェールオーバー環境をサポートします。 詳細については、「 [AlwaysOn 可用性グループ (SQL Server)](../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)」を参照してください。  
   
  SQL Server 2016 では、一元化された SSIS カタログ (つまり SSISDB ユーザー データベース) を簡単に配置できる新しい機能が SSIS に導入されています。 SSISDB データベースとそのコンテンツ (プロジェクト、パッケージ、実行ログなど) の高可用性を提供するために、SSISDB データベースを (他のユーザー データベースと同じように) AlwaysOn 可用性グループに追加できます。 フェールオーバーが発生すると、セカンダリ ノードのいずれかが自動的に新しいプライマリ ノードになります。  
   
  Always On 機能の詳細と SSISDB に対して有効にするための手順については、「[SSIS Catalog](../integration-services/catalog/ssis-catalog.md)」(SSIS カタログ) を参照してください。  
 
-####  <a name="IncrementalDeployment"></a> パッケージの増分配置  
+####  <a name="incremental-package-deployment"></a><a name="IncrementalDeployment"></a> パッケージの増分配置  
 パッケージの増分配置機能によって、プロジェクト全体を配置することなく、既存または新規のプロジェクトに 1 つ以上のパッケージを配置できます。 パッケージは、次のツールを使用して増分配置できます。  
   
 -   配置ウィザード  
@@ -184,7 +184,7 @@ ms.locfileid: "71295042"
   
  詳細については、「[Integration Services (SSIS) プロジェクトとパッケージの配置](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  
 
-####  <a name="encrypted"></a> SSIS カタログでの Always Encrypted のサポート  
+####  <a name="support-for-always-encrypted-in-the-ssis-catalog"></a><a name="encrypted"></a> SSIS カタログでの Always Encrypted のサポート  
  SSIS は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の Always Encrypted 機能を既にサポートしています。 詳細については、次のログの投稿を参照してください。  
   
 -   [SSIS with Always Encrypted (SSIS と Always Encrypted)](https://blogs.msdn.com/b/ssis/archive/2015/12/18/ssis-with-always.aspx)  
@@ -193,18 +193,18 @@ ms.locfileid: "71295042"
 
 ### <a name="better-debugging"></a>デバッグの強化
 
-####  <a name="LogReader"></a> SSIS カタログの新しい ssis_logreader データベース レベルのロール  
+####  <a name="new-ssis_logreader-database-level-role-in-the-ssis-catalog"></a><a name="LogReader"></a> SSIS カタログの新しい ssis_logreader データベース レベルのロール  
  SSIS カタログの以前のバージョンでは、 **ssis_admin** ロールのユーザーだけが、ログ出力を含むビューにアクセスできます。 管理者でないユーザーに対してログ出力を含むビューにアクセスするためのアクセス権を付与する、新しい **ssis_logreader** データベース レベルのロールが追加されました。  
   
  また、新しい **ssis_monitor** ロールも追加されました。 このロールは Always On 機能をサポートし、SSIS カタログによって内部的にのみ使用されます。  
 
-####  <a name="RuntimeLineage"></a> SSIS カタログの新しい RuntimeLineage ログ記録レベル  
+####  <a name="new-runtimelineage-logging-level-in-the-ssis-catalog"></a><a name="RuntimeLineage"></a> SSIS カタログの新しい RuntimeLineage ログ記録レベル  
  SSIS カタログの新しい **RuntimeLineage** ログ記録レベルは、データ フローの系列情報を追跡するために必要な情報を収集します。 この系列情報を解析して、タスク間の系列の関係をマッピングできます。 ISV と開発者は、この情報を利用して、カスタム系列マッピング ツールを構築できます。 
 
-####  <a name="CustomLogging"></a> SSIS カタログでの新しいカスタム ログ レベル  
- SSIS カタログの以前のバージョンでは、パッケージを実行するときに、4 つの組み込みログ記録レベル (**なし、基本、パフォーマンス、または詳細**) から選択できました。 SQL Server 2016 では、**RuntimeLineage** ログ記録レベルが追加されています。 さらに、複数のカスタム ログ記録レベルを作成して SSIS カタログに保存し、パッケージを実行するときに、毎回ログ記録レベルを選択できるようになりました。 カスタム ログ記録レベルでは、キャプチャする統計とイベントのみを選択します。 必要に応じて、変数の値、接続文字列、およびタスクのプロパティを確認するために、イベント コンテキストを含めます。 詳細については、「 [SSIS サーバーでのパッケージ実行のログ記録を有効にする](../integration-services/performance/integration-services-ssis-logging.md#server_logging)」を参照してください。 
+####  <a name="new-custom-logging-level-in-the-ssis-catalog"></a><a name="CustomLogging"></a> SSIS カタログでの新しいカスタム ログ レベル  
+ SSIS カタログの以前のバージョンでは、パッケージを実行するときに、4 つの組み込みログ記録レベル ( **なし、基本、パフォーマンス、または詳細**) から選択できました。 SQL Server 2016 では、**RuntimeLineage** ログ記録レベルが追加されています。 さらに、複数のカスタム ログ記録レベルを作成して SSIS カタログに保存し、パッケージを実行するときに、毎回ログ記録レベルを選択できるようになりました。 カスタム ログ記録レベルでは、キャプチャする統計とイベントのみを選択します。 必要に応じて、変数の値、接続文字列、およびタスクのプロパティを確認するために、イベント コンテキストを含めます。 詳細については、「 [SSIS サーバーでのパッケージ実行のログ記録を有効にする](../integration-services/performance/integration-services-ssis-logging.md#server_logging)」を参照してください。 
 
-####  <a name="ErrorColumn"></a> データ フロー内のエラー列の名前  
+####  <a name="column-names-for-errors-in-the-data-flow"></a><a name="ErrorColumn"></a> データ フロー内のエラー列の名前  
  エラー出力にエラーが含まれるデータ フロー内の行をリダイレクトすると、出力には、エラーが発生したが列の名前が表示されない列の数値識別子が含まれています。 エラーが発生した列の名前を、さまざまな方法で検索または表示できるようになりました。  
   
 -   ログ記録を構成するときに、記録する **DiagnosticEx** イベントを選択します。 このイベントは、データ フロー列マップをログに書き込みます。 次に、エラー出力でキャプチャされた列識別子を使用して、この列マップで列名を検索できます。 詳細については、「[データのエラー処理](../integration-services/data-flow/error-handling-in-data.md)」を参照してください。  
@@ -215,12 +215,12 @@ ms.locfileid: "71295042"
   
 -   スクリプト コンポーネントまたはカスタムデータフロー コンポーネントで、IDTSComponentMetadata100 インターフェイスの新しい <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> メソッドを呼び出します。  
   
- この機能強化の詳細については、SSIS 開発者である Bo Fan による次のブログの投稿を参照してください: [Error Column Improvements for SSIS Data Flow](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx) (SSIS データ フローのエラー列の機能強化)。  
+ この機能強化の詳細については、SSIS 開発者である Bo Fan による次のブログの投稿を参照してください: [Error Column Improvements for SSIS Data Flow](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)(SSIS データ フローのエラー列の機能強化)。  
   
 > [!NOTE]  
 >  (このサポートはその後のリリースで拡張されています。 詳細については、「 [エラー列名の拡張サポート](#getidstring) 」および「 [API の新しい IDTSComponentMetaData130 インターフェイス](#CMD130)」を参照してください。)  
 
-####  <a name="getidstring"></a> エラー列名の拡張サポート  
+####  <a name="expanded-support-for-error-column-names"></a><a name="getidstring"></a> エラー列名の拡張サポート  
  **DiagnosticEx** イベントで、系列列だけではなく、すべての入力列と出力列の列情報を記録するようになりました。 その結果、パイプライン系列マップの代わりに出力パイプライン列マップを呼び出すことができるようになりました。  
   
  GetIdentificationStringByLineageID メソッドの名前が <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A>で追加または更新された機能について説明します。 詳細については、「 [データ フロー内のエラー列の名前](#ErrorColumn)」を参照してください。  
@@ -230,31 +230,31 @@ ms.locfileid: "71295042"
 > [!NOTE]  
 >  (RC0 では、このメソッドは、新しい <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> インターフェイスに移動されています。 詳細については、「 [API の新しい IDTSComponentMetaData130 インターフェイス](#CMD130)」を参照してください。)  
 
-####  <a name="ServerLogLevel"></a> サーバー全体の既定のログ記録レベルのサポート  
+####  <a name="support-for-server-wide-default-logging-level"></a><a name="ServerLogLevel"></a> サーバー全体の既定のログ記録レベルのサポート  
  SQL Server の **[サーバーのプロパティ]** の **[サーバーのログ記録レベル]** プロパティで、既定のサーバー全体のログ記録レベルを選択できるようになりました。 組み込みのログ記録レベル (基本、なし、詳細、パフォーマンス、またはランタイムの系列) のいずれかを選択するか、既存のカスタマイズしたログ記録レベルを選択できます。 選択したログ記録レベルは、SSIS カタログに配置されているすべてのパッケージに適用されます。 また、既定で SSIS パッケージを実行する SQL エージェント ジョブにも適用されます。  
 
-####  <a name="CMD130"></a> API の新しい IDTSComponentMetaData130 インターフェイス  
+####  <a name="new-idtscomponentmetadata130-interface-in-the-api"></a><a name="CMD130"></a> API の新しい IDTSComponentMetaData130 インターフェイス  
  SSIS カタログの新しい <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> インターフェイスにより、既存の <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> インターフェイス、特に <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> メソッドに新しい機能が追加されます ( **GetIdentificationStringByID Method** メソッドは、 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> インターフェイスからこの新しいインターフェイスに移動されました)。また、新しい <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn130> 」および「 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn130> インターフェイスも追加されました。これらのインターフェイスは、いずれも **LineageIdentificationString** プロパティを提供します。 詳細については、「 [データ フロー内のエラー列の名前](#ErrorColumn)」を参照してください。  
 
 ### <a name="better-package-management"></a>パッケージ管理の強化
 
-####  <a name="ProjectUpgrade"></a> プロジェクトをアップグレードするためのエクスペリエンスの向上  
+####  <a name="improved-experience-for-project-upgrade"></a><a name="ProjectUpgrade"></a> プロジェクトをアップグレードするためのエクスペリエンスの向上  
  SSIS プロジェクトを以前のバージョンから現在のバージョンにアップグレードするとき、プロジェクト レベルの接続マネージャーが期待どおりに動作を続行し、パッケージのレイアウトと注釈が保持されます。  
 
-####  <a name="BufferSize"></a> AutoAdjustBufferSize プロパティによるデータフローのバッファー サイズの自動計算  
+####  <a name="autoadjustbuffersize-property-automatically-calculates-buffer-size-for-data-flow"></a><a name="BufferSize"></a> AutoAdjustBufferSize プロパティによるデータフローのバッファー サイズの自動計算  
  新しい **AutoAdjustBufferSize** プロパティの値を **true**に設定すると、データ フロー エンジンによって、データ フローのバッファー サイズが自動的に計算されます。 詳細については、「 [Data Flow Performance Features](../integration-services/data-flow/data-flow-performance-features.md)」を参照してください。  
 
-####  <a name="Templates"></a> 再利用できる制御フロー テンプレート  
+####  <a name="reusable-control-flow-templates"></a><a name="Templates"></a> 再利用できる制御フロー テンプレート  
  よく使用される制御フロー タスクまたはコンテナーをスタンドアロン テンプレート ファイルに保存し、制御フロー テンプレートを使用するプロジェクト内の 1 つまたは複数のパッケージで複数回再利用できます。 この再利用可能性によって、SSIS パッケージの設計と管理を容易に実行できます。 詳細については、「 [制御フロー パッケージ パーツを使用することによりパッケージ間で制御フローを再利用する](../integration-services/reuse-control-flow-across-packages-by-using-control-flow-package-parts.md)」を参照してください。  
 
-####  <a name="Parts"></a> パーツとして名前が変更された新しいテンプレート  
+####  <a name="new-templates-renamed-as-parts"></a><a name="Parts"></a> パーツとして名前が変更された新しいテンプレート  
  CTP 3.0 でリリースされた新しい再利用できる制御フロー テンプレートが、制御フロー パーツまたはパッケージ パーツとしてその名前が変更されました。 この機能の詳細については、「 [制御フロー パッケージ パーツを使用することによりパッケージ間で制御フローを再利用する](../integration-services/reuse-control-flow-across-packages-by-using-control-flow-package-parts.md)」を参照してください。  
 
 ## <a name="connectivity"></a>接続  
 
 ### <a name="expanded-connectivity-on-premises"></a>オンプレミスでの接続性の拡張
 
-####  <a name="ODatav4"></a> OData v4 データ ソースのサポート  
+####  <a name="support-for-odata-v4-data-sources"></a><a name="ODatav4"></a> OData v4 データ ソースのサポート  
  OData ソースと OData 接続マネージャーで OData v3 と v4 のプロトコルがサポートされるようになりました。  
   
 -   OData V3 プロトコルでは、ATOM データ形式と JSON データ形式をサポートします。  
@@ -263,13 +263,13 @@ ms.locfileid: "71295042"
   
  詳細については、「 [OData Source](../integration-services/data-flow/odata-source.md)」を参照してください。  
 
-####  <a name="Excel2013"></a> Excel 2013 データ ソースの明示的なサポート  
+####  <a name="explicit-support-for-excel-2013-data-sources"></a><a name="Excel2013"></a> Excel 2013 データ ソースの明示的なサポート  
  Excel 接続マネージャー、Excel ソース、Excel 変換先、および SQL Server インポートおよびエクスポート ウィザードで、Excel 2013 データソースの明示的なサポートが提供されるようになりました。 
 
-####  <a name="HDFS"></a> Hadoop ファイル システム (HDFS) のサポート  
+####  <a name="support-for-the-hadoop-file-system-hdfs"></a><a name="HDFS"></a> Hadoop ファイル システム (HDFS) のサポート  
  HDFS のサポートに、Hadoop クラスターとタスクに接続して、HDFS の一般的な操作を実行するための接続マネージャーが含まれています。 詳細については、「[Integration Services &#40;SSIS&#41; での Hadoop と HDFS のサポート](../integration-services/hadoop-and-hdfs-support-in-integration-services-ssis.md)」を参照してください。  
 
-####  <a name="more_hadoop"></a> Hadoop と HDFS の拡張サポート  
+####  <a name="expanded-support-for-hadoop-and-hdfs"></a><a name="more_hadoop"></a> Hadoop と HDFS の拡張サポート  
   
 -   Hadoop 接続マネージャーが、基本認証と Kerberos 認証の両方をサポートするようになりました。 詳細については、「 [Hadoop Connection Manager](../integration-services/connection-manager/hadoop-connection-manager.md)」を参照してください。  
   
@@ -277,38 +277,38 @@ ms.locfileid: "71295042"
   
 -   Hadoop ファイル システムで、CopyToHadoop オプションと CopyFromHadoop オプションに加え、CopyWithinHadoop オプションもサポートするようになりました。 詳細については、「 [Hadoop File System Task](../integration-services/control-flow/hadoop-file-system-task.md)」を参照してください。  
 
-####  <a name="hdfsORC"></a> HDFS ファイル変換先での ORC ファイル形式のサポート  
+####  <a name="hdfs-file-destination-now-supports-orc-file-format"></a><a name="hdfsORC"></a> HDFS ファイル変換先での ORC ファイル形式のサポート  
  HDFS ファイル変換先で、テキストと Avro に加え、ORC ファイル形式もサポートするようになりました (HDFS ファイル ソースは、テキストと Avro のみをサポートします)。このコンポーネントの詳細については、「 [HDFS File Destination](../integration-services/data-flow/hdfs-file-destination.md)」を参照してください。  
 
-####  <a name="odbc2016"></a> SQL Server 2016 での ODBC コンポーネントの更新  
+####  <a name="odbc-components-updated-for-sql-server-2016"></a><a name="odbc2016"></a> SQL Server 2016 での ODBC コンポーネントの更新  
  ODBC のソース コンポーネントと変換先コンポーネントが SQL Server 2016 との完全互換を提供するように更新されています。 新しい機能の追加も動作の変更もありません。  
 
-####  <a name="Excel2016"></a> Excel 2016 データ ソースの明示的なサポート  
+####  <a name="explicit-support-for-excel-2016-data-sources"></a><a name="Excel2016"></a> Excel 2016 データ ソースの明示的なサポート  
  Excel 接続マネージャー、Excel ソース、および Excel 変換先で、Excel 2016 データ ソースの明示的なサポートが提供されるようになりました。  
 
-####  <a name="SAPBW"></a> Connector for SAP BW for SQL Server 2016 のリリース  
+####  <a name="connector-for-sap-bw-for-sql-server-2016-released"></a><a name="SAPBW"></a> Connector for SAP BW for SQL Server 2016 のリリース  
  MicrosoftÂ® Connector for SAP BW for Microsoft SQL ServerÂ® 2016 は、SQL Server 2016 Feature Pack の一部としてリリースされています。 Feature Pack のコンポーネントをダウンロードするには、「[MicrosoftÂ® SQL ServerÂ® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297)」を参照してください。
  
-#### <a name="oracleteradata"></a> Connector v4.0 for Oracle および Connector v4.0 for Teradata のリリース
+#### <a name="connectors-v40-for-oracle-and-teradata-released"></a><a name="oracleteradata"></a> Connector v4.0 for Oracle および Connector v4.0 for Teradata のリリース
 Microsoft Connector v4.0 for Oracle および Microsoft Connector v4.0 Teradata がリリースされています。 これらのコネクタをダウンロードするには、「 [Microsoft Connectors v4.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=52950)」を参照してください。
 
-### <a name="pdwau5"></a> Connectors for Analytics Platform System (PDW) Appliance Update 5 のリリース
+### <a name="connectors-for-analytics-platform-system-pdw-appliance-update-5-released"></a><a name="pdwau5"></a> Connectors for Analytics Platform System (PDW) Appliance Update 5 のリリース
 AU5 の PDW にデータを読み込むための変換先アダプターがリリースされています。 このアダプターをダウンロードするには、「 [Analytics Platform System Appliance Update 5 Documentation and Client Tools](https://www.microsoft.com/download/details.aspx?id=51610)」(Analytics Platform System Appliance Update 5 のドキュメントとクライアント ツール) を参照してください。
 
 ### <a name="expanded-connectivity-to-the-cloud"></a>クラウドへの接続性の拡張
 
-####  <a name="AFP2016"></a> SQL Server 2016 用の Azure Feature Pack for SSIS のリリース  
+####  <a name="azure-feature-pack-for-ssis-released-for-sql-server-2016"></a><a name="AFP2016"></a> SQL Server 2016 用の Azure Feature Pack for SSIS のリリース  
  SQL Server 2016 用の Azure Feature Pack for Integration Services がリリースされています。 この機能パックには、Azure データソースとタスクに接続して、Azure の一般的な操作を実行するための接続マネージャーが含まれています。 詳細については、「[Azure Feature Pack for Integration Services &#40;SSIS&#41; (Integration Services 用の Azure Feature Pack &#40;SSIS&#41;)](../integration-services/azure-feature-pack-for-integration-services-ssis.md)」を参照してください。  
 
-#### <a name="dynamics"></a> Service Pack 1 でリリースされた Microsoft Dynamics オンライン リソースのサポート
+#### <a name="support-for-microsoft-dynamics-online-resources-released-in-service-pack-1"></a><a name="dynamics"></a> Service Pack 1 でリリースされた Microsoft Dynamics オンライン リソースのサポート
 
 SQL Server 2016 Service Pack 1 がインストールされている場合、OData ソースと OData 接続マネージャーで、Microsoft Dynamics AX Online と Microsoft Dynamics CRM Online の OData フィードに接続できるようになりました。
 
-#### <a name="datalakestore"></a> Azure Data Lake Store のサポートをリリース
+#### <a name="support-for-azure-data-lake-store-released"></a><a name="datalakestore"></a> Azure Data Lake Store のサポートをリリース
 
 最新バージョンの Azure Feature Pack には、接続マネージャーと、Azure Data Lake Store との間でデータを移動するときの移動元および移動先が含まれています。 詳細については、「[Integration Services (SSIS) 用の Azure Feature Pack](../integration-services/azure-feature-pack-for-integration-services-ssis.md)」を参照してください。
 
-#### <a name="sqldwupload"></a> Azure SQL Data Warehouse のサポートをリリース
+#### <a name="support-for-azure-sql-data-warehouse-released"></a><a name="sqldwupload"></a> Azure SQL Data Warehouse のサポートをリリース
 
 最新バージョンの Azure Feature Pack には、SQL Data Warehouse にデータを取り込む Azure SQL DW Upload タスクが含まれています。 詳細については、「[Integration Services (SSIS) 用の Azure Feature Pack](../integration-services/azure-feature-pack-for-integration-services-ssis.md)」を参照してください。
 
@@ -316,12 +316,12 @@ SQL Server 2016 Service Pack 1 がインストールされている場合、ODat
  
 ### <a name="better-install-experience"></a>インストール エクスペリエンスの強化
 
-####  <a name="Upgrade"></a> SSISDB が可用性グループに属する場合のアップグレードのブロック  
+####  <a name="upgrade-blocked-when-ssisdb-belongs-to-an-availability-group"></a><a name="Upgrade"></a> SSISDB が可用性グループに属する場合のアップグレードのブロック  
  SSIS カタログ データベース (SSISDB) が Always On 可用性グループに属する場合は、SSISDB を可用性グループから削除し、SQL Server をアップグレードした後、SSISDB を可用性グループに再び追加する必要があります。 詳細については、「 [Upgrading SSISDB in an availability group](../integration-services/catalog/ssis-catalog.md#Upgrade)」を参照してください。  
 
 ### <a name="better-design-experience"></a>設計エクスペリエンスの強化
 
-####  <a name="OneDesigner"></a> SSIS デザイナーでの複数ターゲットと複数バージョンのサポート  
+####  <a name="multi-targeting-and-multi-version-support-in-ssis-designer"></a><a name="OneDesigner"></a> SSIS デザイナーでの複数ターゲットと複数バージョンのサポート  
  Visual Studio 2015 用の SQL Server Data Tools (SSDT) で SSIS デザイナーを使用して、SQL Server 2016、SQL Server 2014、または SQL Server 2012 をターゲットとするパッケージを作成、管理、および実行できるようになりました。 SSDT を入手する方法については、「 [最新の SQL Server Data Tools のダウンロード](../ssdt/download-sql-server-data-tools-ssdt.md)」を参照してください。 
 
  ソリューション エクスプローラーで Integration Services プロジェクトを右クリックし、 **[プロパティ]** を選択すると、そのプロジェクトのプロパティ ページが開きます。 **[構成プロパティ]** の **[全般]** タブで、 **[TargetServerVersion]** プロパティを選択した後、[SQL Server 2016]、[SQL Server 2014]、または [SQL Server 2012] を選択します。  
@@ -333,38 +333,38 @@ SQL Server 2016 Service Pack 1 がインストールされている場合、ODat
 
 ### <a name="better-management-experience-in-sql-server-management-studio"></a>SQL Server Management Studio の管理エクスペリエンスの強化
 
-####  <a name="CatViews"></a> SSIS カタログ ビューのパフォーマンスの向上  
+####  <a name="improved-performance-for-ssis-catalog-views"></a><a name="CatViews"></a> SSIS カタログ ビューのパフォーマンスの向上  
  ほとんどの SSIS カタログ ビューで、ssis_admin ロールのメンバー以外のユーザーが実行したときのパフォーマンスが向上しています。  
 
 ### <a name="other-enhancements"></a>その他の機能強化
 
-####  <a name="BDDinbox"></a> SSIS の一部になった Balanced Data Distributor 変換  
+####  <a name="balanced-data-distributor-transformation-is-now-part-of-ssis"></a><a name="BDDinbox"></a> SSIS の一部になった Balanced Data Distributor 変換  
  Balanced Data Distributor 変換は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の前のバージョンでは別にダウンロードする必要がありましたが、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]のインストール時にインストールされるようになりました。 詳細については、「 [Balanced Data Distributor Transformation](../integration-services/data-flow/transformations/balanced-data-distributor-transformation.md)」を参照してください。  
   
-####  <a name="ComplexFeedinbox"></a> SSIS の一部になったデータ フィード パブリッシング コンポーネント  
+####  <a name="data-feed-publishing-components-are-now-part-of-ssis"></a><a name="ComplexFeedinbox"></a> SSIS の一部になったデータ フィード パブリッシング コンポーネント  
  データ フィード パブリッシング コンポーネントは [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の前のバージョンでは別にダウンロードする必要がありましたが、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]のインストール時にインストールされるようになりました。 詳細については、「 [Data Streaming Destination](../integration-services/data-flow/data-streaming-destination.md)」を参照してください。  
 
-####  <a name="AzureBlob"></a> SQL Server インポートおよびエクスポート ウィザードでの Azure BLOB Storage のサポート  
+####  <a name="support-for-azure-blob-storage-in-the-sql-server-import-and-export-wizard"></a><a name="AzureBlob"></a> SQL Server インポートおよびエクスポート ウィザードでの Azure BLOB Storage のサポート  
  SQL Server インポートおよびエクスポート ウィザードで、データの読み込み元と保存先として Azure BLOB Storage を使用できるようになりました。 詳細については、「[[データ ソースの選択] &#40;SQL Server インポートおよびエクスポート ウィザード&#41;](../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)」および「[[変換先の選択] &#40;SQL Server インポートおよびエクスポート ウィザード&#41;](../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)」を参照してください。 
 
-####  <a name="CDCOracle"></a> Change Data Capture Designer と Service for Oracle for Microsoft SQL Server 2016 のリリース  
+####  <a name="change-data-capture-designer-and-service-for-oracle-for-microsoft-sql-server-2016-released"></a><a name="CDCOracle"></a> Change Data Capture Designer と Service for Oracle for Microsoft SQL Server 2016 のリリース  
  MicrosoftÂ® Change Data Capture Designer と Service for Oracle by Attunity for Microsoft SQL ServerÂ® 2016 は、SQL Server 2016 Feature Pack の一部としてリリースされています。  これらのコンポーネントで、Oracle 12c のクラシック インストールをサポートできるようになりました (マルチテナント インストールはサポートされません)。Feature Pack のコンポーネントをダウンロードするには、「[MicrosoftÂ® SQL ServerÂ® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297)」を参照してください。  
   
-####  <a name="cdc2016"></a> SQL Server 2016 での CDC コンポーネントの更新  
+####  <a name="cdc-components-updated-for-sql-server-2016"></a><a name="cdc2016"></a> SQL Server 2016 での CDC コンポーネントの更新  
  CDC (Change Data Capture) Control Task、Source、および Splitter Transformation コンポーネントが、SQL Server 2016 との完全互換性を提供するように更新されています。 新しい機能の追加も動作の変更もありません。  
   
-####  <a name="ASDDL"></a> Analysis Services DDL 実行タスクの更新  
+####  <a name="analysis-services-execute-ddl-task-updated"></a><a name="ASDDL"></a> Analysis Services DDL 実行タスクの更新  
  Analysis Services DDL 実行タスクが、表形式モデルのスクリプト言語コマンドも受け入れるように更新されています。
 
-####  <a name="ssasrc0"></a> Analysis Services タスクによる表形式モデルのサポート  
+####  <a name="analysis-services-tasks-support-tabular-models"></a><a name="ssasrc0"></a> Analysis Services タスクによる表形式モデルのサポート  
  SQL Server Analysis Services (SSAS) をサポートするすべての SSIS タスクと変換先を、SQL Server 2016 の表形式モデルで使用できるようになりました。 SSIS タスクは、多次元オブジェクトではなく表形式オブジェクトを表すように更新されています。 たとえば、処理するオブジェクトを選択すると、Analysis Services 処理タスクによって表形式モデルが自動的に検出され、メジャー グループやディメンションではなく、表形式オブジェクトの一覧が表示されます。 Partition Processing Destination でも表形式オブジェクトが表示され、パーティションへのデータのプッシュをサポートします。  
   
  Dimension Processing Destination は、SQL 2016 互換レベルの表形式モデルでは機能しません。  表形式処理で必要なのは、Analysis Services 処理タスクと Partition Processing Destination だけです。 
 
-####  <a name="builtinR"></a> 組み込み R Services のサポート  
+####  <a name="support-for-built-in-r-services"></a><a name="builtinR"></a> 組み込み R Services のサポート  
  SSIS は、組み込み R services を [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で既にサポートしています。 SSIS を使用して、データの抽出と分析の出力の読み込みだけではなく、R モデルの構築、実行、定期的な保持も実行できます。 詳細については、次のログの投稿を参照してください。 [Operationalize your machine learning project using SQL Server 2016 SSIS and R Services](https://blogs.msdn.com/b/ssis/archive/2016/01/12/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services.aspx)(SQL Server 2016 SSIS と R Services を使用した機械学習を運用可能にする)。 
 
-####  <a name="ValidateXML"></a> XML タスクでの XML 検証の詳細な出力  
+####  <a name="rich-xml-validation-output-in-the-xml-task"></a><a name="ValidateXML"></a> XML タスクでの XML 検証の詳細な出力  
  XML タスクの **ValidationDetails** プロパティを有効にして、XML ドキュメントを検証し、詳細なエラー出力を取得します。 **ValidationDetails** プロパティが利用できるようになる前は、XML タスクによる XML 検証では、true や false のみの結果が返され、エラーやその場所に関する情報は返されませんでした。 現在は、 **ValidationDetails** を true に設定すると、出力ファイルに各エラーの行番号と位置を含む詳しい情報が出力されます。 この情報を使って、XML ドキュメントのエラーを把握、特定、修正できます。 詳細については、「 [Validate XML with the XML Task](../integration-services/control-flow/validate-xml-with-the-xml-task.md)」を参照してください。  
   
  [!INCLUDE[ssIS](../includes/ssis-md.md)] では、 **Service Pack 2 で** ValidationDetails [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] プロパティが導入されました。 その時点では、この新しいプロパティは発表されることも文書化されることもありませんでした。 **ValidationDetails** プロパティは、 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] と [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]でも利用できます。   

@@ -14,10 +14,10 @@ ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bcc63d87bc71fa2497e1282364f87272438bbf97
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70212290"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>データベース ミラーリングの監視 (SQL Server)
@@ -36,7 +36,7 @@ ms.locfileid: "70212290"
   
 -   [関連タスク](#RelatedTasks)  
   
-##  <a name="MonitoringStatus"></a> ミラーリングの状態の監視  
+##  <a name="monitoring-mirroring-status"></a><a name="MonitoringStatus"></a> ミラーリングの状態の監視  
  サーバー インスタンス上の 1 つ以上のミラー化されたデータベースの監視を設定および管理するには、データベース ミラーリング モニターまたは **dbmmonitor** システム ストアド プロシージャを使用します。 ミラーリング セッション中にミラー化されたデータベースを監視すると、データ フローが発生しているかどうかや、データ フローがどの程度適切に行われているかを確認することができます。  
   
  ミラー化されたデータベースを監視した場合、具体的には次のことを行えます。  
@@ -63,7 +63,7 @@ ms.locfileid: "70212290"
   
      しきい値を超える値が新しい状態行に含まれている場合、情報イベントが Windows イベント ログに送信されます。 その場合、システム管理者は、それらのイベントに基づいて手動で警告を構成できます。 詳細については、「 [ミラーリング パフォーマンス基準の警告しきい値および警告の使用 &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)」を参照してください。  
   
-###  <a name="tools_for_monitoring_dbm_status"></a> データベース ミラーリングの状態を監視するためのツール  
+###  <a name="tools-for-monitoring-database-mirroring-status"></a><a name="tools_for_monitoring_dbm_status"></a> データベース ミラーリングの状態を監視するためのツール  
  ミラーリングの状態は、データベース ミラーリング モニターまたは **sp_dbmmonitorresults** システム ストアド プロシージャを使用して監視できます。 これらのツールを使用すると、どちらのシステム管理者も、ローカル サーバー インスタンス上でミラー化されたデータベースのデータベース ミラーリングを監視できます。この場合のシステム管理者は、 **sysadmin** 固定サーバー ロールのメンバー、およびシステム管理者によって **msdb** データベースの **dbm_monitor** 固定データベース ロールに追加されたユーザーです。 どちらのツールを使用した場合も、システム管理者はミラーリングの状態を手動で更新することもできます。  
   
 > [!NOTE]  
@@ -83,7 +83,7 @@ ms.locfileid: "70212290"
   
      次の表では、データベース ミラーリング モニターとは別にデータベース ミラーリングの監視を管理および使用するためのストアド プロシージャについて説明します。  
   
-    |手順|[説明]|  
+    |手順|説明|  
     |---------------|-----------------|  
     |[sp_dbmmonitoraddmonitoring](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)|サーバー インスタンス上のミラー化されたデータベースごとに、定期的に状態情報を更新するジョブを作成します。|  
     |[sp_dbmmonitorchangemonitoring](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)|データベース ミラーリング監視パラメーターの値を変更します。|  
@@ -138,7 +138,7 @@ ms.locfileid: "70212290"
 #### <a name="dropping-the-database-mirroring-monitor-job"></a>データベース ミラーリング モニターのジョブの削除  
  データベース ミラーリング モニターのジョブである **[データベース ミラーリング モニターのジョブ]** は、削除するまでなくなりません。 監視ジョブは、システム管理者が管理する必要があります。 **[データベース ミラーリング モニターのジョブ]** を削除するには、 **sp_dbmmonitordropmonitoring**を使用します。 詳細については、「 [sp_dbmmonitordropmonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)」を参照してください。  
   
-###  <a name="perf_metrics_of_dbm_monitor"></a> データベース ミラーリング モニターに表示される状態  
+###  <a name="status-displayed-by-the-database-mirroring-monitor"></a><a name="perf_metrics_of_dbm_monitor"></a> データベース ミラーリング モニターに表示される状態  
  データベース ミラーリング モニターの **[状態]** ページには、パートナーと、ミラーリング セッションの状態が表示されます。 この情報には、トランザクション ログの状態、フェールオーバーを完了するために必要な時間を推測するのに役立つその他の情報、データ損失の可能性 (セッションが同期されていない場合) などのパフォーマンス基準が含まれます。 さらに、 **[状態]** ページには、ミラーリング セッションに関する一般的な状態と情報が表示されます。  
   
 > [!NOTE]  
@@ -248,7 +248,7 @@ ms.locfileid: "70212290"
   
     -   [自動フェールオーバーを伴う高い安全性 (同期)]  
   
-##  <a name="AdditionalSources"></a> ミラー化データベースに関する追加情報  
+##  <a name="additional-sources-of-information-about-a-mirrored-database"></a><a name="AdditionalSources"></a> ミラー化データベースに関する追加情報  
  ミラー化されたデータベースの監視および監視対象のパフォーマンス変数に対する警告の設定を行う手段として、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] には、データベース ミラーリング モニターと dbmmonitor ストアド プロシージャ以外に、データベース ミラーリングに関するカタログ ビュー、パフォーマンス カウンター、およびイベント通知が用意されています。  
   
  **このセクションの内容**  
@@ -259,7 +259,7 @@ ms.locfileid: "70212290"
   
 -   [データベース ミラーリングのイベント通知](#DbmEventNotif)  
   
-###  <a name="DbmMetadata"></a> データベース ミラーリング メタデータ  
+###  <a name="database-mirroring-metadata"></a><a name="DbmMetadata"></a> データベース ミラーリング メタデータ  
  次のカタログ ビューまたは動的管理ビューによって公開されるメタデータに、各データベース ミラーリング セッションに関する説明が記述されています。  
   
 -   **sys.database_mirroring**  
@@ -280,7 +280,7 @@ ms.locfileid: "70212290"
   
      詳細については、「[sys.dm_db_mirroring_connections &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections.md)」を参照してください。  
   
-###  <a name="DbmPerfCounters"></a> データベース ミラーリングのパフォーマンス カウンター  
+###  <a name="database-mirroring-performance-counters"></a><a name="DbmPerfCounters"></a> データベース ミラーリングのパフォーマンス カウンター  
  パフォーマンス カウンターを使用すると、データベース ミラーリングのパフォーマンスを監視できます。 たとえば、データベース ミラーリングがプリンシパル サーバーのパフォーマンスに影響を及ぼしているかどうかを確認するには、 **Transaction Delay** カウンターを調べることができます。また、ミラー データベースとプリンシパル データベース間の遅延時間がいかに少ないかを確認するには、 **Redo Queue** カウンターと **Log Send Queue** カウンターを調べることができます。 1 秒間に送信されたログの量を監視する場合は、 **Log Bytes Sent/sec** カウンターを調べることができます。  
   
  パフォーマンス カウンターは、いずれかのパートナーのパフォーマンス モニターにあるデータベース ミラーリング パフォーマンス オブジェクト (**SQLServer:Database Mirroring**) で使用できます。 詳しくは、「 [SQL Server:Database Mirroring オブジェクト](../../relational-databases/performance-monitor/sql-server-database-mirroring-object.md)」を参照してください。  
@@ -289,7 +289,7 @@ ms.locfileid: "70212290"
   
 -   [システム モニターの起動 &#40;Windows&#41;](../../relational-databases/performance/start-system-monitor-windows.md)  
   
-###  <a name="DbmEventNotif"></a> データベース ミラーリングのイベント通知  
+###  <a name="database-mirroring-event-notifications"></a><a name="DbmEventNotif"></a> データベース ミラーリングのイベント通知  
  イベント通知は、特殊なデータベース オブジェクトです。 さまざまな Transact-SQL データ定義言語 (DDL) ステートメントや SQL トレースのイベントに応答してイベント通知が行われ、サーバー イベントとデータベース イベントに関する情報を [!INCLUDE[ssSB](../../includes/sssb-md.md)] サービスに送信します。  
   
  データベース ミラーリングでは、次のイベントを使用できます。  
@@ -302,7 +302,7 @@ ms.locfileid: "70212290"
   
      このクラスでは、データベース ミラーリングのトランスポート セキュリティに関連する監査メッセージを報告します。 詳細については、「 [Audit Database Mirroring Login Event Class](../../relational-databases/event-classes/audit-database-mirroring-login-event-class.md)」を参照してください。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [ミラーリング パフォーマンス基準の警告しきい値および警告の使用 &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)  
   

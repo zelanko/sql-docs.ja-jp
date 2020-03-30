@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: b5520bb39a8e8e856030781b7739a55fd88fccaf
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75306552"
 ---
 # <a name="analysis-server-properties-service-tab"></a>[SQL Server Analysis Services のプロパティ] ダイアログ ボックス ([サービス] タブ)
@@ -47,11 +47,11 @@ ms.locfileid: "75306552"
  **[開始モード]**  
  このサービスを以下のいずれかのモードに設定します。  
   
--   手動: このサービスは、コンピューターの起動時に自動的に開始されません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーまたは他のツールを使用してこのサービスを開始する必要があります。  
+-   手動: このサービスは、コンピューターの起動時に自動的に開始しません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーまたは他のツールを使用してこのサービスを開始する必要があります。  
   
--   自動：このサービスは、コンピューターの起動時に開始を試みます。  
+-   \[自動]: このサービスは、コンピューターの起動時に開始を試みます。  
   
--   無効:このサービスを開始できません。  
+-   \[無効]: このサービスは開始できません。  
   
  **State**  
  このサービスが実行中か、停止しているか、無効になっているかが表示されます。  

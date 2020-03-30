@@ -21,10 +21,10 @@ ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 78aa101ac0f7c86bc2563f7cf0151e7f976a5b80
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296187"
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services (SSIS) パッケージ
@@ -77,7 +77,7 @@ ms.locfileid: "71296187"
  パッケージ オブジェクトを構成して、チェックポイントでのパッケージの再開、デジタル証明書を使用したパッケージの署名、パッケージの保護レベルの設定、およびトランザクションを使用したデータ整合性の検証などの機能をサポートできます。  
   
 ### <a name="restarting-packages"></a>パッケージの再開  
- パッケージには、チェックポイント プロパティが含まれます。これを使用すると、1 つ以上のタスクが失敗した場合にパッケージを再開できます。 たとえば、異なる 2 つのテーブルを更新する 2 つのデータ フロー タスクがパッケージに含まれ、2 番目のタスクが失敗した場合、最初のデータ フロー タスクを繰り返さずにそのパッケージを再実行できます。 パッケージの再開を使用すると、実行時間が長いパッケージで時間を節約できます。 再開とは、パッケージ全体を再実行するのではなく、失敗したタスクからパッケージを開始できるということです。 詳細については、「 [Restart Packages by Using Checkpoints](../integration-services/packages/restart-packages-by-using-checkpoints.md)」を参照してください。  
+ パッケージには、チェックポイント プロパティが含まれます。これを使用すると、1 つ以上のタスクが失敗した場合にパッケージを再開できます。 たとえば、異なる 2 つのテーブルを更新する 2 つのデータ フロー タスクがパッケージに含まれ、2 番目のタスクが失敗した場合、最初のデータ フロー タスクを繰り返さずにそのパッケージを再実行できます。 パッケージの再開を使用すると、実行時間が長いパッケージで時間を節約できます。 再開とは、パッケージ全体を再実行するのではなく、失敗したタスクからパッケージを開始できるということです。 詳細については、「[チェックポイントを使用してパッケージを再開する](../integration-services/packages/restart-packages-by-using-checkpoints.md)」を参照してください。  
   
 ### <a name="securing-packages"></a>パッケージの保護  
  デジタル署名を使用してパッケージに署名したり、パスワードまたはユーザー キーを使用してパッケージを暗号化できます。 デジタル署名により、パッケージのソースが認証されます。 ただし、パッケージの読み込み時にデジタル署名を確認するように [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] を構成する必要もあります。 詳細については、「 [デジタル署名を使用してパッケージのソースを特定する](../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md) 」および「 [パッケージ内の機微なデータへのアクセス制御](../integration-services/security/access-control-for-sensitive-data-in-packages.md)」を参照してください。  
@@ -90,8 +90,8 @@ ms.locfileid: "71296187"
   
 |ログ エントリ|説明|  
 |---------------|-----------------|  
-|**PackageStart**|パッケージの実行が開始されたことを示します。<br /><br /> 注:このログ エントリは自動的にログに書き込まれます。 除外することはできません。|  
-|**PackageEnd**|パッケージが完了したことを示します。<br /><br /> 注:このログ エントリは自動的にログに書き込まれます。 除外することはできません。|  
+|**PackageStart**|パッケージの実行が開始されたことを示します。<br /><br /> 注: このログ エントリは自動的にログに書き込まれます。 除外することはできません。|  
+|**PackageEnd**|パッケージが完了したことを示します。<br /><br /> 注: このログ エントリは自動的にログに書き込まれます。 除外することはできません。|  
 |**Diagnostic**|同時実行できる実行可能ファイル数など、パッケージの実行に影響するシステム構成に関する情報を提供します。|  
   
 ## <a name="set-the-properties-of-a-package"></a>パッケージのプロパティを設定する  

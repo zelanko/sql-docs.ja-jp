@@ -16,10 +16,10 @@ ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e2083d5f8602c28028da90cf4ecd1ed809115c7f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822677"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Always On 可用性グループ ダッシュボードの使用 (SQL Server Management Studio)
@@ -85,7 +85,7 @@ ms.locfileid: "74822677"
 > [!TIP]  
 >  列見出しをクリックすると、可用性グループの名前、プライマリ インスタンス、フェールオーバー モード、または問題で、可用性グループの情報を並べ替えることができます。  
   
-##  <a name="AvGroupDetails"></a> 可用性グループの詳細  
+##  <a name="availability-group-details"></a><a name="AvGroupDetails"></a> 可用性グループの詳細  
  概要の画面で選択した可用性グループについての以下の詳細情報が表示されます。  
   
  **[可用性グループの状態]**  
@@ -104,13 +104,13 @@ ms.locfileid: "74822677"
  **[クラスターの状態]**  
  接続されているサーバーのインスタンスと可用性グループがメンバー ノードになっているクラスターの名前と状態。  
   
-##  <a name="AvReplicaDetails"></a> 可用性レプリカの詳細  
+##  <a name="availability-replica-details"></a><a name="AvReplicaDetails"></a> 可用性レプリカの詳細  
 
 プライマリ レプリカに接続されていると、 **[Availability replica details]\(可用性レプリカの詳細\)** には可用性グループないのすべてのレプリカからの情報が表示されます。 セカンダリ レプリカに接続されいる場合は、接続されたレプリカからの情報のみが表示されます。  
 
 **[可用性レプリカ]** ペインには、次の列が表示されます。  
   
- **名前**  
+ **Name**  
  可用性レプリカをホストするサーバー インスタンスの名前。 この列は既定で表示されます。  
   
  **ロール**  
@@ -199,7 +199,7 @@ ms.locfileid: "74822677"
   
  グループ化された情報を表示するペインには、次の列が表示されます。  
   
- **名前**  
+ **Name**  
  可用性データベースの名前です。 この値は既定で表示されます。  
   
  **[レプリカ]**  

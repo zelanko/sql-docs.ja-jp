@@ -28,10 +28,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 0b91be419419d7dab1904068b1600def88106023
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75256320"
 ---
 # <a name="transact-sql-editor-options"></a>Transact-SQL エディターのオプション
@@ -42,7 +42,7 @@ ms.locfileid: "75256320"
   
 [クエリの結果](#QueryResults)  
   
-## <a name="QueryExecution"></a>クエリの実行  
+## <a name="query-execution"></a><a name="QueryExecution"></a>クエリの実行  
   
 |プロパティ|説明|  
 |------------|---------------|  
@@ -70,7 +70,7 @@ ms.locfileid: "75256320"
 |**SET ANSI_WARNINGS**|いくつかのエラー条件に対して SQL-92 標準の動作を実行することを指定します。詳しくは、「[SET ANSI_WARNINGS](https://go.microsoft.com/fwlink/?LinkId=238758)」をご覧ください。|  
 |**SET ANSI_NULLS**|等号 ( **=** ) 比較演算子と不等号 ( **<>** ) 比較演算子を NULL 値に対して使用した場合の、SQL-92 準拠動作を指定します。詳しくは、「[SET ANSI_NULLS](https://go.microsoft.com/fwlink/?LinkId=238759)」をご覧ください。|  
   
-## <a name="QueryResults"></a>クエリの結果  
+## <a name="query-results"></a><a name="QueryResults"></a>クエリの結果  
   
 |プロパティ|説明|  
 |------------|---------------|  

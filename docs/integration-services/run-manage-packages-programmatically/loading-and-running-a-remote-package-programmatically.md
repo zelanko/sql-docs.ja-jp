@@ -15,10 +15,10 @@ ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b6382de8778e5f11e76f4481519284d50b7b52e0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71282168"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>プログラムによるリモート パッケージの読み込みと実行
@@ -33,7 +33,7 @@ ms.locfileid: "71282168"
   
  また、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] がインストールされているローカル コンピューターからリモート パッケージを実行することもできます。 詳細については、「[プログラムによるローカル パッケージの読み込みと実行](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)」を参照してください。  
   
-##  <a name="top"></a> リモート コンピューターでのリモート パッケージの実行  
+##  <a name="running-a-remote-package-on-the-remote-computer"></a><a name="top"></a> リモート コンピューターでのリモート パッケージの実行  
  上で説明しましたが、リモート サーバーでリモート パッケージを実行する方法は複数あります。  
   
 -   [SQL Server エージェントを使用して、プログラムでリモート パッケージを実行する](#agent)  
@@ -42,7 +42,7 @@ ms.locfileid: "71282168"
   
  このトピックでパッケージを読み込み、保存するために使用するほとんどすべてのメソッドには、**Microsoft.SqlServer.ManagedDTS** アセンブリへの参照が必要です。 ただし、このトピックで説明する、**sp_start_job** ストアド プロシージャを実行するための ADO.NET の方法は例外です。この方法では、**System.Data** への参照のみが必要です。 **Microsoft.SqlServer.ManagedDTS** アセンブリへの参照を新しいプロジェクトに追加した後、<xref:Microsoft.SqlServer.Dts.Runtime>using**または**Imports**ステートメントを使用して** 名前空間をインポートします。  
   
-###  <a name="agent"></a> SQL Server エージェントを使用した、サーバー上でのプログラムによるリモート パッケージの実行  
+###  <a name="using-sql-server-agent-to-run-a-remote-package-programmatically-on-the-server"></a><a name="agent"></a> SQL Server エージェントを使用した、サーバー上でのプログラムによるリモート パッケージの実行  
  次のコード例では、プログラムで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用して、サーバー上のリモート パッケージを実行する方法を示します。 このコード例では、**sp_start_job** システム ストアド プロシージャを呼び出し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを開始します。 プロシージャによって開始されるジョブの名前は `RunSSISPackage` で、このジョブはリモート コンピューターに保存されています。 その後、`RunSSISPackage` ジョブにより、リモート コンピューターでパッケージが実行されます。  
   
 > [!NOTE]  
@@ -147,7 +147,7 @@ namespace LaunchSSISPackageAgent_CS
 }  
 ```  
   
-###  <a name="service"></a> Web サービスまたはリモート コンポーネントを使用した、プログラムによるリモート パッケージの実行  
+###  <a name="using-a-web-service-or-remote-component-to-run-a-remote-package-programmatically"></a><a name="service"></a> Web サービスまたはリモート コンポーネントを使用した、プログラムによるリモート パッケージの実行  
  上記のサーバー上でプログラムによってパッケージを実行するためのソリューションでは、サーバー上にカスタム コードを用意する必要はありません。 ただし、SQL Server エージェントに依存せずにパッケージを実行するソリューションが好ましいこともあります。 次の例では、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージをローカルで起動するためにサーバー上で作成できる Web サービスと、この Web サービスをクライアント コンピューターから呼び出すために使用できるテスト アプリケーションを示します。 Web サービスではなくリモート コンポーネントを作成する場合は、同じコード ロジックをほとんど変更せずにリモート コンポーネントで使用できます。 ただし、リモート コンポーネントを使用する場合は、Web サービスよりも広範な設定が必要になることがあります。  
   
 > [!IMPORTANT]  

@@ -15,10 +15,10 @@ ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e8a6a14a6efc6a9d5f96144364f1532c14b0c1c0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75235342"
 ---
 # <a name="select-initial-data-synchronization-page-always-on-availability-group-wizards"></a>[最初のデータの同期を選択] ページ (AlwaysOn 可用性グループ ウィザード)
@@ -28,7 +28,7 @@ ms.locfileid: "75235342"
   
  選択肢には、 **[自動シード処理]** 、 **[完全なデータベースとログ バックアップ]** 、 **[参加のみ]** 、 **[最初のデータの同期をスキップ]** があります。 **[自動シード処理]** 、 **[完全]** 、 **[参加のみ]** を選択する前に、使用している環境が前提条件を満たしていることを確認してください。  
     
-##  <a name="Recommendations"></a> 推奨事項  
+##  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
   
 -   初期データ同期の実行中は、プライマリ データベースのログ バックアップ タスクを中断します。  
   
@@ -38,11 +38,11 @@ ms.locfileid: "75235342"
   
      バックアップおよび復元操作を高いセキュリティで保護する必要がある場合は、 **[参加のみ]** または **[最初のデータの同期をスキップ]** オプションのどちらかを選択することをお勧めします。  
   
-## <a name="Auto"></a> 自動シード処理
+## <a name="automatic-seeding"></a><a name="Auto"></a> 自動シード処理
  
  グループの各データベースのセカンダリ レプリカが SQL Server で自動的に作成されます。 自動シード処理には、データとログ ファイルのパスが、グループに参加しているすべての SQL Server インスタンスで同じである必要があります。 [!INCLUDE[sssql15-md.md](../../../includes/sssql15-md.md)] 以降で使用できます。 「[AlwaysOn 可用性グループを自動的に初期化する](automatically-initialize-always-on-availability-group.md)」を参照してください。
 
-##  <a name="Full"></a> 完全なデータベースとログ バックアップ 
+##  <a name="full-database-and-log-backup"></a><a name="Full"></a> 完全なデータベースとログ バックアップ 
  各プライマリ データベースに対して **[完全なデータベースとログ バックアップ]** オプションを選択すると、1 つのワークフローで、プライマリ データベースの完全バックアップとログ バックアップを作成する、セカンダリ レプリカをホストする各サーバー インスタンスでこれらのバックアップを復元して、対応するセカンダリ データベースを作成する、各セカンダリ データベースを可用性グループに参加させる、という操作を実行します。  
   
  使用している環境が、次の「初期データの完全同期を使用するための前提条件」を満たしており、ウィザードでデータ同期を自動的に開始する場合にのみ、このオプションを選択してください。  
@@ -75,18 +75,18 @@ ms.locfileid: "75235342"
 > [!IMPORTANT]  
 >  ログ バックアップは、ログ バックアップ チェーンの一部になります。 それらのバックアップ ファイルは、適切に保存してください。  
   
-##  <a name="Joinonly"></a> [参加のみ]  
+##  <a name="join-only"></a><a name="Joinonly"></a> [参加のみ]  
  このオプションは、可用性グループのセカンダリ レプリカをホストする各サーバー インスタンス上に、新しいセカンダリ データベースが既に存在する場合にのみ選択します。 セカンダリ データベースの準備については、このセクションの「 [セカンダリ データベースを手動で準備するには](#PrepareSecondaryDbs)」を参照してください。  
   
  **[参加のみ]** を選択すると、既存の各セカンダリ データベースを可用性グループに参加させます。  
   
-## <a name="Skip"></a> [最初のデータの同期をスキップ]  
+## <a name="skip-initial-data-synchronization"></a><a name="Skip"></a> [最初のデータの同期をスキップ]  
  このオプションは、各プライマリ データベースのデータベースおよびログ バックアップを実行し、セカンダリ レプリカをホストする各サーバー インスタンスに復元する場合に選択します。 ウィザードの終了後、各セカンダリ レプリカのすべてのセカンダリ データベースを参加させる必要があります。  
   
 > [!NOTE]  
 >  詳細については、「 [AlwaysOn セカンダリ データベース上のデータ移動の開始 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)」を参照してください。  
   
-##  <a name="PrepareSecondaryDbs"></a> セカンダリ データベースを手動で準備するには  
+##  <a name="to-prepare-secondary-databases-manually"></a><a name="PrepareSecondaryDbs"></a> セカンダリ データベースを手動で準備するには  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ウィザードを使用せずにセカンダリ データベースを準備するには、次の方法のどちらかを使用できます。  
   
 -   RESTORE WITH NORECOVERY を使用してプライマリ データベースの最新のデータベース バックアップを手動で復元し、その後、RESTORE WITH NORECOVERY を使用して後続のログ バックアップを復元する。 プライマリ データベースとセカンダリ データベースのファイル パスが異なる場合は、WITH MOVE オプションを使用する必要があります。 可用性グループのセカンダリ レプリカをホストする各サーバー インスタンスで、この復元シーケンスを実行します。  これらのバックアップ操作と復元操作は、 [!INCLUDE[tsql](../../../includes/tsql-md.md)] または PowerShell を使用して実行できます。  
@@ -110,7 +110,7 @@ ms.locfileid: "75235342"
   
  すべてのセカンダリ データベースを準備してから、ウィザードを実行することもできます。 この場合、ウィザードの **[最初のデータの同期を選択]** ページで **[参加のみ]** を選択して、準備した新しいセカンダリ データベースを可用性グループに自動的に参加させます。  
   
-##  <a name="LaunchWiz"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="LaunchWiz"></a> 関連タスク  
   
 -   [[新しい可用性グループ] ダイアログ ボックスの使用 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

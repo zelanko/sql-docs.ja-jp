@@ -17,10 +17,10 @@ ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: eb4812b48c9465659ca8c0739f0411a9e65660bf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71293868"
 ---
 # <a name="transfer-jobs-task"></a>ジョブ転送タスク
@@ -86,7 +86,7 @@ ms.locfileid: "71293868"
 >  転送先サーバー上の **sysadmin** 固定サーバー ロールのメンバー、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント固定データベース ロールのうち 1 つのロールのメンバーだけが、転送先にジョブを正常に作成できます。 転送元サーバー上のジョブにアクセスするには、ユーザーは少なくとも転送元サーバー上で **SQLAgentUserRole** 固定データベース ロールのメンバーである必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント固定データベース ロールおよびその権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」をご覧ください。  
   
 ### <a name="options"></a>オプション  
- **名前**  
+ **Name**  
  ジョブ転送タスクの一意な名前を入力します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
 > [!NOTE]  
@@ -113,7 +113,7 @@ ms.locfileid: "71293868"
   
  このプロパティには、次の表に示すオプションがあります。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**True** にします|すべてのジョブをコピーします。|  
 |**False**|指定のジョブのみをコピーします。|  
@@ -131,7 +131,7 @@ ms.locfileid: "71293868"
   
  このプロパティには、次の表に示すオプションがあります。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**[FailTask]**|ジョブの名前がコピー先サーバーに既に存在する名前と同じである場合、タスクは失敗します。|  
 |**Overwrite**|コピー先サーバーの同じ名前のジョブを上書きします。|  
@@ -142,7 +142,7 @@ ms.locfileid: "71293868"
   
  このプロパティには、次の表に示すオプションがあります。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**True** にします|コピー先サーバーのジョブを有効にします。|  
 |**False**|コピー先サーバーのジョブを無効にします。|  

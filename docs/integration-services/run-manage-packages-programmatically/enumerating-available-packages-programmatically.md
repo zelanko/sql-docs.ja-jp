@@ -15,10 +15,10 @@ ms.assetid: 254ec7ee-d3ff-4361-8995-46e9b9c4dc95
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 80bf829afcbc93e397e8ea797f22905b3b55c0cd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295767"
 ---
 # <a name="enumerating-available-packages-programmatically"></a>プログラムによる使用可能なパッケージの列挙
@@ -28,7 +28,7 @@ ms.locfileid: "71295767"
 
   <a name="top"></a> プログラムにより [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを操作する際に、個々のパッケージまたはフォルダーが存在するかどうかを判断したり、読み込みと実行が可能な保存済みパッケージを列挙したりする必要がある場合があります。 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 名前空間の <xref:Microsoft.SqlServer.Dts.Runtime> クラスは、これらの要件を満たすさまざまなメソッドを提供します。    
     
-##  <a name="exists"></a> パッケージまたはフォルダーが存在するかどうかの判断    
+##  <a name="determining-whether-a-package-or-folder-exists"></a><a name="exists"></a> パッケージまたはフォルダーが存在するかどうかの判断    
  保存済みのパッケージの読み込みと実行を行う前に、プログラムによってそのパッケージが存在するかどうかを判断するには、次のいずれかのメソッドを呼び出します。    
     
 |保存先|呼び出すメソッド|    
@@ -45,7 +45,7 @@ ms.locfileid: "71295767"
     
  [先頭に戻る](#top)    
     
-##  <a name="listing"></a> 使用可能なパッケージの列挙    
+##  <a name="enumerating-available-packages"></a><a name="listing"></a> 使用可能なパッケージの列挙    
  プログラムにより保存済みパッケージの一覧を取得するには、次のいずれかのメソッドを呼び出します。    
     
 |保存先|呼び出すメソッド|    
@@ -55,7 +55,7 @@ ms.locfileid: "71295767"
     
  次のサンプルは、これらのメソッドの使用方法を示すコンソール アプリケーションです。    
     
-###  <a name="listing_store"></a> 例 (SSIS パッケージ ストア)    
+###  <a name="example-ssis-package-store"></a><a name="listing_store"></a> 例 (SSIS パッケージ ストア)    
  <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetDtsServerPackageInfos%2A> メソッドを使用して、SSIS パッケージ ストアに保存されているパッケージを一覧表示します。 SSIS パッケージ ストアによって管理される既定のストレージの場所は、ファイル システムおよび MSDB です。 これらの場所の中に、追加の論理フォルダーを作成できます。    
     
 ```vb    
@@ -161,7 +161,7 @@ namespace EnumeratePackagesSSIS_CS
     
  [先頭に戻る](#top)    
     
-###  <a name="listing_sql"></a> 例 (SQL Server)    
+###  <a name="example-sql-server"></a><a name="listing_sql"></a> 例 (SQL Server)    
  <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetPackageInfos%2A> メソッドを使用して、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のインスタンスに保存されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パッケージを一覧表示します。    
     
 ```vb    

@@ -14,10 +14,10 @@ ms.assetid: 703e947f-d345-4506-be21-34bfbfa7bca6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ff428ab60ad51cfdf2cd19454c34e90644f30b5d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75235437"
 ---
 # <a name="policy-evaluation-result-page-always-on-dashboard"></a>ポリシー評価の結果ページ (Always On ダッシュボード)
@@ -25,7 +25,7 @@ ms.locfileid: "75235437"
 
   AlwaysOn ダッシュボードの **[ポリシー評価の結果]** ページは、現在のポリシーの問題を表示するために使用します。  
     
-##  <a name="Options"></a> ダイアログ ボックスのオプション  
+##  <a name="dialog-box-options"></a><a name="Options"></a> ダイアログ ボックスのオプション  
  **[検出された問題]**  
  検出された各問題の行を表示します。 問題に関連付けられているアイコンでは、次のように問題の重大度が視覚的に示されます。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "75235437"
  **その他の情報**  
  選択した問題のヘルプを開くには、このリンクをクリックします。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [AlwaysOn ダッシュボードの使用 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   

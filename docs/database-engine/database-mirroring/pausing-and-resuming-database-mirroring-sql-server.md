@@ -18,10 +18,10 @@ ms.assetid: c67802c6-ee8c-4cbd-a6d4-f7b80413a4ab
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b6a46805e9dfe86d7560a2786f10a99b66344a97
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75254153"
 ---
 # <a name="pausing-and-resuming-database-mirroring-sql-server"></a>データベース ミラーリングの一時停止と再開 (SQL Server)
@@ -43,7 +43,7 @@ ms.locfileid: "75254153"
   
 -   [関連タスク](#RelatedTasks)  
   
-##  <a name="EffectOnLogTrunc"></a> 一時停止および再開がログ切り捨てに与える影響  
+##  <a name="how-pausing-and-resuming-affect-log-truncation"></a><a name="EffectOnLogTrunc"></a> 一時停止および再開がログ切り捨てに与える影響  
  通常、データベースで自動チェックポイントが実行されている場合は、次のログ バックアップの後、そのチェックポイントまでトランザクション ログが切り捨てられます。 データベース ミラーリング セッションが一時停止している間は、プリンシパル サーバーがミラー サーバーへのログ レコードの送信待ち状態になるため、現在のログ レコードがすべてアクティブなまま保持されます。 セッションが再開されてプリンシパル サーバーがログ レコードをミラー サーバーに送信するまでの間、未送信のログ レコードがプリンシパル データベースのトランザクション ログに蓄積されます。  
   
  セッションが再開されると、プリンシパル サーバーは蓄積されたログ レコードを直ちにミラー サーバーに送信し始めます。 ミラー サーバーが最も古い自動チェックポイントに対応するログ レコードをキューに格納したことを確認したら、プリンシパル サーバーはプリンシパル データベースのログをそのチェックポイントまで切り捨てます。 ミラー サーバーは同じログ レコードの再実行キューを切り捨てます。 連続する各チェックポイントでこのプロセスが繰り返されるため、チェックポイントごとに段階的にログが切り捨てられます。  
@@ -51,7 +51,7 @@ ms.locfileid: "75254153"
 > [!NOTE]  
 >  チェックポイントおよびログ切り捨ての詳細については、「[データベース チェックポイント &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)」を参照してください。  
   
-##  <a name="AvoidFullLog"></a> トランザクション ログがいっぱいになった状態の回避  
+##  <a name="avoid-a-full-transaction-log"></a><a name="AvoidFullLog"></a> トランザクション ログがいっぱいになった状態の回避  
  最大サイズに到達したか、サーバー インスタンスの領域が不足して、ログがいっぱいになると、データベースではそれ以上の更新を実行できません。 この問題を防ぐには、次の 2 つの方法があります。  
   
 -   ログがいっぱいになる前に、データベース ミラーリング セッションを再開します。またはログ領域を増やします。 データベース ミラーリングを再開すると、累積されたアクティブなログがプリンシパル サーバーからミラー サーバーに送信され、ミラー データベースが同期中の状態になります。 次に、ミラー サーバーがログをディスクに固定し、再実行を開始します。  
@@ -60,7 +60,7 @@ ms.locfileid: "75254153"
   
      セッションの一時停止とは異なり、ミラー化を解除することにより、ミラーリング セッションに関するすべての情報が削除されます。 各パートナー サーバー インスタンスでは、データベースの独自のコピーが保持されます。 以前のミラー コピーを復旧した場合、そのコピーは以前のプリンシパル コピーから派生し、セッションが一時停止されてから経過した時間だけ遅延が生じたものになります。 詳細については、「 [データベース ミラーリングの削除 &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)」を参照してください。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
  **データベース ミラーリングを一時停止または再開するには**  
   
 -   [データベース ミラーリング セッションを一時停止または再開する &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/pause-or-resume-a-database-mirroring-session-sql-server.md)  

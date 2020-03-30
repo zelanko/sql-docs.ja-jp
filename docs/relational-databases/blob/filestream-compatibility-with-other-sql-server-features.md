@@ -15,10 +15,10 @@ ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c4d32598cfab0cc08ece6721b0ff593c8577394d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75245395"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>FILESTREAM と SQL Server のその他の機能との互換性
@@ -48,18 +48,18 @@ ms.locfileid: "75245395"
   
 -   [包含データベース](#contained)  
   
-##  <a name="ssis"></a> SQL Server Integration Services (SSIS)  
+##  <a name="sql-server-integration-services-ssis"></a><a name="ssis"></a> SQL Server Integration Services (SSIS)  
  SQL Server Integration Services (SSIS) では、DT_IMAGE SSIS データ型を使用して、他の BLOB データと同様にデータ フローの FILESTREAM データを処理します。  
   
  列インポート変換を使用すると、ファイル システムから FILESTREAM 列にファイルを読み込むことができます。 また、列エクスポート変換を使用すると、FILESTREAM 列からファイル システム内の別の場所にファイルを抽出できます。  
   
-##  <a name="distqueries"></a> 分散クエリおよびリンク サーバー  
+##  <a name="distributed-queries-and-linked-servers"></a><a name="distqueries"></a> 分散クエリおよびリンク サーバー  
  FILESTREAM データは、 **varbinary(max)** データとして扱うことにより、分散クエリおよびリンク サーバーを介して利用することができます。 4 部構成の名前を使用する分散クエリでは、FILESTREAM の **PathName()** 関数を使用することはできません。その名前がローカル サーバーを指し示す場合も同様です。 ただし、 **OPENQUERY()** を使用するパススルー クエリの内側のクエリでは **PathName()** を使用できます。  
   
-##  <a name="encryption"></a> 暗号化  
+##  <a name="encryption"></a><a name="encryption"></a> 暗号化  
  FILESTREAM データは、透過的なデータ暗号化が有効になっている場合でも暗号化されません。  
   
-##  <a name="DatabaseSnapshot"></a> データベース スナップショット  
+##  <a name="database-snapshots"></a><a name="DatabaseSnapshot"></a> データベース スナップショット  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、FILESTREAM ファイル グループの [データベース スナップショット](../../relational-databases/databases/database-snapshots-sql-server.md) をサポートしていません。 CREATE DATABASE ON 句に FILESTREAM ファイル グループが含まれていると、ステートメントが失敗してエラーが発生します。  
   
  FILESTREAM を使用している場合は、標準の (FILESTREAM ファイル グループではない) ファイル グループのデータベース スナップショットを作成できます。 FILESTREAM ファイル グループは、それらのデータベース スナップショットに対してオフラインとしてマークされます。  
@@ -68,7 +68,7 @@ ms.locfileid: "75245395"
   
  `Could not continue scan with NOLOCK due to data movement.`  
   
-##  <a name="Replication"></a> Replication  
+##  <a name="replication"></a><a name="Replication"></a> Replication  
  パブリッシャーで FILESTREAM 属性が有効になっている **varbinary(max)** 列は、FILESTREAM 属性を含めてサブスクライバーにレプリケートすることも、含めずにレプリケートすることもできます。 列をレプリケートする方法を指定するには、 **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスを使用するか、@schema_optionsp_addarticle[ または ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)sp_addmergearticle[ の ](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) パラメーターを使用します。 FILESTREAM 属性を持たない **varbinary(max)** 列にレプリケートされるデータは、このデータ型の制限 (2 GB) を超えないようにする必要があります。この制限を超えると実行時エラーが発生します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]にデータをレプリケートする場合以外は、FILESTREAM 属性をレプリケートすることをお勧めします。 指定するスキーマ オプションに関係なく、FILESTREAM 列を含むテーブルを [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] サブスクライバーにレプリケートすることはサポートされていません。  
   
 > [!NOTE]  
@@ -100,24 +100,24 @@ ms.locfileid: "75245395"
   
 -   マージ レプリケーションでは、 [Web 同期](../../relational-databases/replication/web-synchronization-for-merge-replication.md)を使用して FILESTREAM データを HTTPS 接続経由で同期させることができます。 その際には、データが Web 同期の制限 (50 MB) に収まっている必要があります。データがこの制限を超えていると、実行時エラーが発生します。  
   
-##  <a name="LogShipping"></a> ログ配布  
+##  <a name="log-shipping"></a><a name="LogShipping"></a> ログ配布  
  [ログ配布](../../database-engine/log-shipping/about-log-shipping-sql-server.md) は FILESTREAM をサポートしています。 プライマリ サーバーとセカンダリ サーバーの両方で [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以降のバージョンが実行されていて、FILESTREAM が有効になっている必要があります。  
   
-##  <a name="DatabaseMirroring"></a> データベース ミラーリング  
+##  <a name="database-mirroring"></a><a name="DatabaseMirroring"></a> データベース ミラーリング  
  データベース ミラーリングは FILESTREAM をサポートしていません。 プリンシパル サーバー上に FILESTREAM ファイル グループを作成することはできません。 FILESTREAM ファイル グループを含むデータベースに対してデータベース ミラーリングを構成することはできません。  
   
-##  <a name="FullText"></a> フルテキスト インデックス作成  
+##  <a name="full-text-indexing"></a><a name="FullText"></a> フルテキスト インデックス作成  
  [フルテキスト インデックス作成](../../relational-databases/search/populate-full-text-indexes.md) では、FILESTREAM 列が **varbinary(max)** 列と同じように処理されます。 FILESTREAM テーブルに、各 FILESTREAM BLOB のファイル名拡張子を含む列が含まれている必要があります。 詳細については、「[フルテキスト検索でのクエリ](../../relational-databases/search/query-with-full-text-search.md)」、「[検索用フィルターの構成と管理](../../relational-databases/search/configure-and-manage-filters-for-search.md)」、および「[sys.fulltext_document_types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md)」を参照してください。  
   
  フルテキスト エンジンは、FILESTREAM BLOB の内容のインデックスを作成します。 イメージなど、インデックスを作成しても役に立たないファイルもあります。 FILESTREAM BLOB が更新されると、インデックスが再作成されます。  
   
-##  <a name="FailoverClustering"></a> フェールオーバー クラスタリング  
+##  <a name="failover-clustering"></a><a name="FailoverClustering"></a> フェールオーバー クラスタリング  
  フェールオーバー クラスタリングでは、FILESTREAM ファイル グループが共有ディスク上に配置されている必要があります。 また、FILESTREAM インスタンスをホストするクラスターの各ノードで FILESTREAM が有効になっている必要もあります。 詳細については、「 [フェールオーバー クラスターでの FILESTREAM の設定](../../relational-databases/blob/set-up-filestream-on-a-failover-cluster.md)」を参照してください。  
   
-##  <a name="SQLServerExpress"></a> SQL Server Express  
+##  <a name="sql-server-express"></a><a name="SQLServerExpress"></a> SQL Server Express  
  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] は FILESTREAM をサポートしています。 FILESTREAM データ コンテナーは 10 GB のデータベース サイズの制限に含まれません。  
   
-##  <a name="contained"></a> 包含データベース  
+##  <a name="contained-databases"></a><a name="contained"></a> 包含データベース  
  FILESTREAM 機能では、データベースの外部での構成が一部必要となります。 そのため、FILESTREAM または FileTable を使用するデータベースは完全包含ではありません。  
   
  包含データベースの特定の機能 (包含ユーザーなど) を使用する場合は、データベースの包含を PARTIAL に設定します。 ただし、この場合、一部のデータベース設定はデータベースに含まれないため、データベースを移動するときに自動的には移動されないことに注意してください。  

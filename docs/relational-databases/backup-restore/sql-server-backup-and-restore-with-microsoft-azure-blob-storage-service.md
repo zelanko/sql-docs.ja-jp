@@ -11,10 +11,10 @@ ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ba2574b4468742414d60c1f4e7db4a93380fba0e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75251135"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>Windows Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元
@@ -22,7 +22,7 @@ ms.locfileid: "75251135"
 
   ![Azure BLOB へのバックアップのグラフィック](../../relational-databases/backup-restore/media/backup-to-azure-blob-graphic.png "Azre BLOB へのバックアップのグラフィック")  
   
- このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Microsoft Azure Blob ストレージ サービス](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)へのバックアップと Microsoft Azure Blob ストレージ サービスからの復元について説明します。 また、Microsoft Azure BLOB Service を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップを格納する利点の概要についても説明します。  
+ このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Microsoft Azure Blob ストレージ サービス [への](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)のバックアップと Microsoft Azure Blob ストレージ サービスからの復元について説明します。 また、Microsoft Azure BLOB Service を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップを格納する利点の概要についても説明します。  
   
  SQL Server では、次の方法で Microsoft Azure Blob ストレージ サービスにバックアップを格納できます。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "75251135"
   
 -   **SQL Server で Microsoft Azure にバックアップする方法:** SQL Server を構成することにより、単一データベースまたは複数データベースのバックアップ方法やスケジュールを管理することも、インスタンス レベルでの既定値を設定することもできます。 この機能は、 **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]** と呼ばれるものです。 詳細については、「[Microsoft Azure への SQL Server マネージド バックアップ](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)」を参照してください。 この機能は、SQL Server 2014 以降で使用できます。  
   
-## <a name="benefits-of-using-the-microsoft-azure-blob-service-for-includessnoversionincludesssnoversion-mdmd-backups"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップに Microsoft Azure BLOB Service を使用する利点  
+## <a name="benefits-of-using-the-microsoft-azure-blob-service-for-ssnoversion-backups"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップに Microsoft Azure BLOB Service を使用する利点  
   
 -   柔軟で信頼性が高く、制限のないオフサイト ストレージ: Microsoft Azure BLOB Service へのバックアップの格納は、アクセスしやすく便利で柔軟なオフサイトのオプションです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップ用にオフサイト ストレージを作成するのは、既存のスクリプトやジョブを変更するのと同様に簡単です。 オフサイト ストレージは、通常、災害発生時にオフサイトと運用データベース両方の場所に影響しないように、運用データベースの場所から十分に離れた場所に設置する必要があります。 BLOB ストレージを地理的に離れた場所にレプリケートすることによって、地域全体に影響する可能性がある災害が発生した場合の保護レベルが強化されます。 また、バックアップは場所や時間を問わず使用でき、復元のために簡単にアクセスできます。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "75251135"
   
 -   コスト面での利点: 使用するサービスにのみ料金がかかります。 オフサイトのバックアップ アーカイブ オプションとして、優れたコスト効果を得ることができます。 詳細とリンクについては、「 [Microsoft Azure の課金に関する注意点](#Billing) 」を参照してください。  
   
-##  <a name="Billing"></a> Microsoft Azure の課金に関する注意点:  
+##  <a name="microsoft-azure-billing-considerations"></a><a name="Billing"></a> Microsoft Azure の課金に関する注意点:  
  Microsoft Azure ストレージのコストを把握しておくと、Microsoft Azure でバックアップを作成および格納するコストを予測できます。  
   
  [Microsoft Azure 料金計算ツール](https://go.microsoft.com/fwlink/?LinkId=277060) を使用すると、コストを見積もることができます。  

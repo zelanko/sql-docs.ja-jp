@@ -18,10 +18,10 @@ ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 98333f81a1e7c50434936c2df958da21366c6e9d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296986"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>スクリプト コンポーネント エディターでのスクリプト コンポーネントの構成
@@ -53,7 +53,7 @@ ms.locfileid: "71296986"
 ### <a name="inputs-columns-page-of-the-script-transformation-editor"></a>[スクリプト変換エディター] の [入力列] ページ  
  変換および変換先では、 **[スクリプト変換エディター]** の **[入力列]** ページが表示されます。変換元では表示されません。 このページでは、使用できる入力列から、使用するカスタム スクリプトを選択し、その入力列に読み取り専用でアクセスするか、または読み取り/書き込みでアクセスするかを指定します。  
   
- このメタデータに基づいて生成されるコード プロジェクトでは、BufferWrapper プロジェクト アイテムに、各入力のクラスが含まれます。このクラスには、選択した各入力列用の型指定されたアクセサー プロパティが含まれています。 たとえば、**CustomerInput** という名前の入力から整数型の **CustomerID** 列と文字列型の **CustomerName** 列を選択した場合、BufferWrapper プロジェクト アイテムには <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> から派生した **CustomerInput** クラスが格納されます。**CustomerInput** クラスからは、**CustomerID** という名前の整数型プロパティと、**CustomerName** という名前の文字列型プロパティが公開されます。 この規則により、次のような型チェック付きのコードが記述できます。  
+ このメタデータに基づいて生成されるコード プロジェクトでは、BufferWrapper プロジェクト アイテムに、各入力のクラスが含まれます。このクラスには、選択した各入力列用の型指定されたアクセサー プロパティが含まれています。 たとえば、**CustomerInput** という名前の入力から整数型の **CustomerID** 列と文字列型の **CustomerName** 列を選択した場合、BufferWrapper プロジェクト アイテムには **から派生した**CustomerInput<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> クラスが格納されます。**CustomerInput** クラスからは、**CustomerID** という名前の整数型プロパティと、**CustomerName** という名前の文字列型プロパティが公開されます。 この規則により、次のような型チェック付きのコードが記述できます。  
   
 ```vb  
 Dim currentCustomerID as Integer = CustomerInput.CustomerID  
@@ -71,7 +71,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
   
 -   スクリプト コンポーネントを変換先として使用する場合、1 つの入力がサポートされますが出力はありません。  
   
- このメタデータに基づいて生成されるコード プロジェクトでは、BufferWrapper プロジェクト アイテムに、各入力および出力のクラスが含まれます。 たとえば、**CustomerOutput** という名前の出力を作成した場合、BufferWrapper プロジェクト アイテムには、<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> から派生した **CustomerOutput** クラスが含まれます。**CustomerOutput** クラスには、作成された各出力列用の型指定されたアクセサー プロパティが含まれます。  
+ このメタデータに基づいて生成されるコード プロジェクトでは、BufferWrapper プロジェクト アイテムに、各入力および出力のクラスが含まれます。 たとえば、**CustomerOutput** という名前の出力を作成した場合、BufferWrapper プロジェクト アイテムには、**から派生した**CustomerOutput<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> クラスが含まれます。**CustomerOutput** クラスには、作成された各出力列用の型指定されたアクセサー プロパティが含まれます。  
   
  出力列は、 **[入力および出力]** ページでのみ構成できます。 変換および変換先の入力列は、 **[入力列]** ページで選択できます。 BufferWrapper プロジェクト アイテムで作成された、型指定されたアクセサー プロパティは、出力列の書き込み専用プロパティです。 入力列のアクセサー プロパティは、 **[入力列]** ページで各列に選択した使用法の種類に応じて、読み取り専用または読み取り/書き込みのプロパティになります。  
   
@@ -121,7 +121,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
 ### <a name="connection-managers-page-of-the-script-transformation-editor"></a>[スクリプト変換エディター] の [接続マネージャー] ページ  
  **[スクリプト変換エディター]** の **[接続マネージャー]** ページでは、カスタム スクリプトで使用する接続マネージャーを追加および削除します。 通常、変換元または変換先コンポーネントを作成する場合は、接続マネージャーを参照する必要があります。  
   
- このメタデータに基づいて生成されるコード プロジェクトの **ComponentWrapper** プロジェクト アイテムには、選択した各接続マネージャー用の型指定されたアクセサー プロパティを格納する **Connections** コレクション クラスが含まれます。 型指定された各アクセサー プロパティの名前は、接続マネージャー自体の名前と同じであり、<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSConnectionManager100> のインスタンスとして、接続マネージャーへの参照を返します。 たとえば、エディターの **[接続マネージャー]** ページに `MyADONETConnection` という名前の接続マネージャーを追加した場合、次のコードを使用して、スクリプト内のその接続マネージャーへの参照を取得できます。  
+ このメタデータに基づいて生成されるコード プロジェクトの **ComponentWrapper** プロジェクト アイテムには、選択した各接続マネージャー用の型指定されたアクセサー プロパティを格納する **Connections** コレクション クラスが含まれます。 型指定された各アクセサー プロパティの名前は、接続マネージャー自体の名前と同じであり、<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSConnectionManager100> のインスタンスとして、接続マネージャーへの参照を返します。 たとえば、エディターの `MyADONETConnection`[接続マネージャー]**ページに** という名前の接続マネージャーを追加した場合、次のコードを使用して、スクリプト内のその接続マネージャーへの参照を取得できます。  
   
 ```vb  
 Dim myADONETConnectionManager As IDTSConnectionManager100 = _  

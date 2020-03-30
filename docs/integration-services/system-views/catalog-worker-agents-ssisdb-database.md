@@ -11,10 +11,10 @@ ms.assetid: 0bd0d827-e2f1-44fe-aa90-6bf922d68d16
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f2678853d13436811b53b40473a04191625535db
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295143"
 ---
 # <a name="catalogworker_agents-ssisdb-database"></a>catalog.worker_agents (SSISDB データベース)
@@ -26,12 +26,12 @@ ms.locfileid: "71295143"
 
 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out Worker の情報を表示します。
 
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |WorkerAgentId|**uniqueidentifier**|Scale Out Worker の worker エージェント ID。|
 |IsEnabled|**bit**|Scale Out Worker が有効になっているかどうか。|
 |DisplayName|**nvarchar (256)**|Scale Out Worker の表示名。|
-|[説明]|**nvarchar (256)**|Scale Out Worker の説明。|
+|説明|**nvarchar (256)**|Scale Out Worker の説明。|
 |MachineName|**nvarchar (256)**|Scale Out Worker のコンピューター名。|
 |Tags|**nvarchar(max)**|Scale Out Worker のタグ。|
 |UserAccount|**nvarchar (256)**|Scale Out Worker サービスを実行するユーザー アカウント。|

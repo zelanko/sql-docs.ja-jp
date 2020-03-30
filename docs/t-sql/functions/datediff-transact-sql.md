@@ -32,10 +32,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7d6ab92ef6c9f10aea46d375633ae539122299e8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68731130"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
@@ -44,7 +44,7 @@ ms.locfileid: "68731130"
 
 この関数は、*startdate* と *enddate* で指定された 2 つの日付間の差を、指定された datepart 境界の数で (符号付き整数値として) で返します。
   
-*startdate* 値と *enddate* 値の間のより大きな差を処理する関数については、「[DATEDIFF_BIG &#40;Transact-SQL&#41;](../../t-sql/functions/datediff-big-transact-sql.md)」を参照してください。 [!INCLUDE[tsql](../../includes/tsql-md.md)] の日付と時刻のあらゆるデータ型と関数に関する概要については、「[日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)」を参照してください。
+[startdate](../../t-sql/functions/datediff-big-transact-sql.md) 値と *enddate* 値の間のより大きな差を処理する関数については、「*DATEDIFF_BIG &#40;Transact-SQL&#41;* 」を参照してください。 [ の日付と時刻のあらゆるデータ型と関数に関する概要については、「](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;[!INCLUDE[tsql](../../includes/tsql-md.md)]」を参照してください。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -102,7 +102,7 @@ _datepart_ 値を変数に指定することはできません。また、`'mont
   
 ## <a name="return-value"></a>戻り値  
 
-*datepart* により設定された境界に表示された、*startdate* と *enddate* の間の **int** 差。
+**datepart** により設定された境界に表示された、*startdate* と *enddate* の間の *int* 差。
   
 たとえば、`SELECT DATEDIFF(day, '2036-03-01', '2036-02-28');` からは -2 が返されます。2036 はうるう年である必要があることを示します。 この場合、_startdate_ '2036-03-01' から開始し、-2 日をカウントすると、'2036-02-28' の _enddate_ に達することを意味します。
   
@@ -112,7 +112,7 @@ _datepart_ 値を変数に指定することはできません。また、`'mont
   
 `DATEDIFF` では、戻り値を計算するために、*startdate* または *enddate* のタイム ゾーン オフセット要素が使用されます。
   
-[smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) の精度は分単位までなので、*startdate* または **enddate** に *smalldatetime* 値を使用した場合、戻り値では秒とミリ秒が常に 0 に設定されます。
+[smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) の精度は分単位までなので、*startdate* または *enddate* に **smalldatetime** 値を使用した場合、戻り値では秒とミリ秒が常に 0 に設定されます。
   
 日付データ型の変数に時刻値のみが割り当てられている場合、`DATEDIFF` では、欠落している日付要素の値が既定値である `1900-01-01` に設定されます。 時刻データ型または日付データ型の変数に日付値のみが割り当てられている場合、`DATEDIFF` では、欠落している時刻要素の値が既定値である `00:00:00` に設定されます。 *startdate* または *enddate* のいずれか一方が時刻要素のみで、もう一方が日付要素のみであった場合、`DATEDIFF` では、欠落している時刻要素と日付要素がそれぞれの既定値に設定されます。
   
@@ -145,7 +145,7 @@ SELECT DATEDIFF(microsecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00
   
 `SET DATEFIRST` を指定しても、`DATEDIFF` には何の影響もありません。 `DATEDIFF` では、週の最初の曜日として常に日曜日を使用し、関数が決定的な方法で動作するようにします。
 
-*enddate* と *startdate* の差として **int** の範囲を超える値が返された場合、`DATEDIFF` は **minute** 以上の精度でオーバーフローする可能性があります。
+`DATEDIFF`enddate**と**startdate*の差として*int *の範囲を超える値が返された場合、* は **minute** 以上の精度でオーバーフローする可能性があります。
   
 ## <a name="examples"></a>例  
 次の例では、*startdate* パラメーターと *enddate* パラメーターの引数として、各種の式を使用しています。
@@ -202,7 +202,7 @@ SELECT DATEDIFF(day,
 ```  
   
 ### <a name="f-specifying-numeric-expressions-and-scalar-system-functions-for-enddate"></a>F. enddate に数値式およびスカラー システム関数を指定する  
-この例では、*enddate* の引数として、数値式 `(GETDATE() + 1)` のほか、スカラー システム関数 `GETDATE` および `SYSDATETIME` を使用しています。
+この例では、`(GETDATE() + 1)`enddate`GETDATE` の引数として、数値式 `SYSDATETIME` のほか、スカラー システム関数 *および* を使用しています。
   
 ```sql
 USE AdventureWorks2012;  
@@ -322,7 +322,7 @@ SELECT @result
 118 years, 11 months, 11 days, 7 hours, 8 minutes and 1.123 seconds
 ```
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 次の例では、*startdate* パラメーターと *enddate* パラメーターの引数として、各種の式を使用しています。
   
 ### <a name="j-specifying-columns-for-startdate-and-enddate"></a>J. startdate と enddate に列を指定する  

@@ -11,10 +11,10 @@ ms.assetid: 744e9357-94a9-4202-abe8-1d3d202697e9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b47e4f57101e05eb70dbdb464d6a4b36498dd3f7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71293248"
 ---
 # <a name="cdc-source-custom-properties"></a>CDC ソースのカスタム プロパティ
@@ -24,7 +24,7 @@ ms.locfileid: "71293248"
 
   次の表は、CDC ソースのカスタム プロパティを示しています。 すべてのプロパティは読み取り/書き込み可能です。  
   
-|プロパティ名|データ型|[説明]|  
+|プロパティ名|データ型|説明|  
 |-------------------|---------------|-----------------|  
 |Connection|ADO.Net Connection|変更テーブルにアクセスするための [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC データベースへの ADO.NET 接続。|  
 |StateVariable|String|現在の CDC 実行の CDC 状態を保持する SSIS 文字列パッケージ変数。|  

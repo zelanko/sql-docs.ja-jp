@@ -21,17 +21,17 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0e94bdcf4770190d3d84986b511996213fac17f9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68702830"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>NEAR による他の単語の近くにある単語の検索
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 述語または [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 関数で "*近接語句*" (**NEAR**) を使用すると、互いに似た単語や語句を検索できます。 
+  *CONTAINS* 述語または **CONTAINSTABLE** 関数で "[近接語句](../../t-sql/queries/contains-transact-sql.md)" ([NEAR](../../relational-databases/system-functions/containstable-transact-sql.md)) を使用すると、互いに似た単語や語句を検索できます。 
   
-##  <a name="Custom_NEAR"></a> NEAR の概要  
+##  <a name="overview-of-near"></a><a name="Custom_NEAR"></a> NEAR の概要  
 **NEAR** には次の機能があります。  
 -   最初の検索語句と最後の検索語句を分離する非検索用語の最大数を指定することができます。
 
@@ -129,7 +129,7 @@ CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')
   
  NEAR を生成語句 (ISABOUT ...) や重み付け語句 (FORMSOF ...) と組み合わせることはできません。  
   
-##  <a name="Additional_Considerations"></a> 近接検索に関する詳細情報  
+##  <a name="more-info-about-proximity-searches"></a><a name="Additional_Considerations"></a> 近接検索に関する詳細情報  
    
 -   検索語句の出現の重複  
   
@@ -152,7 +152,7 @@ CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')
   
 -   **transform noise words** サーバー オプション  
   
-     **transform noise words[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の値は、ストップワードが近接検索で指定されている場合、** がストップワードを処理する方法に影響を与えます。 詳細については、「 [transform noise words Server Configuration Option](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)」を参照してください。   
+     **transform noise words** の値は、ストップワードが近接検索で指定されている場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がストップワードを処理する方法に影響を与えます。 詳細については、「 [transform noise words Server Configuration Option](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)」を参照してください。   
   
 ## <a name="see-also"></a>参照  
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)  

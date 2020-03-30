@@ -19,10 +19,10 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 973e5e1449205d5e72abfa03068db3c8c3e98f87
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296161"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services (SSIS) の変数
@@ -86,7 +86,7 @@ ms.locfileid: "71296161"
 > [!NOTE]  
 >  システム変数で構成可能なオプションは、変数値が変更されたときにイベントを起動するかどうかを指定するオプションのみです。  
   
- **Description**    
+ **説明**    
  変数の説明を指定します。  
   
  **EvaluateAsExpression**    
@@ -251,7 +251,7 @@ ms.locfileid: "71296161"
   
 -   [変数] ウィンドウ。  
   
--   [プロパティ] ウィンドウ。 **[プロパティ]** ウィンドウには、 **[変数]** ウィンドウでは使用できない変数を構成するための次のプロパティが一覧表示されています: Description、EvaluateAsExpression、Expression、ReadOnly、ValueType、IncludeInDebugDump。  
+-   [プロパティ] ウィンドウ。 **[プロパティ]** ウィンドウには、 **[変数]** ウィンドウでは使用できない変数 (Description、EvaluateAsExpression、Expression、ReadOnly、ValueType、および IncludeInDebugDump) を構成するためのプロパティが一覧表示されています。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、RaiseChangedEvent プロパティを除き、更新できないプロパティを持つ一連のシステム変数もあります。  

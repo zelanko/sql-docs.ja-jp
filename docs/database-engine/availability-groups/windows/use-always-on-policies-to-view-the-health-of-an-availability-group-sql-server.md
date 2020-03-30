@@ -13,10 +13,10 @@ ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 13f43e5f66ca7700e9dd4732e9cf45ee1921548d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75244741"
 ---
 # <a name="use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server"></a>AlwaysOn ポリシーを使用した可用性グループの正常性の確認 (SQL Server)
@@ -29,10 +29,10 @@ ms.locfileid: "75244741"
   
   
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  CONNECT、VIEW SERVER STATE、および VIEW ANY DEFINITION 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> AlwaysOn ダッシュボードの使用  
+##  <a name="using-the-always-on-dashboard"></a><a name="SSMSProcedure"></a> AlwaysOn ダッシュボードの使用  
  **AlwaysOn ダッシュボードを開くには**  
   
 1.  オブジェクト エクスプローラーで、可用性レプリカの 1 つをホストするサーバー インスタンスに接続します。 可用性グループ内のすべての可用性レプリカについての情報を表示するには、プライマリ レプリカをホストするサーバー インスタンスを使用してください。  
@@ -47,7 +47,7 @@ ms.locfileid: "75244741"
   
  AlwaysOn ダッシュボードの使用方法の詳細については、「[AlwaysOn ダッシュボードの使用 &#40;SQL Server Management Studio&#41;](~/database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)」を参照してください。  
   
-##  <a name="PowerShellProcedure"></a> PowerShell の使用  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell の使用  
  **Use Always On policies to view the health of an availability group**  
   
 1.  可用性レプリカの 1 つをホストするサーバー インスタンスを既定の操作対象に設定 (**cd**) します。 可用性グループ内のすべての可用性レプリカについての情報を表示するには、プライマリ レプリカをホストするサーバー インスタンスを使用してください。  
@@ -86,7 +86,7 @@ ms.locfileid: "75244741"
   
      これらのコマンドレットでは、次のオプションを使用できます。  
   
-    |オプション|[説明]|  
+    |オプション|説明|  
     |------------|-----------------|  
     |**AllowUserPolicies**|AlwaysOn ポリシーのカテゴリにあるユーザー ポリシーを実行します。|  
     |**InputObject**|可用性グループ、可用性レプリカ、または可用性データベースの状態 (使用するコマンドレットに応じて異なります) を表すオブジェクトのコレクションです。 コマンドレットを実行すると、指定されたオブジェクトの正常性が計算されます。|  
@@ -112,7 +112,7 @@ ms.locfileid: "75244741"
   
 -   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
   
-##  <a name="RelatedContent"></a> 関連コンテンツ  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 関連コンテンツ  
  **SQL Server Alway On チームのブログ: PowerShell を使用した AlwaysOn 正常性状態の監視:**  
   
 -   [パート 1: 基本的なコマンドレットの概要](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview/)  

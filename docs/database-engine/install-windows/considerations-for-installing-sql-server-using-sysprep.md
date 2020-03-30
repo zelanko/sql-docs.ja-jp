@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 448906ca9a9dcb1a29b4cfab323e610909546171
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75251576"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>SysPrep を使用した SQL Server のインストールに関する注意点
@@ -33,7 +33,7 @@ ms.locfileid: "75251576"
   
 SysPrep を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールする方法の詳細については、「[SysPrep を使用して SQL Server をインストールする](../../database-engine/install-windows/install-sql-server-using-sysprep.md)」を参照してください。  
   
-## <a name="common-uses-for-includessnoversionincludesssnoversion-mdmd-sysprep"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep の一般的な使用方法  
+## <a name="common-uses-for-ssnoversion-sysprep"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep の一般的な使用方法  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 機能は、次のいずれかの方法で使用できます。  
   
 - イメージの準備手順を使用して、同じコンピューター上に 1 つ以上の未構成の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを準備できます。 同じコンピューターでイメージの完了手順を使用することで、これらの準備済みインスタンスを構成できます。  
@@ -59,7 +59,7 @@ SysPrep を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)
   
     - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Edition の準備済みインスタンスには、製品 ID を指定できません。  
   
-## <a name="supported-includessnoversionincludesssnoversion-mdmd-installations"></a>サポートされる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール  
+## <a name="supported-ssnoversion-installations"></a>サポートされる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール  
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の SysPrep は、ツールを含む [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべての機能をサポートします。  
   
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] またはそれ以前のバージョンをサイド バイ サイドでインストールするために、複数のインスタンスを準備できます。 これらのインスタンスの機能は、SysPrep をサポートしている必要があります。  
@@ -74,10 +74,10 @@ SysPrep を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)
   
 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]以降では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の SysPrep はコマンド ラインからの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターのインストールをサポートしています。  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-sysprep-limitations"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep の制限事項  
+## <a name="ssnoversion-sysprep-limitations"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep の制限事項  
 準備済みインスタンスの修復はサポートされていません。 イメージの準備手順またはイメージの完了手順でセットアップが失敗した場合は、アンインストールを実行する必要があります。  
   
-##  <a name="BKMK_PrepareImage"></a> イメージの準備  
+##  <a name="prepare-image"></a><a name="BKMK_PrepareImage"></a> イメージの準備  
 イメージの準備手順では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 製品と機能がインストールされますが、インストールの構成は行われません。  
   
 インストールする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 製品のインストール ファイルのインストール場所は、この手順で指定できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを準備するには、 **[インストール センター]** の **[詳細設定]** ページにある **[SysPrep 配置のスタンドアロン インスタンスのイメージの準備]** を使用するか、コマンド プロンプトを使用します。  
@@ -88,7 +88,7 @@ SysPrep を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)
   
  インスタンスの準備が終了すると、 **[スタート]** メニューのショートカットから準備済み [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスの構成を完了できるようになります。  
   
-##  <a name="BKMK_CompleteImage"></a> イメージの完了  
+##  <a name="complete-image"></a><a name="BKMK_CompleteImage"></a> イメージの完了  
 次のいずれかの方法を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の準備済みインスタンスを完了できます。  
   
 - [スタート] メニューのショートカットを使用します。  

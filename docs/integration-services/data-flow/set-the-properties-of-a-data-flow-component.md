@@ -13,10 +13,10 @@ ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 10b397e4fdabefe333854fe04ab37c4bdd92cf38
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71291841"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>データ フロー コンポーネントのプロパティを設定する
@@ -122,7 +122,7 @@ ms.locfileid: "71291841"
 -   [出力列](#outputcolumns)  
   
  
-###  <a name="components"></a> Component properties  
+###  <a name="component-properties"></a><a name="components"></a> Component properties  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のオブジェクト モデルでは、データ フロー内のコンポーネントに <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> インターフェイスを実装します。  
   
  次の表は、データ フロー内のコンポーネントのプロパティを示しています。 一部のプロパティの値は読み取り専用で、実行時にデータ フロー エンジンによって割り当てられます。  
@@ -142,7 +142,7 @@ ms.locfileid: "71291841"
 |[ValidateExternalMetadata]|Boolean|外部列のメタデータを検証するかどうかを示します。 このプロパティの既定値は **True**です。|  
 |Version|整数|コンポーネントのバージョン。|  
   
-###  <a name="inputs"></a> 入力プロパティ  
+###  <a name="input-properties"></a><a name="inputs"></a> 入力プロパティ  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のオブジェクト モデルでは、変換および変換先には入力があります。 データ フロー内のコンポーネントの入力は、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100> インターフェイスを実装します。  
   
  次の表は、データ フロー内のコンポーネントの入力のプロパティを示しています。 一部のプロパティの値は読み取り専用で、実行時にデータ フロー エンジンによって割り当てられます。  
@@ -162,7 +162,7 @@ ms.locfileid: "71291841"
   
  変換先および一部の変換では、エラー出力がサポートされず、これらのコンポーネントの ErrorRowDisposition プロパティおよび TruncationRowDisposition プロパティは読み取り専用です。  
   
-###  <a name="inputcolumns"></a> 入力列プロパティ  
+###  <a name="input-column-properties"></a><a name="inputcolumns"></a> 入力列プロパティ  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のオブジェクト モデルでは、入力には入力列のコレクションが含まれています。 データ フロー内のコンポーネントの入力列は、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn100> インターフェイスを実装します。  
   
  次の表は、データ フロー内のコンポーネントの入力列のプロパティを示しています。 一部のプロパティの値は読み取り専用で、実行時にデータ フロー エンジンによって割り当てられます。  
@@ -186,7 +186,7 @@ ms.locfileid: "71291841"
   
  入力列には、後の「データ型プロパティ」で説明するデータ型プロパティもあります。  
   
-###  <a name="outputs"></a> 出力プロパティ  
+###  <a name="output-properties"></a><a name="outputs"></a> 出力プロパティ  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のオブジェクト モデルでは、変換元および変換には出力があります。 データ フロー内のコンポーネントの出力は、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> インターフェイスを実装します。  
   
  次の表は、データ フロー内のコンポーネントの出力のプロパティを示しています。 一部のプロパティの値は読み取り専用で、実行時にデータ フロー エンジンによって割り当てられます。  
@@ -207,7 +207,7 @@ ms.locfileid: "71291841"
 |SynchronousInputID|整数|出力に同期する入力の ID。|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|行の処理中に発生した切り捨てを処理する方法を指定する値。 値は **Fail component**、 **Ignore failure**、 **Redirect row**|  
   
-###  <a name="outputcolumns"></a> 出力列プロパティ  
+###  <a name="output-column-properties"></a><a name="outputcolumns"></a> 出力列プロパティ  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のオブジェクト モデルでは、出力に出力列のコレクションが含まれています。 データ フロー内のコンポーネントの出力列は、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100> インターフェイスを実装します。  
   
  次の表は、データ フロー内のコンポーネントの出力列のプロパティを示しています。 一部のプロパティの値は読み取り専用で、実行時にデータ フロー エンジンによって割り当てられます。  

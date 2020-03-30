@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6216e8e008bff92ce502aa6dda8025c5ef63f0ba
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74412661"
 ---
 # <a name="troubleshooting-hash-indexes-for-memory-optimized-tables"></a>メモリ最適化テーブルのハッシュ インデックスのトラブルシューティング
@@ -232,6 +232,6 @@ OLTP ワークロードは、個々の行に注目します。 フル テーブ�
   - ハッシュ インデックスのフル スキャンに必要な時間の増加。  
   
 
-##  <a name="Additional_Reading"></a> その他の情報  
+##  <a name="additional-reading"></a><a name="Additional_Reading"></a> その他の情報  
  [メモリ最適化テーブルのハッシュ インデックス](../../relational-databases/sql-server-index-design-guide.md#hash_index)   
  [メモリ最適化テーブルの非クラスター化インデックス](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)  

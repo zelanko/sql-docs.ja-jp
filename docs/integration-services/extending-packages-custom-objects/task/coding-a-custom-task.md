@@ -19,10 +19,10 @@ ms.assetid: dc224f4f-b339-4eb6-a008-1b4fe0ea4fd2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 23cea7d670916db9dfd13fa37170967a3c19d11c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297127"
 ---
 # <a name="coding-a-custom-task"></a>カスタム タスクのコーディング
@@ -167,7 +167,7 @@ End Class
   
  次の表は、<xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A> メソッド内のタスクに対して提供されるパラメーターの一覧です。  
   
-|パラメーター|[説明]|  
+|パラメーター|説明|  
 |---------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Connections>|タスクで使用できる <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> オブジェクトのコレクションを含みます。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.VariableDispenser>|タスクで使用できる変数を含みます。 タスクは、VariableDispenser を介して変数を使用します。変数を直接使用することはありません。 変数ディスペンサーには、変数をロックまたはロック解除したり、デッドロックや上書きを防ぐ機能があります。|  

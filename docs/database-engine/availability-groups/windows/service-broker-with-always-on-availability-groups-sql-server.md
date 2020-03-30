@@ -14,10 +14,10 @@ ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8845f69e619c8cd2cc7a194b6f03a4dec5f592c1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822613"
 ---
 # <a name="service-broker-with-always-on-availability-groups-sql-server"></a>Service Broker と Always On 可用性グループ (SQL Server)
@@ -26,7 +26,7 @@ ms.locfileid: "74822613"
   このトピックでは、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] で Service Broker を [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]と共に使用できるように構成する方法について説明します。  
   
   
-##  <a name="ReceiveRemoteMessages"></a> 可用性グループのサービスでリモート メッセージを受信するための要件  
+##  <a name="requirements-for-a-service-in-an-availability-group-to-receive-remote-messages"></a><a name="ReceiveRemoteMessages"></a> 可用性グループのサービスでリモート メッセージを受信するための要件  
   
 1.  **可用性グループにリスナーが存在している。**  
   
@@ -76,7 +76,7 @@ ms.locfileid: "74822613"
   
      ルートの作成の詳細については、「 [Service Broker のルーティングの例](https://msdn.microsoft.com/library/ms166090\(SQL.105\).aspx) 」( [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] バージョンのオンライン ブック) および「 [CREATE ROUTE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-route-transact-sql.md)と共に使用できるように構成する方法について説明します。  
   
-##  <a name="SendRemoteMessages"></a> 可用性グループのリモート サービスにメッセージを送信するための要件  
+##  <a name="requirements-for-sending-messages-to-a-remote-service-in-an-availability-group"></a><a name="SendRemoteMessages"></a> 可用性グループのリモート サービスにメッセージを送信するための要件  
   
 1.  **対象サービスへのルートを作成する。**  
   
@@ -99,7 +99,7 @@ ms.locfileid: "74822613"
   
 2.  **msdb に AutoCreatedLocal ルートまたは特定のサービスへのルートが含まれている。** (詳細については、このトピックの前の「 [可用性グループのサービスでリモート メッセージを受信するための要件](#ReceiveRemoteMessages)」を参照してください)。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md)  
   
