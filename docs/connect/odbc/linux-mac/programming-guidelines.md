@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: v-makouz
 ms.author: genemi
 ms.openlocfilehash: bf0961b8ef53060904ad797832e7c7467a859c2b
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79285866"
 ---
 # <a name="programming-guidelines"></a>プログラミング ガイドライン
@@ -22,7 +22,7 @@ ms.locfileid: "79285866"
 
 macOS と Linux での [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のプログラミング機能は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ([SQL Server Native Client (ODBC)](https://go.microsoft.com/fwlink/?LinkID=134151)) の ODBC に基づいています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client は、Windows Data Access Components の ODBC に基づいています ([ODBC プログラマー リファレンス](https://go.microsoft.com/fwlink/?LinkID=45250))。  
 
-ODBC アプリケーションでは、unixODBC ヘッダー (`sql.h`、`sqlext.h`、`sqltypes.h`、`sqlucode.h`) をインクルードした後に `/usr/local/include/msodbcsql.h` をインクルードすることで、複数のアクティブな結果セット (MARS) やその他の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 固有の機能を使用できます。 次に、Windows ODBC アプリケーションで使用する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 固有の項目に、同じシンボル名を使用します。
+ODBC アプリケーションでは、unixODBC ヘッダー ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、`/usr/local/include/msodbcsql.h`、`sql.h`、`sqlext.h`) をインクルードした後に `sqltypes.h` をインクルードすることで、複数のアクティブな結果セット (MARS) やその他の `sqlucode.h` 固有の機能を使用できます。 次に、Windows ODBC アプリケーションで使用する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 固有の項目に、同じシンボル名を使用します。
 
 ## <a name="available-features"></a>利用可能な機能  
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC 用 Native Client のドキュメント ([SQL Server Native Client (ODBC)](https://go.microsoft.com/fwlink/?LinkID=134151)) の次のセクションは、macOS と Linux で ODBC ドライバーを使用する場合に有効です。  
@@ -75,11 +75,11 @@ ODBC Driver 13 および 13.1 の場合、SQLCHAR データは UTF-8 である�
 ODBC Driver 17 の場合、次のいずれかの文字セット/エンコードの SQLCHAR データがサポートされます。
 
 > [!NOTE]  
-> `musl` と `glibc` には `iconv` の違いがあるため、これらのロケールの多くは、Alpine Linux ではサポートされていません。
+> `iconv` と `musl` には `glibc` の違いがあるため、これらのロケールの多くは、Alpine Linux ではサポートされていません。
 >
 > 詳細については、「[Functional differences from glibc (glibc との機能の違い)](https://wiki.musl-libc.org/functional-differences-from-glibc.html)」を参照してください。
 
-|名前|説明|
+|Name|説明|
 |-|-|
 |UTF-8|Unicode|
 |CP437|MS-DOS ラテン アメリカ|
@@ -122,13 +122,13 @@ Windows と、Linux および macOS 上の iconv ライブラリの一部のバ�
 
 ODBC Driver 13 および 13.1 では、UTF-8 マルチバイト文字または UTF-16 サロゲートが SQLPutData バッファー間で分割されている場合、データの破損が発生します。 部分文字エンコーディングで終了していないストリーミング SQLPutData にバッファーを使用します。 この制限は、ODBC Driver 17 で削除されました。
 
-## <a name="bkmk-openssl"></a>OpenSSL
+## <a name="openssl"></a><a name="bkmk-openssl"></a>OpenSSL
 バージョン 17.4 以降では、ドライバーによって OpenSSL が動的に読み込まれ、別のドライバー ファイルを必要とせずに、バージョン 1.0 または 1.1 のいずれかのシステムで実行できます。 複数バージョンの OpenSSL が存在する場合、ドライバーによって最新のバージョンの読み込みが試行されます。 このドライバーは、現在、OpenSSL 1.0. x と 1.1. x をサポートしています。
 
 > [!NOTE]  
 > ドライバー (またはそのコンポーネントのいずれか) を使用するアプリケーションが OpenSSL の異なるバージョンにリンクされているか、異なるバージョンを動的に読み込んでいる場合、競合が発生する可能性があります。 システムに複数バージョンの OpenSSL が存在し、アプリケーションにそれが使用されている場合、アプリケーションとドライバーによって読み込まれたバージョンが不一致にならないように特に注意することを強くお勧めします。エラーによりメモリが破損する可能性があり、必ずしも明白なまたは一貫した方法で示されるとは限らないためです。
 
-## <a name="bkmk-alpine"></a>Alpine Linux
+## <a name="alpine-linux"></a><a name="bkmk-alpine"></a>Alpine Linux
 この記事の執筆時点では、MUSL の既定のスタック サイズは 128K です。これは基本的な ODBC ドライバーの機能には十分ですが、アプリケーションの処理によっては、特に複数のスレッドからドライバーを呼び出す場合は、この制限をたやすく超えます。 Alpine Linux 上で `-Wl,-z,stack-size=<VALUE IN BYTES>` を使用して ODBC アプリケーションをコンパイルし、スタック サイズを大きくすることをお勧めします。 参照の場合、ほとんどの GLIBC システムの既定のスタック サイズは 2 MB です。
 
 ## <a name="additional-notes"></a>追加情報  

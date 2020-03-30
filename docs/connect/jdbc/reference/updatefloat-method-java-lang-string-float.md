@@ -16,10 +16,10 @@ ms.assetid: 19a6164f-f560-4304-8466-e55f0667a3d4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 74df5537849daddf09d9edbb10f1baa4d8808e41
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67998950"
 ---
 # <a name="updatefloat-method-javalangstring-float"></a>updateFloat (java.lang.String, float) メソッド
@@ -42,7 +42,7 @@ public void updateFloat(java.lang.String columnName,
   
  *x*  
   
- **float** 値。  
+ **float** 値です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

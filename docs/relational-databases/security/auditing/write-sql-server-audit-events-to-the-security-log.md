@@ -16,10 +16,10 @@ ms.assetid: 6fabeea3-7a42-4769-a0f3-7e04daada314
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0c998b4d5ed5988d5a5e2a01bf0cbd611157f665
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68095102"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>セキュリティ ログへの SQL サーバー監査イベントの書き込み  
@@ -41,17 +41,17 @@ Windows の監査ポリシーは、Windows セキュリティ ログに書き込
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] はシステムがイベントをセキュリティ ログに記録できないことを検出できないため、監査イベントが失われる場合があります。  
 -   ボックス管理者によってセキュリティ ログが修復されると、ログ動作は正常に戻ります。  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コンピューターの管理者は、セキュリティ ログのローカル設定がドメイン ポリシーによって上書きされることを理解している必要があります。 この場合、ドメイン ポリシーによってサブカテゴリ設定 (**auditpol /get /subcategory:"application generated"** ) が上書きされる可能性があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の監査対象であるイベントが記録されないことを検出する方法がない場合、これがイベントをログに記録する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の機能に影響します。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  これらの設定を行うには、Windows 管理者である必要があります。  
   
-##  <a name="auditpolAccess"></a> auditpol を使用して Windows のオブジェクト アクセスの監査の設定を行うには  
+##  <a name="to-configure-the-audit-object-access-setting-in-windows-using-auditpol"></a><a name="auditpolAccess"></a> auditpol を使用して Windows のオブジェクト アクセスの監査の設定を行うには  
   
 1.  管理権限を使用してコマンド プロンプトを開きます。  
   
@@ -67,7 +67,7 @@ Windows の監査ポリシーは、Windows セキュリティ ログに書き込
   
 3.  コマンド プロンプト ウィンドウを閉じます。  
   
-##  <a name="secpolAccess"></a> secpol を使用して "セキュリティ監査の生成" 権限をアカウントに許可するには  
+##  <a name="to-grant-the-generate-security-audits-permission-to-an-account-using-secpol"></a><a name="secpolAccess"></a> secpol を使用して "セキュリティ監査の生成" 権限をアカウントに許可するには  
   
 1.  任意の Windows オペレーティング システムで、 **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックします。  
   
@@ -87,7 +87,7 @@ Windows の監査ポリシーは、Windows セキュリティ ログに書き込
   
 9. この設定を有効にするために [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を再起動します。  
   
-##  <a name="secpolPermission"></a> secpol を使用して Windows のオブジェクト アクセスの監査の設定を行うには  
+##  <a name="to-configure-the-audit-object-access-setting-in-windows-using-secpol"></a><a name="secpolPermission"></a> secpol を使用して Windows のオブジェクト アクセスの監査の設定を行うには  
   
 1.  [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] または Windows Server 2008 より前のオペレーティング システムでは、 **[スタート]** ボタンをクリックして、 **[ファイル名を指定して実行]** をクリックします。  
   

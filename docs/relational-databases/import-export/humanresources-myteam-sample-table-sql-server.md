@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a95168f9c932b187a77d0d8e97511fd0070ea8ba
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68035682"
 ---
 # <a name="humanresourcesmyteam-sample-table-sql-server"></a>HumanResources.myTeam サンプル テーブル (SQL Server)
@@ -31,10 +31,10 @@ ms.locfileid: "68035682"
   
  **myTeam** テーブルには、次の列が含まれています。  
   
-|列|データ型|NULL 値の許容|[説明]|  
+|列|データ型|NULL 値の許容|説明|  
 |------------|---------------|-----------------|-----------------|  
 |**EmployeeID**|**smallint**|不可|行の主キー。 チーム メンバーの従業員 ID。|  
-|**名前**|**nvarchar (50)**|不可|チーム メンバーの名前。|  
+|**Name**|**nvarchar (50)**|不可|チーム メンバーの名前。|  
 |**Title**|**nvarchar (50)**|Nullable|チームにおける従業員の肩書き。|  
 |**バックグラウンド**|**nvarchar (50)**|不可|行が最後に更新された日時 (既定値)。|  
   

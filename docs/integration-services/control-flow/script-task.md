@@ -19,10 +19,10 @@ ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1cb9ca9739ca6f50a2424d9d68ee66263edf08f3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74542303"
 ---
 # <a name="script-task"></a>スクリプト タスク
@@ -72,7 +72,7 @@ ms.locfileid: "74542303"
 ### <a name="configuring-the-script-task-in-the-designer"></a>デザイナーでのスクリプト タスクの構成  
  次の表では、スクリプト タスクでログに記録できる **ScriptTaskLogEntry** イベントについて説明します。 **ScriptTaskLogEntry** イベントは、 **[SSIS ログの構成]** ダイアログ ボックスの **[詳細]** タブでログ記録の対象として選択できます。 詳細については、「[Integration Services (SSIS) のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」をご覧ください。  
   
-|ログ エントリ|[説明]|  
+|ログ エントリ|説明|  
 |---------------|-----------------|  
 |**ScriptTaskLogEntry**|スクリプト内でのログ記録の実装結果を報告します。 タスクは、 **Dts** オブジェクトの **Log** メソッドを呼び出すたびにログ エントリを書き込みます。 タスクは、これらのエントリをコードの実行時に書き込みます。 詳細については、「 [スクリプト タスクでのログ記録](../../integration-services/extending-packages-scripting/task/logging-in-the-script-task.md)」を参照してください。|  
   
@@ -99,7 +99,7 @@ ms.locfileid: "74542303"
  スクリプト タスクの詳細については、「 [Script Task](../../integration-services/control-flow/script-task.md) 」および「 [スクリプト タスク エディターでのスクリプト タスクの構成](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)」を参照してください。 スクリプト タスクのプログラミングの詳細については、「 [Extending the Package with the Script Task](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)」を参照してください。  
   
 ### <a name="options"></a>オプション  
- **名前**  
+ **Name**  
  スクリプト タスクの固有の名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
 > [!NOTE]  

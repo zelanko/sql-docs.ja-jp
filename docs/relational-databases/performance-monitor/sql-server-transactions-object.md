@@ -14,10 +14,10 @@ ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 80c62c0048f40ba945d3204c414180be9f8e0d7b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67995643"
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server: Transactions オブジェクト
@@ -30,7 +30,7 @@ ms.locfileid: "67995643"
   
  次の表では、 **SQLServer:Transactions** のカウンターについて説明します。  
   
-|SQL Server Transactions のカウンター|[説明]|  
+|SQL Server Transactions のカウンター|説明|  
 |--------------------------------------|-----------------|  
 |**Free Space in tempdb (KB)**|**tempdb**の使用可能な領域 (KB)。 スナップショット分離レベルのバージョン ストアと、この [!INCLUDE[ssDE](../../includes/ssde-md.md)]インスタンスで作成された新しいすべての一時オブジェクトの両方を保持するには、十分な空き領域が必要です。|  
 |**Longest Transaction Running Time**|現在のトランザクションの中で最も長くアクティブになっているトランザクションが開始してから現在までの継続時間 (秒)。 このカウンターがアクティビティを示すのは、データベースが READ COMMITTED スナップショット分離レベルの場合のみです。 データベースが他の分離レベルの場合、アクティビティはログに記録されません。|  

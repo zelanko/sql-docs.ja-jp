@@ -17,10 +17,10 @@ ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a7d61b0e88dd2017218c74635b89f8207691c22a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68133267"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 サブスクライバー
@@ -68,7 +68,7 @@ ms.locfileid: "68133267"
   
     1.  スナップショットがパブリケーションに対して生成されたら、パブリケーションのスナップショット フォルダーに移動します。  
   
-    2.  `MyArticle.sch` など、アーティクルと同じ名前が付いた `.sch` ファイルを検索します。  
+    2.  `.sch` など、アーティクルと同じ名前が付いた `MyArticle.sch` ファイルを検索します。  
   
     3.  メモ帳やその他のテキスト エディターを使用して、このファイルを開きます。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "68133267"
 |**geography**|イメージ|  
 |**geometry**|イメージ|  
 |**hierarchyid**|イメージ|  
-|**image**|VARCHAR(0) FOR BIT DATA*|  
+|**画像**|VARCHAR(0) FOR BIT DATA*|  
 |**into**|INT|  
 |**money**|DECIMAL(19,4)|  
 |**nchar(1-4000)**|VARCHAR(1-4000)|  

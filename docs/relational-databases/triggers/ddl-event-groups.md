@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 388a9d8e11cc738b13df752868568cd4cea556d9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68074164"
 ---
 # <a name="ddl-event-groups"></a>DDL イベント グループ
@@ -31,7 +31,7 @@ ms.locfileid: "68074164"
 ## <a name="events"></a>events  
  DDL_DATABASE_LEVEL_EVENTS の下に記載されているイベントは、サーバー (インスタンス) またはデータベース レベルで実行されます。 DDL_SERVER_LEVEL_EVENTS の下に記載されているイベントは、サーバー レベルでのみ実行できます。  
   
-|parent_type|型|name|  
+|parent_type|type|name|  
 |-|-|-|
 |NULL|296|ALTER_SERVER_CONFIGURATION|  
 |NULL|10001|DDL_EVENTS|  

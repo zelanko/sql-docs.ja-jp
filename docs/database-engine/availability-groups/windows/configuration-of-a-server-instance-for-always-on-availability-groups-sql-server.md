@@ -14,10 +14,10 @@ ms.assetid: fad8db32-593e-49d5-989c-39eb8399c416
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 94f3a9b92e05983ff9e2a10473a171069acf9a77
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67988555"
 ---
 # <a name="enable-the-always-on-availability-group-feature-for-a-sql-server-instance"></a>SQL Server インスタンスの Always On 可用性グループ機能を有効にする
@@ -28,7 +28,7 @@ ms.locfileid: "67988555"
 > [!IMPORTANT]  
 >  Windows Server フェールオーバー クラスタリング (WSFC) ノードおよび [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] インスタンスの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の前提条件と制限に関する基本情報については、「 [Always On 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)」を参照してください。  
    
-##  <a name="TermsAndDefinitions"></a> 用語と定義  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a> 用語と定義  
  [Always On 可用性グループ](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
  データベース ミラーリングに代わる、高可用性と災害復旧のためのエンタープライズ レベルのソリューション。 *可用性グループ* は、 *可用性データベース*として知られる、ひとまとまりでフェールオーバーされる個別のユーザー データベースのセットのためのフェールオーバー環境をサポートします。  
   
@@ -38,14 +38,14 @@ ms.locfileid: "67988555"
  [データベース ミラーリング エンドポイント](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
  エンドポイントとは、SQL Server でネットワーク経由の通信を行うことができるようにする SQL Server オブジェクトです。 データベース ミラーリングおよび [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] に参加する場合、サーバー インスタンスには特別な専用のエンドポイントが必要です。 サーバー インスタンスのすべてのミラーリングと可用性グループの接続は、同じデータベース ミラーリング エンドポイントを使用します。 このエンドポイントの用途は特殊で、他のサーバー インスタンスからこれらの接続を受信するためにのみ使用されます。  
   
-##  <a name="ConfigSI"></a> Always On 可用性グループをサポートするようにサーバー インスタンスを構成するには  
+##  <a name="to-configure-a-server-instance-to-support-always-on-availability-groups"></a><a name="ConfigSI"></a> Always On 可用性グループをサポートするようにサーバー インスタンスを構成するには  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]をサポートする場合、サーバー インスタンスは、可用性グループをホストする WSFC フェールオーバー クラスター内のノードにあり、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] が有効になっていて、データベース ミラーリング エンドポイントを持っている必要があります。  
   
 1.  可用性グループに追加するすべてのサーバー インスタンスの Always On 可用性グループ機能を有効にします。 特定の可用性グループの特定のサーバー インスタンスがホストできる可用性レプリカは 1 つだけです。  
   
 2.  サーバー インスタンスに、データベース ミラーリング エンドポイントが存在することを確認します。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
  **Always On 可用性グループを有効にするには**  
   
 -   [AlwaysOn 可用性グループの有効化と無効化 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)  
@@ -62,7 +62,7 @@ ms.locfileid: "67988555"
   
 -   [データベース ミラーリング エンドポイントで発信接続に証明書を使用できるようにする &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
-##  <a name="RelatedContent"></a> 関連コンテンツ  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 関連コンテンツ  
   
 -   **ブログ:**  
   

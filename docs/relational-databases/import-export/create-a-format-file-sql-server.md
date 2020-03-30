@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fb0199e5ec3bc083d7a6e2087ec86c04c233436b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68035819"
 ---
 # <a name="create-a-format-file-sql-server"></a>フォーマット ファイルの作成 (SQL Server)
@@ -151,7 +151,7 @@ bcp コマンドを使用して (つまり `bcp format` を使用して) フォ�
   
 ```  
   
- "`bcp in -c -C65001 -f format_file` ..." または "`BULK INSERT`/`OPENROWSET` ... `FORMATFILE='format_file' CODEPAGE=65001` ..." を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にデータをインポートすると、65001 を超える照合順序またはコード ページ情報のオプションが存在するようになります。  
+ "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ..." または "`bcp in -c -C65001 -f format_file``BULK INSERT`/ ... `OPENROWSET` ..." を使用して `FORMATFILE='format_file' CODEPAGE=65001` にデータをインポートすると、65001 を超える照合順序またはコード ページ情報のオプションが存在するようになります。  
 そのため、フォーマット ファイルを生成する場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にデータをインポートし直す前に、生成されたフォーマット ファイルから照合順序の情報を削除する必要があります。  
 次に照合順序情報を含まないフォーマット ファイルの例を示します。  
   

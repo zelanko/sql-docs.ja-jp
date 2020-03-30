@@ -14,10 +14,10 @@ ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 73cd348f9cb1f22eca30c28cee97ce8e81a20b16
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68014509"
 ---
 # <a name="prerequisites-to-convert-log-shipping-to-always-on-availability-groups"></a>ログ配布を Always On 可用性グループに変換する前提条件
@@ -29,7 +29,7 @@ ms.locfileid: "68014509"
 >  可用性グループのプライマリまたはセカンダリ データベース (場合によっては読み取り可能) は、ログ配布プライマリ データベースとして構成できます。  
   
   
-##  <a name="AGPrereqsRealAddress"></a> 可用性グループの前提条件  
+##  <a name="availability-group-prerequisites"></a><a name="AGPrereqsRealAddress"></a> 可用性グループの前提条件  
  バックアップ ジョブを可用性グループのプライマリ レプリカ上で実行できるようにするには、AlwaysOn 可用性グループの次のバックアップ設定を使用します。  
   
 |プロパティ|設定|  
@@ -43,7 +43,7 @@ ms.locfileid: "68014509"
   
  [可用性レプリカでのバックアップの構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)  
   
-##  <a name="LogShipPrereqs"></a> ログ配布の前提条件  
+##  <a name="log-shipping-prerequisites"></a><a name="LogShipPrereqs"></a> ログ配布の前提条件  
   
 -   ログ配布プライマリ データベースは、可用性グループの初期/現在のプライマリ レプリカをホストしている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに存在している必要があります。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68014509"
   
  [可用性グループへのログ配布構成の変換](https://blogs.msdn.microsoft.com/sqlalwayson/2012/01/09/converting-a-logshipping-configuration-to-availability-group/) (SQL Server ブログ)  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
  **ログ配布**  
   
 -   [SQL Server 2016 へのログ配布のアップグレード &#40;Transact-SQL&#41;](../../../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
@@ -82,7 +82,7 @@ ms.locfileid: "68014509"
   
 -   [可用性レプリカでのバックアップの構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)  
   
-##  <a name="RelatedContent"></a> 関連コンテンツ  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 関連コンテンツ  
   
 -   **ブログ:**  
   

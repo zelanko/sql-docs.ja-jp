@@ -15,10 +15,10 @@ ms.assetid: 6baee70f-848c-4e86-b20d-78875c0f82cb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a7a0a6d1fa10576eab5e515031e8233af95c2d76
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67934913"
 ---
 # <a name="availability-database-is-suspended-for-an-availability-group"></a>可用性グループの可用性データベースの中断
@@ -33,7 +33,7 @@ ms.locfileid: "67934913"
 |**カテゴリ**|**警告**|  
 |**ファセット**|可用性データベース|  
   
-## <a name="description"></a>[説明]  
+## <a name="description"></a>説明  
  このポリシーは、セカンダリ データベース ("セカンダリ データベース レプリカ" とも呼ばれます) のデータの移動状態をチェックします。 データの移動が中断された場合、ポリシーは通常とは異なる状態です。 それ以外の場合、ポリシーは正常な状態です。  
   
 > [!NOTE]  

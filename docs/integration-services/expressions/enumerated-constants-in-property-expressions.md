@@ -18,10 +18,10 @@ ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 38ba2374821505dc3541ea05e76fd8aaecdcb5fc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297637"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>プロパティ式における列挙定数
@@ -47,7 +47,7 @@ ms.locfileid: "71297637"
   
  [Common Properties](#CommonProperties)  
   
-##  <a name="Package"></a> [パッケージ]  
+##  <a name="package"></a><a name="Package"></a> [パッケージ]  
  次の表は、列挙子からの値を使用して設定する、パッケージのプロパティの表示名とそれに対応する数値を示します。  
   
  **PackageType** プロパティ - **DTSPackageType** 列挙子の値を使用して設定されます。  
@@ -90,7 +90,7 @@ ms.locfileid: "71297637"
 |EncryptAllWithUserKey|4|  
 |ServerStorage|5|  
   
-##  <a name="PrecedenceConstraints"></a> 優先順位制約  
+##  <a name="precedence-constraints"></a><a name="PrecedenceConstraints"></a> 優先順位制約  
  **EvalOp** プロパティ - **DTSPrecedenceEvalOp** 列挙子の値を使用して設定されます。  
   
 |DTSPrecedenceEvalOp の表示名|数値|  
@@ -109,7 +109,7 @@ ms.locfileid: "71297637"
 |Completion|2|  
 |Canceled|3|  
   
-##  <a name="Foreach"></a> Foreach ループ列挙子  
+##  <a name="foreach-loop-enumerators"></a><a name="Foreach"></a> Foreach ループ列挙子  
  Foreach ループには、プロパティ式で設定できるプロパティを含む一連の列挙子があります。  
   
 ### <a name="foreach-ado-enumerator"></a>Foreach ADO 列挙子  
@@ -147,7 +147,7 @@ ms.locfileid: "71297637"
 |ノード|1|  
 |NodeText|2|  
   
-##  <a name="Tasks"></a> 処理手順  
+##  <a name="tasks"></a><a name="Tasks"></a> 処理手順  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、プロパティ式で設定できるプロパティを含む多くのタスクが含まれています。  
   
 ### <a name="analysis-services-execute-ddl-task"></a>Analysis Services DDL 実行タスク  
@@ -479,7 +479,7 @@ ms.locfileid: "71297637"
 |速い|1|  
 |[詳細]|2|  
   
-##  <a name="MaintenancePlanTasks"></a> メンテナンス プランのタスク  
+##  <a name="maintenance-plan-tasks"></a><a name="MaintenancePlanTasks"></a> メンテナンス プランのタスク  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、メンテナンス プランおよび [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ用の SQL Server タスクを実行する一連のタスクが含まれています。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、プログラムによるこれらのタスクの操作がサポートされていません。また、プログラミング リファレンス ドキュメントには、これらのタスクとその列挙子に関する API ドキュメントが含まれていません。  
@@ -572,7 +572,7 @@ ms.locfileid: "71297637"
 |インデックス|2|  
 |All|3|  
   
-##  <a name="CommonProperties"></a> 共通プロパティ  
+##  <a name="common-properties"></a><a name="CommonProperties"></a> 共通プロパティ  
  パッケージ、タスク、Foreach ループ コンテナー、For ループ コンテナー、およびシーケンス コンテナーでは、次の列挙子を使用して、指定されたプロパティを設定できます。  
   
  **ForceExecutionResult** プロパティ - **DTSForcedExecResult** 列挙子の値を使用して設定されます。  

@@ -11,10 +11,10 @@ ms.assetid: 17a81fcd-8dbd-458d-a9c7-2b5209062f45
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: aed634232901aa116fddf361d3c3347d1e462eb2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68086282"
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Azure でのデータベース ファイルのスナップショット バックアップ
@@ -31,37 +31,37 @@ ms.locfileid: "68086282"
   
 ## <a name="using-azure-snapshots-to-back-up-database-files-stored-in-azure"></a>Azure のスナップショットを使用した Azure に格納されているデータベース ファイルのバックアップ  
   
-### <a name="what-is-a-includessnoversionincludesssnoversion-mdmd-file-snapshot-backup"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ファイル スナップショット バックアップとは  
+### <a name="what-is-a-ssnoversion-file-snapshot-backup"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ファイル スナップショット バックアップとは  
  ファイル スナップショット バックアップは、データベース ファイルが含まれる BLOB とそれらのファイル スナップショットに対するポインターが含まれるバックアップ ファイルの、一連の Azure スナップショットで構成されます。 各ファイル スナップショットは、コンテナーにベース BLOB とともに格納されています。 バックアップ ファイル自体を URL、ディスク、テープに書き込むように指定できます。 URL へのバックアップをお勧めします。 バックアップの詳細については「[BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)」、URL へのバックアップについては「[SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)」を参照してください。  
   
  ![スナップショット機能のアーキテクチャ](../../relational-databases/backup-restore/media/snapshotbackups-flat.png "スナップショット機能のアーキテクチャ")  
   
  ベース BLOB を削除すると、バックアップ セットが無効になり、BLOB とそのファイル スナップショットすべてを明示的に削除するように選択しない限り、ファイル スナップショットが含まれる BLOB を削除できなくなります。 さらに、データベースまたはデータ ファイルを削除しても、ベース BLOB やそのファイル スナップショットは削除されません。 また、バックアップ ファイルを削除しても、そのバックアップ セット内のファイル スナップショットは削除されません。 ファイル スナップショットのバックアップ セットを削除するには、 **sys.sp_delete_backup** システム ストアド プロシージャを使用します。  
   
- **データベースの完全バックアップ:** ファイル スナップショット バックアップを使用してデータベースの完全バックアップを実行すると、データベースを構成する各データ ファイルとログ ファイルの Azure スナップショットが作成され、トランザクション ログのバックアップ チェーンが確立されて、バックアップ ファイルにファイル スナップショットの場所が書き込まれます。  
+ **データベースの完全バックアップ** : ファイル スナップショット バックアップを使用してデータベースの完全バックアップを実行すると、データベースを構成する各データとログ ファイルの Azure スナップショットを作成し、トランザクション ログのバックアップ チェーンを確立して、バックアップ ファイルにファイル スナップショットの場所を書き込みます。  
   
- **トランザクション ログのバックアップ**: ファイル スナップショット バックアップを使用してトランザクション ログのバックアップを実行すると、(トランザクション ログだけでなく) 各データベース ファイルのファイル スナップショットが作成され、バックアップ ファイルにファイル スナップショットの場所情報が記録されて、トランザクション ログ ファイルが切り捨てられす。  
+ **トランザクション ログのバックアップ** : ファイル スナップショット バックアップを使用してトランザクション ログのバックアップを実行すると、(トランザクション ログだけでなく) 各データベース ファイルのファイル スナップショットを作成し、バックアップ ファイルにファイル スナップショットの場所情報を記録して、トランザクション ログ ファイルを切り捨てます。  
   
 > [!IMPORTANT]  
 >  トランザクション ログのバックアップ チェーンの確立に必要な最初の完全バックアップ (ファイル スナップショット バックアップの場合もあり) の後、各トランザクション ログのファイル スナップショット ファイルはすべて、データベースの復元やログの復元の実行に使用できるため、トランザクション ログのバックアップのみを実行するのみで済みます。 データベースの最初の完全バックアップの後は、各ファイル スナップショットや各データベース ファイルのベース BLOB の現在の状態の違いは Azure BLOB ストレージ サービスが処理するため、追加の完全バックアップや差分バックアップは不要です。  
   
 > [!NOTE]  
->  Microsoft Azure BLOB ストレージ サービスでの SQL Server 2016 の使用方法に関するチュートリアルについては、「[チュートリアル:Azure Blob Storage サービスと SQL Server 2016 データベースの使用](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+>  Microsoft Azure BLOB ストレージ サービスでの SQL Server 2016 の使用方法に関するチュートリアルについては、「 [チュートリアル: Windows Azure ストレージ サービス内の SQL Server データ ファイル](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)」をご覧ください。  
   
 ### <a name="restore-using-file-snapshot-backups"></a>ファイル スナップショット バックアップを使用した復元  
  各ファイル スナップショット バックアップ セットには各データベース ファイルのファイル スナップショットが含まれているため、復元プロセスには、最大で隣接する 2 つのファイル スナップショット バックアップ セットが必要です。 これは、バックアップ セットが完全バックアップまたはログ バックアップからのものであるかに関係なく当てはまります。 これは、従来のストリーミング バックアップ ファイルを使用して復元プロセスを実行するときとまったく異なります。 従来のストリーミング バックアップでは、復元プロセスにバックアップ セットのチェーン全体 (完全バックアップ、差分バックアップ、1 つ以上のトランザクション ログのバックアップ) を使用する必要があります。 復元プロセスの復旧の部分は、復元にファイル スナップショット バックアップまたはストリーミング バックアップ セットを使用しているかどうかに関係なく、同じです。  
   
- **任意のバックアップ セットの時点まで**: RESTORE DATABASE 操作を実行して特定のファイル スナップショット バックアップ セットの時点までデータベースを復元するには、ベース BLOB 自体と特定のバックアップ セットのみが必要です。 RESTORE DATABASE 操作を実行するにはトランザクション ログのファイル スナップショット バックアップ セットを使用できるため、この種類の RESTORE DATABASE オプションの実行には通常、トランザクション ログのバックアップ セットを使用し、データベースの完全バックアップ セットをほとんど使用されません。 このトピックの最後に、この手法について説明する例を紹介します。  
+ **任意のバックアップ セットの時点まで** : RESTORE DATABASE 操作を実行して特定のファイル スナップショット バックアップ セットの時点までデータベースを復元するには、ベース BLOB 自体と特定のバックアップ セットのみが必要です。 RESTORE DATABASE 操作を実行するにはトランザクション ログのファイル スナップショット バックアップ セットを使用できるため、この種類の RESTORE DATABASE オプションの実行には通常、トランザクション ログのバックアップ セットを使用し、データベースの完全バックアップ セットをほとんど使用されません。 このトピックの最後に、この手法について説明する例を紹介します。  
   
- **2 つのファイル スナップショット バックアップ セット間の時点まで**: RESTORE DATABASE 操作を実行して、2 つの隣接したトランザクション ログのバックアップ セットの間の特定の時点までデータベースをバックアップするには、2 つのトランザクション ログのバックアップ セット (それぞれデータベースを復元する時点の前後に 1 つ) のみが必要です。 これを実現するには、前の時点のトランザクション ログのファイル スナップショット バックアップ セットを使用して WITH NORECOVERY で RESTORE DATABASE 操作を実行し、後の時点のトランザクション ログのファイル スナップショット バックアップ セットを使用して WITH RECOVERY で RESTORE LOG 操作を実行して、STOPAT 引数を使用してトランザクション ログのバックアップからの復旧を停止する時点を指定します。 このトピックの最後に、この手法について説明する例を紹介します。 ライブ デモについては、 [特定の時点での復元に関するデモ](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo)を参照してください。  
+ **2 つのファイル スナップショット バックアップ セット間の時点まで** : RESTORE DATABASE 操作を実行して、2 つの隣接したトランザクション ログのバックアップ セットの間の特定の時点までデータベースをバックアップするには、2 つのトランザクション ログのバックアップ セット (それぞれデータベースを復元する時点の前後に 1 つ) のみが必要です。 これを実現するには、前の時点のトランザクション ログのファイル スナップショット バックアップ セットを使用して WITH NORECOVERY で RESTORE DATABASE 操作を実行し、後の時点のトランザクション ログのファイル スナップショット バックアップ セットを使用して WITH RECOVERY で RESTORE LOG 操作を実行して、STOPAT 引数を使用してトランザクション ログのバックアップからの復旧を停止する時点を指定します。 このトピックの最後に、この手法について説明する例を紹介します。 ライブ デモについては、 [特定の時点での復元に関するデモ](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo)を参照してください。  
   
 ### <a name="file-backup-set-maintenance"></a>ファイル バックアップ セットのメンテナンス  
- **ファイル スナップショット バックアップ セットの削除**: FORMAT 引数を使用してファイル スナップショット バックアップ セットを上書きすることはできません。 元のファイル スナップショット バックアップで作成されたファイル スナップショットが孤立したまま残されるのを避けるために、FORMAT 引数は使用できません。 ファイル スナップショットのバックアップ セットを削除するには、 **sys.sp_delete_backup** システム ストアド プロシージャを使用します。 このストアド プロシージャは、バックアップ セットを構成するバックアップ ファイルとファイル スナップショットを削除します。 別のメソッドを使用してファイル スナップショットのバックアップ セットを削除すると、バックアップ セット内のファイル スナップショットを削除することなくバックアップ ファイルが削除されることがあります。  
+ **ファイル スナップショット バックアップ セットの削除** : FORMAT 引数を使用してファイル スナップショット バックアップ セットを上書きすることはできません。 元のファイル スナップショット バックアップで作成されたファイル スナップショットが孤立したまま残されるのを避けるために、FORMAT 引数は使用できません。 ファイル スナップショットのバックアップ セットを削除するには、 **sys.sp_delete_backup** システム ストアド プロシージャを使用します。 このストアド プロシージャは、バックアップ セットを構成するバックアップ ファイルとファイル スナップショットを削除します。 別のメソッドを使用してファイル スナップショットのバックアップ セットを削除すると、バックアップ セット内のファイル スナップショットを削除することなくバックアップ ファイルが削除されることがあります。  
   
- **孤立したバックアップ ファイル スナップショットの削除**: バックアップ ファイルが **sys.sp_delete_backup** システム ストアド プロシージャを使用せずに削除された場合、またはデータベースやデータベース ファイルが含まれる BLOB に関連付けられたバックアップ ファイル スナップショットが存在する間にデータベースやデータベース ファイルが削除された場合は、ファイル スナップショットが孤立している可能性があります。 ファイル スナップショットが孤立していることを特定するには、 **sys.fn_db_backup_file_snapshots** のシステム関数を使用してデータベース ファイルのすべてのファイル スナップショットを一覧表示します。 ファイル スナップショットが特定のファイル スナップショットのバックアップ セットの一部であることを特定するには、RESTORE FILELISTONLY システム ストアド プロシージャを使用します。 その後、 **sys.sp_delete_backup_file_snapshot** システム ストアド プロシージャを使用して各バックアップ ファイルの孤立したスナップショットを削除できます。 このトピックの最後に、このシステム関数とこれらのシステム ストアド プロシージャを使用する例を紹介します。 詳細については、「[sp_delete_backup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md)」、「[sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)」、「[sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md)」、「[RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)」を参照してください。  
+ **孤立したバックアップ ファイル スナップショットの削除** : バックアップ ファイルが **sys.sp_delete_backup** のシステム ストアド プロシージャを使用せずに削除された、またはデータベースやデータベース ファイルが含まれる BLOB にバックアップ ファイル スナップショットが関連付けられていた間にデータベースやデータベース ファイルが削除された場合、ファイル スナップショットが孤立している可能性があります。 ファイル スナップショットが孤立していることを特定するには、 **sys.fn_db_backup_file_snapshots** のシステム関数を使用してデータベース ファイルのすべてのファイル スナップショットを一覧表示します。 ファイル スナップショットが特定のファイル スナップショットのバックアップ セットの一部であることを特定するには、RESTORE FILELISTONLY システム ストアド プロシージャを使用します。 その後、 **sys.sp_delete_backup_file_snapshot** システム ストアド プロシージャを使用して各バックアップ ファイルの孤立したスナップショットを削除できます。 このトピックの最後に、このシステム関数とこれらのシステム ストアド プロシージャを使用する例を紹介します。 詳細については、「[sp_delete_backup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md)」、「[sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)」、「[sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md)」、「[RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)」を参照してください。  
   
 ### <a name="considerations-and-limitations"></a>注意点と制限事項  
- **Premium Storage:** Premium Storage を使用するときは、次の制限が適用されます。  
+ **Premium Storage:** Premium Storage を使用する際には、次の制限が適用されます。  
   
 -   バックアップ ファイル自体は、Premium Storage を使用して格納できません。  
   
@@ -71,17 +71,17 @@ ms.locfileid: "68086282"
   
 -   RESTORE WITH MOVE が必須です。  
   
--   Premium Storage の詳細については、[Premium Storage: Azure 仮想マシン ワークロード向けの高パフォーマンス ストレージ](https://azure.microsoft.com/documentation/articles/storage-premium-storage-preview-portal/)に関するページを参照してください  
+-   Premium Storage の詳細については、「 [Premium Storage: Azure 仮想マシン ワークロード向けの高パフォーマンス ストレージ](https://azure.microsoft.com/documentation/articles/storage-premium-storage-preview-portal/)」を参照してください。  
   
- **単一のストレージ アカウント**: ファイル スナップショットと目的の BLOB では同じストレージ アカウントが使用されている必要があります。  
+ **単一のストレージ アカウント** : ファイル スナップショットと目的の BLOB は同じストレージ アカウントを使用する必要があります。  
   
- **一括復旧モデル**: 一括ログ復旧モードを使用して最小ログ記録トランザクションを含むトランザクション ログのバックアップを実行するときは、トランザクション ログのバックアップを使用してログの復元 (特定の時点への復旧を含む) を実行することはできません。 代わりに、ファイル スナップショット バックアップ セットの特定の時点までのデータベースの復元を実行します。 この制限は、ストリーミング バックアップの制限と同じです。  
+ **一括復旧モデル** : 一括ログ復旧モードを使用して最小ログ記録トランザクションを含むトランザクション ログのバックアップを実行する際には、トランザクション ログのバックアップを使用してログの復元 (特定の時点への復旧を含む) を実行することはできません。 代わりに、ファイル スナップショット バックアップ セットの特定の時点までのデータベースの復元を実行します。 この制限は、ストリーミング バックアップの制限と同じです。  
   
- **オンライン復元**: ファイル スナップショット バックアップを使用するときは、オンライン復元を実行することはできません。 オンライン復元の詳細については、「[オンライン復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)」を参照してください。  
+ **オンライン復元** : ファイル スナップショット バックアップを使用している際には、オンライン復元を実行することはできません。 オンライン復元の詳細については、「[オンライン復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)」を参照してください。  
   
- **課金**: SQL Server のファイル スナップショット バックアップを使用すると、データの変化に応じて追加料金が発生します。 詳細については、「 [スナップショットの課金方法について](https://msdn.microsoft.com/library/azure/hh768807.aspx)」を参照してください。  
+ **課金** : SQL Server のファイル スナップショット バックアップを使用する際には、データの変化に応じて追加料金が発生します。 詳細については、「 [スナップショットの課金方法について](https://msdn.microsoft.com/library/azure/hh768807.aspx)」を参照してください。  
   
- **アーカイブ**: ファイル スナップショット バックアップをアーカイブする場合は、BLOB ストレージまたはストリーミング バックアップにアーカイブできます。 Blob ストレージにアーカイブするには、ファイル スナップショット バックアップ セット内のスナップショットを別個の BLOB にコピーします。 ストリーミング バックアップにアーカイブするには、ファイル スナップショット バックアップを新しいデータベースとして復元し、圧縮や暗号化を使用した通常のストリーミング バックアップを実行して、必要に応じて、ベース BLOB とは別個にアーカイブします。  
+ **アーカイブ** : ファイル スナップショット バックアップをアーカイブする場合は、BLOB ストレージまたはストリーミング バックアップにアーカイブできます。 Blob ストレージにアーカイブするには、ファイル スナップショット バックアップ セット内のスナップショットを別個の BLOB にコピーします。 ストリーミング バックアップにアーカイブするには、ファイル スナップショット バックアップを新しいデータベースとして復元し、圧縮や暗号化を使用した通常のストリーミング バックアップを実行して、必要に応じて、ベース BLOB とは別個にアーカイブします。  
   
 > [!IMPORTANT]  
 >  複数のファイル スナップショット バックアップの管理には、パフォーマンス上わずかなオーバーヘッドしか発生しません。 ただし、管理するファイル スナップショット バックアップの数が多すぎる場合は、データベースに対してI/O パフォーマンス上の影響を及ぼす可能性があります。 復旧ポイントをサポートする目的において必要なファイル スナップショット バックアップのみを管理することをお勧めします。  
@@ -111,7 +111,7 @@ BACKUP LOG AdventureWorks2016
 GO  
 ```  
   
-## <a name="restoring-from-a-includessnoversionincludesssnoversion-mdmd-file-snapshot-backup"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ファイル スナップショット バックアップからの復元  
+## <a name="restoring-from-a-ssnoversion-file-snapshot-backup"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ファイル スナップショット バックアップからの復元  
  次の例では、トランザクション ログのファイル スナップショット バックアップ セットを使用して AdventureWorks2016 データベースを復元し、復旧操作を示します。 データベースは、単一のトランザクション ログ ファイル スナップショットのバックアップ セットから復元できます。  
   
 ```  
@@ -120,7 +120,7 @@ WITH RECOVERY, REPLACE;
 GO  
 ```  
   
-## <a name="restoring-from-a-includessnoversionincludesssnoversion-mdmd-file-snapshot-backup-to-a-point-in-time"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ファイル スナップショット バックアップからの特定の時点への復元  
+## <a name="restoring-from-a-ssnoversion-file-snapshot-backup-to-a-point-in-time"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ファイル スナップショット バックアップからの特定の時点への復元  
  次の例では、2 つのトランザクション ログのファイル スナップショット バックアップ セットを使用して AdventureWorks2016 データベースをその特定の時点の状態に復元し、復旧操作を示します。  
   
 ```  
@@ -176,6 +176,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [チュートリアル:Azure Blob Storage サービスと SQL Server 2016 データベースの使用](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+ [チュートリアル: Windows Azure ストレージ サービス内の SQL Server データ ファイル](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
   

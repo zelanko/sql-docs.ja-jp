@@ -17,10 +17,10 @@ ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 407e477be98f386adc27fc965b1d099d1dec4dfa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75251231"
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>トランザクション - 可用性グループとデータベース ミラーリング
@@ -51,7 +51,7 @@ SQL Server 2016 SP1 以前では、可用性グループに対して、同じ SQ
   
 複数のデータベースにまたがるトランザクションは、データベース ミラーリングでもサポートされていません。  
   
-##  <a name="dtcsupport"></a> SQL Server 2016 SP1 以前: 分散トランザクションのサポート  
+##  <a name="sql-server-2016-sp1-and-before-support-for-distributed-transactions"></a><a name="dtcsupport"></a> SQL Server 2016 SP1 以前: 分散トランザクションのサポート  
 複数のデータベースがそれぞれ異なる SQL Server インスタンスでホストされている場合は、可用性グループで分散トランザクションがサポートされます。 これは、SQL Server インスタンスと DTC に準拠した別のサーバー間の分散トランザクションにも当てはまります。  
  
 Microsoft 分散トランザクション コーディネーター (MSDTC または DTC) は、分散システムのトランザクション インフラストラクチャを提供する Windows サービスです。 MSDTC では、クライアント アプリケーションに対して、1 つのトランザクションに複数のデータ ソースを含め、その後、トランザクションに含まれるすべてのサーバーにコミットすることを許可します。 たとえば、MSDTC を使用して、さまざまなサーバーの複数のデータベースにわたるトランザクションを調整することができます。

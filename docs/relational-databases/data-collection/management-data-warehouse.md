@@ -14,10 +14,10 @@ ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8723d9750eb03eda14a7983cba8919ea8e92eb81
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68133619"
 ---
 # <a name="management-data-warehouse"></a>管理データ ウェアハウス (management data warehouse)
@@ -39,7 +39,7 @@ ms.locfileid: "68133619"
   
  次の表では、core スキーマ内のデータベース テーブルについて説明します。 データ コレクターは、これらのデータベース テーブルで、データの出所、挿入者、データ ウェアハウスにアップロードされた時刻を追跡できます。  
   
-|テーブル名|[説明]|  
+|テーブル名|説明|  
 |----------------|-----------------|  
 |core.performance_counter_report_group_items|管理データ ウェアハウスのレポートがパフォーマンス カウンターをグループ化および集計する方法に関する情報を格納します。|  
 |core.snapshots_internal|それぞれの新しいスナップショットを識別します。 アップロード パッケージによってデータの新しいバッチのアップロードが開始されるたびに、このテーブルに新しい行が挿入されます。|  

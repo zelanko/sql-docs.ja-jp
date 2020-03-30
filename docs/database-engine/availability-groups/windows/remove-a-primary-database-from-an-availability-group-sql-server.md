@@ -18,25 +18,25 @@ ms.assetid: 6d4ca31e-ddf0-44bf-be5e-a5da060bf096
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: dfba294b5c07fc7053669c5c4ebbbd46217efb18
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822636"
 ---
 # <a name="remove-a-primary-database-from-an-always-on-availability-group"></a>Always On 可用性グループからプライマリ データベースを削除する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このトピックでは、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]の [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]、または PowerShell を使用して、AlwaysOn 可用性グループからプライマリ データベースおよび対応するセカンダリ データベースの両方を削除する方法について説明します。  
   
-##  <a name="Prerequisites"></a> 前提条件と制限  
+##  <a name="prerequisites-and-restrictions"></a><a name="Prerequisites"></a> 前提条件と制限  
   
 -   このタスクは、プライマリ レプリカ上でのみサポートされます。 プライマリ レプリカをホストするサーバー インスタンスに接続されている必要があります。  
   
  
-##  <a name="Permissions"></a> Permissions  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  可用性グループの ALTER AVAILABILITY GROUP 権限、CONTROL AVAILABILITY GROUP 権限、ALTER ANY AVAILABILITY GROUP 権限、または CONTROL SERVER 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  **可用性データベースを削除するには**  
   
 1.  オブジェクト エクスプローラーで、削除するデータベースのプライマリ レプリカをホストするサーバー インスタンスに接続し、サーバー ツリーを展開します。  
@@ -55,7 +55,7 @@ ms.locfileid: "74822636"
   
 6.  **[可用性グループからデータベースを削除]** ダイアログ ボックスで、表示されたすべてのデータベースを削除するには、 **[OK]** をクリックします。 すべて削除しない場合は、 **[キャンセル]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  **可用性データベースを削除するには**  
   
 1.  プライマリ レプリカをホストするサーバー インスタンスに接続します。  
@@ -72,7 +72,7 @@ ms.locfileid: "74822636"
     ALTER AVAILABILITY GROUP MyAG REMOVE DATABASE Db6;  
     ```  
   
-##  <a name="PowerShellProcedure"></a> PowerShell の使用  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell の使用  
  **可用性データベースを削除するには**  
   
 1.  プライマリ レプリカをホストするサーバー インスタンスにディレクトリを変更 (**cd**) します 。  
@@ -93,7 +93,7 @@ ms.locfileid: "74822636"
   
 -   [SQL Server PowerShell プロバイダー](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> 補足情報: 可用性グループから可用性データベースを削除した後  
+##  <a name="follow-up-after-removing-an-availability-database-from-an-availability-group"></a><a name="FollowUp"></a> 補足情報: 可用性グループから可用性データベースを削除した後  
  可用性グループから可用性データベースを削除すると、以前のプライマリ データベースおよび対応するセカンダリ データベース間のデータの同期が終了します。 以前のプライマリ データベースはオンラインのまま残ります。 すべての対応するセカンダリ データベースは RESTORING 状態になります。  
   
  この時点で、削除されたセカンダリ データベースを処理する別の方法は次のとおりです。  

@@ -16,10 +16,10 @@ ms.assetid: 924df406-14b2-40b8-a7bc-c2fd145d7d7c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7e37449fc991cc02fb1e15eb73719e9fef1bde83
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67981066"
 ---
 # <a name="getobject-method-sqlserverresultset"></a>getObject メソッド (SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67981066"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|Name|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[getObject (int)](../../../connect/jdbc/reference/getobject-method-int-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列インデックスの値を、Java プログラミング言語のオブジェクトとして取得します。|  
 |[getObject (int, java.util.Map)](../../../connect/jdbc/reference/getobject-method-int-java-util-map-sqlserverresultset.md)|渡された Map オブジェクトを使用して、[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列インデックスの値が Java プログラミング言語のオブジェクトとして取得されます。|  

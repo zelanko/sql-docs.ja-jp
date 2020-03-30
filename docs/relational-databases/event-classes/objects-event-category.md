@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 02bd8c4d017d391755eb9d61ef7685883a5ade51
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68115898"
 ---
 # <a name="objects-event-category"></a>Objects イベント カテゴリ
@@ -27,7 +27,7 @@ ms.locfileid: "68115898"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[Auto Stats イベント クラス](../../relational-databases/event-classes/auto-stats-event-class.md)|インデックス統計および列統計の自動更新が実行されたことを示します。|  
 |[Object:Altered イベント クラス](../../relational-databases/event-classes/object-altered-event-class.md)|ALTER DATABASE ステートメントや ALTER TABLE ステートメントなどによりオブジェクトが変更されたことを示します。|  

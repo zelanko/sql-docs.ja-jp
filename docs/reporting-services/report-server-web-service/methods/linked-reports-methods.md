@@ -13,16 +13,16 @@ ms.assetid: 06941742-2c65-428e-a722-4b4dd59096a5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a474b4b3cb3a9973fc4fdaf14e7179cc73a2d2de
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79198249"
 ---
 # <a name="linked-reports-methods"></a>リンク レポートのメソッド
   以下のメソッドを使用してリンク アイテムを作成し、管理できます。  
   
-|Method|アクション|  
+|方法|アクション|  
 |------------|------------|  
 |<xref:ReportService2010.ReportingService2010.CreateLinkedItem%2A>|新しいリンク アイテムをレポート サーバー データベースに追加します。|  
 |<xref:ReportService2010.ReportingService2010.GetItemLink%2A>|指定したリンク アイテムでアイテム定義が使用されているアイテムの名前を返します。|  

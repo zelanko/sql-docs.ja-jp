@@ -14,15 +14,15 @@ ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: ab394b7eed0a284b8ed74e5333b01f27283469ca
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67987363"
 ---
 # <a name="sql-server-access-methods-object"></a>SQL Server の Access Methods オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **Access Methods** オブジェクトには、データベース内の論理データへのアクセス方法を監視するためのカウンターがあります。 ディスク上のデータベース ページへの物理アクセスは、 **Buffer Manager** カウンターを使用して監視します。 データベースに格納されているデータへのアクセス方法を監視すれば、インデックスの追加や変更、パーティションの追加や移動、ファイルまたはファイル グループの追加、インデックスのデフラグ、クエリの書き直しなど、どのような措置によってクエリ パフォーマンスが向上するかを判断する際に役立ちます。 **Access Methods** カウンターを使用して、データベース内のデータ、インデックス、および空き領域サイズを監視し、各サーバー インスタンスのデータ量と断片化状況を確認することもできます。 インデックスが過度に断片化されると、パフォーマンスの低下につながります。  
+  **の**Access Methods[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトには、データベース内の論理データへのアクセス方法を監視するためのカウンターがあります。 ディスク上のデータベース ページへの物理アクセスは、 **Buffer Manager** カウンターを使用して監視します。 データベースに格納されているデータへのアクセス方法を監視すれば、インデックスの追加や変更、パーティションの追加や移動、ファイルまたはファイル グループの追加、インデックスのデフラグ、クエリの書き直しなど、どのような措置によってクエリ パフォーマンスが向上するかを判断する際に役立ちます。 **Access Methods** カウンターを使用して、データベース内のデータ、インデックス、および空き領域サイズを監視し、各サーバー インスタンスのデータ量と断片化状況を確認することもできます。 インデックスが過度に断片化されると、パフォーマンスの低下につながります。  
   
  データ量、断片化、および使用状況の詳細な情報を得るには、次の動的管理ビューを使用します。  
   

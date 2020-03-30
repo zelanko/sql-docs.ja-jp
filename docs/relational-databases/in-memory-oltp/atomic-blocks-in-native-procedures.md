@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 329fb8644219d750595ff8a9cb2ddb5a6b804e4d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67951222"
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>ネイティブ プロシージャの ATOMIC ブロック
@@ -133,14 +133,14 @@ GO
   
  **BEGIN ATOMIC**では以下のオプションは必須です。  
   
-|必須の設定|[説明]|  
+|必須の設定|説明|  
 |----------------------|-----------------|  
 |**TRANSACTION ISOLATION LEVEL**|サポートされる値は **SNAPSHOT**、 **REPEATABLEREAD**、 **SERIALIZABLE**です。|  
 |**LANGUAGE**|日付と時刻の形式とシステム メッセージが決まります。 [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) のすべての言語とエイリアスがサポートされます。|  
   
  次の設定は省略可能です。  
   
-|省略可能な設定|[説明]|  
+|省略可能な設定|説明|  
 |----------------------|-----------------|  
 |**DATEFORMAT**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべての日付形式がサポートされています。 指定した場合、**DATEFORMAT** は **LANGUAGE**に関連付けられた既定の日付形式をオーバーライドします。|  
 |**DATEFIRST**|指定した場合、**DATEFIRST** は **LANGUAGE**に関連付けられた既定をオーバーライドします。|  

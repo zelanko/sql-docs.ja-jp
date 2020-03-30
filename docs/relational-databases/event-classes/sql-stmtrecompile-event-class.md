@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 214b2e4cc7f72fd34b500a1cefb4fca07bc9b27b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68043362"
 ---
 # <a name="sqlstmtrecompile-event-class"></a>SQL:StmtRecompile イベント クラス
@@ -39,7 +39,7 @@ ms.locfileid: "68043362"
 |IsSystem|**int**|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。<br /><br /> 1 = システム<br /><br /> 0 = ユーザー|60|はい|  
 |LineNumber|**int**|バッチ内のこのステートメントのシーケンス番号 (該当する場合)。|5|はい|  
 |LoginName|**nvarchar**|このバッチを送信したログインの名前。|11|はい|  
-|LoginSid|**image**|現在ログインしているユーザーのセキュリティ識別子 (SID)。 この情報は、sys.server_principals カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  
+|LoginSid|**画像**|現在ログインしているユーザーのセキュリティ識別子 (SID)。 この情報は、sys.server_principals カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  
 |NestLevel|**int**|ストアド プロシージャ コールの入れ子レベル。 たとえば、my_proc_a ストアド プロシージャは my_proc_b を呼び出します。 この場合、my_proc_a の NestLevel は 1 で、my_proc_b の NestLevel は 2 です。|29|はい|  
 |NTDomainName|**nvarchar**|ユーザーが所属する Windows ドメイン。|7|はい|  
 |NTUserName|**nvarchar**|接続しているユーザーの Windows ユーザー名。|6|はい|  

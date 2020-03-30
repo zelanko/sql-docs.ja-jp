@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cf54565115df53dc7d502f48aad68f9974adebd0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67909689"
 ---
 # <a name="indexes-on-computed-columns"></a>計算列のインデックス
@@ -115,7 +115,7 @@ COLUMNPROPERTY 関数の **IsPrecise** プロパティは、 *computed_column_ex
 > [!NOTE]
 > ANSI_WARNINGS を ON に設定すると、データベース互換性レベルが 90 以上に設定されている場合、暗黙的に ARITHABORT が ON に設定されます。  
   
-## <a name="BKMK_persisted"></a> 保存される計算列でのインデックスの作成  
+## <a name="creating-indexes-on-persisted-computed-columns"></a><a name="BKMK_persisted"></a> 保存される計算列でのインデックスの作成  
 
 不正確であるが決定的な式で定義される計算列を作成できることがあります。 これは、CREATE TABLE または ALTER TABLE ステートメントで列に PERSISTED マークが付いているときに可能です。
 

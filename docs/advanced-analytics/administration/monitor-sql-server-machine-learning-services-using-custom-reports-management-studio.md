@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: afc90985fc7c0c6d7a04cb575ee9e93a4b7b4c51
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727748"
 ---
 # <a name="monitor-python-and-r-script-execution-using-custom-reports-in-sql-server-management-studio"></a>SQL Server Management Studio のカスタムレポートを使用して Python および R のスクリプトの実行を監視する
@@ -65,7 +65,7 @@ SQL Server Management Studio のレポートの詳細については、「[Manag
 
 [GitHub の SSMS カスタム レポート リポジトリ](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/ssms-custom-reports)には次のレポートが含まれています。
 
-| レポート | [説明] |
+| レポート | 説明 |
 |-|-|
 | Active sessions | 現在、SQL Server インスタンスに接続し、Python または R のスクリプトを実行しているユーザー。 |
 | 構成 | Machine Learning Services のインストール設定および Python または R のランタイムのプロパティ。 |

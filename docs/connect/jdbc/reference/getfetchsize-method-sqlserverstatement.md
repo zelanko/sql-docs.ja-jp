@@ -16,10 +16,10 @@ ms.assetid: 8115ca58-8ae9-46ce-8515-7905d7bb25fe
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22ba06688fb402fdbcd5e9afd951a668ef9c440d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67983217"
 ---
 # <a name="getfetchsize-method-sqlserverstatement"></a>getFetchSize メソッド (SQLServerStatement)
@@ -35,7 +35,7 @@ public final int getFetchSize()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- [setFetchSize](../../../connect/jdbc/reference/setfetchsize-method-sqlserverstatement.md) メソッドによって指定されるフェッチ サイズを示す **int** です。  
+ **setFetchSize** メソッドによって指定されるフェッチ サイズを示す [int](../../../connect/jdbc/reference/setfetchsize-method-sqlserverstatement.md) です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

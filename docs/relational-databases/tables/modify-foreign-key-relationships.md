@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ca7964d61cd272af8adc93aac89f8da68827acac
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68139598"
 ---
 # <a name="modify-foreign-key-relationships"></a>外部キー リレーションシップの変更
@@ -43,9 +43,9 @@ ms.locfileid: "68139598"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
  新しい外部キー列は、関連付けられる主キー列のデータ型およびサイズと一致する必要があります。ただし、次の例外があります。  
   
 -   **char** 列または **sysname** 列は **varchar** 列と関連付けることができます。  
@@ -54,12 +54,12 @@ ms.locfileid: "68139598"
   
 -   alias データ型は、その基本型に関連付けることができます。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  テーブルに対する ALTER 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-modify-a-foreign-key"></a>外部キーを変更するには  
   
@@ -102,7 +102,7 @@ ms.locfileid: "68139598"
      **[IDENTITY] カテゴリ**  
      展開して **[オブジェクト名]** および **[説明]** のプロパティ フィールドを表示します。  
   
-     **名前**  
+     **Name**  
      リレーションシップの名前を表示します。 新しいリレーションシップを作成した場合、このプロパティには、 **テーブル デザイナー**のアクティブ ウィンドウのテーブルに基づいて、既定の名前が設定されます。 名前はいつでも変更できます。  
   
      **説明**  
@@ -144,7 +144,7 @@ ms.locfileid: "68139598"
   
 4.  **[ファイル]** メニューの **[<** テーブル名 _> を保存]_ をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  **外部キーを変更するには**  
   
  Transact-SQL を使用して FOREIGN KEY 制約を変更するには、まず既存の FOREIGN KEY 制約を削除してから、新しい定義を使用して再作成する必要があります。 詳細については、「 [Delete Foreign Key Relationships](../../relational-databases/tables/delete-foreign-key-relationships.md) 」および「 [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md)」を参照してください。  

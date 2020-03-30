@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 5b2e87cf96d6237521caeaae55802d2d72769603
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73594336"
 ---
-# <a name="install-azdata-to-manage-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-with-windows-installer"></a>Windows インストーラーで `azdata`を管理するための [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] をインストールする
+# <a name="install-azdata-to-manage-big-data-clusters-2019-with-windows-installer"></a>Windows インストーラーで `azdata`を管理するための [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] をインストールする
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -48,7 +48,7 @@ Microsoft Windows インストーラーで `azdata` をインストールする�
 >[!NOTE]
 >以前のインストールが MSI を使用して行われた場合、MSI インストーラーを使用する前に、現在のバージョンをアンインストールする必要はありません。
 
-### <a id="install-azdata-windows"></a>Windows インストーラーでインストールする
+### <a name="install-with-windows-installer"></a><a id="install-azdata-windows"></a>Windows インストーラーでインストールする
 
 Windows 上の `azdata` を、Windows インストーラーを使用してインストールまたは更新します。
 

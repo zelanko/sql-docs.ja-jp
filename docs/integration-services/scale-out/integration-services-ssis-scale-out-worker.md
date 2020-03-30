@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 1f2be60ff216b65afbb50c0e97da4edfb4239aec
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68082071"
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Integration Services (SSIS) Scale Out Worker
@@ -28,10 +28,10 @@ Scale Out Worker は Scale Out Worker サービスを実行し、Scale Out Maste
 ## <a name="configure-the-scale-out-worker-service"></a>Scale Out Worker サービスを構成する
 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config` ファイルを使用して、Scale Out Worker サービスを構成できます。 構成ファイルの更新後に、サービスを再起動する必要があります。
 
-|構成  |[説明]  |既定値|
+|構成  |説明  |既定値|
 |---------|---------|---------|
 |DisplayName|Scale Out Worker の表示名。 **[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017 では使用しません。**|コンピューター名|
-|[説明]|Scale Out Worker の説明。 **[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017 では使用しません。**|Empty|
+|説明|Scale Out Worker の説明。 **[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017 では使用しません。**|Empty|
 |MasterEndpoint|Scale Out Master に接続するエンドポイント。|Scale Out Worker のインストール時に設定されるエンドポイント|
 |MasterHttpsCertThumbprint|Scale Out Master の認証に使用されるクライアント SSL 証明書のサムプリント|Scale Out Worker のインストール時に指定されるクライアント証明書のサムプリント。|
 |WorkerHttpsCertThumbprint|Scale Out Master の認証に使用される Scale Out Master 証明書のサムプリント。|Scale Out Worker のインストール時に自動的に作成され、インストールされる証明書のサムプリント|

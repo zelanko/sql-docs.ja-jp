@@ -11,10 +11,10 @@ ms.assetid: 673cea01-a260-4fce-a1a0-f73839289805
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 07e92734aebb13d04d715a727c8b2bbe2e0dc785
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71293267"
 ---
 # <a name="create-infocube-for-transaction-data"></a>[トランザクション データのインフォキューブの作成]
@@ -64,7 +64,7 @@ ms.locfileid: "71293267"
  **Type**  
  データ フロー列に関連付けられているインフォオブジェクトの種類を表示します。 次の表に、種類として使用できる値の一覧を示します。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |CHA|特性|  
 |UNI|Units|  

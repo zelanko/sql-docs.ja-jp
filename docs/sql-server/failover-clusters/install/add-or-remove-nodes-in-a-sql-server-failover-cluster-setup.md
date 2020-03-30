@@ -18,10 +18,10 @@ ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: cba52dccb916e7dc1400d36b17eb3fd884c9faee
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75230887"
 ---
 # <a name="add-or-remove-nodes-in-a-sql-server-failover-cluster-setup"></a>SQL Server フェールオーバー クラスターでのノードの追加または削除 (セットアップ)
@@ -43,7 +43,7 @@ ms.locfileid: "75230887"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインストール場所に使用されているオペレーティング システムのドライブ文字は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターに追加されるすべてのノードで一致している必要があります。  
   
-##  <a name="Add"></a> ノードの追加  
+##  <a name="add-node"></a><a name="Add"></a> ノードの追加  
   
 #### <a name="to-add-a-node-to-an-existing-ssnoversion-failover-cluster"></a>既存の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターにノードを追加するには  
   
@@ -67,7 +67,7 @@ ms.locfileid: "75230887"
   
 9. [サーバーの構成 - サービス アカウント] ページで、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスのログイン アカウントを指定します。 このページで構成する実際のサービスは、インストール時に選択した機能によって異なります。 フェールオーバー クラスターのインストールでは、アクティブ ノードに指定された設定に基づいて、アカウント名とスタートアップの種類に関する情報がこのページにあらかじめ設定されます。 各アカウントのパスワードを入力する必要があります。 詳細については、「 [サーバー構成 - サービス アカウント](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) 」および「 [Windows サービス アカウントと権限の構成](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)」を参照してください。  
   
-     **セキュリティに関する注意:** 空白のパスワードは使用せず、強力なパスワードを使用してください。  
+     **セキュリティに関する注意:** [!INCLUDE[ssNoteStrongPass](../../../includes/ssnotestrongpass-md.md)]  
   
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスのログイン情報を指定したら、 **[次へ]** をクリックします。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "75230887"
   
 15. コンピューターの再起動を求めるメッセージが表示されたら、再起動してください。 セットアップが完了した時点で、インストール ウィザードによるメッセージを確認することが重要です。 セットアップ ログ ファイルの詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)」を参照してください。  
   
-##  <a name="Remove"></a> ノードの削除  
+##  <a name="remove-node"></a><a name="Remove"></a> ノードの削除  
   
 #### <a name="to-remove-a-node-from-an-existing-ssnoversion-failover-cluster"></a>既存の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターからノードを削除するには  
   

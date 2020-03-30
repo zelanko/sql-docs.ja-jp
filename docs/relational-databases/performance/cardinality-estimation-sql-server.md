@@ -16,10 +16,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0f9e7ef2d1503088cba081b931e09f1fb3536b56
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67946994"
 ---
 # <a name="cardinality-estimation-sql-server"></a>カーディナリティ推定 (SQL Server)
@@ -68,10 +68,10 @@ ms.locfileid: "67946994"
 
 以降の更新プログラムは [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以上 (互換性レベルが 120 以上) に含まれています。 レベル 120 以上の CE 更新プログラムには、最新のデータ ウェアハウスおよび OLTP ワークロードで適切に機能する更新された前提条件とアルゴリズムが組み込まれています。 CE 120 以降では、CE 70 の前提条件から次のモデル前提条件が変更されました。
 
--  **非依存性**が**相関関係**になります:異なる列の値の組み合わせは必ずしも独立していません。 これはより実際のデータ クエリと似ている可能性があります。
--  **単純なコンテインメント**は**ベース コンテインメント**になります:ユーザーは存在しないデータをクエリする可能性があります。 たとえば、2 つのテーブル間の等価結合では、ベース テーブル ヒストグラムを使用して結合の選択度を推定した後、述語選択度を考慮します。
+-  **非依存性**が**相関関係**になります: 異なる列の値の組み合わせは必ずしも独立していません。 これはより実際のデータ クエリと似ている可能性があります。
+-  **簡単なコンテインメント**は**ベース コンテインメント**になります: ユーザーは存在しないデータをクエリする可能性があります。 たとえば、2 つのテーブル間の等価結合では、ベース テーブル ヒストグラムを使用して結合の選択度を推定した後、述語選択度を考慮します。
   
-**互換性レベル:** [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) に次の [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを使用して、データベースが特定のレベルであることを確認します。  
+**互換性レベル:** [!INCLUDE[tsql](../../includes/tsql-md.md)]COMPATIBILITY_LEVEL[ に次の ](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) コードを使用して、データベースが特定のレベルであることを確認します。  
 
 ```sql  
 SELECT ServerProperty('ProductVersion');  
@@ -256,7 +256,7 @@ CE 120 以降で効果の低いクエリ プランが、クエリで生成され
   
 ### <a name="example-a-ce-understands-maximum-value-might-be-higher-than-when-statistics-were-last-gathered"></a>例 A。CE は、統計が最後に収集されたときよりも、最大値が高くなる可能性があることを理解しています  
   
-統計は `2016-04-30` に `OrderTable` について最後に収集され、最大 `OrderAddedDate` は `2016-04-30` であったものとします。 CE 120 (およびより高いレベル) は、"*昇順*" データを持つ `OrderTable` の列が、統計によって記録された最大値よりも大きい値を持つ可能性があることを理解しています。 これを理解すると、次のような [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントのクエリ プランの機能を改善できます。  
+統計は `OrderTable` に `2016-04-30` について最後に収集され、最大 `OrderAddedDate` は `2016-04-30` であったものとします。 CE 120 (およびより高いレベル) は、"`OrderTable`昇順 *" データを持つ*  の列が、統計によって記録された最大値よりも大きい値を持つ可能性があることを理解しています。 これを理解すると、次のような [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントのクエリ プランの機能を改善できます。  
   
 ```sql  
 SELECT CustomerId, OrderAddedDate  

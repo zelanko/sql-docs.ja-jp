@@ -18,10 +18,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 411d03198633354169e7faf8f5693685e078f2fa
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75239149"
 ---
 # <a name="set-job-step-success-or-failure-flow"></a>Set Job Step Success or Failure Flow
@@ -46,10 +46,10 @@ ms.locfileid: "75239149"
   
 ## <a name="before-you-begin"></a>はじめに  
   
-### <a name="Security"></a>セキュリティ  
+### <a name="security"></a><a name="Security"></a>セキュリティ  
 詳細については、「 [SQL Server エージェントのセキュリティの実装](../../ssms/agent/implement-sql-server-agent-security.md)」をご覧ください。  
   
-## <a name="SSMS"></a>SQL Server Management Studio の使用  
+## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>SQL Server Management Studio の使用  
   
 #### <a name="to-set-job-step-success-or-failure-flow"></a>ジョブ ステップの成功時または失敗時の動作を設定するには  
   
@@ -77,7 +77,7 @@ ms.locfileid: "75239149"
   
 9. **[実行時のユーザー]** ボックスの一覧を使用できる場合、ジョブで使用する資格情報を持つプロキシ アカウントを選択します。  
   
-## <a name="TSQL"></a>Transact-SQL の使用  
+## <a name="using-transact-sql"></a><a name="TSQL"></a>Transact-SQL の使用  
   
 #### <a name="to-set-job-step-success-or-failure-flow"></a>ジョブ ステップの成功時または失敗時の動作を設定するには  
   
@@ -101,7 +101,7 @@ ms.locfileid: "75239149"
   
 詳細については、「 [sp_add_jobstep (Transact-SQL)](https://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755)」を参照してください。  
   
-## <a name="SMO"></a>SQL Server 管理オブジェクトの使用  
+## <a name="using-sql-server-management-objects"></a><a name="SMO"></a>SQL Server 管理オブジェクトの使用  
 **ジョブ ステップの成功時または失敗時の動作を設定するには**  
   
 Visual Basic、Visual C#、PowerShell などの選択したプログラミング言語で **JobStep** クラスを使用します。 詳細については、「 [SQL Server 管理オブジェクト (SMO) プログラミング ガイド](https://msdn.microsoft.com/library/ms162169.aspx)」を参照してください。  

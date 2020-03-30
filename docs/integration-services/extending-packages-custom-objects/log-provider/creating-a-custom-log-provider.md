@@ -16,10 +16,10 @@ ms.assetid: fc20af96-9eb8-4195-8d3f-8a4d7c753f24
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d946868dad2aa9facc9b08a8ab32a1a4218406e9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297206"
 ---
 # <a name="creating-a-custom-log-provider"></a>カスタム ログ プロバイダーの作成
@@ -50,7 +50,7 @@ ms.locfileid: "71297206"
 >  多くの [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ログ プロバイダーには、カスタム ユーザー インターフェイスがあります。カスタム ユーザー インターフェイスには <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI> が実装され、 **[SSIS ログの構成]** ダイアログ ボックスの **[構成]** ボックスが、使用可能な接続マネージャーがフィルター選択されたドロップダウン リストに置き換えられます。 ただし、カスタム ログ プロバイダーのカスタム ユーザー インターフェイスは、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] では実装されていません。  
   
 ### <a name="applying-the-dtslogprovider-attribute"></a>DtsLogProvider 属性の適用  
- 作成したクラスに <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> 属性を適用して、そのクラスがログ プロバイダーとして識別されるようにします。 この属性には、ログ プロバイダーの名前や説明など、デザイン時の情報を指定します。 この属性の **DisplayName** プロパティと **Description** プロパティは、[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] でパッケージのログ記録を構成するときに、 **[SSIS ログの構成]** エディターに表示される **[名前]** 列と **[説明]** 列に対応します。  
+ 作成したクラスに <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> 属性を適用して、そのクラスがログ プロバイダーとして識別されるようにします。 この属性には、ログ プロバイダーの名前や説明など、デザイン時の情報を指定します。 この属性の **DisplayName** プロパティと **Description** プロパティは、 **でパッケージのログ記録を構成するときに、** [SSIS ログの構成]**エディターに表示される**[名前]**列と**[説明][!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 列に対応します。  
   
 > [!IMPORTANT]  
 >  この属性の <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute.LogProviderType%2A> プロパティは使用されません。 ただし、このプロパティには値を入力する必要があります。そうしないと、使用可能なログ プロバイダーの一覧にカスタム ログ プロバイダーが表示されません。  

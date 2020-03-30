@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 3e21dfe719f40165e0e68e7bf6242c526c298eb4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73707437"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の新機能
@@ -59,7 +59,7 @@ R の新機能には、次のような特徴を持つ[**パッケージ管理**]
 
 ### <a name="r-libraries"></a>R ライブラリ
 
-| Package | [説明] |
+| Package | 説明 |
 |---------|-------------|
 | [**MicrosoftML**](r/ref-r-microsoftml.md) | このリリースでは、MicrosoftML は既定の R インストールに含まれており、前の SQL Server 2016 R Services で必要だったアップグレード手順が不要になっています。 MicrosoftML は、最先端の機械学習アルゴリズムと、リモート計算コンテキストでスケーリングまたは実行できるデータ変換を提供します。 アルゴリズムには、カスタマイズ可能なディープ ニューラル ネットワーク、高速デシジョン ツリーとデシジョン フォレスト、線形回帰、およびロジスティック回帰が含まれます。  |
 
@@ -75,7 +75,7 @@ T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) 関数を使用する�
 
 ### <a name="python-libraries"></a>Python ライブラリ
 
-| Package | [説明] |
+| Package | 説明 |
 |---------|-------------|
 |[**revoscalepy**](python/ref-py-revoscalepy.md)| Python で RevoScaleR に相当するもの。 線形回帰およびロジスティック回帰、デシジョン ツリー、ブースト ツリー、ランダム フォレストに対し、すべて並列化可能で、リモート計算コンテキストで実行することができる Python モデルを作成することができます。 このパッケージでは、複数のデータ ソースとリモート計算コンテキストの使用がサポートされています。 データ サイエンティストや開発者は、リモート SQL Server で Python コードを実行して、データを移動せずに、データを探索したり、モデルを構築したりすることができます。 |
 |[**microsoftml**](python/ref-py-microsoftml.md) |Python で MicrosoftML R パッケージに相当するもの。 |

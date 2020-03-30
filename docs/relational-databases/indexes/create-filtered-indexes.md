@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3cb02f0cbb395b8e3f730e62139eb7b7d89b4c96
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908105"
 ---
 # <a name="create-filtered-indexes"></a>フィルター選択されたインデックスの作成
@@ -59,15 +59,15 @@ ms.locfileid: "72908105"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Design"></a> デザインに関する考慮事項  
+###  <a name="design-considerations"></a><a name="Design"></a> デザインに関する考慮事項  
   
 -   クエリに関連する少数の値だけが列に含まれている場合、値のサブセットにフィルター選択されたインデックスを作成できます。 たとえば、列の値がほとんど NULL の場合に、クエリで常に NULL 以外の値を選択するときは、NULL 以外のデータ行にフィルター選択されたインデックスを作成できます。 作成したインデックスは、同じキー列に定義されているテーブル全体の非クラスター化インデックスよりも小さく、メンテナンス コストが少なくなります。  
   
 -   テーブルに異種データの行が含まれている場合、1 つ以上のカテゴリのデータに対してフィルター選択されたインデックスを作成できます。 これにより、クエリのフォーカスをテーブルの特定の領域に狭めて、これらのデータに対するクエリのパフォーマンスを向上させることができます。 繰り返しになりますが、作成したインデックスは、テーブル全体の非クラスター化インデックスよりも小さく、メンテナンス コストが少なくなります。  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   フィルター選択されたインデックスをビューに作成することはできません。 ただし、クエリ オプティマイザーにとって、ビューで参照されているテーブルに定義されたフィルター選択されたインデックスは役立ちます。 クエリ オプティマイザーでは、クエリ結果が正しくなる場合、ビューから選択するクエリに対してフィルター選択されたインデックスが検討されます。
 
@@ -97,12 +97,12 @@ ms.locfileid: "72908105"
 
 - [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md) 構文のフィルター選択されたインデックスの作成に必要な SET オプションを確認します。
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  テーブルまたはビューに対する ALTER 権限が必要です。 実行するには、 **sysadmin** 固定サーバー ロール、または **db_ddladmin** 固定データベース ロールおよび **db_owner** 固定データベース ロールのメンバーである必要があります。 フィルター選択されたインデックスの式を変更するには、CREATE INDEX WITH DROP_EXISTING を使用します。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-create-a-filtered-index"></a>フィルター選択されたインデックスを作成するには  
   
@@ -126,7 +126,7 @@ ms.locfileid: "72908105"
   
 10. **[OK]** をクリックします。  
 
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-create-a-filtered-index"></a>フィルター選択されたインデックスを作成するには  
   

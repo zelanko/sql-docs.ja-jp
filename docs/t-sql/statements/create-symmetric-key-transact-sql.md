@@ -23,10 +23,10 @@ ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 485ef972b86795a2127dba5fc3e86bdf98354c7c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68117066"
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY (Transact-SQL)
@@ -156,7 +156,7 @@ CREATE SYMMETRIC KEY key_name
 ## <a name="examples"></a>例  
   
 ### <a name="a-creating-a-symmetric-key"></a>A. 対称キーを作成する  
- 次の例では、`AES 256` アルゴリズムを使用して対称キー `JanainaKey09` を作成し、新しいキーを証明書 `Shipping04` を使用して暗号化します。  
+ 次の例では、`JanainaKey09` アルゴリズムを使用して対称キー `AES 256` を作成し、新しいキーを証明書 `Shipping04` を使用して暗号化します。  
   
 ```  
 CREATE SYMMETRIC KEY JanainaKey09   
@@ -180,7 +180,7 @@ GO
 ```  
   
 ### <a name="c-creating-a-symmetric-key-using-an-extensible-key-management-ekm-device"></a>C. 拡張キー管理 (EKM) デバイスを使用して対称キーを作成する  
- 次の例では、`MyEKMProvider` というプロバイダーとキー名 `KeyForSensitiveData` を使用して、`MySymKey` という対称キーを作成します。 `User1` に承認を割り当てています。また、システム管理者が `MyEKMProvider` というプロバイダーを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に既に登録していることを前提としています。  
+ 次の例では、`MySymKey` というプロバイダーとキー名 `MyEKMProvider` を使用して、`KeyForSensitiveData` という対称キーを作成します。 `User1` に承認を割り当てています。また、システム管理者が `MyEKMProvider` というプロバイダーを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に既に登録していることを前提としています。  
   
 ```  
 CREATE SYMMETRIC KEY MySymKey  

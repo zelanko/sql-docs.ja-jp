@@ -15,28 +15,28 @@ ms.assetid: e23c6e06-1cd1-4d4a-9bc2-e3e06ab2933d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 0dd31433b94cb32cb68c9ff9d1eaa7e2f08ab324
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822432"
 ---
 # <a name="modify-the-session-timeout-period-for-an-availability-group-replica"></a>可用性グループ レプリカのセッション タイムアウト期間の変更
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このトピックでは、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]、または PowerShell を使用して、Always On 可用性レプリカのセッション タイムアウト期間を構成する方法について説明します。 セッション タイムアウト期間は、接続されたレプリカからの ping 応答を可用性レプリカが何秒待機するかを制御するレプリカ プロパティです。この期間を過ぎると、接続に失敗したと見なされます。 既定では、レプリカは ping 応答を 10 秒間待機します。 このレプリカ プロパティは、可用性グループ内の指定したセカンダリ レプリカとプライマリ レプリカ間の接続のみに適用されます。 セッション タイムアウト期間の詳細については、「[Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)」を参照してください。  
    
-##  <a name="Prerequisites"></a> 前提条件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
   
 -   プライマリ レプリカをホストするサーバー インスタンスに接続されている必要があります。  
   
-##  <a name="Recommendations"></a> 推奨事項  
+##  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
  タイムアウト期間を 10 秒以上にしておくことをお勧めします。 値を 10 秒未満に設定すると、負荷の高いシステムでは PING を受信できず、誤認エラーが示される可能性があります。  
   
   
-## <a name="Permissions"></a> Permissions  
+## <a name="permissions"></a><a name="Permissions"></a> Permissions  
  可用性グループの ALTER AVAILABILITY GROUP 権限、CONTROL AVAILABILITY GROUP 権限、ALTER ANY AVAILABILITY GROUP 権限、または CONTROL SERVER 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  **可用性レプリカのセッション タイムアウト期間を変更するには**  
   
 1.  オブジェクト エクスプローラーで、プライマリ レプリカをホストするサーバー インスタンスに接続し、サーバー ツリーを展開します。  
@@ -49,7 +49,7 @@ ms.locfileid: "74822432"
   
 5.  **[可用性レプリカ プロパティ]** ダイアログ ボックスで **[セッションのタイムアウト (秒)]** フィールドを使用して、このレプリカでのセッション タイムアウト期間の秒数を変更します。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  **可用性レプリカのセッション タイムアウト期間を変更するには**  
   
 1.  プライマリ レプリカをホストするサーバー インスタンスに接続します。  
@@ -69,7 +69,7 @@ ms.locfileid: "74822432"
        MODIFY REPLICA ON 'INSTANCE09' WITH (SESSION_TIMEOUT = 15);  
     ```  
   
-##  <a name="PowerShellProcedure"></a> PowerShell の使用  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell の使用  
  **可用性レプリカのセッション タイムアウト期間を変更するには**  
   
 1.  プライマリ レプリカをホストするサーバー インスタンスにディレクトリを変更 (**cd**) します 。  

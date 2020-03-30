@@ -18,10 +18,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 30b1023ab732bdc711afa2a15b70df5646a90826
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242419"
 ---
 # <a name="disable-or-enable-a-job"></a>Disable or Enable a Job
@@ -32,12 +32,12 @@ ms.locfileid: "75242419"
 
 このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で [!INCLUDE[tsql](../../includes/tsql-md.md)]エージェント ジョブを無効にする方法について説明します。 ジョブを無効にしても、ジョブは削除されるわけではなく、必要に応じて再び有効にすることができます。  
   
-## <a name="BeforeYouBegin"></a>はじめに  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>はじめに  
   
-### <a name="Security"></a>セキュリティ  
+### <a name="security"></a><a name="Security"></a>セキュリティ  
 詳細については、「 [SQL Server エージェントのセキュリティの実装](../../ssms/agent/implement-sql-server-agent-security.md)」をご覧ください。  
   
-## <a name="SSMS"></a>SQL Server Management Studio の使用  
+## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>SQL Server Management Studio の使用  
   
 #### <a name="to-disable-or-enable-a-job"></a>ジョブを無効または有効にするには  
   
@@ -49,7 +49,7 @@ ms.locfileid: "75242419"
   
 4.  ジョブを無効にするには、 **[無効化]** をクリックします。 ジョブを有効にするには、 **[有効化]** をクリックします。  
   
-## <a name="TSQL"></a>Transact-SQL の使用  
+## <a name="using-transact-sql"></a><a name="TSQL"></a>Transact-SQL の使用  
   
 #### <a name="to-disable-or-enable-a-job"></a>ジョブを無効または有効にするには  
   

@@ -13,10 +13,10 @@ ms.assetid: 1f510151-41d5-45c2-9cd0-b1ca0246fffe
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3f5e9e831677a2779c908a0ec4b3afa5b27f7fff
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68058494"
 ---
 # <a name="create-xml-index-selective-xml-indexes"></a>CREATE XML INDEX (選択的 XML インデックス)
@@ -65,7 +65,7 @@ xmlnamespace_uri AS xmlnamespace_prefix
 )  
 ```  
   
-##  <a name="Arguments"></a> 引数  
+##  <a name="arguments"></a><a name="Arguments"></a> 引数  
  *index_name*  
  作成する新しいインデックスの名前を指定します。 インデックス名は、テーブル内では一意である必要がありますが、データベース内で一意である必要はありません。 インデックス名は、[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。  
   

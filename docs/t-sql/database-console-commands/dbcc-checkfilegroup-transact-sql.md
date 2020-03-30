@@ -26,10 +26,10 @@ ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: c3b8061b49d0acacedae323645cd8822beaa016e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68102036"
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
@@ -131,7 +131,7 @@ DBCC CHECKFILEGROUP は、内部データベースのスナップショットを
 ## <a name="understanding-dbcc-error-messages"></a>DBCC エラー メッセージについて  
 DBCC CHECKFILEGROUP コマンドの終了後、メッセージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに書き込まれます。 DBCC コマンドが正常に実行された場合、メッセージでは正常完了とコマンド実行時間が示されます。 エラーが発生して DBCC コマンドが完了前に停止した場合、メッセージではコマンドが終了したことと、状態の値、コマンド実行時間が示されます。 次の表は、メッセージに含まれる可能性がある状態値の一覧と説明です。
   
-|State|[説明]|  
+|State|説明|  
 |-----------|-----------------|  
 |0|エラー番号 8930 が発生しました。 メタデータの破損が原因で DBCC コマンドが終了しました。|  
 |1|エラー番号 8967 が発生しました。 内部 DBCC エラーがあります。|  

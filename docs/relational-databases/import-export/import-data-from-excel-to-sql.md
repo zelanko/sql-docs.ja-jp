@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 68a5542d36731e260ab4aeb5a0734bea2a983108
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75245268"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Excel から SQL Server または Azure SQL Database にデータをインポートする
@@ -45,7 +45,7 @@ SSIS や Azure Data Factory のような複雑なツールとサービスの詳�
 
 SQL Server をインストールしていない場合、あるいは SQL Server をインストールしているが、SQL Server Management Studio をインストールしていない場合、「 [SQL Server Management Studio (SSMS) のダウンロード](../../ssms/download-sql-server-management-studio-ssms.md)」を参照してください。
 
-## <a name="wiz"></a> SQL Server インポートおよびエクスポート ウィザード
+## <a name="sql-server-import-and-export-wizard"></a><a name="wiz"></a> SQL Server インポートおよびエクスポート ウィザード
 
 SQL Server インポートおよびエクスポート ウィザードのページをステップ実行して、Excel ファイルから直接データをインポートします。 必要に応じて、後でカスタマイズして再利用できる SQL Server Integration Services (SSIS) パッケージとして設定を保存します。
 
@@ -67,7 +67,7 @@ SQL Server インポートおよびエクスポート ウィザードのペー�
 
 インポートとエクスポートのウィザードを起動するその他の方法については、「[SQL Server インポートおよびエクスポート ウィザードを起動する](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md)」を参照してください。
 
-## <a name="ssis"></a> SQL Server Integration Services (SSIS)
+## <a name="sql-server-integration-services-ssis"></a><a name="ssis"></a> SQL Server Integration Services (SSIS)
 
 SSIS に精通していて、SQL Server インポートおよびエクスポート ウィザードを実行したくない場合は、Excel ソースおよびデータ フロー内の SQL Server 変換先を使用する SSIS パッケージを作成します。
 
@@ -80,7 +80,7 @@ SSIS パッケージをビルドする方法の学習を開始するには、チ
 
 ![データ フロー内のコンポーネント](media/excel-to-sql-data-flow.png)
 
-## <a name="openrowset"></a>OPENROWSET およびリンク サーバー
+## <a name="openrowset-and-linked-servers"></a><a name="openrowset"></a>OPENROWSET およびリンク サーバー
 
 > [!IMPORTANT]
 > Azure SQL Database では、Excel から直接インポートすることはできません。 まず、データをテキスト (CSV) ファイルにエクスポートする必要があります。 例については、「[例](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)」を参照してください。
@@ -128,7 +128,7 @@ FROM OPENDATASOURCE('Microsoft.ACE.OLEDB.12.0',
 GO
 ```
 
-新しいテーブルを作成する代わりに、インポートされたデータを、 *"既存"* テーブルに *"追加"* するには、前の例で使用された `SELECT ... INTO ... FROM ...` 構文ではなく `INSERT INTO ... SELECT ... FROM ...` 構文を使用します。
+新しいテーブルを作成する代わりに、インポートされたデータを、 *"既存"* テーブルに *"追加"* するには、前の例で使用された `INSERT INTO ... SELECT ... FROM ...` 構文ではなく `SELECT ... INTO ... FROM ...` 構文を使用します。
 
 Excel のデータをインポートせずに Excel のデータにクエリを実行するには、標準の `SELECT ... FROM ...` 構文を使用します。
 
@@ -140,7 +140,7 @@ Excel のデータをインポートせずに Excel のデータにクエリを�
 
 ### <a name="linked-servers"></a>リンク サーバー
 
-SQL Server から Excel ファイルへの永続的な接続を *"リンク サーバー"* として構成することもできます。 次の例は、既存の Excel のリンク サーバー `EXCELLINK` の `Data` ワークシートからデータを、`Data_ls` という名前の新しい SQL Server データベース テーブルにインポートしています。
+SQL Server から Excel ファイルへの永続的な接続を *"リンク サーバー"* として構成することもできます。 次の例は、既存の Excel のリンク サーバー `Data` の `EXCELLINK` ワークシートからデータを、`Data_ls` という名前の新しい SQL Server データベース テーブルにインポートしています。
 
 ```sql
 USE ImportFromExcel;
@@ -183,7 +183,7 @@ EXEC @RC = [master].[dbo].[sp_addlinkedserver] @server, @srvproduct, @provider,
 - [SQL Server のリンク サーバーおよび分散クエリで Excel を使用する方法](https://support.microsoft.com/help/306397/how-to-use-excel-with-sql-server-linked-servers-and-distributed-queries)
 - [[HOWTO] DTS: Excel から SQL Server にデータをインポートする方法](https://support.microsoft.com/help/321686/how-to-import-data-from-excel-to-sql-server)
 
-## <a name="prereq"></a> 前提条件 - Excel データをテキストとして保存する
+## <a name="prerequisite---save-excel-data-as-text"></a><a name="prereq"></a> 前提条件 - Excel データをテキストとして保存する
 
 このページの BULK INSERT ステートメント、BCP ツール、または Azure Data Factory に記載されているメソッドの残りの部分を使用するには、最初に Excel データをテキスト ファイルにエクスポートする必要があります。
 
@@ -194,7 +194,7 @@ Excel で **[ファイル] メニューから [名前をつけて保存]** を�
 > [!TIP]
 > データ インポート ツールで最適な結果を得るには、列ヘッダーとデータ行のみが含まれているシートを保存します。 保存したデータにページ タイトル、空白行、メモなどが含まれる場合は、後でデータをインポートするときに、予期しない結果になる可能性があります。
 
-## <a name="import-wiz"></a>フラット ファイルのインポート ウィザード
+## <a name="the-import-flat-file-wizard"></a><a name="import-wiz"></a>フラット ファイルのインポート ウィザード
 
 フラット ファイルのインポート ウィザードのページをステップ実行して、テキストファイルとして保存したデータをインポートします。
 
@@ -202,7 +202,7 @@ Excel で **[ファイル] メニューから [名前をつけて保存]** を�
 
 フラット ファイルのインポート ウィザードについて詳しくは、「[SQL のフラット ファイルのインポート ウィザード](import-flat-file-wizard.md)」をご覧ください。
 
-## <a name="bulk-insert"></a>BULK INSERT コマンド
+## <a name="bulk-insert-command"></a><a name="bulk-insert"></a>BULK INSERT コマンド
 
 `BULK INSERT` は、SQL Server Management Studio から実行できる Transact-SQL コマンドです。 次の例では、`Data.csv` コンマ区切りファイルから既存のデータベース テーブルにデータを読み込みます。
 
@@ -224,7 +224,7 @@ SQL Server と SQL Database の詳細と例については、次のトピック�
 - [BULK INSERT または OPENROWSET(BULK...) を使用した一括データのインポート](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)
 - [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)
 
-## <a name="bcp"></a>BCP ツール
+## <a name="bcp-tool"></a><a name="bcp"></a>BCP ツール
 
 BCP は、コマンド プロンプトから実行するプログラムです。 次の例では、`Data.csv` コンマ区切りファイルから既存の `Data_bcp` データベース テーブルにデータを読み込みます。
 
@@ -243,7 +243,7 @@ BCP の詳細については、次のトピックを参照してください。
 - [bcp ユーティリティ](../../tools/bcp-utility.md)
 - [一括エクスポートまたは一括インポートのデータの準備](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)
 
-## <a name="adf-wiz"></a>コピー ウィザード (Azure Data Factory)
+## <a name="copy-wizard-azure-data-factory"></a><a name="adf-wiz"></a>コピー ウィザード (Azure Data Factory)
 
 Azure Data Factory のコピー ウィザードのページをステップ実行して、テキストファイルとして保存したデータをインポートします。
 
@@ -252,9 +252,9 @@ Azure Data Factory のコピー ウィザードのページをステップ実行
 コピー ウィザードの詳細については、次のトピックを参照してください。
 
 - [Data Factory コピー ウィザード](https://docs.microsoft.com/azure/data-factory/data-factory-azure-copy-wizard)
-- [チュートリアル:コピー アクティビティがあるパイプラインを Data Factory コピー ウィザードで作成する](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial)。
+- [チュートリアル: コピー アクティビティがあるパイプラインを Data Factory コピー ウィザードで作成する](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial)。
 
-## <a name="adf"></a> Azure Data Factory
+## <a name="azure-data-factory"></a><a name="adf"></a> Azure Data Factory
 
 Azure Data Factory に精通していて、コピー ウィザードを実行したくない場合は、テキスト ファイルから SQL Server または Azure SQL Database にコピーするコピー アクティビティでパイプラインを作成します。
 
@@ -269,7 +269,7 @@ Azure Data Factory に精通していて、コピー ウィザードを実行し
 Azure Data Factory でデータをコピーする方法の学習を開始するには、次のトピックを参照してください。
 
 - [コピー アクティビティを使用したデータの移動](https://docs.microsoft.com/azure/data-factory/data-factory-data-movement-activities)
-- [チュートリアル:コピー アクティビティがあるパイプラインを Azure portal で作成する](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
+- [チュートリアル: コピー アクティビティがあるパイプラインを Azure Portal で作成する](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
 
 ## <a name="common-errors"></a>一般的なエラー
 

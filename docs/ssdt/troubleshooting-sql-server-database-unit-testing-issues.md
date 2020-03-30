@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: fd1b41a9744c112fcafc8968bad7abc5ac9aa4c4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75256307"
 ---
 # <a name="troubleshooting-sql-server-database-unit-testing-issues"></a>SQL Server のデータベース単体テストに関する問題のトラブルシューティング
@@ -27,13 +27,13 @@ ms.locfileid: "75256307"
   
 -   [データベース単体テストの実行時にタイムアウトする](#TimeoutsDuringUnitTests)  
   
-## <a name="UnitTestingAndAppConfigChanges"></a>単体テストの実行時に単体テストと App.Config への変更が無視される  
+## <a name="unit-testing-and-appconfig-changes-ignored-when-you-run-unit-tests"></a><a name="UnitTestingAndAppConfigChanges"></a>単体テストの実行時に単体テストと App.Config への変更が無視される  
 テスト プロジェクトの App.Config ファイルを変更する場合、テスト プロジェクトをビルドし直さないと、その変更が反映されません。 これらの変更には、 **[SQL Server テスト構成]** ダイアログ ボックスを使用して App.Config に対して行う変更も含まれます。 テスト プロジェクトをビルドし直さない場合、単体テストを実行しても変更は適用されません。  
   
-## <a name="DatabaseDeploymentInUnitTests"></a>単体テストの実行時にデータベースが予期しないターゲットに配置される  
+## <a name="database-deployment-to-unexpected-target-when-you-run-unit-tests"></a><a name="DatabaseDeploymentInUnitTests"></a>単体テストの実行時にデータベースが予期しないターゲットに配置される  
 単体テストの実行時にデータベース プロジェクトからデータベースを配置する場合は、単体テスト構成で指定された接続文字列情報を使用してデータベースが配置されます。 データベース プロジェクトのデバッグ プロパティで指定された接続情報はこのタスクでは使用されないため、同じデータベースの異なるインスタンスに対して SQL Server 単体テストを実行できます。  
   
-## <a name="TimeoutsDuringUnitTests"></a>データベース単体テストの実行時にタイムアウトする  
+## <a name="timeouts-when-you-run-database-unit-tests"></a><a name="TimeoutsDuringUnitTests"></a>データベース単体テストの実行時にタイムアウトする  
 タイムアウトが原因でデータベース単体テストが失敗する場合は、テスト プロジェクトの app.config ファイルを更新してタイムアウト期間を長くすることができます。 接続文字列で定義した接続のタイムアウトは、単体テストがサーバーに接続する際の待機時間を指定します。 app.config ファイルで直接定義する必要があるコマンド タイムアウトは、単体テストが Transact\-SQL スクリプトを実行する際の待機時間を指定します。 実行時間の長い単体テストで問題が発生した場合は、適切なコンテキスト要素でコマンド タイムアウト値を大きくしてください。 たとえば、**PrivilegedContext** 要素に 120 秒のコマンド タイムアウトを指定するには、app.config を次のように更新します。  
   
 ```  

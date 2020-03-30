@@ -16,16 +16,16 @@ ms.assetid: b78d2192-f315-4c45-9051-c77059e2c3f4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4a47ac1202ec73c15198b9b6f3c87ee53e027c83
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67976181"
 ---
 # <a name="preparestatement-method-javalangstring-int-int-int"></a>prepareStatement (java.lang.String, int, int, int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  渡された結果セットの種類、コンカレンシー、および保持機能の [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトを生成する [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) オブジェクトを作成します。  
+  渡された結果セットの種類、コンカレンシー、および保持機能の [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) オブジェクトを生成する [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトを作成します。  
   
 ## <a name="syntax"></a>構文  
   

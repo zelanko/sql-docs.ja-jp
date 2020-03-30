@@ -21,10 +21,10 @@ ms.assetid: b3a930e6-df05-4034-929c-f681f5f6fc6e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5563c65352713f3557e4c412607d1944f28f3a3f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68071434"
 ---
 # <a name="filegroupproperty-transact-sql"></a>FILEGROUPPROPERTY (Transact-SQL)
@@ -47,7 +47,7 @@ FILEGROUPPROPERTY ( filegroup_name, property )
  *property*  
 ファイル グループのプロパティの名前を返す **varchar(128)** 型の式を指定します。 *property* によって返される値は次のいずれかです。  
   
-|値|[説明]|返される値|  
+|値|説明|返される値|  
 |-----------|-----------------|--------------------|  
 |**IsReadOnly**|ファイル グループが読み取り専用であるかどうかを示します。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力です。|  
 |**IsUserDefinedFG**|ファイル グループはユーザー定義のファイル グループです。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力です。|  

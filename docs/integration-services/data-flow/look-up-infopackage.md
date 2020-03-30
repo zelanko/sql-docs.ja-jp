@@ -11,10 +11,10 @@ ms.assetid: 7c0cb7a4-cd07-44cc-85cb-eb1ad91f85fd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2c5736704fd170c629dacdadb89cb3466a0180db
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298232"
 ---
 # <a name="look-up-infopackage"></a>[インフォパッケージの参照]
@@ -63,7 +63,7 @@ ms.locfileid: "71298232"
  **Type**  
  インフォパッケージの種類を表示します。 次の表に、種類として使用できる値の一覧を示します。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |Trans.|トランザクション データ。|  
 |Attr.|属性データ。|  

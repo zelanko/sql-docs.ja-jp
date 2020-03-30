@@ -13,10 +13,10 @@ ms.assetid: c557e37d-319e-4adb-a0c1-94189b15d2ac
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0d37918c0ca2be62c2e620faa8034548df2b4592
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67940824"
 ---
 # <a name="backup-device-general-page"></a>[バックアップ デバイス] ([全般] ページ)
@@ -58,7 +58,7 @@ ms.locfileid: "67940824"
   
  論理バックアップ デバイスに対応している物理バックアップ デバイスは、メディア セットの最初のバックアップを論理バックアップ デバイスに書き込むときに初期化されます。 物理バックアップ デバイスが、まだ存在していないファイルの場合は、この時点で作成されます。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [ディスク ファイルの論理バックアップ デバイスの定義 &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
   

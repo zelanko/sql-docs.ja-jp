@@ -13,10 +13,10 @@ ms.assetid: 5972cee3-b1a9-4c56-aed6-bdddf84af283
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dc7e5d4deb17335dfc1910b44306f611092e0984
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294675"
 ---
 # <a name="manage-an-oracle-cdc-service"></a>Manage an Oracle CDC Service
@@ -42,7 +42,7 @@ ms.locfileid: "71294675"
   
      操作する CDC サービスを右クリックして、目的のアクションをクリックすることもできます。 「 [CDC Service で可能な操作](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService)」を参照してください。  
   
-##  <a name="BKMK_WhatcandowithCDCService"></a> CDC Service で可能な操作  
+##  <a name="what-can-you-do-with-a-cdc-service"></a><a name="BKMK_WhatcandowithCDCService"></a> CDC Service で可能な操作  
  CDC サービスの操作時には、以下のアクションを実行できます。  
   
 ### <a name="delete-the-service"></a>サービスの削除  

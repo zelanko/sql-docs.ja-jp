@@ -17,10 +17,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
 ms.openlocfilehash: ae08d5baef685a0b338ad574357230f01d3814cf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70873881"
 ---
 # <a name="edge-constraints"></a>エッジ制約
@@ -29,7 +29,7 @@ ms.locfileid: "70873881"
 
 エッジ制約を使用して、データの整合性と特定のセマンティクスを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] グラフ データベース内のエッジ テーブルに適用できます。
 
-## <a name="Connection"></a> エッジ制約
+## <a name="edge-constraints"></a><a name="Connection"></a> エッジ制約
 
 グラフ機能の初回のリリースでは、エッジ テーブルでエッジのエンドポイントに対して強制できることは何もありませんでした。 つまり、グラフ データベース内のエッジは、その種類に関係なく、任意のノードを他の任意のノードに接続することができました。
 

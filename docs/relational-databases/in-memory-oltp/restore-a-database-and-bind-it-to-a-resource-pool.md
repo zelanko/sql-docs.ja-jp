@@ -11,10 +11,10 @@ ms.assetid: 0d20a569-8a27-409c-bcab-0effefb48013
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 4b19476f08398e6b704ee56125f3290d39c59954
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68111813"
 ---
 # <a name="restore-a-database-and-bind-it-to-a-resource-pool"></a>データベースの復元とリソース プールへのバインド
@@ -34,7 +34,7 @@ ms.locfileid: "68111813"
   
 5.  [リソース プール パフォーマンスの監視](../../relational-databases/in-memory-oltp/restore-a-database-and-bind-it-to-a-resource-pool.md#bkmk_Monitor)  
   
-###  <a name="bkmk_NORECOVERY"></a> NORECOVERY を指定して復元を行う  
+###  <a name="restore-with-norecovery"></a><a name="bkmk_NORECOVERY"></a> NORECOVERY を指定して復元を行う  
  データベースを復元するときに、NORECOVERY ではメモリを使用せずにデータベースが作成され、ディスク イメージが復元されます。  
   
 ```sql  
@@ -43,7 +43,7 @@ RESTORE DATABASE IMOLTP_DB
    WITH NORECOVERY  
 ```  
   
-###  <a name="bkmk_createPool"></a> リソース プールを作成する  
+###  <a name="create-the-resource-pool"></a><a name="bkmk_createPool"></a> リソース プールを作成する  
  次の [!INCLUDE[tsql](../../includes/tsql-md.md)] では、使用可能なメモリを 50% に指定して、Pool_IMOLTP という名前のリソース プールが作成されます。  プールが作成された後、Pool_IMOLTP が含まれるようにリソース ガバナーが再構成されます。  
   
 ```sql  
@@ -52,7 +52,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-###  <a name="bkmk_bind"></a> データベースとリソース プールをバインドする  
+###  <a name="bind-the-database-and-resource-pool"></a><a name="bkmk_bind"></a> データベースとリソース プールをバインドする  
  システム関数 `sp_xtp_bind_db_resource_pool` を使用して、データベースをリソース プールにバインドします。 この関数は、パラメーターとしてデータベース名とリソース プール名をこの順序で受け取ります。  
   
  次の [!INCLUDE[tsql](../../includes/tsql-md.md)] では、リソース プール Pool_IMOLTP へのデータベース IMOLTP_DB のバインドを定義しています。 このバインドは、次の手順を完了するまで有効になりません。  
@@ -62,7 +62,7 @@ EXEC sp_xtp_bind_db_resource_pool 'IMOLTP_DB', 'Pool_IMOLTP'
 GO  
 ```  
   
-###  <a name="bkmk_RECOVERY"></a> RECOVERY を指定して復元を行う  
+###  <a name="restore-with-recovery"></a><a name="bkmk_RECOVERY"></a> RECOVERY を指定して復元を行う  
  RECOVERY を指定してデータベースを復元すると、データベースがオンラインになり、すべてのデータが復元されます。  
   
 ```sql  
@@ -70,7 +70,7 @@ RESTORE DATABASE IMOLTP_DB
    WITH RECOVERY  
 ```  
   
-###  <a name="bkmk_Monitor"></a> リソース プール パフォーマンスの監視  
+###  <a name="monitor-the-resource-pool-performance"></a><a name="bkmk_Monitor"></a> リソース プール パフォーマンスの監視  
  データベースが名前付きリソース プールにバインドされ、RECOVERY を指定して復元されたら、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Resource Pool Stats オブジェクトを監視します。 詳細については、「 [SQL Server、Resource Pool Stats オブジェクト](../../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

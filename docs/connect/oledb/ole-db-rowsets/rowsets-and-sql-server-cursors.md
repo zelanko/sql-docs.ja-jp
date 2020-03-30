@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 9ba062c9718203c52659dd0c35fa7bcb76b1a40c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67994178"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>行セットと SQL Server カーソル
@@ -64,7 +64,7 @@ ms.locfileid: "67994178"
   
  次の行セット プロパティによって、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] カーソルを使用することが OLE DB Driver for SQL Server に指示されます。 プロパティによっては、他のプロパティと組み合わせて使用できるものもあります。 たとえば、DBPROP_IRowsetScroll プロパティと DBPROP_IRowsetChange プロパティを備えた行セットは、即時更新動作を表すブックマーク行セットになります。 同時に指定できないプロパティもあります。 たとえば、DBPROP_OTHERINSERT を備えた行セットにはブックマークを含めることはできません。  
   
-|プロパティ ID|Value|行セットの動作|  
+|プロパティ ID|値|行セットの動作|  
 |-----------------|-----------|---------------------|  
 |DBPROP_SERVERCURSOR|VARIANT_TRUE|行セットを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データを更新できません。 行セットは順次処理され、順方向のスクロールとフェッチのみがサポートされます。 相対行位置指定がサポートされます。 コマンド テキストに ORDER BY 句を指定できます。|  
 |DBPROP_CANSCROLLBACKWARDS または DBPROP_CANFETCHBACKWARDS|VARIANT_TRUE|行セットを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データを更新できません。 行セットでは、両方向へのスクロールとフェッチがサポートされます。 相対行位置指定がサポートされます。 コマンド テキストに ORDER BY 句を指定できます。|  
@@ -77,7 +77,7 @@ ms.locfileid: "67994178"
 |DBPROP_IMMOBILEROWS|VARIANT_FALSE|行セットを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データを更新できません。 行セットでは、順方向のスクロールしかサポートされません。 相対行位置指定がサポートされます。 参照先の列にインデックスが存在する場合は、コマンド テキストに ORDER BY 句を指定できます。<br /><br /> DBPROP_IMMOBILEROWS は、別のセッションのコマンドや別のユーザーから挿入された [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 行を表示できる行セットだけで使用できます。 DBPROP_OTHERINSERT に VARIANT_TRUE を設定できない行セットで、プロパティに VARIANT_FALSE が設定されている行セットを開こうとすると、エラーが発生します。|  
 |DBPROP_REMOVEDELETED|VARIANT_TRUE|行セットを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データを更新できません。 行セットでは、順方向のスクロールしかサポートされません。 相対行位置指定がサポートされます。 別のプロパティで制約されている場合を除いて、コマンド テキストに ORDER BY 句を指定できます。|  
   
- サーバー カーソルでサポートされる OLE DB Driver for SQL Server 行セットは、**IOpenRowset::OpenRowset** メソッドを使用して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ベース テーブルまたはビュー上に簡単に作成できます。 テーブルやビューを名前で指定し、必要な行セット プロパティのセットを *rgPropertySets* パラメーターで渡します。  
+ サーバー カーソルでサポートされる OLE DB Driver for SQL Server 行セットは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]IOpenRowset::OpenRowset **メソッドを使用して、** ベース テーブルまたはビュー上に簡単に作成できます。 テーブルやビューを名前で指定し、必要な行セット プロパティのセットを *rgPropertySets* パラメーターで渡します。  
   
  コンシューマーが、サーバー カーソルでサポートされる行セットを要求すると、行セットを作成するコマンド テキストが制限されます。 具体的には、1 つの行セットを結果として返す 1 つの SELECT ステートメント、または 1 つの行セットを結果として返す 1 つの SELECT ステートメントを実装するストアド プロシージャに制限されます。  
   

@@ -19,10 +19,10 @@ ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6683cec953daf6146371d62e8db2e4add2bd42df
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298346"
 ---
 # <a name="data-flow-task"></a>[データ フロー タスク]
@@ -92,7 +92,7 @@ ms.locfileid: "71298346"
   
  たとえば、次の表に含まれるメッセージ "行がデータ フロー コンポーネントに入力として指定されました。 :  : 1185 : OLE DB ソースの出力 : 1180 : 並べ替え : 1181 : 並べ替えの入力 : 76" は、列へと解析されています。 このメッセージは、OLE DB ソースから並べ替え変換に行が送信されるときに **OnPipelineRowsSent** イベントによって書き込まれました。  
   
-|列|説明|Value|  
+|列|説明|値|  
 |------------|-----------------|-----------|  
 |**PathID**|OLE DB ソースと並べ替え変換の間のパスの **ID** プロパティの値です。|1185|  
 |**PathName**|パスの **Name** プロパティの値です。|OLE DB ソースの出力|  

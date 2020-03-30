@@ -16,10 +16,10 @@ ms.assetid: 86745aeb-ea0d-42d1-b7d2-141b7b067af9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9a00a79466bb4f53fcef10edb1dd6804542b3eae
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67982393"
 ---
 # <a name="getlong-method-sqlserverresultset"></a>getLong メソッド (SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67982393"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|Name|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[getLong (int)](../../../connect/jdbc/reference/getlong-method-int-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列インデックスの値を、Java プログラミング言語の **long** として取得します。|  
 |[getLong (java.lang.String)](../../../connect/jdbc/reference/getlong-method-java-lang-string-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列名の値を、Java プログラミング言語の **long** として取得します。|  

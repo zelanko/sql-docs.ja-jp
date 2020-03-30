@@ -12,10 +12,10 @@ ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
 ms.openlocfilehash: 3a9c24e046c9fa6dfeba338a28b0aa4ff3a86782
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75251340"
 ---
 # <a name="download-sql-server-extended-features-and-tools"></a>SQL Server の拡張機能とツールのダウンロード
@@ -49,7 +49,7 @@ ms.locfileid: "75251340"
 | [SQL Server Data-Tier Application Framework](https://www.microsoft.com/download/details.aspx?id=56508) | SQL Server Data-tier Application (DAC) Framework は、.NET Framework をベースにしたコンポーネントであり、データベースの開発と管理に必要なアプリケーション ライフサイクル サービスを提供します。 |
 | [SQL Server セマンティック言語統計](https://docs.microsoft.com/sql/relational-databases/search/install-and-configure-semantic-search) | セマンティック言語統計データベースは、Microsoft SQL Server の統計的セマンティック検索機能に必要なコンポーネントです。 |
 | [SQL Server 共有管理オブジェクト](https://docs.microsoft.com/sql/relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide) | SQL Server 管理オブジェクト (SMO) は .NET Framework のオブジェクト モデルです。ソフトウェア開発者は SMO を使用して、SQL Server のオブジェクトおよびサービスを管理するクライアント側アプリケーションを作成できます。 |
-| [System CLR Types](https://go.microsoft.com/fwlink/?linkid=2108808) | SQL Server System CLR Types パッケージには、SQL Server の geometry 型、geography 型、および階層 ID 型を実装するコンポーネントが含まれています。 **注意事項: このコンポーネントには [Windows インストーラー 4.5](https://go.microsoft.com/fwlink/?LinkId=123373)** も必要です。 |
+| [System CLR Types](https://go.microsoft.com/fwlink/?linkid=2108808) | SQL Server System CLR Types パッケージには、SQL Server の geometry 型、geography 型、および階層 ID 型を実装するコンポーネントが含まれています。 **注: このコンポーネントを使用するには、[Windows インストーラー 4.5](https://go.microsoft.com/fwlink/?LinkId=123373) も必要です**。 |
 | [Windows PowerShell Extensions for Microsoft SQL Server](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server-powershell?view=sql-server-2017) | Microsoft Windows PowerShell Extensions for SQL Server には、SQL Server インスタンスの管理用 PowerShell スクリプトを管理者および開発者が作成するためのプロバイダーとコマンドレットのセットが含まれています。 |
 |||
 

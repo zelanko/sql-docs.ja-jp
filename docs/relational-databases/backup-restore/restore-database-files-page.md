@@ -14,10 +14,10 @@ ms.assetid: 714c36ea-a9f9-43a4-99f9-a6f73d1baf8e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5c99e51dd90f17313d146fce2b6b02802a579eb6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67944828"
 ---
 # <a name="restore-database-files-page"></a>[データベースの復元]\([ファイル] ページ)
@@ -32,7 +32,7 @@ ms.locfileid: "67944828"
  **[すべてのファイルをフォルダーに移動]**  
  復元されたファイルを再配置します。  
   
-|オプション|[説明]|  
+|オプション|説明|  
 |------------|-----------------|  
 |**データ ファイル フォルダー**|復元されたデータ ファイルが移されるデータ ファイルのフォルダー名を入力または検索します。|  
 |**ログ ファイル フォルダー**|復元されたログ ファイルが移されるログ ファイル フォルダーを入力または検索します。|  

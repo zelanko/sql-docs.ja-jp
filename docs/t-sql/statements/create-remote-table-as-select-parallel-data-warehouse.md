@@ -11,10 +11,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 1b6b024507d06149efc0bc2693b5bde2f67d482b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74401702"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
@@ -132,7 +132,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
   
  接続設定では、SSL で保護されたユーザー名とパスワードのデータを使用して SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続できますが、実際のデータはクリア テキストで暗号化されずに送信されます。 この場合、悪意のあるユーザーが、SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスにログオンするための [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザー名とパスワードが含まれている CREATE REMOTE TABLE ステートメントのテキストを傍受する可能性があります。 このリスクを避けるためには、SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスへの接続ではデータの暗号化を使用してください。  
   
-##  <a name="Examples"></a> 使用例  
+##  <a name="examples"></a><a name="Examples"></a> 使用例  
   
 ### <a name="a-creating-a-remote-table"></a>A. リモート テーブルの作成  
  この例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] という `MyOrdersTable` SMP のリモート テーブルをデータベース `OrderReporting` およびスキーマ `Orders` に作成します。 `OrderReporting` データベースは、既定のポート 1433 でリッスンする `SQLA` というサーバー上にあります。 サーバーへの接続では、ユーザー `David` の資格情報を使用します。ユーザーのパスワードは `e4n8@3` です。  

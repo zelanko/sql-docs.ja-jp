@@ -15,10 +15,10 @@ ms.assetid: 28261014-342c-442a-bd89-6d04b8d4e8b7
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 78f61b21ae2399a3aa5d0b5432a4047c3f4fd4b6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67991491"
 ---
 # <a name="always-on-availability-group-is-not-ready-for-automatic-failover"></a>Always On 可用性グループで自動フェールオーバーの準備ができていない
@@ -33,7 +33,7 @@ ms.locfileid: "67991491"
 |**カテゴリ**|**重大**|  
 |**ファセット**|可用性グループ|  
   
-## <a name="description"></a>[説明]  
+## <a name="description"></a>説明  
  このポリシーは、フェールオーバーの準備が整っているセカンダリ レプリカが 1 つ以上可用性グループに存在するかどうかを確認します。 プライマリ レプリカのフェールオーバー モードが自動モードである一方で、可用性グループのセカンダリ レプリカのいずれもフェールオーバーの準備ができていない場合、ポリシーは通常とは異なる状態で、アラートが発生します。  
   
  自動フェールオーバーの準備が整っているセカンダリ レプリカが 1 つ以上存在する場合、ポリシーは正常な状態です。  

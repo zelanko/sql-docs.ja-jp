@@ -15,10 +15,10 @@ ms.assetid: d721c796-0397-46a7-901b-1a9a3c3fb385
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2b0b681ffb0b045ab5ba59c1a9fd28b3b295431f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70212321"
 ---
 # <a name="scm-services---change-the-service-startup-account"></a>SCM サービス - サービス開始アカウントを変更する
@@ -28,9 +28,9 @@ ms.locfileid: "70212321"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssDE](../../includes/ssde-md.md)] および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのサービス開始アカウントを変更する場合、変更を有効にするために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス ( [!INCLUDE[ssDE](../../includes/ssde-md.md)]) を再起動する必要があります。 サービスを再起動すると、サービスが正常に再起動するまでは、その [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに関連付けられているすべてのデータベースが使用できなくなります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのサービス開始アカウントを変更する必要がある場合は、定期的なメンテナンスのときや、日常の運用を妨げることなくデータベースをオフラインにできるときに実行してください。  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   クラスター化されたサーバー  
   
@@ -42,7 +42,7 @@ ms.locfileid: "70212321"
   
      [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] のインストール中に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスは、ネットワーク サービス アカウントを使用するように構成されますが、無効になっています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスに割り当てられたアカウントを変更できますが、このサービスを有効にしたり開始したりすることはできません。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] から Express 以外に SKU をアップグレードした後、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスが自動的に有効になることはありませんが、必要に応じて有効にすることができます。サービスを有効にするには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して、サービス開始モードを手動または自動に変更します。  
   
-##  <a name="SSMSProcedure"></a> SQL Server 構成マネージャーの使用  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> SQL Server 構成マネージャーの使用  
   
 #### <a name="to-change-the-sql-server-service-startup-account"></a>SQL Server のサービス開始アカウントを変更するには  
   

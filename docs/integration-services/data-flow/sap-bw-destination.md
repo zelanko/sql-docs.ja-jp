@@ -11,10 +11,10 @@ ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 62b781351b406aadc1b7516cd70dc0d11e7c5a16
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71291894"
 ---
 # <a name="sap-bw-destination"></a>SAP BW 転送先
@@ -37,7 +37,7 @@ ms.locfileid: "71291894"
   
 -   [SAP BW 変換先の構成](#bkmk_Configure_Destination)  
   
-##  <a name="bkmk_Prepare_Objects"></a> 変換先に必要な SAP Netweaver BW オブジェクトの準備  
+##  <a name="preparing-the-sap-netweaver-bw-objects-that-the-destination-requires"></a><a name="bkmk_Prepare_Objects"></a> 変換先に必要な SAP Netweaver BW オブジェクトの準備  
  SAP BW 変換先を使用する前に、特定のオブジェクトを SAP Netweaver BW システムに含める必要があります。 これらのオブジェクトがまだ存在しない場合は、これらの手順に従って SAP Netweaver BW システムで作成および構成する必要があります。  
   
 > [!NOTE]  
@@ -59,12 +59,12 @@ ms.locfileid: "71291894"
   
  また、SAP Netweaver BW システムにデータの読み込みをサポートするために必要な、追加のインフォオブジェクト、インフォキューブ、インフォソース、およびインフォパッケージを作成できます。  
   
-##  <a name="bkmk_Connect_Database"></a> SAP Netweaver BW システムへの接続  
+##  <a name="connecting-to-the-sap-netweaver-bw-system"></a><a name="bkmk_Connect_Database"></a> SAP Netweaver BW システムへの接続  
  SAP Netweaver BW Version 7 システムに接続するため、SAP BW 変換先は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW パッケージの一部である SAP BW 接続マネージャーを使用します。 SAP BW 接続マネージャーは、SAP BW 変換先が使用できる唯一の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 接続マネージャーです。  
   
  SAP BW 接続マネージャーの詳細については、「 [SAP BW Connection Manager](../../integration-services/connection-manager/sap-bw-connection-manager.md)」を参照してください。  
   
-##  <a name="bkmk_Configure_Destination"></a> SAP BW 変換先の構成  
+##  <a name="configuring-the-sap-bw-destination"></a><a name="bkmk_Configure_Destination"></a> SAP BW 変換先の構成  
  SAP BW 変換先は、次の方法で構成できます。  
   
 -   データの読み込みに使用するインフォパッケージを探して参照します。  

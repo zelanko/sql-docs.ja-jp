@@ -20,10 +20,10 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4c77d87f1ffe0083662f9f4fcfe643de3359ea59
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68012973"
 ---
 # <a name="clr-strict-security"></a>CLR の厳密なセキュリティ   
@@ -31,7 +31,7 @@ ms.locfileid: "68012973"
 
 `SAFE` で `EXTERNAL ACCESS`、`UNSAFE`、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のアクセス許可の解釈を制御します。   
 
-|値 |[説明] | 
+|値 |説明 | 
 |----- |----- | 
 |0 |無効 - 旧バージョンとの互換性のために提供されています。 `Disabled` 値の使用はお勧めしません。 | 
 |1 |有効 - [!INCLUDE[ssde-md](../../includes/ssde-md.md)]がアセンブリの `PERMISSION_SET` の情報を無視し、常に `UNSAFE` と解釈するようになります。  `Enabled` の既定値は [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] です。 | 

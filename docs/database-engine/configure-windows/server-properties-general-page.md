@@ -15,10 +15,10 @@ ms.assetid: 10ac57f1-b4bd-4528-bb66-3e47ccf663e7
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: dbc306b3ec8d23c4ddc7aec6477c407f21e345a8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68025483"
 ---
 # <a name="server-properties---general-page"></a>[サーバーのプロパティ] - [全般] ページ
@@ -40,7 +40,7 @@ ms.locfileid: "68025483"
  **プラットフォーム**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を実行しているオペレーティング システムとハードウェアを表示します。  
   
- **Version**  
+ **バージョン**  
  現在実行中の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エディションのバージョン番号を表示します。  
   
  **Language**  

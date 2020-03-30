@@ -20,10 +20,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: ab19f300a05e61d2f008e4d1cf246e803f990a4c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75252390"
 ---
 # <a name="notify-an-operator-of-job-status"></a>Notify an Operator of Job Status
@@ -34,12 +34,12 @@ ms.locfileid: "75252390"
 
 このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)]、または SQL Server 管理オブジェクトを使用して、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントからジョブに関する通知をオペレーターに送信するための通知オプションを設定する方法について説明します。  
   
-## <a name="BeforeYouBegin"></a>はじめに  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>はじめに  
   
-### <a name="Security"></a>セキュリティ  
+### <a name="security"></a><a name="Security"></a>セキュリティ  
 詳細については、「 [SQL Server エージェントのセキュリティの実装](../../ssms/agent/implement-sql-server-agent-security.md)」をご覧ください。  
   
-## <a name="SSMS"></a>SQL Server Management Studio の使用  
+## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>SQL Server Management Studio の使用  
   
 #### <a name="to-notify-an-operator-of-job-status"></a>オペレーターにジョブの状態を通知するには  
   
@@ -73,7 +73,7 @@ ms.locfileid: "75252390"
   
     -   **[ジョブ完了時]** : 完了時の状態とは関係なくオペレーターに通知します。  
   
-## <a name="TSQL"></a>Transact-SQL の使用  
+## <a name="using-transact-sql"></a><a name="TSQL"></a>Transact-SQL の使用  
   
 #### <a name="to-notify-an-operator-of-job-status"></a>オペレーターにジョブの状態を通知するには  
   
@@ -98,7 +98,7 @@ ms.locfileid: "75252390"
   
 詳細については、「 [sp_add_notification (Transact-SQL)](https://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)」を参照してください。  
   
-## <a name="SMO"></a>SQL Server 管理オブジェクトの使用  
+## <a name="using-sql-server-management-objects"></a><a name="SMO"></a>SQL Server 管理オブジェクトの使用  
 **オペレーターにジョブの状態を通知するには**  
   
 Visual Basic、Visual C#、PowerShell などの選択したプログラミング言語で **Job** クラスを使用します。 詳細については、「 [SQL Server 管理オブジェクト (SMO) プログラミング ガイド](https://msdn.microsoft.com/library/ms162169.aspx)」を参照してください。  

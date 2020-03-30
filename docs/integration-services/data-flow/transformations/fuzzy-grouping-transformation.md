@@ -29,10 +29,10 @@ ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e8cec010923591d3fc05ef2920578bdebc4f9f5c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297937"
 ---
 # <a name="fuzzy-grouping-transformation"></a>あいまいグループ化変換
@@ -121,7 +121,7 @@ ms.locfileid: "71297937"
  **使用できる入力列**  
  重複する値を持つ行をグループ化するために使用する入力列を、この一覧から選択します。  
   
- **名前**  
+ **Name**  
  使用できる入力列の名前を表示します。  
   
  **[パススルー]**  
@@ -148,7 +148,7 @@ ms.locfileid: "71297937"
  **[数字]**  
  列データを比較する際の先頭および末尾の数字の有意性を指定します。 たとえば、先頭の数字が有意である場合、"123 Main Street" は "456 Main Street" と同じグループとは見なされません。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**[Neither]**|先頭および末尾の数字は考慮されません。|  
 |**[Leading]**|先頭の数字のみが考慮されます。|  

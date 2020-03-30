@@ -11,10 +11,10 @@ ms.assetid: dbafe110-b480-48f3-b45f-31d71ca68f62
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 086b4503289c01f8b0022633361e7ce72dff73e1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295253"
 ---
 # <a name="catalogvalidations-ssisdb-database"></a>catalog.validations (SSISDB データベース)
@@ -26,7 +26,7 @@ ms.locfileid: "71295253"
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログのすべてのプロジェクトおよびパッケージ検証の詳細を表示します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |validation_id|**bigint**|検証の一意識別子 (ID)。|  
 |environment_scope|**Char(1)**|検証が考慮する環境参照を示します。 値が `A` の場合は、プロジェクトに関連するすべての環境参照が検証に含まれます。 値が `S` の場合は、1 つの環境参照のみが含まれます。 値が `D` の場合、環境参照は含まれず、各パラメーターには、検証に合格するため、既定のリテラル値を指定する必要があります。|  

@@ -21,10 +21,10 @@ ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d0e511e34b782c444bcdf6c778bb89dfebd4fab4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68099035"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>テキスト関数とイメージ関数 - TEXTPTR (Transact-SQL)
@@ -65,7 +65,7 @@ TEXTPTR ( column )
 |PATINDEX<b>('</b> _%pattern%_ **' ,** _expression_ **)**|**text** または **ntext** 列で指定された文字列の文字位置を返します。|  
 |DATALENGTH<b>(</b>_expression_ **)**|**text**、**ntext**、**image** 列のデータの長さを返します。|  
 |[SET TEXTSIZE]|SELECT ステートメントで返される **text**、**ntext**、または **image** データの制限値をバイト単位で返します。|  
-|SUBSTRING<b>(</b>_text_column_, _start_, _length_ **)**|指定された *start* オフセットと *length* で指定される **varchar** 文字列を返します。 長さは 8 KB 未満で指定してください。|  
+|SUBSTRING<b>(</b>_text_column_, _start_, _length_ **)**|指定された **start** オフセットと *length* で指定される *varchar* 文字列を返します。 長さは 8 KB 未満で指定してください。|  
   
 ## <a name="examples"></a>例  
   
@@ -73,7 +73,7 @@ TEXTPTR ( column )
 >  次の例を実行するには、**pubs** データベースをインストールする必要があります。  
   
 ### <a name="a-using-textptr"></a>A. TEXTPTR を使用する  
- 次の例では、`TEXTPTR` 関数を使用して、`pubs` データベースの `pub_info` テーブル内の `New Moon Books` に関連付けられている **image** 列 `logo` を検索します。 テキスト ポインターは、ローカル変数 `@ptrval.` に格納されます。  
+ 次の例では、`TEXTPTR` 関数を使用して、**データベースの** テーブル内の `logo` に関連付けられている `New Moon Books`image`pub_info` 列 `pubs` を検索します。 テキスト ポインターは、ローカル変数 `@ptrval.` に格納されます。  
   
 ```  
 USE pubs;  
@@ -104,7 +104,7 @@ COMMIT;
 ```  
   
 ### <a name="c-returning-text-data"></a>C. テキスト データを返す  
- 次の例では、`pub_info` テーブルから `pub_id` 列、および `pr_info` 列の 16 バイトのテキスト ポインターを選択します。  
+ 次の例では、`pub_id` テーブルから `pr_info` 列、および `pub_info` 列の 16 バイトのテキスト ポインターを選択します。  
   
 ```  
 USE pubs;  
@@ -163,7 +163,7 @@ This is sample text data for Lucerne Publishing, publisher 9999 in the pubs data
 ```  
   
 ### <a name="d-returning-specific-text-data"></a>D. 特定のテキスト データを返す  
- 次の例では、`pubs` データベースの `pub_info` テーブル内の `pub_id``0736` に関連付けられた `text` 列 (`pr_info`) を検索します。 まず、ローカル変数 `@val` が宣言されます。 次に、テキスト ポインター (長いバイナリ文字列) が `@val` に挿入され、`READTEXT` ステートメントにパラメーターとして指定されます。 これによって、5 番目のバイト (オフセットは 4) から開始して、10 バイトのデータが返されます。  
+ 次の例では、`text` データベースの `pr_info` テーブル内の `pub_id``0736` に関連付けられた `pub_info` 列 (`pubs`) を検索します。 まず、ローカル変数 `@val` が宣言されます。 次に、テキスト ポインター (長いバイナリ文字列) が `@val` に挿入され、`READTEXT` ステートメントにパラメーターとして指定されます。 これによって、5 番目のバイト (オフセットは 4) から開始して、10 バイトのデータが返されます。  
   
 ```  
 USE pubs;  

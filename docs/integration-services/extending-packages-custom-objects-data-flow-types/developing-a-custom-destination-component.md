@@ -21,10 +21,10 @@ ms.assetid: 24619363-9535-4c0e-8b62-1d22c6630e40
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c1912b398ca0d5db28bef668572a3a07d752694e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71287943"
 ---
 # <a name="developing-a-custom-destination-component"></a>カスタム変換先コンポーネントの開発
@@ -42,7 +42,7 @@ ms.locfileid: "71287943"
  変換先コンポーネントのデザイン時の機能を実装する作業には、外部データ ソースへの接続の指定、およびコンポーネントが正しく設定されているかどうかの検証が含まれます。 定義上、変換先コンポーネントには 1 つの入力と、場合によって 1 つのエラー出力があります。  
   
 ### <a name="creating-the-component"></a>コンポーネントの作成  
- 変換先コンポーネントは、パッケージで定義された <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> オブジェクトを使用して、外部データ ソースに接続します。 変換先コンポーネントは、接続マネージャーに関する要求を [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーやコンポーネントのユーザーに示すため、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> の <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> コレクションに要素を追加します。 このコレクションには 2 つの目的があります。1 つは、接続マネージャーの必要性を [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーに通知することで、もう 1 つは、ユーザーが接続マネージャーを選択または作成した後に、コンポーネントが使用する、パッケージ内の接続マネージャーへの参照を保持することです。 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> がコレクションに追加されると、 **[詳細エディター]** は **[接続プロパティ]** タブを表示します。このタブでは、コンポーネントが使用する接続をパッケージ内で選択したり、新しく作成したりすることができます。  
+ 変換先コンポーネントは、パッケージで定義された <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> オブジェクトを使用して、外部データ ソースに接続します。 変換先コンポーネントは、接続マネージャーに関する要求を [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーやコンポーネントのユーザーに示すため、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> の <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> コレクションに要素を追加します。 このコレクションには 2 つの目的があります。1 つは、接続マネージャーの必要性を [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーに通知することで、もう 1 つは、ユーザーが接続マネージャーを選択または作成した後に、コンポーネントが使用する、パッケージ内の接続マネージャーへの参照を保持することです。 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> がコレクションに追加されると、 **[詳細エディター]** は **[接続プロパティ]** タブを表示します。このタブでは、コンポーネントが使用する接続をパッケージ内で選択したり、新しく作成したりすることができます。  
   
  次のコード例は、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A> に入力を追加し、次に <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> オブジェクトを追加する <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> の実装を示します。  
   

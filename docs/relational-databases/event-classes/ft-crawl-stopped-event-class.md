@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3804c83c328a7fc067d2aed964eb7b9635cfb386
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68089335"
 ---
 # <a name="ftcrawl-stopped-event-class"></a>FT:Crawl Stopped イベント クラス
@@ -25,7 +25,7 @@ ms.locfileid: "68089335"
   
 ## <a name="ftcrawl-stopped-event-class-data-columns"></a>FT:Crawl Stopped イベント クラスのデータ列  
   
-|データ列名|データ型|[説明]|列 ID|フィルターの適用|  
+|データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|フルテキスト クロールが停止したデータベースの ID。 データベースに対応する値は、DB_ID 関数を使用して特定します。|3|はい|  
 |**EventClass**|**int**|イベントの種類 = 156。|27|いいえ|  

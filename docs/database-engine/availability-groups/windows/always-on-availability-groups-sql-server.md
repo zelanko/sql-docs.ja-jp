@@ -17,10 +17,10 @@ ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6eae33bebd834a79a62bd94c5dbe75f4c431b0ba
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68014819"
 ---
 # <a name="always-on-availability-groups-a-high-availability-and-disaster-recovery-solution"></a>Always On 可用性グループ: 高可用性とディザスター リカバリーのソリューション
@@ -33,7 +33,7 @@ ms.locfileid: "68014819"
  >[!NOTE]
  >Always On 可用性グループは、この可用性機能の完全な正式名称です。 省略形は、AOAG または AAG ではなく、AG です。 
   
-##  <a name="Benefits"></a> 利点  
+##  <a name="benefits"></a><a name="Benefits"></a> 利点  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] には、データベースの可用性を向上し、リソースの使用を改善できる、豊富なオプションのセットが用意されています。 主なコンポーネントは次のとおりです。  
   
 -   最大 9 つの可用性レプリカをサポートします。 *可用性グループ* は、SQL Server の特定のインスタンスによってホストされ、可用性グループに属する各可用性データベースのローカル コピーを保持します。 各可用性グループは、1 個のプライマリ レプリカと最大 8 個のセカンダリ レプリカをサポートします。 詳細については、「 [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)」を参照してください。  
@@ -89,7 +89,7 @@ ms.locfileid: "68014819"
   
     -   PowerShell コマンドレット。 詳細については、「 [Always On 可用性グループの PowerShell コマンドレットの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)」を参照してください。  
   
-##  <a name="TermsAndDefinitions"></a> 用語と定義  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a> 用語と定義  
  **可用性グループ**  
  ひとまとまりでフェールオーバーされるデータベースのセット ( *可用性データベース*) のコンテナー。  
   
@@ -117,7 +117,7 @@ ms.locfileid: "68014819"
 > [!NOTE]  
 >  詳細については、「 [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)」を参照してください。  
   
-##  <a name="Interoperability"></a> その他のデータベース エンジン機能との相互運用性と共存  
+##  <a name="interoperability-and-coexistence-with-other-database-engine-features"></a><a name="Interoperability"></a> その他のデータベース エンジン機能との相互運用性と共存  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の次の機能またはコンポーネントと共に使用できます。  
   
 -   [変更データ キャプチャについて &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
@@ -149,11 +149,11 @@ ms.locfileid: "68014819"
 > [!WARNING]  
 >  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] で他の機能を使用する場合の制限事項については、「[Always On 可用性グループ: 相互運用性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)」を参照してください。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server.md)  
   
-##  <a name="RelatedContent"></a> 関連コンテンツ  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 関連コンテンツ  
   
 -   **ブログ:**  
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ad62ae2b8e9b62e209900df47dfbba9d30557cb7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67999640"
 ---
 # <a name="brokermessage-undeliverable-event-class"></a>Broker:Message Undeliverable イベント クラス
@@ -27,7 +27,7 @@ ms.locfileid: "67999640"
   
 ## <a name="brokermessage-undeliverable-event-class-data-columns"></a>Broker:Message Undeliverable イベント クラスのデータ列  
   
-|データ列|種類|[説明]|列番号|フィルターの適用|  
+|データ列|種類|説明|列番号|フィルターの適用|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**アプリケーション名**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |**BigintData1**|**bigint**|配信不能メッセージのシーケンス番号。|52|いいえ|  

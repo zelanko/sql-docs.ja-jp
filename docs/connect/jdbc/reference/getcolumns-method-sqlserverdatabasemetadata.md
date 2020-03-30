@@ -16,10 +16,10 @@ ms.assetid: f173fa5d-e114-4a37-a5c4-2baad9ff3af1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d34f5748a5a85d67754ea9a001ba1819935e53a6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67952837"
 ---
 # <a name="getcolumns-method-sqlserverdatabasemetadata"></a>getColumns メソッド (SQLServerDatabaseMetaData)
@@ -65,7 +65,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  getColumns メソッドによって返される結果セットには、次の情報が含まれます。  
   
-|Name|Type|説明|  
+|Name|種類|説明|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|カタログ名。|  
 |TABLE_SCHEM|**String**|テーブル スキーマ名です。|  

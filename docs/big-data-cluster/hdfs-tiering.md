@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 008a62d3d36acf96b0c63559cd4d8ecbf27641c1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74190402"
 ---
 # <a name="configure-hdfs-tiering-on-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] で HDFS の階層化を構成する
@@ -57,7 +57,7 @@ Azure Data Lake Storage Gen2 および Amazon S3 への接続がサポートさ�
 - [ビッグ データ クラスターに HDFS の階層化のための ADLS Gen2 をマウントする方法](hdfs-tiering-mount-adlsgen2.md)
 - [ビッグ データ クラスターに HDFS の階層化のための S3 をマウントする方法](hdfs-tiering-mount-s3.md)
 
-## <a id="issues"></a> 既知の問題と制限事項
+## <a name="known-issues-and-limitations"></a><a id="issues"></a> 既知の問題と制限事項
 
 次の一覧に、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] で HDFS の階層化を使用する場合の既知の問題と現在の制限事項を示します。
 

@@ -11,10 +11,10 @@ ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: cdc58884e65fb243bbb75f257e19ccef3faa2b9f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908937"
 ---
 # <a name="delete-backup-blob-files-with-active-leases"></a>アクティブなリースを保持しているバックアップ BLOB ファイルを削除する
@@ -42,7 +42,7 @@ Microsoft Azure Storage へのバックアップまたは Microsoft Azure Storag
   
 1. **BLOB を削除する:** アクティブなリースを保持している BLOB を削除するには、最初にリースを終了する必要があります。  
 
-###  <a name="Code_Example"></a> PowerShell スクリプトの例  
+###  <a name="powershell-script-example"></a><a name="Code_Example"></a> PowerShell スクリプトの例  
   
 > [!IMPORTANT]
 > PowerShell 2.0 を実行している場合、Microsoft WindowsAzure.Storage.dll アセンブリの読み込み中に問題が発生することがあります。 この問題を解決するには、[PowerShell](https://docs.microsoft.com/powershell/) をアップグレードすることをお勧めします。 次の回避策を利用することで、powershell.exe.config ファイルを作成または変更し、実行時、.NET 2.0 アセンブリと .NET 4.0 アセンブリをロードすることもできます。  

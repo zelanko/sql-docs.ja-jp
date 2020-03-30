@@ -1,5 +1,5 @@
 ---
-title: チュートリアル:マップ レポート (レポート ビルダー) | Microsoft Docs
+title: 'チュートリアル: マップ レポート (レポート ビルダー) | Microsoft Docs'
 ms.date: 08/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,13 +9,13 @@ ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4db47bde02745ddc554f17e1f951c836c1542cc8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041671"
 ---
-# <a name="tutorial-map-report-report-builder"></a>チュートリアル:マップ レポート (レポート ビルダー)
+# <a name="tutorial-map-report-report-builder"></a>チュートリアル: マップ レポート (レポート ビルダー)
 この [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] チュートリアルでは、地図を背景として、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポートのデータを表示するときに使用できるマップ機能について学習できます。 
   
 マップは、空間データに基づいています。空間データは通常、ポイント、線、および多角形で構成され (郡の輪郭を表す多角形、道路を表す線、市区町村の場所を表すポイントなど)、 種類ごとに異なるマップ レイヤーにマップ要素のセットとして表示されます。  
@@ -27,16 +27,16 @@ ms.locfileid: "63041671"
 このチュートリアルでは、New York 州の郡にある店舗の場所を表示するマップ レポートを作成します。  
    
 > [!NOTE]  
-> このチュートリアルでは、ウィザードに関する複数の手順を、データセットの作成とテーブルの作成の 2 つの手順にまとめて示します。 レポート サーバーの参照、データ ソースの選択、データセットの作成、およびウィザードの実行に関する詳細な手順については、このシリーズの最初のチュートリアルである「[チュートリアル:基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」を参照してください。  
+> このチュートリアルでは、ウィザードに関する複数の手順を、データセットの作成とテーブルの作成の 2 つの手順にまとめて示します。 レポート サーバーの参照、データ ソースの選択、データセットの作成、およびウィザードの実行に関する詳細な手順については、このシリーズの最初のチュートリアル (「[チュートリアル: 基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」) を参照してください。  
   
-このチュートリアルの推定所要時間:30 分。  
+このチュートリアルの推定所要時間: 30 分。  
   
 ## <a name="requirements"></a>必要条件  
 このチュートリアルでは、Bing マップの背景をサポートするようにレポート サーバーが構成されている必要があります。 詳細については、「 [マップ レポートのサポートを計画する](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19)」を参照してください。 
 
 その他の要件については、「[チュートリアルの前提条件 (レポート ビルダー)](../reporting-services/prerequisites-for-tutorials-report-builder.md)」を参照してください。  
   
-## <a name="Map"></a>1.マップ ウィザードを使用して多角形レイヤーを含むマップを作成する  
+## <a name="1-create-a-map-with-a-polygon-layer-from-the-map-wizard"></a><a name="Map"></a>1.マップ ウィザードを使用して多角形レイヤーを含むマップを作成する  
 このセクションでは、マップをマップ ギャラリーからレポートに追加します。 このマップには、New York 州の郡を表示するレイヤーが含まれています。 各郡の図形は、マップ ギャラリーのマップに埋め込まれている空間データに基づく多角形です。  
   
 ### <a name="to-add-a-map-with-the-map-wizard-in-a-new-report"></a>新しいレポートでマップ ウィザードを使用してマップを追加するには  
@@ -108,7 +108,7 @@ ms.locfileid: "63041671"
   
 マップの凡例とカラー スケールは、各郡に分析データが関連付けられていないため、まだ表示されません。 このチュートリアルで後ほど分析データを追加します。  
   
-## <a name="PointLayer"></a>2.店舗の場所を表示するマップのポイント レイヤーを追加する  
+## <a name="2-add-a-map-point-layer-to-display-store-locations"></a><a name="PointLayer"></a>2.店舗の場所を表示するマップのポイント レイヤーを追加する  
 このセクションでは、マップ レイヤー ウィザードを使用して、店舗の場所を表示するポイント レイヤーを追加します。  
   
 > [!NOTE]  
@@ -169,13 +169,13 @@ ms.locfileid: "63041671"
 9. クエリ デザイナーのツール バーで、 **[実行]** ( **!** ) をクリックします。  
   
     この結果セットには、消費者向けの商品を販売している New York 州内の店舗を表す 7 つの列が含まれています。 一覧を次に示します。わかりにくいものには説明を付けています。 
-    *   **StoreKey**:店舗の識別子。  
+    *   **StoreKey**: 店舗の識別子。  
     *   **StoreName**。
-    *   **SellingArea**:製品の展示に使用できる面積。範囲は 455 - 1,125 平方フィートです。
+    *   **SellingArea**: 製品の展示に使用できる面積。範囲は 455 ～ 1125 平方フィートです。
     *   **City**。
     *   **County**。
-    *   **営業担当者**: 総売上。 
-    *   **SpatialLocation**:緯度と経度による位置。 
+    *   **Sales**: 総売上。 
+    *   **SpatialLocation**: 緯度と経度による位置。 
 
     ![report-builder-map-design-query](../reporting-services/media/report-builder-map-design-query.png) 
   
@@ -227,7 +227,7 @@ ms.locfileid: "63041671"
 
 
   
-## <a name="LineLayer"></a>3.ルートを表示するマップの線レイヤーを追加する  
+## <a name="3-add-a-map-line-layer-to-display-a-route"></a><a name="LineLayer"></a>3.ルートを表示するマップの線レイヤーを追加する  
 マップ レイヤー ウィザードを使用して、2 つの店舗間のルートを表示するマップ レイヤーを追加します。 このチュートリアルではパスを 3 つの店舗の場所から作成しますが、 ビジネス アプリケーションでは店舗間の最適なルートにすることができます。  
   
 ### <a name="to-add-a-line-layer-to-map"></a>マップに線レイヤーを追加するには  
@@ -284,7 +284,7 @@ ms.locfileid: "63041671"
 
       これはズーム比です。 125% で州全体が表示されます。
   
-## <a name="TileLayer"></a>4.Bing Maps のタイル背景を追加する  
+## <a name="4-add-a-bing-maps-tile-background"></a><a name="TileLayer"></a>4.Bing Maps のタイル背景を追加する  
 このセクションでは、Bing Maps のタイル背景を表示するマップ レイヤーを追加します。  
   
 1.  デザイン ビューに切り替えます。  
@@ -306,7 +306,7 @@ ms.locfileid: "63041671"
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="Transparent"></a>5.レイヤーを透明にする  
+## <a name="5-make-a-layer-transparent"></a><a name="Transparent"></a>5.レイヤーを透明にする  
 このセクションでは、レイヤー上のアイテムが別のレイヤーを通して見えるように、レイヤーの順序と透明度を、目的の効果が得られるように調整します。 作成した最初のレイヤー PolygonLayer1 から開始します。 
   
 1.  マップをダブルクリックして **[マップ レイヤー]** ペインを表示します。  
@@ -321,12 +321,12 @@ ms.locfileid: "63041671"
 
     ![report-builder-map-transparency](../reporting-services/media/report-builder-map-transparency.png)
   
-## <a name="Vary"></a>6.郡の色を売上に基づいて変化させる  
+## <a name="6-vary-county-color-based-on-sales"></a><a name="Vary"></a>6.郡の色を売上に基づいて変化させる  
 レポート プロセッサにより、マップ ウィザードの最後のページで選択したテーマに基づいてカラー パレットから色値が自動的に割り当てられるため、多角形レイヤー上の各郡は異なる色で表示されます。  
   
 このセクションでは、各郡の店舗売上の範囲に特定の色を関連付ける色ルールを指定します。 赤、黄、緑の各色は、売上高が相対的に高い、中程度、または低いことを示します。 カラー スケールを通貨形式に変更します。 新しい凡例に年間売上高の範囲を表示します。 店舗のない郡については、どの色も使用しないことで、関連付けられたデータがないことを示します。  
   
-### <a name="Relationship"></a>6a. 空間データと分析データの間にリレーションシップを構築する  
+### <a name="6a-build-a-relationship-between-spatial-and-analytical-data"></a><a name="Relationship"></a>6a. 空間データと分析データの間にリレーションシップを構築する  
 分析データに基づいて郡の図形を色分けするには、まず分析データを空間データに関連付けておく必要があります。 このチュートリアルでは、郡の名前を使用してデータを対応させます。 
   
 1.  デザイン ビューに切り替えます。  
@@ -355,7 +355,7 @@ ms.locfileid: "63041671"
   
 店舗がある各郡には、ウィザードで選択したスタイルのカラー パレットに基づく色が割り当てられています。 その他の郡は灰色になります。  
   
-### <a name="ColorRules"></a>6b. 多角形の色ルールを指定する  
+### <a name="6b-specify-color-rules-for-polygons"></a><a name="ColorRules"></a>6b. 多角形の色ルールを指定する  
 各郡の色を店舗売上に基づいて変化させるルールを作成するには、範囲の値、その範囲内で表示する部分範囲の数、および使用する色を指定する必要があります。  
   
 #### <a name="to-specify-color-rules-for-all-polygons-that-have-associated-data"></a>データが関連付けられているすべての多角形の色ルールを指定するには  
@@ -398,7 +398,7 @@ ms.locfileid: "63041671"
   
     カラー スケールには、赤、橙、黄、緑の 4 色が表示されます。 各色は、郡別の売上に基づいて自動的に計算された売上範囲を表しています。  
   
-### <a name="ColorScale"></a>6c. カラー スケールのデータを通貨形式に変更する  
+### <a name="6c-format-the-data-in-the-color-scale-as-currency"></a><a name="ColorScale"></a>6c. カラー スケールのデータを通貨形式に変更する  
 既定では、一般的な形式がデータに適用されますが、 このセクションでは、形式をカスタマイズします。  
   
 1. デザイン ビューに切り替えます。  
@@ -409,7 +409,7 @@ ms.locfileid: "63041671"
   
     カラー スケールで、各範囲の年間売上高が通貨形式で表示されます。  
   
-### <a name="NewLegend"></a>6d. 凡例のタイトルの追加   
+### <a name="6d-add-a-legend-title"></a><a name="NewLegend"></a>6d. 凡例のタイトルの追加   
   
 1.  カラー スケールが選択された状態で、[プロパティ] ペインに **[MapColorScale]** のプロパティが表示されます。 
   
@@ -423,7 +423,7 @@ ms.locfileid: "63041671"
   
 店舗と売上が関連付けられている郡が、色のルールに従って表示されます。 売上が関連付けられていない郡の色はありません。  
   
-### <a name="NoData"></a>6f. データがない郡の色を変更する  
+### <a name="6f-change-color-for-counties-with-no-data"></a><a name="NoData"></a>6f. データがない郡の色を変更する  
 レイヤー上のすべてのマップ要素の既定の表示オプションを設定することができます。 これらの表示オプションよりも色ルールが優先されます。  
   
 #### <a name="to-set-the-display-properties-for-all-elements-on-a-layer"></a>レイヤー上のすべての要素に対して表示プロパティを設定するには  
@@ -448,7 +448,7 @@ ms.locfileid: "63041671"
   
 データが関連付けられていない郡が灰色 - 青で表示されます。 分析データが関連付けられている郡のみが、色のルールで指定した **[赤]** から **[緑]** の範囲の色で表示されます。  
   
-## <a name="CustomPoint"></a>7.カスタム ポイントを追加する  
+## <a name="7-add-a-custom-point"></a><a name="CustomPoint"></a>7.カスタム ポイントを追加する  
 このセクションでは、まだ開店していない新しい店舗を表すために、マーカーの種類に **[星]** を使用してポイントを指定します。  
   
 1.  デザイン ビューに切り替えます。  
@@ -491,7 +491,7 @@ ms.locfileid: "63041671"
 
 ![report-builder-map-custom-point-new-store](../reporting-services/media/report-builder-map-custom-point-new-store.png)
   
-## <a name="CenterView"></a>8.マップの中心の変更およびサイズの変更   
+## <a name="8-center-and-resize-the-map"></a><a name="CenterView"></a>8.マップの中心の変更およびサイズの変更   
 このセクションでは、マップの中心を変更する方法、およびズーム レベルを変更する別の方法について説明します。  
  
 1.  デザイン ビューに切り替えます。  
@@ -512,7 +512,7 @@ ms.locfileid: "63041671"
   
 デザイン ビューでは、デザイン画面やビューのマップはサンプル データに基づいています。 表示されたレポートでは、指定したビューがマップ ビューの中心になります。  
   
-## <a name="Title"></a>9.レポート タイトルを追加する  
+## <a name="9-add-a-report-title"></a><a name="Title"></a>9.レポート タイトルを追加する  
   
 1.  デザイン ビューに切り替えます。
   
@@ -522,7 +522,7 @@ ms.locfileid: "63041671"
   
 このタイトルは、レポートの最上部に表示されます。 ページ ヘッダーが定義されていない場合は、レポート本文の最上部にあるアイテムがレポート ヘッダーに相当します。  
   
-## <a name="Save"></a>10.レポートを保存する  
+## <a name="10-save-the-report"></a><a name="Save"></a>10.レポートを保存する  
   
 1.  デザイン ビューまたはプレビューで、 **[ファイル]** メニューの **[名前を付けて保存]** をクリックします。
  

@@ -13,17 +13,17 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: c5e5c8256c117ebd3fbb57b5a7c291b539c5a428
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68132251"
 ---
 # <a name="manage-and-monitor-semantic-search"></a>セマンティクス検索の管理および監視
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   セマンティック インデックス作成プロセスと、インデックスの管理および監視に関連するタスクについて説明します。  
   
-##  <a name="HowToMonitorStatus"></a> セマンティック インデックス作成の状態の確認  
+##  <a name="check-the-status-of-semantic-indexing"></a><a name="HowToMonitorStatus"></a> セマンティック インデックス作成の状態の確認  
 ### <a name="is-the-first-phase-of-semantic-indexing-complete"></a>セマンティック インデックス作成の最初のフェーズは完了していますか?
  動的管理ビュー [sys.dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md) に対してクエリを実行し、**status** 列と **status_description** 列を確認します。  
   
@@ -50,7 +50,7 @@ SELECT * FROM sys.dm_fts_semantic_similarity_population WHERE table_id = OBJECT_
 GO  
 ```  
   
-##  <a name="HowToCheckSize"></a> セマンティック インデックスのサイズの確認  
+##  <a name="check-the-size-of-the-semantic-indexes"></a><a name="HowToCheckSize"></a> セマンティック インデックスのサイズの確認  
 ### <a name="what-is-the-logical-size-of-a-semantic-key-phrase-index-or-a-semantic-document-similarity-index"></a>セマンティック キー フレーズ インデックスまたはドキュメントの類似性に関するセマンティック インデックスの論理サイズは?
  動的管理ビュー [sys.dm_db_fts_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql.md) に対してクエリを実行します。  
   
@@ -80,7 +80,7 @@ SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'ItemCount')
 GO  
 ```  
   
-##  <a name="HowToForcePopulation"></a> セマンティック インデックスの強制的な作成  
+##  <a name="force-the-population-of-the-semantic-indexes"></a><a name="HowToForcePopulation"></a> セマンティック インデックスの強制的な作成  
  START/STOP/PAUSE 句または RESUME POPULATION 句を使用して、フルテキスト インデックスおよびセマンティック インデックスを強制的に作成できます (これらの句の構文と動作については、フルテキスト インデックスに関する説明に示されています)。 詳細については、「[ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)」および「[フルテキスト インデックスの作成](../../relational-databases/search/populate-full-text-indexes.md)」を参照してください。  
   
  セマンティック インデックス作成はフルテキスト インデックス作成に依存しているため、セマンティック インデックスは関連するフルテキスト インデックスが作成されたときにのみ作成されます。  
@@ -98,7 +98,7 @@ ALTER FULLTEXT INDEX ON Production.Document
 GO  
 ```  
   
-##  <a name="HowToDisableIndexing"></a> セマンティック インデックスの作成の無効化または再有効化  
+##  <a name="disable-or-re-enable-semantic-indexing"></a><a name="HowToDisableIndexing"></a> セマンティック インデックスの作成の無効化または再有効化  
  ENABLE/DISABLE 句を使用して、フルテキスト インデックスまたはセマンティック インデックスの作成を有効または無効にすることができます (これらの句の構文と動作については、フルテキスト インデックスに関する説明に示されています)。 詳細については、「 [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)」を参照してください。  
   
  セマンティック インデックスの作成が無効化または中断された後でもセマンティック データに対するクエリは正常に動作し、以前にインデックスが作成されたデータを返します。 この動作は、フルテキスト検索の動作と一致しません。  
@@ -119,7 +119,7 @@ ALTER FULLTEXT INDEX ON table_name ENABLE
 GO  
 ```  
   
-##  <a name="SemanticIndexing"></a> セマンティック インデックス作成のフェーズについて  
+##  <a name="about-the-phases-of-semantic-indexing"></a><a name="SemanticIndexing"></a> セマンティック インデックス作成のフェーズについて  
  セマンティック検索では、セマンティック検索が有効なそれぞれの列に対して、次の 2 種類のデータに関するインデックスが作成されます。  
   
 1.  **キー フレーズ**  
@@ -133,7 +133,7 @@ GO
 2.  **フェーズ 2:** ドキュメントの類似性に関するセマンティック インデックスが作成されます。 このインデックスは、前のフェーズで作成された 2 つのインデックスに依存します。  
   
 ##  <a name="BestPracticeUnderstand"></a>   
-##  <a name="ProblemNotPopulated"></a> 問題点: セマンティック インデックスが作成されない  
+##  <a name="issue-semantic-indexes-are-not-populated"></a><a name="ProblemNotPopulated"></a> 問題点: セマンティック インデックスが作成されない  
 ### <a name="are-the-associated-full-text-indexes-populated"></a>関連するフルテキスト インデックスが作成されていますか?  
  セマンティック インデックス作成はフルテキスト インデックス作成に依存しているため、セマンティック インデックスは関連するフルテキスト インデックスが作成されたときにのみ作成されます。  
   

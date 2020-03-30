@@ -10,10 +10,10 @@ ms.prod_service: database-engine
 ms.author: mikeray
 author: MikeRayMSFT
 ms.openlocfilehash: 769c421c087de366ec262c3e5b8744ffb78f3ba6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75656784"
 ---
 # <a name="sql-server-development-partners"></a>SQL Server 開発のパートナー
@@ -22,7 +22,7 @@ SQL Server データベース ソリューションの開発をサポートす�
 
 ## <a name="our-development-partners"></a>Microsoft の開発パートナー
 
-| Partner | [説明] | リンク |
+| Partner | 説明 | リンク |
 | --- | --- | --- |
 |![idera][1] |**IDERA**<br>高速 SQL はデータベース開発者とデータベース管理者が単一のインターフェイスから SQL Server を含むすべての主要なデータベース プラットフォーム上で高性能な SQL コードを作成できるようにする、インテリジェントな SQL が統合開発環境です。<br><br>[システム要件][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Web サイト][idera_website]<br>[Twitter][idera_twitter]<br>[ビデオ][idera_youtube] |
 |![click2cloud][2] |**Click2Cloud Inc.**<br>Click2Cloud Inc. によって、開発者コミュニティは、適切なツールセットを使用してプログラミング言語、フレームワーク、サービスを柔軟に選択できるようになります。 Click2Cloud のツールキットを使用して、開発者は "Linux 上の SQL" コンテナーを作成し、アプリケーションにアタッチできるだけでなく、セキュリティで保護されたマルチテナントのアーキテクチャを構築できます。 コンテナーは、任意のクラウドベースのコンテナー プラットフォームに個別に配置できます。|[Marketplace][click2cloud_marketplace]<br>[Web サイト][click2cloud_website]<br>[Twitter][click2cloud_twitter]<br>[ビデオ][click2cloud_youtube] |

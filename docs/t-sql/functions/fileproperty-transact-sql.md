@@ -23,10 +23,10 @@ ms.assetid: b82244ed-d623-431f-aa06-8017349d847f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 79be8af32c13b9e910b94b40bd3c1bf9b2c0e2c5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68071405"
 ---
 # <a name="fileproperty-transact-sql"></a>FILEPROPERTY (Transact-SQL)
@@ -50,7 +50,7 @@ FILEPROPERTY ( file_name , property )
  *property*  
  返されるファイル プロパティの名前を含む式を指定します。 *プロパティ* は **varchar (128)** , 、値は次のいずれかを指定することができます。  
   
-|値|[説明]|返される値|  
+|値|説明|返される値|  
 |-----------|-----------------|--------------------|  
 |**IsReadOnly**|ファイル グループが読み取り専用であるかどうかを示します。|1 = True<br /><br /> 0 = False<br /><br /> NULL = 入力は無効です。|  
 |**IsPrimaryFile**|ファイルはプライマリ ファイルです。|1 = True<br /><br /> 0 = False<br /><br /> NULL = 入力は無効です。|  

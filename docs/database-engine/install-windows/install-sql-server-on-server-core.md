@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 19437198d7f65d640ea4501e97e149670a0a95fa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75325462"
 ---
 # <a name="install-sql-server-on-server-core"></a>Server Core への SQL Server のインストール
@@ -36,7 +36,7 @@ Server Core インストール オプションでは、特定のサーバー ロ
 |Windows PowerShell|Server Core インストールに付属しています。|  
 |Java ランタイム |PolyBase を使用するには、適切な Java ランタイムをインストールする必要があります。 詳細については、「[PolyBase のインストール](../../relational-databases/polybase/polybase-installation.md)」を参照してください。|
   
-##  <a name="BK_SupportedFeatures"></a> サポートされている機能  
+##  <a name="supported-features"></a><a name="BK_SupportedFeatures"></a> サポートされている機能  
  Server Core インストールの [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] でサポートされている機能については、次の表を参照してください。  
   
 |機能|サポートされています|追加情報|  
@@ -89,7 +89,7 @@ Server Core インストール オプションでは、特定のサーバー ロ
   
 ### <a name="feature-parameters"></a>機能パラメーター  
   
-|機能パラメーター|[説明]|  
+|機能パラメーター|説明|  
 |-----------------------|-----------------|  
 |SQLENGINE|[!INCLUDE[ssDE](../../includes/ssde-md.md)]のみをインストールします。|  
 |レプリケーション|[!INCLUDE[ssDE](../../includes/ssde-md.md)]と共にレプリケーション コンポーネントをインストールします。|  
@@ -102,7 +102,7 @@ Server Core インストール オプションでは、特定のサーバー ロ
 
  機能パラメーターの使い方の例を参照してください。  
   
-|パラメーターおよび値|[説明]|  
+|パラメーターおよび値|説明|  
 |--------------------------|-----------------|  
 |/FEATURES=SQLEngine|[!INCLUDE[ssDE](../../includes/ssde-md.md)]のみをインストールします。|  
 |/FEATURES=SQLEngine,FullText|[!INCLUDE[ssDE](../../includes/ssde-md.md)] とフルテキストをインストールします。|  
@@ -258,10 +258,10 @@ Server Core インストール オプションでは、特定のサーバー ロ
   
          DefaultSetup.ini ファイルが存在しない場合は、作成し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ソース メディアのルート レベルの \x86 および \x64 フォルダーにコピーできます。  
   
-## <a name="configure-remote-access-of-includessnoversionincludesssnoversion-mdmd-on-server-core"></a>Server Core で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のリモート アクセスを構成する  
+## <a name="configure-remote-access-of-ssnoversion-on-server-core"></a>Server Core で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のリモート アクセスを構成する  
  Server Core で実行している [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] インスタンスのリモート アクセスを構成するには、以下で説明する操作を実行します。  
   
-### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>のインスタンスでリモート接続を有効にする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="enable-remote-connections-on-the-instance-of-ssnoversion"></a>のインスタンスでリモート接続を有効にする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 
 リモート接続を有効にするには、SQLCMD.exe をローカルで使用して、Server Core インスタンスに対して次のステートメントを実行します。  
 
@@ -272,7 +272,7 @@ Server Core インストール オプションでは、特定のサーバー ロ
    GO
    ```  
   
-### <a name="enable-and-start-the-includessnoversionincludesssnoversion-mdmd-browser-service"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] browser service  
+### <a name="enable-and-start-the-ssnoversion-browser-service"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] browser service  
  Browser サービスは、既定では無効になっています。  Server Core で実行している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで無効になっている場合、このサービスを有効にするには、コマンド プロンプトから次のコマンドを実行します。  
   
  `sc config SQLBROWSER start= auto`  
@@ -284,7 +284,7 @@ Server Core インストール オプションでは、特定のサーバー ロ
 ### <a name="create-exceptions-in-windows-firewall"></a>Windows ファイアウォールで例外を作成する  
  Windows ファイアウォールで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アクセスの例外を作成するには、「 [SQL Server のアクセスを許可するための Windows ファイアウォールの構成](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)」で指定されている手順に従います。  
   
-### <a name="enable-tcpip-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="enable-tcpip-on-the-instance-of-ssnoversion"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Server Core 上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対して TCP/IP プロトコルを有効にするには、Windows PowerShell を使用します。 次の手順に従います。  
   
 1.  サーバーで、タスク マネージャーを起動します。  

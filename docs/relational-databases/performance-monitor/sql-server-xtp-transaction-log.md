@@ -11,10 +11,10 @@ ms.assetid: d16491ef-4a25-4e02-88a7-ab7c0812904a
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: bc88a64348879c6fb25c8949a829698319c7f618
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68113957"
 ---
 # <a name="sql-server-xtp-transaction-log"></a>SQL Server XTP トランザクション ログ
@@ -24,7 +24,7 @@ ms.locfileid: "68113957"
   
  次の表では、 **SQL Server XTP トランザクション ログ** のカウンターについて説明します。  
   
-|カウンター|[説明]|  
+|カウンター|説明|  
 |-------------|-----------------|  
 |**Log bytes written/sec**|インメモリ OLTP エンジンによって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] トランザクション ログに書き込まれたバイト数に関する 1 秒間の平均です。|  
 |**Log records written/sec**|インメモリ OLTP エンジンによって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] トランザクション ログに書き込まれたレコード数に関する 1 秒間の平均です。|  

@@ -16,10 +16,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 45c297ea29dbab974f72f4ecf69deb5c65f57bbb
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908013"
 ---
 # <a name="view-statistics-properties"></a>統計のプロパティの表示
@@ -38,14 +38,14 @@ ms.locfileid: "72908013"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  統計オブジェクトを表示するには、テーブルを所有しているか、固定サーバー ロール **sysadmin** 、固定データベース ロール **db_owner** 、または固定データベース ロール **db_ddladmin** のメンバーである必要があります。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-view-statistics-properties"></a>統計のプロパティを表示するには  
   
@@ -59,9 +59,9 @@ ms.locfileid: "72908013"
   
 5.  プロパティを表示する統計オブジェクトを右クリックし、 **[プロパティ]** を選択します。  
   
-6.  **[統計のプロパティ - _statistics_name_]** ダイアログ ボックスの **[ページの選択]** ウィンドウで **[詳細]** を選択します。  
+6.  **[統計のプロパティ -** statistics_name _]_ ダイアログ ボックスの **[ページの選択]** ウィンドウで **[詳細]** を選択します。  
   
-     **[統計のプロパティ - _statistics_name_]** ダイアログ ボックスの **[詳細]** ページで次のプロパティが表示されます。  
+     **[統計のプロパティ -** statistics_name **]** ダイアログ ボックスの _[詳細]_ ページで次のプロパティが表示されます。  
   
      **テーブル名**  
      統計の対象となるテーブルの名前が表示されます。  
@@ -70,7 +70,7 @@ ms.locfileid: "72908013"
      統計情報が格納されるデータベース オブジェクトの名前が表示されます。  
   
      **[INDEX の統計 statistics_name]**  
-     このテキスト ボックスは、統計オブジェクトから返されるプロパティを示します。 このプロパティは、次の 3 つのセクションに分かれています:統計ヘッダー、密度ベクトル、ヒストグラム。  
+     このテキスト ボックスは、統計オブジェクトから返されるプロパティを示します。 このプロパティは、統計ヘッダー、密度ベクトル、およびヒストグラムという 3 つのセクションに分かれています。  
   
      以下に、統計ヘッダーを指定した場合に結果セットに返される列を示します。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "72908013"
      以下に、密度ベクトルを指定した場合に結果セットに返される列を示します。  
   
      **[すべての密度]**  
-     密度は "1 / *distinct values*" です。 結果には、統計オブジェクトの列の各プレフィックスに対する密度が、密度ごとに 1 行表示されます。 個別の値は、行および列プレフィックスごとの列値の個別のリストです。 たとえば、統計オブジェクトにキー列 (A, B, C) が含まれる場合、結果では列プレフィックス (A)、(A, B)、(A, B, C) ごとに個別の値リストの密度が報告されます。 プレフィックス (A、B、C) を使用すると、これらの各リストは次の個別の値リストになります。(3, 5, 6)、(4, 4, 6)、(4, 5, 6)、(4, 5, 7)。 プレフィックス (A、B) を使用すると、同じ列値に次の個別の値リストが含まれます。(3, 5)、(4, 4)、(4, 5)。  
+     密度は "1 / *distinct values*" です。 結果には、統計オブジェクトの列の各プレフィックスに対する密度が、密度ごとに 1 行表示されます。 個別の値は、行および列プレフィックスごとの列値の個別のリストです。 たとえば、統計オブジェクトにキー列 (A, B, C) が含まれる場合、結果では列プレフィックス (A)、(A, B)、および (A, B, C) ごとに個別の値リストの密度が報告されます。 プレフィックス (A, B, C) を使用すると、これらの各リストは個別の値リスト (3, 5, 6)、(4, 4, 6)、(4, 5, 6)、(4, 5, 7) のようになります。 プレフィックス (A, B) を使用すると、同じ列値の個別の値リストが (3, 5)、(4, 4)、および (4, 5) になります。  
   
      **[平均の長さ]**  
      列プレフィックスの列値のリストを格納する平均の長さ (バイト単位)。 たとえば、リスト (3, 5, 6) の値ごとに 4 バイト必要な場合は、長さは 12 バイトになります。  
@@ -134,7 +134,7 @@ ms.locfileid: "72908013"
   
 7.  **[OK]** をクリックします。  
 
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-view-statistics-properties"></a>統計のプロパティを表示するには  
   

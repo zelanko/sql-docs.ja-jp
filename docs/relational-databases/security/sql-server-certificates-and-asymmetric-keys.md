@@ -14,10 +14,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 99e5f88f730953929115a5b18c00e5d1bb67562e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68126828"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>SQL Server の証明書と非対称キー
@@ -45,7 +45,7 @@ ms.locfileid: "68126828"
 ### <a name="using-a-certificate-in-sql-server"></a>SQL Server での証明書の使用  
  証明書は、データベース ミラーリングで接続を保護したり、パッケージや他のオブジェクトに署名したり、データや接続を暗号化したりする場合に使用できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の証明書に関するその他のリソースを次の表に示します。  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)|証明書を作成するためのコマンドについて説明します。|  
 |[デジタル署名を使用してパッケージのソースを特定する](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)|証明書を使用してソフトウェア パッケージに署名する方法について説明します。|  
@@ -59,7 +59,7 @@ ms.locfileid: "68126828"
 ### <a name="using-an-asymmetric-key-in-sql-server"></a>SQL Server での非対称キーの使用  
  非対称キーは、データを保護したり、プレーンテキストに署名したりする場合に使用できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]での非対称キーに関するその他のリソースを次の表に示します。  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)|非対称キーを作成するためのコマンドについて説明します。|  
 |[SIGNBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/signbyasymkey-transact-sql.md)|オブジェクトに署名するためのオプションについて説明します。|  

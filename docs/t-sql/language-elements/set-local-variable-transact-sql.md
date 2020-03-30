@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 770ef448094e764bcc1ca970354941c0d1d03d4c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68072281"
 ---
 # <a name="set-local_variable-transact-sql"></a>SET @local_variable (Transact-SQL)
@@ -122,7 +122,7 @@ CURSOR
 SET ステートメントにカーソルの宣言が含まれることを指定します。  
   
 SCROLL  
-カーソルがすべての FETCH オプションをサポートすることを指定します:FIRST、LAST、NEXT、PRIOR、RELATIVE、ABSOLUTE。 SCROLL と FAST_FORWARD を一緒に指定することはできません。  
+カーソルがすべての FETCH オプション (FIRST、LAST、NEXT、PRIOR、RELATIVE、ABSOLUTE) をサポートすることを指定します。 SCROLL と FAST_FORWARD を一緒に指定することはできません。  
   
 FORWARD_ONLY  
 カーソルで、FETCH NEXT オプションだけがサポートされることを指定します。 カーソルは、最初の行から最後の行への一方向にのみ取得されます。 STATIC、KEYSET、DYNAMIC のいずれのキーワードも指定しないで FORWARD_ONLY を指定した場合、カーソルは DYNAMIC として実装されます。 FORWARD_ONLY も SCROLL も指定しなかった場合は、STATIC、KEYSET、または DYNAMIC キーワードを指定しない限り、FORWARD_ONLY が既定値になります。 STATIC、KEYSET、および DYNAMIC カーソルの既定値は SCROLL です。  
@@ -306,7 +306,7 @@ DECLARE @p Point = CONVERT(Point, '')
 SET @p.SetXY(22, 23);  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="j-printing-the-value-of-a-variable-initialized-by-using-set"></a>J. SET によって初期化された変数の値を出力する  
 次の例では、`@myvar` 変数を作成し、文字列値を代入して、`@myvar` 変数の値を出力します。  

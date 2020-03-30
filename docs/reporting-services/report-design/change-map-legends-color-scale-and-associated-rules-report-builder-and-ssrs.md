@@ -32,10 +32,10 @@ ms.assetid: a1d691b2-c5ae-420f-af60-b7c54a7385a4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2d8df41eb7c0a0463648898c08091dd8f8c01f29
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65581741"
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>マップの凡例、カラー スケール、および関連付けられているルールの変更 (レポート ビルダーおよび SSRS)
@@ -51,7 +51,7 @@ ms.locfileid: "65581741"
   
  ![rs_MapElements](../../reporting-services/report-design/media/rs-mapelements.gif "rs_MapElements")  
   
-##  <a name="Viewport"></a> ビューポートを基準とする凡例の相対位置を変更するには  
+##  <a name="to-change-the-position-of-a-legend-relative-to-the-viewport"></a><a name="Viewport"></a> ビューポートを基準とする凡例の相対位置を変更するには  
   
 #### <a name="to-change-the-position-of-a-legend-relative-to-the-viewport"></a>ビューポートを基準とする凡例の相対位置を変更するには  
   
@@ -66,7 +66,7 @@ ms.locfileid: "65581741"
     > [!NOTE]  
     >  プレビューすると、凡例に関連したルールからの結果が存在する場合にのみ、マップの凡例およびカラー スケールが表示されます。 表示するアイテムが存在しない場合、表示レポートに凡例は表示されません。  
   
-##  <a name="MapLegend"></a> マップの凡例のレイアウトを変更するには  
+##  <a name="to-change-the-layout-of-a-map-legend"></a><a name="MapLegend"></a> マップの凡例のレイアウトを変更するには  
   
 #### <a name="to-change-the-layout-of-a-map-legend"></a>マップの凡例のレイアウトを変更するには  
   
@@ -76,19 +76,19 @@ ms.locfileid: "65581741"
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="MapLegendTitle"></a> マップの凡例のタイトルを表示または非表示にするには  
+##  <a name="to-show-or-hide-a-map-legend-title"></a><a name="MapLegendTitle"></a> マップの凡例のタイトルを表示または非表示にするには  
   
 #### <a name="to-show-or-hide-a-map-legend-title"></a>マップの凡例のタイトルを表示または非表示にするには  
   
 -   デザイン画面でマップの凡例を右クリックし、 **[凡例のタイトルの表示]** をクリックします。  
   
-##  <a name="ColorScaleTitle"></a> カラー スケールのタイトルを表示または非表示にするには  
+##  <a name="to-show-or-hide-a-color-scale-title"></a><a name="ColorScaleTitle"></a> カラー スケールのタイトルを表示または非表示にするには  
   
 #### <a name="to-show-or-hide-a-color-scale-title"></a>カラー スケールのタイトルを表示または非表示にするには  
   
 -   デザイン画面でカラー スケールを右クリックし、 **[カラー スケールのタイトルの表示]** をクリックします。  
   
-##  <a name="MoveItems"></a> 最初の凡例からアイテムを移動するには  
+##  <a name="to-move-items-out-of-the-first-legend"></a><a name="MoveItems"></a> 最初の凡例からアイテムを移動するには  
  追加の凡例を必要な数だけ作成し、各マップ レイヤーのルールを更新して、ルールの結果を表示する凡例を指定します。  
   
 #### <a name="to-create-a-new-legend"></a>新しい凡例を作成するには  
@@ -109,7 +109,7 @@ ms.locfileid: "65581741"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TemplateStyle"></a> テンプレート スタイルに基づいてマップ要素の色を変えるには  
+##  <a name="to-vary-map-element-colors-based-on-a-template-style"></a><a name="TemplateStyle"></a> テンプレート スタイルに基づいてマップ要素の色を変えるには  
   
 #### <a name="to-vary-map-element-colors-based-on-a-template-style"></a>テンプレート スタイルに基づいてマップ要素の色を変えるには  
   
@@ -123,7 +123,7 @@ ms.locfileid: "65581741"
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="ColorPalette"></a> カラー パレットに基づいてマップ要素の色を変えるには  
+##  <a name="to-vary-map-element-colors-based-on-color-palette"></a><a name="ColorPalette"></a> カラー パレットに基づいてマップ要素の色を変えるには  
   
 #### <a name="to-vary-map-element-colors-based-on-color-palette"></a>カラー パレットに基づいてマップ要素の色を変えるには  
   
@@ -141,7 +141,7 @@ ms.locfileid: "65581741"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="ColorRanges"></a> 色の範囲に基づいてマップ要素の色を変えるには  
+##  <a name="to-vary-map-element-colors-based-on-color-ranges"></a><a name="ColorRanges"></a> 色の範囲に基づいてマップ要素の色を変えるには  
   
 #### <a name="to-vary-map-element-colors-based-on-color-ranges"></a>色の範囲に基づいてマップ要素の色を変えるには  
   
@@ -163,7 +163,7 @@ ms.locfileid: "65581741"
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="CustomColors"></a> カスタム色に基づいてマップ要素の色を変えるには  
+##  <a name="to-vary-map-element-colors-based-on-custom-colors"></a><a name="CustomColors"></a> カスタム色に基づいてマップ要素の色を変えるには  
   
 #### <a name="to-vary-map-element-colors-based-on-custom-colors"></a>カスタム色に基づいてマップ要素の色を変えるには  
   
@@ -181,7 +181,7 @@ ms.locfileid: "65581741"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="DistributionOptions"></a> 凡例の分布オプションを設定するには  
+##  <a name="to-set-distribution-options-for-a-legend"></a><a name="DistributionOptions"></a> 凡例の分布オプションを設定するには  
   
 #### <a name="to-set-distribution-options-for-a-legend"></a>凡例の分布オプションを設定するには  
   
@@ -189,7 +189,7 @@ ms.locfileid: "65581741"
   
 2.  必要なデータが存在するレイヤーを右クリックし、 _[\<map element type>_ **の色のルール]** をクリックします。  
   
-3.  **[\<rule type> を使用してデータを表示する]** オプションを選択します。 分布オプションを使用するには、レイヤーに関連付けられている分析データに基づき、 **[分布]** ページで範囲を作成する必要があります。  
+3.  **[** rule type> を使用してデータを表示する]\< オプションを選択します。 分布オプションを使用するには、レイヤーに関連付けられている分析データに基づき、 **[分布]** ページで範囲を作成する必要があります。  
   
 4.  **[分布]** をクリックします。  
   
@@ -213,7 +213,7 @@ ms.locfileid: "65581741"
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="RuleLegend"></a> ルールの凡例の内容を変更するには  
+##  <a name="to-change-the-contents-of-a-rule-legend"></a><a name="RuleLegend"></a> ルールの凡例の内容を変更するには  
   
 #### <a name="to-change-the-contents-of-a-color-size-width-or-marker-type-legend"></a>色、サイズ、幅、またはマーカーの種類の凡例の内容を変更するには  
   
@@ -221,7 +221,7 @@ ms.locfileid: "65581741"
   
 2.  必要なデータが存在するレイヤーを右クリックし、 _[\<map element type>_ **のルール]** をクリックします。  
   
-3.  **[\<*rule type*> を使用してデータを表示する]** が選択されていることを確認します。  
+3.  **[** \<rule type *> を使用してデータを表示する]* が選択されていることを確認します。  
   
 4.  **[データ フィールド]** で、レイヤー上に視覚化しようとしている分析データが選択されていることを確認します。  
   
@@ -234,7 +234,7 @@ ms.locfileid: "65581741"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="ColorScale"></a> カラー スケールの内容を変更するには  
+##  <a name="to-change-the-contents-of-the-color-scale"></a><a name="ColorScale"></a> カラー スケールの内容を変更するには  
   
 #### <a name="to-change-the-contents-of-the-color-scale-or-a-color-legend"></a>カラー スケールまたは色の凡例の内容を変更するには  
   
@@ -242,7 +242,7 @@ ms.locfileid: "65581741"
   
 2.  必要なデータが存在するレイヤーを右クリックし、 _[\<map element type>_ **の色のルール]** をクリックします。  
   
-3.  使用する色ルールを選択します。 マップの凡例またはカラー スケールにアイテムを表示するには、 **[\<rule type> を使用してデータを表示する]** のいずれかのオプションを選択する必要があります。  
+3.  使用する色ルールを選択します。 マップの凡例またはカラー スケールにアイテムを表示するには、 **[** rule type> を使用してデータを表示する]\< のいずれかのオプションを選択する必要があります。  
   
 4.  **[データ フィールド]** で、レイヤー上に視覚化しようとしている分析データが選択されていることを確認します。  
   
@@ -255,7 +255,7 @@ ms.locfileid: "65581741"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="HideItems"></a> すべてのアイテムを凡例から削除するには  
+##  <a name="to-remove-all-items-from-a-legend"></a><a name="HideItems"></a> すべてのアイテムを凡例から削除するには  
   
 #### <a name="to-hide-items-based-on-a-rule"></a>ルールに基づいてアイテムを非表示にするには  
   
@@ -267,7 +267,7 @@ ms.locfileid: "65581741"
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="ChangeFormatItems"></a> 凡例の内容の書式を変更するには  
+##  <a name="to-change-the-format-of-content-in-a-legend"></a><a name="ChangeFormatItems"></a> 凡例の内容の書式を変更するには  
  マップの凡例に関連付けられているルールの凡例オプションを設定します。  
   
 #### <a name="to-change-the-format-of-content-in-a-legend"></a>凡例の内容の書式を変更するには  

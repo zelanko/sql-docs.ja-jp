@@ -11,10 +11,10 @@ ms.assetid: a6b595e1-5227-47ce-8ee2-a28c1e1d5645
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4102ee4dc551a02a8b6853062e19d448ab414e7b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296530"
 ---
 # <a name="catalogprojects-ssisdb-database"></a>catalog.projects (SSISDB データベース)
@@ -26,7 +26,7 @@ ms.locfileid: "71296530"
 
   **SSISDB** カタログに表示されるすべてのプロジェクトの詳細を表示します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |project_id|**bigint**|プロジェクトの一意識別子 (ID)。|  
 |folder_id|**bigint**|プロジェクトがあるフォルダーの一意の ID。|  

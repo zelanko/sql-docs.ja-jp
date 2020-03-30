@@ -14,17 +14,17 @@ ms.assetid: cd9b6880-c924-42c7-b333-09c303317c0b
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 364fd8e037e2c09afa16294e75096993f861ca20
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67987151"
 ---
 # <a name="sql-server-broker-activation-object"></a>SQL Server: Broker Activation オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **SQLServer:BrokerActivation** パフォーマンス オブジェクトには、ストアド プロシージャのアクティブ化に関する情報を報告するパフォーマンス カウンターが含まれています。 次の表は、このオブジェクトに含まれているカウンターを示します。  
   
-|SQL Server Broker Activation カウンター|[説明]|  
+|SQL Server Broker Activation カウンター|説明|  
 |-------------------------------------------|-----------------|  
 |**Stored Procedures Invoked/sec**|インスタンス内のすべてのキュー モニターによって 1 秒間に呼び出されたアクティブ化ストアド プロシージャの合計数が報告されます。|  
 |**Task Limit Reached**|キューに登録できる最大数のタスクが既に実行されているために、キュー モニターで新しいタスクの開始に失敗した合計回数が報告されます。|  

@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 22b11ff1f9a6ed218b4c63c2f22bfb6e2d441703
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74550196"
 ---
 # <a name="sql_variant_property-transact-sql"></a>SQL_VARIANT_PROPERTY (Transact-SQL)
@@ -46,7 +46,7 @@ SQL_VARIANT_PROPERTY ( expression , property )
  *property*  
  情報を提供する **sql_variant** プロパティの名前です。 *property* は **varchar(** 128 **)** であり、次のいずれかの値を指定できます。  
   
-|値|[説明]|返される sql_variant の基本データ型|  
+|値|説明|返される sql_variant の基本データ型|  
 |-----------|-----------------|----------------------------------------|  
 |**BaseType**|以下のような [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型です。<br /><br /> **bigint**<br /><br /> **[バイナリ]**<br /><br /> **char**<br /><br /> **date**<br /><br /> **datetime**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**<br /><br /> **decimal**<br /><br /> **float**<br /><br /> **int**<br /><br /> **money**<br /><br /> **nchar**<br /><br /> **numeric**<br /><br /> **nvarchar**<br /><br /> **real**<br /><br /> **smalldatetime**<br /><br /> **smallint**<br /><br /> **smallmoney**<br /><br /> **time**<br /><br /> **tinyint**<br /><br /> **uniqueidentifier**<br /><br /> **varbinary**<br /><br /> **varchar**|**sysname**<br /><br /> NULL = 入力は無効です。|  
 |**[精度]**|数値基本データ型の桁数です。<br /><br /> **datetime** = 23<br /><br />**datetime2** = 27<br /><br /> **smalldatetime** = 16<br /><br /> **float** = 53<br /><br /> **real** = 24<br /><br /> **decimal** (p,s) および **numeric** (p,s) = p<br /><br /> **money** = 19<br /><br /> **smallmoney** = 10<br /><br /> **bigint** = 19<br /><br /> **int** = 10<br /><br /> **smallint** = 5<br /><br /> **tinyint** = 3<br /><br /> **bit** = 1<br /><br /> その他のすべてのデータ型 = 0|**int**<br /><br /> NULL = 入力は無効です。|  

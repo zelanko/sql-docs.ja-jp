@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 50a6e158f5678b30028337b70e1da6914038e64a
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896539"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>SQL Server のデータ型と ADO.NET
@@ -29,13 +29,13 @@ SQL Server 2008 には、ビジネス ニーズを満たすように設計され
   
 ## <a name="in-this-section"></a>このセクションの内容  
 [SqlTypes とデータセット](sqltypes-dataset.md)  
-`DataSet` 内の `SqlTypes` に対する新しい型のサポートについて説明します。  
+`SqlTypes` 内の `DataSet` に対する新しい型のサポートについて説明します。  
   
 [null 値の処理](handle-null-values.md)  
 null 値と 3 値ロジックを操作する方法について説明します。  
   
 [GUID と uniqueidentifier 値の比較](compare-guid-uniqueidentifier-values.md)  
-SQL Server と .NET で GUID と uniqueidentifier 値を操作する方法について説明します。  
+SQL Server と .NET で GUID および uniqueidentifier 値を操作する方法を示します。  
   
 [日付型と時刻型のデータ](date-time-data.md)  
 SQL Server 2008 で導入された新しい日付と時刻データ型を使用する方法について説明します。  
@@ -44,11 +44,11 @@ SQL Server 2008 で導入された新しい日付と時刻データ型を使用�
 SQL Server 2008 で導入された大きな値の UDT からデータを取得する方法について説明します。  
   
 [SQL Server における XML データ](xml-data-sql-server.md)  
-SQL Server から取得された XML データを操作する方法について説明します。  
+SQL Server から取得した XML データを操作する方法について説明します。  
   
 ## <a name="reference"></a>リファレンス  
 <xref:System.Data.DataSet>  
-`DataSet` クラスおよびそのすべてのメンバーについて説明します。  
+`DataSet` クラスとそのすべてのメンバーについて説明します。  
   
 <xref:System.Data.SqlTypes>  
 `SqlTypes` 名前空間およびそのすべてのメンバーについて説明します。  

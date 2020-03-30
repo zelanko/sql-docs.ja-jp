@@ -28,10 +28,10 @@ ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 652e8448eb5e4de9b39f9e399d1f2a709ef8cf47
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68100460"
 ---
 # <a name="move-system-databases"></a>システム データベースの移動
@@ -56,7 +56,7 @@ ms.locfileid: "68100460"
 >  ファイルを移動すると、 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] サービス アカウントに、新しいファイル フォルダーの場所にあるファイルへのアクセス権が必要になります。
     
   
-##  <a name="Planned"></a> 計画に従った再配置とスケジュールされたディスク メンテナンスの手順  
+##  <a name="planned-relocation-and-scheduled-disk-maintenance-procedure"></a><a name="Planned"></a> 計画に従った再配置とスケジュールされたディスク メンテナンスの手順  
  計画に従った再配置やスケジュールされたメンテナンス操作の中でシステム データベースのデータ ファイルやログ ファイルを移動するには、次の手順を実行します。 この手順は、master データベースと Resource データベース以外のすべてのシステム データベースに適用されます。  
   
 1.  移動対象のそれぞれのファイルに対して、次のステートメントを実行します。  
@@ -93,7 +93,7 @@ ms.locfileid: "68100460"
   
 2.  テスト メールを送信して、データベース メールが動作していることを確認します。  
   
-##  <a name="Failure"></a> 障害復旧の手順  
+##  <a name="failure-recovery-procedure"></a><a name="Failure"></a> 障害復旧の手順  
  ハードウェア障害が原因でファイルを移動する必要がある場合、次の手順に従って別の場所にファイルを再配置します。 この手順は、master データベースと Resource データベース以外のすべてのシステム データベースに適用されます。  
   
 > [!IMPORTANT]  
@@ -141,7 +141,7 @@ ms.locfileid: "68100460"
     WHERE database_id = DB_ID(N'<database_name>');  
     ```  
   
-##  <a name="master"></a> master データベースの移動  
+##  <a name="moving-the-master-database"></a><a name="master"></a> master データベースの移動  
  master データベースを移動するには、次の手順を実行します。  
   
 1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、 **[Microsoft SQL Server]** 、 **[構成ツール]** の順にポイントし、 **[SQL Server 構成マネージャー]** をクリックします。  
@@ -188,10 +188,10 @@ ms.locfileid: "68100460"
 10. この時点で、SQL Server は通常どおり実行されるはずです。 ただし、Microsoft では、 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\instance_ID\Setup`( *instance_ID* は `MSSQL13.MSSQLSERVER`のようになります) のレジストリ エントリを調整することもお勧めします。 そのハイブで、 `SQLDataRoot` 値を新しいパスに変更します。 レジストリの更新に失敗すると、修正プログラムの適用やアップグレードが失敗する可能性があります。
 
   
-##  <a name="Resource"></a> Resource データベースの移動  
+##  <a name="moving-the-resource-database"></a><a name="Resource"></a> Resource データベースの移動  
  Resource データベースの既定の場所は、\<*drive*>:\Program Files\Microsoft SQL Server\MSSQL\<version>.\<*instance_name*>\MSSQL\Binn\\ です。 データベースを移動することはできません。  
   
-##  <a name="Follow"></a> 補足情報: すべてのシステム データベースを移動した後  
+##  <a name="follow-up-after-moving-all-system-databases"></a><a name="Follow"></a> 補足情報: すべてのシステム データベースを移動した後  
  すべてのシステム データベースを、新しいドライブやボリューム、または別のドライブ文字を使用した別のサーバーに移動した場合は、次の更新を行います。  
   
 -   SQL Server エージェントのログ パスを変更します。 このパスを更新しないと、SQL Server エージェントは起動しません。  
@@ -216,7 +216,7 @@ ms.locfileid: "68100460"
   
 4.  変更を完了するため、SQL Server サービスをいったん停止してから開始します。  
   
-##  <a name="Examples"></a> 使用例  
+##  <a name="examples"></a><a name="Examples"></a> 使用例  
   
 ### <a name="a-moving-the-tempdb-database"></a>A. tempdb データベースを移動する  
  次の例では、計画に従った再配置の一環として、 `tempdb` データ ファイルとログ ファイルを新しい場所に移動します。  

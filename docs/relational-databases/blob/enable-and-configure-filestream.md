@@ -12,10 +12,10 @@ ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 7abba927f12f4f6ae8b9c45dc4695eb64b7d5621
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908767"
 ---
 # <a name="enable-and-configure-filestream"></a>FILESTREAM の有効化と構成
@@ -23,7 +23,7 @@ ms.locfileid: "72908767"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   FILESTREAM の使用を開始するには、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスで FILESTREAM を有効にする必要があります。 このトピックでは、SQL Server 構成マネージャーを使用して FILESTREAM を有効にする方法について説明します。  
   
-##  <a name="enabling"></a> FILESTREAM の有効化  
+##  <a name="enabling-filestream"></a><a name="enabling"></a> FILESTREAM の有効化  
   
 #### <a name="to-enable-and-change-filestream-settings"></a>FILESTREAM の設定の有効化と変更  
   
@@ -58,9 +58,9 @@ ms.locfileid: "72908767"
   
 13. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを再開します。  
 
-##  <a name="best"></a> ベスト プラクティス  
+##  <a name="best-practices"></a><a name="best"></a> ベスト プラクティス  
   
-###  <a name="config"></a> 物理的な構成と保守  
+###  <a name="physical-configuration-and-maintenance"></a><a name="config"></a> 物理的な構成と保守  
  FILESTREAM ストレージ ボリュームを設定する場合は、次のガイドラインを考慮してください。  
   
 -   FILESTREAM コンピューター システム上で短いファイル名を無効にします。 短いファイル名の作成には、長い時間がかかります。 短いファイル名を無効にするには、Windows **fsutil** ユーティリティを使用します。  
@@ -84,7 +84,7 @@ ms.locfileid: "72908767"
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
   
-###  <a name="database"></a> 物理的なデータベース設計  
+###  <a name="physical-database-design"></a><a name="database"></a> 物理的なデータベース設計  
  FILESTREAM データベースを設計するときは、次のガイドラインを考慮してください。  
   
 -   FILESTREAM 列には対応する **uniqueidentifier**ROWGUID 列が存在する必要があります。 また、この種のテーブルには、一意なインデックスが存在する必要があります。 通常、このインデックスは、クラスター化インデックスではありません。 データベースのビジネス ロジックでクラスター化インデックスが求められる場合は、インデックスに格納されている値がランダムでないことを確認する必要があります。 格納されている値がランダムである場合、テーブルの行が追加または削除されるたびにインデックスの並べ替えが発生します。  

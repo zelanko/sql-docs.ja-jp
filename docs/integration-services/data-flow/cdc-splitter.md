@@ -13,10 +13,10 @@ ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: beba1f54c4eae683e6b35eb44408d84c5d812b84
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71293229"
 ---
 # <a name="cdc-splitter"></a>CDC スプリッター
@@ -26,7 +26,7 @@ ms.locfileid: "71293229"
 
   CDC スプリッターは、CDC ソース データの変更行の単一フローを、挿入、更新、削除の各操作のための個別のデータ フローに分割します。 データベースは、必須の列 `__$operation` と、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 変更テーブル内のその標準の値に基づいて分割されます。  
   
-|操作の値|Output|[説明]|  
+|操作の値|Output|説明|  
 |------------------------|------------|-----------------|  
 |1|削除|削除された行|  
 |2|挿入|挿入された行 ( **"結合を含む差分"** CDC モードを使用する場合は使用不可)|  

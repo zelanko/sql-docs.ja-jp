@@ -18,10 +18,10 @@ ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: ac8532f2cc5d8e2f50c0408ce983a61626748fb1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68066541"
 ---
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance (geography データ型)
@@ -54,15 +54,15 @@ _tolerance_
 最小値は距離の 0.1% で、それより小さい許容範囲はこの最小値に切り上げられます。  
   
 _relative_  
-_tolerance_ の値が相対値か絶対値かを指定する **bit** です。 値が 'TRUE' または 1 の場合、許容範囲は相対値です。 この値は、_tolerance_ パラメーターと角度 \* 楕円の赤道半径の積です。 値が 'FALSE' または 0 の場合、許容範囲は絶対値です。 _tolerance_ 値は、理想的なバッファー距離と返される線形近似との差異の絶対最大値になります。  
+**tolerance** の値が相対値か絶対値かを指定する _bit_ です。 値が 'TRUE' または 1 の場合、許容範囲は相対値です。 この値は、_tolerance_ パラメーターと角度 \* 楕円の赤道半径の積です。 値が 'FALSE' または 0 の場合、許容範囲は絶対値です。 _tolerance_ 値は、理想的なバッファー距離と返される線形近似との差異の絶対最大値になります。  
   
 ## <a name="return-types"></a>戻り値の型  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
-CLR の戻り値の型:**SqlGeography**  
+CLR の戻り値の型: **SqlGeography**  
   
 ## <a name="remarks"></a>解説  
-_distance_ が数値ではない (NAN) 場合、または _distance_ が正か負の無限大の場合、このメソッドは **ArgumentException** をスローします。  _tolerance_ が 0、数値ではない (NaN)、負、または正か負の無限大の場合も、このメソッドは **ArgumentException** をスローします。  
+**distance** が数値ではない (NAN) 場合、または _distance_ が正か負の無限大の場合、このメソッドは _ArgumentException_ をスローします。  **tolerance** が 0、数値ではない (NaN)、負、または正か負の無限大の場合も、このメソッドは _ArgumentException_ をスローします。  
   
 `STBuffer()` は、**FullGlobe** インスタンスを返すことがあります。たとえば、バッファーの距離が赤道から極地までの距離を超えている場合、`STBuffer()` は 2 つの極地の **FullGlobe** インスタンスを返します。  
   

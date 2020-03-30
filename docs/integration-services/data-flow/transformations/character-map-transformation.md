@@ -19,10 +19,10 @@ ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8211045a72ae56b04bb93b7be7e83f296f2467e5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71291662"
 ---
 # <a name="character-map-transformation"></a>文字マップ変換
@@ -41,7 +41,7 @@ ms.locfileid: "71291662"
 ## <a name="mapping-operations"></a>マップ操作  
  次の表では、文字マップ変換がサポートするマップ操作について説明します。  
   
-|操作|[説明]|  
+|操作|説明|  
 |---------------|-----------------|  
 |バイトの反転|バイト順を反転します。|  
 |全角|半角文字を全角文字にマップします。|  
@@ -100,7 +100,7 @@ ms.locfileid: "71291662"
  **宛先**  
  文字列処理の結果を、既定の列を使用して所定の場所に保存するか、変更されたデータを新しい列として保存するかを指定します。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |新しい列|データを新しい列に保存します。 **[出力の別名]** で、列名を割り当てます。|  
 |[埋め込み先変更]|変更されたデータを既存の列に保存します。|  
@@ -108,7 +108,7 @@ ms.locfileid: "71291662"
  **操作**  
  列のデータに適用する文字列関数を一覧から選択します。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |小文字|小文字に変換します。|  
 |大文字|大文字に変換します。|  

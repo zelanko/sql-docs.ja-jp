@@ -29,10 +29,10 @@ ms.assetid: e311c425-742a-4b0d-b847-8b974bf66d53
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2ae87d5c125ae3eac01013843c9fe2db183b9c1c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68055960"
 ---
 # <a name="alter-xml-schema-collection-transact-sql"></a>ALTER XML SCHEMA COLLECTION (Transact-SQL)
@@ -62,7 +62,7 @@ ALTER XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier ADD 'Schema Com
 ## <a name="remarks"></a>解説  
  XML スキーマ コレクションにない名前空間を持つ XML スキーマを新しく追加する場合や、コレクションの既存の名前空間に新しいコンポーネントを追加する場合は、ALTER XML SCHEMA COLLECTION を使用します。  
   
- 次の例では、コレクション `MyColl` の既存の名前空間 `https://MySchema/test_xml_schema` に新しい \<element> を追加します。  
+ 次の例では、コレクション \< の既存の名前空間 `https://MySchema/test_xml_schema` に新しい `MyColl`element> を追加します。  
   
 ```  
 -- First create an XML schema collection.  
@@ -80,7 +80,7 @@ ALTER XML SCHEMA COLLECTION MyColl ADD '
  </schema>';  
 ```  
   
- `ALTER XML SCHEMA` では、事前に定義された名前空間 `https://MySchema/test_xml_schema` に要素 `<anotherElement>` を追加します。  
+ `ALTER XML SCHEMA` では、事前に定義された名前空間 `<anotherElement>` に要素 `https://MySchema/test_xml_schema` を追加します。  
   
  コレクション内に追加しようとしているコンポーネントの一部が、既に同じコレクション内にあるコンポーネントを参照している場合は、`<import namespace="referenced_component_namespace" />` を使用する必要があります。 ただし、`<xsd:import>` で現在のスキーマ名前空間を使用しても無効であり、現在のスキーマ名前空間と同じ名前空間からのコンポーネントは自動的にインポートされます。  
   

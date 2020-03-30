@@ -14,10 +14,10 @@ ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: e4f5817fe575422dddeedd525b077dbf643a29b2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908881"
 ---
 # <a name="online-restore-sql-server"></a>オンライン復元 (SQL Server)
@@ -63,7 +63,7 @@ ms.locfileid: "72908881"
     > [!NOTE]  
     >  または、復元シーケンスの前に手動でファイルをオフラインにすることもできます。 詳細については、このトピックの「データベースまたはファイルのオフライン化」を参照してください。  
   
-##  <a name="taking_db_or_file_offline"></a> データベースまたはファイルのオフライン化  
+##  <a name="taking-a-database-or-file-offline"></a><a name="taking_db_or_file_offline"></a> データベースまたはファイルのオフライン化  
  オンライン復元を使用しない場合、次のいずれかの方法で、復元シーケンスを開始する前にデータベースをオフラインにできます。  
   
 -   どの復旧モデルでも、次の [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) ステートメントを使用することにより、データベースをオフラインにできます。  
@@ -95,7 +95,7 @@ ms.locfileid: "72908881"
   
 -   [例: 読み取り専用ファイルのオンライン復元 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [ファイルおよびファイル グループの復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)  
   

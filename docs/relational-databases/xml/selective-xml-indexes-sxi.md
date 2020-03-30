@@ -11,10 +11,10 @@ ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f176ba79cc42610d706bb56896a8ca073ea8185a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68000708"
 ---
 # <a name="selective-xml-indexes-sxi"></a>選択的 XML インデックス (SXI)
@@ -33,7 +33,7 @@ ms.locfileid: "68000708"
   
  選択的 XML インデックス機能は、選択的 XML インデックスによってインデックス設定されているノードに対するセカンダリ選択的 XML インデックスもサポートします。 これらのセカンダリ選択的インデックスは効率的であり、クエリのパフォーマンスがさらに向上します。  
   
-##  <a name="benefits"></a> 選択的 XML インデックスの利点  
+##  <a name="benefits-of-selective-xml-indexes"></a><a name="benefits"></a> 選択的 XML インデックスの利点  
  選択的 XML インデックスには、次のような利点があります。  
   
 1.  一般的なクエリのロードでの XML データ型に対するクエリのパフォーマンスが大幅に向上します。  
@@ -45,7 +45,7 @@ ms.locfileid: "68000708"
 4.  選択的 XML インデックスを使用するためにアプリケーションを更新する必要はありません。  
   
   
-##  <a name="compare"></a> 選択的 XML インデックスとプライマリ XML インデックス  
+##  <a name="selective-xml-indexes-and-primary-xml-indexes"></a><a name="compare"></a> 選択的 XML インデックスとプライマリ XML インデックス  
   
 > [!IMPORTANT]  
 >  ほとんどの場合、通常の XML インデックスではなく選択的 XML インデックスを作成すると、パフォーマンスが向上し、効率的な保管が可能になります。  
@@ -57,7 +57,7 @@ ms.locfileid: "68000708"
 -   ドキュメント構造内の不明な要素または不明な位置にある要素のクエリをサポートする。  
   
   
-##  <a name="example"></a> 選択的 XML インデックスの単純な例  
+##  <a name="simple-example-of-a-selective-xml-index"></a><a name="example"></a> 選択的 XML インデックスの単純な例  
  次の XML フラグメントを、約 500,000 行ある表形式の XML ドキュメントと考えてください。  
   
 ```xml  
@@ -101,7 +101,7 @@ FOR
   
 ## <a name="supported-features-prerequisites-and-limitations"></a>サポートされる機能、前提条件、および制限事項  
   
-###  <a name="features"></a> サポートされる XML 機能  
+###  <a name="supported-xml-features"></a><a name="features"></a> サポートされる XML 機能  
  選択的 XML インデックスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって exist()、value()、および nodes() メソッドの中でサポートされる XQuery をサポートします。  
   
 -   exist()、value()、および nodes() メソッドでは、式全体を変換するための十分な情報が選択的 XML インデックスに含まれます。  
@@ -113,7 +113,7 @@ FOR
 -   modify() メソッドでは、選択的 XML インデックスを使用して XML ドキュメントを更新することはありません。  
   
   
-###  <a name="unsupported"></a> サポートされない XML 機能  
+###  <a name="unsupported-xml-features"></a><a name="unsupported"></a> サポートされない XML 機能  
  選択的 XML インデックスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の XML の実装でサポートされている次の機能はサポートしません。  
   
 -   complex XS 型 (union 型、sequence 型、および list 型) のノードに対するインデックス設定。  
@@ -129,7 +129,7 @@ FOR
 -   id() 関数の使用によるノードの識別子の指定と取得。  
   
   
-###  <a name="prereq"></a> 前提条件  
+###  <a name="prerequisites"></a><a name="prereq"></a> 前提条件  
  ユーザー テーブルの XML 列に対して選択的 XML インデックスを作成する前に、次の前提条件を満たす必要があります。  
   
 -   クラスター化インデックスは、ユーザー テーブルの主キー上に存在する必要がある。  
@@ -139,7 +139,7 @@ FOR
 -   選択的 XML インデックスで使用する場合、ユーザー テーブルのクラスター化キーのサイズは 15 バイトに制限されます。  
   
   
-###  <a name="limits"></a> 制限事項  
+###  <a name="limitations"></a><a name="limits"></a> 制限事項  
  **一般的な要件と制限事項**  
   
 -   各選択的 XML インデックスは、単一の XML 列にのみ作成できます。  
@@ -191,7 +191,7 @@ FOR
 -   選択的 XML インデックスとセカンダリ選択的 XML インデックスは、データベース チューニング アドバイザーではサポートされません。  
   
   
-##  <a name="reltasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="reltasks"></a> 関連タスク  
   
 |||  
 |-|-|  

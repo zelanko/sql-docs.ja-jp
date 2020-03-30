@@ -16,10 +16,10 @@ ms.assetid: a5f6bdce-2b13-4924-aaeb-b50b57d624d8
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 89d2da02b841edd85d58798ca4c7c1745332d536
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68093646"
 ---
 # <a name="sql-server-database-replica"></a>SQL Server、データベース レプリカ
@@ -27,7 +27,7 @@ ms.locfileid: "68093646"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **SQLServer:Database Replica** パフォーマンス オブジェクトには、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の AlwaysOn 可用性グループのセカンダリ データベースに関する情報を報告するパフォーマンス カウンターが含まれています。 このオブジェクトは、セカンダリ レプリカをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスでのみ有効です。  
   
-|カウンター名|[説明]|表示|  
+|カウンター名|説明|表示|  
 |------------------|-----------------|--------------|  
 |**受信ファイル バイト数/秒**|セカンダリ データベースのセカンダリ レプリカが最近 1 秒間に受信した FILESTREAM データの量。|セカンダリ レプリカ|  
 |**ログ適用保留キュー**|データベース レプリカへの適用を待機しているログ ブロックの数。|セカンダリ レプリカ|

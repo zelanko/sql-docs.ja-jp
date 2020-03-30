@@ -13,10 +13,10 @@ ms.assetid: e963e205-9ae0-446d-97df-028a1d2727d9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 031dade1cb1f5535a1b0ccacc0efe4ca8b241ccb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63194050"
 ---
 # <a name="debugging-data-processing-extension-code"></a>データ処理拡張機能コードのデバッグ
@@ -26,7 +26,7 @@ ms.locfileid: "63194050"
   
 1.  [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)] を起動し、データ処理拡張機能プロジェクトを開きます。  
   
-2.  プロジェクトを構築し、データ処理拡張機能アセンブリと付随する .pdb ファイルをレポート デザイナーに配置します。 配置方法の詳細については、[方法:データ処理拡張機能のレポート デザイナーへの配置](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension-to-report-designer.md)に関するページを参照してください。  
+2.  プロジェクトを構築し、データ処理拡張機能アセンブリと付随する .pdb ファイルをレポート デザイナーに配置します。 配置の詳細については、「[データ処理拡張機能をレポート デザイナーに配置する方法](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension-to-report-designer.md)」を参照してください。  
   
 3.  データ処理拡張機能コードを [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] で開いたまま、別の [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ウィンドウで新しいレポート プロジェクトを開きます。  
   

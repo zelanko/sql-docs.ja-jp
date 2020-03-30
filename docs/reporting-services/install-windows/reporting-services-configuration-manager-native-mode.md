@@ -12,10 +12,10 @@ helpviewer_keywords:
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3df5a4c27e5c916d5a2c803d7bd4d40110aabb27
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73593780"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Reporting Services 構成マネージャー (ネイティブ モード)
@@ -29,7 +29,7 @@ ms.locfileid: "73593780"
 > [!NOTE]
 > SharePoint と Reporting Services の統合は、SQL Server 2016 以降では使用できません。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] リリース以降の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーは、SharePoint モードのレポート サーバーを管理できるように設計されていません。 SharePoint モードの管理や構成は、SharePoint サーバーの全体管理および PowerShell スクリプトを使用して行います。  
   
-##  <a name="bkmk_scenarios"></a> Reporting Services 構成マネージャーを使用するシナリオ  
+##  <a name="scenarios-to-use-reporting-services-configuration-manager"></a><a name="bkmk_scenarios"></a> Reporting Services 構成マネージャーを使用するシナリオ  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用すると、次のタスクを実行できます。  
   
 -   レポート サーバー サービス アカウントの構成。 アカウントは最初にセットアップ時に構成されますが、パスワードの更新や使用するアカウントの変更を行う場合は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーで変更できます。  
@@ -48,7 +48,7 @@ ms.locfileid: "73593780"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーには、レポート サーバー コンテンツの管理、拡張機能の有効化、サーバーに対するアクセス権の付与を支援する機能はありません。 これには完全な配置が必要であり、拡張機能の有効化や既定値の変更には [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用し、サーバーへのユーザー アクセス権の付与には Web ポータルを使用します。
 
-##  <a name="bkmk_requirements"></a> 必要条件
+##  <a name="requirements"></a><a name="bkmk_requirements"></a> 必要条件
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーはバージョン固有です。 このバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] と共にインストールされる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーは、以前のバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の構成には使用できません。 同じコンピューター上で古いバージョンと新しいバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をサイド バイ サイドで実行している場合は、各バージョンに付属する Reporting Services 構成マネージャーを使用して、各インスタンスを構成する必要があります。  
 
@@ -64,7 +64,7 @@ ms.locfileid: "73593780"
 
 Reporting Services 構成マネージャーは、SQL Server Reporting Services をインストールするときに自動的にインストールされます。
 
-##  <a name="bkmk_start_configuration_manager"></a> Reporting Services 構成マネージャーを起動するには
+##  <a name="to-start-the-reporting-services-configuration-manager"></a><a name="bkmk_start_configuration_manager"></a> Reporting Services 構成マネージャーを起動するには
 
 1.  使用している Microsoft Windows のバージョンに合わせて次の手順を使用します。
 

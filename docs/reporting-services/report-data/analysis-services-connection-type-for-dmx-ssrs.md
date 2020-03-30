@@ -17,10 +17,10 @@ ms.assetid: 2de825e9-6d8a-4128-add0-da15dc6cea3e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 96aa224d6eb9dac6e6f2959010631007ba41a8cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081440"
 ---
 # <a name="analysis-services-connection-type-for-dmx-ssrs"></a>DMX のための Analysis Services の接続の種類 (SSRS)
@@ -30,12 +30,12 @@ ms.locfileid: "77081440"
 >  レポートをデザインする前に、モデルのトレーニングを行う必要があります。 詳細については、「 [データ マイニング ソリューション](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)」を参照してください。  
   
 ## <a name="design-mode"></a>デザイン モード  
- DMX クエリ デザイナーは、デザイン モードで開きます。 デザイン モードには、単一のデータ マイニング モデルと入力テーブルを選択するためのグラフィカルなデザイン画面、および予測クエリを指定するためのグリッドが含まれています。 DMX クエリ デザイナーには、この他に 2 つのモードがあります。クエリ モードと結果モードです。 クエリ モードでは、デザインモードのグリッドがクエリ ペインに置き換えられ、これを使用して DMX クエリを入力することができます。 結果モードでは、クエリによって返された結果セットがデータ グリッドに表示されます。  
+ DMX クエリ デザイナーは、デザイン モードで開きます。 デザイン モードには、単一のデータ マイニング モデルと入力テーブルを選択するためのグラフィカルなデザイン画面、および予測クエリを指定するためのグリッドが含まれています。 DMX クエリ デザイナーには、この他に、クエリ モードと結果モードの 2 つのモードがあります。 クエリ モードでは、デザインモードのグリッドがクエリ ペインに置き換えられ、これを使用して DMX クエリを入力することができます。 結果モードでは、クエリによって返された結果セットがデータ グリッドに表示されます。  
   
  DMX クエリ デザイナーのモードを変更するには、クエリのデザイン画面を右クリックし、 **[デザイン]** 、 **[クエリ]** 、または **[結果]** をクリックします。 詳細については、「[Analysis Services の DMX クエリ デザイナーのユーザー インターフェイス](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)」および「[データ マイニング モデル (DMX) からデータを取得する (SSRS)](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)」を参照してください。  
   
 ## <a name="designing-a-prediction-query"></a>予測クエリのデザイン  
- デザイン モードのクエリ デザイン ペインには 2 つのウィンドウがあります。 **[マイニング モデル]** と **[入力テーブルの選択]** です。 **[マイニング モデル]** ウィンドウでは、クエリで使用するマイニング モデルを選択します。 **[入力テーブルの選択]** ウィンドウでは、予測の基盤とするテーブルを選択します。 入力テーブルではなく、単一クエリを使用する場合は、クエリ デザイン ペインで右クリックし、 **[単一クエリ]** をクリックします。 **[入力テーブルの選択]** ウィンドウは、 **[単一クエリ入力]** ウィンドウに置き換えられます。  
+ デザイン モードのクエリ デザイン ペインには、 **[マイニング モデル]** と **[入力テーブルの選択]** の 2 つのウィンドウがあります。 **[マイニング モデル]** ウィンドウでは、クエリで使用するマイニング モデルを選択します。 **[入力テーブルの選択]** ウィンドウでは、予測の基盤とするテーブルを選択します。 入力テーブルではなく、単一クエリを使用する場合は、クエリ デザイン ペインで右クリックし、 **[単一クエリ]** をクリックします。 **[入力テーブルの選択]** ウィンドウは、 **[単一クエリ入力]** ウィンドウに置き換えられます。  
   
  デザイン モードで、 **[マイニング モデル]** ウィンドウおよび **[入力テーブルの選択]** ウィンドウから、グリッド ペインの **[フィールド]** 列にフィールドをドラッグします。 また、残りの列に値を設定することによって、別名を指定したり、結果にフィールドを表示したり、複数のフィールドをグループにまとめたり、演算子を指定して特定の条件または引数でフィールド値を制限したりすることができます。 クエリ モードでは、フィールドをクエリ ペインにドラッグして DMX クエリを作成できます。  
   
@@ -47,6 +47,6 @@ ms.locfileid: "77081440"
 ## <a name="see-also"></a>参照  
  [データ マイニング ソリューション](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)   
  [クエリ デザイン ツール (SSRS)](../../reporting-services/report-data/query-design-tools-ssrs.md)   
- [データ接続文字列を作成する - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [データ接続文字列の作成 - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   

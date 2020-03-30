@@ -17,10 +17,10 @@ ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 363a2761472f544e2c995fba25f4650ee6242b36
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71293881"
 ---
 # <a name="transfer-error-messages-task"></a>エラー メッセージ転送タスク
@@ -86,7 +86,7 @@ ms.locfileid: "71293881"
   **[エラー メッセージ転送タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、エラー メッセージ転送タスクに名前を付けて説明を記述することができます。 エラー メッセージ転送タスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス間で 1 つ以上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザー定義エラー メッセージを転送します。   
   
 ### <a name="options"></a>オプション  
- **名前**  
+ **Name**  
  エラー メッセージ転送タスクの一意の名前を入力します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
 > [!NOTE]  
@@ -113,7 +113,7 @@ ms.locfileid: "71293881"
   
  このプロパティには、次の表に示すオプションがあります。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**True** にします|すべてのユーザー定義メッセージをコピーします。|  
 |**False**|指定されたユーザー定義メッセージのみをコピーします。|  

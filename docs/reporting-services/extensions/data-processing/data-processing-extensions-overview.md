@@ -11,10 +11,10 @@ ms.assetid: 1d652605-9313-4c75-98b4-ba4dcbbb222d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 67e20d8d0bdcfbb03d0188ac62b4d89bc12b704f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63194206"
 ---
 # <a name="data-processing-extensions-overview"></a>データ処理拡張機能の概要
@@ -74,7 +74,7 @@ Reporting Services データ処理拡張機能のアーキテクチャ
   
 -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[vstecado](../../../includes/vstecado-md.md)] アーキテクチャ、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] データ プロバイダー、ADO.NET DataSet オブジェクト、および共通する [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] インターフェイスについてよく理解していること。  
   
--   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# や [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET など、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 言語による開発経験があること。  
+-   [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Visual C# や [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET など、[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 言語による開発経験があること。  
   
 ## <a name="see-also"></a>参照  
  [Reporting Services の拡張機能](../../../reporting-services/extensions/reporting-services-extensions.md)   

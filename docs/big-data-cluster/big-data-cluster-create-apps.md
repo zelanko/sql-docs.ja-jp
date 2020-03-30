@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 33b5bf6061e9168fd150adcb4a7ccf29302bce63
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75253154"
 ---
 # <a name="how-to-deploy-an-app-on-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] にアプリを展開する方法
@@ -106,11 +106,11 @@ azdata app create --spec <directory containing spec file>
 azdata app create --spec ./addpy
 ```
 
-これは、アプリケーションが `addpy` フォルダーに格納されていることを前提としています。 このフォルダーには、`spec.yaml` というアプリケーションの仕様ファイルも含まれています。 `spec.yaml` ファイルの詳細については、[アプリケーションの展開](concept-application-deployment.md)に関するページを参照してください。
+これは、アプリケーションが `addpy` フォルダーに格納されていることを前提としています。 このフォルダーには、`spec.yaml` というアプリケーションの仕様ファイルも含まれています。 [ ファイルの詳細については、](concept-application-deployment.md)アプリケーションの展開`spec.yaml`に関するページを参照してください。
 
 このアプリ サンプル アプリを展開するには、`addpy` というディレクトリに次のファイルを作成します。
 
-- `add.py` 次の Python コードをこのファイルにコピーします。
+- [https://login.microsoftonline.com/consumers/](`add.py`) 次の Python コードをこのファイルにコピーします。
    ```py
    #add.py
   def add(x, y):
@@ -118,7 +118,7 @@ azdata app create --spec ./addpy
     return result
   result=add(x,y)
    ```
-- `spec.yaml` 次のコードをこのファイルにコピーします。
+- [https://login.microsoftonline.com/consumers/](`spec.yaml`) 次のコードをこのファイルにコピーします。
    ```yaml
    #spec.yaml
    name: add-app #name of your python script

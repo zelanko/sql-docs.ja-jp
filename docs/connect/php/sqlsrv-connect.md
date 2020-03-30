@@ -19,10 +19,10 @@ ms.assetid: 37836b49-258e-45ce-9549-b8bd85d6952d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 11da2b4eca130eafe93a01315aaa1f6d9919632c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015041"
 ---
 # <a name="sqlsrv_connect"></a>sqlsrv_connect
@@ -42,7 +42,7 @@ sqlsrv_connect( string $serverName [, array $connectionInfo])
   
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 3.0 以降では、 `"(localdb)\instancename"`で LocalDB インスタンスを指定することもできます。 詳細については、「[LocalDB のサポート](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)」を参照してください。  
   
-また、 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 3.0 以降では、AlwaysOn 可用性グループへの接続に仮想ネットワーク名を指定することもできます。 [!INCLUDE[ssHADR](../../includes/sshadr_md.md)] に対する [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] サポートの詳細については、「[Support for High Availability, Disaster Recovery](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)」 (高可用性およびディザスター リカバリーのサポート) をご覧ください。  
+また、 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 3.0 以降では、AlwaysOn 可用性グループへの接続に仮想ネットワーク名を指定することもできます。 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] に対する [!INCLUDE[ssHADR](../../includes/sshadr_md.md)] サポートの詳細については、「[Support for High Availability, Disaster Recovery](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)」 (高可用性およびディザスター リカバリーのサポート) をご覧ください。  
   
 *$connectionInfo* [省略可能]: 接続属性を含む連想 **array** です (たとえば、**array**("Database" => "AdventureWorks"))。 配列でサポートしているキーの一覧については、「 [Connection Options](../../connect/php/connection-options.md) 」を参照してください。  
   
@@ -50,7 +50,7 @@ sqlsrv_connect( string $serverName [, array $connectionInfo])
 PHP 接続リソースです。 接続を正常に作成して開くことができない場合、 **false** が返されます。  
   
 ## <a name="remarks"></a>解説  
-*UID* キーおよび *PWD* キーの値がオプションの *$connectionInfo* パラメーターで指定されていない場合、Windows 認証を使用して接続は試行されます。 サーバーに接続する方法の詳細については、「[方法: Windows 認証を使用して接続する](../../connect/php/how-to-connect-using-windows-authentication.md)」および「[方法: SQL Server 認証を使用して接続する](../../connect/php/how-to-connect-using-sql-server-authentication.md)」を参照してください。  
+*UID* キーおよび *PWD* キーの値がオプションの *$connectionInfo* パラメーターで指定されていない場合、Windows 認証を使用して接続は試行されます。 サーバーに接続する方法の詳細については、「 [How to: Connect Using Windows Authentication](../../connect/php/how-to-connect-using-windows-authentication.md) 」および「 [How to: Connect Using SQL Server Authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md)」を参照してください。  
   
 ## <a name="example"></a>例  
 次の例では、Windows 認証を使用して接続を作成して開きます。 この例では、ローカル コンピューターに SQL Server および [AdventureWorks](https://www.codeplex.com/SqlServerSamples) データベースがインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  

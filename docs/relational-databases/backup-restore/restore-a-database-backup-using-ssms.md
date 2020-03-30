@@ -20,10 +20,10 @@ ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 7cd893c9556b1dd45e2206ce73740e253af98ed3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70278767"
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>SSMS を使用してデータベース バックアップを復元する
@@ -75,7 +75,7 @@ Microsoft Azure BLOB ストレージ サービスからの SQL Server の復元�
             **追加**  
             **[追加]** をクリックすると、 **[バックアップ メディアの種類]** ドロップダウン リストで選択したメディアの種類に応じて、次のダイアログ ボックスのいずれかが開きます。 ( **[バックアップ メディア]** ボックスの一覧がいっぱいの場合、 **[追加]** ボタンは使用できません)。
 
-            |メディアの種類|ダイアログ ボックス|[説明]|    
+            |メディアの種類|ダイアログ ボックス|説明|    
             |----------------|----------------|-----------------|    
             |**[最近使ったファイル]**|**[バックアップ ファイルの検索]**|このダイアログ ボックスでは、ツリーからローカル ファイルを選択するか、完全修飾の汎用名前付け規則 (UNC) 名を使用したリモート ファイルを指定できます。 詳細については、「 [バックアップ デバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)」を参照してください。|    
             |**[デバイス]**|**[バックアップ デバイスの選択]**|このダイアログ ボックスでは、サーバー インスタンスで定義された論理バックアップ デバイスの一覧から選択できます。|    

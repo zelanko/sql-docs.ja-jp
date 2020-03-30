@@ -16,10 +16,10 @@ ms.assetid: fe6b6bb1-38d0-46c4-bab8-31df14e8999c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a2c265d3a373eb53b822142fa2955d07b96b88f2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68033659"
 ---
 # <a name="partial-backups-sql-server"></a>部分バックアップ (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "68033659"
   
  部分バックアップは、部分的な差分バックアップの *差分ベース* として使用できます。 詳細については、「 [差分バックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)」を参照してください。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 > [!NOTE]  
 >  部分バックアップは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] またはメンテナンス プラン ウィザードではサポートされません。  

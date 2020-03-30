@@ -17,10 +17,10 @@ ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c6076e4c02ccb4c91c88a22df7cd7c4a50b0f877
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295120"
 ---
 # <a name="debugging-data-flow"></a>データ フローのデバッグ
@@ -183,7 +183,7 @@ order by source_component_name desc
   
 8.  更新されたパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
 
-## <a name="add_viewer"></a> データ フローにデータ ビューアーを追加する
+## <a name="add-a-data-viewer-to-a-data-flow"></a><a name="add_viewer"></a> データ フローにデータ ビューアーを追加する
   このトピックでは、データ フローにデータ ビューアーを追加して構成する方法について説明します。 データ ビューアーには、2 つのデータ フロー コンポーネント間を移動するデータが表示されます。 たとえば、データ ビューアーでは、データ ソースから抽出されたデータを、データ フローの変換で変更される前の状態で表示できます。  
   
  パスは、データ フロー コンポーネントの出力を別のコンポーネントの入力に連結することにより、データ フロー内のコンポーネントを連結します。  

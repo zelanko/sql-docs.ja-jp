@@ -15,10 +15,10 @@ ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 88893b16dcb6e0529f166ab3c6e3f255110b6f71
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295774"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>チェックポイントを使用してパッケージを再開する
@@ -57,7 +57,7 @@ ms.locfileid: "71295774"
   
  次の表に、チェックポイントの実装時に設定するパッケージのプロパティの一覧を示します。  
   
-|プロパティ|[説明]|  
+|プロパティ|説明|  
 |--------------|-----------------|  
 |CheckpointFileName|チェックポイント ファイルの名前を指定します。|  
 |CheckpointUsage|チェックポイントを使用するかどうかを指定します。|  
@@ -70,7 +70,7 @@ ms.locfileid: "71295774"
 ### <a name="checkpoint-usage"></a>チェックポイントの使用法  
  CheckpointUsage プロパティは次の値に設定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**Never**|チェックポイント ファイルを使用せず、パッケージのワークフローの最初からパッケージを実行することを指定します。|  
 |**毎回**|チェックポイント ファイルを常に使用し、前の実行で失敗した時点からパッケージを再開することを指定します。 チェックポイント ファイルが見つからない場合、パッケージは失敗します。|  

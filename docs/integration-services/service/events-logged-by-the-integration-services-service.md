@@ -15,10 +15,10 @@ ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8b2f033557c566050dffbd82bc64df84feabb7b6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296926"
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>Integration Services サービスによってログに記録されるイベント
@@ -35,7 +35,7 @@ ms.locfileid: "71296926"
 ## <a name="service-status-messages"></a>サービスの状態メッセージ
  インストールで [ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ] を選択すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスがインストールおよび起動され、スタートアップの種類が自動に設定されます。  
   
-|イベント ID|シンボル名|Text|Notes|  
+|イベント ID|シンボル名|Text|メモ|  
 |--------------|-------------------|----------|-----------|  
 |256|DTS_MSG_SERVER_STARTING|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] サービスを開始しています。|サービスが開始されようとしています。|  
 |257|DTS_MSG_SERVER_STARTED|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] サービスが開始されました。|サービスが開始されました。|  
@@ -46,7 +46,7 @@ ms.locfileid: "71296926"
 ## <a name="settings-file-messages"></a>設定ファイルのメッセージ  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスの設定は、変更可能な XML ファイルに格納されています。 詳細については、「[Integration Services サービス (SSIS サービス)](../../integration-services/service/integration-services-service-ssis-service.md)」を参照してください。  
   
-|イベント ID|シンボル名|Text|Notes|  
+|イベント ID|シンボル名|Text|メモ|  
 |--------------|-------------------|----------|-----------|  
 |274|DTS_MSG_SERVER_MISSING_CONFIG_REG|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] サービス: %n構成ファイルを指定するレジストリ設定がありません。 %n既定の構成ファイルを読み込もうとしています。|構成ファイルのパスを含むレジストリ エントリが存在しないか、空です。|  
 |272|DTS_MSG_SERVER_MISSING_CONFIG|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] サービス構成ファイルが存在しません。%n既定の設定を使用して読み込んでいます。|指定した場所に構成ファイル自体が存在しません。|  
@@ -54,7 +54,7 @@ ms.locfileid: "71296926"
   
 ## <a name="other-messages"></a>その他のメッセージ  
   
-|イベント ID|シンボル名|Text|Notes|  
+|イベント ID|シンボル名|Text|メモ|  
 |--------------|-------------------|----------|-----------|  
 |336|DTS_MSG_SERVER_STOPPING_PACKAGE|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] サービス: 実行中のパッケージを停止しています。%nパッケージ インスタンス ID: %1%nパッケージ ID: %2%nパッケージ名: %3%nパッケージの説明: %4%nパッケージ|実行中のパッケージをサービスが停止しようとしています。 実行中のパッケージは、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で監視および停止できます。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] でパッケージを管理する方法については、「[パッケージの管理 &#40;SSIS サービス&#41;](../../integration-services/service/package-management-ssis-service.md)」を参照してください。|  
 

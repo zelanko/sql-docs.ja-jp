@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e61f8d9df3cb6dcaf545819d630c70bc18709d15
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68041777"
 ---
 # <a name="database-mirroring-system-object-reference"></a>データベース ミラーリング システム オブジェクト リファレンス
@@ -21,14 +21,14 @@ ms.locfileid: "68041777"
   
 ## <a name="system-catalog-views"></a>システム カタログ ビュー
 
-| システム カタログ ビュー | [説明]|
+| システム カタログ ビュー | 説明|
 | :------ | :----------------------------- |
 | [sys.database_mirroring_witnesses](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   | サーバーがデータベース ミラーリング パートナーシップで果たすすべてのミラーリング監視ロールの行を格納します。 |
 | &nbsp; | &nbsp; |
 
 ## <a name="system-dynamic-management-views"></a>システム動的管理ビュー
 
-| システム動的管理ビュー | [説明]|
+| システム動的管理ビュー | 説明|
 | :------ | :----------------------------- |
 | [sys.dm_db_mirroring_auto_page_repair](../../relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-auto-page-repair.md)   | サーバー インスタンス上のミラー化されたデータベースに対して試行されたページの自動修復ごとに 1 行を返します。  |
 | [sys.dm_db_mirroring_connections](../../relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections.md)    | データベース ミラーリング用に確立された各接続の行を返します。 |
@@ -36,7 +36,7 @@ ms.locfileid: "68041777"
 
 ## <a name="system-tables"></a>システム テーブル
 
-| システム テーブル | [説明]|
+| システム テーブル | 説明|
 | :------ | :----------------------------- |
 | [sysdbmaintplan_databases](../../relational-databases/system-tables/sysdbmaintplan-databases-transact-sql.md)   | データベース ミラーリング メンテナンス プランに関する情報を返します。 |
 | [sysdbmaintplan_history](../../relational-databases/system-tables/sysdbmaintplan-history-transact-sql.md)    | データベース ミラーリング メンテナンス プランの履歴に関する情報を返します。 |

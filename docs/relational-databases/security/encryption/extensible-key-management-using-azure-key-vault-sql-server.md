@@ -18,10 +18,10 @@ ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: df42a2d0f7dea2e32df61670aff88374a6fcff54
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558066"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Azure Key Vault を使用する拡張キー管理 (SQL Server)
@@ -31,7 +31,7 @@ ms.locfileid: "75558066"
   
  このトピックでは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタについて説明します。 その他の情報については、「 [Azure Key Vault を使用した拡張キー管理のセットアップ手順](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)」、「 [SQL 暗号化機能への SQL Server コネクタの使用](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)」、「 [SQL Server コネクタのメンテナンスとトラブルシューティング](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)」を参照してください。  
   
-##  <a name="Uses"></a> 拡張キー管理 (EKM) の概要と用途  
+##  <a name="what-is-extensible-key-management-ekm-and-why-use-it"></a><a name="Uses"></a> 拡張キー管理 (EKM) の概要と用途  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、[Transparent Data Encryption &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)、[列レベルの暗号化 (CLE)](../../../t-sql/functions/cryptographic-functions-transact-sql.md)、[バックアップの暗号化](../../../relational-databases/backup-restore/backup-encryption.md)など、機密データの保護に有効ないくつかの種類の暗号化が用意されています。 いずれのケースも、この従来のキー階層では、対称データ暗号化キー (DEK) を使用してデータが暗号化されます。 対称なデータ暗号化キーは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に格納されたキーの階層で暗号化することにより、さらに保護されます。 このモデルに代わるのが、EKM プロバイダー モデルです。 EKM プロバイダーのアーキテクチャでは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の外側にある外部暗号化サービス プロバイダーに格納された非対称キーを使用して、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でデータの暗号化キーを保護することができます。 このモデルによって、セキュリティの層が拡充され、キーとデータの管理が分離されます。  
    
  次の図は、従来のサービスにおけるキー管理階層と Azure Key Vault システムとを比較したものです。  

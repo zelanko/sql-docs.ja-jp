@@ -13,10 +13,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 3b548dd789bc7e234eb527ffe5766f433a06d77e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75244758"
 ---
 # <a name="aliasing-azure-sql-data-warehouse-parallel-data-warehouse"></a>別名 (Azure SQL Data Warehouse、Parallel Data Warehouse)
@@ -42,7 +42,7 @@ object_source [ AS ] alias
  *alias*  
  テーブルまたは列の目的の一時的な参照名。 あらゆる有効な名前を使用できます。 詳細については、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] の "オブジェクトの名前付け規則" を参照してください。  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdw-and-sspdw"></a>例: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、クリエに複数の結合が含まれています。 この例では、テーブルと列の両方の別名を確認できます。  
   
 -   列の別名: この例では、列と選択リストに列を含む式の両方に別名が与えられています。 `SalesTerritoryRegion AS SalesTR` では、単純な列の別名を確認できます。 `Sum(SalesAmountQuota) AS TotalSales` では、式の別名を確認できます。  

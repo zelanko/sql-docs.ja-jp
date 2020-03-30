@@ -13,10 +13,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 849cd64d336cf9289e04cd770eb51175c5cbebbc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68082899"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>テーブルおよび列に対するセマンティック検索の有効化
@@ -25,9 +25,9 @@ ms.locfileid: "68082899"
   
  統計的セマンティック検索では、フルテキスト検索によって作成されたインデックスを使用し、追加のインデックスを作成します。 このフルテキスト検索に対する依存関係があるため、新しいフルテキスト インデックスの定義や既存のフルテキスト インデックスの変更の際には、新しいセマンティック インデックスを作成します。 新しいセマンティック インデックスを作成するには、このトピックで説明するように、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用するか、または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のフルテキスト インデックス作成ウィザードおよびその他のダイアログ ボックスを使用します。  
   
-##  <a name="BasicEnabling"></a> セマンティック インデックスを作成する  
+##  <a name="create-a-semantic-index"></a><a name="BasicEnabling"></a> セマンティック インデックスを作成する  
   
-###  <a name="reqenable"></a> セマンティック インデックスの作成の要件と制限  
+###  <a name="requirements-and-restrictions-for-creating-a-semantic-index"></a><a name="reqenable"></a> セマンティック インデックスの作成の要件と制限  
   
 -   インデックスは、フルテキスト インデックス作成でサポートされる、テーブルおよびインデックス付きビューを含むいずれかのデータベース オブジェクトに作成できます。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "68082899"
   
 -   言語モデルを使用できない列に対して言語を指定した場合、インデックスの作成は失敗し、エラー メッセージが返されます。  
   
-##  <a name="HowToEnableCreate"></a> フルテキスト インデックスがない場合のセマンティック インデックスの作成  
+##  <a name="create-a-semantic-index-when-there-is-no-full-text-index"></a><a name="HowToEnableCreate"></a> フルテキスト インデックスがない場合のセマンティック インデックスの作成  
  **CREATE FULLTEXT INDEX** ステートメントを使用して新しいフルテキスト インデックスを作成する場合、列定義の一部としてキーワード **STATISTICAL_SEMANTICS** を指定すると、列レベルでのセマンティック インデックス作成を有効にすることができます。 また、フルテキスト インデックス作成ウィザードを使用して新しいフルテキスト インデックスを作成するときにセマンティック インデックス作成を有効にすることもできます。  
   
  ### <a name="create-a-new-semantic-index-by-using-transact-sql"></a>Transact-SQL を使用して新しいセマンティック インデックスを作成する  
@@ -117,7 +117,7 @@ GO
 ### <a name="create-a-new-semantic-index-by-using-sql-server-management-studio"></a>SQL Server Management Studio を使用して新しいセマンティック インデックスを作成する  
  フルテキスト インデックス作成ウィザードを実行し、セマンティック インデックスを作成するそれぞれの列に対し **[テーブル列の選択]** ページで **[統計的セマンティクス]** を有効にします。 フルテキスト インデックス作成ウィザードの起動方法などの詳細については、「 [フルテキスト インデックス作成ウィザードの使用](../../relational-databases/search/use-the-full-text-indexing-wizard.md)」をご覧ください。  
   
-##  <a name="HowToEnableAlter"></a> 既存のフルテキスト インデックスがある場合のセマンティック インデックスの作成  
+##  <a name="create-a-semantic-index-when-there-is-an-existing-full-text-index"></a><a name="HowToEnableAlter"></a> 既存のフルテキスト インデックスがある場合のセマンティック インデックスの作成  
  **ALTER FULLTEXT INDEX** ステートメントを使用して既存のフルテキスト インデックスを変更するとき、セマンティック インデックス作成を追加できます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のさまざまなダイアログ ボックスを使用して、セマンティック インデックス作成を追加することもできます。  
   
 ### <a name="add-a-semantic-index-by-using-transact-sql"></a>Transact-SQL を使用してセマンティック インデックスを追加する  
@@ -148,13 +148,13 @@ GO
 
 ## <a name="alter-a-semantic-index"></a>セマンティック インデックスを変更する
   
-###  <a name="addreq"></a> 既存のインデックスを変更するための要件と制限  
+###  <a name="requirements-and-restrictions-for-altering-an-existing-index"></a><a name="addreq"></a> 既存のインデックスを変更するための要件と制限  
   
 -   インデックスの作成の進行中は既存のインデックスを変更できません。 インデックスの作成の進行状況を監視する方法の詳細については、「 [セマンティクス検索の管理および監視](../../relational-databases/search/manage-and-monitor-semantic-search.md)」をご覧ください。  
   
 -   インデックス作成を列に追加する操作とこの列のインデックス作成を変更または削除する操作を **ALTER FULLTEXT INDEX** ステートメントの 1 回の呼び出しで行うことはできません。  
   
-##  <a name="dropping"></a> セマンティック インデックスを削除する  
+##  <a name="drop-a-semantic-index"></a><a name="dropping"></a> セマンティック インデックスを削除する  
 **ALTER FULLTEXT INDEX** ステートメントを使用して既存のフルテキスト インデックスを変更するとき、セマンティック インデックス作成を削除できます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のさまざまなダイアログ ボックスを使用して、セマンティック インデックス作成を削除することもできます。  
   
  ### <a name="drop-a-semantic-index-by-using-transact-sql"></a>Transact-SQL を使用してセマンティック インデックスを削除する  
@@ -185,7 +185,7 @@ GO
  ### <a name="drop-a-semantic-index-by-using-sql-server-management-studio"></a>SQL Server Management Studio を使用してセマンティック インデックスを削除する  
  **[フルテキスト インデックスのプロパティ]** ダイアログ ボックスの **[フルテキスト インデックスの列]** ページで、セマンティック インデックス作成とフルテキスト インデックス作成が有効な列を変更できます。 詳細については、「 [フルテキスト インデックスの管理](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)」をご覧ください。  
   
-###  <a name="dropreq"></a> Requirements and restrictions for dropping a semantic index  
+###  <a name="requirements-and-restrictions-for-dropping-a-semantic-index"></a><a name="dropreq"></a> Requirements and restrictions for dropping a semantic index  
   
 -   セマンティック インデックス作成を保持しているときに列からフルテキスト インデックス作成を削除することはできません。 セマンティック インデックス作成は、ドキュメントの類似性の結果に関してフルテキスト インデックス作成に依存します。  
   
@@ -242,7 +242,7 @@ GO
   
 ## <a name="determine-what-can-be-indexed-for-semantic-search"></a>セマンティック検索用にインデックスを作成できる対象を確認する  
   
-###  <a name="HowToCheckLanguages"></a> セマンティック検索でサポートされている言語を確認する  
+###  <a name="check-which-languages-are-supported-for-semantic-search"></a><a name="HowToCheckLanguages"></a> セマンティック検索でサポートされている言語を確認する  
   
 > [!IMPORTANT]  
 >  セマンティック インデックス作成は、フルテキスト インデックス作成ほどサポートされている言語が多くありません。 このため、フルテキスト検索用にインデックスを作成できる一方でセマンティック検索用にはインデックスを作成できない列が存在する場合があります。  
@@ -269,15 +269,15 @@ GO
 |ポルトガル語 (ポルトガル)|2070|  
 |Spanish|3082|  
   
-###  <a name="doctypes"></a> どのドキュメントの種類でインデックス作成ができるかを判断する  
+###  <a name="determine-which-document-types-can-be-indexed"></a><a name="doctypes"></a> どのドキュメントの種類でインデックス作成ができるかを判断する  
  カタログ ビュー [sys.fulltext_document_types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md) のクエリを実行します。  
   
  インデックスの対象とするドキュメントの種類が、サポートされている種類の一覧に含まれていない場合は、追加のフィルターを探してダウンロードし、インストールしなければならない場合があります。 詳細については、「 [登録済みのフィルターおよびワード ブレーカーの表示または変更](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)」を参照してください。  
   
-##  <a name="BestPracticeFilegroup"></a> ベスト プラクティス: フルテキストおよびセマンティック インデックスに対して別個のファイル グループの作成を検討してください。  
+##  <a name="best-practice-consider-creating-a-separate-filegroup-for-the-full-text-and-semantic-indexes"></a><a name="BestPracticeFilegroup"></a> ベスト プラクティス: フルテキストおよびセマンティック インデックスに対して別個のファイル グループの作成を検討してください。  
  ディスク領域の割り当てが問題となる場合は、フルテキスト インデックスとセマンティック インデックスに対して別個のファイル グループを作成することを検討してください。 セマンティック インデックスは、フルテキスト インデックスと同じファイル グループに作成されます。 完全に作成されたセマンティック インデックスには大量のデータが含まれる可能性があります。  
  
-##  <a name="IssueNoResults"></a> 問題点: 特定の列の検索で結果が返されない  
+##  <a name="issue-searching-on-specific-column-returns-no-results"></a><a name="IssueNoResults"></a> 問題点: 特定の列の検索で結果が返されない  
  **Unicode 以外の LCID が Unicode 言語に指定されていませんか。**  
  Unicode の語のみを含む言語の LCID (たとえば、ロシア語の LCID 1049) を持つ非 Unicode 列型に対してセマンティック インデックス作成を有効にすることができます。 この場合、この列のセマンティック インデックスから結果が返されることはありません。  
   

@@ -19,10 +19,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7740c95e40b4902e88d1ae5f632b34c7f759f441
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68132283"
 ---
 # <a name="limit-search-results-with-rank"></a>RANK を使用して検索結果を制限する方法
@@ -36,7 +36,7 @@ ms.locfileid: "68132283"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、一致結果を順位で並べ替え、指定された数の行のみを返します。 このオプションを使用すると、パフォーマンスが大幅に向上します。 たとえば、通常ならば 100 万行のテーブルから 10 万行を返すクエリに対して、上位 100 行だけを返すように要求すれば、そのクエリの処理が速くなります。  
   
-##  <a name="examples"></a> RANK を使用して検索結果を制限する例  
+##  <a name="examples-of-using-rank-to-limit-search-results"></a><a name="examples"></a> RANK を使用して検索結果を制限する例  
   
 ### <a name="example-a-searching-for-only-the-top-three-matches"></a>例 A: 上位 3 件の一致結果のみを検索する  
  次の例では、CONTAINSTABLE を使用して上位 3 件の一致結果のみを返します。  
@@ -91,7 +91,7 @@ GO
 ```  
   
   
-##  <a name="how"></a> 検索クエリの結果が順位付けされる方法  
+##  <a name="how-search-query-results-are-ranked"></a><a name="how"></a> 検索クエリの結果が順位付けされる方法  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のフルテキスト検索では、フルテキスト クエリが返すデータの関連性を示す省略可能なスコア (順位値) を生成できます。 この順位値は 1 行ごとに計算され、クエリの結果セットを関連性に従って並べ替える順序付け基準として使用できます。 順位値は、単に、結果セット内の各行の相対的な関連順位を示します。 実際の値は重要ではなく、通常はクエリが実行されるたびに変わります。 順位値は、他のクエリでは意味を持ちません。  
   
 ### <a name="statistics-for-ranking"></a>順位付けの統計  

@@ -10,10 +10,10 @@ ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 894ba4f1b73cb482ab521e859d0472f7039bfabf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77077061"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>URL の構成 (SSRS 構成マネージャー)
@@ -162,7 +162,7 @@ ms.locfileid: "77077061"
 ## <a name="urls-for-multiple-report-server-instances-on-the-same-computer"></a>同じコンピューター上の複数のレポート サーバー インスタンスの URL  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の複数のインスタンスの URL を予約する場合は、名前の競合が発生しないように名前付け規則に従う必要があります。 詳細については、「[レポート サーバーの複数インスタンス配置における URL 予約 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md)」を参照してください。  
   
-##  <a name="URLExamples"></a> URL の構成の例  
+##  <a name="examples-of-url-configurations"></a><a name="URLExamples"></a> URL の構成の例  
  レポート サーバーの URL の具体例を次に示します。  
   
 -   `https://localhost/reportserver`  

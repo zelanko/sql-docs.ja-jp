@@ -16,10 +16,10 @@ ms.assetid: 0cf286c7-9dcd-4b02-a568-ba6b6eb27e82
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3fabb6e8f71c1b771341045de7a113703d5f254e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67998227"
 ---
 # <a name="updatestring-method-sqlserverresultset"></a>updateString メソッド (SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67998227"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|Name|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[updateString (int, java.lang.String)](../../../connect/jdbc/reference/updatestring-method-int-java-lang-string.md)|渡された列インデックスを使用して、指定された列を**文字列**の値で更新します。|  
 |[updateString (java.lang.String, java.lang.String)](../../../connect/jdbc/reference/updatestring-method-java-lang-string-java-lang-string.md)|渡された列名を使用して、指定された列を**文字列**の値で更新します。|  

@@ -20,10 +20,10 @@ ms.assetid: 1f3730b4-1495-4d3a-af43-e57952812df9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: e22d0c36c3a5ce614357566079ec81dc54b7c70e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68022199"
 ---
 # <a name="sessionproperty-transact-sql"></a>SESSIONPROPERTY (Transact-SQL)
@@ -44,7 +44,7 @@ SESSIONPROPERTY (option)
  *オプション*  
  このセッションの現在のオプション設定値です。 *オプション* 値は次のいずれかを指定することができます。  
   
-|オプション|[説明]|  
+|オプション|説明|  
 |------------|-----------------|  
 |ANSI_NULLS|= (等号) と <> (不等号) を NULL 値に対して使用した場合の ISO 動作を指定します。<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |ANSI_PADDING|列に定義されているサイズよりも短い値を列に格納する方法と、値の後に文字とバイナリ データ型で空白が続いている値を列に格納する方法を指定します。<br /><br /> 1 = ON<br /><br /> 0 = OFF|  

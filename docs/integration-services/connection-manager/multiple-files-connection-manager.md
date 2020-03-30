@@ -18,10 +18,10 @@ ms.assetid: 10bdc56e-c5cd-4ddb-b2f7-375fe57fe8b2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1bee1c469ca7febfa114a3143d5842db74356ed9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294370"
 ---
 # <a name="multiple-files-connection-manager"></a>複数ファイル接続マネージャー
@@ -39,7 +39,7 @@ ms.locfileid: "71294370"
   
  次の表に **FileUsageType**の値を示します。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**0**|複数ファイル接続マネージャーは、既存のファイルを使用します。|  
 |**1**|複数ファイル接続マネージャーは、ファイルを作成します。|  

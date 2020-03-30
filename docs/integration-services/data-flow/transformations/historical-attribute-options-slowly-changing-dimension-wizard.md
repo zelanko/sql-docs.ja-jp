@@ -13,10 +13,10 @@ ms.assetid: a176ec66-ec39-4c99-99d1-c1afa8450e1e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4b06f56346e8e17fbdb9284dded2bfc154b9ae1a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297914"
 ---
 # <a name="historical-attribute-options-slowly-changing-dimension-wizard"></a>[履歴属性オプション] (緩やかに変化するディメンション ウィザード)
@@ -32,7 +32,7 @@ ms.locfileid: "71297914"
  **[現在のレコードと有効期限が切れたレコードを 1 列で表示する]**  
  1 列を使用して履歴属性のステータスを記録する場合は、次のオプションを使用できます。  
   
-|オプション|[説明]|  
+|オプション|説明|  
 |------------|-----------------|  
 |**[現在のレコードを示す列]**|現在のレコードを示す列を選択します。|  
 |**[現時点での値]**|**[True]** または **[Current]** を使用してレコードが現在のレコードであるかどうかを示します。|  
@@ -41,7 +41,7 @@ ms.locfileid: "71297914"
  **[開始日と終了日を使用して現在のレコードと有効期限が切れたレコードを識別する]**  
  このオプションのディメンション テーブルには、日付列を含める必要があります。 履歴属性を開始日および終了日を使用して示す場合は、次のオプションを使用できます。  
   
-|オプション|[説明]|  
+|オプション|説明|  
 |------------|-----------------|  
 |**[開始日の列]**|ディメンション テーブルで開始日を含む列を選択します。|  
 |**[終了日の列]**|ディメンション テーブルで終了日を含む列を選択します。|  

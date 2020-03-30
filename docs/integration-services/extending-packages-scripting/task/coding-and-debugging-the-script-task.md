@@ -22,10 +22,10 @@ ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1a437704946f379f38aa590ccbf53f240fad94cc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296915"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>スクリプト タスクのコーディングおよびデバッグ
@@ -210,7 +210,7 @@ To open Help, press F1.
 >  プロジェクト参照は、VSTA IDE の **[クラス ビュー]** または**プロジェクト エクスプローラー**で表示できます。 どちらのウィンドウも **[表示]** メニューから開きます。 新しい参照は、 **[プロジェクト]** メニュー、**プロジェクト エクスプローラー**、または **[クラス ビュー]** から追加できます。  
   
 ## <a name="interacting-with-the-package-in-the-script-task"></a>スクリプト タスク内でのパッケージとの対話  
- スクリプト タスクは、<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> クラスのインスタンスであるグローバル オブジェクト **Dts**、およびそのメンバーを使用して、内部のパッケージや [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ランタイムとやり取りします。  
+ スクリプト タスクは、**クラスのインスタンスであるグローバル オブジェクト**Dts<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel>、およびそのメンバーを使用して、内部のパッケージや [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ランタイムとやり取りします。  
   
  次の表は、<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> クラスのプリンシパルのパブリック メンバーの一覧です。このクラスは、グローバル オブジェクト **Dts** を介してスクリプト タスクのコードに公開されます。 このセクションのトピックでは、これらのメンバーを使用する方法についてさらに詳しく説明します。  
   

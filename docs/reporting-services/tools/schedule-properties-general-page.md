@@ -11,10 +11,10 @@ ms.assetid: 20e43966-6caf-4972-a2e2-0d9131ac8f51
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a05afd2a99ca8680d5c3d38538a9fcee03d5dc5f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571397"
 ---
 # <a name="schedule-properties-general-page"></a>[スケジュールのプロパティ]\([全般] ページ)
@@ -34,7 +34,7 @@ ms.locfileid: "65571397"
 >この機能は、すべてのエディションの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用できるわけではなく、この機能がないエディションを実行している場合は、このページが表示されません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[SQL Server 2017 の各エディションとサポートされている機能](../../sql-server/editions-and-components-of-sql-server-2017.md)」をご覧ください。  
   
 ## <a name="options"></a>オプション  
- **名前**  
+ **Name**  
  共有スケジュールの名前を指定します。  
   
  **[このスケジュールの実行開始日]**  

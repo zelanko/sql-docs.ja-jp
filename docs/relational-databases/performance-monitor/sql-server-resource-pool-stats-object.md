@@ -14,10 +14,10 @@ ms.assetid: bb46e029-fcf9-4aeb-a066-be41e7668fb9
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 98241060994cd97944db30a777bc23f475b8cb0e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67995700"
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>SQLServer:Resource Pool Stats オブジェクト
@@ -26,7 +26,7 @@ ms.locfileid: "67995700"
   
  アクティブな各リソース プールでは、リソース ガバナー リソース プール名と同じインスタンス名を持つ SQLServer:Resource Pool Stats パフォーマンス オブジェクトのインスタンスが作成されます。 次の表では、このインスタンスでサポートされるカウンターについて説明します。  
   
-|カウンター名|[説明]|  
+|カウンター名|説明|  
 |------------------|-----------------|  
 |**Active memory grant amount (KB)**|許可されているメモリの現在の合計量 (KB 単位)。 この情報は、 [sys.dm_exec_query_resource_semaphores](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)で取得することもできます。| 
 |**Active memory grants count**|メモリ許可の現在の合計数。 この情報は、 [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)で取得することもできます。|  

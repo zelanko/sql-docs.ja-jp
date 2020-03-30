@@ -16,10 +16,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: de89d261fd63cf1895016b2a994c5ac77740cce6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75258505"
 ---
 # <a name="create-an-activex-script-job-step"></a>Create an ActiveX Script Job Step
@@ -28,7 +28,7 @@ ms.locfileid: "75258505"
 > [!IMPORTANT]  
 > [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
 
-このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)]、または SQL Server 管理オブジェクトを使用して、ActiveX スクリプトを実行する [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブ ステップを作成および定義する方法について説明します。  
+このトピックでは、[!INCLUDE[msCoName](../../includes/msconame_md.md)] で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、または SQL Server 管理オブジェクトを使用して、ActiveX スクリプトを実行する [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] エージェント ジョブ ステップを作成および定義する方法について説明します。  
 
 **重要** [!INCLUDEssNoteDepFutureAvoid]
   
@@ -48,13 +48,13 @@ ms.locfileid: "75258505"
   
 ## <a name="before-you-begin"></a>はじめに  
   
-### <a name="Restrictions"></a>制限事項と制約事項  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>制限事項と制約事項  
 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-### <a name="Security"></a>セキュリティ  
+### <a name="security"></a><a name="Security"></a>セキュリティ  
 詳細については、「 [SQL Server エージェントのセキュリティの実装](../../ssms/agent/implement-sql-server-agent-security.md)」をご覧ください。  
   
-## <a name="SSMS"></a>SQL Server Management Studio の使用  
+## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>SQL Server Management Studio の使用  
   
 #### <a name="to-create-an-activex-script-job-step"></a>ActiveX スクリプト ジョブ ステップを作成するには  
   
@@ -76,7 +76,7 @@ ms.locfileid: "75258505"
   
 9. **[詳細設定]** ページをクリックして、ジョブ ステップのオプションのうち、ジョブ ステップが成功または失敗した場合のアクション、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによるジョブ ステップの再試行回数、および再試行間隔を設定します。  
   
-## <a name="TSQL"></a>Transact-SQL の使用  
+## <a name="using-transact-sql"></a><a name="TSQL"></a>Transact-SQL の使用  
   
 #### <a name="to-create-an-activex-script-job-step"></a>ActiveX スクリプト ジョブ ステップを作成するには  
   
@@ -109,7 +109,7 @@ ms.locfileid: "75258505"
   
 詳細については、「 [sp_add_jobstep (Transact-SQL)](https://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755)」を参照してください。  
   
-## <a name="SMO"></a>SQL Server 管理オブジェクトの使用  
+## <a name="using-sql-server-management-objects"></a><a name="SMO"></a>SQL Server 管理オブジェクトの使用  
 **ActiveX スクリプト ジョブ ステップを作成するには**  
   
 Visual Basic、Visual C#、PowerShell などの選択したプログラミング言語で **JobStep** クラスを使用します。  

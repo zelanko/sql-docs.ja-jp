@@ -16,10 +16,10 @@ ms.assetid: 78f39ec7-e27c-4534-bb19-fae806afd08c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9c18df5aa5b0b82e14a20489df4afd99636aa2e4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67996691"
 ---
 # <a name="updatecharacterstream-method-sqlserverresultset"></a>updateCharacterStream メソッド (SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67996691"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|Name|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[updateCharacterStream &#40;int, java.io.Reader&#41; メソッド](../../../connect/jdbc/reference/updatecharacterstream-method-int-java-io-reader.md)|指定された列を文字ストリームの値で更新します。|  
 |[updateCharacterStream (int, java.io.Reader, int) メソッド](../../../connect/jdbc/reference/updatecharacterstream-method-int-java-io-reader-int.md)|指定された列を文字ストリームの値で更新します。文字ストリームの値は、指定された文字数を持ちます。|  

@@ -15,10 +15,10 @@ ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 46eb7c7f0834f864aba8e3951f4caf9092f5bb7b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294195"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>[データ プロファイル タスク エディター] ([全般] ページ)
@@ -54,7 +54,7 @@ ms.locfileid: "71294195"
  **[DestinationType]**  
  データ プロファイル出力をファイルに保存するか変数に保存するかを指定します。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**[FileConnection]**|ファイル接続マネージャーで指定された場所にあるファイルにプロファイル出力を保存します。<br /><br /> 注: 使用するファイル接続マネージャーは **[Destination]** オプションで指定します。|  
 |**変数**|プロファイル出力をパッケージ変数に保存します。<br /><br /> 注: 使用するパッケージ変数は **[Destination]** オプションで指定します。|  

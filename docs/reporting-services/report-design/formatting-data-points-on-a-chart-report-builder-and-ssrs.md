@@ -12,10 +12,10 @@ ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5fbcae6cbbadb8665086c65088c32513a632c34a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77079927"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>グラフでのデータ ポイントの書式設定 (レポート ビルダーおよび SSRS)
@@ -41,7 +41,7 @@ ms.locfileid: "77079927"
 ## <a name="positioning-data-point-labels-on-a-chart"></a>グラフへのデータ ポイント ラベルの配置  
  すべての種類のグラフで、グラフを右クリックして **[データ ラベルの表示]** を選択すると、データ ポイント ラベルを表示できます。 データ ポイント ラベルの位置は、グラフの種類に応じて指定されます。  
   
--   横棒グラフの場合、 **BarLabelStyle** カスタム属性を使用してデータ ポイント ラベルの位置を指定できます。 指定できる位置は 4 つあります。Outside、Left、Center、Right です。 バーのラベル スタイルが外側に設定されている場合、ラベルは、グラフ領域内に収まる範囲でバーの外側に配置されます。 バーの外側でグラフ領域内にラベルを配置できない場合、ラベルはバーの内側に配置されます。  
+-   横棒グラフの場合、 **BarLabelStyle** カスタム属性を使用してデータ ポイント ラベルの位置を指定できます。 外側、左、中央、および右の 4 つの位置から選択できます。 バーのラベル スタイルが外側に設定されている場合、ラベルは、グラフ領域内に収まる範囲でバーの外側に配置されます。 バーの外側でグラフ領域内にラベルを配置できない場合、ラベルはバーの内側に配置されます。  
   
 -   円グラフの場合、 **PieLabelStyle** カスタム属性を使用してデータ ポイント ラベルの位置を指定できます。 円グラフの周囲にデータ ポイント ラベルを配置する場合は、円グラフのサイズ、円グラフと対応する凡例の間の空間、ラベルのサイズなど、多くの点を考慮する必要があります。 詳細については、「 [円グラフの外側へのデータ ポイント ラベルの表示 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "77079927"
  [グラフの軸ラベルの書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [日付または通貨として軸ラベルを書式設定する &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [チュートリアル:レポートへの円グラフの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [チュートリアル: レポートへの円グラフの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [式の例 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
