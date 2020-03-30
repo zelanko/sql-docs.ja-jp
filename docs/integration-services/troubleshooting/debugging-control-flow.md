@@ -20,10 +20,10 @@ ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f762b5c7c5c4ce48c0c1bee660ed726b124e9c55
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295129"
 ---
 # <a name="debugging-control-flow"></a>制御フローのデバッグ
@@ -115,10 +115,10 @@ ms.locfileid: "71295129"
 |ウィンドウ|説明|  
 |------------|-----------------|  
 |ブレークポイント|パッケージ内のブレークポイントを一覧表示し、ブレークポイントの有効化および削除のオプションを提供します。|  
-|Output|[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の機能に関する状態メッセージを表示します。|  
+|出力|[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の機能に関する状態メッセージを表示します。|  
 |即時|式をデバッグして評価し、変数の値を出力するのに使用されます。|  
 
-## <a name="debug"></a> タスクまたはコンテナーにブレークポイントを設定してパッケージをデバッグする
+## <a name="debug-a-package-by-setting-breakpoints-on-a-task-or-a-container"></a><a name="debug"></a> タスクまたはコンテナーにブレークポイントを設定してパッケージをデバッグする
   この手順では、パッケージ、タスク、For ループ コンテナー、Foreach ループ コンテナー、またはシーケンス コンテナーにブレークポイントを設定する方法について説明します。  
   
 ### <a name="to-set-breakpoints-in-a-package-a-task-or-a-container"></a>パッケージ、タスク、またはコンテナーにブレークポイントを設定するには  
@@ -144,7 +144,7 @@ ms.locfileid: "71295129"
 ## <a name="set-breakpoints"></a>[ブレークポイントの設定]
   **[ブレークポイントの設定]** ダイアログ ボックスを使用すると、ブレークポイントを有効にしてブレークポイントの動作を制御するためのイベントを指定できます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **有効**  
  選択すると、イベントのブレークポイントが有効になります。  
   
@@ -154,7 +154,7 @@ ms.locfileid: "71295129"
  **Hit Count Type**  
  ブレークポイントがいつ有効になるかを指定します。  
   
-|Value|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**毎回**|ブレークポイントにヒットすると、常に実行が中断されます。|  
 |**ヒット カウント (等しい)**|ブレークポイントの発生回数がヒット カウントと等しくなると実行が中断されます。|  

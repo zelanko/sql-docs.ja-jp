@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 2f8ca3e42221387470ee4fc4cbd6873b526bc8b7
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77256873"
 ---
 # <a name="how-to-upgrade-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]をアップグレードする方法
@@ -76,11 +76,11 @@ ms.locfileid: "77256873"
 >最新のイメージ タグは、[SQL Server 2019 ビッグ データ クラスターのリリース ノート](release-notes-big-data-cluster.md)で入手できます。
 
 >[!IMPORTANT]
->プライベート リポジトリを使用して BDC を展開またはアップグレードするためにイメージを事前にプルする場合は、現在のビルド イメージとターゲット ビルド イメージがプライベート リポジトリ内にあることを確認します。 これにより、必要に応じて正常にロールバックすることができます。 また、最初の展開以降にプライベート リポジトリの >資格情報を変更した場合は、対応する環境変数 DOCKER_PASSWORD および >DOCKER_USERNAME を更新します。 現在のビルドとターゲット ビルドに異なるプライベート リポジトリを使用したアップグレードはサポートされていません。
+>プライベート リポジトリを使用して BDC を展開またはアップグレードするためにイメージを事前にプルする場合は、現在のビルド イメージとターゲット ビルド イメージがプライベート リポジトリ内にあることを確認します。 これにより、必要な場合に正常にロールバックすることが可能になります。 また、最初の展開以降にプライベート リポジトリの >資格情報を変更した場合は、対応する環境変数 DOCKER_PASSWORD および >DOCKER_USERNAME を更新します。 現在のビルドとターゲット ビルドに異なるプライベート リポジトリを使用したアップグレードはサポートされていません。
 
 ### <a name="increase-the-timeout-for-the-upgrade"></a>アップグレードのタイムアウトを増やす
 
-割り当てられた時間内に特定のコンポーネントがアップグレードされない場合、タイムアウトが発生する可能性があります。 次のコードは、エラーの例を示しています。
+割り当てられた時間内に特定のコンポーネントがアップグレードされない場合、タイムアウトが発生する可能性があります。 次のコードにエラー例を示します。
 
    ```
    >azdata.EXE bdc upgrade --name <mssql-cluster>
@@ -162,7 +162,7 @@ SQL Server 2019 GDR1 リリースの前に展開されたビッグ データ ク
    > [!IMPORTANT]
    > 各リリースで、`azdata` の `n-1` バージョンへのパスが変更されます。 以前に `azdata` をインストールしている場合でも、新しいクラスターを作成する前に、最新のパスから再インストールする必要があります。
 
-### <a id="azdataversion"></a> azdata のバージョンを確認する
+### <a name="verify-the-azdata-version"></a><a id="azdataversion"></a> azdata のバージョンを確認する
 
 新しいビッグ データ クラスターを展開する前に、`--version` パラメーターを指定して、最新バージョンの `azdata` を使用していることを確認します。
 
