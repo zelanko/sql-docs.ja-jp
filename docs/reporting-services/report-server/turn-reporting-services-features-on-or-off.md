@@ -12,10 +12,10 @@ ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 67945db1fd131b27b37a7e34853987c38fad8d84
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67140382"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Reporting Services 機能の有効化と無効化
@@ -31,7 +31,7 @@ ms.locfileid: "67140382"
   
 -   [レポート データ ソース用 Windows 統合セキュリティ](#WinIntSec)  
   
-##  <a name="RSWebSvc"></a> レポート サーバー Web サービス  
+##  <a name="report-server-web-service"></a><a name="RSWebSvc"></a> レポート サーバー Web サービス  
   
 ### <a name="to-turn-on-or-off-the-report-server-web-service-by-editing-configuration"></a>構成を編集してレポート サーバー Web サービスを有効または無効にするには  
   
@@ -67,7 +67,7 @@ ms.locfileid: "67140382"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="Sched"></a> 定期的なイベントおよび配信  
+##  <a name="scheduled-events-and-delivery"></a><a name="Sched"></a> 定期的なイベントおよび配信  
   
 #### <a name="to-turn-on-or-off-scheduled-events-and-delivery-by-editing-configuration"></a>構成を編集して定期的なイベントおよび配信を有効または無効にするには  
   
@@ -94,11 +94,11 @@ ms.locfileid: "67140382"
 > [!NOTE]  
 >  バックグラウンド処理によって、サーバー処理に必要なデータベース メンテナンス機能が提供されているため、バックグラウンド処理を完全に無効にすることはできません。  
   
-##  <a name="WebPortal"></a> Web ポータル
+##  <a name="web-portal"></a><a name="WebPortal"></a> Web ポータル
   
 SQL Server 2016 Reporting Services 累積的更新プログラム 2 より、Web ポータルは常に有効になります。
   
-##  <a name="WinIntSec"></a> Windows 統合セキュリティ  
+##  <a name="windows-integrated-security"></a><a name="WinIntSec"></a> Windows 統合セキュリティ  
   
 ### <a name="to-turn-on-or-off-windows-integrated-security-by-using-sql-server-management-studio"></a>SQL Server Management Studio を使用して Windows 統合セキュリティを有効または無効にするには  
   

@@ -9,10 +9,10 @@ ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: af9333214aa10f8c21d8b7eb31b92c261ff155e9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65574017"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>レポート サーバー上のアイテムの URL の例 - SharePoint モード
@@ -34,7 +34,7 @@ ms.locfileid: "65574017"
 |SharePoint Web アプリケーション|SharePoint Web アプリケーションは、スタンドアロン サーバーとしてインストールするか、一連の仮想サーバーを含むファームの下にインストールできます。 Web アプリケーションには `http:*//servername*` などの URL を指定します。複数のサイトを指定することもできます。|  
 |サイト|サイトは、Web アプリケーションの親サイトまたはサブサイトになります。|  
 |SharePoint ライブラリ|ライブラリには、ドキュメントやフォルダーが格納されます。 レポート、レポート モデル、共有データ ソース、および外部画像を保存できるサイト オブジェクトは、ライブラリまたはライブラリ内のフォルダーのみです。|  
-|Item|URL 内で参照できるレポート サーバーのアイテムとしては、レポートまたはサブレポートのレポート定義、レポート モデル、共有データ ソース、外部画像などがあります。|  
+|アイテム|URL 内で参照できるレポート サーバーのアイテムとしては、レポートまたはサブレポートのレポート定義、レポート モデル、共有データ ソース、外部画像などがあります。|  
   
 ## <a name="url-syntax-and-rules"></a>URL の構文と規則  
  ライブラリ内の各レポート サーバー アイテムを識別するには、完全修飾 URL を使用します。完全修飾 URL は、プロトコルを表すプレフィックス、サーバー名、サイト、ライブラリ、ファイル名、ファイルの種類を示すファイル名拡張子で構成されます。  
@@ -100,7 +100,7 @@ ms.locfileid: "65574017"
 |**または** インスタンス上の [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] Documents/Doc [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] フォルダー内の Company Sales サンプル レポート。|`https://TestServer/TestSite/Documents/Doc/Company%20Sales.rdl`|  
 |**または** インスタンス上の [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] Report Center [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 内の Company Sales サンプル レポート。|`https://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl`|  
   
-##  <a name="publishingToDocLib"></a> 作成ツールから SharePoint ライブラリへのパブリッシュ  
+##  <a name="publishing-from-an-authoring-tool-to-a-sharepoint-library"></a><a name="publishingToDocLib"></a> 作成ツールから SharePoint ライブラリへのパブリッシュ  
  レポート作成ツールを使用してレポートと関連ファイルをライブラリにパブリッシュする場合、ファイルは検証されてから追加されます。 SharePoint ライブラリで **[アップロード]** アクションを使用してレポートと関連ファイルをアップロードする場合、検証チェックは行われません。 ファイルが有効かどうかは、管理、編集、または実行のためにレポートにアクセスするまで知ることができません。  
   
 > [!NOTE]  

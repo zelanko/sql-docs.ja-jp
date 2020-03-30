@@ -14,10 +14,10 @@ ms.assetid: 1313b889-69b4-4018-9868-0496dd83bf44
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a90f68a55b10234e0397aba480b8d78a9cea1d9c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68039120"
 ---
 # <a name="use-xml-in-computed-columns"></a>計算列での XML の使用
@@ -86,7 +86,7 @@ FROM T
   
 ### <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[計算列を使用した使用頻度の高い XML 値の昇格](../../relational-databases/xml/promote-frequently-used-xml-values-with-computed-columns.md)|計算列やプロパティ テーブルでプロパティの昇格を使用する方法について説明します。|  
   

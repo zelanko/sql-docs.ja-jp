@@ -16,10 +16,10 @@ ms.assetid: ed1ef012-fa14-4ba5-bafe-d1527ba065b3
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 60183a9777098728ee258274a19aca4d65885b87
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68115828"
 ---
 # <a name="options-in-the-back-up-database-task-for-maintenance-plan"></a>メンテナンス プラン用のデータベースのバックアップ タスクのオプション
@@ -31,14 +31,14 @@ ms.locfileid: "68115828"
 -   [メンテナンス プランの作成](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)  
   
 ## <a name="options"></a>オプション  
- **[接続]**  
+ **Connection**  
  このタスクを実行するときに使用するサーバー接続を選択します。  
   
  **[新規作成]**  
  このタスクを実行するときに使用する新しいサーバー接続を作成します。 **[新しい接続]** ダイアログ ボックスについては、後で説明します。  
   
  **データベース**  
- このタスクで操作するデータベースを指定します。 選択すると、ドロップ ダウン リストに次のオプションが表示されます: **[すべてのデータベース]** 、 **[すべてのシステム データベース]** **[すべてのユーザー データベース]** 、 **[These specific databases]\(これらの特定のデータベース\)** 。  
+ このタスクで操作するデータベースを指定します。 ボックスの一覧から、 **[すべてのデータベース]** 、 **[すべてのシステム データベース]** 、 **[すべてのユーザー データベース]** 、または **[特定のデータベース]** を選択します。  
   
  **[すべてのデータベース]**  
  すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを対象として、メンテナンス タスクを実行するメンテナンス プランを生成します。  
@@ -126,7 +126,7 @@ ms.locfileid: "68115828"
  Windows 認証を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続します。  
   
  **[特定のユーザー名とパスワードを使用する]**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続します。 このオプションは利用できません。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用して [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続します。 このオプションは利用できません。  
   
  **ユーザー名**  
  認証に使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。 このオプションは利用できません。  

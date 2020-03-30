@@ -11,10 +11,10 @@ ms.assetid: 273a54f8-b107-4f36-9461-2b475644760d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9026edfafeb24eae766e9d42634512a565b6934b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296677"
 ---
 # <a name="catalogevent_message_context"></a>catalog.event_message_context 
@@ -26,7 +26,7 @@ ms.locfileid: "71296677"
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーでの実行について、実行イベントのメッセージに関連付けられた条件に関する情報を表示します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |Context_id|bigint|エラー コンテキストの一意の ID。|  
 |Event_message_id|bigint|コンテキストに関連するメッセージの一意の ID。|  
@@ -43,7 +43,7 @@ ms.locfileid: "71296677"
   
 ||||  
 |-|-|-|  
-|コンテキストの種類の値|種類名|[説明]|  
+|コンテキストの種類の値|種類名|説明|  
 |10|タスク|エラーが発生したときのタスクの状態。|  
 |20|パイプライン|パイプライン コンポーネント (ソース、変換先、または変換コンポーネント) でのエラー。|  
 |30|Sequence|シーケンスの状態。|  

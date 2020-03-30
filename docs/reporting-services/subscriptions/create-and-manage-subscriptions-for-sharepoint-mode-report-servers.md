@@ -13,10 +13,10 @@ ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5d4ffc3930003a4035211a4a63a54bc4f8196948
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65578346"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>SharePoint モード レポート サーバーのサブスクリプションの作成と管理
@@ -48,7 +48,7 @@ ms.locfileid: "65578346"
   
 -   [サブスクリプションを削除するには](#bkmk_to_delete_subscription)  
   
-##  <a name="bkmk_subscription_requirements"></a> サブスクリプションの一般的な要件  
+##  <a name="general-requirements-for-subscriptions"></a><a name="bkmk_subscription_requirements"></a> サブスクリプションの一般的な要件  
  サブスクリプションを作成するには、レポートの表示と警告の作成の権限が必要です。レポートでは、保存された資格情報が使用されている必要があります。  
   
  サブスクリプションを作成する際には、出力ファイル形式を選択できます。 形式によっては正しく機能しないレポートもあります。 サブスクリプションで形式を選択する前に、レポートを開き、別の形式にエクスポートして、期待どおりに表示されることを確認します。  
@@ -64,7 +64,7 @@ ms.locfileid: "65578346"
   
  サブスクリプション用に選択する出力形式は、レポート サーバーにインストールされた表示拡張機能に基づきます。 そのため、レポート サーバーの表示拡張機能によってサポートされる出力形式しか選択できません。  
   
-###  <a name="bkmk_tosharepoint_library"></a> SharePoint ライブラリにレポートを配信するサブスクリプションを作成するには  
+###  <a name="to-create-a-subscription-to-deliver-a-report-to-a-sharepoint-library"></a><a name="bkmk_tosharepoint_library"></a> SharePoint ライブラリにレポートを配信するサブスクリプションを作成するには  
   
 1.  レポートを含む SharePoint ライブラリを参照します。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "65578346"
   
 10. **[パラメーター]** では、パラメーター化されたレポートに対するサブスクリプションを作成している場合に、サブスクリプション処理時にレポートと共に使用する値を指定します。 選択したレポートにパラメーターが含まれていない場合、パラメーター セクションはこのページに表示されません。 パラメーターの詳細については、「[パブリッシュ済みレポートのパラメーターを設定する方法 (Reporting Services の SharePoint 統合モード)](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)」を参照してください。  
   
-###  <a name="bkmk_subscription_for_sharedfolder"></a> 共有フォルダーへの配信のサブスクリプションを作成するには  
+###  <a name="to-create-a-subscription-for-shared-folder-delivery"></a><a name="bkmk_subscription_for_sharedfolder"></a> 共有フォルダーへの配信のサブスクリプションを作成するには  
   
 1.  レポートを含む SharePoint ライブラリを参照します。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "65578346"
   
 12. **[パラメーター]** では、パラメーター化されたレポートに対するサブスクリプションを作成している場合に、サブスクリプション処理時にレポートと共に使用する値を指定します。 パラメーターの詳細については、「[パブリッシュ済みレポートのパラメーターを設定する方法 (Reporting Services の SharePoint 統合モード)](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)」を参照してください。  
   
-###  <a name="bkmk_subscription_for_email"></a> レポート サーバー電子メール配信のサブスクリプションを作成するには  
+###  <a name="to-create-a-subscription-for-report-server-e-mail-delivery"></a><a name="bkmk_subscription_for_email"></a> レポート サーバー電子メール配信のサブスクリプションを作成するには  
   
 1.  レポートを含む SharePoint ライブラリを参照します。  
   
@@ -138,7 +138,7 @@ ms.locfileid: "65578346"
   
 10. **[パラメーター]** では、パラメーター化されたレポートに対するサブスクリプションを作成している場合に、サブスクリプション処理時にレポートと共に使用する値を指定します。 パラメーターの詳細については、「[パブリッシュ済みレポートのパラメーターを設定する方法 (Reporting Services の SharePoint 統合モード)](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)」を参照してください。  
   
-###  <a name="bkmk_to_modify_subscription"></a> サブスクリプションを表示または変更するには  
+###  <a name="to-view-or-modify-a-subscription"></a><a name="bkmk_to_modify_subscription"></a> サブスクリプションを表示または変更するには  
   
 1.  レポートを含む SharePoint ライブラリを参照します。  
   
@@ -146,7 +146,7 @@ ms.locfileid: "65578346"
   
 3.  各サブスクリプションは、配信の種類で識別されます。 サブスクリプションの種類をクリックし、既存のプロパティを表示および変更します。  
   
-###  <a name="bkmk_to_delete_subscription"></a> サブスクリプションを削除するには  
+###  <a name="to-delete-a-subscription"></a><a name="bkmk_to_delete_subscription"></a> サブスクリプションを削除するには  
   
 1.  レポートを含む SharePoint ライブラリを参照します。  
   

@@ -11,10 +11,10 @@ ms.assetid: 7e81f7e1-fac0-4b57-b145-8f1b9e4720bf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8347b0b1860041c6bd2a9241e015e2bfd71e5135
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298146"
 ---
 # <a name="raw-file-custom-properties"></a>RAW ファイルのカスタム プロパティ
@@ -28,7 +28,7 @@ ms.locfileid: "71298146"
   
  次の表は、RAW ファイル ソースのカスタム プロパティを示しています。 すべてのプロパティは読み取り/書き込み可能です。  
   
-|プロパティ名|データ型|[説明]|  
+|プロパティ名|データ型|説明|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer (列挙)|生データへのアクセスに使用するモード。 可能な値は、 **ファイル名** (0) および **変数からのファイル名** (1) です。 既定値は **ファイル名** (0) です。|  
 |FileName|String|ソース ファイルのパスおよびファイル名。|  
@@ -43,7 +43,7 @@ ms.locfileid: "71298146"
   
  次の表は、RAW ファイル変換先のカスタム プロパティを示しています。 すべてのプロパティは読み取り/書き込み可能です。  
   
-|プロパティ名|データ型|[説明]|  
+|プロパティ名|データ型|説明|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer (列挙)|FileName プロパティにファイル名を含めるか、またはファイル名が含まれる変数名を含めるかを指定する値。 オプションは、 **ファイル名** (0) および **変数からのファイル名** (1) です。|  
 |FileName|String|RAW ファイル変換先が書き込むファイルの名前。|  

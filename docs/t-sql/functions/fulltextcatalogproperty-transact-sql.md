@@ -20,10 +20,10 @@ ms.assetid: f841dc79-2044-4863-aff0-56b8bb61f250
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2f5a83635d9c608d779631b61859082a6dccadc2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67940223"
 ---
 # <a name="fulltextcatalogproperty-transact-sql"></a>FULLTEXTCATALOGPROPERTY (Transact-SQL)
@@ -51,7 +51,7 @@ _catalog\_name_
 _property_  
 フルテキスト カタログのプロパティ名を含む式を指定します。 次の表は、プロパティと、返される情報についての説明の一覧です。  
   
-|プロパティ|[説明]|  
+|プロパティ|説明|  
 |--------------|-----------------|  
 |**AccentSensitivity**|アクセントの区別の設定。<br /><br /> 0 = アクセントを区別しない<br /><br /> 1 = アクセントを区別する|  
 |**IndexSize**|フルテキスト カタログの論理サイズ (MB 単位)。 セマンティック キー フレーズとドキュメントの類似性のインデックスのサイズが含まれています。<br /><br /> 詳細については、後の「解説」を参照してください。|  

@@ -26,10 +26,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: a50c5344f8742a8483d952b8cab3b03d8d666b31
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68057909"
 ---
 # <a name="about-log-shipping-sql-server"></a>ログ配布について (SQL Server)
@@ -50,7 +50,7 @@ ms.locfileid: "68057909"
   
 -   [関連タスク](#RelatedTasks)  
   
-##  <a name="Benefits"></a> 利点  
+##  <a name="benefits"></a><a name="Benefits"></a> 利点  
   
 -   1 つのプライマリ データベースと 1 つ以上のセカンダリ データベース (それぞれが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の個別のインスタンスに存在) で構成される災害復旧ソリューションを提供します。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68057909"
   
 -   プライマリ サーバーでプライマリ データベースのログをバックアップする時点と、セカンダリ サーバーがそのログ バックアップを復元 (適用) する時点との間に生じる遅延時間をユーザーが指定できます。 たとえば、プライマリ データベースでデータが誤って変更された場合などに、長い遅延が役立ちます。 誤った変更にすぐに気付いた場合、遅延があれば、変更が反映される前に、セカンダリ データベースにあるまだ変更されていないデータを取得できます。  
   
-##  <a name="TermsAndDefinitions"></a> 用語と定義  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a> 用語と定義  
  プライマリ データベース  
  実稼働サーバーである [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "68057909"
 > [!TIP]  
 >  警告 1 件につき警告番号を指定する必要があります。 また、警告が発生するとオペレーターに通知されるよう警告を構成してください。  
   
-##  <a name="ComponentsAndConcepts"></a> ログ配布の概要  
+##  <a name="log-shipping-overview"></a><a name="ComponentsAndConcepts"></a> ログ配布の概要  
  ログ配布は、次に示す 3 つの操作から構成されます。  
   
 1.  プライマリ サーバー インスタンスでトランザクション ログをバックアップする。  
@@ -128,7 +128,7 @@ ms.locfileid: "68057909"
   
  ![ジョブのバックアップ、コピー、復元を示す構成](../../database-engine/log-shipping/media/ls-typical-configuration.gif "ジョブのバックアップ、コピー、復元を示す構成")  
   
-##  <a name="Interoperability"></a> 相互運用性  
+##  <a name="interoperability"></a><a name="Interoperability"></a> 相互運用性  
  ログ配布は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の次の機能またはコンポーネントと共に使用できます。  
   
 -   [ログ配布から AlwaysOn 可用性グループへの移行の前提条件 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
@@ -140,7 +140,7 @@ ms.locfileid: "68057909"
 > [!NOTE]  
 >  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] とデータベース ミラーリングは、相互に排他的です。 これらの機能のいずれかに対して構成されたデータベースを他の機能用に構成することはできません。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [SQL Server 2016 へのログ配布のアップグレード &#40;Transact-SQL&#41;](../../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   

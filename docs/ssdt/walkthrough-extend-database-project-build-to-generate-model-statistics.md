@@ -11,13 +11,13 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: fbbedff0adbe0302465344d437f9646bf68d997f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242689"
 ---
-# <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>チュートリアル:モデルの統計を生成するためのデータベース プロジェクトのビルドの拡張
+# <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>チュートリアル :モデルの統計を生成するためのデータベース プロジェクトのビルドの拡張
 
 ビルド コントリビューターを作成して、データベース プロジェクトのビルド時にカスタム アクションを実行できます。 このチュートリアルでは、データベース プロジェクトのビルド時に SQL データベース モデルから統計を出力する ModelStatistics という名前のビルド コントリビューターを作成します。 このビルド コントリビューターはビルド時にパラメーターを受け取るため、追加のステップが必要となります。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "75242689"
   
 この場合、属性の最初のパラメーターは一意の識別子である必要があります。この識別子は、プロジェクト ファイル内でコントリビューターを識別するために使用されます。 ライブラリの名前空間 (このチュートリアルでは "ExampleContributors") とクラス名 (このチュートリアルでは "ModelStatistics") を組み合わせて識別子を生成することをお勧めします。 このチュートリアルの後半では、この名前空間を使用してコントリビューターの実行を指定する方法について説明します。  
   
-## <a name="CreateBuildContributor"></a>ビルド コントリビューターを作成する  
+## <a name="create-a-build-contributor"></a><a name="CreateBuildContributor"></a>ビルド コントリビューターを作成する  
 ビルド コントリビューターを作成するには、次のタスクを実行する必要があります。  
   
 -   クラス ライブラリ プロジェクトを作成し、必要な参照を追加する。  
@@ -452,7 +452,7 @@ ms.locfileid: "75242689"
   
     次に、アセンブリをインストールし、SQL プロジェクトのビルド時に読み込まれるようにします。  
   
-## <a name="InstallBuildContributor"></a>ビルド コントリビューターのインストール  
+## <a name="install-a-build-contributor"></a><a name="InstallBuildContributor"></a>ビルド コントリビューターのインストール  
 ビルド コントリビューターをインストールするには、アセンブリおよび関連付けられた .pdb ファイルを Extensions フォルダーにコピーする必要があります。  
   
 #### <a name="to-install-the-mybuildcontributor-assembly"></a>MyBuildContributor アセンブリをインストールするには  
@@ -464,7 +464,7 @@ ms.locfileid: "75242689"
     > [!NOTE]  
     > 既定では、コンパイル済みの .dll ファイルのパスは YourSolutionPath\YourProjectPath\bin\Debug または YourSolutionPath\YourProjectPath\bin\Release です。  
   
-## <a name="TestBuildContributor"></a>ビルド コントリビューターの実行またはテスト  
+## <a name="run-or-test-your-build-contributor"></a><a name="TestBuildContributor"></a>ビルド コントリビューターの実行またはテスト  
 ビルド コントリビューターを実行またはテストするには、次のタスクを実行する必要があります。  
   
 -   ビルドする予定の .sqlproj ファイルにプロパティを追加する。  
@@ -593,5 +593,5 @@ Relationships
   
 ## <a name="see-also"></a>参照  
 [ビルド コントリビューターと配置コントリビューターを使用してデータベースのビルドと配置をカスタマイズする](../ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md)  
-[チュートリアル:配置計画を分析するためのデータベース プロジェクトの配置の拡張](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
+[チュートリアル: 配置計画を分析するためのデータベース プロジェクトの配置の拡張](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
   

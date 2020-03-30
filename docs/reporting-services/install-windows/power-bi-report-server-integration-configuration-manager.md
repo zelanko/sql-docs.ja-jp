@@ -7,19 +7,19 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
 ms.openlocfilehash: c2013e99f5e222c50d954e292cbc0b48b39cb7c9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68265644"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Power BI レポート サーバーの統合 (構成マネージャー)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーの **[Power BI 統合]** ページを使用して、レポート サーバーを目的の Azure Active Directory (AD) 管理対象テナントに登録すると、レポート サーバーのユーザーはサポートされるレポート アイテムを [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] ダッシュボードにピン留めできるようになります。 ピン留めできるサポートされているアイテムの一覧については、「 [Power BI ダッシュボードへの Reporting Services のアイテムのピン留め](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)」を参照してください。
+**構成マネージャーの**[Power BI 統合][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ページを使用して、レポート サーバーを目的の Azure Active Directory (AD) 管理対象テナントに登録すると、レポート サーバーのユーザーはサポートされるレポート アイテムを [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] ダッシュボードにピン留めできるようになります。 ピン留めできるサポートされているアイテムの一覧については、「 [Power BI ダッシュボードへの Reporting Services のアイテムのピン留め](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)」を参照してください。
 
-## <a name="bkmk_requirements"></a> Power BI 統合の要件
+## <a name="requirements-for-power-bi-integration"></a><a name="bkmk_requirements"></a> Power BI 統合の要件
 
 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] サービスを参照できるようにするためのアクティブなインターネット接続に加え、 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]統合を完了するには次の要件があります。
 
@@ -33,17 +33,17 @@ ms.locfileid: "68265644"
 
 - ピン留めするレポートでは、保存された資格情報を使用する必要があります。 これは [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 統合自体の要件ではありませんが、ピン留めされたアイテムの更新プロセスの要件となっています。  レポート アイテムのピン留め操作により、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] でのタイルの更新スケジュールを管理する [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]サブスクリプションが作成されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションでは、保存された資格情報が必要です。 レポートで保存された資格情報を使用していない場合、ユーザーは引き続きレポート アイテムをピン留めできますが、関連付けられたサブスクリプションが [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]でデータを更新しようとすると、 **[個人用サブスクリプション]** ページに次のようなエラー メッセージが表示されます。
 
-    PowerBI 配信エラー: ダッシュボード:IT 支払い分析のサンプル、ビジュアル:Chart2、エラー:現在のアクションを完了できません。 ユーザー データ ソースの資格情報が、このレポートまたは共有データセットを実行するための要件を満たしていません。 ユーザー データ ソースの資格情報が.
+    PowerBI 配信エラー: ダッシュ ボード: IT 支払い分析のサンプル、ビジュアル: Chart2、エラー: 現在のアクションを完了できません。 ユーザー データ ソースの資格情報が、このレポートまたは共有データセットを実行するための要件を満たしていません。 ユーザー データ ソースの資格情報が.
 
 資格情報を保存する方法の詳細については、「 [Reporting Services データ ソースに資格情報を保存する](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)」の「レポート固有のデータ ソース用の保存された資格情報を構成する」を参照してください。
 
 管理者は、  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のログ ファイルで詳細を確認できます。  次のようなメッセージが表示されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のログ ファイルを確認および監視する優れた方法として、ファイルに対して [!INCLUDE[msCoName](../../includes/msconame-md.md)] Power Query を使用します。  詳細情報と短いビデオについては、「 [レポート サーバー サービスのトレース ログ](../../reporting-services/report-server/report-server-service-trace-log.md)」を参照してください。
 
-- subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR:PowerBI 配信エラー: ダッシュボード:IT 支払い分析のサンプル、ビジュアル:Chart2、エラー:現在のアクションを完了できません。 ユーザー データ ソースの資格情報が、このレポートまたは共有データセットを実行するための要件を満たしていません。 ユーザー データ ソースの資格情報がレポート サーバー データベースに格納されていないか、ユーザー データ ソースが、資格情報を要求しないように構成されているにもかかわらず、自動実行アカウントが指定されていません。
+- subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: PowerBI 配信エラー: ダッシュ ボード: IT 支払い分析のサンプル、ビジュアル: Chart2、エラー: 現在のアクションを完了できません。 ユーザー データ ソースの資格情報が、このレポートまたは共有データセットを実行するための要件を満たしていません。 ユーザー データ ソースの資格情報がレポート サーバー データベースに格納されていないか、ユーザー データ ソースが、資格情報を要求しないように構成されているにもかかわらず、自動実行アカウントが指定されていません。
 
-- notification!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR:サブスクリプション fcdb8581-d763-4b3b-ba3e-8572360df4f9 の処理中にエラーが発生しました:PowerBI 配信エラー: ダッシュボード:IT 支払い分析のサンプル、ビジュアル:Chart2、エラー:現在のアクションを完了できません。 ユーザー データ ソースの資格情報が、このレポートまたは共有データセットを実行するための要件を満たしていません。 ユーザー データ ソースの資格情報がレポート サーバー データベースに格納されていないか、ユーザー データ ソースが、資格情報を要求しないように構成されているにもかかわらず、自動実行アカウントが指定されていません。
+- notification!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Error occurred processing subscription fcdb8581-d763-4b3b-ba3e-8572360df4f9: PowerBI 配信エラー: ダッシュ ボード: IT 支払い分析のサンプル、ビジュアル: Chart2、エラー: 現在のアクションを完了できません。 ユーザー データ ソースの資格情報が、このレポートまたは共有データセットを実行するための要件を満たしていません。 ユーザー データ ソースの資格情報がレポート サーバー データベースに格納されていないか、ユーザー データ ソースが、資格情報を要求しないように構成されているにもかかわらず、自動実行アカウントが指定されていません。
 
-## <a name="bkmk_steps2integrate"></a> レポート サーバーを統合および登録するには
+## <a name="to-integrate-and-register-the-report-server"></a><a name="bkmk_steps2integrate"></a> レポート サーバーを統合および登録するには
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーで次の手順を完了します。 詳細については、「[Reporting Services 構成マネージャー](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)」を参照してください。
 
@@ -60,7 +60,7 @@ ms.locfileid: "68265644"
 
 5. **[結果]** ウィンドウの **[コピー]** ボタンをクリックして、登録の詳細を Windows クリップボードにコピーし、後で参照できるように保存します。
 
-## <a name="bkmk_unregister"></a> Power BI への登録の解除
+## <a name="unregister-with-power-bi"></a><a name="bkmk_unregister"></a> Power BI への登録の解除
 
 **登録解除:** Azure Active Directory からレポート サーバーの登録を解除すると、次のようになります。
 
@@ -74,7 +74,7 @@ ms.locfileid: "68265644"
 
 構成マネージャーの **Power BI** ページで、 **[Power BI への登録を解除]** を選択します。
 
-##  <a name="bkmk_updateregistration"></a> 登録の更新
+##  <a name="update-registration"></a><a name="bkmk_updateregistration"></a> 登録の更新
 
 レポート サーバーの構成を変更した場合は、 **[登録の更新]** を使用します。 たとえば、ユーザーが [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]を参照する際に使用する URL を追加または削除する場合は、次の手順を実行します。
 
@@ -90,7 +90,7 @@ ms.locfileid: "68265644"
 
      Azure AD へのログインを求められます。 ページが更新され、 **[リダイレクト URL]** に新しい URL が表示されます。
 
-##  <a name="bkmk_integration_process"></a> Power BI の統合とピン留めのプロセスの概要
+##  <a name="summary-of-the-power-bi-integration-and-pin-process"></a><a name="bkmk_integration_process"></a> Power BI の統合とピン留めのプロセスの概要
 
 ここでは、レポート サーバーを [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] と統合し、レポート アイテムをダッシュボードにピン留めするときの基本的な手順と関連するテクノロジの概要を説明します。
 

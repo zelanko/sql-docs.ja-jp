@@ -17,10 +17,10 @@ ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1c3ccadbe443ca555e5386ea3d3434405ae97461
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71291478"
 ---
 # <a name="dqs-cleansing-transformation"></a>DQS クレンジング変換
@@ -74,13 +74,13 @@ ms.locfileid: "71291478"
   
 -   [[DQS クレンジング接続マネージャー] ダイアログ ボックスのオプションの設定](#manager)  
   
-###  <a name="open"></a> DQS クレンジング変換エディターを開く  
+###  <a name="open-the-dqs-cleansing-transformation-editor"></a><a name="open"></a> DQS クレンジング変換エディターを開く  
   
 1.  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] で、DQS クレンジング変換を [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]パッケージに追加します。  
   
 2.  コンポーネントを右クリックし、 **[編集]** をクリックします。  
   
-###  <a name="connection"></a> [接続マネージャー] タブのオプションの設定  
+###  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> [接続マネージャー] タブのオプションの設定  
  **[データ品質接続マネージャー]**  
  既存の DQS 接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続を作成します。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "71291478"
   
 -   **[行のリダイレクト]** : 入力データが Data Quality Services データベースに挿入されていないために、エラー出力にリダイレクトされることを示します。  
   
-###  <a name="mapping"></a> [マッピング] タブのオプションの設定  
+###  <a name="set-options-on-the-mapping-tab"></a><a name="mapping"></a> [マッピング] タブのオプションの設定  
  複合ドメインに列をマップする方法については、「 [複合ドメインへの列のマップ](../../../integration-services/data-flow/transformations/map-columns-to-composite-domains.md)」を参照してください。  
   
  **使用できる入力列**  
@@ -134,7 +134,7 @@ ms.locfileid: "71291478"
  **[状態の別名]**  
  修正されたデータの状態情報を含む列を一覧表示します。 列名を変更するフィールドをクリックしてください。  
   
-###  <a name="advanced"></a> [詳細設定] タブのオプションの設定  
+###  <a name="set-options-on-the-advanced-tab"></a><a name="advanced"></a> [詳細設定] タブのオプションの設定  
  **[出力の標準化]**  
  ドメインで定義されている出力形式に基づいて標準化された形式でデータを出力するかどうかを示します。 標準化された形式の詳細については、「 [データ クレンジング](../../../data-quality-services/data-cleansing.md)」を参照してください。  
   
@@ -150,7 +150,7 @@ ms.locfileid: "71291478"
  **[追加されたデータ スキーマ]**  
  データ スキーマを出力するかどうかを示します。 詳細については、「 [参照データへのドメインまたは複合ドメインのアタッチ](../../../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)」を参照してください。  
   
-###  <a name="manager"></a> [DQS クレンジング接続マネージャー] ダイアログ ボックスのオプションの設定  
+###  <a name="set-the-options-in-the-dqs-cleansing-connection-manager-dialog-box"></a><a name="manager"></a> [DQS クレンジング接続マネージャー] ダイアログ ボックスのオプションの設定  
  **サーバー名**  
  接続先の DQS サーバーの名前を選択または入力します。 サーバーの詳細については、「 [DQS 管理](../../../data-quality-services/dqs-administration.md)」を参照してください。  
   

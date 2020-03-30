@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dae7d1e29227484e907c45e8062f90873c10892b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68086775"
 ---
 # <a name="datetime2-transact-sql"></a>datetime2 (Transact-SQL)
@@ -66,7 +66,7 @@ ms.locfileid: "68086775"
 |---|---|
 |YYYY-MM-DDThh:mm:ss[.nnnnnnn]<br /><br /> YYYY-MM-DDThh:mm:ss[.nnnnnnn]|この形式は、セッションのロケール設定である SET LANGUAGE および SET DATEFORMAT の影響を受けません。 文字列リテラルには、**T**、コロン (:)、およびピリオド (.) が含まれます (例: '2007-05-02T19:58:47.1234567')。|  
   
-|ODBC|[説明]|  
+|ODBC|説明|  
 |---|---|
 |{ ts 'yyyy-mm-dd hh:mm:ss[.fractional seconds]' }|ODBC API 固有:<br /><br /> 1 秒未満の秒を表す小数点の右側の桁数は、0 から 7 (100 ナノ秒) の範囲で指定できます。|  
   

@@ -17,10 +17,10 @@ ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9354bf1c1539a7ba83f1af1eafdb27ed99041d76
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68000696"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>OPENXML 内でのメタプロパティの指定
@@ -38,7 +38,7 @@ ms.locfileid: "68000696"
 > [!NOTE]  
 >  これらのメタプロパティは、XPath による位置指定では参照できません。  
   
-|メタプロパティ属性|[説明]|  
+|メタプロパティ属性|説明|  
 |----------------------------|-----------------|  
 |**\@mp:id**|DOM ノードに対して、システムによって生成されたドキュメント レベルの識別子を提供します。 この ID は、ドキュメントが再解析されない限り、同じ XML ノードを参照します。<br /><br /> XML ID が **0** の場合、その要素はルート要素です。 その親要素の XML ID は NULL になります。|  
 |**\@mp:localname**|ノードの名前のローカル部分を格納します。 要素ノードや属性ノードの名前付けの際に、プレフィックスおよび名前空間 URI と共に使用します。|  
@@ -49,7 +49,7 @@ ms.locfileid: "68000696"
   
  次の表には、用意されている追加の親プロパティを示します。これらのプロパティを使用すると、階層情報を取得できます。  
   
-|親メタプロパティ属性|[説明]|  
+|親メタプロパティ属性|説明|  
 |-----------------------------------|-----------------|  
 |**\@mp:parentid**|**../\@mp:id** と対応します。|  
 |**\@mp:parentlocalname**|**../\@mp:localname** と対応します。|  

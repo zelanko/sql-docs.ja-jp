@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 12/16/2019
 ms.openlocfilehash: 96fe1480deed7dad420687b5b3b08a3ea8da2ffd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76516603"
 ---
 # <a name="sql-server-reporting-services-features-supported-by-editions"></a>SQL Server の各エディションでサポートされる SQL Server Reporting Services の機能
@@ -27,7 +27,7 @@ ms.locfileid: "76516603"
  - [SQL Server Reporting Services (SSRS) の新機能](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)。
  - [SQL Server の各エディションでサポートされている機能](~/sql-server/editions-and-components-of-sql-server-version-15.md)
 
-##  <a name="SSRS"></a> SQL Server Reporting Services (SQL Server Reporting Services)  
+##  <a name="sql-server-reporting-services"></a><a name="SSRS"></a> SQL Server Reporting Services (SQL Server Reporting Services)  
 
 Evaluation Edition および Developer Edition でサポートされている機能については、次の表の SQL Server Enterprise Edition の列を参照してください。
 
@@ -73,7 +73,7 @@ Evaluation Edition および Developer Edition でサポートされている機
 > SQL Server Express with Tools および SQL Server Express では、SQL Server Reporting Services はサポートされていません。
   
 ## <a name="edition-requirements-for-the-report-server-database"></a>レポート サーバー データベースのエディションの要件
- レポート サーバー データベースを作成するときは、SQL Server [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のすべてのエディションでデータベースをホストできるわけではないことに注意してください。 次の表に、SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の特定のエディションで使用できる [!INCLUDE[ssDE](../includes/ssde-md.md)] のエディションを示します。  
+ レポート サーバー データベースを作成するときは、SQL Server [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のすべてのエディションでデータベースをホストできるわけではないことに注意してください。 次の表に、SQL Server [!INCLUDE[ssDE](../includes/ssde-md.md)] の特定のエディションで使用できる [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のエディションを示します。  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Reporting Services のエディション|データベースをホストするために使用するデータベース エンジン インスタンスのエディション|  
 |----------------------------------------------------------------------|---------------------------------------------------------------------------|  
@@ -83,7 +83,7 @@ Evaluation Edition および Developer Edition でサポートされている機
 |Express with Advanced Services|Express with Advanced Services (ローカルのみ)|  
 |評価|評価|  
   
-##  <a name="BIC"></a> Business Intelligence クライアント  
+##  <a name="business-intelligence-clients"></a><a name="BIC"></a> Business Intelligence クライアント  
 次のソフトウェア クライアント アプリケーションは、Microsoft ダウンロード センターで入手できます。 これらは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンス上で実行されるビジネス インテリジェンス ドキュメントの作成に役立ちます。 作成したドキュメントをサーバー環境でホストする場合は、そのドキュメントの種類をサポートする [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のエディションを使用してください。 これらのクライアント アプリケーションで作成したドキュメントをホストするのに必要なサーバー機能を備えた [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディションを次の表に示します。  
   
 |ツール名|Enterprise|Standard|Web|Express with Advanced Services|Developer|  

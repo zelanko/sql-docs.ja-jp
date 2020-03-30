@@ -12,10 +12,10 @@ ms.assetid: a30600a9-bbed-4519-9426-3470ff2982e7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 69dce8309f96988a9d339aefbb684116c0df2eb4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63193788"
 ---
 # <a name="delivery-extensions-overview"></a>配信拡張機能の概要
@@ -51,7 +51,7 @@ Reporting Services の配信拡張機能アーキテクチャ
   
 -   レポート マネージャーに独自のサブスクリプション ユーザー インターフェイスを実装する場合は、[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] および Web コントロールについてよく理解していること  
   
--   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# や [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET など、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 言語による開発経験があること。  
+-   [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Visual C# や [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET など、[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 言語による開発経験があること。  
   
 ## <a name="see-also"></a>参照  
  [配信拡張機能の実装](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   

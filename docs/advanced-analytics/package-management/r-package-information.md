@@ -10,10 +10,10 @@ author: garyericson
 ms.author: garye
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 41e5f384878dfb284c31d6ba2886c9e223d03ca3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74479422"
 ---
 # <a name="get-r-package-information"></a>R パッケージ情報の取得
@@ -134,7 +134,7 @@ SQL Server Machine Learning Services のセットアップで MRO が提供す�
 
 ## <a name="list-all-installed-r-packages"></a>インストールされているすべての R パッケージの列挙
 
-次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャの例では、R 関数 `installed.packages()` を使用して、現在の SQL インスタンスの R_SERVICES ライブラリにインストールされている R パッケージを一覧表示します。 このスクリプトでは、DESCRIPTION ファイルのパッケージ名とバージョン フィールドを返します。
+次の `installed.packages()` ストアド プロシージャの例では、R 関数 [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、現在の SQL インスタンスの R_SERVICES ライブラリにインストールされている R パッケージを一覧表示します。 このスクリプトでは、DESCRIPTION ファイルのパッケージ名とバージョン フィールドを返します。
 
 ```sql
 EXECUTE sp_execute_external_script
