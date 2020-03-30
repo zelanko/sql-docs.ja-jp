@@ -12,16 +12,16 @@ author: mashamsft
 ms.author: mathoma
 ms.reviewer: kfarlee
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9314afbfa0cdcb917edd8942157c87e7db605b9d
-ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
+ms.openlocfilehash: 58c31d9b5e0e8858cc1953a2961107caea08d381
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77544946"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80342528"
 ---
 # <a name="accelerated-database-recovery"></a>高速データベース復旧
 
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 高速データベース復旧 (ADR) では、SQL データベース エンジンの復旧プロセスの再設計により、データベースの可用性が向上します (実行時間の長いトランザクションが存在する場合は特に)。 ADR は SQL Server 2019 の新しい機能です。また、Azure SQL Database の単一データベースとプールされたデータベースや Azure SQL Data Warehouse (現在、プレビュー段階) のデータベースで利用できます。 ADR の主な利点:
 

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 6988274ce4c8f8bf38d89c156150b37589529dae
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68769469"
 ---
 # <a name="subscribers"></a>[サブスクライバー]
@@ -31,7 +31,7 @@ ms.locfileid: "68769469"
   
 ## <a name="options"></a>オプション  
  **[パブリッシャーのプロパティ]**  
- **[パブリケーション]** ページで選択したパブリケーションへのサブスクライバーとして、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ ソースまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のデータ ソースを有効にするには、グリッド内の対応するチェック ボックスをオンにします。 サブスクライバーが一覧にない場合、 **[サブスクライバーの追加]** または **[SQL Server サブスクライバーの追加]** をクリックします。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][パブリケーション][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ページで選択したパブリケーションへのサブスクライバーとして、**のデータ ソースまたは** 以外のデータ ソースを有効にするには、グリッド内の対応するチェック ボックスをオンにします。 サブスクライバーが一覧にない場合、 **[サブスクライバーの追加]** または **[SQL Server サブスクライバーの追加]** をクリックします。  
   
  **サブスクリプション データベース**  
  この列で表示される情報と実行できる操作は、 **[サブスクライバー]** 列に表示されているサブスクライバーの種類によって変わります。  

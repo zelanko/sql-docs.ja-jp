@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b22210bdcabf1972e7fa76d7871ebd94e1f23ff5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72452903"
 ---
 # <a name="temporal-table-security"></a>テンポラル テーブル セキュリティ
@@ -28,7 +28,7 @@ ms.locfileid: "72452903"
 
  次の表は、テンポラル テーブルに適用されるセキュリティ原則についてまとめたものです。
 
-|原則|[説明]|
+|原則|説明|
 |---------------|-----------------|
 |システムによるバージョン管理の有効/無効を切り替えるには、影響を受けるオブジェクトに対する最高の権限が必要になる|SYSTEM_VERSIONING の有効/無効を切り替えるには、現行テーブルと履歴テーブルの両方の CONTROL 権限が必要になります。|
 |履歴データを直接変更できない|SYSTEM_VERSIONING がオンのときは、現行テーブルまたは履歴テーブルの実際の権限に関係なく、履歴データを変更することはできません。 データとスキーマのいずれも変更できません。|

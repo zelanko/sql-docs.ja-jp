@@ -26,10 +26,10 @@ ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: b1446d4b43524a1e670084812279284d86eb1b0b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71326095"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
@@ -128,7 +128,7 @@ ON *filegroup |* **[DEFAULT]** は、このキューを作成する [!INCLUDE[ss
 
 次の表は、キューの列の一覧です。
 
-|列名|データ型|[説明]|
+|列名|データ型|説明|
 |-----------------|---------------|-----------------|
 |status|**tinyint**|メッセージの状態。 RECEIVE ステートメントでは、status が **1** のメッセージがすべて返されます。 メッセージの保有が指定されている場合は、status が 0 に設定されます。 メッセージの保有が指定されていない場合は、メッセージがキューから削除されます。 キューのメッセージには、次のいずれかの値を含めることができます。<br /><br /> **0** = 保持されている受信メッセージ<br /><br /> **1** = 受信準備完了<br /><br /> **2** = 未完了<br /><br /> **3** = 保持されている送信メッセージ|
 |priority|**tinyint**|このメッセージに割り当てられている優先度レベル。|

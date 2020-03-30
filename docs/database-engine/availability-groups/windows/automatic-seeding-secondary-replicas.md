@@ -13,10 +13,10 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d76d91b2a083f06ea02951957bdd7e43b9092dea
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288546"
 ---
 # <a name="use-automatic-seeding-to-initialize-a-secondary-replica-for-an-always-on-availability-group"></a>自動シード処理を使用して、Always On 可用性グループのセカンダリ レプリカを初期化する
@@ -46,7 +46,7 @@ SQL Server 2012 および 2014 では、SQL Server Always On 可用性グルー�
 
 自動シード処理では圧縮を使用できますが、既定では使用不可になっています。 圧縮を有効にすると、ネットワーク帯域幅が減り、プロセス速度が上がる可能性はありますが、その代りにプロセッサのオーバーヘッドが増えます。 自動シード処理中に圧縮を使用するには、トレース フラグ 9567 を有効にします (「[可用性グループの圧縮の調整](tune-compression-for-availability-group.md)」を参照)。
 
-## <a name = "disklayout"></a> ディスク レイアウト
+## <a name="disk-layout"></a><a name = "disklayout"></a> ディスク レイアウト
 
 SQL Server 2016 以前では、自動シード処理でデータベースが作成されるフォルダーが既に存在しており、プライマリ レプリカのパスと同じである必要があります。 
 
@@ -103,13 +103,13 @@ WITH (
  GO
 ```
 
-`CREATE AVAILABILITY GROUP` ステートメントの実行中にプライマリ レプリカで `SEEDING_MODE` を設定しても、プライマリ レプリカには既にデータベースの主要な読み取り/書き込みコピーが含まれているため、効果はありません。 `SEEDING_MODE` が適用されるのは、別のレプリカがプライマリになっており、データベースが追加されている場合のみです。 シード処理モードは後で変更できます (「[レプリカのシード処理モードを変更する](#change-the-seeding-mode-of-a-replica)」を参照)。
+`SEEDING_MODE` ステートメントの実行中にプライマリ レプリカで `CREATE AVAILABILITY GROUP` を設定しても、プライマリ レプリカには既にデータベースの主要な読み取り/書き込みコピーが含まれているため、効果はありません。 `SEEDING_MODE` が適用されるのは、別のレプリカがプライマリになっており、データベースが追加されている場合のみです。 シード処理モードは後で変更できます (「[レプリカのシード処理モードを変更する](#change-the-seeding-mode-of-a-replica)」を参照)。
 
 セカンダリ レプリカになるインスタンスの場合、インスタンスが結合されると、SQL Server ログに次のようなメッセージが追加されます。
 
 >可用性グループ 'AGName' のローカル可用性レプリカには、データベースの作成アクセス許可は与えられていませんが、`SEEDING_MODE` が `AUTOMATIC` になっています。 `ALTER AVAILABILITY GROUP ... GRANT CREATE ANY DATABASE` コマンドを使用して、プライマリ可用性レプリカによってシード処理されるデータベースを作成できるようにします。
 
-### <a name = "grantCreate"></a> セカンダリ レプリカの CREATE DATABASE アクセス許可を可用性グループに付与する
+### <a name="grant-create-database-permission-on-secondary-replica-to-availability-group"></a><a name = "grantCreate"></a> セカンダリ レプリカの CREATE DATABASE アクセス許可を可用性グループに付与する
 
 参加後に、SQL Server のセカンダリ レプリカ インスタンスでデータベースを作成するアクセス許可を可用性グループに付与します。 自動シード処理が動作するには、データベースを作成するアクセス許可が可用性グループに必要です。 
 
@@ -230,7 +230,7 @@ GO
 
 次の表に、自動シード処理に関連する拡張イベントを示します。
 
-|名前|説明|
+|Name|説明|
 |----|-----------|
 |hadr_db_manager_seeding_request_msg|シード処理要求メッセージ。|
 |hadr_physical_seeding_backup_state_change|物理シード処理のバックアップ側の状態変更。|
@@ -247,7 +247,7 @@ GO
 |hadr_automatic_seeding_failure|自動シード処理操作が失敗するときに発生します。|
 |hadr_automatic_seeding_timeout|自動シード処理操作がタイムアウトになるときに発生します。|
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ALTER AVAILABILITY GROUP (Transact-SQL)](/sql/t-sql/statements/alter-availability-group-transact-sql)
 

@@ -15,17 +15,17 @@ ms.assetid: aca0d016-3228-40b8-bdc3-285ed6d9b280
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 74f8a0823f281a9260ba2d8ba322ac97c0e7056b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74821776"
 ---
 # <a name="view-availability-group-listener-properties-sql-server"></a>可用性グループ リスナーのプロパティの表示 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このトピックでは、 *で* または [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を使用して、AlwaysOn [!INCLUDE[tsql](../../../includes/tsql-md.md)] 可用性グループ リスナー [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のプロパティを表示する方法について説明します。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  **リスナーのプロパティを表示するには**  
   
 1.  オブジェクト エクスプローラーで、リスナーを表示する可用性グループの任意の可用性レプリカをホストするサーバー インスタンスに接続します。 サーバー名をクリックし、サーバー ツリーを展開します。  
@@ -38,7 +38,7 @@ ms.locfileid: "74821776"
   
 5.  これにより、 **[可用性グループ リスナーのプロパティ]** ダイアログ ボックスが開きます。 詳細については、このトピックの「 [[可用性グループ リスナーのプロパティ] (ダイアログ ボックス)](#AgListenerPropertiesDialog)」を参照してください。  
   
-###  <a name="AgListenerPropertiesDialog"></a> [可用性グループ リスナーのプロパティ] (ダイアログ ボックス)  
+###  <a name="availability-group-listener-properties-dialog-box"></a><a name="AgListenerPropertiesDialog"></a> [可用性グループ リスナーのプロパティ] (ダイアログ ボックス)  
  **[リスナーの DNS 名]**  
  可用性グループ リスナーのネットワーク名。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "74821776"
   
  グリッドには、リスナーがリッスンする各サブネットと、そのサブネットに関連付けられた IP アドレスが表示されます。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  **リスナーのプロパティを表示するには**  
   
  可用性グループ リスナーを監視するには、次のビューを使用します。  
@@ -82,7 +82,7 @@ ms.locfileid: "74821776"
 > [!NOTE]  
 >  [!INCLUDE[tsql](../../../includes/tsql-md.md)] を使用した [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 環境の監視の詳細については、「[可用性グループの監視 &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)」を参照してください。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [可用性グループ リスナーの作成または構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   

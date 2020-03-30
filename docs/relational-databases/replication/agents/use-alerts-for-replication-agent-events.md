@@ -23,10 +23,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 829c8e5e6f4207e721c4fa57b7cb012146e2762d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76288267"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>レプリケーション エージェント イベントに対する警告の使用
@@ -41,9 +41,9 @@ ms.locfileid: "76288267"
 |14151|**レプリケーション: エージェントが失敗しました**|エージェントがエラーでシャットダウンされました。|はい|  
 |14152|**レプリケーション: エージェントを再試行します**|操作の再試行が成功せず、エージェントはシャットダウンされました (エージェントが、サーバーの利用不能、デッドロック、接続の失敗、タイムアウト障害などのエラーを検出しました)。|はい|  
 |14157|**レプリケーション: 有効期限の切れたサブスクリプションを削除しました**|有効期限の切れたサブスクリプションが削除されました。|いいえ|  
-|20572|**レプリケーション:データ検証で問題が見つかった後、サブスクリプションが再初期化されました**|応答ジョブ "データ検証で問題が見つかったサブスクリプションの再初期化" でサブスクリプションが正常に再初期化されました。|いいえ|  
-|20574|**レプリケーション:サブスクライバーでデータ検証の問題が見つかりました**|ディストリビューション エージェントまたはマージ エージェントはデータの検証で問題が見つかりました。|はい|  
-|20575|**レプリケーション:サブスクライバーでデータ検証を正常に終了しました**|ディストリビューション エージェントまたはマージ エージェントはデータの検証を正常に終了しました。|はい|  
+|20572|**レプリケーション: データ検証で問題が見つかった後、サブスクリプションが再初期化されました**|応答ジョブ "データ検証で問題が見つかったサブスクリプションの再初期化" でサブスクリプションが正常に再初期化されました。|いいえ|  
+|20574|**レプリケーション: サブスクライバーでデータ検証で問題が見つかりました**|ディストリビューション エージェントまたはマージ エージェントはデータの検証で問題が見つかりました。|はい|  
+|20575|**レプリケーション: サブスクライバーでデータ検証を正常に終了しました**|ディストリビューション エージェントまたはマージ エージェントはデータの検証を正常に終了しました。|はい|  
 |20578|**レプリケーション: エージェントのカスタム シャットダウン**|||  
 |22815|**ピア ツー ピア競合検出の警告**|ピア ツー ピア ノードで変更を適用しようとしたときにディストリビューション エージェントで競合が検出されました。|はい|  
   
@@ -51,7 +51,7 @@ ms.locfileid: "76288267"
   
  **定義済みのレプリケーションの警告を構成するには**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]:[定義済みのレプリケーションの警告の構成 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [定義済みのレプリケーションの警告の構成 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md)  
   
 ## <a name="viewing-the-application-log-directly"></a>アプリケーション ログの直接表示  
  Windows アプリケーション ログを表示するには、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows イベント ビューアーを使用します。 アプリケーション ログには [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のエラー メッセージだけでなく、コンピューターのその他多くの利用状況に関するメッセージが含まれます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エラー ログとは異なり、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を起動するたびに新しいアプリケーション ログが作成されることはありません (各 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セッションでは、既存のアプリケーション ログに新しいイベントを書き込みます)。ただし、ログに記録されたイベントを保有する期間を指定できます。 Windows アプリケーション ログを表示するときに、特定のイベントのログをフィルター選択できます。 詳細については、Windows のマニュアルを参照してください。  
@@ -62,7 +62,7 @@ ms.locfileid: "76288267"
 ### <a name="framework-for-automating-responses"></a>応答の自動化のためのフレームワーク  
  通常では、警告が表示された場合、警告の原因と実行する適切な操作を知るのに役立つ唯一の情報は、警告自体に含まれています。 この情報の解析は間違いやすく、時間がかかります。 レプリケーションでは、 **sysreplicationalerts** システム テーブルで警告についての追加情報が提供され、応答の自動化を容易にしています。提供される情報は、既に解析済みで、カスタマイズしたプログラムで簡単に使用できます。  
   
- たとえば、サブスクライバー A の **Sales.SalesOrderHeader** テーブルのデータが検証に失敗した場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、その失敗を通知するメッセージ 20574 を表示します。 受信するメッセージは、"パブリケーション 'MyPublication' のアーティクル 'SalesOrderHeader' に対するサブスクライバー 'A' のサブスクリプションで、データ検証に失敗しました" という内容になります。  
+ たとえば、サブスクライバー A の **Sales.SalesOrderHeader** テーブルのデータが検証に失敗した場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、その失敗を通知するメッセージ 20574 を表示します。 "パブリケーション 'MyPublication' のアーティクル 'SalesOrderHeader' に対するサブスクライバー 'A' のサブスクリプションで、データ検証に失敗しました" というメッセージが表示されます。  
   
  このメッセージに基づいた応答を作成する場合は、サブスクライバー名、アーティクル名、パブリケーション名、およびエラーをメッセージから手動で解析する必要があります。 しかし、ディストリビューション エージェントおよびマージ エージェントは **sysreplicationalerts** にそれらの情報 (およびエージェントの種類、警告の時刻、パブリケーション データベース、サブスクライバー データベース、パブリケーションの種類などの詳細) を書き込みます。このため、応答ジョブではテーブルから関連情報を直接クエリできます。 正確な行を警告の特定のインスタンスへ関連付けることはできませんが、このテーブルにある **status** 列を使用して、対象となるエントリを追跡できます。 このテーブルのエントリは、履歴の保有期間の間、維持されます。  
   

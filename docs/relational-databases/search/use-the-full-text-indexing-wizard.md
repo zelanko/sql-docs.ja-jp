@@ -24,10 +24,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e82b1b58fb4ed880f288ae98148f6c16da1907fd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72903818"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>フルテキスト インデックス作成ウィザードの使用
@@ -85,7 +85,7 @@ ms.locfileid: "72903818"
  10. **新しいカタログを作成する**
  - [フルテキスト カタログの選択]。  
   
-    a. **名前**  
+    a. **Name**  
      新しいフルテキスト カタログの名前を入力します。  
   
      b. **[既定のカタログとして設定する]**  
@@ -98,7 +98,7 @@ ms.locfileid: "72903818"
      フルテキスト インデックスを作成するファイル グループを指定します。  
   
      e. 値を選択します。  
-      |値|[説明]|  
+      |値|説明|  
       |-----------|-----------------|
       |**<default>**| テーブルまたはビューがパーティション分割されていない場合に、基になるテーブルまたはビューと同じファイル グループを使用するには、この値を選択します。 テーブルまたはビューがパーティション分割されている場合は、プライマリ ファイル グループが使用されます。|
       |**PRIMARY**|新しいフルテキスト インデックスにプライマリ ファイル グループを使用する場合に選択します。|
@@ -112,7 +112,7 @@ ms.locfileid: "72903818"
   
      次のいずれかの値を選択します。  
   
-   |値|[説明]|  
+   |値|説明|  
     |-----------|-----------------|  
     |**<system>**|新しいフルテキスト インデックスに対してシステム ストップリストを使用する場合に選択します。 これは既定値です。|  
     |**<off>**|新しいフルテキスト インデックスに対してストップリストを無効にする場合に選択します。|  

@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 472a654a0bee8b386c6573c8ab1ed8fdb0b4cf8d
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286666"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>ネイティブ コンパイル T-SQL モジュールでサポートされる機能
@@ -199,34 +199,34 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 
 -   すべての[数学関数 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
 
--   日付関数: CURRENT_TIMESTAMP、DATEADD、DATEDIFF、DATEFROMPARTS、DATEPART、DATETIME2FROMPARTS、DATETIMEFROMPARTS、DAY、EOMONTH、GETDATE、GETUTCDATE、MONTH、SMALLDATETIMEFROMPARTS、SYSDATETIME、SYSUTCDATETIME、YEAR。  
+-   日付関数: CURRENT_TIMESTAMP、DATEADD、DATEDIFF、DATEFROMPARTS、DATEPART、DATETIME2FROMPARTS、DATETIMEFROMPARTS、DAY、EOMONTH、GETDATE、GETUTCDATE、MONTH、SMALLDATETIMEFROMPARTS、SYSDATETIME、SYSUTCDATETIME、および YEAR  
 
--   文字列関数: LEN、LTRIM、RTRIM、SUBSTRING。  
+-   文字列関数: LEN、LTRIM、RTRIM、および SUBSTRING。  
     - **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。  
-      [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降では、次の組み込み関数もサポートされます: TRIM、TRANSLATE、CONCAT_WS。  
+      [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降では、組み込み関数の TRIM、TRANSLATE、CONCAT_WS もサポートされます。  
 
 -   ID 関数: SCOPE_IDENTITY  
 
 -   NULL 関数: ISNULL  
 
--   一意識別子関数: NEWID および NEWSEQUENTIALID  
+-   Uniqueidentifier 関数: NEWID および NEWSEQUENTIALID  
 
 -   JSON 関数  
     - **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。  
       [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降では、ネイティブ コンパイル モジュールで JSON 関数がサポートされます。
 
--   エラー関数: ERROR_LINE、ERROR_MESSAGE、ERROR_NUMBER、ERROR_PROCEDURE、ERROR_SEVERITY、ERROR_STATE  
+-   エラー関数: ERROR_LINE、ERROR_MESSAGE、ERROR_NUMBER、ERROR_PROCEDURE、ERROR_SEVERITY、および ERROR_STATE  
 
 -   システム関数: @@rowcount。 ネイティブ コンパイル ストアド プロシージャ内のステートメントによって、@@rowcount が更新されます。ネイティブ コンパイル ストアド プロシージャ内で @@rowcount を使用し、ネイティブ コンパイル ストアド プロシージャ内で実行された最後のステートメントによる影響を受けた行の数を決定することができます。 ただし、ネイティブ コンパイル ストアド プロシージャの実行の開始時および終了時に、@@rowcount は 0 にリセットされます。  
 
--   セキュリティ関数: IS_MEMBER({'group' | 'role'})、IS_ROLEMEMBER ('role' [, 'database_principal'])、IS_SRVROLEMEMBER ('role' [, 'login'])、ORIGINAL_LOGIN()、SESSION_USER、CURRENT_USER、SUSER_ID(['login'])、SUSER_SID(['login'] [, Param2])、SUSER_SNAME([server_user_sid])、SYSTEM_USER、SUSER_NAME、USER、USER_ID(['user'])、USER_NAME([id])、CONTEXT_INFO()。
+-   セキュリティ関数: IS_MEMBER({'group' | 'role'})、IS_ROLEMEMBER ('role' [、'database_principal'])、IS_SRVROLEMEMBER ('role' [, 'login'])、ORIGINAL_LOGIN()、SESSION_USER、CURRENT_USER、SUSER_ID(['login'])、SUSER_SID(['login'] [, Param2])、SUSER_SNAME([server_user_sid])、SYSTEM_USER、SUSER_NAME、USER、USER_ID(['user'])、USER_NAME([id])、CONTEXT_INFO()。
 
 -   ネイティブ モジュールの実行は入れ子にすることができます。
 
 ##  <a name="auditing"></a><a name="auditing"></a> 監査  
  プロシージャ レベルの監査はネイティブ コンパイル ストアド プロシージャでサポートされています。  
 
- 監査の詳細については、「 [サーバー監査の仕様およびデータベース監査の仕様を作成する方法](../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)」を参照してください。  
+ 監査の詳細については、「 [Create a Server Audit and Database Audit Specification](../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)」を参照してください。  
 
 ##  <a name="table-and-query-hints"></a><a name="tqh"></a> テーブル ヒントとクエリ ヒント  
  サポート対象は次のとおりです。  
@@ -244,13 +244,13 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 ##  <a name="limitations-on-sorting"></a><a name="los"></a> 並べ替えに関する制限事項  
  [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) および [ORDER BY 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md) を使用するクエリでは、8,000 を超える行の並べ替えを行うことができます。 ただし、[ORDER BY 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md) を使用しない場合、[TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) で並べ替えができる行数は最大で 8,000 です (結合がある場合は、より少ない行数になります)。  
 
- クエリが [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) 演算子および [ORDER BY 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md) を使用する場合、TOP 演算子には 8192 行まで指定できます。 8192 行を超える行を指定すると、エラー メッセージが表示されます: "**メッセージ 41398、レベル 16、状態 1、プロシージャ *\<procedureName>* 、行 *\<lineNumber>* TOP 演算子は、最大 8192 行を返すことができます。 *\<number>* が要求されました**"。  
+ クエリが [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) 演算子および [ORDER BY 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md) を使用する場合、TOP 演算子には 8192 行まで指定できます。 8192 行を超える行を指定すると、"**メッセージ 41398、レベル 16、状態 1、プロシージャ *\<procedureName>* 、行 *\<lineNumber>* TOP 演算子は、最大 8192 行を返すことができます。 *\<number>* が要求されました**" というエラー メッセージが表示されます。  
 
  TOP 句がない場合は、ORDER BY で任意の数の行を並べ替えることができます。  
 
  ORDER BY 句を使用しない場合、TOP 演算子と共に任意の整数値を使用できます。  
 
- TOP N = 8192 の例: コンパイルできます。  
+ TOP N = 8192 の例: コンパイル  
 
 ```sql  
 CREATE PROCEDURE testTop  
@@ -263,7 +263,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```
 
- TOP N > 8192 の例: コンパイルできません。  
+ TOP N > 8192 の例: コンパイルは失敗します。  
 
 ```sql  
 CREATE PROCEDURE testTop  
@@ -278,7 +278,7 @@ GO
 
  8192 行の制限は、 `TOP N` が定数の場合に、前の例のように、 `N` にのみ適用されます。  8192 より大きな `N` が必要である場合は、値を変数に割り当て、 `TOP`と共にその変数を使用することができます。  
 
- 変数を使用した例: コンパイルできます。  
+ 変数を使用した例: コンパイル  
 
 ```sql  
 CREATE PROCEDURE testTop  

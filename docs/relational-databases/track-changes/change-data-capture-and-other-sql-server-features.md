@@ -13,10 +13,10 @@ ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e29ad6de65172b08bb3f35aa89820ca817a9e1d3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095295"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>変更データ キャプチャとその他の SQL Server 機能
@@ -33,10 +33,10 @@ ms.locfileid: "74095295"
 
 -   [包含データベース](#Contained)
   
-##  <a name="ChangeTracking"></a> 変更の追跡  
+##  <a name="change-tracking"></a><a name="ChangeTracking"></a> 変更の追跡  
  変更データ キャプチャと [変更の追跡](../../relational-databases/track-changes/about-change-tracking-sql-server.md) は、同じデータベースで有効にすることができます。 特に注意が必要な点はありません。 詳細については、「[変更の追跡のしくみ &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-tracking-sql-server.md)」を参照してください。  
   
-##  <a name="DatabaseMirroring"></a> データベース ミラーリング  
+##  <a name="database-mirroring"></a><a name="DatabaseMirroring"></a> データベース ミラーリング  
  変更データ キャプチャが有効になっているデータベースをミラー化できます。 フェールオーバー後にキャプチャとクリーンアップが自動的に行われるようにするには、次の手順を実行します。  
   
 1.  新しいプリンシパル サーバー インスタンスで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが実行されていることを確認します。  
@@ -49,7 +49,7 @@ ms.locfileid: "74095295"
   
  データベース ミラーリングの詳細については、「[データベース ミラーリング &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)」を参照してください。  
   
-##  <a name="TransReplication"></a> Transactional Replication  
+##  <a name="transactional-replication"></a><a name="TransReplication"></a> Transactional Replication  
  変更データ キャプチャとトランザクション レプリケーションは、同じデータベースで共存できます。ただし、両方の機能が有効になっている場合、変更テーブルが異なる方法で作成されます。 変更データ キャプチャとトランザクション レプリケーションでは、トランザクション ログから変更を読み取る際に、常に同じプロシージャ ( [sp_replcmds](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)) が使用されます。 変更データ キャプチャのみが有効になっている場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブによって **sp_replcmds**が呼び出されます。 同じデータベースで両方の機能が有効になっている場合は、ログ リーダー エージェントによって **sp_replcmds**が呼び出されます。 このエージェントは、変更テーブルとディストリビューション データベース テーブルの両方を作成します。 詳細については、「 [Replication Log Reader Agent](../../relational-databases/replication/agents/replication-log-reader-agent.md)」を参照してください。  
   
  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースで変更データ キャプチャが有効になっており、2 つのテーブルでキャプチャが有効になっているシナリオについて考えてみます。 変更テーブルを作成するために、キャプチャ ジョブによって **sp_replcmds**が呼び出されます。 データベースでトランザクション レプリケーションが有効になり、パブリケーションが作成されます。 次に、ログ リーダー エージェントがデータベースに対して作成され、キャプチャ ジョブが削除されます。 ログ リーダー エージェントは、変更テーブルにコミットされた最後のログ シーケンス番号からログのスキャンを続行します。 これにより、変更テーブル内のデータの一貫性が確保されます。 このデータベースでトランザクション レプリケーションが無効になっている場合、ログ リーダー エージェントが削除され、キャプチャ ジョブが再作成されます。  
@@ -59,7 +59,7 @@ ms.locfileid: "74095295"
   
  変更データ キャプチャが有効な場合、トランザクション レプリケーションの **proc exec** オプションは使用できません。  
   
-##  <a name="RestoreOrAttach"></a> 変更データ キャプチャが有効になっているデータベースの復元またはアタッチ  
+##  <a name="restoring-or-attaching-a-database-enabled-for-change-data-capture"></a><a name="RestoreOrAttach"></a> 変更データ キャプチャが有効になっているデータベースの復元またはアタッチ  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、データベースが復元またはアタッチされた後に変更データ キャプチャを有効のままにするかどうかを、次のロジックに従って判断します。  
   
 -   データベースを同じサーバーに同じデータベース名で復元した場合、変更データ キャプチャは有効のままです。  
@@ -76,7 +76,7 @@ ms.locfileid: "74095295"
   
  [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) を使用すると、復元またはアタッチされたデータベースから変更データ キャプチャを削除できます。  
   
-##  <a name="Contained"></a> 包含データベース  
+##  <a name="contained-databases"></a><a name="Contained"></a> 包含データベース  
  変更データ キャプチャは、[包含データベース](../../relational-databases/databases/contained-databases.md)ではサポートされていません。
   
 ## <a name="change-data-capture-and-always-on"></a>変更データ キャプチャと AlwaysOn  

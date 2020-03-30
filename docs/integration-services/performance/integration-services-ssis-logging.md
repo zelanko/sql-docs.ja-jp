@@ -30,10 +30,10 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: baad15da62c4452361fe8ff3cdf46582dd3727ea
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287886"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) のログ記録
@@ -71,7 +71,7 @@ ms.locfileid: "79287886"
   
  次の表に、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に含まれるログ プロバイダーの ProgID と ClassID、およびログ プロバイダーが書き込むログの場所の一覧を示します。  
   
-|ログ プロバイダー|ProgID|ClassID|場所|  
+|ログ プロバイダー|ProgID|ClassID|Location|  
 |------------------|------------|-------------|--------------|  
 |テキスト ファイル|DTS.LogProviderTextFile|{0A039101-ACC1-4E06-943F-279948323883}|ログ プロバイダーが使用するファイル接続マネージャーでテキスト ファイルのパスを指定します。|  
 |SQL Server プロファイラー|DTS.LogProviderSQLProfiler|{E93F6300-AE0C-4916-A7BF-A8D0CE12C77A}|ログ プロバイダーが使用するファイル接続マネージャーで [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]が使用するファイルのパスを指定します。|  
@@ -105,7 +105,7 @@ ms.locfileid: "79287886"
 |演算子|パッケージを起動したユーザーの ID。|  
 |SourceName|ログ イベントが発生したコンテナーまたはタスクの名前。|  
 |[SourceID]|ログ イベントが発生したパッケージ、For ループ コンテナー、Foreach ループ コンテナー、シーケンス コンテナー、またはタスクの一意識別子。|  
-|[ExecutionID]|パッケージ実行インスタンスの GUID。<br /><br /> 注:単一のパッケージを実行すると、ExecutionID 要素の値が異なるログ エントリが作成される場合があります。 たとえば、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で 1 つのパッケージを実行すると、検証フェーズでは [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]に対応する ExecutionID 要素を持つログ エントリが作成されます。 一方、実行フェーズでは、dtshost.exe に対応する ExecutionID 要素を持つログ エントリが作成されます。 また、パッケージ実行タスクを含むパッケージを実行すると、これらの各タスクで子パッケージが実行されます。 これらの子パッケージでは、親パッケージが作成するログ エントリとは異なる ExecutionID 要素を持つログ エントリが作成される場合があります。|  
+|[ExecutionID]|パッケージ実行インスタンスの GUID。<br /><br /> 注: 単一のパッケージを実行すると、ExecutionID 要素の値が異なるログ エントリが作成される場合があります。 たとえば、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で 1 つのパッケージを実行すると、検証フェーズでは [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]に対応する ExecutionID 要素を持つログ エントリが作成されます。 一方、実行フェーズでは、dtshost.exe に対応する ExecutionID 要素を持つログ エントリが作成されます。 また、パッケージ実行タスクを含むパッケージを実行すると、これらの各タスクで子パッケージが実行されます。 これらの子パッケージでは、親パッケージが作成するログ エントリとは異なる ExecutionID 要素を持つログ エントリが作成される場合があります。|  
 |[MessageText]|ログ エントリに関連付けられているメッセージ。|  
 |[DataBytes]|ログ エントリ固有のバイト配列。 このフィールドの意味は、ログ エントリによって異なります。|  
   
@@ -137,7 +137,7 @@ ms.locfileid: "79287886"
 |**OnVariableValueChanged**|変数の値が変更されたときにログ エントリを書き込みます。|  
 |**OnWarning**|警告が発生したときにログ エントリを書き込みます。|  
 |**PipelineComponentTime**|各データ フロー コンポーネントに対する検証および実行の各フェーズのログ エントリを書き込みます。 ログ エントリは、各フェーズの処理時間を示します。|  
-|**Diagnostic**<br /><br /> **DiagnosticEx**|診断情報を提供するログ エントリを書き込みます。<br /><br /> たとえば、外部データ プロバイダーを呼び出す前と後にメッセージをログに書き込むことができます。 詳細については、「 [パッケージ実行のトラブルシューティング ツール](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)」を参照してください。<br /><br /> エラーが発生したデータ フロー内の列の列名を調べるには、 **DiagnosticEx** イベントを記録します。 このイベントは、データ フロー系列マップをログに書き込みます。 エラー出力でキャプチャされた列識別子を使用して、この系列マップの列名を調べることができます。 詳細については、「[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。<br /><br /> **DiagnosticEx** イベントでは XML 出力に含まれる空白が維持されないので、ログのサイズを軽減できます。 読みやすくするために、XML 書式と構文の強調表示をサポートする XML エディター (たとえば Visual Studio) にログをコピーします。<br /><br /> 注:SQL Server ログ プロバイダーを使用して **DiagnosticEx** イベントを記録する場合、出力が切り捨てられる可能性があります。 SQL Server ログ プロバイダーの **メッセージ** フィールドは、nvarchar (2048) 型です。 出力が切り捨てられないようにするには、 **DiagnosticEx** イベントを記録するときに別のログ プロバイダーを使用してください。|  
+|**Diagnostic**<br /><br /> **DiagnosticEx**|診断情報を提供するログ エントリを書き込みます。<br /><br /> たとえば、外部データ プロバイダーを呼び出す前と後にメッセージをログに書き込むことができます。 詳細については、「 [パッケージ実行のトラブルシューティング ツール](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)」を参照してください。<br /><br /> エラーが発生したデータ フロー内の列の列名を調べるには、 **DiagnosticEx** イベントを記録します。 このイベントは、データ フロー系列マップをログに書き込みます。 エラー出力でキャプチャされた列識別子を使用して、この系列マップの列名を調べることができます。 詳細については、「[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。<br /><br /> **DiagnosticEx** イベントでは XML 出力に含まれる空白が維持されないので、ログのサイズを軽減できます。 読みやすくするために、XML 書式と構文の強調表示をサポートする XML エディター (たとえば Visual Studio) にログをコピーします。<br /><br /> 注: SQL Server ログ プロバイダーを使用して **DiagnosticEx** イベントを記録する場合、出力が切り捨てられる可能性があります。 SQL Server ログ プロバイダーの **メッセージ** フィールドは、nvarchar (2048) 型です。 出力が切り捨てられないようにするには、 **DiagnosticEx** イベントを記録するときに別のログ プロバイダーを使用してください。|  
   
  パッケージおよび多くのタスクには、ログ機能を有効にできるカスタム ログ エントリがあります。 たとえば、メール送信タスクには **SendMailTaskBegin** カスタム ログ エントリがあります。これを使用すると、電子メール メッセージの送信前に、メール送信タスクの実行開始時の情報をログに書き込むことができます。 詳細については、「 [Custom Messages for Logging](#custom_messages)」を参照してください。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "79287886"
   
 1.  パッケージおよびタスクのログ記録を有効にします。 ログは、パッケージ レベル、コンテナー レベル、またはタスク レベルで記録できます。 パッケージ、コンテナー、タスクに対して、それぞれ異なるログを指定できます。  
   
-2.  ログ プロバイダーを選択して、パッケージのログを追加します。 ログはパッケージ レベルでのみ作成可能で、タスクやコンテナーではパッケージで作成されたログのいずれかを使用します。 各ログは、テキスト ファイル、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Windows のイベント ログ、または XML ファイルのいずれかのログ プロバイダーに関連付けられます。 詳細については、「 [SQL Server Data Tools でパッケージのログ記録を有効にする](#ssdt)」を参照してください。  
+2.  ログ プロバイダーを選択して、パッケージのログを追加します。 ログはパッケージ レベルでのみ作成可能で、タスクやコンテナーではパッケージで作成されたログのいずれかを使用します。 各ログは、テキスト ファイル、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Windows のイベント ログ、または XML ファイルのいずれかのログ プロバイダーに関連付けられます。 詳細については、「 [SQL Server Data Tools でパッケージのログ記録を有効にする](#ssdt)」を参照してください。  
   
 3.  ログに取り込むイベントと、各イベントのログ スキーマ情報を選択します。 詳細については、「 [保存されている構成ファイルを使用してログ記録を構成する](#saved_config)」を参照してください。  
   
@@ -214,7 +214,7 @@ ms.locfileid: "79287886"
   
 -   "Sum Quantity and LineItemTotalCost" という名前の集計変換は、計算の実行と次の変換へのデータの受け渡しに合計 220 ミリ秒 (PrimeOutput に 141 ミリ秒、ProcessInput に 79 秒) 費やしました。  
 
-## <a name="ssdt"></a> SQL Server Data Tools でパッケージのログ記録を有効にする
+## <a name="enable-package-logging-in-sql-server-data-tools"></a><a name="ssdt"></a> SQL Server Data Tools でパッケージのログ記録を有効にする
   この手順では、パッケージにログを追加し、パッケージ レベルのログ記録を構成し、ログ構成を XML ファイルに保存する方法について説明します。 ログはパッケージ レベルでのみ追加できますが、パッケージに含まれるコンテナーでのログを有効にするためにパッケージでログ記録を実行する必要はありません。  
   
 > [!IMPORTANT]  
@@ -262,7 +262,7 @@ ms.locfileid: "79287886"
   
 11. 更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
 
-## <a name="configure_logs"></a> [SSIS ログの構成] ダイアログ ボックス
+## <a name="configure-ssis-logs-dialog-box"></a><a name="configure_logs"></a> [SSIS ログの構成] ダイアログ ボックス
   **SSIS ログの構成** ダイアログ ボックスを使用して、パッケージのログ記録オプションを定義します。  
   
  **目的に合ったトピックをクリックしてください**  
@@ -275,15 +275,15 @@ ms.locfileid: "79287886"
   
 4.  [[詳細] タブでオプションを構成する](#detail)  
   
-###  <a name="open_dialog"></a> [SSIS ログの構成] ダイアログ ボックスを開く  
+###  <a name="open-the-configure-ssis-logs-dialog-box"></a><a name="open_dialog"></a> [SSIS ログの構成] ダイアログ ボックスを開く  
  **[SSIS ログの構成] ダイアログ ボックスを開くには**  
   
 -   [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで、 **[SSIS]** メニューの **[ログ記録]** をクリックします。  
   
-###  <a name="container"></a> [コンテナー] ペインでオプションを構成する  
+###  <a name="configure-the-options-in-the-containers-pane"></a><a name="container"></a> [コンテナー] ペインでオプションを構成する  
  **[SSIS ログの構成]** ダイアログ ボックスの **[コンテナー]** ペインを使用すると、パッケージおよびパッケージのコンテナーでログを有効できます。  
   
-#### <a name="options"></a>Options  
+#### <a name="options"></a>オプション  
  **Containers**  
  パッケージとパッケージのコンテナーでログを有効にするには、階層ビューのチェック ボックスをオンにします。  
   
@@ -295,34 +295,34 @@ ms.locfileid: "79287886"
   
  コンテナーが淡色表示になっている場合に、そのコンテナーにログ オプションを設定するには、チェック ボックスを 2 回クリックします。 最初のクリックでチェック ボックスがオフになった後、2 番目のクリックでオンになったら、使用するログ プロバイダーを選択し、ログに記録する情報を指定できます。  
   
-###  <a name="provider"></a> [プロバイダーとログ] タブでオプションを構成する  
+###  <a name="configure-the-options-on-the-providers-and-logs-tab"></a><a name="provider"></a> [プロバイダーとログ] タブでオプションを構成する  
  **[SSIS ログの構成]** ダイアログ ボックスの **[プロバイダーとログ]** タブを使用すると、ランタイム イベントをキャプチャするログを作成したり構成したりできます。  
   
-#### <a name="options"></a>Options  
+#### <a name="options"></a>オプション  
  **[プロバイダーの種類]**  
  ログ プロバイダーの種類を一覧から選択します。  
   
  **追加**  
  パッケージのログ プロバイダーのコレクションに、指定した種類のログを追加します。  
   
- **名前**  
+ **Name**  
  **[SSIS ログの構成]** ダイアログ ボックスの **[コンテナー]** ペインで選択したコンテナーまたはタスクについて、ログを有効または無効にします。 [名前] フィールドは編集可能です。 プロバイダーの既定の名前を使用するか、わかりやすい一意な名前を入力します。  
   
  **説明**  
  [説明] フィールドは編集可能です。 クリックして、ログの既定の説明を変更します。  
   
- **Configuration**  
- 既存の接続マネージャーを一覧から選択するか、 **[\<新しい接続>]** をクリックして新しい接続マネージャーを作成します。 ログ プロバイダーの種類によっては、OLE DB 接続マネージャーやファイル接続マネージャーを構成できます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows イベント ログ用のログ プロバイダーの場合、接続は不要です。  
+ **構成**  
+ 既存の接続マネージャーを一覧から選択するか、\<[**新しい接続>]** をクリックして新しい接続マネージャーを作成します。 ログ プロバイダーの種類によっては、OLE DB 接続マネージャーやファイル接続マネージャーを構成できます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows イベント ログ用のログ プロバイダーの場合、接続は不要です。  
   
- 関連トピック:[OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) マネージャー、[File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)  
+ 関連項目:「 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) 」、「 [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)」  
   
  **削除**  
  ログ プロバイダーを選択して、 **[削除]** をクリックします。  
   
-###  <a name="detail"></a> [詳細] タブでオプションを構成する  
+###  <a name="configure-the-options-on-the-details-tab"></a><a name="detail"></a> [詳細] タブでオプションを構成する  
  **[SSIS ログの構成]** ダイアログ ボックスの **[詳細]** タブで、ログ記録を有効にするイベントと、ログ記録する詳細情報を指定します。 選択した情報は、パッケージ内のすべてのログ プロバイダーに適用されます。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスとテキスト ファイルに別々の情報を書き込むことはできません。  
   
-#### <a name="options"></a>Options  
+#### <a name="options"></a>オプション  
  **イベント**  
  イベントのログ記録を有効または無効にします。  
   
@@ -332,7 +332,7 @@ ms.locfileid: "79287886"
  **詳細**  
  ログ記録するイベントをオンまたはオフにし、各イベントでログ記録する情報をオンまたはオフにします。 **[標準]** をクリックすると、ログの詳細情報がイベントの一覧を除いてすべて非表示になります。 次の情報をログ記録できます。  
   
-|Value|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**コンピューター**|ログ記録されたイベントが発生したコンピューターの名前。|  
 |**[オペレーター]**|パッケージを起動した人物のユーザー名。|  
@@ -351,7 +351,7 @@ ms.locfileid: "79287886"
  **および**  
  構成の詳細をテンプレートとして XML ファイルに保存します。  
 
-## <a name="saved_config"></a> 保存されている構成ファイルを使用してログ記録を構成する
+## <a name="configure-logging-by-using-a-saved-configuration-file"></a><a name="saved_config"></a> 保存されている構成ファイルを使用してログ記録を構成する
   この手順では、以前に保存したログ構成ファイルを読み込んでパッケージ内の新しいコンテナーのログ記録を構成する方法について説明します。  
   
  既定では、パッケージに含まれるすべてのコンテナーは、親コンテナーと同じログ構成を使用します。 たとえば、Foreach ループ内のタスクは、Foreach ループと同じログ構成を使用します。  
@@ -382,7 +382,7 @@ ms.locfileid: "79287886"
   
 9. 更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
 
-## <a name="server_logging"></a> SSIS サーバーでのパッケージ実行のログ記録を有効にする
+## <a name="enable-logging-for-package-execution-on-the-ssis-server"></a><a name="server_logging"></a> SSIS サーバーでのパッケージ実行のログ記録を有効にする
   このトピックでは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置したパッケージを実行するときに、パッケージのログ記録レベルを設定または変更する方法について説明します。 パッケージを実行するときに設定したログ記録レベルは、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] での設計時に構成したパッケージのログ記録レベルをオーバーライドします。 詳細については、「 [SQL Server Data Tools でパッケージのログ記録を有効にする](#ssdt) 」を参照してください。  
   
  SQL Server の **[サーバーのプロパティ]** のサーバーの **[ログ記録レベル]** プロパティで、既定のサーバー全体のログ記録レベルを選択できます。 このトピックで説明している組み込みのログ記録レベルのいずれかを選択するか、既存のカスタマイズしたログ記録レベルを選択できます。 選択したログ記録レベルは、既定で SSIS カタログに展開されているすべてのパッケージに適用されます。 また、既定で SSIS パッケージを実行する SQL エージェント ジョブにも適用されます。  
@@ -438,7 +438,7 @@ ms.locfileid: "79287886"
   
 -   ssis_admin 管理者または sysadmin ロールのユーザーのみが、カスタマイズされたログ記録レベルの作成、更新、または削除を行うことができます。  
 
-## <a name="custom_messages"></a> Custom Messages for Logging
+## <a name="custom-messages-for-logging"></a><a name="custom_messages"></a> Custom Messages for Logging
 SQL Server Integration Services には、パッケージや多くのタスクのログ エントリを書き込むための豊富なカスタム イベントが用意されています。 記録したエントリを使用すれば、定義済みのイベントやユーザー定義メッセージを後の分析用に記録しておくことで、実行の進行状況、結果、および問題点に関する詳細を保管できます。 たとえば、一括挿入の開始時刻と終了時刻を記録しておけば、パッケージ実行時のパフォーマンスの問題を特定できます。  
   
  カスタム ログ エントリとは、パッケージ、すべてのコンテナー、およびタスクに使用できる一連の標準的なログ記録イベントとは異なるエントリのセットです。 カスタム ログ エントリは、パッケージ内の特定のタスクに関する有益な情報を取得するように調整されます。 たとえば、SQL 実行タスクのカスタム ログ エントリの 1 つに、そのタスクで実行される SQL ステートメントをログに記録するものがあります。  
@@ -491,7 +491,7 @@ SQL Server Integration Services には、パッケージや多くのタスクの
   
 ### <a name="log-entries"></a>ログ エントリ  
   
-####  <a name="Package"></a> [パッケージ]  
+####  <a name="package"></a><a name="Package"></a> [パッケージ]  
  次の表は、パッケージのカスタム ログ エントリの一覧です。  
   
 |ログ エントリ|説明|  
@@ -500,7 +500,7 @@ SQL Server Integration Services には、パッケージや多くのタスクの
 |**PackageEnd**|パッケージが完了したことを示します。 このログ エントリは自動的にログに書き込まれます。 除外することはできません。|  
 |**Diagnostic**|同時実行できる実行可能ファイル数など、パッケージの実行に影響するシステム構成に関する情報を提供します。<br /><br /> **診断** ログ エントリに、外部データ プロバイダーの呼び出し前後のエントリも含まれています。|  
   
-####  <a name="BulkInsert"></a> 一括挿入タスク  
+####  <a name="bulk-insert-task"></a><a name="BulkInsert"></a> 一括挿入タスク  
  次の表は、一括挿入タスクのカスタム ログ エントリの一覧です。  
   
 |ログ エントリ|説明|  
@@ -509,7 +509,7 @@ SQL Server Integration Services には、パッケージや多くのタスクの
 |**DTSBulkInsertTaskEnd**|一括挿入が終了したことを示します。|  
 |**DTSBulkInsertTaskInfos**|タスクに関する説明情報を提供します。|  
   
-####  <a name="DataFlow"></a> Data Flow Task  
+####  <a name="data-flow-task"></a><a name="DataFlow"></a> Data Flow Task  
  次の表は、データ フロー タスクのカスタム ログ エントリの一覧です。  
   
 |ログ エントリ|説明|  
@@ -525,17 +525,17 @@ SQL Server Integration Services には、パッケージや多くのタスクの
 |**PipelineExecutionTrees**|データ フロー内のレイアウトの実行ツリーを報告します。 データ フロー エンジンのスケジューラは、このツリーを使用して、データ フローの実行プランを構築します。|  
 |**PipelineInitialization**|タスクに関する初期化情報を提供します。 この情報には、BLOB データの一時的な保存に使用するディレクトリ、既定のバッファー サイズ、およびバッファー内の行数が含まれます。 データ フロー タスクの構成によっては、複数のログ エントリが書き込まれる場合があります。|  
   
-####  <a name="ExecuteDTS200"></a> DTS 2000 実行タスク  
+####  <a name="execute-dts-2000-task"></a><a name="ExecuteDTS200"></a> DTS 2000 実行タスク  
  次の表は、DTS 2000 実行タスクのカスタム ログ エントリの一覧です。  
   
 |ログ エントリ|説明|  
 |---------------|-----------------|  
 |**ExecuteDTS80PackageTaskBegin**|タスクが DTS 2000 パッケージの実行を開始したことを示します。|  
-|**ExecuteDTS80PackageTaskEnd**|タスクが終了したことを示します。<br /><br /> 注:DTS 2000 パッケージは、タスク終了後も引き続き実行される場合があります。|  
+|**ExecuteDTS80PackageTaskEnd**|タスクが終了したことを示します。<br /><br /> 注: DTS 2000 パッケージは、タスク終了後も引き続き実行される場合があります。|  
 |**ExecuteDTS80PackageTaskTaskInfo**|タスクに関する説明情報を提供します。|  
 |**ExecuteDTS80PackageTaskTaskResult**|タスクで実行された DTS 2000 パッケージの実行結果を報告します。|  
   
-####  <a name="ExecuteProcess"></a> プロセス実行タスク  
+####  <a name="execute-process-task"></a><a name="ExecuteProcess"></a> プロセス実行タスク  
  次の表は、プロセス実行タスクのカスタム ログ エントリの一覧です。  
   
 |ログ エントリ|説明|  
@@ -543,21 +543,21 @@ SQL Server Integration Services には、パッケージや多くのタスクの
 |**ExecuteProcessExecutingProcess**|タスクで実行するように構成されている実行可能ファイルの実行プロセスに関する情報を提供します。<br /><br /> 2 つのログ エントリが書き込まれます。 1 つのエントリには、タスクで実行される実行可能ファイルの名前と場所が含まれ、もう 1 つのエントリは、実行可能ファイルの終了を記録します。|  
 |**ExecuteProcessVariableRouting**|実行可能ファイルの入力と出力にルーティングされる変数に関する情報を提供します。 ログ エントリは、stdin (入力)、stdout (出力)、および stderr (エラー出力) に書き込まれます。|  
   
-####  <a name="ExecuteSQL"></a> SQL 実行タスク  
+####  <a name="execute-sql-task"></a><a name="ExecuteSQL"></a> SQL 実行タスク  
  次の表では、SQL 実行タスクのカスタム ログ エントリを説明します。  
   
 |ログ エントリ|説明|  
 |---------------|-----------------|  
 |**ExecuteSQLExecutingQuery**|SQL ステートメントの実行フェーズに関する情報を提供します。 タスクがデータベースへの接続を取得したとき、SQL ステートメントの準備が開始されたとき、および SQL ステートメントの実行が完了した後に、ログ エントリが書き込まれます。 準備フェーズのログ エントリには、タスクで使用される SQL ステートメントが含まれます。|  
   
-####  <a name="FileSystem"></a> ファイル システム タスク  
+####  <a name="file-system-task"></a><a name="FileSystem"></a> ファイル システム タスク  
  次の表では、ファイル システム タスクのカスタム ログ エントリを説明します。  
   
 |ログ エントリ|説明|  
 |---------------|-----------------|  
 |**FileSystemOperation**|タスクで実行される操作を報告します。 ログ エントリは、ファイル システム操作の開始時に書き込まれます。これには、操作の基になるファイルと操作対象のファイルに関する情報が含まれます。|  
   
-####  <a name="FTP"></a> FTP タスク  
+####  <a name="ftp-task"></a><a name="FTP"></a> FTP タスク  
  次の表は、FTP タスクのカスタム ログ エントリの一覧です。  
   
 |ログ エントリ|説明|  
@@ -565,7 +565,7 @@ SQL Server Integration Services には、パッケージや多くのタスクの
 |**FTPConnectingToServer**|タスクで FTP サーバーへの接続が開始されたことを示します。|  
 |**FTPOperation**|タスクで実行された FTP 操作の開始および種類を報告します。|  
   
-####  <a name="MessageQueue"></a> メッセージ キュー タスク  
+####  <a name="message-queue-task"></a><a name="MessageQueue"></a> メッセージ キュー タスク  
  次の表は、メッセージ キュー タスクのカスタム ログ エントリの一覧です。  
   
 |ログ エントリ|説明|  
@@ -579,14 +579,14 @@ SQL Server Integration Services には、パッケージや多くのタスクの
 |**MSMQTaskInfo**|タスクに関する説明情報を提供します。|  
 |**MSMQTaskTimeOut**|タスクがタイムアウトしたことを示します。|  
   
-####  <a name="Script"></a> スクリプト タスク  
+####  <a name="script-task"></a><a name="Script"></a> スクリプト タスク  
  次の表では、スクリプト タスクのカスタム ログ エントリを説明します。  
   
 |ログ エントリ|説明|  
 |---------------|-----------------|  
 |**ScriptTaskLogEntry**|スクリプト内でのログ記録の実装結果を報告します。 ログ エントリは、 **Dts** オブジェクトの **Log** メソッドを呼び出すたびに書き込まれます。 このエントリは、コードの実行時に書き込まれます。 詳細については、「 [スクリプト タスクでのログ記録](../../integration-services/extending-packages-scripting/task/logging-in-the-script-task.md)」を参照してください。|  
   
-####  <a name="SendMail"></a> メール送信タスク  
+####  <a name="send-mail-task"></a><a name="SendMail"></a> メール送信タスク  
  次の表は、メール送信タスクのカスタム ログ エントリの一覧です。  
   
 |ログ エントリ|説明|  
@@ -595,7 +595,7 @@ SQL Server Integration Services には、パッケージや多くのタスクの
 |**SendMailTaskEnd**|タスクが電子メール メッセージの送信を終了したことを示します。|  
 |**SendMailTaskInfo**|タスクに関する説明情報を提供します。|  
   
-####  <a name="TransferDatabase"></a> データベース転送タスク  
+####  <a name="transfer-database-task"></a><a name="TransferDatabase"></a> データベース転送タスク  
  次の表は、データベース転送タスクのカスタム ログ エントリの一覧です。  
   
 |ログ エントリ|説明|  
@@ -603,7 +603,7 @@ SQL Server Integration Services には、パッケージや多くのタスクの
 |**SourceDB**|タスクでコピーされたデータベースを示します。|  
 |**SourceSQLServer**|データベースのコピー元のコンピューターを示します。|  
   
-####  <a name="TransferErrorMessages"></a> エラー メッセージ転送タスク  
+####  <a name="transfer-error-messages-task"></a><a name="TransferErrorMessages"></a> エラー メッセージ転送タスク  
  次の表は、エラー メッセージ転送タスクのカスタム ログ エントリの一覧です。  
   
 |ログ エントリ|説明|  
@@ -611,7 +611,7 @@ SQL Server Integration Services には、パッケージや多くのタスクの
 |**TransferErrorMessagesTaskFinishedTransferringObjects**|タスクがエラー メッセージの転送を終了したことを示します。|  
 |**TransferErrorMessagesTaskStartTransferringObjects**|タスクがエラー メッセージの転送を開始したことを示します。|  
   
-####  <a name="TransferJobs"></a> ジョブ転送タスク  
+####  <a name="transfer-jobs-task"></a><a name="TransferJobs"></a> ジョブ転送タスク  
  次の表は、ジョブ転送タスクのカスタム ログ エントリの一覧です。  
   
 |ログ エントリ|説明|  
@@ -619,7 +619,7 @@ SQL Server Integration Services には、パッケージや多くのタスクの
 |**TransferJobsTaskFinishedTransferringObjects**|タスクが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブの転送を終了したことを示します。|  
 |**TransferJobsTaskStartTransferringObjects**|タスクが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブの転送を開始したことを示します。|  
   
-####  <a name="TransferLogins"></a> ログイン転送タスク  
+####  <a name="transfer-logins-task"></a><a name="TransferLogins"></a> ログイン転送タスク  
  次の表は、ログイン転送タスクのカスタム ログ エントリの一覧です。  
   
 |ログ エントリ|説明|  
@@ -627,7 +627,7 @@ SQL Server Integration Services には、パッケージや多くのタスクの
 |**TransferLoginsTaskFinishedTransferringObjects**|タスクがログインの転送を終了したことを示します。|  
 |**TransferLoginsTaskStartTransferringObjects**|タスクがログインの転送を開始したことを示します。|  
   
-####  <a name="TransferMasterStoredProcedures"></a> Master ストアド プロシージャ転送タスク  
+####  <a name="transfer-master-stored-procedures-task"></a><a name="TransferMasterStoredProcedures"></a> Master ストアド プロシージャ転送タスク  
  次の表は、Master ストアド プロシージャ転送タスクのカスタム ログ エントリの一覧です。  
   
 |ログ エントリ|説明|  
@@ -635,7 +635,7 @@ SQL Server Integration Services には、パッケージや多くのタスクの
 |**TransferStoredProceduresTaskFinishedTransferringObjects**|**master** データベースに格納されている、ユーザー定義ストアド プロシージャの転送をタスクが完了したことを示します。|  
 |**TransferStoredProceduresTaskStartTransferringObjects**|**master** データベースに格納されている、ユーザー定義ストアド プロシージャの転送をタスクが開始したことを示します。|  
   
-####  <a name="TransferSQLServerObjects"></a> SQL Server オブジェクトの転送タスク  
+####  <a name="transfer-sql-server-objects-task"></a><a name="TransferSQLServerObjects"></a> SQL Server オブジェクトの転送タスク  
  次の表は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトの転送タスクのカスタム ログ エントリの一覧です。  
   
 |ログ エントリ|説明|  
@@ -643,7 +643,7 @@ SQL Server Integration Services には、パッケージや多くのタスクの
 |**TransferSqlServerObjectsTaskFinishedTransferringObjects**|タスクが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース オブジェクトの転送を終了したことを示します。|  
 |**TransferSqlServerObjectsTaskStartTransferringObjects**|タスクが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース オブジェクトの転送を開始したことを示します。|  
   
-####  <a name="WebServices"></a> Web サービス タスク  
+####  <a name="web-services-task"></a><a name="WebServices"></a> Web サービス タスク  
  次の表は、Web サービス タスクに対して有効にできるカスタム ログ エントリの一覧です。  
   
 |ログ エントリ|説明|  
@@ -652,7 +652,7 @@ SQL Server Integration Services には、パッケージや多くのタスクの
 |**WSTaskEnd**|タスクが Web サービス メソッドを完了しました。|  
 |**WSTaskInfo**|タスクに関する説明情報を提供します。|  
   
-####  <a name="WMIDataReader"></a> WMI データ リーダー タスク  
+####  <a name="wmi-data-reader-task"></a><a name="WMIDataReader"></a> WMI データ リーダー タスク  
  次の表は、WMI データ リーダー タスクのカスタム ログ エントリの一覧です。  
   
 |ログ エントリ|説明|  
@@ -660,7 +660,7 @@ SQL Server Integration Services には、パッケージや多くのタスクの
 |**WMIDataReaderGettingWMIData**|タスクが WMI データの読み取りを開始したことを示します。|  
 |**WMIDataReaderOperation**|タスクで実行された WQL クエリを報告します。|  
   
-####  <a name="WMIEventWatcher"></a> WMI イベント監視タスク  
+####  <a name="wmi-event-watcher-task"></a><a name="WMIEventWatcher"></a> WMI イベント監視タスク  
  次の表は、WMI イベント監視タスクのカスタム ログ エントリの一覧です。  
   
 |ログ エントリ|説明|  
@@ -669,7 +669,7 @@ SQL Server Integration Services には、パッケージや多くのタスクの
 |**WMIEventWatcherTimedout**|タスクがタイムアウトしたことを示します。|  
 |**WMIEventWatcherWatchingForWMIEvents**|タスクが WQL クエリの実行を開始したことを示します。 このエントリには、クエリが含まれています。|  
   
-####  <a name="XML"></a> XML タスク  
+####  <a name="xml-task"></a><a name="XML"></a> XML タスク  
  次の表では、XML タスクのカスタム ログ エントリを説明します。  
   
 |ログ エントリ|説明|  

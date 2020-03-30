@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 1d95c1982d5809288b64f34cd1f6328b4ee00e4c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76941040"
 ---
 # <a name="copy-only-backups"></a>コピーのみのバックアップ
@@ -37,7 +37,7 @@ ms.locfileid: "76941040"
   
 - コピーのみのログ バックアップ (完全復旧モデルおよび一括ログ復旧モデルのみ)  
 
-     コピーのみのログ バックアップは、既存のログ アーカイブ ポイントを保持するため、定期的なログ バックアップの一連の作業に影響を与えません。 通常、コピーのみのログ バックアップは不要です。 新しい定期的なログ バックアップを (WITH NORECOVERY を使用して) 作成してから、そのバックアップを、復元シーケンスに必要なすべての以前のログ バックアップと共に使用できます。 ただし、コピーのみのログ バックアップは、オンライン復元を実行する際に役立つ場合があります。 この例については、「[例:読み取り/書き込みファイルのオンライン復元 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md)」を参照してください。  
+     コピーのみのログ バックアップは、既存のログ アーカイブ ポイントを保持するため、定期的なログ バックアップの一連の作業に影響を与えません。 通常、コピーのみのログ バックアップは不要です。 新しい定期的なログ バックアップを (WITH NORECOVERY を使用して) 作成してから、そのバックアップを、復元シーケンスに必要なすべての以前のログ バックアップと共に使用できます。 ただし、コピーのみのログ バックアップは、オンライン復元を実行する際に役立つ場合があります。 この例については、「[例: 読み取り/書き込みファイルのオンライン復元 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md)」を参照してください。  
 
      コピーのみのバックアップの後、トランザクション ログは切り捨てられません。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "76941040"
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、または PowerShell を使用してコピーのみのバックアップを作成できます。  
 
 ### <a name="examples"></a>例  
-###  <a name="SSMSProcedure"></a> A. SQL Server Management Studio を使用する  
+###  <a name="a-using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> A. SQL Server Management Studio を使用する  
 次の例では、 `Sales` データベースのコピーのみのバックアップを既定のバックアップ場所にあるディスクにバックアップします。
 
 1. **オブジェクト エクスプローラー**で、SQL Server データベース エンジンのインスタンスに接続し、そのインスタンスを展開します。
@@ -61,7 +61,7 @@ ms.locfileid: "76941040"
 
 1. **[OK]** をクリックします。
 
-###  <a name="TsqlProcedure"></a>B. Transact-SQL の使用  
+###  <a name="b-using-transact-sql"></a><a name="TsqlProcedure"></a>B. Transact-SQL の使用  
 次の例では、COPY_ONLY parameter パラメーターを使用して `Sales` データベースに対するコピーのみのバックアップが作成されます。  トランザクション ログのコピーのみのバックアップも同様に取得されます。
 
 ```sql
@@ -78,13 +78,13 @@ WITH COPY_ONLY;
 > COPY_ONLY は、DIFFERENTIAL オプションと共に指定した場合には機能しません。  
 
   
-###  <a name="PowerShellProcedure"></a>C. PowerShell の使用  
+###  <a name="c-using-powershell"></a><a name="PowerShellProcedure"></a>C. PowerShell の使用  
 次の例では、-CopyOnly パラメーターを使用して `Sales` データベースに対するコピーのみのバックアップが作成されます。  
 ```powershell
 Backup-SqlDatabase -ServerInstance 'SalesServer' -Database 'Sales' -BackupFile 'E:\BAK\Sales_Copy.bak' -CopyOnly
 ```  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
  **完全バックアップまたはログ バックアップを作成するには**  
   
 - [データベースの完全バックアップの作成 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  

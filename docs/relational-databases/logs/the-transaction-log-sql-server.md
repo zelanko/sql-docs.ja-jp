@@ -15,10 +15,10 @@ ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: cd975ed830f9a0b705e516707d550697fbf34325
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287806"
 ---
 # <a name="the-transaction-log-sql-server"></a>トランザクション ログ (SQL Server)
@@ -67,7 +67,7 @@ ms.locfileid: "79287806"
 
 **データベース ミラーリング シナリオ**では、プリンシパル データベースに対するすべての更新が、そのデータベースの完全なコピーである、独立したミラー データベースに直ちに再現されます。 各ログ レコードは、プリンシパル サーバー インスタンスからミラー サーバー インスタンスに直ちに送信されます。ここでは、受信したログ レコードがミラー データベースに適用され、継続的にロールフォワードされます。 詳しくは、「 [データベース ミラーリング](../../database-engine/database-mirroring/database-mirroring-sql-server.md)」をご覧ください。
 
-##  <a name="Characteristics"></a>トランザクション ログの特性
+##  <a name="transaction-log-characteristics"></a><a name="Characteristics"></a>トランザクション ログの特性
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のトランザクション ログには、次のような特性があります。 
 -  トランザクション ログは、データベース内に別個のファイルまたはファイル セットとして実装されます。 ログ キャッシュはデータ ページ用のバッファー キャッシュとは別に管理され、単純かつ高速の、堅牢なコードとして[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]に実装されています。 詳細については、「[トランザクション ログの物理アーキテクチャ](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)」を参照してください。
 
@@ -79,10 +79,10 @@ ms.locfileid: "79287806"
 
 トランザクション ログのアーキテクチャと内部構造の詳細については、「[SQL Server トランザクション ログのアーキテクチャと管理ガイド](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)」を参照してください。
 
-##  <a name="Truncation"></a> トランザクション ログの切り捨て  
+##  <a name="transaction-log-truncation"></a><a name="Truncation"></a> トランザクション ログの切り捨て  
 ログの切り捨てによりログ ファイルの領域が解放され、トランザクション ログで再利用できるようになります。 トランザクション ログの定期的な切り捨ては、ログがいっぱいにならないようにするために不可欠です。 いくつかの要因によってログの切り捨てが遅れる可能性があるため、ログのサイズを監視することは重要です。 一部の操作は、トランザクション ログのサイズへの影響を軽減するためにログへの記録を最小限に抑えることができます。  
  
-ログの切り捨てでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの論理トランザクション ログから非アクティブな[仮想ログ ファイル (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) が削除されます。これにより、論理ログの領域が解放され、物理トランザクション ログで再利用できるようになります。 トランザクション ログが切り捨てられなければ、物理ログ ファイルに割り当てられているディスク上の領域がいっぱいになってしまいます。  
+ログの切り捨てでは、[ データベースの論理トランザクション ログから非アクティブな](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)仮想ログ ファイル (VLF)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が削除されます。これにより、論理ログの領域が解放され、物理トランザクション ログで再利用できるようになります。 トランザクション ログが切り捨てられなければ、物理ログ ファイルに割り当てられているディスク上の領域がいっぱいになってしまいます。  
   
 領域が足りなくなるのを回避するために、何かの理由でログの切り捨てが遅れている場合を除き、次のイベントの後に切り捨てが自動的に発生します。  
   
@@ -95,13 +95,13 @@ ms.locfileid: "79287806"
 > ログの切り捨てを行っても、物理ログ ファイルのサイズは縮小されません。 物理ログ ファイルの物理サイズを削減するには、ログ ファイルを圧縮する必要があります。 物理ログ ファイルのサイズの圧縮の詳細については、「 [トランザクション ログ ファイルのサイズの管理](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)」を参照してください。  
 > ただし、[ログの切り捨てが遅れる原因となる要因](#FactorsThatDelayTruncation)には留意してください。 ログの圧縮後、ストレージ領域が再び必要になると、トランザクション ログが再び増え、その分のパフォーマンスのオーバーヘッドが発生します。
   
-##  <a name="FactorsThatDelayTruncation"></a> Factors that can delay log truncation  
+##  <a name="factors-that-can-delay-log-truncation"></a><a name="FactorsThatDelayTruncation"></a> Factors that can delay log truncation  
  このトピックで前述したように、ログ レコードが長い間アクティブなままになると、トランザクション ログの切り捨てが遅れて、トランザクション ログがいっぱいになります。  
   
 > [!IMPORTANT]
 > トランザクション ログがいっぱいに応答する方法については、「 [Troubleshoot a Full Transaction Log &#40;SQL Server Error 9002&#41;](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)」を参照してください。  
   
- 実際に、ログの切り捨てはさまざまな理由で遅延が発生する場合があります。 ログの切り捨てを妨げている原因を、[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの **log_reuse_wait** 列と **log_reuse_wait_desc** 列に対するクエリを実行して確認してください。 次の表では、これらの列の値について説明します。  
+ 実際に、ログの切り捨てはさまざまな理由で遅延が発生する場合があります。 ログの切り捨てを妨げている原因を、**sys.databases** カタログ ビューの **log_reuse_wait** 列と [log_reuse_wait_desc](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 列に対するクエリを実行して確認してください。 次の表では、これらの列の値について説明します。  
   
 |log_reuse_wait の値|log_reuse_wait_desc の値|説明|  
 |----------------------------|----------------------------------|-----------------|  
@@ -122,7 +122,7 @@ ms.locfileid: "79287806"
 |14|OTHER_TRANSIENT|この値は現在使用されていません。|  
 |16|XTP_CHECKPOINT|インメモリ OLTP チェックポイントを実行する必要があります。メモリ最適化されたテーブルの場合、前回のチェックポイント以後、トランザクション ログ ファイルが 1.5 GB を超えると (ディスクベースのテーブルとメモリ最適化されたテーブルの両方を含む)、自動チェックポイントが取得されます。<br /> 詳細については、「[メモリ最適化テーブルのチェックポイント操作](../../relational-databases/in-memory-oltp/checkpoint-operation-for-memory-optimized-tables.md)」と「インメモリ最適化されたテーブルのログ記録とチェックポイント」 (https://blogs.msdn.microsoft.com/sqlcat/2016/05/20/logging-and-checkpoint-process-for-memory-optimized-tables-2/) を参照してください。
   
-##  <a name="MinimallyLogged"></a> 最小ログ記録が可能な操作  
+##  <a name="operations-that-can-be-minimally-logged"></a><a name="MinimallyLogged"></a> 最小ログ記録が可能な操作  
 *最小ログ記録* では、トランザクションの復旧に必要な情報だけが記録されます。特定の時点への復旧はサポートしません。 このトピックでは、一括ログ [復旧モデル](../backup-restore/recovery-models-sql-server.md) で (バックアップが実行されていない場合は単純復旧モデルで) 最小ログが記録される操作について説明します。  
   
 > [!NOTE]
@@ -133,7 +133,7 @@ ms.locfileid: "79287806"
   
  次に示す操作は、完全復旧モデルで完全にログ記録されますが、単純復旧モデルと一括ログ復旧モデルでは最小限にしかログ記録されません。  
   
--   一括インポート操作 ([bcp](../../tools/bcp-utility.md)、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)、[INSERT...SELECT](../../t-sql/statements/insert-transact-sql.md))。 テーブルへの一括インポートの最小ログ記録の詳細については、「 [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)」を参照してください。  
+-   一括インポート操作 ([bcp](../../tools/bcp-utility.md)、 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)、 [INSERT...SELECT](../../t-sql/statements/insert-transact-sql.md))。 テーブルへの一括インポートの最小ログ記録の詳細については、「 [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)」を参照してください。  
   
 トランザクション レプリケーションが有効な場合、`BULK INSERT` 操作は、一括ログ復旧モデルでも完全にログ記録されます。  
   
@@ -141,7 +141,7 @@ ms.locfileid: "79287806"
   
 トランザクション レプリケーションが有効な場合、`SELECT INTO` 操作は、一括ログ復旧モデルでも完全にログ記録されます。  
   
--   新規データの挿入時または追加時の、[UPDATE](../../t-sql/queries/update-transact-sql.md) ステートメントの `.WRITE` 句を使用した、大きな値のデータ型の部分更新。 既存の値を更新する場合は、最小ログ記録は使用されません。 大きな値のデータ型の詳細については、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」を参照してください。  
+-   新規データの挿入時または追加時の、`.WRITE`UPDATE[ ステートメントの ](../../t-sql/queries/update-transact-sql.md) 句を使用した、大きな値のデータ型の部分更新。 既存の値を更新する場合は、最小ログ記録は使用されません。 大きな値のデータ型の詳細については、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」を参照してください。  
   
 -   [text](../../t-sql/queries/writetext-transact-sql.md) 、 [ntext](../../t-sql/queries/updatetext-transact-sql.md) 、 **image**の各データ型列に新規データを挿入または追加するときの **WRITETEXT**ステートメントおよび **UPDATETEXT** ステートメント。 既存の値を更新する場合は、最小ログ記録は使用されません。  
   
@@ -159,7 +159,7 @@ ms.locfileid: "79287806"
   
     -   [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) による新しいヒープの再構築 (適用可能な場合)。 `DROP INDEX` 操作中のインデックス ページの割り当て解除は、**常に**完全にログ記録されます。
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
 **トランザクション ログの管理**  
   
 -   [トランザクション ログ ファイルのサイズの管理](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)  
@@ -176,7 +176,7 @@ ms.locfileid: "79287806"
   
 -   [トランザクション ログ バックアップの復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [SQL Server トランザクション ログのアーキテクチャと管理ガイド](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)   
 [トランザクションの持続性の制御](../../relational-databases/logs/control-transaction-durability.md)   
 [一括インポートで最小ログ記録を行うための前提条件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   

@@ -15,10 +15,10 @@ author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4c19e3ad3589cad6f7503ff9f0e92c090bef5035
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287356"
 ---
 # <a name="thread-and-task-architecture-guide"></a>スレッドおよびタスクのアーキテクチャ ガイド
@@ -94,7 +94,7 @@ CPU を追加しても、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 
 ## <a name="best-practices-for-running-sql-server-on-computers-that-have-more-than-64-cpus"></a>64 基を超える CPU を搭載したコンピューター上で SQL Server を実行する場合のベスト プラクティス
 
 ### <a name="assigning-hardware-threads-with-cpus"></a>CPU へのハードウェア スレッドの割り当て
-プロセッサを特定のスレッドにバインドするために、affinity mask および affinity64 mask サーバー構成オプションを使用しないでください。 これらのオプションは、64 基までの CPU に制限されます。 代わりに、[ALTER SERVER CONFIGURATION](../t-sql/statements/alter-server-configuration-transact-sql.md) の `SET PROCESS AFFINITY` オプションを使用してください。
+プロセッサを特定のスレッドにバインドするために、affinity mask および affinity64 mask サーバー構成オプションを使用しないでください。 これらのオプションは、64 基までの CPU に制限されます。 代わりに、`SET PROCESS AFFINITY`ALTER SERVER CONFIGURATION[ の ](../t-sql/statements/alter-server-configuration-transact-sql.md) オプションを使用してください。
 
 ### <a name="managing-the-transaction-log-file-size"></a>トランザクション ログ ファイル サイズの管理
 トランザクション ログ ファイルのサイズの拡張に関して、自動拡張に依存しないでください。 トランザクション ログの拡張は、シリアルなプロセスである必要があります。 ログを拡張すると、ログの拡張が完了するまでトランザクションの書き込み操作が実行されなくなる場合があります。 ログ ファイルに対する領域をあらかじめ割り当てるには、その代わりに、環境における一般的なワークロードに十分に対応できる大きさの値にファイル サイズを設定します。
@@ -115,7 +115,7 @@ SQL トレースおよび SQL Profiler は、運用環境で使用しないこ�
 > [!IMPORTANT]
 > SQL トレースと [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] は、非推奨です。 Microsoft SQL Server の Trace や Replay オブジェクトを含む *Microsoft.SqlServer.Management.Trace* 名前空間も非推奨とされます。 
 > [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] 
-> 代わりに拡張イベントを使用します。 [拡張イベント](../relational-databases/extended-events/extended-events.md)について詳しくは、「[クイック スタート:SQL Server 拡張イベント](../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)」および [SSMS XEvent Profiler](../relational-databases/extended-events/use-the-ssms-xe-profiler.md) に関するページをご覧ください。
+> 代わりに拡張イベントを使用します。 [拡張イベント](../relational-databases/extended-events/extended-events.md)の詳細については、「[クイック スタート: SQL Server 拡張イベント](../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)」および [SSMS XEvent Profiler](../relational-databases/extended-events/use-the-ssms-xe-profiler.md) に関するページを参照してください。
 
 > [!NOTE]
 > Analysis Services のワークロード用の [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] は非推奨とされず、引き続きサポートされます。

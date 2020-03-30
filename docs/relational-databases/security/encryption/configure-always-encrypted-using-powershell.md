@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5c90ea22849dd1d0437cdf058f639bbe546ccab9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73594413"
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>Configure Always Encrypted using PowerShell
@@ -35,7 +35,7 @@ PowerShell を使うと、役割の分離を有効または無効にして、Alw
 SQL Server インスタンスをホストしているコンピューターではない安全なコンピューターに [SqlServer モジュール](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/sqlserver) をインストールします。 モジュールは、PowerShell ギャラリーから直接インストールできます。  詳細については、[ダウンロード](../../../ssms/download-sql-server-ps-module.md)の手順を参照してください。
 
 
-## <a name="importsqlservermodule"></a> SqlServer モジュールをインポートする 
+## <a name="importing-the-sqlserver-module"></a><a name="importsqlservermodule"></a> SqlServer モジュールをインポートする 
 
 SqlServer モジュールを読み込むには:
 
@@ -49,7 +49,7 @@ SqlServer モジュールを読み込むには:
 Import-Module "SqlServer" 
 ```
 
-## <a name="connectingtodatabase"></a> データベースに接続する
+## <a name="connecting-to-a-database"></a><a name="connectingtodatabase"></a> データベースに接続する
 
 一部の Always Encrypted コマンドレットはデータベースのデータまたはメタデータを操作するので、最初にデータベースに接続する必要があります。 SqlServer モジュールを使用して Always Encrypted を構成するときに推奨されるデータベース接続方法は次の 2 つです。 
 1. **Get-SqlDatabase** コマンドレットを使用して接続します。
@@ -117,11 +117,11 @@ Get-SqlColumnMasterKey -Path SQLSERVER:\SQL\servercomputer\DEFAULT\Databases\you
 - [PowerShell を使用して Always Encrypted で列を暗号化、再暗号化、復号化解除する](configure-column-encryption-using-powershell.md)
 
 
-##  <a name="aecmdletreference"></a> Always Encrypted コマンドレット リファレンス
+##  <a name="always-encrypted-cmdlet-reference"></a><a name="aecmdletreference"></a> Always Encrypted コマンドレット リファレンス
 
 Always Encrypted では次の PowerShell コマンドレットを使用できます。
 
-|コマンドレット |[説明]
+|コマンドレット |説明
 |:---|:---
 |**[Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)**   |Azure への認証を実行し、認証トークンを取得します。
 |**[Add-SqlColumnEncryptionKeyValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlcolumnencryptionkeyvalue)**   |データベースの既存の列暗号化キー オブジェクトに新しく暗号化された値を追加します。

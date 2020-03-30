@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d3aa8e127c382d8f7915edbcb81e1272fe522251
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73981937"
 ---
 # <a name="create-a-database-user"></a>データベース ユーザーの作成
@@ -38,7 +38,7 @@ ms.locfileid: "73981937"
   
  データベース ユーザーを作成するには、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用します。  
   
-##  <a name="Understanding"></a> ユーザーの種類について  
+##  <a name="understanding-the-types-of-users"></a><a name="Understanding"></a> ユーザーの種類について  
  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] は、データベース ユーザーを作成するときに 6 つのオプションを表示します。 次の図に、6 つのオプションを緑色のボックスに示し、それらが何を表すかを示します。  
   
  ![TypesOfUsers](../../../relational-databases/security/authentication-access/media/typesofusers.png "TypesOfUsers")  
@@ -56,17 +56,17 @@ ms.locfileid: "73981937"
   
 > **ヒント!** 組織内のユーザーの場合は、Windows 認証の方が適切です。これは、別のパスワードを覚える必要がないため、および Windows 認証は Kerberos などの他のセキュリティ機能を提供するためです。  
   
-##  <a name="Restrictions"></a> 背景情報  
+##  <a name="background"></a><a name="Restrictions"></a> 背景情報  
  ユーザーは、データベース レベルのセキュリティ プリンシパルです。 データベースに接続するためには、データベース ユーザーにログインをマップする必要があります。 異なるデータベースには、1 つのログインを異なるユーザーとしてマップすることができますが、各データベースでは 1 人のユーザーとしてのみマップできます。 部分的包含データベースでは、ログインを持たないユーザーを作成できます。 包含データベース ユーザーの詳細については、「[CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)」を参照してください。 データベースで guest ユーザーが有効になっている場合は、データベース ユーザーにマップされていないログインでも、guest ユーザーとしてそのデータベースにアクセスすることができます。  
   
 > **重要:** guest ユーザーは無効にするのが一般的です。 必要な場合を除き、guest ユーザーは有効にしないでください。  
   
  セキュリティ プリンシパルとして、ユーザーには権限を許可することができます。 ユーザーのスコープはデータベースです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンス上の特定のデータベースに接続するには、データベース ユーザーにログインをマップする必要があります。 データベース内の権限を許可したり拒否したりする際に、その対象となるのは、ログインではなく、データベース ユーザーです。  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  データベースに対する **ALTER ANY USER** 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SSMS でユーザーを作成する  
+##  <a name="create-a-user-with-ssms"></a><a name="SSMSProcedure"></a> SSMS でユーザーを作成する  
   
  
 1.  オブジェクト エクスプローラーで、 **[データベース]** フォルダーを展開します。  
@@ -140,7 +140,7 @@ ms.locfileid: "73981937"
      **削除**  
      選択されている拡張プロパティを削除します。  
   
-##  <a name="TsqlProcedure"></a> T-SQL を使用してユーザーを作成する  
+##  <a name="create-a-user-using-t-sql"></a><a name="TsqlProcedure"></a> T-SQL を使用してユーザーを作成する  
     
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
   

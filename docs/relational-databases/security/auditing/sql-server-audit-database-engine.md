@@ -1,10 +1,10 @@
 ---
 title: SQL Server Audit (データベース エンジン) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/21/2016
+ms.date: 01/01/2020
 ms.prod: sql
 ms.prod_service: security
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 f1_keywords:
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SQL Server Audit
 - audits [SQL Server], SQL Server Audit
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
-author: VanMSFT
-ms.author: vanto
+author: davidtrigano
+ms.author: datrigan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 4d9319ef90263e6513661c4d9a24be7f530b917f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: f13076ab831dbf3321a60aef8752d88c6193265a
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72903847"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80243412"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (データベース エンジン)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -142,7 +142,7 @@ ms.locfileid: "72903847"
 ### <a name="data-definition-language-statements"></a>データ定義言語ステートメント  
  以下の DDL ステートメントを使用して、監査の仕様を作成、変更、および削除することができます。  
   
-|DDL ステートメント|[説明]| 
+|DDL ステートメント|説明| 
 |-|-|  
 |[ALTER AUTHORIZATION](../../../t-sql/statements/alter-authorization-transact-sql.md)|セキュリティ保護可能なエンティティの所有権を変更します。|  
 |[ALTER DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/alter-database-audit-specification-transact-sql.md)|SQL Server Audit 機能を使用して、データベース監査仕様オブジェクトを変更します。|  
@@ -158,7 +158,7 @@ ms.locfileid: "72903847"
 ### <a name="dynamic-views-and-functions"></a>動的ビューと関数  
  次の表に、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査に使用できる動的ビューと関数の一覧を示します。  
   
-|動的ビューと関数|[説明]|  
+|動的ビューと関数|説明|  
 |---------------------------------|-----------------|  
 |[sys.dm_audit_actions](../../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)|監査ログで報告される可能性のあるすべての監査アクション、および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit の一部として構成できるすべての監査アクション グループに対して 1 つの行を返します。|  
 |[sys.dm_server_audit_status](../../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)|監査の現在の状態に関する情報を提供します。|  
@@ -168,7 +168,7 @@ ms.locfileid: "72903847"
 ### <a name="catalog-views"></a>カタログ ビュー  
  次の表に、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査に使用できるカタログ ビューの一覧を示します。  
   
-|カタログ ビュー|[説明]|  
+|カタログ ビュー|説明|  
 |-------------------|-----------------|  
 |[sys.database_audit_specifications](../../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)|サーバー インスタンス上の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査に含まれるデータベース監査仕様に関する情報を含みます。|  
 |[sys.database_audit_specification_details](../../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)|すべてのデータベースについてサーバー インスタンス上の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査に含まれる、データベース監査仕様に関する情報を含みます。|  

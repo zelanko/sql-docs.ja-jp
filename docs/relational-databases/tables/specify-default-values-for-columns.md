@@ -1,7 +1,7 @@
 ---
 title: 列の既定値の指定 | Microsoft Docs
 ms.custom: ''
-ms.date: 02/20/2019
+ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 64514aed-b846-407b-992e-cf813f9a1a91
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f9cf01e13bc1fe278af9d68897a71c99003b37fc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 1544242905645fed5cb00fda3f7da0a06809326c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74200498"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448482"
 ---
 # <a name="specify-default-values-for-columns"></a>列の既定値の指定
 
@@ -33,7 +33,7 @@ ms.locfileid: "74200498"
 
 - NULL 値を許可するオプションを設定していない場合は、列が空白のままになります。ただし、列に値を指定しないと、行を保存できません。
 
-## <a name="Restrictions"></a> 制限事項と制約事項
+## <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項
 
 始める前に、次の制限事項と制約事項に注意してください。
 
@@ -45,11 +45,11 @@ ms.locfileid: "74200498"
 
 - オブジェクトまたは関数を入力するには、引用符で囲まずにオブジェクト名または関数名を入力します。
 
-### <a name="Security"></a> セキュリティのアクセス許可
+### <a name="security-permissions"></a><a name="Security"></a> セキュリティのアクセス許可
 
 この記事で説明するアクションには、テーブルに対する ALTER アクセス許可が必要です。
 
-## <a name="SSMSProcedure"></a> SSMS を使用して既定値を指定する
+## <a name="use-ssms-to-specify-a-default"></a><a name="SSMSProcedure"></a> SSMS を使用して既定値を指定する
 
 オブジェクト エクスプローラーを使用して、テーブルの列の既定値を指定できます。
 
@@ -66,7 +66,7 @@ ms.locfileid: "74200498"
 
 4. **[ファイル]** メニューの **[** <テーブル名> _を保存]_ をクリックします。
 
-## <a name="TsqlProcedure"></a> Transact-SQL を使用して既定値を指定する
+## <a name="use-transact-sql-to-specify-a-default"></a><a name="TsqlProcedure"></a> Transact-SQL を使用して既定値を指定する
 
 SSMS を使用して T-SQL を送信することにより、さまざまな方法で列の既定値を指定できます。
 
@@ -84,7 +84,7 @@ SSMS を使用して T-SQL を送信することにより、さまざまな方�
    INSERT INTO dbo.doc_exz (column_a) VALUES (7);
    GO
    ALTER TABLE dbo.doc_exz
-     ADD CONSTRAINT col_b_def
+     ADD CONSTRAINT DF_Doc_Exz_Column_B
      DEFAULT 50 FOR column_b;
    GO
    ```
@@ -106,7 +106,7 @@ The following two T-SQL code examples were offered by 'nycdotnet' (Steve) via pu
 ```sql
     CREATE TABLE dbo.doc_exz (
       column_a INT,
-      column_b INT CONSTRAINT DF_doc_exz_column_b DEFAULT 50);
+      column_b INT CONSTRAINT DF_Doc_Exz_Column_B DEFAULT 50);
 ```
 
 詳細については、「[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)」を参照してください。

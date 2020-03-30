@@ -33,10 +33,10 @@ ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 782536e79336c0224638707538e8a12a31f5af84
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287986"
 ---
 # <a name="database-files-and-filegroups"></a>データベース ファイルとファイル グループ
@@ -59,9 +59,9 @@ ms.locfileid: "79287986"
 ### <a name="logical-and-physical-file-names"></a>論理ファイル名と物理ファイル名
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ファイルにはファイル名の種類が 2 つあります。 
 
-**logical_file_name:** logical_file_name は、すべての Transact-SQL ステートメントで物理ファイルを参照するために使用する名前です。 論理ファイル名は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の識別子の規則に従っている必要があります。また、データベース内の論理ファイル名は互いに一意にする必要があります。 これは `ALTER DATABASE` の `NAME` 引数で設定されます。 詳細については、「[ALTER DATABASE の File および Filegroup オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)」を参照してください。
+**logical_file_name:**  logical_file_name はすべての Transact-SQL ステートメントで物理ファイルを参照するために使用する名前です。 論理ファイル名は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の識別子の規則に従っている必要があります。また、データベース内の論理ファイル名は互いに一意にする必要があります。 これは `NAME` の `ALTER DATABASE` 引数で設定されます。 詳細については、「[ALTER DATABASE の File および Filegroup オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)」を参照してください。
 
-**os_file_name:** os_file_name は、ディレクトリ パスを含む物理ファイルの名前です。 この名前はオペレーティング システムのファイル名の規則に従っている必要があります。 これは `ALTER DATABASE` の `FILENAME` 引数で設定されます。 詳細については、「[ALTER DATABASE の File および Filegroup オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)」を参照してください。
+**os_file_name:** os_file_name はディレクトリ パスを含む物理ファイルの名前です。 この名前はオペレーティング システムのファイル名の規則に従っている必要があります。 これは `FILENAME` の `ALTER DATABASE` 引数で設定されます。 詳細については、「[ALTER DATABASE の File および Filegroup オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)」を参照してください。
 
 > [!IMPORTANT]
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータとログ ファイルは、FAT または NTFS のいずれかのファイル システムに配置できます。 Windows システムの場合、NTFS のセキュリティの方が強力なので、NTFS ファイル システムを使用することをお勧めします。 
@@ -84,7 +84,7 @@ ms.locfileid: "79287986"
 
 各ファイルに最大サイズを指定することもできます。 最大サイズを指定しなかった場合、ファイルはディスクの空き領域を使い果たすまで拡張し続けます。 この機能は、ユーザーがシステム管理者と簡単に連絡を取れない状況にあり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をアプリケーションに埋め込んだデータベースとして使用している場合に特に便利です。 ユーザーは、必要に応じてファイルを自動拡張するようにし、データベースの空き領域の監視や追加領域を手動で割り当てる管理上の負担を軽減できます。  
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で[ファイルの瞬時初期化 (IFI)](../../relational-databases/databases/database-instant-file-initialization.md) を有効にすると、データ ファイルに新しい領域を割り当てるとき、最小限のオーバーヘッドが発生します。
+[ で](../../relational-databases/databases/database-instant-file-initialization.md)ファイルの瞬時初期化 (IFI)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を有効にすると、データ ファイルに新しい領域を割り当てるとき、最小限のオーバーヘッドが発生します。
 
 トランザクション ログ ファイル管理の詳細については、「[トランザクション ログ ファイルのサイズの管理](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations)」を参照してください。   
 
@@ -199,7 +199,7 @@ GO
 - ファイルは 1 つのファイル グループにしか所属できません。
 - トランザクション ログ ファイルをファイル グループに格納することはできません。
 
-## <a name="Recommendations"></a> 推奨事項
+## <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項
 ファイルとファイル グループを使用して作業するときの一般的な推奨事項を次に示します。 
 - 大部分のデータベースは、1 つのデータ ファイルと 1 つのトランザクション ログ ファイルで正常に機能します。
 - 複数のデータ ファイルを使用する場合は、追加ファイル用に 2 番目のファイル グループを作成し、既定のファイル グループとして設定します。 これにより、プライマリ ファイルにはシステム テーブルとシステム オブジェクトだけが格納されます。

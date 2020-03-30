@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 699d7779c3409a69d4389a96b93feab1cae3f9e0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70148838"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
@@ -71,7 +71,7 @@ ms.locfileid: "70148838"
 ## <a name="supported-string-literal-formats-for-datetimeoffset"></a>datetimeoffset でサポートされる文字列リテラル形式
 次の表は、**datetimeoffset** でサポートされている ISO 8601 文字列リテラル形式を一覧にしたものです。 **datetimeoffset** の日付部分と時刻部分に使用できるアルファベット、数値、区切りなし、時刻の各形式については、「[date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)」および「[time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md)」をご覧ください。
   
-|ISO 8601|[説明]|  
+|ISO 8601|説明|  
 |---|---|
 |YYYY-MM-DDThh:mm:ss[.nnnnnnn][{+&#124;-}hh:mm]|この 2 つの形式は、セッションのロケール設定である SET LANGUAGE および SET DATEFORMAT の影響を受けません。 **datetimeoffset** 部分と **datetime** 部分の間にスペースを入れることはできません。|  
 |YYYY-MM-DDThh:mm:ss[.nnnnnnn]Z (UTC)|ISO 定義に基づくこの形式は、**datetime** 部分を協定世界時 (UTC) で指定する必要があることを示します。 たとえば、1999-12-12 12:30:30.12345 -07:00 は 1999-12-12 19:30:30.12345Z と表す必要があります。|  

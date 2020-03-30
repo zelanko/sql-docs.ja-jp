@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 0f400667e73effb73ff41c3c7270e3f89a2ca0da
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76162643"
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>SQL Server Integration Services (SSIS) on Linux をインストールする
@@ -26,7 +26,7 @@ ms.locfileid: "76162643"
 - [Ubuntu 16.04](#ubuntu)
 - [Red Hat Enterprise Linux](#RHEL)
 
-## <a name="ubuntu"></a> Ubuntu に SSIS をインストールする
+## <a name="install-ssis-on-ubuntu"></a><a name="ubuntu"></a> Ubuntu に SSIS をインストールする
 
 Ubuntu 上に **mssql-server-is** パッケージをインストールするには、次の手順を行います。
 
@@ -118,7 +118,7 @@ sudo apt-get install mssql-server-is
 sudo apt-get remove mssql-server-is
 ```
 
-## <a name="RHEL"></a> RHEL に SSIS をインストールする
+## <a name="install-ssis-on-rhel"></a><a name="RHEL"></a> RHEL に SSIS をインストールする
 RHEL 上に **mssql-server-is** パッケージをインストールするには、次の手順を行います。
 
 <!--SQL Server 2017 on Linux-->

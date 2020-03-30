@@ -11,10 +11,10 @@ ms.assetid: 1b38e8e3-c560-4b6e-b60e-bfd7cfcd4fdf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b5de8c538d0ee91f8d176637beceabdf9352177a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76037047"
 ---
 # <a name="functions---dm_execution_performance_counters"></a>関数 - dm_execution_performance_counters
@@ -39,7 +39,7 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 ## <a name="remarks"></a>解説  
  次の表に、dm_execution_performance_counter 関数によって返されるカウンター名の値を一覧で示します。  
   
-|カウンター名|[説明]|  
+|カウンター名|説明|  
 |------------------|-----------------|  
 |BLOB bytes read|データ フロー エンジンがすべてのソースから読み取るバイナリ ラージ オブジェクト (BLOB) データのバイト数。|  
 |BLOB bytes written|データ フロー エンジンがすべての出力先に書き込む BLOB データのバイト数。|  
@@ -57,7 +57,7 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 ## <a name="return"></a>戻り値  
  dm_execution_performance_counters 関数は、1 つの処理中の実行に対して次の列を持つ表を返します。 返す情報は、実行に含まれているすべてのパッケージが対象です。 処理中の実行がない場合は、空の表を返します。  
   
-|列名|列の型|[説明]|解説|  
+|列名|列の型|説明|解説|  
 |-----------------|-----------------|-----------------|-------------|  
 |execution_id|**BigInt**<br /><br /> **NULL** は無効な値です。|パッケージを含む実行の一意識別子。||  
 |counter_name|**nvarchar(128)**|カウンターの名前。|値の「**解説**」セクションを参照してください。|  

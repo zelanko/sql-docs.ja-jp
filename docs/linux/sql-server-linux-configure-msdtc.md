@@ -8,10 +8,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: a39e0a743053db694efc2d0e8176e659d7e376d1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68995875"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>Linux で Microsoft 分散トランザクション コーディネーター (MSDTC) を構成する方法
@@ -29,7 +29,7 @@ ms.locfileid: "68995875"
 
 MSDTC では、mssql-conf ユーティリティ用に次の 2 つの構成パラメーターを使用します。
 
-| mssql-conf setting | [説明] |
+| mssql-conf setting | 説明 |
 |---|---|
 | **network.rpcport** | RPC エンドポイント マッパー プロセスのバインド先の TCP ポート。 |
 | **distributedtransaction.servertcpport** | MSDTC サーバーがリッスンするポート。 設定しない場合、MSDTC サービスはサービス再起動時にランダムな一時ポートを使用するため、MSDTC サービスが通信を継続できるようにファイアウォールの例外を再構成する必要があります。 |
@@ -184,7 +184,7 @@ tcp6 0 0 :::51999 :::* LISTEN 13911/sqlservr
 
 SQL Server on Linux の MSDTC では、既定で RPC 通信で認証が使用されません。 ただし、ホスト マシインが Active Directory (AD) ドメインに参加しているときは、次の **mssql-conf** 設定を使用して認証された RPC 通信を使用するように MSDTC を構成できます。
 
-| 設定 | [説明] |
+| 設定 | 説明 |
 |---|---|
 | **distributedtransaction.allowonlysecurerpccalls**          | 分散トランザクションに対して、セキュリティで保護された RPC のみを構成します。 既定値は 0 です。 |
 | **distributedtransaction.fallbacktounsecurerpcifnecessary** | 分散トランザクションに対して、セキュリティで保護された RPC のみを構成します。 既定値は 0 です。 |
