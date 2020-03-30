@@ -11,13 +11,13 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4edf4003d40da35dcd54b3938e0f318ef8b9440a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74957056"
 ---
-# <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] の分析情報ウィジェットを使用してサーバーとデータベースを管理する
+# <a name="manage-servers-and-databases-with-insight-widgets-in-name-sos"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] の分析情報ウィジェットを使用してサーバーとデータベースを管理する
 
 分析情報ウィジェットでは、お客様がサーバーとデータベースを監視するために使用している Transact-SQL (T-SQL) クエリが取得され、それらが洞察に富んだ視覚エフェクトに変換されます。
 

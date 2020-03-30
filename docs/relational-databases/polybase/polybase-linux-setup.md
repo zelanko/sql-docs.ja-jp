@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
 ms.openlocfilehash: 117620c170b183b12d06eb717cfc1bb4b2dc559c
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77173555"
 ---
 # <a name="install-polybase-on-linux"></a>Linux への PolyBase のインストール
@@ -36,7 +36,7 @@ Linux に [PolyBase](../../relational-databases/search/full-text-search.md) (**m
 
 
 
-## <a name="RHEL">RHEL へのインストール</a>
+## <a name=""></a><a name="RHEL">RHEL へのインストール</a>
 
 Red Hat Enterprise Linux に **mssql-server-polybase** をインストールするには、次のコマンドを使用します。 
 
@@ -55,7 +55,7 @@ sudo systemctl restart mssql-server
 
 オフライン インストールが必要な場合は、[リリース ノート](../../linux/sql-server-linux-release-notes.md)の PolyBase パッケージのダウンロードを参照してください。 次に、[SQL Server のインストール](../../linux/sql-server-linux-setup.md#offline)の記事で説明されているのと同じオフライン インストール手順を使用します。
 
-## <a name="ubuntu">Ubuntu へのインストール</a>
+## <a name=""></a><a name="ubuntu">Ubuntu へのインストール</a>
 
 Ubuntu に **mssql-server-polybase** をインストールするには、次のコマンドを使用します。 
 
@@ -74,7 +74,7 @@ sudo systemctl restart mssql-server
 
 オフライン インストールが必要な場合は、[リリース ノート](../../linux/sql-server-linux-release-notes.md)の PolyBase パッケージのダウンロードを参照してください。 次に、[SQL Server のインストール](../../linux/sql-server-linux-setup.md#offline)の記事で説明されているのと同じオフライン インストール手順を使用します。
 
-## <a name="SLES">SLES へのインストール</a>
+## <a name=""></a><a name="SLES">SLES へのインストール</a>
 
 SUSE Linux Enterprise Server に **mssql-server-polybase** をインストールするには、次のコマンドを使用します。 
 
@@ -95,7 +95,7 @@ sudo systemctl restart mssql-server
 オフライン インストールが必要な場合は、[リリース ノート](../../linux/sql-server-linux-release-notes.md)の PolyBase パッケージのダウンロードを参照してください。 次に、[SQL Server のインストール](../../linux/sql-server-linux-setup.md#offline)の記事で説明されているのと同じオフライン インストール手順を使用します。
 
 
-## <a name="enable">PolyBase を有効にする</a> 
+## <a name=""></a><a name="enable">PolyBase を有効にする</a> 
 
 インストールが完了したら、PolyBase を有効にしてその機能にアクセスできるようにする必要があります。 インストールされている SQL Server インスタンスに接続し、次の Transact-SQL コマンドを使用して有効にします。
 

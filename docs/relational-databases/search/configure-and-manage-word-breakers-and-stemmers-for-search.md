@@ -22,10 +22,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 393b6e248962fa496dcdac9fe5def556b766a2bd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056261"
 ---
 # <a name="configure--manage-word-breakers--stemmers-for-search-sql-server"></a>検索用のワード ブレーカーとステミング機能の構成と管理 (SQL Server)
@@ -53,7 +53,7 @@ ms.locfileid: "74056261"
 SELECT * FROM sys.fulltext_languages
 ```
 
-##  <a name="register"></a>登録されているワード ブレーカーの一覧の取得
+##  <a name="get-the-list-of-registered-word-breakers"></a><a name="register"></a>登録されているワード ブレーカーの一覧の取得
 
 フルテキスト検索で、ある言語のワード ブレーカーを使用するには、それらが登録されている必要があります。 ワード ブレーカーを登録すると、関連する言語リソース (ステマー、ノイズ ワード (ストップワード)、類義語辞典ファイル) もフルテキスト インデックス操作やフルテキスト クエリ操作で使用できるようになります。
 
@@ -69,7 +69,7 @@ GO
 ## <a name="if-you-add-or-remove-a-word-breaker"></a>ワード ブレーカーを追加または削除する場合  
 ワード ブレーカーを追加、削除、または変更すると、フルテキスト インデックスおよびフルテキスト クエリでサポートされている Microsoft Windows のロケール識別子 (LCID) の一覧を更新する必要があります。 詳細については、「 [登録済みのフィルターおよびワード ブレーカーの表示または変更](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)」を参照してください。  
   
-##  <a name="default"></a> 既定のフルテキスト言語オプションの設定  
+##  <a name="set-the-default-full-text-language-option"></a><a name="default"></a> 既定のフルテキスト言語オプションの設定  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のローカライズされたバージョンでは、適切な言語が存在する場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップによって **default full-text language** オプションはサーバーの言語に設定されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のローカライズされていないバージョンでは、 **[既定のフルテキスト言語]** オプションは英語になります。  
   
  フルテキスト インデックスを作成または変更する場合は、フルテキスト インデックス列ごとに言語を指定できます。 列に言語が指定されていない場合、既定では構成オプション **default full-text language**の値になります。  
@@ -77,7 +77,7 @@ GO
 > [!NOTE]  
 >  1 つのフルテキスト クエリ関数句に指定されるすべての列は、クエリで LANGUAGE オプションが指定されていない限り、同じ言語を使用する必要があります。 クエリ対象のフルテキスト インデックスが付けられた列に使用する言語によって、フルテキスト クエリの述語 ([CONTAINS](../../t-sql/queries/contains-transact-sql.md) および [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)) および関数 ([CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) および [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md)) の引数に対して実行される言語分析が決まります。  
   
-##  <a name="lang"></a> インデックス列の言語の選択  
+##  <a name="choose-the-language-for-an-indexed-column"></a><a name="lang"></a> インデックス列の言語の選択  
  フルテキスト インデックスを作成する際には、各インデックス列に対して言語を指定することをお勧めします。 列に言語が指定されていない場合、システムの既定の言語が使用されます。 列のインデックス作成に使用されるワード ブレーカーとステミング機能は、列の言語によって決まります。 また、指定した言語の類義語辞典ファイルが、列のフルテキスト クエリで使用されます。  
   
  フルテキスト インデックスの作成時に列の言語を選択する際には、注意点が 2 つあります。 これらの注意点は、テキストをトークン化する方法と、Full-Text Engine によるインデックス作成の方法にかかわるものです。 詳細については、「 [フルテキスト インデックス作成時の言語の選択](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)」を参照してください。  
@@ -90,7 +90,7 @@ SELECT language_id AS 'LCID' FROM sys.fulltext_index_columns;
 
 追加のオプションと詳細については、「[sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)」をご覧ください。
 
-##  <a name="tshoot"></a> 単語区切りのタイムアウト エラーのトラブルシューティング  
+##  <a name="troubleshoot-word-breaking-time-out-errors"></a><a name="tshoot"></a> 単語区切りのタイムアウト エラーのトラブルシューティング  
  単語区切りのタイムアウト エラーは、さまざまな状況で発生する可能性があります。 エラーが発生する状況とその対処方法については、「[MSSQLSERVER_30053](../errors-events/mssqlserver-30053-database-engine-error.md)」をご覧ください。
 
 ### <a name="info-about-the-mssqlserver_30053-error"></a>MSSQLSERVER_30053 エラーに関する情報
@@ -130,7 +130,7 @@ SELECT language_id AS 'LCID' FROM sys.fulltext_index_columns;
 |フィルター デーモン プロセスの構成が正しくない。|正しいパスワードを使用していることと、フィルター デーモン アカウントのログオンがドメイン ポリシーによって拒否されていないことを確認してください。|  
 |クエリが集中的に行われるワークロードをサーバー インスタンスで実行している。|負荷を少なくしてクエリの再実行を試みてください。|  
 
-##  <a name="impact"></a> 更新されたワード ブレーカーの影響について  
+##  <a name="understand-the-impact-of-updated-word-breakers"></a><a name="impact"></a> 更新されたワード ブレーカーの影響について  
  各バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、通常、新しいワード ブレーカーが含まれています。これらのワード ブレーカーでは、言語の規則が改良されているため、以前のワード ブレーカーよりも精度が向上しています。 新しいワード ブレーカーは、前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からインポートされたフルテキスト インデックスのワード ブレーカーとは少し動作が異なる場合もあります。
  
 データベースが現在のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にアップグレードされたときにフルテキスト カタログをインポートした場合は、この動作の違いが重要になります。 フルテキスト カタログのフルテキスト インデックスで使用される 1 つまたは複数の言語が、新しいワード ブレーカーに関連付けられる可能性があります。 詳細については、「 [フルテキスト検索のアップグレード](../../relational-databases/search/upgrade-full-text-search.md)」を参照してください。  

@@ -12,10 +12,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 22f296db7717e81068ac52d6c3df547a0ba0d085
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73660790"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT (Azure SQL Data Warehouse)
@@ -124,7 +124,7 @@ SELECT ステートメントは、CTAS と CREATE TABLE の基本的な違いで
 <a name="permissions-bk"></a>  
   
 ## <a name="permissions"></a>アクセス許可  
-CTAS には、*select_criteria* で参照されるすべてのオブジェクトに対する `SELECT` 権限が必要です。
+CTAS には、`SELECT`select_criteria*で参照されるすべてのオブジェクトに対する* 権限が必要です。
 
 テーブルを作成する権限については、CREATE TABLE の「[権限](https://msdn.microsoft.com/library/mt203953/#Permissions)」を参照してください。 
   
@@ -167,11 +167,11 @@ CTAS を使用してテーブルを作成するときに、パフォーマンス
 <a name="ctas-copy-table-bk"></a>
 
 ### <a name="a-use-ctas-to-copy-a-table"></a>A. CTAS を使用したテーブルのコピー 
-適用対象:Azure SQL Data Warehouse と Parallel Data Warehouse
+適用対象: Azure SQL Data Warehouse と Parallel Data Warehouse
 
 `CTAS` の最も一般的な使用方法の 1 つとして、DDL を変更できるようにテーブルのコピーを作成することが考えられます。 たとえば、最初に `ROUND_ROBIN` としてテーブルを作成し、それを列で分散されるテーブルに変更する必要がある場合、`CTAS` を使用して分散列を変更します。 また、`CTAS` を使用して、パーティション、インデックス、列の型を変更することができます。
 
-たとえば、分散列が `CREATE TABLE` で指定されていないため、既定の分散種類である `ROUND_ROBIN` 分散を使用して、このテーブルを作成したとします。
+たとえば、分散列が `ROUND_ROBIN` で指定されていないため、既定の分散種類である `CREATE TABLE` 分散を使用して、このテーブルを作成したとします。
 
 ```sql
 CREATE TABLE FactInternetSales
@@ -239,7 +239,7 @@ DROP TABLE FactInternetSales_old;
 <a name="ctas-change-column-attributes-bk"></a>
 
 ### <a name="b-use-ctas-to-change-column-attributes"></a>B. CTAS を使用して列属性を変更する 
-適用対象:Azure SQL Data Warehouse と Parallel Data Warehouse
+適用対象: Azure SQL Data Warehouse と Parallel Data Warehouse
 
 この例では CTAS を使用して、DimCustomer2 テーブルのデータ型、NULL 値の許容、いくつかの列の照合順序を変更します。  
   
@@ -300,7 +300,7 @@ DROP TABLE DimCustomer2_old;
 <a name="ctas-change-distribution-method-bk"></a>
 
 ### <a name="c-use-ctas-to-change-the-distribution-method-for-a-table"></a>C. CTAS を使用してテーブルの分散方法を変更する
-適用対象:Azure SQL Data Warehouse と Parallel Data Warehouse
+適用対象: Azure SQL Data Warehouse と Parallel Data Warehouse
 
 この簡単な例では、テーブルの分散方法を変更する方法を示します。 これを行う方法のしくみを表示するには、ハッシュ分散テーブルをラウンドロビンに変更してから、ラウンドロビン テーブルをハッシュ分散に戻します。 最終的なテーブルは元のテーブルと一致します。 
 
@@ -351,7 +351,7 @@ DROP TABLE [dbo].[DimSalesTerritory_old];
 <a name="ctas-change-to-replicated-bk"></a>
 
 ### <a name="d-use-ctas-to-convert-a-table-to-a-replicated-table"></a>D. CTAS を使用してテーブルをレプリケートされたテーブルに変換する  
-適用対象:Azure SQL Data Warehouse と Parallel Data Warehouse 
+適用対象: Azure SQL Data Warehouse と Parallel Data Warehouse 
 
 この例は、ラウンドロビン テーブルまたはハッシュ分散テーブルをレプリケートされたテーブルに変換する場合に適用されます。 この特定の例では、分散の種類を変更する前の方法を 1 歩進めた方法を使用します。  DimSalesTerritory はディメンションであり、より小さいテーブルである可能性があるため、テーブル間の結合時にデータが移動されないようにテーブルをレプリケート済みとして再作成することを選択できます。 
 
@@ -375,7 +375,7 @@ DROP TABLE [dbo].[DimSalesTerritory_old];
 ```
  
 ### <a name="e-use-ctas-to-create-a-table-with-fewer-columns"></a>E. CTAS を使用して列が少ないテーブルを作成する
-適用対象:Azure SQL Data Warehouse と Parallel Data Warehouse 
+適用対象: Azure SQL Data Warehouse と Parallel Data Warehouse 
 
 次の例では、`myTable (c, ln)` という名前のラウンドロビン分散テーブル テーブルを作成します。 新しいテーブルには 2 つの列のみがあります。 列名には、SELECT ステートメントの列の別名を使用します。  
   
@@ -398,7 +398,7 @@ AS SELECT CustomerKey AS c, LastName AS ln
 <a name="ctas-query-hint-bk"></a>
 
 ### <a name="f-use-a-query-hint-with-create-table-as-select-ctas"></a>F. CREATE TABLE AS SELECT (CTAS) でクエリ ヒントを使用する  
-適用対象:Azure SQL Data Warehouse と Parallel Data Warehouse
+適用対象: Azure SQL Data Warehouse と Parallel Data Warehouse
   
 このクエリは、CTAS ステートメントでクエリの結合ヒントを使用するための基本構文を示しています。 クエリが送信されると、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] では、分散ごとにクエリ プランを生成する際にハッシュ結合方法が適用されます。 ハッシュ結合のクエリ ヒントの詳細については、「[OPTION 句 &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md)」を参照してください。  
   
@@ -421,7 +421,7 @@ OPTION ( HASH JOIN );
 <a name="ctas-azure-blob-storage-bk"></a>
 
 ### <a name="g-use-ctas-to-import-data-from-azure-blob-storage"></a>G. CTAS を使用して Azure BLOB ストレージからデータをインポートする  
-適用対象:Azure SQL Data Warehouse と Parallel Data Warehouse  
+適用対象: Azure SQL Data Warehouse と Parallel Data Warehouse  
 
 外部テーブルからデータをインポートするには、CREATE TABLE AS SELECT を使用して外部テーブルから選択するだけです。 外部テーブルからデータを選択して [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] に格納する構文は、通常のテーブルからデータを選択する構文と同じです。  
   
@@ -503,7 +503,7 @@ CTAS を使用して、サポートされていない一部の機能に対処し
 <a name="ctas-replace-select-into-bk"></a>
 
 ### <a name="i-use-ctas-instead-of-selectinto"></a>I. SELECT..INTO の代わりに CTAS を使用する  
-適用対象:Azure SQL Data Warehouse と Parallel Data Warehouse
+適用対象: Azure SQL Data Warehouse と Parallel Data Warehouse
 
 SQL Server コードでは通常、SELECT..INTO を使用して、テーブルに SELECT ステートメントの結果を設定します。 これは、SQL Server の SELECT..INTO ステートメントの例です。
 
@@ -529,8 +529,8 @@ FROM    [dbo].[FactInternetSales]
 
 <a name="ctas-replace-implicit-joins-bk"></a>
 
-### <a name="j-use-ctas-and-implicit-joins-to-replace-ansi-joins-in-the-from-clause-of-an-update-statement"></a>J. CTAS と暗黙の結合を使用して、`UPDATE` ステートメントの `FROM` 句で ANSI 結合を置き換える  
-適用対象:Azure SQL Data Warehouse と Parallel Data Warehouse  
+### <a name="j-use-ctas-and-implicit-joins-to-replace-ansi-joins-in-the-from-clause-of-an-update-statement"></a>J. CTAS と暗黙の結合を使用して、`FROM` ステートメントの `UPDATE` 句で ANSI 結合を置き換える  
+適用対象: Azure SQL Data Warehouse と Parallel Data Warehouse  
 
 UPDATE または DELETE を実行するために ANSI 結合構文を使用して、3 つ以上のテーブルをまとめて結合する更新は複雑になることがあります。
 
@@ -574,7 +574,7 @@ AND [acs].[CalendarYear]                = [fis].[CalendarYear]
 ;
 ```
 
-SQL Data Warehouse では `UPDATE` ステートメントの `FROM` 句での ANSI 結合がサポートされていないため、この SQL Server コードを少し変更しないと使用できません。
+SQL Data Warehouse では `FROM` ステートメントの `UPDATE` 句での ANSI 結合がサポートされていないため、この SQL Server コードを少し変更しないと使用できません。
 
 `CTAS` と暗黙の結合を組み合わせて使用して、このコードを置き換えることができます。
 
@@ -613,7 +613,7 @@ DROP TABLE CTAS_acs
 <a name="ctas-replace-ansi-joins-bk"></a>
 
 ### <a name="k-use-ctas-to-specify-which-data-to-keep-instead-of-using-ansi-joins-in-the-from-clause-of-a-delete-statement"></a>K. CTAS を使用して、DELETE ステートメントの FROM 句で ANSI 結合を使用する代わりに保持するデータを指定する  
-適用対象:Azure SQL Data Warehouse と Parallel Data Warehouse  
+適用対象: Azure SQL Data Warehouse と Parallel Data Warehouse  
 
 データを削除するときに `CTAS` を使用するのが最良の方法である場合があります。 データを削除するのではなく、保持する必要があるデータを選択するだけです。 SQL Data Warehouse では `DELETE` ステートメントの `FROM` 句での ANSI 結合がサポートされていないため、これは特に、ansi 結合構文を使用する `DELETE` ステートメントの場合に当てはまります。
 
@@ -641,7 +641,7 @@ RENAME OBJECT dbo.DimProduct_upsert TO DimProduct;
 <a name="ctas-simplify-merge-bk"></a>
 
 ### <a name="l-use-ctas-to-simplify-merge-statements"></a>L. CTAS を使用して MERGE ステートメントを簡略化する  
-適用対象:Azure SQL Data Warehouse と Parallel Data Warehouse  
+適用対象: Azure SQL Data Warehouse と Parallel Data Warehouse  
 
 MERGE ステートメントの少なくとも一部は、`CTAS` を使用して置き換えることができます。 `INSERT` と `UPDATE` を単一のステートメントにまとめることができます。 削除されたレコードは、2 番目のステートメントで閉じる必要があります。
 
@@ -680,7 +680,7 @@ RENAME OBJECT dbo.[DimProduct_upsert]  TO [DimProduct];
 <a name="ctas-data-type-and-nullability-bk"></a>
 
 ### <a name="m-explicitly-state-data-type-and-nullability-of-output"></a>M. 明示的にデータ型および出力の null 値の許容を示す  
-適用対象:Azure SQL Data Warehouse と Parallel Data Warehouse  
+適用対象: Azure SQL Data Warehouse と Parallel Data Warehouse  
 
 SQL Server コードを SQL Data Warehouse に移行したときに、次のようなコーディング パターンが発生する場合があります。
 
@@ -736,7 +736,7 @@ from ctas_r
 
 2 つの結果の間でこのような違いが見られる理由は、暗黙的な型キャストへの依存です。 最初の例では、テーブルで列定義が定義されます。 行が挿入されたときに、暗黙的な型変換が発生します。 2 番目の例では、式で列のデータ型が定義されるため、暗黙的な型変換は発生しません。 また、2 番目の例の列が NULL 許容列として定義されているのに対して、最初の例では定義されていないことに注目してください。 最初の例でテーブルが作成されたときに、列の NULL 値の許容は明示的に定義されました。 2 番目の例では、式にただ任せ、その結果、既定で NULL 定義となります。  
 
-これらの問題を解決するには、`CTAS` ステートメントの `SELECT` 部分で型変換と NULL 値の許容を明示的に設定する必要があります。 CREATE TABLE 部分でこれらのプロパティを設定することはできません。
+これらの問題を解決するには、`SELECT` ステートメントの `CTAS` 部分で型変換と NULL 値の許容を明示的に設定する必要があります。 CREATE TABLE 部分でこれらのプロパティを設定することはできません。
 
 次の例ではコードを修正する方法を示します。
 
@@ -757,7 +757,7 @@ SELECT ISNULL(CAST(@d*@f AS DECIMAL(7,2)),0) as result
 - ISNULL の 2 番目の部分は定数 (つまり、0) である
 
 > [!NOTE]
-> NULL 値の許容を正しく設定するには、`COALESCE` ではなく、`ISNULL` を使用することが重要です。 `COALESCE` は決定的関数ではないため、式の結果は常に NULL 許容になります。 `ISNULL` は異なります。 これは決定的です。 そのため、`ISNULL` 関数の 2 番目の部分が定数またはリテラルである場合、結果の値は NOT NULL になります。
+> NULL 値の許容を正しく設定するには、`ISNULL` ではなく、`COALESCE` を使用することが重要です。 `COALESCE` は決定的関数ではないため、式の結果は常に NULL 許容になります。 `ISNULL` は異なります。 これは決定的です。 そのため、`ISNULL` 関数の 2 番目の部分が定数またはリテラルである場合、結果の値は NOT NULL になります。
 
 このヒントは、計算の整合性を確保するために役立つだけではありません。 テーブルのパーティション切り替えにも重要になります。 以下のテーブルがファクトとして定義されているとします。
 

@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e9bd4cb0c2fff4259814f6e33a65777023a801fd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74412530"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>SQL Server Management Studio によるインメモリ OLTP のサポート
@@ -86,7 +86,7 @@ ms.locfileid: "74412530"
   
     -   **[オブジェクト エクスプローラー]** で、データベースを右クリックし、 **[プロパティ]** 、 **[全般]** ページの順にクリックします。 **[メモリ最適化オブジェクトに割り当てられたメモリ]** プロパティの値は、データベースのメモリ最適化オブジェクトに割り当てられたメモリを示します。 **[メモリ最適化オブジェクトに使用されるメモリ]** プロパティの値は、データベースのメモリ最適化オブジェクトに使用されるメモリを示します。  
   
-## <a name="supported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>でサポートされる機能 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+## <a name="supported-features-in-ssmanstudiofull"></a>でサポートされる機能 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、メモリ最適化データ ファイル グループ、メモリ最適化テーブル、インデックス、およびネイティブ コンパイル ストアド プロシージャを含むデータベースのデータベース エンジンによってサポートされる操作と機能をサポートしています。  
   
  データベース、テーブル、ストアド プロシージャ、ユーザー定義テーブル型、またはインデックス オブジェクトについては、インメモリ OLTP をサポートするために [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の次の機能が更新または拡張されています。  
@@ -152,7 +152,7 @@ ms.locfileid: "74412530"
   
 -   テンプレート エクスプローラー  
   
-## <a name="unsupported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>でサポートされない機能 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+## <a name="unsupported-features-in-ssmanstudiofull"></a>でサポートされない機能 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  インメモリ OLTP オブジェクトに対して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、データベース エンジンでもサポートされない機能と操作はサポートしていません。  
   
  サポートされていない [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能の詳細については、「 [インメモリ OLTP に対してサポートされていない SQL Server の機能](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)」を参照してください 。  

@@ -15,10 +15,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: eed8020872b3d2a3babc0581054bef0dbed64a4d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74055947"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>フルテキスト フィルター デーモン ランチャーのサービス アカウントの設定
@@ -31,7 +31,7 @@ SQL フルテキスト フィルター デーモン ランチャー サービス
   
 SQL フルテキスト フィルター デーモン ランチャー サービスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の特定のインスタンスに関連付けられているインスタンス対応のサービスです。 SQL フルテキスト フィルター デーモン ランチャー サービスにより、起動される各フィルター デーモン ホスト プロセスにサービス アカウント情報が反映されます。  
 
-##  <a name="setting"></a> サービス アカウントの設定  
+##  <a name="set-the-service-account"></a><a name="setting"></a> サービス アカウントの設定  
   
 1.  **[スタート]** メニューの **[すべてのプログラム]** をポイントし、[[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] を展開して、 **[SQL Server 2016 構成マネージャー]** をクリックします。  
   
@@ -43,7 +43,7 @@ SQL フルテキスト フィルター デーモン ランチャー サービス
   
 ![SQL フルテキスト フィルター デーモン ランチャー プロセスのプロパティ](../../relational-databases/search/media/sql-full-text-filter-daemon-launch-process-properties.png)
   
-##  <a name="error"></a> SQL フルテキスト フィルター デーモン ランチャー サービスが開始しない場合にトラブルシューティングする  
+##  <a name="troubleshoot-the-sql-full-text-filter-daemon-launcher-service-if-it-doesnt-start"></a><a name="error"></a> SQL フルテキスト フィルター デーモン ランチャー サービスが開始しない場合にトラブルシューティングする  
  SQL フルテキスト フィルター デーモン ランチャー サービスが開始しない場合は、次の原因が考えられます。  
   
 ### <a name="permissions-issues"></a>アクセス許可の問題

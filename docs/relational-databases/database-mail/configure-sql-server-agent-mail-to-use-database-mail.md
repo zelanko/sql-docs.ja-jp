@@ -14,10 +14,10 @@ ms.assetid: 4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d0692421ca7e63b419c99ecc835516af4cbd5af0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095774"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>データベース メールを使用するように SQL Server エージェント メールを構成する
@@ -34,12 +34,12 @@ ms.locfileid: "74095774"
   
 -   [フォロー アップ タスク](#Follow_Up)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
   > [!NOTE]
   > Managed Instance 上の SQL エージェントは常に、データベース メールを使用するように構成されます。そのため、このコンテンツはマネージド インスタンスには該当しません。 Managed Instance では、SQL エージェントとデータベース メールをバインドする目的でプロファイルを用意する必要があります。このプロファイルの名前は **[AzureManagedInstance_dbmail_profile](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)** という名前にする必要があります。 
   
-###  <a name="Prerequisites"></a> 前提条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
   
 -   [データベース メールを有効にします](../../relational-databases/database-mail/configure-database-mail.md)。  
   
@@ -49,12 +49,12 @@ ms.locfileid: "74095774"
   
 -   作成したプロファイルを **msdb** データベースの既定のプロファイルに設定します。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  プロファイル アカウントを作成し、ストアド プロシージャを実行するユーザーは、sysadmin 固定サーバー ロールのメンバーである必要があります。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  **データベース メールを使用するように SQL Server エージェントを構成するには**  
   
 -   オブジェクト エクスプローラーで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを展開します。  
@@ -71,7 +71,7 @@ ms.locfileid: "74095774"
   
 -   SQL Server エージェントを再起動します。  
   
-##  <a name="Follow_Up"></a> フォロー アップ タスク  
+##  <a name="follow-up-tasks"></a><a name="Follow_Up"></a> フォロー アップ タスク  
  警告および通知を送信できるようにエージェントを構成するには、次のタスクが必要となります。  
   
 -   [警告](../../ssms/agent/alerts.md)  

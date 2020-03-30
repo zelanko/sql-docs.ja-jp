@@ -22,10 +22,10 @@ ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 9b034e43f918a0f6c198c29cf2f6618ba38638f8
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288576"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>復元と復旧の概要 (SQL Server)
@@ -47,7 +47,7 @@ ms.locfileid: "79288576"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップと復元は、サポートされるすべてのオペレーティング システムで機能します。 サポートされているオペレーティング システムについては、「 [SQL Server 2016 のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)」を参照してください。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からのバックアップに対するサポートの情報については、「 [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)」の「互換性サポート」のセクションを参照してください。  
   
-##  <a name="RestoreScenariosOv"></a> 復元シナリオの概要  
+##  <a name="overview-of-restore-scenarios"></a><a name="RestoreScenariosOv"></a> 復元シナリオの概要  
  *の* 復元シナリオ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とは、1 つ以上のバックアップからデータを復元した後にデータベースを復旧するプロセスです。 サポートされている復元シナリオは、データベースの復旧モデルおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のエディションによって異なります。  
   
  次の表では、さまざまな復旧モデルでサポートされている復元シナリオについて説明しています。  
@@ -85,7 +85,7 @@ ms.locfileid: "79288576"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ファイルまたはページを復元する場合、復元操作中にデータベース内の他のデータをオンラインのままにすることができます。  
 
-## <a name="TlogAndRecovery"></a> 復旧とトランザクション ログ
+## <a name="recovery-and-the-transaction-log"></a><a name="TlogAndRecovery"></a> 復旧とトランザクション ログ
 ほとんどの復元シナリオでは、トランザクション ログ バックアップを適用し、オンラインにするデータベースのために [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] で**復旧プロセス**を実行できるようにする必要があります。 復旧とは、トランザクション的に一貫した (クリーンな) 状態で各データベースを開始させるために、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用されるプロセスです。
 
 フェールオーバーやその他のクリーンでないシャットダウンが発生した場合、データベースは一部の変更がバッファー キャッシュからデータ ファイルに書き込まれない状態になる場合があり、未完了のトランザクションによる変更がデータ ファイル内に存在している可能性もあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが開始されると、各データベースの復旧が実行されます。これは 3 つのフェーズで構成され、最後の[データベース チェックポイント](../../relational-databases/logs/database-checkpoints-sql-server.md)に基づいています。
@@ -105,7 +105,7 @@ ms.locfileid: "79288576"
 > [!NOTE]
 > エンタープライズ環境でデータベースの可用性を最大にするために、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition では、再実行フェーズの後に、元に戻すフェーズを実行したまま、データベースをオンラインにすることができます。 これは、高速復旧と呼ばれます。
 
-##  <a name="RMsAndSupportedRestoreOps"></a> 復旧モデルとサポートされる復元操作  
+##  <a name="recovery-models-and-supported-restore-operations"></a><a name="RMsAndSupportedRestoreOps"></a> 復旧モデルとサポートされる復元操作  
  データベースで使用できる復元操作は、そのデータベースの復旧モデルによって決まります。 次の表では、特定の復元シナリオごとに、各復旧モデルによりサポートされるかどうかと、どの程度までサポートされるかを示します。  
   
 |復元操作|完全復旧モデル|一括ログ復旧モデル|単純復旧モデル|  
@@ -123,7 +123,7 @@ ms.locfileid: "79288576"
 > [!IMPORTANT]  
 > データベースの復旧モデルにかかわらず、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップを、そのバックアップを作成したバージョンより古いバージョンの [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] に復元することはできません。  
   
-## <a name="RMsimpleScenarios"></a> 単純復旧モデルでの復元シナリオ  
+## <a name="restore-scenarios-under-the-simple-recovery-model"></a><a name="RMsimpleScenarios"></a> 単純復旧モデルでの復元シナリオ  
  単純復旧モデルの復元操作には次の制限があります。  
   
 -   ファイルの復元および段階的な部分復元は、読み取り専用のセカンダリ ファイル グループでのみ使用可能です。 これらの復元シナリオの詳細については、「[ファイルの復元 &#40;単純復旧モデル&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)」および「[段階的な部分復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)」を参照してください。  
@@ -137,7 +137,7 @@ ms.locfileid: "79288576"
 > [!IMPORTANT]  
 > データベースの復旧モデルにかかわらず、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップは、バックアップを作成したバージョンより古いバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では復元できません。  
   
-##  <a name="RMblogRestore"></a> 一括ログ復旧モデルを使用した復元  
+##  <a name="restore-under-the-bulk-logged-recovery-model"></a><a name="RMblogRestore"></a> 一括ログ復旧モデルを使用した復元  
  このセクションでは、一括ログ復旧モデルを使用した復元の考慮事項について説明します。一括ログ復旧モデルは、完全復旧モデルの補完のみを目的としたモデルです。  
   
 > [!NOTE]  
@@ -164,20 +164,20 @@ ms.locfileid: "79288576"
   
  オンライン復元の実行方法の詳細については、「[オンライン復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)」を参照してください。  
   
-##  <a name="DRA"></a> データベース復旧アドバイザー (SQL Server Management Studio)  
+##  <a name="database-recovery-advisor-sql-server-management-studio"></a><a name="DRA"></a> データベース復旧アドバイザー (SQL Server Management Studio)  
 データベース復旧アドバイザーにより、最適な復元シーケンスを実装する復元プランを容易に構築できるようになります。 お客様からご要望のあった、データベース復元に関するさまざまな既知の問題の解決や機能強化が実施されました。 データベース復旧アドバイザーによって導入された主な機能強化は次のとおりです。  
   
--   **復元プラン アルゴリズム:** 特に、複雑な復元シナリオの復元プランの構築に使用されるアルゴリズムが大幅に改善されました。 特定の時点への復元時の分岐シナリオなど、多数のエッジ ケースが以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]よりも効率的に処理されます。  
+-   **復元プラン アルゴリズム:**  特に、複雑な復元シナリオの復元プランの構築に使用されるアルゴリズムが大幅に改善されました。 特定の時点への復元時の分岐シナリオなど、多数のエッジ ケースが以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]よりも効率的に処理されます。  
   
--   **特定の時点への復元:** データベース復旧アドバイザーにより、特定の時点へのデータベースの復元が大幅に簡素化されます。 バックアップの視覚的タイムラインにより、特定の時点への復元のサポートが大幅に強化されています。 この視覚的タイムラインにより、データベースを復元する際の目的の復旧ポイントとして適切な時点を特定できます。 タイムラインにより、分岐した復旧パス (複数の復旧分岐にまたがるパス) をたどることが容易になります。 特定の時点への復元プランには、目的の時点 (日時) への復元に関連するバックアップが自動的に含まれます。 詳細については、「[SQL Server データベースを特定の時点に復元する &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)」を参照してください。  
+-   **特定の時点への復元:**  データベース復旧アドバイザーにより、特定の時点へのデータベースの復元が大幅に簡素化されます。 バックアップの視覚的タイムラインにより、特定の時点への復元のサポートが大幅に強化されています。 この視覚的タイムラインにより、データベースを復元する際の目的の復旧ポイントとして適切な時点を特定できます。 タイムラインにより、分岐した復旧パス (複数の復旧分岐にまたがるパス) をたどることが容易になります。 特定の時点への復元プランには、目的の時点 (日時) への復元に関連するバックアップが自動的に含まれます。 詳細については、「[SQL Server データベースを特定の時点に復元する &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)」を参照してください。  
   
 データベース復旧アドバイザーの詳細については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manageability の次のブログを参照してください。  
   
--   [復旧アドバイザー: 概要](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
+-   [Recovery Advisor: An Introduction](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
   
--   [復旧アドバイザー: SSMS を使用して分割バックアップを作成/復元する](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
+-   [Recovery Advisor: Using SSMS to create/restore split backups](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
 
-## <a name="adr"></a> 高速データベース復旧
+## <a name="accelerated-database-recovery"></a><a name="adr"></a> 高速データベース復旧
 [高速データベース復旧](/azure/sql-database/sql-database-accelerated-database-recovery/)は [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] で利用できます。 高速データベース復旧では、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の[復旧プロセス](#TlogAndRecovery)の再設計により、データベースの可用性が大幅に向上します (長時間トランザクションが存在する場合は特に)。 高速データベース復旧が有効にされたデータベースでは、フェールオーバーまたは他のクリーンではないシャットダウンの後の復旧プロセスが、非常に速く完了します。 高速データベース復旧を有効にした場合、取り消された長時間トランザクションのロールバックも非常に速く完了します。
 
 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] では、次の構文を使用して、データベースごとに高速データベース復旧を有効にできます。
@@ -189,7 +189,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = ON;
 > [!NOTE]
 > [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、高速データベース復旧が既定で有効になります。
 
-## <a name="RelatedContent"></a> 参照  
+## <a name="see-also"></a><a name="RelatedContent"></a> 参照  
  [バックアップの概要 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)      
  [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)     
  [SQL Server トランザクション ログのアーキテクチャと管理ガイド](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)     

@@ -16,10 +16,10 @@ ms.assetid: 33df3a3d-1f5c-429b-a3b9-52b7d8689089
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b625b23dc45a3a5ed9abc00f0068ed3e7fbfeb58
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297449"
 ---
 # <a name="operators-ssis-expression"></a>演算子 (SSIS 式)
@@ -31,7 +31,7 @@ ms.locfileid: "71297449"
   
  次の表に、演算子に関するこのセクションのトピックの一覧を示します。  
   
-|演算子|[説明]|  
+|演算子|説明|  
 |--------------|-----------------|  
 |[キャスト (SSIS 式)](../../integration-services/expressions/cast-ssis-expression.md)|式をあるデータ型から別のデータ型に変換します。|  
 |[() (括弧) (SSIS 式)](../../integration-services/expressions/parentheses-ssis-expression.md)|式の評価順序を特定します。|  

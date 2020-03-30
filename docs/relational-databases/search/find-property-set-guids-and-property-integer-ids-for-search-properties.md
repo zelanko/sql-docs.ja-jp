@@ -15,10 +15,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 3b950557c3c5c22968cffa4be0b4565ddedb293c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056517"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>検索プロパティのプロパティ セット GUID およびプロパティ整数 ID の取得
@@ -37,10 +37,10 @@ ms.locfileid: "74056517"
   
  このトピックでは、使用可能なプロパティ (特にマイクロソフトによって定義されているプロパティ) に関する情報を取得するための一般的な方法について説明します。 サード パーティによって定義されているプロパティについては、サード パーティのドキュメントを参照するか、ベンダーに問い合わせてください。  
   
-##  <a name="wellknown"></a> 広く使用され、知られている Microsoft プロパティについての情報の入手  
+##  <a name="finding-information-about-widely-used-well-known-microsoft-properties"></a><a name="wellknown"></a> 広く使用され、知られている Microsoft プロパティについての情報の入手  
  マイクロソフトでは、さまざまなコンテキストで使用できる何百ものドキュメント プロパティを定義していますが、それぞれのファイル形式で使用できるプロパティはごくわずかです。 頻繁に使用される Windows プロパティの中に、少数の汎用プロパティがあります。 よく知られている汎用プロパティの一部の例を次の表に示します。 この表では、よく知られている名前、Windows の正規名 (マイクロソフトが公開するプロパティの説明で使用)、プロパティ セット GUID、プロパティ整数識別子、および簡単な説明を示します。  
   
-|よく知られている名前|Windows の正規名|プロパティ セット GUID|整数 ID|[説明]|  
+|よく知られている名前|Windows の正規名|プロパティ セット GUID|整数 ID|説明|  
 |----------------------|----------------------------|-----------------------|----------------|-----------------|  
 |Authors|**System.Author**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|4|特定のアイテムの作成者。|  
 |Tags|**System.Keywords**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|アイテムに割り当てられる一連のキーワード (タグとも呼ばれます)。|  
@@ -57,7 +57,7 @@ ms.locfileid: "74056517"
   
 -   ソフトウェア ベンダーによって定義された、アプリケーション固有のカスタム プロパティ  
   
-##  <a name="filtdump"></a> FILTDUMP.EXE による使用可能なプロパティについての情報の取得  
+##  <a name="finding-information-about-available-properties-by-using-filtdumpexe"></a><a name="filtdump"></a> FILTDUMP.EXE による使用可能なプロパティについての情報の取得  
  インストールされた IFilter で検出および抽出されるプロパティを調べるには、 **Windows SDK に含まれている** filtdump.exe [!INCLUDE[msCoName](../../includes/msconame-md.md)] ユーティリティをインストールして実行してください。  
   
  **filtdump.exe** はコマンド プロンプトから実行し、1 つの引数を指定します。 この引数は、インストールした IFilter が対象とする種類のファイルの個別の名前です。 このユーティリティは、IFilter で検出された、ドキュメント内のすべてのプロパティと、そのプロパティ セット GUID、整数 ID、および追加情報の一覧を表示します。  
@@ -68,7 +68,7 @@ ms.locfileid: "74056517"
   
 -   32 ビット バージョンの場合は、 `C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin`にあります。  
   
-##  <a name="propdesc"></a> Windows プロパティの説明からの検索プロパティの値の入手  
+##  <a name="finding-values-for-a-search-property-from-a-windows-property-description"></a><a name="propdesc"></a> Windows プロパティの説明からの検索プロパティの値の入手  
  よく知られた Windows 検索プロパティについては、プロパティの説明 ( **propertyDescription** ) の **formatID** 属性および**propID**属性から必要な情報を入手できます。  
   
  次の例では、一般的なマイクロソフト プロパティの関連する部分 (この例では、 `System.Author` ) を示します。 `formatID` 属性はプロパティ セット GUID の `F29F85E0-4FF9-1068-AB91-08002B27B3D9`を指定し、 `propID` 属性は、プロパティの整数 ID `4.` を指定します。 `name` 属性は、Windows の正規のプロパティ名である `System.Author`を示すことに注意してください (この例では、関係のない列プロパティ説明部分を省略しています)。  
@@ -87,7 +87,7 @@ propID = 4
   
  Windows プロパティの完全な一覧については、Windows サーチに関するドキュメントの「 [Windows プロパティ](https://go.microsoft.com/fwlink/?LinkId=215013)」を参照してください。  
   
-##  <a name="examples"></a> 検索プロパティ リストへのプロパティの追加  
+##  <a name="adding-a-property-to-a-search-property-list"></a><a name="examples"></a> 検索プロパティ リストへのプロパティの追加  
  次の例では、プロパティを検索プロパティ リストに追加する方法を示します。 この例では、 [ALTER SEARCH PROPERTY LIST](../../t-sql/statements/alter-search-property-list-transact-sql.md) ステートメントを使用して、 `System.Author` プロパティを `PropertyList1`という名前の検索プロパティ リストに追加し、 `Author`という表示名を指定します。  
   
 ```  

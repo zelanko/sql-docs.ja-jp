@@ -23,10 +23,10 @@ ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 8cb409823bad1370c38b6dc99f04c7e49d58796a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73982406"
 ---
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF (Transact-SQL)
@@ -76,7 +76,7 @@ WITH NO_INFOMSGS
 |**ログの使用済み領域 (%)**|現在トランザクション ログ情報の保存に使用されているログ ファイルのパーセンテージ。|  
 |**状態**|ログ ファイルの状態。 常に 0 です。|  
   
-## <a name="Remarks"></a> 解説  
+## <a name="remarks"></a><a name="Remarks"></a> 解説  
 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、データベース別のトランザクション ログの容量利用情報を返すには、[ の代わりに ](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)sys.dm_db_log_space_usage`DBCC SQLPERF(LOGSPACE)` DMV を使用します。    
  
 トランザクション ログには、データベースで実行された各トランザクションが記録されます。 詳細については、「[トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)」と「[SQL Server トランザクション ログのアーキテクチャと管理ガイド](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)」を参照してください。

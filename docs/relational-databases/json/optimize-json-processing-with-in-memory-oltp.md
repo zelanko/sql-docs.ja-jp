@@ -11,10 +11,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a2b02d5b987958abc8dd97e48f86e7b44636efad
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74096078"
 ---
 # <a name="optimize-json-processing-with-in-memory-oltp"></a>インメモリ OLTP を使用した JSON の処理の最適化
@@ -46,7 +46,7 @@ SQL Server と Azure SQL Database の機能を使用すると、既存のイン�
  - メモリ最適化インデックスを使用して JSON ドキュメントの[値にインデックスを作成](#index)できます。
  - JSON ドキュメントの値を使用する [SQL クエリをネイティブでコンパイル](#compile)したり、結果を JSON テキストとして書式設定したりできます。
 
-## <a name="validate"></a> JSON の列の検証
+## <a name="validate-json-columns"></a><a name="validate"></a> JSON の列の検証
 SQL Server と Azure SQL Database では、文字列の列に格納された JSON ドキュメントの内容を検証するネイティブ コンパイルの CHECK 制約を追加できます。 ネイティブ コンパイルされた JSON の CHECK 制約では、メモリ最適化テーブルに格納されている JSON テキストの書式が正しいことを保証します。
 
 次の例では、JSON 列 `Product` を含む `Tags` テーブルを作成します。 `Tags` 列には、`ISJSON` 関数を使用して列の JSON テキストを検証する、CHECK 制約が設定されています。
@@ -75,7 +75,7 @@ ALTER TABLE xtp.Product
         CHECK (ISJSON(Data)=1)
 ```
 
-## <a name="computedcol"></a> 計算列を使用した JSON 値の公開
+## <a name="expose-json-values-using-computed-columns"></a><a name="computedcol"></a> 計算列を使用した JSON 値の公開
 計算列では、JSON テキストの値が公開されます。JSON テキストから値を再度取得したり、JSON の構造を再度解析したりすることなくそれらの値にアクセスできます。 このようにして公開される値の型は厳密に指定され、計算列に物理的に保存されます。 保存される計算列を使用した JSON 値へのアクセスは、JSON ドキュメント内の値に直接アクセスするよりも高速です。
 
 次の例では、JSON の `Data` 列から次の 2 つの値を公開する方法を示します。
@@ -100,7 +100,7 @@ CREATE TABLE xtp.Product(
 ) WITH (MEMORY_OPTIMIZED=ON);
 ```
 
-## <a name="index"></a> JSON の列のインデックス値
+## <a name="index-values-in-json-columns"></a><a name="index"></a> JSON の列のインデックス値
 SQL Server と Azure SQL Database では、メモリ最適化インデックスを使用して JSON の列の値にインデックスを作成できます。 インデックスが作成されている JSON 値は、次の例のように、計算列を使用して公開され、型が厳密に指定されている必要があります。
 
 JSON の列の値には、標準の非クラスター化インデックスとハッシュ インデックスの両方を使用してインデックスを作成できます。
@@ -131,7 +131,7 @@ ALTER TABLE Product
         WITH (BUCKET_COUNT=20000)
 ```
 
-## <a name="compile"></a> JSON クエリのネイティブ コンパイル
+## <a name="native-compilation-of-json-queries"></a><a name="compile"></a> JSON クエリのネイティブ コンパイル
 プロシージャ、関数、およびトリガーに組み込み JSON 関数を使用するクエリが含まれている場合は、ネイティブ コンパイルによって、それらのクエリのパフォーマンスが向上し、クエリの実行に必要な CPU サイクルが減少します。
 
 次に、いくつかの JSON 関数 (**JSON_VALUE**、**OPENJSON**、**JSON_MODIFY**) を使用するネイティブ コンパイル プロシージャの例を示します。

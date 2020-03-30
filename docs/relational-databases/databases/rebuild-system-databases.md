@@ -16,10 +16,10 @@ ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e31a24a949968e3d17b50c32b42e92cdd0997483
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76516553"
 ---
 # <a name="rebuild-system-databases"></a>システム データベースの再構築
@@ -46,12 +46,12 @@ ms.locfileid: "76516553"
   
      [再構築エラーのトラブルシューティング](#Troubleshoot)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
  master、model、msdb、および tempdb の各システム データベースを再構築する場合は、元の場所からデータベースを削除して再作成する必要があります。 再構築ステートメントに新しい照合順序を指定する場合は、その照合順序の設定でシステム データベースが作成されます。 これらのデータベースに対するユーザーの変更はすべて失われます。 たとえば、master データベースのユーザー定義オブジェクト、msdb にスケジュールされたジョブ、または model データベースの既定のデータベース設定に対する変更が対象になります。  
   
-###  <a name="Prerequisites"></a> 前提条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
  システム データベースを再構築する前に次の作業を行い、システム データベースを現在の設定に復元できるようにしておいてください。  
   
 1.  サーバー全体のすべての構成値を記録します。  
@@ -87,7 +87,7 @@ ms.locfileid: "76516553"
   
 7.  master、model、msdb のデータおよびログのテンプレート ファイルのコピーがローカル サーバーに存在することを確認します。 テンプレート ファイルの既定の場所は、C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Templates です。 これらのファイルは再構築プロセスで使用され、セットアップを成功させるにはこれらのファイルが存在する必要があります。 これらのファイルがない場合は、セットアップの修復機能を実行するか、インストール メディアからファイルを手動でコピーします。 インストール メディアのファイルを探すには、適切なプラットフォーム ディレクトリ (x86 または x64) に移動し、次に setup\sql_engine_core_inst_msi\Pfiles\SqlServr\MSSQL.X\MSSQL\Binn\Templates に移動します。  
   
-##  <a name="RebuildProcedure"></a> システム データベースの再構築  
+##  <a name="rebuild-system-databases"></a><a name="RebuildProcedure"></a> システム データベースの再構築  
  次の手順では、master、model、msdb、および tempdb の各システム データベースを再構築します。 再構築するシステム データベースを指定することはできません。 クラスター化されたインスタンスの場合、この手順はアクティブ ノードで実行する必要があります。また、手順を実行する前に、対応するクラスター アプリケーション グループ内の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースをオフラインにしておく必要があります。  
   
  この手順では resource データベースが再構築されません。 このトピックで後述する「resource データベースの再構築手順」セクションを参照してください。  
@@ -108,13 +108,13 @@ ms.locfileid: "76516553"
     |/SQLSYSADMINACCOUNTS=*accounts*|**sysadmin** 固定サーバー ロールに追加する Windows グループまたは個々のアカウントを指定します。 複数のアカウントを指定する場合、各アカウントを空白で区切ります。 たとえば、「 **BUILTIN\Administrators MyDomain\MyUser**」と入力します。 アカウント名に空白を含むアカウントを指定する場合は、アカウントを二重引用符で囲みます。 たとえば、「 **NT AUTHORITY\SYSTEM**」と入力します。|  
     |[ /SAPWD=*StrongPassword* ]|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sa** アカウントのパスワードを指定します。 このパラメーターは、インスタンスが混合モード認証 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および Windows 認証) を使用する場合に必要になります。<br /><br /> **&#42;&#42; セキュリティ メモ &#42;&#42;** **sa** アカウントは、よく知られた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アカウントで、悪意のあるユーザーの攻撃対象となることが少なくありません。 **sa** ログインには、複雑なパスワードを使用することが非常に重要です。<br /><br /> Windows 認証モードにはこのパラメーターを指定しないでください。|  
     |[ /SQLCOLLATION=*CollationName* ]|新しいサーバー レベルの照合順序を指定します。 このパラメーターは省略可能です。 これを指定しない場合は、サーバーの現在の照合順序が使用されます。<br /><br /> **\*\* 重要 \*\*** サーバー レベルの照合順序を変更しても、既存のユーザー データベースの照合順序は変更されません。 新しく作成されたすべてのユーザー データベースには、既定で新しい照合順序が使用されます。<br /><br /> 詳細については、「 [サーバーの照合順序の設定または変更](../../relational-databases/collations/set-or-change-the-server-collation.md)」を参照してください。|  
-    |[ /SQLTEMPDBFILECOUNT=NumberOfFiles ]|tempdb データ ファイルの数を設定します。 この値は 8 またはコアの数の、どちらか大きい方まで増やすことができます。<br /><br /> 既定値:8 またはコアの数のうち、小さい方の値。|  
-    |[ /SQLTEMPDBFILESIZE=FileSizeInMB ]|各 tempdb データ ファイルの初期サイズを MB 単位で指定します。 最大 1024 MB まで指定できます。<br /><br /> 既定値:8|  
-    |[ /SQLTEMPDBFILEGROWTH=FileSizeInMB ]|各 tempdb データ ファイルのファイル拡張増分値を MB 単位で指定します。 0 は、自動拡張がオフで、領域を追加できないことを示します。 最大 1024 MB まで指定できます。<br /><br /> 既定値:64|  
-    |[ /SQLTEMPDBLOGFILESIZE=FileSizeInMB ]|tempdb ログ ファイルの初期サイズを MB 単位で指定します。 最大 1024 MB まで指定できます。<br /><br /> 既定値:8.<br /><br /> 許容範囲: 最小値 = 8、最大値 = 1024 です。|  
-    |[ /SQLTEMPDBLOGFILEGROWTH=FileSizeInMB ]|tempdb ログ ファイルのファイル拡張増分値を MB 単位で指定します。 0 は、自動拡張がオフで、領域を追加できないことを示します。 最大 1024 MB まで指定できます。<br /><br /> 既定値:64<br /><br /> 許容範囲: 最小値 = 8、最大値 = 1024 です。|  
-    |[ /SQLTEMPDBDIR=Directories ]|tempdb データ ファイルのディレクトリを指定します。 複数のディレクトリを指定する場合、各ディレクトリを空白で区切ります。 複数のディレクトリが指定されている場合、tempdb データ ファイルはラウンド ロビン形式ですべてのディレクトリにまたがるようになります。<br /><br /> 既定値:システム データ ディレクトリ|  
-    |[ /SQLTEMPDBLOGDIR=Directory ]|tempdb のログ ファイルのディレクトリを指定します。<br /><br /> 既定値:システム データ ディレクトリ|  
+    |[ /SQLTEMPDBFILECOUNT=NumberOfFiles ]|tempdb データ ファイルの数を設定します。 この値は 8 またはコアの数の、どちらか大きい方まで増やすことができます。<br /><br /> 既定値: 8 またはコアの数のうち、小さい方の値|  
+    |[ /SQLTEMPDBFILESIZE=FileSizeInMB ]|各 tempdb データ ファイルの初期サイズを MB 単位で指定します。 最大 1024 MB まで指定できます。<br /><br /> 既定値: 8|  
+    |[ /SQLTEMPDBFILEGROWTH=FileSizeInMB ]|各 tempdb データ ファイルのファイル拡張増分値を MB 単位で指定します。 0 は、自動拡張がオフで、領域を追加できないことを示します。 最大 1024 MB まで指定できます。<br /><br /> 既定値：64|  
+    |[ /SQLTEMPDBLOGFILESIZE=FileSizeInMB ]|tempdb ログ ファイルの初期サイズを MB 単位で指定します。 最大 1024 MB まで指定できます。<br /><br /> 既定値: 8<br /><br /> 許容範囲: 最小値 = 8、最大値 = 1024|  
+    |[ /SQLTEMPDBLOGFILEGROWTH=FileSizeInMB ]|tempdb ログ ファイルのファイル拡張増分値を MB 単位で指定します。 0 は、自動拡張がオフで、領域を追加できないことを示します。 最大 1024 MB まで指定できます。<br /><br /> 既定値：64<br /><br /> 許容範囲: 最小値 = 8、最大値 = 1024|  
+    |[ /SQLTEMPDBDIR=Directories ]|tempdb データ ファイルのディレクトリを指定します。 複数のディレクトリを指定する場合、各ディレクトリを空白で区切ります。 複数のディレクトリが指定されている場合、tempdb データ ファイルはラウンド ロビン形式ですべてのディレクトリにまたがるようになります。<br /><br /> 既定値: システム データ ディレクトリ|  
+    |[ /SQLTEMPDBLOGDIR=Directory ]|tempdb のログ ファイルのディレクトリを指定します。<br /><br /> 既定値: システム データ ディレクトリ|  
   
 3.  セットアップによりシステム データベースの再構築が完了すると、メッセージが表示されることなく、コマンド プロンプトに戻ります。 Summary.txt ログ ファイルを調査し、プロセスが正常に完了したことを確認します。 このファイルは C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Logs にあります。  
   
@@ -139,7 +139,7 @@ ms.locfileid: "76516553"
   
 -   サーバー全体の構成値が記録した以前の値と一致することを確認します。  
   
-##  <a name="Resource"></a> resource データベースの再構築  
+##  <a name="rebuild-the-resource-database"></a><a name="Resource"></a> resource データベースの再構築  
  次の手順では、resource システム データベースを再構築します。 resource システム データベースを再構築する場合は、すべての修正プログラムが失われるため、再適用する必要があります。  
   
 #### <a name="to-rebuild-the-resource-system-database"></a>resource システム データベースを再構築するには  
@@ -156,7 +156,7 @@ ms.locfileid: "76516553"
   
 6.  **[修復の準備完了]** ページで **[修復]** をクリックします。 [完了] ページでは、操作が完了したことが示されます。  
   
-##  <a name="CreateMSDB"></a> 新しい msdb データベースの作成  
+##  <a name="create-a-new-msdb-database"></a><a name="CreateMSDB"></a> 新しい msdb データベースの作成  
  **msdb** データベースが破損した場合に、 **msdb** データベースのバックアップがなければ、 **instmsdb** スクリプトを使用して新しい **msdb** データベースを作成することができます。  
   
 > [!WARNING]  
@@ -168,7 +168,7 @@ ms.locfileid: "76516553"
   
      詳細については、「 [データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md) 」を参照してください。  
   
-3.  別のコマンド ライン ウィンドウで、**msdb** データベースをデタッチします。これには、`SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"` というコマンドを実行します ( *\<servername>* は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに置き換えます)。  
+3.  別のコマンド ライン ウィンドウで、**msdb** データベースをデタッチします。これには、 *というコマンドを実行します (\<* servername>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は `SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"` のインスタンスに置き換えます)。  
   
 4.  Windows エクスプローラーを使用して、 **msdb** データベースの各ファイルの名前を変更します。 これらのファイルは、既定で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの DATA サブフォルダーにあります。  
   
@@ -186,7 +186,7 @@ ms.locfileid: "76516553"
   
 10. **msdb** データベースをバックアップします。  
   
-##  <a name="Troubleshoot"></a> 再構築エラーのトラブルシューティング  
+##  <a name="troubleshoot-rebuild-errors"></a><a name="Troubleshoot"></a> 再構築エラーのトラブルシューティング  
  コマンド プロンプト ウィンドウには、構文エラーおよびその他の実行時エラーが表示されます。 セットアップ ステートメントに次の構文エラーがないか調査してください。  
   
 -   パラメーター名の前のスラッシュ記号 (/) の欠如。  

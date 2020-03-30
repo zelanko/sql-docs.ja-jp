@@ -11,10 +11,10 @@ ms.assetid: fe3cbaf4-65f4-44c5-acc6-7b735cda0c5d
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: f963d8d7fe186d889856c108de1541110beb16a3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74165510"
 ---
 # <a name="sql-server-xtp-in-memory-oltp-performance-counters"></a>SQL Server XTP (インメモリ OLTP) パフォーマンス カウンター
@@ -28,10 +28,10 @@ ms.locfileid: "74165510"
   
  *\<version>* の値は、2016 のようになります。  
   
-##  <a name="SQLServerPOs"></a> SQL Server XTP パフォーマンス オブジェクト  
+##  <a name="sql-server-xtp-performance-objects"></a><a name="SQLServerPOs"></a> SQL Server XTP パフォーマンス オブジェクト  
  次の表では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パフォーマンス オブジェクトについて説明します。  
   
-|パフォーマンス オブジェクト|[説明]|  
+|パフォーマンス オブジェクト|説明|  
 |------------------------|-----------------|  
 |[SQL Server の XTP Cursors](../../relational-databases/performance-monitor/sql-server-xtp-cursors.md)|SQL Server XTP Cursors パフォーマンス オブジェクトには、インメモリ OLTP エンジンの内部カーソルに関連するカウンターが含まれています。 カーソルとは、インメモリ OLTP エンジンが [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを処理するために使用する、低レベルの構成要素です。 このため、通常はユーザー側でカーソルを直接管理することはありません。|  
 |[SQL Server XTP Databases](../../relational-databases/performance-monitor/sql-server-xtp-databases.md)|SQL Server XTP Databases パフォーマンス オブジェクトは、インメモリ OLTP データベース固有のカウンターを提供します。|  

@@ -30,16 +30,16 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: efc249be2368973bcd1f3a4692ed280c1a131ec6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68344600"
 ---
 # <a name="principals-database-engine"></a>プリンシパル (データベース エンジン)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  *プリンシパル* は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リソースを要求できるエンティティです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の承認モデルの他のコンポーネントと同様に、プリンシパルは階層内に配置できます。 プリンシパルの効力のスコープは、プリンシパルの定義のスコープ (Windows、サーバー、データベース) と、プリンシパルが分割不可能かコレクションであるかによって異なります。 分割できないプリンシパルの例には Windows ログインがあり、コレクションであるプリンシパルの例には Windows グループがあります。 各プリンシパルには、1 つのセキュリティ識別子 (SID) があります。 このトピックは、すべてのバージョンの SQL Server に適用されますが、SQL データベースまたは SQL データ ウェアハウスではサーバー レベルのプリンシパルでいくつかの制約があります。 
+  *プリンシパル* は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リソースを要求できるエンティティです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の承認モデルの他のコンポーネントと同様に、プリンシパルは階層内に配置できます。 プリンシパルの効力のスコープは、プリンシパルの定義のスコープ (Windows、サーバー、データベース) と、プリンシパルが分割できないアイテムであるかコレクションであるかによって異なります。 分割できないプリンシパルの例には Windows ログインがあり、コレクションであるプリンシパルの例には Windows グループがあります。 各プリンシパルには、1 つのセキュリティ識別子 (SID) があります。 このトピックは、すべてのバージョンの SQL Server に適用されますが、SQL データベースまたは SQL データ ウェアハウスではサーバー レベルのプリンシパルでいくつかの制約があります。 
   
 ## <a name="sql-server-level-principals"></a>SQL Server レベルのプリンシパル  
   
@@ -84,7 +84,7 @@ ms.locfileid: "68344600"
  これらのプリンシパル アカウントのパスワードは、Microsoft に発行された証明書に基づくので、管理者は変更できません。
   
 ## <a name="the-guest-user"></a>guest ユーザー  
- 各データベースには、 `guest`の動作から変更されています。 データベースにはアクセスできるが、データベース内のユーザー アカウントは持っていないユーザーは、 `guest` ユーザーに許可された権限を継承します。 `guest` ユーザーを削除することはできませんが、 CONNECT 権限を取り消すことで無効にすることはできます。 CONNECT 権限を取り消すには、`master` または `tempdb` 以外のデータベース内で `REVOKE CONNECT FROM GUEST;` を実行します。  
+ 各データベースには、 `guest`の動作から変更されています。 データベースにはアクセスできるが、データベース内のユーザー アカウントは持っていないユーザーは、 `guest` ユーザーに許可された権限を継承します。 `guest` ユーザーを削除することはできませんが、 CONNECT 権限を取り消すことで無効にすることはできます。 CONNECT 権限を取り消すには、`REVOKE CONNECT FROM GUEST;` または `master` 以外のデータベース内で `tempdb` を実行します。  
   
   
 ## <a name="related-tasks"></a>Related Tasks  

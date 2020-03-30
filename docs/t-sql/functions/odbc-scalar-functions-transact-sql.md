@@ -53,10 +53,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5fd8173f0c29855fc4553dedcd9ac47ddc909f57
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76909832"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>ODBC スカラー関数 (Transact-SQL)
@@ -72,7 +72,7 @@ ms.locfileid: "76909832"
   
 ### <a name="string-functions"></a>文字列関数  
   
-|Function|[説明]|  
+|Function|説明|  
 |--------------|-----------------|  
 |BIT_LENGTH(string_exp) (ODBC 3.0)|文字列式の長さ (ビット単位) を返します。<br /><br /> string_exp を文字列に変換せず、指定されたデータ型の内部サイズを返します。|  
 |CONCAT(string_exp1,string_exp2) (ODBC 1.0)|string_exp1 に対して string_exp2 を連結した結果の文字列を返します。 結果の文字列は DBMS に依存します。 たとえば、string_exp1 に指定された列に NULL 値が格納されていた場合、DB2 では NULL が返されますが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では非 NULL 文字列が返されます。|  
@@ -80,13 +80,13 @@ ms.locfileid: "76909832"
   
 ### <a name="numeric-function"></a>数値関数  
   
-|Function|[説明]|  
+|Function|説明|  
 |--------------|-----------------|  
 |TRUNCATE( numeric_exp, integer_exp) (ODBC 2.0)|numeric_exp を、小数点の右側の integer_exp 桁までに切り詰めて返します。 integer_exp が負数の場合、numeric_exp は、小数点の左側 &#124;integer_exp&#124; 桁に切り詰められます。|  
   
 ### <a name="time-date-and-interval-functions"></a>時刻、日付、および間隔を扱う関数  
   
-|Function|[説明]|  
+|Function|説明|  
 |--------------|-----------------|  
 |CURRENT_DATE( ) (ODBC 3.0)|現在の日付を返します。|  
 |CURDATE( ) (ODBC 3.0)|現在の日付を返します。|  
@@ -177,7 +177,7 @@ SELECT {fn WEEK( @date_exp )};
 -- Returns 16  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-an-odbc-function-in-a-stored-procedure"></a>D. ODBC 関数をストアド プロシージャで使用する  
  次の例では、ストアド プロシージャで、ODBC 関数を使用します。  

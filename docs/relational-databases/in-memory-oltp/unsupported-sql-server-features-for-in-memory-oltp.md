@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8464f56274308694ada9e5721ae8e0ceb5ed85ed
-ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/22/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77558322"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>インメモリ OLTP に対してサポートされていない SQL Server の機能
@@ -84,7 +84,7 @@ ms.locfileid: "77558322"
 
 SQL Server の新しいリリースでは、以前はサポートされていなかった機能のサポートが追加される場合があります。 このセクションでは、以前はインメモリ OLTP でサポートされておらず、後にインメモリ OLTP でサポートされるようになった機能の一覧を示します。
 
-次の表で、`(15.x)` などの "_バージョン_" の値は、Transact-SQL ステートメント `SELECT @@Version;` から返される値を指します。
+次の表で、 _などの "_ バージョン`(15.x)`" の値は、Transact-SQL ステートメント `SELECT @@Version;` から返される値を指します。
 
 | 機能名 | SQL Server のバージョン | 説明 |
 | :----------- | :-------------------- | :------- |

@@ -22,10 +22,10 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 842a6519c1493162d06c853f11a9494d8dc3ca5b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74190118"
 ---
 # <a name="deploy-a-data-tier-application"></a>データ層アプリケーションの配置
@@ -114,7 +114,7 @@ ms.locfileid: "74190118"
   
  **[ログ ファイルのパスと名前]** : ログ ファイルの完全パスとファイル名を指定します。 このボックスには、既定のパスとファイル名が表示されます。 ボックス内の文字列を編集して既定値を変更するか、 **[参照]** をクリックしてログ ファイルを配置するフォルダーに移動してください。  
   
-###  <a name="Summary"></a> [概要] ページ  
+###  <a name="summary-page"></a><a name="Summary"></a> [概要] ページ  
  このページでは、DAC の配置時にウィザードが行うアクションを確認します。  
   
  **[次の設定を使用して DAC を配置します。]** : 表示された情報を確認し、実行されるアクションが正しいかどうかを確認します。 このウィンドウには、選択した DAC パッケージと、配置される DAC インスタンス用に選択した名前が表示されます。 また、DAC に関連付けられたデータベースを作成する際に使用される設定も表示されます。  

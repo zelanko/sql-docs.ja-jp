@@ -17,10 +17,10 @@ ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 62d90931cdc1d7748f47edabb31e5f9404b1262d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72916198"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>トランザクション ログ バックアップの適用 (SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "72916198"
   
  このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの復元の一環として行う、トランザクション ログ バックアップの適用について説明します。  
  
-##  <a name="Requirements"></a> トランザクション ログ バックアップを復元するための要件  
+##  <a name="requirements-for-restoring-transaction-log-backups"></a><a name="Requirements"></a> トランザクション ログ バックアップを復元するための要件  
  トランザクション ログ バックアップを適用するには、次の要件を満たしている必要があります。  
   
 -   **復元シーケンスに必要なログ バックアップの保持:** 復元シーケンスを完了できるだけのログ レコードがバックアップされている必要があります。 復元シーケンスを開始する前に、必要なログ バックアップ (必要な場合は [ログ末尾のバックアップ](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) も含む) が用意されている必要があります。  
@@ -41,7 +41,7 @@ ms.locfileid: "72916198"
     > [!TIP]
     > ベスト プラクティスとして、すべてのログ バックアップを復元することをお勧めします (`RESTORE LOG *database_name* WITH NORECOVERY`)。 次に、最後のログ バックアップを復元した後、別の操作でデータベースを復旧します (`RESTORE DATABASE *database_name* WITH RECOVERY`)。  
   
-##  <a name="RecoveryAndTlogs"></a> 復旧とトランザクション ログ  
+##  <a name="recovery-and-transaction-logs"></a><a name="RecoveryAndTlogs"></a> 復旧とトランザクション ログ  
  復元操作を完了してデータベースを復旧すると、データベースの整合性を確保するために、復旧プロセスが実行されます。 復旧プロセスの詳細については、「[復元と復旧の概要 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)」を参照してください。
  
  復旧プロセスが完了すると、データベースはオンラインになり、そのデータベースにそれ以上のトランザクション ログ バックアップを適用できなくなります。 たとえば、一連のトランザクション ログ バックアップに、実行時間が長いトランザクションが含まれているとします。 トランザクションの開始は最初のトランザクション ログ バックアップに記録されていますが、トランザクションの終了は 2 番目のトランザクション ログ バックアップに記録されています。 最初のトランザクション ログ バックアップには、コミットやロールバック操作は記録されていません。 最初のトランザクション ログ バックアップが適用されたときに復旧操作を実行すると、実行時間が長いトランザクションは不完全だと見なされ、そのトランザクションに関して最初のトランザクション ログ バックアップに記録されたデータ変更がロールバックされます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、この時点より後で 2 番目のトランザクション ログ バックアップを適用することはできません。  
@@ -49,7 +49,7 @@ ms.locfileid: "72916198"
 > [!NOTE]
 > 状況によっては、ログの復元中にファイルを明示的に追加できます。  
   
-##  <a name="PITrestore"></a> ログ バックアップを使用し、障害発生時まで復元する  
+##  <a name="use-log-backups-to-restore-to-the-failure-point"></a><a name="PITrestore"></a> ログ バックアップを使用し、障害発生時まで復元する  
  次のような一連のイベントが発生したとします。  
   
 |Time|Event|  
@@ -83,7 +83,7 @@ ms.locfileid: "72916198"
   
 > 場合によっては、トランザクション ログを使用して特定の時点までデータベースを復元することもできます。 詳細については、「 [SQL Server データベースを特定の時点に復元する方法 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)」を参照してください。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
  **トランザクション ログのバックアップを適用するには**  
   
 -   [トランザクション ログ バックアップの復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  

@@ -1,5 +1,5 @@
 ---
-title: チュートリアル:SSIS パッケージを SQL ビューとして公開する | Microsoft Docs
+title: 'チュートリアル: SSIS パッケージを SQL ビューとして公開する | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,14 +12,14 @@ f1_keywords:
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 263f398e0c14c1b056185722a0662e031c9d7472
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 52c4f92994068e0c5de8afd7233bd53c1244e38d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71297737"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216899"
 ---
-# <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>チュートリアル:SQL ビューとして SSIS パッケージを公開する
+# <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>チュートリアル: SSIS パッケージを SQL ビューとして公開する
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -33,7 +33,7 @@ ms.locfileid: "71297737"
   
 2.  [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md)  
   
-## <a name="step-1-build-and-deploy-ssis-project-to-the-ssis-catalog"></a>手順 1:SSIS プロジェクトを構築して SSIS カタログに配置する  
+## <a name="step-1-build-and-deploy-ssis-project-to-the-ssis-catalog"></a>手順 1: SSIS プロジェクトを構築して SSIS カタログに配置する  
  この手順では、SSIS 対応データ ソース ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを使用します) からデータを抽出し、そのデータを Data Streaming Destination コンポーネントを使用して出力する SSIS パッケージを作成します。 その後、SSIS プロジェクトを構築して SSIS カタログに配置します。  
   
 1.  **SQL Server Data Tools**を起動します。 **[スタート]** メニューで、 **[すべてのプログラム]** 、 **[Microsoft SQL Server]** の順にポイントし、 **[SQL Server Data Tools]** をクリックします。  
@@ -58,7 +58,7 @@ ms.locfileid: "71297737"
   
 5.  **ソース コンポーネント** を、ツールボックスから **データ フロー デザイナー** にドラッグし、データ ソースからデータを抽出するように構成します。  
   
-    1.  このチュートリアルを実行するために、次のものを作成します。テスト データベース: **TestDB**、テーブル: **Employee**。 **ID**、 **FirstName** 、 **LastName**という 3 つの列があるテーブルを作成します。  
+    1.  このチュートリアルを実行するために、 **Employee** テーブルがあるテスト データベース **TestDB**を作成します。 **ID**、 **FirstName** 、 **LastName**という 3 つの列があるテーブルを作成します。  
   
     2.  **ID** を主キーとして設定します。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "71297737"
   
     2.  ウィザードの指示に従って、プロジェクトをローカル データベース サーバーの SSIS カタログに配置します。 次の例では、 **Power BI** をフォルダー名として、 **SSISPackagePublishing** をSSIS カタログ内のプロジェクト名として使用します。  
   
-## <a name="step-2-use-the-ssis-data-feed-publishing-wizard-to-publish-ssis-package-as-a-sql-view"></a>手順 2:SSIS データ フィード公開ウィザードを使用して SSIS パッケージを SQL ビューとして公開する  
+## <a name="step-2-use-the-ssis-data-feed-publishing-wizard-to-publish-ssis-package-as-a-sql-view"></a>手順 2: SSIS データ フィード公開ウィザードを使用して SSIS パッケージを SQL ビューとして公開する  
  この手順では、SQL Server Integration Services (SSIS) データ フィード公開ウィザードを使用して、SSIS パッケージを SQL Server データベースにビューとして公開します。 パッケージの出力データは、このビューをクエリすることで使用できます。  
   
  SSIS データ フィード公開ウィザードにより、OLE DB Provider for SSIS (SSISOLEDB) を利用するリンク サーバーが作成され、リンク サーバーのクエリを構成する SQL ビューが作成されます。 このクエリには、SSIS カタログのフォルダー名、プロジェクト名、およびパッケージ名が含まれます。  
@@ -159,7 +159,7 @@ ms.locfileid: "71297737"
     > [!NOTE]  
     >  次のデータ型はサポートされていません: text、ntext、image、nvarchar(max)、varchar(max)、varbinary(max)。  
   
-## <a name="step-3-test-the-sql-view"></a>手順 3:SQL ビューをテストする  
+## <a name="step-3-test-the-sql-view"></a>手順 3: SQL ビューをテストする  
  ここでは、SSIS データ フィード公開ウィザードによって作成された SQL ビューを実行します。  
   
 1.  SQL Server Management Studio を起動します。  
@@ -170,7 +170,7 @@ ms.locfileid: "71297737"
   
 4.  SSIS パッケージの結果が表示されることを確認します。  
   
-## <a name="step-4-verify-the-ssis-package-execution"></a>手順 4:SSIS パッケージの実行を確認する  
+## <a name="step-4-verify-the-ssis-package-execution"></a>手順 4: SSIS パッケージの実行を確認する  
  この手順では、SSIS パッケージが実行されたことを確認します。  
   
 1.  SQL Server Management Studio で、 **[Integration Services カタログ]** 、 **[SSISDB]** 、SSIS プロジェクトが存在する **フォルダー** 、 **[プロジェクト]** 、プロジェクト ノード、 **[パッケージ]** の順に展開します。  
@@ -266,8 +266,6 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Cat
 -   左右の角かっこ ([ と ]) - これらの文字は、前後のスペースを示すために使用されます。 たとえば、"[ some spaces ]" は、前に 1 つ、後ろに 1 つのスペースがある文字列 " some spaces " を示します。 これらの文字そのものをクエリ句で使用する場合は、エスケープする必要があります。 たとえば、 \\[ や \\] のように指定します。  
   
 -   スラッシュ (\\) - クエリで使用するすべての \ では、エスケープ文字を使用する必要があります。 たとえば、クエリ句の \\\ は \ として評価されます。  
-  
- スラッシュ (\\) - クエリで使用するすべての \ では、エスケープ文字を使用する必要があります。 たとえば、クエリ句の \\\ は \ として評価されます。  
   
 ## <a name="see-also"></a>参照  
  [Data Streaming Destination](../../integration-services/data-flow/data-streaming-destination.md)   

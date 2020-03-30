@@ -16,10 +16,10 @@ ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 39e6e14700fe7ad9d9c1c3ba71eca82b3855beb2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056684"
 ---
 # <a name="configure-a-flexible-automatic-failover-policy-for-an-always-on-availability-group"></a>Always On 可用性グループに柔軟な自動フェールオーバー ポリシーを構成する
@@ -34,7 +34,7 @@ ms.locfileid: "74056684"
   > 可用性グループの柔軟なフェールオーバー ポリシーは、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]を使用して構成できません。  
   
  
-## <a name="Limitations"></a> 自動フェールオーバーの制限  
+## <a name="limitations-on-automatic-failovers"></a><a name="Limitations"></a> 自動フェールオーバーの制限  
   
 -   自動フェールオーバーが行われるには、現在のプライマリ レプリカおよび 1 つのセカンダリ レプリカが自動フェールオーバーを使用する同期コミット可用性モード用に構成され、セカンダリ レプリカがプライマリ レプリカと同期している必要があります。  
   
@@ -42,24 +42,24 @@ ms.locfileid: "74056684"
   
 -   WSFC クラスターでは、可用性グループが WSFC のエラーしきい値を超えると、自動フェールオーバーはその可用性グループに対して実行されません。 また、クラスター管理者が失敗したリソース グループを手動でオンラインにするか、データベース管理者が可用性グループの手動フェールオーバーを実行するまで、可用性グループの WSFC リソース グループはエラー状態のままになります。 *WSFC のエラーしきい値* は、特定の期間に可用性グループに対して許容されるエラーの最大数として定義されています。 既定の期間は 6 時間であり、この期間のエラーの最大数の既定値は *n*-1 です ( *n* は WSFC ノードの数です)。 特定の可用性グループのエラーしきい値を変更するには、WSFC フェールオーバー マネージャー コンソールを使用します。  
   
-##  <a name="Prerequisites"></a> 前提条件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
   
 -   プライマリ レプリカをホストするサーバー インスタンスに接続されている必要があります。  
    
-##  <a name="Permissions"></a> Permissions  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
   
 |タスク|アクセス許可|  
 |----------|-----------------|  
 |新しい可用性グループの柔軟なフェールオーバー ポリシーを構成する|**sysadmin** 固定サーバー ロールのメンバーシップと、CREATE AVAILABILITY GROUP サーバー権限、ALTER ANY AVAILABILITY GROUP 権限、CONTROL SERVER 権限のいずれかが必要です。|  
 |既存の可用性グループのポリシーを変更する|可用性グループの ALTER AVAILABILITY GROUP 権限、CONTROL AVAILABILITY GROUP 権限、ALTER ANY AVAILABILITY GROUP 権限、または CONTROL SERVER 権限が必要です。|  
 
-##  <a name="HCtimeout"></a> 正常性チェックのタイムアウトしきい値  
+##  <a name="health-check-timeout-threshold"></a><a name="HCtimeout"></a> 正常性チェックのタイムアウトしきい値  
  可用性グループの WSFC リソース DLL では、プライマリ レプリカをホストする SQL Server のインスタンスで *sp_server_diagnostics* ストアド プロシージャを呼び出して、プライマリ レプリカの [正常性チェック](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) を実行します。 **sp_server_diagnostics** は、可用性グループの正常性チェックのタイムアウトしきい値の 3 分の 1 の間隔で結果を返します。 既定の正常性チェックのタイムアウトしきい値は 30 秒であるので、 **sp_server_diagnostics** では 10 秒間隔で結果が返されます。 **sp_server_diagnostics** が低速であるか、情報を返さない場合、リソース DLL は正常性チェックのタイムアウトしきい値の間隔が完全に経過するのを待ってから、プライマリ レプリカが無応答であると判断します。 プライマリ レプリカが応答しない場合、自動フェールオーバー (現在サポートされている場合) が開始されます。  
   
 > [!IMPORTANT]  
 >  **sp_server_diagnostics** では、データベース レベルでの正常性チェックは実行されません。  
   
-##  <a name="FClevel"></a> エラー条件レベル  
+##  <a name="failure-condition-level"></a><a name="FClevel"></a> エラー条件レベル  
  **sp_server_diagnostics** から返される診断データと正常性の情報によって自動フェールオーバーが保証されるかどうかは、可用性グループのエラー条件レベルによって異なります。 *エラー条件レベル* は、自動フェールオーバーを実行するエラー条件を指定します。 エラー条件レベルの範囲は、最も制限が緩いものから (レベル 1)、最も制限の厳しい指定 (レベル 5) まで 5 つあります。 任意のレベルは、それより制限が緩いすべてのレベルを含みます。 したがって、最も制限の厳しいレベル 5 にはそれより制限が緩い 4 つの条件が含まれます。以下同様です。  
   
 > [!IMPORTANT]  
@@ -78,7 +78,7 @@ ms.locfileid: "74056684"
 > [!NOTE]  
 >  クライアント要求に対して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスが応答しないことは、可用性グループには関係ありません。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  **柔軟なフェールオーバー ポリシーを構成するには**  
   
 1.  プライマリ レプリカをホストするサーバー インスタンスに接続します。  
@@ -115,7 +115,7 @@ ms.locfileid: "74056684"
         ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT = 60000);  
         ```  
   
-##  <a name="PowerShellProcedure"></a> PowerShell の使用  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell の使用  
  **柔軟なフェールオーバー ポリシーを構成するには**  
   
 1.  既定 (**cd**) を、プライマリ レプリカをホストするサーバー インスタンスに設定します。  
@@ -161,7 +161,7 @@ ms.locfileid: "74056684"
   
 -   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
 
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
  **自動フェールオーバーを設定するには**  
   
 -   [可用性レプリカの可用性モードの変更 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md) (自動フェールオーバーには同期コミット可用性モードが必要)  
@@ -170,7 +170,7 @@ ms.locfileid: "74056684"
   
 -   [自動フェールオーバーの条件を制御する柔軟なフェールオーバー ポリシーの構成 &#40;Always On 可用性グループ&#41;](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md)  
   
-##  <a name="RelatedContent"></a> 関連コンテンツ  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 関連コンテンツ  
   
 -   [動作方法: SQL Server Always On のリース タイムアウト](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx)  
   

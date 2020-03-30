@@ -22,10 +22,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 38e0164de9dda9f86183a89a29b58753b2a7f118
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287642"
 ---
 # <a name="filter-published-data"></a>パブリッシュされたデータのフィルター選択
@@ -123,7 +123,7 @@ ms.locfileid: "76287642"
   
     -   **text と ntext**  
   
-    -   **image**  
+    -   **画像**  
   
     -   **XML**  
   

@@ -23,10 +23,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4bb0b9c6b9d6fe47b69678211122e5c8be7023c7
-ms.sourcegitcommit: fc99fdd586eabc2d60f33056123398f263d5913d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78937663"
 ---
 # <a name="alter-schema-transact-sql"></a>ALTER SCHEMA (Transact-SQL)
@@ -97,7 +97,7 @@ ALTER SCHEMA schema_name
 ## <a name="examples"></a>例  
   
 ### <a name="a-transferring-ownership-of-a-table"></a>A. テーブルの所有権を譲渡する  
- 次の例では、テーブル `Address` をスキーマ `Person` からスキーマ "HumanResources" に移動することで、スキーマ `HumanResources` を変更します。  
+ 次の例では、テーブル `HumanResources` をスキーマ `Address` からスキーマ "HumanResources" に移動することで、スキーマ `Person` を変更します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -138,7 +138,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-transferring-ownership-of-a-table"></a>C. テーブルの所有権を譲渡する  
- 次の例では、`dbo` スキーマで `Region` テーブルを作成し、`Sales` スキーマを作成し、`Region` テーブルを `dbo` スキーマから `Sales` スキーマに移動します。  
+ 次の例では、`Region` スキーマで `dbo` テーブルを作成し、`Sales` スキーマを作成し、`Region` テーブルを `dbo` スキーマから `Sales` スキーマに移動します。  
   
 ```  
 CREATE TABLE dbo.Region   

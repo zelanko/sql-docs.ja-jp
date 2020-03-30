@@ -1,6 +1,6 @@
 ---
 title: コールバックを使用する Windows アプリケーション
-description: 非同期コマンドを安全に実行して、別のスレッドからのフォームやそのコンテンツを正しく処理する方法の例を示します。
+description: 非同期コマンドを安全に実行して、別のスレッドからのフォームやその内容の操作を正しく処理する方法の例を示します。
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: e8c5fbecb8892639e5e4e0cb608c3c4de0447508
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896011"
 ---
 # <a name="windows-applications-using-callbacks"></a>コールバックを使用する Windows アプリケーション
@@ -25,7 +25,7 @@ ms.locfileid: "78896011"
 
 ほとんどの非同期処理シナリオでは、データベース操作を開始した後、そのデータベース操作の完了を待つことなく他のプロセスの実行に進む必要があります。 ただし、多くのシナリオでは、データベース操作が完了した後で何かを実行する必要があります。 たとえば、Windows アプリケーションでは、実行時間の長い操作をバックグラウンド スレッドに委任している間、ユーザー インターフェイス スレッドの応答性を維持することができます。 ただし、データベース操作が完了したら、その結果を使用してフォームにデータを入力する必要があります。 この種類のシナリオは、コールバックを使用した実装が最も適しています。  
   
-コールバックは、<xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>、<xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteReader%2A>、または <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> メソッドで <xref:System.AsyncCallback> 委任を指定して定義します。 この委任は、操作が完了したときに呼び出されます。 この委任に <xref:Microsoft.Data.SqlClient.SqlCommand> 自体への参照を渡すと、グローバル変数を使用しなくても、容易に <xref:Microsoft.Data.SqlClient.SqlCommand> オブジェクトにアクセスして適切な `End` メソッドを呼び出すことができます。  
+コールバックは、<xref:System.AsyncCallback>、<xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>、または <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> メソッドで <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> 委任を指定して定義します。 この委任は、操作が完了したときに呼び出されます。 この委任に <xref:Microsoft.Data.SqlClient.SqlCommand> 自体への参照を渡すと、グローバル変数を使用しなくても、容易に <xref:Microsoft.Data.SqlClient.SqlCommand> オブジェクトにアクセスして適切な `End` メソッドを呼び出すことができます。  
   
 ## <a name="example"></a>例  
 次の Windows アプリケーションは、<xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A> メソッドを使用して、数秒の遅延を含む Transact-SQL ステートメントを実行する方法 (実行時間の長いコマンドのエミュレーション) を示しています。  
