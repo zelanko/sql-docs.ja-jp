@@ -13,10 +13,10 @@ ms.assetid: cca96a8f-7737-42d2-bbcc-03d5f858dcc1
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 7883a99a223af67f536a0991bb0ba48f30211bc6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68071363"
 ---
 # <a name="alter-index-selective-xml-indexes"></a>ALTER INDEX (選択的 XML インデックス)
@@ -109,7 +109,7 @@ identifier
 )  
 ```  
   
-##  <a name="Arguments"></a> 引数  
+##  <a name="arguments"></a><a name="Arguments"></a> 引数  
  *index_name*  
  変更する既存のインデックスの名前です。  
   
@@ -148,7 +148,7 @@ identifier
  ALTER INDEX を実行するには、少なくともテーブルまたはビューに対する ALTER 権限が必要です。  
   
 ## <a name="examples"></a>例  
- ALTER INDEX ステートメントの例を次に示します。 このステートメントは、インデックスの XQuery の部分にパス `'/a/b/m'` を追加し、「[CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-selective-xml-index-transact-sql.md)」のトピックの例で作成したインデックスの SQL の部分からパス `'/a/b/e'` を削除します。 削除するパスは、作成時に指定された名前によって識別されます。  
+ ALTER INDEX ステートメントの例を次に示します。 このステートメントは、インデックスの XQuery の部分にパス `'/a/b/m'` を追加し、「`'/a/b/e'`CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;[」のトピックの例で作成したインデックスの SQL の部分からパス ](../../t-sql/statements/create-selective-xml-index-transact-sql.md) を削除します。 削除するパスは、作成時に指定された名前によって識別されます。  
   
 ```sql  
 ALTER INDEX sxi_index  

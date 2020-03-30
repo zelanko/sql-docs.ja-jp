@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0c80e52eff233c2d04cb77fb5cf5d85bdac8fe34
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68081764"
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>メモリ最適化テーブルでのトランザクション
@@ -98,7 +98,7 @@ READ_COMMITTED_SNAPSHOT または SNAPSHOT 分離レベルが有効な場合は�
   
 次の表は、トランザクション分離のレベルを、分離が少ないものから順に示しています。 発生する可能性のある競合、およびこれらの競合を処理するための再試行ロジックの詳細については、「 [競合の検出と再試行ロジック](#conflict-detection-and-retry-logic)」を参照してください。 
   
-| Isolation Level | [説明] |   
+| Isolation Level | 説明 |   
 | :-- | :-- |   
 | READ UNCOMMITTED | 使用できません: Read Uncommitted 分離ではメモリ最適化テーブルにアクセスできません。 この場合でも、セッション レベル TRANSACTION ISOLATION LEVEL が READ UNCOMMITTED に設定されていれば、WITH (SNAPSHOT) テーブル ヒントを使用するか、データベース設定 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT を ON に設定することにより、SNAPSHOT 分離でメモリ最適化テーブルにアクセスすることができます。 | 
 | READ COMMITTED | オートコミット モードが有効の場合にのみ、メモリ最適化テーブルに対してサポートされます。 この場合でも、セッション レベル TRANSACTION ISOLATION LEVEL が READ COMMITTED に設定されていれば、WITH (SNAPSHOT) テーブル ヒントを使用するか、データベース設定 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT を ON に設定することにより、SNAPSHOT 分離でメモリ最適化テーブルにアクセスすることができます。<br/><br/>データベース オプション READ_COMMITTED_SNAPSHOT が ON に設定されている場合は、同じステートメント内でメモリ最適化テーブルとディスク ベースのテーブルの両方に READ COMMITTED 分離でアクセスすることはできません。 |  
@@ -139,7 +139,7 @@ READ_COMMITTED_SNAPSHOT または SNAPSHOT 分離レベルが有効な場合は�
 
 メモリ最適化テーブルにアクセスするトランザクションの失敗の原因となるエラー条件を以下に示します。
 
-| エラー コード | [説明] | 原因 |
+| エラー コード | 説明 | 原因 |
 | :-- | :-- | :-- |
 | **41302** | 現在のトランザクションが開始されてから別のトランザクションで更新された行を更新しようとしました。 | このエラー条件は、2 つの同時実行トランザクションが同時に同じ行を更新または削除しようとした場合に発生します。 2 つのトランザクションのうちの 1 つがこのエラー メッセージを受け取り、そのトランザクションは再試行が必要になります。 <br/><br/>  | 
 | **41305**| REPEATABLE READ の検証の失敗。 このトランザクションがメモリ最適化テーブルから読み取った行が、このトランザクションのコミット前にコミットした別のトランザクションによって更新されました。 | このエラーは、REPEATABLE READ 分離または SERIALIZABLE 分離の使用時に発生することがあります。また、同時実行トランザクションのアクションが FOREIGN KEY 制約の違反を引き起こした場合も発生する可能性があります。 <br/><br/>外部キー制約のこのような同時違反はまれであり、一般的にはアプリケーション ロジックまたはデータ エントリの問題を示しています。 ただし、FOREIGN KEY 制約に関係する列のインデックスが存在しない場合も、このエラーが発行する可能性があります。 したがって、メモリ最適化テーブルでは、外部キー列のインデックスを必ず作成するようにしてください。 <br/><br/> 外部キー違反によって発生する検証エラーに関する考慮事項の詳細については、SQL Server Customer Advisory Team による [このブログ投稿](https://blogs.msdn.microsoft.com/sqlcat/2016/03/24/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys/) を参照してください。 |  

@@ -17,10 +17,10 @@ ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b05b7ffa40bb5b44c9dd3a5fa0d320cfadba0a43
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294059"
 ---
 # <a name="integration-services-containers"></a>Integration Services コンテナー
@@ -65,7 +65,7 @@ ms.locfileid: "71294059"
 |**ForcedExecutionValueType**|**ForcedExecutionValue**のデータ型。 このプロパティの既定値は **Int32**です。|  
 |**ForceExecutionResult**|パッケージまたはコンテナーの強制実行結果を示す値です。 有効値は、 **None**、 **Success**、 **Failure**、および **Completion**です。 このプロパティの既定値は、 **None**です。<br /><br /> 詳細については、<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionResult%2A> を参照してください。|  
 |**ForcedExecutionValue**|コンテナーのオプションの実行値に特定の値を適用する必要があるかどうかを示すブール値です。 このプロパティの既定値は **False**です。<br /><br /> 詳細については、<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionValue%2A> を参照してください。|  
-|**ID**|コンテナー GUID です。パッケージの作成時に割り当てられます。 このプロパティは読み取り専用です。<br /><br /> <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ID%2A>|  
+|**ID**|コンテナー GUID です。パッケージの作成時に割り当てられます。 このプロパティは読み取り専用です。<br /><br /> [https://login.microsoftonline.com/consumers/](<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ID%2A>)|  
 |**IsolationLevel**|コンテナー トランザクションの分離レベルです。 値は、 **Unspecified**、 **Chaos**、 **ReadUncommitted**、 **ReadCommitted**、 **RepeatableRead**、 **Serializable**、および **Snapshot**です。 このプロパティの既定値は **Serializable**です。 詳細については、<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A> を参照してください。|  
 |**LocaleID**|Microsoft Win32 ロケールです。 このプロパティの既定値は、ローカル コンピューター上のオペレーティング システムのロケールです。<br /><br /> 詳細については、<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LocaleID%2A> を参照してください。|  
 |**LoggingMode**|コンテナーのログ記録の動作を指定する値です。 値は、 **Disabled**、 **Enabled**、および **UseParentSetting**です。 このプロパティの既定値は **UseParentSetting**です。 詳細については、<xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode> を参照してください。|  

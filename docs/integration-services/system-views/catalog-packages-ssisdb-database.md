@@ -14,10 +14,10 @@ ms.assetid: a634e94d-f492-4dfd-9611-a35f545106a1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: aea0d3c07482c7c54dc5adb8956b290791f29111
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295165"
 ---
 # <a name="catalogpackages-ssisdb-database"></a>catalog.packages (SSISDB データベース)
@@ -29,7 +29,7 @@ ms.locfileid: "71295165"
 
   **SSISDB** カタログに表示されるすべてのパッケージの詳細を表示します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |package_id|**bigint**|パッケージの一意識別子 (ID) です。|  
 |name|**nvarchar (256)**|パッケージの一意の名前。|  

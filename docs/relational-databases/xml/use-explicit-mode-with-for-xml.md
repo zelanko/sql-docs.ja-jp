@@ -15,10 +15,10 @@ ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 63a80b7bebafdaf05c93a95b9ce5efd0dc89c316
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68001790"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>FOR XML での EXPLICIT モードの使用
@@ -66,14 +66,14 @@ ms.locfileid: "68001790"
         <Customer cid="C1" name="Janine">  
         ```  
   
-    -   2 行目では、 **Tag** 列に値 2、 **Parent** 列に値 1 が指定されています。 したがって、<`Customer`> 要素の子要素として、<`Order`> 要素が追加されます。  
+    -   2 行目では、 **Tag** 列に値 2、 **Parent** 列に値 1 が指定されています。 したがって、<`Order`> 要素の子要素として、<`Customer`> 要素が追加されます。  
   
         ```  
         <Customer cid="C1" name="Janine">  
            <Order id="O1" date="1/20/1996">  
         ```  
   
-    -   次の 2 行では、 **Tag** 列に値 3、 **Parent** 列に値 2 が指定されています。 したがって、<`Order`> 要素の子要素として、2 つの <`OrderDetail`> 要素が追加されます。  
+    -   次の 2 行では、 **Tag** 列に値 3、 **Parent** 列に値 2 が指定されています。 したがって、<`OrderDetail`> 要素の子要素として、2 つの <`Order`> 要素が追加されます。  
   
         ```  
         <Customer cid="C1" name="Janine">  
@@ -82,7 +82,7 @@ ms.locfileid: "68001790"
               <OrderDetail id="OD2" pid="P2"/>  
         ```  
   
-    -   最後の行では、 **Tag** 列に値 2 が指定され、 **Parent** 列には値 1 が指定されています。 したがって、<`Customer`> 親要素には、別の <`Order`> 子要素が追加されます。  
+    -   最後の行では、 **Tag** 列に値 2 が指定され、 **Parent** 列には値 1 が指定されています。 したがって、<`Order`> 親要素には、別の <`Customer`> 子要素が追加されます。  
   
         ```  
         <Customer cid="C1" name="Janine">  
@@ -112,7 +112,7 @@ ElementName!TagNumber!AttributeName!Directive
  各部分の説明は、次のとおりです。  
   
  *ElementName*  
- 結果の要素の汎用識別子。 たとえば、*ElementName* として **Customers** が指定されている場合、\<Customers> 要素が生成されます。  
+ 結果の要素の汎用識別子。 たとえば、**ElementName** として *Customers* が指定されている場合、\<Customers> 要素が生成されます。  
   
  *TagNumber*  
  要素に割り当てられる一意なタグの値。 この値と **Tag** および **Parent**の 2 つのメタデータ列の組み合わせにより、生成される XML 内の要素の入れ子構造が決定されます。  
@@ -150,21 +150,21 @@ ElementName!TagNumber!AttributeName!Directive
   
 -   [例: 従業員情報の取得](../../relational-databases/xml/example-retrieving-employee-information.md)  
   
--   [例: ELEMENT ディレクティブの指定](../../relational-databases/xml/example-specifying-the-element-directive.md)  
+-   [例 : ELEMENT ディレクティブの指定](../../relational-databases/xml/example-specifying-the-element-directive.md)  
   
--   [例: ELEMENTXSINIL ディレクティブの指定](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md)  
+-   [例 : ELEMENTXSINIL ディレクティブの指定](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md)  
   
 -   [例: EXPLICIT モードを使用した兄弟の構築](../../relational-databases/xml/example-constructing-siblings-with-explicit-mode.md)  
   
--   [例: ID ディレクティブと IDREF ディレクティブの指定](../../relational-databases/xml/example-specifying-the-id-and-idref-directives.md)  
+-   [例 : ID ディレクティブと IDREF ディレクティブの指定](../../relational-databases/xml/example-specifying-the-id-and-idref-directives.md)  
   
--   [例: ID ディレクティブと IDREFS ディレクティブの指定](../../relational-databases/xml/example-specifying-the-id-and-idrefs-directives.md)  
+-   [例 : ID ディレクティブと IDREFS ディレクティブの指定](../../relational-databases/xml/example-specifying-the-id-and-idrefs-directives.md)  
   
--   [例: HIDE ディレクティブの指定](../../relational-databases/xml/example-specifying-the-hide-directive.md)  
+-   [例 : HIDE ディレクティブの指定](../../relational-databases/xml/example-specifying-the-hide-directive.md)  
   
--   [例: ELEMENT ディレクティブとエンティティのエンコードの指定](../../relational-databases/xml/example-specifying-the-element-directive-and-entity-encoding.md)  
+-   [例 : ELEMENT ディレクティブとエンティティのエンコードを指定する](../../relational-databases/xml/example-specifying-the-element-directive-and-entity-encoding.md)  
   
--   [例: CDATA ディレクティブの指定](../../relational-databases/xml/example-specifying-the-cdata-directive.md)  
+-   [例 : CDATA ディレクティブの指定](../../relational-databases/xml/example-specifying-the-cdata-directive.md)  
   
 -   [例: XMLTEXT ディレクティブの指定](../../relational-databases/xml/example-specifying-the-xmltext-directive.md)  
   

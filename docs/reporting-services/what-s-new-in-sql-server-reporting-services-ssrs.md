@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 12/05/2019
 ms.openlocfilehash: cb50ca237fb1b9fae87b73fd81a9e6f2426b4775
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77079610"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) の新機能
@@ -50,7 +50,7 @@ Azure Active Directory アプリケーション プロキシを使用すると�
 
 ### <a name="custom-headers"></a>カスタム ヘッダー
 
-指定された正規表現パターンに一致するすべての URL のヘッダー値を設定します。 ユーザーは、有効な XML を使用してカスタム ヘッダー値を更新し、選択した要求 URL のヘッダー値を設定できます。 管理者は、XML 内に任意の数のヘッダーを追加できます。 詳細については、「 **[サーバーのプロパティ] の [詳細設定] ページ**」の記事の[カスタム ヘッダー](tools/server-properties-advanced-page-reporting-services.md#customheaders)のセクションを参照してください。
+指定された正規表現パターンに一致するすべての URL のヘッダー値を設定します。 ユーザーは、有効な XML を使用してカスタム ヘッダー値を更新し、選択した要求 URL のヘッダー値を設定できます。 管理者は、XML 内に任意の数のヘッダーを追加できます。 詳細については、「[[サーバーのプロパティ] の [詳細設定] ページ](tools/server-properties-advanced-page-reporting-services.md#customheaders)」の記事の**カスタム ヘッダー**のセクションを参照してください。
 
 ### <a name="transparent-database-encryption"></a>Transparent Database Encryption
 
@@ -183,9 +183,9 @@ iPad および iPhone の iOS 用 Power BI モバイル アプリでは、ロー
 
 **ツリー マップとサンバースト グラフ:** ツリーマップ ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") とサンバースト グラフ ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon") を使用してレポートを強化できます。これらは、階層データを表示する優れた方法です。 詳細については、「 [Reporting Services のツリー マップとサンバースト グラフ](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md)」を参照してください。  
 
-**レポートの埋め込み:** iframe を URL パラメーターと共に使用して、モバイル レポートやページ分割されたレポートを他の Web ページやアプリケーションに埋め込むことができるようになりました。  
+**レポートの埋め込み:** モバイルおよびページ分割されたレポートを、URL パラメーターと共に、他の Web ページに (また、iframe を使ってアプリケーションに) 埋め込むことができるようになりました。  
 
-**レポートアイテムの Power BI ダッシュボードへのピン留め:** [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]でレポートを表示しているときに、レポート アイテムを選択し、[!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ダッシュボードにピン留めできます。   ピン留めできるアイテムは、グラフ、ゲージ パネル、マップ、イメージです。 次のようにすることができます。
+**レポートアイテムの Power BI ダッシュボードへのピン留め:** [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]でレポートを表示しているときに、レポート アイテムを選択し、 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ダッシュボードにピン留めできます。   ピン留めできるアイテムは、グラフ、ゲージ パネル、マップ、イメージです。 次のようにすることができます。
 
 1. ピン留めするダッシュボードを含むグループを選択します。
 2. アイテムをピン留めするダッシュボードを選択します。
@@ -197,7 +197,7 @@ iPad および iPhone の iOS 用 Power BI モバイル アプリでは、ロー
 
 詳細については、「[Power BI Report Server の統合 &#40;構成マネージャー&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)」および「[Power BI ダッシュボードへの Reporting Services のアイテムのピン留め](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)」を参照してください。  
 
-**PowerPoint のレンダリングとエクスポート:** Microsoft PowerPoint (PPTX) 形式は、[!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] の新しい表示拡張機能です。 通常のアプリケーション (レポート ビルダー、レポート デザイナー (SSDT)、および [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]) から PPTX 形式のレポートをエクスポートできます。 たとえば、次の図は [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]のエクスポート メニューを示しています。 
+**PowerPoint のレンダリングとエクスポート:** Microsoft PowerPoint (PPTX) 形式は、 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] の新しい表示拡張機能です。 通常のアプリケーション (レポート ビルダー、レポート デザイナー (SSDT)、および [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]) から PPTX 形式のレポートをエクスポートできます。 たとえば、次の図は [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]のエクスポート メニューを示しています。 
 
 ![ssrs-export-powerpoint](../reporting-services/media/ssrs-export-powerpoint.png) 
 
@@ -209,7 +209,7 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 
 詳細については、「 [URL アクセスを使用してレポートをエクスポート](../reporting-services/export-a-report-using-url-access.md)」を参照してください。
 
-**リモート印刷での PDF による ActiveX の置き換え:** レポート ビューアーのツールバーは、ActiveX コントロールではなく PDF 経由で印刷されるようになりました。 新しいレポート ビューアーは、Microsoft Edge を含む、ほとんどの最新ブラウザーでサポートされています。 ActiveX コントロールをダウンロードする必要はなくなります。 使用するブラウザーと、インストールされている PDF 表示アプリケーションおよびサービスに応じて、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ではレポートを印刷するための印刷ダイアログ ボックスが開かれるか、.PDF ファイルをダウンロードするプロンプトが表示されます。 管理者が [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] からクライアント側の印刷を無効にすることもできます。
+**リモート印刷での PDF による ActiveXの置き換え:** レポート ビューアー ツール バーでの印刷が、ActiveX コントロールではなく PDF を使うようになりました。 新しいレポート ビューアーは、Microsoft Edge を含む、ほとんどの最新ブラウザーでサポートされています。 ActiveX コントロールをダウンロードする必要はなくなります。 使用するブラウザーと、インストールされている PDF 表示アプリケーションおよびサービスに応じて、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ではレポートを印刷するための印刷ダイアログ ボックスが開かれるか、.PDF ファイルをダウンロードするプロンプトが表示されます。 管理者が [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] からクライアント側の印刷を無効にすることもできます。
 
 詳細については、「 [Reporting Services のクライアント側印刷機能の有効化と無効化](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)」を参照してください。
 
@@ -226,7 +226,7 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 
 ### <a name="sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)
 
-新しいリリースの SSDT には、[!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 用のプロジェクト テンプレートが含まれています:レポート サーバー プロジェクト ウィザードとレポート サーバー プロジェクト。 SSDT のダウンロードについては、 [SQL Server Data Tools for Visual Studio 2015](https://go.microsoft.com/fwlink/?LinkId=827542)に関するページをご覧ください。  
+新しいリリースの SSDT には、 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]用のプロジェクト テンプレート (レポート サーバー プロジェクト ウィザードとレポート サーバー プロジェクト) が含まれています。 SSDT のダウンロードについては、 [SQL Server Data Tools for Visual Studio 2015](https://go.microsoft.com/fwlink/?LinkId=827542)に関するページをご覧ください。  
 
 ### <a name="report-builder-improvements"></a>レポート ビルダーの機能強化
 

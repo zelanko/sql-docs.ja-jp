@@ -12,10 +12,10 @@ ms.author: maggies
 ms.topic: conceptual
 ms.date: 08/17/2017
 ms.openlocfilehash: 9d0ff28e1e9c7784da2c1206f72573ba608797a1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68264989"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
@@ -33,7 +33,7 @@ ms.locfileid: "68264989"
 > [!NOTE]
 > SharePoint と Reporting Services の統合は、SQL Server 2016 以降では使用できません。
    
-##  <a name="bkmk_known_issues"></a> アップグレードに関する既知の問題とベスト プラクティス  
+##  <a name="known-upgrade-issues-and-best-practices"></a><a name="bkmk_known_issues"></a> アップグレードに関する既知の問題とベスト プラクティス  
  アップグレード可能なサポートされるエディションとバージョンの詳細な一覧については、「 [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)」を参照してください。  
   
 > [!TIP]  
@@ -42,13 +42,13 @@ ms.locfileid: "68264989"
 >  -   [SQL Server 2016 リリース ノート](https://go.microsoft.com/fwlink/?LinkID=398124)をダウンロードする。  
   
   
-##  <a name="bkmk_side_by_side"></a> サイド バイ サイド インストール  
+##  <a name="side-by-side-installations"></a><a name="bkmk_side_by_side"></a> サイド バイ サイド インストール  
  SQL Server Reporting Services のネイティブ モードは、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] のネイティブ モードの展開とサイド バイ サイドでインストールできます。  
   
  SharePoint モードの SQL Server Reporting Services と以前のバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードのコンポーネントのサイド バイ サイド展開はサポートされていません。  
   
   
-##  <a name="bkmk_inplace_upgrade"></a> インプレース アップグレード  
+##  <a name="in-place-upgrade"></a><a name="bkmk_inplace_upgrade"></a> インプレース アップグレード  
  アップグレードは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップで実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を含む任意またはすべての [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]コンポーネントをアップグレードできます。 セットアップによって既存のインスタンスが検出され、アップグレードするように求められます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップには、コマンド ライン引数またはセットアップ ウィザードで指定できるアップグレード オプションが用意されています。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを実行すると、次のいずれかのバージョンからアップグレードするオプションを選ぶか、既存のインストールと並行して実行する SQL Server Reporting Services の新しいインスタンスをインストールすることができます。  
@@ -68,7 +68,7 @@ ms.locfileid: "68264989"
 * [コマンド プロンプトからの SQL Server 2016 のインストール](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)
   
   
-##  <a name="bkmk_upgrade_checklist"></a> アップグレード前のチェック リスト  
+##  <a name="pre-upgrade-checklist"></a><a name="bkmk_upgrade_checklist"></a> アップグレード前のチェック リスト  
  SQL Server Reporting Services にアップグレードする前に、次のトピックを確認してください。  
   
 -   お使いのハードウェアおよびソフトウェアで [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]をサポートできるかどうかを判断する要件を確認します。 詳細については、「 [SQL Server 2016 のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)」を参照してください。  
@@ -83,7 +83,7 @@ ms.locfileid: "68264989"
   
 -   IIS で既存の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 仮想ディレクトリに任意のカスタマイズをバックアップします。  
   
--   無効な SSL 証明書を削除します。  これには、有効期限が切れており、Reporting Services をアップグレードする前に更新する予定のない証明書が含まれます。  無効な証明書はアップグレードが失敗する原因となり、次のようなエラー メッセージが Reporting Services のログ ファイルに書き込まれます。**Microsoft.ReportingServices.WmiProvider.WMIProviderException:Web サイトで Secure Sockets Layer (SSL) 証明書が構成されていません。** 。  
+-   無効な SSL 証明書を削除します。  これには、有効期限が切れており、Reporting Services をアップグレードする前に更新する予定のない証明書が含まれます。  無効な証明書はアップグレードが失敗する原因となり、" **Microsoft.ReportingServices.WmiProvider.WMIProviderException: Web サイトで Secure Sockets Layer (SSL) 証明書が構成されていません。** " のようなエラー メッセージが Reporting Services のログ ファイルに書き込まれます。  
   
  実稼働環境をアップグレードする前に、必ず実稼働環境と同じ構成をしている実稼動前の環境でアップグレード テストを実行してください。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "68264989"
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を配置した SharePoint 2010 を SharePoint 2013/2016 に移行することが求められている。 SharePoint 2013/2016 では、SharePoint 2010 からのインプレース アップグレードがサポートされていません。 詳細については、「[Reporting Services の移行 &#40;SharePoint Mode&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)」を参照してください。  
   
   
-##  <a name="bkmk_native_scenarios"></a> ネイティブ モードのアップグレードと移行のシナリオ  
+##  <a name="native-mode-upgrade-and-migration-scenarios"></a><a name="bkmk_native_scenarios"></a> ネイティブ モードのアップグレードと移行のシナリオ  
  **アップグレード:** ネイティブ モードのインプレース アップグレード手順は、前述のサポートされている各バージョンで共通です。 SQL Server インストール ウィザードまたはコマンド ライン インストールを実行します。 インストールが完了すると、レポート サーバー データベースは自動的に新しいレポート サーバー データベース スキーマにアップグレードされます。 詳細については、このトピックの「 [インプレース アップグレード](#bkmk_inplace_upgrade) 」を参照してください。  
   
  アップグレード処理では、まずアップグレードする既存のレポート サーバー インスタンスを選択します。  
@@ -132,7 +132,7 @@ ms.locfileid: "68264989"
  **移行:** ネイティブ モード インストールの以前のバージョンを SQL Server Reporting Services に移行する手順は、前述のサポートされている各バージョンで共通です。 詳細については、「[Reporting Services のインストールの移行 &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)」を参照してください。  
   
   
-##  <a name="bkmk_native_scaleout"></a> Reporting Services ネイティブ モードのスケールアウト配置のアップグレード  
+##  <a name="upgrade-a-reporting-services-native-mode-scale-out-deployment"></a><a name="bkmk_native_scaleout"></a> Reporting Services ネイティブ モードのスケールアウト配置のアップグレード  
  複数のレポート サーバーにスケールアウトされる [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モードの配置をアップグレードする方法の概要を次に示します。 このプロセスでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置のダウンタイムが発生します。  
   
 1.  レポート サーバー データベースと暗号化キーをバックアップします。 詳細については、「[Reporting Services のバックアップおよび復元操作](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)」および「[スケールアウト配置に関する暗号化キーの追加と削除 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)」を参照してください。  
@@ -145,7 +145,7 @@ ms.locfileid: "68264989"
   
      各サーバーで、アップグレードおよびスケールアウトの手順を繰り返します。  
   
-##  <a name="bkmk_sharePoint_scenarios"></a> SharePoint モードのアップグレードと移行のシナリオ  
+##  <a name="sharepoint-mode-upgrade-and-migration-scenarios"></a><a name="bkmk_sharePoint_scenarios"></a> SharePoint モードのアップグレードと移行のシナリオ  
  以降のセクションでは、指定されたバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の SharePoint モードから SQL Server Reporting Services [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の SharePoint モードにアップグレードまたは移行するために必要な基本的な手順と問題について説明します。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードの配置をアップグレードするためのインストール コンポーネントは 2 つあります。  
@@ -194,7 +194,7 @@ ms.locfileid: "68264989"
 -   SQL Server Reporting Services のインストールを実行し、"レポート サーバー" ごとに SharePoint モードをアップグレードします。 SQL Server インストール ウィザードによって [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービスがインストールされ、新しいサービスのアプリケーションが作成されます。 
   
   
-##  <a name="bkmk_migration_considerations"></a> 移行に関する考慮事項  
+##  <a name="considerations-for-a-migration"></a><a name="bkmk_migration_considerations"></a> 移行に関する考慮事項  
  アプリケーション データを移動する際には、次の問題と制限事項に注意する必要があります。  
   
 -   暗号化キーの保護には、コンピューターの ID を組み込んだハッシュが含まれます。  
@@ -208,9 +208,9 @@ ms.locfileid: "68264989"
   
  新しいレポート サーバー コンピューターで元に戻せる暗号化を再設定するには、事前にバックアップしたキーを復元する必要があります。 レポート サーバー データベースに格納されている完全なキーのセットは、対称キーの値、およびキーを格納したレポート サーバー インスタンスのみが使用できるようにキーへのアクセスを制限するための ID 情報で構成されています。 キーを復元するときに、レポート サーバーによって、キーの既存のコピーが新しいバージョンで置き換えられます。 新しいバージョンには、現在のコンピューターで定義されたコンピューター ID とサービス ID の値が含まれています。 詳細については、次のトピックを参照してください。  
   
--   SharePoint モード:詳細については、「[Reporting Services SharePoint サービス アプリケーションの管理](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)」の「キー管理」のセクションを参照してください。  
+-   SharePoint モード: 詳細については、「[Reporting Services SharePoint サービス アプリケーションの管理](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)」の「キー管理」のセクションを参照してください。  
   
--   ネイティブ モード:「[Reporting Services の暗号化キーのバックアップと復元](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)」を参照してください。  
+-   ネイティブ モード: 「 [Reporting Services の暗号化キーのバックアップと復元](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)」を参照してください。  
   
   
 ### <a name="fixed-database-name"></a>固定されたデータベース名  
@@ -225,7 +225,7 @@ ms.locfileid: "68264989"
 -   アイテム数が少ない場合は、レポート デザイナー、モデル デザイナー、およびレポート ビルダーから新しいレポート サーバーに、レポートおよび共有データ ソースを再パブリッシュできます。 ロールの割り当て、サブスクリプション、共有スケジュール、レポート スナップショット スケジュール、レポートやその他のアイテムに設定したカスタム プロパティ、モデル アイテム セキュリティ、およびレポート サーバーで設定したプロパティを再作成する必要があります。 レポート履歴およびレポート実行ログ データは失われます。  
   
   
-##  <a name="bkmk_additional_resources"></a> その他のリソース  
+##  <a name="additional-resources"></a><a name="bkmk_additional_resources"></a> その他のリソース  
   
 > [!NOTE]  
 >  SharePoint データベース アタッチ アップグレードの詳細については、以下を参照してください。  

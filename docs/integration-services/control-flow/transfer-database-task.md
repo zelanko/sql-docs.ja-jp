@@ -19,10 +19,10 @@ ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8badd727143d80db08eed45ddbf5102c635ddeeb
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71293895"
 ---
 # <a name="transfer-database-task"></a>データベース転送タスク
@@ -94,7 +94,7 @@ ms.locfileid: "71293895"
   **[データベース転送タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、データベース転送タスクの名前と説明を入力できます。 データベース転送タスクは、2 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの間で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースをコピーまたは移動します。 このタスクを使用して、同じサーバー内でデータベースをコピーすることもできます。   
   
 ### <a name="options"></a>オプション  
- **名前**  
+ **Name**  
  データベース転送タスクの一意な名前を入力します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
 > [!NOTE]  
@@ -135,7 +135,7 @@ ms.locfileid: "71293895"
   
  このプロパティには、次の表に示すオプションがあります。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**True** にします|転送先サーバーのデータベースを上書きします。|  
 |**False**|転送先サーバーのデータベースを上書きしません。|  
@@ -164,7 +164,7 @@ ms.locfileid: "71293895"
   
  このプロパティには、次の表に示すオプションがあります。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**True** にします|ソース データベースを再アタッチします。|  
 |**False**|ソース データベースを再アタッチしません。|  

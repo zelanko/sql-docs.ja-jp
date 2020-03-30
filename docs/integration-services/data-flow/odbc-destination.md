@@ -16,10 +16,10 @@ ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 153cbd447fa84087b50501005d0ea457f47d1eda
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298213"
 ---
 # <a name="odbc-destination"></a>ODBC 入力先
@@ -33,7 +33,7 @@ ms.locfileid: "71298213"
   
  ODBC 入力先には、1 つの標準出力と 1 つのエラー出力があります。  
   
-##  <a name="BKMK_odbcdestination_loadoptions"></a> 読み込みオプション  
+##  <a name="load-options"></a><a name="BKMK_odbcdestination_loadoptions"></a> 読み込みオプション  
  ODBC 入力先先は、2 つのアクセス読み込みモジュールのうちどちらかを使用できます。 [ODBC ソース エディター &#40;[接続マネージャー] ページ&#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)。 次の 2 つのモードがあります。  
   
 -   **バッチ**: このモードでは、ODBC 入力先は、把握した ODBC プロバイダーの機能に基づいて、最も効率的な挿入方法を使用します。 最新の ODBC プロバイダーの場合、これは、パラメーターを設定した INSERT ステートメントを準備し、行方向の配列パラメーター バインドを使用する方法です (このとき、配列のサイズは **BatchSize** プロパティによって制御します)。 **[バッチ]** を選択したが、この方法がプロバイダーでサポートされていない場合、ODBC 入力先は自動的に **[行ごと]** モードに切り替わります。  
@@ -110,7 +110,7 @@ ms.locfileid: "71298213"
 #### <a name="data-access-mode"></a>[データ アクセス モード]  
  データを入力先に読み込む方法を選択します。 次の表に示すオプションがあります。  
   
-|オプション|[説明]|  
+|オプション|説明|  
 |------------|-----------------|  
 |[テーブル名 - バッチ]|バッチ モードで動作する ODBC 入力先を構成するには、このオプションを選択します。 このオプションを選択した場合は、次のオプションを指定できます。|  
 ||**[テーブル名またはビュー名]** : 使用できるテーブルまたはビューを一覧から選択します。<br /><br /> この一覧には、最初の 1,000 個のテーブルのみが含まれます。 データベースに 1,000 を超えるテーブルがある場合、テーブル名の最初の文字を入力するか、名前の一部の入力にワイルドカード (\*) を使用すると、目的のテーブルが表示されます。<br /><br /> **[バッチ サイズ]** : 一括読み込みのバッチのサイズを入力します。 これは、バッチとして読み込まれる行数です。|  
@@ -164,7 +164,7 @@ ms.locfileid: "71298213"
 #### <a name="truncation"></a>切り捨て  
  ODBC 入力先でフローの切り捨てを処理する方法 (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を選択します。  
   
-#### <a name="description"></a>[説明]  
+#### <a name="description"></a>説明  
  エラーの説明を表示します。  
   
 #### <a name="set-this-value-to-selected-cells"></a>[選択したセルに設定する値]  

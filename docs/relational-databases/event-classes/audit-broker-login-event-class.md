@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: babd96ee665a589456d3fda7ed7e2a5a13366d36
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67903516"
 ---
 # <a name="audit-broker-login-event-class"></a>Audit Broker Login イベント クラス
@@ -25,7 +25,7 @@ ms.locfileid: "67903516"
   
 ## <a name="audit-broker-login-event-class-data-columns"></a>Audit Broker Login イベント クラスのデータ列  
   
-|データ列|種類|[説明]|列番号|フィルターの適用|  
+|データ列|種類|説明|列番号|フィルターの適用|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|このイベント クラスでは使用しません。|10|はい|  
 |**ClientProcessID**|**int**|このイベント クラスでは使用しません。|9|はい|  
@@ -52,7 +52,7 @@ ms.locfileid: "67903516"
   
  次の表に、このイベント クラスのサブクラス値を示します。  
   
-|id|サブクラス|[説明]|  
+|id|サブクラス|説明|  
 |--------|--------------|-----------------|  
 |1|Login Success|Login Success イベントは、隣接するブローカー ログイン プロセスが正常に完了したことを報告するイベントです。|  
 |2|Login Protocol Error|Login Protocol Error イベントは、形式は整形式でも、ログイン プロセスの現在状態では無効なメッセージをブローカーが受け取ったことを報告するイベントです。 このメッセージは、失われたか、誤った順序で送信されている可能性があります。|  

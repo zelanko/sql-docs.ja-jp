@@ -16,10 +16,10 @@ ms.assetid: 4b7f7f62-43a3-49db-a72e-22d4d7c2ddbb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4d5d50306c8f9a072b9dfc28f7e3519b026cce71
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822622"
 ---
 # <a name="remove-an-availability-group-sql-server"></a>可用性グループの削除 (SQL Server)
@@ -32,17 +32,17 @@ ms.locfileid: "74822622"
 >  可能であれば、プライマリ レプリカをホストするサーバー インスタンスに接続しているときにのみ可用性グループを削除してください。 可用性グループをプライマリ レプリカから削除すると、元のプライマリ データベースで変更が許可されます (高可用性の保護なし)。 セカンダリ レプリカから可用性グループを削除すると、プライマリ レプリカは RESTORING 状態になり、変更はデータベースで許可されません。  
 
   
-## <a name="Restrictions"></a> 制限事項と推奨事項  
+## <a name="limitations-and-recommendations"></a><a name="Restrictions"></a> 制限事項と推奨事項  
   
 -   オンライン状態の可用性グループをセカンダリ レプリカから削除すると、プライマリ レプリカは RESTORING 状態になります。 したがって、可能であれば、プライマリ レプリカをホストするサーバー インスタンスから可用性グループのみを削除してください。    
 -   WSFC フェールオーバー クラスターから削除されたコンピューターで可用性グループを削除した場合、可用性グループはローカルからのみ削除されます。 
 -   Windows Server フェールオーバー クラスタリング (WSFC) クラスターにクォーラムがない場合は、可用性グループを削除しないでください。 クラスターのクォーラムがないときに可用性グループを削除すると、クラスターに格納されているメタデータ可用性グループは削除されません。 クラスターのクォーラムが再取得された後、WSFC クラスターから削除するために、可用性グループをもう一度削除する必要があります。    
 -   セカンダリ レプリカについては、DROP AVAILABILITY GROUP は緊急の目的だけに使用してください。 理由は、可用性グループを削除すると可用性グループがオフラインになるためです。 セカンダリ レプリカから可用性グループを削除した場合、プライマリ レプリカは、OFFLINE 状態がクォーラム損失、強制フェールオーバー、または DROP AVAILABILITY GROUP コマンドのどの原因で発生したのかを特定できません。 スプリット ブレイン状況の発生を防ぐために、プライマリ レプリカは RESTORING 状態に遷移します。 詳細については、「 [動作方法: DROP AVAILABILITY GROUP の動作](https://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) 」(CSS SQL Server エンジニアのブログ) を参照してください。  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  可用性グループの ALTER AVAILABILITY GROUP 権限、CONTROL AVAILABILITY GROUP 権限、ALTER ANY AVAILABILITY GROUP 権限、または CONTROL SERVER 権限が必要です。 ローカル サーバー インスタンスによってホストされていない可用性グループを削除するには、その可用性グループ上の CONTROL SERVER 権限または CONTROL 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  **可用性グループを削除するには**  
   
 1.  オブジェクト エクスプローラーで、プライマリ レプリカをホストするサーバー インスタンスに接続するか (可能な場合)、可用性グループの適切なセキュリティ資格情報を持つ WSFC ノード上の AlwaysOn 可用性グループに対して有効な別のサーバー インスタンスに接続します。 サーバー ツリーを展開します。  
@@ -59,7 +59,7 @@ ms.locfileid: "74822622"
   
 5.  **[可用性グループの削除]** ダイアログ ボックスで、表示された可用性グループを削除するために、 **[OK]** をクリックします。 表示された可用性グループをすべて削除しない場合は、 **[キャンセル]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  **可用性グループを削除するには**  
   
 1.  プライマリ レプリカをホストするサーバー インスタンスに接続するか (可能な場合)、可用性グループの適切なセキュリティ資格情報を持つ WSFC ノード上の AlwaysOn 可用性グループに対して有効な別のサーバー インスタンスに接続します。  
@@ -76,7 +76,7 @@ ms.locfileid: "74822622"
     DROP AVAILABILITY GROUP MyAG;  
     ```  
   
-##  <a name="PowerShellProcedure"></a> PowerShell の使用  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell の使用  
  **可用性グループを削除するには**  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell プロバイダーで次の操作を行います。  
@@ -99,7 +99,7 @@ ms.locfileid: "74822622"
   
 -   [SQL Server PowerShell プロバイダー](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="RelatedContent"></a> 関連コンテンツ  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 関連コンテンツ  
   
 -   [動作方法: DROP AVAILABILITY GROUP の動作](https://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) (CSS SQL Server エンジニアのブログ)  
   

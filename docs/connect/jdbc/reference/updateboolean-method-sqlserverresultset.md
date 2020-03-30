@@ -16,10 +16,10 @@ ms.assetid: 524ecc30-1587-47e1-812d-ddbc75163266
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: eb459d663bd48bd5d2a0f6a63667e37fb55e90f5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67996948"
 ---
 # <a name="updateboolean-method-sqlserverresultset"></a>updateBoolean メソッド (SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67996948"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|Name|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[updateBoolean (int, boolean)](../../../connect/jdbc/reference/updateboolean-method-int-boolean.md)|渡された列インデックスを使用して、指定された列を **boolean** の値で更新します。|  
 |[updateBoolean (java.lang.String, boolean)](../../../connect/jdbc/reference/updateboolean-method-java-lang-string-boolean.md)|渡された列名を使用して、指定された列を **boolean** の値で更新します。|  

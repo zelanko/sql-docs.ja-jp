@@ -11,10 +11,10 @@ ms.assetid: a8b16fdc-c748-49be-acf2-a6ac7432d16b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 902a1e986f79205dfd676c635ac54814382c2ec3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76941204"
 ---
 # <a name="pdoprepare"></a>PDO::prepare
@@ -29,9 +29,9 @@ PDOStatement PDO::prepare ( $statement [, array(key_pair)] )
 ```
 
 #### <a name="parameters"></a>パラメーター
-$*ステートメント*:SQL ステートメントを含む文字列。
+$*statement*: SQL ステートメントを含む文字列。
 
-*key_pair*:属性の名前と値を含む配列。 詳細については、「解説」を参照してください。
+*key_pair*: 属性の名前と値を含む配列。 詳細については、「解説」を参照してください。
 
 ## <a name="return-value"></a>戻り値
 成功した場合は、PDOStatement オブジェクトを返します。 失敗した場合は、PDOException オブジェクトを、または `PDO::ATTR_ERRMODE` の値によっては false を返します。
@@ -49,7 +49,7 @@ $*ステートメント*:SQL ステートメントを含む文字列。
 |PDO::SQLSRV_ATTR_DECIMAL_PLACES|フェッチされた通貨値の書式設定時に、小数点以下の桁数を指定します。 このオプションは `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` が true の場合のみ機能します。 詳細については、「[10 進数文字列と金額の書式設定 (PDO_SQLSRV ドライバー)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)」を参照してください。|
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|True の場合、直接クエリの実行を指定します。 False は、準備されたステートメントの実行です。 `PDO::SQLSRV_ATTR_DIRECT_QUERY` に関する詳細については、「[Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)」 (PDO_SQLSRV ドライバーでの直接ステートメント実行と準備されたステートメントの実行) を参照してください。|
 |PDO::SQLSRV_ATTR_ENCODING|PDO::SQLSRV_ENCODING_UTF8 (既定値)<br /><br />PDO::SQLSRV_ENCODING_SYSTEM<br /><br />PDO::SQLSRV_ENCODING_BINARY|
-|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|日付型と時刻型を [PHP DateTime](http://php.net/manual/en/class.datetime.php) オブジェクトを使用して取得するかどうかを指定します。 詳細については、「[PDO_SQLSRV ドライバーを使用して日付と時刻の型を PHP DateTime オブジェクトとして取得する](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)|  
+|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|日付型と時刻型を [PHP DateTime](http://php.net/manual/en/class.datetime.php) オブジェクトを使用して取得するかどうかを指定します。 詳細については、「[方法: PDO_SQLSRV ドライバーを使用して日付/時刻型を PHP DateTime オブジェクトとして取得する](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)」を参照してください。|  
 |PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|数値の SQL 型の列からの数値フェッチを処理します。 詳細については、「 [PDO::setAttribute](../../connect/php/pdo-setattribute.md)」を参照してください。|
 |PDO::SQLSRV_ATTR_FORMAT_DECIMALS|該当する場合に 10 進文字列の前にゼロを追加するかどうかを指定します。 このオプションを設定すると、`PDO::SQLSRV_ATTR_DECIMAL_PLACES` オプションが money 型の書式設定用に有効となります。 詳細については、「[10 進数文字列と金額の書式設定 (PDO_SQLSRV ドライバー)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)」を参照してください。| 
 |PDO::SQLSRV_ATTR_QUERY_TIMEOUT|詳細については、「 [PDO::setAttribute](../../connect/php/pdo-setattribute.md)」を参照してください。|
@@ -60,7 +60,7 @@ array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL, PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYP
 ```
 `PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE` に指定可能な値を次の表に示します。 スクロール可能なカーソルの詳細については、「[カーソルの種類 &#40;PDO_SQLSRV ドライバー&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)」を参照してください。
 
-|Value|説明|
+|値|説明|
 |---------|---------------|
 |PDO::SQLSRV_CURSOR_BUFFERED|クライアント側の (バッファー処理された) 静的カーソルを作成します。これは、クライアント マシンのメモリ内に結果セットをバッファー処理します。|
 |PDO::SQLSRV_CURSOR_DYNAMIC|サーバー側 (バッファーなし) の動的カーソルを作成します。これは、任意の順序で行にアクセスすることができ、変更内容がデータベースに反映されます。|
@@ -244,7 +244,7 @@ PDO_SQLSRV ドライバーでは最初に `PDO::bindParam()` に指定された�
 
 見つからない場合、`PDO::prepare()` または `PDOStatement::setAttribute()` にエンコーディングが設定されているかどうかドライバーによりチェックされます。 それ以外の場合、ドライバーでは `PDO::__construct()` または `PDO::setAttribute()` に指定されたエンコーディングが使用されます。
 
-さらに、バージョン5.8.0 以降では、`PDO::ATTR_EMULATE_PREPARES` を true に設定して PDO::p repare を使用する場合には、`N` プレフィックスが確実に使用されるように、ユーザーは [PHP 7.2 で導入された拡張文字列型](https://wiki.php.net/rfc/extended-string-types-for-pdo)を使用できます。 以下のスニペットでは、さまざまな代替方法を示しています。
+さらに、バージョン5.8.0 以降では、`PDO::ATTR_EMULATE_PREPARES` を true に設定して PDO::p repare を使用する場合には、[ プレフィックスが確実に使用されるように、ユーザーは ](https://wiki.php.net/rfc/extended-string-types-for-pdo)PHP 7.2 で導入された拡張文字列型`N`を使用できます。 以下のスニペットでは、さまざまな代替方法を示しています。
 
 > [!NOTE]
 > 既定では、emulate prepare が false に設定されます。この場合、拡張された PDO 文字列定数は無視されます。
@@ -295,7 +295,7 @@ $stmt->execute([':value' => $p]);
 ご覧のように、バインディングはドライバーによって内部的に行われます。 有効なクエリが実行のためにパラメーターなしでサーバーに送信されます。 通常のケースと比較すると、パラメーター化クエリ機能が使用されていない場合にいくつかの制限事項が発生します。
 
 - `PDO::PARAM_INPUT_OUTPUT` としてバインドされたパラメーターの場合は機能しません。
-    - ユーザーが `PDO::bindParam()` で `PDO::PARAM_INPUT_OUTPUT` を指定すると、PDO 例外がスローされます。
+    - ユーザーが `PDO::PARAM_INPUT_OUTPUT` で `PDO::bindParam()` を指定すると、PDO 例外がスローされます。
 - 出力パラメーターとしてバインドされたパラメーターの場合は機能しません。
     - ユーザーが準備されたステートメントを出力パラメーター用のプレースホルダーを使用して作成した場合 (つまり、`SELECT ? = COUNT(*) FROM Table1` のようにプレースホルダーのすぐ後に等号が指定されている場合)、PDO 例外がスローされます。
     - 準備されたステートメントにより、出力パラメーター用の引数としてプレースホルダーを使用してストアド プロシージャが呼び出された場合、ドライバーでは出力パラメーターを検出できないため、例外はスローされません。 一方で、ユーザーが出力パラメーター用に指定した変数は変更されません。

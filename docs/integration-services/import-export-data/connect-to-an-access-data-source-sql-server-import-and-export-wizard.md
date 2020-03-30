@@ -10,10 +10,10 @@ ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 67a361446c69425f6b05bef913ded568a7dcfd75
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296292"
 ---
 # <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>Access データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)
@@ -71,7 +71,7 @@ Access ファイルのパスとファイル名を指定します。 たとえば
 > [!NOTE]
 > 64 ビット バージョンの SQL Server インポートおよびエクスポート ウィザードを使用するには、SQL Server をインストールする必要があります。 SQL Server Data Tools (SSDT) および SQL Server Management Studio (SSMS) は 32 ビット アプリケーションであり、32 ビット バージョンのウィザードを含む、32 ビット ファイルのみがインストールされます。
 
-## <a name="officeDownloads"></a>Access に接続するために必要なファイルを取得する  
+## <a name="get-the-files-you-need-to-connect-to-access"></a><a name="officeDownloads"></a>Access に接続するために必要なファイルを取得する  
 Access と Excel を含む Microsoft Office データ ソース用の接続コンポーネントがまだインストールされていない場合は、必要に応じてダウンロードします。 [Microsoft Access データベース エンジン 2016 再頒布可能パッケージ](https://www.microsoft.com/download/details.aspx?id=54920)で、Access と Excel の両方のファイルの最新バージョンの接続コンポーネントをダウンロードします。
   
 以前のバージョンの Access で作成したファイルは、最新バージョンのコンポーネントで開くことができます。
@@ -82,7 +82,7 @@ Office 365 サブスクリプションがある場合は、Microsoft Access 2016
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
-## <a name="database_password"></a> データベース ファイルはパスワードで保護されているか
+## <a name="is-the-database-file-password-protected"></a><a name="database_password"></a> データベース ファイルはパスワードで保護されているか
 Access データベースがパスワードで保護されているものの、ワークグループの情報ファイルを使用していない場合があります。 すべてのユーザーが同じパスワードを指定する必要がありますが、ユーザー名を入力する必要はありません。 データベースのパスワードを提供するには、次の手順を実行します。
 
 1.  **[データ ソースの選択]** または **[変換先の選択]** ページで、 **[詳細設定]** をクリックして、 **[データ リンク プロパティ]** ダイアログ ボックスを開きます。  

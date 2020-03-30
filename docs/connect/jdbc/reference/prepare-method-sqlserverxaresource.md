@@ -16,10 +16,10 @@ ms.assetid: f800c966-3fae-41b3-963a-464988f80da3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4ae595ee4912251fc6e97d272202812e3d51dda5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67976318"
 ---
 # <a name="prepare-method-sqlserverxaresource"></a>prepare メソッド (SQLServerXAResource)
@@ -37,10 +37,10 @@ public int prepare(javax.transaction.xa.Xid xid)
 #### <a name="parameters"></a>パラメーター  
  *xid*  
   
- Xid オブジェクト。  
+ Xid オブジェクトです。  
   
 ## <a name="return-value"></a>戻り値  
- **int** 値。  
+ **int** 値です。  
   
 ## <a name="exceptions"></a>例外  
  javax.transaction.xa.XAException  

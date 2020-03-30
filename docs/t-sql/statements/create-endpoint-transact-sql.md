@@ -32,10 +32,10 @@ ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0a320b01433ad95f4bd695a3f700b7e7bb9ba653
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67902832"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
@@ -53,7 +53,7 @@ ms.locfileid: "67902832"
   
      この部分では、エンドポイントでサポートされているペイロードを定義します。 ペイロードには、サポートされている [!INCLUDE[tsql](../../includes/tsql-md.md)]、Service Broker、データベース ミラーリングのうちのいずれかを指定できます。 ここでは、言語固有の情報も指定できます。  
   
-> **注:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] からは、ネイティブ XML Web サービス (SOAP/HTTP エンドポイント) は削除されました。  
+> **注:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] でネイティブ XML Web サービス (SOAP/HTTP エンドポイント) は削除されました。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -138,7 +138,7 @@ FOR DATABASE_MIRRORING (
  FOR { TSQL | SERVICE_BROKER | DATABASE_MIRRORING }  
  ペイロードの種類を指定します。  
   
- 現時点では、`<language_specific_arguments>` パラメーターに渡す [!INCLUDE[tsql](../../includes/tsql-md.md)] 言語固有の引数はありません。  
+ 現時点では、[!INCLUDE[tsql](../../includes/tsql-md.md)] パラメーターに渡す `<language_specific_arguments>` 言語固有の引数はありません。  
   
  **TCP プロトコル オプション**  
   
@@ -150,7 +150,7 @@ FOR DATABASE_MIRRORING (
  LISTENER_IP **=** ALL | **(** _4-part-ip_ **)**  |  **(** "*ip_address_v6*" **)**  
  エンドポイントが受信待ちする IP アドレスを指定します。 既定値は ALL です。 したがって、リスナーによって任意の有効な IP アドレスでの接続が許可されます。  
   
- 完全修飾ドメイン名の代わりに IP アドレスを使用してデータベース ミラーリングを構成する (`ALTER DATABASE SET PARTNER = partner_IP_address` または `ALTER DATABASE SET WITNESS = witness_IP_address`) 場合は、ミラーリング エンドポイントの作成時に `LISTENER_IP=ALL` の代わりに `LISTENER_IP =IP_address` を指定する必要があります。  
+ 完全修飾ドメイン名の代わりに IP アドレスを使用してデータベース ミラーリングを構成する (`ALTER DATABASE SET PARTNER = partner_IP_address` または `ALTER DATABASE SET WITNESS = witness_IP_address`) 場合は、ミラーリング エンドポイントの作成時に `LISTENER_IP =IP_address` の代わりに `LISTENER_IP=ALL` を指定する必要があります。  
   
  **SERVICE_BROKER オプションと DATABASE_MIRRORING オプション**  
   

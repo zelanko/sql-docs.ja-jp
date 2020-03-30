@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: e5ccf4831cf882eedd4b2b95894d44457402bb6e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67994163"
 ---
 # <a name="updating-data-in-sql-server-cursors"></a>SQL Server カーソルでのデータ更新
@@ -38,7 +38,7 @@ ms.locfileid: "67994163"
 ## <a name="immediate-and-delayed-update-modes"></a>即時更新モードと遅延更新モード  
  即時更新モードでは、**IRowsetChange::SetData** を呼び出すたびに、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] との間にラウンドトリップが発生します。 コンシューマーが 1 つの行に複数の変更を加える場合は、**SetData** を 1 回呼び出してすべての変更を実行する方が効率が高くなります。  
   
- 遅延更新モードでは、**IRowsetUpdate::Update** の *cRows* パラメーターと *rghRows* パラメーターに示される行ごとに、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] との間にラウンドトリップが発生します。  
+ 遅延更新モードでは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]IRowsetUpdate::Update*の*cRows*パラメーターと*rghRows **パラメーターに示される行ごとに、** との間にラウンドトリップが発生します。  
   
  どちらのモードでも、行セットに対してトランザクション オブジェクトが開いていないときは、1 つのラウンドトリップが個別のトランザクションを表します。  
   

@@ -19,10 +19,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 5800bd00faac0c34052a5930cfdb1ccaf86afbcb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75257879"
 ---
 # <a name="use-tokens-in-job-steps"></a>ジョブ ステップでのトークンの使用
@@ -62,7 +62,7 @@ ms.locfileid: "75257879"
   
 ### <a name="sql-server-agent-tokens"></a>SQL Server エージェントのトークン  
   
-|トークン|[説明]|  
+|トークン|説明|  
 |---------|---------------|  
 |**(A-DBN)**|データベース名。 ジョブが警告によって実行される場合、ジョブ ステップのこのトークンは自動的にデータベース名の値に置き換えられます。|  
 |**(A-SVR)**|サーバー名。 ジョブが警告によって実行される場合、ジョブ ステップのこのトークンは自動的にサーバー名の値に置き換えられます。|  
@@ -89,7 +89,7 @@ ms.locfileid: "75257879"
   
 ### <a name="sql-server-agent-escape-macros"></a>SQL Server エージェントのエスケープ マクロ  
   
-|エスケープ マクロ|[説明]|  
+|エスケープ マクロ|説明|  
 |-----------------|---------------|  
 |**$(ESCAPE_SQUOTE(** _token\_name_ **))**|トークンの置換後の文字列にある単一引用符 (') をエスケープします。 1 つの単一引用符を 2 つの連続する単一引用符に置き換えます。|  
 |**$(ESCAPE_DQUOTE(** _token\_name_ **))**|トークンの置換後の文字列にある二重引用符 (") をエスケープします。 1 つの二重引用符を 2 つの連続する二重引用符に置き換えます。|  

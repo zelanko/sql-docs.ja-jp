@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9c1b80a81aa6c05727b0711e68219d5c0aa32cb9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75325514"
 ---
 # <a name="create-indexed-views"></a>インデックス付きビューの作成
@@ -31,7 +31,7 @@ ms.locfileid: "75325514"
 
 この記事では、ビューにインデックスを作成する方法について説明します。 ビューに作成する最初のインデックスは、一意なクラスター化インデックスにする必要があります。 一意のクラスター化インデックスを作成した後は、非クラスター化インデックスを追加で作成できます。 ビューに一意のクラスター化インデックスを作成すると、そのビューは、クラスター化インデックスが定義されているテーブルと同じ方法でデータベースに格納されるので、クエリのパフォーマンスが向上します。 クエリ オプティマイザーではインデックス付きビューを使って、クエリの実行速度を高めることができます。 オプティマイザーでビューを代用するかどうかを判別するために、ビューがクエリで参照されている必要はありません。
 
-## <a name="BeforeYouBegin"></a> はじめに
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに
 
 次の手順は、インデックス付きビューの作成に必要な手順であり、インデックス付きビューの正常な実装に不可欠です。
 
@@ -47,7 +47,7 @@ ms.locfileid: "75325514"
 >
 > <sup>1</sup> 更新、削除、挿入操作など。
 
-### <a name="Restrictions"></a> インデックス付きビューに必要な SET オプション
+### <a name="required-set-options-for-indexed-views"></a><a name="Restrictions"></a> インデックス付きビューに必要な SET オプション
 
 クエリの実行時、異なる SET オプションがアクティブになっている場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は同じ式を評価しても異なる結果を生成することがあります。 たとえば、SET のオプション `CONCAT_NULL_YIELDS_NULL` を ON に設定すると、式 `'abc' + NULL` は値 `NULL` を返すようになります。 一方、`CONCAT_NULL_YIELDS_NULL` を OFF に設定すると、同じ式を実行が `'abc'` を生成するようになります。
 
@@ -131,13 +131,13 @@ SET オプションと決定的な関数の要件に加えて、次の要件を�
 > [!IMPORTANT]
 > テンポラル クエリ (`FOR SYSTEM_TIME` 句を使うクエリ) 上では、インデックス付きビューはサポートされていません。
 
-### <a name="Recommendations"></a> 推奨事項
+### <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項
 
 インデックス付きビューで **datetime** 文字リテラルと **smalldatetime** 文字列リテラルを参照するときは、決定的な日付形式スタイルを使用して、そのリテラルを目的の日付型に明示的に変換することをお勧めします。 決定的な日付形式の一覧については、「[CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)」を参照してください。 決定的な式と非決定的な式の詳細については、このページの「[考慮事項](#nondeterministic)」セクションを参照してください。
 
 多数のインデックス付きビュー、または少数ではあるものの非常に複雑なインデックス付きビューで参照されるテーブルに対して DML (`UPDATE`、`DELETE`、`INSERT` など) を実行する場合、DML 実行時にこれらのインデックス付きビューを更新する必要もあります。 その結果、DML クエリのパフォーマンスが大幅に低下する場合があります。また、場合によっては、クエリ プランを生成できないこともあります。 このようなシナリオでは、運用環境で使用する前に DML クエリをテストし、クエリ プランを分析してから DML ステートメントを調整/簡素化します。
 
-### <a name="Considerations"></a> 考慮事項
+### <a name="considerations"></a><a name="Considerations"></a> 考慮事項
 
 インデックス付きビューの列の **large_value_types_out_of_row** オプションの設定は、ベース テーブルの対応する列の設定が継承されます。 この値は、 [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)を使用して設定します。 式から形成される列に対する既定の設定は 0 です。 つまり、大きい値の型は行内に格納されます。
 
@@ -151,13 +151,13 @@ SET オプションと決定的な関数の要件に加えて、次の要件を�
 
 <a name="nondeterministic"></a>**datetime** 型または **smalldatetime** 型への文字列の暗黙的な変換が必要な式は非決定的であると見なされます。 詳細については、「[リテラル日付文字列を DATE 値に非決定論的に変換する](../../t-sql/data-types/nondeterministic-convert-date-literals.md)」を参照してください。
 
-### <a name="Security"></a> セキュリティ
+### <a name="security"></a><a name="Security"></a> セキュリティ
 
-#### <a name="Permissions"></a> Permissions
+#### <a name="permissions"></a><a name="Permissions"></a> Permissions
 
 データベースの **CREATE VIEW** アクセス許可と、ビューが作成されているスキーマの **ALTER** アクセス許可が必要です。
 
-## <a name="TsqlProcedure"></a> Transact-SQL の使用
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用
 
 ### <a name="to-create-an-indexed-view"></a>インデックス付きビューを作成するには
 

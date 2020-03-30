@@ -12,10 +12,10 @@ ms.author: mikeray
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.openlocfilehash: fade888b904b6be436e78cc38f9fc77bc8ee734d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75307072"
 ---
 # <a name="complete-the-post-installation-steps"></a>インストール後の手順の実行
@@ -26,7 +26,7 @@ ms.locfileid: "75307072"
   
 ## <a name="to-complete-the-post-installation-steps"></a>インストール後の手順を実行するには  
   
-1. **ファイアウォール規則を作成する**:コントローラー コンピューターとクライアント コンピューターで、対応するサービスのファイアウォール経由の受信トラフィックを許可する必要があります。 インストール フォルダーに配置されているサービス実行可能ファイルのファイアウォール ルールを指定します。  
+1. **ファイアウォール ルールを作成する**: コントローラー コンピューターとクライアント コンピューターで、対応するサービスのファイアウォール経由の受信トラフィックを許可する必要があります。 インストール フォルダーに配置されているサービス実行可能ファイルのファイアウォール ルールを指定します。  
   
     1. コントローラー サービスの場合は、インストール フォルダーにある **DReplayController.exe**のルールを作成します。 たとえば、次のコマンドを実行すると、このルールが有効になります ( `%InstallPath%` はサービスのインストール フォルダーです)。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "75307072"
   
          `netsh advfirewall firewall add rule name="allow dreplay client" dir=in program="%InstallPath%\DReplayClient\DReplayClient.exe" action=allow`  
   
-2. **ターゲット サーバーで各クライアントの権限を与える**:クライアント コンピューターへのクライアント サービスのインストールが完了したら、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のターゲット インスタンスの sysadmin ロールにクライアント サービス アカウントを手動で追加する必要があります。  
+2. **ターゲット サーバーで各クライアントの権限を与える**: クライアント コンピューターへのクライアント サービスのインストールが完了したら、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の対象インスタンスの sysadmin ロールにクライアント サービス アカウントを手動で追加する必要があります。  
   
 ## <a name="net-framework-security"></a>.NET Framework のセキュリティ
 

@@ -11,10 +11,10 @@ ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2461413e6f41c82404ac11cc5769b74993f13ed8
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77004537"
 ---
 # <a name="building-the-connection-url"></a>接続 URL の構築
@@ -50,7 +50,7 @@ ms.locfileid: "77004537"
 > [!NOTE]  
 >  前の例では接続文字列でユーザー名とパスワードを使用していますが、より安全な統合セキュリティを使用する必要があります。 詳細については、後の「[Windows 上で統合認証を使用する接続](#Connectingintegrated)」セクションを参照してください。  
   
- 次の接続文字列は、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] でサポートされている任意のオペレーティング システム上で実行中のアプリケーションから統合認証および Kerberos を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに接続する方法の例を示しています。  
+ 次の接続文字列は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされている任意のオペレーティング システム上で実行中のアプリケーションから統合認証および Kerberos を使用して [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] データベースに接続する方法の例を示しています。  
   
 ```java
 jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationScheme=JavaKerberos  
@@ -91,7 +91,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
 > [!NOTE]  
 >  中かっこ内の空白はリテラルでありトリミングされません。  
   
-##  <a name="Connectingintegrated"></a> Windows 上で統合認証を使用する接続  
+##  <a name="connecting-with-integrated-authentication-on-windows"></a><a name="Connectingintegrated"></a> Windows 上で統合認証を使用する接続  
  JDBC ドライバーでは、integratedSecurity 接続文字列プロパティを通じて、Windows オペレーティング システム上でのタイプ 2 の統合認証の使用がサポートされています。 統合認証を使用するには、JDBC ドライバーがインストールされているコンピューターの Windows システム パス上のディレクトリに mssql-jdbc_auth-\<バージョン>-\<arch>.dll ファイルをコピーします。  
   
  mssql-jdbc_auth-\<バージョン>-\<arch>.dl ファイルは次の場所にインストールされます。  
@@ -122,7 +122,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  `Connection con = DriverManager.getConnection("jdbc:sqlserver://;integratedSecurity=true;", pro);`  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [JDBC ドライバーによる SQL Server への接続](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   
   

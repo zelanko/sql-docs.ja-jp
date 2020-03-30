@@ -12,10 +12,10 @@ author: yitam
 ms.author: v-yitam
 manager: v-mabarw
 ms.openlocfilehash: bd60bff3ab9ee19b1a1d2435e69651ea054689e7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76913325"
 ---
 # <a name="non-system-locale-settings"></a>システム ロケール以外の設定
@@ -58,7 +58,7 @@ pdo_sqlsrv.set_locale_info = <option>
 
 1. オプション 0 -- アプリケーション ロケールを変更しない場合にこれを使用します。
 
-1. オプション 1 -- これを使用すると、他の `LC_xxx` カテゴリに影響を与えずに、`LC_CTYPE` のシステム値のみが設定されます。
+1. オプション 1 -- これを使用すると、他の `LC_CTYPE` カテゴリに影響を与えずに、`LC_xxx` のシステム値のみが設定されます。
 
 1. オプション 2 -- `LC_ALL` を使用すると、すべての `LC_xxx` カテゴリがオーバーライドされ、php アプリケーションとその拡張機能に影響が及びます。
 

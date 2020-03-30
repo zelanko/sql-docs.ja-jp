@@ -18,10 +18,10 @@ ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: df39ac4151bb5860db970d423edcbe7064178a08
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75241780"
 ---
 # <a name="differences-between-availability-modes-for-an-always-on-availability-group"></a>Always On 可用性グループの可用性モードの違い
@@ -33,7 +33,7 @@ ms.locfileid: "75241780"
 > [!NOTE]  
 >  セカンダリ レプリカがプライマリのセッション タイムアウト期間を超えた場合、プライマリ レプリカはそのセカンダリ レプリカに対して一時的に非同期コミット モードに移行します。 セカンダリ レプリカがプライマリ レプリカと再接続すると、同期コミット モードが再開されます。  
   
-##  <a name="SupportedAvModes"></a> サポートされる可用性モード  
+##  <a name="supported-availability-modes"></a><a name="SupportedAvModes"></a> サポートされる可用性モード  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] は、次のように、非同期コミット モード、同期コミット モード、および構成のみモードの 3 種類の可用性モードをサポートします。  
   
 -   *非同期コミット モード* は、可用性レプリカが離れた距離に分散されている場合に正常に利用できる災害復旧ソリューションです。 すべてのセカンダリ レプリカが非同期コミット モードで実行されている場合、プライマリ レプリカは、いずれかのセカンダリ レプリカによりログが書き込まれるまで待機しません。 ログ レコードがローカル ログ ファイルに書き込まれるとすぐに、プライマリ レプリカはクライアントにトランザクションの確認を送信します。 プライマリ レプリカは、非同期コミット モードが構成されているセカンダリ レプリカに対して、トランザクションの遅延を最小限に抑えて実行されます。  現在のプライマリに非同期コミット可用性モードが構成されている場合、このプライマリは、セカンダリの個々の可用性モードの設定に関係なく、すべてのセカンダリ レプリカに対してトランザクションを非同期にコミットします。  
@@ -61,14 +61,14 @@ ms.locfileid: "75241780"
   
  通常、非同期コミット レプリカとしてのノード 04 が災害復旧サイトに配置されます。 ノード 04 にフェールオーバーした後もノード 01、02、03 は非同期コミット モードにとどまるため、2 つのサイト間の長いネットワーク待機時間が原因で可用性グループに生じるパフォーマンスの低下を回避できます。  
   
-##  <a name="AsyncCommitAvMode"></a> Asynchronous-Commit Availability Mode  
+##  <a name="asynchronous-commit-availability-mode"></a><a name="AsyncCommitAvMode"></a> Asynchronous-Commit Availability Mode  
  *非同期コミット モード*では、セカンダリ レプリカがプライマリ レプリカと同期されることはありません。 特定のセカンダリ データベースが対応するプライマリ データベースからの遅れを取り戻す場合もありますが、セカンダリ データベースはどの時点でも遅延する可能性があります。 非同期コミット モードは、プライマリ レプリカから非常に離れた場所にセカンダリ レプリカがあり、軽度のエラーによるプライマリ レプリカへの影響でも不都合が生じる災害復旧シナリオ、または同期によるデータ保護よりもパフォーマンスの方が重要な場合に役立ちます。 また、プライマリ レプリカはセカンダリ レプリカから送信される確認を待機しないため、セカンダリ レプリカの問題がプライマリ レプリカに影響することはありません。  
   
  非同期コミット セカンダリ レプリカは、プライマリ レプリカから受信するログ レコードとの時間差を埋めようとします。 ただし、非同期コミット セカンダリ データベースは常に同期されていない状態であり、対応するプライマリ データベースよりも若干遅れる可能性があります。 通常、非同期コミット セカンダリ データベースと対応するプライマリ データベース間の時間差はわずかですが、 セカンダリ レプリカをホストするサーバーに負荷がかかり過ぎている場合やネットワークが低速の場合は、この時間差が大きくなります。  
   
  非同期コミット モードでサポートされるフェールオーバーは、強制フェールオーバーのみです (データ損失の可能性あり)。 フェールオーバーの強制は、現在のプライマリ レプリカが長期間使用できない状態のままであり、データを失うリスクよりもプライマリ データベースがすぐに使用できるようになることの方が重要である場合にのみ、最後の手段として使用します。フェールオーバー ターゲットとなるレプリカは、ロールが SECONDARY 状態または RESOLVING 状態であることが必要です。 フェールオーバー ターゲットはプライマリ ロールに移行し、データベースのコピーがプライマリ データベースになります。 元のプライマリ データベースが使用できるようになると、残りのセカンダリ データベースと元のプライマリ データベースは手動で個別に再開されるまで中断されます。 非同期コミット モードでは、元のプライマリ レプリカから元のセカンダリ レプリカにまだ送信されていなかったトランザクション ログはすべて失われます。 つまり、一部またはすべての新しいプライマリ データベースで、最近コミットされたトランザクションが欠落している可能性があります。 強制フェールオーバーのしくみと、強制フェールオーバーを使用する際のベスト プラクティスの詳細については、「 [フェールオーバーとフェールオーバー モード &#40;AlwaysOn 可用性グループ&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)」を参照してください。  
   
-##  <a name="SyncCommitAvMode"></a> Synchronous-Commit Availability Mode  
+##  <a name="synchronous-commit-availability-mode"></a><a name="SyncCommitAvMode"></a> Synchronous-Commit Availability Mode  
  同期コミット可用性モード (*同期コミット モード*) では、セカンダリ データベースは可用性グループに参加すると、対応するプライマリ データベースからの遅れを取り戻し、SYNCHRONIZED 状態になります。 データの同期が継続されている間は、セカンダリ データベースは SYNCHRONIZED のままです。 これにより、特定のプライマリ データベースでコミットされたすべてのトランザクションが、対応するセカンダリ データベースでもコミットされていることが保証されます。 特定のセカンダリ レプリカのすべてのセカンダリ データベースが同期されると、セカンダリ レプリカ全体の同期状態が HEALTHY になります。  
   
  **このセクションの内容**  
@@ -81,7 +81,7 @@ ms.locfileid: "75241780"
   
 -   [自動フェールオーバーを指定した同期コミット モード](#SyncCommitWithAuto)  
   
-###  <a name="DisruptSync"></a> データの同期が中断する要因  
+###  <a name="factors-that-disrupt-data-synchronization"></a><a name="DisruptSync"></a> データの同期が中断する要因  
  すべてのデータベースが同期されると、セカンダリ レプリカは HEALTHY 状態になります。 次のいずれかの状況にならない限り、同期されたセカンダリ レプリカは HEALTHY のままです。  
   
 -   ネットワークやコンピューターの遅延または不具合が原因で、セカンダリ レプリカとプライマリ レプリカ間のセッションがタイムアウトになった。  
@@ -100,7 +100,7 @@ ms.locfileid: "75241780"
 > [!TIP]  
 >  可用性グループ、可用性レプリカ、または可用性データベースの同期状態を確認するには、 **sys.dm_hadr_availability_group_states** 、 **sys.dm_hadr_availability_replica_states** 、または [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md)それぞれの [synchronization_health](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md)列または [synchronization_health_desc](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)列に対してクエリを実行します。  
   
-###  <a name="HowSyncWorks"></a> セカンダリ レプリカでの同期のしくみ  
+###  <a name="how-synchronization-works-on-a-secondary-replica"></a><a name="HowSyncWorks"></a> セカンダリ レプリカでの同期のしくみ  
  同期コミット モードでは、セカンダリ レプリカは可用性グループに参加してプライマリ レプリカとのセッションを確立した後、受信したログ レコードをディスクに書き込み (*ログ書き込み*)、プライマリ レプリカに確認メッセージを送信します。 セカンダリ データベースの書き込まれたログがプライマリ データベースのログの末尾に追い付くと、セカンダリ データベースの状態は SYNCHRONIZED に設定されます。 同期に必要な時間は、主にセッションの開始時にセカンダリ データベースがプライマリ データベースからどれだけ遅れたか (プライマリ レプリカから最初に受信したログ レコード数によって測定)、プライマリ データベースのワークロード、およびセカンダリ レプリカをホストするサーバー インスタンスのコンピューター速度に依存します。  
   
  同期操作は次のように行われます。  
@@ -118,10 +118,10 @@ ms.locfileid: "75241780"
   
  同期コミット モードでは、2 か所間のデータの同期を要求することによってデータを保護しますが、トランザクションの遅延が多少大きくなるというデメリットもあります。  
   
-### <a name="SyncCommitWithManual"></a> 手動フェールオーバーのみを指定した同期コミット モード  
+### <a name="synchronous-commit-mode-with-only-manual-failover"></a><a name="SyncCommitWithManual"></a> 手動フェールオーバーのみを指定した同期コミット モード  
  これらのレプリカが接続され、データベースが同期されている場合、手動フェールオーバーがサポートされます。 セカンダリ レプリカがダウンしても、プライマリ レプリカは影響を受けません。 SYNCHRONIZED 状態のレプリカが存在しない場合、プライマリ レプリカは公開された状態で (つまり、データをセカンダリ レプリカに送信せずに) 実行されます。 プライマリ レプリカが利用できなくなると、セカンダリ レプリカが RESOLVING 状態になりますが、データベース所有者はセカンダリ レプリカへの強制フェールオーバーを実行できます (データを損失する可能性もあります)。 詳細については、「 [フェールオーバーとフェールオーバー モード &#40;AlwaysOn 可用性グループ&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)、または PowerShell を使用して、AlwaysOn 可用性グループ上で計画的な手動フェールオーバーまたは強制手動フェールオーバー (強制フェールオーバー) を実行する方法について説明します。  
   
-###  <a name="SyncCommitWithAuto"></a> 自動フェールオーバーを指定した同期コミット モード  
+###  <a name="synchronous-commit-mode-with-automatic-failover"></a><a name="SyncCommitWithAuto"></a> 自動フェールオーバーを指定した同期コミット モード  
  自動フェールオーバーは、プライマリ レプリカが機能しなくなった後もデータベースをすぐに再度使用できるようにすることで、高可用性を実現します。 可用性グループを自動フェールオーバー用に構成するには、現在のプライマリ レプリカと少なくとも 1 つのセカンダリ レプリカの両方を、自動フェールオーバーを指定した同期コミット モードに設定する必要があります。 最大 3 つの自動フェールオーバー レプリカを所有することができます。  
   
  さらに、特定の時点で自動フェールオーバーを実行するには、このセカンダリ レプリカがプライマリ レプリカと同期されている (つまり、すべてのセカンダリ レプリカが同期されている) 必要があるだけでなく、Windows Server フェールオーバー クラスタリング (WSFC) クラスターがクォーラムを持っている必要もあります。 プライマリ レプリカが使用できなくなると、これらの条件で自動フェールオーバーが発生します。 セカンダリ レプリカはプライマリ ロールに切り替わり、そのデータベースをプライマリ データベースとして提供します。 詳細については、「[フェールオーバーとフェールオーバー モード &#40;AlwaysOn 可用性グループ&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)」トピックの「自動フェールオーバー」セクションを参照してください。  
@@ -138,7 +138,7 @@ ms.locfileid: "75241780"
 
 セカンダリ レプリカでの再実行待機時間の調査方法について詳しくは、[プライマリの変更がセカンダリ レプリカで反映されない場合のトラブルシューティング](../../../database-engine/availability-groups/windows/troubleshoot-primary-changes-not-reflected-on-secondary.md)に関するページを参照してください。
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
  **可用性モードとフェールオーバー モードを変更するには**  
   
 -   [可用性レプリカの可用性モードの変更 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)  
@@ -169,7 +169,7 @@ ms.locfileid: "75241780"
   
 -   [sys.dm_hadr_database_replica_states &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)  
   
-##  <a name="RelatedContent"></a> 関連コンテンツ  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 関連コンテンツ  
   
 -   [高可用性と災害復旧のための Microsoft SQL Server AlwaysOn ソリューション ガイド](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

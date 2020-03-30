@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/01/2017
 ms.openlocfilehash: 26ea58eaaaffbbd0c53d78ca971f472413be322b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082259"
 ---
 # <a name="add-and-verify-a-data-connection-report-builder-and-ssrs"></a>データ接続を追加および確認する (レポート ビルダーおよび SSRS)
@@ -52,9 +52,9 @@ ms.locfileid: "77082259"
 
 2. **[接続テスト]** をクリックします。
 
-3. 接続に成功すると、次のメッセージが表示されます: "接続が正常に作成されました"。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3. 接続に成功すると、"接続が正常に作成されました" というメッセージが表示されます。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-4. 接続に成功しなかった場合は、次のメッセージが表示されます: "データ ソースに接続できません"。  
+4. 接続に成功しなかった場合は、"データ ソースに接続できません。" というメッセージが表示されます。  
 
 5. **[詳細]** をクリックし、情報に基づいて問題を修正します。
 
@@ -62,9 +62,9 @@ ms.locfileid: "77082259"
 
 6. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [レポート データセット (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
 - [レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)
 - [レポートの検索、表示、管理 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)
-- [データ接続文字列を作成する - レポート ビルダーおよび SSRS](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)
+- [データ接続文字列の作成 - レポート ビルダーおよび SSRS](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)

@@ -21,10 +21,10 @@ ms.assetid: 9702e90c-fada-4978-a473-1b1423017d80
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3290aa2297ca849ed175b7db109f6b200debc789
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295680"
 ---
 # <a name="integration-services-roles-ssis-service"></a>Integration Services のロール (SSIS サービス)
@@ -93,7 +93,7 @@ ms.locfileid: "71295680"
   
      リーダー ロールおよびライター ロールをそれぞれのパッケージに割り当てることができます。  
 
-## <a name="assign"></a> リーダー ロールおよびライター ロールをパッケージに割り当てる
+## <a name="assign-a-reader-and-writer-role-to-a-package"></a><a name="assign"></a> リーダー ロールおよびライター ロールをパッケージに割り当てる
   リーダー ロールおよびライター ロールをそれぞれのパッケージに割り当てることができます。  
   
 ### <a name="assign-a-reader-and-writer-role-to-a-package"></a>リーダー ロールおよびライター ロールをパッケージに割り当てる  
@@ -108,7 +108,7 @@ ms.locfileid: "71295680"
   
 5.  **[OK]** をクリックします。
 
-## <a name="create"></a> ユーザー定義ロールを作成する
+## <a name="create-a-user-defined-role"></a><a name="create"></a> ユーザー定義ロールを作成する
     
 ### <a name="to-create-a-user-defined-role"></a>ユーザー定義ロールを作成するには  
   
@@ -134,7 +134,7 @@ ms.locfileid: "71295680"
   
 11. **[OK]** をクリックします。
 
-## <a name="roles_dialog"></a> [パッケージのロール] ダイアログ ボックスの UI リファレンス
+## <a name="package-roles-dialog-box-ui-reference"></a><a name="roles_dialog"></a> [パッケージのロール] ダイアログ ボックスの UI リファレンス
   **の** [パッケージのロール] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ダイアログ ボックスを使用すると、パッケージに対する読み取りアクセス権のあるデータベースレベル ロールおよびパッケージに対する書き込みアクセス権のあるデータベースレベル ロールを指定できます。 データベースレベル ロールは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb** データベースに格納されたパッケージにのみ適用されます。  
   
  ダイアログ ボックスに一覧表示されたロールは、 **msdb** システム データベースの現在のデータベース ロールです。 ロールが選択されていない場合は、既定の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ロールが適用されます。 リーダー ロールには、既定では、 **db_ssisadmin**および **db_ssisoperator**と、パッケージを作成したユーザーが含まれています。 ユーザーがこれらのロールのいずれかのメンバー、またはパッケージを作成したユーザーである場合は、パッケージの列挙、表示、エクスポート、および実行が可能です。 ライター ロールには、既定では、 **db_ssisadmin** と、パッケージを作成したユーザーが含まれています。 ユーザーがこのロールのメンバー、またはパッケージを作成したユーザーである場合は、パッケージのインポート、削除、変更を行うことができます。  

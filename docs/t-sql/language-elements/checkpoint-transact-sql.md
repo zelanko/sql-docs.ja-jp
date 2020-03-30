@@ -27,10 +27,10 @@ ms.assetid: ccdfc689-ad4e-44c0-83f7-0f2cfcfb6406
 author: juliemsft
 ms.author: jrasnick
 ms.openlocfilehash: d662eb333ae932370c09847319cb69a5deb4773e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67950332"
 ---
 # <a name="checkpoint-transact-sql"></a>CHECKPOINT (Transact-SQL)
@@ -59,7 +59,7 @@ CHECKPOINT [ checkpoint_duration ]
   
  *checkpoint_duration* の使用によるパフォーマンスへの影響は、ダーティ ページの数、システムにあるアクティビティ、実際に指定された時間によって異なります。 たとえば、通常、チェックポイントが 120 秒で完了する場合、*checkpoint_duration* を 45 秒に設定すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって、既定で割り当てられるリソースよりも多くのリソースがチェックポイントに割り当てられます。 逆に、*checkpoint_duration* を 180 秒に指定すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、既定で割り当てられるリソースよりも少ないリソースしか割り当てられません。 一般に、*checkpoint_duration* が短いとチェックポイントに割り当てるリソースが増え、*checkpoint_duration* が長いとチェックポイントに割り当てるリソースが減ります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、常に可能な限りチェックポイントを完了し、チェックポイントが完了するとすぐに CHECKPOINT ステートメントによって値が返されます。 したがってチェックポイントの完了は、状況に応じて、指定した時間よりも早まったり、遅くなったりすることがあります。  
   
-##  <a name="Security"></a> セキュリティ  
+##  <a name="security"></a><a name="Security"></a> セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
  CHECKPOINT 権限は、既定では、**sysadmin** 固定サーバー ロールと、**db_owner** および **db_backupoperator** 固定データベース ロールのメンバーに与えられており、この権限は譲渡できません。  

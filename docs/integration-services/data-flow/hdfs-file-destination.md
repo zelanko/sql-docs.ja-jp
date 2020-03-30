@@ -13,10 +13,10 @@ ms.assetid: 4338ce9f-c077-4301-aca5-47ed070ec94d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: eec72a0421576ed4c09d35cd19bb0d842bd08f78
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71292374"
 ---
 # <a name="hdfs-file-destination"></a>HDFS ファイル変換先
@@ -58,7 +58,7 @@ Java ビルドのアーキテクチャ (32/64 ビット) は、SSIS ランタイ
 2. コマンド プロンプトから `sysdm.cpl` を実行します。
 3. **[詳細設定]** タブの **[環境変数]** を選択します。
 4. **[システム変数]** セクションで **[新規]** を選択します。
-5. **[変数名]** に「`JAVA_HOME`」と入力します。
+5. `JAVA_HOME`[変数名] **に「** 」と入力します。
 6. **[ディレクトリの参照]** を選択し、解凍したフォルダーに移動し、`jre` サブフォルダーを選択します。
    **[OK]** を選択すると、**変数の値**が自動的に入力されます。
 7. **[OK]** を選択し、 **[新しいシステム変数]** ダイアログ ボックスを閉じます。

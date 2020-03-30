@@ -16,10 +16,10 @@ ms.assetid: f4a44a35-0f44-4a42-91d5-d73ac658a3b0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 491016d02dfdb890914633333e19a3138c01779d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68041354"
 ---
 # <a name="transaction-log-backups-sql-server"></a>トランザクション ログのバックアップ (SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "68041354"
  
 一般的に、データベース管理者は完全バックアップを定期的に (たとえば週 1 回) 作成しますが、必要に応じて短い間隔で (たとえば 1 日 1 回) 差分データベース バックアップを作成します。 データベース バックアップとは別に、トランザクション ログのバックアップを頻繁に作成します。 最適なバックアップ間隔は、バックアップの種類に応じて、データの重要度、データベースのサイズ、サーバーの作業負荷などの要因によって異なります。 効率的な手法の導入については、このトピックの「[推奨事項](#Recommendations)」を参照してください。 
    
-##  <a name="LogBackupSequence"></a> 一連のログ バックアップの動作  
+##  <a name="how-a-sequence-of-log-backups-works"></a><a name="LogBackupSequence"></a> 一連のログ バックアップの動作  
  トランザクション ログのバックアップの *ログ チェーン* のシーケンスは、データのバックアップとは関連がありません。 たとえば、次の一連のイベントが発生したとします。  
   
 |Time|Event|  
@@ -45,7 +45,7 @@ ms.locfileid: "68041354"
   
  午後 8 時に作成されたトランザクション ログ バックアップには、午後 4 時以降のトランザクション ログ レコードが含まれていて、この間午後 6 時にデータベースの完全バックアップが作成されています。トランザクション ログ バックアップのシーケンスは、午前 8 時に最初にデータベースの完全バックアップが作成されてから、午後 8 時のトランザクション ログ バックアップまで継続しています。 これらのログ バックアップを適用する方法の詳細については、「 [トランザクション ログ バックアップの適用 &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)」の例を参照してください。  
   
-##  <a name="Recommendations"></a> 推奨事項  
+##  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
   
 -   トランザクション ログが破損すると、前回の有効なバックアップ以降に行われた作業が失われます。 そのため、ログ ファイルはフォールト トレランス ストレージに置くことを強くお勧めします。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68041354"
 > 復元する必要があるログ バックアップの数を制限するには、定期的なデータのバックアップが不可欠です。 たとえば、データベースの完全バックアップを毎週実行し、差分バックアップを毎日実行するようにスケジュールできます。  
 > 繰り返しになりますが、復旧計画を導入するときは必要な [RTO](https://wikipedia.org/wiki/Recovery_time_objective) と [RPO](https://wikipedia.org/wiki/Recovery_point_objective) について、特に、データベースの完全バックアップと差分バックアップの頻度について検討してください。
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
  **トランザクション ログのバックアップを作成するには**  
   
 -   [トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  

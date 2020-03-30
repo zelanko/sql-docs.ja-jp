@@ -11,10 +11,10 @@ author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
 ms.openlocfilehash: b2adbb0fca6c717a5864570cad40c65d7c332f90
-ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79090497"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Linux および macOS 上の Microsoft ODBC Driver for SQL Server のリリース ノートです
@@ -114,7 +114,7 @@ GeneMi.  2019/04/03.
 
 **新しいディストリビューションのサポート**: macOS High Sierra および Ubuntu 17.10 
 
-**パフォーマンスの強化**:ドライバーが UTF-8 と 16 の間で変換されるときのパフォーマンスの向上が 10 倍を超えました。
+**パフォーマンスの向上**: ドライバーが UTF-8/16 との間で変換するときのパフォーマンスが 10 倍よりも高くなりました。
 
 **機能の追加**:
 
@@ -140,11 +140,11 @@ Azure SQL Managed Instance のサポート。
 
 ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、Microsoft SQL Server 2016 と組み合わせて使用される場合に、Always Encrypted および Azure Active Directory のサポートが追加されました。
 
-**新しいディストリビューションのサポート**:OS X 10.11 および macOS 10.12 は、macOS 上の ODBC ドライバーの最初のリリースでサポートされています。 Red Hat 6、7、SUSE 12 に加え、Ubuntu 16.10 のサポートも追加されました。 各プラットフォームには、インストールと構成が容易になるプラットフォーム関連パッケージ (RPM または DEB) があります。 詳細については、[Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) と [macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md) での ODBC ドライバーのインストール手順を参照してください。
+**新しいディストリビューションのサポート**: OS X 10.11 および macOS 10.12 は、macOS 上の ODBC Driver の最初のリリースでサポートされています。 Red Hat 6、7、SUSE 12 に加え、Ubuntu 16.10 のサポートも追加されました。 各プラットフォームには、インストールと構成が容易になるプラットフォーム関連パッケージ (RPM または DEB) があります。 詳細については、[Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) と [macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md) での ODBC ドライバーのインストール手順を参照してください。
 
-**unixODBC Driver Manager 2.3.1 のサポートの変更**:ODBC ドライバーは、(RedHat 6 を除き) unixODBC Driver Manager のカスタム パッケージに依存しなくなり、代わりにディストリビューション パッケージ マネージャーを利用してディストリビューションのリポジトリの UnixODBC の依存関係を解決するようになりました。
+**unixODBC Driver Manager 2.3.1 のサポートの変更**: ODBC ドライバーは、(RedHat 6 を除き) unixODBC Driver Manager のカスタム パッケージに依存しなくなり、代わりにディストリビューション パッケージ マネージャーを利用してディストリビューションのリポジトリの UnixODBC の依存関係を解決するようになりました。
 
-**BCP API のサポート**:Linux および macOS ODBC ドライバーは [BCP API 関数 (**bcp_init** など)](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md) の使用をサポートするようになりました。
+**BCP API のサポート**: Linux および macOS ODBC ドライバーは [BCP API 関数 (**bcp_init** など)](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md) の使用をサポートするようになりました。
 
 ## <a name="130-for-ssnoversion-on-linux"></a>13.0、Linux 上の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
 
@@ -154,11 +154,11 @@ Microsoft ODBC Driver 13.0 for SQL Server を使用することで、SQL Server 
 
 Red Hat、SUSE に加え、Ubuntu のサポートが追加されました。 各プラットフォームには、インストールと構成が容易になるプラットフォーム関連パッケージ (RPM または DEB) があります。  インストール手順については、[ドライバーのインストール](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)に関するページを参照してください。
 
-**unixODBC Driver Manager 2.3.1 のサポート**:新しいドライバー マネージャーに加え、インストールと構成が容易になる、この依存関係をインストールするためのパッケージも追加されました。  
+**unixODBC Driver Manager 2.3.1 のサポート**: 新しいドライバー マネージャーに加え、インストールと構成が容易になる、この依存関係をインストールするためのパッケージも追加されました。  
 
-**透過的ネットワーク IP 解決**:透過的ネットワーク IP 解決は、ホスト名の最初に解決された IP が応答せず、そのホスト名に関連付けられている IP が複数ある場合に、ドライバーの接続シーケンスに影響する既存のマルチサブネット フェールオーバー機能が改訂されたものです。
+**透過的ネットワーク IP 解決**: 透過的ネットワーク IP 解決は、ホスト名の最初に解決された IP が応答せず、そのホスト名に関連付けられている IP が複数ある場合に、ドライバーの接続シーケンスに影響する既存のマルチサブネット フェールオーバー機能が改訂されたものです。
 
-**TLS 1.2 のサポート**:SQL Server との通信がセキュリティで保護されている場合、Linux 上の Microsoft ODBC Driver 13.0 for SQL Server は TLS 1.2 をサポートするようになりました。
+**TLS 1.2 のサポート**: SQL Server との通信がセキュリティで保護されている場合、Linux 上の Microsoft ODBC Driver 13.0 for SQL Server は TLS 1.2 をサポートするようになりました。
 
 ## <a name="11-for-ssnoversion-on-linux"></a>11、Linux 上の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
 
@@ -166,6 +166,6 @@ ODBC Driver on SUSE Linux (Preview) は、64 ビット SUSE Linux Enterprise 11 
 
 Linux 上の ODBC ドライバーは、[!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]をサポートしています。 詳細については、[Linux 上の ODBC ドライバーでの高可用性とディザスター リカバリーのサポート](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)に関するページを参照してください。  
 
-ODBC Driver on Linux は、Microsoft Azure SQL Database への接続をサポートします。 詳細については、「[ODBC を使用した Azure SQL データベースへの接続](https://msdn.microsoft.com/library/hh974312.aspx)」を参照してください。  
+ODBC Driver on Linux は、Microsoft Azure SQL Database への接続をサポートします。 詳細については、[ODBC を使って Azure SQL Database に接続する方法](https://msdn.microsoft.com/library/hh974312.aspx)に関するページをご覧ください。  
 
 `-l` オプション (ログインのタイムアウト) が `bcp` に追加されました。 詳しくは、「[Connecting with **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md)」(bcp による接続) をご覧ください。

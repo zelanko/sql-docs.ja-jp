@@ -21,10 +21,10 @@ ms.assetid: 31bd7a97-7f28-42a8-ba24-24d16d22973d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ec6830916132a87a7beb50a8509f2f46bd2d1d74
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68026273"
 ---
 # <a name="x40x40cursor_rows-transact-sql"></a>&#x40;&#x40;CURSOR_ROWS (Transact-SQL)
@@ -45,7 +45,7 @@ ms.locfileid: "68026273"
   
 ## <a name="return-value"></a>戻り値  
   
-|戻り値|[説明]|  
+|戻り値|説明|  
 |---|---|
 |-*m*|カーソルは非同期で作成されます。 返される値 (-*m*) は、現在キーセットにある行数です。|  
 |-1|カーソルが動的です。 動的カーソルはすべての変更を反映するので、そのカーソルに登録されている行数は常に変化します。 登録されているすべての行がカーソルによって取得されるとは限りません。|  

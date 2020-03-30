@@ -16,10 +16,10 @@ ms.assetid: d4f59d5e-af85-491d-abde-eb06684745ce
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ea6ee99c0b640b5be27f23b63c93e5892f023db1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67972352"
 ---
 # <a name="settimestamp-method-sqlservercallablestatement"></a>setTimestamp メソッド (SQLServerCallableStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67972352"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|Name|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[setTimestamp (java.lang.String, java.sql.Timestamp)](../../../connect/jdbc/reference/settimestamp-method-java-lang-string-java-sql-timestamp.md)|指定されたパラメーターを、渡されたタイムスタンプ値に設定します。|  
 |[setTimestamp (java.lang.String, java.sql.Timestamp, java.util.Calendar)](../../../connect/jdbc/reference/settimestamp-method-java-lang-string-java-sql-timestamp-java-util-calendar.md)|渡された Calendar オブジェクトを使用して、指定されたパラメーターを、渡されたタイムスタンプの値に設定します。|  

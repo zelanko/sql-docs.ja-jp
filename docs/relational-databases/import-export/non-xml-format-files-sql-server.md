@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3581d9247979702a7c1e9af409b43121c4158334
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68111887"
 ---
 # <a name="non-xml-format-files-sql-server"></a>XML 以外のフォーマット ファイル (SQL Server)
@@ -36,7 +36,7 @@ ms.locfileid: "68111887"
   
 -   [関連タスク](#RelatedTasks)  
   
-##  <a name="Benefits"></a> XML 以外のフォーマット ファイルの利点  
+##  <a name="benefits-of-non-xml-format-files"></a><a name="Benefits"></a> XML 以外のフォーマット ファイルの利点  
   
 -   **bcp** コマンドの **format** オプションを指定することで、XML 以外のフォーマット ファイルを自動的に作成できます。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68111887"
 > [!NOTE]  
 >  XML フォーマット ファイルには、XML 以外のフォーマット ファイルに比べていくつかの利点があります。 詳細については、「 [XML フォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)です。  
   
-##  <a name="Structure"></a> XML 以外のフォーマット ファイルの構造  
+##  <a name="structure-of-non-xml-format-files"></a><a name="Structure"></a> XML 以外のフォーマット ファイルの構造  
  XML 以外のフォーマット ファイルは、特定の構造を持つテキスト ファイルです。 XML 以外のフォーマット ファイルには、各テーブル列のファイル保存形式、プレフィックス長、フィールド長、およびフィールド ターミネータに関する情報が含まれています。  
   
  次の図は、XML 以外のフォーマット ファイルのサンプルの、フォーマット ファイル フィールドを示しています。  
@@ -58,14 +58,14 @@ ms.locfileid: "68111887"
   
  " **バージョン** " フィールドおよび " **列の数** " フィールドは XML 以外のフォーマット ファイルごとに 1 つだけ存在します。 次の表で、各フィールドの意味を説明します。  
   
-|フォーマット ファイル フィールド|[説明]|  
+|フォーマット ファイル フィールド|説明|  
 |------------------------|-----------------|  
 |Version|**bcp** ユーティリティのバージョン番号です。次の値があります。<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> このバージョン番号は **ではなく**bcp [!INCLUDE[tsql](../../includes/tsql-md.md)]だけで認識されます。<br /><br /> <br /><br /> 注: フォーマット ファイルの読み取りに使用される **bcp** ユーティリティ (Bcp.exe) のバージョンは、フォーマット ファイルの作成に使用されたバージョン、またはそれ以降のバージョンである必要があります。 たとえば、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] の **bcp** では、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] の **bcp** によって生成されるバージョン 10.0 のフォーマット ファイルを読み取ることができますが、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] の **bcp** では、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] の **bcp** によって生成されるバージョン 12.0 のフォーマット ファイルを読み取ることができません。|  
 |列の数|データ ファイルのフィールドの数。 この数は、すべての行で同じである必要があります。|  
   
  他のフォーマット ファイル フィールドには、一括インポートまたは一括エクスポートされるデータ フィールドが記述されます。 各データ フィールドは、フォーマット ファイル内に個別の行を必要とします。 フォーマット ファイルの各行には、次の表で示すフォーマット ファイル フィールドの値が含まれます。  
   
-|フォーマット ファイル フィールド|[説明]|  
+|フォーマット ファイル フィールド|説明|  
 |------------------------|-----------------|  
 |**ホスト ファイル フィールドの順序**|データ ファイル内の各フィールドの位置を示す番号。 行の最初のフィールドは 1 になり、それ以降のフィールドにも順番に番号が付けられます。|  
 |**ホスト ファイル データ型**|データ ファイルの特定のフィールドに格納されているデータ型。 ASCII データ ファイルでは、SQLCHAR を使用します。ネイティブ形式のデータ ファイルでは、既定のデータ型を使用します。 詳細については、「 [bcp を使用したファイル ストレージ型の指定 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)」を参照してください。|  
@@ -79,7 +79,7 @@ ms.locfileid: "68111887"
 > [!NOTE]  
 >  フォーマット ファイルを変更して、フィールドの数や順序がテーブル列とは異なるデータ ファイルから一括インポートできます。 詳細については、このトピックの「 [関連タスク](#RelatedTasks) 」の一覧を参照してください。  
   
-##  <a name="Examples"></a> XML 形式以外のフォーマット ファイルの例  
+##  <a name="example-of-a-non-xml-format-file"></a><a name="Examples"></a> XML 形式以外のフォーマット ファイルの例  
  次の例は、以前に作成された XML 以外のフォーマット ファイル (`myDepartmentIdentical-f-c.fmt`) を示しています。 このファイルには、 `HumanResources.Department` サンプル データベースの `AdventureWorks2012` テーブルの各列の文字データ フィールドが記述されています。  
   
  生成されるフォーマット ファイル `myDepartmentIdentical-f-c.fmt`には、次の情報が含まれます。  
@@ -96,7 +96,7 @@ ms.locfileid: "68111887"
 > [!NOTE]  
 >  この XML 以外のフォーマット ファイルのサンプルに関連するフォーマット ファイル フィールドを示す図については、このトピックの「 [XML 以外のフォーマット ファイルの構造](#Structure)」を参照してください。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [フォーマット ファイルの作成 &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md)  
   

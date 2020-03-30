@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4a9ef3df75a54b6565b1d71c0a9e4557f752f95b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68697493"
 ---
 # <a name="data-type-conversion-database-engine"></a>データ型の変換 (データベース エンジン)
@@ -68,7 +68,7 @@ SET @string = 1;
 SELECT @string + ' is a string.'
 ```
 
-`1` の `int` 値は `varchar` に変換されるため、`SELECT` ステートメントからは値 `1 is a string.` が返されます。
+`int` の `1` 値は `varchar` に変換されるため、`SELECT` ステートメントからは値 `1 is a string.` が返されます。
 
 次の例は、代わりに `int` 変数を使用した同様のスクリプトを示しています。
 
@@ -135,7 +135,7 @@ SELECT @notastring + '1'
 |**datetime**、**smalldatetime**|**Date**|  
 |上記以外は NULL に設定|null 値に設定された **Variant**|  
   
-**binary**、**varbinary**、**image** の各型の値を除いて、1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 値はすべて 1 つの [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 値に変換されます。 これらの値は [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] の 1 次元 **Byte()** 配列に変換されます。 この配列の範囲は、**Byte(** 0 から _length_ 1 **)** です。*length* は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **binary**、**varbinary**、または **image** の値のバイト数です。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]binary[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]、**varbinary**、**image** の各型の値を除いて、1 つの **値はすべて 1 つの** 値に変換されます。 これらの値は **の 1 次元**Byte()[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 配列に変換されます。 この配列の範囲は、**Byte(** 0 から _length_ 1 **)** です。*length* は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **binary**、**varbinary**、または **image** の値のバイト数です。
   
 次の表は、[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] データ型から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型への変換を示しています。
   
@@ -148,7 +148,7 @@ SELECT @notastring + '1'
 |4,000 文字以下の **String**|**varchar**/**nvarchar**|  
 |4,000 文字を超える **String**|**text**/**ntext**|  
 |8,000 バイト以下の 1 次元 **Byte()** 配列|**varbinary**|  
-|8,000 バイトを超える 1 次元 **Byte()** 配列|**image**|  
+|8,000 バイトを超える 1 次元 **Byte()** 配列|**画像**|  
   
 ## <a name="see-also"></a>参照
 [OLE オートメーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)  

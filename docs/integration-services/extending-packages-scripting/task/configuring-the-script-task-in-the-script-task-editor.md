@@ -17,10 +17,10 @@ ms.assetid: 232de0c9-b24d-4c38-861d-6c1f4a75bdf3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9ac35433b8e197da585f18a6cf87328d493c9bda
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71286040"
 ---
 # <a name="configuring-the-script-task-in-the-script-task-editor"></a>スクリプト タスク エディターでのスクリプト タスクの構成
@@ -45,12 +45,12 @@ ms.locfileid: "71286040"
  スクリプト タスクとスクリプト コンポーネントの既定のスクリプト言語を設定するには、 **[オプション]** ダイアログ ボックスの **[全般]** ページにある **[ScriptLanguage]** プロパティを使用します。 詳細については、「 [General Page](../../general-page-of-integration-services-designers-options.md)」を参照してください。  
   
 ### <a name="entrypoint-property"></a>EntryPoint プロパティ  
- **EntryPoint** プロパティは、スクリプト タスク コードのエントリ ポイントとして [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ランタイムが呼び出す、VSTA プロジェクトの **ScriptMain** クラスのメソッドを指定します。 **ScriptMain** クラスは、スクリプト テンプレートによって生成される既定のクラスです。  
+ **EntryPoint** プロパティは、スクリプト タスク コードのエントリ ポイントとして **ランタイムが呼び出す、VSTA プロジェクトの**ScriptMain[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] クラスのメソッドを指定します。 **ScriptMain** クラスは、スクリプト テンプレートによって生成される既定のクラスです。  
   
  VSTA プロジェクトでメソッドの名前を変更する場合は、 **EntryPoint** プロパティの値を変更する必要があります。  
   
 ### <a name="readonlyvariables-and-readwritevariables-properties"></a>ReadOnlyVariables プロパティおよび ReadWriteVariables プロパティ  
- 既存の変数をコンマ区切りリストとして、これらのプロパティの値に入力すると、スクリプト タスクのコード内で、その変数に読み取り専用アクセスまたは読み取り/書き込みアクセスできるようになります。 どちらの種類の変数にも、**Dts** オブジェクトの <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> プロパティを介して、コード内でアクセスします。 詳細については、「 [スクリプト タスクでの変数の使用](../../../integration-services/extending-packages-scripting/task/using-variables-in-the-script-task.md)」を参照してください。  
+ 既存の変数をコンマ区切りリストとして、これらのプロパティの値に入力すると、スクリプト タスクのコード内で、その変数に読み取り専用アクセスまたは読み取り/書き込みアクセスできるようになります。 どちらの種類の変数にも、<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A>Dts**オブジェクトの** プロパティを介して、コード内でアクセスします。 詳細については、「 [スクリプト タスクでの変数の使用](../../../integration-services/extending-packages-scripting/task/using-variables-in-the-script-task.md)」を参照してください。  
   
 > [!NOTE]  
 >  変数名の大文字と小文字は区別されます。  

@@ -22,10 +22,10 @@ ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e555a51cc4ab7c628dc75469aa1cfe4d7c01edcc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70211440"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
@@ -155,7 +155,7 @@ ms.locfileid: "70211440"
 ## <a name="queue-columns"></a>キューの列  
  次の表は、キューの列の一覧です。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**status**|**tinyint**|メッセージの状態。 RECEIVE コマンドで返されるメッセージの状態は常に **0** です。 キューのメッセージには、次のいずれかの値が含まれます。<br /><br /> **0** = 準備完了。**1** = 受信メッセージ。**2** = 未完了。**3** = 保持されている送信済みメッセージ。|  
 |**priority**|**tinyint**|メッセージに適用されているメッセージ交換の優先度レベル。|  

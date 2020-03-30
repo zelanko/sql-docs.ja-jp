@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b20a628a24e36da854dd567c8f72c89c7169e361
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68084101"
 ---
 # <a name="control-transaction-durability"></a>トランザクションの持続性の制御
@@ -90,7 +90,7 @@ ms.locfileid: "68084101"
     
 ## <a name="how-to-control-transaction-durability"></a>トランザクションの持続性を制御する方法    
     
-###  <a name="bkmk_DbControl"></a> データベース レベルの制御    
+###  <a name="database-level-control"></a><a name="bkmk_DbControl"></a> データベース レベルの制御    
  DBA は次のステートメントを使用して、トランザクションの遅延持続性をデータベースに対してユーザーが使用できるかどうかを制御できます。 遅延持続性の設定は ALTER DATABASE で設定する必要があります。    
     
 ```sql    
@@ -106,7 +106,7 @@ ALTER DATABASE ... SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }
  **FORCED**    
  この設定では、データベースにコミットされるすべてのトランザクションに遅延持続性が適用されます。 トランザクションで完全持続性 (DELAYED_DURABILITY = OFF) が指定された場合も、指定がまったく行われていない場合も、遅延持続性トランザクションになります。 データベースに対してトランザクションの遅延持続性が役立ち、アプリケーション コードの変更を行わない場合に、この設定を使用できます。    
     
-###  <a name="CompiledProcControl"></a> ATOMIC ブロック レベルの制御 - ネイティブ コンパイル ストアド プロシージャ    
+###  <a name="atomic-block-level-control---natively-compiled-stored-procedures"></a><a name="CompiledProcControl"></a> ATOMIC ブロック レベルの制御 - ネイティブ コンパイル ストアド プロシージャ    
  次のコードは、ATOMIC ブロック内で使用します。    
     
 ```sql    
@@ -141,7 +141,7 @@ END
 |**DELAYED_DURABILITY = OFF**|ATOMIC ブロックで、新しい完全持続性トランザクションが開始されます。|ATOMIC ブロックで、既存のトランザクションにセーブポイントが作成され、新しいトランザクションが開始されます。|    
 |**DELAYED_DURABILITY = ON**|ATOMIC ブロックで、新しい遅延持続性トランザクションが開始されます。|ATOMIC ブロックで、既存のトランザクションにセーブポイントが作成され、新しいトランザクションが開始されます。|    
     
-###  <a name="bkmk_T-SQLControl"></a> COMMIT レベルの制御 - [!INCLUDE[tsql](../../includes/tsql-md.md)]    
+###  <a name="commit-level-control--tsql"></a><a name="bkmk_T-SQLControl"></a> COMMIT レベルの制御 - [!INCLUDE[tsql](../../includes/tsql-md.md)]    
  COMMIT 構文は、トランザクションの遅延持続性を適用できるように拡張されています。 DELAYED_DURABILITY がデータベース レベルで DISABLED または FORCED に設定されている場合 (上記を参照)、この COMMIT オプションは無視されます。    
     
 ```sql    
@@ -172,7 +172,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
     
 -   システム ストアド プロシージャ `sp_flush_log`を実行する。 このプロシージャにより、それまでにコミット済みの遅延持続性トランザクションのログ レコードがすべて強制的にディスクにフラッシュされます。 詳細については、「[sys.sp_flush_log &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-flush-log-transact-sql.md)」を参照してください。    
     
-##  <a name="bkmk_OtherSQLFeatures"></a> 遅延持続性とその他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能    
+##  <a name="delayed-durability-and-other-ssnoversion-features"></a><a name="bkmk_OtherSQLFeatures"></a> 遅延持続性とその他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能    
  **変更の追跡と変更データ キャプチャ**    
  変更の追跡を有効にしたすべてのトランザクションには、完全持続可能性が適用されます。 変更の追跡が有効なテーブルに対して書き込み操作を行うトランザクションには、変更追跡プロパティがあります。 変更データ キャプチャ (CDC) を使用するデータベースの場合、遅延持続は使用できません。    
     
@@ -197,13 +197,13 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
  **ログ バックアップ**    
  バックアップに含まれるのは、持続可能な状態になったトランザクションのみです。    
     
-##  <a name="bkmk_DataLoss"></a> データが失われるケース    
+##  <a name="when-can-i-lose-data"></a><a name="bkmk_DataLoss"></a> データが失われるケース    
  遅延持続性をテーブルに実装する場合、状況によってはデータが失われる可能性があることを理解する必要があります。 一切のデータ損失を許容できない場合は、テーブルに対して遅延持続性は使用しないでください。    
     
 ### <a name="catastrophic-events"></a>重大なイベント    
  サーバー クラッシュなどの重大なイベントが発生すると、ディスクに保存されていないすべてのコミット済みトランザクションのデータが失われます。 遅延持続性トランザクションは、データベース内のいずれかのテーブル (持続性のあるメモリ最適化テーブルまたはディスク ベース テーブル) に対して完全持続性トランザクションが実行されるか、 `sp_flush_log` が呼び出されるたびに、ディスクに保存されます。 遅延持続性トランザクションを使用している場合、定期的に更新するか定期的に `sp_flush_log` を呼び出すことができる小さいテーブルをデータベース内に作成して、未処理のコミット済みトランザクションすべてを保存できます。 トランザクション ログもいっぱいになるたびにフラッシュされますが、それを予測するのは難しく、制御は不可能です。    
     
-### <a name="includessnoversionincludesssnoversion-mdmd-shutdown-and-restart"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のシャットダウンと再起動    
+### <a name="ssnoversion-shutdown-and-restart"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のシャットダウンと再起動    
  遅延持続性の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の予期しないシャットダウンと予期されたシャットダウン/再起動に違いはありません。 重大なイベントと同様に、データ損失に対する計画を立てる必要があります。 計画されたシャットダウン/再起動では、ディスクに書き込まれていない一部のトランザクションが最初にディスクに保存される場合がありますが、それを予期することはできません。 計画されているかどうかに関係なく、シャットダウン/再起動によって重大なイベントと同様にデータが失われるものとして計画してください。    
     
 ## <a name="see-also"></a>参照    

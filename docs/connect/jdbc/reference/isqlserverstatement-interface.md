@@ -11,10 +11,10 @@ ms.assetid: 7f83b514-6e76-4f37-baf3-a10db2010e7c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b736ed84e0fed6794b036d22af84912f240539fb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67977339"
 ---
 # <a name="isqlserverstatement-interface"></a>ISQLServerStatement インターフェイス
@@ -38,7 +38,7 @@ public interface ISQLServerStatement
   
  このインターフェイスでは、次の [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 固有のメソッドが公開されます。  
   
-|Method|詳細については、「|  
+|方法|詳細については、「|  
 |------------|-------------------------------|  
 |public String getResponseBuffering|[getResponseBuffering](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md)|  
 |public void setResponseBuffering|[setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)|  

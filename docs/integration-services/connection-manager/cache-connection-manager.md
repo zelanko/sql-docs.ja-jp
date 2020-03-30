@@ -15,10 +15,10 @@ ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ac44546e0f74e8cdee7e004f33a515b94e16aeb2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294453"
 ---
 # <a name="cache-connection-manager"></a>キャッシュ接続マネージャー
@@ -67,7 +67,7 @@ ms.locfileid: "71294453"
   
  **[キャッシュ接続マネージャー エディター]** ダイアログ ボックスには、次のタブがあります。  
   
-###  <a name="generaltab"></a> [全般] タブ  
+###  <a name="general-tab"></a><a name="generaltab"></a> [全般] タブ  
  **[キャッシュ接続マネージャー エディター]** ダイアログ ボックスの **[全般]** タブを使用すると、ファイルからキャッシュを読み取るか、キャッシュをファイルに保存するかを指定できます。  
   
 #### <a name="options"></a>オプション  
@@ -98,7 +98,7 @@ ms.locfileid: "71294453"
  **[メタデータの更新]**  
  キャッシュ接続マネージャーで列のメタデータを削除し、選択したキャッシュ ファイルの列のメタデータでキャッシュ接続マネージャーを再設定します。  
   
-###  <a name="columnstab"></a> [列] タブ  
+###  <a name="columns-tab"></a><a name="columnstab"></a> [列] タブ  
  **[キャッシュ接続マネージャー エディター]** ダイアログ ボックスの **[列]** タブを使用すると、キャッシュ内の各列のプロパティを構成できます。  
   
 #### <a name="options"></a>オプション  

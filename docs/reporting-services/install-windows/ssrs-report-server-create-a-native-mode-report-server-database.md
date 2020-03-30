@@ -13,10 +13,10 @@ ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: dbe8c7f4d755d18c0baa01f5f6ef37601292047b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74866335"
 ---
 # <a name="create-a-native-mode-report-server-database-ssrs-configuration-manager"></a>ネイティブ モードのレポート サーバー データベースを作成する (SSRS Configuration Manager)
@@ -32,7 +32,7 @@ ms.locfileid: "74866335"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をネイティブ モードの既定の構成でインストールした場合、レポート サーバー データベースは、レポート サーバー インスタンスのインストール時に自動的に作成および構成されています。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用すると、セットアップによって自動的に構成された設定を表示または変更できます。  
   
-##  <a name="rsdbrequirements"></a> 開始前の準備  
+##  <a name="before-you-start"></a><a name="rsdbrequirements"></a> 開始前の準備  
  レポート サーバー データベースの作成または構成は、複数の手順から成るプロセスです。 レポート サーバー データベースを作成する前に、次の項目をどのように指定するかを検討してください。  
   
  **データベース サーバーの選択**  

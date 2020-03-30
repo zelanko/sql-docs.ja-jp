@@ -24,10 +24,10 @@ ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bed89f0cade880f41122e921fbda146ae2abc28d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296977"
 ---
 # <a name="working-with-images-with-the-script-task"></a>スクリプト タスクによる画像の操作
@@ -44,7 +44,7 @@ ms.locfileid: "71296977"
 > [!NOTE]  
 >  複数のパッケージでより簡単に再利用できるタスクを作成する場合は、このスクリプト タスク サンプルのコードを基にした、カスタム タスクの作成を検討してください。 詳細については、「 [カスタム タスクの開発](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)」を参照してください。  
   
-##  <a name="example1"></a> 例 1 の説明 : 画像を JPEG 形式に変換する  
+##  <a name="example-1-description-convert-images-to-jpeg-format"></a><a name="example1"></a> 例 1 の説明 : 画像を JPEG 形式に変換する  
  次の例では、変数で指定された画像ファイルを開き、エンコーダーを使用して圧縮 JPEG ファイルとして保存します。 エンコーダー情報を取得するコードは、private 関数にカプセル化されています。  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>このスクリプト タスクの例を単一の画像ファイルで使用するように構成するには  
@@ -153,7 +153,7 @@ End Function
   
 ```  
   
-##  <a name="example2"></a> 例 2 の説明 : サムネイル画像を作成および保存する  
+##  <a name="example-2-description-create-and-save-thumbnail-images"></a><a name="example2"></a> 例 2 の説明 : サムネイル画像を作成および保存する  
  次の例では、変数で指定された画像ファイルを開いて、一定の縦横比を維持しながら画像のサムネイルを作成し、ファイル名を変更してサムネイルを保存します。 一定の縦横比を維持しながらサムネイルの高さと幅を計算するコードは、private サブルーチンでカプセル化されています。  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>このスクリプト タスクの例を単一の画像ファイルで使用するように構成するには  

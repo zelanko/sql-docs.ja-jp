@@ -13,10 +13,10 @@ ms.assetid: 0b4f98a1-0151-4301-a675-a6db9ff20c87
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: d977fe6650ea6d2f28b1762cfb44aaa89164d772
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68087372"
 ---
 # <a name="facet-properties-dialog-box-dependent-conditions-page"></a>[ファセットのプロパティ] ダイアログ ボックスの [依存条件] ページ
@@ -24,7 +24,7 @@ ms.locfileid: "68087372"
   このダイアログ ボックスを使用すると、このポリシー ベースの管理ファセットを現在参照している条件の一覧を表示できます。  
   
 ## <a name="options"></a>オプション  
- **名前**  
+ **Name**  
  現在のファセットを参照している各条件の名前を一覧表示します。  
   
 ## <a name="see-also"></a>参照  

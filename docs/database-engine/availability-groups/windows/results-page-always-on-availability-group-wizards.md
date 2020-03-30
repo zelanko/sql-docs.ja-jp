@@ -16,10 +16,10 @@ ms.assetid: d80b14eb-60db-4351-90ad-6c179d235aa3
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: bb4a661110d91f73f45152b84dcfb63f8763d018
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75235446"
 ---
 # <a name="results-page-always-on-availability-group-wizards"></a>[結果] ページ (AlwaysOn 可用性グループ ウィザード)
@@ -27,21 +27,21 @@ ms.locfileid: "75235446"
 
   このヘルプ トピックでは、 **[結果]** ページのオプションについて説明します。 このトピックの対象は、 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]の [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]、 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]、 [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] 、および [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]です。 このページを使用すると、ウィザードの結果を表示できます。  
   
-##  <a name="PageOptions"></a> [結果] ページのオプション  
+##  <a name="results-page-options"></a><a name="PageOptions"></a> [結果] ページのオプション  
  **[概要]** グリッドに含まれる列は、次のとおりです。  
   
- **名前**  
+ **Name**  
  特定の操作について説明する語句が表示されます。  
   
  **結果**  
  完了した手順ごとに、次のハイパーリンク テキストのいずれかが表示されます。  
   
-|結果|[説明]|  
+|結果|説明|  
 |------------|-----------------|  
 |**Error**|検証手順が失敗したことを示します。 エラー メッセージを表示するには、リンクをクリックします。|  
 |**Success**|検証手順が正常に完了したことを示します。|  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [[新しい可用性グループ] ダイアログ ボックスの使用 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
