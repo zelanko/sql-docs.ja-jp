@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 0fc4e3bd7565d4227da1e2d29853ff65ed2b7ca5
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78866410"
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>Microsoft ADO.NET for SQL Server
@@ -25,10 +25,10 @@ ms.locfileid: "78866410"
 ADO.NET は、.NET 言語の主要なデータ アクセス テクノロジです。 Microsoft.Data.SqlClient 名前空間を使って SQL Server にアクセスするか、他のサプライヤーのプロバイダーを使ってそのストアにアクセスします。 System.Data.Odbc や System.Data.Oledb を使って、.NET 言語から他のデータ アクセス テクノロジを活用するデータにアクセスします。 クライアント アプリケーション内のオフライン データ キャッシュが必要な場合は、System.Data.Dataset を使います。 Web サービスで活用できるローカル保存と XML 機能も提供します。  
   
 ## <a name="getting-started"></a>作業の開始  
-* [ステップ 1:ADO.NET 開発用の開発環境を構成する](step-1-configure-development-environment-ado-net-development.md)  
-* [手順 2:ADO.NET 開発用の SQL データベースを作成する](step-2-create-sql-database-ado-net-development.md)  
-* [ステップ 3:ADO.NET を使用した SQL への接続を概念実証する](step-3-connect-sql-ado-net.md)  
-* [手順 4:ADO.NET を使用して SQL に弾性的に接続する](step-4-connect-resiliently-sql-ado-net.md)  
+* [ステップ 1: ADO.NET 開発用に開発環境を構成する](step-1-configure-development-environment-ado-net-development.md)  
+* [ステップ 2: ADO.NET 開発用の SQL データベースを作成する](step-2-create-sql-database-ado-net-development.md)  
+* [ステップ 3: ADO.NET を使用した SQL への接続を概念実証する](step-3-connect-sql-ado-net.md)  
+* [ステップ 4: ADO.NET で SQL に弾性的に接続する](step-4-connect-resiliently-sql-ado-net.md)  
   
 ## <a name="documentation"></a>ドキュメント  
 * [ADO.NET の概要](https://msdn.microsoft.com/library/e80y5yhx.aspx)

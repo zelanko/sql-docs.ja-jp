@@ -1,5 +1,5 @@
 ---
-title: 方法:SQLSRV ドライバーを使用して出力パラメーターを取得する | Microsoft Docs
+title: '方法: SQLSRV ドライバーを使用して出力パラメーターを取得する | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/11/2018
 ms.prod: sql
@@ -12,13 +12,13 @@ ms.assetid: 1157bab7-6ad1-4bdb-a81c-662eea3e7fcd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: db1216f513f353a6c703805c7aabe7b8dd468115
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993405"
 ---
-# <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>方法:SQLSRV ドライバーを使用して出力パラメーターを取得する
+# <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>方法: SQLSRV ドライバーを使用して出力パラメーターを取得する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 このトピックでは、1 つのパラメーターが出力パラメーターとして定義されているストアド プロシージャを呼び出す方法について説明します。 出力パラメーターまたは入出力パラメーターを取得する場合、返されるパラメーター値にアクセスできるようになる前に、ストアド プロシージャによって返されるすべての結果を使用する必要があります。  
@@ -32,7 +32,7 @@ SQLSRV_SQLTYPE_VARCHAR('max') などのストリーム型が出力パラメー�
 次の例では、指定された従業員による年度累計売上を返すストアド プロシージャを呼び出しています。 PHP 変数 *$lastName* は入力パラメーターで、 *$salesYTD* は出力パラメーターです。  
   
 > [!NOTE]  
-> *$salesYTD* を 0.0 に初期化すると、返される PHPTYPE が **float**に設定されます。 データ型の整合性を確保するため、ストアド プロシージャを呼び出す前に出力パラメーターを初期化するか、目的の PHPTYPE を指定する必要があります。 PHPTYPE の指定については、「[方法: PHP データ型を指定する](../../connect/php/how-to-specify-php-data-types.md)」を参照してください。  
+> *$salesYTD* を 0.0 に初期化すると、返される PHPTYPE が **float**に設定されます。 データ型の整合性を確保するため、ストアド プロシージャを呼び出す前に出力パラメーターを初期化するか、目的の PHPTYPE を指定する必要があります。 PHPTYPE の指定については、「 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)」を参照してください。  
   
 ストアド プロシージャによって返される結果は 1 つだけであるため、 *$salesYTD* には、ストアド プロシージャが実行された直後の出力パラメーターの戻り値が格納されます。  
   

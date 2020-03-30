@@ -29,10 +29,10 @@ ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 6ee0ca48835d87c379008c1894ed63596d23ac9b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68048153"
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
@@ -157,7 +157,7 @@ TO (test1fg, test2fg, test3fg, test4fg, test5fg)
   
  パーティション関数 `myRangePF4` を変更してパーティションを追加すると、ファイル グループ `test5fg` は新たに作成されたパーティションを受け取ります。  
 
-### <a name="e-creating-a-partition-schema-only-on-primary---only-primary-is-supported-for-includesqldbesaincludessqldbesa-mdmd"></a>E. PRIMARY のみでパーティション構成を作成する - PRIMARY のみが [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] でサポートされる
+### <a name="e-creating-a-partition-schema-only-on-primary---only-primary-is-supported-for-sqldbesa"></a>E. PRIMARY のみでパーティション構成を作成する - PRIMARY のみが [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] でサポートされる
 
  次の例では、テーブルまたはインデックスを 4 つのパーティションに分割するパーティション関数を作成します。 すべてのパーティションが PRIMARY ファイル グループに作成されることを指定するパーティション構成が作成されます。  
   

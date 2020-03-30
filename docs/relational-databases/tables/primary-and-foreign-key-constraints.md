@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b738bd06abe616adc846727dd5721b7204e340c8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67999437"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>主キー制約と外部キー制約
@@ -36,7 +36,7 @@ ms.locfileid: "67999437"
   
  [関連タスク](../../relational-databases/tables/primary-and-foreign-key-constraints.md#Tasks)  
   
-##  <a name="PKeys"></a> 主キー制約  
+##  <a name="primary-key-constraints"></a><a name="PKeys"></a> 主キー制約  
  テーブルには通常、テーブルの各行を一意に識別する値が格納された単一の列または複数の列の組み合わせがあります。 この列、または列の組み合わせを、テーブルの主キー (PK) と呼び、テーブルのエンティティが整合性を持つようにします。 主キー制約は一意なデータを保証するものであるため、通常は ID 列に対して定義されます。  
   
  主キー制約をテーブルに対して指定すると、重複のないインデックスを [!INCLUDE[ssDE](../../includes/ssde-md.md)] が主キー列に対して自動的に作成し、データが一意になるようにします。 また、クエリの中で主キーが使用された場合は、このインデックスによってデータに高速にアクセスできます。 複数の列に一意キー制約が定義されている場合は、1 つの列内で値が重複してもかまいませんが、一意キー制約が定義された列に格納される値の組み合わせは一意である必要があります。  
@@ -57,7 +57,7 @@ ms.locfileid: "67999437"
   
 -   CLR ユーザー定義型の列に対して主キーを定義する場合は、型の実装でバイナリ順がサポートされている必要があります。  
   
-##  <a name="FKeys"></a> Foreign Key Constraints  
+##  <a name="foreign-key-constraints"></a><a name="FKeys"></a> Foreign Key Constraints  
  外部キー (FK) は、2 つのテーブルのデータ間にリンクを確立および設定することによって外部キー テーブルに格納できるデータを制御するための単一の列または複数の列の組み合わせです。 外部キー参照では、1 つのテーブルの主キー値が格納されている列が別のテーブルの 1 つ以上の列によって参照されたときに、2 つのテーブル間にリンクが作成されます。 この列は、2 番目のテーブルの外部キーになります。  
   
  たとえば、 **Sales.SalesOrderHeader** テーブルには、 **Sales.SalesPerson** テーブルへの外部キー リンクが存在します。これは、販売注文と販売員の間に論理リレーションシップが存在するからです。 **SalesOrderHeader** テーブルの **SalesPersonID** 列は、 **SalesPerson** テーブルの主キー列と一致します。 また、 **SalesOrderHeader** テーブルの **SalesPersonID** 列は、 **SalesPerson** テーブルに対する外部キーです。 この外部キー リレーションシップを作成することによって、 **SalesPerson** テーブル内に存在しない **SalesPersonID** の値を **SalesOrderHeader** テーブルに挿入することはできなくなります。  
@@ -118,7 +118,7 @@ ms.locfileid: "67999437"
   
 -   INSTEAD OF トリガーを含んだテーブルに、連鎖動作を指定する REFERENCES 句を同時に指定することはできません。 ただし、連鎖動作の対象になるテーブルの AFTER トリガーは、別のテーブルやビューに対して INSERT、UPDATE、または DELETE ステートメントを実行し、そのオブジェクトに定義されている INSTEAD OF トリガーを起動できます。  
   
-##  <a name="Tasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="Tasks"></a> 関連タスク  
  次の表は、主キー制約および外部キー制約に関連した一般的なタスクの一覧です。  
   
 |タスク|トピック|  

@@ -13,10 +13,10 @@ ms.assetid: 665e63e6-4bd2-4091-92a5-327364db2f8d
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 3b408951b0a1f32bda0920260aae18ab93350fdd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67986718"
 ---
 # <a name="sql-server-catalog-metadata-object"></a>SQLServer、Catalog Metadata オブジェクト
@@ -26,7 +26,7 @@ ms.locfileid: "67986718"
 次の表では、SQL Server **Catalog Metadata** パフォーマンス オブジェクトについて説明します。
 
 
-|**SQL Server Catalog Metadata カウンター**|[説明]|  
+|**SQL Server Catalog Metadata カウンター**|説明|  
 |-------------|-----------------|  
 |**Cache Entries Count**|カタログ メタデータ キャッシュ内のエントリ数。|
 |**Cache Entries Pinned Count**|固定されたカタログ メタデータ キャッシュのエントリ数。|

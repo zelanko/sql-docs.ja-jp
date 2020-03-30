@@ -9,10 +9,10 @@ ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 83b041ebde43c0208c3606fff6b0dcc33d7680c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081898"
 ---
 # <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>組み込みコレクション - データセット フィールド コレクションの参照 (レポート ビルダー)
@@ -38,7 +38,7 @@ ms.locfileid: "77081898"
  `=IIF(IsNothing(Fields!MiddleName.Value),"No Middle Name",Fields!MiddleName.Value)`  
   
 ### <a name="detecting-missing-fields-for-dynamic-queries-at-run-time"></a>実行時の動的クエリにおける存在しないフィールドの検出  
- 既定では、Fields コレクションのアイテムには 2 つのプロパティがあります。Value と IsMissing です。 IsMissing プロパティは、デザイン時にデータセットに対して定義されているフィールドが、実行時に取得されたフィールドに存在するかどうかを示します。 たとえば、クエリには、入力パラメーターによって結果セットの異なるストアド プロシージャを呼び出すものや、テーブル定義が変更された場合に `SELECT * FROM` *\<table>* を照会するものがあります。  
+ 既定では、フィールド コレクションのアイテムには、Value および IsMissing という 2 つのプロパティがあります。 IsMissing プロパティは、デザイン時にデータセットに対して定義されているフィールドが、実行時に取得されたフィールドに存在するかどうかを示します。 たとえば、クエリには、入力パラメーターによって結果セットの異なるストアド プロシージャを呼び出すものや、テーブル定義が変更された場合に `SELECT * FROM` *\<table>* を照会するものがあります。  
   
 > [!NOTE]  
 >  IsMissing は、任意の種類のデータ ソースに関して、デザイン時と実行時の間にデータセット スキーマに加えられた変更を検出します。 IsMissing は、多次元キューブで空のメンバーを検出するために使用することはできません。また、 **EMPTY** および **NON EMPTY**という MDX クエリ言語の概念とは関連していません。  

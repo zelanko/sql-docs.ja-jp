@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: bd0dbbedcb2fa33af80e0a1a1d593bf7df27edb6
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896955"
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>SQL Server のインスタンスの列挙 (ADO.NET)
@@ -36,7 +36,7 @@ System.Data.Sql.SqlDataSourceEnumerator instance =
    System.Data.Sql.SqlDataSourceEnumerator.Instance  
 ```  
   
-静的インスタンスを取得したら、使用可能なサーバーに関する情報を含む <xref:System.Data.DataTable> を返す <xref:System.Data.Sql.SqlDataSourceEnumerator.GetDataSources%2A> メソッドを呼び出すことができます。  
+静的インスタンスを取得したら、使用可能なサーバーに関する情報を含む <xref:System.Data.Sql.SqlDataSourceEnumerator.GetDataSources%2A> を返す <xref:System.Data.DataTable> メソッドを呼び出すことができます。  
   
 ```csharp  
 System.Data.DataTable dataTable = instance.GetDataSources();  
@@ -49,7 +49,7 @@ System.Data.DataTable dataTable = instance.GetDataSources();
 |**ServerName**|サーバー名。|  
 |**InstanceName**|サーバー インスタンスの名前。 サーバーが既定のインスタンスとして実行されている場合は空白です。|  
 |**IsClustered**|サーバーがクラスターの一部であるかどうかを示します。|  
-|**Version**|サーバーのバージョン。 次に例を示します。<br /><br /> -   9.00.x (SQL Server 2005)<br />-10.0.xx (SQL Server 2008)<br />-   10.50.x (SQL Server 2008 R2)<br />-11.0.xx (SQL Server 2012)|  
+|**バージョン**|サーバーのバージョン。 次に例を示します。<br /><br /> -   9.00.x (SQL Server 2005)<br />-10.0.xx (SQL Server 2008)<br />-   10.50.x (SQL Server 2008 R2)<br />-11.0.xx (SQL Server 2012)|  
   
 ## <a name="enumeration-limitations"></a>列挙の制限  
 使用可能なすべてのサーバーが一覧表示されるとは限りません。 この一覧は、タイムアウトやネットワーク トラフィックなどの要因によって異なることがあります。 このため、2 回の連続呼び出しで一覧が異なる場合があります。 同じネットワーク上のサーバーのみが一覧表示されます。 ブロードキャスト パケットは通常、ルーターをスキャンしません。あるサーバーが一覧表示されないことがあっても、複数の呼び出し間で安定しているのはこのためです。  

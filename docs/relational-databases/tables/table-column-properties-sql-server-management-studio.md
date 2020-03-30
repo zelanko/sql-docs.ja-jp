@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3ef1d3001078b4f1217bad60646d28a26319d80c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68016244"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>テーブル列のプロパティ (SQL Server Management Studio)
@@ -33,7 +33,7 @@ ms.locfileid: "68016244"
  **全般**  
  展開すると、 **[オブジェクト名]** 、 **[Null を許容]** 、 **[データ型]** 、 **[既定値またはバインド]** 、 **[長さ]** 、 **[有効桁数]** 、 **[小数点以下桁数]** が表示されます。  
   
- **名前**  
+ **Name**  
  選択した列の名前を表示します。  
   
  **[NULL を許容]**  

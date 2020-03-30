@@ -12,10 +12,10 @@ author: yitam
 ms.author: v-yitam
 manager: v-mabarw
 ms.openlocfilehash: 4a5ac641a98077c09bb38a5fc8fbd3fb1a4bf73d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68265144"
 ---
 # <a name="formatting-decimal-strings-and-money-values-sqlsrv-driver"></a>10 進数文字列と金額の書式設定 (SQLSRV ドライバー)
@@ -31,7 +31,7 @@ ms.locfileid: "68265144"
 ## <a name="configure-number-of-decimal-places"></a>小数点以下の桁数を構成する
 `FormatDecimals` をオンにすると、別のオプション `DecimalPlaces` を使用して、money および smallmoney のデータを表示するときの小数点以下の桁数を構成できます。 [0, 4] の範囲の整数値を指定でき、表示されるときに丸めが発生する場合があります。 ただし、基になる金額データは変わりません。
 
-いずれのオプションも接続またはステートメント レベルに設定できます。ステートメント設定は、それに対応する接続設定を常にオーバーライドします。 `DecimalPlaces` オプションの影響を受けるのは money データ**だけ**であり、`DecimalPlaces` を有効にするには `FormatDecimals` を true に設定する必要があることに注意してください。 そうしないと、`DecimalPlaces` の設定に関係なく、書式設定は無効になります。
+いずれのオプションも接続またはステートメント レベルに設定できます。ステートメント設定は、それに対応する接続設定を常にオーバーライドします。 `DecimalPlaces` オプションの影響を受けるのは money データ**だけ**であり、`FormatDecimals` を有効にするには `DecimalPlaces` を true に設定する必要があることに注意してください。 そうしないと、`DecimalPlaces` の設定に関係なく、書式設定は無効になります。
 
 > [!NOTE]
 > money または smallmoney のフィールドには小数点以下桁数が 4 であるため、`DecimalPlaces` 値を負の値または 4 より大きい値に設定すると無視されます。 書式設定された金額データを計算への入力として使用することはお勧めしません。
@@ -66,7 +66,7 @@ sqlsrv_close($conn);
 ```
 
 ## <a name="example---format-the-output-parameter"></a>例 - 出力パラメーターの書式設定
-10 進数または数値フィールドが[出力パラメーター](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)として返される場合、戻り値は通常の varchar 文字列と見なされます。 ただし、SQLSRV_SQLTYPE_DECIMAL か SQLSRV_SQLTYPE_NUMERIC が指定されている場合、`FormatDecimals` を true に設定すると、数字の文字列値で先頭のゼロが不足することがなくなります。 詳細については、「[方法:SQLSRV ドライバーを使用して出力パラメーターを取得する](../..//connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)」を参照してください。
+10 進数または数値フィールドが[出力パラメーター](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)として返される場合、戻り値は通常の varchar 文字列と見なされます。 ただし、SQLSRV_SQLTYPE_DECIMAL か SQLSRV_SQLTYPE_NUMERIC が指定されている場合、`FormatDecimals` を true に設定すると、数字の文字列値で先頭のゼロが不足することがなくなります。 詳細については、「[方法: SQLSRV ドライバーを使用して出力パラメーターを取得する](../..//connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)」をご覧ください。
 
 次の例からは、10 進数 (8,4) 値を返すストアド プロシージャの出力パラメーターを書式設定する方法がわかります。
 

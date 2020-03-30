@@ -13,10 +13,10 @@ ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 13b4922d1fba2d41878217cadc8d47d45928b4ef
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68025212"
 ---
 # <a name="set-warning-thresholds"></a>[警告しきい値の設定]
@@ -35,14 +35,14 @@ ms.locfileid: "68025212"
   
  このフィールドには、該当のサーバー インスタンスに対して現在モニターが接続されているかどうかも示されます。 次の接続ステータスがあります。  
   
--   *server_instance_name* **に接続していません**  
+-   **server_instance_name** *に接続していません*  
   
--   *server_instance_name* **に接続しようとしています**  
+-   **server_instance_name** *に接続しようとしています*  
   
--   *server_instance_name* **に接続**  
+-   **server_instance_name** *に接続*  
   
     > [!NOTE]  
-    >  **sysadmin** 固定サーバー ロールのメンバーでない場合、このステータスは "*server_instance_name* **に接続** **(制限された権限)** " になります。  
+    >  **sysadmin** 固定サーバー ロールのメンバーでない場合、このステータスは "**server_instance_name** *に接続* **(制限された権限)** " になります。  
   
  パートナー サーバーの各インスタンスについて、その名前が *サーバー インスタンスと接続状態* を示すフィールドに表示されます。 一番上のフィールドには、モニターを開始した時点におけるプリンシパル サーバーが表示されます。  
   

@@ -16,10 +16,10 @@ ms.assetid: c465ff91-ab96-41de-8917-96c4974c2624
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a0c0d06a4e4d9f6b83ba938dad9abfbf9c58b7fc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67982766"
 ---
 # <a name="getint-method-int-sqlserverresultset"></a>getInt (int) メソッド (SQLServerResultSet)
@@ -40,7 +40,7 @@ public int getInt(int columnIndex)
  列インデックスを示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
- **int** 値。  
+ **int** 値です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -16,10 +16,10 @@ ms.assetid: 9950a8c9-9fe0-4003-95df-6f0d1becb0e7
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0f7af8a254bea06745c85cfdd0442b28eef876de
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68013217"
 ---
 # <a name="affinity-input-output-mask-server-configuration-option"></a>affinity Input-Output mask サーバー構成オプション
@@ -60,7 +60,7 @@ ms.locfileid: "68013217"
   
 -   **affinity I/O mask** オプションで 0、 **affinity mask** オプションで 1。  
   
- **affinity I/O mask** オプションは拡張オプションです。 **sp_configure** システム ストアド プロシージャを使用して **affinity I/O mask** の設定を変更するには、**show advanced options** を 1 に設定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、**affinity I/O mask[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オプションを再構成した場合、** のインスタンスを再起動する必要があります。  
+ **affinity I/O mask** オプションは拡張オプションです。 **sp_configure** システム ストアド プロシージャを使用して **affinity I/O mask** の設定を変更するには、**show advanced options** を 1 に設定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、**affinity I/O mask** オプションを再構成した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを再起動する必要があります。  
   
 > [!CAUTION]  
 >  Windows オペレーティング システムでの CPU 関係の構成と、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]での関係マスクの構成は、同時に行わないようにしてください。 この 2 つの設定は、同じ効果をねらったものであり、これらの構成間に一貫性がない場合は、予期しない結果を招く可能性があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPU 関係を構成する場合は、 **の** sp_configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オプションを使用する方法が最適です。  

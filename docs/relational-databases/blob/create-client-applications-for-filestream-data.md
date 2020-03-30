@@ -12,10 +12,10 @@ ms.assetid: 8a02aff6-e54c-40c6-a066-2083e9b090aa
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 385deb9dd689c6716ab8addaa64d8bf8bd62ed97
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68085394"
 ---
 # <a name="create-client-applications-for-filestream-data"></a>FILESTREAM データ用のクライアント アプリケーションの作成
@@ -31,7 +31,7 @@ ms.locfileid: "68085394"
 > [!NOTE]  
 >  このトピックの例を実行するには、「 [FILESTREAM が有効なデータベースを作成する方法](../../relational-databases/blob/create-a-filestream-enabled-database.md) 」および「 [FILESTREAM データを格納するテーブルを作成する方法](../../relational-databases/blob/create-a-table-for-storing-filestream-data.md)」に基づいて、FILESTREAM が有効なデータベースとテーブルを作成する必要があります。  
   
-##  <a name="func"></a> FILESTREAM データを操作するための関数  
+##  <a name="functions-for-working-with-filestream-data"></a><a name="func"></a> FILESTREAM データを操作するための関数  
  FILESTREAM を使用してバイナリ ラージ オブジェクト (BLOB) データを格納すると、Win32 API を使用してそのファイルを操作できます。 Win32 アプリケーションで FILESTREAM BLOB データを操作できるようにするために、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には次の関数と API が用意されています。  
   
 -   [PathName](../../relational-databases/system-functions/pathname-transact-sql.md) 。BLOB へのパスをトークンとして返します。 アプリケーションでは、このトークンを使用して Win32 ハンドルを取得し、BLOB データを操作します。  
@@ -40,24 +40,24 @@ ms.locfileid: "68085394"
   
 -   [GET_FILESTREAM_TRANSACTION_CONTEXT()](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md) は、セッションの現在のトランザクションを表すトークンを返します。 アプリケーションでは、このトークンを使用して、FILESTREAM のファイル システム ストリーミング操作をトランザクションにバインドします。  
   
--   [OpenSqlFilestream API](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) 。Win32 ファイル ハンドルを取得します。 アプリケーションでは、このハンドルを使って FILESTREAM データをストリーミングして、次の Win32 API にハンドルを渡すことができます。[ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422)、[WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423)、[TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424)、[SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425)、[SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)、[FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427)。 このハンドルを使用してその他の API を呼び出すと、ERROR_ACCESS_DENIED エラーが返されます。 ハンドルは、 [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428)を使用して閉じる必要があります。  
+-   [OpenSqlFilestream API](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) 。Win32 ファイル ハンドルを取得します。 アプリケーションでは、このハンドルを使って FILESTREAM データをストリーミングして、Win32 API の [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422)、 [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423)、 [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424)、 [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425)、 [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)、 [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427)にハンドルを渡すことができます。 このハンドルを使用してその他の API を呼び出すと、ERROR_ACCESS_DENIED エラーが返されます。 ハンドルは、 [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428)を使用して閉じる必要があります。  
   
  すべての FILESTREAM データ コンテナー アクセスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] トランザクションで実行されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行すると、SQL データと FILESTREAM データの一貫性を維持できます。  
   
-##  <a name="steps"></a> FILESTREAM データにアクセスするための手順  
+##  <a name="steps-for-accessing-filestream-data"></a><a name="steps"></a> FILESTREAM データにアクセスするための手順  
   
-###  <a name="path"></a> FILESTREAM ファイルのパスの読み取り  
+###  <a name="reading-the-filestream-file-path"></a><a name="path"></a> FILESTREAM ファイルのパスの読み取り  
  FILESTREAM テーブルの各セルには、ファイル パスが関連付けられています。 パスを読み取るには、 **ステートメントで** varbinary(max) **列の** PathName [!INCLUDE[tsql](../../includes/tsql-md.md)] プロパティを使用します。 **varbinary(max)** 列のファイル パスを読み取る方法を次の例に示します。  
   
  [!code-sql[FILESTREAM#FS_PathName](../../relational-databases/blob/codesnippet/tsql/create-client-applicatio_1.sql)]  
   
-###  <a name="trx"></a> トランザクション コンテキストの読み取り  
+###  <a name="reading-the-transaction-context"></a><a name="trx"></a> トランザクション コンテキストの読み取り  
  現在のトランザクション コンテキストを取得するには、[!INCLUDE[tsql](../../includes/tsql-md.md)] [GET_FILESTREAM_TRANSACTION_CONTEXT()](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md) 関数を使用します。 トランザクションを開始して現在のトランザクション コンテキストを読み取る方法を次の例に示します。  
   
  [!code-sql[FILESTREAM#FS_GET_TRANSACTION_CONTEXT](../../relational-databases/blob/codesnippet/tsql/create-client-applicatio_2.sql)]  
   
-###  <a name="handle"></a> Win32 ファイル ハンドルの取得  
- Win32 ファイル ハンドルを取得するには、OpenSqlFilestream API を呼び出します。 この API は、sqlncli.dll ファイルからエクスポートされます。 返されるハンドルは、次のいずれかの Win32 API に渡すことができます。[ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422)、[WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423)、[TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424)、[SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425)、[SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)、[FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427)。 Win32 ファイル ハンドルを取得し、これを使用して FILESTREAM BLOB に対してデータを読み書きする方法を次の例に示します。  
+###  <a name="obtaining-a-win32-file-handle"></a><a name="handle"></a> Win32 ファイル ハンドルの取得  
+ Win32 ファイル ハンドルを取得するには、OpenSqlFilestream API を呼び出します。 この API は、sqlncli.dll ファイルからエクスポートされます。 返されるハンドルは、Win32 API の [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422)、 [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423)、 [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424)、 [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425)、 [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)、 [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427)に渡すことができます。 Win32 ファイル ハンドルを取得し、これを使用して FILESTREAM BLOB に対してデータを読み書きする方法を次の例に示します。  
   
  [!code-cs[FILESTREAM#FS_CS_ReadAndWriteBLOB](../../relational-databases/blob/codesnippet/csharp/create-client-applicatio_3.cs)]  
   
@@ -65,7 +65,7 @@ ms.locfileid: "68085394"
   
  [!code-cpp[FILESTREAM#FS_CPP_WriteBLOB](../../relational-databases/blob/codesnippet/cpp/create-client-applicatio_5.cpp)]  
   
-##  <a name="best"></a> アプリケーションの設計と実装のベスト プラクティス  
+##  <a name="best-practices-for-application-design-and-implementation"></a><a name="best"></a> アプリケーションの設計と実装のベスト プラクティス  
   
 -   FILESTREAM を使用するアプリケーションの設計と実装を行う場合は、次のガイドラインを考慮してください。  
   

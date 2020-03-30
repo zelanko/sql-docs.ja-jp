@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: e572b8fcf1550562c7a9f1841eec1c311f18c3f8
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896705"
 ---
 # <a name="large-udts"></a>大きな UDT
@@ -30,10 +30,10 @@ ms.locfileid: "78896705"
 ユーザー定義型の完全なドキュメントについては、SQL Server オンライン ブックの「[CLR ユーザー定義型](https://go.microsoft.com/fwlink/?LinkId=98366)」を参照してください。
   
 ## <a name="retrieving-udt-schemas-using-getschema"></a>GetSchema を使用した UDT スキーマの取得  
-<xref:Microsoft.Data.SqlClient.SqlConnection> の <xref:Microsoft.Data.SqlClient.SqlConnection.GetSchema%2A> メソッドは、<xref:System.Data.DataTable> のデータベース スキーマ情報を返します。
+<xref:Microsoft.Data.SqlClient.SqlConnection.GetSchema%2A> の <xref:Microsoft.Data.SqlClient.SqlConnection> メソッドは、<xref:System.Data.DataTable> のデータベース スキーマ情報を返します。
   
 ### <a name="getschematable-column-values-for-udts"></a>UDT の GetSchemaTable 列の値  
-<xref:Microsoft.Data.SqlClient.SqlDataReader> の <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> メソッドは、列メタデータを表す <xref:System.Data.DataTable> を返します。 次の表では、SQL Server 2005 と SQL Server 2008 の間の大きな UDT に対する列メタデータの違いについて説明します。  
+<xref:Microsoft.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> の <xref:Microsoft.Data.SqlClient.SqlDataReader> メソッドは、列メタデータを表す <xref:System.Data.DataTable> を返します。 次の表では、SQL Server 2005 と SQL Server 2008 の間の大きな UDT に対する列メタデータの違いについて説明します。  
   
 |SqlDataReader 列|SQL Server 2005|SQL Server 2008 以降|  
 |--------------------------|---------------------|-------------------------------|  
@@ -50,7 +50,7 @@ ms.locfileid: "78896705"
 ## <a name="sqldatareader-considerations"></a>SqlDataReader の考慮事項  
 SQL Server 2008 以降、<xref:Microsoft.Data.SqlClient.SqlDataReader> は大きな UDT 値を取得できるように拡張されました。 <xref:Microsoft.Data.SqlClient.SqlDataReader> によって処理される UDT 値の大きさは、使用している SQL Server のバージョンと、接続文字列で指定されている `Type System Version` によって異なります。 詳細については、<xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A> を参照してください。  
   
-<xref:Microsoft.Data.SqlClient.SqlDataReader> の次のメソッドは、`Type System Version` が SQL Server 2005 に設定されている場合、UDT ではなく <xref:System.Data.SqlTypes.SqlBinary> を返します。  
+<xref:Microsoft.Data.SqlClient.SqlDataReader> の次のメソッドは、<xref:System.Data.SqlTypes.SqlBinary> が SQL Server 2005 に設定されている場合、UDT ではなく `Type System Version` を返します。  
   
 - <xref:Microsoft.Data.SqlClient.SqlDataReader.GetProviderSpecificFieldType%2A>  
   
@@ -62,7 +62,7 @@ SQL Server 2008 以降、<xref:Microsoft.Data.SqlClient.SqlDataReader> は大き
   
 - <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlValues%2A>  
   
-次のメソッドは、`Type System Version` が SQL Server 2005 に設定されている場合、UDT ではなく `Byte[]` の配列を返します。  
+次のメソッドは、`Byte[]` が SQL Server 2005 に設定されている場合、UDT ではなく `Type System Version` の配列を返します。  
   
 - <xref:Microsoft.Data.SqlClient.SqlDataReader.GetValue%2A>  
   

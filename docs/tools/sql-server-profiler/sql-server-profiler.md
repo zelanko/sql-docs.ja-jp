@@ -12,10 +12,10 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 11/27/2018
 ms.openlocfilehash: 4b2130aad931b55e1644aedb36762ad3b94a1e1c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75307827"
 ---
 # <a name="sql-server-profiler"></a>SQL Server プロファイラー
@@ -27,7 +27,7 @@ ms.locfileid: "75307827"
 > [!IMPORTANT]
 > SQL トレースと [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、非推奨です。 Microsoft SQL Server の Trace や Replay オブジェクトを含む *Microsoft.SqlServer.Management.Trace* 名前空間も非推奨とされます。 
 > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 
-> 代わりに拡張イベントを使用します。 [拡張イベント](../../relational-databases/extended-events/extended-events.md)について詳しくは、「[クイック スタート:SQL Server 拡張イベント](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)」および [SSMS XEvent Profiler](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md) に関するページをご覧ください。
+> 代わりに拡張イベントを使用します。 [拡張イベント](../../relational-databases/extended-events/extended-events.md)の詳細については、「[クイック スタート: SQL Server 拡張イベント](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)」および [SSMS XEvent Profiler](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md) に関するページを参照してください。
 
 > [!NOTE]
 > Analysis Services のワークロード用の [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は非推奨とされず、引き続きサポートされます。
@@ -42,7 +42,7 @@ ms.locfileid: "75307827"
 ||||  
 |-|-|-|  
 |**機能\対象のワークロード**|**リレーショナル エンジン**|**Analysis Services**|  
-|**トレースのキャプチャ**|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の [拡張イベント](../../relational-databases/extended-events/extended-events.md)のグラフィカル ユーザー インターフェイス|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|  
+|**トレースのキャプチャ**|[ の ](../../relational-databases/extended-events/extended-events.md)拡張イベント[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のグラフィカル ユーザー インターフェイス|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|  
 |**トレースの再生**|[分散再生](../distributed-replay/sql-server-distributed-replay.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|  
   
 ## <a name="sql-server-profiler"></a>SQL Server プロファイラー  

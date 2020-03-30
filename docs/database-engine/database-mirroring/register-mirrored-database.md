@@ -13,10 +13,10 @@ ms.assetid: 6acd02b9-2311-49b0-a5f8-3852beecb4b0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 19f6a39707ce5615f2a912c5273274d0abb60623
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68025404"
 ---
 # <a name="register-mirrored-database"></a>[ミラー化されたデータベースの登録]
@@ -45,7 +45,7 @@ ms.locfileid: "68025404"
   
  このグリッドには次の列が含まれています。  
   
-|列名|[説明]|  
+|列名|説明|  
 |-----------------|-----------------|  
 |**[登録]**|登録する各データベースのチェック ボックスをオンにします。 現在監視されているデータベースのチェック ボックスはオンに設定され、変更することはできません。<br /><br /> 注: データベースの登録を解除するには、 **[ミラー化されたデータベースの登録]** ダイアログ ボックスを閉じ、ナビゲーション ツリーでデータベースを選択して、 **[アクション]** メニューから **[登録解除]** を選択します。|  
 |**[データベース]**|選択されたサーバー インスタンスでミラー化されたデータベースの名前です。|  

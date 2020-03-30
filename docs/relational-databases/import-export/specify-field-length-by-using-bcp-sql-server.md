@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0cbb165d6c0b56626849a74eed191402b65623de
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68062529"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>bcp を使用したフィールド長の指定 (SQL Server)
@@ -68,7 +68,7 @@ ms.locfileid: "68062529"
 |**bit**|1|  
 |**[バイナリ]**|列に対して定義された長さの 2 倍 + 1|  
 |**varbinary**|列に対して定義された長さの 2 倍 + 1|  
-|**image**|0|  
+|**画像**|0|  
 |**datetime**|24|  
 |**smalldatetime**|24|  
 |**float**|30|  
@@ -102,7 +102,7 @@ ms.locfileid: "68062529"
 |**bit**|1|  
 |**[バイナリ]**|列に対して定義された長さ|  
 |**varbinary**|列に対して定義された長さ|  
-|**image**|0|  
+|**画像**|0|  
 |**datetime**|8|  
 |**smalldatetime**|4|  
 |**float**|8|  

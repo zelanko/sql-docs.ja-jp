@@ -19,10 +19,10 @@ ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e37b386b0dd8fd5a596096b8f56e87db1a0fa1e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77078123"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services でサポートされるデータ ソース (SSRS)
@@ -81,21 +81,21 @@ ms.locfileid: "77078123"
 ## <a name="supported-data-sources"></a>サポートされるデータ ソース  
  次の表は、レポート データセットおよびレポート モデルのデータを取得するときに使用できる、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] データ処理拡張機能およびデータ プロバイダーを示しています。 拡張機能またはデータ プロバイダーの詳細を参照する場合は、2 番目の列のリンクをクリックしてください。 以下に、表の列の説明を示します。  
   
--   レポート データのソース:アクセス先のデータの種類 (リレーショナル データベース、多次元データベース、フラット ファイル、XML など)。 この列では、"レポートに対して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] で使用できるデータの種類" がわかります。  
+-   レポート データのソース: アクセス先のデータの種類 (リレーショナル データベース、多次元データベース、フラット ファイル、XML など)。 この列を参照すると、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] がレポートに使えるデータの種類がわかります。  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ ソースの種類:[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] でデータ ソースを定義するときにドロップダウン リストに表示されるデータ ソースの種類のうちの 1 つ。 このリストには、インストールおよび登録された DPE とデータ プロバイダーから取得した値が設定されます。 この列では、"レポート データ ソースを作成するときにドロップダウン リストから選択するべきデータ ソースの種類" がわかります。  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ ソースの種類: [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]でデータ ソースを定義するときにドロップダウン リストに表示されるデータ ソースの種類のうちの 1 つ。 このリストには、インストールおよび登録された DPE とデータ プロバイダーから取得した値が設定されます。 この列を参照すると、レポート データ ソースを作成するときにドロップダウン リストから選択すべきデータ ソースの種類がわかります。  
   
--   データ処理拡張機能/データ プロバイダーの名前:[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能または選択された [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ ソースの種類に対応する他のデータ プロバイダー。 この列では、"データ ソースの種類を選択したときに、どのデータ処理拡張機能またはデータ プロバイダーが使用されるか" がわかります。  
+-   データ処理拡張機能/データ プロバイダーの名前: 選択した [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ ソースの種類に対応する [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能または他のデータ プロバイダー。 この列では、データ ソースの種類を選択したときに、どのデータ処理拡張機能またはデータ プロバイダーが使用されるかを識別できます。  
   
--   基になるデータ プロバイダーのバージョン (省略可):データ ソースの種類によっては複数のデータ プロバイダーをサポートします。 たとえば、同じプロバイダーに異なるバージョンが存在する場合や、特定の種類のデータ プロバイダーとして複数のサードパーティによる実装が存在する場合があります。 プロバイダー名は、データ ソースを構成した後の接続文字列に含まれることがよくあります。 この列では、データ ソースの種類を選択した後に、 **[接続プロパティ]** ダイアログ ボックスで選択するべきデータ プロバイダーがわかります。  
+-   基になるデータ プロバイダーのバージョン (オプション): データ ソースの種類によっては複数のデータ プロバイダーがサポートされます。 たとえば、同じプロバイダーに異なるバージョンが存在する場合や、特定の種類のデータ プロバイダーとして複数のサードパーティによる実装が存在する場合があります。 プロバイダー名は、データ ソースを構成した後の接続文字列に含まれることがよくあります。 この列では、データ ソースの種類を選択した後に、 **[接続プロパティ]** ダイアログ ボックスで選択すべきデータ プロバイダーを識別できます。  
   
--   データ ソース *\<プラットフォーム>* :対象データ ソースのデータ処理拡張機能またはデータ プロバイダーによりサポートされるデータ ソースのプラットフォーム。 この列では、"このデータ処理拡張機能またはこのデータ プロバイダーが、この種類のプラットフォームのデータ ソースからデータを取得できるかどうか" がわかります。  
+-   データ ソース *\<platform>* : 対象データ ソースのデータ処理拡張機能またはデータ プロバイダーによりサポートされるデータ ソースのプラットフォーム。 この列では、プラットフォームの種類に応じて、データ ソースからデータを取得できるデータ処理拡張機能またはデータ プロバイダーを識別できます。  
   
--   データ ソースのバージョン:DPE またはデータ プロバイダーでサポートされている対象データ ソースのバージョン。 この列では、"このデータ処理拡張機能またはこのデータ プロバイダーが、このバージョンのデータ ソースからデータを取得できるかどうか" がわかります。  
+-   データ ソースのバージョン: DPE またはデータ プロバイダーでサポートされている対象データ ソースのバージョン。 この列では、対象となるバージョンのデータ ソースからデータを取得できるデータ処理拡張機能またはプロバイダーを識別できます。  
   
--   RS *\<プラットフォーム>* :カスタムの DPE またはデータ プロバイダーをインストールできる、レポート サーバーおよびレポート作成クライアントのプラットフォーム。 組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能は、インストールされた [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]に含まれています。 カスタムのデータ処理拡張機能または [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダーは、特定のプラットフォーム用にネイティブにコンパイルする必要があります。 この列では、"このデータ処理拡張機能またはこのデータ プロバイダーを、この種類のプラットフォームにインストールできるかどうか" がわかります。  
+-   RS *\<platform>* : カスタムの DPE またはデータ プロバイダーをインストールできる、レポート サーバーおよびレポート作成クライアントのプラットフォーム。 組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能は、インストールされた [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]に含まれています。 カスタムのデータ処理拡張機能または [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダーは、特定のプラットフォーム用にネイティブにコンパイルする必要があります。 この列では、対象となる種類のプラットフォームにインストールできるデータ処理拡張機能またはプロバイダーを識別できます。  
   
-###  <a name="DataSourcesTable"></a> データ ソースの種類  
+###  <a name="types-of-data-sources"></a><a name="DataSourcesTable"></a> データ ソースの種類  
   
 |レポート データの<br /><br /> ソース|Reporting Services データ ソースの種類|データ処理拡張機能/データ プロバイダーの名前|基になるデータ プロバイダーのバージョン<br /><br /> (省略可能)|Data<br /><br /> source<br /><br /> プラットフォーム x86|Data<br /><br /> source<br /><br /> プラットフォーム x64|データ ソースのバージョン|RS<br /><br /> プラットフォーム x86|RS<br /><br /> プラットフォーム x64|  
 |-------------------------------|-----------------------------------------|------------------------------------------------------|-------------------------------------------------------|--------------------------------------|--------------------------------------|----------------------------|-------------------------|-------------------------|  
@@ -134,7 +134,7 @@ ms.locfileid: "77078123"
   
  レポート ビルダーがサポートしているデータ処理拡張機能の詳細については、「[データ接続文字列を作成する - レポート ビルダーおよび SSRS](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」を参照してください。
   
-###  <a name="MicrosoftSQLServer"></a> Microsoft SQL Server データ処理拡張機能  
+###  <a name="microsoft-sql-server-data-processing-extension"></a><a name="MicrosoftSQLServer"></a> Microsoft SQL Server データ処理拡張機能  
  データ ソースの種類 **Microsoft SQL Server** は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をラップし、拡張したものです。 このデータ処理拡張機能は、x86 および [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]ベースのプラットフォーム用にネイティブでコンパイルされ、これらのプラットフォームで実行されます。  
   
  [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] では、このデータ拡張機能に関連付けられているクエリ デザイナーは Visual Database Tools デザイナーです。 クエリ デザイナーをグラフィカル モードで使用すると、クエリが分析され、再作成される場合があります。 クエリに使用する [!INCLUDE[tsql](../../includes/tsql-md.md)] 構文を制御するには、テキストベースのクエリ デザイナーを使用します。 詳細については、「 [グラフィカル クエリ デザイナーのユーザー インターフェイス](../../reporting-services/report-data/graphical-query-designer-user-interface.md)」を参照してください。  
@@ -145,7 +145,7 @@ ms.locfileid: "77078123"
   
  [データ ソースの表に戻る](#DataSourcesTable)  
   
-###  <a name="Azure"></a> Microsoft Azure SQL Database 処理拡張機能  
+###  <a name="microsoft-azure-sql-database-processing-extension"></a><a name="Azure"></a> Microsoft Azure SQL Database 処理拡張機能  
  データ ソースの種類 **Microsoft Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]** は、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をラップし、拡張したものです。  
   
  [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]では、このデータ拡張機能に関連付けられているグラフィカル クエリ デザイナーは、リレーショナル クエリ デザイナーです。**Microsoft SQL Server** のデータ ソースの種類で使う Visual Database Tools デザイナーではありません。  
@@ -158,13 +158,13 @@ ms.locfileid: "77078123"
   
  [データ ソースの表に戻る](#DataSourcesTable)  
   
-###  <a name="PWD"></a> Microsoft SQL Server 並列データ ウェアハウス処理拡張機能  
+###  <a name="microsoft-sql-server-parallel-data-warehouse-processing-extension"></a><a name="PWD"></a> Microsoft SQL Server 並列データ ウェアハウス処理拡張機能  
 このデータ ソースは非推奨となりました。 Microsoft Analytics Platform (APS) に接続するには、SQL Server データ ソースの種類を使用してください。
   
  [データ ソースの表に戻る](#DataSourcesTable)  
   
-###  <a name="AnalysisServices"></a> Microsoft SQL Server Analysis Services データ処理拡張機能  
- データ ソースの種類に **[Microsoft SQL Server Analysis Services]** を選択した場合は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 用の [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダーを拡張する [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能を選択しています。 このデータ処理拡張機能は、x86 および x64 ベースのプラットフォーム用にネイティブでコンパイルされ、これらのプラットフォームで実行されます。  
+###  <a name="microsoft-sql-server-analysis-services-data-processing-extension"></a><a name="AnalysisServices"></a> Microsoft SQL Server Analysis Services データ処理拡張機能  
+ データ ソースの種類に **[Microsoft SQL Server Analysis Services]** を選択した場合は、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 用の [!INCLUDE[msCoName](../../includes/msconame-md.md)] データ プロバイダーを拡張する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ処理拡張機能を選択しています。 このデータ処理拡張機能は、x86 および x64 ベースのプラットフォーム用にネイティブでコンパイルされ、これらのプラットフォームで実行されます。  
   
  このデータ プロバイダーは、ADOMD.NET オブジェクト モデルを使用して、XML for Analysis (XMLA) Version 1.1 を使用したクエリを作成します。 結果はフラット化された行セットとして返されます。 詳細については、「[MDX のための Analysis Services の接続の種類 &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)」、「[DMX のための Analysis Services の接続の種類 &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)」、「[Analysis Services の MDX クエリ デザイナーのユーザー インターフェイス](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md)」、および「[Analysis Services の DMX クエリ デザイナーのユーザー インターフェイス](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)」を参照してください。  
   
@@ -172,14 +172,14 @@ ms.locfileid: "77078123"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースからモデルを作成することもできます。  
   
-###  <a name="OLEDBAll"></a> OLE DB Data Processing Extension  
+###  <a name="ole-db-data-processing-extension"></a><a name="OLEDBAll"></a> OLE DB Data Processing Extension  
  OLE DB データ処理拡張機能では、レポートで使用するデータ ソースのバージョンに基づいて、追加のデータ プロバイダー レイヤーを選択する必要があります。 特定のデータ プロバイダーを選択しなかった場合は、既定値が使用されます。 [データ ソース] または [共有データ ソース] ダイアログ ボックスで **[編集]** ボタンをクリックして **[接続プロパティ]** ダイアログ ボックスにアクセスし、特定のデータ プロバイダーを選びます。  
   
  OLE DB に関連付けられたクエリ デザイナーの詳細については、「 [グラフィカル クエリ デザイナーのユーザー インターフェイス](../../reporting-services/report-data/graphical-query-designer-user-interface.md)」を参照してください。 OLE DB プロバイダーに対するサポートの詳細については、 [サポート技術情報の「](https://support.microsoft.com/default.aspx/kb/811241) Visual Studio .NET デザイナーのツールでサポートされる OLE DB プロバイダー [!INCLUDE[msCoName](../../includes/msconame-md.md)] 」を参照してください。  
   
  [データ ソースの表に戻る](#DataSourcesTable)  
   
-####  <a name="OLEDBSQL"></a> OLE DB for SQL Server  
+####  <a name="ole-db-for-sql-server"></a><a name="OLEDBSQL"></a> OLE DB for SQL Server  
  データ ソースの種類に **[OLE DB]** を選択した場合は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Data Provider for OLE DB を拡張した [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ処理拡張機能が選択されます。 このデータ処理拡張機能は、x86 および x64 プラットフォーム用にネイティブでコンパイルされ、これらのプラットフォームで実行されます。  
   
  詳細については、「[OLE DB の接続の種類 &#40;SSRS&#41;](../../reporting-services/report-data/ole-db-connection-type-ssrs.md)」を参照してください。  
@@ -191,8 +191,8 @@ ms.locfileid: "77078123"
   
  [データ ソースの表に戻る](#DataSourcesTable)  
   
-####  <a name="OracleOLEDB"></a> OLE DB for Oracle  
- OLE DB for Oracle データ処理拡張機能では、次の Oracle データ型はサポートされません: BLOB、CLOB、NCLOB、BFILE、UROWID。  
+####  <a name="ole-db-for-oracle"></a><a name="OracleOLEDB"></a> OLE DB for Oracle  
+ データ処理拡張機能の OLE DB for Oracle では、BLOB、CLOB、NCLOB、BFILE、UROWID といった Oracle データの種類はサポートされません。  
   
  位置に依存する無名パラメーターはサポートされます。 この拡張機能では、名前付きパラメーターはサポートされません。 名前付きパラメーターを使用するには、 [Oracle](#OracleClient) データ処理拡張機能を使用します。  
   
@@ -200,7 +200,7 @@ ms.locfileid: "77078123"
   
  [データ ソースの表に戻る](#DataSourcesTable)  
   
-####  <a name="OLEDBStandard"></a> 標準の OLE DB .NET Framework データ プロバイダー  
+####  <a name="ole-db-standard-net-framework-data-provider"></a><a name="OLEDBStandard"></a> 標準の OLE DB .NET Framework データ プロバイダー  
  OLE DB [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダーをサポートするデータ ソースからデータを取得するには、データ ソースの種類に **OLE DB** を使用して、既定のデータ プロバイダーを選択するか、または **[接続文字列]** ダイアログ ボックスでインストール済みのデータ プロバイダーから選択します。  
   
 > [!NOTE]  
@@ -208,7 +208,7 @@ ms.locfileid: "77078123"
   
  [データ ソースの表に戻る](#DataSourcesTable)  
   
-###  <a name="ODBC"></a> ODBC Data Processing Extension  
+###  <a name="odbc-data-processing-extension"></a><a name="ODBC"></a> ODBC Data Processing Extension  
  データ ソースの種類に **[ODBC]** を選択した場合は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Data Provider for ODBC を拡張した [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ処理拡張機能が選択されます。 このデータ処理拡張機能は、x86 および [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)] プラットフォーム用にネイティブでコンパイルされ、これらのプラットフォームで動作します。 この拡張機能を使用すると、ODBC プロバイダーを持つ任意のデータ ソースのデータに接続し、データを取得できます。  
   
 > [!NOTE]  
@@ -216,7 +216,7 @@ ms.locfileid: "77078123"
   
  [データ ソースの表に戻る](#DataSourcesTable)  
   
-####  <a name="ODBCGeneric"></a> 標準の ODBC .NET Framework データ プロバイダー  
+####  <a name="odbc-standard-net-framework-data-provider"></a><a name="ODBCGeneric"></a> 標準の ODBC .NET Framework データ プロバイダー  
  標準の ODBC [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダーをサポートするデータ ソースからデータを取得するには、データ ソースの種類に **[ODBC]** を使用して、既定のデータ プロバイダーを選択するか、または **[接続文字列]** ダイアログ ボックスでインストール済みのデータ プロバイダーから選択します。  
   
 > [!NOTE]  
@@ -224,7 +224,7 @@ ms.locfileid: "77078123"
   
  [データ ソースの表に戻る](#DataSourcesTable)  
   
-###  <a name="OracleClient"></a> Oracle データ処理拡張機能  
+###  <a name="oracle-data-processing-extension"></a><a name="OracleClient"></a> Oracle データ処理拡張機能  
  データ ソースの種類として **[Oracle]** を選択すると、Oracle Data Provider を直接使う [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能が選択されて、System.Data.OracleClient を経由しなくなります。 Oracle データベースからレポート データを取得するには、管理者が Oracle クライアント ツールをインストールする必要があります。 クライアント アプリケーションのバージョンは 11g 以降である必要があります。 これらのツールをレポート作成クライアントにインストールすると、レポートをプレビューすることができ、レポート サーバーにインストールすると、パブリッシュされたレポートを表示できます。  
  
 Oracle クライアント ツールをインストールするには、次のようにします。
@@ -243,7 +243,7 @@ Oracle クライアント ツールをインストールするには、次のよ
   
  [データ ソースの表に戻る](#DataSourcesTable)  
   
-###  <a name="Teradata"></a> Teradata データ処理拡張機能  
+###  <a name="teradata-data-processing-extension"></a><a name="Teradata"></a> Teradata データ処理拡張機能  
  データ ソースの種類に **[Teradata]** を選択した場合は、.NET Framework Data Provider for Teradata を拡張した [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能が選択されます。 Teradata からレポート データを取得するには、システム管理者はレポート作成クライアントに .NET Framework Data Provider for Teradata をインストールしてクライアント上でレポートを編集およびプレビューし、レポート サーバー上でパブリッシュされたレポートを表示する必要があります。  
   
  レポート サーバー プロジェクトには、この拡張で使用できるグラフィカル クエリ デザイナーはありません。 クエリを作成するにはテキストベースのクエリ デザイナーを使用する必要があります。  
@@ -272,7 +272,7 @@ Oracle クライアント ツールをインストールするには、次のよ
  
  [データ ソースの表に戻る](#DataSourcesTable)  
   
-###  <a name="SharePointList"></a> SharePoint リスト データ拡張機能  
+###  <a name="sharepoint-list-data-extension"></a><a name="SharePointList"></a> SharePoint リスト データ拡張機能  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、レポートのデータ ソースに SharePoint リストを使用できるように、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint リスト データ拡張機能が含まれています。 リスト データは、以下から取得できます。  
   
 -   SharePoint Server 2016  
@@ -285,21 +285,21 @@ Oracle クライアント ツールをインストールするには、次のよ
   
 2.  SharePoint 統合モードで構成されたレポート サーバーの場合、リスト データは対応する Lists.asmx Web サービス、または SharePoint API に対するプログラム呼び出しのいずれかから取得されます。 このモードでは、SharePoint ファームからリスト データを取得できます。  
   
-3.  [!INCLUDE[SPS2013](../../includes/sps2013-md.md)] および SharePoint Server 2016 では、[!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint テクノロジ用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインを使うことで、SharePoint サイトの Lists.asmx Web サービスから、または SharePoint ファームを構成する SharePoint サイトから、リスト データを取得できます。 このシナリオは、レポート サーバーが不要なため、 *ローカル モード* とも呼ばれています。  
+3.  [!INCLUDE[SPS2013](../../includes/sps2013-md.md)] および SharePoint Server 2016 では、[!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint テクノロジ用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] アドインを使うことで、SharePoint サイトの Lists.asmx Web サービスから、または SharePoint ファームを構成する SharePoint サイトから、リスト データを取得できます。 このシナリオは、レポート サーバーが不要なため、 *ローカル モード* とも呼ばれています。  
   
  指定できる資格情報は、クライアント アプリケーションが使用している実装によって異なります。 詳細については、「[SharePoint リストの接続の種類 &#40;SSRS&#41;](../../reporting-services/report-data/sharepoint-list-connection-type-ssrs.md)」を参照してください。  
   
-###  <a name="XML"></a> XML データ処理拡張機能  
+###  <a name="xml-data-processing-extension"></a><a name="XML"></a> XML データ処理拡張機能  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、レポート内で XML データを使用できるように、XML データ処理拡張機能が含まれています。 データは、XML ドキュメントや Web サービス、または URL を使用してアクセス可能な Web ベースのアプリケーションから取得できます。 詳細については、「[XML の接続の種類 &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)」を参照してください。 関連付けられているクエリ デザイナーの詳細については、「 [グラフィカル クエリ デザイナーのユーザー インターフェイス](../../reporting-services/report-data/graphical-query-designer-user-interface.md)」の「テキスト ベースのクエリ デザイナー」セクションを参照してください。
   
  [データ ソースの表に戻る](#DataSourcesTable)  
   
-###  <a name="SAPBW"></a> SAP BW データ処理拡張機能  
+###  <a name="sap-bw-data-processing-extension"></a><a name="SAPBW"></a> SAP BW データ処理拡張機能  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、SAP BW データ ソースからのデータをレポートで使用できるデータ処理拡張機能が含まれます。
   
  [データ ソースの表に戻る](#DataSourcesTable)  
   
-###  <a name="Hyperion"></a> Hyperion Essbase Business Intelligence のデータ拡張機能  
+###  <a name="hyperion-essbase-business-intelligence-data-processing-extension"></a><a name="Hyperion"></a> Hyperion Essbase Business Intelligence のデータ拡張機能  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、レポートの [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] データ ソースからのデータを使用できるデータ処理拡張機能が含まれます。  
   
  詳細については、「[Hyperion Essbase の接続の種類 &#40;SSRS&#41;](../../reporting-services/report-data/hyperion-essbase-connection-type-ssrs.md)」を参照してください。 関連付けられているクエリ デザイナーの詳細については、「 [Hyperion Essbase Query Designer User Interface](../../reporting-services/report-data/hyperion-essbase-query-designer-user-interface.md)」を参照してください。  

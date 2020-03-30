@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 2847838b37a9f5c233f649b6a712d4c0b2d150f4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67988858"
 ---
 # <a name="using-large-value-types"></a>大きな値をとるデータ型の使用
@@ -33,7 +33,7 @@ ms.locfileid: "67988858"
 > [!NOTE]  
 >  大きな値をとるデータ型は、最大サイズを 1 KB から 8 KB に制限できます。また、サイズを無制限にすることもできます。  
   
- 以前は、**text**、**ntext**、**image** などの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型のみにこのようなサイズを指定できました。 **varchar**、**nvarchar**、**varbinary** に **max** 指定子が導入されたことで、これらのデータ型の存在は冗長になりました。 ただし、これらの大きなデータ型も引き続き使用できるので、OLE DB データ アクセス コンポーネントに対する大部分のインターフェイスは変更されません。 以前のリリースとの下位互換性を維持するために、OLE DB Driver for SQL Server では DBCOLUMNFLAGS_ISLONG フラグが引き続き使用されます。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降用に作成されたプロバイダーやドライバーでは、最大長を無制限に設定する場合、新しいデータ型に対して、DBCOLUMNFLAGS_ISLONG や SQL_LONGVARCHAR といった表現を引き続き使用できます。  
+ 以前は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]text **、** ntext **、** image**などの** データ型のみにこのようなサイズを指定できました。 **varchar**、**nvarchar**、**varbinary** に **max** 指定子が導入されたことで、これらのデータ型の存在は冗長になりました。 ただし、これらの大きなデータ型も引き続き使用できるので、OLE DB データ アクセス コンポーネントに対する大部分のインターフェイスは変更されません。 以前のリリースとの下位互換性を維持するために、OLE DB Driver for SQL Server では DBCOLUMNFLAGS_ISLONG フラグが引き続き使用されます。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降用に作成されたプロバイダーやドライバーでは、最大長を無制限に設定する場合、新しいデータ型に対して、DBCOLUMNFLAGS_ISLONG や SQL_LONGVARCHAR といった表現を引き続き使用できます。  
   
 > [!NOTE]  
 >  **varchar(max)** データ型、**nvarchar(max)** データ型、**varbinary(max)** データ型を、ストアド プロシージャの入力パラメーターの型や出力パラメーターの型、または関数の戻り値の型として指定したり、[CAST と CONVERT](../../../t-sql/functions/cast-and-convert-transact-sql.md) の各関数に指定することもできます。  

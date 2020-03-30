@@ -11,10 +11,10 @@ ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bc81bae599bcd9e401aad7e610a7c43ed1a0dcec
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027883"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>SQL Server 用 Microsoft JDBC ドライバー
@@ -28,7 +28,7 @@ Microsoft JDBC Driver for SQL Server は、IBM WebSphere や SAP NetWeaver な�
 ## <a name="getting-started"></a>作業の開始  
 
 * [ステップ 1: Java 開発用に開発環境を構成する](step-1-configure-development-environment-for-java-development.md)  
-* [手順 2: Java 開発用に SQL データベースを作成する](step-2-create-a-sql-database-for-java-development.md)  
+* [ステップ 2: Java 開発用に SQL データベースを作成する](step-2-create-a-sql-database-for-java-development.md)  
 * [ステップ 3: Java を使用した SQL への接続を概念実証する](step-3-proof-of-concept-connecting-to-sql-using-java.md)  
   
 ## <a name="documentation"></a>ドキュメント  

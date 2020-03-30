@@ -9,10 +9,10 @@ ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4dbe5d5afdf507f3edfd68135aa8ee14aee5ae08
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63043182"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>チュートリアル: レポートへのスパークラインの追加 (レポート ビルダー)
@@ -28,7 +28,7 @@ ms.locfileid: "63043182"
 ## <a name="requirements"></a>必要条件  
 要件に関する詳細については、「[チュートリアルの前提条件 (レポート ビルダー)](../reporting-services/prerequisites-for-tutorials-report-builder.md)」を参照してください。  
   
-## <a name="CreateTable"></a>1.テーブルを使用したレポートを作成する  
+## <a name="1-create-a-report-with-a-table"></a><a name="CreateTable"></a>1.テーブルを使用したレポートを作成する  
   
 1.  コンピューター、[Web ポータル、SharePoint 統合モードのいずれかから](../reporting-services/report-builder/start-report-builder.md) レポート ビルダーを起動します [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "63043182"
   
 13. **[次へ]** をクリックします。  
   
-## <a name="Query"></a>2.テーブル ウィザードでクエリおよびテーブル レイアウトを作成する  
+## <a name="2-create-a-query-and-table-layout-in-the-table-wizard"></a><a name="Query"></a>2.テーブル ウィザードでクエリおよびテーブル レイアウトを作成する  
 レポートでは、クエリが事前に定義された共有データセットを使用するか、そのレポートでのみ使用する埋め込みデータセットを作成できます。 このチュートリアルでは、埋め込みデータセットを作成します。  
   
 > [!NOTE]  
@@ -160,7 +160,7 @@ ms.locfileid: "63043182"
   
 15. **[実行]** をクリックして、レポートをプレビューします。  
 
-### <a name="FormatCurrency"></a>2a. データに通貨の書式を設定する  
+### <a name="2a-format-data-as-currency"></a><a name="FormatCurrency"></a>2a. データに通貨の書式を設定する  
 既定では、 **Sales** フィールドの集計データは通常の数値として表示されます。 このフィールドを書式設定して、数値を通貨として表示します。 書式設定したテキスト ボックスおよびプレースホルダー テキストのサンプル値を表示するには、 **[プレースホルダーのスタイル]** の設定を切り替えます。  
   
 1.  **[デザイン]** をクリックしてデザイン ビューに切り替えます。  
@@ -177,7 +177,7 @@ ms.locfileid: "63043182"
     
     ![report-builder-placeholder-value-button](../reporting-services/media/report-builder-placeholder-value-button.png)
    
-### <a name="FormatDates"></a>2b. (オプション) データに日付の書式を設定する  
+### <a name="2b-optional-format-data-as-dates"></a><a name="FormatDates"></a>2b. (オプション) データに日付の書式を設定する  
 既定では、 **SalesDate** フィールドには日付と時刻の情報が表示されます。 このフィールドを書式設定して、日付のみを表示できます。  
   
 1.  `[SalesDate]`が格納されたセルをクリックします。  
@@ -190,7 +190,7 @@ ms.locfileid: "63043182"
   
 **SalesDate** の値は既定の日付形式で表示され、 **Sales** の集計値は通貨の形式で表示されます。   
   
-## <a name="Sparkline"></a>3.スパークラインを追加する    
+## <a name="3-add-a-sparkline"></a><a name="Sparkline"></a>3.スパークラインを追加する    
   
 1.  **[デザイン]** をクリックしてデザイン ビューに戻ります。  
   
@@ -224,7 +224,7 @@ ms.locfileid: "63043182"
   
      ![report-builder-sparkline-misaligned](../reporting-services/media/report-builder-sparkline-misaligned.png)
   
-## <a name="AlignSparklines"></a>4.スパークラインを垂直方向および水平方向に揃える  
+## <a name="4-align-the-sparklines-vertically-and-horizontally"></a><a name="AlignSparklines"></a>4.スパークラインを垂直方向および水平方向に揃える  
 スパークラインは、測定方法が異なると、読み取りにくくなります。 各スパークラインの縦軸と横軸は、残りのスパークラインと一致させる必要があります。  
    
 1.  **[デザイン]** をクリックしてデザイン ビューに戻ります。  
@@ -251,7 +251,7 @@ ms.locfileid: "63043182"
   
 ![report-builder-sparkline-aligned](../reporting-services/media/report-builder-sparkline-aligned.png)
   
-## <a name="Width"></a>7.(オプション) 列幅を変更する  
+## <a name="7-optional-change-column-widths"></a><a name="Width"></a>7.(オプション) 列幅を変更する  
 テーブルの各セルには、既定でテキスト ボックスが含まれます。 テキスト ボックスは、ページを表示するときにテキストに合わせて垂直方向に拡張されます。 表示されるレポートでは、各行がその行で最も高いテキスト ボックスの高さに拡張されます。 デザイン画面の行の高さは、表示されるレポートの行の高さには影響しません。  
   
 各行の垂直方向の領域を小さくするには、列の幅を広げ、列で想定されるテキスト ボックスの内容が 1 行に収まるようにします。  
@@ -266,7 +266,7 @@ ms.locfileid: "63043182"
   
 4.  **[実行]** をクリックし、レポートをプレビューして、列の幅が十分に広くなったかどうかを確認します。  
   
-## <a name="Title"></a>8.(オプション) レポート タイトルを追加する  
+## <a name="8-optional-add-a-report-title"></a><a name="Title"></a>8.(オプション) レポート タイトルを追加する  
 レポート タイトルは、レポートの最上部に表示されます。 レポート ヘッダーがあれば、そこにレポート タイトルを配置します。レポート ヘッダーを使用しない場合は、レポート本文の一番上のテキスト ボックスに配置します。 このチュートリアルでは、自動的にレポート本文の一番上に配置されるテキスト ボックスを使用します。  
   
 テキストの語句や文字のフォントのスタイル、サイズ、および色を変更して、テキストをさらに強調することもできます。 詳細については、「[テキスト ボックス内のテキストの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)」を参照してください。  
@@ -285,7 +285,7 @@ ms.locfileid: "63043182"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="Save"></a>9.レポートを保存する  
+## <a name="9-save-the-report"></a><a name="Save"></a>9.レポートを保存する  
 レポートをレポート サーバーまたは自分のコンピューターに保存します。 レポート サーバーに保存しない場合は、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のいくつかの機能 (レポート パーツ、サブレポートなど) が使用できなくなります。  
   
 ### <a name="to-save-the-report-on-a-report-server"></a>レポート サーバーにレポートを保存するには  

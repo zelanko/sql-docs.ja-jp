@@ -15,10 +15,10 @@ ms.assetid: 2a54eef8-9e8e-4e04-909c-6970112d55cc
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 64f427de0a2b2735671a885ca550c76386ce0177
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67991505"
 ---
 # <a name="add-a-database-to-an-always-on-availability-group"></a>Always On 可用性グループへのデータベースの追加
@@ -34,10 +34,10 @@ ms.locfileid: "67991505"
 -   プライマリ レプリカがホストされるサーバー インスタンスにデータベースが存在し、データベースが可用性データベースの前提条件と制限に準拠している必要があります。 詳細については、「 [Always On 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)の構成に関する一般的な問題のトラブルシューティングに役立つ情報を提供します。  
   
  
-##  <a name="Permissions"></a> Permissions  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  可用性グループの ALTER AVAILABILITY GROUP 権限、CONTROL AVAILABILITY GROUP 権限、ALTER ANY AVAILABILITY GROUP 権限、または CONTROL SERVER 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="use-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
 
   
 1.  オブジェクト エクスプローラーで、プライマリ レプリカをホストするサーバー インスタンスに接続し、サーバー ツリーを展開します。  
@@ -58,7 +58,7 @@ ms.locfileid: "67991505"
   
          **[可用性グループのプロパティ]** ダイアログ ボックスを使用して可用性グループにデータベースを追加した後、セカンダリ レプリカをホストする各サーバー インスタンスで、対応するセカンダリ データベースを構成する必要があります。 詳細については、「 [AlwaysOn セカンダリ データベース上のデータ移動の開始 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)」を参照してください。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL を使用する  
+##  <a name="use-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL を使用する  
 
   
 1.  プライマリ レプリカをホストするサーバー インスタンスをホストするセカンダリ インスタンスに接続します。    
@@ -79,7 +79,7 @@ ms.locfileid: "67991505"
   
 3.  可用性グループにデータベースを追加した後、セカンダリ データベースをホストする各サーバー インスタンスで、対応するセカンダリ データベースを構成する必要があります。 詳細については、「 [AlwaysOn セカンダリ データベース上のデータ移動の開始 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)」を参照してください。  
   
-##  <a name="PowerShellProcedure"></a> PowerShell を使用する  
+##  <a name="use-powershell"></a><a name="PowerShellProcedure"></a> PowerShell を使用する  
 
   
 1.  プライマリ レプリカをホストするサーバー インスタンスにディレクトリを変更 (**cd**) します 。  
@@ -106,7 +106,7 @@ ms.locfileid: "67991505"
   
  完全な例については、次の「 [例 (PowerShell)](#PSExample)」を参照してください。  
   
-###  <a name="PSExample"></a> 例 (PowerShell)  
+###  <a name="example-powershell"></a><a name="PSExample"></a> 例 (PowerShell)  
  次の例では、可用性グループのプライマリ レプリカをホストするサーバー インスタンス上のデータベースからセカンダリ データベースを準備し、そのデータベースを (プライマリ データベースとして) 可用性グループに追加した後、セカンダリ データベースを可用性グループに参加させるすべての処理を示しています。 最初に、データベースとトランザクション ログをバックアップします。 次に、セカンダリ レプリカをホストするサーバー インスタンスにデータベースとログのバックアップを復元します。  
   
  この例では、 **Add-SqlAvailabilityDatabase** を 2 回呼び出します。1 回目はデータベースを可用性グループに追加するためにプライマリ レプリカで呼び出し、2 回目はセカンダリ レプリカ上のセカンダリ データベースを可用性グループに参加させるためにセカンダリ レプリカで呼び出します。 セカンダリ レプリカが複数ある場合は、それぞれのセカンダリ データベースを復元して参加させます。  

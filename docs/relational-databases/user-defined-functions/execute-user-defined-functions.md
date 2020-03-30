@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b028b6ab4da678444427682a635f679acce576ab
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68123589"
 ---
 # <a name="execute-user-defined-functions"></a>ユーザー定義関数の実行
@@ -29,16 +29,16 @@ ms.locfileid: "68123589"
 > **注:** ユーザー定義関数の詳細については、「  [ユーザー定義関数](user-defined-functions.md) 」および「 [CREATE FUNCTION (Transact SQL)](../../t-sql/statements/create-function-transact-sql.md) 」を参照してください。 
   
  
-##  <a name="BeforeYouBegin"></a> はじめる前に  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめる前に  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
  Transact-SQL では、 *値* を使用するか、@*parameter_name*=*値.* を使用し、パラメーターを指定できます。 パラメーターは、トランザクションの一部ではないです。そのため、トランザクションが後でロールバックの値にパラメーターが変更された場合、パラメーター戻すことはできません前の値にします。 呼び出し元に返される値は常に、モジュールから戻る時点での値になります。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
  [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md) ステートメントの実行に権限は必要ありませんが、 EXECUTE 文字列内で参照されるセキュリティ保護可能なリソースに対しては権限が **必要です** 。 たとえば、この文字列に [INSERT](../../t-sql/statements/insert-transact-sql.md) ステートメントが含まれている場合、EXECUTE ステートメントの呼び出し元は対象のテーブルに対する INSERT 権限が必要です。 EXECUTE ステートメントは、モジュール内に含まれている場合でも、検出されるたびに権限が確認されます。 詳細については、「[EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)」を参照してください。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 ### <a name="example"></a>例 
   

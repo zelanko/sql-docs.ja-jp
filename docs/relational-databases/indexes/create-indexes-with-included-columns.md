@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6c3ec437ccaaf3280be800ea6f80ac6ad38a0a1d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68024907"
 ---
 # <a name="create-indexes-with-included-columns"></a>付加列インデックスの作成
@@ -41,15 +41,15 @@ ms.locfileid: "68024907"
 > [!NOTE]  
 > クエリによって参照されるすべての列がインデックスに含まれているときは、一般的に、そのインデックスは *クエリをカバーしている*と呼ばれます。  
    
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="DesignRecs"></a> 設計上の推奨事項  
+###  <a name="design-recommendations"></a><a name="DesignRecs"></a> 設計上の推奨事項  
   
 -   検索や参照に使用される列のみがキー列になるように、大きなサイズのインデックス キーを使用して、非クラスター化インデックスを設計し直します。 クエリをカバーする他のすべての列を非キー列にします。 その結果、クエリをカバーするために必要なすべての列を含むことができますが、インデックス キー自体は小さく、効率的です。  
   
 -   非クラスター化インデックスに非キー列を含め、現在のインデックス サイズの制限で (最大 32 個のキー列と、最大 1,700 バイトのインデックス キー サイズ) を超えないようにします ([!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] より前は、最大 16 個のキー列と最大 900 バイトのインデックス キーのサイズでした)。 インデックス キー列の数やインデックス キーのサイズを計算するときに、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では非キー列が考慮されません。  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   非キー列を定義できるのは、クラスター化されていないインデックスだけです。  
   
@@ -67,12 +67,12 @@ ms.locfileid: "68024907"
   
     -   **varchar**、 **nvarchar**、または **varbinary** の各列の長さを拡張します。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  テーブルまたはビューに対する ALTER 権限が必要です。 実行するには、 **sysadmin** 固定サーバー ロール、または **db_ddladmin** 固定データベース ロールおよび **db_owner** 固定データベース ロールのメンバーである必要があります。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-create-an-index-with-nonkey-columns"></a>非キー列を含むインデックスを作成するには  
   
@@ -100,7 +100,7 @@ ms.locfileid: "68024907"
   
 12. **[新しいインデックス]** ダイアログ ボックスで、 **[OK]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-create-an-index-with-nonkey-columns"></a>非キー列を含むインデックスを作成するには  
   

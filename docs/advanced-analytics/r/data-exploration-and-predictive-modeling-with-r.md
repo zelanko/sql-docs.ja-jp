@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6b336404d3b69e31ffb6f1a2aa82ade04804eb9e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78172240"
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r-in-sql-server"></a>SQL Server での R によるデータ探索および予測モデリング
@@ -70,7 +70,7 @@ R ソリューションを開発するときは、必ず Microsoft R Client を�
 
 + **[!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)]:** R ランタイムのディストリビューションと、標準的な R 演算のパフォーマンスを向上させる、Intel Math Kernel Library などの一連のパッケージ。  
   
-+ **RevoScaleR:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに計算をプッシュできる R パッケージ。 [!INCLUDE[rsql_rre-noversion](../../includes/rsql-rre-noversion-md.md)] パフォーマンスとスケーラビリティを高めるために再設計された一連の共通の R 関数も含まれています。 これらの強化された関数は、 **rx** プレフィックスで識別できます。 さまざまなソースの強化されたデータ プロバイダーも含まれており、これらの関数には **Rx** のプレフィックスが付いています。
++ **RevoScaleR:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに計算をプッシュできる R パッケージ。 [https://login.microsoftonline.com/consumers/]([!INCLUDE[rsql_rre-noversion](../../includes/rsql-rre-noversion-md.md)]) パフォーマンスとスケーラビリティを高めるために再設計された一連の共通の R 関数も含まれています。 これらの強化された関数は、 **rx** プレフィックスで識別できます。 さまざまなソースの強化されたデータ プロバイダーも含まれており、これらの関数には **Rx** のプレフィックスが付いています。
 
 R をサポートする任意の Windows ベースのコード エディター ([!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)] (RStudio) など) を使用できます。 [!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)] をダウンロードすれば、RGui.exe などの R の一般的なコマンド ライン ツールも取得できます。
 

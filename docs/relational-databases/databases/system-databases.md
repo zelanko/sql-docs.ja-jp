@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b2bce8ef0c47a26ef1b1a095160ce6cc7357a00f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68127362"
 ---
 # <a name="system-databases"></a>システム データベース
@@ -28,7 +28,7 @@ ms.locfileid: "68127362"
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、次のシステム データベースが用意されています。  
   
-|システム データベース|[説明]|  
+|システム データベース|説明|  
 |---------------------|-----------------|  
 |[master データベース](../../relational-databases/databases/master-database.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスのシステムレベルの情報をすべて記録します。|  
 |[msdb データベース](../../relational-databases/databases/msdb-database.md)|警告やジョブのスケジュールを設定するために SQL Server エージェントにより使用されます。|  

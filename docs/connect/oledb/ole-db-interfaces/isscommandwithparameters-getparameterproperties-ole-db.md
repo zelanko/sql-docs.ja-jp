@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 4ed73892ae0ebe88d4b18f2d2114143423570c60
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015418"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>ISSCommandWithParameters::GetParameterProperties (OLE DB)
@@ -43,7 +43,7 @@ HRESULT GetParameterProperties(
  *prgParamProperties* に返された SSPARAMPROPS 構造体の数を保持するメモリへのポインター。  
   
  *prgParamProperties*[out]  
- SSPARAMPROPS 構造体の配列が返されるメモリへのポインター。 プロバイダーは、この構造体用のメモリを割り当て、このメモリのアドレスを返します。コンシューマーは、構造体が不要になった時点で、**IMalloc::Free** を使用してこのメモリを解放します。 コンシューマーは、*prgParamProperties* に対して **IMalloc::Free** を呼び出す前に、各 DBPROP 構造体の *vValue* プロパティに対して **VariantClear** を呼び出す必要があります。これは、変数に参照型 (BSTR など) が含まれている場合にメモリ リークを防ぐためです。 *pcParams* の出力が 0 か、DB_E_ERRORSOCCURRED 以外のエラーが発生した場合は、プロバイダーはメモリの割り当てを行わず、*prgParamProperties* の出力に NULL ポインターを設定します。  
+ SSPARAMPROPS 構造体の配列が返されるメモリへのポインター。 プロバイダーは、この構造体用のメモリを割り当て、このメモリのアドレスを返します。コンシューマーは、構造体が不要になった時点で、**IMalloc::Free** を使用してこのメモリを解放します。 コンシューマーは、**prgParamProperties** に対して *IMalloc::Free* を呼び出す前に、各 DBPROP 構造体の **vValue** プロパティに対して *VariantClear* を呼び出す必要があります。これは、変数に参照型 (BSTR など) が含まれている場合にメモリ リークを防ぐためです。 *pcParams* の出力が 0 か、DB_E_ERRORSOCCURRED 以外のエラーが発生した場合は、プロバイダーはメモリの割り当てを行わず、*prgParamProperties* の出力に NULL ポインターを設定します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **GetParameterProperties** メソッドは、主要な OLE DB **ICommandProperties::GetProperties** メソッドと同じエラー コードを返します。ただし、DB_S_ERRORSOCCURRED と DB_E_ERRORSOCCURED は返すことができません。  

@@ -25,10 +25,10 @@ ms.assetid: aa732e43-53ba-4eea-bb9b-089da0766fc1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6ac35c702783ca5b80367c6f41af9c4c450e0be7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67997968"
 ---
 # <a name="manage-the-database-engine-services"></a>データベース エンジン サービスの管理
@@ -52,7 +52,7 @@ ms.locfileid: "67997968"
   
  **Windows 8 を使用して SQL Server 構成マネージャーにアクセスするには**  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーは [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理コンソール プログラムのスナップインであり、スタンドアロン プログラムではありません。そのため、Windows 8.0 を実行している場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーはアプリケーションとして表示されません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを開くには、 **検索** チャームで、 **[アプリ]** の下に「 **SQLServerManager12.msc** 」( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]の場合) と入力し ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]の場合は「 **SQLServerManager11.msc** 」、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]の場合は「 **SQLServerManager10.msc** 」と入力し)、 **Enter**キーを押します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーは [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理コンソール プログラムのスナップインであり、スタンドアロン プログラムではありません。そのため、Windows 8.0 を実行している場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーはアプリケーションとして表示されません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを開くには、 **検索** チャームで、 **[アプリ]** の下に「 **SQLServerManager12.msc** 」( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]の場合) と入力し ( **の場合は「** SQLServerManager11.msc[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 」、 **の場合は「** SQLServerManager10.msc[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 」と入力し)、 **Enter**キーを押します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

@@ -20,10 +20,10 @@ ms.assetid: cdede70c-4eb5-4c92-98ab-b07787ab7222
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6fa6d6c5736f57338474c17ac41eee55411c865b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68105016"
 ---
 # <a name="checksum_agg-transact-sql"></a>CHECKSUM_AGG (Transact-SQL)
@@ -62,7 +62,7 @@ DISTINCT
 `CHECKSUM_AGG` には、他の集計関数と同様の機能があります。 詳細については、[集計関数 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)を参照してください。
   
 ## <a name="examples"></a>例  
-次の例では、`CHECKSUM_AGG` を使用して、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `ProductInventory` テーブルの `Quantity` 列の変更を検出します。
+次の例では、`CHECKSUM_AGG` を使用して、`Quantity` データベースの `ProductInventory` テーブルの [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 列の変更を検出します。
   
 ```sql
 --Get the checksum value before the column value is changed.  

@@ -22,10 +22,10 @@ ms.assetid: 4ea33d04-f8e9-46ff-ae61-985bd3eaca2c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f71a288994afb76d1237f303edfc926116f5962e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68040336"
 ---
 # <a name="applock_test-transact-sql"></a>APPLOCK_TEST (Transact-SQL)
@@ -49,7 +49,7 @@ APPLOCK_TEST ( 'database_principal' , 'resource_name' , 'lock_mode' , 'lock_owne
 クライアント アプリケーションによって指定されたロック リソース名を指定します。 アプリケーション側では、リソース名が一意になるよう管理されている必要があります。 指定した名前は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ロック マネージャーが内部的に保存できる値に内部的にハッシュされます。  *resource_name* は **nvarchar (255**) であり、既定値はありません。 *resource_name* はバイナリ比較し、現在のデータベースの照合順序の設定に関係なく大文字小文字を区別します。
   
 **'** *lock_mode* **'**  
-特定のリソースに対して取得するロック モード。 *lock_mode* は **nvarchar (32)** であり、既定値はありません。 *lock_mode* は、次のいずれかの値をとります:**Shared**、**Update**、**IntentShared**、**IntentExclusive**、**Exclusive**。
+特定のリソースに対して取得するロック モード。 *lock_mode* は **nvarchar (32)** であり、既定値はありません。 *lock_mode* は、**Shared**、**Update**、**IntentShared**、**IntentExclusive**、**Exclusive** のいずれかの値をとります。
   
 **'** *lock_owner* **'**  
 ロックの所有者を指定します。これはロックが要求されたときの *lock_owner* 値です。 *lock_owner* は **nvarchar (32)** , 、値には、いずれかを指定して **トランザクション** (既定値) または **セッション**です。 既定値または **Transaction** を明示的に指定した場合、APPLOCK_TEST はトランザクション内から実行する必要があります。

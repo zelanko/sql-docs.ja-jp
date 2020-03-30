@@ -12,10 +12,10 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.openlocfilehash: cbc59ea90a962b105d4ac4fd4aa0e6d10f3ba7d3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75307042"
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
@@ -30,14 +30,14 @@ ms.locfileid: "75307042"
   
 -   [再生構成ファイル](#ReplayConfig)  
   
-##  <a name="DReplayController"></a> コントローラー構成ファイル:DReplayController.config  
+##  <a name="controller-configuration-file-dreplaycontrollerconfig"></a><a name="DReplayController"></a> コントローラー構成ファイル: DReplayController.config  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller サービスを開始すると、コントローラー構成ファイル `DReplayController.config`からログ記録レベルが読み込まれます。 このファイルは、Distributed Replay Controller サービスをインストールしたフォルダーにあります。  
   
  **\<コントローラーのインストール パス>\DReplayController.config**  
   
  コントローラー構成ファイルによって指定されるログ記録レベルには、次の内容が含まれます。  
   
-|設定|XML 要素|説明|使用できる値|Required|  
+|設定|XML 要素|説明|使用できる値|必須|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |ログ記録レベル|`<LoggingLevel>`|コントローラー サービスのログ記録レベルを指定します。|`INFORMATION` &#124; `WARNING` &#124; `CRITICAL`|いいえ。 既定値は `CRITICAL` です。|  
   
@@ -51,14 +51,14 @@ ms.locfileid: "75307042"
 </Options>  
 ```  
   
-##  <a name="DReplayClient"></a> クライアント構成ファイル:DReplayClient.config  
+##  <a name="client-configuration-file-dreplayclientconfig"></a><a name="DReplayClient"></a> クライアント構成ファイル: DReplayClient.config  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client サービスを開始すると、クライアント構成ファイル `DReplayClient.config`から構成設定が読み込まれます。 このファイルは、各クライアントの Distributed Replay Client サービスをインストールしたフォルダーにあります。  
   
  **\<クライアントのインストール パス>\DReplayClient.config**  
   
  クライアント構成ファイルによって指定される設定には、次の内容が含まれます。  
   
-|設定|XML 要素|説明|使用できる値|Required|  
+|設定|XML 要素|説明|使用できる値|必須|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |コントローラー|`<Controller>`|コントローラーのコンピューターの名前を指定します。 クライアントは、コントローラーにアクセスすることによって、Distributed Replay 環境での登録を試みます。|"`localhost`" または "`.`" を使用してローカル コンピューターを参照できます。|いいえ。 既定では、クライアントはローカル ("`.`") で実行しているコントローラー インスタンスの登録を試みます (存在する場合)。|  
 |クライアントの作業ディレクトリ|`<WorkingDirectory>`|ディスパッチ ファイルが保存されるクライアント上のローカル パス。<br /><br /> このディレクトリ内のファイルは、次の再生時に上書きされます。|ドライブ文字で始まる完全なディレクトリ名。|いいえ。 値が指定されない場合は、ディスパッチ ファイルは既定のクライアント構成ファイルと同じ場所に保存されます。 値が指定されており、そのフォルダーがクライアントに存在しない場合は、クライアント サービスは開始されません。|  
@@ -78,7 +78,7 @@ ms.locfileid: "75307042"
 </Options>  
 ```  
   
-##  <a name="PreprocessConfig"></a> 前処理構成ファイル:DReplay.exe.preprocess.config  
+##  <a name="preprocess-configuration-file-dreplayexepreprocessconfig"></a><a name="PreprocessConfig"></a> 前処理構成ファイル : DReplay.exe.preprocess.config  
  前処理段階を開始するために管理ツールを使用すると、管理ツールは前処理構成ファイル `DReplay.exe.preprocess.config` から前処理設定を読み込みます。  
   
  既定の構成ファイルまたは管理ツール **-c** パラメーターを使用して、変更された前処理構成ファイルの場所を指定します。 管理ツールの前処理オプションの使用の詳細については、「[前処理オプション &#40;Distributed Replay 管理ツール&#41;](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md)」を参照してください。  
@@ -89,7 +89,7 @@ ms.locfileid: "75307042"
   
  前処理構成の設定は、前処理構成ファイル内の `<PreprocessModifiers>` 要素の子である XML 要素で指定されています。 これらの設定には、次の内容が含まれています。  
   
-|設定|XML 要素|説明|使用できる値|Required|  
+|設定|XML 要素|説明|使用できる値|必須|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |システム セッション アクティビティを含む|`<IncSystemSession>`|キャプチャ中のシステム セッション アクティビティが再生中に含まれるかどうかを示します。|`Yes` &#124; `No`|いいえ。 既定値は `No` です。|  
 |最大アイドル時間|`<MaxIdleTime>`|アイドル時間を絶対数 (単位は秒) で指定します。|>= -1 の整数です。<br /><br /> `-1` は、元のトレース ファイルの元の値から変更されていないことを示します。<br /><br /> `0` は、指定された時刻に何らかのアクティビティが行われていることを示します。|いいえ。 既定値は `-1` です。|  
@@ -107,7 +107,7 @@ ms.locfileid: "75307042"
 </Options>  
 ```  
   
-##  <a name="ReplayConfig"></a> 再生構成ファイル:DReplay.exe.replay.config  
+##  <a name="replay-configuration-file-dreplayexereplayconfig"></a><a name="ReplayConfig"></a> 再生構成ファイル : DReplay.exe.replay.config  
  イベント再生段階を開始するために管理ツールを使用すると、管理ツールは再生構成ファイル `DReplay.exe.replay.config`から再生設定を読み込みます。  
   
  既定の構成ファイルまたは管理ツール **-c** パラメーターを使用して、変更された再生構成ファイルの場所を指定します。 管理ツールの再生オプションの使用の詳細については、「[replay オプション &#40;Distributed Replay 管理ツール&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)」を参照してください。  
@@ -121,9 +121,9 @@ ms.locfileid: "75307042"
 ### <a name="replayoptions-element"></a>\<ReplayOptions> 要素  
  再生構成ファイルの `<ReplayOptions>` 要素によって指定される設定には、次の内容が含まれます。  
   
-|設定|XML 要素|説明|使用できる値|Required|  
+|設定|XML 要素|説明|使用できる値|必須|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の対象インスタンス (テスト サーバー)|`<Server>`|接続先となる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサーバーとインスタンスの名前を指定します。|*server_name*[\\*instance_name*]<br /><br /> "`localhost`" または "`.`" を使用してローカル ホストを表すことはできません。|いいえ (管理ツールの **replay** オプションで、サーバー名が既に **-s**_target server_ パラメーターを使用して指定されている場合)。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の対象インスタンス (テスト サーバー)|`<Server>`|接続先となる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサーバーとインスタンスの名前を指定します。|*server_name*[\\*instance_name*]<br /><br /> "`localhost`" または "`.`" を使用してローカル ホストを表すことはできません。|いいえ (管理ツールの **replay** オプションで、サーバー名が既に _-s_**target server** パラメーターを使用して指定されている場合)。|  
 |シーケンス モード|`<SequencingMode>`|イベント スケジュールに使用されるモードを指定します。|`synchronization` &#124; `stress`|いいえ。 既定値は `stress` です。|  
 |ストレス スケールの粒度|`<StressScaleGranularity>`|ストレス モードで、Service Profile ID (SPID) のすべての接続をまとめて測定するのか (SPID)、個別に測定するのか (Connection) を指定します。|SPID &#124; Connection|はい。 既定値は `SPID` です。|  
 |接続タイム スケール|`<ConnectTimeScale>`|ストレス モードで接続時間を測定するのに使用されます。|`1` ～ `100`の整数値です。|いいえ。 既定値は `100` です。|  
@@ -136,7 +136,7 @@ ms.locfileid: "75307042"
 ### <a name="outputoptions-element"></a>\<OutputOptions> 要素  
  再生構成ファイルの `<OutputOptions>` 要素によって指定される設定には、次の内容が含まれます。  
   
-|設定|XML 要素|説明|使用できる値|Required|  
+|設定|XML 要素|説明|使用できる値|必須|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |行数の記録|`<RecordRowCount>`|それぞれの結果セットで行数を記録するかどうかを示します。|`Yes` &#124; `No`|いいえ。 既定値は `Yes` です。|  
 |結果セットの記録|`<RecordResultSet>`|すべての結果セットの内容を記録するかどうかを示します。|`Yes` &#124; `No`|いいえ。 既定値は `No` です。|  

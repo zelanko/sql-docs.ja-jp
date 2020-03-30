@@ -9,10 +9,10 @@ ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8dfd41dfbcbd35712fb2e13925b047e4ed2db962
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082208"
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>組み込みコレクション - 組み込み Globals および Users 参照 (レポート ビルダー)
@@ -42,9 +42,9 @@ ms.locfileid: "77082208"
 ### <a name="renderformat"></a>RenderFormat  
  次の表では、 **RenderFormat**のメンバーについて説明します。  
   
-|メンバー|Type|説明|  
+|メンバー|種類|説明|  
 |------------|----------|-----------------|  
-|名前|**String**|RSReportServer 構成ファイルに登録されているレンダラーの名前です。<br /><br /> レポート処理または表示サイクルの特定の部分で使用できます。|  
+|Name|**String**|RSReportServer 構成ファイルに登録されているレンダラーの名前です。<br /><br /> レポート処理または表示サイクルの特定の部分で使用できます。|  
 |IsInteractive|**Boolean**|現在の表示要求で対話型の表示形式を使用するかどうかを示します。|  
 |DeviceInfo|読み取り専用の名前/値のコレクションです。|現在の表示要求の deviceinfo パラメーターのキーと値のペアです。<br /><br /> キーまたはインデックスを使用して、コレクションに文字列値を指定できます。|  
   

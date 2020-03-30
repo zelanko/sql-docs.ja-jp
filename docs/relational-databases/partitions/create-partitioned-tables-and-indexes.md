@@ -30,10 +30,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 046ce79c989fdfb24c6615968e6bad951aeb7280
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68024903"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>パーティション テーブルとパーティション インデックスの作成
@@ -64,17 +64,17 @@ ms.locfileid: "68024903"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   パーティション関数および構成のスコープは、それが作成されたデータベースに制限されます。 データベース内では、パーティション関数は他の関数とは別の名前空間に配置されます。  
   
 -   パーティション関数内のいずれかの行に null 値を持つパーティション分割列がある場合、これらの行は左端のパーティションに割り当てられます。 ただし、NULL が境界値として指定され、RIGHT が指定されている場合、NULL 値は左端のパーティションを空にしたまま 2 番目のパーティションに配置されます。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  パーティション テーブルを作成するには、データベースでの CREATE TABLE 権限と、テーブルを作成する構成に対する ALTER 権限が必要です。 パーティション インデックスを作成するには、インデックスを作成するテーブルまたはビューに対する ALTER 権限が必要です。 パーティション テーブルまたはパーティション インデックスを作成するには、次の追加の権限のいずれかが必要です。  
   
 -   ALTER ANY DATASPACE 権限。 この権限は、既定では **sysadmin** 固定サーバー ロール、 **db_owner** 固定データベース ロール、および **db_ddladmin** 固定データベース ロールのメンバーに与えられています。  
@@ -83,7 +83,7 @@ ms.locfileid: "68024903"
   
 -   パーティション関数およびパーティション構成を作成するデータベースのサーバーに対する CONTROL SERVER 権限または ALTER ANY DATABASE 権限。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  次の手順を実行して、1 つまたは複数のファイル グループ、対応するファイルと、およびテーブルを作成します。 これらのオブジェクトは、次の手順でパーティション テーブルを作成するときに参照します。  
   
 #### <a name="to-create-new-filegroups-for-a-partitioned-table"></a>パーティション テーブルの新しいファイル グループを作成するには  
@@ -203,7 +203,7 @@ ms.locfileid: "68024903"
   
                 -   **[日]** を選択した場合は、ジョブ スケジュールを実行する日付と、ジョブ スケジュールを繰り返す頻度を月単位で指定します。 たとえば、隔月の 15 日にジョブ スケジュールを実行する場合は、 **[日]** を選択し、1 番目のボックスに「15」と入力し、2 番目のボックスに「2」と入力します。 2 番目のボックスで使用できる最大の値は "99" であることに注意してください。  
   
-                -   **[曜日]** を選択した場合は、ジョブ スケジュールを実行する曜日と、ジョブ スケジュールを繰り返す頻度を月単位で指定します。 たとえば、隔月の最後の平日にジョブ スケジュールを実行する場合は、 **[日]** を選択し、リストから **[最終]** を選択します。次に 2 番目のリストから **[平日]** を選択し、最後のボックスに「2」と入力します。 **[第 1]** 、 **[第 2]** 、 **[第 3]** 、または **[第 4]** も、特定の平日 (たとえば、日曜日や水曜日) に加えて、最初の 2 つのリストから選択できます。 最後のボックスで使用できる最大の値は "99" であることに注意してください。  
+                -   **[曜日]** を選択した場合は、ジョブ スケジュールを実行する曜日と、ジョブ スケジュールを繰り返す頻度を月単位で指定します。 たとえば、隔月の最後の平日にジョブ スケジュールを実行する場合は、 **[日]** を選択し、リストから **[最終]** を選択します。次に 2 番目のリストから **[平日]** を選択し、最後のボックスに「2」と入力します。 最初の 2 つのリストでは、特定の平日 (たとえば、日曜日や水曜日) に加えて、 **[第 1]** 、 **[第 2]** 、 **[第 3]** 、または **[第 4]** を選択できます。 最後のボックスで使用できる最大の値は "99" であることに注意してください。  
   
         2.  **[一日のうちの頻度]** で、頻度、ジョブ スケジュールを実行する当日にジョブ スケジュールを繰り返す頻度を指定します。  
   
@@ -260,7 +260,7 @@ ms.locfileid: "68024903"
   
  パーティションの作成ウィザードによってパーティション関数とパーティション構成が作成され、指定したテーブルにパーティション分割が適用されます。 テーブル パーティション分割を検証するには、オブジェクト エクスプローラーでテーブルを右クリックし、 **[プロパティ]** をクリックします。 **[ストレージ]** ページをクリックします。 このページには、パーティション関数の名前および構成やパーティションの数などの情報が表示されます。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-create-a-partitioned-table"></a>パーティション テーブルを作成するには  
   
@@ -384,7 +384,7 @@ ms.locfileid: "68024903"
   
 #### <a name="to-determine-the-partition-column-for-a-partitioned-table"></a>パーティション テーブルのパーティション列を調べるには  
   
-1.  次のクエリでは、テーブルのパーティション分割列の名前を返します。 `PartitionTable`  
+1.  次のクエリでは、テーブルのパーティション分割列の名前を返します。 [https://login.microsoftonline.com/consumers/](`PartitionTable`)  
   
     ```  
     SELECT   

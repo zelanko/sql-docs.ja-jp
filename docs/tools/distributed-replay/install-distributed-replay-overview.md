@@ -11,10 +11,10 @@ ms.author: mikeray
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.openlocfilehash: e5d1605d9f44cf5e28cd6e49b6a234de44f5c5f7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74992133"
 ---
 # <a name="install-distributed-replay---overview"></a>分散再生のインストール - 概要
@@ -25,7 +25,7 @@ ms.locfileid: "74992133"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[分散再生の要件](../../tools/distributed-replay/distributed-replay-requirements.md)|分散再生のインストール要件の一覧を示す手順に関するトピック。|  
 |[分散再生のインストール](../../tools/distributed-replay/install-distributed-replay.md)|セットアップ ウィザードを使用した標準的な分散再生のインストール方法を提供する手順に関するトピック。無人セットアップを実行するためのサンプル構文とインストール パラメーター、および構成ファイルを使用して分散再生を実行するためのサンプル構文とインストール パラメーターも含まれます。|  

@@ -9,10 +9,10 @@ ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 94883e68a4543c7fe98794d8b89dc38f05d2b410
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081189"
 ---
 # <a name="report-builder-functions---multilookup-function"></a>レポート ビルダー関数 - Multilookup 関数
@@ -88,7 +88,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  CategoryNames データセットには、次の表に示すように、カテゴリ識別子とカテゴリ名が格納されています。  
   
-|id|名前|  
+|id|Name|  
 |--------|----------|  
 |1|Accessories|  
 |2|Bikes|  

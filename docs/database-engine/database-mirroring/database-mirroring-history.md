@@ -13,10 +13,10 @@ ms.assetid: 1d6e4b10-4a23-47d7-9918-c417992f09d3
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 329eda4ba3c0bdabc355242d626a3d0ac89e6033
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68006426"
 ---
 # <a name="database-mirroring-history"></a>[データベース ミラーリングの履歴]
@@ -66,7 +66,7 @@ ms.locfileid: "68006426"
  **HISTORY**  
  履歴一覧を表示します。 列のヘッダーをクリックすると、その列のデータを使用してグリッドが並べ替えられます。 一覧には次の列があります。  
   
-|列名|[説明]|  
+|列名|説明|  
 |-----------------|-----------------|  
 |**[記録された日時]**|履歴行のタイムスタンプです。|  
 |**ロール**|このデータベースに対するサーバー インスタンスの現在のミラーリング ロールです。[プリンシパル] または [ミラー] のいずれかになります。|  

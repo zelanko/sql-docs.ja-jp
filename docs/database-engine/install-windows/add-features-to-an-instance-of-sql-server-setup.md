@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 0b7cdfe016a1010bef5322c3d39b7ee436437aa5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68051204"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>SQL Server のインスタンスへの機能の追加 (セットアップ)
@@ -40,7 +40,7 @@ ms.locfileid: "68051204"
   
 ## <a name="procedures"></a>手順  
   
-#### <a name="to-add-features-to-an-instance-of-includesscurrentincludessscurrent-mdmd"></a>コマンド プロンプトから [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+#### <a name="to-add-features-to-an-instance-of-sscurrent"></a>コマンド プロンプトから [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール メディアを挿入します。 ルート フォルダーの setup.exe をダブルクリックします。 ネットワーク共有からインストールするには、ネットワーク共有上のルート フォルダーに移動し、setup.exe をダブルクリックします。 [ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] セットアップ] ダイアログ ボックスが表示されます。必須コンポーネントをインストールする場合は [!INCLUDE[clickOK](../../includes/clickok-md.md)]**をインストールしない場合は** [キャンセル] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] をクリックします。  
   

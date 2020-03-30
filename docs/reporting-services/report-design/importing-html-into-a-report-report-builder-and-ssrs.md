@@ -11,10 +11,10 @@ ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2e89fb3f197037d757916a60d246c158d43b565b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082053"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>レポートへの HTML のインポート (レポート ビルダーおよび SSRS)
@@ -27,20 +27,20 @@ ms.locfileid: "77082053"
 > [!NOTE]  
 >  HTML マークアップが含まれたテキストをインポートする場合、データは必ず最初にテキスト ボックスによって解析される必要があります。 サポートされているのは HTML タグのサブセットのみなので、レンダリングされたレポートに表示される HTML が元の HTML と異なる場合もあります。  
   
- すぐに使用するには、「[チュートリアル:テキストの書式設定 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-format-text-report-builder.md)」をご覧ください。  
+ すぐに使用するには、「[チュートリアル: テキストの書式設定 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-format-text-report-builder.md)」をご覧ください。  
   
 ## <a name="supported-html-tags"></a>サポートされる HTML タグ  
  以下は、プレースホルダー テキストとして定義された場合に HTML として表示されるタグの全リストです。  
   
--   ハイパーリンク:\<A HREF>  
+-   ハイパーリンク: \<A HREF>  
   
--   フォント:\<FONT>  
+-   フォント: \<FONT>  
   
--   ヘッダー、スタイル、ブロック要素:\<H{n}>、\<DIV>、\<SPAN>、\<P>、\<DIV>、\<LI>、\<HN>  
+-   ヘッダー、スタイル、およびブロック要素: \<H{n}>、\<DIV>、\<SPAN>、\<P>、\<DIV>、\<LI>、\<HN>  
   
--   テキスト形式:\<B>、\<I>、\<U>、\<S>  
+-   テキスト形式: \<B>、\<I>、\<U>、\<S>  
   
--   リストの処理:\<OL>、\<UL>、\<LI>  
+-   リストの処理: \<OL>、\<UL>、\<LI>  
   
  レポートの処理中、その他の HTML マークアップ タグはすべて無視されます。 プレースホルダー テキスト内の式で表される HTML が整形式でない場合、プレースホルダーはプレーン テキストに変換されます。 HTML タグの大文字と小文字は区別されません。  
   

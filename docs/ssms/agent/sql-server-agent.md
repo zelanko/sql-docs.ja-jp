@@ -16,10 +16,10 @@ ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e62d4502feb6985717e9aad1bf2f6da63100e60c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75257933"
 ---
 # <a name="sql-server-agent"></a>SQL Server エージェント
@@ -31,7 +31,7 @@ ms.locfileid: "75257933"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、 *の*ジョブ[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] と呼ばれる管理タスクをスケジュールに従って実行する Microsoft Windows サービスです。  
 
-## <a name="Benefits"></a>SQL Server エージェントの利点 
+## <a name="benefits-of-sql-server-agent"></a><a name="Benefits"></a>SQL Server エージェントの利点 
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用してジョブ情報を格納します。 ジョブには 1 つ以上のジョブ ステップが含まれます。 各ジョブ ステップには、データベースをバックアップするなど、独自のタスクがあります。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "75257933"
 > [!NOTE]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がインストールされるときに、サービスを自動起動することをユーザーが明示的に選択しない限り、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] エージェント サービスは既定で無効になります。  
   
-## <a name="Components"></a>SQL Server エージェントのコンポーネント  
+## <a name="sql-server-agent-components"></a><a name="Components"></a>SQL Server エージェントのコンポーネント  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントでは、次のコンポーネントを使用して、実行するタスク、タスクを実行する時期、タスクの成功/失敗の報告方法を定義します。  
   
 ### <a name="jobs"></a>ジョブ  
@@ -114,7 +114,7 @@ ms.locfileid: "75257933"
   
 オペレーターは、個人のグループを表す別名として定義できます。 その場合、その別名のすべてのメンバーが同時に通知を受け取ることになります。 詳細については、「 [オペレーター](../../ssms/agent/operators.md)」を参照してください。  
   
-## <a name="Security"></a>SQL Server エージェントのセキュリティ管理  
+## <a name="security-for-sql-server-agent-administration"></a><a name="Security"></a>SQL Server エージェントのセキュリティ管理  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントでは **msdb**データベースの固定データベース ロールである **SQLAgentUserRole**、 **SQLAgentReaderRole** 、 **SQLAgentOperatorRole** を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sysadmin**固定サーバー ロールのメンバーではないユーザーの** エージェントへのアクセスを制御します。 これらの固定データベース ロールに加え、サブシステムとプロキシを使用することで、タスクの実行に最低限必要な権限で各ジョブ ステップを実行できるようになります。  
   
 ### <a name="roles"></a>ロール  
@@ -125,7 +125,7 @@ ms.locfileid: "75257933"
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、次の表に示すサブシステムを定義しています。  
   
-|サブシステム名|[説明]|  
+|サブシステム名|説明|  
 |--------------|-----------|  
 |Microsoft ActiveX スクリプト|ActiveX スクリプティング ジョブ ステップを実行します。<br /><br />**警告** ActiveX スクリプティング サブシステムは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[msCoName](../../includes/msconame_md.md)] の将来のバージョンで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントから削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。|  
 |オペレーティング システム (**CmdExec**)|実行可能なプログラムを実行します。|  
@@ -165,7 +165,7 @@ ms.locfileid: "75257933"
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントに関連したタスクを次に示します。  
   
-|[説明]|トピック|  
+|説明|トピック|  
 |-----------|-----|  
 |SQL Server エージェントを構成する方法について説明します。|[SQL Server エージェントの構成](../../ssms/agent/configure-sql-server-agent.md)|  
 |SQL Server エージェント サービスを開始、停止、および一時停止する方法について説明します。|[SQL Server エージェント サービスの開始、停止、または一時停止](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)|  

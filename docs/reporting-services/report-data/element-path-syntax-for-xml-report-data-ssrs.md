@@ -12,10 +12,10 @@ ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 967ffe24035094296d467e4a60225f31b1558cc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77077661"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>XML レポート データの要素パス構文 (SSRS)
@@ -90,7 +90,7 @@ XMLLocalName :: =
 > [!NOTE]  
 >  要素パスが空の場合、クエリには、既定の要素パス (リーフ ノード コレクションの最初のパス) が使用されます。 1 つ目は要素パスを空にする例です。/Customers/Customer/Orders/Order という要素パスを指定した場合と同じ結果になります。 このパス上に存在するすべてのノードの値と属性が結果セットに返され、ノード名と属性名がデータセットのフィールドとして表示されます。  
   
- **例 #1**:*空*  
+ **例 1**: *空*  
   
 |Order|数量|id|FirstName|LastName|Customer.ID|xmlns|  
 |-----------|---------|--------|---------------|--------------|-----------------|-----------|  
@@ -133,7 +133,7 @@ XMLLocalName :: =
 |8|Crystal|Hu|20|  
 |15|Wyatt|Diaz|33|  
   
-#### <a name="xml-document-customersxml"></a>XML ドキュメント:Customers.xml  
+#### <a name="xml-document-customersxml"></a>XML ドキュメント: Customers.xml  
  前のセクションの要素パスの例を試すには、この XML をコピーして、レポート デザイナーからアクセス可能な URL に保存した後、この XML ドキュメントを XML データ ソースとして使用します (例: `https://localhost/Customers.xml`)。  
   
 ```  

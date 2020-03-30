@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 336b5b12eaf0744afd63510ce287edbb5439c3ca
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015583"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>IRow::GetColumns を使用した列のフェッチ (OLE DB)
@@ -30,7 +30,7 @@ ms.locfileid: "68015583"
   
 -   列のグループを (順番に) フェッチする方法。  
   
--   列に 2 回アクセスする方法。 列の実際の幅の初回取得以降は、この実際の値がアクセスされます。 DBCOLUMNACCESS 構造体では、**pData** が NULL で **cbMaxLen** が 0 の場合、**IRow**-**>GetColumns()** を呼び出すと、列の実際の長さだけが返されます。 この場合、**IRow->GetColumns()** を同じ列に対してもう一度呼び出すと、実際のデータを取得できます。  
+-   列に 2 回アクセスする方法。 列の実際の幅の初回取得以降は、この実際の値がアクセスされます。 DBCOLUMNACCESS 構造体では、**pData** が NULL で **cbMaxLen** が 0 の場合、**IRow**- **>GetColumns()** を呼び出すと、列の実際の長さだけが返されます。 この場合、**IRow->GetColumns()** を同じ列に対してもう一度呼び出すと、実際のデータを取得できます。  
   
 > [!IMPORTANT]  
 >  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  

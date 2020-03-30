@@ -11,10 +11,10 @@ ms.assetid: 84bf4654-3ef7-4d7f-a269-c8bb4ed4acad
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 2920b0f21cca13272b8d8678106d0d231ad56e41
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67947821"
 ---
 # <a name="sql-server-xtp-cursors"></a>SQL Server の XTP Cursors
@@ -24,7 +24,7 @@ ms.locfileid: "67947821"
   
  次の表で、 **SQL Server の XTP Cursors** カウンターについて説明します。  
   
-|カウンター|[説明]|  
+|カウンター|説明|  
 |-------------|-----------------|  
 |**Cursor deletes/sec**|カーソルの削除回数に関する 1 秒あたりの平均です。|  
 |**Cursor inserts/sec**|カーソルの挿入回数に関する 1 秒あたりの平均です。|  

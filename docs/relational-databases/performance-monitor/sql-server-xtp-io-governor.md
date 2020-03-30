@@ -11,10 +11,10 @@ ms.assetid: 91e176fe-c838-44e9-b4fc-2814a0551ca3
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 975dca6fe0151b5bd1fc1d72b9d14e47a57413d2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67915210"
 ---
 # <a name="sql-server-xtp-io-governor"></a>SQL Server XTP IO ガバナー
@@ -24,7 +24,7 @@ SQL Server XTP IO ガバナーのパフォーマンス オブジェクトには�
 
 次の表で、 **SQL Server XTP IO ガバナー** カウンターについて説明します。
 
-|カウンター|[説明]|  
+|カウンター|説明|  
 |-------------|-----------------|  
 |**1 秒あたりの不十分なクレジット待機数**|レート オブジェクトのクレジット不足に起因する待機数 (1 秒あたり)。|
 |**1 秒あたりに発行された Io 数**|フラッシュ スレッドにより発行された Io 数 (1 秒あたり)。|

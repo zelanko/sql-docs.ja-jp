@@ -18,10 +18,10 @@ ms.assetid: 6bd9ccae-af77-4a05-b97f-f8ab41cfde42
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 53b447b2a13c68c2c87536bc3c1f14f9efd74cfd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68132092"
 ---
 # <a name="connectionproperty-transact-sql"></a>CONNECTIONPROPERTY (Transact-SQL)
@@ -41,7 +41,7 @@ CONNECTIONPROPERTY ( property )
 *property*  
 接続のプロパティです。 *property* には、これらの値のいずれかを指定することができます。
   
-|値|データ型|[説明]|  
+|値|データ型|説明|  
 |---|---|---|
 |net_transport|**nvarchar(40)**|この接続で使用される物理的な転送プロトコルを返します。 この値は NULL 許容ではありません。 有効な戻り値:<br /><br /> **HTTP**<br /> **名前付きパイプ**<br /> **セッション**<br /> **共有メモリ**<br /> **SSL**<br /> **TCP**<br /><br /> and<br /><br /> **VIA**<br /><br /> 注: 接続で複数のアクティブな結果セット (MARS) の両方が有効になっているときに、接続プールが有効になっている場合は、常に**セッション**を返します。|  
 |protocol_type|**nvarchar(40)**|ペイロードのプロトコルの種類を返します。 現在、これによって TDS (TSQL) と SOAP が区別されています。 NULL 値が許可されます。|  

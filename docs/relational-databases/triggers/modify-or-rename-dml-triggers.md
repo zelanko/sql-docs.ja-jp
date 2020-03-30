@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ebccd45c54a3f5abb745f7c3028e0438c9ed5d2e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68056007"
 ---
 # <a name="modify-or-rename-dml-triggers"></a>DML トリガーの変更または名前の変更
@@ -41,13 +41,13 @@ ms.locfileid: "68056007"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   トリガーの名前を変更する場合、トリガーは現在のデータベース内にある必要があり、新しい名前は [識別子](../../relational-databases/databases/database-identifiers.md)に関するルールに従っている必要があります。  
   
-###  <a name="Recommendations"></a> 推奨事項  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
   
 -   [sp_rename](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md) ストアド プロシージャを使用してトリガーの名前を変更しないことをお勧めします。 オブジェクト名の一部または全部を変更すると、スクリプトおよびストアド プロシージャが壊れる可能性があります。 トリガーの名前を変更しても、 [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) カタログ ビューの definition 列にある、対応するオブジェクトの名前は変更されません。 トリガーを削除してから再作成することをお勧めします。  
   
@@ -63,12 +63,12 @@ ms.locfileid: "68056007"
   
     -   [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  DML トリガーを変更するには、トリガーが定義されているテーブルやビューに対する ALTER 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-modify-a-dml-trigger"></a>DML トリガーを変更するには  
   
@@ -86,7 +86,7 @@ ms.locfileid: "68056007"
   
 2.  新しい名前を指定して、[トリガーを再作成](../../relational-databases/triggers/create-dml-triggers.md)します。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-modify-a-trigger-using-alter-trigger"></a>ALTER TRIGGER を使用してトリガーを変更するには  
   

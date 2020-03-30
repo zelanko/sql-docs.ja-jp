@@ -14,10 +14,10 @@ ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
 ms.openlocfilehash: d5c82466168714f6a58055e1ed50959602318ef3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242163"
 ---
 # <a name="table-valued-object-column-properties-visual-database-tools"></a>テーブル値オブジェクト (列) のプロパティ (Visual Database Tools)
@@ -33,7 +33,7 @@ ms.locfileid: "75242163"
 **[IDENTITY] カテゴリ**  
 展開すると、 **[名前]** プロパティが表示されます。  
   
-**名前**  
+**Name**  
 選択した列の名前が表示されます。  
   
 **クエリ デザイナー カテゴリ**  

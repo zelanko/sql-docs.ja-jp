@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 04/26/2017
 ms.openlocfilehash: f4c45335bae79a0307be27efb88cb0858bd6439f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75243560"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>dbSqlPackage プロバイダーでの MSDeploy の使用
@@ -45,7 +45,7 @@ MSDeploy -verb: MSDeploy-verb -source:dbSqlPackage="Input"[,dbSqlPackage-source-
 ## <a name="ms-deploy-verbs"></a>MS-Deploy 動詞  
 MS-Deploy 動詞は、MS-Deploy コマンド ラインに **-verb** スイッチを使用して指定します。 **dbSqlPackage** プロバイダーでは、次の **MSDeploy** 動詞がサポートされています。  
   
-|動詞|[説明]|  
+|動詞|説明|  
 |--------|---------------|  
 |ダンプ (dump)|.dacpac ファイルに含まれるソース データベースに関する名前、バージョン番号、説明などの情報を提供します。 ソース データベースは、コマンド ラインで次の形式を使用して指定します。<br /><br />**msdeploy -verb:dump -source:dbSqlPackage="** _.dacpac-file-path_ **"**|  
 |sync|dbSqlPackage 操作は、コマンド ラインで次の形式を使用して指定します。<br /><br />**msdeploy -verb:sync -source:dbSqlPackage**="input" _[,DbSqlPackage-source-parameters] -_ **dest:dbSqlPackage**="input" *[,DbSqlPackage-destination-parameters]*<br /><br />sync 動詞の有効なソースおよびターゲットのパラメーターの詳細については、以下のセクションを参照してください。|  
@@ -53,7 +53,7 @@ MS-Deploy 動詞は、MS-Deploy コマンド ラインに **-verb** スイッチ
 ## <a name="dbsqlpackage-source"></a>dbSqlPackage ソース  
 **dbSqlPackage** は、有効な SQL Server または SQL Azure 接続文字列か、ディスク上にある .dacpac ファイルのパスのどちらかを入力として取得します。  プロバイダーの入力ソースを指定する構文は次のとおりです。  
   
-|入力|Default|[説明]|  
+|入力|Default|説明|  
 |---------|-----------|---------------|  
 |**-source:dbSqlPackage=** {*input*}|**N/A**|*input* は、有効な SQL Server または SQL Azure 接続文字列か、ディスク上にある .dacpac ファイルのパスです。<br /><br />**注:** 入力ソースとして接続文字列を使用する場合、サポートされる接続文字列プロパティは *InitialCatalog、DataSource、UserID、Password、IntegratedSecurity、Encrypt、TrustServerCertificate* および *ConnectionTimeout* のみです。|  
   
@@ -61,7 +61,7 @@ MS-Deploy 動詞は、MS-Deploy コマンド ラインに **-verb** スイッチ
   
 **Source** パラメーターは次のとおりです。  
   
-|パラメーター|Default|[説明]|  
+|パラメーター|Default|説明|  
 |-------------|-----------|---------------|  
 |**Profile**:{ *string*}|該当なし|DAC 公開プロファイルのファイル パスを指定します。 結果の dacpac の生成時に使用するプロパティと変数のコレクションをプロファイルで定義します。 **Publish**、**Script**、または **DeployReport** 操作の 1 つが実行される場合、公開プロファイルはターゲットに渡されて既定のオプションとして使用されます。|  
 |**DacApplicationName**={ *string* }|データベース名|DACPAC メタデータに格納されるアプリケーション名を定義します。 既定の文字列は、データベース名です。|  
@@ -78,13 +78,13 @@ MS-Deploy 動詞は、MS-Deploy コマンド ラインに **-verb** スイッチ
 ## <a name="dbsqlpackage-destination"></a>DbSqlPackage ターゲット  
 **dbSqlPackage** プロバイダーは、有効な SQL Server または SQL Azure 接続文字列か、ターゲット入力としてディスク上にある .dacpac ファイルのパスのどちらかを受け入れます。  プロバイダーのターゲットを指定する構文は次のとおりです。  
   
-|入力|Default|[説明]|  
+|入力|Default|説明|  
 |---------|-----------|---------------|  
 |-**dest:dbSqlPackage**={*input*}|該当なし|*input* は、有効な SQL Server または SQL Azure 接続文字列か、ディスク上にある .dacpac ファイルの完全パスまたは部分パスです。 *input* がファイル パスの場合、他のパラメーターは指定できません。|  
   
 次の **Destination** パラメーターは、すべての **dbSqlPackage** 操作に使用できます。  
   
-|プロパティ|Default|[説明]|  
+|プロパティ|Default|説明|  
 |------------|-----------|---------------|  
 |**Action={Publish&#124;DeployReport&#124;Script}**|該当なし|オプション パラメーターは、**Destination** で実行する操作を指定します。|  
 |**AllowDropBlockingAssemblies ={True &#124; False}**|**False**|**SqlClr** による公開で、ブロックしているアセンブリを配置計画から削除するかどうかを指定します。 既定では、参照しているアセンブリを削除する必要がある場合、ブロックしているアセンブリまたは参照しているアセンブリによって、アセンブリの更新がブロックされます。|  
@@ -123,7 +123,7 @@ MS-Deploy 動詞は、MS-Deploy コマンド ラインに **-verb** スイッチ
 |**IgnoreFileSize= {True &#124; False}**|**True** にします|データベースへの公開時に、ファイル サイズの相違を無視するか更新するかを指定します。|  
 |**IgnoreFillFactor= {True &#124; False}**|**True** にします|データベースへの公開時に、FILL FACTOR の相違を無視するか更新するかを指定します。|  
   
-|プロパティ|Default|[説明]|  
+|プロパティ|Default|説明|  
 |------------|-----------|---------------|  
 |**IgnoreFullTextCatalogFilePath= {True &#124; False}**|**True** にします|データベースへの公開時に、フルテキスト インデックス ファイルのパスの相違を無視するか更新するかを指定します。|  
 |**IgnoreIdentitySeed= {True &#124; False}**|**False**|データベースへの公開時に、ID 列のシードの相違を無視するか更新するかを指定します。|  
@@ -172,7 +172,7 @@ MS-Deploy 動詞は、MS-Deploy コマンド ラインに **-verb** スイッチ
   
 次の **Destination** パラメーターは、**DeployReport** および **Script** 操作にのみ使用できます。  
   
-|パラメーター|Default|[説明]|  
+|パラメーター|Default|説明|  
 |-------------|-----------|---------------|  
 |**OutputPath**={ *string* }|該当なし|省略可能なパラメーターです。**string** で指定されたディスク上の場所に DeployReport XML 出力ファイルまたは Script SQL 出力ファイルを作成することを *dbSqlPackage* に対して指定します。 この操作では、文字列で指定された場所にある現在のスクリプトが上書きされます。|  
   

@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 274c79dabe90098094423b2994edb93603e649e1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68123569"
 ---
 # <a name="rename-user-defined-functions"></a>ユーザー定義関数名の変更
@@ -36,9 +36,9 @@ ms.locfileid: "68123569"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   関数名は、 [識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。  
   
@@ -46,12 +46,12 @@ ms.locfileid: "68123569"
   
 -   ユーザー定義関数の名前または定義を変更すると、依存オブジェクトを更新してその関数に加えられた変更を反映しなければ、その依存オブジェクトが失敗する可能性があります。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  関数を削除するには、関数が属するスキーマに対する ALTER 権限、または関数に対する CONTROL 権限が必要です。 関数を再作成するには、データベースの CREATE FUNCTION 権限と、関数を作成するスキーマの ALTER 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-rename-user-defined-functions"></a>ユーザー定義関数の名前を変更するには  
   
@@ -71,7 +71,7 @@ ms.locfileid: "68123569"
   
 5.  関数の新しい名前を入力します。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  **ユーザー定義関数の名前を変更するには**  
   
  Transact-SQL ステートメントを使用して、このタスクを実行することはできません。 Transact-SQL を使用してユーザー定義関数の名前を変更するには、まず既存の関数を削除してから、新しい定義を使用して再作成する必要があります。 関数の古い名前を使用していたすべてのコードおよびアプリケーションが、新しい名前を使用していることを確認します。  

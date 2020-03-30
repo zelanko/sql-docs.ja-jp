@@ -16,16 +16,16 @@ ms.assetid: cb541175-d3a5-4bca-b327-64e2270c0df1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 93b9fa705f7d3ed00431db9ca5ff507beffc890d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67998339"
 ---
 # <a name="updatesaredetected-method-sqlserverdatabasemetadata"></a>updatesAreDetected メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) クラスの [rowUpdated](../../../connect/jdbc/reference/rowupdated-method-sqlserverresultset.md) メソッドを呼び出すことで表示されている行が更新されたことを検出できるかどうかを取得します。  
+  [SQLServerResultSet](../../../connect/jdbc/reference/rowupdated-method-sqlserverresultset.md) クラスの [rowUpdated](../../../connect/jdbc/reference/sqlserverresultset-class.md) メソッドを呼び出すことで表示されている行が更新されたことを検出できるかどうかを取得します。  
   
 ## <a name="syntax"></a>構文  
   

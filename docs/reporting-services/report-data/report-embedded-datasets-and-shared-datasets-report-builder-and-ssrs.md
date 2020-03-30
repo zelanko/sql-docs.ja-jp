@@ -11,10 +11,10 @@ ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a77d0b930b15d287a010e141c256c9bf311dc303
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081804"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)
@@ -51,7 +51,7 @@ ms.locfileid: "77081804"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Overview"></a> レポート データセットとクエリについて  
+##  <a name="understanding-report-datasets-and-queries"></a><a name="Overview"></a> レポート データセットとクエリについて  
  レポート データセットには、外部データ ソースに対して実行されるクエリ コマンドが含まれており、取得するデータを指定します。 クエリ コマンドを構築するには、外部データ ソースのデータ拡張機能に関連付けられているクエリ デザイナーを使用します。 クエリ デザイナーで、クエリ コマンドを実行して結果セットを表示できます。 結果セットは、列名と行を持つ四角形の行セットで、各行の値の数は同じです。 *不規則階層*とも呼ばれる階層データはサポートされていません。 列名は、データセット フィールドの一覧としてレポート定義に保存されます。  
   
  レポートにデータセットを追加すると、レポート データ ペインのフィールド コレクションから、テーブル、グラフ、およびレポート レイアウトのデザインに使用するその他のレポート アイテムにフィールドをドラッグできます。 フィールドの操作の詳細については、「 [データセット フィールド コレクション &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)」を参照してください。  
@@ -111,7 +111,7 @@ ms.locfileid: "77081804"
   
  サポートされているファイルの種類は .sql と .rdl だけです。 多次元式 (MDX) クエリ、データ マイニング予測 (DMX) クエリ、およびモデル クエリ (SMQL) は、関連付けられているクエリ デザイナーでのみ生成できます。  
   
-##  <a name="Compare"></a> 共有データセットと埋め込みデータセットの比較および作成  
+##  <a name="comparing-and-creating-shared-datasets-and-embedded-datasets"></a><a name="Compare"></a> 共有データセットと埋め込みデータセットの比較および作成  
  埋め込みデータセットは、レポートまたはパブリッシュされたレポート パーツで定義されます。 埋め込みデータセットに加えられた変更は、そのレポートまたはそのレポート パーツにのみ影響を与えます。  
   
  共有データセットは、レポート サーバーまたは SharePoint サイトで定義され、共有データ ソースに基づいており、複数のレポートおよびレポート パーツで使用できます。 共有データセット定義に加えられた変更は、そのデータセット定義を使用するすべてのレポートとすべてのレポート パーツに影響を与えます。  
@@ -149,9 +149,9 @@ ms.locfileid: "77081804"
 |フィールド|クエリ コマンドのフィールド<br /><br /> データセット定義の一部を構成しない計算フィールド|フィールドの表示 (変更は不可)<br /><br /> フィールド コレクションは静的で、共有データセットをレポートに追加したときのクエリに基づきます。 更新するには、 **[データセットのプロパティ]** ダイアログ ボックスの **[フィールドの更新]** をクリックします。 定義内の現在のクエリから返されるコレクションが、実際のフィールド コレクションです。<br /><br /> 計算フィールドの追加|  
 |データセット|大文字と小文字の区別などのデータ オプション|インスタンスのデータ オプションのオーバーライド|  
   
- データセットの作成の詳細については、[Reporting Services ドキュメント](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)の「[共有データセットまたは埋め込みデータセットの作成 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)」と「[Reporting Services ツール](../../reporting-services/tools/reporting-services-tools.md)」を参照してください。  
+ データセットの作成の詳細については、[Reporting Services ドキュメント](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)の「[共有データセットまたは埋め込みデータセットの作成 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/tools/reporting-services-tools.md)」と「[Reporting Services ツール](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)」を参照してください。  
   
-##  <a name="SortGroupFilter"></a> データセット内のデータのフィルター処理、並べ替え、グループ化  
+##  <a name="filtering-sorting-and-grouping-data-in-a-dataset"></a><a name="SortGroupFilter"></a> データセット内のデータのフィルター処理、並べ替え、グループ化  
  データセット内のデータは、外部データ ソースに対してクエリ コマンドを実行することによって取得されたものです。 データ拡張機能のクエリ コマンド構文によって、データを並べ替えできるか、グループ化できるかどうかが決まります。 並べ替えとグループ化は、レポートのデータが取得される前にクエリで実行されます。 フィルター処理は、レポートのデータを取得した後に実行されます。  
   
  詳細については、「 [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)」を参照してください。  
@@ -173,7 +173,7 @@ ms.locfileid: "77081804"
 ### <a name="grouping-data-in-a-dataset"></a>データセットのデータのグループ化  
  データセットのデータはグループ化できません。 データセットのデータを集計するには、データがレポート用に取得される前に、クエリ コマンドを編集して集計を計算します。 これらは、 *サーバー集計*と呼ばれます。 式では、事前に計算された集計としてこれらの値を識別するため、Aggregate 関数を使用します。 詳細については、「[集計関数 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)」を参照してください。  
   
-##  <a name="Parameters"></a> パラメーターとデータセットの使用  
+##  <a name="using-parameters-and-datasets"></a><a name="Parameters"></a> パラメーターとデータセットの使用  
  埋め込みデータセット クエリにクエリ変数が含まれている場合、クエリ パラメーターと対応するレポート パラメーターが自動的に作成されます。 レポートを実行すると、レポート パラメーターの値は、このデータセット クエリ パラメーターにリンクされます。 その結果、外部データ ソースで実行されるクエリ コマンドには、レポート パラメーターで指定された値が含まれます。 ユーザーはレポート パラメーターを使用して、レポートに表示するデータを選択できます。 クエリ パラメーターとレポート パラメーターがどのようにリンクされているかは、「[パラメーター] ([データセットのプロパティ] ダイアログ ボックス)」ページで確認できます。  
   
  共有データセットの場合、クエリ パラメーターは、レポートとは独立してレポート サーバーで管理できる共有データセット定義の一部です。 次の一覧では、クエリ パラメーター値のサポートについて説明します。  
@@ -195,10 +195,10 @@ ms.locfileid: "77081804"
 ### <a name="displaying-hidden-datasets"></a>非表示のデータセットの表示  
  多次元データ ソースに対するパラメーター化クエリを作成すると、パラメーターに有効な値を提供するデータセットが自動的に作成されます。 一部のクエリ デザイナーでは、フィルターを指定して、パラメーターを作成するオプションを選択することによって、データセットを作成できます。 既定では、これらのデータセットはレポート データ ペインに表示されませんが、表示することも可能です。 詳細については、「[多次元データのパラメーター値の非表示データセットの表示 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md)」を参照してください。  
   
-##  <a name="Maps"></a> マップとデータセットの使用  
+##  <a name="using-maps-and-datasets"></a><a name="Maps"></a> マップとデータセットの使用  
  レポートにマップを含める場合は、空間データを指定する必要があります。 空間データは、レポート データセットから、マップ ギャラリーのマップから、または ESRI シェープファイルから取得できます。 レポートまたは ESRI シェープファイルから取得した空間データは、レポート データ ペインにデータセットとして表示されません。 詳細については、「[マップ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)」を参照してください。  
   
-##  <a name="Multiple"></a> 複数のデータセットからのデータの表示  
+##  <a name="displaying-data-from-multiple-datasets"></a><a name="Multiple"></a> 複数のデータセットからのデータの表示  
  レポートには通常、複数のデータセットがあります。 次の一覧では、レポートにおけるデータセットの使用方法について説明します。  
   
 -   独立したデータ領域を使用して、各データセットのデータを表示します。 詳細については、「[データ領域とマップ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md)」を参照してください。  
@@ -211,10 +211,10 @@ ms.locfileid: "77081804"
   
 -   1 つのデータ領域で複数のデータセットの詳細データを表示することはできません。 ただし、データ領域内で複数のデータセットの集計関数値または組み込み関数値を表示することは可能です。 詳細については、「 [集計関数リファレンス (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)」を参照してください。 複数のデータセットの詳細データを 1 つのデータ領域に組み合わせるには、データを 1 つのデータセットとして取得するようにクエリを書き直す必要があります。  
   
-##  <a name="NoRows"></a> 行データが使用できない場合のメッセージの表示  
+##  <a name="displaying-a-message-when-no-rows-of-data-are-available"></a><a name="NoRows"></a> 行データが使用できない場合のメッセージの表示  
  レポート処理中、データセットのクエリを実行しても、結果のセットに行が含まれていないことがあります。 表示レポートでは、空のデータセットにリンクされているデータ領域は空のデータ領域として表示されます。 表示レポートの空のデータ領域部分に表示するテキストを指定できます。 また、すべてのデータセットのクエリを実行しても実行時にデータが生成されない場合にサブレポートに表示するメッセージも指定できます。 詳細については、「[データ領域にデータがないことを示すメッセージの設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)」を参照してください。  
   
-##  <a name="Options"></a> データセット オプションの設定  
+##  <a name="setting-dataset-options"></a><a name="Options"></a> データセット オプションの設定  
  各種言語データをサポートするデータ ソースの場合、並べ替え順、各種言語文字プロパティ、および大文字と小文字の区別に影響を与えるデータセットのプロパティを調整しなければならないことがあります。 これらのプロパティには、大文字小文字、かな、文字幅、アクセント、照合順序が含まれます。 これらのプロパティの設定方法については、「[[オプション] ([データセットのプロパティ] ダイアログ ボックス) &#40;レポート ビルダー&#41;](../../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

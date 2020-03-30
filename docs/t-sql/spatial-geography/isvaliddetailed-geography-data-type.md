@@ -18,10 +18,10 @@ ms.assetid: f5f0b753-c825-43ce-987d-98655d8d8702
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: c769b2e5fa5de94770d556264b82c81e28d43363
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67930214"
 ---
 # <a name="isvaliddetailed-geography-data-type"></a>IsValidDetailed (geography データ型)
@@ -44,7 +44,7 @@ ms.locfileid: "67930214"
 ## <a name="remarks"></a>解説  
  次の表に、返される可能性のある戻り値を示します。  
   
-|戻り値|[説明]|  
+|戻り値|説明|  
 |------------------|-----------------|  
 |24400|有効|  
 |24401|無効です。原因は不明です。|  

@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 7b617ecdbf2977372dbb006baaec4c791b988ef8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67988906"
 ---
 # <a name="sparse-columns-support-in-ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server のスパース列のサポート
@@ -51,7 +51,7 @@ ms.locfileid: "67988906"
 ## <a name="down-level-client-behavior"></a>下位クライアントの動作  
  下位クライアントでは、SQLColumns および DBSCHMA_COLUMNS でメタデータが返されるのは、スパース **column_set** のメンバーでない列のみです。
   
- 下位クライアントでは、スパース **column_set** のメンバーである列に名前でアクセスできます。[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] クライアントでは、XML 列として **column_set** 列にアクセスできます。  
+ 下位クライアントでは、スパース **column_set** のメンバーである列に名前でアクセスできます。**クライアントでは、XML 列として**column_set[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 列にアクセスできます。  
   
 ## <a name="bulk-copy-bcp-support-for-sparse-columns"></a>一括コピー (BCP) によるスパース列のサポート  
  OLE DB の BCP API には、スパース列や **column_set** 機能のための変更はありません。  

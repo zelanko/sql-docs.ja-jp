@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 20ca1afc5261c2a03a10b2f146cb9aad9b67a315
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028468"
 ---
 # <a name="azure-key-vault-sample-version-600"></a>Azure Key Vault のサンプル版 6.0.0
@@ -22,7 +22,7 @@ ms.locfileid: "69028468"
 
 ## <a name="sample-application-using-azure-key-vault-feature"></a>Azure Key Vault 機能を使用したサンプル アプリケーション
 
-このアプリケーションは、JDBC ドライバー バージョン 6.0.0 および Azure-Keyvault (バージョン 0.9.7)、Adal4j (バージョン 1.3.0)、およびそれらの依存関係を使用して実行可能です。  基になる依存関係を解決するには、[こちら](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)の説明に従って、プロジェクトの pom ファイルにこれらのライブラリを追加します。
+このアプリケーションは、JDBC ドライバー バージョン 6.0.0 および Azure-Keyvault (バージョン 0.9.7)、Adal4j (バージョン 1.3.0)、およびそれらの依存関係を使用して実行可能です。  [こちら](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)の説明に従って、プロジェクトの pom ファイルにこれらのライブラリを追加することで、基になる依存関係を解決できます。
 
 ```java
 import java.net.URISyntaxException;

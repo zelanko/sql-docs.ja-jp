@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5d730c8e71044154b9844174ac8d21837c9ea05f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73843798"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>まずはデータベースのストレッチの有効化ウィザードを実行する
@@ -45,7 +45,7 @@ ms.locfileid: "73843798"
   
 2.  **[タスク]** を右クリックし、 **[Stretch]** (ストレッチ) を選択してから **[有効化]** を選択して、ウィザードを起動します。  
   
-##  <a name="Intro"></a> 概要  
+##  <a name="introduction"></a><a name="Intro"></a> 概要  
  ウィザードの目的と前提条件を確認します。  
  
  次に重要な前提条件を示します。
@@ -55,17 +55,17 @@ ms.locfileid: "73843798"
   
  ![Stretch Database ウィザードの概要ページ](../../sql-server/stretch-database/media/stretch-wizard-1.png "Stretch Database ウィザードの概要ページ")  
   
-##  <a name="Tables"></a> [テーブルの選択]  
+##  <a name="select-tables"></a><a name="Tables"></a> [テーブルの選択]  
  Stretch を有効にするテーブルを選択します。  
  
 多数の行があるテーブルが、並べ替え済み一覧の上部に表示されます。 ウィザードでは、テーブルの一覧を表示する前に、Stretch Database で現在サポートされていないデータ型を分析します。 
   
  ![Stretch Database ウィザードの [テーブルの選択] ページ](../../sql-server/stretch-database/media/stretch-wizard-2.png "Stretch Database ウィザードの [テーブルの選択] ページ")  
   
-|列|[説明]|  
+|列|説明|  
 |------------|-----------------|  
 |(タイトルなし)|選択したテーブルの Stretch を有効にするにはこの列のチェック ボックスを選択します。|  
-|**名前**|データベースのテーブル名を指します。|  
+|**Name**|データベースのテーブル名を指します。|  
 |(タイトルなし)|この列には、選択したテーブルで Stretch を無効にはしない警告記号が表示される場合があります。 また、たとえば、テーブルでサポートされていないデータ型が使用されているなど、選択したテーブルで Stretch を有効化しないブロックの問題が表示される場合もあります。 ツールヒントの詳細な情報を表示するには、記号の上にマウス ポインターを移動します。 詳細については、「 [Stretch Database の制限事項](../../sql-server/stretch-database/limitations-for-stretch-database.md)」を参照してください。|  
 |**ストレッチ済み**|テーブルが既に Stretch 用に有効であるかどうかを示します。|  
 |**移行**|テーブル全体を移行 ( **[テーブル全体]** ) することも、表の既存の列にフィルターを指定することもできます。 移行する行を選択するのに、別のフィルター関数を使用する場合、ウィザードを終了した後、ALTER TABLE ステートメントを実行してフィルター関数を指定します。 フィルター関数の詳細については、「[フィルター関数を使用して、移行する行を選択する](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)」を参照してください。 この関数の適用方法の詳細については、「[テーブルに対して Stretch Database を有効にする](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)」または「[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)」を参照してください。|  
@@ -102,7 +102,7 @@ ms.locfileid: "73843798"
   
 -   ウィザードを終了した後、ALTER TABLE ステートメントを実行してフィルター関数を指定します。 必要な手順については、「 [Add a filter function after running the Wizard](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md#addafterwiz)」 (ウィザードの実行後、フィルター関数を追加する) を参照してください。  
   
-##  <a name="Configure"></a> Azure を構成する  
+##  <a name="configure-azure"></a><a name="Configure"></a> Azure を構成する  
   
 1.  Microsoft アカウントを使用して Microsoft Azure にサインインします。  
   
@@ -143,7 +143,7 @@ ms.locfileid: "73843798"
   
          ![既存の Azure サーバーを選択 - Stretch Database ウィザード](../../sql-server/stretch-database/media/stretch-wizard-5.png "既存の Azure サーバーを選択 - Stretch Database ウィザード")  
   
-##  <a name="Credentials"></a> セキュリティで保護された資格情報  
+##  <a name="secure-credentials"></a><a name="Credentials"></a> セキュリティで保護された資格情報  
  Stretch Database がリモート データベースへの接続に使用する資格情報をセキュリティで保護するためのデータベース マスター キーが必要です。  
   
  データベースにマスター キーが既に存在する場合は、そのパスワードを入力します。  
@@ -156,26 +156,26 @@ ms.locfileid: "73843798"
   
  データベースのマスター キーを作成する方法については、「[CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)」と「[データベース マスター キーの作成](../../relational-databases/security/encryption/create-a-database-master-key.md)」をご覧ください。 ウィザードが作成する資格情報の詳細については、「[データベース スコープ ベースの資格情報を作成する &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)」を参照してください。  
   
-##  <a name="Network"></a> IP アドレスを選択する  
+##  <a name="select-ip-address"></a><a name="Network"></a> IP アドレスを選択する  
  サブネットの IP アドレスの範囲を使用するか (推奨)、SQL Server のパブリック IP アドレスを使用して SQL Server がリモートの Azure サーバーと通信するためのファイアウォール ルールを Azure に作成します。  
   
  このページで指定した IP アドレスは、 SQL Server で開始された受信データ、クエリ、管理操作が Azure ファイアウォールを通過できるように Azure サーバーに伝えます。 このウィザードで SQL Server のファイアウォール設定が変わることはありません。  
   
  ![Stretch Database ウィザードの [IP アドレスの選択] ページ](../../relational-databases/tables/media/stretch-wizard-7.png "Stretch Database ウィザードの [IP アドレスの選択] ページ")  
   
-##  <a name="Summary"></a> まとめ  
+##  <a name="summary"></a><a name="Summary"></a> まとめ  
  入力した値、ウィザードで選択したオプション、Azure の推定コストを確認します。 次に、 **[完了]** を選択してストレッチを有効にします。  
   
  ![Stretch Database ウィザードの概要ページ](../../sql-server/stretch-database/media/stretch-wizard-8.png "Stretch Database ウィザードの概要ページ")  
   
-##  <a name="Results"></a> 結果  
+##  <a name="results"></a><a name="Results"></a> 結果  
  結果を確認します。  
   
  データの移行状況を監視する方法の詳細については、「[データ移行の監視とトラブルシューティング &#40;Stretch Database&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)」を参照してください。  
   
  ![Stretch Database ウィザードの [結果] ページ](../../sql-server/stretch-database/media/stretch-wizard-9.PNG "Stretch Database ウィザードの [結果] ページ")  
   
-##  <a name="KnownIssues"></a> ウィザードのトラブルシューティング  
+##  <a name="troubleshooting-the-wizard"></a><a name="KnownIssues"></a> ウィザードのトラブルシューティング  
  **Stretch Database ウィザードにエラーが発生しました。**  
  Stretch Database がサーバー レベルでまだ有効になっていなく、システム管理者に有効にする権限がないウィザードを実行すると、ウィザードでエラーが発生します。 システム管理者にローカル サーバー インスタンスの Stretch Database を有効にするように依頼し、ウィザードを再度実行します。 詳細については、「 [前提条件: サーバーで Stretch Database を有効にするためのアクセス許可](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)」を参照してください。  
   

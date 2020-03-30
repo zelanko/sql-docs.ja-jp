@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: f259c5a8a9b32d723c62d73f2b0563093851ef5c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571593"
 ---
 # <a name="data-alert-designer"></a>データ警告デザイナー
@@ -54,7 +54,7 @@ ms.locfileid: "65571593"
   
  データ警告デザイナーを開くには、レポート ツール バーの **[アクション]** メニューの **[新しいデータの警告]** オプションをクリックします。 **[新しいデータの警告]** オプションが表示されない場合は、レポートが保存された資格情報を使用するように構成されていません。 資格情報の種類は、SharePoint ライブラリからレポート データ ソースを更新することで更新できます。  
   
-##  <a name="AlertDesigner"></a> データ警告デザイナーのユーザー インターフェイス  
+##  <a name="data-alert-designer-user-interface"></a><a name="AlertDesigner"></a> データ警告デザイナーのユーザー インターフェイス  
  データ警告デザイナーは、いくつかの領域に分割されています。 レポート データ フィードを選択する領域や、ルールを条件に追加して単純な条件または複雑な条件を作成する領域などがあります。 次の図は、データ警告デザイナー内の領域を示しています。  
   
  ![警告デザイナー ユーザー インターフェイスの領域](../reporting-services/media/rs-alertdesigner.gif "警告デザイナー ユーザー インターフェイスの領域")  
@@ -176,7 +176,7 @@ ms.locfileid: "65571593"
   
  電子メールが生成される方法の詳細については、「 [Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)」を参照してください。  
   
-##  <a name="CreateAlert"></a> データ警告定義の作成  
+##  <a name="create-a-data-alert-definition"></a><a name="CreateAlert"></a> データ警告定義の作成  
  SharePoint の "アイテムの表示" および "警告の作成" の権限が与えられている場合は、表示する権限を持つ任意のレポートに対してデータ警告定義を作成できます。ただし、保存された資格情報を使用するか、または資格情報を使用しないレポートに限られます。 レポートは、SharePoint ライブラリから実行します。 データ警告デザイナーで使用できるデータは、レポートからのデータです。 レポートがパラメーター化されている場合は、さまざまなパラメーター値を使用してレポートを実行し、対象データが確実にレポートに表示されるようにします。 レポートを開いた後で、レポート ツール バーの **[アクション]** メニューの **[新しいデータの警告]** をクリックして、データ警告デザイナーを開きます。 次の図は、データ警告デザイナーを開く方法を示しています。  
   
  ![SharePoint ライブラリから警告デザイナーを開く](../reporting-services/media/rs-openalertdesigneriw.gif "SharePoint ライブラリから警告デザイナーを開く")  
@@ -184,7 +184,7 @@ ms.locfileid: "65571593"
  詳細については、「 [警告デザイナーでのデータ警告の作成](../reporting-services/create-a-data-alert-in-data-alert-designer.md)」を参照してください。  
   
   
-##  <a name="SaveAlert"></a> データ警告定義の保存  
+##  <a name="save-a-data-alert-definition"></a><a name="SaveAlert"></a> データ警告定義の保存  
  データ警告デザイナーは、データ警告定義が保存されるサイトの URL を表示します。 データ警告定義は、常にレポートと同じサイトに保存されます。  
   
 > [!NOTE]  
@@ -193,7 +193,7 @@ ms.locfileid: "65571593"
  警告の定義を保存する前に検証が行われます。 警告の定義を正常に保存するためには、エラーを修正しておく必要があります。 詳細については、「 [警告デザイナーでのデータ警告の作成](../reporting-services/create-a-data-alert-in-data-alert-designer.md)」を参照してください。  
   
   
-##  <a name="EditAlert"></a> データ警告定義の編集  
+##  <a name="edit-a-data-alert-definition"></a><a name="EditAlert"></a> データ警告定義の編集  
  データ警告定義は、保存後に再度開いてデータ警告デザイナーで編集することができます。 ルールや句を追加、変更、または削除したり、スケジュールや電子メール設定を変更することができます。 警告で使用するレポート データ フィードに変更があり、警告ルールで参照するフィールドが提供されなくなった場合、またはデータ型などフィールドのメタデータに変更があった場合は、警告の定義が有効ではなくなるので、再度保存するには定義を修正する必要があります。 異なるデータ フィードを使用する場合は、新しい警告の定義を作成する必要があります。  
   
  データ警告定義を編集するには、データ警告マネージャーで目的の定義を右クリックし、 **[編集]** をクリックします。 次の図は、データ警告マネージャーでの、データ警告のショートカット メニューを示しています。  
@@ -203,7 +203,7 @@ ms.locfileid: "65571593"
  詳細については、「 [警告デザイナーでのデータ警告の編集](../reporting-services/edit-a-data-alert-in-alert-designer.md)」を参照してください。  
   
   
-##  <a name="HowTo"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="HowTo"></a> 関連タスク  
  このセクションでは、警告を作成および編集する手順について説明します。  
   
 -   [警告デザイナーでのデータ警告の編集](../reporting-services/edit-a-data-alert-in-alert-designer.md)  

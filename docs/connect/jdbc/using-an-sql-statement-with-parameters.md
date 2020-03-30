@@ -11,19 +11,19 @@ ms.assetid: 3202b88f-ce13-44dd-982c-c6a3b0260378
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f7b8b3f8b387345d91451c726b7f74a5685913f6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69026655"
 ---
 # <a name="using-an-sql-statement-with-parameters"></a>パラメーターがある SQL ステートメントの使用
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-IN パラメーターを含む SQL ステートメントを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのデータを処理する場合は、[SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) クラスの [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md) メソッドを使用して、要求されたデータを含む [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) を取得することができます。 この場合、最初に [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) クラスの [prepareStatement](../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md) メソッドを使用して、SQLServerPreparedStatement オブジェクトを作成する必要があります。
+IN パラメーターを含む SQL ステートメントを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのデータを処理する場合は、[SQLServerPreparedStatement](../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md) クラスの [executeQuery](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) メソッドを使用して、要求されたデータを含む [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) を取得することができます。 この場合、最初に [SQLServerConnection](../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md) クラスの [prepareStatement](../../connect/jdbc/reference/sqlserverconnection-class.md) メソッドを使用して、SQLServerPreparedStatement オブジェクトを作成する必要があります。
 
-SQL ステートメントを作成する場合、IN パラメータは ?  (疑問符) 文字で指定します。これはパラメータ値のプレースホルダになり、後で SQL ステートメントに渡されます。 パラメーターの値を指定するには、SQLServerPreparedStatement クラスの setter メソッドの 1 つを使用できます。 使用する setter メソッドは、SQL ステートメントに渡す値のデータ型によって決定されます。
+SQL ステートメントを作成する場合、IN パラメータは ? (疑問符) 文字で指定します。これはパラメータ値のプレースホルダになり、後で SQL ステートメントに渡されます。 パラメーターの値を指定するには、SQLServerPreparedStatement クラスの setter メソッドの 1 つを使用できます。 使用する setter メソッドは、SQL ステートメントに渡す値のデータ型によって決定されます。
 
 setter メソッドに値を渡す場合は、SQL ステートメントで使用する実際の値だけでなく、SQL ステートメント内のパラメータの順序も指定する必要があります。 たとえば、SQL ステートメントにパラメーターが 1 つ存在する場合、その序数値は 1 になります。 ステートメントに 2 つのパラメーターが含まれている場合、1 つ目の序数値は 1 に、2 つ目の序数値は 2 になります。
 

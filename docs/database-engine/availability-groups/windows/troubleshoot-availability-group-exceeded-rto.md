@@ -10,10 +10,10 @@ ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9b62bcc1eebe8371bc45ae7f565d9aa712f1b1d4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68013752"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rto"></a>トラブルシューティング: 可用性グループ接続の超過 RTO
@@ -28,7 +28,7 @@ ms.locfileid: "68013752"
   
 2.  [リソースの競合のために再実行スレッドが遅れる](#BKMK_CONTENTION)  
   
-##  <a name="BKMK_REDOBLOCK"></a> レポート ワークロードが再実行スレッドの実行をブロックする  
+##  <a name="reporting-workload-blocks-the-redo-thread-from-running"></a><a name="BKMK_REDOBLOCK"></a> レポート ワークロードが再実行スレッドの実行をブロックする  
  セカンダリ レプリカの再実行スレッドが、実行時間の長い読み取り専用クエリによるデータ定義言語 (DDL) の変更をブロックしています。  
   
 ### <a name="explanation"></a>説明  
@@ -44,7 +44,7 @@ from sys.dm_exec_requests where command = 'DB STARTUP'
   
  レポート ワークロードを完了させて、その時点で再実行スレッドをブロック解除させるか、ブロックしているセッション ID で [KILL &#40;Transact-SQL&#41; ](~/t-sql/language-elements/kill-transact-sql.md) を実行して直ちに再実行スレッドをブロック解除することができます。  
   
-##  <a name="BKMK_CONTENTION"></a> リソースの競合のために再実行スレッドが遅れる  
+##  <a name="redo-thread-falls-behind-due-to-resource-contention"></a><a name="BKMK_CONTENTION"></a> リソースの競合のために再実行スレッドが遅れる  
  セカンダリ レプリカでの大量のレポート ワークロードのために、セカンダリ レプリカのパフォーマンスが低下し、再実行スレッドが遅れています。  
   
 ### <a name="explanation"></a>説明  

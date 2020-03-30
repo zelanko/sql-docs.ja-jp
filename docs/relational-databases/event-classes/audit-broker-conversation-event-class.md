@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fb5389bd711a9427a0487e7d7374d899a8ac2c67
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67903542"
 ---
 # <a name="audit-broker-conversation-event-class"></a>Audit Broker Conversation イベント クラス
@@ -25,7 +25,7 @@ ms.locfileid: "67903542"
   
 ## <a name="audit-broker-conversation-event-class-data-columns"></a>Audit Broker Conversation イベント クラスのデータ列  
   
-|データ列|種類|[説明]|列番号|フィルターの適用|  
+|データ列|種類|説明|列番号|フィルターの適用|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |**BigintData1**|**bigint**|メッセージのメッセージ シーケンス番号。|52|いいえ|  
@@ -51,7 +51,7 @@ ms.locfileid: "67903542"
   
  次の表に、このイベント クラスのサブクラス値を示します。  
   
-|id|サブクラス|[説明]|  
+|id|サブクラス|説明|  
 |--------|--------------|-----------------|  
 |1|No Security Header|セキュリティで保護されたメッセージ交換時に、Service Broker がセッション キーを含んでいないメッセージを受信しました。 セキュリティで保護されたメッセージ交換が確立されると、ダイアログのプロトコルは、メッセージ交換で使用されるすべてのメッセージにセッション キーが含まれていることを必要とします。|  
 |2|No Certificate|メッセージ交換の送信者または受信者のどちらかの使用可能な証明書を Service Broker で検出できませんでした。 メッセージ交換をセキュリティで保護するには、メッセージ交換の送信者と受信者の両方が使用できる証明書がデータベースに格納されている必要があります。|  

@@ -13,10 +13,10 @@ ms.assetid: 47b9c236-66a3-4c42-97ee-da5555bdc046
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: fff8aa7a2e37f66470798b2772ed00d0298708a3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68093412"
 ---
 # <a name="sql-server-memory-broker-clerks-object"></a>SQL Server、Memory Broker Clerks オブジェクト
@@ -25,7 +25,7 @@ ms.locfileid: "68093412"
 
 次の表では、SQL Server の **Memory Broker Clerks** パフォーマンス オブジェクトについて説明します。
 
-|**SQL Server Memory Broker Clerks のカウンター**|[説明]|  
+|**SQL Server Memory Broker Clerks のカウンター**|説明|  
 |-------------|-----------------|  
 |**内部の利点**|エントリ数負荷に対するメモリの内部値 (ミリ秒/ページ/ミリ秒単位) に 100 億を掛けて小数点以下を切り捨てたもの。|
 |**Memory Broker Clerk のサイズ**|Clerk のサイズ (ページ単位)。|

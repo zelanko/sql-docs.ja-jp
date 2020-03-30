@@ -16,10 +16,10 @@ ms.assetid: 3050c836-fbb3-4475-99e5-05637a48a932
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0d395e016ad6d84edb17fc826f39036be95b6815
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67996859"
 ---
 # <a name="updatebytes-method-sqlserverresultset"></a>updateBytes メソッド (SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67996859"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|Name|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[updateBytes (int, byte&#91;&#93;)](../../../connect/jdbc/reference/updatebytes-method-int-byte.md)|渡された列インデックスを使用して、指定された列を **byte** 値の配列で更新します。|  
 |[updateBytes (java.lang.String, byte&#91;&#93;)](../../../connect/jdbc/reference/updatebytes-method-java-lang-string-byte.md)|渡された列名を使用して、指定された列を **byte** 値の配列で更新します。|  

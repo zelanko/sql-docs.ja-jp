@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: ddc9a1b1a242f9a92b1e854520d16abeb7baf809
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015651"
 ---
 # <a name="sql-server-error-detail"></a>SQL Server エラーの詳細
@@ -53,7 +53,7 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
 |*pwszMessage*|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エラー メッセージです。 このエラー メッセージは、**IErrorInfo::GetDescription** で返される文字列と同じです。|  
 |*pwszServer*|セッションの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの名前。|  
 |*pwszProcedure*|該当する場合は、エラーが発生したプロシージャの名前です。 該当しない場合は空文字列です。|  
-|*lNative*|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のネイティブ エラー番号です。 **ISQLErrorInfo::GetSQLInfo** の *plNativeError* パラメーターで返される値と同じです。|  
+|*lNative*|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のネイティブ エラー番号です。 *ISQLErrorInfo::GetSQLInfo* の **plNativeError** パラメーターで返される値と同じです。|  
 |*bState*|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エラー メッセージの状態です。|  
 |*bClass*|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エラー メッセージの重大度です。|  
 |*wLineNumber*|該当する場合は、ストアド プロシージャでエラーが発生した行番号です。|  

@@ -20,10 +20,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 0fc8aeed348f64c17894fa3432a7a81274ffbea4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015244"
 ---
 # <a name="tables-and-indexes"></a>テーブルとインデックス
@@ -41,7 +41,7 @@ ms.locfileid: "68015244"
   
 |プロパティ ID|説明|  
 |-----------------|-----------------|  
-|SSPROP_COL_COLLATIONNAME|型: VT_BSTR<br /><br /> R/W:Write<br /><br /> 既定値は[Null]<br /><br /> 説明:このプロパティは、**ITableDefinition** でのみ使用されます。 このプロパティに指定した文字列は、[CREATE TABLE](../../../t-sql/statements/create-table-transact-sql.md) ステートメントの作成時に<br /><br /> ステートメントの使用などがあります。|  
+|SSPROP_COL_COLLATIONNAME|型 : VT_BSTR<br /><br /> R/W: 書き込み<br /><br /> 既定値 : NULL<br /><br /> 説明 : このプロパティは、**ITableDefinition** でのみ使用します。 このプロパティに指定した文字列は、[CREATE TABLE](../../../t-sql/statements/create-table-transact-sql.md) ステートメントの作成時に<br /><br /> ステートメントの使用などがあります。|  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 068418e04624d912671e5b390823fb0903ba50af
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75256126"
 ---
 # <a name="connected-database-development"></a>接続されているデータベース開発
@@ -28,7 +28,7 @@ ms.locfileid: "75256126"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |---------|---------------|  
 |[操作方法:データベースに接続し、既存のオブジェクトを参照する](../ssdt/how-to-connect-to-a-database-and-browse-existing-objects.md)|データベースに接続してデータベースのエンティティを参照します。|  
 |[テーブル デザイナーを使用してデータベース オブジェクトを作成する方法](../ssdt/how-to-create-database-objects-using-table-designer.md)|新しいテーブル デザイナーを使用してテーブルをデザインし、テーブルのリレーションシップを管理します。|  

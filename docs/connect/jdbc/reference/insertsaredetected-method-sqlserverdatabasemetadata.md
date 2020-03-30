@@ -16,16 +16,16 @@ ms.assetid: f296cc42-9d26-48c3-a360-bcf51c31f7fb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4d2889af814e7c7122c9784f5ac9a70421731c09
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67977876"
 ---
 # <a name="insertsaredetected-method-sqlserverdatabasemetadata"></a>insertsAreDetected メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) クラスの [rowInserted](../../../connect/jdbc/reference/rowinserted-method-sqlserverresultset.md) メソッドを呼び出すことで、可視の行が挿入されたことを検出できるかどうかが取得されます。  
+  [SQLServerResultSet](../../../connect/jdbc/reference/rowinserted-method-sqlserverresultset.md) クラスの [rowInserted](../../../connect/jdbc/reference/sqlserverresultset-class.md) メソッドを呼び出すことで、可視の行が挿入されたことを検出できるかどうかが取得されます。  
   
 ## <a name="syntax"></a>構文  
   

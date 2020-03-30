@@ -11,10 +11,10 @@ ms.assetid: ba1d3242-19ca-4321-83fe-867a4f69f1d4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 61cd0ce3e23cec94cc1d8fe0dcf0dfd1505437b3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67977422"
 ---
 # <a name="isqlserverdatasource-interface"></a>ISQLServerDataSource インターフェイス
@@ -38,7 +38,7 @@ public interface ISQLServerDataSource
   
  このインターフェイスでは、次の [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 固有のメソッドが公開されます。  
   
-|Method|詳細については、「|  
+|方法|詳細については、「|  
 |------------|-------------------------------|  
 |public String getApplicationName()|[getApplicationName](../../../connect/jdbc/reference/getapplicationname-method-sqlserverdatasource.md)|  
 |public String getDatabaseName()|[getDatabaseName](../../../connect/jdbc/reference/getdatabasename-method-sqlserverdatasource.md)|  

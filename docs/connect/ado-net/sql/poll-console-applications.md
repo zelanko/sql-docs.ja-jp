@@ -1,6 +1,6 @@
 ---
 title: コンソール アプリケーションでのポーリング
-description: ポーリングを使用して、コンソール アプリケーションから非同期コマンドの実行の完了を待つ方法を示す例を提供します。 この技法はまた、クラス ライブラリや、ユーザー インターフェイスのないその他のアプリケーションでも有効です。
+description: ポーリングを使用して、コンソール アプリケーションからの非同期コマンドの実行が完了するまで待機する例を示します。 この手法は、クラス ライブラリや、ユーザー インターフェイスのないその他のアプリケーションでも有効です。
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 89bcaa6d6e92ccde2d1c151b493c26fe1279d89f
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896645"
 ---
 # <a name="polling-in-console-applications"></a>コンソール アプリケーションでのポーリング

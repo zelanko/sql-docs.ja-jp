@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: a5a4dd3540f4171847014e6175b84bd861b7abb6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67995139"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>クライアントからサーバーへの変換
@@ -72,7 +72,7 @@ ms.locfileid: "67995139"
   
 ||||  
 |-|-|-|  
-|Type|長さ (文字数)|スケール|  
+|種類|長さ (文字数)|スケール|  
 |DBTIME2|8、10..18|0、1..9|  
 |DBTIMESTAMP|19、21..29|0、1..9|  
 |DBTIMESTAMPOFFSET|26、28..36|0、1..9|  

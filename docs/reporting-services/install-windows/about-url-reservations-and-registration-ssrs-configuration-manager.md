@@ -14,10 +14,10 @@ ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 64c458b703d740fa50ff7bcdd6fce20752e6746a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76259335"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>URL の予約と登録について (SSRS 構成マネージャー)
@@ -32,7 +32,7 @@ ms.locfileid: "76259335"
 > [!NOTE]  
 > HTTP.SYS は、ネットワーク要求をリッスンして要求キューにルーティングするオペレーティング システム コンポーネントです。 このリリースの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、HTTP.SYS によって、レポート サーバー Web サービスと Web ポータルの要求キューが作成され、管理されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションのホスティングやアクセスにインターネット インフォメーション サービス (IIS) は使用されなくなりました。 HTTP.SYS 機能の詳細については、「[HTTP Server API (HTTP サーバー API)](https://go.microsoft.com/fwlink/?LinkId=92652)」をご覧ください。  
   
-##  <a name="ReportingServicesURLs"></a> Reporting Services の URL  
+##  <a name="urls-in-reporting-services"></a><a name="ReportingServicesURLs"></a> Reporting Services の URL  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、以下のツール、アプリケーション、およびアイテムに URL を通じてアクセスできます。  
   
 -   レポート サーバー Web サービス  
@@ -46,7 +46,7 @@ ms.locfileid: "76259335"
 > [!NOTE]  
 > この記事では、レポート サーバーに保存されている特定のレポートへの URL アクセスについては説明していません。 これらのアイテムへの URL アクセスについて詳しくは、「[URL アクセスを使用したレポート サーバー アイテムへのアクセス](../../reporting-services/access-report-server-items-using-url-access.md)」をご覧ください。  
   
-##  <a name="URLreservation"></a> URL の予約と登録  
+##  <a name="url-reservation-and-registration"></a><a name="URLreservation"></a> URL の予約と登録  
  URL 予約は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションへのアクセスに使用できる URL を定義します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、レポート サーバー Web サービスと [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] の URL を HTTP.SYS で 1 つ以上予約して、サービスの起動時に登録します。 URL にパラメーターを追加することにより、Web サービスを通じてレポートを開くことができます。 予約と登録は、HTTP.SYS によって行われます。 詳細については、「[Namespace Reservations, Registration, and Routing (名前空間の予約、登録、およびルーティング)](https://go.microsoft.com/fwlink/?LinkId=92653)」をご覧ください。  
   
  *URL 予約* とは、Web アプリケーションへの URL エンドポイントを作成して HTTP.SYS に格納するプロセスです。 HTTP.SYS は、コンピューターで定義されているすべての URL 予約の共通リポジトリであり、URL 予約が一意であることを保証する一連の共通規則を定義します。  
@@ -62,7 +62,7 @@ ms.locfileid: "76259335"
 |`https://+:80/reportserver`|`https://<computername>/reportserver`<br /><br /> `https://<IPAddress>/reportserver`<br /><br /> `https://localhost/reportserver`|この URL 予約では、ポート 80 でワイルドカード (+) を指定しています。 これにより、ポート 80 のレポート サーバー コンピューターに解決されるホストが指定されているすべての受信要求がレポート サーバー キューに送られます。 この URL 予約を使用すると、任意の数の URL を使用してレポート サーバーにアクセスできます。<br /><br /> ほとんどのオペレーティング システムでは、これが [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーの既定の URL 予約です。|  
 |`https://123.45.67.0:80/reportserver`|`https://123.45.67.0/reportserver`|この URL 予約では IP アドレスを指定しています。これは、ワイルドカードの URL 予約よりはるかに制限の厳しい URL 予約です。 レポート サーバーへの接続に使用できるのは、この IP アドレスを含む URL だけです。 この URL 予約を指定すると、`https://<computername>/reportserver` または `https://localhost/reportserver` でのレポート サーバーへの要求は失敗します。|  
   
-##  <a name="DefaultURLs"></a> 既定の URL  
+##  <a name="default-urls"></a><a name="DefaultURLs"></a> 既定の URL  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を既定の構成でインストールすると、レポート サーバー Web サービスと [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]の URL が自動的に予約されます。 これらの既定値は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールで URL 予約を定義するときにも使用できます。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] をインストールした場合や、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を名前付きインスタンスとしてインストールした場合は、既定の URL にインスタンス名が含まれます。  
   
 > [!IMPORTANT]  
@@ -91,13 +91,13 @@ ms.locfileid: "76259335"
 |SQL Server Express|レポート サーバー Web サービス|`https://<servername>/reportserver_SQLExpress`|`https://<servername>:80/reportserver_SQLExpress`|  
 |SQL Server Express|Web ポータル|`https://<servername>/reports_SQLExpress`|`https://<servername>:80/reports_SQLExpress`|  
   
-##  <a name="URLPermissionsAccounts"></a> Reporting Services の URL の認証とサービス ID  
+##  <a name="authentication-and-service-identity-for-reporting-services-urls"></a><a name="URLPermissionsAccounts"></a> Reporting Services の URL の認証とサービス ID  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の URL 予約では、URL 予約のアカウントが表示されます。 仮想サービス アカウントが、同じインスタンスで実行される [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーション用に作成されるすべての URL に対して使用されます。
   
  
  既定のセキュリティが **RSWindowsNegotiate**であるため、匿名アクセスは無効になっています。 イントラネット アクセスの場合、レポート サーバーの URL ではネットワーク コンピューターの名前が使用されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をインターネット接続用に構成する場合は、別の設定を使用する必要があります。 認証の詳細については、「[レポート サーバーでの認証](../../reporting-services/security/authentication-with-the-report-server.md)」をご覧ください。  
   
-##  <a name="URLlocalAdmin"></a> ローカル管理用の URL  
+##  <a name="urls-for-local-administration"></a><a name="URLlocalAdmin"></a> ローカル管理用の URL  
  URL 予約に強いワイルドカードまたは弱いワイルドカードを指定した場合、`https://localhost/reportserver` または `https://localhost/reports` を使用できます。  
   
  `https://localhost` URL は、`https://127.0.0.1` として解釈されます。 URL 予約をコンピューター名や 1 つの IP アドレスに設定した場合は、ローカル コンピューターの 127.0.0.1 に対して追加の予約を作成しないと localhost を使用できません。 同様に、localhost や 127.0.0.1 がコンピューターで無効になっている場合も、その URL を使用できません。  

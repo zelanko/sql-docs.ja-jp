@@ -17,13 +17,13 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: ac10530cf2fa3831a26733e7470b6bd107d17121
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75244237"
 ---
-# <a name="how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects"></a>方法:名前の変更とリファクタリングを使用して、データベース オブジェクトを変更する
+# <a name="how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects"></a>名前の変更とリファクタリングを使用して、データベース オブジェクトを変更する方法
 
 Transact\-SQL エディターの [リファクター] コンテキスト メニューを使用すると、オブジェクトの名前を変更することも別のスキーマに移動することもできます。また、変更をコミットする前に、影響を受ける領域をすべてプレビューすることもできます。 [リファクター] メニューでは、データベース オブジェクトへのすべての参照を完全修飾することも、データベース プロジェクト内の `SELECT` ステートメントに含まれるワイルドカード文字を展開することもできます。  
   
@@ -76,7 +76,7 @@ Transact\-SQL エディターの [リファクター] コンテキスト メニ�
   
 ### <a name="to-fully-qualify-database-object-names"></a>データベース オブジェクト名を完全修飾するには  
   
-1.  Transact\-SQL エディターで **GetProductsBySupplier.sql** が開いていることを確認します。  
+1.  Transact**SQL エディターで** GetProductsBySupplier.sql\- が開いていることを確認します。  
   
 2.  次に示す行の `Product` の部分にカーソルを置いて、右クリックします。 **[リファクター]** をポイントし、 **[完全修飾名]** をクリックします。  
   

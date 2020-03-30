@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8e3fbbeed1224c6cd67c4292a6e263fb079d3ad5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68107145"
 ---
 # <a name="disable-indexes-and-constraints"></a>インデックスと制約の無効化
@@ -50,9 +50,9 @@ ms.locfileid: "68107145"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   無効なインデックスは保守されません。  
   
@@ -88,12 +88,12 @@ ms.locfileid: "68107145"
   
 -   新しいクラスター化インデックスを作成すると、以前に無効化された非クラスター化インデックスが有効になります。 詳しくは、「 [Enable Indexes and Constraints](../../relational-databases/indexes/enable-indexes-and-constraints.md)」をご覧ください。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  ALTER INDEX を実行するには、少なくとも、テーブルまたはビューの ALTER 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-disable-an-index"></a>インデックスを無効にするには  
   
@@ -162,7 +162,7 @@ ms.locfileid: "68107145"
   
 -   ハイパーリンクをクリックして、エラー全体を表示するダイアログ ボックスを開きます。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-disable-an-index"></a>インデックスを無効にするには  
   
