@@ -23,10 +23,10 @@ ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2e8838c92e2af7ca79ad1aa69972e46be0a1f64c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287436"
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>SQL Server インポートおよびエクスポート ウィザードを使用してデータをインポートおよびエクスポートする
@@ -45,7 +45,7 @@ ms.locfileid: "79287436"
     \- または \-
 -   **例を見る。** 一般的なセッションで表示される複数の画面を簡単に確認するには、この簡単な例を 1 つのページで示した「[簡単な例によるインポートおよびエクスポート ウィザードの概要](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)」をご覧ください。  
 
-##  <a name="wizardSources"></a> 使用できる変換元と変換先  
+##  <a name="what-sources-and-destinations-can-i-use"></a><a name="wizardSources"></a> 使用できる変換元と変換先  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードは、次の表のデータ ソースをデータのコピー元およびコピー先として使うことができます。 一部のデータ ソースに接続するには、追加ファイルをダウンロードしてインストールする必要があります。
  
 | データ ソース | 追加ファイルをダウンロードする必要があるかどうか |
@@ -87,7 +87,7 @@ ms.locfileid: "79287436"
 > [!TIP]
 > ウィザードのページまたはダイアログ ボックスで F1 キーをタップすると、現在のページの文書が表示されます。   
   
-##  <a name="wizardSSIS"></a> ウィザードは SQL Server Integration Services (SSIS) を使用する  
+##  <a name="the-wizard-uses-sql-server-integration-services-ssis"></a><a name="wizardSSIS"></a> ウィザードは SQL Server Integration Services (SSIS) を使用する  
  ウィザードは SQL Server Integration Services (SSIS) を使用してデータをコピーします。 SSIS は、データの抽出、変換、および読み込み (ETL) を行うツールです。 ウィザードの各ページでは、SSIS の言語の一部を使用します。
   
  SSIS での基本単位は **パッケージ**です。 ウィザードのページを進みながらオプションを指定すると、SSIS パッケージがメモリに作成されます。    

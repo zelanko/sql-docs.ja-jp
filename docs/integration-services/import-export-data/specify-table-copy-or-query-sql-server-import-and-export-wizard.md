@@ -12,10 +12,10 @@ ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f561fd0e5817ecc03e8d5fe4cc8c32661ebdca21
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296251"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>[テーブルのコピーまたはクエリの指定] \(SQL Server インポートおよびエクスポート ウィザード)
@@ -81,7 +81,7 @@ ms.locfileid: "71296251"
     
 -   **[転送するデータを指定するためのクエリを記述する]** を選択した場合、次のページは **[基になるクエリの指定]** になります。 このページで、データ ソースから転送先にコピーするデータを選択する SQL ステートメントを書き込んでテストします。 (その後、クエリを指定すると、次のページは **[コピー元のテーブルおよびビューを選択]** になります)。詳細については、「[基になるクエリの指定](../../integration-services/import-export-data/provide-a-source-query-sql-server-import-and-export-wizard.md)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [簡単な例によるインポートおよびエクスポート ウィザードの概要](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 
 

@@ -18,10 +18,10 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 343d3d0d16a19e6d7e1610eff84f6e1aa8ff860a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71293799"
 ---
 # <a name="web-service-task"></a>Web サービス タスク
@@ -85,7 +85,7 @@ ms.locfileid: "71293799"
 ## <a name="web-service-task-editor-general-page"></a>[Web サービス タスク エディター] ([全般] ページ)
   **[Web サービス タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、HTTP 接続マネージャーの指定、Web サービス タスクで使用する WSDL (Web サービス記述言語) ファイルの場所の指定、Web サービス タスクの記述、WSDL ファイルのダウンロードなどの操作を実行できます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **[HTTPConnection]**  
  接続マネージャーを一覧から選択するか、\<[**新しい接続...>]** をクリックして新しい接続マネージャーを作成します。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "71293799"
   
  **[WSDL のダウンロード]** ボタンを使用して WSDL ファイルをダウンロードする場合は、この値を **True**に設定します。  
   
- **Name**  
+ **名前**  
  Web サービス タスクの一意な名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
 > [!NOTE]  
@@ -132,7 +132,7 @@ ms.locfileid: "71293799"
 ## <a name="web-service-task-editor-input-page"></a>[Web サービス タスク エディター] ([入力] ページ)
   **[Web サービス タスク エディター]** ダイアログ ボックスの **[入力]** ページを使用すると、Web サービス、Web メソッド、および Web メソッドの入力値を指定できます。 値を指定するには、[値] 列に直接文字列を入力するか、[値] 列から変数を選択します。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **サービス**  
  Web メソッドを実行するために使用する Web サービスを一覧から選択します。  
   
@@ -142,7 +142,7 @@ ms.locfileid: "71293799"
  **[WebMethodDocumentation]**  
  Web メソッドの説明を入力するか、参照ボタン ( **[...]** ) をクリックして **[Web メソッド ドキュメント]** ダイアログ ボックスに説明を入力します。  
   
- **Name**  
+ **名前**  
  Web メソッドへの入力の名前を一覧表示します。  
   
  **Type**  
@@ -164,7 +164,7 @@ ms.locfileid: "71293799"
  **[OutputType]**  
  結果を格納するときに使用するストレージ型を選択します。 このプロパティのオプションを次の表に示します。  
   
-|Value|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**[ファイル接続]**|結果をファイルに格納します。 この値を選択すると、動的オプションの **[ファイル]** が表示されます。|  
 |**変数**|結果を変数に格納します。 この値を選択すると、動的オプションの **[変数]** が表示されます。|  

@@ -15,10 +15,10 @@ ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 63d4507a2ad81a1167444acca111865460662904
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71299007"
 ---
 # <a name="configure-dialog-box"></a>[構成] ダイアログ ボックス
@@ -36,7 +36,7 @@ ms.locfileid: "71299007"
   
 -   [[参照] ページのオプションの設定](#references)  
   
-##  <a name="open_dialog"></a> [構成] ダイアログ ボックスを開く  
+##  <a name="open-the-configure-dialog-box"></a><a name="open_dialog"></a> [構成] ダイアログ ボックスを開く  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]から [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに接続します。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "71299007"
   
 5.  パッケージまたはプロジェクトを右クリックし、 **[構成]** をクリックします。  
   
-##  <a name="parameter"></a> [パラメーター] ページのオプションの設定  
+##  <a name="set-the-options-on-the-parameters-page"></a><a name="parameter"></a> [パラメーター] ページのオプションの設定  
  パラメーターの名前と値を表示したり、値を変更するには、 **[パラメーター]** ページを使用します。  
   
  **[スコープ]** ボックスの一覧から、 **[パラメーター]** タブと **[接続マネージャー]** タブに表示されるパラメーターのスコープを選択します。  
@@ -60,7 +60,7 @@ ms.locfileid: "71299007"
  **コンテナー**  
  パラメーターを含むオブジェクトを一覧表示します。  
   
- **Name**  
+ **名前**  
  パラメーター名を一覧表示します。  
   
  **Value**  
@@ -71,7 +71,7 @@ ms.locfileid: "71299007"
  **コンテナー**  
  接続マネージャーを含むオブジェクトを一覧表示します。  
   
- **Name**  
+ **名前**  
  接続マネージャーの名前を一覧表示します。  
   
  **プロパティ名**  
@@ -80,7 +80,7 @@ ms.locfileid: "71299007"
  **Value**  
  接続マネージャーのプロパティに割り当てられた値を一覧表示します。 **[パラメーター値の設定]** ダイアログ ボックスの値を変更するには、参照ボタンをクリックします。 リテラル値を入力するか、使用する値を含んでいる環境変数をマップするか、パッケージの既定値を使用することができます。  
   
-##  <a name="references"></a> [参照] ページのオプションの設定  
+##  <a name="set-the-options-on-the-references-page"></a><a name="references"></a> [参照] ページのオプションの設定  
  環境への参照を追加および削除したり、環境プロパティにアクセスするには、 **[参照]** ページを使用します。  
   
  環境は、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置したプロジェクトに含まれるパッケージのランタイム値を示します。  

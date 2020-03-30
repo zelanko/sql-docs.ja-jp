@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: bb468aff505b4b12d2eabd64f9512c5d0a18267e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258806"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>インストール ウィザードを使用した SQL Server のアップグレード (セットアップ)
@@ -70,7 +70,7 @@ ms.locfileid: "75258806"
   
 ## <a name="procedure"></a>手順  
   
-### <a name="to-upgrade-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] にアップグレードするには  
+### <a name="to-upgrade-ssnoversion"></a>[!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] にアップグレードするには  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール メディアを挿入し、ルート フォルダーの Setup.exe をダブルクリックします。 ネットワーク共有からインストールするには、ネットワーク共有上のルート フォルダーに移動し、Setup.exe をダブルクリックします。  
   

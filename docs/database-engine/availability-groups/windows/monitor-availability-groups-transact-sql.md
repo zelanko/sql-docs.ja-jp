@@ -18,10 +18,10 @@ ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6a95082cd732b644105c14c4ba598f859f48456e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68014699"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>可用性グループの監視 (Transact-SQL)
@@ -32,10 +32,10 @@ ms.locfileid: "68014699"
 >  これらのビューの多くは ID 列を使用して結合可能であり、1 つのクエリで複数のビューの情報を取得できます。  
   
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] カタログ ビューでは、サーバー インスタンスに対する VIEW ANY DEFINITION 権限が必要です。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 動的管理ビューでは、サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
-##  <a name="AoAgFeatureOnSI"></a> サーバー インスタンス上の Always On 可用性グループ機能の監視  
+##  <a name="monitoring-the-always-on-availability-groups-feature-on-a-server-instance"></a><a name="AoAgFeatureOnSI"></a> サーバー インスタンス上の Always On 可用性グループ機能の監視  
  サーバー インスタンス上の [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 機能を監視するには、次の組み込み関数を使用します。  
   
  [SERVERPROPERTY](../../../t-sql/functions/serverproperty-transact-sql.md) 関数  
@@ -43,7 +43,7 @@ ms.locfileid: "68014699"
   
  **列名:** IsHadrEnabled、HadrManagerStatus  
   
-##  <a name="WSFC"></a> WSFC クラスターの可用性グループの監視  
+##  <a name="monitoring-availability-groups-on-the-wsfc-cluster"></a><a name="WSFC"></a> WSFC クラスターの可用性グループの監視  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]に対応したローカル サーバー インスタンスをホストする Windows Server フェールオーバー クラスタリング (WSFC) クラスターを監視するには、次のビューを使用します。  
   
  [sys.dm_hadr_cluster](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md)  
@@ -82,7 +82,7 @@ ms.locfileid: "68014699"
   
  WSFC クラスターと [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] についての詳細は、「[Windows Server フェールオーバー クラスタリング &#40;WSFC&#41; と SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)」および「[フェールオーバー クラスタリングと Always On 可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)」を参照してください。  
   
-##  <a name="AvGroups"></a> 可用性グループの監視  
+##  <a name="monitoring-availability-groups"></a><a name="AvGroups"></a> 可用性グループの監視  
  サーバー インスタンスが可用性レプリカをホストしている可用性グループを監視するには、次のビューを使用します。  
   
  [sys.availability_groups](../../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)  
@@ -100,7 +100,7 @@ ms.locfileid: "68014699"
   
  **列名:** group_id、primary_replica、primary_recovery_health、primary_recovery_health_desc、secondary_recovery_health、secondary_recovery_health_desc、synchronization_health、synchronization_health_desc  
   
-##  <a name="AvReplicas"></a> sys.dm_hadr_availability_replica_cluster_states  
+##  <a name="monitoring-availability-replicas"></a><a name="AvReplicas"></a> sys.dm_hadr_availability_replica_cluster_states  
  可用性レプリカを監視するには、次のビューとシステム関数を使用します。  
   
  [sys.availability_replicas](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)  
@@ -134,7 +134,7 @@ ms.locfileid: "68014699"
 > [!NOTE]  
 >  可用性レプリカのパフォーマンス カウンター ( **SQLServer:可用性レプリカ**  パフォーマンス オブジェクト) の詳細については、「 [SQL Server、可用性レプリカ](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)」を参照してください。  
   
-##  <a name="AvDbs"></a> sys.dm_hadr_database_replica_cluster_states  
+##  <a name="monitoring-availability-databases"></a><a name="AvDbs"></a> sys.dm_hadr_database_replica_cluster_states  
  可用性データベースを監視するには、次のビューを使用します。  
   
  [可用性データベースの監視](../../../relational-databases/system-catalog-views/sys-availability-databases-cluster-transact-sql.md)  
@@ -171,7 +171,7 @@ ms.locfileid: "68014699"
 > [!NOTE]  
 >  可用性データベースの [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] パフォーマンス カウンター ( **SQLServer:Database Replica** パフォーマンス オブジェクト) の詳細については、「 [SQL Server、データベース レプリカ](../../../relational-databases/performance-monitor/sql-server-database-replica.md)」を参照してください。 また、可用性データベースのトランザクション ログ アクティビティを監視するには、**SQLServer:Databases** パフォーマンス オブジェクトのカウンター、**Log Flush Write Time (ms)** 、**Log Flushes/sec**、**Log Pool Cache Misses/sec**、**Log Pool Disk Reads/sec**、**Log Pool Requests/sec** です。詳しくは、「 [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md)」をご覧ください。  
   
-##  <a name="AGlisteners"></a> 可用性グループ リスナーの監視  
+##  <a name="monitoring-availability-group-listeners"></a><a name="AGlisteners"></a> 可用性グループ リスナーの監視  
  WSFC クラスターのサブネット上の可用性グループ リスナーを監視するには、次のビューを使用します。  
   
  [sys.availability_group_listener_ip_addresses](../../../relational-databases/system-catalog-views/sys-availability-group-listener-ip-addresses-transact-sql.md)  
@@ -193,7 +193,7 @@ ms.locfileid: "68014699"
   
  可用性グループ リスナーの詳細については、「[可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)」を参照してください。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
  **Always On 可用性グループと監視タスク:**  
   
 -   [[オブジェクト エクスプローラーの詳細] を使用した可用性グループの監視 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-object-explorer-details-to-monitor-availability-groups.md)  

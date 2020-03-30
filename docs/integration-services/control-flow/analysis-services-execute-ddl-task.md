@@ -18,10 +18,10 @@ ms.assetid: 7f25c8c6-b601-41f2-9553-be0a2ee0751a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a160e61e390f58dc640a5d1da265cdb77d5d9be1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294338"
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Analysis Services DDL 実行タスク
@@ -238,8 +238,8 @@ ms.locfileid: "71294338"
 ## <a name="analysis-services-execute-ddl-task-editor-general-page"></a>[Analysis Services DDL 実行タスク エディター] ([全般] ページ)
   **[Analysis Services DDL 実行タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DDL 実行タスクの名前と説明を入力できます。  
   
-### <a name="options"></a>オプション  
- **Name**  
+### <a name="options"></a>Options  
+ **名前**  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DDL 実行タスクの一意な名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
 > [!NOTE]  
@@ -252,7 +252,7 @@ ms.locfileid: "71294338"
   **[Analysis Services DDL 実行タスク エディター]** ダイアログ ボックスの **[DDL]** ページを使用すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトまたは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースへの接続を指定でき、データ定義言語 (DDL) ステートメントのソースについての情報を表示できます。  
   
 ### <a name="static-options"></a>静的オプション  
- **[接続]**  
+ **接続**  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトまたは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 接続マネージャーを一覧で選択するか、\< **[新しい接続...]** > をクリックして **[Analysis Services 接続マネージャーの追加]** ダイアログ ボックスを使用して新しい接続を作成します。  
   
  **関連トピック:** [[Analysis Services 接続マネージャーの追加] ダイアログ ボックスの UI リファレンス](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)、[Analysis Services 接続マネージャー](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
@@ -260,7 +260,7 @@ ms.locfileid: "71294338"
  **[SourceType]**  
  DDL ステートメントのソースの種類を指定します。 このプロパティには、次の表に示すオプションがあります。  
   
-|Value|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**[直接入力]**|**[SourceDirect]** テキスト ボックスに格納される DDL ステートメントへのソースを設定します。 この値を選択すると、次に示す動的オプションが表示されます。|  
 |**[ファイル接続]**|DDL ステートメントを含むファイルへのソースを設定します。 この値を選択すると、次に示す動的オプションが表示されます。|  

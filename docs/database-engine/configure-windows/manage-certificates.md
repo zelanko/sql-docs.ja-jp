@@ -21,10 +21,10 @@ ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b98f52d7c8e23530c13da6ad44d90090998ac09e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68212742"
 ---
 # <a name="certificate-management-sql-server-configuration-manager"></a>証明書の管理 (SQL Server 構成マネージャー)
@@ -41,7 +41,7 @@ SSL/TLS 証明書は、SQL Server へのアクセスをセキュリティで保�
 > [!NOTE]
 > SQL Server 構成マネージャーの証明書の管理は、SQL Server 2008 以降の古いバージョンの SQL Server で使用できます。
 
-##  <a name="provision-single-server-cert"></a> 1 つの SQL Server インスタンス用の証明書をインストールするには  
+##  <a name="to-install-a-certificate-for-a-single-sql-server-instance"></a><a name="provision-single-server-cert"></a> 1 つの SQL Server インスタンス用の証明書をインストールするには  
   
 1. SQL Server 構成マネージャーのコンソール ペインで、 **[SQL Server ネットワークの構成]** を展開します。  
   
@@ -54,7 +54,7 @@ SSL/TLS 証明書は、SQL Server へのアクセスをセキュリティで保�
 5. **[次へ]** を選択して、証明書を検証します。 エラーがない場合は、 **[次へ]** を選択して、ローカル インスタンスに証明書をインポートします。  
   
  
-##  <a name="provision-failover-cluster-cert"></a> フェールオーバー クラスター構成で証明書をインストールするには  
+##  <a name="to-install-a-certificate-in-a-failover-cluster-configuration"></a><a name="provision-failover-cluster-cert"></a> フェールオーバー クラスター構成で証明書をインストールするには  
   
 1. SQL Server 構成マネージャーのコンソール ペインで、 **[SQL Server ネットワークの構成]** を展開します。
   
@@ -77,7 +77,7 @@ SSL/TLS 証明書は、SQL Server へのアクセスをセキュリティで保�
 > [!NOTE]
 > これらの手順は、SQL Server フェールオーバー クラスター インスタンスのアクティブ ノードで実行します。 ユーザーには、すべてのクラスター ノードでの管理者権限が必要です。
 
-##  <a name="provision-availability-group-cert"></a>可用性グループ構成で証明書をインストールするには  
+##  <a name="to-install-a-certificate-in-an-availability-group-configuration"></a><a name="provision-availability-group-cert"></a>可用性グループ構成で証明書をインストールするには  
   
 1. SQL Server 構成マネージャーのコンソール ペインで、 **[SQL Server ネットワークの構成]** を展開します。
   

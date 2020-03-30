@@ -23,10 +23,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: c4d1c2c09c764e1e5102e520ccb2f6152e57ce7c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76286579"
 ---
 # <a name="sql-server-replication-publication-properties--dialog-box"></a>SQL Server レプリケーションの 'パブリケーションのプロパティ' ダイアログ ボックス
@@ -37,8 +37,8 @@ ms.locfileid: "76286579"
 ## <a name="general"></a>全般
  **[パブリケーションのプロパティ]** ダイアログ ボックスの **[全般]** ページには、名前、説明、およびサブスクリプションの有効期限ポリシーなどの、パブリケーションに関する基本情報が表示されます。  
   
-### <a name="options"></a>オプション  
- **Name**  
+### <a name="options"></a>Options  
+ **名前**  
  パブリケーションの名前です (読み取り専用)。  
   
  **[データベース]**  
@@ -80,7 +80,7 @@ ms.locfileid: "76286579"
 -   サブスクライバーがデータを更新する場合に、異なるデータ パーティションを異なるサブスクライバーに送信できるので (2 つのサブスクライバーが同一のデータ値を更新することはない)、競合をなくす、または減らすことができます。    
 -   機密データの送信を回避できます。 行フィルターと列フィルターを使用して、サブスクライバーによるデータへのアクセスを制限できます。 マージ レプリケーションにおいて HOST_NAME() を含むパラメーター化されたフィルターを使用する場合は、セキュリティ上の留意事項があります。 詳細については、「 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」の「HOST_NAME() によるフィルター選択」を参照してください。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **[フィルター選択されたテーブル]**  
  このペインには、パブリケーションのテーブル アーティクルに追加したフィルターが表示されます。 行フィルターが設定されているテーブルは、ペイン内で最上位レベルのノードとして表示されます。 マージ パブリケーションの場合、結合フィルターを介してフィルター選択が拡張されているテーブルは、子ノードとして表示されます。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "76286579"
   
  サブスクライバーがパブリッシャーまたはディストリビューターに接続してパブリケーションへのアクセスを要求すると、サブスクライバーのログインが PAL 内の認証情報と比較されます。 これにより、クライアント ツールでパブリッシャーおよびディストリビューターのログインが使用されてパブリッシャーでの変更が直接実行されるのを防ぐことができ、パブリッシャーのセキュリティがさらに高まります。 詳細については、「[パブリッシャーのセキュリティ保護](../../relational-databases/replication/security/secure-the-publisher.md)」を参照してください。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **追加**  
  一覧に新しいエントリを追加します。 追加できるのは、パブリッシャーとディストリビューターの両方で既に定義されているログイン、アカウント、またはグループの名前だけです。 ドメイン アカウントが使用されるか、ローカル アカウントが両方のサーバーで作成されている場合は、両方のサーバーで定義されています。  
   
@@ -139,7 +139,7 @@ ms.locfileid: "76286579"
   
 -   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンでのマージ レプリケーションに対して、Web 同期のプロパティを設定して、サブスクリプションを HTTPS (安全なハイパーテキスト転送プロトコル) 経由で同期できるようにする。 Web 同期を使用するには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] インターネット インフォメーション サービス (IIS) サーバーを構成する必要があります。 詳細については、「 [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md)」を参照してください。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **[FTP 経由でスナップショットにアクセス]**  
  **[ファイル転送プロトコル (FTP) を使用したスナップショット ファイルのダウンロードをサブスクライバーに許可する]** を選択し、 **[FTP サーバー名]** 、 **[ポート番号]** 、 **[FTP ルート フォルダーからのパス]** 、 **[ログイン]** 、および **[パスワード]** を指定し、サブスクライバーがスナップショットの配信に FTP を使用できるようにします。  
   
@@ -160,7 +160,7 @@ ms.locfileid: "76286579"
   
  各エージェントに必要なセキュリティ設定および権限の詳細については、「 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **[セキュリティ設定]** または **[エージェントの作成]**  
  エージェント ジョブが作成されている場合、 **[セキュリティ設定]** をクリックして、エージェントのセキュリティ設定を変更できるダイアログ ボックスにアクセスします。 エージェント ジョブが作成されていない場合、 **[エージェントの作成]** をクリックしてエージェントの作成とセキュリティ設定を指定します。  
 
@@ -169,7 +169,7 @@ ms.locfileid: "76286579"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]  
   **[パブリケーションのプロパティ]** ダイアログ ボックスの **[データ パーティション]** ページを使用すると、パラメーター化されたフィルタリングを使用するマージ パブリケーションのデータ パーティションを定義できます。 これらのパーティションを定義した後で、パーティションのスナップショットを生成して、サブスクライバーの接続プロパティ (ログイン名やコンピューター名) に基づいて複数のサブスクライバーの初期データセットを提供することができます。 また、サブスクライバーが最初に同期するときにパーティション用のスナップショットがない場合に、スナップショットの配布および生成をサブスクライバーが要求できるように設定することもできます。 詳しくは、「 [パラメーター化されたフィルターを使用したパブリケーションのスナップショットの作成](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)」をご覧ください。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **追加**  
  パーティションを定義するには **[追加]** をクリックします。 **[データ パーティションの追加]** ダイアログ ボックスで、 **HOST_NAME()** や **SUSER_SNAME()** の値を指定し、スナップショットを更新するスケジュールを定義します。  
   
@@ -196,7 +196,7 @@ ms.locfileid: "76286579"
 > [!NOTE]  
 >  変更する場合は、パブリケーションの新しいスナップショットが必要です。 詳細については、「[Change Publication and Article Properties](../../relational-databases/replication/publish/change-publication-and-article-properties.md)」 (パブリケーションおよびアーティクルのプロパティの変更) を参照してください。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **[スナップショットの形式]**  
  スナップショットの形式にネイティブ モードまたはキャラクター モードを選択します。  
   

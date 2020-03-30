@@ -9,10 +9,10 @@ ms.topic: reference
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ee1e8f3ae65b4a906d42a4b00644456d89f9b900
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71713427"
 ---
 # <a name="known-errors-and-resolutions-with-change-data-capture-for-oracle-by-attunity"></a>Change Data Capture for Oracle by Attunity の既知のエラーと解決策
@@ -144,7 +144,7 @@ SQL Server 内で CDC データベースのトレース テーブルにクエリ
 
 これは、CDC インスタンスから Oracle サーバーに接続しようとしている Oracle アカウントにシステム ログ ビューを表示する権限が与えられていないときに発生します。 
 
-### <a name="resolution"></a>解決策
+### <a name="resolution"></a>解像度
 
 このエラーを解決するには、現在構成されているユーザーに、Oracle データベース システム内で適切なアクセス許可を与えるか、CDC インスタンスから Oracle サーバーに接続する際に使用されるアカウントを変更します。 
 
@@ -156,7 +156,7 @@ SQL Server 内で CDC データベースのトレース テーブルにクエリ
 
 
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ変更の追跡 &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [変更データ キャプチャについて &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [変更データの処理 &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)   

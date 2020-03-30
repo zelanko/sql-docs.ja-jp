@@ -15,10 +15,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 218965b18f6b94551334cc960e6be7219c8ccc1d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242249"
 ---
 # <a name="job-properties---new-job-targets-page"></a>ジョブのプロパティ - [新しいジョブ] ([対象サーバー] ページ)
@@ -29,7 +29,7 @@ ms.locfileid: "75242249"
 
 このページを使用すると、ジョブのターゲット サーバーを管理できます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
 **[ローカル サーバーを対象とする]**  
 ローカル サーバー上でジョブを実行します。 ターゲット サーバーがリストされていない場合は、これが唯一利用できるオプションです。  
   

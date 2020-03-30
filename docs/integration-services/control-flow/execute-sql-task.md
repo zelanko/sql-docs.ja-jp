@@ -21,10 +21,10 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1e331b974bee3017e17e75dbf8c3ecb8506349b2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298302"
 ---
 # <a name="execute-sql-task"></a>SQL 実行タスク
@@ -118,7 +118,7 @@ ms.locfileid: "71298302"
 Transact-SQL クエリ言語の詳細については、「[Transact-SQL リファレンス &#40;データベース エンジン&#41;](../../t-sql/transact-sql-reference-database-engine.md)」を参照してください。  
   
 ### <a name="static-options"></a>静的オプション  
- **Name**  
+ **名前**  
  ワークフロー内の SQL 実行タスクに一意な名前を指定します。 指定された名前は [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーに表示されます。  
   
  **説明**  
@@ -147,7 +147,7 @@ Transact-SQL クエリ言語の詳細については、「[Transact-SQL リフ�
   
  **関連トピック:** [OLE DB 接続マネージャー](../../integration-services/connection-manager/ole-db-connection-manager.md)、[ODBC 接続マネージャー](../../integration-services/connection-manager/odbc-connection-manager.md)、[ADO 接続マネージャー](../../integration-services/connection-manager/ado-connection-manager.md)、[ADO.NET 接続マネージャー](../../integration-services/connection-manager/ado-net-connection-manager.md)、[SQL Server Compact Edition 接続マネージャー](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)  
   
- **[接続]**  
+ **接続**  
  定義済みの接続マネージャーの一覧から接続を選択します。 新しい接続を作成するには、[\<**新しい接続...** >] を選択します。  
   
  **[SQLSourceType]**  
@@ -157,7 +157,7 @@ Transact-SQL クエリ言語の詳細については、「[Transact-SQL リフ�
   
  このプロパティのオプションを次の表に示します。  
   
-|Value|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**[直接入力]**|Transact-SQL ステートメントをソースに設定します。 この値を選択すると、動的オプション **[SQLStatement]** が表示されます。|  
 |**[ファイル接続]**|Transact-SQL ステートメントを含んでいるファイルを選択します。 この値を設定すると、動的オプション **[ファイル接続]** が表示されます。|  
@@ -203,7 +203,7 @@ Transact-SQL クエリ言語の詳細については、「[Transact-SQL リフ�
 ## <a name="parameter-mapping-page---execute-sql-task-editor"></a>[パラメーター マッピング] ページ - [SQL 実行タスク エディター]
 **[SQL 実行タスク エディター]** ダイアログ ボックスの **[パラメーター マッピング]** ページを使用すると、SQL ステートメント内のパラメーターに変数をマップできます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **[変数名]**  
  **[追加]** をクリックしてパラメーター マッピングを追加した後で、システム変数またはユーザー定義変数を一覧から選択するか、[\<**新しい変数...** >] をクリックして **[変数の追加]** ダイアログ ボックスで新しい変数を追加します。  
   
@@ -234,7 +234,7 @@ Transact-SQL クエリ言語の詳細については、「[Transact-SQL リフ�
 ## <a name="result-set-page---execute-sql-task-editor"></a>[結果セット] ページ - [SQL 実行タスク エディター]
 **[SQL 実行タスク エディター]** ダイアログ ボックスの **[結果セット]** ページを使用すると、SQL ステートメントの結果を新しい変数または既存の変数にマップできます。 このダイアログ ボックスのオプションは、[全般] ページの **[ResultSet]** が **[なし]** に設定されている場合は無効です。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **[結果名]**  
  **[追加]** をクリックして結果セットのマッピング設定を追加した後、結果に名前を付けます。 結果セットの種類によっては、特定の結果名を使用する必要があります。  
   
@@ -272,7 +272,7 @@ SQL ステートメントとストアド プロシージャでは多くの場合
   
 -   [リターン コードの値の取得](#Return_codes)    
   
-###  <a name="Parameter_names_and_markers"></a> パラメーター名とパラメーター マーカー  
+###  <a name="parameter-names-and-markers"></a><a name="Parameter_names_and_markers"></a> パラメーター名とパラメーター マーカー  
  SQL コマンドの構文では、SQL 実行タスクが使用する接続の種類によって、異なるパラメーター マーカーが使用されます。 たとえば、[!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーの場合は、SQL コマンドが使用するパラメーター マーカーの形式を **\@varParameter** にする必要がありますが、OLE DB 接続の場合は疑問符 (?) パラメーター マーカーが必要です。  
   
  変数とパラメーターの間でのマッピングでパラメーター名として使用できる名前も、接続マネージャーの種類によって異なります。 たとえば、[!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーでは \@ プレフィックス付きのユーザー定義名を使用し、OLE DB 接続マネージャーではパラメーター名として 0 から始まる序数の数値を使用する必要があります。  
@@ -307,7 +307,7 @@ SQL ステートメントとストアド プロシージャでは多くの場合
   
  OLE DB 接続マネージャーを使用する場合、パラメーター化サブクエリは使用できません。これは、SQL 実行タスクが OLE DB プロバイダーを介してパラメーター情報を取得できないからです。 ただし、式を使用することで、パラメーター値をクエリ文字列に連結したり、タスクの SqlStatementSource プロパティを設定したりできます。  
   
-###  <a name="Date_and_time_data_types"></a> 日付と時刻のデータ型のパラメーターの使用  
+###  <a name="use-parameters-with-date-and-time-data-types"></a><a name="Date_and_time_data_types"></a> 日付と時刻のデータ型のパラメーターの使用  
   
 #### <a name="use-date-and-time-parameters-with-adonet-and-ado-connection-managers"></a>ADO.NET 接続マネージャーおよび ADO 接続マネージャーでの日付と時刻のパラメーターの使用  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型 ( **time** および **datetimeoffset**) のデータを読み取る場合、 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーまたは ADO 接続マネージャーのいずれかを使用する SQL 実行タスクには、次の追加要件があります。  
@@ -356,7 +356,7 @@ SQL ステートメントとストアド プロシージャでは多くの場合
   
  データが適切な入力パラメーターまたは出力パラメーターに格納されないと、パッケージは失敗します。  
   
-###  <a name="WHERE_clauses"></a> WHERE 句でのパラメーターの使用  
+###  <a name="use-parameters-in-where-clauses"></a><a name="WHERE_clauses"></a> WHERE 句でのパラメーターの使用  
  SELECT、INSERT、UPDATE、および DELETE コマンドには、多くの場合、WHERE 句が含まれています。WHERE 句は、SQL コマンドを限定するために、ソース テーブル内の各行が満たすべき条件を定義したフィルターの役割を果たします。 パラメーターは、WHERE 句で使用されるフィルター値を提供します。  
   
  パラメーター マーカーを使用して、パラメーター値を動的に指定できます。 SQL ステートメントで使用できるパラメーター マーカーとパラメーター名に関する規則は、SQL 実行タスクで使用される接続マネージャーの種類によって異なります。  
@@ -377,7 +377,7 @@ SQL ステートメントとストアド プロシージャでは多くの場合
   
 -   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続では、パラメーター名 \@parmMinProductID と \@parmMaxProductID を使用します。  
   
-###  <a name="Stored_procedures"></a> ストアド プロシージャでのパラメーターの使用  
+###  <a name="use-parameters-with-stored-procedures"></a><a name="Stored_procedures"></a> ストアド プロシージャでのパラメーターの使用  
  ストアド プロシージャを実行する SQL コマンドでは、パラメーター マッピングを使用することもできます。 パラメーター マーカーとパラメーター名の使用方法に関する規則は、パラメーター化クエリの規則と同様に、SQL 実行タスクで使用される接続マネージャーの種類によって異なります。  
   
  次の表に、EXEC コマンドの例を接続マネージャーの種類別に示します。 この例では、 **の** uspGetBillOfMaterials [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)]ストアド プロシージャを実行します。 このストアドプロシージャでは、`@StartProductID` と `@CheckDate` **入力** パラメーターが使用されます。  
@@ -464,7 +464,7 @@ SQL ステートメントとストアド プロシージャでは多くの場合
   
 14. **[OK]** をクリックします。  
 
-##  <a name="Return_codes"></a> リターン コードの値の取得  
+##  <a name="get-the-values-of-return-codes"></a><a name="Return_codes"></a> リターン コードの値の取得  
  ストアド プロシージャは、リターン コードという整数値を返してプロシージャの実行状態を表すことができます。 SQL 実行タスクにリターン コードを実装するには、 **ReturnValue** 型のパラメーターを使用します。  
   
  次の表に、リターン コードを実装する EXEC コマンドの一部の例を接続の種類別に示します。 すべての例で、 **入力** パラメーターを使用します。 パラメーター マーカーとパラメーター名の使用方法に関する規則は、すべてのパラメーター型 (**Input**、**Output**、および **ReturnValue**) に適用される規則と同じです。  
@@ -493,7 +493,7 @@ SQL ステートメントとストアド プロシージャでは多くの場合
   
 -   [結果セットによる変数の設定](#Populate_variable_with_result_set)  
   
-###  <a name="Result_set_type"></a> 結果セットの種類を指定する  
+###  <a name="specify-a-result-set-type"></a><a name="Result_set_type"></a> 結果セットの種類を指定する  
  SQL 実行タスクでサポートされている結果セットの種類は、次のとおりです。  
   
 -   " **なし** " は、クエリが結果を返さない場合に使用される結果セットです。 たとえば、テーブルのレコードを追加、変更、および削除するクエリで使用されます。  
@@ -506,7 +506,7 @@ SQL ステートメントとストアド プロシージャでは多くの場合
   
  SQL 実行タスクが " **完全な結果セット** " の結果セットを使用し、クエリが複数の行セットを返す場合、タスクは最初の行セットのみを返します。 この行セットでエラーが発生すると、タスクはそのエラーをレポートします。 他の行セットでエラーが発生しても、タスクはエラーをレポートしません。  
   
-###  <a name="Populate_variable_with_result_set"></a> 結果セットによる変数の設定  
+###  <a name="populate-a-variable-with-a-result-set"></a><a name="Populate_variable_with_result_set"></a> 結果セットによる変数の設定  
  結果セットの種類が、単一行、行セット、または XML の場合、クエリが返す結果セットをユーザー定義の変数にバインドできます。  
   
  結果セットの種類が " **単一行**" の場合、列名を結果セットの名前として使用し、返される結果の列を変数にバインドしたり、列一覧の列の序数を結果セットの名前として使用できます。 たとえば、クエリ `SELECT Color FROM Production.Product WHERE ProductID = ?` の結果セットの名前は **Color** または **0**となります。 クエリが複数の列を返す場合に、すべての列の値にアクセスするには、各列を異なる変数にバインドする必要があります。 数字を結果セットの名前として使用し、列を変数にマップする場合、その数字はクエリの列一覧に列が表示される順序を示します。 たとえば、クエリ `SELECT Color, ListPrice, FROM Production.Product WHERE ProductID = ?`では、 **Color** 列に 0 を、 **ListPrice** 列に 1 を使用します。 列名を結果セットの名前として使用できるかどうかは、タスクの構成で指定されているプロバイダーによって異なります。 すべてのプロバイダーで列名が使用できるわけではありません。  

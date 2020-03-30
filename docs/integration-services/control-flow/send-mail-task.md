@@ -21,10 +21,10 @@ ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f35ec3ad66199e6c13c648c9a2208f5bf88f439a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71293930"
 ---
 # <a name="send-mail-task"></a>メール送信タスク
@@ -91,8 +91,8 @@ ms.locfileid: "71293930"
 ## <a name="send-mail-task-editor-general-page"></a>[メール送信タスク エディター] ([全般] ページ)
   **[メール送信タスク エディター]** の **[全般]** ページを使用すると、メール送信タスクに名前を付けて説明を記述できます。  
   
-### <a name="options"></a>オプション  
- **Name**  
+### <a name="options"></a>Options  
+ **名前**  
  メール送信タスクに一意の名前を提供します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
  **注** &#xA0;&#xA0;&#xA0;タスク名はパッケージ内で一意である必要があります。  
@@ -103,7 +103,7 @@ ms.locfileid: "71293930"
 ## <a name="send-mail-task-editor-mail-page"></a>[メール送信タスク エディター] ([メール] ページ)
   **[メール送信タスク エディター]** ダイアログ ボックスの **[メール]** ページを使用すると、受信者、メッセージの種類、メッセージの重要度を指定できます。 メッセージにファイルを添付することもできます。 メッセージ テキストは、入力した文字列、テキストが含まれるファイルへのファイル接続、またはテキストが含まれる変数の名前になります。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **[SMTPConnection]**  
  一覧で SMTP 接続マネージャーを選択するか、[ **\<新しい接続...>** ] をクリックして新しい接続マネージャーを作成します。  
   
@@ -124,13 +124,13 @@ ms.locfileid: "71293930"
  **[Bcc]**  
  メッセージのコピーを Bcc として受け取る受信者の電子メール アドレスを指定します。受信者はセミコロンで区切ります。  
   
- **[件名]**  
+ **件名**  
  電子メール メッセージの件名を指定します。  
   
  **[MessageSourceType]**  
  メッセージのソースの種類を選択します。 このプロパティのオプションを次の表に示します。  
   
-|Value|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**[直接入力]**|メッセージ テキストをソースとして設定します。 この値を選択すると、動的オプション **[MessageSource]** が表示されます。|  
 |**[ファイル接続]**|メッセージ テキストが含まれるファイルをソースとして設定します。 この値を選択すると、動的オプション **[MessageSource]** が表示されます。|  

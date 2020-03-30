@@ -12,10 +12,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: e32c215050b8ee7ec74bee51f7330dbb793814cd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73729868"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
@@ -106,7 +106,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  *column_name*  
  テーブルの列の名前です。
 
-### <a name="ColumnOptions"></a> 列のオプション
+### <a name="column-options"></a><a name="ColumnOptions"></a> 列のオプション
 
  `COLLATE` *Windows_collation_name*  
  式の照合順序を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされている Windows 照合順序のいずれかを指定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされている Windows 照合順序の一覧については、「[Windows 照合順序名 (Transact-SQL)](windows-collation-name-transact-sql.md)」を参照してください。  
@@ -122,7 +122,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  | *constraint_name* | (省略可能) 制約の名前です。 制約名は、データベース内で一意です。 名前は、他のデータベース内で再利用できます。 |
  | *constant_expression* | 列の既定値です。 式は、リテラル値または定数である必要があります。 たとえば、`'CA'` や `4` などの定数式は許可されます。 `2+3` や `CURRENT_TIMESTAMP` などの定数式は許可されません。 |
   
-### <a name="TableOptions"></a> テーブル構造のオプション
+### <a name="table-structure-options"></a><a name="TableOptions"></a> テーブル構造のオプション
 
 テーブルの種類を選択する方法の詳細については、「[SQL Data Warehouse でのテーブルのインデックス作成](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-tables-index/)」を参照してください。
   
@@ -137,7 +137,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  
  `LOCATION = USER_DB` このオプションは非推奨です。 この構文は容認されますが、現在は不要であり、動作にも影響しません。   
   
-### <a name="TableDistributionOptions"></a> テーブル分散オプション
+### <a name="table-distribution-options"></a><a name="TableDistributionOptions"></a> テーブル分散オプション
 
 最適な分散メソッドを選択する方法および分散テーブルを使用する方法を理解するには、「[Azure SQL Data Warehouse での分散テーブルの設計に関するガイダンス](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-distribute/)」を参照してください。
 
@@ -147,7 +147,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 `DISTRIBUTION = REPLICATE` テーブルの 1 つのコピーを各コンピューティング ノードに格納します。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] の場合、テーブルは各コンピューティング ノード上のディストリビューション データベースに格納されます。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の場合、テーブルはコンピューティング ノードにまたがる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ファイルグループに格納されます。 この動作は [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の既定の動作です。
   
-### <a name="TablePartitionOptions"></a>テーブル パーティションのオプション
+### <a name="table-partition-options"></a><a name="TablePartitionOptions"></a>テーブル パーティションのオプション
 テーブル パーティションの使用の詳細については、「[SQL Data Warehouse でのテーブルのパーティション分割](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/)」を参照してください。
 
  `PARTITION` ( *partition_column_name* `RANGE` [ `LEFT` | `RIGHT` ] `FOR VALUES` ( [ *boundary_value* [,...*n*] ] ))   
@@ -172,7 +172,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 詳細については、「[順序指定クラスター化列ストア インデックスを使用したパフォーマンス チューニング](https://docs.microsoft.com/azure/sql-data-warehouse/performance-tuning-ordered-cci)」を参照してください。   
 
-### <a name="DataTypes"></a> データ型
+### <a name="data-type"></a><a name="DataTypes"></a> データ型
 
 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] では、最も一般的に使用されるデータ型をサポートしています。 以下に、サポートされるデータ型を一覧し、その詳細説明および格納バイトを示します。 データ型とその使用方法をよく理解するには、[SQL Data Warehouse でのテーブルのデータ型](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types)に関するページを参照してください。
 
@@ -326,7 +326,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
  ディストリビューション列の DEFAULT 制約を定義することはできません。  
   
-### <a name="partitions"></a>[メジャー グループ]
+### <a name="partitions"></a>メジャー グループ
 パーティションを使用する場合、パーティション列には、Unicode のみの照合順序は設定できません。 たとえば、次のステートメントは失敗します。  
   
  ```sql
@@ -356,7 +356,7 @@ CREATE TABLE t1 ( c1 varchar(20) COLLATE Divehi_90_CI_AS_KS_WS) WITH (PARTITION 
 <a name="ExamplesColumn"></a>   
 ## <a name="examples-for-columns"></a>列の例
 
-### <a name="ColumnCollation"></a> A. 列の照合順序を指定します。 
+### <a name="a-specify-a-column-collation"></a><a name="ColumnCollation"></a> A. 列の照合順序を指定します。 
  次の例では、テーブル `MyTable` を 2 つの異なる列照合順序で作成します。 既定では、列 `mycolumn1` の既定の照合順序は Latin1_General_100_CI_AS_KS_WS となります。 列 `mycolumn2` の照合順序は Frisian_100_CS_AS となります。  
   
 ```sql
@@ -368,7 +368,7 @@ WITH ( CLUSTERED COLUMNSTORE INDEX )
 ;  
 ```  
   
-### <a name="DefaultConstraint"></a> B. 列に対して DEFAULT 制約を指定する
+### <a name="b-specify-a-default-constraint-for-a-column"></a><a name="DefaultConstraint"></a> B. 列に対して DEFAULT 制約を指定する
 
  次の例では、列に対して既定値を指定する構文を示します。 colA 列には constraint_colA という名前の DEFAULT 制約があり、既定値は 0 です。  
   
@@ -385,7 +385,7 @@ WITH ( CLUSTERED COLUMNSTORE INDEX )
 <a name="ExamplesTemporaryTables"></a> 
 ## <a name="examples-for-temporary-tables"></a>一時テーブルの例
 
-### <a name="TemporaryTable"></a> C. ローカル一時テーブルを作成します。  
+### <a name="c-create-a-local-temporary-table"></a><a name="TemporaryTable"></a> C. ローカル一時テーブルを作成します。  
  次の例は、#myTable という名前のローカル一時テーブルを作成します。 テーブルは、3 つの部分で構成される名前によって指定され、# で始まります。
   
 ```sql
@@ -406,7 +406,7 @@ WITH
 <a name="ExTableStructure"></a>  
 ## <a name="examples-for-table-structure"></a>テーブル構造の例
 
-### <a name="ClusteredColumnstoreIndex"></a> D. クラスター化列ストア インデックスを持つテーブルを作成する  
+### <a name="d-create-a-table-with-a-clustered-columnstore-index"></a><a name="ClusteredColumnstoreIndex"></a> D. クラスター化列ストア インデックスを持つテーブルを作成する  
  次の例では、クラスター化列ストア インデックスを持つ分散テーブルを作成します。 各ディストリビューションは、列ストアとして格納されます。  
   
  クラスター化列ストア インデックスは、データの配布方法には影響しません。データは常に行によって配布されます。 クラスター化列ストア インデックスは、各ディストリビューション内でのデータの格納方法に影響します。  
@@ -425,7 +425,7 @@ WITH
 ;  
 ```  
 
-### <a name="OrderedClusteredColumnstoreIndex"></a> E. 順序付けされたクラスター化列ストア インデックスを作成する
+### <a name="e-create-an-ordered-clustered-columnstore-index"></a><a name="OrderedClusteredColumnstoreIndex"></a> E. 順序付けされたクラスター化列ストア インデックスを作成する
 
 以下の例は、順序付けされたクラスター化列ストア インデックスを作成する方法を示しています。 インデックスは SHIPDATE で順序付けされます。
 
@@ -439,7 +439,7 @@ SELECT * FROM ext_Lineitem
 <a name="ExTableDistribution"></a> 
 ## <a name="examples-for-table-distribution"></a>テーブルの分散例
 
-### <a name="RoundRobin"></a> F. ROUND_ROBIN テーブルを作成する  
+### <a name="f-create-a-round_robin-table"></a><a name="RoundRobin"></a> F. ROUND_ROBIN テーブルを作成する  
  次の例では、3 つの列を含みパーティションのない ROUND_ROBIN テーブルを作成します。 データはすべてのディストリビューションに分散されます。 テーブルは CLUSTERED COLUMNSTORE INDEX で作成されており、ヒープまたは行ストア クラスター化インデックスより、パフォーマンスとデータ圧縮が優れています。  
   
 ```sql
@@ -452,7 +452,7 @@ CREATE TABLE myTable
 WITH ( CLUSTERED COLUMNSTORE INDEX );  
 ```  
   
-### <a name="HashDistributed"></a> G. ハッシュ分散テーブルを作成する
+### <a name="g-create-a-hash-distributed-table"></a><a name="HashDistributed"></a> G. ハッシュ分散テーブルを作成する
 
  次の例では、前の例と同じテーブルを作成します。 ただし、このテーブルの場合、行は ROUND_ROBIN テーブルのようにランダムに分散されるのではなく、(`id` 列上に) 配布されます。 テーブルは CLUSTERED COLUMNSTORE INDEX で作成されており、ヒープまたは行ストア クラスター化インデックスより、パフォーマンスとデータ圧縮が優れています。  
   
@@ -470,7 +470,7 @@ WITH
   );  
 ```  
   
-### <a name="Replicated"></a> H. レプリケート テーブルを作成します。  
+### <a name="h-create-a-replicated-table"></a><a name="Replicated"></a> H. レプリケート テーブルを作成します。  
  次の例では、前の例のようなレプリケート テーブルを作成します。 レプリケート テーブルは、各計算ノードに完全にコピーされます。 各計算ノードにこのコピーがあれば、クエリにおけるデータ移動を減らすことができます。 この例は CLUSTERED INDEX を使用して作成され、ヒープよりもデータの圧縮率が高くなっています。 ヒープでは、適切な CLUSTERED COLUMNSTORE INDEX 圧縮を実現するための十分な列が含まれていない場合があります。  
   
 ```sql
@@ -490,7 +490,7 @@ WITH
 <a name="ExTablePartitions"></a> 
 ## <a name="examples-for-table-partitions"></a>テーブル パーティションの例
 
-###  <a name="PartitionedTable"></a> I. パーティション テーブルを作成します。
+###  <a name="i-create-a-partitioned-table"></a><a name="PartitionedTable"></a> I. パーティション テーブルを作成します。
 
  次の例では、例 A で示したのと同じテーブルを作成し、`id` 列に RANGE LEFT パーティションを追加します。 4 つのパーティション境界値が指定されており、5 つのパーティションが作成されます。  
   
@@ -525,7 +525,7 @@ WITH
 - パーティション 4:30 <= col < 40
 - パーティション 5:40 <= col  
   
-### <a name="OnePartition"></a> J. パーティションが 1 つのパーティション テーブルを作成する
+### <a name="j-create-a-partitioned-table-with-one-partition"></a><a name="OnePartition"></a> J. パーティションが 1 つのパーティション テーブルを作成する
 
  次の例では、1 つのパーティションを持つパーティション テーブルを作成します。 境界値は指定されていないため、結果は 1 つのパーティションになります。  
   
@@ -542,7 +542,7 @@ WITH
 ;  
 ```  
   
-### <a name="DatePartition"></a> K. 日付のパーティション分割でテーブルを作成する
+### <a name="k-create-a-table-with-date-partitioning"></a><a name="DatePartition"></a> K. 日付のパーティション分割でテーブルを作成する
 
  次の例では、`myTable` という名前の新しいテーブルを作成し、`date` 列に基づいてパーティション分割を行います。 RANGE RIGHT を使用し、境界値として日付を使用することで、各パーティションにデータの月が格納されます。  
   
@@ -583,7 +583,7 @@ WITH
 ```  
   
 <a name="SeeAlso"></a>
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
  
 [CREATE TABLE AS SELECT &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
 [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   

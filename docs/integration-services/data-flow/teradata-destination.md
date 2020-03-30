@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d016a1fed3a60df78a02242a2f42e46cf7184553
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75245100"
 ---
 # <a name="teradata-destination"></a>Teradata 変換先
@@ -83,28 +83,28 @@ Teradata ソースから Teradata ODBC ドライバーへの ODBC の呼び出�
 |:-|:-|:-|
 |AlwaysDropErrorTable|Boolean|既定値は **False** です。 **True** の場合、Teradata 変換先が読み取りに失敗した場合でも、すべてのエラー テーブルが削除されます。|
 |ArraySupport|Boolean|既定値は **True** です。 **True** の場合、DML グループで ArraySupport が使用されます。 TPT Stream にのみ適用されます。 このプロパティは、**詳細エディター**にあります。|
-|バッファー|整数|増加する要求バッファーの数。値は 2 から 64 で設定できます。 TPT Stream にのみ適用されます。 このプロパティは、**詳細エディター**にあります。|
+|バッファー|Integer|増加する要求バッファーの数。値は 2 から 64 で設定できます。 TPT Stream にのみ適用されます。 このプロパティは、**詳細エディター**にあります。|
 |BufferMode|Boolean|既定値は **True** です。 PutBuffer 機能が使用されている場合、**True** にする必要があります。 このプロパティは、**詳細エディター**にあります。|
-|BufferSize|整数|読み込みパーセルの送信に使用される出力バッファー サイズ (KB 単位)。 既定値は 1024 です。 TPT Load にのみ適用されます。 このプロパティは、**詳細エディター**にあります。|
+|BufferSize|Integer|読み込みパーセルの送信に使用される出力バッファー サイズ (KB 単位)。 既定値は 1024 です。 TPT Load にのみ適用されます。 このプロパティは、**詳細エディター**にあります。|
 |DataEncryption|Boolean|既定値は **False** です。 **True** の場合は、完全セキュリティ暗号化が使用されます。|
-|DefaultCodePage|整数|データ ソースにコード ページ情報がない場合に使用されるコード ページ。 <br>**注**:このプロパティは、**詳細エディター**にあります。|
+|DefaultCodePage|Integer|データ ソースにコード ページ情報がない場合に使用されるコード ページ。 <br>**注**:このプロパティは、**詳細エディター**にあります。|
 |DetailedTracingLevel|Integer (列挙)|詳細トレースに対して、次のいずれかのオプションを選択します。 <br> **Off**:詳細ログは記録されません。 <br> **General**:ドライバー固有のアクティビティの一般的なトレースがログに記録されます。 <br> **CLI**:CLIv2 に関連するアクティビティのトレースがログに記録されます。 <br> **Notify Method**:通知機能に関連するアクティビティのトレースがログに記録されます。 <br> **Common Library**: opcommon ライブラリ アクティビティのトレースがログに記録されます。 <br> **[すべて]** : 上記のすべてのアクティビティのトレースがログに記録されます。 <br> 詳細トレース ログ ファイルは、**DetailedTracingFile** プロパティで定義されています。 <br> オプションが Off になっていない場合は、**DetailedTracingFile** プロパティを設定する必要があります。 <br> このプロパティは、**詳細エディター**にあります。|
 |DetailedTracingFile|String|**DetailedTracingLevel** が **Off** になっていない場合に、自動的に生成されるログ ファイルのパス。 このプロパティは、**詳細エディター**にあります。|
 |DiscardLargeRow|Boolean|既定値は **False** です。 **True** の場合、大きい行 (64K を超える) が破棄されます。|
 |ErrorTableName|String|エラー テーブル名。 既定値はターゲット テーブル名です。|
 |ExtendedStringColumnsAllocation|Boolean|**True** の場合、**Maximal Transfer Character Allocation Factor** が使用されます。 <br> Teradata データベースの **Export Width Table ID** プロパティが **Maximal Defaults** に設定されている場合は、この値を **True** に設定する必要があります。 <br> 既定値は **False** です。|
 |FastLoad|Boolean|**True** の場合、高速読み込みが使用されます。 既定値は **false** です。 これは、[Teradata 変換先エディター ([接続マネージャー] ページ)](#teradata-destination-editor-connection-manager-page) で設定することもできます。|
-|[MaxErrors]|整数|データ フローを停止する前に許容されるエラーの数を指定します。 既定値は **0** です。これは、エラー数の制限がないことを意味します。<br> **[エラー処理]** ページで **[フローのリダイレクト]** が選択されている場合。 エラー数が上限に達する前に、すべてのエラーがエラー出力に返されます。 詳細については、「[Teradata ソース エディター ([エラー出力] ページ)](#teradata-destination-editor-error-output-page)」をご覧ください。|
-|MaxSessions|整数|ログオンされているセッションの最大数。 この値は、1 より大きくする必要があります。 既定値は、使用可能な AMP ごとに 1 つのセッションです。|
-|MinSessions|整数|ログオンされているセッションの最小数。 この値は、1 より大きくする必要があります。 既定値は、使用可能な AMP ごとに 1 つのセッションです。|
-|Pack|整数|複数ステートメントの要求にパックするステートメントの数。 既定値は 20 で、最大許容値は 2400 です。 TPT Stream にのみ適用されます。 このプロパティは、**詳細エディター**にあります。|
+|[MaxErrors]|Integer|データ フローを停止する前に許容されるエラーの数を指定します。 既定値は **0** です。これは、エラー数の制限がないことを意味します。<br> **[エラー処理]** ページで **[フローのリダイレクト]** が選択されている場合。 エラー数が上限に達する前に、すべてのエラーがエラー出力に返されます。 詳細については、「[Teradata ソース エディター ([エラー出力] ページ)](#teradata-destination-editor-error-output-page)」をご覧ください。|
+|MaxSessions|Integer|ログオンされているセッションの最大数。 この値は、1 より大きくする必要があります。 既定値は、使用可能な AMP ごとに 1 つのセッションです。|
+|MinSessions|Integer|ログオンされているセッションの最小数。 この値は、1 より大きくする必要があります。 既定値は、使用可能な AMP ごとに 1 つのセッションです。|
+|Pack|Integer|複数ステートメントの要求にパックするステートメントの数。 既定値は 20 で、最大許容値は 2400 です。 TPT Stream にのみ適用されます。 このプロパティは、**詳細エディター**にあります。|
 |PackMaximum|Boolean|**True** の場合、現在の Stream ジョブの最大パック係数が動的に決定されます。 TPT Stream にのみ適用されます。 このプロパティは、**詳細エディター**にあります。|
 |QueryBandSessInfo|Varchar|チャージバックの監視とガバナンスを有効にする、ユーザー定義のセッションベースのクエリ バンド式。 このプロパティは、接続文字列の形式である必要があります。 このプロパティは、**詳細エディター**にあります。|
 |ReplicationOveride|Integer (列挙)|オプション: <br> **既定**:SET SESSION OVERRIDE REPLICATION ステートメントがデータベースに送信されません。 データベースの既定の設定が使用されます。 <br> **更新日時**:通常のレプリケーション サービス コントロールはオーバーライドされます。 <br> **Off**:通常のレプリケーション サービス コントロールが使用されます。 <br> このプロパティは、TPT Stream のみに適用されます。 <br> このプロパティは、**詳細エディター**にあります。|
 |Robust|Boolean|**True** の場合、復旧と再起動の操作に Robust の再起動ロジックが使用されます。 このプロパティは、**TPT Stream** のみに適用されます。 このプロパティは、**詳細エディター**にあります。|
 |TableName|String|使用されているデータを含むテーブルの名前。|
-|TenacityHours|整数|読み込み操作またはエクスポート操作の最大数が既に実行されている場合に、TPT ドライバーがログインを試行する時間数。 既定値は 4 時間です。 このプロパティは、**詳細エディター**にあります。|
-|TenacitySleep|整数|TPT ドライバーが制限に達したときにログインを試行する前に一時停止する分数。 制限は **MaxSessions** プロパティと **TenacityHours** プロパティによって定義されます。 既定値は 6 分です。 このプロパティは、**詳細エディター**にあります。|
+|TenacityHours|Integer|読み込み操作またはエクスポート操作の最大数が既に実行されている場合に、TPT ドライバーがログインを試行する時間数。 既定値は 4 時間です。 このプロパティは、**詳細エディター**にあります。|
+|TenacitySleep|Integer|TPT ドライバーが制限に達したときにログインを試行する前に一時停止する分数。 制限は **MaxSessions** プロパティと **TenacityHours** プロパティによって定義されます。 既定値は 6 分です。 このプロパティは、**詳細エディター**にあります。|
 |UnicodePassThrough|Boolean|Off (既定値):Unicode パス スルーを無効にします。 <br>On:Unicode パス スルーを有効にします。|
 
 ## <a name="configuring-the-teradata-destination"></a>Teradata 変換先を構成する
@@ -140,7 +140,7 @@ Teradata 変換先エディターの [接続マネージャー] ページを開�
 
 - [Teradata 変換先エディター] で、[接続マネージャー] をクリックします。
 
-### <a name="options"></a>オプション
+### <a name="options"></a>Options
 
 **Connection manager**
 
@@ -183,7 +183,7 @@ Teradata 変換先エディターの [マッピング] ページを開くには
 
 - [Teradata 変換先エディター] で、[マッピング] をクリックします。
 
-### <a name="options"></a>オプション
+### <a name="options"></a>Options
 
 **使用できる入力列**
 
@@ -216,7 +216,7 @@ Teradata 変換先エディターの [マッピング] ページを開くには
 
 - [Teradata 変換先エディター] で、[エラー出力] をクリックします。
 
-### <a name="options"></a>オプション
+### <a name="options"></a>Options
 
 **エラー動作**
 

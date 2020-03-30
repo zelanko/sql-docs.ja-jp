@@ -18,10 +18,10 @@ ms.assetid: d1fcffec-f34f-46de-9a0e-343f3b5dbae2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 08879880e93307a496969b79c3aa05144f7aef62
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015062"
 ---
 # <a name="sqlsrv_errors"></a>sqlsrv_errors
@@ -57,7 +57,7 @@ sqlsrv_errors( [int $errorsAndOrWarnings] )
 #### <a name="parameters"></a>パラメーター  
 *$errorsAndOrWarnings*[省略可能]: 定義済みの定数。 このパラメーターには、次の表に示すいずれかの値を指定できます。  
   
-|Value|説明|  
+|値|説明|  
 |---------|---------------|  
 |SQLSRV_ERR_ALL|**sqlsrv** 関数の最後の呼び出しで生成されたエラーと警告が返されます。|  
 |SQLSRV_ERR_ERRORS|**sqlsrv** 関数の最後の呼び出しで生成されたエラーが返されます。|  

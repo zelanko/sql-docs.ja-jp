@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: cc2f32dd81e8dd505b6eaa79359ce10c757ea744
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65577769"
 ---
 # <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>SharePoint 統合モードで Reporting Services の RDL サンドボックスの有効化と無効化
@@ -174,7 +174,7 @@ RDL (レポート定義言語) サンドボックス機能を使用すると、�
   
 -   このクラスを許可一覧に追加します。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
  [RsReportServer.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [レポート サーバー サービスのトレース ログ](../../reporting-services/report-server/report-server-service-trace-log.md)  

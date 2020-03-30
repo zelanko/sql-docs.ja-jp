@@ -32,10 +32,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4c305cf11073c6903c75a9ce8b987cc041aa9fa7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73981954"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
@@ -361,7 +361,7 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
 ## <a name="context-switching"></a>コンテキストの切り替え  
  `AS { LOGIN | USER } = ' name '` 句を使用して、動的ステートメントの実行コンテキストを切り替えることができます。 コンテキスト スイッチを `EXECUTE ('string') AS <context_specification>` のように指定した場合、コンテキスト スイッチは、実行するクエリのスコープでのみ有効になります。  
   
-###  <a name="_user"></a> ユーザーまたはログイン名の指定  
+###  <a name="specifying-a-user-or-login-name"></a><a name="_user"></a> ユーザーまたはログイン名の指定  
  `AS { LOGIN | USER } = ' name '` で指定するユーザーまたはログイン名は、sys.database_principals または sys.server_principals の各プリンシパルとして存在する必要があります。存在しない場合、ステートメントは失敗します。 さらに、プリンシパルで IMPERSONATE 権限が許可されている必要があります。 呼び出し元がデータベース所有者または sysadmin 固定サーバー ロールのメンバーでない場合は、ユーザーが Windows グループ メンバーシップによって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベースやインスタンスにアクセスしているときでも、プリンシパルは存在する必要があります。 たとえば、次のような条件を想定します。  
   
 -   CompanyDomain\SQLUsers グループに Sales データベースへのアクセス権がある。  
@@ -658,7 +658,7 @@ WITH RESULT SETS
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="example-o-basic-procedure-execution"></a>例 O:基本プロシージャの実行  
  ストアド プロシージャの実行:  

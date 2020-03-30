@@ -9,10 +9,10 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
 ms.openlocfilehash: 637198e079c6aa1b1e08e1a69e204b36f54f3827
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79285846"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server 用 ODBC ドライバーと共に Always Encrypted を使用する
@@ -314,7 +314,7 @@ Always Encrypted はクライアント側暗号化テクノロジであるため
 
 ステートメントの Always Encrypted 動作を制御するには、SQLSetStmtAttr を呼び出して、`SQL_SOPT_SS_COLUMN_ENCRYPTION` ステートメント属性を次のいずれかの値に設定します。
 
-|Value|説明|
+|値|説明|
 |-|-|
 |`SQL_CE_DISABLED` (0)|ステートメントに対して Always Encrypted は無効にされます|
 |`SQL_CE_RESULTSETONLY` (1)|暗号化解除のみです。 結果セットと戻り値は暗号化解除され、パラメーターは暗号化されません|

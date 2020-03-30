@@ -12,10 +12,10 @@ ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
 ms.openlocfilehash: 8d13d6df17cad82076813c5fee93ed794d3439f2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68892582"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Power Pivot for SharePoint のアップグレード
@@ -58,7 +58,7 @@ ms.locfileid: "68892582"
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint アドイン (**spPowerPivot.msi**) は、以前のバージョンとサイド バイ サイドでインストールされます。 たとえば [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] アドインは、 `c:\Program Files\Microsoft SQL Server\130\Tools\PowerPivotTools`フォルダーにインストールされます。  
   
-##  <a name="bkmk_prereq"></a> 前提条件  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 前提条件  
  **アクセス許可**  
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint のインストールをアップグレードするには、ファームの管理者である必要があります。 SQL Server セットアップを実行するには、ローカル管理者である必要があります。  
@@ -75,7 +75,7 @@ ms.locfileid: "68892582"
   
 -   既存のインストールで SharePoint 2010 が実行されている場合は、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]。 詳細については、「 [Microsoft SharePoint 2010 Service Pack 2](https://www.microsoft.com/download/details.aspx?id=39672)」を参照してください。 バージョンを確認するには、PowerShell コマンド `(Get-SPfarm).BuildVersion.ToString()` を使用します。 リリース日でビルド バージョンを参照するには、「 [SharePoint 2010 のビルド番号](https://www.toddklindt.com/blog/Lists/Posts/Post.aspx?ID=224)」を参照してください。  
   
-##  <a name="bkmk_uprgade_sharepoint2013"></a> 既存の SharePoint 2013 ファームのアップグレード  
+##  <a name="upgrade-an-existing-sharepoint-2013-farm"></a><a name="bkmk_uprgade_sharepoint2013"></a> 既存の SharePoint 2013 ファームのアップグレード  
  SharePoint 2013 に配置された [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] をアップグレードするには、次の手順を実行します。  
   
  ![PowerPivot for SharePoint 2013 アップグレード](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2013.png "PowerPivot for SharePoint 2013 アップグレード")  
@@ -139,7 +139,7 @@ ms.locfileid: "68892582"
   
 5.  アップグレード後の手順を実行し、ファーム内の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバーのバージョンを確認して、アップグレードが成功したことを確認します。 詳しくは、この記事の「[アップグレード後の検証タスク](#verify)」および次のセクションをご覧ください。  
   
-##  <a name="bkmk_uprgade_sharepoint2010"></a> 既存の SharePoint 2010 ファームのアップグレード  
+##  <a name="upgrade-an-existing-sharepoint-2010-farm"></a><a name="bkmk_uprgade_sharepoint2010"></a> 既存の SharePoint 2010 ファームのアップグレード  
  SharePoint 2010 に配置された [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] をアップグレードするには、次の手順を実行します。  
   
  ![PowerPivot for SharePoint 2010 アップグレード](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2010.png "PowerPivot for SharePoint 2010 アップグレード")  
@@ -231,13 +231,13 @@ ms.locfileid: "68892582"
   
      他のエラーについては、ULS ログを確認します。 詳細については、「[SharePoint ログ ファイルと診断ログの構成と表示 &#40;Power Pivot for SharePoint&#41;](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging)」を参照してください。  
   
-##  <a name="bkmk_workbooks"></a> ブック  
+##  <a name="workbooks"></a><a name="bkmk_workbooks"></a> ブック  
  サーバーをアップグレードしても、サーバー上で実行される [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックがアップグレードされない場合がありますが、前のバージョンの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel で作成された古いブックは、そのリリースで利用できる機能を使用して以前と同様に機能し続けます。 ブックが機能し続けるのは、以前のインストールに含まれていた Analysis Services OLE DB プロバイダーのバージョンがアップグレードしたサーバーに残っているためです。  
   
-##  <a name="bkmk_datarefresh"></a> データ更新  
+##  <a name="data-refresh"></a><a name="bkmk_datarefresh"></a> データ更新  
  アップグレードはデータ更新操作に影響を及ぼします。 サーバーでのスケジュールされたデータ更新は、そのサーバー バージョンに対応するブックに対してのみ使用できます。 以前のバージョンのブックをホストしている場合、それらのブックに対してデータ更新が機能しなくなる可能性があります。 データ更新を再び有効にするには、ブックをアップグレードする必要があります。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel で各ブックを手動でアップグレードするか、SharePoint 2010 でデータ更新機能の自動アップグレードを有効にすることができます。 自動アップグレードでは、データ更新を実行する前にブックが最新のバージョンにアップグレードされます。これにより、データ更新操作をスケジュールどおり行うことができます。  
   
-##  <a name="bkmk_verify_versions"></a> Power Pivot のコンポーネントとサービスのバージョンを確認する  
+##  <a name="verify-the-versions-of-power-pivot-components-and-services"></a><a name="bkmk_verify_versions"></a> Power Pivot のコンポーネントとサービスのバージョンを確認する  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System サービスと Analysis Services のインスタンスはすべて、同じバージョンである必要があります。 すべてのサーバー コンポーネントが同じバージョンであることを確認するには、次のコンポーネントのバージョン情報を確認します。  
   
 ### <a name="verify-the-version-of-power-pivot-solutions-and-the-power-pivot-system-service"></a>Power Pivot ソリューションと Power Pivot System サービスのバージョンを確認する  
@@ -312,14 +312,14 @@ Get-PowerPivotSystemService
   
 3.  バージョン 13.0.\<ビルド番号> であることを確認します。  
   
-##  <a name="geminifarm"></a> SharePoint ファーム内の複数の Power Pivot for SharePoint サーバーをアップグレードする  
+##  <a name="upgrading-multiple-power-pivot-for-sharepoint-servers-in-a-sharepoint-farm"></a><a name="geminifarm"></a> SharePoint ファーム内の複数の Power Pivot for SharePoint サーバーをアップグレードする  
  複数の [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] サーバーを含むマルチサーバー トポロジでは、すべてのサーバー インスタンスとコンポーネントで同じバージョンを使用する必要があります。 最新バージョンのソフトウェアを実行するサーバーによって、ファーム内のすべてのサーバーのレベルが設定されます。 一部のサーバーのみをアップグレードすると、古いバージョンのソフトウェアを実行するサーバーは、同様にアップグレードを行うまで使用できなくなります。  
   
  最初のサーバーをアップグレードした後は、まだアップグレードされていない他のサーバーが **使用できなくなります**。 すべてのサーバーが同じレベルで実行されるようになると、再び使用可能になります。  
   
  SQL Server セットアップによって [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ソリューション ファイルが物理コンピューター上の適切な位置でアップグレードされますが、ファームで使用中のソリューションをアップグレードするには、この記事の前のセクションで説明した [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツールを使う必要があります。  
   
-##  <a name="qfe"></a> ファーム内の Power Pivot インスタンスに QFE を適用する  
+##  <a name="applying-a-qfe-to-a-power-pivot-instance-in-the-farm"></a><a name="qfe"></a> ファーム内の Power Pivot インスタンスに QFE を適用する  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint サーバーに修正プログラムを適用すると、既存のプログラム ファイルが、特定の問題の修正を含む新しいバージョンに更新されます。 QFE をマルチサーバー トポロジに適用するときに、最初に使用すべきプライマリ サーバーはありません。 ファーム内の他の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバーに同じ QFE を適用している限り、どのサーバーからでも開始できます。  
   
  QFE を適用した場合は、ファーム構成データベース内のサーバー バージョン情報を更新する構成手順も実行する必要があります。 修正プログラムを適用したサーバーのバージョンがファームに対して新たに想定されるバージョンになります。 すべてのコンピューターに QFE が適用され、構成が完了するまで、QFE が適用されていない [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint インスタンスを使用して [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データの要求を処理することはできません。  
@@ -343,7 +343,7 @@ Get-PowerPivotSystemService
   
  ファーム内のサービスのバージョン情報をチェックするには、サーバーの全体管理の [アップグレードと修正プログラムの管理] セクションにある **[製品と修正プログラムのインストール状態のチェック]** ページを使用します。  
   
-##  <a name="verify"></a> アップグレード後の検証タスク  
+##  <a name="post-upgrade-verification-tasks"></a><a name="verify"></a> アップグレード後の検証タスク  
  アップグレードが完了したら、次の手順を実行して、サーバーが動作可能であることを確認します。  
   
 |タスク|Link|  

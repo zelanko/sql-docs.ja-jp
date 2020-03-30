@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: ee2425a5b2ff846e37dfe6acb06d8b26b54fd7da
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287629"
 ---
 # <a name="manage-identity-columns"></a>ID 列の管理
@@ -40,15 +40,15 @@ ms.locfileid: "76287629"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Recommendations"></a> 推奨事項  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
   
 -   複数のパブリケーションでテーブルをパブリッシュする場合、両方のパブリケーションに同じ ID 範囲管理オプションを指定する必要があります。 詳細については、「[データとデータベース オブジェクトのパブリッシュ](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)」の「複数のパブリケーションでのテーブルのパブリッシュ」を参照してください。  
   
 -   複数のテーブルで使用できる自動的に増分する番号、またはテーブルを参照せずにアプリケーションから呼び出すことができる自動的に増分する番号を作成するには、「[シーケンス番号](../../../relational-databases/sequence-numbers/sequence-numbers.md)」を参照してください。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  パブリケーションの新規作成ウィザードの **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスの **[プロパティ]** タブで、ID 列の管理オプションを指定します。 このウィザードの使用の詳細については、「[パブリケーションの作成](../../../relational-databases/replication/publish/create-a-publication.md)」を参照してください。 パブリケーションの新規作成ウィザードで選択した内容に応じて、次の操作を行います。  
   
 -   **[パブリケーションの種類]** ページで **[マージ パブリケーション]** または **[更新可能なサブスクリプションを含むトランザクション パブリケーション]** を選択した場合は、ID 範囲の管理を自動または手動に設定します (自動 (既定値) に設定することを推奨します)。 このプロパティは、テーブルがパブリッシュされた後は変更できません。ただし、その他の関連プロパティは変更できます。  
@@ -69,7 +69,7 @@ ms.locfileid: "76287629"
   
 5.  手順 4. で **[自動]** または **[True]** を選択した場合は、次の表のオプションの値を入力します。 これらの設定の使用方法の詳細については、「[ID 列のレプリケート](../../../relational-databases/replication/publish/replicate-identity-columns.md)」の「ID 範囲の割り当て」を参照してください。  
   
-    |オプション|Value|説明|  
+    |オプション|値|説明|  
     |------------|-----------|-----------------|  
     |**[パブリッシャーの範囲サイズ]**|範囲サイズの整数値 (たとえば 20000)。|「[ID 列のレプリケート](../../../relational-databases/replication/publish/replicate-identity-columns.md)」の「ID 範囲の割り当て」を参照してください。|  
     |**[サブスクライバーの範囲サイズ]**|範囲サイズの整数値 (たとえば 10000)。|「[ID 列のレプリケート](../../../relational-databases/replication/publish/replicate-identity-columns.md)」の「ID 範囲の割り当て」を参照してください。|  
@@ -92,7 +92,7 @@ ms.locfileid: "76287629"
   
 5.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスで、 **[OK]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  レプリケーション ストアド プロシージャを使用して、アーティクルを作成するときの ID 範囲管理オプションを指定できます。  
   
 #### <a name="to-enable-automatic-identity-range-management-when-defining-articles-for-a-transactional-publication"></a>トランザクション パブリケーションのアーティクルを定義する際に自動 ID 範囲管理を有効にするには  

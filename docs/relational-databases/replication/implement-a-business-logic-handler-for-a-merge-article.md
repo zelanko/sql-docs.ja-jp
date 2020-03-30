@@ -20,10 +20,10 @@ ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8ba12a2dc53b845d52d2a3dcac574bed08865c12
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75322149"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>マージ アーティクルのビジネス ロジック ハンドラーの実装
@@ -52,7 +52,7 @@ ms.locfileid: "75322149"
   
      [レプリケーション管理オブジェクト (RMO)](#RMOProcedure)  
   
-##  <a name="ReplProg"></a> レプリケーション プログラミングの使用  
+##  <a name="using-replication-programming"></a><a name="ReplProg"></a> レプリケーション プログラミングの使用  
   
 #### <a name="to-create-and-deploy-a-business-logic-handler"></a>ビジネス ロジック ハンドラーを作成および配置するには  
   
@@ -60,7 +60,7 @@ ms.locfileid: "75322149"
   
 2.  次の名前空間の参照をプロジェクトに追加します。  
   
-    |アセンブリ参照|Location|  
+    |アセンブリ参照|場所|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (既定インストール)|  
     |<xref:System.Data>|GAC (.NET Framework のコンポーネント)|  
@@ -114,7 +114,7 @@ ms.locfileid: "75322149"
   
 1.  [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) を実行し、 **\@publication**、 **\@article** を指定し、 **\@property** に **article_resolver** 値、 **\@value** にビジネス ロジック ハンドラーの表示名を指定します。  
   
-###  <a name="TsqlExample"></a> 例 (レプリケーション プログラミング)  
+###  <a name="examples-replication-programming"></a><a name="TsqlExample"></a> 例 (レプリケーション プログラミング)  
  次の例に、監査ログを作成するビジネス ロジック ハンドラーを示します。  
   
  [!code-cs[HowTo#rmo_BusinessLogicCode](../../relational-databases/replication/codesnippet/csharp/rmohowto/businesslogic.cs#rmo_businesslogiccode)]  
@@ -125,7 +125,7 @@ ms.locfileid: "75322149"
   
  [!code-sql[HowTo#sp_RegisterBLH_10](../../relational-databases/replication/codesnippet/tsql/implement-a-business-log_3.sql)]  
   
-##  <a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
   
 #### <a name="to-create-a-business-logic-handler"></a>ビジネス ロジック ハンドラーを作成するには  
   
@@ -133,7 +133,7 @@ ms.locfileid: "75322149"
   
 2.  次の名前空間の参照をプロジェクトに追加します。  
   
-    |アセンブリ参照|Location|  
+    |アセンブリ参照|場所|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (既定インストール)|  
     |<xref:System.Data>|GAC (.NET Framework のコンポーネント)|  
@@ -220,7 +220,7 @@ ms.locfileid: "75322149"
   
 6.  <xref:Microsoft.SqlServer.Replication.MergeArticle.ArticleResolver%2A>にビジネス ロジック ハンドラーの表示名を設定します。 これは、ビジネス ロジック ハンドラーの登録時に指定した <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> プロパティの値になります。  
   
-###  <a name="PShellExample"></a> 例 (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> 例 (RMO)  
  次のビジネス ロジック ハンドラーの例では、サブスクライバーでの挿入、更新、および削除に関する情報をログに記録します。  
   
  [!code-cs[HowTo#rmo_BusinessLogicCode](../../relational-databases/replication/codesnippet/csharp/rmohowto/businesslogic.cs#rmo_businesslogiccode)]  

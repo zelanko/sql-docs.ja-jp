@@ -15,10 +15,10 @@ ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 1ccffc653225645de94355707ae2116982d2deb4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75557535"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Azure Key Vault を使用する SQL Server TDE 拡張キー管理 - 設定手順
@@ -238,7 +238,7 @@ SQL Server のバージョン  |再頒布可能パッケージのインストー
  > Key Vault は、同じ名前を持った複数バージョンのキーをサポートしていますが、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタで使用するキーについては、複数のバージョンを使用したりロールオーバーしたりすることは避けてください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の暗号化に使用するキーをロールしたいと管理者が考える場合は、コンテナー内に別の名前で新しいキーを作成し、DEK を暗号化するために使用してください。  
    
   
-## <a name="part-iii-install-the-includessnoversionincludesssnoversion-mdmd-connector"></a>パート III:[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタをインストールする  
+## <a name="part-iii-install-the-ssnoversion-connector"></a>パート III:[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタをインストールする  
  [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/p/?LinkId=521700)から SQL Server コネクタをダウンロードします。 (この作業は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コンピューターの管理者が行う必要があります。)  
 
 > [!NOTE]  
@@ -262,7 +262,7 @@ SQL Server のバージョン  |再頒布可能パッケージのインストー
 -   [C.SQL Server コネクタのエラー コードの説明](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixC)  
   
   
-## <a name="part-iv-configure-includessnoversionincludesssnoversion-mdmd"></a>パート IV:[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を構成する  
+## <a name="part-iv-configure-ssnoversion"></a>パート IV:[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を構成する  
  このセクションの各操作に最低限必要な権限レベルについては、「[B. よく寄せられる質問](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixB) 」を参照してください。  
   
 1.  **sqlcmd.exe または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio を起動する**  

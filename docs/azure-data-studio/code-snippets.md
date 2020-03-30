@@ -11,13 +11,13 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 09a8432d10a70bb8530654d76bce874f735788a6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67959707"
 ---
-# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] でコード スニペットを作成して使用し、Transact-SQL (T-SQL) スクリプトをすばやく作成する
+# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-name-sos"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] でコード スニペットを作成して使用し、Transact-SQL (T-SQL) スクリプトをすばやく作成する
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] のコード スニペットは、データベースおよびデータベース オブジェクトを簡単に作成できるようにするテンプレートです。 
 

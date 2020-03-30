@@ -14,10 +14,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f60ded18e88d57c5a2975b567fa246923ece7ebe
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71974359"
 ---
 # <a name="how-query-store-collects-data"></a>クエリ ストアでデータを収集する方法
@@ -76,7 +76,7 @@ SQL Server クエリ ストアの動作は、フライト データ レコーダ
   
  ![クエリ ストア プロセス プラン情報](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
  [クエリ ストアを使用した、パフォーマンスの監視](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
  [クエリ ストアを使用する際のベスト プラクティス](../../relational-databases/performance/best-practice-with-the-query-store.md)  
  [クエリ ストアのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md) 

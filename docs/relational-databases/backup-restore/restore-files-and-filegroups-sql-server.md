@@ -18,10 +18,10 @@ ms.assetid: 72603b21-3065-4b56-8b01-11b707911b05
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5398b371ea4c969fedf54502d160ebd183cc2bdb
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908858"
 ---
 # <a name="restore-files-and-filegroups-sql-server"></a>ファイルとファイル グループの復元 (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "72908858"
   
      [制限事項と制約事項](#Restrictions)  
   
--   [セキュリティ](#Security)  
+-   [Security](#Security)  
   
 -   **ファイルおよびファイル グループを復元する方法:**  
   
@@ -43,9 +43,9 @@ ms.locfileid: "72908858"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   ファイルとファイル グループの復元中は、復元作業を実行するシステム管理者以外は、復元されるデータベースを使用しないでください。  
   
@@ -57,14 +57,14 @@ ms.locfileid: "72908858"
   
 -   暗号化されたデータベースを復元するには、データベースの暗号化に使用された証明書または非対称キーにアクセスできることが必要です。 証明書または非対称キーがないと、データベースは復元できません。 このため、バックアップが必要である間は、データベース暗号化キーの暗号化に使用する証明書を保持しておく必要があります。 詳細については、「 [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)」をご覧ください。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  復元するデータベースが存在しない場合、ユーザーは RESTORE を実行できる CREATE DATABASE 権限を使用する必要があります。 データベースが存在する場合、既定では、RESTORE 権限は **sysadmin** 固定サーバー ロールおよび **dbcreator** 固定サーバー ロールのメンバーと、データベースの所有者 (**dbo**) に与えられています (FROM DATABASE_SNAPSHOT オプションを使用する場合、データベースは常に存在します)。  
   
  RESTORE 権限は、サーバーでメンバーシップ情報を常に確認できるロールに与えられます。 固定データベース ロールのメンバーシップは、データベースがアクセス可能で破損していない場合にのみ確認することができますが、RESTORE の実行時にはデータベースがアクセス可能で損傷していないことが必ずしも保証されないため、 **db_owner** 固定データベース ロールのメンバーには RESTORE 権限は与えられません。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-restore-files-and-filegroups"></a>ファイルおよびファイル グループを復元するには  
   
@@ -95,7 +95,7 @@ ms.locfileid: "72908858"
     |列見出し|値|  
     |-----------------|------------|  
     |**復元**|このチェック ボックスをオンにすると、バックアップ セットが復元されます。|  
-    |**Name**|バックアップ セットの名前です。|  
+    |**名前**|バックアップ セットの名前です。|  
     |**[ファイルの種類]**|バックアップのデータの種類を指定します。**データ**、**ログ**、または **Filestream データ**です。 テーブルに含まれるデータの種類は、 **データ** ファイルです。 トランザクション ログ データの種類は、 **ログ** ファイルです。 ファイル システムに格納されたバイナリ ラージ オブジェクト (BLOB) データの種類は、 **FILESTREAM データ** ファイルです。|  
     |**Type**|実行するバックアップの種類: **[完全]** 、 **[差分]** 、 **[トランザクション ログ]** 。|  
     |**[サーバー]**|バックアップ操作を実行するデータベース エンジン インスタンスの名前です。|  
@@ -154,7 +154,7 @@ ms.locfileid: "72908858"
   **[ロールバック UNDO ファイル]**  
   **[ロールバック UNDO ファイル]** テキスト ボックスで、スタンバイ ファイル名を指定します。 データベースを読み取り専用モード (RECOVERY WITH STANDBY) にする場合は、このオプションが必要です。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-restore-files-and-filegroups"></a>ファイルおよびファイル グループを復元するには  
   
@@ -180,7 +180,7 @@ ms.locfileid: "72908858"
   
          トランザクション ログ バックアップを適用する場合、そのバックアップには、ファイルとファイル グループのバックアップが作成された時刻の情報が格納されている必要があります (すべてのデータベース ファイルを復元する場合を除く)。  
   
-###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 例 (Transact-SQL)  
  この例では、 `MyDatabase` データベースのファイルとファイル グループを復元します。 データベースを現在の時刻に復元するために、2 つのトランザクション ログが適用されます。  
   
 ```sql  

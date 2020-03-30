@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9ee964e5c1c58ea54da3f3451c0ffdde29e71b23
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75246941"
 ---
 # <a name="oracle-destination"></a>Oracle 変換先
@@ -81,16 +81,16 @@ Oracle ソースによって Oracle データ ソースに対して行われる 
 
 |プロパティ名|データ型|説明|読み込みモード|
 |:-|:-|:-|:-|
-|BatchSize|整数|一括読み込みのバッチのサイズ。 これは、バッチとして読み込まれる行数です。|バッチ モードでのみ使用されます。|
-|DefaultCodePage|整数|データ ソースにコード ページ情報がない場合に使用されるコード ページ。 <br>**注**:このプロパティは、**詳細エディター**によってのみ設定されます。|両方のモードで使用されます。|
+|BatchSize|Integer|一括読み込みのバッチのサイズ。 これは、バッチとして読み込まれる行数です。|バッチ モードでのみ使用されます。|
+|DefaultCodePage|Integer|データ ソースにコード ページ情報がない場合に使用されるコード ページ。 <br>**注**:このプロパティは、**詳細エディター**によってのみ設定されます。|両方のモードで使用されます。|
 |FastLoad|Boolean|高速読み込みが使用されるかどうか。 既定値は **false** です。 これは、[Oracle 変換先エディター ([接続マネージャー] ページ)](#oracle-destination-editor-connection-manager-page) で設定することもできます。 |両方のモードで使用されます。|
-|[MaxErrors]|整数|データ フローを停止する前に許容されるエラーの数を指定します。 既定値は **0** です。これは、エラー数の制限がないことを意味します。<br> **[エラー処理]** ページで **[フローのリダイレクト]** が選択されている場合。 エラー数が上限に達する前に、すべてのエラーがエラー出力に返されます。 詳細については、「[エラー処理](#error-handling)」を参照してください。|高速読み込みモードでのみ使用されます。|
+|[MaxErrors]|Integer|データ フローを停止する前に許容されるエラーの数を指定します。 既定値は **0** です。これは、エラー数の制限がないことを意味します。<br> **[エラー処理]** ページで **[フローのリダイレクト]** が選択されている場合。 エラー数が上限に達する前に、すべてのエラーがエラー出力に返されます。 詳細については、「[エラー処理](#error-handling)」を参照してください。|高速読み込みモードでのみ使用されます。|
 |NoLogging|Boolean|データベースのログ記録が無効になっているかどうか。 既定値は **False** です。これは、ログ記録が有効になっていることを意味します。|両方のモードで使用されます。|
 |並列|Boolean|並列読み込みが許可されるかどうか。 **True** は、同じターゲット テーブルに対して、他の読み込みセッションの実行が許可されていることを示します。<br> 詳細については、「[並列処理](#parallelism)」をご覧ください。|高速読み込みモードでのみ使用されます。|
 |TableName|String|使用されているデータを含むテーブルの名前。|両方のモードで使用されます。|
 |TableSubName|String|サブ名またはサブパーティション。 この値は省略可能です。<br> **注**:このプロパティは、**詳細エディター**でのみ設定できます。|高速読み込みモードでのみ使用されます。|
-|TransactionSize|整数|単一のトランザクションで実行できる挿入の数。 既定値は **BatchSize** です。|バッチ モードでのみ使用されます。|
-|TransferBufferSize|整数|転送バッファーのサイズ。 既定値は 64 KB です。|高速読み込みモードでのみ使用されます。|
+|TransactionSize|Integer|単一のトランザクションで実行できる挿入の数。 既定値は **BatchSize** です。|バッチ モードでのみ使用されます。|
+|TransferBufferSize|Integer|転送バッファーのサイズ。 既定値は 64 KB です。|高速読み込みモードでのみ使用されます。|
 
 ## <a name="configuring-the-oracle-destination"></a>Oracle 変換先の構成
 
@@ -125,7 +125,7 @@ Oracle 変換先エディターを次の図に示します。 それには、[�
 
 - [Oracle 変換先エディター] で、[接続マネージャー] をクリックします。
 
-### <a name="options"></a>オプション
+### <a name="options"></a>Options
 
 **Connection manager**
 
@@ -160,7 +160,7 @@ Oracle 変換先エディターを次の図に示します。 それには、[�
 
 - [Oracle 変換先エディター] で、[マッピング] をクリックします。
 
-### <a name="options"></a>オプション
+### <a name="options"></a>Options
 
 **使用できる入力列**
 
@@ -194,7 +194,7 @@ Oracle 変換先エディターを次の図に示します。 それには、[�
 
 - [Oracle 変換先エディター]で、[エラー出力] をクリックします。
 
-### <a name="options"></a>オプション
+### <a name="options"></a>Options
 
 **エラー動作**
 

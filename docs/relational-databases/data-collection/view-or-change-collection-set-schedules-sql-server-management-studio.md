@@ -19,10 +19,10 @@ ms.assetid: 26336c98-78c5-414f-8d6a-574fc3af60c4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e38b03a9e903666593567bf34eaa50c578de6825
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74055330"
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>コレクション セットのスケジュールの表示または変更 (SQL Server Management Studio)
@@ -99,12 +99,12 @@ ms.locfileid: "74055330"
   
 6.  **[OK]** をクリックして、変更を保存し、 **[データ コレクション セットのプロパティ]** ダイアログ ボックスを閉じます。  
   
-####  <a name="CollectionSet"></a> [データ コレクション セットのプロパティ] ダイアログ ボックス  
+####  <a name="data-collection-set-properties-dialog-box"></a><a name="CollectionSet"></a> [データ コレクション セットのプロパティ] ダイアログ ボックス  
  **[全般] ページ**  
   
  このページを使用すると、データの収集方法とアップロード方法を構成し、スケジュールを構成し、管理データ ウェアハウスでのデータ保持期間を構成できます。 このページでは、コレクター型や収集頻度などコレクション セットに関する情報や、コレクション セットに使用される入力パラメーターの情報も提供します。  
   
- **Name**  
+ **名前**  
  このページが参照するコレクション セットの名前を表示します。  
   
  **[データの収集およびアップロード]**  
@@ -118,7 +118,7 @@ ms.locfileid: "74055330"
  **[収集頻度 (秒)]**  
  コレクション セット内のコレクション アイテムを表示します。 コレクション アイテムごとに次の情報が提供されます。  
   
--   **Name**  
+-   **名前**  
   
 -   **[コレクターの種類]**  
   

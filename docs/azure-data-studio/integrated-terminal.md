@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: 13a0e3c17f45e0ba136d83f832d3531bc8059884
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67959535"
 ---
 # <a name="integrated-terminal"></a>統合ターミナル
@@ -87,7 +87,7 @@ Windows 上でシェルを正しく構成することは、適切な実行可能
 * `terminal.integrated.fontSize`
 * `terminal.integrated.lineHeight`
 
-## <a id="key-bindings"></a>ターミナル キーのバインド
+## <a name="terminal-key-bindings"></a><a id="key-bindings"></a>ターミナル キーのバインド
 
 **[ビュー]:[Toggle Integrated Terminal]\(統合ターミナルの切り替え\)** コマンドは **Ctrl + `** キーにバインドされており、統合ターミナル パネルの表示と非表示をすばやく切り替えます。
 

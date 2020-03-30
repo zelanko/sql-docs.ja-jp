@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 627fa6a19c88507034bfbd8a7236b94e17242851
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908128"
 ---
 # <a name="configure-parallel-index-operations"></a>並列インデックス操作の構成
@@ -40,7 +40,7 @@ ms.locfileid: "72908128"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **並列処理の最大限度を設定するために使用するもの:**  
   
@@ -48,15 +48,15 @@ ms.locfileid: "72908128"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   通常は、クエリ オプティマイザーによって使用されるプロセッサ数で、最適なパフォーマンスが得られます。 ただし、非常に大きなインデックスの作成、再構築、または削除などの操作ではリソースが集中的に消費されるので、インデックス操作中に、他のアプリケーションやデータベース操作でリソースが不足する可能性があります。 この問題が発生した場合は、インデックス操作に使用するプロセッサ数を制限することで、インデックス ステートメントの実行に使用される最大プロセッサ数を手動で構成できます。  
   
 -   MAXDOP インデックス オプションは、このオプションを指定しているクエリに関してのみ、max degree of parallelism 構成オプションをオーバーライドします。 次の表に、max degree of parallelism 構成オプションと MAXDOP インデックス オプションで指定できる有効な整数値を示します。  
   
-    |Value|説明|  
+    |値|説明|  
     |-----------|-----------------|  
     |0|現在のシステム ワークロードに応じて、使用する CPU 数をサーバーが決定するように指定します。 この値は既定値であり、推奨の設定です。|  
     |1|並列プラン生成を抑制します。 操作は順番に実行されます。|  
@@ -78,10 +78,10 @@ ms.locfileid: "72908128"
   
 -   クエリ オプティマイザーで構築操作に 2 次以上の並列処理が適用されると、並べ替えを必要とするパーティション インデックス操作に必要なメモリ容量がさらに大きくなる場合があります。 並列処理の次数が高いと、必要なメモリ容量も大きくなります。 詳細については、「 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)」を参照してください。  
   
-###  <a name="Security"></a> <a name="Permissions"></a> アクセス許可  
+###  <a name="permissions"></a><a name="Security"></a> <a name="Permissions"></a> アクセス許可  
  テーブルまたはビューに対する `ALTER` 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-set-max-degree-of-parallelism-on-an-index"></a>インデックスに並列処理の最大限度を設定するには  
   
@@ -101,7 +101,7 @@ ms.locfileid: "72908128"
   
 8.  **[OK]** をクリックします。  
 
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-set-max-degree-of-parallelism-on-an-existing-index"></a>既存のインデックスに並列処理の最大限度を設定するには  
   
@@ -140,7 +140,7 @@ ms.locfileid: "72908128"
     GO  
     ```  
  
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [クエリ処理アーキテクチャ ガイド](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing)    
 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)     
 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)     

@@ -11,10 +11,10 @@ ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 97ddd5aa4abf926ecd4e68e89bef63b8f25ce323
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68009973"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>OLE DB Provider for SQL Server のドライバー対応接続プール
@@ -67,7 +67,7 @@ ms.locfileid: "68009973"
     
 - 接続文字列とプールされた接続文字列の次のいずれかの接続属性の間に違いがある場合、プールされた接続は使用されません。  
   
-    |Attribute|ODBC ドライバー 13|ODBC ドライバー 11|  
+    |属性|ODBC ドライバー 13|ODBC ドライバー 11|  
     |-|-|-|  
     |`SQL_ATTR_CURRENT_CATALOG`|はい|はい|
     |`SQL_ATTR_PACKET_SIZE`|はい|はい|
@@ -107,7 +107,7 @@ ms.locfileid: "68009973"
   
      次のいずれかの接続属性を変更した場合、既存の接続を再利用できます。  必要に応じて、ドライバーによって値がリセットされます。 ドライバーは追加のネットワーク呼び出しを行うことなく、クライアントでこれらの属性をリセットできます。  
   
-    |Attribute|ODBC ドライバー 13|ODBC ドライバー 11|  
+    |属性|ODBC ドライバー 13|ODBC ドライバー 11|  
     |-|-|-|  
     |すべてのステートメント属性|はい|はい|
     |`SQL_ATTR_AUTOCOMMIT`|はい|はい|

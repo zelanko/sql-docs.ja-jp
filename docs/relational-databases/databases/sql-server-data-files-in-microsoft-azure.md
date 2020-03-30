@@ -11,10 +11,10 @@ ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ba61e7cc35d9cd0a0f63e3e2f89980b12c6904d5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74833578"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure 内の SQL Server データ ファイル
@@ -109,7 +109,7 @@ ON
 - Azure 仮想マシンで実行されている SQL Server:[Azure Virtual Machine に SQL Server](https://azuremarketplace.microsoft.com/marketplace/apps?search=sql%20server&page=1) をインストールする場合は、SQL Server 2016 をインストールするか、既存のインスタンスを更新します。 同様に、SQL Server 2016 CTP2 のプラットフォーム イメージを使用して Azure に新しい仮想マシンを作成することもできます。
 
   
-###  <a name="bkmk_Limitations"></a> 制限事項  
+###  <a name="limitations"></a><a name="bkmk_Limitations"></a> 制限事項  
   
 - この機能の現在のリリースでは、Azure Storage に **FileStream** データを格納することはできません。 **FileStream** データは、Azure Storage に格納されているデータ ファイルを含むデータベースに格納することも可能ですが、FileStream のデータ ファイルはすべてローカルのストレージに格納する必要があります。  FileStream データはローカルのストレージに存在する必要があるので、それを Azure Storage を使用するコンピューター間で移動することはできません。そのため、FileStream に関連付けられているデータを別のコンピューターに移動するには、[従来の手法](../../relational-databases/blob/move-a-filestream-enabled-database.md)を使用することをお勧めします。  
   
@@ -154,7 +154,7 @@ ON
 
 - **sys.master_files** システム ビューに、新しい **int**列 **credential_id** が追加されました。 **credential_id** 列は、Azure Storage データ ファイルが自身の資格状態を使用するために `sys.credentials` への相互参照を有効にする目的で使用されます。 資格情報を使用するデータベース ファイルが存在するが、この資格情報を削除できないという場合などに、トラブルシューティングとして使用できます。  
   
-##  <a name="bkmk_Troubleshooting"></a> Microsoft Azure で SQL Server データ ファイルを使用する場合のトラブルシューティング  
+##  <a name="troubleshooting-for-sql-server-data-files-in-microsoft-azure"></a><a name="bkmk_Troubleshooting"></a> Microsoft Azure で SQL Server データ ファイルを使用する場合のトラブルシューティング  
  サポートされていない機能または制限事項によるエラーを回避するために、まず「 [Limitations](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md#bkmk_Limitations)」をご確認ください。  
   
  Azure Storage 機能で SQL Server データ ファイルを使用する場合に発生する可能性のあるエラーの一覧は、次のとおりです。  

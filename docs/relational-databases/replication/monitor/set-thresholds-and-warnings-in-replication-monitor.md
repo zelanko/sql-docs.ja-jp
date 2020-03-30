@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 883f554c214809260f69392ad072b1971a34f2da
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287826"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>レプリケーション モニターのしきい値と警告の設定
@@ -58,7 +58,7 @@ ms.locfileid: "76287826"
   
 -   [スナップショット パプリケーションのしきい値および警告を設定する](#Snapshot)  
   
-##  <a name="Transactional"></a> トランザクション パブリケーションのしきい値と警告を設定するには  
+##  <a name="to-set-thresholds-and-warnings-for-a-transactional-publication"></a><a name="Transactional"></a> トランザクション パブリケーションのしきい値と警告を設定するには  
   
 1.  左ペインでパブリッシャー グループを展開し、パブリッシャーを展開して、パブリケーションをクリックします。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "76287826"
   
 5.  **[閉じる]** をクリックします。  
   
-##  <a name="Merge"></a> マージ パプリケーションのしきい値および警告を設定する  
+##  <a name="set-thresholds-and-warnings-for-a-merge-publication"></a><a name="Merge"></a> マージ パプリケーションのしきい値および警告を設定する  
   
 1.  左ペインでパブリッシャー グループを展開し、パブリッシャーを展開して、パブリケーションをクリックします。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "76287826"
   
 5.  **[閉じる]** をクリックします。  
   
-##  <a name="Snapshot"></a> スナップショット パプリケーションのしきい値および警告を設定する  
+##  <a name="set-thresholds-and-warnings-for-a-snapshot-publication"></a><a name="Snapshot"></a> スナップショット パプリケーションのしきい値および警告を設定する  
   
 1.  左ペインでパブリッシャー グループを展開し、パブリッシャーを展開して、パブリケーションをクリックします。  
   

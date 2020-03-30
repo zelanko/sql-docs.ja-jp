@@ -9,12 +9,11 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-feedback_product_url: https://feedback.azure.com/forums/927307-sql-server-big-data-clusters/
-ms.openlocfilehash: 69281b0708b2603f232481a5661da111d1b0aae9
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.openlocfilehash: c751992e666151752783e9813efa2f696fcdcb6e
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77903776"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]とは
@@ -78,7 +77,7 @@ SQL Server ビッグ データ クラスターには、スケーラブルな HDF
 - Jupyter 互換ノートブックを作成、開く、および実行する機能。
 - 外部データ ソースの作成を簡易化するデータ仮想化ウィザード (**データ仮想化の拡張機能**によって有効化されます)。
 
-## <a id="architecture"></a> アーキテクチャ
+## <a name="architecture"></a><a id="architecture"></a> アーキテクチャ
 
 SQL Server ビッグ データ クラスターは、[Kubernetes](https://kubernetes.io/docs/concepts/) によって調整された Linux コンテナーのクラスターです。
 
@@ -89,7 +88,7 @@ Kubernetes はオープン ソースのコンテナー オーケストレータ�
 |||
 |:--|:--|
 | **クラスター** | Kubernetes クラスターは、ノードと呼ばれる一連のマシンです。 1 つのノードがクラスターを制御し、マスター ノードに指定されます。残りのノードはワーカー ノードです。 Kubernetes マスターは、ワーカー間で作業を分散し、クラスターの正常性を監視する役割を担います。 |
-| **[Node]** | ノードによって、コンテナー化されたアプリケーションが実行されます。 物理マシンまたは仮想マシンのいずれかです。 Kubernetes クラスターには、物理マシンと仮想マシンの両方のノードを含めることができます。 |
+| **Node** | ノードによって、コンテナー化されたアプリケーションが実行されます。 物理マシンまたは仮想マシンのいずれかです。 Kubernetes クラスターには、物理マシンと仮想マシンの両方のノードを含めることができます。 |
 | **ポッド** | ポッドは、Kubernetes のアトミック展開単位です。 ポッドは、アプリケーションの実行に必要な 1 つ以上のコンテナーと関連するリソースの論理グループです。 各ポッドはノード上で実行されます。ノードでは、1 つ以上のポッドを実行できます。 Kubernetes マスターによって、クラスター内のノードにポッドが自動的に割り当てられます。 |
 | &nbsp; ||
 
@@ -101,15 +100,15 @@ Kubernetes はオープン ソースのコンテナー オーケストレータ�
 
 ![アーキテクチャの概要](media/big-data-cluster-overview/architecture-diagram-overview.png)
 
-### <a id="controlplane"></a> コントローラー
+### <a name="controller"></a><a id="controlplane"></a> コントローラー
 
 コントローラーには、クラスターの管理とセキュリティ機能があります。 これには、制御サービス、構成ストア、および Kibana、Grafana、Elasticsearch などのその他のクラスターレベルサービスが含まれています。
 
-### <a id="computeplane"></a> コンピューティング プール
+### <a name="compute-pool"></a><a id="computeplane"></a> コンピューティング プール
 
 コンピューティング プールは、クラスターにコンピューティング リソースを提供します。 これには SQL Server on Linux ポッドを実行するノードが含まれます。 コンピューティング プール内のポッドは、特定の処理タスクのために *SQL コンピューティング インスタンス*に分割されます。 
 
-### <a id="dataplane"></a> データ プール
+### <a name="data-pool"></a><a id="dataplane"></a> データ プール
 
 データ プールは、データの永続化とキャッシュに使用されます。 データ プールは、SQL Server on Linux を実行している 1 つ以上のポッドで構成されます。 これは、SQL クエリまたは Spark ジョブからデータを取り込むために使用されます。 SQL Server ビッグ データ クラスターのデータ マートは、データ プールに保持されます。 
 

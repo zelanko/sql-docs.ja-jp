@@ -16,10 +16,10 @@ ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8df94f31b6a036677f5d62ae60ffb4cf53a082be
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75321233"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>マージ テーブル アーティクル間に論理レコード リレーションシップを定義する
@@ -45,13 +45,13 @@ ms.locfileid: "75321233"
   
      [レプリケーション管理オブジェクト (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   パブリケーションに対するサブスクリプションが初期化された後に、論理レコードを追加、変更、または削除した場合は、変更を行った後で、新しいスナップショットを生成し、すべてのサブスクリプションを再初期化する必要があります。 プロパティ変更の要件の詳細については、「[Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)」(パブリケーションとアーティクルのプロパティの変更) をご覧ください。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  **[結合の追加]** ダイアログ ボックスで論理レコードを定義します。このダイアログ ボックスは、パブリケーションの新規作成ウィザードと **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスで使用できます。 ウィザードの使用およびダイアログ ボックスへのアクセスの詳細については、「[パブリケーションの作成](../../../relational-databases/replication/publish/create-a-publication.md)」および「[View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」 (パブリケーション プロパティの表示および変更) を参照してください。  
   
  **[結合の追加]** ダイアログ ボックスで論理レコードを定義できるのは、マージ パブリケーションの結合フィルターに論理レコードが適用されている場合だけです。また、パブリケーションが、事前計算済みパーティションを使用するための要件を満たしている必要もあります。 結合フィルターに適用されていない論理レコードを定義して、論理レコード レベルでの競合の検出と解決を設定するには、ストアド プロシージャを使用する必要があります。  
@@ -84,7 +84,7 @@ ms.locfileid: "75321233"
   
     -   パブリケーションの新規作成ウィザードの **[行のフィルター選択]** ページまたは **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスで、 **[フィルター選択されたテーブル]** ペイン内のフィルターを選択し、 **[削除]** をクリックします。 削除する結合フィルター自体が他の結合によって拡張されている場合は、それらの結合も削除されます。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  プログラムでレプリケーション ストアド プロシージャを使用して、アーティクル間に論理レコード リレーションシップを指定できます。  
   
 #### <a name="to-define-a-logical-record-relationship-without-an-associated-join-filter"></a>関連する結合フィルターを使用せずに論理レコード リレーションシップを定義するには  
@@ -146,12 +146,12 @@ ms.locfileid: "75321233"
   
 2.  パブリッシャー側のパブリケーション データベースに対して、 [sp_dropmergefilter](../../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)を実行します。 **\@publication** を指定し、リレーションシップ内の 1 つのアーティクルの名前を **\@article** に、手順 1. のリレーションシップの名前を **\@filtername** に指定します。  
   
-###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 例 (Transact-SQL)  
  この例では、既存のパブリケーションで事前計算済みパーティションを有効にし、 `SalesOrderHeader` テーブルと `SalesOrderDetail` テーブルの 2 つの新しいアーティクルを含む論理レコードを作成しています。  
   
  [!code-sql[HowTo#sp_AddMergeLogicalRecord](../../../relational-databases/replication/codesnippet/tsql/define-a-logical-record-_2.sql)]  
   
-##  <a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
   
 > [!NOTE]  
 >  マージ レプリケーションを使用して、論理レコード レベルで追跡および解決する競合を指定できますが、これらのオプションは RMO を使用して設定できません。  
@@ -196,7 +196,7 @@ ms.locfileid: "75321233"
   
 10. パブリケーションの他の論理レコード リレーションシップについても、手順 8. と 9. をそれぞれ実行します。  
   
-###  <a name="PShellExample"></a> 例 (RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a> 例 (RMO)  
  この例では、 `SalesOrderHeader` テーブルと `SalesOrderDetail` テーブルの 2 つの新しいアーティクルを含む論理レコードを作成しています。  
   
  [!code-cs[HowTo#rmo_CreateLogicalRecord](../../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_createlogicalrecord)]  

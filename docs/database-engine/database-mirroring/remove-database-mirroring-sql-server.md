@@ -14,10 +14,10 @@ ms.assetid: bbc4d7f7-3bc7-40d6-a822-af195fe7f8c0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: da0da7ae26d859c8bd7ea4b92ff126819d6bc2ae
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68025388"
 ---
 # <a name="remove-database-mirroring-sql-server"></a>データベース ミラーリングの削除 (SQL Server)
@@ -28,7 +28,7 @@ ms.locfileid: "68025388"
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **データベース ミラーリングの削除に使用するツール:**  
   
@@ -40,14 +40,14 @@ ms.locfileid: "68025388"
   
 -   [関連タスク](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  データベースに対する ALTER 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-remove-database-mirroring"></a>データベース ミラーリングを削除するには  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68025388"
   
 5.  ミラーリングを削除するには、 **[ミラーリングの削除]** をクリックします。 確認を求めるメッセージが表示されます。 **[はい]** をクリックすると、セッションが停止し、データベースからミラーリングが削除されます。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  データベース ミラーリングを削除するには、 **[データベースのプロパティ]** を使用します。 **[データベースのプロパティ]** ダイアログ ボックスの **[ミラーリング]** ページを使用します。  
   
 #### <a name="to-remove-database-mirroring"></a>データベース ミラーリングを削除するには  
@@ -84,7 +84,7 @@ ms.locfileid: "68025388"
     ALTER DATABASE AdventureWorks2012 SET PARTNER OFF;  
     ```  
   
-##  <a name="FollowUp"></a>補足情報: データベース ミラーリングの削除  
+##  <a name="follow-up-removing-database-mirroring"></a><a name="FollowUp"></a>補足情報: データベース ミラーリングの削除  
   
 > [!NOTE]  
 >  ミラーリングの削除による影響の詳細については、「[データベース ミラーリングの削除 &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)」を参照してください。  
@@ -104,7 +104,7 @@ ms.locfileid: "68025388"
     > [!IMPORTANT]  
     >  このデータベースを復旧すると、異なる 2 つのデータベースが同じ名前でオンラインになります。 そのため、クライアントがどちらか一方のデータベース (通常は最新のプリンシパル データベース) にしかアクセスできないようにする必要があります。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [データベース ミラーリング セッションを一時停止または再開する &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/pause-or-resume-a-database-mirroring-session-sql-server.md)  
   

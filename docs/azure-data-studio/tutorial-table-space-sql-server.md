@@ -11,13 +11,13 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/10/2019
 ms.openlocfilehash: f22aba3fd2f2d006355fdd30aef6f196f2795f6c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74957016"
 ---
-# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>チュートリアル:[!INCLUDE[name-sos](../includes/name-sos-short.md)] を利用し、テーブル領域使用のサンプル分析情報ウィジェットを有効にする
+# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-name-sos"></a>チュートリアル:[!INCLUDE[name-sos](../includes/name-sos-short.md)] を利用し、テーブル領域使用のサンプル分析情報ウィジェットを有効にする
 
 このチュートリアルでは、データベース ダッシュボードで分析情報ウィジェットを有効にする方法について説明します。データベース内のすべてのテーブルを対象に領域の使用状況がひとめでわかります。 このチュートリアルでは、次の方法を学習します。
 
@@ -33,7 +33,7 @@ ms.locfileid: "74957016"
 * [[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] を使用して SQL Server に接続し、クエリを実行する](quickstart-sql-server.md)
 * [[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] を使用して Azure SQL Database に接続し、クエリを実行する](quickstart-sql-database.md)
 
-## <a name="turn-on-a-management-insight-on-includename-sosincludesname-sos-shortmds-database-dashboard"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] のデータベース ダッシュボードで管理分析情報をオンにする
+## <a name="turn-on-a-management-insight-on-name-soss-database-dashboard"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] のデータベース ダッシュボードで管理分析情報をオンにする
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] には、データベース内のテーブルによって使用される領域を監視するためのサンプル ウィジェットが組み込まれています。
 

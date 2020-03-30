@@ -14,10 +14,10 @@ ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 562fda7c79681fa70e36bf19221ceb44b2dc87ec
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78866380"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>SQL Server データベース エンジンへの接続のトラブルシューティング
@@ -78,7 +78,7 @@ SQL Server インスタンスをホストするサーバーで、インスタン
 
 インスタンスが停止している場合、インスタンスを右クリックし、 **[開始]** をクリックします。 サーバー インスタンスが起動し、インジケーターが緑の矢印になります。
 
-## <a name = "startbrowser"></a> 検証 - SQL Server Browser サービスが実行されている
+## <a name="verify---sql-server-browser-service-is-running"></a><a name = "startbrowser"></a> 検証 - SQL Server Browser サービスが実行されている
 
 名前付きインスタンスに接続するには、SQL Server Browser サービスが実行されている必要があります。 構成マネージャーで、**SQL Server Browser** サービスを見つけ、それが実行されていることを確認します。 実行されていない場合、起動します。 既定のインスタンスの場合、SQL Server Browser サービスは必要ありません。
 
@@ -129,7 +129,7 @@ SQL Server のインスタンスをホストしているコンピューターに
 
   >SQL Server では、IP バージョン 4 プロトコルまたは IP バージョン 6 プロトコルで接続できます。 ネットワークでは、一方または両方を許可できます。 ほとんどの人が **IPv4** アドレスのトラブルシューティングから始めます。 こちらの方が短く、入力が簡単です。
 
-## <a name = "getTCP"></a>SQL Server インスタンス TCP ポートを取得する
+## <a name="get-the-sql-server-instance-tcp-port"></a><a name = "getTCP"></a>SQL Server インスタンス TCP ポートを取得する
 
 ほとんどの場合、TCP プロトコルを使用して別のコンピューターからデータベース エンジンに接続します。
 
@@ -142,7 +142,7 @@ SQL Server のインスタンスをホストしているコンピューターに
   > [!NOTE]
   > `IP address 127.0.0.1` がおそらく表示されます。 これはループバック アダプター アドレスと呼ばれています。 同じコンピューター上のプロセスのみを接続に使用できます。 トラブルシューティングに役立ちますが、これを利用し、別のコンピューターから接続することはできません。
 
-## <a name = "enableprotocols"></a>プロトコルを有効にする
+## <a name="enable-protocols"></a><a name = "enableprotocols"></a>プロトコルを有効にする
 
 SQL Server の一部のインストールでは、管理者が構成マネージャーを利用して有効にしない限り、別のコンピューターからデータベース エンジンへの接続が有効になりません。 別のコンピューターからの接続を有効にする:
 
@@ -150,7 +150,7 @@ SQL Server の一部のインストールでは、管理者が構成マネージ
 1. 構成マネージャーを利用し、左ペインで、 **[SQL Server ネットワークの構成]** を展開し、接続先とする SQL Server インスタンスを選択します。 右ペインに、利用可能な接続プロトコルが一覧表示されます。 通常、共有メモリが有効になっています。 これは同じコンピューターからのみ利用できます。そのため、ほとんどのインストールで、共有メモリを有効にしたままにします。 別のコンピューターから SQL Server に接続するには、通常、TCP/IP を使用します。 TCP/IP が有効ではない場合、 **[TCP/IP]** を右クリックし、 **[有効化]** をクリックします。
 1. プロトコルの有効化設定を変更した場合、データベース エンジンを再起動します。 左ペインで、 **[SQL Server のサービス]** を接続します。 右ペインで、データベース エンジンのインスタンスを右クリックし、 **[再起動]** をクリックします。
 
-## <a name="testTCPIP"></a>TCP/IP 接続をテストする
+## <a name="testing-tcpip-connectivity"></a><a name="testTCPIP"></a>TCP/IP 接続をテストする
 
 TCP/IP を使用して SQL Server に接続するには、Windows が接続を確立できることが必須となります。 `ping` ツールを使用し、TCP をテストします。
 

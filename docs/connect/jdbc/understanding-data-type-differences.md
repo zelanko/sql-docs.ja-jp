@@ -11,10 +11,10 @@ ms.assetid: ab8fa00f-cb16-47e2-94b8-3a76f56c2b84
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 906a4abf0768fcad2e5ac31a0ee93345dcc8b30c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027380"
 ---
 # <a name="understanding-data-type-differences"></a>データ型の違いについて
@@ -77,6 +77,6 @@ JDBC の **TIMESTAMP** 型は、[!INCLUDE[ssNoVersion](../../includes/ssnoversio
 
 JDBC の高度な型 (UDT、Struct など) に対応した SQLData インターフェイスを使用するカスタム型のマッピング機能は、 JDBC ドライバーに実装されていません。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [JDBC ドライバーのデータ型について](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

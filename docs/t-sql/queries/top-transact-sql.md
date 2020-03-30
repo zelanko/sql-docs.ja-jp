@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 51bb7288f620e479d818598cf28d357b6e4e479d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67948248"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
@@ -161,7 +161,7 @@ INSERT、UPDATE、MERGE、または DELETE で TOP を使用すると、参照�
 |[同順位の値を含む](#tie)|WITH TIES|  
 |[DELETE、INSERT、または UPDATE の影響を受ける行の制限](#DML)|DELETE、INSERT、UPDATE|  
   
-###  <a name="BasicSyntax"></a> 基本構文  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> 基本構文  
 このセクションの例では、最低限必要な構文を使用して ORDER BY 句の基本機能を示します。  
   
 #### <a name="a-using-top-with-a-constant-value"></a>A. 定数値を指定して TOP を使用する  
@@ -206,7 +206,7 @@ ORDER BY HireDate DESC;
 GO    
 ```  
   
-###  <a name="tie"></a> 同順位の値を含む  
+###  <a name="including-tie-values"></a><a name="tie"></a> 同順位の値を含む  
   
 #### <a name="a-using-with-ties-to-include-rows-that-match-the-values-in-the-last-row"></a>A. WITH TIES を使用して、最後の行の値と一致する行を含める  
 次の例では、給与の高い上位 `10` % の全従業員を取得し、結果を給与の降順で返します。 `WITH TIES` を指定すると、返された最も低い給与 (最後の行) と同じ給与の従業員も返されるので、結果は全従業員の `10` % を超える場合があります。  
@@ -225,7 +225,7 @@ ORDER BY Rate DESC;
 GO    
 ```  
   
-###  <a name="DML"></a> DELETE、INSERT、または UPDATE の影響を受ける行の制限  
+###  <a name="limiting-the-rows-affected-by-delete-insert-or-update"></a><a name="DML"></a> DELETE、INSERT、または UPDATE の影響を受ける行の制限  
   
 #### <a name="a-using-top-to-limit-the-number-of-rows-deleted"></a>A. TOP を使用して削除する行数を制限する  
 DELETE で TOP (*n*) 句を使用した場合、任意に選択される *n* 行に対して削除操作が実行されます。 つまり、DELETE ステートメントは WHERE 句で定義した条件を満たす任意の数 (*n*) の行を選択します。 次の例では、納期が 2002 年 7 月 1 日より早い `20` 行を `PurchaseOrderDetail` テーブルから選択して削除します。  
@@ -315,7 +315,7 @@ WHERE HumanResources.Employee.BusinessEntityID = th.BusinessEntityID;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 次の例では、クエリ条件に一致する上位 31 行を返します。 **ORDER BY** 句により、返される 31 行は、`LastName` 列のアルファベット順に基づく最初の 31 行になります。  
   
 ties を指定せずに **TOP** を使用する。  

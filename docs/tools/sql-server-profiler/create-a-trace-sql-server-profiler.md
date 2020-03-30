@@ -12,10 +12,10 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 08/01/2016
 ms.openlocfilehash: 5a5c004bbc7e93720f18df998b989c46ced0188e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75307331"
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>トレースの作成 (SQL Server Profiler)
@@ -54,7 +54,7 @@ ms.locfileid: "75307331"
   
 7.  **[実行]** をクリックしてトレースを開始します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Profiler の実行に必要な権限](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)   
  [SQL Server プロファイラーのテンプレートと権限](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [[SQL Server Profiler]](../../tools/sql-server-profiler/sql-server-profiler.md)   

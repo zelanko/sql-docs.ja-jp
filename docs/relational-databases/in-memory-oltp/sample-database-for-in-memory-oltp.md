@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ef40223423b1645ce2acd7944db2ba32f85d01db
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258781"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>インメモリ OLTP のサンプル データベース
@@ -43,13 +43,13 @@ ms.locfileid: "75258781"
   
 -   [サンプルにおけるメモリおよびディスク領域の使用率](#MemoryandDiskSpaceUtilizationintheSample)  
   
-##  <a name="Prerequisites"></a> 前提条件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
 -   運用環境と仕様が似ているサーバー (パフォーマンス テスト用)。 このサンプルでは、SQL Server に使用できるメモリが 16 GB 以上必要です。 インメモリ OLTP でのハードウェアに関する一般的なガイドラインは、ブログの投稿「[SQL Server 2014 におけるインメモリ OLTP のハードウェアに関する考慮事項](blog-hardware-in-memory-oltp.md)」を参照してください。
 
-##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> AdventureWorksに基づくインメモリOLTPサンプルのインストール  
+##  <a name="installing-the-in-memory-oltp-sample-based-on-adventureworks"></a><a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> AdventureWorksに基づくインメモリOLTPサンプルのインストール  
  サンプルをインストールするには、次の手順を実行します。  
   
 1.  [https://www.microsoft.com/download/details.aspx?id=49502](https://www.microsoft.com/download/details.aspx?id=49502) にある AdventureWorks2016CTP3.bak と SQLServer2016CTP3Samples.zip をローカル フォルダー ('c:\temp' など) にダウンロードします。  
@@ -80,7 +80,7 @@ ms.locfileid: "75258781"
   
 3.  サンプル スクリプトとワークロードを表示するには、ファイル SQLServer2016CTP3Samples.zip をローカル フォルダーにアンパックします。 ワークロードを実行する手順については、インメモリ OLTP\readme.txt ファイルをご参照ください。  
   
-##  <a name="Descriptionofthesampletablesandprocedures"></a> サンプル テーブルおよびプロシージャの説明  
+##  <a name="description-of-the-sample-tables-and-procedures"></a><a name="Descriptionofthesampletablesandprocedures"></a> サンプル テーブルおよびプロシージャの説明  
  サンプルでは、AdventureWorks の既存のテーブルに基づいて、製品および販売注文ごとに新しいテーブルを作成します。 新しいテーブルのスキーマは既存のテーブルと似ていますが、以下に示すように、異なる点がいくつかあります。  
   
  新しいメモリ最適化テーブルには、"_inmem" というサフィックスが付いています。 また、サンプルにはこれに対応するテーブルも含まれており、このテーブルには "_ondisk" というサフィックスが付いています。これらのテーブルを使用することで、システム上のメモリ最適化テーブルのパフォーマンスと、ディスク ベース テーブルのパフォーマンスを一対一で比較できます。  
@@ -309,7 +309,7 @@ ms.locfileid: "75258781"
   
     -   これはヘルパー プロシージャ dbo.usp_GenerateCKCheck、dbo.usp_GenerateFKCheck、および dbo.GenerateUQCheck を使用して、整合性チェックの実行に必要な T-SQL を生成します。  
   
-##  <a name="PerformanceMeasurementsusingtheDemoWorkload"></a> デモ ワークロードを使用したパフォーマンス測定  
+##  <a name="performance-measurements-using-the-demo-workload"></a><a name="PerformanceMeasurementsusingtheDemoWorkload"></a> デモ ワークロードを使用したパフォーマンス測定  
  ostress は、Microsoft CSS SQL Server サポート チームによって開発されたコマンド ライン ツールです。 このツールを使用すると、クエリやストアド プロシージャを並列実行できます。 指定された T-SQL ステートメントが並列実行されるようにスレッドの数を構成できるほか、そのスレッドでステートメントを実行する回数を指定できます。ostress はスレッドをスピン アップし、すべてのスレッド内のステートメントを並列実行します。 すべてのスレッドに対する実行が完了したら、その実行が完了するまでの所要時間を報告します。  
   
 ### <a name="installing-ostress"></a>ostress のインストール  
@@ -434,7 +434,7 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
   
  デモの実行が完了するたびに、リセットすることをお勧めします。 このワークロードは挿入のみであるため、実行のたびに多くのメモリを消費します。このため、メモリ不足が発生しないようにリセットが必要です。 実行後に消費されるメモリ量について、セクション「 [ワークロード実行後のメモリ使用率](#Memoryutilizationafterrunningtheworkload)」で説明しています。  
   
-###  <a name="Troubleshootingslow-runningtests"></a> 実行速度の遅いテストのトラブルシューティング  
+###  <a name="troubleshooting-slow-running-tests"></a><a name="Troubleshootingslow-runningtests"></a> 実行速度の遅いテストのトラブルシューティング  
  テスト結果は、通常、ハードウェアと、テスト実行で使用されたコンカレンシーのレベルによって変わります。 期待した結果を得られない場合に確認することをいくつか次に示します。  
   
 -   同時実行トランザクション数:1 つのスレッドでワークロードを実行すると、インメモリ OLTP によるパフォーマンス向上が 2 倍に満たない場合があります。 高レベルのコンカレンシーがある場合、唯一大きな問題になるのがラッチ競合です。  
@@ -447,10 +447,10 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
   
     -   現象: メモリ最適化テーブルでワークロードを実行しているとき、CPU 使用率が 100% からかけ離れている場合、または、その変動が激しい場合は、ログ IO ボトルネックが存在する可能性があります。 これを確認するには、リソース モニターを開き、ログ ドライブのキュー長を確認します。  
   
-##  <a name="MemoryandDiskSpaceUtilizationintheSample"></a> サンプルにおけるメモリおよびディスク領域の使用率  
+##  <a name="memory-and-disk-space-utilization-in-the-sample"></a><a name="MemoryandDiskSpaceUtilizationintheSample"></a> サンプルにおけるメモリおよびディスク領域の使用率  
  ここでは、サンプル データベースのメモリおよびディスク領域の使用率に関して期待すべき事項について説明します。 また、16 個の論理コアを備えたテスト サーバーでの結果も示します。  
   
-###  <a name="Memoryutilizationforthememory-optimizedtables"></a> メモリ最適化テーブルのメモリ使用率  
+###  <a name="memory-utilization-for-the-memory-optimized-tables"></a><a name="Memoryutilizationforthememory-optimizedtables"></a> メモリ最適化テーブルのメモリ使用率  
   
 #### <a name="overall-utilization-of-the-database"></a>データベースの全体的な使用率  
  次のクエリを使用すると、システムのインメモリ OLTP の合計メモリ使用率を取得できます。  
@@ -505,7 +505,7 @@ WHERE t.type='U'
   
  ここで印象的なのは、インデックスに割り当てられているメモリのサイズです (テーブル データのサイズと比較)。 このサイズになるのは、サンプルのハッシュ インデックスが、大きなデータ サイズに合わせて事前にサイズ調整されているためです。 ハッシュ インデックスのサイズは固定されているため、テーブルのデータのサイズに合わせて大きくなることはありません。  
   
-####  <a name="Memoryutilizationafterrunningtheworkload"></a> ワークロード実行後のメモリ使用率  
+####  <a name="memory-utilization-after-running-the-workload"></a><a name="Memoryutilizationafterrunningtheworkload"></a> ワークロード実行後のメモリ使用率  
  1,000 万個の販売注文を挿入した後の全体的なメモリ使用率は次のようになります。  
   
 ```sql

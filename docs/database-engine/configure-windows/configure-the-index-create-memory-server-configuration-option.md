@@ -13,10 +13,10 @@ ms.assetid: 3d722d9b-bada-4bf5-a9d7-bfc556bb4915
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 289610b05757a1b2e94f27164b8f43464d49c227
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68012607"
 ---
 # <a name="configure-the-index-create-memory-server-configuration-option"></a>index create memory サーバー構成オプションの構成
@@ -32,7 +32,7 @@ ms.locfileid: "68012607"
   
      [Recommendations (推奨事項)](#Recommendations)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **以下を使用して index create memory オプションを構成するには:**  
   
@@ -42,9 +42,9 @@ ms.locfileid: "68012607"
   
 -   **補足情報:** [index create memory オプションを構成した後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   **[min memory per query](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md)** オプションの設定は、**index create memory** オプションよりも優先順位が高くなります。 両方のオプションを変更し、 **index create memory** の設定値を **min memory per query**より小さくした場合は、警告メッセージが表示されます。ただし、値はそのまま設定されます。 クエリ実行中にも同様の警告が表示されます。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "68012607"
   
 -   このオプションの実行値は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているオペレーティング システムおよびハードウェア プラットフォームで実際に確保できるメモリ容量を超えることはありません。  
   
-###  <a name="Recommendations"></a> 推奨事項  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
   
 -   このオプションは詳細設定オプションであるため、熟練したデータベース管理者または認定された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロフェッショナルだけが変更するようにしてください。  
   
@@ -60,12 +60,12 @@ ms.locfileid: "68012607"
 
 -   通常、稼働中のシステムではインデックス作成は頻度の少ない作業であり、多くの場合、閑散時に実行が予定されるジョブです。 したがって、インデックスの作成が頻繁でなく、閑散時に行われる場合、**index create memory** を増やすとインデックス作成のパフォーマンスが向上できます。 ただし、 **[min memory per query](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md)** 構成オプションの値は小さい数にします。そうすれば、要求したすべてのメモリが利用できない場合でも、インデックス作成ジョブは起動します。
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  パラメーターなしで、または最初のパラメーターだけを指定して **sp_configure** を実行する権限は、既定ですべてのユーザーに付与されます。 両方のパラメーターを指定して **sp_configure** を実行し構成オプションを変更したり RECONFIGURE ステートメントを実行したりするには、ALTER SETTINGS サーバーレベル権限がユーザーに付与されている必要があります。 ALTER SETTINGS 権限は、 **sysadmin** 固定サーバー ロールと **serveradmin** 固定サーバー ロールでは暗黙のうちに付与されています。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-configure-the-index-create-memory-option"></a>index create memory オプションを構成するには  
   
@@ -77,7 +77,7 @@ ms.locfileid: "68012607"
   
      **index create memory** オプションは、インデックス作成時の並べ替えに使用するメモリの量を制御する場合に使用します。 **index create memory** オプションは自動構成型で、ほとんどの場合、調整を行わなくても機能します。 ただし、インデックスを正常に作成できない場合は、必要に応じて、このオプションの値を実行値より大きくしてください。 クエリの並べ替えは、 **min memory per query** オプションを使用して制御します。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-configure-the-index-create-memory-option"></a>index create memory オプションを構成するには  
   
@@ -101,7 +101,7 @@ GO
   
  詳細については、「 [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)」を参照してください。  
   
-##  <a name="FollowUp"></a>補足情報: index create memory オプションを構成した後  
+##  <a name="follow-up-after-you-configure-the-index-create-memory-option"></a><a name="FollowUp"></a>補足情報: index create memory オプションを構成した後  
  新しい設定は、サーバーを再起動しなくてもすぐに有効になります。  
   
 ## <a name="see-also"></a>参照  

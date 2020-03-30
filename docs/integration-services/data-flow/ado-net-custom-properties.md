@@ -11,10 +11,10 @@ ms.assetid: e062a9ab-1e6b-4061-845a-4f8a0552b09d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a4e670cf37550734d672047f2d7cf4a9f8045473
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71293493"
 ---
 # <a name="ado-net-custom-properties"></a>ADO NET カスタム プロパティ
@@ -46,8 +46,8 @@ ms.locfileid: "71293493"
   
 |プロパティ|データ型|説明|  
 |--------------|---------------|-----------------|  
-|BatchSize|整数|サーバーに送信されるバッチ内の行数です。 値 **0** は、バッチ サイズが内部バッファーのサイズに一致することを示します。 このプロパティの既定値は **0**です。|  
-|CommandTimeOut|整数|SQL コマンドがタイムアウトになるまでの最大秒数。この値に **0** を指定すると、時間は無制限になります。 このプロパティの既定値は **0**です。|  
+|BatchSize|Integer|サーバーに送信されるバッチ内の行数です。 値 **0** は、バッチ サイズが内部バッファーのサイズに一致することを示します。 このプロパティの既定値は **0**です。|  
+|CommandTimeOut|Integer|SQL コマンドがタイムアウトになるまでの最大秒数。この値に **0** を指定すると、時間は無制限になります。 このプロパティの既定値は **0**です。|  
 |TableOrViewName|String|変換先のテーブルまたはビューの名前。|  
   
  詳しくは、「 [ADO NET 変換先](../../integration-services/data-flow/ado-net-destination.md)」をご覧ください。  

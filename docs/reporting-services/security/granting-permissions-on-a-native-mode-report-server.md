@@ -21,10 +21,10 @@ ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: be6b0825244dee9f80f88a1b211eee5881d2a96a
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77147372"
 ---
 # <a name="grant-permissions-on-a-native-mode-report-server"></a>ネイティブ モードのレポート サーバーに対するアクセス許可の付与
@@ -63,7 +63,7 @@ ms.locfileid: "77147372"
 ## <a name="tasks-and-tools-for-managing-permissions"></a>権限を管理するためのタスクとツール
  ロールの定義と割り当てを管理するには、次のツールを使用します。
   
-|ツール|処理手順|  
+|ツール|タスク|  
 |----------|-----------|  
 |Management Studio: ロールの定義を表示、変更、作成、および削除する場合に使用します|[ロールを作成、削除、または変更する &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)|  
 |Web ポータル: ロールにユーザーとグループを割り当てる場合に使用します|[レポート サーバーへのユーザー アクセスを許可する](../../reporting-services/security/grant-user-access-to-a-report-server.md)<br /><br /> [ロールの割り当てを変更または削除する](../../reporting-services/security/role-assignments-modify-or-delete.md)|  

@@ -47,10 +47,10 @@ author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 35ce03a8619eada5480d0cd656f20946bb11a11c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75924966"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
@@ -644,12 +644,12 @@ ABORT
 > [!IMPORTANT]
 > インデックスのあるファイル グループがオフラインであるか、または読み取り専用に設定されている場合、インデックスを再構成または再構築することはできません。 キーワード ALL を指定した場合で、1 つ以上のインデックスがオフラインまたは読み取り専用のファイル グループにある場合、ステートメントは失敗します。  
   
-## <a name="rebuilding-indexes"></a> インデックスの再構築  
+## <a name="rebuilding-indexes"></a><a name="rebuilding-indexes"></a> インデックスの再構築  
 インデックスの再構築では、インデックスを削除し再作成します。 この操作では、断片化をなくし、指定されているか既に存在する FILL FACTOR 設定に基づいてページを圧縮することによりディスク領域を取り戻した後、連続するページにインデックス行を再び並べ替えます。 ALL を指定した場合、テーブル上のすべてのインデックスが、1 回のトランザクションで削除され再構築されます。 外部キー制約は、前もって削除しておく必要はありません。 128 以上のエクステントがあるインデックスを再構築すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では、トランザクションがコミットされるまで実際のページの割り当て解除とそれに関連するロックが延期されます。  
  
 詳細については、「 [インデックスの再編成と再構築](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)」を参照してください。 
   
-## <a name="reorganizing-indexes"></a> インデックスの再構成
+## <a name="reorganizing-indexes"></a><a name="reorganizing-indexes"></a> インデックスの再構成
 インデックスの再構成では、最小のシステム リソースが使用されます。 この操作では、リーフ レベル ページをリーフ ノードの論理順序 (左から右) に合わせて物理的に並べ替えることにより、テーブルやビュー上にあるクラスター化および非クラスター化インデックスのリーフ レベルをデフラグします。 再構成でも、インデックス ページは圧縮されます。 圧縮は既存の FILL FACTOR 値に基づいて行われます。 
   
 `ALL` を指定した場合、テーブル上のクラスター化と非クラスター化の両方のリレーショナル インデックスと XML インデックスが再構成されます。 ALL を指定した場合は、いくつかの制限が適用されます。本記事の「引数」セクションの ALL の定義を参照してください。  
@@ -659,7 +659,7 @@ ABORT
 > [!IMPORTANT]
 > 順序付けされたクラスター化列ストア インデックスを使用しての Azure SQL Data Warehouse テーブルでは、`ALTER INDEX REORGANIZE` がデータを再度並べ替えません。 データを再度並べ替えるには `ALTER INDEX REBUILD` を使用します。
   
-## <a name="disabling-indexes"></a> インデックスの無効化  
+## <a name="disabling-indexes"></a><a name="disabling-indexes"></a> インデックスの無効化  
 インデックスを無効化すると、ユーザーはインデックスにアクセスできなくなり、クラスター化インデックスの場合は基になるテーブル データにもアクセスできなくなります。 インデックス定義はシステム カタログに残ります。 ビュー上で非クラスター化インデックスまたはクラスター化インデックスを物理的に無効にすると、インデックス データが削除されます。 クラスター化インデックスを無効にすると、データにアクセスできなくなりますが、データはインデックスが削除または再構築されるまで B ツリーに残ります。このデータは管理されません。 有効化または無効化されたインデックスの状態を表示するには、**sys.indexes** カタログ ビューの **is_disabled** 列にクエリを実行します。  
   
 テーブルがトランザクション レプリケーション パブリケーション内にある場合、主キー列に関連付けられているインデックスを無効にすることはできません。 これらのインデックスはレプリケーションで必要です。 インデックスを無効にするには、まずパブリケーションからテーブルを削除する必要があります。 詳細については、「[Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)」(データとデータベース オブジェクトのパブリッシュ) をご覧ください。  
@@ -682,7 +682,7 @@ ABORT
 |ALLOW_PAGE_LOCKS = ON|ヒープおよび関連する非クラスター化インデックスに適用。|  
 |ALLOW_PAGE_LOCKS = OFF|非クラスター化インデックスに完全に適用。 この場合、非クラスター化インデックスではすべてのページ ロックが許可されません。 ヒープでは、ページに対して共有 (S)、更新 (U) および排他 (X) ロックだけが許可されなくなります。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]では内部目的用にインテント ページ ロック (IS、IU、または IX) を引き続き取得できます。|  
   
-## <a name="online-index-operations"></a>オンラインのインデックス操作  
+## <a name="online-index-operations"></a><a name="online-index-operations"></a>オンラインのインデックス操作  
 インデックスを再構築する場合で ONLINE オプションが ON に設定されている場合、クエリおよびデータ変更で、基になるオブジェクト、テーブルおよび関連インデックスを使用できます。 1 つのパーティションに存在するインデックスの一部をオンラインで再構築することもできます。 排他テーブル ロックは、変更処理中の非常に短い時間だけ保持されます。  
   
 インデックスの再構成は、常にオンラインで実行されます。 この処理ではロックが長期間保持されないので、実行中のクエリや更新はブロックされません。  
@@ -695,7 +695,7 @@ ABORT
   
 その他すべてのオンライン インデックス操作は、同時に実行しようとしても失敗します。 たとえば、同じテーブル上で同時に複数のインデックスを再構築したり、同じテーブルで既存のインデックスを再構築する間に新しいインデックスを作成することはできません。  
 
-### <a name="resumable-indexes"></a>再開可能なインデックス操作
+### <a name="resumable-index-operations"></a><a name="resumable-indexes"></a>再開可能なインデックス操作
 
 **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 

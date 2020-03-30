@@ -26,10 +26,10 @@ ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 67488a92a14a2533c9ba6ef14941b11b8bcbb8c2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68127116"
 ---
 # <a name="use-the-copy-database-wizard"></a>データベース コピー ウィザードの使用
@@ -49,7 +49,7 @@ ms.locfileid: "68127116"
 -   データベースを移動またはコピーする時期をスケジュールします。  
   
 
-##  <a name="Restrictions"></a> 制限事項と制約事項  
+##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   データベース コピー ウィザードは、Express Edition では使用できません。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "68127116"
 > **重要!!** **デタッチ後にアタッチ** する方法を使用すると、転送元と転送先のデータベースの所有権が、 **データベース コピー ウィザード**を実行しているログインに設定されます。  データベースの所有権を変更するには、「 [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md) 」を参照してください。
   
   
-##  <a name="Prerequisites"></a> 前提条件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
 -   移動先またはコピー先のサーバーで SQL Server エージェントが起動されていることを確認します。  
 
 -   移動元またはコピー元のサーバー上のデータとログ ファイル ディレクトリに、移動先またはコピー先サーバーから到達できることを確認します。
@@ -90,7 +90,7 @@ ms.locfileid: "68127116"
 
 > **重要!!** **デタッチ後にアタッチ** する方法では、Integration Services プロキシ アカウントを使用しないと、コピーまたは移動プロセスが失敗します。  特定の状況下では、ソース データベースはコピー元または移動元サーバーに再アタッチされず、すべての NTFS セキュリティ アクセス許可がデータとログ ファイルから除去されます。  このような場合は、ファイルに移動し、関連する権限を再適用した後、データベースを SQL Server のインスタンスに再アタッチします。
   
-##  <a name="Recommendations"></a> 推奨事項  
+##  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
   
 -   アップグレードしたデータベースのパフォーマンスを最適化するには、アップグレードしたデータベースに対して [sp_updatestats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) (統計の更新) を実行します。  
   
@@ -98,10 +98,10 @@ ms.locfileid: "68127116"
   
 
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  コピー元または移動元とコピー先または移動先の両方のサーバーにおいて **sysadmin** 固定サーバー ロールのメンバーである必要があります。  
   
-##  <a name="Overview"></a> データベース コピー ウィザードのページ 
+##  <a name="the-copy-database-wizard-pages"></a><a name="Overview"></a> データベース コピー ウィザードのページ 
 SQL Server Management Studio で **オブジェクト エクスプローラー** から **データベース コピー ウィザード** を起動し、 **[データベース]** を展開します。  次に、データベースを右クリックして、 **[タスク]** をポイントし、 **[データベースのコピー]** をクリックします。  **[データベース コピー ウィザードへようこそ]** のスプラッシュ ページが表示されたら、 **[次へ]** をクリックします。
 
 
@@ -295,7 +295,7 @@ SSIS パッケージの既定の名前が作成されます。必要に応じて
 -    **メッセージ**  
 各ステップで返されるメッセージが表示されます。
 
-##  <a name="Examples"></a> 使用例
+##  <a name="examples"></a><a name="Examples"></a> 使用例
 ### <a name="common-steps"></a>**一般的な手順** 
 **移動** または **コピー**、 **デタッチ後にアタッチ** または **SMO**を選択するかどうかにかかわらず、以下に示す 5 つの手順は同じになります。  簡潔にするため、最初の 5 つの手順をここに一度だけリストし、例はすべて **手順 6**から始めます。
 
@@ -384,12 +384,12 @@ SSIS パッケージの既定の名前が作成されます。必要に応じて
 14. 新しく作成された SQL Server エージェント ジョブ `SalesCopy weekly refresh`を手動で開始します。  ジョブ履歴を確認して、 `SalesCopy` がインスタンスに存在すること確認します。
 
   
-##  <a name="FollowUp"></a> 補足情報:データベースをアップグレードした後  
+##  <a name="follow-up-after-upgrading-a-database"></a><a name="FollowUp"></a> 補足情報:データベースをアップグレードした後  
  データベース コピー ウィザードを使用して、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のバージョンにアップグレードした後は、データベースが直ちに使用可能となり、自動的にアップグレードされます。 データベースにフルテキスト インデックスがある場合、アップグレード プロセスでは、 **"フルテキスト アップグレード オプション"** サーバー プロパティの設定に応じて、インポート、リセット、または再構築が行われます。 アップグレード オプションが **[インポート]** または **[再構築]** に設定されている場合、アップグレード中はフルテキスト インデックスを使用できなくなります。 インデックスを作成するデータ量によって、インポートには数時間、再構築には最大でその 10 倍の時間がかかることがあります。 なお、アップグレード オプションが **[インポート]** に設定されており、フルテキスト カタログが使用できない場合は、関連付けられたフルテキスト インデックスが再構築されます。 **フルテキスト アップグレード オプション** プロパティの設定の表示と変更については、「 [サーバー インスタンスでのフルテキスト検索の管理と監視](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)」を参照してください。  
   
  アップグレード前のユーザー データベースの互換性レベルが 100 以上の場合は、アップグレード後も互換性レベルは変わりません。 アップグレードされたデータベースの互換性レベルが 90 の場合、互換性レベルは 100 に設定されます。これは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]でサポートされている下限の互換性レベルです。 詳細については、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。  
  
- ## <a name="Post"></a> コピーまたは移動後の考慮事項
+ ## <a name="post-copy-or-move-considerations"></a><a name="Post"></a> コピーまたは移動後の考慮事項
  **コピー** または **移動**の後に、次の手順を実行するかどうかを検討します。
 -    デタッチ後にアタッチの方法を使用する際に、データベースの所有権を変更する。
 -    **移動**後に移動元のサーバーでサーバー オブジェクトを破棄する。

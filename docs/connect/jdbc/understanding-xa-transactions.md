@@ -11,10 +11,10 @@ ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3e249bb515ca0a8b579e923e7d289fccd80ce6ef
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286516"
 ---
 # <a name="understanding-xa-transactions"></a>XA トランザクションについて
@@ -116,7 +116,7 @@ Windows Vista 以降の場合:
   
 3. 次のセクションのコード例に従ってログ機能を設定します。 出力ログ ファイルで、"Server XA DLL バージョン:..." というフレーズを探します。  
 
-### <a name="BKMK_ServerSide"></a> 準備されていないトランザクションを自動ロールバックするためのサーバー側のタイムアウト設定の構成  
+### <a name="configuring-server-side-timeout-settings-for-automatic-rollback-of-unprepared-transactions"></a><a name="BKMK_ServerSide"></a> 準備されていないトランザクションを自動ロールバックするためのサーバー側のタイムアウト設定の構成  
 
 > [!WARNING]  
 > このサーバー側のオプションは、Microsoft JDBC Driver 4.2 (以降) for SQL Server の新機能です。 このように動作を更新するには、サーバー上の sqljdbc_xa.dll が更新されていることを確認してください。 クライアント側のタイムアウトの設定について詳しくは、「[XAResource.setTransactionTimeout()](https://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html)」をご覧ください。  

@@ -11,10 +11,10 @@ ms.assetid: e6318776-a188-48a7-995d-9eafd7148ff2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2b9979f7d82ef153ed3c447b5d47bf7424ca9443
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75608031"
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>ODBC データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)
@@ -65,7 +65,7 @@ Microsoft またはサード パーティから必要な ODBC ドライバーを
 
 接続文字列を指定すると、 **[データ ソースの選択]** ページまたは **[変換先の選択]** ページに、ウィザードがデータ ソースへの接続に使うすべての接続情報 (サーバー名、データベース名、認証方法など) が表示されます。 DSN を指定した場合は、この情報は表示されません。
 
-## <a name="odbc_dsn"></a> オプション 1 - DSN を指定する
+## <a name="option-1---provide-a-dsn"></a><a name="odbc_dsn"></a> オプション 1 - DSN を指定する
 DSN (データ ソース名) で接続情報を指定する場合は、 **[ODBC データ ソース アドミニストレーター]** アプレットを使って既存の DSN の名前を調べるか、新しい DSN を作成します。
 1.  スタート メニューまたはコントロール パネルの **[ODBC データ ソース (64 ビット)]** アプレットを検索または参照します。 32 ビット ドライバーしかない場合、または 32 ビット ドライバーを使う必要がある場合は、代わりに **[ODBC データ ソース (32 ビット)]** を検索または参照します。
 2.  アプレットを起動します。 **[ODBC データ ソース アドミニストレーター]** ウィンドウが開きます。 アプレットの表示は次のようになります。
@@ -88,7 +88,7 @@ DSN (データ ソース名) で接続情報を指定する場合は、 **[ODBC 
     
 8.  ウィザードに戻り、 **[データ ソースの選択]** ページまたは **[変換先の選択]** ページの **[DSN]** フィールドに DSN 名を入力します。 ウィザードの次のステップに進みます。
 
-## <a name="odbc_connstring"></a> オプション 2 - 接続文字列を指定する
+## <a name="option-2---provide-a-connection-string"></a><a name="odbc_connstring"></a> オプション 2 - 接続文字列を指定する
 接続文字列で接続情報を指定する場合は、このトピックの残りの部分を参考にして、必要な接続文字列を取得します。
 
 この例では、Microsoft SQL Server に接続する次の接続文字列を使います。 使用されるデータベース例は **WideWorldImporters** であり、ローカル コンピューターで SQL Server に接続します。
@@ -168,7 +168,7 @@ ODBC ドライバーの接続文字列をオンラインで調べるには、「
 
     ![ODBC を使って SQL に接続する (後)](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-after.jpg)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [データ ソースの選択](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [変換先の選択](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
 

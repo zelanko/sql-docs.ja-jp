@@ -44,10 +44,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 401e9a36e6ab93a9701508bc4b587a55b81642e1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75253902"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>スクリプトの生成とパブリッシュ ウィザード
@@ -61,17 +61,17 @@ ms.locfileid: "75253902"
 ## <a name="before-you-begin"></a>はじめに  
  転送元と転送先のデータベースは、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、または [!INCLUDE[ssDE](../../includes/ssde-md.md)] 以降を実行している [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] のインスタンス上に配置できます。  
   
-###  <a name="PubHostSvc"></a> ホストされたサービスへのパブリッシュ  
+###  <a name="publishing-to-a-hosted-service"></a><a name="PubHostSvc"></a> ホストされたサービスへのパブリッシュ  
  **スクリプトの生成とパブリッシュ ウィザード** を使用すると、スクリプトの作成に加えて、ホストされた特定の種類の SQL Server Web サービスにデータベースをパブリッシュできます。 SQL Server Hosting Toolkit には、CodePlex 上で共有されているソース プロジェクトとして Database Publishing Services が提供されています。 Database Publishing Services プロジェクトを使用すると、Web ホスティング プロバイダーの顧客がデータベースを簡単に Web サービスに配置できる一連の Web サービスを構築することができます。 SQL Server Hosting Toolkit のダウンロードの詳細については、「 [SQL Server Database Publishing Services](https://go.microsoft.com/fwlink/?LinkId=142025)」をご覧ください。  
   
  データベースを Web ホスティング サービスにパブリッシュするには、ウィザードの **[スクリプト作成オプションの設定]** ページで **[Web サービスにパブリッシュ]** オプションを選択します。  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  データベースをパブリッシュするには、少なくとも元のデータベースで db_ddladmin 固定データベース ロールのメンバーシップが必要です。 ホスティング プロバイダーの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにデータベース スクリプトをパブリッシュするには、少なくともターゲット データベースで db_ddladmin 固定データベース ロールのメンバーシップが必要です。  
   
  また、ホスティング プロバイダーのアカウントにアクセスしてデータベースをウィザードでパブリッシュするには、ユーザー名とパスワードを入力する必要があります。 ソース データベースをパブリッシュする前に、ホスティング プロバイダーにターゲット データベースを作成しておく必要もあります。 パブリッシュを実行すると、その既存のデータベースのオブジェクトは上書きされます。  
   
-##  <a name="GenPubScriptWiz"></a> スクリプトの生成とパブリッシュ ウィザードの使用  
+##  <a name="using-the-generate-and-publish-scripts-wizard"></a><a name="GenPubScriptWiz"></a> スクリプトの生成とパブリッシュ ウィザードの使用  
  **スクリプトを生成してパブリッシュするには**  
   
 1.  **オブジェクト エクスプローラー**で、スクリプト化するデータベースを含んだインスタンスのノードを展開します。  
@@ -92,14 +92,14 @@ ms.locfileid: "75253902"
     -   [[概要] ページ](#Summary)   
     -   [[スクリプトの保存またはパブリッシュ] ページ](#SavePubScripts)  
   
-###  <a name="Introduction"></a> [説明] ページ  
+###  <a name="introduction-page"></a><a name="Introduction"></a> [説明] ページ  
  このページには、スクリプトを生成またはパブリッシュする手順が説明されています。  
   
  **[次回からこのページを表示しない]** : **スクリプトの生成とパブリッシュ ウィザード**を次回起動したときにこのページをスキップします。  
   
   ![[説明] ページ](media/generate-and-publish-scripts-wizard/intro.png)
   
-###  <a name="ChooseObjects"></a> [オブジェクトの選択] ページ  
+###  <a name="choose-objects-page"></a><a name="ChooseObjects"></a> [オブジェクトの選択] ページ  
  このページでは、このウィザードで生成されたスクリプトに含めるオブジェクトを選択できます。 次のウィザード ページでは、これらのスクリプトを指定した場所に保存するか、これらのスクリプトを使用して、 [SQL Server Database Publishing Services](https://go.microsoft.com/fwlink/?LinkId=142025)がインストールされているリモートの Web ホスティング プロバイダーにデータベース オブジェクトをパブリッシュするかを選択できます。  
   
  **データベース全体のスクリプトを作成するオプション** : データベース内のすべてのオブジェクトのスクリプトを生成し、データベース自体のスクリプトを含めます。 
@@ -116,7 +116,7 @@ ms.locfileid: "75253902"
 
    ![特定のデータベースのスクリプトを作成](media/generate-and-publish-scripts-wizard/scriptspecificobjects.png)
   
-###  <a name="SetScriptOpt"></a> [スクリプト作成オプションの設定] ページ  
+###  <a name="set-scripting-options-page"></a><a name="SetScriptOpt"></a> [スクリプト作成オプションの設定] ページ  
  このページでは、スクリプトを指定した場所に保存するか、スクリプトを使用してリモートの Web ホスティング プロバイダーにデータベース オブジェクトをパブリッシュするかを指定します。 パブリッシュするには、Database Publishing Services Web サービスを使用してインストールされた Web サービスにアクセスできる必要があります。  
   
  **[オプション]** : スクリプトを指定した場所に保存する場合は、 **[スクリプトを指定した場所に保存]** をクリックします。 その後、データベース エンジンのインスタンスまたは [!INCLUDE[ssSDS](../../includes/sssds-md.md)]に対して、保存したスクリプトを実行できます。 リモートの Web ホスティング プロバイダーにデータベース オブジェクトをパブリッシュする場合は、 **[Web サービスにパブリッシュ]** をクリックします。  
@@ -141,7 +141,7 @@ ms.locfileid: "75253902"
   
 -   **[対象になるデータベース]** : 選択したオブジェクトのパブリッシュ先のデータベースを選択します。 対象になるデータベースを選択する前に、プロバイダーを選択する必要があります。  
   
-###  <a name="AdvScriptOpt"></a> [スクリプト作成の詳細オプション] ページ  
+###  <a name="advanced-scripting-options-page"></a><a name="AdvScriptOpt"></a> [スクリプト作成の詳細オプション] ページ  
  このページでは、このウィザードでスクリプトを生成する方法を指定できます。 さまざまなオプションを使用できます。 オプションが [データベース エンジンの種類] **で指定したバージョンの SQL Server または**[!INCLUDE[ssSDS](../../includes/sssds-md.md)] によってサポートされていない場合、グレーで表示されます。  
 
 ![詳細オプション](media/generate-and-publish-scripts-wizard/advanced.png)
@@ -214,7 +214,7 @@ ms.locfileid: "75253902"
   
 -   **[一意キーのスクリプトを作成]** : テーブルに一意キーを作成するスクリプトを作成します。 一意キーにより、重複するデータを入力できなくなります。 既定値は **True**です。 詳細については、「 [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)」を参照してください。  
   
-###  <a name="MgProviders"></a> [プロバイダーの管理] ページ  
+###  <a name="manage-providers-page"></a><a name="MgProviders"></a> [プロバイダーの管理] ページ  
  このダイアログ ボックスを使用すると、ホスティング プロバイダー接続を表示、追加、編集、削除、またはテストできます。 ホスティング プロバイダーによって、CodePlex 上にある SQL Server Hosting Toolkit の Database Publishing Service プロジェクトを使用して作成される Web サービスの接続情報が指定されます。  
   
  **[構成済みのプロバイダー]** : 保存されている各ホスティング プロバイダーの名前と **Web** サービス アドレスが一覧表示されます。  
@@ -231,7 +231,7 @@ ms.locfileid: "75253902"
   
  **[キャンセル]** : **[ホスティング プロバイダー]** ダイアログ ボックスで行ったすべての変更を取り消します。  
   
-###  <a name="AdvPubOpts"></a> [パブリッシングの詳細オプション] ページ  
+###  <a name="advanced-publishing-options-page"></a><a name="AdvPubOpts"></a> [パブリッシングの詳細オプション] ページ  
  このページでは、このウィザードでデータベースをパブリッシュする方法を指定できます。 さまざまなオプションを使用できます。 オプションが [データベース エンジンの種類] **で指定したバージョンの SQL Server または**[!INCLUDE[ssSDS](../../includes/sssds-md.md)] によってサポートされていない場合、グレーで表示されます。  
 
   ![パブリッシングの詳細](media/generate-and-publish-scripts-wizard/advancedpublish.png)
@@ -288,7 +288,7 @@ ms.locfileid: "75253902"
   
 9. **[データ圧縮オプションのパブリッシュ]** - データ圧縮オプションが元のデータベースまたは元のデータベースのテーブルで構成されている場合に、パブリッシュ処理にデータ圧縮オプションを含めます。 既定値は **True**です。 詳細については、「 [Data Compression](../../relational-databases/data-compression/data-compression.md)」を参照してください。  
   
-###  <a name="ProvConfig"></a> [プロバイダーの構成] ページ  
+###  <a name="provider-configuration-page"></a><a name="ProvConfig"></a> [プロバイダーの構成] ページ  
  このダイアログ ボックスを使用すると、ホスティング プロバイダーの設定を表示または変更することができます。 このダイアログ ボックスを使用すると、次の操作を実行できます。  
   
 -   ホスティング プロバイダーの接続情報の表示、追加、または編集  
@@ -321,12 +321,12 @@ ms.locfileid: "75253902"
   
  **[キャンセル]** - このダイアログ ボックスで行ったすべての変更を取り消して、ウィザードに戻ります。  
   
-###  <a name="Summary"></a> [概要] ページ  
+###  <a name="summary-page"></a><a name="Summary"></a> [概要] ページ  
  このページには、このウィザードで選択したオプションがまとめて表示されます。 オプションを変更するには、 **[戻る]** をクリックします。 保存またはパブリッシュするスクリプトの生成を開始するには、 **[次へ]** をクリックします。  
   
  **[選択内容の確認]** - ウィザードの各ページで行った選択の内容が表示されます。 ノードを展開すると、対応するページで選択したオプションが表示されます。  
   
-###  <a name="SavePubScripts"></a> [スクリプトの保存またはパブリッシュ] ページ  
+###  <a name="save-or-publish-scripts-page"></a><a name="SavePubScripts"></a> [スクリプトの保存またはパブリッシュ] ページ  
  このページを使用して、実行中のウィザードの進行状況を監視します。  
   
  **[詳細]** - **[アクション]** 列が表示され、ウィザードの進行状況を確認できます。 スクリプトが生成されると、このウィザードでは、選択内容に基づいて、スクリプトをファイルに保存するか、スクリプトを使用して Web サービスにパブリッシュします。 各手順が完了したときに、 **[結果]** 列の値をクリックすると、対応する手順の結果を確認できます。  

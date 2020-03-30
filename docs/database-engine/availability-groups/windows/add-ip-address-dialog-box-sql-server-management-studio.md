@@ -13,10 +13,10 @@ ms.assetid: 98c9ad3b-ff3c-4c1d-b344-59a72fca137c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 10ead33635c1fc1e263252ec3ae0a3f86b173679
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822093"
 ---
 # <a name="add-ip-address-dialog-box-sql-server-management-studio"></a>[IP アドレスの追加] ダイアログ ボックス (SQL Server Management Studio)
@@ -26,7 +26,7 @@ ms.locfileid: "74822093"
 ## <a name="prerequisites"></a>前提条件  
  サブネットを可用性グループ リスナーに追加するには、サブネットごとの IP アドレスと、IPv4 アドレスのサブネット マスクを把握している必要があります。  
   
-##  <a name="PageOptions"></a> [IP アドレスの追加] オプション  
+##  <a name="add-ip-address-options"></a><a name="PageOptions"></a> [IP アドレスの追加] オプション  
  **サブネット**  
  ドロップダウン リストを使用して、可用性グループ リスナーに追加するサブネットのアドレスを選択します。 既定では、サブネットには IPv4 アドレスと IPv6 アドレスの両方があります。 **[IP アドレスの追加]** ダイアログを初めて使用するときは、 **[サブネット]** ボックスの一覧に、可用性グループのレプリカをホストするサブネットごとに両方のサブネット アドレスが表示されます。 特定のサブネットをリスナーに追加するには、そのサブネット アドレスのいずれかを選択します。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "74822093"
  **キャンセル**  
  クリックすると、選択が取り消され、 **[新しい可用性グループ リスナー]** ダイアログ ボックスまたは **[リスナー]** タブに戻ります。サブネットの静的 IP アドレスは追加されません。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [可用性グループ リスナーの作成または構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   

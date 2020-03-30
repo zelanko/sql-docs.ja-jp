@@ -10,10 +10,10 @@ ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9d4e12a0322a35e96bd930c4fa6f1f852daf2bdd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75258462"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>レッスン 2: 接続情報の指定 (Reporting Services)
@@ -65,6 +65,6 @@ ms.locfileid: "75258462"
 
 このレッスンでは、AdventureWorks2016 サンプル データベースへの接続を正常に定義しました。 「[レッスン 3:テーブル レポートのデータセットの定義 &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)」に進み、レポートのデータセットを定義します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [データ接続文字列の作成 - レポート ビルダーおよび SSRS](report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)

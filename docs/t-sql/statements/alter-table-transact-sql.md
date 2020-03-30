@@ -60,10 +60,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 37cbb3621a1c9567a778fe58c4771e4336308647
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288306"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
@@ -1054,7 +1054,7 @@ ALTER TABLE ステートメント内の任意の列を、共通言語ランタ�
 
 テーブルの行を更新する列を追加するには、テーブルの **UPDATE** 権限が必要です。 たとえば、既定値を持つ **NOT NULL** 列を追加する場合や、テーブルが空でないときに ID 列を追加する場合です。
 
-## <a name="Example_Top"></a> 使用例
+## <a name="examples"></a><a name="Example_Top"></a> 使用例
 
 |カテゴリ|主な構文要素|
 |--------------|------------------------------|
@@ -1065,7 +1065,7 @@ ALTER TABLE ステートメント内の任意の列を、共通言語ランタ�
 |[制約およびトリガーを無効および有効にする](#disable_enable)|CHECK • NO CHECK • ENABLE TRIGGER • DISABLE TRIGGER|
 | &nbsp; | &nbsp; |
 
-### <a name="add"></a>列と制約を追加する
+### <a name="adding-columns-and-constraints"></a><a name="add"></a>列と制約を追加する
 
 このセクションの例では、テーブルに列と制約を追加する方法を示します。
 
@@ -1295,7 +1295,7 @@ ALTER TABLE Customers ADD
     ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') ;
 ```
 
-### <a name="Drop"></a>列と制約を削除する
+### <a name="dropping-columns-and-constraints"></a><a name="Drop"></a>列と制約を削除する
 
 このセクションの例では、列と制約を削除する方法を示します。
 
@@ -1380,7 +1380,7 @@ DROP TABLE Person.ContactBackup ;
 
 ![[トップに戻る] リンクで使用される矢印アイコン](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [例](#Example_Top)
 
-### <a name="alter_column"></a> 列定義を変更する
+### <a name="altering-a-column-definition"></a><a name="alter_column"></a> 列定義を変更する
 
 #### <a name="a-changing-the-data-type-of-a-column"></a>A. 列のデータ型を変更する
 
@@ -1474,7 +1474,7 @@ ALTER COLUMN C2 varchar(50) ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCR
 GO
 ```
 
-### <a name="alter_table"></a> テーブル定義を変更する
+### <a name="altering-a-table-definition"></a><a name="alter_table"></a> テーブル定義を変更する
 
 このセクションの例では、テーブルの定義を変更する方法を示します。
 
@@ -1592,7 +1592,7 @@ ALTER TABLE Person.Person
 DISABLE CHANGE_TRACKING;
 ```
 
-### <a name="disable_enable"></a>制約およびトリガーを無効および有効にする
+### <a name="disabling-and-enabling-constraints-and-triggers"></a><a name="disable_enable"></a>制約およびトリガーを無効および有効にする
 
 #### <a name="a-disabling-and-re-enabling-a-constraint"></a>A. 制約を無効化および再有効化する
 
@@ -1659,7 +1659,7 @@ INSERT INTO dbo.trig_example VALUES (3,'Mary Booth',100001) ;
 GO
 ```
 
-### <a name="online"></a>オンライン操作
+### <a name="online-operations"></a><a name="online"></a>オンライン操作
 
 #### <a name="a-online-index-rebuild-using-low-priority-wait-options"></a>A. 低優先度の待機オプションを使ったオンライン インデックス再構築
 
@@ -1697,7 +1697,7 @@ DROP TABLE dbo.doc_exy ;
 GO
 ```
 
-### <a name="system_versioning"></a> システムのバージョン管理
+### <a name="system-versioning"></a><a name="system_versioning"></a> システムのバージョン管理
 
 システムのバージョン管理を使用する構文に慣れるには、次の 4 つの例を参照してください。 詳細については、「[システム バージョン管理されたテンポラル テーブルの概要](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)」を参照してください。
 

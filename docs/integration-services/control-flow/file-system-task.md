@@ -16,10 +16,10 @@ ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f170a279f591b496b4c69cbb80b4c719954c30ba
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294126"
 ---
 # <a name="file-system-task"></a>ファイル システム タスク
@@ -95,11 +95,11 @@ ms.locfileid: "71294126"
   
  さまざまな変数を使用する式を使用できます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **[IsDestinationPathVariable]**  
  対象になるパスを変数に格納するかどうかを示します。 このプロパティのオプションを次の表に示します。  
   
-|Value|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**True**|対象になるパスは変数に格納されます。 この値を選択すると、動的オプション **[DestinationVariable]** が表示されます。|  
 |**False**|対象になるパスは、ファイル接続マネージャーで指定されます。 この値を選択すると、動的オプション **[DestinationConnection]** が表示されます。|  
@@ -107,7 +107,7 @@ ms.locfileid: "71294126"
  **[OverwriteDestination]**  
  操作によって対象になるディレクトリ内のファイルを上書きできるかどうかを指定します。  
   
- **Name**  
+ **名前**  
  ファイル システム タスクの一意な名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
 > [!NOTE]  
@@ -119,7 +119,7 @@ ms.locfileid: "71294126"
  **操作**  
  実行するファイル システム操作を選択します。 このプロパティのオプションを次の表に示します。  
   
-|Value|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**ディレクトリのコピー**|ディレクトリをコピーします。 この値を選択すると、ソースとターゲットを指定するための動的オプションが表示されます。|  
 |**ファイルのコピー**|ファイルをコピーします。 この値を選択すると、ソースとターゲットを指定するための動的オプションが表示されます。|  
@@ -135,7 +135,7 @@ ms.locfileid: "71294126"
  **[IsSourcePathVariable]**  
  対象になるパスを変数に格納するかどうかを示します。 このプロパティのオプションを次の表に示します。  
   
-|Value||  
+|値||  
 |-----------|-|  
 |**True**|対象になるパスは変数に格納されます。 この値を選択すると、動的オプション **[SourceVariable]** が表示されます。|  
 |**False**|対象になるパスは、ファイル接続マネージャーで指定されます。 この値を選択すると、動的オプション **[DestinationVariable]** が表示されます。|  

@@ -31,10 +31,10 @@ ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2266b837ce7822a6b03b3f6a26d4d1d818aade72
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298300"
 ---
 # <a name="foreach-loop-container"></a>Foreach ループ コンテナー
@@ -186,8 +186,8 @@ ms.locfileid: "71298300"
   
  Foreach ループ コンテナーとその構成方法については、「 [Foreach ループ コンテナー](../../integration-services/control-flow/foreach-loop-container.md) 」と「 [Foreach ループ コンテナーを構成する](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)」を参照してください。  
   
-### <a name="options"></a>オプション  
- **Name**  
+### <a name="options"></a>Options  
+ **名前**  
  Foreach ループ コンテナーの一意な名前を指定します。 この名前は、タスク アイコンとログでラベルとして使用されます。  
   
 > [!NOTE]  
@@ -205,7 +205,7 @@ ms.locfileid: "71298300"
  **列挙子**  
  列挙子の型を一覧から選択します。 このプロパティには、次の表に示すオプションがあります。  
   
-|Value|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**[Foreach File 列挙子]**|ファイルを列挙します。 この値を選択すると、セクション **[Foreach File 列挙子]** に動的オプションが表示されます。|  
 |**[Foreach Item 列挙子]**|アイテム内の値を列挙します。 この値を選択すると、セクション **[Foreach Item 列挙子]** に動的オプションが表示されます。|  
@@ -313,7 +313,7 @@ ms.locfileid: "71298300"
 #### <a name="enumerator--foreach-adonet-schema-rowset-enumerator"></a>[Enumerator] = [Foreach ADO.NET Schema Rowset 列挙子]  
  Foreach ADO.NET Schema Rowset 列挙子は、指定したデータ ソースのスキーマを列挙するために使用します。 たとえば、Foreach ループに SQL 実行タスクが含まれている場合、Foreach ADO.NET Schema Rowset 列挙子を使用して、 **AdventureWorks** データベース内の列や、スキーマ権限を取得するための SQL 実行タスクなど、スキーマを列挙できます。  
   
- **[接続]**  
+ **接続**  
  ADO.NET 接続マネージャーを一覧から選択するか、[\<**新しい接続...** >] をクリックして ADO.NET 接続マネージャーを作成します。  
   
 > [!IMPORTANT]  
@@ -347,7 +347,7 @@ ms.locfileid: "71298300"
  **[DocumentSourceType]**  
  XML ドキュメントのソースの種類を選択します。 このプロパティには、次の表に示すオプションがあります。  
   
-|Value|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**[直接入力]**|ソースを XML ドキュメントに設定します。|  
 |**[ファイル接続]**|XML ドキュメントが含まれているファイルを選択します。|  
@@ -367,17 +367,17 @@ ms.locfileid: "71298300"
  **[EnumerationType]**  
  一覧から列挙型を選択します。 このプロパティには、次の表に示すオプションがあります。  
   
-|Value|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**[Navigator]**|XPathNavigator を使用して列挙します。|  
-|**[Node]**|XPath 操作によって返されたノードを列挙します。|  
+|**Node**|XPath 操作によって返されたノードを列挙します。|  
 |**[NodeText]**|XPath 操作によって返されたテキスト ノードを列挙します。|  
 |**[ElementCollection]**|XPath 操作によって返された要素ノードを列挙します。|  
   
  **[OuterXPathStringSourceType]**  
  XPath 文字列のソースの種類を選択します。 このプロパティには、次の表に示すオプションがあります。 
   
-|Value|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**[直接入力]**|ソースを XML ドキュメントに設定します。|  
 |**[ファイル接続]**|XML ドキュメントが含まれているファイルを選択します。|  
@@ -400,7 +400,7 @@ ms.locfileid: "71298300"
  **[InnerXPathStringSourceType]**  
  内部 XPath 文字列のソースの種類を選択します。 このプロパティには、次の表に示すオプションがあります。  
   
-|Value|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**[直接入力]**|ソースを XML ドキュメントに設定します。|  
 |**[ファイル接続]**|XML ドキュメントが含まれているファイルを選択します。|  
@@ -420,7 +420,7 @@ ms.locfileid: "71298300"
 #### <a name="enumerator--foreach-smo-enumerator"></a>[Enumerator] = [Foreach SMO 列挙子]  
  Foreach SMO 列挙子は、SQL Server 管理オブジェクト (SMO) のオブジェクトを列挙するために使用します。 たとえば、Foreach ループに SQL 実行タスクが含まれている場合、Foreach SMO 列挙子を使用して、**AdventureWorks** データベース内のテーブルを列挙し、各テーブル内の行数をカウントするクエリを実行できます。  
   
- **[接続]**  
+ **接続**  
  既存の ADO.NET 接続マネージャーを選択するか、[\<**新しい接続...** >] をクリックして新しい接続マネージャーを作成します。  
   
  関連トピック:[ADO.NET 接続マネージャー](../../integration-services/connection-manager/ado-net-connection-manager.md)、[ADO.NET の接続マネージャーの構成](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
@@ -433,7 +433,7 @@ ms.locfileid: "71298300"
   
  **関連トピック:** [[SMO 列挙の選択] ダイアログ ボックス](https://msdn.microsoft.com/library/64ada1fe-21a2-4675-98fc-d5c803aa32f0)  
   
-####  <a name="ForeachHDFSFile"></a> [列挙子] = [Foreach HDFS File 列挙子]  
+####  <a name="enumerator--foreach-hdfs-file-enumerator"></a><a name="ForeachHDFSFile"></a> [列挙子] = [Foreach HDFS File 列挙子]  
  **[Foreach HDFS File Enumerator]** (Foreach HDFS ファイル列挙子) を指定すると、SSIS パッケージは、指定した HDFS の場所にある HDFS ファイルを列挙します。 各 HDFS ファイルの名前を変数に格納し、Foreach ループ コンテナー内のタスクで使用することができます。  
   
  **Hadoop 接続マネージャー**  
@@ -457,7 +457,7 @@ ms.locfileid: "71298300"
   
  エディターの **[変数のマッピング]** ページで、列挙された HDFS ファイルの名前を格納する変数を選択または作成します。  
   
-####  <a name="ForeachAzureBlob"></a> [列挙子] = [Foreach Azure BLOB 列挙子]  
+####  <a name="enumerator--foreach-azure-blob-enumerator"></a><a name="ForeachAzureBlob"></a> [列挙子] = [Foreach Azure BLOB 列挙子]  
  **[Azure BLOB 列挙子]** を指定すると、SSIS パッケージは、指定した BLOB の場所にある BLOB ファイルを列挙します。 列挙された BLOB ファイルの名前を変数に格納し、Foreach ループ コンテナー内のタスクで使用できます。  
   
  **Azure BLOB 列挙子** は、 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]用の SQL Server Integration Services (SSIS) Feature Pack for Azure のコンポーネントです。 Feature Pack は [こちら](https://go.microsoft.com/fwlink/?LinkID=626967)からダウンロードしてください。  
@@ -482,7 +482,7 @@ ms.locfileid: "71298300"
  **[BLOB 時間範囲フィルター]**  
  時間範囲フィルターを指定します。 **TimeRangeFrom** の後から **TimeRangeTo** の前までに変更されたファイルが列挙されます。 
 
-####  <a name="ForeachAdlsFile"></a> [列挙子] = [Foreach ADLS File 列挙子] 
+####  <a name="enumerator--foreach-adls-file-enumerator"></a><a name="ForeachAdlsFile"></a> [列挙子] = [Foreach ADLS File 列挙子] 
 **ADLS File 列挙子**は、SSIS パッケージを有効にして Azure Data Lake Store のファイルを列挙します。 列挙されたファイル (プレフィックスとしてスラッシュ `/` が付く) の完全パスを変数に格納し、Foreach ループ コンテナー内のタスクでファイル パスを使用できます。
   
 **[AzureDataLakeConnection]**  
@@ -497,7 +497,7 @@ Azure Data Lake 接続マネージャーを指定するか、ADLS アカウン�
 **[SearchRecursively]**  
 指定されたディレクトリ内で再帰的に検索するかどうかを指定します。  
 
-####  <a name="ForeachBlobFsFile"></a> [列挙子] = [Foreach Data Lake Storage Gen2 File Enumerator]\(Foreach Data Lake Storage Gen2 File 列挙子\) 
+####  <a name="enumerator--foreach-data-lake-storage-gen2-file-enumerator"></a><a name="ForeachBlobFsFile"></a> [列挙子] = [Foreach Data Lake Storage Gen2 File Enumerator]\(Foreach Data Lake Storage Gen2 File 列挙子\) 
 **[Foreach Data Lake Storage Gen2 File Enumerator]\(Foreach Data Lake Storage Gen2 File 列挙子\)** を指定すると、SSIS パッケージで Azure Data Lake Storage Gen2 のファイルを列挙できます。
 
 **[AzureStorageConnection]**  
@@ -528,7 +528,7 @@ Data Lake Storage Gen2 アクセス許可は [RBAC](https://docs.microsoft.com/a
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] チュートリアルの「簡単な ETL パッケージの作成」には、Foreach ループの追加および構成について説明するレッスンが含まれています。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **変数**  
  既存の変数を選択するか、 **[新しい変数...]** をクリックして新しい変数を作成します。  
   
@@ -549,7 +549,7 @@ Data Lake Storage Gen2 アクセス許可は [RBAC](https://docs.microsoft.com/a
 ## <a name="schema-restrictions-dialog-box-adonet"></a>[スキーマの制限] ダイアログ ボックス (ADO.NET)
 **[スキーマの制限]** ダイアログ ボックスを使用すると、Foreach ADO.NET Schema Rowset 列挙子に適用するスキーマの制限を設定できます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **制限事項**  
  スキーマに適用する制約を設定します。  
   
@@ -564,7 +564,7 @@ Data Lake Storage Gen2 アクセス許可は [RBAC](https://docs.microsoft.com/a
 ## <a name="for-each-item-columns-dialog-box"></a>[For Each Item 列] ダイアログ ボックス
 **[For Each Item 列]** ダイアログ ボックスを使用すると、Foreach Item 列挙子が列挙するアイテムの列を定義できます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **列**  
  列を一覧表示します。  
   
@@ -580,7 +580,7 @@ Data Lake Storage Gen2 アクセス許可は [RBAC](https://docs.microsoft.com/a
  ## <a name="select-smo-enumeration-dialog-box"></a>[SMO 列挙の選択] ダイアログ ボックス
 **[SMO 列挙の選択]** ダイアログ ボックスを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の特定のインスタンスの列挙対象となる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) オブジェクトを指定し、列挙型を選択できます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **[列挙]**  
  サーバーを展開して SMO オブジェクトを選択します。  
   
@@ -596,7 +596,7 @@ Data Lake Storage Gen2 アクセス許可は [RBAC](https://docs.microsoft.com/a
  **[URN]**  
  URN 列挙型を使用します。  
   
- **[場所]**  
+ **場所**  
  Locations 列挙型を使用します。 このオプションは、ファイルに対してのみ使用できます。  
 
 ## <a name="use-property-expressions-with-foreach-loop-containers"></a>Foreach ループ コンテナーでのプロパティ式を使用する  

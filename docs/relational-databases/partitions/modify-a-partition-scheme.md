@@ -11,10 +11,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9efb96c0bb54e3887f6c3fd101633a0efe664bdc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68091052"
 ---
 # <a name="modify-a-partition-scheme"></a>パーティション構成の変更
@@ -27,7 +27,7 @@ ms.locfileid: "68091052"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **以下を使用してパーティション テーブルまたはパーティション インデックスを作成するには:**  
   
@@ -35,14 +35,14 @@ ms.locfileid: "68091052"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
  ALTER PARTITION SCHEME の対象となるファイル グループは、オンラインになっている必要があります。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  次の権限を使って ALTER PARTITION SCHEME を実行できます。  
   
 -   ALTER ANY DATASPACE 権限。 この権限は、既定では **sysadmin** 固定サーバー ロール、 **db_owner** 固定データベース ロール、および **db_ddladmin** 固定データベース ロールのメンバーに与えられています。  
@@ -51,7 +51,7 @@ ms.locfileid: "68091052"
   
 -   パーティション構成が作成されたデータベースのサーバーに対する CONTROL SERVER または ALTER ANY DATABASE 権限。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  **パーティション構成を変更するには:**  
   
  この操作は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]では実行できません。 パーティション構成を変更するには、最初にパーティション構成を削除し、パーティションの作成ウィザードを使用して必要なプロパティを持つ新しいパーティション構成を作成する必要があります。 詳細については、「[**パーティション テーブルとパーティション インデックスの作成**](../../relational-databases/partitions/create-partitioned-tables-and-indexes.md)」の「[SQL Server Management Studio の使用](../../relational-databases/partitions/create-partitioned-tables-and-indexes.md#SSMSProcedure)」を参照してください。  
@@ -68,7 +68,7 @@ ms.locfileid: "68091052"
   
 5.  **[オブジェクトの削除]** ダイアログ ボックスで、正しいパーティション構成が選択されていることを確認し、 **[OK]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-modify-a-partition-scheme"></a>パーティション構成を変更するには  
   

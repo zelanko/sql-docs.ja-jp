@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ae7ab885ced505ccf7da03d388e8063c276fc0d9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68113709"
 ---
 # <a name="date-transact-sql"></a>date (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68113709"
   
 ## <a name="date-description"></a>date の説明
   
-|プロパティ|Value|  
+|プロパティ|値|  
 |--------------|-----------|  
 |構文|**date**|  
 |使用法|DECLARE \@MyDate **date**<br /><br /> CREATE TABLE Table1 ( Column1 **date** )|  
@@ -206,7 +206,7 @@ SELECT
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-|データ型|Output|  
+|データ型|出力|  
 |---------------|------------|  
 |**time**|12:35:29. 1234567|  
 |**date**|2007-05-08|  
@@ -215,7 +215,7 @@ SELECT
 |**datetime2**|2007-05-08 12:35:29. 1234567|  
 |**datetimeoffset**|2007-05-08 12:35:29.1234567 +12:15|  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
   
