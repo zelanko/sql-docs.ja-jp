@@ -1,5 +1,5 @@
 ---
-title: レポートサーバーの複数インスタンス配置における URL 予約 (SSRS Configuration Manager) |Microsoft Docs
+title: 複数インスタンスのレポート サーバー展開の URL 予約 (SSRS 構成マネージャー) |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,12 +12,12 @@ ms.assetid: f67c83c0-1f74-42bb-bfc1-e50c38152d3d
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f49a13fa50254e4c485a228d506b49e14d190959
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c91db169984bbb2969a8339ed20e8e6bc5b804b6
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66108619"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "80380693"
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments--ssrs-configuration-manager"></a>レポート サーバーの複数インスタンス配置における URL 予約 (SSRS 構成マネージャー)
   同じコンピューターに [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の複数のインスタンスをインストールする場合は、インスタンスごとに URL 予約を定義する方法を検討する必要があります。 各インスタンス内のレポート サーバー Web サービスとレポート マネージャーには、それぞれ 1 つ以上の URL 予約が必要です。 予約はすべて、HTTP.SYS 内で一意にする必要があります。  
@@ -42,13 +42,13 @@ ms.locfileid: "66108619"
 |既定のレポート サーバー インスタンス (MSSQLSERVER)|ReportServer_MyNamedInstance|一意性|  
 |----------------------------------------------------|-----------------------------------|----------------|  
 |http://+:80/reportserver|http://+:8888/reportserver|各インスタンスが、別々のポートでリッスンします。|  
-|http://www.contoso.com/reportserver|http://SRVR-46/reportserver|各インスタンスが、別々のサーバー名 (完全修飾ドメイン名およびコンピューター名) に応答します。|  
+|`http://www.contoso.com/reportserver`|`http://SRVR-46/reportserver`|各インスタンスが、別々のサーバー名 (完全修飾ドメイン名およびコンピューター名) に応答します。|  
   
 ## <a name="uniqueness-requirements"></a>一意性の要件  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の基になるテクノロジには、一意の名前に関する要件があります。 HTTP.SYS のリポジトリ内の URL はすべて一意にする必要があります。 URL は、ポート、ホスト名、または仮想ディレクトリ名を変えることで一意にできます。 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] では、同一プロセス内の各アプリケーション ID が一意である必要があります。 この要件は、仮想ディレクトリ名に影響します。 この要件では、同一レポート サーバー インスタンス内では重複する仮想ディレクトリ名を使用できないことが規定されています。  
   
-## <a name="see-also"></a>参照  
- [レポート サーバー URL の構成 &#40;SSRS 構成マネージャー&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
+## <a name="see-also"></a>関連項目  
+ [SSRS 構成マネージャー&#41;&#40;レポート サーバー URL を構成する](configure-report-server-urls-ssrs-configuration-manager.md)   
  [URL の構成 &#40;SSRS 構成マネージャー&#41;](configure-a-url-ssrs-configuration-manager.md)  
   
   
