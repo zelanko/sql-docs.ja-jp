@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.openlocfilehash: 76c59c6c7b821bfcc9eb76ca3a694a1c69095ce1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558527"
 ---
 # <a name="operate-rhel-failover-cluster-instance-fci-for-sql-server"></a>SQL Server の RHEL フェールオーバー クラスター インスタンス (FCI) を運用する
@@ -39,7 +39,7 @@ ms.locfileid: "75558527"
 
 クラスター構成、リソース エージェント オプション、および管理の詳細については、[RHEL リファレンス ドキュメント](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html)を参照してください。
 
-## <a name = "failManual"></a>クラスターを手動でフェールオーバーする
+## <a name="failover-cluster-manually"></a><a name = "failManual"></a>クラスターを手動でフェールオーバーする
 
 `resource move` コマンドでは、ターゲット ノードでリソースを強制的に開始する制約が作成されます。  `move` コマンドを実行した後、リソースの `clear` を実行すると制約が削除されるため、リソースを再び移動したり、リソースを自動的にフェールオーバーしたりできるようになります。 
 

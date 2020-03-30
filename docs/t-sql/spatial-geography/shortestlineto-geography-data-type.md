@@ -18,10 +18,10 @@ ms.assetid: 9d7c9885-5d1b-49ae-af31-5ef9fb8acaba
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 4832f28fbd07d85c9afaaf7874a51655b6922dc3
-ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79090590"
 ---
 # <a name="shortestlineto-geography-data-type"></a>ShortestLineTo (geography データ型)
@@ -43,7 +43,7 @@ ms.locfileid: "79090590"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型:**SqlGeography**  
+ CLR の戻り値の型: **SqlGeography**  
   
 ## <a name="remarks"></a>解説  
  このメソッドでは、比較対象の 2 つの交差しない **geography** インスタンスの境界上にあるエンドポイントを持つ **LineString** インスタンスが返されます。 返される **LineString** インスタンスの長さは、2 つの **geography** インスタンスの間の最短距離です。 2 つの **geography** インスタンスが相互に交差している場合、空の **LineString** インスタンスが返されます。  

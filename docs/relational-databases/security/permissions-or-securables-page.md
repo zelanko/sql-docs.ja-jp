@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 949e3c3cfc14082ef2093dfdd11baa01218ccb2f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68076623"
 ---
 # <a name="permissions-or-securables-page"></a>[権限] ページまたは [セキュリティ保護可能なリソース] ページ
@@ -36,7 +36,7 @@ ms.locfileid: "68076623"
 ## <a name="upper-grid"></a>上のグリッド  
  上のグリッドには、権限を設定できるアイテムが 1 つ以上表示されます。 このダイアログ ボックスには、上のグリッドに追加するオブジェクトまたはプリンシパルを選択するための **[検索]** ボタンがあります。 グリッドの名前には、 **[セキュリティ保護可能なリソース]** 、または 1 つ以上の種類のセキュリティ保護可能なリソースやプリンシパルが表示される場合があります。 上のグリッドに表示される列は、プリンシパルまたはセキュリティ保護可能なリソースによって異なります。  
   
- **Name**  
+ **名前**  
  グリッドに追加される各プリンシパルまたはセキュリティ保護可能なリソースの名前です。  
   
  **Type**  

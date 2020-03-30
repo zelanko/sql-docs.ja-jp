@@ -16,10 +16,10 @@ ms.assetid: b98e2511-297f-49fd-b0e8-74652a91bc0c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3d90d3339c34cd79111f498a4d854e19f9776209
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822550"
 ---
 # <a name="summary-page-always-on-availability-group-wizards"></a>[概要] ページ (AlwaysOn 可用性グループ ウィザード)
@@ -29,7 +29,7 @@ ms.locfileid: "74822550"
   
   このヘルプ トピックでは、 **[概要]** ページのオプションについて説明します。 このトピックの対象は、 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]の [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]、 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 、 [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] 、および [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]です。 このページのグリッドを使用して、新しい可用性グループに対して選択した内容を確認します。 変更が必要な場合は、 **[戻る]** をクリックして、該当するページに戻ります。 準備ができたら、 **[次へ]** をクリックして、 **[概要]** ページに戻ります。 選択内容に問題がなければ、 **[完了]** をクリックします。  
   
-##  <a name="PageOptions"></a> [概要] ページのオプション  
+##  <a name="summary-page-options"></a><a name="PageOptions"></a> [概要] ページのオプション  
  **[スクリプト]**  
  概要グリッドに一覧表示されているアクションのための [!INCLUDE[tsql](../../../includes/tsql-md.md)] スクリプトを生成します。 スクリプトの生成先を指定するように求められます。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "74822550"
   
  ![[トップに戻る] リンクで使用される矢印アイコン](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [&#91;トップ&#93;](#Top)  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [[新しい可用性グループ] ダイアログ ボックスの使用 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

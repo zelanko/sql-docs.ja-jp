@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 5d341d7bbda403b405268fe253cff7d60cea4d0d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68077439"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>SQL Server on Linux の可用性グループを作成および構成する
@@ -59,7 +59,7 @@ sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled 1
 hadr.hadrenabled = 1
 ```
 
-### <a name="restart-includessnoversion-mdincludesssnoversion-mdmd"></a>[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] を再起動する
+### <a name="restart-ssnoversion-md"></a>[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] を再起動する
 Windows の場合と同様に、可用性グループを有効にした後で、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] を再起動する必要があります。 これは、次のようにして行うことができます。
 
 ```bash
@@ -316,7 +316,7 @@ sudo systemctl restart mssql-server
 
 このセクションでは、[!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] (SSMS) または Transact-SQL を使用して [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] の可用性グループを作成する方法を説明します。
 
-### <a name="use-includessmanstudiofull-mdincludesssmanstudiofull-mdmd"></a>[!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] を使用します
+### <a name="use-ssmanstudiofull-md"></a>[!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] を使用します
 
 このセクションでは、新しい可用性グループ ウィザードを使用して、SSMS を使用する外部タイプのクラスターの AG を作成する方法を説明します。
 
@@ -332,7 +332,7 @@ sudo systemctl restart mssql-server
 
 5.  [レプリカの指定] ダイアログで **[レプリカの追加]** をクリックします。
 
-6.  [サーバーに接続] ダイアログで、セカンダリ レプリカにする [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] の Linux インスタンスの名前と、接続するための資格情報を入力します。 **[接続]** をクリックします。
+6.  [サーバーに接続] ダイアログで、セカンダリ レプリカにする [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] の Linux インスタンスの名前と、接続するための資格情報を入力します。 **[Connect]** をクリックします。
 
 7.  前の 2 つの手順を、構成専用レプリカまたは別のセカンダリ レプリカを格納するインスタンスに対して繰り返します。
 
@@ -533,7 +533,7 @@ sudo systemctl restart mssql-server
     GO
     ```
 
-## <a name="create-the-includessnoversion-mdincludesssnoversion-mdmd-login-and-permissions-for-pacemaker"></a>Pacemaker の [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] ログインおよびアクセス許可を作成する
+## <a name="create-the-ssnoversion-md-login-and-permissions-for-pacemaker"></a>Pacemaker の [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] ログインおよびアクセス許可を作成する
 
 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] on Linux に基づいている Pacemaker 高可用性クラスターは、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] インスタンスにアクセスする必要があり、可用性グループそのものへのアクセス許可も必要です。 これらの手順では、ログインおよび関連するアクセス許可、さらに [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] へのログイン方法を Pacemaker に指示するファイルが作成されます。
 

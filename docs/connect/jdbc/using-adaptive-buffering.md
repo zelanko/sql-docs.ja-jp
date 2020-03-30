@@ -11,10 +11,10 @@ ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 28b2750d96e1fbe5b5a1cfc3021a22415128b7df
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69026797"
 ---
 # <a name="using-adaptive-buffering"></a>アダプティブ バッファリングの使用
@@ -91,6 +91,6 @@ get\<Type>Stream メソッドを使用して大きな値を 1 回読み取り、
 
 - 順方向専用の更新可能な結果セット: 行をブロック単位でフェッチする場合、その接続でアダプティブ バッファリングが有効になっていたとしても、通常は [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの [getFetchSize](../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md) メソッドで指定された行数がメモリに読み込まれます。 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの [next](../../connect/jdbc/reference/next-method-sqlserverresultset.md) メソッドを呼び出すと OutOfMemoryError が発生する場合は、フェッチされる行数を減らすことによって対処できます。フェッチ サイズの行数を減らすには、[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの [setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) メソッドを呼び出します。必要であれば、行数を 1 に設定することも検討してください。 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトの [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) メソッドを "**adaptive**" パラメーターで呼び出した後、ステートメントを実行することによって、行のバッファリングを強制的に抑制することもできます。 結果セットはスクロールできないため、アプリケーションから、いずれかの get\<Type>Stream メソッドで大きな列の値にアクセスした場合、アプリケーションが読み取りを始めると直ちに、ドライバーが、順方向専用、読み取り専用の結果セットの場合とまったく同じように、その値を破棄します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [JDBC ドライバーによるパフォーマンスと信頼性の強化](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)

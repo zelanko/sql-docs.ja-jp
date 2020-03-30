@@ -19,10 +19,10 @@ ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6829260583ebc3c1b0dec3fec5d3158ddbbea297
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71293525"
 ---
 # <a name="ado-net-destination"></a>ADO NET 変換先
@@ -123,7 +123,7 @@ ms.locfileid: "71293525"
   
 3.  **[ADO NET 変換先エディター]** で、 **[マッピング]** をクリックします。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **使用できる入力列**  
  使用できる入力列の一覧を表示します。 ドラッグ アンド ドロップ操作により、テーブル内の使用できる入力列を変換先列にマップします。  
   
@@ -147,7 +147,7 @@ ms.locfileid: "71293525"
   
 3.  **[ADO NET 変換先エディター]** で、 **[エラー出力]** をクリックします。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **入力または出力**  
  入力の名前を表示します。  
   

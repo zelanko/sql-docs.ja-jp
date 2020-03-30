@@ -24,10 +24,10 @@ ms.custom: seo-lt-2019
 ms.date: 09/25/2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0fb3a05f08cdf3481b9e2957c35bf6ee48bce6b0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76909965"
 ---
 # <a name="use-bulk-insert-or-openrowsetbulk-to-import-data-to-sql-server"></a>BULK INSERT または OPENROWSET(BULK...) を使用して SQL Server にデータをインポートする
@@ -58,7 +58,7 @@ BULK INSERT では、データ ファイルからテーブルにデータが読�
 - [フォーマット ファイルを使用したテーブル列のスキップ &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)
 - [フォーマット ファイルを使用したテーブル列とデータ ファイル フィールドのマッピング &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)
 
-## <a name="openrowsetbulk-function"></a>OPENROWSET(BULK...)Function
+## <a name="openrowsetbulk-function"></a>OPENROWSET(BULK...)機能
 
 OPENROWSET 一括行セット プロバイダーには、BULK オプションを指定して OPENROWSET 関数を呼び出すことによってアクセスします。 OPENROWSET(BULK...) 関数では、OLE DB プロバイダー経由でデータ ファイルなどのリモート データ ソースに接続することで、リモート データにアクセスできます。
 
@@ -176,7 +176,7 @@ SELECT * FROM OPENROWSET(
 > [!IMPORTANT]
 > Azure SQL Database では、Windows ファイルからの読み取りはサポートされません。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)
 - [SELECT 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-clause-transact-sql.md)

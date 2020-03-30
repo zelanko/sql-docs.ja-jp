@@ -25,10 +25,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1980e9c96e568352fe616b6de8a6c7320c3d6c86
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288666"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 互換性レベル
@@ -121,7 +121,7 @@ SELECT name, compatibility_level FROM sys.databases;
 ## <a name="compatibility-levels-and-stored-procedures"></a>互換性レベルとストアド プロシージャ
 ストアド プロシージャを実行すると、そのストアド プロシージャが定義されているデータベースの現在の互換性レベルが使用されます。 データベースの互換性設定が変更された場合、そのデータベースのすべてのストアド プロシージャは、設定に合わせて自動的に再コンパイルされます。
 
-## <a name="backwardCompat"></a> 旧バージョンとの互換性を保持するための互換性レベルの使用
+## <a name="using-compatibility-level-for-backward-compatibility"></a><a name="backwardCompat"></a> 旧バージョンとの互換性を保持するための互換性レベルの使用
 [データベース互換レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)設定では、サーバー全体ではなく指定のデータベースに対してのみ、[!INCLUDE[tsql](../../includes/tsql-md.md)] に関連するものとクエリ最適化動作において以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] との下位互換性が提供されます。  
 
 互換モード 130 以降、修正プログラムと機能に影響を与える新しいクエリ プランは、新しい互換性レベルにのみ意図的に追加されています。 これは、新しいクエリ最適化動作によって導入される可能性のあるクエリ プランの変更によるパフォーマンスの低下から発生する、アップグレード中のリスクを最小限に抑えるために追加されました。      

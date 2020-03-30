@@ -24,10 +24,10 @@ ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a94825fe0af3820ab7f39ca25a104242e21bda8c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258649"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>バックアップ中および復元中に発生する可能性があるメディア エラー (SQL Server)
@@ -38,7 +38,7 @@ ms.locfileid: "75258649"
 >  ミラー化バックアップでは、メディア セットのコピー (ミラー) が最大で 4 つ作成され、メディアの破損によるエラーから復旧するために使用する代替コピーが提供されます。 詳細については、「 [ミラー化バックアップ メディア セット &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)」を参照してください。  
   
   
-##  <a name="BckChecksums"></a> バックアップ チェックサム  
+##  <a name="backup-checksums"></a><a name="BckChecksums"></a> バックアップ チェックサム  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされているチェックサムは、ページ チェックサム、ログ ブロック チェックサム、およびバックアップ チェックサムの 3 種類です。 バックアップ チェックサムの生成時には、データベースから読み取ったデータについて、データベース内に存在するチェックサムや破損ページ情報との整合性が BACKUP によって検証されます。  
   
  BACKUP ステートメントではオプションで、バックアップ ストリームのバックアップ チェックサムを計算できます。特定のページにページ チェックサムまたは破損ページ情報がある場合、ページのバックアップ時に、そのページのチェックサムおよび破損ページの状態とページ ID も検証されます。 バックアップ操作でバックアップ チェックサムを作成する際に、チェックサムがページに追加されることはありません。 ページはデータベースに存在するままの状態でバックアップされます。バックアップでページは変更されません。  
@@ -75,7 +75,7 @@ ms.locfileid: "75258649"
   
 4.  正常にバックアップが生成されたがページ エラーが含まれていることを示すメッセージを表示します。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
  **バックアップ チェックサムを有効または無効にするには**  
   
 -   [バックアップ中または復元中にバックアップ チェックサムを有効または無効にする &#40;SQL Server&#41;](../../relational-databases/backup-restore/enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)  

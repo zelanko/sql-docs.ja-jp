@@ -25,10 +25,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions
 ms.openlocfilehash: 99c252c81b081a7d4e0583e6722c5c853904cc27
-ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78288966"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
@@ -409,7 +409,7 @@ DW_COMPATIBILITY_LEVEL (Preview) **=** {**AUTO** | 10 | 20 }
 |"**10**"| 互換性レベルのサポートを導入する前に、Transact-SQL とクエリ処理の動作を実行します。|
 |**20**| 1 番目の互換性レベル。ゲート Transact-SQL とクエリ処理の動作が含まれます。 |
 
-## <a name="Permissions"></a> Permissions
+## <a name="permissions"></a><a name="Permissions"></a> Permissions
 
 データベースに対する `ALTER ANY DATABASE SCOPE CONFIGURATION` が必要です。 この権限は、データベース上で CONTROL 権限を持つユーザーが付与できます。
 

@@ -10,10 +10,10 @@ ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fca89bf8992db9ec3b07cea422ec146993e8aec8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75244300"
 ---
 # <a name="lesson-4-add-a-table-to-the-report-reporting-services"></a>レッスン 4:テーブルをレポートに追加する (Reporting Services)
@@ -81,7 +81,7 @@ ms.locfileid: "75244300"
 
 テーブル データ領域がレポートに、フィールドがデータ領域にそれぞれ正しく追加され、レポートが正しくプレビューされました。 次のレッスンでは、列ヘッダーとフィールド式の書式を設定する方法について学習します。 次に、「[レッスン 5: レポートの書式設定 &#40;Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md)」を参照してください。
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [テーブル &#40;レポート ビルダーおよび SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)  
 [データセット フィールド コレクション (レポート ビルダーおよび SSRS)](report-data/dataset-fields-collection-report-builder-and-ssrs.md)  

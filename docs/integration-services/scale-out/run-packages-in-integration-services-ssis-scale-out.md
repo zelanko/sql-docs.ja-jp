@@ -13,10 +13,10 @@ ms.author: haoqian
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
 ms.openlocfilehash: 68a24188a307dd84a28342d89559630efa9a9d80
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72305077"
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>Integration Services (SSIS) Scale Out でパッケージを実行する
@@ -32,7 +32,7 @@ Integration Services サーバーにパッケージを配置すると、次の�
 
 -   [SQL Server エージェント ジョブ](#sql_agent)
 
-## <a name="scale_out_dialog"></a> [Scale Out でパッケージを実行] ダイアログ ボックスを使用してパッケージを実行する
+## <a name="run-packages-with-the-execute-package-in-scale-out-dialog-box"></a><a name="scale_out_dialog"></a> [Scale Out でパッケージを実行] ダイアログ ボックスを使用してパッケージを実行する
 
 1. [Scale Out でパッケージを実行] ダイアログ ボックスを開きます。
 
@@ -61,7 +61,7 @@ Integration Services サーバーにパッケージを配置すると、次の�
 
     パッケージの実行を開始するには、 **[OK]** をクリックします。 パッケージの実行レポートを表示するには、オブジェクト エクスプローラーでパッケージを右クリックし、 **[レポート]** 、 **[すべての実行]** の順にクリックして実行を見つけます。
     
-## <a name="stored_proc"></a> ストアド プロシージャでパッケージを実行する
+## <a name="run-packages-with-stored-procedures"></a><a name="stored_proc"></a> ストアド プロシージャでパッケージを実行する
 
 1.  実行を作成します。
 
@@ -124,7 +124,7 @@ Scale Out でパッケージを実行するには、次のアクセス許可の�
 
 パッケージが既定で Scale Out モードで実行されなくなるように、既定の実行モードを元に戻すには、 **[サーバー全体の既定の実行モード]** を **[サーバー]** に設定します。
 
-## <a name="sql_agent"></a> SQL Server エージェント ジョブでパッケージを実行する
+## <a name="run-package-in-sql-server-agent-job"></a><a name="sql_agent"></a> SQL Server エージェント ジョブでパッケージを実行する
 SQL Server エージェント ジョブで、ジョブの 1 つの手順として SSIS パッケージを実行することができます。 Scale Out でパッケージを実行するには、既定の実行モードを **Scale Out** に設定します。既定の実行モードを **Scale Out** に設定すると、SQL Server エージェント ジョブ内のパッケージが Scale Out モードで実行されます。
 
 ## <a name="next-steps"></a>次のステップ

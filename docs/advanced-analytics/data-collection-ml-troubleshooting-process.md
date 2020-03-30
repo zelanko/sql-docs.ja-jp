@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 15c570594f84bf8d1d61abac4bc4e4c372f18784
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727606"
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>機械学習のためのデータ収集のトラブルシューティング
@@ -302,6 +302,6 @@ SQL Server プロセスとその機能に必要なすべてのフォルダーを
 
 2. SQL Server に対してファイアウォール規則が作成されているかどうかを確認します。 セキュリティ上の理由から、既定のインストールでは、リモート R または Python クライアントがインスタンスに接続できない場合があります。 詳細については、[SQL Server への接続のトラブルシューティング](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)に関する記事を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [SQL Server での機械学習のトラブルシューティング](machine-learning-troubleshooting-faq.md)

@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4e33a8add08837fb71c0d0558d6bbe7f3ae9197c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287946"
 ---
 # <a name="memory-management-architecture-guide"></a>メモリ管理アーキテクチャ ガイド
@@ -124,7 +124,7 @@ AWE および Locked Pages in Memory 特権を使用して、 [!INCLUDE[ssNoVers
 |スレッド スタック メモリ|はい|はい|
 |Windows からの直接割り当て|はい|はい|
 
-## <a name="dynamic-memory-management"></a> 動的メモリ管理
+## <a name="dynamic-memory-management"></a><a name="dynamic-memory-management"></a> 動的メモリ管理
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] の既定のメモリ管理動作では、システムでメモリ不足を発生させることなく、必要な量のメモリを獲得します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]では、Microsoft Windows の Memory Notification API を使用してこれを実現しています。
 
 メモリを動的に使用する場合、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] はシステムに定期的にクエリして、メモリの空き容量を確認します。 このようにメモリの空き容量を維持することによって、オペレーティング システム (OS) のページングが防止されます。 空きメモリが少ない場合、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は OS に対してメモリを解放します。 空きメモリが多い場合、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] はより多くのメモリを割り当てることができます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] によってメモリが追加されるのは、ワークロードが高いためにメモリを増やす必要がある場合だけです。アクティブでないサーバーの仮想アドレス空間のサイズは増えません。  
@@ -203,7 +203,7 @@ min server memory と max server memory の両方に同じ値を指定した場�
 >    
 > この構成の使い方の推奨事項については、「[min memory per query サーバー構成オプションの構成](../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md#Recommendations)」を参照してください。
 
-### <a name="memory-grant-considerations"></a>メモリ許可に関する考慮事項
+### <a name="memory-grant-considerations"></a><a name="memory-grant-considerations"></a>メモリ許可に関する考慮事項
 **行モード実行**の場合は、いかなる状況でも初期のメモリ許可を超過することはありません。 **ハッシュ**操作または**並べ替え**操作を実行するために、初期のメモリ許可より多くのメモリを必要とする場合、ディスクへの書き込みが行われます。 ハッシュ操作では TempDB 内の作業ファイルによって書き込みがサポートされます。一方、並べ替え操作では[作業テーブル](../relational-databases/query-processing-architecture-guide.md#worktables)によって書き込みがサポートされます。   
 
 並べ替え操作中に発生する書き込みは、[並べ替えの警告](../relational-databases/event-classes/sort-warnings-event-class.md)と呼ばれています。 並べ替えの警告は、並べ替え操作がメモリに収まらないことを示します。 インデックスの作成に関連する並べ替え操作は対象になりません。`SELECT` ステートメントで使用される `ORDER BY` 句などのクエリ内の並べ替え操作のみが対象になります。

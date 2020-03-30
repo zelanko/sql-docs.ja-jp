@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 4d380954be720a6cb839b0c4259a408733f8e176
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056334"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>文字形式を使用したデータのインポートまたはエクスポート (SQL Server)
@@ -40,7 +40,7 @@ ms.locfileid: "74056334"
 
 
   
-## 文字形式の使用に関する注意点<a name="considerations"></a>
+## <a name="considerations-for-using-character-format"></a>文字形式の使用に関する注意点<a name="considerations"></a>
 文字形式を使用するときは、以下の点を考慮してください。  
   
 -   既定では、 [bcp ユーティリティ](../../tools/bcp-utility.md) は、文字データ フィールド間の区切りにはタブ文字を、レコードの終わりには改行文字を使用します。  別のターミネータの指定方法の詳細については、「[フィールド ターミネータと行ターミネータの指定 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)」を参照してください。  
@@ -49,7 +49,7 @@ ms.locfileid: "74056334"
   
     |一括操作の方向|変換|  
     |---------------------------------|----------------|  
-    |[エクスポート]|データを文字表現に変換します。 明示的に要求された場合は、データが文字の列ごとに要求されたコード ページに変換されます。 コード ページが指定されていない場合は、文字データはクライアント コンピューターの OEM コード ページを使用して変換されます。|  
+    |エクスポート|データを文字表現に変換します。 明示的に要求された場合は、データが文字の列ごとに要求されたコード ページに変換されます。 コード ページが指定されていない場合は、文字データはクライアント コンピューターの OEM コード ページを使用して変換されます。|  
     |[インポート]|必要に応じて、文字データをネイティブ表現に変換し、クライアントのコード ページから目的の列のコード ページに変換します。|  
   
 -   変換中に拡張文字が失われないようにするには、Unicode 文字形式を使用するか、コード ページを指定します。  
@@ -58,7 +58,7 @@ ms.locfileid: "74056334"
   
 -   [bcp ユーティリティ](../../tools/bcp-utility.md) は [money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) 型の値をエクスポートする場合、コンマなどの桁区切り文字で区切らずに、小数点以下 4 桁の文字形式データ ファイルとしてエクスポートします。 たとえば、値 1,234,567.123456 を含む [money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) 型の列は、文字列 1234567.1235 としてデータ ファイルに一括エクスポートされます。  
   
-## 文字形式のコマンド オプション<a name="command_options"></a>  
+## <a name="command-options-for-character-format"></a>文字形式のコマンド オプション<a name="command_options"></a>  
 文字形式のデータは、[bcp](../../tools/bcp-utility.md)、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)、または [INSERT ...SELECT * FROM OPENROWSET(BULK...) を使用してテーブルにインポートできます](../../t-sql/functions/openrowset-transact-sql.md)。[bcp](../../tools/bcp-utility.md) コマンドまたは [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) ステートメントの場合は、ステートメントでデータ形式を指定できます。  [INSERT ...SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) ステートメントの場合は、フォーマット ファイルでデータ形式を指定する必要があります。  
   
 文字形式は、次のコマンド オプションでサポートされています。  
@@ -74,10 +74,10 @@ ms.locfileid: "74056334"
 > [!NOTE]
 >  また、フォーマット ファイルでフィールドごとに形式を指定することもできます。 詳細については、「 [データのインポートまたはエクスポート用のフォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)」を参照してください。
 
-## テスト条件の例<a name="etc"></a>  
+## <a name="example-test-conditions"></a>テスト条件の例<a name="etc"></a>  
 このトピックの例は、以下に定義されたテーブルとフォーマット ファイルに基づいています。
 
-### **サンプル テーブル**<a name="sample_table"></a>
+### <a name="sample-table"></a>**サンプル テーブル**<a name="sample_table"></a>
 次のスクリプトは、 `myChar` という名前のテーブルのテスト データベースを作成し、テーブルにいくつかの初期値を設定します。  Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) で次の Transact-SQL を実行します。
 
 ```sql
@@ -104,7 +104,7 @@ VALUES
 SELECT * FROM TestDatabase.dbo.myChar;
 ```
 
-### **XML 形式以外のフォーマット ファイルのサンプル**<a name="nonxml_format_file"></a>
+### <a name="sample-non-xml-format-file"></a>**XML 形式以外のフォーマット ファイルのサンプル**<a name="nonxml_format_file"></a>
 SQL Server は、非 XML 形式と XML 形式の 2 種類のフォーマット ファイルをサポートしています。  XML 以外のフォーマットとは、以前のバージョンの SQL Server でサポートされる従来のフォーマットです。  詳細については、「 [XML 以外のフォーマット ファイル (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) 」を参照してください。  次のコマンドでは、 [bcp ユーティリティ](../../tools/bcp-utility.md) を使用し、 `myChar.fmt`のスキーマに基づいて XML 以外のフォーマット ファイル `myChar`を生成します。  [bcp](../../tools/bcp-utility.md) コマンドを使用してフォーマット ファイルを作成するには、 **format** 引数を指定し、データ ファイルのパスの代わりに **nul** を使用します。  format オプションには、次に示す **-f** オプションが必要です。  さらに、この例では、修飾子 **c** を使用して文字データを指定し、 **T** を使用して統合セキュリティによる信頼関係接続を指定します。  コマンド プロンプトで、次のコマンドを入力します。
 
 ```cmd
@@ -120,10 +120,10 @@ Notepad D:\BCP\myChar.fmt
 > `SQLState = S1000, NativeError = 0`  
 > `Error = [Microsoft][ODBC Driver 13 for SQL Server]I/O error while reading BCP format file`
 
-## 使用例<a name="examples"></a>
+## <a name="examples"></a>使用例<a name="examples"></a>
 次の例では、上記で作成したデータベースとフォーマット ファイルを使用します。
 
-### **bcp と文字形式を使用したデータのエクスポート**<a name="bcp_char_export"></a>
+### <a name="using-bcp-and-character-format-to-export-data"></a>**bcp と文字形式を使用したデータのエクスポート**<a name="bcp_char_export"></a>
 **-c** スイッチと **OUT** コマンドです。  注: この例で作成するデータ ファイルをその後のすべての例で使用します。  コマンド プロンプトで、次のコマンドを入力します。
 
 ```cmd
@@ -133,7 +133,7 @@ REM Review results
 NOTEPAD D:\BCP\myChar.bcp
 ```
 
-### **フォーマット ファイルなしで bcp と文字形式を使用してデータをインポートする方法**<a name="bcp_char_import"></a>
+### <a name="using-bcp-and-character-format-to-import-data-without-a-format-file"></a>**フォーマット ファイルなしで bcp と文字形式を使用してデータをインポートする方法**<a name="bcp_char_import"></a>
 **-c** スイッチと **IN** コマンドです。  コマンド プロンプトで、次のコマンドを入力します。
 
 ```cmd
@@ -147,7 +147,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myChar;"
 ```
 
-### **XML 形式以外のフォーマット ファイルで bcp と文字形式を使用してデータをインポートする方法**<a name="bcp_char_import_fmt"></a>
+### <a name="using-bcp-and-character-format-to-import-data-with-a-non-xml-format-file"></a>**XML 形式以外のフォーマット ファイルで bcp と文字形式を使用してデータをインポートする方法**<a name="bcp_char_import_fmt"></a>
 **-c** および **-f** スイッチと **IN** コマンドです。  コマンド プロンプトで、次のコマンドを入力します。
 
 ```cmd
@@ -161,7 +161,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myChar;"
 ```
 
-### **フォーマット ファイルなしで BULK INSERT と文字形式を使用する方法**<a name="bulk_char"></a>
+### <a name="using-bulk-insert-and-character-format-without-a-format-file"></a>**フォーマット ファイルなしで BULK INSERT と文字形式を使用する方法**<a name="bulk_char"></a>
 **DATAFILETYPE** 引数です。  Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) で次の Transact-SQL を実行します。
 
 ```sql
@@ -176,7 +176,7 @@ BULK INSERT TestDatabase.dbo.myChar
 SELECT * FROM TestDatabase.dbo.myChar;
 ```
 
-### **XML 形式以外のフォーマット ファイルで BULK INSERT と文字形式を使用する方法**<a name="bulk_char_fmt"></a>
+### <a name="using-bulk-insert-and-character-format-with-a-non-xml-format-file"></a>**XML 形式以外のフォーマット ファイルで BULK INSERT と文字形式を使用する方法**<a name="bulk_char_fmt"></a>
 **FORMATFILE** 引数。  Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) で次の Transact-SQL を実行します。
 
 ```sql
@@ -191,7 +191,7 @@ BULK INSERT TestDatabase.dbo.myChar
 SELECT * FROM TestDatabase.dbo.myChar;
 ```
 
-### **XML 形式以外のフォーマット ファイルで OPENROWSET と文字形式を使用する方法**<a name="openrowset_char_fmt"></a>
+### <a name="using-openrowset-and-character-format-with-a-non-xml-format-file"></a>**XML 形式以外のフォーマット ファイルで OPENROWSET と文字形式を使用する方法**<a name="openrowset_char_fmt"></a>
 **FORMATFILE** 引数。  Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) で次の Transact-SQL を実行します。
 
 ```sql
@@ -207,7 +207,7 @@ INSERT INTO TestDatabase.dbo.myChar
 SELECT * FROM TestDatabase.dbo.myChar;
 ```
   
-## 関連タスク<a name="RelatedTasks"></a>  
+## <a name="related-tasks"></a>関連タスク<a name="RelatedTasks"></a>  
 一括インポートまたは一括エクスポートのデータ形式を使用するには 
   
 -   [以前のバージョンの SQL Server からのネイティブ形式データおよび文字形式データのインポート](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  

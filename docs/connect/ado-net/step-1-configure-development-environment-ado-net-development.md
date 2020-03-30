@@ -1,5 +1,5 @@
 ---
-title: 手順 1:ADO.NET 開発用に開発環境を構成する | Microsoft Docs
+title: 'ステップ 1: ADO.NET 開発用に開発環境を構成する | Microsoft Docs'
 description: ADO.NET 開発用に環境を構成する方法について説明します。
 ms.custom: ''
 ms.date: 08/15/2019
@@ -12,17 +12,17 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 6ef7c4e9a1040783f535f58e595b0c9840e94cec
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78895845"
 ---
-# <a name="step-1-configure-development-environment-for-adonet-development"></a>手順 1:ADO.NET 開発用に開発環境を構成する
+# <a name="step-1-configure-development-environment-for-adonet-development"></a>ステップ 1: ADO.NET 開発用に開発環境を構成する
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
-- 次の記事:&nbsp;&nbsp;&nbsp;[ステップ 2:ADO.NET 開発用の SQL データベースを作成する](step-2-create-sql-database-ado-net-development.md)  
+- 次の記事:&nbsp;&nbsp;&nbsp;[ステップ 2: ADO.NET 開発用の SQL データベースを作成する](step-2-create-sql-database-ado-net-development.md)  
 
 ## <a name="download-a-net-sql-driver"></a>.NET SQL ドライバーのダウンロード
 

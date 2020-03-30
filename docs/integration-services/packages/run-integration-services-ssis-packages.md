@@ -22,10 +22,10 @@ ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fe82e7d6746f3a5fc76fda3f960f069ef4345525
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287386"
 ---
 # <a name="run-integration-services-ssis-packages"></a>Integration Services (SSIS) パッケージの実行
@@ -111,7 +111,7 @@ ms.locfileid: "79287386"
   
      ストアド プロシージャを使用してパッケージを実行します。 **[スクリプト]** をクリックして、実行のインスタンスを作成し、実行のインスタンスを開始する Transact-SQL ステートメントを生成します。 ステートメントには catalog.create_execution、catalog.set_execution_parameter_value、および catalog.start_execution の各ストアド プロシージャの呼び出しが含まれています。 これらのストアド プロシージャの詳細については、「[catalog.create_execution (SSISDB データベース)](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md)」、「[catalog.set_execution_parameter_value (SSISDB データベース)](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)」、および「[catalog.start_execution (SSISDB データベース)](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)」をご覧ください。  
 
-## <a name="execute_package_dialog"></a> [パッケージの実行] ダイアログ ボックス
+## <a name="execute-package-dialog-box"></a><a name="execute_package_dialog"></a> [パッケージの実行] ダイアログ ボックス
   **[パッケージの実行]** ダイアログ ボックスでは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに格納されているパッケージを実行できます。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージには、値が環境変数に格納されているパラメーターが含まれている場合があります。 こうしたパッケージを実行するには、環境変数の値の提供に使用する環境を事前に指定する必要があります。 プロジェクトには複数の環境を含めることができますが、実行時に環境変数の値をバインドするのに使用できる環境は 1 つだけです。 パッケージで環境変数が使用されない場合、環境は不要です。  
@@ -130,7 +130,7 @@ ms.locfileid: "79287386"
   
 -   [[パッケージの実行] ダイアログ ボックスのオプションのスクリプト作成](#script)  
   
-###  <a name="open_dialog"></a> [パッケージの実行] ダイアログ ボックスを開く  
+###  <a name="open-the-execute-package-dialog-box"></a><a name="open_dialog"></a> [パッケージの実行] ダイアログ ボックスを開く  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]から [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに接続します。  
   
@@ -144,16 +144,16 @@ ms.locfileid: "79287386"
   
 5.  パッケージを右クリックし、 **[実行]** をクリックします。  
   
-###  <a name="general"></a> [全般] ページのオプションの設定  
+###  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> [全般] ページのオプションの設定  
  **[環境]** を選択して、実行するパッケージに適用される環境を指定します。  
   
-###  <a name="parameters"></a> [パラメーター] タブのオプションの設定  
+###  <a name="set-the-options-on-the-parameters-tab"></a><a name="parameters"></a> [パラメーター] タブのオプションの設定  
  **[パラメーター]** タブを使用して、パッケージの実行時に使用するパラメーターの値を変更します。  
   
-###  <a name="connection"></a> [接続マネージャー] タブのオプションの設定  
+###  <a name="set-the-options-on-the-connection-managers-tab"></a><a name="connection"></a> [接続マネージャー] タブのオプションの設定  
  [接続マネージャー] タブを使用して、パッケージの接続マネージャーのプロパティを設定します。  
   
-###  <a name="advanced"></a> [詳細設定] タブのオプションの設定  
+###  <a name="set-the-options-on-the-advanced-tab"></a><a name="advanced"></a> [詳細設定] タブのオプションの設定  
  [詳細設定] タブを使用して、プロパティとその他のパッケージの設定を管理します。  
   
  **[追加]** 、 **[編集]** 、 **[削除]**  
@@ -168,7 +168,7 @@ ms.locfileid: "79287386"
  **32 ビット ランタイム**  
  パッケージが 32 ビット システムで実行されるように指定します。  
   
-###  <a name="script"></a> [パッケージの実行] ダイアログ ボックスのオプションのスクリプト作成  
+###  <a name="scripting-the-options-in-the-execute-package-dialog-box"></a><a name="script"></a> [パッケージの実行] ダイアログ ボックスのオプションのスクリプト作成  
  **[パッケージの実行]** ダイアログ ボックスが表示されているときに、ツール バーの **[スクリプト]** を使用すると、 [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを生成することもできます。 生成されたスクリプトからは、 **[パッケージの実行]** ダイアログ ボックスで選択したのと同じオプションを指定したストアド プロシージャ [catalog.start_execution (SSISDB データベース)](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md) が呼び出されます。 このスクリプトは、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]の新しいスクリプト ウィンドウに表示されます。  
 
 ## <a name="see-also"></a>参照  

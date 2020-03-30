@@ -10,10 +10,10 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 52285164928e1a4811abc17e931a1af1921c6d07
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76831409"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>チュートリアル:SQL Server ビッグ データ クラスターにサンプル データを読み込む
@@ -34,11 +34,11 @@ ms.locfileid: "76831409"
    - **sqlcmd**
    - **curl**
  
-## <a id="sampledata"></a> サンプル データを読み込む
+## <a name="load-sample-data"></a><a id="sampledata"></a> サンプル データを読み込む
 
 次の手順では、ブートストラップ スクリプトを使用して SQL Server データベースのバックアップをダウンロードし、ご利用のビッグ データ クラスターにそのデータを読み込みます。 使いやすいように、これらの手順は 「[Windows](#windows)」セクションと「[Linux](#linux)」セクションに分けられています。 認証メカニズムとして基本的なユーザー名とパスワードを使用する場合は、スクリプトを実行する前に AZDATA_USERNAME と AZDATA_PASSWORD の環境変数を設定します。 それ以外の場合、スクリプトでは SQL Server マスター インスタンスと Knox ゲートウェイへの接続に統合認証が使用されます。 また、統合認証を使用するには、エンドポイントに対して DNS 名を指定する必要があります。
 
-## <a id="windows"></a> Windows
+## <a name="windows"></a><a id="windows"></a> Windows
 
 次の手順では、Windows クライアントを使用して、ご利用のビッグ データ クラスターにサンプル データを読み込む方法について説明します。
 
@@ -76,7 +76,7 @@ ms.locfileid: "76831409"
    .\bootstrap-sample-db.cmd <CLUSTER_NAMESPACE> <SQL_MASTER_ENDPOINT> <KNOX_ENDPOINT>
    ```
 
-## <a id="linux"></a> Linux
+## <a name="linux"></a><a id="linux"></a> Linux
 
 次の手順では、Linux クライアントを使用して、ご利用のビッグ データ クラスターにサンプル データを読み込む方法について説明します。
 

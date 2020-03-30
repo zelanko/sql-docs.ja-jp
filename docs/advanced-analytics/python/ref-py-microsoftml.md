@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 7ecbfd2edd20a312fc8a6d451938f1407585ded5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73706948"
 ---
 # <a name="microsoftml-python-module-in-sql-server"></a>microsoftml (SQL Server の Python モジュール)
@@ -52,7 +52,7 @@ ms.locfileid: "73706948"
 
 ## <a name="1-training-functions"></a>1 - トレーニング関数
 
-| Function | 説明 |
+| 機能 | 説明 |
 |----------|-------------|
 |[microsoftml.rx_ensemble](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-ensemble) | モデルのアンサンブルをトレーニングします。 |
 |[microsoftml.rx_fast_forest](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-forest)  | ランダム フォレスト。 |
@@ -68,14 +68,14 @@ ms.locfileid: "73706948"
 
 ### <a name="categorical-variable-handling"></a>カテゴリ変数の処理
 
-| Function | 説明 |
+| 機能 | 説明 |
 |----------|-------------|
 |[microsoftml.categorical](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical) | テキスト列をカテゴリに変換します。 |
 |[microsoftml.categorical_hash](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical-hash) | テキスト列をハッシュし、カテゴリに変換します。 |
 
 ### <a name="schema-manipulation"></a>スキーマ操作
 
-| Function | 説明 |
+| 機能 | 説明 |
 |----------|-------------|
 |[microsoftml.concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat) | 複数の列を連結して 1 つのベクトルにします。 |
 |[microsoftml.drop_columns](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/drop-columns) | データセットから列を削除します。 |
@@ -84,7 +84,7 @@ ms.locfileid: "73706948"
 
 ### <a name="variable-selection"></a>選択、変数
 
-| Function | 説明 |
+| 機能 | 説明 |
 |----------|-------------|
 |[microsoftml.count_select](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/count-select) |カウントに基づく特徴の選択。 |
 |[microsoftml.mutualinformation_select](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/mutualinformation-select) | 相互情報に基づく特徴の選択。 |
@@ -92,7 +92,7 @@ ms.locfileid: "73706948"
 
 ### <a name="text-analytics"></a>テキスト分析
 
-| Function | 説明 |
+| 機能 | 説明 |
 |----------|-------------|
 |[microsoftml.featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-text) | テキスト列を数的特徴に変換します。 |
 |[microsoftml.get_sentiment](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/get-sentiment) | 感情分析。 |
@@ -100,7 +100,7 @@ ms.locfileid: "73706948"
 
 ### <a name="image-analytics"></a>画像分析 
 
-| Function | 説明 |
+| 機能 | 説明 |
 |----------|-------------|
 |[microsoftml.load_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/load-image) | 画像を読み込みます。 |
 |[microsoftml.resize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/resize-image) | 画像サイズを変更します。 |
@@ -109,7 +109,7 @@ ms.locfileid: "73706948"
 
 ### <a name="featurization-functions"></a>特徴付け関数
 
-| Function | 説明 |
+| 機能 | 説明 |
 |----------|-------------|
 |[microsoftml.rx_featurize](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-featurize) | データ ソースのデータ変換 |
 
@@ -117,7 +117,7 @@ ms.locfileid: "73706948"
 
 ## <a name="3-scoring-functions"></a>3 - スコア付け関数
 
-| Function | 説明 |
+| 機能 | 説明 |
 |----------|-------------|
 |[microsoftml.rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-predict) | Microsoft 機械学習アルゴリズムを使用してスコアを付けます。 |
 
@@ -135,7 +135,7 @@ from revoscalepy.functions.RxSummary import rx_summary
 from revoscalepy.etl.RxImport import rx_import_datasource
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 + [Python のチュートリアル](../tutorials/sql-server-python-tutorials.md)
 + [チュートリアル:T-SQL に Python コードを埋め込む](../tutorials/run-python-using-t-sql.md)

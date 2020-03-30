@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 2412bfb8bcd3cacc2db2702879353b92e328b09a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727387"
 ---
 # <a name="what-are-standalone-machine-learning-server-or-r-server-in-sql-server"></a>SQL Server でのスタンドアロン Machine Learning Server または R Server とは
@@ -90,7 +90,7 @@ SQL Server は、累積的な更新プログラムを定期的にリリースし
 
 既存のインスタンスに更新プログラムを適用する方法の詳細については、「インストール手順の[更新プログラムの適用](../install/sql-machine-learning-standalone-windows-install.md#apply-cu)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
  [R Server (スタンドアロン) または Machine Learning Server (スタンドアロン) のインストール](../install/sql-machine-learning-standalone-windows-install.md)に関する記事
 

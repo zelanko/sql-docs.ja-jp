@@ -14,10 +14,10 @@ ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6bd60789112a8aa28481b3bb615f1df2a957125a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68067575"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>SQL Server のエディション別の計算容量制限
@@ -28,7 +28,7 @@ ms.locfileid: "68067575"
   
  このテーブルでは、前の図の表記について説明します。  
   
-|Value|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |0..1|0 個または 1 個|  
 |1|1 個|  
@@ -92,7 +92,7 @@ ms.locfileid: "68067575"
   
 仮想プロセッサあたりのパフォーマンスが重要な場合は、ハイパースレッディングを無効にすることができます。 BIOS のセットアップ中にプロセッサの BIOS 設定からハイパースレッディングの有効と無効を切り替えることができます。 ただし、これは通常、サーバーを対象とした操作であり、そのサーバーで実行されているすべてのワークロードに影響します。 したがって、仮想化された環境で実行されるワークロードを、物理オペレーティング システム環境でハイパースレッディングによるパフォーマンス向上の恩恵を受けるワークロードから切り離すと良い結果が得られる場合があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server 2016 のエディションとコンポーネント](../sql-server/editions-and-components-of-sql-server-2016.md)   
  [SQL Server 2016 の各エディションでサポートされる機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [SQL Server の最大容量仕様](../sql-server/maximum-capacity-specifications-for-sql-server.md)   

@@ -11,13 +11,13 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: b263c3890ab9a03295212c723adad4a431fbf04f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76928006"
 ---
-# <a name="getting-started-with-includename-sosincludesname-sos-shortmd-extensibility"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] の拡張性の概要
+# <a name="getting-started-with-name-sos-extensibility"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] の拡張性の概要
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] には、ユーザー エクスペリエンスをカスタマイズし、それらのカスタマイズ結果をユーザー コミュニティ全体で利用できるようにするいくつかの拡張性メカニズムがあります。 [!INCLUDE[name-sos](../includes/name-sos.md)] のコア プラットフォームは Visual Studio Code 上に構築されているため、Visual Studio Code の拡張 API のほとんどが利用できます。 さらに、データ管理に固有のアクティビティに対して追加の拡張性ポイントを提供しました。
 

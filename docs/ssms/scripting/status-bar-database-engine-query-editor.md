@@ -12,10 +12,10 @@ ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a579eeeb12795c76bbe585a982a159d6e069813d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75243445"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>ステータス バー (データベース エンジン クエリ エディター)
@@ -32,13 +32,13 @@ ms.locfileid: "75243445"
 
 [!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
 
-##  <a name="StatusBarColors"></a> ステータス バーの色
+##  <a name="status-bar-colors"></a><a name="StatusBarColors"></a> ステータス バーの色
 
 **[オブジェクト エクスプローラー]** または **[登録済みサーバー]** の特定のサーバー ノードとステータス バーの色を関連付けることができます。 ステータス バーの色を指定できるのは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続されているサーバー ノードのみで、他の SQL Server テクノロジのノードでは指定できません。 また、新しい [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウを [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続するたびに、作成したステータス バーの色を指定することもできます。 その後、サーバー ノードに定義された状態の色を使用してクエリ エディター ウィンドウを開くか、そのエディター ウィンドウに対して一意の色を指定することができます。  
 
 オブジェクト エクスプローラーのサーバー ノードに対して、作成したステータス バーの色を設定する場合、その設定を接続時に行う必要があります。 既存のサーバー ノードに関連付けられている色を変更するには、接続解除してから、新しい色を指定して再接続する必要があります。  
 
-##  <a name="SetOEServerColor"></a> オブジェクト エクスプローラーでのサーバー状態の色の設定
+##  <a name="set-the-status-color-for-a-server-in-object-explorer"></a><a name="SetOEServerColor"></a> オブジェクト エクスプローラーでのサーバー状態の色の設定
 
 **オブジェクト エクスプローラーでサーバー状態の色を設定するには**  
   
@@ -54,7 +54,7 @@ ms.locfileid: "75243445"
   
 6.  残りの接続情報を入力して、 **[接続]** ボタンをクリックします。  
   
-##  <a name="SetRegServerColor"></a> 登録済みサーバーの状態の色の設定  
+##  <a name="set-the-status-color-for-a-registered-server"></a><a name="SetRegServerColor"></a> 登録済みサーバーの状態の色の設定  
  **登録済みサーバーの状態の色を設定するには**  
   
 1.  **[登録済みサーバー]** で、サーバー ノードを右クリックして、 **[プロパティ...]** をクリックします。  
@@ -69,7 +69,7 @@ ms.locfileid: "75243445"
   
 6.  **[サーバー登録プロパティの編集]** ダイアログ ボックスで、 **[保存]** ボタンをクリックします。  
   
-##  <a name="OpenServerColor"></a> サーバーの色を使用したエディターの起動  
+##  <a name="open-an-editor-using-a-server-color"></a><a name="OpenServerColor"></a> サーバーの色を使用したエディターの起動  
  **サーバーの色を使用してエディター ウィンドウを開くには**  
   
 -   **オブジェクト エクスプローラー** または **[登録済みサーバー]** でサーバー ノードを右クリックして、 **[新しいクエリ]** をクリックします。  
@@ -78,7 +78,7 @@ ms.locfileid: "75243445"
   
 -   エディター ウィンドウのステータス バーでは、関連付けられたサーバーに定義されている色が使用されます。  
   
-##  <a name="OpenSpecColor"></a> 状態の色の指定によるエディターの起動  
+##  <a name="open-an-editor-specifying-a-status-color"></a><a name="OpenSpecColor"></a> 状態の色の指定によるエディターの起動  
  **状態の色を指定してエディター ウィンドウを開くには**  
   
 -   **[ファイル]** メニューの **[新規作成]** をポイントし、 **[データベース エンジン クエリ]** をクリックします。  

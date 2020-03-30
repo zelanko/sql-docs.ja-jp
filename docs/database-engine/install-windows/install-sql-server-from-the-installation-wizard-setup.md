@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 9dc0d760bd7fd6a89d9829fa5e883ef1ad9b59b7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76934189"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>SQL Server をインストール ウィザードからインストールする (セットアップ)
@@ -50,7 +50,7 @@ ms.locfileid: "76934189"
 
 ::: monikerRange=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
 
-###  <a name="bkmk_ga_instalpatch"></a> インストールのパッチ要件
+###  <a name="install-patch-requirement"></a><a name="bkmk_ga_instalpatch"></a> インストールのパッチ要件
 
 SQL Server 2016 および 2017 の前提条件としてインストールされる Microsoft Visual C++ 2013 ランタイム バイナリに問題が見つかりました。 更新プログラムを利用してこの問題を修正できます。 Visual C++ ランタイム バイナリに対するこの更新プログラムをインストールしないと、特定のシナリオにおいて、SQL Server で安定性の問題が発生する可能性があります。 SQL Server をインストールする前に、「[SQL Server リリース ノート](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch)」にある手順に従って、ご使用のコンピューターに Visual C++ ランタイム バイナリのパッチが必要かどうかを確認してください。 
 
@@ -404,7 +404,7 @@ SQL Server 2016 および 2017 の前提条件としてインストールされ�
   
 システムのセキュリティを向上させるため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、主要なサービスと機能を個別にインストールし、有効化できるようになっています。 詳細については、「[セキュリティ構成](../../relational-databases/security/surface-area-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
   
 * [SQL Server のインストールの検証](../../database-engine/install-windows/validate-a-sql-server-installation.md)  
 * [失敗した SQL Server のインストールの修復](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)

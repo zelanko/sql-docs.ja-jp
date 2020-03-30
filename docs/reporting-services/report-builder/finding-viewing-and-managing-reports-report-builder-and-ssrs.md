@@ -10,10 +10,10 @@ ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 74c4591122fa45d4e050718e78296ed672a4c210
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75258103"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "75258103"
 > [!NOTE]  
 > [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="FindingAndViewingReportsRB30"></a> レポート ビルダーを使用したレポートの検索と表示  
+##  <a name="finding-and-viewing-reports-in-report-builder"></a><a name="FindingAndViewingReportsRB30"></a> レポート ビルダーを使用したレポートの検索と表示  
  作業するレポートを検索したり、レポートで使用する共有データ ソース、画像、サブレポートを選択したりするには、コンピューター、レポート サーバーのフォルダー、または Reporting Services に統合されている SharePoint サイトを参照します。  
   
  レポート サーバーでレポートを検索するには、レポート サーバーの URL を指定する必要があります。また、レポート アイテムの読み取りや保存ができるようにフォルダーに対する適切な権限が必要です。 適切な URL と権限については、レポート サーバーのシステム管理者に問い合わせてください。  
@@ -49,7 +49,7 @@ ms.locfileid: "75258103"
 -   **レポートの表示** レポートの作成時や更新時にレポート ビルダーでレポートをプレビューします。 レポート ビルダーがレポート サーバーに接続しているときは、レポート サーバーがレポートを読み込んで処理します。接続していないときは、レポートがローカルで処理されます。 レポート ビルダーのレポート ビューアーに処理後のレポートが表示されます。  
   
  
-##  <a name="ViewingAndManagingReportServer"></a> レポート サーバーでのレポートの表示と管理  
+##  <a name="viewing-and-managing-reports-on-a-report-server"></a><a name="ViewingAndManagingReportServer"></a> レポート サーバーでのレポートの表示と管理  
  Web ポータルは、レポート サーバー上のレポートの表示および管理に使用されます。 サーバー上のフォルダーを参照してレポートを見つけ、レポートを実行してブラウザーに表示し、管理作業を実行します。  
   
  Web ポータルは以下の管理作業に役立ちます。  
@@ -90,7 +90,7 @@ Web ポータルには通常、フォルダー、レポート、データ ソー
 |Ctrl&lt;/localizedText&gt; + &lt;localizedText&gt;F5&lt;/localizedText&gt; キー|[レポート] ツール バーで **[更新]** ボタンをクリックした場合と同じ結果になります。|  
   
   
-##  <a name="ViewingAndManagingSharePointSite"></a> SharePoint サイトからのレポート サーバー アイテムの表示と管理  
+##  <a name="viewing-and-managing-report-server-items-from-a-sharepoint-site"></a><a name="ViewingAndManagingSharePointSite"></a> SharePoint サイトからのレポート サーバー アイテムの表示と管理  
  システム管理者がレポート サーバーを SharePoint 統合モードで実行するように構成している場合、SharePoint サイトからレポートや他のレポート サーバー アイテムを表示および管理できます。  
   
  SharePoint サイトには、データ ソース プロパティ、レポート履歴、レポート処理オプション、スケジュール、サブスクリプション、レポート パラメーターを設定するためのページや、共有スケジュールを作成するためのページがあります。 SharePoint サイトではレポート サーバー アイテムの管理を、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で他のツールを使って作成し管理するときと同じ方法で行うことができます。  
@@ -119,11 +119,11 @@ Web ポータルには通常、フォルダー、レポート、データ ソー
  ![レポート サーバー アイテムのメニュー コマンド](../../reporting-services/report-builder/media/rs-ecbforrsitems.gif "レポート サーバーアイテムのメニュー コマンド")  
   
   
-##  <a name="DeskTop"></a> デスクトップ アプリケーションでのレポートの表示  
+##  <a name="viewing-reports-in-a-desktop-application"></a><a name="DeskTop"></a> デスクトップ アプリケーションでのレポートの表示  
  レポート ビューアーとしてブラウザーをまったく使用せず、代わりにデスクトップ アプリケーション ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel など) を使用することができます。 このためには、デスクトップ アプリケーションの形式および生成先の共有フォルダーを指定するサブスクリプションを定義します。 レポートは、アプリケーション ファイルとして生成され、ファイル名拡張子が付けられ、ハード ディスク上にファイルとして保存されます。 その後は、ブラウザーの代わりに [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel (または他のアプリケーション) を使用してレポートを表示できるようになります。  
   
   
-##  <a name="AboutUserSessions"></a> ユーザー セッションについて  
+##  <a name="about-user-sessions"></a><a name="AboutUserSessions"></a> ユーザー セッションについて  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、ブラウザー セッションを使用して、レポートの表示中の整合性を保ちます。 セッションは、認証されているユーザーではなく、ブラウザー接続に基づき確立されます。 ユーザーが新しいブラウザー ウィンドウでレポートを開くたびに、新しいセッションが作成されます。 ブラウザー セッションを確立すると、レポート サーバー上でレポートが変更されたとしても、ユーザーはセッション開始時に開いていたレポートに対して作業を継続して行います。 たとえば、ユーザーが午後 11 時にレポートを開き、レポートの作成者が同じレポートを午後 11 時 1 分に再びパブリッシュした場合でも、ユーザーのセッションが継続されている間はユーザーが開いたレポートがセッションに保持されます。  
   
  ブラウザーの **[更新]** ボタンを使用して同じセッション内のレポートを更新すると、元のセッションのバージョンのレポートが表示されます。 [レポート] ツール バーの **[更新]** ボタンを使用して要求時レポートを更新すると、レポートは再実行され、新しいデータがあれば、これが表示されます。  
@@ -131,7 +131,7 @@ Web ポータルには通常、フォルダー、レポート、データ ソー
  セッション情報は、レポート サーバーの一時データベースに格納されます。 レポート サーバーでは、 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] のセッション管理を使用しません。 サーバーを再起動したり、データベースの復旧操作を実行した場合、セッション状態は復元されません。 セッションの管理の詳細については、「 [実行状態の識別](../../reporting-services/report-server-web-service-net-framework-soap-headers/identifying-execution-state.md)」をご覧ください。  
   
  
-##  <a name="InThisSection"></a> トピックの内容  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> トピックの内容  
  以下の記事では、レポートの表示と管理に関する追加情報を説明します。  
   
  [レポートの検索、表示、管理](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)
@@ -142,7 +142,7 @@ Web ポータルには通常、フォルダー、レポート、データ ソー
  [レポート ビルダーでのレポートのプレビュー](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)  
  作成中または更新中のレポートをプレビューする方法について説明します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポートの保存 (レポート ビルダー)](../../reporting-services/report-builder/saving-reports-report-builder.md)   
  [SQL Server のレポート ビルダー](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  

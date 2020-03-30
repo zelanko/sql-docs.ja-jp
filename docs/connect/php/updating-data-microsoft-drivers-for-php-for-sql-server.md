@@ -11,10 +11,10 @@ ms.assetid: dd323f83-f415-4fa4-8457-89dad6d321d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 93bad991b56928db0d7b872b13904385d79ae788
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68014842"
 ---
 # <a name="updating-data-microsoft-drivers-for-php-for-sql-server"></a>データの更新 (Microsoft Drivers for PHP for SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "68014842"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |---------|---------------|  
 |[方法: パラメーター化クエリを実行する](../../connect/php/how-to-perform-parameterized-queries.md)|パラメーター化クエリを実行する方法を説明します。|  
 |[方法: ストリームとしてデータを送信する](../../connect/php/how-to-send-data-as-a-stream.md)|サーバーにデータをストリーミングする方法について説明します。|  

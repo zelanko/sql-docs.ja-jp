@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3360957d62c6af05c6d650c0143f9f45fde3bd19
-ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/27/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77705877"
 ---
 # <a name="data-compression"></a>データ圧縮
@@ -134,7 +134,7 @@ REBUILD PARTITION = ALL WITH (
   
  記憶域を削減するデータ圧縮の利点は、頻繁にアクセスしないデータに便利です。 たとえば、各月のデータ用のパーティションがある場合、ほとんどアクティビティは最新の月のデータに対して実行されるため、古い月のデータをアーカイブして必要なストレージを削減できます。  
   
-### <a name="metadata"></a>Metadata  
+### <a name="metadata"></a>メタデータ  
 次のシステム ビューには、クラスター化インデックスのデータ圧縮に関する情報が含まれています。  
 -   [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) - **type** 列と **type_desc** 列には、CLUSTERED COLUMNSTORE と NONCLUSTERED COLUMNSTORE が含まれます。  
 -   [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) - **data_compression** 列と **data_compression_desc** 列には、COLUMNSTORE と COLUMNSTORE_ARCHIVE が含まれます。  

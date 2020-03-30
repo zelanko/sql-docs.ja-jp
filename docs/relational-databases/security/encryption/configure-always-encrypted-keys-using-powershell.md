@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2748ffa055927670b840a17590dc4e29436deb30
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73594462"
 ---
 # <a name="provision-always-encrypted-keys-using-powershell"></a>PowerShell を使用して Always Encrypted キーをプロビジョニングする
@@ -27,7 +27,7 @@ ms.locfileid: "73594462"
 Always Encrypted に SqlServer PowerShell を使用する方法については、「 [PowerShell を使用した Always Encrypted の構成](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)」を参照してください。
 
 
-## <a name="KeyProvisionWithoutRoles"></a> 役割の分離を指定せずにキーを与える
+## <a name="key-provisioning-without-role-separation"></a><a name="KeyProvisionWithoutRoles"></a> 役割の分離を指定せずにキーを与える
 
 このセクションで説明するキーのプロビジョニング方法では、セキュリティ管理者と DBA の間での役割の分離はサポートされていません。 以下の手順の一部では、物理キーの操作とキー メタデータの操作が組み合わされています。 そのため、この方法によるキーのプロビジョニングは、DevOps モデルを使用している組織の場合、またはデータベースがクラウドでホストされていて、(オンプレミスの DBA ではなく) クラウドの管理者の機密データへのアクセスを制限することが主な目的の場合に、お勧めします。 潜在的な対立関係に DBA が含まれる場合、または DBA に機密データへのアクセスを許可するべきではない場合は、この方法は推奨されません。
 
@@ -164,7 +164,7 @@ $cekName = "CEK1"
 New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKey $cmkName
 ```
 
-## <a name="KeyProvisionWithRoles"></a> 役割の分離を指定してキーを与える
+## <a name="key-provisioning-with-role-separation"></a><a name="KeyProvisionWithRoles"></a> 役割の分離を指定してキーを与える
 
 このセクションでは、セキュリティ管理者がデータベースにアクセスせず、データベース管理者にキー ストアまたはプレーンテキスト キーへのアクセス許可を与えない暗号化を構成するための手順について説明します。
 

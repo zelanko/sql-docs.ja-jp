@@ -85,10 +85,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: ebf82ec10f01b52b606a1250266884bbcd0a4497
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288616"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>コマンド プロンプトからの SQL Server のインストール
@@ -145,7 +145,7 @@ C:\SQLMedia\SQLServer2019> setup.exe /help
 > [!NOTE]
 > ローカル インストールの場合は、セットアップを管理者として実行する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をリモート共有からインストールする場合は、そのリモート共有に対する読み取り権限と実行権限を持つドメイン アカウントを使用する必要があります。 フェールオーバー クラスターのインストールの場合は、サービスとしてログインする権限、およびすべてのフェールオーバー クラスター ノード上のオペレーティング システムの一部として動作する権限を持つローカル管理者である必要があります。  
   
-##  <a name="ProperUse"></a> セットアップ パラメーターの適切な使用法  
+##  <a name="proper-use-of-setup-parameters"></a><a name="ProperUse"></a> セットアップ パラメーターの適切な使用法  
 正しい構文でインストール コマンドを作成するには、次のガイドラインに従ってください。  
   
 -   /PARAMETER (例: `/INDICATEPROGRESS`)
@@ -168,7 +168,7 @@ C:\SQLMedia\SQLServer2019> setup.exe /help
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント用として挙げられているパラメーターは、そのコンポーネント専用です。 SQL Server エージェント パラメーターおよび SQL Server ブラウザー パラメーターは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]をインストールする場合に適用されます。  
 
 
-##  <a name="Install"></a> インストール パラメーター  
+##  <a name="installation-parameters"></a><a name="Install"></a> インストール パラメーター  
  次の表にあるパラメーターを使用して、インストール用のコマンドライン スクリプトを作成します。  
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|説明|  
@@ -271,7 +271,7 @@ C:\SQLMedia\SQLServer2019> setup.exe /help
 setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /SQLSVCINSTANTFILEINIT="True" /IACCEPTSQLSERVERLICENSETERMS  
 ```  
   
-##  <a name="SysPrep"></a> SysPrep パラメーター  
+##  <a name="sysprep-parameters"></a><a name="SysPrep"></a> SysPrep パラメーター  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep の詳細については、次を参照してください  
   
  [SysPrep を使用して [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] をインストールする](../../database-engine/install-windows/install-sql-server-using-sysprep.md) 
@@ -374,7 +374,7 @@ setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 setup.exe /q /ACTION=CompleteImage /INSTANCENAME=MYNEWINST /INSTANCEID=<MYINST> /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /IACCEPTSQLSERVERLICENSETERMS  
 ```  
   
-##  <a name="Upgrade"></a> アップグレード パラメーター  
+##  <a name="upgrade-parameters"></a><a name="Upgrade"></a> アップグレード パラメーター  
  次の表に示すパラメーターは、アップグレード用のコマンド ライン スクリプトを作成する場合に使用します。 
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|説明|  
@@ -412,7 +412,7 @@ setup.exe /q /ACTION=CompleteImage /INSTANCENAME=MYNEWINST /INSTANCEID=<MYINST> 
 setup.exe /q /ACTION=upgrade /INSTANCEID = <INSTANCEID>/INSTANCENAME=MSSQLSERVER /RSUPGRADEDATABASEACCOUNT="<Provide a SQL Server logon account that can connect to the report server during upgrade>" /RSUPGRADEPASSWORD="<Provide a password for the report server upgrade account>" /ISSVCAccount="NT Authority\Network Service" /IACCEPTSQLSERVERLICENSETERMS  
 ```  
   
-##  <a name="Repair"></a> 修復パラメーター  
+##  <a name="repair-parameters"></a><a name="Repair"></a> 修復パラメーター  
  次の表に示すパラメーターは、修復用のコマンド ライン スクリプトを作成する場合に使用します。 
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|説明|  
@@ -436,7 +436,7 @@ setup.exe /q /ACTION=upgrade /INSTANCEID = <INSTANCEID>/INSTANCENAME=MSSQLSERVER
 setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>  
 ```  
   
-##  <a name="Rebuild"></a> 再構築システム データベース パラメーター  
+##  <a name="rebuild-system-database-parameters"></a><a name="Rebuild"></a> 再構築システム データベース パラメーター  
  次の表に示すパラメーターは、master、model、msdb、および tempdb の各システム データベースを再構築するコマンド ライン スクリプトを作成する場合に使用します。 詳細については、「 [システム データベースの再構築](../../relational-databases/databases/rebuild-system-databases.md)」を参照してください。 
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|説明|  
@@ -455,7 +455,7 @@ setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **省略可能**|tempdb ログ ファイルの初期サイズを MB 単位で指定します。 最大 1024 のサイズまで指定できます。 既定値:<br /><br /> [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]: 4<br /><br /> 他のすべてのエディション: 8<br /><br /> 許容範囲: 最小値 = 既定値 (4 または 8)、最大値 = 1024|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILEGROWTH<br /><br /> **省略可能**|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] で導入されました。 各 tempdb ログ ファイルの初期サイズを指定します。<br/><br/>既定値 = [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] の場合は 4 MB、その他のエディションの場合は 8 MB。<br/><br/>最小値 = (4 MB または 8 MB)。<br/><br/>最大値 = 1024 MB ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] の場合は 262,144 MB)。|  
   
-##  <a name="Uninstall"></a> アンインストール パラメーター  
+##  <a name="uninstall-parameters"></a><a name="Uninstall"></a> アンインストール パラメーター  
  次の表に示すパラメーターは、アンインストール用のコマンド ライン スクリプトを作成する場合に使用します。 
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|説明|  
@@ -478,7 +478,7 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
   
  名前付きインスタンスを削除する場合は、この記事で前に示した例の "MSSQLSERVER" の代わりにインスタンス名を指定します。 
   
-##  <a name="ClusterInstall"></a> フェールオーバー クラスター パラメーター  
+##  <a name="failover-cluster-parameters"></a><a name="ClusterInstall"></a> フェールオーバー クラスター パラメーター  
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] フェールオーバー クラスター インスタンスをインストールする前に、次の記事を確認してください。  
   
 -   [[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
@@ -743,7 +743,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSUPGRADEDATABASEACCOUNT<br /><br /> **省略可能**|プロパティは、2008 R2 以前のバージョンの SharePoint モードのレポート サーバーをアップグレードする場合にのみ使用されます。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] で変更された古い SharePoint モード アーキテクチャを使用するレポート サーバーに対しては、追加のアップグレード操作が実行されます。 このオプションがコマンドライン インストールに含まれていない場合、古いレポート サーバー インスタンス用の既定のサービス アカウントが使用されます。 このプロパティが使用されている場合は、 **/RSUPGRADEPASSWORD** プロパティを使用してアカウントのパスワードを指定します。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSUPGRADEPASSWORD<br /><br /> **省略可能**|既存のレポート サーバー サービス アカウントのパスワード。|  
   
-####  <a name="AddNode"></a> ノード追加パラメーター  
+####  <a name="add-node-parameters"></a><a name="AddNode"></a> ノード追加パラメーター  
  次の表に示すパラメーターは、ノード追加用のコマンド ライン スクリプトを作成する場合に使用します。 
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|説明|  
@@ -810,7 +810,7 @@ setup.exe /q /ACTION=AddNode /INSTANCENAME="<Insert Instance Name>" /SQLSVCACCOU
 setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICATEPROGRESS] /CONFIRMIPDEPENDENCYCHANGE=0  
 ```  
   
-##  <a name="Accounts"></a> サービス アカウント パラメーター  
+##  <a name="service-account-parameters"></a><a name="Accounts"></a> サービス アカウント パラメーター  
  ビルトイン アカウント、ローカル アカウント、またはドメイン アカウントを使用して、SQL Server サービスを構成できます。 
   
 > [!NOTE] 
@@ -830,7 +830,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
   > Reporting Services の機能は SQL Server 2017 から削除されました。 SQL Server Reporting Services のアカウント パラメーターは、SQL Server 2017 より前のバージョンにのみ適用されます。 
 
 
-##  <a name="Feature"></a> 機能パラメーター  
+##  <a name="feature-parameters"></a><a name="Feature"></a> 機能パラメーター  
  特定の機能をインストールするには、/FEATURES パラメーターを使用して、以下の表の親機能の値または機能の値を指定します。 SQL Server の各エディションでサポートされる機能の一覧については、「[[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] の各エディションとサポートされている機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。 
   
 |親機能パラメーター|機能パラメーター|説明|  
@@ -881,7 +881,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |/FEATURES=BOL|ヘルプ コンテンツを表示および管理するための SQL Server オンライン ブック コンポーネントをインストールします。|  
 |/FEATURES=SQLEngine,PolyBase|PolyBase エンジンをインストールします。|  
   
-##  <a name="RoleParameters"></a> ロール パラメーター  
+##  <a name="role-parameters"></a><a name="RoleParameters"></a> ロール パラメーター  
  セットアップ ロール パラメーター (/Role パラメーター) は、あらかじめ構成された機能の選択内容をインストールするために使用されます。 SSAS ロールでは、既存の SharePoint ファーム、または新しい未構成のファームのどちらかに SSAS インスタンスがインストールされます。 これらのシナリオをサポートするために、2 つのセットアップ ロールが用意されています。 インストールするために選択できるセットアップ ロールは一度に 1 つだけです。 セットアップ ロールを選択すると、そのロールに所属する機能とコンポーネントがセットアップによってインストールされます。 ロールに指定されている機能とコンポーネントは変更できません。 機能ロール パラメーターの使用方法の詳細については、「 [コマンド プロンプトからの Power Pivot のインストール](https://msdn.microsoft.com/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328)」をご覧ください。 
   
  AllFeatures_WithDefaults ロールは、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] のエディションの既定の動作であり、このロールを指定した場合は、ユーザーに対して表示されるダイアログ ボックスの数が減少します。 このロールは、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]以外の SQL Server エディションをインストールするときに、コマンド ラインから指定できます。 
@@ -892,7 +892,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |SPI_AS_NewFarm|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] および [!INCLUDE[ssDE](../../includes/ssde-md.md)] を [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] の名前付きインスタンスとして、新しい未構成の Office [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] ファームまたはスタンドアロン サーバーにインストールします。 SQL Server セットアップは、機能ロールのインストール時にファームを構成します。|メモリ内のデータの格納と処理用にあらかじめ構成された、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 計算エンジン。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ソリューション パッケージ<br /><br /> SQL Server オンライン ブック<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> 構成ツール (Configuration Tools)<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  
 |AllFeatures_WithDefaults|現在のエディションで使用できるすべての機能をインストールします。<br /><br /> 現在のユーザーを SQL Server **sysadmin** 固定サーバー ロールに追加します。<br /><br /> [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 以降を使用していて、そのオペレーティング システムがドメイン コントローラーでない場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]と [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は既定で NTAUTHORITY\NETWORK SERVICE アカウントを使用し、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は既定で NTAUTHORITY\NETWORK SERVICE アカウントを使用します。<br /><br /> このロールは、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]のエディションで、既定で有効になっています。 その他のエディションの場合、このロールは有効になっていませんが、UI またはコマンドライン パラメーターを使用して指定できます。|[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]のエディションの場合は、そのエディションで使用できる機能のみがインストールされます。 その他のエディションの場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべての機能がインストールされます。<br /><br /> **AllFeatures_WithDefaults** パラメーターは、**AllFeatures_WithDefaults** パラメーターの設定をオーバーライドする他のパラメーターと組み合わせることができます。 たとえば、 **AllFeatures_WithDefaults** パラメーターと **/Features=RS** パラメーターを組み合わせて使用すると、すべての機能をインストールするコマンドがオーバーライドされ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]のみがインストールされますが、 **AllFeatures_WithDefaults** パラメーターを適用することで、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]に対して既定のサービス アカウントが使用されます。<br /><br /> **AllFeatures_WithDefaults** パラメーターを **/ADDCURRENTUSERASSQLADMIN=FALSE** と共に使用すると、準備ダイアログには現在のユーザーに関する情報が自動入力されません。 SQL Server エージェントのサービス アカウントとパスワードを指定するには、 **/AGTSVCACCOUNT** と **/AGTSVCPASSWORD** を追加します。|  
   
-##  <a name="RollOwnership"></a> /FAILOVERCLUSTERROLLOWNERSHIP パラメーターを使用したフェールオーバーの動作の制御  
+##  <a name="controlling-failover-behavior-using-the-failoverclusterrollownership-parameter"></a><a name="RollOwnership"></a> /FAILOVERCLUSTERROLLOWNERSHIP パラメーターを使用したフェールオーバーの動作の制御  
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] フェールオーバー クラスターを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードするには、フェールオーバー クラスター ノードのパッシブ ノードから開始して、1 ノードごとにセットアップを実行する必要があります。 フェールオーバー クラスター インスタンスのノード総数と、アップグレード済みのノードの数との違いに応じて、セットアップがアップグレード済みのノードにフェールオーバーする時期が決まります。 ノード総数の半数以上がアップグレード済みの場合、既定のセットアップにより、アップグレード済みのノードにフェールオーバーが発生します。 
  
 アップグレード プロセス中にクラスター ノードのフェールオーバーの動作を制御するには、コマンド プロンプトでアップグレード操作を実行して /FAILOVERCLUSTERROLLOWNERSHIP パラメーターを使用し、アップグレード操作によってノードがオフラインになる前にフェールオーバーの動作を制御します。 このパラメーターの使用方法は次のとおりです。  
@@ -903,7 +903,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
   
 -   /FAILOVERCLUSTERROLLOWNERSHIP=2 は既定の設定です。 これは、このパラメーターが指定されていない場合に使用されます。 この設定は、SQL Server セットアップによってクラスターの所有権 (グループの移動) が必要に応じて管理されることを示しています。 
   
-##  <a name="InstanceID"></a> インスタンス ID (InstanceID) の構成  
+##  <a name="instance-id-or-instanceid-configuration"></a><a name="InstanceID"></a> インスタンス ID (InstanceID) の構成  
  インスタンス ID (/InstanceID) パラメーターは、インスタンス コンポーネントのインストール先と、インスタンスのレジストリ パスを指定するために使用されます。 INSTANCEID の値は文字列で、一意である必要があります。 
   
 -   SQL インスタンス ID: `MSSQLxx.<INSTANCEID>`  

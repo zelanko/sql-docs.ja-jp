@@ -16,10 +16,10 @@ ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 25a2d1fe5eba1f52fc9738b9191f9bdade40002d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295805"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>パッケージに対する SQL Server エージェント ジョブ
@@ -43,7 +43,7 @@ ms.locfileid: "71295805"
   
 -   [スケジュールされたパッケージのトラブルシューティング](#trouble)  
   
-##  <a name="jobs"></a> Scheduling Jobs in SQL Server Agent  
+##  <a name="scheduling-jobs-in-sql-server-agent"></a><a name="jobs"></a> Scheduling Jobs in SQL Server Agent  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントとは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを実行してタスクの自動化とスケジュール設定を可能にする、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってインストールされるサービスです。 ジョブを自動的に実行できるようにするには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスを実行している必要があります。 詳細については、「 [Configure SQL Server Agent](https://docs.microsoft.com/sql/ssms/agent/configure-sql-server-agent)」をご覧ください。  
   
  **のインスタンスに接続すると、** のオブジェクト エクスプローラーに [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [SQL Server エージェント] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]ノードが表示されます。  
@@ -56,7 +56,7 @@ ms.locfileid: "71295805"
   
  ジョブ完了時にオペレーターへ電子メール メッセージを送信する通知オプションなどの設定、警告の追加を行い、ジョブを拡張できます。 詳細については、「 [警告](https://docs.microsoft.com/sql/ssms/agent/alerts)」を参照してください。  
   
-##  <a name="packages"></a> Scheduling Integration Services Packages  
+##  <a name="scheduling-integration-services-packages"></a><a name="packages"></a> Scheduling Integration Services Packages  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを作成して [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのスケジュールを設定する場合は、少なくとも 1 つのステップを追加し、ステップの種類を **[SQL Server Integration Services パッケージ]** に設定する必要があります。 1 つのジョブに複数のステップを含め、それぞれのステップで異なるパッケージを実行できます。  
   
  ジョブ ステップからの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの実行は、 **dtexec** ユーティリティ (dtexec.exe) および **DTExecUI** (dtexecui.exe) を使用したパッケージの実行に似ています。 コマンド ライン オプションまたは **[パッケージ実行ユーティリティ]** ダイアログ ボックスを使用してパッケージの実行時オプションを設定する代わりに、 **[新しいジョブ ステップ]** ダイアログ ボックスで実行時オプションを設定します。 パッケージを実行するためのオプションの詳細については、「 [dtexec ユーティリティ](../../integration-services/packages/dtexec-utility.md)」を参照してください。  
@@ -65,7 +65,7 @@ ms.locfileid: "71295805"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用してパッケージを実行する方法を示しているビデオについては、MSDN ライブラリのビデオのホームページの「[SQL Server エージェントを使用してパッケージ実行を自動化する方法 (SQL Server ビデオ)](https://go.microsoft.com/fwlink/?LinkId=141771)」をご覧ください。  
   
-##  <a name="trouble"></a> トラブルシューティング  
+##  <a name="troubleshooting"></a><a name="trouble"></a> トラブルシューティング  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブ ステップは、パッケージを [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] およびコマンド ラインで正常に実行できる場合でも、パッケージの開始に失敗することがあります。 この問題には、いくつかの一般的な原因と、推奨されるソリューションがあります。 詳細については、次のリソースを参照してください。  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポート技術情報の記事「 [SQL Server エージェントのジョブ ステップから SSIS パッケージを呼び出したときに SSIS パッケージが実行されません](https://support.microsoft.com/kb/918760)  
@@ -100,7 +100,7 @@ ms.locfileid: "71295805"
   
     "概要"、"すべてのメッセージ"、および "実行のパフォーマンス" の各レポートの詳細については、「 [Integration Services サーバーのレポート](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports)」を参照してください。  
 
-## <a name="schedule"></a> SQL Server エージェントを使用してパッケージのスケジュールを設定する
+## <a name="schedule-a-package-by-using-sql-server-agent"></a><a name="schedule"></a> SQL Server エージェントを使用してパッケージのスケジュールを設定する
   以下の手順は、パッケージを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブ ステップを使用して、パッケージの実行を自動化する方法を示しています。  
   
 ### <a name="to-automate-package-execution-by-using-sql-server-agent"></a>SQL Server エージェントを使用してパッケージの実行を自動化するには  
@@ -153,7 +153,7 @@ ms.locfileid: "71295805"
   
      **パッケージ ソース:** SSIS カタログ  
   
-    |タブ|オプション|  
+    |タブ|Options|  
     |---------|-------------|  
     |**Package**|**[サーバー]**<br /><br /> SSISDB カタログをホストしているデータベース サーバー インスタンスの名前を入力または選択します。<br /><br /> **[SSIS カタログ]** がパッケージ ソースである場合、サーバーへのログオンに使用できるのは Microsoft Windows ユーザー アカウントだけです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証は使用できません。|  
     ||**Package**<br /><br /> 参照ボタンをクリックして、パッケージを選択します。<br /><br /> **オブジェクト エクスプローラー** の **[Integration Services カタログ]** ノードの下にあるフォルダー内のパッケージを選択します。|  
@@ -169,7 +169,7 @@ ms.locfileid: "71295805"
   
      SQL Server、SSIS パッケージ ストア、またはファイル システムに格納されるパッケージに設定できるオプションの多くは、 **dtexec** コマンド プロンプト ユーティリティのコマンド ライン オプションに対応しています。 ユーティリティとコマンド ライン オプションの詳細については、「 [dtexec ユーティリティ](../../integration-services/packages/dtexec-utility.md)」を参照してください。  
   
-    |タブ|オプション|  
+    |タブ|Options|  
     |---------|-------------|  
     |**Package**<br /><br /> これらは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストアに格納されるパッケージのタブ オプションです。|**[サーバー]**<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスのデータベース サーバー インスタンスの名前を入力または選択します。|  
     ||**[Windows 認証を使用する]**<br /><br /> Microsoft Windows ユーザー アカウントを使用してサーバーにログオンする場合に、このオプションを選択します。|  

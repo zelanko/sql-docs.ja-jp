@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 95fe64603a08d4531d43e45c0b6d76c191fe7d34
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73843713"
 ---
 # <a name="what-are-the-sql-database-functions"></a>Microsoft SQL データベース関数とは
@@ -52,7 +52,7 @@ SQL データベースで使うことができる組み込み関数のカテゴ�
 
 ### <a name="categories-of-scalar-functions"></a>スカラー関数のカテゴリ
   
-|関数のカテゴリ|[説明]|  
+|関数のカテゴリ|説明|  
 |-----------------------|-----------------|  
 |[構成関数](configuration-functions-transact-sql.md)|現在の構成についての情報を返します。|  
 |[変換関数](conversion-functions-transact-sql.md)|データ型のキャストと変換をサポートします。|  

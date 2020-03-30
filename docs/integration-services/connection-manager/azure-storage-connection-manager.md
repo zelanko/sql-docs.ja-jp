@@ -15,10 +15,10 @@ ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6d3912e2b5cbf8051348191cf3efb6ed2d20d551
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74687191"
 ---
 # <a name="azure-storage-connection-manager"></a>Azure Storage 接続マネージャー
@@ -68,5 +68,5 @@ Azure Storage 接続マネージャーにより、SQL Server Integration Service
 ## <a name="secure-network-traffic-to-your-storage-account"></a>ストレージ アカウントへのネットワークトラフィックをセキュリティで保護する
 Azure Data Factory は、Azure Storage にとって[信頼できる Microsoft サービス](https://docs.microsoft.com/azure/storage/common/storage-network-security#trusted-microsoft-services)になりました。 マネージド ID の認証を使用すると、[選択したネットワークへのアクセスを制限](https://docs.microsoft.com/azure/storage/common/storage-network-security#change-the-default-network-access-rule)することで、ストレージ アカウントをセキュリティで保護することができます。その上、データ ファクトリでご利用のストレージ アカウントに引き続きアクセスすることができます。 手順については、「[例外の管理](https://docs.microsoft.com/azure/storage/common/storage-network-security#managing-exceptions)」を参照してください。
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services &#40;SSIS&#41; の接続](../../integration-services/connection-manager/integration-services-ssis-connections.md)

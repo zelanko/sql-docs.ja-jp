@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bfedebc32722f860fb0c84f385742c441023140d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68072210"
 ---
 # <a name="throw-transact-sql"></a>THROW (Transact-SQL)
@@ -48,7 +48,7 @@ THROW [ { error_number | @local_variable },
  *message*  
  例外を説明する文字列または変数です。 *message* は **nvarchar(2048)** です。  
   
- *状態*  
+ *state*  
  メッセージに関連付けられる状態を示す、0 から 255 の範囲の定数または変数です。 *state* は **tinyint** です。  
   
 ## <a name="remarks"></a>解説  

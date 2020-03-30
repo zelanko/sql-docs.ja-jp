@@ -19,10 +19,10 @@ ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 68f0f1ea718d867b2fb26f08bb5b6c30e49dd739
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71291222"
 ---
 # <a name="pivot-transformation"></a>ピボット変換
@@ -49,7 +49,7 @@ ms.locfileid: "71291222"
   
  入力データには重複する行が含まれる場合があります。重複する行があると、ピボット変換は失敗します。 "重複する行" とは、設定キー列およびピボット列に同じ値を持つ行のことです。 エラーを回避するには、エラー行をエラー出力にリダイレクトするように変換を構成するか、重複する行が存在しないように値を事前に集計しておくことができます。  
   
-##  <a name="options"></a> [ピボット] ダイアログ ボックスのオプション  
+##  <a name="options-in-the-pivot-dialog-box"></a><a name="options"></a> [ピボット] ダイアログ ボックスのオプション  
  ピボット操作を構成するには、 **[ピボット]** ダイアログ ボックスのオプションを設定します。 **[ピボット]** ダイアログ ボックスを開くには、 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]でパッケージにピボット変換を追加し、コンポーネントを右クリックして **[編集]** をクリックします。  
   
  **[ピボット]** ダイアログ ボックスのオプションは次のとおりです。  

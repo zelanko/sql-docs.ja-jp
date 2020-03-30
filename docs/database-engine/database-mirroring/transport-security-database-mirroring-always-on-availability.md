@@ -21,10 +21,10 @@ ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 85ca560e24fac75897d0b65946121e3ca4251e20
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75252750"
 ---
 # <a name="transport-security---database-mirroring---always-on-availability"></a>トランスポート セキュリティ - データベース ミラーリング - AlwaysOn 可用性
@@ -40,12 +40,12 @@ ms.locfileid: "75252750"
   
 -   [関連タスク](#RelatedTasks)  
   
-##  <a name="Authentication"></a> [認証]  
+##  <a name="authentication"></a><a name="Authentication"></a> [認証]  
  認証とは、ユーザーが本人であるかどうかを検査するプロセスです。 データベース ミラーリング エンドポイント間の接続には、認証が必要になります。 パートナーまたはミラーリング監視サーバーから接続を要求された場合は、その接続要求を認証する必要があります。  
   
  サーバー インスタンスによりデータベース ミラーリングまたは [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] に使用される認証の種類は、データベース ミラーリング エンドポイントのプロパティで指定します。 データベース ミラーリング エンドポイントに使用できるトランスポート セキュリティには、次の 2 種類があります:Windows 認証 (セキュリティ サポート プロバイダー インターフェイス (SSPI)) と証明書ベース認証。  
   
-### <a name="windows-authentication"></a>[Windows 認証]  
+### <a name="windows-authentication"></a>Windows 認証  
  Windows 認証では、各サーバー インスタンスが相手側のインスタンスにログインする際には、プロセスを実行している Windows ユーザー アカウントの Windows 資格情報が使用されます。 Windows 認証では、次のように、ログイン アカウントの手動による構成が必要になる場合があります。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが同じドメイン アカウントでサービスとして実行される場合、追加の構成は必要ありません。  
@@ -64,7 +64,7 @@ ms.locfileid: "75252750"
   
  接続を設定するときに、サーバー インスタンスにより、独自の証明書の秘密キーを使用して ID が作成されます。 接続要求を受け取るサーバー インスタンスでは、送信者の証明書の公開キーを使用して送信者の ID を認証します。 たとえば、Server_A と Server_B という 2 つのサーバー インスタンスを考えてみます。 Server_A では、Server_B に接続要求を送信する前に、秘密キーを使用して接続ヘッダーを暗号化します。 Server_B では、Server_A の証明書の公開キーを使用して接続ヘッダーの暗号化を解除します。 暗号化が解除されたヘッダーが正しい場合、Server_B は、そのヘッダーが Server_A によって暗号化されていたので、接続は認証されると認識します。 暗号化が解除されたヘッダーが正しくない場合、Server_B は、接続要求が認証されないため、接続が拒否されると認識します。  
   
-##  <a name="DataEncryption"></a> データの暗号化  
+##  <a name="data-encryption"></a><a name="DataEncryption"></a> データの暗号化  
  既定では、データベース ミラーリング エンドポイントは、ミラーリング接続経由で送信されるデータの暗号化を必要とします。 このようなエンドポイントの接続対象となるエンドポイントも暗号化を使用している必要があります。 ネットワークの安全性を保証できる場合を除いて、データベース ミラーリング接続に対して暗号化を使用することをお勧めします。 暗号化は、無効にしたり、必須ではない状態でサポートすることもできます。 暗号化が無効になっていると、データは暗号化されず、エンドポイントは暗号化を必要とするエンドポイントに接続できません。 暗号化がサポートされている場合は、相手側のエンドポイントによって暗号化がサポートまたは必要とされている場合にのみデータが暗号化されます。  
   
 > [!NOTE]  
@@ -88,7 +88,7 @@ ms.locfileid: "75252750"
   
  暗号化を指定する [!INCLUDE[tsql](../../includes/tsql-md.md)] 構文の詳細については、「[CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)」を参照してください。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
  **データベース ミラーリング エンドポイントのトランスポート セキュリティを構成するには**  
   
 -   [Windows 認証でのデータベース ミラーリング エンドポイントの作成 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  

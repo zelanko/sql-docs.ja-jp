@@ -12,10 +12,10 @@ ms.assetid: 5ebdc186-e50f-4d14-bbf4-95af5051e4a4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 69a12437e3b1e611cf9e48d60c9fd77cd02f63bc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67971867"
 ---
 # <a name="sqlservercallablestatement-members"></a>SQLServerCallableStatement のメンバー
@@ -37,7 +37,7 @@ ms.locfileid: "67971867"
   
 ## <a name="methods"></a>メソッド  
   
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)|([SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) から継承されます) この CallableStatement オブジェクトのコマンド バッチにパラメーターのセットを追加します。|  
 |[cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|([SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) から継承されます) CallableStatement オブジェクトによって現在実行されている SQL ステートメントを取り消します。|  

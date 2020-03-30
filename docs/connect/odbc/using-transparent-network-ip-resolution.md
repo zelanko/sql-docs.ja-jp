@@ -11,10 +11,10 @@ ms.assetid: d255208f-d486-4ad3-8080-61c6e0261825
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: df5b0233168c52b4f79cdc6d2d03cd7b72e16046
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68008477"
 ---
 # <a name="using-transparent-network-ip-resolution"></a>透過的なネットワーク IP の解決の使用
@@ -46,7 +46,7 @@ Keyword|値|Default
 
 `SQL_COPT_SS_TNIR` の接続前属性を使用すると、アプリケーションでこの設定をプログラムによって制御できます。
 
-接続属性|   サイズ/型|  Default| Value| 説明
+接続属性|   サイズ/型|  Default| 値| 説明
 -|-|-|-|-
 `SQL_COPT_SS_TNIR` (1249)| `SQL_IS_INTEGER` または `SQL_IS_UINTEGER`| `SQL_IS_ON`(1)、`SQL_IS_OFF`(0)|`SQL_IS_ON`|TNIR を有効または無効にします。
 

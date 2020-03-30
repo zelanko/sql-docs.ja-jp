@@ -26,10 +26,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a322934e89cb0b7b0c7959d3078c52a4a3fac65a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75952421"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
@@ -195,7 +195,7 @@ WITH NAME = Philipe
 GO
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)
 - [DROP USER (Transact-SQL)](../../t-sql/statements/drop-user-transact-sql.md)
@@ -366,7 +366,7 @@ WITHNAME = Philipe
 GO
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)
 - [DROP USER (Transact-SQL)](../../t-sql/statements/drop-user-transact-sql.md)
@@ -619,7 +619,7 @@ ALTER USER [westus/joe] WITH LOGIN = joe@westus.com, name= joe_alias
 ALTER USER [westus\mygroup] WITH LOGIN = mygroup
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)
 - [DROP USER (Transact-SQL)](../../t-sql/statements/drop-user-transact-sql.md)
@@ -731,7 +731,7 @@ ALTER USER Mary51 WITH DEFAULT_SCHEMA = Purchasing;
 GO
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)
 - [DROP USER (Transact-SQL)](../../t-sql/statements/drop-user-transact-sql.md)
@@ -841,7 +841,7 @@ ALTER USER Mary51 WITH DEFAULT_SCHEMA = Purchasing;
 GO
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)
 - [DROP USER (Transact-SQL)](../../t-sql/statements/drop-user-transact-sql.md)

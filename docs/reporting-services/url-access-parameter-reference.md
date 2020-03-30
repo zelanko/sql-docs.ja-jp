@@ -13,10 +13,10 @@ ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0ac67de4831d1785f17029bc6c68fa6f7d8aeb16
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77147385"
 ---
 # <a name="url-access-parameter-reference"></a>URL アクセス パラメーター リファレンス
@@ -29,7 +29,7 @@ ms.locfileid: "77147385"
 > SharePoint と Reporting Services の統合は、SQL Server 2016 以降では使用できません。
   
 
-##  <a name="bkmk_htmlviewer"></a> HTML ビューアー コマンド (rc:)
+##  <a name="html-viewer-commands-rc"></a><a name="bkmk_htmlviewer"></a> HTML ビューアー コマンド (rc:)
  - HTML ビューアー コマンドは HTML ビューアーを対象として使用され、接頭辞として *rc:* が付きます。
   
 -   **Toolbar**:ツール バーの表示と非表示を切り替えます。 このパラメーターの値が **false**の場合、残りのオプションすべてが無視されます。 このパラメーターを省略すると、サポートされている表示形式でツール バーが自動的に表示されます。 このパラメーターの既定値は **true**です。
@@ -113,7 +113,7 @@ ms.locfileid: "77147385"
   
 -   **デバイス情報設定**: `rc:tag=value` の形式でデバイス情報設定を指定します。この *tag* は、現在使用されている表示拡張機能に固有のデバイス情報設定の名前です (*Format* パラメーターの説明を参照してください)。たとえば、IMAGE 表示拡張機能の *OutputFormat* デバイス情報設定を使用すると、URL アクセス文字列に `...&rs:Format=IMAGE&rc:OutputFormat=JPEG` パラメーターを指定することで、レポートを JPEG 画像で表示できます。 拡張機能に固有のすべてのデバイス情報設定の詳細については、「[表示拡張機能のデバイス情報設定 &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)」を参照してください。
   
-##  <a name="bkmk_reportserver"></a> レポート サーバー コマンド (rs:)
+##  <a name="report-server-commands-rs"></a><a name="bkmk_reportserver"></a> レポート サーバー コマンド (rs:)
  レポート サーバー コマンドには接頭辞として *rs:* が付き、レポート サーバーを対象として使用されます。
   
 -   **コマンド**:アイテムの種類に応じて、カタログ アイテムに対して操作を実行します。 既定値は、URL アクセス文字列で参照されるカタログ アイテムの種類で決まります。 有効な値は次のとおりです。
@@ -264,7 +264,7 @@ ms.locfileid: "77147385"
   
 -   **ShowHideToggle**:レポートのセクションの表示と非表示を切り替えます。 切り替えるセクションを表す正の整数を指定します。
   
-##  <a name="bkmk_webpart"></a> レポート ビューアー Web パーツのコマンド (rv:)
+##  <a name="report-viewer-web-part-commands-rv"></a><a name="bkmk_webpart"></a> レポート ビューアー Web パーツのコマンド (rv:)
  次の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] レポート パラメーター名は予約されており、SharePoint と統合されているレポート ビューアー Web パーツを対象とするために使用されます。 これらのパラメーター名の先頭には *rv:* が付いています。 レポート ビューアー Web パーツでは、*rs:ParameterLanguage* パラメーターも受け取られます。
   
 -   **Toolbar**:レポート ビューアー Web パーツのツール バーの表示を制御します。 既定値は **Full**です。 可能な値は次のとおりです。

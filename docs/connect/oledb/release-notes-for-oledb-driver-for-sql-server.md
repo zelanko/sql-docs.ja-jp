@@ -7,18 +7,16 @@ ms.topic: conceptual
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie
-ms.openlocfilehash: c0a9e1726958a1eda7cf71817479f7c37dcfe854
-ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
+ms.openlocfilehash: 2c50ae262516fab757d4de7c254af79f0184ea84
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79090528"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80345434"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>Microsoft OLE DB Driver for SQL Server のリリース ノート
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-
-[!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
 このページでは、Microsoft OLE DB Driver for SQL Server の各バージョンで追加された内容について説明します。
 

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c6dff2998686c73693f73ecbcad0b9b7f360ca86
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67940711"
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics イベント クラス
@@ -28,7 +28,7 @@ ms.locfileid: "67940711"
   
 ### <a name="eventsubclass-0"></a>EventSubclass 0  
   
-|データ列名|データ型|[説明]|列 ID|フィルターの適用|  
+|データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|NULL|52|はい|  
 |BinaryData|**画像**|NULL|2|はい|  
@@ -47,7 +47,7 @@ ms.locfileid: "67940711"
   
 ### <a name="eventsubclass-1"></a>EventSubclass 1  
   
-|データ列名|データ型|[説明]|列 ID|フィルターの適用|  
+|データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|このプランが再コンパイルされた累積回数。|52|はい|  
 |BinaryData|**画像**|コンパイル済みプランのバイナリ XML。|2|はい|  
@@ -71,7 +71,7 @@ ms.locfileid: "67940711"
   
 ### <a name="eventsubclass-2"></a>EventSubClass 2  
   
-|データ列名|データ型|[説明]|列 ID|フィルターの適用|  
+|データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|このプランが再コンパイルされた累積回数。|52|はい|  
 |BinaryData|**画像**|コンパイル済みプランのバイナリ XML。|2|はい|  
@@ -94,7 +94,7 @@ ms.locfileid: "67940711"
   
 ### <a name="eventsubclass-3"></a>EventSubClass 3  
   
-|データ列名|データ型|[説明]|列 ID|フィルターの適用|  
+|データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|このプランが再コンパイルされた累積回数。|52|はい|  
 |BinaryData|**画像**|NULL|2|はい|  
@@ -114,7 +114,7 @@ ms.locfileid: "67940711"
   
 ### <a name="eventsubclass-4"></a>EventSubClass 4  
   
-|データ列名|データ型|[説明]|列 ID|フィルターの適用|  
+|データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|NULL|52|はい|  
 |BinaryData|**画像**|NULL|2|はい|  
@@ -134,7 +134,7 @@ ms.locfileid: "67940711"
   
 ### <a name="eventsubclass-5"></a>EventSubClass 5  
   
-|データ列名|データ型|[説明]|列 ID|フィルターの適用|  
+|データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|NULL|52|はい|  
 |BinaryData|**画像**|NULL|2|はい|  

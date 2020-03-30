@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: d6f17b46cb396ee34133e67a528e22cab571cceb
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 57cd755c29262d64d7e5215c0ef053a28c5f3507
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288386"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79510203"
 ---
 # <a name="query-processing-architecture-guide"></a>クエリ処理アーキテクチャ ガイド
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -139,7 +139,7 @@ GO
 4. リレーショナル エンジンによって、実行プランの実行が開始されます。 リレーショナル エンジンは、ベース テーブルからのデータを必要とする手順を処理するときに、要求した行セットのデータを渡すようにストレージ エンジンに要求します。
 5. リレーショナル エンジンでは、ストレージ エンジンから返されたデータが結果セット用に定義された形式に変換され、結果セットをクライアントに返します。
 
-### <a name="ConstantFolding"></a> 定数のたたみ込みと式の評価 
+### <a name="constant-folding-and-expression-evaluation"></a><a name="ConstantFolding"></a> 定数のたたみ込みと式の評価 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ではクエリのパフォーマンスを向上するために、いくつかの定数式を前もって評価します。 これを定数のたたみ込みと呼びます。 定数は [!INCLUDE[tsql](../includes/tsql-md.md)] リテラル (`3`、`'ABC'`、`'2005-12-31'`、`1.0e3`、`0x12345678` など) です。
 
 #### <a name="foldable-expressions"></a>たたみ込み可能な式
@@ -181,7 +181,7 @@ WHERE TotalDue > 117.00 + 1000.00;
 
 一方、ユーザー定義関数を含んだ式は決定的関数であってもたたみ込まれないので、`dbo.f` をスカラー値のユーザー定義関数とした場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、式 `dbo.f(100)` はたたみ込まれません。 パラメーター化の詳細については、この記事で後述する「[強制パラメーター化](#ForcedParam)」を参照してください。
 
-#### <a name="ExpressionEval"></a>式の評価 
+#### <a name="expression-evaluation"></a><a name="ExpressionEval"></a>式の評価 
 また、定数のたたみ込みは行われませんが、引数がコンパイル時に確定する式は、引数がパラメーターと定数のどちらでも、最適化のときにクエリ オプティマイザーのカーディナリティ (結果セットのサイズ) 推定機能によって評価されます。
 
 具体的には、次の組み込み関数と特殊演算子は、入力がすべて確定する場合コンパイル時に評価されます: `UPPER`、`LOWER`、`RTRIM`、`DATEPART( YY only )`、`GETDATE`、`CAST`、`CONVERT`。 次に示す演算子も、入力がすべて確定する場合コンパイル時に評価されます。
@@ -550,9 +550,9 @@ GO
 [!INCLUDE[ssResult](../includes/ssresult-md.md)]
 
 ```
-memory_object_address   objtype   refcounts   usecounts   query_plan_hash    query_hash
----------------------   -------   ---------   ---------   ------------------ ------------------ 
-0x000001CC6C534060      Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+memory_object_address    objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------    -------   ---------   ---------   ------------------ ------------------ 
+0x000001CC6C534060        Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
 
 plan_handle                                                                               
 ------------------------------------------------------------------------------------------
@@ -573,9 +573,9 @@ GO
 プラン キャッシュで検出できる内容をもう一度確認します。 [!INCLUDE[ssResult](../includes/ssresult-md.md)]
 
 ```
-memory_object_address   objtype   refcounts   usecounts   query_plan_hash    query_hash
----------------------   -------   ---------   ---------   ------------------ ------------------ 
-0x000001CC6C534060      Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+memory_object_address    objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------    -------   ---------   ---------   ------------------ ------------------ 
+0x000001CC6C534060        Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
 
 plan_handle                                                                               
 ------------------------------------------------------------------------------------------
@@ -599,10 +599,10 @@ GO
 プラン キャッシュで検出できる内容をもう一度確認します。 [!INCLUDE[ssResult](../includes/ssresult-md.md)]
 
 ```
-memory_object_address   objtype   refcounts   usecounts   query_plan_hash    query_hash
----------------------   -------   ---------   ---------   ------------------ ------------------ 
-0x000001CD01DEC060      Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
-0x000001CC6C534060      Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D
+memory_object_address    objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------    -------   ---------   ---------   ------------------ ------------------ 
+0x000001CD01DEC060        Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+0x000001CC6C534060        Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D
 
 plan_handle                                                                               
 ------------------------------------------------------------------------------------------
@@ -690,7 +690,7 @@ sql_handle
 > [!NOTE]
 > `AUTO_UPDATE_STATISTICS` データベース オプションが `ON` に設定されていると、対象にしているテーブルまたはインデックス付きビューの統計が更新された場合、または前回の実行から基数が大きく変更された場合、クエリが再コンパイルされます。 この動作は、標準のユーザー定義テーブル、一時テーブル、および DML トリガーによって作成された inserted テーブルと deleted テーブルに当てはまります。 過度の再コンパイルによってクエリのパフォーマンスが低下する場合は、この設定を `OFF`に変更することを検討してください。 `AUTO_UPDATE_STATISTICS` データベース オプションを `OFF` に設定すると、統計や基数の変更に基づく再コンパイルは行われません。ただし、DML `INSTEAD OF` トリガーで作成した inserted テーブルおよび deleted テーブルは例外です。 これらのテーブルは tempdb で作成されるため、それらにアクセスするクエリの再コンパイルは tempdb の `AUTO_UPDATE_STATISTICS` の設定によって異なります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2005 より前のバージョンでは、この設定を `OFF` にした場合も、DML トリガーの inserted テーブルと deleted テーブルにタイする基数の変更に基づいて再コンパイルが引き続き行われます。
 
-### <a name="PlanReuse"></a> パラメーターと実行プランの再利用
+### <a name="parameters-and-execution-plan-reuse"></a><a name="PlanReuse"></a> パラメーターと実行プランの再利用
 ADO、OLE DB、ODBC の各アプリケーションのパラメーター マーカーなどのパラメーターを使用すると、実行プランの再利用回数を増やすことができます。 
 
 > [!WARNING] 
@@ -758,7 +758,7 @@ WHERE AddressID = 1 + 2;
 
 ただし、簡易パラメーター化のルールに従ってパラメーター化することはできます。 強制パラメーター化の試行に失敗した場合でも、簡易パラメーター化が続けて試行されます。
 
-### <a name="SimpleParam"></a> 簡易パラメーター化
+### <a name="simple-parameterization"></a><a name="SimpleParam"></a> 簡易パラメーター化
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、Transact-SQL ステートメントでパラメーターまたはパラメーター マーカーを使用することで、新しい [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントと既存のコンパイル済みの実行プランとを照合するリレーショナル エンジンの機能が強化されています。
 
 > [!WARNING] 
@@ -793,7 +793,7 @@ WHERE ProductSubcategoryID = 4;
 
 また、単一クエリと、単一クエリと構文的に等しくパラメーター値だけが異なるクエリをパラメーター化することを指定できます。 
 
-### <a name="ForcedParam"></a> 強制パラメーター化
+### <a name="forced-parameterization"></a><a name="ForcedParam"></a> 強制パラメーター化
 データベースのすべての `SELECT`、`INSERT`、`UPDATE`、`DELETE` ステートメントをパラメーター化するように指定することで、いくつかの制約はありますが [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の簡易パラメーター化の既定動作をオーバーライドできます。 強制パラメータ化を有効にするには、 `PARAMETERIZATION` ステートメントの `FORCED` オプションを `ALTER DATABASE` に設定します。 強制パラメーター化を行うと、クエリをコンパイルおよび再コンパイルする頻度を緩和できるので、データベースによってはパフォーマンスが向上します。 一般的に POS (point-of-sale) などのアプリケーションから大量のクエリが同時に実行されるデータベースは、強制パラメーター化によりパフォーマンスが向上します。
 
 `PARAMETERIZATION` オプションを `FORCED`に設定すると、 `SELECT`、 `INSERT`、 `UPDATE`、 `DELETE` の各ステートメントに使用されているリテラル値は、その形式を問わずクエリのコンパイル時にパラメーターに変換されます。 ただし、次に示すクエリ構造に現れるリテラルは例外です。 
@@ -842,7 +842,7 @@ WHERE ProductSubcategoryID = 4;
 * バイナリ リテラルは、8,000 バイト以内の場合は varbinary(8000) 型にパラメーター化されます。 8,000 バイトを超える場合は、varbinary(max) 型に変換されます。
 * money 型のリテラルは、money 型にパラメーター化されます。
 
-#### <a name="ForcedParamGuide"></a> 強制パラメーター化使用のガイドライン
+#### <a name="guidelines-for-using-forced-parameterization"></a><a name="ForcedParamGuide"></a> 強制パラメーター化使用のガイドライン
 `PARAMETERIZATION` オプションを FORCED に設定するときは、次のことを考慮してください。
 
 * 強制パラメーター化を行うと、クエリをコンパイルするときにクエリ内のリテラル定数がパラメーターに変更されます。 そのため、クエリ オプティマイザーで最適なクエリ プランが選択されない場合があります。 特に、インデックス付きビューや、計算列のインデックスに合わせてクエリが調整されることはあまりありません。 パーティション テーブルおよび分散パーティション ビューに発行するクエリについても、最適なプランが選択されない場合があります。 インデックス付きビューおよび計算列のインデックスに大きく依存する環境では、強制パラメーター化を使用しないでください。 `PARAMETERIZATION FORCED` オプションは、熟練したデータベース管理者が、パフォーマンスに悪影響が出ないことを確認した上でのみ使用してください。
@@ -894,7 +894,7 @@ WHERE ProductID = 63;
 * 実行プランの作成および再利用のタイミングをアプリケーションで制御できます。
 * 準備/実行のモデルは、以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] など、他のデータベースに移植できます。
 
-### <a name="ParamSniffing"></a> パラメーター スニッフィング
+### <a name="parameter-sniffing"></a><a name="ParamSniffing"></a> パラメーター スニッフィング
 "パラメーター スニッフィング" とは、コンパイルまたは再コンパイルの間に [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] が現在のパラメーター値を "スニッフィング (傍受)" し、クエリ オプティマイザーに渡すプロセスです。渡されたパラメーター値は、より効率的なクエリ実行プランを生成するために利用できます。
 
 パラメーター値は、次のようなバッチのコンパイルまたは再コンパイル中にスニッフィングされます。
@@ -903,7 +903,7 @@ WHERE ProductID = 63;
 -  sp_executesql 経由で送信されたクエリ 
 -  準備されたクエリ
 
-不適切なパラメーター スニッフィング問題のトラブルシューティングについては、「[Troubleshoot queries with parameter-sensitive query execution plan issues](https://docs.microsoft.com/azure/sql-database/sql-database-monitor-tune-overview#troubleshoot-performance-problems)」 (パラメーター依存のクエリ実行プランの問題を解決する) を参照してください。
+不適切なパラメーター スニッフィング問題のトラブルシューティングについては、「[Troubleshoot queries with parameter-sensitive query execution plan issues](/azure/sql-database/sql-database-monitor-tune-overview)」 (パラメーター依存のクエリ実行プランの問題を解決する) を参照してください。
 
 > [!NOTE]
 > `RECOMPILE` ヒントを利用するクエリの場合、パラメーター値とローカル変数の現在の値の両方がスニッフィングされます。 (パラメーターとローカル変数の) スニッフィングされた値は、バッチの中で、`RECOMPILE` ヒントのあるステートメントの手前に存在する値です。 特に、パラメーターの場合、バッチ呼び出しで共に与えられた値はスニッフィングされません。
@@ -945,7 +945,7 @@ WHERE ProductID = 63;
 * 特定のクエリに対して可能な並列実行プランより、直列実行プランの方が速いと考えられる。
 * クエリに、並列では実行できないスカラー演算子または関係演算子が含まれる。 演算子によっては、クエリ プランのセクションまたはプラン全体が直列モードで実行される場合があります。
 
-### <a name="DOP"></a> 並列処理の次数
+### <a name="degree-of-parallelism"></a><a name="DOP"></a> 並列処理の次数
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、並列クエリの実行またはインデックス DDL (データ定義言語) 操作のインスタンスごとに、並列処理の最適な次数を自動的に検出します。 この処理は次の基準に基づいて実行されます。 
 
 1. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] が、SMP (対称型マルチプロセッシング) コンピューターなど、**複数のマイクロプロセッサまたは CPU を搭載したコンピューター上で実行**されているかどうか。 並列クエリを使用できるのは、複数の CPU を搭載したコンピューターだけです。 
@@ -1285,12 +1285,12 @@ XML プラン表示出力では、 `SeekPredicateNew` 要素がその要素を�
 
 別の例として、テーブルで列 A に境界点が (10、20、30) である 4 つのパーティションと、列 B にインデックスが設定されており、クエリに述語句 `WHERE B IN (50, 100, 150)`が含まれるとします。 テーブル パーティションは A の値に基づいているため、B の値はどのテーブル パーティションにも存在する可能性があります。 したがって、クエリ プロセッサは、4 つの各テーブル パーティションで、B の 3 つの値 (50、100、150) を検索します。 クエリ プロセッサは、これらの 12 個の各クエリ スキャンを並列実行できるように、ワーカー スレッドを均等に割り当てます。
 
-|列 A に基づいたテーブル パーティション |各テーブル パーティションにおける列 B の検索 |
+|列 A に基づいたテーブル パーティション    |各テーブル パーティションにおける列 B の検索 |
 |----|----|
-|テーブル パーティション 1:A < 10   |B=50、B=100、B=150 |
-|テーブル パーティション 2:A >= 10 AND A < 20   |B=50、B=100、B=150 |
-|テーブル パーティション 3:A >= 20 AND A < 30   |B=50、B=100、B=150 |
-|テーブル パーティション 4:A >= 30  |B=50、B=100、B=150 |
+|テーブル パーティション 1:A < 10     |B=50、B=100、B=150 |
+|テーブル パーティション 2:A >= 10 AND A < 20     |B=50、B=100、B=150 |
+|テーブル パーティション 3:A >= 20 AND A < 30     |B=50、B=100、B=150 |
+|テーブル パーティション 4:A >= 30     |B=50、B=100、B=150 |
 
 ### <a name="best-practices"></a>ベスト プラクティス
 
@@ -1374,7 +1374,7 @@ SET STATISTICS XML OFF;
 GO
 ```
 
-##  <a name="Additional_Reading"></a> その他の情報  
+##  <a name="additional-reading"></a><a name="Additional_Reading"></a> その他の情報  
  [プラン表示の論理操作と物理操作のリファレンス](../relational-databases/showplan-logical-and-physical-operators-reference.md)  
  [拡張イベント](../relational-databases/extended-events/extended-events.md)  
  [クエリ ストアを使用する際の推奨事項](../relational-databases/performance/best-practice-with-the-query-store.md)  

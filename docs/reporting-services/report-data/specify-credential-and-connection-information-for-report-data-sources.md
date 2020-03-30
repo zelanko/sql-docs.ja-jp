@@ -28,10 +28,10 @@ ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ab7f9d0717cac0dae86eb2b5202fd02de254c5e0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75244562"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>レポート データ ソースに関する資格情報と接続情報を指定する
@@ -147,7 +147,7 @@ ms.locfileid: "75244562"
 ## <a name="user-name-and-password-login"></a>ユーザー名とパスワードによるログイン  
  **[次のユーザー名とパスワードを使用]** を選択した場合、データ ソースへのアクセスにはユーザー名およびパスワードの指定が必要になります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの場合は、この資格情報がデータベース ログイン用となる可能性があります。 この資格情報は、認証用にデータ ソースに渡されます。  
   
-##  <a name="DataSourceConfigurationConnections"></a> データ ソースの構成とネットワーク接続  
+##  <a name="data-source-configuration-and-network-connections"></a><a name="DataSourceConfigurationConnections"></a> データ ソースの構成とネットワーク接続  
  次の表は、資格情報の種類とデータ処理拡張機能の特定の組み合わせにおける接続方法を示しています。 カスタム データ処理拡張機能を使用している場合は、「 [カスタム データ処理拡張機能の接続を指定する](../../reporting-services/report-data/specify-connections-for-custom-data-processing-extensions.md)」をご覧ください。  
   
 |**Type**|**ネットワーク接続のコンテキスト**|**データ ソースの種類**<br /><br /> **(SQL Server、Oracle、ODBC、OLE DB、Analysis Services、XML、SAP NetWeaver BI、Hyperion Essbase)**|  

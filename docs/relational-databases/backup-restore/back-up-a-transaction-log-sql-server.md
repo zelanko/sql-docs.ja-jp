@@ -15,10 +15,10 @@ ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 965b6957f9428a2c1d12b307db0a0f2b77ea16e8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71708736"
 ---
 # <a name="back-up-a-transaction-log"></a>トランザクション ログをバックアップする
@@ -26,17 +26,17 @@ ms.locfileid: "71708736"
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、または PowerShell を使用して、トランザクション ログをバックアップする方法について説明します。  
 
 ## <a name="before-you-begin"></a>はじめに
-### <a name="Restrictions"></a> 制限事項と制約事項  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 `BACKUP` ステートメントは、明示的または[暗黙的](../../t-sql/statements/set-implicit-transactions-transact-sql.md)なトランザクションでは使用できません。 明示的なトランザクションとは、トランザクションの開始と終了を明示的に定義したものです。
 
-### <a name="Recommendations"></a> 推奨事項  
+### <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
   
 - データベースで完全または一括ログ[復旧モデル](recovery-models-sql-server.md)を使用している場合は、データを保護し、[トランザクション ログがいっぱいになる](../logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)のを防ぐために、十分な頻度で定期的にトランザクション ログをバックアップする必要があります。 これによってログが切り捨てられ、特定の時点へのデータベースの復元がサポートされます。 
   
 - 既定では、バックアップ操作が成功するたびに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログおよびシステム イベント ログにエントリが 1 つ追加されます。 ログを頻繁にバックアップすると、これらの成功メッセージがすぐに蓄積され、エラー ログが大きくなり、他のメッセージを探すのが困難になります。 そのような場合、これらのエントリに依存するスクリプトがなければ、トレース フラグ 3226 を使用することによってこれらのログ エントリを除外できます。「[トレース フラグ &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)」を参照してください。  
   
-### <a name="Permissions"></a> Permissions
+### <a name="permissions"></a><a name="Permissions"></a> Permissions
 
 必要な `BACKUP DATABASE` および `BACKUP LOG` アクセス許可は、既定では、**sysadmin** 固定サーバー ロール、**db_owner** 固定データベース ロール、および **db_backupoperator** 固定データベース ロールのメンバーに与えられます。 始める前に、適切なアクセス許可があることを確認してください。
   
@@ -150,7 +150,7 @@ BACKUP LOG AdventureWorks2012
 GO  
 ```  
   
-##  <a name="PowerShellProcedure"></a> PowerShell の使用
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell の使用
 
 [SQL Server PowerShell プロバイダー](../../relational-databases/scripting/sql-server-powershell-provider.md)を設定して使用します。 **Backup-SqlDatabase** コマンドレットを使用して **-BackupAction** パラメーターの値の **ログ** を指定します。  
   
@@ -160,7 +160,7 @@ GO
 Backup-SqlDatabase -ServerInstance Computer\Instance -Database <myDatabase> -BackupAction Log  
 ```
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 - [トランザクション ログ バックアップの復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   

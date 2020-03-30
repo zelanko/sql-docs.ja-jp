@@ -16,10 +16,10 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fe0c9a950221317cb4a9088bae7629fc0c894165
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71710320"
 ---
 # <a name="create-a-full-database-backup"></a>データベースの完全バックアップの作成
@@ -30,32 +30,32 @@ ms.locfileid: "71710320"
 
 Azure Blob Storage サービスへの SQL Server のバックアップについては、「[Windows Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」および「[SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)」を参照してください。
 
-## <a name="Restrictions"></a> 制限事項と制約事項
+## <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項
 
 - `BACKUP` ステートメントは、明示的または暗黙的なトランザクションでは使用できません。
 - 新しいバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって作成されたバックアップは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では復元できません。
 
 バックアップの概念とタスクに関する概要および詳細については、先へ進む前に「[Backup Overview &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)」を参照してください。
 
-## <a name="Recommendations"></a> 推奨事項
+## <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項
 
 - データベース サイズが大きくなると、データベースの完全バックアップにかかる時間は長くなり、必要な記憶領域も増加します。 大規模なデータベースでは、一連の[データベースの差分バックアップ](../../relational-databases/backup-restore/differential-backups-sql-server.md)を使用してデータベースの完全バックアップを補完することを検討してください。
 - データベースの完全バックアップのサイズは、 [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) システム ストアド プロシージャを使用して推計します。
 - 既定では、バックアップ操作が成功するたびに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログおよびシステム イベント ログにエントリが 1 つ追加されます。 頻繁にバックアップすると、これらの成功メッセージがすぐに蓄積され、エラー ログが大きくなります。 そのために、他のメッセージを探すのが困難になることがあります。 そのような場合、これらのエントリに依存するスクリプトがなければ、トレース フラグ 3226 を使用することによってこれらのバックアップ ログ エントリを除外できます。 詳細については、「[トレース フラグ &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)」を参照してください。
 
-## <a name="Security"></a> セキュリティ
+## <a name="security"></a><a name="Security"></a> セキュリティ
 
 データベースのバックアップでは、**TRUSTWORTHY** は OFF に設定されます。 **TRUSTWORTHY** を ON に設定する方法については、「[ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)」を参照してください。
 
 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、バックアップの作成での **PASSWORD** および **MEDIAPASSWORD** オプションが廃止されました。 パスワード付きで作成されたバックアップを復元することは、引き続き可能です。
 
-## <a name="Permissions"></a> Permissions
+## <a name="permissions"></a><a name="Permissions"></a> Permissions
 
 `BACKUP DATABASE` および `BACKUP LOG` アクセス許可は、既定では、**sysadmin** 固定サーバー ロール、**db_owner** 固定データベース ロール、および **db_backupoperator** 固定データベース ロールのメンバーに与えられます。
 
  バックアップ デバイスの物理ファイルに対する所有と許可の問題によって、バックアップ操作が妨げられることがあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスでは、デバイスに対して読み書きを実行できる必要があります。つまり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスが実行されているアカウントには、バックアップ デバイスに対する書き込み権限が必要です。 ただし、システム テーブルにバックアップ デバイスのエントリを追加する [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)では、ファイル アクセスの権限は確認されません。 結果として、バックアップ デバイスの物理ファイルに関する問題は、バックアップや復元が試行され、物理リソースがアクセスされるまで、表面化しない可能性があります。
 
-## <a name="SSMSProcedure"></a> SQL Server Management Studio の使用
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用
 
 > [!NOTE]
 > [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してバックアップ タスクを指定する場合、 **[スクリプト]** ボタンをクリックしてスクリプトの保存先を選択することにより、対応する [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) スクリプトを生成できます。
@@ -240,7 +240,7 @@ GO
 
 1. バックアップが正常に完了したら、 **[OK]** をクリックして SQL Server Management Studio のダイアログ ボックスを閉じます。
 
-## <a name="TsqlProcedure"></a> Transact-SQL の使用
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用
 
 次の項目を指定して `BACKUP DATABASE` ステートメントを実行し、データベースの完全バックアップを作成します。
 
@@ -278,7 +278,7 @@ GO
  > [!IMPORTANT]
  > `BACKUP` ステートメントで **FORMAT** 句を使用すると、バックアップ メディアに格納されているバックアップが破棄されるので、十分注意して使用してください。
 
-### <a name="TsqlExample"></a> 使用例
+### <a name="examples"></a><a name="TsqlExample"></a> 使用例
 
 次の例では、次の Transact-SQL コードを使用してテスト データベースを作成します。
 
@@ -361,7 +361,7 @@ BACKUP DATABASE SQLTestDB
 GO
 ```
 
-## <a name="PowerShellProcedure"></a> PowerShell の使用
+## <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell の使用
 
 **Backup-SqlDatabase** コマンドレットを使用します。 データベースの完全バックアップであることを明示するには、 **-BackupAction** パラメーターにその既定値 **Database** を指定します。 このパラメーターは、データベースの完全バックアップでは省略可能です。
 
@@ -402,7 +402,7 @@ $backupFile = $container + '/' + $fileName
 Backup-SqlDatabase -ServerInstance $server -Database $database -BackupFile $backupFile -Credential $credential
 ```
 
-## <a name="RelatedTasks"></a> 関連タスク
+## <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク
 
 - [データベースのバックアップ (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)
 - [データベースの差分バックアップの作成 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)
@@ -412,7 +412,7 @@ Backup-SqlDatabase -ServerInstance $server -Database $database -BackupFile $back
 - [データベースを新しい場所に復元する &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)
 - [メンテナンス プラン ウィザードの使用](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [SQL Server のバックアップと復元操作のトラブルシューティング](https://support.microsoft.com/kb/224071)
 - [バックアップの概要 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)

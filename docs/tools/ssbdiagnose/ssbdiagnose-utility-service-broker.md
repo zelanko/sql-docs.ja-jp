@@ -27,10 +27,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.openlocfilehash: 5775600e5dc6e0bebd74104dcc9bfa350873de3e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75254205"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose ユーティリティ (Service Broker)
@@ -303,7 +303,7 @@ WHERE database_id = DB_ID();
  **診断**  
  構成上の問題を報告します。 これには、 **CONFIGURATION** レポートの実行中または **RUNTIME** レポートの構成フェーズ中に見つかった問題が含まれます。 **ssbdiagnose** は、構成上の各問題を一度だけ報告します。  
   
- **イベント**  
+ **Event**  
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] RUNTIME **レポートの実行中に監視されるメッセージ交換で問題が検出されたことを示す** イベントを報告します。 **ssbdiagnose** は、イベントが生成されるたびにイベントを報告します。 複数のメッセージ交換で問題が検出される場合は、イベントが複数回報告されます。  
   
  **問題**  

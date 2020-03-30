@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 robots: noindex,nofollow
 ms.openlocfilehash: b32ad209651c30f810f239b0c14689be497c4378
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286566"
 ---
 # <a name="installation-wizard-help"></a>インストール ウィザードのヘルプ
@@ -192,7 +192,7 @@ ms.locfileid: "79286566"
 * ディレクトリ、ファイルの場所、およびインスタンス ID の名前付けの詳細については、「[SQL Server の既定のインスタンスおよび名前付きインスタンスのファイルの場所](file-locations-for-default-and-named-instances-of-sql-server.md)」を参照してください。  
 * [ファイル サーバーの共有アクセス許可と NTFS アクセス許可](https://docs.microsoft.com/iis/web-hosting/configuring-servers-in-the-windows-web-platform/configuring-share-and-ntfs-permissions)
 
-## <a name="serverconfig"></a> [データベース エンジンの構成] - [サーバー構成] ページ
+## <a name="database-engine-configuration---server-configuration-page"></a><a name="serverconfig"></a> [データベース エンジンの構成] - [サーバー構成] ページ
 
 このページは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ モードを設定し、Windows ユーザーまたはグループを [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の管理者として追加するために使用します。  
   
@@ -271,7 +271,7 @@ Windows 認証と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認�
 
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] を実行するアカウントの選択の詳細については、「[Windows サービス アカウントとアクセス許可の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)」をご覧ください。
 
-## <a name ="datadir"></a> [データベース エンジンの構成] - [データ ディレクトリ] ページ
+## <a name="database-engine-configuration---data-directories-page"></a><a name ="datadir"></a> [データベース エンジンの構成] - [データ ディレクトリ] ページ
 
 このページを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]のプログラムおよびデータ ファイルのインストール場所を指定します。 インストールの種類により、サポートされるストレージにはローカル ディスク、共有ストレージ、または SMB ファイル サーバーが含まれる場合があります。  
   
@@ -330,7 +330,7 @@ SMB ファイル共有をディレクトリとして指定するには、サポ�
   * システム ファイルが配置されているディレクトリ
   * フェールオーバー クラスター インスタンス上のマップされたネットワーク ドライブ  
   
-## <a name="a-nametempdba-database-engine-configuration---tempdb-page"></a><a name="tempdb"><a/> [データベース エンジンの構成] - [TempDB] ページ
+## <a name="a-nametempdb-database-engine-configuration---tempdb-page"></a><a name="tempdb"><a/> [データベース エンジンの構成] - [TempDB] ページ
 
 このページを利用し、**tempdb** のデータとログ ファイルの場所、サイズ、拡張設定、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]のファイル数を指定します。 インストールの種類により、サポートされるストレージにはローカル ディスク、共有ストレージ、または SMB ファイル サーバーが含まれる場合があります。  
   
@@ -417,7 +417,7 @@ The MaxDOP setting applies only to SQL Server 2019 and later.
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
-## <a name="a-namemaxdopa-database-engine-configuration---maxdop-page"></a><a name="maxdop"><a/> [データベース エンジンの構成] - [MAXDOP] ページ
+## <a name="a-namemaxdop-database-engine-configuration---maxdop-page"></a><a name="maxdop"><a/> [データベース エンジンの構成] - [MAXDOP] ページ
 
 **並列処理の最大限度 (MaxDOP)** により、1 つのステートメントで使用できるプロセッサの最大数が決まります。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] では、インストール時にこのオプションを構成する機能が導入されています。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] では、また、サーバー用の推奨される MaxDOP 設定が、コア数に基づいて自動的に検出されます。  
 
@@ -427,7 +427,7 @@ The MaxDOP setting applies only to SQL Server 2019 and later.
 
 * **[並列処理の最大限度] (MaxDOP)** は、1 つのステートメントの並列実行中に使用するプロセッサの最大数の値です。 既定値は、「[max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)」の並列処理の最大限度ガイドラインと一致します。
 
-## <a name="a-namememorya-database-engine-configuration---memory-page"></a><a name="memory"><a/> [データベース エンジンの構成] - [メモリ] ページ
+## <a name="a-namememory-database-engine-configuration---memory-page"></a><a name="memory"><a/> [データベース エンジンの構成] - [メモリ] ページ
 
 **[最小サーバー メモリ]** では、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] でバッファー プールとその他のキャッシュに使用されるメモリの下限が決まります。 既定値は 0 で、推奨値も 0 です。 **最小サーバー メモリ**の効果について詳しくは、「[メモリ管理アーキテクチャ ガイド](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-and-max-server-memory)」をご覧ください。
 

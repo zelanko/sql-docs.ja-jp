@@ -19,10 +19,10 @@ ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 38af7d056eab840a5cf83eefa96ec2731e58bc67
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71292769"
 ---
 # <a name="excel-source"></a>Excel ソース
@@ -77,7 +77,7 @@ ms.locfileid: "71292769"
  **[データ アクセス モード]**  
  ソースからデータを選択する方法を指定します。  
   
-|Value|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |[テーブルまたはビュー]|Excel ファイルのワークシートまたは名前付き範囲からデータを取得します。|  
 |[テーブル名またはビュー名の変数]|ワークシートまたは範囲の名前を変数に指定します。<br /><br /> **関連情報:** [パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
@@ -120,7 +120,7 @@ ms.locfileid: "71292769"
 ## <a name="excel-source-editor-columns-page"></a>[Excel ソース エディター] ([列] ページ)
   **[Excel ソース エディター]** ダイアログ ボックスの **[列]** ページを使用すると、出力列をそれぞれの外部 (変換元) 列にマップできます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **使用できる外部列**  
  データ ソース内の使用できる外部列の一覧を表示します。 このテーブルを使用して列を追加または削除することはできません。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "71292769"
 ## <a name="excel-source-editor-error-output-page"></a>[Excel ソース エディター] ([エラー出力] ページ)
   **[Excel ソース エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを選択したり、エラー出力列のプロパティを設定したりできます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **入力または出力**  
  データ ソースの名前を表示します。  
   

@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 221c5c0fa216b8d5fba7f133b717a3d102aea963
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287136"
 ---
 # <a name="query-columns-using-always-encrypted-with-sql-server-management-studio"></a>SQL Server Management Studio で Always Encrypted を使用した列のクエリを実行する
@@ -77,7 +77,7 @@ SSN が `char(11)` テーブルで暗号化された `Patients` 列であると�
 
 詳細については、 [列マスター キーの作成と格納 (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md) を参照してください。
 
-## <a name="en-dis"></a> データベース接続での Always Encrypted の有効化と無効化   
+## <a name="enabling-and-disabling-always-encrypted-for-a-database-connection"></a><a name="en-dis"></a> データベース接続での Always Encrypted の有効化と無効化   
 SSMS でデータベースに接続する場合は、データベース接続について Always Encrypted を有効または無効にすることができます。 既定では、Always Encrypted は無効になっています。 
 
 データベース接続で Always Encrypted を有効にすると、以下の操作を透過的に試行するように、SQL Server Management Studio で使用される NET Framework Data Provider for SQL Server に指示されます。   
@@ -106,7 +106,7 @@ Always Encrypted を有効 (無効) にするには、次のようにします�
 > 2.    **[接続]**  >  **[接続の変更...]** を選択します。これにより、クエリ エディター ウィンドウの現在の接続の **[サーバーに接続]** ダイアログが開きます。 
 > 2.    上記の手順に従って Always Encrypted を有効または無効にし、 **[接続]** をクリックします。  
    
-## <a name="param"></a>Always Encrypted のパラメーター化   
+## <a name="parameterization-for-always-encrypted"></a><a name="param"></a>Always Encrypted のパラメーター化   
  
 Always Encrypted のパラメーター化は、Transact-SQL 変数をクエリ パラメーター ( [SqlParameter クラス](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx)のインスタンス) に自動的に変換する、SQL Server Management Studio の機能です (SSMS バージョン 17.0 以降が必要です)。これにより、基になる .NET Framework Data Provider for SQL Server は暗号化された列をターゲットとするデータを検出し、データベースに送信する前にそのデータを暗号化できます。 
   

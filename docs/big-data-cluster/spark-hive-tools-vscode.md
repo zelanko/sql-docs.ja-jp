@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 732db8e12b2923dfdd74727c5e9e0a5a56483fc4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75255916"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-cluster-in-visual-studio-code"></a>SQL Server ビッグ データ クラスター上の Visual Studio Code で Spark ジョブを送信する
@@ -176,7 +176,7 @@ Visual Studio Code からクラスターにスクリプトを送信するには�
 
 [Apache Livy](https://livy.incubator.apache.org/) の構成はサポートされており、ワーク スペース フォルダーの **.VSCode\settings.json** で設定できます。 現在、Livy の構成では Python スクリプトのみがサポートされています。 詳細については、[Livy の README](https://github.com/cloudera/livy/blob/master/README.rst ) を参照してください。
 
-### <a id="triggerlivyconf"></a>**Livy の構成をトリガーする方法**
+### <a name="how-to-trigger-livy-configuration"></a><a id="triggerlivyconf"></a>**Livy の構成をトリガーする方法**
 
 #### <a name="method-1"></a>方法 1
 
@@ -201,7 +201,7 @@ Visual Studio Code からクラスターにスクリプトを送信するには�
 
 **要求本文**
 
-| name | description | 型 |
+| name | description | type |
 | :- | :- | :- |
 | file | 実行するアプリケーションを含むファイル | パス (必須) |
 | proxyUser | ジョブの実行時に権限を借用するユーザー | string |
@@ -224,13 +224,13 @@ Visual Studio Code からクラスターにスクリプトを送信するには�
 
 作成されるバッチ オブジェクト。
 
-| name | description | 型 |
+| name | description | type |
 | :- | :- | :- |
 | id | セッション ID | INT |
 | appId | このセッションのアプリケーション ID | String |
 | appInfo | アプリケーションの詳細情報 | キーのマップ = val |
 | log | ログの行 | 文字列の一覧 |
-| 状態 | バッチの状態 | string |
+| state | バッチの状態 | string |
 
 >[!NOTE]
 >割り当てられた Livy の構成は、スクリプトの送信時に出力ウィンドウに表示されます。

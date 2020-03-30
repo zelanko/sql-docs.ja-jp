@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 0e6ceaa3fae1efd04490932dd1fdc42a9805b2f3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67995117"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>OLE DB の日付/時刻の強化に対するデータ型のサポート
@@ -28,9 +28,9 @@ ms.locfileid: "67995117"
   この記事では、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の日付および時刻データ型をサポートする OLE DB (OLE DB Driver for SQL Server) の型について説明します。  
   
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>行セットとパラメーターでのデータ型マッピング  
- OLE DB には、新しいサーバーの種類をサポートする 2 つの新しいデータ型が用意されています。DBTYPE_DBTIME2 と DBTYPE_DBTIMESTAMPOFFSET です。 次の表に、完全なサーバーの型マッピングを示します。  
+ OLE DB には、新しいサーバーの種類をサポートする 2 つの新しいデータ型 (DBTYPE_DBTIME2 と DBTYPE_DBTIMESTAMPOFFSET) が用意されています。 次の表に、完全なサーバーの型マッピングを示します。  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のデータ型|OLE DB データ型|Value|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のデータ型|OLE DB データ型|値|  
 |-----------------------------------------|----------------------|-----------|  
 |DATETIME|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
@@ -39,7 +39,7 @@ ms.locfileid: "67995117"
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146 (msoledbsql.h)|  
 |datetime2|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
   
-## <a name="data-formats-strings-and-literals"></a>データ形式:文字列とリテラル  
+## <a name="data-formats-strings-and-literals"></a>データ形式 : 文字列とリテラル  
   
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のデータ型|OLE DB データ型|クライアントで変換した場合の文字列の形式|  
 |-----------------------------------------|----------------------|------------------------------------------|  
@@ -60,7 +60,7 @@ ms.locfileid: "67995117"
   
  空の文字列は、有効な日付リテラルまたは時間リテラルではありません。また、NULL 値を表すものでもありません。 空の文字列を日付または時刻の値に変換しようとすると、SQLState 22018 のエラーが発生し、"キャストした文字コードが正しくありません" というメッセージが表示されます。  
   
-## <a name="data-formats-data-structures"></a>データ形式:データ構造  
+## <a name="data-formats-data-structures"></a>データ形式 : データ構造体  
  次に説明する OLE DB 固有の構造体では、OLE DB は次の制約に準拠しています。 これらはグレゴリオ暦から取得されます。  
   
 -   月の範囲は 1 ～ 12 です。  
@@ -174,14 +174,14 @@ enum SQLVARENUM {
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>ITableDefinition::CreateTable でのデータ型マッピング  
  次の型マッピングは、ITableDefinition::CreateTable で使用される DBCOLUMNDESC 構造体で使用されます。  
   
-|OLE DB データ型 (*wType*)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のデータ型|Notes|  
+|OLE DB データ型 (*wType*)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のデータ型|メモ|  
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|date||  
 |DBTYPE_DBTIMESTAMP|**datetime2**(p)|OLE DB Driver for SQL Server によって、DBCOLUMDESC の *bScale* メンバーが調査され、秒の小数部の桁数が決定されます。|  
 |DBTYPE_DBTIME2|**time**(p)|OLE DB Driver for SQL Server によって、DBCOLUMDESC の *bScale* メンバーが調査され、秒の小数部の桁数が決定されます。|  
 |DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|OLE DB Driver for SQL Server によって、DBCOLUMDESC の *bScale* メンバーが調査され、秒の小数部の桁数が決定されます。|  
   
- アプリケーションで *wType* に DBTYPE_DBTIMESTAMP を指定した場合、*pwszTypeName* に型名を指定することで、**datetime2** へのマッピングをオーバーライドします。 **datetime** を指定する場合、*bScale* は 3 にする必要があります。 **smalldatetime** を指定する場合、*bScale* は 0 にする必要があります。 *bScale* が *wType* および *pwszTypeName* と一致しない場合、DB_E_BADSCALE が返されます。  
+ アプリケーションで *wType* に DBTYPE_DBTIMESTAMP を指定した場合、**pwszTypeName** に型名を指定することで、*datetime2* へのマッピングをオーバーライドします。 **datetime** を指定する場合、*bScale* は 3 にする必要があります。 **smalldatetime** を指定する場合、*bScale* は 0 にする必要があります。 *bScale* が *wType* および *pwszTypeName* と一致しない場合、DB_E_BADSCALE が返されます。  
   
 ## <a name="see-also"></a>参照  
  [日付と時刻の強化機能 &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  

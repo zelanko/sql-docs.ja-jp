@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f9e604ba803b1116c9867071f547a1d1958437b7
-ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78288977"
 ---
 # <a name="row-level-security"></a>行レベルのセキュリティ
@@ -43,7 +43,7 @@ Row-Level Security (RLS) は、アプリケーションでセキュリティの�
 > [!NOTE]
 > Azure SQL Data Warehouse では、フィルター述語のみがサポートされています。 ブロック述語は現在、Azure SQL Data Warehouse でサポートされていません。
 
-## <a name="Description"></a> 説明
+## <a name="description"></a><a name="Description"></a> 説明
 
 RLS では、2 種類のセキュリティ述語をサポートしています。  
   
@@ -89,7 +89,7 @@ RLS では、2 種類のセキュリティ述語をサポートしています�
   
 - BULK INSERT などの Bulk API は変更されていません。 つまり、AFTER INSERT ブロック述語は、通常の挿入操作と同様に一括挿入操作に適用されます。  
   
-## <a name="UseCases"></a> 例
+## <a name="use-cases"></a><a name="UseCases"></a> 例
 
  RLS をどのように使用するかの設計例を次に示します。  
   
@@ -103,7 +103,7 @@ RLS では、2 種類のセキュリティ述語をサポートしています�
   
  より形式的に表現すると、RLS はアクセス制御に基づく述語を採用しています。 柔軟で、集中管理された、述語ベースの評価を備えています。 述語は、管理者が適切に決定したメタデータや他の条件に基づくことができます。 述語は、ユーザーがその属性に基づいて適切にデータにアクセスできるかどうかを決定する条件として使用されます。 述語ベースのアクセス制御を使用することで、ラベルベースのアクセス制御を実装できます。  
   
-## <a name="Permissions"></a> Permissions
+## <a name="permissions"></a><a name="Permissions"></a> Permissions
 
  セキュリティ ポリシーの作成、変更、削除には、 **ALTER ANY SECURITY POLICY** 権限が必要です。 セキュリティ ポリシーの作成か削除には、スキーマ上で **ALTER** 権限が必要です。  
   
@@ -119,7 +119,7 @@ RLS では、2 種類のセキュリティ述語をサポートしています�
   
  `SCHEMABINDING = OFF`でセキュリティ ポリシーが作成された場合、ユーザーは、対象テーブルにクエリを実行するために、述語関数とその述語関数で使用される追加のテーブル、ビュー、または関数に対する  **SELECT** 権限または **EXECUTE** 権限が必要です。 `SCHEMABINDING = ON` (既定) でセキュリティ ポリシーが作成された場合、ユーザーが対象テーブルに対してクエリを実行すると、これらの権限チェックは迂回されます。  
   
-## <a name="Best"></a> ベスト プラクティス  
+## <a name="best-practices"></a><a name="Best"></a> ベスト プラクティス  
   
 - RLS オブジェクト、述語関数、セキュリティ ポリシーに対して別のスキーマを作成することを強くお勧めします。 これにより、これらの特殊なオブジェクトに必要な権限をターゲット テーブルから分離できます。 マルチテナントデータベースでは、さまざまなポリシーと述語関数のさらなる分離が必要になる場合がありますが、すべてのケースで標準というわけではありません。
   
@@ -141,7 +141,7 @@ RLS では、2 種類のセキュリティ述語をサポートしています�
   
 - 述語関数では、連結文字列を **NULL** と比較しないようにする必要があります。この動作は、[SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md) オプションの影響を受けるためです。  
 
-## <a name="SecNote"></a> セキュリティに関する注意:サイドチャネル攻撃
+## <a name="security-note-side-channel-attacks"></a><a name="SecNote"></a> セキュリティに関する注意:サイドチャネル攻撃
 
 ### <a name="malicious-security-policy-manager"></a>悪意のあるセキュリティ ポリシー マネージャー
 
@@ -151,7 +151,7 @@ RLS では、2 種類のセキュリティ述語をサポートしています�
 
 慎重に作成されたクエリを通じて、情報漏えいが発生する可能性があります。 たとえば、 `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` というクエリで、悪意のあるユーザーに John doe さんの給与が 100,000 ドルであることが知らされました。 悪意のあるユーザーが他のユーザーの給与を直接照会するような事態を防ぐため、セキュリティ述語がある場合でも、ゼロ除算の例外がクエリ結果として返されることで、悪意のあるユーザーによって知られてしまいます。  
 
-## <a name="Limitations"></a> 機能間の互換性
+## <a name="cross-feature-compatibility"></a><a name="Limitations"></a> 機能間の互換性
 
  一般に、行レベルのセキュリティは機能間で予想どおりに機能します。 ただし、例外がいくつかあります。 ここでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の他の特定の機能で行レベルのセキュリティを使用する場合の注意事項について説明します。  
   
@@ -177,9 +177,9 @@ RLS では、2 種類のセキュリティ述語をサポートしています�
   
 - **テンポラル テーブル:** テンポラル テーブルは RLS と互換性があります。 ただし、現在のテーブルのセキュリティ述語は、履歴テーブルに自動的にはレプリケートされません。 現在のテーブルと履歴テーブルの両方にセキュリティ ポリシーを適用するには、テーブルごとにセキュリティ述語を個別に追加する必要があります。  
   
-## <a name="CodeExamples"></a> 使用例  
+## <a name="examples"></a><a name="CodeExamples"></a> 使用例  
   
-### <a name="Typical"></a> A. データベースに対して認証するユーザーのシナリオ
+### <a name="a-scenario-for-users-who-authenticate-to-the-database"></a><a name="Typical"></a> A. データベースに対して認証するユーザーのシナリオ
 
  この例では、3 人のユーザーを作成し、6 行のテーブルを作成して設定します。 その後、インライン テーブル値関数とテーブルのセキュリティ ポリシーが作成されます。 さらにこの例では、select ステートメントがさまざまなユーザーに対してどのようにフィルター処理されるかが示されます。  
   
@@ -301,7 +301,7 @@ DROP FUNCTION Security.fn_securitypredicate;
 DROP SCHEMA Security;
 ```
 
-### <a name="external"></a> B. Azure SQL Data Warehouse 外部テーブルに対して行レベルのセキュリティを使用する場合のシナリオ
+### <a name="b-scenarios-for-using-row-level-security-on-an-azure-sql-data-warehouse-external-table"></a><a name="external"></a> B. Azure SQL Data Warehouse 外部テーブルに対して行レベルのセキュリティを使用する場合のシナリオ
 
 この簡単な例では、3 人のユーザーと 6 行の外部テーブルを作成します。 その後、インライン テーブル値関数と外部テーブルのセキュリティ ポリシーが作成されます。 この例では、select ステートメントがさまざまなユーザーに対してどのようにフィルター処理されるかが示されます。
 
@@ -418,7 +418,7 @@ DROP LOGIN Sales2;
 DROP LOGIN Manager;
 ```
 
-### <a name="MidTier"></a> C. 中間層アプリケーションからデータベースに接続するユーザーのシナリオ
+### <a name="c-scenario-for-users-who-connect-to-the-database-through-a-middle-tier-application"></a><a name="MidTier"></a> C. 中間層アプリケーションからデータベースに接続するユーザーのシナリオ
 
 > [!NOTE]
 > この例の場合、Azure SQL Data Warehouse では、ブロック述語機能が現在サポートされていないため、正しくないユーザー ID の行の挿入がブロックされません。

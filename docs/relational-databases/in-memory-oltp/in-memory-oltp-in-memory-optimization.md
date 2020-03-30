@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 87ad093d5be6f4fa394e934e6c0d88796a22e196
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74401653"
 ---
 # <a name="in-memory-oltp-and-memory-optimization"></a>インメモリ OLTP とメモリ最適化
@@ -84,7 +84,7 @@ SQL Server 上のインメモリ OLTP について説明し、パフォーマン
   
 -   [インメモリ OLTP ブログ](https://go.microsoft.com/fwlink/?LinkId=311696)  
 
-## <a name="anchorname-17minute-video"></a>17 分の動画、インデックス付き
+## <a name="17-minute-video-indexed"></a><a name="anchorname-17minute-video"></a>17 分の動画、インデックス付き
 
 - _動画のタイトル:_ &nbsp; **SQL Server 2016 のインメモリ OLTP**
 - _公開日:_ &nbsp; 2019-03-10 (`YouTube.com` 上)。
@@ -103,7 +103,7 @@ SQL Server 上のインメモリ OLTP について説明し、パフォーマン
 2. 次に、SQL Server Management Studio (SSMS.exe) で数回のクリックでテーブルのメモリ最適化エディションを作成し、設定する方法を確認します。
 3. 次に、メモリ最適化テーブルを使用してデモを再実行します。 大幅な速度の向上が測定されます。
 
-### <a name="anchorname-index-17minute-video"></a>動画の各セクションへのインデックス
+### <a name="index-to-each-section-in-the-video"></a><a name="anchorname-index-17minute-video"></a>動画の各セクションへのインデックス
 
 | 時間マークのリンク | セクションのタイトル |
 | :------------- | :------------ |
@@ -133,7 +133,7 @@ SQL Server 上のインメモリ OLTP について説明し、パフォーマン
 | <br/>G.&nbsp;[16:53](https://www.youtube.com/watch?v=l5l5eophmK4&t=1013) | <br/>最後のコメント (17:32 で終了)。 |
 | &nbsp; | &nbsp; |
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース機能](../../relational-databases/database-features.md)  
   
   

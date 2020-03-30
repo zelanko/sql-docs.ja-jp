@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f744dbde25bf5f7b307ccb44e03de70c1b60cc66
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73844550"
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>フィルター関数を使用して移行する行を選択する (Stretch Database)
@@ -197,7 +197,7 @@ ALTER TABLE SensorTelemetry
   )
 ```
   
-## <a name="addafterwiz"></a>ウィザードの実行後、フィルター関数を追加する  
+## <a name="add-a-filter-function-after-running-the-wizard"></a><a name="addafterwiz"></a>ウィザードの実行後、フィルター関数を追加する  
   
 **データベースのストレッチの有効化** ウィザードで作成できない関数を使用したい場合は、ウィザードを終了してから **ALTER TABLE** ステートメントを実行して関数を指定できます。 ただし、関数を適用する前に、既に進行中のデータ移行を停止し、移行されたデータを戻す必要があります。 (これが必要な理由については、「 [既存のフィルター関数の置き換え](#replacePredicate)」を参照してください)。
   
@@ -492,7 +492,7 @@ SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column
   
  関数から行の空ではない結果が返された場合、その行は移行の対象になります。  
   
-## <a name="replacePredicate"></a>既存のフィルター関数の置き換え  
+## <a name="replace-an-existing-filter-function"></a><a name="replacePredicate"></a>既存のフィルター関数の置き換え  
  以前に指定したフィルター関数を置き換えるには、 **ALTER TABLE** ステートメントをもう一度実行し、 **FILTER_PREDICATE** パラメーターに新しい値を指定します。 次に例を示します。  
   
 ```sql  

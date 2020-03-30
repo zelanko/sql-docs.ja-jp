@@ -11,10 +11,10 @@ ms.author: pelopes
 manager: rothj
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 933a37dd4ef627796b7688510bd235c80db417be
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095991"
 ---
 # <a name="microsoft-sql-server-distributed-queries-ole-db-connectivity"></a>Microsoft SQL Server 分散クエリ: OLE DB 接続
@@ -610,13 +610,13 @@ SQL Server で使用されるすべての OLE DB インターフェイスの一�
 
 Microsoft SQL Server によって、異種データ ソースにあるデータにアクセスするための最も信頼性の高いツール セットが提供されます。 SQL Server によって公開されている OLE DB インターフェイスを理解することで、開発者は分散クエリの高度な制御と高度な処理を実現できます。
 
-## <a name="appendixa"></a>SQL Server によって使用される OLE DB インターフェイス
+## <a name="ole-db-interfaces-consumed-by-sql-server"></a><a name="appendixa"></a>SQL Server によって使用される OLE DB インターフェイス
 
 次の表は、SQL Server によって使用されるすべての OLE DB インターフェイスを示しています。 「必須」列は、インターフェイスが SQL Server に必要な最小限の OLE DB 機能の一部であるか、またはオプションかを示します。 特定のインターフェイスが必須としてマークされていない場合でも、SQL Server からプロバイダーへのアクセスは可能ですが、プロバイダーに対して特定の SQL Server 機能または最適化を実行することはできません。
 
 オプションのインターフェイスの場合、「シナリオ」列には、指定したインターフェイスを使用する 6 つのシナリオのうち 1 つ以上が示されています。 たとえば、ベース テーブル行セットの `IRowsetChange` インターフェイスはオプションのインターフェイスです。このインターフェイスは、`UPDATE`、DELETE、`INSERT` の各ステートメントのシナリオで使用されます。 このインターフェイスがサポートされていない場合、UPDATE、DELETE、`INSERT` の各ステートメントをそのプロバイダーに対してサポートすることはできません。 オプションであるその他のインターフェイスの一部には、「シナリオ」列に \"パフォーマンス\" とマークされています。これは、そのインターフェイスを使用すると全般的なパフォーマンスが高くなることを示しています。 たとえば、`IDBSchemaRowset` インターフェイスがサポートされていない場合、SQL Server では行セットを 2 回開く必要があります (メタデータのために 1 回、クエリ実行のために 1 回)。 `IDBSchemaRowset` をサポートすることにより、SQL Server のパフォーマンスが向上します。
 
-|Object|インターフェイス|Required|説明|シナリオ|
+|Object|インターフェイス|必須|説明|シナリオ|
 |:-----|:-----|:-----|:-----|:-----|
 |データ ソース オブジェクト|`IDBInitialize`|はい|データおよびセキュリティ コンテキストの初期化とセットアップを行います。| |
 | |`IDBCreateSession`|はい|DB セッション オブジェクトを作成します。| |
@@ -654,7 +654,7 @@ Microsoft SQL Server によって、異種データ ソースにあるデータ�
 >[!NOTE]
 >`Index` オブジェクト、`Command` オブジェクト、および `Error` オブジェクトは必須ではありません。 ただし、サポートされている場合、「必須」列に示されているとおり、一覧にあるインターフェイスは必須です。
 
-## <a name="appendixb"></a>リモート クエリの生成に使用される SQL サブセット
+## <a name="sql-subset-used-for-generating-remote-queries"></a><a name="appendixb"></a>リモート クエリの生成に使用される SQL サブセット
 
 SQL コマンド プロバイダーに対して SQL Server クエリ プロセッサによって生成される SQL サブセットは、`DBPROP_SQLSUPPORT`プロパティで示されているとおり、プロバイダーがサポートしている構文レベルによって異なります。
 
@@ -794,7 +794,7 @@ digit ::= 0 \| 1 \| 2 \| 3 \| 4 \| 5 \| 6 \| 7 \| 8 \| 9
 
 period ::= . 
 
-## <a name="appendixc"></a>SQL Server 固有のプロパティ
+## <a name="sql-server-specific-properties"></a><a name="appendixc"></a>SQL Server 固有のプロパティ
 
 ```
 enum SQLPROPERTIES

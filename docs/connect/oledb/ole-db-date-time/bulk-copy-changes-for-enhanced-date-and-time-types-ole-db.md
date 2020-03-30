@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 417bf44993ffc850da03d090e36c29cae472c104
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015832"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db"></a>機能強化された日付型と時刻型向けの一括コピーの変更 (OLE DB)
@@ -83,7 +83,7 @@ ms.locfileid: "68015832"
 ## <a name="bcp-types-in-msoledbsqlh"></a>msoledbsql.h の BCP 型  
  msoledbsql.h には次の型が定義されています。 これらの型は OLE DB で IBCPSession::BCPColFmt の *eUserDataType* パラメーターと共に渡されます。  
   
-|ファイル ストレージ型|ホスト ファイル データ型|IBCPSession::BCPColFmt と共に使用するための msoledbsql.h での型|Value|  
+|ファイル ストレージ型|ホスト ファイル データ型|IBCPSession::BCPColFmt と共に使用するための msoledbsql.h での型|値|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
 |Datetime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIM4|0x3a|  

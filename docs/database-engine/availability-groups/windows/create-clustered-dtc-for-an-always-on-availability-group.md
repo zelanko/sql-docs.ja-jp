@@ -12,10 +12,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 96c706d58e0f90f4f10b89a724f7d87fa94e41f3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72586765"
 ---
 # <a name="create-clustered-dtc-resource-for-an-always-on-availability-group"></a>Always On 可用性グループ用のクラスター化された DTC リソースを作成する
@@ -332,7 +332,7 @@ GO
 > 
 > 可用性グループで DTC サポートを有効にする唯一の方法は、Transact-SQL を利用して可用性グループを作成することです。
  
-## <a name="ClusterDTC"></a>8.クラスター リソースを準備する
+## <a name="8--prepare-cluster-resources"></a><a name="ClusterDTC"></a>8.クラスター リソースを準備する
 
 このスクリプトは DTC 依存リソース(ディスクと IP) を準備します。  共有ストレージが Windows クラスターに追加されます。  ネットワーク リソースが作成されます。それから DTC が作成され、可用性グループのリソースとなります。  `SQLNODE1` で次の PowerShell スクリプトを実行します。 [Allan Hirt](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/) さんのスクリプトに感謝します。
 
@@ -479,7 +479,7 @@ $nodes = (Get-ClusterNode).Name;
 }
 ```  
 
-## <a name="11--cycle-the-includessnoversionincludesssnoversion-mdmd-service-for-each-instance"></a>11.各インスタンスの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスを停止し、すぐに起動する
+## <a name="11--cycle-the-ssnoversion-service-for-each-instance"></a>11.各インスタンスの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスを停止し、すぐに起動する
 
 完全に構成されているクラスター化された DTC サービスでは、この DTC サービスを使用するように [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が登録されていることを確認するために、可用性グループの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の各インスタンスを停止して再起動する必要があります。
 

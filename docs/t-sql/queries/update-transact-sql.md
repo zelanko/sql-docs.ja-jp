@@ -39,10 +39,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d4c6c89602f55eb72c01d32a2541bcf4c775b9a9
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78176692"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
@@ -329,7 +329,7 @@ GO
 > [!IMPORTANT]
 >  **ntext**、**text**、**image** データ型は、将来の [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンで削除される予定です。 新しい開発作業では、これらのデータ型の使用は避け、現在これらのデータ型を使用しているアプリケーションは修正するようにしてください。 代わりに、 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)、 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) を使用してください。  
   
-### <a name="updating-lobs"></a> 大きな値のデータ型を更新する  
+### <a name="updating-large-value-data-types"></a><a name="updating-lobs"></a> 大きな値のデータ型を更新する  
  **.** WRITE **(** _expression_ **,** @_Offset_ **,** @_Length_ **)** 句を使用し、**varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** データ型の部分または完全更新を実行します。 
  
  たとえば、**varchar(max)** 列の部分的な更新では、列の最初の 200 バイト (ASCII 文字を使用する場合は 200 文字) だけが削除または変更される可能性がありますが、完全な更新では、列のすべてのデータが削除または変更されます。 データベースの復旧モデルに一括ログ復旧モデルまたは単純復旧モデルが設定されている場合、 **.WRITE** で新しいデータを挿入または追加する際には、最小限しかログに記録されません。 既存の値を更新するときには、最小限のログ記録は使用されません。 詳細については、「 [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)」を参照してください。  
@@ -466,11 +466,11 @@ ID     Value
 ## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>アクセス許可  
- 対象のテーブルに対する `UPDATE` 権限が必要です。 UPDATE ステートメントに WHERE 句が含まれる場合や、SET 句の *expression* でテーブル内の列を使用する場合は、`SELECT` 権限も必要です。  
+ 対象のテーブルに対する `UPDATE` 権限が必要です。 UPDATE ステートメントに WHERE 句が含まれる場合や、SET 句の `SELECT`expression *でテーブル内の列を使用する場合は、* 権限も必要です。  
   
  UPDATE 権限は、既定では `sysadmin` 固定サーバー ロール、`db_owner` および `db_datawriter` 固定データベース ロールのメンバー、テーブル所有者に与えられています。 `sysadmin`、`db_owner`、`db_securityadmin` ロールのメンバーと、テーブル所有者は、他のユーザーに権限を譲渡できます。  
   
-##  <a name="UpdateExamples"></a> 使用例  
+##  <a name="examples"></a><a name="UpdateExamples"></a> 使用例  
   
 |カテゴリ|主な構文要素|  
 |--------------|------------------------------|  
@@ -486,7 +486,7 @@ ID     Value
 |[UPDATE ステートメントの結果をキャプチャする](#CaptureResults)|OUTPUT 句|  
 |[その他のステートメントで UPDATE を使用する](#Other)|ストアド プロシージャ • TRY...CATCH|  
   
-###  <a name="BasicSyntax"></a> 基本構文  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> 基本構文  
  このセクションの例では、最低限必要な構文を使用して UPDATE ステートメントの基本機能を示します。  
   
 #### <a name="a-using-a-simple-update-statement"></a>A. 単純な UPDATE ステートメントを使用する  
@@ -510,11 +510,11 @@ SET Bonus = 6000, CommissionPct = .10, SalesQuota = NULL;
 GO  
 ```  
   
-###  <a name="LimitingValues"></a> 更新される行を制限する  
+###  <a name="limiting-the-rows-that-are-updated"></a><a name="LimitingValues"></a> 更新される行を制限する  
  このセクションの例では、UPDATE ステートメントによって影響を受ける行の数を制限する方法を示します。  
   
 #### <a name="c-using-the-where-clause"></a>C. WHERE 句を使用する  
- 次の例では、WHERE 句を使用して更新する行を指定します。 このステートメントは、`Production.Product` テーブルの `Color` 列の値を更新します。`Color` 列の既存の値が 'Red' で、なおかつ `Name` 列の値が 'Road-250' で始まるすべての行が対象となります。  
+ 次の例では、WHERE 句を使用して更新する行を指定します。 このステートメントは、`Color` テーブルの `Production.Product` 列の値を更新します。`Color` 列の既存の値が 'Red' で、なおかつ `Name` 列の値が 'Road-250' で始まるすべての行が対象となります。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -598,7 +598,7 @@ DEALLOCATE complex_cursor;
 GO  
 ```  
   
-###  <a name="ColumnValues"></a> 列の値を設定する  
+###  <a name="setting-column-values"></a><a name="ColumnValues"></a> 列の値を設定する  
  このセクションの例では、計算値、サブクエリ、および DEFAULT 値を使用した列の更新を示します。  
   
 #### <a name="g-specifying-a-computed-value"></a>G. 計算値を指定する  
@@ -664,7 +664,7 @@ SET CostRate = DEFAULT
 WHERE CostRate > 20.00;  
 ```  
   
-###  <a name="TargetObjects"></a> 標準的なテーブル以外の対象オブジェクトを指定する  
+###  <a name="specifying-target-objects-other-than-standard-tables"></a><a name="TargetObjects"></a> 標準的なテーブル以外の対象オブジェクトを指定する  
  このセクションの例では、ビュー、テーブルの別名、またはテーブル変数を指定して行を更新する方法を示します。  
   
 #### <a name="k-specifying-a-view-as-the-target-object"></a>K. ビューを対象オブジェクトとして指定する  
@@ -721,11 +721,11 @@ ORDER BY EmpID;
 GO  
 ```  
   
-###  <a name="OtherTables"></a> 他のテーブルのデータに基づいてデータを更新する  
+###  <a name="updating-data-based-on-data-from-other-tables"></a><a name="OtherTables"></a> 他のテーブルのデータに基づいてデータを更新する  
  このセクションの例では、テーブルの行を別のテーブルの情報に基づいて更新する方法を示します。  
   
 #### <a name="n-using-the-update-statement-with-information-from-another-table"></a>北 別のテーブルの情報を使用して UPDATE ステートメントを実行する  
- 次の例では、`SalesOrderHeader` テーブルの最新の売上高を反映するように `SalesPerson` テーブルの `SalesYTD` 列を変更します。  
+ 次の例では、`SalesYTD` テーブルの最新の売上高を反映するように `SalesPerson` テーブルの `SalesOrderHeader` 列を変更します。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -760,7 +760,7 @@ SET SalesYTD = SalesYTD +
 GO  
 ```  
   
-###  <a name="RemoteTables"></a> リモート テーブルの行を更新する  
+###  <a name="updating-rows-in-a-remote-table"></a><a name="RemoteTables"></a> リモート テーブルの行を更新する  
  このセクションの例では、[リンク サーバー](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)または[行セット関数](../../t-sql/functions/rowset-functions-transact-sql.md)を使用してリモート テーブルを参照し、リモートの対象テーブルの行を更新する方法を示します。  
   
 #### <a name="o-updating-data-in-a-remote-table-by-using-a-linked-server"></a>O. リンク サーバーを使用してリモート テーブルのデータを更新する  
@@ -804,11 +804,11 @@ UPDATE OPENDATASOURCE('SQLNCLI', 'Data Source=<server name>;Integrated Security=
 SET GroupName = 'Sales and Marketing' WHERE DepartmentID = 4;  
 ```
 
-###  <a name="LOBValues"></a> ラージ オブジェクト データ型を更新する  
+###  <a name="updating-large-object-data-types"></a><a name="LOBValues"></a> ラージ オブジェクト データ型を更新する  
  このセクションの例では、ラージ オブジェクト (LOB) データ型で定義された列の値を更新する方法を示します。  
   
 #### <a name="r-using-update-with-write-to-modify-data-in-an-nvarcharmax-column"></a>R. UPDATE を .WRITE と共に使用し、nvarchar(max) 列のデータを変更する  
- 次の例では、.WRITE 句を使用して、`Production.Document` テーブルの `DocumentSummary` 型の **nvarchar(max)** 列の値を部分的に更新します。 置換する語、既存データ内で置換される語の開始位置 (オフセット)、置換する文字数 (長さ) を指定することにより、`components` という語が、`features` という語で置換されます。 また、この例では、OUTPUT 句を使用して、`DocumentSummary` 列の前イメージと後イメージを `@MyTableVar` テーブル変数に返します。  
+ 次の例では、.WRITE 句を使用して、`DocumentSummary` テーブルの **型の**nvarchar(max)`Production.Document` 列の値を部分的に更新します。 置換する語、既存データ内で置換される語の開始位置 (オフセット)、置換する文字数 (長さ) を指定することにより、`components` という語が、`features` という語で置換されます。 また、この例では、OUTPUT 句を使用して、`DocumentSummary` 列の前イメージと後イメージを `@MyTableVar` テーブル変数に返します。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -907,7 +907,7 @@ SET [Chart] = CAST('Xray 1' as varbinary(max))
 WHERE [SerialNumber] = 2;  
 ```  
   
-###  <a name="UDTs"></a> ユーザー定義型を更新する  
+###  <a name="updating-user-defined-types"></a><a name="UDTs"></a> ユーザー定義型を更新する  
  次の例では、CLR ユーザー定義型 (UDT) の列の値を変更します。 3 つの方法が示されています。 ユーザー定義の列に関する詳細については、「[CLR ユーザー定義型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)」を参照してください。  
   
 #### <a name="v-using-a-system-data-type"></a>V. システム データ型を使用する  
@@ -937,7 +937,7 @@ SET Location.X = 23.5
 WHERE Name = 'Anchorage';  
 ```  
   
-###  <a name="TableHints"></a> ヒントを使用してクエリ オプティマイザーの既定の動作をオーバーライドする  
+###  <a name="overriding-the-default-behavior-of-the-query-optimizer-by-using-hints"></a><a name="TableHints"></a> ヒントを使用してクエリ オプティマイザーの既定の動作をオーバーライドする  
  このセクションの例では、テーブル ヒントとクエリ ヒントを使用して、UPDATE ステートメントを処理する際のクエリ オプティマイザーの既定の動作を一時的にオーバーライドする方法を示します。  
   
 > [!CAUTION]  
@@ -975,7 +975,7 @@ GO
 EXEC Production.uspProductUpdate 'BK-%';  
 ```  
   
-###  <a name="CaptureResults"></a> UPDATE ステートメントの結果をキャプチャする  
+###  <a name="capturing-the-results-of-the-update-statement"></a><a name="CaptureResults"></a> UPDATE ステートメントの結果をキャプチャする  
  このセクションの例では、[OUTPUT 句](../../t-sql/queries/output-clause-transact-sql.md)を使用して、UPDATE ステートメントの影響を受ける各行の情報や、それらに基づく式を返す方法を示します。 これらの結果は処理アプリケーションに返され、確認メッセージの表示、アーカイブ化、その他のアプリケーション要件で使用することができます。  
   
 #### <a name="aa-using-update-with-the-output-clause"></a>AA. UPDATE ステートメントを OUTPUT 句と共に使用する  
@@ -1009,11 +1009,11 @@ FROM HumanResources.Employee;
 GO  
 ```  
   
-###  <a name="Other"></a> その他のステートメントで UPDATE を使用する  
+###  <a name="using-update-in-other-statements"></a><a name="Other"></a> その他のステートメントで UPDATE を使用する  
  このセクションの例では、他のステートメントでの UPDATE の使用方法を示します。  
   
 #### <a name="ab-using-update-in-a-stored-procedure"></a>AB. UPDATE をストアド プロシージャで使用する  
- 次の例では、UPDATE ステートメントをストアド プロシージャで使用しています。 このプロシージャには、1 つの入力パラメーター `@NewHours` と 1 つの出力パラメーター `@RowCount` があります。 その `@NewHours` パラメーター値を UPDATE ステートメントで使用して、`HumanResources.Employee` テーブルの `VacationHours` 列を更新します。 影響を受けた行数は、`@RowCount` 出力パラメーターを使用して、ローカル変数に返されます。 `VacationHours` に設定する値は、SET 句で CASE 式を使用して条件に応じて決定しています。 従業員の給与が時給ベース (`SalariedFlag` = 0) である場合、`VacationHours` は `@NewHours` で指定された値に現在の時間数を加算した値に設定されます。それ以外の場合は、`VacationHours` は `@NewHours` で指定された値に設定されます。  
+ 次の例では、UPDATE ステートメントをストアド プロシージャで使用しています。 このプロシージャには、1 つの入力パラメーター `@NewHours` と 1 つの出力パラメーター `@RowCount` があります。 その `@NewHours` パラメーター値を UPDATE ステートメントで使用して、`VacationHours` テーブルの `HumanResources.Employee` 列を更新します。 影響を受けた行数は、`@RowCount` 出力パラメーターを使用して、ローカル変数に返されます。 `VacationHours` に設定する値は、SET 句で CASE 式を使用して条件に応じて決定しています。 従業員の給与が時給ベース (`SalariedFlag` = 0) である場合、`VacationHours` は `@NewHours` で指定された値に現在の時間数を加算した値に設定されます。それ以外の場合は、`VacationHours` は `@NewHours` で指定された値に設定されます。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -1072,7 +1072,7 @@ GO
 ### <a name="ad-using-a-simple-update-statement"></a>AD. 単純な UPDATE ステートメントを使用する  
  次の例は、更新する行の指定に WHERE 句が使用されなかった場合に、すべての行がどのように影響を受けるかを示します。  
   
- この例では、`DimEmployee` テーブルのすべての行の `EndDate` 列と `CurrentFlag` 列の値を更新します。  
+ この例では、`EndDate` テーブルのすべての行の `CurrentFlag` 列と `DimEmployee` 列の値を更新します。  
   
 ```sql  
 -- Uses AdventureWorks  

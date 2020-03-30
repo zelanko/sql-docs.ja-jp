@@ -31,10 +31,10 @@ ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 15aa957b25323337f3b76b4f54f89a7121567a24
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73982186"
 ---
 # <a name="use-sql-server-objects"></a>SQL Server オブジェクトの使用
@@ -68,29 +68,29 @@ ms.locfileid: "73982186"
   
 -   [必要なアクセス許可](#RequiredPermissions)  
   
-##  <a name="SQLServerAgentPOs"></a> SQL Server エージェント パフォーマンス オブジェクト  
+##  <a name="sql-server-agent-performance-objects"></a><a name="SQLServerAgentPOs"></a> SQL Server エージェント パフォーマンス オブジェクト  
  次の表は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント用のパフォーマンス オブジェクトの一覧を示します。  
   
-|パフォーマンス オブジェクト|[説明]|  
+|パフォーマンス オブジェクト|説明|  
 |------------------------|-----------------|  
 |[SQLAgent:Alerts](../../relational-databases/performance-monitor/sql-server-agent-alerts-object.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント警告についての情報を提供します。|  
 |[SQLAgent:Jobs](../../relational-databases/performance-monitor/sql-server-agent-jobs-object.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブについての情報を提供します。|  
 |[SQLAgent:JobSteps](../../relational-databases/performance-monitor/sql-server-agent-jobsteps-object.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブ ステップについての情報を提供します。|  
 |[SQLAgent:Statistics](../../relational-databases/performance-monitor/sql-server-agent-statistics-object.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントについての一般的な情報を提供します。|  
   
-##  <a name="ServiceBrokerPOs"></a> Service Broker のパフォーマンス オブジェクト  
+##  <a name="service-broker-performance-objects"></a><a name="ServiceBrokerPOs"></a> Service Broker のパフォーマンス オブジェクト  
  次の表は、 [!INCLUDE[ssSB](../../includes/sssb-md.md)]用のパフォーマンス オブジェクトの一覧を示します。  
   
-|パフォーマンス オブジェクト|[説明]|  
+|パフォーマンス オブジェクト|説明|  
 |------------------------|-----------------|  
 |[SQLServer:Broker Activation](../../relational-databases/performance-monitor/sql-server-broker-activation-object.md)|[!INCLUDE[ssSB](../../includes/sssb-md.md)]のアクティブなタスクについての情報を提供します。|  
 |[SQLServer:Broker Statistics](../../relational-databases/performance-monitor/sql-server-broker-statistics-object.md)|[!INCLUDE[ssSB](../../includes/sssb-md.md)] についての一般的な情報を提供します。|  
 |[SQLServer:Broker Transport](../../relational-databases/performance-monitor/sql-server-broker-dbm-transport-object.md)|[!INCLUDE[ssSB](../../includes/sssb-md.md)] のネットワークについての情報を提供します。|  
   
-##  <a name="SQLServerPOs"></a> SQL Server パフォーマンス オブジェクト  
+##  <a name="sql-server-performance-objects"></a><a name="SQLServerPOs"></a> SQL Server パフォーマンス オブジェクト  
  次の表では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトについて説明します。  
   
-|パフォーマンス オブジェクト|[説明]|  
+|パフォーマンス オブジェクト|説明|  
 |------------------------|-----------------|  
 |[SQLServer:Access Methods](../../relational-databases/performance-monitor/sql-server-access-methods-object.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース オブジェクトの割り当てを検索して計測します。たとえば、インデックスとデータに割り当てられているインデックス検索の数またはページ数を計測します。|  
 |[SQLServer:Backup Device](../../relational-databases/performance-monitor/sql-server-backup-device-object.md)|バックアップ デバイスのスループットなど、バックアップ操作と復元操作で使用するバックアップ デバイスについての情報を提供します。|  
@@ -127,17 +127,17 @@ ms.locfileid: "73982186"
 |[SQLServer:Wait Statistics](../../relational-databases/performance-monitor/sql-server-wait-statistics-object.md)|待機についての情報を提供します。|  
 |[SQLServer:Workload Group Stats](../../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md)|リソース ガバナーのワークロード グループ統計に関する情報を提供します。|  
   
-##  <a name="SQLServerReplicationPOs"></a> SQL Server レプリケーション パフォーマンス オブジェクト  
+##  <a name="sql-server-replication-performance-objects"></a><a name="SQLServerReplicationPOs"></a> SQL Server レプリケーション パフォーマンス オブジェクト  
  次の表は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーション用のパフォーマンス オブジェクトの一覧を示します。  
   
-|パフォーマンス オブジェクト|[説明]|  
+|パフォーマンス オブジェクト|説明|  
 |------------------------|-----------------|  
 |**SQLServer:Replication Agents**<br /><br /> **SQLServer:Replication Snapshot**<br /><br /> **SQLServer:Replication Logreader**<br /><br /> **SQLServer:Replication Dist.**<br /><br /> **SQLServer:Replication Merge**<br /><br /> 詳細については、「 [Monitoring Replication with System Monitor](../../relational-databases/replication/monitor/monitoring-replication-with-system-monitor.md)」を参照してください。|レプリケーション エージェントの利用状況についての情報を提供します。|  
   
-##  <a name="SsisPipelineCounters"></a> SSIS Pipeline カウンター  
+##  <a name="ssis-pipeline-counters"></a><a name="SsisPipelineCounters"></a> SSIS Pipeline カウンター  
  **SSIS Pipeline** カウンターの詳細については、「 [パフォーマンス カウンター](../../integration-services/performance/performance-counters.md)」を参照してください。  
   
-##  <a name="RequiredPermissions"></a> 必要な権限  
+##  <a name="required-permissions"></a><a name="RequiredPermissions"></a> 必要な権限  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLAgent:Alerts **以外の**オブジェクトを使用する際の権限は Windows のアクセス許可に依存しています。 **SQLAgent:Alerts** を使用するには、ユーザーは **sysadmin**固定サーバー ロールのメンバーでなければなりません。  
   
 ## <a name="see-also"></a>参照  

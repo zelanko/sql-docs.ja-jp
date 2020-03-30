@@ -11,10 +11,10 @@ ms.assetid: c602fd39-db93-4717-8f3a-5a98b940f9cc
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 55dc6787960fbb4979bbe0d21f27f0fa43437662
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75243009"
 ---
 # <a name="determine-why-changes-from-primary-replica-are-not-reflected-on-secondary-replica-for-an-always-on-availability-group"></a>可用性グループでセカンダリ レプリカにプライマリ レプリカの変更が反映されない理由を判断する
@@ -50,7 +50,7 @@ ms.locfileid: "75243009"
 以下のセクションでは、プライマリ レプリカで変更が読み取り専用クエリでセカンダリ レプリカに反映されていない一般的な原因について説明します。  
 
 
-##  <a name="BKMK_OLDTRANS"></a> 実行時間の長いアクティブなトランザクション  
+##  <a name="long-running-active-transactions"></a><a name="BKMK_OLDTRANS"></a> 実行時間の長いアクティブなトランザクション  
  プライマリ レプリカでの実行時間の長いトランザクションは、更新がセカンダリ レプリカで読み取られることを妨げます。  
   
 ### <a name="explanation"></a>説明  
@@ -59,7 +59,7 @@ ms.locfileid: "75243009"
 ### <a name="diagnosis-and-resolution"></a>診断と解決  
  プライマリ レプリカで、 [DBCC OPENTRAN &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-opentran-transact-sql.md) を使用して、最も古いアクティブなトランザクションを表示し、それらをロールバックできるかどうかを確認します。 最も古いアクティブなトランザクションがロールバックされ、セカンダリ レプリカに同期された後、セカンダリ レプリカ上の読み取りワークロードは、次に古いアクティブなトランザクションの先頭までの可用性データベース内の更新を確認できます。  
   
-##  <a name="BKMK_LATENCY"></a> 長いネットワーク遅延またはスループットが低いネットワークは、プライマリ レプリカでログの構築の原因になります。  
+##  <a name="high-network-latency-or-low-network-throughput-causes-log-build-up-on-the-primary-replica"></a><a name="BKMK_LATENCY"></a> 長いネットワーク遅延またはスループットが低いネットワークは、プライマリ レプリカでログの構築の原因になります。  
  長いネットワーク遅延または低いスループットは、セカンダリ レプリカに十分な速さでログが送信されることを妨げます。  
   
 ### <a name="explanation"></a>説明  
@@ -92,7 +92,7 @@ ms.locfileid: "75243009"
   
  この問題を解決するには、ネットワーク帯域幅をアップグレードするか、不要なネットワーク トラフィックを削除するか減らしてみてください。  
   
-##  <a name="BKMK_REDOBLOCK"></a> 別のレポート ワークロードが再実行スレッドの実行をブロックする  
+##  <a name="another-reporting-workload-blocks-the-redo-thread-from-running"></a><a name="BKMK_REDOBLOCK"></a> 別のレポート ワークロードが再実行スレッドの実行をブロックする  
  セカンダリ レプリカの再実行スレッドが、実行時間の長い読み取り専用クエリによるデータ定義言語 (DDL) の変更をブロックしています。 再実行スレッドが読み取りワークロードで利用できるように追加の更新を提供するには、その前に再実行スレッドがブロック解除される必要があります。  
   
 ### <a name="explanation"></a>説明  
@@ -108,7 +108,7 @@ from sys.dm_exec_requests where command = 'DB STARTUP'
   
  レポート ワークロードを完了させて、その時点で再実行スレッドをブロック解除させるか、ブロックしているセッション ID で [KILL &#40;Transact-SQL&#41; ](~/t-sql/language-elements/kill-transact-sql.md) を実行して直ちに再実行スレッドをブロック解除することができます。  
   
-##  <a name="BKMK_REDOBEHIND"></a> リソースの競合のために再実行スレッドが遅れる  
+##  <a name="redo-thread-falls-behind-due-to-resource-contention"></a><a name="BKMK_REDOBEHIND"></a> リソースの競合のために再実行スレッドが遅れる  
  セカンダリ レプリカでの大量のレポート ワークロードのために、セカンダリ レプリカのパフォーマンスが低下し、再実行スレッドが遅れています。  
   
 ### <a name="explanation"></a>説明  

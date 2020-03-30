@@ -4,18 +4,18 @@ ms.date: 12/06/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-builder
-description: Word 表示拡張機能は、改ページ調整されたレポートを  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 形式 (.docx) で表示します。 形式は、Office Open XML です。
+description: Word 表示拡張機能は、改ページ調整されたレポートを Microsoft Word 形式 (.docx) で表示します。 形式は、Office Open XML です。
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 75df880cf51df8670671331ddd6de2738b0bba54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8b0085829346cd09f813e62fe50b1ce22f85b7f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77079415"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342879"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exporting to Microsoft Word (Report Builder and SSRS)
 
@@ -30,14 +30,14 @@ ms.locfileid: "77079415"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ReportItemsWord"></a> Word のレポート アイテム  
+##  <a name="report-items-in-word"></a><a name="ReportItemsWord"></a> Word のレポート アイテム  
  Word にエクスポートされたレポートは、そのレポート本文を表す、入れ子の表として表示されます。 Tablix データ領域は、レポート内のデータ領域の構造を反映した、入れ子の表としてレンダリングされます。 テキスト ボックスおよび四角形は、表内のセルとしてレンダリングされます。 テキスト ボックスの値はセル内部に表示されます。  
   
  画像、グラフ、データ バー、スパークライン、マップ、インジケーター、およびゲージは、それぞれ表のセル内に静的な画像としてレンダリングされます。 これらのレポート アイテムでは、設定されているハイパーリンクやドリルスルー リンクがレンダリングされます。 グラフ内のクリック可能なマップや領域はサポートされません。  
   
  ニュースレター形式のカラム レポートは、Word ではレンダリングされません。 レポート本文およびページ背景の画像およびカラーはレンダリングされません。  
   
-##  <a name="Pagination"></a> ページ割り付け  
+##  <a name="pagination"></a><a name="Pagination"></a> ページ割り付け  
  レポートを Word で開くと、レポート全体の改ページ位置が、ページ サイズに基づいて自動的に修正されます。 改ページ位置の修正によって、想定しない場所に改ページが挿入されることがあります。場合によっては、エクスポートされたレポートに連続して 2 つの改ページが挿入されたり、空白のページが追加されたりすることもあります。 Word の改ページは、ページ余白を調整することによって変更できます。  
   
  このレンダラーでは、論理的な改ページのみがサポートされます。  
@@ -50,7 +50,7 @@ ms.locfileid: "77079415"
   
  レンダリング時には、コンテンツを表示できるように、必要に応じてレポートの幅が最大 22 インチまで拡大されます。 レポートの最小幅は、[プロパティ] ペインの RDL の Width プロパティに基づきます。  
   
-##  <a name="DocumentProperties"></a> ドキュメント プロパティ  
+##  <a name="document-properties"></a><a name="DocumentProperties"></a> ドキュメント プロパティ  
  Word レンダラーでは、次のメタデータが DOCX ファイルに書き込まれます。  
   
 |レポート要素のプロパティ|説明|  
@@ -59,7 +59,7 @@ ms.locfileid: "77079415"
 |Report.Author|Author|  
 |Report.Description|説明|  
   
-##  <a name="ReportHeadersFooters"></a> ページ ヘッダーとページ フッター  
+##  <a name="page-headers-and-footers"></a><a name="ReportHeadersFooters"></a> ページ ヘッダーとページ フッター  
  ページのヘッダーとフッターは、Word のヘッダー領域およびフッター領域としてレンダリングされます。 ページ ヘッダーまたはページ フッターに、レポートの合計ページ数を表すページ番号 (または式) が表示される場合、これらは、レンダリング後のレポートに正確なページ番号が表示されるように、Word のフィールドに変換されます。 レポートで設定されたヘッダーまたはフッターの高さは、Word では反映されません。 状況によっては、PrintOnFirstPage プロパティを使用して、ページ ヘッダーとページ フッターのテキストをレポートの最初のページに印刷するかどうかを指定できます。 表示レポートに複数のページがあり、ページごとに 1 つのセクションのみが含まれる場合は、PrintOnFirstPage を False に設定でき、最初のページのテキストは非表示になります。それ以外の場合は、PrintOnFirstPage プロパティの値に関係なく、テキストが印刷されます。  
   
  Word レンダラーでは、レポートが Word にエクスポートされるときに、ページのヘッダーとフッター内にあるすべての式の解析が試行されます。 式の多くの形式では、解析が完了すると、すべてのレポート ページのページ フッターとページ ヘッダーに予期された値が表示されます。  
@@ -78,7 +78,7 @@ ms.locfileid: "77079415"
   
  この問題を回避するには、フッターおよびヘッダーで式を使用するときに 1 つの複合式ではなく複数のテキスト ランを使用します。 次の 2 つの式は等価です。 最初の式は複合式で、2 番目の式はテキスト ランを使用しています。 Word レンダラーでは、2 番目の式のみが正しく解析されます。  
   
-##  <a name="Interactivity"></a> 対話性  
+##  <a name="interactivity"></a><a name="Interactivity"></a> 対話性  
  Word では、いくつかの対話型要素がサポートされています。 具体的な動作について説明します。  
   
 ### <a name="show-and-hide"></a>表示/非表示  
@@ -96,7 +96,7 @@ ms.locfileid: "77079415"
 ### <a name="bookmarks"></a>ブックマーク  
  レポート内のブックマークは、Word のブックマークとしてレンダリングされます。 ブックマーク リンクは、文書内のブックマーク ラベルに接続するハイパーリンクとしてレンダリングされます。 ブックマーク ラベルは 40 文字未満にする必要があります。 ブックマーク ラベルに使用できる特殊文字はアンダースコア (_) だけです。 サポート外の特殊文字はブックマーク ラベルの名前から削除されます。また、40 文字を超えた場合、名前が切り詰められます。 レポートに重複するブックマーク名が存在した場合、それらのブックマークは、Word ではレンダリングされません。  
   
-##  <a name="WordStyleRendering"></a> Word スタイルのレンダリング  
+##  <a name="word-style-rendering"></a><a name="WordStyleRendering"></a> Word スタイルのレンダリング  
  以降、Word におけるスタイルのレンダリングについて簡単に説明します。  
   
 ### <a name="color-palette"></a>色パレット  
@@ -105,7 +105,7 @@ ms.locfileid: "77079415"
 ### <a name="border"></a>罫線  
  ページ罫線を除く、レポート アイテムの罫線は、Word の表のセル罫線としてレンダリングされます。  
   
-##  <a name="SquigglyLines"></a> エクスポートされたレポートの波線  
+##  <a name="squiggly-lines-in-exported-reports"></a><a name="SquigglyLines"></a> エクスポートされたレポートの波線  
  レポート データまたは定数をエクスポートして Word で表示すると、その部分の下に赤または緑の波線が表示される場合があります。 赤い波線はスペル ミスを示します。 緑の波線は文法エラーを示します。 これは、Word で指定された編集言語の校正 (スペルおよび文法) 規則に適合しない単語がレポートに含まれている場合に生じます。 たとえば、レポートの列タイトルが英語である場合に、このレポートをスペイン語版の Word でレンダリングすると、列タイトルに赤い波線の下線が表示される可能性があります。 レポートには完全な文や段落ではなく短いテキストのみが含まれていることが多いため、レポートでは文法エラーとして認識されるエラーよりスペル ミスとして認識されるエラーの方がより一般的です。  
   
  レポート内に波線が存在する場合、そのレポートにエラーがある可能性を示していますが、実際のエラーではないことが少なくありません。 このような波線は、レポートの校正言語を変更することで除去できます。 校正言語を変更するには、レポートのコンテンツを選択し、そのコンテンツの適切な言語を指定します。 コンテンツをすべて選択することも、部分的に選択することもできます。 Word の言語オプションである **[校正言語の設定]** は、 **[校閲]** タブの **[言語]** にあります。コンテンツを更新した後は、再度ドキュメントを保存する必要があります。  
@@ -121,7 +121,7 @@ ms.locfileid: "77079415"
 > [!NOTE]  
 >  Word の **[Microsoft Office 言語設定]** または **[Word のオプション]** ダイアログ ボックスで編集言語を変更すると、その変更がすべての Office プログラムに適用されます。  
   
-##  <a name="WordLimitations"></a> Word の制限  
+##  <a name="word-limitations"></a><a name="WordLimitations"></a> Word の制限  
  [!INCLUDE[ofprword](../../includes/ofprword-md.md)]では、次の制限事項が適用されます。  
   
 -   Word の表でサポートされる列数は、最大 63 です。 列数が 63 を超えるレポートをレンダリングしようとすると、Word によって表が分割されます。 追加列は 63 列目と隣接するように、レポート本文に配置されます。 そのため、レポートの列位置にずれが生じる場合があります。  
@@ -138,7 +138,7 @@ ms.locfileid: "77079415"
   
 -   テキストを Word にエクスポートした際に、一部のフォントについては、フォント装飾付きテキストによって、レンダリング後のレポートに予期しないグリフや存在しないグリフが生成される場合があります。  
   
-##  <a name="WordBenefits"></a> Word レンダラーを使用する利点  
+##  <a name="benefits-of-using-the-word-renderer"></a><a name="WordBenefits"></a> Word レンダラーを使用する利点  
  エクスポートされたレポートで [!INCLUDE[ofprword](../../includes/ofprword-md.md)] .docx ファイルの新機能が利用できるようになる点に加え、エクスポートされたレポートの *.docx ファイルのサイズが小さくなる傾向があります。 Word レンダラーを使用してエクスポートされたレポートは通常、Word 2003 レンダラーを使用してエクスポートされた同じレポートよりもサイズがかなり小さくなります。  
   
 ## <a name="backward-compatibility-of-exported-reports"></a>エクスポートされたレポートの下位互換性  
@@ -146,7 +146,7 @@ ms.locfileid: "77079415"
   
  互換性モードをオフにしてレポートを再度保存すると、レポートのレイアウトが予期しない方法で変更される場合があります。  
   
-##  <a name="AvailabilityWord"></a> Word 2003 レンダラー  
+##  <a name="the-word-2003-renderer"></a><a name="AvailabilityWord"></a> Word 2003 レンダラー  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 (.doc) 表示拡張機能の使用は非推奨とされます。 詳細については、「 [SQL Server 2016 における SQL Server Reporting Services の非推奨の機能](~/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)」を参照してください。  
@@ -186,7 +186,7 @@ ms.locfileid: "77079415"
 ### <a name="differences-between-the-word-and-word-2003-renderers"></a>Word レンダラーと Word 2003 レンダラーの違い  
  Word レンダラーまたは Word 2003 レンダラーを使用して表示されたレポートは、見た目では区別できない傾向にあります。 ただし、Word または Word 2003 の 2 つの形式の間で若干の違いが見つかる場合があります。  
   
-##  <a name="DeviceInfo"></a> デバイス情報設定  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a> デバイス情報設定  
  このレンダラーでは、デバイス情報設定を変更することによって、一部の既定の設定を変更できます。たとえば、ハイパーリンクやドリルスルー リンクを省略することも、展開表示と縮小表示の切り替えが可能な項目について、レンダリング時の状態に関係なく、すべての項目を展開することもできます。 詳しくは、「 [Word Device Information Settings](../../reporting-services/word-device-information-settings.md)」をご覧ください。  
 
 ## <a name="next-steps"></a>次のステップ

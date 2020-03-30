@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 0bed12749231eb9ca4c4398699d662666004613a
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79285856"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>クラスター リソースとサービスの展開設定を構成する
@@ -179,7 +179,7 @@ ms.locfileid: "79285856"
    azdata bdc config init --source aks-dev-test --target custom-bdc
    ```
 
-## <a id="docker"></a> 既定の Docker レジストリ、リポジトリ、およびイメージ タグを変更する
+## <a name="change-default-docker-registry-repository-and-images-tag"></a><a id="docker"></a> 既定の Docker レジストリ、リポジトリ、およびイメージ タグを変更する
 
 組み込みの構成ファイル (具体的には、control. json) には、`docker` セクションが含まれており、ここでコンテナー レジストリ、リポジトリ、およびイメージ タグが事前に設定されます。 既定では、ビッグ データ クラスターに必要なイメージは、`mssql/bdc` リポジトリ内の Microsoft Container Registry (`mcr.microsoft.com`) にあります。
 
@@ -216,7 +216,7 @@ azdata bdc config replace -c custom-bdc/control.json -j "$.spec.docker.imageTag=
 > [!TIP]
 > ビッグ データ クラスターの展開には、コンテナー レジストリと、コンテナー イメージをプルするリポジトリへのアクセス権が必要です。 ご使用の環境に既定の Microsoft Container Registry へのアクセス権がない場合は、必要なイメージが最初にプライベート Docker リポジトリに配置されるオフライン インストールを実行できます。 オフライン インストールの詳細については、「[SQL Server ビッグ データ クラスターのオフライン展開を実行する](deploy-offline.md)」を参照してください。 イメージをプルする元となるプライベート リポジトリに展開ワークフローから確実にアクセスできるようにするために、`DOCKER_USERNAME` および `DOCKER_PASSWORD` [の環境変数](deployment-guidance.md#env)を設定してから展開を発行する必要があることにご注意ください。
 
-## <a id="clustername"></a> クラスター名を変更する
+## <a name="change-cluster-name"></a><a id="clustername"></a> クラスター名を変更する
 
 クラスター名は、ビッグ データ クラスターと、展開時に作成される Kubernetes 名前空間の両方の名前です。 これは `bdc.json` 展開構成ファイルの次の部分で指定されます。
 
@@ -236,7 +236,7 @@ azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "metad
 > [!IMPORTANT]
 > ビッグ データ クラスターの名前は、小文字の英数字のみを使用し、スペースを含めない必要があります クラスターのすべての Kubernetes 成果物 (コンテナー、ポッド、ステートフル セット、サービス) は、指定したクラスター名と同じ名前の名前空間に作成されます。
 
-## <a id="ports"></a> エンドポイント ポートを更新する
+## <a name="update-endpoint-ports"></a><a id="ports"></a> エンドポイント ポートを更新する
 
 エンドポイントは、`control.json` のコントローラー用と、`bdc.json` の対応するセクションのゲートウェイと SQL Server マスター インスタンス用に定義されます。 `control.json` 構成ファイルの次の部分は、コントローラーのエンドポイント定義を示しています。
 
@@ -263,7 +263,7 @@ azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "metad
 azdata bdc config replace --config-file custom-bdc/control.json --json-values "$.spec.endpoints[?(@.name==""Controller"")].port=30000"
 ```
 
-## <a id="replicas"></a> スケールを構成する
+## <a name="configure-scale"></a><a id="replicas"></a> スケールを構成する
 
 各リソース (記憶域プールなど) の構成は、`bdc.json` 構成ファイルで定義されます。 たとえば、`bdc.json` の次の部分は、`storage-0` リソース定義を示しています。
 
@@ -305,7 +305,7 @@ azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "$.spe
 > [!NOTE]
 > コンピューティング プールとデータ プールで検証済みのインスタンスの最大数は、それぞれ `8` です。 この制限は展開時には適用されませんが、運用環境の展開では、これより大きいスケールを構成することはお勧めできません。
 
-## <a id="storage"></a> 記憶域を構成する
+## <a name="configure-storage"></a><a id="storage"></a> 記憶域を構成する
 
 各プールに使用される記憶域クラスと特性を変更することもできます。 次の例では、カスタム記憶域クラスを記憶域プールとデータ プールに割り当て、データを格納するための永続ボリューム要求のサイズを HDFS (記憶域プール) 用に 500 Gb、データ プール用に 100 Gb に更新します。 
 
@@ -369,7 +369,7 @@ azdata bdc config patch --config-file custom-bdc/bdc.json --patch ./patch.json
 > [!NOTE]
 > `kubeadm-dev-test` に基づく構成ファイルには、各プールの記憶域の定義はありませんが、必要に応じて上のプロセスを使用して追加できます。
 
-## <a id="sparkstorage"></a> Spark を使用せずに記憶域プールを構成する
+## <a name="configure-storage-pool-without-spark"></a><a id="sparkstorage"></a> Spark を使用せずに記憶域プールを構成する
 
 また、Spark を使用せずに実行し、別の Spark プールを作成するように記憶域プールを構成することもできます。 この構成により、記憶域に依存せず、Spark コンピューティングの機能をスケーリングすることができます。 Spark プールを構成する方法については、この記事の「[Spark プールを作成する](#sparkpool)」セクションを参照してください。
 
@@ -382,7 +382,7 @@ azdata bdc config patch --config-file custom-bdc/bdc.json --patch ./patch.json
 azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "$.spec.resources.storage-0.spec.settings.spark.includeSpark=false"
 ```
 
-## <a id="sparkpool"></a> Spark プールを作成する
+## <a name="create-a-spark-pool"></a><a id="sparkpool"></a> Spark プールを作成する
 
 Spark プールは、追加で作成することも、記憶域プールで実行される Spark インスタンスの代わりに作成することもできます。 次の例では、`bdc.json` 構成ファイルに修正プログラムを適用して、2 つのインスタンスを持つ Spark プールを作成する方法を示します。 
 
@@ -425,7 +425,7 @@ Spark プールは、追加で作成することも、記憶域プールで実�
 azdata bdc config patch -c custom-bdc/bdc.json -p spark-pool-patch.json
 ```
 
-## <a id="podplacement"></a> Kubernetes ラベルを使用してポッドの配置を構成する
+## <a name="configure-pod-placement-using-kubernetes-labels"></a><a id="podplacement"></a> Kubernetes ラベルを使用してポッドの配置を構成する
 
 Kubernetes ノード上で特定のリソースを持つポッドの配置を制御することで、さまざまな種類のワークロード要件に対応できます。 Kubernetes ラベルを使用すると、ご使用の Kubernetes クラスター内のどのノードがビッグ データ クラスター リソースの展開に使用されるかをカスタマイズできますが、特定のリソースに使用されるノードも制限されます。
 たとえば、記憶域プール ポッドがより多くの記憶域があるノードに確実に配置されるようにする一方で、SQL Server マスター インスタンスをより多くの CPU およびメモリ リソースがあるノードに配置することができます。 この場合、まず異なる種類のハードウェアが混在する Kubernetes クラスターを構築してから、それに応じて[ノード ラベルを割り当てます](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)。 ビッグ データ クラスターの展開時に、クラスター レベルで同じラベルを指定して、`control.json` ファイルの `clusterLabel` 属性を使用してビッグ データ クラスターに使用されるノードを示すことができます。 その結果、別のラベルがプール レベルの配置に使用されます。 これらのラベルは、`nodeLabel` 属性を使用して、ビッグ データ クラスターの展開構成ファイルで指定できます。 Kubernetes により、指定されたラベルと一致するノードのポッドが割り当てられます。 Kubernetes クラスター内のノードに追加する必要がある特定のラベル キーは、`mssql-cluster` (ビッグ データ クラスターに使用されるノードを示すため) と `mssql-resource` (さまざまなリソースに対してポッドが配置される特定のノードを示すため) です。 これらのラベルの値には、任意の文字列を指定できます。
@@ -467,7 +467,7 @@ azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.gateway.spec.n
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.appproxy.spec.nodeLabel=bdc-shared"
 ```
 
-## <a id="jsonpatch"></a> JSON 修正プログラ ムファイルを使用したその他のカスタマイズ
+## <a name="other-customizations-using-json-patch-files"></a><a id="jsonpatch"></a> JSON 修正プログラ ムファイルを使用したその他のカスタマイズ
 
 JSON 修正プログラム ファイルによって、複数の設定が一度で構成されます。 Json 修正プログラムの詳細については、[Python の JSON 修正プログラム](https://github.com/stefankoegl/python-json-patch)と [JSONPath Online Evaluator](https://jsonpath.com/) のページを参照してください。
 
