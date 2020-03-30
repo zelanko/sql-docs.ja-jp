@@ -14,10 +14,10 @@ ms.assetid: 6d667bba-7c25-492a-8f4d-70ebaca28f40
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fa5d6c780ce80e8f6de0493494f736f7049edc16
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298970"
 ---
 # <a name="integration-services-ssis-server-and-catalog"></a>Integration Services (SSIS) サーバーとカタログ
@@ -40,7 +40,7 @@ ms.locfileid: "71298970"
   
  SSIS と Always On 可用性グループを利用して SSISDB とそのコンテンツの高可用性を実現することもできます。 詳しくは、「[Always On for SSIS Catalog (SSISDB)](ssis-catalog.md#always-on-for-ssis-catalog-ssisdb)」をご覧ください。 また、Matt Masson による blogs.msdn.com のブログ記事「[SSIS with Always On](https://go.microsoft.com/fwlink/?LinkId=255873)」(SSIS と Always On) もご覧ください。  
   
-##  <a name="ssms"></a> SQL Server Management Studio の Integration Services サーバー  
+##  <a name="integration-services-server-in-sql-server-management-studio"></a><a name="ssms"></a> SQL Server Management Studio の Integration Services サーバー  
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]SSISDB**データベースをホストする**のインスタンスに接続している場合、オブジェクト エクスプローラーに、次のオブジェクトが表示されます。  
   
 -   **SSISDB データベース**  

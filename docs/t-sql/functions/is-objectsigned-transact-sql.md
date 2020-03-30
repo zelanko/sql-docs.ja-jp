@@ -18,10 +18,10 @@ ms.assetid: afbc4f7f-8266-4ee6-9802-14a2dbe69ef6
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 274e6128ba57a92f6f2e1e84e160424571742787
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71314611"
 ---
 # <a name="is_objectsigned-transact-sql"></a>IS_OBJECTSIGNED (Transact-SQL)
@@ -65,7 +65,7 @@ IS_OBJECTSIGNED (
 ## <a name="remarks"></a>解説  
  IS_OBJECTSIGNED は次の値を返します。  
   
-|戻り値|[説明]|  
+|戻り値|説明|  
 |------------------|-----------------|  
 |NULL|オブジェクトが署名されていないか、オブジェクトが有効ではありません。|  
 |0|オブジェクトは署名されていますが、署名が有効ではありません。|  

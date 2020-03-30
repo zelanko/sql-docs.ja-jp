@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 7d48edb0024261bee87071cbd3ac77e3c49aabfd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76284813"
 ---
 # <a name="disable-publishing-and-distribution"></a>パブリッシングおよびディストリビューションの無効化
@@ -52,13 +52,13 @@ ms.locfileid: "76284813"
   
      [レプリケーション管理オブジェクト (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Prerequisites"></a> 前提条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
   
 -   パブリッシングおよびディストリビューションを無効にするには、すべてのディストリビューション データベースおよびパブリケーション データベースをオンラインにする必要があります。 ディストリビューション データベースまたはパブリケーション データベースに対して、 *データベース スナップショット* が存在する場合、これらを削除してからパブリッシングおよびディストリビューションを無効にする必要があります。 データベース スナップショットは、データベースの読み取り専用のオフライン コピーで、レプリケーション スナップショットとは関連がありません。 詳細については、「[データベース スナップショット &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)」を参照してください。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  パブリッシングとディストリビューションの無効化ウィザードを使用して、パブリッシングおよびディストリビューションを無効化します。  
   
 #### <a name="to-disable-publishing-and-distribution"></a>パブリッシングおよびディストリビューションを無効化するには  
@@ -69,7 +69,7 @@ ms.locfileid: "76284813"
   
 3.  パブリッシングとディストリビューションの無効ウィザードの手順に従って操作します。  
 
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  パブリッシングおよびディストリビューションは、レプリケーションのストアド プロシージャを使用してプログラムから無効にできます。  
   
 #### <a name="to-disable-publishing-and-distribution"></a>パブリッシングおよびディストリビューションを無効化するには  
@@ -91,7 +91,7 @@ ms.locfileid: "76284813"
     > [!NOTE]  
     > [sp_dropdistpublisher](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md) および [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)の実行前にレプリケーションのパブリッシング オブジェクトおよびディストリビューション オブジェクトがすべて削除されていなかった場合は、これらのプロシージャからエラーが返されます。 パブリッシャーまたはディストリビューターの削除時に、レプリケーション関連のオブジェクトをすべて削除するには、`@no_checks` パラメーターを **1** に設定する必要があります。 パブリッシャーまたはディストリビューターがオフラインになっているか、アクセスできない場合は、`@ignore_distributor` パラメーターを **1** に設定して削除できます。ただし、パブリッシング オブジェクトおよびディストリビューション オブジェクトは削除されずに残るため、手動で削除する必要があります。  
   
-###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 例 (Transact-SQL)  
  次の例は、サブスクリプション データベースからレプリケーション オブジェクトを削除するスクリプトです。  
   
  [!code-sql[HowTo#sp_removedbreplication](../../relational-databases/replication/codesnippet/tsql/disable-publishing-and-d_1.sql)]  
@@ -100,7 +100,7 @@ ms.locfileid: "76284813"
   
  [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/disable-publishing-and-d_2.sql)]  
   
-##  <a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
   
 #### <a name="to-disable-publishing-and-distribution"></a>パブリッシングおよびディストリビューションを無効化するには  
   
@@ -120,7 +120,7 @@ ms.locfileid: "76284813"
   
 8.  <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A> メソッドを呼び出します。 **force** に *true* を渡すと、すべてのローカル パブリケーション データベースが無効になっているか、ディストリビューション データベースがアンインストールされているかどうかを最初に確認せずに、ディストリビューターのレプリケーション オブジェクトをすべて削除します。  
   
-###  <a name="PShellExample"></a> 例 (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> 例 (RMO)  
  次の例では、ディストリビューターのパブリッシャーの登録を削除し、ディストリビューション データベースを削除して、ディストリビューターをアンインストールします。  
   
  [!code-cs[HowTo#rmo_DropDistPub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_dropdistpub)]  

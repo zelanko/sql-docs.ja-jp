@@ -17,10 +17,10 @@ ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: cf87d09eed5b955c1773c46270f25cb0a2d57eaa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71708684"
 ---
 # <a name="back-up-files-and-filegroups"></a>ファイルおよびファイル グループのバックアップ
@@ -29,9 +29,9 @@ ms.locfileid: "71708684"
   
 ファイルのバックアップの詳細については、「 [ファイルの完全バックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md) 」および「 [差分バックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)」を参照してください。  
 
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 - BACKUP ステートメントは、明示的または暗黙的なトランザクションでは使用できません。  
   
@@ -39,11 +39,11 @@ ms.locfileid: "71708684"
   
 この機能の制限および制約の詳細については、「 [バックアップの概要 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)」を参照してください。  
   
-###  <a name="Recommendations"></a> 推奨事項
+###  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項
   
 既定では、バックアップ操作が成功するたびに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログおよびシステム イベント ログにエントリが 1 つ追加されます。 ログを頻繁にバックアップすると、これらの成功メッセージがすぐに蓄積され、他のメッセージを探すのが困難になるほどエラー ログが大きくなることがあります。 そのような場合、これらのエントリに依存するスクリプトがなければ、トレース フラグ 3226 を使用することによってこれらのログ エントリを除外できます。「[トレース フラグ &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)」を参照してください。  
 
-###  <a name="Permissions"></a> Permissions
+###  <a name="permissions"></a><a name="Permissions"></a> Permissions
 
 `BACKUP DATABASE` および `BACKUP LOG` アクセス許可は、既定では、**sysadmin** 固定サーバー ロール、**db_owner** 固定データベース ロール、および **db_backupoperator** 固定データベース ロールのメンバーに与えられます。  
   
@@ -141,7 +141,7 @@ ms.locfileid: "71708684"
   
   [ WITH *with_options* [ **,** ...*o* ] ] ;  
   
-|オプション|[説明]|  
+|オプション|説明|  
 |------------|-----------------|  
 |*database*|トランザクション ログ、データベースの一部、またはデータベース全体をバックアップする場合の、バックアップ元となるデータベースを指定します。|  
 |FILE _=_ *logical_file_name*|ファイル バックアップに含めるファイルの論理名を指定します。|  
@@ -154,7 +154,7 @@ ms.locfileid: "71708684"
 
 詳細については、「[トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)」を参照してください。  
   
-###  <a name="TsqlExample"></a> 使用例
+###  <a name="examples"></a><a name="TsqlExample"></a> 使用例
 次の例では、 `Sales` データベースのセカンダリ ファイル グループの 1 つ以上のファイルをバックアップします。 このデータベースでは、完全復旧モデルを使用し、次のセカンダリ ファイル グループが含まれています。  
   
 - `SalesGroup1` ファイルと `SGrp1Fi1` ファイルを含む、 `SGrp1Fi2`という名前のファイル グループ。  
@@ -199,7 +199,7 @@ BACKUP DATABASE Sales
 GO  
 ```  
   
-## <a name="PowerShellProcedure"></a> PowerShell の使用
+## <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell の使用
 
 [SQL Server PowerShell プロバイダー](../../relational-databases/scripting/sql-server-powershell-provider.md)を設定して使用します。
   

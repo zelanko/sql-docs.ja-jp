@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4786c512850d161d9b7ab33f2a12cd0bd077b2bd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73593827"
 ---
 # <a name="configure-the-enclave-type-for-always-encrypted-server-configuration-option"></a>Always Encrypted サーバー構成オプションのエンクレーブの種類を構成する
@@ -24,7 +24,7 @@ ms.locfileid: "73593827"
 
 **列暗号化エンクレーブの種類**サーバー構成オプションを使うと、Always Encrypted に使用されるセキュリティで保護されたエンクレーブの種類を制御できます。 次のいずれかの値にオプションを設定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-------------------|-----------------| 
 |0|**セキュア エンクレーブなし**。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は Always Encrypted のセキュア エンクレーブを初期化しません。 そのため、セキュア エンクレーブを使用した Always Encrypted の機能は利用できなくなります。|  
 |1|**仮想化ベースのセキュリティ (VBS)** 。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] により、仮想化ベースのセキュリティ (VBS) エンクレーブの初期化が試みられます。

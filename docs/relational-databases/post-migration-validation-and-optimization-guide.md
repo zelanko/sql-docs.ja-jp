@@ -13,10 +13,10 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 ms.openlocfilehash: 915dde0b6b2083c45b5bfe4196e7578537a91379
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72909155"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>移行後の検証および最適化ガイド
@@ -29,7 +29,7 @@ ms.locfileid: "72909155"
 
 次に示すのは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プラットフォームへの移行後に発生する一般的なパフォーマンスのシナリオと、その解決方法です。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] から [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] への移行 (古いバージョンから新しいバージョン) に固有のシナリオや、外部のプラットフォーム (Oracle、DB2、MySQL、Sybase など) から [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] への移行に固有のシナリオが含まれています。
 
-## <a name="CEUpgrade"></a> CE バージョンでの変更によるクエリ パフォーマンス低下
+## <a name="query-regressions-due-to-change-in-ce-version"></a><a name="CEUpgrade"></a> CE バージョンでの変更によるクエリ パフォーマンス低下
 
 **適用対象:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] から [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] への移行。
 
@@ -47,7 +47,7 @@ ms.locfileid: "72909155"
 
 このトピックの詳細については、「[SQL Server 2016 へのアップグレード中にパフォーマンスの安定性を維持する](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)」を参照してください。
 
-## <a name="ParameterSniffing"></a> パラメーター スニッフィングに対する感度
+## <a name="sensitivity-to-parameter-sniffing"></a><a name="ParameterSniffing"></a> パラメーター スニッフィングに対する感度
 
 **適用対象:** 外部プラットフォーム (Oracle、DB2、MySQL、Sybase など) から [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] への移行。
 
@@ -68,7 +68,7 @@ ms.locfileid: "72909155"
 > [!TIP] 
 > これが問題かどうかをすばやく識別するには、[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] のプラン分析機能を利用します。 詳細については、[こちら](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier/)をご覧ください。
 
-## <a name="MissingIndexes"></a> 欠落したインデックス
+## <a name="missing-indexes"></a><a name="MissingIndexes"></a> 欠落したインデックス
 
 **適用対象:** 外部プラットフォーム (Oracle、DB2、MySQL、Sybase など) および [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] から [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] への移行。
 
@@ -86,7 +86,7 @@ ms.locfileid: "72909155"
 > [!TIP] 
 > 既存のスクリプトの例としては、[Index Creation](https://github.com/Microsoft/tigertoolbox/tree/master/Index-Creation) や [Index Information](https://github.com/Microsoft/tigertoolbox/tree/master/Index-Information) などがあります。 
 
-## <a name="InabilityPredicates"></a> 述語を使ってデータをフィルターできない
+## <a name="inability-to-use-predicates-to-filter-data"></a><a name="InabilityPredicates"></a> 述語を使ってデータをフィルターできない
 
 **適用対象:** 外部プラットフォーム (Oracle、DB2、MySQL、Sybase など) および [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] から [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] への移行。
 
@@ -115,7 +115,7 @@ SARGable ではない述語の例を次に示します。
 > [!NOTE] 
 > 上記のすべてをプログラムで実行することができます。
 
-## <a name="TableValuedFunctions"></a> テーブル値関数の使用 (複数ステートメントとインライン)
+## <a name="use-of-table-valued-functions-multi-statement-vs-inline"></a><a name="TableValuedFunctions"></a> テーブル値関数の使用 (複数ステートメントとインライン)
 
 **適用対象:** 外部プラットフォーム (Oracle、DB2、MySQL、Sybase など) および [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] から [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] への移行。
 
@@ -162,7 +162,7 @@ SARGable ではない述語の例を次に示します。
 
 2.  さらに複雑な場合は、メモリ最適化テーブルまたは一時テーブルに格納される中間結果を使うことを検討します。
 
-##  <a name="Additional_Reading"></a> その他の情報
+##  <a name="additional-reading"></a><a name="Additional_Reading"></a> その他の情報
 
  [クエリ ストアを使用する際の推奨事項](../relational-databases/performance/best-practice-with-the-query-store.md)  
 [メモリ最適化テーブル](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  

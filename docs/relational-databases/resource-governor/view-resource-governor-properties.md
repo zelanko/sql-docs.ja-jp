@@ -14,10 +14,10 @@ ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 2250030405a0c6bb2512e3b8446cb76e11a7080e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72903910"
 ---
 # <a name="view-resource-governor-properties"></a>View Resource Governor Properties
@@ -25,7 +25,7 @@ ms.locfileid: "72903910"
 
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の [リソース ガバナーのプロパティ] ページを使用して、リソース プールやワークロード グループなどのリソース ガバナー エンティティを作成または構成できます。  
   
- ##  <a name="BeforeYouBegin"></a> 関連トピック 
+ ##  <a name="related-topics"></a><a name="BeforeYouBegin"></a> 関連トピック 
  **[リソース ガバナーのプロパティ]** ページでは、リソース ガバナー エンティティのプロパティを表示する以外に、さまざまな構成タスクを実行できます。 詳細については、以下のトピックを参照してください。  
   
 -   [リソース ガバナーの有効化](../../relational-databases/resource-governor/enable-resource-governor.md)  
@@ -48,10 +48,10 @@ ms.locfileid: "72903910"
   
  [sys.dm_resource_governor_configuration](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md) 動的管理ビューにクエリを実行して is_configuration_pending の現在の状態を取得することにより、構成が保留中かどうかを確認できます。  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  リソース ガバナーのプロパティを表示するには、VIEW SERVER STATER 権限が必要です。 リソース ガバナーの構成タスクを行うには、CONTROL SERVER 権限が必要です。  
   
-##  <a name="ViewRGProp"></a> [リソース ガバナーのプロパティ] ページ  
+##  <a name="resource-governor-properties-page"></a><a name="ViewRGProp"></a> [リソース ガバナーのプロパティ] ページ  
  **で、次の [リソース ガバナーのプロパティ] ページでリソース ガバナーのプロパティを表示するには [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でオブジェクト エクスプローラーを開き、 **[管理]** ノードを **[リソース ガバナー]** ノードまで再帰的に展開します。  
@@ -62,7 +62,7 @@ ms.locfileid: "72903910"
   
 4.  変更を保存するには、 **[OK]** をクリックします。  
 
-##  <a name="RGProp"></a> Resource Governor properties  
+##  <a name="resource-governor-properties"></a><a name="RGProp"></a> Resource Governor properties  
  **[分類子関数の名前]**  
  分類子関数を一覧から選択して指定します。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "72903910"
  **[リソース プール]**  
  提供されるグリッドを使用して、リソース プールおよび外部リソース プールの構成を作成または変更します。 このグリッドには、あらかじめ定義されている内部プールおよび既定プールの情報が設定されています。 プールの行の最初の列をクリックして、使用するプールを選択します。 新しいリソース プールを作成するには、先頭にアスタリスク ( **&#42;** ) が付いている行をクリックします。  
   
- **名前**  
+ **Name**  
  リソース プールの名前を指定します。  
   
  **[最小 CPU %]**  
@@ -92,7 +92,7 @@ ms.locfileid: "72903910"
  **[リソース プールのワークロード グループ]**  
  提供されるグリッドを使用して、ワークロード グループ構成を作成または変更します。 このグリッドには、あらかじめ定義されている内部グループおよび既定グループの情報が設定されています。 グループの行の最初の列をクリックして、使用するグループを選択します。 新しいワークロード グループを作成するには、先頭にアスタリスク ( **&#42;** ) が付いている行をクリックします。  
   
- **名前**  
+ **Name**  
  ワークロード グループの名前を指定します。  
   
  **重要度**  

@@ -12,10 +12,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 50411ab35801dea8db00dcea6f6d0109be954a02
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288736"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Always Encrypted のキー管理の概要
@@ -46,7 +46,7 @@ Always Encrypted キーとキーの管理について説明するときは、実
 - **キーの交換** -既存のキーを定期的に新しいキーに交換します。 キーが侵害された場合や、暗号化キーを定期的に交換することを定めた組織のポリシーまたはコンプライアンス規定に準拠するために、キーを交換する必要があります。 
 
 
-## <a name="KeyManagementRoles"></a> キー管理の役割
+## <a name="key-management-roles"></a><a name="KeyManagementRoles"></a> キー管理の役割
 
 Always Encrypted キーを管理するユーザーには、セキュリティ管理者とデータベース管理者 (DBA) の 2 つの異なる役割があります。
 

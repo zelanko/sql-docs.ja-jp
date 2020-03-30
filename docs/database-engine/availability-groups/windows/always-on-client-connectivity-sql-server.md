@@ -15,10 +15,10 @@ ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: dcff763612b51918eb13336379c01f1c1ac9e108
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822084"
 ---
 # <a name="driver-and-client-connectivity-support-for-availability-groups"></a>可用性グループのドライバーとクライアント接続のサポート
@@ -27,7 +27,7 @@ ms.locfileid: "74822084"
   このトピックでは、Always On 可用性グループへのクライアント接続に関して、クライアント構成および設定の前提条件、制限、推奨などの考慮事項について説明します。  
   
  
-##  <a name="ClientConnSupport"></a> クライアント接続のサポート  
+##  <a name="client-connectivity-support"></a><a name="ClientConnSupport"></a> クライアント接続のサポート  
  以下のセクションでは、クライアント接続に対する [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のサポートについて説明します。  
   
  **ドライバー サポート**  
@@ -52,7 +52,7 @@ ms.locfileid: "74822084"
 > [!IMPORTANT]  
 >  クライアントは、可用性グループ リスナーに接続するために、TCP 接続文字列を使用する必要があります。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [可用性グループの作成と構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)  
   

@@ -10,10 +10,10 @@ ms.assetid: 386cedbb-fae5-45ce-9363-c4a417f80a2f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 938a6d8ba779d1cef37b5fab767e609d00b4f022
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288376"
 ---
 # <a name="connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard"></a>SQL Server データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)
@@ -125,7 +125,7 @@ Windows 統合認証ではなく SQL Server 認証を使用する接続文字列
 ## <a name="other-data-providers-and-more-info"></a>その他のデータ プロバイダーと詳細情報
 ここに記載されていないデータ プロバイダーを使用して SQL Server に接続する方法については、「[SQL Server connection strings](https://www.connectionstrings.com/sql-server/)」 (SQL Server 接続文字列) を参照してください。 このサード パーティのサイトには、このページで説明したデータ プロバイダーと接続パラメーターに関する詳細情報も含まれています。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 [データ ソースの選択](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [変換先の選択](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
 

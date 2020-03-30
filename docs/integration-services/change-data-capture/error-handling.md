@@ -11,10 +11,10 @@ ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3a4aebf354f999b26be59efc2f3c25a205dd3d9d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298787"
 ---
 # <a name="error-handling"></a>エラー処理
@@ -38,7 +38,7 @@ ms.locfileid: "71298787"
   
  次の表に、Oracle CDC インスタンスの状態テーブルで報告されるさまざまな状態コードを示します。  
   
-|Status|Active 状態コード|Error 状態コード|[説明]|副状態|  
+|Status|Active 状態コード|Error 状態コード|説明|副状態|  
 |------------|------------------------|-----------------------|-----------------|---------------|  
 |ABORTED|0|1|Oracle CDC インスタンスが実行されていません。 ABORTED 副状態は、ACTIVE だった Oracle CDC インスタンスが予期せず停止したことを示します。|ABORTED 副状態になるのは、実行されていない Oracle CDC インスタンスの状態が ACTIVE になっていることが Oracle CDC Service のメイン インスタンスで検出された場合です。|  
 |ERROR|0|1|Oracle CDC インスタンスが実行されていません。 ERROR 状態は、回復できないエラーが発生したために ACTIVE だった CDC インスタンスが無効になったことを示します。|MISCONFIGURED: 回復できない構成エラーが検出されました。<br /><br /> PASSWORD-REQUIRED: Change Data Capture Designer for Oracle by Attunity のパスワードが設定されていないか、構成されているパスワードが無効です。 サービスの非対称キーのパスワードが変更されたことが原因として考えられます。|  

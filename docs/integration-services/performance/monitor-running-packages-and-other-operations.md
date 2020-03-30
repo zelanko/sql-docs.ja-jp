@@ -14,10 +14,10 @@ ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d7fd62f4f2f82e6dcc3921db7099b4f052db27b3
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287846"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>実行中のパッケージとその他の操作の監視
@@ -55,12 +55,12 @@ ms.locfileid: "79287846"
   
  9 つの状態の種類を使用して、操作の状態を示します。 状態の種類の一覧については、「[catalog.operations &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)」を参照してください。  
 
-## <a name="active_ops"></a> [アクティブな操作] ダイアログ ボックス
-  配置、検証、パッケージの実行など、 **サーバー上で現在実行中の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 操作の状態を表示するには、** [アクティブな操作][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ダイアログ ボックスを使用します。 このデータは、SSISDB カタログに格納されます。  
+## <a name="active-operations-dialog-box"></a><a name="active_ops"></a> [アクティブな操作] ダイアログ ボックス
+  配置、検証、パッケージの実行など、**サーバー上で現在実行中の** 操作の状態を表示するには、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)][アクティブな操作][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ダイアログ ボックスを使用します。 このデータは、SSISDB カタログに格納されます。  
   
  関連 [!INCLUDE[tsql](../../includes/tsql-md.md)] ビューの詳細については、「[catalog.operations (SSISDB データベース)](../../integration-services/system-views/catalog-operations-ssisdb-database.md)」、「[catalog.validations (SSISDB データベース)](../../integration-services/system-views/catalog-validations-ssisdb-database.md)」、「[catalog.executions (SSISDB データベース)](../../integration-services/system-views/catalog-executions-ssisdb-database.md)」を参照してください。  
   
-###  <a name="open_dialog"></a> [アクティブな操作] ダイアログ ボックスを開く  
+###  <a name="open-the-active-operations-dialog-box"></a><a name="open_dialog"></a> [アクティブな操作] ダイアログ ボックスを開く  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]を開きます。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "79287846"
 |プロジェクトの復元|106|  
 |パッケージ実行の作成および開始|200|  
 |操作の停止 (検証または実行の停止)|202|  
-|プロジェクトの検証|該当なし|  
+|プロジェクトの検証|300|  
 |パッケージの検証|301|  
 |カタログの構成|1000|  
   
@@ -127,7 +127,7 @@ ms.locfileid: "79287846"
  マネージド API を使用したプログラムによるアクセス  
  <xref:Microsoft.SqlServer.Management.IntegrationServices> 名前空間とそのクラスのトピックをご覧ください。  
 
-## <a name="reports"></a> Reports for the Integration Services Server
+## <a name="reports-for-the-integration-services-server"></a><a name="reports"></a> Reports for the Integration Services Server
   現在のリリースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] サーバーに配置された [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトの監視に役立つ標準レポートを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で使用できるようになりました。 これらのレポートは、パッケージの状態と履歴を確認したり、必要に応じてパッケージ実行の失敗の原因を特定したりするのに役立ちます。  
   
  各レポート ページの先頭にある戻るアイコンをクリックすると、前に表示されていたページに戻ります。最新の情報に更新アイコンをクリックすると、ページに表示されている情報が更新されます。印刷アイコンをクリックすると、現在のページが印刷されます。  

@@ -17,10 +17,10 @@ ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5e518050759aea98d249e93374a6335bddf30c75
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72909485"
 ---
 # <a name="filter-a-trace"></a>トレースへのフィルターの適用
@@ -61,7 +61,7 @@ ms.locfileid: "72909485"
   
  フィルターを適用できるかどうかは、データ列によって異なります。 一部のデータ列にはフィルターを適用できません。 フィルターの適用が可能なデータ列では、次の表に示す関係演算子を使用してフィルターを指定できます。  
   
-|関係演算子|演算子記号|[説明]|  
+|関係演算子|演算子記号|説明|  
 |-------------------------|---------------------|-----------------|  
 |Like|LIKE|イベントのトレース データが入力したテキストと同じでなければならないことを指定します。 複数の値を指定できます。|  
 |パターンに一致しない|パターンに一致しない|イベントのトレース データが入力したテキストと同じであってはならないことを指定します。 複数の値を指定できます。|  

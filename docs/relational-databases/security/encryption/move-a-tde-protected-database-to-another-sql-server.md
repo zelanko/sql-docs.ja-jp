@@ -14,17 +14,17 @@ ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 21918147a6efdc750ecb56eb44c457fea9d962ac
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558513"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>別の SQL Server への TDE で保護されたデータベースの移動
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このトピックでは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] または [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を使用して、Transparent Data Encryption (TDE) によってデータベースを保護し、そのデータベースを別の [!INCLUDE[tsql](../../../includes/tsql-md.md)] インスタンスに移動する方法について説明します。 TDE は、データとログ ファイルの I/O 暗号化と複合化をリアルタイムで実行します。 暗号化は、復旧中に、可用性のためのデータベース ブート レコードに格納されるデータベース暗号化キー (DEK) を使用します。 DEK は、サーバーの **master** データベースに保存されている証明書を使用して保護される対称キーか、EKM モジュールによって保護される非対称キーです。   
    
-##  <a name="Restrictions"></a> 制限事項と制約事項  
+##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   TDE で保護されたデータベースを移動するとき、DEK を開くために使用される証明書または非対称キーも移動する必要があります。 この証明書または非対称キーは、 **からデータベース ファイルにアクセスできるように、移動先サーバーの** master [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースにインストールする必要があります。 詳細については、「[透過的なデータ暗号化 &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)」を参照してください。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "75558513"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、既定で、ここで作成したファイルを **C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA** に保存します。 ただし、ファイル名と場所は異なる場合があります。  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
   
 -   データベース マスター キーを作成するには、 **master** データベースに対する **CONTROL DATABASE** 権限が必要です。  
   
@@ -40,11 +40,11 @@ ms.locfileid: "75558513"
   
 -   暗号化されたデータベースに対する **CONTROL DATABASE** 権限と、データベース暗号化キーの暗号化に使用する証明書または非対称キーに対する **VIEW DEFINITION** 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> 透過的なデータ暗号化で保護されたデータベースを作成するには  
+##  <a name="to-create-a-database-protected-by-transparent-data-encryption"></a><a name="SSMSProcedure"></a> 透過的なデータ暗号化で保護されたデータベースを作成するには  
 
 次の手順は、SQL Server Management Studio を使用し、TRANSACT-SQL を使用して、TDE で保護されたデータベースを作成する必要があることを示しています。
   
-###  <a name="SSMSCreate"></a> SQL Server Management Studio の使用  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSCreate"></a> SQL Server Management Studio の使用  
   
 1.  データベース マスター キーと証明書を **master** データベース内に作成します。 詳細については、「 **Transact-SQL の使用** 」をご覧ください。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "75558513"
   
 8.  完了したら、 **[OK]** をクリックします。  
 
-###  <a name="TsqlCreate"></a> Transact-SQL の使用  
+###  <a name="using-transact-sql"></a><a name="TsqlCreate"></a> Transact-SQL の使用  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -136,11 +136,11 @@ ms.locfileid: "75558513"
   
 -   [ALTER DATABASE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md)  
   
-##  <a name="TsqlProcedure"></a> 透過的なデータ暗号化で保護されたデータベースを移動するには 
+##  <a name="to-move-a-database-protected-by-transparent-data-encryption"></a><a name="TsqlProcedure"></a> 透過的なデータ暗号化で保護されたデータベースを移動するには 
 
 次の手順は、SQL Server Management Studio を使用し、TRANSACT-SQL を使用して、TDE で保護されたデータベースを移動する必要があることを示しています。
   
-###  <a name="SSMSMove"></a> SQL Server Management Studio の使用  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSMove"></a> SQL Server Management Studio の使用  
   
 1.  オブジェクト エクスプローラーで、暗号化したデータベースを右クリックし、 **[タスク]** をポイントして **[デタッチ]** をクリックします。  
   
@@ -215,7 +215,7 @@ ms.locfileid: "75558513"
      **状態**  
      次の表に示すように、データベースの状態を表示します。  
   
-    |アイコン|状態テキスト|[説明]|  
+    |アイコン|状態テキスト|説明|  
     |----------|-----------------|-----------------|  
     |(アイコンなし)|(テキストなし)|このオブジェクトのアタッチ操作が開始されていないか、保留されています。 これは、ダイアログ ボックスを開いたときの既定の状態です。|  
     |緑の右向き三角形|進行中|アタッチ操作が開始されましたが、完了していません。|  
@@ -251,7 +251,7 @@ ms.locfileid: "75558513"
      **メッセージ**  
      空白のメッセージ、または **"ファイルが見つかりません"** ハイパーリンクが表示されます。  
   
-###  <a name="TsqlMove"></a> Transact-SQL の使用  
+###  <a name="using-transact-sql"></a><a name="TsqlMove"></a> Transact-SQL の使用  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
   

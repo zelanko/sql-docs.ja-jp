@@ -25,10 +25,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
 ms.openlocfilehash: ee3854c45678cb29989849a6ee8b28e821b6d830
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287839"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
@@ -109,14 +109,14 @@ ms.locfileid: "76287839"
   
 複数のプリンシパルで複数回、EXECUTE AS ステートメントを呼び出すと、実行コンテキストのスタックを作成できます。 これを実行すると、REVERT ステートメントにより、コンテキスト スタックの次の上位レベルのログインまたはユーザーにコンテキストが切り替えられます。 この動作のデモについては、「[例 A](#_exampleA)」をご覧ください。  
   
-##  <a name="_user"></a> ユーザーまたはログイン名の指定  
+##  <a name="specifying-a-user-or-login-name"></a><a name="_user"></a> ユーザーまたはログイン名の指定  
  EXECUTE AS \<context_specification> で指定するユーザーまたはログイン名は、それぞれ **sys.database_principals** または **sys.server_principals** のプリンシパルとして存在する必要があります。存在しない場合、EXECUTE AS ステートメントは失敗します。 さらに、プリンシパルで IMPERSONATE 権限が許可されている必要があります。 呼び出し元がデータベース所有者または固定サーバー ロール **sysadmin** のメンバーでない場合は、ユーザーが Windows グループ メンバーシップによって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベースやインスタンスにアクセスしているときでも、プリンシパルは存在する必要があります。 たとえば、次のような条件を想定します。 
   
 -   **CompanyDomain\SQLUsers** グループに **Sales** データベースへのアクセス権がある。  
   
 -   **CompanyDomain\SqlUser1** は **SQLUsers** のメンバーであり、したがって **Sales** データベースへのアクセスが暗黙的に許可されている。  
   
- この場合、**CompanyDomain\SqlUser1** は **SQLUsers** グループのメンバーシップを介してデータベースにアクセスできますが、`CompanyDomain\SqlUser1` がプリンシパルとしてデータベースに存在しないので、ステートメント `EXECUTE AS USER = 'CompanyDomain\SqlUser1'` は失敗します。  
+ この場合、**CompanyDomain\SqlUser1** は **SQLUsers** グループのメンバーシップを介してデータベースにアクセスできますが、`EXECUTE AS USER = 'CompanyDomain\SqlUser1'` がプリンシパルとしてデータベースに存在しないので、ステートメント `CompanyDomain\SqlUser1` は失敗します。  
   
 ユーザーが孤立した (関連付けられたログインが存在しない) 状態になり、かつユーザーが **WITHOUT LOGIN** で作成されなかった場合、そのユーザーに対する **EXECUTE AS** は失敗します。  
   
@@ -134,14 +134,14 @@ ms.locfileid: "76287839"
  このオプションは、接続プールが使用されている環境で役立ちます。 接続プールには、アプリケーション サーバーのアプリケーションで再利用できるよう、データベース接続のグループが保持されています。 *\@varbinary_variable* に渡される値を認識できるのは EXECUTE AS ステートメントの呼び出し元のみであるため、呼び出し元が確立した実行コンテキストは、他のアカウントによって変更されることはありません。  
   
 ## <a name="determining-the-original-login"></a>元のログインの特定  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続したログインの名前に戻すには、[ORIGINAL_LOGIN](../../t-sql/functions/original-login-transact-sql.md) 関数を使用します。 この関数を使用すると、明示的または暗黙的にコンテキストが何度も切り替えられるセッションにおける、元のログインの ID を取得できます。  
+ [ のインスタンスに接続したログインの名前に戻すには、](../../t-sql/functions/original-login-transact-sql.md)ORIGINAL_LOGIN[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 関数を使用します。 この関数を使用すると、明示的または暗黙的にコンテキストが何度も切り替えられるセッションにおける、元のログインの ID を取得できます。  
   
 ## <a name="permissions"></a>アクセス許可  
  ログインで **EXECUTE AS** を指定するには、呼び出し元に、指定のログイン名に対する **IMPERSONATE** 権限が与えられている必要があり、また **IMPERSONATE ANY LOGIN** 権限が拒否されていないことも条件となります。 データベース ユーザーに **EXECUTE AS** を指定するには、呼び出し元に、指定のユーザー名に対する **IMPERSONATE** 権限が与えられている必要があります。 **EXECUTE AS CALLER** を指定した場合、**IMPERSONATE** 権限は必要ありません。  
   
 ## <a name="examples"></a>例  
   
-###  <a name="_exampleA"></a> A. EXECUTE AS と REVERT を使用してコンテキストを切り替える  
+###  <a name="a-using-execute-as-and-revert-to-switch-context"></a><a name="_exampleA"></a> A. EXECUTE AS と REVERT を使用してコンテキストを切り替える  
  次の例では、複数のプリンシパルを使用してコンテキスト実行スタックを作成した後、 `REVERT` ステートメントを使用して実行コンテキストを以前のコンテキストに戻します。 `REVERT` ステートメントは、実行コンテキストが最初の呼び出し元に設定されるまで、スタックの上層に向かって複数回実行されます。  
   
 ```  
@@ -186,7 +186,7 @@ GO
 ```  
   
 ### <a name="b-using-the-with-cookie-clause"></a>B. WITH COOKIE 句を使用する  
- 次の例では、セッションの実行コンテキストを、指定したユーザーに設定し、WITH NO REVERT COOKIE = @*varbinary_variable* 句を指定します。 コンテキストを正常に呼び出し元に戻すには、`REVERT` ステートメントで、`EXECUTE AS` ステートメントの `@cookie` 変数に渡される値を指定する必要があります。 この例を実行するには、例 A で作成したログイン `login1` とユーザー `user1` が存在している必要があります。  
+ 次の例では、セッションの実行コンテキストを、指定したユーザーに設定し、WITH NO REVERT COOKIE = @*varbinary_variable* 句を指定します。 コンテキストを正常に呼び出し元に戻すには、`REVERT` ステートメントで、`@cookie` ステートメントの `EXECUTE AS` 変数に渡される値を指定する必要があります。 この例を実行するには、例 A で作成したログイン `login1` とユーザー `user1` が存在している必要があります。  
   
 ```  
 DECLARE @cookie varbinary(8000);  

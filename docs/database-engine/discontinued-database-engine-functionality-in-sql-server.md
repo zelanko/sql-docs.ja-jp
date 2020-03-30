@@ -37,10 +37,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 25da4c94448a6527e50fe759e6c75cdbad10b007
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79190532"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server"></a>SQL Server で廃止されたデータベース エンジンの機能
@@ -77,7 +77,7 @@ ms.locfileid: "79190532"
 
 - [SQL Server 2014 で廃止されたデータベース エンジンの機能](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)
 
-### <a name="see-also"></a>関連項目
+### <a name="see-also"></a>参照
 
 - [SQL Server 2019 データベース エンジンの非推奨の機能](deprecated-database-engine-features-in-sql-server-version-15.md)
 - [SQL Server 2017 データベース エンジンの非推奨の機能](deprecated-database-engine-features-in-sql-server-2017.md)

@@ -18,10 +18,10 @@ ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 46807e551052ca6da38fde744d9a1e9dd7c794b0
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288496"
 ---
 # <a name="tempdb-database"></a>TempDB データベース
@@ -264,7 +264,7 @@ ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON
 SELECT SERVERPROPERTY('IsTempdbMetadataMemoryOptimized')
 ```
 
-メモリ最適化 TempDB メタデータを有効にした後で、何らかの理由でサーバーの起動に失敗した場合は、 **-f** スタートアップ オプションを使用して[最小構成](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)で SQL Server を開始することで、この機能を回避できます。 これにより、この機能を無効にしてから、通常モードで SQL Server を再起動することができます。
+メモリ最適化 TempDB メタデータを有効にした後で、何らかの理由でサーバーの起動に失敗した場合は、[-f](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md) スタートアップ オプションを使用して**最小構成**で SQL Server を開始することで、この機能を回避できます。 これにより、この機能を無効にしてから、通常モードで SQL Server を再起動することができます。
 
 ## <a name="capacity-planning-for-tempdb-in-sql-server"></a>SQL Server の TempDB に使用するディスク領域の計画
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 運用環境での TempDB の適切なサイズを判断するには、多くの要因が関係します。 この記事で前述されているように、これらの要因には既存のワークロードや使用されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能などがあります。 SQL Server のテスト環境で次のタスクを実行して、既存のワークロードを分析することをお勧めします。

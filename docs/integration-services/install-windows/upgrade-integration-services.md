@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.openlocfilehash: 0b7fd8a71f2636893f157b18630e2773b2f01951
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68262791"
 ---
 # <a name="upgrade-integration-services"></a>Integration Services のアップグレード
@@ -69,7 +69,7 @@ ms.locfileid: "68262791"
   
  アップグレード時には、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] と [!INCLUDE[ssDE](../../includes/ssde-md.md)]の両方をアップグレードするか、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のみ、または [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]のみをアップグレードすることができます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のみをアップグレードすると、 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 以降は引き続き機能しますが、 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]の機能は使用できません。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]のみをアップグレードすると、 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] は完全に機能しますが、 [!INCLUDE[ssDECurrent](../../includes/ssdecurrent-md.md)] のインスタンスを別のコンピューターで使用できない限り、パッケージを格納できる場所はファイル システムのみになります。  
   
-## <a name="upgrading-both-integration-services-and-the-database-engine-to-includesscurrentincludessscurrent-mdmd"></a>Integration Services とデータベース エンジンの両方を [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+## <a name="upgrading-both-integration-services-and-the-database-engine-to-sscurrent"></a>Integration Services とデータベース エンジンの両方を [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  ここでは、次の条件を満たしたアップグレードを実行した場合の影響について説明します。  
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] と [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスをどちらも [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にアップグレードする。  
@@ -129,7 +129,7 @@ ms.locfileid: "68262791"
   
 -   既定では、アップグレード インストールで、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] はパッケージの実行に関連するイベントをアプリケーション イベント ログに記録するように構成されます。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のデータ コレクター機能を使用すると、この設定によって大量のイベント ログ エントリが生成される場合があります。 ログに記録されるイベントは、EventID 12288 の "パッケージが起動されました。" や EventID 12289 の "パッケージが正常に完了しました。" などです。 これら 2 つのイベントがアプリケーション イベント ログに記録されないようにするには、レジストリを編集用に開きます。 次に、レジストリ内で HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS ノードを見つけ、LogPackageExecutionToEventLog 設定の DWORD 値を 1 から 0 に変更します。  
   
-## <a name="upgrading-only-the-database-engine-to-includesscurrentincludessscurrent-mdmd"></a>データベース エンジンのみを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+## <a name="upgrading-only-the-database-engine-to-sscurrent"></a>データベース エンジンのみを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  ここでは、次の条件を満たしたアップグレードを実行した場合の影響について説明します。  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスのみをアップグレードする。 つまり、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のインスタンスであるが、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のインスタンスおよびクライアント ツールは [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]である状態。  

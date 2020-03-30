@@ -16,10 +16,10 @@ ms.assetid: 3e7f5925-6edd-42e1-bf17-f7deb03993a7
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d0984d0003f6a20c410b91f99dc6fd1b4ae3f545
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73844325"
 ---
 # <a name="database-engine-error-severities"></a>データベース エンジン エラーの重大度
@@ -29,7 +29,7 @@ ms.locfileid: "73844325"
 ## <a name="levels-of-severity"></a>重大度レベル  
  次の表は、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]によって発生したエラーの重大度レベルについて示しています。  
   
-|重大度レベル|[説明]|  
+|重大度レベル|説明|  
 |--------------------|-----------------|  
 |0-9|ステータス情報を返すか、重大ではないエラーを報告する情報メッセージです。 重大度 0 ～ 9 のシステム エラーが [!INCLUDE[ssDE](../../includes/ssde-md.md)] によって発生することはありません。|  
 |10|ステータス情報を返すか、重大ではないエラーを報告する情報メッセージです。 互換性の理由から、呼び出し側アプリケーションにエラー情報を返す前に [!INCLUDE[ssDE](../../includes/ssde-md.md)] によって重大度 10 から重大度 0 に変換されます。|  

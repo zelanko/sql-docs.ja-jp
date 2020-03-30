@@ -14,10 +14,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e8f345576db61768d9afe8243dfe41801f68b2ac
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095731"
 ---
 # <a name="json-path-expressions-sql-server"></a>JSON パス式 (SQL Server)
@@ -42,7 +42,7 @@ ms.locfileid: "74095731"
   
 2.  [パス](#PATH) 自体。  
 
-##  <a name="PATHMODE"></a> Path mode  
+##  <a name="path-mode"></a><a name="PATHMODE"></a> Path mode  
  必要に応じて、パス式の先頭に **lax** または **strict**キーワードを指定してパス モードを宣言します。 既定値は **lax**です。  
   
 -   **lax** モードでは、パス式にエラーが含まれている場合、関数は空の値を返します。 たとえば、値 **$.name** を要求するときに JSON テキストに **name** キーが含まれていない場合、関数は null を返しますが、エラーは発生しません。  
@@ -58,7 +58,7 @@ SET @json=N'{ ... }'
 SELECT * FROM OPENJSON(@json, N'lax $.info')
 ```  
   
-##  <a name="PATH"></a> Path  
+##  <a name="path"></a><a name="PATH"></a> Path  
  省略可能なパス モード宣言の後に、パス自体を指定します。  
   
 -   ドル記号 (`$`) はコンテキスト アイテムを表します。  

@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 228054b56d6b26bf4439c01363d6cad24422f938
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015223"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>大きな CLR ユーザー定義型 (OLE DB)
@@ -33,7 +33,7 @@ ms.locfileid: "68015223"
   
  次の表に、パラメーターおよび行セットでのデータ型のマッピングを示します。  
   
-|SQL Server のデータ型|OLE DB データ型|メモリ レイアウト|Value|  
+|SQL Server のデータ型|OLE DB データ型|メモリ レイアウト|値|  
 |--------------------------|----------------------|-------------------|-----------|  
 |CLR UDT|DBTYPE_UDT|BYTE[](バイト配列\)|132 (oledb.h)|  
   
@@ -81,7 +81,7 @@ ms.locfileid: "68015223"
   
  UDT には次の列も定義されています。  
   
-|列識別子|Type|説明|  
+|列識別子|種類|説明|  
 |-----------------------|----------|-----------------|  
 |DBCOLUMN_UDT_CATALOGNAME|DBTYPE_WSTR|UDT 列の場合は、UDT が定義されているカタログの名前。|  
 |DBCOLUMN_UDT_SCHEMANAME|DBTYPE_WSTR|UDT 列の場合は、UDT が定義されているスキーマの名前。|  
@@ -106,7 +106,7 @@ ms.locfileid: "68015223"
   
  UDT には、次の追加の列が定義されています。  
   
-|列識別子|Type|説明|  
+|列識別子|種類|説明|  
 |-----------------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|UDT 列の場合は、UDT が定義されているカタログの名前。|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|UDT 列の場合は、UDT が定義されているスキーマの名前。|  

@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d48ff63d5ea5ab7ed805eb7db092fa35682bbc9b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70009404"
 ---
 # <a name="columnstore-indexes-overview"></a>列ストア インデックス: 概要
@@ -90,7 +90,7 @@ ms.locfileid: "70009404"
 #### <a name="batch-mode-execution"></a>バッチ モード実行
 バッチ モード実行は、複数の行をまとめて処理するためのクエリ処理方法です。 バッチ モード実行は、列ストア ストレージ形式と緊密に統合され、このストレージ形式に合わせて最適化されています。 バッチ モード実行は、"*ベクター ベースの*" 実行、または "*ベクター化された*" 実行と呼ばれることもあります。 列ストア インデックスのクエリではバッチ モード実行が使用され、これによりクエリ パフォーマンスが、通常、2 から 4 倍向上します。 詳細については、「[クエリ処理アーキテクチャ ガイド](../query-processing-architecture-guide.md#execution-modes)」をご覧ください。 
   
-##  <a name="benefits"></a> 列ストア インデックスを使用する理由  
+##  <a name="why-should-i-use-a-columnstore-index"></a><a name="benefits"></a> 列ストア インデックスを使用する理由  
 列ストア インデックスにより、非常に高いレベルでデータ圧縮が実現し (通常 10 倍)、データ ウェアハウスのストレージ コストが大幅に削減されます。 分析においても、列ストア インデックスは btree インデックスと比べて桁違いに優れたパフォーマンスを発揮します。 列ストア インデックスは、データ ウェアハウスと分析のワークロードに対して推奨されるデータ ストレージ形式です。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降、運用ワークロードにおけるリアルタイム分析で列ストア インデックスを使用できます。  
   
 列ストア インデックスが高速に動作する理由:  
@@ -120,7 +120,7 @@ ms.locfileid: "70009404"
   
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、列ストア インデックス上に 1 つまたは複数の非クラスター化行ストア インデックスを持たせて、基になる列ストア上で効率的にテーブルを検索できるようになりました。 他のオプションも使用できます。 たとえば、行ストア テーブルで UNIQUE 制約を使用することで、主キー制約を適用できます。 一意でない値は行ストア テーブルに挿入できないため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で列ストアにその値を挿入することはできません。  
   
-## <a name="metadata"></a>Metadata  
+## <a name="metadata"></a>メタデータ  
 列ストア インデックス内のすべての列は、付加列としてメタデータに格納されます。 列ストア インデックスはキー列を持ちません。  
 
 |||
@@ -134,11 +134,11 @@ ms.locfileid: "70009404"
 |[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)||  
   
 ## <a name="related-tasks"></a>関連タスク  
-クラスター化列ストア インデックスとしてリレーショナル テーブルを指定していない限り、そのリレーショナル テーブルでは、行ストアが、基になるデータ形式として使用されます。 `WITH CLUSTERED COLUMNSTORE INDEX` オプションを指定しない場合、`CREATE TABLE` によって行ストア テーブルが作成されます。  
+クラスター化列ストア インデックスとしてリレーショナル テーブルを指定していない限り、そのリレーショナル テーブルでは、行ストアが、基になるデータ形式として使用されます。 `CREATE TABLE` オプションを指定しない場合、`WITH CLUSTERED COLUMNSTORE INDEX` によって行ストア テーブルが作成されます。  
   
 `CREATE TABLE` ステートメントでテーブルを作成する際に、`WITH CLUSTERED COLUMNSTORE INDEX` オプションを指定することでそのテーブルを列ストアとして作成できます。 既に、行ストア テーブルがある場合、その行ストアは、`CREATE COLUMNSTORE INDEX` ステートメントを使用して列ストアに変換できます。  
   
-|タスク|参照トピック|Notes|  
+|タスク|参照トピック|メモ|  
 |----------|----------------------|-----------|  
 |テーブルを列ストアとして作成する。|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降、テーブルをクラスター化列ストア インデックスとして作成できます。 最初に行ストア テーブルを作成し、次に列ストアに変換する必要はありません。|  
 |列ストア インデックスを持つメモリ テーブルを作成します。|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降、列ストア インデックスを持つ、メモリ最適化テーブルを作成できます。 列ストア インデックスは、テーブルの作成後に `ALTER TABLE ADD INDEX` 構文を使用して追加することもできます。|  

@@ -15,10 +15,10 @@ ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 57625308d1d8e9fcca375e33c72f4bdbf9ace222
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286996"
 ---
 # <a name="troubleshoot-always-on-availability-groups-configuration-sql-server"></a>Always On 可用性グループの構成のトラブルシューティング (SQL Server)
@@ -44,10 +44,10 @@ ms.locfileid: "79286996"
 |[関連タスク](#RelatedTasks)|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] オンライン ブックの中の、可用性グループ構成のトラブルシューティングに特に関連するタスク指向のトピックの一覧が含まれます。|  
 |[関連コンテンツ](#RelatedContent)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オンライン ブックの外部にある関連したリソースの一覧が含まれます。|  
   
-##  <a name="IsHadrEnabled"></a> Always On 可用性グループが有効になっていない  
+##  <a name="always-on-availability-groups-is-not-enabled"></a><a name="IsHadrEnabled"></a> Always On 可用性グループが有効になっていない  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 機能は、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]の各インスタンスで有効になっている必要があります。 詳細については、「[Always On 可用性グループの有効化と無効化 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)」を参照してください。  
   
-##  <a name="Accounts"></a> Accounts  
+##  <a name="accounts"></a><a name="Accounts"></a> Accounts  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の実行に使用するアカウントは、正しく構成されている必要があります。  
   
 1.  アカウントに適切な権限が与えられていることを確認します。  
@@ -58,7 +58,7 @@ ms.locfileid: "79286996"
   
 2.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] がビルトイン アカウント (Local System、Local Service、Network Service など) で実行されている場合または非ドメイン アカウントで実行されている場合は、エンドポイント認証に証明書を使用する必要があります。 サービス アカウントで同じドメインのドメイン アカウントを使用している場合は、すべてのレプリカの場所の各サービス アカウントに対して CONNECT アクセスを付与するか、証明書を使用できます。 詳細については、「[データベース ミラーリング エンドポイントでの証明書の使用 &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)」を参照してください。  
   
-##  <a name="Endpoints"></a> Endpoints  
+##  <a name="endpoints"></a><a name="Endpoints"></a> Endpoints  
  エンドポイントが正しく構成されている必要があります。  
   
 1.  可用性レプリカ (各 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリカの場所 *) をホストする*の各インスタンスにデータベース ミラーリング エンドポイントがあることを確認します。 データベース ミラーリング エンドポイントが特定のサーバー インスタンスに存在するかどうかを確認するには、[sys.database_mirroring_endpoints](../../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md) カタログ ビューを使用します。 詳細については、「[Windows 認証でのデータベース ミラーリング エンドポイントの作成 &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)」または「[データベース ミラーリング エンドポイントで発信接続に証明書を使用できるようにする &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)」を参照してください。  
@@ -111,16 +111,16 @@ ms.locfileid: "79286996"
   
     ```  
   
-##  <a name="SystemName"></a> System Name  
+##  <a name="system-name"></a><a name="SystemName"></a> System Name  
  エンドポイントの URL におけるサーバー インスタンスのシステム名には、システムを明確に識別できる任意の名前を使用できます。 サーバー アドレスには、システム名 (システムが同じドメインに存在する場合)、完全修飾ドメイン名、または IP アドレス (可能であれば静的 IP アドレス) を使用できます。 完全修飾ドメイン名を使用すると動作が保証されます。 詳細については、「 [可用性レプリカを追加または変更する場合のエンドポイント URL の指定 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)の構成に関する一般的な問題のトラブルシューティングに役立つ情報を提供します。  
   
-##  <a name="NetworkAccess"></a> Network Access  
+##  <a name="network-access"></a><a name="NetworkAccess"></a> Network Access  
  可用性レプリカをホストしている各サーバー インスタンスは、TCP で他の各サーバー インスタンスのポートにアクセスできる必要があります。 これは、サーバー インスタンスが相互に信頼関係を持たない別のドメイン (信頼されていないドメイン) に存在する場合に特に重要になります。  
   
-##  <a name="Msg1418"></a> エンドポイント アクセス (SQLServer エラー 1418)  
+##  <a name="endpoint-access-sql-server-error-1418"></a><a name="Msg1418"></a> エンドポイント アクセス (SQLServer エラー 1418)  
  この [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] メッセージは、エンドポイントの URL で指定されたサーバー ネットワーク アドレスに到達できないか、そのアドレスが存在しないことを意味し、ネットワーク アドレス名を確認してコマンドを再実行するように示しています。  
   
-##  <a name="JoinDbFails"></a> データベースの参加の失敗 (SQL Server エラー 35250)  
+##  <a name="join-database-fails-sql-server-error-35250"></a><a name="JoinDbFails"></a> データベースの参加の失敗 (SQL Server エラー 35250)  
  ここでは、プライマリ レプリカへの接続がアクティブでないためにセカンダリ データベースを可用性グループに参加させることができない問題について、考え得る原因と解決策について説明します。  
   
  **解決策:**  
@@ -129,7 +129,7 @@ ms.locfileid: "79286996"
   
 2.  ネットワーク サービス アカウントにエンドポイントへの接続権限があるかどうかを確認します。  
   
-##  <a name="ROR"></a> 読み取り専用ルーティングが正常に動作しない  
+##  <a name="read-only-routing-is-not-working-correctly"></a><a name="ROR"></a> 読み取り専用ルーティングが正常に動作しない  
  次の構成値の設定を確認し、必要に応じて修正します。  
   
 ||対象|アクション|説明|Link|  
@@ -141,7 +141,7 @@ ms.locfileid: "79286996"
 |![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|read_only_routing_list にあるすべてのレプリカ|READ_ONLY_ROUTING_URL (TCP<strong>://</strong>*system-address*<strong>:</strong>*port*) に正しい完全修飾ドメイン名 (FQDN) とポート番号が含まれていることを確認します。|-|[AlwaysOn の read_only_routing_url の計算](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)<br /><br /> [sys.availability_replicas &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
 |![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|クライアント システム|クライアント ドライバーが読み取り専用のルーティングをサポートしていることを確認します。|-|[Always On クライアント接続 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)|  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [可用性グループの作成と構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)  
   
@@ -157,13 +157,13 @@ ms.locfileid: "79286996"
   
 -   [データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理 &#40;SQL Server&#41;](../../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)  
   
-##  <a name="RelatedContent"></a> 関連コンテンツ  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 関連コンテンツ  
   
 -   [フェールオーバー クラスターのイベントおよびログを表示する](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
 -   [Get-ClusterLog フェールオーバー クラスター コマンドレット](https://technet.microsoft.com/library/ee461045.aspx)  
   
--   [SQL Server Always On チーム ブログ:SQL Server Always On チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server AlwaysOn チームのブログ: SQL Server AlwaysOn チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>参照  
  [データベース ミラーリングと Always On 可用性グループのトランスポート セキュリティ &#40;SQL Server&#41;](../../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   

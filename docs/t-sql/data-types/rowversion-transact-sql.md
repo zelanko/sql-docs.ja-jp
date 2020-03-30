@@ -27,10 +27,10 @@ ms.assetid: 65c9cf0e-3e8a-45f8-87b3-3460d96afb0b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6c79f2e87ccb6706eab6621cc72bb2fa45b7e9e6
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77179283"
 ---
 # <a name="rowversion-transact-sql"></a>rowversion (Transact-SQL)
@@ -81,7 +81,7 @@ INSERT INTO MyTest (myKey, myValue) VALUES (2, 0);
 GO  
 ```  
   
-次に、以下のサンプル [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用して、更新中に `MyTest` テーブルにオプティミスティック コンカレンシーを実装します。 このスクリプトでは、前回の行の読み取りからの **rowversion** 値を表すために `<myRv>` を使用します。 実際の **rowversion** 値でこの値を置き換えます。 実際の **rowversion** 値の例は、`0x00000000000007D3` などになります。
+次に、以下のサンプル [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用して、更新中に `MyTest` テーブルにオプティミスティック コンカレンシーを実装します。 このスクリプトでは、前回の行の読み取りからの `<myRv>`rowversion**値を表すために** を使用します。 実際の **rowversion** 値でこの値を置き換えます。 実際の **rowversion** 値の例は、`0x00000000000007D3` などになります。
   
 ```sql
 DECLARE @t TABLE (myKey int);  
@@ -101,9 +101,9 @@ IF (SELECT COUNT(*) FROM @t) = 0
   
 
 
-また、サンプル [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントをトランザクションに置くことができます。 トランザクションの範囲内で `@t` 変数に対してクエリを実行すると、`MyTest` テーブルに対するクエリを再度実行しなくても、テーブルの更新済みの `myKey` 列を取得できます。
+また、サンプル [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントをトランザクションに置くことができます。 トランザクションの範囲内で `@t` 変数に対してクエリを実行すると、`myKey` テーブルに対するクエリを再度実行しなくても、テーブルの更新済みの `MyTest` 列を取得できます。
 
-**timestamp** 構文を使用した同じ例を次に示します。 実際の **timestamp** で `<myTS>` を置き換えます。
+**timestamp** 構文を使用した同じ例を次に示します。 実際の `<myTS>`timestamp**で** を置き換えます。
 
 ```sql
 CREATE TABLE MyTest2 (myKey int PRIMARY KEY  
@@ -128,7 +128,7 @@ IF (SELECT COUNT(*) FROM @t) = 0
     END;  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  

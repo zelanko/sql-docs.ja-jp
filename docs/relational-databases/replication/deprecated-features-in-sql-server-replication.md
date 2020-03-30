@@ -14,19 +14,19 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 9f414d0ac6fc35e8ad65cedad2b04f88eb3b3553
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76284955"
 ---
 # <a name="deprecated-features-in-sql-server-replication"></a>SQL Server レプリケーションの非推奨の機能
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でまだ使用できるものの、非推奨のレプリケーション機能について説明します。 これらの機能は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の今後のリリースで削除される予定です。 非推奨の機能を新しいアプリケーションで使用しないでください。  
   
-## <a name="items-deprecated-in-includesssql15includessssql15-mdmd"></a>Items Deprecated in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
+## <a name="items-deprecated-in-sssql15"></a>Items Deprecated in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
-|機能|[説明]|  
+|機能|説明|  
 |-------------|-----------------|  
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|レプリケーションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エンドポイントが現在の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョンの 2 つのメジャー バージョンに存在する場合にサポートされます。 そのため、 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] では、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] または [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]との相互間でレプリケーションがサポートされません。|  
 |[!INCLUDE[ssEW](../../includes/ssew-md.md)]|レプリケーションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エンドポイントが現在の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョンの 2 つのメジャー バージョンに存在する場合にサポートされます。 そのため、 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] では、 [!INCLUDE[ssEW](../../includes/ssew-md.md)]との相互間でレプリケーションがサポートされません。|  

@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1c0dea1eff86506021907b184c80b3f28f74ab5a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72905951"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
@@ -39,7 +39,7 @@ ms.locfileid: "72905951"
   
 4.  [[ストレージ] ページ](#Storage)  
 
-##  <a name="GeneralPage"></a> [全般] ページ  
+##  <a name="general-page"></a><a name="GeneralPage"></a> [全般] ページ  
  **[データベース]**  
  このテーブルを含むデータベースの名前です。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "72905951"
  **[作成日]**  
  テーブルが作成された日付と時刻です。  
   
- **名前**  
+ **Name**  
  テーブルの名前。  
   
  **[スキーマ]**  
@@ -85,7 +85,7 @@ ms.locfileid: "72905951"
  **[レプリケートされるテーブル]**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーションによってテーブルがいつ別のデータベースにレプリケートされるかを示します。 指定できる値は、 **[True]** または **[False]** です。  
   
-##  <a name="ChangeTracking"></a> [変更の追跡] ページ  
+##  <a name="change-tracking-page"></a><a name="ChangeTracking"></a> [変更の追跡] ページ  
  **変更の追跡**  
  テーブルに対する変更の追跡が有効かどうかを示します。 既定値は **False**です。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "72905951"
   
  変更の追跡の詳細については、「[変更の追跡について &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)」を参照してください。  
   
-##  <a name="FileTable"></a> [FileTable] ページ  
+##  <a name="filetable-page"></a><a name="FileTable"></a> [FileTable] ページ  
  FileTable に関連するテーブルのプロパティを表示します。 詳細については、「[FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)」をご覧ください。  
   
  **[FileTable の名前列の照合順序]**  
@@ -110,7 +110,7 @@ ms.locfileid: "72905951"
  **FileTable の名前空間の有効化**  
  **True**の場合、この値はテーブルが FileTable であることを示します。 この値を **False**に変更すると、FileTable が通常のユーザー テーブルに変更されます。 後でテーブルを FileTable に戻す場合は、変換時に FileTable 一貫性チェックを行い、テーブルに問題がないことを確認する必要があります。  
   
-##  <a name="Storage"></a> [ストレージ] ページ  
+##  <a name="storage-page"></a><a name="Storage"></a> [ストレージ] ページ  
  選択されているテーブルのストレージに関連するプロパティを表示します。  
   
 ### <a name="compression"></a>圧縮  

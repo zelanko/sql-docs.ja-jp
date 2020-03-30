@@ -1,5 +1,5 @@
 ---
-title: チュートリアル:Azure Blob Storage サービスと SQL Server 2016 データベースの使用
+title: 'チュートリアル: Azure Blob Storage サービスと SQL Server 2016 データベースの使用'
 ms.custom: seo-dt-2019
 ms.date: 01/10/2019
 ms.prod: sql
@@ -15,13 +15,13 @@ ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: aba8d7e3dc7aaf48523303ad6f63682c888b3c46
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286976"
 ---
-# <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>チュートリアル:Azure Blob Storage サービスと SQL Server 2016 データベースの使用
+# <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>チュートリアル: Azure Blob Storage サービスと SQL Server 2016 データベースの使用
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Microsoft Azure Blob Storage サービスでの SQL Server 2016 の使用に関するチュートリアルへようこそ。 このチュートリアルは、Microsoft Azure Blob Storage サービスを SQL Server データ ファイルや SQL Server バックアップに使用する方法を理解するのに役立ちます。  

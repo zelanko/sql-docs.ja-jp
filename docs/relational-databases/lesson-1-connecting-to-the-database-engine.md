@@ -11,10 +11,10 @@ ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1bc950a7d0a576338bea9a614193ab3edaee7c96
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73032997"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>レッスン 1: データベース エンジンへの接続
@@ -27,7 +27,7 @@ ms.locfileid: "73032997"
 - [Management Studio を使用した接続](#connect)  
 - [追加接続の認証](#additional) 
 
-## <a name="tools">作業開始のためのツール</a> 
+## <a name=""></a><a name="tools">作業開始のためのツール</a> 
 - [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] にはさまざまなツールが付属しています。 このトピックでは、作業に必要なツールを選択するときの参考となるよう、最初に必要となるツールについて説明します。 すべてのツールには、 **[スタート]** メニューからアクセスできます。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]など、一部のツールは既定ではインストールされません。 インストールするには、セットアップ中に、クライアント コンポーネントの一部としてツールを選択する必要があります。 以下のツールの詳細については、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックで検索してください。 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] には、これらのツールのサブセットのみが付属しています。  
 
 ### <a name="basic-tools"></a>基本ツール
@@ -46,7 +46,7 @@ ms.locfileid: "73032997"
 - 現在のバージョンの Windows では、 **[スタート]** ページで「 **Configuration Manager**] の順にポイントして、 **[SQL Server *&lt;バージョン&gt;* Configuration Manager**から無料でダウンロードできます。   
 - 以前のバージョンの Windows では、 **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、[ [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
 
-## <a name="connect"></a>Management Studio を使用した接続  
+## <a name="connecting-with-management-studio"></a><a name="connect"></a>Management Studio を使用した接続  
 - インスタンスの名前がわかり、ローカルの Administrators グループのメンバーとしてコンピューターにログインしていれば、同じコンピューターで実行されているツールから [!INCLUDE[ssDE](../includes/ssde-md.md)] に簡単に接続できます。 次の手順は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]をホストしている同じコンピューター上で実行する必要があります。  
 
 > [!NOTE]  
@@ -85,7 +85,7 @@ ms.locfileid: "73032997"
 > [!NOTE]
 > このチュートリアルでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を初めて使用し、接続時に特別な問題がないことを想定しています。 このような前提はほとんどのユーザーにとって十分であり、このチュートリアルが単純であるのはこのためです。 詳細なトラブルシューティングの手順については、「 [SQL Server データベース エンジンへの接続のトラブルシューティング](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)」を参照してください。 
 
-## <a name="additional"></a>追加接続の認証  
+## <a name="authorizing-additional-connections"></a><a name="additional"></a>追加接続の認証  
 ここまでの作業で、管理者として [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に接続できました。次に行う最初の作業の 1 つに、他のユーザーの接続の認証があります。 これには、ログインを作成し、そのログインに対し、ユーザーとしてデータベースにアクセスすることを認証します。 ログインは Windows 認証ログインまたは SQL Server 認証ログインです。Windows 認証ログインには Windows の資格情報が使用されます。SQL Server 認証ログインは Windows の資格情報に依存せず、認証情報は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に保存されます。 可能であれば、Windows 認証を使用します。
 
 > [!TIP]

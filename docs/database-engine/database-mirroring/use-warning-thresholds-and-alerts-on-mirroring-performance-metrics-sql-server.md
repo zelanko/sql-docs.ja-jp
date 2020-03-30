@@ -19,10 +19,10 @@ ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ad44ae43a33a132fc2b5170a8ff4d3e6b3572ded
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74820904"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>ミラーリング パフォーマンス基準の警告しきい値および警告の使用 (SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "74820904"
  ミラー化されたデータベースに対する監視が確立された後、システム管理者は、複数の主要なパフォーマンス基準に警告しきい値を設定できます。 また、管理者は、これらの基準や他のデータベース ミラーリング イベントに基づいて警告を構成することもできます。  
   
   
-##  <a name="PerfMetricsAndWarningThresholds"></a> パフォーマンス基準と警告しきい値  
+##  <a name="performance-metrics-and-warning-thresholds"></a><a name="PerfMetricsAndWarningThresholds"></a> パフォーマンス基準と警告しきい値  
  次の表では、警告を構成できるパフォーマンス基準、対応する警告しきい値、および対応するデータベース ミラーリング モニターのラベルについて説明します。  
   
 |パフォーマンス基準|警告しきい値|データベース ミラーリング モデルのラベル|  
@@ -44,7 +44,7 @@ ms.locfileid: "74820904"
   
  これらのパフォーマンス基準のいずれでも、システム管理者は、ミラー化されたデータベースでしきい値を指定できます。 詳細については、このトピックの「 [警告しきい値の設定と管理](#SetUpManageWarningThresholds)」を参照してください。  
   
-##  <a name="SetUpManageWarningThresholds"></a> 警告しきい値の設定と管理  
+##  <a name="setting-up-and-managing-warning-thresholds"></a><a name="SetUpManageWarningThresholds"></a> 警告しきい値の設定と管理  
  システム管理者は、主要なミラーリング パフォーマンス基準に 1 つ以上の警告しきい値を設定できます。 両方のパートナーの特定の警告に対してしきい値を設定し、データベースがフェールオーバーする場合に警告が保持されるようにすることをお勧めします。 各パートナーで適切なしきい値は、そのパートナーのシステムのパフォーマンス機能によって異なります。  
   
  警告しきい値は、次のいずれかを使用して設定および管理できます。  
@@ -59,7 +59,7 @@ ms.locfileid: "74820904"
   
      次のシステム ストアド プロシージャを使用すると、管理者は、一度に 1 つのパートナーのミラー化されたデータベースで警告しきい値を設定および管理できます。  
   
-    |手順|[説明]|  
+    |手順|説明|  
     |---------------|-----------------|  
     |[sp_dbmmonitorchangealert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)|指定したミラーリングのパフォーマンス基準に対する警告しきい値を追加または変更します。|  
     |[sp_dbmmonitorhelpalert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql.md)|データベース ミラーリング監視の主要なパフォーマンス基準の 1 つまたはすべてについて、警告しきい値に関する情報を返します。|  
@@ -80,7 +80,7 @@ ms.locfileid: "74820904"
 >   
 >  トピック  
   
-##  <a name="UseAlerts"></a> ミラー化されたデータベースに対する警告の使用  
+##  <a name="using-alerts-for-a-mirrored-database"></a><a name="UseAlerts"></a> ミラー化されたデータベースに対する警告の使用  
  ミラー化されたデータベースを監視する際に重要なのは、重大なデータベース ミラーリング イベントに対して警告を構成することです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、次のようなデータベース ミラーリング イベントが生成されます。  
   
 -   パフォーマンスしきい値イベント  
@@ -101,7 +101,7 @@ ms.locfileid: "74820904"
 > [!IMPORTANT]  
 >  すべてのミラーリング セッションでは、状態変更イベントに対する警告を送信するようにデータベースを構成することを強くお勧めします。 状態変更は手動による構成の変更結果として予測される場合を除いて、データを損傷する可能性があります。 データを保護するには、予測されていない状態変更の原因を特定して解決します。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
  **SQL Server Management Studio を使用して警告を作成するには**  
   
 -   [エラー番号を使用して警告を作成する](../../ssms/agent/create-an-alert-using-an-error-number.md)  

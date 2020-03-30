@@ -23,10 +23,10 @@ ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f69f0553eecb8ebe13dc23f50982ac09ef63e5a0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71299079"
 ---
 # <a name="working-with-variables-programmatically"></a>プログラムでの変数の使用
@@ -50,7 +50,7 @@ ms.locfileid: "71299079"
   
 -   パッケージ、**Foreach ループ** コンテナー、**For ループ** コンテナー、**シーケンス** コンテナー、タスク ホスト、およびイベント ハンドラーなど、すべての種類のコンテナー用にカスタム変数を作成できます。 詳細については、「[Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)」をご覧ください。  
   
-## <a name="scope"></a>Scope  
+## <a name="scope"></a>スコープ  
  各コンテナーには、独自の <xref:Microsoft.SqlServer.Dts.Runtime.Variables> コレクションが含まれています。 新しい変数が作成されると、その親コンテナーのスコープ内に格納されます。 パッケージ コンテナーは、コンテナー階層の最上層にあるため、パッケージ スコープを持つ変数はグローバル変数と同じように機能し、パッケージ内のすべてのコンテナーで使用できます。 また、子コンテナーは、<xref:Microsoft.SqlServer.Dts.Runtime.Variables> コレクションを介して、親コンテナーの変数コレクションにアクセスできます。アクセスするには、コレクション内の変数名または変数のインデックスのどちらかを使用します。  
   
  変数は上から順にスコープされるため、パッケージ レベルで宣言された変数は、パッケージ内のすべてのコンテナーで使用できます。 したがって、コンテナーの <xref:Microsoft.SqlServer.Dts.Runtime.Variables> コレクションには、コンテナー独自の変数だけでなく、その親コンテナーに属するすべての変数が含まれます。  
@@ -166,7 +166,7 @@ End Module
   
  使用できるシステム変数は、コンテナーの種類によって異なります。 パッケージ、コンテナー、タスク、およびイベント ハンドラーで使用できるシステム変数の一覧については、「[システム変数](../../integration-services/system-variables.md)」を参照してください。  
   
-## <a name="value"></a>Value  
+## <a name="value"></a>値  
  カスタム変数の値には、リテラルまたは式を設定できます。  
   
 -   変数にリテラル値を格納する場合は、<xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A> プロパティの値を設定します。  

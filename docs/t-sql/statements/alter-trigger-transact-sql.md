@@ -22,10 +22,10 @@ ms.assetid: 2a99c7c1-ac2f-4637-aa7c-3d1bf514e500
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 5e8523831fd181c17bd8fcff1698d85f46c824e2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73983316"
 ---
 # <a name="alter-trigger-transact-sql"></a>ALTER TRIGGER (Transact-SQL)
@@ -199,7 +199,7 @@ AS { sql_statement
  実行後に DDL トリガーが起動される [!INCLUDE[tsql](../../includes/tsql-md.md)] 言語イベントの名前です。 DDL トリガーで使用できるイベントの一覧については、「[DDL イベント](../../relational-databases/triggers/ddl-events.md)」を参照してください。  
   
  *event_group*  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 言語イベントの定義済みグループの名前を指定します。 DDL トリガーは、*event_group* に属する [!INCLUDE[tsql](../../includes/tsql-md.md)] 言語イベントの実行後に起動します。 DDL トリガーで使用できるイベント グループの一覧については、「[DDL イベント グループ](../../relational-databases/triggers/ddl-event-groups.md)」を参照してください。 対応するイベントの種類を sys.trigger_events カタログ ビューに追加すると、*event_group* は、ALTER TRIGGER の実行が終了した後、マクロとしても機能します。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 言語イベントの定義済みグループの名前を指定します。 DDL トリガーは、[!INCLUDE[tsql](../../includes/tsql-md.md)]event_group*に属する* 言語イベントの実行後に起動します。 DDL トリガーで使用できるイベント グループの一覧については、「[DDL イベント グループ](../../relational-databases/triggers/ddl-event-groups.md)」を参照してください。 対応するイベントの種類を sys.trigger_events カタログ ビューに追加すると、*event_group* は、ALTER TRIGGER の実行が終了した後、マクロとしても機能します。  
   
  NOT FOR REPLICATION  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  

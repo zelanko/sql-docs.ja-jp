@@ -22,10 +22,10 @@ ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 67a62cc33877644f9feb6384c5d454b2cf30695b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76831803"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>ポリシー ベースの管理を使用したサーバーの管理
@@ -117,6 +117,6 @@ ms.locfileid: "76831803"
 
 ## <a name="see-also"></a>参照  
  
- - [チュートリアル:"既定でオフ" ポリシーの作成と適用](lesson-1-create-and-apply-an-off-by-default-policy.md)
- - [チュートリアル:名前付け基準ポリシーの作成と適用](lesson-2-create-and-apply-a-naming-standards-policy.md)
+ - [チュートリアル: "既定でオフ" ポリシーを作成して適用する](lesson-1-create-and-apply-an-off-by-default-policy.md)
+ - [チュートリアル: 名前付け基準ポリシーを作成して適用する](lesson-2-create-and-apply-a-naming-standards-policy.md)
  - [ポリシーベースの管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  

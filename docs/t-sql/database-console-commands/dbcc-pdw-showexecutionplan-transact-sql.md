@@ -13,10 +13,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 7fd267efe05da089cf72b1b9d1e4a04e6c18b83b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68809844"
 ---
 # <a name="dbcc-pdw_showexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
@@ -57,7 +57,7 @@ DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )
   
 アプライアンスに対する VIEW-SERVER-STATE アクセス許可が必要です。
   
-## <a name="examples-includesssdwincludessssdw-mdmd"></a>例: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]  
+## <a name="examples-sssdw"></a>例: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]  
   
 ### <a name="a-dbcc-pdw_showexecutionplan-basic-syntax"></a>A. DBCC PDW_SHOWEXECUTIONPLAN の基本的な構文  
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] インスタンスで実行している場合は、上記のクエリを変更して distribution_id も選択します。  
@@ -75,7 +75,7 @@ order by request_id, [dms_step_index];
 DBCC PDW_SHOWEXECUTIONPLAN ( 1, 375 );  
 ```  
 
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sspdw"></a>例: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### <a name="b-dbcc-pdw_showexecutionplan-basic-syntax"></a>B. DBCC PDW_SHOWEXECUTIONPLAN の基本的な構文  
  実行時間が長すぎるクエリでは、DMS クエリプラン操作または SQL クエリ プラン操作が実行されています。  
   

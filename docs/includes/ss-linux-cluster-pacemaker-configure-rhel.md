@@ -53,7 +53,7 @@
    ```
    
    >[!NOTE]
-   >前に同じノードでクラスターを構成した場合は、`pcs cluster setup` を実行するときに `--force` オプションを使用する必要があります。 このオプションは、`pcs cluster destroy` を実行するのと同等です。 Pacemaker を再度有効にするために、`sudo systemctl enable pacemaker` を実行します。
+   >前に同じノードでクラスターを構成した場合は、`--force` を実行するときに `pcs cluster setup` オプションを使用する必要があります。 このオプションは、`pcs cluster destroy` を実行するのと同等です。 Pacemaker を再度有効にするために、`sudo systemctl enable pacemaker` を実行します。
 
 1. SQL Server の SQL Server リソース エージェントをインストールします。 すべてのノードで次のコマンドを実行します。 
 

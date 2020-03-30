@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 374e9c1ba9bd93900e8a6677984f5e0e63a7c454
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77173584"
 ---
 # <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
@@ -49,7 +49,7 @@ TRANSLATE ( inputString, characters, translations)
 
 ## <a name="remarks"></a>解説
 
-*characters* 式と *translations* 式の長さが異なる場合、`TRANSLATE` はエラーを返します。 `TRANSLATE` は、いずれかの引数が NULL の場合は NULL を返します。  
+`TRANSLATE`characters*式と*translations *式の長さが異なる場合、* はエラーを返します。 `TRANSLATE` は、いずれかの引数が NULL の場合は NULL を返します。  
 
 `TRANSLATE` 関数の動作は、複数の [REPLACE](../../t-sql/functions/replace-transact-sql.md) 関数を使用した場合と似ています。 ただし、`TRANSLATE` では `inputString` 内の個々の文字が複数回置き換えられることはありません。 `characters` パラメーター内の 1 つの値で、`inputString` 内の複数の文字を置き換えることができます。 
 

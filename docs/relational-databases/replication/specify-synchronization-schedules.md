@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: f240938196d50b76b182e994000727c4f3e30d58
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287129"
 ---
 # <a name="specify-synchronization-schedules"></a>同期スケジュールの指定
@@ -39,7 +39,7 @@ ms.locfileid: "76287129"
   
      [レプリケーション管理オブジェクト (RMO)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  サブスクリプションの新規作成ウィザードの **[同期スケジュール]** ページで同期スケジュールを指定します。 このウィザードへのアクセスの詳細については、「 [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md) 」および「 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)」を参照してください。  
   
  **[ジョブ スケジュールのプロパティ]** ダイアログ ボックスで同期スケジュールを変更します。このダイアログ ボックスは、 **の** [ジョブ] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] フォルダーおよびレプリケーション モニターのエージェントの詳細ウィンドウから使用できます。 レプリケーション モニターの起動の詳細については、「[Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)」 (レプリケーション モニターの開始) を参照してください。  
@@ -82,7 +82,7 @@ ms.locfileid: "76287129"
   
 4.  **[サブスクリプション <SubscriptionName>]** ウィンドウで、 **[アクション]** をクリックし、 **[\<AgentName> ジョブのプロパティ]** をクリックします。  
   
-5.  **[ジョブのプロパティ - \<JobName>]** ダイアログ ボックスの **[スケジュール]** ページで、 **[編集]** をクリックします。  
+5.  **[ジョブのプロパティ -** JobName>] **ダイアログ ボックスの \<[スケジュール]** ページで、 **[編集]** をクリックします。  
   
 6.  **[ジョブ スケジュールのプロパティ]** ダイアログ ボックスで、 **[スケジュールの種類]** ボックスの一覧の値を選択します。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "76287129"
   
 3.  サブスクリプションに関連付けられているディストリビューション エージェントまたはマージ エージェントのジョブを右クリックし、 **[プロパティ]** をクリックします。  
   
-4.  **[ジョブのプロパティ - \<JobName>]** ダイアログ ボックスの **[スケジュール]** ページで、 **[編集]** をクリックします。  
+4.  **[ジョブのプロパティ -** JobName>] **ダイアログ ボックスの \<[スケジュール]** ページで、 **[編集]** をクリックします。  
   
 5.  **[ジョブ スケジュールのプロパティ]** ダイアログ ボックスで、 **[スケジュールの種類]** ボックスの一覧の値を選択します。  
   
@@ -126,7 +126,7 @@ ms.locfileid: "76287129"
   
 3.  サブスクリプションに関連付けられているディストリビューション エージェントまたはマージ エージェントのジョブを右クリックし、 **[プロパティ]** をクリックします。  
   
-4.  **[ジョブのプロパティ - \<JobName>]** ダイアログ ボックスの **[スケジュール]** ページで、 **[編集]** をクリックします。  
+4.  **[ジョブのプロパティ -** JobName>] **ダイアログ ボックスの \<[スケジュール]** ページで、 **[編集]** をクリックします。  
   
 5.  **[ジョブ スケジュールのプロパティ]** ダイアログ ボックスで、 **[スケジュールの種類]** ボックスの一覧の値を選択します。  
   
@@ -140,7 +140,7 @@ ms.locfileid: "76287129"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  レプリケーション ストアド プロシージャを使用してプログラムで同期スケジュールを定義できます。 使用するストアド プロシージャは、レプリケーションの種類およびサブスクリプションの種類 (プルまたはプッシュ) によって異なります。  
   
  スケジュールを定義するには、次のスケジュール設定のパラメーターを使用します。これらのパラメーターの動作は、[sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md) から継承されます。  
@@ -169,7 +169,7 @@ ms.locfileid: "76287129"
   
 1.  トランザクション パブリケーションに対して新しいプル サブスクリプションを作成します。 詳細については、「 [プル サブスクリプションの作成](../../relational-databases/replication/create-a-pull-subscription.md)」をご覧ください。  
   
-2.  サブスクライバーで、[sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) を実行します。 **\@publisher**、 **\@publisher_db**、および **\@publication** を指定し、 **\@job_name** および **\@password** にはサブスクライバーでディストリビューション エージェントを実行するときに使用する [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 資格情報を指定します。 サブスクリプションを同期するディストリビューション エージェント ジョブのスケジュールを定義する、上述の同期のパラメーターを指定します。  
+2.  サブスクライバーで、[sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) を実行します。 **\@publisher**、 **\@publisher_db**、および **\@publication** を指定し、[!INCLUDE[msCoName](../../includes/msconame-md.md)]**job_name\@ および** **password\@ にはサブスクライバーでディストリビューション エージェントを実行するときに使用する**  Windows 資格情報を指定します。 サブスクリプションを同期するディストリビューション エージェント ジョブのスケジュールを定義する、上述の同期のパラメーターを指定します。  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-push-subscription-to-a-transactional-publication"></a>トランザクション パブリケーションに対するプッシュ サブスクリプションの同期スケジュールを定義するには  
   
@@ -189,7 +189,7 @@ ms.locfileid: "76287129"
   
 2.  サブスクライバーで、 [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)を実行します。 **\@subscriber**、 **\@subscriber_db**、および **\@publication** を指定し、 **\@job_name** および **\@password** にはサブスクライバーでマージ エージェントを実行するときに使用する Windows 資格情報を指定します。 サブスクリプションを同期するマージ エージェント ジョブのスケジュールを定義する、上述の同期のパラメーターを指定します。  
   
-##  <a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
  レプリケーションは、SQL&#xA0;Server エージェントを使用して、スナップショットの生成やサブスクリプションの同期など、定期的に発生する動作のジョブをスケジュール設定します。 レプリケーション管理オブジェクト (RMO) をプログラムで使用して、レプリケーション エージェント ジョブのスケジュールを指定できます。  
   
 > [!NOTE]  
@@ -319,7 +319,7 @@ ms.locfileid: "76287129"
   
 3.  <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> メソッドを呼び出してサブスクリプションを作成します。  
   
-###  <a name="PShellExample"></a> 例 (RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a> 例 (RMO)  
  次の例では、マージ パブリケーションに対するプッシュ サブスクリプションを作成して、サブスクリプションを同期するスケジュールを指定します。  
   
  [!code-cs[HowTo#rmo_CreateMergePushSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_createmergepushsub)]  

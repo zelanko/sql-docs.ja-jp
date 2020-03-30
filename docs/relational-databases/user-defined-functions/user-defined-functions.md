@@ -17,17 +17,17 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 09fb423dc4d3685b22c67b2a86a74443633ba74a
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78370545"
 ---
 # <a name="user-defined-functions"></a>ユーザー定義関数
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
   プログラミング言語の関数と同様、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のユーザー定義関数は、パラメーターを受け取り複雑な計算などの処理を実行してその結果を値として返すルーチンです。 戻り値は、単一のスカラー値または結果セットになります。  
    
-##  <a name="Benefits"></a> ユーザー定義関数  
+##  <a name="user-defined-functions"></a><a name="Benefits"></a> ユーザー定義関数  
 ユーザー定義関数 (UDF) を使用する理由とは? 
   
 -   モジュール プログラミングが可能になります。  
@@ -47,7 +47,7 @@ ms.locfileid: "78370545"
 > [!IMPORTANT]
 > クエリの [!INCLUDE[tsql](../../includes/tsql-md.md)] UDF は、1 つのスレッドでのみ実行できます (直列実行プラン)。 そのため、UDF を使用すると、並列クエリ処理が禁止されます。 並列クエリ処理の詳細については、「[クエリ処理アーキテクチャ ガイド](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing)」をご覧ください。
   
-##  <a name="FunctionTypes"></a> 関数の種類  
+##  <a name="types-of-functions"></a><a name="FunctionTypes"></a> 関数の種類  
 **スカラー関数**  
  ユーザー定義のスカラー関数は、RETURNS 句で定義された型の単一のデータ値を返します。 インライン スカラー関数の場合、返されるスカラー値は単一ステートメントの結果です。 複数ステートメントを持つスカラー関数の場合、関数本体に、単一の値を返す一連の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを含めることができます。 戻り値の型は、 **text**、 **ntext**、 **image**、 **cursor**、 **timestamp**を除く各種のデータ型になります。 
  **[使用例。](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar)**
@@ -58,7 +58,7 @@ ms.locfileid: "78370545"
 **システム関数**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、さまざまな操作を実行するために使用できる多数のシステム関数が用意されています。 システム関数は変更できません。 詳細については、「[組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)」、「[システム ストアド関数 &#40;Transact-SQL&#41;](~/relational-databases/system-functions/system-functions-category-transact-sql.md)」、および「[動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)」を参照してください。  
   
-##  <a name="Guidelines"></a> ガイドライン  
+##  <a name="guidelines"></a><a name="Guidelines"></a> ガイドライン  
  [!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントが取り消されて、モジュール (トリガーやストアド プロシージャ) 内の次のステートメントが続行されるようなエラーについては、関数内では扱いが異なります。 関数内では、このようなエラーによって関数自体の実行が停止されます。 そのため、次に関数を呼び出したステートメントも取り消されることになります。  
   
  `BEGIN...END` ブロック内のステートメントは、副作用を伴いません。 関数の副作用とは、データベース テーブルの変更など、その関数の有効範囲外のリソースの状態を永続的に変更してしまうことです。 関数内のステートメントが変更できる内容は、ローカル カーソルまたはローカル変数など、その関数に対してローカルなオブジェクトの変更のみです。 データベース テーブルの変更、関数に対してローカルではないカーソルの操作、電子メールの送信、カタログ変更、ユーザーへ返す結果セットの生成などの操作は、関数では実行できません。  
@@ -71,7 +71,7 @@ ms.locfileid: "78370545"
 > [!IMPORTANT]   
 > ユーザー定義関数のその他の情報とパフォーマンスに関する考慮事項については、「[ユーザー定義関数の作成 (データベース エンジン)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)」を参照してください。 
   
-##  <a name="ValidStatements"></a> 関数で有効なステートメント  
+##  <a name="valid-statements-in-a-function"></a><a name="ValidStatements"></a> 関数で有効なステートメント  
 関数では、次の種類のステートメントが有効です。  
   
 -   関数に対してローカルなデータ変数やカーソルを定義するために使用できる `DECLARE` ステートメント。  
@@ -103,7 +103,7 @@ ms.locfileid: "78370545"
 |@@IDLE|@@TOTAL_WRITE|  
 |@@IO_BUSY||  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] ユーザー定義関数では、次の非決定論的な組み込み関数を使用**できません**。  
+ **ユーザー定義関数では、次の非決定論的な組み込み関数を使用**できません[!INCLUDE[tsql](../../includes/tsql-md.md)]。  
   
 |||  
 |-|-|  
@@ -112,10 +112,10 @@ ms.locfileid: "78370545"
   
  決定的および非決定的な組み込みシステム関数の一覧については、「[決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」を参照してください。  
   
-##  <a name="SchemaBound"></a> スキーマ バインド関数  
+##  <a name="schema-bound-functions"></a><a name="SchemaBound"></a> スキーマ バインド関数  
  `CREATE FUNCTION` は、`SCHEMABINDING` 句をサポートしています。この句は、テーブル、ビュー、およびその他のユーザー定義関数など、参照対象オブジェクトのスキーマにその関数をバインドします。 スキーマ バインド関数によって参照されるオブジェクトを変更または削除しようとすると、失敗します。  
   
- [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) に `SCHEMABINDING` を指定するには、次の条件を満たしている必要があります。  
+ `SCHEMABINDING`CREATE FUNCTION[ に ](../../t-sql/statements/create-function-transact-sql.md) を指定するには、次の条件を満たしている必要があります。  
   
 -   CREATE 関数が参照するすべてのビューとユーザー定義関数が、スキーマにバインドされている必要があります。  
   
@@ -125,10 +125,10 @@ ms.locfileid: "78370545"
   
  `ALTER FUNCTION` を使用してスキーマ バインドを削除できます。 関数を再定義するには、`ALTER FUNCTION` ステートメントを使用します。`WITH SCHEMABINDING` は指定しないでください。  
   
-##  <a name="Parameters"></a> パラメーターの指定  
+##  <a name="specifying-parameters"></a><a name="Parameters"></a> パラメーターの指定  
  ユーザー定義関数は、0 個またはそれ以上の入力パラメーターを受け取り、スカラー値またはテーブルのいずれかを返します。 1 つの関数では、最大で 1,024 個の入力パラメーターを受け取ることができます。 関数のパラメーターが既定値を持つ場合は、既定値を得るために、関数を呼び出すときに DEFAULT キーワードを指定する必要があります。 この動作はユーザー定義ストアド プロシージャ内の既定値を持つパラメーターとは異なります。ユーザー定義ストアド プロシージャの場合は、パラメーターを省略すると既定値が暗黙的に使用されます。 ユーザー定義関数では、出力パラメーターがサポートされません。  
   
-##  <a name="Tasks"></a> 他の例について  
+##  <a name="more-examples"></a><a name="Tasks"></a> 他の例について  
   
 |||  
 |-|-|  

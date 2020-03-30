@@ -18,10 +18,10 @@ ms.assetid: 1d4cf35a-ca89-4aa4-ae30-e61a0ff18b53
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 2845ecc6189b113bc31ae85b869985cf2ddfdb16
-ms.sourcegitcommit: cf8db6330be0d89bbec362e4c7e187b5461026f0
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77051682"
 ---
 # <a name="stsymdifference-geometry-data-type"></a>STSymDifference (geometry データ型)
@@ -38,12 +38,12 @@ ms.locfileid: "77051682"
   
 ## <a name="arguments"></a>引数  
  *other_geometry*  
- `STSymDifference()` を呼び出したインスタンスの対象となる、別の **geometry** インスタンスです。  
+ **を呼び出したインスタンスの対象となる、別の**geometry`STSymDifference()` インスタンスです。  
   
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR の戻り値の型:**SqlGeometry**  
+ CLR 戻り値の型: **SqlGeometry**  
   
 ## <a name="remarks"></a>解説  
  **geometry** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。 結果に円弧が含まれるのは、入力インスタンスに円弧が含まれる場合のみです。  
@@ -71,7 +71,7 @@ SELECT @g.STSymDifference(@h).ToString();
  ```  
   
 ## <a name="c-using-stsymdifference-on-curvepolygon-instance-with-an-inscribed-polygon-instance"></a>C. Polygon インスタンスが内接する CurvePolygon インスタンスで STSymDifference() を使用する  
- 次の例は、比較対象の 2 つのインスタンスの対称差を表す、内部 `Polygon` リングを含む `CurvePolygon` インスタンスを返します。  
+ 次の例は、比較対象の 2 つのインスタンスの対称差を表す、内部 `CurvePolygon` リングを含む `Polygon` インスタンスを返します。  
   
 ```
  DECLARE @g geometry = 'CURVEPOLYGON (CIRCULARSTRING (0 -4, 4 0, 0 4, -4 0, 0 -4))';  

@@ -15,15 +15,15 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 5d0948f6732b97da93b1136635175b90d5e92059
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76286879"
 ---
 # <a name="best-practices-for-replication-administration"></a>レプリケーション管理の推奨事項
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  レプリケーションを構成したら、レプリケーション トポロジの管理方法について理解することが重要です。 このトピックでは、さまざまな分野における推奨事項について説明し、また各分野の詳細情報へのリンクも提供します。 このトピックで説明するベスト プラクティスのガイダンスに従うだけでなく、次のよく寄せられる質問のトピックに目を通し、一般的な疑問や問題について理解することをお勧めします: 「[レプリケーションの管理者に関してよく寄せられる質問](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)」。  
+  レプリケーションを構成したら、レプリケーション トポロジの管理方法について理解することが重要です。 このトピックでは、さまざまな分野における推奨事項について説明し、また各分野の詳細情報へのリンクも提供します。 このトピックで説明する推奨事項に従うだけでなく、よく寄せられる質問のトピック「[レプリケーションの管理者に関してよく寄せられる質問](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)」に目を通し、一般的な疑問と問題点について理解することをお勧めします。  
   
  推奨事項について理解するには、以下の 2 つの分野に分けて行うのが効果的です。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "76286879"
  レプリケートされたデータベースでは、データのバックアップと復元に対する特別な注意が必要です。 詳細については、「 [レプリケートされたデータベースのバックアップと復元](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)」を参照してください。  
   
 ## <a name="script-the-replication-topology"></a>レプリケーション トポロジ スクリプトの作成  
- トポロジ内のすべてのレプリケーション コンポーンネントは、ディザスター リカバリー計画の一部としてスクリプト化され、スクリプトはタスクの繰り返しの自動化にも使用することができます。 スクリプトには、パブリケーションやサブスクリプションなどスクリプト化されたレプリケーション コンポーネントを実装するために必要な [!INCLUDE[tsql](../../../includes/tsql-md.md)] システム ストアド プロシージャが格納されます。 スクリプトはウィザード (パブリケーションの新規作成ウィザードなど) で作成することができ、コンポーネントの作成後、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を使用して作成することもできます。 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または **sqlcmd**を使用すると、スクリプトの表示、変更、および実行を行うことができます。 スクリプトをバックアップ ファイルと共に保存して、レプリケーション トポロジの再構成が必要な場合に使用できます。 詳細については、「[レプリケーションのスクリプト作成](../../../relational-databases/replication/scripting-replication.md)」を参照してください。  
+ トポロジ内のすべてのレプリケーション コンポーンネントは、ディザスター リカバリー計画の一部としてスクリプト化され、スクリプトはタスクの繰り返しの自動化にも使用することができます。 スクリプトには、パブリケーションやサブスクリプションなどスクリプト化されたレプリケーション コンポーネントを実装するために必要な [!INCLUDE[tsql](../../../includes/tsql-md.md)] システム ストアド プロシージャが格納されます。 スクリプトはウィザード (パブリケーションの新規作成ウィザードなど) で作成することができ、コンポーネントの作成後、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を使用して作成することもできます。 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または **sqlcmd**を使用すると、スクリプトの表示、変更、および実行を行うことができます。 スクリプトをバックアップ ファイルと共に保存して、レプリケーション トポロジの再構成が必要な場合に使用できます。 詳しくは、「 [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)」をご覧ください。  
   
  プロパティが変更された場合は、コンポーネントのスクリプトを再作成する必要があります。 トランザクション レプリケーションでカスタム ストアド プロシージャを使用している場合は、各プロシージャのコピーをスクリプトと共に保存しておく必要があります。プロシージャが変更された場合は、プロシージャのコピーも更新する必要があります (スキーマやアプリケーション要件が変更されると、通常、プロシージャが更新されます)。 カスタム プロシージャの詳細については、「[トランザクション アーティクルに変更を反映する方法の指定](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)」を参照してください。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "76286879"
 ## <a name="validate-data-periodically"></a>定期的なデータの検証  
  レプリケーションでは検証は必須ではありませんが、トランザクション レプリケーションおよびマージ レプリケーションを行う場合には定期的に検証することをお勧めします。 検証を行うことによって、サブスクライバーのデータがパブリッシャーのデータに一致していることを検証できます。 検証が正常に行われるのは、パブリッシャーの変更内容がその時点ですべてサブスクライバーにレプリケートされていて (サブスクライバーでの更新がサポートされている場合は、サブスクライバーからパブリッシャーへも変更内容がレプリケートされ)、2 つのデータベースが同期している場合です。  
   
- パブリケーション データベースのバックアップ スケジュールに従って検証を行うことを推奨します。 たとえば、パブリケーション データベースを週に 1 回完全バックアップする場合は、検証もバックアップの終了後、週に 1 回行います。 詳細については、「[レプリケートされたデータの検証](../../../relational-databases/replication/validate-data-at-the-subscriber.md)」を参照してください。  
+ パブリケーション データベースのバックアップ スケジュールに従って検証を行うことを推奨します。 たとえば、パブリケーション データベースを週に 1 回完全バックアップする場合は、検証もバックアップの終了後、週に 1 回行います。 詳細については、「[レプリケートされたデータの検証](../../../relational-databases/replication/validate-data-at-the-subscriber.md)」 を参照してください。  
   
 ## <a name="use-agent-profiles-to-change-agent-parameters-if-necessary"></a>エージェント プロファイルによるエージェント パラメーターへの必要に応じた変更  
  エージェント プロファイルを使用すると、レプリケーション エージェントのパラメーターを簡単に設定できます。 エージェントのコマンド ラインでパラメーターを指定することもできますが、通常は定義済みのエージェント プロファイルを使用するか、パラメーターの値の変更が必要な場合新規プロファイルを作成します。 たとえば、マージ レプリケーションを使用中にサブスクライバーの接続をブロードバンドからダイヤルアップに変更する場合、マージ エージェントに対して **低速リンク** プロファイルの使用を検討してください。このプロファイルでは、低速通信リンクにより適したパラメーターのセットが使用されます。 詳しくは、「 [レプリケーション エージェント プロファイル](../../../relational-databases/replication/agents/replication-agent-profiles.md)」をご覧ください。  

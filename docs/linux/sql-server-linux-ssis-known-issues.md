@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 45e5d9b36b6fd75db7bbc3c5ea397ee9226e2771
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288066"
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Linux での SSIS に関する制限事項と既知の問題
@@ -26,7 +26,7 @@ ms.locfileid: "79288066"
 Linux での SSIS パッケージのこのリリースでは、次の機能はサポートされていません。
   - SSIS カタログ データベース
   - SQL エージェントでスケジュールされたパッケージの実行
-  - Windows 認証
+  - [Windows 認証]
   - サードパーティ コンポーネント
   - 変更データ キャプチャ (CDC)
   - SSIS Scale Out
@@ -36,7 +36,7 @@ Linux での SSIS パッケージのこのリリースでは、次の機能は�
 
 Linux での SSIS のその他の制限事項と既知の問題については、[リリース ノート](sql-server-linux-release-notes.md#ssis)を参照してください。
 
-## <a name="components"></a> サポートされているコンポーネントとサポートされていないコンポーネント
+## <a name="supported-and-unsupported-components"></a><a name="components"></a> サポートされているコンポーネントとサポートされていないコンポーネント
 
 Linux では、次の組み込みの Integration Services コンポーネントがサポートされています。 これらの一部については、Linux プラットフォームでは制限があります。 ここに記載されていない組み込みコンポーネントは、Linux ではサポートされていません。
 

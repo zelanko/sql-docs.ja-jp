@@ -21,10 +21,10 @@ ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3dee5b4c6522afd93591d1e8aa0c94052d41d9bd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71711066"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>パラメーター化されたフィルター - パラメーター化された行フィルター
@@ -125,7 +125,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 ### <a name="setting-partition-options"></a>[パーティションのオプション] の設定  
  **[パーティションのオプション]** プロパティの値は、アーティクルを作成するときに、フィルター選択されたテーブルのデータをサブスクライバーが共有する方法に応じて設定します。 このプロパティは、 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)、 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)、および **[アーティクルのプロパティ]** ダイアログ ボックスを使用して、4 つの値のいずれかに設定できます。 このプロパティは、 **[フィルターの追加]** ダイアログ ボックスまたは **[フィルターの編集]** ダイアログ ボックスを使用して、2 つの値のいずれかに設定できます。これらのダイアログ ボックスは、パブリケーションの新規作成ウィザードおよび **[パブリケーションのプロパティ]** ダイアログ ボックスから使用できます。 次の表は、利用可能な値をまとめたものです。  
   
-|[説明]|[フィルターの追加] および [フィルターの編集] の値|[アーティクルのプロパティ] の値|ストアド プロシージャ内の値|  
+|説明|[フィルターの追加] および [フィルターの編集] の値|[アーティクルのプロパティ] の値|ストアド プロシージャ内の値|  
 |-----------------|-----------------------------------------|---------------------------------|--------------------------------|  
 |パーティション内のデータは重複しています。サブスクライバーはパラメーター化されたフィルターで参照されている列を更新できます。|**[このテーブルの 1 行を複数のサブスクリプションに移動する]**|**[重複する]**|**0**|  
 |パーティション内のデータは重複しています。サブスクライバーはパラメーター化されたフィルターで参照されている列を更新できません。|なし*|**[重複する (パーティション外のデータ変更を禁止)]**|**1**|  

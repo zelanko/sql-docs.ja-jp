@@ -13,10 +13,10 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5499bb5106deddcd073c52453a477190e3150bb9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76941115"
 ---
 # <a name="distributed-availability-groups"></a>分散型可用性グループ
@@ -140,7 +140,7 @@ SQL Server 2012 または 2014 には分散型可用性グループ機能が存�
 
 ![分散型可用性グループでの読み取りのスケールアウト](./media/distributed-availability-group/dag-05-scaling-out-reads-with-distributed-ags.png)
 
-次の図の AG 1 は、次の 2 つの異なる分散型可用性グループのプライマリ レプリカになっています:分散型 AG 1 (AG 1 と AG2 で構成) および分散型 AG 2 (AG 1 と AG 3 で構成)。
+次の図の AG 1 は、2 つの異なる分散型可用性グループ (分散型 AG 1 (AG 1 と AG2 で構成) および分散型 AG 2 (AG 1 と AG 3 で構成)) のプライマリ レプリカになっています。
 
 
 ![分散型可用性グループを使った読み取りのスケールアウトのもう 1 つの例]( ./media/distributed-availability-group/dag-06-another-scaling-out-reads-using-distributed-ags-example.png)
@@ -231,7 +231,7 @@ INNER JOIN sys.availability_replicas AS ar
 GO
 ```
 
-次の図は、分散型可用性グループに参加している 2 つ目の WSFC クラスターの出力例です。 SPAG1 は、次の 2 つのレプリカで構成されています:DENNIS と JY。 一方、SPDistAG という分散型可用性グループには、従来の可用性グループのようにインスタンス名ではなく、2 つの参加している可用性グループ (SPAG1 と SPAG2) の名前が表示されます。 
+次の図は、分散型可用性グループに参加している 2 つ目の WSFC クラスターの出力例です。 SPAG1 は、DENNIS と JY という 2 つのレプリカで構成されています。 一方、SPDistAG という分散型可用性グループには、従来の可用性グループのようにインスタンス名ではなく、2 つの参加している可用性グループ (SPAG1 と SPAG2) の名前が表示されます。 
 
 ![上記のクエリの出力例](./media/distributed-availability-group/dag-11-example-output-of-query-above.png)
 

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 7d7607d8749f99452d58374eb2a83c6a31f640d3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76288255"
 ---
 # <a name="ltagentprofilenamegt-properties"></a>&lt;AgentProfileName&gt; プロパティ
@@ -27,7 +27,7 @@ ms.locfileid: "76288255"
   **[&lt;AgentProfileName&gt; のプロパティ]** ダイアログ ボックスを使用すると、プロファイル内の各エージェント パラメーターに対して指定された値を表示したり、ユーザー定義のプロファイルの値を変更したりできます。  
   
 ## <a name="options"></a>オプション  
- **名前**  
+ **Name**  
  プロファイルの名前。  
   
  **説明**  

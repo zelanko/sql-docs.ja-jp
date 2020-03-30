@@ -11,10 +11,10 @@ ms.assetid: 0c617b53-a74b-4d5b-b76b-3ec7f1b8e8de
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2068b4099649b7ebd8aa2bcb4c58aa0d59e123d0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67936214"
 ---
 # <a name="pdolastinsertid"></a>PDO::lastInsertId
@@ -30,7 +30,7 @@ string PDO::lastInsertId ([ $name = NULL ] );
 ```  
   
 #### <a name="parameters"></a>パラメーター  
-$*name*: シーケンス名を指定できる文字列 (省略可能)。 
+$*name*: シーケンス名を指定できる省略可能な文字列。 
   
 ## <a name="return-value"></a>戻り値  
 シーケンス名が指定されていない場合、最後に追加された行の識別子の文字列。

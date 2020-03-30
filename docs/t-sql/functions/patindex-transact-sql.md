@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 51b18437976a9ecb192a69602ecbdc97054b9b47
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76831836"
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX (Transact-SQL)
@@ -53,7 +53,7 @@ PATINDEX ( '%pattern%' , expression )
  [式](../../t-sql/language-elements/expressions-transact-sql.md)です。通常は、指定したパターンで検索する列です。 *式*は文字列データ型に分類されます。  
   
 ## <a name="return-types"></a>戻り値の型  
-*expression* が **varchar(max)** または **nvarchar(max)** データ型の場合は **bigint**。それ以外の場合は **int**。  
+**expression** が *varchar(max)* または **nvarchar(max)** データ型の場合は **bigint**。それ以外の場合は **int**。  
   
 ## <a name="remarks"></a>解説  
 *pattern* または*式*が NULL の場合、PATINDEX は NULL を返します。  
@@ -70,7 +70,7 @@ SC の照合順序を使用する場合、戻り値では、*expression* パラ�
 ## <a name="examples"></a>例  
   
 ### <a name="a-simple-patindex-example"></a>A. 簡単な PATINDEX の例  
- 次の例では、文字 `ter` の開始位置の短い文字列 (`interesting data`) を確認します。  
+ 次の例では、文字 `interesting data` の開始位置の短い文字列 (`ter`) を確認します。  
   
 ```sql  
 SELECT position = PATINDEX('%ter%', 'interesting data');  
@@ -85,7 +85,7 @@ position
 ```
   
 ### <a name="b-using-a-pattern-with-patindex"></a>B. PATINDEX でパターンを使用する  
-次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `ensure` テーブルにある `DocumentSummary` 列の特定の行で、パターン `Document` が始まる位置を検出します。  
+次の例では、`ensure` データベースの `DocumentSummary` テーブルにある `Document` 列の特定の行で、パターン [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] が始まる位置を検出します。  
   
 ```sql  
 SELECT position = PATINDEX('%ensure%',DocumentSummary)  

@@ -17,10 +17,10 @@ ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a2eaffb39868737c955224b3ccd3ba39366d6f92
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72906383"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>既存のインデックスの別のファイル グループへの移動
@@ -42,20 +42,20 @@ ms.locfileid: "72906383"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   テーブルにクラスター化インデックスがある場合、クラスター化インデックスを新しいファイル グループに移動すると、テーブルはそのファイル グループに移動します。  
   
 -   UNIQUE 制約または PRIMARY KEY 制約を使用して作成されたインデックスは、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]を使用して移動することはできません。 これらのインデックスを移動するには、 [で](../../t-sql/statements/create-index-transact-sql.md) CREATE INDEX [!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントを (DROP_EXISTING=ON) オプションと共に使用します。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  テーブルまたはビューに対する ALTER 権限が必要です。 実行するには、 **sysadmin** 固定サーバー ロール、または **db_ddladmin** 固定データベース ロールおよび **db_owner** 固定データベース ロールのメンバーである必要があります。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-using-table-designer"></a>テーブル デザイナーを使用して既存のインデックスを別のファイル グループに移動するには  
   
@@ -101,7 +101,7 @@ ms.locfileid: "72906383"
   
 8.  **[OK]** をクリックします。  
   
- **[インデックスのプロパティ - _index_name_]** ダイアログ ボックスの **[ストレージ]** ページでは、次の情報を利用できます。  
+ **[インデックスのプロパティ -** index_name **]** ダイアログ ボックスの _[ストレージ]_ ページでは、次の情報を利用できます。  
   
  **[ファイル グループ]**  
  指定したファイル グループのインデックスを格納します。 一覧には、標準 (ROW) ファイル グループのみが表示されます。 既定で選択されているのは、データベースのプライマリ ファイル グループです。  
@@ -143,7 +143,7 @@ ms.locfileid: "72906383"
 > [!NOTE]  
 >  使用可能な CPU 数よりも多い値を指定すると、実際に使用可能な CPU 数が使用されます。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup"></a>既存のインデックスを別のファイル グループに移動するには  
   

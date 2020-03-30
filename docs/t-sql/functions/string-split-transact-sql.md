@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: 20580d1c746a678771ff3be0e67bab72e2b72be8
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77179273"
 ---
 # <a name="string_split-transact-sql"></a>STRING_SPLIT (Transact-SQL)
@@ -48,7 +48,7 @@ STRING_SPLIT ( string , separator )
 ## <a name="arguments"></a>引数
 
  *string*  
- 任意の文字型 (**nvarchar**、**varchar**、**nchar**、**char** など) の[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
+ 任意の文字型 ([nvarchar](../../t-sql/language-elements/expressions-transact-sql.md)、**varchar**、**nchar**、**char** など) の**式**です。  
   
  *separator*  
  任意の文字型の 1 文字の[式](../../t-sql/language-elements/expressions-transact-sql.md)です (**nvarchar(1)** 、**varchar(1)** 、**nchar(1)** 、**char(1)** など)。連結する部分文字列の区切り文字として使用されます。  
@@ -104,7 +104,7 @@ WHERE RTRIM(value) <> '';
 
 次の例のように、Product テーブルには、コンマで区切られたタグのリストを含む列があります。  
   
-|ProductId|名前|Tags|  
+|ProductId|Name|Tags|  
 |---------------|----------|----------|  
 |1|Full-Finger Gloves|clothing,road,touring,bike|  
 |2|LL Headset|bike|  
@@ -120,7 +120,7 @@ FROM Product
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|ProductId|名前|value|  
+|ProductId|Name|value|  
 |---------------|----------|-----------|  
 |1|Full-Finger Gloves|clothing|  
 |1|Full-Finger Gloves|道路|  

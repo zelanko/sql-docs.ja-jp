@@ -15,10 +15,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.openlocfilehash: c54c1774622416adb213b31852941c934be7af24
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056201"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>フルテキスト検索に使用する類義語辞典ファイルの構成と管理
@@ -29,7 +29,7 @@ ms.locfileid: "74056201"
   
 フルテキスト検索の類義語辞典は、XML テキスト ファイルです。
   
-##  <a name="tasks"></a>類義語辞典の機能  
+##  <a name="whats-in-a-thesaurus"></a><a name="tasks"></a>類義語辞典の機能  
  フルテキスト検索クエリで特定の言語のシノニムを検索するには、その言語の類義語辞典のマッピング (シノニム) を定義しておく必要があります。 各類義語辞典は、次の内容を定義するために手動で構成する必要があります。  
   
 -   拡張セット  
@@ -46,10 +46,10 @@ ms.locfileid: "74056201"
   
      類義語辞典では、チルダ ( **~** )、アキュート アクセント記号 ( **&acute;** )、ウムラウト ( **&uml;** ) などの分音記号をすべての検索パターンで区別するかしないか (つまり、"*アクセントを区別する*" か "*アクセントを区別しない*" か) が設定されます。 たとえば、フルテキスト クエリで "caf&eacute;" というパターンが他のパターンに置き換えられるように指定するとします。 類義語辞典でアクセントが区別されない場合、フルテキスト検索では、パターン "caf&eacute;" と "cafe" が置き換えられます。 類義語辞典でアクセントが区別される場合、フルテキスト検索では "caf&eacute;" というパターンのみが置き換えられます。 既定では、類義語辞典でアクセントは区別されません。  
   
-##  <a name="initial_thesaurus_files"></a> 既定の類義語辞典ファイル
+##  <a name="default-thesaurus-files"></a><a name="initial_thesaurus_files"></a> 既定の類義語辞典ファイル
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には XML 類義語辞典ファイルのセットが用意されており、サポートされている各言語に対して 1 つのファイルが存在します。 これらのファイルは基本的に空です。 すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 類義語辞典およびコメント アウトされたサンプル類義語辞典に共通する最上位の XML 構造のみが格納されています。  
   
-##  <a name="location"></a> 類義語辞典ファイルの場所  
+##  <a name="location-of-thesaurus-files"></a><a name="location"></a> 類義語辞典ファイルの場所  
  類義語辞典ファイルの既定の場所は次のとおりです。  
   
      <SQL_Server_data_files_path>\MSSQL13.MSSQLSERVER\MSSQL\FTDATA\  
@@ -79,12 +79,12 @@ ms.locfileid: "74056201"
   
  グローバル類義語辞典ファイルは、LCID 0 のニュートラル言語に対応します。 この値は、管理者のみが変更できます。  
 
-##  <a name="how_queries_use_tf"></a>フルテキスト クエリで類義語辞典を使用する方法  
+##  <a name="how-full-text-queries-use-the-thesaurus"></a><a name="how_queries_use_tf"></a>フルテキスト クエリで類義語辞典を使用する方法  
 類義語辞典クエリでは、言語固有の類義語辞典とグローバル類義語辞典の両方が使用されます。
 1.  まず、言語固有のファイルが参照されて処理のために読み込まれ (まだ読み込まれていない場合)、 類義語辞典ファイル内の拡張セットおよび置換セットのルールで指定された言語固有のシノニムを含むようにクエリが拡張されます。 
 2.  この手順がグローバル類義語辞典に対して繰り返されます。 ただし、言語固有の類義語辞典ファイルで既に一致するものが見つかった用語は、グローバル類義語辞典では照合されません。  
 
-##  <a name="structure"></a> 類義語辞典ファイルの構造  
+##  <a name="structure-of-a-thesaurus-file"></a><a name="structure"></a> 類義語辞典ファイルの構造  
  各類義語辞典ファイルでは、ID が `Microsoft Search Thesaurus` の XML コンテナー、およびサンプル類義語辞典を含むコメント `<!--`...`-->` が定義されます。 類義語辞典は `<thesaurus>` 要素で定義されます。この要素には、分音記号の設定、拡張セット、置換セットを定義する子要素のサンプルが含まれます。
 
 一般的な空の類義語辞典ファイルには、次の XML テキストが含まれています。  
@@ -115,7 +115,7 @@ ms.locfileid: "74056201"
 </XML>  
 ```
 
-### <a name="expansion"></a> XML structure of an expansion set  
+### <a name="xml-structure-of-an-expansion-set"></a><a name="expansion"></a> XML structure of an expansion set  
   
  各拡張セットは `<expansion>` 要素で囲みます。 この要素内に、`<sub>` 要素で囲んだ 1 つまたは複数の代替文字列を指定します。 拡張セットでは、互いにシノニムとなる代替文字列のグループを指定できます。  
   
@@ -131,7 +131,7 @@ ms.locfileid: "74056201"
 </expansion>  
 ```  
   
-### <a name="replacement"></a> XML structure of a replacement set  
+### <a name="xml-structure-of-a-replacement-set"></a><a name="replacement"></a> XML structure of a replacement set  
   
 各置換セットは `<replacement>` 要素で囲みます。 この要素内に、`<pat>` 要素で囲んだ 1 つ以上のパターンと `<sub>` 要素で囲んだ 0 個以上の代替文字列 (シノニムごとに 1 つ) を指定できます。 ここで指定するパターンが代替セットで置き換えられます。 パターンと代替文字列には、語または語の並びを含めることができます。 パターンに対して代替文字列が指定されていない場合は、ユーザー クエリからパターンが削除されます。  
   
@@ -178,7 +178,7 @@ and
 > [!NOTE]  
 >  この設定はファイルで 1 回のみ適用でき、ファイル内のすべての検索パターンに適用されます。 この設定は個別のパターンには指定できません。  
 
-##  <a name="editing"></a> 類義語辞典ファイルの編集  
+##  <a name="edit-a-thesaurus-file"></a><a name="editing"></a> 類義語辞典ファイルの編集  
 特定の言語の類義語辞典は、類義語辞典ファイル (XML ファイル) を編集することによって構成できます。 セットアップ中に、`<xml>` コンテナーとコメント アウトされたサンプルの `<thesaurus`> 要素のみが格納されている空の類義語辞典ファイルがインストールされます。 シノニムを検索するフルテキスト検索クエリを正しく機能させるには、一連のシノニムを定義する実際の `<thesaurus`> 要素を作成する必要があります。 シノニムの定義には、拡張セットと置換セットという 2 つの形式があります。  
 
 ### <a name="edit-a-thesaurus-file"></a>類義語辞典ファイルを編集する  

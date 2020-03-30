@@ -18,10 +18,10 @@ ms.assetid: 0e4e4fa2-b608-4cc4-98ba-0845ddb4214c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: e47aebb82c0cc3149dae7de697e92c965903a753
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68101790"
 ---
 # <a name="numrings-geography-data-type"></a>NumRings (geography データ型)
@@ -39,7 +39,7 @@ ms.locfileid: "68101790"
 ## <a name="return-type"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **int**  
   
- CLR の戻り値の型:**SqlInt32**  
+ CLR の戻り値の型: **SqlInt32**  
   
 ## <a name="remarks"></a>解説  
  このメソッドは、対象となるインスタンスが **Polygon** インスタンスではない場合に NULL を返し、空のインスタンスの場合に 0 を返します。 このメソッドは正確です。  
