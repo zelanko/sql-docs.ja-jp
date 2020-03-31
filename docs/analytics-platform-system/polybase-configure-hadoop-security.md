@@ -1,6 +1,6 @@
 ---
-title: PolyBase Hadoop のセキュリティを構成する
-description: Parallel Data Warehouse で PolyBase を構成して外部 Hadoop に接続する方法について説明します。
+title: ポリベース ハドオップ セキュリティの設定
+description: 外部 Hadoop に接続するように、並列データ ウェアハウスで PolyBase を構成する方法について説明します。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -18,19 +18,19 @@ ms.locfileid: "79289680"
 ---
 # <a name="polybase-configuration-and-security-for-hadoop"></a>PolyBase の構成と Hadoop 用のセキュリティ
 
-この記事では、Hadoop への APS PolyBase 接続に影響するさまざまな構成設定について説明します。 PolyBase の概要については、「 [polybase とは](configure-polybase-connectivity-to-external-data.md)」を参照してください。
+この記事では、Hadoop への APS PolyBase 接続に影響を与えるさまざまな構成設定のリファレンスを提供します。 PolyBase とは何かのチュートリアルについては、「[ポリベースとは 」](configure-polybase-connectivity-to-external-data.md)を参照してください。
 
 > [!NOTE]
-> AP では、すべてのコンピューティングノードと制御ノードで XML ファイルの変更が必要になります。
+> APS では、すべてのコンピューティング ノードとコントロール ノードで XML ファイルを変更する必要があります。
 > 
-> APS で XML ファイルを変更するときは、特別な注意が必要です。 タグまたは不要な文字があると、xml ファイルが無効になり、機能の usablが低下する可能性があります。
-> Hadoop 構成ファイルは次のパスにあります。  
+> APS の XML ファイルを変更する場合は、特に注意してください。 タグが欠落しているか、不要な文字を使用すると、xml ファイルが無効になり、機能の usablilty が妨げられる可能性があります。
+> Hadoop 構成ファイルは、次のパスにあります。  
 > ```  
 > C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\Hadoop\conf 
 > ``` 
-> Xml ファイルを変更する場合は、サービスを再起動して有効にする必要があります。
+> xml ファイルを変更すると、サービスを再開して有効にする必要があります。
 
-## <a id="rpcprotection"></a>Hadoop. RPC 保護の設定
+## <a name="hadooprpcprotection-setting"></a><a id="rpcprotection"></a> Hadoop.RPC.Protection 設定
 
 Hadoop クラスターで通信を保護する一般的な方法は、hadoop.rpc.protection 構成を "Privacy" または "Integrity" に変更することです。 既定では、PolyBase は構成が "Authenticate" に設定されているものと想定します。 この既定値をオーバーライドするには、次のプロパティを core-site.xml ファイルに追加します。 この構成を変更すると、Hadoop ノード間の安全なデータ転送と、SQL Server への SSL 接続が有効になります。
 
@@ -42,13 +42,13 @@ Hadoop クラスターで通信を保護する一般的な方法は、hadoop.rpc
    </property> 
 ```
 
-## <a id="kerberossettings"></a>Kerberos の構成  
+## <a name="kerberos-configuration"></a><a id="kerberossettings"></a>Kerberos 構成  
 
 PolyBase が Kerberos でセキュリティが強化されているクラスターに対して認証を行う場合、hadoop.rpc.protection が既定で "Authenticate" に設定されている必要があることに注意してください。 これにより、Hadoop ノード間のデータ通信が暗号化されなくなります。 hadoop.rpc.protection の "Privacy" または "Integrity" 設定を使用するには、PolyBase サーバーで core-site.xml ファイルを更新します。 詳細については、前のセクションの「[Hadoop.RPC.Protection 設定での Hadoop クラスターへの接続](#rpcprotection)」を参照してください。
 
-MIT KDC を使用して Kerberos で保護された Hadoop クラスターに接続するには、すべての APS 計算ノードと制御ノードで次の変更が必要です。
+MIT KDC を使用して Kerberos で保護された Hadoop クラスターに接続するには、すべての APS コンピューティング ノードと制御ノードで次の変更が必要です。
 
-1. APS のインストールパスで Hadoop 構成ディレクトリを検索します。 通常、このパスは次のとおりです。  
+1. APS のインストール パスで Hadoop 構成ディレクトリを検索します。 通常、このパスは次のとおりです。  
 
    ```  
    C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\Hadoop\conf  
@@ -60,7 +60,7 @@ MIT KDC を使用して Kerberos で保護された Hadoop クラスターに接
    
    |**#**|**構成ファイル**|**構成キー**|**操作**|  
    |------------|----------------|---------------------|----------|   
-   |1 で保護されたプロセスとして起動されました|core-site.xml|polybase.kerberos.kdchost|KDC のホスト名を指定します。 例: kerberos.your-realm.com.|  
+   |1|core-site.xml|polybase.kerberos.kdchost|KDC のホスト名を指定します。 例: kerberos.your-realm.com.|  
    |2|core-site.xml|polybase.kerberos.realm|Kerberos 領域を指定します。 例: YOUR-REALM.COM|  
    |3|core-site.xml|hadoop.security.authentication|Hadoop 側の構成を検出して SQL Server コンピューターにコピーします。 例: KERBEROS<br></br>**セキュリティに関する注意:** KERBEROS は大文字で記述する必要があります。 小文字の場合、機能しない可能性があります。|   
    |4|hdfs-site.xml|dfs.namenode.kerberos.principal|Hadoop 側の構成を検出して SQL Server コンピューターにコピーします。 例: hdfs/_HOST@YOUR-REALM.COM|  
@@ -114,8 +114,8 @@ MIT KDC を使用して Kerberos で保護された Hadoop クラスターに接
 
 4. 各 Hadoop ユーザーの認証情報を指定するデータベース スコープ資格情報オブジェクトを作成します。 「 [PolyBase T-SQL オブジェクト](../relational-databases/polybase/polybase-t-sql-objects.md)」を参照してください。
 
-## <a id="encryptionzone"></a>Hadoop 暗号化ゾーンのセットアップ
-Hadoop 暗号化ゾーンを使用している場合は、次のように core-site.xml と hdfs-site.xml を変更します。 KMS サービスが実行されている ip アドレスを、対応するポート番号を使用して指定します。 CDH の KMS の既定のポートは16000です。
+## <a name="hadoop-encryption-zone-setup"></a><a id="encryptionzone"></a>Hadoop 暗号化ゾーンのセットアップ
+Hadoop 暗号化ゾーンを使用している場合は、次のようにコア サイト.xml と hdfs-site.xml を変更します。 KMS サービスが実行されている IP アドレスを、対応するポート番号で指定します。 CDH 上の KMS のデフォルトポートは 16000 です。
 
 **core-site.xml**
 ```xml

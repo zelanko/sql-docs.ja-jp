@@ -23,63 +23,58 @@ ms.locfileid: "79289210"
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>データベース メールを使用するように SQL Server エージェント メールを構成する
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の通知と警告をデータベース メールを使用して送信するように [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]エージェントを構成する方法について説明します。  
   
--   **作業を開始する準備:**  
+-   **作業を開始する前に、次の操作を行います。**  
   
 -   [前提条件](#Prerequisites)  
   
--   [Security](#Security)  
+-   [セキュリティ](#Security)  
   
--   [データベースメールを使用するように SQL Server エージェントを構成するには SQL Server Management Studio を使用します。](#SSMSProcedure)  
+-   [SQL Server Management Studio でデータベース メールを使用するように SQL Server エージェントを構成するには](#SSMSProcedure)  
   
 -   [フォローアップタスク](#Follow_Up)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>始める前に  
   
-###  <a name="Prerequisites"></a> 前提条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
   
 -   データベース メールを有効にします。  
   
 -   使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス アカウントのデータベース メール アカウントを作成します。  
   
--   使用する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントサービスアカウントのデータベースメールプロファイルを作成し、そのユーザーを**Msdb**データベースの**databasemailuserrole**に追加します。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス アカウントのデータベース メール プロファイルを作成し、ユーザーを **msdb** データベースの **DatabaseMailUserRole** に追加します。  
   
 -   作成したプロファイルを **msdb** データベースの既定のプロファイルに設定します。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a>セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> アクセス許可  
  プロファイル アカウントを作成し、ストアド プロシージャを実行するユーザーは、sysadmin 固定サーバー ロールのメンバーである必要があります。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
- **データベースメールを使用するように SQL Server エージェントを構成するには**  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>SQL サーバー管理スタジオの使用  
+ **データベース メールを使用するように SQL Server エージェントを構成するには**  
   
 -   オブジェクト エクスプローラーで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを展開します。  
   
--   
-  **[SQL Server エージェント]** を右クリックし、 **[プロパティ]** をクリックします。  
+-   **[SQL Server エージェント]** を右クリックし、 **[プロパティ]** をクリックします。  
   
--   
-  **[警告システム]** をクリックします。  
+-   **[警告システム]** をクリックします。  
   
--   
-  **[メール プロファイルを有効にする]** チェック ボックスをオンにします。  
+-   **[メール プロファイルを有効にする]** チェック ボックスをオンにします。  
   
--   
-  **[メール システム]** ボックスの一覧で、 **[データベース メール]** を選択します。  
+-   **[メール システム]** ボックスの一覧で、 **[データベース メール]** を選択します。  
   
--   
-  **[メール プロファイル]** ボックスの一覧で、データベース メールのメール プロファイルを選択します。  
+-   **[メール プロファイル]** ボックスの一覧で、データベース メールのメール プロファイルを選択します。  
   
 -   SQL Server エージェントを再起動します。  
   
-##  <a name="Follow_Up"></a>フォローアップタスク  
+##  <a name="follow-up-tasks"></a><a name="Follow_Up"></a> フォロー アップ タスク  
  警告および通知を送信できるようにエージェントを構成するには、次のタスクが必要となります。  
   
--   [警告](../../ssms/agent/alerts.md)  
+-   [アラート](../../ssms/agent/alerts.md)  
   
      特定のデータベース イベントまたはオペレーティング システムの状態がオペレーターに通知されるように、警告を構成できます。  
   
--   [オペレーター](../../ssms/agent/operators.md)  
+-   [演算子](../../ssms/agent/operators.md)  
   
      オペレーターとは、電子通知を受け取ることのできる人またはグループの別名です。  
   
