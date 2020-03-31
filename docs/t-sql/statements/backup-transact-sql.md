@@ -47,10 +47,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: c1065c56e3f07f1381e5056d1b2eca3a20ed0cd2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74249730"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
@@ -556,7 +556,7 @@ BACKUP LOG の NO_TRUNCATE オプションを指定すると、COPY_ONLY と CON
 > [!NOTE]
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でのバックアップの概要については、「[バックアップの概要](../../relational-databases/backup-restore/backup-overview-sql-server.md)」をご覧ください。
 
-### <a name="Backup_Types"></a> バックアップの種類
+### <a name="backup-types"></a><a name="Backup_Types"></a> バックアップの種類
 
 サポートされるバックアップの種類は、次のようにデータベースの復旧モデルに依存します。
 
@@ -579,14 +579,14 @@ BACKUP LOG の NO_TRUNCATE オプションを指定すると、COPY_ONLY と CON
 
 - *コピーのみのバックアップ*は、従来のバックアップで行われる一連の作業とは別に、特別な目的で行われる完全バックアップまたはログ バックアップです。 コピーのみのバックアップを作成するには、BACKUP ステートメント内で COPY_ONLY オプションを指定します。 詳しくは、「[コピーのみのバックアップ](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)」をご覧ください。
 
-### <a name="Tlog_Truncation"></a> トランザクション ログの切り捨て
+### <a name="transaction-log-truncation"></a><a name="Tlog_Truncation"></a> トランザクション ログの切り捨て
 
 データベースのトランザクション ログがいっぱいにならないように、トランザクション ログを定期的にバックアップする必要があります。 ログの切り捨ては、単純復旧モデルではデータベースのバックアップ後に、完全復旧モデルではトランザクション ログのバックアップ後に、自動的に行われます。 ただし、切り捨ての処理が遅れる場合もあります。 ログの切り捨てが遅れる要因については、「[トランザクション ログ](../../relational-databases/logs/the-transaction-log-sql-server.md)」をご覧ください。
 
 > [!NOTE]
 > `BACKUP LOG WITH NO_LOG` および `WITH TRUNCATE_ONLY` オプションは廃止されました。 完全復旧モデルまたは一括ログ復旧モデルの復旧を使用している場合に、ログ バックアップ チェーンをデータベースから削除するには、単純復旧モデルに切り替える必要があります。 詳しくは、「[データベースの復旧モデルの表示または変更](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)」をご覧ください。
 
-### <a name="Formatting_Media"></a> バックアップ メディアのフォーマット
+### <a name="formatting-backup-media"></a><a name="Formatting_Media"></a> バックアップ メディアのフォーマット
 
 次の条件のいずれか 1 つでも該当する場合は、BACKUP ステートメントでバックアップ メディアがフォーマットされます。
 
@@ -594,7 +594,7 @@ BACKUP LOG の NO_TRUNCATE オプションを指定すると、COPY_ONLY と CON
 - メディアが空である。
 - 操作が、連続するテープの書き込みになっている。
 
-### <a name="Backup_Devices_and_Media_Sets"></a> バックアップ デバイスとメディア セットの操作
+### <a name="working-with-backup-devices-and-media-sets"></a><a name="Backup_Devices_and_Media_Sets"></a> バックアップ デバイスとメディア セットの操作
 
 #### <a name="backup-devices-in-a-striped-media-set-a-stripe-set"></a>ストライプ メディア セット (ストライプ セット) 内のバックアップ デバイス
 *ストライプ セット* とは、データがブロックに分割され、一定の順序で分散される、一連のディスク ファイルです。 ストライプ セットで使用されるバックアップ デバイスの数は、(`FORMAT` でメディアを最初期化する場合を除いて) 常に同じである必要があります。
@@ -653,13 +653,13 @@ BACKUP ステートメントの `TO` 句で指定する各バックアップ デ
 
 ミラー化メディア セットについて詳しくは、「[ミラー化バックアップ メディア セット](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)」をご覧ください。 メディア セットとメディア ファミリの概要について詳しくは、「[メディア セット、メディア ファミリ、およびバックアップ セット](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)」をご覧ください。
 
-### <a name="Restoring_Backups"></a> SQL Server バックアップの復元
+### <a name="restoring-sql-server-backups"></a><a name="Restoring_Backups"></a> SQL Server バックアップの復元
 
 データベースを復元し、必要に応じて、そのデータベースを復旧してオンラインにする、またはファイルやファイル グループを復元するには、[!INCLUDE[tsql](../../includes/tsql-md.md)] の [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) ステートメントを使用するか、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の**復元**タスクを使用します。 詳しくは、「[復元と復旧の概要](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)」をご覧ください。
 
-## <a name="Additional_Considerations"></a> BACKUP のオプションに関するその他の注意点
+## <a name="additional-considerations-about-backup-options"></a><a name="Additional_Considerations"></a> BACKUP のオプションに関するその他の注意点
 
-### <a name="Interactions_SKIP_etc"></a> SKIP、NOSKIP、INIT、および NOINIT の相関関係
+### <a name="interaction-of-skip-noskip-init-and-noinit"></a><a name="Interactions_SKIP_etc"></a> SKIP、NOSKIP、INIT、および NOINIT の相関関係
 
 次の表に、{ **NOINIT** | INIT } と { **NOSKIP** | SKIP } オプションの相関関係を示します。
 
@@ -737,7 +737,7 @@ BACKUP DATABASE 権限と BACKUP LOG 権限は、既定では、 **sysadmin** �
 
 バックアップ デバイスの物理ファイルに対する所有と許可の問題によって、バックアップ操作が妨げられることがあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、デバイスに対して読み書きを実行できる必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスが実行されているアカウントには書き込み権限が必要です。 ただし、システム テーブルにバックアップ デバイスのエントリを追加する [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)では、ファイル アクセスの権限は確認されません。 バックアップ デバイスの物理ファイルに関するこのような問題は、バックアップや復元が試行され、物理リソースがアクセスされるまで、表面化しない可能性があります。
 
-## <a name="examples"></a> 使用例
+## <a name="examples"></a><a name="examples"></a> 使用例
 
 このセクションには、次の例が含まれています。
 
@@ -755,7 +755,7 @@ BACKUP DATABASE 権限と BACKUP LOG 権限は、既定では、 **sysadmin** �
 > [!NOTE]
 > バックアップ方法に関するトピックには、他にも例が記載されています。 詳しくは、「[バックアップの概要](../../relational-databases/backup-restore/backup-overview-sql-server.md)」をご覧ください。
 
-### <a name="backing_up_db"></a> A. データベース全体をバックアップする
+### <a name="a-backing-up-a-complete-database"></a><a name="backing_up_db"></a> A. データベース全体をバックアップする
 
 次の例では、[!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] データベースをディスク ファイルにバックアップします。
 
@@ -766,7 +766,7 @@ BACKUP DATABASE AdventureWorks2012
 GO
 ```
 
-### <a name="backing_up_db_and_log"></a> B. データベースおよびログをバックアップする
+### <a name="b-backing-up-the-database-and-log"></a><a name="backing_up_db_and_log"></a> B. データベースおよびログをバックアップする
 
 次の例では、既定により単純復旧モデルを使用する [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースをバックアップします。 ここではまず、ログをバックアップするため、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースを修正して完全復旧モデルを使用するようにします。
 
@@ -804,7 +804,7 @@ GO
 > [!NOTE]
 > 運用データベースでは、ログを定期的にバックアップしてください。 ログのバックアップは、データ損失から万全に保護できるように頻繁に行ってください。
 
-### <a name="full_file_backup"></a> C. セカンダリ ファイル グループの完全ファイル バックアップを作成する
+### <a name="c-creating-a-full-file-backup-of-the-secondary-filegroups"></a><a name="full_file_backup"></a> C. セカンダリ ファイル グループの完全ファイル バックアップを作成する
 
 次の例では、両方のセカンダリ ファイル グループ内のすべてのファイルについて、完全ファイル バックアップを作成します。
 
@@ -817,7 +817,7 @@ BACKUP DATABASE Sales
 GO
 ```
 
-### <a name="differential_file_backup"></a> D. セカンダリ ファイル グループの差分ファイル バックアップを作成する
+### <a name="d-creating-a-differential-file-backup-of-the-secondary-filegroups"></a><a name="differential_file_backup"></a> D. セカンダリ ファイル グループの差分ファイル バックアップを作成する
 
 次の例では、両方のセカンダリ ファイル グループ内のすべてのファイルについて、差分ファイル バックアップを作成します。
 
@@ -832,7 +832,7 @@ BACKUP DATABASE Sales
 GO
 ```
 
-### <a name="create_single_family_mirrored_media_set"></a> E. 単一ファミリ ミラー化メディア セットを作成し、そこにバックアップを作成する
+### <a name="e-creating-and-backing-up-to-a-single-family-mirrored-media-set"></a><a name="create_single_family_mirrored_media_set"></a> E. 単一ファミリ ミラー化メディア セットを作成し、そこにバックアップを作成する
 
 次の例では、単一メディア ファミリと 4 つのミラーを含むミラー化メディア セットを作成し、そこに [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] データベースのバックアップを作成します。
 
@@ -847,7 +847,7 @@ WITH
     MEDIANAME = 'AdventureWorksSet0';
 ```
 
-### <a name="create_multifamily_mirrored_media_set"></a> F. マルチファミリ ミラー化メディア セットを作成して、そこにバックアップする
+### <a name="f-creating-and-backing-up-to-a-multifamily-mirrored-media-set"></a><a name="create_multifamily_mirrored_media_set"></a> F. マルチファミリ ミラー化メディア セットを作成して、そこにバックアップする
 
 次の例では、各ミラーが 2 つのメディア ファミリで構成されているミラー化メディア セットを作成します。 その後、両方のミラーに [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] データベースのバックアップが作成されます。
 
@@ -860,7 +860,7 @@ WITH
     MEDIANAME = 'AdventureWorksSet1';
 ```
 
-### <a name="existing_mirrored_media_set"></a> G. 既存のミラー化メディア セットにバックアップする
+### <a name="g-backing-up-to-an-existing-mirrored-media-set"></a><a name="existing_mirrored_media_set"></a> G. 既存のミラー化メディア セットにバックアップする
 
 次の例では、前の例で作成されたメディア セットにバックアップ セットを追加します。
 
@@ -876,7 +876,7 @@ WITH
 > [!NOTE]
 > NOINIT は既定値ですが、ここではわかりやすくするために記載しています。
 
-### <a name="creating_compressed_backup_new_media_set"></a> H. 新しいメディア セットに圧縮されたバックアップを作成する
+### <a name="h-creating-a-compressed-backup-in-a-new-media-set"></a><a name="creating_compressed_backup_new_media_set"></a> H. 新しいメディア セットに圧縮されたバックアップを作成する
 
 次の例では、メディアをフォーマットして新しいメディア セットを作成し、[!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] データベースの圧縮された完全バックアップを実行します。
 
@@ -887,7 +887,7 @@ WITH
     COMPRESSION;
 ```
 
-### <a name="url"></a> I. Microsoft Azure BLOB ストレージ サービスへのバックアップ
+### <a name="i-backing-up-to-the-microsoft-azure-blob-storage-service"></a><a name="url"></a> I. Microsoft Azure BLOB ストレージ サービスへのバックアップ
 
 この例では、Microsoft Azure BLOB ストレージ サービスへの `Sales` のデータベースの完全バックアップを実行します。 ストレージ アカウント名は `mystorageaccount`です。 コンテナーは `myfirstcontainer`と呼ばれます。 保存されたアクセス ポリシーは読み取り、書き込み、削除および一覧表示権で作成されています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資格情報 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` は、保存されたアクセス ポリシーに関連付けられている Shared Access Signature を使用して作成されています。 Microsoft Azure BLOB ストレージ サービスへの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップについては、「[Microsoft Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」および「[SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)」を参照してください。
 
@@ -897,7 +897,7 @@ TO URL = 'https://mystorageaccount.blob.core.windows.net/myfirstcontainer/Sales_
 WITH STATS = 5;
 ```
 
-### <a name="backup_progress"></a> J. バックアップ ステートメントの進行状況を追跡する
+### <a name="j-track-the-progress-of-backup-statement"></a><a name="backup_progress"></a> J. バックアップ ステートメントの進行状況を追跡する
 
 次のクエリでは、現在実行中のバックアップ ステートメントに関する情報が返されます。
 ```sql
@@ -1095,7 +1095,7 @@ BACKUP DATABASE アクセス許可は、既定では、**sysadmin** 固定サー
 
 URL に対する所有とアクセス許可の問題によって、バックアップ操作が妨げられることがあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、デバイスに対して読み書きを実行できる必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスが実行されているアカウントには書き込み権限が必要です。
 
-## <a name="examples"></a> 使用例
+## <a name="examples"></a><a name="examples"></a> 使用例
 
 この例では、Microsoft Azure BLOB ストレージ サービスへの `Sales` のデータベースの COPY_ONLY バックアップを実行します。 ストレージ アカウント名は `mystorageaccount`です。 コンテナーは `myfirstcontainer`と呼ばれます。 保存されたアクセス ポリシーは読み取り、書き込み、削除および一覧表示権で作成されています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資格情報 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` は、保存されたアクセス ポリシーに関連付けられている Shared Access Signature を使用して作成されています。 Microsoft Azure BLOB ストレージ サービスへの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップについては、「[Microsoft Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」および「[SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)」を参照してください。
 
@@ -1254,7 +1254,7 @@ master データベースは差分バックアップできません。 master �
 
 DATABASE オブジェクトに ExclusiveUpdate ロックを実行します。
 
-## <a name="Security"></a> セキュリティ
+## <a name="security"></a><a name="Security"></a> セキュリティ
 
 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] バックアップはアプライアンスに格納されません。 そのため、IT チームは、バックアップ セキュリティのあらゆる面の管理を担当します。 これには、バックアップ データのセキュリティ、バックアップの保存に使用されるサーバーのセキュリティ、バックアップ サーバーを [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] アプライアンスに接続するネットワーク インフラストラクチャのセキュリティなどの管理が含まれます。
 

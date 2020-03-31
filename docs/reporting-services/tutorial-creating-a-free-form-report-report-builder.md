@@ -9,10 +9,10 @@ ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 567abd4423f546f853abea4caa5c944ce9d8ccdb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66499565"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>チュートリアル:自由形式のレポートの作成 (レポート ビルダー)
@@ -27,7 +27,7 @@ ms.locfileid: "66499565"
 ## <a name="requirements"></a>必要条件  
 要件に関する詳細については、「[チュートリアルの前提条件 (レポート ビルダー)](../reporting-services/prerequisites-for-tutorials-report-builder.md)」を参照してください。  
   
-## <a name="BlankReport"></a>1.空のレポート、データ ソース、およびデータセットを作成する  
+## <a name="1-create-a-blank-report-data-source-and-dataset"></a><a name="BlankReport"></a>1.空のレポート、データ ソース、およびデータセットを作成する  
   
 > [!NOTE]  
 > このチュートリアルでは、外部のデータ ソースが必要ないようにクエリにデータ値が含まれています。 このため、クエリが非常に長くなっています。 ビジネス環境でクエリにデータを含めることはありません。 これは、学習に使用することのみを目的としています。  
@@ -115,7 +115,7 @@ ms.locfileid: "66499565"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="List"></a>2.一覧を追加および構成する  
+## <a name="2-add-and-configure-a-list"></a><a name="List"></a>2.一覧を追加および構成する  
 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、一覧データ領域は自由形式レポートを作成するのに最適です。 表やマトリックスと同様に、これは *tablix* データ領域に基づきます。 詳細については、「 [一覧がある請求書とフォームを作成する](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)」を参照してください。  
   
 ニュースレターのように書式設定されたレポートで販売区域ごとの売上情報を表示するには、一覧を使用します。 情報は、区域ごとにグループ化されます。 区域ごとのデータをグループ化する新しい行グループを追加し、組み込みの詳細行グループを削除します。  
@@ -167,7 +167,7 @@ ms.locfileid: "66499565"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="Graphics"></a>3.グラフィック要素を追加する  
+## <a name="3-add-graphic-elements"></a><a name="Graphics"></a>3.グラフィック要素を追加する  
 一覧データ領域の利点の 1 つは、表形式のレイアウトに制限されずに、四角形やテキスト ボックスなどのレポート アイテムをどこにでも追加できることです。 ここでは、グラフィック (任意の色で塗りつぶされた四角形) を追加して、レポートの体裁を整えます。  
   
 ### <a name="to-add-graphic-elements-to-the-report"></a>レポートにグラフィック要素を追加するには  
@@ -190,7 +190,7 @@ ms.locfileid: "66499565"
   
 ![report-builder-free-form-gray-rectangle](../reporting-services/media/report-builder-free-form-gray-rectangle.png)
  
-## <a name="Text"></a>4.自由形式テキストを追加する  
+## <a name="4-add-free-form-text"></a><a name="Text"></a>4.自由形式テキストを追加する  
 テキスト ボックスを追加し、各レポート ページに繰り返し表示される固定テキストとデータ フィールドを表示できます。  
   
 ### <a name="to-add-text-to-the-report"></a>テキストをレポートに追加するには  
@@ -282,7 +282,7 @@ ms.locfileid: "66499565"
   
 ![report-builder-newsletter-page-preview](../reporting-services/media/report-builder-newsletter-page-preview.png)
   
-## <a name="Table"></a>5.売上の詳細情報を表示するテーブルを追加する  
+## <a name="5-add-a-table-to-show-sales-details"></a><a name="Table"></a>5.売上の詳細情報を表示するテーブルを追加する  
 テーブルまたはマトリックスの新規作成ウィザードを使用して、自由形式レポートにテーブルを追加します。 ウィザードの完了後、合計を表示する行を手動で追加します。  
   
 ### <a name="to-add-a-table"></a>テーブルを追加するには  
@@ -328,7 +328,7 @@ ms.locfileid: "66499565"
   
 ![report-builder-free-form-with-table](../reporting-services/media/report-builder-free-form-with-table.png)
    
-## <a name="Save"></a>6.レポートを保存する  
+## <a name="6-save-the-report"></a><a name="Save"></a>6.レポートを保存する  
 レポートは、レポート サーバー、SharePoint ライブラリ、またはコンピューターに保存することができます。  
   
 このチュートリアルでは、レポートをレポート サーバーに保存します。 レポート サーバーにアクセスできない場合は、レポートをコンピューターに保存してください。  
@@ -359,7 +359,7 @@ ms.locfileid: "66499565"
   
 4.  **[保存]** をクリックします。  
   
-## <a name="Line"></a>7.(省略可) レポートの領域を区切る線を追加する  
+## <a name="7-optional-add-a-line-to-separate-areas-of-the-report"></a><a name="Line"></a>7.(省略可) レポートの領域を区切る線を追加する  
 レポートの編集領域と詳細領域を区切る線を追加します。  
   
 ### <a name="to-add-a-line"></a>罫線を追加するには  
@@ -374,7 +374,7 @@ ms.locfileid: "66499565"
      * **[幅]** に **[3]** pt を選択します。
      * **[色]** に **[トマト]** を選択します。  
   
-## <a name="Visualization"></a>8.(省略可) 概要データのビジュアル表現を追加する  
+## <a name="8-optional-add-summary-data-visualizations"></a><a name="Visualization"></a>8.(省略可) 概要データのビジュアル表現を追加する  
 四角形を利用して、レポートの表示方法を制御できます。 四角形の内側に円グラフや縦棒グラフを配置することで、レポートを思いどおりに表示できます。  
   
 ### <a name="to-add-a-rectangle"></a>四角形を追加するには  

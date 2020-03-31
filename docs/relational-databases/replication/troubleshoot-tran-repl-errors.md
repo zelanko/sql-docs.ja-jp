@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 9a079838d343ba8de93e270d01d704eb32219ee9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76286991"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>トラブルシューティング ツール:トラブルシューティング ツール: SQL Server トランザクション レプリケーション エラーを検出する 
@@ -258,7 +258,7 @@ ms.locfileid: "76286991"
 詳細については、[レプリケーション エージェントの詳細ログを有効にする方法](https://support.microsoft.com/help/312292/how-to-enable-replication-agents-for-logging-to-output-files-in-sql-se)に関するページをご覧ください。 
 
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 <br>[トランザクション レプリケーションの概要](../../relational-databases/replication/transactional/transactional-replication.md)
 <br>[レプリケーションのチュートリアル](../../relational-databases/replication/replication-tutorials.md)
 <br>[ReplTalk ブログ](https://blogs.msdn.microsoft.com/repltalk)

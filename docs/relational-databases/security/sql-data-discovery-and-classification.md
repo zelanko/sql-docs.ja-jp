@@ -12,10 +12,10 @@ ms.date: 09/12/2019
 ms.author: mibar
 author: barmichal
 ms.openlocfilehash: 077a9a6be533ec05f9c062100d04bf02562f6066
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75548342"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL データの検出と分類
@@ -29,14 +29,14 @@ ms.locfileid: "75548342"
 > [!NOTE]
 > データの検出と分類は、**SQL Server 2012 以降でサポートされ、[SSMS 17.5](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 以降で使用できます**。 Azure SQL Database については、「[Azure SQL Database のデータの検出と分類](/azure/sql-database/sql-database-data-discovery-and-classification/)」を参照してください。
 
-## <a id="subheading-1"></a>概要
+## <a name="overview"></a><a id="subheading-1"></a>概要
 データの検出と分類では高度な一連のサービスが導入され、データベースだけでなく、データの保護を目的とした新しい SQL Information Protection パラダイムが形成されます。
 
 * **検出および推奨事項** - 分類エンジンはデータベースをスキャンし、機密データが含まれる可能性のある列を識別します。 適切な分類の推奨事項を確認して適用するだけでなく、手動で列を分類するための簡単な方法が提供されます。
 * **ラベル付け** - 列で永続的に機密分類ラベルにタグを付けることができます。
 * **表示** - データベース分類状態を詳細なレポートに表示することができます。このレポートを印刷したりエクスポートしたりして、コンプライアンスと監査の目的に、またその他のニーズに合わせて使用することができます。
 
-## <a id="subheading-2"></a>機微な列の検出、分類およびラベル付け
+## <a name="discovering-classifying--labeling-sensitive-columns"></a><a id="subheading-2"></a>機微な列の検出、分類およびラベル付け
 次のセクションでは、データベース内の機密データを含む列の検出、分類、およびラベル付けの手順に加え、データベースの現在の分類状態の表示とレポートのエクスポートの手順について説明します。
 
 分類には、次の 2 つのメタデータ属性が含まれます。
@@ -91,7 +91,7 @@ ms.locfileid: "75548342"
 
     ![ナビゲーション ウィンドウ][10]
 
-## <a id="subheading-3"></a>SSMS で情報保護ポリシーを管理する
+## <a name="manage-information-protection-policy-with-ssms"></a><a id="subheading-3"></a>SSMS で情報保護ポリシーを管理する
 
 [SSMS 18.4](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 以降を利用し、情報保護ポリシーを管理できます。
 
@@ -111,7 +111,7 @@ ms.locfileid: "75548342"
 > 情報保護ポリシー ファイルは SQL Server に保存されません。
 > SSMS では既定の情報保護ポリシーが使用されます。 カスタマイズされた情報保護ポリシーでエラーが発生した場合、SSMS では既定のポリシーを使用できません。 データ分類でエラーが発生します。 解決するには、 **[情報保護ポリシーのリセット]** をクリックし、既定のポリシーを使用し、データ分類をもう一度有効にします。
 
-## <a id="subheading-4"></a>分類メタデータへのアクセス
+## <a name="accessing-the-classification-metadata"></a><a id="subheading-4"></a>分類メタデータへのアクセス
 
 SQL Server 2019 には [`sys.sensitivity_classifications`](../system-catalog-views/sys-sensitivity-classifications-transact-sql.md) というシステム カタログ ビューが導入されています。 このビューでは、情報の種類と機密ラベルが返されます。 
 
@@ -183,15 +183,15 @@ FROM
     ON  EP.major_id = C.object_id AND EP.minor_id = C.column_id
 ```
 
-## <a id="subheading-5"></a>分類の管理
+## <a name="manage-classifications"></a><a id="subheading-5"></a>分類の管理
 
-# <a name="t-sqltabt-sql"></a>[T-SQL](#tab/t-sql)
+# <a name="t-sql"></a>[T-SQL](#tab/t-sql)
 T-SQL を使って、列の分類を追加/削除し、データベース全体のすべての分類を取得することができます。
 
 - 1 つ以上の列の分類の追加/更新:[ADD SENSITIVITY CLASSIFICATION](https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql)
 - 1 つ以上の列の分類の削除:[DROP SENSITIVITY CLASSIFICATION](https://docs.microsoft.com/sql/t-sql/statements/drop-sensitivity-classification-transact-sql)
 
-# <a name="powershell-cmdlettabsql-powelshell"></a>[PowerShell コマンドレット](#tab/sql-powelshell)
+# <a name="powershell-cmdlet"></a>[PowerShell コマンドレット](#tab/sql-powelshell)
 PowerShell コマンドレットを使用して列の分類を追加/削除し、すべての分類を取得し、データベース全体の推奨事項を取得できます。
 
 - [Get-SqlSensitivityClassification](https://docs.microsoft.com/powershell/module/sqlserver/Get-SqlSensitivityClassification?view=sqlserver-ps)
@@ -201,7 +201,7 @@ PowerShell コマンドレットを使用して列の分類を追加/削除し�
 
 ---
 
-## <a id="subheading-6"></a>次のステップ
+## <a name="next-steps"></a><a id="subheading-6"></a>次のステップ
 
 Azure SQL Database については、「[Azure SQL Database のデータの検出と分類](https://go.microsoft.com/fwlink/?linkid=866265)」を参照してください。
 

@@ -13,10 +13,10 @@ ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 02be70284a4a32c69618659f1271165677628845
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77078568"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>マップ ウィザードおよびマップ レイヤー ウィザードのページ (レポート ビルダーおよび SSRS)
@@ -100,17 +100,17 @@ ms.locfileid: "77078568"
   
  マップに関する詳細については、「 [マップ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)をクリックします。 マップをレポートに追加する手順については、「[チュートリアル:マップ レポート &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-map-report-report-builder.md)」を参照してください。  
   
-##  <a name="SpatialDataSource"></a> [空間データのソースを選択]  
+##  <a name="choose-a-source-of-spatial-data"></a><a name="SpatialDataSource"></a> [空間データのソースを選択]  
  このページでは、使用する空間データ ソースと空間データを指定します。 空間データのソースとして、マップ ギャラリー、ESRI シェープファイル、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以降のバージョンのデータベースの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 空間データを指定するデータセット クエリを使用できます。  
   
  それぞれのレイヤーの空間データのソースは同じソースであっても異なるソースであってもかまいませんが、レイヤーを追加するたびにソースを指定する必要があります。 空間データのソースがマップ ギャラリーまたは ESRI シェープファイルの場合、空間データ ソースは独立したレポート アイテムではありません。 空間データ ソースはレポート データ ペインに表示されません。  
   
-###  <a name="SpatialData"></a> 空間データとは  
+###  <a name="what-is-spatial-data"></a><a name="SpatialData"></a> 空間データとは  
  空間データには、地理的要素または幾何学的要素を定義する座標が格納されています。 マップ内で、空間データは *マップ要素*を定義します。マップ要素には、領域または形状を定義する多角形、ルートまたはパスを定義する線、およびマーカーまたは画鋲を定義するポイントがあります。 空間データは、バイナリ形式でデータ ソースに格納され、座標セットとして指定されます。 たとえば、ポイントは XY 座標 (X Y)、線は 2 つの座標セット ((X1 Y1), (X2 Y2))、多角形は最初の最後の座標セットが同じ 4 つ以上の座標セット ((X1 Y1), (X2 Y2), (X3 Y3), (X1 Y1)) で表されます。  
   
  詳細については、使用する空間データの種類に関するドキュメントを参照してください。  
   
-###  <a name="MapGallery"></a> What is the map gallery?  
+###  <a name="what-is-the-map-gallery"></a><a name="MapGallery"></a> What is the map gallery?  
  マップ ギャラリーには、レポート作成環境のマップ ギャラリー フォルダー内にあるレポートで使用されているマップが含まれます。 ギャラリーのマップを使用することで、マップを簡単にレポートに追加できます。 ギャラリーにあらかじめ定義されているマップは、マップ プロバイダーによって提供されます。  
   
 > [!NOTE]  
@@ -118,7 +118,7 @@ ms.locfileid: "77078568"
   
  マップ ギャラリーを拡張するには、マップ ギャラリー ディレクトリのレポートを追加または削除したり、マップを整理するためのフォルダーを追加したりします。 詳細については、「[マップ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)」を参照してください。  
   
-###  <a name="Shapefile"></a> What is an ESRI shapefile?  
+###  <a name="what-is-an-esri-shapefile"></a><a name="Shapefile"></a> What is an ESRI shapefile?  
  ESRI シェープファイルは、Environmental Systems Research Institute, Inc. (ESRI) シェープファイル空間データ形式に準拠するデータが格納されたファイルのセットです。 通常、ファイルのセットには、空間データが格納されている *\<filename>* .shp ファイルと、サポート ファイルの *\<filename>* .dbf が含まれます。  
   
  シェープファイルを空間データ ソースとして指定し、このファイルがローカル コンピューター上にある場合は、空間データが自動的にレポートに埋め込まれます。 ESRI ファイルの空間データを動的に使用するには、次の操作を行う必要があります。  
@@ -127,10 +127,10 @@ ms.locfileid: "77078568"
   
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のレポート デザイナーで、.shp ファイルと .dbf ファイルの両方をレポート プロジェクトに追加し、空間データ ソースとして .shp ファイルの名前を指定します。  
   
-###  <a name="GetShapefiles"></a> ESRI シェープファイルを取得できる場所  
+###  <a name="where-can-i-get-esri-shapefiles"></a><a name="GetShapefiles"></a> ESRI シェープファイルを取得できる場所  
  ESRI シェープファイルは Web 上で入手できます。 詳細については、「 [マップに使用する ESRI シェープファイルの検索](https://go.microsoft.com/fwlink/?linkid=178814)」を参照してください。  
   
-###  <a name="SqlServerSpatial"></a> SQL Server 空間クエリとは  
+###  <a name="what-is-a-sql-server-spatial-query"></a><a name="SqlServerSpatial"></a> SQL Server 空間クエリとは  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 空間クエリは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベースの SQLGeometry データ型または SQLGeography データ型のデータを指定するデータセット クエリです。  
   
 > [!NOTE]  
@@ -140,7 +140,7 @@ ms.locfileid: "77078568"
   
  詳細については、「 [空間データ型](../../relational-databases/spatial/spatial-data-types-overview.md)」を参照してください。  
   
-##  <a name="MapView"></a> [空間データとマップ ビューのオプションを選択]  
+##  <a name="choose-spatial-data-and-map-view-options"></a><a name="MapView"></a> [空間データとマップ ビューのオプションを選択]  
  このページでは、次のオプションを設定できます。  
   
 -   ウィザードの前のページで選択した空間データのビューの中心およびズーム レベルを設定します。 設定したビューは、マップ全体に適用されます。  
@@ -153,12 +153,12 @@ ms.locfileid: "77078568"
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Bing のマップ タイルの背景を含めるかどうかを指定します。  
   
-###  <a name="Viewport"></a> マップ ビューまたはビューポートとは  
+###  <a name="what-is-the-map-view-or-viewport"></a><a name="Viewport"></a> マップ ビューまたはビューポートとは  
  マップ ビューポートは、レポートのすべてのレイヤーについて、表示するマップ領域を定義します。  
   
  既定では、カラー スケールと距離スケールはビューポートの内側に表示され、マップの凡例はビューポートの外側に表示されます。 ビューポートのこれらのオプションは、ウィザードを完了した後も変更できます。  
   
-###  <a name="Resolution"></a> マップの解像度および最適化とは  
+###  <a name="what-is-map-resolution-and-optimization"></a><a name="Resolution"></a> マップの解像度および最適化とは  
  線または多角形を表す空間データの解像度を変更することは、描画するマップの精細度を指定することになります。 たとえば、領域の航空写真ビューの場合、地球表面の数百メートル単位までの精細度が必要か、1 マイル単位の解像度で十分かを検討します。  
   
  空間データをレポートに含める場合、解像度が高くなるほど、その解像度で細部を描画するのに必要な要素の数が増えます。 空間データをレポートに含めない場合、解像度が高くなるほど、レポートを表示するたびにレポート プロセッサがその解像度でのマップの線を計算するのに必要となる時間が増加します。  
@@ -167,14 +167,14 @@ ms.locfileid: "77078568"
   
  スライダーを調整すると、ウィザード ペインのプレビュー データが更新されるので、その効果がわかります。 マップをレポートに追加した後は、マップ ビューポートのオプションを変更することで、この値を調整できます。  
   
-###  <a name="Embed"></a> 空間データの埋め込みとは  
+###  <a name="what-does-embedding-spatial-data-do"></a><a name="Embed"></a> 空間データの埋め込みとは  
  マップ要素または Bing のマップ タイルをレポートに埋め込むと、空間データがレポート定義に格納されます。  
   
  マップを含んだレポートでは、レポートの処理時またはデザイン時に動的に取得されレポート定義に埋め込まれる Bing のマップ タイルまたは空間データを使用できます。 マップ要素が埋め込まれるとレポート定義のサイズが著しく増加しますが、レポート内でマップを表示するのに要する時間が短縮されます。 動的なマップ要素の場合はレポート定義のサイズが小さくなりますが、マップを処理して表示するのに要する時間が増加します。  
   
  優れたレポート デザインを実現するには、静的なマップ データまたは動的なマップ データのトレードオフを評価し、環境に合わせてバランスを調整します。 通常、データ量が増えることは、レポート サーバー上でレポート定義およびコンパイル後のレポートを格納するのにより多くの領域が必要になり、処理時間が長くなることを意味します。 空間データはトリミングし、他のレポート データも制限して、必要なデータのみをレポートに含めるようにすることをお勧めします。  
   
-###  <a name="Tiles"></a> Bing のマップ タイルの背景とは  
+###  <a name="what-is-a-bing-map-tile-background"></a><a name="Tiles"></a> Bing のマップ タイルの背景とは  
  マップに地理的イメージの背景を追加するには、Bing のマップ タイルの背景オプションを選択します。 このウィザード ページで指定したマップ領域および解像度に対応するタイルが、レポート プロセッサによって、Bing マップ Web サービスからダウンロードされます。 次のいずれかのタイルの種類を指定できます。  
   
 -   **[道路] :** 道路地図スタイルを白い背景色で表示します。  
@@ -189,12 +189,12 @@ ms.locfileid: "77078568"
   
  タイル レイヤーをカスタマイズするためのその他の方法については、「[マップまたはマップ レイヤーの追加、変更、または削除 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)」を参照してください。  
   
-##  <a name="Visualization"></a> [マップの視覚エフェクトの選択]  
+##  <a name="choose-map-visualization"></a><a name="Visualization"></a> [マップの視覚エフェクトの選択]  
  このページでは、レポートに追加するマップまたはマップ レイヤーの種類を選択します。 ウィザードを初めて実行すると、マップと最初のマップ レイヤーがレポートに追加されます。 1 つのマップに複数のマップ レイヤーを追加できます。 それぞれのマップ レイヤーには、特定の種類の空間データ (多角形、線、またはポイント) が表示されます。  
   
  マップの目的と使用できるデータに合わせてマップの種類を選択します。  
   
-###  <a name="MapType"></a> 基本マップ、バブル マップ、および分析マップの違い  
+###  <a name="what-is-the-difference-among-a-basic-map-a-bubble-map-and-an-analytical-map"></a><a name="MapType"></a> 基本マップ、バブル マップ、および分析マップの違い  
  **[基本マップ]** には、場所のみが表示されます。 マップ上の領域の色に濃淡を付けることができますが、色は分析データ値を表しません。  
   
  **[バブル マップ]** には、たとえば店舗売上のような単一の分析データの集計をバブル サイズとする相対値が示されます。 多角形またはポイントのどちらに対してもバブル マップを作成できます。 多角形の場合は、多角形の中心点のプロパティを設定します。ポイントの場合は、マーカーのプロパティを設定します。  
@@ -203,29 +203,29 @@ ms.locfileid: "77078568"
   
  詳細については、「 [マップ レポートの計画 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)」を参照してください。  
   
-##  <a name="AnalyticalData"></a> [分析データセットの選択]  
+##  <a name="choose-the-analytical-dataset"></a><a name="AnalyticalData"></a> [分析データセットの選択]  
  このページでは、このマップ レイヤーに表示する分析データをどこから取得するかを指定します。  
   
  マップ背景にレポート データまたは任意の分析データを表示するには、データの場所と、データをどのように空間データに関連付けるかを指定する必要があります。 データのソースとして、既存のレポート データセットか、または作成するクエリの対象とする新しいデータセットを選択できます。 空間データを含む ESRI シェープファイルに既存の分析データが含まれている場合もあります。  
   
-###  <a name="Diff"></a> 空間データと分析データの違い  
+###  <a name="what-is-the-difference-between-spatial-data-and-analytical-data"></a><a name="Diff"></a> 空間データと分析データの違い  
  空間データは、ポイント、線、および多角形を指定する座標のセットから構成されます。 マップ要素は、空間データに基づきます。  
   
  分析データは、数値データまたはカテゴリ データで、マップの外観を変更するために使用できます。 分析データは、レポート データセットから取得できます。また、分析データは、マップ ギャラリーのマップまたは ESRI シェープファイルの空間データに含まれている場合があります。  
   
-##  <a name="SpecifyMatchFields"></a> 対応フィールドの指定  
+##  <a name="specify-the-match-fields"></a><a name="SpecifyMatchFields"></a> 対応フィールドの指定  
  このページでは、空間データと分析データの間のリレーションシップを作成します。  
   
-###  <a name="MatchFields"></a> 対応フィールドとは  
+###  <a name="what-are-match-fields"></a><a name="MatchFields"></a> 対応フィールドとは  
  対応フィールドを使用することで、レポート プロセッサが分析データと空間データの間のリレーションシップを作成することが可能になります。 対応フィールドは、分析データ内の一意な値を指定します。 たとえば、データ内で店舗名が一意でない可能性がある場合は、市区町村と店舗名の両方を指定します。  
   
-##  <a name="ThemeandVisualization"></a> [配色テーマとデータの視覚エフェクトを選択]  
+##  <a name="choose-color-theme-and-data-visualization"></a><a name="ThemeandVisualization"></a> [配色テーマとデータの視覚エフェクトを選択]  
  このページでは、マップの背景に対してデータをどのように視覚化するか、マップ テーマ、視覚化するフィールド、および変更する要素 (色、サイズ、マーカーの種類) を指定します。  
   
-###  <a name="Theme"></a> テーマとは  
+###  <a name="what-does-the-theme-do"></a><a name="Theme"></a> テーマとは  
  選択したテーマによって、色、罫線、およびフォントの既定値が設定されます。 これらのオプションは、ウィザードを完了した後も変更できます。  
   
-###  <a name="Legends"></a> マップ プレビューにおける凡例とスケールの役割  
+###  <a name="what-are-the-legends-and-scales-in-map-preview-for"></a><a name="Legends"></a> マップ プレビューにおける凡例とスケールの役割  
  凡例は、マップに表示されているデータをユーザーが解釈する際に役に立ちます。 マップは、色の範囲、距離スケール、および凡例を提供します。  
   
 -   **色の範囲 :** 色の範囲では、スケール付きのカラー バーが表示され、レイヤーに指定したルールに基づいて、レポート プロセッサによって決定されるデータ間隔のガイドが提供されます。  
@@ -234,7 +234,7 @@ ms.locfileid: "77078568"
   
 -   **凡例 :** 凡例は、マップ上の色、サイズ、マーカーの種類の意味を示します。 既定では、すべてのレイヤーのすべてのルールで、データ間隔が最初の凡例に表示されます。 マップをレポートに追加した後で、この凡例をカスタマイズしたり、凡例を追加したりできます。  
   
-###  <a name="Rules"></a> ルールとは  
+###  <a name="what-are-rules"></a><a name="Rules"></a> ルールとは  
  ルールとは、レポート プロセッサが分析データを範囲に分類するために使用する計算です。 レイヤーごとに異なるルールを指定できます。 指定できるルールの種類は、レイヤー上の空間データの種類によって異なります。  
   
 -   **多角形 :** 色ルールを指定できます。  

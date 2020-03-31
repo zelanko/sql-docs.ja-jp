@@ -18,17 +18,17 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a755ba9aa8915734768c56c096ea917a6e0c5564
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68021221"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>フルテキスト インデックスのパフォーマンスの向上
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 このトピックでは、フルテキスト インデントとクエリのパフォーマンス低下の一般的な原因をいくつか説明します。 また、このような問題を軽減し、パフォーマンスを改善する提案もいくつか紹介します。
   
-##  <a name="causes"></a> Common causes of performance issues
+##  <a name="common-causes-of-performance-issues"></a><a name="causes"></a> Common causes of performance issues
 ### <a name="hardware-resource-issues"></a>ハードウェア リソースの問題
 フルテキスト インデックス作成とフルテキスト クエリのパフォーマンスは、メモリ、ディスク速度、CPU 速度、コンピューターのアーキテクチャなどのハードウェア リソースの影響を受けます。  
 
@@ -57,7 +57,7 @@ ms.locfileid: "68021221"
   
     マスター マージで大量のデータを処理すると、実行時間が長いトランザクションが発生し、チェックポイント時のログの切り捨てが遅れる場合があります。 この場合、完全復旧モデルでは、トランザクション ログが非常に大きくなることがあります。 完全復旧モデルを使用するデータベースで大きなフルテキスト インデックスを再編成する前に、実行時間が長いトランザクションのための十分な領域をトランザクション ログに割り当てることをお勧めします。 詳細については、「 [トランザクション ログ ファイルのサイズの管理](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)」を参照してください。  
   
-##  <a name="tuning"></a> フルテキスト インデックスのパフォーマンスの調整  
+##  <a name="tune-the-performance-of-full-text-indexes"></a><a name="tuning"></a> フルテキスト インデックスのパフォーマンスの調整  
 フルテキスト インデックスのパフォーマンスを最大化するには、次に示すベスト プラクティスを実装します。  
   
 -   すべての CPU プロセッサまたはコアを最大限に使用するには、[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) '**max full-text crawl range**' をシステム上の CPU の数に設定します。 構成オプションの詳細については、「 [max full-text crawl range サーバー構成オプション](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)」を参照してください。  
@@ -70,7 +70,7 @@ ms.locfileid: "68021221"
 
 -   timestamp 列に基づいて増分作成を使用する場合は、**timestamp** 列にセカンダリ インデックスを構築し、増分作成のパフォーマンスを向上します。  
   
-##  <a name="full"></a> 完全作成のパフォーマンスに関するトラブルシューティング  
+##  <a name="troubleshoot-the-performance-of-full-populations"></a><a name="full"></a> 完全作成のパフォーマンスに関するトラブルシューティング  
 ### <a name="review-the-full-text-crawl-logs"></a>フルテキスト クロール ログを確認する
  パフォーマンスの問題を診断するには、フルテキスト クロール ログを調べます。
  
@@ -195,7 +195,7 @@ GO
   
          断片化を解消するには、クラスター化インデックスを再構成または再構築します。 詳細については、「 [インデックスの再編成と再構築](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)」を参照してください。  
   
-##  <a name="filters"></a> ドキュメントのインデックス作成が遅い問題のトラブルシューティング
+##  <a name="troubleshoot-slow-indexing-of-documents"></a><a name="filters"></a> ドキュメントのインデックス作成が遅い問題のトラブルシューティング
 
 > [!NOTE]
 > ここでは、他のドキュメントの種類が埋め込まれているドキュメント (Microsoft Word 文書など) のインデックスを作成する場合にのみ影響する問題について説明します。

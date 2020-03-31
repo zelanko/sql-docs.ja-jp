@@ -14,10 +14,10 @@ ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b385e04cf2efa103dba4a66d4e794a7984814fb4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67140268"
 ---
 # <a name="create-modify-and-delete-data-driven-subscriptions"></a>データ ドリブン サブスクリプションを作成、変更、および削除する
@@ -35,14 +35,14 @@ ms.locfileid: "67140268"
   
 -   [サブスクリプションの実行](#bkmk_run_subscription)  
   
-##  <a name="bkmk_manage_and_delete"></a> データ ドリブン サブスクリプションの管理および削除  
+##  <a name="managing-and-deleting-a-data-driven-subscription"></a><a name="bkmk_manage_and_delete"></a> データ ドリブン サブスクリプションの管理および削除  
  実行中のデータ ドリブン サブスクリプションは、Web ポータルで停止できず、削除できません。 そのため、共有スケジュールを使用してデータ ドリブン サブスクリプションを開始すると便利です。 一時的にサブスクリプションを処理しないようにする場合は、サブスクリプションを開始するスケジュールを一時停止できます。 詳細については、「 [ネイティブ モード レポート サーバーのサブスクリプションの作成と管理](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)」を参照してください。  
   
  データ ドリブン サブスクリプションを削除するには、 **[サブスクリプション]** ページでレポートの横にあるチェックボックスをオンにし、 **[削除]** を選択します。  
   
  データ ドリブン サブスクリプションを取り消す方法については、「 [実行中の処理を管理する](../../reporting-services/subscriptions/manage-a-running-process.md)」を参照してください。  
   
-##  <a name="bkmk_create_and_modify"></a> データ ドリブン サブスクリプションの作成および変更  
+##  <a name="creating-and-modifying-a-data-driven-subscription"></a><a name="bkmk_create_and_modify"></a> データ ドリブン サブスクリプションの作成および変更  
  データ ドリブン サブスクリプションを作成するには、保存された資格情報を使用するレポートか、資格情報を使用しないレポートを選択します。 データ ドリブン サブスクリプションを作成するときは、標準サブスクリプションをデータ ドリブン サブスクリプションから簡単に区別できるように、説明フィールドの名前付け規則の使用を検討してください。  
   
 ### <a name="to-create-a-data-driven-subscription-native-mode"></a>データ ドリブン サブスクリプションを作成するには (ネイティブ モード)  
@@ -88,17 +88,17 @@ ms.locfileid: "67140268"
   
 -   **ユーザーの必要条件**。 サブスクリプションの作成者には、"レポートの管理" および "すべてのサブスクリプションを管理" の実行権限が必要です。 アイテムレベルのタスク権限の詳細については、「 [タスクと権限](../../reporting-services/security/tasks-and-permissions.md)」を参照してください。 また、作成者には、サブスクライバー データが格納されている外部データ ソースにアクセスするための資格情報も必要です。  
   
-##  <a name="bkmk_define_query"></a> サブスクリプションの情報を取得するクエリの定義  
+##  <a name="defining-a-query-that-retrieves-subscription-information"></a><a name="bkmk_define_query"></a> サブスクリプションの情報を取得するクエリの定義  
  データ ドリブン サブスクリプションでは、サブスクライバー データを取得するクエリまたはコマンドを指定する必要があります。 クエリは、サブスクライバーごとに 1 行生成する必要があります。 電子メール配信拡張機能を使用している場合、クエリは、各サブスクライバーの有効な電子メール エイリアスを返す必要があります。 配信される回数は、クエリが返す行数に基づいています。 行セットが 10,000 行で構成されている場合、サブスクリプションは 10,000 のレポートを配信します。  
   
  クエリの実行に時間のかかる場合は、タイムアウト値を大きくして、追加の処理を調整できます。  
   
  この手順では、クエリを検証してから続行する必要があります。 検証では、クエリは処理されませんが、これ以降の選択項目の列を参照できるように行セット内のすべての列の一覧が返されます。 クエリが検証に失敗すると、手順を続行できません。 クエリ構文が間違っている場合、またはデータ ソースへの接続が無効な場合、クエリは検証に失敗します。 データ ソースを訂正するには、 **[戻る]** ボタンを使用します。  
   
-##  <a name="bkmk_run_subscription"></a> サブスクリプションの実行  
+##  <a name="running-the-subscription"></a><a name="bkmk_run_subscription"></a> サブスクリプションの実行  
  サブスクリプションを処理するための条件を指定する必要があります。 スケジュールを指定するか、レポート実行スナップショットの更新と同時にサブスクリプションを開始することができます。 データ ドリブン サブスクリプションの処理は、標準のサブスクリプションの処理と同じです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ネイティブ モード レポート サーバーのサブスクリプションの作成と管理](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [サブスクリプションと配信 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [レポート サーバーの Web ポータル (SSRS ネイティブ モード)](../../reporting-services/web-portal-ssrs-native-mode.md)   

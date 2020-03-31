@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 068b7aa3c068b10b787b99bba26c12a2b680bcd3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727410"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R Services のパフォーマンス: 結果とリソース
@@ -97,7 +97,7 @@ R Services または RevoScaleR の関数についての問題のトラブルシ
 | *airlineWithIndex*    | 10000000 | 2978816 KB | 2972160 KB | 6128 KB    | 528 KB  | 0                   |
 | *airlineWithPageComp* | 10000000 | 625784 KB  | 623744 KB  | 1352 KB    | 688 KB  | 79%                 |
 | *airlineWithRowComp*  | 10000000 | 1262520 KB | 1258880 KB | 2552 KB    | 1088 KB | 58%                 |
-| *airlineColumnar*     | 9999999  | 201992 KB  | 201624 KB  | 300        | 368 KB  | 93%                 |
+| *airlineColumnar*     | 9999999  | 201992 KB  | 201624 KB  | 該当なし        | 368 KB  | 93%                 |
 
 **結論**
 
@@ -307,7 +307,7 @@ R ジョブへの影響を評価するために、履歴書照合シナリオで
 
 6. 適切なワークロード グループに関数を使用するように、Resource Governor 構成を更新します。
 
-### <a name="results"></a>[結果]
+### <a name="results"></a>結果
 
 履歴書照合の検討で、最高のパフォーマンスが得られた構成は次のとおりです。
 
