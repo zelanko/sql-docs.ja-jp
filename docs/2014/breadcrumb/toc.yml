@@ -17,7 +17,7 @@
               tocHref: /sql/database-engine/
               topicHref: /sql/database-engine/sql-server-database-engine-overview
               items:
-                - name: '[構成]'
+                - name: 構成
                   tocHref: /sql/database-engine/configure-windows/
                   topicHref: /sql/database-engine/configure-windows/configure-database-engine-instances-sql-server
                 - name: 照合順序
@@ -236,7 +236,7 @@
                 - name: インデックス
                   tocHref: /sql/relational-databases/indexes/
                   topicHref: /sql/relational-databases/indexes/indexes
-                - name: '[メジャー グループ]'
+                - name: メジャー グループ
                   tocHref: /sql/relational-databases/partitions/
                   topicHref: /sql/relational-databases/partitions/partitioned-tables-and-indexes
                 - name: ビュー
@@ -291,7 +291,7 @@
                     - name: 管理
                       tocHref: /sql/relational-databases/replication/administration/
                       topicHref: /sql/relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators
-                    - name: '[エージェント]'
+                    - name: エージェント
                       tocHref: /sql/relational-databases/replication/agents/
                       topicHref: /sql/relational-databases/replication/agents/replication-agents-overview
                     - name: 開発者ガイド - レプリケーション

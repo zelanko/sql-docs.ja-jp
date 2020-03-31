@@ -257,25 +257,25 @@
       href: job-properties-new-job-general-page.md
     - name: 'ジョブのプロパティ: [新しいジョブ] ([ステップ] ページ)'
       href: job-properties-new-job-steps-page.md
-    - name: 'ジョブのプロパティ: [新しいジョブ] ([スケジュール] ページ)'
+    - name: '[ジョブのプロパティ]:[新しいジョブ] ([スケジュール] ページ)'
       href: job-properties-new-job-schedules-page.md
-    - name: 'ジョブのプロパティ: [新しいジョブ] ([警告] ページ)'
+    - name: '[ジョブのプロパティ]:[新しいジョブ] ([警告] ページ)'
       href: job-properties-new-job-alerts-page.md
-    - name: '[ジョブのプロパティ]: [新しいジョブ] ([通知] ページ)'
+    - name: '[ジョブのプロパティ]:[新しいジョブ] ([通知] ページ)'
       href: job-properties-new-job-notifications-page.md
-    - name: 'ジョブのプロパティ: [新しいジョブ] ([対象サーバー] ページ)'
+    - name: '[ジョブのプロパティ]:[新しいジョブ] ([対象サーバー] ページ)'
       href: job-properties-new-job-targets-page.md
     - name: 'ジョブ カテゴリのプロパティ: [新しいジョブ カテゴリ]'
       href: job-categories-properties-new-job-category.md
-    - name: '[ジョブ カテゴリ] : [ジョブ カテゴリの管理]'
+    - name: '[ジョブ カテゴリ]:ジョブ カテゴリの管理'
       href: job-categories-manage-job-categories.md
-    - name: 'ジョブ ステップのプロパティ: [新しいジョブ ステップ] ([全般] ページ)'
+    - name: '[ジョブ ステップのプロパティ]:[新しいジョブ ステップ] ([全般] ページ)'
       href: job-step-properties-new-job-step-general-page.md
-    - name: '[ジョブ ステップのプロパティ]: [新しいジョブ ステップ] ([詳細設定] ページ)'
+    - name: '[ジョブ ステップのプロパティ]:[新しいジョブ ステップ] ([詳細] ページ)'
       href: job-step-properties-new-job-step-advanced-page.md
     - name: '[ジョブのスケジュール選択]'
       href: pick-schedule-for-job.md
-    - name: '[新しいジョブ スケジュール]: [ジョブ スケジュールのプロパティ]'
+    - name: '[新しいジョブ スケジュール]:[ジョブ スケジュールのプロパティ]'
       href: new-job-schedule-job-schedule-properties.md
     - name: '[スケジュールの管理]'
       href: manage-schedules.md
@@ -289,7 +289,7 @@
       href: alert-properties-new-alert-general-page.md
     - name: '[警告のプロパティ]/[新しい警告] ([応答] ページ)'
       href: alert-properties-new-alert-response-page.md
-    - name: '[警告のプロパティ]: [新しい警告] ([オプション] ページ)'
+    - name: '[警告のプロパティ]:[新しい警告] ([オプション] ページ)'
       href: alert-properties-new-alert-options-page.md
     - name: '[警告のプロパティ] ([履歴] ページ)'
       href: alert-properties-history-page.md
@@ -301,13 +301,13 @@
       href: proxy-account-properties-new-proxy-account-principals-tab.md
     - name: 'プロキシ エディターおよび [プリンシパルの追加]'
       href: proxy-editor-add-principal.md
-    - name: '[プロキシ アカウントのプロパティ] \([参照設定] タブ)'
+    - name: '[プロキシ アカウントのプロパティ]  ([参照設定] タブ)'
       href: proxy-account-properties-references-tab.md
     - name: '[オペレーター] ノード (SQL Server エージェントの F1 ヘルプ)'
       href: operators-node-sql-server-agent-f1-help.md
     - name: '[オペレーターのプロパティ] および [新しいオペレーター] ([全般] ページ)'
       href: operator-properties-new-operator-general-page.md
-    - name: 'オペレーターのプロパティ: [新しいオペレーター] ([通知] ページ)'
+    - name: '[オペレーターのプロパティ]:[新しいオペレーター] ([通知] ページ)'
       href: operator-properties-new-operator-notifications-page.md
     - name: '[<OperatorName> のプロパティ] ([履歴] ページ)'
       href: operator-properties-history-page.md
@@ -317,7 +317,7 @@
       href: configure-sql-server-agent-error-logs-general-page.md
     - name: '[SQL Server エージェント エラー ログの再利用]'
       href: recycle-sql-server-agent-error-logs.md
-    - name: '[SQL Server エージェントのプロパティ]\([全般] ページ)'
+    - name: '[SQL Server エージェントのプロパティ] ([全般] ページ)'
       href: sql-server-agent-properties-general-page.md
     - name: 'SQL Server エージェントのプロパティ ([詳細設定] ページ)'
       href: sql-server-agent-properties-advanced-page.md

@@ -82,7 +82,7 @@
       href: change-a-model-name-master-data-services.md
     - name: モデルを削除する
       href: delete-a-model-master-data-services.md
-- name: '[エンティティ]'
+- name: エンティティ
   href: entities-master-data-services.md
   items:
     - name: エンティティを作成する
@@ -288,7 +288,7 @@
       href: validation-statuses-master-data-services.md
     - name: 検証ストアド プロシージャ
       href: validation-stored-procedure-master-data-services.md
-- name: メタデータ
+- name: Metadata
   href: metadata-master-data-services.md
   items:
     - name: メタデータの追加 (マスター データ サービス)

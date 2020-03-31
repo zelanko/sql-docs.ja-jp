@@ -5072,7 +5072,7 @@
       href: ../connect/oledb/when-to-use-oledb-driver-for-sql-server.md
     - name: OLE DB Driver for SQL Server の詳細情報の検索
       href: ../connect/oledb/finding-more-oledb-driver-for-sql-server-information.md
-    - name: 機能
+    - name: 特徴
       href: ../connect/oledb/features/oledb-driver-for-sql-server-features.md
       items:
         - name: 拡張イベント ログの診断情報へのアクセス

@@ -707,7 +707,7 @@
                   href: database-engine/availability-groups/windows/view-availability-replica-properties-sql-server.md
                 - name: リスナーのプロパティを表示する
                   href: database-engine/availability-groups/windows/view-availability-group-listener-properties-sql-server.md
-            - name: Operation
+            - name: 操作
               items:
                 - name: データベースを追加する
                   items:
@@ -751,6 +751,8 @@
                   href: database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md
                 - name: 正常性とポリシーを表示する
                   href: database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md
+                - name: リスナーへの接続
+                  href: database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md
         - name: 概念
           items:
             - name: 構成
@@ -789,12 +791,12 @@
                   href: database-engine/availability-groups/windows/possible-failures-during-sessions-between-availability-replicas-sql-server.md
             - name: 接続
               items:
-                - name: クライアント接続
+                - name: リスナー
+                  href: database-engine/availability-groups/windows/availability-group-listener-overview.md
+                - name: クライアント接続の種類
                   href: database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md
-                - name: クライアント接続
+                - name: ドライバーおよびクライアントのサポート
                   href: database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md
-                - name: リスナー、クライアント、フェールオーバー
-                  href: database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md
             - name: 相互運用性
               items:
                 - name: レプリケーション、CT、CDC
@@ -2567,7 +2569,7 @@
               href: relational-databases/native-client/system-requirements-for-sql-server-native-client.md
             - name: SQL Server Native Client を使用する場合
               href: relational-databases/native-client/when-to-use-sql-server-native-client.md
-        - name: 機能
+        - name: 特徴
           href: relational-databases/native-client/features/sql-server-native-client-features.md
           items:
             - name: 診断情報の拡張イベント
@@ -4196,7 +4198,7 @@
           items:
             - name: SQL Server 2019
               href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md
-            - name: SQL Server 2017 以前
+            - name: SQL Server 2016 および 2017
               href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md
         - name: セキュリティに関する考慮事項
           href: sql-server/install/security-considerations-for-a-sql-server-installation.md
@@ -6166,15 +6168,6 @@
                       href: relational-databases/policy-based-management/facet-properties-dialog-box-dependent-conditions-page.md
         - name: トランザクション ログの管理
           items:
-            - name: ログ ファイルの表示
-              href: relational-databases/logs/log-file-viewer.md
-              items:
-                - name: '[ファイル]'
-                  href: relational-databases/logs/open-log-file-viewer.md
-                - name: オフラインで表示
-                  href: relational-databases/logs/view-offline-log-files.md
-                - name: F1 ヘルプ
-                  href: relational-databases/logs/log-file-viewer-f1-help.md
             - name: '[トランザクション ログ]'
               href: relational-databases/logs/the-transaction-log-sql-server.md
               items:
@@ -8401,6 +8394,15 @@
               href: ssms/ssms-utility.md
             - name: SSMS のキーボード ショートカット
               href: ssms/sql-server-management-studio-keyboard-shortcuts.md
+            - name: ログ ファイルの表示
+              href: relational-databases/logs/log-file-viewer.md
+              items:
+                - name: F1 ヘルプ
+                  href: relational-databases/logs/log-file-viewer-f1-help.md
+                - name: '[ファイル]'
+                  href: relational-databases/logs/open-log-file-viewer.md
+                - name: オフラインで表示
+                  href: relational-databases/logs/view-offline-log-files.md
             - name: SQL Server エージェント
               items:
                 - name: SQL Server エージェント
@@ -9842,7 +9844,7 @@
             - name: SQL Server Machine Learning Services のインストール
               href: linux/sql-server-linux-setup-machine-learning.md
             - name: Docker に SQL Server Machine Learning Services をインストールする
-              href: linux/sql-server-setup-machine-learning-docker.md
+              href: linux/sql-server-linux-setup-machine-learning-docker.md
             - name: SQL Server の言語拡張をインストールする
               href: linux/sql-server-linux-setup-language-extensions.md
             - name: リポジトリの構成
@@ -17068,5 +17070,3 @@
               href: xquery/string-search-in-xquery.md
             - name: XQuery での名前空間の処理
               href: xquery/handling-namespaces-in-xquery.md
-- name: ナレッジ ベースのサポート
-  href: kb-support/toc.yml

@@ -143,7 +143,7 @@
   items:
     - name: 階層の作成および管理
       href: create-and-manage-hierarchies-ssas-tabular.md
-- name: '[メジャー グループ]'
+- name: メジャー グループ
   href: partitions-ssas-tabular.md
   items:
     - name: ワークスペース データベースのパーティションの作成と管理
