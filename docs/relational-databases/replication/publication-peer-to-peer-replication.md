@@ -1,5 +1,5 @@
 ---
-title: '[パブリケーション](ピア ツー ピア レプリケーション) | Microsoft Docs'
+title: '[パブリケーション] (ピア ツー ピア レプリケーション) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,17 +13,17 @@ ms.assetid: 92794414-6e54-437a-88b6-3bf02d3802f6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d7097c59f77b95a561420183e2e899c0672dc5e7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67908122"
 ---
 # <a name="publication-peer-to-peer-replication"></a>[パブリケーション] (ピア ツー ピア レプリケーション)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **[パブリケーション]** ページでは、ピア ツー ピア レプリケーションに対して有効になっているトランザクション パブリケーションを表示します。 パブリケーションは、 **[パブリケーションのプロパティ]** ダイアログ ボックスの **[サブスクリプション オプション]** ページで有効になっています。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **発行元**  
  接続先のサーバーを表示します。 別のサーバーに接続するには、 **[SQL Server パブリッシャーの検索]** を選択します。  
   

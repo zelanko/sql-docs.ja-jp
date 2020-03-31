@@ -11,18 +11,18 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: d33f43f4232e7a9a62365c5bb438c91339f4fd47
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73532420"
 ---
 # <a name="sql-server-dacpac-extension"></a>SQL Server dacpac の拡張機能
 
-**データ層アプリケーション ウィザード**には、dacpac ファイルの配置と抽出、および bacpac ファイルのインポートとエクスポートを行うための、使いやすいウィザード エクスペリエンスが用意されています。
+**データ層アプリケーション ウィザード** には、dacpac ファイルの配置と抽出、および bacpac ファイルのインポートとエクスポートを行うための、使いやすいウィザード エクスペリエンスが用意されています。
 
 
-## <a name="features"></a>[機能]
+## <a name="features"></a>特徴
 
 * dacpac を SQL Server インスタンスに配置する
 * SQL Server インスタンスを dacpac に抽出する
