@@ -11,10 +11,10 @@ ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7f2e417ddefc0094fc6320deafea40251ba77372
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76761856"
 ---
 # <a name="dtexec-utility"></a>dtexec ユーティリティ
@@ -52,7 +52,7 @@ ms.locfileid: "76761856"
   
 -   [使用例](#example)  
   
-##  <a name="server"></a> Integration Services サーバーとプロジェクト ファイル  
+##  <a name="integration-services-server-and-project-file"></a><a name="server"></a> Integration Services サーバーとプロジェクト ファイル  
  **dtexec** を使用して [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーでパッケージを実行すると、**dtexec** は [catalog.create_execution (SSISDB データベース)](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md)、[catalog.set_execution_parameter_value (SSISDB データベース)](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)、および [catalog.start_execution (SSISDB データベース)](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md) の各ストアド プロシジャを呼び出すことにより、実行を作成し、パラメーター値を設定して、実行を開始します。 すべての実行ログは、関連するビューでサーバーから確認できます。また、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で利用可能な標準レポートを使用して確認することもできます。 レポートの詳細については、「 [Integration Services サーバーのレポート](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports)」を参照してください。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーでのパッケージの実行例を次に示します。  
@@ -65,7 +65,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
  **dtexec** とサードパーティのスケジューリング ツールを使用して、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置されているパッケージのスケジュールを設定できます。  
   
-##  <a name="bit"></a> 64 ビット コンピューターでのインストールに関する注意点  
+##  <a name="installation-considerations-on-64-bit-computers"></a><a name="bit"></a> 64 ビット コンピューターでのインストールに関する注意点  
  64 ビット コンピューターには、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] によって 64 ビット版の **dtexec** ユーティリティ (dtexec.exe) がインストールされます。 特定のパッケージを 32 ビット モードで実行する必要がある場合は、32 ビット版の **dtexec** ユーティリティをインストールする必要があります。 32 ビット版の **dtexec** ユーティリティをインストールするには、セットアップ中に [クライアント ツール] または [ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ] を選択する必要があります。  
   
  既定では、64 ビットと 32 ビットの両方のバージョンの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コマンド プロンプト ユーティリティがインストールされている 64 ビット コンピューターでは、コマンド プロンプトで 32 ビット バージョンが実行されます。 これは、PATH 環境変数で、32 ビット バージョンのディレクトリ パスが 64 ビット バージョンのディレクトリ パスより前に配置されているためです (通常、32 ビットのディレクトリ パスは *\<ドライブ>* :\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn で、64 ビットのディレクトリ パスは *\<ドライブ>* :\Program Files\Microsoft SQL Server\110\DTS\Binn です)。  
@@ -80,12 +80,12 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
 -   PATH 環境変数で、64 ビットのパス ( *\<ドライブ>* :\Program Files\Microsoft SQL Server\110\DTS\Binn) を 32 ビットのパス ( *\<ドライブ>* :\ Program Files(x86)\Microsoft SQL Server\110\DTS\Binn) より前に配置してパスの順序を永続的に変更します。  
   
-##  <a name="side"></a> サイド バイ サイド インストールを使用しているコンピューターに関する注意点  
+##  <a name="considerations-on-computers-with-side-by-side-installations"></a><a name="side"></a> サイド バイ サイド インストールを使用しているコンピューターに関する注意点  
  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] を、 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] または [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] がインストールされているコンピューターにインストールすると、複数のバージョンの **dtexec** ユーティリティがインストールされます。  
   
  正しいバージョンのユーティリティを実行していることを確認するには、コマンド プロンプトで完全なパス ( *\<ドライブ>* :\Program Files\Microsoft SQL Server\\<バージョン\>\DTS\Binn) を入力してユーティリティを実行します。  
   
-##  <a name="phases"></a> 実行のフェーズ  
+##  <a name="phases-of-execution"></a><a name="phases"></a> 実行のフェーズ  
  このユーティリティの実行には、4 つのフェーズがあります。 それらのフェーズを次に示します。  
   
 1.  コマンド初期フェーズ:コマンド プロンプトによって、指定されたオプションおよび引数のリストが読み取られます。 **/?** オプション または **/HELP** オプションが指定されている場合、後続のフェーズはすべてスキップされます。  
@@ -102,12 +102,12 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
 4.  検証および実行フェーズ:パッケージを実行します。 **/VALIDATE** オプションが指定された場合は、実行せずに検証を実行します。  
   
-##  <a name="exit"></a> 返される終了コード  
+##  <a name="exit-codes-returned"></a><a name="exit"></a> 返される終了コード  
  **dtexec ユーティリティから返される終了コード**  
   
  パッケージの実行時、 **dtexec** は終了コードを返すことができます。 終了コードは、ERRORLEVEL 変数の値を設定する場合に使用されます。この変数の値は、バッチ ファイル内の条件ステートメントや分岐ロジックでテストできます。 次の表は、終了時に **dtexec** ユーティリティが設定できる値を示しています。  
   
-|Value|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |0|パッケージが正常に実行されました。|  
 |1|パッケージが失敗しました。|  
@@ -116,7 +116,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
 |5|ユーティリティは要求されたパッケージを読み込めません。 パッケージを読み込めませんでした。|  
 |6|ユーティリティは、コマンド ラインに構文の内部エラーまたはセマンティック エラーを検出しました。|  
   
-##  <a name="syntaxRules"></a> 構文規則  
+##  <a name="syntax-rules"></a><a name="syntaxRules"></a> 構文規則  
  **ユーティリティの構文規則**  
   
  すべてのオプションは、スラッシュ (/) またはマイナス記号 (-) で始まる必要があります。 ここに示すオプションはスラッシュ (/) で始まりますが、マイナス記号 (-) を代わりに使用することもできます。  
@@ -127,7 +127,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
  パスワードを除いて、オプションおよび引数では大文字と小文字が区別されません。  
   
-##  <a name="cmdshell"></a> xp_cmdshell での dtexec の使用  
+##  <a name="using-dtexec-from-the-xp_cmdshell"></a><a name="cmdshell"></a> xp_cmdshell での dtexec の使用  
  **xp_cmdshell での dtexec の使用**  
   
  **xp_cmdshell** プロンプトから dtexec を実行できます。 次の例では、UpsertData.dtsx というパッケージを実行し、リターン コードを無視します。  
@@ -145,7 +145,7 @@ EXEC @returncode = xp_cmdshell 'dtexec /f "C:\UpsertData.dtsx"'
   
 > **重要!!** [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を新しくインストールした場合、 **xp_cmdshell** オプションは既定により無効になっています。 オプションを有効にするには、 **sp_configure** システム ストアド プロシージャを実行します。 詳細については、「 [xp_cmdshell サーバー構成オプション](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)」を参照してください。  
 
-##  <a name="bash"></a> Bash からの dtexec の使用
+##  <a name="using-dtexec-from-bash"></a><a name="bash"></a> Bash からの dtexec の使用
 
 **Bash** シェルは、Linux では一般的なシェルです。 Windows でも使用できます。 Bash プロンプトから dtexec を実行できます。 Bash ではセミコロン (`;`) がコマンド区切り演算子となることに注意してください。 これは特に、`/Conn[ection]`、`/Par[arameter]` または '`/Set` オプションを使用してパッケージに値を渡すときに重要です。セミコロンを使用して、名前と、指定された項目の値を区切るためです。 次の例では、Bash を使って値をパッケージに渡すときに、セミコロンとその他の項目を正しくエスケープする方法を示します。
 
@@ -153,13 +153,13 @@ EXEC @returncode = xp_cmdshell 'dtexec /f "C:\UpsertData.dtsx"'
 dtexec /F MyPackage.dtsx /CONN "MyConnection"\;"\"MyConnectionString\""
 ```
 
-##  <a name="syntax"></a> 構文  
+##  <a name="syntax"></a><a name="syntax"></a> 構文  
   
 ```  
 dtexec /option [value] [/option [value]]...  
 ```  
   
-##  <a name="parameter"></a> パラメーター  
+##  <a name="parameters"></a><a name="parameter"></a> パラメーター  
   
 -   **/?** [*option_name*]:(省略可能)。 コマンド プロンプトのオプション、または指定された *option_name* のヘルプを表示して、ユーティリティを終了します。  
   
@@ -482,7 +482,7 @@ dtexec /option [value] [/option [value]]...
   
      このオプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのみに使用されます。 コマンド プロンプトで **dtexec** ユーティリティを実行している場合、このオプションは無視されます。  
   
-##  <a name="remark"></a> 解説  
+##  <a name="remarks"></a><a name="remark"></a> 解説  
  コマンド オプションの指定順序は、パッケージの実行方法に影響します。  
   
 -   オプションは、コマンド ライン上で指定されている順に処理されます。 コマンド ファイルは、コマンド ラインで指定されているとおりに読み取られます。 コマンド ファイル内のコマンドも指定されている順に処理されます。  
@@ -491,7 +491,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/Set** オプションと **/ConfigFile** オプションは、指定されている順に処理されます。  
   
-##  <a name="example"></a> 使用例  
+##  <a name="examples"></a><a name="example"></a> 使用例  
  次の例では、**dtexec** コマンド プロンプト ユーティリティを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを構成および実行する方法について説明します。  
   
  **パッケージの実行**  
