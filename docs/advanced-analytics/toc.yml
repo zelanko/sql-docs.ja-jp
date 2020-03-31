@@ -15,18 +15,16 @@
       href: ../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md
 - name: インストール
   items:
-    - name: SQL Server 2019 での分離の変更
-      href: ../advanced-analytics/install/sql-server-machine-learning-services-2019.md
     - name: Windows での ML Services のインストール
       href: ../advanced-analytics/install/sql-machine-learning-services-windows-install.md
     - name: Linux での ML Services のインストール
       href: ../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/advanced-analytics/toc.json
+    - name: Docker での ML Services のインストール
+      href: ../linux/sql-server-linux-setup-machine-learning-docker.md?toc=/sql/advanced-analytics/toc.json
+    - name: SQL Server 2019 での分離の変更
+      href: ../advanced-analytics/install/sql-server-machine-learning-services-2019.md
     - name: R サービスのインストール
       href: ../advanced-analytics/install/sql-r-services-windows-install.md
-    - name: スタンドアロン サーバーのインストール
-      href: ../advanced-analytics/install/sql-machine-learning-standalone-windows-install.md
-    - name: 事前トレーニング済みモデルのインストール
-      href: ../advanced-analytics/install/sql-pretrained-models-install.md
     - name: オフライン インストール (インターネットなし)
       items:
         - name: インターネットへのアクセスなしでのインストール
@@ -35,6 +33,8 @@
           href: ../advanced-analytics/install/sql-ml-cab-downloads.md
     - name: コマンド プロンプトのセットアップ
       href: ../advanced-analytics/install/sql-ml-component-commandline-install.md
+    - name: 事前トレーニング済みモデルのインストール
+      href: ../advanced-analytics/install/sql-pretrained-models-install.md
     - name: Python と R のアップグレード
       href: ../advanced-analytics/install/upgrade-r-and-python.md
     - name: Azure Data Studio ノートブック
@@ -45,6 +45,8 @@
       href: ../advanced-analytics/r/set-up-a-data-science-client.md
     - name: Azure VM でのインストール
       href: ../advanced-analytics/install/sql-machine-learning-azure-virtual-machine.md
+    - name: スタンドアロン サーバーのインストール
+      href: ../advanced-analytics/install/sql-machine-learning-standalone-windows-install.md
 - name: クイックスタート
   items:
     - name: Python
