@@ -1,7 +1,7 @@
 ---
 title: '[サーバーへの接続] (データベース エンジン)'
 ms.custom: seo-lt-2019
-ms.date: 08/14/2017
+ms.date: 03/27/2020
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -17,12 +17,12 @@ f1_keywords:
 ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c29717713a6b2e41456288f026b46e220be8b229
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9fdaf17118649543fe95ba60c7f6c0148d52d0e5
+ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78261707"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80402545"
 ---
 # <a name="connect-to-server-database-engine"></a>[サーバーへの接続] (データベース エンジン)
 
@@ -30,11 +30,11 @@ ms.locfileid: "78261707"
 このダイアログを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] に接続するときのオプションを表示または指定できます。 ほとんどの場合、 **[サーバー名]** ボックスにデータベース サーバーのコンピューター名を入力し、 **[接続]** をクリックすることで接続できます。 名前付きインスタンスに接続する場合は、コンピューター名の後に円記号、その後にインスタンスの名前を使用します。 たとえば、「 `mycomputer\myinstance` 」のように入力します。 [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]に接続している場合、コンピューター名の後に **\sqlexpress**を付けて使用します。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続する機能に影響する要因は多数あります。 ヘルプのための次のリソースが見つかりません。  
-- [チュートリアル レッスン 1: データベース エンジンへの接続](../../relational-databases/lesson-1-connecting-to-the-database-engine.md)  
+- [チュートリアル レッスン 1:データベース エンジンへの接続](../../relational-databases/lesson-1-connecting-to-the-database-engine.md)  
 - [SQL Server データベース エンジンへの接続のトラブルシューティング](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)  
 - [SQL Server への接続エラーの解決](https://support.microsoft.com/help/4009936/solving-connectivity-errors-to-sql-server)   
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
 **サーバーの種類**  
 オブジェクト エクスプローラーからサーバーを登録するときは、接続するサーバーの種類 ( [!INCLUDE[ssDE](../../includes/ssde_md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、または [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]) を選択します。 ダイアログの残りの部分には、選択したサーバーの種類に該当するオプションだけが表示されます。 [登録済みサーバー] を使用してサーバーを登録する場合、 **[サーバーの種類]** ボックスは読み取り専用になり、[登録済みサーバー] コンポーネントに表示されているサーバーの種類と一致する値が表示されます。 別の種類のサーバーを登録するには、新しいサーバーの登録を開始する前に、[登録済みサーバー] ツール バーの [ [!INCLUDE[ssDE](../../includes/ssde_md.md)]]、[ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]]、[ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]]、[ [!INCLUDE[ssEW](../../includes/ssew-md.md)]]、または [ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ] をクリックします。  
   
@@ -63,7 +63,10 @@ SSMS の現在のバージョンでは、[!INCLUDE[ssDE](../../includes/ssde_md.
 > Azure Active Directory 認証は、Azure Active Directory (Azure AD) の ID を使用して [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] に接続するメカニズムです。  Azure とフェデレーションされていないドメインから資格情報を使用して Windows にログインしている場合、あるいは初期ドメインまたはクライアント ドメインに基づく Azure AD を使用する Azure AD 認証を使用している場合は、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] への接続にこの方法を使用します。 詳細については、[Azure Active Directory 認証を使用した SQL Database への接続](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)に関するページを参照してください。  
 > 
 > **Active Directory - 統合**  
-> Azure Active Directory 認証は、Azure Active Directory (Azure AD) の ID を使用して [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] に接続するメカニズムです。 フェデレーション ドメインから Azure Active Directory の資格情報を使用して Windows にログインしている場合は、この方法を使用して [!INCLUDE[ssSDS](../../includes/sssds-md.md)] に接続します。 詳細については、[Azure Active Directory 認証を使用した SQL Database への接続](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)に関するページを参照してください。  
+> Azure Active Directory 認証は、Azure Active Directory (Azure AD) の ID を使用して [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] に接続するメカニズムです。 フェデレーションされているドメイン、またはパススルーおよびパスワード ハッシュ認証のためのシームレスなシングル サインオン用に構成されたマネージド ドメインからの Azure Active Directory 資格情報を使用して Windows にログインしている場合に、SQL Database、マネージド インスタンス、または Azure Synapse Analytics に接続するには、この方法を使用します。 詳細については、「[Azure Active Directory シームレス シングル サインオン](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso)」と、[Azure Active Directory 認証を使用した SQL Database への接続](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)に関する記事を参照してください。
+>
+  > [!NOTE]
+  > 統合 Windows 認証用の [MSAL.NET (Microsoft.Identity.Client)](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki#roadmap) は、パススルーおよびパスワード ハッシュ認証のためのシームレスなシングル サインオンではサポートされていません。  
   
 **ユーザー名**  
 接続に使用する Windows ユーザー名です。 このオプションは、 **Active Directory パスワード認証**を使用した接続が指定されている場合にのみ使用できます。 **[Windows 認証]** または **[Active Directory - 統合]** 認証を選択した場合は、読み取り専用となります。  
