@@ -1,6 +1,6 @@
 ---
 title: sp_rxPredict |マイクロソフトドキュメント
-ms.date: 03/30/2020
+ms.date: 03/31/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,13 +15,13 @@ helpviewer_keywords:
 - sp_rxPredict procedure
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 752d9655096bc929ea9175577c7705dc58955652
-ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
+monikerRange: '>=sql-server-2016||>= sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 86b9cd8a9327eb8afaf9945ca09629362062011f
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80471836"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517454"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ R と Python の機械学習モデルでほぼリアルタイムでスコアリ�
 
 ## <a name="syntax"></a>構文
 
-```syntaxsql
+```
 sp_rxPredict  ( @model, @input )
 ```
 
@@ -64,7 +64,7 @@ sp_rxPredict  ( @model, @input )
 
 ### <a name="supported-algorithms"></a>サポートされているアルゴリズム
 
-モデルを作成してトレーニングするには[、SQL Server 2016 R サービス](https://docs.microsoft.com/sql/advanced-analytics/r/sql-server-r-services?view=sql-server-2017)[、SQL Server 2016 R Server (スタンドアロン)、SQL Server 2017](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2016)[マシン ラーニング サービス (R または Python)、](../../advanced-analytics/what-is-sql-server-machine-learning.md?view=sql-server-2017)または SQL Server [2017 Server (スタンドアロン) (R または Python) (R または Python)](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2017)で提供される、R または Python でサポートされているアルゴリズムのいずれかを使用します。
+モデルを作成してトレーニングするには[、SQL Server 2 マシン ラーニング サービス (R または Python)](https://docs.microsoft.com/sql/advanced-analytics/what-is-sql-server-machine-learning) [、SQL Server 2016 R サービス、SQL Server](https://docs.microsoft.com/sql/advanced-analytics/r/sql-server-r-services)の[機械学習サーバー (スタンドアロン) (R または Python)](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone)、または[SQL Server 2016 R サーバー (スタンドアロン)](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2016)で提供される、R または Python でサポートされているアルゴリズムのいずれかを使用します。
 
 #### <a name="r-revoscaler-models"></a>R: レボスケールモデル
 
@@ -132,7 +132,7 @@ FROM model_table
 WHERE model_name = 'rxLogit trained';
 
 EXEC sp_rxPredict @model = @model,
-  @inputData = N'SELECT * FROM data';
+@inputData = N'SELECT * FROM data';
 ```
 
 有効な SQL クエリに加えて*\@、inputData*の入力データには、格納されたモデルの列と互換性のある列が含まれている必要があります。
