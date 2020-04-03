@@ -1,5 +1,6 @@
 ---
 title: レポートのプレビュー
+description: 運用環境にパブリッシュする前に SQL Server Reporting Services でレポートをプレビューする方法について説明します。
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
@@ -9,19 +10,19 @@ ms.technology: reports
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 82559832d11d9461665e89963026a267d9f0554c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: fe2d8ff228978270867780e14053c950690f1f22
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68267490"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510133"
 ---
 # <a name="preview-reports-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) でレポートをプレビューする
 
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートをデザインするときに、そのレポートを実稼働環境にパブリッシュする前に表示することができます。 これを行うには、レポート デザイナーでプレビュー モードに切り替えるか、レポート デザイナーのプレビュー ウィンドウを使用するか、テスト環境のレポート サーバーにレポートをパブリッシュします。  
   
 > [!NOTE]  
-> レポートをプレビューすると、レポートのデータがローカル コンピューターのファイルにキャッシュされます。 同じレポートを、同じクエリ、パラメーター、および資格情報を使用して再びプレビューすると、レポート デザイナーはクエリを再実行する代わりにキャッシュされたコピーを表示します。 データ ファイルは *\<reportname>*.rdl.data として、レポート定義ファイルと同じディレクトリに保存されます。 レポート デザイナーを終了してもファイルは削除されません。  
+> レポートをプレビューすると、レポートのデータがローカル コンピューターのファイルにキャッシュされます。 同じレポートを、同じクエリ、パラメーター、および資格情報を使用して再びプレビューすると、レポート デザイナーはクエリを再実行する代わりにキャッシュされたコピーを表示します。 データ ファイルは *\<reportname>* .rdl.data として、レポート定義ファイルと同じディレクトリに保存されます。 レポート デザイナーを終了してもファイルは削除されません。  
   
 ## <a name="preview-mode"></a>プレビュー モード
 

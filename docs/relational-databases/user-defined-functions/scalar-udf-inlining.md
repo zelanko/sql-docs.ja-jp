@@ -1,8 +1,8 @@
 ---
-title: Microsoft SQL データベースでのスカラー UDF のインライン化 | Microsoft Docs
-description: SQL Server (SQL Server 2019 以降) および Azure SQL Database 内でスカラー UDF を呼び出すスカラー UDF インライン化機能を使用すると、クエリのパフォーマンスが向上します。
+title: Microsoft SQL Server でのスカラー UDF のインライン化 | Microsoft Docs
+description: SQL Server (SQL Server 2019 以降) 内でスカラー UDF を呼び出すスカラー UDF インライン化機能を使用すると、クエリのパフォーマンスが向上します。
 ms.custom: ''
-ms.date: 01/09/2020
+ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,18 +15,18 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: fa881a12ad04c5613aced89771ebc31e1cdaa5a2
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 79608c96e56a7f70d10aaa4b897db837bdf03acc
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79287406"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79486550"
 ---
 # <a name="scalar-udf-inlining"></a>スカラー UDF のインライン化
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-この記事では、[インテリジェントなクエリ処理](../../relational-databases/performance/intelligent-query-processing.md)機能スイートに含まれる機能であるスカラー UDF のインライン化について説明します。 この機能により、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)] 以降) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] でスカラー UDF を呼び出すクエリのパフォーマンスが向上します。
+この記事では、[インテリジェントなクエリ処理](../../relational-databases/performance/intelligent-query-processing.md)機能スイートに含まれる機能であるスカラー UDF のインライン化について説明します。 この機能により、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)] 以降) でスカラー UDF を呼び出すクエリのパフォーマンスが向上します。
 
 ## <a name="t-sql-scalar-user-defined-functions"></a>T-SQL スカラー ユーザー定義関数
 [!INCLUDE[tsql](../../includes/tsql-md.md)] で実装されていて単一のデータ値を返すユーザー定義関数は、T-SQL スカラー ユーザー定義関数と呼ばれます。 T-SQL の UDF は、[!INCLUDE[tsql](../../includes/tsql-md.md)] クエリ間でコードの再利用とモジュール性を実現するための洗練された方法です。 一部の計算 (複雑なビジネス ルールなど) は、命令型の UDF 形式で表した方が簡単です。 UDF は、複雑な SQL クエリの作成に関する専門知識を必要とせずに、複雑なロジックを構築するのに役立ちます。

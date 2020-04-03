@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 ms.reviewer: vanto
-ms.openlocfilehash: e37237224dd9e8a6b44b913914c43d29cbc25d21
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 497791ba9eb066621a468ec954a0d3bc27d2cfcb
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "69028724"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216622"
 ---
 # <a name="manage-sql-server-on-linux-with-powershell-core"></a>PowerShell Core で SQL Server on Linux を管理する
 
@@ -198,7 +198,7 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 ```
 
 ## <a name="explore-cmdlets-currently-available-in-ps-core"></a>PS Core で現在利用できるコマンドレットを試す
-SqlServer モジュールには現在、Windows PowerShell で利用できるコマンドレットが 109 個用意されていますが、109 個のうちの 62 個だけが PSCore で利用できます。 現在利用できる 59 個のコマンドレットの完全な一覧は以下のようになります。  SqlServer モジュールの全コマンドレットを詳しく記録したものが必要な場合、SqlServer [コマンドレット リファレンス](https://docs.microsoft.com/powershell/module/sqlserver/)を参照してください。
+SqlServer モジュールには現在、Windows PowerShell で利用できるコマンドレットが 109 個用意されていますが、109 個のうちの 62 個だけが PSCore で利用できます。 現在利用できる 62 個のコマンドレットの完全なリストは、以下に含まれています。  SqlServer モジュールの全コマンドレットを詳しく記録したものが必要な場合、SqlServer [コマンドレット リファレンス](https://docs.microsoft.com/powershell/module/sqlserver/)を参照してください。
 
 次のコマンドでは、お使いのバージョンの PowerShell で利用できるすべてのコマンドレットが表示されます。
 
@@ -271,5 +271,5 @@ SELECT Name
 - Read-SqlXEvent
 - Convert-UrnToPath
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 - [SQL Server PowerShell](../relational-databases/scripting/sql-server-powershell.md)

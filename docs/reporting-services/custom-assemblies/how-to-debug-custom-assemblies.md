@@ -1,5 +1,6 @@
 ---
 title: 方法:カスタム アセンブリをデバッグする | Microsoft Docs
+description: カスタム アセンブリ コードを分析してエラーを探すのに役立つ Microsoft .NET Framework デバッグ ツールを使用する方法について説明します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3a3215b3-548c-4474-81ba-3a98dd3912bf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1ec4fb2f9d38997c7000e576a36fa8c6c1407e45
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 17162c5cb862c496c70459818497e66d1342923a
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63194305"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80217076"
 ---
 # <a name="how-to-debug-custom-assemblies"></a>方法:カスタム アセンブリをデバッグする
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] には、ご自分のカスタム アセンブリ コードを分析してエラーを探すのに役立ついくつかのデバッグ ツールが用意されています。 どのツールが最適であるかは、何を実行するかによって異なります。 この例では、[!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] を使用します。  

@@ -1,6 +1,6 @@
 ---
 title: Linux でのデータベースのエクスポートとインポート
-description: ''
+description: この記事では、SQL Server Management Studio と SqlPackage.exe を使用して SQL Server on Linux 上でデータベースをエクスポートおよびインポートする方法について説明します。
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/02/2017
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
-ms.openlocfilehash: f99ff799ec91ea455cc37bd994c8555330a8ff0f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 8602f17b88400f7b0dbac6b4015dbfaf6f85fd65
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68105550"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216649"
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>Windows 上で SSMS または SqlPackage.exe を使用して Linux 上でデータベースをエクスポートおよびインポートする
 
@@ -62,7 +62,7 @@ ms.locfileid: "68105550"
 
 *.BACPAC ファイルがインポートされ、指定したターゲット サーバーに新しいデータベースが作成されます。
 
-## <a id="sqlpackage"></a> SqlPackage のコマンドライン オプション
+## <a name="sqlpackage-command-line-option"></a><a id="sqlpackage"></a> SqlPackage のコマンドライン オプション
 
 また、SQL Server Data Tools (SSDT) コマンドライン ツールである [SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx) を使用して、BACPAC ファイルをエクスポートおよびインポートすることもできます。
 
@@ -79,5 +79,5 @@ SqlPackage.exe /a:Import /tsn:tcp:<your_server> /tdn:<your_database> /tu:<userna
 
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 SSMS の使用方法の詳細については、[SQL Server Management Studio の使用](https://msdn.microsoft.com/library/ms174173.aspx)に関するページを参照してください。 SqlPackage.exe の詳細については、[SqlPackage のリファレンス ドキュメント](https://msdn.microsoft.com/library/hh550080.aspx)を参照してください。

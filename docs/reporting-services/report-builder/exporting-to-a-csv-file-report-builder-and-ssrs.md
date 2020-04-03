@@ -1,5 +1,6 @@
 ---
 title: CSV ファイルへのエクスポート (レポート ビルダー) | Microsoft Docs
+description: レポートビルダーの CSV 表示拡張機能では、ページ分割されたレポートを、さまざまなアプリケーションで読むことが可能で、互換性のあるプレーンテキスト形式として表示します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0b53c40aeb36b2db7586fe135daa05aff17e54e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1104054faef55ca3b3b661ea210c279c9aa55841
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77078368"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342888"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>CSV ファイルへのエクスポート (レポート ビルダーおよび SSRS)
   CSV (コンマ区切り値) 表示拡張機能では、レポートのデータを平面的に表して、標準化されたプレーンテキスト形式でページ分割されたレポートを表示します。プレーンテキスト形式のレポートは、多くのアプリケーションで簡単に読み取ったり変換したりすることができます。  
@@ -27,7 +28,7 @@ ms.locfileid: "77078368"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="CSVRendering"></a> CSV の表示  
+##  <a name="csv-rendering"></a><a name="CSVRendering"></a> CSV の表示  
  既定の設定を使用して表示された場合、CSV 形式のレポートは次のような特徴のレポートになります。  
   
 -   既定のフィールド区切り記号は、コンマ (,) です。  
@@ -95,7 +96,7 @@ ms.locfileid: "77078368"
  詳細については、「 [テーブル、マトリックス、および一覧 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)」を参照してください。  
   
   
-##  <a name="RenderingModes"></a> 表示モード  
+##  <a name="renderer-modes"></a><a name="RenderingModes"></a> 表示モード  
  CSV 表示拡張機能は 2 つのモードで操作できます。1 つは Excel に最適なモード、もう 1 つは、RFC 4180 の CSV 仕様に厳密に準拠することが要求されるサードパーティのアプリケーションに最適なモードです。 使用するモードによって、ピア データ領域の処理は異なります。  
   
 ### <a name="default-mode"></a>既定モード  
@@ -119,7 +120,7 @@ ms.locfileid: "77078368"
 #### <a name="formatting"></a>書式設定  
  値の書式は設定されていません。  
   
-##  <a name="Interactivity"></a> 対話性  
+##  <a name="interactivity"></a><a name="Interactivity"></a> 対話性  
  このレンダラーによって生成されたどちらの CSV 形式でも、対話性はサポートされていません。 次の対話型要素は表示されません。  
   
 -   ハイパーリンク  
@@ -137,7 +138,7 @@ ms.locfileid: "77078368"
 -   ブックマーク  
   
   
-##  <a name="DeviceInfo"></a> デバイス情報設定  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a> デバイス情報設定  
  このレンダラーでは、デバイス情報設定を変更することで既定の設定の一部を変更できます。たとえば、表示モード、区切り記号として使用する文字、テキスト修飾子の既定の文字として使用する文字などを変更できます。 詳細については、「 [CSV Device Information Settings](../../reporting-services/csv-device-information-settings.md)」を参照してください。  
   
   

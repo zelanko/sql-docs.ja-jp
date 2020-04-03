@@ -1,21 +1,20 @@
 ---
-title: ダウンロードしてインストールする
-titleSuffix: Azure Data Studio
+title: Azure Data Studio のダウンロードとインストール
 description: Windows、macOS、または Linux 用の Azure Data Studio をダウンロードしてインストールします
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: yualan
+ms.author: alayu
 ms.custom: seodec18
-ms.date: 2/19/2020
-ms.reviewer: alayu; sstein
-ms.openlocfilehash: 028dcffc4e5d6522edf512ddd894dfbd3affc214
-ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
+ms.date: 3/18/2020
+ms.reviewer: maghan, sstein
+ms.openlocfilehash: 30b3e23ef7fb4f9266e2ca3498f29ce79904a484
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77507496"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216461"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Azure Data Studio のダウンロードとインストール
 
@@ -28,9 +27,9 @@ ms.locfileid: "77507496"
 
 |プラットフォーム|ダウンロード|リリース日| Version |
 |:---|:---|:---|:---|
-|Windows|[ユーザー インストーラー (推奨)](https://go.microsoft.com/fwlink/?linkid=2116782)<br>[システム インストーラー](https://go.microsoft.com/fwlink/?linkid=2116781)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2116691)|2020 年 2 月 19 日|1.15.1|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2116692)|2020 年 2 月 19 日|1.15.1|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2116780)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2116779)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2116783)|2020 年 2 月 19 日|1.15.1|
+|Windows|[ユーザー インストーラー (推奨)](https://go.microsoft.com/fwlink/?linkid=2121609)<br>[システム インストーラー](https://go.microsoft.com/fwlink/?linkid=2121612)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2121511)|2020 年 3 月 18 日|1.16.0|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2121611)|2020 年 3 月 18 日|1.16.0|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2121610)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2121613)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2121510)|2020 年 3 月 18 日|1.16.0|
 
 最新リリースに関する詳細については、[リリース ノート](release-notes.md)をご覧ください。
 
@@ -42,32 +41,32 @@ ms.locfileid: "77507496"
 
 **ユーザー インストーラー** (推奨)
 
-1. [Windows 用の [!INCLUDE[name-sos](../includes/name-sos-short.md)] *ユーザー* インストーラー](https://go.microsoft.com/fwlink/?linkid=2116782)をダウンロードして実行します。
+1. [Windows 用の [!INCLUDE[name-sos](../includes/name-sos-short.md)] *ユーザー* インストーラー](https://go.microsoft.com/fwlink/?linkid=2121609)をダウンロードして実行します。
 2. [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] アプリを起動します。
 
 **システム インストーラー**
 
-1. [Windows 用の [!INCLUDE[name-sos](../includes/name-sos-short.md)] *システム* インストーラー](https://go.microsoft.com/fwlink/?linkid=2116781)をダウンロードして実行します。
+1. [Windows 用の [!INCLUDE[name-sos](../includes/name-sos-short.md)] *システム* インストーラー](https://go.microsoft.com/fwlink/?linkid=2121612)をダウンロードして実行します。
 2. [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] アプリを起動します。
 
 **zip ファイル**
 
-1. [[!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip for Windows](https://go.microsoft.com/fwlink/?linkid=2116691) をダウンロードします。
+1. [[!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip for Windows](https://go.microsoft.com/fwlink/?linkid=2121511) をダウンロードします。
 2. ダウンロードしたファイルを参照して抽出します。
 3. `\azuredatastudio-windows\azuredatastudio.exe` を実行します。
 
 ## <a name="get-azure-data-studio-for-macos"></a>Azure Data Studio for macOS を取得する
 
-1. [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=2116692) をダウンロードします。
+1. [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=2121611) をダウンロードします。
 2. zip のコンテンツを展開するには、ダブルクリックします。
 3. [!INCLUDE[name-sos](../includes/name-sos-short.md)] を*スタート パッド*で使用できるようにするには、*Azure Data Studio.app* を *[アプリケーション]* フォルダーにドラッグします。
 
 ## <a name="get-azure-data-studio-for-linux"></a>Linux 用の Azure Data Studio を取得する
 
 1. インストーラーのいずれか、または tar.gz アーカイブを使用することで、Linux 用の [!INCLUDE[name-sos](../includes/name-sos-short.md)] をダウンロードします。
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=2116780)
-    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2116779)
-    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2116783)
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=2121610)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2121613)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2121510)
 1. ファイルを抽出して [!INCLUDE[name-sos](../includes/name-sos-short.md)] を起動するには、新しいターミナル ウィンドウを開いて次のコマンドを入力します。
 
    **Debian のインストール:**
@@ -91,13 +90,13 @@ ms.locfileid: "77507496"
    **tar.gz のインストール:**
 
    ```bash
-   cd ~ 
+   cd ~
    cp ~/Downloads/azuredatastudio-linux-<version string>.tar.gz ~ 
    tar -xvf ~/azuredatastudio-linux-<version string>.tar.gz 
    echo 'export PATH="$PATH:~/azuredatastudio-linux-x64"' >> ~/.bashrc
-   source ~/.bashrc 
-   azuredatastudio 
-   ``` 
+   source ~/.bashrc
+   azuredatastudio
+   ```
 
    > [!NOTE]
    > Debian、Redhat、および Ubuntu では、依存関係が不足する場合があります。 ご自身の Linux のバージョンに応じて、次のコマンドを使ってこれらの依存関係をインストールします。
@@ -107,12 +106,12 @@ ms.locfileid: "77507496"
    sudo apt-get install libunwind8
    ```
 
-   **Redhat:** 
+   **Redhat:**
    ```bash
    yum install libXScrnSaver
    ```
 
-   **Ubuntu:** 
+   **Ubuntu:**
    ```bash
    sudo apt-get install libxss1
 
@@ -175,7 +174,7 @@ Windows インストーラーを使用して [!INCLUDE[name-sos-short](../includ
 
 ## <a name="supported-sql-offerings"></a>サポートされる SQL 製品
 
-* このバージョンの Azure Data Studio は、すべての[サポート対象バージョンである SQL Server 2014 から [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) で動作し、Azure SQL Database および Azure SQL Data Warehouse で最新のクラウド機能と連携するためのサポートが提供されます。 Azure Data Studio では、Azure SQL Managed Instance のプレビューもサポートされています。
+- このバージョンの Azure Data Studio は、すべての[サポート対象バージョンである SQL Server 2014 から [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) で動作し、Azure SQL Database および Azure SQL Data Warehouse で最新のクラウド機能と連携するためのサポートが提供されます。 Azure Data Studio では、Azure SQL Managed Instance のプレビューもサポートされています。
 
 ## <a name="upgrade-from-sql-operations-studio"></a>SQL Operations Studio からのアップグレード
 

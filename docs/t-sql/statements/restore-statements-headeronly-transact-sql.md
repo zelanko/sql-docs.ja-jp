@@ -23,12 +23,12 @@ ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 4ff8da4a1076d8ade4d54e5d44c51d3263480c1c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 7b1c32e3e569b8c29dd75df1fafb98bb7c0c979f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73983030"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79486582"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>RESTORE Statements - HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -97,7 +97,7 @@ FROM <backup_device>
 |**BackupDescription**|**nvarchar (255)**|バックアップ セットの説明。|  
 |**BackupType**|**smallint**|バックアップの種類:<br /><br /> **1** = データベース<br /><br /> **2** = トランザクション ログ<br /><br /> **4** = ファイル<br /><br /> **5** = データベースの差分<br /><br /> **6** = ファイルの差分<br /><br /> **7** = 部分的<br /><br /> **8** = 部分的な差分|  
 |**ExpirationDate**|**datetime**|バックアップ セットの失効日。|  
-|**Compressed**|**BYTE(1)**|ソフトウェア ベースの圧縮によりバックアップ セットが圧縮されているかどうか:<br /><br /> **0** = いいえ<br /><br /> **1** = はい|  
+|**Compressed**|**BIT(1)**|ソフトウェア ベースの圧縮によりバックアップ セットが圧縮されているかどうか:<br /><br /> **0** = いいえ<br /><br /> **1** = はい|  
 |**Position**|**smallint**|ボリューム内でのバックアップ セットの位置 (FILE = のオプションで使用)。|  
 |**DeviceType**|**tinyint**|バックアップ操作で使用するデバイスに対応する値。<br /><br /> ディスク:<br /><br /> **2** = 論理<br /><br /> **102** = 物理<br /><br /> テープ:<br /><br /> **5** = 論理<br /><br /> **105** = 物理<br /><br /> 仮想デバイス:<br /><br /> **7** = 論理<br /><br /> **107** = 物理<br /><br /> 論理デバイス名とデバイス番号は **sys.backup_devices** です。詳細については、「[sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)」を参照してください。|  
 |**UserName**|**nvarchar(128)**|バックアップ操作を実行したユーザーの名前。|  

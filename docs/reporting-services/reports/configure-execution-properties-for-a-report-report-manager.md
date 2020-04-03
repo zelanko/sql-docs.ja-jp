@@ -1,5 +1,6 @@
 ---
 title: レポートの実行プロパティを構成する - Reporting Services | Microsoft Docs
+description: レポートが要求されるたびに同じデータを取得するオーバーヘッドを回避するために、レポート処理オプションを設定してレポート データを取得するタイミングを指定する方法について説明します。
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 73cc8dcc-ef80-40d7-9739-d33bba0eb28a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6dfb24b6314529b19fb7bb5edb81534f30dc018a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5f30c3e123c80b9a16fd020e3126a3c40f366834
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67492750"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510173"
 ---
 # <a name="configure-execution-properties-for-a-report"></a>レポートの実行プロパティを構成する
   レポートの処理オプションでは、レポート データが取得されるタイミングを指定できます。 レポート データ処理のスケジュールを設定することは、外部データ ソースが特定の時刻に更新される場合 (日次または週次で更新されるデータ ウェアハウスなど) や、レポート要求のたびに同じデータが取得されるオーバーヘッドを回避したい場合などに効果的です。 また、外部のデータベース サーバーにかかる処理負荷を制御する場合や、まったく同じ一連のデータを扱う複数のユーザーに一貫性した結果を提供する場合に役立てることもできます。 変化しやすいデータを使用した場合、レポートを要求するたびに異なる結果が生成される可能性があります。 一方、レポート スナップショットでは、同時点のデータを含む他のレポートや分析ツールとの有効な比較が可能になります。  
@@ -77,7 +78,7 @@ ms.locfileid: "67492750"
    >[!NOTE]
    >スナップショットをすぐに作成する場合、 **[Schedules and settings]\(スケジュールと設定\)** ボタンではなく **[新しい履歴スナップショット]** ボタンを選択します。レポート スナップショットが直後に作成されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポート処理プロパティの設定](../../reporting-services/report-server/set-report-processing-properties.md)   
  [レポート サーバー コンテンツの管理 (SSRS ネイティブ モード)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [レポート処理プロパティの設定](../../reporting-services/report-server/set-report-processing-properties.md)   

@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 02/05/2018
 ms.author: mikeray
 ms.custom: include file
-ms.openlocfilehash: 6b00c445f75c4cdc36e34d471b01d4fa56f81f9e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 90c7c7863228ce210e56e76ab3e12c77e7ccc902
+ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/30/2020
-ms.locfileid: "70963581"
+ms.locfileid: "80408061"
 ---
 各可用性グループにはプライマリ レプリカが 1 つだけあります。 プライマリ レプリカは読み書きができます。 プライマリになっているレプリカの変更は、フェールオーバーで行うことができます。 高可用性の可用性グループでは、クラスター マネージャーによってフェールオーバー プロセスが自動化されます。 クラスターの種類が NONE の可用性グループでは、フェールオーバー プロセスは手動です。 
 
@@ -68,7 +68,7 @@ ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
 
 3. `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` を 1 に更新します。
 
-   次の例のスクリプトは、`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` という名前の可用性グループで `ag1` を 1 に設定します。 次のスクリプトを実行する前に、`ag1` を実際の可用性グループの名前に置き換えます。
+   次の例のスクリプトは、`ag1` という名前の可用性グループで `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` を 1 に設定します。 次のスクリプトを実行する前に、`ag1` を実際の可用性グループの名前に置き換えます。
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
@@ -76,19 +76,26 @@ ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
    ```
 
    この設定により、すべてのアクティブなトランザクションが、プライマリ レプリカと少なくとも 1 つの同期セカンダリ レプリカにコミットされます。 
-
-4. プライマリ レプリカをセカンダリ レプリカに降格させます。 降格された後のプライマリ レプリカは読み取り専用になります。 ロールを `SECONDARY` に更新するには、プライマリ レプリカをホストしている SQL Server インスタンスで次のコマンドを実行します。
-
+   >[!NOTE]
+   >この設定は、フェールオーバーに固有のものではなく、環境の要件に基づいて設定する必要があります。
+   
+4. ロールの変更に備えて、プライマリ レプリカをオフラインにします。
    ```SQL
-   ALTER AVAILABILITY GROUP [ag1] 
-        SET (ROLE = SECONDARY); 
+   ALTER AVAILABILITY GROUP [ag1] OFFLINE
    ```
 
 5. ターゲット セカンダリ レプリカをプライマリに昇格させます。 
 
    ```SQL
    ALTER AVAILABILITY GROUP ag1 FORCE_FAILOVER_ALLOW_DATA_LOSS; 
-   ```  
+   ``` 
+
+6. 以前のプライマリのロールを `SECONDARY` に更新し、プライマリ レプリカをホストする SQL Server インスタンスで次のコマンドを実行します。
+
+   ```SQL
+   ALTER AVAILABILITY GROUP [ag1] 
+        SET (ROLE = SECONDARY); 
+   ```
 
    > [!NOTE] 
    > 可用性グループを削除するには、[DROP AVAILABILITY GROUP](https://docs.microsoft.com/sql/t-sql/statements/drop-availability-group-transact-sql) を使います。 種類が NONE または EXTERNAL のクラスターを使って作成された可用性グループでは、可用性グループに含まれるすべてのレプリカでコマンドを実行する必要があります。

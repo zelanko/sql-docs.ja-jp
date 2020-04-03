@@ -1,5 +1,6 @@
 ---
 title: PolyBase Transact-SQL リファレンス | Microsoft Docs
+description: PolyBase を使用するには、Hadoop、Azure blob storage、Azure Data Lake Store、SQL Server、Oracle、Teradata、MongoDB で外部データ用の外部テーブルを作成します。
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: polybase
@@ -12,12 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: e1e07db85220c9312ab71bb5fb020b9a9d611a5f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 7773d7a294e24e4aa191e6422e72097f2dc28743
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71710524"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215782"
 ---
 # <a name="polybase-transact-sql-reference"></a>PolyBase Transact-SQL リファレンス
 

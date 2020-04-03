@@ -1,5 +1,6 @@
 ---
 title: カスタム レポート アイテムのクラス ライブラリ | Microsoft Docs
+description: カスタム レポート アイテムのクラス ライブラリについて説明し、コード サンプルを利用してクラスの利用方法について理解します。
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f18c5d8f-1d6b-4f0b-8657-c14896c2ce0d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7ed0bd3c53550a21f4a157ee637e7d153d8f2922
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f30b581c67eb161bd0d221b9a4aa341d90ab7148
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63194102"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216948"
 ---
 # <a name="custom-report-item-class-libraries"></a>カスタム レポート アイテムのクラス ライブラリ
   カスタム レポート アイテムは、**Microsoft.ReportDesigner** 名前空間のクラスを使用します。 カスタム レポート アイテムを実装する際に使用するクラスは、2 つの主なカテゴリに分類できます。1 つは、カスタム レポート アイテム インフラストラクチャをサポートするためにデザインされた独自のクラス、もう 1 つは、関連するレポート定義言語 (RDL) 要素の機能をカプセル化するマネージド ラッパー クラスです。 これらのクラスの使用方法のコード サンプルについては、「[SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)」 (SQL Server Reporting Services の製品サンプル) を参照してください。  
@@ -61,7 +62,7 @@ ms.locfileid: "63194102"
 |**OnPaint**|**Paint** イベントに応答して呼び出されます。|  
   
 ### <a name="microsoftreportdesignercustomreportitemattribute"></a>Microsoft.ReportDesigner.CustomReportItemAttribute  
- この属性は、カスタム レポート アイテムの種類を識別するために使用されます。 この名前は、レポート デザイナー構成ファイルの \<ReportItem**要素の** **名前**> 属性の値と一致している必要があります。  
+ この属性は、カスタム レポート アイテムの種類を識別するために使用されます。 この名前は、レポート デザイナー構成ファイルの **ReportItem** 要素の \<**名前**> 属性の値と一致している必要があります。  
   
 #### <a name="public-methods"></a>パブリック メソッド  
   

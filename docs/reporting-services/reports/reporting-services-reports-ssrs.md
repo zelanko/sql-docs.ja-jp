@@ -1,5 +1,6 @@
 ---
 title: Reporting Services レポート | Microsoft Docs
+description: レポートの利点、改ページ調整されたレポートの作成方法、レポートの表示方法など、Reporting Services レポートの詳細について説明します。
 ms.date: 06/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4d178d69c68d2466fcec808b0cabdd180368f23a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9eb81b3b3274afa8a53a217ea1139a8a904979ef
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77082431"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510063"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Reporting Services レポート (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートは、レポート データ要素とレポート レイアウト要素を含む XML ベースのレポート定義です。 クライアント ファイル システムでは、レポート定義に .rdl というファイル拡張子が付きます。 改ページ調整されたレポートをパブリッシュすると、そのレポートによって、レポート サーバーまたは SharePoint サイトに格納されたレポート アイテムが使用されます。 改ページ調整されたレポートは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]によって提供されるサーバー ベースのレポート プラットフォームの一部です。 また、 [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)操作も可能です。  
@@ -45,7 +46,7 @@ ms.locfileid: "77082431"
   
     ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
-##  <a name="bkmk_StagesSummary"></a> レポート処理の段階  
+##  <a name="stages-of-report-processing"></a><a name="bkmk_StagesSummary"></a> レポート処理の段階  
  レポートを作成するときは、XML 形式でレポート定義ファイル (.rdl) を定義します。 このファイルには、レポート プロセッサでレポート データとレポート レイアウトを組み合わせるために必要なすべての情報が含まれます。 レポートを表示すると、次の段階に従ってレポートが処理されます。  
   
 -   **コンパイル。** レポート定義の式を評価し、コンパイルされた中間形式をレポート サーバーの内部に格納します。  
@@ -155,7 +156,7 @@ ms.locfileid: "77082431"
   
  パフォーマンスの詳細については、「[Performance, Snapshots, Caching (Reporting Services)](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)」(パフォーマンス、スナップショット、キャッシュ (Reporting Services)) を参照してください。  
   
-##  <a name="bkmk_SecureReportsSummary"></a> レポートのセキュリティ保護  
+##  <a name="secure-reports"></a><a name="bkmk_SecureReportsSummary"></a> レポートのセキュリティ保護  
  レポートのセキュリティを保護するには:  
   
 レポート サーバー管理者は、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のインストールに使用されている承認および認証のシステムを確認します。 既定では、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は Windows 認証、統合セキュリティ、およびロールの割り当てを使用してパブリッシュされたレポートへのアクセスを制御しています。 詳細については、「[ロールとアクセス許可 (Reporting Services)](../../reporting-services/security/roles-and-permissions-reporting-services.md)」と「[Reporting Services のセキュリティと保護](../../reporting-services/security/reporting-services-security-and-protection.md)」を参照してください。  

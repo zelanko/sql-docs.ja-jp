@@ -1,5 +1,6 @@
 ---
 title: 拡張イベントからのターゲット データの詳細表示
+description: SQL Server Management Studio の高度な機能を使用して、拡張イベントからのターゲット データを詳細にわたって表示します。 データの表示、エクスポート、および操作を行うことができます。
 ms.date: 05/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f5bf55c020e773e8d724a3c84bcee4dd78307a4f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 298cebbde96d9de3eadcb6c11ae59b43f2e973d5
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75255762"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434039"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>SQL Server での拡張イベントからのターゲット データの詳細表示
 
@@ -318,7 +319,7 @@ SSMS 表示フィルターは、次のとおりです。
 
 ![あるノードのプロパティの一覧が表示されているクエリ プラン](../../relational-databases/extended-events/media/xevents-ssms-ui60-showplangraph.png)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [XELite: XEL ファイルまたはライブ SQL ストリームから XEvents を読み取るためのクロスプラットフォーム ライブラリ](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/)、2019 年 5 月リリース。
 

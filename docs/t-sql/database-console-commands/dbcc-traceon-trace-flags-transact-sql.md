@@ -1,7 +1,7 @@
 ---
 title: トレース フラグ (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/11/2020
+ms.date: 03/27/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: e19d4af33285f68033dbcead3f7bc275b2e029cb
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 3296dad876dc0f3ce95a29dc1b9f21f38db7b0a5
+ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288636"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80402592"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - トレース フラグ (Transact-SQL)
 
@@ -184,10 +184,11 @@ ms.locfileid: "79288636"
 |**9939**|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] での DML 操作のターゲットになっていない場合、メモリ最適化テーブルまたはテーブル変数を参照する DML 操作で、メモリ最適化テーブルおよびテーブル変数の並列プランと並列スキャンを有効にします。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/4013877)をご覧ください。<br /><br />**注:** トレース フラグ 4199 が明示的に有効になっている場合、トレース フラグ 9939 は必要ありません。<br /><br />**スコープ**: グローバル、セッション、クエリ (QUERYTRACEON)|   
 |**10204**|列ストア インデックスの再編成中に、マージ/再圧縮を無効にします。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] では、列ストア インデックスを再編成するときに、圧縮された小さい行グループを圧縮された大きい行グループに自動的にマージし、多数の行が削除されている行グループを圧縮する、新しい機能があります。<br /><br />**注:** トレース フラグ 10204 は、メモリ最適化テーブル上に作成された列ストア インデックスには適用されません。<br /><br />**スコープ**: グローバル、セッション|   
 |**10316**|既定のものに加えて、[内部メモリ最適化ステージング テンポラル テーブル](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)に追加のインデックスを作成できるようにします。 既定のインデックスで対応されていない列を含む特定のクエリ パターンがある場合は、新しいインデックスの追加を検討できます。<br /><br />**注:** メモリ最適化テーブルのシステムでバージョン管理されたテンポラル テーブルは、高いトランザクション スループットを提供するように設計されています。 追加のインデックスを作成すると、現在のテーブルの行を更新または削除する DML 操作にオーバーヘッドが発生する可能性があることに注意してください。 インデックスを追加するときは、テンポラル クエリのパフォーマンスと DML オーバーヘッドの増加の間の適切なバランスを見つける必要があります。<br /><br />**スコープ**: グローバル、セッション|
-|**11023**|[UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) ステートメントの一部としてサンプル レートが明示的に指定されていない場合、後続のすべての統計更新に対して、最後の永続化されたサンプル レートの使用を無効にします。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/4039284)をご覧ください。<br /><br />**スコープ**: グローバル、セッション|    
-|**11024**|任意のパーティションの変更数がローカルな[しきい値](../../relational-databases/statistics/statistics.md#AutoUpdateStats)を超えた場合の統計の自動更新のトリガーを有効にします。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/4041811)をご覧ください。<br /><br />**注:** このトレース フラグは [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 以降のビルドに適用されます。<br /><br />**スコープ**: グローバル、セッション| 
-|**11047**|`query wait (s)` または Resource Governor `REQUEST_MEMORY_GRANT_TIMEOUT_SEC` 構成によって設定された既定のタイムアウトが、列ストア インデックスの構築操作に適用されます。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/4480641)をご覧ください。<br /><br />**注:** このトレース フラグは、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU5、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU14 以降のビルドに適用されます。<br /><br />**スコープ**: グローバル、セッション|  
-
+|**11023**|[UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) ステートメントの一部としてサンプル レートが明示的に指定されていない場合、後続のすべての統計更新に対して、最後の永続化されたサンプル レートの使用を無効にします。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/4039284)をご覧ください。<br /><br />**スコープ**: グローバルのみ|    
+|**11024**|任意のパーティションの変更数がローカルな[しきい値](../../relational-databases/statistics/statistics.md#AutoUpdateStats)を超えた場合の統計の自動更新のトリガーを有効にします。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/4041811)をご覧ください。<br /><br />**注:** このトレース フラグは [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 以降のビルドに適用されます。<br /><br />**スコープ**: グローバルのみ| 
+|**11047**|`query wait (s)` または Resource Governor `REQUEST_MEMORY_GRANT_TIMEOUT_SEC` 構成によって設定された既定のタイムアウトが、列ストア インデックスの構築操作に適用されます。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/4480641)をご覧ください。<br /><br />**注:** このトレース フラグは、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU5、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU14 以降のビルドに適用されます。<br /><br />**スコープ**: グローバルのみ| 
+|**11064**|`SELECT` と `INSERT` ステートメント間のメモリ配分を最適化することにより、列ストア インデックスへのデータ読み込み操作のスケーラビリティが向上します。 列ストア インデックスへのデータの読み込みの詳細については、「[列ストア インデックス - データ読み込みガイダンス](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)」を参照してください。<br /><br />**注:** このトレース フラグは、[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降のビルドに適用されます。<br /><br />**スコープ**: グローバルのみ| 
+|**11068**|列ストア インデックスの挿入操作に対して、構成された並列処理の最大限度 (MAXDOP) 値を使用します。 並列処理の度合いのオーバーライドについて詳しくは、「[クエリ処理アーキテクチャ ガイド](../../relational-databases/query-processing-architecture-guide.md#overriding-degrees-of-parallelism)」を参照してください。<br /><br />**重要:** このトレース フラグは、トレース フラグ 11064 も有効になっている場合にのみ有効です。<br /><br />**重要:** このトレース フラグは、[列ストア セグメント](../../relational-databases/indexes/columnstore-indexes-overview.md#column-segment)の質の維持よりも高速なデータ読み込みが優先される場合に使用します。 たとえば、挿入操作が並列モードで実行される場合、列ストアに 1,048,577 行を読み込むときにこのトレース フラグを使用すると、複数の圧縮された行グループが生成される可能性があります。 このトレース フラグがない場合、挿入操作では 1 つの圧縮された行グループが生成されます。<br /><br />**注:** このトレース フラグは、[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降のビルドに適用されます。<br /><br />**スコープ**: グローバルのみ| 
   
 ## <a name="examples"></a>例  
  次の例では、DBCC TRACEON を使うことによって、サーバー レベルですべてのセッションにトレース フラグ 3205 を設定します。  

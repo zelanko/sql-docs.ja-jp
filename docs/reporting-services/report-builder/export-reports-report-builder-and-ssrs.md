@@ -1,5 +1,6 @@
 ---
 title: レポートのエクスポート (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダー、レポート デザイナー、またはレポート サーバーを使用して、Reporting Services レポートを PowerPoint や PDF などの別のファイル形式にエクスポートできます。
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-builder
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a213d0decf0b2765dca07faec69135ddd3e44d99
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a97450563aa62e7b8179b7c5a0d2bead5f156f1b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77078488"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342924"
 ---
 # <a name="export-reports-report-builder-and-ssrs"></a>レポートのエクスポート (レポート ビルダーおよび SSRS)
 
@@ -37,7 +38,7 @@ ms.locfileid: "77078488"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
 
-## <a name="bkmk_export_from_rb"></a> レポートをレポート ビルダーからエクスポートするには
+## <a name="to-export-a-report-from-report-builder"></a><a name="bkmk_export_from_rb"></a> レポートをレポート ビルダーからエクスポートするには
 
 1.  レポートを実行するか、プレビューします。  
   
@@ -49,7 +50,7 @@ ms.locfileid: "77078488"
   
      **[名前を付けて保存]** ダイアログが表示されます。 既定では、ファイル名はエクスポートしたレポートの名前になります。 必要に応じてファイル名を変更できます。  
   
-##  <a name="bkmk_export_from_rm"></a> レポートを [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web ポータルからエクスポートするには  
+##  <a name="to-export-a-report-from-the-ssrsnoversion-web-portal"></a><a name="bkmk_export_from_rm"></a> レポートを [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web ポータルからエクスポートするには  
   
 1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web ポータルの **[ホーム]** ページから、エクスポートするレポートに移動します。  
   
@@ -71,7 +72,7 @@ ms.locfileid: "77078488"
   
      選択した形式に関連付けられているアプリケーションを使用して、レポートが表示または保存されます。 **[保存]** をクリックした場合、レポートを保存する場所を指定するよう求められます。  
   
-##  <a name="bkmk_export_from_sharepoint"></a> レポートを SharePoint ライブラリからエクスポートするには  
+##  <a name="to-export-a-report-from-a-sharepoint-library"></a><a name="bkmk_export_from_sharepoint"></a> レポートを SharePoint ライブラリからエクスポートするには  
   
 1.  レポートをプレビューします。  
   
@@ -91,7 +92,7 @@ ms.locfileid: "77078488"
   
      **注** ファイルの種類に関連付けられたプログラムがないことが原因で、レポートを選択した形式で開くことができない場合は、エクスポートされたファイルを保存するか、レポートを開くためのプログラムをオンライン上で探すことが求められます。  
   
-##  <a name="RendererTypes"></a> 表示拡張機能の種類  
+##  <a name="rendering-extension-types"></a><a name="RendererTypes"></a> 表示拡張機能の種類  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の表示拡張機能には、次の 3 種類があります。  
   
 -   **データ表示拡張機能** データ表示拡張機能では、すべての書式設定とレイアウト情報がレポートから取り除かれ、データのみが表示されます。 生成されたファイルを使用して、生のレポート データを別のファイル形式 (Excel、他のデータベース、XML データ メッセージ、カスタム アプリケーションなど) にインポートできます。 データ表示拡張機能では、改ページはサポートされません。  
@@ -106,8 +107,8 @@ ms.locfileid: "77078488"
   
      サポートされているハード改ページ表示拡張機能は、TIFF および PDF です。  
   
-##  <a name="ExportFormats"></a> レポートの表示中にエクスポートできる形式  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、さまざまな形式でレポートを表示する表示拡張機能が用意されています。 選択したファイル形式に合わせてレポート デザインを最適化する必要があります。  次の表に、ユーザー インターフェイスからエクスポートできる形式を示します。  これに加え、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションで利用できる形式や URL へのアクセスによってエクスポートできる形式もあります。  このトピックの「 [レポートをエクスポートするその他の方法](#OtherWaysExportingReports)」セクションを参照してください。  
+##  <a name="formats-you-can-export-while-viewing-reports"></a><a name="ExportFormats"></a> レポートの表示中にエクスポートできる形式  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、さまざまな形式でレポートを表示する表示拡張機能が用意されています。 選択したファイル形式に合わせてレポート デザインを最適化する必要があります。  次の表に、ユーザー インターフェイスからエクスポートできる形式を一覧表示します。  これに加え、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションで利用できる形式や URL へのアクセスによってエクスポートできる形式もあります。  このトピックの「 [レポートをエクスポートするその他の方法](#OtherWaysExportingReports)」セクションを参照してください。  
   
 |Format|表示拡張機能の種類|説明|  
 |------------|------------------------------|-----------------|  
@@ -121,12 +122,12 @@ ms.locfileid: "77078488"
 |WORDOPENXML|ソフト改ページ|レポートを表示するときにエクスポート メニューで "Word" として表示されます。 Word 表示拡張機能では、レポートは、 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2013 と互換性のある Word 文書 (.docx) として表示されます。  詳細については、「[Microsoft Word へのエクスポート](../../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md)」を参照してください。|  
 |XML|Data|XML 表示拡張機能では、レポートが XML 形式で返されます。 レポート XML のスキーマは、レポート固有のものであり、データのみを含んでいます。 XML 表示拡張機能では、レイアウト情報はレンダリングされません。また、改ページ位置も維持されません。 この拡張機能で生成された XML は、データベースにインポートしたり、XML データ メッセージとして使用したり、カスタム アプリケーションに送信することができます。<br/><br/> 詳細については、「[XML へのエクスポート](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md)」を参照してください。|  
   
-##  <a name="GeneratingDataFeedsFromReport"></a> レポートからのデータ フィードの生成  
+##  <a name="generating-data-feeds-from-a-report"></a><a name="GeneratingDataFeedsFromReport"></a> レポートからのデータ フィードの生成  
  レポートからデータ フィードを生成するには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web ポータルでレポートを実行した後、Web ポータルのツール バーの **[データ フィードの生成]** アイコンをクリックします。 ファイルを保存するか、開くかを選択するメッセージが表示されます。 **[開く]** を選択すると、.atomsvc ファイル拡張子に関連付けられているアプリケーションで Atom サービス ドキュメントが開きます。 **[保存]** を選択すると、ドキュメントが .atomsvc ファイルとして保存されます。 既定では、ファイルの名前はレポートの名前です。 この名前は、わかりやすい名前に変更できます。  
   
  Atom サービス ドキュメントは自分のコンピューターに保存されます。 後でレポート サーバーまたは別のサーバーにレポートをアップロードして、他のユーザーがレポートを使用できるようにすることができます。 詳細については、「[複数のレポートからのデータ フィードの生成](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)」および「[1 つのレポートからのデータ フィードの生成](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md)」を参照してください。  
   
-##  <a name="Troubleshooting"></a> エクスポートされたレポートのトラブルシューティング  
+##  <a name="troubleshooting-exported-reports"></a><a name="Troubleshooting"></a> エクスポートされたレポートのトラブルシューティング  
  レポートを別の形式にエクスポートした場合、表示が変わったり、思いどおりに動作しなかったりすることがあります。 これは、特定の規則や制限がレンダラーに適用されることがあるためです。 多くの制限には、レポートの作成時に考慮することにより対処可能です。 場合によっては、レポートで若干異なるレイアウトを使用する、レポート内へのアイテムの配置を工夫する、レポートのフッターを 1 行のテキストに制限するなどの作業が必要になります。  
   
  レポートにアラビア数字の Unicode テキストが含まれている場合やアラビア語の日付が含まれている場合、レポートを次のいずれかの形式でエクスポートしたりレポートを印刷したりすると、日付と数字が正しく表示されません。  
@@ -163,7 +164,7 @@ ms.locfileid: "77078488"
   
  また、組み込みの RenderFormat グローバルを使用することにより、条件に応じてレンダラーごとに異なるレポート レイアウトを適用することもできます。 詳細については、「[組み込み Globals および Users 参照](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)」を参照してください。
 
-##  <a name="OtherWaysExportingReports"></a> レポートをエクスポートするその他の方法  
+##  <a name="other-ways-of-exporting-reports"></a><a name="OtherWaysExportingReports"></a> レポートをエクスポートするその他の方法  
  レポートのエクスポートは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web ポータルまたはレポート ビルダーでレポートを開くときに必要に応じて実行するタスクです。 エクスポート操作を自動化する場合は (レポートを、定期的なスケジュールで特定のファイルの種類として共有フォルダーにエクスポートする場合など)、レポートを共有フォルダーに配信するサブスクリプションを作成します。 詳細については、「 [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)」を参照してください。  
   
  レポート ツールでプレビューしたレポート、または [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web ポータルなどのブラウザー アプリケーションで開いたレポートは常に、まず HTML でレンダリングされます。 表示の既定として別の表示拡張機能を指定することはできません。 ただし、後から電子メールの受信ボックスや共有フォルダーに配信する際に必要な表示形式でレポートを生成するサブスクリプションを作成できます。 詳細については、「 [ネイティブ モード レポート サーバーのサブスクリプションの作成と管理](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md) 」および「 [データ ドリブン サブスクリプションを作成、変更、および削除する](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)」を参照してください。  

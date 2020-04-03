@@ -21,17 +21,17 @@ ms.assetid: de03531b-d9e7-4c3c-9604-14e582ac20c6
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 381eb06e646f98b3ec092cbaa4b6431677be559c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ea01281d77206ceccfe8598efc31d073ceea9391
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67906881"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448269"
 ---
 # <a name="str-transact-sql"></a>STR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  数値データから変換された文字データを返します。  
+  数値データから変換された文字データを返します。 文字データは右揃えで、長さと小数点以下の精度が指定されています。 
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,7 +55,7 @@ STR ( float_expression [ , length [ , decimal ] ] )
  **varchar**  
   
 ## <a name="remarks"></a>解説  
- STR で *length* パラメーターと *decimal* パラメーターを指定する場合は、正の値を指定する必要があります。 数値は、既定では整数に丸められます。小数点以下桁数に 0 が指定された場合も同様です。 指定する長さは、その数字の小数点より前の桁数に、符号があればその符号部分を加えた数以上にする必要があります。 短い *float_expression* は、指定された長さで右揃えされ、長い *float_expression* は、指定された小数点以下桁数に切り捨てられます。 たとえば、STR(12 **,** 10) の結果は 12 になります。 これは結果セットの中で右揃えされます。 一方、STR(1223 **,** 2) と指定すると、結果は切り捨てられて ** になります。 文字列関数は入れ子にすることができます。  
+ STR で *length* パラメーターと *decimal* パラメーターを指定する場合は、正の値を指定する必要があります。 数値は、既定では整数に丸められます。小数点以下桁数に 0 が指定された場合も同様です。 指定する長さは、その数字の小数点より前の桁数に、符号があればその符号部分を加えた数以上にする必要があります。 短い *float_expression* は、指定された長さで右揃えされ、長い *float_expression* は、指定された小数点以下桁数に切り捨てられます。 たとえば、STR(12, 10) の結果は 12 になります。 これは結果セットの中で右揃えされます。 一方、STR(1223, 2) と指定すると、結果は切り捨てられて \*\* になります。 文字列関数は入れ子にすることができます。  
   
 > [!NOTE]  
 >  Unicode データに変換するには、CONVERT または [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 変換関数の中で STR を使用します。  

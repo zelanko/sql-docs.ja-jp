@@ -1,5 +1,6 @@
 ---
 title: SQL Server 2017 の各エディションとサポートされる機能 - Linux
+description: この記事では、SQL Server 2017 on Linux のさまざまなエディションでサポートされている機能について説明します。 利用可能なエディションとコンポーネントから選択するのに役立ちます。
 ms.date: 01/14/2020
 ms.prod: sql
 ms.technology: linux
@@ -24,12 +25,12 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: a652bc56a826469017ba4de643c9d3e1822d4c22
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: c7394bf48f6bc32664e7d0a96af96ac0f3d1116f
+ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288446"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80402667"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Linux 上の SQL Server 2017 のエディションとサポートされる機能
 
@@ -77,7 +78,7 @@ Developer Edition、Enterprise Core Edition、および Evaluation Edition で�
 
 Developer Edition では引き続き、[SQL Server 分散再生](../tools/distributed-replay/sql-server-distributed-replay.md)のクライアントが 1 つだけサポートされます。 
   
-##  <a name="Cross-BoxScaleLimits"></a> スケールの制限  
+##  <a name="scale-limits"></a><a name="Cross-BoxScaleLimits"></a> スケールの制限  
   
 |機能|Enterprise|Standard|Web|Express| 
 |-------------|----------------|--------------|---------|------------------------|
@@ -90,7 +91,7 @@ Developer Edition では引き続き、[SQL Server 分散再生](../tools/distri
   
 <sup>1</sup> Enterprise Edition with Server + Client Access License (CAL) に基づくライセンス (新しい使用許諾契約では利用できません) は、SQL Server インスタンスあたり最大 20 コアに制限されています。 コアベースのサーバー ライセンス モデルでは、制限はありません。 詳細については、「[SQL Server のエディション別の計算容量制限](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)」を参照してください。  
  
-##  <a name="RDBMSHA"></a> RDBMS の高可用性  
+##  <a name="rdbms-high-availability"></a><a name="RDBMSHA"></a> RDBMS の高可用性  
   
 |機能|Enterprise|Standard|Web|Express|  
 |-------------|----------------|--------------|---------|------------------------|  
@@ -118,7 +119,7 @@ Developer Edition では引き続き、[SQL Server 分散再生](../tools/distri
 
 <sup>3</sup> Standard Edition では、基本的な可用性グループがサポートされます。 基本的な可用性グループは、1 つのデータベースで、2 つのレプリカをサポートします。 基本的な可用性グループの詳細については、「[基本的な可用性グループ](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)」を参照してください。    
 
-##  <a name="RDBMSSP"></a> RDBMS のスケーラビリティとパフォーマンス  
+##  <a name="rdbms-scalability-and-performance"></a><a name="RDBMSSP"></a> RDBMS のスケーラビリティとパフォーマンス  
   
 |機能|Enterprise|Standard|Web|Express|  
 |-------------|----------------|--------------|---------|------------------------| 
@@ -143,7 +144,7 @@ Developer Edition では引き続き、[SQL Server 分散再生](../tools/distri
 
 <sup>1</sup> インメモリ OLTP データ サイズおよび列ストア セグメント キャッシュは、「スケールの制限」セクションでエディションごとに指定されているメモリ量に制限されます。 並列処理には最大限度があります。 インデックス構築のための並列処理の度合い (DOP) は、Standard Edition では 2 DOP に、Web Edition と Express Edition では 1 DOP に制限されます。 これは、ディスク ベース テーブルとメモリ最適化テーブルで作成された列ストア インデックスに当てはまります。
 
-##  <a name="RDBMSS"></a> RDBMS のセキュリティ  
+##  <a name="rdbms-security"></a><a name="RDBMSS"></a> RDBMS のセキュリティ  
   
 |機能|Enterprise|Standard|Web|Express|
 |-------------|----------------|--------------|---------|------------------------------------| 
@@ -157,7 +158,7 @@ Developer Edition では引き続き、[SQL Server 分散再生](../tools/distri
 |包含データベース|はい|はい|はい|はい| 
 |バックアップの暗号化|はい|はい|いいえ|いいえ|  
 
-##  <a name="RDBMSM"></a> RDBMS の管理の容易性  
+##  <a name="rdbms-manageability"></a><a name="RDBMSM"></a> RDBMS の管理の容易性  
   
 |機能|Enterprise|Standard|Web|Express|   
 |-------------|----------------|--------------|---------|------------------------|  
@@ -176,7 +177,7 @@ Developer Edition では引き続き、[SQL Server 分散再生](../tools/distri
 |並列整合性チェック|はい|いいえ|いいえ|いいえ| 
 |SQL Server ユーティリティ コントロール ポイント|はい|いいえ|いいえ|いいえ|    
 
-##  <a name="Programmability"></a> Programmability  
+##  <a name="programmability"></a><a name="Programmability"></a> Programmability  
   
 |機能|Enterprise|Standard|Web|Express 
 |-------------|----------------|--------------|---------|------------------------|  
@@ -197,11 +198,11 @@ Developer Edition では引き続き、[SQL Server 分散再生](../tools/distri
 
 <sup>1</sup> 複数のコンピューティング ノードでのスケール アウトにはヘッド ノードが必要です。
 
-## <a name="IS"></a> Integration Services
+## <a name="integration-services"></a><a name="IS"></a> Integration Services
 
 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] の各エディションがサポートする Integration Services (SSIS) の機能については、「[SQL Server の各エディションがサポートする Integration Services の機能](../integration-services/integration-services-features-supported-by-the-editions-of-sql-server.md)」をご覧ください。
 
-##  <a name="SLS"></a> 空間およびロケーション サービス  
+##  <a name="spatial-and-location-services"></a><a name="SLS"></a> 空間およびロケーション サービス  
   
 |機能名|Enterprise|Standard|Web|Express|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|
@@ -209,7 +210,7 @@ Developer Edition では引き続き、[SQL Server 分散再生](../tools/distri
 |平面データ型と測地データ型|はい|はい|はい|はい| 
 |高度な空間的なライブラリ|はい|はい|はい|はい|   
 |業界標準の空間データ形式のインポート/エクスポート|はい|はい|はい|はい|   
-## <a name="Unsupported"></a> サポートされていない機能とサービス
+## <a name="unsupported-features--services"></a><a name="Unsupported"></a> サポートされていない機能とサービス
 
 次の機能とサービスは、SQL Server 2017 on Linux では利用できません。 これらの機能のサポートは、今後ますます使用可能になります。
 
@@ -228,6 +229,7 @@ Developer Edition では引き続き、[SQL Server 分散再生](../tools/distri
 | &nbsp; | 警告 |
 | &nbsp; | ログ リーダー エージェント (Log Reader Agent) |
 | &nbsp; | 管理対象のバックアップ |
+| &nbsp; | MSX と TSX を使用するマルチサーバー管理 |
 | **高可用性** | データベース ミラーリング  |
 | **Security** | 拡張キー管理 |
 | &nbsp; | リンク サーバーに対する AD 認証 | 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ef4bf385e2ce0ecd140ad402c43d0039669c56e8
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 39273f66a62f713e7aa95c3ce20d9ed3204776e8
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288296"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80380813"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -177,8 +177,10 @@ SQL Server フェールオーバー クラスタリングのログ記録レベ�
   
 -   2: エラーおよび警告  
   
+リソース フェールオーバーのシナリオでは、フェールオーバーが発生する前に、SQL Server リソース DLL でダンプ ファイルを取得できます。 これは、FCI と可用性グループの両方のテクノロジに当てはまります。 SQL Server リソース DLL で SQL Server リソースが失敗したと判断した場合、SQL Server リソース DLL では Sqldumper.exe ユーティリティを使用して、SQL Server プロセスのダンプ ファイルを取得します。 リソース フェールオーバー時に、確実に Sqldumper.exe ユーティリティによってダンプ ファイルが正常に生成されるようにするには、次の 3 つのプロパティを前提条件として設定する必要があります: SqlDumperDumpTimeOut、SqlDumperDumpPath、SqlDumperDumpFlags。
+
 SQLDUMPEREDUMPFLAGS  
-SQL Server の SQLDumper ユーティリティによって生成されるダンプ ファイルの種類を決定します。 既定の設定は 0 です。 詳細については、[SQL Server Dumper ユーティリティに関するサポート技術情報の資料](https://go.microsoft.com/fwlink/?LinkId=206173)を参照してください。  
+SQL Server の SQLDumper ユーティリティによって生成されるダンプ ファイルの種類を決定します。 既定の設定は 0 です。 この設定には、16 進数ではなく、10 進数の値が使用されます。 ミニ ダンプでは 288 を使用し、間接メモリのミニ ダンプでは 296 を使用し、フィルター処理されたダンプでは 33024 を使用します。 詳細については、[SQL Server Dumper ユーティリティに関するサポート技術情報の資料](https://go.microsoft.com/fwlink/?LinkId=206173)を参照してください。  
   
 SQLDUMPERDUMPPATH = { 'os_file_path' | DEFAULT }  
 SQLDumper ユーティリティがダンプ ファイルを保存する場所。 詳細については、[SQL Server Dumper ユーティリティに関するサポート技術情報の資料](https://go.microsoft.com/fwlink/?LinkId=206173)を参照してください。  
@@ -304,7 +306,7 @@ HYBRID_BUFFER_POOL = ON | OFF <br>
 |[メモリ内データベース オプションの設定](#MemoryOptimized)|MEMORY_OPTIMIZED|
 
   
-###  <a name="Affinity"></a> プロセス関係を設定する  
+###  <a name="setting-process-affinity"></a><a name="Affinity"></a> プロセス関係を設定する  
 このセクションの例では、CPU および NUMA ノードにプロセス関係を設定する方法を示します。 この例では、256 個の CPU が、4 つのグループから成る NUMA ノード構成 (4 グループ合計 16 ノード) でサーバーに搭載されていることを想定しています。 スレッドは NUMA ノードにも CPU にも割り当てられていません。  
   
 -   グループ 0:NUMA ノード 0 から 3、CPU 0 から 63  
@@ -351,7 +353,7 @@ ALTER SERVER CONFIGURATION
 SET PROCESS AFFINITY CPU=AUTO;  
 ```  
   
-###  <a name="Diagnostic"></a> Setting diagnostic log options  
+###  <a name="setting-diagnostic-log-options"></a><a name="Diagnostic"></a> Setting diagnostic log options  
   
 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)。    
   
@@ -387,7 +389,7 @@ ALTER SERVER CONFIGURATION
 SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;  
 ```  
   
-###  <a name="Failover"></a> フェールオーバー クラスター プロパティを設定する  
+###  <a name="setting-failover-cluster-properties"></a><a name="Failover"></a> フェールオーバー クラスター プロパティを設定する  
   
 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)。   
   
@@ -401,7 +403,7 @@ ALTER SERVER CONFIGURATION
 SET FAILOVER CLUSTER PROPERTY HealthCheckTimeout = 15000;  
 ```  
   
-###  <a name="ChangeClusterContextExample"></a> B. 可用性レプリカのクラスター コンテキストを変更する  
+###  <a name="b-changing-the-cluster-context-of-an-availability-replica"></a><a name="ChangeClusterContextExample"></a> B. 可用性レプリカのクラスター コンテキストを変更する  
 次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの HADR クラスター コンテキストを変更します。 変更先の WSFC クラスターである `clus01` を指定するため、この例では、完全なクラスター オブジェクト名である `clus01.xyz.com` を指定します。  
   
 ```sql  
@@ -410,7 +412,7 @@ ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com';
   
 ### <a name="setting-buffer-pool-extension-options"></a>バッファー プール拡張オプションを設定する  
   
-####  <a name="BufferPoolExtension"></a> A. バッファー プール拡張オプションを設定する  
+####  <a name="a-setting-the-buffer-pool-extension-option"></a><a name="BufferPoolExtension"></a> A. バッファー プール拡張オプションを設定する  
   
 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降)。    
   
@@ -439,7 +441,7 @@ SET BUFFER POOL EXTENSION ON
 GO   
 ```  
 
-### <a name="MemoryOptimized"></a>メモリ内データベース オプションの設定
+### <a name="setting-in-memory-database-options"></a><a name="MemoryOptimized"></a>メモリ内データベース オプションの設定
 
 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降)。
 

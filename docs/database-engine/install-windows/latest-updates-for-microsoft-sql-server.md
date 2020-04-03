@@ -12,18 +12,22 @@ author: tmichael-ms
 ms.author: tmichael
 ms.reviewer: hristins
 mtps_version: v=MSDN.10
-ms.openlocfilehash: 975ea7d96e50dbdb375580919a5cac5503e831c2
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.openlocfilehash: 6d81ddb24d11e9357819b43338341b818fb35583
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79198273"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434099"
 ---
 # <a name="latest-updates-for-microsoft-sql-server"></a>Microsoft SQL Server の最新の更新プログラム
 
-SQL Server 製品の更新プログラムを 1 か所で検索して管理します。 更新プログラムに関する情報の受け取りと、更新プログラムのダウンロードについては、[SQL Server リリース ブログ](https://aka.ms/sqlreleases)に従ってください。
+SQL Server 製品の更新プログラムを 1 か所で検索して管理します。 更新プログラムに関する情報を受け取り、更新プログラムをダウンロードするには、[SQL Server リリースのブログ](https://aka.ms/sqlreleases)に従ってください。
 
-このページでは、SQL Server のサポートされているすべてのバージョンの最新の更新プログラムを追跡します。 サポートされている製品の詳細については、[Microsoft 製品のライフサイクルのページ](https://support.microsoft.com/lifecycle/)を参照してください。
+このページでは、SQL Server のサポートされているすべてのバージョンの最新の更新プログラムを追跡します。 
+
+以前の更新プログラムの詳細については、[SQL Server ビルドのブログ](https://sqlserverbuilds.blogspot.com/)を参照してください。 
+
+サポートされている製品の詳細については、[Microsoft 製品のライフサイクルのページ](https://support.microsoft.com/lifecycle/)を参照してください。 
 
 ## <a name="latest-updates"></a>最新の更新プログラム
 
@@ -66,3 +70,5 @@ SQL Server 製品の更新プログラムを 1 か所で検索して管理しま
   - [SQL Server デベロッパー センター](https://msdn.microsoft.com/sqlserver/default.aspx)
   - [SQL Server TechCenter](https://technet.microsoft.com/sqlserver/default.aspx)
   - [SQL Server 製品情報センター](https://www.microsoft.com/sqlserver/default.aspx)
+  - [SQL Server ビルドのブログ](https://sqlserverbuilds.blogspot.com/)
+  - [SQL Server リリースのブログ](https://aka.ms/sqlreleases)

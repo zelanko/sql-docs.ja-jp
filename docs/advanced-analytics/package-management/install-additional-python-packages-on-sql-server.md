@@ -8,13 +8,13 @@ ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 83635ac9cb5b35aba25ace6947bc1281d468cb65
-ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 0018d38beb1c576ea80b39d525388118d7b8063c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/22/2020
-ms.locfileid: "77558316"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79434109"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>sqlmlutils を使用した Python パッケージのインストール
 
@@ -75,9 +75,21 @@ ms.locfileid: "77558316"
 
 SQL Server への接続に使用するクライアント コンピューターがインターネットにアクセスできる場合は、**sqlmlutils** を使用して、**テキスト ツール** パッケージ、およびインターネット経由のすべての依存関係を検索し、SQL Server インスタンスにパッケージをリモートでインストールすることができます。
 
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+1. クライアント コンピューターで、**Python** または Python 環境を開きます。
+
+1. 次のコマンドを使用して、**テキスト ツール** パッケージをインストールします。 独自の SQL Server データベース接続情報に置き換えます (Windows 認証を使用する場合は、`uid` パラメーターと `pwd` パラメーターは必要ありません)。
+
+::: moniker-end
+
+::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+
 1. クライアント コンピューターで、**Python** または Python 環境を開きます。
 
 1. 次のコマンドを使用して、**テキスト ツール** パッケージをインストールします。 実際の SQL Server データベースの接続情報に置き換えてください。
+
+::: moniker-end
 
    ```python
    import sqlmlutils
@@ -105,12 +117,22 @@ SQL Server への接続に使用するクライアント コンピューター�
 
 この例では、**テキスト ツール**に依存関係がないので、インストールする `text-tools` フォルダー内のファイルは 1 つのみです。 これに対し、**scikit-plot** のようなパッケージには 11 個の依存関係があるため、フォルダー内に 12 個のファイル (**scikit-plot** パッケージと 11 個の依存パッケージ) があり、それぞれをインストールします。
 
-次の Python スクリプトを実行します。 パッケージの実際のファイル パスと名前、および独自の SQL Server データベース接続情報に置き換えます (Windows 認証を使用しない場合は、`uid` パラメーターと `pwd` パラメーターを追加します)。 フォルダー内のパッケージ ファイルごとに `sqlmlutils.SQLPackageManager` ステートメントを繰り返します。
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+次の Python スクリプトを実行します。 パッケージの実際のファイル パスと名前、独自の SQL Server データベース接続情報に置き換えます (Windows 認証を使用する場合は、`uid` パラメーターと `pwd` パラメーターは必要ありません)。 フォルダー内のパッケージ ファイルごとに `sqlmlutils.SQLPackageManager` ステートメントを繰り返します。
+
+::: moniker-end
+
+::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+
+次の Python スクリプトを実行します。 パッケージの実際のファイル パスと名前、独自の SQL Server データベース接続情報に置き換えます。 フォルダー内のパッケージ ファイルごとに `sqlmlutils.SQLPackageManager` ステートメントを繰り返します。
+
+::: moniker-end
 
 ```python
 import sqlmlutils
-connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase")
-sqlmlutils.SQLPackageManager(connection).install("c:/temp/packages/text-tools/text_tools-1.0.0-py3-none-any.whl")
+connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase", uid="username", pwd="password"))
+sqlmlutils.SQLPackageManager(connection).install("text_tools-1.0.0-py3-none-any.whl")
 ```
 
 ## <a name="use-the-package-in-sql-server"></a>SQL Server でのパッケージの使用

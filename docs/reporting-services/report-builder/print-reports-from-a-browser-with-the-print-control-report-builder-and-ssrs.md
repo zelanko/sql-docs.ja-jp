@@ -1,5 +1,6 @@
 ---
 title: 印刷コントロールを使用したブラウザーからのレポートの印刷 (レポート ビルダー) | Microsoft Docs
+description: ブラウザーに表示されるレポートの印刷品質を上げたり、複数のページを印刷したりするには、SQL Server Reporting Services のクライアント側印刷機能を使用します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 10054250-d915-4bcb-8a1d-26837db4e932
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bc5eabd755bec6c25c16b3974efe267cf3e27c72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2b469ea664d5205844993a9d232990b1832bd648
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77082541"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290917"
 ---
 # <a name="print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs"></a>印刷コントロールを使用したブラウザーからのレポートの印刷 (レポート ビルダーおよび SSRS)
   レポートを表示するための最も一般的なクライアント アプリケーションはブラウザーですが、ブラウザーの印刷機能はレポートの印刷には適していません。 ブラウザーの印刷機能は、Web ページを印刷するための機能です。 通常、ブラウザーから印刷したページには、Web ページ上にあるすべての可視要素と、ページまたは Web サイトを識別するヘッダーおよびフッター情報が含まれます。 ブラウザーからの印刷では現在のウィンドウの内容が印刷されるため、 レポートが数ページあっても最初のページしか印刷されません。また、レポート ページのサイズが印刷ページのサイズより大きい場合には、ページの全体を印刷しきれない場合もあります。  

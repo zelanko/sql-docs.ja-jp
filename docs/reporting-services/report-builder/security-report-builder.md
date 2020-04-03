@@ -1,5 +1,6 @@
 ---
 title: セキュリティ (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーのセキュリティ機能は、パブリッシュ元の場所、パブリッシュされるレポート、外部のデータ ソースとそれに基づくモデル、インタラクティブ機能に関連します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e8b89f31330fa09d5dbe1f70fd10b2c473d26c0d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1d2c4c195b0d21d2090e13eff578cc533871da4d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190096"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290838"
 ---
 # <a name="security-report-builder"></a>セキュリティ (レポート ビルダー)
   レポート ビルダーは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーと連携するように設計されたレポート作成クライアント アプリケーションです。 レポート サーバーは、ネイティブ モードでスタンドアロン サーバーとして動作するように構成したり、SharePoint 統合モードで SharePoint サイト上のレポートをサポートするように構成したりすることができます。  
@@ -34,7 +35,7 @@ ms.locfileid: "74190096"
   
  このトピックの情報を確認し、セキュリティ機能を使用してレポートとレポート関連アイテムを管理および保護する方法について理解を深めてください。  
   
-##  <a name="ReportServers"></a> レポート サーバーのセキュリティについて  
+##  <a name="understanding-security-for-report-servers"></a><a name="ReportServers"></a> レポート サーバーのセキュリティについて  
  レポートのパブリッシュと表示は権限を必要とする操作です。 レポート サーバー管理者が権限を与えて、次のいずれかの種類のレポート サーバーで権限のあるユーザーのみがレポートをパブリッシュおよび表示できるようにします。  
   
 -   ネイティブ モードで構成されたレポート サーバー  
@@ -54,7 +55,7 @@ ms.locfileid: "74190096"
      SharePoint サイトまたはサブサイトに接続したりそれらのサイトを参照したりすることができない場合は、SharePoint サイト管理者に問い合わせてください。  
   
   
-##  <a name="Reports"></a> パブリッシュされたレポートとレポート関連アイテムのセキュリティについて  
+##  <a name="understanding-security-for-published-reports-and-report-related-items"></a><a name="Reports"></a> パブリッシュされたレポートとレポート関連アイテムのセキュリティについて  
  レポートとレポート関連アイテムのセキュリティは、レポート サーバー管理者が管理します。 レポート関連アイテムには、埋め込みデータ ソースおよび共有データ ソース (資格情報を含む)、共有データセット、パラメーター、レポート パーツ、モデルなどがあります。  
   
  レポート サーバーまたは SharePoint サイトでは、レポートとレポート関連アイテムおよび操作を個別にセキュリティ保護できます。 アイテムと操作にアクセスするための権限は、セキュリティ ポリシーによって与えられます。このポリシーは、ユーザー アカウントやグループ アカウントをアイテムに対して相対的に権限レベルにマップするものです。 多数のポリシーを維持する際の複雑さとオーバーヘッドを軽減するため、フォルダーなどのコンテナーに対する権限はコンテナー内のアイテムに継承されます。 たとえば、フォルダーに対する "レポートの表示" 権限を持つユーザーは、フォルダー内のアイテムに対する "レポートの表示" 権限も持ちます。  
@@ -81,7 +82,7 @@ ms.locfileid: "74190096"
  詳細については、「 [レポート パーツ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)」を参照してください。  
   
   
-##  <a name="Data"></a> レポート データと外部データ ソースのセキュリティについて  
+##  <a name="understanding-security-for-report-data-and-external-data-sources"></a><a name="Data"></a> レポート データと外部データ ソースのセキュリティについて  
  レポートで各外部データ ソースのデータにアクセスするには、埋め込みデータ ソースを作成するか、共有データ ソースまたは共有データセットへの参照をレポートに追加します。  
   
  外部データ ソースごとに、ソースおよび基になるデータにアクセスするために必要な資格情報を指定する必要があります。 データ ソースの所有者が、アクセスを提供する資格情報の種類を指定します。  
@@ -96,13 +97,13 @@ ms.locfileid: "74190096"
  データ ソースの詳細については、「[データ接続文字列を作成する - レポート ビルダーおよび SSRS](../report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」を参照してください。  
   
   
-##  <a name="Models"></a> モデルとセキュリティ フィルターについて  
+##  <a name="understanding-models-and-security-filters"></a><a name="Models"></a> モデルとセキュリティ フィルターについて  
  外部データに基づくレポート モデルからデータが取得される場合、モデルでセキュリティ フィルターを適用できます。レポートを実行する各ユーザーが表示権限を持つデータだけを見ることができるよう、データをセキュリティで保護することができます。  
   
  レポート パラメーターは行レベルのセキュリティには使用されません。ユーザーまたはユーザー グループは特定のデータ行を参照できます。 レポート内に表示されるデータにセキュリティを適用するには、セキュリティ フィルターまたはモデル アイテム セキュリティを使用する必要があります。  
   
   
-##  <a name="Interactive"></a> レポート作成における対話機能のセキュリティについて  
+##  <a name="understanding-security-for-report-authoring-for-interactive-features"></a><a name="Interactive"></a> レポート作成における対話機能のセキュリティについて  
  レポートでは、ユーザーがレポートの表示を対話形式でカスタマイズできるようにするためにパラメーターが頻繁に使用されます。 次のヒントを参考にして、推奨されるレポートをデザインしてください。  
   
 -   有効な値を提供する場合を除き、クエリ パラメーターに基づいた、型が **Text** のパラメーターは使用しないでください。 使用可能な値の一覧を使用すると、ユーザーが有効な値しか選択できないようにするのに役立ちます。 使用可能な値の一覧を使用しない場合は、ユーザーが入力できる値を制限できません。  

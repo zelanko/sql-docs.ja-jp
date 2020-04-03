@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 6e1b69fc176281e9be65ca7a9766fc8fb270a3de
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65580086"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Reporting Services SharePoint サービス アプリケーションの管理
@@ -34,7 +34,7 @@ ms.locfileid: "65580086"
   
 2.  サービス アプリケーションの名前の近くか、または **[種類]** 列をクリックして列全体を選択し、SharePoint リボンで **[プロパティ]** をクリックします。  
   
- サービス アプリケーション プロパティの詳細については、「 [3: Reporting Services サービス アプリケーションの作成](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication)」を参照してください。  
+ サービス アプリケーション プロパティの詳細については、「[手順 3: Reporting Services サービス アプリケーションの作成](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication)」の「サービス アプリケーション」セクションをご覧ください。  
   
 ## <a name="open-service-application-management-pages"></a>サービス アプリケーションの管理ページを開く
 
@@ -101,7 +101,7 @@ ms.locfileid: "65580086"
 
  レポート サブスクリプションおよびデータ ドリブン サブスクリプションによって作成されたジョブなど、実行中のジョブを表示および削除できます。 ページはサブスクリプションの管理には使用されるのではなく、サブスクリプションによってトリガーされるジョブです。 たとえば、1 時間に 1 回実行するようにスケジュールされているサブスクリプションは、 **[ジョブの管理]** ページに 1 時間に 1 回表示されるジョブを生成します。  
   
- ![manage running jobs](../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif "manage running jobs")  
+ ![実行中のジョブの管理](../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif "実行中のジョブの管理")  
   
 ## <a name="key-management"></a>キー管理
  次の表は、キー管理ページをまとめたものです。  
@@ -109,7 +109,7 @@ ms.locfileid: "65580086"
 > [!IMPORTANT]  
 >  セキュリティを高めるために、Reporting Services の暗号化キーは定期的に変更することをお勧めします。 キーを変更する推奨されるタイミングは、Reporting Services のメジャー バージョンのアップグレードの直後です。 アップグレード後であれば、アップグレード サイクル以外での Reporting Services の暗号化キーの変更に伴う他のサービスの中断を最小限に抑えることができます。  
   
-|ページ|[説明]|  
+|ページ|説明|  
 |----------|-----------------|  
 |暗号化キーのバックアップ|1) **[パスワード]** ボックスと **[パスワードの確認入力]** ボックスにパスワードを入力し、 **[エクスポート]** をクリックします。 入力したパスワードがドメイン ポリシーの複雑さの要件を満たしていない場合は、警告が表示されます。<br /><br /> 2) キー ファイルを保存する場所を指定するよう求められます。 キー ファイルは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]を実行しているコンピューターとは別のコンピューター上に保存することをお勧めします。 既定のファイル名は、サービス アプリケーションと同じ名前です。|  
 |暗号化キーの復元|1) キー ファイルを入力するか、または **[ファイルの場所]** ボックスでファイルの場所を参照します。<br /><br /> 2) **[パスワード]** ボックスで、暗号化ファイルのバックアップに使用されたパスワードを入力します。<br /><br /> 3) **[OK]** をクリックします。|  
@@ -140,7 +140,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 
  詳細については、「 [Reporting Services SharePoint モード用の PowerShell コマンドレット](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)」をご覧ください。  
 
-### <a name="options"></a>オプション
+### <a name="options"></a>Options
 
  **[実行アカウントの指定]**  
  アカウントを指定します。  
@@ -158,7 +158,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 
  このページを使用すると、レポート サーバーからのレポート サーバー電子メール配信を有効にする簡易メール転送プロトコル (SMTP) の設定を指定できます。 レポート サーバーの電子メール配信拡張機能により、電子メール サブスクリプションを通じてレポートやレポート処理通知を配信できます。 レポート サーバーの電子メール配信拡張機能を使用するには、SMTP サーバーと、差出人フィールドに使用する電子メール アドレスが必要です。  
 
-### <a name="options"></a>オプション
+### <a name="options"></a>Options
 
  **[SMTP サーバーの使用]**  
  レポート サーバー電子メールが SMTP サーバーによってルーティングされるように指定します。  

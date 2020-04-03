@@ -9,12 +9,12 @@ ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2afc9fce446d277422c564330c5cc7db254f2d00
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 481e0170e14b978f9fa26689a71383d981313a57
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75252004"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80215382"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>ビッグ データ クラスターに HDFS 階層制御のための ADLS Gen2 をマウントする方法
 
@@ -27,13 +27,13 @@ ms.locfileid: "75252004"
   - **azdata**
   - **kubectl**
 
-## <a id="load"></a> Azure Data Lake Storage にデータを読み込む
+## <a name="load-data-into-azure-data-lake-storage"></a><a id="load"></a> Azure Data Lake Storage にデータを読み込む
 
 次のセクションでは、HDFS 階層制御をテストするための Azure Data Lake Storage Gen2 の設定方法について説明します。 Azure Data Lake Storage に既にデータが格納されている場合は、このセクションを省略して独自のデータを使用することができます。
 
-1. [Data Lake Storage Gen2 機能を持つストレージ アカウントを作成します](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-quickstart-create-account)。
+1. [Data Lake Storage Gen2 機能を持つストレージ アカウントを作成します](/azure/storage/blobs/data-lake-storage-quickstart-create-account)。
 
-1. このストレージ アカウントに外部データ用の [BLOB コンテナー/ファイル システムを作成します](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal)。
+1. このストレージ アカウントに自分のデータ用の[ファイル システムを作成](/azure/storage/blobs/data-lake-storage-explorer)します。
 
 1. CSV ファイルまたは Parquet ファイルをコンテナーにアップロードします。 これは、ビッグ データ クラスターの HDFS にマウントされる外部 HDFS データです。
 
@@ -48,7 +48,7 @@ OAuth 資格情報を使用してマウントするには、次の手順に従�
 1. 右のナビゲーション バーで [アプリの登録] を選択し、新しい登録を作成します
 1. Web アプリケーションを作成し、ウィザードに従います。 **ここで作成したアプリの名前を忘れないでください**。 この名前を承認されたユーザーとして ADLS アカウントに追加する必要があります。 また、アプリを選択したときの [概要] のアプリケーション クライアント ID も記録しておきます。
 1. Web アプリケーションが作成されたら、[Certificates&secrets]\(証明書とシークレット\) に移動し、**新しいクライアント シークレット**を作成して、キーの期間を選択します。 シークレットを**追加**します。
-1.  [アプリの登録] ページに戻り、上部にある [エンドポイント] をクリックします。 **OAuth トークン エンドポイント (v2) の URL を記録しておきます**
+1.     [アプリの登録] ページに戻り、上部にある [エンドポイント] をクリックします。 **OAuth トークン エンドポイント (v2) の URL を記録しておきます**
 1. ここまでで、OAuth に関する次の内容をメモしておく必要があります。
 
     - Web アプリケーションの "アプリケーション クライアント ID"
@@ -99,7 +99,7 @@ Azure portal で ADLS アカウント用に取得できるアクセス キーを
    fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
    ```
 
-## <a id="mount"></a> リモート HDFS ストレージをマウントする
+## <a name="mount-the-remote-hdfs-storage"></a><a id="mount"></a> リモート HDFS ストレージをマウントする
 
 アクセス キーまたは OAuth を使用するための MOUNT_CREDENTIALS 環境変数を設定したので、マウントを開始することができます。 次の手順では、Azure Data Lake のリモート HDFS ストレージを、ビッグ データ クラスターのローカル HDFS ストレージにマウントします。
 
@@ -127,7 +127,7 @@ Azure portal で ADLS アカウント用に取得できるアクセス キーを
 
 正常にマウントされていれば、HDFS データに対してクエリを実行し、そのデータに対して Spark ジョブを実行できます。 これは、`--mount-path` によって指定された場所にあるビッグ データ クラスターの HDFS に表示されます。
 
-## <a id="status"></a> マウントの状態を取得する
+## <a name="get-the-status-of-mounts"></a><a id="status"></a> マウントの状態を取得する
 
 ビッグ データ クラスター内のすべてのマウントの状態を一覧表示するには、次のコマンドを使用します。
 
@@ -149,7 +149,7 @@ azdata bdc hdfs mount status --mount-path <mount-path-in-hdfs>
 azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
 ```
 
-## <a id="delete"></a> マウントを削除する
+## <a name="delete-the-mount"></a><a id="delete"></a> マウントを削除する
 
 マウントを削除するには、**azdata bdc hdfs mount delete** コマンドを使用して、HDFS で次のマウント パスを指定します。
 

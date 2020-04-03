@@ -1,5 +1,6 @@
 ---
 title: PolyBase の監視とトラブルシューティング | Microsoft Docs
+description: PolyBase のトラブルシューティングを行うには、次のビューと DMV を使用します。 PolyBase クエリ プランを表示し、PolyBase グループ内のノードを監視して、Hadoop 名前ノードの高可用性を設定します。
 ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
@@ -14,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: edd716b36e8dc7339ab9661a2213afae5ac35379
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 171527b02674a5a02420f5cb002fddd7e7f31ac6
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76909632"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216053"
 ---
 # <a name="monitor-and-troubleshoot-polybase"></a>PolyBase の監視とトラブルシューティング
 
@@ -223,6 +224,6 @@ PolyBase は現在、Zookeeper や Knox などの Name Node HA サービスと�
 
 外部テーブルのエラーのトラブルシューティングについては、Murshed Zaman のブログ [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "PolyBase のセットアップ エラーと考えられる解決策") を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [PolyBase Kerberos の接続性のトラブルシューティング](polybase-troubleshoot-connectivity.md)

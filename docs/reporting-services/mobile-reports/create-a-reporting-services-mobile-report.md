@@ -1,5 +1,6 @@
 ---
 title: Reporting Services モバイル レポートの作成 | Microsoft Docs
+description: SQL Server Mobile Report Publisher では、柔軟なモバイル レポート要素を使用して、任意の画面サイズの SQL Server Reporting Services モバイル レポートを作成します。
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3fd0fc3530ec35da61e2314ef7a80a58d9bdd7d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 08076ebf437841f5d60d957df934fc7de6406ded
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63316455"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448219"
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>Reporting Services モバイル レポートの作成
 SQL Server Mobile Report Publisher を使用すると、調整可能なグリッド行とグリッド列、および柔軟なモバイル レポート要素を備えたデザイン画面で、任意の画面サイズに対応する SQL Server Reporting Services モバイル レポートをすばやく作成できます。  
@@ -42,7 +43,7 @@ SQL Server Mobile Report Publisher を使用すると、調整可能なグリッ
   
 6. **[ローカル Excel]** または **[レポート サーバー]** を選択します。  
   
-   >**ヒント**: Excel からデータを追加する場合、次を確認します。  
+   >**ヒント**:Excel からデータを追加する場合、次を確認します。  
     >* モバイル レポートで作業できるよう、 [Excel データを準備します](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md) 。  
     >* まずファイルを閉じます。  
 7. 目的のワークシートを選択し、 **[インポート]** を選択します。   
@@ -64,7 +65,7 @@ SQL Server Mobile Report Publisher を使用すると、調整可能なグリッ
   
    サーバーに保存するには、SQL Server Reporting Services レポート サーバーにアクセスできる必要があります。  
      
-   ### <a name="see-also"></a>参照  
+   ### <a name="see-also"></a>関連項目  
      
 -   [Create and publish mobile reports with SQL Server Mobile Report Publisher (SQL Server Mobile Report Publisher でモバイル レポートを作成し発行する)](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 -   [スマートフォンやタブレット向けに Reporting Services モバイル レポートをレイアウトする](../../reporting-services/mobile-reports/lay-out-a-reporting-services-mobile-report-for-phone-or-tablet.md)  

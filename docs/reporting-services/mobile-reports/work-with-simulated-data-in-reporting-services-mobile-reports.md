@@ -1,5 +1,6 @@
 ---
 title: Reporting Services のモバイル レポートでシミュレートされたデータを使用する | Microsoft Docs
+description: デザイン サーフェイスにギャラリー要素を配置すると、Mobile Report Publisher によって、それに対してシミュレートされたデータが生成されます。 シミュレートされたデータを使用してプロトタイプを設計します。
 ms.date: 02/08/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6baabc36-58fb-4a98-bb9c-c42bafb16d0f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 15c2ebe8c7084e10e4b7ff1ad556ed465d91c799
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 39640b3ce6e8d3c8760e3c1a1153949426eba80c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62474871"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448361"
 ---
 # <a name="work-with-simulated-data-in-reporting-services-mobile-reports"></a>Reporting Services のモバイル レポートでシミュレートされたデータを使用する
 デザイン サーフェイスにギャラリー要素を配置すると、 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] は、その要素のシミュレートされたデータを即座に生成します。 このデータは、モバイル レポートを作成するときにさまざまな目的を果たします。   
@@ -38,9 +39,9 @@ ms.locfileid: "62474871"
   
 実際のデータにすべてのコントロールがバインドされたら、使用されなくなったシミュレートされたテーブルはモバイル レポートから自動的に削除されます。 デザイン サーフェイス上の要素によって参照されているシミュレートされたテーブルは削除できません。  
   
->**注**: シミュレートされたデータによって、モバイル レポートの全体的なサイズは増加しません。これは、これらのデータはモバイル レポートでシリアル化されず、実行時にその場で生成されるからです。  
+>**注**:シミュレートされたデータによって、モバイル レポートの全体的なサイズは増加しません。これは、これらのデータはモバイル レポートでシリアル化されず、実行時にその場で生成されるからです。  
   
-### <a name="see-also"></a>参照  
+### <a name="see-also"></a>関連項目  
 - [Create and publish mobile reports with SQL Server Mobile Report Publisher (SQL Server Mobile Report Publisher でモバイル レポートを作成し発行する)](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 -  [iPad アプリ (Power BI for iOS) で SQL Server モバイル レポートと KPI を表示する](https://pbiwebprod-docs.azurewebsites.net/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  
 -  [iPhone アプリ (Power BI for iOS) で SQL Server モバイル レポートと KPI を表示する](https://pbiwebprod-docs.azurewebsites.net/documentation/powerbi-mobile-iphone-kpis-mobile-reports)  

@@ -1,5 +1,6 @@
 ---
 title: HTML へのレンダリング (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーの HTML 表示拡張機能では、ページ分割されたレポートを HTML 形式として表示します。 他のページに組み込む完全な HTML ページまたはフラグメントが生成されることがあります。
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b6b8a27924bcceefe54d4a4663e3d55888920dbf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5862081622d9d5c1a42fa8806ae482f02919a7b3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77082480"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290878"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>HTML での表示 (レポート ビルダーおよび SSRS)
   XML 表示拡張機能では、ページ分割されたレポートが XML 形式で返されます。 また、完全な HTML ページを生成することも、他の HTML ページに埋め込むための HTML の一部分を生成することもできます。 すべての HTML は、UTF-8 エンコードで生成されます。  
@@ -27,11 +28,11 @@ ms.locfileid: "77082480"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="RenderingMHTML"></a> MHTML での表示  
+##  <a name="rendering-in-mhtml"></a><a name="RenderingMHTML"></a> MHTML での表示  
  HTML 表示拡張機能を使用すると、MHTML (MIME Encapsulation of Aggregate HTML Documents) でレポートを表示することもできます。 MHTML は、HTML を拡張して、画像などのエンコードされているオブジェクトを HTML ドキュメントに埋め込むことができるようにしたものです。 MHTML 表示拡張機能を使用すると、画像、ドキュメント、その他のバイナリ ファイルなどのリソースを、レポート HTML 内部の MIME 構造として単一のファイルに埋め込むことができます。 また、MHTML レポートは、すべてのリソースがレポートの中に含まれるので、電子メール メッセージに埋め込むのにも役立ちます。 実際に MHTML を表示するのは HTML 表示拡張機能ですが、この機能を MHTML 表示拡張機能と呼ぶこともあります。  
   
   
-##  <a name="BrowserSupport"></a> ブラウザー サポート  
+##  <a name="browser-support"></a><a name="BrowserSupport"></a> ブラウザー サポート  
  この表示拡張機能では、次のブラウザー バージョンをサポートしています。  
   
 -   Internet Explorer 5.5 以降  
@@ -43,7 +44,7 @@ ms.locfileid: "77082480"
  各ブラウザーで適切に処理されるようにするため、表示されるレポートはブラウザーによって多少異なる場合があります。 たとえば、テキスト ボックスには WritingMode というプロパティが表示されます。 このプロパティは Firefox でサポートされていません。  
   
   
-##  <a name="HTMLSpecificRenderingRules"></a> HTML 固有の表示規則  
+##  <a name="html-specific-rendering-rules"></a><a name="HTMLSpecificRenderingRules"></a> HTML 固有の表示規則  
  表示する際は、次の HTML 固有の規則が適用されます。  
   
 -   各 **ReportItems** コレクション内にアイテムが複数存在する場合は、レンダラーによって、すべてのアイテムを格納するための HTML テーブル構造が構築されます。  
@@ -61,7 +62,7 @@ ms.locfileid: "77082480"
 -   すべての座標とレポート アイテム サイズはミリメートルに変換されます。 スタイル プロパティなどの他のすべてのサイズは、元の単位のままになります。 0\.2 mm に満たないサイズや位置の差は 0 mm として扱われます。  
   
   
-##  <a name="Interactivity"></a> 対話性  
+##  <a name="interactivity"></a><a name="Interactivity"></a> 対話性  
  HTML では、いくつかの対話型要素がサポートされています。 具体的な動作について説明します。  
   
 ### <a name="show-and-hide"></a>表示/非表示  
@@ -84,10 +85,10 @@ ms.locfileid: "77082480"
   
  追加の検索機能は、ReportViewer Web フォーム コントロールによって提供されます。  
   
-##  <a name="FontsOnClient"></a> クライアント コンピューター上のフォント
+##  <a name="fonts-on-the-client-computer"></a><a name="FontsOnClient"></a> クライアント コンピューター上のフォント
  レポート内でカスタム フォントが使用されている場合、レポートが正しく表示されるためには、レポートの閲覧に使用するコンピューター (クライアント コンピューター) にカスタム フォントがインストールされている必要があります。 クライアント コンピューターにフォントがインストールされていない場合、レポートにはカスタム フォントの代わりにシステムの既定のフォントが表示されます。
   
-##  <a name="DeviceInfo"></a> デバイス情報設定  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a> デバイス情報設定  
  デバイス情報設定を変更することによって、このレンダラーに関する既定の設定の一部 (表示モードなど) を変更することができます。 詳細については、「 [HTML デバイス情報設定](../../reporting-services/html-device-information-settings.md)」を参照してください。  
   
   

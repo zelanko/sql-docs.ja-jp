@@ -1,5 +1,6 @@
 ---
 title: 拡張イベントのツール
+description: これらのツールでは、SQL Server 拡張イベント セッションが作成されて管理されます。 自分が作成したセッション以外にも、サーバーには、既定のシステム正常性セッションが存在します。
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,12 +14,12 @@ ms.assetid: d312a9ff-50ba-4721-baef-50bfd3169d38
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 811542608a33777a5e44183f65e44d8321a65c63
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 8359dfc1874f55542e02ca7f05e3ca6cfead1c07
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75234630"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79433689"
 ---
 # <a name="extended-events-tools"></a>拡張イベントのツール
 
@@ -34,14 +35,14 @@ ms.locfileid: "75234630"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell プロバイダー。 拡張イベント セッションの作成、変更、および管理に使用できる強力なツールです。 詳細については、「 [拡張イベントへの PowerShell プロバイダーの使用](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)」を参照してください。  
   
--   [https://login.microsoftonline.com/consumers/]([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) 拡張イベントのトピックに用意されているコード サンプルを作成し、実行することができます。 詳細については、「 [オブジェクト エクスプローラー](../../ssms/object/object-explorer.md)」を参照してください。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 拡張イベントのトピックに用意されているコード サンプルを作成し、実行することができます。 詳細については、「 [オブジェクト エクスプローラー](../../ssms/object/object-explorer.md)」を参照してください。  
   
  自分が作成したセッション以外にも、サーバーには、既定のシステム正常性セッションが存在します。 このセッションは、パフォーマンスの問題をトラブルシューティングするのに役立つシステム データを収集します。 詳細については、「 [system_health セッションの使用](../../relational-databases/extended-events/use-the-system-health-session.md)」を参照してください。  
   
 ## <a name="ddl-statements"></a>DDL ステートメント  
  拡張イベント セッションを作成、変更、および削除するには、次の DDL ステートメントを使用します。  
   
-|Name|[説明]|  
+|名前|説明|  
 |----------|-----------------|  
 |[CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)|イベントのソース、イベント セッション ターゲット、およびイベント セッション パラメーターを識別する拡張イベント セッション オブジェクトを作成します。|  
 |[ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)|イベント セッションの開始および停止、またはイベント セッションの構成変更を行います。|  
@@ -50,7 +51,7 @@ ms.locfileid: "75234630"
 ## <a name="catalog-views"></a>カタログ ビュー  
  イベント セッションの作成時に作成されたメタデータを取得するには、次のカタログ ビューを使用します。  
   
-|Name|[説明]|  
+|名前|説明|  
 |----------|-----------------|  
 |[sys.server_event_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql.md)|すべてのイベント セッションの定義を一覧表示します。|  
 |[sys.server_event_session_actions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-session-actions-transact-sql.md)|イベント セッションの各イベントのアクションごとに 1 行のデータを返します。|  
@@ -64,7 +65,7 @@ ms.locfileid: "75234630"
 > [!NOTE]  
 >  これらのビューには、セッションが開始されるまでセッション データは格納されません。  
   
-|Name|[説明]|  
+|名前|説明|  
 |----------|-----------------|  
 |[sys.dm_os_dispatcher_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-dispatcher-pools-transact-sql.md)|セッション ディスパッチャー プールに関する情報を返します。|  
 |[sys.dm_xe_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md)|イベント パッケージによって公開されるオブジェクトごとに 1 行のデータを返します。|  
@@ -80,7 +81,7 @@ ms.locfileid: "75234630"
 ## <a name="system-tables"></a>システム テーブル  
  次のシステム テーブルを使用して、SQL トレース イベントのクラスおよび列と等価な拡張イベントの情報を取得します。  
   
-|Name|[説明]|  
+|名前|説明|  
 |----------|-----------------|  
 |[trace_xe_event_map &#40;Transact-SQL&#41;](../../relational-databases/system-tables/extended-events-tables-trace-xe-event-map.md)|SQL トレース イベント クラスに割り当てられている拡張イベントのイベントごとに 1 行のデータを格納します。|  
 |[trace_xe_action_map &#40;Transact-SQL&#41;](../../relational-databases/system-tables/extended-events-tables-trace-xe-action-map.md)|SQL トレース列 ID に割り当てられている拡張イベントのアクションごとに 1 行のデータを格納します。|  

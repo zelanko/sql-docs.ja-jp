@@ -22,12 +22,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4cf6e85cef8d95e2b1bb167d482f36ec540196f6
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 68b29bd0497598909914cb71f9f180ccf57191c0
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79287316"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79486518"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server のインデックスのアーキテクチャとデザイン ガイド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +52,7 @@ XML インデックスの詳細については、[XML インデックスの概�
 
 フルテキスト インデックスの詳細については、「[フルテキスト インデックスの作成](../relational-databases/search/populate-full-text-indexes.md)」を参照してください。
   
-##  <a name="Basics"></a> インデックスのデザインの基礎  
+##  <a name="index-design-basics"></a><a name="Basics"></a> インデックスのデザインの基礎  
  通常の書籍について考えてみましょう。書籍の最後には、その書籍内の情報をすばやく検索するのに役立つインデックスがあります。 インデックスは、並べ替えられたキーワードのリストであり、各キーワードの横には、各キーワードが記載されているページを指す一連のページ番号があります。 SQL Server インデックスは、順序付けされた値のリストであり、値ごとに、これらの値が記載されているデータ [ページ](../relational-databases/pages-and-extents-architecture-guide.md)へのポインターがあります。 インデックス自体はページに格納され、SQL Server 内にインデックスページが作成されます。 通常の書籍では、インデックスが複数のページにまたがっており、たとえば "SQL" という単語が含まれるすべてのページへのポインターを見つける必要がある場合は、キーワードである "SQL" を含むインデックス ページが見るかるまで、ページをめくる必要があります。 そこで、書籍のすべてのページへのポインターに従います。  インデックスの先頭で、各文字が見つかるアルファベット順のリストが記載されたページを 1 ページを作成すれば、さらに最適化されます。 次に例を示します。"A から D - 121 ページ"、"E から G - 122 ページ" など。 この追加ページがあれば、インデックスのページをめくって始まりの場所を見つける手順を省くことができます。 このようなページは、通常の書籍にはありませんが、SQL Server インデックスにはあります。 この 1 ページは、インデックスのルート ページと呼ばれます。 ルート ページとは、SQL Server インデックスによって使用されるツリー構造の開始ページです。 ツリーの比喩で言えば、実際のデータへのポインターを含む最終ページは、ツリーの "リーフ ページ" と呼ばれます。 
 
  SQL Server インデックスとは、テーブルまたはビューに関連付けられたディスク上またはメモリ内の構造で、テーブルやビューからの行の取得を高速化します。 インデックスには、テーブル内またはビュー内の 1 つ以上の列から構築されたキーが含まれています。 ディスク上のインデックスの場合、これらのキーは 1 つのツリー構造 (B-Tree) 内に格納されます。SQL Server はこの構造を使用して、キー値に関連付けられた 1 つ以上の行を効率よく迅速に検出できます。  
@@ -83,7 +83,7 @@ XML インデックスの詳細については、[XML インデックスの概�
 5.  インデックスの最適な格納場所を決定します。 非クラスター化インデックスは、基になるテーブルと同じファイル グループまたは別のファイル グループに格納できます。 インデックスの格納場所により、ディスク I/O のパフォーマンスが向上し、その結果クエリのパフォーマンスを向上させることができます。 たとえば、非クラスター化インデックスを、テーブル ファイル グループとは別のディスク上にあるファイル グループに格納すると、複数のディスクを同時に読み取ることができるため、パフォーマンスが向上します。  
      また、クラスター化インデックスと非クラスター化インデックスでは、複数のファイル グループにまたがってパーティション構成を使用できます。 大きなテーブルやインデックスをパーティション分割すると、コレクション全体の整合性を維持しながら、データのサブセットに対するアクセスや管理を迅速かつ効率的に行うことができるので、大きなテーブルやインデックスを管理しやすくなります。 詳細については、「 [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)」を参照してください。 パーティション分割を検討するときは、インデックスを固定するかどうかを決定します。つまり、基本的にテーブルと同じ方法でパーティション分割するか、または別の方法でパーティション分割するかを決定するということです。   
 
-##  <a name="General_Design"></a> インデックスのデザインの全般的なガイドライン  
+##  <a name="general-index-design-guidelines"></a><a name="General_Design"></a> インデックスのデザインの全般的なガイドライン  
  経験豊富なデータベース管理者であれば適切なインデックス セットをデザインできますが、それほど複雑でないデータベースとワークロードであっても、この作業はきわめて複雑で、時間がかかり、間違いを犯しやすいものです。 使用するデータベース、クエリ、データ列の特性を理解することが、最適なインデックスをデザインする際に役に立ちます。  
   
 ### <a name="database-considerations"></a>データベースに関する注意点  
@@ -153,7 +153,7 @@ XML インデックスの詳細については、[XML インデックスの概�
   
 インデックスを最初に保存したときの特性をカスタマイズし、FILLFACTOR などのオプションを設定してパフォーマンスやメンテナンスを最適化できます。 また、パフォーマンスを最適化するために、ファイル グループやパーティション構成を使用してインデックスの保存場所を決定することもできます。  
   
-###  <a name="Index_placement"></a> ファイル グループまたはパーティション構成に対するインデックス配置  
+###  <a name="index-placement-on-filegroups-or-partitions-schemes"></a><a name="Index_placement"></a> ファイル グループまたはパーティション構成に対するインデックス配置  
  インデックスの設計について考えるときは、データベースに関連付けられたファイル グループ上にインデックスを配置することを検討する必要があります。 ファイル グループまたはパーティション構成を慎重に選択することで、クエリのパフォーマンスを向上できる場合があります。  
   
  既定では、インデックスが作成されるベース テーブルと同じファイル グループにインデックスも格納されます。 パーティション分割されていないクラスター化インデックスおよびベース テーブルは、常に同じファイル グループに存在します。 しかし、次の操作を実行できます。  
@@ -177,7 +177,7 @@ XML インデックスの詳細については、[XML インデックスの概�
   
 詳細については、「 [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)」を参照してください。  
   
-###  <a name="Sort_Order"></a> インデックス並べ替え順のデザイン ガイドライン  
+###  <a name="index-sort-order-design-guidelines"></a><a name="Sort_Order"></a> インデックス並べ替え順のデザイン ガイドライン  
  インデックスを定義する場合、インデックス キー列のデータを昇順と降順のどちらで格納する必要があるかを考慮する必要があります。 昇順は既定の並べ替え順で、以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]との互換性が維持されます。 CREATE INDEX、CREATE TABLE、および ALTER TABLE の各ステートメントの構文では、インデックスと制約の個別の列にキーワード ASC (昇順) と DESC (降順) を使用できます。  
   
  インデックスにキー値が格納される順序を指定することは、テーブルを参照しているクエリに ORDER BY 句があり、そのインデックスの 1 つ以上のキー列が ORDER BY 句によって異なる方向に指定されている場合に役立ちます。 このような場合、インデックスにより、クエリ プランで SORT 操作を実行する必要がなくなるので、クエリをより効率的に実行できるようになります。 たとえば、 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] の購買部のバイヤーが、業者から購入する製品の品質を評価する必要がある場合について考えてみます。 バイヤーにとって最も関心があるのは、これらの業者から配送された製品の中から、返品率の高い製品を見つけ出すことです。 次のクエリに示すように、この基準を満たすデータを取得するには、 `RejectedQty` テーブルの `Purchasing.PurchaseOrderDetail` 列を降順 (大から小) に並べ替え、 `ProductID` 列を昇順 (小から大) に並べ替える必要があります。  
@@ -207,7 +207,7 @@ ON Purchasing.PurchaseOrderDetail
   
  [!INCLUDE[ssDE](../includes/ssde-md.md)] は、どちらの方向でも同じように効率的に移動します。 `(RejectedQty DESC, ProductID ASC)` として定義されたインデックスは、ORDER BY 句の列の並べ替え方向が逆転されたクエリで引き続き使用できます。 たとえば、ORDER BY 句 `ORDER BY RejectedQty ASC, ProductID DESC` が含まれたクエリでは、このインデックスを使用できます。  
   
- 並べ替え順は、キー列のみに指定できます。 [sys.index_columns](../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md) カタログ ビューと INDEXKEY_PROPERTY 関数により、インデックス列が昇順と降順のどちらで格納されているかが報告されます。  
+ 並べ替え順序は、インデックスでキー列のみに指定できます。 [sys.index_columns](../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md) カタログ ビューと INDEXKEY_PROPERTY 関数により、インデックス列が昇順と降順のどちらで格納されているかが報告されます。  
 
 ## <a name="metadata"></a>Metadata  
 これらのメタデータ ビューを使って、インデックスの属性を表示します。 多くのアーキテクチャ情報が、これらのビューの一部に埋め込まれます。
@@ -228,7 +228,7 @@ ON Purchasing.PurchaseOrderDetail
 |[sys.dm_db_xtp_nonclustered_index_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-nonclustered-index-stats-transact-sql.md)|[sys.dm_db_xtp_table_memory_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md)|
 |[sys.hash_indexes &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md)|[sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)|  
 
-##  <a name="Clustered"></a> クラスター化インデックスのデザイン ガイドライン  
+##  <a name="clustered-index-design-guidelines"></a><a name="Clustered"></a> クラスター化インデックスのデザイン ガイドライン  
  クラスター化インデックスは、データ行をそのキー値に基づいて並べ替え、テーブル内に格納します。 データ行自体は 1 つの順序でしか並べ替えられないため、1 つのテーブルに設定できるクラスター化インデックスは 1 つだけです。 ほとんどの場合、各テーブルには、次の条件を満たす単一または複数の列に基づいて定義されたクラスター化インデックスを作成することをお勧めします。  
   
 -   頻繁に使用されるクエリに使用可能。  
@@ -302,7 +302,7 @@ ON Purchasing.PurchaseOrderDetail
   
     広範なキーは、複数の列または複数のサイズの大きな列を組み合わせたものです。 クラスター化インデックスのキー値は、すべての非クラスター化インデックスにより、参照キーとして使用されます。 非クラスター化インデックスのエントリには、クラスター化キー以外に、非クラスター化インデックスのキー列も格納されるため、同じテーブルに非クラスター化インデックスが定義されている場合は、サイズがかなり大きくなります。  
   
-##  <a name="Nonclustered"></a> 非クラスター化インデックスのデザイン ガイドライン  
+##  <a name="nonclustered-index-design-guidelines"></a><a name="Nonclustered"></a> 非クラスター化インデックスのデザイン ガイドライン  
  非クラスター化インデックスには、インデックス キー値、およびテーブル データの格納場所を指す行ロケーターが含まれています。 1 つのテーブルまたはインデックス付きビューに複数の非クラスター化インデックスを作成できます。 一般に、非クラスター化インデックスは、頻繁に使用するクエリで、クラスター化インデックスで対応されないクエリのパフォーマンスを向上するようにデザインします。  
   
  クエリ オプティマイザーでデータ値を検索するときは、本の索引を使用する場合と同じように、非クラスター化インデックスを検索してテーブル内でのデータ値の位置を探し、その位置から直接データを取得します。 非クラスター化インデックスには、クエリの検索対象であるデータ値のテーブル内での位置を正確に記述するエントリが格納されているので、完全一致比較クエリの場合は非クラスター化インデックスが最適です。 たとえば、 `HumanResources. Employee` テーブルに対してクエリを実行し、ある 1 人の上司に直属するすべての従業員を取得する場合、クエリ オプティマイザーは `IX_Employee_ManagerID`をキー列として、非クラスター化インデックス `ManagerID` を使用することができます。 クエリ オプティマイザーはこのインデックスの中から、指定された `ManagerID`と一致するすべてのエントリを迅速に検索できます。 インデックスの各エントリのポインターは、テーブル (またはクラスター化インデックス) の、対応するデータが見つかる正確なページおよび行を指しています。 クエリ オプティマイザーは、インデックスの中からすべてのエントリを検出した後、正確なページおよび行に直接移動してデータを取得できます。  
@@ -371,7 +371,7 @@ ON Purchasing.PurchaseOrderDetail
   
      1 と 0 のみなど異なる値が少数しかない場合、テーブル スキャンを行う方が通常は効率的なので、ほとんどのクエリではインデックスが使用されません。 このようなデータの場合は、少数の行のみに含まれる異なる値に対してフィルター選択されたインデックスを作成することを検討してください。 たとえば、ほとんどの値が 0 の場合は、クエリ オプティマイザーで 1 を含むデータ行に対してフィルター選択されたインデックスを使用できます。  
   
-####  <a name="Included_Columns"></a> 付加列の使用による非クラスター化インデックスの拡張  
+####  <a name="use-included-columns-to-extend-nonclustered-indexes"></a><a name="Included_Columns"></a> 付加列の使用による非クラスター化インデックスの拡張  
  非クラスター化インデックスのリーフ レベルに非キー列を追加することにより、非クラスター化インデックスの機能を拡張できます。 非キー列を含めることにより、より多くのクエリをカバーする非クラスター化インデックスを作成できます。 これは、非キー列には次の利点があるためです。  
   
 -   非キー列には、インデックス キー列として許可されていないデータ型を設定できる。  
@@ -471,7 +471,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  データ変更によるパフォーマンスへの影響や追加ディスク領域の要件よりも、クエリのパフォーマンスから得られる利点の方が大きいかどうかを判断する必要があります。  
   
-##  <a name="Unique"></a> 一意インデックスのデザイン ガイドライン  
+##  <a name="unique-index-design-guidelines"></a><a name="Unique"></a> 一意インデックスのデザイン ガイドライン  
  一意インデックスを使用すると、インデックス キーの値が重複することがないので、テーブルのすべての行を一意にすることができます。 一意であることがデータ自体の特性である場合にだけ、一意インデックスを指定します。 たとえば、主キーが `NationalIDNumber` で、 `HumanResources.Employee` テーブルの `EmployeeID`列の値が必ず一意になるようにする場合は、 `NationalIDNumber` 列で UNIQUE 制約を作成します。 ユーザーが複数の従業員に対してその列に同じ値を入力しようとすると、エラー メッセージが表示され、重複する値は入力されません。  
   
  複数列に一意インデックスを指定すると、インデックス キーの値の組み合わせはそれぞれ一意になります。 たとえば、 `LastName`列、 `FirstName`列、および `MiddleName` 列の組み合わせに一意インデックスを作成した場合、テーブル内の 2 つの行がこれらの列に対して同じ値の組み合わせを持つことはできません。  
@@ -495,7 +495,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
 -   一意非クラスター化インデックスには、付加非キー列を含めることができます。 詳細については、 [付加列インデックス](#Included_Columns)に関する記述を参照してください。  
   
   
-##  <a name="Filtered"></a> フィルター選択されたインデックスのデザイン ガイドライン  
+##  <a name="filtered-index-design-guidelines"></a><a name="Filtered"></a> フィルター選択されたインデックスのデザイン ガイドライン  
  フィルター選択されたインデックスは、最適化された非クラスター化インデックスであり、適切に定義されたデータのサブセットから選択するクエリに対応する際に特に適しています。 フィルター選択されたインデックスは、フィルター述語を使用して、テーブル内の一部の行にインデックスを作成します。 フィルター選択されたインデックスを適切にデザインすると、クエリのパフォーマンスが向上し、インデックスのメンテナンス コストを削減して、テーブル全体のインデックスと比較してインデックスのストレージ コストを削減することができます。  
   
 **適用対象**: [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
@@ -635,7 +635,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
  データ変換を比較演算子の左辺から右辺に移動すると、変換の意味が変わることがあります。 この例では、CONVERT 演算子を右辺に追加したときに、整数の比較から **varbinary** の比較に変わりました。  
   
-## <a name="columnstore_index"></a> 列ストア インデックスのデザイン ガイドライン
+## <a name="columnstore-index-design-guidelines"></a><a name="columnstore_index"></a> 列ストア インデックスのデザイン ガイドライン
 
 *columnstore index* は、列ストアと呼ばれる列指向データ形式を使用してデータを格納、取得、および管理するためのテクノロジです。 詳細については、「[列ストア インデックス - 概要](../relational-databases/indexes/columnstore-indexes-overview.md)」を参照してください。 
 
@@ -725,7 +725,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
  
 詳細については、「[列ストア インデックス - 設計ガイダンス](../relational-databases/indexes/columnstore-indexes-design-guidance.md)」を参照してください。
 
-##  <a name="hash_index"></a> ハッシュ インデックスのデザイン ガイドライン 
+##  <a name="hash-index-design-guidelines"></a><a name="hash_index"></a> ハッシュ インデックスのデザイン ガイドライン 
 
 すべてのメモリ最適化テーブルには少なくとも 1 つのインデックスが必要です。このインデックスによって行が連結されるためです。 メモリ最適化テーブルでは、すべてのインデックスもメモリ最適化されます。 ハッシュ インデックスは、メモリ最適化テーブルで使用できるインデックスの種類の 1 つです。 詳細については、「[メモリ最適化テーブルのインデックス](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)」を参照してください。
 
@@ -759,7 +759,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
 ![hekaton_tables_23d](../relational-databases/in-memory-oltp/media/hekaton-tables-23d.png "インデックス キーがハッシュ関数に入力され、ハッシュ バケットのアドレスが出力されます。これはチェーンの先頭を示します。")  
 
-### <a name="configuring_bucket_count"></a> ハッシュ インデックスのバケット数の構成
+### <a name="configuring-the-hash-index-bucket-count"></a><a name="configuring_bucket_count"></a> ハッシュ インデックスのバケット数の構成
 ハッシュ インデックスのバケット数はインデックス作成時に指定しますが、`ALTER TABLE...ALTER INDEX REBUILD` 構文を使用して変更することができます。  
   
 ほとんどの場合、バケット数は、理想的にはインデックス キーの個別の値の数の 1 から 2 倍の範囲内にします。   
@@ -794,7 +794,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
 
 ハッシュ インデックスを使用し、一意のインデックス キーの数が行の数より 100 倍 (またはそれ以上) 多い場合は、大きい行チェーンを回避するために bucket_count を増やすか、代わりに[非クラスター化インデックス](#inmem_nonclustered_index)を使用することをお勧めします。
 
-### <a name="h3-b2-declaration-limitations"></a> 宣言に関する考慮事項  
+### <a name="declaration-considerations"></a><a name="h3-b2-declaration-limitations"></a> 宣言に関する考慮事項  
 ハッシュ インデックスは、メモリ最適化テーブルにのみ存在できます。 ディスク ベース テーブルには存在できません。  
   
 ハッシュ インデックスは、次のように宣言できます。  
@@ -817,7 +817,7 @@ HASH (Column2) WITH (BUCKET_COUNT = 64);
   
 後で前のバージョンが不要になったときに、ガベージ コレクション (GC) スレッドがバケットとそのリンク リストを横断して、前のエントリをクリーンアップします。 GC スレッドのパフォーマンスは、リンク リストのチェーン長が短い場合に優れています。 詳細については、「[インメモリ OLTP ガベージ コレクション](../relational-databases/in-memory-oltp/in-memory-oltp-garbage-collection.md)」を参照してください。 
 
-##  <a name="inmem_nonclustered_index"></a> メモリ最適化非クラスター化インデックスのデザイン ガイドライン 
+##  <a name="memory-optimized-nonclustered-index-design-guidelines"></a><a name="inmem_nonclustered_index"></a> メモリ最適化非クラスター化インデックスのデザイン ガイドライン 
 
 非クラスター化インデックスは、メモリ最適化テーブルで使用できるインデックスの種類の 1 つです。 詳細については、「[メモリ最適化テーブルのインデックス](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)」を参照してください。
 
@@ -886,7 +886,7 @@ Bw ツリーのインデックス ページは、1 行の格納から最大 8 KB
 > [!TIP]
 > 非クラスター化インデックス キーの列に、多数の重複値がある場合は、更新、挿入、および削除に関してパフォーマンスが低下します。 このような場合にパフォーマンスを改善する方法の 1 つは、非クラスター化インデックスに列を追加することです。
 
-##  <a name="Additional_Reading"></a> その他の情報  
+##  <a name="additional-reading"></a><a name="Additional_Reading"></a> その他の情報  
 [CREATE INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-index-transact-sql.md)    
 [ALTER INDEX &#40;Transact-SQL&#41;](../t-sql/statements/alter-index-transact-sql.md)   
 [CREATE XML INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-xml-index-transact-sql.md)  

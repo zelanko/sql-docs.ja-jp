@@ -1,5 +1,6 @@
 ---
 title: SQL Server 拡張イベント セッション
+description: SQL Server 拡張イベント セッションは、拡張イベント エンジンをホストしている SQL Server プロセス内で作成されます。 セッション状態とセッションの内容について説明します。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,12 +15,12 @@ ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0352441798ddffc96b057876768f66f0c9d4a10a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: cce8dfb0d96059f577adb4e86e6fc5556d9fd90c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75242909"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79487670"
 ---
 # <a name="sql-server-extended-events-sessions"></a>SQL Server 拡張イベント セッション
 
@@ -38,7 +39,7 @@ ms.locfileid: "75242909"
   
  前の図を見ると、イベント セッションに対して異なる DDL コマンドが発行されたときに、セッション状態が変化していることがわかります。 このような状態の変化について次の表で説明します。  
   
-|図ラベル|DDL ステートメント|[説明]|  
+|図ラベル|DDL ステートメント|説明|  
 |------------------------|-------------------|-----------------|  
 |作成|CREATE EVENT SESSION|CREATE EVENT SESSION によって提供されたメタデータを含むセッション オブジェクトがホスト プロセスによって作成されます。 ホスト プロセスは、セッション定義を検証し、ユーザーの権限レベルを検証した後、メタデータを master データベースに格納します。 このときセッションはまだアクティブではありません。|  
 |Alter|ALTER EVENT SESSION, STATE=START|ホスト プロセスによってセッションが開始されます。 ホスト プロセスは、格納されているメタデータを読み取って、セッション定義を検証し、ユーザーの権限レベルを検証して、セッションを作成します。 イベントやターゲットなどのセッション オブジェクトが読み込まれ、イベント処理がアクティブになります。|  

@@ -1,5 +1,6 @@
 ---
 title: レポート ビルダーの起動 | Microsoft Docs
+description: レポート ビルダーは、スタンドアロンのレポート作成環境です。 初めて起動すると、Microsoft ダウンロード センターからダウンロードするように求められます。
 ms.date: 01/03/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cd186252204a82e115387b625503945c50604460
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: bdb67ef174ec849233826b65a2d90f08e8e4eb7d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75721387"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290764"
 ---
 # <a name="start-report-builder"></a>レポート ビルダーの起動
 
@@ -37,7 +38,7 @@ ms.locfileid: "75721387"
   
  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] を Web ポータルまたは SharePoint サイトから起動したときに [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] の以前のバージョンが開く場合は、Web ポータルまたは SharePoint サイト上のバージョンを更新できる管理者に相談してください。  
   
-## <a name="to-start-includessrbnoversionincludesssrbnoversionmd-from-the-includessrsnoversionincludesssrsnoversion-mdmd-web-portal"></a>[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] を [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web ポータルから起動するには  
+## <a name="to-start-ssrbnoversion-from-the-ssrsnoversion-web-portal"></a>[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] を [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web ポータルから起動するには  
   
 1.  Web ブラウザーで、アドレス バーにレポート サーバーの URL を入力します。 既定の URL は https://\<*サーバー名*>/reports です。  
   
@@ -49,7 +50,7 @@ ms.locfileid: "75721387"
   
      次回からは、[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] が開いて、ページ分割されたレポートを作成したり、レポート サーバー上のレポートを開いたりできます。  
   
-## <a name="to-start-includessrbnoversionincludesssrbnoversionmd-in-sharepoint-integrated-mode"></a>[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] を SharePoint 統合モードで起動するには  
+## <a name="to-start-ssrbnoversion-in-sharepoint-integrated-mode"></a>[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] を SharePoint 統合モードで起動するには  
   
 1.  目的のライブラリがある SharePoint サイトに移動します。  
   

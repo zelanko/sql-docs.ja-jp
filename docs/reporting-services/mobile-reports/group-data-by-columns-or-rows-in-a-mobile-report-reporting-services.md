@@ -1,5 +1,6 @@
 ---
 title: モバイル レポートのデータを行または列によってグループ化する | Reporting Services | Microsoft Docs
+description: Mobile Report Publisher では、多数の種類のグラフのデータを列または行によって整理できます。 この記事では、列または行ごとに構造化されたデータを示します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b9ebd36c-a337-47ae-83e5-6c2f2144eb52
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c3a4db20da76fa0188db3171f879e6fdcaefdacd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f28c3feb8d8cd2fe68ab093241ac4390768b6487
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63200898"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448236"
 ---
 # <a name="group-data-by-columns-or-rows-in-a-mobile-report--reporting-services"></a>モバイル レポートのデータを行または列によってグループ化する |Reporting Services
 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]は、多数の種類のグラフのデータを列または行によって整理できます。 次の手順に従ってください。
@@ -60,5 +61,5 @@ ms.locfileid: "63200898"
 
    今回のグラフの各バーは、Category 列の各カテゴリの値を表しています。
 
-### <a name="see-also"></a>参照
+### <a name="see-also"></a>関連項目
 * [Reporting Services モバイル レポートの視覚エフェクト](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)

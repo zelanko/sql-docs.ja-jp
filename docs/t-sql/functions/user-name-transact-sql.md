@@ -24,12 +24,12 @@ ms.assetid: ab32d644-4228-449a-9ef0-5a975c305775
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2f8a3f4dbdbaa9cbd2cf1c99a86ad6f3573ab11
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 21c085bd942b368259444698cabf5dfa44d0fbe1
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73844337"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79526787"
 ---
 # <a name="user_name-transact-sql"></a>USER_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,6 +53,9 @@ USER_NAME ( [ id ] )
   
 ## <a name="remarks"></a>解説  
  *id* を省略した場合は、現在のコンテキストの現在のユーザーであると見なされます。 パラメーターに "NULL" という語が含まれていると、NULL が返されます。 EXECUTE AS ステートメントの実行後に *id* を指定せずに USER_NAME を呼び出した場合、USER_NAME では権限を借用したユーザーの名前が返されます。 Windows プリンシパルがグループのメンバーシップを使ってデータベースにアクセスした場合、USER_NAME はグループではなく Windows プリンシパルの名前を返します。  
+ 
+> [!NOTE]
+> USER_NAME 関数は Azure SQL Database でサポートされていますが、USER_NAME と一緒に *Execute as* を使用することは Azure SQL Database ではサポートされていません。 
   
 ## <a name="examples"></a>例  
   
@@ -123,7 +126,7 @@ Zelig
 DBO
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-user_name-without-an-id"></a>E. ID を指定せずに USER_NAME を使用する  
  次の例では、ID を指定せずに、現在のユーザーの名前を検索します。  

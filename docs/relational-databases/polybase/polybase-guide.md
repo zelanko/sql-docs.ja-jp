@@ -1,5 +1,6 @@
 ---
 title: PolyBase とは | Microsoft Docs
+description: PolyBase を使用すると、Hadoop や Azure Blob Storage など、外部データ ソースからデータを読み取る Transact-SQL クエリを SQL Server インスタンスで処理できるようになります。
 ms.date: 06/10/2019
 ms.prod: sql
 ms.technology: polybase
@@ -18,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions||>=aps-pdw-2016||=azure-sqldw-latest'
-ms.openlocfilehash: 7e9e09cece42b84e5fa9691aa0d353d2ed22431b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: d90503571b10aa614af24a4ee35601b266ab290f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71710580"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80217135"
 ---
 # <a name="what-is-polybase"></a>PolyBase とは
 

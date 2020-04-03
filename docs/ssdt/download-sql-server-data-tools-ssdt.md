@@ -13,12 +13,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 02/20/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 6be69f873785f413b4edddf42f303e8eb7d4b14c
-ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
+ms.openlocfilehash: f6a7628d324236a8fbbe7afa5b80c746f95fec13
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77652941"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271488"
 ---
 # <a name="download-sql-server-data-tools-ssdt-for-visual-studio"></a>SQL Server Data Tools (SSDT) for Visual Studio のダウンロード
 
@@ -79,10 +79,10 @@ Analysis Services、Integration Services、Reporting Services プロジェクト
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>SSDT for VS 2017 (スタンドアロン インストーラー)
 
-[![ダウンロード](../ssdt/media/download.png) SSDT for Visual Studio 2017 (15.9.3) をダウンロードする](https://go.microsoft.com/fwlink/?linkid=2110080)
+[![ダウンロード](../ssdt/media/download.png) SSDT for Visual Studio 2017 (15.9.4) をダウンロードする](https://go.microsoft.com/fwlink/?linkid=2124518 )
 
 > [!IMPORTANT]
-> * SSDT for Visual Studio 2017 (15.9.3) をインストールする前に、*Analysis Services プロジェクト*と *Reporting Services プロジェクト*の拡張機能がインストールされている場合はアンインストールし、すべての VS インスタンスを閉じます。
+> * SSDT for Visual Studio 2017 (15.9.4) をインストールする前に、*Analysis Services プロジェクト*と *Reporting Services プロジェクト*の拡張機能がインストールされている場合はアンインストールし、すべての VS インスタンスを閉じます。
 > * SQL Server 2017 用の受信トレイ コンポーネント Power Query ソースが削除されました。 すぐに使用できるコンポーネントとして SQL Server 2017 および 2019 用の Power Query ソースを発表しました。これは[こちら](https://www.microsoft.com/download/details.aspx?id=100619)からダウンロードできます。
 > * SQL Server 2019 用の受信トレイ コンポーネント Microsoft Oracle Connector が削除されました。 すぐに使用できるコンポーネントとして SQL Server 2019 用の Microsoft Oracle Connector を発表しました。これは[こちら](https://www.microsoft.com/download/details.aspx?id=58228)からダウンロードできます。
 
@@ -98,17 +98,17 @@ SSDT for Visual Studio 2017 の[システム要件](https://docs.microsoft.com/v
 
 **SSDT for VS 2017** の今回のリリースは、次の言語でインストールできます。
 
-* [簡体中国語]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x804)
-* [繁体中国語]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x404)
-* [英語 (米国)]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x409)
-* [フランス語]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x40c)
-* [ドイツ語]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x407)
-* [イタリア語]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x410)
-* [日本語]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x411)
-* [韓国語]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x412)
-* [ポルトガル語 (ブラジル)]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x416)
-* [ロシア語]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x419)
-* [スペイン語]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x40a)
+* [簡体中国語]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x804)
+* [繁体中国語]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x404)
+* [英語 (米国)]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x409)
+* [フランス語]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x40c)
+* [ドイツ語]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x407)
+* [イタリア語]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x410)
+* [日本語]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x411)
+* [韓国語]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x412)
+* [ポルトガル語 (ブラジル)]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x416)
+* [ロシア語]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x419)
+* [スペイン語]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x40a)
 
 ### <a name="considerations-and-limitations"></a>考慮事項と制限事項
 
@@ -129,8 +129,6 @@ SSDT for Visual Studio 2017 の[システム要件](https://docs.microsoft.com/v
 3. 引き続き、オンラインのときに、次のコマンドのいずれかを実行し、オフライン インストールに必要なすべてのファイルをダウンロードします。 `--layout` オプションの使用がキーとなり、オフライン インストールのために実際のファイルがダウンロードされます。 `<filepath>` はファイルを保存する実際のレイアウトのパスに置き換えます。
    1. 特定の言語には、`vs_sql.exe --layout c:\<filepath> --lang en-us` のようにロケールを渡します (1 つの言語は 1 GB まで)。
    1. すべての言語には、`vs_sql.exe --layout c:\<filepath>` のように `--lang` 引数を省略します (すべての言語は 3.9 GB まで)。
-
-4. `SSDT-Setup-ENU.exe /layout c:\<filepath>` を実行して、VS2017 ファイルがダウンロードされたのと同じ `<filepath>` の場所に SSDT ペイロードを抽出します。 このアクションにより、両方からのすべてのファイルが 1 つのレイアウト フォルダーにまとめられます。
 
 前述の手順を完了したら、以下の手順を**オフライン**で実行できます。
 

@@ -1,5 +1,6 @@
 ---
 title: カスタム レポート アイテムのアーキテクチャ | Microsoft Docs
+description: カスタム レポート アイテムのアーキテクチャは、RDL でネイティブ サポートされていない機能を開発者が追加することを可能にする拡張機能です。そのしくみについて説明します。
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2a88ea46-c9f8-4dd7-aad1-16de11da4f06
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 15e81e7cc32e32f0cfc56da2a3ec3bb0983dde6d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 039afae1b8be540869930055e77320c27857e23d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63194286"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216961"
 ---
 # <a name="custom-report-item-architecture"></a>カスタム レポート アイテムのアーキテクチャ
   カスタム レポート アイテムは、レポート定義言語 (RDL) の拡張機能です。開発者は、カスタム レポート アイテムを使用して、RDL ではネイティブでサポートされない機能を追加するか、既存のコントロールの機能を拡張することができます。 カスタム レポート アイテムには、2 つのメイン コンポーネントである、実行時コンポーネントとデザイン時コンポーネントがあります。 これらのコンポーネントは、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] アセンブリとして実装され、CLS 準拠の言語で作成できます。  

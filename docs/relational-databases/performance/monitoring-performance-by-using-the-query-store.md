@@ -1,7 +1,7 @@
 ---
 title: クエリのストアを使用した、パフォーマンスの監視 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/04/2020
+ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 02658b617400f33b5a648dab43953a041f5c2936
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
+ms.openlocfilehash: bd1dde8b4b98041ed8a9d07c82d52f8d202ed0c9
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288466"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448178"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>クエリのストアを使用した、パフォーマンスの監視
 
-[!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のクエリのストア機能により、クエリ プランの選択やパフォーマンスを把握できます。 これにより、クエリ プランの変更によって生じるパフォーマンスの違いがすばやくわかるようになり、パフォーマンス上のトラブルシューティングを簡略化できます。 クエリのストアは、自動的にクエリ、プラン、および実行時統計の履歴をキャプチャし、確認用に保持します。 データは時間枠で区分されるため、データベースの使用パターンを表示して、サーバー上でクエリ プランが変わった時点を確認することができます。 [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) オプションを使用してクエリ ストアを構成できます。
 
@@ -303,35 +303,44 @@ ALTER DATABASE <db_name> SET QUERY_STORE CLEAR;
 
 **アドホック クエリの削除**
 
-この操作は、24 時間以上前に 1 回実行しただけのクエリを削除します。
+これにより、アドホック クエリと内部クエリがクエリ ストアから 3 分ごとに削除されるため、クエリ ストアの領域が不足することはなく、本当に追跡する必要があるクエリが削除されることもありません。
 
 ```sql
+SET NOCOUNT ON
+-- This purges adhoc and internal queries from the query store every 3 minutes so that the
+-- query store does not run out of space and remove queries we really need to track
+DECLARE @command varchar(1000)
+
+SELECT @command = 'IF ''?'' NOT IN(''master'', ''model'', ''msdb'', ''tempdb'') BEGIN USE ?
+EXEC(''
 DECLARE @id int
 DECLARE adhoc_queries_cursor CURSOR
 FOR
 SELECT q.query_id
 FROM sys.query_store_query_text AS qt
 JOIN sys.query_store_query AS q
-    ON q.query_text_id = qt.query_text_id
+ON q.query_text_id = qt.query_text_id
 JOIN sys.query_store_plan AS p
-    ON p.query_id = q.query_id
+ON p.query_id = q.query_id
 JOIN sys.query_store_runtime_stats AS rs
-    ON rs.plan_id = p.plan_id
-GROUP BY q.query_id
-HAVING SUM(rs.count_executions) < 2
-AND MAX(rs.last_execution_time) < DATEADD (hour, -24, GETUTCDATE())
-ORDER BY q.query_id ;
+ON rs.plan_id = p.plan_id
+WHERE q.is_internal_query = 1 ' -- is it an internal query then we dont care to keep track of it
 
+' OR q.object_id = 0' -- if it does not have a valid object_id then it is an adhoc query and we dont care about keeping track of it
+' GROUP BY q.query_id
+HAVING MAX(rs.last_execution_time) < DATEADD (minute, -5, GETUTCDATE()) ' -- if it has been more than 5 minutes since the adhoc query ran
+' ORDER BY q.query_id ;
 OPEN adhoc_queries_cursor ;
 FETCH NEXT FROM adhoc_queries_cursor INTO @id;
 WHILE @@fetch_status = 0
-    BEGIN
-        PRINT @id
-        EXEC sp_query_store_remove_query @id
-        FETCH NEXT FROM adhoc_queries_cursor INTO @id
-    END
+BEGIN
+EXEC sp_query_store_remove_query @id
+FETCH NEXT FROM adhoc_queries_cursor INTO @id
+END
 CLOSE adhoc_queries_cursor ;
 DEALLOCATE adhoc_queries_cursor;
+'') END' ;
+EXEC sp_MSforeachdb @command
 ```
 
 不要になったデータを消去する別のロジックを利用した独自のプロシージャを定義できます。

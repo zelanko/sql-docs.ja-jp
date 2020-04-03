@@ -1,7 +1,7 @@
 ---
 title: SQL Server on Linux を Active Directory に参加させる
 titleSuffix: SQL Server
-description: ''
+description: この記事では、SQL Server Linux ホスト マシンを AD ドメインに参加させるためのガイダンスを提供します。 組み込みの SSSD パッケージを使用することも、サードパーティの AD プロバイダーを使用することもできます。
 author: Dylan-MSFT
 ms.author: dygray
 ms.reviewer: vanto
@@ -9,12 +9,12 @@ ms.date: 04/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 5999a50e793cb29ea67075d0fa36454cdb58a67d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c787409d4e8772d89fc748d39c605506f5dcb520
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76761876"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216203"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Linux ホスト上の SQL Server を Active Directory ドメインに参加させる
 
@@ -129,7 +129,7 @@ ping contoso.com
 - [オプション 1: SSSD パッケージを使用する](#option1)
 - [オプション 2: サードパーティの openldap プロバイダー ユーティリティを使用する](#option2)
 
-### <a id="option1"></a> オプション 1: SSSD パッケージを使用して AD ドメインに参加する
+### <a name="option-1-use-sssd-package-to-join-ad-domain"></a><a id="option1"></a> オプション 1: SSSD パッケージを使用して AD ドメインに参加する
 
 この方法では、**realmd** パッケージと **sssd** パッケージを使用して、SQL Server ホストを AD ドメインに参加させます。
 
@@ -203,7 +203,7 @@ SQL Server ホストを Active Directory ドメイン に参加させるには�
 
 詳しくは、[ID ドメインの検出と参加](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html)に関する Red Hat のドキュメントを参照してください。
 
-### <a id="option2"></a> オプション 2: サードパーティの openldap プロバイダー ユーティリティを使用する
+### <a name="option-2-use-third-party-openldap-provider-utilities"></a><a id="option2"></a> オプション 2: サードパーティの openldap プロバイダー ユーティリティを使用する
 
 [PBIS](https://www.beyondtrust.com/)、[VAS](https://www.oneidentity.com/products/authentication-services/)、[Centrify](https://www.centrify.com/) などのサードパーティ製ユーティリティを使用できます。 この記事では、個々のユーティリティの手順については説明しません。 最初に、これらのユーティリティのいずれかを使って、SQL Server 用 Linux ホストをドメインに参加させる必要があります。  
 

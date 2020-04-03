@@ -24,12 +24,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: mikeray
-ms.openlocfilehash: 7327d63e9c22ab1020c885e9b372c444c485de8d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 68ad6f8f3c56b094b5d14d369452d78237b6dcee
+ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288556"
+ms.locfileid: "80402658"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>SQL Server 2019 on Linux のエディションとサポートされる機能
 
@@ -227,6 +227,7 @@ Developer Edition では引き続き、[SQL Server 分散再生](../tools/distri
 | **SQL Server エージェント** |  サブシステム: CmdExec、PowerShell、キュー リーダー、SSIS、SSAS、SSRS |
 | &nbsp; | 警告 |
 | &nbsp; | 管理対象のバックアップ |
+| &nbsp; | MSX と TSX を使用するマルチサーバー管理 |
 | **高可用性** | データベース ミラーリング  |
 | **Security** | 拡張キー管理 |
 | &nbsp; | リンク サーバーに対する AD 認証 | 

@@ -1,7 +1,7 @@
 ---
-title: JDBC ドライバーの展開 | Microsoft Docs
+title: JDBC ドライバーの展開
 ms.custom: ''
-ms.date: 01/20/2020
+ms.date: 03/13/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,40 +10,43 @@ ms.topic: conceptual
 ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 99ca0fab9a23689ac9c20cad6ebf0d94dd7b2113
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.openlocfilehash: d7e66360e08646a623aec5ed6f0b0f92d6ac62bf
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77004675"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79433799"
 ---
 # <a name="deploying-the-jdbc-driver"></a>JDBC ドライバーの展開
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] に依存するアプリケーションを展開する場合、使用するアプリケーションと共に JDBC ドライバーを再配布する必要があります。 Windows オペレーティング システムのコンポーネントである Windows Data Access Component (Windows DAC) とは異なり、JDBC ドライバーは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のコンポーネントであると見なされます。  
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] に依存するアプリケーションを展開する場合、使用するアプリケーションと共に JDBC ドライバーを再配布する必要があります。 Windows オペレーティング システムのコンポーネントである Windows Data Access Component (Windows DAC) とは異なり、JDBC ドライバーは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のコンポーネントであると見なされます。  
   
- アプリケーションと共に JDBC ドライバーを展開する方法には 2 種類あります。 1 つは、JDBC ドライバーのファイルを、独自のカスタム インストール パッケージの一部として含める方法です。 2 つ目の方法では、Microsoft によって提供される JDBC インストール パッケージを使用します。これは、[デベロッパー センター内の Microsoft JDBC Driver for SQL Server](https://go.microsoft.com/fwlink/?LinkId=70166) に関するページからダウンロードできます。  
+アプリケーションと共に JDBC ドライバーを展開する方法には 2 種類あります。 1 つは、JDBC ドライバーのファイルを、独自のカスタム インストール パッケージの一部として含める方法です。 2 つ目の方法では、Microsoft によって提供される JDBC インストール パッケージを使用します。これは、[Microsoft JDBC Driver for SQL Server のダウンロード ページ](download-microsoft-jdbc-driver-for-sql-server.md)からダウンロードできます。  
   
- 以下のセクションでは、Windows および UNIX オペレーティング システム上で JDBC インストール パッケージを使用する方法について説明します。  
+以下のセクションでは、Windows および UNIX オペレーティング システム上で JDBC インストール パッケージを使用する方法について説明します。  
   
 > [!NOTE]  
->  一般的な Java アプリケーションの展開については、Java の Web サイトを参照してください。  
+> 一般的な Java アプリケーションの展開については、Java の Web サイトを参照してください。  
   
-## <a name="deploying-the-jdbc-driver-on-windows-systems"></a>Windows システム上での JDBC ドライバーの展開  
- Windows オペレーティング システム上で JDBC ドライバーを展開する場合、zip 形式のインストール パッケージをアンパックする必要があります。これは通常、`sqljdbc_<version>_<language>.zip` という名前です。
+## <a name="deploying-the-jdbc-driver-on-windows-systems"></a>Windows システム上での JDBC ドライバーの展開
 
-## <a name="deploying-the-driver-on-unix-systems"></a>UNIX システム上での JDBC ドライバーの展開 
- UNIX オペレーティング システム上で JDBC ドライバーを展開する場合、GZIP ファイル形式のインストール パッケージを使用する必要があります。これは通常、`sqljdbc_<version>_<language>.tar.gz` という名前です。  
+Windows オペレーティング システム上で JDBC ドライバーを展開する場合、zip 形式のインストール パッケージをアンパックする必要があります。これは通常、`sqljdbc_<version>_<language>.zip` という名前です。
+
+## <a name="deploying-the-driver-on-unix-systems"></a>UNIX システム上での JDBC ドライバーの展開
+
+UNIX オペレーティング システム上で JDBC ドライバーを展開する場合、GZIP ファイル形式のインストール パッケージを使用する必要があります。これは通常、`sqljdbc_<version>_<language>.tar.gz` という名前です。  
   
- JDBC ドライバーをインストールする前に、gzip ユーティリティおよび tar ユーティリティの両方がユーザーのシステム上にインストールされ、これらのユーティリティの実行可能ファイルを含むフォルダーが PATH 環境変数に追加されていることを確認します。  
+JDBC ドライバーをインストールする前に、gzip ユーティリティおよび tar ユーティリティの両方がユーザーのシステム上にインストールされ、これらのユーティリティの実行可能ファイルを含むフォルダーが PATH 環境変数に追加されていることを確認します。  
   
- zip 形式の tar ファイルをアンパックするには、ドライバーをアンパックするディレクトリに移動し、次のコマンドを入力します。  
+zip 形式の tar ファイルをアンパックするには、ドライバーをアンパックするディレクトリに移動し、次のコマンドを入力します。  
   
- `gzip -d sqljdbc_<version>_<language>.tar.gz`  
+`gzip -d sqljdbc_<version>_<language>.tar.gz`  
   
- tar ファイルをアンパックするには、ドライバーをインストールするディレクトリに tar ファイルを移動し、次のコマンドを入力します。  
+tar ファイルをアンパックするには、ドライバーをインストールするディレクトリに tar ファイルを移動し、次のコマンドを入力します。  
   
- `tar -xf sqljdbc_<version>_<language>.tar`  
+`tar -xf sqljdbc_<version>_<language>.tar`  
 
 ## <a name="legalities-of-driver-redistribution"></a>ドライバーの再配布の合法性
 
@@ -51,7 +54,6 @@ JDBC Driver バージョン 6.0、6.2、6.4、7.0、7.2、7.4、および 8.2 �
 
 JDBC Driver バージョン 4.x は、旧バージョンです。 4\.x のサポートは 2018 までに有効期限が切れています。
 
-## <a name="see-also"></a>関連項目  
- [JDBC ドライバーの概要](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
-  
-  
+## <a name="see-also"></a>関連項目
+
+[JDBC ドライバーの概要](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

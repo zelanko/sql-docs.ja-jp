@@ -12,12 +12,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 860888bf0f2292a68fa6a4c6a6b92489466a586c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: b83ceb3dd5079f82a13e8f1e2aba37fcf5ca5835
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75688786"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271428"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) リリース ノート
 
@@ -44,6 +44,39 @@ GeneMi , 2019/03/22.
 
 P.S.  There is no need to keep this large HTML comment indefinitely.
 -->
+
+## <a name="1594nbsp-ssdt-for-vs-2017"></a>15.9.4、VS 2017 用 &nbsp; SSDT
+
+_リリース済み:_ &nbsp; 2020 年 3 月 26 日  
+_ビルド番号:_ &nbsp; 14.0.16214.0  
+_Visual Studio 2017 用 SSDT。_
+
+### <a name="whats-new"></a>新機能
+
+| New Item | 詳細 |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Services (SSIS) | コンテナーの中で制御フローの制約線を動かすと VS がクラッシュすることがあるという問題を修正しました。 |
+| Integration Services (SSIS) | メンテナンス計画タスクの UI では、タスク UI の外で作成された ADO.NET 接続マネージャーを一覧表示できないという問題を修正しました。 |
+| Integration Services (SSIS) | SSIS プロジェクトも読み込まれているソリューションに属する SSAS プロジェクトをデプロイするとき、Azure インタラクティブ ログイン ページが表示されない問題を修正しました。 |
+| Integration Services (SSIS) | SQL Server がインストールされていないとき、MSOLAP ドライバー プロパティ ボタンをクリックすると DTS ウィザードがクラッシュする問題を修正しました。 |
+| Integration Services (SSIS) | MSOLEDBSQL ドライバーでは、DTS ウィザードで AAD 認証がサポートされない問題を修正しました。 |
+| Integration Services (SSIS) | SQL Server 2012 を対象にしているとき、XML 変換元と ADO.NET 変換先を正しく固定できない問題を修正しました。 |
+| Integration Services (SSIS) | Web サービス タスク エディターの "WSDL ダウンロード" ボタンが正しく表示されない問題を修正しました。 |
+| Integration Services (SSIS) | 参照変換エディターの [接続マネージャー] ページでテーブルを選択できないことがある問題を修正しました。 |
+| Integration Services (SSIS) | キャッシュ変換エディターのレイアウトが壊れることがある問題を修正しました。 |
+| Integration Services (SSIS) | パッケージ エディターの "接続マネージャー" 領域が正しく表示されない問題を修正しました。 |
+| Integration Services (SSIS) | [パッケージ配置モデルに変換] ウィザードに状態アイコンが正しく表示されない問題を修正しました。 |
+| Integration Services (SSIS) | インターネットからペイロードをダウンロードする必要がない完全なインストーラーにインストーラーを変更しました。 |
+
+### <a name="known-issues"></a>既知の問題
+
+| 既知の問題 | 詳細 |
+| :---------- | :------ |
+| ExecuteOutOfProcess が True に設定されていると、SSIS パッケージ実行タスクはデバッグをサポートしません。 | この問題はデバッグにのみ該当します。 DTExec.exe または SSIS カタログを介した保存、展開、実行は影響を受けません。 |
+| SSIS と SSAS が同じ Visual Studio インスタンスにインストールされている場合、Power Query ソースは OData v4 をサポートしない可能性があります。 | &nbsp; |
+| SSIS と SSAS が同じ Visual Studio インスタンスにインストールされている場合、Power Query ソースでは Oracle への接続に ODBC を使用できない可能性があります。 | &nbsp; |
+| Power Query ソースはローカライズされていません | &nbsp; |
+| &nbsp; | &nbsp; |
 
 ## <a name="1593nbsp-ssdt-for-vs-2017"></a>15.9.3、VS 2017 用 &nbsp; SSDT
 

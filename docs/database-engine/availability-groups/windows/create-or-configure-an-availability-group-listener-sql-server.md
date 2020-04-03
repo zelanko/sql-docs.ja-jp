@@ -16,12 +16,12 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 602502f636d4204364025ae9a8e4b039e822ae8b
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.openlocfilehash: 6674f818d9983de56b4b015cb446b2c8f2931b84
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79190566"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434159"
 ---
 # <a name="configure-a-listener-for-an-always-on-availability-group"></a>Always On 可用性グループのリスナーの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -321,21 +321,11 @@ Start-ClusterResource yourListenerName
   
  詳細については、「 [同じ可用性グループの複数のリスナーを作成する方法](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao/) 」(SQL Server AlwaysOn チームのブログ) を参照してください。  
   
-##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
+ 
   
--   [可用性グループ リスナーのプロパティの表示 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-group-listener-properties-sql-server.md)  
-  
--   [可用性グループ リスナーの削除 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-an-availability-group-listener-sql-server.md)  
-  
-##  <a name="related-content"></a><a name="RelatedContent"></a> 関連コンテンツ  
-  
--   [同じ可用性グループの複数のリスナーを作成する方法](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao/)  
-  
--   [SQL Server Always On チーム ブログ:SQL Server Always On チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
-  
-## <a name="see-also"></a>参照  
- [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
- [SQL Server マルチサブネット クラスタリング &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)  
-  
+## <a name="next-steps"></a>次のステップ
+
+これでリスナーを作成したので、[リスナーに接続する](listeners-client-connectivity-application-failover.md)ようにアプリケーションを構成します。 また、可用性グループの正常性を確保するために、さまざまな[可用性グループの監視戦略](monitoring-of-availability-groups-sql-server.md)を確認することもできます。
+
+また、必要に応じて、[リスナーのプロパティを表示](view-availability-group-listener-properties-sql-server.md)したり、[リスナーを削除する](remove-an-availability-group-listener-sql-server.md)方法を学習したりすることもできます。 
   

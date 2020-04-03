@@ -1,5 +1,6 @@
 ---
 title: 画像ファイルへのエクスポート (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーの画像表示拡張機能では、改ページ調整されたレポートをビットマップまたはメタファイルとして表示します。 既定値は、複数のページに表示できる TIFF ファイルです。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 020d8ea2-de07-4212-a2bb-2ed0df2c8db8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2393769b4d6ca1676833b4e208e7f09dfcd444df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d5a3bd0cd2dfdba8b34ff6dc97f56fb3eaf53306
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77081380"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342841"
 ---
 # <a name="exporting-to-an-image-file-report-builder-and-ssrs"></a>画像ファイルへのエクスポート (レポート ビルダーおよび SSRS)
   画像表示拡張機能では、改ページ調整されたレポートがビットマップまたはメタファイルとして表示されます。 画像表示拡張機能では、既定でレポートの TIFF ファイルが生成されます。このファイルは、複数のページに表示することもできます。 クライアントは、受信した画像をイメージ ビューアーで表示したり、印刷したりできます。 ここでは、画像レンダラー固有の情報を提供し、また表示規則の例外について説明します。  
@@ -23,7 +24,7 @@ ms.locfileid: "77081380"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="SupportedImageFormats"></a> サポートされている画像形式  
+##  <a name="supported-image-formats"></a><a name="SupportedImageFormats"></a> サポートされている画像形式  
  次の表は、各画像レンダラー形式のファイルの拡張子と MimeType を示しています。  
   
 |**Type**|**拡張子**|**MIMEType**|  
@@ -37,11 +38,11 @@ ms.locfileid: "77081380"
 |EMFPlus|EMF|image/emf|  
   
   
-##  <a name="RenderingMultiplePages"></a> 複数ページの表示  
+##  <a name="rendering-multiple-pages"></a><a name="RenderingMultiplePages"></a> 複数ページの表示  
  1 つのファイルで複数のページのドキュメントをサポートしているファイル形式は TIFF だけです。 JPG や PNG などの他の形式では、一度に出力できるのは 1 ページで、ページごとに表示拡張機能を個別に呼び出す必要があります。  
   
   
-##  <a name="Interactivity"></a> 対話性  
+##  <a name="interactivity"></a><a name="Interactivity"></a> 対話性  
  このレンダラーで生成されたすべての画像形式では、対話機能がサポートされていません。 次の対話型要素は表示されません。  
   
 -   ハイパーリンク  
@@ -59,7 +60,7 @@ ms.locfileid: "77081380"
 -   ブックマーク  
   
   
-##  <a name="DeviceInfo"></a> デバイス情報設定  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a> デバイス情報設定  
  デバイス情報設定を変更することによって、このレンダラーの既定の設定の一部を変更することができます。 詳細については、「 [画像デバイス情報設定](../../reporting-services/image-device-information-settings.md)」を参照してください。  
   
   

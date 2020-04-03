@@ -1,7 +1,7 @@
 ---
 title: JDBC ドライバーでの Always Encrypted の使用 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/29/2020
+ms.date: 03/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 41c91f87a62e9f4d912c7e8bbdebe86574ceebe6
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.openlocfilehash: 37057985b6c552091d2989d56a13c52b0b0cf5ac
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77004601"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271328"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>JDBC ドライバーでの Always Encrypted の使用
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -58,6 +58,8 @@ Microsoft JDBC Driver for SQL Server には、次の組み込みの列マスタ�
 
 ### <a name="using-azure-key-vault-provider"></a>Azure Key Vault プロバイダーを使用する
 Azure Key Vault は、特にアプリケーションが Azure でホストされている場合、Always Encrypted の列マスター キーの格納と管理に便利なオプションです。 Microsoft JDBC Driver for SQL Server には、Azure Key Vault にキーが格納されているアプリケーション用の組み込みプロバイダー SQLServerColumnEncryptionAzureKeyVaultProvider が含まれています。 このプロバイダーの名前は AZURE_KEY_VAULT です。 Azure Key Vault ストア プロバイダーを使用するには、アプリケーション開発者が Azure Key Vault でコンテナーとキーを作成し、Azure Active Directory でアプリの登録を作成する必要があります。 登録されたアプリケーションには、Always Encrypted で使用するために作成されたキー コンテナーに対して定義されているアクセス ポリシーで、取得、暗号化解除、暗号化、キーのラップを解除、キーのラップ、検証のアクセス許可が付与されている必要があります。 キー コンテナーを設定して列マスター キーを作成する方法の詳細については、「[Azure Key Vault - 手順](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/)」 と「[Azure Key Vault で列マスター キーを作成する](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault)」を参照してください。
+
+Azure Key Vault プロバイダーの使用時、JDBC ドライバーによって、信頼されているエンドポイントの一覧と列のマスター キー パスが照合されます。 ドライバー バージョン 8.2.2 以降、この一覧は構成できます。アプリケーションの作業ディレクトリで "mssql-jdbc.properties" ファイルを作成し、`AKVTrustedEndpoints` プロパティをセミコロン区切りの一覧に設定します。 値がセミコロンで始まる場合、既定のリストが拡張されます。それ以外の場合は、既定のリストが置き換えられます。
 
 このページの例では、SQL Server Management Studio を使用して Azure Key Vault ベースの列マスター キーと列暗号化キーを作成した場合、それらを再作成する T-SQL スクリプトは、この例と同じようになる場合があります。ただし、**KEY_PATH** と **ENCRYPTED_VALUE** は独自の値になります。
 

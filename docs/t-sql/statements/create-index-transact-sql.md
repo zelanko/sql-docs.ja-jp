@@ -1,7 +1,7 @@
 ---
 title: CREATE INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/12/2019
+ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -54,12 +54,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80f3fba621cbfe4f8411f618ca60025685c2da34
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: d3695dcb6f322f2b0509bca2bb98b1c592c13a1f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79287256"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448355"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -750,7 +750,7 @@ DROP_EXISTING を使用すると、非クラスター化インデックスが定
 
 詳しくは、「 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)」をご覧ください。
 
-### <a name="resumable-indexes"></a>再開可能なインデックス操作
+### <a name="resumable-index-operations"></a><a name="resumable-indexes"></a>再開可能なインデックス操作
 **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 次のガイドラインは再開可能なインデックス操作に適用されます。
@@ -820,7 +820,7 @@ OPTIMIZE_FOR_SEQUENTIAL_KEY インデックス オプションをオンにする
 圧縮状態の変更による、テーブル、インデックス、またはパーティションへの影響を評価するには、 [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) ストアド プロシージャを使用します。
 
 ## <a name="permissions"></a>アクセス許可
-テーブルまたはビューに対する `ALTER` 権限が必要です。 `sysadmin` 固定サーバー ロール、`db_ddladmin` 固定データベース ロール、または `db_owner` 固定データベース ロールのメンバーである必要があります。
+テーブルまたはビューに対する `ALTER` 権限が必要です。 ユーザーは、`sysadmin` 固定サーバー ロール、`db_ddladmin` 固定データベース ロール、または `db_owner` 固定データベース ロールのメンバーである必要があります。
 
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項
 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] では、以下を作成することはできません。

@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 999ae75343a71efafd7348065b2a1d3533b4bd10
-ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
+ms.openlocfilehash: e333a2e489f178ff1301001822f80ec24354184c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/22/2020
-ms.locfileid: "77558359"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448400"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -310,7 +310,7 @@ BULK INSERT ステートメントは、テーブルまたはビューにデー�
 
  SQL Server への一括インポートによって実行される行挿入操作がトランザクション ログに記録される条件について詳しくは、「[一括インポートで最小ログ記録を行うための前提条件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)」をご覧ください。 最小ログ記録は、Azure SQL Database ではサポートされていません。
 
-## <a name="Limitations"></a> 制限
+## <a name="restrictions"></a><a name="Limitations"></a> 制限
 
 BULK INSERT でフォーマット ファイルを使用する場合、指定できるフィールド数は 1,024 個までです。 これは、テーブルに許容される最大列数と同じです。 フォーマット ファイルを使用して、1,024 個を超えるフィールドが含まれるデータ ファイルで BULK INSERT を使用すると、BULK INSERT によってエラー 4822 が生成されます。 [bcp ユーティリティ](../../tools/bcp-utility.md)にはこのような制限がないため、1,024 個を超えるフィールドを含むデータ ファイルには、フォーマット ファイルを使用せずに BULK INSERT を使用するか、**bcp** コマンドを使用してください。
 
@@ -464,6 +464,24 @@ CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
 WITH ( TYPE = BLOB_STORAGE,
           LOCATION = 'https://****************.blob.core.windows.net/invoices'
           , CREDENTIAL= MyAzureBlobStorageCredential --> CREDENTIAL is not required if a blob is configured for public (anonymous) access!
+);
+
+BULK INSERT Sales.Invoices
+FROM 'inv-2017-12-08.csv'
+WITH (DATA_SOURCE = 'MyAzureBlobStorage');
+```
+ストレージ アカウントにアクセスする別の方法として、[マネージド ID](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview) を使用することもできます。 これを行うには、[手順 1 から 3](https://docs.microsoft.com/azure/sql-database/sql-database-vnet-service-endpoint-rule-overview?toc=/azure/sql-data-warehouse/toc.json&bc=/azure/sql-data-warehouse/breadcrumb/toc.json#steps) に従って、マネージド ID を使用してストレージにアクセスするように SQL Database を構成します。その後、次のようにコード サンプルを実装できます。
+```sql
+--> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
+GO
+--> Change to using Managed Identity instead of SAS key 
+CREATE DATABASE SCOPED CREDENTIAL msi_cred WITH IDENTITY = 'Managed Identity';
+GO
+CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
+WITH ( TYPE = BLOB_STORAGE,
+          LOCATION = 'https://****************.blob.core.windows.net/curriculum'
+          , CREDENTIAL= msi_cred --> CREDENTIAL is not required if a blob is configured for public (anonymous) access!
 );
 
 BULK INSERT Sales.Invoices

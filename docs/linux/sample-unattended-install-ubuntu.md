@@ -8,12 +8,12 @@ ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: b71bad98aa6e9172b69efa67ce8708f1479fa691
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 427aff5fe9911fde59f3f37077fc9c2306d2bd42
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67910484"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79487600"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>サンプル:Ubuntu 向け SQL Server 無人インストール スクリプト
 
@@ -31,6 +31,9 @@ ms.locfileid: "67910484"
 - 他のシステム要件については、[SQL Server on Linux のシステム要件](sql-server-linux-setup.md#system)に関する記事を参照してください。
 
 ## <a name="sample-script"></a>サンプル スクリプト
+
+> [!NOTE]
+> SQL Server の起動に時間がかかると、スクリプトが失敗する可能性があります。 これは、スクリプトが 0 以外の状態で終了するためです。 最初の行の `-e` スイッチを削除すると、この問題が解決する可能性があります。
 
 ```bash
 #!/bin/bash -e

@@ -1,5 +1,6 @@
 ---
 title: データ ソースとレポートのパブリッシュ | Microsoft Docs
+description: データ ソースとレポートをパブリッシュして、レポート サーバーまたは SharePoint サイトに対する権限を持っている個人がレポートを実行できるようにする方法について説明します。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3a740f8a-1060-4ec3-938b-2305b6887ebd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a5a043efe7e80805a9d2c1c18dc86a425f01be7f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 93e0c70d19d4f64278603c062e4f59aedd97070b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190458"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510073"
 ---
 # <a name="publishing-data-sources-and-reports"></a>データ ソースとレポートのパブリッシュ
   レポートをパブリッシュする前に、レポートをプレビューしてレポート実行時の表示を確認する必要があります。 プレビュー後も、表示結果に満足できるまでデザインを調整できます。  

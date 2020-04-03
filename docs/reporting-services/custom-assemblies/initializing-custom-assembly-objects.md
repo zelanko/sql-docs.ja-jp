@@ -1,6 +1,7 @@
 ---
 title: カスタム アセンブリ オブジェクトの初期化 | Microsoft Docs
 ms.date: 03/03/2017
+description: レポートのグローバル オブジェクト コレクションから利用できる値でカスタム クラスを初期化する方法について説明します。
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: custom-assemblies
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 26fd74dc-d02f-40f7-aeb3-50ce05e9e6b9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8bef8bcf36629b0cb31afef31f4d9a199313f015
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c2f0f85904b4541ed478664f5f39e19cc309cf9a
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63193954"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80217031"
 ---
 # <a name="initializing-custom-assembly-objects"></a>カスタム アセンブリ オブジェクトの初期化
-  状況によっては、カスタム アセンブリ クラスのプロパティ値とフィールド値をインスタンス化する際、これらを初期化する必要があります。 初期化が必要になる可能性が最も高いのは、レポートのグローバル オブジェクト コレクションからカスタム クラスと値を使用する場合です。 そのためには、レポートの **Code** オブジェクトの **OnInit** メソッドをオーバーライドします。 **OnInit** にアクセスするには、レポート定義の **Code** 要素を使用します。 レポートで使用する予定のカスタム アセンブリのクラスのプロパティ値またはフィールド値を初期化する方法は 2 つあります。1 つは、**OnInit** を使用してクラスの新しいインスタンスを宣言し、作成する方法、もう 1 つは、**OnInit** を使用してパブリックに使用できるメソッドを呼び出す方法です。  
+  状況によっては、カスタム アセンブリ クラスのプロパティ値とフィールド値をインスタンス化する際、これらを初期化する必要があります。 初期化が必要になる可能性が最も高いのは、レポートのグローバル オブジェクト コレクションからカスタム クラスと値を使用する場合です。 そのためには、レポートの **Code** オブジェクトの **OnInit** メソッドをオーバーライドします。 **OnInit** にアクセスするには、レポート定義の **Code** 要素を使用します。 レポートで使用する予定のカスタム アセンブリでクラスのプロパティ値またはフィールド値を初期化する手法が 2 つあります。**OnInit** を利用してクラスの新しいインスタンスを宣言し、作成するか、**OnInit** を利用し、一般公開されているメソッドを呼び出すことができます。  
   
 ## <a name="global-object-collections-and-initialization"></a>グローバル オブジェクト コレクションと初期化  
  カスタム クラス変数を初期化するときは、 **Globals** および **User** の各コレクションを使用できます。 レポート ライフサイクルで、**OnInit** メソッドを呼び出す時点では、**Parameters**、**Fields** および **ReportItems** の各コレクションを使用できません。 共有コレクションの **Globals** または **User** を使用するには、**Report** オブジェクト参照を含める必要があります。 たとえば、レポートにアクセスしているユーザーの現在の言語に基づいてカスタム クラスを初期化する場合、**Code** 要素は次のようになります。  

@@ -9,24 +9,36 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6a1f903d0be82d6f5057af68dce80bda1e48238a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e67e7f0d764a35dab94e26a70b7af39dfd23dae2
+ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/30/2020
-ms.locfileid: "78225926"
+ms.locfileid: "80402649"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools-preview"></a>SQL Server Integration Services (SSIS) DevOps ツール (プレビュー)
 
-[SSIS DevOps Tools](https://marketplace.visualstudio.com/items?itemName=SSIS.ssis-devops-tools) 拡張機能は **Azure DevOps** マーケットプレースで入手できます。
+[SSIS DevOps Tools](https://marketplace.visualstudio.com/items?itemName=SSIS.ssis-devops-tools) 拡張機能は **Azure DevOps** Marketplace で入手できます。
 
 **Azure DevOps** 組織がない場合、まず、[Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/get-started/pipelines-sign-up?view=azure-devops) に新規登録し、[次の手順](https://docs.microsoft.com/azure/devops/marketplace/overview?view=azure-devops&tabs=browser#add-an-extension)で **SSIS DevOps ツール**拡張機能を追加します。
 
-**SSIS DevOps ツール**に **SSIS Build** タスクと **SSIS Deploy** リリース タスクが含まれています。
+**SSIS DevOps ツール**には、**SSIS Build** タスク、**SSIS Deploy** リリース タスク、および **SSIS Catalog Configuration タスク**が含まれています。
 
-- **SSIS Build** タスクでは、プロジェクト デプロイ モデルまたはパッケージ デプロイ モデルで dtproj ファイルをビルドできます。
+- **[SSIS Build](#ssis-build-task)** タスクでは、プロジェクト デプロイ モデルまたはパッケージ デプロイ モデルでの dtproj ファイルのビルドがサポートされます。
 
-- **SSIS Deploy** タスクでは、1 つまたは複数の ispac ファイルをオンプレミスの SSIS カタログと Azure-SSIS IR にデプロイしたり、SSISDeploymentManifest ファイルとその関連ファイルをオンプレミスの Azure ファイル共有にデプロイしたりできます。
+- **[SSIS Deploy](#ssis-deploy-task)** タスクでは、1 つまたは複数の ispac ファイルをオンプレミスの SSIS カタログと Azure-SSIS IR にデプロイしたり、SSISDeploymentManifest ファイルとその関連ファイルをオンプレミスまたは Azure ファイル共有にデプロイしたりできます。
+
+- **[SSIS Catalog Configuration](#ssis-catalog-configuration-task)** タスクでは、JSON 形式の構成ファイルを使用した SSIS カタログのフォルダー、プロジェクト、環境の構成がサポートされます。 このタスクでは次のシナリオがサポートされます。
+    - Folder
+        - フォルダーを作成します。
+        - フォルダーの説明を更新します。
+    - Project
+        - パラメーターの値を構成します。literal 値と referenced 値の両方がサポートされます。
+        - 環境参照を追加します。
+    - 環境
+        - 環境を作成します。
+        - 環境の説明を更新します。
+        - 環境変数を作成または更新します。
 
 ## <a name="ssis-build-task"></a>SSIS Build タスク
 
@@ -64,8 +76,6 @@ cat log.txt
 
 - 保護レベルの **EncryptSensitiveWithPassword** と **EncryptAllWithPassword** は SSIS Build タスクではサポートされていません。 コードベースのいずれの SSIS プロジェクトでもこの 2 つの保護レベルが使用されていないことを確認してください。使用されている場合、SSIS Build タスクの実行中、応答が停止し、タイムアウトになります。
 
-- **ConnectByProxy** は、最近 SSDT に追加された新しいプロパティです。 Microsoft によってホストされているエージェントにインストールされた SSDT は更新されないため、回避策としてセルフホステッド エージェントを使用してください。
-
 ## <a name="ssis-deploy-task"></a>SSIS Deploy タスク
 
 ![デプロイ タスク](media/ssis-deploy-task.png)
@@ -98,14 +108,14 @@ cat log.txt
 
 #### <a name="authentication-type"></a>認証の種類
 
-指定の宛先サーバーにアクセスするための認証の種類。 このプロパティは、宛先の種類が SSISDB の場合にのみ表示されます。 一般的に、SSIS Deploy タスクでは次の 4 つの種類がサポートされます。
+指定の宛先サーバーにアクセスするための認証の種類。 このプロパティは、宛先の種類が SSISDB の場合にのみ表示されます。 一般に、以下の認証の種類がサポートされています。
 
 - Windows 認証
 - SQL Server 認証
 - Active Directory - パスワード
 - Active Directory - 統合
 
-ただし、特定の種類の認証がサポートされるかどうかは、宛先サーバーの種類やエージェントの種類に左右されます。 サポート マトリックスの詳細を一覧にしたものが下の表になります。
+しかし、特定の種類の認証がサポートされるかどうかは、宛先サーバーの種類やエージェントの種類によって異なります。 サポート マトリックスの詳細を一覧にしたものが下の表になります。
 
 | |Microsoft によってホストされるエージェント|自己ホスト エージェント|
 |---------|---------|---------|
@@ -137,13 +147,209 @@ cat log.txt
 
 ### <a name="limitations-and-known-issues"></a>制限事項と既知の問題
 
-SSIS Deploy タスクでは現在、次のシナリオがサポートされていません。
+SSIS Deploy タスクでは、現在、次のシナリオはサポートされていません。
 
 - SSIS カタログで環境を構成する。
 - 多要素認証 (MFA) のみが許可される Azure SQL Server または Azure SQL マネージド インスタンスに ispac をデプロイする。
 - MSDB または SSIS パッケージ ストアにパッケージをデプロイする。
 
+## <a name="ssis-catalog-configuration-task"></a>SSIS Catalog Configuration タスク
+
+![catalog configuration タスク](media/ssis-catalog-configuation-task.png)
+
+### <a name="properties"></a>Properties
+
+#### <a name="configuration-file-source"></a>構成ファイルのソース
+
+SSIS カタログ構成 JSON ファイルのソース。 [ファイル パス] または [インライン] にすることができます。
+
+[構成 JSON を定義する](#define-configuration-json)方法の詳細を参照してください。
+
+- [インライン構成 JSON のサンプル](#a-sample-inline-configuration-json)を参照してください。
+- [JSON スキーマ](#json-schema)を確認してください。
+
+#### <a name="configuration-json-file-path"></a>構成 JSON ファイルのパス
+
+SSIS カタログ構成 JSON ファイルのパス。 このプロパティは、構成ファイル ソースとして [ファイル パス] を選択した場合にのみ表示されます。
+
+構成 JSON ファイルで[パイプライン変数](https://docs.microsoft.comazure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch)を使用するには、このタスクの前に [File Transform タスク](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/file-transform?view=azure-devops)を追加して、構成値をパイプライン変数に置き換える必要があります。 詳細については、「[JSON 変数置換](https://docs.microsoft.com/azure/devops/pipelines/tasks/transforms-variable-substitution?view=azure-devops&tabs=Classic#json-variable-substitution)」を参照してください。
+
+#### <a name="inline-configuration-json"></a>インライン構成 JSON
+
+SSIS カタログ構成のインライン JSON。 このプロパティは、構成ファイル ソースとして "インライン" を選択した場合にのみ表示されます。 パイプライン変数は直接使用できます。
+
+#### <a name="roll-back-configuration-when-error-occurs"></a>エラーが発生したときに構成をロールバックする
+
+エラーが発生したときに、このタスクによって行われた構成をロールバックするかどうか。
+
+#### <a name="target-server"></a>ターゲット サーバー
+
+ターゲット SQL Server の名前。 これには SQL Server、Azure SQL Database、Azure SQL Database マネージド インスタンスの名前が想定されます。
+
+#### <a name="authentication-type"></a>認証の種類
+
+指定されたターゲット サーバーにアクセスするための認証の種類。 一般に、以下の認証の種類がサポートされています。
+
+- Windows 認証
+- SQL Server 認証
+- Active Directory - パスワード
+- Active Directory - 統合
+
+しかし、特定の種類の認証がサポートされるかどうかは、宛先サーバーの種類やエージェントの種類によって異なります。 サポート マトリックスの詳細を一覧にしたものが下の表になります。
+
+| |Microsoft によってホストされるエージェント|自己ホスト エージェント|
+|---------|---------|---------|
+|オンプレミスの SQL サーバーまたは VM |該当なし|Windows 認証|
+|Azure SQL|SQL Server 認証 <br> Active Directory - パスワード|SQL Server 認証 <br> Active Directory - パスワード <br> Active Directory - 統合|
+
+#### <a name="username"></a>ユーザー名
+
+ターゲット SQL Server にアクセスするためのユーザー名。 このプロパティは、認証の種類が SQL Server 認証またはアクティブ ディレクトリ - パスワードの場合にのみ表示されます。
+
+#### <a name="password"></a>Password
+
+ターゲット SQL Server にアクセスするためのパスワード。 このプロパティは、認証の種類が SQL Server 認証またはアクティブ ディレクトリ - パスワードの場合にのみ表示されます。
+
+### <a name="define-configuration-json"></a>構成 JSON を定義する
+
+構成 JSON スキーマには、次の 3 つの層があります。
+
+- catalog
+- folder
+- project と environment
+
+![カタログ構成スキーマ](media/catalog-configuration-schema.png)
+
+#### <a name="a-sample-inline-configuration-json"></a>インライン構成 JSON のサンプル
+
+```json
+{
+  "folders": [
+    {
+      "name": "devopsdemo",
+      "description": "devops demo folder",
+      "projects": [
+        {
+          "name": "catalog devops",
+          "parameters": [
+            {
+              "name": "password",
+              "container": "Package.dtsx",
+              "value": "passwd",
+              "valueType": "referenced"
+            },
+            {
+              "name": "serverName",
+              "container": "catalog devops",
+              "value": "localhost",
+              "valueType": "literal"
+            }
+          ],
+          "references": [
+            {
+              "environmentName": "test",
+              "environmentFolder": "devopsdemo"
+            },
+            {
+              "environmentName": "test",
+              "environmentFolder": "."
+            }
+          ]
+        }
+      ],
+      "environments": [
+        {
+          "name": "test",
+          "description": "test",
+          "variables": [
+            {
+              "name": "passwd",
+              "type": "string",
+              "description": "",
+              "value": "$(SSISDBServerAdminPassword)",
+              "sensitive": true
+            },
+            {
+              "name": "serverName",
+              "type": "string",
+              "description": "",
+              "value": "$(TargetServerName)",
+              "sensitive": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
+
+#### <a name="json-schema"></a>JSON スキーマ
+
+##### <a name="catalog-attributes"></a>カタログ属性
+
+|プロパティ  |説明  |Notes  |
+|---------|---------|---------|
+|フォルダー  |フォルダー オブジェクトの配列。 各オブジェクトには、カタログ フォルダーの構成情報が含まれています。|フォルダー オブジェクトのスキーマについては、「*フォルダー属性*」を参照してください。|
+
+##### <a name="folder-attributes"></a>フォルダー属性
+
+|プロパティ  |説明  |Notes  |
+|---------|---------|---------|
+|name  |カタログ フォルダーの名前。|フォルダーが存在しない場合は作成されます。|
+|description|カタログ フォルダーの説明。|*null* の値はスキップされます。|
+|projects|プロジェクト オブジェクトの配列。 各オブジェクトには、プロジェクトの構成情報が含まれています。|プロジェクト オブジェクトのスキーマについては、「*プロジェクト属性*」を参照してください。|
+|環境|環境オブジェクトの配列。 各オブジェクトには、環境の構成情報が含まれています。|環境オブジェクトのスキーマについては、「*環境属性*」を参照してください。|
+
+##### <a name="project-attributes"></a>プロジェクト属性
+
+|プロパティ  |説明  |Notes  |
+|---------|---------|---------|
+|name|プロジェクトの名前。 |プロジェクトが親フォルダーに存在しない場合、プロジェクト オブジェクトはスキップされます。|
+|parameters|パラメーター オブジェクトの配列です。 各オブジェクトには、パラメーターの構成情報が含まれています。|パラメーター オブジェクトのスキーマについては、「*パラメーター属性*」を参照してください。|
+|references|参照オブジェクトの配列。 各オブジェクトは、ターゲット プロジェクトへの環境参照を表します。|参照オブジェクトのスキーマについては、「*参照属性*」を参照してください。|
+
+##### <a name="parameter-attributes"></a>パラメーター属性
+
+|プロパティ  |説明  |Notes  |
+|---------|---------|---------|
+|name|パラメーターの名前。|パラメーターは、"*プロジェクト パラメーター*" または "*パッケージ パラメーター*" にすることができます。 <br> パラメーターは、親プロジェクトに存在しない場合はスキップされます。|
+|container|パラメーターのコンテナー。|<li>パラメーターがプロジェクト パラメーターの場合、*container* はプロジェクト名である必要があります。 <li>パッケージ パラメーターの場合、*container* は、拡張子が **.dtsx** のパッケージ名である必要があります。 <li> パラメーターが接続マネージャー プロパティの場合、名前は次の形式である必要があります: **CM.\<接続マネージャー名 >.\<プロパティ名>** 。|
+|value|パラメーターの値。|<li>*valueType* が *referenced* の場合: 値は *string* 型の環境変数への参照です。 <li> *valueType* が *literal* の場合: この属性では、任意の有効な "*ブール値*"、"*数値*"、および "*文字列*" の JSON 値がサポートされます。 <br> 値は、ターゲット パラメーターの型に変換されます。 変換できない場合はエラーが発生します。<li> *null* の値は無効です。 タスクではこのパラメーター オブジェクトがスキップされ、警告が示されます。|
+|valueType|パラメーター値の型。|有効な型は次のとおりです。 <br> *literal*: *value* 属性はリテラル値を表します。 <br> *referenced*: *value* 属性は、環境変数への参照を表します。|
+
+##### <a name="reference-attributes"></a>参照属性
+
+|プロパティ  |説明  |Notes  |
+|---------|---------|---------|
+|environmentFolder|環境のフォルダー名。|フォルダーが存在しない場合は作成されます。 <br> 値は "." にすることができます。これは、環境を参照する、プロジェクトの親フォルダーを表します。|
+|environmentName|参照先環境の名前。|存在しない場合は、指定された環境が作成されます。|
+
+##### <a name="environment-attributes"></a>環境属性
+
+|プロパティ  |説明  |Notes  |
+|---------|---------|---------|
+|name|環境の名前。|環境が存在しない場合は作成されます。|
+|description|環境の説明。|*null* の値はスキップされます。|
+|variables|変数オブジェクトの配列。|各オブジェクトには、環境変数の構成情報が含まれています。変数オブジェクトのスキーマについては、「*変数属性*」を参照してください。|
+
+##### <a name="variable-attributes"></a>変数属性
+
+|プロパティ  |説明  |Notes  |
+|---------|---------|---------|
+|name|環境変数の名前。|環境変数が存在しない場合は作成されます。|
+|type|環境変数のデータ型。|有効な型は次のとおりです。 <br> *boolean* <br> *byte* <br> *datetime* <br> decimal <br> *double* <br> *int16* <br> *int32* <br> *int64* <br> *sbyte* <br> *single* <br> *string* <br> *uint32* <br> *uint64*|
+|description|環境変数の説明。|*null* の値はスキップされます。|
+|value|環境変数の値。|この属性では、任意の有効なブール値、数値、および文字列の JSON 値がサポートされます。<br> 値は **type** 属性によって指定された型に変換されます。 変換に失敗すると、エラーが発生します。<br>*null* の値は無効です。 タスクではこの環境変数オブジェクトがスキップされ、警告が示されます。|
+|sensitive|環境変数の値が機微であるかどうか。|有効な入力は次のとおりです。 <br> *true* <br> *false*|
+
 ## <a name="release-notes"></a>リリース ノート
+
+### <a name="version-020-preview"></a>バージョン 0.2.0 プレビュー
+
+リリース日:2020 年 3 月 31 日
+
+- SSIS Catalog Configuration タスクを追加します。
 
 ### <a name="version-013-preview"></a>バージョン 0.1.3 プレビュー
 

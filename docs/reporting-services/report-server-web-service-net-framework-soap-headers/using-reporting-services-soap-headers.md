@@ -1,5 +1,6 @@
 ---
 title: Reporting Services の SOAP ヘッダーの使用 | Microsoft Docs
+description: Reporting Services の SOAP ヘッダーを使用して、操作を 1 つのトランザクションにバッチ処理したり、セッション状態を管理したり、項目のパスまたは ID に基づいてプロパティを取得したりします。
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 306d2c06-a25a-40f8-8a35-13dd32e8841e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 99a4ac18003defd2a6b3cffdd4bc1d2955c44816
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 7f0cb5dc846e8f1f7e292366c7f938366b53de2d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63026013"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216198"
 ---
 # <a name="using-reporting-services-soap-headers"></a>Reporting Services の SOAP ヘッダーの使用
   SOAP を使用した Web サービス メソッドとの通信では、標準形式に従います。 この標準形式の一部は、XML ドキュメントでエンコードされるデータです。 XML ドキュメントは、ルート **Envelope** 要素で構成され、さらにその要素は必須の **Body** 要素および省略可能な **Header** 要素で構成されます。 **Body** 要素には、メッセージ固有のデータが含まれます。 省略可能な **Header** 要素には、特定のメッセージに直接関連しない追加情報を含めることができます。 **Header** 要素の各子要素は、SOAP ヘッダーと呼ばれます。  
@@ -30,10 +31,10 @@ ms.locfileid: "63026013"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[メソッドのバッチ処理](../../reporting-services/report-server-web-service-net-framework-soap-headers/batching-methods.md)|<xref:ReportService2005.BatchHeader> を使用して、複数の操作を 1 つのトランザクションにまとめる方法を説明します。|  
-|[実行状態の識別](../../reporting-services/report-server-web-service-net-framework-soap-headers/identifying-execution-state.md)|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Session Header **を使って、** でセッション状態を管理する方法について説明します。|  
+|[実行状態の識別](../../reporting-services/report-server-web-service-net-framework-soap-headers/identifying-execution-state.md)|**Session Header** を使って、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] でセッション状態を管理する方法について説明します。|  
 |[GetProperties メソッドのアイテム名前空間の設定](../../reporting-services/report-server-web-service-net-framework-soap-headers/setting-the-item-namespace-for-the-getproperties-method.md)|<xref:ReportService2010.ReportingService2010.GetProperties%2A> メソッドおよび <xref:ReportService2010.ItemNamespaceHeader> SOAP ヘッダーを使用することによって、アイテムのパスまたは ID に基づいたプロパティを取得する方法について説明します。|  
   
 ## <a name="see-also"></a>参照  

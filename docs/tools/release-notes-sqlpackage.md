@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 9dfbb1192c160fb032afa6dbb56ee7b24b80bcd6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f0c3fe15a46333fad43b72ba3c8040153b9b51a2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75241220"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80386191"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>SqlPackage.exe のリリース ノート
 
@@ -49,6 +49,12 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | ScriptDom |  18.3.1 で ScriptDom の解析回帰が導入されましたが、"RENAME" が最上位のトークンとして不適切に処理されるため、解析が失敗します。
 | &nbsp; | &nbsp; |
 
+### <a name="known-issues"></a>既知の問題 
+
+| 機能 | 詳細 |
+| :------ | :------ |
+| デプロイ |  18.4.1 で導入された回帰が原因で、"オブジェクト参照がオブジェクトのインスタンスに設定されていません" という エラーが発生します。これは、dacpac をデプロイするとき、または外部ログインを持つユーザーで bacpac をインポートするときに発生します。 回避策は、sqlpackage 18.4 を使用することです。これは、次の sqlpackage リリースで修正される予定です。 | 
+| &nbsp; | &nbsp; |
 
 ## <a name="184-sqlpackage"></a>18.4 sqlpackage
 
@@ -59,7 +65,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 |Linux .NET Core |[zip ファイル](https://go.microsoft.com/fwlink/?linkid=2108814)|2019 年 10 月 29 日| 18.4|15.0.4573.2|
 |Windows .NET Core |[zip ファイル](https://go.microsoft.com/fwlink/?linkid=2109019)|2019 年 10 月 29 日| 18.4|15.0.4573.2|
 
-### <a name="features"></a>[機能]
+### <a name="features"></a>特徴
 
 | 機能 | 詳細 |
 | :------ | :------ |
@@ -98,7 +104,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 |Linux .NET Core (プレビュー)|[zip ファイル](https://go.microsoft.com/fwlink/?linkid=2102978)|2019 年 9 月 13 日| 18.3.1|15.0.4538.1|
 |Windows .NET Core (プレビュー)|[zip ファイル](https://go.microsoft.com/fwlink/?linkid=2102979)|2019 年 9 月 13 日| 18.13.1|15.0.4538.1|
 
-### <a name="features"></a>[機能]
+### <a name="features"></a>特徴
 
 | 機能 | 詳細 |
 | :------ | :------ |
@@ -119,7 +125,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | ビルド/配置 | xml 列セットの nodes () メソッドが解決されるように修正しました。| 
 | ScriptDom | "URL" 文字列が最上位レベルのトークンとして解釈されていたその他のケースが修正されました。 | 
 | グラフ | 制約内の擬似列参照に対して生成された TSQL を修正しました。  | 
-| [エクスポート] | 複雑さの要件を満たすランダムなパスワードが生成されるようになりました。 | 
+| エクスポート | 複雑さの要件を満たすランダムなパスワードが生成されるようになりました。 | 
 | デプロイ | 制約を取得するときにコマンド タイムアウトに従うように修正しました。 | 
 | .NET Core (プレビュー) | ファイルへの診断ログの記録を修正しました。 | 
 | .NET Core (プレビュー) | ストリーミングを使用してテーブル データをエクスポートすることで、大きなテーブルがサポートされるようになりました。 | 
@@ -133,7 +139,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 |macOS .NET Core (プレビュー)|[zip ファイル](https://go.microsoft.com/fwlink/?linkid=2087247)|2019 年 4 月 15 日 | 18.2 |15.0.4384.2|
 |Linux .NET Core (プレビュー)|[zip ファイル](https://go.microsoft.com/fwlink/?linkid=2087431)|2019 年 4 月 15 日 | 18.2 |15.0.4384.2|
 
-### <a name="features"></a>[機能]
+### <a name="features"></a>特徴
 
 | 機能 | 詳細 |
 | :------ | :------ |
@@ -158,7 +164,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 ビルド: &nbsp; 15.0.4316.1  
 プレビュー リリース。
 
-### <a name="features"></a>[機能]
+### <a name="features"></a>特徴
 
 | 機能 | 詳細 |
 | :------ | :------ |
@@ -176,7 +182,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | パフォーマンス | スクリプトを生成する際のスキーマ比較での顕著なパフォーマンス問題が修正されました。 | 
 | スキーマ比較 | 特定の拡張イベント (xevent) セッションを無視するスキーマのドリフト検出ロジックが修正されました。 |
 | グラフ | グラフ テーブルのインポート順序が修正されました。 | 
-| [エクスポート] | オブジェクトのアクセス許可による外部テーブルのエクスポートが修正されました。 |
+| エクスポート | オブジェクトのアクセス許可による外部テーブルのエクスポートが修正されました。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>既知の問題
@@ -195,7 +201,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 リリース日: &nbsp;2018 年 10 月 24 日  
 ビルド: &nbsp; 15.0.4200.1
 
-### <a name="features"></a>[機能]
+### <a name="features"></a>特徴
 
 | 機能 | 詳細 |
 | :------ | :------ |
@@ -222,7 +228,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 リリース日: &nbsp;2018 年 6 月 22 日  
 ビルド: &nbsp; 14.0.4079.2
 
-### <a name="features"></a>[機能]
+### <a name="features"></a>特徴
 
 | 機能 | 詳細 |
 | :------ | :------ |
@@ -243,7 +249,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 リリース日: &nbsp;2018 年 1 月 25 日  
 ビルド: &nbsp; 14.0.3917.1
 
-### <a name="features"></a>[機能]
+### <a name="features"></a>特徴
 
 | 機能 | 詳細 |
 | :------ | :------ |
@@ -265,7 +271,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 リリース日: &nbsp;2017 年 12 月 12 日  
 ビルド: &nbsp; 14.0.3881.1
 
-### <a name="features"></a>[機能]
+### <a name="features"></a>特徴
 
 | 機能 | 詳細 |
 | :------ | :------ |

@@ -1,5 +1,6 @@
 ---
 title: Reporting Services モバイル レポート用に Excel データを準備する | Microsoft Docs
+description: Reporting Services モバイル レポートでは、Excel ファイルのデータを使用できます。 簡単にインポートできるように Excel ファイルとワークシートを準備するには、次のヒントに従ってください。
 ms.date: 02/08/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 16698f8d-bfc7-4eca-9e97-82c99d8bc08e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9285b9b89930fe540f9b5493f1730184cf4e9526
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ef25e90b8a9deb641a72006faf0a0c903a554ba5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62499953"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448375"
 ---
 # <a name="prepare-excel-data-for-reporting-services-mobile-reports"></a>Reporting Services モバイル レポート用に Excel データを準備する
   
@@ -83,7 +84,7 @@ Excel ファイルをモバイル レポート用のデータセットとして�
   
 Excel ワークシート内のカスタム オブジェクト (ピボット テーブル、視覚化エフェクト、画像など) は、 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]にインポートされません。  
   
-### <a name="see-also"></a>参照  
+### <a name="see-also"></a>関連項目  
 - [Reporting Services モバイル レポート用にデータを準備する](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)  
 - [Create and publish mobile reports with SQL Server Mobile Report Publisher (SQL Server Mobile Report Publisher でモバイル レポートを作成し発行する)](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 -  [iPad アプリ (Power BI for iOS) で SQL Server モバイル レポートと KPI を表示する](https://pbiwebprod-docs.azurewebsites.net/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  

@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 15da54550dd314a50d4c3235a77394292d23f1d9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c2350410fe4aa70a9091314034a849a2ed8c4e18
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71296946"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216911"
 ---
 # <a name="integration-services-service-ssis-service"></a>Integration Services サービス (SSIS サービス)
 
@@ -85,7 +85,7 @@ ms.locfileid: "71296946"
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが停止した場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザード、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナー、パッケージ実行ユーティリティ、および **dtexec** コマンド プロンプト ユーティリティ (dtexec.exe) を使用してパッケージを実行し続けることができます。 ただし、実行中のパッケージを監視することはできません。  
   
- 既定では、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは NETWORK SERVICE アカウントのコンテキスト内で実行されます。  
+ 既定では、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは NETWORK SERVICE アカウントのコンテキスト内で実行されます。 NETWORK SERVICE アカウントなど、アクセス許可が限られているアカウントの下で SQL Server Integration Services サービスを実行することをお勧めします。 特権アカウントの下で SQL Server Integration Services サービスを実行する行為には、セキュリティ上の危険が潜んでいます。 
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは Windows のイベント ログに書き込みを行います。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でサービス イベントを表示できます。 Windows イベント ビューアーを使用してサービス イベントを表示することもできます。  
   
@@ -293,7 +293,7 @@ to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487
   
 4.  **[サーバーへの接続]** ダイアログ ボックスで、サーバー名を指定します。 ピリオド (.)、(local)、または **localhost** を使用すると、ローカル サーバーを指定できます。  
   
-5.  **[接続]** をクリックします。  
+5.  **[Connect]** をクリックします。  
 
 ## <a name="connect-to-a-remote-ssis-server"></a>リモート SSIS サーバーへの接続
   
@@ -319,7 +319,7 @@ to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487
     > [!NOTE]  
     >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは、そのインスタンスに固有のものではありません。 このサービスに接続するには、Integration Services サービスが実行されているコンピューターの名前を使用します。  
   
-5.  **[接続]** をクリックします。  
+5.  **[Connect]** をクリックします。  
   
 > [!NOTE]  
 >  **[サーバーの参照]** ダイアログ ボックスには、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]のリモート インスタンスは表示されません。 また、 **[サーバーへの接続]** ダイアログ ボックスで **[オプション]** ボタンをクリックしたときに表示される **[接続プロパティ]** タブのオプションは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] への接続時には適用されません。  

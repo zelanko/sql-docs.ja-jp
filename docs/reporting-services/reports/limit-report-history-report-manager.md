@@ -1,5 +1,6 @@
 ---
 title: レポート履歴を制限する - Reporting Services | Microsoft Docs
+description: レポート サーバーのレポート履歴を構成する方法について説明します。 特定のレポートのレポート履歴を構成する方法についても説明します。
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8e255792-d9ef-496f-a26c-9e969c1209a0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2dd66078363e281c2a73bfcc70ba685493bc3b88
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 634a033c06b2ed6815e32cf97829118dafa13b5f
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67492592"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510123"
 ---
 # <a name="limit-report-history---reporting-services"></a>レポート履歴を制限する - Reporting Services
   レポート履歴とは、時間の経過と共に作成されるレポート スナップショットの集まりです。 レポート履歴は必要時に作成できるほか、どの程度の頻度でスナップショットを作成し、レポート履歴に追加するかをスケジュールで設定することもできます。  

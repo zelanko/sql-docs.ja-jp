@@ -1,5 +1,6 @@
 ---
 title: Windows への PolyBase のインストール | Microsoft Docs
+description: シングル ノードまたは PolyBase スケールアウト グループとして PolyBase をインストールする方法について説明します。 インストール ウィザードまたはコマンド プロンプトを使用できます。 最後に、PolyBase を有効にします。
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: polybase
@@ -10,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 007719c2407f6e193b8612ef51944ccbfd3238d3
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: d6c9585f536c92e1f2776831434614c59919ddf3
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288476"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80217128"
 ---
 # <a name="install-polybase-on-windows"></a>Windows への PolyBase のインストール
 
@@ -95,7 +96,7 @@ PolyBase スケールアウト グループの場合、次のことを確認し�
    > インストール後に、[PolyBase 機能を有効にする](#enable)必要があります。
 
 
-##  <a name="installing"></a> コマンド プロンプトの使用
+##  <a name="use-a-command-prompt"></a><a name="installing"></a> コマンド プロンプトの使用
 
 次の表の値を使用して、インストール スクリプトを作成します。 SQL Server PolyBase エンジンと SQL Server PolyBase Data Movement サービスは、同じアカウントで実行する必要があります。 PolyBase スケールアウト グループで、すべてのノード上の PolyBase サービスを、同じドメイン アカウントで実行する必要があります。  
    
@@ -151,7 +152,7 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
    
 ```  
 
-## <a id="enable"></a> PolyBase を有効にする
+## <a name="enable-polybase"></a><a id="enable"></a> PolyBase を有効にする
 
 インストールが完了したら、PolyBase を有効にしてその機能にアクセスできるようにする必要があります。 次の Transact-SQL コマンドを使用します。 ビッグ データ クラスター インストール中にデプロイされた SQL 2019 インスタンスではこの設定が既定で有効になっています。
 
@@ -166,7 +167,7 @@ RECONFIGURE;
 
 PolyBase は、DWConfiguration、DWDiagnostics、および DWQueue の 3 つのユーザー データベースをインストールします。 これらのデータベースは PolyBase で使用されます。 変更したり削除しないでください。  
    
-### <a id="confirminstall"></a> インストールの確認方法  
+### <a name="how-to-confirm-installation"></a><a id="confirminstall"></a> インストールの確認方法  
 
 次のコマンドを実行します。 PolyBase がインストールされている場合は 1 が返されます。 それ以外の場合は 0 が返されます。  
 

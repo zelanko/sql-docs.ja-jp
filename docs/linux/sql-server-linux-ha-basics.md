@@ -1,6 +1,6 @@
 ---
 title: Linux デプロイでの SQL Server の高可用性
-description: Always On 可用性グループ、フェールオーバー クラスター インスタンス (FCI)、ログ配布など、SQL Server on Linux で利用できるさまざまな高可用性オプションについて説明します。
+description: Always On 可用性グループ、フェールオーバー クラスター インスタンス (FCI)、ログ配布など、SQL Server on Linux の高可用性オプションについて説明します。
 ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
@@ -9,12 +9,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 474533a69d74512e3e305f44d96f90009aa64e00
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c999228cdcd78ca2996ee134266a36543e97d913
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75656611"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216682"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Linux デプロイでの SQL Server 可用性の基本
 
@@ -22,7 +22,7 @@ ms.locfileid: "75656611"
 
 [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] 以降では、Linux と Windows の両方で [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] がサポートされています。 Windows ベースの [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] デプロイと同様に、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] のデータベースとインスタンスは、Linux 下でも高可用性を備えている必要があります。 この記事では、高可用性を備えた Linux ベースの [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] データベースとインスタンスを計画し、デプロイするうえでの技術的な側面について説明すると共に、Windows ベースのインストールとの違いについて説明します。 Linux プロフェッショナルは [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] について聞き慣れなかったり、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] プロフェッショナルは Linux について聞き慣れない場合があるかもしれないため、この記事では、一部のプロフェッショナルにとっては馴染みのある概念についても説明しています。
 
-## <a name="includessnoversion-mdincludesssnoversion-mdmd-availability-options-for-linux-deployments"></a>Linux デプロイでの [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 可用性オプション
+## <a name="ssnoversion-md-availability-options-for-linux-deployments"></a>Linux デプロイでの [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 可用性オプション
 バックアップと復元に加えて、Linux では、Windows ベースのデプロイと同じ、3 つの可用性機能を使用できます。
 -   Always On 可用性グループ (AG)
 -   Always On フェールオーバー クラスター インスタンス (FCI)
@@ -51,7 +51,7 @@ Linux では、多くのコマンドを昇格された特権で実行する必�
 -   `systemctl` - サービスを開始、停止、または有効化します
 -   テキスト エディター コマンド。 Linux には、vi や emacs など、さまざまなテキスト エディター オプションがあります。
 
-## <a name="common-tasks-for-availability-configurations-of-includessnoversion-mdincludesssnoversion-mdmd-on-linux"></a>Linux 上の [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] の可用性構成に関する一般的なタスク
+## <a name="common-tasks-for-availability-configurations-of-ssnoversion-md-on-linux"></a>Linux 上の [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] の可用性構成に関する一般的なタスク
 このセクションでは、Linux ベースのすべての [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] デプロイに共通するタスクについて説明します。
 
 ### <a name="ensure-that-files-can-be-copied"></a>ファイルをコピーできることを確認する
@@ -120,7 +120,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 -   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
-### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>可用性のための [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] パッケージをインストールする
+### <a name="install-ssnoversion-md-packages-for-availability"></a>可用性のための [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] パッケージをインストールする
 Windows ベースの [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] インストールでは、一部のコンポーネントは基本的なエンジンのインストールでもインストールされますが、それ以外はインストールされません。 Linux では、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] エンジンのみがインストール プロセスの一部としてインストールされます。 その他はすべてオプションです。 Linux 下の高可用性 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] インスタンスの場合、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] と共に 2 つのパッケージをインストールする必要があります。[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent (*mssql-server-agent*) と高可用性 (HA) パッケージ (*mssql-server-ha*) です。 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent は厳密にはオプションですが、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] のジョブのスケジューラであり、ログ配布で必要とされるため、インストールすることをお勧めします。 Windows ベースのインストールでは、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent はオプションではありません。
 
 >[!NOTE]
@@ -204,10 +204,10 @@ Pacemaker クラスターのログの場所は、ディストリビューショ�
 
 ログの既定の場所を変更するには、`corosync.conf` に変更を加えます。
 
-## <a name="plan-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>Pacemaker クラスターを [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 用に計画 する
+## <a name="plan-pacemaker-clusters-for-ssnoversion-md"></a>Pacemaker クラスターを [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 用に計画 する
 このセクションでは、Pacemaker クラスターの重要な計画ポイントについて説明します。
 
-### <a name="virtualizing-linux-based-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>Linux ベースの Pacemaker クラスターを [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 用に仮想化する
+### <a name="virtualizing-linux-based-pacemaker-clusters-for-ssnoversion-md"></a>Linux ベースの Pacemaker クラスターを [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 用に仮想化する
 仮想マシンを使用して Linux ベースの [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] デプロイを AG と FCI 用にデプロイする際には、Windows ベースの場合と同じ規則が適用されます。 仮想化された [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] デプロイのサポートに関する一連の基本規則は、[Microsoft サポート KB 956893](https://support.microsoft.com/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment) で公開されています。 Microsoft の Hyper-V や VMware の ESXi など、異なるハイパーバイザー間では、プラットフォーム自体の違いによって異なる規則が生じる場合もあります。
 
 仮想化環境で AG と FCI を使用する場合は、指定された Pacemaker クラスターのノードに対して、アンチアフィニティが設定されていることを確認してください。 AG または FCI の構成で高可用性向けに構成された場合、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] をホストしている各 VM は、同じハイパーバイザー ホストで実行されないようにする必要があります。 たとえば、2 ノードの FCI がデプロイされている場合、特にライブ マイグレーションや vMotion のような機能を使用している場合には、ホストで障害が発生したときに、ノードをホストしている VM のいずれかに対して移行先を確保できるよう、"*少なくとも*" 3 つのハイパーバイザー ホストを確保する必要があります。

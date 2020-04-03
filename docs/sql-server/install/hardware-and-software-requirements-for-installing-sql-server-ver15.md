@@ -1,7 +1,8 @@
 ---
-title: SQL Server のインストールに必要なハードウェアおよびソフトウェア | Microsoft Docs
+title: SQL Server 2019:ハードウェアとソフトウェアの要件
+description: SQL Server 2019 をインストールして実行するためのハードウェア、ソフトウェア、およびオペレーティング システムの要件の一覧。
 ms.custom: sqlfreshmay19
-ms.date: 11/04/2019
+ms.date: 02/19/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -44,62 +45,31 @@ helpviewer_keywords:
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: aca31d10c030c360dcd82d6c4851df700bc3c4fe
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 4dce96a698b9d4c84adbfdafdfbb7ac9056aac05
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74319048"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79428173"
 ---
-# <a name="hardware-and-software-requirements-for-installing-sql-server"></a>SQL Server のインストールに必要なハードウェアおよびソフトウェア
+# <a name="sql-server-2019-hardware-and-software-requirements"></a>SQL Server 2019:ハードウェアとソフトウェアの要件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この記事では、Windows オペレーティング システムでの [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] のインストールと実行に必要な最低限のハードウェア要件とソフトウェア要件について説明します。
+この記事では、Windows オペレーティング システムでの SQL Server 2019 のインストールと実行に必要な最低限のハードウェア要件とソフトウェア要件について説明します。
 
-[!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] では、Linux での [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] が新たにサポートされました。 詳細については、[Linux での [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールに必要なハードウェアおよびソフトウェア](../../linux/sql-server-linux-setup.md#system)に関するページを参照してください。 
+他のバージョンの SQL Server のハードウェアとソフトウェアの要件については、以下を参照してください。
+- [SQL Server 2016 および 2017](hardware-and-software-requirements-for-installing-sql-server.md)
+- [SQL Server on Linux](../../linux/sql-server-linux-setup.md#system)
+- [ビッグ データ クラスター](../../big-data-cluster/deployment-guidance.md)
 
-**お試しください:**  
-  
-- [**Evaluation Center**](https://www.microsoft.com/evalcenter/evaluate-sql-server-2019-rc)から SQL Server をダウンロードします。 
-  
-<!-- 
-- Spin up a Virtual Machine with [**SQL Server 2017**](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) already installed.  
--->
-  
-**すべてのエディションに次の考慮事項が適用されます。**  
-  
-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでは、読み取り専用ドライブ、マップされたドライブ、または圧縮されたドライブでのインストールがブロックされます。  
-  
-- リモート デスクトップ接続で、RDC クライアントのローカル リソースのメディアを使用して、セットアップを起動した場合、インストールは失敗します。 リモートでインストールするには、メディアをネットワーク共有に配置するか、物理または仮想マシンのローカルに配置する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール メディアは、ネットワーク共有、マッピングされたドライブ、またはローカル ドライブに配置するか、仮想マシンに ISO として配置する必要があります。
-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを実行すると、製品に必要な以下のソフトウェア コンポーネントがインストールされます。  
-  
-    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client  
-  
-    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ サポート ファイル  
-
-##  <a name="hwswr"></a> ハードウェアとソフトウェアの要件  
-次の要件は、すべてのインストールに適用されます。  
-  
-|コンポーネント|要件|  
-|---------------|-----------------|  
-|オペレーティング システム|Windows 10 TH1 1507 以降<br/><br>Windows Server 2016 以降<br/><br/>
-|.NET Framework|最小限のオペレーティング システムには、最小限の .NET Framework が含まれています。|  
-|ネットワーク ソフトウェア|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] でサポートされるオペレーティング システムにはネットワーク ソフトウェアが組み込まれています。 スタンドアロン インストールの名前付きおよび既定のインスタンスでは、次のネットワーク プロトコルがサポートされています。共有メモリ、名前付きパイプ、および TCP/IP。<br/><br/> |  
-|ハード ディスク|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] では 6 GB 以上のハード ディスク空き容量が必要です。<br/><br/> 必要となるディスク空き容量は、インストールする [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] のコンポーネントに応じて異なります。 詳細については、この記事で後述する「[必要なハード ディスク空き容量](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace)」を参照してください。 データ ファイルでサポートされているストレージの種類の詳細については、「 [Storage Types for Data Files](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes)」を参照してください。|  
-|モニター|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] では Super-VGA (800x600) 以上の解像度のモニターが必要です。|  
-|インターネット|インターネット機能にはインターネット アクセス (有料) が必要です。|  
-
-> [!NOTE]
-> 仮想マシンで [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] を実行すると、仮想化のオーバーヘッドのために、ネイティブで実行した場合よりも遅くなります。  
-
-> [!IMPORTANT]
-> PolyBase 機能には、ハードウェアとソフトウェアに追加の要件があります。 詳細については、「 [PolyBase 入門](../../relational-databases/polybase/get-started-with-polybase.md)」を参照してください。  
-  
-##  <a name="pmosr"></a> プロセッサ、メモリ、およびオペレーティング システムの要件  
+##  <a name="hardware-requirements"></a><a name="pmosr"></a> ハードウェア要件  
  次に示すメモリおよびプロセッサの要件は [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]のすべてのエディションに適用されます。  
   
 |コンポーネント|要件|  
 |---------------|-----------------|  
+|ハード ディスク|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] では 6 GB 以上のハード ディスク空き容量が必要です。<br/><br/> 必要となるディスク空き容量は、インストールする [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] のコンポーネントに応じて異なります。 詳細については、この記事で後述する「[必要なハード ディスク空き容量](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace)」を参照してください。 データ ファイルでサポートされているストレージの種類の詳細については、「 [Storage Types for Data Files](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes)」を参照してください。|  
+|モニター|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] では Super-VGA (800x600) 以上の解像度のモニターが必要です。|  
+|インターネット|インターネット機能にはインターネット アクセス (有料) が必要です。|  
 |メモリ \*|**最小:**<br/><br/> Express Edition: 512 MB<br/><br/> 他のすべてのエディション: 1 GB<br/><br/> **推奨:**<br/><br/> Express Edition: 1 GB<br/><br/> 他のすべてのエディション: 4 GB 以上。最適なパフォーマンスを確保するために、データベースのサイズが大きくなるにつれて増やす必要があります。|  
 |プロセッサの速度|**最小:** x64 プロセッサ:1.4 GHz<br/><br/> **推奨:** 2.0 GHz 以上|  
 |プロセッサの種類|x64 プロセッサ: AMD Opteron、AMD Athlon 64、Intel Xeon (Intel EM64T 対応)、Intel Pentium IV (EM64T 対応)|  
@@ -109,19 +79,28 @@ ms.locfileid: "74319048"
   
  \*[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) の [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] コンポーネントをインストールする場合の最小メモリ要件は 2 GB の RAM で、[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] の最小メモリ要件とは異なります。 DQS のインストールの詳細については、「 [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)」を参照してください。  
 
-**Server Core サポート:**
 
-SQL Server 2019 の Server Core モードでのインストールは、次のエディションの Windows Server でサポートされます。
+##  <a name="software-requirements"></a><a name="hwswr"></a> ソフトウェア要件  
 
-|                              |
-| :------------------------  |
-| Windows Server 2019 Core | 
-| Windows Server 2016 Core |
-| &nbsp; | 
+次の要件は、すべてのインストールに適用されます。  
+  
+|コンポーネント|要件|  
+|---------------|-----------------|  
+|オペレーティング システム|Windows 10 TH1 1507 以降<br/><br>Windows Server 2016 以降<br/><br/>
+|.NET Framework|最小限のオペレーティング システムには、最小限の .NET Framework が含まれています。|  
+|ネットワーク ソフトウェア|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] でサポートされるオペレーティング システムにはネットワーク ソフトウェアが組み込まれています。 スタンドアロン インストールの名前付きおよび既定のインスタンスでは、次のネットワーク プロトコルがサポートされています。共有メモリ、名前付きパイプ、および TCP/IP。<br/><br/> |  
 
-Server Core への SQL Server のインストールの詳細については、「[Server Core への SQL Server のインストール](../../database-engine/install-windows/install-sql-server-on-server-core.md)」を参照してください。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを実行すると、製品に必要な以下のソフトウェア コンポーネントがインストールされます。  
+  
+   - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client    
+   - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ サポート ファイル  
 
-###  <a name="TOP_Principal"></a> OS の互換性   
+
+> [!IMPORTANT]
+> PolyBase 機能には、ハードウェアとソフトウェアに追加の要件があります。 詳細については、「 [PolyBase 入門](../../relational-databases/polybase/get-started-with-polybase.md)」を参照してください。  
+  
+
+##  <a name="operating-system-support"></a><a name="TOP_Principal"></a> オペレーティング システムのサポート 
 
 次の表では、Windows のバージョンと SQL Server 2019 のエディションとの互換性を示します。  
   
@@ -140,10 +119,23 @@ Server Core への SQL Server のインストールの詳細については、�
 | &nbsp; | &nbsp; |
 
 
-##  <a name="CrossLanguageSupport"></a> 言語間サポート  
+### <a name="server-core-support"></a>Server Core サポート
+
+SQL Server 2019 の Server Core モードでのインストールは、次のエディションの Windows Server でサポートされます。
+
+|                              |
+| :------------------------  |
+| Windows Server 2019 Core | 
+| Windows Server 2016 Core |
+| &nbsp; | 
+
+Server Core への SQL Server のインストールの詳細については、「[Server Core への SQL Server のインストール](../../database-engine/install-windows/install-sql-server-on-server-core.md)」を参照してください。 
+
+
+##  <a name="cross-language-support"></a><a name="CrossLanguageSupport"></a> 言語間サポート  
  各言語にローカライズされた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールする場合の言語間サポートと注意点の詳細については、「 [SQL Server のローカル言語版](../../sql-server/install/local-language-versions-in-sql-server.md)」を参照してください。  
   
-##  <a name="HardDiskSpace"></a> 必要なハード ディスク空き容量  
+##  <a name="disk-space-requirements"></a><a name="HardDiskSpace"></a> 必要なディスク領域  
  [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]のインストール中は、Windows インストーラーによってシステム ドライブ上に一時ファイルが作成されます。 したがって、セットアップを実行して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をインストールまたはアップグレードする前に、これらの一時ファイル用に 6.0 GB 以上の空き容量がシステム ドライブにあることを確認してください。 この要件は、既定以外のドライブに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントをインストールする場合にも適用されます。  
   
  実際に必要なハード ディスク空き容量は、システム構成と、インストールする機能によって異なります。 次の表は、 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] の各コンポーネントに必要なディスク空き容量を示しています。  
@@ -168,7 +160,7 @@ Server Core への SQL Server のインストールの詳細については、�
   
  *ダウンロードされるオンライン ブック コンテンツに必要なディスク領域は 200 MB です。  
   
-##  <a name="StorageTypes"></a> データ ファイルのストレージの種類  
+##  <a name="storage-types-for-data-files"></a><a name="StorageTypes"></a> データ ファイルのストレージの種類  
  データ ファイルでサポートされているストレージの種類は、次のとおりです。  
   
 - ローカル ディスク 
@@ -182,7 +174,7 @@ Server Core への SQL Server のインストールの詳細については、�
   
   
   
-##  <a name="DC_support"></a> ドメイン コントローラーへの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール  
+##  <a name="installing-ssnoversion-on-a-domain-controller"></a><a name="DC_support"></a> ドメイン コントローラーへの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール  
  セキュリティ上の理由から、ドメイン コントローラーには [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] をインストールしないことをお勧めします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ時にインストールが中止されることはありませんが、次の制限事項が適用されます。  
   
 - ローカル サービス アカウントを使用して、ドメイン コントローラー上で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを実行することはできません。    
@@ -192,7 +184,18 @@ Server Core への SQL Server のインストールの詳細については、�
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、読み取り専用ドメイン コントローラーではサポートされません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでは、読み取り専用ドメイン コントローラーにセキュリティ グループを作成したり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントを準備したりすることはできません。 この場合、セットアップは失敗します。 
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスは、読み取り専用ドメイン コントローラーのみにアクセスできる環境ではサポートされません。 
   
-## <a name="see-also"></a>参照  
- [SQL Server のインストール計画](../../sql-server/install/planning-a-sql-server-installation.md)   
- [SQL Server インストールにおけるセキュリティの考慮事項](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
+## <a name="installation-media"></a>インストール メディア
+
+関連するインストール メディアは、次の場所から入手できます。 
+  
+- [SQL Server 評価センター](https://www.microsoft.com/evalcenter/evaluate-sql-server-2019)
+- [最新の累積的な更新プログラム](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
+
+または、[SQL Server を既に実行している Azure 仮想マシン](/azure/virtual-machines/windows/sql/quickstart-sql-vm-create-portal)を作成することもできます。ただし、仮想マシン上の SQL Server は、仮想化のオーバーヘッドのためにネイティブで実行するよりも低速になります。
+
+
+## <a name="next-steps"></a>次のステップ
+
+SQL Server のインストールのためのハードウェアとソフトウェアの要件を確認した後は、[SQL Server のインストール計画](../../sql-server/install/planning-a-sql-server-installation.md)を開始したり、[SQL Server のセキュリティに関する考慮事項](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)を確認したりできます。
+
 

@@ -1,5 +1,6 @@
 ---
 title: PolyBase Kerberos の接続性のトラブルシューティング | Microsoft Docs
+description: Kerberos でセキュリティ保護された Hadoop クラスターを使用した PolyBase の認証問題のトラブルシューティングを行うには、PolyBase に組み込まれている対話型診断を使用できます。
 author: alazad-msft
 ms.author: alazad
 ms.reviewer: mikeray
@@ -10,12 +11,12 @@ ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 631cfbf59cedddc699d82f36d4ea42ff23b0119c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 23aaaef5f85b814bda8f576fc6a0cfe671fea8e8
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72909151"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215857"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos の接続性のトラブルシューティング
 
@@ -249,7 +250,7 @@ Kerberos へのアクセス時に引き続き問題が発生する場合は、�
 
 4. KDC で AES256 のみをサポートできる場合は、[JCE ポリシー ファイル](http://www.oracle.com/technetwork/java/javase/downloads/index.html)がインストールされていることを確認します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [Active Directory 認証を使用した PolyBase と Cloudera の統合](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/10/17/integrating-polybase-with-cloudera-using-active-directory-authentication)  
 [CDH 用に Kerberos を設定するための Cloudera のガイド](https://www.cloudera.com/documentation/enterprise/5-6-x/topics/cm_sg_principal_keytab.html)  
 [HDP 用に Kerberos を設定するための Hortonworks のガイド](https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.0.0/bk_Ambari_Security_Guide/content/ch_configuring_amb_hdp_for_kerberos.html)  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 11b3c1d06c74f8d5c19aa95ba8de20fbce67d3dd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: e67682a25768e80469aa13a027099bacc515f8a7
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75259042"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448104"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Windows 認証でのデータベース ミラーリング エンドポイントの作成 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,18 +37,18 @@ ms.locfileid: "75259042"
   
 -   **データベース ミラーリング エンドポイントを作成するために使用するもの:** [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
  サーバー インスタンスの認証方法と暗号化方法は、システム管理者が設定します。  
   
 > [!IMPORTANT]  
 >  RC4 アルゴリズムは非推奨とされます。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] AES を使用することをお勧めします。  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  CREATE ENDPOINT 権限、または sysadmin 固定サーバー ロールのメンバーシップが必要です。 詳細については、「 [GRANT (エンドポイントの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)」を参照してください。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-create-a-database-mirroring-endpoint-that-uses-windows-authentication"></a>Windows 認証を使用するデータベース ミラーリング エンドポイントを作成するには  
   
@@ -91,7 +91,7 @@ ms.locfileid: "75259042"
   
      )  
   
-     パラメーターの説明  
+     where  
   
     -   \<*endpointName*> は、サーバー インスタンスのデータベース ミラーリング エンドポイントの一意名です。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "75259042"
   
     -   既定では、ENCRYPTION は REQUIRED に設定されます。 これは、このエンドポイントへのすべての接続に暗号化を使用する必要があることを意味します。 ただし、エンドポイントで暗号化を無効にしたり、オプションにできます。 選択肢は次のとおりです。  
   
-        |Value|定義|  
+        |値|定義|  
         |-----------|----------------|  
         |DISABLED|接続を経由して送信されたデータが暗号化されないことを指定します。|  
         |SUPPORTED|反対側のエンドポイントで SUPPORTED または REQUIRED が指定されている場合に限り、データを暗号化することを指定します。|  
@@ -122,7 +122,7 @@ ms.locfileid: "75259042"
   
     -   \<*algorithm*> には、エンドポイントの暗号化標準を指定するオプションが用意されています。 \<*algorithm*> の値は、次の各アルゴリズムまたはそれらの組み合わせになります: RC4、AES、AES RC4、RC4 AES。  
   
-         AES RC4 では、エンドポイントが暗号化アルゴリズムのネゴシエートを行う際に、AES アルゴリズムを優先することが示されます。 RC4 AES では、エンドポイントが暗号化アルゴリズムのネゴシエートを行う際に、RC4 アルゴリズムを優先することが示されます。 両方のエンドポイントで両方のアルゴリズムを異なる順序で指定した場合、接続を受け入れた方のエンドポイントが優先されます。  
+         AES RC4 では、エンドポイントが暗号化アルゴリズムのネゴシエートを行う際に、AES アルゴリズムを優先することが示されます。 RC4 AES では、エンドポイントが暗号化アルゴリズムのネゴシエートを行う際に、RC4 アルゴリズムを優先することが示されます。 両方のエンドポイントで両方のアルゴリズムを異なる順序で指定した場合、接続を受け入れた方のエンドポイントが優先されます。 異なるサーバー間の接続エラーを回避するために、同じアルゴリズムを明示的に指定します。
   
         > [!NOTE]  
         >  RC4 アルゴリズムは非推奨とされます。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] AES を使用することをお勧めします。  
@@ -139,7 +139,7 @@ ms.locfileid: "75259042"
     > [!NOTE]  
     >  既存のエンドポイントを変更するには、「 [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)で作成する方法について説明します。  
   
-###  <a name="TsqlExample"></a> 例: データベース ミラーリングをサポートするエンドポイントの作成 (Transact-SQL)  
+###  <a name="example-creating-endpoints-to-support-for-database-mirroring-transact-sql"></a><a name="TsqlExample"></a> 例: データベース ミラーリングをサポートするエンドポイントの作成 (Transact-SQL)  
  次の例では、3 台の異なるコンピューター システムに既定のサーバー インスタンスのデータベース ミラーリング エンドポイントを作成します。  
   
 |サーバー インスタンスの役割|ホスト コンピューター名|  
@@ -179,7 +179,7 @@ CREATE ENDPOINT endpoint_mirroring
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
  **データベース ミラーリング エンドポイントを構成するには**  
   
 -   [AlwaysOn 可用性グループのデータベース ミラーリング エンドポイントの作成 &#40;SQL Server PowerShell&#41;](../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  

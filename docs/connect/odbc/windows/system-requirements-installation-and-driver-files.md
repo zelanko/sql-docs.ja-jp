@@ -1,7 +1,7 @@
 ---
 title: システム要件、インストール、およびドライバー ファイル | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2019
+ms.date: 03/18/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6365b86a4efe8d29273035d62f76c7bb02b15335
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 2f451493a93e545fea0507f83fe5195b30ec2680
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79285816"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79526807"
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>システム必要条件、インストール、およびドライバー ファイル
 
@@ -23,17 +23,22 @@ ms.locfileid: "79285816"
 
 この記事では、SQL Server に接続する ODBC ドライバーについて説明します。
 
-## <a name="driver-versions"></a>ドライバー バージョン
+## <a name="sql-version-compatibility"></a>SQL バージョンの互換性
 
-| ドライバーのバージョン | サポートの説明 |
-| :------------- | :--------------------- |
-| ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] | SQL Server 2014、SQL Server 2012、[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)]、および [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] への接続をサポートします。 |
-| ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Windows | [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client の 1 つまたは複数のバージョンもインストールされているコンピューターにインストールできます。 |
-| ODBC Driver 13 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] | SQL Server 2016、SQL Server 2014、SQL Server 2012、[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]、および [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)] への接続をサポートします。 |
-| ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] | 上記の 13 のものに加えて、SQL Server 2017 をサポートします。 |
-| ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] | 13.1 と同じデータベース バージョンをサポートします。 |
-| ODBC Driver 17 for SQL Server | ドライバー バージョン 17.3 以降で、SQL Server 2019 をサポートします。 |
-| &nbsp; | &nbsp; |
+互換性とは、ドライバーが、リリースの時点で SQL の既存のリリースに対して互換性のテストが行われていることを示します。 SQL Server のリリースでは、ほとんどの場合、既存のクライアント ドライバーとの下位互換性を維持するようにしています。 ただし、SQL Server リリースの新機能は、古いクライアント ドライバーでは使用できない場合があります。
+
+|ドライバーのバージョン|Azure SQL データベース|Azure SQL DW|Azure SQL Managed Instance|SQL Server 2019|SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|SQL Server 2008 R2|SQL Server 2008|SQL Server 2005|
+|-|-|-|-|-|-|-|-|-|-|-|-|
+|17.5|Y|Y|Y|Y|Y|Y|Y|Y| | | |
+|17.4|Y|Y|Y|Y|Y|Y|Y|Y| | | |
+|17.3|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y| |
+|17.2|Y|Y|Y| |Y|Y|Y|Y|Y|Y| |
+|17.1|Y|Y|Y| |Y|Y|Y|Y|Y|Y| |
+|17.0|Y|Y|Y| |Y|Y|Y|Y|Y|Y| |
+|13.1| | | | |Y|Y|Y|Y|Y|Y| |
+|13  | | | | | |Y|Y|Y|Y|Y| |
+|11  | | | | | | |Y|Y|Y|Y|Y|
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 ### <a name="connection-string-details"></a>接続文字列の詳細
 
@@ -41,33 +46,31 @@ ms.locfileid: "79285816"
 
 ## <a name="supported-operating-systems"></a>サポートされるオペレーティング システム
 
-次の Windows オペレーティング システムのドライバーでアプリケーションを実行できます。  
+次のマトリックスは、Windows オペレーティング システムのバージョンでサポートされているドライバーのバージョンを示しています。
 
-- Windows Server 2008 R2
-- Windows Server 2012
-- Windows Server 2012 R2
-- Windows Server 2016
-- Windows Vista SP2 &nbsp; " _(ODBC Driver 11 のみ。)_ "
-- Windows 7
-- Windows 8
-- Windows 8.1
-- Windows 10
+|ドライバーのバージョン|Windows Server 2019|Windows Server 2016|Windows Server 2012 R2|Windows Server 2012|Windows Server 2008 R2|Windows 10|Windows 8.1|Windows 7|Windows Vista SP2|
+|-|-|-|-|-|-|-|-|-|-|
+|17.5|Y|Y|Y|Y| |Y|Y| | |
+|17.4|Y|Y|Y|Y|Y|Y|Y|Y| |
+|17.3|Y|Y|Y|Y|Y|Y|Y|Y| |
+|17.2| |Y|Y|Y|Y|Y|Y|Y| |
+|17.1| |Y|Y|Y|Y|Y|Y|Y| |
+|17.0| |Y|Y|Y|Y|Y|Y|Y| |
+|13.1| |Y|Y|Y|Y|Y|Y|Y| |
+|13  | | | |Y|Y| |Y|Y| |
+|11  | | | |Y|Y| | |Y|Y|
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="installing-microsoft-odbc-driver-for-sql-server"></a>Microsoft ODBC Driver for SQL Server のインストール
 
-次のいずれかのリンクから `msodbcsql.msi` を実行すると、ドライバーがインストールされます。
-
-- [Windows で Microsoft ODBC Driver 17 for SQL Server をダウンロードする](https://www.microsoft.com/download/details.aspx?id=56567)
-- [Windows で Microsoft ODBC Driver 13.1 for SQL Server をダウンロードする](https://www.microsoft.com/download/details.aspx?id=53339)
-- [Microsoft ODBC Driver 13 for SQL Server on Windows のダウンロード](https://www.microsoft.com/download/details.aspx?id=50420)
-- [Windows で Microsoft ODBC Driver 11 for SQL Server をダウンロードする](https://www.microsoft.com/download/details.aspx?id=36434)
+[Windows 向けのダウンロード](../download-odbc-driver-for-sql-server.md#download-for-windows)のいずれかから `msodbcsql.msi` を実行すると、ドライバーがインストールされます。
 
 > [!NOTE]
 > Driver 17.1.0.1 以下をインストールしているお客様は、新しいバージョンの Driver をインストールする前にこれを手動でアンインストールすることをお勧めします。
 
 ### <a name="side-by-side-with-native-client"></a>Native Client とサイド バイ サイド
 
-ドライバーは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client とサイド バイ サイドでインストールできます。
+ドライバーは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client とサイド バイ サイドでインストールできます。 ドライバーのメジャー バージョン (11、13、17) はすべて、相互にサイド バイ サイドでインストールすることもできます。
 
 `msodbcsql.msi` を呼び出すと、既定ではクライアント コンポーネントのみがインストールされます。 クライアント コンポーネントは、ドライバーを使用して開発されたアプリケーションの実行をサポートするファイルです。 SDK コンポーネントをインストールするには、コマンド ラインで `ADDLOCAL=ALL` を指定します。 次に例を示します。
   

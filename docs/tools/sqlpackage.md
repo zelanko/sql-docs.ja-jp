@@ -8,13 +8,13 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 ms.reviewer: alayu; sstein
-ms.date: 06/28/2018
-ms.openlocfilehash: f5a1391865b2f08d6eb127fc360d94437c08155e
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.date: 03/17/2020
+ms.openlocfilehash: 3a45b9164d2d81983e9a40f0395189979d4daa7d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79286486"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448253"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -70,7 +70,7 @@ sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_ve
 
 ### <a name="help-for-the-extract-action"></a>抽出アクションのヘルプ
 
-|パラメーター|短い形式|Value|説明|
+|パラメーター|短い形式|値|説明|
 |---|---|---|---|
 |**/Action:**|**/a**|Extract|実行する操作を指定します。 |
 |**/AccessToken:**|**/at**|{string}| ターゲット データベースに接続するときに使用するトークン ベースの認証アクセス トークンを指定します。 |
@@ -78,7 +78,7 @@ sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_ve
 |**/DiagnosticsFile:**|**/df**|{string}|診断ログを保存するファイルを指定します。 |
 |**/MaxParallelism:**|**/mp**|{int}| 1 つのデータベースに対して実行される同時実行操作の並列処理の次数を指定します。 既定値は 8 です。 |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|sqlpackage.exe が既存のファイルを上書きするかどうかを指定します。 False を指定すると、既存のファイルが検出された場合に sqlpackage.exe の操作が中止します。 既定値は True です。 |
-|**/Properties:**|**/p**|{PropertyName}={Value}|操作固有のプロパティの名前と値のペア ({PropertyName}={Value}) を指定します。 操作のプロパティ名については、特定の操作のヘルプを参照してください。 例: sqlpackage.exe /Action:Publish /?。 |
+|**/Properties:**|**/p**|{PropertyName}={Value}|操作固有のプロパティの名前と値のペア ({PropertyName}={Value}) を指定します。 操作のプロパティ名については、特定の操作のヘルプを参照してください。 例: sqlpackage.exe /Action:Extract /?。 |
 |**/Quiet:**|**/q**|{True&#124;False}|詳細なフィードバックを非表示にするかどうかを指定します。 既定値は False です。 |
 |**/SourceConnectionString:**|**/scs**|{string}|ソース データベースの有効な SQL Server または SQL Azure 接続文字列を指定します。 このパラメーターを指定する場合、他のどのソース パラメーターとも同時には使用できません。 |
 |**/SourceDatabaseName:**|**/sdn**|{string}|ソース データベースの名前を定義します。 |
@@ -94,7 +94,7 @@ sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_ve
 
 ### <a name="properties-specific-to-the-extract-action"></a>抽出アクションに固有のプロパティ
 
-|プロパティ|Value|説明|
+|プロパティ|値|説明|
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|SQL Server に対してクエリを実行するときのコマンドのタイムアウト (秒) を指定します。|
 |**/p:**|DacApplicationDescription=(STRING)|DACPAC メタデータに格納されるアプリケーションの説明を定義します。|
@@ -111,7 +111,7 @@ sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_ve
 |**/p:**|IgnoreUserLoginMappings=(BOOLEAN)|ユーザーとログイン間のリレーションシップを無視するかどうかを指定します。|
 |**/p:**|LongRunningCommandTimeout=(INT32)| SQL Server に対してクエリを実行するときの実行時間の長いコマンドのタイムアウトを秒単位で指定します。 無期限に待機するには、0 を使用します。|
 |**/p:**|Storage=({File&#124;Memory} 'File')|抽出時に使用されるスキーマ モデルのバックアップ用ストレージの種類を指定します。|
-|**/p:**|TableData=(STRING)|データの抽出元テーブルを示します。 テーブル名は次の形式で指定してください: schema_name.table_identifier。名前部分はかっこで囲んでも囲まなくても構いません。|
+|**/p:**|TableData=(STRING)|データの抽出元テーブルを示します。 テーブル名は次の形式で指定してください: schema_name.table_identifier。名前部分はかっこで囲んでも囲まなくても構いません。 このオプションは、複数回指定できます。|
 |**/p:**| TempDirectoryForTableData=(STRING)|パッケージ ファイルに書き込む前にテーブル データをバッファーするために使用する、一時ディレクトリを指定します。|
 |**/p:**|VerifyExtraction=(BOOLEAN)|抽出された DACPAC を検証するかどうかを指定します。|
 
@@ -121,7 +121,7 @@ SqlPackage.exe の公開操作では、ソース データベースの構造に�
 
 ### <a name="help-for-publish-action"></a>公開アクションのヘルプ
 
-|パラメーター|短い形式|Value|説明|
+|パラメーター|短い形式|値|説明|
 |---|---|---|---|
 |**/Action:**|**/a**|発行|実行する操作を指定します。 |
 |**/AccessToken:**|**/at**|{string}| ターゲット データベースに接続するときに使用するトークン ベースの認証アクセス トークンを指定します。 |
@@ -160,7 +160,7 @@ SqlPackage.exe の公開操作では、ソース データベースの構造に�
 
 ### <a name="properties-specific-to-the-publish-action"></a>公開アクションに固有のプロパティ
 
-|プロパティ|Value|説明|
+|プロパティ|値|説明|
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|配置コントリビューターに追加の配置コントリビューター引数を指定します。 複数の値を指定する場合は、セミコロンで区切ります。|
 |**/p:**|AdditionalDeploymentContributors=(STRING)|dacpac を配置するときに実行する必要がある、追加の配置コントリビューターを指定します。 このとき、セミコロン区切りで、完全修飾ビルド コントリビューター名または ID を指定する必要があります。|
@@ -269,7 +269,7 @@ SqlPackage.exe の Export 操作を実行すると、SQL Server または Azure 
   
 ### <a name="help-for-export-action"></a>エクスポート アクションのヘルプ
 
-|パラメーター|短い形式|Value|説明|
+|パラメーター|短い形式|値|説明|
 |---|---|---|---|
 |**/Action:**|**/a**|エクスポート|実行する操作を指定します。 |
 |**/AccessToken:**|**/at**|{string}| ターゲット データベースに接続するときに使用するトークン ベースの認証アクセス トークンを指定します。 |
@@ -277,7 +277,7 @@ SqlPackage.exe の Export 操作を実行すると、SQL Server または Azure 
 |**/DiagnosticsFile:**|**/df**|{string}|診断ログを保存するファイルを指定します。 |
 |**/MaxParallelism:**|**/mp**|{int}| 1 つのデータベースに対して実行される同時実行操作の並列処理の次数を指定します。 既定値は 8 です。 |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|sqlpackage.exe が既存のファイルを上書きするかどうかを指定します。 False を指定すると、既存のファイルが検出された場合に sqlpackage.exe の操作が中止します。 既定値は True です。 |
-|**/Properties:**|**/p**|{PropertyName}={Value}|操作固有のプロパティの名前と値のペア ({PropertyName}={Value}) を指定します。 操作のプロパティ名については、特定の操作のヘルプを参照してください。 例: sqlpackage.exe /Action:Publish /?。|
+|**/Properties:**|**/p**|{PropertyName}={Value}|操作固有のプロパティの名前と値のペア ({PropertyName}={Value}) を指定します。 操作のプロパティ名については、特定の操作のヘルプを参照してください。 例: sqlpackage.exe /Action:Export /?。|
 |**/Quiet:**|**/q**|{True&#124;False}|詳細なフィードバックを非表示にするかどうかを指定します。 既定値は False です。|
 |**/SourceConnectionString:**|**/scs**|{string}|ソース データベースの有効な SQL Server または SQL Azure 接続文字列を指定します。 このパラメーターを指定する場合、他のどのソース パラメーターとも同時には使用できません。 |
 |**/SourceDatabaseName:**|**/sdn**|{string}|ソース データベースの名前を定義します。 |
@@ -293,13 +293,13 @@ SqlPackage.exe の Export 操作を実行すると、SQL Server または Azure 
 
 ### <a name="properties-specific-to-the-export-action"></a>エクスポート アクションに固有のプロパティ
 
-|プロパティ|Value|説明|
+|プロパティ|値|説明|
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|SQL Server に対してクエリを実行するときのコマンドのタイムアウト (秒) を指定します。|
 |**/p:**|DatabaseLockTimeout=(INT32 '60')| SQLServer に対してクエリを実行するときのデータベース ロックのタイムアウトを秒単位で指定します。 無期限に待機するには、-1 を使用します。|
 |**/p:**|LongRunningCommandTimeout=(INT32)| SQL Server に対してクエリを実行するときの実行時間の長いコマンドのタイムアウトを秒単位で指定します。 無期限に待機するには、0 を使用します。|
 |**/p:**|Storage=({File&#124;Memory} 'File')|抽出時に使用されるスキーマ モデルのバックアップ用ストレージの種類を指定します。|
-|**/p:**|TableData=(STRING)|データの抽出元テーブルを示します。 テーブル名は次の形式で指定してください: schema_name.table_identifier。名前部分はかっこで囲んでも囲まなくても構いません。|
+|**/p:**|TableData=(STRING)|データの抽出元テーブルを示します。 テーブル名は次の形式で指定してください: schema_name.table_identifier。名前部分はかっこで囲んでも囲まなくても構いません。 このオプションは、複数回指定できます。|
 |**/p:**|TempDirectoryForTableData=(STRING)|パッケージ ファイルに書き込む前にテーブル データをバッファーするために使用する、一時ディレクトリを指定します。|
 |**/p:**|TargetEngineVersion=({Default&#124;Latest&#124;V11&#124;V12} 'Latest')|予期されるターゲット エンジンのバージョンを指定します。 これにより、生成された bacpac で、メモリ最適化テーブルなどの V12 機能を持つ Azure SQL Database サーバーによってサポートされるオブジェクトを許可するかどうかが決まります。|
 |**/p:**|VerifyFullTextDocumentTypesSupported=(BOOLEAN)|Microsoft Azure SQL Database v12 のサポートされているフルテキスト ドキュメントの種類を確認するかどうかを指定します。|
@@ -310,14 +310,14 @@ SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.ba
   
 ### <a name="help-for-command-actions"></a>コマンド アクションのヘルプ
 
-|パラメーター|短い形式|Value|説明|
+|パラメーター|短い形式|値|説明|
 |---|---|---|---|
 |**/Action:**|**/a**|[インポート]|実行する操作を指定します。 |
 |**/AccessToken:**|**/at**|{string}| ターゲット データベースに接続するときに使用するトークン ベースの認証アクセス トークンを指定します。 |
 |**/Diagnostics:**|**/d**|{True&#124;False}|診断ログがコンソールへの出力かどうかを指定します。 既定値は False です。 |
 |**/DiagnosticsFile:**|**/df**|{string}|診断ログを保存するファイルを指定します。 |
 |**/MaxParallelism:**|**/mp**|{int}| 1 つのデータベースに対して実行される同時実行操作の並列処理の次数を指定します。 既定値は 8 です。 |
-|**/Properties:**|**/p**|{PropertyName}={Value}|操作固有のプロパティの名前と値のペア ({PropertyName}={Value}) を指定します。 操作のプロパティ名については、特定の操作のヘルプを参照してください。 例: sqlpackage.exe /Action:Publish /?。|
+|**/Properties:**|**/p**|{PropertyName}={Value}|操作固有のプロパティの名前と値のペア ({PropertyName}={Value}) を指定します。 操作のプロパティ名については、特定の操作のヘルプを参照してください。 例: sqlpackage.exe /Action:Import /?。|
 |**/Quiet:**|**/q**|{True&#124;False}|詳細なフィードバックを非表示にするかどうかを指定します。 既定値は False です。|
 |**/SourceFile:**|**/sf**|{string}|ソース ファイルを操作のソースとして使用するように指定します。 このパラメーターを使用した場合、他のソース パラメーターは無効になります。 |
 |**/TargetConnectionString:**|**/tcs**|{string}|ターゲット データベースの有効な SQL Server または Azure 接続文字列を指定します。 このパラメーターを指定する場合、他のどのターゲット パラメーターとも同時には使用できません。 |
@@ -333,7 +333,7 @@ SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.ba
 
 インポート アクションに固有のプロパティ:
 
-|プロパティ|Value|説明|
+|プロパティ|値|説明|
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|SQL Server に対してクエリを実行するときのコマンドのタイムアウト (秒) を指定します。|
 |**/p:**|DatabaseEdition=({Basic&#124;Standard&#124;Premium&#124;DataWarehouse&#124;GeneralPurpose&#124;BusinessCritical&#124;Hyperscale&#124;Default} 'Default')|Azure SQL Database のエディションを定義します。|
@@ -352,7 +352,7 @@ SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.ba
   
 ### <a name="help-for-deployreport-action"></a>DeployReport アクションのヘルプ
 
-|パラメーター|短い形式|Value|説明|
+|パラメーター|短い形式|値|説明|
 |---|---|---|---|
 |**/Action:**|**/a**|DeployReport|実行する操作を指定します。 |
 |**/AccessToken:**|**/at**|{string}| ターゲット データベースに接続するときに使用するトークン ベースの認証アクセス トークンを指定します。 |
@@ -362,7 +362,7 @@ SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.ba
 |**/OutputPath:**|**/op**|{string}|出力ファイルが生成されるファイル パスを指定します。 |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|sqlpackage.exe が既存のファイルを上書きするかどうかを指定します。 False を指定すると、既存のファイルが検出された場合に sqlpackage.exe の操作が中止します。 既定値は True です。 |
 |**/Profile:**|**/pr**|{string}|DAC 公開プロファイルのファイル パスを指定します。 出力の生成時に使用するプロパティと変数のコレクションをプロファイルで定義します。 |
-|**/Properties:**|**/p**|{PropertyName}={Value}|操作固有のプロパティの名前と値のペア ({PropertyName}={Value}) を指定します。 操作のプロパティ名については、特定の操作のヘルプを参照してください。 例: sqlpackage.exe /Action:Publish /?。 |
+|**/Properties:**|**/p**|{PropertyName}={Value}|操作固有のプロパティの名前と値のペア ({PropertyName}={Value}) を指定します。 操作のプロパティ名については、特定の操作のヘルプを参照してください。 例: sqlpackage.exe /Action:DeployReport /?。 |
 |**/Quiet:**|**/q**|{True&#124;False}|詳細なフィードバックを非表示にするかどうかを指定します。 既定値は False です。 |
 |**/SourceConnectionString:**|**/scs**|{string}|ソース データベースの有効な SQL Server または SQL Azure 接続文字列を指定します。 このパラメーターを指定する場合、他のどのソース パラメーターとも同時には使用できません。 |
 |**/SourceDatabaseName:**|**/sdn**|{string}|ソース データベースの名前を定義します。 |
@@ -388,7 +388,7 @@ SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.ba
 
 ## <a name="properties-specific-to-the-deployreport-action"></a>DeployReport アクションに固有のプロパティ
 
-|プロパティ|Value|説明|
+|プロパティ|値|説明|
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|配置コントリビューターに追加の配置コントリビューター引数を指定します。 複数の値を指定する場合は、セミコロンで区切ります。|
 |**/p:**|AdditionalDeploymentContributors=(STRING)|dacpac を配置するときに実行する必要がある、追加の配置コントリビューターを指定します。 このとき、セミコロン区切りで、完全修飾ビルド コントリビューター名または ID を指定する必要があります。|
@@ -488,7 +488,7 @@ SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.ba
   
 ### <a name="help-for-driftreport-action"></a>DriftReport アクションのヘルプ
 
-|パラメーター|短い形式|Value|説明|
+|パラメーター|短い形式|値|説明|
 |---|---|---|---|
 |**/Action:**|**/a**|DriftReport|実行する操作を指定します。 |
 |**/AccessToken:**|**/at**|{string}| ターゲット データベースに接続するときに使用するトークン ベースの認証アクセス トークンを指定します。 |
@@ -515,7 +515,7 @@ SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.ba
   
 ### <a name="help-for-the-script-action"></a>スクリプト アクションのヘルプ
 
-|パラメーター|短い形式|Value|説明|
+|パラメーター|短い形式|値|説明|
 |---|---|---|---|
 |**/Action:**|**/a**|スクリプト|実行する操作を指定します。 |
 |**/AccessToken:**|**/at**|{string}| ターゲット データベースに接続するときに使用するトークン ベースの認証アクセス トークンを指定します。 |
@@ -527,7 +527,7 @@ SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.ba
 |**/OutputPath:**|**/op**|{string}|出力ファイルが生成されるファイル パスを指定します。 |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|sqlpackage.exe が既存のファイルを上書きするかどうかを指定します。 False を指定すると、既存のファイルが検出された場合に sqlpackage.exe の操作が中止します。 既定値は True です。 |
 |**/Profile:**|**/pr**|{string}|DAC 公開プロファイルのファイル パスを指定します。 出力の生成時に使用するプロパティと変数のコレクションをプロファイルで定義します。|
-|**/Properties:**|**/p**|{PropertyName}={Value}|操作固有のプロパティの名前と値のペア ({PropertyName}={Value}) を指定します。 操作のプロパティ名については、特定の操作のヘルプを参照してください。 例: sqlpackage.exe /Action:Publish /?。|
+|**/Properties:**|**/p**|{PropertyName}={Value}|操作固有のプロパティの名前と値のペア ({PropertyName}={Value}) を指定します。 操作のプロパティ名については、特定の操作のヘルプを参照してください。 例: sqlpackage.exe /Action:Script /?。|
 |**/Quiet:**|**/q**|{True&#124;False}|詳細なフィードバックを非表示にするかどうかを指定します。 既定値は False です。|
 |**/SourceConnectionString:**|**/scs**|{string}|ソース データベースの有効な SQL Server または SQL Azure 接続文字列を指定します。 このパラメーターを指定する場合、他のどのソース パラメーターとも同時には使用できません。 |
 |**/SourceDatabaseName:**|**/sdn**|{string}|ソース データベースの名前を定義します。 |
@@ -553,7 +553,7 @@ SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.ba
 
 ### <a name="properties-specific-to-the-script-action"></a>スクリプト アクションに固有のプロパティ
 
-|プロパティ|Value|説明|
+|プロパティ|値|説明|
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|配置コントリビューターに追加の配置コントリビューター引数を指定します。 複数の値を指定する場合は、セミコロンで区切ります。
 |**/p:**|AdditionalDeploymentContributors=(STRING)|dacpac を配置するときに実行する必要がある、追加の配置コントリビューターを指定します。 このとき、セミコロン区切りで、完全修飾ビルド コントリビューター名または ID を指定する必要があります。

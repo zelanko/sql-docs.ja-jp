@@ -1,5 +1,6 @@
 ---
 title: RDL ファイルのアセンブリの参照 | Microsoft Docs
+description: レポート定義言語 (RDL) ファイルでアセンブリを参照する方法について説明します。特に、CodeModules 要素と Classes 要素を取り上げます。
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9a48e552-7d47-4243-9be1-894990c506d9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 87285bffd5136c4ac2a66ae17755edcecd35f065
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d310ec6895f1e8d027378fca71df36331dfbf5a8
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63193973"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80217021"
 ---
 # <a name="referencing-assemblies-in-an-rdl-file"></a>RDL ファイルのアセンブリの参照
   レポート定義ファイルでのカスタム コード アセンブリの使用をサポートするため、2 つのレポート定義言語 (RDL) 要素 **CodeModules** と **Classes** が RDL 仕様に含まれています。  

@@ -1,5 +1,6 @@
 ---
 title: Reporting Services における例外処理の概要 | Microsoft Docs
+description: エラーが発生したときにユーザーに有用な情報を返せるように、レポート サーバー Web サービスによってスローされる例外を処理する方法について説明します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 54381870-ce67-482b-aa83-6a838cdbf9b9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ee084e9d85a1bee21db3994be8b9473daefc7c0f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: edaacc97dae131afbc0a9b9f3651877e4952754d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62992238"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80215727"
 ---
 # <a name="introducing-exception-handling-in-reporting-services"></a>Reporting Services における例外処理の概要
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションが要求をレポート サーバー Web サービスに送信し、サービスが要求を処理できない場合、サービスは SOAP 例外をクライアントに返します。 レポート サーバー Web サービスによってスローされた例外の処理は、開発するアプリケーションの重要な部分です。エラーが発生した場合にユーザーに有益な情報を返すことができるからです。  

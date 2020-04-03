@@ -1,5 +1,6 @@
 ---
 title: SharePoint ライブラリへのレポートのパブリッシュ | Microsoft Docs
+description: レポート デザイナーでプロジェクトのプロパティを設定して、SharePoint ライブラリにレポートをパブリッシュする方法について説明します。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3f6dfc28-50d8-4231-bd25-871b5f77cce6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1b10c9dbfa67a632ce007c1406f8b806a03475b4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 093837d7d7d2c6833b4c7dce8fabbf554d634290
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65571046"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510113"
 ---
 # <a name="publish-a-report-to-a-sharepoint-library"></a>SharePoint ライブラリへのレポートのパブリッシュ
   SharePoint 統合用に構成されている SharePoint サイトにレポートをパブリッシュするには、レポート デザイナーでレポート プロジェクトのプロパティを設定する必要があります。 プロジェクトのプロパティでは、サーバー、レポート、および共有データ ソースへの参照はすべて、完全修飾 URL で指定する必要があります。 レポート定義では、サブレポートや詳細レポートへの参照、および Web ベースの画像などのリソースへの参照はすべて完全修飾 URL で指定する必要があります。  

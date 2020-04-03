@@ -9,12 +9,12 @@ ms.date: 02/28/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1cd604c754113f7196963daf714eab3dd41143cc
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.openlocfilehash: 2bbacb2bdeeb409f08e6e68438535bc0d6671b01
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79190582"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79487620"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>Active Directory モードで [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] を展開する
 
@@ -77,19 +77,19 @@ BDC ドメイン サービス アカウント (DSA) は、OU でユーザー、�
 
     ![image15](./media/deploy-active-directory/image15.png)
 
-1. **[追加]** をクリックし、 **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA** ユーザーを追加します。
+1. **[追加]** をクリックし、**bdcDSA** ユーザーを追加します。
 
     ![image16](./media/deploy-active-directory/image16.png)
 
     ![image17](./media/deploy-active-directory/image17.png)
 
-1. **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA** ユーザーを選択し、アクセス許可をすべて消去し、 **[詳細]** をクリックします。
+1. **bdcDSA** ユーザーを選択し、アクセス許可をすべて消去し、 **[詳細]** をクリックします。
 
 1. **[追加]** をクリックします。
 
     ![image18](./media/deploy-active-directory/image18.png)
 
-    - **[プリンシパルの選択]** をクリックし、 **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA** を挿入し、[OK] をクリックします。
+    - **[プリンシパルの選択]** をクリックし、**bdcDSA** を挿入し、[OK] をクリックします。
 
     - **[種類]** を **[許可]** に設定します。
 
@@ -113,7 +113,7 @@ BDC ドメイン サービス アカウント (DSA) は、OU でユーザー、�
 
 - **[追加]** をクリックします。
 
-    - **[プリンシパルの選択]** をクリックし、 **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA** を挿入し、[OK] をクリックします。
+    - **[プリンシパルの選択]** をクリックし、**bdcDSA** を挿入し、[OK] をクリックします。
 
     - **[種類]** を **[許可]** に設定します。
 
@@ -127,7 +127,7 @@ BDC ドメイン サービス アカウント (DSA) は、OU でユーザー、�
 
 - **[追加]** をクリックします。
 
-    - **[プリンシパルの選択]** をクリックし、 **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA** を挿入し、[OK] をクリックします。
+    - **[プリンシパルの選択]** をクリックし、**bdcDSA** を挿入し、[OK] をクリックします。
 
     - **[種類]** を **[許可]** に設定します。
 
@@ -166,7 +166,7 @@ AD 統合には次のパラメーターが必要です: この記事の後半に
 
 - `security.activeDirectory.ouDistinguishedName`: クラスターにより作成されたあらゆる AD アカウントが追加される組織単位 (OU) の識別名。 ドメインの名前が `contoso.local` の場合、OU の識別名は `OU=BDC,DC=contoso,DC=local` です。
 
-- `security.activeDirectory.dnsIpAddresses`: ドメイン コントローラーの IP アドレスの一覧。
+- `security.activeDirectory.dnsIpAddresses`: ドメインの DNS サーバーの IP アドレスの一覧が含まれます。 
 
 - `security.activeDirectory.domainControllerFullyQualifiedDns`:ドメイン コントローラーの FQDN の一覧。 FQDN には、ドメイン コントローラーのコンピューター名またはホスト名が含まれています。 複数のドメイン コントローラーがある場合、ここで一覧を指定できます。 例: `HOSTNAME.CONTOSO.LOCAL`
 
@@ -250,7 +250,7 @@ AD 統合を利用し、単一ノード Kubernetes クラスター (kubeadm) で
 
 これで、Active Directory 統合を使用し、BDC の展開に必要なパラメーターをすべて設定できたはずです。
 
-[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] を展開する方法が記載されているドキュメントの完全版が必要な場合、[公式ドキュメント](deployment-guidance.md)をご覧ください。
+`azdata` コマンドと kubeadm-prod デプロイ プロファイルを使用して、Active Directory と統合された BDC クラスターをデプロイできるようになりました。 [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] をデプロイする方法の完全なドキュメントについては、「[Kubernetes 上に SQL Server ビッグ データ クラスターを展開する方法](deployment-guidance.md)」を参照してください。
 
 ## <a name="verify-reverse-dns-entry-for-domain-controller"></a>ドメイン コントローラーの逆引き DNS エントリを確認する
 
@@ -325,3 +325,5 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 - 現時点では、ドメイン (Active Directory) につき BDC が 1 つだけ許可されています。 今後のリリースでは、ドメインあたり複数の BDC を有効にできるようになる予定です。
 
 - セキュリティ構成で指定されているどの AD グループも、DomainLocal にスコープ指定できません。 AD グループのスコープは、[この手順](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps)に従って確認できます。
+
+- BDC へのログインに使用できる AD アカウントは、BDC 用に構成されたのと同じドメインから許可されています。他の信頼される側のドメインからのログインは、将来のリリースで有効になる予定です。

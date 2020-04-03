@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4f5e7fe0-b5b1-4665-93d4-80dce12d6b14
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e2024af63b1a033b2dcb5afbde461cff02b9462b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d4cd11ea250637c172a9d8343af934c326089add
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77082220"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80380773"
 ---
 # <a name="urls-in-configuration-files--ssrs-configuration-manager"></a>構成ファイル内の URL (SSRS 構成マネージャー)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、RSReportServer.config ファイルにアプリケーション設定を格納します。 このファイルには、URL と URL 予約の両方の構成設定が含まれています。 これらの構成設定は、変更の目的とルールが大きく異なります。 構成ファイルの変更による配置のチューニングに慣れている場合、各 URL 設定の使用方法の理解にこのトピックが役立ちます。  
@@ -36,7 +36,7 @@ ms.locfileid: "77082220"
   
  **UrlRoot** は、アプリケーションにアクセスするための URL を構成するときに RSReportServer.config ファイルで自動的に指定されます。 構成ファイルでこの値を変更する場合は、配信するレポートが格納されているレポート サーバー データベースに接続しているレポート サーバー Web サービスの有効な URL アドレスを指定する必要があります。 **UrlRoot** は、各レポート サーバー インスタンスにつき 1 つしか指定できません。RSReportServer.config ファイルに存在できる **UrlRoot** エントリは、レポート サーバー インスタンスごとに 1 つだけです。 複数の URL をレポート サーバー Web サービス用に予約している場合は、 **UrlRoot**で使用可能な値のいずれかを選択する必要があります。  
   
- ほとんどの場合、 **UrlRoot**を変更する必要はありません。 ただし、完全修飾 URL を使用してレポート サーバーにアクセスする場合、ホスト ヘッダーを使用する URL を完全修飾サイト名に設定していないときは、RSReportServer.config を手動で編集して、 **UrlRoot** をレポートの表示に使用されるレポート サーバーの完全修飾 URL (たとえば https://www.adventure-works.com/mywebapp/reportserver) に設定する必要があります。  
+ ほとんどの場合、 **UrlRoot**を変更する必要はありません。 しかし、完全修飾 URL を使用してレポート サーバーにアクセスする場合、ホスト ヘッダーを使用する URL を完全修飾サイト名に設定していないときは、RSReportServer.config を手動で編集して、**UrlRoot** をレポートの表示に使用されるレポート サーバーの完全修飾 URL (たとえば、`https://www.adventure-works.com/mywebapp/reportserver`) に設定する必要があります。  
   
 #### <a name="urls-connecting-the-ssrswebportal-and-web-parts-to-the-report-server-web-service"></a>[!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] および Web パーツをレポート サーバー Web サービスに接続するための URL  
  Reporting Services の [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] および SharePoint 2.0 Web パーツは、レポート サーバーに接続する Web フロントエンド コンポーネントです。 バックエンド レポート サーバーへの接続に使用される URL は次のとおりです。  

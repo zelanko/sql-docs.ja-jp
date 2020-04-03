@@ -1,5 +1,6 @@
 ---
 title: 複雑な名前を持つカスタム アセンブリの使用 | Microsoft Docs
+description: 複雑な名前を持つカスタム アセンブリを使用し、共通言語ランタイム (CLR) にアセンブリを一意に識別し、バイナリの整合性を確保する方法について説明します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ca9f19d7-6e86-46f2-b9ad-9bf807eaa52e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 31479ae9b460b6a660ec865e68e46afd912f49b6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: bdee8daafe68742dce4c91f1dffb61f849445998
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63194089"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216997"
 ---
 # <a name="using-strong-named-custom-assemblies"></a>複雑な名前を持つカスタム アセンブリの使用
   複雑な名前はアセンブリを識別します。この名前には、アセンブリのマニフェストに格納されたアセンブリのテキスト名、4 つの部分から成るバージョン番号、カルチャ情報 (指定されている場合)、公開キー、およびデジタル署名が含まれます。 複雑な名前は、共通言語ランタイム (CLR) にアセンブリを一意に識別し、バイナリの整合性を確保します。  

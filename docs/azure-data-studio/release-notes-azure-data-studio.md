@@ -1,25 +1,40 @@
 ---
 title: リリース ノート
-titleSuffix: Azure Data Studio
 description: Azure Data Studio リリース ノート
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: alayu; sstein
+author: yualan
+ms.author: alayu
+ms.reviewer: maghan, sstein
 ms.custom: seodec18
-ms.date: 02/19/2020
-ms.openlocfilehash: 3b37609f6db3e9dc8fa0d6622574054686552350
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.date: 03/18/2020
+ms.openlocfilehash: 7a510500d16c29971d1a5263c5138ad1981c9401
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78408857"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215481"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio のリリース ノート
 
 **[最新リリースのダウンロードとインストール](download.md)**
+
+## <a name="march-2020"></a>2020 年 3 月
+
+2020 年 3 月 18 日 &nbsp; / &nbsp; バージョン:1.16.0 
+
+&nbsp;
+
+| Change | 詳細 |
+| :----- | :------ |
+| SQL Notebook でのグラフ作成サポートの追加 | コード セルで SQL クエリを実行しているときに、ユーザーがグラフを作成して保存できるようになりました。 |
+| Jupyter Book の作成エクスペリエンスの追加 | ユーザーはノートブックを使用して独自の Jupyter Book を作成できるようになりました。 |
+| Postgres 拡張機能の AAD サポートの追加 | |
+| アクセシビリティに関する多くのバグを修正 | [アクセシビリティに関するバグのリスト](https://github.com/microsoft/azuredatastudio/issues?page=1&q=is%3Aissue+is%3Aclosed+milestone%3A%22S360+-+Accessibility%22+label%3AA11y_AzureDataStudio) |
+| 1\.42 への VS Code のマージ | このリリースには、以前の 3 つの VS Code リリースからの VS Code の更新プログラムが含まれています。 詳細については、[それらのリリース ノートをお読みください](https://code.visualstudio.com/updates/v1_42)。 |
+| バグと問題が解決されました | 修正の完全な一覧については、[GitHubの「バグと問題」](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22March+2020%22+is%3Aclosed)を参照してください。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="february-hotfix"></a>2 月 (修正プログラム)
 
@@ -49,6 +64,7 @@ ms.locfileid: "78408857"
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issue"></a>既知の問題
+
 - macOS Catalina のユーザーは Azure Data Studio を右クリックして、[開く] をクリックする必要があります。
 
 ## <a name="december-2019-hotfix"></a>2019 年 12 月 (修正プログラム)
@@ -144,6 +160,7 @@ ms.locfileid: "78408857"
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>既知の問題
+
 - ノートブック
     - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Notebook が正しくシリアル化されないまれなケース
 
@@ -163,6 +180,7 @@ ms.locfileid: "78408857"
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>既知の問題
+
 - ノートブック
     - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Notebook が正しくシリアル化されないまれなケース
 
@@ -201,10 +219,9 @@ ms.locfileid: "78408857"
 | バグと問題が解決されました | 以前のリリースの Azure Data Studio では、接続ダイアログからの接続時にユーザー データベースが選択された場合、取得されるオブジェクト エクスプローラー エントリのスコープが、その 1 つのデータベースに完全に制限されていました。 今回のリリースからは、この動作が変更され、サーバー レベルのプロパティもオブジェクト エクスプローラーに表示されるようになりました。 <br/> 修正の完全な一覧については、[GitHubの「バグと問題」](https://github.com/microsoft/azuredatastudio/milestone/35?closed=1)を参照してください。 |
 | &nbsp; | &nbsp; |
 
-
 ## <a name="june-2019"></a>2019 年 6 月
 
-2019 年 6 月 6 日 &nbsp; / &nbsp; バージョン:1.8.0 
+2019 年 6 月 6 日 &nbsp; / &nbsp; バージョン:1.8.0
 
 &nbsp;
 
@@ -220,6 +237,7 @@ ms.locfileid: "78408857"
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>既知の問題
+
 - Database Administration Tool Extensions for Windows
     - 切断されたサーバー ノードからプロパティを起動できない
     - Azure サーバーのプロパティを起動できない
@@ -361,8 +379,8 @@ ms.locfileid: "78408857"
 | Paste the Plan 拡張機能の導入。 | &nbsp; |
 | High Color クエリ拡張機能の導入 (SSMS エディター テーマを含む)。 | &nbsp; |
 | SQL Server エージェント、プロファイラー、およびインポート拡張機能の修正。 | &nbsp; |
-| macOS で非アクティブな接続が削除される原因となった、.Net Core Socket KeepAlive の問題を修正しました。 | &nbsp; |
-| SQL Tools Service を .Net Core 2.2 Preview 3 (最終的な AAD サポート用) にアップグレードしました。 | &nbsp; |
+| macOS で非アクティブな接続が削除される原因となった、.NET Core Socket KeepAlive の問題の修正。 | &nbsp; |
+| SQL Tools Service を .NET Core 2.2 Preview 3 (最終的な AAD サポート用) にアップグレード。 | &nbsp; |
 | &nbsp; | &nbsp; |
 
 ### <a name="bug-fixes-november-2018"></a>バグの修正、2018 年 11 月

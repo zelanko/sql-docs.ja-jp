@@ -1,6 +1,6 @@
 ---
 title: SQL Server on Linux 用のアプリケーションを開発する
-description: ''
+description: SQL Server on Linux に接続して使用するアプリケーションは、さまざまなプログラミング言語と一般的な Web フレームワークから作成できます。
 author: VanMSFT
 ms.author: vanto
 ms.date: 11/17/2017
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
-ms.openlocfilehash: 584bf33201cab5d0f57205de0fed181725187d52
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ad0b4de881afe1cf30f865540ddff692d1415d9c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68077412"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216773"
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>SQL Server on Linux 用のアプリケーションの開発を開始する方法
 
@@ -60,7 +60,7 @@ SQL Server に対するアプリケーションの構築を始める最適な方
 
 ## <a name="use-new-sql-tools-for-linux"></a>Linux 用の新しい SQL ツールを使用する
 
-[Visual Studio Code](https://aka.ms/mssql-marketplace) の新しい [mssql 拡張機能](https://code.visualstudio.com)が Linux、macOS、および Windows で使用できるようになりました。 手順ごとの説明については、次のチュートリアルをご覧ください。
+[Visual Studio Code](https://code.visualstudio.com) の新しい [mssql 拡張機能](https://aka.ms/mssql-marketplace)が Linux、macOS、および Windows で使用できるようになりました。 手順ごとの説明については、次のチュートリアルをご覧ください。
 
 - [Visual Studio Code を使用する](sql-server-linux-develop-use-vscode.md)
 

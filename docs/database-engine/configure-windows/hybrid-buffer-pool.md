@@ -11,12 +11,12 @@ ms.assetid: ''
 author: briancarrig
 ms.author: brcarrig
 manager: amitban
-ms.openlocfilehash: 1d1e595918b33ae4fcc11cd59bf0964b2e6d919c
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.openlocfilehash: e2aafb77145fbe22a980ef158cfa7c78db6288d2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79112282"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216261"
 ---
 # <a name="hybrid-buffer-pool"></a>ハイブリッド バッファー プール
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,9 +96,7 @@ SELECT name, is_memory_optimized_enabled FROM sys.databases;
 
 Windows 上でご利用の PMEM デバイスをフォーマットする場合、NTFS に利用できる最大のアロケーション ユニット サイズ (Windows Server 2019 では 2 MB) を使用して、デバイスが DAX (Direct Access) 用に確実にフォーマットされているようにします。
 
-大規模なページ メモリ割り当てモデルを使用します。これは、[トレース フラグ 834](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) で有効にすることができます。 トレース フラグ 834 は、スタートアップ トレース フラグです。
-
-大規模なページ メモリ割り当てモデルを使用するには、Windows 上の [メモリ内のロックされたページ](./enable-the-lock-pages-in-memory-option-windows.md) を使用する必要があります。
+Windows で [[メモリ内のページのロック]](./enable-the-lock-pages-in-memory-option-windows.md) を使用します。
 
 ファイル サイズは 2 MB の倍数である必要があります (剰余 2 MB はゼロと等しい)。
 

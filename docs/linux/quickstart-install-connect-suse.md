@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: 811438987106a5eb73a914e5d7bbceb139cd5c37
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: bb7a6689d2cf6638f2d4e2de078e4e4412225595
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75558635"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79487610"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>クイック スタート:SUSE Linux Enterprise Server で SQL Server をインストールし、データベースを作成する
 
@@ -31,7 +31,7 @@ ms.locfileid: "75558635"
 このクイックスタートでは、SQL Server 2019 を SUSE Linux Enterprise Server (SLES) v12 にインストールします。 次に、**sqlcmd** と接続して最初のデータベースを作成し、クエリを実行します。
 
 > [!IMPORTANT]
-> SQL Server 2019 は、SUSE Enterprise Linux Server v12 SP2、SP3、または SP4 でサポートされています。
+> SQL Server 2019 は、SUSE Enterprise Linux Server v12 SP2、SP3、SP4 または SP5 でサポートされています。
 
 ::: moniker-end
 
@@ -50,7 +50,7 @@ SLES v12 SP2 コンピューターには**少なくとも 2 GB** のメモリが
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-SLES v12 SP2、SP3、または SP4 のコンピューターには、**少なくとも 2 GB** のメモリが必要です。 ファイル システムは **XFS** または **EXT4** である必要があります。 **BTRFS** などの他のファイル システムはサポートされていません。
+SLES v12 SP2、SP3、SP4 または SP5 のコンピューターには、**少なくとも 2 GB** のメモリが必要です。 ファイル システムは **XFS** または **EXT4** である必要があります。 **BTRFS** などの他のファイル システムはサポートされていません。
 
 ::: moniker-end
 
@@ -66,7 +66,7 @@ SQL Server の CTP または RC リリースを以前インストールしてい
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-## <a id="install"></a>SQL Server をインストールする
+## <a name="install-sql-server"></a><a id="install"></a>SQL Server をインストールする
 
 SLES 上で SQL Server を構成するには、ターミナルで次のコマンドを実行して **mssql-server** パッケージをインストールします。
 
@@ -125,7 +125,7 @@ SLES 上で SQL Server を構成するには、ターミナルで次のコマン
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="install"></a>SQL Server をインストールする
+## <a name="install-sql-server"></a><a id="install"></a>SQL Server をインストールする
 
 SLES 上で SQL Server を構成するには、ターミナルで次のコマンドを実行して **mssql-server** パッケージをインストールします。
 
@@ -173,7 +173,7 @@ SLES 上で SQL Server を構成するには、ターミナルで次のコマン
 ::: moniker-end
 
 
-## <a id="tools"></a>SQL Server コマンドライン ツールをインストールする
+## <a name="install-the-sql-server-command-line-tools"></a><a id="tools"></a>SQL Server コマンドライン ツールをインストールする
 
 データベースを作成するには、SQL Server 上で Transact-SQL ステートメントを実行できるツールと接続する必要があります。 次の手順で SQL Server コマンドライン ツールの [sqlcmd](../tools/sqlcmd-utility.md) と [bcp](../tools/bcp-utility.md) をインストールします。
 

@@ -1,7 +1,7 @@
 ---
 title: JDBC ドライバーの使用 | Microsoft Docs
 ms.custom: ''
-ms.date: 02/10/2020
+ms.date: 03/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 965c8aa6e47c230d2d876f81300f2bb890e2c16e
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.openlocfilehash: d5bf434fa5ca6718e4ce926188564e38ce308ae5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77903550"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271338"
 ---
 # <a name="using-the-jdbc-driver"></a>JDBC ドライバーの使用
 
@@ -27,7 +27,7 @@ ms.locfileid: "77903550"
 
 Microsoft JDBC Driver には、次の Java Runtime Environment (JRE) 設定との通信で使用される複数の Jar が用意されています。
 
-Microsoft JDBC Driver 8.2 for SQL Server では、**mssql-jdbc-8.2.1.jre8.jar**、**mssql-jdbc-8.2.1.jre11.jar**、**mssql-jdbc-8.2.1.jre13.jar** の各クラス ライブラリ ファイルが提供されます。
+Microsoft JDBC Driver 8.2 for SQL Server では、**mssql-jdbc-8.2.2.jre8.jar**、**mssql-jdbc-8.2.2.jre11.jar**、**mssql-jdbc-8.2.2.jre13.jar** の各クラス ライブラリ ファイルが提供されます。
 
 Microsoft JDBC Driver 7.4 for SQL Server では、**mssql-jdbc-7.4.1.jre8.jar**、**mssql-jdbc-7.4.1.jre11.jar**、**mssql-jdbc-7.4.1.jre12.jar** の各クラス ライブラリ ファイルが提供されます。
 
@@ -61,31 +61,31 @@ JDBC Driver 7.2 を使用する場合は、**mssql-jdbc-7.2.2.jre8.jar** また�
 
 JDBC Driver 7.4 を使用する場合は、**mssql-jdbc-7.4.1.jre8.jar**、**mssql-jdbc-7.4.1.jre11.jar**、または **mssql-jdbc-7.4.1.jre12.jar** が含まれるようにクラスパスを設定します。
 
-JDBC Driver 8.2 を使用する場合は、**mssql-jdbc-8.2.1.jre8.jar**、**mssql-jdbc-8.2.1.jre11.jar**、または **mssql-jdbc-8.2.1.jre13.jar** が含まれるようにクラスパスを設定します。
+JDBC Driver 8.2 を使用する場合は、**mssql-jdbc-8.2.2.jre8.jar**、**mssql-jdbc-8.2.2.jre11.jar**、または **mssql-jdbc-8.2.2.jre13.jar** が含まれるようにクラスパスを設定します。
 
 クラスパスに適切な Jar ファイルのエントリがない場合、アプリケーションでは `Class not found` という一般的な例外がスローされます。  
 
 ### <a name="for-microsoft-jdbc-driver-82"></a>Microsoft JDBC Driver 8.2 の場合
 
-**mssql-jdbc-8.2.1.jre8.jar**、**mssql-jdbc-8.2.1.jre11.jar**、または **mssql-jdbc-8.2.1.jre13.jar** ファイルが次の場所にインストールされます。
+**mssql-jdbc-8.2.2.jre8.jar**、**mssql-jdbc-8.2.2.jre11.jar**、または **mssql-jdbc-8.2.2.jre13.jar** ファイルが次の場所にインストールされます。
 
 ```bash
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.2.1.jre8.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.2.2.jre8.jar
 
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.2.1.jre11.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.2.2.jre11.jar
 
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.2.1.jre13.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.2.2.jre13.jar
 ```
 
 次のスニペットは、Windows アプリケーションで使用される CLASSPATH ステートメントの例です。
 
-`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 8.2 for SQL Server\sqljdbc_8.2\enu\mssql-jdbc-8.2.1.jre11.jar`
+`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 8.2 for SQL Server\sqljdbc_8.2\enu\mssql-jdbc-8.2.2.jre11.jar`
 
 次のスニペットは、Unix/Linux アプリケーションで使用される CLASSPATH ステートメントの例です。
 
-`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_8.2/enu/mssql-jdbc-8.2.1.jre11.jar`
+`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_8.2/enu/mssql-jdbc-8.2.2.jre11.jar`
 
-CLASSPATH ステートメントに [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] が 1 つだけ含まれていることを確認します (**mssql-jdbc-8.2.1.jre8.jar**、**mssql-jdbc-8.2.1.jre11.jar**、または **mssql-jdbc-8.2.1.jre13.jar** など)。
+CLASSPATH ステートメントに [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] が 1 つだけ含まれていることを確認します (**mssql-jdbc-8.2.2.jre8.jar**、**mssql-jdbc-8.2.2.jre11.jar**、または **mssql-jdbc-8.2.2.jre13.jar** など)。
 
 ### <a name="for-microsoft-jdbc-driver-74"></a>Microsoft JDBC Driver 7.4 の場合
 

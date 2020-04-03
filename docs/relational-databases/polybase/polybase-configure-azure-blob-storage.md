@@ -1,5 +1,6 @@
 ---
 title: 外部データへのアクセス:Azure Blob Storage - PolyBase
+description: この記事では、SQL Server インスタンス上の PolyBase と Azure Blob Storage を使用します。 PolyBase は、外部テーブルとデータのインポート/エクスポートのアドホック クエリに適しています。
 ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: polybase
@@ -9,12 +10,12 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.custom: seo-dt-2019, seo-lt-2019
-ms.openlocfilehash: 680a8e28e807505f4824524a686f244621cb3dd0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: eb9e04b48a6eb6894e3ef8f8227d573443934ab4
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75258693"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215873"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Azure Blob Storage 上の外部データにアクセスするように PolyBase を構成する
 

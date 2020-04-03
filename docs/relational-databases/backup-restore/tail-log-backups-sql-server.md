@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: f069a36982a624dceee4f2be38633ec6998f1eb2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 22fda4d5e11b562ea3162ed14766ed085977200e
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68041339"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79510043"
 ---
 # <a name="tail-log-backups-sql-server"></a>ログ末尾のバックアップ (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "68041339"
   
 > **注:** ログ末尾のバックアップは、すべての復元シナリオで必要となるわけではありません。 復旧ポイントが、それより前のログ バックアップに含まれているのであれば、ログ末尾のバックアップは不要です。 また、データベースを移動するか置き換えて (上書きして) いる場合、ログ末尾のバックアップは不要であり、最新のバックアップ以降の特定の時点に復元する必要もありません。  
   
-   ##  <a name="TailLogScenarios"></a> ログ末尾のバックアップが必要となるシナリオ  
+   ##  <a name="scenarios-that-require-a-tail-log-backup"></a><a name="TailLogScenarios"></a> ログ末尾のバックアップが必要となるシナリオ  
  以下に示すシナリオでは、ログ末尾のバックアップをお勧めします。  
   
 -   データベースがオンライン状態であり、データベースに対して復元操作を実行する予定がある場合に、ログ末尾のバックアップを最初に行う。 オンライン データベースのエラーを防ぐには、[BACKUP](../../t-sql/statements/backup-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの WITH NORECOVERY オプションを使用する必要があります。  
@@ -47,10 +47,10 @@ ms.locfileid: "68041339"
   
 |BACKUP LOG オプション|説明|  
 |-----------------------|--------------|  
-|NORECOVERY|データベースの復元操作を続行する場合は、必ず NORECOVERY を使用します。 NORECOVERY を指定すると、データベースは復元中の状態になります。 これにより、ログ末尾のバックアップの後にデータベースが変化しないことが保障されます。 これと併せて、NO_TRUNCATE オプションまたは COPY_ONLY オプションを指定しない限り、ログは切り捨てられます。<br /><br /> **重要:** データベースが破損している場合を除き、NO_TRUNCATE を使用しないでください。|  
+|NORECOVERY|データベースの復元操作を続行する場合は、必ず NORECOVERY を使用します。 NORECOVERY を指定すると、データベースは復元中の状態になります。 これにより、ログ末尾のバックアップの後にデータベースが変化しないことが保障されます。 これと併せて、NO_TRUNCATE オプションまたは COPY_ONLY オプションを指定しない限り、ログは切り捨てられます。<br /><br /> **重要:** データベースが破損している場合を除き、NO_TRUNCATE を使用しないでください。 NORECOVERY で復元を実行する前に排他アクセスを取得するには、データベースを[シングル ユーザー モード](../../relational-databases/databases/set-a-database-to-single-user-mode.md)にしなければならない場合があります。 復元後、データベースをマルチユーザー モードに戻します。 |  
 |CONTINUE_AFTER_ERROR|破損したデータベースの末尾をバックアップする場合に限り、CONTINUE_AFTER_ERROR を使用します。<br /><br /> 破損したデータベースにログ末尾のバックアップを適用する場合、通常であればログ バックアップにキャプチャされるメタデータの一部を使用できない場合があります。 詳細については、このトピックの「 [不完全なバックアップ メタデータが含まれたログ末尾のバックアップ](#IncompleteMetadata)」を参照してください。|  
   
-##  <a name="IncompleteMetadata"></a> 不完全なバックアップ メタデータが含まれたログ末尾のバックアップ  
+##  <a name="tail-log-backups-that-have-incomplete-backup-metadata"></a><a name="IncompleteMetadata"></a> 不完全なバックアップ メタデータが含まれたログ末尾のバックアップ  
  データベースがオフラインである場合、データベースが破損している場合、またはデータ ファイルが欠落している場合でも、ログ末尾のバックアップではログの末尾がキャプチャされます。 これが原因で、復元情報コマンドや **msdb**のメタデータが不完全になる場合があります。 ただし、メタデータが不完全なだけで、キャプチャされたログは完全であり、使用できます。  
   
  ログ末尾のバックアップに不完全なメタデータが含まれている場合は、 [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) テーブルの **has_incomplete_metadata** が **1**に設定されます。 また、 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)の出力で **HasIncompleteMetadata** が **1**に設定されます。  
@@ -63,7 +63,7 @@ ms.locfileid: "68041339"
 -   **type_desc**  
 -   **is_readonly**  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
  ログ末尾のバックアップを作成するには、「[データベースが破損したときのトランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)」をご覧ください。  
   
  トランザクション ログ バックアップを復元するには、「[トランザクション ログ バックアップの復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)」をご覧ください。  

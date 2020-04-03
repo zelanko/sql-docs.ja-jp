@@ -1,5 +1,6 @@
 ---
 title: カスタム レポート アイテムのデザイン時コンポーネントの作成 | Microsoft Docs
+description: カスタム レポート アイテムのデザイン時コンポーネントの作成方法について説明します。 このコンポーネントによって、ドラッグ アンド ドロップ操作を受け取るデザイン領域がアクティブになります。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a9789c2d017200650bcae7b5f864da708e5c7453
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 46be46e47b7e5a5028b639ecb0e74cbe19c8446a
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63194296"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80217008"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>カスタム レポート アイテムのデザイン時コンポーネントの作成
   カスタム レポート アイテムのデザイン時コンポーネントは、Visual Studio レポート デザイナー環境で使用できるコントロールです。 カスタム レポート アイテムのデザイン時コンポーネントは、ドラッグ アンド ドロップ操作を使用できるアクティブ化されたデザイン画面、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] プロパティ ブラウザーとの統合、およびカスタム プロパティ エディター機能を提供します。  

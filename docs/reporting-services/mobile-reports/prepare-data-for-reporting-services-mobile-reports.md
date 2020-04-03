@@ -1,5 +1,6 @@
 ---
 title: Reporting Services モバイル レポート用にデータを準備する | Microsoft Docs
+description: SQL Server Mobile Report Publisher では、フィルター処理、集計、タイム スライスなどの複雑なデータ操作をサポートしています。 これらの操作用にデータを準備する方法について学習します。
 ms.date: 02/08/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8adce9ad-6a08-4d20-b1cf-d3c45544d8de
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9ded496c3509420d54325dc054e018048ede0732
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: bbd04e9eef6d0775407e9b9893c59daefd7dc0a9
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62499933"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448380"
 ---
 # <a name="prepare-data-for-reporting-services-mobile-reports"></a>Reporting Services モバイル レポート用にデータを準備する
   
@@ -81,7 +82,7 @@ ms.locfileid: "62499933"
 | テクノロジ ハードウェアおよび機器   | Information Technology |  
 | 電気通信サービス |Information Technology |  
   
-### <a name="see-also"></a>参照  
+### <a name="see-also"></a>関連項目  
 - [Reporting Services モバイル レポート用に Excel データを準備する](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)  
 - [モバイル レポートで Analysis Services の日付の書式設定を保持する](../../reporting-services/mobile-reports/retain-date-formatting-for-analysis-services-in-mobile-reports.md)
 - [SQL Server Mobile Report Publisher を使用してモバイル レポートを作成する](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)

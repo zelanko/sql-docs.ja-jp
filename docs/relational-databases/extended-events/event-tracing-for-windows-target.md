@@ -1,5 +1,6 @@
 ---
 title: Event Tracing for Windows ターゲット
+description: Event Tracing for Windows (ETW) をターゲットとして使用する方法について説明します。 ETW トレースは、拡張イベントと組み合わせて使用するか、拡張イベントのイベント コンシューマーとして使用します。
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,12 +15,12 @@ ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8923769d3edb35b328c9b0351fd9700ff9168c6c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: cdff5b987e6ff86a148cdb8d8ad317e9c14a543f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75234663"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79433969"
 ---
 # <a name="event-tracing-for-windows-target"></a>Event Tracing for Windows ターゲット
 
@@ -51,7 +52,7 @@ ms.locfileid: "75234663"
   
  次の表では、ETW ターゲットの構成に使用できるオプションについて説明します。  
   
-|オプション|使用できる値|[説明]|  
+|オプション|使用できる値|説明|  
 |------------|--------------------|-----------------|  
 |default_xe_session_name|256 文字までの任意の文字列。 この値は省略可能です。|拡張イベント セッション名。 既定値は、XE_DEFAULT_ETW_SESSION です。|  
 |default_etw_session_logfile_path|256 文字までの任意の文字列。 この値は省略可能です。|拡張イベント セッションのログ ファイルへのパス。 既定値は %TEMP%\ XEEtw.etl です。|  

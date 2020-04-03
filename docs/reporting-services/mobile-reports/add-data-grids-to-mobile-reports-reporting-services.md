@@ -1,5 +1,6 @@
 ---
 title: モバイル レポートにデータ グリッドを追加する | Reporting Services | Microsoft Docs
+description: SQL Server Mobile Report Publisher のグリッドにデータを表示できます。 シンプル データ グリッド、インジケーター データ グリッド、またはグラフのデータ グリッドを選択します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fe98a970-90d3-44d1-9189-9141c237f141
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2658eb0eec1bd99c4e4503e8d8ae8894638e8c23
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 403e6b3873b93dace3f124eb5931143e8dd4b322
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63280461"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448311"
 ---
 # <a name="add-data-grids-to-mobile-reports--reporting-services"></a>モバイル レポートにデータ グリッドを追加する | Reporting Services
 最善の視覚化がデータ自体である場合があります。 ここでは、 *に使用できる次種類*データ グリッド [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]つまりテーブルについて説明します。
@@ -76,7 +77,7 @@ ms.locfileid: "63280461"
    * **[対象のルックアップ]** は、 **[グラフの視覚化の参照データ]** で選択したデータ テーブルのフィールドです。 各行のグラフのデータは、これらの 2 つのフィールドで結合されます。   
    * **[Chart data field (グラフのデータ フィールド)]** は、各行のグラフで Y 軸の値または系列として使用される、 **[グラフの視覚化の参照データ]** のデータ テーブル内のメトリックを決定します。  
 
-## <a name="see-also"></a>参照 
+## <a name="see-also"></a>関連項目 
 * [Maps in SQL Server mobile reports](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
 * [Reporting Services モバイル レポートのナビゲーター](../../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md)
 * [Reporting Services モバイル レポートの視覚エフェクト](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)

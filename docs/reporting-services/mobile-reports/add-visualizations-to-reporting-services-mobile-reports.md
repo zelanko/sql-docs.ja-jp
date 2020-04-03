@@ -1,5 +1,6 @@
 ---
 title: Reporting Services モバイル レポートへの視覚エフェクトの追加 | Microsoft Docs
+description: Reporting Services モバイル レポートで使用できる 3 種類の基本的なグラフ (時刻、カテゴリ、合計) と、それらに対応する比較グラフについて学習します。
 ms.date: 09/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3b220b74-9ecd-4084-93fb-545208d5d7a2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 42df96705e680643a9dacca3393e8c9c262c66c9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 3379d5eb53bc255a09e255d4986eb924912e5eb3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63316580"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79447981"
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>Reporting Services モバイル レポートへの視覚エフェクトの追加
 グラフは、データの視覚化における重要な部分です。 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] モバイル レポートで使用可能な、幅広いシナリオに対応した各種グラフについて説明します。 
@@ -187,7 +188,7 @@ ms.locfileid: "63316580"
    2 月、6 月、7 月などの損失が出た月は赤色で示されています。 
    9 月、10 月、11 月などの利益が出た月は緑色で示されています。 
 
-## <a name="see-also"></a>参照 
+## <a name="see-also"></a>関連項目 
 * [Maps in SQL Server mobile reports](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
 * [Reporting Services モバイル レポートのナビゲーター](../../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md)
 * [Reporting Services モバイル レポートのデータ グリッド](../../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md)

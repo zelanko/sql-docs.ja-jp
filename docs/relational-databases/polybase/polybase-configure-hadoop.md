@@ -1,5 +1,6 @@
 ---
 title: 外部データへのアクセス:Hadoop - PolyBase
+description: この記事では、SQL Server インスタンス上の PolyBase と Hardoop を使用します。 PolyBase は、外部テーブルとデータのインポート/エクスポートのアドホック クエリに適しています。
 ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: polybase
@@ -9,12 +10,12 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 979d0f5d57c7d761e5c9c3f1b302046312396554
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 27fa4b36df7248ceee2a484d57ab77d28ca50247
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79286906"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215872"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Hadoop 内の外部データにアクセスするように PolyBase を構成する
 
@@ -66,7 +67,7 @@ ms.locfileid: "79286906"
   
    ![services.msc で PolyBase サービスを停止および開始する](../../relational-databases/polybase/media/polybase-stop-start.png "services.msc で PolyBase サービスを停止および開始する")  
   
-## <a id="pushdown"></a> プッシュダウン計算を有効にする  
+## <a name="enable-pushdown-computation"></a><a id="pushdown"></a> プッシュダウン計算を有効にする  
 
 クエリ パフォーマンスを高めるには、Hadoop クラスターへのプッシュダウン計算を有効にします。  
   

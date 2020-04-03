@@ -1,5 +1,6 @@
 ---
 title: 拡張イベント関連のシステム オブジェクト
+description: これらのリソースは拡張イベントに関連します。たとえば、システム オブジェクトによるサポート方法、SQL Server による使用方法、特に Azure SQL Database に対する側面などです。
 ms.date: 03/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -9,12 +10,12 @@ ms.topic: reference
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 38982119f9c4485d99263a53c73d1e1c1e4404dc
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 2db8a1ca2d96046c9eb3d3d5e8dd393b0342334d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79287736"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79487570"
 ---
 # <a name="system-objects-that-support-extended-events"></a>拡張イベントをサポートするシステム オブジェクト
 

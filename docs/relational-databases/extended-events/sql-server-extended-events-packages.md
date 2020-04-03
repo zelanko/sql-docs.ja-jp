@@ -1,5 +1,6 @@
 ---
 title: SQL Server 拡張イベント パッケージ
+description: パッケージは、SQL Server 拡張イベント オブジェクトのコンテナーです。 この記事では、パッケージに含めることができるオブジェクトについて説明します。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,12 +14,12 @@ ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 37c4b2c9972dbd8e236f8a8e64f312a15a3353ac
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ad638233ef9af4edfeb0fbedad1f0e1a01c5dc01
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75242927"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79487660"
 ---
 # <a name="sql-server-extended-events-packages"></a>SQL Server 拡張イベント パッケージ
 
@@ -43,7 +44,7 @@ ms.locfileid: "75242927"
   
 -   対象サーバー  
   
--   アクション  
+-   Actions  
   
 -   型  
   
@@ -99,7 +100,7 @@ where name = 'keyword_map'
 ### <a name="targets"></a>対象サーバー  
  ターゲットは、イベントのコンシューマーです。 ターゲットは、イベントを開始したスレッド上で同期的に、またはシステムによって提供されたスレッド上で非同期的に、イベントを処理します。 拡張イベントには、複数のターゲットが用意されており、イベント出力を転送する目的で必要に応じて使用できます。 詳細については、「 [SQL Server 拡張イベント ターゲット](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)」を参照してください。  
   
-### <a name="actions"></a>アクション  
+### <a name="actions"></a>Actions  
  アクションは、プログラムがイベントに呼応して実行する特定の (または一連の) 応答です。 アクションはイベントに関連付けられます。各イベントには、それぞれ異なる一連のアクションが関連付けられる場合もあります。  
   
 > [!NOTE]  
@@ -150,7 +151,7 @@ where name = 'keyword_map'
   
 -   pred_compare  
   
--   型  
+-   type  
   
  詳細については、「[sys.dm_xe_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md)」を参照してください。  
   

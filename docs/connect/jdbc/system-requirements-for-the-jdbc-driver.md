@@ -1,7 +1,7 @@
 ---
 title: JDBC ドライバーのシステム要件 | Microsoft Docs
 ms.custom: ''
-ms.date: 02/10/2020
+ms.date: 03/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1a6aac999ef6877356f66f4db1d6d6763cc0f1ea
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.openlocfilehash: 7e80f52f1edba3826c18cc6a306206bdfb254248
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77903729"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271388"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>JDBC ドライバーのシステム要件
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "77903729"
 
 **Microsoft JDBC Driver 8.2 for SQL Server:**  
 
-  JDBC Driver 8.2 の各インストール パッケージには、3 つの JAR クラス ライブラリ (**mssql-jdbc-8.2.1.jre8.jar**、**mssql-jdbc-8.2.1.jre11.jar**、および **mssql-jdbc-8.2.1.jre13.jar**) が含まれています。
+  JDBC Driver 8.2 の各インストール パッケージには、3 つの JAR クラス ライブラリ (**mssql-jdbc-8.2.2.jre8.jar**、**mssql-jdbc-8.2.2.jre11.jar**、および **mssql-jdbc-8.2.2.jre13.jar**) が含まれています。
 
   JDBC Driver 8.2 は、すべての主要な Java 仮想マシンと連携し、それらでサポートされるように設計されていますが、テストは OpenJDK 1.8、OpenJDK 11.0、OpenJDK 13.0、Azul Zulu JRE 1.8、Azul Zulu JRE 11.0、Azul Zulu JRE 13.0 上でのみ実行されます。
   
@@ -55,9 +55,9 @@ ms.locfileid: "77903729"
   
   |JAR|JDBC バージョン準拠|推奨される Java のバージョン|説明|  
 |---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-8.2.1.jre8.jar|4.2|8|Java Runtime Environment (JRE) 1.8 が必要です。 JRE 1.7 以前を使用すると、例外がスローされます。<br /><br /> 8\.2 の新機能:JDK 13 サポート、セキュア エンクレーブを使用する Always Encrypted、テンポラル データ型のパフォーマンスの向上。 |
-|mssql-jdbc-8.2.1.jre11.jar|4.3|11|Java Runtime Environment (JRE) 11.0 が必要です。 JRE 10.0 以前を使用すると、例外がスローされます。<br /><br /> 8\.2 の新機能:JDK 13 サポート、セキュア エンクレーブを使用する Always Encrypted、テンポラル データ型のパフォーマンスの向上。 |
-|mssql-jdbc-8.2.1.jre13.jar|4.3|13|Java Runtime Environment (JRE) 13.0 が必要です。 JRE 11.0 以前を使用すると、例外がスローされます。<br /><br /> 8\.2 の新機能:JDK 13 サポート、セキュア エンクレーブを使用する Always Encrypted、テンポラル データ型のパフォーマンスの向上。 |
+|mssql-jdbc-8.2.2.jre8.jar|4.2|8|Java Runtime Environment (JRE) 1.8 が必要です。 JRE 1.7 以前を使用すると、例外がスローされます。<br /><br /> 8\.2 の新機能:JDK 13 サポート、セキュア エンクレーブを使用する Always Encrypted、テンポラル データ型のパフォーマンスの向上。 |
+|mssql-jdbc-8.2.2.jre11.jar|4.3|11|Java Runtime Environment (JRE) 11.0 が必要です。 JRE 10.0 以前を使用すると、例外がスローされます。<br /><br /> 8\.2 の新機能:JDK 13 サポート、セキュア エンクレーブを使用する Always Encrypted、テンポラル データ型のパフォーマンスの向上。 |
+|mssql-jdbc-8.2.2.jre13.jar|4.3|13|Java Runtime Environment (JRE) 13.0 が必要です。 JRE 11.0 以前を使用すると、例外がスローされます。<br /><br /> 8\.2 の新機能:JDK 13 サポート、セキュア エンクレーブを使用する Always Encrypted、テンポラル データ型のパフォーマンスの向上。 |
 
 
   JDBC Driver 8.2 は Maven Central Repository でも使用でき、次のコードを POM.XML に追加することで Maven プロジェクトに追加できます。  
@@ -66,7 +66,7 @@ ms.locfileid: "77903729"
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>8.2.1.jre11</version>
+    <version>8.2.2.jre11</version>
 </dependency>
 ```
 

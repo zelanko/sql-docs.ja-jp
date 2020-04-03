@@ -1,5 +1,6 @@
 ---
 title: SharePoint ライブラリへのレポートの保存 (レポート ビルダー) | Microsoft Docs
+description: この記事では、SharePoint 統合のために構成されたレポート サーバーにレポートを保存するために必要な要件とプロセスについて説明します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4daa1eee-78b7-43d0-8b22-4a98e8fa66ba
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 916c135c9de0d67862d4b7300e24c2ae412b0cb6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 41331a57b9eb8c3981a82e826794b9031b3eb73c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581132"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290852"
 ---
 # <a name="save-a-report-to-a-sharepoint-library-report-builder"></a>SharePoint ライブラリへのレポートの保存 (レポート ビルダー)
   SharePoint 統合用に構成されているレポート サーバーにレポートを保存するには、SharePoint サーバーを参照して、レポート サーバーへの接続を確立する必要があります。 レポート定義では、レポートに関連するアイテムへのすべての参照で、SharePoint レポート サーバー固有の値を使用する必要があります。 関連するアイテムには、サブレポート、詳細レポート、および Web ベースの画像などのリソースがあります。 詳細については、「[外部アイテムへのパスの指定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)」を参照してください。  

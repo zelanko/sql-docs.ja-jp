@@ -1,5 +1,6 @@
 ---
 title: カスタム レポート アイテムの実行時コンポーネントの作成 | Microsoft Docs
+description: カスタム レポート アイテムの実行時コンポーネントを作成し、デザイン環境でそのコンポーネントのプロパティを定義する方法について説明します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b3e15a4a-98f8-4dbb-b847-bbcb20327051
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f92a148ec6f967fe1d3fe4282af68c0f801aa0c2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0946739b0b0aaefd1e0d6a682f0228dfa98529c9
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63194012"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216986"
 ---
 # <a name="creating-a-custom-report-item-run-time-component"></a>カスタム レポート アイテムの実行時コンポーネントの作成
   カスタム レポート アイテムの実行時コンポーネントは、任意の CLS 準拠の言語を使用して [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] コンポーネントとして実装され、実行時にレポート プロセッサによって呼び出されます。 実行時コンポーネントのプロパティをデザイン環境で定義するには、カスタム レポート アイテムの対応するデザイン時コンポーネントを変更します。  

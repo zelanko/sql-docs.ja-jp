@@ -2,7 +2,7 @@
 title: 可用性グループの一部として複製したパブリッシャー データベースを管理する
 description: SQL レプリケーションでパブリッシャーとして機能し、Always On 可用性グループにも参加しているデータベースを管理し、保守する方法の説明。
 ms.custom: seodec18
-ms.date: 05/17/2016
+ms.date: 05/18/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -13,33 +13,33 @@ helpviewer_keywords:
 ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7371acd7c96dbf4baa6edf31ca88d1994141663f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 4a9bf2731cf91c18a1c8dfa7ce015b0b7c21d0d3
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75228188"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448427"
 ---
 # <a name="manage-a-replicated-publisher-database-as-part-of-an-always-on-availability-group"></a>Always On 可用性グループの一部として複製したパブリッシャー データベースを管理する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   このトピックでは、AlwaysOn 可用性グループを使用するときのパブリケーション データベースのメンテナンスについての特別な考慮事項について説明します。  
   
-##  <a name="MaintainPublDb"></a> 可用性グループでのパブリッシュされたデータベースのメンテナンス  
+##  <a name="maintaining-a-published-database-in-an-availability-group"></a><a name="MaintainPublDb"></a> 可用性グループでのパブリッシュされたデータベースのメンテナンス  
  AlwaysOn パブリケーション データベースのメンテナンスは、通常のパブリケーション データベースのメンテナンスと基本的に同じです。ただし、次の点を考慮する必要があります。  
   
 -   管理は、プライマリ レプリカ ホストで行う必要があります。 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]では、プライマリ レプリカ ホストと読み取り可能なセカンダリ レプリカの **[ローカル パブリケーション]** フォルダーにパブリケーションが表示されます。 フェールオーバー後、プライマリに昇格したセカンダリが読み取り不可である場合は、変更を反映させるために [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] を手動で更新する必要がある場合があります。  
   
 -   レプリケーション モニターは、常に元のパブリッシャーの下でパブリケーション情報を表示します。 ただし、元のパブリッシャーをサーバーとして追加することで、この情報を任意のレプリカからレプリケーション モニターで表示することができます。  
   
--   ストアド プロシージャまたはレプリケーション管理オブジェクト (RMO) を使用して現在のプライマリでレプリケーションを管理する場合、パブリッシャー名を指定する際には、データベースのレプリケーションを有効にしたインスタンス (元のパブリッシャー) の名前を指定する必要があります。 適切な名前を決定するには、 **PUBLISHINGSERVERNAME** 関数を使用します。 パブリッシング データベースを可用性グループに参加させると、セカンダリ データベース レプリカに格納されているレプリケーション メタデータは、プライマリにあるレプリケーション メタデータと同一になります。 その結果、プライマリでレプリケーションが有効なパブリケーション データベースでは、セカンダリのシステム テーブルに格納されるパブリッシャー インスタンス名は、セカンダリではなくプライマリの名前になります。 これにより、パブリケーション データベースがセカンダリにフェールオーバーした場合に、レプリケーションの構成およびメンテナンスに影響が出ます。 たとえば、フェールオーバー後にセカンダリでストアド プロシージャを使用してレプリケーションを構成していて、別のレプリカで有効化されたパブリケーション データベースへのプル サブスクリプションが必要な場合、**sp_addpullsubscription** または **sp_addmergepulllsubscription** の *\@publisher* パラメーターとして現在のパブリッシャーではなく元のパブリッシャーの名前を指定する必要があります。 ただし、フェールオーバー後にパブリケーション データベースを有効にした場合、システム テーブルに格納されるパブリッシャー インスタンス名は、現在のプライマリ ホストの名前になります。 この場合、 *\@publisher* パラメーターに現在のプライマリ レプリカのホスト名を使用します。  
+-   ストアド プロシージャまたはレプリケーション管理オブジェクト (RMO) を使用して現在のプライマリでレプリケーションを管理する場合、パブリッシャー名を指定する際には、データベースのレプリケーションを有効にしたインスタンス (元のパブリッシャー) の名前を指定する必要があります。 適切な名前を決定するには、 **PUBLISHINGSERVERNAME** 関数を使用します。 パブリッシング データベースを可用性グループに参加させると、セカンダリ データベース レプリカに格納されているレプリケーション メタデータは、プライマリにあるレプリケーション メタデータと同一になります。 その結果、プライマリでレプリケーションが有効なパブリケーション データベースでは、セカンダリのシステム テーブルに格納されるパブリッシャー インスタンス名は、セカンダリではなくプライマリの名前になります。 これにより、パブリケーション データベースがセカンダリにフェールオーバーした場合に、レプリケーションの構成およびメンテナンスに影響が出ます。 たとえば、フェールオーバー後にセカンダリでストアド プロシージャを使用してレプリケーションを構成していて、別のレプリカで有効化されたパブリケーション データベースへのプル サブスクリプションが必要な場合、**sp_addpullsubscription** または **sp_addmergepullsubscription** の *\@publisher* パラメーターとして現在のパブリッシャーではなく元のパブリッシャーの名前を指定する必要があります。 ただし、フェールオーバー後にパブリケーション データベースを有効にした場合、システム テーブルに格納されるパブリッシャー インスタンス名は、現在のプライマリ ホストの名前になります。 この場合、 *\@publisher* パラメーターに現在のプライマリ レプリカのホスト名を使用します。  
   
     > [!NOTE]  
     >  **sp_addpublication** などの一部のプロシージャでは、 *\@publisher* パラメーターは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスではないパブリッシャーに対してのみサポートされます。この場合は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On と無関係です。  
   
 -   フェールオーバー後に [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] でサブスクリプションを同期するには、サブスクライバーからプル サブスクリプションを同期し、アクティブなパブリッシャーからプッシュ サブスクリプションを同期します。  
   
-##  <a name="RemovePublDb"></a> 可用性グループからのパブリッシュされたデータベースの削除  
+##  <a name="removing-a-published-database-from-an-availability-group"></a><a name="RemovePublDb"></a> 可用性グループからのパブリッシュされたデータベースの削除  
  パブリッシュされたデータベースを可用性グループから削除する場合、またはパブリッシュされたメンバー データベースを含む可用性グループを削除する場合、次の点を考慮します。  
   
 -   元のパブリッシャーのパブリケーション データベースを可用性グループのプライマリ レプリカから削除する場合、パブリッシャーとデータベースのペアについてのリダイレクトを削除するために、 *\@redirected_publisher* パラメーターの値を指定せずに **sp_redirect_publisher** を実行する必要があります。  
@@ -100,7 +100,7 @@ ms.locfileid: "75228188"
   
      この時点で、パブリッシュされたデータベースのコピーを保持または削除できます。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [AlwaysOn 可用性グループ用のレプリケーションの構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)  
   

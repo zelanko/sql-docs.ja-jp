@@ -1,5 +1,6 @@
 ---
 title: レポート サーバー システムのプロパティ | Microsoft Docs
+description: システム プロパティは、レポート サーバー データベースに対してグローバルです。 Web サービス メソッドを使用すると、これらのプロパティの多くの読み取りや修正ができます。
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: cd874117-00e5-4ae6-8629-eb9ba9f40478
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 30455d77efff3c9a9e4f48b9cbeccfa983001220
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ecb90d65a011e5bb00c66f5f6ccd32ab4be663ee
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63128815"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509634"
 ---
 # <a name="reporting-services-properties---report-server-system-properties"></a>Reporting Services のプロパティ - レポート サーバーのシステム プロパティ
   次のシステム プロパティ名は予約されています。 同じ名前のユーザー定義プロパティは作成できません。 Web サービス メソッドを使用すると、これらのプロパティの多くの読み取りや修正ができます。  
   
 ## <a name="properties"></a>Properties  
   
-|プロパティ|[説明]|  
+|プロパティ|説明|  
 |--------------|-----------------|  
 |SiteName|ユーザー インターフェイスに表示されるレポート サーバー サイトの名前。 既定値は **Microsoft Report Server** です。 このプロパティには空の文字列を指定できます。 最大長は 8,000 文字です。|  
 |SystemSnapshotLimit|レポートに格納されるスナップショットの最大数。 有効値は **-1** ～ **2**、**147**、**483**、**647**です。 値が **-1**の場合、スナップショットに制限はありません。|  

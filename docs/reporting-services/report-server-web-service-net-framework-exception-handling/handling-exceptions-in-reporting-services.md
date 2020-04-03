@@ -1,5 +1,6 @@
 ---
 title: Reporting Services での例外を処理 | Microsoft Docs
+description: アプリケーションで次に実行する適切なアクションを決定できるように、Reporting Services で発生する例外を処理する方法について説明します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1a443432-2db5-48c5-bc29-433b4688082f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7fbf4c9d89d35f4fbb437a41c691f7f8c6578b9b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2e29de3a0c6b622de2abb411f36a815d7071f16d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63028569"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216331"
 ---
 # <a name="handling-exceptions-in-reporting-services"></a>Reporting Services の例外の処理
   Reporting Services SOAP API クライアント要求を完了できない場合は、レポート サーバーが予期した呼び出しの結果ではなくエラーを返します。 呼び出しを完了できない場合は、レポート サーバー Web サービスのエラーが SOAP **Fault** XML 要素として返されます。 エラー解消の鍵となる要素は **detail** 要素です。この要素には、レポート サーバーが提供するすべてのエラー情報に加えて、Web サービス エラー情報も含まれています。 **detail** 要素の中の最重要情報は、レポート サーバー エラー コードです。 メッセージとエラー コードから、アプリケーションで次にとるべき適切な処理を判断することができます。 SOAP エラーの詳細については、W3C (World Wide Web Consortium) の Web サイト (http://www.w3.org/TR/SOAP ) を参照してください。  

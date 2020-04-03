@@ -1,6 +1,6 @@
 ---
 title: SSMS を使用して SQL Server on Linux を管理する
-description: ''
+description: この記事では、SQL Server Management Studio について説明します。これは、SQL Server のコンポーネントを構成、管理、開発し、それらのコンポーネントへアクセスするための統合環境です。
 author: VanMSFT
 ms.author: vanto
 ms.date: 05/21/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
-ms.openlocfilehash: 753845d41c946d955b80a927901f827ee4643567
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 3ddc3ffa91b62956fdfef91ff3c19a784fc2fe2b
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68000092"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216661"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Windows で SQL Server Management Studio を使用して SQL Server on Linux を管理する
 
@@ -55,7 +55,7 @@ SQL Server を操作する際には、常に最新版の SQL Server Management S
 
 1. **[サーバーに接続]** ウィンドウで、次の情報を入力します (SSMS が既に実行されている場合は、 **[接続] > [データベース エンジン]** をクリックして **[サーバーに接続]** ウィンドウを開きます)。
 
-   | 設定 | [説明] |
+   | 設定 | 説明 |
    |-----|-----|
    | **サーバーの種類** | 既定値はデータベース エンジンです。この値は変更しないでください。 |
    | **サーバー名** | ターゲットの Linux SQL Server マシンの名前か、その IP アドレスを入力します。 |
@@ -63,9 +63,9 @@ SQL Server を操作する際には、常に最新版の SQL Server Management S
    | **Login** | サーバー上のデータベースへのアクセス権を持つユーザーの名前 (たとえば、セットアップ中に作成された既定の **SA** アカウント) を入力します。 |
    | **パスワード** | 指定したユーザーのパスワードを入力します (**SA** アカウントの場合は、セットアップ時に作成したものを入力します)。 |
 
-    ![SQL Server Management Studio: SQL Database サーバーへの接続](./media/sql-server-linux-manage-ssms/connect.png)
+    ![SQL Server Management Studio:SQL Database サーバーへの接続](./media/sql-server-linux-manage-ssms/connect.png)
 
-1. **[接続]** をクリックします。
+1. **[Connect]** をクリックします。
 
     > [!TIP]
     > 接続エラーが発生した場合は、まずエラー メッセージから問題を診断します。 次に、[接続のトラブルシューティングに関する推奨事項](sql-server-linux-troubleshooting-guide.md#connection)を確認します。
@@ -91,7 +91,7 @@ SQL Server を操作する際には、常に最新版の SQL Server Management S
 
 1. **[実行]** ボタンをクリックしてクエリを実行し、結果を確認します。
 
-   ![正常終了しました。 SQL Database サーバーへの接続: SQL Server Management Studio](./media/sql-server-linux-manage-ssms/execute-query.png)
+   ![正常終了しました。 SQL Database サーバーへの接続:SQL Server Management Studio](./media/sql-server-linux-manage-ssms/execute-query.png)
 
 Transact-SQL クエリはほとんどの管理タスクに使用できますが、SSMS のグラフィカル ツールを使用すれば、SQL Server をより簡単に管理することができます。 以下のセクションでは、グラフィカル ユーザー インターフェイスの使用例をいくつか紹介します。
 
@@ -140,9 +140,9 @@ SQL Server Management Studio (SSMS) には、[利用状況モニター](../relat
 
 ペインが展開されると、利用状況モニターによってインスタンスに対して情報のクエリが実行されます。 ペインを折りたたむと、そのペインのすべての利用状況クエリが停止します。 1 つ以上のペインを同時に展開し、インスタンスのさまざまな利用状況を表示することができます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 - [SSMS とは](../ssms/sql-server-management-studio-ssms.md)
 - [SSMS を使用したデータベースのエクスポートとインポート](sql-server-linux-migrate-ssms.md)
-- [チュートリアル: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)
-- [チュートリアル: Transact-SQL ステートメントの作成](../t-sql/tutorial-writing-transact-sql-statements.md)
+- [チュートリアル:SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)
+- [チュートリアル:Transact-SQL ステートメントの作成](../t-sql/tutorial-writing-transact-sql-statements.md)
 - [サーバーのパフォーマンスと利用状況の監視](../relational-databases/performance/server-performance-and-activity-monitoring.md)

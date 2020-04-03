@@ -1,5 +1,6 @@
 ---
 title: メソッドのバッチ処理 | Microsoft Docs
+description: Reporting Services で SOAP ヘッダーを使用して、1 回の操作で複数の Web サービス メソッドを含める方法について説明します。
 ms.date: 03/04/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 86435534-c9fe-4b49-b88c-7fb6d21976b0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bcafb334e32a1b98d10c57d8f31fe321d0b7f182
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: dcc18839d2e10a35a35289a5950cab566afea23a
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62991485"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80215591"
 ---
 # <a name="batching-methods"></a>メソッドのバッチ処理
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の SOAP ヘッダーを使用することによって、1 つの操作に複数の Web サービス メソッドを含めることができます。 メソッドは、1 つのデータベース トランザクションのスコープ内で、呼び出された順序で実行されます。  

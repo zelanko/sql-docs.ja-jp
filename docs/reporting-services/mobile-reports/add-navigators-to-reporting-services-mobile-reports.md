@@ -1,5 +1,6 @@
 ---
 title: Reporting Services モバイル レポートへのナビゲーターの追加 | Microsoft Docs
+description: Mobile Report Publisher では、ナビゲーターを追加して、時間または選択によってデータをフィルター処理します。 ナビゲーターは、Power BI や Excel のピボットテーブルのスライサーに似ています。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e141f50e-49a9-46c6-983c-f656013aa07c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 27060715a2d616dd99e294175163ad74b54a17b9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 6749853bc1717077a4d65f4f27546c0fe260cdaf
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63317041"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448201"
 ---
 # <a name="add-navigators-to-reporting-services-mobile-reports"></a>Add navigators to Reporting Services mobile reports
 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]では、時間または選択したものによって視覚エフェクトのデータをフィルター処理するには、 *ナビゲーター* を追加します。 
@@ -119,7 +120,7 @@ ms.locfileid: "63317041"
   
 フィルターも一緒にカスケードできるので、ある選択値で 2 番目の利用可能な値をフィルター処理できます。 フィルターをカスケードするには、通常のギャラリー要素の場合と同様にキー列にフィルターを適用します。  
 
-### <a name="see-also"></a>参照 
+### <a name="see-also"></a>関連項目 
   
 * [Maps in SQL Server mobile reports](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
 * [Reporting Services モバイル レポートの視覚エフェクト](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)

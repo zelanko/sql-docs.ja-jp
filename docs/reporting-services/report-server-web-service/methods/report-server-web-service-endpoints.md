@@ -1,5 +1,6 @@
 ---
 title: レポート サーバー Web サービスのエンドポイント | Microsoft Docs
+description: レポート サーバー Web サービスでは、レポートの実行およびナビゲーションに加えて、レポート サーバーの管理に利用できる 3 つのエンドポイントが提供されます。
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 19daac65c808691be20621d6718b4b71e33b83f9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: a546ba4143b7f0cc63281ce9e7a95a4eb6910366
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63284630"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509753"
 ---
 # <a name="report-server-web-service-endpoints"></a>レポート サーバー Web サービスのエンドポイント
   レポート サーバー Web サービスでは、レポートの実行およびナビゲーションに加えて、レポート サーバーの管理に利用できる複数のエンドポイントが提供されます。  
@@ -31,7 +32,7 @@ ms.locfileid: "63284630"
 >  レポート サーバーが SharePoint 統合モード用に構成されている場合、<xref:ReportService2005> API は **rsOperationNotSupportedSharePointMode** エラーを返します。 レポート サーバーがネイティブ モード用に構成されている場合、<xref:ReportService2006> API は **rsOperationNotSupportedNativeMode** エラーを返します。 同様に、<xref:ReportService2010> のモード固有 API を不適切なモードで使用した場合も、それぞれエラーが返されます。  
   
 > [!NOTE]  
->  <xref:ReportService2005> では、<xref:ReportService2006> エンドポイントと [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] エンドポイントは非推奨です。 <xref:ReportService2010> エンドポイントには、両方のエンドポイントの機能と追加の管理機能が含まれています。  
+>  [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] では、<xref:ReportService2005> エンドポイントと <xref:ReportService2006> エンドポイントは非推奨です。 <xref:ReportService2010> エンドポイントには、両方のエンドポイントの機能と追加の管理機能が含まれています。  
   
  レポート サーバーがネイティブ モード用または SharePoint 統合モード用に構成されている場合、管理エンドポイントの WSDL には次の URL を使用してアクセスできます。  
   
@@ -61,9 +62,9 @@ https://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx
 ## <a name="sharepoint-proxy-endpoints"></a>SharePoint プロキシ エンドポイント  
  レポート サーバーが SharePoint 統合モード用に構成されていて、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] アドインがインストールされている場合、SharePoint サーバーにプロキシ エンドポイントのセットがインストールされています。 プロキシ エンドポイントは、レポート サーバーが SharePoint 統合モード用に構成されている場合に、レポート ソリューションを開発するための主要な API として利用できます。 プロキシ エンドポイントに対して開発を行う場合、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] アドインは、信頼されたアカウント認証モードを使用して SharePoint サーバーとレポート サーバーの間で資格情報の交換を管理します。 レポート サーバー エンドポイントに対して開発を行う場合、呼び出し元のアプリケーションは、信頼されたアカウント認証モードを使用して資格情報の交換を管理する必要があります。 次の表は、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] アドインと共にインストールされるエンドポイントの一覧です。  
   
-|プロキシ エンドポイント|[説明]|  
+|プロキシ エンドポイント|説明|  
 |--------------------|-----------------|  
-|<xref:ReportService2006>|SharePoint 統合モード用に構成されたレポート サーバーを管理するための API を提供します。<br /><br /> 注: [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] では、このエンドポイントは非推奨です。|  
+|<xref:ReportService2006>|SharePoint 統合モード用に構成されたレポート サーバーを管理するための API を提供します。<br /><br /> 注:[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] では、このエンドポイントは非推奨です。|  
 |<xref:ReportService2010>|ネイティブ モード用または SharePoint 統合モード用に構成されたレポート サーバーを管理するための API を提供します。|  
 |<xref:ReportExecution2005>|レポートの実行とナビゲーションのための API を提供します。|  
 |<xref:ReportServiceAuthentication>|SharePoint Web アプリケーションがフォーム認証用に構成されている場合にレポート サーバーに対してユーザーを認証するための API を提供します。|  

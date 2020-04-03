@@ -1,5 +1,6 @@
 ---
 title: オブジェクト エクスプローラーでのイベント セッションの管理
+description: 拡張イベント セッションの作成、開始または停止、エクスポート、インポート、編集、削除など、拡張イベントに影響を与える操作をオブジェクト エクスプローラーで実行できます。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,12 +11,12 @@ ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2d7019b369999afe8c28660a6a533e61b1d01c29
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 390e8d4c65951f7b2b6c1f17d161a8ddc6d71242
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75234530"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434089"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>オブジェクト エクスプローラーでのイベント セッションの管理
 
@@ -116,7 +117,7 @@ STATE = STOP
   
 4.  イベント セッションの編集が終了したら、 **[OK]** をクリックします。  
   
-## <a name="script-an-event-session-definition-using-includetsqlincludestsql-mdmd"></a>を使用したイベント セッション定義のスクリプト化 [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+## <a name="script-an-event-session-definition-using-tsql"></a>を使用したイベント セッション定義のスクリプト化 [!INCLUDE[tsql](../../includes/tsql-md.md)]  
  新規セッション ウィザードおよび [新しいセッション] ダイアログの両方に、拡張イベント セッションを定義する [!INCLUDE[tsql](../../includes/tsql-md.md)] を生成するスクリプト オプションがあります。  
   
  セッション名を右クリックし、 [!INCLUDE[tsql](../../includes/tsql-md.md)] [セッションをスクリプト化] **をポイントし、** [CREATE] **をクリックして、既存の拡張イベント セッションの**にアクセスできます。  

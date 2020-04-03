@@ -15,12 +15,12 @@ ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 30155a37f57391edeee916cd2b6629d63a1dcaaa
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 58773f430fc61a7817d7d3ee7c9e7b597716c438
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288656"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434179"
 ---
 # <a name="sql-server-installation-guide"></a>SQL Server のインストール ガイド
 
@@ -44,7 +44,9 @@ ms.locfileid: "79288656"
     - [[!INCLUDE[ss2016](../../includes/sssql15-md.md)]](~/sql-server/editions-and-components-of-sql-server-2016.md)」を参照してください。  
     - [[!INCLUDE[ss2014](../../includes/sssql14-md.md)]](https://technet.microsoft.com/library/cc645993(v=sql.120).aspx)
 
-*  **要件**: 「[SQL Server のインストール計画](../../sql-server/install/planning-a-sql-server-installation.md)」でインストール要件、システム構成チェック、セキュリティ上の考慮事項を確認します。 
+*  **要件**: [SQL Server 2016、2017](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)、[SQL Server 2019](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) または [SQL Server on Linux](../../linux/sql-server-linux-setup.md) に対するハードウェアとソフトウェアのインストール要件と、「[SQL Server のインストール計画](../../sql-server/install/planning-a-sql-server-installation.md)」に記載されているシステム構成チェック、セキュリティ上の考慮事項を確認してください。 
+
+
   
 * **サンプル データベースとサンプル コード**: 
     * これらは存在しますが、既定では SQL Server セットアップの一環としてインストールされません 
@@ -68,8 +70,19 @@ ms.locfileid: "79288656"
 * [Azure Data Studio](https://go.microsoft.com/fwlink/?linkid=2109256)
 
 
+## <a name="considerations"></a>考慮事項
+
+-   リモート デスクトップ接続で、RDC クライアントのローカル リソースのメディアを使用して、セットアップを起動した場合、インストールは失敗します。 リモートでインストールするには、メディアをネットワーク共有に配置するか、物理または仮想マシンのローカルに配置する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール メディアは、ネットワーク共有、マッピングされたドライブ、またはローカル ドライブに配置するか、仮想マシンに ISO として配置する必要があります。  
+  
+  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを実行すると、製品に必要な以下のソフトウェア コンポーネントがインストールされます。  
+  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client    
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ サポート ファイル  
+
 ## <a name="sql-server-installation"></a>SQL Server のインストール
- 
+
+
 |[アーティクル]|説明|  
 |-----------|-----------------|  
 |[インストール ウィザードからの SQL Server&2016; のインストール (セットアップ)](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)|setup.exe セットアップ メディアから起動するインストール ウィザード GUI を使用して SQL Server をインストールします。 |  
@@ -111,7 +124,7 @@ ms.locfileid: "79288656"
 
 [[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] のアップグレード](../../database-engine/install-windows/upgrade-sql-server.md)   
 [[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] のアンインストール](../../sql-server/install/uninstall-sql-server.md)   
-[SQL Server Reporting Services (SSRS) のインストール](../../reporting-services/install-windows/install-reporting-services.md)
-[SQL Server Analysis Services (SSAS) のインストール](/analysis-services/instances/install-windows/install-analysis-services)
-[[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] ビジネス インテリジェンス機能のインストール](../../sql-server/install/install-sql-server-business-intelligence-features.md)   
+[SQL Server Reporting Services (SSRS) のインストール](../../reporting-services/install-windows/install-reporting-services.md)   
+[SQL Server Analysis Services (SSAS) のインストール](/analysis-services/instances/install-windows/install-analysis-services)   
+[[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] のビジネス インテリジェンス機能のインストール](../../sql-server/install/install-sql-server-business-intelligence-features.md)   
 [高可用性ソリューション &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)  

@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 34599160e206d89eaee04074ddbaee2bac7c5f89
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.openlocfilehash: a138a8451211436d55da537b9d8a45d26c534e48
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "77173567"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80215747"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-in-kubernetes"></a>Kubernetes の SQL Server ビッグ データ クラスターでのデータ永続化
 
@@ -33,6 +33,8 @@ SQL Server ビッグ データ クラスターでは、[ストレージ クラ�
 - 構成内で指定しているストレージ クラスのストレージ プロビジョナーによって動的プロビジョニングがサポートされていない場合は、永続化ボリュームを事前に作成する必要があります。 たとえば、`local-storage` プロビジョナーでは動的プロビジョニングが有効になりません。 `kubeadm` を使用して展開された Kubernetes クラスター内での作業の進め方に関するガイダンスについては、この[サンプル スクリプト](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu)を参照してください。
 
 - ビッグ データ クラスターを展開するときに、クラスター内のすべてのコンポーネントで使用する、同一のストレージ クラスを構成できます。 ただし、運用環境での展開のベスト プラクティスとして、さまざまなコンポーネントでは、サイズやスループットに関してさまざまなワークロードに対応するために、異なるストレージ構成が必要になります。 コントローラーで指定されている既定のストレージ構成は、SQL Server マスター インスタンス、データセット、および記憶域プールごとに上書きできます。 この記事では、これを行う方法の例を示します。
+
+- 記憶域プールのサイズ要件を計算するときは、HDFS の構成に使用されているレプリケーション係数を考慮する必要があります。  レプリケーション係数は、展開時にクラスター展開構成ファイルで構成できます。 開発テスト プロファイル (つまり、`aks-dev-test` または `kubeadm-dev-test`) の既定値は 2 で、運用環境のデプロイに推奨されるプロファイル (つまり `kubeadm-prod`) の既定値は 3 です。 ベスト プラクティスとして、3 以上の HDFS のレプリケーション係数を使用して、ビッグ データ クラスターの運用環境の展開を構成することをお勧めします。 レプリケーション係数の値は、記憶域プール内のインスタンスの数に影響します。少なくとも、レプリケーション係数の値と同じ数の記憶域プール インスタンスを展開する必要があります。 また、ストレージのサイズを適切に変更し、レプリケーション係数の値と同じ回数だけ HDFS でデータがレプリケートされるように構成する必要があります。 HDFS でのデータ レプリケーションの詳細については、[こちら](https://hadoop.apache.org/docs/r3.2.1/hadoop-project-dist/hadoop-hdfs/HdfsDesign.html#Data_Replication)を参照してください。 
 
 - SQL Server 2019 CU1 リリース時点では、展開後にストレージ構成設定を変更することはできません。 この制約により、各インスタンスの永続ボリューム要求のサイズの変更ができないだけでなく、展開後のスケーリング操作もできません。 そのため、ビッグ データ クラスターを展開する前に、ストレージのレイアウトを計画することが非常に重要です。
 
@@ -101,7 +103,7 @@ azdata bdc config init --source aks-dev-test --target custom
 このプロセスでは `bdc.json` と `control.json` の 2 つのファイルが作成されます。これらは、手動で編集するか `azdata bdc config` コマンドを使用することによってカスタマイズできます。 jsonpath および jsonpatch ライブラリを組み合わせて使用すると、構成ファイルを編集する手段を提供できます。
 
 
-### <a id="config-samples"></a>ストレージ クラス名および要求サイズを構成する
+### <a name="configure-storage-class-name-andor-claims-size"></a><a id="config-samples"></a>ストレージ クラス名および要求サイズを構成する
 
 既定では、クラスター内にプロビジョニングされた各ポッドに対応する、プロビジョニングされた永続ボリューム要求のサイズは、10 ギガバイト (GB) です。 この値は、クラスターの展開前にカスタム構成ファイル内で実行しているワークロードに合わせて更新できます。
 

@@ -21,12 +21,12 @@ ms.assetid: bd721d97-6e23-488b-8c8c-c0453d5b3b86
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 02353688efb79b4c2dbb7c4bc3d9ed0d4d5e0a37
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 9fa8bd2c029ea65bb03e21543212dd11b65f2242
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67913940"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80345455"
 ---
 # <a name="set-ansi_defaults-transact-sql"></a>SET ANSI_DEFAULTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -44,13 +44,14 @@ SET ANSI_DEFAULTS { ON | OFF }
 ```
 
 ```
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
+-- Syntax for Azure Synapse and Parallel Data Warehouse
 
 SET ANSI_DEFAULTS ON
 ```
 
 ## <a name="remarks"></a>解説  
-ANSI_DEFAULTS は、クライアントで変更できない、サーバー側の設定です。 クライアントは自身の設定を管理します。 既定では、これらの設定はサーバー設定と対照的です。 サーバー設定は、ユーザーが変更するものではありません。 ユーザーがクライアントの動作を変更するには、SQL_COPT_SS_PRESERVE_CURSORS を使用します。 詳細については、「[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)」を参照してください。  
+ANSI_DEFAULTS はサーバー側の設定であり、すべてのクライアント接続の動作を有効にすることができます。 クライアントでは、通常、接続またはセッションの初期化時に設定を要求します。 サーバー設定は、ユーザーが変更するものではありません。   
+ユーザーがクライアントの動作を変更するには、`SQL_COPT_SS_PRESERVE_CURSORS` などのクライアント固有のメソッドを使用する必要があります。 詳細については、「[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)」を参照してください。
   
 有効 (ON) に設定すると、次の ISO 設定が有効になります。  
   
@@ -63,9 +64,9 @@ ANSI_DEFAULTS は、クライアントで変更できない、サーバー側の
   
 また、ユーザーの作業セッション時や、トリガーまたはストアド プロシージャの実行時は、これらの ISO 標準 SET オプションは、クエリ処理環境を定義します。 ただし、これらの SET オプションには ISO 標準に準拠するために必要なオプションがすべて含まれているわけではありません。  
   
-計算列およびインデックス付きビューにおいてインデックスを操作する場合は、4 つの既定オプション (ANSI_NULLS、ANSI_PADDING、ANSI_WARNINGS、および QUOTED_IDENTIFIER) を ON に設定する必要があります。 これは、計算列とインデックス付きビューにおいてインデックスを作成および変更するときに、指定された値に設定する必要がある 7 つの SET オプションの中の 4 つのオプションです。 その他の SET オプションは、ARITHABORT (ON)、CONCAT_NULL_YIELDS_NULL (ON)、および NUMERIC_ROUNDABORT (OFF) です。 インデックス付きビューおよび計算列上のインデックスに必要な SET オプション設定の詳細については、「[SET ステートメントの使用に関する留意事項](../../t-sql/statements/set-statements-transact-sql.md#considerations-when-you-use-the-set-statements)」を参照してください。  
+計算列およびインデックス付きビューにおいてインデックスを操作する場合は、これらの 4 つの既定値 (`ANSI_NULLS`、`ANSI_PADDING`、`ANSI_WARNINGS`、および `QUOTED_IDENTIFIER`) を ON に設定する必要があります。 これは、計算列とインデックス付きビューにおいてインデックスを作成および変更するときに、指定された値に設定する必要がある 7 つの SET オプションの中の 4 つのオプションです。 その他の SET オプションは、`ARITHABORT` (ON)、`CONCAT_NULL_YIELDS_NULL` (ON)、および `NUMERIC_ROUNDABORT` (OFF) です。 インデックス付きビューおよび計算列上のインデックスに必要な SET オプション設定の詳細については、「[SET ステートメントの使用に関する留意事項](../../t-sql/statements/set-statements-transact-sql.md#considerations-when-you-use-the-set-statements)」を参照してください。  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、接続時に自動的に ANSI_DEFAULTS が ON に設定されます。 次に、このドライバーとプロバイダーによって、CURSOR_CLOSE_ON_COMMIT と IMPLICIT_TRANSACTIONS が OFF に設定されます。 CURSOR_CLOSE_ON_COMMIT と IMPLICIT_TRANSACTIONS を OFF にする設定は、ODBC データ ソース、ODBC 接続属性、OLE DB 接続プロパティのいずれかで構成できます。OLE DB 接続プロパティは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続する前に、アプリケーションの内部で設定されます。 DB-Library アプリケーションからの接続に対しては、ANSI_DEFAULTS は既定で OFF に設定されています。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、接続時に自動的に ANSI_DEFAULTS が ON に設定されます。 次に、このドライバーとプロバイダーによって、CURSOR_CLOSE_ON_COMMIT と IMPLICIT_TRANSACTIONS が OFF に設定されます。 `CURSOR_CLOSE_ON_COMMIT` および `IMPLICIT_TRANSACTIONS` の OFF 設定は、ODBC データ ソースまたは ODBC 接続属性で、あるいは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続する前にアプリケーションに設定される OLE DB 接続プロパティで構成できます。 DB-Library アプリケーションからの接続に対しては、`ANSI_DEFAULTS` は既定で OFF に設定されています。  
   
 SET ANSI_DEFAULTS を実行すると、QUOTED_IDENTIFIER は解析時に設定され、次のオプションは実行時に設定されます。  
   

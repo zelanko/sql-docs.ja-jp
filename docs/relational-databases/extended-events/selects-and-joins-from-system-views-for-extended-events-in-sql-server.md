@@ -1,5 +1,6 @@
 ---
 title: 拡張イベントに対するシステム ビューからの SELECT と JOIN
+description: SQL Server と Azure SQL Database には、拡張イベントのシステム ビューがあります。 イベント セッション情報がさまざまな観点でどのように表されるかについて説明します。
 ms.date: 08/02/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d3bcb7e272c1a5120b65018aab781546ba8d0f2b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 3245b4288871e4b92b783aad0f08ca1027b401a0
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75242899"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79526757"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SQL Server の拡張イベントに対するシステム ビューからの SELECT と JOIN
 
@@ -345,29 +346,25 @@ ORDER BY
 ```
 
 
-#### <a name="output"></a>Output
+#### <a name="output"></a>出力
 
 
-次に示すのは、前の SELECT JOIN UNION を実行した実際の出力です。 出力のパラメーターの名前と値は、前の CREATE EVENT SESSION ステートメントと対応します。
+次の表は、前の SELECT JOIN UNION を実行した場合の出力を示しています。 出力のパラメーターの名前と値は、前の CREATE EVENT SESSION ステートメントと対応します。
 
-
-```
-Session-Name          Clause-Type            Parameter-Name                  Parameter-Value
-------------          -----------            --------------                  ---------------
-event_session_test3   1_EVENT                Event-Name                      lock_deadlock
-event_session_test3   2_EVENT_SET            collect_database_name           1
-event_session_test3   3_EVENT_ACTION         sqlserver.client_hostname       (Not_Applicable)
-event_session_test3   3_EVENT_ACTION         sqlserver.collect_system_time   (Not_Applicable)
-event_session_test3   3_EVENT_ACTION         sqlserver.event_sequence        (Not_Applicable)
-event_session_test3   4_EVENT_PREDICATES     ([sqlserver].[equal_i_sql_unicode_string]([database_name],N'InMemTest2') AND [package0].[counter]<=(16))   (Not_Applicable)
-event_session_test3   5_TARGET               event_file                      (Not_Applicable)
-event_session_test3   6_TARGET_SET           filename                        C:\Junk\event_session_test3_EF.xel
-event_session_test3   6_TARGET_SET           max_file_size                   20
-event_session_test3   6_TARGET_SET           max_rollover_files              2
-event_session_test3   7_WITH_MAX_MEMORY      max_memory                      4096
-event_session_test3   7_WITH_STARTUP_STATE   startup_state                   1
-```
-
+| Session-Name | Clause-Type | Parameter-Name | Parameter-Value |
+|---|---|---|---|
+|event_session_test3  | 1_EVENT |                Event-Name |                       lock_deadlock |
+|event_session_test3  |  2_EVENT_SET |             collect_database_name |            1 |
+|event_session_test3  |  3_EVENT_ACTION |          sqlserver.client_hostname |       (Not_Applicable) |
+|event_session_test3  |  3_EVENT_ACTION |         sqlserver.collect_system_time |   (Not_Applicable) |
+|event_session_test3  |  3_EVENT_ACTION |         sqlserver.event_sequence |        (Not_Applicable) |
+|event_session_test3  |  4_EVENT_PREDICATES |     (\[sqlserver\].\[equal_i_sql_unicode_string\]\(\[database_name\],N'InMemTest2'\) AND \[package0\].\[counter\]<=\(16\)\) |   (Not_Applicable) |
+|event_session_test3  |  5_TARGET |               event_file |                      (Not_Applicable) |
+|event_session_test3  |  6_TARGET_SET |           filename  |                       C:\Junk\event_session_test3_EF.xel |
+|event_session_test3  |  6_TARGET_SET |           max_file_size |                   20 |
+|event_session_test3  |  6_TARGET_SET |           max_rollover_files |              2 |
+|event_session_test3  |  7_WITH_MAX_MEMORY |      max_memory |                      4096 |
+|event_session_test3  |  7_WITH_STARTUP_STATE |   startup_state |                   1 |
 
 以上でカタログ ビューのセクションは終わりです。
 
@@ -419,32 +416,27 @@ SELECT  --C.1
 ```
 
 
-#### <a name="output"></a>Output
+#### <a name="output"></a>出力
 
 パッケージのリストです。
 
-
-```
-/***  (The unique p.guid values are not shown.)
-Package        Package-Description
--------        -------------------
-filestream     Extended events for SQL Server FILESTREAM and FileTable
-package0       Default package. Contains all standard types, maps, compare operators, actions and targets
-qds            Extended events for Query Store
-SecAudit       Security Audit Events
-sqlclr         Extended events for SQL CLR
-sqlos          Extended events for SQL Operating System
-SQLSatellite   Extended events for SQL Satellite
-sqlserver      Extended events for Microsoft SQL Server
-sqlserver      Extended events for Microsoft SQL Server
-sqlserver      Extended events for Microsoft SQL Server
-sqlsni         Extended events for Microsoft SQL Server
-ucs            Extended events for Unified Communications Stack
-XtpCompile     Extended events for the XTP Compile
-XtpEngine      Extended events for the XTP Engine
-XtpRuntime     Extended events for the XTP Runtime
-***/
-```
+| Package        |Package-Description|
+|---|---|
+|ファイル ストリーム (filestream)|     SQL Server FILESTREAM と FileTable の拡張イベント |
+|package0   |    既定のパッケージ。 すべての標準の型、マップ、比較演算子、アクション、およびターゲットが含まれています |
+|qds         |   クエリ ストアの拡張イベント |
+|SecAudit     |  セキュリティ監査イベント |
+|sqlclr        | SQL CLR の拡張イベント |
+|sqlos         | SQL オペレーティング システムの拡張イベント |
+|SQLSatellite |  SQL サテライトの拡張イベント |
+|sqlserver   |   Microsoft SQL Server の拡張イベント |
+|sqlserver  |    Microsoft SQL Server の拡張イベント |
+|sqlserver  |    Microsoft SQL Server の拡張イベント |
+|sqlsni     |    Microsoft SQL Server の拡張イベント |
+|ucs        |    統合コミュニケーション スタックの拡張イベント |
+|XtpCompile |    XTP コンパイルの拡張イベント |
+|XtpEngine  |    XTP エンジンの拡張イベント |
+|XtpRuntime |    XTP ランタイムの拡張イベント |
 
 
 *上記の頭字語の定義:*
@@ -477,27 +469,20 @@ SELECT  --C.2
 ```
 
 
-#### <a name="output"></a>Output
+#### <a name="output"></a>出力
 
 オブジェクト タイプごとのオブジェクトの数です。 約 1915 個のオブジェクトがあります。
 
-
-```
-/***  Actual output, sum is about 1915:
-
-Count-of-Type   object_type
--------------   -----------
-1303            event
-351             map
-84              message
-77              pred_compare
-53              action
-46              pred_source
-28              type
-17              target
-***/
-```
-
+|Count-of-Type |   object_type |
+|---|---|
+|1303|            イベント |
+|351  |           map |
+|84    |          message |
+|77     |         pred_compare |
+|53     |        action |
+|46     |         pred_source |
+|28     |         type |
+|17     |         ターゲット (target) |
 
 <a name="section_C_3_select_all_available_objects"></a>
 
@@ -532,39 +517,33 @@ SELECT  --C.3
 ```
 
 
-#### <a name="output"></a>Output
+#### <a name="output"></a>出力
 
 次に示すのは上の SELECT によって返されるオブジェクトの例です。
 
 
-```
-/***
-Type-of-Item   Package        Item                          Item-Description
-------------   -------        ----                          ----------------
-action         package0       callstack                     Collect the current call stack
-action         package0       debug_break                   Break the process in the default debugger
-action         sqlos          task_time                     Collect current task execution time
-action         sqlserver      sql_text                      Collect SQL text
-event          qds            query_store_aprc_regression   Fired when Query Store detects regression in query plan performance
-event          SQLSatellite   connection_accept             Occurs when a new connection is accepted. This event serves to log all connection attempts.
-event          XtpCompile     cgen                          Occurs at start of C code generation.
-map            qds            aprc_state                    Query Store Automatic Plan Regression Correction state
-message        package0       histogram_event_required      A value is required for the parameter 'filtering_event_name' when source type is 0.
-pred_compare   package0       equal_ansi_string             Equality operator between two ANSI string values
-pred_compare   sqlserver      equal_i_sql_ansi_string       Equality operator between two SQL ANSI string values
-pred_source    sqlos          task_execution_time           Get current task execution time
-pred_source    sqlserver      client_app_name               Get the current client application name
-target         package0       etw_classic_sync_target       Event Tracing for Windows (ETW) Synchronous Target
-target         package0       event_counter                 Use the event_counter target to count the number of occurrences of each event in the event session.
-target         package0       event_file                    Use the event_file target to save the event data to an XEL file, which can be archived and used for later analysis and review. You can merge multiple XEL files to view the combined data from separate event sessions.
-target         package0       histogram                     Use the histogram target to aggregate event data based on a specific event data field or action associated with the event. The histogram allows you to analyze distribution of the event data over the period of the event session.
-target         package0       pair_matching                 Pairing target
-target         package0       ring_buffer                   Asynchronous ring buffer target.
-type           package0       xml                           Well formed XML fragment
-***/
-```
-
-
+|Type-of-Item|   Package|        Item|                          Item-Description|
+|---|---|---|---|
+|action|         package0  |     callstack                     |現在の呼び出し履歴の収集|
+|action |        package0  |     debug_break                   |既定のデバッガーでプロセスを中断|
+|action |       sqlos      |    task_time                     |現在のタスク実行時間の収集|
+|action |        sqlserver |     sql_text                     | SQL テキストの収集|
+|イベント  |        qds       |     query_store_aprc_regression  | クエリ ストアがクエリ プランのパフォーマンスの回帰を検出したときに発生|
+|イベント  |        SQLSatellite |  connection_accept            | 新しい接続が受け入れられたときに発生します。 このイベントは、すべての接続試行をログに記録するために役立ちます。|
+|イベント  |        XtpCompile  |   cgen                          |C コード生成の開始時に発生します。|
+|map    |        qds         |   aprc_state                    |クエリ ストアのプランの回帰自動修正の状態|
+|message |       package0    |   histogram_event_required      |ソースの種類が 0 の場合、パラメーター 'filtering_event_name' の値が必要です。|
+|pred_compare |  package0   |    equal_ansi_string             |2 つの ANSI 文字列値間の等値演算子|
+|pred_compare |  sqlserver  |    equal_i_sql_ansi_string       |2 つの SQL ANSI 文字列値間の等値演算子|
+|pred_source |   sqlos      |    task_execution_time           |現在のタスク実行時間の取得|
+|pred_source |   sqlserver  |    client_app_name               |現在のクライアント アプリケーション名の取得|
+|ターゲット (target) |        package0   |    etw_classic_sync_target       |Event Tracing for Windows (ETW) 同期ターゲット|
+|ターゲット (target) |        package0   |    event_counter                 |イベント カウンター ターゲットを使用して、各イベントがイベント セッションに出現する回数をカウントします。|
+|ターゲット (target)  |       package0  |     event_file                    |event_file ターゲットを使用して、イベント データを XEL ファイルに保存します。このファイルはアーカイブし、後で分析して確認するために使用できます。 複数の XEL ファイルを結合して、個別のイベント セッションから結合されたデータを表示することができます。|
+|ターゲット (target)  |       package0   |    histogram                     |ヒストグラム ターゲットを使用して、イベントに関連付けられている特定のイベント データ フィールドまたはアクションに基づいてイベント データを集計します。 このヒストグラムにより、イベント セッション期間中のイベント データの分布を分析することができます。|
+|ターゲット (target)   |      package0  |     pair_matching                 |ペアリング ターゲット|
+|ターゲット (target)   |      package0  |     ring_buffer                   |非同期のリング バッファー ターゲット|
+|type     |      package0  |     xml                           |整形式の XML フラグメント|
 
 <a name="section_C_4_data_fields"></a>
 
@@ -605,40 +584,35 @@ SELECT  -- C.4
 ```
 
 
-#### <a name="output"></a>Output
+#### <a name="output"></a>出力
 
 前の SELECT、WHERE `o.name = 'lock_deadlock'`では次の行が返されます。
 
 - 各行は、 *sqlserver.lock_deadlock* イベントのオプションのフィルターを表します。
 - 次の表示では *\[Column-Description\]* 列は省略されています。 その値は多くの場合 NULL です。
+- これは実際の出力です。ただし、NULL であることが多い Description 列は省略されています。
+- これらの行は object_type = 'lock_deadlock' の場所です。
 
+|Package|     Event|           Column-for-Predicate-Data|
+|---|---|---|
+|sqlserver|   lock_deadlock|   associated_object_id|
+|sqlserver|  lock_deadlock |  database_id|
+|sqlserver|  lock_deadlock |  database_name|
+|sqlserver|   lock_deadlock|   deadlock_id|
+|sqlserver|   lock_deadlock|   duration|
+|sqlserver|   lock_deadlock|   lockspace_nest_id|
+|sqlserver|   lock_deadlock|   lockspace_sub_id|
+|sqlserver|   lock_deadlock|   lockspace_workspace_id|
+|sqlserver|   lock_deadlock|   mode|
+|sqlserver|   lock_deadlock|   object_id|
+|sqlserver|   lock_deadlock|   owner_type|
+|sqlserver|   lock_deadlock|   resource_0|
+|sqlserver|   lock_deadlock|  resource_1|
+|sqlserver|   lock_deadlock|   resource_2|
+|sqlserver|   lock_deadlock|   resource_description|
+|sqlserver|   lock_deadlock|   resource_type|
+|sqlserver|   lock_deadlock|   transaction_id|
 
-```
-/***
-Actual output, except for the omitted Description column which is often NULL.
-These rows are where object_type = 'lock_deadlock'.
-
-Package     Event           Column-for-Predicate-Data
--------     -----           -------------------------
-sqlserver   lock_deadlock   associated_object_id
-sqlserver   lock_deadlock   database_id
-sqlserver   lock_deadlock   database_name
-sqlserver   lock_deadlock   deadlock_id
-sqlserver   lock_deadlock   duration
-sqlserver   lock_deadlock   lockspace_nest_id
-sqlserver   lock_deadlock   lockspace_sub_id
-sqlserver   lock_deadlock   lockspace_workspace_id
-sqlserver   lock_deadlock   mode
-sqlserver   lock_deadlock   object_id
-sqlserver   lock_deadlock   owner_type
-sqlserver   lock_deadlock   resource_0
-sqlserver   lock_deadlock   resource_1
-sqlserver   lock_deadlock   resource_2
-sqlserver   lock_deadlock   resource_description
-sqlserver   lock_deadlock   resource_type
-sqlserver   lock_deadlock   transaction_id
-***/
-```
 
 
 
@@ -693,7 +667,7 @@ SELECT  --C.5
 ```
 
 
-#### <a name="output"></a>Output
+#### <a name="output"></a>出力
 
 <a name="resource_type_dmv_actual_row"></a>
 
@@ -765,7 +739,7 @@ SELECT  --C.6
 ```
 
 
-#### <a name="output"></a>Output
+#### <a name="output"></a>出力
 
 次のパラメーター行は、SQL Server 2016 で前の SELECT で返された結果の一部です。
 
