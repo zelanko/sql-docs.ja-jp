@@ -1,5 +1,6 @@
 ---
 title: セキュリティで保護された Web サービス メソッドの使用 | Microsoft Docs
+description: RSReportServer 構成ファイルの SecureConnectionLevel 設定によるレポート サーバー Web サービス メソッドではセキュリティで保護された接続が必要です。
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 87329299-c2ea-4517-9148-d855726768a9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 84c0b693df2906d4ab3245df20c3b9a979cf07f6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ddbc92de40fa15840e9c12cd482b1488bd54f7b9
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63128800"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509603"
 ---
 # <a name="using-secure-web-service-methods"></a>セキュリティで保護された Web サービス メソッドの使用
   特定のレポート サーバー Web サービスを呼び出す場合に、セキュリティによる接続の保護が必要なことがあります。 セキュリティで保護された接続を必要とするメソッドは、RSReportServer.config ファイルの **SecureConnectionLevel** 設定で決まります。 有効な設定値は 0 以上の整数値です。 次の表では、これらの値を説明します。  
   
-|Level|[説明]|  
+|Level|説明|  
 |-----------|-----------------|  
 |**0**|セキュリティで保護されません。 Reporting Services SOAP API への呼び出しに対して、セキュリティで保護された接続は不要です。|  
 |**0** より大きい。|セキュリティで保護されます。 Reporting Services SOAP API へのすべての呼び出しに対して、セキュリティで保護された接続が必要です。|  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 50f5aad8-0dff-45ef-8350-f9596d3db898
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: af8c94c6705578371fcb6b4d260da6313b73e4ca
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: d412a817a3e796e2ed85002ab11575b32e06ca91
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68013842"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216274"
 ---
 # <a name="take-an-availability-group-offline-sql-server"></a>可用性グループをオフラインにする (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,20 +26,20 @@ ms.locfileid: "68013842"
   
   
 > [!CAUTION]  
->  OFFLINE オプションは、可用性グループのリソースをクラスター間で移行する場合のみ使用してください。  
+>  可用性グループ リソースのクラスター間での移行、または読み取りスケールの可用性グループのフェールオーバーには、OFFLINE オプションを使用します。
   
-##  <a name="Prerequisites"></a> 前提条件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
   
 -   OFFLINE コマンドを入力するサーバー インスタンスが、 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 以上 (Enterprise Edition 以上) を実行している必要があります。    
 -   可用性グループが現在オンラインになっている必要があります。  
   
-##  <a name="Recommendations"></a> 推奨事項  
+##  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
  可用性グループをオフラインにする前に、可用性グループ リスナーを削除します。 詳細については、「 [可用性グループ リスナーの削除 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-an-availability-group-listener-sql-server.md)への OS のアップグレードで使用することです。  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  可用性グループの ALTER AVAILABILITY GROUP 権限、CONTROL AVAILABILITY GROUP 権限、ALTER ANY AVAILABILITY GROUP 権限、または CONTROL SERVER 権限が必要です。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  **可用性グループをオフラインにするには**  
   
 1.  可用性グループの可用性レプリカをホストしているサーバー インスタンスに接続します。 このレプリカは、プライマリ レプリカでもセカンダリ レプリカでもかまいません。  
@@ -57,23 +57,23 @@ ms.locfileid: "68013842"
 ALTER AVAILABILITY GROUP AccountsAG OFFLINE;  
 ```  
   
-##  <a name="FollowUp"></a> 補足情報: 可用性グループがオフラインになった後  
+##  <a name="follow-up-after-the-availability-group-goes-offline"></a><a name="FollowUp"></a>補足情報: 可用性グループがオフラインになった後  
   
--   **OFFLINE 操作のログ記録:**  OFFLINE 操作が開始された WSFC ノードの ID が、WSFC クラスター ログと SQL ERRORLOG の両方に保存されます。  
+-   **OFFLINE 操作のログ記録:** OFFLINE 操作が開始された WSFC ノードの ID が、WSFC クラスター ログと SQL ERRORLOG の両方に保存されます。  
   
--   **可用性グループをオフラインにする前に可用性グループ リスナーを削除しなかった場合:**  可用性グループを別の WSFC クラスターに移行する場合は、リスナーの VNN と VIP を削除します。 これらは、フェールオーバー クラスター管理コンソール、 [Remove-ClusterResource](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx) PowerShell コマンドレット、または [cluster.exe](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx)を使用して削除できます。 cluster.exe は Windows 8 では非推奨とされることに注意してください。  
+-   **グループをオフラインにする前に、可用性グループ リスナーを削除しなかった場合:** 可用性グループを別の WSFC クラスターに移行している場合は、リスナーの VNN と VIP を削除します。 これらは、フェールオーバー クラスター管理コンソール、 [Remove-ClusterResource](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx) PowerShell コマンドレット、または [cluster.exe](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx)を使用して削除できます。 cluster.exe は Windows 8 では非推奨とされることに注意してください。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [可用性グループ リスナーの削除 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-an-availability-group-listener-sql-server.md)  
   
 -   [サーバー インスタンスの HADR クラスター コンテキストの変更 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-hadr-cluster-context-of-server-instance-sql-server.md)  
   
-##  <a name="RelatedContent"></a> 関連コンテンツ  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 関連コンテンツ  
   
 -   [SQL Server 2012 技術記事](https://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   
--   [SQL Server AlwaysOn チームのブログ: SQL Server AlwaysOn チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On チーム ブログ:SQL Server Always On チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  

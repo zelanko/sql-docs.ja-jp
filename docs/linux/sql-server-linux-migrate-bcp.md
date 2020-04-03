@@ -1,6 +1,6 @@
 ---
 title: データを SQL Server on Linux に一括コピーする
-description: ''
+description: この記事では、bcp ユーティリティについて説明します。 bcp を使用すると、大量の行を SQL Server テーブルにインポートしたり、SQL Server テーブルからデータ ファイルにデータをエクスポートしたりできます。
 author: VanMSFT
 ms.author: vanto
 ms.date: 01/30/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
-ms.openlocfilehash: b611ef63532dd855648354bb85fc96f7cb52bd60
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: cd1af76a6cd22e8f8004c869127585f66e03badc
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68127321"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216611"
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>bcp を使用してデータを SQL Server on Linux に一括コピーする
 
@@ -94,7 +94,7 @@ bcp TestEmployees in ~/test_data.txt -S localhost -U sa -P <your_password> -d Bc
 - `-t`: フィールド ターミネータを指定します。 ここでは、データ ファイル内のレコードのフィールド ターミネータとして `comma` を使用しています
 
 > [!NOTE]
-> この例では、カスタムの行ターミネータを指定していません。 以前に `newline` コマンドを使用してデータ ファイルを作成したときは、テキスト データ ファイルの行は `cat` で正しく終了していました。
+> この例では、カスタムの行ターミネータを指定していません。 以前に `cat` コマンドを使用してデータ ファイルを作成したときは、テキスト データ ファイルの行は `newline` で正しく終了していました。
 
 ターミナル ウィンドウで次のコマンドを実行して、データが正常にインポートされたことを確認できます。 コマンドを実行する前に、必要に応じて `username` と `<your_password>` を置き換えます。
 ```bash 
@@ -134,7 +134,7 @@ cat ~/test_export.txt
 3,Tom,Germany
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 - [bcp ユーティリティ](../tools/bcp-utility.md)
 - [bcp を使用した互換性のためのデータ形式の指定](../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)
 - [BULK INSERT を使用した一括データのインポート](../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)

@@ -1,6 +1,6 @@
 ---
-title: サポートされているバージョンとエディションのアップグレード
-titleSuffix: SQL Server 2017
+title: サポートされているバージョンとエディションのアップグレード (SQL Server 2017)
+description: SQL Server 2017 のサポートされているバージョンとエディションのアップグレード。
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -16,14 +16,14 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4dba820ec4e353fff15b0695b97f940441caf802
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: d3f5721cbbd6d56d4fc5f2510775b050c210c981
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75258834"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434169"
 ---
-# <a name="supported-version-and-edition-upgrades-for-sql-server-2017"></a>SQL Server 2017 のサポートされているバージョンとエディションのアップグレード
+# <a name="supported-version--edition-upgrades-sql-server-2017"></a>サポートされているバージョンとエディションのアップグレード (SQL Server 2017)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   
@@ -51,7 +51,7 @@ ms.locfileid: "75258834"
  
 -   フェールオーバー クラスターは、WOW モードでサポートされていません。  
     
-## <a name="upgrades-from-earlier-versions-to-includesssqlv14-mdincludessssqlv14-mdmd"></a>以前のバージョンから [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]  
+## <a name="upgrades-from-earlier-versions-to-sssqlv14-md"></a>以前のバージョンから [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]  
  
 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] では、次のバージョンの SQL Server からのアップグレードがサポートされます。
  
@@ -112,7 +112,7 @@ ms.locfileid: "75258834"
  \* Microsoft では、特に Technology Adoption Program (TAP) に参加したお客様向けに、リリース候補版ソフトウェアからのアップグレードをサポートしています。 
 
    
-###  <a name="SupportFor2005"></a> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] に対する [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] のサポート  
+###  <a name="sssqlv14-md-support-for-ssversion2005"></a><a name="SupportFor2005"></a> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] に対する [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] のサポート  
  ここでは、 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] に対する [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]のサポートについて説明します。 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]では、次の作業を実行できます。  
   
 -   データベース エンジンの [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] インスタンスに、 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] データベース (mdf/ldf ファイル) をアタッチします。  
@@ -145,7 +145,7 @@ ms.locfileid: "75258834"
   
 - [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] のサード パーティのカスタム Integration Services コンポーネントに対するサポート (実行とアップグレードなど)。  
   
-## <a name="includesssqlv14-mdincludessssqlv14-mdmd-edition-upgrade"></a>[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] エディションのアップグレード  
+## <a name="sssqlv14-md-edition-upgrade"></a>[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] エディションのアップグレード  
 次の表に示すのは、 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]でサポートされるエディションのアップグレード シナリオです。  
   
 エディションのアップグレードを実行する手順については、「[Upgrade to a Different Edition of SQL Server &#40;Setup&#41;](../../database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup.md)」 (SQL Server の別のエディションへのアップグレード &#40;セットアップ&#41;) を参照してください。  
@@ -153,7 +153,7 @@ ms.locfileid: "75258834"
 |アップグレード元|アップグレード先|  
 |------------------|----------------|  
 |[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Enterprise (Server+CAL および Core)**|[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Enterprise |  
-|[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Evaluation Enterprise**|[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Enterprise (Server+CAL または Core ライセンス) <br/><br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Standard <br/> <br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Developer <br/> <br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Web <br/> <br/> Evaluation (無償エディション) からいずれかの有償エディションへのアップグレードは、スタンドアロン インストールではサポートされていますが、クラスター化インストールではサポートされていません。|  
+|[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Evaluation Enterprise**|[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Enterprise (Server+CAL または Core ライセンス) <br/><br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Standard <br/> <br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Developer <br/> <br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Web <br/> <br/> Evaluation (無償エディション) からいずれかの有償エディションへのアップグレードは、スタンドアロン インストールではサポートされていますが、クラスター化インストールではサポートされていません。 この制限は、可用性グループに参加している Windows フェールオーバー クラスターにインストールされているスタンドアロン インスタンスには適用されません。|  
 |[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Standard**|[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Enterprise (Server+CAL または Core ライセンス)|  
 |[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Developer**|[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Enterprise (Server+CAL または Core ライセンス) <br/><br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Web <br/> <br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Standard|  
 |[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Web|[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Enterprise (Server+CAL または Core ライセンス) <br/><br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Standard|  

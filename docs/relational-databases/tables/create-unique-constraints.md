@@ -1,7 +1,7 @@
 ---
 title: UNIQUE 制約の作成 | Microsoft Docs
 ms.custom: ''
-ms.date: 10/12/2016
+ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,23 +17,26 @@ ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4a35a937411a83b9dd27f4ab1673c9a892cf615b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: d66d2e0f2ddacb06e5313c6f5a5ee11fefaf2640
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72907915"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448195"
 ---
 # <a name="create-unique-constraints"></a>UNIQUE 制約の作成
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して UNIQUE 制約を作成し、主キー以外の特定の列に重複した値が入力されないようにします。 UNIQUE 制約を作成すると、対応する一意なインデックスが自動的に作成されます。  
   
+> [!NOTE]    
+> Azure Synapse Analytics での一意制約の詳細については、[Azure Synapse Analytics の主キー、外部キー、一意キー](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-table-constraints)に関するページを参照してください。
+  
  **このトピックの内容**  
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **UNIQUE 制約を作成する方法:**  
   
@@ -41,14 +44,14 @@ ms.locfileid: "72907915"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  テーブルに対する ALTER 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-create-a-unique-constraint"></a>UNIQUE 制約を作成するには  
   
@@ -60,9 +63,9 @@ ms.locfileid: "72907915"
   
 4.  **[全般]** の下のグリッドで、 **[型]** をクリックし、プロパティの右にあるドロップダウン リスト ボックスの **[一意キー]** をクリックします。  
   
-5.  **[ファイル]** メニューの **[<** テーブル名 _> を保存]_ をクリックします。  
+5.  **[ファイル]** メニューの **[<_テーブル名_> を保存]** をクリックします。  
 
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-create-a-unique-constraint"></a>UNIQUE 制約を作成するには  
   
@@ -90,7 +93,7 @@ ms.locfileid: "72907915"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 次の例では、`PasswordHash` テーブルの `PasswordSalt` および `Person.Password` 列に UNIQUE 制約を作成します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 次の例では、`Person.Password` テーブルの `PasswordHash` および `PasswordSalt` 列に UNIQUE 制約を作成します。  
   
     ```  
     USE AdventureWorks2012;   

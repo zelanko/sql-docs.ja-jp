@@ -1,5 +1,6 @@
 ---
 title: モバイル レポートにゲージを追加する | Reporting Services | Microsoft Docs
+description: Reporting Services モバイル レポートにゲージを追加できます。 ゲージには、データセットに含まれる 1 つの値 (値自体か、目標値と比較した値) を表示します。
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 90440119ec21cbfe97096b439e61074c7e515e00
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 456c50650afc01fc18465b0d96f3cfeb715ddecb
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63280565"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448284"
 ---
 # <a name="add-gauges-to-mobile-reports--reporting-services"></a>モバイル レポートにゲージを追加する | Reporting Services
 ゲージは、モバイル レポートで広く使用されている最も基本的なビジュアルです。 データセットに含まれる 1 つの値 (値自体か、目標値と比較した値) を表示します。
@@ -42,7 +43,7 @@ SQL Server Mobile Report Publisher のすべてのゲージに少なくとも 1 
 
 4. (省略可能) 集計を変更するには、 **[オプション]** をクリックして別の集計を選択します。
    
-   >**注**: 主要な値の集計を変更すると、多くの場合、比較対象値の集計も変更する必要があります。ただし、場合によっては異なる集計方法を組み合わせることもできます。  
+   >**注**:主要な値の集計を変更すると、多くの場合、比較対象値の集計も変更する必要があります。ただし、場合によっては異なる集計方法を組み合わせることもできます。  
 
 ## <a name="filter-a-gauge"></a>ゲージにフィルターを適用する
   
@@ -58,7 +59,7 @@ SQL Server Mobile Report Publisher のすべてのゲージに少なくとも 1 
   
 ゲージの要素をデータ フィールドに結び付けるデータのプロパティのほかにも、数多くの機能に関するプロパティやビジュアルのプロパティをカスタマイズできます。 
 
-### <a name="set-value-direction-high-or-low-is-better"></a>値の方向を設定する: [大きい値が適当] または [低い値が適当]
+### <a name="set-value-direction-high-or-low-is-better"></a>値の方向を設定する:[大きい値が適当] または [低い値が適当]
 * ゲージを選択し、 **[レイアウト]** タブの **[ビジュアルのプロパティ]** ペインで、 **[値の方向]** を **[大きい値が適当]** または **[低い値が適当]** に設定します。 
 
 **[大きい値が適当]** を選択すると、正の数は緑色で表示され、望ましい良い変化であることを示し、低下した値は赤色で表示され、望ましくない悪い変化であることを示します。 
@@ -81,7 +82,7 @@ SQL Server Mobile Report Publisher のすべてのゲージに少なくとも 1 
 
 ここでは、[通貨]、[パーセント]、[時間]、または [一般] など、ゲージに表示される数値の書式を設定します。 モバイル レポートの各要素に対して数値書式を設定します。
   
-### <a name="see-also"></a>参照 
+### <a name="see-also"></a>関連項目 
 
 * [SQL Server Mobile Report Publisher を使用してモバイル レポートを作成する](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)
 * [Maps in SQL Server mobile reports](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)

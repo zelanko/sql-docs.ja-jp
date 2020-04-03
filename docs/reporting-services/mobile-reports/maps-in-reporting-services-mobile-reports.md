@@ -1,5 +1,6 @@
 ---
 title: Reporting Services モバイル レポート内のマップ | Microsoft Docs
+description: SQL Server Mobile Report Publisher では、3 種類のマップの視覚エフェクト、および大陸と多数の個々の国の組み込みのマップを提供します。
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 50658295-a71c-441e-8eba-e1ef066629c0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5b09c8aec100d877256f0d8d9b4b97530ecdf5c6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 6b7635b0af96f0009ef6220fc8360a1373d2f998
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62683696"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448435"
 ---
 # <a name="maps-in-reporting-services-mobile-reports"></a>Maps in Reporting Services mobile reports
 マップは、地理的データを視覚化するための優れた方法です。 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] は、3 種類のマップの視覚エフェクト、および大陸と多数の個々の国の組み込みのマップを提供します。 [カスタム マップをアップロードして使用する](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)こともできます。   
@@ -58,7 +59,7 @@ SQL Server モバイル レポートでは、さまざまな状況に役立つ�
   
 2. **[データの追加]** を選択し、次に **ローカル Excel** または **[SSRS サーバー]** を選択します。  
   
-   > **ヒント**: データが [モバイル レポートに適した形式](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)であることを確認してください。  
+   > **ヒント**:データが [モバイル レポートに適した形式](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)であることを確認してください。  
   
 3. 目的のワークシートを選択し、 **[インポート]** を選択します。  
    [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]でデータを確認します。  
@@ -77,7 +78,7 @@ SQL Server モバイル レポートでは、さまざまな状況に役立つ�
      
 8. 左上隅の **[保存]** アイコンを選択して、コンピューターに **[ローカルに保存]** するか、または **[サーバーに保存]** します。  
   
-### <a name="see-also"></a>参照  
+### <a name="see-also"></a>関連項目  
 -  [Custom maps in Reporting Services mobile reports](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)  
 - [Create and publish mobile reports with SQL Server Mobile Report Publisher (SQL Server Mobile Report Publisher でモバイル レポートを作成し発行する)](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
   

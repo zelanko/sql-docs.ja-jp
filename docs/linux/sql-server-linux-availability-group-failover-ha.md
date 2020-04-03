@@ -1,6 +1,6 @@
 ---
 title: 可用性グループのフェールオーバーを管理する - SQL Server on Linux
-description: ''
+description: この記事では、フェールオーバーの種類、すなわち、自動フェールオーバー、計画的な手動フェールオーバー、強制手動フェールオーバーについて説明します。 自動と計画的な手動では、すべてのデータが保持されます。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 92d9a7518e0a6176199f39dcd69c87ea25c8004d
-ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
+ms.openlocfilehash: 635c567722fd5744aa56a16a6f48e8c4284f8ba8
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78280881"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216851"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Linux での Always On 可用性グループのフェールオーバー
 
@@ -24,7 +24,7 @@ ms.locfileid: "78280881"
 
 フェールオーバーの背景情報については、「[フェールオーバーとフェールオーバー モード](../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)」をご覧ください。
 
-## <a name="failover"></a>手動フェールオーバー
+## <a name="manual-failover"></a><a name="failover"></a>手動フェールオーバー
 
 外部のクラスター マネージャーによって管理されている AG をフェールオーバーするには、クラスター管理ツールを使います。 たとえば、ソリューションで Pacemaker を使って Linux クラスターが管理されている場合、RHEL または Ubuntu で手動フェールオーバーを実行するには、`pcs` を使います。 SLES では `crm` を使います。 
 
@@ -43,7 +43,7 @@ ms.locfileid: "78280881"
 
    次に、[場所の制約を削除](#removeLocConstraint)します。
 
-#### <a name="manualMove"></a> 手順 1. 可用性グループ リソースを移動することにより手動でフェールオーバーを行う
+#### <a name="step-1-manually-fail-over-by-moving-availability-group-resource"></a><a name="manualMove"></a> 手順 1. 可用性グループ リソースを移動することにより手動でフェールオーバーを行う
 
 *ag_cluster* という名前の AG リソースを *nodeName2* という名前のクラスター ノードに手動でフェールオーバーするには、ディストリビューションに適したコマンドを実行します。
 
@@ -62,7 +62,7 @@ ms.locfileid: "78280881"
 >[!IMPORTANT]
 >手動でリソースをフェールオーバーした後、自動的に追加される場所の制約を削除する必要があります。
 
-#### <a name="removeLocConstraint"> </a> 手順 2. 場所の制約の削除
+#### <a name="step-2-remove-the-location-constraint"></a><a name="removeLocConstraint"> </a> 手順 2. 場所の制約の削除
 
 手動フェールオーバーの間に、`pcs` のコマンド `move` または `crm` のコマンド `migrate` によって、新しいターゲット ノードに配置されるリソースに対する場所の制約が追加されます。 新しい制約を表示するには、リソースを手動で移動した後に次のコマンドを実行します。
 
@@ -107,7 +107,7 @@ ms.locfileid: "78280881"
 - [Pacemaker - リソースを手動で移動する](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/_move_resources_manually.html)
  [SLES 管理ガイド - リソース](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 
  
-## <a name="forceFailover"></a> フェールオーバーを強制的に実行する 
+## <a name="force-failover"></a><a name="forceFailover"></a> フェールオーバーを強制的に実行する 
 
 強制フェールオーバーは、厳密にディザスター リカバリーを目的としたものです。 この場合、プライマリ データセンターがダウンしているため、クラスター管理ツールでフェールオーバーを行うことはできません。 非同期のセカンダリ レプリカに対して強制フェールオーバーを実行した場合、データ損失の可能性があります。 強制フェールオーバーは、AG にサービスをすぐに復元する必要があり、データが失われてもかまわない場合に限り、実行してください。
 

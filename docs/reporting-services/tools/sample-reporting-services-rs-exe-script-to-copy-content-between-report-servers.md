@@ -9,10 +9,10 @@ ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 18d10f94696f901efd4f3938bf9b5e06d1c7078d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "70176289"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>レポート サーバー間でコンテンツをコピーするサンプル Reporting Services rs.exe スクリプト
@@ -21,10 +21,10 @@ ms.locfileid: "70176289"
 
 この記事では、**RS.exe** ユーティリティを使用してコンテンツのアイテムと設定を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバー間でコピーする、サンプル [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS スクリプトについて説明します。 RS.exe は、ネイティブ モードと SharePoint モードの両方で、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]と共にインストールされます。 このスクリプトは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アイテム (レポートやサブスクリプションなど) をサーバー間でコピーします。 スクリプトは SharePoint モードとネイティブ モードの両方のレポート サーバーをサポートしています。  
 
-##  <a name="bkmk_download_script"></a> ssrs_migration.rss スクリプトをダウンロードするには  
+##  <a name="to-download-the-ssrs_migrationrss-script"></a><a name="bkmk_download_script"></a> ssrs_migration.rss スクリプトをダウンロードするには  
  GitHub サイト「[Reporting Services RS.exe migration script](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/reporting-services/ssrs-migration-rss)」 (Reporting Services RS.exe 移行スクリプト) からスクリプトをローカル フォルダーにダウンロードします。 詳細については、この記事内の「[スクリプトの使用方法](#bkmk_how_to_use_the_script)」をご覧ください。  
   
-##  <a name="bkmk_supported_scenarios"></a> サポートされるシナリオ  
+##  <a name="supported-scenarios"></a><a name="bkmk_supported_scenarios"></a> サポートされるシナリオ  
  スクリプトは SharePoint モードとネイティブ モードの両方のレポート サーバーをサポートしています。 スクリプトは、レポート サーバー バージョン [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 以降と、Power BI Report Server をサポートしています。  
   
 スクリプトは同じモードまたは異なるモードのレポート サーバー間でコンテンツをコピーするために使用できます。 たとえば、スクリプトを実行して [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ネイティブ モード レポート サーバーから [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] SharePoint モード レポート サーバーにコンテンツをコピーできます。 スクリプトは RS.exe がインストールされているいずれのサーバーからも実行できます。 たとえば、以下の配置では次のことが可能です。  
@@ -43,7 +43,7 @@ ms.locfileid: "70176289"
   
  RS.exe ユーティリティの詳細については、「 [RS.exe ユーティリティ &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)」をご覧ください。  
   
-###  <a name="bkmk_what_is_migrated"></a> スクリプトが移行するアイテムとリソース  
+###  <a name="items-and-resources-the-script-migrates"></a><a name="bkmk_what_is_migrated"></a> スクリプトが移行するアイテムとリソース  
  スクリプトは同じ名前の既存のコンテンツ アイテムを上書きしません。  スクリプトが移行元サーバー上のアイテムと同じ名前のアイテムを移行先サーバーで検出した場合、個々のアイテムについて "FAILURE" メッセージが表示されますが、スクリプトは続行されます。 次の表は、スクリプトを使用して移行先のモードのレポート サーバーに移行できるコンテンツとリソースの種類を示したものです。  
   
 |Item|移行対象|SharePoint|説明|  
@@ -53,7 +53,7 @@ ms.locfileid: "70176289"
 |履歴|**いいえ**|**いいえ**||  
 |履歴の設定|はい|はい|履歴の設定は移行されますが、履歴の詳細は移行されません。|  
 |スケジュール|はい|はい|スケジュールを移行するには、SQL Server エージェントがターゲット サーバーで実行されている必要があります。 SQL Server エージェントが移行先で実行されていない場合は、次のようなエラー メッセージが表示されます。<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service isn't running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service isn't running. This operation requires the SQL Agent service.`|  
-|ロールとシステム ポリシー|はい|はい|既定では、スクリプトはカスタム アクセス許可スキーマをサーバー間でコピーしません。 既定の動作では、[次の親アイテムからアクセス許可を継承する] フラグが TRUE に設定されている移行先サーバーにアイテムがコピーされます。 スクリプトで個々のアイテムの権限をコピーする場合は、SECURITY スイッチを使用します。<br /><br /> ソース サーバーとターゲット サーバーが**同じレポート サーバー モードでない**場合、たとえばネイティブ モードから SharePoint モードへの移行のとき、スクリプトは、「[Reporting Services のロールおよびタスクと SharePoint のグループおよびアクセス許可の比較](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)」の記事で説明している比較に基づいて、既定のロールとグループをマップしようとします。 カスタムのロールとグループは移行先サーバーにコピーされません。<br /><br /> スクリプトが **同じモードの**サーバー間でコピーする場合は、SECURITY スイッチを使用してください。スクリプトは移行先サーバーで新しいロール (ネイティブ モード) またはグループ (SharePoint モード) を作成します。<br /><br /> ロールが移行先サーバーに既に存在する場合、スクリプトは次のような "FAILURE" メッセージを表示し、他のアイテムの移行を続行します。 スクリプトの完了後、移行先サーバー上のロールがご自分のニーズを満たすように構成されていることを確認してください。 移行中のロール: 8 項目が見つかりました。<br /><br /> `Migrating role: Browser ... FAILURE: The role 'Browser' already exists and cannot be created. ---> Microsoft.ReportingServices.Diagnostics.Utilities.RoleAlreadyExistsException: The role 'Browser' already exists and cannot be created.`<br /><br /> 詳細については、「[レポート サーバーへのユーザー アクセスを許可する](../../reporting-services/security/grant-user-access-to-a-report-server.md)」をご覧ください。<br /><br /> **注:** 移行元サーバー上に存在するユーザーが移行先サーバーに存在しない場合、スクリプトは移行先サーバーでロールの割り当てを適用することはできません。SECURITY スイッチを使用している場合でも同様です。|  
+|ロールとシステム ポリシー|はい|はい|既定では、スクリプトはカスタム アクセス許可スキーマをサーバー間でコピーしません。 既定の動作では、[次の親アイテムからアクセス許可を継承する] フラグが TRUE に設定されている移行先サーバーにアイテムがコピーされます。 スクリプトで個々のアイテムの権限をコピーする場合は、SECURITY スイッチを使用します。<br /><br /> ソース サーバーとターゲット サーバーが**同じレポート サーバー モードでない**場合、たとえばネイティブ モードから SharePoint モードへの移行のとき、スクリプトは、「[Reporting Services のロールおよびタスクと SharePoint のグループおよびアクセス許可の比較](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)」の記事で説明している比較に基づいて、既定のロールとグループをマップしようとします。 カスタムのロールとグループは移行先サーバーにコピーされません。<br /><br /> スクリプトが **同じモードの**サーバー間でコピーする場合は、SECURITY スイッチを使用してください。スクリプトは移行先サーバーで新しいロール (ネイティブ モード) またはグループ (SharePoint モード) を作成します。<br /><br /> ロールが移行先サーバーに既に存在する場合、スクリプトは次のような "FAILURE" メッセージを表示し、他のアイテムの移行を続行します。 スクリプトの完了後、移行先サーバー上のロールがご自分のニーズを満たすように構成されていることを確認してください。 移行中のロール:8 個の項目が見つかりました。<br /><br /> `Migrating role: Browser ... FAILURE: The role 'Browser' already exists and cannot be created. ---> Microsoft.ReportingServices.Diagnostics.Utilities.RoleAlreadyExistsException: The role 'Browser' already exists and cannot be created.`<br /><br /> 詳細については、「[レポート サーバーへのユーザー アクセスを許可する](../../reporting-services/security/grant-user-access-to-a-report-server.md)」をご覧ください。<br /><br /> **注:** 移行元サーバー上に存在するユーザーが移行先サーバーに存在しない場合、スクリプトは移行先サーバーでロールの割り当てを適用することはできません。SECURITY スイッチを使用している場合でも同様です。|  
 |[共有データ ソース]|はい|はい|スクリプトはターゲット サーバー上の既存のアイテムを上書きしません。 同じ名前のアイテムがターゲット サーバーに既に存在する場合は、次のようなエラー メッセージが表示されます。<br /><br /> `Migrating DataSource: /Data Sources/Aworks2012_oltp ... FAILURE:The item '/Data Sources/Aworks2012_oltp' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Data Source s/Aworks2012_oltp' already exists.`<br /><br /> 資格情報は、データ ソースの一部としてコピー **されません** 。 コンテンツ アイテムの移行後、移行先サーバーで資格情報を更新します。|  
 |共有データセット|はい|はい|| 
 |Folder|はい|はい|スクリプトはターゲット サーバー上の既存のアイテムを上書きしません。 同じ名前のアイテムがターゲット サーバーに既に存在する場合は、次のようなエラー メッセージが表示されます。<br /><br /> `Migrating Folder: /Reports ... FAILURE: The item '/Reports' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Reports' already exists.`|  
@@ -67,7 +67,7 @@ ms.locfileid: "70176289"
 |イメージ|はい|はい||  
 |レポート パーツ|はい|はい||  
   
-##  <a name="bkmk_required_permissions"></a> 必要なアクセス許可  
+##  <a name="required-permissions"></a><a name="bkmk_required_permissions"></a> 必要なアクセス許可  
  アイテムやリソースの読み書きに必要なアクセス許可は、スクリプトで使用されるすべてのメソッドで同じではありません。 次の表は、各アイテムまたはリソースに使用するメソッドをまとめたもので、各メソッドはそれぞれ関連するコンテンツにリンクされています。 必要な権限を確認するには、個々の記事に移動してください。 たとえば、ListChildren メソッドのトピックでは、必要な権限が次のように示されています。  
   
 -   **ネイティブ モードで必要な権限:** アイテムに対する ReadProperties  
@@ -90,7 +90,7 @@ ms.locfileid: "70176289"
   
  詳しくは、「 [Reporting Services のロールおよびタスクと SharePoint のグループおよび権限の比較](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)」をご覧ください。  
   
-##  <a name="bkmk_how_to_use_the_script"></a> スクリプトの使用方法  
+##  <a name="how-to-use-the-script"></a><a name="bkmk_how_to_use_the_script"></a> スクリプトの使用方法  
   
 1.  スクリプト ファイルをローカル フォルダー (c: **\rss\ssrs_migration.rss**など) にダウンロードします。  
   
@@ -197,9 +197,9 @@ ms.locfileid: "70176289"
   
 -   パスワードは移行されないため、再入力する必要があります。たとえば、保存された資格情報を使用するデータ ソースなどです。  
   
-##  <a name="bkmk_parameter_description"></a> パラメーターの説明  
+##  <a name="parameter-description"></a><a name="bkmk_parameter_description"></a> パラメーターの説明  
   
-|パラメーター|説明|Required|  
+|パラメーター|説明|必須|  
 |---------------|-----------------|--------------|  
 |**-s** Source_URL|移行元レポート サーバーの URL。|はい|  
 |**-u** Domain\password **-p** password|移行元サーバーの資格情報。|省略可能。省略した場合は既定の資格情報が使用されます。|  
@@ -211,9 +211,9 @@ ms.locfileid: "70176289"
 |**-v tf** ="TARGETFOLDER"|ルート レベルに移行する場合は "/" に設定します。 既存のフォルダーにコピーする場合は "/フォルダー/サブフォルダー" に設定します。 "SOURCEFOLDER" 内のすべてのコンテンツが "TARGETFOLDER" にコピーされます。|省略可能。既定値は "/" です。|  
 |**-v security**= "True/False"|"False" に設定した場合、移行先カタログ アイテムには移行先システムの設定に従ってセキュリティ設定が継承されます。 この設定は、ネイティブ モードから SharePoint モードへなど、異なるモードのレポート サーバー間の移行にお勧めします。 "True" に設定した場合、スクリプトはセキュリティ設定を移行しようとします。|省略可能。既定値は "False" です。|  
   
-##  <a name="bkmk_more_examples"></a> その他の例  
+##  <a name="more-examples"></a><a name="bkmk_more_examples"></a> その他の例  
   
-###  <a name="bkmk_native_2_native"></a> ネイティブ モード レポート サーバーからネイティブ モード レポート サーバー  
+###  <a name="native-mode-report-server-to-native-mode-report-server"></a><a name="bkmk_native_2_native"></a> ネイティブ モード レポート サーバーからネイティブ モード レポート サーバー  
  次の例では、ネイティブ モード **Sourceserver** からネイティブ モード **Targetserver**にコンテンツを移行します。  
   
 ```  
@@ -226,7 +226,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\User -p password -v ts="https://TargetServer/reportserver" -v tu="Domain\Userser" -v tp="password" -v security="True"  
 ```  
   
-###  <a name="bkmk_native_2_sharepoint_root"></a> ネイティブ モードから SharePoint モード (ルート サイト)  
+###  <a name="native-mode-to-sharepoint-mode---root-site"></a><a name="bkmk_native_2_sharepoint_root"></a> ネイティブ モードから SharePoint モード (ルート サイト)  
  次の例では、ネイティブ モード **SourceServer** から SharePoint モード サーバー **TargetServer**上の "ルート サイト" にコンテンツを移行します。 ネイティブ モード サーバー上の "Reports" および "Data Sources" フォルダーは SharePoint 配置上の新しいライブラリとして移行されます。  
   
  ![ssrs_rss_migrate_root_site](../../reporting-services/tools/media/ssrs-rss-migrate-root-site.gif "ssrs_rss_migrate_root_site")  
@@ -235,14 +235,14 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\User -p Password -v ts="https://TargetServer/_vti_bin/ReportServer" -v tu="Domain\User" -v tp="Password"  
 ```  
   
-###  <a name="bkmk_native_2_sharepoint_with_site"></a> ネイティブ モードから SharePoint モード ("bi" サイト コレクション)  
+###  <a name="native-mode-to-sharepoint-mode--bi-site-collection"></a><a name="bkmk_native_2_sharepoint_with_site"></a> ネイティブ モードから SharePoint モード ("bi" サイト コレクション)  
  次の例では、ネイティブ モード サーバーから、"sites/bi" サイト コレクションおよび共有ドキュメント ライブラリを含む SharePoint サーバーにコンテンツを移行します。 スクリプトは移行先ドキュメント ライブラリ内にフォルダーを作成します。 たとえば、移行先ドキュメント ライブラリ内に "Reports" および "Data Sources" フォルダーを作成します。  
   
 ```  
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\User -p Password -v ts="https://TargetServer/sites/bi/_vti_bin/reportserver" -v tst="sites/bi" -v tf="Shared Documents" -v tu="Domain\User" -v tp="Password"  
 ```  
   
-###  <a name="bkmk_sharepoint_2_sharepoint"></a> SharePoint モードから SharePoint モード ("bi" サイト コレクション)  
+###  <a name="sharepoint-mode-to-sharepoint-mode--bi-site-collection"></a><a name="bkmk_sharepoint_2_sharepoint"></a> SharePoint モードから SharePoint モード ("bi" サイト コレクション)  
  この例では、次のようにコンテンツを移行します。  
   
 -   "sites/bi" サイト コレクションおよび共有ドキュメント ライブラリを含む SharePoint サーバー **SourceServer** から。  
@@ -253,7 +253,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/_vti_bin/reportserver -v st="sites/bi" -v f="Shared Documents" -u Domain\User1 -p Password -v ts="https://TargetServer/sites/bi/_vti_bin/reportserver" -v tst="sites/bi" -v tf="Shared Documents" -v tu="Domain\User" -v tp="Password"  
 ```  
   
-###  <a name="bkmk_native_to_native_Azure_vm"></a> ネイティブ モードからネイティブ モード (Azure 仮想マシン)  
+###  <a name="native-mode-to-native-mode---azure-virtual-machine"></a><a name="bkmk_native_to_native_Azure_vm"></a> ネイティブ モードからネイティブ モード (Azure 仮想マシン)  
  この例では、次のようにコンテンツを移行します。  
   
 -   ネイティブ モード レポート サーバー **SourceServer**から。  
@@ -267,7 +267,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u
 > [!TIP]  
 > Windows PowerShell を使用して Azure 仮想マシン上に [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーを作成する方法については、「[PowerShell を使用したネイティブ モードのレポート サーバーを含む Azure VM の作成](https://docs.microsoft.com/azure/virtual-machines/windows/sqlclassic/virtual-machines-windows-classic-ps-sql-report)」をご覧ください。  
   
-##  <a name="bkmk_sharepoint_site_to_native_Azure_vm"></a> SharePoint モード ("bi" サイト コレクションから Azure 仮想マシン上のネイティブ モード サーバー) 
+##  <a name="sharepoint-mode--bi-site-collection-to-a-native-mode-server-on-an-azure-virtual-machine"></a><a name="bkmk_sharepoint_site_to_native_Azure_vm"></a> SharePoint モード ("bi" サイト コレクションから Azure 仮想マシン上のネイティブ モード サーバー) 
  この例では、次のようにコンテンツを移行します。  
   
 -   "sites/bi" サイト コレクションおよび共有ドキュメント ライブラリを含む SharePoint モード レポート サーバー **SourceServer** から。  
@@ -278,7 +278,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://uetesta02/_vti_bin/reportserver -u user1 -p Password -v ts="https://ssrsnativeazure.cloudapp.net/ReportServer" -v tu="user2" -v tp="Passowrd2"  
 ```  
   
-##  <a name="bkmk_verification"></a> 検証  
+##  <a name="verification"></a><a name="bkmk_verification"></a> 検証  
  このセクションは、コンテンツとポリシーが正常に移行されたことを確認するために移行先サーバーで実行する一部の手順をまとめたものです。  
   
 ### <a name="schedules"></a>スケジュール  
@@ -307,7 +307,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://uetesta02/_vti_bin/reportser
   
 3.  **[ロール]** をクリックします。  
   
-##  <a name="bkmk_troubleshoot"></a> トラブルシューティング  
+##  <a name="troubleshooting"></a><a name="bkmk_troubleshoot"></a> トラブルシューティング  
  より詳細な情報が表示されるようにするには、トレース フラグ **-t** を使用します。 たとえば、スクリプトを実行し、次のようなメッセージが表示されたとします。  
   
 -   Could not connect to server: https://\<servername>/ReportServer/ReportService2010.asmx  
@@ -316,7 +316,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://uetesta02/_vti_bin/reportser
   
 -   System.Exception:Could not connect to server: https://\<servername>/ReportServer/ReportService2010.asmx ---> System.Net.WebException:**The request failed with HTTP status 401:Unauthorized**.   System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse (SoapClientMessage メッセージ、WebResponse 応答、Stream responseStream, Boolean asyncCall) System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke (文字列であります。methodName、オブジェクトのパラメーター) (文字列 url 文字列のユーザー名、文字列パスワード Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService で Microsoft.SqlServer.ReportingServices2010.ReportingService2010.IsSSLRequired() で、文字列ドメイン、Int32 タイムアウト) で Microsoft.ReportingServices.ScriptHost.ScriptHost.DetermineServerUrlSecurity()---内部例外スタック トレースの終わり--  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [RS.exe ユーティリティ &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)   
  [Reporting Services のロールおよびタスクと SharePoint のグループおよび権限の比較](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
   

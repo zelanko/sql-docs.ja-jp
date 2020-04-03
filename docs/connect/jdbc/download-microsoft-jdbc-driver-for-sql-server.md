@@ -1,7 +1,7 @@
 ---
 title: Microsoft SQL Server 用 JDBC Driver のダウンロード
 description: SQL Server に接続する Java アプリケーションを開発するには、Microsoft SQL Server 用 JDBC Driver をダウンロードします。
-ms.date: 02/26/2020
+ms.date: 03/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,33 +10,49 @@ ms.topic: conceptual
 ms.assetid: 451181b8-11e6-4d01-b547-9ac5aada8238
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6576ed155e57fbd69757065c440382efa4adba5e
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.openlocfilehash: 680ef7db59a1ed62e73e12b5a343b6cdfe4272ef
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77903499"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271398"
 ---
 # <a name="download-microsoft-jdbc-driver-for-sql-server"></a>Microsoft SQL Server 用 JDBC Driver のダウンロード
 
-この記事では、SQL Server 用 Microsoft JDBC Driver へのダウンロード リンクを提供します。 このドライバーを使用すると、SQL Server に接続する Java アプリケーションを開発できます。  
+Microsoft JDBC Driver for SQL Server は Type 4 JDBC Driver であり、Java Platform で利用できる標準の JDBC アプリケーション プログラム インターフェイス (API) によって、データベース接続が提供されます。 ドライバーのダウンロードは、すべてのユーザーが追加料金なしで利用できます。 任意の Java アプリケーション、アプリケーション サーバー、Java 対応アプレットから、SQL Server にアクセスできます。
 
-## <a name="available-downloads-of-jdbc-driver-for-sql-server"></a>JDBC Driver for SQL Server の利用可能なダウンロード
+## <a name="download"></a>ダウンロード
 
-次の表のリンクを使用して、お使いの Java Runtime Environment (JRE) に合った最新の SQL Server 用 Microsoft JDBC Driver をダウンロードしてください。
+最新の一般提供 (GA) バージョンはバージョン 8.2 です。 Java 8、11、13 がサポートされています。 それ以前の Java ランタイムを実行する必要がある場合、[Java と JDBC の仕様のサポート表](microsoft-jdbc-driver-for-sql-server-support-matrix.md#java-and-jdbc-specification-support)を見て、サポートされているドライバー バージョンの中で利用できるものがあるか確認してください。 Microsoft は Java 接続のサポートの向上を継続的に進めています。 そのため、最新バージョンの Microsoft JDBC ドライバーを使用することを強くおすすめします。
 
-| Version | リリース日 | Java のバージョン |
-|---|---|---|
-| [Microsoft JDBC Driver 8.2](https://go.microsoft.com/fwlink/?linkid=2116870) | 2020 年 2 月 26 日 | JRE 8、11、13 |
-| [Microsoft JDBC Driver 7.4](https://go.microsoft.com/fwlink/?linkid=2099962) | 8/1/2019 | JRE 8、11、12 |
-| [Microsoft JDBC Driver 7.2](https://go.microsoft.com/fwlink/?linkid=2063159) | 4/17/2019 | JRE 8、11 |
-| [Microsoft JDBC Driver 7.0](https://go.microsoft.com/fwlink/?linkid=2005972) | 7/31/2018 | JRE 8、10 |
-| [Microsoft JDBC Driver 6.4](https://go.microsoft.com/fwlink/?linkid=868290)  | 3/26/2018 | JRE 7、8、9 |
-| [Microsoft JDBC Driver 6.2](https://go.microsoft.com/fwlink/?linkid=852460) | 2/12/2018 | JRE 7、8 |
-| [Microsoft JDBC Driver 6.0](https://go.microsoft.com/fwlink/?LinkId=245496) | 2/27/2018 | JRE 7、8 |
-| [Microsoft JDBC Driver 4.2](https://go.microsoft.com/fwlink/?linkid=841534) | 2/26/2018 | JRE 7、8 |
+**[![ダウンロード](../../ssms/media/download-icon.png) Microsoft JDBC Driver 8.2 for SQL Server (zip) のダウンロード](https://go.microsoft.com/fwlink/?linkid=2122433)**  
+**[![ダウンロード](../../ssms/media/download-icon.png) Microsoft JDBC Driver 8.2 for SQL Server (tar.gz) のダウンロード](https://go.microsoft.com/fwlink/?linkid=2122536)**  
 
-ドライバーをダウンロードすると、複数の JAR ファイルがあります。 JAR ファイルの名前は、サポートされている Java のバージョンを示します。 各リリースの詳細については、[リリース ノート](release-notes-for-the-jdbc-driver.md)と[システム要件](system-requirements-for-the-jdbc-driver.md)に関するページを参照してください。
+### <a name="version-information"></a>バージョン情報
+
+- リリース番号:8.2.2
+- リリース日:2020 年 3 月 24 日
+
+ドライバーをダウンロードすると、複数の JAR ファイルがあります。 JAR ファイルの名前は、サポートされている Java のバージョンを示します。
+
+> [!Note]
+> 英語以外のバージョンからこのページにアクセスしていて、最新の内容を見たい場合は、[サイトの英語 (米国) 版](https://aka.ms/downloadmssqljdbcenglish)をご覧ください。 [使用できる言語](#available-languages)を選択して、英語 (米国) 版のサイトから別の言語をダウンロードできます。ます。
+
+## <a name="available-languages"></a>使用できる言語
+
+Microsoft JDBC Driver for SQL Server のこのリリースは、次の言語で利用できます。
+
+Microsoft JDBC Driver 8.2.2 for SQL Server (zip):[簡体中国語](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x40a)
+
+Microsoft JDBC Driver 8.2.2 for SQL Server (tar.gz):[簡体中国語](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x40a)
+
+### <a name="release-notes"></a>リリース ノート
+
+このリリースの詳細については、[リリース ノート](release-notes-for-the-jdbc-driver.md)と[システム要件](system-requirements-for-the-jdbc-driver.md)をご覧ください。
+
+### <a name="previous-releases"></a>以前のリリース
+
+以前のリリースをダウンロードするには、[以前の Microsoft JDBC Driver for SQL Server のリリース](release-notes-for-the-jdbc-driver.md#previous-releases)に関する記事を参照してください。
 
 ## <a name="using-the-jdbc-driver-with-maven-central"></a>JDBC ドライバーと Maven Central の使用
 
@@ -46,7 +62,7 @@ JDBC ドライバーを Maven プロジェクトに追加するには、次の�
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>8.2.1.jre11</version>
+    <version>8.2.2.jre11</version>
 </dependency>
 ```  
 

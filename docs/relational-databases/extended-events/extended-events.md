@@ -1,5 +1,6 @@
 ---
 title: Xevent の概要 - SQL Server
+description: SQL Server 拡張イベントのアーキテクチャを使用すると、パフォーマンスの問題を特定してトラブルシューティングを行うために必要なデータを収集できます。 このアーキテクチャは、構成可能でスケーラブルです。
 ms.date: 07/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,12 +15,12 @@ ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 34ebcae99f096d095839cb533fb6efe58b113050
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 3dbd6e4beee31e90d0354345bb25e4f0c32fc969
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75234595"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434049"
 ---
 # <a name="extended-events-overview"></a>拡張イベントの概要
 
@@ -29,7 +30,7 @@ ms.locfileid: "75234595"
 
 拡張イベントの詳細については、「[クイック スタート:SQL Server 拡張イベント](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)」を参照してください。
 
-## <a name="benefits-of-includessnoversionincludesssnoversion-mdmd-extended-events"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張イベントの利点  
+## <a name="benefits-of-ssnoversion-extended-events"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張イベントの利点  
 
 拡張イベントは軽量なパフォーマンス監視システムであり、使用されるパフォーマンス リソースは最小限です。 拡張イベントには、セッション データを作成、変更、表示、分析するためのグラフィカル ユーザー インターフェイスが 2 つ用意されています。 これらのインターフェイスには次の名前が付けられています。
 

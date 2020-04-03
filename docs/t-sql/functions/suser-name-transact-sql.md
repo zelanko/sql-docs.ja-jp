@@ -24,12 +24,12 @@ ms.assetid: ae598d9f-9baa-49b8-b1c1-042854206de4
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a9b0e4e37eef574fd50d28e02c4f92ee1805c953
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 63eb298fab5e2c62ac9403325368b008efa95dab
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68117619"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79526747"
 ---
 # <a name="suser_name-transact-sql"></a>SUSER_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -58,6 +58,9 @@ _server\_user\_id_
 SUSER_NAME では、**syslogins** システム テーブル内にエントリがあるログインに対してのみログイン名が返されます。  
   
 SUSER_NAME は、選択リストの中、WHERE 句の中、また、式を使える所ならどこにでも使用できます。 パラメーターが指定されていない場合でも、SUSER_NAME の後に括弧を使用します。  
+
+> [!NOTE]
+> SUSER_NAME 関数は Azure SQL Database でサポートされていますが、SUSER_NAME と一緒に *Execute as* を使用することは Azure SQL Database ではサポートされていません。 
   
 ## <a name="examples"></a>例  
 次の例では、ログイン識別番号 `1` のユーザーのログイン識別名を返します。  

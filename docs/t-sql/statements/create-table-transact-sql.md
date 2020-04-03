@@ -46,12 +46,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7e90aea4fc05a01f67527e33cac4ba90913405c7
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 5c95568167d1a783ed8d605bc64bc60a135046f0
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79287666"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80380673"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -69,7 +69,7 @@ ms.locfileid: "79287666"
 ```
 -- Simple CREATE TABLE Syntax (common if not using options)
 CREATE TABLE
-    { database_name.schema_name.table_name. | schema_name.table_name | table_name }
+    { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( { <column_definition> } [ ,...n ] )
 [ ; ]
 ```
@@ -956,7 +956,7 @@ CREATE TABLE を使用してパーティション テーブルを作成するに
 - FOREIGN KEY 制約は、同じサーバー上の同じデータベース内のテーブルのみを参照できます。 複数のデータベースにまたがる参照整合性は、トリガーを使って実装する必要があります。 詳細については、[CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md) に関するページをご覧ください。
 - FOREIGN KEY 制約は、同じテーブル内の他の列を参照できます。 これは、自己参照と呼ばれます。
 - 列レベルの FOREIGN KEY 制約の REFERENCES 句は、参照列を 1 つだけ表示できます。 この参照列は、制約が定義されている列と同じデータ型である必要があります。
-- テーブルレベルの FOREIGN KEY 制約の REFERENCES 句は、制約列リスト内の列の数と同じ数の参照列を持っている必要があります。 また、各参照列のデータ型は、列リスト内の、参照列に対応する列と同じでなければなりません。
+- テーブルレベルの FOREIGN KEY 制約の REFERENCES 句は、制約列リスト内の列の数と同じ数の参照列を持っている必要があります。 また、各参照列のデータ型は、列リスト内の、参照列に対応する列と同じでなければなりません。 参照列は、参照先テーブルに主キーまたは一意制約の列を指定するときに使用された同じ順序で指定する必要があります。
 - **timestamp** 型の列が外部キーまたは参照されるキーの一部である場合、CASCADE、SET NULL、または SET DEFAULT を指定することはできません。
 - CASCADE、SET NULL、SET DEFAULT および NO ACTION は、互いに参照関係にあるテーブルに対して組み合わせて使用することができます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] が NO ACTION を検出すると、関連する CASCADE、SET NULL および SET DEFAULT 操作が停止されロールバックされます。 DELETE ステートメントの実行によって、CASCADE、SET NULL、SET DEFAULT および NO ACTION 操作の組み合わせが適用される場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] が NO ACTION があるかどうかを調べる前にすべての CASCADE、SET NULL および SET DEFAULT 操作が適用されます。
 - [!INCLUDE[ssDE](../../includes/ssde-md.md)] には、他のテーブルを参照するテーブルに含めることができる FOREIGN KEY 制約の数についても、特定のテーブルを参照する他のテーブルが持つ FOREIGN KEY 制約の数についても、事前定義済みの制限はありません。

@@ -1,5 +1,6 @@
 ---
 title: SQL Server の拡張イベントのターゲット
+description: この記事では、SQL Server の拡張イベントの package0 ターゲットについて説明します。 データおよびターゲット パラメーターの収集とレポートを行うターゲットの機能について学習します。
 ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,12 +11,12 @@ ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 942f69fc92fa06b5131cee2dba9145f4faaae0cc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ba516e2e58a19ffdd5d225f3bc0a8c495c0432bd
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75501986"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79487520"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>SQL Server の拡張イベントのターゲット
 
@@ -37,7 +38,7 @@ ms.locfileid: "75501986"
 ### <a name="prerequisites"></a>前提条件
 
 
-- 「 [クイック スタート: SQL Server の拡張イベント](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)」で説明されている拡張イベントの基本について一般的に理解していること。
+- 次に説明されている拡張イベントの基本について一般的に理解していること。「[クイック スタート: SQL Server 拡張イベント](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)」を参照してください。
 
 
 - 頻繁に更新される SQL Server Management Studio (SSMS.exe) ユーティリティの最近のバージョンをインストールしてあること。 詳細については、次の項目を参照してください。

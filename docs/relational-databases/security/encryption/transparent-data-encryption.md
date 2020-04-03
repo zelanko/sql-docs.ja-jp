@@ -1,7 +1,7 @@
 ---
 title: 透過的なデータ暗号化 (TDE) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/09/2019
+ms.date: 03/24/2020
 ms.prod: sql
 ms.technology: security
 ms.topic: conceptual
@@ -18,12 +18,12 @@ author: jaszymas
 ms.author: jaszymas
 ms.reviewer: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 498fe2391cd3e8109aed3f6e1e02436234ffe6f7
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: a45cddab6506fcd7b3affb262b956bcf97f30b72
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288266"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80271458"
 ---
 # <a name="transparent-data-encryption-tde"></a>Transparent Data Encryption (TDE)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,17 +64,14 @@ ms.locfileid: "79288266"
   
  ![トピックで説明された階層を表示します。](../../../relational-databases/security/encryption/media/tde-architecture.png "トピックで説明された階層を表示します。")  
   
-## <a name="using-transparent-data-encryption"></a>Transparent Data Encryption の使用  
- TDE を使用するには、次の手順を実行します。  
+## <a name="enable-tde"></a>TDE を有効にする  
+ 透過的なデータ暗号化は次の手順で有効にします。 
   
 **適用対象**: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
--   マスター キーを作成します。  
-  
--   マスター キーで保護された証明書を作成または取得します。  
-  
--   データベース暗号化キーを作成し、証明書で保護します。  
-  
+-   マスター キーを作成します。    
+-   マスター キーで保護された証明書を作成または取得します。    
+-   データベース暗号化キーを作成し、証明書で保護します。    
 -   暗号化を使用するようにデータベースを設定します。  
   
  次の例では、 `AdventureWorks2012` という名前のサーバーにインストールされた証明書を使用して、 `MyServerCert`データベースを暗号化および暗号化解除しています。  
@@ -146,7 +143,7 @@ GO
 > [!TIP]  
 > データベースの TDE ステータスの変更を監視するには、SQL Server Audit または SQL Database Auditing を使用します。 SQL Server では、TDE は、[SQL Server Audit Action Groups and Actions](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md) (SQL Server Audit のアクション グループとアクション) で説明されている監査アクション グループ DATABASE_CHANGE_GROUP の下で追跡されます。
   
-### <a name="restrictions"></a>制限  
+## <a name="restrictions"></a>制限  
  最初のデータベース暗号化、キー変更、またはデータベースの暗号化解除の実行中は、次の操作を実行できません。  
   
 -   データベース内のファイル グループからのファイルの削除  
@@ -196,8 +193,26 @@ GO
  データベース ファイルを作成する際には、TDE が有効になっているとファイルの瞬時初期化を使用できません。  
   
  非対称キーでデータベース暗号化キーを暗号化するには、非対称キーが拡張キー管理プロバイダーに存在している必要があります。  
+
+## <a name="tde-scan"></a>TDE スキャン
+
+データベースで Transparent Data Encryption (TDE) を有効にするには、各ページをデータ ファイルからバッファー プールに読み込み、暗号化されたページをディスクから書き戻す暗号化のスキャンを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で実行する必要があります。 ユーザーが暗号化のスキャンをより制御できるよう、構文の一時停止および再開が可能な、TDE スキャンが [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] に導入されています。これでは、システムでワークロードが多い場合やビジネスに極めて重要な時間のときはスキャンを一時停止し、後でスキャンを再開できます。
+
+TDE 暗号化のスキャンを一時停止するには、次の構文を使用します。
+
+```sql
+ALTER DATABASE <db_name> SET ENCRYPTION SUSPEND;
+```
+
+同様に、次の構文で TDE 暗号化のスキャンを再開できます。
+
+```sql
+ALTER DATABASE <db_name> SET ENCRYPTION RESUME;
+```
+
+暗号化のスキャンの現在の状態を示すために、`sys.dm_database_encryption_keys` 動的管理ビューに `encryption_scan_state` が追加されています。 また、暗号化のスキャンの状態が最後に変更された日時を含む `encryption_scan_modify_date` という新しい列もあります。 暗号化のスキャンが一時停止中に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスが再開された場合、一時停止されている既存のスキャンがあることが起動時にエラー ログに記述されます。
   
-### <a name="transparent-data-encryption-and-transaction-logs"></a>Transparent Data Encryption とトランザクション ログ  
+## <a name="tde-and-transaction-logs"></a>TDE とトランザクション ログ  
  データベースで TDE の使用を有効にすると、仮想トランザクション ログの残りの部分が "ゼロ設定" され、強制的に次の仮想トランザクション ログに移行します。 これにより、データベースが暗号化対象として設定された後にトランザクション ログにクリア テキストが残らないことが保証されます。 ログ ファイルの暗号化の状態を確認するには、次の例のように `encryption_state` ビュー内の `sys.dm_database_encryption_keys` 列を表示します。  
   
 ```  
@@ -217,39 +232,44 @@ GO
   
  データベース暗号化キーを 2 回変更した後は、データベース暗号化キーを再度変更する前に、ログ バックアップを実行する必要があります。  
   
-### <a name="transparent-data-encryption-and-the-tempdb-system-database"></a>Transparent Data Encryption と tempdb システム データベース  
+## <a name="tde-and-tempdb"></a>TDE と tempdb 
  tempdb システム データベースは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス上の他のデータベースが TDE を使用して暗号化されると暗号化されます。 この場合、同じ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンス上にある暗号化されないデータベースのパフォーマンスに影響が生じることがあります。 tempdb システム データベースの詳細については、「 [tempdb データベース](../../../relational-databases/databases/tempdb-database.md)」を参照してください。  
   
-### <a name="transparent-data-encryption-and-replication"></a>Transparent Data Encryption とレプリケーション  
+## <a name="tde-and-replication"></a>TDE とレプリケーション  
  レプリケーションでは、TDE が有効になっているデータベースのデータが暗号化された形式で自動的にレプリケートされることはありません。 ディストリビューション データベースとサブスクライバー データベースを保護する場合は、TDE を個別に有効にする必要があります。 スナップショット レプリケーションでは、トランザクション レプリケーションとマージ レプリケーションへの最初のデータ ディストリビューションと同様に、暗号化されていない中間ファイル (bcp ファイルなど) にデータを格納できます。  トランザクション レプリケーションまたはマージ レプリケーション時に、暗号化を有効にして通信チャネルを保護することができます。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
-  
-### <a name="transparent-data-encryption-and-filestream-data"></a>Transparent Data Encryption と FILESTREAM データ  
+
+## <a name="tde-and-always-on"></a>TDE と Always On
+ [暗号化されたデータベースを Always On 可用性グループに追加](../../../database-engine/availability-groups/windows/encrypted-databases-with-always-on-availability-groups-sql-server.md)できます。 
+ 
+ 可用性グループに含まれるデータベースを暗号化するには、プライマリ レプリカで[データベース暗号化キー](../../../t-sql/statements/create-database-encryption-key-transact-sql.md)を作成する前に、すべてのセカンダリ レプリカでマスター キーと証明書、または非対称キー (EKM) を作成します。 
+ 
+ 証明書がデータベース暗号化キー (DEK) の保護に使用されている場合、プライマリ レプリカで作成された[証明書をバックアップ](../../../t-sql/statements/backup-certificate-transact-sql.md)し、すべてのセカンダリ レプリカで[ファイルから証明書を作成](../../../t-sql/statements/create-certificate-transact-sql.md)してからプライマリ レプリカでデータベース暗号化キーを作成します。 
+
+## <a name="tde-and-filestream-data"></a>TDE と FILESTREAM データ  
  FILESTREAM データは TDE が有効になっている場合でも暗号化されません。  
 
 <a name="scan-suspend-resume"></a>
 
-## <a name="transparent-data-encryption-tde-scan"></a>Transparent Data Encryption (TDE) スキャン
+## <a name="remove-tde"></a>TDE の削除
 
-データベースで Transparent Data Encryption (TDE) を有効にするには、各ページをデータ ファイルからバッファー プールに読み込み、暗号化されたページをディスクから書き戻す暗号化のスキャンを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で実行する必要があります。 ユーザーが暗号化のスキャンをより制御できるよう、構文の一時停止および再開が可能な、TDE スキャンが [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] に導入されています。これでは、システムでワークロードが多い場合やビジネスに極めて重要な時間のときはスキャンを一時停止し、後でスキャンを再開できます。
-
-TDE 暗号化のスキャンを一時停止するには、次の構文を使用します。
+ALTER DATABASE ステートメントを使用してデータベースから暗号化を削除します。
 
 ```sql
-ALTER DATABASE <db_name> SET ENCRYPTION SUSPEND;
+ALTER DATABASE <db_name> SET ENCRYPTION OFF;
 ```
 
-同様に、次の構文で TDE 暗号化のスキャンを再開できます。
+データベースの状態を表示するには、[sys.dm_database_encryption_keys](../../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) 動的管理ビューを使います。
 
-```sql
-ALTER DATABASE <db_name> SET ENCRYPTION RESUME;
-```
+暗号化の解除が完了するまで待機し、その後、[DROP DATABASE ENCRYPTION KEY](../../../t-sql/statements/drop-database-encryption-key-transact-sql.md) でデータベース暗号化キーを削除します。
 
-暗号化のスキャンの現在の状態を示すために、`sys.dm_database_encryption_keys` 動的管理ビューに `encryption_scan_state` が追加されています。 また、暗号化のスキャンの状態が最後に変更された日時を含む `encryption_scan_modify_date` という新しい列もあります。 暗号化のスキャンが一時停止中に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスが再開された場合、一時停止されている既存のスキャンがあることが起動時にエラー ログに記述されます。
+> [!IMPORTANT]  
+> TDE に使用されているマスター キーと証明書を安全な場所にバックアップします。 データベースが TDE で暗号化されたときに取得されたバックアップを復元するには、マスター キーと証明書が必要です。 データベース暗号化キーを削除したら、ログをバックアップし、それから復号されたデータベースの完全なバックアップを新しく作成します。  
+
+## <a name="tde-and-buffer-pool-extension"></a>TDE とバッファー プール拡張  
+
+バッファー プール拡張機能 (BPE) に関連するファイルは、データベースが TDE を使用して暗号化される場合でも暗号化されません。 BPE 関連のファイルについては、BitLocker や EFS などのファイル システム レベルの暗号化ツールを使用する必要があります。  
   
-## <a name="transparent-data-encryption-and-buffer-pool-extension"></a>Transparent Data Encryption とバッファー プール拡張機能  
- バッファー プール拡張機能 (BPE) に関連するファイルは、データベースが TDE を使用して暗号化される場合でも暗号化されません。 BPE 関連のファイルについては、BitLocker や EFS などのファイル システム レベルの暗号化ツールを使用する必要があります。  
-  
-## <a name="transparent-data-encryption-and-in-memory-oltp"></a>Transparent Data Encryption とインメモリ OLTP  
+## <a name="tde-and-in-memory-oltp"></a>TDE とインメモリ OLTP  
  TDE は、インメモリ OLTP オブジェクトを含むデータベースで有効にすることができます。 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] と [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] では、TDE が有効な場合、インメモリ OLTP ログ レコードとデータが暗号化されます。 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] では、TDE が有効な場合、インメモリ OLTP ログ レコードは暗号化されますが、MEMORY_OPTIMIZED_DATA ファイルグループのファイルは暗号化されません。  
   
 ## <a name="related-tasks"></a>Related Tasks  

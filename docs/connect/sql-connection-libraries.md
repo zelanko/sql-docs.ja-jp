@@ -8,19 +8,19 @@ ms.custom: ''
 ms.topic: article
 ms.date: 03/05/2020
 ms.author: JRoth
-ms.openlocfilehash: eb842769490b521b248ed4114953b8d828fa80d3
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 88fbd0e3fd01492b8e7d920eb132196f8a005478
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79286406"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79434119"
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Microsoft SQL データベースの接続モジュール
 
 この記事では、クライアント プログラムが [Microsoft SQL Server](../relational-databases/database-features.md)、およびそれとよく似たクラウド版 [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/) との対話に使用できる接続モジュール (*ドライバー*) のダウンロード リンクを示します。 次のオペレーティング システムで実行されるさまざまなプログラミング言語用のドライバーが用意されています。
 
 - Linux
-- MacOS
+- macOS
 - Windows
 
 **OOP とリレーショナルの不一致:**
@@ -34,17 +34,6 @@ ms.locfileid: "79286406"
 <a name="anchor-20-drivers-relational-access" />
 
 ## <a name="drivers-for-relational-access"></a>リレーショナル アクセス用のドライバー
-
-<!--
-Each given Microsoft Download Center page should be enhanced
-with a link to the next NEWER version page, on the day that the
-original page is no longer the latest because the newer page is being added.
-But this policy is not agreed on or observed,
-putting the links in the following table at risk for being outdated.
-
-PHP driver in Github.com also uses this FWLink:  https://go.microsoft.com/fwlink/?LinkID=518036 ,
-although the FWLink is less precise than is https://github.com/Microsoft/msphpsql/tree/dev#install-unix .
--->
 
 | Language | SQL ドライバーのダウンロード |
 | :------- | :---------------------- |
@@ -76,14 +65,15 @@ although the FWLink is less precise than is https://github.com/Microsoft/msphpsq
 <a name="anchor-60-build-an-app-webpages" />
 
 ## <a name="build-an-app-webpages"></a>Build-an-app の Web ページ
+
 **[https://aka.ms/sqldev](https://aka.ms/sqldev)** により、*Build-an-app* の一連の Web ページが表示されます。 これらの Web ページには、プログラミング言語、オペレーティング システム、および SQL 接続ドライバーのさまざまな組み合わせに関する情報が記載されています。 Build-an-app の Web ページで提供される情報の中には、次の項目があります。
 
 - 言語 + オペレーティングシステム + ドライバーの組み合わせごとに、作業を開始する方法についての詳細。
-    - 最新の SQL 接続ドライバーをインストールするための手順。
+  - 最新の SQL 接続ドライバーをインストールするための手順。
 - 次の各項目のコード例。
-    - オブジェクト リレーショナル コードの例。
-    - RDS のコード例です。
-    - パフォーマンスの大幅な向上のための列ストア インデックスのデモ。
+  - オブジェクト リレーショナル コードの例。
+  - RDS のコード例です。
+  - パフォーマンスの大幅な向上のための列ストア インデックスのデモ。
 
 **Build-an-app の Web ページの最初のページ:**  
 ![Build-an-app の Web ページの最初のページのスクリーンショット](media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-choose-language-g21.png)
@@ -94,6 +84,7 @@ although the FWLink is less precise than is https://github.com/Microsoft/msphpsq
 &nbsp;
 
 ## <a name="related-links"></a>関連リンク
+
 - [Java およびその他の言語を使用してクラウド内の Azure SQL Database に接続する方法のコード例](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)
 
 <!--

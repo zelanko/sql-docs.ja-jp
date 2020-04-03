@@ -17,12 +17,12 @@ author: markingmyname
 ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 50b9e158fe828271cc4e96c6175895cc858ac962
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8b4503c55545867639a3a437371d6265a85706af
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75254331"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271478"
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>テーブルの作成クエリの作成 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,18 +73,18 @@ WHERE country = 'UK'
   
 5.  特定の順序で行をコピーする場合は、並べ替え順序を指定します。 詳しくは、「 **クエリ結果の並べ替えおよびグループ化**」をご覧ください。  
   
-6.  コピーする行を指定するために、検索条件を入力します。 詳しくは、「検索基準の指定 (../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)」をご覧ください。  
+6.  コピーする行を指定するために、検索条件を入力します。 詳細については、「[検索基準の指定](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)」を参照してください。  
   
     検索条件を指定しなかった場合は、コピー元テーブルのすべての行がコピー先テーブルにコピーされます。  
   
     > [!NOTE]  
     > 検索する列を抽出条件ペインに追加すると、コピーする列の一覧にその列も追加されます。 検索に使用する列をコピーしない場合は、テーブルまたはテーブル構造オブジェクトを示す四角形内の列名の横のチェック ボックスをオフにします。  
   
-7.  集計情報をコピーする場合は、[グループ化] オプションを指定します。 詳しくは、「クエリ結果の集計 (../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)」をご覧ください。  
+7.  集計情報をコピーする場合は、[グループ化] オプションを指定します。 詳しくは、「[クエリ結果の要約](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)」をご覧ください。  
   
 テーブルの作成クエリを実行しても、 [結果ペイン](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)には結果が表示されません。 代わりに、コピーされた行数を示すメッセージが表示されます。  
   
 ## <a name="see-also"></a>参照  
-クエリおよびビューのデザインの操作方法に関するトピック (../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[クエリおよびビューのデザインの操作方法に関するトピック](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 クエリの種類 (../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
   
