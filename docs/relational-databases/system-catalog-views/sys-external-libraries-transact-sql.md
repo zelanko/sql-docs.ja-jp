@@ -1,5 +1,5 @@
 ---
-title: external_libraries (Transact-sql) |Microsoft Docs
+title: external_libraries (トランザクション-SQL) |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -19,37 +19,37 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac6ad0872e813d36d9884a00f979b2a5284cd4a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6b1bfc00b403fa76f692db78593ed4c0e6b53ce8
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73536159"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664430"
 ---
 # <a name="sysexternal_libraries-transact-sql"></a>sys.external_libraries (Transact-SQL)  
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-では、R、Python、Java などの外部ランタイムに関連するパッケージライブラリの管理がサポートされています。
+R、Python、Java などの外部ランタイムに関連するパッケージライブラリの管理をサポートします。
 
 > [!NOTE]
 > SQL Server 2017 では、R 言語と Windows プラットフォームがサポートされています。 Windows および Linux プラットフォームの R、Python、Java は SQL Server 2019 以降でサポートされています。
 
 ## <a name="sysexternal_libraries"></a>sys.external_libraries
 
-カタログビューの external_libraries には、データベースにアップロードされた各外部ライブラリの行が一覧表示されます。
+カタログ ビュー sys.external_libraries には、データベースにアップロードされた各外部ライブラリの行が一覧表示されます。
 
-|列名 |データ型 | [説明]|
+|列名 |データ型 | 説明|
 |------|------|------|
-|external_library_id |INT | 外部ライブラリオブジェクトの ID。 |
+|external_library_id |INT | 外部ライブラリ オブジェクトの ID。 |
 |name |sysname |外部ライブラリの名前。 所有者ごとにデータベース内で一意です。|
 |principal_id |INT |この外部ライブラリを所有するプリンシパルの ID。 |
-|言語 | sysname | 外部ライブラリをサポートする言語またはランタイムの名前。 有効な値は、' R '、' Python '、および ' Java ' です。 今後、追加のランタイムが追加される可能性があります。|
-|scope |INT |パブリックスコープの場合は0。プライベートスコープの場合は1 |  
-|scope_desc |varchar (7) |パッケージがパブリックであるかプライベートであるかを示します|
+|language | sysname | 外部ライブラリをサポートする言語またはランタイムの名前。 有効な値は'R'、'Python'、および'Java'です。 今後、ランタイムが追加される可能性があります。|
+|scope |INT |パブリック スコープの場合は 0。プライベート スコープの場合は 1 |  
+|scope_desc |ヴァルチャー(7) |パッケージがパブリックかプライベートかを示します。|
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 
 + [sys.external_library_files](sys-external-library-files-transact-sql.md)  
 + [外部ライブラリの作成](../../t-sql/statements/create-external-library-transact-sql.md)  
-+ [SQL Server に新しい R パッケージをインストールする](../../advanced-analytics/r/install-additional-r-packages-on-sql-server.md)  
-+ [SQL Server に新しい Python パッケージをインストールする](../../advanced-analytics/python/install-additional-python-packages-on-sql-server.md)  
++ [SQL Server に新しい R パッケージをインストールする](../../machine-learning/package-management/install-additional-r-packages-on-sql-server.md)  
++ [SQL Server に新しい Python パッケージをインストールする](../../machine-learning/package-management/install-additional-python-packages-on-sql-server.md)  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>= sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 86b9cd8a9327eb8afaf9945ca09629362062011f
-ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
+ms.openlocfilehash: 45afb5e861aee7b8cf253f6c241a884b54ff9451
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80517454"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662839"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ SQL Server データベースにバイナリ形式で格納された機械学習
 
 R と Python の機械学習モデルでほぼリアルタイムでスコアリングを提供します。 `sp_rxPredict``rxPredict`は[、RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)および[MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)の R 関数のラッパーとして提供されるストアド プロシージャであり、[リボスケータ](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package)と[microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)の Python 関数[rx_predict。](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) C++ で記述され、スコアリング操作専用に最適化されています。
 
-モデルは R または Python を使用して作成する必要がありますが、いったんシリアル化され、ターゲット データベース エンジン インスタンスのバイナリ形式で格納されると、R または Python 統合がインストールされていない場合でも、そのデータベース エンジン インスタンスから使用できます。 詳細については、「 [sp_rxPredict を使用したリアルタイム スコアリング](https://docs.microsoft.com/sql/advanced-analytics/real-time-scoring)」を参照してください。
+モデルは R または Python を使用して作成する必要がありますが、いったんシリアル化され、ターゲット データベース エンジン インスタンスのバイナリ形式で格納されると、R または Python 統合がインストールされていない場合でも、そのデータベース エンジン インスタンスから使用できます。 詳細については、「 [sp_rxPredict を使用したリアルタイム スコアリング](https://docs.microsoft.com/sql/machine-learning/real-time-scoring)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -64,7 +64,7 @@ sp_rxPredict  ( @model, @input )
 
 ### <a name="supported-algorithms"></a>サポートされているアルゴリズム
 
-モデルを作成してトレーニングするには[、SQL Server 2 マシン ラーニング サービス (R または Python)](https://docs.microsoft.com/sql/advanced-analytics/what-is-sql-server-machine-learning) [、SQL Server 2016 R サービス、SQL Server](https://docs.microsoft.com/sql/advanced-analytics/r/sql-server-r-services)の[機械学習サーバー (スタンドアロン) (R または Python)](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone)、または[SQL Server 2016 R サーバー (スタンドアロン)](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2016)で提供される、R または Python でサポートされているアルゴリズムのいずれかを使用します。
+モデルを作成してトレーニングするには[、SQL Server 2 マシン ラーニング サービス (R または Python)](https://docs.microsoft.com/sql/machine-learning/what-is-sql-server-machine-learning) [、SQL Server 2016 R サービス、SQL Server](https://docs.microsoft.com/sql/machine-learning/r/sql-server-r-services)の[機械学習サーバー (スタンドアロン) (R または Python)](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone)、または[SQL Server 2016 R サーバー (スタンドアロン)](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone?view=sql-server-2016)で提供される、R または Python でサポートされているアルゴリズムのいずれかを使用します。
 
 #### <a name="r-revoscaler-models"></a>R: レボスケールモデル
 
