@@ -9,12 +9,12 @@ ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2f8ca3e42221387470ee4fc4cbd6873b526bc8b7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 776c54ef7475b1ff7c5679f98e994a1b42784262
+ms.sourcegitcommit: 52925f1928205af15dcaaf765346901e438ccc25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77256873"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80607837"
 ---
 # <a name="how-to-upgrade-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]をアップグレードする方法
 
@@ -66,10 +66,10 @@ ms.locfileid: "77256873"
    azdata bdc upgrade -n <clusterName> -t <imageTag> -r <containerRegistry>/<containerRepository>
    ```
 
-   たとえば、次のスクリプトでは `2019-CU1-ubuntu-16.04` イメージ タグを使用しています。
+   たとえば、次のスクリプトでは `2019-CU4-ubuntu-16.04` イメージ タグを使用しています。
 
    ```
-   azdata bdc upgrade -n bdc -t 2019-CU1-ubuntu-16.04 -r mcr.microsoft.com/mssql/bdc
+   azdata bdc upgrade -n bdc -t 2019-CU4-ubuntu-16.04 -r mcr.microsoft.com/mssql/bdc
    ```
 
 >[!NOTE]
@@ -96,7 +96,7 @@ ms.locfileid: "77256873"
 アップグレードのタイムアウトを増やすには、 **--controller-timeout** と **--component-timeout** パラメーターを使用して、アップグレードの発行時に高い値を指定します。 このオプションは、SQL Server 2019 CU2 リリース以降でのみ使用できます。 次に例を示します。
 
    ```bash
-   azdata bdc upgrade -t 2019-CU2-ubuntu-16.04 --controller-timeout=40 --component-timeout=40 --stability-threshold=3
+   azdata bdc upgrade -t 2019-CU4-ubuntu-16.04 --controller-timeout=40 --component-timeout=40 --stability-threshold=3
    ```
 **--controller-timeout** では、コントローラーまたはコントローラー db のアップグレードが完了するまでの待機時間を分単位で指定します。
 **--component-timeout** では、これ以降のアップグレードの各フェーズの完了時間を指定します。

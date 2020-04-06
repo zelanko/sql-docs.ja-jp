@@ -9,12 +9,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 55d59d140d8b833cb4b2ea6b11360043710de60d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: eb85d1867461ba25bb4fc572634fba443dd14282
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79218050"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665362"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] の新機能
 
@@ -231,7 +231,7 @@ ms.locfileid: "79218050"
 
 |新機能または更新 | 詳細 |
 |:---|:---|
-|パーティション ベースのモデリング | `sp_execute_external_script` に追加された新しいパラメーターを使用して、データのパーティションごとに外部スクリプトを処理できます。 この機能は、1 つの大きいモデルではなく、多数の小さいモデル (データのパーティションごとに 1 つのモデル) のトレーニングをサポートします。 [パーティション ベースのモデルの作成](../advanced-analytics/tutorials/r-tutorial-create-models-per-partition.md)に関する記事を参照してください。|
+|パーティション ベースのモデリング | `sp_execute_external_script` に追加された新しいパラメーターを使用して、データのパーティションごとに外部スクリプトを処理できます。 この機能は、1 つの大きいモデルではなく、多数の小さいモデル (データのパーティションごとに 1 つのモデル) のトレーニングをサポートします。 [パーティション ベースのモデルの作成](../machine-learning/tutorials/r-tutorial-create-models-per-partition.md)に関する記事を参照してください。|
 |Windows Server フェールオーバー クラスター| Windows Server フェールオーバー クラスター上の Machine Learning Services に高可用性を構成できます。|
 | &nbsp; | &nbsp; |
 

@@ -10,12 +10,12 @@ ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 2c928db781c6e7d31f07e1cea37ed80481b8fed6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b59588853342b298ebe4ffa8effb59e371c9df6a
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68136479"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665404"
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 リリース ノート
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -149,7 +149,7 @@ Windows 上の SQL Server については、このリリースに関するリリ
 
 ## <a name="more-information"></a>詳細情報
 - [SQL Server Reporting Services リリース ノート](../reporting-services/release-notes-reporting-services.md)での制限事項と問題について説明します。
-- [Machine Learning サービスの既知の問題](../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)
+- [Machine Learning サービスの既知の問題](../machine-learning/known-issues-for-sql-server-machine-learning-services.md)
 - [SQL Server Update Center - サポート対象のすべてのバージョンのリンクと情報](https://msdn.microsoft.com/library/ff803383.aspx)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

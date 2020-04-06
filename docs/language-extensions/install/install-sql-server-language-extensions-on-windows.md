@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3e4f3a84e5001d7485ab590a66ee497522042824
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0d85376a8ebcd946950062ead62387897c47b537
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73658841"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664409"
 ---
 # <a name="install-sql-server-language-extensions-on-windows"></a>SQL Server の言語拡張を Windows にインストールする
 
@@ -39,7 +39,7 @@ ms.locfileid: "73658841"
 
 + ドメイン コントローラーには SQL Server 言語拡張をインストールしないでください。 セットアップの言語拡張の部分が失敗します。
 
-+ 言語拡張と [Machine Learning Services](../../advanced-analytics/index.yml) は、SQL Server ビッグ データ クラスターには既定でインストールされます。 ビッグ データ クラスターを使用する場合、この記事の手順を行う必要はありません。 詳細については、[ビッグ データ クラスターでの Machine Learning Services (Python および R) の使用](../../big-data-cluster/machine-learning-services.md)に関するページを参照してください。
++ 言語拡張と [Machine Learning Services](../../machine-learning/index.yml) は、SQL Server ビッグ データ クラスターには既定でインストールされます。 ビッグ データ クラスターを使用する場合、この記事の手順を行う必要はありません。 詳細については、[ビッグ データ クラスターでの Machine Learning Services (Python および R) の使用](../../big-data-cluster/machine-learning-services.md)に関するページを参照してください。
 
 > [!IMPORTANT]
 > セットアップが完了したら、この記事で説明されている構成後の手順を必ず完了してください。 これらの手順には、SQL Server で外部コードを使用できるようにすることや、ユーザーに代わって SQL Server が Java コードを実行するために必要なアカウントを追加することが含まれます。 通常、構成を変更するには、インスタンスを再起動するか、Launchpad サービスを再起動する必要があります。
@@ -87,7 +87,7 @@ SQL Server 2019 Release Candidate 1 に Java をインストールして使用�
 
         - 独自の Java ランタイムを使用する場合は、 **[Machine Learning Services および言語の拡張]** を選択します。 [Java] は選択しないでください。
 
-        R および Python を使用する場合は、[Windows への SQL Server Machine Learning Services のインストール](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install)に関する記事をご覧ください。
+        R および Python を使用する場合は、[Windows への SQL Server Machine Learning Services のインストール](https://docs.microsoft.com/sql/machine-learning/install/sql-machine-learning-services-windows-install)に関する記事をご覧ください。
 
     ![言語拡張の機能オプション](../media/sql-install-feature-selection.png)
 
@@ -227,17 +227,17 @@ GO
 
 インスタンス レベルでは、追加の構成には次のものが含まれます。
 
-* [SQL Server Machine Learning Services のファイアウォール構成](../../advanced-analytics/security/firewall-configuration.md)
+* [SQL Server Machine Learning Services のファイアウォール構成](../../machine-learning/security/firewall-configuration.md)
 * [追加のネットワーク プロトコルの有効化](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [リモート接続の有効化](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
-* [SQLRUserGroup のログインを作成する](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)
+* [SQLRUserGroup のログインを作成する](../../machine-learning/security/create-a-login-for-sqlrusergroup.md)
 
 <a name="bkmk_configureAccounts"></a> 
 <a name="permissions-external-script"></a> 
 
 データベースでは、次の構成の更新が必要になる場合があります。
 
-* [SQL Server Machine Learning Services にユーザー アクセス許可を付与する](../../advanced-analytics/security/user-permission.md)
+* [SQL Server Machine Learning Services にユーザー アクセス許可を付与する](../../machine-learning/security/user-permission.md)
 * [特定の言語を実行するためのアクセス許可をユーザーに付与する](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql#permissions)
 
 > [!NOTE]

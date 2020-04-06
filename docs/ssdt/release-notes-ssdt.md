@@ -12,12 +12,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: b83ceb3dd5079f82a13e8f1e2aba37fcf5ca5835
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 79ee8bba588f7d429cf0a6fd279ec4b8d0271262
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80271428"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742326"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) リリース ノート
 
@@ -106,7 +106,6 @@ _Visual Studio 2017 用 SSDT。_
 | 既知の問題 | 詳細 |
 | :---------- | :------ |
 | ExecuteOutOfProcess が True に設定されていると、SSIS パッケージ実行タスクはデバッグをサポートしません。 | この問題はデバッグにのみ該当します。 DTExec.exe または SSIS カタログを介した保存、展開、実行は影響を受けません。 |
-| SSDT for Visual Studio 2017 (15.8 以降) では、Teradata のソース/変換先を含むパッケージを設計することはサポートされていません。 | SSDT for Visual Studio 2017 (15.8) を使用します。 |
 | SSIS と SSAS が同じ Visual Studio インスタンスにインストールされている場合、Power Query ソースは OData v4 をサポートしない可能性があります。 | &nbsp; |
 | SSIS と SSAS が同じ Visual Studio インスタンスにインストールされている場合、Power Query ソースでは Oracle への接続に ODBC を使用できない可能性があります。 | &nbsp; |
 | Power Query ソースはローカライズされていません | &nbsp; |
@@ -134,7 +133,6 @@ _Visual Studio 2017 用 SSDT。_
 | 既知の問題 | 詳細 |
 | :---------- | :------ |
 | ExecuteOutOfProcess が True に設定されていると、SSIS パッケージ実行タスクはデバッグをサポートしません。 | この問題はデバッグにのみ該当します。 DTExec.exe または SSIS カタログを介した保存、展開、実行は影響を受けません。 |
-| SSDT for Visual Studio 2017 (15.8 以降) では、Teradata のソース/変換先を含むパッケージを設計することはサポートされていません。 | SSDT for Visual Studio 2017 (15.8) を使用します。 |
 | パッケージ配置モデルのデータ ソースを作成または編集できません。 | データ ソース ウィザードを開くことができません。 |
 | SSIS と SSAS が同じ Visual Studio インスタンスにインストールされている場合、Power Query ソースは OData v4 をサポートしない可能性があります。 | &nbsp; |
 | SSIS と SSAS が同じ Visual Studio インスタンスにインストールされている場合、Power Query ソースでは Oracle への接続に ODBC を使用できない可能性があります。 | &nbsp; |
@@ -164,7 +162,6 @@ _Visual Studio 2017 用 SSDT。_
 | 既知の問題 | 詳細 |
 | :---------- | :------ |
 | ExecuteOutOfProcess が True に設定されていると、SSIS パッケージ実行タスクはデバッグをサポートしません。 | この問題はデバッグにのみ該当します。 DTExec.exe または SSIS カタログを介した保存、展開、実行は影響を受けません。 |
-| SSDT for Visual Studio 2017 (15.8 以降) では、Teradata のソース/変換先を含むパッケージを設計することはサポートされていません。 | SSDT for Visual Studio 2017 (15.8) を使用します。 |
 | パッケージ配置モデルのデータ ソースを作成または編集できません。 | データ ソース ウィザードを開くことができません。 |
 | SSIS と SSAS が同じ Visual Studio インスタンスにインストールされている場合、Power Query ソースは OData v4 をサポートしない可能性があります。 | &nbsp; |
 | SSIS と SSAS が同じ Visual Studio インスタンスにインストールされている場合、Power Query ソースでは Oracle への接続に ODBC を使用できない可能性があります。 | &nbsp; |
@@ -198,7 +195,6 @@ _Visual Studio 2017 用 SSDT。_
 | 既知の問題 | 詳細 |
 | :---------- | :------ |
 | ExecuteOutOfProcess が True に設定されていると、SSIS パッケージ実行タスクはデバッグをサポートしません。 | この問題はデバッグにのみ該当します。 DTExec.exe または SSIS カタログを介した保存、展開、実行は影響を受けません。 |
-| SSDT for Visual Studio 2017 (15.8 以降) では、Teradata のソース/変換先を含むパッケージを設計することはサポートされていません。 | SSDT for Visual Studio 2017 (15.8) を使用します。 |
 | SSIS と SSAS が同じ Visual Studio インスタンスにインストールされている場合、Power Query ソースは OData v4 をサポートしない可能性があります。 | &nbsp; |
 | SSIS と SSAS が同じ Visual Studio インスタンスにインストールされている場合、Power Query ソースでは Oracle への接続に ODBC を使用できない可能性があります。 | &nbsp; |
 | Power Query ソースはローカライズされていません。 | &nbsp; |
@@ -218,7 +214,6 @@ _Visual Studio 2017 用 SSDT。_
 ### <a name="known-issues"></a>既知の問題:
 
 - ExecuteOutOfProcess が True に設定されていると、SSIS パッケージ実行タスクはデバッグをサポートしません。 この問題はデバッグにのみ該当します。 DTExec.exe または SSIS カタログを介した保存、展開、実行は影響を受けません。
-- SSDT for Visual Studio 2017 (15.8.2) では、Oracle/Teradata のソース/変換先を含むパッケージを設計することはサポートされていません。 SSDT for Visual Studio 2017 (15.8) を使用します。
 
 ## <a name="1581nbsp-ssdt-for-vs-2017"></a>15.8.1、&nbsp;VS 2017 用 SSDT
 
@@ -237,7 +232,6 @@ _Visual Studio 2017 用 SSDT。_
 
 - ExecuteOutOfProcess が True に設定されていると、SSIS パッケージ実行タスクはデバッグをサポートしません。 この問題はデバッグにのみ該当します。 DTExec.exe または SSIS カタログを介した保存、展開、実行は影響を受けません。
 - スクリプト タスク/フラット ファイルの変換先が含まれるパッケージを含む SSIS プロジェクトを Azure-SSIS に展開すると、Azure-SSIS でのパッケージの実行が失敗します。
-- SSDT for Visual Studio 2017 (15.8.1) では、Oracle/Teradata のソース/変換先を含むパッケージを設計することはサポートされていません。 SSDT for Visual Studio 2017 (15.8) を使用します。
 
 
 ## <a name="158nbsp-ssdt-for-vs-2017"></a>15.8、&nbsp;VS 2017 用 SSDT

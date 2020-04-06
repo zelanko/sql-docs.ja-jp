@@ -23,12 +23,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/03/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 685397689b390175bd15f6241fc7036004e1e97a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a6298057dbc5d4dcb4dc71cedb166186a95cbddf
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79198539"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80530817"
 ---
 # <a name="ssms-query-editor"></a>SSMS クエリ エディター
 
@@ -86,7 +86,7 @@ ms.locfileid: "79198539"
 
 選択されているコードを実行します。コードが選択されていない場合は、クエリ エディター内のコード全体を実行します。
 
-F5 キーを押すか、**コンテキスト メニュー**から選択してクエリを[実行](#execute-using-the-context-menu)することもできます。
+F5 キーを押すか、[コンテキスト メニュー](#execute-using-the-context-menu)から選択してクエリを**実行**することもできます。
 
 ### <a name="cancel-executing-query-using-the-editor-toolbar"></a>エディター ツール バーを使用した [クエリ実行のキャンセル]
 
@@ -268,8 +268,8 @@ Microsoft データベース エンジン チューニング アドバイザー 
 
 **[クエリ オプション]** ダイアログ ボックスを開きます。 このダイアログ ボックスを使用すると、クエリの実行およびクエリ結果に関する既定のオプションを構成できます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [メニューとショートカット キーのカスタマイズ](../customize-menus-and-shortcut-keys.md)
 
-- [SQL Server Management Studio の代替手段](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)
+- [SQL Server Management Studio のキーボード ショートカット](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)

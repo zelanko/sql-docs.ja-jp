@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: craigg-msft
 ms.author: craigg
-ms.openlocfilehash: 6b6870e6b958b2ce7a7c5d050000bd190ef345df
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5e9223f957692074090b949cd522c0146d4a57fb
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68893080"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665395"
 ---
 # <a name="tutorials-for-sql-server"></a>SQL Server チュートリアル
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68893080"
 |[Integration Services のチュートリアル](../integration-services/integration-services-tutorials.md)|[!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージの作成と配置の方法を学習します。|  
 |[レプリケーションのチュートリアル](../relational-databases/replication/replication-tutorials.md)|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]を使用してレプリケーション トポロジをセットアップして実行する方法について説明します。|  
 |[Reporting Services チュートリアル &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|基本的なレポートとサブスクリプションを作成する方法について説明します。|  
-|[SQL Server Machine Learning チュートリアル](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)|R または Python を使って [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のデータを処理する方法について説明します。 R または Python のスクリプトを [!INCLUDE[tsql](../includes/tsql-md.md)] から実行します。|  
+|[SQL Server Machine Learning チュートリアル](../machine-learning/tutorials/sql-server-r-tutorials.md)|R または Python を使って [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のデータを処理する方法について説明します。 R または Python のスクリプトを [!INCLUDE[tsql](../includes/tsql-md.md)] から実行します。|  
   
  ## <a name="previously-published-tutorials"></a>以前に公開されたチュートリアル 
   

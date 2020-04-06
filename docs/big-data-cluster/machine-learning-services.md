@@ -8,18 +8,18 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
-ms.openlocfilehash: e16304765e5f4a51feed4d3d59e790505baa740d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dd8e1b948d259b4c233aebcb3614dea5b3e72129
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252024"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664131"
 ---
 # <a name="run-python-and-r-scripts-with-machine-learning-services-on-sql-server-big-data-clusters"></a>SQL Server ビッグ データ クラスターで Machine Learning Services を使用して Python および R のスクリプトを実行する
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-[Machine Learning Services](../advanced-analytics/index.yml) を使用して [SQL Server ビッグ データ クラスター](big-data-cluster-overview.md)のマスター インスタンスで Python や R のスクリプトを実行できます。
+[Machine Learning Services](../machine-learning/index.yml) を使用して [SQL Server ビッグ データ クラスター](big-data-cluster-overview.md)のマスター インスタンスで Python や R のスクリプトを実行できます。
 
 > [!NOTE]
 > また、[SQL Server 言語拡張機能](../language-extensions/language-extensions-overview.md)を使用して、マスター インスタンスで Java コードを実行することもできます。 以下の手順に従うと、言語拡張機能も有効になります。
@@ -82,7 +82,7 @@ GO
 
 ## <a name="next-steps"></a>次のステップ
 
-+ [クイック スタート: SQL Server Machine Learning Services を使用した単純な Python スクリプトの作成と実行](../advanced-analytics/tutorials/quickstart-python-create-script.md)
-+ [クイック スタート: SQL Server Machine Learning Services を使用して Python で予測モデルを作成してスコア付けする](../advanced-analytics/tutorials/quickstart-python-train-score-model.md)
-+ [クイック スタート: SQL Server Machine Learning Services で簡単な R スクリプトを作成して実行する](../advanced-analytics/tutorials/quickstart-r-create-script.md)
-+ [クイック スタート: SQL Server Machine Learning Services を使用して R で予測モデルを作成してスコア付けする](../advanced-analytics/tutorials/quickstart-r-train-score-model.md)
++ [クイック スタート: SQL Server Machine Learning Services を使用した単純な Python スクリプトの作成と実行](../machine-learning/tutorials/quickstart-python-create-script.md)
++ [クイック スタート: SQL Server Machine Learning Services を使用して Python で予測モデルを作成してスコア付けする](../machine-learning/tutorials/quickstart-python-train-score-model.md)
++ [クイック スタート: SQL Server Machine Learning Services で簡単な R スクリプトを作成して実行する](../machine-learning/tutorials/quickstart-r-create-script.md)
++ [クイック スタート: SQL Server Machine Learning Services を使用して R で予測モデルを作成してスコア付けする](../machine-learning/tutorials/quickstart-r-train-score-model.md)

@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d23ae15a277c866c62f3e9be9e2eab19c5255c10
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 39bebccfc01d379a2c3839fcd7f8fd8824aa18e4
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77173606"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531101"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>SQL Server ビッグ データ クラスターの展開のために Azure Kubernetes Service を構成する
 
@@ -28,7 +28,7 @@ AKS を使用すると、コンテナー化されたアプリケーションを�
 この記事では、Azure CLI を使用して AKS 上に Kubernetes を展開する手順について説明します。 Azure サブスクリプションをお持ちでない場合は、開始する前に無料アカウントを作成してください。
 
 > [!TIP]
-> また、1 つの手順で AKS とビッグ データ クラスターの展開をスクリプト化することもできます。 詳細については、[Python スクリプト](quickstart-big-data-cluster-deploy.md)または Azure Data Studio の[ノートブック](deploy-notebooks.md)において、この操作を行う方法を確認してください。
+> また、1 つの手順で AKS とビッグ データ クラスターの展開をスクリプト化することもできます。 詳細については、[Python スクリプト](quickstart-big-data-cluster-deploy.md)または Azure Data Studio の[ノートブック](notebooks-deploy.md)において、この操作を行う方法を確認してください。
 
 ## <a name="prerequisites"></a>前提条件
 

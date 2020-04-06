@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b0b4a72519a0fa20d0c4a7472760a8f06a9ced32
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dbf5f8534b19e93d956531df3c43a04776afe1c5
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79190610"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665376"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016 の新機能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -55,7 +55,7 @@ ms.locfileid: "79190610"
 
 ## <a name="sql-server-2016-analysis-services-ssas"></a>SQL Server 2016 Analysis Services (SSAS)
 SQL Server 2016 Analysis Services では、**1200 互換性レベル**に基づいて、表形式モデルのデータベースに対するパフォーマンス、オーサリング、データベース管理、フィルター、処理などが向上しています。
-- **[SQL Server R サービス](../advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md)** は、統計的分析に使用する R プログラミング言語を、SQL Server に統合します。 
+- **[SQL Server R サービス](~/machine-learning/what-s-new-in-sql-server-machine-learning-services.md)** は、統計的分析に使用する R プログラミング言語を、SQL Server に統合します。 
 - 新しい **Database Consistency Checker (DBCC)** は、潜在的なデータの破損の問題を検出するために、内部的に実行されます。
 - **直接クエリ**は、最初に外部データをインポートするのではなく、ライブの外部データにクエリを実行します。直接クエリでは、Azure SQL、Oracle、Teradata を含む、より多くのデータ ソースがサポートされるようになりました。 
 - 多数の新しい **DAX (Data Access Expressions) 関数**が追加されています。
