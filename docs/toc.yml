@@ -78,6 +78,8 @@
           items:
             - name: 展開のガイダンス
               href: big-data-cluster/deployment-guidance.md
+            - name: デプロイされるリソース
+              href: big-data-cluster/concept-architecture-pods.md
             - name: 新しいリリースにアップグレードする
               href: big-data-cluster/deployment-upgrade.md
             - name: 展開をカスタマイズする
@@ -107,7 +109,7 @@
                 - name: 単一ノードの Kubeadm スクリプト
                   href: big-data-cluster/deployment-script-single-node-kubeadm.md
                 - name: ノートブックを使用したデプロイ
-                  href: big-data-cluster/deploy-notebooks.md
+                  href: big-data-cluster/notebooks-deploy.md
     - name: 概念
       items:
         - name: アプリケーションの展開
@@ -190,26 +192,18 @@
               href: big-data-cluster/connect-to-big-data-cluster.md
             - name: クラスターの状態を表示する
               href: big-data-cluster/view-cluster-status.md
-            - name: Kubernetes のトラブルシューティング
-              href: big-data-cluster/cluster-troubleshooting-commands.md
-            - name: ノートブックを使用して管理する
-              href: big-data-cluster/manage-notebooks.md
             - name: コントローラー ダッシュボードを使って管理する
               href: big-data-cluster/manage-with-controller-dashboard.md
+            - name: 既存のノートブックを管理する
+              href: big-data-cluster/notebooks-manage-bdc.md
+            - name: Spark を使用してノートブックを実行する
+              href: big-data-cluster/notebooks-tutorial-spark.md
             - name: Security
               items:
                 - name: AZDATA_PASSWORD を更新する
                   href: big-data-cluster/change-azdata-password.md
                 - name: ユーザー アクセスを管理する
                   href: big-data-cluster/manage-user-access.md
-        - name: ノートブック
-          items:
-            - name: Notebooks の概要
-              href: big-data-cluster/notebooks-guidance.md
-            - name: ノートブックのチュートリアル
-              href: big-data-cluster/tutorial-notebook-spark.md
-            - name: 既存のノートブックを管理する
-              href: big-data-cluster/notebooks-how-to-manage.md
         - name: Spark ジョブ
           items:
             - name: Azure Data Studio で Spark ジョブを送信する
@@ -222,7 +216,9 @@
               href: big-data-cluster/spark-history-server.md
         - name: トラブルシューティング
           items:
-            - name: Active Directory を展開する
+            - name: Kubernetes のトラブルシューティング
+              href: big-data-cluster/cluster-troubleshooting-commands.md
+            - name: Active Directory グループのスコープ
               href: big-data-cluster/troubleshoot-active-directory.md
     - name: リファレンス
       items:
@@ -2555,7 +2551,11 @@
             - name: Java から SQL データ型
               href: language-extensions/how-to/java-to-sql-data-types.md
             - name: Java の jar ファイルを作成する
-              href: language-extensions/how-to/create-a-java-jar-file-from-class-files.md
+              href: language-extensions/how-to/call-java-from-sql.md
+        - name: リファレンス
+          items:
+            - name: 機能拡張フレームワーク API
+              href: language-extensions/reference/extensibility-framework-api.md
     - name: SQL Server Native Client
       href: relational-databases/native-client/sql-server-native-client.md
       items:
@@ -7017,8 +7017,8 @@
           href: relational-databases/synonyms/create-synonyms.md
 - name: レポートと分析
   items:
-    - name: 高度な分析と機械学習 >
-      href: advanced-analytics/
+    - name: Machine Learning Services >
+      href: machine-learning/
     - name: 分析プラットフォーム システム >
       displayName: 'APS, PDW, Parallel Data Warehouse'
       href: analytics-platform-system/index.md
@@ -7791,8 +7791,6 @@
               href: azure-data-studio/keyboard-shortcuts.md
             - name: エクスプローラーの Azure SQL リソース
               href: azure-data-studio/azure-resource-explorer.md
-            - name: SQL のノートブック
-              href: azure-data-studio/sql-notebooks.md
             - name: サーバー グループ
               href: azure-data-studio/server-groups.md
             - name: ソース管理
@@ -7801,6 +7799,14 @@
               href: azure-data-studio/settings.md
             - name: Windows 認証 (Kerberos)
               href: azure-data-studio/enable-kerberos.md
+            - name: ノートブック
+              items:
+                - name: Notebooks の概要
+                  href: azure-data-studio/notebooks-guidance.md
+                - name: SQL Kernel の使用方法
+                  href: azure-data-studio/notebooks-tutorial-sql-kernel.md
+                - name: ノートブックを管理する方法
+                  href: azure-data-studio/notebooks-manage-sql-server.md
             - name: 使用状況データ収集
               href: azure-data-studio/usage-data-collection.md
         - name: 拡張機能
@@ -9079,7 +9085,7 @@
                   href: ssms/menu-help/options-environment-help-general-page.md
                 - name: '[外部ツール]'
                   href: ssms/menu-help/external-tools.md
-                - name: '[カスタマイズ] \([コマンド] ページ)'
+                - name: '[カスタマイズ] ([コマンド] ページ)'
                   href: ssms/menu-help/customize-commands-page.md
                 - name: '[オプション] ([環境]/[全般] ページ)'
                   href: ssms/menu-help/options-environment-general-page.md
@@ -9137,7 +9143,7 @@
                   href: ssms/object/connect-to-an-instance-from-object-explorer.md
                 - name: '[名前が見つかりません] ダイアログ ボックス'
                   href: ssms/object/name-not-found-dialog-box.md
-                - name: '[オブジェクトの参照] \(オブジェクト エクスプローラー)'
+                - name: '[オブジェクトの参照] (オブジェクト エクスプローラー)'
                   href: ssms/object/browse-for-objects-object-explorer.md
                 - name: '[オブジェクトの種類を選択] (オブジェクト エクスプローラー)'
                   href: ssms/object/select-object-types-object-explorer.md
