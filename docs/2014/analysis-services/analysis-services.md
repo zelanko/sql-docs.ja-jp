@@ -1,7 +1,7 @@
 ---
-title: SQL Server 2014 Analysis Services |Microsoft Docs
+title: SQL Server 2014 の分析サービス |マイクロソフトドキュメント
 ms.custom: ''
-ms.date: 11/25/2019
+ms.date: 04/06/2020
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: analysis-services
@@ -18,37 +18,37 @@ ms.assetid: 49d186f4-4b4d-4a5a-bb1a-e2699c64a731
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bceabba9b490be6bc2c51b4fdcce9b6b131eb0ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 986356e6ebf7697bf0b425553f6803659a0fc5cb
+ms.sourcegitcommit: 8f99d15c5b23d9f3c08a77e2b8bea5772f570493
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74683477"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80760304"
 ---
 # <a name="sql-server-2014-analysis-services"></a>SQL Server 2014 Analysis Services
 
-  SQL Server 2014 Analysis Services は、意思決定支援およびビジネスインテリジェンス (BI) ソリューションで使用される分析データエンジンであり、Excel、Reporting Services レポートなどのビジネスレポートとクライアントアプリケーションの分析データを提供します。サードパーティの BI ツール。 
+  SQL Server 2014 Analysis Services は、意思決定支援およびビジネス インテリジェンス (BI) ソリューションで使用される分析データ エンジンであり、Excel、Reporting Services レポート、その他のサード パーティの BI ツールなどのビジネス レポートやクライアント アプリケーションの分析データを提供します。 
 
-## <a name="about-sql-server-analysis-services-documentation"></a>SQL Server Analysis Services のドキュメントについて
+## <a name="about-sql-server-analysis-services-documentation"></a>SQL Server 分析サービスのドキュメントについて
 
-ドキュメントはバージョン別に分けられます。 現在は SQL Server 2014 Analysis Services ドキュメントにあります。
+ドキュメントはバージョン別に分離されています。 現在、SQL Server 2014 分析サービスのドキュメントを参照してください。
 
-- SQL Server 2012 以前の詳細については、 [SQL Server 前のバージョンのドキュメント](https://docs.microsoft.com/previous-versions/sql/)を参照してください。
-- SQL Server 2014 の詳細については、 [SQL Server 2014 のオンラインブック](../2014-toc/index.yml)を参照してください。
-- SQL Server 2016 以降の詳細については、 [MICROSOFT SQL のドキュメント](https://docs.microsoft.com/sql/)を参照してください。
-- Azure Analysis Services の詳細については、 [Azure Analysis Services のドキュメント](https://docs.microsoft.com/azure/analysis-services/)を参照してください。
+- SQL Server 2012 およびそれ以前のバージョンの詳細については[、SQL Server の以前のバージョンのドキュメント](https://docs.microsoft.com/previous-versions/sql/)を参照してください。
+- SQL Server 2014 の詳細については[、「SQL Server](../2014-toc/index.yml) 2014 オンライン ブック」を参照してください。
+- SQL Server 2016 およびそれ以降の詳細については[、Analysis サービスのドキュメントを参照してください](https://docs.microsoft.com/analysis-services/)。
+- Azure 分析サービスの詳細については[、「Azure 分析サービスのドキュメント」を参照してください](https://docs.microsoft.com/azure/analysis-services/)。
 
-## <a name="analysis-services-workflow"></a>Analysis Services ワークフロー
+## <a name="analysis-services-workflow"></a>分析サービス ワークフロー
 
-一般的なワークフローには、OLAP または表形式のデータモデルを構築し、そのモデルをデータベースとしてサーバーインスタンスに配置し、データを読み込むようにデータベースを処理してから、データアクセスを許可する権限を割り当てることがあります。 準備が完了すると、複数の用途を持つこのデータ モデルに、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] をデータ ソースとしてサポートしている任意のクライアント アプリケーションがアクセスできるようになります。  
+一般的なワークフローには、OLAP または表形式のデータ モデルの構築、モデルをデータベースとしてサーバー インスタンスに配置、データを読み込むデータベースの処理、データ アクセスを許可する権限の割り当てなどが含まれます。 準備が完了すると、複数の用途を持つこのデータ モデルに、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] をデータ ソースとしてサポートしている任意のクライアント アプリケーションがアクセスできるようになります。  
   
- モデルを作成するには、SQL Server Data Tools を使用します (「 [Analysis Services で使用されるツールとアプリケーション](tools-and-applications-used-in-analysis-services.md)」を参照)。表形式または多次元およびデータマイニングプロジェクトテンプレートのいずれかを選択します。 プロジェクト テンプレートには、モデルで必要とされるすべてのオブジェクトのフォルダーが含まれています。 ウィザードを使用して、データ ソース、データ ソース ビュー、ディメンション、キューブ、ロールなど、すべての基本的な要素を作成することができます。  
+ モデルを作成するには、SQL Server データ ツール[(Analysis Services で使用されるツールとアプリケーション](tools-and-applications-used-in-analysis-services.md)を参照) を使用して、表形式または多次元およびデータ マイニング プロジェクト テンプレートを選択します。 プロジェクト テンプレートには、モデルで必要とされるすべてのオブジェクトのフォルダーが含まれています。 ウィザードを使用して、データ ソース、データ ソース ビュー、ディメンション、キューブ、ロールなど、すべての基本的な要素を作成することができます。  
   
  モデルは、外部データ システムから取得したデータによって作成されます。通常は外部データ システムとして、SQL Server または Oracle リレーショナル データベース エンジンでホストされているデータ ウェアハウスを使用します (テーブル モデルでは、追加のデータ ソースの種類もサポートされています)。 モデルは、キューブなどのクエリ オブジェクトを指定しますが、複数のキューブ、計算、KPI (ビジネス ロジック、ナビゲーションやドリルスルー動作などの相互作用をカプセル化する) で使用できるディメンションも指定します。  
   
- モデルを使用するには、特定のサーバーモードでデータベースを実行するサーバーインスタンスに配置します。これにより、Excel または他のアプリケーションを介して接続する承認されたユーザーがデータを使用できるようになります。  
+ モデルを使用するには、特定のサーバー モードでデータベースを実行するサーバー インスタンスに展開され、Excel またはその他のアプリケーションを介して接続する承認されたユーザーがデータを使用できるようにします。  
   
- インスタンスは、次の3つのサーバーモードのいずれかでインストールできます。  
+ インスタンスは、次の 3 つのサーバー モードのいずれかでインストールできます。  
   
 -   テーブル インスタンスとしてインストールし、テーブル モデルを実行します。  
   
@@ -60,27 +60,27 @@ ms.locfileid: "74683477"
   
  Analysis Services に関する基本ドキュメントは、作成するプロジェクトの種類に対応するセクション別に分類されます。 それぞれのモードまたは機能領域の詳細については、次のリンクから選択してください。  
   
- **領域ごとのコンテンツの参照**  
- ![小さいファイルフォルダーアイコン](../../2014/integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン") [SSAS&#41;&#40;テーブルソリューションと多次元ソリューションの比較](comparing-tabular-and-multidimensional-solutions-ssas.md)  
+ **エリア別のコンテンツの参照**  
+ [SSAS&#41;&#40;表形式および多次元ソリューションを比較する](comparing-tabular-and-multidimensional-solutions-ssas.md)![小さなファイル フォルダ アイコン](../../2014/integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")  
   
- ![小さいファイルフォルダーアイコン](../../2014/integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン") [Analysis Services インスタンス管理](instances/analysis-services-instance-management.md)  
+ ![小さなファイル フォルダ アイコン](../../2014/integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")[分析サービス インスタンス管理](instances/analysis-services-instance-management.md)  
   
- ![小さいファイルフォルダーアイコン](../../2014/integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")[テーブルモデリング &#40;SSAS 表形式&#41;](tabular-models/tabular-models-ssas.md)  
+ [SSAS 表形式&#41;&#40;](tabular-models/tabular-models-ssas.md)![小さいファイル フォルダー アイコン](../../2014/integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")の表形式モデル  
   
- ![小さいファイルフォルダーアイコン](../../2014/integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")[多次元モデリング &#40;SSAS&#41;](multidimensional-models/multidimensional-models-ssas.md)  
+ SSAS&#41;&#40;![小さいファイル フォルダ アイコン](../../2014/integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")[多次元モデリング](multidimensional-models/multidimensional-models-ssas.md)  
   
- ![小さいファイルフォルダーアイコン](../../2014/integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")[データマイニング &#40;SSAS&#41;](data-mining/data-mining-ssas.md)  
+ [SSAS&#41;&#40;](data-mining/data-mining-ssas.md)![小さなファイル フォルダ アイコン](../../2014/integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")データ マイニング  
   
- ![小さいファイルフォルダーアイコン](../../2014/integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン") [PowerPivot for SharePoint &#40;SSAS&#41;](power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
+ ![小さなファイル フォルダー アイコン](../../2014/integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン") [PowerPivot を &#40;SSAS&#41;](power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]機能はエディションによって異なります。 多次元およびデータ マイニング モデルは Standard Edition で使用できますが、上位エディションに比べると機能が少なくなっています。 テーブル モデルと PowerPivot for SharePoint はプレミアム機能であり、Standard Edition のライセンスでは使用できません。 詳しくは「 [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」をご覧ください。  
+>  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] の機能は、エディションによって異なります。 多次元およびデータ マイニング モデルは Standard Edition で使用できますが、上位エディションに比べると機能が少なくなっています。 テーブル モデルと PowerPivot for SharePoint はプレミアム機能であり、Standard Edition のライセンスでは使用できません。 詳しくは「 [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services チュートリアル &#40;SSAS&#41;](analysis-services-tutorials-ssas.md)   
+ [SSAS&#41;&#40;分析サービスのチュートリアル](analysis-services-tutorials-ssas.md)   
  [SQL Server 2014 のインストール](../database-engine/install-windows/installation-for-sql-server.md)   
- [開発者ガイド &#40;Analysis Services&#41;](analysis-services-developer-documentation.md)   
- [SQL Server リソースセンター](https://go.microsoft.com/fwlink/?linkID=219676)   
+ [開発者ガイド&#40;分析サービス&#41;](analysis-services-developer-documentation.md)   
+ [SQL Server リソース センター](https://go.microsoft.com/fwlink/?linkID=219676)   
  [SQLCat.com](https://go.microsoft.com/fwlink/?linkID=220963)  
   
   
