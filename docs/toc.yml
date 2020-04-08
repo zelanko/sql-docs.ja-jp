@@ -8529,6 +8529,14 @@
                   href: ssms/register-servers/registered-servers-f1-help.md
             - name: SSMS を使用したスクリプトの作成
               items:
+                - name: スクリプトの生成
+                  items:
+                    - name: スクリプトの生成
+                      href: ssms/scripting/generate-scripts-sql-server-management-studio.md
+                    - name: スクリプトの生成およびパブリッシュ ウィザード
+                      href: ssms/scripting/generate-and-publish-scripts-wizard.md
+                    - name: スクリプト生成ウィザードでサポートされるオブジェクト
+                      href: ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
                 - name: クエリ エディターとテキスト エディター
                   href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
                   items:
@@ -8650,14 +8658,6 @@
                       items:
                         - name: '[空間結果] ウィンドウ'
                           href: ssms/scripting/spatial-results-window.md
-                        - name: スクリプトの生成
-                          href: ssms/scripting/generate-scripts-sql-server-management-studio.md
-                          items:
-                            - name: スクリプトの生成およびパブリッシュ ウィザード
-                              href: ssms/scripting/generate-and-publish-scripts-wizard.md
-                              items:
-                                - name: スクリプト生成ウィザードでサポートされるオブジェクト
-                                  href: ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
         - name: 操作方法
           items:
             - name: 英語以外の SSMS のインストール
