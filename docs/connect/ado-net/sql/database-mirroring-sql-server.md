@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: c7ace2feb39bcc3f5f257c0ac2c7360649cfc33c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 38481625645a7d2a70b7d3212cdf9ef765ca9c1f
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78896998"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928869"
 ---
 # <a name="database-mirroring-in-sql-server"></a>SQL Server のデータベース ミラーリング
 
@@ -48,7 +48,7 @@ SQL Server のデータベース ミラーリング機能を使用すると、�
 >  データベース ミラーリングのシナリオでは、接続文字列で初期カタログまたはデータベース名を明示的に指定する必要があります。 クライアントが、初期カタログやデータベースが明示的に指定されていない接続に関するフェールオーバー情報を受信する場合は、このフェールオーバー情報はキャッシュされず、アプリケーションはプリンシパル サーバーでの障害発生時にフェールオーバーを試行しません。 接続文字列にフェールオーバー パートナーの値が含まれていても、初期カタログまたはデータベースの値が存在しない場合は、`InvalidArgumentException` が生成されます。  
   
 ## <a name="retrieving-the-current-server-name"></a>現在のサーバー名の取得  
-フェールオーバーが発生した場合は、<xref:Microsoft.Data.SqlClient.SqlConnection.DataSource%2A> オブジェクトの <xref:Microsoft.Data.SqlClient.SqlConnection> プロパティを使用して、現在の接続が実際に接続されているサーバーの名前を取得できます。 次のコード フラグメントでは、接続変数が開いている <xref:Microsoft.Data.SqlClient.SqlConnection> を参照していることを前提として、アクティブなサーバーの名前を取得します。  
+フェールオーバーが発生した場合は、<xref:Microsoft.Data.SqlClient.SqlConnection> オブジェクトの <xref:Microsoft.Data.SqlClient.SqlConnection.DataSource%2A> プロパティを使用して、現在の接続が実際に接続されているサーバーの名前を取得できます。 次のコード フラグメントでは、接続変数が開いている <xref:Microsoft.Data.SqlClient.SqlConnection> を参照していることを前提として、アクティブなサーバーの名前を取得します。  
   
 フェールオーバー イベントが発生し、接続がミラー サーバーに切り替えられた場合は、**DataSource** プロパティがそのミラー名を反映するように更新されます。  
   
