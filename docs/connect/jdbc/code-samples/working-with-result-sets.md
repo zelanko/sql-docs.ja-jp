@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 4fc4b1c6-3075-4ad7-9244-865d9ede7ae6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 44eac2fbcc156b3591bdf02fd00ff0d6bd19366b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2138d2b07bd43f46b25ad42fee7ea1cbbcc68d31
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69028242"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922522"
 ---
 # <a name="working-with-result-sets"></a>結果セットの処理
 
@@ -38,7 +38,7 @@ ms.locfileid: "69028242"
 | [結果セットのデータ サンプルの変更](../../../connect/jdbc/code-samples/modifying-result-set-data-sample.md)   | 結果セットを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースのデータを挿入、取得、および変更する方法について説明します。                                                      |
 | [結果セットのデータ サンプルのキャッシング](../../../connect/jdbc/code-samples/caching-result-set-data-sample.md)       | 結果セットを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースから大量のデータを取得し、そのデータがクライアント上でキャッシュされる方法を制御する方法について説明します。 |
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 
 [サンプル JDBC ドライバー アプリケーション](../../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md)  
   

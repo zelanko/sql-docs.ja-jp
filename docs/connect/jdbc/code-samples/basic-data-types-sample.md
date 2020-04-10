@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 59ac80cf-fc66-4493-933d-38e479c5f54d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7936f33fd7a831d19e7978681cbb169f3b9aba7b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 43a19765231aeea5f28ead28b74130befb10bb1a
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69028389"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922616"
 ---
 # <a name="basic-data-types-sample"></a>基本データ型のサンプル
 
@@ -38,7 +38,7 @@ ms.locfileid: "69028389"
   
 ## <a name="example"></a>例
 
-次の例では、サンプル コードはデータベースへの接続を行い、DataTypesTable テスト テーブルから 1 行のデータを取得します。 カスタム displayRow メソッドが呼び出され、\<SQLServerResultSet[ クラスのさまざまな get](../../../connect/jdbc/reference/sqlserverresultset-class.md)Type> メソッドを使用して、結果セット内のすべてのデータが表示されます。  
+次の例では、サンプル コードはデータベースへの接続を行い、DataTypesTable テスト テーブルから 1 行のデータを取得します。 カスタム displayRow メソッドが呼び出され、[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) クラスのさまざまな get\<Type> メソッドを使用して、結果セット内のすべてのデータが表示されます。  
   
 次に、このサンプルでは、SQLServerResultSet クラスのさまざまな update\<Type> メソッドを使用して、結果セット内のデータを更新し、さらに [updateRow](../../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) メソッドを呼び出して、データをデータベースに戻して保持します。  
   
@@ -154,7 +154,7 @@ public class BasicDataTypes {
 }
 ```
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 
 [データ型の処理 &#40;JDBC&#41;](../../../connect/jdbc/code-samples/working-with-data-types-jdbc.md)  
   
