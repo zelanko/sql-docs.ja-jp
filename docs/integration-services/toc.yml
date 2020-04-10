@@ -63,6 +63,8 @@
       href: ../integration-services/lift-shift/ssis-azure-schedule-packages.md
     - name: SSMS を使用した Azure でのパッケージのスケジュール設定
       href: ../integration-services/lift-shift/ssis-azure-schedule-packages-ssms.md
+    - name: Azure のプロセスとツールに移行する
+      href: ../integration-services/lift-shift/ssis-migration-to-Azure.md
 - name: Integration Services のインストール
   href: ../integration-services/install-windows/install-integration-services.md
 - name: Integration Services バージョンのサイド バイ サイド インストール
@@ -446,7 +448,7 @@
         - name: Data Streaming Destination
           href: ../integration-services/data-flow/data-streaming-destination.md
           items:
-            - name: 'チュートリアル: SSIS パッケージを SQL ビューとして公開する'
+            - name: 'チュートリアル:SQL ビューとして SSIS パッケージを公開する'
               href: ../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md
         - name: DataReader 変換先
           href: ../integration-services/data-flow/datareader-destination.md
@@ -477,7 +479,7 @@
         - name: OData ソース
           href: ../integration-services/data-flow/odata-source.md
           items:
-            - name: 'チュートリアル: OData ソースの使用'
+            - name: 'チュートリアル:OData ソースの使用'
               href: ../integration-services/data-flow/tutorial-using-the-odata-source.md
             - name: 実行時の OData ソース クエリの提供
               href: ../integration-services/data-flow/modify-odata-source-query-at-runtime.md
@@ -733,7 +735,7 @@
       href: ../integration-services/data-flow/extract-data-by-using-the-xml-source.md
     - name: XML 入力元のカスタム プロパティ
       href: ../integration-services/data-flow/xml-source-custom-properties.md
-- name: '変数:'
+- name: 変数
   href: ../integration-services/integration-services-ssis-variables.md
   items:
     - name: '[変数] ウィンドウ'
@@ -821,7 +823,7 @@
           href: ../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md
         - name: <= (以下) (SSIS 式)
           href: ../integration-services/expressions/less-than-or-equal-to-ssis-expression.md
-        - name: '? : (条件) (SSIS 式)'
+        - name: '? :(条件) (SSIS 式)'
           href: ../integration-services/expressions/conditional-ssis-expression.md
     - name: 関数 (SSIS 式)
       href: ../integration-services/expressions/functions-ssis-expression.md
@@ -933,7 +935,7 @@
       href: ../integration-services/scale-out/integration-services-ssis-scale-out.md
     - name: 1 台のコンピューターでの SSIS Scale Out の概要
       href: ../integration-services/scale-out/get-started-with-ssis-scale-out-onebox.md
-    - name: 'チュートリアル: Integration Services Scale Out をセットアップする'
+    - name: 'チュートリアル:Integration Services Scale Out を設定する'
       href: ../integration-services/scale-out/walkthrough-set-up-integration-services-scale-out.md
     - name: Scale Out でのパッケージの実行
       href: ../integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md
@@ -1007,7 +1009,7 @@
       href: ../integration-services/performance/integration-services-ssis-logging.md
     - name: パフォーマンス カウンター
       href: ../integration-services/performance/performance-counters.md
-- name: '[トラブルシューティング]'
+- name: トラブルシューティング
   items:
     - name: 概要
       href: ../integration-services/troubleshooting/troubleshoot-integration-services-ssis-packages.md
@@ -1155,7 +1157,7 @@
           href: ../integration-services/system-stored-procedures/catalog-get-project-ssisdb-database.md
     - name: catalog.grant_permission
       href: ../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md
-    - name: '[詳細ビュー]'
+    - name: 詳細ビュー
       items:
         - name: catalog.move_environment
           href: ../integration-services/system-stored-procedures/catalog-move-environment-ssisdb-database.md
@@ -1595,7 +1597,7 @@
           href: ../integration-services/change-data-capture/the-oracle-cdc-instance.md
         - name: Oracle CDC データベース
           href: ../integration-services/change-data-capture/the-oracle-cdc-databases.md
-        - name: '[トラブルシューティング]'
+        - name: トラブルシューティング
           href: ../integration-services/change-data-capture/known-issues-resolutions-with-cdc-for-oracle-attunity.md
         - name: Change Data Capture Designer for Oracle by Attunity の F1 ヘルプ参照
           href: ../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-f1-help-reference.md
@@ -1730,7 +1732,7 @@
     - name: パッケージを作成する
       href: ../integration-services/ssis-how-to-create-an-etl-package.md
       items:
-        - name: 'レッスン 1: プロジェクトと基本パッケージの作成'
+        - name: 'レッスン 1:プロジェクトと基本パッケージの作成'
           href: ../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md
           items:
             - name: レッスン 1-1 - 新しい Integration Services プロジェクトの作成
@@ -1762,7 +1764,7 @@
               href: ../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md
             - name: レッスン 2-4 - レッスン 2 のチュートリアル パッケージのテスト
               href: ../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md
-        - name: 'レッスン 3: ログの追加'
+        - name: 'レッスン 3:ログ機能の追加'
           href: ../integration-services/lesson-3-add-logging-with-ssis.md
           items:
             - name: レッスン 3-1 - レッスン 2 のパッケージのコピー
@@ -1771,7 +1773,7 @@
               href: ../integration-services/lesson-3-2-adding-and-configuring-logging.md
             - name: レッスン 3-3 - レッスン 3 のチュートリアル パッケージのテスト
               href: ../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md
-        - name: 'レッスン 4: エラー フロー リダイレクションの追加'
+        - name: 'レッスン 4:エラー フロー リダイレクションの追加'
           href: ../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md
           items:
             - name: レッスン 4-1 - レッスン 3 のパッケージのコピー
@@ -1809,7 +1811,7 @@
     - name: パッケージの配置
       href: ../integration-services/deploy-packages-with-ssis.md
       items:
-        - name: 'レッスン 1: 配置バンドルを作成する準備'
+        - name: 'レッスン 1:配置バンドルを作成する準備'
           href: ../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md
           items:
             - name: レッスン 1-1 - 作業フォルダーと環境変数の作成
@@ -1829,7 +1831,7 @@
               href: ../integration-services/lesson-2-1-building-the-deployment-utility.md
             - name: レッスン 2-2 - 配置バンドルの確認
               href: ../integration-services/lesson-2-2-verifying-the-deployment-bundle.md
-        - name: 'レッスン 3: インストール パッケージ'
+        - name: 'レッスン 3:パッケージのインストール'
           href: ../integration-services/lesson-3-install-ssis-packages.md
           items:
             - name: レッスン 3-1 - 配置バンドルのコピー
