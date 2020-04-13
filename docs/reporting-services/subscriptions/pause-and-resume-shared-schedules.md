@@ -1,5 +1,6 @@
 ---
 title: 共有スケジュールの一時停止と再開 | Microsoft Docs
+description: この記事では、使用中であるが進行中ではない共有スケジュールを一時停止および再開する方法について説明します。 一時停止と再開は、ネイティブ モードまたは SharePoint モードで行うことができます。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e416be75-5234-4aa6-a3de-77f60f25169a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7ec4c97ad3627ae91fd01cf0d8d73a2569a0c41a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 93a24bc7b76ba780ccd8136eb75702f8c3b236ef
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578179"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742103"
 ---
 # <a name="pause-and-resume-shared-schedules"></a>Pause and Resume Shared Schedules
   使用中の共有スケジュールは、一時停止および再開することができます。 共有スケジュールを一時停止すると、レポート処理とサブスクリプションのトリガーとして使用しているスケジュールが一時的に無効になります。 一時停止や再開を行うことができるのは共有スケジュールだけです。 レポート固有のスケジュールは一時停止できません。  

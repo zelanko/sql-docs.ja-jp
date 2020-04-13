@@ -1,5 +1,6 @@
 ---
-title: エラーとイベントのリファレンス (Reporting Services) | Microsoft Docs
+title: エラーとイベントのリファレンス (Reporting Services)
+description: さまざまなレポート サーバー イベントの ID、種類、カテゴリ、ソース、説明を確認できます。 これらのイベントの種類には、エラー、警告、情報があります。
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: troubleshooting
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/12/2019
-ms.openlocfilehash: d2d1a8c853bd4ad577dd1c0ced9aed47b15a2ee7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9bfaa996eb0a0bf02440268c68a8a543470fd022
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68258543"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664403"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>エラーとイベントのリファレンス (Reporting Services)
 
@@ -28,7 +29,7 @@ ms.locfileid: "68258543"
 
 次のレポート サーバーのイベントは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アプリケーション ログに記録されます。  
   
-|イベント ID|種類|カテゴリ|source|説明|  
+|イベント ID|Type|カテゴリ|source|説明|  
 |--------------|----------|--------------|------------|-----------------|  
 |106|エラー|スケジュール設定|レポート サーバー|スケジュールされた操作 (たとえば、レポートのサブスクリプションおよび配信) を定義する場合は、SQL Server エージェントを実行する必要があります。|  
 |[107](../../reporting-services/troubleshooting/report-server-windows-service-mssqlserver-107.md)|エラー|起動/シャットダウン|レポート サーバー<br /><br /> スケジュールおよび配信のプロセッサ|*\<Source>* はレポート サーバー データベースに接続できません。 詳細については、「[レポート サーバー Windows サービス &#40;MSSQLServer&#41; 107](../../reporting-services/troubleshooting/report-server-windows-service-mssqlserver-107.md)」を参照してください。|  
@@ -60,7 +61,7 @@ ms.locfileid: "68258543"
 |133|エラー|管理|レポート サーバー<br /><br /> Web ポータル<br /><br /> スケジュールおよび配信のプロセッサ|構成ファイルを読み込めませんでした。 このエラーは、XML が無効な場合に発生することがあります。|  
 |134|エラー|管理|レポート サーバー|レポート サーバーでは、構成ファイルの設定の値を暗号化できませんでした。|  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
  [Reporting Services のサブスクリプションを監視する](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)  
  [Reporting Services のログ ファイルとソース](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)

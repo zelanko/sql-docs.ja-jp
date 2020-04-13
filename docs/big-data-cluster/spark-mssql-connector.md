@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8869a556eff61eca9cfc085b91cfc6fb9c0c3455
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7c8b8da0912f3c928857dd84b8981fecb10b17da
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79487680"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531114"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>MSSQL Spark コネクタを使用して Spark から SQL Server に対する読み取りと書き込みを行う方法
 
@@ -111,7 +111,7 @@ writer.save()
 
 ### <a name="run-the-sample-notebook"></a>サンプル ノートブックを実行する
 
-非 AD モードでこのデータを使って MSSQL Spark コネクタの使用法を示すには、サンプル ノートブックをダウンロードして、Azure Data Studio で開き、各コード ブロックを実行します。 ノードブックの操作に関する詳細については、「[SQL Server でノートブックを使用する方法](notebooks-guidance.md)」を参照してください。
+非 AD モードでこのデータを使って MSSQL Spark コネクタの使用法を示すには、サンプル ノートブックをダウンロードして、Azure Data Studio で開き、各コード ブロックを実行します。 ノードブックの操作に関する詳細については、[SQL Server でノートブックを使用する方法](../azure-data-studio/notebooks-guidance.md)に関するページを参照してください。
 
 1. PowerShell または Bash コマンド ラインから、次のコマンドを実行して **mssql_spark_connector_non_ad_pyspark.ipynb** サンプル ノートブックをダウンロードします。
 

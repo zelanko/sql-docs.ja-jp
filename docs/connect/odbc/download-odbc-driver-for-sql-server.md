@@ -1,20 +1,20 @@
 ---
 title: ODBC Driver for SQL Server のダウンロード
-ms.date: 03/10/2020
+ms.date: 04/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 53b09784-bb9d-4fd4-99d3-0492b3308ac4
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 0646ac7388edfefcf598556753225a182a4aa13e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ce99312dac0fa05af904f1c6a8c5e78c398d70fe
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79090394"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924580"
 ---
 # <a name="download-odbc-driver-for-sql-server"></a>ODBC Driver for SQL Server のダウンロード
 
@@ -67,6 +67,10 @@ Microsoft ODBC Driver for SQL Server は、関連するインストール手順�
 
 > [!Note]
 > `msodbcsql17-*` という名前のパッケージが最新バージョンです。 `msodbcsql-*` という名前のパッケージは、バージョン 13 のドライバーです。
+
+### <a name="alpine"></a>Alpine
+
+- [Alpine パッケージ](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.2.1-1_amd64.apk) ([PGP 署名](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.2.1-1_amd64.sig))
 
 ### <a name="debian"></a>Debian
 

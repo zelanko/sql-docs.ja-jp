@@ -5,16 +5,16 @@ description: この記事では、SQL Server ビッグ データ クラスター
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 03/12/2020
+ms.date: 03/31/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 136665cbe354ce0fdbbc575d2e97759f35cb3444
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cd004554ad45db40beae958bdf0a7142b1b74bab
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286226"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517163"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>SQL Server 2019 ビッグ データ クラスターのリリース ノート
 
@@ -24,7 +24,7 @@ ms.locfileid: "79286226"
 
 ## <a name="supported-platforms"></a>サポートされているプラットフォーム
 
-このセクションでは、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] (BDC) でサポートされているプラットフォームについて説明します。
+このセクションでは、BDC でサポートされているプラットフォームについて説明します。
 
 ### <a name="kubernetes-platforms"></a>Kubernetes プラットフォーム
 
@@ -50,25 +50,34 @@ ms.locfileid: "79286226"
 
 |プラットフォーム|サポートされているバージョン|
 |---------|---------|
-|`azdata`|サーバーと同じマイナー バージョンを指定する必要があります (SQL Server マスター インスタンスと同様)。<br/><br/>`azdata –-version` を実行して、バージョンを検証します。<br/><br/>SQL Server 2019 CU3 の時点で、このバージョンは `15.0.4023` です。|
+|`azdata`|サーバーと同じマイナー バージョンを指定する必要があります (SQL Server マスター インスタンスと同様)。<br/><br/>`azdata –-version` を実行して、バージョンを検証します。<br/><br/>最新バージョンについては、「[リリース履歴](#release-history)」を参照してください。|
 |Azure Data Studio|[Azure Data Studio](https://aka.ms/getazuredatastudio) の最新のビルドを取得します。|
 
 ## <a name="release-history"></a>リリース履歴
 
 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] のリリース履歴の一覧を次の表に示します。
 
-| Release               | Version       | リリース日 |
-|-----------------------|---------------|--------------|
-| [CU3](#cu3)           | 15.0.4023.6    | 2020-03-12   |
+| Release               | Version         | リリース日 |
+|-----------------------|-----------------|--------------|
+| [CU4](#cu4)           | 15.0.4033.1     | 2020-03-31   |
+| [CU3](#cu3)           | 15.0.4023.6     | 2020-03-12   |
 | [CU2](#cu2)           | 15.0.4013.40    | 2020-02-13   |
-| [CU1](#cu1)           | 15.0.4003.23   | 2020-01-07   |
-| [GDR1](#rtm)            | 15.0.2070.34  | 2019-11-04   |
+| [CU1](#cu1)           | 15.0.4003.23    | 2020-01-07   |
+| [GDR1](#rtm)          | 15.0.2070.34    | 2019-11-04   |
 
 ## <a name="how-to-install-updates"></a>更新プログラムのインストール方法
 
 更新プログラムをインストールする方法については、「[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]をアップグレードする方法](deployment-upgrade.md)」を参照してください。
 
-## <a name="cu3-mar-2020"></a><a id="cu3"></a> CU3 (2020 年 3 月)
+## <a name="cu4-april-2020"></a><a id="cu4"></a> CU4 (2020 年 4 月)
+
+SQL Server 2019 の Cumulative Update 4 (CU4) リリースです。 このリリースの SQL Server データベース エンジンのバージョンは、15.0.4033.1 です。
+
+|パッケージ バージョン | イメージ タグ |
+|-----|-----|
+|15.0.4033.1 |[2019-CU4-ubuntu-16.04]
+
+## <a name="cu3-march-2020"></a><a id="cu3"></a> CU3 (2020 年 3 月)
 
 SQL Server 2019 の Cumulative Update 3 (CU3) リリースです。 このリリースの SQL Server Database エンジンのバージョンは、15.0.4023.6 です。
 
@@ -83,7 +92,7 @@ SQL Server 2019 CU3 では、以前のリリースで発生した次の問題が
 - [プライベート リポジトリを使用した展開](#deployment-with-private-repository)
 - [タイムアウトによりアップグレードが失敗することがある](#upgrade-may-fail-due-to-timeout)
 
-## <a name="cu2-feb-2020"></a><a id="cu2"></a> CU2 (2020 年 2 月)
+## <a name="cu2-february-2020"></a><a id="cu2"></a> CU2 (2020 年 2 月)
 
 これは SQL Server 2019 の Cumulative Update 2 (CU2) リリースです。 このリリースの SQL Server データベース エンジンのバージョンは、15.0.4013.40 です。
 
@@ -91,7 +100,7 @@ SQL Server 2019 CU3 では、以前のリリースで発生した次の問題が
 |-----|-----|
 |15.0.4013.40 |[2019-CU2-ubuntu-16.04]
 
-## <a name="cu1-jan-2020"></a><a id="cu1"></a> CU1 (2020 年 1 月)
+## <a name="cu1-january-2020"></a><a id="cu1"></a> CU1 (2020 年 1 月)
 
 これは SQL Server 2019 の Cumulative Update 1 (CU1) リリースです。 このリリースに対する SQL Server データベース エンジンのバージョンは 15.0.4003.23 です。
 
@@ -99,7 +108,7 @@ SQL Server 2019 CU3 では、以前のリリースで発生した次の問題が
 |-----|-----|
 |15.0.4003.23|[2019-CU1-ubuntu-16.04]
 
-## <a name="gdr1-nov-2019"></a><a id="rtm"></a> GDR1 (2019 年 11 月)
+## <a name="gdr1-november-2019"></a><a id="rtm"></a> GDR1 (2019 年 11 月)
 
 SQL Server 2019 一般配布リリース 1 (GDR1) で [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-nover.md)]の一般提供が開始されました。 このリリースの SQL Server データベース エンジンのバージョンは、15.0.2070.34 です。
 

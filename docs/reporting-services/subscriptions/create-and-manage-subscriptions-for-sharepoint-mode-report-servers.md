@@ -1,5 +1,6 @@
 ---
 title: SharePoint モード レポート サーバーのサブスクリプションの作成と管理 | Microsoft Docs
+description: SharePoint モードのレポート サーバーと統合されている SharePoint Web アプリから、レポートを配信する Reporting Services サブスクリプションを作成する方法について説明します。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d4ffc3930003a4035211a4a63a54bc4f8196948
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5275678180b785b1d41705d4f2debdada8fd5a78
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578346"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742259"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>SharePoint モード レポート サーバーのサブスクリプションの作成と管理
   SharePoint モードのレポート サーバーと統合されている SharePoint Web アプリケーションから、レポートを配信する [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションを作成することができます。 サブスクリプションは、ドキュメント ライブラリやファイル フォルダーに対して、または電子メールとしてレポートを配信できます。 このトピックでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションを作成するための要件と手順についてまとめます。  
@@ -32,7 +33,7 @@ ms.locfileid: "65578346"
   
 -   **ファイル フォルダー:** 元のレポートに基づくドキュメントを、ファイル システムの共有フォルダーに配信できます。 この場合、ネットワーク接続経由でアクセスできる既存のフォルダーを選択する必要があります。  
   
--   **電子メール:** レポート サーバーの電子メール配信拡張機能を使用できるようにレポート サーバーが構成されている場合は、レポートまたはエクスポートされたレポート ファイル (出力形式で保存) を受信トレイに送信するサブスクリプションを作成できます。 レポートまたはレポート URL なしで通知だけを受信するには、 **[レポートへのリンクを含める]** チェック ボックスと **[メッセージ内にレポートを表示する]** チェック ボックスをオフにします。  
+-   **電子メール:** レポート サーバーのメール配信拡張機能を使用できるようにレポート サーバーが構成されている場合は、レポートまたはエクスポートされたレポート ファイル (出力形式で保存) を受信トレイに送信するサブスクリプションを作成できます。 レポートまたはレポート URL なしで通知だけを受信するには、 **[レポートへのリンクを含める]** チェック ボックスと **[メッセージ内にレポートを表示する]** チェック ボックスをオフにします。  
   
  **このトピックの内容:**  
   

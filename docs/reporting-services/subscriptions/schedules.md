@@ -1,5 +1,6 @@
 ---
 title: スケジュール | Microsoft Docs
+description: この概要では、共有スケジュールとレポート固有スケジュールを使用してレポートの処理および配信を制御する方法について説明します。
 ms.date: 07/01/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e73ce189b38f3610468993999df172d778f30026
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 503396c71b1f3795177d7a6e1e23032f4833beba
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578092"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742162"
 ---
 # <a name="schedules"></a>スケジュール
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、レポートの処理および配信の制御を支援する **共有スケジュール** と **レポート固有スケジュール** が用意されています。 これら 2 種類のスケジュールでは、定義、格納、管理の方法が異なります。 2 種類のスケジュールの内部の構成は同じです。 すべてのスケジュールでは、毎月、毎週、または毎日という定期実行の種類を指定します。 定期実行の種類では、イベントが発生する頻度を表す間隔と範囲を設定します。 定期的な実行パターンの種類とパターンの指定方法は、共有スケジュールとレポート固有スケジュールのいずれを作成する場合でも同じです。

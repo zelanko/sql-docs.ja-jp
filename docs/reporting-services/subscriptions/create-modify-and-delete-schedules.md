@@ -1,5 +1,6 @@
 ---
 title: スケジュールの作成、変更、および削除 | Microsoft Docs
+description: Reporting Services の共有スケジュールを作成、変更、削除します。 ネイティブ モードの場合は、Web ポータルまたは Management Studio を使用します。 SharePoint の場合は、サービス アプリを使用します。
 ms.date: 06/11/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 29b453914dce3d371ded8f401fd4af0380a115b8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ca14dd80ab00e0a2930ddabdf206f8fbaf6c08eb
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67140221"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742271"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
   この記事を利用して、[!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 共有スケジュールを作成、変更、および削除する方法について学習しましょう。  ネイティブ モードの共有スケジュールを管理するには、Web ポータルの [スケジュール] ページまたは [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]の [共有スケジュール] フォルダーを使用します。 SharePoint モードの場合は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの管理ページを使用します。

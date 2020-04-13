@@ -1,1 +1,1 @@
-<Token>**適用対象:** ![○](media/yes.png).NET Framework ![○](media/yes.png).NET Core ![X](media/no.png).NET Standard </Token>
+<Token>**適用対象:** ![はい](media/yes-icon.png).NET Framework ![はい](media/yes-icon.png).NET Core ![いいえ](media/no-icon.png).NET Standard </Token>

@@ -1,5 +1,6 @@
 ---
 title: レポート サーバーでタイム ゾーンと時計の設定を変更する | Microsoft Docs
+description: レポート サーバーのタイム ゾーンと時計の設定を変更します。 レポート サーバーのタイム ゾーンを設定することはできません。そのため、コンピューターのタイム ゾーンを設定するか、SharePoint 領域の設定を使用します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 69a19468-baa1-40f6-b158-8afdab0f8968
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5c1e3a2b4fe468f3565dbf7ad47295ab8836315b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2abd40f651171717a5ef7f0351a38780812828b3
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578365"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742282"
 ---
 # <a name="change-time-zones-and-clock-settings-on-a-report-server"></a>レポート サーバーでタイム ゾーンと時計の設定を変更する
   レポート サーバーでは、インストールされているコンピューターのローカル時刻が常に使用されます。 異なるタイム ゾーンを使用するように構成することはできません。 クライアント アプリケーションと、参照先のレポート サーバーのタイム ゾーンが異なる場合、スケジュールが設定された操作は、レポート サーバーのタイム ゾーンを使用して実行されます。 レポート マネージャーと SharePoint 管理ページの各スケジュール ページには、スケジュールが設定された操作が行われる正確な日時がわかるよう、タイム ゾーンが明記されます。 たとえば、カスタム スケジュールを作成するためのページには、"時間は (UTC-08:00) 太平洋標準時 (米国およびカナダ) で表されます" と表示されます。

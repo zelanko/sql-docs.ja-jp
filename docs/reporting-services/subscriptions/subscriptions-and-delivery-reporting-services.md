@@ -1,5 +1,6 @@
 ---
 title: サブスクリプションと配信 (Reporting Services) | Microsoft Docs
+description: この記事では、特定の時刻に、またはイベントへの応答としてレポートを配信する、Reporting Services サブスクリプションについて説明します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fd9288a630dd24dd8d79deef184cfc4c4fabcd9f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 91de7513eb5d7a6528537ca68b15765c36162f8d
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578039"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742230"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>サブスクリプションと配信 (Reporting Services)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションは、特定の時刻で、またはイベントへの応答として、指定されたファイル形式でレポートを配信する構成です。 たとえば、毎週水曜日に、MonthlySales.rdl レポートを Microsoft Word 文書としてファイル共有に保存します。 サブスクリプションを使用して、レポート配信のスケジュールや自動化を設定したり、レポート パラメーターの特定の値セットを指定したりすることができます。  
@@ -176,7 +177,7 @@ ms.locfileid: "65578039"
   
 -   <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ファイル共有アカウント**を使用するよう構成されている**  のサブスクリプションをすべて列挙する PowerShell スクリプトの例については、「[サブスクリプション設定とファイル共有アカウント &#40;構成マネージャー&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)」を参照してください。  
+-   **ファイル共有アカウント**を使用するよう構成されている [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のサブスクリプションをすべて列挙する PowerShell スクリプトの例については、「[サブスクリプション設定とファイル共有アカウント &#40;構成マネージャー&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [データ ドリブン サブスクリプションの作成 &#40;SSRS チュートリアル&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   

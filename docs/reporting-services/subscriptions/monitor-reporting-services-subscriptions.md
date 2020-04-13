@@ -1,5 +1,6 @@
 ---
 title: Reporting Services のサブスクリプションを監視する | Microsoft Docs
+description: UI、PowerShell、またはログ ファイルを使用して Reporting Services サブスクリプションを追跡する方法について説明します。 監視オプションは、実行しているレポート サーバーのモードによって異なります。
 ms.date: 06/12/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d1cfa2c5face12eab1677d4a1386511d005aa5dd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d5c5b4965489544cfd1f6ee5ccfb1ce4170381bf
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67285041"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742041"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Reporting Services のサブスクリプションを監視する
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションの監視は、ユーザー インターフェイス、Windows PowerShell、またはログ ファイルから行うことができます。 監視のために使用できるオプションは、実行しているレポート サーバーのモードによって異なります。  
@@ -76,7 +77,7 @@ ms.locfileid: "67285041"
   
  サブスクリプションに関連するトレース ログ ファイルのサンプル エラー メッセージを次に示します。  
   
--   library!WindowsService_7!b60!05/20/2019-22:34:36 i 情報: サーバー システムで指定されているとおり、EnableExecutionLogging を 'True' に初期化中です properties.emailextension!WindowsService_7!b60!05/20/2019-22:34:41 エラー: **メールを送信中にエラーが発生しました**。 例外: System.Net.Mail.SmtpException: SMTP サーバーにセキュリティで保護された接続が必要であるか、またはクライアントが認証されていません。 サーバーの応答内容: 5.7.1 クライアントは System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response) で認証されませんでした  
+-   library!WindowsService_7!b60!05/20/2019-22:34:36 i INFO:Initializing EnableExecutionLogging to 'True'  as specified in Server system properties.emailextension!WindowsService_7!b60!05/20/2019-22:34:41 ERROR:**Error sending email**. 例外:System.Net.Mail.SmtpException:SMTP サーバーにセキュリティで保護された接続が必要であるか、クライアントが認証されていません。 サーバーの応答内容:5.7.1 クライアントは System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response) で認証されませんでした  
   
  ログ ファイルには、レポートが開かれているかどうか、または実際に配信が成功したかどうかに関する情報は含まれません。 配信が成功するということは、スケジュールおよび配信のプロセッサでエラーが生成されず、レポート サーバーがメール サーバーに接続したことを意味します。 電子メールがユーザーのメールボックスで配信不能なメッセージ エラーとなった場合、その情報はログ ファイルに含まれません。 ログ ファイルの詳細については、「 [Reporting Services のログ ファイルとソース](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)」を参照してください。  
   
@@ -97,7 +98,7 @@ ms.locfileid: "67285041"
 ||||||||  
 |-|-|-|-|-|-|-|  
 |Date|Process|領域|カテゴリ|Level|Correlation|Message|  
-|2019/5/21 14:34:06:15|アプリケーション プール： a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|レポート サーバー電子メール拡張機能|Unexpected|(空)|**Error sending email.** 例外: System.Net.Mail.SmtpException: メールボックスが使用できません。 サーバーの応答内容: 5.7.1 クライアントは、次の場所で、この送信者として送信する権限がありません。System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)、System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)、System.Net.Mail.SmtpClient.Send(MailMessage message)、Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
+|2019/5/21 14:34:06:15|アプリケーション プール： a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|レポート サーバー電子メール拡張機能|Unexpected|(空)|**Error sending email.** 例外:System.Net.Mail.SmtpException:メールボックスが使用できません。 サーバーの応答内容:5.7.1 クライアントは、次の場所で、この送信者として送信する権限がありません。System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)、System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)、System.Net.Mail.SmtpClient.Send(MailMessage message)、Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
   
 ##  <a name="use-powershell-to-monitor-subscriptions"></a><a name="bkmk_use_powershell"></a> PowerShell を使用してサブスクリプションを監視する  
  ネイティブ モードまたは SharePoint モードのサブスクリプションの状態を確認するために使用できる PowerShell スクリプトの例は、「[サブスクリプション所有者の管理とサブスクリプションの実行 - PowerShell](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)」を参照してください。  
@@ -117,7 +118,7 @@ ms.locfileid: "67285041"
   
  処理を妨げる条件が原因でサブスクリプションが無効になる場合、サブスクリプションは、レポート サーバーがサブスクリプションを実行したときにこの事実を反映します。 サブスクリプションが毎週金曜日午前 2 時にレポートを配信するようにスケジュールされているのに、使用する配信拡張機能が月曜日の午前 9 時にアンインストールされた場合、サブスクリプションは、金曜日の午前 2 時になるまで無効な状態であることを示しません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ネイティブ モード レポート サーバーのサブスクリプションの作成と管理](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [サブスクリプションと配信 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
