@@ -13,12 +13,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c5e7595b421627266c7f08ca76588f481a19554f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 55ed06976ef161037134164116ea2364f420f405
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75257666"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80530943"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>フルテキスト インデックスの作成と管理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -109,7 +109,7 @@ ms.locfileid: "75257666"
   
 [SELECT](../../t-sql/queries/select-transact-sql.md) ステートメントを使用して、 [INDEXPROPERTY](../../t-sql/functions/indexproperty-transact-sql.md) 関数を呼び出します。 この関数呼び出しでは、次のように、OBJECT_ID 関数を使用してテーブル名 (*table_name*) をテーブル ID に変換します。その際、対象テーブルの一意のインデックスの名前と **IsFulltextKey** インデックス プロパティを指定します。  
   
-```  
+```sql  
 SELECT INDEXPROPERTY( OBJECT_ID('table_name'), 'index_name',  'IsFulltextKey' );  
 ```  
   
@@ -119,7 +119,7 @@ SELECT INDEXPROPERTY( OBJECT_ID('table_name'), 'index_name',  'IsFulltextKey' );
   
  次の例では、フルテキスト キー列の一意性を確保するために `PK_Document_DocumentID` インデックスが使用されているかどうかを確認します。  
   
-```  
+```sql  
 USE AdventureWorks  
 GO  
 SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentID',  'IsFulltextKey' )  
@@ -133,7 +133,7 @@ SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentID
  
 この識別子を取得するには、SELECT ステートメントで OBJECTPROPERTYEX 関数を呼び出します。 次のようにテーブル名 (*table_name*) をテーブル ID に変換する OBJECT_ID 関数を使用し、 **TableFulltextKeyColumn** プロパティを指定します。  
   
-```  
+```sql  
 SELECT OBJECTPROPERTYEX(OBJECT_ID( 'table_name'), 'TableFulltextKeyColumn' ) AS 'Column Identifier';  
 ```  
   
@@ -141,7 +141,7 @@ SELECT OBJECTPROPERTYEX(OBJECT_ID( 'table_name'), 'TableFulltextKeyColumn' ) AS 
   
  次の例では、フルテキスト キー列の識別子または NULL が返されます。 NULL は、無効なインデックス名が使用されている、インデックス名がテーブルに対応していない、テーブルが存在しないなどを意味します。  
   
-```  
+```sql  
 USE AdventureWorks;  
 GO  
 SELECT OBJECTPROPERTYEX(OBJECT_ID('Production.Document'), 'TableFulltextKeyColumn');  
@@ -150,7 +150,7 @@ GO
   
  次の例は、一意のキー列の識別子からその列の名前を取得する方法を示しています。  
   
-```  
+```sql  
 USE AdventureWorks;  
 GO  
 DECLARE @key_column sysname  

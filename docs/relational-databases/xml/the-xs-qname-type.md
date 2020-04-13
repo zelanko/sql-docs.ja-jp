@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 72c5bfde-b0b2-4372-bf36-97ba930dea06
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fd21cae531e41359c797bc3197e3e5bacce65a0f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f25b1828191a695b21d733e1304dbaa3177e2a27
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68078133"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662932"
 ---
 # <a name="the-xsqname-type"></a>The xs:QName Type
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、XML スキーマ制約要素を使用する **xs:QName** から派生した型はサポートしません。 また、現在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、メンバー型に **QName** を指定した共用体型をサポートしません。  
   
 ## <a name="example"></a>例  

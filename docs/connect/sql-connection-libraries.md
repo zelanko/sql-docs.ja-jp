@@ -1,23 +1,23 @@
 ---
 title: Microsoft SQL データベースの接続ライブラリ | Microsoft Docs
 description: 各種のクライアント プログラミング言語から Microsoft SQL Server および Azure SQL Database への接続を可能にするモジュールのダウンロード リンクを示します。
-author: RothJa
+author: David-Engel
 ms.prod: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.custom: ''
 ms.topic: article
-ms.date: 03/05/2020
-ms.author: JRoth
-ms.openlocfilehash: 88fbd0e3fd01492b8e7d920eb132196f8a005478
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.date: 03/06/2020
+ms.author: v-daenge
+ms.openlocfilehash: a60c1314164ddc6b662914d828e4bf5973f38d2f
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79434119"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219381"
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Microsoft SQL データベースの接続モジュール
 
-この記事では、クライアント プログラムが [Microsoft SQL Server](../relational-databases/database-features.md)、およびそれとよく似たクラウド版 [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/) との対話に使用できる接続モジュール (*ドライバー*) のダウンロード リンクを示します。 次のオペレーティング システムで実行されるさまざまなプログラミング言語用のドライバーが用意されています。
+この記事では、クライアント プログラムが [Microsoft SQL Server](../relational-databases/database-features.md)、およびそれとよく似たクラウド版 [Azure SQL Database](/azure/sql-database/) との対話に使用できる接続モジュール (*ドライバー*) のダウンロード リンクを示します。 次のオペレーティング システムで実行されるさまざまなプログラミング言語用のドライバーが用意されています。
 
 - Linux
 - macOS
@@ -44,7 +44,7 @@ ms.locfileid: "79434119"
 | PHP | [PHP](./php/download-drivers-php-sql-server.md) |
 | Python | [pyodbc、インストール手順](./python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md)<br />[ODBC のダウンロード](./odbc/download-odbc-driver-for-sql-server.md) |
 | Ruby | [Ruby ドライバー、インストール手順](./ruby/step-1-configure-development-environment-for-ruby-development.md)<br />[Ruby のダウンロード ページ](https://rubyinstaller.org/downloads/) |
-| &nbsp; | <br/> |
+| &nbsp; | &nbsp; |
 
 <a name="anchor-40-drivers-orm-access" />
 
@@ -60,7 +60,7 @@ ms.locfileid: "79434119"
 | Node.js | [Sequelize ORM](https://docs.sequelizejs.com) |
 | Python | [Django](https://www.djangoproject.com/) |
 | Ruby | [Ruby on Rails](https://rubyonrails.org/) |
-| &nbsp; | <br/> |
+| &nbsp; | &nbsp; |
 
 <a name="anchor-60-build-an-app-webpages" />
 

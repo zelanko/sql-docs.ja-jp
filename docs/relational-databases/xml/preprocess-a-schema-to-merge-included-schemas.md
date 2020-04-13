@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 58773dbce29589d66403c6584b5360c0dc8026d4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 28dbb25bb3952c586b2dfc4e2b05556c41ee7602
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67995330"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664911"
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>含まれているスキーマをマージするためのスキーマの前処理
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   W3C XSD の **include** 要素では、スキーマのモジュール性がサポートされます。そのため、1 つの XML スキーマを複数の物理ファイルにパーティション分割できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、この要素は現在サポートされていません。 この要素を含む XML スキーマはサーバーによって拒否されます。  
   
  解決方法として、\<xsd:include> ディレクティブを含む XML スキーマを前処理して、含まれているすべてのスキーマの内容をコピーし、1 つのスキーマにマージすることで、サーバーにアップロードできます。 次の C# コードを使用すると、前処理を行うことができます。 コードの最初の部分にあるコメントにはこのコードの使用方法が記述されています。  

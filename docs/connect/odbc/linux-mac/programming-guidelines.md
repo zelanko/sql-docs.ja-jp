@@ -9,12 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: v-makouz
 ms.author: v-daenge
-ms.openlocfilehash: 9299e42d4e9defb5695716771a60ea2855729ee7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b54fd76c8c6e60b7250ef354b8999347eb96d95a
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80912378"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219233"
 ---
 # <a name="programming-guidelines"></a>プログラミング ガイドライン
 
@@ -22,7 +22,7 @@ ms.locfileid: "80912378"
 
 macOS と Linux での [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のプログラミング機能は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ([SQL Server Native Client (ODBC)](https://go.microsoft.com/fwlink/?LinkID=134151)) の ODBC に基づいています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client は、Windows Data Access Components の ODBC に基づいています ([ODBC プログラマー リファレンス](https://go.microsoft.com/fwlink/?LinkID=45250))。  
 
-ODBC アプリケーションでは、unixODBC ヘッダー ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、`/usr/local/include/msodbcsql.h`、`sql.h`、`sqlext.h`) をインクルードした後に `sqltypes.h` をインクルードすることで、複数のアクティブな結果セット (MARS) やその他の `sqlucode.h` 固有の機能を使用できます。 次に、Windows ODBC アプリケーションで使用する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 固有の項目に、同じシンボル名を使用します。
+ODBC アプリケーションでは、unixODBC ヘッダー (`sql.h`、`sqlext.h`、`sqltypes.h`、`sqlucode.h`) をインクルードした後に `/usr/local/include/msodbcsql.h` をインクルードすることで、複数のアクティブな結果セット (MARS) やその他の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 固有の機能を使用できます。 次に、Windows ODBC アプリケーションで使用する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 固有の項目に、同じシンボル名を使用します。
 
 ## <a name="available-features"></a>利用可能な機能  
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC 用 Native Client のドキュメント ([SQL Server Native Client (ODBC)](https://go.microsoft.com/fwlink/?LinkID=134151)) の次のセクションは、macOS と Linux で ODBC ドライバーを使用する場合に有効です。  
@@ -39,7 +39,7 @@ ODBC アプリケーションでは、unixODBC ヘッダー ([!INCLUDE[ssNoVersi
 -   [結果の処理 (ODBC)](https://msdn.microsoft.com/library/ms130812.aspx)  
 -   [ストアド プロシージャの実行](../../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)
 -   [スパース列のサポート (ODBC)](https://msdn.microsoft.com/library/cc280357.aspx)
--   [SSL 暗号化](../../../relational-databases/native-client/features/using-encryption-without-validation.md)
+-   [検証を伴わない暗号化の使用](../../../relational-databases/native-client/features/using-encryption-without-validation.md)
 -   [テーブル値パラメーター](https://docs.microsoft.com/sql/relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc)
 -   [コマンドおよびデータ API の UTF-8 および UTF-16](https://msdn.microsoft.com/library/ff878241.aspx)
 -   [カタログ関数の使用](../../../relational-databases/native-client/odbc/using-catalog-functions.md)  
@@ -75,11 +75,11 @@ ODBC Driver 13 および 13.1 の場合、SQLCHAR データは UTF-8 である�
 ODBC Driver 17 の場合、次のいずれかの文字セット/エンコードの SQLCHAR データがサポートされます。
 
 > [!NOTE]  
-> `iconv` と `musl` には `glibc` の違いがあるため、これらのロケールの多くは、Alpine Linux ではサポートされていません。
+> `musl` と `glibc` には `iconv` の違いがあるため、これらのロケールの多くは、Alpine Linux ではサポートされていません。
 >
 > 詳細については、「[Functional differences from glibc (glibc との機能の違い)](https://wiki.musl-libc.org/functional-differences-from-glibc.html)」を参照してください。
 
-|Name|説明|
+|名前|説明|
 |-|-|
 |UTF-8|Unicode|
 |CP437|MS-DOS ラテン アメリカ|
@@ -90,7 +90,7 @@ ODBC Driver 17 の場合、次のいずれかの文字セット/エンコード�
 |CP949|韓国語、EUC-KR|
 |CP950|繁体字中国語、Big5|
 |CP1251|キリル文字|
-|CP1253|Greek|
+|CP1253|ギリシャ語|
 |CP1256|アラビア語|
 |CP1257|バルト語|
 |CP1258|ベトナム語|
@@ -102,7 +102,7 @@ ODBC Driver 17 の場合、次のいずれかの文字セット/エンコード�
 |ISO-8859-6|ラテン/アラビア語|
 |ISO-8859-7|ラテン/ギリシャ語|
 |ISO-8859-8 / CP1255|ヘブライ語|
-|ISO-8859-9 / CP1254|Turkish|
+|ISO-8859-9 / CP1254|トルコ語|
 |ISO-8859-13|ラテン-7|
 |ISO-8859-15|ラテン-9|
 

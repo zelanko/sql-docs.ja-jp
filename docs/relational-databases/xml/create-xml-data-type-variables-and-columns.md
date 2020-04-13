@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 16cb419ef7cc893575e91c695158e9d7b66ce2c0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 71bda739146d1729cdf09d510c8d8c7dfb835a84
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67984868"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664607"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>XML データ型の変数と列の作成
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   **xml** データ型は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] での組み込みデータ型の 1 つであり、 **int** 、 **varchar**などの他の組み込みデータ型といくつかの点で似ている部分があります。 他の組み込みの型と同じく、 **xml** データ型はテーブルを作成するときに列の型として変数の型、パラメーターの型、および関数の戻り値の型と同様に使用したり、 [CAST および CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md)で使用できます。  
   
 ## <a name="creating-columns-and-variables"></a>列と変数の作成  

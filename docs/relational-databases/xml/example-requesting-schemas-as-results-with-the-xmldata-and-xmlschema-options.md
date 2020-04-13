@@ -13,15 +13,15 @@ ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: a11e6a91c1fea9a0eb7b20124e0de8565540caf5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ed72f442fa85a505ace0a1826028ee43f1ea6e97
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75243783"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664513"
 ---
 # <a name="request-schemas-as-results-with-xmldata--xmlschema"></a>XMLDATA & XMLSCHEMA を使用した結果としてのスキーマの要求
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   次のクエリでは、ドキュメント構造を記述する XML-DATA スキーマが返されます。  
   
 ## <a name="example"></a>例  

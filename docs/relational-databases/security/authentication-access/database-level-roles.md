@@ -38,12 +38,12 @@ ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e91fcd2281082bbef88f0a8387d3ed6cef603d9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: edc3b7277646122dfec73f7b79445a8ca066e24c
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287336"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664463"
 ---
 # <a name="database-level-roles"></a>データベース レベルのロール
 
@@ -96,7 +96,7 @@ ms.locfileid: "79287336"
 |**loginmanager** | 仮想 master データベースのログインを作成および削除できます。|
 
 > [!NOTE]
-> サーバー レベル プリンシパルと Azure Active Directory 管理者 (構成されている場合) には [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] と [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)] でのすべての権限があり、すべてのロールのメンバーである必要はありません。 詳細については、「 [SQL Database の認証と承認: アクセス権の付与](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/)」を参照してください。 
+> サーバー レベル プリンシパルと Azure Active Directory 管理者 (構成されている場合) には [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] と [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)] でのすべての権限があり、すべてのロールのメンバーである必要はありません。 詳細については、「[SQL Database の認証と承認:アクセス権の付与](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/)」を参照してください。 
   
 ## <a name="msdb-roles"></a>msdb ロール  
  msdb データベースには、次の表に示す特別な用途のロールが含まれています。  
@@ -112,29 +112,17 @@ ms.locfileid: "79287336"
 > [!IMPORTANT]  
 >  **db_ssisadmin** ロールおよび **dc_admin** ロールのメンバーは、特権を sysadmin に昇格できる可能性があります。 このような特権の昇格が発生するのは、それらのロールが [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] パッケージを変更でき、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] エージェントの sysadmin セキュリティ コンテキストを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] パッケージを実行できるためです。 メンテナンス プラン、データ コレクション セット、およびその他の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] パッケージの実行時にこの特権の昇格を防ぐには、特権が制限されたプロキシ アカウントを使用するようにパッケージを実行する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント ジョブを構成するか、 **db_ssisadmin** ロールおよび **dc_admin** ロールには **sysadmin** メンバーのみを追加するようにします。  
 
-## <a name="working-with-r-services"></a>R Services の使用  
-
-**適用対象:** SQL Server ( [!INCLUDE[ssSQLv14_md](../../../includes/sssqlv14-md.md)]   
-
-R Services がインストールされている場合は、パッケージの管理で追加のデータベース ロールを使用できます。 詳細については、[SQL Server の R パッケージ管理](../../../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md)に関するページを参照してください。
-
-|ロール名 |説明|  
-|-------------|-----------------|
-|**rpkgs-users** |ユーザーは、rpkgs-shared ロールのメンバーによってインストールされた共有パッケージを使用することができます。|
-|**rpkgs-private** |rpkgs-users ロールと同じアクセス許可で共有パッケージにアクセスできます。 このロールのメンバーは、プライベート スコープのパッケージをインストール、削除および使用することもできます。|
-|**rpkgs-shared** |rpkgs-private ロールと同じアクセス許可を提供します。 このロールのメンバーであるユーザーは、共有パッケージをインストールまたは削除することもできます。|
-  
 ## <a name="working-with-database-level-roles"></a>データベース レベルのロールの操作  
  次の表では、データベース レベルのロールを操作するためのコマンド、ビュー、および関数について説明します。  
   
-|機能|種類|説明|  
+|機能|Type|説明|  
 |-------------|----------|-----------------|  
-|[sp_helpdbfixedrole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql.md)|メタデータ|固定データベース ロールの一覧を返します。|  
-|[sp_dbfixedrolepermission &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql.md)|メタデータ|固定データベース ロールの権限を表示します。|  
-|[sp_helprole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)|メタデータ|現在のデータベース内のロールに関する情報を返します。|  
-|[sp_helprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)|メタデータ|現在のデータベースに含まれるロールのメンバーに関する情報を返します。|  
-|[sys.database_role_members &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)|メタデータ|データベース ロールのメンバーごとに 1 行のデータを返します。|  
-|[IS_MEMBER &#40;Transact-SQL&#41;](../../../t-sql/functions/is-member-transact-sql.md)|メタデータ|現在のユーザーが、指定された Microsoft Windows グループまたは Microsoft SQL Server データベース ロールのメンバーであるかどうかを示します。|  
+|[sp_helpdbfixedrole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql.md)|Metadata|固定データベース ロールの一覧を返します。|  
+|[sp_dbfixedrolepermission &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql.md)|Metadata|固定データベース ロールの権限を表示します。|  
+|[sp_helprole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)|Metadata|現在のデータベース内のロールに関する情報を返します。|  
+|[sp_helprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)|Metadata|現在のデータベースに含まれるロールのメンバーに関する情報を返します。|  
+|[sys.database_role_members &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)|Metadata|データベース ロールのメンバーごとに 1 行のデータを返します。|  
+|[IS_MEMBER &#40;Transact-SQL&#41;](../../../t-sql/functions/is-member-transact-sql.md)|Metadata|現在のユーザーが、指定された Microsoft Windows グループまたは Microsoft SQL Server データベース ロールのメンバーであるかどうかを示します。|  
 |[CREATE ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-role-transact-sql.md)|command|現在のデータベースに新しいデータベース ロールを作成します。|  
 |[ALTER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-role-transact-sql.md)|command|データベース ロールの名前またはメンバーシップを変更します。|  
 |[DROP ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-role-transact-sql.md)|command|データベースからロールを削除します。|  

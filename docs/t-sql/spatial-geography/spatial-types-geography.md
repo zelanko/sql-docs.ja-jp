@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d9e4952a-1841-4465-a64b-11e9288dba1d
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5b98f2283cfb9d89277ad97ffc7a883e43a42b4f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9bef65845acd2e81cfea0910e81443d7e4bc390f
+ms.sourcegitcommit: 7ed12a64f7f76d47f5519bf1015d19481dd4b33a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68042519"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80891153"
 ---
 # <a name="spatial-types---geography"></a>空間型 - geography
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "68042519"
 ### <a name="a-showing-how-to-add-and-query-geography-data"></a>A. geography 型のデータの追加方法とクエリ方法を示す  
  次の例は、geography 型のデータの追加方法とクエリ方法を示しています。 最初の例では、ID 列と `geography` 型の `GeogCol1`列を含むテーブルを作成します。 3 番目の列で、 `geography` 型の列をその Open Geospatial Consortium (OGC) の Well-Known Text (WKT) 表現で示し、 `STAsText()` メソッドを使用します。 次に 2 つの行が挿入されます。1 つは、 `LineString` の `geography`インスタンスを含む行で、もう 1 つは `Polygon` インスタンスを含む行です。  
   
-```  
+```sql  
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
     DROP TABLE dbo.SpatialTable;  
 GO  
@@ -64,7 +64,7 @@ GO
 ### <a name="b-returning-the-intersection-of-two-geography-instances"></a>B. 2 つの geography インスタンスが交差する点を返す  
  次の例では、`STIntersection()` メソッドを使用して、前の例で挿入した 2 つの `geography` インスタンスが交差する点を返します。  
   
-```  
+```sql  
 DECLARE @geog1 geography;  
 DECLARE @geog2 geography;  
 DECLARE @result geography;  
@@ -78,7 +78,7 @@ SELECT @result.STAsText();
 ### <a name="c-using-geography-in-a-computed-column"></a>C. 計算列で geography 型を使用する  
  次の例では、**geography** 型を使用して、保存される計算列を持つテーブルを作成します。  
   
-```  
+```sql  
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
     DROP TABLE dbo.SpatialTable;  
 GO  
@@ -88,7 +88,7 @@ CREATE TABLE SpatialTable
     locationId int IDENTITY(1,1),  
     location geography,  
     deliveryArea as location.STBuffer(10) persisted  
-)  
+);  
 ```  
   
 ## <a name="see-also"></a>参照  

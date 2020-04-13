@@ -22,12 +22,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7c55041d7b461406305a7b3a17c0e274270b7c5f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 59dba483b5c8de6ba46634cfb40816ff8e01ee9b
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68893891"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664241"
 ---
 # <a name="create-external-resource-pool-transact-sql"></a>CREATE EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ MAX_PROCESSES =*value*
 
 リソース プールの一般的な情報については、「[リソース ガバナー リソース プール](../../relational-databases/resource-governor/resource-governor-resource-pool.md)」、「[sys.resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)」、および「[sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)」をご覧ください。
 
-機械学習で使用される外部リソース プールの管理に固有の情報については、「[Resource governance for machine learning in SQL Server (SQL Server での機械学習のリソース管理)](../../advanced-analytics/r/resource-governance-for-r-services.md)」をご覧ください。 
+機械学習で使用される外部リソース プールの管理に固有の情報については、「[Resource governance for machine learning in SQL Server (SQL Server での機械学習のリソース管理)](../../machine-learning/administration/resource-governor.md)」をご覧ください。 
 
 ## <a name="permissions"></a>アクセス許可
 

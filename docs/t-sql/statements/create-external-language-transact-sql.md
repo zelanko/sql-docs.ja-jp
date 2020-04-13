@@ -1,21 +1,20 @@
 ---
 title: CREATE EXTERNAL LANGUAGE (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 02/19/2020
+ms.date: 04/03/2020
 ms.prod: sql
-ms.reviewer: dphansen
 ms.technology: language-extensions
 ms.topic: language-reference
-author: nelgson
-ms.author: negust
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 65f805c0d2467f3b4301ed1d237284cb61224b97
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 76d14fac74d806427f67eadaea3bb5363b17d88a
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77520895"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664214"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -23,7 +22,7 @@ ms.locfileid: "77520895"
 指定したファイル パスまたはバイト ストリームから、データベースに外部言語拡張機能を登録します。 このステートメントは、データベース管理者が SQL Server によってサポートされている任意の OS プラットフォームで新しい外部言語拡張機能を登録する汎用メカニズムとして機能します。 詳細については、[Language Extensions (言語拡張)](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview) に関する記事を参照してください。
 
 > [!NOTE]
-> 現在、外部言語としては **Java** のみがサポートされています。 **R** と **Python** は予約済みの名前であり、それらの特定の名前で外部言語を作成することはできません。 **R** および **Python** を使う方法について詳しくは、「[SQL Server Machine Learning Services (SQL Server Machine Learning Services)](https://docs.microsoft.com/sql/advanced-analytics/)」をご覧ください。
+> 現在、外部言語としては **Java** のみがサポートされています。 **R** と **Python** は予約済みの名前であり、それらの特定の名前で外部言語を作成することはできません。 **R** および **Python** を使う方法について詳しくは、「[SQL Server Machine Learning Services (SQL Server Machine Learning Services)](https://docs.microsoft.com/sql/machine-learning/)」をご覧ください。
 
 ## <a name="syntax"></a>構文
 
@@ -106,10 +105,6 @@ FROM <file_spec> [ ,...2 ]
 **platform**
 
 このパラメーターは、ハイブリッド OS のシナリオに必要です。 ハイブリッド アーキテクチャでは、プラットフォームごとに 1 回、言語を登録する必要があります。 プラットフォームと言語の名前は、外部言語ごとの一意のキーになります。 プラットフォームを指定しないと、現在の OS が想定されます。
-
-## <a name="remarks"></a>解説
-
-現在、**PARAMETERS** と **ENVIRONMENT_VARIABLES** はサポートされていません。
 
 ## <a name="permissions"></a>アクセス許可
 

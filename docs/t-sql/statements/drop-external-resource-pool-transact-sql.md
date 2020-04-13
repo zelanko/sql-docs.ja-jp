@@ -18,12 +18,12 @@ ms.assetid: e2fa01bd-96ff-4ea9-bb08-6cb6b6adf68c
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-ms.openlocfilehash: f4326901f40c580e869cae11ed184ca70cd7b442
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bf49435cad63eda8b09873c247ad2c378a1c4d33
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68892741"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664332"
 ---
 # <a name="drop-external-resource-pool-transact-sql"></a>DROP EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68892741"
 外部プロセス用のリソースの定義に使われる Resource Governor 外部リソース プールを削除します。 
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-[!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] の [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] の場合、外部プールは `rterm.exe`、`BxlServer.exe`、およびそれらにより生成された他のプロセスを管理します。
+[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] の [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] の場合、外部プールは `rterm.exe`、`BxlServer.exe`、およびそれらにより生成された他のプロセスを管理します。
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -79,8 +79,6 @@ GO
 ## <a name="see-also"></a>参照
 
 + [external scripts enabled サーバー構成オプション](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)
-+ [SQL Server R サービス](../../advanced-analytics/r-services/sql-server-r-services.md)
-+ [SQL Server R Services の既知の問題](../../advanced-analytics/r-services/known-issues-for-sql-server-r-services.md)
 + [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)
 + [ALTER EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)
 + [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)

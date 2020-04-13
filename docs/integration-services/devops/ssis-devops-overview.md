@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e67e7f0d764a35dab94e26a70b7af39dfd23dae2
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: 619fddade48e56c28995b193776e6d13f31918ac
+ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402649"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80809719"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools-preview"></a>SQL Server Integration Services (SSIS) DevOps ツール (プレビュー)
 
@@ -172,7 +172,7 @@ SSIS カタログ構成 JSON ファイルのソース。 [ファイル パス] �
 
 SSIS カタログ構成 JSON ファイルのパス。 このプロパティは、構成ファイル ソースとして [ファイル パス] を選択した場合にのみ表示されます。
 
-構成 JSON ファイルで[パイプライン変数](https://docs.microsoft.comazure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch)を使用するには、このタスクの前に [File Transform タスク](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/file-transform?view=azure-devops)を追加して、構成値をパイプライン変数に置き換える必要があります。 詳細については、「[JSON 変数置換](https://docs.microsoft.com/azure/devops/pipelines/tasks/transforms-variable-substitution?view=azure-devops&tabs=Classic#json-variable-substitution)」を参照してください。
+構成 JSON ファイルで[パイプライン変数](/azure/devops/pipelines/process/variables)を使用するには、このタスクの前に [File Transform タスク](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/file-transform?view=azure-devops)を追加して、構成値をパイプライン変数に置き換える必要があります。 詳細については、「[JSON 変数置換](https://docs.microsoft.com/azure/devops/pipelines/tasks/transforms-variable-substitution?view=azure-devops&tabs=Classic#json-variable-substitution)」を参照してください。
 
 #### <a name="inline-configuration-json"></a>インライン構成 JSON
 

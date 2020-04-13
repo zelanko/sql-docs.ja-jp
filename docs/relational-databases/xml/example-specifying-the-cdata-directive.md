@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 949071e6-787f-480d-bb86-3ac16a027af1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6e67e3bb42aa2d70ae4e27a3f13955e5d0827c2b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b6c6c2f5e19e22cdff4b7f9ca282fc3406efd3fc
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006750"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664781"
 ---
 # <a name="example-specifying-the-cdata-directive"></a>例 : CDATA ディレクティブの指定
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   **CDATA**ディレクティブが指定されている場合、含まれているデータはエンティティとしてエンコードされず、CDATA セクションに配置されます。 **CDATA** 属性は、無名でなければなりません。  
   
  次のクエリでは、製品モデルの概要説明を CDATA セクションに配置しています。  

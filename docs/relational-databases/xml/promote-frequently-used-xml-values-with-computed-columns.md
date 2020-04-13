@@ -13,15 +13,15 @@ ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 156ed5549daa8129ff17d1b2827d798521c8a88b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9ca8eb44f7dad50d22b36a1cd795b3695836cb6b
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75257635"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664880"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>計算列を使用した使用頻度の高い XML 値の昇格
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   クエリが主に少数の要素や属性の値に対して行われる場合、対象になる値をリレーショナル列に昇格できます。 XML インスタンス全体を取得する一方で、XML データの一部に対してクエリを実行する場合に昇格が役立ちます。 XML 列に XML インデックスを作成する必要はありません。 代わりに、昇格した列にインデックスを設定できます。 クエリは昇格した列を使用するように記述する必要があります。 クエリ オプティマイザーは、クエリの対象を XML 列から、昇格した列に振り替えないためです。  
   
  昇格した列は、同一のテーブルで計算列にすることができます。また、任意のテーブルでユーザーが管理する独立した列にすることもできます。 これは、各 XML インスタンスから単一の値を昇格するときには十分です。 しかし、複数の値から構成されるプロパティの場合、個々のプロパティ用に個別のテーブルを作成する必要があります。詳細については、次のセクションを参照してください。  

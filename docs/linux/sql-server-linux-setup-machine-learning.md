@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8d626b478a94f796155a895e134eb171c18fcc28
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 84d76508ad50de0b76266ce936f752065b989105
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216601"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664373"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-linux"></a>Linux に SQL Server Machine Learning Services (Python と R) をインストールする
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-この記事では、Linux に [SQL Server Machine Learning Services](../advanced-analytics/index.yml) をインストールする方法について説明します。 Machine Learning Services を使用して、データベース内で Python と R のスクリプトを実行できます。
+この記事では、Linux に [SQL Server Machine Learning Services](../machine-learning/index.yml) をインストールする方法について説明します。 Machine Learning Services を使用して、データベース内で Python と R のスクリプトを実行できます。
 
 > [!NOTE]
 > Machine Learning Services は、既定で SQL Server ビッグ データ クラスターにインストールされます。 詳細については、[ビッグ データ クラスターでの Machine Learning Services (Python および R) の使用](../big-data-cluster/machine-learning-services.md)に関するページを参照してください
@@ -435,10 +435,10 @@ mssql-mlservices-mlm-py-9.4.7.64
 
 Python 開発者は、次のチュートリアルに従って、SQL Server で Python を使用する方法を学習できます。
 
-+ [Python のチュートリアル:SQL Server Machine Learning Services での線形回帰を使用したスキー レンタルの予測](..\advanced-analytics\tutorials\python-ski-rental-linear-regression-deploy-model.md)
-+ [チュートリアル:SQL Server Machine Learning Services と K-Means クラスタリングを使用して顧客を分類する](../advanced-analytics/tutorials/python-clustering-model.md)
++ [Python のチュートリアル:SQL Server Machine Learning Services での線形回帰を使用したスキー レンタルの予測](../machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model.md)
++ [Python のチュートリアル:SQL Server Machine Learning Services と K-Means クラスタリングを使用して顧客を分類する](../machine-learning/tutorials/python-clustering-model.md)
 
 R 開発者はいくつかの簡単な例を試して、SQL Server での R の動作方法の基本を確認できます。 次の手順については、以下のリンクを参照してください。
 
-+ [チュートリアル:T-SQL での R の実行](../advanced-analytics/tutorials/quickstart-r-create-script.md)
-+ [チュートリアル:R 開発者向けのデータベース内分析](../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [クイック スタート: T-SQL での R の実行](../machine-learning/tutorials/quickstart-r-create-script.md)
++ [チュートリアル:R 開発者向けのデータベース内分析](../machine-learning/tutorials/sqldev-in-database-r-for-sql-developers.md)

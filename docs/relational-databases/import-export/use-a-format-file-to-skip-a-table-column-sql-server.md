@@ -1,5 +1,6 @@
 ---
 title: フォーマット ファイルを使用したテーブル列のスキップ (SQL Server) | Microsoft Docs
+description: この記事では、スキップされた列のデータがソース データ ファイルに存在しない場合に、フォーマット ファイルを使用してテーブル列のインポートをスキップする方法について説明します。
 ms.custom: ''
 ms.date: 02/15/2018
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: 30e0e7b9-d131-46c7-90a4-6ccf77e3d4f3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9acac3eca271c8bb8c20df7e429dd830d19bdd43
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a568d1bfbfb461a8749699e0f7e175ed2c002f9e
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72909253"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980418"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>フォーマット ファイルを使用したテーブル列のスキップ (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "72909253"
 -   スキップされる列に既定値が含まれている。  
   
 ## <a name="sample-table-and-data-file"></a>サンプル テーブルとデータ ファイル  
- この記事の例は、`myTestSkipCol`dbo**スキーマにある** という名前のテーブルを想定しています。 このテーブルは *WideWorldImporters* や *AdventureWorks* などのサンプル データベース、またはその他の任意のデータベースで作成できます。 このテーブルは次のように作成します。  
+ この記事の例は、**dbo** スキーマにある `myTestSkipCol` という名前のテーブルを想定しています。 このテーブルは *WideWorldImporters* や *AdventureWorks* などのサンプル データベース、またはその他の任意のデータベースで作成できます。 このテーブルは次のように作成します。  
   
 ```sql
 USE WideWorldImporters;  
@@ -66,7 +67,7 @@ XML 以外のフォーマット ファイルまたは XML フォーマット フ
 ## <a name="option-1---use-a-non-xml-format-file"></a>オプション #1 - XML 以外のフォーマット ファイルの使用  
   
 ### <a name="step-1---create-a-default-non-xml-format-file"></a>手順 #1 - XML 以外の既定のフォーマット ファイルの作成  
-コマンド プロンプトで次の `myTestSkipCol`bcp **コマンドを実行して、** サンプル テーブル用に作成した、XML 以外の既定のフォーマット ファイルを作成します。  
+コマンド プロンプトで次の **bcp** コマンドを実行して、`myTestSkipCol` サンプル テーブル用に作成した、XML 以外の既定のフォーマット ファイルを作成します。  
   
 ```cmd
 bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c -T  
@@ -140,7 +141,7 @@ GO
   
 ### <a name="step-1---create-a-default-xml-format-file"></a>手順 #1 - 既定の XML フォーマット ファイルの作成   
 
-コマンド プロンプトで次の `myTestSkipCol`bcp **コマンドを実行して、** サンプル テーブル用に作成した、既定の XML フォーマット ファイルを作成します。  
+コマンド プロンプトで次の **bcp** コマンドを実行して、`myTestSkipCol` サンプル テーブル用に作成した、既定の XML フォーマット ファイルを作成します。  
   
 ```cmd
 bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c -x -T  
@@ -172,7 +173,7 @@ bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
 
 ### <a name="step-2---modify-an-xml-format-file"></a>手順 #2 - XML フォーマット ファイルの変更
 
-これは、`myTestSkipCol2.xml` をスキップする、変更済みの XML フォーマット ファイル `Col2` です。 `FIELD` の `ROW` と `Col2` のエントリが削除され、エントリの番号が変更されています。 最初のフィールドの後ろの区切り記号も `\t` から `,` に変更されています。
+これは、`Col2` をスキップする、変更済みの XML フォーマット ファイル `myTestSkipCol2.xml` です。 `Col2` の `FIELD` と `ROW` のエントリが削除され、エントリの番号が変更されています。 最初のフィールドの後ろの区切り記号も `\t` から `,` に変更されています。
 
 ```xml
 <?xml version="1.0"?>  
@@ -197,7 +198,7 @@ bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
 
 XML フォーマット ファイルでは、**bcp** コマンドまたは `BULK INSERT` ステートメントを使用して直接テーブルにインポートする場合は、列をスキップできません。 ただし、テーブルの最後の列を除くすべての列にインポートできます。 最後の列を除く任意の列をスキップする必要がある場合、データ ファイルに含まれている列のみを含んでいる対象テーブルのビューを作成する必要があります。 その後、データ ファイルからビューにデータを一括インポートできます。  
   
-次の例では、`v_myTestSkipCol` テーブルに `myTestSkipCol` ビューを作成します。 このビューでは 2 番目のテーブル列である `Col2`がスキップされます。 その後、 `BULK INSERT` を使用して `myTestSkipCol2.dat` データ ファイルをこのビューにインポートします。  
+次の例では、`myTestSkipCol` テーブルに `v_myTestSkipCol` ビューを作成します。 このビューでは 2 番目のテーブル列である `Col2`がスキップされます。 その後、 `BULK INSERT` を使用して `myTestSkipCol2.dat` データ ファイルをこのビューにインポートします。  
   
 SSMS で、次のコードを実行します。 お使いのコンピューターのサンプル ファイルがある場所のファイル システム パスを更新します。 
   

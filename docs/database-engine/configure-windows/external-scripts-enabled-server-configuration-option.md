@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9d0ce165-8719-4007-9ae8-00f85cab3a0d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3f47352cc82ac831ebcd64548baa24423490094f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 14e3d788034fad9e26f8283e5155d29286ad7360
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72006050"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664301"
 ---
 # <a name="external-scripts-enabled-server-configuration-option"></a>external scripts enabled サーバー構成オプション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ RECONFIGURE WITH OVERRIDE;
 
 この変更を有効にするには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再起動する必要があります。
 
-詳しくは、「[Set up SQL Server Machine Learning](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)」(SQL Server Machine Learning をセットアップする) をご覧ください。
+詳しくは、「[Set up SQL Server Machine Learning](../../machine-learning/install/sql-machine-learning-services-windows-install.md)」(SQL Server Machine Learning をセットアップする) をご覧ください。
 
 ## <a name="see-also"></a>参照
 
@@ -63,4 +63,4 @@ RECONFIGURE WITH OVERRIDE;
 
 [sp_execute_external_script &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
 
-[SQL Server Machine Learning サービス](../../advanced-analytics/r/sql-server-r-services.md)
+[SQL Server Machine Learning サービス](../../machine-learning/index.yml)

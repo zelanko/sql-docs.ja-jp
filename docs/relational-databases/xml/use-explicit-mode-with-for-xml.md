@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 63a80b7bebafdaf05c93a95b9ce5efd0dc89c316
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cd64762cced69019e1d58414b43af061933c4437
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68001790"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665023"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>FOR XML での EXPLICIT モードの使用
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   トピック「 [FOR XML を使用した XML の構築](../../relational-databases/xml/for-xml-sql-server.md)」で説明されているように、RAW モードと AUTO モードでは、クエリ結果から生成される XML の構造を厳密に制御することはできません。 一方、EXPLICIT モードを使用すると、クエリ結果から生成される XML の構造を柔軟に制御することができます。  
   
  ただし、必要な XML に関する追加情報 (XML 内の入れ子構造など) をクエリの一部として明示的に指定するために、EXPLICIT モードのクエリを記述する際には特殊な記述方法が必要になります。 このため、要求する XML によっては、EXPLICIT モードのクエリを記述する作業が複雑になることがあります。 EXPLICIT モードのクエリを記述するよりも、 [PATH モード](../../relational-databases/xml/use-path-mode-with-for-xml.md) で入れ子を使用する方が作業が容易になる場合もあります。  
