@@ -1,7 +1,5 @@
 ---
 title: '[サーバーへの接続] (データベース エンジン)'
-ms.custom: seo-lt-2019
-ms.date: 08/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -17,24 +15,30 @@ f1_keywords:
 ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 396d9c1094d496289540804baa07c959fe5c3eef
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.custom: seo-lt-2019
+ms.date: 04/07/2020
+ms.openlocfilehash: 49bc9ee786c814da1322e9f44c1b80bf7bc63b23
+ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531206"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80809696"
 ---
 # <a name="connect-to-server-database-engine"></a>[サーバーへの接続] (データベース エンジン)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-このダイアログを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] に接続するときのオプションを表示または指定できます。 ほとんどの場合、 **[サーバー名]** ボックスにデータベース サーバーのコンピューター名を入力し、 **[接続]** をクリックすることで接続できます。 名前付きインスタンスに接続する場合は、コンピューター名の後に円記号、その後にインスタンスの名前を使用します。 たとえば、「 `mycomputer\myinstance` 」のように入力します。 [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]に接続している場合、コンピューター名の後に **\sqlexpress**を付けて使用します。  
+このダイアログを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] に接続するときのオプションを表示または指定できます。 ほとんどの場合、 **[サーバー名]** ボックスにデータベース サーバーのコンピューター名を入力し、 **[接続]** をクリックすることで接続できます。 名前付きインスタンスに接続する場合は、コンピューター名の後に円記号、その後にインスタンスの名前を使用します。 たとえば、「 `mycomputer\myinstance` 」のように入力します。 [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]に接続している場合、コンピューター名の後に **\sqlexpress**を付けて使用します。
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続する機能に影響する要因は多数あります。 ヘルプのための次のリソースが見つかりません。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続する機能に影響する要因は多数あります。 ヘルプのための次のリソースが見つかりません。
+
 - [チュートリアル レッスン 1:データベース エンジンへの接続](../../relational-databases/lesson-1-connecting-to-the-database-engine.md)  
+
 - [SQL Server データベース エンジンへの接続のトラブルシューティング](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)  
+
 - [SQL Server への接続エラーの解決](https://support.microsoft.com/help/4009936/solving-connectivity-errors-to-sql-server)   
   
-## <a name="options"></a>Options  
+## <a name="options"></a>Options
+
 **サーバーの種類**  
 オブジェクト エクスプローラーからサーバーを登録するときは、接続するサーバーの種類 ( [!INCLUDE[ssDE](../../includes/ssde_md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、または [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]) を選択します。 ダイアログの残りの部分には、選択したサーバーの種類に該当するオプションだけが表示されます。 [登録済みサーバー] を使用してサーバーを登録する場合、 **[サーバーの種類]** ボックスは読み取り専用になり、[登録済みサーバー] コンポーネントに表示されているサーバーの種類と一致する値が表示されます。 別の種類のサーバーを登録するには、新しいサーバーの登録を開始する前に、[登録済みサーバー] ツール バーの [ [!INCLUDE[ssDE](../../includes/ssde_md.md)]]、[ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]]、[ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]]、[ [!INCLUDE[ssEW](../../includes/ssew-md.md)]]、または [ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ] をクリックします。  
   
@@ -43,13 +47,13 @@ ms.locfileid: "80531206"
   
 > [!NOTE]  
 > [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] のアクティブなユーザー インスタンスに接続するには、`np:\\.\pipe\3C3DF6B1-2262-47\tsql\query` などの、パイプ名を指定する名前付きパイプ プロトコルを使用して接続します。 詳細については、[!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] のドキュメントを参照してください。  
+
 > [!NOTE]  
 > 接続は、通常、"最近使用した (MRU)" の履歴で保持されます。 MRU からエントリを削除するには、 **[サーバー名]** コンボ ボックス上をクリックし、削除するサーバーの名前を選択し、**DEL** キーを押すだけです。  
-   
+
 **認証**  
 SSMS の現在のバージョンでは、[!INCLUDE[ssDE](../../includes/ssde_md.md)] のインスタンスへの接続時に 5 つの認証モードを用意しています。 認証ダイアログ ボックスが次の一覧と一致しない場合は、[SQL Server Management Studio (SSMS) のダウンロード](../download-sql-server-management-studio-ssms.md) から SSMS の最新のバージョンをダウンロードします。  
 
-  
 > **[Windows 認証]**  
 > [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 認証モードを使用すると、ユーザーは Windows ユーザー アカウントを使用して接続できます。  
 > 
@@ -71,12 +75,14 @@ SSMS の現在のバージョンでは、[!INCLUDE[ssDE](../../includes/ssde_md.
 **Login**  
 接続に使用するログインを入力します。 このオプションは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証または Active Directory パスワード認証を使用した接続が指定されている場合にのみ使用できます。  
   
+> [!NOTE]  
+> 接続は、通常、"最近使用した (MRU)" の履歴で保持されます。 MRU からエントリを削除するには、 **[サーバー名]** コンボ ボックス上をクリックし、削除するサーバーの名前を選択し、**DEL** キーを押すだけです。 これは、SSMS 18.5 で導入されました。
+
 **パスワード**  
 ログインのパスワードを入力します。 このオプションは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証または Active Directory - パスワード認証を使用した接続が指定されている場合にのみ編集できます。  
-  
+
 **のインスタンスに接続するときには、**  
-クリックしてサーバーに接続します。  
-  
+クリックしてサーバーに接続します。
+
 **[オプション]**  
-クリックして、 **[接続プロパティ]** タブ、および **[追加の接続パラメーター]** タブを表示します。  
-  
+クリックして、 **[接続プロパティ]** タブ、および **[追加の接続パラメーター]** タブを表示します。
