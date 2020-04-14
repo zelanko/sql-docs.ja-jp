@@ -25,7 +25,7 @@ SQL Server Trusted Launchpad サービスでは、R および Python の外部�
 
 ## <a name="determine-whether-launchpad-is-running"></a>Launchpad が実行されているかどうかを判断する
 
-1. **[サービス]** パネル (services.msc) を開きます。 または、コマンド ラインで「**Sqlservermanager13.msc**」または「**SQLServerManager14**」と入力して、[SQL Server 構成マネージャー](https://docs.microsoft.com/sql/relational-databases/sql-server-configuration-manager)を開きます。
+1. **[サービス]** パネル (services.msc) を開きます。 または、コマンド ラインで「**SQLServerManager13.msc**」または「**SQLServerManager14.msc**」と入力して、[SQL Server 構成マネージャー](https://docs.microsoft.com/sql/relational-databases/sql-server-configuration-manager)を開きます。
 
 2. Launchpad が実行されているサービス アカウントをメモします。 R または Python が有効になっている各インスタンスには、Launchpad サービスの独自のインスタンスが必要です。 たとえば、名前付きインスタンスのサービスは、_MSSQLLaunchpad$InstanceName_ のようになります。
 
