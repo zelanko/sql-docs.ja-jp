@@ -1,6 +1,6 @@
 ---
-title: R チュートリアル:機能エンジニアリング
-description: データベース内分析に SQL Server 関数を使用してデータ機能を作成する方法を示すチュートリアル。
+title: R チュートリアル:特徴量エンジニアリング
+description: データベース内分析に SQL Server 関数を使用してデータの特徴量を作成する方法を示すチュートリアル。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/26/2018
@@ -16,20 +16,20 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/04/2020
 ms.locfileid: "81115765"
 ---
-# <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>R と SQL Server を使用したデータ機能の作成 (チュートリアル)
+# <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>R と SQL Server を使用したデータの特徴量の作成 (チュートリアル)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-データ エンジニアリングは、機械学習の重要な部分です。 データを予測モデリングに使用するには、多くの場合、事前に変換する必要があります。 必要な機能がデータにない場合、既存の値からデータをエンジニアリングできます。
+データ エンジニアリングは、機械学習の重要な部分です。 データを予測モデリングに使用するには、多くの場合、事前に変換する必要があります。 必要な特徴量がデータにない場合、既存の値からデータをエンジニアリングできます。
 
-このモデリング タスクでは、乗車位置と降車位置の未加工の緯度値と経度値を使用するのではなく、2 つの位置間の距離 (マイル単位) が必要です。 この機能を作成するには、[ヘイバーサイン式](https://en.wikipedia.org/wiki/Haversine_formula)を使用して 2 点間の直線距離を計算します。
+このモデリング タスクでは、乗車位置と降車位置の未加工の緯度値と経度値を使用するのではなく、2 つの位置間の距離 (マイル単位) が必要です。 この特徴量を作成するには、[ヘイバーサイン式](https://en.wikipedia.org/wiki/Haversine_formula)を使用して 2 点間の直線距離を計算します。
 
-この手順では、データから機能を作成するため、次の 2 つの方法について説明します。
+この手順では、データから特徴量を作成するため、次の 2 つの方法について説明します。
 
 > [!div class="checklist"]
 > * カスタム R 関数を使用する
 > * [!INCLUDE[tsql](../../includes/tsql-md.md)] でカスタム T-SQL 関数を使用する
 
-目標は、元の列と新しい数値機能 *direct_distance* を含む新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ セットを作成することです。
+目標は、元の列と新しい数値特徴量 *direct_distance* を含む新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ セットを作成することです。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -85,13 +85,13 @@ R 言語は統計ライブラリが豊富なことで知られていますが、
     + 1 行目で新しい環境を定義します。 R では、環境を使用して、パッケージなどの名前空間をカプセル化できます。 `search()` 関数を使用すると、ワークスペース内の環境を確認できます。 特定の環境内にあるオブジェクトを確認するには、「 `ls(<envname>)`」と入力します。
     + `$env.ComputeDist` から始まる行には、ヘイバーサイン式を定義するコードが含まれています。この式で、球面上にある 2 点間の *大圏距離* を計算します。
 
-4. 関数を定義したら、それをデータに適用して *direct_distance* という新しい機能列を作成します。 ただし、変換を実行する前に、コンピューティング コンテキストをローカルに変更します。
+4. 関数を定義したら、それをデータに適用して *direct_distance* という新しい特徴量列を作成します。 ただし、変換を実行する前に、コンピューティング コンテキストをローカルに変更します。
 
     ```R
     rxSetComputeContext("local");
     ```
 
-5. [rxDataStep](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatastep) 関数を呼び出して機能エンジニアリング データを取得し、`env$ComputeDist` 関数をメモリ内のデータに適用します。
+5. [rxDataStep](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatastep) 関数を呼び出して特徴量エンジニアリング データを取得し、`env$ComputeDist` 関数をメモリ内のデータに適用します。
 
     ```R
     start.time <- proc.time();
@@ -203,7 +203,7 @@ R 言語は統計ライブラリが豊富なことで知られていますが、
       connectionString = connStr)
     ```
   
-6.  これで新しい機能が作成されました。**rxGetVarsInfo** を呼び出し、機能テーブル内のデータの概要を作成します。
+6.  これで新しい特徴量が作成されました。**rxGetVarsInfo** を呼び出し、特徴量テーブル内のデータの概要を作成します。
   
     ```R
     rxGetVarInfo(data = featureDataSource)
@@ -246,7 +246,7 @@ SQL 関数を呼び出すときにデータ変換にかかる時間を確認す�
 ネットワークの速度やハードウェアの構成によっては、時間が大幅に異なる場合があります。 テストした構成では、[!INCLUDE[tsql](../../includes/tsql-md.md)] 関数のアプローチの方が、カスタム R 関数を使用するよりも高速でした。 そのため、以降の手順ではこれらの計算に [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数を使用しています。
 
 > [!TIP]
-> 非常に多くの場合、[!INCLUDE[tsql](../../includes/tsql-md.md)] を使用する機能エンジニアリングの方が R よりも高速になります。たとえば、T-SQL には、移動平均や *n* タイルのロールなど、一般的なデータ サイエンス計算に適用できる高速ウィンドウ関数と順位付け関数が含まれています。 データとタスクに基づいて、最も効率的な方法を選択してください。
+> 非常に多くの場合、[!INCLUDE[tsql](../../includes/tsql-md.md)] を使用する特徴量エンジニアリングの方が R よりも高速になります。たとえば、T-SQL には、移動平均や *n* タイルのロールなど、一般的なデータ サイエンス計算に適用できる高速ウィンドウ関数と順位付け関数が含まれています。 データとタスクに基づいて、最も効率的な方法を選択してください。
 
 ## <a name="next-steps"></a>次のステップ
 

@@ -54,11 +54,11 @@ _hack_license_ 列には、タクシー運転手のライセンス番号が含�
 
     クラス 0: `tip_amount` = $0
 
-    クラス 1: `tip_amount` > $0 および `tip_amount` <= $5
+    クラス 1: `tip_amount` > $0 かつ `tip_amount` <= $5
     
-    クラス 2: `tip_amount` > $5 および `tip_amount` <= $10
+    クラス 2: `tip_amount` > $5 かつ `tip_amount` <= $10
     
-    クラス 3: `tip_amount` > $10 および `tip_amount` <= $20
+    クラス 3: `tip_amount` > $10 かつ `tip_amount` <= $20
     
     クラス 4: `tip_amount` > $20
 
@@ -199,7 +199,7 @@ _hack_license_ 列には、タクシー運転手のライセンス番号が含�
 
 ## <a name="next-step"></a>次のステップ
 
-[T-SQL を使用してデータ機能を作成する](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[T-SQL を使用してデータの特徴量を作成する](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="previous-step"></a>前の手順
 

@@ -23,7 +23,7 @@ ms.locfileid: "81115805"
 
 この手順では、Python パッケージの **scikit-learn** と **revoscalepy** を使用して、機械学習モデルをトレーニングする方法について説明します。 これらの Python ライブラリは、SQL Server Machine Learning Services と共に、既にインストールされています。
 
-SQL Server ストアド プロシージャを使用してモデルを作成およびトレーニングするには、モジュールを読み込んでから、必要な関数を呼び出します。 このモデルには、過去のレッスンで作成したデータ機能が必要です。 最後に、トレーニング済みのモデルを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルに保存します。
+SQL Server ストアド プロシージャを使用してモデルを作成およびトレーニングするには、モジュールを読み込んでから、必要な関数を呼び出します。 このモデルには、過去のレッスンで作成したデータの特徴量が必要です。 最後に、トレーニング済みのモデルを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルに保存します。
  
 
 ## <a name="split-the-sample-data-into-training-and-testing-sets"></a>トレーニング セットとテスト セットへのデータの分割
@@ -120,7 +120,7 @@ SQL Server ストアド プロシージャを使用してモデルを作成お�
     *外部スクリプトからの STDOUT メッセージ:* 
   *C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy*
 
-3. テーブル *nyc\_taxi_models* を開きます。 _model_列にシリアル化されたモデルを含む新しい行が 1 つ追加されます。
+3. テーブル *nyc\_taxi_models* を開きます。 _model_ 列にシリアル化されたモデルを含む新しい行が 1 つ追加されます。
 
     *SciKit_model* *0x800363736B6C6561726E2E6C696E6561....*
 
@@ -168,7 +168,7 @@ SQL Server ストアド プロシージャを使用してモデルを作成お�
     このストアド プロシージャは、モデル トレーニングの一環として、以下の手順を実行します。
 
     - SELECT クエリにより、カスタム スカラー関数 _fnCalculateDistance_ が適用され、乗車場所と降車場所間の直線距離が計算されます。 クエリの結果は、Python の既定の入力変数 `InputDataset` に格納されます。
-    - 二項変数 _tipped_ が*ラベル*または結果列として使用され、モデルは、_passenger_count_、_trip_distance_、_trip_time_in_secs_、および _direct_distance_ の機能列を使用して調整されます。
+    - 二値変数 _tipped_ が*ラベル*または結果列として使用され、モデルは、_passenger_count_、_trip_distance_、_trip_time_in_secs_、および _direct_distance_ の特徴量列を使用して調整されます。
     - トレーニング済みモデルはシリアル化され、Python 変数`logitObj`に格納されます。 T-SQL キーワードの OUTPUT を追加することにより、変数をストアド プロシージャの出力として追加できます。 次の手順では、この変数を使用して、モデルのバイナリコードをデータベース テーブル _nyc_taxi_models_ に挿入します。 このメカニズムにより、モデルの格納と再利用が容易になります。
 
 2. 以下のようにストアド プロシージャを実行し、トレーニングした **revoscalepy** モデルを、テーブル *nyc_taxi_models* に挿入します。
@@ -184,7 +184,7 @@ SQL Server ストアド プロシージャを使用してモデルを作成お�
     *外部スクリプトからの STDOUT メッセージ:* 
   *C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy*
 
-3. テーブル *nyc_taxi_models*を開きます。 _model_列にシリアル化されたモデルを含む新しい行が 1 つ追加されます。
+3. テーブル *nyc_taxi_models*を開きます。 _model_ 列にシリアル化されたモデルを含む新しい行が 1 つ追加されます。
 
     *revoscalepy_model* *0x8003637265766F7363616c....*
 
@@ -196,4 +196,4 @@ SQL Server ストアド プロシージャを使用してモデルを作成お�
 
 ## <a name="previous-step"></a>前の手順
 
-[T-SQL を使用してデータ機能を作成する](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[T-SQL を使用してデータの特徴量を作成する](sqldev-py5-train-and-save-a-model-using-t-sql.md)
