@@ -68,11 +68,11 @@ SQL Server Management Studio のレポートの詳細については、「[Manag
 | レポート | 説明 |
 |-|-|
 | Active sessions | 現在、SQL Server インスタンスに接続し、Python または R のスクリプトを実行しているユーザー。 |
-| 構成 | Machine Learning Services のインストール設定および Python または R のランタイムのプロパティ。 |
-| インスタンスを構成する | Machine Learning Services を構成します。 |
-| 実行の統計 | Machine Learning Services の実行統計 たとえば、外部スクリプト実行の合計数と並列実行数を取得できます。 |
-| 拡張イベント | 外部スクリプトの実行に関する追加の洞察を得るために使用できる拡張イベント。 |
-| パッケージ | SQL Server インスタンスにインストールされている R または Python のパッケージと、バージョンや名前などのプロパティを一覧表示します。 |
+| Configuration | Machine Learning Services のインストール設定および Python または R のランタイムのプロパティ。 |
+| Configure Instance | Machine Learning Services を構成します。 |
+| Execution Statistics | Machine Learning Services の実行統計 たとえば、外部スクリプト実行の合計数と並列実行数を取得できます。 |
+| Extended Events | 外部スクリプトの実行に関する追加の洞察を得るために使用できる拡張イベント。 |
+| Packages | SQL Server インスタンスにインストールされている R または Python のパッケージと、バージョンや名前などのプロパティを一覧表示します。 |
 | Resource Usage | SQL Server の CPU、メモリ、IO 消費量、および外部スクリプトの実行を表示します。 外部のリソース プールのメモリ設定を表示することもできます。 |
 
 ## <a name="next-steps"></a>次のステップ
