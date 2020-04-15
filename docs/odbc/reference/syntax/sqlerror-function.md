@@ -1,5 +1,5 @@
 ---
-title: SQLError 関数 |Microsoft Docs
+title: 関数の実行 |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,23 +17,23 @@ f1_keywords:
 helpviewer_keywords:
 - SQLError function [ODBC]
 ms.assetid: ee5c90de-3c61-4f63-8b57-1543d1704a0e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6f98bbc393db9b1e1d10fe0f68285f30231c0ef8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2c61b9bad08f06760b67df43b7c7a62e804c7c07
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68003112"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302724"
 ---
 # <a name="sqlerror-function"></a>SQLError 関数
-**互換性**  
- 導入されたバージョン: ODBC 1.0 標準準拠: 非推奨  
+**適合 性**  
+ バージョン導入: ODBC 1.0 標準準拠: 非推奨  
   
  **まとめ**  
- **SQLError**は、エラーまたは状態の情報を返します。  
+ **エラー**またはステータス情報を返します。  
   
- ドライバーマネージャーが ODBC 2 の場合にこの関数をマップする方法の詳細については、「」を参照してください。*x*アプリケーションは ODBC 3 を使用して動作しています。*x*ドライバー、「付録 G: 旧バージョンとの互換性のためのドライバーガイドライン」の「[非推奨の関数のマッピング](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)」を参照してください。  
+ ドライバー マネージャーは、ODBC 2 のときにこの関数をマップする方法の詳細について。*x*アプリケーションは ODBC 3 で動作しています。*x*ドライバーについては、「付録 G: 下位互換性のためのドライバーのガイドライン」の[「非推奨関数のマッピング](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)   

@@ -1,5 +1,5 @@
 ---
-title: データソースからの切断 |Microsoft Docs
+title: データ ソースからの切断 |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -21,20 +21,20 @@ helpviewer_keywords:
 - ODBC functions
 - SQL Server Native Client ODBC driver, connections
 ms.assetid: 65b0267d-b2ab-4a59-83f2-436d90cfbf79
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d5a7cb061c308508b0ab5d489dcabb4b25f93883
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: de6722994ca31af3fef9a359f4bb01b5f1fc64c2
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73784751"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305503"
 ---
 # <a name="disconnecting-from-a-data-source"></a>データ ソースからの切断
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  アプリケーションでデータソースの使用が完了すると、 **Sqldisconnect**が呼び出されます。 **Sqldisconnect**は、接続に割り当てられているすべてのステートメントを解放し、データソースからドライバーを切断します。 切断後、アプリケーションは[Sqlfreehandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md)を呼び出して接続ハンドルを解放できます。 終了する前に、アプリケーションは**Sqlfreehandle**を呼び出して環境ハンドルを解放します。  
+  アプリケーションがデータ ソースの使用を終了すると **、SQLDisconnect**が呼び出されます。 **SQLDisconnect**は、接続に割り当てられているすべてのステートメントを解放し、データ ソースからドライバーを切断します。 切断後、アプリケーションは[SQLFreeHandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md)を呼び出して接続ハンドルを解放できます。 終了する前に、アプリケーションは**SQLFreeHandle**を呼び出して環境ハンドルを解放します。  
   
  切断後は、割り当てられていた接続ハンドルを再利用して、別のデータ ソースに接続したり、同じデータ ソースに再接続したりできます。 切断してから後で再接続するか、接続した状態を維持するかを決める際、アプリケーションの作成者は各操作の相対コストを考慮する必要があります。 接続メディアによっては、データ ソースに接続し、接続した状態を維持するのに比較的コストがかかる場合があります。 両者を比較検討する場合は、アプリケーションで同じデータ ソースに追加操作が行われる可能性やタイミングについて想定することも必要です。 また、アプリケーションで複数の接続が必要になる場合もあります。  
   

@@ -1,5 +1,5 @@
 ---
-title: LINKEDSERVERS 行セット (OLE DB) |Microsoft Docs
+title: LINKEDSERVERS 行セット (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,26 +11,24 @@ helpviewer_keywords:
 - LINKEDSERVERS rowset
 - enumerating data sources [OLE DB]
 ms.assetid: 2633fd8a-65e7-498d-9aed-8e4b1cca2381
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a109f663ade5c1b52f9e6d6ca9cd83efac4b3ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 130cfb23f1d0a1eefa90868cf4c59f4c6d3f1e8e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73759363"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304973"
 ---
 # <a name="schema-rowsets---linkedservers-rowset"></a>スキーマ行セット - LINKEDSERVERS 行セット
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  
   **LINKEDSERVERS** 行セットは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分散クエリに参加できる、組織のデータ ソースを列挙します。  
   
- 
-  **LINKEDSERVERS** 行セットは、次の列で構成されます。  
+ **LINKEDSERVERS** 行セットは、次の列で構成されます。  
   
-|列名|型を表すインジケーター|[説明]|  
+|列名|型を表すインジケーター|説明|  
 |-----------------|--------------------|-----------------|  
 |SVR_NAME|DBTYPE_WSTR|リンク サーバーの名前。|  
 |SVR_PRODUCT|DBTYPE_WSTR|メーカーなどの名前。リンク サーバーの名前で表されるデータ ストアの種類を識別します。|  

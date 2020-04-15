@@ -1,5 +1,5 @@
 ---
-title: SQLReadFileDSN 関数 |Microsoft Docs
+title: 関数を読み取る |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,21 +17,21 @@ f1_keywords:
 helpviewer_keywords:
 - SQLReadFileDSN function [ODBC]
 ms.assetid: ead464aa-cdc3-47dd-a0c0-997711205d31
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ad1e3dc4901fc7251528e6040b9250469f8fef6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3abda956ee7682c9ac49270e8bf69fb039641790
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68053658"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303953"
 ---
 # <a name="sqlreadfiledsn-function"></a>SQLReadFileDSN 関数
-**互換性**  
- 導入されたバージョン: ODBC 3.0  
+**適合 性**  
+ バージョン導入: ODBC 3.0  
   
  **まとめ**  
- **SQLReadFileDSN**ファイル DSN から情報を読み取ります。  
+ **ファイル DSN**から情報を読み取ります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,49 +47,49 @@ BOOL SQLReadFileDSN(
 ```  
   
 ## <a name="arguments"></a>引数  
- *lpszFileName*  
- 代入Dsn ファイルの名前を格納しているデータバッファーへのポインター。 . Dsn 拡張子は、まだ dsn 拡張子のないすべてのファイル名に追加されます。 * \*Lpszfilename*の値は、null で終わる文字列である必要があります。  
+ *ファイル名*  
+ [入力]dsn ファイルの名前を含むデータ バッファーへのポインター。 拡張子が .dsn でないすべてのファイル名に拡張子 .dsn が付加されます。 * \*lpszFileName*の値は、null で終わる文字列である必要があります。  
   
- *lpszAppName*  
- 代入アプリケーションの名前を格納しているデータバッファーへのポインター。 ODBC セクションの場合は "ODBC" です。 * \*Lpszappname*の値は、null で終わる文字列である必要があります。  
+ *を使用します。*  
+ [入力]アプリケーションの名前を含むデータ バッファーへのポインター。 これは ODBC セクションの "ODBC" です。 * \*lpszAppName*の値は、null で終わる文字列である必要があります。  
   
- *lpszKeyName*  
- 代入読み取るキーの名前を格納しているデータバッファーへのポインター。 予約済みキーワードについては、「コメント」を参照してください。 * \*Lpszappname*の値は、null で終わる文字列である必要があります。  
+ *名前を変更します。*  
+ [入力]読み取るキーの名前を含むデータ バッファーへのポインター。 予約キーワードについては、「コメント」を参照してください。 * \*lpszAppName*の値は、null で終わる文字列である必要があります。  
   
- *lpszString*  
- Output読み取るキーに関連付けられている文字列を格納しているデータバッファーへのポインター。  
+ *文字列*  
+ [出力]読み取るキーに関連付けられている文字列を含むデータ バッファーへのポインター。  
   
- * \*Lpszfilename*が有効な dsn ファイル名ですが、 *lpszfilename*引数が null ポインターであり、 *lpszfilename*引数が null ポインターの場合は、 * \*lpszfilename*に有効なアプリケーションの一覧が含まれています。 * \*Lpszfilename*が有効な. dsn ファイル名* \** であり、lpszfilename が有効なアプリケーション名であるにもかかわらず、 *lpszfilename*引数が null ポインターである場合、 * \*lpszfilename*には、dsn ファイルの該当セクションにある有効な予約済みキーワードの一覧がセミコロンで区切られて含まれています。 * \*Lpszfilename*が有効な dsn ファイル名ですが* \*、lpszfilename*が null ポインターで、 *lpszfilename*引数が null ポインターである場合、 * \*lpszfilename*には、dsn ファイル内のセクションのリストがセミコロンで区切られて含まれています。  
+ * \*lpszFileName*が有効な .dsn ファイル名であるが *、引数 lpszAppName*が null ポインターであり、*引数 lpszKeyName*が null ポインターである場合*\*、lpszString*には有効なアプリケーションのリストが含まれます。 * \*lpszFileName*が有効な .dsn ファイル名であり*\*、lpszAppName*が有効なアプリケーション名である場合、*引数 lpszKeyName*が null ポインターである場合*\*、lpszString*には、有効な予約キーワードのリストが DSN ファイルの適切なセクションに含まれます。 * \*lpszFileName*が有効な .dsn ファイル名であり*\*、lpszAppName*が null ポインターであり、*引数 lpszKeyName*が null ポインターである場合*\*、lpszString*には DSN ファイル内のセクションのリストがセミコロンで区切られます。  
   
- *cbString*  
- 代入Lpszstring バッファーの長さ。 * \**  
+ *cb文字列*  
+ [入力]*\*バッファ*の長さ。  
   
- *pcbString*  
- Output* \*Lpszstring*で返される、使用可能な合計バイト数。 返すことのできるバイト数が*cbstring*以上の場合、 * \*lpszstring*の出力文字列は*cbstring*から null 終了文字を引いた値に切り捨てられます。 *Pcbstring*引数には null ポインターを指定できます。  
+ *pcb ストリング*  
+ [出力]* \*lpszString*で返されるバイト数の合計。 戻り値のバイト数が*cbString*以上の場合*\*、lpszString*の出力文字列は *、cbString*から null 終端文字を引いた値に切り捨てられます。 *引数の引数*は null ポインターにすることができます。  
   
 ## <a name="returns"></a>戻り値  
- 関数は、成功した場合は TRUE、失敗した場合は FALSE を返します。  
+ 関数は成功した場合は TRUE を返し、失敗した場合は FALSE を返します。  
   
 ## <a name="diagnostics"></a>診断  
- **SQLReadFileDSN**から FALSE が返された場合、 **sqlインストーラエラー**を呼び出すことによって、関連* \*する pferrorcode*値を取得できます。 次の表は、 **sqlインストーラエラー**によって返される可能性がある* \*pferrorcode*値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
+ **SQLReadFileDSN が**FALSE を返すと、関連付けられた*\*pfErrorCode*値を取得するには **、SQLInstallerError**を呼び出します。 次の表は **、SQLInstallerError***\** によって返される可能性のある pfErrorCode 値の一覧であり、この関数のコンテキストでそれぞれについて説明します。  
   
-|*\*pfErrorCode*|エラー|[説明]|  
+|*\*エラーコード*|エラー|説明|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|一般的なインストーラーエラー|特定のインストーラーエラーがなかったためにエラーが発生しました。|  
-|ODBC_ERROR_INVALID_BUFF_LEN|バッファーの長さが無効です|*Lpszstring*引数が NULL でした。<br /><br /> *Cbstring*引数が0以下でした。|  
-|ODBC_ERROR_INVALID_PATH|無効なインストールパス|*Lpszfilename*引数で指定されたファイル名のパスが無効です。|  
-|ODBC_ERROR_INVALID_REQUEST_TYPE|要求の種類が無効です|*Lpszappname*引数が NULL でしたが、 *lpszappname*引数が有効でした。|  
-|ODBC_ERROR_OUT_OF_MEM|メモリ不足|メモリ不足のため、インストーラーで関数を実行できませんでした。|  
-|ODBC_ERROR_OUTPUT_STRING_TRUNCATED|出力文字列が切り捨てられました|Lpszstring の値が* \*pcbstring*の値以下で*あった*ため、 * \*lpszstring*で返された文字列が切り捨てられました。|  
-|ODBC_ERROR_REQUEST_FAILED|失敗した要求|キーワードがファイル DSN に存在しませんでした。|  
+|ODBC_ERROR_GENERAL_ERR|インストーラの一般的なエラー|特定のインストーラ エラーが発生しなかったエラーが発生しました。|  
+|ODBC_ERROR_INVALID_BUFF_LEN|バッファ長が無効です|*引数が*NULL でした。<br /><br /> *引数 cbString*が 0 以下でした。|  
+|ODBC_ERROR_INVALID_PATH|インストール パスが無効です|*引数 lpszFileName*に指定されたファイル名のパスが無効です。|  
+|ODBC_ERROR_INVALID_REQUEST_TYPE|無効な種類の要求|*引数が*NULL であるのに対して、*引数は有効*です。|  
+|ODBC_ERROR_OUT_OF_MEM|メモリ不足|メモリ不足のため、インストーラは機能を実行できませんでした。|  
+|ODBC_ERROR_OUTPUT_STRING_TRUNCATED|出力文字列が切り捨てられました|*cbString*の*\***\** 値が pcbString の値以下であったため、lpszString で返された文字列が切り捨てられました。|  
+|ODBC_ERROR_REQUEST_FAILED|要求が失敗しました|ファイル DSN にキーワードが存在しませんでした。|  
   
 ## <a name="comments"></a>説明  
- ODBC では、接続情報を格納するセクション名 [ODBC] が予約されています。 このセクションの予約済みキーワードは、 **SQLDriverConnect**の接続文字列用に予約されているキーワードと同じです。 (詳細については、 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)関数の説明を参照してください。)  
+ ODBC では、接続情報を格納するセクション名 [ODBC] が予約されています。 このセクションの予約済みキーワードは **、SQLDriverConnect**での接続文字列用に予約されているものと同じです。 (詳細については[、SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)関数の説明を参照してください。  
   
- アプリケーションでは、これらの予約済みキーワードを使用して、ファイル DSN の情報を読み取ることができます。 アプリケーションで、ファイル DSN に関連付けられている DSN のない接続文字列を調べる必要がある場合、[ODBC] セクションの予約されている接続文字列キーワードに対して**SQLReadFileDSN**を呼び出すことができます。 DSN のない接続で渡される完全な接続文字列は、[ODBC] セクションのすべてのキーワード (予約およびドライバー固有) を組み合わせたものです。  
+ アプリケーションは、これらの予約済みキーワードを使用して、ファイル DSN 内の情報を読み取ることができます。 アプリケーションがファイル DSN に関連付けられた DSN を使用しないで接続文字列を検索する場合は、[ODBC] セクションで予約されている接続文字列キーワードの**SQLReadFileDSN**を呼び出すことができます。 DSN レス接続で渡される完全な接続文字列は、[ODBC] セクションのすべてのキーワード (予約済みおよびドライバ固有) の組み合わせです。  
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|参照先|  
 |---------------------------|---------|  
-|ファイル DSN への情報の書き込み|[SQLWriteFileDSN](../../../odbc/reference/syntax/sqlwritefiledsn-function.md)|
+|ファイル DSN への情報の書き込み|[ファイルを書き込む](../../../odbc/reference/syntax/sqlwritefiledsn-function.md)|

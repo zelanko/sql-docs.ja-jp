@@ -1,5 +1,5 @@
 ---
-title: SQLAllocEnv (Visual FoxPro ODBC ドライバー) |Microsoft Docs
+title: SQLAllocEnv (ビジュアル フォックスプロ ODBC ドライバー) |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,23 +10,23 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLAllocEnv function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: a21c3782-273f-40b3-b239-47beaf8df462
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4705ec549fb13ba056f5128167a6f5b7a39cff41
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6faf8bde409837f07ef88ea3e9a6f05a525e805e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68063269"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300692"
 ---
 # <a name="sqlallocenv-visual-foxpro-odbc-driver"></a>SQLAllocEnv (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
->  このトピックには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の一般的な情報については、「 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)」の該当するトピックを参照してください。  
+>  このトピックには、ビジュアル フォックス プロ ODBC ドライバー固有の情報が含まれています。 この関数の一般的な情報については[、ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)の該当するトピックを参照してください。  
   
- サポート: 完全  
+ サポート: フル  
   
- ODBC API の準拠: コアレベル  
+ ODBC API 準拠: コア レベル  
   
- 環境ハンドル*henv*にメモリを割り当て、アプリケーションで使用するために ODBC 呼び出しレベルインターフェイスを初期化します。  
+ 環境ハンドルにメモリを割り当て *、henv*を使用して、アプリケーションで使用する ODBC 呼び出しレベル インターフェイスを初期化します。  
   
- 詳細については、 *ODBC プログラマーリファレンス*の「 [sqlallocenv](../../odbc/reference/syntax/sqlallocenv-function.md) 」を参照してください。
+ 詳細については *、ODBC プログラマ リファレンス*の[SQLAllocEnv](../../odbc/reference/syntax/sqlallocenv-function.md)を参照してください。

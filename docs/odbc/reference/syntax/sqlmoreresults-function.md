@@ -1,5 +1,5 @@
 ---
-title: SQLMoreResults 関数 |Microsoft Docs
+title: 関数の表示 |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,21 +17,21 @@ f1_keywords:
 helpviewer_keywords:
 - SQLMoreResults function [ODBC]
 ms.assetid: bf169ed5-4d55-412c-b184-12065a726e89
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3ca7ed4f6bbcd31b8f67b95dc14a2c6c301b5a59
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 78bbb277e4b783eb46c79f59939a1080feae2b60
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68138827"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304743"
 ---
 # <a name="sqlmoreresults-function"></a>SQLMoreResults 関数
-**互換性**  
- 導入されたバージョン: ODBC 1.0 標準準拠: ODBC  
+**適合 性**  
+ バージョン導入: ODBC 1.0 標準準拠: ODBC  
   
  **まとめ**  
- **Sqlmoreresults**は、 **select**、 **UPDATE**、 **INSERT**、または**DELETE**ステートメントを含むステートメントでより多くの結果が得られるかどうかを判断し、存在する場合は、それらの結果の処理を初期化します。  
+ **SQLMoreResults**は **、SELECT、UPDATE、****挿入**、または DELETE**UPDATE**ステートメントを含む**DELETE**ステートメントで、さらに結果を使用できるかどうかを判断し、その場合は、それらの結果の処理を初期化します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,79 +42,79 @@ SQLRETURN SQLMoreResults(
 ```  
   
 ## <a name="arguments"></a>引数  
- *StatementHandle*  
- 代入ステートメントハンドル。  
+ *ステートメントハンドル*  
+ [入力]ステートメント ハンドル。  
   
 ## <a name="returns"></a>戻り値  
- SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_NO_DATA、SQL_ERROR、SQL_INVALID_HANDLE、SQL_PARAM_DATA_AVAILABLE。  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_NO_DATA、SQL_ERROR、SQL_INVALID_HANDLE、またはSQL_PARAM_DATA_AVAILABLE。  
   
 ## <a name="diagnostics"></a>診断  
- **Sqlmoreresults**が SQL_ERROR または SQL_SUCCESS_WITH_INFO を返す場合、関連付けられた SQLSTATE 値を取得するには、 *handletype*を SQL_HANDLE_STMT、 *StatementHandle*の*ハンドル*を指定して**SQLGetDiagRec**を呼び出します。 次の表は、 **Sqlmoreresults**によって一般的に返される SQLSTATE 値の一覧を示しています。この関数のコンテキストでは、それぞれについて説明しています。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
+ **SQLMoreResults**がSQL_ERRORまたはSQL_SUCCESS_WITH_INFOを返すときは、SQL_HANDLE_STMTの*ハンドル型*と*ステートメント ハンドル*ハンドルを指定して**SQLGetDiagRec**を呼び出すことによって、関連付けられた SQLSTATE*値を取得*できます。 次の表は **、SQLMoreResults**によって一般的に返される SQLSTATE 値を示し、この関数のコンテキストで各値を説明しています。「(DM)」という表記は、ドライバ マネージャによって返される SQLSTATEs の説明の前に記述されます。 特に注記がない限り、各 SQLSTATE 値に関連付けられた戻りコードはSQL_ERROR。  
   
-|SQLSTATE|エラー|[説明]|  
+|SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
-|01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
-|01S02|オプションの値が変更されました|バッチ処理中に、ステートメント属性の値が変更されました。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
-|08S01|通信リンクの失敗|関数が処理を完了する前に、ドライバーと、ドライバーが接続されていたデータソースとの間の通信リンクが失敗しました。|  
-|40001|シリアル化エラー|リソースが別のトランザクションでデッドロックしているため、トランザクションがロールバックされました。|  
-|40003|ステートメントの完了が不明です|この関数の実行中に関連付けられた接続が失敗したため、トランザクションの状態を確認できません。|  
-|HY000|一般的なエラー|特定の SQLSTATE がなく、実装固有の SQLSTATE が定義されていないエラーが発生しました。 Messagetext バッファーの**SQLGetDiagRec**によって返されるエラーメッセージには、エラーとその原因が記述されています。 * \**|  
-|HY001|メモリ割り当てエラー|ドライバーは、関数の実行または完了をサポートするために必要なメモリを割り当てることができませんでした。|  
-|HY008|操作が取り消されました|*StatementHandle*に対して非同期処理が有効になりました。 **Sqlmoreresults**関数が呼び出され、実行が完了する前に、 **SQLCancel**または**sqlcancelhandle**が*StatementHandle*で呼び出されました。 その後、 *StatementHandle*で**Sqlmoreresults**関数が再度呼び出されました。<br /><br /> **Sqlmoreresults**関数が呼び出され、実行が完了する前に、マルチスレッドアプリケーションの別のスレッドの*StatementHandle*で**SQLCancel**または**sqlcancelhandle**が呼び出されました。|  
-|HY010|関数のシーケンスエラー|(DM) 非同期的に実行する関数が、 *StatementHandle*に関連付けられている接続ハンドルに対して呼び出されました。 この非同期関数は、 **Sqlmoreresults**関数が呼び出されたときにまだ実行されていました。<br /><br /> (DM) 非同期的に実行されている関数 (この1つではない) が*StatementHandle*に対して呼び出され、この関数が呼び出されたときにまだ実行されています。<br /><br /> (DM) **Sqlexecute**、 **SQLExecDirect**、 **Sqlbulkoperations**、 **SQLSetPos**が*StatementHandle*に対して呼び出され、SQL_NEED_DATA が返されました。 この関数は、実行時データのすべてのパラメーターまたは列に対してデータが送信される前に呼び出されました。|  
-|HY013|メモリ管理エラー|基になるメモリオブジェクトにアクセスできなかったため、関数呼び出しを処理できませんでした。メモリ不足の状態が原因である可能性があります。|  
-|HY117|トランザクションの状態が不明なため、接続が中断されました。 切断と読み取り専用の機能のみが許可されます。|(DM) 中断状態の詳細については、「 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)」を参照してください。|  
-|HYT01|接続タイムアウトの期限が切れました|データソースが要求に応答する前に、接続のタイムアウト期間が経過しました。 接続タイムアウト期間は、 **SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT によって設定されます。|  
-|IM001|ドライバーはこの機能をサポートしていません|(DM) *StatementHandle*に関連付けられているドライバーでは、関数はサポートされていません。|  
-|IM017|非同期通知モードでは、ポーリングは無効になっています|通知モデルが使用されるたびに、ポーリングは無効になります。|  
-|IM018|**Sqlcompleteasync**は、このハンドルで前の非同期操作を完了するために呼び出されていません。|ハンドルに対する前の関数呼び出しが SQL_STILL_EXECUTING を返し、通知モードが有効になっている場合は、処理を完了するために、ハンドルに対して**Sqlcompleteasync**を呼び出す必要があります。|  
+|01000|一般的な警告|ドライバー固有の情報メッセージ。 (関数はSQL_SUCCESS_WITH_INFOを返します。|  
+|01S02|オプション値が変更されました|バッチの処理中に変更されたステートメント属性の値。 (関数はSQL_SUCCESS_WITH_INFOを返します。|  
+|08S01|通信リンクの障害|ドライバとドライバが接続されているデータ ソースとの間の通信リンクが、関数の処理を完了する前に失敗しました。|  
+|40001|シリアル化の失敗|別のトランザクションでリソースがデッドロックしたため、トランザクションがロールバックされました。|  
+|40003|ステートメントの完了が不明です|この関数の実行中に関連付けられた接続が失敗し、トランザクションの状態を判別できません。|  
+|HY000|一般的なエラー|特定の SQLSTATE がなく、実装固有の SQLSTATE が定義されていないエラーが発生しました。 メッセージ テキスト バッファー内の**SQLGetDiagRec**によって返されるエラー メッセージは、エラーとその原因を記述します。 * \**|  
+|HY001|メモリ割り当てエラー|ドライバは、関数の実行または完了をサポートするために必要なメモリを割り当てることができませんでした。|  
+|HY008|操作がキャンセルされました|*ステートメント ハンドル*に対して非同期処理が有効になりました。 **関数**が呼び出され、実行が完了する前にステートメント*ハンドル*で**SQL キャンセル**または SQL**キャンセル ハンドル**が呼び出されました。 その後、*ステートメント ハンドル*で**SQLMoreResults**関数が再び呼び出されました。<br /><br /> **SQLMoreResults**関数が呼び出され、実行が完了する前に、マルチスレッド アプリケーションの別のスレッドからステートメント ハンドルに対して**SQLCancel**または**SQLCancelHandle**が呼び出されました。 *StatementHandle*|  
+|HY010|関数シーケンス エラー|(DM)*ステートメント ハンドル*に関連付けられている接続ハンドルに対して非同期に実行される関数が呼び出されました。 この非同期関数は **、SQLMoreResults**関数が呼び出されたときに実行されていました。<br /><br /> (DM)*ステートメント ハンドル*に対して非同期に実行される関数 (この関数ではない) が呼び出され、この関数が呼び出されたときにまだ実行されていました。<br /><br /> (DM)**ステートメント***ハンドル*に対**して**呼び**出され**、SQL_NEED_DATA返されました。 **SQLBulkOperations** この関数は、実行時のすべてのデータ パラメーターまたは列に対してデータが送信される前に呼び出されました。|  
+|HY013|メモリ管理エラー|メモリ不足の状態が原因で、基になるメモリ オブジェクトにアクセスできなかったため、関数呼び出しを処理できませんでした。|  
+|HY117|不明なトランザクション状態のため、接続が中断されました。 切断と読み取り専用の機能のみが許可されます。|(DM) 中断状態の詳細については[、SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。|  
+|ヒュットー1|接続のタイムアウトが期限切れになりました|データ ソースが要求に応答する前に、接続タイムアウト期間が切れました。 接続タイムアウト期間は **、SQL_ATTR_CONNECTION_TIMEOUT SQLSetConnectAttr**を使用して設定されます。|  
+|IM001|ドライバはこの機能をサポートしていません|(DM)*ステートメント ハンドル*に関連付けられているドライバーは、関数をサポートしていません。|  
+|IM017|非同期通知モードではポーリングが無効になっています|通知モデルを使用すると、ポーリングは無効になります。|  
+|IM018|**SQLCompleteAsync**このハンドルに対する前の非同期操作を完了するために呼び出されていません。|ハンドルの前の関数呼び出しがSQL_STILL_EXECUTINGを返し、通知モードが有効な場合、後処理を実行して操作を完了するために、ハンドルで**SQLCompleteAsync**を呼び出す必要があります。|  
   
 ## <a name="comments"></a>説明  
- **SELECT**ステートメントは結果セットを返します。 **UPDATE**、 **INSERT**、および**DELETE**ステートメントは、影響を受ける行の数を返します。 これらのステートメントのいずれかがバッチ処理されている場合、パラメーターの配列 (パラメーターの順序の昇順で番号が付けられているか、バッチに出現する順序で番号が付けられます) またはプロシージャで、複数の結果セットまたは行数を返すことができます。 ステートメントとパラメーターの配列のバッチについては、「SQL ステートメントと[パラメーター値の配列](../../../odbc/reference/develop-app/arrays-of-parameter-values.md)[のバッチ](../../../odbc/reference/develop-app/batches-of-sql-statements.md)」を参照してください。  
+ **SELECT**ステートメントは結果セットを返します。 **UPDATE**、**挿入**、および**DELETE**ステートメントは、影響を受ける行のカウントを返します。 これらのステートメントのいずれかがバッチ処理され、パラメーターの配列 (パラメーターの配列で番号が増え、バッチに出現する順序で番号が付けられている) またはプロシージャで送信された場合、複数の結果セットまたは行カウントを返すことができます。 ステートメントのバッチとパラメーターの配列については、「 [SQL ステートメントのバッチ](../../../odbc/reference/develop-app/batches-of-sql-statements.md)」および「[パラメーター値の配列](../../../odbc/reference/develop-app/arrays-of-parameter-values.md)」を参照してください。  
   
- バッチを実行すると、アプリケーションは最初の結果セットに配置されます。 アプリケーションでは、1つの結果セットだけがある場合と同じように、最初または後続の結果セットで**SQLBindCol**、 **sqlbulkoperations**、 **sqlfetch**、 **SQLGetData**、 **sqlbulkoperations**、 **SQLSetPos**、およびすべてのメタデータ関数を呼び出すことができます。 最初の結果セットが完成すると、アプリケーションは**Sqlmoreresults**を呼び出して次の結果セットに移動します。 別の結果セットまたはカウントが使用可能な場合、 **Sqlmoreresults**は SQL_SUCCESS を返し、結果セットまたは追加処理のカウントを初期化します。 行カウント生成ステートメントが、結果セット生成ステートメントの間に出現する場合は、 **Sqlmoreresults**を呼び出すことによってステップオーバーできます。**UPDATE**、 **INSERT**、または**DELETE**ステートメントに対して**sqlmoreresults**を呼び出した後、アプリケーションは**SQLRowCount**を呼び出すことができます。  
+ バッチを実行すると、アプリケーションは最初の結果セットに配置されます。 アプリケーションは、1 つの結果セットがある場合と同様に、最初または後の結果セットで **、SQLBindCol** **、SQLBulkOperations**、SQLFetch、SQLGetData、SQLFetchScroll、SQLSetPos、およびすべてのメタデータ関数を呼び出すことができます。 **SQLFetch** **SQLGetData** **SQLFetchScroll** **SQLSetPos** 最初の結果セットで実行すると、アプリケーションは**SQLMoreResults**を呼び出して次の結果セットに移動します。 別の結果セットまたはカウントが使用可能な場合 **、SQLMoreResults**はSQL_SUCCESSを返し、追加の処理のために結果セットまたはカウントを初期化します。 結果セット生成ステートメントの間に行数生成ステートメントが出現する場合は、 **SQLMoreResults**を呼び出してステップ オーバーできます。**更新**、**挿入**、または**削除**ステートメントの**SQLMoreResults**を呼び出した後、アプリケーションは**SQLRowCount**を呼び出すことができます。  
   
- フェッチされた行のない現在の結果セットがある場合、 **Sqlmoreresults**はその結果セットを破棄し、次の結果セットまたはカウントを使用できるようにします。 すべての結果が処理されている場合は、 **Sqlmoreresults**によって SQL_NO_DATA が返されます。 一部のドライバーでは、すべての結果セットと行カウントが処理されるまで、出力パラメーターと戻り値は使用できません。 このようなドライバーでは、 **Sqlmoreresults**が SQL_NO_DATA を返すと、出力パラメーターと戻り値が使用できるようになります。  
+ フェッチされていない行を持つ現在の結果セットがあった場合 **、SQLMoreResults**はその結果セットを破棄し、次の結果セットまたはカウントを使用可能にします。 すべての結果が処理されている**場合は**、SQL_NO_DATA返します。 一部のドライバーでは、すべての結果セットと行カウントが処理されるまで、出力パラメーターと戻り値は使用できません。 このようなドライバーの場合は、出力パラメーターと戻り値は **、SQLMoreResults**がSQL_NO_DATAを返したときに使用できるようになります。  
   
- 以前の結果セットに対して確立されたバインドは引き続き有効です。 列構造がこの結果セットと異なる場合は、 **Sqlfetch**または**sqlfetchscroll**を呼び出すと、エラーまたは切り捨てが発生する可能性があります。 これを回避するには、アプリケーションは**SQLBindCol**を呼び出して、必要に応じて明示的に再バインドする必要があります (または、記述子フィールドを設定します)。 また、アプリケーションは SQL_UNBIND の*オプション*を使用して**SQLFreeStmt**を呼び出し、すべての列バッファーのバインドを解除することもできます。  
+ 前の結果セットに対して確立されたバインディングは、引き続き有効です。 列構造がこの結果セットで異なる場合 **、SQLFetch**または**SQLFetchScroll**を呼び出すと、エラーまたは切り捨てが発生する可能性があります。 これを防ぐために、アプリケーションは**SQLBindCol**を呼び出して、必要に応じて明示的に再バインドする必要があります (または記述子フィールドを設定して再バインドする必要があります)。 または、アプリケーションは、すべての列バッファーをアンバインドする*オプション*をSQL_UNBINDを指定して**SQLFreeStmt**を呼び出すことができます。  
   
- カーソルの種類、カーソルの同時実行、キーセットのサイズ、最大長などのステートメント属性の値は、アプリケーションが**Sqlmoreresults**を呼び出してバッチを移動するときに変更される可能性があります。 この場合、 **Sqlmoreresults**は SQL_SUCCESS_WITH_INFO と SQLSTATE 01S02 (オプション値が変更されました) を返します。  
+ **SQLMoreResults**の呼び出しによってアプリケーションがバッチ内を移動する場合、カーソルの種類、カーソルの同時実行性、キーセット のサイズ、最大長などのステートメント属性の値が変更される場合があります。 この場合 **、SQLMoreResults**はSQL_SUCCESS_WITH_INFOを返し、SQLSTATE 01S02 (オプション値が変更されました) を返します。  
   
- SQL_CLOSE の*オプション***を指定して** **sqlcloを**呼び出すと、バッチの実行結果として使用可能だったすべての結果セットと行数が破棄されます。 ステートメントハンドルは、割り当てられた状態または準備された状態に戻ります。 バッチが実行され、ステートメントハンドルが実行中、カーソル位置、または非同期状態にあるときに、非同期に実行する関数をキャンセルするために**SQLCancel**を呼び出すと、キャンセル呼び出しが成功した場合に、バッチによって生成されたすべての結果セットと行数が破棄されます。 ステートメントは、準備された状態または割り当てられた状態に戻ります。  
+ オプションを*SQL_CLOSE*で指定して**SQLCloseCursor**または**SQLFreeStmt**を呼び出すと、バッチの実行の結果として使用できるすべての結果セットと行カウントが破棄されます。 ステートメント・ハンドルは、割り振り状態または準備済み状態のいずれかに戻ります。 バッチが実行され、ステートメント ハンドルが実行、カーソル位置、または非同期状態にある場合に、非同期実行関数をキャンセルする**SQLCancel**を呼び出すと、バッチが生成したすべての結果セットと行数が、キャンセル呼び出しが成功した場合に破棄されます。 その後、ステートメントは準備済みまたは割り当て済みの状態に戻ります。  
   
- ステートメントまたはプロシージャのバッチに、 **SELECT**、 **UPDATE**、 **INSERT**、および**DELETE**ステートメントを使用する他の SQL ステートメントが混在している場合、これらのステートメントは**sqlmoreresults**に影響しません。  
+ ステートメントのバッチまたはプロシージャーが **、他**の SQL ステートメントと SELECT、 **UPDATE**、**挿入**、**および DELETE**ステートメントを混在させる場合、これらの他のステートメントは**SQLMoreResults**に影響を与えないでください。  
   
  詳細については、「[複数の結果](../../../odbc/reference/develop-app/multiple-results.md)」を参照してください。  
   
- ステートメントのバッチで検索された update、insert、または delete ステートメントがデータソースの行に影響を与えない場合は、 **Sqlmoreresults**は SQL_SUCCESS を返します。 これは、 **SQLExecDirect**、 **sqlexecute**、または**sqlparamdata**を使用して実行される検索 update、insert、または delete ステートメントの場合とは異なり、データソースの行に影響を与えない場合は SQL_NO_DATA を返します。 アプリケーションが**SQLRowCount**を呼び出して、 **Sqlmoreresults**を呼び出した後に行数を取得した場合、 **SQLRowCount**は SQL_NO_DATA を返します。  
+ ステートメントのバッチ内の検索された更新、挿入、または削除ステートメントがデータ ソースの行に影響しない場合 **、SQLMoreResults**はSQL_SUCCESSを返します。 これは **、SQLExecDirect** **、SQLExecute、** または**SQLParamData**を使用して実行される検索された更新、挿入、または削除ステートメントの場合とは異なり、データ ソースの行に影響がない場合はSQL_NO_DATAを返します。 アプリケーションが**SQLRowCount**を呼び出して **、SQLMoreResults**の呼び出しがどの行にも影響を与えていない場合に、行数を取得すると **、SQLRowCount**はSQL_NO_DATA返します。  
   
- 結果処理関数の有効なシーケンス処理の詳細については、「[付録 B: ODBC 状態遷移テーブル](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)」を参照してください。  
+ 結果処理関数の有効なシーケンスの詳細については、「 付録 B : [ODBC 状態遷移テーブル](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)」を参照してください。  
   
- SQL_PARAM_DATA_AVAILABLE およびストリーム出力パラメーターの詳細については、「 [SQLGetData を使用した出力パラメーターの取得](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)」を参照してください。  
+ SQL_PARAM_DATA_AVAILABLEおよびストリーム出力パラメーターの詳細については、「 [SQLGetData を使用した出力パラメーターの取得](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)」を参照してください。  
   
 ## <a name="availability-of-row-counts"></a>行数の可用性  
- バッチに複数の連続した行カウント生成ステートメントが含まれている場合、これらの行カウントが1行のカウントにロールアップされる可能性があります。 たとえば、バッチに5つの insert ステートメントが含まれている場合、特定のデータソースは5つの個別の行カウントを返すことができます。 他の特定のデータソースは、5つの個別の行カウントの合計を表す行数を1つだけ返します。  
+ バッチに複数の連続した行カウント生成ステートメントが含まれている場合、これらの行カウントは 1 つの行カウントにロールアップされる可能性があります。 たとえば、バッチに 5 つの insert ステートメントがある場合、特定のデータ ソースは 5 つの個別の行カウントを返すことができます。 他のデータ ソースでは、5 つの個別の行カウントの合計を表す 1 つの行カウントのみが返されます。  
   
- バッチに結果セット生成と行数生成ステートメントの組み合わせが含まれている場合、行カウントがまったく使用できないか、または使用できない可能性があります。 行数の可用性に関するドライバーの動作は、 **SQLGetInfo**の呼び出しを通じて使用可能な SQL_BATCH_ROW_COUNT 情報の種類で列挙されます。 たとえば、バッチに**select**が含まれており、その後に2つの**INSERT**s と別の**select**が含まれているとします。 その場合、次のようなケースが考えられます。  
+ バッチに結果セット生成ステートメントと行カウント生成ステートメントの組み合わせが含まれている場合、行数がまったく使用できる場合と使用できない場合があります。 行数の可用性に関するドライバーの動作は **、SQLGetInfo**の呼び出しを通じて利用できるSQL_BATCH_ROW_COUNT情報の種類で列挙されます。 たとえば、バッチに**SELECT**が含まれ、その後に 2 つの**INSERT**ともう 1 つの**SELECT**が含まれているとします。 その場合、次のケースが考えられます。  
   
--   2つの**INSERT**ステートメントに対応する行カウントは、まったく使用できません。 **Sqlmoreresults**の最初の呼び出しでは、2番目の**SELECT**ステートメントの結果セットが配置されます。  
+-   2 つの**INSERT**ステートメントに対応する行カウントは、まったく使用できません。 **SQLMoreResults**の最初の呼び出しは、2 番目の**SELECT**ステートメントの結果セットに位置します。  
   
--   2つの**INSERT**ステートメントに対応する行カウントは、個別に使用できます。 ( **SQLGetInfo**を呼び出すと、SQL_BATCH_ROW_COUNT 情報型の SQL_BRC_ROLLED_UP ビットは返されません)。**Sqlmoreresults**の最初の呼び出しでは、最初の**挿入**の行数が示されます。2回目の呼び出しでは、2番目の**insert**の行数が示されます。 **Sqlmoreresults**の3回目の呼び出しでは、2番目の**SELECT**ステートメントの結果セットが配置されます。  
+-   2 つの**INSERT**ステートメントに対応する行カウントは個別に使用できます。 **(SQLGetInfo**の呼び出しでは、SQL_BATCH_ROW_COUNT情報の種類のSQL_BRC_ROLLED_UP ビットは返されません。**SQLMoreResults**の最初の呼び出しは、最初の**INSERT**の行カウントに位置し、2 番目の呼び出しでは、2 番目の**INSERT**の行カウントに位置します。 3 回目の**呼**び出しでは、2 番目の**SELECT**ステートメントの結果セットに配置されます。  
   
--   2つの**挿入**に対応する行数が、1つの使用可能な行数にロールアップされます。 ( **SQLGetInfo**を呼び出すと、SQL_BATCH_ROW_COUNT 情報型の SQL_BRC_ROLLED_UP ビットが返されます)。**Sqlmoreresults**の最初の呼び出しでは、ロールアップされた行数に移動し、2回目の**Sqlmoreresults**を呼び出すと、2番目の**SELECT**の結果セットが配置されます。  
+-   2 つの**INSERT**に対応する行カウントは、使用可能な 1 つの行カウントにロールアップされます。 **(SQLGetInfo**の呼び出しは、SQL_BATCH_ROW_COUNT情報の種類のSQL_BRC_ROLLED_UP ビットを返します。**SQLMoreResults**の最初の呼び出しは、ロールアップされた行カウントに位置し **、SQLMoreResults**への 2 回目の呼び出しは 2 番目の**SELECT**の結果セットに配置されます。  
   
- 特定のドライバーでは、行の数を明示的なバッチに対してのみ使用でき、ストアドプロシージャでは使用できません。  
+ 一部のドライバーは、明示的なバッチでのみ行数を使用できるようにし、ストアド プロシージャには使用できません。  
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|参照先|  
 |---------------------------|---------|  
-|ステートメント処理の取り消し|[SQLCancel 関数](../../../odbc/reference/syntax/sqlcancel-function.md)|  
-|データのブロックのフェッチまたは結果セットのスクロール|[SQLFetchScroll 関数](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
-|1つの行またはデータのブロックを順方向専用にフェッチする|[SQLFetch 関数](../../../odbc/reference/syntax/sqlfetch-function.md)|  
-|データ列の一部またはすべてをフェッチしています|[SQLGetData 関数](../../../odbc/reference/syntax/sqlgetdata-function.md)|  
+|ステートメント処理のキャンセル|[SQLCancel 関数](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|データブロックのフェッチまたは結果セットのスクロール|[SQLFetchScroll 関数](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
+|単一行またはデータブロックを順方向方向にフェッチする|[SQLFetch 関数](../../../odbc/reference/syntax/sqlfetch-function.md)|  
+|データ列の一部または全部をフェッチする|[SQLGetData 関数](../../../odbc/reference/syntax/sqlgetdata-function.md)|  
   
 ## <a name="see-also"></a>参照  
  [ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)   
- [ODBC ヘッダーファイル](../../../odbc/reference/install/odbc-header-files.md)   
+ [ODBC ヘッダー ファイル](../../../odbc/reference/install/odbc-header-files.md)   
  [SQLGetData を使用した出力パラメーターの取得](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)

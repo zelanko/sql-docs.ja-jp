@@ -1,5 +1,5 @@
 ---
-title: データバッファーを使用する |Microsoft Docs
+title: データ バッファの使用 |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - buffers [ODBC], data
 - data buffers [ODBC]
 ms.assetid: 06b9f603-b395-497c-979b-d3ec3d6db375
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4b3128e0b8be8ec5bfaa2c4f0e7e64ce866b6295
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 510d3a6728efb63c3c352e5215e54d1bf7c4e025
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68079581"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306773"
 ---
 # <a name="using-data-buffers"></a>データ バッファーの使用
-データバッファーは、それぞれの型、アドレス、バイト長という3つの情報によって記述されます。 関数がこれらの情報のいずれかを必要としていて、それをまだ認識していない場合は、アプリケーションがそれを渡す引数があります。  
+データ・バッファーは、タイプ、アドレス、バイト長の 3 つの情報で記述されます。 関数がこれらの情報の 1 つを必要とし、まだそれを知らない場合は、アプリケーションが渡す引数を持ちます。  
   
  このセクションでは、次のトピックを扱います。  
   

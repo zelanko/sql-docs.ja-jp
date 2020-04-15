@@ -1,5 +1,5 @@
 ---
-title: SQLSetConfigMode 関数 |Microsoft Docs
+title: 関数を設定する |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,21 +17,21 @@ f1_keywords:
 helpviewer_keywords:
 - SQLSetConfigMode function [ODBC]
 ms.assetid: 09eb88ea-b6f6-4eca-b19d-0951cebc6c0a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e2f2bcd3fef2946e5b983c1bbdeee1efe4776512
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c36da48fa1493f61131d23a07f7a820b67ebac82
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68018919"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81293282"
 ---
 # <a name="sqlsetconfigmode-function"></a>SQLSetConfigMode 関数
-**互換性**  
- 導入されたバージョン: ODBC 3.0  
+**適合 性**  
+ バージョン導入: ODBC 3.0  
   
  **まとめ**  
- **SQLSetConfigMode**は、DSN 値を一覧表示する Odbc .ini エントリのシステム情報の場所を示す構成モードを設定します。  
+ **SQLSetConfigMode は**、ODBC.ini エントリの DSN 値がシステム情報のどこにあるかを示すコンフィギュレーション モードを設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,8 +42,8 @@ BOOL SQLSetConfigMode(
 ```  
   
 ## <a name="arguments"></a>引数  
- *wConfigMode*  
- 代入インストーラー構成モード (「コメント」を参照してください)。 *Wconfigmode*の値は次のようになります。  
+ *モード*  
+ [入力]インストーラーの構成モード (「コメント」を参照)。 *wConfigMode*の値は次のようになります。  
   
  ODBC_USER_DSN  
   
@@ -52,29 +52,29 @@ BOOL SQLSetConfigMode(
  ODBC_BOTH_DSN  
   
 ## <a name="returns"></a>戻り値  
- 関数は、成功した場合は TRUE、失敗した場合は FALSE を返します。  
+ 関数は成功した場合は TRUE を返し、失敗した場合は FALSE を返します。  
   
 ## <a name="diagnostics"></a>診断  
- **SQLSetConfigMode**から FALSE が返された場合、 **sqlインストーラエラー**を呼び出すことによって、関連* \*する pferrorcode*値を取得できます。 次の表は、 **sqlインストーラエラー**によって返される可能性がある* \*pferrorcode*値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
+ **SQLSetConfigMode が**FALSE を返す場合は、SQL インストーラ**エラー**を呼び出すことによって、関連付けられた*\*pfErrorCode*値を取得できます。 次の表は **、SQLInstallerError***\** によって返される可能性のある pfErrorCode 値の一覧であり、この関数のコンテキストでそれぞれについて説明します。  
   
-|*\*pfErrorCode*|エラー|[説明]|  
+|*\*エラーコード*|エラー|説明|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_INVALID_PARAM_SEQUENCE|無効なパラメーターシーケンス|*Wconfigmode*引数に ODBC_USER_DSN、ODBC_SYSTEM_DSN、または ODBC_BOTH_DSN が含まれていませんでした。|  
+|ODBC_ERROR_INVALID_PARAM_SEQUENCE|無効なパラメータ シーケンス|*引数に*ODBC_USER_DSN、ODBC_SYSTEM_DSN、またはODBC_BOTH_DSNが含まれていませんでした。|  
   
 ## <a name="comments"></a>説明  
- この関数は、DSN 値を一覧表示する Odbc .ini エントリのシステム情報の場所を設定するために使用されます。 *Wconfigmode*が ODBC_USER_DSN の場合、Dsn はユーザー dsn で、関数は HKEY_CURRENT_USER の ODBC .ini エントリから読み取ります。 ODBC_SYSTEM_DSN の場合、DSN はシステム DSN で、関数は HKEY_LOCAL_MACHINE の Odbc .ini エントリから読み取ります。 ODBC_BOTH_DSN されている場合は HKEY_CURRENT_USER が試行され、失敗した場合は HKEY_LOCAL_MACHINE が使用されます。  
+ この関数は、DSN 値をリストする Odbc.ini エントリがシステム情報内のどこにあるかを設定するために使用されます。 *wConfigMode*がODBC_USER_DSN場合、DSN はユーザー DSN であり、関数はHKEY_CURRENT_USERの Odbc.ini エントリから読み取ります。 ODBC_SYSTEM_DSN場合、DSN はシステム DSN であり、関数は HKEY_LOCAL_MACHINE の Odbc.ini エントリから読み取ります。 ODBC_BOTH_DSNの場合は、HKEY_CURRENT_USER試行され、失敗した場合は、HKEY_LOCAL_MACHINEが使用されます。  
   
- この関数は、 **Sqlcreatedatasource**および**SQLDriverConnect**には影響しません。 構成モードは、ドライバーが**Sqlgetprivateprofilestring**を呼び出してレジストリから読み取るとき、または**sqlgetprivateprofilestring**を呼び出してレジストリに書き込むときに設定する必要があります。 **Sqlgetprivateprofilestring**および**sqlgetprivateprofilestring**への呼び出しでは、構成モードを使用して、操作するレジストリの部分を認識します。  
+ この関数は **、データ ソース**と**SQL ドライバー接続**には影響しません。 構成モードは、ドライバーが**SQLGetPrivateProfileString**を呼び出すことによってレジストリから読み取る場合、または**SQLWritePrivateProfileString**を呼び出すことによってレジストリに書き込む場合に設定する必要があります。 **呼**び出しは、構成モード**を使用して**、レジストリのどの部分を操作するかを知ります。  
   
 > [!CAUTION]  
->  **SQLSetConfigMode**は、必要な場合にのみ呼び出す必要があります。モードが不適切に設定されていると、ODBC インストーラーが正常に機能しなくなる可能性があります。  
+>  **必要な**場合にのみ呼び出す必要があります。モードが正しく設定されていない場合、ODBC インストーラが正しく機能しない可能性があります。  
   
- **SQLSetConfigMode**は、構成モードの直接レジストリ変更を行います。 これは、 **Sqlconfigdatasource**への呼び出しによって構成モードを変更するプロセスとは異なります。 **Sqlconfigdatasource**を呼び出すと、dsn を変更するときにユーザーとシステムの dsn を区別するように構成モードが設定されます。 返される前に、 **Sqlconfigdatasource**によって構成モードが DSN の両方にリセットされます。  
+ **構成モードの**レジストリを直接変更します。 これは **、SQLConfigDataSource**の呼び出しによって構成モードを変更するプロセスとは別です。 **SQLConfigDataSource**の呼び出しは、DSN を変更するときにユーザー DSN とシステム DSN を区別するコンフィギュレーション モードを設定します。 戻る前に、**構成**モードを BOTHDSN にリセットします。  
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|参照先|  
 |---------------------------|---------|  
-|データソースの作成|[SQLCreateDataSource](../../../odbc/reference/syntax/sqlcreatedatasource-function.md)|  
-|接続文字列またはダイアログボックスを使用したデータソースへの接続|[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
-|構成モードを取得しています|[SQLGetConfigMode](../../../odbc/reference/syntax/sqlgetconfigmode-function.md)|
+|データ ソースの作成|[データ ソースを作成します。](../../../odbc/reference/syntax/sqlcreatedatasource-function.md)|  
+|接続文字列またはダイアログ ボックスを使用したデータ ソースへの接続|[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
+|コンフィギュレーション モードの取得|[モード](../../../odbc/reference/syntax/sqlgetconfigmode-function.md)|

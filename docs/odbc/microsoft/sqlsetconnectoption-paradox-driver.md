@@ -1,5 +1,5 @@
 ---
-title: SQLSetConnectOption (Paradox ドライバー) |Microsoft Docs
+title: コネクトオプション (パラドックス ドライバ) |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,23 +11,23 @@ helpviewer_keywords:
 - SQLSetConnectOption function [ODBC], Paradox Driver
 - Paradox driver [ODBC], SQLSetConnectOption
 ms.assetid: 050ee2be-594e-4dbd-af67-8b6aae756cd1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0cf6d01650b86fca4c782521fe3c368f729e6b42
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 06a90a83e2cbf24e6e85a67d961684c230bca924
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67897771"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301493"
 ---
 # <a name="sqlsetconnectoption-paradox-driver"></a>SQLSetConnectOption (Paradox ドライバー)
 > [!NOTE]  
->  このトピックでは、Paradox ドライバー固有の情報について説明します。 この関数の一般的な情報については、「 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)」の該当するトピックを参照してください。  
+>  このトピックでは、Paradox ドライバー固有の情報を提供します。 この関数の一般的な情報については[、ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)の該当するトピックを参照してください。  
   
-|fOption|解説|  
+|オプション|解説|  
 |-------------|-------------|  
-|SQL_ACCESS_MODE|SQL_ACCESS_MODE fOption は、SQL_MODE_READ_ONLY または SQL_MODE_READ_WRITE のいずれかに設定できます。 ただし、SQL_ACCESS_MODE が SQL_MODE_READ_ONLY に設定されている場合、ドライバーは更新を妨げることはありません。|  
-|SQL_AUTOCOMMIT|Paradox ドライバーは、トランザクションをサポートしていないため、ON (既定の状態) に設定されている SQL_AUTOCOMMIT のみをサポートしています。|  
+|SQL_ACCESS_MODE|fOption SQL_ACCESS_MODEは、SQL_MODE_READ_ONLYまたはSQL_MODE_READ_WRITEに設定できます。 ただし、SQL_ACCESS_MODEがSQL_MODE_READ_ONLYに設定されている場合、ドライバーは更新を防止しません。|  
+|SQL_AUTOCOMMIT|Paradox ドライバは、トランザクションをサポートしていないため、SQL_AUTOCOMMITが ON (既定の状態) に設定されている場合にのみサポートされます。|  
 |SQL_CURRENT_QUALIFIER|サポートされています。|  
 |SQL_LOGIN_TIMEOUT|サポートされていません。|  
 |SQL_OPT_TRACE|サポートされています。|  

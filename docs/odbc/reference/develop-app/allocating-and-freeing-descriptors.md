@@ -1,5 +1,5 @@
 ---
-title: 記述子の割り当てと解放 |Microsoft Docs
+title: 記述子の割り当てと解放 |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ helpviewer_keywords:
 - descriptors [ODBC], allocating and freeing
 - allocating and freeing descriptors [ODBC]
 ms.assetid: c615ab7a-f631-4783-a37f-d429873b6047
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5eaf5b7d4dcf335636d8f8b3d5e3ac9b4b5f481f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 692c339af26b96aef3ffe4ba20f592c49b05d85e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67909934"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81288320"
 ---
 # <a name="allocating-and-freeing-descriptors"></a>記述子の割り当てと解放
-記述子は、次のセクションで説明するように、暗黙的または明示的に割り当てられます。  
+記述子は、次のセクションで説明されているように、暗黙的または明示的に割り当てられます。  
   
 -   [暗黙的に割り当てられた記述子](../../../odbc/reference/develop-app/implicitly-allocated-descriptors.md)  
   

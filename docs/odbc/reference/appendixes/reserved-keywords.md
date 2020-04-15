@@ -1,5 +1,5 @@
 ---
-title: 予約済みキーワード |Microsoft Docs
+title: 予約キーワード |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,22 +11,22 @@ helpviewer_keywords:
 - ODBC function call reserved words [ODBC]
 - reserved keywords [ODBC]
 ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a89a24ddbbe14938824819e24fd9112597168507
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ed8056d6c9645a211f1413a1b280426925dd538e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68057214"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307993"
 ---
 # <a name="reserved-keywords"></a>予約済みキーワード
-次の文字列は、ODBC 関数呼び出し用に予約されています。 これらの単語は、最低限の SQL 文法を制限しません。ただし、主要な SQL 文法をサポートするドライバーとの互換性を確保するために、アプリケーションではこれらのキーワードを使用しないようにする必要があります。 #**Define**値 SQL_ODBC_KEYWORDS には、これらのキーワードのコンマ区切りリストが含まれています。  
+次の文字列は、ODBC 関数呼び出し用に予約されています。 これらの単語は、SQL 文法の最小を制限しません。ただし、コア SQL 文法をサポートするドライバーとの互換性を確保するために、アプリケーションはこれらのキーワードのいずれも使用しないようにする必要があります。 #**定義**値SQL_ODBC_KEYWORDSには、これらのキーワードのコンマ区切りリストが含まれます。  
   
 |||  
 |-|-|  
 |ABSOLUTE|IS|  
-|アクション|ISOLATION|  
+|ACTION|ISOLATION|  
 |ADA|JOIN|  
 |ADD|KEY|  
 |ALL|LANGUAGE|  
@@ -36,7 +36,7 @@ ms.locfileid: "68057214"
 |ANY|LEVEL|  
 |ARE|LIKE|  
 |AS|LOCAL|  
-|ASC|[LOWER]|  
+|ASC|LOWER|  
 |ASSERTION|MATCH|  
 |AT|[MAX]|  
 |AUTHORIZATION|[MIN]|  
@@ -48,7 +48,7 @@ ms.locfileid: "68057214"
 |BOTH|NATURAL|  
 |BY|NCHAR|  
 |CASCADE|NEXT|  
-|CASCADED|いいえ|  
+|CASCADED|NO|  
 |CASE|NONE|  
 |CAST|NOT|  
 |CATALOG|NULL|  
@@ -66,9 +66,9 @@ ms.locfileid: "68057214"
 |CONNECT|OUTPUT|  
 |CONNECTION|OVERLAPS|  
 |CONSTRAINT|PAD|  
-|制約|PARTIAL|  
+|CONSTRAINTS|PARTIAL|  
 |CONTINUE|PASCAL|  
-|CONVERT|移動|  
+|CONVERT|POSITION|  
 |CORRESPONDING|PRECISION|  
 |[COUNT]|PREPARE|  
 |CREATE|PRESERVE|  
@@ -78,7 +78,7 @@ ms.locfileid: "68057214"
 |CURRENT_TIME|PROCEDURE|  
 |CURRENT_TIMESTAMP|PUBLIC|  
 |CURRENT_USER|READ|  
-|CURSOR|REAL|  
+|CURSOR|real|  
 |DATE|REFERENCES|  
 |DAY|RELATIVE|  
 |DEALLOCATE|RESTRICT|  
@@ -94,7 +94,7 @@ ms.locfileid: "68057214"
 |DESCRIPTOR|SESSION|  
 |DIAGNOSTICS|SESSION_USER|  
 |DISCONNECT|SET|  
-|DISTINCT|サイズ|  
+|DISTINCT|SIZE|  
 |DOMAIN|SMALLINT|  
 |DOUBLE|SOME|  
 |DROP|SPACE|  
@@ -104,14 +104,14 @@ ms.locfileid: "68057214"
 |ESCAPE|SQLERROR|  
 |EXCEPT|SQLSTATE|  
 |EXCEPTION|SQLWARNING|  
-|EXEC|[SUBSTRING]|  
+|EXEC|SUBSTRING|  
 |EXECUTE|[SUM]|  
 |EXISTS|SYSTEM_USER|  
 |EXTERNAL|TABLE|  
 |EXTRACT|TEMPORARY|  
 |FALSE|THEN|  
 |FETCH|TIME|  
-|FIRST|TIMESTAMP|  
+|FIRST|timestamp|  
 |FLOAT|TIMEZONE_HOUR|  
 |FOR|TIMEZONE_MINUTE|  
 |FOREIGN|TO|  
@@ -125,9 +125,9 @@ ms.locfileid: "68057214"
 |GOTO|UNIQUE|  
 |GRANT|UNKNOWN|  
 |GROUP|UPDATE|  
-|HAVING|[UPPER]|  
+|HAVING|UPPER|  
 |HOUR|USAGE|  
-|ID|User|  
+|IDENTITY|User|  
 |IMMEDIATE|USING|  
 |IN|値|  
 |INCLUDE|VALUES|  

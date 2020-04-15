@@ -1,5 +1,5 @@
 ---
-title: SET EXCLUSIVE Command |Microsoft Docs
+title: 排他コマンドの設定 |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SET EXCLUSIVE command [ODBC]
 ms.assetid: d4fe12c5-7e8b-4d20-9ea4-2bcaffb271f2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9d1a37043d332b54d0d5c5ebb7b2ba9f3acce000
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d140c4be3ab850547ac82f9b954e7313b008dbf0
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68071759"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300862"
 ---
 # <a name="set-exclusive-command"></a>SET EXCLUSIVE コマンド
-ネットワーク上でテーブルファイルを排他的に使用するか共有するかを指定します。  
+テーブル ファイルをネットワーク上で排他用または共有用に開くかどうかを指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -31,13 +31,13 @@ SET EXCLUSIVE ON | OFF
   
 ## <a name="arguments"></a>引数  
  ON  
- ネットワーク上で開かれているテーブルのアクセシビリティを、そのネットワークを開いたユーザーに制限します。 このテーブルには、ネットワーク上の他のユーザーがアクセスできません。 [排他モードに設定すると、他のすべてのユーザーに読み取り専用アクセスを許可しないようにすることもできます。  
+ ネットワーク上で開かれたテーブルのアクセスを、そのテーブルを開いたユーザーに制限します。 このテーブルは、ネットワーク上の他のユーザーがアクセスできません。 また、SET EXCLUSIVE ON は、他のすべてのユーザーが読み取り専用アクセスを持つことを防ぎます。  
   
  OFF  
- (ドライバーの既定値は、グローバルデータセッションでは Visual FoxPro、プライベートデータセッションでは OFF です)。ネットワーク上で開いているテーブルをネットワーク上の任意のユーザーが共有および変更できるようにします。  
+ (ドライバーの既定値は、Visual FoxPro の既定値は、グローバル データ セッションの場合は ON、プライベート データ セッションではオフです)。ネットワーク上で開かれたテーブルを、ネットワーク上の任意のユーザが共有および変更できるようにします。  
   
 ## <a name="remarks"></a>解説  
- SET EXCLUSIVE の設定を変更しても、以前に開いたテーブルの状態は変更されません。 たとえば、SET EXCLUSIVE が ON に設定された状態でテーブルを開き、SET EXCLUSIVE を後で OFF に変更した場合、テーブルはその排他使用状態を保持します。  
+ SET EXCLUSIVE の設定を変更しても、以前に開いたテーブルのステータスは変更されません。 例えば、SET EXCLUSIVE を ON に設定して表をオープンし、後で SET EXCLUSIVE を OFF に変更した場合、その表は排他使用状況を保持します。  
   
 ## <a name="see-also"></a>参照  
  [ODBC Visual FoxPro セットアップ ダイアログ ボックス](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)

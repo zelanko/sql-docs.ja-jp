@@ -1,5 +1,5 @@
 ---
-title: dBASE データ型 |Microsoft Docs
+title: dBASE データ型 |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,46 +15,46 @@ helpviewer_keywords:
 - dbase data types [ODBC]
 - ODBC desktop database drivers [ODBC], DBasedriver
 ms.assetid: a0e31e6b-d02b-4ee2-9b37-5baf6a11c0a6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1753e0d50655205bc6f459548f2ef2b77d5cc885
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 17b96ad0b6674a2d120ef46d9bfa221e8df6d140
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68096451"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307693"
 ---
 # <a name="dbase-data-types"></a>dBASE データ型
-次の表に、dBASE データ型を ODBC SQL データ型にマップする方法を示します。 すべての ODBC SQL データ型がサポートされているわけではないことに注意してください。  
+次の表は、dBASE データ型が ODBC SQL データ型にマップされる方法を示しています。 ODBC SQL データ型の一つには、サポートされていない点に注意してください。  
   
 |dBASE データ型|ODBC データ型|  
 |---------------------|--------------------|  
 |CHAR|SQL_VARCHAR|  
 |DATE|SQL_DATE|  
-|FLOAT [1]|SQL_DOUBLE|  
-|LUN|SQL_BIT|  
-|記|SQL_LONGVARCHAR|  
-|NUMERIC (BCD)|SQL_DOUBLE|  
-|OLEOBJECT [1]|SQL_LONGBINARY|  
+|フロート[1]|SQL_DOUBLE|  
+|論理|SQL_BIT|  
+|メモ|SQL_LONGVARCHAR|  
+|数値 (BCD)|SQL_DOUBLE|  
+|OLEオブジェクト[1]|SQL_LONGBINARY|  
   
- [1] dBASE バージョン5でのみ有効です。*x*  
+ [1] dBASE バージョン 5 に対してのみ有効です。*x*  
   
- DBASE III の有効桁数では、最大で2桁の指数と dBASE IV の数値に最大3桁の指数を持つ数値を使用できます。 数値はテキストとして格納されるため、数値に変換されます。 変換する数値がフィールドに合わない場合、予期しない結果が発生する可能性があります。  
+ dBASE III の精度では、最大 2 桁の指数と dBASE IV 番号の数値を最大 3 桁の指数で指定できます。 数値は文字列として格納されるため、数値に変換されます。 変換する数値がフィールドに収まらない場合は、原因不明の結果が発生する可能性があります。  
   
- DBASE では、有効桁数と小数点以下桁数を数値データ型で指定できますが、ODBC dBASE ドライバーではサポートされていません。 ODBC dBASE ドライバーは、数値データ型に対して、常に15と小数点以下桁数が0の有効桁数を返します。  
+ dBASE では、精度と小数点以下桁数を NUMERIC データ型で指定できますが、ODBC dBASE ドライバではサポートされていません。 ODBC dBASE ドライバは、NUMERIC データ型の場合、常に精度 15、小数点以下桁数 0 を返します。  
   
- ODBC dBASE ドライバーを使用して Numeric データ型で作成された列は、SQL_DOUBLE ODBC データ型にマップされます。 したがって、この列のデータは丸められます。 この動作は dBASE (型 N) の数値データ型と同じではありません。これは、バイナリでコード化された10進数 (BCD) です。  
+ ODBC dBASE ドライバーを使用して数値データ型で作成された列は、ODBC データ型SQL_DOUBLEにマップされます。 したがって、この列のデータは丸めの対象となります。 この動作は、dBASE (タイプ N) の NUMERIC データ型の場合とは同じではありません。  
   
 > [!NOTE]  
->  **SQLGetTypeInfo**は、ODBC SQL データ型を返します。 *Odbc プログラマーズリファレンス*の付録 D のすべての変換は、このトピックで前述した odbc SQL データ型に対してサポートされています。  
+>  ODBC SQL データ**型を**返します。 *ODBC プログラマ リファレンス*の付録 D のすべての変換は、このトピックで前述した ODBC SQL データ型でサポートされています。  
   
- 次の表は、dBASE データ型に関する制限を示しています。  
+ 次の表は、dBASE データ型の制限を示しています。  
   
-|データ型|[説明]|  
+|データ型|説明|  
 |---------------|-----------------|  
-|CHAR|長さが0または指定されていない CHAR 型の列を作成すると、実際には254バイトの列が返されます。|  
-|暗号化データ|DBASE ドライバーは、暗号化された dBASE テーブルをサポートしていません。|  
-|LUN|DBASE ドライバーでは、論理列にインデックスを作成できません。|  
-|記|メモ列の最大長は65500バイトです。|  
+|CHAR|ゼロまたは未指定の長さの CHAR 列を作成すると、実際には 254 バイトの列が戻されます。|  
+|暗号化データ|dBASE ドライバは暗号化された dBASE テーブルをサポートしていません。|  
+|論理|dBASE ドライバーは、論理列のインデックスを作成できません。|  
+|メモ|MEMO 列の最大長は 65,500 バイトです。|  
   
- データ型に関する制限事項の詳細については、 [「データ型の制限](../../odbc/microsoft/data-type-limitations.md)」を参照してください。
+ データ型に関するその他の制限については、「[データ型の制限](../../odbc/microsoft/data-type-limitations.md)」を参照してください。

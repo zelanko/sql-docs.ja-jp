@@ -1,5 +1,5 @@
 ---
-title: カーソルの SQL ステートメントの構築 |Microsoft Docs
+title: カーソル用の SQL ステートメントの作成 |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,30 +15,30 @@ helpviewer_keywords:
 - ODBC applications, statements
 - statements [ODBC], cursors
 ms.assetid: 134003fd-9c93-4f5c-a988-045990933b80
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 706559859c48fd61b7223793fc9421fdefc4798b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e0e422be747c2b47dacb1feb97ba6c00fa1131fc
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73779973"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81291446"
 ---
 # <a name="constructing-sql-statements-for-cursors"></a>カーソル用の SQL ステートメントの作成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client odbc ドライバーでは、odbc 仕様で定義されているカーソル機能を実装するために、サーバーカーソルを使用します。 ODBC アプリケーションでは、 [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)を使用して異なるステートメント属性を設定することによって、カーソル動作を制御します。 次に、属性とその既定値を示します。  
+  ネイティブ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアント ODBC ドライバーは、サーバー カーソルを使用して、ODBC 仕様で定義されているカーソル機能を実装します。 ODBC アプリケーションは[、SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)を使用して、異なるステートメント属性を設定することで、カーソルの動作を制御します。 次に、属性とその既定値を示します。  
   
-|Attribute|Default|  
+|属性|Default|  
 |---------------|-------------|  
 |SQL_ATTR_CONCURRENCY|SQL_CONCUR_READ_ONLY|  
 |SQL_ATTR_CURSOR_TYPE|SQL_CURSOR_FORWARD_ONLY|  
 |SQL_ATTR_CURSOR_SCROLLABLE|SQL_NONSCROLLABLE|  
 |SQL_ATTR_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_ATTR_ROW_ARRAY_SIZE|1 で保護されたプロセスとして起動されました|  
+|SQL_ATTR_ROW_ARRAY_SIZE|1|  
   
- SQL ステートメントの実行時にこれらのオプションを既定値に設定すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC ドライバーは、サーバーカーソルを使用して結果セットを実装しません。代わりに、既定の結果セットが使用されます。 SQL ステートメントの実行時に、これらのオプションのいずれかが既定値から変更され[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]た場合、NATIVE Client ODBC ドライバーは、サーバーカーソルを使用して結果セットを実装しようとします。  
+ これらのオプションが SQL ステートメントの実行時にデフォルトに設定されている場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアント ODBC ドライバーはサーバー カーソルを使用して結果セットを実装しません。代わりに、既定の結果セットを使用します。 SQL ステートメントの実行時にこれらのオプションのいずれかがデフォルト値から変更された場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ・クライアント ODBC ドライバーはサーバー・カーソルを使用して結果セットを実装しようとします。  
   
  既定の結果セットは、すべての [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントをサポートします。 既定の結果セットを使用するときに実行できる SQL ステートメントの種類に制限はありません。  
   
@@ -62,14 +62,12 @@ ms.locfileid: "73779973"
   
      キーワード FOR BROWSE または INTO を伴う SELECT ステートメント。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、上記の条件のいずれかに該当する SQL ステートメントをサーバー カーソルを使用して実行した場合、サーバー カーソルは暗黙的に既定の結果セットに変換されます。 **SQLExecDirect**または**sqlexecute**が SQL_SUCCESS_WITH_INFO を返すと、カーソル属性が既定の設定に戻ります。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、上記の条件のいずれかに該当する SQL ステートメントをサーバー カーソルを使用して実行した場合、サーバー カーソルは暗黙的に既定の結果セットに変換されます。 **SQLExecDirect**または**SQLExecute が**SQL_SUCCESS_WITH_INFOを返した後、カーソル属性は既定の設定に戻ります。  
   
  上記の分類に該当しない SQL ステートメントは、ステートメント属性の設定がどのようであっても実行できます。既定の結果セット、サーバー カーソルを問わず、どちらも正常に機能します。  
   
 ## <a name="errors"></a>エラー  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 以降のバージョンで複数の結果セットが生成されるステートメントを実行すると、SQL_SUCCESS_WITH INFO および次のメッセージが生成されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 以降のバージョンで複数の結果セットが生成されるステートメントを実行すると、SQL_SUCCESS_WITH INFO および次のメッセージが生成されます。  
   
 ```  
 SqlState: 01S02"  
@@ -78,7 +76,7 @@ szErrorMsgString: "[Microsoft][SQL Server Native Client][SQL Server]
                Cursor type changed."  
 ```  
   
- このメッセージを受信する ODBC アプリケーションは、 [SQLGetStmtAttr](../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md)を呼び出して、現在のカーソル設定を確認できます。  
+ このメッセージを受信する ODBC アプリケーションは[、SQLGetStmtAttr](../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md)を呼び出して、現在のカーソル設定を判別できます。  
   
  サーバー カーソルを使用しているときに、複数の SELECT ステートメントから構成されるプロシージャを実行すると、次のエラーが発生します。  
   

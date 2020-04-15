@@ -1,5 +1,5 @@
 ---
-title: カーソルオプションの設定 (ODBC) |Microsoft Docs
+title: カーソルオプションの設定 (ODBC) |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -10,20 +10,20 @@ ms.topic: reference
 helpviewer_keywords:
 - cursors [ODBC], options
 ms.assetid: 0e72b48a-fc5a-4656-8cf5-39f57d8c1565
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 50e1a6733976dee4dc6a7d429d5940bc1a08ea84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 01847d48b4f8791f5171e05284eb6eabd62a0af7
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73781328"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81293842"
 ---
 # <a name="set-cursor-options-odbc"></a>カーソル オプションの設定 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  カーソルオプションを設定するには、 [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)を呼び出して、カーソルの動作を制御するステートメントオプションを設定または[SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md)に取得します。  
+  カーソル オプションを設定するには、カーソルの動作を制御するステートメント オプションを取得するために[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)を呼び出して設定するか[、SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md)を呼び出します。  
   
 |*属性*|指定対象|  
 |-----------------|---------------|  
@@ -35,7 +35,7 @@ ms.locfileid: "73781328"
   
  これらの属性の既定値 (順方向専用、読み取り専用、行セット サイズ 1) では、サーバー カーソルを使用しません。 サーバー カーソルを使用するには、少なくともこれらの属性のいずれかを既定値以外に設定する必要があります。また、実行するステートメントを、単一の SELECT ステートメントか、単一の SELECT ステートメントを含むストアド プロシージャにする必要があります。 サーバー カーソルの使用時に、サーバー カーソルによってサポートされていない句 (COMPUTE、COMPUTE BY、FOR BROWSE、および INTO) を SELECT ステートメントで使用することはできません。  
   
- 使用するカーソルの種類を制御するには、SQL_ATTR_CURSOR_TYPE と SQL_ATTR_CONCURRENCY を設定するか、SQL_ATTR_CURSOR_SENSITIVITY と SQL_ATTR_CURSOR_SCROLLABLE を設定します。 カーソルの動作を指定するこの 2 つの方法を組み合わせて実行しないでください。  
+ 使用するカーソルの種類は、SQL_ATTR_CURSOR_TYPEとSQL_ATTR_CONCURRENCYを設定するか、SQL_ATTR_CURSOR_SENSITIVITYとSQL_ATTR_CURSOR_SCROLLABLEを設定することによって制御できます。 カーソルの動作を指定するこの 2 つの方法を組み合わせて実行しないでください。  
   
 ## <a name="example"></a>例  
  次のサンプルでは、ステートメント ハンドルを割り当て、行のバージョンに基づくオプティミスティック コンカレンシーを使用する動的カーソルを種類として設定してから、SELECT を実行します。  
@@ -60,6 +60,6 @@ retcode = SQLExecDirect(hstmt1, select au_lname from authors", SQL_NTS);
 ```  
   
 ## <a name="see-also"></a>参照  
- [クエリの実行方法に関するトピック &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+ [ODBC&#41;のクエリハウツートピック&#40;実行](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   

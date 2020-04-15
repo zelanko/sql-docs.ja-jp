@@ -1,5 +1,5 @@
 ---
-title: SQLPoolConnect 関数 |Microsoft Docs
+title: 機能を接続する |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,21 +10,21 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLPoolConnect function [ODBC]
 ms.assetid: 41322737-890d-4a81-aed2-06cc3d546962
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0c390dacb5072c5d516e95b4fe6b789bfffbbd2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5045fe47683529f858b01e69f6af696e2821ca4c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68005800"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306903"
 ---
 # <a name="sqlpoolconnect-function"></a>SQLPoolConnect 関数
-**互換性**  
- 導入されたバージョン: ODBC 3.8 標準準拠: ODBC  
+**適合 性**  
+ バージョン導入: ODBC 3.8 標準準拠: ODBC  
   
  **まとめ**  
- プール内の接続を再利用できない場合は、 **Sqlpoolconnect**を使用して新しい接続を作成します。  
+ プール内の接続を再利用できない場合は **、SQLPoolConnect**を使用して新しい接続を作成します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,43 +39,43 @@ SQLRETURN  SQLPoolConnect(
 ```  
   
 ## <a name="arguments"></a>引数  
- *hDbc*  
- 代入接続ハンドル。  
+ *Hdbc*  
+ [入力]接続ハンドル。  
   
- *hDbcInfoToken*  
- 代入新しいアプリケーション接続要求のトークンハンドル。  
+ *トークン*  
+ [入力]新しいアプリケーション接続要求のトークン ハンドル。  
   
- *wszOutConnectString*  
- Output完了した接続文字列のバッファーへのポインター。 ターゲットデータソースへの接続に成功すると、このバッファーには完了した接続文字列が含まれます。 アプリケーションでは、このバッファーに対して少なくとも1024文字を割り当てる必要があります。  
+ *文字列*  
+ [出力]完了した接続文字列のバッファーへのポインター。 ターゲット データ ソースへの接続が成功すると、このバッファーには、完了した接続文字列が格納されます。 アプリケーションでは、このバッファーに少なくとも 1,024 文字を割り当てる必要があります。  
   
- *WszOutConnectString*が NULL の場合でも、 *Cchconnectstringlen*は*wszOutConnectString*が指すバッファー内で返すことができる文字の合計数 (文字データの null 終端文字を除く) を返します。  
+ *wszOutConnectString*が NULL の場合 *、cchConnectStringLen*は *、wszOutConnectString*が指すバッファで返す可能性がある文字の総数 (文字データの NULL 終端文字を除く) を返します。  
   
- *cchConnectStringBuffer*  
- 代入**WszOutConnectString*バッファーの長さ (文字数)。  
+ *をクリックします。*  
+ [入力]文字で表した **wszOutConnect 文字列*バッファーの長さ。  
   
- *cchConnectStringLen*  
- Output\* *WszOutConnectString*で返すことができる文字の合計数 (null 終了文字を除く) を返すバッファーへのポインター。 返すことのできる文字数が*cchconnectstringbuffer*以上の場合、 \* *wszOutConnectString*内の完了した接続文字列は*cchconnectstringbuffer*から null 終端文字の長さを差し引いた値に切り捨てられます。  
+ *クチコネクトストリングレン*  
+ [出力]\* *wszOutConnectString*で返される文字の合計数 (NULL 終端文字を除く) を返すバッファーへのポインター。 返される文字の数が*cchConnectStringBuffer*以上の場合\**、wszOutConnectString*内の完了した接続文字列は *、cchConnectStringBuffer*から null 終了文字の長さを引いた長さに切り捨てられます。  
   
 ## <a name="returns"></a>戻り値  
- SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、または SQL_INVALID_HANDLE。  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、またはSQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>診断  
- [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)に似ていますが、ドライバーマネージャーでは SQL_HANDLE_DBC_INFO_TOKEN の**Handletype**と*Hdbcinfotoken*の**ハンドル**が使用される点が異なります。  
+ 入力検証エラーの[SQLDriverConnect と](../../../odbc/reference/syntax/sqldriverconnect-function.md)同様に、ドライバー マネージャーがSQL_HANDLE_DBC_INFO_TOKENの**ハンドル型**と*hDbcInfoToken*の**ハンドル**を使用する点を除いて。  
   
 ## <a name="remarks"></a>解説  
- ドライバーマネージャーは、 *hDbc*と*Hdbcinfotoken*の親の henv ハンドルが同じであることを保証します。  
+ ドライバー マネージャーは *、hDbc*と*hDbcInfoToken*の親 HENV ハンドルが同じであることを保証します。  
   
- [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)とは異なり、接続情報の入力をユーザーに求める*drivercompletion*引数はありません。 プールのシナリオでは、プロンプトダイアログは許可されません。  
+ [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)とは異なり、接続情報を入力するようにユーザーに要求する*DriverCompletion*引数はありません。 プールのシナリオでは、プロンプト ダイアログは許可されません。  
   
- アプリケーションでは、この関数を直接呼び出すことはできません。 ドライバー対応接続プールをサポートする ODBC ドライバーでは、この関数を実装する必要があります。  
+ アプリケーションはこの関数を直接呼び出さないでください。 ドライバー対応接続プールをサポートする ODBC ドライバーは、この関数を実装する必要があります。  
   
- ドライバーが SQL_ERROR または SQL_INVALID_HANDLE を返すたびに、ドライバーマネージャーはそのエラーをアプリケーションに返します ( [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)または[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md))。  
+ ドライバーがSQL_ERRORまたはSQL_INVALID_HANDLEを返すたびに、ドライバー マネージャーはエラーをアプリケーションに返します[(SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)または[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)で)。  
   
- ドライバーが SQL_SUCCESS_WITH_INFO を返すたびに、ドライバーマネージャーは*Hdbcinfotoken*から診断情報を取得し、SQL_SUCCESS_WITH_INFO を[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)および[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)のアプリケーションに返します。  
+ ドライバーがSQL_SUCCESS_WITH_INFOを返すたびに、ドライバー マネージャーは*hDbcInfoToken*から診断情報を取得し[、SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)と[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)でアプリケーションにSQL_SUCCESS_WITH_INFOを返します。  
   
- アプリケーションで[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)を使用する場合、 *wszOutConnectString*は null バッファーになります (最後の3つのパラメーターはすべて NULL、0、null に設定されます)。 それ以外の場合、ドライバーは出力接続文字列を返す必要があります。出力接続文字列は、アプリケーションの[SQLDriverConnect 関数](../../../odbc/reference/syntax/sqldriverconnect-function.md)呼び出しに返されます。  
+ アプリケーションが[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)を使用する場合 *、wszOutConnect 文字列*は NULL バッファになります (最後の 3 つのパラメータはすべて NULL、0、NULL に設定されます)。 それ以外の場合、ドライバーは、アプリケーションの[SQLDriverConnect 関数](../../../odbc/reference/syntax/sqldriverconnect-function.md)呼び出しに返される出力接続文字列を返す必要があります。  
   
- ODBC ドライバーの開発には sqlspi. h を含めます。  
+ ODBC ドライバ開発用に sqlspi.h を含めます。  
   
 ## <a name="see-also"></a>参照  
  [ODBC ドライバーの開発](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   

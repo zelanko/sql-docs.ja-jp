@@ -1,5 +1,5 @@
 ---
-title: デスクトップデータベースドライバーの実装 |Microsoft Docs
+title: デスクトップ データベース ドライバの実装 |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], implementing
 - desktop database drivers [ODBC], implementing
 ms.assetid: a8bf304b-eff1-447c-887c-dabdb5353a2d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cb4f4c2b1e9658e1e0199ec6d856ef21db80cf07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0b25a5e8ed7a39a11b207c185f47855c7670473e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67952351"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81290612"
 ---
 # <a name="implementing-desktop-database-drivers"></a>デスクトップ データベース ドライバーの実装
-Microsoft ODBC Desktop データベースドライバを実装およびセットアップする方法については、ODBC データソースアドミニストレーターのオンラインヘルプを参照してください。 このファイルには、 [MICROSOFT ODBC データソースアドミニストレーター](../../odbc/admin/odbc-data-source-administrator.md)のドライバーセットアップルーチンの実行中にアクセスできます。  
+Microsoft ODBC デスクトップ データベース ドライバの実装方法とセットアップ方法に関する手順とテクニカル ノートは、ODBC データ ソース アドミニストレータのオンライン ヘルプを参照してください。 このファイルは[、Microsoft ODBC データ ソース アドミニストレータ](../../odbc/admin/odbc-data-source-administrator.md)からドライバ セットアップ ルーチンを実行してアクセスできます。  
   
  このセクションでは、次のトピックを扱います。  
   
@@ -30,9 +30,9 @@ Microsoft ODBC Desktop データベースドライバを実装およびセット
   
 -   [ODBC コンポーネント ファイル](../../odbc/microsoft/odbc-component-files.md)  
   
--   [ハードウェアとソフトウェアの要件](../../odbc/microsoft/hardware-and-software-requirements-odbc.md)  
+-   [ハードウェアおよびソフトウェアの要件](../../odbc/microsoft/hardware-and-software-requirements-odbc.md)  
   
--   [記述子とデスクトップデータベースドライバー](../../odbc/microsoft/descriptors-and-desktop-database-drivers.md)  
+-   [デスクトップ データベース ドライバを使用した記述子](../../odbc/microsoft/descriptors-and-desktop-database-drivers.md)  
   
 -   [デスクトップ データベース ドライバーの診断](../../odbc/microsoft/diagnostics-for-desktop-database-drivers.md)  
   

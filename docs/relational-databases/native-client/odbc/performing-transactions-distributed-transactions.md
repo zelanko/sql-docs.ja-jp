@@ -1,5 +1,5 @@
 ---
-title: 分散トランザクションを作成する |Microsoft Docs
+title: 分散トランザクションを作成する |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 05/13/2019
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - transactions [ODBC]
 - ODBC, transactions
 ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b01e47f81f153b73c8a57d23c9a75fc8b57ef66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f21ea9b7146b2907a09688f5189d6d9ae4f3f26a
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73761072"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303706"
 ---
 # <a name="create-a-distributed-transaction"></a>分散トランザクションの作成
 
@@ -34,47 +34,47 @@ The following includes .md file is Empty, as of long before 2019/May/13.
 -->
 
 
-分散トランザクションは、さまざまな方法でさまざまな Microsoft SQL システムに対して作成できます。
+分散トランザクションは、さまざまな方法で、さまざまな Microsoft SQL システムに対して作成できます。
 
-## <a name="odbc-driver-calls-the-msdtc-for-sql-server-on-premises"></a>ODBC ドライバーは SQL Server オンプレミスの MSDTC を呼び出します。
+## <a name="odbc-driver-calls-the-msdtc-for-sql-server-on-premises"></a>ODBC ドライバーは、オンプレミスの SQL Server の MSDTC を呼び出します。
 
-Microsoft 分散トランザクションコーディネーター (MSDTC) を使用すると、アプリケーション__ はの2つ以上の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスに対してトランザクションを拡張または配信できます。 分散トランザクションは、2つのインスタンスが別々のコンピューターでホストされている場合でも機能します。
+Microsoft 分散トランザクション コーディネータ (MSDTC)_distribute_を使用すると、アプリケーションは、 の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]2 つ以上のインスタンスにトランザクションを拡張または分散できます。 分散トランザクションは、2 つのインスタンスが別々のコンピューターでホストされている場合でも機能します。
 
-MSDTC はオンプレミス Microsoft SQL Server 用にインストールされていますが、Microsoft の Azure SQL Database クラウドサービスでは使用できません。
+MSDTC はオンプレミスでインストールされていますが、マイクロソフトの Azure SQL データベース クラウド サービスでは使用できません。
 
-MSDTC は、C++ プログラムが分散トランザクションを管理するときに、SQL Server Native Client driver for Open Database Connectivity (ODBC) によって呼び出されます。 Native Client ODBC ドライバーには、Open Group Distributed Transaction Processing (DTP) XA 標準に準拠しているトランザクションマネージャーがあります。 このコンプライアンスは MSDTC によって要求されます。 通常、すべてのトランザクション管理コマンドは、この Native Client ODBC ドライバーを介して送信されます。 順序は次のとおりです。
+MSDTC は、C++ プログラムが分散トランザクションを管理するときに、オープン データベース接続 (ODBC) 用の SQL Server ネイティブ クライアント ドライバによって呼び出されます。 ネイティブ クライアント ODBC ドライバーには、オープン グループ分散トランザクション処理 (DTP) XA 標準に準拠しているトランザクション マネージャーがあります。 このコンプライアンスは MSDTC で必要です。 通常、すべてのトランザクション管理コマンドは、このネイティブ クライアント ODBC ドライバーを介して送信されます。 順序は次のとおりです。
 
-1. C++ Native Client ODBC アプリケーションは、自動コミットモードがオフになっている状態で[SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)を呼び出すことによってトランザクションを開始します。
+1. C++ ネイティブ クライアント ODBC アプリケーションは、自動コミット モードをオフにして[SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)を呼び出してトランザクションを開始します。
 
-2. アプリケーションは、コンピューター A 上の SQL Server X の一部のデータを更新します。
+2. アプリケーションは、コンピュータ A 上の SQL Server X 上のデータを更新します。
 
-3. アプリケーションは、コンピューター B 上の SQL Server Y の一部のデータを更新します。
-    - SQL Server Y で更新が失敗した場合、両方の SQL Server インスタンスのすべてのコミットされていない更新がロールバックされます。
+3. アプリケーションは、コンピュータ B 上の SQL Server Y 上のデータを更新します。
+    - SQL Server Y の更新が失敗した場合は、両方の SQL Server インスタンスでコミットされていない更新がすべてロールバックされます。
 
-4. 最後に、SQL_COMMIT または SQL_ROLLBACK オプションを使用して、 [SQLEndTran _(1)_](../../../relational-databases/native-client-odbc-api/sqlendtran.md)を呼び出すことによってトランザクションを終了します。
+4. 最後に、アプリケーションは[SQLEndTran _(1)_](../../../relational-databases/native-client-odbc-api/sqlendtran.md)を呼び出してトランザクションを終了し、SQL_COMMITまたはSQL_ROLLBACKオプションを使用します。
 
-_(1)_ ODBC を使用せずに MSDTC を呼び出すことができます。 このような場合、MSDTC はトランザクションマネージャーになり、アプリケーションは**SQLEndTran**を使用しなくなります。
+_(1)_ MSDTC は ODBC なしで起動できます。 このような場合、MSDTC がトランザクション マネージャになり、アプリケーションで**SQLEndTran**が使用されなくなります。
 
-### <a name="only-one-distributed-transaction"></a>1つの分散トランザクションのみ
+### <a name="only-one-distributed-transaction"></a>分散トランザクションは 1 つのみ
 
-C++ Native Client ODBC アプリケーションが分散トランザクションに参加しているとします。 次に、アプリケーションが2番目の分散トランザクションに参加します。 この場合、Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC ドライバーは元の分散トランザクションを残し、新しい分散トランザクションに参加します。
+C++ ネイティブ クライアント ODBC アプリケーションが分散トランザクションに参加しているとします。 次に、アプリケーションは 2 番目の分散トランザクションに参加します。 この場合、ネイティブ[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]クライアント ODBC ドライバーは元の分散トランザクションを残し、新しい分散トランザクションに参加します。
 
-詳細については、「 [DTC プログラマーズリファレンス](https://docs.microsoft.com/previous-versions/windows/desktop/ms686108\(v=vs.85\))」を参照してください。
+詳細については、「 DTC プログラマ リファレンス 」を[参照してください](https://docs.microsoft.com/previous-versions/windows/desktop/ms686108\(v=vs.85\))。
 
-## <a name="c-alternative-for-sql-database-in-the-cloud"></a>クラウドでの SQL Database の代替 C#
+## <a name="c-alternative-for-sql-database-in-the-cloud"></a>クラウド内の SQL データベースの C# 代替手段
 
-Azure SQL Database または Azure SQL Data Warehouse で MSDTC はサポートされていません。
+MSDTC は、Azure SQL データベースまたは Azure SQL データ ウェアハウスではサポートされていません。
 
-ただし、C# プログラムで .NET クラスの[TransactionScope](/dotnet/api/system.transactions.transactionscope)を使用することによって、SQL Database に対して分散トランザクションを作成できます。
+ただし、C# プログラムで .NET クラス[System.Transactions.TransactionScope](/dotnet/api/system.transactions.transactionscope)を使用することで、SQL データベースの分散トランザクションを作成できます。
 
 ### <a name="other-programming-languages"></a>その他のプログラミング言語
 
-次の他のプログラミング言語では、SQL Database サービスを使用した分散トランザクションのサポートが提供されない場合があります。
+以下の他のプログラミング言語では、SQL Database サービスによる分散トランザクションのサポートが提供されない場合があります。
 
 - ODBC ドライバーを使用するネイティブ C++
-- Transact-sql を使用したリンクサーバー
+- トランザクション SQL を使用したリンク サーバー
 - JDBC ドライバー
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [トランザクションの実行 (ODBC)](performing-transactions-in-odbc.md)
