@@ -1,5 +1,5 @@
 ---
-title: ODBC のデータ型 |Microsoft Docs
+title: ODBC のデータ型 |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - data types [ODBC]
 - data types [ODBC], about data types
 ms.assetid: 7332d93e-44db-4132-9c10-988dbc13369e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9cfcc3a6d692f814ecf87f3a299d01f56592b549
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a9a602c43a257dba2cd856625c1520077188bb20
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68077003"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305193"
 ---
 # <a name="data-types-in-odbc"></a>ODBC のデータ型
-ODBC では、SQL データ型と C データ型の2セットのデータ型を使用します。 データソースでは SQL データ型が使用され、C データ型はアプリケーションの C コードで使用されます。  
+ODBC では、SQL データ型と C データ型の 2 つのデータ型セットを使用します。 SQL データ型はデータ ソースで使用され、C データ型はアプリケーションの C コードで使用されます。  
   
- ここでは、次のトピックについて説明します。  
+ このセクションでは、次のトピックについて説明します。  
   
 -   [型識別子](../../../odbc/reference/develop-app/type-identifiers.md)  
   
@@ -31,4 +31,4 @@ ODBC では、SQL データ型と C データ型の2セットのデータ型を�
   
 -   [ODBC の C データ型](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)  
   
--   [データ型変換](../../../odbc/reference/develop-app/data-type-conversions.md)
+-   [データ型の変換](../../../odbc/reference/develop-app/data-type-conversions.md)
