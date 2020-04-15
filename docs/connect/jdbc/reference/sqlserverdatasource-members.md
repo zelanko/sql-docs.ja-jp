@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7e749bc5-d765-4864-be2b-7822d4c20c09
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8fd4c6c324c8f25ab9b3630aaf565671261115c5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 26d778c5d75686a3de61064037fd0ade492f998b
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927628"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219287"
 ---
 # <a name="sqlserverdatasource-members"></a>SQLServerDataSource のメンバー
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "80927628"
   
 ## <a name="constructors"></a>コンストラクター  
   
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[SQLServerDataSource ()](../../../connect/jdbc/reference/sqlserverdatasource-constructor.md)|[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) クラスの新しいインスタンスを初期化します。|  
   
@@ -36,7 +36,7 @@ ms.locfileid: "80927628"
   
 ## <a name="methods"></a>メソッド  
   
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[getApplicationIntent](../../../connect/jdbc/reference/getapplicationintent-method-sqlserverdatasource.md)|**applicationIntent** 接続プロパティの値が返されます。|  
 |[getApplicationName](../../../connect/jdbc/reference/getapplicationname-method-sqlserverdatasource.md)|アプリケーション名を返します。|  
@@ -47,7 +47,7 @@ ms.locfileid: "80927628"
 |[getEncrypt](../../../connect/jdbc/reference/getencrypt-method-sqlserverdatasource.md)|encrypt プロパティが有効であるかどうかを示す **Boolean** 値を返します。|  
 |[getDescription](../../../connect/jdbc/reference/getdescription-method-sqlserverdatasource.md)|データ ソースの記述を返します。|  
 |[getFailoverPartner](../../../connect/jdbc/reference/getfailoverpartner-method-sqlserverdatasource.md)|データベース ミラーリング構成で使用されるフェールオーバー サーバーの名前を返します。|  
-|[getHostNameInCertificate](../../../connect/jdbc/reference/gethostnameincertificate-method-sqlserverdatasource.md)|SQL Server の SSL (Secure Sockets Layer) 証明書の検証に使用されるホスト名を返します。|  
+|[getHostNameInCertificate](../../../connect/jdbc/reference/gethostnameincertificate-method-sqlserverdatasource.md)|SQL Server の TLS (トランスポート層セキュリティ) (以前の SSL (Secure Sockets Layer)) 証明書を検証するために使用するホスト名が返されます。|  
 |[getInstanceName](../../../connect/jdbc/reference/getinstancename-method-sqlserverdatasource.md)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス名が返されます。|  
 |[getLastUpdateCount](../../../connect/jdbc/reference/getlastupdatecount-method-sqlserverdatasource.md)|lastUpdateCount プロパティが有効であるかどうかを示す**ブール**値が返されます。|  
 |[getLockTimeout](../../../connect/jdbc/reference/getlocktimeout-method-sqlserverdatasource.md)|データベースがロック タイムアウトを通知するまでに待機する時間 (ミリ秒) を示す **int** 値が返されます。|  
@@ -83,7 +83,7 @@ ms.locfileid: "80927628"
 |[setEnablePrepareOnFirstPreparedStatementCall](../../../connect/jdbc/reference/setenableprepareonfirstpreparedstatementcall-method-sqlserverdatasource.md)|**enablePrepareOnFirstPreparedStatementCall** 接続プロパティの新しい値が指定されます。|  
 |[setEncrypt](../../../connect/jdbc/reference/setencrypt-method-sqlserverdatasource.md)|encrypt プロパティが有効であるかどうかを示す **Boolean** 値を設定します。|  
 |[setFailoverPartner](../../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md)|データベース ミラーリング構成で使用されるフェールオーバー サーバーの名前を設定します。|  
-|[setHostNameInCertificate](../../../connect/jdbc/reference/sethostnameincertificate-method-sqlserverdatasource.md)|SQL Server の SSL (Secure Sockets Layer) 証明書の検証に使用されるホスト名を設定します。|  
+|[setHostNameInCertificate](../../../connect/jdbc/reference/sethostnameincertificate-method-sqlserverdatasource.md)|TLS (トランスポート層セキュリティ) (以前の SSL (Secure Sockets Layer)) を検証するために使用するホスト名を設定します。|  
 |[setInstanceName](../../../connect/jdbc/reference/setinstancename-method-sqlserverdatasource.md)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス名が設定されます。|  
 |[setIntegratedSecurity](../../../connect/jdbc/reference/setintegratedsecurity-method-sqlserverdatasource.md)|integratedSecurity プロパティが有効であるかどうかを示す **Boolean** 値を設定します。|  
 |[setLastUpdateCount](../../../connect/jdbc/reference/setlastupdatecount-method-sqlserverdatasource.md)|lastUpdateCount プロパティが有効であるかどうかを示す**ブール** 値を設定します。|  

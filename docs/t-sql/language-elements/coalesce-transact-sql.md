@@ -1,6 +1,6 @@
 ---
 title: COALESCE (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: COALESCE の Transact-SQL リファレンス。NULL と評価されない最初の式の現在の値を返します。
 ms.date: 08/30/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -21,12 +21,12 @@ ms.assetid: fafc0dba-f8a8-4aad-9b7f-908e34b74d88
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 085972109c9b19173e46c97cc5cef239a454dcb7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9e3692da70cf2d503dc994646a6cb2e92a05fe94
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67950291"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517683"
 ---
 # <a name="coalesce-transact-sql"></a>COALESCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -65,7 +65,7 @@ END
   
 そのため、入力値 (_expression1_、_expression2_、_expressionN_ など) が複数回評価されます。 サブクエリを含む値式は不明確な式と見なされ、サブクエリは 2 回評価されます。 この結果は、SQL 標準に準拠しています。 どちらの場合も、最初の評価とその後の評価で返される結果が異なります。  
   
-たとえば、`COALESCE((subquery), 1)` というコードを実行すると、サブクエリは 2 回評価されます。 その結果、クエリの分離レベルによっては、得られる結果が異なる場合があります。 たとえば、マルチユーザー環境の `NULL` 分離レベルでは、このコードによって `READ COMMITTED` 値が返される場合があります。 安定した結果が返されるようにするには、`SNAPSHOT ISOLATION` 分離レベルを使用するか、`COALESCE` を `ISNULL` 関数に置き換えてください。 または、次の例に示すように、サブクエリをサブセレクトに含めるようにクエリを書き換えることもできます。  
+たとえば、`COALESCE((subquery), 1)` というコードを実行すると、サブクエリは 2 回評価されます。 その結果、クエリの分離レベルによっては、得られる結果が異なる場合があります。 たとえば、マルチユーザー環境の `READ COMMITTED` 分離レベルでは、このコードによって `NULL` 値が返される場合があります。 安定した結果が返されるようにするには、`SNAPSHOT ISOLATION` 分離レベルを使用するか、`COALESCE` を `ISNULL` 関数に置き換えてください。 または、次の例に示すように、サブクエリをサブセレクトに含めるようにクエリを書き換えることもできます。  
   
 ```sql  
 SELECT CASE WHEN x IS NOT NULL THEN x ELSE 1 END  
@@ -109,7 +109,7 @@ SELECT (SELECT Nullable FROM Demo WHERE SomeCol = 1) AS x
     );  
     ```  
   
-4.  `ISNULL` と `COALESCE` の妥当性検査も異なります。 たとえば、`NULL` の `ISNULL` 値は **int** に変換されますが、`COALESCE` の場合は、データ型を指定する必要があります。  
+4.  `ISNULL` と `COALESCE` の妥当性検査も異なります。 たとえば、`ISNULL` の `NULL` 値は **int** に変換されますが、`COALESCE` の場合は、データ型を指定する必要があります。  
   
 5.  `ISNULL` は、2 つのパラメーターのみを受け取ります。 これに対し `COALESCE` はさまざまな数のパラメーターを受け取ります。  
   
@@ -217,9 +217,9 @@ Socks, Mens  Blue       PN1965         Blue
 NULL         White      PN9876         White
 ```  
   
-最初の行の `FirstNotNull` 値が `PN1278` でなく `Socks, Mens` であることに着目してください。 この値がこうなるのは、この例で、`Name` 列が `COALESCE` のパラメーターとして指定されていないためです。  
+最初の行の `FirstNotNull` 値が `Socks, Mens` でなく `PN1278` であることに着目してください。 この値がこうなるのは、この例で、`Name` 列が `COALESCE` のパラメーターとして指定されていないためです。  
   
-### <a name="d-complex-example"></a>D: 複雑な例  
+### <a name="d-complex-example"></a>D:複雑な例  
 次の例では、`COALESCE` を使用して 3 つの列の値を比較し、列で検索された null 以外の値のみを返します。  
   
 ```sql  

@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 49276dd1d3e4f868a2f1fce7a521bba9d31545c9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3667a8bffa62dbb4b297fc73ce2910048110468f
+ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79510213"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80464382"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE の SET オプション (Transact-SQL)
 
@@ -3034,7 +3034,7 @@ SELECT name, is_result_set_caching_on FROM sys.databases
 WHERE name = <'Your_Database_Name'>
 ```
 
-次のコマンドを実行して、クエリが結果キャッシュ ヒットで実行されたのか、結果キャッシュ ミスで実行されたのかを確認します。  キャッシュ ヒットがあった場合、result_cache_hit は 1 を返します。
+このコマンドを実行すると、キャッシュ済みの結果を利用してクエリが実行されたか確認されます。  result_set_cache 列では、キャッシュ ヒットの場合は 1、キャッシ ュミスの場合は 0、結果セットのキャッシュが使用されなかった理由については負の値が返されます。  詳細については、[sys.dm_pdw_exec_requests](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql?view=aps-pdw-2016-au7) を確認してください。  
 
 ```sql
 SELECT request_id, command, result_set_cache FROM sys.dm_pdw_exec_requests

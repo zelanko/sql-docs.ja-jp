@@ -1,6 +1,6 @@
 ---
 title: FORMAT (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: FORMAT 関数の Transact-SQL リファレンス。
 ms.date: 08/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,12 +18,12 @@ ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: fd44673ce62d74349e83b09b020c9e20ab6957de
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bc64f97123a14d971a531b489eeddbec42f3931b
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70155799"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517642"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
 
@@ -74,7 +74,7 @@ FORMAT ( value, format [, culture ] )
   
  *value* 引数の許容データ型の一覧を、.NET Framework にマッピングした同等の型と共に、次の表に示します。  
   
-|カテゴリ|種類|.NET の種類|  
+|カテゴリ|Type|.NET の種類|  
 |--------------|----------|---------------|  
 |数値|bigint|Int64|  
 |数値|INT|Int32|  
@@ -150,7 +150,7 @@ DateTime Result  Custom Number Result
   
 ### <a name="c-format-with-numeric-types"></a>C. 数値型を使用する FORMAT
 
- 次の例では、**データベースの**Sales.CurrencyRate[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] テーブルから 5 行を返します。 列 **EndOfDateRate** は、**money** 型としてテーブルに格納されます。 この例では、書式設定されずに返された列を、.NET の数値書式、一般書式、および通貨の書式の種類を指定して書式設定します。 これらの数値書式およびその他の数値書式の詳細については、「[標準数値書式設定文字列](https://msdn.microsoft.com/library/dwhawy9k.aspx)」を参照してください。  
+ 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの **Sales.CurrencyRate** テーブルから 5 行を返します。 列 **EndOfDateRate** は、**money** 型としてテーブルに格納されます。 この例では、書式設定されずに返された列を、.NET の数値書式、一般書式、および通貨の書式の種類を指定して書式設定します。 これらの数値書式およびその他の数値書式の詳細については、「[標準数値書式設定文字列](https://msdn.microsoft.com/library/dwhawy9k.aspx)」を参照してください。  
   
 ```sql  
 SELECT TOP(5)CurrencyRateID, EndOfDayRate  

@@ -1,6 +1,6 @@
 ---
 title: STRING_SPLIT (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: STRING_SPLIT 関数の Transact-SQL リファレンス。 このテーブル値関数では、文字区切り記号に基づき、文字列が部分文字列に分割されます。
 ms.date: 11/28/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,12 +18,12 @@ ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 20580d1c746a678771ff3be0e67bab72e2b72be8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f75e154faf4525fbff03b7ece4dbb42da896ac94
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77179273"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517100"
 ---
 # <a name="string_split-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 
@@ -48,7 +48,7 @@ STRING_SPLIT ( string , separator )
 ## <a name="arguments"></a>引数
 
  *string*  
- 任意の文字型 ([nvarchar](../../t-sql/language-elements/expressions-transact-sql.md)、**varchar**、**nchar**、**char** など) の**式**です。  
+ 任意の文字型 (**nvarchar**、**varchar**、**nchar**、**char** など) の[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
   
  *separator*  
  任意の文字型の 1 文字の[式](../../t-sql/language-elements/expressions-transact-sql.md)です (**nvarchar(1)** 、**varchar(1)** 、**nchar(1)** 、**char(1)** など)。連結する部分文字列の区切り文字として使用されます。  
@@ -104,7 +104,7 @@ WHERE RTRIM(value) <> '';
 
 次の例のように、Product テーブルには、コンマで区切られたタグのリストを含む列があります。  
   
-|ProductId|Name|Tags|  
+|ProductId|名前|Tags|  
 |---------------|----------|----------|  
 |1|Full-Finger Gloves|clothing,road,touring,bike|  
 |2|LL Headset|bike|  
@@ -120,7 +120,7 @@ FROM Product
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|ProductId|Name|value|  
+|ProductId|名前|value|  
 |---------------|----------|-----------|  
 |1|Full-Finger Gloves|clothing|  
 |1|Full-Finger Gloves|道路|  

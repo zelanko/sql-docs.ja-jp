@@ -1,5 +1,6 @@
 ---
 title: Excel から SQL にデータをインポートする | Microsoft Docs
+description: この記事では、Excel から SQL Server または Azure SQL Database にデータをインポートする方法について説明します。 シングル ステップを使用する場合もあれば、中間テキスト ファイルが必要な場合もあります。
 ms.custom: sqlfreshmay19
 ms.date: 09/30/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 68a5542d36731e260ab4aeb5a0734bea2a983108
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6bbb114a2d3ae3f5655f4d5a60a2842af77170b6
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75245268"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980577"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Excel から SQL Server または Azure SQL Database にデータをインポートする
 
@@ -128,7 +129,7 @@ FROM OPENDATASOURCE('Microsoft.ACE.OLEDB.12.0',
 GO
 ```
 
-新しいテーブルを作成する代わりに、インポートされたデータを、 *"既存"* テーブルに *"追加"* するには、前の例で使用された `INSERT INTO ... SELECT ... FROM ...` 構文ではなく `SELECT ... INTO ... FROM ...` 構文を使用します。
+新しいテーブルを作成する代わりに、インポートされたデータを、 *"既存"* テーブルに *"追加"* するには、前の例で使用された `SELECT ... INTO ... FROM ...` 構文ではなく `INSERT INTO ... SELECT ... FROM ...` 構文を使用します。
 
 Excel のデータをインポートせずに Excel のデータにクエリを実行するには、標準の `SELECT ... FROM ...` 構文を使用します。
 
@@ -140,7 +141,7 @@ Excel のデータをインポートせずに Excel のデータにクエリを�
 
 ### <a name="linked-servers"></a>リンク サーバー
 
-SQL Server から Excel ファイルへの永続的な接続を *"リンク サーバー"* として構成することもできます。 次の例は、既存の Excel のリンク サーバー `Data` の `EXCELLINK` ワークシートからデータを、`Data_ls` という名前の新しい SQL Server データベース テーブルにインポートしています。
+SQL Server から Excel ファイルへの永続的な接続を *"リンク サーバー"* として構成することもできます。 次の例は、既存の Excel のリンク サーバー `EXCELLINK` の `Data` ワークシートからデータを、`Data_ls` という名前の新しい SQL Server データベース テーブルにインポートしています。
 
 ```sql
 USE ImportFromExcel;
@@ -252,7 +253,7 @@ Azure Data Factory のコピー ウィザードのページをステップ実行
 コピー ウィザードの詳細については、次のトピックを参照してください。
 
 - [Data Factory コピー ウィザード](https://docs.microsoft.com/azure/data-factory/data-factory-azure-copy-wizard)
-- [チュートリアル: コピー アクティビティがあるパイプラインを Data Factory コピー ウィザードで作成する](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial)。
+- [チュートリアル:コピー アクティビティがあるパイプラインを Data Factory コピー ウィザードで作成する](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial)。
 
 ## <a name="azure-data-factory"></a><a name="adf"></a> Azure Data Factory
 
@@ -269,7 +270,7 @@ Azure Data Factory に精通していて、コピー ウィザードを実行し
 Azure Data Factory でデータをコピーする方法の学習を開始するには、次のトピックを参照してください。
 
 - [コピー アクティビティを使用したデータの移動](https://docs.microsoft.com/azure/data-factory/data-factory-data-movement-activities)
-- [チュートリアル: コピー アクティビティがあるパイプラインを Azure Portal で作成する](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
+- [チュートリアル:コピー アクティビティがあるパイプラインを Azure portal で作成する](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
 
 ## <a name="common-errors"></a>一般的なエラー
 

@@ -17,12 +17,12 @@ ms.assetid: 2f3ce5f5-c81c-4470-8141-8144d4f218dd
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8c7fed197491d26c4aaad4b4d09ba480d2d7eb82
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 445453f6be42c6015fc3b6728eb12ee9a78f0ef6
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68123598"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928163"
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>決定的関数と非決定的関数
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68123598"
 ## <a name="built-in-function-determinism"></a>組み込み関数の決定性  
  組み込み関数の決定性には、影響を与えることができません。 各組み込み関数が決定的であるか非決定的であるかは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]による関数の実装方法に基づきます。 たとえば、クエリに ORDER BY 句を指定しても、そのクエリで使用される関数の決定性は変わりません。  
   
- 組み込みの文字列関数はすべて決定的です。 文字列関数の一覧については、「[文字列関数 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)」を参照してください。  
+ [FORMAT](../../t-sql/functions/format-transact-sql.md) を除き、組み込みの文字列関数はすべて決定的関数になります。 文字列関数の一覧については、「[文字列関数 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)」を参照してください。  
   
  文字列関数以外のカテゴリに属する次の組み込み関数は、常に決定的関数になります。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "68123598"
 |-|-|-|  
 |ABS|DATEDIFF|POWER|  
 |ACOS|DAY|RADIANS|  
-|ASIN|DEGREES|[ROUND]|  
+|ASIN|DEGREES|ROUND|  
 |ATAN|EXP|SIGN|  
 |ATN2|FLOOR|SIN|  
 |CEILING|ISNULL|SQUARE|  
@@ -55,7 +55,7 @@ ms.locfileid: "68123598"
   
  次の関数は必ず決定的関数になるとは限りませんが、決定的な方法で指定されている場合は、インデックス付きビューまたは計算列のインデックスで使用できます。  
   
-|Function|説明|  
+|機能|説明|  
 |--------------|--------------|  
 |すべての集計関数|OVER 句および ORDER BY 句で指定されていない限り、集計関数はすべて決定的です。 集計関数の一覧については、「[集計関数 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)」を参照してください。|  
 |CAST|**datetime**、 **smalldatetime**、または **sql_variant**と共に使用しない場合は、決定的関数になります。|  

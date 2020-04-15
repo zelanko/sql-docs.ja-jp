@@ -1,7 +1,7 @@
 ---
 title: SERVERPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 03/31/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4654771be070cc02f2c56b1f08950d120706216d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: db0bbc0fe85809ea827b005e8c10bbbfe4f30670
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76761712"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517525"
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
 
@@ -67,6 +67,7 @@ SERVERPROPERTY ( 'propertyname' )
 |InstanceDefaultLogPath|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から 2015 年後半以降の更新プログラムの現在のバージョン。<br /><br /> インスタンス ログ ファイルの既定のパスの名前。|  
 |InstanceName|ユーザーの接続先のインスタンス名。<br /><br /> インスタンス名が既定インスタンスの場合や、無効な入力またはエラーの場合は、NULL が返されます。<br /><br /> NULL = 無効な入力、エラー、または該当なし<br /><br /> 基本データ型: **nvarchar(128)**|  
 |IsAdvancedAnalyticsInstalled|セットアップ時に Advanced Analytics 機能がインストールされた場合は 1 を返します。Advanced Analytics がインストールされていない場合は 0 を返します。|  
+|IsBigDataCluster| CU4 から始まった [!INCLUDE[ssSQL2019](../../includes/sssqlv15-md.md)] で導入されました。<br /><br />インスタンスが SQL Server ビッグ データ クラスターの場合は 1 を返し、ビッグ データ クラスターではない場合は 0 を返します。|  
 |IsClustered|サーバー インスタンスがフェールオーバー クラスターで構成されます。<br /><br /> 1 = クラスター化<br /><br /> 0 = 非クラスター化<br /><br /> NULL = 無効な入力、エラー、または該当なし<br /><br /> 基本データ型: **int**|  
 |IsFullTextInstalled|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の現在のインスタンスに、フルテキスト インデックス作成およびセマンティック インデックス作成のコンポーネントがインストールされています。<br /><br /> 1 = フルテキスト インデックス作成およびセマンティック インデックス作成のコンポーネントがインストールされています。<br /><br /> 0 = フルテキスト インデックス作成およびセマンティック インデックス作成のコンポーネントがインストールされていません。<br /><br /> NULL = 無効な入力、エラー、または該当なし<br /><br /> 基本データ型: **int**|  
 |IsHadrEnabled|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]は、このサーバー インスタンス上で有効です。<br /><br /> 0 = [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]機能は無効です。<br /><br /> 1 = [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]機能は有効です。<br /><br /> NULL = 無効な入力、エラー、または該当なし<br /><br /> 基本データ型: **int**<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで可用性レプリカを作成して実行するには、サーバー インスタンス上で [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]が有効になっている必要があります。 詳細については、「[AlwaysOn 可用性グループの有効化と無効化 (SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)」を参照してください。<br /><br /> **注:** IsHadrEnabled プロパティは、[!INCLUDE[ssHADR](../../includes/sshadr-md.md)] のみに関連します。 データベース ミラーリングやログ配布などの、その他の高可用性機能およびディザスター リカバリー機能は、このサーバー プロパティの影響を受けません。|  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: eb926c0696f0e926f91297ee5b719bbafce3eda8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 91f71543b9fecd994cc2b951758caacd23e8ae1f
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80909128"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219361"
 ---
 # <a name="tracing-driver-operation"></a>ドライバー操作のトレース
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "80909128"
   
  次の表では、パブリックなログ記録のカテゴリで利用可能なログ記録の各レベルについて説明します。  
   
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |SEVERE|重大なエラーを示す、最高レベルのログ記録です。 JDBC Driver では、このレベルはエラーや例外の報告に使用されます。|  
 |WARNING|問題が発生する可能性があることを示します。|  
@@ -53,21 +53,21 @@ ms.locfileid: "80909128"
   
  次の表では、内部的なログ記録のカテゴリで利用可能なログ記録の各レベルについて説明します。  
   
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |SEVERE|重大なエラーを示す、最高レベルのログ記録です。 JDBC Driver では、このレベルはエラーや例外の報告に使用されます。|  
 |WARNING|問題が発生する可能性があることを示します。|  
 |INFO|情報としてのメッセージを提供します。|  
 |FINE|基本的なオブジェクトの作成と破棄など、各種のトレース情報を提供します。 パブリック メソッドによってスローされるすべての例外も含まれます。|  
-|FINER|パブリック メソッドのすべての開始ポイントと終了ポイント、関連するパラメーターのデータ型、パブリック クラスのすべてのパブリック プロパティなど、詳細なトレース情報を提供します。 入力パラメーター、出力パラメーター、メソッドの戻り値も含まれますが、CLOB、BLOB、NCLOB、Reader、\<stream> の戻り値の型は除きます。<br /><br /> バージョン 1.2 の JDBC Driver には、[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)、[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)、XA、[SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) の各ログ記録カテゴリが存在し、いずれも FINE のログ記録レベルが割り当てられていました。 これらは、バージョン 2.0 リリース以降で FINER レベルにアップグレードされています。|  
-|FINEST|より詳細なトレース情報を提供します。 これは最低レベルのログ記録です。<br /><br /> バージョン 1.2 の JDBC Driver には、TDS.DATA および TDS.TOKEN というログ記録カテゴリが存在し、いずれも FINEST のログ記録レベルが割り当てられていました。 バージョン 2.0 リリース以降でも、ログ記録レベルは FINEST から変更されていません。|  
+|FINER|パブリック メソッドのすべての開始ポイントと終了ポイント、関連するパラメーターのデータ型、パブリック クラスのすべてのパブリック プロパティなど、詳細なトレース情報を提供します。 入力パラメーター、出力パラメーター、メソッドの戻り値も含まれますが、CLOB、BLOB、NCLOB、Reader、\<stream> の戻り値の型は除きます。<br /><br /> バージョン 1.2 の JDBC Driver には、次のログ記録カテゴリが存在し、FINE のログ記録レベルが割り当てられていました。[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)、[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)、XA、および [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md)。 これらは、バージョン 2.0 リリース以降で FINER レベルにアップグレードされています。|  
+|FINEST|より詳細なトレース情報を提供します。 これは最低レベルのログ記録です。<br /><br /> バージョン 1.2 の JDBC Driver には、次のログ記録カテゴリが存在し、FINEST のログ記録レベルが割り当てられていました。TDS.DATA および TDS.TOKEN。 バージョン 2.0 リリース以降でも、ログ記録レベルは FINEST から変更されていません。|  
 |OFF|ログ記録をオフにします。|  
 |ALL|すべてのメッセージのログ記録を有効にします。|  
   
 ## <a name="logging-categories"></a>ログ記録のカテゴリ  
  Logger オブジェクトを作成するときは、どの名前付きエンティティまたはカテゴリからログ情報を取得するのかをそのオブジェクトに知らせる必要があります。 JDBC Driver は、パブリックなログ記録のカテゴリとして、次のカテゴリをサポートします。いずれも com.microsoft.sqlserver.jdbc ドライバー パッケージで定義されています。  
   
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |Connection|[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) クラスのメッセージを記録します。 アプリケーションは、ログ記録レベルを FINER として設定できます。|  
 |ステートメント|[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) クラスのメッセージを記録します。 アプリケーションは、ログ記録レベルを FINER として設定できます。|  
@@ -77,7 +77,7 @@ ms.locfileid: "80909128"
   
  Microsoft JDBC Driver Version 2.0 以降では、さらに com.microsoft.sqlserver.jdbc.internals パッケージが用意されており、内部的なログ記録のカテゴリとして、次のカテゴリがサポートされています。  
   
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |AuthenticationJNI|Windows 統合認証の問題に関するメッセージをログに記録します (**authenticationScheme** 接続プロパティが暗黙的または明示的に **NativeAuthentication** に設定された場合)。<br /><br /> アプリケーションは、ログ記録レベルを FINEST および FINE として設定できます。|  
 |SQLServerConnection|[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) クラスのメッセージを記録します。 アプリケーションは、ログ記録レベルを FINE および FINER として設定できます。|  
@@ -89,7 +89,7 @@ ms.locfileid: "80909128"
 |XA|[SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) クラスのすべての XA トランザクションについてメッセージを記録します。 アプリケーションは、ログ記録レベルを FINE および FINER として設定できます。|  
 |KerbAuthentication|タイプ 4 Kerberos 認証に関するメッセージをログに記録します (**authenticationScheme** 接続プロパティが **JavaKerberos** に設定された場合)。 アプリケーションは、ログ記録レベルを FINE または FINER として設定できます。|  
 |TDS.DATA|ドライバーと SQL Server の間で交わされる TDS プロトコル レベルのメッセージ交換を含んだメッセージを記録します。 送受信される各 TDS パケットの詳細な内容が ASCII および 16 進形式で記録されます。 ログイン資格情報 (ユーザー名とパスワード) は記録されません。 それ以外のすべてのデータが記録されます。<br /><br /> このカテゴリは非常に冗長で詳細なメッセージを作成します。ログ記録のレベルを FINEST に設定したときにのみ有効になります。|  
-|TDS.Channel|SQL Server との TCP 通信チャネルのアクションをトレースします。 記録されるメッセージには、読み取りや書き込みのほか、ソケットの開閉が含まれます。 SQL Server との SSL (Secure Sockets Layer) 接続の確立に関連したメッセージもトレースされます。<br /><br /> このカテゴリは、ログ記録レベルを FINE、FINER、または FINEST に設定したときにのみ有効になります。|  
+|TDS.Channel|SQL Server との TCP 通信チャネルのアクションをトレースします。 記録されるメッセージには、読み取りや書き込みのほか、ソケットの開閉が含まれます。 SQL Server との TLS (トランスポート層セキュリティ) (以前の SSL (Secure Sockets Layer)) 接続の確立に関連したメッセージもトレースされます。<br /><br /> このカテゴリは、ログ記録レベルを FINE、FINER、または FINEST に設定したときにのみ有効になります。|  
 |TDS.Writer|TDS チャネルへの書き込みをトレースします。 トレースされるのは書き込みの長さのみです。書き込みの内容がトレースされるわけではありません。 このカテゴリでは、アテンション シグナルがサーバーに送信され、ステートメントの実行がキャンセルされた場合にも、問題がトレースされます。<br /><br /> このカテゴリは、ログ記録レベルを FINEST に設定したときにのみ有効になります。|  
 |TDS.Reader|TDS チャネルからの特定の読み取り操作を FINEST レベルでトレースします。 FINEST レベルのトレースは冗長になる場合があります。 WARNING レベルや SEVERE レベルでは、ドライバーが接続を閉じる前に SQL Server から無効な TDS プロトコルを受信した場合にトレースが行われます。<br /><br /> このカテゴリは、ログ記録レベルを FINER または FINEST に設定したときにのみ有効になります。|  
 |TDS.Command|低レベルの状態遷移や、TDS コマンドの実行に関連したその他の情報 ([!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの実行、ResultSet カーソルのフェッチ、コミットなど) をトレースします。<br /><br /> このカテゴリは、ログ記録レベルを FINEST に設定したときにのみ有効になります。|  
@@ -158,7 +158,7 @@ com.microsoft.sqlserver.jdbc.level=FINEST
 > [!NOTE]  
 >  java.util.logging に含まれる LogManager オブジェクトを使用して、`logging.properties` ファイルでプロパティを設定することができます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [JDBC ドライバーに関する問題の診断](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
   
   

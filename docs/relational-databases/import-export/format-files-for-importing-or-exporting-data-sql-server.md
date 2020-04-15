@@ -1,5 +1,6 @@
 ---
 title: データをインポートおよびエクスポートするためのフォーマット ファイル
+description: SQL Server テーブルに一括インポートする場合、またはテーブルから一括エクスポートする場合、フォーマット ファイルには、テーブルに対応するデータ ファイルのフィールド形式情報を格納できます。
 ms.date: 09/25/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -15,19 +16,19 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 3cc48298aadc027509adb9d0abf5f5057e0c4fef
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 683ed7310ac90e37c4bcce24080f879082c6c410
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74055978"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980447"
 ---
 # <a name="format-files-to-import-or-export-data-sql-server"></a>データをインポートまたはエクスポートするためのフォーマット ファイル (SQL Server)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルにデータを一括インポートしたり、テーブルからデータを一括エクスポートしたりする場合、 *フォーマット ファイル* を使用して、データの一括エクスポートと一括インポートに必要なすべてのフォーマット情報を格納できます。 これには、そのテーブルに対応するデータ ファイル内の各フィールドのフォーマット情報が含まれます。
 
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、XML フォーマット ファイルと XML 以外のフォーマット ファイルの 2 種類がサポートされます。 XML 以外のフォーマット ファイルにも XML フォーマット ファイルにもデータ ファイル内のすべてのフィールドの説明が含まれており、XML フォーマット ファイルには対応するテーブル列の説明も含まれています。 通常は、XML フォーマット ファイルと XML 以外のフォーマット ファイルの間には互換性があります。 ただし、XML フォーマット ファイルの方が XML 以外のフォーマット ファイルよりも優れた点がいくつかあるので、新しいフォーマット ファイルには XML 構文を使用することをお勧めします。 詳細については、「 [XML フォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)です。
+[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、次の 2 種類のフォーマット ファイルがサポートされます: XML の形式と XML 以外のフォーマット ファイル。 XML 以外のフォーマット ファイルにも XML フォーマット ファイルにもデータ ファイル内のすべてのフィールドの説明が含まれており、XML フォーマット ファイルには対応するテーブル列の説明も含まれています。 通常は、XML フォーマット ファイルと XML 以外のフォーマット ファイルの間には互換性があります。 ただし、XML フォーマット ファイルの方が XML 以外のフォーマット ファイルよりも優れた点がいくつかあるので、新しいフォーマット ファイルには XML 構文を使用することをお勧めします。 詳細については、「 [XML フォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)です。
 
 ## <a name="benefits-of-format-files"></a><a name="Benefits"></a> フォーマット ファイルの利点
 

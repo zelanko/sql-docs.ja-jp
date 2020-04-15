@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 658dcbccb515b7d5d720d0bb0c677aa2178b7606
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fc70544fdb0bb79ef97d5026ad8b985ad8add2ba
+ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216081"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80443382"
 ---
 # <a name="configure-polybase-scale-out-groups-on-windows"></a>Windows 上で PolyBase スケールアウト グループを構成する
 
@@ -87,7 +87,10 @@ ms.locfileid: "80216081"
 3. コンピューティング ノード (PQTH4A-CMP02) で、services.msc を実行します。
   
 4. PolyBase エンジンをシャット ダウンし、PolyBase データ移動サービスを再起動します。
-  
+
+> [!NOTE] 
+> Polybase Engine サービスが再起動したか、ヘッド ノードで停止した場合、Data Movement Service (DMS) と Polybase Engine サービス (DW) の間で通信チャネルが閉じられた直後、DMS サービスが停止します。 DW エンジンが 2 回以上再起動した場合、DMS は 90 分間沈黙します。次回の自動起動試行まで 90 分待機する必要があります。 そのような状況では、すべてのノードで、このサービスを手動で開始してください。
+
 ## <a name="optional-remove-a-compute-node"></a>省略可能:コンピューティング ノードを削除する  
   
 1. コンピューティング ノードの SQL Server (PQTH4A-CMP02) に接続します。

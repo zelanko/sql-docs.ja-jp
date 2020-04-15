@@ -13,12 +13,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 02/20/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: f6a7628d324236a8fbbe7afa5b80c746f95fec13
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ca30249097fa9ad4eec386ca0fc0698976e5362a
+ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80271488"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80809588"
 ---
 # <a name="download-sql-server-data-tools-ssdt-for-visual-studio"></a>SQL Server Data Tools (SSDT) for Visual Studio のダウンロード
 
@@ -84,7 +84,11 @@ Analysis Services、Integration Services、Reporting Services プロジェクト
 > [!IMPORTANT]
 > * SSDT for Visual Studio 2017 (15.9.4) をインストールする前に、*Analysis Services プロジェクト*と *Reporting Services プロジェクト*の拡張機能がインストールされている場合はアンインストールし、すべての VS インスタンスを閉じます。
 > * SQL Server 2017 用の受信トレイ コンポーネント Power Query ソースが削除されました。 すぐに使用できるコンポーネントとして SQL Server 2017 および 2019 用の Power Query ソースを発表しました。これは[こちら](https://www.microsoft.com/download/details.aspx?id=100619)からダウンロードできます。
-> * SQL Server 2019 用の受信トレイ コンポーネント Microsoft Oracle Connector が削除されました。 すぐに使用できるコンポーネントとして SQL Server 2019 用の Microsoft Oracle Connector を発表しました。これは[こちら](https://www.microsoft.com/download/details.aspx?id=58228)からダウンロードできます。
+> * Oracle および Teradata コネクタを使用し、SQL 2019 より前の以前のバージョンの SQL Server をターゲットとするパッケージを設計するには、[SQL 2019 用の Microsoft Oracle Connector](https://www.microsoft.com/download/details.aspx?id=58228) および [SQL 2019 用の Microsoft Teradata Connector](https://www.microsoft.com/download/details.aspx?id=100599) に加えて、対応するバージョンの Microsoft Connector for Oracle and Teradata by Attunity もインストールする必要があります。
+>    * [SQL Server 2017 をターゲットとする Microsoft Connector Version 5.0 for Oracle and Teradata by Attunity](https://www.microsoft.com/download/details.aspx?id=55179)
+>    * [SQL Server 2016 をターゲットとする Microsoft Connector Version 4.0 for Oracle and Teradata by Attunity](https://www.microsoft.com/download/details.aspx?id=52950)
+>    * [SQL Server 2014 をターゲットとする Microsoft Connector Version 3.0 for Oracle and Teradata by Attunity](https://www.microsoft.com/download/details.aspx?id=44582)
+>    * [SQL Server 2012 をターゲットとする Microsoft Connector Version 2.0 for Oracle and Teradata by Attunity](https://www.microsoft.com/download/details.aspx?id=29283)
 
 ### <a name="release-notes"></a>リリース ノート
 

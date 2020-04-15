@@ -1,5 +1,6 @@
 ---
 title: HumanResources.myTeam サンプル テーブル (SQL Server) | Microsoft Docs
+description: SQL Server で一括データをインポートおよびエクスポートするコード例を実行するには、myTeam という名前のテスト テーブルを HumanResources スキーマに作成する必要があります。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.assetid: 27da45a0-c1f4-4bf4-ab24-6196e80d3834
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a95168f9c932b187a77d0d8e97511fd0070ea8ba
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 73ec7e3d639d49fd12a0c0b6708278702a423f0e
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68035682"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980460"
 ---
 # <a name="humanresourcesmyteam-sample-table-sql-server"></a>HumanResources.myTeam サンプル テーブル (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "68035682"
 |列|データ型|NULL 値の許容|説明|  
 |------------|---------------|-----------------|-----------------|  
 |**EmployeeID**|**smallint**|不可|行の主キー。 チーム メンバーの従業員 ID。|  
-|**Name**|**nvarchar (50)**|不可|チーム メンバーの名前。|  
+|**名前**|**nvarchar (50)**|不可|チーム メンバーの名前。|  
 |**Title**|**nvarchar (50)**|Nullable|チームにおける従業員の肩書き。|  
 |**バックグラウンド**|**nvarchar (50)**|不可|行が最後に更新された日時 (既定値)。|  
   

@@ -11,12 +11,12 @@ ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50c2d3aba84ce537e34b5c2bf5948c6ee84ac359
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cd7bcfd87f6ab51f2692d9d1a9ec11d9740aaab9
+ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165224"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80809860"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>システム バージョン管理されたテンポラル テーブルの作成
 
@@ -52,7 +52,7 @@ WITH (SYSTEM_VERSIONING = ON);
 - **PERIOD** 列は、null 値許容性が指定されていない場合でも、常に null 値非許容と見なされます。 **PERIOD** 列が明示的に Null 許容として定義されている場合、**CREATE TABLE** ステートメントは失敗します。
 - 履歴テーブルは、列の数、列名、順序、データ型に関して、現在のテーブルまたはテンポラル テーブルと常にスキーマが整合している必要があります。
 - 匿名履歴テーブルは、現在のテーブルまたはテンポラル テーブルと同じスキーマで自動的に作成されます。
-- 匿名履歴テーブル名の形式は、*MSSQL_TemporalHistoryFor_<current_temporal_table_object_id>_[suffix]* です。 サフィックスは省略可能であり、テーブル名の最初の部分が一意ではない場合にのみ追加されます。
+- 匿名履歴テーブルの名前は次の形式になります。*MSSQL_TemporalHistoryFor_<current_temporal_table_object_id>_[suffix]* 。 サフィックスは省略可能であり、テーブル名の最初の部分が一意ではない場合にのみ追加されます。
 - 履歴テーブルは、行ストア テーブルとして作成されます。 可能な場合はページの圧縮が適用されます。不可能な場合は、履歴テーブルは圧縮されません。 たとえば、スパース列などの一部のテーブル構成では、圧縮は許可されません。
 - 履歴テーブルの既定のクラスター化インデックスは、*IX_<history_table_name>* という形式の自動生成される名前で作成されます。 クラスター化インデックスには、 **PERIOD** 列 (終了、開始) が含まれます。
 - メモリ最適化テーブルとして現在のテーブルを作成する場合は、「 [メモリ最適化テーブルでのシステム バージョン管理されたテンポラル テーブル](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)」を参照してください。
@@ -164,9 +164,8 @@ ALTER TABLE InsurancePolicy
 
 - データが含まれる既存のテーブルに既定値のある null 非許容列を追加することは、SQL Server Enterprise Edition 以外のすべてのエディションではデータ サイズ操作 (Enterprise Edition ではメタデータ操作) となります。 SQL Server Standard Edition では、データが含まれる既存の大規模な履歴テーブルの場合、非 null 列の追加はコストのかかる操作になることがあります。
 - 期間開始列および期間終了列に対する制約は、慎重に選択する必要があります。
-
   - 開始列の既定値では、既存の行が有効であると考慮することを始める時点を指定します。 未来の時刻は指定できません。
-  - 終了日時は、特定の datetime2 精度に対する最大値として指定する必要があります。
+  - 終了日時は、特定の datetime2 精度に対する最大値として指定する必要があります。たとえば、`9999-12-31 23:59:59` や `9999-12-31 23:59:59.9999999` にします。
 - 期間を追加すると、現在のテーブルでデータ整合性チェックが実行されて、期間列の既定値が有効であることが確認されます。
 - **SYSTEM_VERSIONING**を有効にするときに既存の履歴テーブルを指定すると、現在のテーブルと履歴テーブルの両方に対してデータの整合性チェックが行われます。 **DATA_CONSISTENCY_CHECK = OFF** を追加パラメーターとして指定した場合は、スキップできます。
 

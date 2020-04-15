@@ -1,5 +1,5 @@
 ---
-title: GO (Transact-SQL) | Microsoft Docs
+title: SQL Server のユーティリティのステートメント - GO | Microsoft Docs
 ms.custom: ''
 ms.date: 07/27/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b2ca6791-3a07-4209-ba8e-2248a92dd738
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 48bca691f10822176c5169cf6bf9a052d7675478
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 21f930a4224c0d80c1db299f4dda8ef8c9c95729
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68072305"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531227"
 ---
 # <a name="sql-server-utilities-statements---go"></a>SQL Server のユーティリティのステートメント - GO
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

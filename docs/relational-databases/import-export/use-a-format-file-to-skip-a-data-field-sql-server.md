@@ -1,5 +1,6 @@
 ---
 title: フォーマット ファイルを使用したデータ フィールドのスキップ
+description: テーブル列よりも多くのフィールドを持つデータ ファイルでフォーマット ファイルを使用できます。 これにより、テーブル列が対応するデータ フィールドにマップされ、余分なフィールドは無視されます。
 ms.date: 09/19/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -14,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 88d9e3805891c62998afb131ddee7fb202f18b75
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3f936706a855e810eefc8749a6c9296e855a9d57
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056321"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980654"
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>フォーマット ファイルを使用したデータ フィールドのスキップ (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "74056321"
 |[テスト条件の例](#etc)<br />&emsp;&#9679;&emsp;[サンプル テーブル](#sample_table)<br />&emsp;&#9679;&emsp;[サンプル データ ファイル](#sample_data_file)<br />[フォーマット ファイルの作成](#create_format_file)<br />&emsp;&#9679;&emsp;[XML 以外のフォーマット ファイルの作成](#nonxml_format_file)<br />&emsp;&#9679;&emsp;[XML 以外のフォーマット ファイルの変更](#modify_nonxml_format_file)<br />&emsp;&#9679;&emsp;[XML フォーマット ファイルの作成](#xml_format_file)<br />&emsp;&#9679;&emsp;[XML フォーマット ファイルの変更](#modify_xml_format_file)<br />[データ フィールドをスキップするためのフォーマット ファイルを使用したデータのインポート](#import_data)<br />&emsp;&#9679;&emsp;[bcp と XML 以外のフォーマット ファイルの使用](#bcp_nonxml)<br />&emsp;&#9679;&emsp;[bcp と XML フォーマット ファイルの使用](#bcp_xml)<br />&emsp;&#9679;&emsp;[BULK INSERT と XML 以外のフォーマット ファイルの使用](#bulk_nonxml)<br />&emsp;&#9679;&emsp;[BULK INSERT と XML フォーマット ファイルの使用](#bulk_xml)<br />&emsp;&#9679;&emsp;[OPENROWSET(BULK...) と XML 以外のフォーマット ファイルの使用](#openrowset_nonxml)<br />&emsp;&#9679;&emsp;[OPENROWSET(BULK...) と XML フォーマット ファイルの使用](#openrowset_xml)<p>                                                                                                                                                                                                                  </p>|
   
 > [!NOTE]
->  XML 以外のフォーマット ファイルまたは XML フォーマット ファイルを使用して、データ ファイルをテーブルに一括インポートできます。その場合、 [bcp ユーティリティ](../../tools/bcp-utility.md) コマンド、 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) ステートメント、または INSERT ...SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) ステートメント。 詳細については、「[データの一括インポートでのフォーマット ファイルの使用 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)」を参照してください。
+>  XML 以外のフォーマット ファイルまたは XML フォーマット ファイルを使用して、データ ファイルをテーブルに一括インポートできます。その場合、[bcp ユーティリティ](../../tools/bcp-utility.md) コマンド、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) ステートメント、または INSERT ...SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) ステートメント。 詳細については、「[データの一括インポートでのフォーマット ファイルの使用 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)」を参照してください。
 
 ## <a name="example-test-conditions"></a>テスト条件の例<a name="etc"></a>  
 このトピックの変更するフォーマット ファイルの例は、以下に定義されたテーブルとデータ ファイルに基づいています。

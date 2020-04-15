@@ -25,12 +25,12 @@ ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee54971547e141d06fb2688ab4a69b65bda4c00a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 28329315313f6f08f84aa2d8944eef55d26fdd46
+ms.sourcegitcommit: 7ed12a64f7f76d47f5519bf1015d19481dd4b33a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75548275"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80873168"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 
@@ -192,7 +192,7 @@ DELETE
  パーティション ビューに対して DELETE ステートメントで TOP を使用することはできません。  
   
 ## <a name="locking-behavior"></a>ロック動作  
- 既定では、DELETE ステートメントは、常に、そのステートメントで変更するテーブルについて排他 (X) ロックを獲得し、トランザクションが完了するまでそのロックを保持します。 排他 (X) ロックをかけたトランザクション以外はデータを変更できませんが、NOLOCK ヒントまたは READ UNCOMMITTED 分離レベルが指定されている場合に限り、読み取り操作は行うことができます。 別のロック手法を指定することで DELETE ステートメントの期間のこの既定の動作をオーバーライドするテーブル ヒントを指定できます。ただし、このヒントは、経験豊富な開発者およびデータベース管理者が最後の手段としてのみ使用することを推奨します。 詳細については、「[テーブル ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)」を参照してください。  
+ 既定では、DELETE ステートメントは、常に、それにより変更されるテーブル オブジェクトについてインテント排他 (IX) ロックを獲得し、トランザクションが完了するまでそのロックを保持します。 インテント排他 (IX) ロックをかけたトランザクション以外はデータを変更できませんが、NOLOCK ヒントまたは READUNCOMMITTED 分離レベルが使用されている場合に限り、読み取り操作は行うことができます。 別のロック手法を指定することで DELETE ステートメントの期間のこの既定の動作をオーバーライドするテーブル ヒントを指定できます。ただし、このヒントは、経験豊富な開発者およびデータベース管理者が最後の手段としてのみ使用することを推奨します。 詳細については、「[テーブル ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)」を参照してください。  
   
  ヒープから行を削除するときには、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] によって、操作に行またはページ ロックが使用されることがあります。 その結果、削除操作で空になったページがヒープに割り当てられたままになります。 空のページの割り当てが解除されないと、データベース内の他のオブジェクトで該当の領域を再利用できなくなります。  
   
@@ -200,7 +200,7 @@ DELETE
   
 -   DELETE ステートメントで TABLOCK ヒントを指定します。 TABLOCK ヒントを使用すると、削除操作では、行またはページ ロックではなく、テーブルの排他的ロックが取得されます。 これにより、ページの割り当てを解除できるようになります。 TABLOCK ヒントについて詳しくは、「[テーブル ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)」をご覧ください。  
   
--   テーブルからすべての行を削除する場合は、TRUNCATE TABLE を使用します。  
+-   テーブルからすべての行を削除する場合は、`TRUNCATE TABLE` を使用します。  
   
 -   行を削除する前に、ヒープにクラスター化インデックスを作成します。 作成したクラスター化インデックスは、行を削除した後、削除できます。 この方法は前の 2 つの方法より時間がかかり、一時リソースがより多く使用されます。  
   
@@ -208,14 +208,14 @@ DELETE
 >  空のページは、いつでも `ALTER TABLE <table_name> REBUILD` ステートメントを使ってヒープから削除できます。  
   
 ## <a name="logging-behavior"></a>ログ記録の動作  
- DELETE ステートメントは、常に完全にログに記録されます。  
+DELETE ステートメントは、常に完全にログに記録されます。  
   
 ## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>アクセス許可  
- 対象テーブルに対する DELETE 権限が必要です。 ステートメントに WHERE 句が含まれる場合は、SELECT 権限も必要です。  
+ 対象のテーブルに対する `DELETE` 権限が必要です。 ステートメントに WHERE 句が含まれる場合は、`SELECT` 権限も必要です。  
   
- DELETE 権限は、既定では **sysadmin** 固定サーバー ロール、**db_owner** 固定データベース ロール、および **db_datawriter** 固定データベース ロールのメンバーと、テーブル所有者に与えられています。 **sysadmin**、**db_owner**、および **db_securityadmin** ロールのメンバー、およびテーブル所有者は、他のユーザーに権限を譲渡できます。  
+ DELETE 権限は、既定では `sysadmin` 固定サーバー ロール、`db_owner` および `db_datawriter` 固定データベース ロールのメンバー、テーブル所有者に与えられています。 `sysadmin`、`db_owner`、`db_securityadmin` ロールのメンバーと、テーブル所有者は、他のユーザーに権限を譲渡できます。  
   
 ## <a name="examples"></a>例  
   
@@ -241,7 +241,7 @@ GO
  このセクションの例では、削除する行数を制限する方法を示します。  
   
 #### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>B. WHERE 句を使用して行セットを削除する  
- 次の例は、`ProductCostHistory` 列の値が [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] より大きいすべての行を `StandardCost` データベース内の `1000.00`テーブルから削除します。  
+ 次の例は、`StandardCost` 列の値が `1000.00` より大きいすべての行を [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `ProductCostHistory`テーブルから削除します。  
   
 ```sql
 DELETE FROM Production.ProductCostHistory  
@@ -259,7 +259,7 @@ PRINT 'Number of rows deleted is ' + CAST(@@ROWCOUNT as char(3));
 ```  
   
 #### <a name="c-using-a-cursor-to-determine-the-row-to-delete"></a>C. カーソルを使用して削除する行を決定する  
- 次の例は、`EmployeePayHistory` というカーソルを使用している 1 行を [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `complex_cursor` テーブルから削除します。 この操作では、カーソルから現在フェッチされている 1 行だけが削除されます。  
+ 次の例は、`complex_cursor` というカーソルを使用している 1 行を [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `EmployeePayHistory` テーブルから削除します。 この操作では、カーソルから現在フェッチされている 1 行だけが削除されます。  
   
 ```sql
 DECLARE complex_cursor CURSOR FOR  
@@ -279,7 +279,7 @@ GO
 ```  
   
 #### <a name="d-using-joins-and-subqueries-to-data-in-one-table-to-delete-rows-in-another-table"></a>D. 1 つのテーブルへの結合およびサブクエリを使用して、別のテーブルの行を削除する  
- 次の例では、1 つのテーブル内の行を、別のテーブルのデータに基づいて削除する 2 つの方法を示します。 どちらの例も、`SalesPersonQuotaHistory` テーブルに格納されている今年に入ってからの売り上げに基づいて、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `SalesPerson` テーブルから行を削除します。 最初の `DELETE` ステートメントは ISO 互換のサブクエリ ソリューションを示しています。また、2 つ目の `DELETE` ステートメントは、2 つのテーブルを結合する [!INCLUDE[tsql](../../includes/tsql-md.md)] FROM 拡張機能を示しています。  
+ 次の例では、1 つのテーブル内の行を、別のテーブルのデータに基づいて削除する 2 つの方法を示します。 どちらの例も、`SalesPerson` テーブルに格納されている今年に入ってからの売り上げに基づいて、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `SalesPersonQuotaHistory` テーブルから行を削除します。 最初の `DELETE` ステートメントは ISO 互換のサブクエリ ソリューションを示しています。また、2 つ目の `DELETE` ステートメントは、2 つのテーブルを結合する [!INCLUDE[tsql](../../includes/tsql-md.md)] FROM 拡張機能を示しています。  
   
 ```sql
 -- SQL-2003 Standard subquery  
@@ -315,7 +315,7 @@ DELETE spqh
 ```  
   
 #### <a name="e-using-top-to-limit-the-number-of-rows-deleted"></a>E. TOP を使用して削除する行数を制限する  
- DELETE ステートメントで TOP (*n*) 句を使用した場合、ランダムに選択される '*n*' 行に対して削除操作が実行されます。 次の例では、納期が 2006 年 7 月 1 日より早い `20` 行を `PurchaseOrderDetail` データベース内の [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] テーブルからランダムに選択して削除します。  
+ DELETE ステートメントで TOP (*n*) 句を使用した場合、ランダムに選択される '*n*' 行に対して削除操作が実行されます。 次の例では、納期が 2006 年 7 月 1 日より早い `20` 行を [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `PurchaseOrderDetail` テーブルからランダムに選択して削除します。  
   
 ```sql
 DELETE TOP (20)   
@@ -341,7 +341,7 @@ GO
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
 #### <a name="f-deleting-data-from-a-remote-table-by-using-a-linked-server"></a>F. リンク サーバーを使用してリモート テーブルからデータを削除する  
- 次の例では、リモート テーブルの行を削除します。 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) を使用してリモート データ ソースへのリンクを作成した後、 `MyLinkServer`server.catalog.schema.object*という形式の、4 つの要素で構成されたオブジェクト名の一部として、リンク サーバー名* を指定します。  
+ 次の例では、リモート テーブルの行を削除します。 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) を使用してリモート データ ソースへのリンクを作成した後、 *server.catalog.schema.object* という形式の、4 つの要素で構成されたオブジェクト名の一部として、リンク サーバー名 `MyLinkServer` を指定します。  
   
 ```sql
 USE master;  
@@ -404,7 +404,7 @@ GO
 ```  
   
 #### <a name="j-using-output-with-from_table_name-in-a-delete-statement"></a>J. OUTPUT を DELETE ステートメント内で <from_table_name> と共に使用する  
- 次の例は、`ProductProductPhoto` ステートメントの [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 句で定義された検索条件に基づいて、`FROM` データベース内の `DELETE` テーブルの行を削除します。 `OUTPUT` 句では、削除されるテーブルの列 ( `DELETED.ProductID`、 `DELETED.ProductPhotoID`)、および `Product` テーブルの列を返します。 これは `FROM` 句で削除する行を指定するときに使用されます。  
+ 次の例は、`DELETE` ステートメントの `FROM` 句で定義された検索条件に基づいて、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `ProductProductPhoto` テーブルの行を削除します。 `OUTPUT` 句では、削除されるテーブルの列 ( `DELETED.ProductID`、 `DELETED.ProductPhotoID`)、および `Product` テーブルの列を返します。 これは `FROM` 句で削除する行を指定するときに使用されます。  
   
 ```sql
 DECLARE @MyTableVar table (  
@@ -441,7 +441,7 @@ DELETE FROM Table1;
 ```  
   
 ### <a name="l-delete-a-set-of-rows-from-a-table"></a>L. テーブルから行のセットを削除する  
- 次の例では、`Table1` 列の値が 1000.00 より大きいすべての行を `StandardCost` テーブルから削除します。  
+ 次の例では、`StandardCost` 列の値が 1000.00 より大きいすべての行を `Table1` テーブルから削除します。  
   
 ```sql
 DELETE FROM Table1  

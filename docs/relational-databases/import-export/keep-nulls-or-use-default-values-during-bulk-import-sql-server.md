@@ -1,5 +1,6 @@
 ---
 title: 一括インポート中の NULL または既定値の保持
+description: SQL Server での一括インポートの場合、bcp と BULK INSERT の両方で NULL 値を置き換える既定値が読み込まれます。 どちらの場合も、NULL 値を保持することを選択できます。
 ms.date: 09/20/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -21,19 +22,19 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 7120efd623905f05e1f02c6c02856b793ad15cea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9c4a92c1d98bfc7af773cac1be7aedb7113c5b28
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74055954"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980385"
 ---
 # <a name="keep-nulls-or-default-values-during-bulk-import-sql-server"></a>一括インポート中の NULL または既定値の保持 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 既定では、データをテーブルにインポートするとき、 [bcp](../../tools/bcp-utility.md) コマンドと [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) ステートメントによって、テーブルの列に対して定義されているすべての既定値が監視されます。  たとえば、データ ファイルに NULL フィールドがある場合は、NULL 値の代わりにその列の既定値が読み込まれます。  [bcp](../../tools/bcp-utility.md) コマンドと [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) ステートメントの両方で、NULL 値を保持することを指定することもできます。
 
-これに対し、通常の INSERT ステートメントでは、既定値が挿入されるのではなく、NULL 値が保持されます。 INSERT ...SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) ステートメントでは、通常の INSERT と同じ基本的な動作に加えて、既定値を挿入するための [テーブル ヒント](../../t-sql/queries/hints-transact-sql-table.md) がサポートされます。
+これに対し、通常の INSERT ステートメントでは、既定値が挿入されるのではなく、NULL 値が保持されます。 INSERT ...SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) ステートメントでは、通常の INSERT と同じ基本的な動作に加えて、既定値を挿入するための[テーブル ヒント](../../t-sql/queries/hints-transact-sql-table.md)がサポートされます。
 
 |[外枠]|
 |---|

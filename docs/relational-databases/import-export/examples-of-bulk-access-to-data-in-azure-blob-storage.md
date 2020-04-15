@@ -1,5 +1,6 @@
 ---
 title: Azure BLOB ストレージのデータに一括アクセスする
+description: これらの Transact-SQL の例では、BULK INSERT ステートメントと OPENROWSET ステートメントを使用して、Azure Blob ストレージ アカウント内のファイルに直接アクセスする方法を示します。
 ms.description: Transact-SQL examples that use BULK INSERT and OPENROWSET to access data in an Azure Blob storage account.
 ms.date: 10/22/2019
 ms.prod: sql
@@ -17,18 +18,18 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 08e81abbc21671881affc80fc9b7f0346cd490f7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4ed55e856a6a23da04b6f3a2812699c2b457a220
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056003"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980463"
 ---
 # <a name="examples-of-bulk-access-to-data-in-azure-blob-storage"></a>Azure BLOB ストレージのデータに一括アクセスする例
 
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-`BULK INSERT` ステートメントと `OPENROWSET` ステートメントは、Azure BLOB ストレージのファイルに直接アクセスできます。 次の例では、`inv-2017-01-19.csv` という名前の CSV (コンマ区切り値) ファイルのデータを使用します。このファイルは `Week3` という名前のストレージ アカウントで `newinvoices` という名前のコンテナーに格納されています。 ファイルの書式を設定するパスを使用できますが、以下の例には含まれていません。
+`BULK INSERT` ステートメントと `OPENROWSET` ステートメントは、Azure BLOB ストレージのファイルに直接アクセスできます。 次の例では、`inv-2017-01-19.csv` という名前の CSV (コンマ区切り値) ファイルのデータを使用します。このファイルは `newinvoices` という名前のストレージ アカウントで `Week3` という名前のコンテナーに格納されています。 ファイルの書式を設定するパスを使用できますが、以下の例には含まれていません。
 
 SQL Server から Azure BLOB ストレージに一括アクセスする場合、[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 以上が必要になります。
 

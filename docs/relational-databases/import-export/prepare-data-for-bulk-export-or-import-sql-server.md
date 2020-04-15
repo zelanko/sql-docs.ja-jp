@@ -1,5 +1,6 @@
 ---
 title: 一括エクスポートまたは一括インポートのデータの準備
+description: この記事では、データ ファイル形式の要件や bcp ユーティリティを使用するタイミングなど、一括インポート操作と一括エクスポート操作を計画する方法について説明します。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -17,12 +18,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: b5aecdf222ea325f67a23b728ed29ee40e768387
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0248ca835794b71531a2d2f8c0b75b6b75911929
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056413"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980397"
 ---
 # <a name="prepare-data-for-bulk-export-or-import"></a>一括エクスポートまたは一括インポートのデータの準備
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,13 +71,13 @@ ms.locfileid: "74056413"
   
      データを [!INCLUDE[msCoName](../../includes/msconame-md.md)] FoxPro や Visual FoxPro テーブル (.dbf) ファイル、または [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] ワークシート (.xls) ファイルから一括インポートするには、前述の制限に準拠した CSV ファイルにデータを変換する必要があります。 通常、ファイル拡張子は .csv です。 そうすると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一括インポート操作で .csv ファイルをデータ ファイルとして使用できます。  
   
-     32 ビット システムでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OPENROWSET [を OLE DB Provider for Jet と共に使用することにより、一括インポートの最適化を使用せずに CSV データを](../../t-sql/functions/openrowset-transact-sql.md) テーブルにインポートできます。 Jet は、データ ソースと同じディレクトリ内にある schema.ini ファイルで定義されたスキーマを使用して、テキスト ファイルをテーブルとして扱います。  CSV データの場合、schema.ini ファイル内のパラメーターの 1 つが "FORMAT=CSVDelimited" となります。 この解決方法を使用するには、Jet Test IISAMm 操作、その接続文字列の構文、schema.ini の使用法、レジストリ設定オプションなどについて理解する必要があります。  この情報については、Microsoft Access ヘルプとサポート技術情報 (KB) の資料を参照することをお勧めします。 詳しくは、「 [テキスト データ ソース ドライバーを初期化する](https://msdn.microsoft.com/library/office/ff834391.aspx)」、「 [HOWTO: セキュリティ設定された Access データベースへのリンク サーバーを指定した SQL Server 7.0 分散クエリ](https://go.microsoft.com/fwlink/?LinkId=128504)」、「 [Jet OLE DB プロバイダー 4.0 を使用して ISAM データベースに接続する方法](https://go.microsoft.com/fwlink/?LinkId=128505)」、「 [Jet プロバイダーの Text IIsam を使用して区切り記号付きテキスト ファイルを開く方法](https://go.microsoft.com/fwlink/?LinkId=128501)」をご覧ください。  
+     32 ビット システムでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OPENROWSET [を OLE DB Provider for Jet と共に使用することにより、一括インポートの最適化を使用せずに CSV データを](../../t-sql/functions/openrowset-transact-sql.md) テーブルにインポートできます。 Jet は、データ ソースと同じディレクトリ内にある schema.ini ファイルで定義されたスキーマを使用して、テキスト ファイルをテーブルとして扱います。  CSV データの場合、schema.ini ファイル内のパラメーターの 1 つが "FORMAT=CSVDelimited" となります。 この解決方法を使用するには、Jet Test IISAMm 操作、その接続文字列の構文、schema.ini の使用法、レジストリ設定オプションなどについて理解する必要があります。  この情報については、Microsoft Access ヘルプとサポート技術情報 (KB) の資料を参照することをお勧めします。 詳細については、「[Initializing the Text Data Source Driver](https://msdn.microsoft.com/library/office/ff834391.aspx)」 (テキスト データ ソースのドライバーを初期化する)、「[How To Use a SQL Server 7.0 Distributed Query with a Linked Server to Secured Access Databases](https://go.microsoft.com/fwlink/?LinkId=128504)」 (セキュリティ設定された Access データベースにリンクされたサーバーで SQL Server 7.0 分散クエリを使用する方法)、「[HOW TO:Use Jet OLE DB Provider 4.0 to Connect to ISAM Databases](https://go.microsoft.com/fwlink/?LinkId=128505)」 (ISAM データベースへの接続に Jet OLE DB プロバイダー 4.0 を使用する方法)、「[How To Open Delimited Text Files Using the Jet Provider's Text IIsam](https://go.microsoft.com/fwlink/?LinkId=128501)」 (Jet プロバイダーの Text IIsam を使用して区切り記号付きテキスト ファイルを開く方法) を参照してください。  
   
  また、データ ファイルのデータをテーブルに一括インポートするには、以下の要件も満たしている必要があります。  
   
 -   ユーザーは、インポート先のテーブルに対する INSERT 権限および SELECT 権限を持っている必要があります。 また、制約を無効にするなどデータ定義言語 (DDL) 操作が必要なオプションを使用する場合は、ALTER TABLE 権限も必要になります。  
   
--   BULK INSERT または INSERT ...SELECT * FROM OPENROWSET(BULK...) を使用してデータを一括インポートする際は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスのセキュリティ プロファイル (ユーザーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で提供されたログインを使用してログインしている場合) またはデリゲートされたセキュリティに基づいて使用されている [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ログインから、このデータ ファイルにアクセスし、読み取り操作ができる状態でなければなりません。 また、ファイルを読み取るには、ユーザーに ADMINISTER BULK OPERATIONS 権限が必要です。  
+-   BULK INSERT または INSERT ...SELECT * FROM OPENROWSET(BULK...) を使用してデータを一括インポートする際は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスのセキュリティ プロファイル (ユーザーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で提供されたログインを使用してログインしている場合) またはデリゲートされたセキュリティに基づいて使用されている [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ログインから、このデータ ファイルにアクセスし、読み取り操作ができる状態でなければなりません。 また、ファイルを読み取るには、ユーザーに ADMINISTER BULK OPERATIONS 権限が必要です。  
   
 > [!NOTE]  
 >  パーティション ビューへのデータの一括インポートはサポートされません。パーティション ビューにデータを一括インポートするとエラーになります。  

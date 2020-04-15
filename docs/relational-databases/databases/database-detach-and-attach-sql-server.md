@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3b6ee22299c854193d15e5fe4d1e2daabf7250bb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e13bab7b3a5b97195a1fd57e30cd2f5bf514b315
+ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287876"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80809708"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>データベースのデタッチとアタッチ (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -117,7 +117,7 @@ ms.locfileid: "79287876"
 > [!IMPORTANT]  
 > 新しいバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で作成したデータベースは、それ以前のバージョンでアタッチすることはできません。 これにより、データベースが古いバージョンの [!INCLUDE[ssde_md](../../includes/ssde_md.md)] で物理的に使用できないようにします。 ただし、これはメタデータの状態に関係し、[データベースの互換性レベル](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)には影響しません。 詳細については、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。   
   
-データベースを別のサーバー インスタンスにアタッチするときは、ユーザーおよびアプリケーションに一貫した使用環境を提供するために、アタッチ先のサーバー インスタンスで、ログインやジョブなどのデータベースのメタデータの一部またはすべてを作成し直す必要が生じる場合があります。 詳細については、「[データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)」を参照してください。  
+データベースを別のサーバー インスタンスにアタッチするときは、ユーザーおよびアプリケーションに一貫した使用環境を提供するために、アタッチ先のサーバー インスタンスで、ログインやジョブなどのデータベースのメタデータの一部またはすべてを作成し直す必要が生じる場合があります。 詳細については、「[データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)」を参照してください。  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
 **データベースをデタッチするには**  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d323481aaf3e12da9786a3b02f21f47c3c98f7cf
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 52511cbda93f5148daab116f0def292b55828efd
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924540"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219399"
 ---
 # <a name="connecting-to-sql-server"></a>SQL Server への接続
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -62,8 +62,8 @@ Server = [protocol:]server[,port]
 `isql` を使用して接続をテストすることで、ドライバーが機能していることを確認できます。または、次のコマンドを使用できます。
  - **bcp master.INFORMATION_SCHEMA.TABLES out OutFile.dat -S <server> -U <name> -P <password>**  
 
-## <a name="using-secure-sockets-layer-ssl"></a>Secure Sockets Layer (SSL) を使用する  
-Secure Sockets Layer (SSL) を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] への接続を暗号化できます。 SSL は、ネットワーク上で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のユーザー名とパスワードを保護します。 また、サーバーの ID を検証して、man-in-the-middle (MITM) 攻撃に対して保護することもできます。  
+## <a name="using-tlsssl"></a>TLS/SSL の使用  
+TLS (トランスポート層セキュリティ) (以前の SSL (Secure Sockets Layer)) では、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] への接続を暗号化することができます。 TLS は、ネットワーク上で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のユーザー名とパスワードを保護します。 TLS は、サーバーの ID を検証して、man-in-the-middle (MITM) 攻撃に対しても保護します。  
 
 暗号化を有効にすると、セキュリティは向上しますが、パフォーマンスは低下します。
 
@@ -74,7 +74,7 @@ Secure Sockets Layer (SSL) を使用して [!INCLUDE[ssNoVersion](../../../inclu
 ||**TrustServerCertificate=no**|**TrustServerCertificate=yes**|  
 |-|-------------------------------------|------------------------------------|  
 |**Encrypt=no**|サーバー証明書は確認されません。<br /><br />クライアントとサーバー間で送信されるデータは暗号化されません。|サーバー証明書は確認されません。<br /><br />クライアントとサーバー間で送信されるデータは暗号化されません。|  
-|**Encrypt=yes**|サーバー証明書は確認されます。<br /><br />クライアントとサーバー間で送信されるデータは暗号化されます。<br /><br />[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SSL 証明書のサブジェクトの共通名 (CN) またはサブジェクトの別名 (SAN) の名前 (または IP アドレス) は、接続文字列に指定されているサーバー名 (または IP アドレス) と正確に一致する必要があります。|サーバー証明書は確認されません。<br /><br />クライアントとサーバー間で送信されるデータは暗号化されます。|  
+|**Encrypt=yes**|サーバー証明書は確認されます。<br /><br />クライアントとサーバー間で送信されるデータは暗号化されます。<br /><br />[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の TLS/SSL 証明書のサブジェクトの共通名 (CN) またはサブジェクトの別名 (SAN) の名前 (または IP アドレス) は、接続文字列に指定されているサーバー名 (または IP アドレス) と正確に一致する必要があります。|サーバー証明書は確認されません。<br /><br />クライアントとサーバー間で送信されるデータは暗号化されます。|  
 
 既定では、暗号化された接続はサーバーの証明書を必ず検証します。 ただし、自己署名証明書があるサーバーに接続する場合は、`TrustServerCertificate` オプションも追加して、信頼された証明機関の一覧に対する証明書の確認をバイパスします。  
 
@@ -82,7 +82,7 @@ Secure Sockets Layer (SSL) を使用して [!INCLUDE[ssNoVersion](../../../inclu
 Driver={ODBC Driver 13 for SQL Server};Server=ServerNameHere;Encrypt=YES;TrustServerCertificate=YES  
 ```  
   
-SSL は、OpenSSL ライブラリを使用します。 次の表は、OpenSSL の最低限のサポートされるバージョンと、各プラットフォームの既定の証明書信頼ストアを示します。
+TLS は、OpenSSL ライブラリを使用します。 次の表は、OpenSSL の最低限のサポートされるバージョンと、各プラットフォームの既定の証明書信頼ストアを示します。
 
 |プラットフォーム|最低限の OpenSSL のバージョン|既定の証明書信頼ストアの場所|  
 |------------|---------------------------|--------------------------------------------|

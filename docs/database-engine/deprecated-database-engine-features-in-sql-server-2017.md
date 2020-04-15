@@ -3,7 +3,7 @@ title: データベース エンジンの非推奨の機能 | Microsoft Docs
 titleSuffix: SQL Server 2019
 description: SQL Server 2017 (14.x) で引き続き使用できるデータベース エンジンの非推奨の機能について説明します。ただし、新しいアプリケーションではこれらを使用しないでください。
 ms.custom: seo-lt-2019
-ms.date: 03/30/2020
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -17,33 +17,31 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 9e5bccc61c9c1f395e49a7a0a601271ed46f3502
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: 9fcc5f3ebca860e35365bd640a3473b478e06b49
+ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402604"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80550171"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>SQL Server 2017 データベース エンジンの非推奨の機能
 
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-このトピックでは、SQL Server 2017 (14.x) ではまだ使用できる、非推奨の SQL Server データベース エンジン機能について説明します。 新しいアプリケーションでは非推奨のものを使用しないでください。  
-
+  このトピックでは、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] でまだ使用できるものの、非推奨とされた [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]の機能について説明します。 非推奨の機能を新しいアプリケーションで使用しないでください。  
+  
 機能に非推奨の印が付いている場合、それは次のことを意味します。
 
-- その機能は保守管理状態にあり、それ以外では利用されていません。 新しい変更は行われていません。新しい機能との相互運用性に関するものもありません。
+- その機能は保守管理状態にあり、それ以外では利用されていません。 新しい変更は行われません。新しい機能との相互運用性に関する変更もありません。
+- Microsoft は、アップグレードを容易にする目的で、今後のリリースから非推奨機能を外さないように努めます。 ただし、非推奨機能が将来の技術革新を制限してしまう場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] からそれを永久的に外すことをまれに選択することがあります。
+- 新しい開発作業に非推奨機能を使用することはお勧めしません。      
 
-- Microsoft は、アップグレードを容易にする目的で、今後のリリースから非推奨機能を外さないように努めます。 しかし、その機能が将来の技術革新を制限してしまうような場合は、SQL Server からそれを永久的に外すことをまれに選択することがあります。
+非推奨の機能の使用は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Deprecated Features オブジェクトのパフォーマンス カウンターおよびトレース イベントを使用して監視できます。 詳細については、「 [SQL Server オブジェクトの使用](../relational-databases/performance-monitor/use-sql-server-objects.md)」を参照してください。  
 
-- 新しい開発作業に非推奨機能を使用することはお勧めしません。
-
-非推奨機能の使用は、SQL Server:Deprecated Features オブジェクトのパフォーマンス カウンターおよびトレース イベントを使って監視できます。 詳細については、「 [SQL Server オブジェクトの使用](../relational-databases/performance-monitor/use-sql-server-objects.md)」を参照してください。
-
-これらのカウンターの値は、次のステートメントを実行して入手することもできます。
+これらのカウンターの値は、次のステートメントを実行して入手することもできます。  
 
 ```sql
-SELECT * FROM sys.dm_os_performance_counter
+SELECT * FROM sys.dm_os_performance_counters
 WHERE object_name = 'SQLServer:Deprecated Features';
 ```
 
@@ -77,31 +75,21 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 | 非推奨の機能 | 代替 | 機能名 | 機能 ID |
 |--------------------|-------------|--------------|------------|
 | RC4 または RC4_128 を使用した暗号化は非推奨とされており、次のバージョンで削除される予定です。 RC4 および RC4_128 の暗号化解除は非推奨ではありません。 | AES など、別の暗号化アルゴリズムを使用してください。 | 非推奨の暗号化アルゴリズム | 253 |
-
-### <a name="hash-algorithms"></a>ハッシュ アルゴリズム
-
-| 非推奨の機能 | 代替 | 機能名 | 機能 ID |
-|--------------------|-------------|--------------|------------|
 | MD2、MD4、MD5、SHA、および SHA1 の使用は非推奨とされます。 | 代わりに SHA2_256 または SHA2_512 を使用してください。 以前のアルゴリズムは引き続き機能しますが、非推奨のイベントが発生します。 |非推奨のハッシュ アルゴリズム | なし |
 
 ### <a name="remote-servers"></a>リモート サーバー
 
 | 非推奨の機能 | 代替 | 機能名 | 機能 ID |
 |--------------------|-------------|--------------|------------|
-| sp_addremotelogin<br /><br />sp_addserver <br /><br /> sp_dropremotelogin <br /><br /> sp_helpremotelogin <br /><br /> sp_remoteoption|リンク サーバーを使用してリモート サーバーを置き換えてください。 sp_addserver は、ローカル オプションでのみ使用できます。 | sp_addremotelogin<br /><br />sp_addserver <br /><br /> sp_dropremotelogin <br /><br /> sp_helpremotelogin <br /><br /> sp_remoteoption | 70 <br /><br /> 69 <br /><br /> 71 <br /><br /> 72 <br /><br /> 73 |
+| sp_addremotelogin<br /><br />sp_addserver <br /><br /> sp_dropremotelogin <br /><br /> sp_helpremotelogin <br /><br /> sp_remoteoption|リンク サーバーを使用してリモート サーバーを置き換えてください。 sp_addserver は、ローカル オプションでのみ使用できます。 | sp_addremotelogin<br /><br />sp_addserver <br /><br /> sp_dropremotelogin <br /><br /> sp_helpremotelogin <br /><br > sp_remoteoption | 70 <br /><br /> 69 <br /><br /> 71 <br /><br /> 72 <br /><br /> 73 |
 | \@\@remserver | リンク サーバーを使用してリモート サーバーを置き換えてください。 | なし | なし |
 | SET REMOTE_PROC_TRANSACTIONS|リンク サーバーを使用してリモート サーバーを置き換えてください。 | SET REMOTE_PROC_TRANSACTIONS | 110 |
 
-### <a name="set-options"></a>SET オプション
+### <a name="transact-sql"></a>Transact-SQL
 
 | 非推奨の機能 | 代替 | 機能名 | 機能 ID |
 |--------------------|-------------|--------------|------------|
 | **SET ROWCOUNT** 、 **INSERT**、および **UPDATE**ステートメントの **DELETE** | TOP キーワード | SET ROWCOUNT | 109 |
-
-### <a name="table-hints"></a>テーブル ヒント
-
-| 非推奨の機能 | 代替 | 機能名 | 機能 ID |
-|--------------------|-------------|--------------|------------|
 | HOLDLOCK table hint without parenthesis | かっこ付きの HOLDLOCK を使用します。 | HOLDLOCK table hint without parenthesis | 167 |
 
 ## <a name="features-deprecated-in-a-future-version-of-sql-server"></a>SQL Server の将来のバージョンで非推奨となっている機能
@@ -131,12 +119,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 | ヒンディー語 <br /><br /> マケドニア語 | これらの照合順序は SQL Server 2005 (9.x) 以降に存在しますが、fn_helpcollations には表示されません。 代わりに Macedonian_FYROM_90 および Indic_General_90 を使用してください。|ヒンディー語 <br /><br /> マケドニア語 |
 | Azeri_Latin_90 <br /><br /> Azeri_Cyrilllic_90 | Azeri_Latin_100 <br /><br /> Azeri_Cyrilllic_100 | Azeri_Latin_90 <br /><br /> Azeri_Cyrilllic_90 |
 
-### <a name="configuration"></a>構成
-
-| 非推奨の機能 | 代替 | 機能名 |
-|--------------------|-------------|--------------|
-| SET ANSI_NULLS OFF および ANSI_NULLS OFF データベース オプション<br /><br />SET ANSI_PADDING OFF および ANSI_PADDING OFF データベース オプション<br /><br />SET CONCAT_NULL_YIELDS_NULL OFF および CONCAT_NULL_YIELDS_NULL OFF データベース オプション<br /><br />SET OFFSETS | [なし] : <br /><br /> ANSI_NULLS、ANSI_PADDING および CONCAT_NULLS_YIELDS_NULL は常に ON に設定されます。 SET OFFSETS は使用できません。 | SET ANSI_NULLS OFF <br /><br /> SET ANSI_PADDING OFF<br /><br />SET CONCAT_NULL_YIELDS_NULL OFF<br /><br />SET OFFSETS<br /><br />ALTER DATABASE SET ANSI_NULLS OFF<br /><br />ALTER DATABASE SET ANSI_PADDING OFF <br /><br /> ALTER DATABASE SET CONCAT_NULL_YIELDS_NULL OFF |
-
 ### <a name="data-types"></a>データ型
 
 | 非推奨の機能 | 代替 | 機能名 |
@@ -152,6 +134,9 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 | 非推奨の機能 | 代替 | 機能名 |
 |--------------------|-------------|--------------|
 | sp_attach_db <br /><br /> sp_attach_single_file_db|CREATE DATABASE ステートメントで FOR ATTACH オプションを使用します。 複数のログ ファイルを再構築するときに、これらのログ ファイル 1 つ以上に対して新しい場所を指定する場合は、FOR ATTACH_REBUILD_LOG を使用します。 | sp_attach_db <br /><br /> sp_attach_single_file_db |
+| sp_certify_removable<br /><br /> sp_create_removable|sp_detach_db|sp_certify_removable<br /><br /> sp_create_removable |
+| sp_dbremove | DROP DATABASE | sp_dbremove |
+| sp_renamedb | ALTER DATABASE の MODIFY NAME | sp_renamedb |
 
 ### <a name="database-objects"></a>データベース オブジェクト
 
@@ -161,7 +146,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 | CREATE RULE<br /><br /> DROP RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule | CREATE TABLE および ALTER TABLE の CHECK キーワード | CREATE_DROP_RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule |
 | sp_change_users_login | ALTER USER を使用してください。 | sp_change_users_login |
 | sp_depends | sys.dm_sql_referencing_entities および sys.dm_sql_referenced_entities | sp_depends |
-| sp_renamedb | ALTER DATABASE の MODIFY NAME | sp_renamedb |
 | sp_getbindtoken | MARS または分散トランザクションを使用してください。 | sp_getbindtoken |
 
 ### <a name="database-options"></a>データベース オプション
@@ -201,12 +185,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 | sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc | 代わりに CLR Integration を使用してください。 | sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc |
 | xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginConfig|CREATE LOGIN を使用してください。<br /><br /> SERVERPROPERTY の DROP LOGIN IsIntegratedSecurityOnly 引数を使用してください。 | xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginconfig |
 
-### <a name="function"></a>機能
-
-| 非推奨の機能 | 代替 | 機能名 |
-|--------------------|-------------|--------------|
-| fn_get_sql | sys.dm_exec_sql_text | fn_get_sql |
-
 ### <a name="high-availability"></a>高可用性
 
 | 非推奨の機能 | 代替 | 機能名 |
@@ -235,12 +213,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |--------------------|-------------|--------------|
 | リンク サーバーの SQLOLEDB プロバイダーの指定 | SQL Server Native Client (SQLNCLI) | SQLOLEDDB for linked servers |
 
-### <a name="locking"></a>ロック
-
-| 非推奨の機能 | 代替 | 機能名 |
-|--------------------|-------------|--------------|
-| sp_lock | sys.dm_tran_locks | sp_lock |
-
 ### <a name="metadata"></a>Metadata
 
 | 非推奨の機能 | 代替 | 機能名 |
@@ -258,13 +230,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 | 非推奨の機能 | 代替 | 機能名 |
 |--------------------|-------------|--------------|
 | DB-Library<br /><br />Embedded SQL for C|データベース エンジンでは、DB-Library および Embedded SQL API を使用する既存のアプリケーションからの接続が引き続きサポートされますが、これらの API を使用するアプリケーションでのプログラミング作業に必要なファイルやドキュメントは含まれません。 SQL Server データベース エンジンの今後のバージョンでは、DB-Library または Embedded SQL アプリケーションからの接続はサポートされません。 新しいアプリケーションの開発には DB-Library や Embedded SQL を使用しないでください。 DB-Library や Embedded SQL への依存関係は、既存アプリケーションを変更するときに削除してください。 これらの API の代わりに、SQLClient 名前空間または ODBC などの API を使用します。 SQL Server 2019 (15.x) には、これらのアプリケーションの実行に必要な DB-Library DLL が含まれていません。 DB-Library または Embedded SQL アプリケーションを実行するには、SQL Server バージョン 6.5、SQL Server 7.0、または SQL Server 2000 (8.x) から DB-Library DLL を入手する必要があります。 | なし |
-
-### <a name="removable-databases"></a>リムーバブル データベース
-
-| 非推奨の機能 | 代替 | 機能名 |
-|--------------------|-------------|--------------|
-| sp_certify_removable<br /><br /> sp_create_removable|sp_detach_db|sp_certify_removable<br /><br /> sp_create_removable |
-| sp_dbremove | DROP DATABASE | sp_dbremove |
 
 ### <a name="security"></a>Security
 
@@ -288,12 +253,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 | PERMISSIONS 組み込み関数 | 代わりに sys.fn_my_permissions をクエリしてください。 | PERMISSIONS |
 | SETUSER | EXECUTE AS | SETUSER |
 | RC4 および DESX 暗号化アルゴリズム|AES など、別のアルゴリズムを使用してください。 | DESX アルゴリズム |
-
-### <a name="set-options"></a>SET オプション
-
-| 非推奨の機能 | 代替 | 機能名 |
-|--------------------|-------------|--------------|
-| SET FMTONLY | [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)、[sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)、[sp_describe_first_result_set &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)、[sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)。 | SET FMTONLY |
 
 ### <a name="server-configuration-options"></a>サーバー構成オプション
 
@@ -319,11 +278,14 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |--------------------|-------------|--------------|
 | SQL Server Management Studio でのソリューション エクスプローラーの統合 | | なし |
 
-### <a name="system-stored-procedures"></a>システム ストアド プロシージャ
+### <a name="system-stored-procedures-and-functions"></a>システム ストアド プロシージャとシステム関数
 
 | 非推奨の機能 | 代替 | 機能名 |
 |--------------------|-------------|--------------|
 | sp_db_increased_partitions | [なし] : SQL Server 2019 (15. x) では、増加したパーティションのサポートを既定で使用できます。 | sp_db_increased_partitions |
+| fn_virtualservernodes<br /><br />fn_servershareddrives | sys.dm_os_cluster_nodes<br /><br />sys.dm_io_cluster_shared_drives | fn_virtualservernodes<br /><br /> fn_servershareddrives |
+| fn_get_sql | sys.dm_exec_sql_text | fn_get_sql |
+| sp_lock | sys.dm_tran_locks | sp_lock |
 
 ### <a name="system-tables"></a>システム テーブル
 
@@ -338,12 +300,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |--------------------|-------------|--------------|
 | sp_trace_create<br /><br />sp_trace_setevent<br /><br />sp_trace_setfilter<br /><br />sp_trace_setstatus<br /><br />fn_trace_geteventinfo<br /><br />fn_trace_getfilterinfo<br /><br />fn_trace_getinfo<br /><br />fn_trace_gettable<br /><br />sys.traces<br /><br />sys.trace_events<br /><br />sys.trace_event_bindings<br /><br />sys.trace_categories<br /><br />sys.trace_columns<br /><br />sys.trace_subclass_values|[拡張イベント](../relational-databases/extended-events/extended-events.md) | sp_trace_create<br /><br />sp_trace_setevent<br /><br />sp_trace_setfilter<br /><br />sp_trace_setstatus<br /><br />fn_trace_geteventinfo<br /><br />fn_trace_getfilterinfo<br /><br />fn_trace_getinfo<br /><br />fn_trace_gettable<br /><br />sys.traces<br /><br />sys.trace_events<br /><br />sys.trace_event_bindings<br /><br />sys.trace_categories<br /><br />sys.trace_columns<br /><br />sys.trace_subclass_values |
 
-### <a name="system-functions"></a>システム関数
-
-| 非推奨の機能 | 代替 | 機能名 |
-|--------------------|-------------|--------------|
-| fn_virtualservernodes<br /><br />fn_servershareddrives | sys.dm_os_cluster_nodes<br /><br />sys.dm_io_cluster_shared_drives | fn_virtualservernodes<br /><br />fn_servershareddrives |
-
 ### <a name="system-views"></a>システム ビュー
 
 | 非推奨の機能 | 代替 | 機能名 |
@@ -357,14 +313,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 | vardecimal ストレージ形式の使用 | Vardecimal ストレージ形式は非推奨とされます。 SQL Server 2019 (15.x) のデータ圧縮では、10 進数値およびその他のデータ型が圧縮されます。 vardecimal ストレージ形式ではなくデータ圧縮を使用することをお勧めします。 | vardecimal ストレージ形式 |
 | sp_db_vardecimal_storage_format プロシージャの使用|Vardecimal ストレージ形式は非推奨とされます。 SQL Server 2019 (15.x) のデータ圧縮では、10 進数値およびその他のデータ型が圧縮されます。 vardecimal ストレージ形式ではなくデータ圧縮を使用することをお勧めします。 | sp_db_vardecimal_storage_format |
 | sp_estimated_rowsize_reduction_for_vardecimal プロシージャの使用|代わりにデータ圧縮と sp_estimate_data_compression_savings プロシージャを使用してください。 |sp_estimated_rowsize_reduction_for_vardecimal |
-
-### <a name="table-hints"></a>テーブル ヒント
-
-| 非推奨の機能 | 代替 | 機能名 |
-|--------------------|-------------|--------------|
-| UPDATE または DELETE ステートメントの FROM 句での NOLOCK または READUNCOMMITTED の指定 | FROM 句から NOLOCK または READUNCOMMITTED のテーブル ヒントを削除します。 | NOLOCK or READUNCOMMITTED in UPDATE or DELETE |
-| WITH キーワードを使用しないテーブル ヒントの指定|WITH を使用します。|Table hint without WITH |
-| INSERT_HINTS | | INSERT_HINTS |
 
 ### <a name="text-pointers"></a>テキスト ポインター
 
@@ -386,13 +334,18 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 | GROUP BY ALL|状況に応じて UNION または派生テーブルを使用したカスタム ソリューションを使用してください。 | GROUP BY ALL |
 | DML ステートメントでの列名としての ROWGUIDCOL の使用|$rowguid を使用してください。|ROWGUIDCOL |
 | DML ステートメントでの列名としての IDENTITYCOL の使用|$identity を使用してください。|IDENTITYCOL |
-| 一時テーブル名および一時ストアド プロシージャ名としての #、## の使用|別の文字を少なくとも 1 文字は使用してください。|'#' および ' ##' 一時テーブルおよびストアド プロシージャの名前として|185|  
-| Transact-SQL 識別子としての \@、\@\@、または \@\@ の使用。|\@、\@\@、または \@\@ で始まる名前を識別子として使用しないでください。|Transact-SQL 識別子としての '\@' と '\@\@' で始まる名前 |
+| 一時テーブル名および一時ストアド プロシージャ名としての #、## の使用 | 別の文字を少なくとも 1 文字は使用してください。|'#' および ' ##' 一時テーブルおよびストアド プロシージャの名前として
+| Transact-SQL 識別子としての \@、\@\@、または \@\@ の使用。 | \@、\@\@、または \@\@ で始まる名前を識別子として使用しないでください。 | Transact-SQL 識別子としての "\@" と "\@\@" で始まる名前 |
 | 既定値としての DEFAULT キーワードの使用|DEFAULT キーワードを既定値として使用しないでください。 | 既定値としての DEFAULT キーワード |
 | テーブル ヒントの区切り文字としてのスペースの使用|テーブル ヒントはコンマを使用して区切ってください。 | コンマで区切られていない複数のテーブル ヒント |
-| 集計インデックス付きビューの選択リストには、互換性モードが 90 の場合、COUNT_BIG (\*) の指定が必要 | COUNT_BIG (\*) を使用してください。 | COUNT_BIG(\*) がないインデックス付きビューの選択リスト|2|  
+| 集計インデックス付きビューの選択リストには、互換性モードが 90 の場合、COUNT_BIG (\*) の指定が必要 | COUNT_BIG (\*) を使用してください。 | COUNT_BIG(\*) がないインデックス付きビューの選択リスト |
 | ビュー経由で複数ステートメントのテーブル値関数 (TVF) を呼び出す、テーブル ヒントの間接アプリケーション|[なし] :|間接的な TVF ヒント |
-| ALTER DATABASE 構文:<br /><br />MODIFY FILEGROUP READONLY<br /><br />MODIFY FILEGROUP READWRITE | MODIFY FILEGROUP READ_ONLY<br /><br />MODIFY FILEGROUP READ_WRITE|MODIFY FILEGROUP READONLY<br /><br />MODIFY FILEGROUP READWRITE |
+| ALTER DATABASE 構文:<br /><br />MODIFY FILEGROUP READONLY<br /><br />MODIFY FILEGROUP READWRITE | MODIFY FILEGROUP READ_ONLY<br /><br />MODIFY FILEGROUP READ_WRITE | MODIFY FILEGROUP READONLY<br /><br />MODIFY FILEGROUP READWRITE |
+| SET ANSI_NULLS OFF および ANSI_NULLS OFF データベース オプション<br /><br />SET ANSI_PADDING OFF および ANSI_PADDING OFF データベース オプション<br /><br />SET CONCAT_NULL_YIELDS_NULL OFF および CONCAT_NULL_YIELDS_NULL OFF データベース オプション<br /><br />SET OFFSETS | [なし] : <br /><br /> ANSI_NULLS、ANSI_PADDING および CONCAT_NULLS_YIELDS_NULL は常に ON に設定されます。 SET OFFSETS は使用できません。 | SET ANSI_NULLS OFF <br /><br /> SET ANSI_PADDING OFF<br /><br />SET CONCAT_NULL_YIELDS_NULL OFF<br /><br />SET OFFSETS<br /><br />ALTER DATABASE SET ANSI_NULLS OFF<br /><br />ALTER DATABASE SET ANSI_PADDING OFF <br /><br /> ALTER DATABASE SET CONCAT_NULL_YIELDS_NULL OFF |
+| SET FMTONLY | [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)、[sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)、[sp_describe_first_result_set &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)、[sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)。 | SET FMTONLY |
+| UPDATE または DELETE ステートメントの FROM 句での NOLOCK または READUNCOMMITTED の指定 | FROM 句から NOLOCK または READUNCOMMITTED のテーブル ヒントを削除します。 | NOLOCK or READUNCOMMITTED in UPDATE or DELETE |
+| WITH キーワードを使用しないテーブル ヒントの指定 | WITH を使用します。 | Table hint without WITH |
+| INSERT_HINTS | | INSERT_HINTS |
 
 ### <a name="tools"></a>ツール
 
@@ -415,7 +368,8 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 
 > [!NOTE]
 > **sp_setapprole** のクッキーの **OUTPUT** パラメーターは現在、適切な最大長である **varbinary(8000)** としてドキュメントに記載されています。 ただし、現在の実装では **varbinary(50)** を返します。 開発者が **varbinary(50)** を割り当てると、今後のリリースでクッキーの戻り値のサイズが増えた場合にアプリケーションの変更が必要になる可能性があります。 これは廃止の問題ではありませんが、アプリケーションの調整と似ているため、このトピックで説明されています。 詳細については、「[sp_setapprole &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)」を参照してください。  
+  
+## <a name="see-also"></a>参照  
+ [SQL Server 2016 で廃止されたデータベース エンジンの機能](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
+  
 
-## <a name="see-also"></a>参照
-
- [SQL Server 2016 で廃止されたデータベース エンジンの機能](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)
