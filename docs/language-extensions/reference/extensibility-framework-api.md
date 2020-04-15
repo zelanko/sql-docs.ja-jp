@@ -269,7 +269,7 @@ SQLRETURN InitParam(
 - SQL_PARAM_INPUT
 - SQL_PARAM_INPUT_OUTPUT
 
-## <a name="execute"></a>実行
+## <a name="execute"></a>Execute
 
 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 内の `@script` を実行します。
 
@@ -483,7 +483,7 @@ SQLRETURN CleanupSession(
 
 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 内の `@parallel = 1` の場合、この値の範囲は、0 からクエリの並列処理の次数までです。
 
-## <a name="cleanup"></a>クリーンアップ
+## <a name="cleanup"></a>Cleanup
 
 グローバルな共有情報 (JVM など) をクリーンアップします。
 
