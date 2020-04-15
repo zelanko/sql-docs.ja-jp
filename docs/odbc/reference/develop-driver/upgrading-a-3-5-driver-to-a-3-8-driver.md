@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ffba36ac-d22e-40b9-911a-973fa9e10bd3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 97b100b1ade97e1e88cf1421f09a7723412c8b76
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: dcd01d050e806b733d75c54058945d367a33d6a7
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79289800"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81294433"
 ---
 # <a name="upgrading-a-35-driver-to-a-38-driver"></a>ドライバー 3.5 をドライバー 3.8 にアップグレードする
 このトピックでは、ODBC 3.5 ドライバーを ODBC 3.8 ドライバーにアップグレードするためのガイドラインと考慮事項について説明します。  
@@ -39,7 +39,7 @@ SQL_DRIVER_C_TYPE_BASE+0, SQL_DRIVER_C_TYPE_BASE+1
 ##### <a name="driver-specific-data-types-descriptor-types-information-types-diagnostic-types-and-attributes"></a>ドライバー固有のデータ型、記述子の型、情報の種類、診断の種類、および属性  
  新しいドライバーを開発する場合は、データ型、記述子の種類、情報の種類、診断の種類、および属性のドライバー固有の範囲を使用する必要があります。 ドライバー固有の範囲とその基本型の値については[、「ドライバー固有のデータ型、記述子の種類、情報の種類、診断の種類、および属性」で説明します](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md)。  
   
-##### <a name="connection-pooling"></a>接続プール  
+##### <a name="connection-pooling"></a>接続のプール  
  接続プールの管理を改善するために、ODBC 3.8 では**SQLSetConnectAttr**のSQL_ATTR_RESET_CONNECTION接続属性が導入されています。 この属性に対して有効な値はSQL_RESET_CONNECTION_YESだけです。 SQL_ATTR_RESET_CONNECTIONは、ドライバー マネージャーが接続プールに接続を配置する直前に設定され、ドライバーは、他の接続属性を既定値にリセットできます。  
   
  サーバーとの不要な通信を避けるために、ドライバーは、接続がプールから再利用された後、リモート サーバーとの次の通信まで、接続属性のリセットを延期できます。  
@@ -56,7 +56,7 @@ SQL_DRIVER_C_TYPE_BASE+0, SQL_DRIVER_C_TYPE_BASE+1
   
  Windows 7 以降、ODBC ではポーリング メソッドがサポートされています (詳細については、「[非同期実行 (ポーリング メソッド)」](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)を参照してください。 接続ハンドルに非同期操作を実装するバージョン 3.8 ODBC ドライバーの要件はありません。 ドライバーが接続ハンドルに非同期操作を実装しない場合でも、ドライバーは、SQL_ASYNC_DBC_FUNCTIONS *InfoType*を実装し **、SQL_ASYNC_DBC_NOT_CAPABLE**返す必要があります。  
   
- 非同期接続操作が有効な場合、接続操作の実行時間は、すべての繰り返し呼び出しの合計時間になります。 SQL_ATTR_CONNECTION_TIMEOUT接続属性によって設定された値を合計時間が超過した後に最後に繰り返される呼び出しが発生し、操作が完了していない場合、ドライバーはSQL_ERRORを返し、SQLState HYT01 との診断レコードを記録し、メッセージ "接続のタイムアウトが期限切れ" です。 操作が終了してもタイムアウトはありません。  
+ 非同期接続操作が有効な場合、接続操作の実行時間は、すべての繰り返し呼び出しの合計時間になります。 SQL_ATTR_CONNECTION_TIMEOUT接続属性で設定された値を合計時間が超えた後に最後に繰り返し呼び出しが発生し、操作が完了していない場合、ドライバーは SQL_ERROR を返し、SQLState HYT01 とメッセージ 「接続タイムアウトが期限切れ」の診断レコードを記録します。 操作が終了してもタイムアウトはありません。  
   
 ##### <a name="sqlcancelhandle-function"></a>SQLCancelHandle 関数  
  ODBC 3.8 は、接続とステートメントの両方の操作をキャンセルするために使用される[SQLCancelHandle 関数](../../../odbc/reference/syntax/sqlcancelhandle-function.md)をサポートしています。 **SQLCancelHandle**をサポートするドライバーは、関数をエクスポートする必要があります。 アプリケーションがステートメント ハンドルで SQLCancel または**SQLCancelHandle**を呼び出す場合**SQLCancelHandle**、ドライバーは、実行中の同期または非同期の接続関数をキャンセルしないでください。 同様に、アプリケーションが接続ハンドルで**SQLCancelHandle**を呼び出す場合、ドライバーは、実行中の同期または非同期ステートメント関数をキャンセルしないでください。 また、アプリケーションが接続ハンドルで**SQLCancelHandle**を呼び出す場合は、ドライバーは、参照操作をキャンセルしないでください **(SQLBrowseConnect**はSQL_NEED_DATAを返します)。 このような場合、ドライバーは HY010「関数シーケンス エラー」を返す必要があります。  
@@ -72,7 +72,7 @@ SQL_DRIVER_C_TYPE_BASE+0, SQL_DRIVER_C_TYPE_BASE+1
 ##### <a name="asynchronous-execution-notification-method"></a>非同期実行 (通知方法)  
  ODBC 3.8 では、非同期操作の通知方法がサポートされています。 詳細については、「[非同期実行 (通知メソッド)」](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md)を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ODBC ドライバーの開発](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [マイクロソフト提供の ODBC ドライバー](../../../odbc/microsoft/microsoft-supplied-odbc-drivers.md)   
  [ODBC 3.8 の新機能](../../../odbc/reference/what-s-new-in-odbc-3-8.md)

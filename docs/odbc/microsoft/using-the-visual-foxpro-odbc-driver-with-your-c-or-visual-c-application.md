@@ -1,5 +1,5 @@
 ---
-title: C または Visual C++ Application | を使用した Visual FoxPro ODBC ドライバーの使用Microsoft Docs
+title: C または Visual C++ アプリケーションでビジュアル フォックスプロ ODBC ドライバーを使用する |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,35 +14,35 @@ helpviewer_keywords:
 - Visual FoxPro data [ODBC], C or C++ applications
 - C applications [ODBC]
 ms.assetid: beb11a68-849e-4fe0-b217-d3722b1b1389
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8d1fb400fec20017fc37a937b2ca5d911e8413bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e2f3a87503a94da75acc824a0937b92631c01bde
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68087974"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81292632"
 ---
-# <a name="use-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application"></a>C または Visual C++ アプリケーションで Visual FoxPro ODBC ドライバーを使用する
-C または C++ アプリケーションは、 [Sqlexecute](../../odbc/microsoft/sqlexecute-visual-foxpro-odbc-driver.md)または[SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md)ステートメントを visual foxpro に送信することによって、visual foxpro データと通信します。 このステートメントには、次のものを含めることができます。  
+# <a name="use-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application"></a>C または Visual C++ アプリケーションでビジュアル フォックスプロ ODBC ドライバーを使用する
+C または C++ アプリケーションは[、SQLExecute](../../odbc/microsoft/sqlexecute-visual-foxpro-odbc-driver.md)ステートメントまたは[SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md)ステートメントをビジュアル フォックス プロに送信することで、ビジュアル フォックスプロのデータと通信します。 このステートメントには、次の内容を含めることができます。  
   
--   [DROP TABLE](../../odbc/microsoft/drop-table-command.md)コマンドなど、Visual FoxPro 言語にネイティブな SQL ステートメント。  
+-   SQL ステートメントは[、DROP TABLE](../../odbc/microsoft/drop-table-command.md)コマンドなどのビジュアル フォックスプロ言語にネイティブです。  
   
--   [サポートされている ODBC SQL 文法](../../odbc/microsoft/supported-odbc-sql-grammar-visual-foxpro-odbc-driver.md)。  
+-   [サポートされている ODBC SQL 文法](../../odbc/microsoft/supported-odbc-sql-grammar-visual-foxpro-odbc-driver.md):  
   
--   [サポートされている SET コマンド](../../odbc/microsoft/supported-set-commands-visual-foxpro-odbc-driver.md)など、SQL 以外の Visual FoxPro 言語。  
+-   [サポートされている SET コマンド](../../odbc/microsoft/supported-set-commands-visual-foxpro-odbc-driver.md)など、SQL 以外のビジュアル FoxPro 言語 。  
   
- SQL native to Visual FoxPro の詳細については、Visual FoxPro のドキュメントを参照してください。  
+ ビジュアル フォックスプロにネイティブな SQL の詳細については、ビジュアル フォックスプロのドキュメントを参照してください。  
   
-## <a name="example-using-the-visual-foxpro-odbc-driver-with-your-c-or-c-application"></a>例: C または C++ アプリケーションでの Visual FoxPro ODBC ドライバーの使用  
- 次の例では、ODBC C API を使用して、TasTrade という名前の Microsoft® Visual FoxPro サンプルデータベースの employee テーブルの last_name フィールドに格納されているデータを取得します。 このデータベースは Visual FoxPro と共に提供され、既定では次の場所にインストールされます。  
+## <a name="example-using-the-visual-foxpro-odbc-driver-with-your-c-or-c-application"></a>例: C または C++ アプリケーションでのビジュアル フォックスプロ ODBC ドライバーの使用  
+ 次の例では、ODBC C API を使用して、TasTrade という名前の Microsoft ® Visual FoxPro サンプル データベースの従業員テーブルのlast_name フィールドに格納されているデータを取得します。 このデータベースは Visual FoxPro に付属しており、既定では次の場所にインストールされます。  
   
  `c:\vfp\samples\mainsamp\data\tastrade.dbc`  
   
- この例では、一度に1つの姓を表示するので、メッセージボックスで [OK] をクリックして次の姓を表示できます。 Tastrade という名前のデータソースが dbc データベースを使用するように設定されていることを前提としています。  
+ この例では、一度に 1 つの姓を表示し、メッセージ ボックスの [OK] をクリックして、次の姓を表示します。 Tastrade という名前のデータ ソースが、Tastrade.dbc データベースを使用するように設定されていることを前提としています。  
   
 > [!NOTE]  
->  エラーチェックは、すべての ODBC API 呼び出しで実行する必要があります。この例では、簡潔にするためにエラーチェックを除外しています。  
+>  エラー チェックは、すべての ODBC API 呼び出しで実行する必要があります。この例では、簡潔にするためにエラー チェックを除外しています。  
   
 ```  
 // FoxPro_ODBC_Driver_with_C.cpp  

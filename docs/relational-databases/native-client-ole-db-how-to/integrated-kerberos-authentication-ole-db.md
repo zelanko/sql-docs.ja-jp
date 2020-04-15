@@ -1,5 +1,5 @@
 ---
-title: 統合 Kerberos 認証 (OLE DB) |Microsoft Docs
+title: 統合 Kerberos 認証 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 953ee253-a4be-4f47-bbad-d2f6600207b2
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2773078b8e442b1cfed70ccb9f4a8518b108b678
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0f86c41fb3884494f38f0b7817ff0eabe2d4dfcb
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73789911"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302263"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>統合 Kerberos 認証 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "73789911"
   
  また、顧客から提供された SPN を指定する必要があります。 .cpp ファイルで、"CPSPN" の部分を顧客から提供された SPN に変更してください。  
   
- INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。 ole32.lib と oleaut32.lib を使用してコンパイルします。  
+ INCLUDE 環境変数に sqlncli.h を含むディレクトリが含まれていることを確認します。 ole32.lib と oleaut32.lib を使用してコンパイルします。  
   
 ```  
 // compile with: ole32.lib oleaut32.lib  

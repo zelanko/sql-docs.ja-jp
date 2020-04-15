@@ -1,5 +1,5 @@
 ---
-title: スキーマ行セットのサポート (OLE DB) |Microsoft Docs
+title: スキーマ行セットのサポート (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,26 +14,25 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, schema rowsets
 - rowsets [OLE DB], schema
 ms.assetid: a75b4b69-b095-4690-9b31-a2b32a67489e
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 316bfd740f909321798cc2203af9577c5ef6e404
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e54a81cf47804e1cf4568e739bb2c4cf83b9fe25
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73759547"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81288612"
 ---
 # <a name="schema-rowset-support-ole-db"></a>スキーマ行セットのサポート (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、分散クエリを処理[!INCLUDE[tsql](../../../includes/tsql-md.md)]するときに、リンクサーバーからスキーマ情報を返すこともできます。  
+  ネイティブ[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]クライアント OLE DB プロバイダーは、分散クエリを処理[!INCLUDE[tsql](../../../includes/tsql-md.md)]するときにリンク サーバーからスキーマ情報を返すもサポートします。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ではシノニムがサポートされていますが、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ではシノニムのメタデータは返されません。  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ではシノニムがサポートされていますが、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ではシノニムのメタデータは返されません。  
   
- 次の表は、スキーマ行セットと、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでサポートされる制限列の一覧です。  
+ 次の表は、ネイティブ クライアント OLE DB プロバイダー[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]でサポートされるスキーマ行セットと制限列を示しています。  
   
 |スキーマ行セット|制限列|  
 |-------------------|-------------------------|  
@@ -59,7 +58,7 @@ ms.locfileid: "73759547"
  [LINKEDSERVERS 行セット &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
 ## <a name="see-also"></a>参照  
- [SQL Server Native Client &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
+ [OLE DB&#41;&#40;SQL Server ネイティブ クライアント](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
  [ユーザー定義型の使用](../../../relational-databases/native-client/features/using-user-defined-types.md)  
   
   

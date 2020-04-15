@@ -1,5 +1,5 @@
 ---
-title: その他のテキストファイルドライバーのプログラミングの詳細 |Microsoft Docs
+title: その他のテキスト ファイル ドライバのプログラミングの詳細 |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,18 +12,18 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], text file driver
 - Jet-based ODBC drivers [ODBC], text file driver
 ms.assetid: bfa85e91-060e-4d70-88c3-f5c48df634f1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f13193ba437d0da0ee15bd4072fe6f53c7db5b9c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5565c5682e8e33fbadd6ffdd66a89098098bea6d
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68043786"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81290942"
 ---
 # <a name="other-text-file-driver-programming-details"></a>その他のテキスト ファイル ドライバーのプログラミングの詳細
 > [!NOTE]  
->  このセクションでは、ODBC 関数とその他のプログラミングの詳細について、テキストファイルドライバー固有の情報を提供します。 関数に関する一般的な情報については、「 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)」の該当するトピックを参照してください。  
+>  このセクションでは、ODBC 関数およびその他のプログラミングの詳細に関するテキスト ファイル ドライバー固有の情報を提供します。 関数の一般情報については[、ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)の該当するトピックを参照してください。  
   
  このセクションのトピックは次のとおりです。  
   
