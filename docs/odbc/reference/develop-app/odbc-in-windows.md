@@ -1,5 +1,5 @@
 ---
-title: Windows での ODBC |Microsoft Docs
+title: ODBC ウィンドウでの ODBC |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,17 +8,17 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 98e61767-12ed-4aec-816e-639bd9c27b31
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5f06b10f1d69b7165e1193b6be78e5aa8d38b1b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: de5f78f55f7242e0762d9b7cffb6dfe41c83d1dd
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68104797"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81282532"
 ---
 # <a name="odbc-in-windows"></a>Windows での ODBC
-次の項目は、Microsoft® Windows NT®/windows 2000 および Microsoft Windows®95/98 オペレーティングシステムで実行されている ODBC にのみ適用されます。  
+以下の項目は®、マイクロソフトの Windows NT®/Windows 2000 および Windows ® 95/98 オペレーティング システムで実行されている ODBC にのみ適用されます。  
   
  このセクションでは、次のトピックを扱います。  
   

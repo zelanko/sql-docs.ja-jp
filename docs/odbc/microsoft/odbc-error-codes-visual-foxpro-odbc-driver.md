@@ -1,5 +1,5 @@
 ---
-title: ODBC エラーコード (Visual FoxPro ODBC ドライバー) |Microsoft Docs
+title: ODBC エラー コード (ビジュアル フォックスプロ ODBC ドライバー) |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,21 +14,21 @@ helpviewer_keywords:
 - SQLSTATE [ODBC]
 - FoxPro ODBC driver [ODBC], error codes
 ms.assetid: 9b4251f2-6fa6-49df-8abf-7cc1cc35d1c8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4364590e908688fe094da0e7687410bdda3b97cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a2f6da9d4e4799bb9c40ec1c2716b71f70c53695
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67915776"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298112"
 ---
 # <a name="odbc-error-codes-visual-foxpro-odbc-driver"></a>ODBC エラー コード (Visual FoxPro ODBC ドライバー)
-次の表に、ODBC エラーコード SQLSTATE の値にマップされた Visual FoxPro のエラーコードを示します。 マップされた SQLSTATE 値は、 [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md)および[SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md)から取得されます。 **SQLExecDirect**と**SQLPrepare**が Visual FoxPro エンジンにアクセスする唯一の関数であるため、他の ODBC API からの他の SQLSTATE 値はマップされません。  
+次の表は、ODBC エラー コード SQLSTATE 値にマップされた Visual FoxPro エラー コードの一覧です。 マッピングされた SQLSTATE 値は[、SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md)および[SQLPrepare から取得されます](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md)。 他の ODBC API からの他の SQLSTATE**SQLExecDirect**値はマップ**SQLPrepare**されません。  
   
- ODBC エラーコードの詳細については、 *Odbc プログラマーリファレンス*の「[付録 a: odbc エラーコード](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)」を参照してください。  
+ ODBC エラー コードの詳細については、『ODBC プログラマ リファレンス』の[「付録 A: ODBC エラー コード](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)」を*参照してください*。  
   
-|SQLSTATE|Visual FoxPro エラーコード|  
+|SQLSTATE|ビジュアルフォックスプロエラーコード|  
 |--------------|------------------------------|  
 |S1001|149<br /><br /> 150<br /><br /> 182<br /><br /> 202<br /><br /> 308|  
 |1004|159|  

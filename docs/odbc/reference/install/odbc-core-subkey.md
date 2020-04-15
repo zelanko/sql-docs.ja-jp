@@ -1,5 +1,5 @@
 ---
-title: ODBC Core サブキー |Microsoft Docs
+title: ODBC コア サブキー |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,23 +12,23 @@ helpviewer_keywords:
 - registry entries for components [ODBC], core subkey
 - core subkey [ODBC]
 ms.assetid: 055b31fc-f96c-450b-a596-d4570079fbf2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 98c9380083eb5a0ad796f436af271564676b757d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9e6bfcf3c1efa87076e6d3e27a438cde6f794157
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68094009"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304058"
 ---
 # <a name="odbc-core-subkey"></a>ODBC Core サブキー
-ODBC Core サブキーの下の値は、コアコンポーネント (ドライバーマネージャー、カーソルライブラリ、インストーラー DLL など) の使用回数を示します。 この値の形式を次の表に示します。  
+ODBC Core サブキーの下の値は、コア コンポーネント (ドライバー マネージャー、カーソル ライブラリ、インストーラー DLL など) の使用量カウントを示します。 この値の形式を次の表に示します。  
   
-|Name|データ型|データ|  
+|名前|データ型|Data|  
 |----------|---------------|----------|  
-|UsageCount|REG_DWORD|*count*|  
+|使用カウント|REG_DWORD|*count*|  
   
- たとえば、3つの異なるアプリケーション用のセットアッププログラムによって ODBC Core コンポーネントがインストールされていて、2つの異なるドライバーがインストールされているとします。 ODBC Core サブキーの下の値は次のようになります。  
+ たとえば、ODBC Core コンポーネントが、3 つの異なるアプリケーションと 2 つの異なるドライバのセットアップ プログラムによってインストールされているとします。 ODBC コア サブキーの下の値は次のようになります。  
   
 ```  
 UsageCount : REG_DWORD : 0x5  

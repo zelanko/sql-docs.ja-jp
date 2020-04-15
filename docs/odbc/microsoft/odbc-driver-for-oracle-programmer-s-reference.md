@@ -1,5 +1,5 @@
 ---
-title: ODBC Driver for Oracle プログラマー&#39;s リファレンス |Microsoft Docs
+title: Oracle プログラマーのための ODBC ドライバ&#39;リファレンス |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,18 +8,18 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: d70e79a1-6403-49ad-8713-eda6e8aa287e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4fe50584664d625040753a666cf7ebdf0c25ab11
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 763c9892836b262f308b82ef96794a03dc33fd12
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67915780"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298122"
 ---
-# <a name="odbc-driver-for-oracle-programmer39s-reference"></a>ODBC Driver for Oracle プログラマー&#39;s リファレンス
+# <a name="odbc-driver-for-oracle-programmer39s-reference"></a>Oracle プログラマー向け ODBC ドライバ&#39;リファレンス
 > [!IMPORTANT]  
->  この機能は、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、Oracle によって提供される ODBC ドライバーを使用してください。  
+>  この機能は、今後のバージョンの Windows で削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、Oracle によって提供される ODBC ドライバーを使用します。  
   
  このセクションには、次のトピックが含まれます。  
   
@@ -41,11 +41,11 @@ ms.locfileid: "67915780"
   
 -   [キーセット ドリブン カーソルの使用に関する制限](../../odbc/microsoft/limitations-of-using-keyset-driven-cursors.md)  
   
--   [ODBC Driver for Oracle ストアドプロシージャ](../../odbc/microsoft/stored-procedures-odbc-driver-for-oracle.md)  
+-   [Oracle ストアド プロシージャ用の ODBC ドライバ](../../odbc/microsoft/stored-procedures-odbc-driver-for-oracle.md)  
   
--   [ODBC Driver for Oracle のエラーメッセージ](../../odbc/microsoft/error-messages-odbc-driver-for-oracle.md)  
+-   [Oracle エラー メッセージの ODBC ドライバー](../../odbc/microsoft/error-messages-odbc-driver-for-oracle.md)  
   
--   [ODBC の準拠レベル](../../odbc/microsoft/odbc-driver-for-oracle-conformance-levels.md)  
+-   [ODBC 準拠レベル](../../odbc/microsoft/odbc-driver-for-oracle-conformance-levels.md)  
   
 -   [API 関数](../../odbc/microsoft/api-functions-odbc-driver-for-oracle.md)  
   

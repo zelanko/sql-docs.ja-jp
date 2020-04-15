@@ -1,5 +1,5 @@
 ---
-title: ドライバーマネージャーの役割 |Microsoft Docs
+title: ドライバー マネージャーの役割 |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,21 +16,21 @@ helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagRec
 - driver manager [ODBC], error checking
 ms.assetid: 7b861c82-357e-4590-8074-45136e9ed15e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7184c8ac9e0ad1813999a276f1579351f98544ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ee3d704ea43125c3cd912a4e67d90bf5d50c733e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68020401"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304303"
 ---
 # <a name="role-of-the-driver-manager"></a>ドライバー マネージャーのロール
-ドライバーマネージャーは、生成された状態レコードを返す最終的な順序を決定します。 特に、順位が最も高いレコードを決定し、最初に返されるレコードを決定します。 ドライバーは、生成された状態レコードの順序付けを行います。 状態レコードがドライバーマネージャーとドライバーの両方によって投稿されている場合は、ドライバーマネージャーによってそれらの順序が決定されます。 詳細については、「[一連の状態レコード](../../../odbc/reference/develop-app/sequence-of-status-records.md)」を参照してください。  
+ドライバー マネージャーは、最終的に生成する状態レコードを返す順序を決定します。 特に、どのレコードが最高ランクを持ち、最初に返されるレコードを決定します。 ドライバーは、それが生成する状態レコードを並べ替える責任があります。 ドライバー マネージャーとドライバーの両方によって、状態レコードが投稿された場合、ドライバー マネージャーは、それらを順序付けします。 詳細については、「ステータス[レコードの順序](../../../odbc/reference/develop-app/sequence-of-status-records.md)」を参照してください。  
   
- ドライバーマネージャーは、可能な限り多くのエラーチェックを行います。 これにより、すべてのドライバーが同じエラーをチェックすることができません。 たとえば、関数の引数が**SQLSetPos**の*操作*などの個別の値の数を受け入れる場合、ドライバーマネージャーは、指定された値が有効であることを確認します。  
+ ドライバ マネージャは、できるだけ多くのエラー チェックを実行します。 これにより、すべてのドライバーが同じエラーをチェックするのを防ができます。 たとえば、関数の引数が**SQLSetPos**の*操作*などの値の不連続の数を受け入れる場合、ドライバー マネージャーは、指定された値が有効であることを確認します。  
   
- 次のセクションでは、ドライバーマネージャーによってチェックされる条件の種類について説明します。 これらは包括的なものではありません。ドライバーマネージャーが返す SQLSTATEs の完全な一覧については、各関数の「診断」セクションを参照してください。ドライバーマネージャーによって行われた各チェックの説明は、"(DM)" という文字で始まります。 「[付録 B: ODBC 状態遷移テーブル](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)」の状態遷移テーブルも参照してください。かっこで囲まれたエラーは、ドライバーマネージャーによって検出されます。  
+ 次のセクションでは、ドライバー マネージャーによってチェックされる条件の種類について説明します。 それらは網羅的であることを意図したものではありません。ドライバー マネージャーが返す SQLSTATEs の完全な一覧については、各関数の「診断」セクションを参照してください。ドライバ マネージャが行った各チェックの説明は、文字 "(DM)" で始まります。 「付録 B: ODBC 状態遷移テーブル 」の[状態遷移表](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)も参照してください。かっこ内に表示されるエラーは、ドライバー マネージャーによって検出されます。  
   
  このセクションでは、次のトピックを扱います。  
   

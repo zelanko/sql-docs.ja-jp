@@ -1,5 +1,5 @@
 ---
-title: SQLConnect | を使用した接続Microsoft Docs
+title: 接続と接続 |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,19 +18,19 @@ helpviewer_keywords:
 - connection functions [ODBC]
 - ODBC drivers [ODBC], connection functions
 ms.assetid: b16319d2-2c2c-4341-abb5-caa9e17362b4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e37cef235949473beb52e0836553ca16316bc744
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 25c1dca7324f73f6aacf472fb225a09424c73d3a
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68083123"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81294652"
 ---
 # <a name="connecting-with-sqlconnect"></a>SQLConnect による接続
-**SQLConnect**は最も単純な接続関数です。 データソース名が必要で、オプションのユーザー ID とパスワードを受け取ります。 この機能は、データソース名をハードコーディングし、ユーザー ID やパスワードを必要としないアプリケーションに適しています。 また、独自の "ルックアンドフィール" を制御したり、ユーザーインターフェイスを持たないアプリケーションにも適しています。 このようなアプリケーションでは、 **sqldatasources**を使用してデータソースの一覧を作成し、データソース、ユーザー ID、およびパスワードをユーザーに要求してから、 **SQLConnect**を呼び出すことができます。  
+**SQLConnect**は、最も簡単な接続関数です。 データ・ソース名が必要で、オプションのユーザー ID とパスワードを受け入れます。 これは、データ・ソース名をハードコーディングするアプリケーションで、ユーザー ID やパスワードを必要としない場合に適しています。 また、独自の "ルック アンド フィール" を制御するアプリケーションや、ユーザー インターフェイスを持たないアプリケーションでもうまく機能します。 このようなアプリケーションは **、SQLDataSources**を使用してデータ ソースのリストを作成し、データ ソース、ユーザー ID、およびパスワードを求めるメッセージを表示してから **、SQLConnect**を呼び出すことができます。  
   
- 次の例では、northwind という DSN を使用して Northwind データベースに接続し、Employees テーブル内のすべてのレコードから、first name フィールドと last name フィールドをすべて取得します。  
+ 次の例では、Northwind という DSN を使用して Northwind データベースに接続し、"社員" テーブルのすべてのレコードから姓と名のフィールドをすべて取得します。  
   
 ```  
 // Connecting_with_SQLConnect.cpp  

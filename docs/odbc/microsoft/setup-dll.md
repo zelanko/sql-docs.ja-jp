@@ -1,5 +1,5 @@
 ---
-title: セットアップ DLL |Microsoft Docs
+title: DLL のセットアップ |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - setup DLL [ODBC]
 - ODBC desktop database drivers [ODBC], setup DLL
 ms.assetid: 7e036b66-2fbe-4ce2-815c-2fd03b6fce4d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ddc680dce5e4d39dd88e8677718a83ad0ea89cac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 560acbd2227fa7cc0069829319524cae54fd4df1
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68063412"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300722"
 ---
 # <a name="setup-dll"></a>DLL のセットアップ
-ODBC 管理者は、ユーザーがデータソースを構成するときに、関数**Configdsn**を呼び出します。
+ODBC アドミニストレーターは、ユーザーがデータ ソースを構成するときに関数**ConfigDSN**を呼び出します。

@@ -1,5 +1,5 @@
 ---
-title: ドライバーマネージャーの診断の例 |Microsoft Docs
+title: ドライバー マネージャーの診断例 |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - diagnostic information [ODBC], examples
 - error messages [ODBC], diagnostic messages
 ms.assetid: af8f2d35-d1bf-495c-af25-630654542b7d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 95392367b70af3eb820f0943af5dc668783a3fe5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 839095e5544cab73cdddd4f4b17a3d8d52136c9c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68046964"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305813"
 ---
 # <a name="driver-manager-diagnostic-example"></a>ドライバー マネージャー診断の例
-ドライバーマネージャーは診断メッセージを生成することもできます。 たとえば、アプリケーションで**Sqldatasources ソース**に無効な direction オプションが渡された場合、ドライバーマネージャーは**SQLGetDiagRec**から次の値を書式設定して返します。  
+ドライバー マネージャーは、診断メッセージを生成することもできます。 たとえば、アプリケーションが無効な方向オプションを**SQLDataSources**に渡した場合、ドライバー マネージャーは **、SQLGetDiagRec**から次の値をフォーマットして返す可能性があります。  
   
 ```  
 SQLSTATE:         "HY103"  
@@ -30,4 +30,4 @@ Native Error:      0
 Diagnostic Msg:   "[Microsoft][ODBC Driver Manager]Direction option out of range"  
 ```  
   
- このエラーは Driver Manager で発生したため、ベンダ ([Microsoft]) とその識別子 ([ODBC Driver Manager]) の診断メッセージにプレフィックスが追加されました。
+ エラーは、ドライバー マネージャーで発生したため、ベンダー ([Microsoft]) とその識別子 ([ODBC ドライバー マネージャー]) の診断メッセージにプレフィックスを追加します。

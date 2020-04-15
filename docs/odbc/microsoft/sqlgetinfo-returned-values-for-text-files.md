@@ -1,5 +1,5 @@
 ---
-title: SQLGetInfo 返されたテキストファイルの値 |Microsoft Docs
+title: テキスト ファイルの戻り値を返す SQLGetInfo |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,22 +14,22 @@ helpviewer_keywords:
 - text file driver [ODBC], SQLGetInfo
 - Jet-based ODBC drivers [ODBC], text file driver
 ms.assetid: 739a9d72-26aa-42dd-b9fd-76c679976d09
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3d2578c9abe6e2e3b1f99b0e680fc0fcf8c104f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 98dcfb671a96e9b82d7349193926e8f0f5349324
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67898805"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298522"
 ---
 # <a name="sqlgetinfo-returned-values-for-text-files"></a>SQLGetInfo でテキスト ファイルに返される値
-次の表に、 *Fin$ type*引数の C 言語 #defines と**SQLGetInfo**によって返される対応する値の一覧を示します。 この情報を取得するに*は、一覧*表示されている C 言語の #defines を**SQLGetInfo**に渡します。 **SQLGetInfo**によって返される値の詳細については、 [ODBC プログラマーズリファレンス](../../odbc/reference/odbc-programmer-s-reference.md)を参照してください。  
+次の表は *、fInfoType*引数の C 言語#definesと **、SQLGetInfo**によって返される対応する値を示しています。 この情報は *、fInfoType*引数で、リストされている C 言語#definesを**SQLGetInfo**に渡すことによって取得できます。 **SQLGetInfo**によって返される値の詳細については[、ODBC プログラマ リファレンスを参照してください](../../odbc/reference/odbc-programmer-s-reference.md)。  
   
 > [!NOTE]  
->  **SQLGetInfo**が32ビットのビットマスクを返す場合、縦棒 (&#124;) はビットごとの or を表します。  
+>  **SQLGetInfo が**32 ビット ビットマスクを返す場合、縦棒 (&#124;) はビットごとの OR を表します。  
   
-|InfoType|戻り値|  
+|Infotype|戻り値|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"N"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
@@ -44,7 +44,7 @@ ms.locfileid: "67898805"
 |SQL_CATALOG_LOCATION|SQL_QL_START|  
 |SQL_CATALOG_NAME|"Y"|  
 |SQL_CATALOG_NAME_SEPARATOR|"\\"|  
-|SQL_CATALOG_TERM|名簿|  
+|SQL_CATALOG_TERM|"ディレクトリ"|  
 |SQL_CATALOG_USAGE|[複数の値]|  
 |SQL_COLLATION_SEQ|""|  
 |SQL_COLUMN_ALIAS|"Y"|  
@@ -81,22 +81,22 @@ ms.locfileid: "67898805"
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|Odbc .ini の DSN または "" if DRIVER キーワードが Odbc .ini で使用されている場合|  
+|SQL_DATA_SOURCE_NAME|ODBC.ini からの DSN、またはドライバ キーワードが Odbc.ini で使用されている場合は ""|  
 |SQL_DATA_SOURCE_READ_ONLY|"Y"|  
-|SQL_DATABASE_NAME|現在のデータベースディレクトリ|  
+|SQL_DATABASE_NAME|現在のデータベース ディレクトリ|  
 |SQL_DATETIME_LITERALS|0|  
-|SQL_DBMS_NAME|本文|  
+|SQL_DBMS_NAME|"テキスト"|  
 |SQL_DBMS_VER|ISAM: テキスト<br /><br /> バージョン: 1.0<br /><br /> バージョン番号の形式: 01.00.0000|  
 |SQL_DDL_INDEX|0|  
 |SQL_DEFAULT_TXN_ISOLATION|0|  
 |SQL_DESCRIBE_PARAMETER|0|  
-|SQL_DRIVER_HDBC|ドライバーマネージャーによって処理されます。|  
-|SQL_DRIVER_HENV|ドライバーマネージャーによって処理されます。|  
-|SQL_DRIVER_HLIB|ドライバーマネージャーによって処理されます。|  
-|SQL_DRIVER_HSTMT|ドライバーマネージャーによって処理されます。|  
-|SQL_DRIVER_NAME|"OdbcJt32"|  
+|SQL_DRIVER_HDBC|ドライバー マネージャーによって処理されます。|  
+|SQL_DRIVER_HENV|ドライバー マネージャーによって処理されます。|  
+|SQL_DRIVER_HLIB|ドライバー マネージャーによって処理されます。|  
+|SQL_DRIVER_HSTMT|ドライバー マネージャーによって処理されます。|  
+|SQL_DRIVER_NAME|"OdbcJt32.dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
-|SQL_DRIVER_VER|"4.00" (*nnnn*はビルド日付を指定*します)*|  
+|SQL_DRIVER_VER|"4.00.*nnnn*" (*nnnn*はビルドの日付を指定します )|  
 |SQL_DROP_ASSERTION|0|  
 |SQL_DROP_CHARACTER_SET|0|  
 |SQL_DROP_COLLATION|0|  
@@ -141,9 +141,9 @@ ms.locfileid: "67898805"
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|[複数の値]|  
-|SQL_ODBC_SAG_CLI_ の準拠|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SAG_CLI_適合性|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
-|SQL_ODBC_VER|ドライバーマネージャーから|  
+|SQL_ODBC_VER|ドライバ マネージャから|  
 |SQL_OJ_CAPABILITIES|[複数の値]|  
 |SQL_ORDER_BY_COLUMNS_IN_SELECT|"N"|  
 |SQL_OUTER_JOINS|"Y"|  
@@ -155,12 +155,12 @@ ms.locfileid: "67898805"
 |SQL_SCHEMA_USAGE|0|  
 |SQL_SCROLL_OPTIONS|[複数の値]|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
-|SQL_SERVER_NAME|本文|  
-|SQL_SPECIAL_CHARACTERS|"~\`@ # $% ^& * _-+ =\\} {" ';:?/><,.! '[] &#124; "|  
+|SQL_SERVER_NAME|"テキスト"|  
+|SQL_SPECIAL_CHARACTERS|"~@@#$%^\`&*_-+=\\}{'''''';?/><,.!'[]&#124;"|  
 |SQL_STRING_FUNCTIONS|[複数の値]|  
 |SQL_SUBQUERIES|[複数の値]|  
 |SQL_SYSTEM_FUNCTIONS|0|  
-|SQL_TABLE_TERM|一覧|  
+|SQL_TABLE_TERM|「テーブル」|  
 |SQL_TIMEDATE_ADD_INTERVALS|0|  
 |SQL_TIMEDATE_DIFF_INTERVALS|0|  
 |SQL_TIMEDATE_FUNCTIONS|[複数の値]|  

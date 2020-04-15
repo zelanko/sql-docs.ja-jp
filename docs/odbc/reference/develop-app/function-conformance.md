@@ -1,5 +1,5 @@
 ---
-title: 関数の準拠 |Microsoft Docs
+title: 関数の適合性 |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,44 +13,44 @@ helpviewer_keywords:
 - data sources [ODBC], conformance levels
 - ODBC drivers [ODBC], conformance levels
 ms.assetid: bb5d68cf-d238-481e-babc-2e9401b4700e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 45eb427b660496430334633b5d43ee8989211c0f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 33cd0ad4269ed59e31c8ab343ddbb01806afce04
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68069755"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305593"
 ---
 # <a name="function-conformance"></a>関数の適合性
-次の表は、各 ODBC 関数が適切に定義されている場合の準拠レベルを示しています。  
+次の表は、各 ODBC 関数の準拠レベルを示しています。  
   
-|Function|一致レベル|  
+|機能|一致レベル|  
 |--------------|-----------------------|  
-|**SQLAllocHandle**|コア|  
+|**ハンドル**|コア|  
 |**SQLBindCol**|コア|  
-|**SQLBindParameter**|コア [1]|  
+|**SQLBindParameter**|コア[1]|  
 |**SQLBrowseConnect**|[レベル 1]|  
-|**SQLBulkOperations**|[レベル 1]|  
-|**SQLCancel**|コア [1]|  
+|**オペレーション**|[レベル 1]|  
+|**SQLCancel**|コア[1]|  
 |**SQLCloseCursor**|コア|  
-|**SQLColAttribute**|コア [1]|  
-|**SQLColumnPrivileges**|Level 2|  
+|**SQLColAttribute**|コア[1]|  
+|**SQLColumnPrivileges**|[レベル 2]|  
 |**SQLColumns**|コア|  
 |**SQLConnect**|コア|  
-|**SQLCopyDesc**|コア|  
-|**SQLDataSources**|コア|  
-|**SQLDescribeCol**|コア [1]|  
-|**SQLDescribeParam**|Level 2|  
-|**SQLDisconnect**|コア|  
+|**を使用する**|コア|  
+|**データベースソース**|コア|  
+|**SQLDescribeCol**|コア[1]|  
+|**SQLDescribeParam**|[レベル 2]|  
+|**接続解除**|コア|  
 |**SQLDriverConnect**|コア|  
 |**SQLDrivers**|コア|  
-|**SQLEndTran**|コア [1]|  
+|**SQLEndTran**|コア[1]|  
 |**SQLExecDirect**|コア|  
 |**SQLExecute**|コア|  
 |**SQLFetch**|コア|  
-|**SQLFetchScroll**|コア [1]|  
-|**SQLForeignKeys**|Level 2|  
+|**SQLFetchScroll**|コア[1]|  
+|**SQLForeignKeys**|[レベル 2]|  
 |**SQLFreeHandle**|コア|  
 |**SQLFreeStmt**|コア|  
 |**SQLGetConnectAttr**|コア|  
@@ -60,7 +60,7 @@ ms.locfileid: "68069755"
 |**SQLGetDescRec**|コア|  
 |**SQLGetDiagField**|コア|  
 |**SQLGetDiagRec**|コア|  
-|**SQLGetEnvAttr**|コア|  
+|**アズ・ビジトル**|コア|  
 |**SQLGetFunctions**|コア|  
 |**SQLGetInfo**|コア|  
 |**SQLGetStmtAttr**|コア|  
@@ -76,18 +76,18 @@ ms.locfileid: "68069755"
 |**SQLProcedures**|[レベル 1]|  
 |**SQLPutData**|コア|  
 |**SQLRowCount**|コア|  
-|**SQLSetConnectAttr**|コア [2]|  
-|**SQLSetCursorName**|コア|  
-|**SQLSetDescField**|コア [1]|  
+|**SQLSetConnectAttr**|コア[2]|  
+|**カーソルを設定します。**|コア|  
+|**SQLSetDescField**|コア[1]|  
 |**SQLSetDescRec**|コア|  
-|**SQLSetEnvAttr**|コア [2]|  
-|**SQLSetPos**|レベル 1 [1]|  
-|**SQLSetStmtAttr**|コア [2]|  
-|**SQLSpecialColumns**|コア [1]|  
+|**SQLSetEnvAttr**|コア[2]|  
+|**SQLSetPos**|レベル 1[1]|  
+|**SQLSetStmtAttr**|コア[2]|  
+|**SQLSpecialColumns**|コア[1]|  
 |**SQLStatistics**|コア|  
-|**SQLTablePrivileges**|Level 2|  
+|**SQLTablePrivileges**|[レベル 2]|  
 |**SQLTables**|コア|  
   
- [1] この関数の重要な機能は、より高い準拠レベルでのみ使用できます。  
+ [1] この関数の重要な機能は、より高い準拠レベルでのみ利用可能です。  
   
- [2] 特定の属性を既定値以外の値に設定することは、準拠レベルによって異なります。 詳細については、次のセクション「[属性の準拠](../../../odbc/reference/develop-app/attribute-conformance.md)」を参照してください。
+ [2] 特定の属性をデフォルト以外の値に設定するかどうかは、適合レベルによって異なります。 詳細については、次のセクション「[属性の準拠](../../../odbc/reference/develop-app/attribute-conformance.md)」を参照してください。

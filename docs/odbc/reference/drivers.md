@@ -1,5 +1,5 @@
 ---
-title: Drivers |Microsoft Docs
+title: ドライバー |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - drivers [ODBC]
 - drivers [ODBC], about drivers
 ms.assetid: d6795d92-877e-44e1-b7d5-2ff2fd3989bd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6460410488186c94713d859bf2912f2844ca2736
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7c8b40641be3db34fc6929edecdd5dd923700957
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67915431"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81294185"
 ---
 # <a name="drivers"></a>ドライバー
-*ドライバー*は、ODBC API の関数を実装するライブラリです。 各は特定の DBMS に固有です。たとえば、Oracle のドライバーは、Informix DBMS のデータに直接アクセスすることはできません。 ドライバーは、基になる Dbms の機能を公開します。DBMS でサポートされていない機能を実装する必要はありません。 たとえば、基になる DBMS が外部結合をサポートしていない場合、どちらの場合もドライバーは必要ありません。 唯一の重要な例外は、Xbase などのスタンドアロンデータベースエンジンを搭載していない Dbms のドライバーは、少なくとも最小量の SQL をサポートするデータベースエンジンを実装する必要があることです。  
+*ドライバーは、ODBC* API で関数を実装するライブラリです。 各々は特定の DBMS に固有のものです。たとえば、Oracle 用のドライバーは、Informix DBMS 内のデータに直接アクセスできません。 ドライバーは、基になる DBMS の機能を公開します。DBMS でサポートされていない機能を実装する必要はありません。 たとえば、基になる DBMS が外部結合をサポートしていない場合、ドライバーはどちらもサポートしないでください。 この唯一の例外は、Xbase などのスタンドアロン データベース エンジンを持たない DBMS 用のドライバーは、少なくとも最小限の SQL をサポートするデータベース エンジンを実装する必要があります。  
   
  このセクションでは、次のトピックを扱います。  
   

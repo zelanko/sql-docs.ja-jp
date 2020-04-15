@@ -1,5 +1,5 @@
 ---
-title: ODBC 3.8 | の新機能&#39;Microsoft Docs
+title: ODBC 3.8 の新機能&#39;|マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,39 +8,39 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 854f0bb4-17e9-489b-9595-eefffb8ba99f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 48e9c526f4045a4657d7942f3fabcace349cc3ad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 65ba097629005598e6942577e3498813749fd91d
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67951785"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302933"
 ---
-# <a name="what39s-new-in-odbc-38"></a>ODBC 3.8 の新&#39;
-Windows 8 には、ODBC 3.8 の更新バージョンが含まれています。 Windows 8 の ODBC 3.8 には、次の機能が含まれています。  
+# <a name="what39s-new-in-odbc-38"></a>ODBC 3.8 の新機能&#39;
+Windows 8 には、ODBC 3.8 の更新版が含まれています。 Windows 8 の ODBC 3.8 には、次の機能が含まれています。  
   
 -   [ドライバー対応接続プール](../../odbc/reference/develop-app/driver-aware-connection-pooling.md)  
   
 -   [非同期実行 (通知方法)](../../odbc/reference/develop-app/asynchronous-execution-notification-method.md)  
   
--   [データアクセスのトレース (Windows 8)](https://msdn.microsoft.com/library/windows/desktop/hh829624.aspx)  
+-   [データ アクセス トレース (Windows 8)](https://msdn.microsoft.com/library/windows/desktop/hh829624.aspx)  
   
--   PowerShell コマンドが追加され、ODBC データソース、ODBC ドライバー、ODBC パフォーマンスカウンター、およびデータアクセスのトレースをコマンドラインで管理できるようになりました。  詳細については、「 [Windows Data Access Components の PowerShell コマンド](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx)」を参照してください。  
+-   コマンド ラインで ODBC データ ソース、ODBC ドライバー、ODBC パフォーマンス カウンター、およびデータ アクセス トレースを管理するために PowerShell コマンドが追加されました。  詳細については、「 [Windows データ アクセス コンポーネント PowerShell コマンド](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx)」を参照してください。  
   
- Windows 7 には、ODBC 3.8 の更新バージョンが含まれています。 ODBC 3.8 には、次の機能が含まれています。  
+ ウィンドウズ 7 には、ODBC 3.8 の更新バージョンが含まれています。 ODBC 3.8 には、次の機能が含まれています。  
   
--   接続操作を非同期に実行します。 詳細については、「[非同期実行 (ポーリングメソッド)](../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)」を参照してください。  
+-   接続操作を非同期で実行する。 詳細については、「[非同期実行 (ポーリング メソッド)」](../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)を参照してください。  
   
--   ストリーム出力パラメーター。 詳細については、「 [SQLGetData を使用した出力パラメーターの取得](../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)」を参照してください。  
+-   ストリーム出力パラメーター。 詳細については、「 [SQLGetData を使用した出力パラメータの取得](../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)」を参照してください。  
   
--   ODBC C データ型の拡張性。 詳細については、「 [ODBC の C データ型](../../odbc/reference/develop-app/c-data-types-in-odbc.md)」を参照してください。  
+-   ODBC C データ型の拡張性。 詳細については[、「ODBC での C データ型](../../odbc/reference/develop-app/c-data-types-in-odbc.md)」を参照してください。  
   
- ドライバーの作成者は[、3.5 ドライバーの3.8 ドライバーへのアップグレード](../../odbc/reference/develop-driver/upgrading-a-3-5-driver-to-a-3-8-driver.md)を読み取る必要があります。  
+ ドライバの作成者は[、3.5 ドライバの 3.8 ドライバへのアップグレード を](../../odbc/reference/develop-driver/upgrading-a-3-5-driver-to-a-3-8-driver.md)読む必要があります。  
   
- Odbc 3.8 ドライバーを使用して、odbc 3.x および ODBC 2.x アプリケーションで非同期接続操作を使用できます。  
+ ODBC 3.x および ODBC 2.x アプリケーションでは、ODBC 3.8 ドライバーを使用して非同期接続操作を使用できます。  
   
- 詳細については、「[互換性マトリックス](../../odbc/reference/develop-app/compatibility-matrix.md)」を参照してください。  
+ 詳細については、「[Compatibility Matrix](../../odbc/reference/develop-app/compatibility-matrix.md)」 (互換性マトリックス) を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [ODBC プログラマー リファレンス](../../odbc/reference/odbc-programmer-s-reference.md)

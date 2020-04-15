@@ -12,18 +12,18 @@ helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], about ODBC driver for Oracle
 - Oracle data access [ODBC]
 ms.assetid: 937e0662-8b1d-44f7-b077-4015c6605b2c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2b5f1aabd23a587e681c33aed4b4119523444219
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 093cb7352a7f509b0afcc061e2691311bb183169
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402611"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298132"
 ---
 # <a name="odbc-driver-for-oracle"></a>ODBC Driver for Oracle
 > [!IMPORTANT]  
->  この機能は、今後のバージョンの Windows で削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに[、Oracle によって提供される ODBC ドライバを](https://www.oracle.com/database/technologies/releasenote-odbc-ic.html)使用します。  
+>  この機能は、今後のバージョンの Windows で削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、Oracle によって提供される ODBC ドライバーを使用します。  
   
  Oracle 用のマイクロソフト® ODBC ドライバーを使用すると、ODBC 準拠のアプリケーションを Oracle データベースに接続できます。 Oracle 用 ODBC ドライバは、ODBC プログラマ リファレンス で説明されているオープン データベース接続 *(ODBC)* 仕様に準拠しています。 PL/SQLパッケージ、XA/DTC統合、およびインターネットインフォメーションサービス(IIS)内からのオラクルアクセスへのアクセスを可能にします。  
   

@@ -1,5 +1,5 @@
 ---
-title: SQLSetStmtAttr (カーソルライブラリ) |Microsoft Docs
+title: SQL セットストムタット (カーソル ライブラリ) |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,22 +10,22 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetStmtAttr function [ODBC], Cursor Library
 ms.assetid: 6018a733-c2c8-4047-92ec-92cf85031767
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bc222c1c8669769060de4fc0a1390a9bf02e3f31
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1bdd9b3b559d5cc78a0d44f5280aae347bc8996a
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68091695"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300492"
 ---
 # <a name="sqlsetstmtattr-cursor-library"></a>SQLSetStmtAttr (カーソル ライブラリ)
 > [!IMPORTANT]  
->  この機能は、今後のバージョンの Windows では削除される予定です。 新しい開発作業ではこの機能の使用を避け、現在この機能を使用しているアプリケーションの変更を検討してください。 Microsoft では、ドライバーのカーソル機能を使用することをお勧めします。  
+>  この機能は、今後のバージョンの Windows で削除される予定です。 新しい開発作業でこの機能を使用することは避け、現在この機能を使用しているアプリケーションを変更する予定です。 マイクロソフトでは、ドライバーのカーソル機能を使用することをお勧めします。  
   
- このトピックでは、カーソルライブラリでの**SQLSetStmtAttr**関数の使用について説明します。 **SQLSetStmtAttr**の一般的な情報については、「 [SQLSetStmtAttr 関数](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)」を参照してください。  
+ このトピックでは、カーソル ライブラリでの**SQLSetStmtAttr**関数の使用について説明します。 **一**般的な情報については、 SQL[セットStmtAttr 関数](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)を参照してください。  
   
- カーソルライブラリでは、 **SQLSetStmtAttr**で次のステートメント属性がサポートされています。  
+ カーソル ライブラリは **、SQLSetStmtAttr**を使用して次のステートメント属性をサポートします。  
   
 |||  
 |-|-|  
@@ -35,16 +35,16 @@ ms.locfileid: "68091695"
 |SQL_ATTR_PARAM_BIND_OFFSET_PTR|SQL_ATTR_SIMULATE_CURSOR|  
 |SQL_ATTR_PARAM_BIND_TYPE|SQL_ATTR_USE_BOOKMARKS|  
   
- カーソルライブラリでサポートされているのは、SQL_ATTR_CURSOR_TYPE statement 属性の SQL_CURSOR_FORWARD_ONLY と SQL_CURSOR_STATIC の値だけです。  
+ カーソル ライブラリでは、SQL_ATTR_CURSOR_TYPE ステートメント属性のSQL_CURSOR_FORWARD_ONLY値とSQL_CURSOR_STATIC値のみがサポートされます。  
   
- 順方向専用カーソルの場合、カーソルライブラリでは、SQL_ATTR_CONCURRENCY statement 属性の SQL_CONCUR_READ_ONLY 値がサポートされます。 静的カーソルの場合、カーソルライブラリは SQL_ATTR_CONCURRENCY statement 属性の SQL_CONCUR_READ_ONLY と SQL_CONCUR_VALUES の値をサポートします。  
+ 前方専用カーソルの場合、カーソル・ライブラリーは、SQL_ATTR_CONCURRENCYステートメント属性のSQL_CONCUR_READ_ONLY値をサポートします。 静的カーソルの場合、カーソル ライブラリは、SQL_ATTR_CONCURRENCY ステートメント属性のSQL_CONCUR_READ_ONLY値とSQL_CONCUR_VALUES値をサポートします。  
   
- カーソルライブラリは、SQL_ATTR_SIMULATE_CURSOR statement 属性の SQL_SC_NON_UNIQUE 値のみをサポートしています。  
+ カーソル ライブラリでは、SQL_ATTR_SIMULATE_CURSOR ステートメント属性のSQL_SC_NON_UNIQUE値のみがサポートされます。  
   
- ODBC 仕様では、 **Sqlfetch**または**sqlfetchscroll**が呼び出された後、SQL_ATTR_PARAM_BIND_TYPE または SQL_ATTR_ROW_BIND_TYPE 属性を使用した**SQLSetStmtAttr**への呼び出しがサポートされていますが、カーソルライブラリではサポートされません。 カーソルライブラリのバインドの種類を変更する前に、アプリケーションでカーソルを閉じる必要があります。 カーソルライブラリでは、カーソルが開いているときの SQL_ATTR_ROW_BIND_OFFSET_PTR、SQL_ATTR_PARAM_BIND_OFFSET_PTR、SQL_ATTR_ROWS_FETCHED_PTR、および SQL_ATTR_PARAMS_PROCESSED_PTR ステートメントの属性の変更がサポートされています。  
+ ODBC 仕様では、SQLFetch または**SQLFetchScroll**が呼び出された後に、SQL_ATTR_PARAM_BIND_TYPE**SQLFetchScroll**またはSQL_ATTR_ROW_BIND_TYPE属性を使用して**SQLSetStmtAttr**の呼び出しをサポートしていますが、カーソル ライブラリはサポートしていません。 カーソル ライブラリのバインディング タイプを変更する前に、アプリケーションはカーソルを閉じる必要があります。 カーソル・ライブラリーは、カーソルがオープンされているときに、SQL_ATTR_ROW_BIND_OFFSET_PTR、SQL_ATTR_PARAM_BIND_OFFSET_PTR、SQL_ATTR_ROWS_FETCHED_PTR、およびSQL_ATTR_PARAMS_PROCESSED_PTRステートメント属性の変更をサポートします。  
   
- アプリケーションでは、カーソルが開いている間に行セットのサイズを変更するために SQL_ATTR_ROW_ARRAY_SIZE の**属性**を使用して**SQLSetStmtAttr**を呼び出すことができます。 新しい行セットのサイズは、次に**Sqlfetchscroll**または**sqlfetch**が呼び出されたときに有効になります。  
+ アプリケーションは、カーソルが開いている間に行セットのサイズを変更するために、SQL_ATTR_ROW_ARRAY_SIZEの**属性**を指定して**SQLSetStmtAttr**を呼び出すことができます。 新しい行セットのサイズは、次に**SQLFetchScroll**または**SQLFetch**が呼び出された時点で有効になります。  
   
- カーソルライブラリでは、SQL_ATTR_PARAM_BIND_OFFSET_PTR または SQL_ATTR_ROW_BIND_OFFSET_PTR statement 属性の設定をサポートして、バインドオフセットを有効にします。 カーソルライブラリが ODBC 2 と共に使用されている場合、バインドオフセットは**Sqlfetch**の呼び出しには使用されません。*x*ドライバー。  
+ カーソル ライブラリでは、SQL_ATTR_PARAM_BIND_OFFSET_PTRまたはSQL_ATTR_ROW_BIND_OFFSET_PTRステートメント属性を設定して、バインディング オフセットを有効にできます。 カーソル ライブラリが ODBC 2 で使用されている場合 **、SQLFetch**の呼び出しにバインディング オフセットは使用されません。*x*ドライバ。  
   
- カーソルライブラリでは、SQL_ATTR_USE_BOOKMARKS ステートメント属性を SQL_UB_VARIABLE に設定できます。
+ カーソル ライブラリでは、SQL_ATTR_USE_BOOKMARKS ステートメント属性をSQL_UB_VARIABLEに設定できます。

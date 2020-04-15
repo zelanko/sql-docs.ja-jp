@@ -1,5 +1,5 @@
 ---
-title: カーソルの設定 |Microsoft Docs
+title: カーソルの設定 |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,18 +12,18 @@ helpviewer_keywords:
 - cursors [ODBC], scrollable
 - cursors [ODBC], creating
 ms.assetid: b80afb0e-ef2f-408f-86f5-a392edd99a56
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c47e534f069f810948189f2668d4ecdfbfa4ad79
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 805d8076c853513d86f9a3a92d9342d1224226c9
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68107543"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299802"
 ---
 # <a name="setting-up-the-cursor"></a>カーソルの設定
-アプリケーションでは、結果セットを作成するステートメントを実行する前に、カーソルの種類を指定できます。 これは、SQL_ATTR_CURSOR_TYPE statement 属性を使用して行われます。 アプリケーションで型が明示的に指定されていない場合は、順方向専用カーソルが使用されます。 混合カーソルを取得するには、アプリケーションでキーセットドリブンカーソルを指定しますが、結果セットのサイズよりも小さいキーセットのサイズを宣言します。  
+アプリケーションは、結果セットを作成するステートメントを実行する前にカーソルの種類を指定できます。 これは、SQL_ATTR_CURSOR_TYPEステートメント属性を使用して行われます。 アプリケーションが型を明示的に指定しない場合は、前方専用カーソルが使用されます。 混合カーソルを取得するには、アプリケーションはキーセット ドリブン カーソルを指定しますが、結果セットサイズよりも小さいキーセット サイズを宣言します。  
   
- キーセットドリブンカーソルおよび混合カーソルの場合は、アプリケーションでキーセットのサイズを指定することもできます。 これは、SQL_ATTR_KEYSET_SIZE statement 属性を使用して行われます。 キーセットのサイズが既定値の0に設定されている場合、キーセットのサイズは結果セットのサイズに設定され、キーセットドリブンカーソルが使用されます。 キーセットのサイズは、カーソルを開いた後に変更できます。  
+ キーセットドリブン カーソルと混合カーソルの場合、アプリケーションはキーセットサイズを指定することもできます。 これは、SQL_ATTR_KEYSET_SIZEステートメント属性を使用して行われます。 キーセットサイズが 0 (デフォルト) に設定されている場合、キーセットサイズは結果セットのサイズに設定され、キーセットドリブンカーソルが使用されます。 キーセットのサイズは、カーソルがオープンされた後に変更できます。  
   
- アプリケーションでは、行セットのサイズを設定することもできます。詳細については、このセクションの「[ブロックカーソルの使用](../../../odbc/reference/develop-app/using-block-cursors.md)」を参照してください。
+ アプリケーションは行セットのサイズを設定することもできます。詳細については、このセクションの前半の「[ブロック カーソルの使用](../../../odbc/reference/develop-app/using-block-cursors.md)」を参照してください。

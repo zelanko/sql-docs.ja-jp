@@ -1,5 +1,5 @@
 ---
-title: SQLStatistics (Access Driver) |Microsoft Docs
+title: SQL 統計 (アクセス ドライバー) |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,31 +11,31 @@ helpviewer_keywords:
 - Access driver [ODBC], SQLStatistics
 - SQLStatistics function [ODBC], Access Driver
 ms.assetid: 6117ac77-1020-4f0c-8eed-e671c34c1f21
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 523f44924858af182e953aa1ce2b72e20cf97a45
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f75f41bf63cbf224772955effa0f120b5d384111
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68047082"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299362"
 ---
 # <a name="sqlstatistics-access-driver"></a>SQLStatistics (Access ドライバー)
 > [!NOTE]  
->  このトピックでは、ドライバー固有の情報にアクセスします。 この関数の一般的な情報については、「 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)」の該当するトピックを参照してください。  
+>  このトピックでは、アクセス ドライバー固有の情報を提供します。 この関数の一般的な情報については[、ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)の該当するトピックを参照してください。  
   
 |列|説明|  
 |------------|--------------|  
-|TABLE_QUALIFIER|Microsoft Access では、データベースファイルへのパスが返されます。<br /><br /> パターンマッチングは、 *Sztablequalifier*引数ではサポートされていません。|  
-|TABLE_OWNER|所有者名がサポートされていないため、この列には NULL が返されます。|  
-|TABLE_NAME|区切られていないテーブル名です。<br /><br /> パターンマッチングは、 *Sztablename*引数ではサポートされていません。|  
-|INDEX_QUALIFIER|常に NULL が返されます。|  
+|TABLE_QUALIFIER|Access のデータベース ファイルへのパスが返されます。<br /><br /> パターン マッチングは *、szTableQualifier*引数ではサポートされていません。|  
+|TABLE_OWNER|所有者名がサポートされていないため、この列には NULL が戻されます。|  
+|TABLE_NAME|区切り文字なしのテーブル名。<br /><br /> パターン マッチングは *、szTableName*引数ではサポートされていません。|  
+|INDEX_QUALIFIER|NULL は常に返されます。|  
 |INDEX_NAME|インデックスに依存します。|  
-|TYPE|型に対しては、SQL_TABLE_STAT または SQL_INDEX_OTHER のみが返されます。|  
+|TYPE|TYPE に対してSQL_TABLE_STATまたはSQL_INDEX_OTHERのみが返されます。|  
 |SEQ_IN_INDEX|インデックスに依存します。|  
 |COLUMN_NAME|インデックスに依存します。|  
 |COLLATION|インデックスに依存します。|  
-|CARDINALITY|Microsoft アクセスのみに対して返されます。|  
-|PAGES|常に NULL が返されます。|  
+|CARDINALITY|Access の場合にのみ返されます。|  
+|PAGES|NULL は常に返されます。|  
   
- フィルター処理は、一意性 ( *Funique*引数) に基づいています。 *FAccuracy*パラメーターは無視されます。
+ フィルタ処理は、一意性 *(fUnique*引数) に基づいています。 *fAccuracy*パラメーターは無視されます。

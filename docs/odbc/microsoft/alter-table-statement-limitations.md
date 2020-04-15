@@ -1,5 +1,5 @@
 ---
-title: ALTER TABLE ステートメントの制限事項 |Microsoft Docs
+title: テーブルステートメントの制限 |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - ODBC SQL grammar, ALTER TABLE statement limitations
 - ALTER TABLE statement limitations [ODBC]
 ms.assetid: f3e88f85-edf4-47cd-a822-292b106ddb34
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1333cd6cd5946b7a3a70152e12f4d3decfa7fed0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 19afa8b07b0051de9ce45ec652ea337c0f689f52
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68138432"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304701"
 ---
 # <a name="alter-table-statement-limitations"></a>ALTER TABLE ステートメントの制限事項
-DBASE または Paradox ドライバーを使用する場合、インデックスが作成され、新しいレコードが追加されると、インデックスが削除され、テーブルの内容が削除されない限り、ALTER TABLE ステートメントでテーブルの構造を変更することはできません。  
+dBASE または Paradox ドライバを使用する場合、インデックスが作成され、新しいレコードが追加されると、インデックスが削除されてテーブルの内容が削除されない限り、ALTER TABLE ステートメントでテーブルの構造を変更することはできません。  
   
- Microsoft Excel またはテキストドライバーでは、ALTER TABLE ステートメントはサポートされていません。  
+ EXCEL またはテキスト ドライバーでは、ALTER TABLE ステートメントはサポートされていません。  
   
 > [!NOTE]  
->  Borland データベースエンジンを実装せずに Paradox ドライバーを使用する場合、ALTER TABLE ステートメントはサポートされません。read ステートメントと append ステートメントのみが許可されます。
+>  ボーランド データベース エンジンを実装せずに Paradox ドライバを使用する場合、ALTER TABLE ステートメントはサポートされません。読み取りおよび追加ステートメントのみが許可されます。

@@ -1,5 +1,5 @@
 ---
-title: スクロール可能なカーソルの使用 |Microsoft Docs
+title: スクロール可能なカーソルを使用する |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,23 +11,23 @@ helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 ms.assetid: c5d795ba-70b0-420f-a944-b1894061a755
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 33f2050be5a0fb1b6d58bf00dd8c76c33219a237
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9a73f001146691edb8a59d8eee503ae3762fc541
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68079567"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81289133"
 ---
 # <a name="using-scrollable-cursors"></a>スクロール可能なカーソルの使用
-スクロール可能なカーソルを使用するには、次の3つの手順が必要です。  
+スクロール可能なカーソルを使用するには、次の 3 つの手順が必要です。  
   
 1.  カーソル機能を決定します。  
   
 2.  カーソルを設定します。  
   
-3.  行をスクロールおよびフェッチします。  
+3.  行をスクロールしてフェッチします。  
   
  このセクションでは、次のトピックを扱います。  
   

@@ -1,5 +1,5 @@
 ---
-title: SQLGetInfo (Excel ドライバー) |Microsoft Docs
+title: を取得する ( Excel ドライバー ) |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,32 +11,32 @@ helpviewer_keywords:
 - Excel driver [ODBC], SQLGetInfo
 - SQLGetInfo function [ODBC], Excel Driver
 ms.assetid: fed4aea2-6d3d-4199-a5db-3d033eb63927
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ba2e23bf4b3c464c5483897c0a9dd3e6c9dea626
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0a96b135bbd8d44b82e645fac59ddea795666f3f
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68003278"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298582"
 ---
 # <a name="sqlgetinfo-excel-driver"></a>SQLGetInfo (Excel ドライバー)
 > [!NOTE]  
->  このトピックでは、Excel ドライバー固有の情報について説明します。 この関数の一般的な情報については、「 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)」の該当するトピックを参照してください。  
+>  このトピックでは、Excel ドライバー固有の情報を提供します。 この関数の一般的な情報については[、ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)の該当するトピックを参照してください。  
   
- **SQLGetInfo**では、SQL_FILE_USAGE 情報の種類がサポートされています。 返される値は、ドライバーがデータソース内のファイルを直接扱う方法を示す16ビット整数です。  
+ **情報**の種類SQL_FILE_USAGEサポートします。 戻り値は、ドライバーがデータ ソース内のファイルを直接処理する方法を示す 16 ビットの整数です。  
   
--   SQL_FILE_NOT_SUPPORTED-ドライバーが単一層のドライバーではありません。  
+-   SQL_FILE_NOT_SUPPORTED - ドライバーは単一層ドライバーではありません。  
   
--   SQL_FILE_TABLE-1 層ドライバーは、データソース内のファイルをテーブルとして扱います。  
+-   SQL_FILE_TABLE - 単一層のドライバーは、データ ソース内のファイルをテーブルとして扱います。  
   
--   SQL_FILE_QUALIFIER-1 層ドライバーは、データソース内のファイルを修飾子として扱います。  
+-   SQL_FILE_QUALIFIER - 単一層のドライバーは、データ ソース内のファイルを修飾子として扱います。  
   
- ODBC ドライバーは、各ファイルがテーブルであるため、Microsoft Exceldriver の SQL_FILE_TABLE を返します。  
+ ODBC ドライバは、各ファイルがテーブルであるため、Microsoft Excel ドライバのSQL_FILE_TABLEを返します。  
   
 ## <a name="sql_dbms_ver"></a>SQL_DBMS_VER  
   
-|ドライバー|Version|バージョン番号の形式|  
+|Isam|Version|バージョン番号の形式|  
 |----------|-------------|-------------------------------|  
 |Microsoft Excel|3.0|03.00.0000|  
 ||4.0|04.00.0000|  
@@ -77,4 +77,4 @@ ms.locfileid: "68003278"
  SQL_QU_DML_STATEMENTS &#124; SQL_QU_TABLE_DEFINITION  
   
 ## <a name="sql_timedate_functions"></a>SQL_TIMEDATE_FUNCTIONS  
- SQL_FN_TD_CURDATE &#124; SQL_FN_TD_CURTIME &#124; SQL_FN_TD_DAYOFMONTH &#124; SQL_FN_TD_DAYOFWEEK &#124; SQL_FN_TD_DAYOFYEAR &#124; SQL_FN_TD_HOUR &#124; SQL_FN_TD_MINUTE &#124; SQL_FN_TD_MONTH &#124; SQL_FN_TD_NOW &#124; SQL_FN_TD_SECOND &#124; SQL_FN_TD_WEEK &#124; SQL_FN_TD_YEAR
+ &#124;&#124;の&#124;&#124;&#124;&#124;&#124;&#124;&#124;&#124;&#124;&#124;&#124;&#124;&#124;&#124;&#124;&#124;&#124;&#124;&#124;&#124;&#124;&#124;&#124;&#124;&#124;&#124;&#124;&#124;&#124;&#124;&#124;&#124;&#124;&#124;&#124;&#124;&#124;&#124;SQL_FN_TD_DAYOFWEEK&#124;SQL_FN_TD_DAYOFWEEK&#124;SQL_FN_TD_DAYOFWEEK&#124;SQL_FN_TD_DAYOFWEEKSQL_FN_TD_DAYOFWEEK&#124;&#124;&#124;&#124;&#124;&#124;を&#124; SQL_FN_TD_YEAR SQL_FN_TD_WEEK &#124; SQL_FN_TD_SECOND &#124; SQL_FN_TD_NOW &#124; SQL_FN_TD_MONTH SQL_FN_TD_MINUTE &#124; SQL_FN_TD_HOUR &#124; SQL_FN_TD_DAYOFYEAR &#124; SQL_FN_TD_DAYOFMONTH &#124; SQL_FN_TD_CURTIME &#124; SQL_FN_TD_CURDATEします

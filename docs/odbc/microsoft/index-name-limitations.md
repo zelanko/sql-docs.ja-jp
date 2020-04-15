@@ -1,5 +1,5 @@
 ---
-title: インデックス名の制限 |Microsoft Docs
+title: インデックス名の制限 |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
 - desktop database drivers [ODBC]
 ms.assetid: e44e5858-696e-4939-93ae-4d6572e3f49a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6b7b05a5a6aead6c564cb9b5c4ad9ca678abe3fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0deb6a675601b2b88cf3a8a6d649e704ffaf6870
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68085527"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300022"
 ---
 # <a name="index-name-limitations"></a>インデックス名の制限
-Paradox ドライバーを使用する場合、プライマリインデックスの名前は、それが定義されているテーブルと同じである必要があります。 その他の一意または一意でないインデックスは、定義されているテーブルと同じ名前にする必要があります。
+Paradox ドライバを使用する場合、プライマリ インデックスは、定義されているテーブルと同じ名前を持つ必要があります。 他の一意または非一意のインデックスは、定義されているテーブルと同じ名前を持つ必要があります。

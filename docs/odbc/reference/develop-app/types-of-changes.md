@@ -1,5 +1,5 @@
 ---
-title: 変更の種類 |Microsoft Docs
+title: 変更の種類 |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,20 +11,20 @@ helpviewer_keywords:
 - compatibility [ODBC], types of changes
 - backward compatibility [ODBC], types of changes
 ms.assetid: 6a7db81a-20aa-4915-aed8-429711a36f49
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5f43dbf75754a16b3163bbb8e268400f34d372b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f44adb59aa9b0f25475a76a97fe3670de0228c08
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68087813"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301607"
 ---
 # <a name="types-of-changes"></a>変更の種類
-ODBC *3.x (および*odbc のすべてのバージョン) では、3種類の変更が行われます。 これらはそれぞれ下位互換性に影響し、異なる方法で処理されます。 これらの変更については、次の表で説明します。  
+ODBC *3.x* (および任意のバージョンの ODBC) では、3 種類の変更が行われます。 これらの各機能は、下位互換性に異なる影響を与え、異なる方法で処理されます。 これらの変更点を次の表に示します。  
   
-|変更の種類|[説明]|  
+|変更の種類|説明|  
 |--------------------|-----------------|  
-|新機能|これらは、アウトオブラインバインドや記述子*など、ODBC*3.x の新機能です。 これらは、アプリケーションとドライバー、およびドライバーマネージャーのバージョンが2.x である場合にのみ実装されます。したがっ*て、これら*の下位互換性を確保することはできません。|  
-|重複する機能|これらは、ODBC 2.x および ODBC 3.x に存在する機能*です**が、それぞれ*に異なる方法で実装されています。 関数**SQLAllocHandle**と**sqlallocstmt**は一例です。 これらの機能およびその他の重複する機能の旧バージョンとの互換性の問題は、ほとんどの場合、ドライバーマネージャーでのマッピングによって処理されます。|  
-|動作の変更|これらの機能*は、odbc 2.x および odbc* 3.x では異なる方法で処理され*ます。* Datetime **#define**は一例です。 これらの機能は、環境属性の設定に基づいて ODBC 3.x ドライバーによって処理さ*れます。* (詳細については、「[動作の変更](../../../odbc/reference/develop-app/behavioral-changes.md)」を参照してください。)|
+|新機能|これらは、ODBC *3.x*の新機能であり、たとえば、行外のバインディングや記述子などです。 これらは、アプリケーションとドライバー、およびドライバー マネージャーがバージョン*3.x*の場合にのみ実装されるため、下位互換性を持たないようにします。|  
+|重複した機能|これらは ODBC *2.x*と ODBC *3.x*に存在する機能ですが、それぞれに異なる方法で実装されています。 関数**の一****例です。** これらの機能と他の重複した機能の下位互換性の問題は、主にドライバー マネージャーでのマッピングによって処理されます。|  
+|動作の変更|ODBC 2.x および ODBC *3.x*では*3.x*、これらの機能は異なる方法で処理されます。 日時 **#define**は一例です。 これらの機能は、ODBC *3.x*ドライバが、環境属性の設定に基づいて処理します。 (詳細については[、「動作の変更](../../../odbc/reference/develop-app/behavioral-changes.md)」を参照してください)。|
