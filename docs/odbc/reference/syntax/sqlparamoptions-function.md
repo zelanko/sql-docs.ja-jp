@@ -1,5 +1,5 @@
 ---
-title: SQLParamOptions 関数 |Microsoft Docs
+title: SQLパラメータオプション機能 |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 07/18/2019
 ms.prod: sql
@@ -18,27 +18,27 @@ f1_keywords:
 helpviewer_keywords:
 - SQLParamOptions function [ODBC]
 ms.assetid: ee08e987-0243-4060-ab21-64da11fe444f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3ebcd3da4f5e7d57bbc8883ebf7409ff5ea106f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 209cfe6444918a40f5199af1f1a839050a3a6a57
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68343530"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306913"
 ---
 # <a name="sqlparamoptions-function"></a>SQLParamOptions 関数
-**互換性**  
- 導入されたバージョン: ODBC 1.0 標準準拠: 非推奨  
+**適合 性**  
+ バージョン導入: ODBC 1.0 標準準拠: 非推奨  
   
  **まとめ**  
- Odbc 2.0 関数の**Sqlparamoptions**が odbc 3 で置き換えられました。*x*は[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)を呼び出します。  
+ ODBC 2.0 関数**SQLParamOptions は**、ODBC 3 で置き換えられました。*x*を呼び出して[、その後の](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)呼び出しを実行します。  
   
 > [!NOTE]  
->  ドライバーマネージャーが ODBC 2 の場合にこの関数をマップする方法の詳細については、「」を参照してください。*x*アプリケーションは ODBC 3 を使用して動作しています。*x*ドライバー、「付録 G: 旧バージョンとの互換性のためのドライバーガイドライン」の「[非推奨の関数のマッピング](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)」を参照してください。  
+>  ドライバー マネージャーは、ODBC 2 のときにこの関数をマップする方法の詳細について。*x*アプリケーションは ODBC 3 で動作しています。*x*ドライバーについては、「付録 G: 下位互換性のためのドライバーのガイドライン」の[「非推奨関数のマッピング](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)」を参照してください。  
   
 ## <a name="remarks"></a>解説  
- アプリケーションが64ビットのオペレーティングシステムで実行される場合は、「 [ODBC 64 ビット情報](../../../odbc/reference/odbc-64-bit-information.md)」を参照してください。  
+ アプリケーションが 64 ビット オペレーティング システムで実行される場合は[、「ODBC 64](../../../odbc/reference/odbc-64-bit-information.md)ビット情報」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)   

@@ -1,5 +1,5 @@
 ---
-title: Standard ゲートウェイ |Microsoft Docs
+title: スタンダードゲートウェイ |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - standard gateways [ODBC]
 - gateways [ODBC]
 ms.assetid: b8341492-2141-4bab-80bd-f2752223079e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8120f3cda584240b0b58ed5d6758621b18fe44d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 67551845c0dd8c6a28c0c4bc1c50f54ee8232df1
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68070477"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81280075"
 ---
 # <a name="standard-gateway"></a>標準のゲートウェイ
-*ゲートウェイ*とは、ある DBMS を別の DBMS のように表示するソフトウェアのことです。 つまり、ゲートウェイは、単一の DBMS のプログラミングインターフェイス、SQL 文法、データストリームプロトコルを受け入れ、それを非表示の DBMS のプログラミングインターフェイス、SQL 文法、データストリームプロトコルに変換します。 たとえば、Microsoft® SQL Server™を使用するように作成されたアプリケーションは、マイクロ Decisionware DB2 ゲートウェイを介して DB2 データにアクセスすることもできます。この製品を使うと、DB2 は SQL Server のようになります。 ゲートウェイを使用する場合は、ターゲットデータベースごとに異なるゲートウェイを作成する必要があります。  
+*ゲートウェイ*とは、ある DBMS が別の DBMS のように見えるソフトウェアです。 つまり、ゲートウェイは、単一の DBMS のプログラミング インターフェイス、SQL 文法、およびデータ ストリーム プロトコルを受け入れ、それをプログラミング インターフェイス、SQL 文法、および非表示の DBMS のデータ ストリーム プロトコルに変換します。 たとえば、Microsoft® SQL Server を使用するように記述されたアプリケーションは™マイクロディシジョンウェア DB2 ゲートウェイを介して DB2 データにアクセスすることもできます。この製品は、DB2 が SQL Server のように見えるようにします。 ゲートウェイを使用する場合は、ターゲットデータベースごとに異なるゲートウェイを作成する必要があります。  
   
- ゲートウェイは、Dbms 間のアーキテクチャの違いによって制限されますが、標準化に適しています。 ただし、すべての dbms が、1つの DBMS のプログラミングインターフェイス、SQL 文法、データストリームプロトコルで標準化されている場合は、DBMS を標準として選択する必要がありますか。 確かに、商用の DBMS ベンダーは、競合他社の製品に対して標準化に同意することはありません。 また、標準的なプログラミングインターフェイス、SQL 文法、データストリームプロトコルが開発されている場合、ゲートウェイは必要ありません。
+ ゲートウェイは、DBMS 間のアーキテクチャの違いによって制限されますが、標準化の候補として適しています。 ただし、すべての DBMS が単一の DBMS のプログラミング インターフェイス、SQL 文法、およびデータ ストリーム プロトコルを標準化する場合、DBMS を標準として選択する必要がありますか。 確かに、商用 DBMS ベンダーは、競合他社の製品を標準化することに同意する可能性は低い。 また、標準のプログラミングインターフェイス、SQL文法、データストリームプロトコルが開発されている場合、ゲートウェイは必要ありません。

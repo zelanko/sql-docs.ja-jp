@@ -1,5 +1,5 @@
 ---
-title: Microsoft Excel のデータ型 |Microsoft Docs
+title: Excel データ型 |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,37 +15,37 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], Excel driver
 - Excel driver [ODBC], data types
 ms.assetid: 7b44c8e5-0bc3-4912-8a5d-56f4d5562fe6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5a8385c8efb1ab7dcee651e5acb52062292a0bcc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8574985e10e5aaa3ae5431af7ee1245643e20b60
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68045017"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81283772"
 ---
 # <a name="microsoft-excel-data-types"></a>Microsoft Excel のデータ型
-次の表は、Microsoft Excel ドライバーのデータ型を ODBC SQL データ型にマップする方法を示しています。 Microsoft Excel ドライバーは、列のデータに基づいて、これらのデータ型を Microsoft Excel テーブルの列に割り当てます。  
+次の表は、Excel ドライバーのデータ型が ODBC SQL データ型にマップされる方法を示しています。 Microsoft Excel ドライバーは、列のデータに基づいて、Microsoft Excel テーブルの列にこれらのデータ型を割り当てます。  
   
-|Microsoft Excel のデータ型|ODBC データ型|  
+|Excel データ型|ODBC データ型|  
 |-------------------------------|--------------------|  
-|Currency|SQL_NUMERIC|  
+|通貨|SQL_NUMERIC|  
 |DATETIME|SQL_TIMESTAMP|  
-|LUN|SQL_BIT|  
+|論理|SQL_BIT|  
 |NUMBER|SQL_DOUBLE|  
-|TEXT|SQL_VARCHAR|  
+|[TEXT]|SQL_VARCHAR|  
   
 > [!NOTE]  
->  **SQLGetTypeInfo**は、ODBC SQL データ型を返します。 *Odbc プログラマーズリファレンス*の付録 D のすべての変換は、このトピックで前述した odbc SQL データ型に対してサポートされています。  
+>  ODBC SQL データ**型を**返します。 *ODBC プログラマ リファレンス*の付録 D のすべての変換は、このトピックで前述した ODBC SQL データ型でサポートされています。  
   
- 次の表は、Microsoft Excel のデータ型に関する制限を示しています。  
+ 次の表は、Excel のデータ型に関する制限を示しています。  
   
-|データ型|[説明]|  
+|データ型|説明|  
 |---------------|-----------------|  
-|暗号化データ|Microsoft Excel ドライバーは暗号化されたデータを読み取ることができません。|  
-|エラー文字列|Microsoft Excel driver は、Microsoft Excel のエラー値 (#N/A!、#VALUE!、#REF!、#DIV/0!、#NUM!、#NAME?、および #NULL!) の文字列を返すことができませんが、代わりに NULL が返されます。|  
-|LUN|論理列の値は、0または1として SQL_C_CHAR バッファーに返されます。|  
-|NUMBER|整数型の列が作成された場合、整数データ型に対して大きすぎる数値を入力できます。また、整数以外の値を含むデータを挿入することもできます。その結果、列が SQL_DOUBLE に変換される可能性があります。|  
-|TEXT|列の行に複数の Microsoft Excel データ型が含まれている場合は、ODBC Microsoft Excel driver によって SQL_VARCHAR データ型が列に割り当てられます。 この例外が発生するのは、1つの列に datetime データ型 (DATE、TIME、および DATETIME) が2つまたは3つ含まれている場合、ODBC Microsoft Excel ドライバーによって列に SQL_TIMESTAMP データ型が割り当てられます。<br /><br /> 長さが0または指定されていないテキスト列を作成すると、実際には255バイトの列が返されます。<br /><br /> 文字列リテラルには、任意の ANSI 文字 (1-255 10 進数) を含めることができます。 2つの連続する単一引用符 (") を使用して、1つの単一引用符 (') を表します。<br /><br /> SQL_VARCHAR 以外のデータ型の列に NULL を挿入すると、列のデータ型が SQL_VARCHAR に変更されます。|  
+|暗号化データ|Excel ドライバは暗号化されたデータを読み取ることができません。|  
+|エラー文字列|Microsoft Excel ドライバは、Microsoft Excel のエラー値 (#N/A!、#VALUE!、#REF!、#DIV/0!、#NUM!、#NAME!、#NULL!|  
+|論理|LOGICAL 列の値は、0 または 1 として SQL_C_CHAR バッファーに戻されます。|  
+|NUMBER|整数列を作成すると、整数データ型に対して大きすぎる数値を入力したり、整数以外の値を含むデータを挿入したり、列をSQL_DOUBLEに変換することができます。|  
+|[TEXT]|列の行に複数の Excel データ型が含まれている場合、ODBC Excel ドライバは列にSQL_VARCHARデータ型を割り当てます。 ただし、列に日付/時刻データ型 (DATE、TIME、および DATETIME) が 2 つまたは 3 つしか含まれなかった場合、ODBC Excel ドライバは、SQL_TIMESTAMPデータ型を列に割り当てます。<br /><br /> ゼロまたは未指定の長さの TEXT 列を作成すると、実際には 255 バイトの列が戻されます。<br /><br /> 文字ストリング・リテラルには、任意の ANSI 文字 (1 から 255 桁) を入れることができます。 単一引用符 (') を 1 つ表すには、2 つの連続した単一引用符 (") を使用します。<br /><br /> SQL_VARCHAR以外のデータ型を持つ列に NULL を挿入すると、列のデータ型がSQL_VARCHARに変更されます。|  
   
- データ型に関する制限事項の詳細については、 [「データ型の制限](../../odbc/microsoft/data-type-limitations.md)」を参照してください。
+ データ型に関するその他の制限については、「[データ型の制限](../../odbc/microsoft/data-type-limitations.md)」を参照してください。

@@ -1,5 +1,5 @@
 ---
-title: ODBC 3.x アプリケーションの作成 |Microsoft Docs
+title: ODBC 3.x アプリケーションの作成 |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,71 +16,71 @@ helpviewer_keywords:
 - upgrading applications [ODBC], about upgrading
 - backward compatibility [ODBC], upgrading applications
 ms.assetid: 19c54fc5-9dd6-49b6-8c9f-a38961b40a65
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9939d11e3a779cc25d7faeb4950783353947f140
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3ba48d76babcaa5fcc49a541088f7c4cc349b569
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68081454"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81288990"
 ---
 # <a name="writing-odbc-3x-applications"></a>ODBC 3.x アプリケーションの作成
-*Odbc 2.x アプリケーションを*odbc 3.x にアップグレードする場合は *、odbc* *2.x と 2.x*の両方*のドライバーで*動作するように記述する必要があります。 ODBC *3. x*機能を最大限に活用するには、アプリケーションに条件付きコードを組み込む必要があります。  
+ODBC *2.x*アプリケーションを ODBC *3.x*にアップグレードする場合は、ODBC *2.x と 3.x*の両方のドライバで動作するように記述する必要があります。 *3.x* アプリケーションには、ODBC *3.x*の機能を最大限に活用する条件付きコードを組み込む必要があります。  
   
- SQL_ATTR_ODBC_VERSION 環境属性を SQL_OV_ODBC2 に設定する必要があります。 これにより、「[動作の変更](../../../odbc/reference/develop-app/behavioral-changes.md)」セクションで説明した変更に関して、ドライバーが ODBC 2.x ドライバーのように動作することが保証され*ます。*  
+ SQL_ATTR_ODBC_VERSION環境属性は、SQL_OV_ODBC2に設定する必要があります。 これにより、ドライバーは、「[動作の変更](../../../odbc/reference/develop-app/behavioral-changes.md)」で説明されている変更に対して ODBC *2.x*ドライバのように動作します。  
   
- アプリケーションで、「[新機能](../../../odbc/reference/develop-app/new-features.md)」で説明されている機能のいずれかを使用する場合は、ドライバーが odbc *3.X または odbc 2.x* *ドライバーで*あるかどうかを判断するために、条件付きコードを使用する必要があります。 このアプリケーションでは、 **SQLGetDiagField**と**SQLGetDiagRec**を使用して、これらの条件付きコードフラグメントでエラー処理を行っているときに ODBC 2.x sqlstates を取得*します。* 新しい機能については、次の点を考慮する必要があります。  
+ アプリケーションで[「新機能](../../../odbc/reference/develop-app/new-features.md)」セクションで説明されている機能のいずれかを使用する場合は、ドライバーが ODBC *3.x*または ODBC *2.x*ドライバーであるかどうかを判断するために条件付きコードを使用する必要があります。 アプリケーションは、これらの条件付きコード フラグメントでエラー処理を行っている間に ODBC *3.x* SQLSTATE を取得するのに**は、SQLGetDiagField**と**SQLGetDiagRec**を使用します。 新機能に関する次の点を考慮する必要があります。  
   
--   行セットサイズの動作の変更によって影響を受けるアプリケーションは、配列のサイズが1より大きい場合に**Sqlfetch**を呼び出さないように注意する必要があります。 これらのアプリケーションは、 **SQLExtendedFetch**の呼び出しを**SQLSetStmtAttr**の呼び出しに置き換えて、SQL_ATTR_ARRAY_STATUS_PTR Statement 属性と**sqlfetchscroll**を設定します。これにより、ODBC *3. x*ドライバーと odbc *2.x ドライバーの*両方で動作する共通のコードが使用できるようになります。 **SQLSetStmtAttr** with SQL_ATTR_ROW_ARRAY_SIZE は *、ODBC 2.x*ドライバーの SQL_ROWSET_SIZE と共に**SQLSetStmtAttr**にマップされるため、アプリケーションでは、複数行のフェッチ操作に SQL_ATTR_ROW_ARRAY_SIZE を設定するだけで済みます。  
+-   行セットサイズの動作の変更によって影響を受けるアプリケーションは、配列サイズが 1 より大きい場合に**SQLFetch**を呼び出さないように注意する必要があります。 これらのアプリケーションは、ODBC *3.x*と ODBC *2.x*の両方のドライバーで動作する共通のコードを持つため、SQL_ATTR_ARRAY_STATUS_PTR ステートメント属性を設定する**SQLSetStmtAttr**および**SQLFetchScroll**への呼び出しに**SQLExtendedFetch**呼び出しを置き換える必要があります。 SQL_ATTR_ROW_ARRAY_SIZEを持つ**SQLSetStmtAttr**は ODBC *2.x*ドライバー用のSQL_ROWSET_SIZEを使用して**SQLSetStmtAttr**にマップされるため、アプリケーションは複数行フェッチ操作のSQL_ATTR_ROW_ARRAY_SIZEを設定するだけで済みます。  
   
--   アップグレードされるほとんどのアプリケーションは、SQLSTATE コードの変更によって実際に影響を受けることはありません。 影響を受けるアプリケーションに対しては、機械検索を実行でき*ます。ほとんど*の場合、"SQLSTATE マッピング" セクションのエラー変換テーブルを使用して odbc 2.x のエラーコードを odbc 2.x*のコードに*変換します。 *Odbc 3.X ドライバーマネージャー* *は ODBC 2.x*から odbc *3. x* sqlstates へのマッピングを実行するため、これらのアプリケーションの作成者は odbc *3. x* SQLSTATES をチェックするだけで *、odbc 2.x*を条件付きコードに含める必要がありません。  
+-   アップグレード中のほとんどのアプリケーションは、実際には SQLSTATE コードの変更の影響を受けません。 影響を受けるアプリケーションでは、ほとんどの場合、ODBC *3.x*エラー コードを ODBC *2.x*コードに変換する「SQLSTATE マッピング」セクションのエラー変換テーブルを使用して、機械的な検索を実行し、置換できます。 ODBC *3.x*ドライバー・マネージャーは ODBC *2.x* SQLSTATE から ODBC *3.x* SQLSTATE へのマッピングを実行するため、これらのアプリケーション・ライターは ODBC *3.x* SQLSTATE を検査するだけで、条件コードに ODBC *2.x* SQLSTATE を含める心配はありません。  
   
--   アプリケーションで日付、時刻、およびタイムスタンプデータ型を使用する場合は、アプリケーションがそれ自体を ODBC 2.x アプリケーションとして宣言し、その既存のコードを使用して、エアコンコードを使用することは*できません*。  
+-   アプリケーションが日付、時刻、およびタイムスタンプのデータ型を使用する場合、アプリケーションは、それ自体を ODBC *2.x*アプリケーションとして宣言し、コンディショニング コードを使用する代わりに既存のコードを使用できます。  
   
- アップグレードには、次の手順も含まれる必要があります。  
+ アップグレードには、次の手順も含める必要があります。  
   
--   接続を割り当てる前に**SQLSetEnvAttr**を呼び出して、SQL_ATTR_ODBC_VERSION 環境属性を SQL_OV_ODBC2 に設定します。  
+-   接続を割り当てる前に**SQLSetEnvAttr**を呼び出して、SQL_ATTR_ODBC_VERSION環境属性をSQL_OV_ODBC2に設定します。  
   
--   **Sqlallocenv**、 **sqlallocenv**、または**sqlallocenv**へのすべての呼び出しを、SQL_HANDLE_ENV、SQL_HANDLE_DBC、または SQL_HANDLE_STMT の適切な*Handletype*引数を使用して**SQLAllocHandle**への呼び出しで置き換えます。  
+-   **SQLAllocEnv、SQLAllocConnect、** または**SQLAllocStmt**のすべての呼び出しを、SQL_HANDLE_ENV、SQL_HANDLE_DBC、またはSQL_HANDLE_STMTの適切な*HandleType*引数を持つ**SQLAllocHandle**の呼び出しに置き換えます。 **SQLAllocConnect**  
   
--   **Sqlfreeenv**または**SQLFreeConnect**のすべての呼び出しを、 **sqlfreeenv**の呼び出しと、SQL_HANDLE_DBC または SQL_HANDLE_STMT の適切な*handletype*引数を使用して置き換えます。  
+-   **SQLFreeEnv**または**SQLFreeConnect**のすべての呼び出しを、SQL_HANDLE_DBCまたはSQL_HANDLE_STMTの適切な*HandleType*引数を持つ**SQLFreeHandle**への呼び出しに置き換えます。  
   
--   **SQLSetConnectOption**のすべての呼び出しを**SQLSetConnectAttr**の呼び出しに置き換えます。 値が文字列である属性を設定する場合は、 *Stringlength*引数を適切に設定します。 *属性*引数を SQL_XXXX から SQL_ATTR_XXXX に変更します。  
+-   すべての呼び出しを**SQL セットコネクト****Attr**への呼び出しに置き換えます。 値が文字列である属性を設定する場合は、*引数 StringLength*を適切に設定します。 *属性引数を*SQL_XXXXからSQL_ATTR_XXXXに変更します。  
   
--   **SQLGetConnectOption**のすべての呼び出しを**Sqlgetconnectattr**の呼び出しに置き換えます。 文字列属性またはバイナリ属性を取得する場合は、 *Bufferlength*に適切な値を設定し、 *stringlength*引数を渡します。 *属性*引数を SQL_XXXX から SQL_ATTR_XXXX に変更します。  
+-   すべての呼び出しを**SQLGetConnectAttr**への呼び出しに置き換えます。 **SQLGetConnectOption** 文字列またはバイナリ属性を取得する場合は *、BufferLength*を適切な値に設定し *、StringLength*引数を渡します。 *属性引数を*SQL_XXXXからSQL_ATTR_XXXXに変更します。  
   
--   **SQLSetStmtOption**のすべての呼び出しを**SQLSetStmtAttr**の呼び出しに置き換えます。 値が文字列である属性を設定する場合は、 *Stringlength*引数を適切に設定します。 *属性*引数を SQL_XXXX から SQL_ATTR_XXXX に変更します。  
+-   すべての呼び出しを **、SQLSetStmtAttr**への呼び出しに置き換えます。 **SQLSetStmtOption** 値が文字列である属性を設定する場合は、*引数 StringLength*を適切に設定します。 *属性引数を*SQL_XXXXからSQL_ATTR_XXXXに変更します。  
   
--   **SQLGetStmtOption**のすべての呼び出しを**SQLGetStmtAttr**の呼び出しに置き換えます。 文字列属性またはバイナリ属性を取得する場合は、 *Bufferlength*に適切な値を設定し、 *stringlength*引数を渡します。 *属性*引数を SQL_XXXX から SQL_ATTR_XXXX に変更します。  
+-   すべての呼び出しを **、SQLGetStmtAttr**への呼び出しに置き換えます。 **SQLGetStmtOption** 文字列またはバイナリ属性を取得する場合は *、BufferLength*を適切な値に設定し *、StringLength*引数を渡します。 *属性引数を*SQL_XXXXからSQL_ATTR_XXXXに変更します。  
   
--   **Sqltransact**のすべての呼び出しを**SQLEndTran**への呼び出しに置き換えます。 **Sqltransact**呼び出し内の右端の有効なハンドルが環境ハンドルの場合は、適切な*ハンドル*引数を使用して、SQL_HANDLE_ENV の*handletype*引数を**SQLEndTran**呼び出しで使用する必要があります。 **Sqltransact**呼び出し内の右端の有効なハンドルが接続ハンドルの場合は、適切な*ハンドル*引数を使用して、SQL_HANDLE_DBC の*handletype*引数を**SQLEndTran**呼び出しで使用する必要があります。  
+-   **SQLTransact**のすべての呼び出しを**SQLEndTran**への呼び出しに置き換えます。 **SQLTransact**呼び出しの右端の有効なハンドルが環境ハンドルである場合は、SQL_HANDLE_ENVの*HandleType*引数を適切な*Handle*引数を指定して**SQLEndTran**呼び出しで使用する必要があります。 **SQLTransact**呼び出しの中で最も右側の有効なハンドルが接続ハンドルである場合は、SQL_HANDLE_DBCの*HandleType*引数を**SQLEndTran**呼び出しで使用し、適切な*Handle*引数を指定します。  
   
--   **Sqlcolattributes**のすべての呼び出しを**sqlcolattributes**の呼び出しに置き換えます。 *FieldIdentifier*引数が SQL_COLUMN_PRECISION、SQL_COLUMN_SCALE、または SQL_COLUMN_LENGTH のいずれかである場合は、関数の名前以外を変更しないでください。 それ以外の場合は、 *FieldIdentifier*を SQL_COLUMN_XXXX から SQL_DESC_XXXX に変更します。 場合*FieldIdentifier*が SQL_DESC_CONCISE_TYPE、データ型が datetime データ型の場合は、対応する ODBC *3. x*データ型に変更します。  
+-   **SQLCol 属性**のすべての呼び出しを**SQLCol 属性**の呼び出しに置き換えます。 *引数*がSQL_COLUMN_PRECISION、SQL_COLUMN_SCALE、またはSQL_COLUMN_LENGTHの場合は、関数の名前以外は変更しないでください。 指定されていない場合は、[*フィールド識別子] を*SQL_COLUMN_XXXX から SQL_DESC_XXXX に変更します。 *FieldIdentifier*がSQL_DESC_CONCISE_TYPE、データ型が日付時刻データ型の場合は、対応する ODBC *3.x*データ型に変更します。  
   
--   ブロックカーソル、スクロール可能なカーソル、またはその両方を使用する場合、アプリケーションは次のことを行います。  
+-   ブロック・カーソル、スクロール可能カーソル、またはその両方を使用する場合、アプリケーションは以下を実行します。  
   
-    -   **SQLSetStmtAttr**を使用して、行セットのサイズ、カーソルの種類、およびカーソルの同時実行を設定します。  
+    -   行セットのサイズ、カーソルの種類、およびカーソルの同時実行を**SQLSetStmtAttr**を使用して設定します。  
   
-    -   **SQLSetStmtAttr**を呼び出して、ステータスレコードの配列を指すように SQL_ATTR_ROW_STATUS_PTR を設定します。  
+    -   ステータス レコードの配列を指すSQL_ATTR_ROW_STATUS_PTR設定するために **、SQLSetStmtAttr**を呼び出します。  
   
-    -   **SQLSetStmtAttr**を呼び出して、SQLINTEGER を指すように SQL_ATTR_ROWS_FETCHED_PTR を設定します。  
+    -   SQL_ATTR_ROWS_FETCHED_PTRを SQLINTEGER を指す設定を行うために **、SQLSetStmtAttr**を呼び出します。  
   
-    -   必要なバインドを実行し、SQL ステートメントを実行します。  
+    -   必要なバインディングを実行し、SQL ステートメントを実行します。  
   
-    -   ループ内で**Sqlfetchscroll**を呼び出して、行をフェッチし、結果セット内を移動します。  
+    -   ループ内で**SQLFetchScroll**を呼び出して、行をフェッチし、結果セット内を移動します。  
   
-    -   ブックマークによってフェッチする場合、アプリケーションは**SQLSetStmtAttr**を呼び出して、フェッチする行のブックマークを格納する変数に SQL_ATTR_FETCH_BOOKMARK_PTR を設定し、SQL_FETCH_BOOKMARK の*fetchorientation*引数を使用して**sqlfetchscroll**を呼び出します。  
+    -   ブックマークでフェッチする場合、アプリケーションは**SQLSetStmtAttr**を呼び出して、SQL_ATTR_FETCH_BOOKMARK_PTRをフェッチする行のブックマークを含む変数に設定し、SQL_FETCH_BOOKMARKの FetchOrientation 引数を指定して**SQLFetchScroll** *を*呼び出します。  
   
--   パラメーターの配列を使用する場合、アプリケーションは次のことを行います。  
+-   パラメーターの配列を使用する場合、アプリケーションは次の処理を行います。  
   
-    -   **SQLSetStmtAttr**を呼び出して、パラメーター配列のサイズに SQL_ATTR_PARAMSET_SIZE 属性を設定します。  
+    -   SQL_ATTR_PARAMSET_SIZE属性をパラメーター配列のサイズに設定するために **、SQLSetStmtAttr**を呼び出します。  
   
-    -   **SQLSetStmtAttr**を呼び出して、内部 udword 変数を指すように SQL_ATTR_ROWS_PROCESSED_PTR を設定します。  
+    -   内部 UDWORD 変数を指すSQL_ATTR_ROWS_PROCESSED_PTR設定するために**SQLSetStmtAttr**を呼び出します。  
   
-    -   必要に応じて、準備、バインド、および実行の各操作を実行します。  
+    -   必要に応じて、準備、バインド、および実行の操作を実行します。  
   
-    -   何らかの理由 (SQL_NEED_DATA など) で実行が停止した場合、SQL_ATTR_ROWS_PROCESSED_PTR が指す位置を調べることによって、パラメーターの "現在の" 行を見つけることができます。  
+    -   何らかの理由で実行が停止した場合 (SQL_NEED_DATAなど)、SQL_ATTR_ROWS_PROCESSED_PTRが指す場所を調べることによって、パラメータの 「現在の」行を見つけることができます。  
   
  このセクションでは、次のトピックを扱います。  
   

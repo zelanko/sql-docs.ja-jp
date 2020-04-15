@@ -1,5 +1,5 @@
 ---
-title: OLE DB テーブル値パラメーターの型 (プロパティ)
+title: OLE DB テーブル値パラメーター型 (プロパティ)
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -10,27 +10,27 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (OLE DB), API support (properties)
 ms.assetid: b9c4e6ed-fe4f-4ef8-9bc8-784d80d44039
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7fbb516647b76a720adfd855af3f6205d3814e0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2f289da99108bb51c90f9f15bbe8d39a20a6be78
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75242769"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81283218"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>OLE DB テーブル値パラメーターの型のサポート (プロパティ)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   このトピックでは、テーブル値パラメーターの行セット オブジェクトに関連付けられている OLE DB プロパティおよびプロパティ セットについて説明します。  
   
-## <a name="properties"></a>Properties  
- 次に、テーブル値パラメーターの行セット オブジェクトの IRowsetInfo::GetProperties メソッドを使用して公開されるプロパティの一覧を示します。 テーブル値パラメーターの行セット プロパティはすべて読み取り専用であることに注意してください。 したがって、IOpenRowset:: OpenRowset または ITableDefinitionWithConstraints:: CreateTableWithConstraints メソッドを使用してプロパティを既定値以外の値に設定しようとすると、エラーが発生し、オブジェクトは作成されません。  
+## <a name="properties"></a>プロパティ  
+ 次に、テーブル値パラメーターの行セット オブジェクトの IRowsetInfo::GetProperties メソッドを使用して公開されるプロパティの一覧を示します。 テーブル値パラメーターの行セット プロパティはすべて読み取り専用であることに注意してください。 したがって、IOpenRowset::OpenRowset メソッドまたは ITableDefinitionWithConstraints::CreateTableWithConstraints メソッドを使用してプロパティを既定値以外の値に設定しようとすると、エラーが発生し、オブジェクトは作成されません。  
   
  テーブル値パラメーターの行セット オブジェクトで実装されていないプロパティは、次の一覧には含まれていません。 すべてのプロパティの一覧は、Windows Data Access Components の OLE DB に関するドキュメントを参照してください。  
   
-|プロパティ ID|Value|  
+|プロパティ ID|[値]|  
 |-----------------|-----------|  
 |DBPROP_ABORTPRESERVE|VARIANT_TRUE|  
 |DBPROP_ACCESSORDER|DBPROPVAL_AO_RANDOM|  
@@ -78,7 +78,7 @@ ms.locfileid: "75242769"
  次のプロパティ セットでは、テーブル値パラメーターがサポートされます。  
   
 ### <a name="dbpropset_sqlservercolumn"></a>DBPROPSET_SQLSERVERCOLUMN  
- このプロパティは、必要に応じて、DBCOLUMNDESC 構造体を使用して各列に対して ITableDefinitionWithConstraints:: CreateTableWithConstraints を使用することによって、コンシューマーがテーブル値パラメーターの行セットオブジェクトを作成するプロセスで使用されます。  
+ このプロパティは、テーブル値パラメーターの行セット オブジェクトを作成するプロセスでコンシューマーによって使用されます。このプロセスでは、必要に応じて、DBCOLUMNDESC 構造体から各列の ITableDefinitionWithConstraints::CreateTableWithConstraints を使用します。  
   
 |プロパティ ID|プロパティ値|  
 |-----------------|--------------------|  
@@ -86,7 +86,7 @@ ms.locfileid: "75242769"
 |||
 
 ### <a name="dbpropset_sqlserverparameter"></a>DBPROPSET_SQLSERVERPARAMETER  
- これらのプロパティはコンシューマーによって読み取られますが、ISSCommandWithParameters:: GetParameterProperties の呼び出しでテーブル値パラメーターの型情報を検出し、コンシューマーによって設定され、テーブル値パラメーターに関する特定のプロパティを設定します。ISSCommandWithParameters:: SetParameterProperties を使用します。  
+ これらのプロパティは、ISSCommandWithParameters::GetParameterProperties の呼び出しでテーブル値パラメーターの型情報の検出中にコンシューマーによって読み取られ、ISSCommandWithParameters::SetParameterProperties を使用してテーブル値パラメーターに関する特定のプロパティの設定中にコンシューマーによって設定されます。  
   
  次の表に、これらのプロパティの詳細を示します。  
   
@@ -95,12 +95,12 @@ ms.locfileid: "75242769"
 |SSPROP_PARAM_TYPE_TYPENAME|R/W: 読み取り/書き込み<br /><br /> 既定値 : VT_EMPTY<br /><br /> 型 : VT_BSTR<br /><br /> 説明 : コンシューマーは、このプロパティを使用して、テーブル値パラメーターの型名を取得または設定します。<br /><br /> このプロパティは、CLR ユーザー定義型と共に使用することもできます。<br /><br /> このプロパティは、テーブル値パラメーターのテーブルの型名を指定するように、必要に応じて指定できます (ODBC の呼び出し構文のコマンドの場合)。 このプロパティは、パラメーター化されたアドホック SQL クエリに必要です。|  
 |SSPROP_PARAM_TYPE_SCHEMANAME|R/W: 読み取り/書き込み<br /><br /> 既定値 : VT_EMPTY<br /><br /> 型 : VT_BSTR<br /><br /> 説明 : コンシューマーは、このプロパティを使用して、テーブル値パラメーターの型のスキーマ名を取得または設定します。<br /><br /> このプロパティは、CLR ユーザー定義型と共に使用することもできます。|  
 |SSPROP_PARAM_TYPE_CATALOGNAME|R/W: 読み取り専用<br /><br /> 既定値 : VT_EMPTY<br /><br /> 型 : VT_BSTR<br /><br /> 説明 : コンシューマーは、このプロパティを使用して、テーブル値パラメーターの型のカタログ名を取得します。<br /><br /> このプロパティは、CLR ユーザー定義型と共に使用することもできます。 このプロパティを設定するとエラーになります。ユーザー定義テーブル型は、それを使用するテーブル値パラメーターと同じデータベースに内にある必要があります。|  
-|SSPROP_PARAM_TABLE_DEFAULT_COLUMNS|R/W: 読み取り/書き込み<br /><br /> 既定値 : VT_EMPTY<br /><br /> 種類: VT_UI2 &#124; VT_ARRAY<br /><br /> 説明 : コンシューマーは、このプロパティを使用して、既定値として扱う、行セット内の列セットを指定します。 これらの列の値は送信されません。 プロバイダーは、コンシューマーの行セット オブジェクトからデータをフェッチしている間、このような列のバインドを必要としません。<br /><br /> 配列の各要素は、行セット オブジェクト内の列の序数である必要があります。 序数が無効な場合、コマンドの実行時にエラーが発生します。|  
-|SSPROP_PARAM_TABLE_COLUMN_ORDER|R/W: 読み取り/書き込み<br /><br /> 既定値 : VT_EMPTY<br /><br /> 種類: VT_UI2 &#124; VT_ARRAY<br /><br /> 説明 : このプロパティは、列データの並べ替え順を示すヒントをサーバーに提供するためにコンシューマーによって使用されます。 プロバイダーでは検証は行われず、提供された仕様にコンシューマーが準拠していることが想定されます。 サーバーでは、このプロパティを使用して最適化を実行します。<br /><br /> 各列の列順序情報は、配列内の要素のペアで表されます。 ペアの最初の要素は列数で、 ペアの 2 番目の要素は、昇順の場合は 1、降順の場合は 2 になります。|  
+|SSPROP_PARAM_TABLE_DEFAULT_COLUMNS|R/W: 読み取り/書き込み<br /><br /> 既定値 : VT_EMPTY<br /><br /> タイプ: VT_UI2&#124;VT_ARRAY<br /><br /> 説明 : コンシューマーは、このプロパティを使用して、既定値として扱う、行セット内の列セットを指定します。 これらの列の値は送信されません。 プロバイダーは、コンシューマーの行セット オブジェクトからデータをフェッチしている間、このような列のバインドを必要としません。<br /><br /> 配列の各要素は、行セット オブジェクト内の列の序数である必要があります。 序数が無効な場合、コマンドの実行時にエラーが発生します。|  
+|SSPROP_PARAM_TABLE_COLUMN_ORDER|R/W: 読み取り/書き込み<br /><br /> 既定値 : VT_EMPTY<br /><br /> タイプ: VT_UI2&#124;VT_ARRAY<br /><br /> 説明 : このプロパティは、列データの並べ替え順を示すヒントをサーバーに提供するためにコンシューマーによって使用されます。 プロバイダーでは検証は行われず、提供された仕様にコンシューマーが準拠していることが想定されます。 サーバーでは、このプロパティを使用して最適化を実行します。<br /><br /> 各列の列順序情報は、配列内の要素のペアで表されます。 ペアの最初の要素は列数で、 ペアの 2 番目の要素は、昇順の場合は 1、降順の場合は 2 になります。|  
 |||
 
 ## <a name="see-also"></a>参照  
- [OLE DB テーブル値パラメーターの型のサポート](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   
+ [OLE DB テーブル値パラメーター型のサポート](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   
  [テーブル値パラメーターの使用 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

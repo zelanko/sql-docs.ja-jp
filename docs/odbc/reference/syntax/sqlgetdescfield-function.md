@@ -1,5 +1,5 @@
 ---
-title: SQLGetDescField 関数 |Microsoft Docs
+title: 関数 |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,21 +17,21 @@ f1_keywords:
 helpviewer_keywords:
 - SQLGetDescField function [ODBC]
 ms.assetid: f09ff660-1e4a-4370-be85-90d4da0487d3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cdf2990056c297d217248543812e347b61d3486d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 89972d7f36b436868cc8e243b03827f095b90492
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68103809"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81285477"
 ---
 # <a name="sqlgetdescfield-function"></a>SQLGetDescField 関数
-**互換性**  
- 導入されたバージョン: ODBC 3.0 標準準拠: ISO 92  
+**適合 性**  
+ バージョン導入: ODBC 3.0 規格準拠: ISO 92  
   
  **まとめ**  
- **SQLGetDescField**は、記述子レコードの1つのフィールドの現在の設定または値を返します。  
+ **記述子**レコードの単一フィールドの現在の設定値または値を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,83 +47,83 @@ SQLRETURN SQLGetDescField(
 ```  
   
 ## <a name="arguments"></a>引数  
- *記述子ハンドル*  
- 代入記述子ハンドル。  
+ *DescriptorHandle*  
+ [入力]記述子ハンドル。  
   
  *RecNumber*  
- 代入アプリケーションが情報をシークする記述子レコードを示します。 記述子レコードは0から番号が付けられ、レコード番号0はブックマークレコードになります。 *FieldIdentifier*引数がヘッダーフィールドを示す場合、 *recnumber*は無視されます。 *Recnumber*が SQL_DESC_COUNT 以下で、行に列またはパラメーターのデータが含まれていない場合、 **SQLGetDescField**を呼び出すと、フィールドの既定値が返されます。 (詳細については、 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)の「記述子フィールドの初期化」を参照してください)。  
+ [入力]アプリケーションが情報を探す記述子レコードを示します。 記述子レコードには 0 から番号が付けられ、レコード番号 0 はブックマーク・レコードになります。 *引数が*ヘッダー フィールドを示す場合 *、RecNumber*は無視されます。 *RecNumber*がSQL_DESC_COUNT以下であるが、行に列またはパラメーターのデータが含まれていない場合 **、SQLGetDescField**の呼び出しはフィールドの既定値を返します。 (詳細については[、SQLSetDesc フィールド](../../../odbc/reference/syntax/sqlsetdescfield-function.md)の「記述子フィールドの初期化」を参照してください。  
   
  *FieldIdentifier*  
- 代入値が返される記述子のフィールドを示します。 詳細については、 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)の「*FieldIdentifier*引数」セクションを参照してください。  
+ [入力]値を返す記述子のフィールドを示します。 詳細については、 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)の「*フィールド識別子*の引数」を参照してください。  
   
  *ValuePtr*  
- Output記述子情報を返すバッファーへのポインター。 データ型は、 *FieldIdentifier*の値によって異なります。  
+ [出力]記述子情報を返すバッファーへのポインター。 データ型は *、 FieldIdentifier*の値によって異なります。  
   
- *Valueptr*が整数型の場合、アプリケーションは SQLULEN のバッファーを使用し、この関数を呼び出す前に値を0に初期化する必要があります。一部のドライバーでは、バッファーの下位の32ビットまたは16ビットのみが書き込まれ、上位ビットは変更されないためです。  
+ *ValuePtr*が整数型の場合、一部のドライバーは、バッファーの下位 32 ビットまたは 16 ビットのみを書き込み、高い順序のビットを変更せずに残す場合があるため、アプリケーションは SQLULEN のバッファーを使用し、この関数を呼び出す前に値を 0 に初期化する必要があります。  
   
- *Valueptr*が NULL の場合でも、 *stringlength Ptr*は、 *valueptr*が指すバッファー内で返されるバイトの合計数 (文字データの NULL 終端文字を除く) を返します。  
+ *ValuePtr*が NULL の場合 *、StringLengthPtr*は*ValuePtr*が指すバッファに返されるバイトの総数 (文字データの NULL 終端文字を除く) を返します。  
   
  *BufferLength*  
- 代入*FieldIdentifier*が ODBC で定義されたフィールドであり、 *valueptr*が文字列またはバイナリバッファーを指している場合、この引数\*は*valueptr*の長さである必要があります。 *FieldIdentifier*が ODBC で定義されたフィールド\*であり、 *valueptr*が整数の場合、 *bufferlength*は無視されます。 Valueptr の値が Unicode データ型の場合 ( **SQLGetDescFieldW**を呼び出す場合)、 *bufferlength*引数は偶数である必要があります。 * \**  
+ [入力]*フィールド識別子*が ODBC で定義されたフィールド*で、ValuePtr*が文字列またはバイナリ バッファを指している場合、この引数は\* *ValuePtr*の長さになります。 *フィールド識別子*が ODBC で定義されたフィールド\*で *、ValuePtr*が整数の場合、*バッファー長*は無視されます。 * \*ValuePtr*の値が Unicode データ型の場合 **(SQLGetDescFieldW**を呼び出すとき)、BufferLength 引数は偶数でなければなりません。 *BufferLength*  
   
- *FieldIdentifier*がドライバーによって定義されたフィールドである場合、アプリケーションは、 *bufferlength*引数を設定することによって、ドライバーマネージャーに対してフィールドの性質を示します。 *Bufferlength*には次の値を指定できます。  
+ *FieldIdentifier*がドライバー定義フィールドの場合、アプリケーションは *、BufferLength*引数を設定してドライバー マネージャーにフィールドの性質を示します。 *バッファー長*には、次の値を指定できます。  
   
--   * \*Valueptr*が文字列へのポインターである場合、 *bufferlength*は文字列または SQL_NTS の長さになります。  
+-   * \*ValuePtr*が文字列へのポインタである場合 *、BufferLength*は文字列またはSQL_NTSの長さです。  
   
--   * \*Valueptr*がバイナリバッファーへのポインターである場合、アプリケーションは、SQL_LEN_BINARY_ATTR (*長さ*) マクロの結果を*bufferlength*に配置します。 これにより、 *Bufferlength*に負の値が挿入されます。  
+-   * \*ValuePtr*がバイナリ バッファへのポインタである場合、アプリケーションは*bufferLength*に SQL_LEN_BINARY_ATTR(*長さ*) マクロの結果を格納します。 この場合は、負の値を*BufferLength*に配置します。  
   
--   * \*Valueptr*が文字列またはバイナリ文字列以外の値へのポインターである場合、 *bufferlength*には SQL_IS_POINTER 値を指定する必要があります。  
+-   * \*ValuePtr*が文字列またはバイナリ文字列以外の値へのポインターである場合 *、BufferLength*には値がSQL_IS_POINTER。  
   
--   * \*Valueptr*に固定長データ型が含まれている場合、 *bufferlength*は、必要に応じて SQL_IS_INTEGER、SQL_IS_UINTEGER、SQL_IS_SMALLINT、SQL_IS_USMALLINT のいずれかになります。  
+-   * \*ValuePtr*に固定長データ型が含まれている場合 *、BufferLength*は、必要に応じて、SQL_IS_INTEGER、SQL_IS_UINTEGER、SQL_IS_SMALLINT、またはSQL_IS_USMALLINTのいずれかになります。  
   
- *Stringlength Ptr*  
- Output**Valueptr*で返すことができるバイト数の合計 (null 終端文字に必要なバイト数を除く) を返すバッファーへのポインター。  
+ *文字列を長くします。*  
+ [出力]**ValuePtr*で返されるバイトの総数 (NULL 終了文字に必要なバイト数を除く) を返すバッファーへのポインター。  
   
 ## <a name="returns"></a>戻り値  
- SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、SQL_NO_DATA、または SQL_INVALID_HANDLE。  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、SQL_NO_DATA、またはSQL_INVALID_HANDLE。  
   
- *Recnumber*が現在の記述子レコードの数より大きい場合、SQL_NO_DATA が返されます。  
+ *RecNumber*が現在の記述子レコード数より大きい場合は、SQL_NO_DATAが返されます。  
   
- SQL_NO_DATA が返されるのは、*記述子ハンドル*が IRD ハンドルで、ステートメントが prepared または実行状態であるが、開いているカーソルが関連付けられていない場合です。  
+ *SQL_NO_DATAは、DescriptorHandle*が IRD ハンドルであり、ステートメントが準備済みまたは実行済みの状態にあるが、それに関連するオープン・カーソルが存在しない場合に戻されます。  
   
 ## <a name="diagnostics"></a>診断  
- **SQLGetDescField**が SQL_ERROR または SQL_SUCCESS_WITH_INFO を返す場合、関連付けられた SQLSTATE 値を取得するには、 *Handletype* SQL_HANDLE_STMT と*StatementHandle*の*ハンドル*を指定して**SQLGetDiagRec**を呼び出します。 次の表に、 **SQLGetDescField**によって一般的に返される SQLSTATE 値と、この関数のコンテキストにおけるそれぞれの説明を示します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
+ **SQLGetDescField**がSQL_ERRORまたはSQL_SUCCESS_WITH_INFOを返すときは、SQL_HANDLE_STMTの*ハンドル型*と*ステートメント ハンドル*ハンドルを指定して**SQLGetDiagRec**を呼び出すことによって、関連付けられた SQLSTATE*値を取得*できます。 次の表は **、SQLGetDescField**によって一般的に返される SQLSTATE 値を示し、この関数のコンテキストで各値を説明しています。「(DM)」という表記は、ドライバ マネージャによって返される SQLSTATEs の説明の前に記述されます。 特に注記がない限り、各 SQLSTATE 値に関連付けられた戻りコードはSQL_ERROR。  
   
-|SQLSTATE|エラー|[説明]|  
+|SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
-|01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
-|01004|文字列データ、右側が切り捨てられました|バッファー \* *valueptr*は、記述子フィールド全体を返すのに十分な大きさではなかったため、フィールドは切り捨てられました。 切り詰められていない記述子フィールドの長さは、**Stringlength ptr*で返されます。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
-|07009|無効な記述子のインデックス|(DM) *Recnumber*引数が0、SQL_ATTR_USE_BOOKMARK statement 属性が SQL_UB_OFF、および*記述子 HANDLE*引数が IRD ハンドルでした。 (このエラーは、記述子がステートメントハンドルに関連付けられている場合にのみ、明示的に割り当てられた記述子に対して返されます)。<br /><br /> *FieldIdentifier*引数がレコードフィールドで、 *recnumber*引数が0で、*記述子ハンドル*引数が IPD ハンドルでした。<br /><br /> *Recnumber*引数が0未満でした。|  
-|08S01|通信リンクの失敗|関数が処理を完了する前に、ドライバーと、ドライバーが接続されていたデータソースとの間の通信リンクが失敗しました。|  
-|HY000|一般的なエラー|特定の SQLSTATE がなく、実装固有の SQLSTATE が定義されていないエラーが発生しました。 Messagetext バッファーの**SQLGetDiagRec**によって返されるエラーメッセージには、エラーとその原因が記述されています。 * \**|  
-|HY001|メモリ割り当てエラー|ドライバーは、関数の実行または完了をサポートするために必要なメモリを割り当てることができませんでした。|  
-|HY007|関連付けられたステートメントは準備されていません|*記述子ハンドル*が IRD として*StatementHandle*に関連付けられましたが、関連付けられているステートメントハンドルは準備されていないか、実行されていません。|  
-|HY010|関数のシーケンスエラー|(DM)*記述子ハンドル*が、この関数が呼び出されたときに非同期的に実行されている関数 (この関数ではない) が呼び出された*StatementHandle*に関連付けられました。<br /><br /> (DM)*記述子ハンドル*は、 **sqlexecute**、 **SQLExecDirect**、 **sqlbulkoperations**、または**SQLSetPos**が呼び出され SQL_NEED_DATA 返された*StatementHandle*に関連付けられました。 この関数は、実行時データのすべてのパラメーターまたは列に対してデータが送信される前に呼び出されました。<br /><br /> (DM) 実行中の非同期関数が、*記述子ハンドル*に関連付けられている接続ハンドルに対して呼び出されました。 この非同期関数は、 **SQLGetDescField**関数が呼び出されたときにまだ実行されていました。|  
-|HY013|メモリ管理エラー|基になるメモリオブジェクトにアクセスできなかったため、関数呼び出しを処理できませんでした。メモリ不足の状態が原因である可能性があります。|  
-|HY021|不整合な記述子情報|SQL_DESC_TYPE フィールドと SQL_DESC_DATETIME_INTERVAL_CODE フィールドは、有効な ODBC SQL 型、有効なドライバー固有の SQL 型 (IPDs の場合)、または有効な ODBC C 型 (APDs または ARDs の場合) を形成しません。|  
-|HY090|文字列またはバッファーの長さが無効です|(DM) * \*valueptr*が文字列であり、 *bufferlength*が0未満でした。|  
-|HY091|無効な記述子フィールド識別子|*FieldIdentifier*は ODBC で定義されたフィールドではなく、実装定義の値ではありませんでした。<br /><br /> *FieldIdentifier*は、*記述子ハンドル*に対して定義されていません。|  
-|HY117|トランザクションの状態が不明なため、接続が中断されました。 切断と読み取り専用の機能のみが許可されます。|(DM) 中断状態の詳細については、「 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)」を参照してください。|  
-|HYT01|接続タイムアウトの期限が切れました|データソースが要求に応答する前に、接続のタイムアウト期間が経過しました。 接続タイムアウト期間は、 **SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT によって設定されます。|  
-|IM001|ドライバーはこの機能をサポートしていません|(DM)*記述子ハンドル*に関連付けられているドライバーでは、関数はサポートされていません。|  
+|01000|一般的な警告|ドライバー固有の情報メッセージ。 (関数はSQL_SUCCESS_WITH_INFOを返します。|  
+|01004|文字列データ(右切り捨て)|バッファー \* *ValuePtr*は記述子フィールド全体を戻すのに十分な大きさではなかったため、フィールドは切り捨てられました。 切り捨てられていない記述子フィールドの長さは、 **StringLengthPtr*に返されます。 (関数はSQL_SUCCESS_WITH_INFOを返します。|  
+|07009|記述子インデックスが無効です|(DM)*引数*が 0 に等しく、SQL_ATTR_USE_BOOKMARKステートメント属性がSQL_UB_OFFされ、*引数 DescriptorHandle*が IRD ハンドルでした。 (このエラーは、記述子がステートメント・ハンドルに関連付けられている場合にのみ、明示的に割り振られる記述子に対して戻されます。<br /><br /> 引数*は*レコード フィールド *、RecNumber*引数は 0、引数*は*IPD ハンドルでした。<br /><br /> *引数が*0 未満でした。|  
+|08S01|通信リンクの障害|ドライバとドライバが接続されているデータ ソースとの間の通信リンクが、関数の処理を完了する前に失敗しました。|  
+|HY000|一般的なエラー|特定の SQLSTATE がなく、実装固有の SQLSTATE が定義されていないエラーが発生しました。 メッセージ テキスト バッファー内の**SQLGetDiagRec**によって返されるエラー メッセージは、エラーとその原因を記述します。 * \**|  
+|HY001|メモリ割り当てエラー|ドライバは、関数の実行または完了をサポートするために必要なメモリを割り当てることができませんでした。|  
+|HY007|関連付けられたステートメントは準備されていません|*記述子ハンドル*は *、IRD*としてステートメント ハンドルに関連付けられており、関連付けられているステートメント ハンドルが準備または実行されていません。|  
+|HY010|関数シーケンス エラー|(DM) *DescriptorHandle*は、非同期に実行される関数 (この関数ではない) が呼び出され、この関数が呼び出されたときにまだ実行されていた*ステートメント ハンドル*に関連付けられていた。<br /><br /> (DM)*記述子ハンドル*は **、SQL 実行、SQLExecDirect、SQLBulkOperations** **SQLBulkOperations**、または**SQLSetPos**が呼び出され、SQL_NEED_DATA返された*ステートメント ハンドル*に関連付けられました。 **SQLExecDirect** この関数は、実行時のすべてのデータ パラメーターまたは列に対してデータが送信される前に呼び出されました。<br /><br /> (DM)*記述子ハンドル*に関連付けられている接続ハンドルに対して非同期に実行する関数が呼び出されました。 この非同期関数は **、SQLGetDescField**関数が呼び出されたときに実行されていました。|  
+|HY013|メモリ管理エラー|メモリ不足の状態が原因で、基になるメモリ オブジェクトにアクセスできなかったため、関数呼び出しを処理できませんでした。|  
+|HY021|記述子情報の不一致|SQL_DESC_TYPEフィールドとSQL_DESC_DATETIME_INTERVAL_CODEフィールドは、有効な ODBC SQL タイプ、有効なドライバ固有の SQL タイプ (IPD の場合)、または有効な ODBC C タイプ (APK または ARD の場合) を形成しません。|  
+|HY090|無効な文字列またはバッファ長|(DM) * \*ValuePtr*は文字列であり、*バッファ長*は 0 未満でした。|  
+|HY091|記述子フィールド ID が無効です|*フィールド識別子*は ODBC で定義されたフィールドではなく、実装で定義された値ではありませんでした。<br /><br /> *フィールド識別子*は*記述子ハンドル*に対して定義されていませんでした。|  
+|HY117|不明なトランザクション状態のため、接続が中断されました。 切断と読み取り専用の機能のみが許可されます。|(DM) 中断状態の詳細については[、SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。|  
+|ヒュットー1|接続のタイムアウトが期限切れになりました|データ ソースが要求に応答する前に、接続タイムアウト期間が切れました。 接続タイムアウト期間は **、SQL_ATTR_CONNECTION_TIMEOUT SQLSetConnectAttr**を使用して設定されます。|  
+|IM001|ドライバはこの機能をサポートしていません|(DM)*記述子ハンドル*に関連付けられているドライバーは、関数をサポートしていません。|  
   
 ## <a name="comments"></a>説明  
- アプリケーションは、 **SQLGetDescField**を呼び出して、記述子レコードの1つのフィールドの値を返すことができます。 **SQLGetDescField**を呼び出すと、ヘッダーフィールド、レコードフィールド、ブックマークフィールドなど、任意の記述子の種類の任意のフィールドの設定を返すことができます。 アプリケーションでは、 **SQLGetDescField**を繰り返し呼び出すことによって、同じまたは別の記述子内の複数のフィールドの設定を任意の順序で取得できます。 **SQLGetDescField**を呼び出して、ドライバー定義の記述子フィールドを返すこともできます。  
+ アプリケーションは、記述子レコードの単一フィールドの値を返すために**SQLGetDescField**を呼び出すことができます。 **SQLGetDescField**の呼び出しは、ヘッダー フィールド、レコード フィールド、およびブックマーク フィールドを含む、任意の記述子型の任意のフィールドの設定を返すことができます。 アプリケーションは**SQLGetDescField**を繰り返し呼び出すことによって、同じ記述子または異なる記述子内の複数のフィールドの設定を任意の順序で取得できます。 **SQLGetDescフィールド**は、ドライバー定義の記述子フィールドを返すために呼び出すこともできます。  
   
- パフォーマンス上の理由から、アプリケーションでは、ステートメントを実行する前に、IRD の**SQLGetDescField**を呼び出さないでください。  
+ パフォーマンス上の理由から、アプリケーションはステートメントを実行する前に、IRD の**SQLGetDescField**を呼び出す必要があります。  
   
- 列またはパラメーターのデータの名前、データ型、および格納方法を記述する複数のフィールドの設定も、 **Sqlgetdescrec**の1回の呼び出しで取得できます。 **SQLGetStmtAttr**を呼び出すと、ステートメント属性でもある記述子ヘッダー内の1つのフィールドの設定を返すことができます。 **Sqlcolattribute**、 **SQLDescribeCol**、および**SQLDescribeParam**は、レコードまたはブックマークフィールドを返します。  
+ 列またはパラメーター のデータの名前、データ型、およびストレージを記述する複数のフィールドの設定は、 **SQLGetDescRec**への 1 回の呼び出しでも取得できます。 **SQLGetStmtAttr**を呼び出して、ステートメント属性でもある記述子ヘッダー内の単一フィールドの設定を返すことができます。 **SQLCol 属性** **、SQLDescribeCol**、および**SQLDescribeParam**はレコードまたはブックマーク フィールドを返します。  
   
- アプリケーションが**SQLGetDescField**を呼び出して、特定の記述子の種類に対して定義されていないフィールドの値を取得する場合、関数は SQL_SUCCESS を返しますが、フィールドに返される値は定義されていません。 たとえば、APD または**SQLGetDescField**の SQL_DESC_NAME または SQL_DESC_NULLABLE フィールドに対してを呼び出すと、SQL_SUCCESS が返されますが、フィールドの値は未定義になります。  
+ アプリケーションが特定の記述子型に対して未定義のフィールドの値を取得するために**SQLGetDescField**を呼び出すと、関数はSQL_SUCCESSを返しますが、フィールドに対して返される値は未定義です。 たとえば、APD または ARD のSQL_DESC_NAMEまたはSQL_DESC_NULLABLEフィールドに対して**SQLGetDescField**を呼び出すと、フィールドのSQL_SUCCESSが未定義の値を返します。  
   
- アプリケーションが**SQLGetDescField**を呼び出して、特定の記述子の種類に対して定義されているフィールドの値を取得するときに、既定値を持たず、まだ設定されていない場合、この関数は SQL_SUCCESS を返しますが、フィールドに返される値は未定義です。 記述子フィールドの初期化とフィールドの説明の詳細については、 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)の「記述子フィールドの初期化」を参照してください。 記述子の詳細については、「[記述子](../../../odbc/reference/develop-app/descriptors.md)」を参照してください。  
+ アプリケーションが**SQLGetDescField**を呼び出して、特定の記述子型に対して定義されているが、まだ設定されていないフィールドの値を取得すると、関数はSQL_SUCCESS返されますが、フィールドに返される値は未定義です。 記述子フィールドの初期化とフィールドの説明の詳細については、 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)の「記述子フィールドの初期化」を参照してください。 記述子の詳細については、[記述子](../../../odbc/reference/develop-app/descriptors.md)を参照してください。  
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|参照先|  
 |---------------------------|---------|  
 |複数の記述子フィールドの取得|[SQLGetDescRec 関数](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
-|1つの記述子フィールドの設定|[SQLSetDescField 関数](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
+|単一の記述子フィールドの設定|[SQLSetDescField 関数](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
 |複数の記述子フィールドの設定|[SQLSetDescRec 関数](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
   
 ## <a name="see-also"></a>参照  

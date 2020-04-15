@@ -1,5 +1,5 @@
 ---
-title: サポートされているバージョンの FoxPro |Microsoft Docs
+title: サポートされているバージョンのフォックスプロ |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], supported versions
 - FoxPro ODBC driver [ODBC], installing
 ms.assetid: 203fdabe-9b5c-4840-824c-792b508262c2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3902917eb2c219983c6d1ac3c86f738d272aeb5b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 400a3a29bebd5fbd8c19bef1e3d027549394595e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67939848"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81286182"
 ---
 # <a name="supported-versions-of-foxpro"></a>サポートされているバージョンの FoxPro
-Microsoft® Visual FoxPro® ODBC ドライバーを使用して、FoxPro テーブルに格納されているデータにアクセスできます。 次のバージョンの FoxPro データがサポートされています。  
+マイクロソフト®ビジュアル フォックスプロ® ODBC ドライバーを使用して、FoxPro テーブルに格納されているデータにアクセスできます。 次のバージョンの FoxPro データがサポートされています。  
   
 -   2.0  
   
@@ -32,10 +32,10 @@ Microsoft® Visual FoxPro® ODBC ドライバーを使用して、FoxPro テー�
   
 -   2.6  
   
--   Visual FoxPro (すべてのバージョン)  
+-   ビジュアルフォックスプロ(すべてのバージョン)  
   
- Visual FoxPro に格納されているデータにアクセスするときに、0個以上の[テーブル](../../odbc/microsoft/visual-foxpro-terminology.md)を含む[データベース](../../odbc/microsoft/visual-foxpro-terminology.md)、または[フリーテーブル](../../odbc/microsoft/visual-foxpro-terminology.md)のディレクトリに接続することを選択できます。  
+ Visual FoxPro に格納されているデータにアクセスする場合、0 個以上の[テーブル](../../odbc/microsoft/visual-foxpro-terminology.md)を含む[データベース](../../odbc/microsoft/visual-foxpro-terminology.md)に接続するか、[空きテーブル](../../odbc/microsoft/visual-foxpro-terminology.md)のディレクトリに接続するかを選択できます。  
   
- データソースに接続する方法の詳細については、「 [Visual FoxPro データソースの追加](../../odbc/microsoft/adding-a-visual-foxpro-data-source.md)」を参照してください。  
+ データ ソースに接続する方法の詳細については、「 [Visual FoxPro データ ソースの追加](../../odbc/microsoft/adding-a-visual-foxpro-data-source.md)」を参照してください。  
   
- ドライバーをダウンロードするには、 [Visual FOXPRO ODBC ドライバーのダウンロードサイト](https://go.microsoft.com/fwlink/?LinkId=121318)を参照してください。
+ ドライバをダウンロードするには、[ビジュアル フォックスプロ ODBC ドライバのダウンロード サイト](https://go.microsoft.com/fwlink/?LinkId=121318)を参照してください。
