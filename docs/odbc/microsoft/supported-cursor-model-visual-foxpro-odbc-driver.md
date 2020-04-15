@@ -1,5 +1,5 @@
 ---
-title: サポートされているカーソルモデル (Visual FoxPro ODBC ドライバー) |Microsoft Docs
+title: サポートされているカーソル モデル (ビジュアル フォックスプロ ODBC ドライバー) |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,30 +15,30 @@ helpviewer_keywords:
 - block cursors [ODBC]
 - rowset cursors [ODBC]
 ms.assetid: be95bbb2-6886-491e-a5a7-f58028d19c1e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e623c0ce5135a4b2e558be9c405ec2757e605ceb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cf3400f24e20a8fa864404612bf07ea44efce49e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68080714"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301128"
 ---
 # <a name="supported-cursor-model-visual-foxpro-odbc-driver"></a>サポートされるカーソル モデル (Visual FoxPro ODBC ドライバー)
-Visual FoxPro ODBC ドライバーでは、*ブロック*(*行セット*) と*静的*カーソルの両方がサポートされています。 静的カーソルは、レベル1の ODBC 準拠に準拠しているすべてのドライバーでサポートされています。 ドライバーでは、動的カーソル、キーセットドリブンカーソル、または混合 (keyset および動的) カーソルはサポートされていません。  
+ビジュアル フォックスプロ ODBC ドライバーは *、ブロック*(*行セット*) と*静的*カーソルの両方をサポートしています。 静的カーソルは、レベル 1 の ODBC 準拠に準拠するすべてのドライバーでサポートされます。 ドライバーは、動的カーソル、キーセット ドリブン カーソル、または混合 (キーセットカーソルと動的カーソル) カーソルをサポートしていません。  
   
- アプリケーションでは、SQL_CURSOR_FORWARD_ONLY (ブロックカーソル) または SQL_CURSOR_STATIC (静的カーソル) の SQL_CURSOR_TYPE オプションを使用して[SQLSetStmtOption](../../odbc/microsoft/sqlsetstmtoption-visual-foxpro-odbc-driver.md)を呼び出すことができます。  
+ アプリケーションは、SQL_CURSOR_FORWARD_ONLY (ブロック カーソル) またはSQL_CURSOR_STATIC (静的カーソル) のSQL_CURSOR_TYPEオプションを指定して[SQLSetStmtOption](../../odbc/microsoft/sqlsetstmtoption-visual-foxpro-odbc-driver.md)を呼び出すことができます。  
   
 > [!NOTE]  
->  SQL_CURSOR_FORWARD_ONLY または SQL_CURSOR_STATIC 以外の SQL_CURSOR_TYPE オプションを指定して**SQLSetStmtOption**を呼び出した場合、関数は SQLSTATE が 01S02 (オプション値が変更されました) の SQL_SUCCESS_WITH_INFO を返します。 ドライバーは、サポートされていないすべてのカーソルモードを SQL_CURSOR_STATIC に設定します。  
+>  SQL_CURSOR_FORWARD_ONLYまたはSQL_CURSOR_STATIC以外のSQL_CURSOR_TYPEオプションを指定して**SQLSetStmtOption**を呼び出すと、この関数は、01S02 (オプション値が変更された) の SQLSTATE を持つSQL_SUCCESS_WITH_INFOを戻します。 ドライバーは、すべてのサポートされていないカーソル モードをSQL_CURSOR_STATICに設定します。  
   
- カーソルの種類と**SQLSetStmtOption**の詳細については、 [ODBC プログラマーズリファレンス](../../odbc/reference/odbc-programmer-s-reference.md)を参照してください。  
+ カーソルの種類と**SQLSetStmtOption**の詳細については[、ODBC プログラマ リファレンス を参照してください](../../odbc/reference/odbc-programmer-s-reference.md)。  
   
 ## <a name="block-cursor"></a>ブロック カーソル (block cursor)  
- クライアントに返される前方スクロール、読み取り専用の結果セット。データのストレージを管理します。  
+ 前方スクロール、読み取り専用の結果セットがクライアントに返され、データのストレージを管理する責任があります。  
   
 ## <a name="static-cursor"></a>静的カーソル (static cursor)  
- クエリで定義されたデータセットのスナップショット。 静的カーソルには、他のユーザーによって基になるデータのリアルタイムの変更が反映されません。 カーソルのメモリバッファーは ODBC カーソルライブラリによって管理されます。これにより、前方および後方スクロールが可能になります。  
+ クエリによって定義されたデータ セットのスナップショット。 静的カーソルは、他のユーザーによる基になるデータのリアルタイムの変更を反映しません。 カーソルのメモリ バッファは ODBC カーソル ライブラリによって維持され、前方スクロールと逆方向スクロールが可能です。  
   
 ## <a name="rowset"></a>行セット (rowset)  
- カーソルに格納されているデータのブロック。データソースから取得した行を表します。
+ データ ソースから取得した行を表す、カーソルに格納されているデータのブロック。

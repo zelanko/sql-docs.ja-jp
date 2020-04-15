@@ -1,5 +1,5 @@
 ---
-title: データ型 (OLE DB) |Microsoft Docs
+title: データ型 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ helpviewer_keywords:
 - data types [OLE DB]
 - OLE DB, data types
 ms.assetid: 15953706-f0d1-45f5-a2eb-a8bd36e1a5fc
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fd73a7498914060757a9ce4e8137638440556ae3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 501e73cd5db2fbf79cd84c0184161f0c6ec6a341
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73770753"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304445"
 ---
 # <a name="data-types-ole-db"></a>データ型 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client OLE DB プロバイダー [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用してステートメントを実行し、結果を処理するには、行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セット内のパラメーターまた[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は列をバインドするとき、および**itabledefinition**インターフェイスを使用してで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブルを作成するときに、native client OLE DB プロバイダーがデータ型を OLE DB データ型にマップする方法を把握しておく必要があります。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアント[!INCLUDE[tsql](../../includes/tsql-md.md)]OLE DB プロバイダを使用してステートメントを実行し、結果を処理するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアント OLE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DB プロバイダが行セットのパラメータまたは列をバインドするとき、および**ITableDefinition**インターフェイスを使用して テーブルを作成する際に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、データ型を OLE DB データ型にマップする方法を知っている必要があります。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

@@ -1,5 +1,5 @@
 ---
-title: 擬似型識別子 |Microsoft Docs
+title: 疑似型識別子 |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,17 +8,17 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 8fa365d2-9de0-40c6-bcd2-a85613061baf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 92d16bfa1026169d4b2af7ef79bd0bda33b46992
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3fb8b89b3a4acf979a1cb67621b2223d22d303c8
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68057217"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307983"
 ---
 # <a name="pseudo-type-identifiers"></a>疑似型識別子
-アプリケーションプログラミングの便宜上、ODBC では複数の擬似型識別子が定義されています。 これらの識別子は実際のデータ型には対応していませんが、状況によっては、既存のデータ型に解決されます。  
+アプリケーション プログラミングの便宜上、ODBC では、いくつかの擬似型識別子を定義します。 これらの識別子は実際のデータ型に対応するものではなく、状況に応じて既存のデータ型に解決されます。  
   
  このセクションでは、次のトピックを扱います。  
   

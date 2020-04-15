@@ -1,5 +1,5 @@
 ---
-title: 型識別子 |Microsoft Docs
+title: 型識別子 |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - identifiers [ODBC], type
 - type identifiers [ODBC], about type identifiers
 ms.assetid: 1d9fdfa2-e378-44fe-ac66-9743d9bbdd5a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 79aa4de5d722208195477f7ffef53cac6c61a2de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a274a19eaa0a2fdf98bcaa9ef42406ee8a6b6461
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68093020"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306433"
 ---
 # <a name="type-identifiers"></a>型識別子
-ODBC では、SQL データ型と C データ型を記述するために、2つの*型識別子*のセットを定義しています。 型識別子は、SQL 列または C バッファーの型を記述します。 これは **#define**の値であり、通常は関数の引数として渡されるか、またはメタデータに返されます。  
+SQL および C のデータ型を記述するために、ODBC は 2 組の*型識別子 を定義します*。 型識別子は、SQL 列または C バッファーの型を表します。 これは **#define**値であり、通常は関数引数として渡されるか、メタデータに返されます。  
   
- たとえば、次の**SQLBindParameter**の呼び出しでは、SQL_DATE_STRUCT 型の変数を SQL ステートメントの日付パラメーターにバインドします。 *日付*変数の型を指定 SQL_C_TYPE_DATE C 型識別子 SQL_TYPE_DATE、動的パラメーターの型を指定する SQL 型識別子です。  
+ たとえば、次の**SQLBindParameter**呼び出しでは、SQL_DATE_STRUCT型の変数を SQL ステートメントの日付パラメーターにバインドします。 日付型の型識別子SQL_C_TYPE_DATE *Date*変数の型を指定し、動的パラメーターの型を指定SQL_TYPE_DATE SQL 型識別子を指定します。  
   
 ```  
 SQL_DATE_STRUCT Date;  

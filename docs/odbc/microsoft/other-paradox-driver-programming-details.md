@@ -1,5 +1,5 @@
 ---
-title: その他の Paradox ドライバーのプログラミングの詳細 |Microsoft Docs
+title: その他のパラドックスドライバプログラミングの詳細 |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,18 +12,18 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Paradox driver
 - Jet-based ODBC drivers [ODBC], Paradox driver
 ms.assetid: 0a723323-b2a6-4ac3-81d0-6ed66ec08ab8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b19265c66107e6059639663fac4f6c2ff44219f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f2b19abbb3c1a05342707cf80c9266bc19ee689d
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68043791"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81290952"
 ---
 # <a name="other-paradox-driver-programming-details"></a>その他の Paradox ドライバーのプログラミングの詳細
 > [!NOTE]  
->  このセクションでは、ODBC 関数とその他のプログラミングの詳細について、Paradox ドライバー固有の情報を提供します。 関数に関する一般的な情報については、「 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)」の該当するトピックを参照してください。  
+>  このセクションでは、PARADOX ドライバ固有の ODBC 関数およびその他のプログラミングの詳細について説明します。 関数の一般情報については[、ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)の該当するトピックを参照してください。  
   
  このセクションでは、次のトピックを扱います。  
   

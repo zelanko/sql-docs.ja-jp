@@ -61,7 +61,7 @@
           href: ../machine-learning/tutorials/quickstart-python-train-score-model.md
     - name: R
       items:
-        - name: R スクリプトの作成
+        - name: R スクリプトの実行
           href: ../machine-learning/tutorials/quickstart-r-create-script.md
         - name: データ型とオブジェクト
           href: ../machine-learning/tutorials/quickstart-r-data-types-and-objects.md
@@ -74,7 +74,7 @@
     - name: Python
       items:
         - name: Python のチュートリアル
-          href: ../machine-learning/tutorials/sql-server-python-tutorials.md
+          href: ../machine-learning/tutorials/python-tutorials.md
         - name: スキー レンタル (線形回帰)
           items:
             - name: 1 - 概要
@@ -112,7 +112,7 @@
     - name: R
       items:
         - name: R のチュートリアル
-          href: ../machine-learning/tutorials/sql-server-r-tutorials.md
+          href: ../machine-learning/tutorials/r-tutorials.md
         - name: パーティション ベースのモデルの作成
           href: ../machine-learning/tutorials/r-tutorial-create-models-per-partition.md
         - name: T-SQL での R の使用

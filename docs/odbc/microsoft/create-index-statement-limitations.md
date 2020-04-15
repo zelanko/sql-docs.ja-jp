@@ -1,5 +1,5 @@
 ---
-title: CREATE INDEX ステートメントの制限事項 |Microsoft Docs
+title: インデックス ステートメントの作成の制限 |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,24 +11,24 @@ helpviewer_keywords:
 - CREATE INDEX statement limitations [ODBC]
 - ODBC SQL grammar, CREATE INDEX statement limitations
 ms.assetid: 832dcda1-e452-48e6-8adb-7fb33c4fb4ff
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0ddb695d996cdd40b7fde4087799e5c1ec84224c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 053287d5087b377429221c31dd4e6b20f24248e5
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68081929"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81280883"
 ---
 # <a name="create-index-statement-limitations"></a>CREATE INDEX ステートメントの制限事項
-Microsoft Excel またはテキストドライバーでは、CREATE INDEX ステートメントはサポートされていません。  
+CREATE INDEX ステートメントは、Excel またはテキスト ドライバーではサポートされていません。  
   
- インデックスは、最大10個の列に定義できます。 CREATE INDEX ステートメントに10個以上の列が含まれている場合、インデックスは認識されず、インデックスが作成されなかったかのように処理されます。  
+ インデックスは、最大 10 列に定義できます。 CREATE INDEX ステートメントに 10 を超える列が含まれている場合、索引は認識されず、表は索引が作成されなかったかのように扱われます。  
   
- DBASE ドライバーでは、論理列にインデックスを作成できません。  
+ dBASE ドライバーは、論理列のインデックスを作成できません。  
   
- DBASE ドライバーを使用すると、SELECT ステートメントの WHERE 句で指定された列 (フィールド) に対して mdx (または ndx) インデックスを作成することによって、大きなファイルの応答時間を向上させることができます。 既存の。 mdx インデックスは、=、>、 \<、>=、=<、および WHERE 句内の演算子と LIKE 述語、および結合述語に対して自動的に適用されます。  
+ dBASE ドライバーを使用する場合、大きなファイルの応答時間を改善するには、.mdx (または .ndx) インデックスを作成する列 (フィールド) に指定された、SELECT ステートメントの句。 既存の .mdx インデックスは、WHERE 句内の\<=、>、>=、= =< 演算子、および LIKE 述語、および結合述語に自動的に適用されます。  
   
- DBASE ドライバーを使用する場合、CREATE UNIQUE INDEX ステートメントによって作成されるインデックスは実際には一意ではなく、インデックス付き列に重複する値を挿入できます。 同じキー値を持つセットから1つのレコードだけをインデックスに追加できます。  
+ dBASE ドライバーを使用する場合、CREATE UNIQUE INDEX ステートメントによって作成されたインデックスは、実際には一意ではない、重複する値は、インデックス付きの列に挿入できます。 同じキー値を持つセットから 1 つのレコードのみをインデックスに追加できます。  
   
- Paradox ドライバーを使用する場合は、テーブル内の列の連続したサブセット (最初の列を含む) に基づいて一意のインデックスを定義する必要があります。 テーブルで一意のインデックスが定義されていない場合、または Borland データベースエンジンを実装せずに Paradox ドライバーを使用する場合は、Paradox ドライバーによってテーブルを更新することはできません。
+ Paradox ドライバを使用する場合、テーブル内の列の連続したサブセット (最初の列を含む) に一意のインデックスを定義する必要があります。 テーブルに一意のインデックスが定義されていない場合、またはボーランド データベース エンジンを実装せずに Paradox ドライバーを使用する場合、Paradox ドライバによってテーブルを更新することはできません。

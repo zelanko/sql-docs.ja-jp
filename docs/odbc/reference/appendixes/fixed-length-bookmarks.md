@@ -1,5 +1,5 @@
 ---
-title: 固定長のブックマーク |Microsoft Docs
+title: 固定長ブックマーク |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,18 +13,18 @@ helpviewer_keywords:
 - compatibility [ODBC], bookmarks
 - fixed-length bookmarks [ODBC]
 ms.assetid: cbd8185e-fb03-408f-b80b-1a2e164534fd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5877a6cb7a99803f854338321e333c87037c2e90
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f90c5888a68506c056b2a56fce516080148528e7
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67913582"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306983"
 ---
 # <a name="fixed-length-bookmarks"></a>固定長のブックマーク
-ODBC *3.x ドライバーが*固定長のブックマークを使用する odbc 2.x*アプリケーションで*動作する必要がある場合、ドライバーは次の機能をサポートする必要があります。  
+ODBC *3.x*ドライバーが固定長のブックマークを使用する ODBC *2.x*アプリケーションで動作する必要がある場合、ドライバーは次をサポートする必要があります。  
   
--   SQL_USE_BOOKMARKS ステートメントオプションの値として SQL_UB_ON ます。 (SQL_UB_ON は ODBC 3.x では非推奨と*されます*)。  
+-   SQL_USE_BOOKMARKSステートメント・オプションの値としてSQL_UB_ONします。 (SQL_UB_ONは ODBC *3.x*では非推奨です。  
   
--   SQL_GET_BOOKMARK ステートメントオプション。
+-   SQL_GET_BOOKMARK ステートメント オプション。

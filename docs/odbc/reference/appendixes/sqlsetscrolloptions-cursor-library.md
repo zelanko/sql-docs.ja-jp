@@ -1,5 +1,5 @@
 ---
-title: SQLSetScrollOptions (カーソルライブラリ) |Microsoft Docs
+title: スクロールオプション (カーソル ライブラリ) |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,19 +10,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetScrollOptions function [ODBC], Cursor Library
 ms.assetid: c5c0ac6d-a6c1-4077-8186-1644df1944f8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 18a0bc111f6b4e8d82d0ed353837b499f920479e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0099ca5e9bcb3aefdd86e0132f52d110ab64e8a4
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68023360"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304913"
 ---
 # <a name="sqlsetscrolloptions-cursor-library"></a>SQLSetScrollOptions (カーソル ライブラリ)
 > [!IMPORTANT]  
->  この機能は、今後のバージョンの Windows では削除される予定です。 新しい開発作業ではこの機能の使用を避け、現在この機能を使用しているアプリケーションの変更を検討してください。 Microsoft では、ドライバーのカーソル機能を使用することをお勧めします。  
+>  この機能は、今後のバージョンの Windows で削除される予定です。 新しい開発作業でこの機能を使用することは避け、現在この機能を使用しているアプリケーションを変更する予定です。 マイクロソフトでは、ドライバーのカーソル機能を使用することをお勧めします。  
   
- このトピックでは、カーソルライブラリでの**SQLSetScrollOptions**関数の使用について説明します。 **SQLSetScrollOptions**の一般的な情報については、「 [SQLSetScrollOptions 関数](../../../odbc/reference/syntax/sqlsetscrolloptions-function.md)」を参照してください。  
+ このトピックでは、カーソル ライブラリでの**SQLSetScrollOptions**関数の使用について説明します。 一般的な情報については、「 SQL**セットスクロール**[オプション関数](../../../odbc/reference/syntax/sqlsetscrolloptions-function.md)」を参照してください。  
   
- カーソルライブラリでは、旧バージョンとの互換性のためだけに**SQLSetScrollOptions**をサポートしています。アプリケーションでは、代わりに SQL_ATTR_CONCURRENCY、SQL_ATTR_CURSOR_TYPE、および SQL_ATTR_ROW_ARRAY_SIZE ステートメントの属性を使用する必要があります。
+ カーソル ライブラリは、後方互換性を維持するためにのみ**SQLSetScrollOptions**をサポートしています。アプリケーションでは、代わりにSQL_ATTR_CONCURRENCY、SQL_ATTR_CURSOR_TYPE、およびSQL_ATTR_ROW_ARRAY_SIZEステートメント属性を使用する必要があります。

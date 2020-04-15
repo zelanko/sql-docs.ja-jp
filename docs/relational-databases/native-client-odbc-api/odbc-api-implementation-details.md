@@ -1,5 +1,5 @@
 ---
-title: ODBC API の実装の詳細 |Microsoft Docs
+title: ODBC API の実装の詳細 |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -13,26 +13,24 @@ helpviewer_keywords:
 - ODBC, SQL Server-specific behaviors
 - functions [ODBC]
 ms.assetid: dca92489-f179-4b1f-997c-adcc46aa17a3
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eb05bdc934fe8f42a4f0f6589d0f75d38ca621fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 880c38483b3896f95ccfde4f8237d6d0acbf8e3c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73787872"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302728"
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API 実装の詳細
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   ODBC (Open Database Connectivity) は、ODBC データ ソース内のデータにアクセスするアプリケーションで使用される、Microsoft Win32 アプリケーション プログラミング インターフェイスです。  
   
- この [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバー リファレンスは、すべての ODBC 関数呼び出しを記載したものではありません。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーと共に使用される、ドライバー固有のパラメーターや動作を備えた ODBC 関数だけについて説明しています。  
+ この [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバー リファレンスは、すべての ODBC 関数呼び出しを記載したものではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーと共に使用される、ドライバー固有のパラメーターや動作を備えた ODBC 関数だけについて説明しています。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは ODBC 3.51 仕様に準拠しています。 ODBC 3.51 の総合的なリファレンスについては、[データアクセスおよびストレージデベロッパーセンター](https://go.microsoft.com/fwlink?linkid=4173)から Microsoft Data ACCESS Components SDK をダウンロードするか、 [odbc プログラマーズリファレンス](https://go.microsoft.com/fwlink/?LinkId=45250)をオンラインで参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは ODBC 3.51 仕様に準拠しています。 ODBC 3.51 の包括的なリファレンスについては、[データ アクセスおよびストレージ デベロッパー センター](https://go.microsoft.com/fwlink?linkid=4173)から Microsoft データ アクセス コンポーネント SDK をダウンロードするか[、ODBC プログラマ リファレンスを](https://go.microsoft.com/fwlink/?LinkId=45250)オンラインで参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
@@ -137,7 +135,7 @@ ms.locfileid: "73787872"
 -   [SQLTables](../../relational-databases/native-client-odbc-api/sqltables.md)  
   
 ## <a name="see-also"></a>参照  
- [SQL Server Native Client &#40;ODBC&#41; リファレンス](https://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)   
+ [ODBC&#41;の参照&#40;SQL Server ネイティブ クライアント](https://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)   
  [SQL Server Native Client を使用したアプリケーションのビルド](../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

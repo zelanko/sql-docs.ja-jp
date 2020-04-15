@@ -1,5 +1,5 @@
 ---
-title: 非推奨の関数のマッピング |Microsoft Docs
+title: 非推奨関数のマッピング |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,45 +15,45 @@ helpviewer_keywords:
 - functions [ODBC], mapping deprecated functions
 - mapping deprecated functions [ODBC]
 ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 307f0f54434fdcb4ebb19c38256a7a04f4a5c46d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a4e89cd9281520e70ec5fb289c6050e77ec6194c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67990716"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299882"
 ---
 # <a name="mapping-deprecated-functions"></a>非推奨の関数のマッピング
-このセクションでは、odbc 2.x アプリケーションで使用される ODBC *3.x ドライバーの*旧バージョンとの互換性を保証するために、非推奨の関数*が Odbc* *3.x ドライバーマネージャー*によってどのようにマップされるかについて説明します。 ドライバーマネージャーは、アプリケーションのバージョンに関係なく、このマッピングを実行します。 次の一覧に示す*odbc 2.x 関数は*それぞれ *、odbc 3.x ドライバーで*呼び出された場合に対応する odbc 3.x 関数にマップされるため *、ODBC 3.x ドライバーで**は odbc* *2.x 関数を*実装する必要はありません。  
+このセクションでは、ODBC 2.x アプリケーションで使用される ODBC *3.x*ドライバーの下位互換性を保証するために、ODBC *3.x* *2.x*ドライバー マネージャーによって、非推奨関数がどのようにマップされるかについて説明します。 ドライバー マネージャーは、アプリケーションのバージョンに関係なく、このマッピングを実行します。 ODBC 3.x ドライバで呼び出された ODBC *3.x*ドライバでは、次のリストに示す ODBC *2.x*関数がそれぞれ対応する ODBC *3.x*関数にマップされるため、ODBC *3.x*ドライバは ODBC *2.x*関数を実装する必要がありません。  
   
- ドライバー*が ODBC 3.x*ドライバーであり、ドライバーがマップされている関数をサポートしていない場合、一覧内のマッピングがトリガーされます。  
+ 一覧のマッピングは、ドライバーが ODBC *3.x*ドライバーであり、ドライバーがマップされている関数をサポートしていない場合にトリガーされます。  
   
- 次の表は、ODBC *3. x*で導入されたすべての重複機能を示しています。  
+ 次の表は、ODBC *3.x*で導入されたすべての重複した機能の一覧です。  
   
 |ODBC *2.x*関数|ODBC *3.x*関数|  
 |-------------------------|-------------------------|  
-|**SQLAllocConnect**|**SQLAllocHandle**|  
-|**SQLAllocEnv**|**SQLAllocHandle**|  
-|**SQLAllocStmt**|**SQLAllocHandle**|  
-|**SQLBindParam**[1]|**SQLBindParameter**|  
-|**SQLColAttributes**|**SQLColAttribute**|  
-|**SQLError**|**SQLGetDiagRec**|  
-|**SQLFreeConnect**|**SQLFreeHandle**|  
-|**SQLFreeEnv**|**SQLFreeHandle**|  
-|SQL_DROP の*オプション*を使用した**SQLFreeStmt**|**SQLFreeHandle**|  
-|**SQLGetConnectOption**|**SQLGetConnectAttr**|  
-|**SQLGetStmtOption**|**SQLGetStmtAttr**|  
-|**SQLParamOptions**|**SQLSetStmtAttr**|  
-|**SQLSetConnectOption**|**SQLSetConnectAttr**|  
-|**SQLSetParam**[2]|**SQLBindParameter**|  
-|**SQLSetScrollOption**|**SQLSetStmtAttr**|  
-|**SQLSetStmtOption**|**SQLSetStmtAttr**|  
-|**SQLTransact**|**SQLEndTran**|  
+|**コネクト**|**ハンドル**|  
+|**SQLAllocEnv**|**ハンドル**|  
+|**をクリックします。**|**ハンドル**|  
+|**SQL バインドパラム**[1]|**SQLBindParameter**|  
+|**属性**|**SQLColAttribute**|  
+|**エラー**|**SQLGetDiagRec**|  
+|**コネクト**|**SQLFreeHandle**|  
+|**を実行する**|**SQLFreeHandle**|  
+|SQL_DROPの*オプション*を持つ**SQLFreeStmt**|**SQLFreeHandle**|  
+|**オプションを指定します。**|**SQLGetConnectAttr**|  
+|**オプションを指定します。**|**SQLGetStmtAttr**|  
+|**オプション**|**SQLSetStmtAttr**|  
+|**オプションを指定します。**|**SQLSetConnectAttr**|  
+|**SQL セットパラム**[2]|**SQLBindParameter**|  
+|**スクロールオプション**|**SQLSetStmtAttr**|  
+|**オプションを設定します。**|**SQLSetStmtAttr**|  
+|**トランスアクト**|**SQLEndTran**|  
   
- [1] この関数が ODBC 2.x に存在しなかった場合で*も、オープン*グループおよび ISO 標準になっています。  
+ [1] この関数は ODBC *2.x*に存在しないにもかかわらず、オープングループおよび ISO 標準に含まれています。  
   
- [2] ODBC 1.0 関数です。  
+ [2] これは ODBC 1.0 関数です。  
   
  このセクションでは、次のトピックを扱います。  
   

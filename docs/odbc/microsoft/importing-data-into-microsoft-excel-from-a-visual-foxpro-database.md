@@ -1,5 +1,5 @@
 ---
-title: Visual FoxPro データベースから Microsoft Excel にデータをインポートする |Microsoft Docs
+title: ビジュアルフォックスプロデータベースからExcelにデータをインポートする |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,31 +14,31 @@ helpviewer_keywords:
 - Visual FoxPro data [ODBC], importing
 - Visual FoxPro ODBC driver [ODBC], Excel
 ms.assetid: 3085bc4c-00a7-40e5-bffb-c3962cd3d509
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3c65635132c5f98b0565391122877f2e3c0a6714
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1bfd86233e5a0a406febcb30bf7a4fae595e53d2
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68085555"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81287672"
 ---
 # <a name="importing-data-into-microsoft-excel-from-a-visual-foxpro-database"></a>Visual FoxPro データベースから Microsoft Excel へのデータのインポート
-データソースを定義している場合は、Visual FoxPro データを Microsoft Excel ワークシートにインポートできます。 Visual FoxPro データソースの作成の詳細については、「 [Microsoft Excel からの Visual Foxpro データソースへのアクセス](../../odbc/microsoft/accessing-a-visual-foxpro-data-source-from-microsoft-excel.md)」を参照してください。  
+データ ソースを定義している場合は、Visual FoxPro データを Excel ワークシートにインポートできます。 ビジュアル フォックス プロ データ ソースの作成については[、「Excel からビジュアル フォックス プロ データ ソースにアクセスする](../../odbc/microsoft/accessing-a-visual-foxpro-data-source-from-microsoft-excel.md)」を参照してください。  
   
-### <a name="to-import-visual-foxpro-data-into-an-microsoft-excel-worksheet"></a>Microsoft Excel ワークシートに Visual FoxPro データをインポートするには  
+### <a name="to-import-visual-foxpro-data-into-an-microsoft-excel-worksheet"></a>ビジュアル フォックスプロのデータを Excel ワークシートにインポートするには  
   
-1.  Microsoft Excel スプレッドシートを開きます。  
+1.  Excel スプレッドシートを開きます。  
   
-2.  [データ] メニューの [外部データの取り込み] をクリックします。 Microsoft Query が開きます。  
+2.  [データ] メニューの [外部データの取り込み] を選択します。 クエリが開きます。  
   
-3.  [データソースの選択] ダイアログボックスで、Visual FoxPro データソースを選択し、[使用] をクリックします。  
+3.  [データ ソースの選択] ダイアログ ボックスで、Visual FoxPro データ ソースを選択し、[使用] をクリックします。  
   
-4.  データソースによってアクセスされるデータベースにテーブルが含まれている場合は、[テーブルの追加] ダイアログボックスでテーブルを選択します。 Microsoft Query では、クエリデザイナーの上半分に追加したテーブルが表示されます。  
+4.  データ ソースからアクセスするデータベースにテーブルが含まれている場合は、[テーブルの追加] ダイアログ ボックスでテーブルを選択します。 クエリ デザイナの上半分に追加されたテーブルが表示されます。  
   
     > [!NOTE]  
-    >  このダイアログボックスでは所有者がサポートされていないため、所有者の一覧は使用できません。 ドライバーがデータソース内の複数のデータベースをサポートしていないため、データベースの一覧を使用できません。  
+    >  ドライバは所有者をサポートしていないため、このダイアログ ボックスでは所有者リストを使用できません。 ドライバはデータ ソース内の複数のデータベースをサポートしていないため、データベースの一覧は使用できません。  
   
-5.  テーブルからデザイナーの下半分にクエリをドラッグして、クエリのフィールドを選択します。  
+5.  テーブルからデザイナーの下半分にフィールドをドラッグして、クエリのフィールドを選択します。  
   
-6.  Microsoft Query を終了します。 選択したデータは、Microsoft Excel スプレッドシートにインポートされます。
+6.  クエリを閉じます。 選択したデータが Excel スプレッドシートにインポートされます。

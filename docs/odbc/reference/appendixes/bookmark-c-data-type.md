@@ -1,5 +1,5 @@
 ---
-title: ブックマーク C データ型 |Microsoft Docs
+title: ブックマーク C データ型 |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,24 +14,24 @@ helpviewer_keywords:
 - bookmarks [ODBC]
 - bookmark C data type [ODBC]
 ms.assetid: add88e48-ada3-4c0c-a5ac-e78903d3ff41
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 86488da93470a61a54638e9c60e6e1795a9da4dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 566f1065d30a47b2db234ba1f11f877725189fb7
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68125752"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81292292"
 ---
 # <a name="bookmark-c-data-type"></a>Bookmark C データ型
-ブックマーク C データ型を使用すると、アプリケーションでブックマークを取得できます。 ブックマーク C 型は、長さが可変のブックマーク値を取得するためにのみ使用されます。他のデータ型に変換することはできません。 アプリケーションは、 **Sqlbulkoperations** (操作が SQL_ADD)、 **sqlfetch**、 **Sqlbulkoperations**、または**SQLGetData**を使用して、結果セットの列0からブックマークを取得します。 詳細については、「[ブックマーク](../../../odbc/reference/develop-app/bookmarks-odbc.md)」を参照してください。  
+ブックマーク C データ型を使用すると、アプリケーションはブックマークを取得できます。 ブックマーク C 型は、長さが可変であるブックマーク値を取得するためだけに使用されます。他のデータ型に変換しないでください。 アプリケーションは **、SQLBulkOperations** (SQL_ADD操作を伴う) **、SQLFetch、SQLFetchScroll、** または**SQLGetData**を使用して、結果セットの列 0 からブックマークを取得します。 **SQLFetchScroll** 詳細については、「[ブックマーク](../../../odbc/reference/develop-app/bookmarks-odbc.md)」を参照してください。  
   
- 次の表に、bookmark C データ型の*CType*の値、ブックマーク c データ型を実装する ODBC c データ型、および SQL からのこのデータ型の定義を示します。始め.  
+ 次の表は、ブックマーク C データ型の*CType*の値、ブックマーク C データ型を実装する ODBC C データ型、および SQL からのこのデータ型の定義を示しています。H。  
   
 > [!NOTE]
->  SQL_C_BOOKMARK のデータ型は非推奨とされました。 ODBC *3. x*アプリケーションでは、SQL_C_BOOKMARK を使用しないでください。 ODBC *3.x ドライバーは*、それを使用する odbc *2.x アプリケーションを*操作する場合にのみ、SQL_C_BOOKMARK をサポートする必要があります。 ドライバーマネージャーは、アプリケーション*が ODBC 2.x*ドライバーで動作する場合に SQL_C_VARBOOKMARK を SQL_C_BOOKMARK にマップします。  
+>  SQL_C_BOOKMARKデータ型は非推奨になりました。 ODBC *3.x*アプリケーションでは、SQL_C_BOOKMARKを使用しないでください。 ODBC *3.x*ドライバーは、ODBC *2.x*アプリケーションを使用する場合にのみ、SQL_C_BOOKMARKをサポートする必要があります。 ドライバー マネージャーは、アプリケーションが ODBC *2.x*ドライバーと連携する場合にSQL_C_BOOKMARKにSQL_C_VARBOOKMARKをマップします。  
   
-|C 型識別子|ODBC C typedef|C 型|  
+|C 型識別子|ODBC C の型定義|C 型|  
 |-----------------------|--------------------|------------|  
 |SQL_C_BOOKMARK<br />(非推奨)|ブックマーク|unsigned long int|  
-|SQL_C_VARBOOKMARK|SQLCHAR|unsigned char *|
+|SQL_C_VARBOOKMARK|SQLCHAR *|unsigned char *|

@@ -1,5 +1,5 @@
 ---
-title: Visual Studio Analyzer の有効化 |Microsoft Docs
+title: ビジュアル スタジオ アナライザーを有効にする |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,33 +10,33 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio Analyzer [ODBC], enabling
 ms.assetid: 423950e9-a5c0-4da9-b9b2-49c38b3bb0b8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 333ae13b9959337c6adb5142e253a16ba890aa61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d80d54dc4aeebcc5c32d07a2beebb9ded41bf355
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68046779"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300452"
 ---
 # <a name="enabling-visual-studio-analyzer"></a>Visual Studio Analyzer の有効化
 > [!IMPORTANT]  
->  Visual Studio Analyzer のサポートは、Windows 8 以降で削除されました (Visual Studio Analyzer 以前のバージョンの Visual Studio にのみ含まれていました)。 別のトラブルシューティングメカニズムについては、BID トレースを使用します。  
+>  Windows 8 で最初に Visual Studio アナライザーのサポートが削除されました (Visual Studio アナライザーは、以前のバージョンの Visual Studio にのみ含まれていました)。 代替トラブルシューティングメカニズムを使用するには、BID トレースを使用します。  
   
- Microsoft Visual Studio Analyzer は、すべての層およびシステムにわたるアプリケーションのパフォーマンスを大まかに説明するために設計されたアプリケーション分析ツールです。 コンポーネント間の相互作用に焦点を当てています。 Visual Studio Analyzer は、ODBC 管理者の [トレース] タブで開始および停止できます。  
+ Microsoft Visual Studio アナライザーは、すべての層とシステムにわたってアプリケーションのパフォーマンスを高レベルで見えるように設計されたアプリケーション分析ツールです。 これは、コンポーネント間の相互作用に焦点を当てています。 Visual Studio アナライザーは、ODBC アドミニストレータの [トレース] タブから起動および停止できます。  
   
- ODBC によって生成されるイベントを表示するには、次の手順を実行します。  
+ ODBC が生成するイベントを表示するには、次の手順を実行します。  
   
-1.  ODBC データソースアドミニストレーターにアクセスします。  
+1.  ODBC データ ソース アドミニストレータにアクセスします。  
   
-2.  [**トレース**] タブをクリックします。  
+2.  [トレース] タブ**を**クリックします。  
   
-3.  [**開始 Visual Studio Analyzer トレース**] をクリックします。  
+3.  [ **Visual Studio アナライザー トレースの開始**] をクリックします。  
   
 4.  **[OK]** をクリックします。  
   
- Visual Studio Analyzer イベント生成は、**停止 Visual Studio Analyzer トレース**を選択するまで続行されます。  
+ [Visual Studio アナライザーの**トレースの停止**] が選択されるまで、イベント生成が続行されます。  
   
- ここでは、次のトピックについて説明します。  
+ このセクションでは、次のトピックについて説明します。  
   
 -   [ODBC ドライバー マネージャーによって生成されたイベント](../../../odbc/reference/develop-app/events-generated-by-the-odbc-driver-manager.md)

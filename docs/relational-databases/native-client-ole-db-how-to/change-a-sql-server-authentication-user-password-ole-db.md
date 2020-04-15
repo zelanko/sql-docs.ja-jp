@@ -1,5 +1,5 @@
 ---
-title: SQL 認証のユーザーパスワード (OLE DB)
+title: SQL 認証ユーザー パスワード (OLE DB)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 1ed37ded-5671-46a4-b609-eea886dfae20
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 768aff63d6b1faeecc0bba555fad0f598c9015a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 643148404dd2d532ce82e472097fb4331c8877bc
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75226166"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300988"
 ---
 # <a name="change-a-sql-server-authentication-user-password-ole-db"></a>SQL Server 認証のユーザー パスワードの変更 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -24,19 +24,16 @@ ms.locfileid: "75226166"
   このサンプルでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のユーザー アカウントのパスワードを OLE DB を使用して変更する方法を紹介しています。  
   
 > [!IMPORTANT]  
->  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、 [Win32 CRYPTO API](https://go.microsoft.com/fwlink/?LinkId=64532)を使用して暗号化する必要があります。  
+>  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
   
 ## <a name="example"></a>例  
  ビルド前に、.C++ コードを修正し、実際のユーザー ID、古いパスワード、および新しいパスワードを指定してください。  
   
- このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
+ このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数に sqlncli.h を含むディレクトリが含まれていることを確認します。  
   
  ole32.lib と oleaut32.lib を使用してコンパイルします。  
   
- このサンプルをビルドするには、パスワードがわかっている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のユーザー アカウントが必要です。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証でのログインを許可するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio を開き、オブジェクト エクスプローラーでサーバー ノードを右クリックし、[プロパティ] をクリックします。 [セキュリティ] をクリックし、[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証モードと Windows 認証モード] を有効にします。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証用のユーザー アカウントを追加するには、オブジェクト エクスプローラーで [セキュリティ] ノードを右クリックし、[追加] をクリックします。  
+ このサンプルをビルドするには、パスワードがわかっている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のユーザー アカウントが必要です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証でのログインを許可するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio を開き、オブジェクト エクスプローラーでサーバー ノードを右クリックし、[プロパティ] をクリックします。 [セキュリティ] をクリックし、[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証モードと Windows 認証モード] を有効にします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証用のユーザー アカウントを追加するには、オブジェクト エクスプローラーで [セキュリティ] ノードを右クリックし、[追加] をクリックします。  
   
  このサンプルを実行するサーバーには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証が有効になっているログインが少なくとも 1 つ必要です。 また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証でのログインを許可するようにサーバーを設定する必要があります。  
   

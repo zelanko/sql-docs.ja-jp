@@ -1,5 +1,5 @@
 ---
-title: エスケープシーケンス |Microsoft Docs
+title: エスケープ シーケンス | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,18 +12,18 @@ helpviewer_keywords:
 - escape sequences [ODBC], determining if supported
 - interoperability of SQL statements [ODBC], escape sequences
 ms.assetid: 5913abfa-d280-43e4-a2f1-05a924388bf9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d73282cde4d0598d7e6a35ac6273935626b96969
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5d9589230183b198cb7d59cf9739dab75625441e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68001373"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298712"
 ---
 # <a name="escape-sequences"></a>エスケープ シーケンス
-ODBC では、日付、時刻、タイムスタンプ、および日時間隔リテラルの標準文法、スカラー関数呼び出し (**述語エスケープ**文字、外部結合、プロシージャ呼び出しなど) を含むエスケープシーケンスが定義されています。 相互運用可能なアプリケーションでは、可能な限りこれらのシーケンスを使用する必要があります。  
+ODBC は、日付、時刻、タイムスタンプ、および日時間隔リテラル、スカラー関数呼び出し **、LIKE**述語エスケープ文字、外部結合、およびプロシージャー呼び出しの標準文法を含むエスケープ・シーケンスを定義します。 相互運用可能なアプリケーションでは、可能な限りこれらのシーケンスを使用する必要があります。  
   
- ドライバーが日付、時刻、タイムスタンプ、または datetime の各間隔のリテラルのエスケープシーケンスをサポートするかどうかを判断するために、アプリケーションは**SQLGetTypeInfo**を呼び出します。 データソースが date、time、timestamp、または datetime の各 interval データ型をサポートしている場合は、対応するエスケープシーケンスもサポートする必要があります。 他のエスケープシーケンスがサポートされているかどうかを判断するために、アプリケーションは**SQLGetInfo**を呼び出します。  
+ ドライバーが日付、時刻、タイムスタンプ、または日時間隔リテラルのエスケープ シーケンスをサポートするかどうかを判断するには、アプリケーションは**SQLGetTypeInfo**を呼び出します。 データ ソースが日付、時刻、タイムスタンプ、または日時間隔のデータ型をサポートしている場合は、対応するエスケープ シーケンスもサポートする必要があります。 他のエスケープ シーケンスがサポートされているかどうかを確認するために、アプリケーションは**SQLGetInfo**を呼び出します。  
   
- 詳細については、後の「 [ODBC でのエスケープシーケンス](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md)」を参照してください。
+ 詳細については、このセクション[の後半の「ODBC でのエスケープ シーケンス](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md)」を参照してください。

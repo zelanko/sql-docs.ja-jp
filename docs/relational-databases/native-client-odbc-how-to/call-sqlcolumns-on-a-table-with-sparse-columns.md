@@ -1,5 +1,5 @@
 ---
-title: スパース列を含むテーブルで SQLColumns を呼び出す |Microsoft Docs
+title: スパース列を持つテーブルの SQLColumns を呼び出す |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -9,15 +9,15 @@ ms.technology: native-client
 yms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: afd35e13-2370-43c2-9cbc-f8da6248c39c
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ffe65b15ef18618058ea9ccc385dd12cd0482d96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 57dc76c3373623ac133b0911e37ac4298682fa92
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73781695"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298318"
 ---
 # <a name="call-sqlcolumns-on-a-table-with-sparse-columns"></a>スパース列を持つテーブルに対する SQLColumns の呼び出し
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,17 +26,16 @@ ms.locfileid: "73781695"
   
  このサンプルは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] では動作しません。  
   
- スパース列の機能の詳細については、「 [SQL Server Native Client でのスパース列のサポート](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md)」を参照してください。  
+ スパース列機能の詳細については、「 SQL [Server ネイティブ クライアントでのスパース列のサポート](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- 最初のリストは、C++ ソース コードです。 "MyServer" を有効なサーバー名に変更してください。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
+ 最初のリストは、C++ ソース コードです。 "MyServer" を有効なサーバー名に変更してください。 INCLUDE 環境変数に sqlncli.h を含むディレクトリが含まれていることを確認します。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
   
- このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 
-  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
+ このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
   
  /EHsc /D、"UNICODE"、および odbc32.lib を使用してコンパイルします。  
   
- 2番目[!INCLUDE[tsql](../../includes/tsql-md.md)]の () コードリストは、このサンプルで作成したテーブルを削除します。  
+ 2 番目[!INCLUDE[tsql](../../includes/tsql-md.md)]の ( ) コードリストは、このサンプルで作成されたテーブルを削除します。  
   
 ```  
 // compile with: /EHsc /D "UNICODE" odbc32.lib  

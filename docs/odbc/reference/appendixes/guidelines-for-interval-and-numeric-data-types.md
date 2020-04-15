@@ -1,5 +1,5 @@
 ---
-title: Interval と Numeric データ型のガイドライン |Microsoft Docs
+title: 間隔および数値データ型のガイドライン |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,17 +8,17 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 28a879a1-666e-4183-b731-d36b584d5d86
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ced117b492a366d69e72a5780f8091627ede7921
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c22cf71468d8128688a44fa825c31dffa1c5414b
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68041653"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306959"
 ---
 # <a name="guidelines-for-interval-and-numeric-data-types"></a>間隔と数値データ型のガイドライン
-次のセクションでは、interval と numeric データ型について説明します。  
+次のセクションでは、間隔と数値データ型について説明します。  
   
 -   [Interval データ型](../../../odbc/reference/appendixes/interval-data-types.md)  
   

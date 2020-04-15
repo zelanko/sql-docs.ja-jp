@@ -1,5 +1,5 @@
 ---
-title: OLE DB のプロパティについて |Microsoft Docs
+title: OLE DB プロパティについて | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - properties [OLE DB]
 - property values [SQL Server Native Client]
 ms.assetid: 0b36a61e-b542-400d-a3d2-e6f643caf2c6
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 936a3de6838d61ea92d4c1443d31316eac76fd09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e2b07f78cedc95e39b2268b56c9690cdb9c063f0
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73761759"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81289741"
 ---
 # <a name="about-ole-db-properties"></a>OLE DB プロパティについて
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "73761759"
   
  各プロパティには、値、データ型、説明、および読み取り/書き込み属性があります。また、行セット プロパティの場合は、列単位で適用できるかどうかを示すインジケーターがあります。  
   
- プロパティは GUID およびプロパティ ID を表す整数によって識別されます。 プロパティ セットは、同じ GUID を共有するすべてのプロパティのセットです。 定義済みの OLE DB プロパティセットに加えて、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、プロバイダー固有のプロパティセットとプロパティを実装します。 各プロパティは、1 つ以上のプロパティ グループに属しています。 プロパティ グループは、特定のオブジェクトに適用されるすべてのプロパティをグループ化したものです。 プロパティ グループには、初期化プロパティ グループ、データ ソース プロパティ グループ、セッション プロパティ グループ、行セット プロパティ グループ、テーブル プロパティ グループ、列プロパティ グループなどがあります。 これらの各プロパティ グループに、プロパティが含まれています。  
+ プロパティは GUID およびプロパティ ID を表す整数によって識別されます。 プロパティ セットは、同じ GUID を共有するすべてのプロパティのセットです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]定義済みの OLE DB プロパティ セットに加えて、ネイティブ クライアント OLE DB プロバイダは、プロバイダ固有のプロパティ セットとプロパティを実装します。 各プロパティは、1 つ以上のプロパティ グループに属しています。 プロパティ グループは、特定のオブジェクトに適用されるすべてのプロパティをグループ化したものです。 プロパティ グループには、初期化プロパティ グループ、データ ソース プロパティ グループ、セッション プロパティ グループ、行セット プロパティ グループ、テーブル プロパティ グループ、列プロパティ グループなどがあります。 これらの各プロパティ グループに、プロパティが含まれています。  
   
  プロパティ値を設定するには、次の手順を実行します。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "73761759"
 7.  要素数と DBPROPSET 構造体の配列を渡してメソッドを呼び出し、プロパティを設定します。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server Native Client OLE DB プロバイダーアプリケーションの作成](../../relational-databases/native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md)   
- [プロパティ (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=112207)  
+ [SQL Server ネイティブ クライアント OLE DB プロバイダー アプリケーションの作成](../../relational-databases/native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md)   
+ [プロパティ [OLE DB]](https://go.microsoft.com/fwlink/?LinkId=112207)  
   
   

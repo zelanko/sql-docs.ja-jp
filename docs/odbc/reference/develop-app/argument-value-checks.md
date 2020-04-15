@@ -1,5 +1,5 @@
 ---
-title: 引数の値の確認 |Microsoft Docs
+title: 引数の値のチェック |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,26 +12,26 @@ helpviewer_keywords:
 - argument value checks [ODBC]
 - driver manager [ODBC], error checking
 ms.assetid: 37a65f8b-83aa-456c-b7cf-500404abb38a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 013c8f80a672ed691e7519b318206c406171cfbc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6c6e4de16c4a1a80be893acbc7a1993b375f2fee
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68077115"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298826"
 ---
 # <a name="argument-value-checks"></a>引数の値のチェック
-ドライバーマネージャーは、次の種類の引数を確認します。 特に明記されていない限り、ドライバーマネージャーは引数値のエラーに対して SQL_ERROR を返します。  
+ドライバー マネージャーは、次の種類の引数をチェックします。 特に明記されていない限り、ドライバ マネージャは、引数の値にエラーがないかSQL_ERRORを返します。  
   
--   通常、環境、接続、およびステートメントハンドルを null ポインターにすることはできません。 ドライバーマネージャーは、null ハンドルを検出すると SQL_INVALID_HANDLE を返します。  
+-   環境、接続、およびステートメントのハンドルは、通常、NULL ポインターにすることはできません。 ドライバー マネージャーは、null ハンドルが見つかったときにSQL_INVALID_HANDLEを返します。  
   
--   **SQLAllocHandle**の*OutputHandlePtr*や**SQLSetCursorName**の*カーソル名*など、必要なポインター引数を null ポインターにすることはできません。  
+-   必要なポインター引数 **(SQLAllocHandle**の*出力HandlePtr*や**SQLSetCursorName**の*カーソル名*など) は NULL ポインターにできません。  
   
--   ドライバー固有の値をサポートしていないオプションフラグは、有効な値である必要があります。 たとえば、 **SQLSetPos**の*操作*は、SQL_POSITION、SQL_REFRESH、SQL_UPDATE、SQL_DELETE、または SQL_ADD である必要があります。  
+-   ドライバー固有の値をサポートしないオプション フラグは、有効な値である必要があります。 たとえば **、SQLSetPos**の*操作*は、SQL_POSITION、SQL_REFRESH、SQL_UPDATE、SQL_DELETE、またはSQL_ADDである必要があります。  
   
--   オプションフラグは、ドライバーでサポートされている ODBC のバージョンでサポートされている必要があります。 たとえば、 *InfoType* in **SQLGETINFO**は、odbc 2.0 ドライバーを呼び出すときに SQL_ASYNC_MODE (odbc 3.0 で導入) することはできません。  
+-   オプション フラグは、ドライバーでサポートされている ODBC のバージョンでサポートされている必要があります。 たとえば、ODBC 2.0 ドライバを呼び出すときに **、SQLGetInfo**の*情報型*をSQL_ASYNC_MODEすることはできません (ODBC 3.0 で導入)。  
   
--   列とパラメーターの数は、関数に応じて、0より大きいか0以上である必要があります。 ドライバーは、現在の結果セットまたは SQL ステートメントに基づいて、これらの引数値の上限を確認する必要があります。  
+-   列番号およびパラメーター番号は、関数に応じて、0 より大きいか、0 以上である必要があります。 ドライバーは、現在の結果セットまたは SQL ステートメントに基づいて、これらの引数の値の上限をチェックする必要があります。  
   
--   長さ/インジケーターの引数とデータバッファーの長さの引数には、適切な値が含まれている必要があります。 たとえば、 **Sqlcolumns** (*NameLength3*) のテーブル名の長さを指定する引数には SQL_NTS または0より大きい値を指定する必要があります。**SQLDescribeCol**の*bufferlength*には、0以上の値を指定する必要があります。 ドライバーは、これらの引数を確認する必要がある場合もあります。 たとえば、 *NameLength3*がデータソース内のテーブル名の最大長以下であることを確認できます。
+-   長さ/インジケーター引数とデータ・バッファー長引数には、適切な値が含まれている必要があります。 たとえば **、SQLColumns** (*NameLength3*) のテーブル名の長さを指定する引数は、SQL_NTSまたは 0 より大きい値である必要があります。*バッファー長は* **0**以上である必要があります。 ドライバーは、これらの引数を確認する必要があります。 たとえば *、NameLength3*がデータ ソース内のテーブル名の最大長以下であることを確認できます。
