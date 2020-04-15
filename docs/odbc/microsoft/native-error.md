@@ -1,5 +1,5 @@
 ---
-title: ネイティブエラー |Microsoft Docs
+title: ネイティブ エラー |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - native error codes [ODBC]
 - positive error codes [ODBC]
 ms.assetid: b662fab5-c236-4895-a64f-00c9c6c652c2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 494c400ff5ead94c6bf8fdcd4be06652824b236f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d12f86b577d587490f66143a5b18e14adc6d39a2
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68044999"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298182"
 ---
 # <a name="native-error"></a>ネイティブ エラー
-プラスのネイティブエラーコードは、デスクトップデータベースドライバーによって生成されます。 Microsoft Jet によって、負のエラーコードが生成されます。 詳細については、 *『 Microsoft Jet データベースエンジンプログラマーズガイド』* を参照してください。
+正のネイティブ エラー コードは、デスクトップ データベース ドライバによって生成されます。 負のエラー コードは、マイクロソフトの Jet によって生成されます。 詳細については、『 Microsoft *Jet データベース エンジン プログラマ ガイド 』* を参照してください。

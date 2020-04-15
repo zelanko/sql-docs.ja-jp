@@ -1,5 +1,5 @@
 ---
-title: 読み取り専用の状態 (テキストファイルドライバー) |Microsoft Docs
+title: 読み取り専用ステータス(テキストファイルドライバ) |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - read-only status for text driver [ODBC]
 - text file driver [ODBC], read-only status
 ms.assetid: 859580bb-4e69-4517-a4f1-460649dd06ca
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e253b3ad8144a75ca3c176c9d9fce94a7e4ec47f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 934d125b8e50d0c3d1c98fdb8b7ec1cdc7bc2e88
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67988033"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304863"
 ---
 # <a name="read-only-status-text-file-driver"></a>読み取り専用の状態 (テキスト ファイル ドライバー)
-テキストドライバーが使用されている場合、データソーステーブルは読み取り専用です。 ただし、アプリケーションでは、テキストテーブルの挿入を実行できます。
+Text ドライバを使用すると、データ ソース テーブルは読み取り専用になります。 ただし、アプリケーションはテキスト テーブルの挿入を実行できます。

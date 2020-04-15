@@ -1,5 +1,5 @@
 ---
-title: Translation Dll |Microsoft Docs
+title: 翻訳 DLL |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,20 +10,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - translation DLLs [ODBC]
 ms.assetid: 38975059-b346-410f-bb27-326f3f7bbf39
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 168b7b5ef6f8b88a39dbbb0942cf1520adf261e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3dad12bcd71434c1013b4fde5b4bd0231e56016f
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68086033"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81297947"
 ---
 # <a name="translation-dlls"></a>トランザクション DLL
-多くの場合、アプリケーションとデータソースは異なる文字セットにデータを格納します。 ODBC では、ドライバーが文字セット間でデータを変換できるようにするための汎用的なメカニズムが用意されています。 これは、変換関数**SQLDriverToDataSource**と**sqldatasourcetodriver**を実装する DLL で構成されます。これは、データソースとドライバー間のすべてのデータフローを変換するためにドライバーによって呼び出されます。 この DLL は、アプリケーション開発者、ドライバー開発者、またはサードパーティが記述できます。  
+アプリケーションとデータ ソースは、多くの場合、異なる文字セットにデータを格納します。 ODBC には、ドライバーがデータをある文字セットから別の文字セットに変換できるようにする汎用的なメカニズムが用意されています。 これは、データ ソースとドライバーの間で流れるすべてのデータを変換するためにドライバーによって呼び出される変換関数**SQLDriverToDataSource**と**SQLDataSourceToDriver**を実装する DLL で構成されます。 この DLL は、アプリケーション開発者、ドライバー開発者、またはサード パーティによって記述できます。  
   
- 特定のデータソースの翻訳 DLL は、そのデータソースのシステム情報で指定できます。詳細については、「[データソースの指定サブキー](../../../odbc/reference/install/data-source-specification-subkeys.md)」を参照してください。 また、SQL_ATTR_TRANSLATE_DLL と SQL_ATTR_TRANSLATE_OPTION の接続属性を使用して、実行時に設定することもできます。  
+ 特定のデータ ソースの変換 DLL は、そのデータ ソースのシステム情報で指定できます。詳細については、「[データ ソース仕様サブキー](../../../odbc/reference/install/data-source-specification-subkeys.md)」を参照してください。 また、SQL_ATTR_TRANSLATE_DLLとSQL_ATTR_TRANSLATE_OPTION接続属性を使用して実行時に設定することもできます。  
   
- Translation オプションは、特定の翻訳 DLL でのみ解釈できる値です。 たとえば、翻訳 DLL が異なるコードページ間で変換を行う場合、オプションによって、アプリケーションとデータソースで使用されるコードページの数が指定されることがあります。 翻訳 DLL で翻訳オプションを使用する必要はありません。  
+ 変換オプションは、特定の変換 DLL によってのみ解釈できる値です。 たとえば、変換 DLL が異なるコード ページ間で変換される場合、このオプションは、アプリケーションとデータ ソースで使用されるコード ページの番号を指定する場合があります。 翻訳 DLL で翻訳オプションを使用する必要はありません。  
   
- 変換 DLL を指定すると、ドライバーはそれを読み込み、それを呼び出して、アプリケーションとデータソース間のすべてのデータフローを変換します。 これには、データソースに送信されるすべての SQL ステートメントと文字パラメーター、すべての文字の結果、列名などの文字のメタデータ、データソースから取得されるエラーメッセージが含まれます。 変換 DLL は、アプリケーションがデータソースに接続されるまで読み込まれないため、接続データは変換されません。
+ 変換 DLL を指定した後、ドライバーは、それを読み込み、アプリケーションとデータ ソース間で流れるすべてのデータを変換する呼び出しします。 これには、データ ソースに送信されるすべての SQL ステートメントと文字パラメーター、およびすべての文字結果、列名などの文字メタデータ、およびデータ ソースから取得されたエラー メッセージが含まれます。 変換 DLL は、アプリケーションがデータ ソースに接続するまで読み込まれないので、接続データは変換されません。

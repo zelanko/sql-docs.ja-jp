@@ -1,5 +1,5 @@
 ---
-title: カーソルの使用方法に関するトピック (ODBC) |Microsoft Docs
+title: カーソルの使い方に関するトピック (ODBC) |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - cursors [ODBC], how to topics
 ms.assetid: 4e07d2a6-f389-4685-841c-71e34f948816
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8fa0411d322e3e16b8fe1bebf6f84fb626b0f82e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 959110f3e240553bd94dab6c26e208b40c8d43ef
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73781501"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81294178"
 ---
 # <a name="using-cursors-how-to-topics-odbc"></a>カーソルを使用する方法に関するトピック (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,9 +27,9 @@ ms.locfileid: "73781501"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [ODBC &#40;カーソルの使用&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-cursors-odbc.md)  
+-   [ODBC&#41;&#40;カーソルを使用する](../../../relational-databases/native-client-odbc-how-to/cursors/use-cursors-odbc.md)  
   
--   [ODBC&#41;&#40;行セットバインドを使用する](../../../relational-databases/native-client-odbc-how-to/cursors/use-rowset-binding-odbc.md)  
+-   [ODBC&#41;&#40;行セット バインドを使用する](../../../relational-databases/native-client-odbc-how-to/cursors/use-rowset-binding-odbc.md)  
   
 -   [ODBC&#41;&#40;行セットのフェッチと更新](../../../relational-databases/native-client-odbc-how-to/cursors/fetch-and-update-rowsets-odbc.md)  
   

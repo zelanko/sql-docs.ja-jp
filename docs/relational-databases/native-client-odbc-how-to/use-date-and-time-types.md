@@ -1,5 +1,5 @@
 ---
-title: 日付と時刻の型を使用する |Microsoft Docs
+title: 日付と時刻の種類を使用する |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,34 +8,33 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: a2aa5644-1e39-4d78-b149-0599d3502cda
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b77bb50620d106ff801241901f7054459806ef36
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 79ace76e1652cad35c3c04a78e767c0e9a6b4228
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73780320"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298282"
 ---
 # <a name="use-date-and-time-types"></a>日付/時刻型の使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  このサンプルでは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] で追加された日付/時刻データ構造を初期化する方法を示します。 さらに、入力値を準備し、パラメーターをバインドして、クエリを実行します。 これらの型の使用方法の詳細については、「[日付と時刻の機能強化 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)」を参照してください。  
+  このサンプルでは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] で追加された日付/時刻データ構造を初期化する方法を示します。 さらに、入力値を準備し、パラメーターをバインドして、クエリを実行します。 これらの型の使用方法の詳細については、「 [ODBC&#41;&#40;日付と時刻の向上](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  DateTime という名前の ODBC データ ソースが必要です。 DateTime の既定のデータベースは tempdb です。 このデータ ソースには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 用の ODBC ドライバーが使用されている必要があります。  
   
  このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
   
- このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 
-  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
+ このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
   
- 1つ目[!INCLUDE[tsql](../../includes/tsql-md.md)]の () コードリストは、このサンプルで使用するテーブルを作成します。  
+ 最初の[!INCLUDE[tsql](../../includes/tsql-md.md)]( ) コードリストは、このサンプルで使用されるテーブルを作成します。  
   
- odbc32.lib と user32.lib を使用して 3 つ目の (C++) コード リストをコンパイルします。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
+ odbc32.lib と user32.lib を使用して 3 つ目の (C++) コード リストをコンパイルします。 INCLUDE 環境変数に sqlncli.h を含むディレクトリが含まれていることを確認します。  
   
- 3番目[!INCLUDE[tsql](../../includes/tsql-md.md)]の () コードリストは、このサンプルで使用されるテーブルを削除します。  
+ 3 番目[!INCLUDE[tsql](../../includes/tsql-md.md)]の ( ) コードリストは、このサンプルで使用されているテーブルを削除します。  
   
 ```sql
 use tempdb  

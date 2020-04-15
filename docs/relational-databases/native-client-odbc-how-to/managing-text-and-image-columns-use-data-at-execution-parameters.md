@@ -1,5 +1,5 @@
 ---
-title: 実行時データパラメーターの使用 (ODBC) |Microsoft Docs
+title: 実行時データパラメーター (ODBC) を使用する |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - data-at-execution
 ms.assetid: 2a738aef-c991-4f62-bdab-a5221c335f31
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9235d096be513e1480dab7e23672e14011c63f0a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 957a46b2a93013305e8642d4b311c22c9ec16d6f
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73781209"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298842"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-parameters"></a>text 列と image 列の管理 - 実行時パラメーターの使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,40 +26,34 @@ ms.locfileid: "73781209"
     
 ### <a name="to-use-data-at-execution-text-ntext-or-image-parameters"></a>実行時データ text パラメーター、ntext パラメーター、または image パラメーターを使用するには  
   
-1.  
-  [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) を呼び出してプログラム バッファーをステートメント パラメーターにバインドするときに、次のように指定します。  
+1.  [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) を呼び出してプログラム バッファーをステートメント パラメーターにバインドするときに、次のように指定します。  
   
     -   最後のパラメーターとして、SQL_LEN_DATA_AT_EXEC(*length*) を使用します。この *length* は、**text** 列、**ntext** 列、または **image** パラメーターの合計の長さ (バイト単位) です。  
   
     -   プログラム定義のパラメーター識別子として **rgbValue** (8 番目のパラメーター) を使用します。  
   
-2.  
-  [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) または [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) を呼び出すと、SQL_NEED_DATA が返されます。これは、実行時データ パラメーターを処理する準備が整っていることを示します。  
+2.  [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) または [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) を呼び出すと、SQL_NEED_DATA が返されます。これは、実行時データ パラメーターを処理する準備が整っていることを示します。  
   
 3.  実行時データの各パラメーターに対して次の操作を行います。  
   
-    -   
-  [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) を呼び出して、プログラム定義のパラメーター ID を取得します。 実行時データ パラメーターが他にもある場合は、SQL_NEED_DATA が返されます。  
+    -   [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) を呼び出して、プログラム定義のパラメーター ID を取得します。 実行時データ パラメーターが他にもある場合は、SQL_NEED_DATA が返されます。  
   
-    -   
-  [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md) を 1 回以上呼び出して、パラメーター データを length の長さまで送信します。  
+    -   [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md) を 1 回以上呼び出して、パラメーター データを length の長さまで送信します。  
   
-4.  
-  [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) を呼び出して、最後の実行時データ パラメーターのデータがすべて送信されたことを確認します。 SQL_NEED_DATA は返されません。  
+4.  [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) を呼び出して、最後の実行時データ パラメーターのデータがすべて送信されたことを確認します。 SQL_NEED_DATA は返されません。  
   
 ## <a name="example"></a>例  
  このサンプルでは、SQLParamData と SQLPutData を使用して、SQL_LONG 変数の文字データを読み込む方法を示します。 このサンプルは IA64 ではサポートされていません。  
   
- AdventureWorks と呼ばれる ODBC データ ソース (既定のデータベースは AdventureWorks サンプル データベース) が必要です  (AdventureWorks サンプルデータベースは、 [Microsoft SQL Server のサンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホームページからダウンロードできます)。このデータソースは、オペレーティングシステムによって提供される ODBC ドライバーに基づいている必要があります (ドライバー名は "SQL Server")。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
+ AdventureWorks と呼ばれる ODBC データ ソース (既定のデータベースは AdventureWorks サンプル データベース) が必要です  (アドベンチャーワークスサンプルデータベースは[、Microsoft SQL Server サンプルおよびコミュニティプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホームページからダウンロードできます)。このデータ ソースは、オペレーティング システムによって提供される ODBC ドライバに基づいている必要があります (ドライバ名は "SQL Server" です)。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
   
- このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 
-  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
+ このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
   
- 最初の ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) コードリストを実行して、サンプルで使用するテーブルを作成します。  
+ サンプルで使用される[!INCLUDE[tsql](../../includes/tsql-md.md)]テーブルを作成するには、最初の ( ) コードリストを実行します。  
   
  odbc32.lib を使用して 2 つ目の (C++) コード リストをコンパイルします。 次に、プログラムを実行します。  
   
- 3番目の[!INCLUDE[tsql](../../includes/tsql-md.md)]() コードリストを実行して、サンプルによって使用されているテーブルを削除します。  
+ サンプルで使用されている[!INCLUDE[tsql](../../includes/tsql-md.md)]テーブルを削除するには、3 番目の ( ) コードリストを実行します。  
   
 ```  
 use AdventureWorks  
@@ -231,6 +225,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [Text 列と image 列の管理方法に関するトピック &#40;ODBC&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
+ [テキストとイメージの列の管理 方法に関するトピック&#40;ODBC&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
   
   

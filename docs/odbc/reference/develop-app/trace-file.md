@@ -1,5 +1,5 @@
 ---
-title: トレースファイル |Microsoft Docs
+title: トレース ファイル |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,18 +11,18 @@ helpviewer_keywords:
 - trace files [ODBC]
 - tracing options [ODBC], trace files
 ms.assetid: ec97f949-126f-40a2-b67e-e74520a524cb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c94c3718c116b37eb198264887dfb4a319bd1dc3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ddd0ee24649592cf4a1a296a51404334145a3bab
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67985153"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298059"
 ---
 # <a name="trace-file"></a>トレース ファイル
-アプリケーションでは、Odbc .ini レジストリエントリで**tracefile**キーワードを設定するか、SQL_ATTR_TRACEFILE 接続属性を使用して**SQLSetConnectAttr**を呼び出すことによって、トレースファイルを指定します。 トレースを有効にしたときにファイルが存在しない場合は、ドライバーマネージャーによってファイルが作成されます。 競合を回避するには、各アプリケーションに専用のトレースファイルを用意する必要があります。 アプリケーションでは、複数のトレースファイルを使用できます。アプリケーションのセットアッププログラムでは、ユーザーにトレースファイルを選択させることができます。 トレースが動的に有効になっている場合は、トレースファイルにログ記録するのではなく、トレース結果を表示することもできます。  
+アプリケーションは、Odbc.ini レジストリ エントリに**TraceFile**キーワードを設定するか、SQL_ATTR_TRACEFILE接続属性を指定して**SQLSetConnectAttr**を呼び出すことによって、トレース ファイルを指定します。 トレースが有効になっているときにファイルが存在しない場合、ドライバー マネージャーは、ファイルを作成します。 競合を避けるために、各アプリケーションに専用のトレース ファイルが必要です。 アプリケーションは、複数のトレース・ファイルを使用できます。アプリケーションのセットアップ プログラムは、トレース ファイルの選択をユーザーに提供できます。 トレースが動的に有効になっている場合、トレース ファイルにログを記録するのではなく、トレース結果を表示することもできます。  
   
- トレースファイルは、すべての引数のデータ型と値を使用して、各 ODBC 関数呼び出しのログを提供します。 すべての入力関数をログに記録し、返されたすべての関数をリターンコードとエラー状態と共にログに記録します。  
+ トレース ファイルは、すべての引数のデータ型と値を持つ各 ODBC 関数呼び出しのログを提供します。 すべての入力関数をログに記録し、戻りコードとエラー状態を持つすべての戻り関数をログに記録します。  
   
- ODBC 3.x では、接続関数に対するパラメーターがトレース DLL に提供されませ*ん。*
+ ODBC *3.x*では、接続関数へのパラメーターはトレース DLL には提供されません。

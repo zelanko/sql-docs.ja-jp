@@ -1,5 +1,5 @@
 ---
-title: FILESTREAM のサポート (ODBC) |Microsoft Docs
+title: ファイルストリームサポート (ODBC) |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -11,33 +11,32 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server], ODBC
 - ODBC, FILESTREAM support
 ms.assetid: 87982955-1542-4551-9c06-447ffe8193b9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4e7d2e57b68ed9ab3ae117c543361f810952ba9c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 29a7f6ae6cb26c5ddf27f6e495b5348ddd8fe006
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73761190"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303750"
 ---
 # <a name="filestream-support-odbc"></a>FILESTREAM のサポート (ODBC)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client の ODBC では、強化された FILESTREAM 機能がサポートされています。 この機能の詳細については[、FILESTREAM サポート](../../../relational-databases/native-client/features/filestream-support.md)を参照してください。 FILESTREAM の ODB サポートの例については[、「FILESTREAM を使用したデータの増分受信と ODBC&#41;の増分&#40;」](../../../relational-databases/native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md)を参照してください。  
   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client の ODBC では、強化された FILESTREAM 機能がサポートされています。 この機能の詳細については、「 [FILESTREAM のサポート](../../../relational-databases/native-client/features/filestream-support.md)」を参照してください。 FILESTREAM の ODBC サポートを示すサンプルについては、「 [filestream &#40;ODBC&#41;を使用した増分データの送受信](../../../relational-databases/native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md)」を参照してください。  
+ 2 GB を超える**varbinary(max)** 値を送受信するには、アプリケーションは *、列サイズ*を**SQL_SS_LENGTH_UNLIMITED**に設定した SQLBindParameter を使用してパラメーターをバインドし *、StrLen_or_IndPtr*の内容を**SQL_DATA_AT_EXEC**に設定してから SQLExecDirect または SQLExecute を実行する必要があります。  
   
- 2 GB を超える**varbinary (max)** 値を送受信するには、アプリケーションで SQLBindParameter を使用してパラメーターをバインドし、 *columnsize*を**SQL_SS_LENGTH_UNLIMITED**に設定して、SQLExecDirect または sqlexecute の前に*StrLen_or_IndPtr*の内容を**SQL_DATA_AT_EXEC**に設定する必要があります。  
+ 実行時のデータ パラメーターと同様に、データは SQLParamData と SQLPutData で提供されます。  
   
- 実行時データパラメーターと同様に、データは SQLParamData および Sqlparamdata と共に提供されます。  
+ 列が SQLBindCol でバインドされていない場合は、SQLGetData を呼び出して、FILESTREAM 列のチャンク内のデータをフェッチできます。  
   
- 列が SQLBindCol にバインドされていない場合は、SQLGetData を呼び出して、FILESTREAM 列のチャンク単位でデータをフェッチできます。  
+ SQLBindCol でバインドされている場合は、ファイル ストリーム データを更新できます。  
   
- SQLBindCol にバインドされている場合は、FILESTREAM データを更新できます。  
-  
- バインドされた列で SQLFetch を呼び出すと、バッファーが値全体を保持するのに十分な大きさでない場合、"データが切り捨てられました" という警告が表示されます。 この警告を無視し、SQLParamData 呼び出しと Sqlparamdata 呼び出しを使用して、このバインド列のデータを更新します。 SQLBindCol にバインドされている場合は、SQLSetPos を使用して FILESTREAM データを更新できます。  
+ バインドされた列で SQLFetch を呼び出すと、バッファーが値全体を保持するのに十分な大きさでない場合は、「データが切り捨てられた」という警告が表示されます。 この警告を無視して、このバインド列のデータを SQLParamData および SQLPutData 呼び出しで更新します。 SQLBindCol でバインドされている場合は、SQLSetPos を使用してファイル ストリーム データを更新できます。  
   
 ## <a name="example"></a>例  
- FILESTREAM 列は**varbinary (max)** 列とまったく同じように動作しますが、サイズ制限はありません。 これらは SQL_VARBINARY としてバインドされます。 SQL_LONGVARBINARY は image 列で使用され、この型に関する制限が存在します。 たとえば、SQL_LONGVARBINARY connot を出力パラメーターとして使用することはできません)。次の例では、FILESTREAM 列に対する直接 NTFS アクセスを示します。 これらの例では、データベースで、次の [!INCLUDE[tsql](../../../includes/tsql-md.md)] コードが実行されていることを前提としています。  
+ FILESTREAM カラムは**varbinary(max)** カラムとまったく同じように動作しますが、サイズ制限はありません。 これらは SQL_VARBINARY としてバインドされます。 SQL_LONGVARBINARY は image 列で使用され、この型に関する制限が存在します。 たとえば、出力パラメーターとして使用SQL_LONGVARBINARYは使用されません)。次の例は、FILESTREAM 列に対する NTFS への直接アクセスを示しています。 これらの例では、データベースで、次の [!INCLUDE[tsql](../../../includes/tsql-md.md)] コードが実行されていることを前提としています。  
   
 ```  
 CREATE TABLE fileStreamDocs(  

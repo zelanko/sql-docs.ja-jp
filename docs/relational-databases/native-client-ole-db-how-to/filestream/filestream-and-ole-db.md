@@ -1,5 +1,5 @@
 ---
-title: Filestream と OLE DB |Microsoft Docs
+title: FILESTREAM と OLE DB | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,27 +8,27 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 8801f091-2241-4085-87b7-33e031328c9c
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b9c42cabb34d78086e31f9b59096ac4c78558f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 18e8b827300c3f19fbb24a78d6e1b581345b248b
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73768178"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302294"
 ---
 # <a name="filestream-and-ole-db"></a>FILESTREAM と OLE DB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   ここでは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB を FILESTREAM 機能と共に使用する方法を示す 4 つのサンプルを紹介します。  
   
--   [IBCPSession &#40;OLE DB を使用して FILESTREAM 列をファイルに読み取り&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/read-a-filestream-column-to-file-using-ibcpsession-ole-db.md)  
+-   [IBCPSession を使用した FILESTREAM 列のファイルへの読み取り &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/read-a-filestream-column-to-file-using-ibcpsession-ole-db.md)  
   
--   [ISequentialStream &#40;OLE DB を使用して FILESTREAM 列からデータを取得する&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db.md)  
+-   [ISequentialStream を使用した FILESTREAM 列からのデータの取得 &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db.md)  
   
--   [ICommandText Parameter &#40;OLE DB にバインドされた ISequentialStream を使用して FILESTREAM 列にデータを送信&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
+-   [ICommandText パラメーターにバインドされた ISequentialStream を使用したデータの FILESTREAM 列への送信 (OLE DB)](../../../relational-databases/native-client-ole-db-how-to/filestream/send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
   
--   [IRowsetFastUpload &#40;OLE DB を使用して FILESTREAM 列にデータを送信&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
+-   [IRowsetFastUpload を使用した FILESTREAM 列へのデータの送信 (OLE DB)](../../../relational-databases/native-client-ole-db-how-to/filestream/send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
   
   

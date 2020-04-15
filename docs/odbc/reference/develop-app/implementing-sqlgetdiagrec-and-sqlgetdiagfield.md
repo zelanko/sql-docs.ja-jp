@@ -1,5 +1,5 @@
 ---
-title: SQLGetDiagRec と SQLGetDiagField | を実装するMicrosoft Docs
+title: SQL を実装する場合は、次の手順を実行します。マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,21 +14,21 @@ helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagRec
 - retrieving diagnostic information [ODBC]
 ms.assetid: 11ba1857-b533-4517-8131-a2a8a0154a0a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a4b602d5ff4a94d2888395e6a62f03553fb50f98
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4c090af19a9296e46e3036ca23f6c97298bcb1b8
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68216374"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300142"
 ---
 # <a name="implementing-sqlgetdiagrec-and-sqlgetdiagfield"></a>SQLGetDiagRec および SQLGetDiagField の実装
-**SQLGetDiagRec**と**SQLGetDiagField**は、ドライバーマネージャーと各ドライバーによって実装されます。 ドライバーマネージャーと各ドライバーは、各環境、接続、ステートメント、記述子ハンドルの診断レコードを保持し、そのハンドルを使用して別の関数が呼び出された場合、またはハンドルが解放された場合にのみ、これらのレコードを解放します。  
+**ドライバー マネージャー****と各**ドライバーによって実装されます。 ドライバー マネージャーと各ドライバーは、各環境、接続、ステートメント、および記述子ハンドルの診断レコードを保持し、別の関数がそのハンドルを呼び出すか、ハンドルが解放された場合にのみ、それらのレコードを解放します。  
   
- ドライバーマネージャーと各ドライバーは、[一連の状態レコードの順序](../../../odbc/reference/develop-app/sequence-of-status-records.md)に従って最初のステータスレコードを特定する必要がありますが、ドライバーマネージャーは最後のレコードのシーケンスを決定します。  
+ ドライバー マネージャーと各ドライバーの両方が、状態レコードのシーケンスのランキングに従って最初[の状態レコード](../../../odbc/reference/develop-app/sequence-of-status-records.md)を決定する必要がありますが、ドライバー マネージャーは、レコードの最終的なシーケンスを決定します。  
   
- **SQLGetDiagRec**と**SQLGetDiagField**は、自身に関する診断レコードを投稿しません。  
+ **SQLGetDiagRec**と**SQLGetDiagField**は、自分自身に関する診断レコードをポストしません。  
   
  このセクションでは、次のトピックを扱います。  
   

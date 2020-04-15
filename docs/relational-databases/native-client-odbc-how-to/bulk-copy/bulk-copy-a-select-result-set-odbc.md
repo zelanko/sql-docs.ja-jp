@@ -1,5 +1,5 @@
 ---
-title: SELECT 結果セットの一括コピー (ODBC) |Microsoft Docs
+title: SELECT 結果セットの一括コピー (ODBC) |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - bulk copy [ODBC], data files
 - bulk copy [ODBC], about bulk copy
 ms.assetid: 63d5a87b-4d5f-449b-8c77-9f9cc6b190d4
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3909c8d8b8df5b5bcdb17945eee547e81f73f004
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 559477510dba3af4d2b92ba0b961225660505eea
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73781997"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298360"
 ---
 # <a name="bulk-copy-a-select-result-set-odbc"></a>SELECT 結果セットの一括コピー (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "73781997"
   このサンプルでは、一括コピー関数を使用して SELECT ステートメントの結果セットを一括コピーする方法を示します。 このサンプルは、ODBC 3.0 以降のバージョン用に開発されました。  
   
 > [!IMPORTANT]  
->  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、 [Win32 CRYPTO API](https://go.microsoft.com/fwlink/?LinkId=64532)を使用して暗号化する必要があります。  
+>  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
   
 ### <a name="to-bulk-copy-out-the-result-set-of-a-select-statement"></a>SELECT ステートメントの結果セットを一括コピーするには  
   
@@ -38,9 +38,9 @@ ms.locfileid: "73781997"
   
 3.  SQL Server に接続します。  
   
-4.  [Bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)を呼び出して、次の情報を設定します。  
+4.  [bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)を呼び出して、次の情報を設定します。  
   
-    -   *Sztable*パラメーターには NULL を指定します。  
+    -   *szTable*パラメーターに NULL を指定します。  
   
     -   結果セット データを受信するデータ ファイルの名前。  
   
@@ -48,17 +48,16 @@ ms.locfileid: "73781997"
   
     -   コピーの方向 (DB_OUT)。  
   
-5.  [Bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)を呼び出し、EOPTION を BCPHINTS に設定し、SELECT ステートメントを含む sqltchar 配列へのポインターを ivalue に配置します。  
+5.  [bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)呼び出し、 eOption を BCPHINTS に設定し、iValue に SELECT ステートメントを含む SQLTCHAR 配列へのポインターを配置します。  
   
-6.  [Bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)を呼び出して、一括コピー操作を実行します。  
+6.  [bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)を呼び出して、一括コピー操作を実行します。  
 
- これらの手順を使用すると、ファイルはネイティブ形式で作成されます。 [Bcp_colfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)を使用して、データ値を他のデータ型に変換できます。 詳細については、「 [&#40;ODBC&#41;の一括コピーフォーマットファイルの作成](../../../relational-databases/native-client-odbc-how-to/bulk-copy/create-a-bulk-copy-format-file-odbc.md)」を参照してください。  
+ これらの手順を使用すると、ファイルはネイティブ形式で作成されます。 bcp_colfmt[を使用](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)して、データ値を他のデータ型に変換できます。 詳細については、「 [ODBC&#41;で一括コピー形式ファイルを作成&#40;」](../../../relational-databases/native-client-odbc-how-to/bulk-copy/create-a-bulk-copy-format-file-odbc.md)を参照してください。  
   
 ## <a name="example"></a>例  
- AdventureWorks と呼ばれる ODBC データ ソース (既定のデータベースは AdventureWorks サンプル データベース) が必要です  (AdventureWorks サンプルデータベースは、 [Microsoft SQL Server のサンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホームページからダウンロードできます)。このデータソースは、オペレーティングシステムによって提供される ODBC ドライバーに基づいている必要があります (ドライバー名は "SQL Server")。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
+ AdventureWorks と呼ばれる ODBC データ ソース (既定のデータベースは AdventureWorks サンプル データベース) が必要です  (アドベンチャーワークスサンプルデータベースは[、Microsoft SQL Server サンプルおよびコミュニティプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホームページからダウンロードできます)。このデータ ソースは、オペレーティング システムによって提供される ODBC ドライバに基づいている必要があります (ドライバ名は "SQL Server" です)。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
   
- このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 
-  [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
+ このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
   
  odbc32.lib と odbcbcp.lib を使用してコンパイルします。  
   
@@ -167,6 +166,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>参照  
- [SQL Server ODBC ドライバーを使用した一括コピーの操作方法に関するトピック &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
+ [ODBC&#41;の SQL Server ODBC ドライバーの方法に関するトピック&#40;一括コピー](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
   
   

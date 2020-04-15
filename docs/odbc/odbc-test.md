@@ -1,5 +1,5 @@
 ---
-title: ODBC テスト |Microsoft Docs
+title: ODBC テスト |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,24 +16,24 @@ helpviewer_keywords:
 - odbcte32.exe [ODBC]
 - testing ODBC drivers [ODBC]
 ms.assetid: 7f13894c-5697-436c-be3d-fe16e1a02325
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0a95e1798758aa044df5196f621c6afa14958c5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b50c691b5ef989b934041e211bcb0e158aff2cb4
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67996285"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307543"
 ---
 # <a name="odbc-test"></a>ODBC のテスト
-Microsoft® ODBC Test は odbc 対応のアプリケーションであり、odbc ドライバーおよび ODBC ドライバーマネージャーのテストに使用できます。 ODBC 3.51 には、ANSI と Unicode 対応の両方のバージョンの ODBC テストが含まれています。 対応するファイルは次のとおりです。  
+ODBC テスト® ODBC ドライバーと ODBC ドライバー マネージャーをテストするために使用できる ODBC 対応のアプリケーションです。 ODBC 3.51 には、ANSI とユニコード対応の両方のバージョンの ODBC テストが含まれています。 対応するファイルは次のとおりです。  
   
--   Odbcte32 と Gtrtst32 (ANSI バージョン用)。  
+-   ANSI バージョンの Odbcte32.exe および Gtrtst32.dll。  
   
--   Odbct32w と Gtrts32w (Unicode バージョンの場合)。  
+-   ユニコードバージョンの Odbct32w.exe および Gtrts32w.dll。  
   
- ODBC テストを使用するには、ODBC API、C 言語、および SQL を理解している必要があります。 ODBC API の詳細については、 [Odbc プログラマーズリファレンス](../odbc/reference/odbc-programmer-s-reference.md)を参照してください。  
+ ODBC テストを使用するには、ODBC API、C 言語、および SQL を理解する必要があります。 ODBC API の詳細については[、ODBC プログラマ リファレンス を参照してください](../odbc/reference/odbc-programmer-s-reference.md)。  
   
- ドキュメントのこのセクションに以前含まれていたヘルプトピックが、ODBC テストプログラムに含まれるようになりました。 Odbcte32 または Odbct32w を開き、[**ヘルプ**] メニューを開き、[**ヘルプトピック**] をクリックします。  
+ このドキュメントのこのセクションに以前含まれていたヘルプ トピックは、ODBC テスト プログラムに含まれるようになりました。 Odbcte32.exe または Odbct32w.exe を開き、[**ヘルプ**] メニューを開き、[**トピックのヘルプ**] をクリックします。  
   
- 64ビットの Microsoft Windows オペレーティングシステムを対象とするこれらのアプリケーションの64ビットバージョンは、個別のファイルであっても、32ビットバージョンと同じ名前になっていることに注意してください。 つまり、64ビットバージョンの ODBC テストの Unicode バージョンの名前は odbct32w です。
+ 64 ビットの Microsoft Windows オペレーティング システム用の 64 ビット バージョンのアプリケーションは、32 ビット バージョンと同じ名前を持ちます。 つまり、64 ビットバージョンの ODBC テストのユニコードバージョンの名前は odbct32w.exe です。

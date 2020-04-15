@@ -1,5 +1,5 @@
 ---
-title: SQL Server Native Client | での ADO の使用Microsoft Docs
+title: SQL Server ネイティブ クライアントで ADO を使用する |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -12,42 +12,41 @@ helpviewer_keywords:
 - ADO [SQL Server Native Client]
 - SQLNCLI, ADO
 ms.assetid: 118a7cac-4c0d-44fd-b63e-3d542932d239
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7dc196adfa3d43563f1d8755efac2bf363bb88c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 81f7ff71643776eb3116dab0157a4f2cd32b788a
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73761517"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302468"
 ---
 # <a name="using-ado-with-sql-server-native-client"></a>SQL Server Native Client と ADO の併用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  複数のアクティブな結果セット (MARS)、 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]クエリ通知、ユーザー定義型 (udt)、または新しい**xml**データ型など、で導入された新機能を利用するには、ActiveX データオブジェクト (ADO) を使用する既存[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のアプリケーションで、データアクセスプロバイダーとして Native Client OLE DB プロバイダーを使用する必要があります。  
+  複数のアクティブな結果セット (MARS)、クエリ通知、ユーザー定義型 (UDT)、新しい[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]**xml**データ型などで導入された新機能を利用するには、ActiveX データ オブジェクト (ADO) を使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]する既存のアプリケーションでネイティブ クライアント OLE DB プロバイダーを使用する必要があります。  
   
- 
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] の新機能を一切使用する必要がない場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを使用する必要はありません。つまり、現在のデータ アクセス プロバイダー (通常は SQLOLEDB) を継続して使用できます。 既存のアプリケーションを強化して、[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] の新機能を使用する必要がある場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを使用してください。  
+ [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] の新機能を一切使用する必要がない場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを使用する必要はありません。つまり、現在のデータ アクセス プロバイダー (通常は SQLOLEDB) を継続して使用できます。 既存のアプリケーションを強化して、[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] の新機能を使用する必要がある場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを使用してください。  
   
 > [!NOTE]  
 >  新しいアプリケーションを開発している場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の最新バージョンのすべての新機能にアクセスできるように、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ではなく、ADO.NET および .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の使用を検討することをお勧めします。 .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の詳細については、ADO.NET に関する .NET Framework SDK のドキュメントを参照してください。  
   
- ADO から [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の最新バージョンの新機能を使用できるように、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを機能強化し、OLE DB の中核となる機能を拡張しました。 ADO アプリケーションはこのような機能強化により、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の新しい機能、および [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] で導入された 2 つのデータ型 (**xml** と **udt**) を使用できるようになります。 また、この機能強化では、**varchar**、**nvarchar**、**varbinary** の各データ型に対する機能も強化されています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client では、ado アプリケーションで使用するために、SSPROP_INIT_DATATYPECOMPATIBILITY 初期化プロパティが DBPROPSET_SQLSERVERDBINIT プロパティセットに追加されます。これにより、新しいデータ型が ADO と互換性のある方法で公開されるようになります。 また、Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB プロバイダーは、接続文字列で設定された**DataTypeCompatibility**という名前の新しい接続文字列キーワードも定義します。  
+ ADO から [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の最新バージョンの新機能を使用できるように、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを機能強化し、OLE DB の中核となる機能を拡張しました。 ADO アプリケーションはこのような機能強化により、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の新しい機能、および [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] で導入された 2 つのデータ型 (**xml** と **udt**) を使用できるようになります。 また、この機能強化では、**varchar**、**nvarchar**、**varbinary** の各データ型に対する機能も強化されています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ネイティブ クライアントは、ADO アプリケーションで使用するDBPROPSET_SQLSERVERDBINITのプロパティ セットにSSPROP_INIT_DATATYPECOMPATIBILITY初期化プロパティを追加して、新しいデータ型が ADO と互換性のある方法で公開されるようにします。 さらに、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ネイティブ クライアント OLE DB プロバイダーは、接続文字列で設定されている**DataTypeCompatibility**という名前の新しい接続文字列キーワードも定義します。  
   
 > [!NOTE]  
->  既存の ADO アプリケーションは、SQLOLEDB プロバイダーを使用して、XML、UDT、および大きな値のテキストやバイナリのフィールド値にアクセスして更新できます。 サイズの大きな値をとる新しいデータ型 **varchar(max)**、**nvarchar(max)**、**varbinary(max)** はそれぞれ、**adLongVarChar**、**adLongVarWChar**、**adLongVarBinary** という ADO 型として返されます。 XML 列は **adLongVarChar** として返され、UDT 列は **adVarBinary** として返されます。 ただし、SQLOLEDB ではなく[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB PROVIDER (SQLNCLI11) を使用する場合は、新しいデータ型が ADO データ型に正しくマップされるように、 **DataTypeCompatibility**キーワードを "80" に設定する必要があります。  
+>  既存の ADO アプリケーションは、SQLOLEDB プロバイダーを使用して、XML、UDT、および大きな値のテキストやバイナリのフィールド値にアクセスして更新できます。 サイズの大きな値をとる新しいデータ型 **varchar(max)**、**nvarchar(max)**、**varbinary(max)** はそれぞれ、**adLongVarChar**、**adLongVarWChar**、**adLongVarBinary** という ADO 型として返されます。 XML 列は **adLongVarChar** として返され、UDT 列は **adVarBinary** として返されます。 ただし[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、SQLOLEDB ではなくネイティブ クライアント OLE DB プロバイダー (SQLNCLI11) を使用する場合は、新しいデータ型が ADO データ型に正しくマップされるように **、DataTypeCompatibility**キーワードを "80" に設定する必要があります。  
   
 ## <a name="enabling-sql-server-native-client-from-ado"></a>ADO からの SQL Server Native Client の有効化  
- Native Client の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用を有効にするには、ADO アプリケーションで、接続文字列に次のキーワードを実装する必要があります。  
+ ネイティブ クライアントの[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用を有効にするには、ADO アプリケーションは接続文字列に次のキーワードを実装する必要があります。  
   
 -   `Provider=SQLNCLI11`  
   
 -   `DataTypeCompatibility=80`  
   
- Native Client で[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]サポートされている ADO 接続文字列キーワードの詳細については、「 [SQL Server Native Client での接続文字列キーワードの使用](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)」を参照してください。  
+ ネイティブ クライアントで[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]サポートされる ADO 接続文字列キーワードの詳細については、「 SQL Server ネイティブ[クライアントでの接続文字列キーワードの使用](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)」を参照してください。  
   
- 次の例では、MARS 機能の有効化など、Native Client で[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]動作するように完全に有効になっている ADO 接続文字列を確立しています。  
+ 次に、ネイティブ クライアントで[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]動作するように完全に有効になっている ADO 接続文字列を確立する例を示します。  
   
 ```  
 Dim con As New ADODB.Connection  
@@ -61,8 +60,8 @@ con.ConnectionString = "Provider=SQLNCLI11;" _
 con.Open  
 ```  
   
-## <a name="examples"></a>例  
- 次のセクションでは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーで ADO を使用する方法の例について説明します。  
+## <a name="examples"></a>使用例  
+ 次のセクションでは、ネイティブ クライアント OLE DB プロバイダー[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]で ADO を使用する方法の例を示します。  
   
 ### <a name="retrieving-xml-column-data"></a>XML 列データの取得  
  この例では、レコードセットを使用し、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **AdventureWorks** サンプル データベースの XML 列からデータを取得および表示します。  
@@ -144,7 +143,7 @@ Set con = Nothing
 ```  
   
 ### <a name="enabling-and-using-mars"></a>MARS の有効化と使用  
- この例では、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを介して MARS を有効にするように接続文字列が構築され、同じ接続を使用して実行するために2つのレコードセットオブジェクトが作成されます。  
+ この例では、接続文字列を構築して、ネイティブ クライアント OLE [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] DB プロバイダを通じて MARS を有効にし、同じ接続を使用して実行する 2 つのレコードセット オブジェクトを作成します。  
   
 ```  
 Dim con As New ADODB.Connection  
@@ -168,7 +167,7 @@ con.Close
 Set con = Nothing  
 ```  
   
- 以前のバージョンの OLE DB プロバイダーでは、アクティブな結果セットを 1 つの接続ごとに 1 つしか開くことができなかったので、このコードにより 2 回目の実行時に暗黙の接続が作成されました。 暗黙の接続が OLE DB 接続プールにプールされなかったので、これが原因でオーバーヘッドが増加することになります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーによって公開されている MARS 機能を使用すると、1つの接続で複数のアクティブな結果を取得できます。  
+ 以前のバージョンの OLE DB プロバイダーでは、アクティブな結果セットを 1 つの接続ごとに 1 つしか開くことができなかったので、このコードにより 2 回目の実行時に暗黙の接続が作成されました。 暗黙の接続が OLE DB 接続プールにプールされなかったので、これが原因でオーバーヘッドが増加することになります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ネイティブ クライアント OLE DB プロバイダーによって公開される MARS 機能では、1 つの接続で複数のアクティブな結果を取得します。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Native Client を使用したアプリケーションのビルド](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  

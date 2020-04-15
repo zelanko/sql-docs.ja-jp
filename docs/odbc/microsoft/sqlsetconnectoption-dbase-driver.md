@@ -1,5 +1,5 @@
 ---
-title: SQLSetConnectOption (dBASE ドライバー) |Microsoft Docs
+title: 接続オプション (dBASE ドライバー) |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,23 +11,23 @@ helpviewer_keywords:
 - DBase driver [ODBC], SQLSetConnectOption
 - SQLSetConnectOption function [ODBC], dBASE Driver
 ms.assetid: b1924c33-6820-4566-b716-6897807edd0f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d9f2fc32287df9da61d8eabc1b22445d19a0f027
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 32bfb4755d308706372c0d863f8246631c122f21
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68090865"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301523"
 ---
 # <a name="sqlsetconnectoption-dbase-driver"></a>SQLSetConnectOption (dBASE ドライバー)
 > [!NOTE]  
->  このトピックでは、dBASE ドライバー固有の情報について説明します。 この関数の一般的な情報については、「 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)」の該当するトピックを参照してください。  
+>  このトピックでは、dBASE ドライバー固有の情報を提供します。 この関数の一般的な情報については[、ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)の該当するトピックを参照してください。  
   
-|fOption|解説|  
+|オプション|解説|  
 |-------------|-------------|  
-|SQL_ACCESS_MODE|SQL_ACCESS_MODE fOption は、SQL_MODE_READ_ONLY または SQL_MODE_READ_WRITE のいずれかに設定できます。 ただし、SQL_ACCESS_MODE が SQL_MODE_READ_ONLY に設定されている場合、ドライバーは更新を妨げることはありません。|  
-|SQL_AUTOCOMMIT|DBASE ドライバーでは、トランザクションがサポートされていないため、オン (既定の状態) に設定されている SQL_AUTOCOMMIT のみがサポートされます。|  
+|SQL_ACCESS_MODE|fOption SQL_ACCESS_MODEは、SQL_MODE_READ_ONLYまたはSQL_MODE_READ_WRITEに設定できます。 ただし、SQL_ACCESS_MODEがSQL_MODE_READ_ONLYに設定されている場合、ドライバーは更新を防止しません。|  
+|SQL_AUTOCOMMIT|dBASE ドライバーは、SQL_AUTOCOMMITが ON (既定の状態) に設定されている場合にのみサポートされます。|  
 |SQL_CURRENT_QUALIFIER|サポートされています。|  
 |SQL_LOGIN_TIMEOUT|サポートされていません。|  
 |SQL_OPT_TRACE|サポートされています。|  

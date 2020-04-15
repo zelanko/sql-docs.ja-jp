@@ -1,5 +1,5 @@
 ---
-title: ブックマークの種類 |Microsoft Docs
+title: ブックマークの種類 |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,18 +13,18 @@ helpviewer_keywords:
 - bookmarks [ODBC]
 - fixed-length bookmarks [ODBC]
 ms.assetid: cb2e7443-0260-4d1a-930f-0154db447979
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fb8f5848ef9fdffab8592215fdcc5406b24319c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 26d0297cd9dc57e9f30945a9248b235ae469da3e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68118779"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306333"
 ---
 # <a name="bookmark-types"></a>ブックマークの種類
-ODBC *3. x*のすべてのブックマークは、可変長のブックマークです。 これにより、テーブルに関連付けられている主キーまたは一意のインデックスをブックマークとして使用できます。 ブックマークは *、ODBC 2.x*で使用されていた32ビット値にすることもできます。 ブックマークをカーソルと共に使用するように指定するには、ODBC *3. x*アプリケーションで、SQL_ATTR_USE_BOOKMARK statement 属性を SQL_UB_VARIABLE に設定します。 可変長のブックマークが自動的に使用されます。  
+ODBC *3.x*のすべてのブックマークは可変長のブックマークです。 これにより、テーブルに関連付けられた主キーまたは一意のインデックスをブックマークとして使用できます。 また、ODBC *2.x*で使用されていたように、ブックマークは 32 ビット値にすることもできます。 ブックマークをカーソルと共に使用するように指定するには、ODBC *3.x*アプリケーションは SQL_ATTR_USE_BOOKMARK ステートメント属性を SQL_UB_VARIABLE に設定します。 可変長ブックマークが自動的に使用されます。  
   
- アプリケーションで**Sqlcolattribute**を呼び出して、 *FieldIdentifier*引数を SQL_DESC_OCTET_LENGTH に設定すると、ブックマークの長さを取得できます。 可変長のブックマークは long 型の値になる可能性があるため、行セット内の多くの行にブックマークを使用する場合を除き、アプリケーションは列0にバインドしないでください。  
+ アプリケーションは、引数*FieldIdentifier*を SQL_DESC_OCTET_LENGTH に設定して**SQLColAttribute**を呼び出して、ブックマークの長さを取得できます。 可変長ブックマークは長い値になる可能性があるため、行セット内の行の多くについてブックマークを使用しない限り、アプリケーションは列 0 にバインドしないでください。  
   
- 固定長のブックマークは、旧バージョンとの互換性のためにのみサポートされています。 *Odbc 2.x アプリケーションが*odbc *3. x*を使用して SQL_USE_BOOKMARKS を SQL_UB_ON に**設定して**いる場合は、ドライバーマネージャーで SQL_UB_VARIABLE にマップされます。 長さが32ビットだけが設定されている場合でも、可変長のブックマークが使用されます。 ドライバーで固定長のブックマークがサポートされている場合は、可変長のブックマークがサポートされます。 *Odbc 2.x アプリケーションが*odbc *2.x ドライバーを*使用して作業している場合に SQL_ATTR_USE_BOOKMARKS を SQL_UB_VARIABLE に設定するために**SQLSetStmtAttr**を呼び出すと、ドライバーマネージャーで SQL_UB_ON にマップされ、32ビットの固定長ブックマークが使用されます。 SQL_ATTR_FETCH_BOOKMARK_PTR statement 属性は、32ビットのブックマークをポイントする必要があります。 使用するブックマークが32ビットを超えている場合 (主キーをブックマークとして使用する場合など)、カーソルは実際の値を32ビット値にマップする必要があります。 たとえば、ハッシュテーブルを作成することもできます。 *Odbc 2.x アプリケーションで*odbc 2.x ドライバーを使用してブックマークをバインドする場合、バッファーの長さは4である必要が*あります。*
+ 固定長ブックマークは、下位互換性を保つためにのみサポートされます。 ODBC *3.x*ドライバーを使用して動作する ODBC *2.x*アプリケーションが**SQLSetStmtOption**を呼び出してSQL_USE_BOOKMARKSをSQL_UB_ONに設定すると、ドライバー マネージャーでSQL_UB_VARIABLEにマップされます。 可変長ブックマークは、32 ビットしか設定されていない場合でも使用されます。 ドライバーは固定長のブックマークをサポートしている場合、可変長ブックマークをサポートします。 ODBC *2.x*ドライバーを使用して動作する ODBC *3.x*アプリケーションが**sqlSetStmtAttr**を呼び出してSQL_ATTR_USE_BOOKMARKSを SQL_UB_VARIABLE に設定すると、ドライバー マネージャーで SQL_UB_ON にマップされ、32 ビット固定長ブックマークが使用されます。 SQL_ATTR_FETCH_BOOKMARK_PTRステートメント属性は、32 ビットのブックマークを指す必要があります。 使用するブックマークが 32 ビットより長い場合 (主キーがブックマークとして使用される場合など)、カーソルは実際の値を 32 ビット値にマップする必要があります。 たとえば、それらのハッシュ テーブルを作成できます。 ODBC *2.x*ドライバを使用する ODBC *3.x*アプリケーションがブックマークをバインドする場合、バッファの長さは 4 でなければなりません。

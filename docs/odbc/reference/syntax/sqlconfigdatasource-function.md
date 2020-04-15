@@ -1,5 +1,5 @@
 ---
-title: SQLConfigDataSource 関数 |Microsoft Docs
+title: 関数 |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,23 +17,23 @@ f1_keywords:
 helpviewer_keywords:
 - SQLConfigDataSource function [ODBC]
 ms.assetid: f8d6e342-c010-434e-b1cd-f5371fb50a14
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e7706d3a7dd05273b4608d49211a6eaab8927f2a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 90a51193a8f4edbb013527c4dde0625b75131583
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68118605"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299632"
 ---
 # <a name="sqlconfigdatasource-function"></a>SQLConfigDataSource 関数
-**互換性**  
- 導入されたバージョン: ODBC 1.0  
+**適合 性**  
+ バージョン導入: ODBC 1.0  
   
  **まとめ**  
- **Sqlconfigdatasource**は、データソースを追加、変更、または削除します。  
+ **データ ソースを**追加、変更、または削除します。  
   
- **Sqlconfigdatasource**の機能には、ODBCCONF を使用してアクセスすることもでき[ます。EXE](../../../odbc/odbcconf-exe.md)。  
+ **SQLConfig データ ソース**の機能には、ODBCCONF を使用してアクセスすることもできます[。EXE](../../../odbc/odbcconf-exe.md).  
   
 ## <a name="syntax"></a>構文  
   
@@ -48,56 +48,56 @@ BOOL SQLConfigDataSource(
   
 ## <a name="arguments"></a>引数  
  *hwndParent*  
- 代入親ウィンドウハンドル。 ハンドルが null の場合、この関数はダイアログボックスを表示しません。  
+ [入力]親ウィンドウ ハンドル。 ハンドルが null の場合、この関数はダイアログ ボックスを表示しません。  
   
- *fRequest*  
- 代入要求の種類。 *Frequest*引数には、次のいずれかの値が含まれている必要があります。  
+ *リクエスト*  
+ [入力]要求の種類。 *fRequest*引数には、次のいずれかの値を指定する必要があります。  
   
- ODBC_ADD_DSN: 新しいユーザーデータソースを追加します。  
+ ODBC_ADD_DSN: 新しいユーザー データ ソースを追加します。  
   
- ODBC_CONFIG_DSN: 既存のユーザーデータソースを構成 (変更) します。  
+ ODBC_CONFIG_DSN: 既存のユーザー データ ソースを構成 (変更) します。  
   
- ODBC_REMOVE_DSN: 既存のユーザーデータソースを削除します。  
+ ODBC_REMOVE_DSN: 既存のユーザー データ ソースを削除します。  
   
- ODBC_ADD_SYS_DSN: 新しいシステムデータソースを追加します。  
+ ODBC_ADD_SYS_DSN: 新しいシステム データ ソースを追加します。  
   
- ODBC_CONFIG_SYS_DSN: 既存のシステムデータソースを変更します。  
+ ODBC_CONFIG_SYS_DSN: 既存のシステム データ ソースを変更します。  
   
- ODBC_REMOVE_SYS_DSN: 既存のシステムデータソースを削除します。  
+ ODBC_REMOVE_SYS_DSN: 既存のシステム データ ソースを削除します。  
   
- ODBC_REMOVE_DEFAULT_DSN: システム情報から既定のデータソースの仕様セクションを削除します。 (また、システム情報の Odbcinst .ini エントリから、既定のドライバー仕様セクションも削除されます。 この*Frequest*は、非推奨の**Sqlremovedefaultdatasource**関数と同じ機能を実行します)。このオプションが指定されている場合、 **Sqlconfigdatasource**への呼び出しに含まれる他のすべてのパラメーターは null である必要があります。NULL でない場合は無視されます。  
+ ODBC_REMOVE_DEFAULT_DSN: システム情報から既定のデータ ソース仕様セクションを削除します。 (システム情報の Odbcinst.ini エントリから既定のドライバーの仕様セクションも削除されます。 この*fRequest は*、廃止された**SQLRemoveDefaultDataSource**関数と同じ関数を実行します。このオプションを指定すると、呼び出しで **、他**のすべてのパラメーターは、ヌルである必要があります。NULL でない場合は無視されます。  
   
- *lpszDriver*  
- 代入物理ドライバー名の代わりにユーザーに提示されるドライバーの説明 (通常は、関連付けられている DBMS の名前)。  
+ *ドライバー*  
+ [入力]物理ドライバ名の代わりに、ドライバの説明 (通常は関連付けられた DBMS の名前) をユーザーに表示します。  
   
- *lpszAttributes*  
- 代入キーワードと値のペアの形式の、二重の null で終わる属性のリスト。 詳細については、「 [Configdsn](../../../odbc/reference/syntax/configdsn-function.md)」を参照してください。  
+ *属性*  
+ [入力]キーワードと値のペアの形式での属性の二重に終端された一覧。 詳細については、 [ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)を参照してください。  
   
 ## <a name="returns"></a>戻り値  
- 関数は、成功した場合は TRUE、失敗した場合は FALSE を返します。 この関数が呼び出されたときにシステム情報にエントリが存在しない場合、関数は FALSE を返します。  
+ 関数は成功した場合は TRUE を返し、失敗した場合は FALSE を返します。 この関数が呼び出されたときにシステム情報にエントリが存在しない場合、この関数は FALSE を返します。  
   
 ## <a name="diagnostics"></a>診断  
- **Sqlconfigdatasource**から FALSE が返された場合、 **sqlインストーラエラー**を呼び出すことによって、関連* \*する pferrorcode*値を取得できます。 次の表は、 **sqlインストーラエラー**によって返される可能性がある* \*pferrorcode*値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
+ **SQLConfigDataSource が**FALSE を返すと、SQL**インストーラ エラー**を呼び出すことによって、関連付けられた*\*pfErrorCode*値を取得できます。 次の表は **、SQLInstallerError***\** によって返される可能性のある pfErrorCode 値の一覧であり、この関数のコンテキストでそれぞれについて説明します。  
   
-|*\*pfErrorCode*|エラー|[説明]|  
+|*\*エラーコード*|エラー|説明|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|一般的なインストーラーエラー|特定のインストーラーエラーがなかったためにエラーが発生しました。|  
-|ODBC_ERROR_INVALID_HWND|ウィンドウハンドルが無効です|*HwndParent*引数が無効であるか、NULL でした。|  
-|ODBC_ERROR_INVALID_REQUEST_TYPE|要求の種類が無効です|*Frequest*引数は、次のいずれかではありませんでした:<br /><br /> ODBC_ADD_DSN ODBC_CONFIG_DSN ODBC_REMOVE_DSN ODBC_ADD_SYS_DSN ODBC_CONFIG_SYS_DSN ODBC_REMOVE_SYS_DSN ODBC_REMOVE_DEFAULT_DSN|  
-|ODBC_ERROR_INVALID_NAME|ドライバーまたは翻訳者名が無効です|*Lpszdriver*引数が無効でした。 レジストリに見つかりませんでした。|  
-|ODBC_ERROR_INVALID_KEYWORD_VALUE|無効なキーワードと値のペア|*Lpszattributes*引数に構文エラーが含まれています。|  
-|ODBC_ERROR_REQUEST_FAILED|失敗した*要求*|インストーラーは、 *Frequest*引数によって要求された操作を実行できませんでした。 **Configdsn**の呼び出しが失敗しました。|  
-|ODBC_ERROR_LOAD_LIBRARY_FAILED|ドライバーまたはトランスレーターセットアップライブラリを読み込めませんでした|ドライバーセットアップライブラリを読み込めませんでした。|  
-|ODBC_ERROR_OUT_OF_MEM|メモリ不足|メモリ不足のため、インストーラーで関数を実行できませんでした。|  
+|ODBC_ERROR_GENERAL_ERR|インストーラの一般的なエラー|特定のインストーラ エラーが発生しなかったエラーが発生しました。|  
+|ODBC_ERROR_INVALID_HWND|無効なウィンドウ ハンドル|*引数 hwndParent*が無効であるか、NULL でした。|  
+|ODBC_ERROR_INVALID_REQUEST_TYPE|無効な種類の要求|*fRequest*引数は、次の引数の 1 つではありません。<br /><br /> ODBC_REMOVE_SYS_DSN ODBC_REMOVE_DEFAULT_DSNODBC_ADD_SYS_DSN ODBC_CONFIG_SYS_DSNODBC_CONFIG_DSN ODBC_REMOVE_DSNODBC_CONFIG_DSNODBC_ADD_SYS_DSNODBC_ADD_DSN|  
+|ODBC_ERROR_INVALID_NAME|無効なドライバまたはトランスレータ名|*引数が*無効です。 レジストリに見つかりませんでした。|  
+|ODBC_ERROR_INVALID_KEYWORD_VALUE|無効なキーワードと値のペア|*引数 lpszAttributes*に構文エラーが含まれていました。|  
+|ODBC_ERROR_REQUEST_FAILED|*要求*に失敗しました|インストーラーは *、fRequest*引数によって要求された操作を実行できませんでした。 **ConfigDSN**への呼び出しに失敗しました。|  
+|ODBC_ERROR_LOAD_LIBRARY_FAILED|ドライバまたはトランスレータセットアップライブラリを読み込めませんでした|ドライバ セットアップ ライブラリを読み込めませんでした。|  
+|ODBC_ERROR_OUT_OF_MEM|メモリ不足|メモリ不足のため、インストーラは機能を実行できませんでした。|  
   
 ## <a name="comments"></a>説明  
- **Sqlconfigdatasource**は、 *lpszdriver*の値を使用して、システム情報からドライバーのセットアップ DLL の完全なパスを読み取ります。 DLL を読み込み、渡されたのと同じ引数を使用して**Configdsn**を呼び出します。  
+ **ドライバー**のセットアップ DLL の完全なパスをシステム情報から読み取るために*lpszDriver*の値を使用します。 DLL を読み込み、渡された引数と同じ引数を使用して**ConfigDSN**を呼び出します。  
   
- **Sqlconfigdatasource**は、セットアップ DLL が見つからないか、読み込まれない場合、またはユーザーがダイアログボックスをキャンセルした場合に FALSE を返します。 それ以外の場合は、 **Configdsn**から受け取った状態を返します。  
+ **セットアップ**DLL を検索または読み込むことができない場合、またはユーザーがダイアログ ボックスをキャンセルした場合は、FALSE を返します。 それ以外の場合は **、ConfigDSN**から受信した状態を返します。  
   
- **Sqlconfigdatasource**は、システム Dsn *Frequest*をユーザー dsn *frequest*s にマップします (ODBC_ADD_SYS_DSN ODBC_ADD_DSN、ODBC_CONFIG_SYS_DSN を ODBC_CONFIG_DSN に、ODBC_REMOVE_SYS_DSN に ODBC_REMOVE_DSN)。 ユーザー Dsn とシステム Dsn を区別するために、 **Sqlconfigdatasource**は、次の表に従ってインストーラー構成モードを設定します。 **Sqlconfigdatasource**は、戻る前に、構成モードを両方の dsn にリセットします。 **Configdsn** (ドライバーによって実装されます) は、 **Sqlwritedsntoini**と**sqlwriteprivateprofilestring**を呼び出してシステム DSN をサポートする必要があります。 詳細については、「 [Configdsn 関数](../../../odbc/reference/syntax/configdsn-function.md)」を参照してください。  
+ **SQLConfigDataSource は**、システム DSN *fRequest*s をユーザー DSN *fRequest*s にマップします (ODBC_ADD_DSN、ODBC_CONFIG_SYS_DSNをODBC_CONFIG_DSNに、ODBC_REMOVE_SYS_DSNをODBC_REMOVE_DSNにODBC_ADD_SYS_DSN)。 ユーザー DSN とシステム DSN を区別するために、**次**の表に従ってインストーラーの構成モードを設定します。 戻る前に、**構成**モードを BOTHDSN にリセットします。 (ドライバーによって実装される)**構成DSN**は、システム DSN をサポートするために**SQLWriteDSNToIni**と**SQLWritePrivateProfileString**を呼び出す必要があります。 詳細については、 [ConfigDSN 関数](../../../odbc/reference/syntax/configdsn-function.md)を参照してください。  
   
-|*fRequest*|構成モード|  
+|*リクエスト*|コンフィギュレーション モード|  
 |----------------|------------------------|  
 |ODBC_ADD_DSN|USERDSN_ONLY|  
 |ODBC_CONFIG_DSN|USERDSN_ONLY|  
@@ -108,8 +108,8 @@ BOOL SQLConfigDataSource(
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|参照先|  
 |---------------------------|---------|  
-|データソースの追加、変更、または削除|[Configdsn](../../../odbc/reference/syntax/configdsn-function.md) (セットアップ DLL 内)|  
-|システム情報からのデータソース名の削除|[SQLRemoveDSNFromIni](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|  
-|システム情報へのデータソース名の追加|[SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|
+|データ ソースの追加、変更、または削除|[(](../../../odbc/reference/syntax/configdsn-function.md)セットアップ DLL 内) の構成 DSN|  
+|システム情報からのデータ・ソース名の除去|[イニから削除します。](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|  
+|システム情報へのデータ・ソース名の追加|[を使用します。](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|

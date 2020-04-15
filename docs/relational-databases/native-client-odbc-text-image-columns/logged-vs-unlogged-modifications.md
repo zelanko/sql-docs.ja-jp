@@ -1,5 +1,5 @@
 ---
-title: ログ記録と Unlogged の変更 |Microsoft Docs
+title: ログに記録された変更とログに記録されていない変更 |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,22 +20,22 @@ helpviewer_keywords:
 - ODBC data types, text columns
 - image columns [ODBC]
 ms.assetid: 20aa5b27-4a2c-46e7-8356-beb0eebf4b7e
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 502a4eeb657d4bc9e92a2cda25e152329b281567
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: dc7fb913bef4083b045a0c1c010bdedbc43135c5
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73790605"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81297692"
 ---
 # <a name="logged-vs-unlogged-modifications"></a>ログに記録される変更と記録されない変更
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  アプリケーションで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、NATIVE Client ODBC ドライバーが**text**、 **ntext**、および**image**の変更をログに記録しないように要求できます。 ただし、このオプションの使用には注意が必要です。 **Text**型、 **ntext**型、または**image**型のデータが重要ではなく、データ所有者がデータを回復してパフォーマンスを向上させることができない場合にのみ使用してください。  
+  アプリケーションは、ネイティブ クライアント[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ODBC ドライバーが**テキスト** **、ntext**、**およびイメージ**の変更をログに記録しないように要求できます。 ただし、このオプションの使用には注意が必要です。 **テキスト****、ntext、** または**image**データが重要ではなく、データ所有者が高いパフォーマンスを得るためにデータを回復する能力をトレードオフする場合にのみ使用する必要があります。  
   
- **Text**、 **ntext**、および**image**の変更のログ記録は、*属性*パラメーターを SQL_SOPT_SS_ TEXTPTR_LOGGING に設定し、 *valueptr*を SQL_TL_ON または SQL_TL_OFF に設定して、 [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)を呼び出すことによって制御されます。  
+ **テキスト** **、ntext**、および**イメージ**の変更のログ記録は、*属性*パラメーターを TEXTPTR_LOGGING に設定し *、ValuePtr*を SQL_TL_ON またはSQL_TL_OFFに設定して[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) SQL_SOPT_SS_ を呼び出すことによって制御されます。  
   
 ## <a name="see-also"></a>参照  
  [text 列と image 列の管理](../../relational-databases/native-client-odbc-text-image-columns/managing-text-and-image-columns.md)  

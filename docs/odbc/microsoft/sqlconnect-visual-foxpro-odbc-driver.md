@@ -1,5 +1,5 @@
 ---
-title: SQLConnect (Visual FoxPro ODBC ドライバー) |Microsoft Docs
+title: SQLConnect (ビジュアル フォックスプロ ODBC ドライバー) |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,23 +10,23 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLConnect function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 49cbfafa-b21e-4e89-b248-9c7098f46b20
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c5d73339bc87097d81eade4df0b8ab1604979e07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 927e79b318dfc9f06bc9103120e05cd72acd0c84
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68054057"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81283912"
 ---
 # <a name="sqlconnect-visual-foxpro-odbc-driver"></a>SQLConnect (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
->  このトピックには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の一般的な情報については、「 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)」の該当するトピックを参照してください。  
+>  このトピックには、ビジュアル フォックス プロ ODBC ドライバー固有の情報が含まれています。 この関数の一般的な情報については[、ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)の該当するトピックを参照してください。  
   
- サポート: 完全  
+ サポート: フル  
   
- ODBC API の準拠: コアレベル  
+ ODBC API 準拠: コア レベル  
   
- データソースに接続します。これは、[データベース](../../odbc/microsoft/visual-foxpro-terminology.md)または[テーブル](../../odbc/microsoft/visual-foxpro-terminology.md)のディレクトリのいずれかになります。 Visual FoxPro ODBC ドライバーでは、 *Szuid*、 *cbuid*、 *Szauthstr*、および*cbauthstr*の各引数は無視されます。  
+ データ ソース ([データベース](../../odbc/microsoft/visual-foxpro-terminology.md)または[テーブル](../../odbc/microsoft/visual-foxpro-terminology.md)のディレクトリ) に接続します。 ビジュアル フォックスプロ ODBC ドライバーは *、szUID* *、cbUID* *、szAuthStr*、および*cbAuthStr*引数を無視します。  
   
- 詳細については、 *ODBC プログラマーリファレンス*の「 [SQLConnect](../../odbc/reference/syntax/sqlconnect-function.md) 」を参照してください。
+ 詳細については *、『ODBC プログラマ リファレンス*』の[SQLConnect](../../odbc/reference/syntax/sqlconnect-function.md)を参照してください。

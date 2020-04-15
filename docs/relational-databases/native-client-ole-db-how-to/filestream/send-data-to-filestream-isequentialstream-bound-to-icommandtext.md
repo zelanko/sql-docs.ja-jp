@@ -1,5 +1,5 @@
 ---
-title: データ FILESTREAM、ISequentialStream ICommandText
+title: データ ファイルストリーム、I コマンド テキストの順に並びを引く
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,30 +8,29 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 2225f6ab-a6cf-4c95-8291-2d2a13be7952
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4395a52b49bdf5e41350a1e37cd33f72b35f1d1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f27ac32da560316806086f51c69cd2a374eb1a15
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75241717"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81295847"
 ---
 # <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>FILESTREAM へのデータの送信 - ICommandText にバインドされた ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   このサンプルでは、ICommandText パラメーターにバインドされた ISequentialStream インターフェイスを使用して、4 MB ～ 4 GB のデータを filestream 列に送ります。  
   
- Filestream 機能の詳細については、「 [Filestream Support &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)」を参照してください。  
+ ファイルストリーム機能の詳細については、「 OLE [DB&#41;&#40;FILESTREAM サポート](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- このサンプルをコンパイルして実行する前に、FILESTREAM のサポートを有効にします ([filestream の有効化と構成](../../../relational-databases/blob/enable-and-configure-filestream.md))。  
+ このサンプルをコンパイルして実行する前に、FILESTREAM のサポートを有効にしてください (「[FILESTREAM の有効化と構成](../../../relational-databases/blob/enable-and-configure-filestream.md)」を参照)。  
   
- INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
+ INCLUDE 環境変数に sqlncli.h を含むディレクトリが含まれていることを確認します。  
   
- サーバーには、データベースの作成場所として、C:\DBFsa という名前のディレクトリが存在している必要があります。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスには、この場所への書き込みアクセス許可が必要です (たとえば、ローカル システム アカウントでログオンしてください)。  
+ サーバーには、データベースの作成場所として、C:\DBFsa という名前のディレクトリが存在している必要があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスには、この場所への書き込みアクセス許可が必要です (たとえば、ローカル システム アカウントでログオンしてください)。  
   
  1 つ目のコード リストをコピーし、ISSHelper.h という名前のファイルに貼り付けます。  
   

@@ -1,5 +1,5 @@
 ---
-title: SQLGetData (デスクトップデータベースドライバー) |Microsoft Docs
+title: SQLGetData (デスクトップ データベース ドライバ) |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetData function [ODBC], Desktop Database Drivers
 ms.assetid: c9d9a32d-5dc2-4189-9bfb-2b008bc3d6a3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 086c5381f1801baf919508525c17faab93746ca0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2b102d8435831d45aad3c2049581513e0493de9a
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68003360"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304123"
 ---
 # <a name="sqlgetdata-desktop-database-drivers"></a>SQLGetData (デスクトップ データベース ドライバー)
-この関数は、列の後にバインドされた列があるかどうか、および列の取得順序に関係なく、任意の列からデータを取得できます。  
+この関数は、列の後にバインドされた列があるかどうか、および列が取得される順序に関係なく、任意の列からデータを取得できます。  
   
 > [!NOTE]  
->  \***SQLGetData**の pcbValue は、Jet 4.0 データベースで510文字を超える ANSI データにバインドする場合に、実際に使用できる文字数の2倍を返すことがあります。 510以下の文字値を指定すると、実際の cbValue が返されます。
+>  \***SQLGetData**の pcbValue は、Jet 4.0 データベースで 510 文字を超える ANSI データにバインドする場合に実際に使用可能な 2 倍の文字数を返す場合があります。 文字値が 510 以下の場合は、実際の cbValue が返されます。

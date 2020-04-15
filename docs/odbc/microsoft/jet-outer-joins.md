@@ -1,5 +1,5 @@
 ---
-title: 'Jet: Outer Join |Microsoft Docs'
+title: 'ジェット: 外部結合 |マイクロソフトドキュメント'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SQL grammar [ODBC], outer join clause
 - outer join clauses [ODBC]
 ms.assetid: 02e0394e-ddd7-47ae-9180-b4d8a3b648ef
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c8ab2c4f7e66338c792fb62f9192cf312c5d19e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 173f785dae601ad733aa73eb536e5f410d9a10d0
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68085479"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299939"
 ---
 # <a name="jet-outer-joins"></a>Jet: 外部結合
-SELECT ステートメントには、外部結合句のリストを含めることができます。 入れ子になった外部結合がサポートされています。 外部結合の詳細については、 *『 Microsoft Jet データベースエンジンプログラマーズガイド』* を参照してください。
+SELECT ステートメントには、OUTER JOIN 句のリストを含めることができます。 ネストされた OUTER 結合がサポートされています。 OUTER 結合の詳細については *、『Jet データベース エンジン プログラマ ガイド*』を参照してください。

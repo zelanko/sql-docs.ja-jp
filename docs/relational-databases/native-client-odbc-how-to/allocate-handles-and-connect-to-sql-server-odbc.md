@@ -1,5 +1,5 @@
 ---
-title: ハンドルを割り当てて SQL Server に接続する (ODBC) |Microsoft Docs
+title: ハンドルの割り当てと SQL サーバーへの接続 (ODBC) |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - handles [ODBC], connection
 - handles [ODBC], about handles
 ms.assetid: 6172cd52-9c9a-467d-992f-def07f3f3bb1
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce294636c4d01a143b640126832bc6cca31ece14
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5d26af711c07c4ea296d5351d0fcb0d1f9710706
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73782068"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81294526"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>ハンドルの割り当てと SQL Server への接続 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,24 +30,23 @@ ms.locfileid: "73782068"
   
 1.  ODBC ヘッダー ファイル Sql.h、Sqlext.h、Sqltypes.h を含めます。  
   
-2.  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ドライバー固有のヘッダー ファイル Odbcss.h を含めます。  
+2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ドライバー固有のヘッダー ファイル Odbcss.h を含めます。  
   
-3.  SQL_HANDLE_ENV の**Handletype**を使用して[SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396)を呼び出し、ODBC を初期化して環境ハンドルを割り当てます。  
+3.  ODBC を初期化し、環境ハンドルを割り当てるには、ハンドル**のSQL_HANDLE_ENVを**使用して[SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396)を呼び出します。  
   
-4.  **属性**を SQL_ATTR_ODBC_VERSION に設定し、 **valueptr**を SQL_OV_ODBC3 に設定して[SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md)を呼び出し、アプリケーションで ODBC 3. x 形式の関数呼び出しを使用することを示します。  
+4.  SQL_ATTR_ODBC_VERSION に**設定された属性**と**ValuePtr**を SQL_OV_ODBC3 に設定して、アプリケーションが ODBC 3.x 形式の関数呼び出しを使用することを示す[SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md)を呼び出します。  
   
-5.  必要に応じて、 [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md)を呼び出して他の環境オプションを設定するか、 [SQLGetEnvAttr](https://go.microsoft.com/fwlink/?LinkId=58403)を呼び出して環境オプションを取得します。  
+5.  必要に応じて[、SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md)を呼び出して他の環境オプションを設定するか[、SQLGetEnvAttr](https://go.microsoft.com/fwlink/?LinkId=58403)を呼び出して環境オプションを取得します。  
   
-6.  SQL_HANDLE_DBC の**Handletype**を使用して[SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396)を呼び出し、接続ハンドルを割り当てます。  
+6.  接続ハンドルを割り当てるには、SQL_HANDLE_DBCの**ハンドル型**を使用して[SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396)を呼び出します。  
   
-7.  必要に応じて、 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)を呼び出して接続オプションを設定するか、 [Sqlgetconnectattr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)を呼び出して接続オプションを取得します。  
+7.  必要に応じて、接続オプションを設定するために[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)を呼び出すか、接続オプションを取得するために[SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)を呼び出します。  
   
-8.  SQLConnect を呼び出して、既存のデータソースを使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]してに接続します。  
+8.  SQLConnect を呼び出して既存のデータ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ソースを使用して に接続します。  
   
-     または  
+     Or  
   
-     接続[](../../relational-databases/native-client-odbc-api/sqldriverconnect.md)文字列を使用してに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続するには、SQLDriverConnect を呼び出します。  
+     に接続するために接続文字列を使用するには[、SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を呼び出します。  
   
      最小の完全な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続文字列は、次の 2 つの形式のいずれかになります。  
   
@@ -56,27 +55,27 @@ ms.locfileid: "73782068"
     DRIVER={SQL Server Native Client 10.0};SERVER=server;Trusted_connection=yes;  
     ```  
   
-     接続文字列が完全でない場合、 **SQLDriverConnect**は必要な情報の入力を求めることができます。 これは、 *Drivercompletion*パラメーターに指定された値によって制御されます。  
+     接続文字列が完全でない**場合は、** 必要な情報を求めるメッセージを表示できます。 これは *、DriverCompletion*パラメーターに指定された値によって制御されます。  
   
-     \- - または -  
+     \- または  
   
-     反復的な方法で[SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)を複数回呼び出して、接続文字列を作成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]し、に接続します。  
+     [SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)を反復的に複数回呼び出して接続文字列を作成し、 に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続します。  
   
-9. 必要に応じて、 [SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md)を呼び出して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データソースのドライバー属性と動作を取得します。  
+9. 必要に応じて[、SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md)を呼び出して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ ソースのドライバー属性と動作を取得します。  
   
 10. ステートメントを割り当てて使用します。  
   
-11. 切断[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]するには sqldisconnect を呼び出し、接続ハンドルを新しい接続に使用できるようにします。  
+11. SQLDisconnect を呼び[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]出して、接続ハンドルを切断し、新しい接続で使用できるようにします。  
   
-12. SQL_HANDLE_DBC の**Handletype**を使用して[sqlfreehandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md)を呼び出し、接続ハンドルを解放します。  
+12. 接続ハンドルを解放するには、SQL_HANDLE_DBCの**ハンドル型**を使用して[SQLFreeHandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md)を呼び出します。  
   
-13. SQL_HANDLE_ENV の**Handletype**を使用して**sqlfreehandle**を呼び出し、環境ハンドルを解放します。  
+13. 環境ハンドルを解放するSQL_HANDLE_ENVの**ハンドル型**で**SQLFreeHandle**を呼び出します。  
   
 > [!IMPORTANT]  
->  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、 [Win32 CRYPTO API](https://go.microsoft.com/fwlink/?LinkId=64532)を使用して暗号化する必要があります。  
+>  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
   
 ## <a name="example"></a>例  
- この例では、既存**** の ODBC データソースを必要と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]せずにのインスタンスに接続するための SQLDriverConnect の呼び出しを示します。 不完全な接続文字列を**SQLDriverConnect**に渡すと、ODBC ドライバーによって、不足している情報を入力するように求めるメッセージが表示されます。  
+ この例では、既存の ODBC データ ソースを必要[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]とせずにインスタンスに接続するための**SQLDriverConnect**の呼び出しを示します。 不完全な接続文字列を**SQLDriverConnect**に渡すことにより、ODBC ドライバは、不足している情報を入力するようにユーザーに求めるプロンプトを表示します。  
   
 ```  
 #define MAXBUFLEN   255  

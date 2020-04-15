@@ -1,5 +1,5 @@
 ---
-title: キーセットドリブンカーソルの使用に関する制限事項 |Microsoft Docs
+title: キーセット駆動型カーソルの使用に関する制限 |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,22 +11,22 @@ helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], cursors
 - keyset-driven cursors [ODBC]
 ms.assetid: 59d86fed-387c-4719-9550-36343e74da44
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0c35f900faf1a30788b3642af3fdd65d672951d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2aeb5a0c50192118dfff8ed7d866c3911c2b4007
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68054120"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81284152"
 ---
 # <a name="limitations-of-using-keyset-driven-cursors"></a>キーセット ドリブン カーソルの使用に関する制限
 > [!IMPORTANT]  
->  この機能は、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、Oracle によって提供される ODBC ドライバーを使用してください。  
+>  この機能は、今後のバージョンの Windows で削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、Oracle によって提供される ODBC ドライバーを使用します。  
   
- クエリ対象のテーブルに対して1つの ROWID 列を取得できる必要があります。 キーセットドリブンカーソルは、DISTINCT、GROUP BY、UNION、INTERSECT、またはマイナス句を含む結合、クエリ、またはステートメントでは使用できません。  
+ クエリを実行するテーブルの ROWID 列を 1 つだけ取得できる必要があります。 キーセット ドリブン カーソルは、DISTINCT 句、GROUP BY 句、UNION 句、インターセクト 句、または MINUS 句を含む結合、クエリ、またはステートメントには使用できません。  
   
- また、アプリケーションでテーブルの別名が使用されている場合、キーセットドリブンカーソルは機能しません。順方向専用または静的カーソルの種類が必要です。 テーブルの別名を持つ keyset カーソルの種類を使用すると、次のエラーが発生します。 "[Microsoft] [ODBC driver for Oracle] では、join ではキーセットドリブンカーソルを使用できません。 union、intersect、またはマイナスまたは読み取り専用の結果セットを使用することはできません。  
+ また、アプリケーションでテーブルの別名を使用している場合、キーセット ドリブン カーソルは機能しません。前方専用カーソルまたは静的カーソルの種類が必要です。 テーブルの別名でキーセットカーソルタイプを使用すると、次のエラーが発生します: "[Microsoft][Oracle 用 ODBC ドライバー]結合時にキーセットドリブン カーソルを使用できません。?ユニオン、交差、またはマイナスまたは読み取り専用の結果セットで。  
   
 > [!NOTE]  
->  Oracle は、Oracle サーバーに送信される SQL ステートメントをドライバーが処理する方法によって、内部的に次のエラーメッセージを返します。 "ORA-00964: テーブル名がリストから取得されていません。"
+>  Oracle サーバーに送信される SQL ステートメントをドライバーが処理する方法のため、Oracle は内部的に次のエラー メッセージを返します: "ORA-00964: テーブル名は FROM リストにありません。

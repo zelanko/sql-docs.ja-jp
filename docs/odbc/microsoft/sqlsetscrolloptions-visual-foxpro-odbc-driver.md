@@ -1,5 +1,5 @@
 ---
-title: SQLSetScrollOptions (Visual FoxPro ODBC ドライバー) |Microsoft Docs
+title: スクロールオプション ( ビジュアル フォックスプロ ODBC ドライバー ) |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,25 +10,25 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetScrollOptions function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 693e6e28-a845-41b1-9622-5058b0d87229
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b3746d9cea2ce5ffb7d03424d7cda4fa1889aabc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 19051fc83466bc40d72c029089cfe6ec45c20a08
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67905380"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299422"
 ---
 # <a name="sqlsetscrolloptions-visual-foxpro-odbc-driver"></a>SQLSetScrollOptions (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
->  このトピックには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の一般的な情報については、「 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)」の該当するトピックを参照してください。  
+>  このトピックには、ビジュアル フォックス プロ ODBC ドライバー固有の情報が含まれています。 この関数の一般的な情報については[、ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)の該当するトピックを参照してください。  
   
- サポート: 部分的  
+ サポート: 部分  
   
- ODBC API の準拠: レベル2  
+ ODBC API 準拠: レベル 2  
   
- ステートメントハンドルの*hstmt*に関連付けられているカーソルの動作を制御するオプションを設定します。  
+ ステートメント ハンドル*hstmt*に関連付けられたカーソルの動作を制御するオプションを設定します。  
   
- Visual FoxPro ODBC ドライバーでは、SQL_CONCUR_READ_ONLY のみがサポートされます。*Fconcurrency*値 SQL_CONCUR_ROWVER はサポートされていません。 ドライバーは、SQL_KEYSET_SIZE、SQL_CURSOR_DYNAMIC、および SQL_CURSOR_KEYSET_DRIVEN を警告 ODBC_01S02 と共に SQL_SCROLL_STATIC に変換します。  
+ ビジュアル フォックスプロ ODBC ドライバーはSQL_CONCUR_READ_ONLYのみをサポートします。*f同時実行*値SQL_CONCUR_ROWVERはサポートしていません。 ドライバーは、警告ODBC_01S02をSQL_SCROLL_STATICにSQL_KEYSET_SIZE、SQL_CURSOR_DYNAMIC、およびSQL_CURSOR_KEYSET_DRIVENを変換します。  
   
- 詳細については、 *ODBC プログラマーリファレンス*の「 [SQLSetScrollOptions](../../odbc/reference/syntax/sqlsetscrolloptions-function.md) 」を参照してください。
+ 詳細については *、ODBC プログラマ リファレンス*の「 [SQLSetScrollOptions」](../../odbc/reference/syntax/sqlsetscrolloptions-function.md)を参照してください。

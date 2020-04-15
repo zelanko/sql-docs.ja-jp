@@ -1,5 +1,5 @@
 ---
-title: SQLSetConnectOption 関数 |Microsoft Docs
+title: 関数を接続する |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,30 +17,30 @@ f1_keywords:
 helpviewer_keywords:
 - SQLSetConnectOption function [ODBC]
 ms.assetid: 8cd2c2a2-25c8-4aff-951c-b593bbfc90ad
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b429e499cccaad553236b4ebee78374c69c7c4dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 263b15cb75fb5c0c7c1d7aa630a8da171b9765a7
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68093013"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301597"
 ---
 # <a name="sqlsetconnectoption-function"></a>SQLSetConnectOption 関数
-**互換性**  
- 導入されたバージョン: ODBC 1.0 標準準拠: 非推奨  
+**適合 性**  
+ バージョン導入: ODBC 1.0 標準準拠: 非推奨  
   
  **まとめ**  
- ODBC 3.x で*は、odbc*2.0 関数**SQLSetConnectOption**は**SQLSetConnectAttr**に置き換えられています。 詳細については、「[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)」を参照してください。  
+ ODBC 3 *.x*では、ODBC 2.0 関数**SQLSetConnect オプション**が**SQLSetConnectAttr**に置き換えられました。 詳細については、「[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)」を参照してください。  
   
 > [!NOTE]
->  Odbc*2.x アプリケーションが*odbc*2.x ドライバーで*動作しているときに、ドライバーマネージャーがこの関数をマップする方法の詳細については、「[非推奨の関数のマッピング](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)」を参照してください。  
+>  ODBC 2 *.x*アプリケーションが ODBC 3 *.x*ドライバーを使用して動作している場合にドライバー マネージャーがこの関数をマップする方法の詳細については、「[非推奨関数のマッピング](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)」を参照してください。  
   
 ## <a name="remarks"></a>解説  
- アプリケーションが64ビットのオペレーティングシステムで実行される場合は、「 [ODBC 64 ビット情報](../../../odbc/reference/odbc-64-bit-information.md)」を参照してください。  
+ アプリケーションが 64 ビット オペレーティング システムで実行される場合は[、「ODBC 64](../../../odbc/reference/odbc-64-bit-information.md)ビット情報」を参照してください。  
   
 > [!NOTE]  
->  ODBC 3.8 で導入された属性 SQL_ASYNC_DBC_FUNCTION_ENABLE は、 **SQLSetConnectOption**ではサポートされていません。 接続ハンドルで非同期操作を使用するアプリケーションでは、 **SQLSetConnectAttr**を使用する必要があります。  
+>  ODBC 3.8 で導入された属性SQL_ASYNC_DBC_FUNCTION_ENABLEは **、SQLSetConnect オプション**ではサポートされていません。 接続ハンドルで非同期操作を使用するアプリケーションは **、 SQLSetConnectAttr**を使用する必要があります。  
   
 ## <a name="see-also"></a>参照  
  [ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)   

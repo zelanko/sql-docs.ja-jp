@@ -1,5 +1,5 @@
 ---
-title: SQL Server テーブルから列を削除する |Microsoft Docs
+title: SQL Server テーブルからの列の削除 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,26 +13,24 @@ helpviewer_keywords:
 - DropColumn function
 - SQL Server Native Client OLE DB provider, columns
 ms.assetid: 210811b7-cbd6-421e-bc6e-df9482236768
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ff59a03f10e595601590201b4fede2d10424a7d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 97b20e285749c7a3dba2ecf36ccb6556d93b5903
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73761586"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81280025"
 ---
 # <a name="removing-a-column-from-a-sql-server-table"></a>SQL Server テーブルからの列の削除
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、 **itabledefinition::D ropcolumn**関数を公開します。 コンシューマーはこの関数を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルから列を削除できます。  
+  ネイティブ クライアント OLE DB プロバイダーは **、ITableDefinition::DropColumn**関数を公開します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンシューマーはこの関数を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルから列を削除できます。  
   
- コンシューマーはテーブル名は、*pTableID* パラメーターの *uName* 共用体の *pwszName* メンバーに Unicode 文字列で指定します。 
-  *pTableID* の *eKind* メンバーを DBKIND_NAME にする必要があります。  
+ コンシューマーはテーブル名は、*pTableID* パラメーターの *uName* 共用体の *pwszName* メンバーに Unicode 文字列で指定します。 *pTableID* の *eKind* メンバーを DBKIND_NAME にする必要があります。  
   
- コンシューマーは、 *pColumnID*パラメーターの*uName*共用体の*pwszName*メンバーに列名を示します。 列名は Unicode 文字列で指定します。 
-  *pColumnID* の *eKind* メンバーを DBKIND_NAME にする必要があります。  
+ 列名は *pColumnID* パラメーターの *uName* 共用体の *pwszName* メンバーに指定します。 列名は Unicode 文字列で指定します。 *pColumnID* の *eKind* メンバーを DBKIND_NAME にする必要があります。  
   
 ## <a name="example"></a>例  
   

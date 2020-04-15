@@ -1,5 +1,5 @@
 ---
-title: その他の dBASE ドライバーのプログラミングの詳細 |Microsoft Docs
+title: その他の dBASE ドライバ プログラミングの詳細 |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,18 +12,18 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], DBasedriver
 - ODBC desktop database drivers [ODBC], DBasedriver
 ms.assetid: 1bb9b727-66e8-49e8-9a6b-587ad6217031
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0f0fb1fb9a4c0130ac62f9b4cf0b621f1673b7e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d47915f9a8b38e450fb8ca9bc9797b748400d82c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68135748"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81291022"
 ---
 # <a name="other-dbase-driver-programming-details"></a>その他の dBASE ドライバーのプログラミングの詳細
 > [!NOTE]  
->  このセクションでは、ODBC 関数とその他のプログラミングの詳細について、dBASE ドライバー固有の情報を提供します。 関数に関する一般的な情報については、「 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)」の該当するトピックを参照してください。  
+>  このセクションでは、ODBC 関数およびその他のプログラミングの詳細に関する dBASE ドライバー固有の情報を提供します。 関数の一般情報については[、ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)の該当するトピックを参照してください。  
   
  このセクションのトピックは次のとおりです。  
   

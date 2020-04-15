@@ -1,5 +1,5 @@
 ---
-title: SQLMoreResults (Visual FoxPro ODBC ドライバー) |Microsoft Docs
+title: 結果 (ビジュアル フォックスプロ ODBC ドライバー) |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,23 +10,23 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLMoreResults function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: dc59b1dd-c158-4b45-ab46-638be1fa49b8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a21e2145e10c5ed9364a392f6cb888b676ec18e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 68b9c0b698156af480db322ce349986e8936d7a0
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68002251"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299502"
 ---
 # <a name="sqlmoreresults-visual-foxpro-odbc-driver"></a>SQLMoreResults (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
->  このトピックには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の一般的な情報については、「 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)」の該当するトピックを参照してください。  
+>  このトピックには、ビジュアル フォックス プロ ODBC ドライバー固有の情報が含まれています。 この関数の一般的な情報については[、ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)の該当するトピックを参照してください。  
   
- サポート: 完全  
+ サポート: フル  
   
- ODBC API の準拠: レベル2  
+ ODBC API 準拠: レベル 2  
   
- ステートメントハンドル、 *hstmt*、および SELECT、UPDATE、INSERT、または DELETE の各ステートメントに対してより多くの結果が保留されているかどうかを判断し、存在する場合は、それらの結果の処理を初期化します。  
+ SELECT、UPDATE、INSERT、または DELETE ステートメントを含むステートメント ハンドル *、hstmt、* および保留中の結果がある場合は、その結果の処理を初期化するかどうかを決定します。  
   
- 詳細については、 *ODBC プログラマーリファレンス*の「 [Sqlmoreresults](../../odbc/reference/syntax/sqlmoreresults-function.md) 」を参照してください。
+ 詳細については、 ODBC プログラマ リファレンス の[SQLMoreResults](../../odbc/reference/syntax/sqlmoreresults-function.md)を*参照してください*。

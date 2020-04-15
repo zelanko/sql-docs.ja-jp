@@ -1,5 +1,5 @@
 ---
-title: SQLGetTypeInfo (Access Driver) |Microsoft Docs
+title: を取得する情報 (アクセス ドライバー) |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - Access driver [ODBC], SQLGetTypeInfo
 - SQLGetTypeInfo function [ODBC], Access Driver
 ms.assetid: a28b16eb-ca36-4297-9297-ecd7c107a84e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 788f0b8c69636ad9bf93de73632abc911a0fb0e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ddfa9bd29f0834adf1c211f9b8a111db0b94d3fe
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67898759"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81295152"
 ---
 # <a name="sqlgettypeinfo-access-driver"></a>SQLGetTypeInfo (Access ドライバー)
 > [!NOTE]  
->  このトピックでは、ドライバー固有の情報にアクセスします。 この関数の一般的な情報については、「 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)」の該当するトピックを参照してください。  
+>  このトピックでは、アクセス ドライバー固有の情報を提供します。 この関数の一般的な情報については[、ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)の該当するトピックを参照してください。  
   
- **SQLGetTypeInfo**によって生成されるテーブルに返される型の名前 (TYPE_NAME) は、データソースで最もよく使用される名前になります。  
+ **SQLGetTypeInfo**によって生成されるテーブルで返される型 (TYPE_NAME) の名前は、データ ソースで最も一般的に使用される名前になります。  
   
- SQL_ALL_EXCEPT_LIKE は、Byte、Counter、Double、Single、Long、Short の各データ型の検索可能な列に返されます。 (LIKE 機能は、ODBC 正規変換関数を使用して値を文字に変換してから、比較を実行することで実現できます)。
+ SQL_ALL_EXCEPT_LIKEは、バイト、カウンター、倍精度、単精度、長整数型、および短いデータ型の SEARCHABLE 列に返されます。 (LIKE 機能は、ODBC 正規変換関数を使用して値を文字に変換し、比較を実行することによって実現できます。

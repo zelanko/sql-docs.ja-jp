@@ -1,5 +1,5 @@
 ---
-title: 複数のアクティブなステートメントと接続 |Microsoft Docs
+title: 複数のアクティブなステートメントと接続 |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - interoperability [ODBC], multiple active statements and connections
 - multiple active statements and connections [ODBC]
 ms.assetid: a6571356-b23e-4f10-a17b-bce09460b71e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 76b74ff748a62a401955e4ea4a995f507314124e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8259967942f47b06c50a9043158f8b3b45c58d7a
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67942825"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302431"
 ---
 # <a name="multiple-active-statements-and-connections"></a>複数のアクティブなステートメントと接続
-一部のドライバーおよび Dbms では、同時にアクティブにできるステートメントと接続の数が制限されています。 これらの数値は、1つだけ小さくすることができます。 詳細については、「 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)関数の説明」の SQL_MAX_CONCURRENT_ACTIVITIES と SQL_MAX_DRIVER_CONNECTIONS のオプションと、[ステートメントハンドル](../../../odbc/reference/develop-app/statement-handles.md)および[接続ハンドル](../../../odbc/reference/develop-app/connection-handles.md)を参照してください。
+一部のドライバーおよび DBMS では、一度にアクティブにできるステートメントと接続の数が制限されます。 これらの数値は 1 つにも小さくすることができます。 詳細については、 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)関数の説明の SQL_MAX_CONCURRENT_ACTIVITIES およびSQL_MAX_DRIVER_CONNECTIONSオプション、および[ステートメント ハンドル](../../../odbc/reference/develop-app/statement-handles.md)と[接続ハンドル](../../../odbc/reference/develop-app/connection-handles.md)を参照してください。

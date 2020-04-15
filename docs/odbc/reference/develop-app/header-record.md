@@ -1,5 +1,5 @@
 ---
-title: ヘッダーレコード |Microsoft Docs
+title: ヘッダーレコード |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - header records [ODBC]
 - diagnostic records [ODBC]
 ms.assetid: d0fff1ed-5616-422a-a394-7ea1d2486f89
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7f5fe5cf6aae0d5953cc82b845396dd4164c7fa3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 372185966cc1644147feb2683177ae3a5b69e788
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68139024"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300182"
 ---
 # <a name="header-record"></a>ヘッダー レコード
-ヘッダーレコード内のフィールドには、関数の実行に関する一般的な情報が含まれています。これには、リターンコード、行数、状態レコードの数、実行されたステートメントの種類などが含まれます。 関数が SQL_INVALID_HANDLE を返さない限り、ヘッダーレコードは常に作成されます。 ヘッダーレコード内のフィールドの完全な一覧については、 [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)関数の説明を参照してください。
+ヘッダー・レコードのフィールドには、戻りコード、行カウント、状況レコードの数、実行されたステートメントのタイプなど、関数の実行に関する一般的な情報が含まれます。 関数がSQL_INVALID_HANDLEを返す場合を除き、ヘッダー レコードは常に作成されます。 ヘッダー レコードのフィールドの完全な一覧については[、SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)関数の説明を参照してください。

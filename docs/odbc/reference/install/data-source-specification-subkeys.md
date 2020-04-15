@@ -1,5 +1,5 @@
 ---
-title: データソース指定サブキー |Microsoft Docs
+title: データ ソース仕様サブキー |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,30 +12,30 @@ helpviewer_keywords:
 - registry entries for data sources [ODBC], data source specification subkeys
 - subkeys [ODBC], data source specification subkeys
 ms.assetid: d7e88a07-e6ab-4258-a45d-1ca21234fbec
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fae642b46b4c652583622ec4832b3217d0b1681c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 281377c307f3f3750e87bf5dc988beb7660067af
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68068563"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300342"
 ---
 # <a name="data-source-specification-subkeys"></a>データ ソースの仕様のサブキー
-ODBC データソースサブキーに一覧表示される各データソースには、独自のサブキーがあります。 このサブキーには、ODBC データソースサブキーの下にある対応する値と同じ名前が付けられています。 このサブキーの下の値は、ドライバーの DLL の一覧を表示し、データソースの説明を一覧表示する必要があります。 ドライバーが変換プログラムをサポートしている場合は、既定の変換プログラムの名前、既定の翻訳 DLL、および既定の翻訳オプションが一覧表示されます。 値には、ドライバーがデータソースに接続するために必要なその他の情報も表示される場合があります。 たとえば、ドライバーでは、サーバー名、データベース名、またはスキーマ名が必要になる場合があります。  
+ODBC データ ソース サブキーに一覧表示される各データ ソースには、独自のサブキーがあります。 このサブキーは、ODBC データ ソース サブキーの下の対応する値と同じ名前です。 このサブキーの値には、ドライバー DLL が一覧表示され、データ ソースの説明が表示される場合があります。 ドライバがトランスレータをサポートしている場合、値にはデフォルトのトランスレータの名前、デフォルトの翻訳 DLL、デフォルトの翻訳オプションが表示されることがあります。 値には、データ ソースに接続するためにドライバーが必要とするその他の情報も一覧表示されます。 たとえば、ドライバーは、サーバー名、データベース名、またはスキーマ名を必要があります。  
   
- 値の形式を次の表に示します。 ドライバー値のみが必要です。  
+ 値の形式は、次の表に示すとおりです。 必要なのは、ドライバの値だけです。  
   
-|Name|データ型|データ|  
+|名前|データ型|Data|  
 |----------|---------------|----------|  
-|[説明]|REG_SZ|*記述*|  
-|Driver|REG_SZ|*ドライバー-DLL パス*|  
-|TranslationDLL|REG_SZ|*translator-DLL-パス*|  
-|TranslationName|REG_SZ|*変換プログラム-名前*|  
-|TranslationOption|REG_SZ|*translation-オプション*|  
-|*opt-値-名前*|*opt-値型*|*opt-値-データ*|  
+|説明|REG_SZ|*説明*|  
+|Driver|REG_SZ|*ドライバ DLL パス*|  
+|トランスレーションDLL|REG_SZ|*トランスレータ -DLL パス*|  
+|翻訳名|REG_SZ|*翻訳者名*|  
+|翻訳オプション|REG_SZ|*翻訳オプション*|  
+|*オプトバリュー名*|*オプト値タイプ*|*オプトバリューデータ*|  
   
- たとえば、SQL Server ドライバーが OEM から ANSI への変換にサーバー名とフラグを必要とし、これらのサーバーと OEMTOANSI 値を定義するとします。 また、インベントリデータソースが Microsoft®コードページトランスレーターを使用して、Windows® Latin 1 (1250) と多言語 (850) のコードページを変換するとします。 Inventory サブキーの下の値は次のようになります。  
+ たとえば、SQL Server ドライバが、OEM から ANSI への変換に関するサーバー名とフラグを必要とし、これらに対してサーバーと OEMTOANSI の値を定義するとします。 また、インベントリ データ ソースでは、Microsoft ® コード ページトランスレータを使用して、Windows ®ラテン 1 (1250) と多言語 (850) のコード ページ間で翻訳を行う場合を考えます。 インベントリ サブキーの下の値は次のようになります。  
   
 ```  
 Description : REG_SZ : Inventory database on server InvServ  

@@ -1,5 +1,5 @@
 ---
-title: ストアドプロシージャの実行 (OLE DB) |Microsoft Docs
+title: ストアド プロシージャの実行 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - OLE DB, stored procedures
 - SQL Server Native Client OLE DB provider, stored procedures
 ms.assetid: c77d9be9-2176-4438-8c7a-04b63ebece08
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6329b0ff8f4d502916d2046e404fcecac8fc5869
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3f01c5e43d7d451cbcdca30dd66cf2ca70227541
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73759336"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305348"
 ---
 # <a name="stored-procedures---running"></a>ストアド プロシージャ - 実行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "73759336"
   
 -   機能の追加。  
   
- Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーでは、ストアドプロシージャが[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データを返すために使用する3つのメカニズムがサポートされています。  
+ ネイティブ[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]クライアント OLE DB プロバイダは、ストアド[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]プロシージャがデータを返すために使用する 3 つのメカニズムをサポートしています。  
   
 -   プロシージャ内のすべての SELECT ステートメントで結果セットを生成する。  
   
@@ -47,11 +47,11 @@ ms.locfileid: "73759336"
   
  アプリケーションでは、ストアド プロシージャからのこれらすべての出力を処理できる必要があります。  
   
- 結果の処理中には、さまざまな OLE DB プロバイダーからさまざまなタイミングで出力パラメーターと戻り値が返されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの場合、ストアドプロシージャによって返された結果セットをコンシューマーが取得またはキャンセルするまで、出力パラメーターとリターンコードは提供されません。 これらのリターン コードと出力パラメーターは、サーバーからの最後の TDS パケットで返されます。  
+ 結果の処理中には、さまざまな OLE DB プロバイダーからさまざまなタイミングで出力パラメーターと戻り値が返されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ネイティブ クライアント OLE DB プロバイダーの場合、コンシューマーがストアド プロシージャによって返される結果セットを取得または取り消すまで、出力パラメーターと戻りコードは指定されません。 これらのリターン コードと出力パラメーターは、サーバーからの最後の TDS パケットで返されます。  
   
  プロバイダーでは、DBPROP_OUTPUTPARAMETERAVAILABILITY プロパティを使用して、出力パラメーターと戻り値を返すタイミングを報告します。 このプロパティは、DBPROPSET_DATASOURCEINFO プロパティ セットに含まれています。  
   
- Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、DBPROP_OUTPUTPARAMETERAVAILABILITY プロパティを DBPROPVAL_OA_ATROWRELEASE に設定して、結果セットが処理または解放されるまでリターンコードと出力パラメーターが返されないことを示します。  
+ ネイティブ[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]クライアント OLE DB プロバイダーは、DBPROP_OUTPUTPARAMETERAVAILABILITYプロパティをDBPROPVAL_OA_ATROWRELEASEに設定して、結果セットが処理されるか解放されるまで、リターン コードと出力パラメーターが返されないことを示します。  
   
 ## <a name="see-also"></a>参照  
  [ストアド プロシージャ](../../../relational-databases/native-client/ole-db/stored-procedures.md)  
