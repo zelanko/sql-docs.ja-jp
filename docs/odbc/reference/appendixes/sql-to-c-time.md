@@ -1,5 +1,5 @@
 ---
-title: 'SQL から C へ: Time |Microsoft Docs'
+title: 'SQL から C: 時間 |マイクロソフトドキュメント'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,36 +12,36 @@ helpviewer_keywords:
 - time data type [ODBC]
 - data conversions from SQL to C types [ODBC], time
 ms.assetid: 6dc59973-7bb5-40f1-87c8-5bf68b3bf2ee
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 99f8219ef53f72b0d7ab1477bba5d24d441a3141
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ebd146abf650861099a40bf91b2641df768b343d
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68065079"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81296382"
 ---
-# <a name="sql-to-c-time"></a>SQL から C へ: 時刻
-Time ODBC SQL データ型の識別子は次のとおりです。  
+# <a name="sql-to-c-time"></a>SQL から C へ: Time
+時刻 ODBC SQL データ型の識別子は次のとおりです。  
   
  SQL_TYPE_TIME  
   
- 次の表は、SQL データが変換される可能性がある ODBC C データ型を示しています。 テーブル内の列と用語の詳細については、「 [SQL から C データ型へのデータの変換](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)」を参照してください。  
+ 次の表は、SQL データの変換後の ODBC C データ型を示しています。 表の列と用語の説明については[、SQL から C データ型へのデータの変換を参照してください](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)。  
   
-|C 型識別子|テスト|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
+|C 型識別子|テスト|**ターゲット値Ptr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|*Bufferlength* > 文字のバイト長<br /><br /> *9* <= *bufferlength* <= 文字バイト長<br /><br /> *Bufferlength* < 9|データ<br /><br /> 切り捨てられたデータ [a]<br /><br /> 未定義|データの長さ (バイト単位)<br /><br /> データの長さ (バイト単位)<br /><br /> 未定義|該当なし<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|*Bufferlength* > 文字長<br /><br /> *9* <= *bufferlength* <= 文字の長さ<br /><br /> *Bufferlength* < 9|データ<br /><br /> 切り捨てられたデータ [a]<br /><br /> 未定義|データの長さ (文字数)<br /><br /> データの長さ (文字数)<br /><br /> 未定義|該当なし<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_BINARY|データ <のバイト長 = *Bufferlength*<br /><br /> データ > *bufferlength*のバイト長|データ<br /><br /> 未定義|データの長さ (バイト単位)<br /><br /> 未定義|該当なし<br /><br /> 22003|  
-|SQL_C_TYPE_TIME|なし [b]|データ|6 [d]|該当なし|  
-|SQL_C_TYPE_TIMESTAMP|なし [b]|データ [c]|16 [d]|該当なし|  
+|SQL_C_CHAR|*バッファー長>* 文字バイト長<br /><br /> *9* <= *バッファ長<* = 文字バイト長<br /><br /> *バッファ長<* 9|Data<br /><br /> 切り捨てられたデータ[a]<br /><br /> 未定義。|データの長さ (バイト単位)<br /><br /> データの長さ (バイト単位)<br /><br /> 未定義。|該当なし<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|*バッファ長>* 文字長<br /><br /> *9* <= *バッファ長<* = 文字長<br /><br /> *バッファ長<* 9|Data<br /><br /> 切り捨てられたデータ[a]<br /><br /> 未定義。|文字でのデータの長さ<br /><br /> 文字でのデータの長さ<br /><br /> 未定義。|該当なし<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_BINARY|データ長のバイト長<=*バッファ長*<br /><br /> データのバイト長 >*バッファ長*|Data<br /><br /> 未定義。|データの長さ (バイト単位)<br /><br /> 未定義。|該当なし<br /><br /> 22003|  
+|SQL_C_TYPE_TIME|なし[b]|Data|6 [d]|該当なし|  
+|SQL_C_TYPE_TIMESTAMP|なし[b]|データ[c]|16[d]|該当なし|  
   
- [a] 時間の秒の小数部は切り捨てられます。  
+ [a] 時間の秒数の小数部が切り捨てられます。  
   
- [b] この変換では、 *Bufferlength*の値は無視されます。 ドライバーは、**Targetvalueptr*のサイズが C データ型のサイズであることを前提としています。  
+ [b] この変換では *、BufferLength*の値は無視されます。 ドライバーは、**ターゲット値Ptr*のサイズは、Cデータ型のサイズであると仮定します。  
   
- [c] タイムスタンプ構造の日付フィールドは現在の日付に設定され、timestamp 構造体の秒の小数部のフィールドは0に設定されます。  
+ [c] タイムスタンプ構造の日付フィールドは現在の日付に設定され、タイムスタンプ構造の秒の小数部フィールドはゼロに設定されます。  
   
  [d] これは、対応する C データ型のサイズです。  
   
- SQL データを文字 C データに変換すると、結果の文字列は "*hh*:*mm*:*ss*" の形式になります。 この形式は、Windows®の国設定の影響を受けません。
+ TIME SQL データが文字 C データに変換されるとき、結果の文字列は "*hh*:*mm*:*ss*" 形式になります。 この形式は、Windows®国の設定の影響を受けません。

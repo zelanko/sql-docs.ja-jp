@@ -1,5 +1,5 @@
 ---
-title: 実行時データと Text、ntext、Image
+title: 実行時のデータとテキスト、ntext、画像
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - ODBC data-at-execution
 - image columns [ODBC]
 ms.assetid: 67ffb1a6-f38d-4712-ba64-96bdd41ec2b2
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6135fb151d2fd0d4d14674597e874dc00260efdd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d95478cd558239030ccfb4091641258548705ba9
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75254630"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81297718"
 ---
 # <a name="data-at-execution-and-text-ntext-or-image-columns"></a>実行時データと text 型、ntext 型、または image 型の列
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  ODBC 実行時データは、バインドされた列やパラメーターに対して、アプリケーションが大量のデータを操作できるようにする機能です。 非常に大きな**text**型、 **ntext**型、または**image**型の列を取得する場合、アプリケーションは単純に大きなバッファーを割り当てて、その列をバッファーにバインドし、行をフェッチすることができない可能性があります。 非常に大きな**text**型、 **ntext**型、または**image**型の列を更新する場合、アプリケーションは単純に大きなバッファーを割り当てて、それを SQL ステートメントのパラメーターマーカーにバインドした後、ステートメントを実行できない可能性があります。 このような場合、アプリケーションでは、実行時データオプションを使用して[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)または[sqlputdata](../../relational-databases/native-client-odbc-api/sqlputdata.md)を使用する必要があります。  
+  ODBC 実行時データは、バインドされた列やパラメーターに対して、アプリケーションが大量のデータを操作できるようにする機能です。 非常に大きな**テキスト****、ntext**、または**image**列を取得する場合、アプリケーションは、巨大なバッファを割り当て、その列をバッファにバインドして行をフェッチすることはできません。 非常に大きな**テキスト** **、ntext**、または**image**列を更新する場合、アプリケーションは、単に巨大なバッファーを割り当て、SQL ステートメントのパラメーター・マーカーにバインドして、ステートメントを実行することができない場合があります。 このような場合、アプリケーションは、実行時のデータ オプションを使用して[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)または[SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md)を使用する必要があります。  
   
 ## <a name="see-also"></a>参照  
  [text 列と image 列の管理](../../relational-databases/native-client-odbc-text-image-columns/managing-text-and-image-columns.md)  

@@ -1,5 +1,5 @@
 ---
-title: システム要件 (Visual FoxPro ODBC ドライバー) |Microsoft Docs
+title: システム要件 (ビジュアル フォックスプロ ODBC ドライバー) |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,42 +16,42 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], installing
 - FoxPro ODBC driver [ODBC], installing
 ms.assetid: fb4d5157-9a3e-43bf-97b5-7a614558652c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 762d6c3647081c1745ab6a11d7f00d7a7072bd7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d02681709edb3a22144469df7c9abbda34e6e083
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67939805"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301443"
 ---
 # <a name="system-requirements-visual-foxpro-odbc-driver"></a>システム要件 (Visual FoxPro ODBC ドライバー)
-インストールのシステム要件により、ドライバーを正常にインストールするために必要な最小限のオペレーティングシステムとディスク領域が提供されます。 ドライバーをインストールした後、Visual FoxPro データへのアクセスに使用する特定のアプリケーションソフトウェアを選択できます。  
+インストールのシステム要件は、ドライバを正常にインストールするために必要なオペレーティング システムとディスク領域を最小限に抑えます。 ドライバーをインストールした後、Visual FoxPro データにアクセスするために使用する特定のアプリケーション ソフトウェアを選択できます。  
   
 ## <a name="installation-requirements"></a>インストール要件  
- インストール要件およびその他の情報については、「 [Visual FOXPRO ODBC ドライバーのダウンロードサイト](https://go.microsoft.com/fwlink/?LinkId=121318)」を参照してください。  
+ インストール要件およびその他の情報については[、Visual FoxPro ODBC ドライバーのダウンロード サイト](https://go.microsoft.com/fwlink/?LinkId=121318)を参照してください。  
   
-## <a name="accessing-visual-foxpro-data"></a>Visual FoxPro データへのアクセス  
- Microsoft Visual FoxPro または FoxPro 2 にアクセスするには*x*データには、次のものが必要です。  
+## <a name="accessing-visual-foxpro-data"></a>ビジュアルフォックスプロデータへのアクセス  
+ マイクロソフトビジュアルフォックスプロまたはフォックスプロ2にアクセスするには。*x*データを使用するには、次の項目が必要です。  
   
--   ODBC クライアントソフトウェア (ドライバーと共に自動的にインストールされます)  
+-   ODBC クライアント ソフトウェア (ドライバーと共に自動的にインストールされます)  
   
--   Microsoft Visual FoxPro ODBC ドライバー  
+-   マイクロソフト ビジュアル フォックスプロ ODBC ドライバー  
   
--   次のいずれかの種類のアプリケーションソフトウェア。  
+-   次の種類のアプリケーション ソフトウェアのいずれか。  
   
-    -   Microsoft Excel や Microsoft Word などの Microsoft Office アプリケーション  
+    -   Excel や Word などの Office アプリケーション  
   
-    -   C または C++ 言語の ODBC アプリケーション  
+    -   C 言語または C++ 言語 ODBC アプリケーション  
   
-    -   Microsoft Visual Basic ODBC アプリケーション  
+    -   マイクロソフトビジュアルベーシック ODBC アプリケーション  
   
--   次のいずれかの種類のデータ。  
+-   次のタイプのデータのいずれか。  
   
-    -   Visual FoxPro[データベース](../../odbc/microsoft/visual-foxpro-terminology.md)または[フリーテーブル](../../odbc/microsoft/visual-foxpro-terminology.md)のディレクトリ  
+    -   ビジュアル FoxPro[データベース](../../odbc/microsoft/visual-foxpro-terminology.md)または[フリー テーブル](../../odbc/microsoft/visual-foxpro-terminology.md)のディレクトリ  
   
-    -   FoxPro 2.0、2.5、2.6[テーブル](../../odbc/microsoft/visual-foxpro-terminology.md)  
+    -   フォックスプロ 2.0, 2.5, 2.6[テーブル](../../odbc/microsoft/visual-foxpro-terminology.md)  
   
- Visual FoxPro ODBC ドライバーでは、2バイト文字セット (DBCS) がサポートされています。 詳細については、「[インターナショナルサポート](../../odbc/microsoft/international-support-visual-foxpro-odbc-driver.md)」を参照してください。  
+ ビジュアル フォックスプロ ODBC ドライバーは、2 バイト文字セット (DBCS) をサポートしています。 詳細については、インターナショナル[サポート](../../odbc/microsoft/international-support-visual-foxpro-odbc-driver.md)を参照してください。  
   
- このドライバーは、16ビットの Microsoft Windows 3.1 アプリケーションをサポートしていません。
+ ドライバは 16 ビット版の Windows 3.1 アプリケーションをサポートしていません。

@@ -1,5 +1,5 @@
 ---
-title: ExtendedAnsiSQL | の設定Microsoft Docs
+title: 拡張を設定する|マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,25 +10,25 @@ ms.topic: conceptual
 helpviewer_keywords:
 - extendedANSISQL [ODBC], setting
 ms.assetid: 37b775d1-65ac-45ac-8572-454bc4e3c1a2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 330b55ef2d4fee090c453990d3fe75e6e2dacb6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6b5c2e4ed4d8bd64d02fb6a62861db832f6b0898
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68063600"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300802"
 ---
 # <a name="setting-extendedansisql"></a>ExtendedAnsiSQL の設定
-ExtendedAnsiSQL 属性を追加することで、接続文字列内の属性を制御できます。  
+この属性は、ExtendedAnsiSQL 属性を追加することで、接続文字列で制御できます。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
-|ExtendedAnsiSQL = 0 (既定値)|この設定では、新しい機能は有効になりません。|  
-|ExtendedAnsiSQL = 1|この設定により、新しい機能が有効になります。|  
+|拡張アンシSQL=0 (デフォルト)|この設定では、新しい機能は有効になっていません。|  
+|拡張アンシSQL=1|この設定により、新機能が有効になります。|  
   
- 属性は、コントロールパネルで DSN を構成するときに、 **[詳細オプション**] ダイアログボックスで dsn で設定することもできます。  
+ コントロール パネルから DSN を構成するときに、[**詳細オプション]** ダイアログ ボックスを使用して、DSN で属性を設定することもできます。  
   
- 属性を0に設定すると、新しい機能が無効になります。1に設定すると、新しい機能が有効になります。  
+ 属性を 0 に設定すると、新しい機能は無効になります。1 に設定すると、新機能が有効になります。  
   
- 属性は、SQLSetConnectAttr () を使用して設定することもできます。 属性値は65501で、前の表に記載されているように、SQLINTEGER 値が1または0に設定されています。 接続の前または後に呼び出すことができますが、キャッシュされた接続属性と接続文字列をドライバーが処理する順序によって、接続後に呼び出す方が適切です。
+ この属性は、SQLSetConnectAttr() を使用して設定することもできます。 属性値は 65501 で、前の表に示されているように、SQLINTEGER 値 1 または 0 に設定されます。 これは接続の前または後に呼び出すことができますが、ドライバーがキャッシュされた接続属性と接続文字列を処理する順序のために接続後に呼び出すことをおやめください。

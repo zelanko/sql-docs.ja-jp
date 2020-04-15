@@ -1,5 +1,5 @@
 ---
-title: 予約語の制限 |Microsoft Docs
+title: 予約語の制限 |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 05/01/2018
 ms.prod: sql
@@ -11,24 +11,24 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
 - desktop database drivers [ODBC]
 ms.assetid: ed42f083-c9e8-4ee4-9d64-d879bf955c78
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c884d8594c3c4511bed0e24f9b3dd43092176b4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bf536e06556e6b2e7b27f220d09a51f91b44d23c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67988026"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304010"
 ---
-# <a name="reserved-keyword-limitations"></a>予約済みキーワードの制限事項
+# <a name="reserved-keyword-limitations"></a>予約キーワードの制限
 
-SQL テーブルや関連オブジェクトの識別子として、ODBC の予約済みキーワードを使用することは避けてください。 予約済みキーワードを識別子として使用する必要がある場合に、奇数の場合は、*バックティック*(') のペアで識別子を囲む必要があります。 *バックティック*のもう1つの名前は、*バッククォート*です。
+ODBC 予約キーワードは、SQL テーブルまたは関連オブジェクトの識別子として使用しないでください。 予約キーワードを識別子として使用する必要がある場合、奇数のケースが発生した場合は、識別子を*バックティック*(') のペアで囲む必要があります。 *バックティック*の別の名前は *、引用の戻る*です。
 
-予約済みキーワードの制限は、予約済みキーワードの短縮形にも適用されます。
+予約キーワードの制限は、予約キーワードの任意の短縮形にも適用されます。
 
-ODBC の予約済みキーワードの一覧については、以下を参照してください。
+ODBC 予約キーワードのリストは、次のページで入手できます。
 
-- [ODBC の予約済みキーワード](https://docs.microsoft.com/sql/odbc/reference/appendixes/reserved-keywords)。
+- [ODBC 予約キーワード](https://docs.microsoft.com/sql/odbc/reference/appendixes/reserved-keywords):
 
-- *ODBC プログラマーズリファレンスガイド*については、「[付録 C: SQL 文法](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-c-sql-grammar)」を参照してください。
+- ODBC*プログラマ リファレンス ガイド*の[「付録 C: SQL 文法](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-c-sql-grammar)」を参照してください。
 

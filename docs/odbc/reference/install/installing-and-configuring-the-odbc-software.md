@@ -1,5 +1,5 @@
 ---
-title: ODBC ソフトウェアのインストールと構成 |Microsoft Docs
+title: ODBC ソフトウェアのインストールと設定 |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,18 +13,18 @@ helpviewer_keywords:
 - ODBC [ODBC], configuring
 - installing ODBC [ODBC]
 ms.assetid: e2580f7d-d614-4e14-a9a3-804e8061b00e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9bc3770140d6ff5befbafefc26cb8936e14b494a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a71d021f7ff9d1ef73a3a64c1b5bb27dea1caeba
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68094032"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301927"
 ---
 # <a name="installing-and-configuring-the-odbc-software"></a>ODBC ソフトウェアをインストールおよび構成する
 > [!NOTE]  
->  Windows XP および windows Server 2003 以降では、ODBC は Windows オペレーティングシステムに含まれています。 ODBC は、以前のバージョンの Windows にのみ明示的にインストールする必要があります。  
+>  WINDOWS XP および Windows Server 2003 以降では、ODBC が Windows のオペレーション システムに含まれています。 ODBC は、以前のバージョンの Windows にのみ明示的にインストールしてください。  
   
  このセクションでは、次のトピックを扱います。  
   

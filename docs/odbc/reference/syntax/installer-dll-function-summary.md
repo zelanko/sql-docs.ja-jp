@@ -1,5 +1,5 @@
 ---
-title: インストーラー DLL 関数の概要 |Microsoft Docs
+title: インストーラ DLL 関数の概要 |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,41 +11,41 @@ helpviewer_keywords:
 - functions [ODBC], installer DLL functions
 - installer DLL [ODBC]
 ms.assetid: 666c09d3-1e10-4d89-9b42-eda2957a87f0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e6d2a865764a3d802a7e5a5341226d7d1aa855f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ddaf20334a84833433961a49e17724d354945c5a
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68095680"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298772"
 ---
 # <a name="installer-dll-function-summary"></a>インストーラー DLL 関数の概要
-インストーラー DLL の関数を次の表に示します。 各関数の構文とセマンティクスの詳細については、「[インストーラー DLL API リファレンス](../../../odbc/reference/syntax/installer-dll-api-reference-function.md)」を参照してください。  
+次の表は、インストーラー DLL の関数を示しています。 各関数の構文とセマンティクスの詳細については、「インストーラー DLL API リファレンス」を[参照してください](../../../odbc/reference/syntax/installer-dll-api-reference-function.md)。  
   
 |タスク|関数名|目的|  
 |----------|-------------------|-------------|  
-|ODBC のインストール|[SQLConfigDriver](../../../odbc/reference/syntax/sqlconfigdriver-function.md)|ドライバー固有のセットアップ DLL を読み込みます。|  
-||[Sqlgetdrivers ドライバー](../../../odbc/reference/syntax/sqlgetinstalleddrivers-function.md)|インストールされているドライバーの一覧を返します。|  
-||[SQLInstallDriverEx](../../../odbc/reference/syntax/sqlinstalldriverex-function.md)|システム情報にドライバーを追加します。|  
-||[SQLInstallDriverManager](../../../odbc/reference/syntax/sqlinstalldrivermanager-function.md)|ドライバーマネージャーのターゲットディレクトリを返します。|  
-||[Sqlインストーラエラー](../../../odbc/reference/syntax/sqlinstallererror-function.md)|インストーラー関数のエラーまたは状態の情報を返します。|  
-||[SQLInstallTranslatorEx](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md)|システム情報に変換プログラムを追加します。|  
-||[Sqlpostインストーラエラー](../../../odbc/reference/syntax/sqlpostinstallererror-function.md)|ドライバーまたはトランスレーターセットアップライブラリがエラーを報告できるようにします。|  
-||[SQLRemoveDriver](../../../odbc/reference/syntax/sqlremovedriver-function.md)|システム情報からドライバーを削除します。|  
-||[SQLRemoveDriverManager](../../../odbc/reference/syntax/sqlremovedrivermanager-function.md)|システム情報から ODBC コアコンポーネントを削除します。|  
-||[SQLRemoveTranslator](../../../odbc/reference/syntax/sqlremovetranslator-function.md)|システム情報から変換プログラムを削除します。|  
+|ODBC のインストール|[ドライバー](../../../odbc/reference/syntax/sqlconfigdriver-function.md)|ドライバー固有のセットアップ DLL を読み込みます。|  
+||[ドライバーを取得します。](../../../odbc/reference/syntax/sqlgetinstalleddrivers-function.md)|インストールされているドライバの一覧を返します。|  
+||[ドライバのインストール](../../../odbc/reference/syntax/sqlinstalldriverex-function.md)|システム情報にドライバーを追加します。|  
+||[ドライバー マネージャー](../../../odbc/reference/syntax/sqlinstalldrivermanager-function.md)|ドライバー マネージャーのターゲット ディレクトリを返します。|  
+||[エラー](../../../odbc/reference/syntax/sqlinstallererror-function.md)|インストーラ関数のエラーまたはステータス情報を返します。|  
+||[トランスレータ](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md)|システム情報にトランスレータを追加します。|  
+||[エラー](../../../odbc/reference/syntax/sqlpostinstallererror-function.md)|ドライバまたはトランスレータのセットアップ ライブラリでエラーを報告できます。|  
+||[ドライバーの削除](../../../odbc/reference/syntax/sqlremovedriver-function.md)|システム情報からドライバを削除します。|  
+||[をクリックします。](../../../odbc/reference/syntax/sqlremovedrivermanager-function.md)|システム情報から ODBC コア コンポーネントを削除します。|  
+||[トランスレータを削除します。](../../../odbc/reference/syntax/sqlremovetranslator-function.md)|システム情報からトランスレータを削除します。|  
 |データ ソースの構成|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|ドライバー固有のセットアップ DLL を呼び出します。|  
-||[SQLCreateDataSource](../../../odbc/reference/syntax/sqlcreatedatasource-function.md)|データソースを追加するためのダイアログボックスを表示します。|  
-||[SQLGetConfigMode](../../../odbc/reference/syntax/sqlgetconfigmode-function.md)|DSN 値を一覧表示する Odbc .ini エントリのシステム情報の場所を示す構成モードを取得します。|  
-||[SQLGetPrivateProfileString](../../../odbc/reference/syntax/sqlgetprivateprofilestring-function.md)|システム情報に値を書き込みます。|  
-||[SQLGetTranslator](../../../odbc/reference/syntax/sqlgettranslator-function.md)|変換プログラムを選択するためのダイアログボックスを表示します。|  
-||[SQLManageDataSources](../../../odbc/reference/syntax/sqlmanagedatasources.md)|データソースとドライバーを構成するためのダイアログボックスを表示します。|  
-||[SQLReadFileDSN](../../../odbc/reference/syntax/sqlreadfiledsn-function.md)|ファイル Dsn から情報を読み取ります。|  
-||[SQLRemoveDefaultDataSource](../../../odbc/reference/syntax/sqlremovedefaultdatasource-function.md)|既定のデータソースを削除します。|  
-||[SQLRemoveDSNFromIni](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|データソースを削除します。|  
-||[SQLSetConfigMode](../../../odbc/reference/syntax/sqlsetconfigmode-function.md)|DSN 値を一覧表示する Odbc .ini エントリのシステム情報の場所を示す構成モードを設定します。|  
-||[SQLValidDSN](../../../odbc/reference/syntax/sqlvaliddsn-function.md)|データソース名の長さと有効性をチェックします。|  
-||[SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|データソースを追加します。|  
-||[SQLWriteFileDSN](../../../odbc/reference/syntax/sqlwritefiledsn-function.md)|ファイル Dsn に情報を書き込みます。|  
-||[SQLWritePrivateProfileString](../../../odbc/reference/syntax/sqlwriteprivateprofilestring-function.md)|システム情報から値を取得します。|
+||[データ ソースを作成します。](../../../odbc/reference/syntax/sqlcreatedatasource-function.md)|データ ソースを追加するためのダイアログ ボックスを表示します。|  
+||[モード](../../../odbc/reference/syntax/sqlgetconfigmode-function.md)|DSN 値を示す Odbc.ini エントリがシステム情報内のどこにあるかを示すコンフィギュレーション モードを取得します。|  
+||[文字列](../../../odbc/reference/syntax/sqlgetprivateprofilestring-function.md)|システム情報に値を書き込みます。|  
+||[トランスレータを取得します。](../../../odbc/reference/syntax/sqlgettranslator-function.md)|トランスレータを選択するためのダイアログ ボックスを表示します。|  
+||[SQLManageDataSources](../../../odbc/reference/syntax/sqlmanagedatasources.md)|データ ソースとドライバを構成するダイアログ ボックスを表示します。|  
+||[ファイルを読み取るDSN](../../../odbc/reference/syntax/sqlreadfiledsn-function.md)|ファイル DSN から情報を読み取ります。|  
+||[データ ソースを削除します。](../../../odbc/reference/syntax/sqlremovedefaultdatasource-function.md)|既定のデータ ソースを削除します。|  
+||[イニから削除します。](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|データ ソースを削除します。|  
+||[設定モード](../../../odbc/reference/syntax/sqlsetconfigmode-function.md)|DSN 値を示す Odbc.ini エントリがシステム情報内のどこにあるかを示すコンフィギュレーション モードを設定します。|  
+||[を指定します。](../../../odbc/reference/syntax/sqlvaliddsn-function.md)|データ ソース名の長さと有効性を確認します。|  
+||[を使用します。](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|データ ソースを追加します。|  
+||[ファイルを書き込む](../../../odbc/reference/syntax/sqlwritefiledsn-function.md)|情報をファイル DSN に書き込みます。|  
+||[文字列](../../../odbc/reference/syntax/sqlwriteprivateprofilestring-function.md)|システム情報から値を取得します。|

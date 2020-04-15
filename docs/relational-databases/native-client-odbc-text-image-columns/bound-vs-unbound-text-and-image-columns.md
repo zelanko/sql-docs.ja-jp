@@ -1,5 +1,5 @@
 ---
-title: バインドされたテキストと画像の列 |Microsoft Docs
+title: バインドされたテキストとイメージの列のバインドと非バインドの値 |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,25 +18,25 @@ helpviewer_keywords:
 - ODBC data types, text columns
 - image columns [ODBC]
 ms.assetid: ffd3442e-d880-46e9-b848-2365a09a2406
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d23b999c40aaa6a7cd8200185f18f14ac759403f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0cfa05f7019342d63ab6f3092c3b6df5ae6e8daa
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73778874"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81297740"
 ---
 # <a name="bound-vs-unbound-text-and-image-columns"></a>バインドされた text、image 型の列とバインドされない text、image 型の列
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  サーバーカーソルを使用する場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、NATIVE Client ODBC ドライバーは、 **sqlfetch**の実行時に、バインドされていない**text**、 **ntext**、または**image**型の列のデータを転送しないように最適化されています。 **Text**型、 **ntext**型、または**image**型のデータは、アプリケーションが列に対して[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)を発行するまで、実際にはサーバーから取得されません。  
+  サーバー カーソルを使用する場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、ネイティブ クライアント ODBC ドライバは **、SQLFetch**の実行時に非連結**テキスト****、ntext、** または**image**列のデータを送信しないように最適化されます。 **テキスト**、 **ntext**、または**イメージ**のデータは、アプリケーションが列に対して[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)を発行するまで、実際にはサーバーから取得されません。  
   
- ユーザーがカーソル内を上下にスクロールしている間に、 **text**、 **ntext**、または**image**データが表示されないように、多くのアプリケーションを記述できます。 ユーザーが行を選択して詳細を取得すると、アプリケーションは**SQLGetData**を呼び出して、 **text**、 **ntext**、または**image**データを取得できます。 これにより、ユーザーが選択していない行の**text**型、 **ntext**型、または**image**型のデータが転送されるのを防ぐことができるため、非常に大量のデータの転送を防ぐことができます。  
+ 多くのアプリケーションを記述して、ユーザーがカーソル内をスクロールしている間、**テキスト****、ntext、** または**image**データが表示されないようにすることができます。 ユーザーが行を選択して詳細を取得すると、アプリケーションは**SQLGetData**を呼び出して**テキスト** **、ntext**、または**イメージ**データを取得できます。 これにより、ユーザーが選択しない行の**テキスト****、ntext、** または**image**データが送信されなくなり、大量のデータが送信されないようにすることができます。  
   
 ## <a name="see-also"></a>参照  
- [Text 列と Image 列の管理](../../relational-databases/native-client-odbc-text-image-columns/managing-text-and-image-columns.md)   
+ [テキストとイメージの列の管理](../../relational-databases/native-client-odbc-text-image-columns/managing-text-and-image-columns.md)   
  [カーソル動作](../../relational-databases/native-client-odbc-cursors/cursor-behaviors.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: ドライバーのセットアップ DLL |Microsoft Docs
+title: ドライバセットアップ DLL |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,31 +12,31 @@ helpviewer_keywords:
 - ODBC drivers [ODBC], driver setup DLL
 - driver setup DLL [ODBC]
 ms.assetid: 49bab021-81fa-402e-b7a4-a5214f1fadc4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: df91638f91091940e00e7a6a19d0fd6cb700f85f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a0a2878591c92fe0b2070a295d9dc622c245c17e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68094160"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306423"
 ---
 # <a name="driver-setup-dll"></a>ドライバーのセットアップ DLL
 > [!NOTE]  
->  Windows XP および windows Server 2003 以降では、ODBC は Windows オペレーティングシステムに含まれています。 ODBC は、以前のバージョンの Windows にのみ明示的にインストールする必要があります。  
+>  WINDOWS XP および Windows Server 2003 以降では、ODBC が Windows のオペレーション システムに含まれています。 ODBC は、以前のバージョンの Windows にのみ明示的にインストールしてください。  
   
- ドライバーセットアップ DLL には、 **configdriver**および**configdriver**関数が含まれています。 **Configdriver**は、ドライバー固有の情報をレジストリに入力するなど、ドライバー固有のインストールタスクを実行します。 **Configdsn**では、データソースに関するドライバー固有の情報がレジストリに保持されます。 これらの関数の詳細については、「 [SETUP DLL API Reference](../../../odbc/reference/syntax/setup-dll-api-reference.md)」を参照してください。  
+ ドライバーセットアップ DLL には **、構成ドライバー**と**構成DSN**関数が含まれています。 **ConfigDriver**は、ドライバー固有の情報をレジストリに入力するなど、ドライバー固有のインストール タスクを実行します。 **ConfigDSN**は、レジストリ内のデータ ソースに関するドライバ固有の情報を保持します。 これらの関数の詳細については[、「DLL API リファレンスのセットアップ](../../../odbc/reference/syntax/setup-dll-api-reference.md)」を参照してください。  
   
- **Configdsn**は、レジストリにデータソース情報を保持するために、インストーラー DLL 内の次の関数を呼び出します。  
+ **ConfigDSN は**、レジストリ内のデータ ソース情報を維持するために、インストーラー DLL で次の関数を呼び出します。  
   
--   **Sqlwritedsntoini**。 データ ソースを追加します。  
+-   **を使用**します。 データ ソースを追加します。  
   
--   **Sqlremovedsnfromini**。 データソースを削除します。  
+-   **イニから削除**します。 データ ソースを削除します。  
   
--   **Sqlwriteprivateprofilestring**。 データソース仕様サブキーの下にドライバー固有の値を書き込みます。  
+-   **をクリック**します。 データ ソース仕様サブキーの下にドライバー固有の値を記述します。  
   
--   **Sqlgetprivateprofilestring**。 データソース仕様サブキーからドライバー固有の値を読み取ります。  
+-   を**クリック**します。 データ ソース仕様サブキーからドライバー固有の値を読み取ります。  
   
--   **Sqlgettranslator**。 ユーザーに、翻訳者の名前とオプションの入力を求めます。 この関数は、translator セットアップ DLL で**Configtranslator**を呼び出します。  
+-   **トランスレータの取得** トランスレータ名とオプションをユーザーに求めるプロンプトを表示します。 この関数は、トランスレータ セットアップ DLL で**コントランスレータ**を呼び出します。  
   
- ドライバーのセットアップ DLL は、ドライバーの開発者によって作成されます。 ドライバー DLL または別の DLL の一部にすることができます。
+ ドライバセットアップDLLはドライバ開発者によって書き込まれます。 ドライバ DLL の一部または別の DLL を指定できます。

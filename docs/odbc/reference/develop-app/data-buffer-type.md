@@ -1,5 +1,5 @@
 ---
-title: データバッファーの種類 |Microsoft Docs
+title: データ バッファタイプ |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - buffers [ODBC], data
 - C data types [ODBC], buffers
 ms.assetid: 58bea3e9-d552-447f-b3ad-ce1dab213b72
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 615625ca396e5f2ae094962457cc9e746730ddcf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9b98ed2ab0865b98884f6dfa1ff20142540ff314
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68067414"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305248"
 ---
 # <a name="data-buffer-type"></a>データ バッファーの種類
-バッファーの C データ型は、アプリケーションによって指定されます。 1つの変数を使用すると、アプリケーションによって変数が割り当てられたときに発生します。 汎用メモリ (つまり、void 型のポインターによって参照されるメモリ) では、アプリケーションがメモリを特定の型にキャストするときに、この処理が行われます。 ドライバーは、次の2つの方法でこの型を検出します。  
+バッファーの C データ・タイプは、アプリケーションによって指定されます。 単一の変数では、アプリケーションが変数を割り当てると、この処理が発生します。 汎用メモリ (void 型のポインタが指すメモリ) では、アプリケーションがメモリを特定の型にキャストしたときに発生します。 ドライバーは、2 つの方法でこの型を検出します。  
   
--   **データバッファーの型引数。** **SQLBindCol**の*targetvalueptr*にバインドされたバッファーなど、パラメーター値と結果セットデータを転送するために使用されるバッファーには、通常、 **SQLBindCol**の*TargetType*引数など、関連付けられた型引数があります。 この引数では、アプリケーションは、バッファーの型に対応する C 型の識別子を渡します。 たとえば、次の**SQLBindCol**への呼び出しでは、値 SQL_C_TYPE_DATE によって、*日付*バッファーが SQL_DATE_STRUCT であることがドライバーに通知されます。  
+-   **データ バッファー型引数。** パラメーター値と結果セットのデータを転送するために使用されるバッファー **(SQLBindCol**で*TargetValuePtr*でバインドされたバッファーなど) には、通常 **、SQLBindCol**の*TargetType*引数などの関連付けられた型引数があります。 この引数では、アプリケーションは、バッファーの型に対応する C 型の識別子を渡します。 たとえば、次の**SQLBindCol**の呼び出しでは、*値SQL_C_TYPE_DATE、日付*バッファーがSQL_DATE_STRUCTであることをドライバーに通知します。  
   
     ```  
     SQL_DATE_STRUCT Date;  
@@ -33,9 +33,9 @@ ms.locfileid: "68067414"
     SQLBindCol(hstmt, 1, SQL_C_TYPE_DATE, &Date, 0, &DateInd);  
     ```  
   
-     型識別子の詳細については、このセクションの後の「 [ODBC のデータ型](../../../odbc/reference/develop-app/data-types-in-odbc.md)」セクションを参照してください。  
+     型識別子の詳細については、後の[「ODBC データ型](../../../odbc/reference/develop-app/data-types-in-odbc.md)」を参照してください。  
   
--   **定義済みの型。** **SQLGetInfo**の*infovalueptr*引数によってポイントされるバッファーなどのオプションまたは属性を送受信するために使用されるバッファーには、指定されたオプションに依存する固定型があります。 ドライバーは、データバッファーがこの種類であることを前提としています。この型のバッファーを割り当てるのは、アプリケーションの役割です。 たとえば、 **SQLGetInfo**の次の呼び出しでは、ドライバーはバッファーが32ビット整数であると想定しています。これは SQL_STRING_FUNCTIONS オプションで必要とされるためです。  
+-   **定義済みの型。** **SQLGetInfo**の*InfoValuePtr*引数が指すバッファーなど、オプションまたは属性の送信および取得に使用されるバッファーは、指定されたオプションに依存する固定型を持ちます。 ドライバーは、データ バッファーがこの型であることを前提としています。このタイプのバッファを割り当てるのはアプリケーションの責任です。 たとえば、次の**SQLGetInfo**の呼び出しでは、ドライバーはバッファーが 32 ビット整数であると仮定SQL_STRING_FUNCTIONS オプションが必要です。  
   
     ```  
     SQLUINTEGER StringFuncs;  
@@ -43,4 +43,4 @@ ms.locfileid: "68067414"
                 NULL);  
     ```  
   
- ドライバーは、C データ型を使用して、バッファー内のデータを解釈します。
+ ドライバーは、バッファー内のデータを解釈するのに C データ型を使用します。

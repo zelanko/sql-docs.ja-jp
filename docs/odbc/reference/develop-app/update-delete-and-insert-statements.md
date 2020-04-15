@@ -1,5 +1,5 @@
 ---
-title: UPDATE、DELETE、および INSERT ステートメント |Microsoft Docs
+title: 更新、削除、および挿入ステートメント |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,40 +14,40 @@ helpviewer_keywords:
 - INSERT [ODBC]
 - data updates [ODBC], about data updates
 ms.assetid: 5004ea72-4c49-4064-9752-f7032ba7f133
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c2a2787be1bf44e1f214d396444a73b938acf7ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f12682a5d012d6981afce0085e9c920ed2f2ffbc
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67942838"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81284262"
 ---
 # <a name="update-delete-and-insert-statements"></a>UPDATE、DELETE、INSERT ステートメント
-SQL ベースのアプリケーションは、 **UPDATE**、 **DELETE**、および**INSERT**の各ステートメントを実行して、テーブルに変更を加えます。 これらのステートメントは、SQL 文法の最小一致レベルに含まれており、すべてのドライバーとデータソースでサポートされている必要があります。  
+SQL ベースのアプリケーションは **、UPDATE** **、DELETE、****および INSERT**ステートメントを実行してテーブルを変更します。 これらのステートメントは、SQL の最小文法準拠レベルの一部であり、すべてのドライバーとデータ ソースでサポートされている必要があります。  
   
  これらのステートメントの構文は次のとおりです。  
   
- **** _テーブル名の_更新  
+ **テーブル**_名を_更新  
   
- **** _列識別子_ **=** {*expression* &#124; **NULL**} の設定  
+ **SET** _列識別子_**=**{*式*&#124; **NULL**}  
   
- [**,** _列識別子_ **=** {*式*&#124; **NULL**}]...  
+ [**,**_列識別子_**=**{*式*&#124; **NULL**} .  
   
- [**** _検索条件_]  
+ [**WHERE** _検索条件_]  
   
- _テーブル名_**からの削除**[**** _検索条件_]  
+ _テーブル名_**から削除**[**WHERE** _検索条件_]  
   
- **INSERT INTO** _table-name_[**(** _列識別子_[**,** _列識別子_]...**)**]  
+ **テーブル**_名_[**(** _列識別子_[**,** _列識別子_] .**)**]  
   
- {*クエリ指定*&#124;**値 (** _挿入_値 [**,** _挿入値_]...**)**}  
+ {*クエリ指定*&#124; **VALUES (** _挿入値_[**,** _挿入値_]..**)**}  
   
- *クエリ指定*要素は、コアと拡張 sql 文法でのみ有効であり、*式*と*検索条件*の要素がコアと拡張 sql 文法でより複雑になることに注意してください。  
+ *クエリ仕様*要素は、コアおよび拡張 SQL 文法でのみ有効であり、*式*と*検索条件*の要素は、コアおよび拡張 SQL 文法でより複雑になることに注意してください。  
   
- 他の SQL ステートメントと同様に、 **UPDATE**、 **DELETE**、および**INSERT**の各ステートメントは、多くの場合、パラメーターを使用する方が効率的です。 たとえば、Orders テーブルに複数の行を挿入するために、次のステートメントを準備して繰り返し実行することができます。  
+ 他の SQL ステートメントと同様に **、UPDATE** **、DELETE、** および**INSERT**ステートメントは、パラメーターを使用する場合に、より効率的な場合がよくあります。 たとえば、次のステートメントを準備し、繰り返し実行して Orders テーブルに複数の行を挿入できます。  
   
 ```  
 INSERT INTO Orders (PartID, Description, Price) VALUES (?, ?, ?)  
 ```  
   
- この効率性は、パラメーター値の配列を渡すことによって増やすことができます。 ステートメントパラメーターとパラメーター値の配列の詳細については、「[ステートメントパラメーター](../../../odbc/reference/develop-app/statement-parameters.md)」を参照してください。
+ この効率は、パラメータ値の配列を渡すことで向上させることができます。 ステートメント パラメータおよびパラメータ値の配列の詳細については、「ステートメント[パラメータ](../../../odbc/reference/develop-app/statement-parameters.md)」を参照してください。

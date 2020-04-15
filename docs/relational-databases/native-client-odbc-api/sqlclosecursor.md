@@ -1,5 +1,5 @@
 ---
-title: 'Sqlclo: |Microsoft Docs'
+title: カーソルを閉じる |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,23 +11,23 @@ apitype: DLLExport
 helpviewer_keywords:
 - SQLCloseCursor function
 ms.assetid: e7134d65-5c1c-4ae2-b119-d9b4b9a42483
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 21565a3eb897c66175ce91a375bdb0b04b767d74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: fb20bfa7ca76b8156ef2400e6db3235c590680ba
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73787469"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302632"
 ---
 # <a name="sqlclosecursor"></a>SQLCloseCursor
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  **SqlcloSQLFreeStmt**は、 [](../../relational-databases/native-client-odbc-api/sqlfreestmt.md) *オプション*の値を SQL_CLOSE に置き換えます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC ドライバーでは、 **sqlcloの**受信時に保留中の結果セットの行が破棄されます。 ステートメントの列とパラメーターのバインド (存在する場合) は、 **Sqlcloに**よって変更されないことに注意してください。  
+  **SQLCloseCursor**は[、SQL_CLOSE](../../relational-databases/native-client-odbc-api/sqlfreestmt.md)の*オプション*値に置き換えます。 **SQLCloseCursor**を受信すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアント ODBC ドライバーは、保留中の結果セット行を破棄します。 ステートメントの列とパラメーターのバインディング (存在する場合) は **、 SQLCloseCursor**によって変更されないままであることに注意してください。  
   
 ## <a name="see-also"></a>参照  
- [SQLCloseCursor](https://go.microsoft.com/fwlink/?LinkId=59331)   
+ [カーソルを閉じる](https://go.microsoft.com/fwlink/?LinkId=59331)   
  [ODBC API 実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

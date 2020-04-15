@@ -1,5 +1,5 @@
 ---
-title: 基本的な ODBC アプリケーションの手順 |Microsoft Docs
+title: ODBC アプリケーションの基本手順 |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,32 +11,32 @@ helpviewer_keywords:
 - application process [ODBC]
 - application process [ODBC], about application process
 ms.assetid: a92d1f78-c669-47ad-88c4-0b1a93503dfc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 524c4b8f8c9467358a3868f191f8a0d527ca3d70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 29abb0ec5bbfa9b423290e3354d9455b639f8f59
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67909824"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306053"
 ---
 # <a name="basic-odbc-application-steps"></a>基本的な ODBC アプリケーションのステップ
-ここでは、ODBC アプリケーションの一般的な流れについて説明します。 すべてのアプリケーションがこれらの関数を厳密にこの順序で呼び出すことはほとんどありません。 ただし、ほとんどのアプリケーションでは、これらの手順の一部を使用します。 基本的なアプリケーションの手順を次の図に示します。  
+このセクションでは、ODBC アプリケーションの一般的なフローについて説明します。 これらの関数をすべて正確にこの順序で呼び出すアプリケーションは、おそらくありません。 ただし、ほとんどのアプリケーションでは、これらの手順の一部のバリエーションを使用します。 基本的なアプリケーションの手順を次の図に示します。  
   
  ![ODBC アプリケーションの基本手順](../../../odbc/reference/develop-app/media/pr10.gif "pr10")  
   
  このセクションでは、次のトピックを扱います。  
   
--   [ステップ 1: データ ソースへの接続](../../../odbc/reference/develop-app/step-1-connect-to-the-data-source.md)  
+-   [手順 1:データ ソースに接続する](../../../odbc/reference/develop-app/step-1-connect-to-the-data-source.md)  
   
--   [ステップ 2: アプリケーションの初期化](../../../odbc/reference/develop-app/step-2-initialize-the-application.md)  
+-   [手順 2:アプリケーションを初期化する](../../../odbc/reference/develop-app/step-2-initialize-the-application.md)  
   
--   [ステップ 3: SQL ステートメントのビルドと実行](../../../odbc/reference/develop-app/step-3-build-and-execute-an-sql-statement.md)  
+-   [手順 3:SQL ステートメントのビルドと実行](../../../odbc/reference/develop-app/step-3-build-and-execute-an-sql-statement.md)  
   
--   [ステップ 4a: 結果のフェッチ](../../../odbc/reference/develop-app/step-4a-fetch-the-results.md)  
+-   [手順 4a: 結果をフェッチする](../../../odbc/reference/develop-app/step-4a-fetch-the-results.md)  
   
--   [ステップ 4b: 行数のフェッチ](../../../odbc/reference/develop-app/step-4b-fetch-the-row-count.md)  
+-   [手順 4b: 行数をフェッチする](../../../odbc/reference/develop-app/step-4b-fetch-the-row-count.md)  
   
--   [ステップ 5: トランザクションのコミット](../../../odbc/reference/develop-app/step-5-commit-the-transaction.md)  
+-   [手順 5:トランザクションをコミットする](../../../odbc/reference/develop-app/step-5-commit-the-transaction.md)  
   
--   [ステップ 6: データ ソースからの切断](../../../odbc/reference/develop-app/step-6-disconnect-from-the-data-source.md)
+-   [手順 6:データ ソースから切断する](../../../odbc/reference/develop-app/step-6-disconnect-from-the-data-source.md)

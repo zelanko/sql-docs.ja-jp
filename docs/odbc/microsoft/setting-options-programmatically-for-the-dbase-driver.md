@@ -1,5 +1,5 @@
 ---
-title: DBASE ドライバーのプログラムを使用したオプションの設定 |Microsoft Docs
+title: dBASE ドライバのオプションをプログラムで設定する |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,26 +13,26 @@ helpviewer_keywords:
 - DBase driver [ODBC], setting options programmatically
 - ODBC desktop database drivers [ODBC], DBasedriver
 ms.assetid: 336d0fd4-5448-4d8c-b7d9-49e857228e36
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 27f675cca5115a8336f2be4b7fa96c091aee1b62
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 75889d9ff3ccfe01f9b8d5141df7774205522815
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68063561"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300782"
 ---
 # <a name="setting-options-programmatically-for-the-dbase-driver"></a>dBASE ドライバーのプログラムでオプションの設定
 
-|オプション|[説明]|方法|  
+|オプション|説明|Method|  
 |------------|-----------------|------------|  
-|おおよその行数|テーブルサイズの統計を近似するかどうかを決定します。 このオプションは、ODBC ドライバーを使用するすべてのデータソースに適用されます。|このオプションを動的に設定するには、 [Sqlconfigdatasource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)への呼び出しで**STATISTICS**キーワードを使用します。|  
-|照合順序|フィールドの並べ替え順序。<br /><br /> このシーケンスには、ASCII (既定値) と国際対応のいずれかを指定できます。|このオプションを動的に設定するには、 [Sqlconfigdatasource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)の呼び出しで、**組み合わせて sequence**キーワードを使用します。|  
-|データ ソース名|給与や職員など、データソースを識別する名前。|このオプションを動的に設定するには、 [Sqlconfigdatasource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)への呼び出しで**DSN**キーワードを使用します。|  
-|データベース|Microsoft Access データソースは、データベースを選択または作成せずに設定できます。 セットアップ時にデータベースが提供されない場合、ユーザーは、データソースに接続するときにデータベースファイルを選択するように求められます。|このオプションを動的に設定するには、 [Sqlconfigdatasource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)への呼び出しで**dbq**キーワードを使用します。|  
-|[説明]|データソース内のデータの説明 (省略可能)。たとえば、"入社日、給与履歴、およびすべての従業員の現在のレビュー" などです。|このオプションを動的に設定するには、 [Sqlconfigdatasource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)への呼び出しで**DESCRIPTION**キーワードを使用します。|  
-|排他的|[**排他**] ボックスが選択されている場合、データベースは排他モードで開き、一度に1人のユーザーのみがアクセスできます。 排他モードで実行すると、パフォーマンスが向上します。|このオプションを動的に設定するには、 [Sqlconfigdatasource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)への呼び出しで**EXCLUSIVE**キーワードを使用します。|  
-|ページタイムアウト|ページ (使用されていない場合) がバッファーに残っている場合に、削除されるまでの時間を秒単位で指定します。 既定値は 600 1/10 (60 秒) です。 このオプションは、ODBC ドライバーを使用するすべてのデータソースに適用されます。<br /><br /> 固有の遅延が発生したため、ページタイムアウトを0にすることはできません。 ページタイムアウトオプションがその値より下に設定されている場合でも、ページタイムアウトを固有の遅延より小さくすることはできません。|このオプションを動的に設定するには、 [Sqlconfigdatasource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)への呼び出しで**PAGETIMEOUT**キーワードを使用します。|  
-|読み取り専用|データベースを読み取り専用として指定します。|このオプションを動的に設定するには、 [Sqlconfigdatasource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)への呼び出しで**READONLY**キーワードを使用します。|  
-|ディレクトリの選択|アクセスするファイルが格納されているディレクトリを選択できるダイアログボックスが表示されます。<br /><br /> データソースディレクトリを定義するときは、最も頻繁に使用されるファイルが置かれているディレクトリを指定します。 ODBC ドライバーでは、このディレクトリが既定のディレクトリとして使用されます。 頻繁に使用する場合は、他のファイルをこのディレクトリにコピーします。 または、次のようにディレクトリ名を指定して、SELECT ステートメント内のファイル名を修飾することもできます。<br /><br /> C:\MYDIR\EMP \*から選択<br /><br /> または、 **SQLSetConnectOption**関数を SQL_CURRENT_QUALIFIER オプションと共に使用して、新しい既定のディレクトリを指定することもできます。|このオプションを動的に設定するには、 [Sqlconfigdatasource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)への呼び出しで**DEFAULTDIR**キーワードを使用します。|  
-|削除された行の表示|削除済みとしてマークされている行を取得または配置できるかどうかを指定します。 オフにした場合、削除された行は表示されません。選択した場合、削除された行は、削除されていない行と同じように扱われます。 既定値はオフです。|このオプションを動的に設定するには、 [Sqlconfigdatasource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)の呼び出しで**DELETED**キーワードを使用します。|
+|おおよその行数|テーブル サイズの統計情報を近似するかどうかを決定します。 このオプションは、ODBC ドライバを使用するすべてのデータ ソースに適用されます。|このオプションを動的に設定するには[、SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)の呼び出しで**STATISTICS**キーワードを使用します。|  
+|照合順序|フィールドを並べ替える順序。<br /><br /> シーケンスは、ASCII (デフォルト) または国際形式のいずれかです。|このオプションを動的に設定するには、呼び出しで**COLLATINGSEQUENCE**キーワードを使用[します](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)。|  
+|データ ソース名|給与や人事など、データ ソースを識別する名前。|このオプションを動的に設定するには、DSN**キーワードを**使用して[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)を呼び出します。|  
+|データベース|データベースを選択または作成しなくても、Access データ ソースを設定できます。 セットアップ時にデータベースが提供されていない場合、ユーザーはデータ ソースに接続するときにデータベース ファイルを選択するように求められます。|このオプションを動的に設定するには **、DBQ**キーワードを使用して[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)を呼び出します。|  
+|説明|データ ソース内のデータの説明 (省略可能)。たとえば、"採用日、給与履歴、およびすべての従業員の現在の確認" などです。|このオプションを動的に設定するには[、SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)の呼び出しで**DESCRIPTION**キーワードを使用します。|  
+|排他的|[**排他**] ボックスを選択すると、データベースは排他モードで開かれ、一度に 1 人のユーザーだけがアクセスできます。 排他モードで実行すると、パフォーマンスが向上します。|このオプションを動的に設定するには[、SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)の呼び出しで**EXCLUSIVE**キーワードを使用します。|  
+|ページタイムアウト|ページが削除される前に、そのページがバッファー内に残っている期間を 10 分の 1 秒で指定します。 デフォルトは 600 分の 1 秒 (60 秒) です。 このオプションは、ODBC ドライバを使用するすべてのデータ ソースに適用されます。<br /><br /> 固有の遅延のため、ページタイムアウトを 0 にすることはできません。 ページ タイムアウト オプションがその値を下回る場合でも、ページ タイムアウトは、固有の遅延より小さくすることはできません。|このオプションを動的に設定するには[、SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)の呼び出しで**PAGETIMEOUT**キーワードを使用します。|  
+|[読み取り専用]|データベースを読み取り専用に指定します。|このオプションを動的に設定するには[、SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)の呼び出しで**READONLY**キーワードを使用します。|  
+|ディレクトリの選択|アクセスするファイルが含まれているディレクトリを選択するためのダイアログ ボックスが表示されます。<br /><br /> データ ソース ディレクトリを定義する場合は、最も頻繁に使用するファイルが格納されているディレクトリを指定します。 ODBC ドライバは、このディレクトリをデフォルト ディレクトリとして使用します。 頻繁に使用する場合は、他のファイルをこのディレクトリにコピーします。 または、SELECT ステートメントのファイル名をディレクトリ名で修飾することもできます。<br /><br /> C\*から選択:\マイディル\EMP<br /><br /> または、SQL_CURRENT_QUALIFIER オプションを指定して**SQLSetConnect オプション**関数を使用して、新しい既定のディレクトリを指定できます。|このオプションを動的に設定するには[、SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)の呼び出しで**DEFAULTDIR**キーワードを使用します。|  
+|削除された行を表示|削除済みとしてマークされた行を取得または配置できるかどうかを指定します。 オフにすると、削除された行は表示されません。選択した場合、削除された行は削除されていない行と同じように扱われます。 既定値はオフです。|このオプションを動的に設定するには[、SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)の呼び出しで**DELETED**キーワードを使用します。|

@@ -1,5 +1,5 @@
 ---
-title: カーソルの種類 |Microsoft Docs
+title: カーソルの種類 |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,27 +13,26 @@ helpviewer_keywords:
 - cursors [ODBC], types
 - ODBC cursors, types
 ms.assetid: 3a916cc7-f352-42cb-8b83-f78e06cef991
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3e4b097a0ae2a591b5a719ee3a9622ee292e5b52
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 4782c61c2f150e36c9632d09170468229c238cbb
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73784689"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305490"
 ---
 # <a name="cursor-types"></a>カーソルの種類
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  ODBC では[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、MICROSOFT と Native Client ODBC ドライバーでサポートされる4種類のカーソルを定義しています。 これらのカーソルは、結果セットへの変更や、 **tempdb**のメモリや領域など、使用するリソースに対する変更を検出する機能によって異なります。 カーソルが行への変更を検出できるのは、変更が加えられた行の再フェッチを試みたときだけです。現在フェッチしている行への変更を、データ ソースからカーソルに通知する方法はありません。 カーソルを使用して行われなかった変更を検出する機能は、トランザクション分離レベルによって異なる場合があります。  
+  ODBC では、マイクロソフト[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]およびネイティブ クライアント[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ODBC ドライバーでサポートされている 4 つのカーソルの種類を定義します。 これらのカーソルは、結果セットの変更を検出する機能と **、tempdb**のメモリや領域など、それらが消費するリソースで異なります。 カーソルが行への変更を検出できるのは、変更が加えられた行の再フェッチを試みたときだけです。現在フェッチしている行への変更を、データ ソースからカーソルに通知する方法はありません。 カーソルを使用して行われなかった変更を検出する機能は、トランザクション分離レベルによって異なる場合があります。  
   
  次に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされる 4 種類の ODBC カーソルを示します。  
   
 -   順方向専用カーソルではスクロールがサポートされず、カーソルの最初から最後まで行を順番にフェッチする機能だけがサポートされます。  
   
--   静的カーソルは、カーソルを開いたときに**tempdb**に構築されます。 静的カーソルは、常に、カーソルを開いた時点の結果セットを表示します。 データへの変更は反映されません。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の静的カーソルは常に読み取り専用です。 静的サーバーカーソルは作業テーブルとして**tempdb**に作成されるので、カーソルの結果セットのサイズは、で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]許容される最大行サイズを超えることはできません。  
+-   静的カーソルは、カーソルが開かれると**tempdb**に作成されます。 静的カーソルは、常に、カーソルを開いた時点の結果セットを表示します。 データへの変更は反映されません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の静的カーソルは常に読み取り専用です。 静的サーバー カーソルは**tempdb**の作業テーブルとして構築されるため、カーソル結果セットのサイズは、 で許可されている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]最大行サイズを超えることはできません。  
   
 -   キーセット ドリブン カーソルでは、カーソルを開くときに、結果セット内の行のメンバーシップと順序が固定されます。 非キー列の変更は、このカーソルを使用して表示されます。  
   

@@ -1,5 +1,5 @@
 ---
-title: 文字列関数 (Visual FoxPro ODBC ドライバー) |Microsoft Docs
+title: 文字列関数 (ビジュアル フォックスプロ ODBC ドライバー) |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,34 +13,34 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], string functions
 - FoxPro ODBC driver [ODBC], string functions
 ms.assetid: 1974fd26-ef0d-45d5-860b-298917c8e9c3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: db1fbaffbee0f74625f4a11cad3b961f194e3829
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 988ba23b95f6b138148b1fa17ad303d7aa2dc895
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67948776"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299192"
 ---
 # <a name="string-functions-visual-foxpro-odbc-driver"></a>文字列関数 (Visual FoxPro ODBC ドライバー)
-次の表に、Visual FoxPro ODBC ドライバーでサポートされている ODBC 文字列操作関数の一覧を示します。同じ関数の Visual FoxPro 文法が ODBC 構文と異なる場合は、Visual FoxPro と同等のものが表示されます。  
+次の表は、Visual FoxPro ODBC ドライバーでサポートされている ODBC 文字列操作関数の一覧です。同じ関数の Visual FoxPro 文法が ODBC 構文と異なる場合は、対応するビジュアル FoxPro が一覧表示されます。  
   
-|ODBC 文法|Visual FoxPro の文法|  
+|ODBC 文法|ビジュアルフォックスプロ文法|  
 |------------------|---------------------------|  
 |ASCII *(string_exp)*|ASC *(string_exp)*|  
-|CHAR *(コード)*|CHR *(string_exp)*|  
-|CONCAT *(string_exp1、string_exp2)*|*string_exp1 + string_exp2*|  
-|相違点 *(string_exp1、string_exp2)*||  
-|INSERT *(string_exp1、start、length、string_exp2)*|*(String_exp1、開始、長さ、string_exp2)*|  
-|LCASE *(string_exp)*|LOWER *(string_exp)*|  
-|LEFT *(string_exp, count)*||  
-|長さ *(string_exp)*|LEN *(string_exp)*|  
+|文字 *(コード)*|CHR *(string_exp)*|  
+|コンキャット *(string_exp1、string_exp2)*|*string_exp1 + string_exp2*|  
+|違い *(string_exp1、string_exp2)*||  
+|INSERT *(string_exp1、開始、長さ、string_exp2)*|*STUFF(string_exp1、スタート、長さ、string_exp2)*|  
+|LCASE *(string_exp)*|下*段 (string_exp)*|  
+|左 *(string_exp、カウント)*||  
+|長さ *(string_exp)*|レン *(string_exp)*|  
 |LTRIM *(string_exp)*||  
-|REPEAT *(string_exp, count)*|REPLICATE *(string_exp, count)*|  
-|REPLACE *(string_exp1、string_exp2、string_exp3)*|STRTRAN *(string_exp1、string_exp2、string_exp3)*|  
-|RIGHT *(string_exp、count)*||  
+|繰り返し *(string_exp、カウント)*|レプリケート *(string_exp、カウント)*|  
+|置換 *(string_exp1、string_exp2、string_exp3)*|ストラン *(string_exp1、string_exp2、string_exp3)*|  
+|右 *(string_exp、カウント)*||  
 |RTRIM *(string_exp)*||  
-|SOUNDEX *(string_exp)*||  
-|領域 *(カウント)*||  
-|SUBSTRING *(string_exp、start、length)*|SUBSTR *(string_exp、start、length)*|  
-|UCASE *(string_exp)*|UPPER *(string_exp)*|
+|サネックス *(string_exp)*||  
+|スペース *(カウント)*||  
+|サブストリング *(string_exp、開始、長さ)*|SUBSTR *(string_exp、開始、長さ)*|  
+|ウケーstring_exp *(string_exp)*|アッパー *(string_exp)*|
