@@ -1,5 +1,5 @@
 ---
-title: セットアップ DLL 関数の概要 |Microsoft Docs
+title: DLL 関数の概要を設定する |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,18 +10,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - functions [ODBC], setup DLL functions
 ms.assetid: d18169eb-89f7-4079-be70-a85713030191
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c72c5e3c8176b878265dcaa4a7b27544ed8946b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4d141cdd88614c1a4881d794b345e7d2ada4ba69
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68073793"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298875"
 ---
 # <a name="setup-dll-function-summary"></a>セットアップ DLL 関数の概要
-次の表では、セットアップ DLL 関数について説明します。 各関数の構文とセマンティクスの詳細については、「 [SETUP DLL API Reference](../../../odbc/reference/syntax/setup-dll-api-reference.md)」を参照してください。  
+次の表は、セットアップ DLL 関数の説明です。 各関数の構文とセマンティクスの詳細については、「 DLL [API リファレンスのセットアップ](../../../odbc/reference/syntax/setup-dll-api-reference.md)」を参照してください。  
   
 |タスク|関数名|目的|  
 |----------|-------------------|-------------|  
-|データソースと翻訳者の設定|[ConfigDriver](../../../odbc/reference/syntax/configdriver-function.md)<br /><br /> [ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)<br /><br /> [ConfigTranslator](../../../odbc/reference/syntax/configtranslator-function.md)|ドライバーをインストールまたはアンインストールします。<br /><br /> データソースを追加、変更、または削除します。<br /><br /> 既定の翻訳オプションを返します。|
+|データ・ソースおよび変換プログラムのセットアップ|[コンフィグドライバー](../../../odbc/reference/syntax/configdriver-function.md)<br /><br /> [構成DSN](../../../odbc/reference/syntax/configdsn-function.md)<br /><br /> [コンフィグトランスレータ](../../../odbc/reference/syntax/configtranslator-function.md)|ドライバをインストールまたはアンインストールします。<br /><br /> データ ソースを追加、変更、または削除します。<br /><br /> 既定の変換オプションを返します。|

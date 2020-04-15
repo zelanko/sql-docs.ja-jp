@@ -1,5 +1,5 @@
 ---
-title: スキーマ行セットでの分散クエリのサポート |Microsoft Docs
+title: スキーマ行セットでの分散クエリのサポート | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,22 +15,22 @@ helpviewer_keywords:
 - OLE DB rowsets, schema
 - rowsets [OLE DB], schema
 ms.assetid: 11354bb6-be42-4d8d-854c-42dd3dc38656
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3c162bbcbf9f9212d6adc3838a06b5eaaac8b13
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: daf4f4c0c7c6c1d53c2ab899dd150756399d53a3
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73759714"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81296996"
 ---
 # <a name="schema-rowsets---distributed-query-support"></a>スキーマ行セット - 分散クエリのサポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  分散クエリ[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]をサポートするため[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に、Native Client OLE DB provider **IDBSchemaRowset**インターフェイスは、リンクサーバー上のメタデータを返します。  
+  分散クエリ[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]をサポートするために、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ネイティブ クライアント OLE DB プロバイダー **IDBSchemaRowset**インターフェイスは、リンク サーバー上のメタデータを返します。  
   
- DBPROPSET_SQLSERVERSESSION の SSPROP_QUOTEDCATALOGNAMES プロパティが VARIANT_TRUE の場合、カタログ名には引用符で囲んだ識別子 ("my.catalog" など) を指定できます。 スキーマ行セットの出力をカタログによっ[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]て制限する場合、Native Client OLE DB プロバイダーは、リンクサーバーとカタログ名を含む2つの部分で構成される名前を認識します。 次の表のスキーマ行セットの場合は、2部構成のカタログ名を_linked_server_として指定し**ます。**_カタログ_では、出力が名前付きリンクサーバーの適用可能なカタログに制限されます。  
+ DBPROPSET_SQLSERVERSESSION の SSPROP_QUOTEDCATALOGNAMES プロパティが VARIANT_TRUE の場合、カタログ名には引用符で囲んだ識別子 ("my.catalog" など) を指定できます。 カタログによるスキーマ行セットの出力を制限する場合[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、ネイティブ クライアント OLE DB プロバイダは、リンク サーバーとカタログ名を含む 2 つの部分から構成される名前を認識します。 次の表のスキーマ行セットの場合は、2 つの部分から構成されるカタログ名_を linked_server_として指定**します。**_カタログ_は、出力を指定されたリンク サーバーの該当するカタログに制限します。  
   
 |スキーマ行セット|カタログの制限|  
 |-------------------|-------------------------|  
@@ -46,10 +46,10 @@ ms.locfileid: "73759714"
 > [!NOTE]  
 >  スキーマ行セットをリンク サーバーのすべてのカタログに制限するには、*linked_server* 構文を使用します (ピリオドを区切り文字として名前を指定します)。 この構文は、カタログ名の制限で NULL を指定する場合と同じで、カタログをサポートしないデータ ソースをリンク サーバーが示している場合にも使用されます。  
   
- Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、リンクサーバーとして登録された OLE DB データソースの一覧を返す、スキーマ行セットの linkedservers を定義します。  
+ ネイティブ[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]クライアント OLE DB プロバイダは、リンク サーバーとして登録された OLE DB データ ソースの一覧を返す、スキーマ行セット LINKEDSERVERS を定義します。  
   
 ## <a name="see-also"></a>参照  
- [スキーマ行セットのサポート &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowset-support-ole-db.md)   
+ [スキーマ行セットサポート &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowset-support-ole-db.md)   
  [LINKEDSERVERS 行セット &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
   

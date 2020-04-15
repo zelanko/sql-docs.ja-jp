@@ -1,5 +1,5 @@
 ---
-title: エラーとバッチ |Microsoft Docs
+title: エラーとバッチ |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,24 +14,24 @@ helpviewer_keywords:
 - SQL statements [ODBC], batches
 - sql_error [ODBC]
 ms.assetid: 6debd41d-9f4c-4f4c-a44b-2993da5306f0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6902b82c74e953d6009d7e5352608477d92122d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 36a402686a695a08748df24a7b40a228d7a2ca7f
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68051133"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300432"
 ---
 # <a name="errors-and-batches"></a>エラーおよびバッチ
-SQL ステートメントのバッチの実行中にエラーが発生すると、次の4つのいずれかの結果が得られます。 (考えられる各結果はデータソース固有であり、バッチに含まれるステートメントにも依存する可能性があります)。  
+SQL ステートメントのバッチの実行中にエラーが発生した場合、次の 4 つの結果のいずれかが可能です。 (考えられる結果はデータ ソース固有であり、バッチに含まれるステートメントに依存する可能性もあります)。  
   
 -   バッチ内のステートメントは実行されません。  
   
 -   バッチ内のステートメントは実行されず、トランザクションはロールバックされます。  
   
--   Error ステートメントの前にあるすべてのステートメントが実行されます。  
+-   エラーステートメントの前のすべてのステートメントが実行されます。  
   
--   Error ステートメントを除くすべてのステートメントが実行されます。  
+-   エラーステートメント以外のすべてのステートメントが実行されます。  
   
- 最初の2つのケースでは、 **Sqlexecute**と**SQLExecDirect**は SQL_ERROR を返します。 後者の2つのケースでは、実装によっては SQL_SUCCESS_WITH_INFO または SQL_SUCCESS が返されることがあります。 どのような場合でも、 **SQLGetDiagField**、 **SQLGetDiagRec**、または**SQLError**を使用してさらにエラー情報を取得できます。 ただし、この情報の性質と深さは、データソース固有のものです。 また、この情報は、エラーのステートメントを正確に特定することはほとんどありません。
+ 最初の 2 つのケースでは **、SQL 実行**と**SQLExecDirect** SQL_ERROR返します。 後者の 2 つのケースでは、実装に応じて、SQL_SUCCESS_WITH_INFOまたはSQL_SUCCESSが返されることがあります。 いずれの場合も、さらにエラー情報を取得するには、 **SQLGetDiagField**、 **SQLGetDiagRec**、または**SQLError**を使用します。 ただし、この情報の性質と深さはデータ ソースに固有のものです。 さらに、この情報が、誤ったステートメントを正確に識別する可能性は低くなります。

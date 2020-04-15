@@ -1,5 +1,5 @@
 ---
-title: データソースへの接続 (ODBC Driver for Oracle) |Microsoft Docs
+title: データ ソースへの接続 (Oracle 用 ODBC ドライバ) |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,29 +11,29 @@ helpviewer_keywords:
 - connecting to data source [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], connecting to data sources
 ms.assetid: f724a9c5-342a-4f4e-a030-ec34f7378eaf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b0e9e62c8e03166ec2f76b1c6bcb5000a062bac3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6ef567c9e3c7b63e7f5044de699750de856f3e52
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68082037"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81281302"
 ---
 # <a name="connecting-to-a-data-source-odbc-driver-for-oracle"></a>データ ソース (ODBC Driver for Oracle) への接続
 > [!IMPORTANT]  
->  この機能は、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、Oracle によって提供される ODBC ドライバーを使用してください。  
+>  この機能は、今後のバージョンの Windows で削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、Oracle によって提供される ODBC ドライバーを使用します。  
   
- ODBC アプリケーションは、さまざまな方法で接続情報を渡すことができます。 たとえば、アプリケーションでは、ドライバーが常にユーザーに接続情報の入力を求めることがあります。 または、データソース接続を指定する接続文字列がアプリケーションで想定されている場合があります。 データソースへの接続方法は、ODBC アプリケーションで使用される接続方法によって異なります。  
+ ODBC アプリケーションは、接続情報をさまざまな方法で渡すことができます。 たとえば、アプリケーションでは、ドライバーは常に接続情報のユーザーを求める場合があります。 または、アプリケーションは、データ ソース接続を指定する接続文字列を期待する場合があります。 データ ソースへの接続方法は、ODBC アプリケーションで使用する接続方法によって異なります。  
   
- データソースに接続する一般的な方法の1つは、[データソース] ダイアログボックスを使用することです。 ODBC アプリケーションがダイアログボックスを使用するように設定されている場合は、そのダイアログボックスが表示され、適切なデータソース接続情報を入力するように求められます。  
+ データ ソースに接続する一般的な方法の 1 つは、[データ ソース] ダイアログ ボックスを使用することです。 ODBC アプリケーションがダイアログ ボックスを使用するように設定されている場合、ダイアログ ボックスが表示され、適切なデータ ソース接続情報の入力を求めるプロンプトが表示されます。  
   
- [接続文字列](../../odbc/microsoft/connection-string-format-and-attributes.md)を使用してデータソースに接続することもできます。  
+ 接続文字列 を使用してデータ[ソースに接続](../../odbc/microsoft/connection-string-format-and-attributes.md)することもできます。  
   
-### <a name="to-connect-to-a-data-source-using-a-dialog-box"></a>ダイアログボックスを使用してデータソースに接続するには  
+### <a name="to-connect-to-a-data-source-using-a-dialog-box"></a>ダイアログ ボックスを使用してデータ ソースに接続するには  
   
-1.  [データソース] ダイアログボックスが表示されたら、Oracle データソースを選択し、[OK] をクリックします。 ［接続］ダイアログ ボックスが表示されます。  
+1.  [データ ソース] ダイアログ ボックスが表示されたら、Oracle データ ソースを選択し、[OK] をクリックします。 ［接続］ダイアログ ボックスが表示されます。  
   
-2.  [接続] ダイアログボックスに適切な情報を入力し、[OK] をクリックします。  
+2.  [接続] ダイアログ ボックスの適切な情報を入力し、[OK] をクリックします。  
   
- 接続情報が検証されると、アプリケーションは ODBC Driver for Oracle を使用して、データソースに含まれている情報にアクセスできます。
+ 接続情報が検証されると、アプリケーションは ORACLE 用 ODBC ドライバーを使用して、データ ソースに含まれる情報にアクセスできます。

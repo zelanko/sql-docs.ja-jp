@@ -1,5 +1,5 @@
 ---
-title: DLL API リファレンスのセットアップ |Microsoft Docs
+title: DLL API リファレンスのセットアップ |マイクロソフトドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - ODBC drivers [ODBC], driver setup DLL
 - driver setup DLL [ODBC]
 ms.assetid: f9d03f17-1c0d-4e7c-9c04-8c316e07ef25
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 26e5c36b41f68627a634714cfa06525c99451450
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 25cff50b73868b5b3015dfc1a00c560c344a6d36
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67947055"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298887"
 ---
 # <a name="setup-dll-api-reference"></a>セットアップ DLL API リファレンス
-このセクションでは、2つの関数 (**configdriver**と**configdriver**) で構成される driver setup DLL API の構文について説明します。 **Configdriver**と**configdriver**は、ドライバー dll または別のセットアップ DLL のいずれかにすることができます。  
+このセクションでは、2 つの関数 **(ConfigDriver**と**ConfigDSN)** で構成されるドライバー セットアップ DLL API の構文について説明します。 **ドライバー**と**構成DSN**は、ドライバー DLL または別のセットアップ DLL のいずれかにすることができます。  
   
- また、このセクションでは、1つの関数 (**Configtranslator**) で構成される TRANSLATOR SETUP DLL API の構文についても説明します。 **Configtranslator**は、translator dll または別のセットアップ dll のいずれかにすることができます。  
+ さらに、このセクションでは、トランスレータ セットアップ DLL API の構文について**説明します。** **トランスレータ**DLL または別のセットアップ DLL にトランスレータを使用できます。  
   
- 各関数には、その関数が導入された ODBC のバージョンが示されています。  
+ 各関数には、その関数が導入された ODBC のバージョンが付いています。  
   
  このセクションでは、次のトピックを扱います。  
   
