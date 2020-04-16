@@ -1,5 +1,6 @@
 ---
-title: XQuery での文字列検索 |Microsoft Docs
+title: XQuery での文字列検索 |マイクロソフトドキュメント
+description: XQuery での文字列検索の例を参照して、XML ドキュメント内のテキストを検索する方法について説明します。
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: edc62024-4c4c-4970-b5fa-2e54a5aca631
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b34570120b22cea1ca12eaf146d41b596e43aecf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 33f68a55cb627099150ec14941fe5de81de53fc8
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67946258"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388053"
 ---
 # <a name="string-search-in-xquery"></a>XQuery での文字列検索
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "67946258"
   
 ## <a name="examples"></a>例  
   
-### <a name="a-find-feature-descriptions-that-contain-the-word-maintenance-in-the-product-catalog"></a>A. 製品カタログに "maintenance" という単語が含まれている機能の説明を検索します。  
+### <a name="a-find-feature-descriptions-that-contain-the-word-maintenance-in-the-product-catalog"></a>A. 製品カタログに「メンテナンス」という単語が含まれている機能の説明を検索する  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -44,7 +45,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- 前のクエリでは、 `where` flowr 式のは`for`式の結果をフィルター処理し、 **contains ()** 条件を満たす要素のみを返します。  
+ 前の照会では、FLOWR 式の 中の 式`where`は`for`式の結果をフィルターし、 **contains()** 条件を満たすエレメントのみを戻します。  
   
  結果を次に示します。  
   

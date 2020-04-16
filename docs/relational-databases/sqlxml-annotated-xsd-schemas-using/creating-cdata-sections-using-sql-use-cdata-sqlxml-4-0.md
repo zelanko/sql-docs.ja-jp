@@ -1,5 +1,6 @@
 ---
-title: 'Sql を使用した CDATA セクションの作成: using-cdata (SQLXML)'
+title: sql を使用して CDATA セクションを作成します。
+description: sql:use-cdata アノテーションを使用して、マークアップ文字を含むテキストブロックをエスケープして、SQLXML 4.0 で CDATA セクションを作成する方法について説明します。
 ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -20,31 +21,31 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 289e0e7ecb720afc4440283a97bcb7d55ccee8b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: aa359c1c1e855c3652d7c6486d3993f588bae46d
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75257493"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388193"
 ---
 # <a name="creating-cdata-sections-using-sqluse-cdata-sqlxml-40"></a>sql:use-cdata を使用した、CDATA セクションの作成 (SQLXML 4.0)
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   XML では、文字がマークアップ文字として処理されないよう、文字を含むテキスト ブロックをエスケープするときに CDATA セクションを使用します。  
   
- Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のデータベースには、XML パーサーによってマークアップ文字として扱われる文字が含まれている場合があります。たとえば、山かっこ (< と >)、小なり記号 (<=)、およびアンパサンド (&) は、マークアップ文字として扱われます。 この種類の特殊文字は、CDATA セクションで囲むことでマークアップ文字として扱われないようにできます。 CDATA セクション内の文字は、XML パーサーでプレーン テキストとして扱われます。  
+ Microsoft[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のデータベースには、XML パーサーによってマークアップ文字として扱われる文字が含まれていることがあります。たとえば、山かっこ (<と>)、等号以下のシンボル (<=)、アンパサンド (&) はマークアップ文字として扱われます。 この種類の特殊文字は、CDATA セクションで囲むことでマークアップ文字として扱われないようにできます。 CDATA セクション内の文字は、XML パーサーでプレーン テキストとして扱われます。  
   
- **Sql: 使用-cdata**注釈は、によって[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返されるデータを cdata セクションにラップする必要があることを指定するために使用されます (つまり、 **sql: field**によって指定された列の値を cdata セクションで囲む必要があるかどうかを示します)。 **Sql: use-cdata**注釈は、データベース列にマップされる要素に対してのみ指定できます。  
+ **sql:use-cdata**アノテーションは、返される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データを CDATA セクションでラップするように指定するために使用されます (つまり **、sql:field**で指定された列の値を CDATA セクションで囲む必要があるかどうかを示します)。 **sql:use-cdata**アノテーションは、データベース列にマップする要素でのみ指定できます。  
   
- **Sql: use-cdata**注釈はブール値 (0 = false、1 = true) を取ります。 指定できる値は 0、1、true、false です。  
+ **sql:use-cdata**アノテーションはブール値 (0 = false、 1 = true) を受け取ります。 指定できる値は 0、1、true、false です。  
   
- この注釈は、 **sql: url エンコード**では使用できません。また、ID、IDREF、IDREFS、NMTOKEN、および NMTOKENS 属性型では使用できません。  
+ このアノテーションは **、sql:url エンコード**または ID、IDREF、IDREFS、NMTOKEN、および NMTOKENS 属性タイプでは使用できません。  
   
 ## <a name="examples"></a>例  
  次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、「 [SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)」を参照してください。  
   
 ### <a name="a-specifying-sqluse-cdata-on-an-element"></a>A. 要素に対して sql:use-cdata を指定する  
- 次のスキーマでは、 ** \<Address>** 要素内の** \<AddressLine1>** について、 **sql: use-cdata**が 1 (True) に設定されています。 この結果、データは CDATA セクション内に返されます。  
+ 次のスキーマでは、**\<アドレス>** 要素内の**\<アドレスライン 1>** の**sql:use-cdata**が 1 (True) に設定されています。 この結果、データは CDATA セクション内に返されます。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -63,7 +64,7 @@ ms.locfileid: "75257493"
 </xsd:schema>  
 ```  
   
-##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>スキーマに対してサンプル XPath クエリをテストするには  
+##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>スキーマに対してサンプルの XPath クエリをテストするには  
   
 1.  上のスキーマのコードをコピーして、テキスト ファイルに貼り付け、 UseCData.xml として保存します。  
   
@@ -85,9 +86,9 @@ ms.locfileid: "75257493"
   
 3.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、「ADO を使用した[SQLXML 4.0 クエリの実行](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
+     詳細については、「 [ADO を使用した SQLXML 4.0 クエリの実行](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
- 結果セットの一部を次に示します。  
+ これは、部分的な結果セットです。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">   

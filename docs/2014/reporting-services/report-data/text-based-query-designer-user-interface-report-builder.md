@@ -14,12 +14,12 @@ ms.assetid: 89fddca5-bd96-4128-9072-5348d1b6e02c
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b7453be98f6877f77eb61af4bbd429704816a219
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: e500d746f3ef0cdfc2d48037467f2ab6ce376d3f
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78172787"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388324"
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>テキストベースのクエリ デザイナーのユーザー インターフェイス (レポート ビルダー)
   デザイン時に、データ ソースでサポートされているクエリ言語でクエリを指定し、クエリを実行し、結果を表示するには、テキスト ベースのクエリ デザイナーを使用します。 複数の [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメント、カスタム データ処理拡張機能のクエリまたはコマンド構文、および式としてのクエリを指定できます。 テキスト ベースのクエリ デザイナーはクエリを前処理せず、あらゆる種類のクエリ構文に対応できるため、これは多くの種類のデータ ソースで既定のクエリ デザイナー ツールになっています。
@@ -40,26 +40,23 @@ ms.locfileid: "78172787"
 |------------|-----------------|
 |**[テキストとして編集]**|テキスト ベースのクエリ デザイナーと、グラフィカル クエリ デザイナー間で切り替えます。 すべての種類のデータ ソースでグラフィカル クエリ デザイナーがサポートされているとは限りません。|
 |**[インポート]**|ファイルまたはレポートから既存のクエリをインポートします。 サポートされているファイルの種類は sql と rdl だけです。|
-|![クエリを実行する](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "クエリの実行")|クエリを実行し、その結果セットを結果ペインに表示します。|
+|![クエリの実行](../../analysis-services/media/rsqdicon-run.gif "クエリの実行")|クエリを実行し、その結果セットを結果ペインに表示します。|
 |**[コマンドの種類]**|**[Text]** 、 **[StoredProcedure]** 、または **[TableDirect]** を選択します。 パラメーターを受け取るストアド プロシージャの場合、ツール バーの **[実行]** をクリックすると、 **[クエリ パラメーターの定義]** ダイアログ ボックスが表示され、必要な値を入力できます。<br /><br /> 注: ストアド プロシージャから複数の結果セットが返された場合、最初の結果セットのみを使ってデータセットが設定されます。|
 
 ### <a name="command-type-text"></a>コマンドの種類 (Text)
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データセットを作成するとき、既定ではリレーショナル クエリ デザイナーが表示されます。 テキスト ベースのクエリ デザイナーに切り替えるには、ツール バーの **[テキストとして編集]** 切り替えボタンをクリックします。 テキスト ベースのクエリ デザイナーは、クエリ ペインと結果ペインの 2 つのペインで構成されています。 次の図に各ペインの名称を示します。
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データセットを作成するとき、既定ではリレーショナル クエリ デザイナーが表示されます。 テキスト ベースのクエリ デザイナーに切り替えるには、ツール バーの **[テキストとして編集]** 切り替えボタンをクリックします。 テキスト ベースのクエリ デザイナーは、クエリ ペインと結果ペインの 2 つのペインで構成されています。 次の図に各ペインの名称を示します。
 
- ![リレーショナル データのクエリに使用する汎用クエリ デザイナー](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-dsaw-sql-generic.gif "リレーショナル データのクエリに使用する汎用クエリ デザイナー")
+ ![リレーショナル データのクエリに使用する汎用クエリ デザイナー](../../analysis-services/media/rsqd-dsaw-sql-generic.gif "リレーショナル データのクエリに使用する汎用クエリ デザイナー")
 
  次の表に各ペインの機能を示します。
 
-|ペイン|Function|
+|ペイン|関数|
 |----------|--------------|
-|クエリ|
-  [!INCLUDE[tsql](../../../includes/tsql-md.md)] クエリ テキストを表示します。 
-  [!INCLUDE[tsql](../../../includes/tsql-md.md)] クエリを記述または編集する際に、このペインを使用します。|
+|クエリ|[!INCLUDE[tsql](../../../includes/tsql-md.md)] クエリ テキストを表示します。 [!INCLUDE[tsql](../../../includes/tsql-md.md)] クエリを記述または編集する際に、このペインを使用します。|
 |結果|クエリの結果を表示します。 クエリを実行するには、任意のペインで右クリックして、 **[実行]** をクリックするか、ツール バーの **[実行]** ボタンをクリックします。|
 
 #### <a name="example"></a>例
- 次の[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]クエリは、 `Person`スキーマの**2008**データベース`ContactType`テーブルから姓の一覧を返します。
+ 次のクエリは、スキーマの[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]**2008**データベース`ContactType`テーブルから姓の`Person`リストを返します。
 
 ```
 SELECT Name FROM Person.ContactType
@@ -68,29 +65,27 @@ SELECT Name FROM Person.ContactType
  ツール バーの **[実行]** をクリックすると、 **クエリ** ペインのコマンドが実行され、その結果が **結果** ペインに表示されます。 結果セットには、所有者や販売担当者など 20 種類の連絡先の一覧が表示されます。
 
 ### <a name="command-type-storedprocedure"></a>コマンドの種類 (StoredProcedure)
- 
-  **[コマンドの種類] で [StoredProcedure]** を選択した場合、テキスト ベースのクエリ デザイナーには、クエリ ペインと結果ペインの 2 つのペインが表示されます。 ストアド プロシージャ名をクエリ ペインに入力し、ツール バーの **[実行]** をクリックします。 ストアド プロシージャでパラメーターを使用する場合、 **[クエリ パラメーターの定義]** ダイアログ ボックスが表示されます。 ストアド プロシージャのパラメーター値を入力します。 すべてのストアド プロシージャの入力パラメーターについて、レポート パラメーターが作成されます。
+ **[コマンドの種類] で [StoredProcedure]** を選択した場合、テキスト ベースのクエリ デザイナーには、クエリ ペインと結果ペインの 2 つのペインが表示されます。 ストアド プロシージャ名をクエリ ペインに入力し、ツール バーの **[実行]** をクリックします。 ストアド プロシージャでパラメーターを使用する場合、 **[クエリ パラメーターの定義]** ダイアログ ボックスが表示されます。 ストアド プロシージャのパラメーター値を入力します。 すべてのストアド プロシージャの入力パラメーターについて、レポート パラメーターが作成されます。
 
  次の図に、ストアド プロシージャを実行したときのクエリ ペインと結果ペインを示します。 この場合、入力パラメーターは定数です。
 
- ![テキスト ベースのクエリ デザイナーのストアド プロシージャ](https://docs.microsoft.com/analysis-services/analysis-services/media/rs-relational-text-sp.gif "テキスト ベースのクエリ デザイナーのストアド プロシージャ")
+ ![テキスト ベースのクエリ デザイナーのストアド プロシージャ](../../analysis-services/media/rs-relational-text-sp.gif "テキスト ベースのクエリ デザイナーのストアド プロシージャ")
 
  次の表に各ペインの機能を示します。
 
-|ペイン|Function|
+|ペイン|関数|
 |----------|--------------|
 |クエリ|ストアド プロシージャの名前と入力パラメーターを表示します。|
 |結果|クエリの結果を表示します。 クエリを実行するには、任意のペインで右クリックして、 **[実行]** をクリックするか、ツール バーの **[実行]** ボタンをクリックします。|
 
 #### <a name="example"></a>例
- 次のクエリは、 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008**ストアドプロシージャ`uspGetWhereUsedProductID`を呼び出します。 クエリを実行する場合は、製品 ID 番号パラメーターの値を入力する必要があります。
+ 次のクエリは[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]**、2008**ストアド`uspGetWhereUsedProductID`プロシージャを呼び出します。 クエリを実行する場合は、製品 ID 番号パラメーターの値を入力する必要があります。
 
 ```
 uspGetWhereUsedProductID
 ```
 
- 
-  **[実行]** (**!**) ボタンをクリックします。 クエリ パラメーターの入力画面が表示されたら、次の表にある値を入力します。
+ **[実行]** (**!**) ボタンをクリックします。 クエリ パラメーターの入力画面が表示されたら、次の表にある値を入力します。
 
 |||
 |-|-|
@@ -100,17 +95,16 @@ uspGetWhereUsedProductID
  指定した日付について、結果セットには、指定したコンポーネント番号を使用している 13 の製品 ID の一覧が表示されます。
 
 ### <a name="command-type-tabledirect"></a>コマンドの種類 (TableDirect)
- 
-  **[コマンドの種類] で [TableDirect]** を選択した場合、テキスト ベースのクエリ デザイナーには、クエリ ペインと結果ペインの 2 つのペインが表示されます。 テーブルを入力し、 **[実行]** ボタンをクリックすると、そのテーブルのすべての列が返されます。
+ **[コマンドの種類] で [TableDirect]** を選択した場合、テキスト ベースのクエリ デザイナーには、クエリ ペインと結果ペインの 2 つのペインが表示されます。 テーブルを入力し、 **[実行]** ボタンをクリックすると、そのテーブルのすべての列が返されます。
 
 #### <a name="example"></a>例
- データソースの種類が OLE DB の場合、次のデータセットクエリでは、 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008**データベースのすべての種類の連絡先について結果セットが返されます。
+ データ ソースの種類が OLE DB の場合、次のデータセット クエリは[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]**、2008**データベース内のすべての接触タイプの結果セットを返します。
 
  `Person.ContactType`
 
  テーブル名 Person.ContactType を入力した場合、これは [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントの `SELECT * FROM Person.ContactType`を作成することに相当します。
 
 ## <a name="see-also"></a>参照
- [リレーショナルクエリデザイナーのユーザーインターフェイス &#40;レポートビルダー&#41;](relational-query-designer-user-interface-report-builder.md) [クエリデザイナー &#40;レポートビルダー&#41;](../query-designers-report-builder.md)
+ [レポート ビルダー&#40;レポート ビルダー&#41;&#40;](relational-query-designer-user-interface-report-builder.md)[レポート ビルダー&#41;](../query-designers-report-builder.md)のユーザー インターフェイス
 
 

@@ -1,5 +1,5 @@
 ---
-title: ローカル DB の SQL Server ネイティブ クライアント のサポート |マイクロソフトドキュメント
+title: LocalDB のサポート
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.assetid: 127569d1-a9f7-49bf-a561-c084986a8871
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5114d0c12fe66b564c0e02ffb951b1ae0be809e
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: b6b3bda8e934e67371c48611383a45cbdc5cb993
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81303253"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388414"
 ---
 # <a name="sql-server-native-client-support-for-localdb"></a>SQL Server Native Client における LocalDB のサポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
