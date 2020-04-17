@@ -1385,6 +1385,15 @@
                       href: relational-databases/databases/database-properties-mirroring-page.md
                     - name: '[クエリ ストア] ページ'
                       href: relational-databases/databases/database-properties-query-store-page.md
+    - name: イベント通知
+      href: relational-databases/service-broker/event-notifications.md
+      items:
+        - name: 実装
+          href: relational-databases/service-broker/implement-event-notifications.md
+        - name: 構成ダイアログ セキュリティ
+          href: relational-databases/service-broker/configure-dialog-security-for-event-notifications.md
+        - name: 情報の取得
+          href: relational-databases/service-broker/get-information-about-event-notifications.md
     - name: FILESTREAM、FileTable、および BLOB
       href: relational-databases/blob/binary-large-object-blob-data-sql-server.md
       items:
@@ -1540,14 +1549,7 @@
         - name: シーケンスのプロパティ
           href: relational-databases/sequence-numbers/sequence-properties-general-page.md
     - name: Service Broker
-      href: relational-databases/service-broker/event-notifications.md
-      items:
-        - name: 実装
-          href: relational-databases/service-broker/implement-event-notifications.md
-        - name: 構成ダイアログ セキュリティ
-          href: relational-databases/service-broker/configure-dialog-security-for-event-notifications.md
-        - name: 情報の取得
-          href: relational-databases/service-broker/get-information-about-event-notifications.md
+      href: database-engine/configure-windows/sql-server-service-broker.md
     - name: 空間データ
       href: relational-databases/spatial/spatial-data-sql-server.md
       items:
@@ -4370,8 +4372,6 @@
           href: database-engine/configure-windows/remote-servers.md
         - name: SQL Server モニターの概要
           href: database-engine/configure-windows/sql-server-monitor-overview.md
-        - name: Service Broker
-          href: database-engine/configure-windows/sql-server-service-broker.md
         - name: バッファー プール拡張
           href: database-engine/configure-windows/buffer-pool-extension.md
         - name: サーバー構成オプション
