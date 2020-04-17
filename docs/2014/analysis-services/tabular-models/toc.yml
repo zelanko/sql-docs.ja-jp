@@ -166,7 +166,7 @@
     - name: Excel でのテーブル モデルの分析
       href: analyze-a-tabular-model-in-excel-ssas-tabular.md
 - name: テーブル モデル ソリューションの配置
-  href: tabular-model-solution-deployment-ssas-tabular.md
+  href: 'https://docs.microsoft.com/analysis-services/deployment/tabular-model-solution-deployment'
   items:
     - name: SQL Server データ ツールからの配置
       href: deploy-from-sql-server-data-tools-ssas-tabular.md

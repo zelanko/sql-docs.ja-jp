@@ -16,12 +16,12 @@ ms.assetid: 5b4daea5-7f76-4674-aa77-0a79f9f97f7d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1bedefd277f1be7f44d807e6539097dd24f5ab2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 4c015844fd0b0a3ed219adabaf95f4b2af98d663
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62900912"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486978"
 ---
 # <a name="raw-file-source"></a>RAW ファイル ソース (Raw File source)
   RAW ファイル ソースは、ファイルから生データを読み取ります。 データはソース ファイル固有の方法で表示されるため、変換の必要がなく、ほとんどの場合は解析の必要もありません。 したがって、RAW ファイル ソースは、フラット ファイルや OLE DB などの他のソースよりも、高速にデータを読み取ることができます。  
@@ -51,10 +51,10 @@ ms.locfileid: "62900912"
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   sqlservercentral.com のブログ「 [RAW ファイルは最高](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx)」  
+-   sqlservercentral.com のブログ「 [RAW ファイルは最高](https://www.sqlservercentral.com/blogs/31-days-of-ssis-%e2%80%93-raw-files-are-awesome-131)」  
   
 ## <a name="see-also"></a>参照  
- [Raw ファイル変換先](raw-file-destination.md)   
+ [生ファイルの宛先](raw-file-destination.md)   
  [Data Flow](data-flow.md)  
   
   

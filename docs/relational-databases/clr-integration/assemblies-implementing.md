@@ -1,5 +1,6 @@
 ---
-title: アセンブリの実装 |Microsoft Docs
+title: アセンブリの実装 |マイクロソフトドキュメント
+description: アセンブリの作成と変更、アセンブリの削除と有効/無効の切り当て、バージョンの管理など、SQL Server でホストされているアセンブリの操作方法について説明します。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c228d7bf-a906-4f37-a057-5d464d962ff8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c6ca486f3464334c96c3b3874c4dfff71161e978
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 807ed6a6f0d59444cd38f7fdf902a7c3fc1b47d8
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68018850"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488049"
 ---
 # <a name="assemblies---implementing"></a>アセンブリ - 実装
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,23 +29,23 @@ ms.locfileid: "68018850"
   
 -   アセンブリの削除、無効化、および有効化  
   
--   アセンブリバージョンの管理  
+-   アセンブリ バージョンの管理  
   
 ## <a name="creating-assemblies"></a>アセンブリの作成  
- アセンブリの作成は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY ステートメントを使用し、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ではアセンブリ支援エディターを使用して行います。 さらに、で[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] SQL Server プロジェクトを配置すると、プロジェクトに指定されたデータベースにアセンブリが登録されます。 詳細については、「 [CLR データベース オブジェクトの配置](../../relational-databases/clr-integration/deploying-clr-database-objects.md)」を参照してください。  
+ アセンブリの作成は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY ステートメントを使用し、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ではアセンブリ支援エディターを使用して行います。 さらに、SQL Server プロジェクトを配置[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]すると、プロジェクトに指定されたデータベースにアセンブリが登録されます。 詳細については、「 [CLR データベース オブジェクトの配置](../../relational-databases/clr-integration/deploying-clr-database-objects.md)」を参照してください。  
   
  **Transact-SQL を使用してアセンブリを作成するには**  
   
--   [CREATE ASSEMBLY &#40;Transact-sql&#41;](../../t-sql/statements/create-assembly-transact-sql.md)  
+-   [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)  
   
  **SQL Server Management Studio を使用してアセンブリを作成するには**  
   
--   [[アセンブリのプロパティ] &#40;[全般] ページ&#41;](../../relational-databases/clr-integration/assemblies-properties.md)  
+-   [[アセンブリ プロパティ] &#40;[全般] ページの&#41;](../../relational-databases/clr-integration/assemblies-properties.md)  
   
 ## <a name="modifying-assemblies"></a>アセンブリの変更  
  アセンブリの変更は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY ステートメントを使用し、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ではアセンブリ支援エディターを使用して行います。 次の操作を行うと、アセンブリを変更できます。  
   
--   アセンブリの新しいバージョンのバイナリをアップロードして、アセンブリの実装を変更します。 詳細については、このトピックで後述[する「アセンブリバージョンの管理](#_managing)」を参照してください。  
+-   アセンブリの新しいバージョンのバイナリをアップロードして、アセンブリの実装を変更します。 詳細については、このトピックの「[アセンブリ バージョンの管理](#_managing)」を参照してください。  
   
 -   アセンブリの権限セットを変更します。 詳細については、「[アセンブリのデザイン](../../relational-databases/clr-integration/assemblies-designing.md)」を参照してください。  
   
@@ -54,52 +55,50 @@ ms.locfileid: "68018850"
   
  **Transact-SQL を使用してアセンブリを変更するには**  
   
--   [ALTER ASSEMBLY &#40;Transact-sql&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)  
+-   [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)  
   
  **SQL Server Management Studio を使用してアセンブリを変更するには**  
   
--   [[アセンブリのプロパティ] &#40;[全般] ページ&#41;](../../relational-databases/clr-integration/assemblies-properties.md)  
+-   [[アセンブリ プロパティ] &#40;[全般] ページの&#41;](../../relational-databases/clr-integration/assemblies-properties.md)  
   
 ## <a name="dropping-disabling-and-enabling-assemblies"></a>アセンブリの削除、無効化、および有効化  
  アセンブリの削除は、[!INCLUDE[tsql](../../includes/tsql-md.md)] DROP ASSEMBLY ステートメントまたは [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して行います。  
   
  **Transact-SQL を使用してアセンブリを削除するには**  
   
--   [DROP ASSEMBLY &#40;Transact-sql&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)  
+-   [DROP ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)  
   
  **SQL Server Management Studio を使用してアセンブリを削除するには**  
   
 -   [[オブジェクトの削除]](../../ssms/object/delete-objects.md)  
   
- 既定では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で作成されたアセンブリがすべて実行できない状態になっています。 **Sp_configure**システムストアドプロシージャの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **clr enabled**オプションを使用して、でアップロードされるすべてのアセンブリの実行を無効または有効にすることができます。 アセンブリの実行を無効にすると、CLR (共通言語ランタイム) 関数、ストアド プロシージャ、トリガー、集計、およびユーザー定義型を実行できなくなり、現在実行されている場合は停止されます。 アセンブリの実行を無効にしても、アセンブリを作成、変更、または削除する機能は無効になりません。 詳細については、「 [clr Enabled サーバー構成オプション](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)」を参照してください。  
+ 既定では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で作成されたアセンブリがすべて実行できない状態になっています。 **sp_configure**システム ストアド プロシージャの**clr enabled**オプションを使用して、 でアップロードされるすべてのアセンブリの実行を無効または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]有効にできます。 アセンブリの実行を無効にすると、CLR (共通言語ランタイム) 関数、ストアド プロシージャ、トリガー、集計、およびユーザー定義型を実行できなくなり、現在実行されている場合は停止されます。 アセンブリの実行を無効にしても、アセンブリを作成、変更、または削除する機能は無効になりません。 詳細については、「 [clr が有効なサーバー構成オプション](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)」を参照してください。  
   
  **アセンブリの実行を無効および有効にするには**  
   
 -   [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
-##  <a name="_managing"></a>アセンブリバージョンの管理  
- アセンブリを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにアップロードすると、そのアセンブリはデータベース システム カタログ内に格納され、管理されます。 でアセンブリの定義に加えられた変更は[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 、データベースカタログに格納されているアセンブリに反映される必要があります。  
+##  <a name="managing-assembly-versions"></a><a name="_managing"></a>アセンブリ バージョンの管理  
+ アセンブリを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにアップロードすると、そのアセンブリはデータベース システム カタログ内に格納され、管理されます。 で[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]アセンブリの定義に加えられた変更は、 データベース カタログに格納されているアセンブリに反映されます。  
   
  アセンブリを変更する必要がある場合は、ALTER ASSEMBLY ステートメントを実行してデータベース内のアセンブリを更新する必要があります。 これにより、アセンブリの実装を保持している [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] モジュールの最新のコピーにアセンブリが更新されます。  
   
  ALTER ASSEMBLY ステートメントの WITH UNCHECKED DATA 句は、データベース内の永続化されたデータが依存しているアセンブリも最新状態に更新するように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に指示します。 具体的には、次のいずれかが存在する場合、WITH UNCHECKED DATA を指定する必要があります。  
   
--   
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] の関数またはメソッドによってアセンブリ内のメソッドを直接または間接的に参照する、永続化された計算列。  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] の関数またはメソッドによってアセンブリ内のメソッドを直接または間接的に参照する、永続化された計算列。  
   
 -   アセンブリに依存する CLR ユーザー定義型の列と、**UserDefined** (非**ネイティブ**) シリアル化形式を実装する型の列。  
   
 > [!CAUTION]  
 >  WITH UNCHECKED DATA を指定せず、新しいバージョンのアセンブリによってテーブルの既存のデータ、インデックス、または他の固有サイトに影響が生じる場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では ALTER ASSEMBLY の実行回避が試みられます。 ただし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、CLR アセンブリの更新時に、計算列、インデックス、インデックス付きビュー、または式が、基になるルーチンや型と一致することは保証されません。 ALTER ASSEMBLY を実行する場合は、式の結果とアセンブリ内の式に基づく値との間に不一致が生じないように注意する必要があります。  
   
- WITH UNCHECKED DATA 句を使用して ALTER ASSEMBLY を実行できるのは、 **db_owner**および**db_ddlowner**固定データベースロールのメンバーだけです。  
+ 固定データベース ロールの**db_owner**と**db_ddlowner**メンバーのみが、WITH UNCHECKED DATA 句を使用して ALTER ASSEMBLY を実行できます。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、テーブル内に未チェック データがある状態でアセンブリが変更されたというメッセージを Windows アプリケーション イベント ログに記録します。 さらに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、そのアセンブリに依存するデータを含んでいるすべてのテーブルに、未チェック データを含むテーブルであるというマークを付けます。 行カタログビューの**has_unchecked_assembly_data**列には、チェックされていないデータを含むテーブルの場合は値1、未チェックデータを含まないテーブルの場合は0が格納され**ます。**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、テーブル内に未チェック データがある状態でアセンブリが変更されたというメッセージを Windows アプリケーション イベント ログに記録します。 さらに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、そのアセンブリに依存するデータを含んでいるすべてのテーブルに、未チェック データを含むテーブルであるというマークを付けます。 **sys.tables**カタログ ビューの**has_unchecked_assembly_data**列には、チェックされていないデータを含むテーブルの場合は 1、チェックされていないデータがないテーブルの場合は 0 が含まれます。  
   
- チェックされていないデータの整合性を解決するには、チェックされていないデータを含む各テーブルに対して EXTENDED_LOGICAL_CHECKS を使用して DBCC CHECKDB を実行します。 DBCC CHECKDB WITH EXTENDED_LOGICAL_CHECKS が失敗した場合は、無効なテーブル行を削除するか、問題を解決するようにアセンブリコードを変更してから、追加の ALTER ASSEMBLY ステートメントを実行する必要があります。  
+ チェックされていないデータの整合性を解決するには、チェックされていないデータを持つ各テーブルに対して DBCC CHECKDB WITH EXTENDED_LOGICAL_CHECKSを実行します。 DBCC CHECKDB WITH EXTENDED_LOGICAL_CHECKSが失敗した場合は、無効なテーブル行を削除するか、問題に対処するためにアセンブリ コードを変更してから、追加の ALTER ASSEMBLY ステートメントを発行する必要があります。  
   
- ALTER ASSEMBLY ではアセンブリのバージョンが変更されます。 アセンブリのカルチャと公開キートークンは変わりません。SQL Server では、同じ名前、カルチャ、公開キーを持つアセンブリの異なるバージョンを登録することはできません。  
+ ALTER ASSEMBLY ではアセンブリのバージョンが変更されます。 アセンブリのカルチャと公開キー トークンは変わりません。SQL Server では、同じ名前、カルチャ、および公開キーを持つアセンブリの異なるバージョンを登録することはできません。  
   
 ### <a name="interactions-with-computer-wide-policy-for-version-binding"></a>バージョン バインディングでのコンピューター全体のポリシーとの相互作用  
  パブリッシャー ポリシーまたはコンピューター全体の管理者ポリシーを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に格納されているアセンブリへの参照を特定のバージョンにリダイレクトする場合、次のいずれかを実行する必要があります。  
@@ -112,10 +111,10 @@ ms.locfileid: "68018850"
   
  **アセンブリのバージョンを更新するには**  
   
--   [ALTER ASSEMBLY &#40;Transact-sql&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)  
+-   [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)  
   
 ## <a name="see-also"></a>参照  
- [アセンブリ &#40;データベースエンジン&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+ [データベース エンジン&#40;&#41;アセンブリ](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [アセンブリについての情報の取得](../../relational-databases/clr-integration/assemblies-getting-information.md)  
   
   

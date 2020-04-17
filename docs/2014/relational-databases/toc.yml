@@ -208,9 +208,9 @@
           href: policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md
           items:
             - name: Finance の名前ポリシーの作成
-              href: policy-based-management/lesson-2-1-create-the-finance-name-policy.md
+              href: policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md
             - name: Finance の名前ポリシーのサブスクライブおよび確認
-              href: policy-based-management/lesson-2-2-subscribe-to-and-check-the-finance-name-policy.md
+              href: policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md
     - name: 'チュートリアル:ポリシー ベースの管理を使用したベスト プラクティスの評価'
       href: ../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md
       items:

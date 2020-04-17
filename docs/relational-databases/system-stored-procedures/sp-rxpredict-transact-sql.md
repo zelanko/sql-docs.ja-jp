@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3c12349e48f474b53957ffac55415ccc0689eeca
-ms.sourcegitcommit: fbe0ab88fa8d5aa3ea96629f4ccfa4da5caf74f4
+ms.openlocfilehash: 9663b4cd51a7aca9e9e30ccafcdcb0652ec4229a
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "81012441"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488543"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly.md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,7 +40,7 @@ sp_rxPredict  ( @model, @input )
 
 ### <a name="arguments"></a>引数
 
-**model**
+**モデル**
 
 サポートされている形式での事前トレーニング済みモデル。 
 
@@ -64,13 +64,13 @@ sp_rxPredict  ( @model, @input )
 
 ### <a name="supported-algorithms"></a>サポートされているアルゴリズム
 
-モデルを作成してトレーニングするには[、SQL Server の機械学習サービス (R または Python)](https://docs.microsoft.com/sql/machine-learning/what-is-sql-server-machine-learning) [、SQL Server 2016 R サービス 、SQL Server](https://docs.microsoft.com/sql/machine-learning/r/sql-server-r-services)[の機械学習サーバー (スタンドアロン) (R または Python)](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone)、または[SQL Server 2016 R Server (スタンドアロン)](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone?view=sql-server-2016)で提供される、R または Python でサポートされているアルゴリズムのいずれかを使用します。
+モデルを作成してトレーニングするには[、SQL Server の機械学習サービス (R または Python)](https://docs.microsoft.com/sql/machine-learning/sql-server-machine-learning-services) [、SQL Server 2016 R サービス 、SQL Server](https://docs.microsoft.com/sql/machine-learning/r/sql-server-r-services)[の機械学習サーバー (スタンドアロン) (R または Python)](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone)、または[SQL Server 2016 R Server (スタンドアロン)](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone?view=sql-server-2016)で提供される、R または Python でサポートされているアルゴリズムのいずれかを使用します。
 
 #### <a name="r-revoscaler-models"></a>R: レボスケールモデル
 
   + [rxリンモッド](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)
   + [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit)
-  + [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees)
+  + [をクリックします。](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees)
   + [rxDツリー](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree)
   + [rxdフォレスト](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest)
 

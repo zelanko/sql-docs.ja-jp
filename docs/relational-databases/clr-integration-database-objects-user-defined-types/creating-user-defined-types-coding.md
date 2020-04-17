@@ -1,5 +1,6 @@
 ---
-title: ユーザー定義型のコーディング |Microsoft Docs
+title: ユーザー定義型のコーディング |マイクロソフトドキュメント
+description: この例では、SQL Server データベースで使用する UDT を実装する方法を示します。 構造体として UDT を実装します。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -30,18 +31,18 @@ helpviewer_keywords:
 ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9a26fb1282eb9181af9b1b04f40fd7f7c45c688a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a9d51cc0c33c8b656df176baa606a88a542ca4bc
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72907468"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486959"
 ---
 # <a name="creating-user-defined-types---coding"></a>ユーザー定義型の作成 - コーディング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   ユーザー定義型 (UDT) の定義をコーディングする際は、形式やシリアル化のオプションを選択するだけでなく、UDT をクラスと構造体のどちらで実装するかによって、さまざまな機能を実装する必要があります。  
   
- このセクションの例では、 **Point** UDT を**構造体**(Visual Basic の**構造体**) として実装する方法を示します。 **Point** UDT は、プロパティプロシージャとして実装された X 座標と Y 座標で構成されます。  
+ このセクションの例では **、Point** UDT を**構造体**(または Visual Basic の**構造体**) として実装する方法を示します。 **ポイント**UDT は、プロパティ プロシージャとして実装された X 座標と Y 座標で構成されます。  
   
  UDT の定義に必要な名前空間を次に示します。  
   
@@ -57,20 +58,20 @@ using System.Data.SqlTypes;
 using Microsoft.SqlServer.Server;  
 ```  
   
- SqlTypes**名前空間には**、UDT のさまざまな属性に必要なオブジェクトが含まれてい**** ます。また、この名前空間には、アセンブリ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で使用可能なネイティブデータ型を表すクラスが含まれています。 それ以外にもアセンブリが正しく機能するために必要な名前空間が存在する場合があります。 また、 **Point** UDT は、文字列を操作するために**system.string 名前空間**も使用します。  
+ 名前空間**には**、UDT のさまざまな属性に必要なオブジェクトが含まれ、**名前空間**にはアセンブリで使用できるネイティブ データ型を表す[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クラスが含まれています。 それ以外にもアセンブリが正しく機能するために必要な名前空間が存在する場合があります。 **ポイント**UDT は、文字列を操作するために**System.Text**名前空間も使用します。  
   
 > [!NOTE]  
->  **/Clr: pure**を使用してコンパイルされた udt などの Visual C++ データベースオブジェクトは、実行がサポートされていません。  
+>  **/clr:pure**でコンパイルされた UDT などの Visual C++ データベース オブジェクトは、実行に対してサポートされていません。  
   
 ## <a name="specifying-attributes"></a>属性の指定  
  UDT のストレージ表現を構築し、クライアントに UDT を値として転送するためにシリアル化を使用する方法は、属性で決まります。  
   
- **SqlUserDefinedTypeAttribute**を指定する必要があります。 **Serializable**属性は省略可能です。 **SqlFacetAttribute**を指定して、UDT の戻り値の型に関する情報を提供することもできます。 詳細については、「[CLR ルーチンのカスタム属性](../../relational-databases/clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md)」を参照してください。  
+ 属性**が**必要です。 **シリアル化可能属性**は省略可能です。 UDT の戻り値の型に関する情報を提供するために **、Microsoft.SqlServer.Server.SqlFacet 属性**を指定することもできます。 詳細については、「[CLR ルーチンのカスタム属性](../../relational-databases/clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md)」を参照してください。  
   
 ### <a name="point-udt-attributes"></a>Point UDT の属性  
- **SqlUserDefinedTypeAttribute**は、 **Point** UDT のストレージ形式を**ネイティブ**に設定します。 **Isbyteordered**は**true**に設定されています。これにより、マネージコードで同じ比較が行われたかのように、SQL Server で比較結果が同じであることが保証されます。 Udt は**INullable**インターフェイスを実装して、udt を null 対応にします。  
+ **をネイティブにポイント**UDT のストレージ**形式を設定****します**。 **IsByteOrdered**は**true**に設定され、SQL Server では、マネージ コードで同じ比較が行われた場合と同じ比較結果が確実に実行されます。 UDT は、UDT を null に対応させるためにインターフェイスを実装**します**。  
   
- 次のコードフラグメントは、 **Point** UDT の属性を示しています。  
+ 次のコードは、**ポイント**UDT の属性を示しています。  
   
 ```vb  
 <Serializable(), SqlUserDefinedTypeAttribute(Format.Native, _  
@@ -88,15 +89,14 @@ public struct Point : INullable
 ```  
   
 ## <a name="implementing-nullability"></a>NULL 値の許容属性の実装  
- アセンブリの属性を正しく指定することに加えて、UDT で NULL 値の許容属性をサポートする必要があります。 に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]読み込まれた udt は null 対応ですが、udt が null 値を認識できるようにするには、Udt は**INullable**インターフェイスを実装する必要があります。  
+ アセンブリの属性を正しく指定することに加えて、UDT で NULL 値の許容属性をサポートする必要があります。 にロードされる UDT[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は NULL を認識しますが、UDT が NULL 値を認識するには、UDT が**System.Data.SqlTypes.INullable**インターフェイスを実装する必要があります。  
   
- CLR コード内から値が null かどうかを判断するために必要な、 **IsNull**という名前のプロパティを作成する必要があります。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では UDT が NULL インスタンスであることを検出すると、通常の NULL 値処理メソッドを使用して UDT を保存します。 そのため、サーバーが NULL の UDT の不要なシリアル化やシリアル化解除に時間を費やしたり、NULL の UDT を格納して領域を無駄にすることはありません。 この NULL に関するチェックは CLR から UDT が渡されるたびに実行されます。つまり、[!INCLUDE[tsql](../../includes/tsql-md.md)] の IS NULL コンストラクトを使用して NULL UDT のチェックを実行すると、必ず成功することを意味します。 **IsNull**プロパティは、インスタンスが null かどうかをテストするためにサーバーによっても使用されます。 UDT が NULL であることを判断できれば、サーバーはネイティブの NULL 処理を使用できます。  
+ 値が CLR コード内から null かどうかを判断するために必要な**IsNull**というプロパティを作成する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では UDT が NULL インスタンスであることを検出すると、通常の NULL 値処理メソッドを使用して UDT を保存します。 そのため、サーバーが NULL の UDT の不要なシリアル化やシリアル化解除に時間を費やしたり、NULL の UDT を格納して領域を無駄にすることはありません。 この NULL に関するチェックは CLR から UDT が渡されるたびに実行されます。つまり、[!INCLUDE[tsql](../../includes/tsql-md.md)] の IS NULL コンストラクトを使用して NULL UDT のチェックを実行すると、必ず成功することを意味します。 **IsNull**プロパティは、インスタンスが null であるかどうかをテストするためにサーバーによっても使用されます。 UDT が NULL であることを判断できれば、サーバーはネイティブの NULL 処理を使用できます。  
   
- **IsNull**の**get ()** メソッドは、特別なケースではありません。 **Point**変数** \@p**が**Null** ** \@** の場合、既定では、"1" ではなく "Null" に評価されます。 これは、 **IsNull get ()** メソッドの**Sqlmethod (onnullcall)** 属性が既定で false に設定されているためです。 オブジェクトが**Null**の場合、プロパティが要求されると、オブジェクトは逆シリアル化されず、メソッドは呼び出されず、既定値の "Null" が返されます。  
+ **IsNull**の**get()** メソッドは、特別な大文字と小文字を使用しません。 **ポイント**変数**\@p**が**Null**の場合**\@、p.IsNull**は、既定では"1"ではなく"NULL"と評価されます。 これは **、IsNull get()** メソッドの**SqlMethod(OnNullCall)** 属性がデフォルトで false になるためです。 オブジェクトは**Null**であるため、プロパティが要求されると、オブジェクトは逆シリアル化されず、メソッドは呼び出されず、既定値の "NULL" が返されます。  
   
 ### <a name="example"></a>例  
- 次の例では、プライベート変数の `is_Null` に、UDT のインスタンスが NULL かどうかに関する状態が格納されます。 コードを作成する際は、`is_Null` の値を適切な状態に保つように注意する必要があります。 UDT には、UDT の null 値のインスタンスを返す**null**という名前の静的プロパティも必要です。 これにより、データベース内の UDT のインスタンスが実際に NULL の場合に、UDT から NULL 値を返すことができます。  
+ 次の例では、プライベート変数の `is_Null` に、UDT のインスタンスが NULL かどうかに関する状態が格納されます。 コードを作成する際は、`is_Null` の値を適切な状態に保つように注意する必要があります。 UDT には、UDT の null 値インスタンスを返す**Null**という名前の静的プロパティも必要です。 これにより、データベース内の UDT のインスタンスが実際に NULL の場合に、UDT から NULL 値を返すことができます。  
   
 ```vb  
 Private is_Null As Boolean  
@@ -140,7 +140,7 @@ public static Point Null
 ```  
   
 ### <a name="is-null-vs-isnull"></a>IS NULL と IsNull  
- スキーマポイント (id int、ロケーションポイント) を含むテーブルについて考えてみます。ここで、 **Point**は CLR UDT で、次のクエリを実行します。  
+ ポイントが CLR UDT であるスキーマ Points (id int、位置ポイント) と次のクエリを含むテーブルを考えてみます。 **Point**  
   
 ```  
 --Query 1  
@@ -156,14 +156,14 @@ FROM Points
 WHERE location.IsNull = 0;  
 ```  
   
- どちらのクエリも、**Null**以外の場所にあるポイントの id を返します。 クエリ 1 では、通常の Null 処理が使用されるため、UDT のシリアル化解除は必要ありません。 一方、クエリ2では、**Null**以外の各オブジェクトを逆シリアル化し、CLR を呼び出して**IsNull**プロパティの値を取得する必要があります。 明らかに、 **IS NULL**を使用するとパフォーマンスが向上します。また、コードから**** [!INCLUDE[tsql](../../includes/tsql-md.md)] UDT の IsNull プロパティを読み取ることができなくなることはありません。  
+ どちらのクエリも **、NULL**以外の位置を持つポイントの ID を返します。 クエリ 1 では、通常の Null 処理が使用されるため、UDT のシリアル化解除は必要ありません。 一方、クエリ 2 では **、Null 以外**の各オブジェクトを逆シリアル化し **、ISNull**プロパティの値を取得するために CLR を呼び出す必要があります。 明らかに **、IS NULL を**使用するとパフォーマンスが向上し、コードから[!INCLUDE[tsql](../../includes/tsql-md.md)]UDT の**IsNull**プロパティを読み取る理由が決してありません。  
   
- では、 **IsNull**プロパティはどのように使用されていますか。 まず、CLR コード内から値が**Null**かどうかを判断する必要があります。 次に、サーバーには、インスタンスが**Null**かどうかをテストする方法が必要であるため、このプロパティはサーバーによって使用されます。 **Null**であると判断した後は、ネイティブの null 処理を使用して処理できます。  
+ では **、IsNull**プロパティの使用は何ですか? まず、CLR コード内から値が**Null**かどうかを判断する必要があります。 次に、サーバーはインスタンスが**Null であるかどうかを**テストする方法を必要とするため、このプロパティはサーバーによって使用されます。 **Null**であると判断した後、ネイティブの NULL 処理を使用して処理できます。  
   
 ## <a name="implementing-the-parse-method"></a>Parse メソッドの実装  
- **Parse**メソッドと**ToString**メソッドを使用すると、UDT の文字列表現との間で変換を行うことができます。 **Parse**メソッドを使用すると、文字列を UDT に変換できます。 これは、 **static**として宣言されている (または Visual Basic で**共有**されている) 必要があり、 **SqlString**型のパラメーターを受け取ります。  
+ **解析**メソッドと**ToString**メソッドを使用すると、UDT の文字列形式との間の変換が可能になります。 **Parse**メソッドを使用すると、文字列を UDT に変換できます。 静的 **(または**Visual Basic では**共有**) として宣言し、型のパラメーターを受け取る必要**があります**。  
   
- 次のコードでは、X 座標と Y 座標を分離する**Point** UDT の**Parse**メソッドを実装しています。 **Parse**メソッドは、 **SqlTypes**型の1つの引数を持ち、X と Y の値がコンマ区切りの文字列として指定されていることを前提としています。 **SqlMethodAttribute**属性を**false**に設定すると、 **Parse**メソッドを Point の null インスタンスから呼び出すことができなくなります。  
+ 次のコードは、X 座標と Y 座標を分離する**Point** UDT の**Parse**メソッドを実装しています。 **Parse**メソッドには **、型**の引数が 1 つあり、X 値と Y 値がコンマ区切り文字列として指定されていると仮定します。 **属性を** **false**に設定すると、**解析**メソッドがポイントの null インスタンスから呼び出されるのを防ぎます。  
   
 ```vb  
 <SqlMethod(OnNullCall:=False)> _  
@@ -198,7 +198,7 @@ public static Point Parse(SqlString s)
 ```  
   
 ## <a name="implementing-the-tostring-method"></a>ToString メソッドの実装  
- **ToString**メソッドは、 **Point** UDT を文字列値に変換します。 この場合、**ポイント**型の null インスタンスに対して "null" という文字列が返されます。 **ToString**メソッドは、system.string を使用して**Parse**メソッドを**逆にし**、X 座標と Y 座標の値で構成されるコンマ区切りの**system.string**を返します。 **Invokeifreceiverisnull**の既定値は false であるため、 **Point**の null インスタンスのチェックは不要です。  
+ **ToString**メソッドは、**ポイント**UDT を文字列値に変換します。 この場合 **、Point**型の Null インスタンスに対して文字列 "NULL" が返されます。 **ToString**メソッドは、X 座標と Y 座標値で構成されるコンマ区切りの**System.String**を返すために**System.Text.StringBuilder**を使用して**Parse**メソッドを逆にします。 **既定**では false であるため、**ポイント**の null インスタンスのチェックは不要です。  
   
 ```vb  
 Private _x As Int32  
@@ -237,7 +237,7 @@ public override string ToString()
 ```  
   
 ## <a name="exposing-udt-properties"></a>UDT プロパティの公開  
- **Point** UDT は、型 system.string のパブリック読み取り/書き込みプロパティとして実装される X 座標と Y 座標を公開**します。**  
+ **Point** UDT は、**型 System.Int32**のパブリック読み取り/書き込みプロパティとして実装されている X 座標と Y 座標を公開します。  
   
 ```vb  
 Public Property X() As Int32  
@@ -290,10 +290,10 @@ public Int32 Y
 ## <a name="validating-udt-values"></a>UDT 値の検証  
  UDT データの使用時は、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]により、バイナリ値が自動的に UDT 値に変換されます。 この変換処理では、値がその UDT のシリアル化形式に適しているかどうかがチェックされ、値を正しくシリアル化解除できるようにします。 これにより、値はバイナリ形式に再変換できるようになります。 また、バイト順の UDT の場合は、結果のバイナリ値が必ず元のバイナリ値と一致するようになります。 これにより、無効な値がデータベース内に存在する危険性が回避されます。 それでも、このレベルのチェックでは不十分である場合もあります。 UDT 値を一定の範囲内に制限する必要があるときは、さらに検証が必要になります。 たとえば、日付を実装する UDT の日の値は、特定の有効範囲内の正の数である必要があります。  
   
- **SqlUserDefinedTypeAttribute**の**SqlUserDefinedTypeAttribute**プロパティを使用すると、データが udt に割り当てられたとき、または udt に変換されたときにサーバーで実行される検証メソッドの名前を指定できます。 **Validationmethodname**は、bcp ユーティリティ、BULK INSERT、dbcc CHECKDB、DBCC CHECKFILEGROUP、dbcc CHECKTABLE、分散クエリ、および表形式データストリーム (TDS) リモートプロシージャコール (RPC) 操作の実行中にも呼び出されます。 **Validationmethodname**の既定値は null です。これは、検証メソッドがないことを示します。  
+ プロパティ**の**プロパティ**を使用すると**、データが UDT に割り当てられたり UDT に変換されたときにサーバーが実行する検証メソッドの名前を指定できます。 検証**メソッド名**は、bcp ユーティリティ、一括挿入、DBCC CHECKDB、DBCC チェックファイルグループ、DBCC CHECKTABLE、分散クエリ、および表形式データ ストリーム (TDS) リモート プロシージャ コール (RPC) 操作の実行中にも呼び出されます。 **検証メソッド名**の既定値は null で、検証メソッドがないことを示します。  
   
 ### <a name="example"></a>例  
- 次のコード片は、 **validatepoint**の**validationmethodname**を指定する**Point**クラスの宣言を示しています。  
+ 次のコードは、検証**ポイントの検証メソッド名**を指定する**Point** **クラスの宣言**を示しています。  
   
 ```vb  
 <Serializable(), SqlUserDefinedTypeAttribute(Format.Native, _  
@@ -337,7 +337,7 @@ private bool ValidationFunction()
 }  
 ```  
   
- 検証メソッドは任意のスコープを持つことができ、値が有効な場合は**true**を返し、それ以外の場合は**false**を返す必要があります。 メソッドが**false**を返すか、例外をスローした場合、値は無効として扱われ、エラーが発生します。  
+ 検証メソッドは任意のスコープを持つことができるので、値が有効な場合は**true**を返し、それ以外の場合は**false を**返します。 メソッドが**false を**返すか、例外をスローした場合、値は無効として扱われ、エラーが発生します。  
   
  次のコード例では、0 以上の値のみが X 座標および Y 座標として許可されます。  
   
@@ -368,10 +368,10 @@ private bool ValidatePoint()
 ### <a name="validation-method-limitations"></a>検証メソッドの制限事項  
  サーバーから検証メソッドが呼び出されるのは、サーバーで変換が実行されるときです。個別のプロパティを設定したり [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT ステートメントを使用してデータを挿入するときには呼び出されません。  
   
- すべての状況で検証メソッドを実行する場合は、プロパティセッターおよび**Parse**メソッドから明示的に検証メソッドを呼び出す必要があります。 この呼び出しは必須ではなく、場合によっては不適切な呼び出しになることもあります。  
+ 検証メソッドをすべての状況で実行する場合は、プロパティセッターと**Parse**メソッドから検証メソッドを明示的に呼び出す必要があります。 この呼び出しは必須ではなく、場合によっては不適切な呼び出しになることもあります。  
   
 ### <a name="parse-validation-example"></a>Parse による検証の例  
- **Validatepoint**メソッドが**Point**クラスで呼び出されるようにするには、 **Parse**メソッドと、X 座標と Y 座標の値を設定するプロパティプロシージャから、このメソッドを呼び出す必要があります。 次のコードフラグメントは、 **Parse**関数から**validatepoint**検証メソッドを呼び出す方法を示しています。  
+ **ValidatePoint**メソッドが**Point**クラスで呼び出されるようにするには **、Parse**メソッドと、X 座標値と Y 座標値を設定するプロパティ プロシージャから呼び出す必要があります。 次のコードは **、Parse**関数から**ValidatePoint**検証メソッドを呼び出す方法を示しています。  
   
 ```vb  
 <SqlMethod(OnNullCall:=False)> _  
@@ -417,7 +417,7 @@ public static Point Parse(SqlString s)
 ```  
   
 ### <a name="property-validation-example"></a>Property による検証の例  
- 次のコードフラグメントは、X 座標と Y 座標を設定するプロパティプロシージャから**Validatepoint**検証メソッドを呼び出す方法を示しています。  
+ 次のコードは、X 座標と Y 座標を設定するプロパティ プロシージャから**ValidatePoint**検証メソッドを呼び出す方法を示しています。  
   
 ```vb  
 Public Property X() As Int32  
@@ -491,10 +491,10 @@ public Int32 Y
 ```  
   
 ## <a name="coding-udt-methods"></a>UDT メソッドのコーディング  
- UDT メソッドをコーディングする際は、使用するアルゴリズムが時間の経過と共に変化する可能性があるかどうかを考慮します。 変化する可能性がある場合は、UDT で使用するメソッド用に独立したクラスを作成することを検討します。 アルゴリズムが変化したら、新しいコードになったクラスを再コンパイルし、UDT に影響を与えることなくそのアセンブリを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に読み込むことができます。 多くの場合、UDT は [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY ステートメントを使用して再読み込みできますが、既存のデータとの間に問題が発生する可能性があります。 たとえば、 **AdventureWorks**サンプルデータベースに含まれる**currency** UDT は、 **convertcurrency**関数を使用して、別のクラスに実装されている通貨値を変換します。 変換アルゴリズムが今後どう変化するかは予測できず、新しい機能が必要になる可能性もあります。 **Convertcurrency**関数を**Currency** UDT 実装から分離することで、将来の変更を計画するときの柔軟性が向上します。  
+ UDT メソッドをコーディングする際は、使用するアルゴリズムが時間の経過と共に変化する可能性があるかどうかを考慮します。 変化する可能性がある場合は、UDT で使用するメソッド用に独立したクラスを作成することを検討します。 アルゴリズムが変化したら、新しいコードになったクラスを再コンパイルし、UDT に影響を与えることなくそのアセンブリを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に読み込むことができます。 多くの場合、UDT は [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY ステートメントを使用して再読み込みできますが、既存のデータとの間に問題が発生する可能性があります。 たとえば **、AdventureWorks**サンプル データベースに含まれる**通貨**UDT は **、変換関数**を使用して、別のクラスに実装されている通貨値を変換します。 変換アルゴリズムが今後どう変化するかは予測できず、新しい機能が必要になる可能性もあります。 **変換関数**を**通貨**UDT 実装から分離すると、将来の変更を計画する際の柔軟性が向上します。  
   
 ### <a name="example"></a>例  
- **Point**クラスには、Distance ( **distance**、 **DistanceFrom** 、 **DistanceFromXY**) を計算するための3つの単純なメソッドが含まれています。 各は、**ポイント**から0までの距離、指定されたポイントから**ポイント**までの距離、および指定された X 座標と Y 座標から**ポイント**までの距離を計算する**double**型の値を返します。 **Distance**と**DistanceFrom**はそれぞれ**DistanceFromXY**を呼び出し、メソッドごとに異なる引数を使用する方法を示します。  
+ **ポイント**クラスには、**距離、距離****の From、** および**距離 FromXY**という 3 つの簡単な方法があります。 各関数は、**点**から 0 までの距離、指定した点から**点**までの距離、および指定した X 座標と Y 座標から点までの距離を**計算する倍精度**浮動小数点**数**を返します。 **Distance**と**Distance 各**呼び出し**から DistanceFromXY**を呼び出し、各メソッドに対して異なる引数を使用する方法を示します。  
   
 ```vb  
 ' Distance from 0 to Point.  
@@ -541,42 +541,41 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
 ```  
   
 ### <a name="using-sqlmethod-attributes"></a>SqlMethod 属性の使用  
- **SqlMethodAttribute**クラスは、決定性、null 呼び出し動作、およびメソッドがミューテーターかどうかを指定するためにメソッド定義をマークするために使用できるカスタム属性を提供します。 これらのプロパティは既定値に設定されるので、既定値以外の値を設定する場合のみカスタム属性を使用します。  
+ クラス**は**、決定論を指定したり、null 呼び出し動作を指定したり、メソッドがミューターかどうかを指定したりするために、メソッド定義をマークするために使用できるカスタム属性を提供します。 これらのプロパティは既定値に設定されるので、既定値以外の値を設定する場合のみカスタム属性を使用します。  
   
 > [!NOTE]  
->  **SqlMethodAttribute**クラスは**sqlfunctionattribute**クラスを継承するため、 **SqlMethodAttribute**は**sqlfunctionattribute**から**fillrowmethodname**フィールドと**tabledefinition**フィールドを継承します。 これは、一見テーブル値メソッドを記述できることを示していますが、この場合には該当しません。 メソッドがコンパイルされ、アセンブリが配置されますが、実行時に**IEnumerable**の戻り値の型に関するエラーが発生します。アセンブリ '\<\<assembly> ' のクラス '\<class> ' の "method、property、または field ' name> ' には、無効な戻り値の型が含まれています。"  
+>  クラス**は**クラスから継承するため、**TableDefinition****クラスは、SqlFunctionAttribute**から**フィールドを継承**します。 **SqlFunctionAttribute** **SqlFunctionAttribute** これは、一見テーブル値メソッドを記述できることを示していますが、この場合には該当しません。 メソッドがコンパイルされ、アセンブリが配置されますが、実行時に**IEnumerable**戻り値の型に関するエラーが発生し、"アセンブリ '\<\<\<アセンブリ ' アセンブリ ' アセンブリ '>' のクラス ' クラス '> ' のメソッド、プロパティ、またはフィールド ' 名前>' が無効な戻り型です。  
   
- 次の表では、UDT メソッドで使用できる関連する**SqlMethodAttribute**プロパティのいくつかについて説明し、それらの既定値を示します。  
+ 次の表では、UDT メソッドで使用できる関連する**Microsoft.SqlServer.Server.SqlMethodAttribute**プロパティの一部を説明し、既定値を一覧表示します。  
   
  DataAccess  
- 関数から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカル インスタンスに格納されているユーザー データにアクセスする必要があるかどうかを示します。 既定値は**Dataaccesskind**です。**なし**。  
+ 関数から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカル インスタンスに格納されているユーザー データにアクセスする必要があるかどうかを示します。 既定値は**データアクセスの種類です**。**なし**.  
   
  IsDeterministic  
- 入力値とデータベースの状態が同じであれば、関数から同じ値が出力されるかどうかを示します。 既定値は**false**です。  
+ 入力値とデータベースの状態が同じであれば、関数から同じ値が出力されるかどうかを示します。 既定値は **false**です。  
   
  IsMutator  
- メソッドにより UDT インスタンスの状態が変化するかどうかを示します。 既定値は**false**です。  
+ メソッドにより UDT インスタンスの状態が変化するかどうかを示します。 既定値は **false**です。  
   
  IsPrecise  
- 浮動小数点演算など、厳密な結果が算出されない計算が関数に含まれているかどうかを示します。 既定値は**false**です。  
+ 浮動小数点演算など、厳密な結果が算出されない計算が関数に含まれているかどうかを示します。 既定値は **false**です。  
   
  OnNullCall  
- 入力引数に NULL 参照が指定されたときにメソッドが呼び出されるかどうかを示します。 既定値は**true**です。  
+ 入力引数に NULL 参照が指定されたときにメソッドが呼び出されるかどうかを示します。 デフォルトは**true です**。  
   
 ### <a name="example"></a>例  
- **SqlMethodAttribute**プロパティを使用すると、UDT のインスタンスの状態の変更を許可するメソッドをマークすることが可能になります。 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] では、1 つの UPDATE ステートメントの SET 句に 2 つの UDT プロパティを設定できません。 ただし、2 つのメンバーを変更するミューテーターとしてメソッドをマークすることはできます。  
+ プロパティ**を**使用すると、UDT のインスタンスの状態を変更できるメソッドをマークできます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] では、1 つの UPDATE ステートメントの SET 句に 2 つの UDT プロパティを設定できません。 ただし、2 つのメンバーを変更するミューテーターとしてメソッドをマークすることはできます。  
   
 > [!NOTE]  
->  ミューテーター メソッドはクエリ内では使用できません。 代入ステートメントかデータ変更ステートメントでのみ、これらのメソッドを呼び出すことができます。 ミューテーターとしてマークされたメソッドが**void**を返さない場合 (または Visual Basic の**Sub**ではない場合)、CREATE TYPE はエラーで失敗します。  
+>  ミューテーター メソッドはクエリ内では使用できません。 代入ステートメントかデータ変更ステートメントでのみ、これらのメソッドを呼び出すことができます。 ミュータとしてマークされたメソッドが**void**を返さない場合 (または Visual Basic の**Sub**ではない場合)、CREATE TYPE はエラーで失敗します。  
   
- 次のステートメントは、 **Rotate**メソッドを持つ**三角形**UDT が存在することを前提としています。 次[!INCLUDE[tsql](../../includes/tsql-md.md)]の update ステートメントは、 **Rotate**メソッドを呼び出します。  
+ 次のステートメントは **、Rotate**メソッドを持つ**三角形**UDT が存在することを前提としています。 次[!INCLUDE[tsql](../../includes/tsql-md.md)]の update ステートメントは **、Rotate**メソッドを呼び出します。  
   
 ```  
 UPDATE Triangles SET t.RotateY(0.6) WHERE id=5  
 ```  
   
- **Rotate**メソッドは、 **sqlmethod**属性設定**ismutator**を**true**に設定して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]がメソッドをミューテーターメソッドとしてマークできるように装飾されています。 また、このコードでは、 **Onnullcall**を**false**に設定しています。これは、入力パラメーターのいずれかが null 参照の場合に、メソッドが null 参照 (Visual Basic では**Nothing** ) を返すことをサーバーに示すことを示します。  
+ **Rotate**メソッドは、メソッドをミュータメソッドとしてマーク[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]できるように **、IsMutator**を**true**に設定する**SqlMethod**属性で修飾されます。 また、入力パラメーターのいずれかが null 参照の場合に、メソッドが null 参照 (Visual Basic では**何も)** を返さないることをサーバーに示す**OnNullCall**を**false**に設定します。  
   
 ```vb  
 <SqlMethod(IsMutator:=True, OnNullCall:=False)> _  
@@ -599,23 +598,22 @@ public void Rotate(double anglex, double angley, double anglez)
 ```  
   
 ## <a name="implementing-a-udt-with-a-user-defined-format"></a>ユーザー定義形式による UDT の実装  
- ユーザー定義形式を使用して UDT を実装する場合は、UDT データのシリアル化と逆シリアル化を処理するために、Microsoft の SqlServer. IBinarySerialize インターフェイスを実装する**読み取り**および**書き込み**メソッドを実装する必要があります。 また、 **SqlUserDefinedTypeAttribute**の**maxbytesize**も指定する必要があります。  
+ ユーザー定義形式で UDT を実装する場合は、UDT データのシリアル化と逆シリアル化を処理するインターフェイスを実装する**読み取り**および**書き込み**メソッドを実装する必要があります。 プロパティを指定する必要**MaxByteSize****もあります。**  
   
 ### <a name="the-currency-udt"></a>Currency UDT  
- **通貨**UDT は、以降でインストール[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]できる CLR サンプルに含まれてい[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]ます。  
+ **通貨**UDT は、 で始まる CLR サンプル[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に含まれています[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。  
   
- **通貨**UDT は、特定のカルチャの通貨システムでの金額の処理をサポートします。 2つのフィールドを定義する必要があります。 **CultureInfo**の**文字列**。たとえば、通貨の発行者 (En-us など) と**CurrencyValue**の**decimal** (金額) を指定します。  
+ **通貨**UDT は、特定のカルチャの通貨システムにおける金額の処理をサポートします。 2 つのフィールドを定義する必要があります: **CultureInfo**の**文字列**は、通貨を発行したユーザー (en-us など) と**通貨値**の**10 進数**、金額の金額を指定します。  
   
- 比較を実行するためにサーバーによって使用されることはありませんが、 **Currency** UDT では、単一のメソッド**である system.icomparable を**公開する**system.icomparable**インターフェイスが実装されています。 このインターフェイスは、クライアント側でカルチャ内の通貨値を正しく比較したり並べ替えたりする場合に使用されます。  
+ サーバーで比較を実行するために使用されるわけではありませんが、**通貨**UDT は**System.IComparable**インターフェイスを**実装しています。** このインターフェイスは、クライアント側でカルチャ内の通貨値を正しく比較したり並べ替えたりする場合に使用されます。  
   
- CLR で実行されているコードでは、カルチャが通貨値とは別に比較されます。 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] コードでは、次の操作により比較結果が決まります。  
+ CLR で実行されているコードでは、カルチャが通貨値とは別に比較されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] コードでは、次の操作により比較結果が決まります。  
   
-1.  **Isbyteordered**属性を true に設定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]これにより、比較のためにディスクに保存されたバイナリ表現を使用するように指示されます。  
+1.  **IsByteOrdered**属性を true に設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]し、比較のためにディスク上の永続化バイナリ表現を使用するように指示します。  
   
-2.  **Currency** udt に対して**Write**メソッドを使用して、udt がディスクにどのように永続化されるかを判断し[!INCLUDE[tsql](../../includes/tsql-md.md)]ます。したがって、udt 値の比較と操作の順序を決定します。  
+2.  **Currency** UDT の**Write**メソッドを使用して、ディスク上で UDT がどのように永続化されているか、および操作のために UDT[!INCLUDE[tsql](../../includes/tsql-md.md)]値がどのように比較および順序付けされているかを判断します。  
   
-3.  次のバイナリ形式を使用して、**通貨**UDT を保存します。  
+3.  次のバイナリ形式を使用して**通貨**UDT を保存します。  
 
     1.  0 バイト目から 19 バイト目までは UTF-16 エンコードされた文字列としてカルチャを保存します。右側の不足バイトには NULL 文字が埋め込まれます。  
   
@@ -623,10 +621,10 @@ public void Rotate(double anglex, double angley, double anglez)
   
  NULL 文字を埋め込む目的は、カルチャと通貨値を完全に分離することです。これにより、[!INCLUDE[tsql](../../includes/tsql-md.md)] コードで UDT が比較されるとき、カルチャ バイトどうし、通貨バイト値どうしが比較されるようになります。  
   
- **通貨**UDT の完全なコードリストについては、 [SQL Server データベースエンジンサンプル](https://msftengprodsamples.codeplex.com/)で CLR サンプルをインストールする方法に関する説明に従ってください。  
+ **通貨**UDT の完全なコードリストについては、「 [SQL Server データベース エンジンのサンプル](https://msftengprodsamples.codeplex.com/)」の CLR サンプルのインストール手順に従ってください。  
   
 ### <a name="currency-attributes"></a>Currency の属性  
- **Currency** UDT は、次の属性で定義されています。  
+ **通貨**UDT は、次の属性で定義されます。  
   
 ```vb  
 <Serializable(), Microsoft.SqlServer.Server.SqlUserDefinedType( _  
@@ -648,7 +646,7 @@ Microsoft.SqlServer.Server.IBinarySerialize
 ```  
   
 ## <a name="creating-read-and-write-methods-with-ibinaryserialize"></a>IBinarySerialize を備えた Read メソッドと Write メソッドの作成  
- ユーザー設定のシリアル化形式を選択する場合は、 **Ibinaryserialize**インターフェイスを実装し、独自の**読み取り**および**書き込み****メソッドを作成**する必要もあります。 次に示す**Currency** udt からのプロシージャでは、 **BinaryReader**と system.servicemodel**ライター**を使用して、udt に対する読み取りと書き込みを行います。  
+ **ユーザー定義**のシリアル化形式を選択する場合は **、IBinarySerialize**インターフェイスを実装し、独自の**読み取り**および**書き込み**メソッドを作成する必要があります。 **通貨**UDT の次の手順では **、システム.IO.バイナリリーダー**と**システム.IO.BinaryWriter**を使用して、UDT の読み取りと書き込みを行います。  
   
 ```vb  
 ' IBinarySerialize methods  
@@ -747,7 +745,7 @@ public void Read(System.IO.BinaryReader r)
 }  
 ```  
   
- **通貨**UDT の完全なコードリストについては、「 [SQL Server データベースエンジンサンプル](https://msftengprodsamples.codeplex.com/)」を参照してください。  
+ **通貨**UDT の完全なコードリストについては、「 [SQL Server データベース エンジンのサンプル](https://msftengprodsamples.codeplex.com/)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [ユーザー定義型を作成する](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)  

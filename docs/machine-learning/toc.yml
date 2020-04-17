@@ -6,7 +6,7 @@
   expanded: true
   items:
     - name: Machine Learning Services (Python と R) とは?
-      href: ../machine-learning/what-is-sql-server-machine-learning.md
+      href: ../machine-learning/sql-server-machine-learning-services.md
     - name: R Services とは?
       href: ../machine-learning/r/sql-server-r-services.md
     - name: スタンドアロン サーバー

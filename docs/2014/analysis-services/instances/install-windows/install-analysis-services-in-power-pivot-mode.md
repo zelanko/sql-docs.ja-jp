@@ -10,12 +10,12 @@ ms.assetid: d3310562-82c1-454f-9c48-33a241749238
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0cd41c3a139a2e4be03d0204a16cb698b3d36c89
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.openlocfilehash: 95642654da9492087b3720e1b85c369131b55ed2
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "68888656"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487396"
 ---
 # <a name="powerpivot-for-sharepoint-2013-installation"></a>PowerPivot for SharePoint 2013 のインストール
   このトピックでは、SharePoint 配置モードの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーのシングル サーバー インストールの手順について説明します。 手順には、SQL Server インストール ウィザードの実行と、SharePoint 2013 サーバーの全体管理を使用する構成タスクが含まれます。  
@@ -70,7 +70,7 @@ ms.locfileid: "68888656"
 ###  <a name="sql-server-edition-requirements"></a><a name="bkmk_sqleditions"></a> SQL Server エディションの要件  
  ビジネス インテリジェンス機能は、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のすべてのエディションで利用できるわけではありません。 詳細については、「 [SQL Server 2012 のエディションでサポートされるhttps://go.microsoft.com/fwlink/?linkid=232473)機能 ( および SQL Server 2014](https://go.microsoft.com/fwlink/?linkid=232473) [のエディションとコンポーネント](../../../sql-server/editions-and-components-of-sql-server-2016.md)) 」を参照してください。  
   
- 最新のリリース ノートは[SQL Server 2012 SP1 リリース ノート](ttp://go.microsoft.com/fwlink/?LinkID=248389)(https://go.microsoft.com/fwlink/?LinkID=248389).  
+ 最新のリリース ノートは[SQL Server 2012 SP1 リリース ノート](https://go.microsoft.com/fwlink/?LinkID=248389)(https://go.microsoft.com/fwlink/?LinkID=248389).  
   
  [SQL Server 2012 リリースhttps://go.microsoft.com/fwlink/?LinkId=236893)ノート (](https://go.microsoft.com/fwlink/?LinkId=236893).  
   
@@ -189,7 +189,7 @@ ms.locfileid: "68888656"
   
 6.  **[OK]** をクリックします。  
   
-7.  変更は数分で有効になりますが、 **Excel Calculation Services** サービスを **停止** および **開始**することもできます。 終了  
+7.  変更は数分で有効になりますが、 **Excel Calculation Services** サービスを **停止** および **開始**することもできます。 ターゲット  
   
      別の方法として、管理者特権でコマンド プロンプトを開き、「 `iisreset /noforce`」と入力します。  
   

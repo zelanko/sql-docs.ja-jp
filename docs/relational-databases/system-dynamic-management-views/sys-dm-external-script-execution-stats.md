@@ -20,12 +20,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 19eaefc6fcd6615b74614893a37aa1722095e63d
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 9597b55eabb247dc4a95ed83fe04abac5067a269
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664309"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488183"
 ---
 # <a name="sysdm_external_script_execution_stats"></a>sys.dm_external_script_execution_stats
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,13 +33,13 @@ ms.locfileid: "80664309"
 外部スクリプト要求の種類ごとに 1 つの行を返します。 外部スクリプト要求は、サポートされている外部スクリプト言語でグループ化されます。 登録されている外部スクリプト関数ごとに 1 つの行が生成されます。 `rxExec`など、任意の外部スクリプト関数は、親プロセスによって送信された場合を除き、記録されません。
   
 > [!NOTE]  
-> この動的管理ビュー (DMV) は、外部スクリプトの実行をサポートする機能をインストールして有効にしている場合にのみ使用できます。 詳細については[、SQL Server 2016 の R サービスと、SQL Server 2017](../../machine-learning/r/sql-server-r-services.md) [以降の機械学習サービス (R、Python) を](../../machine-learning/what-is-sql-server-machine-learning.md)参照してください。  
+> この動的管理ビュー (DMV) は、外部スクリプトの実行をサポートする機能をインストールして有効にしている場合にのみ使用できます。 詳細については[、SQL Server 2016 の R サービスと、SQL Server 2017](../../machine-learning/r/sql-server-r-services.md) [以降の機械学習サービス (R、Python) を](../../machine-learning/sql-server-machine-learning-services.md)参照してください。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |language|**nvarchar**|登録されている外部スクリプト言語の名前です。 各外部スクリプトは、スクリプト要求で言語を指定して、関連付けられているランチャーを開始する必要があります。 |  
 |counter_name|**nvarchar**|登録されている外部スクリプト関数の名前です。 NULL 値は許可されません。|  
-|counter_value|**整数**|登録されている外部スクリプト関数がサーバーで呼び出されたインスタンスの合計数です。 この値は、機能がインスタンスにインストールされてからの累積値で、リセットすることはできません。|  
+|counter_value|**integer**|登録されている外部スクリプト関数がサーバーで呼び出されたインスタンスの合計数です。 この値は、機能がインスタンスにインストールされてからの累積値で、リセットすることはできません。|  
 
   
 ## <a name="permissions"></a>アクセス許可  

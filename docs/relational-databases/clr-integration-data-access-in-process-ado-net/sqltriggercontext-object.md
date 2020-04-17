@@ -1,5 +1,6 @@
 ---
-title: SqlTriggerContext オブジェクト |Microsoft Docs
+title: オブジェクト |マイクロソフトドキュメント
+description: SQL Server CLR 統合では、SqlTriggerContext クラスは、操作で変更されたアクションの種類や列の種類を含むトリガーのコンテキスト情報を提供します。
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 472a2d0b-64ae-4877-8f11-a5620aa698b7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 84eee9eb282dc3734ddf5c03c131b2f6583bb5e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 55e0ac850071615d9be7fb47442ed674eefab00a
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67913558"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487465"
 ---
 # <a name="sqltriggercontext-object"></a>SqlTriggerContext オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  **Sqltriggercontext**クラスは、トリガーに関するコンテキスト情報を提供します。 このコンテキスト情報には、トリガーを起動する原因となったアクションの種類、更新操作で変更された列、データ定義言語 (DDL) トリガーの場合は、トリガー操作を記述する XML **EventData**構造が含まれます。 **Sqltriggercontext**クラスの使用方法の詳細と例については、「 [CLR Triggers](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)」を参照してください。  
+  クラス**は**、トリガーに関するコンテキスト情報を提供します。 このコンテキスト情報には、トリガーを起動させたアクションの種類、UPDATE 操作で変更された列、およびデータ定義言語 (DDL) トリガーの場合は、トリガー操作を記述する XML **EventData**構造体が含まれます。 **クラスの**使用方法と使用例の詳細については、「 [CLR トリガー](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)」を参照してください。  
   
- 詳細については、.NET Framework SDK ドキュメントの「ドキュメント**コンテキスト**クラスリファレンス」を参照してください。  
+ 詳細については、.NET フレームワーク SDK**のドキュメント**のクラスリファレンス ドキュメントを参照してください。  
   
 ## <a name="see-also"></a>参照  
  [CLR トリガー](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)   

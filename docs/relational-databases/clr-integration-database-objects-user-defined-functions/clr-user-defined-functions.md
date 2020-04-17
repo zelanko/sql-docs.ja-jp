@@ -1,5 +1,6 @@
 ---
-title: CLR ユーザー定義関数 |Microsoft Docs
+title: CLR ユーザー定義関数 |マイクロソフトドキュメント
+description: SQL Server CLR 統合を使用すると、ユーザー定義のスカラー値、テーブル値、および集計関数を任意の .NET Framework プログラミング言語で作成できます。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,21 +16,20 @@ helpviewer_keywords:
 ms.assetid: 6f7491f1-9a46-4146-ae09-056248634de2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6195badbf3fc0d789e1b083ab187eebbce2414fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0da524de3a21a97daf6e3b2d2e0277631a4467c0
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68009724"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488273"
 ---
 # <a name="clr-user-defined-functions"></a>CLR ユーザー定義関数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  ユーザー定義関数は、パラメーターを受け取り、計算やその他の操作を実行し、その結果を返すことができるルーチンです。 
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] からは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET や [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# などの [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework プログラミング言語でユーザー定義関数を記述できます。  
+  ユーザー定義関数は、パラメーターを受け取り、計算やその他の操作を実行し、その結果を返すことができるルーチンです。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] からは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET や [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# などの [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework プログラミング言語でユーザー定義関数を記述できます。  
   
  関数には、1 つの値を返すスカラー関数と行セットを返すテーブル値関数の 2 種類があります。  
   
- 次の表に、このセクションの各トピックの一覧を示します。  
+ 次の表は、このセクションのトピックの一覧です。  
   
  [CLR スカラー値関数](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-scalar-valued-functions.md)  
  実装の要件とスカラー値関数の例について説明します。  

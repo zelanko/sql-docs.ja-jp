@@ -1,5 +1,6 @@
 ---
-title: Dataadapter | を使用した UDT 列の更新Microsoft Docs
+title: データアダプタを使用した UDT 列の更新 |マイクロソフトドキュメント
+description: SQL Server データベース内の UDT は、データを取得および変更するために、システム.データ.データセットとシステム.データ.SqlClient.SqlDataAdapter を使用してサポートされています。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,20 +23,19 @@ helpviewer_keywords:
 ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2154f5f81842cf8cefd5eac71f42837cbf33da31
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 08c36963088684d415534e091a2764f576a86d22
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68028379"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488227"
 ---
 # <a name="accessing-user-defined-types---updating-udt-columns-with-dataadapters"></a>ユーザー定義型へのアクセス - DataAdapter による UDT 列の更新
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  ユーザー定義型 (Udt)**は、データ**を取得および**変更するために、** system.string と system.string を使用してサポートされています。  
+  ユーザー定義型 (UDT) は、データを取得および変更するために **、システム.データ.データセット**と**システム.データ.SqlClient.SqlDataAdapter**を使用してサポートされます。  
   
 ## <a name="populating-a-dataset"></a>データセットの設定  
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントを使用して UDT 列の値を選択すれば、データ アダプターを使用してデータセットにデータを設定できます。 次の例では、次の構造といくつかのサンプルデータを使用して、 **Points**テーブルが定義されていることを前提としています。 次[!INCLUDE[tsql](../../includes/tsql-md.md)]のステートメントでは、 **Points**テーブルを作成し、いくつかの行を挿入します。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントを使用して UDT 列の値を選択すれば、データ アダプターを使用してデータセットにデータを設定できます。 次の例では、次の構造とサンプル データで定義された**Points**テーブルがあることを前提としています。 次[!INCLUDE[tsql](../../includes/tsql-md.md)]のステートメントは **、Points**テーブルを作成し、いくつかの行を挿入します。  
   
 ```  
 CREATE TABLE dbo.Points (id int PRIMARY Key, p Point);  
@@ -47,7 +47,7 @@ INSERT INTO dbo.Points VALUES (4, CONVERT(Point, '4,6'));
 GO  
 ```  
   
- 次の ADO.NET コード片では、有効な接続文字列を取得し、新しい**Sqldataadapter**を作成し、 **Points**テーブルのデータ行を使用して system.string を設定**します。**  
+ 次のADO.NETコードは、有効な接続文字列を取得し、新しい**SqlDataAdapter**を作成し、**ポイント**テーブルのデータの行を**System.Data.DataTable**に設定します。  
   
 ```vb  
 Dim da As New SqlDataAdapter( _  
@@ -64,16 +64,16 @@ da.Fill(datTable);
 ```  
   
 ## <a name="updating-udt-data-in-a-dataset"></a>データセットの UDT データの更新  
- **データセット**内の UDT 列を更新するには、次の2つの方法を使用できます。  
+ **DataSet**の UDT 列を更新するには、次の 2 つの方法を使用できます。  
   
--   **Sqldataadapter**オブジェクトのカスタムの**InsertCommand**、 **UpdateCommand** 、および**DeleteCommand**オブジェクトを提供します。  
+-   オブジェクトにカスタム**挿入コマンド**、**更新コマンド**、および**削除コマンド**オブジェクト**を**提供します。  
   
--   INSERT、UPDATE、および DELETE コマンドを自動的に作成するには、コマンドビルダー (**SqlCommandBuilder**) を使用します。 競合検出を行うには、UDT を含む[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブルに**timestamp**列 (別名**rowversion**) を追加します。 **Timestamp**データ型を使用すると、テーブル内の行のバージョンを指定することができ、データベース内で一意であることが保証されます。 テーブル内の値が変更されると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではその変更の影響を受ける行の 8 バイトのバイナリ番号が自動的に更新されます。  
+-   コマンド ビルダ (**System.Data.SqlClient.SqlCommandBuilder**) を使用して、自動的に挿入、更新、および削除コマンドを作成します。 競合を検出するには **、UDT**を含む[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブルにタイムスタンプ列 (rowversion エイリアス) を追加します。 **rowversion** **タイムスタンプ**データ型を使用すると、テーブル内の行にバージョン スタンプを付けることができ、データベース内で一意であることが保証されます。 テーブル内の値が変更されると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではその変更の影響を受ける行の 8 バイトのバイナリ番号が自動的に更新されます。  
   
- **SqlCommandBuilder**では、基になるテーブルに**timestamp**列がない限り、競合検出のために UDT が考慮されないことに注意してください。 UDT は比較できる場合も比較できない場合もあるので、コマンドの生成に "元の値の比較" オプションを使用しているときは、UDT が WHERE 句に含められません。  
+ **SqlCommandBuilder**では、基になるテーブルに**タイムスタンプ**列がない限り、競合検出の UDT は考慮されないことに注意してください。 UDT は比較できる場合も比較できない場合もあるので、コマンドの生成に "元の値の比較" オプションを使用しているときは、UDT が WHERE 句に含められません。  
   
 ### <a name="example"></a>例  
- 次の例では、 **Point** UDT 列と**timestamp**列を含む2番目のテーブルを作成する必要があります。 両方のテーブルを使用して、カスタムコマンドオブジェクトを作成し、データを更新する方法と、 **timestamp**列を使用して更新する方法を説明します。 2 つ目のテーブルを作成し、そのテーブルにサンプル データを設定するには、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行します。  
+ 次の例では、**ポイント**UDT 列と**タイムスタンプ**列を含む 2 番目のテーブルを作成する必要があります。 どちらのテーブルも、データを更新するカスタム コマンド オブジェクトを作成する方法と **、timestamp**列を使用して更新する方法を示すために使用されます。 2 つ目のテーブルを作成し、そのテーブルにサンプル データを設定するには、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行します。  
   
 ```  
 CREATE TABLE dbo.Points_ts (id int PRIMARY KEY, p Point, ts timestamp);  
@@ -86,9 +86,9 @@ INSERT INTO dbo.Points_ts (id, p) VALUES (4, CONVERT(Point, '4,6'));
   
  次の ADO.NET の例には 2 つのメソッドが含まれています。  
   
--   **UserInsertCommand Dedcommands**。 **Points**テーブル ( **timestamp**列を含まない) の**Point** UDT を更新するために、 ****、 **UpdateCommand**、および**DeleteCommand**オブジェクトを指定する方法を示しています。  
+-   **ユーザー提供コマンド**、 ポイント**テーブル**(**タイムスタンプ**列を含まない) の**ポイント**UDT を更新するための**挿入**コマンド、**更新コマンド**、**および削除コマンド**のオブジェクトを指定する方法を示します。  
   
--   **CommandBuilder**。 **timestamp**列を含む**Points_ts**テーブルで**SqlCommandBuilder**を使用する方法を示します。  
+-   タイムスタンプ**列を**含む**Points_ts**テーブルで**SqlCommandBuilder**を使用する方法を示す**コマンド ビルダ**です。  
   
 ```vb  
 Imports System  

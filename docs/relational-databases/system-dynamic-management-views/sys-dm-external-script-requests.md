@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 67e24b9c5c4ccd5f6ab2159ed5924474ff77bc84
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 70f1024f73ff955facaa2b6a2af2b9f5f4ccf247
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664280"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488201"
 ---
 # <a name="sysdm_external_script_requests"></a>sys.dm_external_script_requests
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "80664280"
   
 > [!NOTE] 
 >  
-> この動的管理ビュー (DMV) は、外部スクリプトの実行をサポートする機能をインストールして有効にしている場合にのみ使用できます。 詳細については[、SQL Server 2016 の R サービスと、SQL Server 2017](../../machine-learning/r/sql-server-r-services.md) [以降の機械学習サービス (R、Python) を](../../machine-learning/what-is-sql-server-machine-learning.md)参照してください。  
+> この動的管理ビュー (DMV) は、外部スクリプトの実行をサポートする機能をインストールして有効にしている場合にのみ使用できます。 詳細については[、SQL Server 2016 の R サービスと、SQL Server 2017](../../machine-learning/r/sql-server-r-services.md) [以降の機械学習サービス (R、Python) を](../../machine-learning/sql-server-machine-learning-services.md)参照してください。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
