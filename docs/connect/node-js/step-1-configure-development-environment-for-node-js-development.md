@@ -1,5 +1,6 @@
 ---
-title: 'ステップ 1: Node.js 開発用に開発環境を構成する | Microsoft Docs'
+title: 手順 1:Node.js 用に開発環境を構成する
+description: SQL Server 用の Node.js ドライバーを使用してアプリケーションを開発するには、前提条件を使用して開発環境を構成する必要があります。
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,26 +11,26 @@ ms.topic: conceptual
 ms.assetid: 2dad01f1-fadf-4ac9-9b4d-26be3d301886
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2ba06f87c5ff4970d3d8686e7195d57dc076cc04
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 38337772d9ec9db2503637122d0d1b616dc6ef5f
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923836"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528136"
 ---
-# <a name="step-1--configure-development-environment-for-nodejs-development"></a>ステップ 1: Node.js 開発用に開発環境を構成する
-SQL Server 用の Node.js ドライバーを使用してアプリケーションを開発するには、前提条件を使用して開発環境を構成する必要があります。  最も一般的な方法は、ノード パッケージ マネージャー (npm) を使用して面倒なモジュールをインストールすることですが、必要に応じて [Github](https://github.com/pekim/tedious) で面倒なモジュールを直接ダウンロードすることもできます。  
+# <a name="step-1--configure-development-environment-for-nodejs-development"></a>手順 1:Node.js 開発用に開発環境を構成する
+SQL Server 用の Node.js ドライバーを使用してアプリケーションを開発するには、前提条件を使用して開発環境を構成する必要があります。  最も一般的な方法は、ノード パッケージ マネージャー (npm) を使用して面倒なモジュールをインストールすることですが、必要に応じて [GitHub](https://github.com/pekim/tedious) で面倒なモジュールを直接ダウンロードすることもできます。  
   
-Node.js ドライバーでは TDS プロトコルが使用されていることに注意してください。これは SQL Server と Azure SQL Database で既定で有効になっています。  追加の構成は不要です。  
+Node.js ドライバーでは TDS プロトコルが使用されます。これは SQL Server と Azure SQL Database で既定で有効になっています。  追加の構成は不要です。  
   
 ## <a name="windows"></a>Windows  
   
-1. **Node.js ランタイムと npm パッケージ マネージャーをインストールします**  
+1. **Node.js ランタイムと npm パッケージ マネージャーをインストールします。**  
 a. [Node.js](https://nodejs.org/en/download/) にアクセスします  
 b. 適切な Windows インストーラーの msi リンクをクリックします。   
 c. ダウンロードが完了したら、msi を実行して Node.js をインストールします  
   
-2. **Cmd.exe を開きます**  
+2. **cmd.exe を開きます**  
   
 3. **プロジェクト ディレクトリを作成**し、それに移動します。    
 ```  
@@ -41,7 +42,7 @@ c. ダウンロードが完了したら、msi を実行して Node.js をイン�
 > npm init  
 ```  
   
-5. **tedious モジュールをプロジェクトにインストールします。**  これは、ドライバーが SQL Server と通信するために使用する TDS プロトコルの実装です。  
+5. **tedious モジュールをプロジェクトにインストールします。**  tedious は、SQL Server への通信に使用される TDS プロトコルの実装です。  
 ```  
 > npm install tedious  
 ```  
@@ -50,11 +51,11 @@ c. ダウンロードが完了したら、msi を実行して Node.js をイン�
   
 1.  **ターミナルを開きます**  
   
-2. **Node.js ランタイムをインストールします**  
+2. **Node.js ランタイムをインストールします。**  
 ```  
 >sudo apt-get install node  
 ```  
-3. **npm (ノード パッケージ マネージャー) をインストールします**  
+3. **npm (ノード パッケージ マネージャー) をインストールします。**  
 ```  
 > sudo apt-get install npm  
 ```  
@@ -69,17 +70,17 @@ c. ダウンロードが完了したら、msi を実行して Node.js をイン�
 > sudo npm init  
 ```  
   
-6. **tedious モジュールをプロジェクトにインストールします。**  これは、ドライバーが SQL Server と通信するために使用する TDS プロトコルの実装です。  
+6. **tedious モジュールをプロジェクトにインストールします。**  tedious は、SQL Server への通信に使用される TDS プロトコルの実装です。  
 ```  
 > sudo npm install tedious  
 ```  
   
-## <a name="mac"></a>Mac  
+## <a name="macos"></a>macOS  
   
-1. **Node.js ランタイムと npm パッケージ マネージャーをインストールします**  
+1. **Node.js ランタイムと npm パッケージ マネージャーをインストールします。**  
 a. [Node.js](https://nodejs.org/en/download/) にアクセスします  
-b. 適切な Mac OS インストーラーのリンクをクリックします。  
-c. ダウンロードが完了したら、dmg を実行して Node.js をインストールします  
+b. 適切な macOS インストーラーのリンクをクリックします。  
+c. ダウンロードが完了したら、"dmg" を実行して Node.js をインストールします  
   
 2. **ターミナルを開きます**  
   
@@ -98,4 +99,3 @@ c. ダウンロードが完了したら、dmg を実行して Node.js をイン�
 ```  
 > npm install tedious  
 ```  
-  

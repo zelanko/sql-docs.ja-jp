@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 766adecbc91f88ed0796e4214b7e4074fc564f01
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 6bc7dfadecfe24d5bd91b7dd12eaa3b68ef01753
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117085"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487701"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>PREDICT T-SQL 関数を使用したネイティブ スコアリング
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 ネイティブ スコアリングでは、[PREDICT T-SQL 関数](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)と SQL Server 2017 のネイティブ C++ 拡張機能を使用して、ほぼリアルタイムで新しいデータ入力の予測値または*スコア*を生成します。 この方法では、予測と予測のワークロードの可能な処理速度が最速になりますが、次のプラットフォームとライブラリの要件があります。RevoScaleR と revoscalepy からの関数のみが C++ を実装していることです。
 
-ネイティブ スコアリングには、既にトレーニング済みのモデルが必要です。 SQL Server 2017 の Windows または Linux、または Azure SQL Database では、Transact-SQL で PREDICT 関数を呼び出して、入力パラメーターとして指定した新しいデータに対してネイティブ スコアリングを呼び出すことができます。 PREDICT 関数は、指定されたデータ入力に対してスコアを返します。
+ネイティブ スコアリングには、既にトレーニング済みのモデルが必要です。 Windows または Linux の SQL Server 2017 では、Transact-SQL で PREDICT 関数を呼び出し、入力パラメーターとして指定した新しいデータに対して、ネイティブ スコアリングを呼び出すことができます。 PREDICT 関数は、指定されたデータ入力に対してスコアを返します。
 
 ## <a name="how-native-scoring-works"></a>ネイティブ スコアリングのしくみ
 
@@ -36,7 +36,7 @@ ms.locfileid: "81117085"
 
 ## <a name="prerequisites"></a>前提条件
 
-PREDICT は、SQL Server 2017 データベース エンジンのすべてのエディションで使用でき、既定で有効になっています。これには、Windows の SQL Server Machine Learning Services、SQL Server 2017 (Windows)、SQL Server 2017 (Linux)、または Azure SQL Database が含まれます。 R や Python をインストールしたり、追加機能を有効にしたりする必要はありません。
+PREDICT は、SQL Server 2017 以降のデータベース エンジンのすべてのエディションで使用でき、既定で有効になっています。これには、Windows の SQL Server Machine Learning Services や、Windows と Linux の SQL Server 2017 以降が含まれます。 R や Python をインストールしたり、追加機能を有効にしたりする必要はありません。
 
 + このモデルは、下記に一覧表示されているサポートされる **rx** アルゴリズムのいずれかを使用して、事前にトレーニングされる必要があります。
 

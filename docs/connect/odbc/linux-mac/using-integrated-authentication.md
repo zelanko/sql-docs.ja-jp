@@ -1,5 +1,6 @@
 ---
-title: 統合認証を使用する | Microsoft Docs
+title: 統合認証を使用する
+descrption: The Microsoft ODBC Driver for SQL Server on Linux and macOS supports connections that use Kerberos integrated authentication.
 ms.custom: ''
 ms.date: 01/20/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e938b9dc95daac7f8e5c4727e1e1185bd8dc8087
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 391d81c46640eb10a0ab2968f278412e55f57611
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921170"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81629662"
 ---
 # <a name="using-integrated-authentication"></a>統合認証を使用する
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -32,9 +33,9 @@ Linux および macOS での [!INCLUDE[msCoName](../../../includes/msconame_md.m
 Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes  
 ```
   
-DSN と接続するときに、**の DSN エントリに**Trusted_Connection=yes`odbc.ini` を追加することもできます。
+DSN と接続するときに、`odbc.ini` の DSN エントリに **Trusted_Connection=yes** を追加することもできます。
   
-統合認証を指定するには、`-E` の `sqlcmd` オプションと `-T` の `bcp` オプションを使用することもできます。詳細については、「[Connecting with **sqlcmd**](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)」 (sqlcmd との接続) と「[Connecting with **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md)」 (bcp との接続) を参照してください。
+統合認証を指定するには、`-E` の `sqlcmd` オプションと `bcp` の `-T` オプションを使用することもできます。詳細については、「[Connecting with **sqlcmd**](connecting-with-sqlcmd.md)」 (sqlcmd との接続) と「[Connecting with **bcp**](connecting-with-bcp.md)」 (bcp との接続) を参照してください。
 
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に接続するクライアント プリンシパルが、Kerberos KDC で既に認証されていることを確認します。
   
@@ -87,10 +88,10 @@ DSN と接続するときに、**の DSN エントリに**Trusted_Connection=yes
 統合認証を構成すると、資格情報がリンク サーバーに渡されます。  
   
 ## <a name="integrated-authentication-and-sqlcmd"></a>統合認証 と sqlcmd
-統合認証を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] にアクセスするには、`-E` の `sqlcmd` オプションを使用します。 `sqlcmd` を実行するアカウントが既定の Kerberos クライアント プリンシパルに関連付けられていることを確認します。
+統合認証を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] にアクセスするには、`sqlcmd` の `-E` オプションを使用します。 `sqlcmd` を実行するアカウントが既定の Kerberos クライアント プリンシパルに関連付けられていることを確認します。
 
 ## <a name="integrated-authentication-and-bcp"></a>統合認証 と bcp
-統合認証を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] にアクセスするには、`-T` の `bcp` オプションを使用します。 `bcp` を実行するアカウントが既定の Kerberos クライアント プリンシパルに関連付けられていることを確認します。 
+統合認証を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] にアクセスするには、`bcp` の `-T` オプションを使用します。 `bcp` を実行するアカウントが既定の Kerberos クライアント プリンシパルに関連付けられていることを確認します。 
   
 `-T` を `-U` または `-P` オプションとともに使用すると、エラーになります。
   
@@ -125,11 +126,11 @@ Linux または macOS コンピューターの時刻と Kerberos キー配布セ
 
 Kerberos 認証が失敗すると、Linux または macOS 上の ODBC ドライバーで NTLM 認証が使用されません。  
 
-Active Directory を使用した Linux または macOS コンピューターの認証の詳細については、「[Active Directory を使用して Linux クライアントを認証する](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048)」と「[Best Practices for Integrating OS X with Active Directory](https://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf)」 (OS X と Active Directory の統合のベストプラクティス) を参照してください。 Kerberos の構成に関する詳細については、[MIT Kerberos のドキュメント](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html)を参照してください。
+Active Directory を使用した Linux または macOS コンピューターの認証の詳細については、「[Active Directory を使用して Linux クライアントを認証する](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048)」をご覧ください。 Kerberos の構成に関する詳細については、[MIT Kerberos のドキュメント](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html)を参照してください。
 
 ## <a name="see-also"></a>参照  
-[プログラミング ガイドライン](../../../connect/odbc/linux-mac/programming-guidelines.md)
+[プログラミング ガイドライン](programming-guidelines.md)
 
-[リリース ノート](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
+[リリース ノート](release-notes-odbc-sql-server-linux-mac.md)
 
-[Azure Active Directory の使用](../../../connect/odbc/using-azure-active-directory.md)
+[Azure Active Directory の使用](../using-azure-active-directory.md)

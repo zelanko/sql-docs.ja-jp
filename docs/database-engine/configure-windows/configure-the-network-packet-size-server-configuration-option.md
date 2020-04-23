@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 236985bf-fc4a-4a57-98f7-a71ef977fd7b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: be854d2002692611289d401b4ad98cb63cf4a27b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b749231e6be3560ceadf24a51cc1f5cb880c24b3
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68731108"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81288302"
 ---
 # <a name="configure-the-network-packet-size-server-configuration-option"></a>network packet size サーバー構成オプションの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "68731108"
 -   暗号化された接続の最大ネットワーク パケット サイズは 16,383 バイトです。  
   
 > [!NOTE]  
-> MARS が有効な場合、SMUX プロバイダーによって SSL 暗号化の前に 16 バイトのヘッダーがパケットに追加され、最大ネットワーク パケット サイズは 16,368 バイトに減ります。
+> MARS が有効な場合、SMUX プロバイダーによって TLS 暗号化の前に 16 バイトのヘッダーがパケットに追加され、最大ネットワーク パケット サイズは 16,368 バイトに減ります。
    
 ###  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
   

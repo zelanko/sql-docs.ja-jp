@@ -1,5 +1,6 @@
 ---
-title: 手順 3:pymssql を使用した SQL への接続を概念実証する | Microsoft Docs
+title: 手順 3:pymssql を使用して SQL に接続する
+description: 手順 3 は概念実証であり、Python と pymssql を使用して SQL Server に接続する方法がわかります。 基本的な例で、データの選択と挿入が示されます。
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 2246ddeb-7c2f-46f3-8a91-cdd718d39b40
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ea474658e57c3f61df7eb95866ea4688c942a750
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c1c75d13e9e44632c411639385227776f54ca1a9
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80913099"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528566"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>手順 3:pymssql を使用した SQL への接続を概念実証する
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "80913099"
   
 ## <a name="step-2--execute-query"></a>手順 2:クエリの実行  
   
-[Cursor.execute](https://pypi.org/project/pymssql/) 関数は、SQL Database に対するクエリから結果セットを取得するために使用できます。 この関数は基本的に任意のクエリを受け取り、 [cursor.fetchone()](https://pypi.org/project/pymssql/)を使用して反復処理できる結果セットを返します。  
+[Cursor.execute](https://pypi.org/project/pymssql/) 関数は、SQL Database に対するクエリから結果セットを取得するために使用できます。 この関数は基本的に任意のクエリを受け取り、[cursor.fetchone()](https://pypi.org/project/pymssql/) を使用して反復処理できる結果セットを返します。  
   
   
 ```python
@@ -50,7 +51,7 @@ ms.locfileid: "80913099"
   
 ## <a name="step-3--insert-a-row"></a>手順 3:行を挿入する  
   
-この例では、[INSERT](../../../t-sql/statements/insert-transact-sql.md) ステートメントを安全に実行し、[SQL インジェクション](../../../relational-databases/tables/primary-and-foreign-key-constraints.md)の値からアプリケーションを保護するパラメーターを渡す方法を確認します。    
+この例では、[INSERT](../../../t-sql/statements/insert-transact-sql.md) ステートメントを安全に実行し、パラメーターを渡す方法について説明します。 パラメーターを値として渡すと、アプリケーションは [SQL インジェクション](../../../relational-databases/tables/primary-and-foreign-key-constraints.md)から保護されます。  
   
   
 ```python
@@ -66,7 +67,7 @@ ms.locfileid: "80913099"
     conn.close()
 ```  
   
-## <a name="step-4--rollback-a-transaction"></a>手順 4:トランザクションをロールバックする  
+## <a name="step-4-roll-back-a-transaction"></a>手順 4:トランザクションをロールバックする  
   
 このコード例は、以下のトランザクションの使用について示します。  
   

@@ -1,5 +1,6 @@
 ---
-title: 基本データ型の使用 | Microsoft Docs
+title: JDBC 基本データ型の使用
+description: Microsoft JDBC Driver for SQL Server では、SQL Server データ型を Java で認識できる形式に変換するために、JDBC 基本データ型が使用されます。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f4608bd48607244c50e7d6fd03b74919448fa074
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1ab207deaa0632e2e4026aa4950c720ba6b22d75
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924067"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81625565"
 ---
 # <a name="using-basic-data-types"></a>基本データ型の使用
 
@@ -64,41 +65,41 @@ ms.locfileid: "80924067"
 | xml                | LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0) | String<br /><br /> SQLXML    |
 | sqlvariant         | SQLVARIANT                                         | Object                       |
 | geometry           | VARBINARY                                          | byte[]                       |
-| 地理          | VARBINARY                                          | byte[]                       |
+| geography          | VARBINARY                                          | byte[]                       |
   
 (1) 時刻の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型を持つ java.sql.Time を使用する場合は、**sendTimeAsDatetime** 接続プロパティを false に設定します。  
   
-(2) **DateTimeOffset Class** で [datetimeoffset](../../connect/jdbc/reference/datetimeoffset-class.md) の値にプログラムでアクセスできます。  
+(2) [DateTimeOffset Class](reference/datetimeoffset-class.md) で **datetimeoffset** の値にプログラムでアクセスできます。  
   
-以下のセクションでは、JDBC ドライバーと基本データ型の使用方法の例を示します。 Java アプリケーションの基本データ型の使用方法の詳細例については、「[基本データ型のサンプル](../../connect/jdbc/basic-data-types-sample.md)」をご覧ください。  
+以下のセクションでは、JDBC ドライバーと基本データ型の使用方法の例を示します。 Java アプリケーションの基本データ型の使用方法の詳細例については、「[基本データ型のサンプル](basic-data-types-sample.md)」をご覧ください。  
   
 ## <a name="retrieving-data-as-a-string"></a>文字列としてのデータの取得
 
-文字列として参照するために JDBC 基本データ型にマップされるデータ ソースからデータを取得する必要がある場合、または厳密に型指定されたデータを必要としない場合は、次のように [SQLServerResultSet](../../connect/jdbc/reference/getstring-method-sqlserverresultset.md) クラスの [getString](../../connect/jdbc/reference/sqlserverresultset-class.md) メソッドを使用できます。  
+文字列として参照するために JDBC 基本データ型にマップされるデータ ソースからデータを取得する必要がある場合、または厳密に型指定されたデータを必要としない場合は、次のように [SQLServerResultSet](reference/sqlserverresultset-class.md) クラスの [getString](reference/getstring-method-sqlserverresultset.md) メソッドを使用できます。  
   
-[!code[JDBC#UsingBasicDataTypes1](../../connect/jdbc/codesnippet/Java/using-basic-data-types_1.java)]  
+[!code[JDBC#UsingBasicDataTypes1](codesnippet/Java/using-basic-data-types_1.java)]  
   
 ## <a name="retrieving-data-by-data-type"></a>データ型によるデータの取得
 
 データ ソースからデータを取得する必要があり、取得するデータの型がわかっている場合は、SQLServerResultSet クラスのいずれかの get\<Type> メソッドを使用します。これらは、"*getter メソッド*" とも呼ばれます。 get\<Type> メソッドでは、次のように列名または列インデックスを使用できます。  
   
-[!code[JDBC#UsingBasicDataTypes2](../../connect/jdbc/codesnippet/Java/using-basic-data-types_2.java)]  
+[!code[JDBC#UsingBasicDataTypes2](codesnippet/Java/using-basic-data-types_2.java)]  
   
 > [!NOTE]  
 > getUnicodeStream メソッドおよび小数点以下桁数付きの getBigDecimal メソッドは、JDBC ドライバーでは非推奨とされているため、サポートされていません。
 
 ## <a name="updating-data-by-data-type"></a>データ型によるデータの更新
 
-データ ソースのフィールドの値を更新する必要がある場合は、SQLServerResultSet クラスのいずれかの update\<Type> メソッドを使用します。 次の例では、[updateInt](../../connect/jdbc/reference/updateint-method-sqlserverresultset.md) メソッドを [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) メソッドと組み合わせて使用し、データ ソース内のデータを更新します。  
+データ ソースのフィールドの値を更新する必要がある場合は、SQLServerResultSet クラスのいずれかの update\<Type> メソッドを使用します。 次の例では、[updateInt](reference/updateint-method-sqlserverresultset.md) メソッドを [updateRow](reference/updaterow-method-sqlserverresultset.md) メソッドと組み合わせて使用し、データ ソース内のデータを更新します。  
   
-[!code[JDBC#UsingBasicDataTypes3](../../connect/jdbc/codesnippet/Java/using-basic-data-types_3.java)]  
+[!code[JDBC#UsingBasicDataTypes3](codesnippet/Java/using-basic-data-types_3.java)]  
   
 > [!NOTE]  
 > JDBC ドライバーは、127 文字を超える列名の SQL Server の列を更新できません。 列名が 127 文字を超える列を更新しようとすると、例外がスローされます。  
   
 ## <a name="updating-data-by-parameterized-query"></a>パラメーター化クエリによるデータの更新
 
-パラメーター化クエリを使用してデータ ソースのデータを更新する必要がある場合は、\<SQLServerPreparedStatement[ クラスのいずれかの set](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)Type> メソッドを使用して、パラメーターのデータ型を設定できます。これらは、"*setter メソッド*" とも呼ばれます。 次の例では、[prepareStatement](../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md) メソッドを使用して、パラメーター化クエリをプリコンパイルし、[setString](../../connect/jdbc/reference/setstring-method-sqlserverpreparedstatement.md) メソッドを使用してパラメーターの文字列値を設定してから、[executeUpdate](../../connect/jdbc/reference/executeupdate-method.md) メソッドを呼び出します。  
+パラメーター化クエリを使用してデータ ソースのデータを更新する必要がある場合は、[SQLServerPreparedStatement](reference/sqlserverpreparedstatement-class.md) クラスのいずれかの set\<Type> メソッドを使用して、パラメーターのデータ型を設定できます。これらは、"*setter メソッド*" とも呼ばれます。 次の例では、[prepareStatement](reference/preparestatement-method-sqlserverconnection.md) メソッドを使用して、パラメーター化クエリをプリコンパイルし、[setString](reference/setstring-method-sqlserverpreparedstatement.md) メソッドを使用してパラメーターの文字列値を設定してから、[executeUpdate](reference/executeupdate-method.md) メソッドを呼び出します。  
   
 [!code[JDBC#UsingBasicDataTypes4](../../connect/jdbc/codesnippet/Java/using-basic-data-types_4.java)]  
   
@@ -106,7 +107,7 @@ ms.locfileid: "80924067"
 
 ## <a name="passing-parameters-to-a-stored-procedure"></a>ストアド プロシージャにパラメーターを渡す
 
-入力されたパラメーターをストアド プロシージャに渡す必要がある場合は、\<SQLServerCallableStatement[ クラスのいずれかの set](../../connect/jdbc/reference/sqlservercallablestatement-class.md)Type> メソッドを使用して、インデックスまたは名前でパラメーターを設定できます。 次の例では、[prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) メソッドを使用してストアド プロシージャへの呼び出しを設定し、[setString](../../connect/jdbc/reference/setstring-method-sqlservercallablestatement.md) メソッドを使用して呼び出し用のパラメーターを設定してから、[executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) メソッドを呼び出します。  
+入力されたパラメーターをストアド プロシージャに渡す必要がある場合は、[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) クラスのいずれかの set\<Type> メソッドを使用して、インデックスまたは名前でパラメーターを設定できます。 次の例では、[prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) メソッドを使用してストアド プロシージャへの呼び出しを設定し、[setString](../../connect/jdbc/reference/setstring-method-sqlservercallablestatement.md) メソッドを使用して呼び出し用のパラメーターを設定してから、[executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) メソッドを呼び出します。  
   
 [!code[JDBC#UsingBasicDataTypes5](../../connect/jdbc/codesnippet/Java/using-basic-data-types_5.java)]  
   
@@ -126,6 +127,6 @@ JDBC ドライバーでストアド プロシージャと入力パラメータ�
   
 JDBC ドライバーでストアド プロシージャと出力パラメーターを使用する方法の詳細については、「[出力パラメーターがあるストアド プロシージャの使用](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md)」を参照してください。  
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [JDBC ドライバーのデータ型について](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

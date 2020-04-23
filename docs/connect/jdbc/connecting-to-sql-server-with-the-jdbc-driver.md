@@ -1,5 +1,6 @@
 ---
 title: JDBC ドライバーによる SQL Server への接続 | Microsoft Docs
+description: Microsoft JDBC Driver for SQL Server を使用してデータベースに接続すると、データベースとのすべてのやり取りは、SQLServerConnection オブジェクトを通して行われます。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 94bcfbe3-f00e-4774-bda8-bb7577518fec
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3ab487442feb91ce49698d554168cd36bf2c7a16
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1089960af020e648586f59914ccc91e99bf0b9af
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922472"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487966"
 ---
 # <a name="connecting-to-sql-server-with-the-jdbc-driver"></a>JDBC ドライバーによる SQL Server への接続
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -44,7 +45,7 @@ System.setProperty("java.net.preferIPv6Addresses", "true");
 |[Kerberos 統合認証による SQL Server への接続](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)|Kerberos 統合認証を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに接続するアプリケーションの Java 実装について説明します。|  
 |[Azure SQL Database への接続](../../connect/jdbc/connecting-to-an-azure-sql-database.md)|SQL Azure 上のデータベースに対する接続の問題について説明します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [JDBC ドライバーの概要](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

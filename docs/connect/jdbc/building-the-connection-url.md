@@ -1,5 +1,6 @@
 ---
 title: 接続 URL の構築 | Microsoft Docs
+description: Microsoft JDBC Driver for SQL Server によって使用される接続文字列の形式について説明します。
 ms.custom: ''
 ms.date: 01/29/2020
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 889571da70eaf43878d4226751b2b031853f802f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 59949c80c565cca03c42b453659117abd69c8e7e
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922627"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486928"
 ---
 # <a name="building-the-connection-url"></a>接続 URL の構築
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "80922627"
 > [!NOTE]  
 >  前の例では接続文字列でユーザー名とパスワードを使用していますが、より安全な統合セキュリティを使用する必要があります。 詳細については、後の「[Windows 上で統合認証を使用する接続](#Connectingintegrated)」セクションを参照してください。  
   
- 次の接続文字列は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされている任意のオペレーティング システム上で実行中のアプリケーションから統合認証および Kerberos を使用して [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] データベースに接続する方法の例を示しています。  
+ 次の接続文字列は、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] でサポートされている任意のオペレーティング システム上で実行中のアプリケーションから統合認証および Kerberos を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに接続する方法の例を示しています。  
   
 ```java
 jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationScheme=JavaKerberos  
@@ -122,7 +123,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  `Connection con = DriverManager.getConnection("jdbc:sqlserver://;integratedSecurity=true;", pro);`  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [JDBC ドライバーによる SQL Server への接続](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   
   

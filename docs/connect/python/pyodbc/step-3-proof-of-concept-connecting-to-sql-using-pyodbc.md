@@ -1,5 +1,6 @@
 ---
-title: 'ステップ 3: pyodbc を使用した SQL への接続を概念実証する | Microsoft Docs'
+title: 手順 3:pyodbc を使用して SQL に接続する
+description: 手順 3 は概念実証であり、Python と pyODBC を使用して SQL Server に接続する方法がわかります。 基本的な例で、データの選択と挿入が示されます。
 ms.custom: ''
 ms.date: 03/01/2020
 ms.prod: sql
@@ -10,14 +11,14 @@ ms.topic: conceptual
 ms.assetid: 4bfd6e52-817d-4f0a-a33d-11466e3f0484
 author: arob98
 ms.author: angrobe
-ms.openlocfilehash: c5d8adfa33541402fb50017c3790d38f0396d73d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 971f89f9748ab8f31c234f872e817b0b474dcbe0
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78256902"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528476"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>ステップ 3: pyodbc を使用した SQL への接続を概念実証する
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>手順 3:pyodbc を使用した SQL への接続を概念実証する
 
 この例は、概念実証です。 わかりやすさのためにサンプル コードは簡略化されており、Microsoft が推奨するベスト プラクティスを表しているとは限りません。  
 

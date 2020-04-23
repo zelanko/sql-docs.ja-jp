@@ -10,12 +10,12 @@ ms.metadata: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 70cdc7e9738abdde2dfaf479320b11a94469f661
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 604292d548d9368439b810fa4dfebf2d4388929e
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244080"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634948"
 ---
 # <a name="submit-spark-jobs-on-big-data-clusters-2019-in-intellij"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]上の IntelliJ で Spark ジョブを送信する
 
@@ -33,9 +33,9 @@ ms.locfileid: "75244080"
 ## <a name="link-sql-server-big-data-cluster"></a>SQL Server ビッグ データ クラスターのリンク
 1. IntelliJ IDEA ツールを開きます。
 
-2. 自己署名証明書を使用している場合は、 **[Tools]\(ツール\)** メニューの SSL 証明書の検証を無効にし、 **[Azure]** 、 **[Validate Spark Cluster SSL Certificate]\(Spark クラスター SSL 証明書の検証\)** 、 **[Disable]\(無効にする\)** の順に選択して SSL 証明書の検証を無効にします。
+2. 自己署名証明書を使用している場合は、 **[Tools]\(ツール\)** メニューから、 **[Azure]** 、 **[Validate Spark Cluster SSL Certificate]\(Spark クラスター SSL 証明書の検証\)** 、 **[Disable]\(無効にする\)** の順に選択して TLS/SSL 証明書の検証を無効にします。
 
-    ![SQL Server ビッグ データ クラスターのリンク - SSL を無効にする](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
+    ![SQL Server ビッグ データ クラスターのリンク - TLS/SSL を無効にする](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
 
 3. **[View]\(表示\)** メニューから Azure エクスプローラーを開き、 **[Tool Windows]\(ツール ウィンドウ\)** 、 **[Azure Explorer]\(Azure エクスプローラー\)** の順に選択します。
 4. **[SQL Server big data cluster]\(SQL Server ビッグ データ クラスター\)** を右クリックし、 **[Link SQL Server big data cluster]\(SQL Server ビッグ データ クラスターのリンク\)** を選択します。 **[Server]\(サーバー\)** 、 **[User Name]\(ユーザー名\)** 、および **[Password]\(パスワード\)** を入力し、 **[OK]** をクリックします。

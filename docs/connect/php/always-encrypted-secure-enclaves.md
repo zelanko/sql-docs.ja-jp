@@ -1,5 +1,6 @@
 ---
-title: セキュリティで保護されたエンクレーブが設定された Always Encrypted と SQL Server 用 PHP ドライバーの併用 | Microsoft Docs.
+title: PHP Drivers でのセキュア エンクレーブが設定された Always Encrypted
+description: Microsoft Drivers for PHP for SQL Server でセキュア エンクレーブが設定された Always Encrypted を使用する方法について説明します。
 ms.date: 01/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
@@ -7,15 +8,14 @@ ms.custom: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: ''
-ms.author: v-dapugl
-author: david-puglielli
-manager: v-mabarw
-ms.openlocfilehash: 796a77f3be0e1d15609f91ee1c36c2769a541cc5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.author: v-daenge
+author: David-Engel
+ms.openlocfilehash: f407cae7fe7d53a7522e64f0bb26961ebeb4276f
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76941085"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632092"
 ---
 # <a name="using-always-encrypted-with-secure-enclaves-with-the-php-drivers-for-sql-server"></a>セキュリティで保護されたエンクレーブが設定された Always Encrypted を SQL Server 用 PHP ドライバーと共に使用する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "76941085"
 
 ## <a name="enabling-always-encrypted-with-secure-enclaves"></a>セキュリティで保護されたエンクレーブが設定された Always Encrypted を有効にする
 
-セキュリティで保護されたエンクレーブが設定された Always Encrypted のサポートは、SQL Server 用 PHP ドライバー 5.8.0 以降で利用可能です。 セキュリティで保護されたエンクレーブが設定された Always Encrypted では、SQL Server 2019 以降と ODBC ドライバーのバージョン 17.4 以降が必要になります。 SQL Server 用 PHP ドライバーを利用する Always Encrypted の一般的な要件の詳細については、[こちら](../../connect/php/using-always-encrypted-php-drivers.md)で確認できます。
+セキュリティで保護されたエンクレーブが設定された Always Encrypted のサポートは、SQL Server 用 PHP ドライバー 5.8.0 以降で利用可能です。 セキュリティで保護されたエンクレーブが設定された Always Encrypted では、SQL Server 2019 以降と ODBC ドライバーのバージョン 17.4 以降が必要になります。 SQL Server 用 PHP ドライバーを利用する Always Encrypted の一般的な要件の詳細については、[こちら](using-always-encrypted-php-drivers.md)で確認できます。
 
 セキュリティで保護されたエンクレーブが設定された Always Encrypted では、エンクレーブを証明する (つまり、外部の構成証明サービスに対してエンクレーブの検証を行う) ことによって、暗号化されたデータのセキュリティが保証されます。 セキュリティ保護されたエンクレーブを使用するには、`ColumnEncryption` キーワードでは、コンマで区切られた状態で、関連する構成証明データと共に構成証明の種類とプロトコルが識別される必要があります。 ODBC ドライバーのバージョン 17.4 では、エンクレーブの種類とプロトコルに対して、仮想化ベースのセキュリティ (VBS) とホスト ガーディアン サービス (HGS) プロトコルのみがサポートされます。 関連付けられている構成証明データは、構成証明サーバーの URL です。 このため、接続文字列には以下が追加されます。
 
@@ -46,9 +46,9 @@ ColumnEncryption=VBS-HGS,http://attestationserver.mydomain/Attestation
 
 - `ALTER TABLE` を使用してテーブルを暗号化する場合、`ALTER TABLE` の呼び出しごとに 1 つの列しか暗号化できないため、複数の列を暗号化するには複数回の呼び出しが必要になります。
 - char 型と nchar 型を比較する場合にパラメーターとして比較のしきい値を渡すときは、対応する `SQLSRV_SQLTYPE_*` 内に列幅を指定する必要があります。そうしないと、エラー `HY104`、`Invalid precision value` が返されます。
-- パターン マッチングでは、`Latin1_General_BIN2` 句を使用して、照合順序が `COLLATE` として指定される必要があります。
-- char 型と nchar 型では文字列の末尾が空白で埋められるので、char 型と nchar 型を照合するためにパターン マッチングの文字列をパラメーターとして渡すときは、`SQLSRV_SQLTYPE_*` または `sqlsrv_query` に渡される `sqlsrv_prepare` には、列のサイズではなく、照合される文字列の長さを指定する必要があります。 たとえば、文字列 `%abc%` を char(10) 列に対して照合する場合は、`SQLSRV_SQLTYPE_CHAR(5)` を指定します。 代わりに `SQLSRV_SQLTYPE_CHAR(10)` を指定すると、クエリでは `%abc%     ` (5 つのスペースが追加されている状態) と照合して、5 個未満のスペースが追加されている列のデータはすべて、一致しなくなります (つまり、`abcdef` には 4つのスペースが埋め込まれているため、`%abc%` とは一致しません)。 Unicode 文字列の場合は、`mb_strlen` 関数または `iconv_strlen` 関数を使用して、文字数を取得します。
-- PDO インターフェイスでは、パラメーターの長さを指定することはできません。 代わりに、`null` に長さ 0 または `PDOStatement::bindParam` を指定します。 長さに明示的に別の数値が設定されている場合、パラメーターは出力パラメーターとして処理されます。
+- パターン マッチングでは、`COLLATE` 句を使用して、照合順序が `Latin1_General_BIN2` として指定される必要があります。
+- char 型と nchar 型では文字列の末尾が空白で埋められるので、char 型と nchar 型を照合するためにパターン マッチングの文字列をパラメーターとして渡すときは、`sqlsrv_query` または `sqlsrv_prepare` に渡される `SQLSRV_SQLTYPE_*` には、列のサイズではなく、照合される文字列の長さを指定する必要があります。 たとえば、文字列 `%abc%` を char(10) 列に対して照合する場合は、`SQLSRV_SQLTYPE_CHAR(5)` を指定します。 代わりに `SQLSRV_SQLTYPE_CHAR(10)` を指定すると、クエリでは `%abc%     ` (5 つのスペースが追加されている状態) と照合して、5 個未満のスペースが追加されている列のデータはすべて、一致しなくなります (つまり、`abcdef` には 4つのスペースが埋め込まれているため、`%abc%` とは一致しません)。 Unicode 文字列の場合は、`mb_strlen` 関数または `iconv_strlen` 関数を使用して、文字数を取得します。
+- PDO インターフェイスでは、パラメーターの長さを指定することはできません。 代わりに、`PDOStatement::bindParam` に長さ 0 または `null` を指定します。 長さに明示的に別の数値が設定されている場合、パラメーターは出力パラメーターとして処理されます。
 - Always Encrypted での文字列以外の型に対しては、パターン マッチングは機能しません。
 - わかりやすくするために、エラー チェックは除外されています。 
 
@@ -391,8 +391,8 @@ zyxwv
 㛜ꆶ㕸㔈♠既ꁺꖁ㓫ޘ갧ᛄ
 ```
 ## <a name="see-also"></a>参照  
-[プログラミング ガイド](../../connect/php/programming-guide-for-php-sql-driver.md)  
-[SQLSRV ドライバー API リファレンス](../../connect/php/sqlsrv-driver-api-reference.md)  
-[PDO_SQLSRV ドライバー API リファレンス](../../connect/php/pdo-sqlsrv-driver-reference.md)  
-[SQL Server 用 PHP ドライバーと共に Always Encrypted を使用する | Microsoft Docs](../../connect/php/using-always-encrypted-php-drivers.md)
+[プログラミング ガイド](programming-guide-for-php-sql-driver.md)  
+[SQLSRV ドライバー API リファレンス](sqlsrv-driver-api-reference.md)  
+[PDO_SQLSRV ドライバー API リファレンス](pdo-sqlsrv-driver-reference.md)  
+[SQL Server 用 PHP ドライバーと共に Always Encrypted を使用する](using-always-encrypted-php-drivers.md)
   

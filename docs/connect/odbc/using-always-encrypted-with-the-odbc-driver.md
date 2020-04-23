@@ -1,5 +1,6 @@
 ---
-title: SQL Server 用 ODBC ドライバーと共に Always Encrypted を使用する | Microsoft Docs
+title: ODBC ドライバーで Always Encrypted を使用する
+description: Always Encrypted と Microsoft ODBC Driver for SQL Server を使用して ODBC アプリケーションを開発する方法について説明します。
 ms.custom: ''
 ms.date: 09/01/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: 637198e079c6aa1b1e08e1a69e204b36f54f3827
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d47e0d0f874689ca81a5153de08cb3e81fff22fc
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79285846"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635420"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server 用 ODBC ドライバーと共に Always Encrypted を使用する
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "79285846"
 
 ### <a name="introduction"></a>はじめに
 
-この記事では、[Always Encrypted (データベース エンジン)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) または[セキュリティで保護されたエンクレーブが設定された Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md) と [ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md) を使用して ODBC アプリケーションを開発する方法について説明します。
+この記事では、[Always Encrypted (データベース エンジン)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) または[セキュリティで保護されたエンクレーブが設定された Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md) と [ODBC Driver for SQL Server](microsoft-odbc-driver-for-sql-server.md) を使用して ODBC アプリケーションを開発する方法について説明します。
 
 Always Encrypted を使用すると、クライアント アプリケーションは SQL Server または Azure SQL データベースにデータまたは暗号化キーを開示することなく、機密データを暗号化することができます。 ODBC Driver for SQL Server など、Always Encrypted が有効なドライバーは、クライアント アプリケーション内の機密データを透過的に暗号化および暗号化解除することで、この処理を実行します。 ドライバーは、どのクエリ パラメーターが機密データベース列 (Always Encrypted を使用して保護される) に対応するかを自動的に決定し、SQL Server または Azure SQL データベースにデータを渡す前にこれらのパラメーターの値を暗号化します。 同様に、ドライバーは、クエリ結果内の暗号化されたデータベース列から取得されたデータを透過的に暗号化解除します。 "*セキュリティで保護されたエンクレーブが設定された*" Always Encrypted では、この機能を拡張して、データの機密性を保ちながら機密データに対してより豊富な機能を使えるようになります。
 
@@ -60,7 +61,7 @@ Always Encrypted は、DSN 構成内で同じキーと値 (接続文字列設定
 ### <a name="enabling-always-encrypted-with-secure-enclaves"></a>セキュリティで保護されたエンクレーブが設定された Always Encrypted を有効にする
 
 > [!NOTE]
-> Linux および Mac 上でセキュリティで保護されたエンクレーブが設定された Always Encrypted を使用するには、OpenSSL バージョン 1.0.1 以降が必要です。
+> Linux および macOS 上でセキュア エンクレーブが設定された Always Encrypted を使用するには、OpenSSL バージョン 1.0.1 以降が必要です。
 
 バージョン 17.4 以降のドライバーでは、セキュリティで保護されたエンクレーブが設定された Always Encrypted がサポートされています。 SQL Server 2019 以降への接続時にエンクレーブの使用を有効にするには、`ColumnEncryption` DSN、接続文字列、または接続属性を、エンクレーブの種類と構成証明プロトコルの名前、および関連する構成証明書のデータに設定します。 バージョン 17.4 では、[仮想化ベースのセキュリティ](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) エンクレーブの種類と[ホスト ガーディアン サービス](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server)構成証明プロトコル (`VBS-HGS` で示されます) のみがサポートされます。これを使用するには、次の例のように構成認証サーバーの URL を指定します。
 
@@ -431,16 +432,16 @@ DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATA
 CMK ストレージで AKV を使用する場合、ODBC アプリケーションに他の変更を加える必要はありません。
 
 > [!NOTE]
-> ドライバーには、それが信頼する AKV エンドポイントの一覧が含まれています。 ドライバー バージョン 17.5.2 以降では、この一覧を構成できます。ドライバー内の `AKVTrustedEndpoints` プロパティ、DSN の ODBCINST.INI または ODBC.INI レジストリ キー (Windows)、`odbcinst.ini` または `odbc.ini` ファイル セクション (Linux/Mac) をセミコロン区切りの一覧に設定します。 DSN 内でそれを設定すると、ドライバー内の設定よりも優先されます。 値がセミコロンで始まる場合、既定のリストが拡張されます。それ以外の場合は、既定のリストが置き換えられます。 既定の一覧 (17.5 現在) は `vault.azure.net;vault.azure.cn;vault.usgovcloudapi.net;vault.microsoftazure.de` となります。
+> ドライバーには、それが信頼する AKV エンドポイントの一覧が含まれています。 ドライバー バージョン 17.5.2 以降では、この一覧を構成できます。ドライバー内の `AKVTrustedEndpoints` プロパティ、DSN の ODBCINST.INI または ODBC.INI レジストリ キー (Windows)、あるいは `odbcinst.ini` または `odbc.ini` ファイル セクション (Linux/macOS) を、セミコロン区切りの一覧に設定します。 DSN 内でそれを設定すると、ドライバー内の設定よりも優先されます。 値がセミコロンで始まる場合、既定のリストが拡張されます。それ以外の場合は、既定のリストが置き換えられます。 既定の一覧 (17.5 現在) は `vault.azure.net;vault.azure.cn;vault.usgovcloudapi.net;vault.microsoftazure.de` となります。
 
 
 ### <a name="using-the-windows-certificate-store-provider"></a>Windows 証明書ストア プロバイダーの使用
 
-Windows 用の ODBC Driver for SQL Server には、`MSSQL_CERTIFICATE_STORE` と呼ばれる Windows 証明書ストア用の組み込みの列マスター キー ストア プロバイダーが含まれています (このプロバイダーは macOS または Linux では使用できません)。このプロバイダーを使用すると、CMK はクライアント コンピューター上にローカルに格納され、ドライバーでそれを使用するためにアプリケーションで追加の構成を行う必要はありません。 ただし、アプリケーションには、ストア内の証明書とその秘密キーへのアクセス権が必要です。 詳しくは、「[列マスター キーを作成して保存する (Always Encrypted)](https://docs.microsoft.com/sql/relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted)」をご覧ください。
+Windows 用の ODBC Driver for SQL Server には、`MSSQL_CERTIFICATE_STORE` と呼ばれる Windows 証明書ストア用の組み込みの列マスター キー ストア プロバイダーが含まれています (このプロバイダーは macOS または Linux では使用できません)。このプロバイダーを使用すると、CMK はクライアント コンピューター上にローカルに格納され、ドライバーでそれを使用するためにアプリケーションで追加の構成を行う必要はありません。 ただし、アプリケーションには、ストア内の証明書とその秘密キーへのアクセス権が必要です。 詳しくは、「[列マスター キーを作成して保存する (Always Encrypted)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)」をご覧ください。
 
 ### <a name="using-custom-keystore-providers"></a>カスタム キーストア プロバイダーの使用
 
-ODBC Driver for SQL Server では、CEKeystoreProvider インターフェイスを使用したカスタムのサードパーティ製キーストア プロバイダーもサポートされています。 これにより、ドライバーが暗号化された列にアクセスする場合にキーストア プロバイダーを使用できるように、アプリケーションでキーストア プロバイダーの読み込み、クエリ、および構成を行うことができます。 アプリケーションはまた、SQL Server に格納するための CEK を暗号化し、ODBC で暗号化された列にアクセスする以外のタスクを実行するために、キーストア プロバイダーと直接やりとりする場合もあります。詳細については、「[カスタム キーストア プロバイダー](../../connect/odbc/custom-keystore-providers.md)」を参照してください。
+ODBC Driver for SQL Server では、CEKeystoreProvider インターフェイスを使用したカスタムのサードパーティ製キーストア プロバイダーもサポートされています。 これにより、ドライバーが暗号化された列にアクセスする場合にキーストア プロバイダーを使用できるように、アプリケーションでキーストア プロバイダーの読み込み、クエリ、および構成を行うことができます。 アプリケーションはまた、SQL Server に格納するための CEK を暗号化し、ODBC で暗号化された列にアクセスする以外のタスクを実行するために、キーストア プロバイダーと直接やりとりする場合もあります。詳細については、「[カスタム キーストア プロバイダー](custom-keystore-providers.md)」を参照してください。
 
 カスタム キーストア プロバイダーとのやりとりには、2 つの接続属性が使用されます。 これらは次のとおりです。
 
@@ -543,7 +544,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 エラーに関する追加の詳細情報は、[SQLGetDiacRec](https://msdn.microsoft.com/library/ms710921(v=vs.85).aspx) を介して取得できます。
 
 > [!NOTE]
-> プロバイダーでは必要に応じて接続ハンドルを使用して、書き込まれたデータを特定の接続に関連付けることができます。 これは、接続ごとの構成を実装する場合に役立ちます。 また、データを送信するのに使用した接続に関係なく、接続コンテキストが無視され、データが同じように扱われる場合もあります。 詳細については、「[コンテキストの関連付け](../../connect/odbc/custom-keystore-providers.md#context-association)」を参照してください。
+> プロバイダーでは必要に応じて接続ハンドルを使用して、書き込まれたデータを特定の接続に関連付けることができます。 これは、接続ごとの構成を実装する場合に役立ちます。 また、データを送信するのに使用した接続に関係なく、接続コンテキストが無視され、データが同じように扱われる場合もあります。 詳細については、「[コンテキストの関連付け](custom-keystore-providers.md#context-association)」を参照してください。
 
 #### <a name="reading-data-from-a-provider"></a>プロバイダーからのデータの読み取り
 
@@ -565,7 +566,7 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 このインターフェイスでは、アプリケーションとキーストア プロバイダーの間で転送されるデータの形式に対して追加の要件は設定されていません。 各プロバイダーでは、必要に応じて独自のプロトコル/データ フォーマットを定義できます。
 
-独自のキーストア プロバイダーを実装する例については、「[カスタム キーストア プロバイダー](../../connect/odbc/custom-keystore-providers.md)」を参照してください。
+独自のキーストア プロバイダーを実装する例については、「[カスタム キーストア プロバイダー](custom-keystore-providers.md)」を参照してください。
 
 ## <a name="limitations-of-the-odbc-driver-when-using-always-encrypted"></a>Always Encrypted を使用するときの ODBC ドライバーの制限事項
 

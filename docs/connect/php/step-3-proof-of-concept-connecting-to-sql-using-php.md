@@ -1,5 +1,6 @@
 ---
-title: 手順 3:PHP を使用した SQL への接続を概念実証する | Microsoft Docs
+title: 手順 3:PHP を使用して SQL に接続する
+description: 手順 3 は概念実証であり、PHP を使用して SQL Server に接続する方法がわかります。 基本的な例で、データの選択と挿入が示されます。
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b88a71d1800b13b4d8fd867715cc3690eee4fc43
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 69c8b1ec58dbb40ab6e4463d343720e02e583ac8
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926853"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528586"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>手順 3:PHP を使用した SQL への接続を概念実証する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -79,8 +80,7 @@ ms.locfileid: "80926853"
   
 ## <a name="step-3--insert-a-row"></a>手順 3:行を挿入する  
   
-この例では、[INSERT](../../t-sql/statements/insert-transact-sql.md) ステートメントを安全に実行し、[SQL インジェクション](../../relational-databases/tables/primary-and-foreign-key-constraints.md)の値からアプリケーションを保護するパラメーターを渡す方法を確認します。    
-  
+この例では、[INSERT](../../t-sql/statements/insert-transact-sql.md) ステートメントを安全に実行し、パラメーターを渡す方法について説明します。 パラメーター値により、アプリケーションは [SQL インジェクション](../../relational-databases/tables/primary-and-foreign-key-constraints.md)から保護されます。
   
 ```php 
     function InsertData()  
@@ -109,7 +109,7 @@ ms.locfileid: "80926853"
     }  
 ```  
   
-## <a name="step-4--rollback-a-transaction"></a>手順 4:トランザクションをロールバックする  
+## <a name="step-4--roll-back-a-transaction"></a>手順 4:トランザクションをロールバックする  
   
   
 このコード例は、以下のトランザクションの使用について示します。  

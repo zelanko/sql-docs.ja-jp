@@ -1,5 +1,6 @@
 ---
-title: '例 : ID ディレクティブと IDREFS ディレクティブの指定 | Microsoft Docs'
+title: '例: ID ディレクティブと IDREFS ディレクティブの指定 | Microsoft Docs'
+description: SQL クエリで ID ディレクティブと IDREFS ディレクティブを指定することにより、ドキュメント内リンクを有効にする方法について説明します。
 ms.custom: fresh2019may
 ms.date: 05/22/2019
 ms.prod: sql
@@ -13,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 99b9f0d8-ecbb-4225-859f-881066c09785
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 29468af968f8e4ffd92e52258b12eb4aece3793b
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 2a05de3b0fbdec71ec15f221158dc9f2e362da8f
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662985"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388663"
 ---
-# <a name="example-specifying-the-id-and-idrefs-directives"></a>例 : ID ディレクティブと IDREFS ディレクティブの指定
+# <a name="example-specifying-the-id-and-idrefs-directives"></a>例:ID ディレクティブと IDREFS ディレクティブの指定
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
@@ -39,7 +40,7 @@ ms.locfileid: "80662985"
 </Customer>  
 ```  
   
-`SalesOrderIDList` 要素の `<Customer>` 属性は、複数の値を指定できる属性であり、`SalesOrderID` 要素の `<SalesOrder>` 属性を参照しています。 このリンクを確立するには、`SalesOrderID` 属性を `ID` 型として宣言し、`SalesOrderIDList` 要素の `<Customer>` 属性を `IDREFS` 型として宣言する必要があります。 各顧客が複数の注文を発注することが考えられるので、 `IDREFS` 型を使用しています。
+`<Customer>` 要素の `SalesOrderIDList` 属性は、複数の値を指定できる属性であり、`<SalesOrder>` 要素の `SalesOrderID` 属性を参照しています。 このリンクを確立するには、`SalesOrderID` 属性を `ID` 型として宣言し、`<Customer>` 要素の `SalesOrderIDList` 属性を `IDREFS` 型として宣言する必要があります。 各顧客が複数の注文を発注することが考えられるので、 `IDREFS` 型を使用しています。
   
  **IDREFS** 型の要素も、複数の値を保持できます。 このため、別の SELECT 句を使用して、同じタグ、親、およびキー列の情報を再利用する必要があります。 さらに、 `ORDER BY` IDREFS **値を構成する一連の行が、それぞれの親要素の直後にグループ化された状態で表示されるように、** 句を指定します。  
   

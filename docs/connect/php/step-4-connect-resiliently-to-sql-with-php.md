@@ -1,5 +1,6 @@
 ---
-title: 手順 4:PHP を使用して SQL に弾性的に接続する | Microsoft Docs
+title: 手順 4:PHP を使用して SQL に弾性的に接続する
+description: 手順 4 は、接続試行中の一時的なエラーによって再試行が行われる方法がわかるように設計されていデモ プログラムです。
 ms.custom: ''
 ms.date: 01/22/2018
 ms.prod: sql
@@ -10,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: 8013474f-48e9-43d5-ab89-7b0504044468
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9467a62d2d3ca1cbbd9b5a543c27f310f7d3ba60
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2433dd8662fd06ce8c429fb3d4b25409fa191911
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926899"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528352"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-php"></a>手順 4:PHP を使用して SQL に弾性的に接続する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
   
-デモ プログラムは、接続の試行時に一時的なエラー (この[付録](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes)に記載されているプレフィックス "08" が付くエラー コード) が発生すると再試行されるように設計されています。 しかし、クエリ コマンドの実行中に一時的なエラーが生じると、プログラムによって接続が破棄され、新しい接続が作成された後、クエリ コマンドが再試行されます。 この設計の選択については、推奨も、非推奨もしません。 デモ プログラムは、使用可能な設計上の柔軟性をいくつか示しています。  
+デモ プログラムは、接続の試行時に一時的なエラー (この[付録](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes)に記載されているプレフィックス "08" が付くエラー コード) が発生すると再試行されるように設計されています。 しかし、クエリ コマンドの実行中に一時的なエラーが生じると、プログラムによって接続が破棄され、新しい接続が作成された後、クエリ コマンドが再試行されます。 この設計は選択しないことをお勧めします。 デモ プログラムは、使用可能な設計上の柔軟性をいくつか示しています。  
   
 このコード サンプルの内容の大部分は、例外キャッチのロジックの記述です。   
   

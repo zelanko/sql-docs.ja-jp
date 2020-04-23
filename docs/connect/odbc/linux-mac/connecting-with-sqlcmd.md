@@ -1,5 +1,6 @@
 ---
-title: sqlcmd による接続 | Microsoft Docs
+title: sqlcmd による接続
+description: Linux と macOS の Microsoft ODBC Driver for SQL Server で sqlcmd ユーティリティを使用する方法について説明します。
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d2493e3ba903c44cf25bf98a10ddf6f52a56dd7c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 628968b7d93b9278eb4aaf6ebca3d03fb3cde102
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924554"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632822"
 ---
 # <a name="connecting-with-sqlcmd"></a>sqlcmd による接続
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-[sqlcmd](https://go.microsoft.com/fwlink/?LinkID=154481) ユーティリティは、Linux および macOS の [!INCLUDE[msCoName](../../../includes/msconame_md.md)]ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で使用できます。
+[sqlcmd](https://go.microsoft.com/fwlink/?LinkID=154481) ユーティリティは、Linux と macOS の [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で使用できます。
   
 次のコマンドは、Windows 認証 (Kerberos) と [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証の使用方法をそれぞれ示しています。
   
@@ -51,7 +52,7 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
   
 - -e 入力スクリプトを標準出力デバイス (stdout) に書き込みます。
 
-- -E 信頼関係接続 (統合認証) を使用します。Linux クライアントまたは macOS クライアントからの統合認証を使用する信頼関係接続の作成の詳細については、「[統合認証を使用する](../../../connect/odbc/linux-mac/using-integrated-authentication.md)」を参照してください。
+- -E 信頼関係接続 (統合認証) を使用します。Linux クライアントまたは macOS クライアントからの統合認証を使用する信頼関係接続の作成の詳細については、「[統合認証を使用する](using-integrated-authentication.md)」を参照してください。
 
 - -f codepage | i:codepage[,o:codepage] | o:codepage[,i:codepage] 入力と出力のコード ページを指定します。 コード ページ番号は、インストールされた Linux コード ページを指定する数値です。
 (17.5.1.1 以降で利用可能)
@@ -67,7 +68,7 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
 - -k  制御文字を削除するか、置き換えます。  
   
 - **-K**_application\_intent_  
-アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 現在サポートされている値は、 **ReadOnly**だけです。 **-K** を指定しない場合、`sqlcmd` では AlwaysOn 可用性グループのセカンダリ レプリカへの接続がサポートされません。 詳細については、[Linux と macOS の ODBC ドライバー - 高可用性とディザスター リカバリー](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)に関するページをご覧ください。  
+アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 現在サポートされている値は、 **ReadOnly**だけです。 **-K** を指定しない場合、`sqlcmd` では AlwaysOn 可用性グループのセカンダリ レプリカへの接続がサポートされません。 詳細については、[Linux と macOS の ODBC ドライバー - 高可用性とディザスター リカバリー](odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)に関するページをご覧ください。  
   
 > [!NOTE]  
 > **-K** は、CTP for SUSE Linux ではサポートされていません。 ただし、**に渡される DSN ファイルで**ApplicationIntent=ReadOnly`sqlcmd` キーワードを指定できます。 詳細については、このトピックの最後の「`sqlcmd` および `bcp` の DSN サポート」を参照してください。  
@@ -77,7 +78,7 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
 - -m *error_level* stdout に送信されるエラー メッセージを制御します。  
   
 - **-M**_multisubnet\_failover_  
-[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 可用性グループまたは [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] フェールオーバー クラスター インスタンスの可用性グループ リスナーに接続する際には、必ず **-M** を指定してください。 **-M** を指定すると、フェールオーバーを迅速に検出して、(現在) アクティブなサーバーに接続できます。 **-M** を指定しない場合、 **-M** は無効になります。 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)] について詳しくは、「[Linux と macOS の ODBC ドライバーでの高可用性とディザスター リカバリーのサポート](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)」をご覧ください。  
+[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 可用性グループまたは [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] フェールオーバー クラスター インスタンスの可用性グループ リスナーに接続する際には、必ず **-M** を指定してください。 **-M** を指定すると、フェールオーバーを迅速に検出して、(現在) アクティブなサーバーに接続できます。 **-M** を指定しない場合、 **-M** は無効になります。 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)] について詳しくは、「[Linux と macOS の ODBC ドライバーでの高可用性とディザスター リカバリーのサポート](odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)」をご覧ください。  
   
 > [!NOTE]  
 > **-M** は、CTP for SUSE Linux ではサポートされていません。 ただし、`sqlcmd` に渡される DSN ファイルで **MultiSubnetFailover=Yes** キーワードを指定できます。 詳細については、このトピックの最後の「`sqlcmd` および `bcp` の DSN サポート」を参照してください。  
@@ -161,7 +162,7 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
 ## <a name="unavailable-options"></a>利用できないオプション
 現在のリリースでは、次のオプションは使用できません。  
 
-- -A  専用管理者接続 (DAC) を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] にログインします。 専用管理者接続 (DAC) を作成する方法については、「[プログラミング ガイドライン](../../../connect/odbc/linux-mac/programming-guidelines.md)」を参照してください。  
+- -A  専用管理者接続 (DAC) を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] にログインします。 専用管理者接続 (DAC) を作成する方法については、「[プログラミング ガイドライン](programming-guidelines.md)」を参照してください。  
   
 - -L  ローカルに構成されたサーバー コンピューターと、ネットワーク上でブロードキャストしているサーバー コンピューター名の一覧を表示します。  
   
@@ -227,5 +228,5 @@ DSN と `sqlcmd` または `bcp` コマンド ラインの両方で同じオプ�
 エイリアス `alias isql="sqlcmd -D"` を定義して、`isql` を呼び出す既存のスクリプトを、`sqlcmd` を使用するように変更できます。  
 
 ## <a name="see-also"></a>参照  
-[**bcp** による接続](../../../connect/odbc/linux-mac/connecting-with-bcp.md)  
+[**bcp** による接続](connecting-with-bcp.md)  
  

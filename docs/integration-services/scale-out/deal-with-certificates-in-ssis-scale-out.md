@@ -10,12 +10,12 @@ ms.custom: performance
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 6c90b71ed61deeadbc0af2592f137893fa676a05
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ab701d44e14bbbd6234f5301a5fb3abdba451ef2
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67896964"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488136"
 ---
 # <a name="manage-certificates-for-sql-server-integration-services-scale-out"></a>SQL Server Integration Services Scale Out の証明書を管理する
 
@@ -29,20 +29,20 @@ Scale Out Master と Scale Out Worker の間の通信を守るために、SSIS S
 
 ほとんどの場合、Scale Out Master 証明書は、Scale Out Master のインストール時に構成されます。
 
-SQL Server インストール ウィザードの **[Integration Services Scale Out の構成 - マスター ノード]** ページで、新しい自己署名 SSL 証明書を作成するか、既存の SSL 証明書を使用するかを選択できます。
+SQL Server インストール ウィザードの **[Integration Services Scale Out の構成 - マスター ノード]** ページで、新しい自己署名 TLS/SSL 証明書を作成するか、既存の TLS/SSL 証明書を使用するかを選択できます。
 
 ![マスターの構成](media/master-config.PNG)
 
-**新しい証明書**。 証明書に対して特別な要件がない場合は、新しい自己署名 SSL 証明書の作成を選択できます。 さらに、証明書で CN を指定できます。 後で Scale Out Worker によって使用されるマスター エンドポイントのホスト名が CN に含まれていることを確認してください。 既定では、マスター ノードの IP アドレスとコンピューターの名前が含まれます。 
+**新しい証明書**。 証明書に対して特別な要件がない場合は、新しい自己署名 TLS/SSL 証明書の作成を選択できます。 さらに、証明書で CN を指定できます。 後で Scale Out Worker によって使用されるマスター エンドポイントのホスト名が CN に含まれていることを確認してください。 既定では、マスター ノードの IP アドレスとコンピューターの名前が含まれます。 
 
-**既存の証明書**。 既存の証明書を使用することを選択する場合は、 **[参照]** をクリックし、ローカル コンピューターの**ルート**証明書ストアから SSL 証明書を選択します。
+**既存の証明書**。 既存の証明書を使用することを選択する場合は、 **[参照]** をクリックし、ローカル コンピューターの**ルート**証明書ストアから TLS/SSL 証明書を選択します。
 
 ### <a name="change-the-scale-out-master-certificate"></a>Scale Out Master 証明書の変更
 
 証明書の有効期限などの理由により、Scale Out Master 証明書を変更する場合があります。 Scale Out Master 証明書を変更するには、次の作業を行います。
 
-#### <a name="1-create-an-ssl-certificate"></a>1.SSL 証明書を作成する
-次のコマンドを使用して、新しい SSL 証明書を作成し、マスター ノードにインストールします。
+#### <a name="1-create-a-tlsssl-certificate"></a>1.TLS/SSL 証明書を作成する
+次のコマンドを使用して、新しい TLS/SSL 証明書を作成し、マスター ノードにインストールします。
 
 ```dos
 MakeCert.exe -n CN={master endpoint host} SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine -a sha1
@@ -70,7 +70,7 @@ netsh http show sslcert ipport=0.0.0.0:8391
 
 ```dos
 netsh http delete sslcert ipport=0.0.0.0:{Master port}
-netsh http add sslcert ipport=0.0.0.0:{Master port} certhash={SSL Certificate Thumbprint} certstorename=Root appid={original appid}
+netsh http add sslcert ipport=0.0.0.0:{Master port} certhash={TLS/SSL Certificate Thumbprint} certstorename=Root appid={original appid}
 ```
 
 次に例を示します。
@@ -81,18 +81,18 @@ netsh http add sslcert ipport=0.0.0.0:8391 certhash=01d207b300ca662f479beb884efe
 ```
 
 #### <a name="3-update-the-scale-out-master-service-configuration-file"></a>3.Scale Out Master サービス構成ファイルを更新する
-マスター ノードで Scale Out Master サービス構成ファイル `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config` を更新します。 **SSLCertThumbprint** を新しい SSL 証明書のサムプリントに更新します。
+マスター ノードで Scale Out Master サービス構成ファイル `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config` を更新します。 **SSLCertThumbprint** を新しい TLS/SSL 証明書のサムプリントに更新します。
 
 #### <a name="4-restart-the-scale-out-master-service"></a>4.Scale Out Master サービスを再起動する
 
 #### <a name="5-reconnect-scale-out-workers-to-scale-out-master"></a>5.Scale Out Worker を Scale Out Master に再接続する
 各 Scale Out Worker に対し、Worker を削除して [Scale Out Manager](integration-services-ssis-scale-out-manager.md) を使用して再度追加するか、次の作業を行います。
 
-a.  ワーカー ノードのローカル コンピューターのルート ストアにクライアント SSL 証明書をインストールします。
+a.  ワーカー ノードのローカル コンピューターのルート ストアにクライアント TLS/SSL 証明書をインストールします。
 
 b.  Scale Out Worker サービス構成ファイルを更新します。
 
-ワーカー ノードで Scale Out Worker サービス構成ファイル `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config` を更新します。 **MasterHttpsCertThumbprint** を新しい SSL 証明書のサムプリントに更新します。
+ワーカー ノードで Scale Out Worker サービス構成ファイル `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config` を更新します。 **MasterHttpsCertThumbprint** を新しい TLS/SSL 証明書のサムプリントに更新します。
 
 c.  Scale Out Worker サービスを再起動します。
 

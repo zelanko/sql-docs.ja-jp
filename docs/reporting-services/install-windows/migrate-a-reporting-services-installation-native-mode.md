@@ -6,12 +6,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 11/06/2018
-ms.openlocfilehash: 5db33f22ffd5143d88c5654c753f1b08811c0c8a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4a5b217ba8733aa92c2255170d2ff1f750d996a7
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68262899"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487061"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Reporting Services のインストールの移行 (ネイティブ モード)
 
@@ -109,9 +109,9 @@ ms.locfileid: "68262899"
   
 * IP アドレス制限は、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 以降のバージョンではサポートされません。 IP アドレス制限を使用する場合、移行を実行する前にレポート ソリューションを設計し直すか、ファイアウォール、ルーター、ネットワーク アドレス変換 (NAT) などのテクノロジを使用して、レポート サーバーへのアクセスが制限されるアドレスを構成する必要があります。  
   
-* クライアント SSL (Secure Sockets Layer) 証明書は、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 以降のバージョンではサポートされません。 クライアント SSL 証明書を使用する場合、移行を実行する前にレポート ソリューションを設計し直す必要があります。  
+* クライアントのトランスポート層セキュリティ (TLS) (旧称 Secure Sockets Layer (SSL)) 証明書は、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 以降のバージョンではサポートされません。 クライアント TLS 証明書を使用する場合、移行を実行する前にレポート ソリューションを設計し直す必要があります。  
   
-* Windows 統合認証以外の認証の種類を使用する場合、サポートされている認証の種類で `<AuthenticationTypes>`RSReportServer.config **ファイルの** 要素を更新する必要があります。 サポートされている認証の種類は、NTLM、Kerberos、Negotiate、および Basic です。 匿名認証、.NET パスポート認証、およびダイジェスト認証は、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 以降のバージョンではサポートされません。  
+* Windows 統合認証以外の認証の種類を使用する場合、サポートされている認証の種類で **RSReportServer.config** ファイルの`<AuthenticationTypes>` 要素を更新する必要があります。 サポートされている認証の種類は、NTLM、Kerberos、Negotiate、および Basic です。 匿名認証、.NET パスポート認証、およびダイジェスト認証は、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 以降のバージョンではサポートされません。  
   
 * カスタムのカスケード スタイル シートをレポート環境で使用している場合、そのスタイル シートは移行できません。 移行後に手動で移動します。
   
@@ -215,7 +215,7 @@ SQL Server Reporting Services の変更点の詳細については、アップ�
   
     1. [カスタム アセンブリの配置](../../reporting-services/custom-assemblies/deploying-a-custom-assembly.md)  
   
-    2. [カスタム レポート アイテムを配置する方法](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
+    2. [方法: カスタム レポート アイテムを配置する](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
     3. [データ処理拡張機能の配置](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)  
   

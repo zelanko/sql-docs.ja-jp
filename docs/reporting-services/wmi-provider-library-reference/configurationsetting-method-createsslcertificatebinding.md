@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 407d50e4-0a55-43cb-8ddf-2d82714071b1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7b65838720b7300b92829aa57da58563628740cf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3c417eb84350ee2b2c3fcf5e74c0e17b2b195d93
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570758"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81630648"
 ---
 # <a name="configurationsetting-method---createsslcertificatebinding"></a>ConfigurationSetting メソッド - CreateSSLCertificateBinding
-  SSL 証明書のバインドを作成します。  
+  TLS/SSL 証明書のバインドを作成します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,7 +46,7 @@ public void CreateSSLCertificateBinding(string application,
  アプリケーションの IP アドレス。  
   
  *[ポート]*  
- バインドに関連付けられた SSL ポート。  
+ バインドに関連付けられた TLS ポート。  
   
  *Lcid*  
  返されるエラー メッセージに使用するロケール。  
@@ -63,7 +63,7 @@ public void CreateSSLCertificateBinding(string application,
 ## <a name="remarks"></a>解説  
  このメソッドは、アプリケーションの rsreportserver.config にバインドを追加します。 バインドが HTTP.SYS に存在しない場合は作成されます。  
   
- バインドを作成する前に、メソッドの呼び出しによって、指定されたアプリケーションの URL 予約が調査され、SSL 証明書のバインドが有効かどうかが確認されます。  
+ バインドを作成する前に、メソッドの呼び出しによって、指定されたアプリケーションの URL 予約が調査され、TLS/SSL 証明書のバインドが有効かどうかが確認されます。  
   
  次の条件が検証されて、その結果エラーが発生する場合があります。  
   

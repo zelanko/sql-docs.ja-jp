@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: da3f7c0f0385ddfd8bdb61ab7009a6503acfb80a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 021df541af90bcaae13e1544f9f6a72e77f8eaf7
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080250"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486918"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>レポート サーバー URL の構成 (SSRS 構成マネージャー)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、レポート サーバー Web サービスと [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]へのアクセスに URL が使用されます。 どちらのアプリケーションを使用する場合も、事前に Web サービスと [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]それぞれに 1 つ以上の URL を構成する必要があります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、両方のアプリケーションの URL に既定値が用意されています。この既定値は、他の Web サービスや Web アプリケーションとのサイド バイ サイドの配置をはじめとするほとんどの配置シナリオに有効です。  
@@ -33,7 +33,7 @@ ms.locfileid: "77080250"
 |ホスト名|TCP/IP ネットワークでは、IP アドレスを使用してネットワーク上のデバイスを一意に識別します。 コンピューターにインストールされているネットワーク アダプター カードごとに、物理 IP アドレスが存在します。 IP アドレスがホスト ヘッダーに解決される場合、ホスト ヘッダーを指定できます。 レポート サーバーを企業ネットワークに配置している場合は、コンピューターのネットワーク名を使用できます。|  
 |Port|TCP ポートはデバイス上のエンドポイントです。 レポート サーバーは、指定されたポートで要求をリッスンします。|  
 |仮想ディレクトリ|1 つのポートが複数の Web サービスまたはアプリケーションで共有されていることがよくあります。 このため、レポート サーバーの URL には、要求を受け取るアプリケーションに対応する仮想ディレクトリが必ず含まれています。 同じ IP アドレスとポートでリッスンする [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションごとに、一意の仮想ディレクトリ名を指定する必要があります。|  
-|SSL 設定|コンピューターに以前にインストールした既存の SSL 証明書を使用するように、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の URL を構成できます。 詳細については、「 [ネイティブ モードのレポート サーバーでの SSL 接続の構成](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)」を参照してください。|  
+|SSL 設定|コンピューターに以前にインストールした既存の TLS/SSL 証明書を使用するように、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の URL を構成できます。 詳細については、「[ネイティブ モードのレポート サーバーでの TLS 接続の構成](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)」をご覧ください。|  
   
 ## <a name="default-urls"></a>既定の URL  
  レポート サーバーまたは [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] に URL を通じてアクセスする場合は、URL に IP アドレスではなくホスト名を指定します。 TCP/IP ネットワークでは、IP アドレスがホスト名 (またはコンピューターのネットワーク名) に解決されます。 既定値を使用して URL を構成した場合は、コンピューター名または localhost をホスト名として指定する URL を使用して、レポート サーバー Web サービスにアクセスできます。  

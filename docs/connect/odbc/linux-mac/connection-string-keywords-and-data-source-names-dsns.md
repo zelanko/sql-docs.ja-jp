@@ -1,5 +1,6 @@
 ---
-title: SQL Server への接続 | Microsoft Docs
+title: ODBC を使用した接続
+description: Microsoft ODBC Driver for SQL Server を使用して、Linux または macOS からデータベースへの接続を作成する方法について説明します。
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 52511cbda93f5148daab116f0def292b55828efd
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: 2b99479883fd1cc74008d62a9c322226ed587244
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219399"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632812"
 ---
 # <a name="connecting-to-sql-server"></a>SQL Server への接続
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "81219399"
   
 ## <a name="connection-properties"></a>接続のプロパティ  
 
-Linux および Mac でサポートされている接続文字列のすべてのキーワードと属性については、「[DSN と接続文字列のキーワードと属性](../../../connect/odbc/dsn-connection-string-attribute.md)」をご覧ください
+Linux および macOS でサポートされている接続文字列のすべてのキーワードと属性については、「[DSN と接続文字列のキーワードと属性](../dsn-connection-string-attribute.md)」をご覧ください。
 
 > [!IMPORTANT]  
 > データベース ミラーリングを使用する (フェールオーバー パートナーがある) データベースに接続する場合は、接続文字列にデータベース名を指定しないでください。 代わりに、**use** <_データベース名_> コマンドを送信してデータベースに接続してから、クエリを実行します。  
@@ -113,6 +114,6 @@ ODBC ドライバー 17.4 以降では、ドライバーでキープアライブ
 
 ## <a name="see-also"></a>参照
 
-- [Linux に SQL Server 用 Microsoft ODBC Driver をインストールする](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
-- [macOS に Microsoft ODBC Driver for SQL Server をインストールする](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md)
-- [プログラミング ガイドライン](../../../connect/odbc/linux-mac/programming-guidelines.md)
+- [Linux に SQL Server 用 Microsoft ODBC Driver をインストールする](installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [macOS に Microsoft ODBC Driver for SQL Server をインストールする](install-microsoft-odbc-driver-sql-server-macos.md)
+- [プログラミング ガイドライン](programming-guidelines.md)

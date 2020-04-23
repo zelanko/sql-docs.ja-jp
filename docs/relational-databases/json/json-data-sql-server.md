@@ -2,7 +2,6 @@
 title: JSON データの使用
 ms.date: 05/14/2019
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: quickstart
 helpviewer_keywords:
@@ -11,14 +10,15 @@ helpviewer_keywords:
 ms.assetid: c9a4e145-33c3-42b2-a510-79813e67806a
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: genemi
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 80f6d40fd2c548135595fd96de6de4b967460a90
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c9c9498c6bcef8bf07657d17565bd8b596668033
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288146"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81485091"
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server の JSON データ
 
@@ -374,7 +374,7 @@ FOR JSON AUTO;
   
 ## <a name="test-drive-built-in-json-support-with-the-adventureworks-sample-database"></a>AdventureWorks サンプル データベースを使用して、組み込みの JSON サポートを試用できます。
 
-AdventureWorks サンプル データベースを入手するには、[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=49502)から最小限のデータベース ファイルとサンプルおよびスクリプト ファイルをダウンロードしてください。
+AdventureWorks サンプル データベースを入手するには、[GitHub](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks) から少なくともデータベース ファイルとサンプルおよびスクリプト ファイルをダウンロードしてください。
 
 SQL Server 2016 のインスタンスにサンプル データベースを復元したら、サンプル ファイルを展開し、JSON フォルダーから *JSON Sample Queries procedures views and indexes.sql* ファイルを開きます。 このファイルのスクリプトを実行して JSON データとして既存のデータの一部の形式を再度設定し、JSON データに対してサンプル クエリとレポートをテストしてから、JSON データにインデックスを付けて JSON をインポートおよびエクスポートします。  
   

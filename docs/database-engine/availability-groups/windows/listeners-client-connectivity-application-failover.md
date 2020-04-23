@@ -1,6 +1,6 @@
 ---
 title: 可用性グループ リスナーに接続する
-description: プライマリ レプリカや読み取り専用のセカンダリ レプリカへの接続方法、SSL や Kerberos の使用方法など、Always On 可用性グループ リスナーへの接続について説明します。
+description: プライマリ レプリカや読み取り専用のセカンダリ レプリカへの接続方法、TLS/SSL や Kerberos の使用方法など、Always On 可用性グループ リスナーへの接続について説明します。
 ms.custom: seodec18
 ms.date: 02/27/2020
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0c8b30de41b8a6a74661e3b4e55e7f2216c29c98
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4505fed51589e2666dd2aa28e8ee42c4aac27f94
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79433739"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528496"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>Always On 可用性グループ リスナーに接続する 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -131,18 +131,54 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;Integrated Security=SSPI; Mul
   
  **MultiSubnetFailover** 接続オプションは、可用性グループが単一のサブネットのみにある場合でも、 **True** に設定することをお勧めします。  これにより、今後、クライアント接続文字列を変更することなく、複数のサブネットをサポートするように新しいクライアントをあらかじめ構成することができ、単一サブネットのフェールオーバーのパフォーマンスも最適化できます。  **MultiSubnetFailover** 接続オプションは必須ではありませんが、サブネットのフェールオーバーが速くなるという利点があります。  これは、クライアント ドライバーが、可用性グループに関連付けられている各 IP アドレスの TCP ソケットを同時に開こうとするためです。  クライアント ドライバーは、最初の IP が正常に応答するのを待ち、応答した場合は、その IP を接続に使用します。  
   
-##  <a name="listeners--ssl-certificates"></a><a name="SSLcertificates"></a> リスナーと SSL 証明書  
+##  <a name="listeners--tlsssl-certificates"></a><a name="SSLcertificates"></a> リスナーと TLS/SSL 証明書  
 
- 可用性グループ リスナーへの接続時に、参加している SQL Server のインスタンスがセッションの暗号化と共に SSL 証明書を使用していることがあります。この場合、強制的に暗号化するために、接続クライアント ドライバーが SSL 証明書のサブジェクト代替名をサポートする必要があります。  SQL Server ドライバーでの証明書のサブジェクト代替名のサポートは、ADO.NET (SqlClient)、Microsoft JDBC、および SQL Native Client (SNAC) に対して計画されています。  
+可用性グループ リスナーへの接続時に、参加している SQL Server のインスタンスがセッションの暗号化と共に TLS/SSL 証明書を使用していることがあります。この場合、強制的に暗号化するために、接続クライアント ドライバーが TLS/SSL 証明書のサブジェクト代替名をサポートする必要があります。  SQL Server ドライバーでの証明書のサブジェクト代替名のサポートは、ADO.NET (SqlClient)、Microsoft JDBC、および SQL Native Client (SNAC) に対して計画されています。  
   
- X.509 証明書は、すべての可用性グループ リスナー セットのリストを証明書のサブジェクト代替名に設定して、フェールオーバー クラスターに参加している各サーバー ノードに対して構成する必要があります。  
-  
- たとえば、WSFC に `AG1_listener.Adventure-Works.com`、 `AG2_listener.Adventure-Works.com`、 `AG3_listener.Adventure-Works.com`という 3 つの可用性グループ リスナーがある場合、証明書のサブジェクト代替名を次のように設定する必要があります。  
-  
+X.509 証明書は、すべての可用性グループ リスナー セットのリストを証明書のサブジェクト代替名に設定して、フェールオーバー クラスターに参加している各サーバー ノードに対して構成する必要があります。 
+
+証明書の値の形式は次のとおりです。 
+
 ```  
-CN = ServerFQDN  
-SAN = ServerFQDN,AG1_listener.Adventure-Works.com, AG2_listener.Adventure-Works.com, AG3_listener.Adventure-Works.com  
-```  
+CN = Server.FQDN  
+SAN = Server.FQDN,Listener1.FQDN,Listener2.FQDN
+```
+
+たとえば、次のような値があるとします。 
+
+```
+Servername: Win2019   
+Instance: SQL2019   
+AG: AG2019   
+Listener: Listener2019   
+Domain: contoso.com  (which is also the FQDN)
+```
+
+可用性グループが 1 つだけの WSFC の場合、証明書には、サーバーの完全修飾ドメイン名 (FQDN) とリスナーの FQDN が含まれている必要があります。 
+
+```
+CN: Win2019.contoso.com
+SAN: Win2019.contoso.com, Listener2019.contoso.com 
+```
+
+この構成では、インスタンス (`WIN2019\SQL2019`) またはリスナー (`Listener2019`) に接続するときに、接続が暗号化されます。 
+
+ネットワークの構成方法によっては、SAN にも NetBIOS を追加することが必要な場合がある、顧客の小さいサブセットが存在します。 この場合、証明書の値は次のようになります。 
+
+```
+CN: Win2019.contoso.com
+SAN: Win2019,Win2019.contoso.com,Listener2019,Listener2019.contoso.com
+```
+
+WSFC に次のような 3 つの可用性グループ リスナーがあるとします: Listener1、Listener2、Listener3
+
+この場合は、証明書の値は次のようになります。 
+
+```
+CN: Win2019.contoso.com
+SAN: Win2019.contoso.com,Listener1.contoso.com,Listener2.contoso.com,Listener3.contoso.com
+```
+  
   
 ##  <a name="listeners-and-kerberos-spns"></a><a name="SPNs"></a> リスナーと Kerberos (SPN) 
 

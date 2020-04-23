@@ -1,5 +1,6 @@
 ---
-title: プログラミング ガイドライン (ODBC Driver for SQL Server) | Microsoft Docs
+title: プログラミング ガイドライン (ODBC ドライバー)
+description: macOS と Linux 上での Microsoft ODBC Driver for SQL Server のプログラミング機能は、SQL Server Native Client (ODBC) の ODBC に基づいています。
 ms.custom: ''
 ms.date: 01/12/2018
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: v-makouz
 ms.author: v-daenge
-ms.openlocfilehash: b54fd76c8c6e60b7250ef354b8999347eb96d95a
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: ecaa595fa08a4a37c9a5d3146dd03af440aa4453
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219233"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632792"
 ---
 # <a name="programming-guidelines"></a>プログラミング ガイドライン
 
@@ -49,7 +50,7 @@ ODBC アプリケーションでは、unixODBC ヘッダー (`sql.h`、`sqlext.h
 macOS および Linux 上のこのリリースの ODBC ドライバーでは、以下の機能が正しく動作することが確認されていません。
 
 -   フェールオーバー クラスターの接続
--   [透過的なネットワーク IP の解決](https://docs.microsoft.com/sql/connect/odbc/linux/using-transparent-network-ip-resolution) (ODBC Driver 17 よりも前のバージョン)
+-   [透過的なネットワーク IP の解決](../using-transparent-network-ip-resolution.md) (ODBC Driver 17 よりも前のバージョン)
 -   [高度なドライバー トレース](https://blogs.msdn.microsoft.com/mattn/2012/05/15/enabling-advanced-driver-tracing-for-the-sql-native-client-odbc-drivers/)
 
 macOS と Linux でのこのリリースの ODBC ドライバーでは、次の機能は利用できません。 
@@ -108,7 +109,7 @@ ODBC Driver 17 の場合、次のいずれかの文字セット/エンコード�
 
 接続時に、読み込まれているプロセスの現在のロケールがドライバーによって検出されます。 上記のいずれかのエンコードを使用している場合、ドライバーでは SQLCHAR (ナロー文字) データにそのエンコードが使用されます。それ以外の場合は、既定の UTF-8 が使用されます。 すべてのプロセスは既定で "C" ロケールで開始されます (従ってドライバーは既定で UTF-8 になります)。そのため、アプリケーションが上記のエンコードのいずれかを使用する必要がある場合は、接続前に **setlocale** 関数を使用してロケールを適切に設定する必要があります。そのために、目的のロケールを明示的に指定するか、`setlocale(LC_ALL, "")` などの空の文字列を使用して環境のロケール設定を使用します。
 
-そのため、エンコードが UTF-8 である一般的な Linux または Mac 環境では、ODBC Driver 13 または 13.1 から 17 にアップグレードしても違いはありません。 ただし、`setlocale()` を介して上記の一覧で UTF-8 以外のエンコードを使用するアプリケーションでは、ドライバーとの間でやり取りするデータに UTF-8 ではなくそのエンコードを使用する必要があります。
+そのため、エンコードが UTF-8 である一般的な Linux または macOS 環境では、ODBC Driver 13 または 13.1 から 17 にアップグレードしても違いはありません。 ただし、`setlocale()` を介して上記の一覧で UTF-8 以外のエンコードを使用するアプリケーションでは、ドライバーとの間でやり取りするデータに UTF-8 ではなくそのエンコードを使用する必要があります。
 
 SQLWCHAR データは UTF 16LE (リトル エンディアン) である必要があります。
 
@@ -147,8 +148,8 @@ ODBC Driver 13 および 13.1 では、UTF-8 マルチバイト文字または U
 3.  高度なマルチスレッド アプリケーションでドライバーを使用する場合、unixODBC のハンドル検証がパフォーマンスのボトルネックになる可能性があります。 このようなシナリオでは、`--enable-fastvalidate` オプションを使用して unixODBC をコンパイルすることで、大幅にパフォーマンスを向上させることができます。 ただし、これにより、アプリケーションから無効なハンドルが ODBC API に渡されると、`SQL_INVALID_HANDLE` エラーが返されずにクラッシュする可能性があることに注意してください。
 
 ## <a name="see-also"></a>参照  
-[よく寄せられる質問](../../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)
+[よく寄せられる質問](frequently-asked-questions-faq-for-odbc-linux.md)
 
-[このバージョンのドライバーの既知の問題](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
+[このバージョンのドライバーの既知の問題](known-issues-in-this-version-of-the-driver.md)
 
-[リリース ノート](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
+[リリース ノート](release-notes-odbc-sql-server-linux-mac.md)

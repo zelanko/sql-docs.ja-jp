@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 894ba4f1b73cb482ab521e859d0472f7039bfabf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 910918a3dd0162bc29eef882cf12b529f98fa05f
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77077061"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487171"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>URL の構成 (SSRS 構成マネージャー)
   [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] やレポート サーバー Web サービスを使用するには、まず、各アプリケーションに対して少なくとも 1 つの URL を構成する必要があります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を "ファイルのみ" モードでインストールした場合 (インストール ウィザードの [レポート サーバー インストール オプション] ページで **[サーバーを構成せずにインストールする]** オプションを選択した場合) は、URL の構成は必須です。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を既定の構成でインストールした場合は、各アプリケーションの URL が既に構成されています。  
@@ -84,20 +84,20 @@ ms.locfileid: "77077061"
   
 6.  まだ確認していない場合は、使用する予定の名前と同じ名前の仮想ディレクトリが IIS にないことを確認します (IIS がインストールされている場合)。  
   
-7.  コンピューターに SSL 証明書がインストールされている場合は、ここでその証明書を選択して URL をバインドすることができます。  
+7.  TLS/SSL 証明書をインストールした場合は、ここでそれを選択して、コンピューターにインストールされている TLS/SSL 証明書に URL をバインドすることができます。  
   
-8.  SSL 証明書を選択する場合は、必要に応じてカスタム ポートを指定できます。 既定のポートは 443 ですが、使用可能なポートをどれでも使用できます。  
+8.  TLS/SSL 証明書を選択する場合は、必要に応じてカスタム ポートを指定できます。 既定のポートは 443 ですが、使用可能なポートをどれでも使用できます。  
   
 9. **[適用]** をクリックして URL を作成します。  
   
 10. ページの **[URL]** セクションでリンクをクリックして URL をテストします。 URL をテストするには、先にレポート サーバー データベースを作成して構成する必要があります。 手順については、「[ネイティブ モード レポート サーバー データベースの作成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)」を参照してください。  
 
 > [!NOTE]
->  既存の SSL バインドと URL 予約があり、SSL バインドを変更する (たとえば、別の証明書やホスト ヘッダーを使用する) 場合、次の手順を順番に実行することをお勧めします。  
+>  既存の TLS バインドと URL 予約があり、TLS バインドを変更する (たとえば、別の証明書やホスト ヘッダーを使用する) 場合、次の手順を順番に実行することをお勧めします。  
 > 
 >  1.  まず、すべての URL 予約を削除します。  
-> 2.  すべての SSL バインドを削除します。  
-> 3.  URL と SSL バインドを作成し直します。  
+> 2.  すべての TLS バインドを削除します。  
+> 3.  URL と TLS バインドを作成し直します。  
 > 
 >  前の手順は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用して行うことができます。  
 > 
@@ -113,9 +113,9 @@ ms.locfileid: "77077061"
   
 3.  仮想ディレクトリを指定します。 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] は、レポート サーバー Web サービスと同じ IP アドレスとポートでリッスンします。 別のレポート サーバー Web サービスを指すように [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] を構成した場合は、RSReportServer.config ファイルで [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] の URL 設定を変更する必要があります。  
   
-4.  SSL 証明書がインストールされている場合は、その証明書を選択して、 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] への要求をすべて HTTPS でルーティングするように指定できます。  
+4.  TLS/SSL 証明書がインストールされている場合は、それを選択して、[!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] への要求をすべて HTTPS でルーティングするように指定できます。  
   
-     SSL 証明書を選択する場合は、必要に応じてカスタム ポートを指定できます。 既定のポートは 443 ですが、使用可能なポートをどれでも使用できます。  
+     TLS/SSL 証明書を選択する場合は、必要に応じてカスタム ポートを指定できます。 既定のポートは 443 ですが、使用可能なポートをどれでも使用できます。  
   
 5.  **[適用]** をクリックして URL を作成します。  
   
@@ -136,14 +136,14 @@ ms.locfileid: "77077061"
  ホスト ヘッダーは一意の名前であり、これを使用して複数の Web サイトで単一の IP アドレスとポートを共有できます。 ホスト ヘッダー名は、IP アドレスとポート番号に比べて容易に記憶でき、入力も簡単です。 たとえば、 www.adventure-works.com などはホスト ヘッダー名の一例です。  
   
  **[SSL ポート]**  
- SSL 接続のポートを指定します。 SSL の既定のポートは 443 です。  
+ TLS/SSL 接続のポートを指定します。 TLS の既定のポートは 443 です。  
   
  **[SSL 証明書]**  
- 対象のコンピューターにインストールした SSL 証明書の名前を指定します。 証明書がワイルドカードにマップされている場合は、それをレポート サーバーの接続に使用できます。  
+ 対象のコンピューターにインストールした TLS/SSL 証明書の名前を指定します。 証明書がワイルドカードにマップされている場合は、それをレポート サーバーの接続に使用できます。  
   
  証明書が登録されている完全修飾コンピューター名を指定します。 証明書が登録されている名前と同じ名前を指定する必要があります。  
   
- このオプションを使用するには、証明書がインストールされている必要があります。 また、RSReportServer.config ファイルの UrlRoot 構成設定を、証明書で登録されたコンピューターの完全修飾名を指すように変更する必要があります。 詳細については、「 [ネイティブ モードのレポート サーバーでの SSL 接続の構成](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)」を参照してください。  
+ このオプションを使用するには、証明書がインストールされている必要があります。 また、RSReportServer.config ファイルの UrlRoot 構成設定を、証明書で登録されたコンピューターの完全修飾名を指すように変更する必要があります。 詳細については、「[ネイティブ モードのレポート サーバーでの TLS 接続の構成](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)」をご覧ください。  
   
 ### <a name="to-set-advanced-properties-on-a-url"></a>URL の詳細プロパティを設定するには  
   

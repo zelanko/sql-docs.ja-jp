@@ -9,12 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: efa536024021e1182ad565fe534d3e706f4e7eff
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 83ce3690d194b8b06fc79d58c2d7bc7efa996619
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80917956"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81293382"
 ---
 # <a name="fips-mode"></a>FIPS モード
 
@@ -25,7 +25,7 @@ SQL Server 用 Microsoft JDBC ドライバーは、*FIPS 140 準拠*となるよ
 #### <a name="prerequisites"></a>前提条件
 
 - FIPS 構成の JVM
-- 適切な SSL 証明書
+- 適切な TLS/SSL 証明書
 - 適切なポリシー ファイル
 - 適切な構成パラメーター
 
@@ -38,11 +38,11 @@ FIPS 構成として承認されたモジュールを確認するには、「[Va
 ベンダーによっては、FIPS を満たすように JVM を構成するための追加の手順を用意している場合があります。
 
 ## <a name="appropriate-ssl-certificate"></a>適切な SSL 証明書
-FIPS モードで SQL Server に接続するには、有効な SSL 証明書が必要です。 FIPS を有効にするクライアント マシン (JVM) 上の Java キーストアにインストールまたはインポートします。
+FIPS モードで SQL Server に接続するには、有効な TLS/SSL 証明書が必要です。 FIPS を有効にするクライアント マシン (JVM) 上の Java キーストアにインストールまたはインポートします。
 
 ### <a name="importing-ssl-certificate-in-java-keystore"></a>Java キーストアに SSL 証明書をインポートする
 FIPS では、ほとんどの場合、PKCS またはプロバイダー固有の形式で証明書 (.cert) をインポートする必要があります。
-次のスニペットを使用して、SSL 証明書をインポートし、適切なキーストア形式を使用して作業ディレクトリに格納します。 _TRUST\_STORE\_PASSWORD_ は、Java キーストアのパスワードです。
+次のスニペットを使用して、TLS/SSL 証明書をインポートし、適切なキーストア形式を使用して作業ディレクトリに格納します。 _TRUST\_STORE\_PASSWORD_ は、Java キーストアのパスワードです。
 
 ```java
 public void saveGenericKeyStore(
@@ -72,7 +72,7 @@ private Certificate getCertificate(String pathName)
 }
 ```
 
-次の例では、BouncyCastle プロバイダーを使用して、Azure SSL 証明書を PKCS12 形式でインポートしています。 このスニペットを使用すると、証明書は、_MyTrustStore\_PKCS12_ という名前の作業ディレクトリにインポートされます。
+次の例では、BouncyCastle プロバイダーを使用して、Azure TLS/SSL 証明書を PKCS12 形式でインポートしています。 このスニペットを使用すると、証明書は、_MyTrustStore\_PKCS12_ という名前の作業ディレクトリにインポートされます。
 
 `saveGenericKeyStore(BCFIPS, PKCS12, "SQLAzure SSL Certificate Name", "SQLAzure.cer");`
 
@@ -84,7 +84,7 @@ JDBC ドライバーを FIPS 準拠モードで実行するには、次の表に
 
 #### <a name="properties"></a>Properties 
 
-|プロパティ|種類|Default|説明|メモ|
+|プロパティ|Type|Default|説明|Notes|
 |---|---|---|---|---|
 |encrypt|boolean ["true / false"]|"false"|FIPS 対応 JVM の場合、暗号化プロパティを **true** にする必要があります。||
 |TrustServerCertificate|boolean ["true / false"]|"false"|FIPS の場合、ユーザーは、証明書チェーンを検証する必要があるため、このプロパティには値 **"false"** を使用する必要があります。 ||

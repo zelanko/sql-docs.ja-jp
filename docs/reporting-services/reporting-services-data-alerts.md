@@ -9,12 +9,12 @@ ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bd26e2ddcacd91269a51e663b80acd4edf95c196
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b1cb553c263bc822d5139d50169241a0f19fdd79
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286626"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487799"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services のデータ警告
 
@@ -116,7 +116,7 @@ SQL Server Reporting Services の "データ警告" は、関心のある、ま�
 ##  <a name="install-data-alerts"></a><a name="InstallAlerting"></a> データ警告のインストール  
  データ警告機能は、SharePoint モードで [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] がインストールされている場合にのみ使用できます。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] を SharePoint モードでインストールすると、データ警告定義および警告メタデータを格納する警告データベースと、警告を管理するための 2 つの SharePoint ページとがセットアップによって自動的に作成され、SharePoint サイトにデータ警告デザイナーが追加されます。 警告機能に関して、インストール中に設定する特別な手順やオプションはありません。  
   
- SharePoint モードでの [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のインストール ([!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] で新たに導入された [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 共有サービスや、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 機能を使用する前に作成および構成する必要のある [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーションを含む) について詳しくは、「[SharePoint 2010 用 Reporting Services の SharePoint モードのインストール](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)」をご覧ください。  
+ SharePoint モードでの [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のインストール ([!INCLUDE[ssSQL11](../includes/sssql11-md.md)] で新たに導入された [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 共有サービスや、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 機能を使用する前に作成および構成する必要のある [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーションを含む) について詳しくは、「[SharePoint 2010 用 Reporting Services の SharePoint モードのインストール](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)」をご覧ください。  
   
  このトピックの冒頭の図に示したように、データ警告には SQL Server エージェント ジョブが使用されます。 このジョブを作成するには、SQL Server エージェントが実行されている必要があります。 SQL Server エージェントは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]をインストールした際に、自動的に開始されるよう構成されている可能性があります。 そのように構成されていない場合は、SQL Server エージェントを手動で開始できます。 詳細については、「[SQL Server エージェントの構成](../ssms/agent/configure-sql-server-agent.md)」および「[データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)」を参照してください。  
   
@@ -131,7 +131,7 @@ SQL Server Reporting Services の "データ警告" は、関心のある、ま�
   
  次の表は、データ警告の構成要素とその既定値、説明、および場所を一覧にしたものです。  
   
-|設定|Default value|説明|Location|  
+|設定|Default value|説明|場所|  
 |-------------|-------------------|-----------------|--------------|  
 |AlertingCleanupCycleMinutes|20|クリーンアップ サイクルの開始間隔 (分) です。|レポート サーバー構成ファイル|  
 |AlertingExecutionLogCleanupMinutes|10080|実行ログのエントリを保持する時間 (分) です。|レポート サーバー構成ファイル|  
@@ -270,12 +270,12 @@ SQL Server Reporting Services の "データ警告" は、関心のある、ま�
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、その他の [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 機能用のパフォーマンス カウンターも用意されています。 詳細については、「[Performance Counters for the ReportServer:Service  and ReportServerSharePoint:Service Performance Objects](../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)」(ReportServer:Service と ReportServerSharePoint:Service パフォーマンス オブジェクトのパフォーマンス カウンター)、「[MSRS 2011 Web Service と MSRS 2011 Windows Service パフォーマンス オブジェクトのパフォーマンス カウンター &#40;ネイティブ モード&#41;](../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)」、「[Performance Counters for the MSRS 2011 Web Service SharePoint Mode and MSRS 2011 Windows Service SharePoint Mode Performance Objects &#40;SharePoint Mode&#41;](../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)」(MSRS 2011 Web Service SharePoint Mode と MSRS 2011 Windows Service SharePoint Mode パフォーマンス オブジェクトのパフォーマンス カウンター &#40;SharePoint モード&#41;) を参照してください。  
   
-##  <a name="support-for-ssl"></a><a name="SupportForSSL"></a> SSL のサポート  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、HTTP SSL (Secure Sockets Layer) サービスを使用して、レポート サーバーまたは SharePoint サイトへの暗号化接続を確立できます。  
+##  <a name="support-for-tls"></a><a name="SupportForSSL"></a> TLS のサポート  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、HTTP SSL サービスを使用して、レポート サーバーまたは SharePoint サイトへの暗号化接続を確立できます。 トランスポート層セキュリティ (TLS) は、以前は Secure Sockets Layer (SSL) と呼ばれていました。
   
- 警告ランタイム サービスとデータ警告ユーザー インターフェイスは、SSL をサポートしており、SSL と HTTP のいずれを使用している場合にも同様に機能します。ただし、少しだけ異なる点があります。 データ警告定義が SSL 接続を使用して作成された場合は、データ警告メッセージから SharePoint ライブラリにリンク バックする URL にも、SSL が使用されます。 SSL 接続は、URL に HTTP ではなく HTTPS が使用されているという点で区別できます。 同様に、データ警告定義が HTTP 接続を使用して作成された場合は、SharePoint サイトへのリンク バックに HTTP が使用されます。 警告定義が SSL と HTTP のどちらを使用して作成されたかにかかわらず、データ警告デザイナーやデータ警告マネージャーを使用する際のユーザーと警告管理者のエクスペリエンスは同じです。 警告定義の作成時とその後の更新および再保存時との間で、使用されるプロトコル (HTTP または SSL) が変わった場合、リンク URL では元のプロトコルがそのまま使用されます。  
+ 警告ランタイム サービスとデータ警告ユーザー インターフェイスでは、TLS がサポートされており、TLS と HTTP のいずれを使用している場合にも同様に機能します。ただし、少しだけ異なる点があります。 データ警告定義が TLS 接続を使用して作成された場合は、データ警告メッセージから SharePoint ライブラリにリンク バックする URL にも、TLS が使用されます。 TLS 接続は、URL に HTTP ではなく HTTPS が使用されているという点で区別できます。 同様に、データ警告定義が HTTP 接続を使用して作成された場合は、SharePoint サイトへのリンク バックに HTTP が使用されます。 警告定義が TLS と HTTP のどちらを使用して作成されたかにかかわらず、データ警告デザイナーやデータ警告マネージャーを使用する際のユーザーと警告管理者のエクスペリエンスは同じです。 警告定義の作成時とその後の更新および再保存時との間で、使用されるプロトコル (HTTP または TLS) が変わった場合、リンク URL では元のプロトコルがそのまま使用されます。  
   
- SSL を使用するように構成された SharePoint サイトにデータ警告定義を作成し、SSL の要件を取り除いた場合、警告はサイトで引き続き機能します。 サイトが削除された場合は、既定のゾーンのサイトが代わりに使用されます。  
+ TLS を使用するように構成された SharePoint サイトにデータ警告定義を作成し、TLS の要件を取り除いた場合、警告はサイトで引き続き機能します。 サイトが削除された場合は、既定のゾーンのサイトが代わりに使用されます。  
   
 ##  <a name="data-alert-user-interface"></a><a name="UserInterface"></a> データ警告のユーザー インターフェイス  
  データ警告では、警告を管理するための SharePoint ページと、データ警告定義の作成と編集を行うためのデザイナーが用意されています。  

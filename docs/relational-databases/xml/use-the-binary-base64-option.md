@@ -1,5 +1,6 @@
 ---
 title: BINARY BASE64 オプションの使用 | Microsoft Docs
+description: SQL クエリで BINARY BASE64 オプションを使用して、base64 エンコード形式のバイナリ データを取得する方法について説明します。
 ms.custom: ''
 ms.date: 04/03/2020
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 86a7bb85-7f83-412a-b775-d2c379702fe9
 author: RothJa
 ms.author: jroth
-ms.openlocfilehash: 42b2e41bedbce625d38b9d73a06b62817419c92c
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: fffd3833256ee6afa9dd3731d5cf02e99913e565
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665242"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388358"
 ---
 # <a name="use-the-binary-base64-option"></a>BINARY BASE64 オプションの使用
 

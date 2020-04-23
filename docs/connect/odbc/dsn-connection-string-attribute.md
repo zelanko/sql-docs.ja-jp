@@ -1,5 +1,6 @@
 ---
-title: ODBC ドライバーのための DSN と接続文字列のキーワード - SQL Server | Microsoft Docs
+title: ODBC DSN と接続文字列のキーワード
+description: このページでは、ODBC Driver for SQL Server で使用可能な、接続文字列と DSN でのキーワード、および SQLSetConnectAttr と SQLGetConnectAttr に対する接続属性の一覧を示します。
 ms.custom: ''
 ms.date: 02/04/2019
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.reviewer: v-chojas
 ms.author: v-jizho2
 author: karinazhou
-ms.openlocfilehash: bf9b755176913ad144781c5be0ad53150aedcd1b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bf0c3d880b9ebd13106be4247d42afd9d9316da9
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76911246"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528984"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>DSN と接続文字列のキーワードと属性
 
@@ -22,7 +23,7 @@ ms.locfileid: "76911246"
 
 ## <a name="supported-dsnconnection-string-keywords-and-connection-attributes"></a>サポートされる DSN/接続文字列のキーワードおよび接続属性
 
-次の表では、各プラットフォーム (L: Linux、M: Mac、W: Windows) で使用可能なキーワードと属性の一覧を示します。 キーワードまたは属性をクリックすると、詳細が表示されます。
+各プラットフォームに使用できるキーワードと属性を次の表に示します (L:Linux、M: macOS、W: Windows)。 キーワードまたは属性をクリックすると、詳細が表示されます。
 
 | DSN / 接続文字列のキーワード | 接続属性 | プラットフォーム |
 |-|-|-|
@@ -151,7 +152,7 @@ SQL Server のフォールバック接続の使用を制御します。 これ�
 
 ###  <a name="authentication---sql_copt_ss_authentication"></a>認証 - SQL_COPT_SS_AUTHENTICATION
 
-SQL Server に接続するときに使用する認証モードを設定します。 詳しくは、「[Azure Active Directory の使用](using-azure-active-directory.md)」をご覧ください。
+SQL Server に接続するときに使用する認証モードを設定します。 詳細については、「[Azure Active Directory の使用](using-azure-active-directory.md)」をご覧ください。
 
 | キーワードの値 | 属性値 | 説明 |
 |-|-|-|
@@ -168,11 +169,11 @@ SQL Server に接続するときに使用する認証モードを設定します
 
 ### <a name="columnencryption---sql_copt_ss_column_encryption"></a>ColumnEncryption - SQL_COPT_SS_COLUMN_ENCRYPTION
 
-透過的な列の暗号化を制御します (Always Encrypted)。 詳しくは、「[Using Always Encrypted (ODBC) (Always Encrypted の使用 (ODBC))](using-always-encrypted-with-the-odbc-driver.md)」をご覧ください。
+透過的な列の暗号化を制御します (Always Encrypted)。 詳しくは、[Always Encrypted の使用 (ODBC)](using-always-encrypted-with-the-odbc-driver.md) に関する記事をご覧ください。
 
 | キーワードの値 | 属性値 | 説明 |
 |-|-|-|
-|有効|SQL_CE_ENABLED|Always Encrypted を有効にします。|
+|Enabled|SQL_CE_ENABLED|Always Encrypted を有効にします。|
 |無効|SQL_CE_DISABLED|(既定値) Always Encrypted を無効にします。|
 | |SQL_CE_RESULTSETONLY|解読のみを有効にします (結果と戻り値)。|
 
@@ -182,7 +183,7 @@ SQL Server に接続するときに使用する認証モードを設定します
 
 | キーワードの値 | 属性値| 説明 |
 |-|-|-|
-|有効|SQL_IS_ON|(既定値) 透過的なネットワーク IP の解決を有効にします。|
+|Enabled|SQL_IS_ON|(既定値) 透過的なネットワーク IP の解決を有効にします。|
 |無効|SQL_IS_OFF|透過的なネットワーク IP の解決を無効にします。|
 
 ### <a name="usefmtonly"></a>UseFMTONLY
@@ -221,7 +222,7 @@ ClientCertificate 属性に指定された PEM または DER 証明書の秘密�
 
 ### <a name="sql_copt_ss_access_token"></a>SQL_COPT_SS_ACCESS_TOKEN
 
-認証のための Azure Active Directory のアクセス トークンの使用を許可します。 詳しくは、「[Azure Active Directory の使用](using-azure-active-directory.md)」をご覧ください。
+認証のための Azure Active Directory のアクセス トークンの使用を許可します。 詳細については、「[Azure Active Directory の使用](using-azure-active-directory.md)」をご覧ください。
 
 | 属性値 | 説明 |
 |-|-|
@@ -246,7 +247,7 @@ Always Encrypted 用のキーストア プロバイダー ライブラリを読�
 
 ### <a name="sql_copt_ss_enlist_in_xa"></a>SQL_COPT_SS_ENLIST_IN_XA
 
-XA 準拠トランザクション プロセッサ (TP) での XA トランザクションを有効にするには、アプリケーションで SQL_COPT_SS_ENLIST_IN_XA および **オブジェクトへのポインターを指定して**SQLSetConnectAttr`XACALLPARAM` を呼び出す必要があります。 このオプションは、Windows、(17.3 以降) Linux、Mac でサポートされています。
+XA 準拠トランザクション プロセッサ (TP) での XA トランザクションを有効にするには、アプリケーションで SQL_COPT_SS_ENLIST_IN_XA および `XACALLPARAM` オブジェクトへのポインターを指定して **SQLSetConnectAttr** を呼び出す必要があります。 このオプションは、Windows、(17.3 以降の) Linux、macOS でサポートされています。
 ```
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XACALLPARAM *param
 ``` 
@@ -257,7 +258,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, (SQLPOINTER)TRUE, 0);
 
 |値|説明|プラットフォーム|  
 |-----------|-----------------|-----------------|  
-|XACALLPARAM object*|`XACALLPARAM` オブジェクトを指すポインター。|Windows、Linux、Mac|
+|XACALLPARAM object*|`XACALLPARAM` オブジェクトを指すポインター。|Windows、Linux、macOS|
 |TRUE|XA トランザクションを ODBC 接続に関連付けます。 関連するすべてのデータベース アクティビティは、XA トランザクションの保護下で実行されます。|Windows|  
 |FALSE|トランザクションと ODBC 接続の関連付けを解除します。|Windows|
 
@@ -265,7 +266,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, (SQLPOINTER)TRUE, 0);
 
 ### <a name="sql_copt_ss_spid"></a>SQL_COPT_SS_SPID
 
-接続のサーバー プロセス ID を取得します。 これは、サーバーへの追加のラウンドトリップが発生しない点を除き、T-SQL [@@SPID](../../t-sql/functions/spid-transact-sql.md) 変数と同じです。
+接続のサーバー プロセス ID を取得します。 これは、サーバーへの追加のラウンド トリップが発生しない点を除き、T-SQL [@@SPID](../../t-sql/functions/spid-transact-sql.md) 変数と同じです。
 
 | 属性値 | 説明 |
 |-|-|

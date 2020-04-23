@@ -1,5 +1,6 @@
 ---
-title: 修正されたバグの一覧 | Microsoft Docs
+title: 修正されたバグの一覧
+description: このページには Microsoft ODBC Driver 17 for SQL Server 以降の各リリースで修正されたバグの一覧が記載されています。
 ms.custom: ''
 ms.date: 06/29/2018
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: e1be25052ed75370eead58832119d543717b8e16
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0541f875230426f6ebc0fd1f90ac06110861f025
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78896773"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81629722"
 ---
 # <a name="list-of-bugs-fixed"></a>修正されたバグの一覧
 
@@ -30,10 +31,10 @@ ms.locfileid: "78896773"
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-175-for-ssnoversion"></a>[!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.5 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバグ修正
 
-- Linux または Mac 上で AKV CMK メタデータ ハッシュの計算を修正しました
+- Linux または macOS 上で AKV CMK メタデータ ハッシュの計算を修正しました
 - OpenSSL 1.0.0 の読み込み時のエラーを修正しました
 - ISO-8859-1 および ISO-8859-2 のコードページを使用するときの変換の問題を修正しました
-- バージョン番号を含めるように Mac 上の内部ライブラリ名を修正しました
+- バージョン番号を含めるように macOS 上の内部ライブラリ名を修正しました
 - 個別の長さとインジケーターのバインドが使用されている場合の null インジケーターの設定を修正しました
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-1742-for-ssnoversion"></a>[!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.4.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバグ修正
@@ -82,7 +83,7 @@ ms.locfileid: "78896773"
 - 切り詰められた ADAL エラー メッセージを修正しました
 - 浮動小数点数を整数に変換するときに、32 ビット版 Windows でまれに発生するバグを修正しました
 - Always Encrypted がオンの状態で 10 進数フィールドに double を挿入すると、データ切り捨てエラーが返される問題を修正しました
-- MacOS インストーラーの警告を修正しました
+- macOS インストーラーの警告を修正しました
 - 接続の回復性と接続プールの両方が有効な場合、セッション回復の試行中に SQL Server に誤った状態が送信され、サーバーによってセッションがドロップされる原因となっていた問題を修正しました
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-17-for-ssnoversion"></a>[!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバグ修正

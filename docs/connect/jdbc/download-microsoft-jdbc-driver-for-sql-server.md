@@ -1,6 +1,6 @@
 ---
 title: Microsoft SQL Server 用 JDBC Driver のダウンロード
-description: SQL Server に接続する Java アプリケーションを開発するには、Microsoft SQL Server 用 JDBC Driver をダウンロードします。
+description: SQL Server や Azure SQL Database に接続する Java アプリケーションを開発するには、Microsoft JDBC Driver for SQL Server をダウンロードします。
 ms.date: 03/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 451181b8-11e6-4d01-b547-9ac5aada8238
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3f2e9f4d0c89438684201bef3bcb5d764af2cec1
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7ab209588a1bf05380ed1856ddfb90683e3259b3
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922407"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487186"
 ---
 # <a name="download-microsoft-jdbc-driver-for-sql-server"></a>Microsoft SQL Server 用 JDBC Driver のダウンロード
 

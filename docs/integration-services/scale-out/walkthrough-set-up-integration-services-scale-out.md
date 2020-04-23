@@ -5,17 +5,17 @@ ms.custom: performance
 ms.date: 12/13/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
 author: HaoQian-MS
 ms.author: haoqian
-ms.openlocfilehash: c1f2a7670913f2df948201b29f26e0283f27f698
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.reviewer: maghan
+ms.openlocfilehash: b6d36286fc4286c902479271546841841db0b84d
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288746"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488001"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>チュートリアル:Integration Services (SSIS) Scale Out を設定する
 
@@ -66,9 +66,9 @@ Scale Out Master 機能をインストールするには、[!INCLUDE[ssNoVersion
 
     ![マスターの構成](media/master-config.PNG "マスターの構成")
 
-4.  次のいずれかを行って、Scale Out Master と Scale Out Worker の間の通信の保護に使用する SSL 証明書を指定します。
-    * **[新しい SSL 証明書の作成]** をクリックして、セットアップ プロセスで既定の自己署名 SSL 証明書を作成します。  既定の証明書は、ローカル コンピューターの信頼されたルート証明機関にインストールされます。 この証明書で CN を指定できます。 マスター エンドポイントのホスト名は、CN に含める必要があります。 既定では、マスター ノードのコンピューター名と IP が含まれます。
-    * **[既存の SSL 証明書を使用する]** をクリックしてから **[参照]** をクリックして証明書を選択し、ローカル コンピューターで既存の SSL 証明書を選択します。 証明書のサムプリントがテキスト ボックスに表示されます。 **[Browse]** (参照) をクリックすると、ローカル コンピューターの信頼されたルート証明機関に格納されている証明書が表示されます。 選択する証明書はここに格納されている必要があります。       
+4.  次のいずれかを行って、Scale Out Master と Scale Out Worker の間の通信の保護に使用する TLS/SSL 証明書を指定します。
+    * **[新しい SSL 証明書の作成]** をクリックして、セットアップ プロセスで既定の自己署名 TLS/SSL 証明書を作成します。  既定の証明書は、ローカル コンピューターの信頼されたルート証明機関にインストールされます。 この証明書で CN を指定できます。 マスター エンドポイントのホスト名は、CN に含める必要があります。 既定では、マスター ノードのコンピューター名と IP が含まれます。
+    * **[既存の SSL 証明書を使用する]** をクリックしてから **[参照]** をクリックして証明書を選択し、ローカル コンピューターで既存の TLS/SSL 証明書を選択します。 証明書のサムプリントがテキスト ボックスに表示されます。 **[Browse]** (参照) をクリックすると、ローカル コンピューターの信頼されたルート証明機関に格納されている証明書が表示されます。 選択する証明書はここに格納されている必要があります。       
 
     ![マスターの構成 2](media/master-config-2.PNG "マスターの構成 2")
   
@@ -118,14 +118,14 @@ Scale Out Worker 機能をインストールするには、[!INCLUDE[ssNoVersion
     > [!NOTE]
     > ここで Worker 構成を省略し、インストール後に [Scale Out Manager](integration-services-ssis-scale-out-manager.md) を使用して Scale Out Worker を Scale Out Master に関連付けることができます。
 
-4. **複数コンピューター**環境の場合は、Scale Out Master の検証に使用されるクライアント SSL 証明書を指定します。 **1 台のコンピューター**環境では、クライアント SSL 証明書を指定する必要がありません。 
+4. **複数コンピューター**環境の場合は、Scale Out Master の検証に使用されるクライアント TLS/SSL 証明書を指定します。 **1 台のコンピューター**環境では、クライアント TLS/SSL 証明書を指定する必要がありません。 
   
-    **[Browse]** (参照) をクリックして、証明書ファイル (*.cer) を指定します。 既定の SSL 証明書を使用するには、Scale Out Master がインストールされているコンピューター上の `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn` に置かれている `SSISScaleOutMaster.cer` ファイルを選択します。   
+    **[Browse]** (参照) をクリックして、証明書ファイル (*.cer) を指定します。 既定の TLS/SSL 証明書を使用するには、Scale Out Master がインストールされているコンピューター上の `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn` に置かれている `SSISScaleOutMaster.cer` ファイルを選択します。   
 
     ![ワーカーの構成 2](media/worker-config-2.PNG "ワーカーの構成 2")
 
     > [!NOTE]
-    > Scale Out Master で使用される SSL 証明書が自己署名されている場合は、Scale Out Worker のコンピューターに対応するクライアント SSL 証明書をインストールする必要があります。 **[Integration Services スケール アウト ワーカーの構成]** ページでクライアント SSL 証明書のファイル パスを指定した場合、証明書は自動的にインストールされます。それ以外の場合は、後で証明書を手動でインストールする必要があります。 
+    > Scale Out Master で使用される TLS/SSL 証明書が自己署名されている場合は、Scale Out Worker のコンピューターに対応するクライアント TLS/SSL 証明書をインストールする必要があります。 **[Integration Services スケール アウト ワーカーの構成]** ページでクライアント TLS/SSL 証明書のファイル パスを指定した場合、証明書は自動的にインストールされます。それ以外の場合は、後で証明書を手動でインストールする必要があります。 
      
 5. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] インストール ウィザードを最後まで実行します。
 

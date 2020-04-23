@@ -32,12 +32,12 @@ helpviewer_keywords:
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 95acac097d1c3ec5ffd4989058db0c2927441554
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e00888943ae196cfb5b579368a7b05d80c4f1182
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907235"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529120"
 ---
 # <a name="configure-web-synchronization"></a>Web 同期の構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "72907235"
   
  Web 同期は、バージョン 5.0 以降の IIS でサポートされます。 IIS 7.0 では、Web 同期の構成ウィザードはサポートされていません。 SQL Server 2012 以降では、IIS サーバーで Web 同期コンポーネントを使用する場合は、レプリケーションとともに SQL Server をインストールすることをお勧めします。 これは無料の SQL Server Express edition で構いません。  
   
- Web 同期では SSL は必須です。 証明機関によって発行されたセキュリティ証明書が必要になります。 テストだけが目的の場合は、独自に発行したセキュリティ証明書を使用できます。  
+ Web 同期には TLS が必要です。 証明機関によって発行されたセキュリティ証明書が必要になります。 テストだけが目的の場合は、独自に発行したセキュリティ証明書を使用できます。  
    
   
  **Web 同期用に IIS を構成するには**  
@@ -144,7 +144,7 @@ ms.locfileid: "72907235"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ディストリビューターおよびパブリッシャーは、同じコンピューター上に存在できます (マージ レプリケーションの一般的なセットアップ)。 ただし、IIS は別のコンピューターにインストールする必要があります。  
   
--   SSL (Secure Sockets Layer) を使用して、IIS を実行しているコンピューターとサブスクライバーとの間の接続を暗号化します。 これは、Web 同期では必須です。  
+-   トランスポート層セキュリティ (TLS) (旧称 Secure Sockets Layer (SSL)) を使用して、IIS を実行しているコンピューターとサブスクライバーとの間の接続を暗号化します。 これは、Web 同期では必須です。  
   
 -   サブスクライバーから IIS までの接続に基本認証を使用します。 基本認証を使用すると、IIS では、委任を必要とすることなくサブスクライバーの代わりにパブリッシャーやディストリビューターに接続できます。 統合認証を使用する場合は、委任が必要です。  
   
@@ -165,7 +165,7 @@ ms.locfileid: "72907235"
   
 -   レプリケーション トポロジ内のサーバーがファイアウォールの内側にあるとき、Web 同期を有効にするために、ファイアウォールのポートを開くことが必要になる場合があります。  
   
-    -   サブスクライバー コンピューターは、SSL を使用する HTTPS (通常はポート 443 を使用するように構成されます) 経由で、IIS を実行しているコンピューターに接続します。 [!INCLUDE[ssEW](../../includes/ssew-md.md)] サブスクライバーは、HTTP (通常はポート 80 を使用するように構成されます) 経由の接続を実行することもできます。  
+    -   サブスクライバー コンピューターは、TLS を使用する HTTPS (通常はポート 443 を使用するように構成されます) 経由で、IIS を実行しているコンピューターに接続します。 [!INCLUDE[ssEW](../../includes/ssew-md.md)] サブスクライバーは、HTTP (通常はポート 80 を使用するように構成されます) 経由の接続を実行することもできます。  
   
     -   通常、IIS を実行しているコンピューターは、ポート 1433 (既定のインスタンス用) を使用してパブリッシャーまたはディストリビューターに接続します。 パブリッシャーまたはディストリビューターが、サーバー上の既定のインスタンスとは別に存在する名前付きインスタンスである場合、その名前付きインスタンスへの接続には通常はポート 1500 が使用されます。  
   

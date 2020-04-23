@@ -1,5 +1,6 @@
 ---
-title: Microsoft JDBC Driver for SQL Server の機能の依存関係 | Microsoft Docs
+title: Microsoft JDBC Driver の機能の依存関係
+description: Microsoft JDBC Driver for SQL Server の依存関係と、それらを満たす方法について説明します。
 ms.custom: ''
 ms.date: 03/24/2020
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8aa9b287d6d04b8ea21e8a8fd76460005edc5cd5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2a08c60322ba4cb75bef804eafb9a3e68e7df5de
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80917989"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81631202"
 ---
 # <a name="feature-dependencies-of-the-microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver for SQL Server の機能の依存関係
 
@@ -94,13 +95,13 @@ ms.locfileid: "80917989"
 
 ### <a name="working-with-the-azure-key-vault-provider"></a>Azure Key Vault プロバイダーの操作:
 
-- JDBC ドライバー バージョン 8.2.2 - 依存関係のバージョン:Azure-Keyvault (バージョン 1.2.2)、Adal4j (バージョン 1.6.4)、Client-Runtime-for-AutoRest (1.7.0)、およびそれらの依存関係 ([サンプル アプリケーション](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
-- JDBC ドライバー バージョン 7.4.1 - 依存関係のバージョン:Azure-Keyvault (バージョン 1.2.1)、Adal4j (バージョン 1.6.4)、Client-Runtime-for-AutoRest (1.6.10)、およびそれらの依存関係 ([サンプル アプリケーション](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
-- JDBC ドライバー バージョン 7.2.2 - 依存関係のバージョン:Azure-Keyvault (バージョン 1.2.0)、Azure-Keyvault-Webkey (バージョン 1.2.0)、Adal4j (バージョン 1.6.3)、Client-Runtime-for-AutoRest (1.6.5)、およびそれらの依存関係 ([サンプル アプリケーション](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
-- JDBC ドライバー バージョン 7.0.0 - 依存関係のバージョン:Azure-Keyvault (バージョン 1.0.0)、Adal4j (バージョン 1.6.0)、およびそれらの依存関係 ([サンプル アプリケーション](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
-- JDBC ドライバー バージョン 6.4.0 - 依存関係のバージョン:Azure-Keyvault (バージョン 1.0.0)、Adal4j (バージョン 1.4.0)、およびそれらの依存関係 ([サンプル アプリケーション](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
-- JDBC ドライバー バージョン 6.2.2 - 依存関係のバージョン:Azure-Keyvault (バージョン 1.0.0)、Adal4j (バージョン 1.4.0)、およびそれらの依存関係 ([サンプル アプリケーション](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
-- JDBC ドライバー バージョン 6.0.0 - 依存関係のバージョン:Azure-Keyvault (バージョン 0.9.7)、Adal4j (バージョン 1.3.0)、およびそれらの依存関係 ([サンプル アプリケーション](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md))
+- JDBC ドライバー バージョン 8.2.2 - 依存関係のバージョン:Azure-Keyvault (バージョン 1.2.2)、Adal4j (バージョン 1.6.4)、Client-Runtime-for-AutoRest (1.7.0)、およびそれらの依存関係 ([サンプル アプリケーション](azure-key-vault-sample-version-7.0.md))
+- JDBC ドライバー バージョン 7.4.1 - 依存関係のバージョン:Azure-Keyvault (バージョン 1.2.1)、Adal4j (バージョン 1.6.4)、Client-Runtime-for-AutoRest (1.6.10)、およびそれらの依存関係 ([サンプル アプリケーション](azure-key-vault-sample-version-7.0.md))
+- JDBC ドライバー バージョン 7.2.2 - 依存関係のバージョン:Azure-Keyvault (バージョン 1.2.0)、Azure-Keyvault-Webkey (バージョン 1.2.0)、Adal4j (バージョン 1.6.3)、Client-Runtime-for-AutoRest (1.6.5)、およびそれらの依存関係 ([サンプル アプリケーション](azure-key-vault-sample-version-7.0.md))
+- JDBC ドライバー バージョン 7.0.0 - 依存関係のバージョン:Azure-Keyvault (バージョン 1.0.0)、Adal4j (バージョン 1.6.0)、およびそれらの依存関係 ([サンプル アプリケーション](azure-key-vault-sample-version-7.0.md))
+- JDBC ドライバー バージョン 6.4.0 - 依存関係のバージョン:Azure-Keyvault (バージョン 1.0.0)、Adal4j (バージョン 1.4.0)、およびそれらの依存関係 ([サンプル アプリケーション](azure-key-vault-sample-version-6.2.2.md))
+- JDBC ドライバー バージョン 6.2.2 - 依存関係のバージョン:Azure-Keyvault (バージョン 1.0.0)、Adal4j (バージョン 1.4.0)、およびそれらの依存関係 ([サンプル アプリケーション](azure-key-vault-sample-version-6.2.2.md))
+- JDBC ドライバー バージョン 6.0.0 - 依存関係のバージョン:Azure-Keyvault (バージョン 0.9.7)、Adal4j (バージョン 1.3.0)、およびそれらの依存関係 ([サンプル アプリケーション](azure-key-vault-sample-version-6.0.0.md))
 
 > [!NOTE]
 > ドライバーの 6.2.2 および 6.4.0 バージョンでは、azure-keyvault-java の依存関係がバージョン 1.0.0 に更新されています。 ただし、新しいバージョンは前のバージョン (0.9.7) と互換性がないため、ドライバー内の既存の実装は破壊されます。 ドライバーの新しい実装では API を変更する必要があり、これにより、Azure Key Vault Provider を使用しているクライアント プログラムが破壊されます。
@@ -117,15 +118,15 @@ ms.locfileid: "80917989"
 - JDBC ドライバー バージョン 6.2.2 - 依存関係のバージョン:Adal4j (バージョン 1.4.0) とその依存関係
 - JDBC ドライバー バージョン 6.0.0 - 依存関係のバージョン:Adal4j (バージョン 1.3.0)、およびその依存関係。 このバージョンのドライバーでは、Windows オペレーティング システム上で _ActiveDirectoryIntegrated_ 認証モードのみで sqljdbc_auth.dll と SQL Server 用 Active Directory 認証ライブラリ (ADALSQL.DLL) を使用して接続できます。
 
-ドライバーのバージョン 6.4.0 以降、アプリケーションでは、Windows オペレーティング システム上で ADALSQL.DLL を必ず使用する必要はありません。 *Windows 以外のオペレーティング システム*では、ActiveDirectoryIntegrated 認証を機能させるには、ドライバーで Kerberos チケットが必要です。 Kerberos を使用して Active Directory に接続する方法の詳細については、「[Set Kerberos ticket on Windows, Linux, and Mac (Windows、Linux、および Mac で Kerberos チケットを設定する)](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac)」を参照してください。
+ドライバーのバージョン 6.4.0 以降、アプリケーションでは、Windows オペレーティング システム上で ADALSQL.DLL を必ず使用する必要はありません。 *Windows 以外のオペレーティング システム*では、ActiveDirectoryIntegrated 認証を機能させるには、ドライバーで Kerberos チケットが必要です。 Kerberos を使用して Active Directory に接続する方法の詳細については、「[Windows、Linux、macOS で Kerberos チケットを設定する](connecting-using-azure-active-directory-authentication.md#set-kerberos-ticket-on-windows-linux-and-macos)」をご覧ください。
 
 *Windows オペレーティング システム*では、ドライバーは、既定で sqljdbc_auth.dll が検索され、Kerberos チケットの設定も Azure ライブラリの依存関係も必要ありません。 sqljdbc_auth.dll を使用できない場合、ドライバーでは、他のオペレーティング システムと同じように、Active Directory への認証用の Kerberos チケットが検索されます。
 
 ドライバー バージョン 8.2.2 以降、"sqljdbc_auth.dll" は "mssql-jdbc_auth-\<バージョン>-\<arch>.dll" に名前が変更されます。 例: 'mssql-jdbc_auth-8.2.2.x64.dll'
 
-この機能を使用している[サンプル アプリケーション](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)を取得できます。
+この機能を使用している[サンプル アプリケーション](connecting-using-azure-active-directory-authentication.md)を取得できます。
 
 ## <a name="see-also"></a>関連項目
 
 [JDBC Driver GitHub リポジトリ](https://github.com/microsoft/mssql-jdbc)  
-[JDBC Driver API リファレンス](../../connect/jdbc/reference/jdbc-driver-api-reference.md)
+[JDBC Driver API リファレンス](reference/jdbc-driver-api-reference.md)

@@ -1,5 +1,6 @@
 ---
-title: sqlsrv_connect | Microsoft Docs
+title: sqlsrv_connect
+description: 接続リソースを作成し、PHP 用の sql_srv ドライバーを使用して接続を開きます。 既定では、Windows 認証を使用して接続は試行されます。
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 37836b49-258e-45ce-9549-b8bd85d6952d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1804d84913a97c114dddf3ae3cbb6e401f4fa949
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 11521a8aed5f3f45ef4b2f7ca8e5a5e8a713376e
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80902743"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633845"
 ---
 # <a name="sqlsrv_connect"></a>sqlsrv_connect
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,17 +41,17 @@ sqlsrv_connect( string $serverName [, array $connectionInfo])
 #### <a name="parameters"></a>パラメーター  
 *$serverName*: 接続が確立されるサーバー名を指定する文字列です。 この文字列の一部には、インスタンス名 (たとえば、"myserver \instancename") またはポート番号 (たとえば、"myServer, 1521") を含めることができます。 このパラメーターに使用できるオプションの詳細については、「[SQL Native Client での接続文字列キーワードの使用](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)」の「ODBC ドライバー接続文字列キーワード」の Server キーワードの説明を参照してください。  
   
-[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 3.0 以降では、 `"(localdb)\instancename"`で LocalDB インスタンスを指定することもできます。 詳細については、「[LocalDB のサポート](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)」を参照してください。  
+[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 3.0 以降では、 `"(localdb)\instancename"`で LocalDB インスタンスを指定することもできます。 詳細については、「[LocalDB のサポート](php-driver-for-sql-server-support-for-localdb.md)」を参照してください。  
   
-また、 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 3.0 以降では、AlwaysOn 可用性グループへの接続に仮想ネットワーク名を指定することもできます。 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] に対する [!INCLUDE[ssHADR](../../includes/sshadr_md.md)] サポートの詳細については、「[Support for High Availability, Disaster Recovery](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)」 (高可用性およびディザスター リカバリーのサポート) をご覧ください。  
+また、 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 3.0 以降では、AlwaysOn 可用性グループへの接続に仮想ネットワーク名を指定することもできます。 [!INCLUDE[ssHADR](../../includes/sshadr_md.md)] に対する [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] サポートの詳細については、「[Support for High Availability, Disaster Recovery](php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)」 (高可用性およびディザスター リカバリーのサポート) をご覧ください。  
   
-*$connectionInfo* [省略可能]: 接続属性を含む連想 **array** です (たとえば、**array**("Database" => "AdventureWorks"))。 配列でサポートしているキーの一覧については、「 [Connection Options](../../connect/php/connection-options.md) 」を参照してください。  
+*$connectionInfo* [省略可能]: 接続属性を含む連想 **array** です (たとえば、**array**("Database" => "AdventureWorks"))。 配列でサポートしているキーの一覧については、「 [Connection Options](connection-options.md) 」を参照してください。  
   
 ## <a name="return-value"></a>戻り値  
 PHP 接続リソースです。 接続を正常に作成して開くことができない場合、 **false** が返されます。  
   
 ## <a name="remarks"></a>解説  
-*UID* キーおよび *PWD* キーの値がオプションの *$connectionInfo* パラメーターで指定されていない場合、Windows 認証を使用して接続は試行されます。 サーバーに接続する方法の詳細については、「 [How to: Connect Using Windows Authentication](../../connect/php/how-to-connect-using-windows-authentication.md) 」および「 [How to: Connect Using SQL Server Authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md)」を参照してください。  
+*UID* キーおよび *PWD* キーの値がオプションの *$connectionInfo* パラメーターで指定されていない場合、Windows 認証を使用して接続は試行されます。 サーバーに接続する方法の詳細については、「[方法: Windows 認証を使用して接続する](how-to-connect-using-windows-authentication.md)」および「[方法: SQL Server 認証を使用して接続する](how-to-connect-using-sql-server-authentication.md)」を参照してください。  
   
 ## <a name="example"></a>例  
 次の例では、Windows 認証を使用して接続を作成して開きます。 この例では、ローカル コンピューターに SQL Server および [AdventureWorks](https://www.codeplex.com/SqlServerSamples) データベースがインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
@@ -88,9 +89,9 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="see-also"></a>参照  
-[SQLSRV ドライバー API リファレンス](../../connect/php/sqlsrv-driver-api-reference.md)
+[SQLSRV ドライバー API リファレンス](sqlsrv-driver-api-reference.md)
 
-[サーバーへの接続](../../connect/php/connecting-to-the-server.md)
+[サーバーへの接続](connecting-to-the-server.md)
 
-[ドキュメントのコード例について](../../connect/php/about-code-examples-in-the-documentation.md)  
+[ドキュメントのコード例について](about-code-examples-in-the-documentation.md)  
   

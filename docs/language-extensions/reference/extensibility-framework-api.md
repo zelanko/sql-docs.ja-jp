@@ -9,12 +9,12 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bc33ebc4ae271841cba2de73cb9168e1a41e7b69
-ms.sourcegitcommit: fbe0ab88fa8d5aa3ea96629f4ccfa4da5caf74f4
+ms.openlocfilehash: cd1ab5402383681172ff111b7daf5fcea675beaa
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "81012428"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298212"
 ---
 # <a name="extensibility-framework-api-for-sql-server"></a>SQL Server 用の機能拡張フレームワーク API
 
@@ -269,7 +269,7 @@ SQLRETURN InitParam(
 - SQL_PARAM_INPUT
 - SQL_PARAM_INPUT_OUTPUT
 
-## <a name="execute"></a>Execute
+## <a name="execute"></a>実行
 
 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 内の `@script` を実行します。
 
@@ -483,7 +483,7 @@ SQLRETURN CleanupSession(
 
 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 内の `@parallel = 1` の場合、この値の範囲は、0 からクエリの並列処理の次数までです。
 
-## <a name="cleanup"></a>Cleanup
+## <a name="cleanup"></a>クリーンアップ
 
 グローバルな共有情報 (JVM など) をクリーンアップします。
 
@@ -587,7 +587,7 @@ SQLRETURN InstallExternalLibrary(
 *LibraryErrorLength*  
 \[出力\] LibraryError 文字列の長さ。
 
-## <a name="uninstalllibrary"></a>UninstallLibrary
+## <a name="uninstallexternallibrary"></a>UninstallExternalLibrary
 
 ライブラリをアンインストールします。 この関数はオプションであり、実装する必要はありません。 既定の実装では、InstallExternalLibrary の既定の実装によって行われた作業を元に戻します。 既定の実装では、*LibraryInstallDirectory* の下にある *LibraryName* ファイルの内容が削除されます。
 

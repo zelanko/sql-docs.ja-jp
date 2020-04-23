@@ -1,6 +1,6 @@
 ---
 title: SQL クライアント プログラミングのホームページ | Microsoft Docs
-description: SQL Server または Azure SQL Database に接続するための、言語とオペレーティング システムのさまざまな組み合わせのドキュメントを参照およびダウンロードできるページへの注釈付きリンクが記載されているハブ ページ。
+description: SQL Server または Azure SQL Database に接続するための、さまざまな言語とオペレーティング システムのドキュメントを参照およびダウンロードできるページへの注釈付きリンクが記載されているページ。
 author: David-Engel
 ms.date: 11/07/2018
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: v-daveng
 ms.author: v-daenge
-ms.openlocfilehash: df07130ea77578dd467add9d8a96cc331d5c127f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c3f2b6db58879a8d0fd3ce82a89511275fe9d3bb
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924883"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529046"
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Microsoft SQL Server に対するクライアント プログラミングのホーム ページ
 
@@ -23,7 +23,7 @@ ms.locfileid: "80924883"
 Microsoft SQL Server を操作するための、およびクラウドで Azure SQL Database を操作するためのクライアント プログラミングに関するホームページへようこそ。 この記事には以下の情報が含まれています。
 
 - 使用できる言語とドライバーの組み合わせについて説明します。
-    - Linux (Ubuntu など)、MacOS、および Windows のオペレーティング システムに関する情報が提供されています。
+  - Linux (Ubuntu など)、macOS、および Windows のオペレーティング システムに関する情報が提供されています。
 - 各組み合わせの詳細なドキュメントへのリンクを提供します。
 - 特定の言語の階層型ドキュメントの区分とサブ区分を表示します (該当する場合)。
 
@@ -35,7 +35,7 @@ Microsoft SQL Server を操作するための、およびクラウドで Azure S
 Azure SQL Database に接続するための接続文字列の詳細については、以下を参照してください。
 
 - [.NET Core (C#) を使用して Azure SQL データベースに照会する](/azure/sql-database/sql-database-connect-query-dotnet-core)。
-- 目次の前の記事の近くにある、他の言語に関するその他の Azure SQL Database。 たとえば、「[PHP を使用して Azure SQL データベースに照会する](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php)」を参照してください。
+- 目次の前の記事の近くにある、他の言語に関するその他の Azure SQL Database の記事。 たとえば、「[PHP を使用して Azure SQL データベースに照会する](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php)」を参照してください。
 
 
 #### <a name="build-an-app-webpages"></a>Build-an-app の Web ページ
@@ -118,7 +118,7 @@ EF には、次のテクノロジと直接的または間接的なリレーシ�
 
 |     |     |
 | :-- | :-- |
-| [EF 6.x](https://docs.microsoft.com/ef/ef6/) | Microsoft が最初に EF をリリースしたのは 2008 年 8 月です。 そして 2015 年 3 月、Microsoft は、最後の Microsoft 開発バージョンとして EF 6.x を発表し、 ソース コードをパブリック ドメインに公開しました。<br /><br />当初、EF は .NET Framework に含まれていましたが、 EF 6 は .NET Framework から削除されました。<br /><br />[Github の *aspnet/EntityFramework6* リポジトリの EF 6.x ソース コード](https://github.com/aspnet/EntityFramework6) |
+| [EF 6.x](https://docs.microsoft.com/ef/ef6/) | Microsoft が最初に EF をリリースしたのは 2008 年 8 月です。 そして 2015 年 3 月、Microsoft は、最後の Microsoft 開発バージョンとして EF 6.x を発表し、 ソース コードをパブリック ドメインに公開しました。<br /><br />当初、EF は .NET Framework に含まれていましたが、 EF 6 は .NET Framework から削除されました。<br /><br />[GitHub の *aspnet/EntityFramework6* リポジトリの EF 6.x ソース コード](https://github.com/aspnet/EntityFramework6) |
 | [EF Core](https://docs.microsoft.com/ef/core/) | 2016 年 6 月、Microsoft は新しく開発された EF Core をリリースしました。 EF Core は、柔軟性と移植性の向上を目指して設計されたもので、 Microsoft Windows 以外のオペレーティング システムで実行できます。 また、EF Core では、Microsoft SQL Server やその他のリレーショナル データベース以外のデータベースを操作することもできます。<br /><br />**C&#x23; のコード例:**<br />[Entity Framework Core の概要](https://docs.microsoft.com/ef/core/get-started/index)<br />[既存のデータベースを使用した .NET Framework 上の EF Core の概要](https://docs.microsoft.com/ef/core/get-started/full-dotnet/existing-db) |
 | &nbsp; | <br /> |
 
@@ -132,7 +132,7 @@ EF とその関連テクノロジは強力で、すべての区分を習得し�
 
 ## <a name="java-logoimage-ref-330-java-java-and-jdbc"></a>![Java のロゴ][image-ref-330-java] Java と JDBC
 
-Microsoft は、SQL Server で使用するための Java Database Connectivity (JDBC) ドライバーを提供しています (もちろん、Azure SQL Database で使用するためのドライバーもあります)。 これは Type 4 JDBC ドライバーであり、標準の JDBC アプリケーション プログラム インターフェイス (API) によってデータベース接続を提供します。
+Microsoft からは、SQL Server (または Azure SQL Database) で使用するための Java Database Connectivity (JDBC) ドライバーが提供されています。 これは Type 4 JDBC ドライバーであり、標準の JDBC アプリケーション プログラム インターフェイス (API) によってデータベース接続を提供します。
 
 #### <a name="code-examples"></a>コード例
 
@@ -162,9 +162,9 @@ JDBC ドキュメントに含まれる主な区分を次に示します。
 
 ## <a name="nodejs-logoimage-ref-340-node-nodejs"></a>![Node.js のロゴ][image-ref-340-node] Node.js
 
-Node.js を使用すると、Windows、Linux、または Mac から SQL Server に接続できます。 Node.js ドキュメントのルートについては、[こちら](./node-js/index.md)をご覧ください。
+Node.js を使用すると、Windows、Linux、または macOS から SQL Server に接続できます。 Node.js ドキュメントのルートについては、[こちら](./node-js/index.md)をご覧ください。
 
-SQL Server 用の Node.js 接続ドライバーは JavaScript で実装されます。 このドライバーで使用される TDS プロトコルは、最新バージョンのすべての SQL Server でサポートされています。 このドライバーは、[Github で入手できる](https://tediousjs.github.io/tedious/)オープンソース プロジェクトです。
+SQL Server 用の Node.js 接続ドライバーは JavaScript で実装されます。 このドライバーで使用される TDS プロトコルは、最新バージョンのすべての SQL Server でサポートされています。 このドライバーはオープンソース プロジェクトであり、[GitHub で入手できます](https://tediousjs.github.io/tedious/)。
 
 #### <a name="code-examples"></a>コード例
 
@@ -179,7 +179,7 @@ SQL Server 用の Node.js 接続ドライバーは JavaScript で実装されま
 
 <a name="an-160-odbc-cpp-docu" />
 
-## <a name="odbc-for-c"></a>C++ 用の ODBC 
+## <a name="odbc-for-c"></a>C++ 用の ODBC
 
 ![ODBC のロゴ][image-ref-350-odbc] ![cpp-big-plus][image-ref-322-cpp]
 
@@ -201,7 +201,7 @@ SQL Server 用の Node.js 接続ドライバーは JavaScript で実装されま
 | 領域 | サブ区分 | 説明 |
 | :--- | :------ | :---------- |
 | [C++ 用の ODBC](./odbc/index.md) | ドキュメントのルート。 |
-| [Linux、Mac](./odbc/linux-mac/index.md) | &nbsp; | Linux または MacOS オペレーティング システムでの ODBC の使用に関する情報。 |
+| [Linux-macOS](./odbc/linux-mac/index.md) | &nbsp; | Linux または macOS オペレーティング システムでの ODBC の使用に関する情報。 |
 | [Windows](./odbc/windows/index.md)     | &nbsp; | Windows オペレーティング システムでの ODBC の使用に関する情報。 |
 | [管理](../odbc/admin/index.md) | &nbsp; | ODBC データ ソースを管理するための管理ツール。 |
 | [Microsoft](../odbc/microsoft/index.md)  | &nbsp; | Microsoft によって作成および提供される各種 ODBC ドライバー。 |
@@ -271,7 +271,7 @@ Ruby を使用して SQL Server と対話できます。 Ruby ドキュメント
 | :-- | :-- |
 | [Ruby を使用した SQL への接続を概念実証する](./ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md) | SQL Server の接続とクエリに重点を置いた小さなコード例。 |
 | [Azure SQL データベース: Ruby を使用してクエリを実行する](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-ruby) | Azure SQL Database の例。 |
-| [Ruby アプリを作成して MacOS で SQL Server を使用する](https://www.microsoft.com/sql-server/developer-get-started/ruby/mac/) | 構成情報とコード例。 |
+| [Ruby アプリを作成して macOS で SQL Server を使用する](https://www.microsoft.com/sql-server/developer-get-started/ruby/mac/) | 構成情報とコード例。 |
 | &nbsp; | <br /> |
 
 
@@ -293,7 +293,7 @@ Ruby を使用して SQL Server と対話できます。 Ruby ドキュメント
 
 次に Web サイトで提供されている詳細情報の概略をいくつか示します。
 
-#### <a name="java-on-ubuntu"></a>Ubuntu 上の Java:
+#### <a name="java-on-ubuntu"></a>Ubuntu 上の Java
 
 1. 環境の設定方法
     - 手順 1.1 SQL Server をインストールする
@@ -306,7 +306,7 @@ Ruby を使用して SQL Server と対話できます。 Ruby ドキュメント
 3. Java アプリを最大 100 倍高速化する
     - 手順3.1 Java アプリを作成して列ストア インデックスを示す
 
-#### <a name="python-on-windows"></a>Windows 上の Python:
+#### <a name="python-on-windows"></a>Windows 上の Python
 
 1. 環境の設定方法
     - 手順 1.1 SQL Server をインストールする
@@ -325,13 +325,13 @@ Ruby を使用して SQL Server と対話できます。 Ruby ドキュメント
 
 次のスクリーンショットは、SQL 開発ドキュメントの Web サイトがどのように表示されるかを示しています。
 
-#### <a name="choose-a-language"></a>言語の選択:
+#### <a name="choose-a-language"></a>言語の選択
 
 ![SQL Dev Web サイト、概要][image-ref-390-aka-ms-sqldev-choose-language]
 
 &nbsp;
 
-#### <a name="choose-an-operating-system"></a>オペレーティング システムの選択:
+#### <a name="choose-an-operating-system"></a>オペレーティング システムの選択
 
 ![SQL Dev Web サイト、Java Ubuntu][image-ref-400-aka-ms-sqldev-java-ubuntu]
 

@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: d3dadf7955dcb61b5d652a1190280926af09c4ae
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 27087dd1ef9291cd75f8ef5f9b38f822b8900295
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286886"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487991"
 ---
 # <a name="scale-out-support-for-high-availability"></a>高可用性を実現するための Scale Out のサポート
 
@@ -53,7 +53,7 @@ Scale Out Master のプライマリ ノードに SQL Server データベース �
 ## <a name="3-install-scale-out-master-on-the-secondary-node"></a>3.セカンダリ ノードに Scale Out Master をインストールする
 Scale Out Master のセカンダリ ノードに SQL Server データベース エンジン サービス、Integration Services、Scale Out Master をインストールします。 
 
-プライマリ ノードで使用したものと同じ Scale Out Master 証明書を使用します。 プライマリ ノードで、Scale Out Master SSL 証明書を秘密キーと共にエクスポートし、セカンダリ ノード上のローカル コンピューターのルート証明書ストアにインストールします。 セカンダリ ノードに Scale Out Master をインストールするときに、この証明書を選択します。
+プライマリ ノードで使用したものと同じ Scale Out Master 証明書を使用します。 プライマリ ノードで、Scale Out Master TLS/SSL 証明書を秘密キーと共にエクスポートし、セカンダリ ノード上のローカル コンピューターのルート証明書ストアにインストールします。 セカンダリ ノードに Scale Out Master をインストールするときに、この証明書を選択します。
 
 ![HA マスターの構成 2](media/ha-master-config2.PNG)
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1ab2635d-0992-4c99-b17d-041d02ec9a7c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a282ed4ce04df00a062fb1b910318125e23b1634
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2c5e66e7ff2b36cd63acb4d05b6503f0bbc33a4a
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68078782"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528746"
 ---
 # <a name="replication-security-best-practices"></a>レプリケーション セキュリティの推奨事項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,9 +28,9 @@ ms.locfileid: "68078782"
   
  次の情報は、すべての環境のレプリケーションに関連します。  
   
--   レプリケーション トポロジ内のコンピューター間の接続を、仮想プライベート ネットワーク (VPN)、SSL (Secure Sockets Layer)、IPSEC (IP Secrity) などの業界標準の方式を使用して暗号化する。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。 VPN と SSL を使用したインターネット経由のデータのレプリケーションについては、「 [Securing Replication Over the Internet](../../../relational-databases/replication/security/securing-replication-over-the-internet.md)」を参照してください。  
+-   レプリケーション トポロジ内のコンピューター間の接続を、仮想プライベート ネットワーク (VPN)、トランスポート層セキュリティ (TLS) (旧称 Secure Sockets Layer (SSL))、IPSEC (IP Secrity) などの業界標準の方式を使用して暗号化します。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。 VPN と TLS を使用したインターネット経由のデータのレプリケーションについては、「[インターネット経由のレプリケーションのセキュリティ](../../../relational-databases/replication/security/securing-replication-over-the-internet.md)」をご覧ください。  
   
-     SSL を使用してレプリケーション トポロジのコンピューター間の接続をセキュリティで保護する場合、各レプリケーション エージェントの **-EncryptionLevel** パラメーターに値 **1** または **2** を指定します (値 **2** が推奨値です)。 値 **1** は、暗号化を使用していますが、SSL サーバー証明書が信頼されている発行者によって署名されていることをエージェントが検証していないことを示します。値 **2** は、証明書が検証されていることを示します。 エージェント パラメーターは、エージェント プロファイルおよびコマンド ラインで指定できます。 詳細については、次を参照してください。  
+     TLS を使用してレプリケーション トポロジのコンピューター間の接続をセキュリティで保護する場合、各レプリケーション エージェントの **-EncryptionLevel** パラメーターに値 **1** または **2** を指定します (値 **2** が推奨値です)。 値 **1** は、暗号化を使用していますが、TLS/SSL サーバー証明書が信頼されている発行者によって署名されていることをエージェントが検証していないことを示します。値 **2** は、証明書が検証されていることを示します。 エージェント パラメーターは、エージェント プロファイルおよびコマンド ラインで指定できます。 詳細については、次を参照してください。  
   
     -   [レプリケーション エージェント プロファイルの操作](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   

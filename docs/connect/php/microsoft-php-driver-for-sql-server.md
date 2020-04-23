@@ -1,5 +1,6 @@
 ---
 title: Microsoft SQL Server 用 Drivers for PHP | Microsoft Docs
+description: Microsoft Drivers for PHP for SQL Server を使用すると、PHP 拡張機能を介して SQL Server for PHP アプリケーションと統合することができます。
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b13d533ae1acd2fee069a2418b70cf9489d74884
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 007bc81ce5528d1f03f73716bf54b325c48a0ff9
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922844"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486739"
 ---
 # <a name="microsoft-drivers-for-php-for-sql-server"></a>Microsoft SQL Server 用 Drivers for PHP
 
@@ -24,10 +25,10 @@ ms.locfileid: "80922844"
 Microsoft Drivers for PHP for SQL Server を使用すると、PHP アプリケーション用に SQL Server を統合することができます。 このドライバーは、PHP スクリプト内から SQL Server データの読み取りと書き込みを可能にする PHP 拡張機能であり、 Azure SQL Database 内のデータおよび SQL Server 2005 以降のすべてのエディション (Express Edition を含む) 内のデータにアクセスするためのインターフェイスを提供します。 このドライバーは、PHP ストリームなどの PHP 機能を使用して、ラージ オブジェクトの読み取りと書き込みを行います。  
   
 ## <a name="getting-started"></a>作業の開始  
-* [ステップ 1: PHP 開発用に開発環境を構成する](step-1-configure-development-environment-for-php-development.md)  
-* [ステップ 2: PHP 開発用のデータベースを作成する](step-2-create-a-sql-database-for-php-development.md)  
-* [ステップ 3: PHP を使用した SQL への接続を概念実証する](step-3-proof-of-concept-connecting-to-sql-using-php.md)  
-* [ステップ 4: PHP で SQL に弾性的に接続する](step-4-connect-resiliently-to-sql-with-php.md)  
+* [ステップ 1:PHP 開発用に開発環境を構成する](step-1-configure-development-environment-for-php-development.md)  
+* [手順 2:PHP 開発用のデータベースを作成する](step-2-create-a-sql-database-for-php-development.md)  
+* [ステップ 3:PHP を使用した SQL への接続を概念実証する](step-3-proof-of-concept-connecting-to-sql-using-php.md)  
+* [手順 4:PHP を使用して SQL に弾性的に接続する](step-4-connect-resiliently-to-sql-with-php.md)  
   
 ## <a name="documentation"></a>ドキュメント  
 * [作業の開始](getting-started-with-the-php-sql-driver.md)

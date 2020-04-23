@@ -1,5 +1,6 @@
 ---
 title: Microsoft ODBC Driver for SQL Server | Microsoft Docs
+description: Microsoft ODBC Driver for SQL Server を使うと、標準の ODBC API を使用して SQL Server や Azure SQL Database に接続できます。
 ms.custom: ''
 ms.date: 02/05/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 957ece4fb8062da2e6dbff1cc84c44c81f019580
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8eb3024d231522ce9c96e9a9cacd48a97c0b5869
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921154"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486777"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft SQL Server 用 ODBC Driver
 
@@ -39,7 +40,7 @@ ODBC ドライバーには、[**sqlcmd**](../../tools/sqlcmd-utility.md) や [**
 
 ## <a name="documentation"></a>ドキュメント
 
-### <a name="features"></a>[機能]
+### <a name="features"></a>特徴
 
 - [カスタム キーストア プロバイダー](../../connect/odbc/custom-keystore-providers.md)
 - [データ分類](../../connect/odbc/data-classification.md)
