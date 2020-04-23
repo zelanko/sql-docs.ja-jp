@@ -10,12 +10,12 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c9fe67c3fe0656924ea8e53c4c937a99b588b46b
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.openlocfilehash: cb77d8abdc0b4a8ca67996433e5399740c7bdc0c
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81388496"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82086887"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>チュートリアル: 詳細レポートとメイン レポートの作成 (レポート ビルダー)
   このチュートリアルでは、詳細レポートとメイン レポートの 2 種類のレポートの作成方法を説明します。 これらのレポートで使用する売上データのサンプルは、Analysis Services キューブから取得します。 次の図は、作成するレポートを示しています。  
@@ -153,7 +153,7 @@ ms.locfileid: "81388496"
 2.  **[キューブの選択]** ダイアログ ボックスで、Sales をクリックし、 **[OK]** をクリックします。  
   
     > [!TIP]  
-    >  MDX クエリを手動で作成しない場合は、![デザイン モードへの切り替え](../analysis-services/media/rsqdicon-designmode.gif "デザイン モードに切り替える") アイコンをクリックしてクエリ デザイナーをクエリ モードに切り替え、完成した MDX をクエリ デザイナーに貼り付けます。その後、「[データセットを作成するには](#DSkip)」の手順 6 に進みます。  
+    >  MDX クエリを手動で作成しない場合は、![デザイン モードへの切り替え](media/rsqdicon-designmode.gif "デザイン モードに切り替える") アイコンをクリックしてクエリ デザイナーをクエリ モードに切り替え、完成した MDX をクエリ デザイナーに貼り付けます。その後、「[データセットを作成するには](#DSkip)」の手順 6 に進みます。  
   
     ```  
     SELECT NON EMPTY { [Measures].[Sales Amount], [Measures].[Sales Return Amount] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS * [Product].[Product Subcategory Name].[Product Subcategory Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
@@ -376,7 +376,7 @@ ms.locfileid: "81388496"
     Http://<ServerName>/<Sites>/  
     ```  
   
-4.  **[保存]** をクリックします。  
+4.  [**保存**] をクリックします。  
   
      **[最近使ったサイトとサーバー]** に、SharePoint サイトのライブラリの一覧が表示されます。  
   
@@ -387,7 +387,7 @@ ms.locfileid: "81388496"
     > [!NOTE]  
     >  メイン レポートも同じ場所に保存します。 メイン レポートと詳細レポートをそれぞれ異なるサイトまたはライブラリに保存する場合は、メイン レポートの **[レポートに移動する]** アクションのパスを更新する必要があります。  
   
-7.  **[保存]** をクリックします。  
+7.  [**保存**] をクリックします。  
   
 ##  <a name="1-create-a-new-report-from-the-table-or-matrix-wizard"></a><a name="MMatrixAndDataset"></a>1. テーブルまたはマトリックス ウィザードから新しいレポートを作成する  
  **[作業の開始]** ダイアログ ボックスから、 **テーブルまたはマトリックス ウィザード**を使用してマトリックス レポートを作成します。  
@@ -644,7 +644,7 @@ ms.locfileid: "81388496"
   
 4.  **[3 つの図形]** をクリックし、 **[OK]** をクリックします。  
   
-5.  インジケーターを右クリックし、ゲージ データ ペインで、 **[(未指定)]** の横にある下矢印をクリックします。 [`Net_QTY`] を選択します。  
+5.  インジケーターを右クリックし、ゲージ データ ペインで、 **[(未指定)]** の横にある下矢印をクリックします。 `Net_QTY` を選択します。  
   
 6.  `[Sum(Net QTY)]` [合計] `[Product_Category_Name]` の **行グループにある**セルに対して、手順 2. ～ 5. を繰り返します。  
   
@@ -656,7 +656,7 @@ ms.locfileid: "81388496"
   
 3.  **[3 つの図形]** をクリックし、 **[OK]** をクリックします。  
   
-4.  インジケーターを右クリックし、ゲージ データ ペインで、 **[(未指定)]** の横にある下矢印をクリックします。 [`Net_Sales`] を選択します。  
+4.  インジケーターを右クリックし、ゲージ データ ペインで、 **[(未指定)]** の横にある下矢印をクリックします。 `Net_Sales` を選択します。  
   
 5.  `[Sum(Net_Sales)]` [合計] `[Product_Category_Name]` の **行グループにある**セルに対して、手順 1. ～ 4. を繰り返します。  
   
@@ -716,7 +716,7 @@ ms.locfileid: "81388496"
     > [!IMPORTANT]  
     >  メイン レポートは、詳細レポートを保存した場所と同じ場所に保存します。 メイン レポートと詳細レポートをそれぞれ異なるサイトまたはライブラリに保存する場合は、メイン レポートの **[レポートに移動する]** アクションで指定されている詳細レポートの場所が正しいことを確認してください。  
   
-7.  **[保存]** をクリックします。  
+7.  [**保存**] をクリックします。  
   
 ##  <a name="8-run-the-main-and-drillthrough-reports"></a><a name="MRunReports"></a>8. メイン レポートとドリルスルー レポートの実行  
  メイン レポートを実行し、製品カテゴリの列の値をクリックして詳細レポートを実行します。  

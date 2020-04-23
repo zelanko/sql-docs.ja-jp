@@ -12,12 +12,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 851c138e00300a303b1618041a16e2c38516968e
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 4f4ebcbf84da7d899b4d4cbd861cfb2ae3f75863
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81301262"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087562"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>dm_pdw_exec_requests (トランザクション-SQL)
 
@@ -38,11 +38,11 @@ ms.locfileid: "81301262"
 |label|**nvarchar(255)**|SELECT クエリ ステートメントに関連付けられているオプションのラベル文字列。|'a-z'、'A-Z'、'0-9''を含む文字列。|  
 |error_id|**nvarchar(36)**|要求に関連付けられているエラーの一意の ID (存在する場合)。|[「トランザクション SQL&#41;&#40;sys.dm_pdw_errors ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md)」を参照してください。エラーが発生しなかった場合は NULL に設定されます。|  
 |database_id|**int**|明示的なコンテキストで使用されるデータベースの識別子 (たとえば、USE DB_X)。|[「トランザクション SQL&#41;&#40;sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)の ID 」を参照してください。|  
-|command|**nvarchar(4000)**|ユーザーが送信した要求の全文を保持します。|有効なクエリまたは要求テキスト。 4000 バイトを超えるクエリは切り捨てられます。|  
+|command|**nvarchar (4000)**|ユーザーが送信した要求の全文を保持します。|有効なクエリまたは要求テキスト。 4000 バイトを超えるクエリは切り捨てられます。|  
 |resource_class|**nvarchar(20)**|この要求に使用されるワークロード・グループ。 |静的リソース クラス</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>動的リソース クラス</br>スモールRC</br>ミディアムRC</br>ラージRC</br>エクスラージ|
 |importance|**nvarchar(128)**|要求の実行時の重要度の設定。  これは、このワークロード グループ内の要求と、共有リソースのワークロード グループ間の要求の相対的な重要度です。  分類子で指定された重要度は、ワークロード・グループの重要度設定をオーバーライドします。</br>適用対象: Azure SQL Data Warehouse|NULL</br>low</br>below_normal</br>通常 (デフォルト)</br>above_normal</br>high|
-|group_name|**Sysname** |リソースを使用する要求の場合、group_nameは、要求が実行されているワークロード・グループの名前です。  要求がリソースを使用しない場合、group_nameは null です。</br>適用対象: Azure SQL Data Warehouse|
-|classifier_name|**Sysname**|リソースを利用する要求の場合、リソースおよび重要度の割り当てに使用される分類子の名前。||
+|group_name|**sysname** |リソースを使用する要求の場合、group_nameは、要求が実行されているワークロード・グループの名前です。  要求がリソースを使用しない場合、group_nameは null です。</br>適用対象: Azure SQL Data Warehouse|
+|classifier_name|**sysname**|リソースを利用する要求の場合、リソースおよび重要度の割り当てに使用される分類子の名前。||
 |resource_allocation_percentage|**10進数(5,2)**|要求に割り当てられたリソースの割合。</br>適用対象: Azure SQL Data Warehouse|
 |result_cache_hit|**16 進 数**|完了したクエリで結果セット キャッシュが使用されたかどうかを詳細に示します。  </br>適用対象: Azure SQL Data Warehouse| 1 = 結果セット キャッシュ ヒット </br> 0 = 結果セット キャッシュ ミス </br> 負の値 = 結果セットのキャッシュが使用されなかった理由。  詳細については、「備考」を参照してください。|
 ||||
@@ -52,7 +52,7 @@ ms.locfileid: "81301262"
 
  result_cache_hitは、クエリが結果セット キャッシュを使用するビットマスクです。  この列は[|(ビット単位 OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md)1 つ以上の値を示します。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|結果セット キャッシュ ヒット|  
 |-**0x00**|結果セット のキャッシュ ミス|  
@@ -62,7 +62,7 @@ ms.locfileid: "81301262"
 |-**0x08**|行レベルのセキュリティ述語のため、結果セットのキャッシュは無効になっています。|  
 |-**0x10**|クエリでシステム テーブル、一時テーブル、または外部テーブルを使用しているため、結果セットのキャッシュは無効になります。|  
 |-**0x20**|クエリにランタイム定数、ユーザー定義関数、または非決定的関数が含まれているため、結果セットのキャッシュは無効になります。|  
-|-**0x40**|結果セットのサイズが大きすぎるため (100 万行>) 結果セットのキャッシュが無効になります。|  
+|-**0x40**|結果セットのサイズが 10 GB >見積もりされているため、結果セットのキャッシュは無効になっています。|  
 |-**0x80**|結果セットに大きなサイズ (>64 kb) の行が含まれているため、結果セットのキャッシュは無効になります。|  
   
 ## <a name="permissions"></a>アクセス許可
