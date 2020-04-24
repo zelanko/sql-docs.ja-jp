@@ -27,12 +27,12 @@ ms.assetid: c6966fb7-6421-47ef-98f3-82351f2f6bdc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f79e7931e0e1fd04a699620f65c1dc2566347202
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e46257d1853ee8aa744c805be424b13f2f9f34bb
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68140230"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635741"
 ---
 # <a name="set-rowcount-transact-sql"></a>SET ROWCOUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "68140230"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 SET ROWCOUNT { number | @number_var }   
 ```  
   
@@ -70,7 +70,7 @@ SET ROWCOUNT { number | @number_var }
 ## <a name="examples"></a>例  
  SET ROWCOUNT を指定した場合、指定した行数が返されると処理は停止します。 次の例では、500 行を超える行数は、`Quantity` が `300` より少ないという条件を満たしていますが、 SET ROWCOUNT の適用後、すべての行が返されたわけではないことがわかります。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT count(*) AS Count  
@@ -91,20 +91,20 @@ GO
   
  ここで `ROWCOUNT` を `4` に設定し、すべての行のうち、4 行だけが返されることを確認します。  
   
-```  
+```sql
 SET ROWCOUNT 4;  
 SELECT *  
 FROM Production.ProductInventory  
 WHERE Quantity < 300;  
 GO  
   
-(4 row(s) affected)
+-- (4 row(s) affected)
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  SET ROWCOUNT を指定した場合、指定した行数が返されると処理は停止します。 次の例では、20 より多くの行が `AccountType = 'Assets'` の条件を満たしていることに注意してください。 SET ROWCOUNT の適用後、すべての行が返されたわけではないことがわかります。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SET ROWCOUNT 5;  
@@ -114,7 +114,7 @@ WHERE AccountType = 'Assets';
   
  すべての行を返すには、ROWCOUNT を 0 に設定します。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SET ROWCOUNT 0;  
