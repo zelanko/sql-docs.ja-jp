@@ -10083,8 +10083,8 @@
           href: sql-server/partner-management-sql-server.md
         - name: 開発
           href: sql-server/partner-dev-sql-server.md
-    - name: ヘルプ ビューアーでのローカル コンテンツ
-      href: sql-server/sql-server-help-installation.md
+    - name: オフライン SQL Server のドキュメント
+      href: sql-server/sql-server-offline-documentation.md
 - name: リファレンス
   items:
     - name: アーカイブ コンテンツ (SQL 2005 から 2012) >
