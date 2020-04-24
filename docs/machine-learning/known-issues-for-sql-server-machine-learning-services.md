@@ -7,17 +7,17 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7151d375385cc7af54a68a141274a033011759e6
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: 87cea1d05376669292edb824631c3834328763f0
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "81119075"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487191"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services での既知の問題
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-この記事では、[SQL Server Machine Learning Services](what-is-sql-server-machine-learning.md) および [SQL Server 2016 R Services](r/sql-server-r-services.md) でオプションとして提供される機械学習コンポーネントでの既知の問題または制限事項について説明します。
+この記事では、[SQL Server Machine Learning Services](sql-server-machine-learning-services.md) および [SQL Server 2016 R Services](r/sql-server-r-services.md) でオプションとして提供される機械学習コンポーネントでの既知の問題または制限事項について説明します。
 
 ## <a name="setup-and-configuration-issues"></a>セットアップと構成に関する問題
 

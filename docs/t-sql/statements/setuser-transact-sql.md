@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7acfac5c-9ad6-4226-b874-7add36c4ea43
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 66830b3000d749ab17a5800c3450c5880c5d1aba
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7293db962cb8e74e234a0a168afa1600ee29fd67
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68076443"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633567"
 ---
 # <a name="setuser-transact-sql"></a>SETUSER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "68076443"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 SETUSER [ 'username' [ WITH NORESET ] ]   
 ```  
@@ -67,7 +67,7 @@ SETUSER [ 'username' [ WITH NORESET ] ]
 ## <a name="examples"></a>例  
  この例では、データベース所有者が別のユーザーの ID を借用する方法を示します。 ユーザー `mary` は、`computer_types` という名前のテーブルを作成しました。 SETUSER を使用して、データベース所有者は `mary` の権限を借用し、ユーザー `joe` に `computer_types` テーブルへのアクセス権を与え、その後自分自身の ID をリセットします。  
   
-```  
+```sql
 SETUSER 'mary';  
 GO  
 GRANT SELECT ON computer_types TO joe;  

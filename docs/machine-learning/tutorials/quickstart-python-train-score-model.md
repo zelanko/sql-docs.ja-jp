@@ -10,17 +10,17 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c6c74d73a531a40e0f8e57e7104109de71e27ce3
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 2eeb4bd6a384b37d8a0d7f2bd15e8ea126654a4e
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116295"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487339"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>クイック スタート:SQL Server Machine Learning Services を使用して Python で予測モデルを作成してスコア付けする
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-このクイックスタートでは、Python を使用して予測モデルを作成してトレーニングします。 モデルを SQL Server インスタンスのテーブルに保存し、そのモデルを使用し、[SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md) を使用して新しいデータから値を予測します。
+このクイックスタートでは、Python を使用して予測モデルを作成してトレーニングします。 モデルを SQL Server インスタンスのテーブルに保存し、そのモデルを使用し、[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) を使用して新しいデータから値を予測します。
 
 SQL で実行されている 2 つのストアド プロシージャを作成して実行します。 最初の例では、クラシックなアヤメの花のデータセットを使用して、花の特性に基づいてアヤメの種を推測する Naïve Bayes モデルを生成します。 2 番目のプロシージャはスコアリング用で、最初のプロシージャで生成されたモデルを呼び出して、新しいデータに基づいて一連の予測を出力します。 SQL ストアド プロシージャに Python コードを配置することで、操作は SQL に格納され、再利用可能になり、他のストアド プロシージャやクライアント アプリケーションから呼び出すことができます。
 
@@ -186,4 +186,4 @@ SQL Server で再利用するために格納されているモデルは、バイ
 
 SQL Server Machine Learning Services の詳細については、次を参照してください。
 
-- [SQL Server Machine Learning Services (Python と R) とは](../what-is-sql-server-machine-learning.md)
+- [SQL Server Machine Learning Services (Python と R) とは](../sql-server-machine-learning-services.md)

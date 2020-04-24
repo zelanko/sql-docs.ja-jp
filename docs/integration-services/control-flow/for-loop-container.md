@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 26d7442164d4d018feb6066e6cafdf12c9312429
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cf4b7ebc576908cdccabdd3d92eec7420705b44d
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294153"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488176"
 ---
 # <a name="for-loop-container"></a>For ループ コンテナー
 
@@ -73,8 +73,6 @@ ms.locfileid: "71294153"
 ##  <a name="configure-the-for-loop-container"></a>For ループ コンテナーを構成する
 この手順では、 **[For ループ エディター]** ダイアログ ボックスを使用して、For ループ コンテナーを構成する方法について説明します。  
   
- For ループ コンテナーの例については、bimonkey.com の「 [失敗しない SSIS ループ](https://go.microsoft.com/fwlink/?LinkId=240295) 」を参照してください。  
-  
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、For ループ コンテナーをダブルクリックして **[For ループ エディター]** を開きます。  
   
 2.  必要に応じて、For ループ コンテナーの名前と説明を変更します。  
@@ -97,7 +95,7 @@ ms.locfileid: "71294153"
   
  For ループ コンテナーの概要とパッケージ内で For ループ コンテナーを使用する方法の詳細については、「 [For Loop Container](../../integration-services/control-flow/for-loop-container.md)」を参照してください。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **[InitExpression]**  
  必要に応じて、ループが使用する値を初期化する式を指定します。  
   
@@ -107,7 +105,7 @@ ms.locfileid: "71294153"
  **[AssignExpression]**  
  必要に応じて、ループの繰り返しごとに条件を変更する式を指定します。  
   
- **Name**  
+ **名前**  
  For ループ コンテナーに一意な名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
 > [!NOTE]  

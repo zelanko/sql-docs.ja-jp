@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f55e679b9e715dc4319b548c18acdb9aaad297c9
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1c81434a2ba9d20dd4d39b258534cd9c8bf32222
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118715"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487581"
 ---
 # <a name="python-language-extension-in-sql-server"></a>SQL Server の Python 言語拡張機能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Python 拡張機能は、リレーショナル データベース エンジンに対する SQL Server Machine Learning Services アドオンの一部です。 これによって追加されるのは、Python の実行環境、Python 3.5 ランタイムとインタープリターを含む Anaconda ディストリビューション、標準ライブラリとツール、および Python 用の Microsoft 製品ライブラリ (大規模な分析用の [revoscalepy](../python/ref-py-revoscalepy.md) と機械学習アルゴリズム用の [microsoftml](../python/ref-py-microsoftml.md)) です。 
 
-Python 統合は [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md) としてインストールされます。
+Python 統合は [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) としてインストールされます。
 
 Python 3.5 ランタイムとインタープリターのインストールにより、標準的な Python ソリューションとのほぼ完全な互換性が確保されます。 Python は SQL Server とは別のプロセスで実行されるので、データベース操作に支障はありません。
 

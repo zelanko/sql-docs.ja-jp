@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8f07c056e903f1036bfba15398f7cf54a1985f2d
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 877b9ece1fb88f8e46b4d986645fe051fba5fdd7
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116415"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487421"
 ---
 # <a name="python-tutorial-predict-ski-rental-with-linear-regression-in-sql-server-machine-learning-services"></a>Python のチュートリアル:SQL Server Machine Learning Services での線形回帰を使用したスキー レンタルの予測
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-この 4 部構成のチュートリアル シリーズでは、[SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md) で Python と線形回帰を使用して、スキーのレンタル数を予測します。 このチュートリアルでは [Azure Data Studio で Python notebook](../../azure-data-studio/sql-notebooks.md) を使用しますが、独自の Python 統合開発環境 (IDE) を使用することもできます。
+この 4 部構成のチュートリアル シリーズでは、[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) で Python と線形回帰を使用して、スキーのレンタル数を予測します。 このチュートリアルでは [Azure Data Studio で Python notebook](../../azure-data-studio/sql-notebooks.md) を使用しますが、独自の Python 統合開発環境 (IDE) を使用することもできます。
 
 たとえば、スキー レンタル事業を所有していて、将来の日付に対するレンタル数を予測したい場合を考えてみましょう。 この情報は、在庫、スタッフおよび設備の準備に役立ちます。
 

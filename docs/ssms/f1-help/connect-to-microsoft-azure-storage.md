@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: ''
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eb943430136a1406ea18b9c387c98fbec6fd27cf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f10095fe581b00411199a63b4bd12a4b29346a26
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245023"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487442"
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>Microsoft Azure Storage への接続
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ Azure アカウントに関する次の情報を指定し、 **[次へ]** をク
 1.  **[ストレージ アカウント]** : ストレージ アカウント名を指定します。
 
    >[!NOTE]
-   > [汎用のストレージ アカウント](https://docs.microsoft.com/azure/storage/storage-introduction#azure-storage-services)にのみ接続できます。 他の種類のストレージ アカウントに接続すると、次のようなエラーが発生することがあります。
+   > [汎用のストレージ アカウント](https://docs.microsoft.com/azure/storage/common/storage-introduction#azure-storage-services)にのみ接続できます。 他の種類のストレージ アカウントに接続すると、次のようなエラーが発生することがあります。
    >
    >  The value for one of the HTTP headers is not in the correct format. (いずれかの HTTP ヘッダーの値の形式が正しくありません。) (Microsoft.SqlServer.StorageClient)
    >

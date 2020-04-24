@@ -59,12 +59,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c61329dcaeb7972382e9385b723f5be889470c3c
-ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
+ms.openlocfilehash: a1ac8a66c76e7244d36652e4c240d02036f81d98
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "81002842"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632248"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -88,7 +88,7 @@ ms.locfileid: "81002842"
 
 ## <a name="syntax-for-disk-based-tables"></a>ディスク ベース テーブルの構文
 
-```
+```syntaxsql
 ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
 {
     ALTER COLUMN column_name
@@ -256,7 +256,7 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
 
 ## <a name="syntax-for-memory-optimized-tables"></a>メモリ最適化テーブルの構文
 
-```
+```syntaxsql
 ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
 {
     ALTER COLUMN column_name
@@ -349,7 +349,7 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
 
 ```
 
-```
+```syntaxsql
 -- Syntax for Azure Synapse Analytics and Analytics Platform System
 
 ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_table_name | source_table_name }
@@ -872,7 +872,7 @@ SET ( FILETABLE_DIRECTORY = *directory_name* )
 
 Windows と互換性のある FileTable ディレクトリ名を指定します。 この名前は、データベース内のすべての FileTable ディレクトリ名の中で一意である必要があります。 一意性の比較では、SQL 照合順序の設定とは関係なく、大文字と小文字は区別されません。 FileTable のみで使用できます。
 
-```sql
+```syntaxsql
  SET (
         REMOTE_DATA_ARCHIVE
         {

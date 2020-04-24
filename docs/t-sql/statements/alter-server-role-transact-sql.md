@@ -1,7 +1,7 @@
 ---
 title: ALTER SERVER ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/06/2016
+ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: pdw, sql-database
 ms.reviewer: ''
@@ -19,12 +19,12 @@ ms.assetid: 7a4db7bb-c442-4e12-9a8a-114da5bc7710
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2307a80d3a40599aed4762077b188baac0533967
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e16c698947dbe8ad6c324f16e644b2dd43276435
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68070271"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81631871"
 ---
 # <a name="alter-server-role-transact-sql"></a>ALTER SERVER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68070271"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server  
   
 ALTER SERVER ROLE server_role_name   
@@ -46,7 +46,7 @@ ALTER SERVER ROLE server_role_name
 } [ ; ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Parallel Data Warehouse  
   
 ALTER SERVER ROLE  server_role_name  ADD MEMBER login;  
@@ -98,7 +98,7 @@ WITH NAME **=** _new_server_role_name_
 ### <a name="a-changing-the-name-of-a-server-role"></a>A. サーバー ロールの名前を変更する  
 次の例では、`Product` という名前のサーバー ロールを作成し、そのサーバー ロールの名前を `Production` に変更します。  
   
-```  
+```sql
 CREATE SERVER ROLE Product ;  
 ALTER SERVER ROLE Product WITH NAME = Production ;  
 GO  
@@ -107,14 +107,14 @@ GO
 ### <a name="b-adding-a-domain-account-to-a-server-role"></a>B. ドメイン アカウントをサーバー ロールに追加する  
 次の例では、`adventure-works\roberto0` という名前のドメイン アカウントを `Production` という名前のユーザー定義サーバー ロールに追加します。  
   
-```  
+```sql
 ALTER SERVER ROLE Production ADD MEMBER [adventure-works\roberto0] ;  
 ```  
   
 ### <a name="c-adding-a-sql-server-login-to-a-server-role"></a>C. SQL Server ログインをサーバー ロールに追加する  
 次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] という名前の `Ted` ログインを `diskadmin` 固定サーバー ロールに追加します。  
   
-```  
+```sql
 ALTER SERVER ROLE diskadmin ADD MEMBER Ted ;  
 GO  
 ```  
@@ -122,14 +122,14 @@ GO
 ### <a name="d-removing-a-domain-account-from-a-server-role"></a>D. サーバー ロールからドメイン アカウントを削除する  
 次の例では、`adventure-works\roberto0` という名前のユーザー定義サーバー ロールから `Production` という名前のドメイン アカウントを削除します。  
   
-```  
+```sql
 ALTER SERVER ROLE Production DROP MEMBER [adventure-works\roberto0] ;  
 ```  
   
 ### <a name="e-removing-a-sql-server-login-from-a-server-role"></a>E. サーバー ロールから SQL Server ログインを削除する  
 次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固定サーバー ロールから `Ted` という名前の `diskadmin` ログインを削除します。  
   
-```  
+```sql
 ALTER SERVER ROLE Production DROP MEMBER Ted ;  
 GO  
 ```  
@@ -137,7 +137,7 @@ GO
 ### <a name="f-granting-a-login-the-permission-to-add-logins-to-a-user-defined-server-role"></a>F. ログインをユーザー定義サーバー ロールに追加する権限をログインに許可する  
 次の例では、`Ted` が他のログインを `Production` という名前のユーザー定義サーバー ロールに追加できるようにします。  
   
-```  
+```sql
 GRANT ALTER ON SERVER ROLE::Production TO Ted ;  
 GO  
 ```  
@@ -145,7 +145,7 @@ GO
 ### <a name="g-to-view-role-membership"></a>G. ロールのメンバーシップを表示するには  
 ロールのメンバーシップを表示するには、**の**[サーバー ロール (メンバー)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ページを使用するか、次のクエリを実行します。  
   
-```  
+```sql
 SELECT SRM.role_principal_id, SP.name AS Role_Name,   
 SRM.member_principal_id, SP2.name  AS Member_Name  
 FROM sys.server_role_members AS SRM  
@@ -161,14 +161,14 @@ ORDER BY  SP.name,  SP2.name
 ### <a name="h-basic-syntax"></a>H. 基本構文  
 次の例では、ログイン `Anna` をサーバー ロール `LargeRC` に追加します。  
   
-```  
+```sql
 ALTER SERVER ROLE LargeRC ADD MEMBER Anna;  
 ```  
   
 ### <a name="i-remove-a-login-from-a-resource-class"></a>I. リソース クラスからログインを削除する。  
 次の例では、サーバー ロール `LargeRC` から Anna のメンバーシップを削除します。  
   
-```  
+```sql
 ALTER SERVER ROLE LargeRC DROP MEMBER Anna;  
 ```  
   

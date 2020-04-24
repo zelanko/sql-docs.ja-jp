@@ -24,12 +24,12 @@ ms.assetid: a300ac43-e4c0-4329-8b79-a1a05e63370a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3cd7682ec9377fe0163add5986bd0cc406d325cf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4bfb869d7c314c5e4cb7b4c5ffae67b60a823a10
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67928957"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634324"
 ---
 # <a name="set-implicit_transactions-transact-sql"></a>SET IMPLICIT_TRANSACTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "67928957"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 SET IMPLICIT_TRANSACTIONS { ON | OFF }  
 ```  
   
@@ -54,6 +54,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
 |CREATE|INSERT|TRUNCATE TABLE|  
 |DELETE|OPEN|UPDATE|  
 |DROP|。|。|  
+||||
   
  OFF の場合、前の T-SQL ステートメントはそれぞれ目に見えない BEGIN TRANSACTION と目に見えない COMMIT TRANSACTION ステートメントによってバインドされます。 OFF の場合、トランザクション モードは "*オートコミット*" です。 T-SQL コードが明確に BEGIN TRANSACTION を発行する場合、トランザクション モードは "*明示的*" です。  
   
@@ -73,7 +74,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
   
  IMPLICIT_TRANSACTIONS の現在の設定を表示するには、次のクエリを実行します。  
   
-```  
+```sql
 DECLARE @IMPLICIT_TRANSACTIONS VARCHAR(3) = 'OFF';  
 IF ( (2 & @@OPTIONS) = 2 ) SET @IMPLICIT_TRANSACTIONS = 'ON';  
 SELECT @IMPLICIT_TRANSACTIONS AS IMPLICIT_TRANSACTIONS;  

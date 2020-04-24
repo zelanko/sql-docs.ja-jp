@@ -1,7 +1,7 @@
 ---
 title: SET SHOWPLAN_ALL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: a500b682-bae4-470f-9e00-47de905b851b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 063c4c94fc457b6b9bb69fa0395398c62bf49516
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3d9e7712128269033a8391169063cf205f40208c
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67941693"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634296"
 ---
 # <a name="set-showplan_all-transact-sql"></a>SET SHOWPLAN_ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "67941693"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 SET SHOWPLAN_ALL { ON | OFF }  
 ```  
@@ -78,7 +78,8 @@ SET SHOWPLAN_ALL { ON | OFF }
 |**Type**|ノード型です。 各クエリの親ノードの場合は、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの種類 (SELECT、INSERT、EXECUTE など) を表します。 実行プランを表すサブノードの場合、種類は PLAN_ROW です。|  
 |**Parallel**|**0** = 操作は並列実行されません。<br /><br /> **1** = 操作は並列実行されます。|  
 |**EstimateExecutions**|現在のクエリの実行中に、操作が実行される推定回数。|  
-  
+|||
+
  \* コスト単位は、実時間ではなく、時間の内部測定に基づいています。 コスト単位は、プランの相対コストを他のプランと比較して決定するために使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -101,7 +102,7 @@ SET SHOWPLAN_ALL { ON | OFF }
   
  **EstimateRows** 列と **TotalSubtreeCost** 列の値は、インデックスが設定された最初のクエリの方が小さくなるので、インデックスが設定されていないクエリよりも速く処理が行われ、使用リソースが少なかったことがわかります。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SET SHOWPLAN_ALL ON;  

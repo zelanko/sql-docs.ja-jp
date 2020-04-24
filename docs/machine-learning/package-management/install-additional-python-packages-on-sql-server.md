@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e4aaac1eb06d391cf73f32cda28b12419a2b5645
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4e72ded2e2f2a51805403132c662bff3d70c97ce
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "81119115"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487118"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>sqlmlutils を使用した Python パッケージのインストール
 
@@ -37,7 +37,7 @@ ms.locfileid: "81119115"
 
 ### <a name="other-considerations"></a>その他の考慮事項
 
-+ パッケージは、使用している Python のバージョンに準拠している必要があります。 各 SQL Server バージョンに含まれている Python のバージョンの詳細については、[「SQL Server Machine Learning Services とは (Python と R)」の「Python と R のバージョン」](../what-is-sql-server-machine-learning.md#versions)を参照してください。
++ パッケージは、使用している Python のバージョンに準拠している必要があります。 各 SQL Server バージョンに含まれている Python のバージョンの詳細については、[「SQL Server Machine Learning Services とは (Python と R)」の「Python と R のバージョン」](../sql-server-machine-learning-services.md#versions)を参照してください。
 
 + Python パッケージ ライブラリは SQL Server インスタンスの Program Files フォルダー内にあります。既定では、このフォルダーにインストールするには管理者権限が必要です。 詳細については、[パッケージ ライブラリの場所](../package-management/python-package-information.md#default-python-library-location)に関するページを参照してください。
 
