@@ -40,12 +40,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: cd6b2c3cea9876091532a5da3cf15bdda1da2d8d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: df6819f9beaa78232227e0fadd3e7c7a2e56c801
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73530929"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634738"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE ステートメント (Transact-SQL)
 
@@ -86,7 +86,7 @@ BACKUP コマンドで作成した SQL Database のバックアップを復元�
 
 ## <a name="syntax"></a>構文
 
-```sql
+```syntaxsql
 --To Restore an Entire Database from a Full database backup (a Complete Restore):
 RESTORE DATABASE { database_name | @database_name_var }
  [ FROM <backup_device> [ ,...n ] ]
@@ -751,7 +751,7 @@ RESTORE DATABASE Sales
 
 ## <a name="syntax"></a>構文
 
-```sql
+```syntaxsql
 --To Restore an Entire Database from a Full database backup (a Complete Restore):
 RESTORE DATABASE { database_name | @database_name_var }
  FROM URL = { 'physical_device_name' | @physical_device_name_var } [ ,...n ]
@@ -883,7 +883,7 @@ WHERE r.command = 'RESTORE DATABASE'
 
 ## <a name="syntax"></a>構文
 
-```sql
+```syntaxsql
 
 -- Restore the master database
 -- Use the Configuration Manager tool.
@@ -995,7 +995,7 @@ FROM DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full';
 
 データベースの完全バックアップは、`\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full` ディレクトリに格納されている完全バックアップから復元されます。 この復元が正常に完了すると、差分バックアップが SalesInvoices2013 データベースに復元されます。 差分バックアップは、`\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff` ディレクトリに格納されます。
 
-```sql
+```syntaxsql
 RESTORE DATABASE SalesInvoices2013
     FROM DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff'
     WITH BASE = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full'
@@ -1007,7 +1007,7 @@ RESTORE DATABASE SalesInvoices2013
 
 次の例では、データベース バックアップ `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full` のヘッダー情報が復元されます。 コマンドを実行すると、Invoices2013Full バックアップに関する情報を含む行が 1 つ生成されます。
 
-```sql
+```syntaxsql
 RESTORE HEADERONLY
     FROM DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full'
 [;]

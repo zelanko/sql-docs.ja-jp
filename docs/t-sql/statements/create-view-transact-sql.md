@@ -1,7 +1,7 @@
 ---
 title: CREATE VIEW (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/10/2018
+ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 50ae26a445faa8f8bcd811ed7834868417fc27b4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5f29027f7b9ab16b1cb9de5c92f5aaf7dccf9765
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982670"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634852"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "73982670"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 CREATE [ OR ALTER ] VIEW [ schema_name . ] view_name [ (column [ ,...n ] ) ]   
@@ -76,7 +76,7 @@ AS select_statement
 }   
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 CREATE VIEW [ schema_name . ] view_name [  ( column_name [ ,...n ] ) ]   
@@ -210,7 +210,7 @@ OR ALTER
   
  `Server1` のパーティション ビューは次のように定義されます。  
   
-```  
+```sql
 --Partitioned view as defined on Server1  
 CREATE VIEW Customers  
 AS  
@@ -229,7 +229,7 @@ FROM Server3.CompanyData.dbo.Customers_99;
   
  一般に、次の形式の場合、ビューをパーティション ビューといいます。  
   
-```  
+```syntaxsql
 SELECT <select_list1>  
 FROM T1  
 UNION ALL  
@@ -253,7 +253,7 @@ FROM Tn;
   
          テーブル `C1` の制約 `T1` は、次の形式で定義する必要があります。  
   
-        ```  
+        ```syntaxsql
         C1 ::= < simple_interval > [ OR < simple_interval > OR ...]  
         < simple_interval > :: =   
         < col > { < | > | \<= | >= | = < value >}   
@@ -261,13 +261,13 @@ FROM Tn;
         | < col > IN ( value_list )  
         | < col > { > | >= } < value1 > AND  
         < col > { < | <= } < value2 >  
-        ```  
+        ```
   
     -   制約は、連続せずかつ重複しない間隔を持つ制約セットを形成されるよう、`<col>` に指定したすべての値が `C1, ..., Cn` の制約の 1 つにのみ該当するような形式にする必要があります。 連続しない制約が定義されている列 `<col>` は、パーティション分割列と呼ばれます。 パーティション分割列は、基になるテーブルではそれぞれ異なる名前が付いている場合があります。 前に示したパーティション分割列の条件を満たすには、パーティション分割列に対して制約が有効かつ信頼されている必要があります。 制約が無効の場合は、ALTER TABLE の CHECK CONSTRAINT *constraint_name* オプションを使用して制約チェックを再度有効にし、WITH CHECK オプションを使用して制約を検証します。  
   
          次は、有効な制約のセットの例です。  
   
-        ```  
+        ```syntaxsql
         { [col < 10], [col between 11 and 20] , [col > 20] }  
         { [col between 11 and 20], [col between 21 and 30], [col between 31 and 100] }  
         ```  
@@ -356,7 +356,7 @@ FROM Tn;
 ### <a name="a-using-a-simple-create-view"></a>A. シンプルな CREATE VIEW を使用する  
  次の例では、単純な `SELECT` ステートメントを使用してビューを作成します。 簡易ビューは、列の組み合わせを頻繁にクエリする場合に便利です。 このビューのデータは、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `HumanResources.Employee` テーブルと `Person.Person` テーブルから取得されます。 このデータには、[!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] の従業員の名前と採用日の情報が含まれています。 従業員の勤続祝いの担当者用にビューを作成することができますが、この担当者はテーブルのすべてのデータにアクセスできるわけではありません。  
   
-```  
+```sql
 CREATE VIEW hiredate_view  
 AS   
 SELECT p.FirstName, p.LastName, e.BusinessEntityID, e.HireDate  
@@ -371,7 +371,7 @@ GO
   
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降と [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
-```  
+```sql
 CREATE VIEW Purchasing.PurchaseOrderReject  
 WITH ENCRYPTION  
 AS  
@@ -387,7 +387,7 @@ GO
 ### <a name="c-using-with-check-option"></a>C. WITH CHECK OPTION を使用する  
  次の例では、5 つのテーブルを参照する `SeattleOnly` というビューを表示し、シアトル在住の従業員だけにデータ変更を許可します。  
   
-```  
+```sql
 CREATE VIEW dbo.SeattleOnly  
 AS  
 SELECT p.LastName, p.FirstName, e.JobTitle, a.City, sp.StateProvinceCode  
@@ -408,7 +408,7 @@ GO
 ### <a name="d-using-built-in-functions-within-a-view"></a>D. ビュー内の組み込み関数を使用する  
  次の例では、組み込み関数を含むビュー定義を示しています。 関数を使用するときには、派生列に列名を指定する必要があります。  
   
-```  
+```sql
 CREATE VIEW Sales.SalesPersonPerform  
 AS  
 SELECT TOP (100) SalesPersonID, SUM(TotalDue) AS TotalSales  
@@ -422,7 +422,7 @@ GO
 ### <a name="e-using-partitioned-data"></a>E. パーティション分割されたデータを使用する  
  次の例では、`SUPPLY1`、`SUPPLY2`、`SUPPLY3`、`SUPPLY4` というテーブルを使用します。 これらのテーブルは、異なる国や地域にある 4 か所のオフィスの仕入れ先テーブルに対応しています。  
   
-```  
+```sql
 --Create the tables and insert the values.  
 CREATE TABLE dbo.SUPPLY1 (  
 supplyID INT PRIMARY KEY CHECK (supplyID BETWEEN 1 and 150),  
@@ -469,7 +469,7 @@ GO
 ### <a name="f-creating-a-simple-view"></a>F. 単純なビューを作成する  
  次の例では、ソース テーブルから一部の列のみを選択することで、ビューを作成します。  
   
-```  
+```sql
 CREATE VIEW DimEmployeeBirthDates AS  
 SELECT FirstName, LastName, BirthDate   
 FROM DimEmployee;  
@@ -478,7 +478,7 @@ FROM DimEmployee;
 ### <a name="g-create-a-view-by-joining-two-tables"></a>G. 2 つのテーブルを結合することでビューを作成する  
  次の例では、`OUTER JOIN` と共に `SELECT` ステートメントを使用することで、ビューを作成します。 結合クエリの結果によって、ビューが設定されます。  
   
-```  
+```sql
 CREATE VIEW view1  
 AS 
 SELECT fis.CustomerKey, fis.ProductKey, fis.OrderDateKey, 

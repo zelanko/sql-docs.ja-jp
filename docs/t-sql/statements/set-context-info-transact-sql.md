@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a0b7b9f3-dbda-4350-a274-bd9ecd5c0a74
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0f75a2c8fcbef8109c48e352a9c3987a2a5a7cc2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 12bdcb5de42e7a3f78455cd0a3bc0046f89b18bc
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78866620"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634420"
 ---
 # <a name="set-context_info-transact-sql"></a>SET CONTEXT_INFO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "78866620"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 SET CONTEXT_INFO { binary_str | @binary_var }  
 ```  
@@ -67,7 +67,7 @@ SET CONTEXT_INFO { binary_str | @binary_var }
 ### <a name="a-setting-context-information-by-using-a-constant"></a>A. 定数を使用してコンテキスト情報を設定する  
  次の例では、`SET CONTEXT_INFO` に値を設定し、結果を表示します。 `sys.dm_exec_sessions` のクエリを実行するには SELECT および VIEW SERVER STATE の権限が必要ですが、CONTEXT_INFO 関数を使用するのにこれらの権限は必要ありません。  
   
-```  
+```sql
 SET CONTEXT_INFO 0x01010101;  
 GO  
 SELECT context_info   
@@ -79,7 +79,7 @@ GO
 ### <a name="b-setting-context-information-by-using-a-function"></a>B. 関数を使用してコンテキスト情報を設定する  
  次の例では、関数の出力を使用してコンテキスト値を設定します。最初に、**binary** 変数に関数からの値を格納する必要があります。  
   
-```  
+```sql
 DECLARE @BinVar varbinary(128);  
 SET @BinVar = CAST(REPLICATE( 0x20, 128 ) AS varbinary(128) );  
 SET CONTEXT_INFO @BinVar;  

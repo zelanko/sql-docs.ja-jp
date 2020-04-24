@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2b6d4c5a-a7f5-4dd1-b10a-7632265b1af7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 015ba90a6f2cad79483e52d5caa23ad06784c055
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9e06886ec3a66e4860927a9f953c0bee9da2b902
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68004711"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634628"
 ---
 # <a name="set-statistics-xml-transact-sql"></a>SET STATISTICS XML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68004711"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 SET STATISTICS XML { ON | OFF }  
 ```  
@@ -74,7 +74,7 @@ SET STATISTICS XML { ON | OFF }
 ## <a name="examples"></a>例  
  次に示す 2 つのステートメントでは、SET STATISTICS XML の設定を使用し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でクエリ内のインデックスの使用状況を分析し最適化する方法を示しています。 最初のクエリでは、インデックス付き列の WHERE 句で = (等しい) 比較演算子を使用します。 2 番目のクエリでは、WHERE 句で LIKE 演算子を使用します。 このように指定すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではクラスター化インデックス スキャンが行われ、WHERE 句の条件を満たすデータが検索されます。 **EstimateRows** 属性と **EstimatedTotalSubtreeCost** 属性の値は、インデックスが設定された最初のクエリの方が小さくなっています。これは、インデックスを設定されていないクエリよりも速く処理が行われ、使用リソースが少なかったことを示しています。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SET STATISTICS XML ON;  
