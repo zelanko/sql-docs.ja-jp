@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7c5fc9d863c23c1cae08c04fef7810aeda446762
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65476992"
 ---
 # <a name="task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table"></a>タスク 13: データを書き込む OLE DB 変換先を MDS ステージング テーブルに追加する
@@ -48,7 +48,7 @@ ms.locfileid: "65476992"
   
      ![完了したデータ フロー](../../2014/tutorials/media/et-addingoledbdestinationtowdtomdsst-03.jpg "完了したデータ フロー")  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
  [タスク 14: SQL 実行タスクを制御フローに追加して MDS のストアド プロシージャを実行する](../../2014/tutorials/task-14-add-execute-to-control-flow-run-mds-stored-procedure.md)  
   
   
