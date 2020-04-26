@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c1d98187fbe76e726dadfe163d75a27c51fd60e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767644"
 ---
-# <a name="step-4-adding-package-configurations"></a>手順 4: パッケージ構成の追加
+# <a name="step-4-adding-package-configurations"></a>手順 4:パッケージ構成の追加
   ここでは、各パッケージに構成を追加します。 パッケージ プロパティとパッケージ オブジェクトの値は、構成によって実行時に更新されます。  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] にはさまざまな種類の構成があります。 構成は、環境変数、レジストリ エントリ、ユーザー定義変数、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] テーブル、XML ファイルに格納できます。 さらに柔軟性を高めるため、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では間接構成を使用することもできます。 これは、環境変数を使用して構成の場所を指定し、それによって実際の値を指定する方法です。 Deployment Tutorial プロジェクトのパッケージでは、XML 構成ファイルと間接構成を組み合わせて使用します。 XML 構成ファイルには、複数のプロパティの構成を含めることができ、必要に応じて複数のパッケージから参照できます。 このチュートリアルでは、パッケージごとに異なる構成ファイルを使用します。  
@@ -34,16 +34,13 @@ ms.locfileid: "62767644"
   
 1.  ソリューション エクスプローラーで DataTransfer.dtsx をダブルクリックします。  
   
-2.  
-  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーで、制御フロー デザイン画面の背景をクリックします。  
+2.  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーで、制御フロー デザイン画面の背景をクリックします。  
   
-3.  
-  **[SSIS]** メニューの **[パッケージ構成]** をクリックします。  
+3.  **[SSIS]** メニューの **[パッケージ構成]** をクリックします。  
   
-4.  
-  **[パッケージ構成オーガナイザー]** ダイアログ ボックスで、 **[パッケージの構成を有効にする]** をオンにして、 **[追加]** をクリックします。  
+4.  **[パッケージ構成オーガナイザー]** ダイアログ ボックスで、 **[パッケージの構成を有効にする]** をオンにして、 **[追加]** をクリックします。  
   
-5.  パッケージ構成ウィザードの初期画面で、 **[次へ]** をクリックします。  
+5.  パッケージ構成ウィザードの [ようこそ] ページで、[**次へ**] をクリックします。  
   
 6.  [構成の種類の選択] ページで、[構成の**種類**] ボックスの一覧から [ **XML 構成ファイル**] を選択し、[構成の`DataTransfer,`場所を**環境変数に格納**する] オプションを選択して、一覧で**DataTransfer**環境変数を入力または選択します。  
   
@@ -54,29 +51,25 @@ ms.locfileid: "62767644"
   
 8.  [ウィザードの完了] ページで、 **[構成名]** ボックスに「 **DataTransfer EV Configuration** 」と入力し、 **[プレビュー]** ペインで構成の内容を確認してから、 **[完了]** をクリックします。  
   
-9. 
-  **[パッケージ構成オーガナイザー]** ダイアログ ボックスを閉じます。  
+9. **[パッケージ構成オーガナイザー]** ダイアログ ボックスを閉じます。  
   
 ### <a name="to-create-the-xml-configuration-for-the-datatransfer-package"></a>DataTransfer パッケージの XML 構成を作成するには  
   
 1.  ソリューション エクスプローラーで DataTransfer.dtsx をダブルクリックします。  
   
-2.  
-  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーで、制御フロー デザイン画面の背景をクリックします。  
+2.  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーで、制御フロー デザイン画面の背景をクリックします。  
   
-3.  
-  **[SSIS]** メニューの **[パッケージ構成]** をクリックします。  
+3.  **[SSIS]** メニューの **[パッケージ構成]** をクリックします。  
   
 4.  [パッケージ構成オーガナイザー] ダイアログ ボックスで、 **[パッケージの構成を有効にする]** チェック ボックスをオンにし、 **[追加]** をクリックします。  
   
-5.  パッケージ構成ウィザードの初期画面で、 **[次へ]** をクリックします。  
+5.  パッケージ構成ウィザードの [ようこそ] ページで、[**次へ**] をクリックします。  
   
 6.  [構成の種類の選択] ページで、 **[構成の種類]** ボックスの一覧から **[XML 構成ファイル]** を選択し、 **[参照]** をクリックします。  
   
-7.  
-  **[構成ファイルの場所の選択]** ダイアログ ボックスで、C:\DeploymentTutorial に移動し、 **[ファイル名]** ボックスに「 **DataTransferConfig** 」と入力してから、 **[保存]** をクリックします。  
+7.  **[構成ファイルの場所の選択]** ダイアログ ボックスで、C:\DeploymentTutorial に移動し、 **[ファイル名]** ボックスに「 **DataTransferConfig** 」と入力してから、 **[保存]** をクリックします。  
   
-8.  [構成の種類の選択] ページで **[次へ]** をクリックします。  
+8.  [構成の種類の選択] ページで、[**次へ**] をクリックします。  
   
 9. [エクスポートするプロパティの選択] ページで、DataTransfer、接続マネージャー、Deployment Tutorial Log、および Properties を展開し、 **[接続文字列]** チェック ボックスをオンにします。  
   
@@ -86,23 +79,19 @@ ms.locfileid: "62767644"
   
 12. [ウィザードの完了] ページで、 **[構成名]** ボックスに「 **DataTransfer Configuration** 」と入力し、構成の内容を確認してから、 **[完了]** をクリックします。  
   
-13. 
-  **[パッケージ構成オーガナイザー]** ダイアログ ボックスで、DataTransfer EV Configuration が最初に、DataTransfer Configuration が 2 番目に表示されていることを確認し、 **[閉じる]** をクリックします。  
+13. **[パッケージ構成オーガナイザー]** ダイアログ ボックスで、DataTransfer EV Configuration が最初に、DataTransfer Configuration が 2 番目に表示されていることを確認し、 **[閉じる]** をクリックします。  
   
 ### <a name="to-create-indirect-configuration-for-the-loadxmldata-package"></a>LoadXMLData パッケージの間接構成を作成するには  
   
 1.  ソリューション エクスプローラーで LoadXMLData.dtsx をダブルクリックします。  
   
-2.  
-  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーで、制御フロー デザイン画面の背景をクリックします。  
+2.  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーで、制御フロー デザイン画面の背景をクリックします。  
   
-3.  
-  **[SSIS]** メニューの **[パッケージ構成]** をクリックします。  
+3.  **[SSIS]** メニューの **[パッケージ構成]** をクリックします。  
   
-4.  
-  **[パッケージ構成オーガナイザー]** ダイアログ ボックスの **[追加]** をクリックします。  
+4.  **[パッケージ構成オーガナイザー]** ダイアログ ボックスの **[追加]** をクリックします。  
   
-5.  パッケージ構成ウィザードの初期画面で、 **[次へ]** をクリックします。  
+5.  パッケージ構成ウィザードの [ようこそ] ページで、[**次へ**] をクリックします。  
   
 6.  [構成の種類の選択] ページで、[構成の**種類**] ボックスの一覧の [ **XML 構成ファイル**] を選択し、[**構成の場所を環境変数に格納**する] オプションを選択して、一覧にある`LoadXMLData` `LoadXMLData`環境変数を入力または選択します。  
   
@@ -117,22 +106,19 @@ ms.locfileid: "62767644"
   
 1.  ソリューション エクスプローラーで LoadXMLData.dtsx をダブルクリックします。  
   
-2.  
-  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーで、制御フロー デザイン画面の背景をクリックします。  
+2.  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーで、制御フロー デザイン画面の背景をクリックします。  
   
-3.  
-  **[SSIS]** メニューの **[パッケージ構成]** をクリックします。  
+3.  **[SSIS]** メニューの **[パッケージ構成]** をクリックします。  
   
 4.  [パッケージ構成オーガナイザー] ダイアログ ボックスで、 **[パッケージの構成を有効にする]** チェック ボックスをオンにし、 **[追加]** をクリックします。  
   
-5.  パッケージ構成ウィザードの初期画面で、 **[次へ]** をクリックします。  
+5.  パッケージ構成ウィザードの [ようこそ] ページで、[**次へ**] をクリックします。  
   
 6.  [構成の種類の選択] ページで、 **[構成の種類]** ボックスの一覧から **[XML 構成ファイル]** を選択し、 **[参照]** をクリックします。  
   
-7.  
-  **[構成ファイルの場所の選択]** ダイアログ ボックスで、C:\DeploymentTutorial に移動し、 **[ファイル名]** ボックスに「 **LoadXMLDataConfig** 」と入力してから、 **[保存]** をクリックします。  
+7.  **[構成ファイルの場所の選択]** ダイアログ ボックスで、C:\DeploymentTutorial に移動し、 **[ファイル名]** ボックスに「 **LoadXMLDataConfig** 」と入力してから、 **[保存]** をクリックします。  
   
-8.  [構成の種類の選択] ページで **[次へ]** をクリックします。  
+8.  [構成の種類の選択] ページで、[**次へ**] をクリックします。  
   
 9. [エクスポートするプロパティの選択] ページで、LoadXMLData、実行可能ファイル、Load XML Data、および Properties を展開し、 **[XMLSource].[XMLData]** チェック ボックスと **[XMLSource].[XMLSchemaDefinition]** チェック ボックスをオンにします。  
   
@@ -140,13 +126,12 @@ ms.locfileid: "62767644"
   
 11. [ウィザードの完了] ページで、 **[構成名]** ボックスに「 **LoadXMLData Configuration** 」と入力し、構成の内容を確認してから、 **[完了]** をクリックします。  
   
-12. 
-  **[パッケージ構成オーガナイザー]** ダイアログ ボックスで、LoadXMLData EV Configuration が最初に、LoadXMLData Configuration が 2 番目に表示されていることを確認し、 **[閉じる]** をクリックします。  
+12. **[パッケージ構成オーガナイザー]** ダイアログ ボックスで、LoadXMLData EV Configuration が最初に、LoadXMLData Configuration が 2 番目に表示されていることを確認し、 **[閉じる]** をクリックします。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [手順 5: 更新したパッケージのテスト](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
+ [手順 5:更新したパッケージのテスト](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
-![Integration Services アイコン (小)](media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services アイコン (小)](media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
  [パッケージの構成](../../2014/integration-services/package-configurations.md)   

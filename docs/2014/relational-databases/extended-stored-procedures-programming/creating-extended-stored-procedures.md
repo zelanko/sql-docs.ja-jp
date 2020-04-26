@@ -16,16 +16,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 0d0343113b350c48cbc42ec5b79bbd0b849f2860
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62512636"
 ---
 # <a name="creating-extended-stored-procedures"></a>拡張ストアド プロシージャの作成
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR 統合を使用してください。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 代わりに CLR Integration を使用してください。  
   
  拡張ストアド プロシージャは、次に示すプロトタイプを備えた関数です。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "62512636"
   
  拡張ストアド プロシージャ DLL を作成するには、次のファイルが必要です。  
   
-|ファイル|[説明]|  
+|ファイル|説明|  
 |----------|-----------------|  
 |Srv.h|拡張ストアド プロシージャ API ヘッダー ファイル|  
 |Opends60.lib|Opends60.dll のインポート ライブラリ|  

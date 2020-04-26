@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3e4777cf05e7f3eab62c389ace8b8d8a96cae304
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65481313"
 ---
 # <a name="task-1-defining-a-matching-policy"></a>タスク 1: 照合ポリシーを定義する
@@ -65,7 +65,7 @@ ms.locfileid: "65481313"
   
 16. [**次へ**] をクリックして、[**照合結果**] ページに移動します。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
  [タスク 2: 照合ポリシーをテストおよびパブリッシュする](../../2014/tutorials/task-2-testing-and-publishing-the-matching-policy.md)  
   
   

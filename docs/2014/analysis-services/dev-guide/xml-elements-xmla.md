@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0c86975f273b2efa5d1384df676519ee622a1677
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62731987"
 ---
 # <a name="xml-elements-xmla"></a>XML 要素 (XMLA)
@@ -26,7 +26,7 @@ ms.locfileid: "62731987"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|プロパティ|[説明]|  
+|プロパティ|説明|  
 |--------------|-----------------|  
 |[XMLA&#41;&#40;ヘッダー](https://docs.microsoft.com/bi-reference/xmla/xml-elements-headers/xml-elements-headers)|プロトコルレベルの機能を管理するために、アプリケーションまたは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスによって SOAP エンベロープの SOAP ヘッダーの中で送信される要素について説明します。|  
 |[XMLA&#41;&#40;メソッド](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods)|データまたはメタデータの取得、またはインスタンスに対する操作の実行のために、アプリケーションによって [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスに送信される SOAP エンベロープ内の最上位要素について説明します。|  
@@ -36,6 +36,6 @@ ms.locfileid: "62731987"
   
 ## <a name="see-also"></a>参照  
  [XMLA&#41;&#40;XML データ型](https://docs.microsoft.com/bi-reference/xmla/xml-data-types/xml-data-types-xmla)   
- [Analysis Services スクリプト言語 &#40;ASSL&#41;を使用した開発](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [Analysis Services スクリプト言語 (ASSL) での開発](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   
   

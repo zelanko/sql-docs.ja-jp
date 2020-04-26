@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 207d82f740b7b5ff174e220e647d67d5bac7f9ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63190830"
 ---
 # <a name="creating-a-market-basket-structure-and-model-intermediate-data-mining-tutorial"></a>Market Basket 構造およびモデルの作成 (中級者向けデータ マイニング チュートリアル)
@@ -27,8 +27,7 @@ ms.locfileid: "63190830"
   
 1.  のソリューションエクスプローラーで[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]、[**マイニング構造**] を右クリックし、[**新しいマイニング構造**] をクリックして、データマイニングウィザードを開きます。  
   
-2.  
-  **[データ マイニング ウィザードへようこそ]** ページで **[次へ]** をクリックします。  
+2.  **[データ マイニング ウィザードへようこそ]** ページで **[次へ]** をクリックします。  
   
 3.  [**定義方法の選択**] ページで、[**既存のリレーショナルデータベースまたはデータウェアハウスから**] が選択されていることを確認し、[**次へ**] をクリックします。  
   
@@ -56,17 +55,16 @@ ms.locfileid: "63190830"
   
     |[列]|コンテンツの種類|データ型|  
     |-------------|------------------|---------------|  
-    |IncomeGroup|Discrete|Text|  
-    |Order Number|キー|Text|  
-    |リージョン|Discrete|Text|  
+    |IncomeGroup|Discrete|テキスト|  
+    |Order Number|Key|テキスト|  
+    |リージョン|Discrete|テキスト|  
     |vAssocSeqLineItems|||  
-    |モデル|キー|Text|  
+    |モデル|Key|テキスト|  
   
 12. [**テストセットの作成**] ページの [**テスト用データの割合**] オプションの既定値は30% です。 これを**0**に変更します。 **[次へ]** をクリックします。  
   
     > [!NOTE]  
-    >  
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] には、モデルの精度を測定するための別のチャートが用意されています。 ただし、リフト チャートや相互検証レポートなど、一部の種類の精度チャートは、分類および推定用に設計されています。 結合型の予測には使用できません。  
+    >  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] には、モデルの精度を測定するための別のチャートが用意されています。 ただし、リフト チャートや相互検証レポートなど、一部の種類の精度チャートは、分類および推定用に設計されています。 結合型の予測には使用できません。  
   
 13. [**ウィザードの完了**] ページの [**マイニング構造名**] に`Association`「」と入力します。  
   
@@ -81,6 +79,6 @@ ms.locfileid: "63190830"
   
 ## <a name="see-also"></a>参照  
  [Microsoft アソシエーションアルゴリズム](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md)   
- [コンテンツの種類 &#40;データマイニング&#41;](../../2014/analysis-services/data-mining/content-types-data-mining.md)  
+ [コンテンツの種類 (データ マイニング)](../../2014/analysis-services/data-mining/content-types-data-mining.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c733fbf1e8a075d0d240f5cb69d888310fc6009f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62757702"
 ---
 # <a name="tables-representation-tabular"></a>テーブル表現 (テーブル)
@@ -27,7 +27,7 @@ ms.locfileid: "62757702"
   
  実際の操作手順では、他のオブジェクトを定義する前にデータ ソース ビューを作成する必要があります。 データ ソース ビュー オブジェクトには、データ ソース内のすべての該当オブジェクトのマッピングが含まれます。 リレーショナル モデルのマッピングは、.NET DataSet オブジェクトとしてデータ ソース ビューに埋め込まれ、DSV の Schema プロパティに格納されます。  
   
- 次のコードスニペットは、SQL クライアント接続文字列、表形式モデルで表現するリレーショナルモデル内のすべてのテーブルにマップされる Select ステートメントのディクショナリ、およびデータの名前を持つ変数 newDataSourceViewName を使用していることを前提としています。ソースビュー (通常はリレーショナルデータベースの名前)。  
+ 次のコードスニペットは、SQL クライアント接続文字列、テーブルモデルで表現するリレーショナルモデル内のすべてのテーブルにマップされる Select ステートメントのディクショナリ、およびデータソースビューの名前 (通常はリレーショナルデータベースの名前) を持つ変数 newDataSourceViewName を持っていることを前提としています。  
   
 ```  
   

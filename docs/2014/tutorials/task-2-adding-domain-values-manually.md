@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 459d0160e9977ed58ebafe5feb9e58eaa5939f72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65488384"
 ---
 # <a name="task-2-adding-domain-values-manually"></a>タスク 2: ドメイン値を手動で追加する
@@ -32,7 +32,7 @@ ms.locfileid: "65488384"
   
      ![ドメイン値の米国](../../2014/tutorials/media/et-addingdomainvaluesmanually-02.jpg "ドメイン値の米国")  
   
-## <a name="next-step"></a>次のステップ  
- [タスク 3:Excel ファイルからドメイン値をインポートする](../../2014/tutorials/task-3-importing-domain-values-from-an-excel-file.md)  
+## <a name="next-step"></a>次の手順  
+ [タスク 3: Excel ファイルからドメイン値をインポートする](../../2014/tutorials/task-3-importing-domain-values-from-an-excel-file.md)  
   
   

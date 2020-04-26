@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9cd00b1966351b5205da737a8f04912b015ec81e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "63023118"
 ---
 # <a name="full-text-event-category"></a>Full text イベント カテゴリ
@@ -28,7 +28,7 @@ ms.locfileid: "63023118"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[FT:Crawl Aborted イベント クラス](ft-crawl-aborted-event-class.md)|フルテキスト クロールで例外が発生したことを示します。|  
 |[FT:Crawl Started イベント クラス](ft-crawl-started-event-class.md)|フルテキスト クロールが開始したことを示します。|  

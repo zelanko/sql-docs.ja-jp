@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d8162c7654d99cd2ebab41d290c0a39c6c686686
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "63058098"
 ---
 # <a name="login-for-updatable-subscriptions"></a>[更新可能なサブスクリプション] のログイン
@@ -33,29 +33,28 @@ ms.locfileid: "63058098"
   
 -   レプリケーションによって作成されるリンク サーバー。サブスクライバーで変更を行うユーザーの資格情報を使用して接続を行います。  
   
- 最初の 2 つのオプションは、このウィザードで指定できます。 最後のオプションは、 [sp_link_publication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql)を使用した場合にのみ指定できます。パラメーター **@security_mode**に値**1**を指定します。  
+ 最初の 2 つのオプションは、このウィザードで指定できます。 最後のオプションは、[sp_link_publication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) を使用した場合にだけ指定できます。**@security_mode** パラメーターに値 **1** を指定します。  
   
 ## <a name="options"></a>オプション  
- **次の SQL Server 認証ログインを使用して接続するリンクサーバーを作成します。**  
+ **[SQL Server 認証を使用して接続するリンク サーバーを作成する]**  
  レプリケーションにより、 **[ログイン]** フィールドおよび **[パスワード]** フィールドに指定された資格情報に基づいてリンク サーバーが作成されます。  
   
  **Login**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]このトピックで説明されているアクセス許可のみを持つログインを入力します。  
   
  **パスワード**  
- 
-  **[ログイン]** に指定したログインに使用する複雑なパスワードを入力します。  
+ **[ログイン]** に指定したログインに使用する複雑なパスワードを入力します。  
   
- **パスワードの確認入力**  
+ **パスワードの確認**  
  パスワードが正常に入力されていることを確認するために、パスワードを再入力します。  
   
- **定義済みのリンクサーバーまたはリモートサーバーを使用します。**  
+ **[定義済みのリンク サーバーまたはリモート サーバーを使用する]**  
  このオプションを使用するには、定義済みのリンク サーバーまたはリモート サーバーが必要です。 詳細については、「[リンク サーバー &#40;データベース エンジン&#41;](../linked-servers/linked-servers-database-engine.md)」および「[リモート サーバー](../../database-engine/configure-windows/remote-servers.md)」を参照してください。 リンク サーバーまたはリモート サーバーに使用するログインに対して複雑なパスワードが設定されていて、このトピックに記載された権限だけが設定されていることを確認してください。  
   
 ## <a name="see-also"></a>参照  
  [トランザクションパブリケーションに対する更新可能なサブスクリプションの作成](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
  [レプリケーションのセキュリティ設定を表示および変更する](security/view-and-modify-replication-security-settings.md)   
  [トランザクションレプリケーションの更新可能なサブスクリプション](transactional/updatable-subscriptions-for-transactional-replication.md)   
- [パブリケーションのサブスクライブ](subscribe-to-publications.md)  
+ [Subscribe to Publications](subscribe-to-publications.md)  
   
   

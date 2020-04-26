@@ -17,23 +17,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fdfaeeb9e8dafe82a1312593df2dd128635b8365
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62766195"
 ---
 # <a name="debugging-data-flow"></a>データ フローのデバッグ
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]とデザイナー [!INCLUDE[ssIS](../../includes/ssis-md.md)]には、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]パッケージ内のデータフローのトラブルシューティングに使用できる機能とツールが含まれています。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] と [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーには、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデータ フローのトラブルシューティングを行うために使用できる機能とツールが含まれています。  
   
--   
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでは、データ ビューアーが用意されています。  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでは、データ ビューアーが用意されています。  
   
--   
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーと [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 変換では、行数が用意されています。  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーと [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 変換では、行数が用意されています。  
   
--   
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでは、実行時の進行状況レポートが用意されています。  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでは、実行時の進行状況レポートが用意されています。  
   
 ## <a name="data-viewers"></a>データ ビューアー  
  データ ビューアーは、データ フローの 2 つのコンポーネント間のデータを表示します。 データ ビューアーでデータを表示できるのは、データ ソースからデータが抽出され、最初にデータ フローに入るときと、変換によりデータが更新される前後、およびデータが変換先に読み込まれる前です。  
@@ -48,16 +45,14 @@ ms.locfileid: "62766195"
   
  実行時には **[データ ビューアー]** ウィンドウが開き、データ ビューアーの形式で指定された情報が表示されます。 たとえば、グリッド形式を使用するデータ ビューアーでは、選択した列のデータ、データ フロー コンポーネントに渡される出力列の数、および表示される行数が表示されます。 この情報はバッファーごとに表示されますが、データ フローの行の幅に応じて、バッファーが表示する行数は増減します。  
   
- 
-  **[データ ビューアー]** ダイアログ ボックスでは、クリップボードへのデータのコピー、テーブルのすべてのデータの消去、データ ビューアーの再構成、データのフローの再開、およびデータ ビューアーのデタッチまたはアタッチを行うことができます。  
+ **[データ ビューアー]** ダイアログ ボックスでは、クリップボードへのデータのコピー、テーブルのすべてのデータの消去、データ ビューアーの再構成、データのフローの再開、およびデータ ビューアーのデタッチまたはアタッチを行うことができます。  
   
 #### <a name="to-add-a-data-viewer"></a>データ ビューアーを追加するには  
   
 -   [データ フローにデータ ビューアーを追加する](../add-a-data-viewer-to-a-data-flow.md)  
   
 ## <a name="row-counts"></a>行数  
- 
-  **デザイナーでは、** [データ フロー] [!INCLUDE[ssIS](../../includes/ssis-md.md)] タブのデザイン画面のパスの隣に、パスを通過した行数が表示されます。 データがパスを移動する間、表示される行数が定期的に更新されます。  
+ **デザイナーでは、** [データ フロー] [!INCLUDE[ssIS](../../includes/ssis-md.md)] タブのデザイン画面のパスの隣に、パスを通過した行数が表示されます。 データがパスを移動する間、表示される行数が定期的に更新されます。  
   
  また、データ フローに行数変換を追加して、最終的な行数を変数に取り込むこともできます。 詳細については、「 [Row Count Transformation](../data-flow/transformations/row-count-transformation.md)」を参照してください。  
   
@@ -66,12 +61,12 @@ ms.locfileid: "62766195"
   
  次の表では、色分けについて説明します。  
   
-|Color|[説明]|  
+|Color|説明|  
 |-----------|-----------------|  
 |無色|データ フロー エンジンによる呼び出しの待機中です。|  
 |黄|変換の実行、データの抽出、またはデータの読み込みを行っています。|  
 |[緑]|正常に実行されました。|  
-|red|実行されましたがエラーが発生しました。|  
+|赤|実行されましたがエラーが発生しました。|  
   
 ## <a name="see-also"></a>参照  
  [パッケージ開発のトラブルシューティング ツール](troubleshooting-tools-for-package-development.md)  

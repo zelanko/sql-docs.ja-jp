@@ -11,16 +11,15 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 29d45e06dcd3e67af3abbc6b356d44877e40f46b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65484703"
 ---
 # <a name="task-2-mapping-excel-columns-to-dqs-domains"></a>タスク 2: DQS ドメインに Excel 列をマップする
     
-1.  
-  **[マップ]** ページの **[データ ソース]** で **[Excel ファイル]** を選択します。  
+1.  **[マップ]** ページの **[データ ソース]** で **[Excel ファイル]** を選択します。  
   
 2.  [**参照**] をクリックし、[**仕入先 .xlsx**] を選択して、[**開く**] をクリックします。  
   
@@ -49,7 +48,7 @@ ms.locfileid: "65484703"
   
 6.  [**次へ**] をクリックして、[**クレンジング**] ページに移動します。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
  [タスク 3: Suppliers ナレッジ ベースに対してデータをクレンジングする](../../2014/tutorials/task-3-cleansing-data-against-the-suppliers-knowledge-base.md)  
   
   

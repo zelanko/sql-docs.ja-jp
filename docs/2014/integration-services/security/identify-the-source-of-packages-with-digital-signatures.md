@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 714ede33a89a3ab4e44dae682887ee0c21c9f363
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62766654"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>デジタル署名を使用してパッケージのソースを特定する
@@ -34,10 +34,10 @@ ms.locfileid: "62766654"
   
 -   デザイン時にすべてのパッケージのデジタル署名を確認してからパッケージを読み込むには、 **で** [パッケージの読み込み時にデジタル署名を確認する] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]チェック ボックスをオンにします。 このオプションは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でのすべてのパッケージに対するグローバルな設定です。 詳細については、「 [General Page](../general-page-of-integration-services-designers-options.md)」を参照してください。  
   
--   個々のパッケージのデジタル署名を確認するには、 `/VerifyS[igned]` **dtexec**ユーティリティを使用してパッケージを実行するときにオプションを指定します。 詳細については、「 [Dtexec ユーティリティ](../packages/dtexec-utility.md)」を参照してください。  
+-   個々のパッケージのデジタル署名を確認するには、 `/VerifyS[igned]` **dtexec**ユーティリティを使用してパッケージを実行するときにオプションを指定します。 詳細については、「[dtexec ユーティリティ](../packages/dtexec-utility.md)」を参照してください。  
   
 ## <a name="setting-a-registry-value-to-check-the-package-signature"></a>パッケージの署名を確認するレジストリ値の設定  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、オプションのレジストリ値**BlockedSignatureStates**もサポートされています。この値を使用して、署名付きパッケージと署名されていないパッケージを読み込む組織のポリシーを管理できます。 このレジストリ値により、パッケージが署名されていない場合、または無効な署名や信頼できない署名が含まれている場合に、パッケージが読み込まれないようにすることができます。 このレジストリ値を設定する方法の詳細については、「 [レジストリ値を設定して署名ポリシーを実装する](../implement-a-signing-policy-by-setting-a-registry-value.md)」を参照してください。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、オプションのレジストリ値である **BlockedSignatureStates**もサポートされています。このレジストリ値を使用すると、署名付きパッケージと署名がないパッケージの読み込みに関する組織のポリシーを管理できます。 このレジストリ値により、パッケージが署名されていない場合、または無効な署名や信頼できない署名が含まれている場合に、パッケージが読み込まれないようにすることができます。 このレジストリ値を設定する方法の詳細については、「 [レジストリ値を設定して署名ポリシーを実装する](../implement-a-signing-policy-by-setting-a-registry-value.md)」を参照してください。  
   
 > [!NOTE]  
 >  オプションの **BlockedSignatureStates** レジストリ値では、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] または **dtexec** コマンド ラインで設定されたデジタル署名オプションよりも制限が厳しい設定を指定できます。 この場合、制限が厳しい方のレジストリ設定が他の設定をオーバーライドします。  

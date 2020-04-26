@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: df86c46bdae8a40a5fa49d38517e8e5588d50e09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63185396"
 ---
 # <a name="lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial"></a>レッスン 6: 予測の作成と操作 (基本的なデータ マイニング チュートリアル)
@@ -26,7 +26,7 @@ ms.locfileid: "63185396"
   
  このレッスンの内容は次のとおりです。  
   
- [基本的なデータマイニングチュートリアル &#40;予測の作成&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [予測の作成 &#40;基本的なデータ マイニング チュートリアル&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
  [構造データでのドリルスルーの使用 &#40;基本的なデータマイニングチュートリアル&#41;](../../2014/tutorials/using-drillthrough-on-structure-data-basic-data-mining-tutorial.md)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "63185396"
  [レッスン 5: モデルのテスト &#40;基本的なデータマイニングチュートリアル&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [基本的なデータマイニングチュートリアル &#40;予測の作成&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [予測の作成 &#40;基本的なデータ マイニング チュートリアル&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>参照  
  [デシジョンツリーモデルのマイニングモデルコンテンツ &#40;Analysis Services データマイニング&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)   

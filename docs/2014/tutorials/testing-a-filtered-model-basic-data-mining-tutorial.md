@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: baa4910b2849c4eb2dd04c6d0115c83683ee8bea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63044097"
 ---
 # <a name="testing-a-filtered-model-basic-data-mining-tutorial"></a>フィルター選択されたモデルのテスト (基本的なデータ マイニング チュートリアル)
@@ -31,8 +31,7 @@ ms.locfileid: "63044097"
   
 1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]の [ソリューションエクスプローラーで、[ **BasicDataMining**] を選択します。  
   
-2.  
-  **[マイニング モデル]** タブをクリックします。  
+2.  **[マイニング モデル]** タブをクリックします。  
   
 3.  `TM_Decision_Tree`モデルを右クリックし、[**新しいマイニングモデル**] をクリックします。  
   
@@ -48,11 +47,9 @@ ms.locfileid: "63044097"
   
      -- または --  
   
-     モデルを選択します。 
-  **[マイニング モデル]** メニューの **[モデル フィルターの設定]** をクリックします。  
+     モデルを選択します。 **[マイニング モデル]** メニューの **[モデル フィルターの設定]** をクリックします。  
   
-2.  
-  **[モデル フィルター]** ダイアログ ボックスで、 **[マイニング構造列]** ボックスのグリッドの先頭行をクリックします。  
+2.  **[モデル フィルター]** ダイアログ ボックスで、 **[マイニング構造列]** ボックスのグリッドの先頭行をクリックします。  
   
      ドロップダウン リストに、そのテーブルの列の名前のみが表示されます。  
   
@@ -86,11 +83,11 @@ ms.locfileid: "63044097"
      [**マイニングモデル**] タブに2つの新しいモデルが表示されるようになりました。  
   
 ## <a name="evaluate-the-results"></a>結果の評価  
- 結果を表示してフィルター選択されたモデルの精度を評価する方法は、前の 3 つのモデルの場合とほぼ同じです。 詳細については、次を参照してください。  
+ 結果を表示してフィルター選択されたモデルの精度を評価する方法は、前の 3 つのモデルの場合とほぼ同じです。 詳細については次を参照してください:  
   
  [デシジョンツリーモデルの調査 &#40;基本的なデータマイニングチュートリアル&#41;](../../2014/tutorials/exploring-the-decision-tree-model-basic-data-mining-tutorial.md)  
   
- [リフトチャートを使用した精度のテスト &#40;基本的なデータマイニングチュートリアル&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+ [リフト チャートを使用した精度テスト (基本的なデータ マイニング チュートリアル)](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
 #### <a name="to-explore-the-filtered-models"></a>フィルター選択されたモデルを調査するには  
   
@@ -132,15 +129,15 @@ ms.locfileid: "63044097"
  入れ子になったテーブルにフィルターを適用する方法の例については、「中級者向け[データマイニングチュートリアル &#40;Analysis Services データマイニング&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)」を参照してください。  
   
 ## <a name="previous-task-in-lesson"></a>このレッスンの前の作業  
- [リフトチャートを使用した精度のテスト &#40;基本的なデータマイニングチュートリアル&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+ [リフト チャートを使用した精度テスト (基本的なデータ マイニング チュートリアル)](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 6: 予測の作成と操作 &#40;基本的なデータマイニングチュートリアル&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [レッスン 6: 予測の作成と操作 &#40;基本的なデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>参照  
  [中級者向けデータマイニングチュートリアル &#40;Analysis Services データマイニング&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
  [マイニングモデルタスクと操作方法](../../2014/analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [マイニングモデルからのフィルターの削除](../../2014/analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)   
- [マイニングモデルのフィルター &#40;Analysis Services データマイニング&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
+ [マイニング モデルのフィルター &#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
   
   

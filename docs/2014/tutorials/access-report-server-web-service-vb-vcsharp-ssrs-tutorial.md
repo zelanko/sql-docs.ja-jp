@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 9f8c549bef9d07f7b206f4dd8a9a652c8c72896f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62824538"
 ---
 # <a name="accessing-the-report-server-web-service-using-visual-basic-or-visual-c-ssrs-tutorial"></a>Visual Basic または Visual C# を使用したレポート サーバー Web サービスへのアクセス (SSRS チュートリアル)
@@ -37,7 +37,7 @@ ms.locfileid: "62824538"
   
 -   デバッグ モードでコンソール アプリケーションを実行する。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  このチュートリアルを完了するには次の準備が必要です。  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -53,10 +53,10 @@ ms.locfileid: "62824538"
   
  **チュートリアルの推定所要時間:** 60 分  
   
-## <a name="tasks"></a>処理手順  
+## <a name="tasks"></a>タスク  
  [レッスン 1: Web サービス クライアント プロジェクトの作成](../../2014/tutorials/lesson-1-creating-the-web-service-client-project.md)  
   
- [レッスン 2 : Web 参照の追加](../../2014/tutorials/lesson-2-adding-a-web-reference.md)  
+ [レッスン 2: Web 参照の追加](../../2014/tutorials/lesson-2-adding-a-web-reference.md)  
   
  [レッスン 3 : Web サービスへのアクセス](../../2014/tutorials/lesson-3-accessing-the-web-service.md)  
   

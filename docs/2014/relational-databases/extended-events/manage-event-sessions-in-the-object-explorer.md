@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d44ab9256367ceb9883b55bb9b01ad67e14ded32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62705518"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>オブジェクト エクスプローラーでのイベント セッションの管理
@@ -96,7 +96,7 @@ STATE = STOP
   
 4.  **[テンプレート]** ボックスを展開します。  
   
-5.  **[\<File From ...>Open]** をクリックし、インポートするセッション (XML ファイル) を参照します。  
+5.  [ ** \<ファイルから**] をクリックして >開き、インポートするセッション (XML ファイル) を参照します。  
   
  **[セッション]** ノードにセッションが表示されます。 既定では、セッションは開始されていません。  
   
@@ -113,17 +113,17 @@ STATE = STOP
   
 4.  イベント セッションの編集が終了したら、 **[OK]** をクリックします。  
   
-## <a name="script-an-event-session-definition-using-includetsqlincludestsql-mdmd"></a>を使用したイベント セッション定義のスクリプト化 [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+## <a name="script-an-event-session-definition-using-tsql"></a>を使用したイベント セッション定義のスクリプト化 [!INCLUDE[tsql](../../includes/tsql-md.md)]  
  新規セッション ウィザードおよび [新しいセッション] ダイアログの両方に、拡張イベント セッションを定義する [!INCLUDE[tsql](../../includes/tsql-md.md)] を生成するスクリプト オプションがあります。  
   
- セッション名を右クリックし、 [!INCLUDE[tsql](../../includes/tsql-md.md)] [セッションをスクリプト化] **をポイントし、** [CREATE] **をクリックして、既存の拡張イベント セッションの**にアクセスできます。  
+ セッション名を右クリックし、 [!INCLUDE[tsql](../../includes/tsql-md.md)] [セッションをスクリプト化] **をポイントし、**[CREATE] **をクリックして、既存の拡張イベント セッションの**にアクセスできます。  
   
 ## <a name="delete-an-extended-events-session"></a>拡張イベント セッションの削除  
  次の方法で拡張イベント セッションを削除できます。  
   
 -   クエリ エディターで、`DROP EVENT SESSION` を使用します。  
   
--   **オブジェクト エクスプローラー**を使用します。  
+-   **オブジェクトエクスプローラー**。  
   
  イベント セッションを削除すると、すべての構成情報が削除され、以後、セッションの定義は sys.server_event_sessions カタログ ビューに表示されません。  
   
@@ -134,7 +134,7 @@ STATE = STOP
   
  **オブジェクト エクスプローラー**で拡張イベント セッションを削除するには  
   
-1.  **[管理]** ノード、 **[拡張イベント]** ノード、および **[セッション]** ノードの順に展開します。  
+1.  [**管理**]、[**拡張イベント**]、[**セッション**] ノードの順に展開します。  
   
 2.  セッションを右クリックし、 **[削除]** をクリックします。  
   

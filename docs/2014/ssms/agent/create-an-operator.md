@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d3a5414e845d8e625c852d628bf0d965432bc72a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63136418"
 ---
 # <a name="create-an-operator"></a>オペレーターの作成
@@ -35,77 +35,69 @@ ms.locfileid: "63136418"
   
      [セキュリティ](#Security)  
   
--   **オペレーターを作成するために使用するもの:**  
+-   **オペレーターを作成する方法:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   ポケットベルと**net send**のオプションは、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将来の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョンでエージェントから削除される予定です。 新しい開発作業では、これらの機能の使用を避け、現在これらの機能を使用しているアプリケーションは修正するようにしてください。  
   
 -   SQL Server エージェントは、データベース メールを使用して、電子メールおよびポケットベルによる通知をオペレーターへ送信するように構成する必要があります。 詳細については、「 [オペレーターへの警告の割り当て](assign-alerts-to-an-operator.md)」を参照してください。  
   
--   
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、ジョブを簡単に管理できるグラフィカルなツールです。ジョブのインフラストラクチャを作成し、管理するには、このツールを使用することをお勧めします。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、ジョブを簡単に管理できるグラフィカルなツールです。ジョブのインフラストラクチャを作成し、管理するには、このツールを使用することをお勧めします。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  オペレーターを作成できるのは、 **sysadmin** 固定サーバー ロールのメンバーだけです。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-create-an-operator"></a>オペレーターを作成するには  
   
-1.  
-  **オブジェクト エクスプ ローラー**で、SQL Server エージェント オペレーターを作成するサーバーをプラス記号をクリックして展開します。  
+1.  **オブジェクト エクスプ ローラー**で、SQL Server エージェント オペレーターを作成するサーバーをプラス記号をクリックして展開します。  
   
 2.  プラス記号をクリックして **[SQL Server エージェント]** を展開します。  
   
-3.  
-  **[オペレーター]** フォルダーを右クリックし、 **[新しいオペレーター]** を選択します。  
+3.  **[オペレーター]** フォルダーを右クリックし、 **[新しいオペレーター]** を選択します。  
   
-     
-  **[新しいオペレーター]** ダイアログ ボックスの **[全般]** ページでは、次のオプションを使用できます。  
+     **[新しいオペレーター]** ダイアログ ボックスの **[全般]** ページでは、次のオプションを使用できます。  
   
      **名前**  
      オペレーターの名前を変更します。  
   
-     **有効**  
+     **Enabled**  
      オペレーターを有効にします。 有効になっていない場合は、オペレーターに通知が送信されません。  
   
-     **電子メール名**  
+     **[電子メール名]**  
      オペレーターの電子メール アドレスを指定します。  
   
-     **Net send アドレス**  
-     
-  **net send**に使用するアドレスを指定します。  
+     **[Net Send アドレス]**  
+     **net send**に使用するアドレスを指定します。  
   
-     **ポケットベルの電子メール名**  
+     **[ポケットベル用電子メール ログイン名]**  
      オペレーターのポケットベルに使用する電子メール アドレスを指定します。  
   
-     **ポケットベルによるポケットベルのスケジュール**  
+     **[ポケットベルの受信スケジュール]**  
      ポケットベルをアクティブにする時間を設定します。  
   
-     **月曜日 ~ 日曜日**  
+     **[月曜日] ～ [日曜日]**  
      ポケットベルをアクティブにする日を選択します。  
   
-     **Workday 開始**  
-     
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントがポケットベルへのメッセージ送信を開始する時刻を選択します。  
+     **[始業時刻]**  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントがポケットベルへのメッセージ送信を開始する時刻を選択します。  
   
-     **Workday 終了日**  
-     
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントがポケットベルへのメッセージ送信を終了する時刻を選択します。  
+     **[終業時刻]**  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントがポケットベルへのメッセージ送信を終了する時刻を選択します。  
   
-     
-  **[新しいオペレーター]** ダイアログ ボックスの **[通知]** ページでは、次のオプションを使用できます。  
+     **[新しいオペレーター]** ダイアログ ボックスの **[通知]** ページでは、次のオプションを使用できます。  
   
-     **警告**  
+     **アラート**  
      インスタンス内の警告を表示します。  
   
      **ジョブ**  
@@ -120,16 +112,15 @@ ms.locfileid: "63136418"
      **メッセージ**  
      電子メールを使用してこのオペレーターに通知します。  
   
-     **ポケットベル**  
+     **ポケット**  
      電子メールをポケット ベルに送信することによって、このオペレーターに通知します。  
   
      **Net send**  
-     
-  **net send**を使用してこのオペレーターに通知します。  
+     **net send**を使用してこのオペレーターに通知します。  
   
 4.  新しいオペレーターの作成が完了したら、 **[OK]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-create-an-operator"></a>オペレーターを作成するには  
   

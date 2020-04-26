@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9fb706a5175a2eb673e8f175a154f681b3af3c43
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62757663"
 ---
 # <a name="calculated-measure-representation-tabular"></a>計算されるメジャー表現 (テーブル)
@@ -23,7 +23,7 @@ ms.locfileid: "62757663"
 ## <a name="calculated-measure-representation"></a>計算されるメジャー表現  
   
 ### <a name="calculated-measure-in-amo"></a>AMO 内の計算されるメジャー  
- AMO を使用してテーブル モデルの計算されるメジャーを管理する場合、<xref:Microsoft.AnalysisServices.Command> オブジェクトの <xref:Microsoft.AnalysisServices.MdxScript> オブジェクトに定義されているメジャーと、論理的な計算されるメジャー オブジェクトが一対一で対応します。 各**計算されるメジャー**は、 `CREATE MEASURE`オブジェクト内の<xref:Microsoft.AnalysisServices.Command>式として定義され、セミコロンで区切られます。 テーブル モデルにおける計算されるメジャーは、すべて `CREATE MEASURE` オブジェクト内の 1 つのコマンド オブジェクトのコレクション <xref:Microsoft.AnalysisServices.MdxScript> 文字列に対応しています。 また、計算される各メジャーは、<xref:Microsoft.AnalysisServices.CalculationProperty> と一対一でマップされます。  
+ AMO を使用してテーブル モデルの計算されるメジャーを管理する場合、<xref:Microsoft.AnalysisServices.Command> オブジェクトの <xref:Microsoft.AnalysisServices.MdxScript> オブジェクトに定義されているメジャーと、論理的な計算されるメジャー オブジェクトが一対一で対応します。 各**計算されるメジャー**は、 `CREATE MEASURE`オブジェクト内の<xref:Microsoft.AnalysisServices.Command>式として定義され、セミコロンで区切られます。 テーブル モデルにおける計算されるメジャーは、すべて <xref:Microsoft.AnalysisServices.MdxScript> オブジェクト内の 1 つのコマンド オブジェクトのコレクション `CREATE MEASURE` 文字列に対応しています。 また、計算される各メジャーは、<xref:Microsoft.AnalysisServices.CalculationProperty> と一対一でマップされます。  
   
  次のコード スニペットは、計算されるメジャーの作成方法を示しています。  
   

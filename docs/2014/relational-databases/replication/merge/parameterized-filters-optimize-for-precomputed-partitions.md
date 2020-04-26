@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8f80afa10c1dbd067648db26c2bed0f423f371b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "63250549"
 ---
 # <a name="optimize-parameterized-filter-performance-with-precomputed-partitions"></a>事前計算済みパーティションによるパラメーター化されたフィルターのパフォーマンス最適化
@@ -53,7 +53,7 @@ ms.locfileid: "63250549"
   
 ### <a name="database-collation"></a>データベースの照合順序  
   
--   事前計算済みパーティションを使用する場合、比較を行う際にはテーブルや列ではなくデータベースの照合順序が常に使用されます。 次のシナリオで考えてみましょう。  
+-   事前計算済みパーティションを使用する場合、比較を行う際にはテーブルや列ではなくデータベースの照合順序が常に使用されます。 以下のシナリオについて考えてみます。  
   
     -   大文字と小文字が区別される照合順序のデータベースに、大文字と小文字が区別されない照合順序のテーブルが格納されています。  
   

@@ -19,10 +19,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: e2b3441d98bc9226abce3a49fd28820df6ec99ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62666870"
 ---
 # <a name="monitoring-replication"></a>監視 (レプリケーション)
@@ -34,11 +34,9 @@ ms.locfileid: "62666870"
   
 -   [!INCLUDE[msCoName](../../includes/msCoName-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssManStudioFull-md.md)]  
   
-     
-  [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] を使用して、レプリケーション モニターにアクセスできます。 また、ログ リーダー エージェント、スナップショット エージェント、マージ エージェント、およびディストリビューション エージェントの各エージェントを開始および停止したり、現在の状態や各エージェントによってログに記録された最後のメッセージを表示することができます。 詳細については、「 [Monitor Replication Agents](monitor/monitor-replication-agents.md)」を参照してください。  
+     [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] を使用して、レプリケーション モニターにアクセスできます。 また、ログ リーダー エージェント、スナップショット エージェント、マージ エージェント、およびディストリビューション エージェントの各エージェントを開始および停止したり、現在の状態や各エージェントによってログに記録された最後のメッセージを表示することができます。 詳細については、「 [Monitor Replication Agents](monitor/monitor-replication-agents.md)」を参照してください。  
   
--   
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] およびレプリケーション管理オブジェクト (RMO)  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] およびレプリケーション管理オブジェクト (RMO)  
   
      どちらのインターフェイスでも、ディストリビューターからすべての種類のレプリケーションを監視できます。 マージ レプリケーションでは、サブスクライバーからレプリケーションを監視することもできます。  
   

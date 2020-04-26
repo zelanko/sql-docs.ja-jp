@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 61b6f366843b326a8983c27c3d5ee945604756f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62757743"
 ---
 # <a name="querying-a-tabular-model"></a>テーブル モデルのクエリ
@@ -103,7 +103,7 @@ DEFINE
 |Product Category Id|Product Category Alternate Id|Product Category Name|Internet Sales|Reseller Sales|  
 |-------------------------|-----------------------------------|---------------------------|--------------------|--------------------|  
 |4|4|Accessories|$700759.96|$571297.93|  
-|1 で保護されたプロセスとして起動されました|1 で保護されたプロセスとして起動されました|Bikes|$28318144.65|$66302381.56|  
+|1|1|Bikes|$28318144.65|$66302381.56|  
 |3|3|Clothing|$339772.61|$1777840.84|  
 |2|2|Components||$11799076.66|  
   

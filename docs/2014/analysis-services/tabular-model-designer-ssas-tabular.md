@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 223a8a300a4f3000512f8d75dfb7595cb52abc08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067826"
 ---
 # <a name="tabular-model-designer-ssas-tabular"></a>テーブル モデル デザイナー (SSAS テーブル)
@@ -24,29 +24,26 @@ ms.locfileid: "66067826"
   
  このトピックのセクション:  
   
--   [効果](#bkmk_benefits)  
+-   [メリット](#bkmk_benefits)  
   
 -   [プロジェクトテンプレート](#bkmk_proj_temp)  
   
--   [ウィンドウとメニュー](#bkmk_wind_men)  
+-   [ウィンドウおよびメニュー](#bkmk_wind_men)  
   
 -   [Visual Studio の統合](#bkmk_vsint)  
   
-##  <a name="bkmk_benefits"></a>効果  
- 
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]をインストールすると、テーブル モデルを作成するための新しいプロジェクト テンプレートが、使用可能なプロジェクトの種類に追加されます。 いずれかのテンプレートを使用して新しいテーブル モデル プロジェクトを作成した後は、テーブル モデル デザイナー ツール、およびウィザードを使用して、モデル作成を開始できます。  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a>効果  
+ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]をインストールすると、テーブル モデルを作成するための新しいプロジェクト テンプレートが、使用可能なプロジェクトの種類に追加されます。 いずれかのテンプレートを使用して新しいテーブル モデル プロジェクトを作成した後は、テーブル モデル デザイナー ツール、およびウィザードを使用して、モデル作成を開始できます。  
   
- プロフェッショナルな多次元のテーブル モデル ソリューション作成のための新しいテンプレートとツールのほかに、 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 環境には、組織のために最も強力な BI ソリューションを作成するための、デバッグ、およびプロジェクトのライフ サイクルに関する機能が用意されています。 
-  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]の詳細については、「 [Visual Studio の概要](https://go.microsoft.com/fwlink/?LinkId=206389)」を参照してください。  
+ プロフェッショナルな多次元のテーブル モデル ソリューション作成のための新しいテンプレートとツールのほかに、 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 環境には、組織のために最も強力な BI ソリューションを作成するための、デバッグ、およびプロジェクトのライフ サイクルに関する機能が用意されています。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]の詳細については、「 [Visual Studio の概要](https://go.microsoft.com/fwlink/?LinkId=206389)」を参照してください。  
   
-##  <a name="bkmk_proj_temp"></a>プロジェクトテンプレート  
- 
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]をインストールすると、以下のテーブル モデル プロジェクト テンプレートがビジネス インテリジェンス プロジェクトの種類に追加されます。  
+##  <a name="project-templates"></a><a name="bkmk_proj_temp"></a> プロジェクト テンプレート  
+ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]をインストールすると、以下のテーブル モデル プロジェクト テンプレートがビジネス インテリジェンス プロジェクトの種類に追加されます。  
   
- **Analysis Services テーブルプロジェクト**  
+ **Analysis Services のテーブル プロジェクト**  
  このテンプレートを使用すると、新しい、空白のテーブル モデル プロジェクトを作成できます。  
   
- **サーバーからインポート (表形式)**  
+ **サーバー (表形式) からのインポート**  
  このテンプレートを使用すると、Analysis Services 内の既存のテーブル モデルからメタデータを抽出して、新しいテーブル モデル プロジェクトを作成できます。  
   
  **PowerPivot からのインポート**  
@@ -55,9 +52,8 @@ ms.locfileid: "66067826"
 > [!NOTE]  
 >  テーブル モデル プロジェクトでは、テーブル モードの Analysis Services サーバー インスタンスがローカルまたはネットワーク上で実行されている必要があります。  
   
-##  <a name="bkmk_wind_men"></a>ウィンドウとメニュー  
- 
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] のテーブル モデルの作成環境には、次が含まれています。  
+##  <a name="windows-and-menus"></a><a name="bkmk_wind_men"></a>ウィンドウとメニュー  
+ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] のテーブル モデルの作成環境には、次が含まれています。  
   
 ### <a name="designer-window"></a>デザイナー ウィンドウ  
  デザイナー ウィンドウは、モデルを視覚的に表現し、テーブル モデルの作成に使用されます。 Model.bim ファイルを開くと、デザイナー ウィンドウにそのモデルが表示されます。 デザイナー ウィンドウでは、2 つの異なる表示モードを使用してモデルを作成することができます。  
@@ -92,8 +88,7 @@ ms.locfileid: "66067826"
   
  プロパティ ウィンドウのフィールドには、クリックすると開くコントロールが埋め込まれています。 編集コントロールの種類は、プロパティごとに異なります。 コントロールには、エディット ボックス、ドロップダウン リスト、およびカスタム ダイアログ ボックスへのリンクが含まれています。 淡色表示のプロパティは読み取り専用です。  
   
- 
-  **プロパティ** ウィンドウを開くには、 **[表示]** メニューをクリックしてから **[プロパティ ウィンドウ]** をクリックします。  
+ **プロパティ** ウィンドウを開くには、 **[表示]** メニューをクリックしてから **[プロパティ ウィンドウ]** をクリックします。  
   
 ### <a name="error-list"></a>エラー一覧  
  エラー一覧ウィンドウには、次のようなモデルの状態に関するメッセージが含まれています。  
@@ -106,26 +101,20 @@ ms.locfileid: "66067826"
   
 -   DirectQuery 検証エラー。  
   
- 既定では、 **エラー一覧** は、エラーが返されない限り表示されません。 ただし、 **エラー一覧** ウィンドウはいつでも表示できます。 
-  **エラー一覧** ウィンドウを表示するには、 **[表示]** メニューをクリックしてから **[エラー一覧]** をクリックします。  
+ 既定では、 **エラー一覧** は、エラーが返されない限り表示されません。 ただし、 **エラー一覧** ウィンドウはいつでも表示できます。 **エラー一覧** ウィンドウを表示するには、 **[表示]** メニューをクリックしてから **[エラー一覧]** をクリックします。  
   
-### <a name="output"></a>Output  
- ビルドと配置の情報が、(進捗状況のモーダル ダイアログに加えて) **出力** ウィンドウに表示されます。 
-  **出力** ウィンドウを表示するには、 **[表示]** をクリックしてから [出力] をクリックします。  
+### <a name="output"></a>出力  
+ ビルドと配置の情報が、(進捗状況のモーダル ダイアログに加えて) **出力** ウィンドウに表示されます。 **出力** ウィンドウを表示するには、 **[表示]** をクリックしてから [出力] をクリックします。  
   
 ### <a name="menu-items"></a>メニュー項目  
- 
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]をインストールすると、テーブル モデルの作成のために特化したメニュー項目が Visual Studio のメニュー バーに追加されます。 
-  **[モデル]** メニューを使用して、データ インポート ウィザードを起動したり、既存の接続を表示したり、ワークスペース データを処理したりできるほか、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel でモデル ワークスペースを参照することもできます。 
-  **[テーブル]** メニューは、テーブル間のリレーションシップの作成と管理、メジャーの作成と管理のほか、データ テーブルの設定や計算オプションなど、各種のテーブル プロパティを指定する際に使用します。 
-  **[列]** メニューでは、テーブル内の列の追加と削除、列の表示と非表示のほか、列のプロパティ (データ型、フィルターなど) を指定することができます。 テーブル モデル ソリューションは、 **[ビルド]** メニューからビルドおよび配置できます。 コピーと貼り付けの機能は、 **[編集]** メニューに含まれています。  
+ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]をインストールすると、テーブル モデルの作成のために特化したメニュー項目が Visual Studio のメニュー バーに追加されます。 **[モデル]** メニューを使用して、データ インポート ウィザードを起動したり、既存の接続を表示したり、ワークスペース データを処理したりできるほか、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel でモデル ワークスペースを参照することもできます。 **[テーブル]** メニューは、テーブル間のリレーションシップの作成と管理、メジャーの作成と管理のほか、データ テーブルの設定や計算オプションなど、各種のテーブル プロパティを指定する際に使用します。 **[列]** メニューでは、テーブル内の列の追加と削除、列の表示と非表示のほか、列のプロパティ (データ型、フィルターなど) を指定することができます。 テーブル モデル ソリューションは、 **[ビルド]** メニューからビルドおよび配置できます。 コピーと貼り付けの機能は、 **[編集]** メニューに含まれています。  
   
  これらのメニュー項目に加えて、Analysis Services のオプションに別途設定が追加されます。追加された設定には、[ツール] のメニュー項目からアクセスすることができます。  
   
 ### <a name="toolbar"></a>ツール バー  
  Analysis Services ツール バーを使用すると、最もよく使用されるモデル作成コマンドにすばやく簡単にアクセスできます。  
   
-##  <a name="bkmk_vsint"></a>Visual Studio の統合  
+##  <a name="visual-studio-integration"></a><a name="bkmk_vsint"></a> Visual Studio との統合  
  **ソース管理**  
  Analysis Services プロジェクトは、選択したソース管理プラグインと統合されます。 ソース コントロールを使用するように Visual Studio を構成した場合は、ソリューション エクスプローラーからチェックインとチェックアウトを使用できます。 Team Foundation Server を使用するように構成するには、「 [Team Foundation バージョン管理を使用する Visual Studio の構成](https://msdn.microsoft.com/library/ms253064.aspx)」を参照してください。 多くのサード パーティ製ソース管理プラグインもサポートされます。  
   
@@ -137,6 +126,6 @@ ms.locfileid: "66067826"
   
 ## <a name="see-also"></a>参照  
  [SSAS 表形式&#41;&#40;テーブルモデルプロジェクト](tabular-models/tabular-model-projects-ssas-tabular.md)   
- [SSAS 表形式&#41;&#40;プロパティ](tabular-models/properties-ssas-tabular.md)  
+ [プロパティ (SSAS テーブル)](tabular-models/properties-ssas-tabular.md)  
   
   

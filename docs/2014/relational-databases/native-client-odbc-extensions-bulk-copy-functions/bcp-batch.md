@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c41e8d90adc8ff6eb2058feebe3f33c10edbfa92
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62631386"
 ---
 # <a name="bcp_batch"></a>bcp_batch
@@ -45,7 +45,7 @@ hdbc
 ## <a name="returns"></a>戻り値  
  **Bcp_batch**を最後に呼び出した後に保存された行の数。エラーが発生した場合は-1。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  一括コピーのバッチではトランザクションを定義します。 アプリケーションで[bcp_bind](bcp-bind.md)を使用し、プログラム変数から SQL Server テーブルに行を一括コピーする**bcp_sendrow** 、プログラムが**bcp_batch**または[bcp_done](bcp-done.md)を呼び出した場合にのみ、行がコミットされます。  
   
  **Bcp_batch**は、 *n*行ごとに、または (テレメトリアプリケーションと同様に) 受信データになどがあるときに1回呼び出すことができます。 アプリケーションがを呼び出さない場合**bcp_batch** **bcp_done**が呼び出されたときにのみ、一括コピーされた行がコミットされます。  

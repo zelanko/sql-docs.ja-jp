@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a6aa4074aa04af86e478b57b1870fd0dd855bea8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63315078"
 ---
 # <a name="exploring-the-call-center-model-intermediate-data-mining-tutorial"></a>コール センター モデルの検証 (中級者向けデータ マイニング チュートリアル)
@@ -24,7 +24,7 @@ ms.locfileid: "63315078"
   
 -   [Microsoft 汎用コンテンツツリービューアー](#bkmk_genviewer) **:** この標準ビューアーは、モデルの生成時にアルゴリズムによって検出されたパターンと統計に関する詳細な情報を提供します。  
   
-##  <a name="bkmk_NNviewer"></a>Microsoft ニューラルネットワークビューアー  
+##  <a name="microsoft-neural-network-viewer"></a><a name="bkmk_NNviewer"></a>Microsoft ニューラルネットワークビューアー  
  ビューアーには、**入力**、**出力**、および**変数**の3つのペインがあります。  
   
  [**出力**] ペインを使用すると、予測可能な属性または依存変数に対して異なる値を選択できます。 モデルに複数の予測可能な属性が含まれている場合は、[**出力属性**] の一覧から属性を選択できます。  
@@ -107,14 +107,14 @@ ms.locfileid: "63315078"
   
  ただし、要因リストの下の方に目を向けると、影響が微弱で解釈が難しいその他の要因がいくつか確認できます。 たとえば、シフトは一見、サービスに影響を及ぼすように見えますが、リフト スコアおよび相対的確率を見る限り、シフトはさほど大きな要因ではありません。  
   
-|Attribute|Value|0.07 \<を優先|優先 >= 0.12|  
+|属性|値|0.07 \<を優先|優先 >= 0.12|  
 |---------------|-----------|--------------------|----------------------|  
 |案件あたりの平均時間|89.087 ~ 120.000||スコア: 100<br /><br /> Value1 の確率: 4.45%<br /><br /> Value2 の確率: 51.94%<br /><br /> Value1 のリフト: 0.19<br /><br /> Value2 のリフト: 1.94|  
 |案件あたりの平均時間|44.000 ~ 70.597|スコア : 92.35<br /><br /> 値 1 の確率 : 60.06 %<br /><br /> 値 2 の確率 : 8.30 %<br /><br /> 値 1 のリフト : 2.61<br /><br /> 値 2 のリフト : 0.31||  
   
- [トップに戻る](#bkmk_NNviewer)  
+ [ページのトップへ](#bkmk_NNviewer)  
   
-##  <a name="bkmk_genviewer"></a>Microsoft 汎用コンテンツツリービューアー  
+##  <a name="microsoft-generic-content-tree-viewer"></a><a name="bkmk_genviewer"></a>Microsoft 汎用コンテンツツリービューアー  
  このビューアーを使用すると、モデルの処理時にアルゴリズムによって作成された、さらに詳しい情報を閲覧できます。 **Microsoft 汎用コンテンツツリービューアー**は、マイニングモデルを一連のノードとして表します。各ノードは、トレーニングデータに関する学習済みの知識を表します。 このビューアーは、あらゆるモデルで使用できますが、ノードの内容はモデルの種類によって異なります。  
   
  ニューラル ネットワーク モデルまたはロジスティック回帰モデルの場合、特に重要なのは `marginal statistics node` です。 このノードには、データに含まれる値の分布に関して得られた統計が表示されます。 この情報は、多数の T-SQL クエリを作成せずにデータの概要を取得する必要がある場合に、役立てることができます。 前のトピックで、ビン分割値のグラフを取り上げましたが、このグラフは、マージナル統計ノードから導かれたものです。  
@@ -145,7 +145,7 @@ WHERE NODE_NAME = '10000000000000000'
   
  ノード階層と、NODE_DISTRIBUTION テーブル内の詳細情報を使用して、ニューラル ネットワーク内のパスを個別にたどり、非表示になっているレイヤーの統計を閲覧することもできます。 詳細については、「[ニューラルネットワークモデルのクエリ例](../../2014/analysis-services/data-mining/neural-network-model-query-examples.md)」を参照してください。  
   
- [トップに戻る](#bkmk_NNviewer)  
+ [ページのトップへ](#bkmk_NNviewer)  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [呼び出しセンター構造へのロジスティック回帰モデルの追加 &#40;中級者向けデータマイニングチュートリアル&#41;](../../2014/tutorials/add-logistic-regression-model-to-call-center-intermediate-data-mining.md)  

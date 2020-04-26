@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 566284668ac8ea27aded665da7028375d97623e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767611"
 ---
-# <a name="step-9-testing-the-lesson-1-tutorial-package"></a>手順 9: レッスン 1 のチュートリアル パッケージのテスト
+# <a name="step-9-testing-the-lesson-1-tutorial-package"></a>手順 9:レッスン 1 のチュートリアル パッケージのテスト
   このレッスンでは次の作業を行いました。  
   
 -   新しい [!INCLUDE[ssIS](../includes/ssis-md.md)] プロジェクトを作成しました。  
@@ -35,21 +35,20 @@ ms.locfileid: "62767611"
   
  ![パッケージ内の制御フロー](../../2014/tutorials/media/task9lesson1control.gif "パッケージ内の制御フロー")  
   
- **Data Flow**  
+ **データ フロー**  
   
- ![パッケージ内のデータフロー](../../2014/tutorials/media/task9lesson1data.gif "パッケージ内のデータフロー")  
+ ![パッケージ内のデータ フロー](../../2014/tutorials/media/task9lesson1data.gif "パッケージ内のデータ フロー")  
   
 ### <a name="to-run-the-lesson-1-tutorial-package"></a>レッスン 1 のチュートリアル パッケージを実行するには  
   
-1.  
-  **[デバッグ]** メニューの **[デバッグの開始]** をクリックします。  
+1.  [**デバッグ**] メニューの [**デバッグ開始**] をクリックします。  
   
      パッケージが実行されます。その結果、 **AdventureWorksDW2012** の **FactCurrency**ファクト テーブルに 1,097 個の行が追加されます。  
   
 2.  パッケージの実行が完了したら、 **[デバッグ]** メニューの **[デバッグの停止]** をクリックします。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 2 : ループの追加](../integration-services/lesson-2-adding-looping-with-ssis.md)  
+ [レッスン 2: ループの追加](../integration-services/lesson-2-adding-looping-with-ssis.md)  
   
 ## <a name="see-also"></a>参照  
  [プロジェクトとパッケージの実行](packages/run-integration-services-ssis-packages.md)  

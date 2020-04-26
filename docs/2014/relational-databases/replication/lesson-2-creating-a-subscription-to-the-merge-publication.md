@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 495fb831490a35043b500caea2c835bfd80b6a8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721032"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>レッスン 2 : マージ パブリケーションへのサブスクリプションの作成
@@ -24,26 +24,21 @@ ms.locfileid: "62721032"
   
 ### <a name="to-create-the-subscription"></a>サブスクリプションを作成するには  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でサブスクライバーに接続し、サーバー ノード、 **[レプリケーション]** フォルダーの順に展開して、 **[ローカル サブスクリプション]** フォルダーを右クリックし、 **[新しいサブスクリプション]** をクリックします。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でサブスクライバーに接続し、サーバー ノード、 **[レプリケーション]** フォルダーの順に展開して、 **[ローカル サブスクリプション]** フォルダーを右クリックし、 **[新しいサブスクリプション]** をクリックします。  
   
      サブスクリプションの新規作成ウィザードが起動します。  
   
-2.  
-  **[パブリケーション]** ページで、 **[パブリッシャー]** ボックスの一覧の **[SQL Server パブリッシャーの検索]** をクリックします。  
+2.  **[パブリケーション]** ページで、 **[パブリッシャー]** ボックスの一覧の **[SQL Server パブリッシャーの検索]** をクリックします。  
   
-3.  
-  **[サーバーへの接続]** ダイアログ ボックスで、 **[サーバー名]** ボックスにパブリッシャー インスタンスの名前を入力し、 **[接続]** をクリックします。  
+3.  **[サーバーへの接続]** ダイアログ ボックスで、 **[サーバー名]** ボックスにパブリッシャー インスタンスの名前を入力し、 **[接続]** をクリックします。  
   
-4.  
-  **[AdvWorksSalesOrdersMerge]** をクリックし、 **[次へ]** をクリックします。  
+4.  **[AdvWorksSalesOrdersMerge]** をクリックし、 **[次へ]** をクリックします。  
   
 5.  [マージ エージェントの場所] ページで、 **[サブスクライバーで各エージェントを実行する]** をクリックし、 **[次へ]** をクリックします。  
   
 6.  [サブスクライバー] ページで、サブスクライバーサーバーのインスタンス名を選択し、[**サブスクリプションデータベース**] の一覧から [ ** \<新しいデータベース>** ] を選択します。  
   
-7.  
-  **[新しいデータベース]** ダイアログ ボックスで、 **[データベース名]** ボックスに「 **SalesOrdersReplica** 」と入力し、 **[OK]** をクリックして **[次へ]** をクリックします。  
+7.  **[新しいデータベース]** ダイアログ ボックスで、 **[データベース名]** ボックスに「 **SalesOrdersReplica** 」と入力し、 **[OK]** をクリックして **[次へ]** をクリックします。  
   
 8.  [マージエージェントセキュリティ] ページで、省略記号ボタン ([**...**]) \<をクリックし、[**プロセスアカウント**] ボックスに「 _Machine_Name>_ **\ repl_merge** 」と入力して、このアカウントのパスワードを入力し、[ **OK**]、[**次へ**] の順にクリックしてから、もう一度 [**次へ**] をクリックします。  
   
@@ -55,26 +50,21 @@ ms.locfileid: "62721032"
   
 ### <a name="setting-database-permissions-at-the-subscriber"></a>サブスクライバー側のデータベース権限を設定するには  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でサブスクライバーに接続し、 **[データベース]**、 **[SalesOrdersReplica]**、 **[セキュリティ]** の順に展開して、 **[ユーザー]** を右クリックし、 **[新しいユーザー]** を選択します。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でサブスクライバーに接続し、 **[データベース]**、 **[SalesOrdersReplica]**、 **[セキュリティ]** の順に展開して、 **[ユーザー]** を右クリックし、 **[新しいユーザー]** を選択します。  
   
 2.  [**全般**] ページの [ \<**ユーザー名**] ボックスに「 _Machine_Name>_ **\ repl_merge** 」と入力し、省略記号ボタン ([**..**.]) をクリックします。次に、[**参照**] をクリックし\< _Machine_Name>_ **\ repl_merge**を選択し、[ **ok**]、[**名前の確認**] の順にクリックし、[ **ok**] をクリックします。  
   
-3.  
-  **[データベース ロールのメンバーシップ]** で **[db_owner]** を選択し、 **[OK]** をクリックしてユーザーを作成します。  
+3.  **[データベース ロールのメンバーシップ]** で **[db_owner]** を選択し、 **[OK]** をクリックしてユーザーを作成します。  
   
 ### <a name="to-create-the-filtered-data-snapshot-for-the-subscription"></a>サブスクリプション用のフィルター選択データのスナップショットを作成するには  
   
 1.  で[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]パブリッシャーに接続し、サーバーノードを展開して、[**レプリケーション**] フォルダーを展開します。  
   
-2.  
-  **[ローカル パブリケーション]** フォルダーを展開し、 **[AdvWorksSalesOrdersMerge]** パブリケーションを右クリックして、 **[プロパティ]** をクリックします。  
+2.  **[ローカル パブリケーション]** フォルダーを展開し、 **[AdvWorksSalesOrdersMerge]** パブリケーションを右クリックして、 **[プロパティ]** をクリックします。  
   
-     
-  **[パブリケーションのプロパティ]** ダイアログ ボックスが表示されます。  
+     **[パブリケーションのプロパティ]** ダイアログ ボックスが表示されます。  
   
-3.  
-  **[データ パーティション]** ページを選択して、 **[追加]** をクリックします。  
+3.  **[データ パーティション]** ページを選択して、 **[追加]** をクリックします。  
   
 4.  [**データパーティションの追加**] ダイアログボックスで`adventure-works\pamela0` 、[ **HOST_NAME 値**] ボックスに「」と入力し、[ **OK]** をクリックします。  
   
@@ -84,8 +74,8 @@ ms.locfileid: "62721032"
  ここでは、マージ パブリケーションへのサブスクリプションを作成し、新しいサブスクリプションのデータ パーティション用のフィルター選択スナップショットを生成して、サブスクリプション初期化時に使用できるようにしました。 次は、サブスクリプション データベースのマージ エージェントに権限を付与します。さらに、マージ エージェントを実行して、同期の開始とサブスクリプションの初期化を行います。 「 [レッスン 3:マージ パブリケーションへのサブスクリプションの同期](lesson-3-synchronizing-the-subscription-to-the-merge-publication.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [パブリケーションをサブスクライブする](subscribe-to-publications.md)   
- [プルサブスクリプションを作成する](create-a-pull-subscription.md)   
- [パラメーター化されたフィルターを使用したマージパブリケーションのスナップショット](snapshots-for-merge-publications-with-parameterized-filters.md)  
+ [Subscribe to Publications](subscribe-to-publications.md)   
+ [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [パラメーター化されたフィルターを使用したマージ パブリケーションのスナップショット](snapshots-for-merge-publications-with-parameterized-filters.md)  
   
   

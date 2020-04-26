@@ -42,10 +42,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7b1acd9e33865f1f60c1d1134e3173af4e4a562b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076606"
 ---
 # <a name="configure-measure-properties"></a>メジャーのプロパティの構成
@@ -58,13 +58,11 @@ ms.locfileid: "66076606"
   
 |プロパティ|定義|  
 |--------------|----------------|  
-|`AggregateFunction`|必須。 メジャーの集計方法を決定します。 
-  `Sum` は既定の集計です。 各関数の詳しい説明については、「 [集計関数の使用](use-aggregate-functions.md) 」を参照してください。|  
+|`AggregateFunction`|必須。 メジャーの集計方法を決定します。 `Sum` は既定の集計です。 各関数の詳しい説明については、「 [集計関数の使用](use-aggregate-functions.md) 」を参照してください。|  
 |`DataType`|必須。 メジャーのバインド先である、基になるファクト テーブル列のデータ型を指定します。 既定では、この値は基になる列から継承されます。|  
 |`Description`|メジャーの説明を指定します。クライアント アプリケーションに表示される場合があります。|  
 |`DisplayFolder`|ユーザーがキューブに接続するとメジャーが表示されるフォルダーです。 キューブに多くのメジャーがある場合、表示フォルダーを使用すると、メジャーを分類して表示を見やすく改善できます。|  
-|`FormatString`|メジャーの `FormatString` プロパティを使用すると、メジャー値の表示に使用する形式を選択できます。<br /><br /> 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]に表示形式の一覧が用意されていますが、一覧にはない追加形式を複数指定できます。 Microsoft Visual Basic で有効な名前付き形式またはユーザー定義形式を指定できます。|  
+|`FormatString`|メジャーの `FormatString` プロパティを使用すると、メジャー値の表示に使用する形式を選択できます。<br /><br /> [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]に表示形式の一覧が用意されていますが、一覧にはない追加形式を複数指定できます。 Microsoft Visual Basic で有効な名前付き形式またはユーザー定義形式を指定できます。|  
 |`ID`|必須。 メジャーの一意識別子 (ID) です。 このプロパティは読み取り専用です。|  
 |`MeasureExpression`|メジャーの値を定義する、制約付きの MDX 式を指定します。 式は、集計前にリーフ レベルで評価され、値の重み付けができるようになります。 たとえば、売上高が為替レートで重み付けされる通貨の換算などです。|  
 |`Name`|必須。 メジャーの名前を指定します。|  

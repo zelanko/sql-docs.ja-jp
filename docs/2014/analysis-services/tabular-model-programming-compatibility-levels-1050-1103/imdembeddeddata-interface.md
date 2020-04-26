@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 83e46e9b62359623093415ca456ecadd72f847cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62757777"
 ---
 # <a name="imdembedded-interface"></a>IMDEmbedded インターフェイス
@@ -30,19 +30,15 @@ ms.locfileid: "62757777"
   
 -   現在の埋め込み操作を取り消します。  
   
--   埋め込みオブジェクトを保存するストリームの推定サイズ (バイト単位) を取得します。 
-  `IPersistStream` から継承されます。  
+-   埋め込みオブジェクトを保存するストリームの推定サイズ (バイト単位) を取得します。 このプロパティは、`IPersistStream` から継承されています。  
   
--   埋め込みデータベースが最後に保存されてから変更されたかどうかを確認します。 
-  `IPersistStream` から継承されます。  
+-   埋め込みデータベースが最後に保存されてから変更されたかどうかを確認します。 このプロパティは、`IPersistStream` から継承されています。  
   
--   ローカルまたはインプロセスエンジンに埋め込みデータベースを読み込みます。 
-  `IPersistStream` から継承されます。  
+-   ローカルまたはインプロセスエンジンに埋め込みデータベースを読み込みます。 このプロパティは、`IPersistStream` から継承されています。  
   
--   ローカルまたはインプロセス データベースをコンテナー ドキュメント内の埋め込みストリームに保存します。 
-  `IPersistStream` から継承されます。  
+-   ローカルまたはインプロセス データベースをコンテナー ドキュメント内の埋め込みストリームに保存します。 このプロパティは、`IPersistStream` から継承されています。  
   
-## <a name="reference"></a>リファレンス  
+## <a name="reference"></a>関連項目  
  次のリファレンスでは`IMDEmbedded` 、 **msmd.h**ヘッダーファイルに示されているインターフェイスについて説明します。  
   
 ### <a name="source-file-pxoembeddeddataidl"></a>ソース ファイル: PXOEmbeddedData.idl  
@@ -85,7 +81,7 @@ HRESULT GetStreamIdentifier (
     )  
 ```  
   
-#### <a name="description"></a>[説明]  
+#### <a name="description"></a>説明  
  ホスト アプリケーションが使用するコンテナー ドキュメント内の埋め込みストリームの識別子を取得します。  
   
 #### <a name="parameters"></a>パラメーター  
@@ -102,18 +98,18 @@ HRESULT GetStreamIdentifier (
  `E_FAIL`  
  ストリーム識別子へのアクセス中にエラーが発生しました。  
   
-#### <a name="remarks"></a>解説  
+#### <a name="remarks"></a>コメント  
  現在の接続に埋め込みデータベースが含まれているかどうかを確認するには、OLE DB 接続プロパティから DBPROP_MSMD_EMBEDDED_DATA プロパティの値を確認してください。  
   
  DBPROP_MSMD_EMBEDDED_DATA は、次のいずれかの値をとります。  
   
-|Name|Value|定義|  
+|名前|[値]|定義|  
 |----------|-----------|----------------|  
 |DBPROPVAL_EMBED_NONE|0x00|使用できる埋め込みデータベースがありません。|  
 |DBPROPVAL_EMBED_EMBEDDED|0x01|現在のアプリケーションには埋め込みデータベースが含まれています。|  
 |DBPROPVAL_EMBED_LINKED|0x02|埋め込みデータベースはリモート アプリケーション (SharePoint Server など) でホストされています。|  
   
-#### <a name="source"></a>source  
+#### <a name="source"></a>ソース  
   
 ```  
 [id(1), helpstring("Get identifier used to look up embedded stream in container document")]   
@@ -129,7 +125,7 @@ HRESULT SetContainerURL (
     )  
 ```  
   
-#### <a name="description"></a>[説明]  
+#### <a name="description"></a>説明  
  埋め込みストリームが含まれているファイルの URL を設定します。  
   
 #### <a name="parameters"></a>パラメーター  
@@ -143,7 +139,7 @@ HRESULT SetContainerURL (
  `E_FAIL`  
  コンテナー URL の設定中にエラーが発生しました。  
   
-#### <a name="source"></a>source  
+#### <a name="source"></a>ソース  
   
 ```  
 [id(2), helpstring("Set the URL for the document containing the embedded stream")]   
@@ -159,7 +155,7 @@ HRESULT SetHosted (
     )  
 ```  
   
-#### <a name="description"></a>[説明]  
+#### <a name="description"></a>説明  
  埋め込みアプリケーションがホスト環境にあるかどうかを示すフラグを設定します。  
   
 #### <a name="parameters"></a>パラメーター  
@@ -173,7 +169,7 @@ HRESULT SetHosted (
  `E_FAIL`  
  フラグの設定中にエラーが発生しました。  
   
-#### <a name="source"></a>source  
+#### <a name="source"></a>ソース  
   
 ```  
 [id(5), helpstring("Set flag indicating if the application is in a hosted environment")]   
@@ -189,7 +185,7 @@ HRESULT SetTempDirPath (
     )  
 ```  
   
-#### <a name="description"></a>[説明]  
+#### <a name="description"></a>説明  
  埋め込みアプリケーションが使用する一時ファイルのパスを設定します。  
   
 #### <a name="parameters"></a>パラメーター  
@@ -203,7 +199,7 @@ HRESULT SetTempDirPath (
  `E_FAIL`  
  パスの設定中にエラーが発生しました。  
   
-#### <a name="source"></a>source  
+#### <a name="source"></a>ソース  
   
 ```  
 [id(4), helpstring("Set the path used by the host application for temporary files")]   
@@ -217,11 +213,11 @@ HRESULT SetTempDirPath (
 HRESULT Cancel ( void )  
 ```  
   
-#### <a name="description"></a>[説明]  
+#### <a name="description"></a>説明  
  現在の埋め込みデータベース操作を取り消します。  
   
 #### <a name="parameters"></a>パラメーター  
- [なし] :  
+ なし。  
   
 #### <a name="return-value"></a>戻り値  
  `S_OK`  
@@ -233,7 +229,7 @@ HRESULT Cancel ( void )
  `E_FAIL`  
  埋め込み操作の取り消し中にエラーが発生しました。  
   
-#### <a name="source"></a>source  
+#### <a name="source"></a>ソース  
   
 ```  
 [id(5), helpstring("Cancel the current operation")]   
@@ -248,9 +244,8 @@ HRESULT GetSizeMax (
     )  
 ```  
   
-#### <a name="description"></a>[説明]  
- ストリームの推定サイズ (バイト単位) を取得し、埋め込みオブジェクトを保存します。 
-  `IPersistStream` から継承されます。  
+#### <a name="description"></a>説明  
+ ストリームの推定サイズ (バイト単位) を取得し、埋め込みオブジェクトを保存します。 このプロパティは、`IPersistStream` から継承されています。  
   
 #### <a name="parameters"></a>パラメーター  
  *in_bstrPath*  
@@ -269,9 +264,8 @@ HRESULT GetSizeMax (
 HRESULT IsDirty ( void )  
 ```  
   
-#### <a name="description"></a>[説明]  
- 埋め込みデータベースが最後に保存されてから変更されたかどうかを確認します。 
-  `IPersistStream` から継承されます。  
+#### <a name="description"></a>説明  
+ 埋め込みデータベースが最後に保存されてから変更されたかどうかを確認します。 このプロパティは、`IPersistStream` から継承されています。  
   
 #### <a name="parameters"></a>パラメーター  
  なし  
@@ -294,9 +288,8 @@ HRESULT Load (
     )  
 ```  
   
-#### <a name="description"></a>[説明]  
- 埋め込みデータベースをローカルまたはインプロセス エンジンに読み込みます。 
-  `IPersistStream` から継承されます。  
+#### <a name="description"></a>説明  
+ 埋め込みデータベースをローカルまたはインプロセス エンジンに読み込みます。 このプロパティは、`IPersistStream` から継承されています。  
   
 #### <a name="parameters"></a>パラメーター  
  *in_pStm*  
@@ -321,9 +314,8 @@ HRESULT Save (
     )  
 ```  
   
-#### <a name="description"></a>[説明]  
- ローカルまたはプロセス内のデータベースをコンテナードキュメント内の埋め込みストリームに保存します。 
-  `IPersistStream` から継承されます。  
+#### <a name="description"></a>説明  
+ ローカルまたはプロセス内のデータベースをコンテナードキュメント内の埋め込みストリームに保存します。 このプロパティは、`IPersistStream` から継承されています。  
   
 #### <a name="parameters"></a>パラメーター  
  *in_pStm*  

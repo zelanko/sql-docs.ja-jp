@@ -11,18 +11,17 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: c34062acefc2dfd847790a39cea35b03727f49ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62678520"
 ---
 # <a name="lesson-1-create-the-rdl-schema-visual-studio-project"></a>レッスン 1 : RDL スキーマ Visual Studio プロジェクトの作成
   このチュートリアルでは、簡単なコンソール アプリケーションを作成します。 このチュートリアルは、で[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]開発することを前提としています。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services で実行されているレポート サーバー Web サービスにアクセスする場合は、"_SQLExpress" を "ReportServer" パスに追加する必要があります。 次に例を示します。  
+>  [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services で実行されているレポート サーバー Web サービスにアクセスする場合は、"_SQLExpress" を "ReportServer" パスに追加する必要があります。 次に例を示します。  
 >   
 >  `http://myserver/reportserver_sqlexpress/reportservice2010.asmx"`  
   
@@ -58,8 +57,7 @@ ms.locfileid: "62678520"
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]ソリューションエクスプローラーに、プロジェクトの折りたたまれたビューが表示されます。  
   
-7.  
-  **[プロジェクト]** メニューの **[既存項目の追加]** をクリックします。  
+7.  **[プロジェクト]** メニューの **[既存項目の追加]** をクリックします。  
   
 8.  生成した .cs ファイルまたは .vb ファイルの場所に移動し、ファイルを選択して、[**追加**] をクリックします。  
   
@@ -71,7 +69,7 @@ ms.locfileid: "62678520"
   
      レポートサーバー Web サービスに接続する方法の詳細については、「 [Web サービスと .NET Framework を使用したアプリケーションの構築](../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)」を参照してください。  
   
-10. ソリューション エクスプローラーでプロジェクト ノードを展開します。 プロジェクトには、Program.cs ([!INCLUDE[vbprvb](../includes/vbprvb-md.md)] の場合は Module1.vb) という既定の名前のコード ファイルが追加されていることがわかります。  
+10. ソリューションエクスプローラーで、プロジェクトノードを展開します。 プロジェクトには、Program.cs ([!INCLUDE[vbprvb](../includes/vbprvb-md.md)] の場合は Module1.vb) という既定の名前のコード ファイルが追加されていることがわかります。  
   
 11. Program.cs ([!INCLUDE[vbprvb](../includes/vbprvb-md.md)] の場合は Module1.vb) ファイルを開き、次のコードに置き換えます。  
   

@@ -14,20 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c2784b7915d96665cae814e0dff46b2f2135bc52
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62511526"
 ---
 # <a name="catalog-metadata"></a>カタログ メタデータ
   このトピックでは、`SQLColumns` および `SQLProcedureColumns` によって返される列のメタデータと、`SQLGetTypeInfo` によって返されるデータ型のメタデータについて説明します。  
   
-## <a name="remarks"></a>解説  
- 
-  `SQLColumns` および `SQLProcedureColumns` によって日付型または時刻型に対して返される列の値を次に示します。  
+## <a name="remarks"></a>コメント  
+ `SQLColumns` および `SQLProcedureColumns` によって日付型または時刻型に対して返される列の値を次に示します。  
   
-|パラメーターのタイプ|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|パラメーターの型|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |DATA_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
 |TYPE_NAME|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
@@ -39,10 +38,9 @@ ms.locfileid: "62511526"
 |CHAR_OCTET_LENGTH|NULL|NULL|NULL|NULL|NULL|NULL|  
 |SS_DATA_TYPE|0|0|111|111|0|0|  
   
- 
-  `SQLGetTypeInfo` によって日付型または時刻型に対して返される列の値を次に示します。  
+ `SQLGetTypeInfo` によって日付型または時刻型に対して返される列の値を次に示します。  
   
-|パラメーターのタイプ|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|パラメーターの型|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |TYPE_NAME|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |DATA_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  

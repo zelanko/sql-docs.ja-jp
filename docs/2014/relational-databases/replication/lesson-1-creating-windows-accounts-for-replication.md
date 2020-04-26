@@ -14,21 +14,21 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a1457a6d407b2b20c28e93c0ed681ab1dc8109d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721159"
 ---
 # <a name="lesson-1-creating-windows-accounts-for-replication"></a>レッスン 1 : レプリケーション用の Windows アカウントの作成
   このレッスンでは、レプリケーション エージェントを実行するための Windows アカウントを作成します。 また、次のエージェントを実行するための別の Windows アカウントをローカル サーバー上に作成します。  
   
-|エージェント|Location|アカウント名|  
+|エージェント|インストール先|アカウント名|  
 |-----------|--------------|------------------|  
-|スナップショット エージェント|Publisher|\<*machine_name*> \ repl_snapshot|  
-|ログ リーダー エージェント (Log Reader Agent)|Publisher|\<*machine_name*> \ repl_logreader|  
-|ディストリビューション エージェント|パブリッシャーおよびサブスクライバー|\<*machine_name*> \ repl_distribution|  
-|[マージ エージェント]|パブリッシャーおよびサブスクライバー|\<*machine_name*> \ repl_merge|  
+|スナップショット エージェント|発行元|\<*machine_name*>\repl_snapshot|  
+|ログ リーダー エージェント (Log Reader Agent)|発行元|\<*machine_name*>\repl_logreader|  
+|ディストリビューション エージェント|パブリッシャーおよびサブスクライバー|\<*machine_name*>\repl_distribution|  
+|[マージ エージェント]|パブリッシャーおよびサブスクライバー|\<*machine_name*>\repl_merge|  
   
 > [!NOTE]  
 >  このレプリケーション チュートリアルでは、パブリッシャーとディストリビューターで同じ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスを共有します。 パブリッシャーとサブスクライバーが同じ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスを共有することもできますが、これは必須条件ではありません。 パブリッシャーとサブスクライバーが同じインスタンスを共有している場合、サブスクライバー側でアカウントの作成に使用される手順は必要ありません。  
@@ -37,8 +37,7 @@ ms.locfileid: "62721159"
   
 1.  パブリッシャーで、コントロールパネルの [**管理ツール**] から [**コンピューターの管理**] を開きます。  
   
-2.  
-  **[システム ツール]** の **[ローカル ユーザーとグループ]** を展開します。  
+2.  **[システム ツール]** の **[ローカル ユーザーとグループ]** を展開します。  
   
 3.  [**ユーザー** ] を右クリックし、[**新しいユーザー**] をクリックします。  
   
@@ -52,8 +51,7 @@ ms.locfileid: "62721159"
   
 1.  サブスクライバーで、コントロールパネルの [**管理ツール**] から [**コンピューターの管理**] を開きます。  
   
-2.  
-  **[システム ツール]** の **[ローカル ユーザーとグループ]** を展開します。  
+2.  **[システム ツール]** の **[ローカル ユーザーとグループ]** を展開します。  
   
 3.  [**ユーザー** ] を右クリックし、[**新しいユーザー**] をクリックします。  
   
@@ -67,6 +65,6 @@ ms.locfileid: "62721159"
  ここでは、レプリケーション エージェントを実行するための Windows アカウントを作成しました。 次はスナップショット フォルダーを設定します。 「 [レッスン 2: スナップショット フォルダーの準備](lesson-2-preparing-the-snapshot-folder.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [レプリケーションエージェントの概要](agents/replication-agents-overview.md)  
+ [レプリケーション エージェントの概要](agents/replication-agents-overview.md)  
   
   

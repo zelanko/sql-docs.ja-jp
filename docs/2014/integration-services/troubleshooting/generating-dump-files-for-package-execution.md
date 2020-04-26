@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8022532dcb038b7c9a5839acb0541337ac3d5001
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62766152"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>パッケージ実行用のダンプ ファイルを生成する
@@ -23,11 +23,9 @@ ms.locfileid: "62766152"
 > [!NOTE]  
 >  デバッグ ダンプ ファイルには機密情報が含まれている場合があります。 機密情報を保護するには、アクセス制御リスト (ACL) を使用してこのファイルへのアクセスを制限するか、アクセスが制限されたフォルダーにファイルをコピーすることができます。 たとえば、デバッグ ファイルを [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポート サービスに送信する前には、機密性の高い情報をすべて削除することをお勧めします。  
   
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーにプロジェクトを配置すると、そのプロジェクトに含まれているパッケージの実行に関する情報を提供するダンプ ファイルを作成できます。 ISServerExec.exe プロセスが終了すると、ダンプ ファイルが作成されます。 
-  **[パッケージの実行]** ダイアログ ボックスの **[エラー時にダンプする]** オプションを選択することにより、パッケージの実行中にエラーが発生したらダンプ ファイルが作成されるように指定できます。 また、次のストアド プロシージャを使用することもできます。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーにプロジェクトを配置すると、そのプロジェクトに含まれているパッケージの実行に関する情報を提供するダンプ ファイルを作成できます。 ISServerExec.exe プロセスが終了すると、ダンプ ファイルが作成されます。 **[パッケージの実行]** ダイアログ ボックスの **[エラー時にダンプする]** オプションを選択することにより、パッケージの実行中にエラーが発生したらダンプ ファイルが作成されるように指定できます。 また、次のストアド プロシージャを使用することもできます。  
   
--   [set_execution_parameter_value &#40;SSISDB データベース&#41;](/sql/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database)  
+-   [catalog.set_execution_parameter_value &#40;SSISDB データベース&#41;](/sql/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database)  
   
      パッケージの実行中にエラーまたはイベントが発生したとき、および特定のイベントが発生したときにダンプ ファイルが作成されるように構成する場合に、このストアド プロシージャを呼び出します。  
   
@@ -48,7 +46,7 @@ ms.locfileid: "62766152"
   
  次の表では、.tmp ファイル内の特定のセクションのみについて説明します。 .tmp ファイルには、次の表に記載されていないデータが他にも含まれています。  
   
-|情報の種類|[説明]|例|  
+|情報の種類|説明|例|  
 |-------------------------|-----------------|-------------|  
 |環境|オペレーティング システムのバージョン、メモリの使用量のデータ、プロセス ID、およびプロセス イメージ名。 環境情報は .tmp ファイルの先頭にあります。|# SSIS Textual Dump taken at 9/13/2007 1:50:34 PM<br /><br /> #PID 4120<br /><br /> #Image Name [C:\Program Files\Microsoft SQL Server\110\DTS\Binn\DTExec.exe]<br /><br /> # OS major=6 minor=0 build=6000<br /><br /> # Running on 2 amd64 processors under WOW64<br /><br /> # Memory: 58% in use. Physical: 845M/2044M  Paging: 2404M/4095M (avail/total)|  
 |ダイナミック リンク ライブラリ (DLL) のパスとバージョン|パッケージの処理中にシステムによって読み込まれる各 DLL のパスとバージョン番号。|# Loaded Module: c:\bb\Sql\DTS\src\bin\debug\i386\DTExec.exe (10.0.1069.5)<br /><br /> # Loaded Module: C:\Windows\SysWOW64\ntdll.dll (6.0.6000.16386)<br /><br /> # Loaded Module: C:\Windows\syswow64\kernel32.dll (6.0.6000.16386)|  

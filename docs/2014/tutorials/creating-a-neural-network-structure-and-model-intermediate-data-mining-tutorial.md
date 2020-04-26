@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 6787db165770f944838a312ecd3e0386d161da38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62856324"
 ---
 # <a name="creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial"></a>ニューラル ネットワーク構造およびモデルの作成 (中級者向けデータ マイニング チュートリアル)
@@ -42,12 +42,11 @@ ms.locfileid: "62856324"
   
  [すべてのモデルの処理](#bkmk_SeedProcess)  
   
-## 既定のコールセンター構造を作成する<a name="bkmk_defaul"></a>  
+## <a name="create-the-default-call-center-structure"></a>既定のコールセンター構造を作成する<a name="bkmk_defaul"></a>  
   
 1.  のソリューションエクスプローラーで[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]、[**マイニング構造**] を右クリックし、[**新しいマイニング構造**] をクリックします。  
   
-2.  
-  **[データ マイニング ウィザードへようこそ]** ページで **[次へ]** をクリックします。  
+2.  **[データ マイニング ウィザードへようこそ]** ページで **[次へ]** をクリックします。  
   
 3.  [**定義方法の選択**] ページで、[**既存のリレーショナルデータベースまたはデータウェアハウスから**] が選択されていることを確認し、[**次へ**] をクリックします。  
   
@@ -76,36 +75,36 @@ ms.locfileid: "62856324"
     |AutomaticResponses|入力|  
     |AverageTimePerIssue|[入力]/[予測]|  
     |Calls|入力|  
-    |DateKey|使用しないでください|  
+    |DateKey|使用しない|  
     |DayOfWeek|入力|  
-    |FactCallCenterID|キー|  
+    |FactCallCenterID|Key|  
     |IssuesRaised|入力|  
     |LevelOneOperators|[入力]/[予測]|  
     |LevelTwoOperators|入力|  
-    |注文|[入力]/[予測]|  
+    |Orders|[入力]/[予測]|  
     |ServiceGrade|[入力]/[予測]|  
-    |Shift|入力|  
-    |TotalOperators|使用しないでください|  
+    |シフト|入力|  
+    |TotalOperators|使用しない|  
     |WageType|入力|  
   
      予測可能列が複数選択されていることに注意してください。 ニューラル ネットワーク アルゴリズムには、入力属性と出力属性のあらゆる組み合わせを分析できるという利点があります。 処理時間が指数関数的に増加する可能性があるため、大きなデータセットに対してこれを行う必要はありません。  
   
 12. [**列のコンテンツおよびデータ型の指定**] ページで、次の表に示すように、グリッドに列、コンテンツの種類、およびデータ型が含まれていることを確認し、[**次へ**] をクリックします。  
   
-    |[列]|コンテンツの種類|データ型|  
+    |[列]|コンテンツの種類|データの種類|  
     |-------------|------------------|----------------|  
     |AutomaticResponses|継続的|Long|  
     |AverageTimePerIssue|継続的|Long|  
     |Calls|継続的|Long|  
-    |DayOfWeek|Discrete|Text|  
-    |FactCallCenterID|キー|Long|  
+    |DayOfWeek|Discrete|テキスト|  
+    |FactCallCenterID|Key|Long|  
     |IssuesRaised|継続的|Long|  
     |LevelOneOperators|継続的|Long|  
     |LevelTwoOperators|継続的|Long|  
-    |注文|継続的|Long|  
-    |ServiceGrade|継続的|DOUBLE|  
-    |Shift|Discrete|Text|  
-    |WageType|Discrete|Text|  
+    |Orders|継続的|Long|  
+    |ServiceGrade|継続的|Double|  
+    |シフト|Discrete|テキスト|  
+    |WageType|Discrete|テキスト|  
   
 13. [**テストセットの作成**] ページで、[**テスト用データの割合**] オプションのテキストボックスをオフにします。 **[次へ]** をクリックします。  
   
@@ -137,14 +136,14 @@ ms.locfileid: "62856324"
   
  既定のモデル (連続)  
   
-|値|サポート|  
+|値|SUPPORT|  
 |-----------|-------------|  
 |Missing|0|  
 |0.09875|120|  
   
  クラスタリングによるビン分割  
   
-|値|サポート|  
+|値|SUPPORT|  
 |-----------|-------------|  
 |\<0.0748051948|34|  
 |0.0748051948-が|27|  
@@ -154,7 +153,7 @@ ms.locfileid: "62856324"
   
  Equal Areas メソッドによるビン分割  
   
-|値|サポート|  
+|値|SUPPORT|  
 |-----------|-------------|  
 |\<0.07|26|  
 |0.07 ~ 0.00|22|  
@@ -182,12 +181,12 @@ ms.locfileid: "62856324"
   
  または、数値を使用する代わりに、サービスグレードを定義済みの対象範囲 ( **Best** (servicegrade \<= 0.05)、**許容**される (0.10 > Servicegrade > 0.05)、**低**(servicegrade >= 0.10) など) に分類する別の派生列を追加することもできます。  
   
-###  <a name="bkmk_newColumn"></a>列のコピーを作成し、分離メソッドを変更する  
+###  <a name="create-a-copy-of-a-column-and-change-the-discretization-method"></a><a name="bkmk_newColumn"></a>列のコピーを作成し、分離メソッドを変更する  
  ターゲット属性 ServiceGrade を含むマイニング列のコピーを作成し、数値をグループ化する方法を変更します。 予測可能な属性を含め、マイニング構造の任意の列の複数のコピーを作成することができます。  
   
  このチュートリアルでは、Equal Areas 分離メソッドを使用して、バケット数を 4 に指定します。 結果のグループ化は、ビジネス ユーザーの興味の対象となるターゲット値に非常に近いものになります。  
   
-####  <a name="bkmk_ColumnCopy"></a>マイニング構造に列のカスタマイズされたコピーを作成するには  
+####  <a name="to-create-a-customized-copy-of-a-column-in-the-mining-structure"></a><a name="bkmk_ColumnCopy"></a>マイニング構造に列のカスタマイズされたコピーを作成するには  
   
 1.  ソリューション エクスプローラーで、作成したマイニング構造をダブルクリックします。  
   
@@ -203,13 +202,11 @@ ms.locfileid: "62856324"
   
 5.  [**プロパティ**] ウィンドウで、 **name**プロパティを見つけ、名前を「 **Service グレード**ビン」に変更します。  
   
-6.  関連するすべてのマイニング モデル列の名前を同じように変更するかどうかを確認するダイアログ ボックスが表示されます。 
-  **[いいえ]** をクリックします。  
+6.  関連するすべてのマイニング モデル列の名前を同じように変更するかどうかを確認するダイアログ ボックスが表示されます。 **[いいえ]** をクリックします。  
   
 7.  [**プロパティ**] ウィンドウで、セクションの [**データ型**] を見つけ、必要に応じて展開します。  
   
-8.  
-  `Content` プロパティの値を `Continuous` から `Discretized` に変更します。  
+8.  `Content` プロパティの値を `Continuous` から `Discretized` に変更します。  
   
      次のプロパティが使用できるようになりました。 次の表に従ってプロパティの値を変更します。  
   
@@ -219,14 +216,13 @@ ms.locfileid: "62856324"
     |`DiscretizationBucketCount`|値なし|4|  
   
     > [!NOTE]  
-    >  
-  <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> の既定値は実際は 0 です。これは、最適なバケット数がアルゴリズムによって自動的に決定されることを表します。 したがって、このプロパティの値を既定値に戻すには、「0」と入力します。  
+    >  <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> の既定値は実際は 0 です。これは、最適なバケット数がアルゴリズムによって自動的に決定されることを表します。 したがって、このプロパティの値を既定値に戻すには、「0」と入力します。  
   
 9. データマイニングデザイナーで、[**マイニングモデル**] タブをクリックします。  
   
      マイニング構造列のコピーを追加すると、そのコピーの使用法フラグが自動的に `Ignore` に設定されます。 マイニング構造に列のコピーを追加する場合、通常は、そのコピーを元の列と一緒に分析に使用することはありません。一緒に使用すると、アルゴリズムでその 2 つの列の間に強力な相関関係が検出されて、他の関係がわかりにくくなってしまう可能性があります。  
   
-##  <a name="bkmk_NewModel"></a>マイニング構造への新しいマイニングモデルの追加  
+##  <a name="add-a-new-mining-model-to-the-mining-structure"></a><a name="bkmk_NewModel"></a>マイニング構造への新しいマイニングモデルの追加  
  対象となる属性の新しいグループ化を作成できたら、次に、その離散化列を使用する新しいマイニング モデルを追加する必要があります。 この手順が完了すると、CallCenter マイニング構造に次の 2 つのマイニング モデルが含まれるようになります。  
   
 -   ServiceGrade 値を連続する範囲として処理するマイニング モデル Call Center Default NN  
@@ -237,8 +233,7 @@ ms.locfileid: "62856324"
   
 1.  ソリューションエクスプローラーで、先ほど作成したマイニング構造を右クリックし、[**開く**] を選択します。  
   
-2.  
-  **[マイニング モデル]** タブをクリックします。  
+2.  **[マイニング モデル]** タブをクリックします。  
   
 3.  [**関連マイニングモデルの作成] を**クリックします。  
   
@@ -248,10 +243,10 @@ ms.locfileid: "62856324"
   
 6.  同様に、ServiceGrade Binned を見つけて、使用法を `Ignore` から `Predict` に変更します。  
   
-##  <a name="bkmk_Alias2"></a>ターゲット列の別名を作成します。  
+##  <a name="create-an-alias-for-the-target-column"></a><a name="bkmk_Alias2"></a>ターゲット列の別名を作成します。  
  通常は、別の予測可能な属性を使用するマイニング モデルを比較することはできませんが、 マイニング モデル列の別名を作成することができるため、 つまり、マイニングモデル内の ServiceGrade ビンの列の名前を変更して、元の列と同じ名前にすることができます。 データが別の方法で分離されていても、この 2 つのモデルを精度チャートで直接比較することができます。  
   
-###  <a name="bkmk_Alias"></a>マイニングモデルのマイニング構造列に別名を追加するには  
+###  <a name="to-add-an-alias-for-a-mining-structure-column-in-a-mining-model"></a><a name="bkmk_Alias"></a>マイニングモデルのマイニング構造列に別名を追加するには  
   
 1.  [**マイニングモデル**] タブの [**構造**] で、[servicegrade ビン] を選択します。  
   
@@ -267,10 +262,10 @@ ms.locfileid: "62856324"
   
      [**プロパティ**] ウィンドウには、次の情報が含まれている必要があります。  
   
-    |プロパティ|Value|  
+    |プロパティ|値|  
     |--------------|-----------|  
     |**説明**|Temporary column alias|  
-    |**id**|ServiceGrade ビン分割|  
+    |**ID**|ServiceGrade ビン分割|  
     |**ModelingFlags**||  
     |**名前**|Service Grade|  
     |**SourceColumn ID**|Service Grade 1|  
@@ -280,21 +275,21 @@ ms.locfileid: "62856324"
   
      グリッドが更新され、列の使用法の横`ServiceGrade`に新しい一時列の別名が表示されます。 マイニング構造と 2 つのマイニング モデルを含むグリッドは次のようになります。  
   
-    |Structure|Call Center Default NN|Call Center Binned NN|  
+    |構造体|Call Center Default NN|Call Center Binned NN|  
     |---------------|----------------------------|---------------------------|  
     ||Microsoft ニューラル ネットワーク|Microsoft ニューラル ネットワーク|  
     |AutomaticResponses|入力|入力|  
     |AverageTimePerIssue|Predict|Predict|  
     |Calls|入力|入力|  
     |DayOfWeek|入力|入力|  
-    |FactCallCenterID|キー|キー|  
+    |FactCallCenterID|Key|Key|  
     |IssuesRaised|入力|入力|  
     |LevelOneOperators|入力|入力|  
     |LevelTwoOperators|入力|入力|  
-    |注文|入力|入力|  
-    |ServiceGrade Binned|無視|Predict (ServiceGrade)|  
-    |ServiceGrade|Predict|無視|  
-    |Shift|入力|入力|  
+    |Orders|入力|入力|  
+    |ServiceGrade Binned|Ignore|Predict (ServiceGrade)|  
+    |ServiceGrade|Predict|Ignore|  
+    |シフト|入力|入力|  
     |Total Operators|入力|入力|  
     |WageType|入力|入力|  
   
@@ -304,7 +299,7 @@ ms.locfileid: "62856324"
 > [!NOTE]  
 >  シード パラメーターに数値を指定しなかった場合は、SQL Server Analysis Services により、モデルの名前に基づいてシードが生成されます。 モデルには必ず異なる名前が付けられるため、データが同じ順序で処理されるようにするにはシード値を設定する必要があります。  
   
-###  <a name="bkmk_SeedProcess"></a>シードを指定してモデルを処理するには  
+###  <a name="to-specify-the-seed-and-process-the-models"></a><a name="bkmk_SeedProcess"></a>シードを指定してモデルを処理するには  
   
 1.  [**マイニングモデル**] タブで、Call CENTER-LR という名前のモデルの列を右クリックし、[**アルゴリズムパラメーターの設定**] を選択します。  
   
@@ -325,6 +320,6 @@ ms.locfileid: "62856324"
  [「&#40;中級者向けデータマイニングチュートリアル」のコールセンターモデルの調査&#41;](../../2014/tutorials/exploring-the-call-center-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>参照  
- [マイニング構造 &#40;Analysis Services-データマイニング&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
+ [マイニング構造 (Analysis Services - データ マイニング)](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

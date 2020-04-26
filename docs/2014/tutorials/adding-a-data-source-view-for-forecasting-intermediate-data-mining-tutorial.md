@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: f60ea2b2a642cf9435ed8366c42e43abb927e426
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62823132"
 ---
 # <a name="adding-a-data-source-view-for-forecasting-intermediate-data-mining-tutorial"></a>予測用のデータ ソース ビューの追加 (中級者向けデータ マイニング チュートリアル)
@@ -24,8 +24,7 @@ ms.locfileid: "62823132"
   
 1.  ソリューションエクスプローラーで、[**データソースビュー**] を右クリックし、[**新しいデータソースビュー**] をクリックします。  
   
-2.  
-  **[データ ソース ビュー ウィザードへようこそ]** ページで **[次へ]** をクリックします。  
+2.  **[データ ソース ビュー ウィザードへようこそ]** ページで **[次へ]** をクリックします。  
   
 3.  [**データソースの選択**] ページの [**リレーショナルデータソース**] で、 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]データソースを選択します。 **[次へ]** をクリックします。  
   

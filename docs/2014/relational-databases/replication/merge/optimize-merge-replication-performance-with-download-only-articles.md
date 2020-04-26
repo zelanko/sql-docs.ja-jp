@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ca661105c28cab2bf3e881cf262922e95da5eed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "63250366"
 ---
 # <a name="optimize-merge-replication-performance-with-download-only-articles"></a>ダウンロード専用アーティクルを使用したマージ レプリケーションのパフォーマンス最適化
@@ -48,6 +48,6 @@ ms.locfileid: "63250366"
   
 ## <a name="see-also"></a>参照  
  [マージレプリケーションのアーティクルオプション](article-options-for-merge-replication.md)   
- [条件付き削除の追跡によるマージレプリケーションのパフォーマンスの最適化](optimize-merge-replication-performance-with-conditional-delete-tracking.md)  
+ [条件付き削除の追跡によるマージ レプリケーション パフォーマンスの最適化](optimize-merge-replication-performance-with-conditional-delete-tracking.md)  
   
   

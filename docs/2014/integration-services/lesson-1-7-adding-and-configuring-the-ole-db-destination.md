@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 97b155852a0d6941cff4da0bdd4565e08dc63e79
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767561"
 ---
 # <a name="step-7-adding-and-configuring-the-ole-db-destination"></a>手順 7:OLE DB 変換先の追加と構成
@@ -24,7 +24,7 @@ ms.locfileid: "62767561"
   
 ### <a name="to-add-and-configure-the-sample-ole-db-destination"></a>サンプルの OLE DB 変換先を追加および構成するには  
   
-1.  **SSIS ツールボックス**で、[**その他の変換先**] を展開し、 [**データ フロー** ] タブのデザイン画面に OLE DB**変換先**をドラッグ**します**。  
+1.  [ **SSIS ツールボックス**] で **[その他の**変換先] を展開し、[ **OLE DB Destination** ] を [**データフロー** ] タブのデザイン画面にドラッグします。 OLE DB の変換先を [ **Lookup Date Key** ] 変換のすぐ下に配置します。  
   
 2.  **[Lookup Date Key]** 変換をクリックし、緑色の矢印を、新しく追加した **[OLE DB 変換先]** にドラッグします。2 つのコンポーネントが接続されます。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "62767561"
   
 13. **[Sample OLE DB Destination]** 変換先を右クリックし、 **[プロパティ]** をクリックします。  
   
-14. [プロパティ] ウィンドウで、プロパティ`LocaleID`が **[英語 (米国)]** に設定`DefaultCodePage`され、プロパティが**1252**に設定されていることを確認します。  
+14. プロパティウィンドウで、 `LocaleID`プロパティが**英語 (米国)** に設定され、`DefaultCodePage`プロパティが**1252**に設定されていることを確認します。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [手順 8:レッスン 1 のパッケージをわかりやすくする作業](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  

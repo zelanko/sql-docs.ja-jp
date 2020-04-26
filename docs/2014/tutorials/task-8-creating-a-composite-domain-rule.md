@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7e40ec982a9b2c43c3d55ec60179ac9a0b80e8a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489625"
 ---
 # <a name="task-8-creating-a-composite-domain-rule"></a>タスク 8: 複合ドメイン ルールを作成する
@@ -34,7 +34,7 @@ ms.locfileid: "65489625"
   
 6.  ページの下部にある [**閉じる**] ボタンをクリックして、DQS クライアントのメインページに切り替えます。 次のレッスンでナレッジ ベースをパブリッシュします。 ナレッジ ベースがロック状態 (ロック アイコン) にあることに注意してください。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
  [タスク 9: 参照データ サービスを構成する](../../2014/tutorials/task-9-configuring-a-reference-data-service.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7a62460a63bab15499f9aeb4c6510c0e4a9652a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067769"
 ---
 # <a name="add-columns-to-a-table-ssas-tabular"></a>列のテーブルへの追加 (SSAS テーブル)
@@ -37,8 +37,7 @@ ms.locfileid: "66067769"
   
 1.  モデル デザイナーで列を追加するテーブルをクリックし、 **[テーブル]** メニュー、  **[テーブルのプロパティ]** の順にクリックします。  
   
-2.  
-  **[テーブルのプロパティの編集]** ダイアログ ボックスのテーブル プレビュー ウィンドウで、追加するソース列を選択してから、[OK] をクリックします。 既にテーブル定義に含まれている列はチェックされています。  
+2.  **[テーブルのプロパティの編集]** ダイアログ ボックスのテーブル プレビュー ウィンドウで、追加するソース列を選択してから、[OK] をクリックします。 既にテーブル定義に含まれている列はチェックされています。  
   
 ## <a name="add-a-calculated-column"></a>計算列の追加  
  計算列では、各行の値の定義に DAX 式を使用します。 たとえば、各行に 1 を加算する単純な数式 (=1) を使用した計算列を作成できます。 計算列には、モデル内のその他のデータに基づき値を計算する複雑な式が含まれることもあります。 計算列については、他のトピックで詳しく説明します。 詳細については、「 [計算列 &#40;SSAS テーブル&#41;](ssas-calculated-columns.md)で作成したテーブル モデル プロジェクトでの利用を想定して取り上げます。  
@@ -64,6 +63,6 @@ ms.locfileid: "66067769"
   
 ## <a name="see-also"></a>参照  
  [[テーブルのプロパティの編集] ダイアログボックス &#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)   
- [SSAS 表形式&#41;&#40;テーブル、列、または行のフィルターのマッピングを変更します。](change-table-column-or-row-filter-mappings-ssas-tabular.md)  
+ [テーブル、列、または行のフィルターのマッピングの変更 &#40;SSAS テーブル&#41;](change-table-column-or-row-filter-mappings-ssas-tabular.md)  
   
   

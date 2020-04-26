@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1a9b8361c83201fa2e3c6aa0c6a091e09f7c12f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767488"
 ---
-# <a name="step-4-testing-the-lesson-2-tutorial-package"></a>手順 4: レッスン 2 のチュートリアル パッケージのテスト
+# <a name="step-4-testing-the-lesson-2-tutorial-package"></a>手順 4:レッスン 2 のチュートリアル パッケージのテスト
   Foreach ループ コンテナーとフラット ファイル接続マネージャーを構成したので、Lesson 2 のパッケージは、Sample Data フォルダー内の 14 個のフラット ファイルに対して反復処理を実行できるようになりました。 指定した条件を満たすファイル名が見つかるたびに、Foreach ループ コンテナーは、ユーザー定義変数にそのファイル名を取り込みます。 次に、この変数に基づいて、フラット ファイル接続マネージャーの ConnectionString プロパティを更新し、新しいフラット ファイルへの接続を確立します。 さらに、新しいフラット ファイル内のデータに対して未変更のデータ フロー タスクを実行してから、フォルダー内の次のファイルに接続します。  
   
  次の手順を実行して、パッケージに追加した新しいループ機能をテストします。  
@@ -32,14 +32,13 @@ ms.locfileid: "62767488"
   
  ![パッケージ内の制御フロー](../../2014/tutorials/media/task4lesson2control.gif "パッケージ内の制御フロー")  
   
- **Data Flow**  
+ **データ フロー**  
   
- ![パッケージ内のデータフロー](../../2014/tutorials/media/task9lesson1data.gif "パッケージ内のデータフロー")  
+ ![パッケージ内のデータ フロー](../../2014/tutorials/media/task9lesson1data.gif "パッケージ内のデータ フロー")  
   
 ### <a name="to-test-the-lesson-2-tutorial-package"></a>レッスン 2 で作成したチュートリアル パッケージをテストするには  
   
-1.  
-  **ソリューション エクスプローラー**で **Lesson 2.dtsx** を右クリックし、 **[パッケージの実行]** をクリックします。  
+1.  **ソリューション エクスプローラー**で **Lesson 2.dtsx** を右クリックし、 **[パッケージの実行]** をクリックします。  
   
      パッケージが実行されます。 各ループの状態は [出力] ウィンドウで確認できます。または、[**進行状況**] タブをクリックして確認することもできます。たとえば、1097行がファイル Currency_VEB からコピー先のテーブルに追加されたことを確認できます。  
   

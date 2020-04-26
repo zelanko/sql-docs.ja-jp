@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dcfd16ae7e49392c9ba0a001ea8d205c4fa88d1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62795343"
 ---
 # <a name="understanding-the-tabular-object-model"></a>テーブル オブジェクト モデルについて
@@ -46,8 +46,7 @@ ms.locfileid: "62795343"
  計算されるメジャーは、モデルが展開された後で要求によって評価されるストアドの式です。 AMO オブジェクトでは、計算されるメジャーは一対多マッピングのリレーションシップを持ちます。 計算列は、必要な主要オブジェクトである次の AMO オブジェクトを使用して表現されます。<xref:Microsoft.AnalysisServices.MdxScript.Commands%2A> および <xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A>。 これは上記の AMO オブジェクトに含まれるすべてのオブジェクトが、モデリングの際に使用できるという意味ではないことに注意する必要があります。  
   
 > [!NOTE]  
->  
-  <xref:Microsoft.AnalysisServices.Measure> オブジェクトはテーブル モデル内の計算されるメジャーとのリレーションシップを持たず、テーブル モデルでサポートされません。  
+>  <xref:Microsoft.AnalysisServices.Measure> オブジェクトはテーブル モデル内の計算されるメジャーとのリレーションシップを持たず、テーブル モデルでサポートされません。  
   
  計算されるメジャー表現を作成および操作する方法の詳細については、「[計算されるメジャー表現 &#40;表形式&#41;](tables-calculated-measure-representation.md) 」を参照してください。  
   

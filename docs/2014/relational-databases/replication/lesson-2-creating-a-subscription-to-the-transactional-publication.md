@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: d3e8b5f0be58d9153fbe4d0ffd0287ea753fcc5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721076"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-transactional-publication"></a>レッスン 2 : トランザクション パブリケーションへのサブスクリプションの作成
@@ -26,8 +26,7 @@ ms.locfileid: "62721076"
   
 1.  で[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]パブリッシャーに接続し、サーバーノードを展開して、[**レプリケーション**] フォルダーを展開します。  
   
-2.  
-  **[ローカル パブリケーション]** フォルダーを展開し、 **[AdvWorksProductTrans]** パブリケーションを右クリックして、 **[新しいサブスクリプション]** をクリックします。  
+2.  **[ローカル パブリケーション]** フォルダーを展開し、 **[AdvWorksProductTrans]** パブリケーションを右クリックして、 **[新しいサブスクリプション]** をクリックします。  
   
      サブスクリプションの新規作成ウィザードが起動します。  
   
@@ -39,8 +38,7 @@ ms.locfileid: "62721076"
   
 6.  [サブスクライバー] ページで、サブスクライバーサーバーのインスタンス名を選択し、[**サブスクリプションデータベース**] の [ ** \<新しいデータベース>** ] を選択します。  
   
-7.  
-  **[新しいデータベース]** ダイアログ ボックスで、 **[データベース名]** ボックスに「 **ProductReplica** 」と入力し、 **[OK]** をクリックして **[次へ]** をクリックします。  
+7.  **[新しいデータベース]** ダイアログ ボックスで、 **[データベース名]** ボックスに「 **ProductReplica** 」と入力し、 **[OK]** をクリックして **[次へ]** をクリックします。  
   
 8.  [**セキュリティのディストリビューションエージェント**] ダイアログボックスで、省略記号ボタン ([**..**.] \<) をクリックし、[**プロセスアカウント**] ボックスに「 _Machine_Name>_ **\ repl_distribution** 」と入力します。このアカウントのパスワードを入力し、[ **OK**] をクリックして、[**次へ**] をクリックします。  
   
@@ -48,28 +46,23 @@ ms.locfileid: "62721076"
   
 ### <a name="setting-database-permissions-at-the-subscriber"></a>サブスクライバー側のデータベース権限を設定するには  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でサブスクライバーに接続します。次に、 **[データベース]**、 **[ProductReplica]**、 **[セキュリティ]** の順に展開し、 **[ユーザー]** を右クリックして、 **[新しいユーザー]** をクリックします。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でサブスクライバーに接続します。次に、 **[データベース]**、 **[ProductReplica]**、 **[セキュリティ]** の順に展開し、 **[ユーザー]** を右クリックして、 **[新しいユーザー]** をクリックします。  
   
-2.  
-  **[全般]** ページの **[ユーザーの種類]** ボックスの一覧の **[Windows ユーザー]** をクリックします。  
+2.  **[全般]** ページの **[ユーザーの種類]** ボックスの一覧の **[Windows ユーザー]** をクリックします。  
   
 3.  [**ユーザー名**] ボックスを選択し、省略記号ボタン ([...]) をクリックします。 [**選択するオブジェクト名を入力**してください] ボックスに <Machine_Name>**\ repl_distribution**] を入力し、[**名前の確認**] をクリックして、[ **OK**] をクリックします。  
   
-4.  
-  **[メンバーシップ]** ページの **[データベース ロールのメンバーシップ]** 領域で、 **[db_owner]** を選択し、 **[OK]** をクリックしてユーザーを作成します。  
+4.  **[メンバーシップ]** ページの **[データベース ロールのメンバーシップ]** 領域で、 **[db_owner]** を選択し、 **[OK]** をクリックしてユーザーを作成します。  
   
 ### <a name="to-view-the-synchronization-status-of-the-subscription"></a>サブスクリプションの同期状態を表示するには  
   
 1.  で[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]パブリッシャーに接続し、サーバーノードを展開して、[**レプリケーション**] フォルダーを展開します。  
   
-2.  
-  **[ローカル パブリケーション]** フォルダーで、 **AdvWorksProductTrans** パブリケーションを展開し、 **ProductReplica** データベースのサブスクリプションを右クリックして、 **[同期の状態の表示]** をクリックします。  
+2.  **[ローカル パブリケーション]** フォルダーで、 **AdvWorksProductTrans** パブリケーションを展開し、 **ProductReplica** データベースのサブスクリプションを右クリックして、 **[同期の状態の表示]** をクリックします。  
   
      サブスクリプションの現在の同期状態が表示されます。  
   
-3.  
-  **[AdvWorksProductTrans]** の下にサブスクリプションが表示されない場合は、F5 キーを押して一覧を更新します。  
+3.  **[AdvWorksProductTrans]** の下にサブスクリプションが表示されない場合は、F5 キーを押して一覧を更新します。  
   
 ## <a name="next-steps"></a>次の手順  
  ここでは、トランザクション パブリケーションへのサブスクリプションを作成しました。 このサブスクリプションのディストリビューション エージェントは常時動作しているので、サブスクリプションの作成時に初期化も行われます。 次は、トレーサー トークンを使って、変更内容がサブスクライバーにレプリケートされているかどうかを確認し、待機時間を決定します。 「 [レッスン 3: サブスクリプションの検証と待機時間の計測](lesson-3-validating-the-subscription-and-measuring-latency.md)」を参照してください。  
@@ -77,6 +70,6 @@ ms.locfileid: "62721076"
 ## <a name="see-also"></a>参照  
  [スナップショットを使用したサブスクリプションの初期化](initialize-a-subscription-with-a-snapshot.md)   
  [プッシュサブスクリプションを作成する](create-a-push-subscription.md)   
- [パブリケーションのサブスクライブ](subscribe-to-publications.md)  
+ [Subscribe to Publications](subscribe-to-publications.md)  
   
   

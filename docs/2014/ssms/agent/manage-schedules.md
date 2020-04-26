@@ -13,35 +13,35 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2371109c8fa28c579cd90735a51a4ad3a790385
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63255072"
 ---
 # <a name="manage-schedules"></a>[スケジュールの管理]
   エージェントのジョブスケジュールの[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロパティを表示および変更できます。  
   
 ## <a name="options"></a>オプション  
- **利用可能なスケジュール**  
+ **[利用可能なスケジュール]**  
  このユーザーが利用可能なスケジュールの一覧を表示します。 ジョブの所有者とスケジュールの所有者は同じである必要があります。 したがって、この一覧には、このジョブの所有者によって所有されているスケジュールだけが表示されます。  
   
  **名前**  
  スケジュールの名前を表示します。  
   
- **有効**  
+ **Enabled**  
  スケジュールを有効にするには、このオプションを選択します。  
   
  **説明**  
  ジョブを実行するスケジュールの条件を説明します。  
   
- **スケジュールされるジョブ**  
+ **[スケジュール済みのジョブ]**  
  スケジュールにアタッチされているジョブの番号を表示します。 番号をクリックすると、ジョブのプロパティが表示されます。  
   
- **[新規作成]**  
+ **新しい**  
  新しいスケジュールを作成するには、このボタンをクリックします。  
   
- **デリート**  
+ **削除**  
  選択されているスケジュールを削除するには、このボタンをクリックします。  
   
  **Properties**  

@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c35062e6dfa339d0cd37f3905dc801f0f47becba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62773431"
 ---
 # <a name="view-a-list-of-modified-files"></a>変更されたファイルの一覧表示
@@ -35,17 +35,17 @@ ms.locfileid: "62773431"
      **チェックイン**  
      ソリューションにチェックインします。  
   
-     **説明**  
+     **コメント**  
      プレーンテキスト コメントを保留中のチェックインに関連付けます。 コメントが作成され、プロジェクトの各バージョンに関連付けられ、ソース管理データベースに格納されます。  
   
-     **オプション**  
+     **[オプション]**  
      [**チェックイン**] ボタンをクリックしたときにソース管理で実行するアクションを指定します。  
   
     -   **[すべてのチェックアウト状態を保持]**  
   
          ファイルをチェックアウトした状態のままで、変更がソース管理プロバイダーに書き込まれるように指定します。  
   
-     **並べ替え**  
+     **基づく**  
      アイテムの一覧に表示された列の並べ替え順序を指定します。  
   
      **[列]**  

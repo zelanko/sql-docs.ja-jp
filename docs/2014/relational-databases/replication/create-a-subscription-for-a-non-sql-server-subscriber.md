@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be2568e0a99ff21280388bd309a1e49bdec7e072
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721674"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>SQL Server 以外のサブスクライバーのサブスクリプションの作成
@@ -26,32 +26,26 @@ ms.locfileid: "62721674"
   
  **このトピックの内容**  
   
--   **次のものを使用して SQL Server 以外のサブスクライバーのサブスクリプションを作成するには:**  
+-   **SQL Server 以外のサブスクライバーのサブスクリプションを作成するために使用するもの:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーのサブスクリプションを作成するには、以下の操作を実行します。  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーのサブスクリプションを作成するには、以下の操作を実行します。  
   
-1.  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ディストリビューターに、適切なクライアント ソフトウェアおよび OLE DB プロバイダーをインストールし、これらを構成します。 詳細については、「 [Oracle Subscribers](non-sql/oracle-subscribers.md) 」および「 [IBM DB2 Subscribers](non-sql/ibm-db2-subscribers.md)」を参照してください。  
+1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ディストリビューターに、適切なクライアント ソフトウェアおよび OLE DB プロバイダーをインストールし、これらを構成します。 詳細については、「 [Oracle Subscribers](non-sql/oracle-subscribers.md) 」および「 [IBM DB2 Subscribers](non-sql/ibm-db2-subscribers.md)」を参照してください。  
   
 2.  パブリケーションの新規作成ウィザードを使用して、パブリケーションを作成します。 Oracle データベースからパブリケーションを作成する方法については、「[Publisher で文書を作成するには](publish/create-a-publication.md)」および「[Create a Publication from an Oracle Database](publish/create-a-publication-from-an-oracle-database.md)」(Oracle データベースからパブリケーションを作成する) を参照してください。 パブリケーションの新規作成ウィザードで、以下のオプションを指定します。  
   
-    -   
-  **[パブリケーションの種類]** ページで、 **[スナップショット パブリケーション]** または **[トランザクション パブリケーション]** を選択します。  
+    -   **[パブリケーションの種類]** ページで、 **[スナップショット パブリケーション]** または **[トランザクション パブリケーション]** を選択します。  
   
-    -   
-  **[スナップショット エージェント]** ページで、 **[スナップショットをすぐに作成する]** チェック ボックスをオフにします。  
+    -   **[スナップショット エージェント]** ページで、 **[スナップショットをすぐに作成する]** チェック ボックスをオフにします。  
   
-         
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーに対してパブリケーションが有効になったら、スナップショットを作成し、スナップショット エージェントが[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーに適したスナップショットおよび初期化スクリプトを生成することを確認します。  
+         [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーに対してパブリケーションが有効になったら、スナップショットを作成し、スナップショット エージェントが[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーに適したスナップショットおよび初期化スクリプトを生成することを確認します。  
   
-3.  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][パブリケーションのプロパティ - **PublicationName>]\< ダイアログ ボックスを使用して、** 以外のサブスクライバーのパブリケーションを有効にします。 この手順の詳細については、「 [Publication Properties, Subscription Options](publication-properties-subscription-options.md) 」を参照してください。  
+3.  **[パブリケーションのプロパティ - \<PublicationName>]** ダイアログ ボックスを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーのパブリケーションを有効にします。 この手順の詳細については、「 [Publication Properties, Subscription Options](publication-properties-subscription-options.md) 」を参照してください。  
   
 4.  サブスクリプションの新規作成ウィザードを使用して、サブスクリプションを作成します。 この手順の詳細については、このトピック内で説明します。  
   
@@ -59,47 +53,36 @@ ms.locfileid: "62721674"
   
 6.  パブリケーションのスナップショットを生成します。 この手順の詳細については、このトピック内で説明します。  
   
-7.  サブスクリプションを同期します。 詳しくは、「 [Synchronize a Push Subscription](synchronize-a-push-subscription.md)」をご覧ください。  
+7.  サブスクリプションを同期します。 詳細については、「 [プッシュ サブスクリプションの同期](synchronize-a-push-subscription.md)」をご覧ください。  
   
 #### <a name="to-enable-a-publication-for-non-sql-server-subscribers"></a>SQL Server 以外のサブスクライバーのパブリケーションを有効にするには  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でパブリッシャーに接続し、サーバー ノードを展開します。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でパブリッシャーに接続し、サーバー ノードを展開します。  
   
-2.  
-  **[レプリケーション]** フォルダーを展開し、 **[ローカル パブリケーション]** フォルダーを展開します。  
+2.  **[レプリケーション]** フォルダーを展開し、 **[ローカル パブリケーション]** フォルダーを展開します。  
   
 3.  パブリケーションを右クリックし、 **[プロパティ]** をクリックします。  
   
-4.  
-  **[サブスクリプション オプション]** ページで、 **[SQL Server 以外のサブスクライバーを許可]** オプションに対して **[True]** の値を選択します。 このオプションを選択した場合、パブリケーションと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーとの互換性を確保するために、プロパティの数が変更されます。  
+4.  **[サブスクリプション オプション]** ページで、 **[SQL Server 以外のサブスクライバーを許可]** オプションに対して **[True]** の値を選択します。 このオプションを選択した場合、パブリケーションと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーとの互換性を確保するために、プロパティの数が変更されます。  
   
     > [!NOTE]  
-    >  
-  **[True]** を選択すると、 **pre_creation_cmd** アーティクル プロパティの値が 'drop' に設定されます。 この設定では、アーティクルのテーブル名と一致するテーブルがサブスクライバーにある場合、レプリケーションによってそのテーブルが削除されます。 サブスクライバーにある既存のテーブルを保持するには、アーティクルごとに [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) ストアド プロシージャを使用し、次のように **pre_creation_cmd**の値に 'none' を指定します。 `sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`  
+    >  **[True]** を選択すると、 **pre_creation_cmd** アーティクル プロパティの値が 'drop' に設定されます。 この設定では、アーティクルのテーブル名と一致するテーブルがサブスクライバーにある場合、レプリケーションによってそのテーブルが削除されます。 サブスクライバーにある既存のテーブルを保持するには、アーティクルごとに [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) ストアド プロシージャを使用し、次のように **pre_creation_cmd**の値に 'none' を指定します。 `sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`  
   
-5.  
-  [!INCLUDE[clickOK](../../includes/clickok-md.md)] パブリケーションの新しいスナップショットを作成するように要求されます。 この時点で作成しない場合は、次に示す作成手順を後で使用してください。  
+5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] パブリケーションの新しいスナップショットを作成するように要求されます。 この時点で作成しない場合は、次に示す作成手順を後で使用してください。  
   
 #### <a name="to-create-a-subscription-for-a-non-sql-server-subscriber"></a>SQL Server 以外のサブスクライバーのサブスクリプションを作成するには  
   
-1.  
-  **[レプリケーション]** フォルダーを展開し、 **[ローカル パブリケーション]** フォルダーを展開します。  
+1.  **[レプリケーション]** フォルダーを展開し、 **[ローカル パブリケーション]** フォルダーを展開します。  
   
 2.  適切なパブリケーションを右クリックして、 **[新しいサブスクリプション]** をクリックします。  
   
-3.  
-  **[ディストリビューション エージェントの場所]** ページで、 **[ディストリビューター &lt;Distributor&gt; ですべてのエージェントを実行する]** が選択されていることを確認します。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーは、サブスクライバーでのエージェントの実行をサポートしていません。  
+3.  **[ディストリビューション エージェントの場所]** ページで、 **[ディストリビューター &lt;Distributor&gt; ですべてのエージェントを実行する]** が選択されていることを確認します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーは、サブスクライバーでのエージェントの実行をサポートしていません。  
   
-4.  
-  **[サブスクライバー]** ページで、 **[サブスクライバーの追加]** をクリックし、次に **[SQL Server 以外のサブスクライバーの追加]** をクリックします。  
+4.  **[サブスクライバー]** ページで、 **[サブスクライバーの追加]** をクリックし、次に **[SQL Server 以外のサブスクライバーの追加]** をクリックします。  
   
-5.  
-  **[SQL Server 以外のサブスクライバーの追加]** ダイアログ ボックスで、サブスクライバーの種類を選択します。  
+5.  **[SQL Server 以外のサブスクライバーの追加]** ダイアログ ボックスで、サブスクライバーの種類を選択します。  
   
-6.  
-  **[データ ソース名]** に値を入力します。  
+6.  **[データ ソース名]** に値を入力します。  
   
     -   Oracle の場合、これは構成した Transparent Network Substrate (TNS) 名です。  
   
@@ -107,28 +90,23 @@ ms.locfileid: "62721674"
   
      この手順で入力したデータ ソース名と手順 9. で指定した資格情報は、このウィザードでは検証されません。 これらは、サブスクリプションに対してディストリビューション エージェントが実行されるまで、レプリケーションで使用されません。 クライアント ツール (Oracle の場合には **sqlplus** など) を使用してサブスクライバーに接続することにより、すべての値がテストされていることを確認します。 詳細については、「 [Oracle Subscribers](non-sql/oracle-subscribers.md) 」および「 [IBM DB2 Subscribers](non-sql/ibm-db2-subscribers.md)」を参照してください。  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]ウィザードの [**サブスクライバー** ] ページで、サブスクライバーが [**サブスクライバー** ] 列に表示されるようになり、[**サブスクリプションデータベース**] 列に読み取り専用 **(既定の転送先)** と表示されます。  
+7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] これで、ウィザードの **[サブスクライバー]** ページで、サブスクライバーが **[サブスクライバー]** 列に表示され、読み取り専用の **[(既定の転送先)]** が **[サブスクリプション データベース]** 列に表示されます。  
   
     -   Oracle の場合、1 つのサーバーに 1 つのデータベースしか作成できないため、データベースを指定する必要はありません。  
   
     -   IBM DB2 の場合、データベースは DB2 接続文字列の **Initial Catalog** プロパティで指定されます。DB2 接続文字列は、後述する **[追加の接続オプション]** フィールドに入力できます。  
   
-8.  
-  **[ディストリビューション エージェント セキュリティ]** ページで、サブスクライバーの横のプロパティ ボタン **[...]** をクリックし、**[ディストリビューション エージェント セキュリティ]** ダイアログ ボックスにアクセスします。  
+8.  **[ディストリビューション エージェント セキュリティ]** ページで、サブスクライバーの横のプロパティ ボタン **[...]** をクリックし、**[ディストリビューション エージェント セキュリティ]** ダイアログ ボックスにアクセスします。  
   
-9. 
-  **[ディストリビューション エージェント セキュリティ]** ダイアログ ボックスで、以下の操作を行います。  
+9. **[ディストリビューション エージェント セキュリティ]** ダイアログ ボックスで、以下の操作を行います。  
   
-    -   
-  **[プロセス アカウント]**、 **[パスワード]**、および **[パスワードの確認入力]** フィールドで、ディストリビューション エージェントの実行、およびディストリビューターへのローカル接続に使用される [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントおよびパスワードを入力します。  
+    -   **[プロセス アカウント]**、 **[パスワード]**、および **[パスワードの確認入力]** フィールドで、ディストリビューション エージェントの実行、およびディストリビューターへのローカル接続に使用される [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントおよびパスワードを入力します。  
   
          アカウントには、ディストリビューション データベースの固定データベース ロール **db_owner** のメンバーであること、パブリケーション アクセス リスト (PAL) のメンバーであること、スナップショット共有での読み取り権限、および OLE DB プロバイダーのインストール ディレクトリでの読み取り権限など、最小限の権限が必要です。 PAL の詳細については、「[Secure the Publisher (パブリッシャーのセキュリティ保護)](security/secure-the-publisher.md)」を参照してください。  
   
-    -   
-  **[サブスクライバーに接続]** の、 **[ログイン]**、 **[パスワード]**、および **[パスワードの確認入力]** フィールドで、サブスクライバーへの接続に使用するログインとパスワードを入力します。 このログインは、あらかじめ構成され、サブスクリプション データベースでオブジェクトを作成できる十分な権限を持っている必要があります。  
+    -   **[サブスクライバーに接続]** の、 **[ログイン]**、 **[パスワード]**、および **[パスワードの確認入力]** フィールドで、サブスクライバーへの接続に使用するログインとパスワードを入力します。 このログインは、あらかじめ構成され、サブスクリプション データベースでオブジェクトを作成できる十分な権限を持っている必要があります。  
   
-    -   
-  **[追加の接続オプション]** フィールドで、接続文字列の形式でサブスクライバーの接続オプションを指定します (Oracle では追加オプションは必要ありません)。 各オプションはセミコロンで区切る必要があります。 以下に、DB2 接続文字列の例を示します (読みやすいように改行しています)。  
+    -   **[追加の接続オプション]** フィールドで、接続文字列の形式でサブスクライバーの接続オプションを指定します (Oracle では追加オプションは必要ありません)。 各オプションはセミコロンで区切る必要があります。 以下に、DB2 接続文字列の例を示します (読みやすいように改行しています)。  
   
         ```  
         Provider=DB2OLEDB;Initial Catalog=MY_SUBSCRIBER_DB;Network Transport Library=TCP;Host CCSID=1252;  
@@ -139,18 +117,15 @@ ms.locfileid: "62721674"
   
          文字列内のオプションの多くは、接続する DB2 サーバーに固有のものですが、 **Process Binary as Character** オプションは常に **False**に設定する必要があります。 サブスクリプション データベースを識別するため、 **Initial Catalog** オプションに値が必要です。  
   
-10. 
-  **[同期スケジュール]** ページで、 **[エージェント スケジュール]** メニューからディストリビューション エージェントのスケジュールを選択します (スケジュールは通常、 **[連続実行する]** です)。  
+10. **[同期スケジュール]** ページで、 **[エージェント スケジュール]** メニューからディストリビューション エージェントのスケジュールを選択します (スケジュールは通常、 **[連続実行する]** です)。  
   
-11. 
-  **[サブスクリプションの初期化]** ページで、サブスクリプションを初期化するかどうか、および初期化する場合はいつ行うのかを指定します。  
+11. **[サブスクリプションの初期化]** ページで、サブスクリプションを初期化するかどうか、および初期化する場合はいつ行うのかを指定します。  
   
     -   すべてのオブジェクトを作成し、サブスクリプション データベースに必要なすべてのデータを追加した場合にのみ、 **[初期化]** チェック ボックスをオフにします。  
   
     -   このウィザードが完了した後に、ディストリビューション エージェントからサブスクライバーへスナップショット ファイルを転送するには、 **[次の場合に初期化]** 列のドロップダウン リスト ボックスから **[今すぐ]** を選択します。 エージェントの次回の実行時にファイルが転送されるようにするには、 **[初回同期時]** を選択します。  
   
-12. 
-  **[ウィザードのアクション]** ページで、必要に応じてサブスクリプションのスクリプトを作成します。 詳しくは、「 [Scripting Replication](scripting-replication.md)」をご覧ください。  
+12. **[ウィザードのアクション]** ページで、必要に応じてサブスクリプションのスクリプトを作成します。 詳細については、「[レプリケーションのスクリプト作成](scripting-replication.md)」を参照してください。  
   
 #### <a name="to-retain-tables-at-the-subscriber"></a>サブスクライバー側のテーブルを保持するには  
   
@@ -158,17 +133,15 @@ ms.locfileid: "62721674"
   
 #### <a name="to-generate-a-snapshot-for-the-publication"></a>パブリケーションのスナップショットを生成するには  
   
-1.  
-  **[レプリケーション]** フォルダーを展開し、 **[ローカル パブリケーション]** フォルダーを展開します。  
+1.  **[レプリケーション]** フォルダーを展開し、 **[ローカル パブリケーション]** フォルダーを展開します。  
   
 2.  パブリケーションを右クリックし、 **[スナップショット エージェントの状態の表示]** をクリックします。  
   
-3.  
-  **[スナップショット エージェントの状態の表示 - \<Publication>]** ダイアログ ボックスで **[開始]** をクリックします。  
+3.  **[スナップショット エージェントの状態の表示 - \<Publication>]** ダイアログ ボックスで **[開始]** をクリックします。  
   
  スナップショット エージェントによるスナップショットの生成が完了すると、"[100%] 17 個のアーティクルのスナップショットが生成されました。" などのメッセージが表示されます。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  レプリケーション ストアド プロシージャを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーに対するプッシュ サブスクリプションをプログラムから作成できます。  
   
 > [!IMPORTANT]  
@@ -178,25 +151,22 @@ ms.locfileid: "62721674"
   
 1.  パブリッシャーとディストリビューターの両方に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーの最新の OLE DB プロバイダーをインストールします。 OLE DB プロバイダーのレプリケーションの要件については、「 [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)」、 [Oracle Subscribers](non-sql/oracle-subscribers.md)」、「 [IBM DB2 Subscribers](non-sql/ibm-db2-subscribers.md)」を参照してください。  
   
-2.  パブリッシャー側のパブリケーション データベースに対して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sp_helppublication &#40;Transact-SQL&#41;[ を実行して、パブリケーションが ](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql) 以外のサブスクライバ―をサポートしていることを確認します。  
+2.  パブリッシャー側のパブリケーション データベースに対して、[sp_helppublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql) を実行して、パブリケーションが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバ―をサポートしていることを確認します。  
   
-    -   
-  `enabled_for_het_sub` の値が 1 の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーがサポートされます。  
+    -   `enabled_for_het_sub` の値が 1 の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーがサポートされます。  
   
     -   `enabled_for_het_sub`の値が0の場合は、 [sp_changepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)を`enabled_for_het_sub`実行し**@property** `true` **@value**ます。には、にを指定します。  
   
         > [!NOTE]  
-        >  
-  `enabled_for_het_sub` を `true` に変更する前に、そのパブリケーションに対する既存のサブスクリプションをすべて削除する必要があります。 パブリケーションで更新サブスクリプションもサポートされる場合、`enabled_for_het_sub` を `true` に設定することはできません。 
-  `enabled_for_het_sub` を変更すると、他のパブリケーション プロパティにも影響します。 詳細については、「 [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)」を参照してください。  
+        >  `enabled_for_het_sub` を `true` に変更する前に、そのパブリケーションに対する既存のサブスクリプションをすべて削除する必要があります。 パブリケーションで更新サブスクリプションもサポートされる場合、`enabled_for_het_sub` を `true` に設定することはできません。 `enabled_for_het_sub` を変更すると、他のパブリケーション プロパティにも影響します。 詳細については、「 [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)」を参照してください。  
   
 3.  パブリッシャー側のパブリケーション データベースに対して、[sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) を実行します。 に**@publication**、 **@subscriber**、 **、の値** **@destination_db**を指定し、に**push** **@subscription_type**を、に値3を指定します**@subscriber_type** (OLE DB プロバイダーを指定します)。  
   
-4.  パブリッシャー側のパブリケーション データベースに対して、[sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql) を実行します。 次を指定します。  
+4.  パブリッシャー側のパブリケーション データベースに対して、[sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql) を実行します。 次の指定を行います。  
   
     -   パラメーター **@subscriber**と**@publication**パラメーター。  
   
-    -   の値 **(既定の転送先)** **@subscriber_db**  
+    -   **@subscriber_db** に対する **(既定の転送先)** の値。  
   
     -   、 **@subscriber_datasrc**、 **@subscriber_location**、 **@subscriber_provider_string**、および**@subscriber_catalog**の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **@subscriber_provider**データソース以外のプロパティ。  
   
@@ -205,18 +175,18 @@ ms.locfileid: "62721674"
         > [!NOTE]  
         >  Windows 統合認証を使用して確立される接続は、 **@job_login**常**@job_password**におよびで指定された windows 資格情報を使用します。 ディストリビューション エージェントは、常に Windows 統合認証を使用してディストリビューターにローカル接続します。 既定では、エージェントは Windows 統合認証を使用してサブスクライバーに接続します。  
   
-    -   に**@subscriber_security_mode** **@subscriber_login** **0**を指定し、および**@subscriber_password**に OLE DB プロバイダーのログイン情報を指定します。  
+    -   **@subscriber_security_mode** に **0** を指定し、**@subscriber_login** に **@subscriber_password** にOLE DB プロバイダーのログイン情報を指定します。  
   
     -   このサブスクリプションでのディストリビューション エージェント ジョブのスケジュール。 詳細については、「[同期スケジュールの指定](specify-synchronization-schedules.md)」を参照してください。  
   
     > [!IMPORTANT]  
-    >  リモート ディストリビューターを使用するパブリッシャー側でプッシュ サブスクリプションを作成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベースエンジン &#40;SQL Server 構成マネージャー&#41;への暗号化接続の有効化](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
+    >  リモート ディストリビューターを使用するパブリッシャー側でプッシュ サブスクリプションを作成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [IBM DB2 サブスクライバー](non-sql/ibm-db2-subscribers.md)   
  [Oracle サブスクライバー](non-sql/oracle-subscribers.md)   
  [その他の非 SQL Server サブスクライバー](non-sql/other-non-sql-server-subscribers.md)   
  [レプリケーションシステムストアドプロシージャの概念](concepts/replication-system-stored-procedures-concepts.md)   
- [レプリケーションのセキュリティに関するベストプラクティス](security/replication-security-best-practices.md)  
+ [レプリケーション セキュリティの推奨事項](security/replication-security-best-practices.md)  
   
   

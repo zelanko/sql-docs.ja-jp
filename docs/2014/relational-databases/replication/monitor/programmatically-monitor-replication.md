@@ -29,10 +29,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 949c8585b3886d0d3f422e76d031b390d248e9a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62667248"
 ---
 # <a name="programmatically-monitor-replication"></a>プログラムによるレプリケーションの監視
@@ -54,7 +54,7 @@ ms.locfileid: "62667248"
   
  [レプリケーション管理オブジェクト (RMO)](#RMO)  
   
-##  <a name="Tsql"></a> Transact-SQL  
+##  <a name="transact-sql"></a><a name="Tsql"></a> Transact-SQL  
   
 #### <a name="to-monitor-publishers-publications-and-subscriptions-from-the-distributor"></a>ディストリビューターからパブリッシャー、パブリケーション、サブスクリプションを監視するには  
   
@@ -104,7 +104,7 @@ ms.locfileid: "62667248"
   
     -   このしきい値に到達したときに警告をログに記録するには、 **@shouldalert** に **@mode** を指定し、無効にするには **2** を指定します。  
   
-##  <a name="RMO"></a> レプリケーション管理オブジェクト (RMO)  
+##  <a name="replication-management-objects-rmo"></a><a name="RMO"></a> レプリケーション管理オブジェクト (RMO)  
   
 #### <a name="to-monitor-a-subscription-to-a-merge-publication-at-the-subscriber"></a>サブスクライバーでマージ パブリケーションのサブスクリプションを監視するには  
   
@@ -266,22 +266,15 @@ ms.locfileid: "62667248"
   
     -   *metricID* - 監視しきい値の基準を表す <xref:System.Int32> 値です。次の表に示す値を使用します。  
   
-        |Value|説明|  
+        |値|説明|  
         |-----------|-----------------|  
-        |1|
-  `expiration` - トランザクション パブリケーションへのサブスクリプションに期限が迫っていないかを監視します。|  
-        |2|
-  `latency` - トランザクション パブリケーションへのサブスクリプションのパフォーマンスを監視します。|  
-        |4|
-  `mergeexpiration` - マージ パブリケーションへのサブスクリプションに期限が迫っていないかを監視します。|  
-        |5|
-  `mergeslowrunduration` - 低速回線 (ダイヤルアップ) 接続でのマージの同期時間を監視します。|  
-        |6|
-  `mergefastrunduration` - 高帯域 (LAN) 接続でのマージ同期の期間を監視します。|  
-        |7|
-  `mergefastrunspeed` : 高帯域幅 (LAN) 接続経由でのマージ同期の同期速度を監視します。|  
-        |8|
-  `mergeslowrunspeed` - 低速回線 (ダイヤルアップ) 接続でのマージの同期速度を監視します。|  
+        |1|`expiration` - トランザクション パブリケーションへのサブスクリプションに期限が迫っていないかを監視します。|  
+        |2|`latency` - トランザクション パブリケーションへのサブスクリプションのパフォーマンスを監視します。|  
+        |4|`mergeexpiration` - マージ パブリケーションへのサブスクリプションに期限が迫っていないかを監視します。|  
+        |5|`mergeslowrunduration` - 低速回線 (ダイヤルアップ) 接続でのマージの同期時間を監視します。|  
+        |6|`mergefastrunduration` - 高帯域 (LAN) 接続でのマージ同期の期間を監視します。|  
+        |7|`mergefastrunspeed` : 高帯域幅 (LAN) 接続経由でのマージ同期の同期速度を監視します。|  
+        |8|`mergeslowrunspeed` - 低速回線 (ダイヤルアップ) 接続でのマージの同期速度を監視します。|  
   
     -   *enable* - <xref:System.Boolean> 値です。  
   

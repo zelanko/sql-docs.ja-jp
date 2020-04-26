@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 23ad4cd92d186f43fb1a9dd81e1dbb0727170367
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721126"
 ---
 # <a name="initialize-a-subscription-with-a-snapshot"></a>スナップショットを使用したサブスクリプションの初期化
@@ -37,7 +37,7 @@ ms.locfileid: "62721126"
  ある時点でスナップショットの転送が中断された場合、転送は自動的に再開され、既に転送が完了したファイルは再送されません。 スナップショット エージェントの配信単位は、各パブリケーション アーティクルに対する bcp ファイルであるため、部分的に配信されたファイルは再度全体を配信する必要があります。 しかし、スナップショットの再開機能を使うことで、転送されるデータ量が大幅に削減され、接続が不安定な場合でもタイムリーにスナップショットを配信できます。  
   
 ## <a name="snapshot-options"></a>スナップショット オプション  
- スナップショットを使用してサブスクリプションを初期化する際には、いくつかのオプションがあります。 次のようにすることができます。  
+ スナップショットを使用してサブスクリプションを初期化する際には、いくつかのオプションがあります。 次の操作を行います。  
   
 -   既定のスナップショット フォルダーを代替または追加する場所として、代替スナップショット フォルダーの場所を指定できます。 詳細については、「 [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md)」を参照してください。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62721126"
 -   ファイル転送プロトコル (FTP) を使用してスナップショット ファイルを転送できます。 詳細については、「[FTP によるスナップショットの転送](transfer-snapshots-through-ftp.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [サブスクリプションの初期化](initialize-a-subscription.md)   
+ [サブスクリプションを初期化する](initialize-a-subscription.md)   
  [スナップショット フォルダーのセキュリティ保護](security/secure-the-snapshot-folder.md)  
   
   

@@ -13,17 +13,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a04465712667205674ddd8ea8bab7d82c3250261
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62630692"
 ---
-# <a name="operator-properties-new-operator-notifications-page"></a>オペレーターのプロパティ: [新しいオペレーター] ([通知] ページ)
+# <a name="operator-properties-new-operator-notifications-page"></a>[オペレーターのプロパティ]:[新しいオペレーター] ([通知] ページ)
   このページを使用すると、オペレーターに通知する警告およびジョブを設定できます。  
   
 ## <a name="options"></a>オプション  
- **警告**  
+ **アラート**  
  インスタンス内の警告を表示します。  
   
  **ジョブ**  
@@ -40,14 +40,13 @@ ms.locfileid: "62630692"
  **メッセージ**  
  電子メールを使用してこのオペレーターに通知します。  
   
- **ポケットベル**  
+ **ポケット**  
  電子メールをポケット ベルに送信することによって、このオペレーターに通知します。  
   
  **Net send**  
- 
-  **net send**を使用してこのオペレーターに通知します。  
+ **net send**を使用してこのオペレーターに通知します。  
   
 ## <a name="see-also"></a>参照  
- [オペレーター](operators.md)  
+ [演算子](operators.md)  
   
   
