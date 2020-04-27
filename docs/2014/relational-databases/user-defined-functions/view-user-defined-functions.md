@@ -19,14 +19,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ea37fdca56c222cbebbdcb00956938a92fe2c203
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211682"
 ---
 # <a name="view-user-defined-functions"></a>ユーザー定義関数の表示
-  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のユーザー定義関数の定義またはプロパティに関する情報は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して取得できます。 関数のデータが元のテーブルからどのように抽出されているのかを理解したり、関数で定義されているデータを確認するために、関数の定義を調べたい場合があります。  
   
 > [!IMPORTANT]  
@@ -44,26 +43,24 @@ ms.locfileid: "68211682"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
- 
-  **sys.sql_expression_dependencies** を使用して関数のすべての依存関係を検索するには、データベースに対する VIEW DEFINITION 権限とデータベースの **sys.sql_expression_dependencies** に対する SELECT 権限が必要です。 OBJECT_DEFINITION で返されるようなシステム オブジェクトの定義は公開されます。  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
+ **sys.sql_expression_dependencies** を使用して関数のすべての依存関係を検索するには、データベースに対する VIEW DEFINITION 権限とデータベースの **sys.sql_expression_dependencies** に対する SELECT 権限が必要です。 OBJECT_DEFINITION で返されるようなシステム オブジェクトの定義は公開されます。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-show-a-user-defined-functions-properties"></a>ユーザー定義関数のプロパティを表示するには  
   
-1.  
-  **オブジェクト エクスプローラー**で、プロパティを表示する関数を含むデータベースの横にあるプラス記号をクリックします。次に、プラス記号をクリックして **[プログラミング]** フォルダーを展開します。  
+1.  **オブジェクト エクスプローラー**で、プロパティを表示する関数を含むデータベースの横にあるプラス記号をクリックします。次に、プラス記号をクリックして **[プログラミング]** フォルダーを展開します。  
   
 2.  プラス記号をクリックして **[関数]** フォルダーを展開します。  
   
 3.  プロパティを表示する関数を含むフォルダーをプラス記号をクリックして展開します。  
   
-    -   テーブル値関数  
+    -   Table-valued Function  
   
     -   スカラー値関数  
   
@@ -71,49 +68,48 @@ ms.locfileid: "68211682"
   
 4.  プロパティを表示する関数を右クリックし、 **[プロパティ]** を選択します。  
   
-     
-  **[関数のプロパティ - function_name** _]_ ダイアログ ボックスに、次のプロパティが表示されます。  
+     **[関数のプロパティ -** function_name _]_ ダイアログ ボックスに、次のプロパティが表示されます。  
   
      **[データベース]**  
      この関数を含むデータベースの名前です。  
   
-     **サーバー**  
+     **[サーバー]**  
      現在のサーバー インスタンスの名前です。  
   
      **User**  
      この接続のユーザーの名前です。  
   
-     **作成日**  
+     **[作成日]**  
      関数が作成された日付を表示します。  
   
-     **実行する方法**  
+     **[実行時の権限]**  
      関数の実行コンテキストです。  
   
-     **名前**  
+     **Name**  
      現在の関数の名前です。  
   
-     **スキーマ**  
+     **[スキーマ]**  
      関数を所有するスキーマを表示します。  
   
-     **システムオブジェクト**  
+     **[システム オブジェクト]**  
      関数がシステム オブジェクトかどうかを指定します。 値は True と False です。  
   
-     **ANSI Null**  
+     **[ANSI NULL]**  
      オブジェクトが ANSI NULL オプションで作成されたかどうかを指定します。  
   
-     **暗号化**  
+     **Encrypted**  
      関数が暗号化されているかどうかを指定します。 値は True と False です。  
   
-     **関数の種類**  
+     **[関数の種類]**  
      ユーザー定義関数の種類です。  
   
-     **引用符で囲まれた識別子**  
+     **[引用符で囲まれた識別子]**  
      オブジェクトが引用符で囲まれた識別子オプションで作成されたかどうかを指定します。  
   
-     **スキーマバインド**  
+     **[スキーマ バインド]**  
      関数がスキーマ バインドされているかどうかを指定します。 値は True と False です。 スキーマ バインド関数の詳細については、「[CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)」の SCHEMABINDING のセクションを参照してください。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-get-the-definition-and-properties-of-a-function"></a>関数の定義およびプロパティを取得するには  
   

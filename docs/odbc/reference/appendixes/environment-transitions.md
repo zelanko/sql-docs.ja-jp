@@ -1,5 +1,5 @@
 ---
-title: 環境遷移 |マイクロソフトドキュメント
+title: 環境の移行 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,116 +15,116 @@ ms.assetid: 9d11b1ab-f4c8-48ca-9812-8c04303f939d
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: ebfb5475d24d5fc70c4cb46a666b2573066565a1
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81283302"
 ---
 # <a name="environment-transitions"></a>環境の遷移
-ODBC 環境には、次の 3 つの状態があります。  
+ODBC 環境には、次の3つの状態があります。  
   
 |State|説明|  
 |-----------|-----------------|  
-|E0|未割り当て環境|  
-|E1|割り当て済み環境、未割り当て接続|  
-|E2|割り当て済み環境、割り当て済み接続|  
+|E0|未割り当ての環境|  
+|E1|割り当て済みの環境、未割り当ての接続|  
+|E2|割り当て済みの環境、割り当てられた接続|  
   
- 次の表は、各 ODBC 関数が環境状態に与える影響を示しています。  
+ 次の表は、各 ODBC 関数が環境の状態にどのように影響するかを示しています。  
   
-## <a name="sqlallochandle"></a>ハンドル  
-  
-|E0<br /><br /> 未割り当て|E1<br /><br /> Allocated|E2<br /><br /> Connection|  
-|------------------------|----------------------|-----------------------|  
-|E1[1]|--[4]|--[4]|  
-|(IH)[2]|E2[5]<br />(HY010)[6]|--[4]|  
-|(IH)[3]|(IH)|--[4]|  
-  
- [1] この行は *、HandleType*がSQL_HANDLE_ENVされたときの遷移を示しています。  
-  
- [2] この行は *、HandleType*がSQL_HANDLE_DBCされたときの遷移を示しています。  
-  
- [3] この行は *、HandleType*がSQL_HANDLE_STMTまたはSQL_HANDLE_DESCされたときの遷移を示しています。  
-  
- 有効なハンドルを指し示す*を*指定して**SQLAllocHandle**を呼び出すと、そのハンドルが上書きされます。 これは、アプリケーション・プログラミング・エラーである可能性があります。  
-  
- [5] 環境にSQL_ATTR_ODBC_VERSION環境属性が設定されていた。  
-  
- [6] 環境にSQL_ATTR_ODBC_VERSION環境属性が設定されていなかった。  
-  
-## <a name="sqldatasources-and-sqldrivers"></a>SQL データソースと SQL ドライバー  
+## <a name="sqlallochandle"></a>SQLAllocHandle  
   
 |E0<br /><br /> 未割り当て|E1<br /><br /> Allocated|E2<br /><br /> Connection|  
 |------------------------|----------------------|-----------------------|  
-|(IH)|--[1]<br />(HY010)[2]|--[1]<br />(HY010)[2]|  
+|E1 [1]|--[4]|--[4]|  
+|(IH)3|E2 [5]<br />HY0104/6|--[4]|  
+|(IH)番|(IH)|--[4]|  
   
- [1] 環境にSQL_ATTR_ODBC_VERSION環境属性が設定されていた。  
+ [1] この行は、 *Handletype*が SQL_HANDLE_ENV されたときの遷移を示しています。  
   
- [2] 環境にSQL_ATTR_ODBC_VERSION環境属性が設定されていません。  
+ [2] この行は、 *Handletype*が SQL_HANDLE_DBC されたときの遷移を示しています。  
+  
+ [3] この行は、 *Handletype*が SQL_HANDLE_STMT または SQL_HANDLE_DESC ときの遷移を示しています。  
+  
+ [4] 有効なハンドルをポイントする*OutputHandlePtr*で**SQLAllocHandle**を呼び出すと、そのハンドルが上書きされます。 これは、アプリケーションプログラミングエラーの可能性があります。  
+  
+ [5] 環境に SQL_ATTR_ODBC_VERSION 環境属性が設定されています。  
+  
+ [6] 環境に SQL_ATTR_ODBC_VERSION 環境属性が設定されていません。  
+  
+## <a name="sqldatasources-and-sqldrivers"></a>SQLDataSources ソースと Sqldatasources  
+  
+|E0<br /><br /> 未割り当て|E1<br /><br /> Allocated|E2<br /><br /> Connection|  
+|------------------------|----------------------|-----------------------|  
+|(IH)|--[1]<br />HY0103|--[1]<br />HY0103|  
+  
+ [1] 環境に SQL_ATTR_ODBC_VERSION 環境属性が設定されています。  
+  
+ [2] 環境に SQL_ATTR_ODBC_VERSION 環境属性が設定されていません。  
   
 ## <a name="sqlendtran"></a>SQLEndTran  
   
 |E0<br /><br /> 未割り当て|E1<br /><br /> Allocated|E2<br /><br /> Connection|  
 |------------------------|----------------------|-----------------------|  
-|(IH)[1]|--[3]<br />(HY010)[4]|--[3]<br />(HY010)[4]|  
-|(IH)[2]|(IH)|--|  
+|(IH)1|--[3]<br />HY0104/4|--[3]<br />HY0104/4|  
+|(IH)3|(IH)|--|  
   
- [1] この行は *、HandleType*がSQL_HANDLE_ENVされたときの遷移を示しています。  
+ [1] この行は、 *Handletype*が SQL_HANDLE_ENV されたときの遷移を示しています。  
   
- [2] この行は *、HandleType*がSQL_HANDLE_DBCされたときの遷移を示しています。  
+ [2] この行は、 *Handletype*が SQL_HANDLE_DBC されたときの遷移を示しています。  
   
- [3] 環境属性SQL_ATTR_ODBC_VERSION環境に設定されています。  
+ [3] 環境に SQL_ATTR_ODBC_VERSION 環境属性が設定されました。  
   
- [4] 環境にSQL_ATTR_ODBC_VERSION環境属性が設定されていません。  
+ [4] 環境に SQL_ATTR_ODBC_VERSION 環境属性が設定されていません。  
   
 ## <a name="sqlfreehandle"></a>SQLFreeHandle  
   
 |E0<br /><br /> 未割り当て|E1<br /><br /> Allocated|E2<br /><br /> Connection|  
 |------------------------|----------------------|-----------------------|  
-|(IH)[1]|E0|(HY010)|  
-|(IH)[2]|(IH)|--[4]<br />E1[5]|  
-|(IH)[3]|(IH)|--|  
+|(IH)1|E0|HY010|  
+|(IH)3|(IH)|--[4]<br />E1 [5]|  
+|(IH)番|(IH)|--|  
   
- [1] この行は *、HandleType*がSQL_HANDLE_ENVされたときの遷移を示しています。  
+ [1] この行は、 *Handletype*が SQL_HANDLE_ENV されたときの遷移を示しています。  
   
- [2] この行は *、HandleType*がSQL_HANDLE_DBCされたときの遷移を示しています。  
+ [2] この行は、 *Handletype*が SQL_HANDLE_DBC されたときの遷移を示しています。  
   
- [3] この行は *、HandleType*がSQL_HANDLE_STMTまたはSQL_HANDLE_DESCされたときの遷移を示しています。  
+ [3] この行は、 *Handletype*が SQL_HANDLE_STMT または SQL_HANDLE_DESC ときの遷移を示しています。  
   
- [4] 他の割り当てられた接続ハンドルがあった。  
+ [4] 他の割り当て済み接続ハンドルがありました。  
   
- [5]*ハンドル*で指定された接続ハンドルが唯一割り当てられた接続ハンドルでした。  
+ [5]*ハンドル*で指定された接続ハンドルは、割り当てられた唯一の接続ハンドルでした。  
   
-## <a name="sqlgetdiagfield-and-sqlgetdiagrec"></a>フィールドと SQL を取得します。  
-  
-|E0<br /><br /> 未割り当て|E1<br /><br /> Allocated|E2<br /><br /> Connection|  
-|------------------------|----------------------|-----------------------|  
-|(IH)[1]|--|--|  
-|(IH)[2]|(IH)|--|  
-  
- [1] この行は *、HandleType*がSQL_HANDLE_ENVされたときの遷移を示しています。  
-  
- [2] この行は *、HandleType*がSQL_HANDLE_DBC、SQL_HANDLE_STMT、またはSQL_HANDLE_DESCされたときの遷移を示しています。  
-  
-## <a name="sqlgetenvattr"></a>アズ・ビジトル  
+## <a name="sqlgetdiagfield-and-sqlgetdiagrec"></a>SQLGetDiagField と SQLGetDiagRec  
   
 |E0<br /><br /> 未割り当て|E1<br /><br /> Allocated|E2<br /><br /> Connection|  
 |------------------------|----------------------|-----------------------|  
-|(IH)|--[1]<br />(HY010)[2]|--|  
+|(IH)1|--|--|  
+|(IH)3|(IH)|--|  
   
- [1] 環境にSQL_ATTR_ODBC_VERSION環境属性が設定されていた。  
+ [1] この行は、 *Handletype*が SQL_HANDLE_ENV されたときの遷移を示しています。  
   
- [2] 環境にSQL_ATTR_ODBC_VERSION環境属性が設定されていません。  
+ [2] この行は、 *Handletype*が SQL_HANDLE_DBC、SQL_HANDLE_STMT、または SQL_HANDLE_DESC の場合の遷移を示しています。  
+  
+## <a name="sqlgetenvattr"></a>SQLGetEnvAttr  
+  
+|E0<br /><br /> 未割り当て|E1<br /><br /> Allocated|E2<br /><br /> Connection|  
+|------------------------|----------------------|-----------------------|  
+|(IH)|--[1]<br />HY0103|--|  
+  
+ [1] 環境に SQL_ATTR_ODBC_VERSION 環境属性が設定されています。  
+  
+ [2] 環境に SQL_ATTR_ODBC_VERSION 環境属性が設定されていません。  
   
 ## <a name="sqlsetenvattr"></a>SQLSetEnvAttr  
   
 |E0<br /><br /> 未割り当て|E1<br /><br /> Allocated|E2<br /><br /> Connection|  
 |------------------------|----------------------|-----------------------|  
-|(IH)|--[1]<br />(HY010)[2]|(HY011)|  
+|(IH)|--[1]<br />HY0103|HY011|  
   
- [1] 環境にSQL_ATTR_ODBC_VERSION環境属性が設定されていた。  
+ [1] 環境に SQL_ATTR_ODBC_VERSION 環境属性が設定されています。  
   
- Attribute*引数が*SQL_ATTR_ODBC_VERSIONされず、環境にSQL_ATTR_ODBC_VERSION環境属性が設定されていなかった。  
+ [2]*属性*引数が SQL_ATTR_ODBC_VERSION ませんでした。環境に SQL_ATTR_ODBC_VERSION 環境属性が設定されていません。  
   
 ## <a name="all-other-odbc-functions"></a>その他すべての ODBC 関数  
   

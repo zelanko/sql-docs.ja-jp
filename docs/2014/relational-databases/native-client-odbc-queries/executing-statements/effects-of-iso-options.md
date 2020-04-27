@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ebef85cf1deb2327122edfd536991f689b14c747
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206763"
 ---
 # <a name="effects-of-iso-options"></a>ISO オプションの効果
@@ -34,8 +34,7 @@ ms.locfileid: "68206763"
   
  SET オプションはユーザーやアプリケーションがいつでも有効または無効にできるので、ストアド プロシージャやトリガーの開発者は、上記の SET オプションを有効にした場合と無効にした場合の両方で、開発したプロシージャやトリガーをテストする必要があります。 これにより、プロシージャやトリガーの起動時に、接続に設定されているオプションに関係なく、プロシージャやトリガーが適切に動作することを確認できます。 これらのオプションのいずれかについて特定の設定が必要なトリガーやストアド プロシージャは、そのトリガーやストアド プロシージャの起動時に SET ステートメントを実行する必要があります。 この SET ステートメントは、トリガーやストアド プロシージャが実行されている間だけ有効になり、トリガーやストアド プロシージャが終了すると元の設定が復元されます。  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに接続しているときは、4 番目の SET オプションの CONCAT_NULL_YIELDS_NULL も有効になります。 データ[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ソースに AnsiNPW = NO が指定されている場合、または[SQLDriverConnect](../../native-client-odbc-api/sqldriverconnect.md)または[SQLBrowseConnect](../../native-client-odbc-api/sqlbrowseconnect.md)のいずれかで、Native Client ODBC ドライバーでこれらのオプションが設定されていません。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに接続しているときは、4 番目の SET オプションの CONCAT_NULL_YIELDS_NULL も有効になります。 データ[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ソースに AnsiNPW = NO が指定されている場合、または[SQLDriverConnect](../../native-client-odbc-api/sqldriverconnect.md)または[SQLBrowseConnect](../../native-client-odbc-api/sqlbrowseconnect.md)のいずれかで、Native Client ODBC ドライバーでこれらのオプションが設定されていません。  
   
  前に説明した ISO オプションと[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]同様に、NATIVE Client ODBC ドライバーでは、QUOTEDID = NO がデータソースで指定されている場合、または**SQLDriverConnect**または**SQLBrowseConnect**のいずれかで指定されている場合、QUOTED_IDENTIFIER オプションは有効になりません。  
   

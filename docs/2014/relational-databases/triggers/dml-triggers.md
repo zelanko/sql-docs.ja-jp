@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: df06fb9ccbf4f3683877605e321207f0ca6d997e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68196507"
 ---
 # <a name="dml-triggers"></a>DML トリガー
@@ -61,8 +61,8 @@ ms.locfileid: "68196507"
 |連鎖参照|制限はありません。|INSTEAD OF UPDATE トリガーと DELETE トリガーは、参照整合性制約の連鎖の対象となっているテーブルでは許可されません。|  
 |実行|次の処理の後<br /><br /> 制約処理<br />宣言参照動作<br />**inserted** テーブルと **deleted** テーブルの作成<br />トリガーを起動する動作|次の処理の前: 制約処理<br /><br /> 次の処理の代わり: トリガーを起動する動作<br /><br /> 次の処理の後:  **inserted** テーブルと **deleted** テーブルの作成|  
 |実行の順序|最初と最後の実行内容を指定できます。|適用なし|  
-|`varchar(max)`inserted `nvarchar(max)`テーブルと`varbinary(max)` **deleted**テーブルで**** の、、および列参照|許可|許可|  
-|`text`inserted `ntext`テーブルと`image` **deleted**テーブルで**** の、、および列参照|禁止|許可|  
+|`varchar(max)`inserted `nvarchar(max)`テーブルと`varbinary(max)` **deleted**テーブルで**inserted**の、、および列参照|許可|許可|  
+|`text`inserted `ntext`テーブルと`image` **deleted**テーブルで**inserted**の、、および列参照|禁止|許可|  
   
  CLR トリガー  
  CLR トリガーは、AFTER トリガーと INSTEAD OF トリガーのいずれかにすることができます。 また、CLR トリガーは DDL トリガーにすることもできます。 CLR トリガーは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャを実行するのではなく、.NET Framework で作成され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でアップロードされたアセンブリのメンバーであるマネージド コードに記述されている、1 つ以上のメソッドを実行します。  

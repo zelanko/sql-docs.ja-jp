@@ -21,10 +21,10 @@ ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 6b9b6e62d0f69c5182ad69e21cb46800d4ddcc86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "72909397"
 ---
 # <a name="sysfn_all_changes_ltcapture_instancegt-transact-sql"></a>fn_all_changes_&lt;capture_instance&gt; (transact-sql)
@@ -60,12 +60,11 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
  このパラメーターは、sys 関数の作成スクリプトを生成するために sp_cdc_generate_wrapper_function を@closed_high_end_point呼び出すときに選択した値に応じて、次の2つの意味のいずれかを使用できます。  
   
--   @closed_high_end_point= 1  
+-   @closed_high_end_point = 1  
   
      結果セットに含まれるのは、end_time 以下に関連付けられたコミット時間がある <capture_instance>_CT 変更テーブル内の行だけです。  
   
--   
-  @closed_high_end_point = 0  
+-   @closed_high_end_point = 0  
   
      結果セットに含まれるのは、関連付けられたコミット時間が end_time 未満の capture_instance_CT 変更テーブル内の行だけです。  
   
@@ -84,15 +83,15 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|列の型|[説明]|  
+|列名|列の型|説明|  
 |-----------------|-----------------|-----------------|  
-|__CDC_STARTLSN|**binary (10)**|変更に関連付けられているトランザクションのコミット LSN。 同じトランザクションでコミットされたすべての変更は、同じコミット LSN を共有します。|  
-|__CDC_SEQVAL|**binary (10)**|特定のトランザクションに含まれる行の変更を並べ替えるためのシーケンス値です。|  
-|\<> の@column_list列|**て**|ラッパー関数を作成するスクリプトを生成するために呼び出されるときに、 *column_list*引数で指定された列を sp_cdc_generate_wrapper_function します。|  
+|__CDC_STARTLSN|**binary(10)**|変更に関連付けられているトランザクションのコミット LSN。 同じトランザクションでコミットされたすべての変更は、同じコミット LSN を共有します。|  
+|__CDC_SEQVAL|**binary(10)**|特定のトランザクションに含まれる行の変更を並べ替えるためのシーケンス値です。|  
+|\<> の@column_list列|**状況に応じて異なる**|ラッパー関数を作成するスクリプトを生成するために呼び出されるときに、 *column_list*引数で指定された列を sp_cdc_generate_wrapper_function します。|  
 |__CDC_OPERATION|**nvarchar (2)**|ターゲット環境に行を適用するために必要な操作を示す操作コード。 これは、呼び出しで指定された引数*row_filter_option*の値によって異なります。<br /><br /> *row_filter_option* = ' all '<br /><br /> ' D '-削除操作<br /><br /> ' I '-挿入操作<br /><br /> ' UN '-更新操作の新しい値<br /><br /> *row_filter_option* = ' all update old '<br /><br /> ' D '-削除操作<br /><br /> ' I '-挿入操作<br /><br /> ' UN '-更新操作の新しい値<br /><br /> ' UO '-更新操作の古い値|  
 |\<> の@update_flag_list列|**bit**|ビットフラグには、列名に _uflag を追加することによって名前が付けられます。 フラグは、' UO ' の\__CDC_OPERATION が ' i ' の場合は常に NULL に設定されます。 _CDC_OPERATION \_が ' UN ' の場合、更新によって対応する列が変更された場合は1に設定されます。 それ以外の場合は、0 に設定されます。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  Fn_all_changes_<capture_instance> 関数は、cdc. fn_cdc_get_all_changes_<capture_instance のクエリ関数のラッパーとして機能します。 ラッパーを作成するスクリプトを生成するには、sys.sp_cdc_generate_wrapper ストアド プロシージャを使用します。  
   
  ラッパー関数が自動的に作成されることはありません。 ラッパー関数を作成するには、次の 2 つを行う必要があります。  

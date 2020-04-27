@@ -21,10 +21,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0519561b24d8aff32adc7c375657fa85b9dfa496
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68195732"
 ---
 # <a name="working-with-the-wmi-provider-for-server-events"></a>WMI Provider for Server Events の操作
@@ -46,7 +46,7 @@ SELECT name, is_broker_enabled, service_broker_guid FROM sys.databases;
  データベースで[!INCLUDE[ssSB](../../includes/sssb-md.md)]を有効にするには、 [ALTER database](/sql/t-sql/statements/alter-database-transact-sql)ステートメントの ENABLE_BROKER SET オプションを使用します。  
   
 ## <a name="specifying-a-connection-string"></a>接続文字列の指定  
- アプリケーションは、プロバイダーによって定義された WMI 名前空間に接続することによって、WMI Provider for Server Events を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにダイレクトします。 Windows WMI サービスは、この名前空間をプロバイダー DLL である Sqlwep.dll にマップし、これをメモリに読み込みます。 の各インスタンス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]には独自の WMI 名前空間があり、 \\ \\既定ではに設定されています。\\*ルート*\Microsoft\SqlServer\ServerEvents\\*instance_name*。 ** の既定の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インストールでは、INSTANCE_NAME 既定値は MSSQLSERVER です。  
+ アプリケーションは、プロバイダーによって定義された WMI 名前空間に接続することによって、WMI Provider for Server Events を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにダイレクトします。 Windows WMI サービスは、この名前空間をプロバイダー DLL である Sqlwep.dll にマップし、これをメモリに読み込みます。 の各インスタンス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]には独自の WMI 名前空間があり、 \\ \\既定ではに設定されています。\\*ルート*\Microsoft\SqlServer\ServerEvents\\*instance_name*。 *instance_name*の既定の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インストールでは、INSTANCE_NAME 既定値は MSSQLSERVER です。  
   
 ## <a name="permissions-and-server-authentication"></a>権限とサーバー認証  
  WMI Provider for Server Events にアクセスするには、WMI 管理アプリケーションの起動元クライアントが、アプリケーションのアプリケーション接続文字列で指定された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス内の Windows 認証ログインまたはグループに対応している必要があります。  

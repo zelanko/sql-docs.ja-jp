@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9db326ac27a7137f03f34e242c3c5c3931637f36
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68198991"
 ---
 # <a name="conflict-detection-in-peer-to-peer-replication"></a>ピア ツー ピア レプリケーションにおける競合検出
@@ -71,8 +71,7 @@ ms.locfileid: "68198991"
   
 -   [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] では、 **[パブリケーションのプロパティ]** ダイアログ ボックスの **[サブスクリプション オプション]** ページまたはピア ツー ピア トポロジ構成ウィザードの **[トポロジの構成]** ページを使用して、検出を有効または無効にできます。  
   
-     
-  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]を使用して競合検出を構成すると、ディストリビューション エージェントは、競合の検出時に変更の適用を停止するように構成されます。  
+     [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]を使用して競合検出を構成すると、ディストリビューション エージェントは、競合の検出時に変更の適用を停止するように構成されます。  
   
 -   検出は、 [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) ストアド プロシージャまたは [sp_configure_peerconflictdetection](/sql/relational-databases/system-stored-procedures/sp-configure-peerconflictdetection-transact-sql)ストアド プロシージャを使用して有効または無効にすることもできます。  
   
@@ -93,7 +92,7 @@ ms.locfileid: "68198991"
   
     3.  競合表示モジュールを使用して検出された競合を確認し、関係する行、競合の種類、および優先されたデータを特定します。 競合は、構成時に指定した発信元 ID 値に基づいて解決されます。つまり、最も ID の大きいノードの行が競合で優先されます。 詳細については、「[トランザクション パブリケーションのデータの競合の表示 &#40;SQL Server Management Studio&#41;](../view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)」を参照してください。  
   
-    4.  検証を実行して、競合する行が正しく収束したことを確認します。 詳細については、「[レプリケートされたデータの検証](../validate-data-at-the-subscriber.md)」 を参照してください。  
+    4.  検証を実行して、競合する行が正しく収束したことを確認します。 詳細については、「[レプリケートされたデータの検証](../validate-data-at-the-subscriber.md)」を参照してください。  
   
         > [!NOTE]  
         >  この手順の実行後にデータに一貫性がない場合は、最も優先度の高いノードの行を手動で更新して、そのノードから変更を反映する必要があります。 競合する変更がトポロジ内になくなると、すべてのノードが一貫性のある状態になります。  

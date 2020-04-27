@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4e912ac2dd63fa63ce57647f0c4e95e6702a22ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68207074"
 ---
 # <a name="direct-execution"></a>直接実行
@@ -27,8 +27,7 @@ ms.locfileid: "68207074"
   
  直接実行は、通常、実行時にステートメントを構築して実行するアプリケーションで使用され、1 回だけステートメントを実行する場合には最も効率的な方法です。 多くのデータベースでの直接実行の欠点は、SQL ステートメントを実行するたびに解析とコンパイルが必要なことで、ステートメントを複数回実行する場合はオーバーヘッドが増加します。  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、マルチユーザー環境で通常実行されるステートメントに関して、直接実行のパフォーマンスが大幅に向上します。また、通常、SQL ステートメントの実行にパラメーター マーカーを指定して SQLExecDirect を使用すると、準備実行に近い効率を得ることができます。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、マルチユーザー環境で通常実行されるステートメントに関して、直接実行のパフォーマンスが大幅に向上します。また、通常、SQL ステートメントの実行にパラメーター マーカーを指定して SQLExecDirect を使用すると、準備実行に近い効率を得ることができます。  
   
  の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスに接続されている[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]場合、Native Client ODBC ドライバーは、 [sp_executesql](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql)を使用して、 **SQLExecDirect**で指定された SQL ステートメントまたはバッチを転送します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]には、 **sp_executesql**で実行された SQL ステートメントまたはバッチが、既にメモリに存在する実行プランを生成したステートメントまたはバッチと一致するかどうかをすばやく判断するロジックがあります。 一致する場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は新しいプランをコンパイルしないで、単に既存のプランを再利用します。 これは、多くのユーザーがいるシステムで**SQLExecDirect**を使用して実行される一般的に実行される SQL ステートメントが、以前のバージョンのの[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ストアドプロシージャでしか使用できなかった、プラン再利用の多くの利点を活用できることを意味します。  
   
@@ -38,8 +37,7 @@ ms.locfileid: "68207074"
   
 -   完全修飾オブジェクト名を使用します。 実行プランは、オブジェクト名が修飾されていないと再利用されません。  
   
--   アプリケーション接続では、できる限り、接続オプションとステートメント オプションの共通のセットを使用します。 あるオプションのセット (ANSI_NULLS など) を使用する接続に対して生成される実行プランは、別のオプションのセットを使用する接続には再利用されません。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーと [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、どちらもこれらのオプションに同じ既定値を使用します。  
+-   アプリケーション接続では、できる限り、接続オプションとステートメント オプションの共通のセットを使用します。 あるオプションのセット (ANSI_NULLS など) を使用する接続に対して生成される実行プランは、別のオプションのセットを使用する接続には再利用されません。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーと [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、どちらもこれらのオプションに同じ既定値を使用します。  
   
  **SQLExecDirect**で実行されたすべてのステートメントがこれらの[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]規則を使用してコード化されている場合、では、営業案件が発生したときに実行プランを再利用  
   

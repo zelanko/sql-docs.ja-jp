@@ -1,5 +1,5 @@
 ---
-title: カーソル ライブラリ キャッシュ |マイクロソフトドキュメント
+title: カーソルライブラリキャッシュ |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ ms.assetid: d6a91cd6-3905-4e3a-98ab-37fce893dbe1
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 5686bf0c3e261b1df947c02e2edaa419da498ecb
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81284692"
 ---
 # <a name="cursor-library-cache"></a>カーソル ライブラリのキャッシュ
 > [!IMPORTANT]  
->  この機能は、今後のバージョンの Windows で削除される予定です。 新しい開発作業でこの機能を使用することは避け、現在この機能を使用しているアプリケーションを変更する予定です。 マイクロソフトでは、ドライバーのカーソル機能を使用することをお勧めします。  
+>  この機能は、今後のバージョンの Windows では削除される予定です。 新しい開発作業ではこの機能の使用を避け、現在この機能を使用しているアプリケーションの変更を検討してください。 Microsoft では、ドライバーのカーソル機能を使用することをお勧めします。  
   
- 結果セット内のデータの各行について、カーソル ライブラリは、バインドされた各列のデータ、バインドされた各列のデータの長さ、および行の状態をキャッシュします。 カーソル ライブラリは **、SQLFetch**と**SQLFetchScroll**を介して返すと位置付け操作の検索ステートメントを構築するキャッシュ内の値を使用します。 詳細については、「[検索ステートメントの作成](../../../odbc/reference/appendixes/constructing-searched-statements.md)」を参照してください。  
+ カーソルライブラリは、結果セット内のデータ行ごとに、バインドされている各列のデータ、各バインド列のデータ長、および行の状態をキャッシュします。 カーソルライブラリでは、キャッシュ内の値を使用して**Sqlfetch**と**sqlfetchscroll**の両方を返し、位置指定操作の検索ステートメントを構築します。 詳細については、「[検索ステートメントの構築](../../../odbc/reference/appendixes/constructing-searched-statements.md)」を参照してください。  
   
  このセクションでは、次のトピックを扱います。  
   

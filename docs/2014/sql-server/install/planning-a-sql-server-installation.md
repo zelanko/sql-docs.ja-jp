@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b1baf29a88ff25eb278271719680d1979940c590
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211495"
 ---
 # <a name="planning-a-sql-server-installation"></a>SQL Server のインストール計画
@@ -26,8 +26,7 @@ ms.locfileid: "68211495"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを実行し、新しいバージョンをインストールするか、新しいバージョンへのアップグレードを行います。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を構成します。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を構成します。  
   
  どのインストール方法を使用するかにかかわらず、個人として、または組織を代表して、ソフトウェア ライセンス条項に同意するかどうかを確認する必要があります。ただし、ソフトウェアの使用に別の契約 ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ボリューム ライセンス契約、ISV や OEM とのサード パーティ契約など) が適用される場合を除きます。  
   
@@ -52,9 +51,8 @@ ms.locfileid: "68211495"
  [ネットワーク プロトコルとネットワーク ライブラリ](../../../2014/sql-server/install/network-protocols-and-network-libraries.md)  
  このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のこのリリースにおけるネットワーク プロトコルの既定の構成と、利用可能な構成オプションについて説明します。  
   
- [SQL Server の複数のバージョンおよびインスタンスの使用](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の複数のバージョンおよびインスタンスのインストールに関する考慮事項について説明します。  
+ [SQL Server の複数のバージョンおよびインスタンスの操作](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の複数のバージョンおよびインスタンスのインストールに関する考慮事項について説明します。  
   
  [SQL Server のローカル言語版](../../../2014/sql-server/install/local-language-versions-in-sql-server.md)  
  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のローカライズ版について説明します。  
@@ -64,8 +62,7 @@ ms.locfileid: "68211495"
  このセクションでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の各種インストール オプションについて概説します。  
   
  [SQL Server 2014 の BI 機能のインストール](install-sql-server-business-intelligence-features.md)  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップのドキュメントのこのセクションでは、Microsoft BI プラットフォームの一部である [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能のインストール方法について説明します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップのドキュメントのこのセクションでは、Microsoft BI プラットフォームの一部である [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能のインストール方法について説明します。  
   
  [SQL Server 2014 へのアップグレード](../../database-engine/install-windows/upgrade-sql-server.md)  
  このセクションでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のバージョンのインスタンスを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にアップグレードする方法について概説します。  
@@ -74,8 +71,7 @@ ms.locfileid: "68211495"
  このセクションでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の既存のインスタンスを完全にアンインストールし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を再インストールできるようにシステムを準備する方法について説明します。  
   
  [SQL Server フェールオーバー クラスターのインストール](../failover-clusters/install/sql-server-failover-cluster-installation.md)  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ ドキュメントのこのセクションでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターをインストールして構成する方法について説明します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ ドキュメントのこのセクションでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターをインストールして構成する方法について説明します。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server 2014 のクイックスタートインストール](../../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)   

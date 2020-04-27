@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2a8dfd7da9bb1ccc60d18e68ccbe4930a6edb00d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68196676"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>UNIQUE 制約と CHECK 制約
@@ -31,7 +31,7 @@ ms.locfileid: "68196676"
   
  [関連タスク](#Tasks)  
   
-##  <a name="Unique"></a> UNIQUE 制約  
+##  <a name="unique-constraints"></a><a name="Unique"></a> UNIQUE 制約  
  制約とは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] によって適用される規則です。 たとえば、UNIQUE 制約を使用して、主キーに関係しない特定の列に重複した値が入力されないようにできます。 UNIQUE 制約も PRIMARY KEY 制約も一意性を設定しますが、主キーではない列または列セットに一意性を設定する場合は、PRIMARY KEY 制約ではなく UNIQUE 制約を使用します。  
   
  PRIMARY KEY 制約とは異なり、UNIQUE 制約は NULL 値を許容できます。 ただし、UNIQUE 制約が適用される他の値と同様に、NULL 値も 1 列に 1 つしか使用できません。 UNIQUE 制約は FOREIGN KEY 制約から参照することもできます。  
@@ -40,7 +40,7 @@ ms.locfileid: "68196676"
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、UNIQUE 制約による一意性の要件を強制する UNIQUE インデックスを自動的に作成します。 このため、重複した行を挿入しようとすると、UNIQUE 制約に違反していることを示すエラー メッセージが [!INCLUDE[ssDE](../../includes/ssde-md.md)] により返され、テーブルには行が追加されません。 クラスター化インデックスが明示的に指定されていない限り、UNIQUE 制約を強制する一意の非クラスター化インデックスが既定で作成されます。  
   
-##  <a name="Check"></a> CHECK 制約  
+##  <a name="check-constraints"></a><a name="Check"></a> CHECK 制約  
  CHECK 制約は、1 つ以上の列に格納できる値を制限することによってドメインの整合性を強制します。 論理演算子に基づいて TRUE または FALSE を返す論理 (ブール) 式を使って CHECK 制約を作成できます。 たとえば、 **salary** 列の値の範囲は、$15,000 ～ $100,000 のデータのみを許容する CHECK 制約を作成することにより制限できます。 これにより、この一定の給与範囲を超える給与を入力できなくなります。 論理式は、 `salary >= 15000 AND salary <= 100000`になります。  
   
  複数の CHECK 制約を 1 つの列に適用できます。 テーブル レベルで CHECK 制約を作成すると、1 つの CHECK 制約を複数の列に適用できます。 たとえば、複数列の CHECK 制約を使用して、 **country_region** 列の値が **USA** であるいずれかの行の **state** 列に 2 文字の値が格納されているかどうかを確認できます。 これにより、1 か所で複数の条件をチェックできるようになります。  
@@ -84,7 +84,7 @@ DELETE CheckTbl WHERE col1 = 10;
   
  `DELETE` 制約では、テーブル `CHECK` に `CheckTbl` 行以上が格納されていなければならないことを指定していますが、`1` ステートメントは成功します。  
   
-##  <a name="Tasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="Tasks"></a> 関連タスク  
   
 > [!NOTE]  
 >  テーブルをレプリケーションのためにパブリッシュする場合は、Transact-SQL ステートメントの [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) または SQL Server 管理オブジェクト (SMO) を使用してスキーマを変更する必要があります。 テーブル デザイナーまたはデータベース ダイアグラム デザイナーを使用してスキーマを変更するとき、テーブルはいったん削除されてから再作成されます。 パブリッシュされたオブジェクトは削除できないので、スキーマの変更は失敗します。  

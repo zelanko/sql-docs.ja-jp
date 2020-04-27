@@ -1,5 +1,5 @@
 ---
-title: SQLGet タイプ情報 (パラドックス ドライバー) |マイクロソフトドキュメント
+title: SQLGetTypeInfo (Paradox ドライバー) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,16 +14,16 @@ ms.assetid: e65063c7-ba9e-4cf0-ac13-4bb5bd2937db
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 693441c088865be85b18106a4c769a9f3f676f13
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "81295102"
 ---
 # <a name="sqlgettypeinfo-paradox-driver"></a>SQLGetTypeInfo (Paradox ドライバー)
 > [!NOTE]  
->  このトピックでは、Paradox ドライバー固有の情報を提供します。 この関数の一般的な情報については[、ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)の該当するトピックを参照してください。  
+>  このトピックでは、Paradox ドライバー固有の情報について説明します。 この関数の一般的な情報については、「 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)」の該当するトピックを参照してください。  
   
- **SQLGetTypeInfo**によって生成されるテーブルで返される型 (TYPE_NAME) の名前は、データ ソースで最も一般的に使用される名前になります。  
+ **SQLGetTypeInfo**によって生成されるテーブルに返される型の名前 (TYPE_NAME) は、データソースで最もよく使用される名前になります。  
   
- SQL_ALL_EXCEPT_LIKEは、バイト、カウンター、倍精度、単精度、長整数型、および短いデータ型の SEARCHABLE 列に返されます。 (LIKE 機能は、ODBC 正規変換関数を使用して値を文字に変換し、比較を実行することによって実現できます。
+ SQL_ALL_EXCEPT_LIKE は、Byte、Counter、Double、Single、Long、Short の各データ型の検索可能な列に返されます。 (LIKE 機能は、ODBC 正規変換関数を使用して値を文字に変換してから、比較を実行することで実現できます)。

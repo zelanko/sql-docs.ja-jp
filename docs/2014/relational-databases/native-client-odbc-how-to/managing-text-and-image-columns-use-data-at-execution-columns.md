@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: efaf7e38ef829d5250c10902151024e09df1723c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68205619"
 ---
 # <a name="use-data-at-execution-columns-odbc"></a>実行時データ列の使用 (ODBC)
@@ -29,27 +29,22 @@ ms.locfileid: "68205619"
   
     -   4 番目のパラメーターとして、プログラム定義の列 ID を指定します。  
   
-2.  
-  [SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407) を呼び出すと、SQL_NEED_DATA が返されます。これは、実行時データ列を処理する準備ができていることを示します。  
+2.  [SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407) を呼び出すと、SQL_NEED_DATA が返されます。これは、実行時データ列を処理する準備ができていることを示します。  
   
 3.  実行時データの各列に対して次の操作を行います。  
   
-    -   
-  [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) を呼び出して、列の配列のポインターを取得します。 実行時データ列が他にもある場合は、SQL_NEED_DATA が返されます。  
+    -   [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) を呼び出して、列の配列のポインターを取得します。 実行時データ列が他にもある場合は、SQL_NEED_DATA が返されます。  
   
-    -   
-  [SQLPutData](../native-client-odbc-api/sqlputdata.md) を 1 回以上呼び出して、列データを length の長さまで送信します。  
+    -   [SQLPutData](../native-client-odbc-api/sqlputdata.md) を 1 回以上呼び出して、列データを length の長さまで送信します。  
   
-4.  
-  [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) を呼び出して、最後の実行時データ列のデータがすべて送信されたことを確認します。 SQL_NEED_DATA は返されません。  
+4.  [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) を呼び出して、最後の実行時データ列のデータがすべて送信されたことを確認します。 SQL_NEED_DATA は返されません。  
   
 ## <a name="example"></a>例  
  このサンプルでは、SQLGetData を使用して SQL_LONG 型の可変長文字データを読み取る方法を示します。 このサンプルは IA64 ではサポートされていません。  
   
  AdventureWorks と呼ばれる ODBC データ ソース (既定のデータベースは AdventureWorks サンプル データベース) が必要です  (AdventureWorks サンプルデータベースは、 [Microsoft SQL Server のサンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホームページからダウンロードできます)。このデータソースは、オペレーティングシステムによって提供される ODBC ドライバーに基づいている必要があります (ドライバー名は "SQL Server")。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
   
- このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 
-  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
+ このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
   
  1 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストを実行して、サンプルで使用するテーブルを作成します。  
   
