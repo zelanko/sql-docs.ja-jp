@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 801872affac61572553cbbd2e9648e197e16bb47
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054287"
 ---
 # <a name="add-metadata-master-data-services"></a>メタデータの追加 (マスター データ サービス)
@@ -26,8 +26,7 @@ ms.locfileid: "66054287"
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
--   
-  **[エクスプローラー]** 機能領域にアクセスする権限が必要です。  
+-   **[エクスプローラー]** 機能領域にアクセスする権限が必要です。  
   
 -   **メタデータ**モデルの場合は、追加するメタデータエンティティまたはリーフメンバーの種類に対する**追加**アクセス許可が必要です。  
   
@@ -37,11 +36,9 @@ ms.locfileid: "66054287"
   
 1.  ホームページの [**モデル**] ボックスの一覧で、**メタデータ**モデルを選択します。 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]  
   
-2.  
-  **[バージョン]** ボックスの一覧からバージョンを選択します。  
+2.  **[バージョン]** ボックスの一覧からバージョンを選択します。  
   
-3.  
-  **[エクスプローラー]** をクリックします。  
+3.  **[エクスプローラー]** をクリックします。  
   
 4.  メニューバーの [**エンティティ**] をポイントし、追加するメタデータエンティティをクリックします。  
   

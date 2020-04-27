@@ -14,22 +14,22 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f2e939e27263f52dc3a6ac607bc59cd8db6c1806
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63250711"
 ---
 # <a name="sql-server-clr-object"></a>SQL Server: CLR オブジェクト
-  **SQLServer: clr**オブジェクトには、での共通言語ランタイム (clr) の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]実行を監視するためのカウンターが用意されています。  
+  **SQLServer:CLR** オブジェクトには、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] での CLR (共通言語ランタイム) の実行を監視するためのカウンターが用意されています。  
   
- 次の表は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **CLR** カウンターを示します。  
+ 次の表では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **CLR** カウンターについて説明します。  
   
-|CLR カウンター|[説明]|  
+|CLR カウンター|説明|  
 |------------------|-----------------|  
-|**CLR 実行**|CLR での総実行時間 (ミリ秒)|  
+|**CLR Execution**|CLR での総実行時間 (ミリ秒)|  
   
 ## <a name="see-also"></a>参照  
- [リソース使用状況の監視 &#40;システムモニタ&#41;](monitor-resource-usage-system-monitor.md)  
+ [リソースの利用状況の監視 &#40;システム モニター&#41;](monitor-resource-usage-system-monitor.md)  
   
   

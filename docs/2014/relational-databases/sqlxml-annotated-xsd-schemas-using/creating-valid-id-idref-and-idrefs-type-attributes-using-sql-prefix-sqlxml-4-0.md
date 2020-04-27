@@ -23,10 +23,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 48ae7034ec0c133c1140e4c581794302ca8bad77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013921"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>sql:prefix を使用した、有効な ID 型、IDREF 型、IDREFS 型の属性の作成 (SQLXML 4.0)
@@ -46,10 +46,9 @@ ms.locfileid: "66013921"
   
  XML ドキュメントに複数の Id が含まれて`sql:prefix`いる場合は、注釈を使用して、値が一意であることを確認します。  
   
- 
-  `sql:prefix` 注釈は、XSD 固定属性では使用できないことに注意してください。  
+ `sql:prefix` 注釈は、XSD 固定属性では使用できないことに注意してください。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、「 [SQLXML の例を実行するための要件](../sqlxml/requirements-for-running-sqlxml-examples.md)」を参照してください。  
   
 ### <a name="a-specifying-id-and-idrefs-types"></a>A. ID 型と IDREFS 型を指定する  

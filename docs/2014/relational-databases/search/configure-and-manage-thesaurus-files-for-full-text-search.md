@@ -15,19 +15,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e52399dc77fce220bf33939b7c7921e32cd2438c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011476"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>フルテキスト検索に使用する類義語辞典ファイルの構成と管理
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ではフルテキスト クエリで類義語辞典を使用し、指定した用語のシノニムを検索できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *類義語辞典* では、特定の言語の一連のシノニムを定義します。 システム管理者は、拡張セットと置換セットという 2 つの形式のシノニムを定義できます。 フルテキスト データに合わせた類義語辞典を作成すると、そのデータのフルテキスト クエリのスコープを効果的に拡張できます。 類義語辞典の照合は、FORMSOF THESAURUS 句を指定する [CONTAINS](/sql/t-sql/queries/freetext-transact-sql) クエリと [CONTAINSTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) クエリの場合、およびすべての [FREETEXT](/sql/t-sql/queries/contains-transact-sql) クエリと [FREETEXTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) クエリの場合に行われます。  
   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ではフルテキスト クエリで類義語辞典を使用し、指定した用語のシノニムを検索できます。 
-  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *類義語辞典* では、特定の言語の一連のシノニムを定義します。 システム管理者は、拡張セットと置換セットという 2 つの形式のシノニムを定義できます。 フルテキスト データに合わせた類義語辞典を作成すると、そのデータのフルテキスト クエリのスコープを効果的に拡張できます。 類義語辞典の照合は、FORMSOF THESAURUS 句を指定する [CONTAINS](/sql/t-sql/queries/freetext-transact-sql) クエリと [CONTAINSTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) クエリの場合、およびすべての [FREETEXT](/sql/t-sql/queries/contains-transact-sql) クエリと [FREETEXTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) クエリの場合に行われます。  
-  
-##  <a name="tasks"></a>類義語辞典ファイルを設定するための基本的なタスク  
+##  <a name="basic-tasks-for-setting-up-a-thesaurus-file"></a><a name="tasks"></a>類義語辞典ファイルを設定するための基本的なタスク  
  サーバー インスタンス上のフルテキスト検索クエリで特定の言語のシノニムを検索するには、その言語の類義語辞典のマッピング (シノニム) を定義しておく必要があります。 各類義語辞典は、次の内容を定義するために手動で構成する必要があります。  
   
 -   分音文字の設定  
@@ -45,12 +42,10 @@ ms.locfileid: "66011476"
      置換セットには、代替セットによって置き換えられるテキストのパターンが格納されます。 このトピックの後半で説明する「置換セットの XML 構造」の例をご覧ください。  
   
   
-##  <a name="initial_thesaurus_files"></a>類義語辞典ファイルの初期コンテンツ  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には XML 類義語辞典ファイルのセットが用意されており、サポートされている各言語に対して 1 つのファイルが存在します。 これらのファイルは基本的に空です。 すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 類義語辞典およびコメント アウトされたサンプル類義語辞典に共通する最上位の XML 構造のみが格納されています。  
+##  <a name="initial-content-of-the-thesaurus-files"></a><a name="initial_thesaurus_files"></a>類義語辞典ファイルの初期コンテンツ  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には XML 類義語辞典ファイルのセットが用意されており、サポートされている各言語に対して 1 つのファイルが存在します。 これらのファイルは基本的に空です。 すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 類義語辞典およびコメント アウトされたサンプル類義語辞典に共通する最上位の XML 構造のみが格納されています。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でリリースされている類義語辞典ファイルには、すべて次の XML コードが含まれています。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でリリースされている類義語辞典ファイルには、すべて次の XML コードが含まれています。  
   
 ```  
 <XML ID="Microsoft Search Thesaurus">  
@@ -79,7 +74,7 @@ ms.locfileid: "66011476"
 ```  
   
   
-##  <a name="location"></a>類義語辞典ファイルの場所  
+##  <a name="location-of-the-thesaurus-files"></a><a name="location"></a>類義語辞典ファイルの場所  
  類義語辞典ファイルの既定の場所は次のとおりです。  
   
  *<SQL_Server_data_files_path>* \MSSQL12.MSSQLSERVER\MSSQL\FTDATA\  
@@ -107,21 +102,21 @@ ms.locfileid: "66011476"
  グローバル類義語辞典ファイルは、LCID 0 のニュートラル言語に対応します。 この値は、管理者のみが変更できます。  
   
   
-##  <a name="how_queries_use_tf"></a>クエリで類義語辞典ファイルを使用する方法  
+##  <a name="how-queries-use-thesaurus-files"></a><a name="how_queries_use_tf"></a>クエリで類義語辞典ファイルを使用する方法  
  類義語辞典クエリでは、言語固有の類義語辞典とグローバル類義語辞典の両方が使用されます。 まず、言語固有のファイルが参照されて処理のために読み込まれ (まだ読み込まれていない場合)、 類義語辞典ファイル内の拡張セットおよび置換セットのルールで指定された言語固有のシノニムを含むようにクエリが拡張されます。 この手順がグローバル類義語辞典に対して繰り返されます。 ただし、言語固有の類義語辞典ファイルで既に一致するものが見つかった用語は、グローバル類義語辞典では照合されません。  
   
   
-##  <a name="structure"></a>類義語辞典ファイルの構造について  
+##  <a name="understanding-the-structure-of-a-thesaurus-file"></a><a name="structure"></a>類義語辞典ファイルの構造について  
  各類義語辞典ファイルでは、ID が `Microsoft Search Thesaurus` の XML コンテナー、およびサンプル類義語辞典を含むコメント `<!--`...`-->` が定義されます。 類義語辞典は、次の\<ように、分音文字の設定、拡張セット、および置換セットを定義する子要素のサンプルを含む類義語辞典> 要素で定義されます。  
   
 -   分音文字の設定の XML 構造  
   
      類義語辞典の分音文字の設定は、単一の <diacritics_sensitive> 要素で指定されます。 この要素には、次のようにアクセントの区別を制御する整数値が含まれます。  
   
-    |分音文字の設定|Value|XML|  
+    |分音文字の設定|[値]|XML|  
     |------------------------|-----------|---------|  
     |アクセントを区別しない|0|`<diacritics_sensitive>0</diacritics_sensitive>`|  
-    |アクセントを区別する|1 で保護されたプロセスとして起動されました|`<diacritics_sensitive>1</diacritics_sensitive>`|  
+    |アクセントを区別する|1|`<diacritics_sensitive>1</diacritics_sensitive>`|  
   
     > [!NOTE]  
     >  この設定はファイルで 1 回のみ適用でき、ファイル内のすべての検索パターンに適用されます。 この設定は個別のパターンには指定できません。  
@@ -167,7 +162,7 @@ ms.locfileid: "66011476"
     </replacement>  
     ```  
   
-     および  
+     and  
   
     ```  
     <replacement>  
@@ -178,21 +173,21 @@ ms.locfileid: "66011476"
     ```  
   
   
-##  <a name="working_with_thesaurus_files"></a>類義語辞典ファイルの操作  
+##  <a name="working-with-thesaurus-files"></a><a name="working_with_thesaurus_files"></a>類義語辞典ファイルの操作  
  **類義語辞典ファイルを編集するには**  
   
 -   [類義語辞典ファイルの編集](#editing)  
   
  **更新された類義語辞典ファイルを読み込むには**  
   
--   [sp_fulltext_load_thesaurus_file &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql)  
+-   [sp_fulltext_load_thesaurus_file &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql)  
   
  **ワード ブレーカー、類語辞典、およびストップリストの組み合わせによるトークン化の結果を表示するには**  
   
 -   [dm_fts_parser &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql)  
   
   
-##  <a name="editing"></a>類義語辞典ファイルの編集  
+##  <a name="editing-a-thesaurus-file"></a><a name="editing"></a>類義語辞典ファイルの編集  
  特定の言語の類義語辞典は、類義語辞典ファイル (XML ファイル) を編集することによって構成できます。 セットアップ中に、 \<xml> コンテナーとコメントアウトされたサンプル\<の類義語辞典> 要素のみを含む空の類義語辞典ファイルがインストールされます。 シノニムが正常に機能するかどうかを確認するフルテキスト検索クエリを実行するには\<、一連のシノニムを定義する実際の類義語辞典> 要素を作成する必要があります。 シノニムの定義には、拡張セットと置換セットという 2 つの形式があります。  
   
  **類義語辞典ファイルの制限**  
@@ -228,7 +223,7 @@ ms.locfileid: "66011476"
   
 3.  置換セットまたは拡張セットを追加、変更、または削除します。  
   
-4.  このファイルを保存して、メモ帳を閉じます。  
+4.  ファイルを保存し、メモ帳を閉じます。  
   
 5.  類義語辞典ファイルの内容を tempdb に読み込むために [sp_fulltext_load_thesaurus_file](/sql/relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql) を使用し、類義語辞典ファイルの言語に対応するロケール識別子 (LCID) を指定します。 たとえば、英語の類義語辞典ファイル tsenu.xml の場合、対応する LCID は 1033 です。  
   
@@ -241,9 +236,9 @@ ms.locfileid: "66011476"
   
 ## <a name="see-also"></a>参照  
  [Transact-sql&#41;を含む &#40;](/sql/t-sql/queries/contains-transact-sql)   
- [CONTAINSTABLE &#40;Transact-sql&#41;](/sql/relational-databases/system-functions/containstable-transact-sql)   
- [FREETEXT &#40;Transact-sql&#41;](/sql/t-sql/queries/freetext-transact-sql)   
- [FREETEXTTABLE &#40;Transact-sql&#41;](/sql/relational-databases/system-functions/freetexttable-transact-sql)   
+ [CONTAINSTABLE &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/containstable-transact-sql)   
+ [FREETEXT &#40;Transact-SQL&#41;](/sql/t-sql/queries/freetext-transact-sql)   
+ [FREETEXTTABLE &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/freetexttable-transact-sql)   
  [フルテキスト検索](full-text-search.md)  
   
   

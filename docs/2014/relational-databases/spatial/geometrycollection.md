@@ -13,22 +13,19 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 5aceabe5a263cfa53572be6f818ddc905f9742a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014228"
 ---
 # <a name="geometrycollection"></a>GeometryCollection
-  
-  `GeometryCollection` は、0 個以上の `geometry` インスタンスまたは `geography` インスタンスのコレクションです。 
-  `GeometryCollection` は空にできます。  
+  `GeometryCollection` は、0 個以上の `geometry` インスタンスまたは `geography` インスタンスのコレクションです。 `GeometryCollection` は空にできます。  
   
 ## <a name="geometrycollection-instances"></a>GeometryCollection インスタンス  
   
 ### <a name="accepted-instances"></a>許容されるインスタンス  
- 
-  `GeometryCollection` インスタンスが許容されるためには、空の `GeometryCollection` インスタンスであるか、`GeometryCollection` インスタンスを構成するすべてのインスタンスが許容されるインスタンスである必要があります。 次の例に、許容されるインスタンスを示します。  
+ `GeometryCollection` インスタンスが許容されるためには、空の `GeometryCollection` インスタンスであるか、`GeometryCollection` インスタンスを構成するすべてのインスタンスが許容されるインスタンスである必要があります。 次の例に、許容されるインスタンスを示します。  
   
 ```  
 DECLARE @g1 geometry = 'GEOMETRYCOLLECTION EMPTY';  
@@ -36,15 +33,14 @@ DECLARE @g2 geometry = 'GEOMETRYCOLLECTION(LINESTRING EMPTY,POLYGON((-1 -1, -1 -
 DECLARE @g3 geometry = 'GEOMETRYCOLLECTION(LINESTRING(1 1, 3 5),POLYGON((-1 -1, -1 -5, -5 -5, -5 -1, -1 -1)))';  
 ```  
   
- 次の例では、`System.FormatException` インスタンス内の `LinesString` インスタンスが許容されないため、`GeometryCollection` がスローされます。  
+ 次の例では、`LinesString` インスタンス内の `GeometryCollection` インスタンスが許容されないため、`System.FormatException` がスローされます。  
   
 ```  
 DECLARE @g geometry = 'GEOMETRYCOLLECTION(LINESTRING(1 1), POLYGON((-1 -1, -1 -5, -5 -5, -5 -1, -1 -1)))';  
 ```  
   
 ### <a name="valid-instances"></a>有効なインスタンス  
- 
-  `GeometryCollection` インスタンスを構成するすべてのインスタンスが有効である場合、`GeometryCollection` インスタンスは有効です。 次の例に、3 つの有効な `GeometryCollection` インスタンスと 1 つの無効な インスタンスを示します。  
+ `GeometryCollection` インスタンスを構成するすべてのインスタンスが有効である場合、`GeometryCollection` インスタンスは有効です。 次の例に、3 つの有効な `GeometryCollection` インスタンスと 1 つの無効な インスタンスを示します。  
   
 ```  
 DECLARE @g1 geometry = 'GEOMETRYCOLLECTION EMPTY';  
@@ -54,8 +50,7 @@ DECLARE @g4 geometry = 'GEOMETRYCOLLECTION(LINESTRING(1 1, 3 5),POLYGON((-1 -1, 
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();  
 ```  
   
- 
-  `@g4` は、`Polygon` 内の `GeometryCollection` インスタンスが有効ではないため、有効ではありません。  
+ `@g4` は、`Polygon` 内の `GeometryCollection` インスタンスが有効ではないため、有効ではありません。  
   
  受け取られる有効なインスタンスについては、 [Point](point.md)、 [MultiPoint](multipoint.md)、 [LineString](linestring.md)、 [MultiLineString](multilinestring.md)、 [Polygon](polygon.md)、 [MultiPolygon](multipolygon.md)を参照してください。  
   

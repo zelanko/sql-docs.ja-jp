@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a9957625e09bde8bb733eca6e564dfdcfbb0bd98
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65484737"
 ---
 # <a name="task-2-testing-and-publishing-the-matching-policy"></a>タスク 2: 照合ポリシーをテストおよびパブリッシュする
@@ -49,7 +49,7 @@ ms.locfileid: "65484737"
   
 7.  [SQL Server Data Quality Services] ダイアログボックスで [**発行**] をクリックし、メッセージボックスの [ **OK** ] をクリックします。 これで、定義した照合ポリシーが**サプライヤー**ナレッジベースに発行されます。 このナレッジ ベースを使用して、入力ファイルに対して照合プロセスを実行し、重複を特定および削除できます。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
  [タスク 3: 照合するデータ品質プロジェクトを作成および実行する](../../2014/tutorials/task-3-creating-and-running-a-data-quality-project-for-matching.md)  
   
   

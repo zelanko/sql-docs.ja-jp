@@ -21,17 +21,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5999a7f3a952cd0392136a96bf3bf166c8e6b155
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011902"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>一括インポート中の NULL の保持または既定値の使用 (SQL Server)
-  既定では、データをテーブルにインポートするとき、 **bcp** コマンドと BULK INSERT ステートメントによって、テーブルの列に対して定義されているすべての既定値が監視されます。 たとえば、データ ファイルに NULL フィールドがある場合は、NULL 値の代わりにその列の既定値が読み込まれます。 
-  **bcp** コマンドと BULK INSERT ステートメントの両方で、NULL 値を保持することを指定することもできます。  
+  既定では、データをテーブルにインポートするとき、 **bcp** コマンドと BULK INSERT ステートメントによって、テーブルの列に対して定義されているすべての既定値が監視されます。 たとえば、データ ファイルに NULL フィールドがある場合は、NULL 値の代わりにその列の既定値が読み込まれます。 **bcp** コマンドと BULK INSERT ステートメントの両方で、NULL 値を保持することを指定することもできます。  
   
- これに対し、通常の INSERT ステートメントでは、既定値が挿入されるのではなく、NULL 値が保持されます。 INSERT ...SELECT * FROM OPENROWSET(BULK...) ステートメントでは、通常の INSERT と同じ基本的な動作に加えて、既定値を挿入するための テーブル ヒント がサポートされます。  
+ これに対し、通常の INSERT ステートメントでは、既定値が挿入されるのではなく、NULL 値が保持されます。 INSERT ...SELECT * FROM OPENROWSET(BULK...) ステートメントでは、通常の INSERT と同じ基本的な動作に加えて、既定値を挿入するためのテーブル ヒントがサポートされます。  
   
 > [!NOTE]  
 >  テーブル列をスキップするサンプル フォーマット ファイルについては、「[フォーマット ファイルを使用したテーブル列のスキップ &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)」を参照してください。  
@@ -67,8 +66,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
  フォーマット ファイルの作成方法の詳細については、「 [フォーマット ファイルの作成 &#40;SQL Server&#41;](create-a-format-file-sql-server.md)を使用します。  
   
 ### <a name="sample-data-file"></a>サンプル データ ファイル  
- この例では、2 番目のフィールドに値を含まないサンプル データ ファイル `MyTestEmptyField2-c.Dat`を使用します。 
-  `MyTestEmptyField2-c.Dat` データ ファイルには、以下のレコードが含まれています。  
+ この例では、2 番目のフィールドに値を含まないサンプル データ ファイル `MyTestEmptyField2-c.Dat`を使用します。 `MyTestEmptyField2-c.Dat` データ ファイルには、以下のレコードが含まれています。  
   
 ```  
 1,,DataField3  
@@ -81,7 +79,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
   
 |command|Qualifier|修飾子の種類|  
 |-------------|---------------|--------------------|  
-|**bcp**|`-k`|スイッチ|  
+|**bcp**|`-k`|Switch|  
 |BULK INSERT|KEEPNULLS<sup>1</sup>|引数|  
   
  <sup>1</sup> BULK INSERT の場合、既定値を使用できない場合は、null 値を許容するようにテーブル列を定義する必要があります。  
@@ -91,7 +89,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
   
  詳細については、「[bcp ユーティリティ](../../tools/bcp-utility.md)」と「[BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)」を参照してください。  
   
-### <a name="examples"></a>例  
+### <a name="examples"></a>使用例  
  以下の例では、 **bcp** または BULK INSERT を使用して一括インポートを行い、NULL 値を保持します。  
   
  2 番目のテーブル列 **Col2**には、既定値があります。 データ ファイルの対応するフィールドには、空の文字列が含まれています。 既定では、 **bcp** または BULK INSERT を使用して、このデータ ファイルから **MyTestDefaultCol2** テーブルにデータをインポートすると、 **Col2** の既定値が挿入され、以下の結果が生成されます。  
@@ -106,7 +104,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
 #### <a name="using-bcp-and-keeping-null-values"></a>bcp の使用および NULL 値の保持  
  次の例では、 **bcp** コマンドで NULL 値を保持する方法について説明します。 **Bcp**コマンドには、次のスイッチが含まれています。  
   
-|スイッチ|[説明]|  
+|Switch|説明|  
 |------------|-----------------|  
 |`-f`|コマンドでフォーマット ファイルが使用されていることを指定します。|  
 |`-k`|一括コピー操作時、空の列には、挿入される列の既定値ではなく、NULL 値が保持されます。|  
@@ -120,8 +118,7 @@ bcp AdventureWorks..MyTestDefaultCol2 in C:\MyTestEmptyField2-c.Dat -f C:\MyTest
 ```  
   
 #### <a name="using-bulk-insert-and-keeping-null-values"></a>BULK INSERT の使用および NULL 値の保持  
- 次の例では、BULK INSERT ステートメントで KEEPNULLS オプションを使用する方法について説明します。 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] クエリ エディターなどのクエリ ツールから、次のコードを実行します。  
+ 次の例では、BULK INSERT ステートメントで KEEPNULLS オプションを使用する方法について説明します。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] クエリ エディターなどのクエリ ツールから、次のコードを実行します。  
   
 ```  
 USE AdventureWorks;  
@@ -147,7 +144,7 @@ GO
 > [!NOTE]  
 >  詳細については、「transact-sql [&#41;の &#40;挿入](/sql/t-sql/statements/insert-transact-sql)」、「 [SELECT &#40;transact-sql&#41;](/sql/t-sql/queries/select-transact-sql)」、「 [OPENROWSET &#40;transact-sql&#41;](/sql/t-sql/functions/openrowset-transact-sql)」、および「[テーブルヒント &#40;transact-sql](/sql/t-sql/queries/hints-transact-sql-table)&#41;」を参照してください。  
   
-### <a name="examples"></a>例  
+### <a name="examples"></a>使用例  
  次の INSERT ... SELECT * FROM OPENROWSET(BULK...) の例では、データを一括インポートし、既定値を保持します。  
   
  この例を実行するには、 **MyTestDefaultCol2** サンプル テーブルと `MyTestEmptyField2-c.Dat` データ ファイルを作成し、 `MyTestDefaultCol2-f-c.Fmt`というフォーマット ファイルを使用する必要があります。 これらのサンプルの作成については、このトピックの前半の「サンプル テーブルとデータ ファイル」を参照してください。  
@@ -159,8 +156,7 @@ GO
 |`1`|`NULL`|`DataField3`|  
 |`2`|`NULL`|`DataField3`|  
   
- "`Default value of Col2`" ではなく既定値 "`NULL`" を挿入するには、次の例で説明するように、KEEPDEFAULTS テーブル ヒントを使用する必要があります。 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] クエリ エディターなどのクエリ ツールから、次のコードを実行します。  
+ "`Default value of Col2`" ではなく既定値 "`NULL`" を挿入するには、次の例で説明するように、KEEPDEFAULTS テーブル ヒントを使用する必要があります。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] クエリ エディターなどのクエリ ツールから、次のコードを実行します。  
   
 ```  
 USE AdventureWorks;  
@@ -175,49 +171,49 @@ GO
   
 ```  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
--   [データを一括インポートするときに Id 値を保持する &#40;SQL Server&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
+-   [データの一括インポート時の ID 値の保持 &#40;SQL Server&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
   
 -   [一括エクスポートまたは一括インポートのデータの準備 &#40;SQL Server&#41;](prepare-data-for-bulk-export-or-import-sql-server.md)  
   
- **フォーマットファイルを使用するには**  
+ **フォーマット ファイルを作成するには**  
   
--   [フォーマットファイル &#40;SQL Server を作成し&#41;](create-a-format-file-sql-server.md)  
+-   [フォーマット ファイルの作成 &#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
   
--   [フォーマットファイルを使用して SQL Server &#40;データを一括インポートする&#41;](use-a-format-file-to-bulk-import-data-sql-server.md)  
+-   [データの一括インポートでのフォーマット ファイルの使用 &#40;SQL Server&#41;](use-a-format-file-to-bulk-import-data-sql-server.md)  
   
--   [フォーマットファイルを使用して、テーブル列をデータファイルフィールド &#40;SQL Server にマップ&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
+-   [フォーマット ファイルを使用したテーブル列とデータ ファイル フィールドのマッピング &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
--   [フォーマットファイルを使用して、データフィールド &#40;SQL Server をスキップし&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md)  
+-   [フォーマット ファイルを使用したデータ フィールドのスキップ &#40;SQL Server&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md)  
   
--   [フォーマットファイルを使用してテーブル列をスキップする &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)  
+-   [フォーマット ファイルを使用したテーブル列のスキップ &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)  
   
  **一括インポートまたは一括エクスポートのデータ形式を使用するには**  
   
 -   [以前のバージョンの SQL Server からのネイティブ形式データおよび文字形式データのインポート](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
--   [文字形式を使用してデータをインポートまたはエクスポート &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
+-   [文字形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
   
--   [ネイティブ形式を使用してデータをインポートまたはエクスポート &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
+-   [ネイティブ形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
   
--   [Unicode 文字形式を使用してデータをインポートまたはエクスポート &#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
+-   [Unicode 文字形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
--   [Unicode ネイティブ形式を使用してデータをインポートまたはエクスポート &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
+-   [Unicode ネイティブ形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
- **Bcp を使用して互換性のためのデータ形式を指定するには**  
+ **bcp を使用した互換性のためのデータ形式を指定するには**  
   
--   [SQL Server &#40;のフィールドターミネータと行ターミネータを指定し&#41;](specify-field-and-row-terminators-sql-server.md)  
+-   [フィールド ターミネータと行ターミネータの指定 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
   
--   [Bcp &#40;SQL Server を使用したデータファイルのプレフィックス長の指定&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
+-   [bcp を使用したデータ ファイルのプレフィックス長の指定 &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
   
--   [Bcp &#40;SQL Server を使用して File Storage の種類を指定し&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
+-   [bcp を使用したファイル ストレージ型の指定 &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
   
 ## <a name="see-also"></a>参照  
- [Transact-sql&#41;のバックアップ &#40;](/sql/t-sql/statements/backup-transact-sql)   
- [OPENROWSET &#40;Transact-sql&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
+ [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
+ [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
  [bcp ユーティリティ](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
- [Transact-sql&#41;&#40;テーブルヒント](/sql/t-sql/queries/hints-transact-sql-table)  
+ [テーブル ヒント &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)  
   
   

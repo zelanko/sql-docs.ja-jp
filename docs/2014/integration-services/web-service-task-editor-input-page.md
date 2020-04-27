@@ -15,26 +15,25 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 63b88aa365139c4d22d7a074f2a30e64947158b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054517"
 ---
 # <a name="web-service-task-editor-input-page"></a>[Web サービス タスク エディター] ([入力] ページ)
-  
   **[Web サービス タスク エディター]** ダイアログ ボックスの **[入力]** ページを使用すると、Web サービス、Web メソッド、および Web メソッドの入力値を指定できます。 値を指定するには、[値] 列に直接文字列を入力するか、[値] 列から変数を選択します。  
   
- このタスクの詳細については、「 [Web サービス タスク](control-flow/web-service-task.md)」を参照してください。  
+ このタスクの詳細については、「 [Web Service Task](control-flow/web-service-task.md)」(Web サービス タスク) を参照してください。  
   
 ## <a name="options"></a>オプション  
- **処理**  
+ **サービス**  
  Web メソッドを実行するために使用する Web サービスを一覧から選択します。  
   
  **方法**  
  タスクで実行する Web メソッドを一覧から選択します。  
   
- **WebMethodDocumentation**  
+ **[WebMethodDocumentation]**  
  Web メソッドの説明を入力するか、参照ボタン ( **[...]** ) をクリックして **[Web メソッド ドキュメント]** ダイアログ ボックスに説明を入力します。  
   
  **名前**  

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 12050c8d2e5d440ef8f4d7f6584f6c08c210f4f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63250584"
 ---
 # <a name="replication-snapshot-agent"></a>レプリケーション スナップショット エージェント
@@ -78,59 +78,55 @@ ms.locfileid: "63250584"
  **-?**  
  使用できるすべてのパラメーターを表示します。  
   
- **-Publisher** _server_name_[**\\**_instance_name_]  
- パブリッシャーの名前です。 サーバー上の の既定のインスタンスの場合は、 server_name [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を指定します。 サーバー上のの[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]名前付きインスタンスの_server_name_**\\**_instance_name_を指定します。  
+ **-Publisher** _server_name_[ **\\** _instance_name_]  
+ パブリッシャーの名前です。 サーバー上の [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定のインスタンスの場合は、server_name を指定します。 サーバー上の _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定のインスタンスの場合は、server_name を指定します。  
   
- **-パブリケーション**_パブリケーション_  
+ **-Publication** _publication_  
  パブリケーションの名前です。 このパラメーターは、新規または再初期化されたサブスクリプションのスナップショットを常に利用できるようにパブリケーションを設定している場合にのみ有効です。  
   
  **-70Subscribers**  
  いずれかのサブスクライバーで [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 が動作している場合に、必ず使用します。  
   
- **-Bcpbatchsize** _bcp_ \_ *バッチ*\_ *サイズ*  
- 一括コピー操作によって送られる行の数です。 
-  **bcp in** 操作を実行する場合、バッチ サイズは 1 つのトランザクションとしてサーバーに送る行数です。ディストリビューション エージェントが **bcp** 実行状況メッセージをログに記録する前に、これらの行数を送る必要があります。 
-  **bcp out** 操作を実行する場合は、固定バッチ サイズ 1000 が使用されます。 値 0 は、メッセージをログに記録しないことを示します。  
+ **-BcpBatchSize** _bcp_\_ *batch*\_ *size*  
+ 一括コピー操作によって送られる行の数です。 **bcp in** 操作を実行する場合、バッチ サイズは 1 つのトランザクションとしてサーバーに送る行数です。ディストリビューション エージェントが **bcp** 実行状況メッセージをログに記録する前に、これらの行数を送る必要があります。 **bcp out** 操作を実行する場合は、固定バッチ サイズ 1000 が使用されます。 値 0 は、メッセージをログに記録しないことを示します。  
   
- **-Definitionfile** _def_path_and_file_name_  
+ **-DefinitionFile** _def_path_and_file_name_  
  エージェント定義ファイルのパスです。 エージェント定義ファイルには、エージェントのコマンド ライン引数が含まれます。 ファイルの内容は実行可能ファイルとして解析されます。 二重引用符 (") を使用して、任意の文字を含む引数値を指定します。  
   
- **-ディストリビューター** _server_name_[**\\**_instance_name_]  
- ディストリビューターの名前です。 サーバー上の *の既定のインスタンスの場合は、* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を指定します。 サーバー上のの[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]名前付きインスタンスの_server_name_**\\**_instance_name_を指定します。  
+ **-Distributor** _server_name_[ **\\** _instance_name_]  
+ ディストリビューターの名前です。 サーバー上の *server_name* の既定のインスタンスの場合は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を指定します。 サーバー上の _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定のインスタンスの場合は、server_name を指定します。  
   
- **-Distributordeadlockpriority の**[**-1**|**0**|**1**]  
+ **-DistributorDeadlockPriority** [ **-1**|**0**|**1**]  
  デッドロックが発生した場合のディストリビューターへのスナップショット エージェント接続の優先度です。 このパラメーターは、スナップショットの生成中にスナップショット エージェントとユーザー アプリケーション間で発生する可能性のあるデッドロックを解決するために指定します。  
   
-|DistributorDeadlockPriority の値|[説明]|  
+|DistributorDeadlockPriority の値|説明|  
 |---------------------------------------|-----------------|  
 |**-1**|ディストリビューター側でデッドロックが発生した場合、スナップショット エージェント以外のアプリケーションが優先されます。|  
 |**0** (既定値)|優先度は割り当てられません。|  
 |**1**|ディストリビューター側でデッドロックが発生した場合、スナップショット エージェントが優先されます。|  
   
  **-DistributorLogin** _distributor_login_  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用してディストリビューターに接続するときに使用されるログインです。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用してディストリビューターに接続するときに使用されるログインです。  
   
  **-DistributorPassword** _distributor_password_  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用してディストリビューターに接続するときに使用されるパスワードです。 .  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用してディストリビューターに接続するときに使用されるパスワードです。 。  
   
  **-DistributorSecurityMode** [ **0**| **1**]  
- ディストリビューターのセキュリティ モードを指定します。 値**0**は認証モード[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (既定値) を示し、値**1**は Windows 認証モードを示します。  
+ ディストリビューターのセキュリティ モードを指定します。 値 **0** は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証モード (既定値) を示し、値 **1** は Windows 認証モードを示します。  
   
- **-Dynamicfilterhostname** _dynamic_filter_host_name_  
+ **-DynamicFilterHostName** _dynamic_filter_host_name_  
  動的スナップショットの作成時に、フィルター選択用の [HOST_NAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/host-name-transact-sql) の値を設定するために使用されます。 たとえば、アーティクルに対してサブセット フィルター句 `rep_id = HOST_NAME()` を指定し、 **DynamicFilterHostName** プロパティを "FBJones" に設定した後でマージ エージェントを呼び出すと、 **rep_id** 列に "FBJones" が含まれる行だけがレプリケートされます。  
   
- **-Dynamicfilterlogin** _dynamic_filter_login_  
+ **-DynamicFilterLogin** _dynamic_filter_login_  
  動的スナップショットの作成時に、フィルター選択用の [SUSER_SNAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/suser-sname-transact-sql) の値を設定するために使用されます。 たとえば、アーティクルに対してサブセット フィルター句 `user_id = SUSER_SNAME()` を指定し、 **DynamicFilterLogin** プロパティを "rsmith" に設定した後で、 **SQLSnapshot** オブジェクトの **Run** メソッドを呼び出すと、 **user_id** 列に "rsmith" を含む行だけがスナップショットに含められます。  
   
- **-Dynamicsnapshotlocation** _dynamic_snapshot_location_  
+ **-DynamicSnapshotLocation** _dynamic_snapshot_location_  
  動的スナップショットの生成先の場所です。  
   
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  スナップショット エージェントが接続時に使用する SSL (Secure Sockets Layer) 暗号化レベルです。  
   
-|EncryptionLevel の値|[説明]|  
+|EncryptionLevel の値|説明|  
 |---------------------------|-----------------|  
 |**0**|SSL は使用されません。|  
 |**1**|SSL は使用されますが、信頼できる発行者によって SSL サーバー証明が署名されているかどうかを検証しません。|  
@@ -141,140 +137,128 @@ ms.locfileid: "63250584"
   
  詳細については、「 [SQL Server レプリケーションセキュリティ](../security/view-and-modify-replication-security-settings.md)」を参照してください。  
   
- **-Fielddelimiter** _field_delimiter_  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 一括コピーで扱うデータ ファイルのフィールドの末尾を示す 1 文字または文字列です。 既定値は \n\<x$3>\n です。  
+ **-FieldDelimiter** _field_delimiter_  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 一括コピーで扱うデータ ファイルのフィールドの末尾を示す 1 文字または文字列です。 既定値は \n\<x$3>\n です。  
   
  **-HistoryVerboseLevel** [ **1**| **2**| **3**]  
- スナップショット操作中にログに記録する履歴の量を指定します。 
-  **1**を選択すれば、ログへの履歴の記録がパフォーマンスに与える影響を最小限に抑えることができます。  
+ スナップショット操作中にログに記録する履歴の量を指定します。 **1**を選択すれば、ログへの履歴の記録がパフォーマンスに与える影響を最小限に抑えることができます。  
   
-|HistoryVerboseLevel の値|[説明]|  
+|HistoryVerboseLevel の値|説明|  
 |-------------------------------|-----------------|  
 |**0**|進行状況メッセージがコンソールまたは出力ファイルに書き込まれます。 履歴レコードは、ディストリビューション データベースのログに記録されません。|  
 |**1**|同じ状態 (startup、progress、success など) を示している以前の履歴メッセージを常に更新します。 前回の記録に同じ状態がない場合は、新しい記録を挿入します。|  
 |**2** (既定値)|アイドル状態や長時間実行を示すメッセージでない場合、新しい履歴レコードを挿入します。アイドル状態などを示すメッセージの場合には、以前のレコードを更新します。|  
-|**番**|アイドル状態を示すメッセージの場合以外は、常に新しいレコードを挿入します。|  
+|**3**|アイドル状態を示すメッセージの場合以外は、常に新しいレコードを挿入します。|  
   
- **-Hrbcpblocks** _number_of_blocks_  
- ライター スレッドとリーダー スレッド間でキューに格納される **bcp** データ ブロックの数です。 既定値は 50 です。 **Hrbcpblocks**は、Oracle パブリケーションでのみ使用されます。  
+ **-HRBcpBlocks** _number_of_blocks_  
+ ライター スレッドとリーダー スレッド間でキューに格納される **bcp** データ ブロックの数です。 既定値は 50 です。 **HRBcpBlocks** は、Oracle パブリケーションでのみ使用されます。  
   
 > [!NOTE]  
 >  このパラメーターは、Oracle パブリッシャーから **bcp** パフォーマンスのチューニングを行う場合に使用されます。  
   
  -**Hrbcpblocksize**_block_size_  
- 各 **bcp** データ ブロックのサイズ (KB) です。 既定値は 64 KB です。 **Hrbcpblocks**は、Oracle パブリケーションでのみ使用されます。  
+ 各 **bcp** データ ブロックのサイズ (KB) です。 既定値は 64 KB です。 **HRBcpBlocks** は、Oracle パブリケーションでのみ使用されます。  
   
 > [!NOTE]  
 >  このパラメーターは、Oracle パブリッシャーから **bcp** パフォーマンスのチューニングを行う場合に使用されます。  
   
  **-HRBcpDynamicBlocks**  
- 各 **bcp** データ ブロックのサイズが動的に拡張可能かどうかを示します。 **Hrbcpblocks**は、Oracle パブリケーションでのみ使用されます。  
+ 各 **bcp** データ ブロックのサイズが動的に拡張可能かどうかを示します。 **HRBcpBlocks** は、Oracle パブリケーションでのみ使用されます。  
   
 > [!NOTE]  
 >  このパラメーターは、Oracle パブリッシャーから **bcp** パフォーマンスのチューニングを行う場合に使用されます。  
   
- **-Keepの vemessageinterval** _keep_alive_interval_  
- 
-  [MSsnapshot_history](/sql/relational-databases/system-tables/mssnapshot-history-transact-sql) テーブルに "waiting for backend message" が記録されるまでのスナップショット エージェントの待機時間 (秒) です。 既定値は 300 秒です。  
+ **-KeepAliveMessageInterval** _keep_alive_interval_  
+ [MSsnapshot_history](/sql/relational-databases/system-tables/mssnapshot-history-transact-sql) テーブルに "waiting for backend message" が記録されるまでのスナップショット エージェントの待機時間 (秒) です。 既定値は 300 秒です。  
   
- **-Logintimeout** _login_time_out_seconds_  
- ログインがタイムアウトするまでの秒数です。既定値は**15**秒です。  
+ **-LoginTimeOut** _login_time_out_seconds_  
+ ログインがタイムアウトになるまでの秒数です。既定値は **15** 秒です。  
   
  **-MaxBcpThreads** _number_of_threads_  
- 並列実行できる一括コピーの操作数を指定します。 同時に存在するスレッドと ODBC 接続の最大数は、 **MaxBcpThreads** の値と、ディストリビューション データベースの同期トランザクションに示されている一括コピー要求の数の小さい方の値になります。 **MaxBcpThreads**の値は**0**より大きく、ハードコーディングされた上限はありません。 既定値は**1**です。  
+ 並列実行できる一括コピーの操作数を指定します。 同時に存在するスレッドと ODBC 接続の最大数は、 **MaxBcpThreads** の値と、ディストリビューション データベースの同期トランザクションに示されている一括コピー要求の数の小さい方の値になります。 **MaxBcpThreads** は **0** よりも大きくする必要があり、上限はありません。 既定値は **1**です。  
   
- \-**Maxnetworkoptimization** [ **0**| **1**]  
- 無関係な削除がサブスクライバーに送られたかどうかを示します。 無関係な削除とは、サブスクライバーのパーティションに属さない行に対する DELETE コマンドがサブスクライバーに送られたことを表します。 無関係な削除はデータの整合性や収束には影響しませんが、不要なネットワーク トラフィックを生じます。 
-  **MaxNetworkOptimization** の既定値は **0**です。 
-  **MaxNetworkOptimization** を **1** に設定すると、無関係な削除が発生する可能性が最小限に抑えられ、ネットワーク トラフィックが減少し、最もネットワークが最適化されます。 ただし、このパラメーターを **1** に設定するとメタデータの保存領域が増加するため、複数レベルの結合フィルターと複雑なサブセット フィルターが存在する場合、パブリッシャーのパフォーマンスが低下します。 レプリケーション トポロジを慎重に評価する必要があります。無関係な削除によるネットワーク トラフィックが容認できないほど大きい場合に限り、 **MaxNetworkOptimization** を **1** に設定してください。  
+ \- **MaxNetworkOptimization** [ **0**| **1**]  
+ 無関係な削除がサブスクライバーに送られたかどうかを示します。 無関係な削除とは、サブスクライバーのパーティションに属さない行に対する DELETE コマンドがサブスクライバーに送られたことを表します。 無関係な削除はデータの整合性や収束には影響しませんが、不要なネットワーク トラフィックを生じます。 **MaxNetworkOptimization** の既定値は **0**です。 **MaxNetworkOptimization** を **1** に設定すると、無関係な削除が発生する可能性が最小限に抑えられ、ネットワーク トラフィックが減少し、最もネットワークが最適化されます。 ただし、このパラメーターを **1** に設定するとメタデータの保存領域が増加するため、複数レベルの結合フィルターと複雑なサブセット フィルターが存在する場合、パブリッシャーのパフォーマンスが低下します。 レプリケーション トポロジを慎重に評価する必要があります。無関係な削除によるネットワーク トラフィックが容認できないほど大きい場合に限り、 **MaxNetworkOptimization** を **1** に設定してください。  
   
 > [!NOTE]
 >  このパラメーターを**1**に設定すると、マージパブリケーションの同期最適化オプションが**true**に設定されている**@keep_partition_changes**場合にのみ役立ちます ( [sp_addmergepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)のパラメーター)。  
   
- **-出力** _output_path_and_file_name_  
+ **-Output** _output_path_and_file_name_  
  エージェントの出力ファイルのパスです。 ファイル名が指定されていない場合、出力はコンソールに送られます。 指定された名前のファイルが存在する場合、出力はそのファイルに追加されます。  
   
  **-OutputVerboseLevel** [ **0**| **1**| **2**]  
  出力を詳細表示にするかどうかを指定します。  
   
-|OutputVerboseLevel の値|[説明]|  
+|OutputVerboseLevel の値|説明|  
 |------------------------------|-----------------|  
 |**0**|エラー メッセージのみが記録されます。|  
 |**1** (既定値)|すべての進行状況レポート メッセージが出力されます (既定)。|  
 |**2**|すべてのエラー メッセージと進行状況レポート メッセージが出力されます。これはデバッグの際に役立ちます。|  
 
- **-Prefetchtables** [ **0**| **1**]  
+ **-PrefetchTables** [ **0**| **1**]  
  テーブル オブジェクトがプリフェッチされてキャッシュされるかどうかを指定する、省略可能なパラメーターです。  既定の動作では、内部の計算に基づき SMO コンポーネントを使用して特定のテーブルのプロパティがプリフェッチされます。  このパラメーターは、SMO のプリフェッチ操作の実行にかなりの時間がかかるシナリオで役立つ場合があります。 このパラメーターを使用しない場合は、パブリケーションにアーティクルとして追加されるテーブルの割合に基づいて、実行時にこの決定が行われます。  
   
-|OutputVerboseLevel の値|[説明]|  
+|OutputVerboseLevel の値|説明|  
 |------------------------------|-----------------|  
 |**0**|SMO コンポーネントのプリフェッチ メソッドの呼び出しは無効です。|  
 |**1**|スナップショット エージェントはプリフェッチ メソッドを呼び出し、SMO を使用していくつかのテーブルのプロパティをキャッシュします|  
   
  **-PacketSize** _packet_size_  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]への接続中にスナップショット エージェントが使用するパケット サイズ (バイト) です。 既定値は 8,192 バイトです。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]への接続中にスナップショット エージェントが使用するパケット サイズ (バイト) です。 既定値は 8,192 バイトです。  
   
 > [!NOTE]  
 >  パフォーマンスの向上が明確でない限り、パケット サイズは変更しないでください。 多くのアプリケーションでは、既定のパケット サイズが最適です。  
   
  **-ProfileName** _profile_name_  
- エージェント パラメーターに使用するエージェント プロファイルを指定します。 
-  **ProfileName** が NULL の場合、このエージェント プロファイルは無効になります。 
-  **ProfileName** を指定しない場合、エージェントの種類に応じた既定のプロファイルが使われます。 詳細については、「[レプリケーション エージェント プロファイル](replication-agent-profiles.md)」を参照してください。  
+ エージェント パラメーターに使用するエージェント プロファイルを指定します。 **ProfileName** が NULL の場合、このエージェント プロファイルは無効になります。 **ProfileName** を指定しない場合、エージェントの種類に応じた既定のプロファイルが使われます。 詳細については、「[レプリケーション エージェント プロファイル](replication-agent-profiles.md)」を参照してください。  
   
  **-PublisherDB** _publisher_database_  
- パブリケーション データベースの名前です。 *このパラメーターは、Oracle パブリッシャーではサポートされていません*。  
+ パブリケーション データベースの名前です。 *このパラメーターは、Oracle パブリッシャーについてはサポートされません。*  
   
- **-Publisherdeadlockpriority の**[**-1**|**0**|**1**]  
+ **-PublisherDeadlockPriority** [ **-1**|**0**|**1**]  
  デッドロックが発生した場合のパブリッシャーへのスナップショット エージェント接続の優先度です。 このパラメーターは、スナップショットの生成中にスナップショット エージェントとユーザー アプリケーション間で発生する可能性のあるデッドロックを解決するために指定します。  
   
-|PublisherDeadlockPriority の値|[説明]|  
+|PublisherDeadlockPriority の値|説明|  
 |-------------------------------------|-----------------|  
 |**-1**|パブリッシャー側でデッドロックが発生した場合、スナップショット エージェント以外のアプリケーションが優先されます。|  
 |**0** (既定値)|優先度は割り当てられません。|  
 |**1**|パブリッシャー側でデッドロックが発生した場合、スナップショット エージェントが優先されます。|  
   
- **-PublisherFailoverPartner** _server_name_[**\\**_instance_name_]  
+ **-PublisherFailoverPartner** _server_name_[ **\\** _instance_name_]  
  パブリケーション データベースとのデータベース ミラーリング セッションに参加する、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー パートナー インスタンスを指定します。 詳細については、「 [データベース ミラーリングとレプリケーション &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)」をご覧ください。  
   
  **-PublisherLogin** _publisher_login_  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用してパブリッシャーに接続するときに使用されるログインです。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用してパブリッシャーに接続するときに使用されるログインです。  
   
  **-PublisherPassword** _publisher_password_  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用してパブリッシャーに接続するときに使用されるパスワードです。 .  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用してパブリッシャーに接続するときに使用されるパスワードです。 。  
   
  **-PublisherSecurityMode** [ **0**| **1**]  
  パブリッシャーのセキュリティ モードを指定します。 値 **0** は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証モード (既定値) を示し、値 **1** は Windows 認証モードを示します。  
   
- **-** _Query_time_out_seconds_  
- クエリがタイムアウトするまでの秒数です。既定値は1800秒です。  
+ **-QueryTimeOut** _query_time_out_seconds_  
+ クエリがタイムアウトになるまでの秒数です。既定値は 1800 秒です。  
   
- **-Replicationtype** [ **1**| **2**]  
+ **-ReplicationType** [ **1**| **2**]  
  レプリケーションの種類を指定します。 値 **1** はトランザクション レプリケーションを示し、値 **2** はマージ レプリケーションを示します。  
   
- **-Rowdelimiter** _row_delimiter_  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 一括コピーで扱うデータ ファイルの各行の末尾を示す 1 文字または文字列です。 既定値は \n\<,@g>\n です。  
+ **-RowDelimiter** _row_delimiter_  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 一括コピーで扱うデータ ファイルの各行の末尾を示す 1 文字または文字列です。 既定値は \n\<,@g>\n です。  
   
- **-Startqueuetimeout** _start_queue_timeout_seconds_  
+ **-StartQueueTimeout** _start_queue_timeout_seconds_  
  実行中の同時実行動的スナップショット処理の数が、 **@max_concurrent_dynamic_snapshots** [sp_addmergepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)のプロパティによって設定された制限値に達したときに、スナップショットエージェントが待機する最大秒数を指定します。 最大秒数に達したときにスナップショット エージェントがまだ待機している場合、スナップショット エージェントは待機を終了します。 値が 0 の場合は、このエージェントが無期限に待機することを意味しますが、取り消すこともできます。  
   
- \-**UsePerArticleContentsView** _use_per_article_contents_view_  
+ \- **UsePerArticleContentsView** _use_per_article_contents_view_  
  このパラメーターは非推奨とされます。旧バージョンとの互換性のためにサポートされています。  
   
 ## <a name="remarks"></a>解説  
   
 > [!IMPORTANT]  
->  ドメイン ユーザー アカウント (既定値) ではなくローカル システム アカウントで実行するように [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントをインストールした場合、サービスはローカル コンピューターにだけアクセスできます。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント下で実行するスナップショット エージェントで、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]へのログイン時に Windows 認証モードを使用するように構成すると、スナップショット エージェントは異常終了します。 既定の設定は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証です。  
+>  ドメイン ユーザー アカウント (既定値) ではなくローカル システム アカウントで実行するように [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントをインストールした場合、サービスはローカル コンピューターにだけアクセスできます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント下で実行するスナップショット エージェントで、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]へのログイン時に Windows 認証モードを使用するように構成すると、スナップショット エージェントは異常終了します。 既定の設定は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証です。  
   
  スナップショット エージェントを開始するには、コマンド プロンプトから **snapshot.exe** を実行します。 詳細については、「 [レプリケーション エージェント実行可能ファイルのプログラミング](../concepts/replication-agent-executables-concepts.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [レプリケーションエージェントの管理](replication-agent-administration.md)  
+ [レプリケーション エージェントの管理](replication-agent-administration.md)  
   
   

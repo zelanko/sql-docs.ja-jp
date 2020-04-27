@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c88e5ac59730eede7c252261d7509ee77de9cd6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483603"
 ---
 # <a name="create-a-model-deployment-package-by-using-the-wizard"></a>ウィザードを使用したモデルの配置パッケージの作成
@@ -27,31 +27,25 @@ ms.locfileid: "65483603"
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
--   
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションで、 **[システム管理]** 機能領域にアクセスする権限が必要です。  
+-   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションで、 **[システム管理]** 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 (マスター データ サービス)](administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](administrators-master-data-services.md)」を参照してください。  
   
 -   モデルのパッケージを作成するには、そのモデルが存在する必要があります。 詳細については、「[モデルを作成する (マスター データ サービス)](../../2014/master-data-services/create-a-model-master-data-services.md)」を参照してください。  
   
 ### <a name="to-create-a-model-deployment-package"></a>モデルの配置パッケージを作成するには  
   
-1.  
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
   
-2.  
-  **[モデル ビュー]** ページのメニュー バーから **[システム]** をポイントして **[配置]** をクリックします。  
+2.  **[モデル ビュー]** ページのメニュー バーから **[システム]** をポイントして **[配置]** をクリックします。  
   
-3.  
-  **[モデル配置ウィザード]** で **[作成]** をクリックします。  
+3.  **[モデル配置ウィザード]** で **[作成]** をクリックします。  
   
-4.  
-  **[パッケージの作成]** ページで **[モデル]** ボックスの一覧からモデルを選択します。  
+4.  **[パッケージの作成]** ページで **[モデル]** ボックスの一覧からモデルを選択します。  
   
 5.  **[次へ]** をクリックします。  
   
-6.  
-  **[ダウンロード]** をクリックします。  
+6.  **[ダウンロード]** をクリックします。  
   
 7.  ファイルを保存します。  
   
@@ -62,6 +56,6 @@ ms.locfileid: "65483603"
 -   [ウィザードを使用したモデルの配置パッケージの展開](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)  
   
 ## <a name="see-also"></a>参照  
- [モデルの配置 &#40;マスターデータサービス&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
+ [モデルの配置 (マスター データ サービス)](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
   

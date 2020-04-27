@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f6b90a36238cd4a02e86d49125ee662f07d32882
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489095"
 ---
 # <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>タスク 6: Cleanse Supplier List プロジェクトから値をインポートする
@@ -32,16 +32,16 @@ ms.locfileid: "65489095"
   
 5.  すべての電子メールが、インタラクティブなクレンジングで行った 2 つの修正と共にインポートされることに注意してください。 スクロールして 2 つの修正を確認します。  
   
-    |Value|次に修正|  
+    |[値]|次に修正|  
     |-----------|----------------|  
     |bobby0@adventure-work.com|bobby0@adventure-works.com|  
     |tad0@adventure-work.com|tad0@adventure-works.com|  
   
 6.  **Country**ドメインのプロジェクト値をインポートする前の手順を繰り返し、**米国**を修正するために新しいエントリが追加されていることを確認します (を使用して**米国**)。  
   
-    |Value|次に修正|  
+    |[値]|次に修正|  
     |-----------|----------------|  
-    |United State|米国|  
+    |United State|United States|  
   
 7.  古いドメイン値を表示するには、[**新規のみ表示**] チェックボックスをオフにします。  
   
@@ -60,11 +60,11 @@ ms.locfileid: "65489095"
   
 12. [**完了**] をクリックして活動を終了します。  
   
-13. [**発行**] をクリックします。  
+13. **[発行]** をクリックします。  
   
 14. メッセージボックスで [ **OK]** をクリックします。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
  [レッスン 3: データを照合して仕入先の一覧から重複を削除する](../../2014/tutorials/lesson-3-matching-data-to-remove-duplicates-from-supplier-list.md)  
   
   

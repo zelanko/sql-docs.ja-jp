@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 953fc5b7c203faa8fa6a9820993a3d0fd7a7de40
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014828"
 ---
 # <a name="guidelines-and-limitations-of-xml-updategrams-sqlxml-40"></a>XML アップデートグラムのガイドラインと制限 (SQLXML 4.0)
@@ -44,11 +44,9 @@ ms.locfileid: "66014828"
   
 -   アップデートグラムでは、更新中に `image` 型データをパラメーターとして引き渡すことはできません。  
   
--   やイメージのような`text/ntext`バイナリラージオブジェクト (BLOB) 型は、updategrams を使用する場合に、 ** \<の前の>** ブロックでは使用しないでください。これには、同時実行制御に使用するものが含まれます。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で、BLOB 型の比較の制限によって問題が発生する可能性があります。 たとえば、`text` データ型の列を比較するには WHERE 句で LIKE キーワードを使用しますが、データ サイズが 8 KB を超える BLOB 型の場合、この比較は失敗します。  
+-   やイメージのような`text/ntext`バイナリラージオブジェクト (BLOB) 型は、updategrams を使用する場合に、 ** \<の前の>** ブロックでは使用しないでください。これには、同時実行制御に使用するものが含まれます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で、BLOB 型の比較の制限によって問題が発生する可能性があります。 たとえば、`text` データ型の列を比較するには WHERE 句で LIKE キーワードを使用しますが、データ サイズが 8 KB を超える BLOB 型の場合、この比較は失敗します。  
   
--   
-  `ntext` データで特殊文字を使用すると、BLOB 型の比較の制限によって、SQLXML 4.0 で問題が発生する可能性があります。 たとえば、アップデートグラムの** \<before>** ブロックで "[Serializable]" を使用した場合、型の`ntext`列の同時実行制御チェックでは、次の SQLOLEDB エラーの説明で失敗します。  
+-   `ntext` データで特殊文字を使用すると、BLOB 型の比較の制限によって、SQLXML 4.0 で問題が発生する可能性があります。 たとえば、アップデートグラムの** \<before>** ブロックで "[Serializable]" を使用した場合、型の`ntext`列の同時実行制御チェックでは、次の SQLOLEDB エラーの説明で失敗します。  
   
     ```  
     Empty update, no updatable rows found   Transaction aborted  

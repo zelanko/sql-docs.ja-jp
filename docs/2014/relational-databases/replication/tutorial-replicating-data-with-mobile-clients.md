@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c36eae0ca3d9613dfdaf13bce3a5e748f91b123f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63255395"
 ---
 # <a name="tutorial-replicating-data-with-mobile-clients"></a>チュートリアル : モバイル クライアントとの間のデータのレプリケーション
@@ -25,43 +25,38 @@ ms.locfileid: "63255395"
 ## <a name="what-you-will-learn"></a>学習する内容  
  このチュートリアルでは、マージ レプリケーションを使用して中央のデータベースから 1 名以上のモバイル ユーザーにデータをパブリッシュし、各ユーザーが独自にフィルター選択されたデータ サブセットを取得するようにします。 最初のレッスンでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使ってパブリケーションを作成する方法を学習し、 後のレッスンではサブスクリプションを作成および同期する方法を学習します。  
   
-## <a name="requirements"></a>必要条件  
- このチュートリアルは、データベースの基本的な操作は理解しているが、レプリケーション機能についてはあまり詳しくないユーザーを対象としています。 このチュートリアルを開始する前に、 [「チュートリアル: レプリケーションに備えたサーバーの準備](tutorial-preparing-the-server-for-replication.md)」を完了しておく必要があります。  
+## <a name="requirements"></a>要件  
+ このチュートリアルは、データベースの基本的な操作は理解しているが、レプリケーション機能についてはあまり詳しくないユーザーを対象としています。 このチュートリアルを開始する前に、 [「チュートリアル: レプリケーションに備えたサーバーの準備」](tutorial-preparing-the-server-for-replication.md)を完了しておく必要があります。  
   
  このチュートリアルを使用するには、システムに次のコンポーネントがインストールされている必要があります。  
   
 -   パブリッシャー サーバー側 (レプリケーション元) :  
   
-    -   
-  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]の任意のエディション。ただし、Express ([!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]) と [!INCLUDE[ssEW](../../includes/ssew-md.md)]は除きます。 レプリケーションのパブリッシャーとして使用できないため除きます。  
+    -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]の任意のエディション。ただし、Express ([!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]) と [!INCLUDE[ssEW](../../includes/ssew-md.md)]は除きます。 レプリケーションのパブリッシャーとして使用できないため除きます。  
   
-    -   
-  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベース。 セキュリティ強化のため、既定ではサンプル データベースがインストールされません。  
+    -   [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベース。 セキュリティ強化のため、既定ではサンプル データベースがインストールされません。  
   
 -   サブスクライバー サーバー側 (レプリケーション先) :  
   
-    -   
-  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]の任意のエディション。ただし、 [!INCLUDE[ssEW](../../includes/ssew-md.md)]は除きます。 
-  [!INCLUDE[ssEW](../../includes/ssew-md.md)] は、このチュートリアルで作成するパブリケーションで使用できません。  
+    -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]の任意のエディション。ただし、 [!INCLUDE[ssEW](../../includes/ssew-md.md)]は除きます。 [!INCLUDE[ssEW](../../includes/ssew-md.md)] は、このチュートリアルで作成するパブリケーションで使用できません。  
   
     > [!NOTE]  
     >  既定では、レプリケーションは [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]にインストールされません。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]では、固定サーバー ロール sysadmin のメンバーとしてログインし、パブリッシャーとサブスクライバーに接続する必要があります。  
+>  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]では、固定サーバー ロール sysadmin のメンバーとしてログインし、パブリッシャーとサブスクライバーに接続する必要があります。  
   
- **このチュートリアルの推定所要時間: 30 分。**  
+ **このチュートリアルの推定所要時間:30 分。**  
   
 ## <a name="lessons-in-this-tutorial"></a>このチュートリアルで行うレッスン  
   
--   [レッスン 1: マージレプリケーションを使用したデータのパブリッシュ](lesson-1-publishing-data-using-merge-replication.md)  
+-   [レッスン 1 : マージ レプリケーションを使用したデータのパブリッシュ](lesson-1-publishing-data-using-merge-replication.md)  
   
--   [レッスン 2: マージパブリケーションへのサブスクリプションの作成](lesson-2-creating-a-subscription-to-the-merge-publication.md)  
+-   [レッスン 2 : マージ パブリケーションへのサブスクリプションの作成](lesson-2-creating-a-subscription-to-the-merge-publication.md)  
   
  [チュートリアルを開始する](merge/merge-replication.md)  
   
 ## <a name="see-also"></a>参照  
- [レプリケーションプログラミングの概念](concepts/replication-programming-concepts.md)  
+ [レプリケーションのプログラミング概念](concepts/replication-programming-concepts.md)  
   
   

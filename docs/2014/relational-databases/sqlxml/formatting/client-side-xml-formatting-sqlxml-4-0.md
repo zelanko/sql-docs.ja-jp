@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 89f1327a7672d7de5b480bf3b8757b0c85ff138f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012318"
 ---
 # <a name="client-side-xml-formatting-sqlxml-40"></a>クライアント側の XML 書式設定 (SQLXML 4.0)
@@ -52,7 +52,7 @@ FROM   Person.Contact
   
  次の表は、クライアント側の FOR XML で指定できるモードです。  
   
-|クライアント側の FOR XML のモード|解説|  
+|クライアント側の FOR XML のモード|コメント|  
 |-------------------------------|-------------|  
 |RAW|クライアント側とサーバー側のどちらの FOR XML で指定しても、同じ結果が生成されます。|  
 |NESTED|サーバー側で FOR XML AUTO モードを指定した場合と同様です。|  

@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f66896479ec06d78b94d6fe084ff806e3af67727
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63265381"
 ---
 # <a name="asserting-permissions-in-custom-assemblies"></a>カスタム アセンブリでの権限のアサート
@@ -32,8 +32,7 @@ ms.locfileid: "63265381"
   
 2.  カスタム アセンブリに必要な権限を与えるために、レポート サーバー ポリシーの構成ファイルを変更します。 セキュリティ ポリシー構成ファイルの詳細については、「[Reporting Services セキュリティ ポリシー ファイルの使用](../extensions/secure-development/using-reporting-services-security-policy-files.md)」を参照してください。  
   
-3.  セキュリティで保護された呼び出しを行うメソッドの一部として、必要な権限をアサートします。 レポート サーバーによって呼び出されるカスタム アセンブリ コードは、レポート式のホスト アセンブリの一部であり、既定では **Execution** アクセス許可で実行するため、このアサートが必要です。 
-  **Execution** アクセス許可セットでコードを実行できますが、保護されたリソースを使用することはできません。  
+3.  セキュリティで保護された呼び出しを行うメソッドの一部として、必要な権限をアサートします。 レポート サーバーによって呼び出されるカスタム アセンブリ コードは、レポート式のホスト アセンブリの一部であり、既定では **Execution** アクセス許可で実行するため、このアサートが必要です。 **Execution** アクセス許可セットでコードを実行できますが、保護されたリソースを使用することはできません。  
   
 4.  カスタム アセンブリが厳密な名前で署名されている場合、カスタム アセンブリを **AllowPartiallyTrustedCallersAttribute** でマークします。 カスタム アセンブリは、レポート式のホスト アセンブリの一部であるレポート式から呼び出され、既定では、**FullTrust** が与えられていない、つまり、"部分的な信頼関係のある" 呼び出し元であるため、このマークが必要です。 詳細については、「[複雑な名前を持つカスタム アセンブリの使用](using-strong-named-custom-assemblies.md)」を参照してください。  
   

@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f131dc8fa36ad8ab8d9284012e25b44ecd209dcd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014903"
 ---
 # <a name="using-sqlxml-bulk-load-in-the-net-environment"></a>.NET 環境での SQLXML 一括読み込みの使用
@@ -148,6 +148,6 @@ ms.locfileid: "66014903"
      この例では、.NET Framework プロジェクトで使用できるマネージド ラッパー DLL (SQLXMLBULKLOADLib.dll) が作成されます。 新しく作成した DLL へのプロジェクト参照を、.NET Framework で追加します。  
   
 ## <a name="see-also"></a>参照  
- [XML データの一括読み込みを実行する &#40;SQLXML 4.0&#41;](bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [XML データの一括読み込みの実行 &#40;SQLXML 4.0&#41;](bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

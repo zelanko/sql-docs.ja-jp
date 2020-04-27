@@ -17,23 +17,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 92238e27c364c8f09721a55d00c750022b53a18f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014732"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>アップデートグラムへのパラメーターの引き渡し (SQLXML 4.0)
   アップデートグラムはテンプレートであり、パラメーターを渡すことができます。 テンプレートにパラメーターを渡す方法の詳細については、「[アップデートグラムのセキュリティに関する考慮事項 &#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)」を参照してください。  
   
- アップデートグラムでは、パラメーター値として NULL を渡すことができます。 NULL パラメーター値を渡すには、`nullvalue` 属性を指定し、 
-  `nullvalue` 属性に割り当てられる値をパラメーター値として指定します。 アップデートグラムでは、この値は NULL として扱われます。  
+ アップデートグラムでは、パラメーター値として NULL を渡すことができます。 NULL パラメーター値を渡すには、`nullvalue` 属性を指定し、 `nullvalue` 属性に割り当てられる値をパラメーター値として指定します。 アップデートグラムでは、この値は NULL として扱われます。  
   
 > [!NOTE]  
->  
-  `<sql:header>` および `<updg:header>` では、`nullvalue` を修飾子なしで指定し、`<updg:sync>` では、`nullvalue` を `updg:nullvalue` のように修飾子付きで指定します。  
+>  `<sql:header>` および `<updg:header>` では、`nullvalue` を修飾子なしで指定し、`<updg:sync>` では、`nullvalue` を `updg:nullvalue` のように修飾子付きで指定します。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例を使用して実際のサンプルを作成するには、 [SQLXML の例を実行するための要件](../../sqlxml/requirements-for-running-sqlxml-examples.md)を満たす必要があります。  
   
  アップデートグラムの例を使用する前に、次の点に注意してください。  

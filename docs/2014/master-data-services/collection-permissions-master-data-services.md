@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 47534b08e32f9e8fe585e4ad7fe2e36f6c6e8c8f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65484016"
 ---
 # <a name="collection-permissions-master-data-services"></a>コレクション権限 (Master Data Services)
@@ -26,7 +26,7 @@ ms.locfileid: "65484016"
 > [!NOTE]  
 >  これらの権限は、ユーザー インターフェイスの **[エクスプローラー]** 機能領域にのみ適用されます。  
   
-|権限|[説明]|  
+|権限|説明|  
 |----------------|-----------------|  
 |**読み取り専用**|すべてのコレクションとコレクション メンバーが表示されます。<br /><br /> ユーザーは、コレクションを追加または削除することも、コレクションに対してメンバーを追加または削除することもできません。|  
 |**Update**|すべてのコレクションが表示され、ユーザーはコレクションを追加および削除できます。<br /><br /> また、ユーザーは、コレクションに対してメンバーの追加および削除を行うこともできます。|  
@@ -35,6 +35,6 @@ ms.locfileid: "65484016"
 ## <a name="see-also"></a>参照  
  [モデルオブジェクト権限の割り当て &#40;マスターデータサービス&#41;](assign-model-object-permissions-master-data-services.md)   
  [コレクション &#40;マスターデータサービス&#41;](../../2014/master-data-services/collections-master-data-services.md)   
- [モデルオブジェクト権限 &#40;マスターデータサービス&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)  
+ [モデル オブジェクト権限 (マスター データ サービス)](../../2014/master-data-services/model-object-permissions-master-data-services.md)  
   
   

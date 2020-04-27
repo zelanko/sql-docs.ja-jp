@@ -15,15 +15,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cd7ce157e831d32272f6ff2531c39f789a01e901
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66015090"
 ---
 # <a name="troubleshoot-full-text-indexing"></a>フルテキスト インデックスの作成のトラブルシューティング
      
-##  <a name="failure"></a> フルテキスト インデックスの作成エラーのトラブルシューティング  
+##  <a name="troubleshoot-full-text-indexing-failures"></a><a name="failure"></a> フルテキスト インデックスの作成エラーのトラブルシューティング  
  フルテキスト インデックスの作成時または保守時には、後述の理由により、フルテキスト インデクサーが 1 つ以上の行のインデックス作成に失敗することがあります。 このような行レベルのエラーでは、インデックスの作成は中止されることなく完了します。 インデクサーは、エラーが発生した行をスキップします。そのため、エラーが発生した行に含まれる内容のクエリはできません。  
   
  インデックス作成は、次の場合に失敗する可能性があります。  
@@ -54,7 +54,7 @@ ms.locfileid: "66015090"
   
 
   
-##  <a name="state"></a> トランザクション ログの復元後のフルテキスト インデックスの一貫性の喪失  
+##  <a name="full-text-index-in-inconsistent-state-after-transaction-log-restored"></a><a name="state"></a> トランザクション ログの復元後のフルテキスト インデックスの一貫性の喪失  
  データベースのトランザクション ログを復元する場合、フルテキスト インデックスの状態に一貫性がないという警告が表示されることがあります。 この警告の原因は、データベースのバックアップ後にテーブルのフルテキスト インデックスが変更されたことにあります。 フルテキスト インデックスを一貫性のある状態に戻すには、テーブルに対してすべてのカタログの作成 (クロール) を実行します。 詳細については、「 [フルテキスト インデックスの作成](../indexes/indexes.md)」をご覧ください。  
   
 

@@ -15,51 +15,47 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5965c48f91387944f223e1d0cfe666b19aba0e63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054294"
 ---
 # <a name="xml-source-editor-connection-manager-page"></a>[XML ソース エディター] ([接続マネージャー] ページ)
-  
   **[XML ソース エディター]** の **[接続マネージャー]** ページを使用すると、XML ファイルと、XML データを変換する XSD を指定できます。  
   
  XML ソースの詳細については、「 [XML Source](data-flow/xml-source.md)」を参照してください。  
   
 ## <a name="static-options"></a>静的オプション  
- **[データ アクセス モード]**  
+ **データアクセスモード**  
  ソースからデータを選択する方法を指定します。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
 |[XML ファイルの場所]|XML ファイルからデータを取得します。|  
-|[変数からの XML ファイル]|XML ファイルの名前を変数で指定します。<br /><br /> **関連情報**:[パッケージで変数を使用する](../../2014/integration-services/use-variables-in-packages.md)|  
+|[変数からの XML ファイル]|XML ファイルの名前を変数で指定します。<br /><br /> **関連情報**: [パッケージで変数を使用する](../../2014/integration-services/use-variables-in-packages.md)|  
 |[変数からの XML データ]|変数から XML データを取得します。|  
   
- **インラインスキーマを使用する**  
+ **[インライン スキーマを使用する]**  
  XML ソース データ自体に、その構造とデータを定義して検証する XSD スキーマを含めるかどうかを指定します。  
   
- **XSD の場所**  
+ **[XSD の場所]**  
  XSD スキーマ ファイルのパスと名前を入力するか、 **[参照]** をクリックしてファイルを指定します。  
   
- **[参照]**  
- 
-  **[開く]** ダイアログ ボックスを使用して、XSD スキーマ ファイルを指定します。  
+ **参照**  
+ **[開く]** ダイアログ ボックスを使用して、XSD スキーマ ファイルを指定します。  
   
- **XSD の生成**  
- 
-  **[名前を付けて保存]** ダイアログ ボックスを使用して、XSD スキーマ ファイルが自動生成される場所を選択します。 スキーマは XML データの構造から推測されます。  
+ **[XSD の生成]**  
+ **[名前を付けて保存]** ダイアログ ボックスを使用して、XSD スキーマ ファイルが自動生成される場所を選択します。 スキーマは XML データの構造から推測されます。  
   
 ## <a name="data-access-mode-dynamic-options"></a>データ アクセス モードの動的オプション  
   
 ### <a name="data-access-mode--xml-file-location"></a>[データ アクセス モード] が [XML ファイルの場所] の場合  
- **XML の場所**  
+ **[XML の場所]**  
  XML データ ファイルのパスと名前を入力するか、 **[参照]** をクリックしてファイルを指定します。  
   
- **[参照]**  
- 
-  **[開く]** ダイアログ ボックスを使用して、XML データ ファイルを指定します。  
+ **参照**  
+ **[開く]** ダイアログ ボックスを使用して、XML データ ファイルを指定します。  
   
 ### <a name="data-access-mode--xml-file-from-variable"></a>[データ アクセス モード] が [変数からの XML ファイル] の場合  
  **変数名**  

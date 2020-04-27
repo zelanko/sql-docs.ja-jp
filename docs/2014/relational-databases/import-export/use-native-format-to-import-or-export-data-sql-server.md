@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a2e91899172dfc6d640df0c33c77e32de3c1c21c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011657"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>ネイティブ形式を使用したデータのインポートまたはエクスポート (SQL Server)
@@ -55,21 +55,18 @@ ms.locfileid: "66011657"
   
      bcp ユーティリティでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部バイナリ データ形式を使用して、非文字データをテーブルからデータ ファイルに書き込みます。  
   
--   
-  `char` データまたは `varchar` データ  
+-   `char` データまたは `varchar` データ  
   
      `char`または`varchar`フィールドの先頭に、 **bcp**によってプレフィックス長が追加されます。  
   
     > [!IMPORTANT]  
     >  ネイティブモードを使用すると、 **bcp**ユーティリティは、既定では文字[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をデータファイルにコピーする前に、文字を OEM 文字に変換します。 **Bcp**ユーティリティは、データファイルの文字を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブルに一括インポートする前に、その文字を ANSI 文字に変換します。 このような変換が行われている間、拡張文字のデータが失われる場合があります。 拡張文字については、Unicode ネイティブ形式を使用するか、コード ページを指定します。  
   
--   `sql_variant`データ  
+-   `sql_variant` データ  
   
-     
-  `sql_variant` データが SQLVARIANT としてネイティブ形式のデータ ファイルに格納されている場合、そのデータのすべての特性が保持されます。 各データ値のデータ型を記録するメタデータが、そのデータ値と一緒に格納されます。 このメタデータを使用して、インポート先の `sql_variant` 列に同じデータ型でデータ値を再作成します。  
+     `sql_variant` データが SQLVARIANT としてネイティブ形式のデータ ファイルに格納されている場合、そのデータのすべての特性が保持されます。 各データ値のデータ型を記録するメタデータが、そのデータ値と一緒に格納されます。 このメタデータを使用して、インポート先の `sql_variant` 列に同じデータ型でデータ値を再作成します。  
   
-     インポート先の列のデータ型が `sql_variant` でない場合、各データ値は、暗黙的なデータ変換の通常の規則に従ってインポート先の列のデータ型に変換されます。 データ変換中にエラーが発生すると、現在のバッチがロールバックされます。 
-  `char` 列間で転送される `varchar` 値と `sql_variant` 値で、コード ページの変換問題が生じている可能性があります。  
+     インポート先の列のデータ型が `sql_variant` でない場合、各データ値は、暗黙的なデータ変換の通常の規則に従ってインポート先の列のデータ型に変換されます。 データ変換中にエラーが発生すると、現在のバッチがロールバックされます。 `char` 列間で転送される `varchar` 値と `sql_variant` 値で、コード ページの変換問題が生じている可能性があります。  
   
      詳細については、「[データ型の変換 &#40;データベース エンジン&#41;](/sql/t-sql/data-types/data-type-conversion-database-engine)」を参照してください。  
   
@@ -78,24 +75,23 @@ ms.locfileid: "66011657"
   
  ネイティブ形式は、次のコマンド ライン オプションでサポートされています。  
   
-|command|オプション|[説明]|  
+|command|オプション|説明|  
 |-------------|------------|-----------------|  
 |**bcp**|**-n**|**Bcp**ユーティリティによって、データのネイティブデータ型が使用されます。<sup>1</sup>|  
 |BULK INSERT|DATAFILETYPE **= '** native **'**|ネイティブ データ型またはワイド ネイティブ データ型のデータが使用されます。 フォーマット ファイルでデータ型を指定している場合、DATAFILETYPE は必要ありません。|  
   
  <sup>1</sup>ネイティブ (**-n**) データを以前のバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアントと互換性のある形式に読み込むには、 **-V**スイッチを使用します。 詳細については、「 [以前のバージョンの SQL Server からのネイティブ形式データおよび文字形式データのインポート](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)」をご覧ください。  
   
- 詳細については、[bcp ユーティリティ](../../tools/bcp-utility.md)、[BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)」、または「[OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)」を参照してください。  
+ 詳細については、「[bcp ユーティリティ](../../tools/bcp-utility.md)」、「[BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)」、または「[OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)」を参照してください。  
   
 > [!NOTE]  
 >  また、フォーマット ファイルでフィールドごとに形式を指定することもできます。 詳細については、「 [データのインポートまたはエクスポート用のフォーマット ファイル &#40;SQL Server&#41;](format-files-for-importing-or-exporting-data-sql-server.md)」を参照してください。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、**bcp** を使用してネイティブ データを一括エクスポートする方法と、BULK INSERT を使用して同じデータを一括インポートする方法を説明します。  
   
 ### <a name="sample-table"></a>サンプル テーブル  
- 次の例を実行するには、**dbo** スキーマに基づいて、**myTestNativeData** という名前のテーブルを **AdventureWorks** サンプル データベース内に作成する必要があります。 このテーブルを作成しないと、例を実行できません。 
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] クエリ エディターで、次のコードを実行します。  
+ 次の例を実行するには、**dbo** スキーマに基づいて、**myTestNativeData** という名前のテーブルを **AdventureWorks** サンプル データベース内に作成する必要があります。 このテーブルを作成しないと、例を実行できません。 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] クエリ エディターで、次のコードを実行します。  
   
 ```  
 USE AdventureWorks;  
@@ -122,14 +118,12 @@ SELECT Col1,Col2,Col3 FROM myTestNativeData
 ### <a name="using-bcp-to-bulk-export-native-data"></a>bcp を使用したネイティブ データの一括エクスポート  
  テーブルからデータ ファイルにデータをエクスポートするには、 **bcp** で **out** オプションと次の修飾子を組み合わせて使用します。  
   
-|修飾子|[説明]|  
+|修飾子|説明|  
 |----------------|-----------------|  
 |**-n**|ネイティブ データ型を指定します。|  
-|**-T**|
-  **bcp** ユーティリティが統合セキュリティを使用した信頼関係接続を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続することを指定します。 **-T**が指定されていない場合、正常にログインするには **-U**および **-P**を指定する必要があります。|  
+|**-T**|**bcp** ユーティリティが統合セキュリティを使用した信頼関係接続を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続することを指定します。 **-T** を指定しない場合、正常にログインするには **-U** と **-P** を指定する必要があります。|  
   
- 次の例では、ネイティブ形式のデータを `myTestNativeData` テーブルから `myTestNativeData-n.Dat` という名前の新しいデータ ファイルに一括エクスポートします。 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows コマンド プロンプトで、次のように入力します。  
+ 次の例では、ネイティブ形式のデータを `myTestNativeData` テーブルから `myTestNativeData-n.Dat` という名前の新しいデータ ファイルに一括エクスポートします。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows コマンド プロンプトで、次のように入力します。  
   
 ```  
 bcp AdventureWorks..myTestNativeData out C:\myTestNativeData-n.Dat -n -T  
@@ -137,8 +131,7 @@ bcp AdventureWorks..myTestNativeData out C:\myTestNativeData-n.Dat -n -T
 ```  
   
 ### <a name="using-bulk-insert-to-bulk-import-native-data"></a>BULK INSERT を使用したネイティブ データの一括インポート  
- 次の例では、BULK INSERT を使用して、`myTestNativeData-n.Dat` データ ファイルのデータを `myTestNativeData` テーブルにインポートします。 
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] クエリ エディターで、次のコードを実行します。  
+ 次の例では、BULK INSERT を使用して、`myTestNativeData-n.Dat` データ ファイルのデータを `myTestNativeData` テーブルにインポートします。 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] クエリ エディターで、次のコードを実行します。  
   
 ```  
 USE AdventureWorks;  
@@ -152,24 +145,24 @@ GO
   
 ```  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
  **一括インポートまたは一括エクスポートのデータ形式を使用するには**  
   
 -   [以前のバージョンの SQL Server からのネイティブ形式データおよび文字形式データのインポート](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
--   [文字形式を使用してデータをインポートまたはエクスポート &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
+-   [文字形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
   
--   [Unicode 文字形式を使用してデータをインポートまたはエクスポート &#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
+-   [Unicode 文字形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
--   [Unicode ネイティブ形式を使用してデータをインポートまたはエクスポート &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
+-   [Unicode ネイティブ形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
 ## <a name="see-also"></a>参照  
  [bcp ユーティリティ](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
- [データ型 &#40;Transact-sql&#41;](/sql/t-sql/data-types/data-types-transact-sql)   
- [sql_variant &#40;Transact-sql&#41;](/sql/t-sql/data-types/sql-variant-transact-sql)   
- [以前のバージョンの SQL Server からネイティブ形式と文字形式のデータをインポートする](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)   
- [OPENROWSET &#40;Transact-sql&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
- [Unicode ネイティブ形式を使用してデータをインポートまたはエクスポート &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
+ [データ型 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   
+ [sql_variant &#40;Transact-SQL&#41;](/sql/t-sql/data-types/sql-variant-transact-sql)   
+ [以前のバージョンの SQL Server からのネイティブ形式データおよび文字形式データのインポート](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)   
+ [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
+ [Unicode ネイティブ形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
   

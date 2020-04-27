@@ -13,14 +13,13 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: b5027eb9be355348e00b6f17128b821a2bfc2af4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014150"
 ---
 # <a name="point"></a>ポイント
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 空間データの `Point` は、1 つの場所を表す 0 次元のオブジェクトです。 には、Z (昇格) 値と M (メジャー) 値が含まれる場合もあります。  
   
 ## <a name="geography-data-type"></a>geography データ型  

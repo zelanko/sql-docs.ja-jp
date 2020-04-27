@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: b7f4f543952fd86cf6c3c66f9f4b2c51019b1869
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63273479"
 ---
 # <a name="creating-a-sequence-clustering-mining-model-structure-intermediate-data-mining-tutorial"></a>シーケンス クラスター マイニング モデル構造の作成 (中級者向けデータ マイニング チュートリアル)
@@ -28,8 +28,7 @@ ms.locfileid: "63273479"
   
 1.  のソリューションエクスプローラーで[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]、[**マイニング構造**] を右クリックし、[**新しいマイニング構造**] をクリックします。  
   
-2.  
-  **[データ マイニング ウィザードへようこそ]** ページで **[次へ]** をクリックします。  
+2.  **[データ マイニング ウィザードへようこそ]** ページで **[次へ]** をクリックします。  
   
 3.  [**定義方法の選択**] ページで、[**既存のリレーショナルデータベースまたはデータウェアハウスから**] が選択されていることを確認し、[**次へ**] をクリックします。  
   
@@ -72,12 +71,12 @@ ms.locfileid: "63273479"
   
     |テーブルまたは列|コンテンツの種類|データ型|  
     |---------------------|------------------|---------------|  
-    |IncomeGroup|Discrete|Text|  
-    |OrderNumber|キー|Text|  
-    |リージョン|Discrete|Text|  
+    |IncomeGroup|Discrete|テキスト|  
+    |OrderNumber|Key|テキスト|  
+    |リージョン|Discrete|テキスト|  
     |vAssocSeqLineItems|||  
     |Line Number|Key Sequence|Long|  
-    |モデル|Discrete|Text|  
+    |モデル|Discrete|テキスト|  
   
 9. [**テストセットの作成**] ページで、**テスト用データの割合**を20に変更し、[**次へ**] をクリックします。  
   
@@ -92,6 +91,6 @@ ms.locfileid: "63273479"
   
 ## <a name="see-also"></a>参照  
  [データマイニングデザイナー](../../2014/analysis-services/data-mining/data-mining-designer.md)   
- [「Microsoft シーケンス クラスター アルゴリズム」](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)  
+ [Microsoft シーケンス クラスタリング アルゴリズム](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)  
   
   

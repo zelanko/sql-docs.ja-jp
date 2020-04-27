@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b0db2a84b4be80fffec0f05aed11f39a3bcea7db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63287357"
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>入れ子になった AUTO モードのクエリを使用した兄弟の生成
@@ -140,8 +140,7 @@ FOR XML AUTO, TYPE
 </Sales.SalesOrderHeader>  
 ```  
   
- 
-  `TYPE` ディレクティブによってクエリの結果が `xml` 型で返されるので、各種の `xml` データ型メソッドを使用して結果の XML にクエリを実行できます。 詳細については、「 [xml データ型のメソッド](/sql/t-sql/xml/xml-data-type-methods)」を参照してください。 次のクエリでは、次の点に注意してください。  
+ `TYPE` ディレクティブによってクエリの結果が `xml` 型で返されるので、各種の `xml` データ型メソッドを使用して結果の XML にクエリを実行できます。 詳細については、「 [xml データ型のメソッド](/sql/t-sql/xml/xml-data-type-methods)」を参照してください。 次のクエリでは、次の点に注意してください。  
   
 -   上記のクエリが `FROM` 句に追加されています。 クエリの結果はテーブルで返されます。 追加された `XmlCol` 別名に注意してください。  
   

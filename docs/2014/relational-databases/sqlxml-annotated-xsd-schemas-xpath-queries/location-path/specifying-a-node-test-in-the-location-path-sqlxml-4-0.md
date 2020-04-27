@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d0a3dd41259bcbf2567d34a86527865de011faf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012671"
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>ロケーション パスでのノード テストの指定 (SQLXML 4.0)
@@ -44,8 +44,7 @@ ms.locfileid: "66012671"
 ## <a name="abbreviated-syntax-for-the-axes"></a>軸の省略構文  
  ロケーション パスでは、次の省略構文がサポートされています。  
   
--   
-  `attribute::` は `@` で省略できます。  
+-   `attribute::` は `@` で省略できます。  
   
      ロケーション パス `Customer[@CustomerID="ALFKI"]` は、`child::Customer[attribute::CustomerID="ALFKI"]` と同じです。  
   
@@ -53,7 +52,6 @@ ms.locfileid: "66012671"
   
      つまり、`child` は既定の軸です。 ロケーション パス `Customer/Order` は、`child::Customer/child::Order` と同じです。  
   
--   
-  `self::node()` は 1 つのピリオド (.) で省略できます。また、`parent::node()` は 2 つのピリオド (..) で省略できます。  
+-   `self::node()` は 1 つのピリオド (.) で省略できます。また、`parent::node()` は 2 つのピリオド (..) で省略できます。  
   
   

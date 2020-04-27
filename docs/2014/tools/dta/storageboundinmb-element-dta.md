@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 33dbfad3c3774abe3de74d4dbf1d67575630b21e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63460103"
 ---
 # <a name="storageboundinmb-element-dta"></a>StorageBoundInMB 要素 (DTA)
@@ -36,13 +36,11 @@ ms.locfileid: "63460103"
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特徴|[説明]|  
+|特徴|説明|  
 |--------------------|-----------------|  
-|**データ型と長さ**|
-  `unsignedInt`、長さは無制限です。|  
+|**データ型と長さ**|`unsignedInt`、長さは無制限です。|  
 |**既定値**|[なし] :|  
-|**個数**|省略可能。 
-  `TuningOptions` 要素に 1 回だけ使用できます。|  
+|**個数**|省略可能。 `TuningOptions` 要素に 1 回だけ使用できます。|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
@@ -60,12 +58,11 @@ ms.locfileid: "63460103"
   
  既定の記憶領域サイズには、非クラスター化インデックスとインデックス付きビューは含まれません。  
   
- 
-  `StorageBoundInMB` 要素に指定した値が実際のディスク容量のサイズを超えている場合は、データベース エンジン チューニング アドバイザーからエラーが返されますが、チューニング自体は続行されます。 チューニングの完了後に、推奨設定を実装することにした場合はディスク容量を追加できます。  
+ `StorageBoundInMB` 要素に指定した値が実際のディスク容量のサイズを超えている場合は、データベース エンジン チューニング アドバイザーからエラーが返されますが、チューニング自体は続行されます。 チューニングの完了後に、推奨設定を実装することにした場合はディスク容量を追加できます。  
   
 ## <a name="example"></a>例  
   
-## <a name="description"></a>[説明]  
+## <a name="description"></a>説明  
  次のコード例では、チューニングの推奨設定で使用できる最大ディスク領域として 1500 MB の制限を設定する方法を示します。  
   
 ## <a name="code"></a>コード  

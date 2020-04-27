@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4a0bc7e2d99190e142647ab8732e2d2d48b3ea2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63255127"
 ---
 # <a name="report-viewer-web-part-programmability-in-sharepoint-integration"></a>SharePoint 統合でのレポート ビューアー Web パーツのプログラミング
@@ -35,8 +35,7 @@ ms.locfileid: "63255127"
     > [!NOTE]  
     >  レポート ビューアー Web パーツに一度に接続できる <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Web パーツは 1 つだけです。レポート ビューアー Web パーツに <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Web パーツおよび `T:Microsoft.SharePoint.WebPartPages.IFilterValues` Web パーツの両方を同時に接続することはできません。  
   
- 
-  <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Web パーツが `T:Microsoft.ReportingServices.SharePoint.UI.WebParts.ReportViewerWebPart` で適切に機能するようにするには、<xref:System.Web.UI.WebControls.WebParts.IWebPartRow.GetRowData%2A> メソッドで次の操作を行う必要があります。  
+ <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Web パーツが `T:Microsoft.ReportingServices.SharePoint.UI.WebParts.ReportViewerWebPart` で適切に機能するようにするには、<xref:System.Web.UI.WebControls.WebParts.IWebPartRow.GetRowData%2A> メソッドで次の操作を行う必要があります。  
   
 -   <xref:System.Data.DataRowView> オブジェクトを入力パラメーターとして使用してコールバック メソッドを呼び出します。  
   
@@ -46,8 +45,7 @@ ms.locfileid: "63255127"
     >  [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2010 用アドインのレポート ビューアー Web パーツでは、"FileRef" 列を使用するレポート パスを受信することもできます。  
   
 ### <a name="implementing-a-report-parameter-provider-with-ifiltervalues"></a>レポート パラメーター プロバイダーと IFilterValues の実装  
- 
-  `T:Microsoft.SharePoint.WebPartPages.IFilterValues` を実装する Web パーツは、レポート ビューアー Web パーツに 1 つのパラメーター値を指定できます。 レポート ビューアー Web パーツに送信されるパラメーター値には、レポート定義で指定された、レポート パラメーターに対する制限と同じ制限 (データ型、有効な値など) が課されます。  
+ `T:Microsoft.SharePoint.WebPartPages.IFilterValues` を実装する Web パーツは、レポート ビューアー Web パーツに 1 つのパラメーター値を指定できます。 レポート ビューアー Web パーツに送信されるパラメーター値には、レポート定義で指定された、レポート パラメーターに対する制限と同じ制限 (データ型、有効な値など) が課されます。  
   
  レポート ビューアー Web パーツにレポート パラメーターを指定するには、次の手順に従います。  
   

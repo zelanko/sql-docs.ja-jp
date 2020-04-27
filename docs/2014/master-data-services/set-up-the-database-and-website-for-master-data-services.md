@@ -13,25 +13,22 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 478dea9095fe22a437aecf138c22374b5a70885b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054102"
 ---
 # <a name="set-up-the-database-and-website-for-master-data-services"></a>マスター データ サービスのデータベースと Web サイトの設定
-  
   [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] を使って、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] のデータベースと Web サイトを設定する (MDS)  
   
  データベースと Web サイトを設定するには、次のタスクを実行してください。  
   
-1.  
-  **の** [データベース構成] [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]ページで、データベースを作成します。  
+1.  **の** [データベース構成] [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]ページで、データベースを作成します。  
   
      詳細については、「データベースの構成」ページを参照して[&#40;マスターデータサービス構成マネージャー&#41;](../../2014/master-data-services/database-configuration-page-master-data-services-configuration-manager.md)と[データベースの作成ウィザード &#40;マスターデータサービス構成マネージャー ](../../2014/master-data-services/create-database-wizard-master-data-services-configuration-manager.md)&#41;を参照してください。  
   
-2.  
-  **の** [Web 構成] [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]ページで、新しい Web サイトを作成するか、既定の Web サイトを選ぶか、別の既存の Web サイトを選びます。 その後、MDS データベースを、選んだ Web アプリケーションや作成した Web アプリケーションに関連付けます。  
+2.  **の** [Web 構成] [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]ページで、新しい Web サイトを作成するか、既定の Web サイトを選ぶか、別の既存の Web サイトを選びます。 その後、MDS データベースを、選んだ Web アプリケーションや作成した Web アプリケーションに関連付けます。  
   
      詳細については、「 [Web 構成ページ &#40;マスターデータサービス構成マネージャー&#41;](../../2014/master-data-services/web-configuration-page-master-data-services-configuration-manager.md) 」と「web[サイトの作成] ダイアログボックス &#40;マスターデータサービス構成マネージャー ](../../2014/master-data-services/create-website-dialog-box-master-data-services-configuration-manager.md)&#41;」を参照してください。  
   

@@ -13,23 +13,21 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ee3582e7de37b99cd7f665f563e789259954b722
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478483"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>Web 設定リファレンス (Master Data Services)
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] では Web.config ファイルを使用することで、インターネット インフォメーション サービス (IIS) を有効にして [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションおよび Web サービスをホストできるようにする構成設定を取り込みます。 この Web.config ファイルは、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] インストール パスの WebApplication フォルダーにあります。 パスと権限の詳細については、「[フォルダーとファイルの権限 (マスター データ サービス)](folder-and-file-permissions-master-data-services.md)」を参照してください。  
   
 ## <a name="webconfig-elements"></a>Web.Config 要素  
  Web.config ファイルには、標準の IIS [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 、.NET Framework、ASP.NET、および Windows Communication Foundation (WCF) の構成要素に加えて、カスタム要素** \<masterDataServices>** が含まれています。 次の表では、Web.config ファイルに含まれている要素について説明します。  
   
-|Configuration 要素|[説明]|  
+|Configuration 要素|説明|  
 |---------------------------|-----------------|  
-|`masterDataServices`|Custom 要素。 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web サービスを [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースに接続します。|  
+|`masterDataServices`|Custom 要素。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web サービスを [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースに接続します。|  
 |`connectionStrings`|ASP.NET 要素。 詳細については、MSDN ライブラリの「 [connectionStrings 要素 (ASP.NET 設定スキーマ)](https://go.microsoft.com/fwlink/?LinkId=178347) 」を参照してください。|  
 |`system.web`|ASP.NET 要素。 詳細については、MSDN ライブラリの「 [system.web 要素 (ASP.NET 設定スキーマ)](https://go.microsoft.com/fwlink/?LinkId=178348) 」を参照してください。|  
 |`startup`|.NET Framework 要素。 詳細については、MSDN ライブラリの「 [ \<startup> 要素](https://go.microsoft.com/fwlink/?LinkId=178349)」を参照してください。|  
@@ -54,13 +52,11 @@ ms.locfileid: "65478483"
   
 ### <a name="elements-and-attributes"></a>要素と属性  
   
-|アイテム|[説明]|  
+|Item|説明|  
 |----------|-----------------|  
 |`instance`|子要素。 Web サービスとデータベース接続文字列の情報を指定する属性を含みます。|  
-|`virtualPath`|Attribute。 
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションとサービスの仮想パスを指定します。 これは、IIS `path` applicationhost.config ファイルの** \<site>** 要素の下にある** \<application>** 要素の属性に対応しています。|  
-|`siteName`|Attribute。 
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションとサービスをホストするサイトの名前を指定します。 これは、IIS `name` applicationhost.config ファイルの [ ** \<サイト>** の下にある** \<サイト>** 要素の属性に対応します。|  
+|`virtualPath`|Attribute。 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションとサービスの仮想パスを指定します。 これは、IIS `path` applicationhost.config ファイルの** \<site>** 要素の下にある** \<application>** 要素の属性に対応しています。|  
+|`siteName`|Attribute。 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションとサービスをホストするサイトの名前を指定します。 これは、IIS `name` applicationhost.config ファイルの [ ** \<サイト>** の下にある** \<サイト>** 要素の属性に対応します。|  
 |`connectionName`|Attribute。 使用する接続の名前を指定します。 これは、web.config `name`の** \<connectionStrings>** 要素の下にある** \<add>** 要素の属性に対応しています。|  
 |`serviceName`|Attribute。 Web サービスの名前を指定します。 これは`name` ** \<** **、web.config の services>要素の下にある service>要素の属性に対応し\<** ています。|  
   

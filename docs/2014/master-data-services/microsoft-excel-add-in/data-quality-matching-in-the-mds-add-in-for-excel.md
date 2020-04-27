@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 696a114c74ecb6d4b8f4cfe6b2d16b33869e1602
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478901"
 ---
 # <a name="data-quality-matching-in-the-mds-add-in-for-excel"></a>Excel 用 MDS アドインでのデータ品質照合
@@ -48,8 +48,8 @@ ms.locfileid: "65478901"
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|外部データを MDS によって管理されるデータと結合して、比較できるようにします。|[データ &#40;Excel 用 MDS アドインの結合&#41;](combine-data-mds-add-in-for-excel.md)|  
-|DQS ナレッジを使用して、データの類似性を見つけます。|[類似データ &#40;Excel 用 MDS アドインに一致&#41;](match-similar-data-mds-add-in-for-excel.md)|  
+|外部データを MDS によって管理されるデータと結合して、比較できるようにします。|[データの結合 (Excel 用 MDS アドイン)](combine-data-mds-add-in-for-excel.md)|  
+|DQS ナレッジを使用して、データの類似性を見つけます。|[類似データの照合 (Excel 用 MDS アドイン)](match-similar-data-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>関連コンテンツ  
   

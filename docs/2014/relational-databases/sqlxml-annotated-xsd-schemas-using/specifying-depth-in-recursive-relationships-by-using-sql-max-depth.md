@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4b247efb895f037965620c7430a3dc41c33fe550
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013655"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>sql:max-depth を使用した、再帰リレーションシップの深さの指定
@@ -93,8 +93,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 </xsd:schema>  
 ```  
   
- このリレーションシップは再帰的なので、何らかの方法でスキーマ内の再帰の深さを指定する必要があります。 指定しない場合、結果は無限再帰となり、従業員から次の従業員へと無限に報告を行うことになります。 
-  `sql:max-depth` 注釈を使用すと、再帰の深さを指定できます。 この例の場合、`sql:max-depth` の値を指定するには、その企業の管理階層の深さを知っておく必要があります。  
+ このリレーションシップは再帰的なので、何らかの方法でスキーマ内の再帰の深さを指定する必要があります。 指定しない場合、結果は無限再帰となり、従業員から次の従業員へと無限に報告を行うことになります。 `sql:max-depth` 注釈を使用すと、再帰の深さを指定できます。 この例の場合、`sql:max-depth` の値を指定するには、その企業の管理階層の深さを知っておく必要があります。  
   
 > [!NOTE]  
 >  このスキーマでは `sql:limit-field` 注釈が指定されていますが、`sql:limit-value` 注釈は指定されていません。 これにより、結果として生成される階層の一番上のノードは、だれにも報告しない従業員だけになります  (ReportsTo は NULL です)。を`sql:limit-field`指定しない`sql:limit-value`と (既定値は NULL になります)、注釈はこれを実現します。 結果の XML に、可能な報告ツリー (テーブル内の各従業員の報告ツリー) をすべて含める場合は、スキーマから `sql:limit-field` 注釈を削除します。  
@@ -230,23 +229,19 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 ## <a name="sqlmax-depth-annotation"></a>sql:max-depth 注釈  
  再帰リレーションシップで構成されるスキーマでは、スキーマ内に再帰の深さを明示的に指定する必要があります。 これは、対応する FOR XML EXPLICIT クエリを正常に作成し、要求された結果を返すために必要です。  
   
- スキーマで記述されている再帰リレーションシップの再帰の深さを指定するには、スキーマで `sql:max-depth` 注釈を使用します。 
-  `sql:max-depth` 注釈の値は、再帰の回数を示す正の整数値 (1 ～ 50) です。値 1 を指定した場合は、`sql:max-depth` 注釈が指定されている要素で再帰が停止します。値 2 を指定した場合は、`sql:max-depth` が指定されている要素の次のレベルで再帰が停止します。このように、指定した値に応じたレベルで再帰が停止します。  
+ スキーマで記述されている再帰リレーションシップの再帰の深さを指定するには、スキーマで `sql:max-depth` 注釈を使用します。 `sql:max-depth` 注釈の値は、再帰の回数を示す正の整数値 (1 ～ 50) です。値 1 を指定した場合は、`sql:max-depth` 注釈が指定されている要素で再帰が停止します。値 2 を指定した場合は、`sql:max-depth` が指定されている要素の次のレベルで再帰が停止します。このように、指定した値に応じたレベルで再帰が停止します。  
   
 > [!NOTE]  
->  基になる実装では、マッピングスキーマに対して指定された XPath クエリは、SELECT...FOR XML EXPLICIT クエリ。 このクエリでは、再帰に有限の深さを指定する必要があります。 
-  `sql:max-depth` に指定する値が大きいほど、生成される FOR XML EXPLICIT クエリは大きくなります。 これによって、取得に時間がかかることがあります。  
+>  基になる実装では、マッピングスキーマに対して指定された XPath クエリは、SELECT...FOR XML EXPLICIT クエリ。 このクエリでは、再帰に有限の深さを指定する必要があります。 `sql:max-depth` に指定する値が大きいほど、生成される FOR XML EXPLICIT クエリは大きくなります。 これによって、取得に時間がかかることがあります。  
   
 > [!NOTE]  
 >  アップデートグラムと XML 一括読み込みでは、max-depth 注釈は無視されます。 つまり、再帰更新や再帰挿入は、max-depth に指定されている値に関係なく行われます。  
   
 ## <a name="specifying-sqlmax-depth-on-complex-elements"></a>複合要素での sql:max-depth の指定  
- 
-  `sql:max-depth` 注釈は、複合コンテンツを含む要素にも指定できます。  
+ `sql:max-depth` 注釈は、複合コンテンツを含む要素にも指定できます。  
   
 ### <a name="recursive-elements"></a>再帰要素  
- 
-  `sql:max-depth` を再帰リレーションシップの親要素と子要素の両方で指定した場合は、親で指定した `sql:max-depth` 注釈が優先されます。 たとえば次のスキーマでは、親と子の両方の従業員要素に `sql:max-depth` 注釈が指定されています。 この場合`sql:max-depth=4`、 ** \<Emp>** 親要素に指定された (スーパーバイザーの役割を担う) が優先されます。 `sql:max-depth` **子\<Emp>** 要素に指定されたは、被監督者のロールを再生していますが、無視されます。  
+ `sql:max-depth` を再帰リレーションシップの親要素と子要素の両方で指定した場合は、親で指定した `sql:max-depth` 注釈が優先されます。 たとえば次のスキーマでは、親と子の両方の従業員要素に `sql:max-depth` 注釈が指定されています。 この場合`sql:max-depth=4`、 ** \<Emp>** 親要素に指定された (スーパーバイザーの役割を担う) が優先されます。 `sql:max-depth` **子\<Emp>** 要素に指定されたは、被監督者のロールを再生していますが、無視されます。  
   
 #### <a name="example-b"></a>例 B  
   

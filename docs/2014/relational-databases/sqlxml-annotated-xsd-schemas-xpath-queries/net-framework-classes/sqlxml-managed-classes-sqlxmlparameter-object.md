@@ -17,19 +17,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 13267e732c6eb5eae388ff8e79ed1d6e0be5febc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010757"
 ---
 # <a name="sqlxmlparameter-object-sqlxml-managed-classes"></a>SqlXmlParameter オブジェクト (SQLXML マネージド クラス)
   SqlXmlParameter オブジェクトは、次のプロパティをサポートしています。  
   
- Name  
+ 名前  
  パラメーターの名前。 コマンドをパラメーターとして渡すことができます。 SqlXmlCommand オブジェクトの CreateParameter メソッドを呼び出すと、parameter オブジェクトが作成されます。  
   
- Value  
+ [値]  
  パラメーターの値。 実際のサンプルについては、「 [SQL クエリの実行 &#40;SQLXML マネージクラス&#41;](sqlxml-4-0-net-framework-support-managed-classes.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

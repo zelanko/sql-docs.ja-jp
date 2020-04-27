@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d01cf5aa2a57ace05cdf7d6da02f1f082d77b0bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054484"
 ---
 # <a name="view-path-metadata-in-the-data-flow-path-editor"></a>データ フロー パス エディターでパスのメタデータを表示する
@@ -25,16 +25,13 @@ ms.locfileid: "66054484"
   
 ### <a name="to-view-path-metadata"></a>パスのメタデータを表示するには  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
 2.  ソリューション エクスプローラーで、パッケージをダブルクリックして開きます。  
   
-3.  
-  **[データ フロー]** タブをクリックし、パスをダブルクリックします。  
+3.  **[データ フロー]** タブをクリックし、パスをダブルクリックします。  
   
-4.  
-  **[データ フロー パス エディター]** ダイアログ ボックスで、 **[メタデータ]** をクリックします。  
+4.  **[データ フロー パス エディター]** ダイアログ ボックスで、 **[メタデータ]** をクリックします。  
   
 5.  パスのメタデータが表示されます。メタデータには、各列の列名、データ型、有効桁数、小数点以下桁数、データ長、コード ページ、および基になるコンポーネントの名前が含まれます。  
   
@@ -44,6 +41,6 @@ ms.locfileid: "66054484"
   
 ## <a name="see-also"></a>参照  
  [Integration Services パス](data-flow/integration-services-paths.md)   
- [Data Flow](data-flow/data-flow.md)  
+ [データ フロー](data-flow/data-flow.md)  
   
   

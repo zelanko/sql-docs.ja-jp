@@ -13,14 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2d1e37f341c0606947b37eb10e8e3123ad410204
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63301314"
 ---
 # <a name="create-views-over-xml-columns"></a>XML 列でのビューの作成
-  
   `xml` 型の列を使用して、ビューを作成することもできます。 次の例では、`xml` データ型の `value()` メソッドを使用して `xml` 型の列の値を取得するビューを作成します。  
   
 ```  
@@ -56,8 +55,7 @@ ProductID   PName
 1           SomeName   
 ```  
   
- 
-  `xml` データ型を使用してビューを作成する際には次の点に注意してください。  
+ `xml` データ型を使用してビューを作成する際には次の点に注意してください。  
   
 -   xml データ型は、具体化されたビュー内に作成できます。 具体化されたビューは、xml データ型のメソッドに基づくことはできません。 ただし、ベース テーブルの xml 型の列とは異なる XML スキーマ コレクションにキャストできます。  
   

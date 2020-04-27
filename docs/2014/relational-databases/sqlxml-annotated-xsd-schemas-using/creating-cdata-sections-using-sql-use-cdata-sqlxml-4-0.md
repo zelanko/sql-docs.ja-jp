@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cddde2ed1e40b2ea21cf4ebff75bea3beed8f2ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014008"
 ---
 # <a name="creating-cdata-sections-using-sqluse-cdata-sqlxml-40"></a>sql:use-cdata を使用した、CDATA セクションの作成 (SQLXML 4.0)
@@ -31,16 +31,13 @@ ms.locfileid: "66014008"
   
  Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のデータベースには、XML パーサーによってマークアップ文字として扱われる文字が含まれている場合があります。たとえば、山かっこ (\<と >)、不等号 (<=)、およびアンパサンド (&) は、マークアップ文字として扱われますが、 この種類の特殊文字は、CDATA セクションで囲むことでマークアップ文字として扱われないようにできます。 CDATA セクション内の文字は、XML パーサーでプレーン テキストとして扱われます。  
   
- 
-  `sql:use-cdata` で返されるデータを CDATA セクションで囲むには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 注釈を使用します。この注釈では、`sql:field` で指定される列の値を CDATA セクションで囲むかどうかを指定できます。 
-  `sql:use-cdata` 注釈は、データベース列にマップされる要素だけに指定できます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で返されるデータを CDATA セクションで囲むには、`sql:use-cdata` 注釈を使用します。この注釈では、`sql:field` で指定される列の値を CDATA セクションで囲むかどうかを指定できます。 `sql:use-cdata` 注釈は、データベース列にマップされる要素だけに指定できます。  
   
- 
-  `sql:use-cdata` 注釈はブール値 (0 = false、1 = true) をとります。 指定できる値は 0、1、true、false です。  
+ `sql:use-cdata` 注釈はブール値 (0 = false、1 = true) をとります。 指定できる値は 0、1、true、false です。  
   
  この注釈は、`sql:url-encode` と共に使用したり、ID、IDREF、IDREFS、NMTOKEN、NMTOKENS 属性型に使用することはできません。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、「 [SQLXML の例を実行するための要件](../sqlxml/requirements-for-running-sqlxml-examples.md)」を参照してください。  
   
 ### <a name="a-specifying-sqluse-cdata-on-an-element"></a>A. 要素に対して sql:use-cdata を指定する  

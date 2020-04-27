@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1597893c203f1223ad916f5c7acecb66ff554c76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012437"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>XPath クエリ内での関係演算子の指定 (SQLXML 4.0)
@@ -36,8 +36,7 @@ ms.locfileid: "66012437"
   
  角かっこで指定された述語は、 ** \<顧客>** 要素をフィルター処理します。 OrderQty 属性値が3を超える** \<orderdetail>** 孫が少なくとも1つある** \<顧客>** の要素のみが返されます。  
   
- 
-  `child` 軸は既定の軸です。 そのため、クエリは次のように指定できます。  
+ `child` 軸は既定の軸です。 そのため、クエリは次のように指定できます。  
   
 ```  
 /Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  
@@ -80,7 +79,7 @@ ms.locfileid: "66012437"
 ```  
   
 ### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>B. XPath クエリに関係演算子を指定し、論理関数を使用して結果を比較する  
- このクエリでは**** 、 ** \<** SalesPersonID 属性値が270未満であるコンテキストノードのすべての注文>子要素が返されます。  
+ このクエリでは**SalesPersonID** 、 ** \<** SalesPersonID 属性値が270未満であるコンテキストノードのすべての注文>子要素が返されます。  
   
 ```  
 /child::Customer/child::Order[(attribute::SalesPersonID < 270)=true()]  

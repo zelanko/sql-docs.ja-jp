@@ -15,19 +15,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 918c0ecd3a1ac1d0f1821ee8f19df291f9a5fa33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054478"
 ---
 # <a name="wmi-connection-manager-editor"></a>WMI 接続マネージャー エディター
-  
   **[WMI 接続マネージャー]** ダイアログ ボックスを使用すると、サーバーに対する Microsoft Windows Management Instrumentation (WMI) 接続を指定できます。  
   
  WMI 接続マネージャーの詳細については、「 [WMI Connection Manager](connection-manager/wmi-connection-manager.md)」を参照してください。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **名前**  
  接続マネージャーの一意な名前を指定します。  
   
@@ -37,7 +36,7 @@ ms.locfileid: "66054478"
  **サーバー名**  
  WMI 接続の対象となるサーバーの名前を指定します。  
   
- **名前空間**  
+ **Namespace**  
  WMI 名前空間を指定します。  
   
  **Windows 認証を使用する**  
@@ -49,7 +48,7 @@ ms.locfileid: "66054478"
  **パスワード**  
  Windows 認証を使用しない場合、接続に使用するパスワードを入力する必要があります。  
   
- **Test**  
+ **テスト**  
  接続マネージャーの設定をテストします。  
   
 ## <a name="see-also"></a>参照  

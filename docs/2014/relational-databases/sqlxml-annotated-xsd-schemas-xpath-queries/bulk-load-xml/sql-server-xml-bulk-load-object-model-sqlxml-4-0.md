@@ -32,10 +32,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1bf68b7f2c8fd1a2cc8d753ddd6348e8161b55c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013293"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>SQL Server XML 一括読み込みオブジェクト モデル (SQLXML 4.0)
@@ -45,7 +45,7 @@ ms.locfileid: "66013293"
  実行  
  パラメーターとして渡されるスキーマ ファイルとデータ ファイル (またはストリーム) を使用して、データの一括読み込みを行います。  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
  BulkLoad  
  一括読み込みを実行するかどうかを指定します。 このプロパティは、スキーマのみを生成する場合に便利です (以降の SchemaGen、SGDropTables、SGUseID の各プロパティを参照してください)。一括読み込みは実行されません。 このプロパティはブール値をとります。 このプロパティを TRUE に設定すると、XML 一括読み込みが行われます。 FALSE に設定すると、XML 一括読み込みは行われません。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66013293"
  このプロパティを TRUE に設定すると、XML 一括読み込みで挿入される値ごとに制約がチェックされ、制約違反があるとエラーが発生します。  
   
 > [!NOTE]  
->  このプロパティを FALSE のままにしておくには、対象テーブルに対する**ALTER TABLE**権限が必要です。 詳細については、「 [ALTER TABLE &#40;transact-sql&#41;](/sql/t-sql/statements/alter-table-transact-sql)」を参照してください。  
+>  このプロパティを FALSE のままにしておくには、対象テーブルに対する**ALTER TABLE**権限が必要です。 詳細については、「[ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)」を参照してください。  
   
  既定値は FALSE です。 FALSE に設定した場合、XML 一括読み込みでは挿入操作中、制約が無視されます。 現在の実装では、マッピング スキーマの主キーと外部キーのリレーションシップの順序でテーブルを定義する必要があります。 つまり、主キーが設定されているテーブルは、外部キーが設定されている対応テーブルよりも前に定義する必要があります。このように定義しない場合、XML 一括読み込みは失敗します。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "66013293"
  TRUE に設定した場合は、挿入操作中、トリガーが通常どおり起動されます。  
   
 > [!NOTE]  
->  このプロパティを FALSE のままにしておくには、対象テーブルに対する**ALTER TABLE**権限が必要です。 詳細については、「 [ALTER TABLE &#40;transact-sql&#41;](/sql/t-sql/statements/alter-table-transact-sql)」を参照してください。  
+>  このプロパティを FALSE のままにしておくには、対象テーブルに対する**ALTER TABLE**権限が必要です。 詳細については、「[ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)」を参照してください。  
   
  ID 配布が実行されている場合は、このオプションは適用されず、トリガーはオンのままになる点に注意してください。 これに該当するのは、親が ID フィールドで、その値が生成時に子に指定されるリレーションシップが定義されており、かつ `KeepIdentity=False` の場合です。  
   
@@ -103,13 +103,12 @@ ms.locfileid: "66013293"
  KeepIdentity  
  ソース ファイルにある ID 型列値の取り扱い方法を指定します。 このプロパティはブール値をとります。 このプロパティを TRUE に設定すると、XML 一括読み込みでは、ソース ファイルで指定されている値が ID 列に割り当てられます。 このプロパティを FALSE に設定すると、一括読み込み操作では、ソースで指定されている ID 列値は無視されます。 この場合、ID 列値は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] によって割り当てられます。  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で生成される値が ID 列に格納される場合に、一括読み込みでこの列を参照する外部キー列も読み込まれる場合、一括読み込みではこれらの ID 値が外部キー列に適切に割り当てられます。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で生成される値が ID 列に格納される場合に、一括読み込みでこの列を参照する外部キー列も読み込まれる場合、一括読み込みではこれらの ID 値が外部キー列に適切に割り当てられます。  
   
  このプロパティの値は、一括読み込みの対象となるすべての列に適用されます。 既定値は TRUE です。  
   
 > [!NOTE]  
->  このプロパティを TRUE のままにするには、対象テーブルに対する**ALTER TABLE**権限が必要です。 この権限がない場合は、値を FALSE に設定する必要があります。 詳細については、「 [ALTER TABLE &#40;transact-sql&#41;](/sql/t-sql/statements/alter-table-transact-sql)」を参照してください。  
+>  このプロパティを TRUE のままにするには、対象テーブルに対する**ALTER TABLE**権限が必要です。 この権限がない場合は、値を FALSE に設定する必要があります。 詳細については、「[ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)」を参照してください。  
   
  KeepNulls  
  列に対応する属性または子要素が XML ドキュメントに見つからない場合に、その列に使用する値を指定します。 このプロパティはブール値をとります。 このプロパティを TRUE に設定すると、XML 一括読み込みでは列に NULL 値が割り当てられます。 サーバーで列の既定値が設定されている場合でも、その既定値は割り当てられません。 このプロパティの値は、一括読み込みの対象となるすべての列に適用されます。  
@@ -133,8 +132,7 @@ ms.locfileid: "66013293"
  既定値は FALSE です。  
   
  SGUseID  
- 
-  `id` 型として指定されているマッピング スキーマの属性を、テーブル作成時の PRIMARY KEY 制約の作成に使用できるかどうかを指定します。 このプロパティは、SchemaGen プロパティが TRUE に設定されている場合に使用します。 SGUseID が TRUE の場合、SchemaGen ユーティリティは、 `dt:type="id"`が主キー列として指定されている属性を使用し、テーブルの作成時に適切な primary key 制約を追加します。  
+ `id` 型として指定されているマッピング スキーマの属性を、テーブル作成時の PRIMARY KEY 制約の作成に使用できるかどうかを指定します。 このプロパティは、SchemaGen プロパティが TRUE に設定されている場合に使用します。 SGUseID が TRUE の場合、SchemaGen ユーティリティは、 `dt:type="id"`が主キー列として指定されている属性を使用し、テーブルの作成時に適切な primary key 制約を追加します。  
   
  既定値は FALSE です。  
   

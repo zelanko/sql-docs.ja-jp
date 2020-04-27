@@ -19,26 +19,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f93a60e7b6c1dfa2a0c7577aafbbb68d5068c629
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013808"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>sql:limit-field および sql:limit-value を使用した、値のフィルター選択 (SQLXML 4.0)
   データベース クエリから返される行を、一定の制限値に基づいて制限することができます。 制限の対象となるデータベース列を識別し、返されるデータのフィルター選択に使用する制限値を指定するには、`sql:limit-field` 注釈と `sql:limit-value` 注釈を使用します。  
   
- 
-  `sql:limit-field` 注釈では、制限の対象となる列を指定します。この注釈は、マップされる要素または属性ごとに使用できます。  
+ `sql:limit-field` 注釈では、制限の対象となる列を指定します。この注釈は、マップされる要素または属性ごとに使用できます。  
   
- 
-  `sql:limit-value` 注釈では、`sql:limit-field` 注釈で指定された列に適用する制限値を指定します。 
-  `sql:limit-value` 注釈は省略可能です。 を`sql:limit-value`指定しない場合は、NULL 値が想定されます。  
+ `sql:limit-value` 注釈では、`sql:limit-field` 注釈で指定された列に適用する制限値を指定します。 `sql:limit-value` 注釈は省略可能です。 を`sql:limit-value`指定しない場合は、NULL 値が想定されます。  
   
 > [!NOTE]  
 >  マップされる SQL 列が `sql:limit-field` 型の場合に `real` を指定すると、SQLXML 4.0 では XML スキーマで指定されているとおり、`sql:limit-value` 指定値として `nvarchar` が変換されます。 ここで、10 進数の制限値を完全な科学的表記法で指定する必要があります。 詳細については、後の例 B を参照してください。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例を使用して実際のサンプルを作成するには、次がインストールされている必要があります。  
   
 -   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client  

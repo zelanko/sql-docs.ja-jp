@@ -23,24 +23,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 677d769f54dab338e65b171bed50b6abb69e356a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010786"
 ---
 # <a name="sqlxml-managed-classes"></a>SQLXML マネージド クラス
-  
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML マネージド クラスでは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 内で SQLXML 4.0 の機能へのアクセスが提供されます。 SQLXML マネージド クラスを使用すると、C# アプリケーションを作成して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスから XML データにアクセスしたり、.NET Framework 環境にデータを取り込んだり、データを処理したり、変更を DiffGram として [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に送信し適用することができます。 SQL マネージド クラスを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースに更新を適用するときには、マッピング スキーマを使用する必要があります。 実際のサンプルについては、「 [.Net 環境での SQLXML 機能へのアクセス](accessing-sqlxml-functionality-in-the-net-environment.md)」を参照してください。  
   
  SQLXML 4.0 で SQLXML マネージド クラスを使用するには、Microsoft Visual Studio をインストールする必要があります。  
   
 > [!NOTE]  
->  .NET Framework には [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .NET データ プロバイダーが含まれています。 このプロバイダーは .NET 環境から [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] へのアクセスに使用できますが、扱えるのは従来の SQL クエリ (FOR XML クエリ以外のリレーショナル データベース クエリ) だけです。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で XML テンプレートやサーバー側の XPath クエリを実行することはできません。  
+>  .NET Framework には [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .NET データ プロバイダーが含まれています。 このプロバイダーは .NET 環境から [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] へのアクセスに使用できますが、扱えるのは従来の SQL クエリ (FOR XML クエリ以外のリレーショナル データベース クエリ) だけです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で XML テンプレートやサーバー側の XPath クエリを実行することはできません。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [SQLXML マネージド クラス オブジェクト モデル](../../../database-engine/dev-guide/sqlxml-managed-classes-object-model.md)  
+ [SQLXML マネージ クラス オブジェクト モデル](../../../database-engine/dev-guide/sqlxml-managed-classes-object-model.md)  
  SQLXML マネージクラスとそのプロパティおよびメソッドについて説明します。  
   
  [SQLXML マネージド クラスの使用](sqlxml-4-0-net-framework-support-managed-classes.md)  

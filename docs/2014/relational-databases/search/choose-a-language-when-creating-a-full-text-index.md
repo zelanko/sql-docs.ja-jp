@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5f045933735d2a26b1e9007868f96680bef4fc47
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012732"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>フルテキスト インデックス作成時の言語の選択
@@ -32,7 +32,7 @@ ms.locfileid: "66012732"
 > [!NOTE]  
 >  列レベルの言語をフルテキスト インデックス列に対して指定するには、列の指定時に LANGUAGE *language_term* 句を使用します。 詳細については、「[CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)」および「[ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql)」を参照してください。  
   
-##  <a name="langsupp"></a> フルテキスト検索の言語サポート  
+##  <a name="language-support-in-full-text-search"></a><a name="langsupp"></a> フルテキスト検索の言語サポート  
  ここでは、ワード ブレーカーとステミング機能の概要を示し、列レベルの言語の LCID がフルテキスト検索で使用されるしくみについて説明します。  
   
 ### <a name="introduction-to-word-breakers-and-stemmers"></a>ワード ブレーカーとステミング機能の概要  
@@ -49,8 +49,7 @@ ms.locfileid: "66012732"
   
 -   Security  
   
-     言語コンポーネントのセキュリティが強化された[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ため、新しいワードブレーカーは既定で有効になっています。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の全体的なセキュリティと堅牢性を強化するためには、ワード ブレーカーやフィルターなどの外部コンポーネントに署名することを強くお勧めします。 次のようにフルテキストを構成すると、これらのコンポーネントが署名されていることを確認できます。  
+     言語コンポーネントのセキュリティが強化された[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ため、新しいワードブレーカーは既定で有効になっています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の全体的なセキュリティと堅牢性を強化するためには、ワード ブレーカーやフィルターなどの外部コンポーネントに署名することを強くお勧めします。 次のようにフルテキストを構成すると、これらのコンポーネントが署名されていることを確認できます。  
   
     ```  
     EXEC sp_fulltext_service 'verify_signature';  
@@ -70,12 +69,11 @@ ms.locfileid: "66012732"
  フルテキスト インデックスの作成時には、有効な言語名を各列に対して指定する必要があります。 言語名が有効であっても [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql) カタログ ビューによって返されない場合、同じ言語ファミリに使用可能な言語名があれば、最も近いものがフルテキスト検索に使用されます。 それ以外の場合は、代わりにニュートラル ワード ブレーカーがフルテキスト検索に使用されます。 このフォールバック動作は、再呼び出しの精度に影響する可能性があります。 したがって、フルテキスト インデックスの作成時には、有効かつ使用可能な言語名を各列に対して指定することを強くお勧めします。  
   
 > [!NOTE]  
->  LCID は、フルテキスト インデックス作成で有効なすべてのデータ型 (`char` 型や `nchar` 型など) に適用されます。 
-  `char`、`varchar`、`text` 型の列の並べ替え順を、LCID で識別された言語とは異なる言語に設定した場合でも、それらの列に対してフルテキスト インデックスを作成したりクエリを実行したりするときには LCID が使用されます。  
+>  LCID は、フルテキスト インデックス作成で有効なすべてのデータ型 (`char` 型や `nchar` 型など) に適用されます。 `char`、`varchar`、`text` 型の列の並べ替え順を、LCID で識別された言語とは異なる言語に設定した場合でも、それらの列に対してフルテキスト インデックスを作成したりクエリを実行したりするときには LCID が使用されます。  
   
 
   
-##  <a name="breaking"></a> 単語分割  
+##  <a name="word-breaking"></a><a name="breaking"></a> 単語分割  
  インデックス作成の対象テキストを単語の境界でトークン化するのは、言語固有のワード ブレーカーです。 したがって、単語を区切る動作は言語によって異なります。 1 つの言語 (x) を使用して複数の言語 (x、y、および z) のインデックスを作成した場合、予期しない動作結果が生じることがあります。 たとえば、ダッシュ (-) やコンマ (,) などの単語区切り要素は、言語によって無視されたりされなかったりします。 また、まれに、ある単語の語幹が言語によって異なる場合に、予期しない語幹検索の動作が生じることがあります。 たとえば、英語では通常、単語の境界は空白またはなんらかの句読点になります。 ドイツ語などの他の言語では、複数の単語や文字を組み合わせることができます。 したがって、列レベルで言語を選択する場合は、その列の行に格納されると予想される言語を選択する必要があります。  
   
 ### <a name="western-languages"></a>西洋言語  
@@ -102,14 +100,13 @@ ms.locfileid: "66012732"
   
 
   
-##  <a name="stemming"></a> ステミング  
+##  <a name="stemming"></a><a name="stemming"></a> ステミング  
  列レベルで言語を選択する際には、ステミングについても考慮します。 フルテキスト クエリでの*ステマー* は、特定の言語の単語に対し、語幹から派生した語形 (変化形) をすべて検索するプロセスです。 汎用のワード ブレーカーで複数の言語を処理する場合、列に対して指定された言語に対してのみステミング プロセスが機能します。列内のその他の言語に対しては、ステミング プロセスが機能しません。 たとえば、ドイツ語のステミング機能は、英語やスペイン語などに対して機能しません。 このため、クエリ時に選択した言語によっては、再呼び出しに影響する場合があります。  
   
 
   
-##  <a name="type"></a> 列の型がフルテキスト検索に及ぼす影響  
- 言語を選択する際のもう 1 つの注意点は、データの表記方法に関連するものです。 
-  `varbinary(max)` 列に格納されていないデータについては、特別なフィルター処理は実行されません。 テキストはそのままの形で単語を分解するコンポーネント (ワード ブレーカー) に渡されます。  
+##  <a name="effect-of-column-type-on-full-text-search"></a><a name="type"></a> 列の型がフルテキスト検索に及ぼす影響  
+ 言語を選択する際のもう 1 つの注意点は、データの表記方法に関連するものです。 `varbinary(max)` 列に格納されていないデータについては、特別なフィルター処理は実行されません。 テキストはそのままの形で単語を分解するコンポーネント (ワード ブレーカー) に渡されます。  
   
  また、ワード ブレーカーは主に記述されたテキストを処理することを目的として設計されています。 したがって、HTML などのなんらかのマークアップがテキストに含まれている場合には、言語面での精度が高いインデックス作成と検索は期待できません。 この場合、2つの選択肢があります。推奨される方法は、テキストデータを`varbinary(max)`列に格納し、そのドキュメントの種類を指定してフィルター処理できるようにすることです。 この方法を選択できない場合は、ニュートラル ワード ブレーカーの使用を検討してください。また、可能であれば、ノイズ ワードの一覧にマークアップ データ (HTML の「br」など) を追加します。  
   
@@ -118,7 +115,7 @@ ms.locfileid: "66012732"
   
 
   
-##  <a name="nondef"></a> フルテキスト クエリにおける既定以外の列レベル言語の指定  
+##  <a name="specifying-a-non-default-column-level-language-in-a-full-text-query"></a><a name="nondef"></a> フルテキスト クエリにおける既定以外の列レベル言語の指定  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の既定のフルテキスト検索では、フルテキスト句内に含まれている各列に対して指定した言語を使用して、クエリ用語が解析されます。 この動作をオーバーライドするには、クエリ時に既定以外の言語を指定します。 言語がサポートされていて、そのリソースがインストールされていれば、 *CONTAINS* 、 [CONTAINSTABLE](/sql/t-sql/queries/contains-transact-sql)、 [FREETEXT](/sql/relational-databases/system-functions/containstable-transact-sql)、 [FREETEXTTABLE](/sql/t-sql/queries/freetext-transact-sql)クエリの LANGUAGE [language_term](/sql/relational-databases/system-functions/freetexttable-transact-sql) 句を使用して、クエリ用語の単語区切り、ステマー、類義語辞典、およびストップワードの処理に使用する言語を指定できます。  
   
 

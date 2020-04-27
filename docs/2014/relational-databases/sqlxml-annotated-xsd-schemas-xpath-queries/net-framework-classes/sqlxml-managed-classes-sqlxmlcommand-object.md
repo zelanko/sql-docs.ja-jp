@@ -31,10 +31,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d002208a83b58a4c8547bc6ce85db073ced70974
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010743"
 ---
 # <a name="sqlxmlcommand-object-sqlxml-managed-classes"></a>SqlXmlCommand オブジェクト (SQLXML マネージド クラス)
@@ -73,7 +73,7 @@ public SqlXmlCommand(string cnString)
  void ClearParameters ()  
  指定したコマンド オブジェクトに作成されたパラメーターを消去します。 このメソッドは、同一のコマンド オブジェクトで複数のクエリを実行する場合に便利です。  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
  SqlXmlCommand オブジェクトは、次のプロパティもサポートしています。  
   
  ClientSideXml  
@@ -106,7 +106,7 @@ public SqlXmlCommand(string cnString)
  CommandType  
  コマンドの種類を指定します。 このプロパティは、実行するコマンドの種類を指定するときに使用します。 コマンドの種類の値を、次の表に示します。 実際のサンプルについては、「 [.Net 環境での SQLXML 機能へのアクセス](accessing-sqlxml-functionality-in-the-net-environment.md)」を参照してください。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
 |SqlXmlCommandType .Sql|SQL コマンド (`SELECT * FROM Employees FOR XML AUTO` など) を実行します。|  
 |SqlXmlCommandType. XPath|XPath コマンド (`Employees[@EmployeeID=1]` など) を実行します。|  

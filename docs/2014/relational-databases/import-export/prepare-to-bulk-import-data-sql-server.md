@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 95deda34b673161bf63c29a912564f39425583a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011863"
 ---
 # <a name="prepare-to-bulk-import-data-sql-server"></a>データの一括インポートの準備 (SQL Server)
@@ -34,12 +34,11 @@ ms.locfileid: "66011863"
 > [!NOTE]  
 >  リモート テーブルへのデータの一括インポートはサポートされていません。  
   
- データファイルからの[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスにデータを一括インポートする場合は、次のガイドラインに従います。  
+ データ ファイルから [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにデータを一括インポートするときは、次のガイドラインに従ってください。  
   
 -   使用しているユーザー アカウントに必要な権限を取得する。  
   
-     
-  **bcp** ユーティリティ、BULK INSERT ステートメント、INSERT ...SELECT * FROM OPENROWSET(BULK...) ステートメントのいずれかで使用するユーザー アカウントには、テーブル操作に必要な権限がテーブルの所有者によって割り当てられている必要があります。 各方法に必要な権限の詳細については、「 [bcp ユーティリティ](../../tools/bcp-utility.md)」、「 [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)」、および「 [BULK INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)) を使用します。  
+     **bcp** ユーティリティ、BULK INSERT ステートメント、INSERT ...SELECT * FROM OPENROWSET(BULK...) ステートメントのいずれかで使用するユーザー アカウントには、テーブル操作に必要な権限がテーブルの所有者によって割り当てられている必要があります。 各方法に必要な権限の詳細については、「 [bcp ユーティリティ](../../tools/bcp-utility.md)」、「 [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)」、および「 [BULK INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)) を使用します。  
   
 -   一括ログ復旧モデルを使用する。  
   
@@ -68,11 +67,11 @@ ms.locfileid: "66011863"
      多くのユーティリティやテキスト エディターで隠し文字を表示できます。隠し文字は、通常データ ファイルの末尾にあります。 一括インポート操作のとき、ASCII データ ファイルに隠し文字があると、"予期しない NULL が見つかりました" というエラーが発生することがあります。 隠し文字をすべて検索して削除することにより、この問題を回避することができます。  
   
 ## <a name="see-also"></a>参照  
- [Bcp ユーティリティ &#40;SQL Server を使用した一括データのインポートとエクスポート&#41;](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)   
- [BULK INSERT または OPENROWSET&#40;BULK... &#41; &#40;SQL Server を使用した一括データのインポート&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)   
+ [bcp ユーティリティを使用した一括データのインポートとエクスポート &#40;SQL Server&#41;](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)   
+ [BULK INSERT または OPENROWSET&#40;BULK...&#41; を使用した一括データのインポート &#40;SQL Server&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)   
  [bcp ユーティリティ](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [一括インポートまたは一括エクスポートのデータ形式 &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
- [OPENROWSET &#40;Transact-sql&#41;](/sql/t-sql/functions/openrowset-transact-sql)  
+ [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)  
   
   

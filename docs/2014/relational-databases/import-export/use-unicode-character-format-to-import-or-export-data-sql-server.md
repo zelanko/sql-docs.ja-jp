@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 34e8f4a5b49c9e023c224e62c23326864ef26f65
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011650"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Unicode 文字形式を使用したデータのインポートまたはエクスポート (SQL Server)
@@ -41,17 +41,17 @@ ms.locfileid: "66011650"
   
  Unicode 文字形式は、次のコマンド ライン オプションでサポートされています。  
   
-|command|オプション|[説明]|  
+|command|オプション|説明|  
 |-------------|------------|-----------------|  
 |**bcp**|**-w**|Unicode 文字形式を使用します。|  
 |BULK INSERT|DATAFILETYPE **= '** widechar **'**|データの一括インポート時に Unicode 文字形式を使用します。|  
   
- 詳細については、[bcp ユーティリティ](../../tools/bcp-utility.md)、[BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)」、または「[OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)」を参照してください。  
+ 詳細については、「[bcp ユーティリティ](../../tools/bcp-utility.md)」、「[BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)」、または「[OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)」を参照してください。  
   
 > [!NOTE]  
 >  また、フォーマット ファイルでフィールドごとに形式を指定することもできます。 詳細については、「 [データのインポートまたはエクスポート用のフォーマット ファイル &#40;SQL Server&#41;](format-files-for-importing-or-exporting-data-sql-server.md)」を参照してください。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例は、 **bcp** を使用して Unicode 文字データを一括エクスポートする方法と、BULK INSERT を使用して Unicode 文字データを一括インポートする方法を示しています。  
   
 ### <a name="sample-table"></a>サンプル テーブル  
@@ -81,15 +81,13 @@ SELECT Col1,Col2,Col3 FROM myTestUniCharData;
 ### <a name="using-bcp-to-bulk-export-unicode-character-data"></a>bcp を使用した Unicode 文字データの一括エクスポート  
  テーブルからデータ ファイルにデータをエクスポートするには、 **bcp** で **out** オプションと次の修飾子を組み合わせて使用します。  
   
-|修飾子|[説明]|  
+|修飾子|説明|  
 |----------------|-----------------|  
 |**-w**|Unicode 文字形式を指定します。|  
-|**-t**`,`|コンマ (`,`) をフィールド ターミネータとして指定します。<br /><br /> 注: 既定のフィールドターミネータは、タブ Unicode 文字 (\t) です。 詳細については、「 [フィールド ターミネータと行ターミネータの指定 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)」を参照してください。|  
-|**-T**|
-  **bcp** ユーティリティが統合セキュリティを使用した信頼関係接続を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続することを指定します。 **-T**が指定されていない場合、正常にログインするには **-U**および **-P**を指定する必要があります。|  
+|**-t** `,`|コンマ (`,`) をフィールド ターミネータとして指定します。<br /><br /> 注: 既定のフィールドターミネータは、タブ Unicode 文字 (\t) です。 詳細については、「 [フィールド ターミネータと行ターミネータの指定 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)」を参照してください。|  
+|**-T**|**bcp** ユーティリティが統合セキュリティを使用した信頼関係接続を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続することを指定します。 **-T** を指定しない場合、正常にログインするには **-U** と **-P** を指定する必要があります。|  
   
- 次の例では、Unicode 文字形式のデータを `myTestUniCharData` テーブルから `myTestUniCharData-w.Dat` という名前の新しいデータ ファイルに一括エクスポートします。このデータ ファイルでは、フィールド ターミネータとしてコンマ (`,`) が使用されます。 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows コマンド プロンプトで、次のように入力します。  
+ 次の例では、Unicode 文字形式のデータを `myTestUniCharData` テーブルから `myTestUniCharData-w.Dat` という名前の新しいデータ ファイルに一括エクスポートします。このデータ ファイルでは、フィールド ターミネータとしてコンマ (`,`) が使用されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows コマンド プロンプトで、次のように入力します。  
   
 ```  
 bcp AdventureWorks2012..myTestUniCharData out C:\myTestUniCharData-w.Dat -w -t, -T  
@@ -97,8 +95,7 @@ bcp AdventureWorks2012..myTestUniCharData out C:\myTestUniCharData-w.Dat -w -t, 
 ```  
   
 ### <a name="using-bulk-insert-to-bulk-import-unicode-character-data"></a>BULK INSERT を使用した Unicode 文字データの一括インポート  
- 次の例では、`BULK INSERT` を使用して、`myTestUniCharData-w.Dat` データ ファイルのデータを `myTestUniCharData` テーブルにインポートします。 既定以外のフィールド ターミネータ (`,`) は、ステートメントで宣言する必要があります。 
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] クエリ エディターで、次のコードを実行します。  
+ 次の例では、`BULK INSERT` を使用して、`myTestUniCharData-w.Dat` データ ファイルのデータを `myTestUniCharData` テーブルにインポートします。 既定以外のフィールド ターミネータ (`,`) は、ステートメントで宣言する必要があります。 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] クエリ エディターで、次のコードを実行します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -115,22 +112,22 @@ GO
   
 ```  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
  **一括インポートまたは一括エクスポートのデータ形式を使用するには**  
   
 -   [以前のバージョンの SQL Server からのネイティブ形式データおよび文字形式データのインポート](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
--   [文字形式を使用してデータをインポートまたはエクスポート &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
+-   [文字形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
   
--   [ネイティブ形式を使用してデータをインポートまたはエクスポート &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
+-   [ネイティブ形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
   
--   [Unicode ネイティブ形式を使用してデータをインポートまたはエクスポート &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
+-   [Unicode ネイティブ形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
 ## <a name="see-also"></a>参照  
  [bcp ユーティリティ](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
- [OPENROWSET &#40;Transact-sql&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
- [データ型 &#40;Transact-sql&#41;](/sql/t-sql/data-types/data-types-transact-sql)   
- [Collation and Unicode Support](../collations/collation-and-unicode-support.md)  
+ [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
+ [データ型 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   
+ [照合順序と Unicode のサポート](../collations/collation-and-unicode-support.md)  
   
   

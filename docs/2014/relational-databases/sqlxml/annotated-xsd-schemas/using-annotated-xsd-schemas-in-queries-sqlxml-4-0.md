@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c435ff3bacecb101784695fe42b8b2158625e058
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014466"
 ---
 # <a name="using-annotated-xsd-schemas-in-queries-sqlxml-40"></a>クエリでの注釈付き XSD スキーマの使用 (SQLXML 4.0)
@@ -116,11 +116,9 @@ ms.locfileid: "66014466"
   
  このテンプレートでは 2 つの XPath クエリも指定しています。 ** \<Xpath クエリ>** の各要素は、 `mapping-schema`属性を指定することによって、マッピングスキーマを一意に識別します。  
   
- テンプレートでインラインスキーマを指定する場合は、 `sql:is-mapping-schema` ** \<xsd: schema>** 要素で注釈も指定する必要があります。 
-  `sql:is-mapping-schema` はブール値 (0 = false、1=true) をとります。 **Sql:-mapping-schema = "1"** のインラインスキーマは、インライン注釈が付けられたスキーマとして扱われ、XML ドキュメントでは返されません。  
+ テンプレートでインラインスキーマを指定する場合は、 `sql:is-mapping-schema` ** \<xsd: schema>** 要素で注釈も指定する必要があります。 `sql:is-mapping-schema` はブール値 (0 = false、1=true) をとります。 **Sql:-mapping-schema = "1"** のインラインスキーマは、インライン注釈が付けられたスキーマとして扱われ、XML ドキュメントでは返されません。  
   
- 
-  `sql:is-mapping-schema` 注釈は、テンプレートの名前空間 `urn:schemas-microsoft-com:xml-sql` に属しています。  
+ `sql:is-mapping-schema` 注釈は、テンプレートの名前空間 `urn:schemas-microsoft-com:xml-sql` に属しています。  
   
  この例をテストするには、テンプレート (InlineSchemaTemplate.xml) をローカルのディレクトリに保存した後、SQLXML 4.0 テスト スクリプト (Sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。 詳細については、「ADO を使用した[SQLXML 4.0 クエリの実行](../using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   

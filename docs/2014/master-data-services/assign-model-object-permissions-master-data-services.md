@@ -14,14 +14,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a1477f934dfa8a23fa5498124b74c9a150b24a33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480072"
 ---
 # <a name="assign-model-object-permissions-master-data-services"></a>モデル オブジェクト権限を割り当てる (Master Data Services)
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、 **の** [エクスプローラー] [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]機能領域内のデータにユーザーまたはグループがアクセスできるようにする必要があるとき、またはユーザーまたはグループを管理者にする必要があるときは、モデル オブジェクトに権限を割り当てます。  
   
 > [!NOTE]  
@@ -30,35 +29,29 @@ ms.locfileid: "65480072"
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
--   
-  **[ユーザー/グループの権限]** 機能領域にアクセスするための権限が必要です。  
+-   **[ユーザー/グループの権限]** 機能領域にアクセスするための権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 (マスター データ サービス)](administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](administrators-master-data-services.md)」を参照してください。  
   
 ### <a name="to-assign-model-object-permissions"></a>モデル オブジェクト権限を割り当てるには  
   
-1.  
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[ユーザー/グループの権限]** をクリックします。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[ユーザー/グループの権限]** をクリックします。  
   
-2.  
-  **[ユーザー]** または **[グループ]** ページで、編集するユーザーまたはグループの行を選択します。  
+2.  **[ユーザー]** または **[グループ]** ページで、編集するユーザーまたはグループの行を選択します。  
   
-3.  
-  **[選択したユーザーの編集]** をクリックします。  
+3.  **[選択したユーザーの編集]** をクリックします。  
   
-4.  
-  **[モデル]** タブをクリックします。  
+4.  **[モデル]** タブをクリックします。  
   
-5.  
-  **[モデル]** ボックスの一覧からモデルを選択します (オプション)。  
+5.  **[モデル]** ボックスの一覧からモデルを選択します (オプション)。  
   
-6.  [**編集**] をクリックします。  
+6.  **[編集]** をクリックします。  
   
 7.  ツリーを展開して、権限を割り当てるモデル オブジェクトをクリックします。  
   
 8.  メニューから、[**読み取り**専用]、[**更新**]、または [**拒否**] を選択します。  
   
-9. **[保存]** をクリックします。  
+9. **[Save]** (保存) をクリックします。  
   
 ## <a name="next-steps"></a>次の手順  
   
@@ -67,6 +60,6 @@ ms.locfileid: "65480072"
 ## <a name="see-also"></a>参照  
  [マスターデータサービス&#41;&#40;モデルオブジェクト権限の削除](../../2014/master-data-services/delete-model-object-permissions-master-data-services.md)   
  [モデルオブジェクト権限 &#40;マスターデータサービス&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
- [モデル管理者 &#40;マスターデータサービスを作成し&#41;](../../2014/master-data-services/create-a-model-administrator-master-data-services.md)  
+ [モデル管理者を作成する (マスター データ サービス)](../../2014/master-data-services/create-a-model-administrator-master-data-services.md)  
   
   

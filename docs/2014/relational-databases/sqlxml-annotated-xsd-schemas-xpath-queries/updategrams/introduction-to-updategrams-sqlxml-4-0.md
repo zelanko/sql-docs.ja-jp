@@ -23,10 +23,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 114bc96623b608cfbb520a9d2f35f23a04310a74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014799"
 ---
 # <a name="introduction-to-updategrams-sqlxml-40"></a>アップデートグラムの概要 (SQLXML 4.0)
@@ -158,8 +158,7 @@ ms.locfileid: "66014799"
 ```  
   
 ## <a name="working-with-characters-valid-in-sql-server-but-not-valid-in-xml"></a>SQL Server で有効であり、XML で有効でない文字の取り扱い  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、テーブル名に空白を含めることができます。 ただし、このようなテーブル名は XML では有効でありません。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、テーブル名に空白を含めることができます。 ただし、このようなテーブル名は XML では有効でありません。  
   
  有効な[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]識別子であるが有効な XML 識別子ではない文字をエンコードする\_\_には、エンコード値として ' __xHHHH ' を使用します。ここで、HHHH は、最上位ビットから順に、文字の4桁の16進数の UCS 2 コードを表します。 このエンコード方式を使用すると、スペース文字は x0020 (スペース文字の4桁の16進コード) に置き換えられます。このため、の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]テーブル名 [Order Details] は XML\_で _x005B_Order_x0020_Details_x005D になります。  
   

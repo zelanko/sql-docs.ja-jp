@@ -15,28 +15,25 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9c4d9b65fed30d09bf739271131d3b83afcd0902
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010138"
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM (SQL Server)
-  FILESTREAM を使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ベースのアプリケーションで非構造化データ (ドキュメントやイメージなど) をファイル システムに格納できます。 これにより、ファイル システムの豊富なストリーミング API と高いパフォーマンスをアプリケーションで活用できるほか、非構造化データとそれに対応する構造化データの間でトランザクションの一貫性も維持されます。  
+  FILESTREAM を使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ベースのアプリケーションで非構造化データ (ドキュメントやイメージなど) をファイル システムに格納できます。 これにより、ファイル システムの豊富なストリーミング API と高いパフォーマンスをアプリケーションで活用できるほか、非構造化データとそれに対応する構造化データの間でトランザクションの一貫性も維持されます。  
   
- FILESTREAM は、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]バイナリラージオブジェクト (BLOB) データ`varbinary(max)`をファイルシステム上のファイルとして格納することにより、と NTFS ファイルシステムを統合します。 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、FILESTREAM データの挿入、更新、クエリ、検索、およびバックアップを行うことができます。 Win32 ファイル システム インターフェイスによるデータへのストリーミング アクセスが可能になります。  
+ FILESTREAM は、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]バイナリラージオブジェクト (BLOB) データ`varbinary(max)`をファイルシステム上のファイルとして格納することにより、と NTFS ファイルシステムを統合します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、FILESTREAM データの挿入、更新、クエリ、検索、およびバックアップを行うことができます。 Win32 ファイル システム インターフェイスによるデータへのストリーミング アクセスが可能になります。  
   
- FILESTREAM では、NT システム キャッシュを使用してファイル データをキャッシュします。 これにより、FILESTREAM データが [!INCLUDE[ssDE](../../includes/ssde-md.md)] のパフォーマンスに与える影響を軽減できます。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバッファー プールは使用されないため、そのメモリはクエリの処理に使用できます。  
+ FILESTREAM では、NT システム キャッシュを使用してファイル データをキャッシュします。 これにより、FILESTREAM データが [!INCLUDE[ssDE](../../includes/ssde-md.md)] のパフォーマンスに与える影響を軽減できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバッファー プールは使用されないため、そのメモリはクエリの処理に使用できます。  
   
  FILESTREAM は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をインストールまたはアップグレードしたときに自動的には有効になりません。 FILESTREAM は、SQL Server 構成マネージャーと [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して有効にする必要があります。 FILESTREAM を使用するには、特殊なファイル グループを格納するためにデータベースを作成または変更する必要があります。 次に、テーブルを作成または変更して、FILESTREAM 属性を格納する `varbinary(max)` 列を含めます。 これらの手順を完了すると、 [!INCLUDE[tsql](../../includes/tsql-md.md)] および Win32 を使用して FILESTREAM データを管理できるようになります。  
   
  FILESTREAM のインストールと使用の詳細については、[関連するタスク](#reltasks)の一覧を参照してください。  
   
-##  <a name="whentouse"></a>FILESTREAM を使用する場合  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では BLOB を、データをテーブルに格納する標準の `varbinary(max)` データとして使用することも、データをファイル システムに格納する FILESTREAM `varbinary(max)` オブジェクトとして使用することもできます。 データベース ストレージとファイル システム ストレージのどちらを使用するかは、データのサイズと用途によって決まります。 次の条件が true の場合は、FILESTREAM を使用することを検討する必要があります。  
+##  <a name="when-to-use-filestream"></a><a name="whentouse"></a>FILESTREAM を使用する場合  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では BLOB を、データをテーブルに格納する標準の `varbinary(max)` データとして使用することも、データをファイル システムに格納する FILESTREAM `varbinary(max)` オブジェクトとして使用することもできます。 データベース ストレージとファイル システム ストレージのどちらを使用するかは、データのサイズと用途によって決まります。 次の条件が true の場合は、FILESTREAM を使用することを検討する必要があります。  
   
 -   格納するオブジェクトの平均的なサイズが 1 MB より大きい。  
   
@@ -47,11 +44,10 @@ ms.locfileid: "66010138"
  比較的小さなオブジェクトの場合は、`varbinary(max)` BLOB をデータベースに格納する方が一般に高いストリーミング パフォーマンスが得られます。  
   
   
-##  <a name="storage"></a>FILESTREAM ストレージ  
+##  <a name="filestream-storage"></a><a name="storage"></a>FILESTREAM ストレージ  
  FILESTREAM ストレージは、データを BLOB としてファイル システムに格納する `varbinary(max)` 列として実装されます。 BLOB のサイズはファイル システムのボリューム サイズによってのみ制限されます。 ファイル システムに格納される BLOB には、標準の `varbinary(max)` の制限 (ファイル サイズ 2 GB) は適用されません。  
   
- 列のデータをファイル システムに格納するように指定するには、`varbinary(max)` 列で FILESTREAM 属性を指定します。 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、これにより、その列のすべてのデータがファイル システム (データベース ファイル以外の場所) に格納されるようになります。  
+ 列のデータをファイル システムに格納するように指定するには、`varbinary(max)` 列で FILESTREAM 属性を指定します。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、これにより、その列のすべてのデータがファイル システム (データベース ファイル以外の場所) に格納されるようになります。  
   
  FILESTREAM データは FILESTREAM ファイル グループに格納する必要があります。 FILESTREAM ファイル グループは特殊なファイル グループで、ファイルそのものではなくファイル システム ディレクトリが含まれます。 これらのファイル システム ディレクトリは、 *データ コンテナー*と呼ばれます。 データ コンテナーは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ストレージとファイル システム ストレージの間のインターフェイスです。  
   
@@ -72,8 +68,7 @@ ms.locfileid: "66010138"
 
   
 ### <a name="integrated-security"></a>Integrated Security  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の FILESTREAM データは、その他のデータと同じように、テーブルまたは列のレベルで権限を与えることによってセキュリティで保護されます。 テーブルの FILESTREAM 列に対する権限を持つユーザーは、関連付けられているファイルを開くことができます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の FILESTREAM データは、その他のデータと同じように、テーブルまたは列のレベルで権限を与えることによってセキュリティで保護されます。 テーブルの FILESTREAM 列に対する権限を持つユーザーは、関連付けられているファイルを開くことができます。  
   
 > [!NOTE]  
 >  FILESTREAM データでは暗号化はサポートされていません。  
@@ -83,12 +78,11 @@ ms.locfileid: "66010138"
 > [!NOTE]  
 >  SQL ログインは、FILESTREAM コンテナーで使用できません。 FILESTREAM コンテナーでは NTFS 認証のみを使用できます。  
   
-##  <a name="dual"></a>Transact-sql およびファイルシステムストリーミングアクセスによる BLOB データへのアクセス  
+##  <a name="accessing-blob-data-with-transact-sql-and-file-system-streaming-access"></a><a name="dual"></a> Transact-SQL およびファイル システム ストリーミング アクセスによる BLOB データへのアクセス  
  FILESTREAM 列にデータを格納した後、それらのファイルにアクセスするには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] トランザクションか Win32 API を使用します。  
   
 ### <a name="transact-sql-access"></a>Transact-SQL アクセス  
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、FILESTREAM データの挿入、更新、および削除を行うことができます。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、FILESTREAM データの挿入、更新、および削除を行うことができます。  
   
 -   挿入操作を使用すると、null 値、空の値、または比較的短いインライン データを FILESTREAM フィールドに事前設定することができます。 ただし、大量のデータをファイルにストリーミングする場合は、Win32 インターフェイスを使用する方が効率的です。  
   
@@ -101,15 +95,15 @@ ms.locfileid: "66010138"
   
  ファイル操作はトランザクション処理なので、ファイル システムを通じて FILESTREAM ファイルを削除したりその名前を変更したりすることはできません。  
   
- **ステートメントモデル**  
+ **ステートメント モデル**  
   
  FILESTREAM のファイル システム アクセスは、ファイルのオープンとクローズを使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実現しています。 ファイル ハンドルを開くとステートメントが開始され、ハンドルを閉じると終了します。 たとえば、書き込みハンドルを閉じると、UPDATE ステートメントが完了したときのように、テーブルに登録されている AFTER トリガーが起動します。  
   
- **ストレージ名前空間**  
+ **ストレージの名前空間**  
   
  FILESTREAM では、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] が BLOB の物理ファイル システムの名前空間を制御します。 新しい組み込み関数の [PathName](/sql/relational-databases/system-functions/pathname-transact-sql)を使用すると、テーブルの各 FILESTREAM セルに対応する BLOB の論理 UNC パスを取得できます。 アプリケーションでは、この論理パスを使用して Win32 ハンドルを取得し、標準の Win32 ファイル システム インターフェイスを使用して BLOB データを操作します。 この関数は、FILESTREAM 列の値が NULL の場合は NULL を返します。  
   
- **トランザクションファイルシステムアクセス**  
+ **ファイル システム アクセスのトランザクション処理**  
   
  新しい組み込み関数の [GET_FILESTREAM_TRANSACTION_CONTEXT()](/sql/t-sql/functions/get-filestream-transaction-context-transact-sql)を使用すると、セッションが関連付けられている現在のトランザクションを表すトークンを取得できます。 このトランザクションは、既に開始され、まだ中止もコミットもされていないトランザクションである必要があります。 アプリケーションでは、トークンを取得することにより、FILESTREAM のファイル システム ストリーミング操作を、既に開始されているトランザクションにバインドできます。 この関数は、明示的に開始されたトランザクションがない場合は NULL を返します。  
   
@@ -121,8 +115,7 @@ ms.locfileid: "66010138"
   
  **分離のセマンティクス**  
   
- 分離のセマンティクスは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のトランザクション分離レベルに従います。 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] およびファイル システム アクセスでは、Read Committed 分離レベルがサポートされます。 Repeatable Read 操作、およびシリアル化可能な分離やスナップショット分離もサポートされます。 ダーティ リードはサポートされません。  
+ 分離のセマンティクスは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のトランザクション分離レベルに従います。 [!INCLUDE[tsql](../../includes/tsql-md.md)] およびファイル システム アクセスでは、Read Committed 分離レベルがサポートされます。 Repeatable Read 操作、およびシリアル化可能な分離やスナップショット分離もサポートされます。 ダーティ リードはサポートされません。  
   
  ファイル システム アクセスのオープン操作はロックを待機しません。 トランザクション分離のためにデータにアクセスできない場合、オープン操作はすぐに失敗します。 分離違反のためにオープン操作を続行できない場合は、ストリーミング API 呼び出しが ERROR_SHARING_VIOLATION で失敗します。  
   
@@ -130,7 +123,7 @@ ms.locfileid: "66010138"
   
  ハンドルへの書き込みが行われた後に FSCTL を発行すると、最後の書き込み操作は維持され、それより前の書き込みは失われます。  
   
- **ファイルシステム Api とサポートされる分離レベル**  
+ **ファイル システム API とサポートされる分離レベル**  
   
  分離違反が原因でファイル システム API がファイルを開くことができない場合、ERROR_SHARING_VIOLATION 例外が返されます。 この分離違反は、2 つのトランザクションが同じファイルにアクセスしようとしたときに発生します。 アクセス操作の結果は、ファイルが開かれたモードと、トランザクションが実行されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンに依存します。 次の表に、同じファイルにアクセスする 2 つのトランザクションで得られる可能性のある結果を示します。  
   
@@ -151,13 +144,13 @@ ms.locfileid: "66010138"
 |Repeatable Read の SELECT 用に開く。|読み取り用に開く。|どちらも成功します。|どちらも成功します。|  
 |Repeatable Read の SELECT 用に開く。|書き込み用に開く。|トランザクション 2 の開く操作は、ERROR_SHARING_VIOLATION 例外で失敗します。|トランザクション 2 の開く操作は、ERROR_SHARING_VIOLATION 例外で失敗します。|  
   
- **リモートクライアントからのライトスルー**  
+ **リモート クライアントからのライトスルー**  
   
  FILESTREAM データへのリモート ファイル システム アクセスは、サーバー メッセージ ブロック (SMB) プロトコルによって実現されます。 クライアントがリモート クライアントの場合は、書き込み操作がクライアント側でキャッシュされず、 常にサーバーに送信されます。 サーバー側でデータをキャッシュできます。 リモート クライアントで実行されるアプリケーションでは、小さな書き込み操作を統合して、大きなデータ サイズを使用して書き込み操作を減らすことをお勧めします。  
   
  FILESTREAM ハンドルを使用してメモリ マップ表示 (メモリ マップ I/O) を作成することはできません。 FILESTREAM データに対してメモリ マッピングを使用すると、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] でデータの一貫性および持続性やデータベースの整合性を保証できなくなります。  
   
-##  <a name="reltasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="reltasks"></a> 関連タスク  
  [FILESTREAM の有効化と構成](enable-and-configure-filestream.md)  
   [FILESTREAM が有効なデータベースを作成する方法](create-a-filestream-enabled-database.md)  
   [FILESTREAM データを格納するテーブルを作成する方法](create-a-table-for-storing-filestream-data.md)  
@@ -170,6 +163,6 @@ ms.locfileid: "66010138"
   [フェールオーバー クラスターでの FILESTREAM の設定](set-up-filestream-on-a-failover-cluster.md)  
   [FILESTREAM アクセスのためのファイアウォールの構成](configure-a-firewall-for-filestream-access.md)  
   
-##  <a name="relcontent"></a> 関連コンテンツ  
+##  <a name="related-content"></a><a name="relcontent"></a> 関連コンテンツ  
  [FILESTREAM と SQL Server のその他の機能との互換性](filestream-compatibility-with-other-sql-server-features.md)  
   

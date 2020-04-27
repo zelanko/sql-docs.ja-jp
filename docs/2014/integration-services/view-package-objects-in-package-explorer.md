@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b48b7b4f106b7be318777d6041c5574f9d6c3039
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054509"
 ---
 # <a name="view-package-objects-in-package-explorer"></a>パッケージ エクスプローラーでパッケージ オブジェクトを表示する
@@ -26,14 +26,11 @@ ms.locfileid: "66054509"
   
 #### <a name="to-view-the-package-structure-and-content"></a>パッケージの構造と内容を表示するには  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージ エクスプローラー **で表示するパッケージが含まれている**プロジェクトを開きます。  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージ エクスプローラー **で表示するパッケージが含まれている**プロジェクトを開きます。  
   
-2.  
-  **[パッケージ エクスプローラー]** タブをクリックします。  
+2.  **[パッケージ エクスプローラー]** タブをクリックします。  
   
-3.  
-  **[変数]**、 **[優先順位制約]**、 **[イベント ハンドラー]**、 **[接続マネージャー]**、 **[ログ プロバイダー]**、または **[実行可能ファイル]** フォルダーの内容を表示するには、各フォルダーを展開します。  
+3.  **[変数]**、 **[優先順位制約]**、 **[イベント ハンドラー]**、 **[接続マネージャー]**、 **[ログ プロバイダー]**、または **[実行可能ファイル]** フォルダーの内容を表示するには、各フォルダーを展開します。  
   
 4.  パッケージの構造に基づき、次の任意のレベルのフォルダーを展開します。  
   

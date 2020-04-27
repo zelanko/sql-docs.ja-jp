@@ -17,10 +17,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: c83d92da6708c8c63e1ba4c2cea60b1497a54883
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63284546"
 ---
 # <a name="permissions-or-securables-page"></a>[権限] ページまたは [セキュリティ保護可能なリソース] ページ
@@ -34,7 +34,7 @@ ms.locfileid: "63284546"
 ## <a name="upper-grid"></a>上のグリッド  
  上のグリッドには、権限を設定できるアイテムが 1 つ以上表示されます。 このダイアログ ボックスには、上のグリッドに追加するオブジェクトまたはプリンシパルを選択するための **[検索]** ボタンがあります。 グリッドの名前には、 **[セキュリティ保護可能なリソース]** 、または 1 つ以上の種類のセキュリティ保護可能なリソースやプリンシパルが表示される場合があります。 上のグリッドに表示される列は、プリンシパルまたはセキュリティ保護可能なリソースによって異なります。  
   
- **Name**  
+ **名前**  
  グリッドに追加される各プリンシパルまたはセキュリティ保護可能なリソースの名前です。  
   
  **Type**  

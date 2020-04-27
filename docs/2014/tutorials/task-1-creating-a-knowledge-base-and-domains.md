@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 79edd8566f2b3c9b586bc8c8815e1d9bc586fb05
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65481241"
 ---
 # <a name="task-1-creating-a-knowledge-base-and-domains"></a>タスク 1: ナレッジ ベースとドメインを作成する
@@ -24,7 +24,7 @@ ms.locfileid: "65481241"
   
 2.  [**サーバーへの接続**] ダイアログボックスで、DQS がインストールされているデータベースサーバーインスタンスを選択し、[**接続**] をクリックします。  
   
-     ![[サーバーへの接続] ダイアログボックス](../../2014/tutorials/media/et-creatingaknowledgebaseanddomains-01.jpg "[サーバーへの接続] ダイアログ ボックス")  
+     ![[サーバーへの接続] ダイアログボックス](../../2014/tutorials/media/et-creatingaknowledgebaseanddomains-01.jpg "[サーバーに接続] ダイアログ ボックス")  
   
 3.  Data Quality Client のホームページの [**ナレッジベース管理**] ウィンドウで、[**新しいナレッジベース**] をクリックします。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "65481241"
   
     -   Zip  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
  [タスク 2: ドメイン値を手動で追加する](../../2014/tutorials/task-2-adding-domain-values-manually.md)  
   
   

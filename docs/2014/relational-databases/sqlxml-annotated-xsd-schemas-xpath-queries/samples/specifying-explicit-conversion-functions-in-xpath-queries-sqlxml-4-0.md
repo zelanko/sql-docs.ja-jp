@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 43e7067f00e21f57d64f2206fb1008f21d77dd4b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010699"
 ---
 # <a name="specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-40"></a>XPath クエリでの明示変換関数の指定 (SQLXML 4.0)
@@ -28,8 +28,7 @@ ms.locfileid: "66010699"
 ## <a name="examples"></a>例  
   
 ### <a name="a-use-the-number-explicit-conversion-function"></a>A. number() 明示変換関数を使用する  
- 
-  `number()` 関数は、引数を数値に変換します。  
+ `number()` 関数は、引数を数値に変換します。  
   
  **ContactID**の値が数値以外の場合、次のクエリは**ContactID**を数値に変換し、値4と比較します。 次に、クエリは、コンテキストノードのすべて** \<の Employee>** 子要素を返します。この属性には、数値4を持つ**ContactID**属性があります。  
   
@@ -78,8 +77,7 @@ ms.locfileid: "66010699"
 ```  
   
 ### <a name="b-use-the-string-explicit-conversion-function"></a>B. string() 明示変換関数を使用する  
- 
-  `string()` 関数は、引数を文字列に変換します。  
+ `string()` 関数は、引数を文字列に変換します。  
   
  次のクエリでは、 **ContactID**を文字列に変換し、文字列値 "4" と比較します。 このクエリでは、コンテキストノードのすべて** \<の Employee>** 要素の子が、文字列値 "4" の**ContactID**が返されます。  
   

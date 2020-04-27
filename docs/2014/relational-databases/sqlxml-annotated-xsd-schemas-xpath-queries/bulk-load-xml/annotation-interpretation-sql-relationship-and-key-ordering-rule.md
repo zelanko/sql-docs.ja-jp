@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 521614f8755261d0348ab95132c527c736c96311
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013510"
 ---
 # <a name="sqlrelationship-and-the-key-ordering-rule-sqlxml-40"></a>sql:relationship とキーの順序付け規則 (SQLXML 4.0)
@@ -58,7 +58,7 @@ ms.locfileid: "66013510"
 </xsd:schema>  
 ```  
   
- ** \<Customer>** 要素ノードがスコープ内に入ると、XML 一括読み込みでは顧客レコードが生成されます。 このレコードは、XML 一括読み込みによって、または** \<顧客>** が読み取られるまで続きます。 Order ** \<>** 要素で**customerid**属性が指定されてい`<sql:relationship>`ないため、XML 一括読み込みでは、 ** \<order>** 要素ノードを処理するときに、 ** \<Customer>** 親要素から custorder テーブルの customerid 外部キー列の値を取得します。 つまり、 ** \<Customer>** 要素を定義する際には、を指定**** `<sql:relationship>`する前に、スキーマで CustomerID 属性を指定する必要があります。 このようにしないと、 ** \<Order>** 要素がスコープに入ると、xml 一括読み込みでは custorder テーブルのレコードが生成されます。また、xml 一括読み込みでは、xml [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]一括読み込みが** \</order>** 終了タグに達すると、CustomerID 外部キー列の値なしでレコードがに送信されます。  
+ ** \<Customer>** 要素ノードがスコープ内に入ると、XML 一括読み込みでは顧客レコードが生成されます。 このレコードは、XML 一括読み込みによって、または** \<顧客>** が読み取られるまで続きます。 Order ** \<>** 要素で**customerid**属性が指定されてい`<sql:relationship>`ないため、XML 一括読み込みでは、 ** \<order>** 要素ノードを処理するときに、 ** \<Customer>** 親要素から custorder テーブルの customerid 外部キー列の値を取得します。 つまり、 ** \<Customer>** 要素を定義する際には、を指定**CustomerID** `<sql:relationship>`する前に、スキーマで CustomerID 属性を指定する必要があります。 このようにしないと、 ** \<Order>** 要素がスコープに入ると、xml 一括読み込みでは custorder テーブルのレコードが生成されます。また、xml 一括読み込みでは、xml [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]一括読み込みが** \</order>** 終了タグに達すると、CustomerID 外部キー列の値なしでレコードがに送信されます。  
   
  この例のスキーマを SampleSchema.xml として保存します。  
   

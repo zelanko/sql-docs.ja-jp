@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 34cc4479a26d633e689963a945095248f683993f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63287274"
 ---
-# <a name="example-specifying-xsinil-with-the-elements-directive"></a>例 : ELEMENTS ディレクティブで XSINIL を指定する
+# <a name="example-specifying-xsinil-with-the-elements-directive"></a>例: ELEMENTS ディレクティブで XSINIL を指定する
   次のクエリでは、 `ELEMENTS` ディレクティブを指定し、クエリ結果から要素中心の XML を生成します。  
   
 ## <a name="example"></a>例  

@@ -20,32 +20,27 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 153a88bcb31f65d4e6aff007cfbee7d1f7afc6df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013728"
 ---
 # <a name="requesting-url-references-to-blob-data-using-sqlencode-sqlxml-40"></a>sql:encode を使用した、BLOB データへの URL 参照の要求 (SQLXML 4.0)
   注釈付き XSD スキーマで、属性 (または要素) が Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の BLOB 列にマップされた場合、XML 内に返されるデータは Base 64 エンコード形式になります。  
   
- 後で BLOB データをバイナリ形式で取得するときに使用できるよう、データへの参照 (URI) を返す場合は、`sql:encode` 注釈を指定します。 
-  `sql:encode` は、単純型の属性または要素に指定できます。  
+ 後で BLOB データをバイナリ形式で取得するときに使用できるよう、データへの参照 (URI) を返す場合は、`sql:encode` 注釈を指定します。 `sql:encode` は、単純型の属性または要素に指定できます。  
   
- 
-  `sql:encode` 注釈を指定すると、フィールド値の代わりにフィールドへの URL を返すことができます。 
-  `sql:encode` では主キーに基づいて、URL での単一選択が生成されます。 主キーは、 `sql:key-fields`注釈を使用して指定できます。  
+ `sql:encode` 注釈を指定すると、フィールド値の代わりにフィールドへの URL を返すことができます。 `sql:encode` では主キーに基づいて、URL での単一選択が生成されます。 主キーは、 `sql:key-fields`注釈を使用して指定できます。  
   
- 
-  `sql:encode` 注釈には、"url" または "default" の値を割り当てることができます。 "default" の場合、データは Base 64 エンコード形式で返されます。  
+ `sql:encode` 注釈には、"url" または "default" の値を割り当てることができます。 "default" の場合、データは Base 64 エンコード形式で返されます。  
   
- 
-  `sql:encode` 注釈は、`sql:use-cdata` と共に使用したり、ID、IDREF、IDREFS、NMTOKEN、または NMTOKENS 属性型に指定したり、 XSD **fixed**属性と共に使用することもできません。  
+ `sql:encode` 注釈は、`sql:use-cdata` と共に使用したり、ID、IDREF、IDREFS、NMTOKEN、または NMTOKENS 属性型に指定したり、 XSD **fixed**属性と共に使用することもできません。  
   
 > [!NOTE]  
 >  BLOB 型の列は、キーの一部または外部キーとして使用することはできません。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、「 [SQLXML の例を実行するための要件](../sqlxml/requirements-for-running-sqlxml-examples.md)」を参照してください。  
   
 ### <a name="a-specifying-sqlencode-to-obtain-a-url-reference-to-blob-data"></a>A. BLOB データへの URL 参照を取得するため、sql:encode を指定する  

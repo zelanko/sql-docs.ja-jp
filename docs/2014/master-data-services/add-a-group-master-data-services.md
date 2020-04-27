@@ -14,32 +14,27 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: df04cd5bcb216a716312783aff3b78d03ea01ac1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480143"
 ---
 # <a name="add-a-group-master-data-services"></a>グループを追加する (マスター データ サービス)
-  
   **で** [グループ] [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] ボックスの一覧にグループを追加して、Web アプリケーションに権限を割り当てるプロセスを開始します。 グループ内のユーザーが [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]にアクセスできるようにするには、グループの権限を 1 つまたは複数の機能領域およびモデル オブジェクトに付与する必要があります。  
   
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
--   
-  **[ユーザー/グループの権限]** 機能領域にアクセスするための権限が必要です。  
+-   **[ユーザー/グループの権限]** 機能領域にアクセスするための権限が必要です。  
   
 ### <a name="to-add-a-group"></a>グループを追加するには  
   
-1.  
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[ユーザー/グループの権限]** をクリックします。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[ユーザー/グループの権限]** をクリックします。  
   
-2.  
-  **[ユーザー]** ページでメニュー バーから **[グループの管理]** をクリックします。  
+2.  **[ユーザー]** ページでメニュー バーから **[グループの管理]** をクリックします。  
   
-3.  
-  **[グループの追加]** をクリックします。  
+3.  **[グループの追加]** をクリックします。  
   
 4.  グループの名前を Active Directory ドメイン名またはサーバー コンピューターの名前の後に入力します ( *domain\group_name* または *computer\group_name*のように入力します)。  
   
@@ -52,9 +47,9 @@ ms.locfileid: "65480143"
   
 ## <a name="next-steps"></a>次の手順  
   
--   [機能領域のアクセス許可を割り当て &#40;マスターデータサービス&#41;](assign-functional-area-permissions-master-data-services.md)  
+-   [機能領域の権限を割り当てる (マスター データ サービス)](assign-functional-area-permissions-master-data-services.md)  
   
 ## <a name="see-also"></a>参照  
- [セキュリティ &#40;マスターデータサービス&#41;](../../2014/master-data-services/security-master-data-services.md)  
+ [セキュリティ (マスター データ サービス)](../../2014/master-data-services/security-master-data-services.md)  
   
   

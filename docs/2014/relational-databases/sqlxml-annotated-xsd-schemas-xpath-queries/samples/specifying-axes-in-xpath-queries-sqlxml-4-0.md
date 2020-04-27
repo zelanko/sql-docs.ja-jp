@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 81d671c834cfeb1bf1191c0d5cd4ace72741ff10
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010717"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>XPath クエリ内での軸の指定 (SQLXML 4.0)
@@ -41,8 +41,7 @@ ms.locfileid: "66010717"
   
  このクエリでは`child` 、は軸で`Contact` 、はノードテストです (が`Contact` ** \<要素>** ノードの場合は TRUE \<、要素> は`child`軸に関連付けられているプライマリノード型であるため)。  
   
- 
-  `child` 軸は既定の軸です。 したがって、クエリは次のように指定できます。  
+ `child` 軸は既定の軸です。 したがって、クエリは次のように指定できます。  
   
 ```  
 /Contact  
@@ -93,8 +92,7 @@ ms.locfileid: "66010717"
   
  このクエリでは`child` 、は軸`Customer` `Order`で、はノードテストです (これらのノードテストは、Customer と Order が** \<要素>** ノードである場合に TRUE になります。これは、 `child` ** \<要素>** ノードが軸のプライマリノードであるためです)。 ** \<顧客>** に一致するノードごとに、 ** \<Orders>** に一致するノードが結果に追加されます。 結果セットに返されるのは、 ** \<Order>** だけです。  
   
- 
-  `child` 軸は既定の軸です。 そのため、クエリは次のように指定できます。  
+ `child` 軸は既定の軸です。 そのため、クエリは次のように指定できます。  
   
 ```  
 /Customer/Order  
@@ -256,8 +254,7 @@ ms.locfileid: "66010717"
   
  `attribute::CustomerID`述語では、 `attribute`は軸`CustomerID`で、はノードテストです (が`CustomerID`属性の場合、ノードテストは TRUE になります。これは、 ** \<属性>** ノードが`attribute`軸のプライマリノードであるためです)。  
   
- 
-  `attribute` 軸は省略形 (@) で指定できます。また、`child` 軸は既定の軸なので、クエリから省略できます。  
+ `attribute` 軸は省略形 (@) で指定できます。また、`child` 軸は既定の軸なので、クエリから省略できます。  
   
 ```  
 /Customer[@CustomerID="1"]  

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 678a7d6ce075e6a1082856aa7962bb3f6eec522d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489718"
 ---
 # <a name="lesson-4-storing-supplier-data-in-mds"></a>レッスン 4: MDS に仕入先データを格納する
@@ -48,7 +48,7 @@ ms.locfileid: "65489718"
   
 8.  派生階層を作成して使用するには、 **supplier**エンティティと**state**エンティティの間のドメインベースの属性リレーションシップを使用します (supplier エンティティの state 属性は state エンティティ型です)。そのためには、**マスターデータマネージャー**を使用します。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
  [タスク 1: マスター データ マネージャーを使用して Suppliers モデルを作成する](../../2014/tutorials/task-1-creating-suppliers-model-using-master-data-manager.md)  
   
   

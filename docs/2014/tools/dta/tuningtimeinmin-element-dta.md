@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c30c6a4f746ae9aa81b8c1a71c0e380bdd26df03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63268156"
 ---
 # <a name="tuningtimeinmin-element-dta"></a>TuningTimeInMin 要素 (DTA)
@@ -36,13 +36,11 @@ ms.locfileid: "63268156"
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特徴|[説明]|  
+|特徴|説明|  
 |--------------------|-----------------|  
-|**データ型と長さ**|
-  `unsignedInt`、長さは無制限です。|  
+|**データ型と長さ**|`unsignedInt`、長さは無制限です。|  
 |**既定値**|480 分 (8 時間)。|  
-|**個数**|
-  `NumberOfEvents` 要素に値が指定されていない限り、必須です。|  
+|**個数**|`NumberOfEvents` 要素に値が指定されていない限り、必須です。|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
@@ -53,7 +51,7 @@ ms.locfileid: "63268156"
   
 ## <a name="example"></a>例  
   
-## <a name="description"></a>[説明]  
+## <a name="description"></a>説明  
  次のコード例は、最大チューニング時間を 12 時間に設定する方法を示します。  
   
 ## <a name="code"></a>コード  

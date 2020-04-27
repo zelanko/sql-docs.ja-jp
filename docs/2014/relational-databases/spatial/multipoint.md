@@ -12,16 +12,14 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: c06ed0be91d64e02f30d6ef4fbebb68e3b9a1272
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014166"
 ---
 # <a name="multipoint"></a>MultiPoint
-  
-  `MultiPoint` は、0 個以上のポイントのコレクションです。 
-  `MultiPoint` インスタンスの境界は空になります。  
+  `MultiPoint` は、0 個以上のポイントのコレクションです。 `MultiPoint` インスタンスの境界は空になります。  
   
 ## <a name="examples"></a>例  
  次の例では、SRID が 23 で、ポイントが 2 つある (1 つは座標 (2,3) のポイントで、もう 1 つは座標 (7,8) で Z が 9.5 のポイント) `geometry MultiPoint` インスタンスを作成します。  

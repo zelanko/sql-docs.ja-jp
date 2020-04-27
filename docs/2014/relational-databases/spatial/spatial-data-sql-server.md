@@ -18,31 +18,27 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 7bd529f67f9184f86d4a9ec704e9cf7af972f3f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014056"
 ---
 # <a name="spatial-data-sql-server"></a>空間データ (SQL Server)
   空間データは、幾何学的オブジェクトの物理的な場所と形状に関する情報を表します。 これらのオブジェクトは、ポイントの場所や、国、道路、湖などのより複雑なオブジェクトである可能性があります。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、`geometry` と `geography` の 2 つの空間データ型がサポートされています。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、`geometry` と `geography` の 2 つの空間データ型がサポートされています。  
   
--   
-  `geometry` 型は、ユークリッド (平面) 座標系のデータを表します。  
+-   `geometry` 型は、ユークリッド (平面) 座標系のデータを表します。  
   
--   
-  `geography` 型は、球体地球座標系のデータを表します。  
+-   `geography` 型は、球体地球座標系のデータを表します。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、どちらのデータ型も .NET 共通言語ランタイム (CLR) のデータ型として実装されています。  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]で導入された空間機能の詳細な説明とサンプルについては、ホワイト ペーパー「 [New Spatial Features in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407)」 (SQL Server 2012 の新しい空間機能) をダウンロードして参照してください。  
+>  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]で導入された空間機能の詳細な説明とサンプルについては、ホワイト ペーパー「 [New Spatial Features in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407)」 (SQL Server 2012 の新しい空間機能) をダウンロードして参照してください。  
   
-##  <a name="reltasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="reltasks"></a> 関連タスク  
  [geometry インスタンスの作成、構築、およびクエリ](create-construct-and-query-geometry-instances.md)  
  geometry データ型のインスタンスで使用できるメソッドについて説明します。  
   

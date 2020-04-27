@@ -15,14 +15,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e79f48f4e4a2eb5fbc83c353461709658caf2509
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63265662"
 ---
 # <a name="using-custom-assemblies-with-reports"></a>レポートでのカスタム アセンブリの使用
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、レポート アイテムの値、スタイル、および書式設定に関するカスタム コードを記述できます。 たとえば、カスタム コードを使用して、ロケールに基づいて通貨を書式設定したり、特殊な書式設定の特定の値にフラグを設定したり、または企業で実際に使用している他のビジネス ルールを適用したりすることができます。 このコードをレポートに含める方法の1つは、レポート定義ファイル内から参照[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]できるを使用して、カスタムコードアセンブリを作成することです。 サーバーは、レポートを実行するときにカスタム アセンブリの関数を呼び出します。 カスタム アセンブリは、レポートで使用する特別な関数を取得するときに使用できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
@@ -44,7 +43,7 @@ ms.locfileid: "63265662"
  [カスタム アセンブリ オブジェクトの初期化](initializing-custom-assembly-objects.md)  
  レポートから呼び出されたカスタム アセンブリ オブジェクトの値を初期化する方法について説明します。  
   
- [カスタム アセンブリをデバッグする方法](how-to-debug-custom-assemblies.md)  
+ [方法:カスタム アセンブリをデバッグする](how-to-debug-custom-assemblies.md)  
  カスタム アセンブリ コードのデバッグ方法について説明します。  
   
 ## <a name="see-also"></a>参照  

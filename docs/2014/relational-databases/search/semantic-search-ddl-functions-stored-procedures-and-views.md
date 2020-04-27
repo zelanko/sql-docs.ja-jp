@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ee5cf7136739b012615121e00d8b8d3ed7c7c6ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011035"
 ---
 # <a name="semantic-search-ddl-functions-stored-procedures-and-views"></a>セマンティック検索の DDL、関数、ストアド プロシージャ、およびビュー
@@ -24,14 +24,14 @@ ms.locfileid: "66011035"
   
  フルテキスト検索をサポートするステートメントおよびデータベース オブジェクトの一覧については、「 [フルテキスト検索の DDL、関数、ストアド プロシージャ、およびビュー](../views/views.md)」を参照してください。  
   
-##  <a name="ddl"></a>Transact-sql データ定義言語 (DDL) ステートメント  
+##  <a name="transact-sql-data-definition-language-ddl-statements"></a><a name="ddl"></a>Transact-sql データ定義言語 (DDL) ステートメント  
   
 |Object|詳細情報|  
 |------------|----------------------|  
 |[ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql)|[テーブルおよび列に対するセマンティック検索の有効化](enable-semantic-search-on-tables-and-columns.md)|  
 |[CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)|[テーブルおよび列に対するセマンティック検索の有効化](enable-semantic-search-on-tables-and-columns.md)|  
   
-##  <a name="func"></a> システム関数  
+##  <a name="system-functions"></a><a name="func"></a> システム関数  
   
 |Object|詳細情報|  
 |------------|----------------------|  
@@ -39,7 +39,7 @@ ms.locfileid: "66011035"
 |[semanticsimilaritydetailstable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql)|[セマンティック検索による類似および関連したドキュメントの取得](find-similar-and-related-documents-with-semantic-search.md)|  
 |[semanticsimilaritytable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritytable-transact-sql)|[セマンティック検索による類似および関連したドキュメントの取得](find-similar-and-related-documents-with-semantic-search.md)|  
   
-##  <a name="meta"></a> システム メタデータ関数  
+##  <a name="system-metadata-functions"></a><a name="meta"></a> システム メタデータ関数  
   
 |Object|詳細情報|  
 |------------|----------------------|  
@@ -50,14 +50,14 @@ ms.locfileid: "66011035"
 |[OBJECTPROPERTYEX &#40;Transact-SQL&#41;](/sql/t-sql/functions/objectproperty-transact-sql)|[テーブルおよび列に対するセマンティック検索の有効化](enable-semantic-search-on-tables-and-columns.md)|  
 |[SERVERPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql)|[セマンティック検索のインストールと構成](install-and-configure-semantic-search.md)|  
   
-##  <a name="sproc"></a> システム ストアド プロシージャ  
+##  <a name="system-stored-procedures"></a><a name="sproc"></a> システム ストアド プロシージャ  
   
 |Object|詳細情報|  
 |------------|----------------------|  
 |[sp_fulltext_semantic_register_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql)|[セマンティック検索のインストールと構成](install-and-configure-semantic-search.md)|  
 |[sp_fulltext_semantic_unregister_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql)|[セマンティック検索のインストールと構成](install-and-configure-semantic-search.md)|  
   
-##  <a name="cv"></a>システムビュー-カタログビュー  
+##  <a name="system-views---catalog-views"></a><a name="cv"></a>システムビュー-カタログビュー  
   
 |Object|詳細情報|  
 |------------|----------------------|  
@@ -65,7 +65,7 @@ ms.locfileid: "66011035"
 |[sys.fulltext_semantic_language_statistics_database &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql)|[セマンティック検索のインストールと構成](install-and-configure-semantic-search.md)|  
 |[sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql)|[セマンティック検索のインストールと構成](install-and-configure-semantic-search.md)|  
   
-##  <a name="dmv"></a>システムビュー-動的管理ビュー  
+##  <a name="system-views---dynamic-management-views"></a><a name="dmv"></a>システムビュー-動的管理ビュー  
   
 |Object|詳細情報|  
 |------------|----------------------|  

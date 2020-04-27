@@ -13,10 +13,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 9244f32b2ee9921d1caaa63b5d6aae9c324049ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014208"
 ---
 # <a name="multilinestring"></a>MultiLineString
@@ -51,7 +51,7 @@ DECLARE @g3 geometry = 'MULTILINESTRING((1 1, 5 5), (1 3, 3 1))';
 DECLARE @g4 geometry = 'MULTILINESTRING((1 1, 3 3, 5 5),(3 3, 5 5, 7 7))';  
 ```  
   
- 次の例では、2 番目の `System.FormatException` インスタンスが有効ではないため、`LineString` がスローされます。  
+ 次の例では、2 番目の `LineString` インスタンスが有効ではないため、`System.FormatException` がスローされます。  
   
 ```  
 DECLARE @g geometry = 'MULTILINESTRING((1 1, 3 5),(-5 3))';  
@@ -60,12 +60,9 @@ DECLARE @g geometry = 'MULTILINESTRING((1 1, 3 5),(-5 3))';
 ### <a name="valid-instances"></a>有効なインスタンス  
  `MultiLineString`インスタンスを有効にするには、次の条件を満たしている必要があります。  
   
-1.  
-  `MultiLineString` インスタンスを構成するすべてのインスタンスが、有効な `LineString` インスタンスである。  
+1.  `MultiLineString` インスタンスを構成するすべてのインスタンスが、有効な `LineString` インスタンスである。  
   
-2.  
-  `LineString` インスタンスを構成する 2 つの `MultiLineString` インスタンスが内部で互いに重ならない。 
-  `LineString` インスタンスは、有限数の接点のみで、互いにまたは他の `LineString` インスタンスと交差するか接することができます。  
+2.  `LineString` インスタンスを構成する 2 つの `MultiLineString` インスタンスが内部で互いに重ならない。 `LineString` インスタンスは、有限数の接点のみで、互いにまたは他の `LineString` インスタンスと交差するか接することができます。  
   
  次の例に、3 つの有効な `MultiLineString` インスタンスと 1 つの無効な `MultiLineString` インスタンスを示します。  
   
@@ -77,8 +74,7 @@ DECLARE @g4 geometry = 'MULTILINESTRING((1 1, 3 3, 5 5),(3 3, 5 5, 7 7))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();  
 ```  
   
- 
-  `@g4` は、2 番目の `LineString` インスタンスが最初の `LineString` インスタンスと内部で重なっているため、有効ではありません。 有限数の接点で接しています。  
+ `@g4` は、2 番目の `LineString` インスタンスが最初の `LineString` インスタンスと内部で重なっているため、有効ではありません。 有限数の接点で接しています。  
   
 ## <a name="examples"></a>例  
  次の例では、2 つの `geometry``MultiLineString` 要素を含む SRID 0 の単純な `LineString` インスタンスを作成しています。  

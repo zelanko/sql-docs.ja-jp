@@ -29,10 +29,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f27b47ae8216fa64b537d4c8b22b612c535a1869
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013672"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>sql:relationship を使用した、リレーションシップの指定 (SQLXML 4.0)
@@ -53,26 +53,26 @@ ms.locfileid: "66013672"
  **名前**  
  リレーションシップの一意な名前を指定します。  
   
- **Parent**  
+ **所属**  
  親リレーション (テーブル) を指定します。 これは省略可能な属性です。この属性を指定しない場合、親テーブル名はドキュメント内の子階層の情報から取得されます。 スキーマで、同じ** \<sql: relationship>** を使用する2つの親子階層が指定されていて、親要素が異なる場合は、 ** \<sql: relationship>** で親属性を指定しません。 この情報はスキーマ内の階層から取得されます。  
   
  **parent-key**  
  親の親キーを指定します。 親キーが複数の列で構成される場合は、値をスペースで区切って指定します。 複数列キーに指定される値と、それに対応する子キーに指定される値の間では、位置的なマッピングが行われます。  
   
- **子**  
+ **子供**  
  子リレーション (テーブル) を指定します。  
   
  **child-key**  
  親の parent-key を参照する子の、子キーを指定します。 子キーが複数の属性 (列) で構成される場合、child-key の値は、スペースで区切って指定します。 複数列キーに指定される値と、それに対応する親キーに指定される値の間では、位置的なマッピングが行われます。  
   
- **Inverse**  
+ **逆条件**  
  ** \<Sql: relationship>** で指定されたこの属性は、アップデートグラムで使用されます。 詳細については、「sql [: relationship での sql: 逆属性の指定](specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)」を参照してください。  
   
  注釈`sql:key-fields`は、子要素を含む要素で指定する必要があります。この要素には、要素と子の間に** \<sql: relationship>** が定義されていて、親要素で指定されたテーブルの主キーは提供されません。 スキーマで** \<sql: relationship>** が指定されていない場合で`sql:key-fields`も、適切な階層を生成するようにを指定する必要があります。 詳細については、「 [sql: キーフィールドを使用したキー列の識別](identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)」を参照してください。  
   
  結果に適切な入れ子を生成するには、すべて`sql:key-fields`のスキーマでを指定することをお勧めします。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、「 [SQLXML の例を実行するための要件](../sqlxml/requirements-for-running-sqlxml-examples.md)」を参照してください。  
   
 ### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>A. 要素に sql:relationship 注釈を指定する  
@@ -171,7 +171,7 @@ ms.locfileid: "66013672"
   
      詳細については、「ADO を使用した[SQLXML クエリの実行](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
- 以下に結果セットを示します。  
+ 結果セットは次のようになります。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">   
@@ -300,7 +300,7 @@ ms.locfileid: "66013672"
   
      詳細については、「ADO を使用した[SQLXML クエリの実行](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
- 以下に結果セットを示します。  
+ 結果セットは次のようになります。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">   
@@ -371,7 +371,7 @@ ms.locfileid: "66013672"
   
      詳細については、「ADO を使用した[SQLXML クエリの実行](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
- 以下に結果セットを示します。  
+ 結果セットは次のようになります。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">   
@@ -461,7 +461,7 @@ ms.locfileid: "66013672"
   
      詳細については、「ADO を使用した[SQLXML クエリの実行](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
- 以下に結果セットを示します。  
+ 結果セットは次のようになります。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

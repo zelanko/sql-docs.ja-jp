@@ -23,16 +23,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 639e6b7640f3463bfe100345d044437d619a5546
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63460002"
 ---
 # <a name="query-and-view-designer-tools-visual-database-tools"></a>クエリおよびビュー デザイナー ツール (Visual Database Tools)
   クエリ、ビュー、インライン関数、または単一ステートメント ストアド プロシージャをデザインするときに使用するデザイナーは、ダイアグラム ペイン、抽出条件ペイン、SQL ペイン、および結果ペインで構成されています。  
   
- ![クエリデザイナー](../../database-engine/media//vs-queryviewdsgpanes.gif "[クエリ デザイナー]")  
+ ![クエリ デザイナー](../../database-engine/media//vs-queryviewdsgpanes.gif "[クエリ デザイナー]")  
   
 -   ダイアグラム ペインには、問い合わせているテーブルおよび他のテーブル値オブジェクトが表示されます。 それぞれの四角形は、テーブルまたはテーブル値オブジェクトを表し、使用可能なデータ列を表示します。 結合は、四角形の間を結ぶ線で示されます。 詳細については、「[ダイアグラム ペイン (Visual Database Tools)](visual-database-tools.md)」を参照してください。  
   
@@ -50,6 +50,6 @@ ms.locfileid: "63460002"
 ## <a name="see-also"></a>参照  
  [クエリおよびビューのデザイン方法に関するトピック &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [クエリおよびビューデザイナー &#40;Visual Database Tools&#41;を開きます。](open-the-query-and-view-designer-visual-database-tools.md)   
- [SQL エディター &#40;Visual Database Tools&#41;](sql-editor-visual-database-tools.md)  
+ [SQL エディター (Visual Database Tools)](sql-editor-visual-database-tools.md)  
   
   

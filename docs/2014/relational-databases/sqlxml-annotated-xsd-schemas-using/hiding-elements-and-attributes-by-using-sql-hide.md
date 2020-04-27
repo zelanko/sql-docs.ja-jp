@@ -25,20 +25,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6ce8daf2badb855cbf855031d93e38fb689eab54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013836"
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>sql:hide による要素と属性の非表示
-  XSD スキーマに対して XPath クエリを実行すると、結果の XML ドキュメントにはスキーマで指定された要素と属性が含められます。 
-  `sql:hide` 注釈を使用すると、スキーマでいくつかの要素と属性を非表示にするよう指定できます。 この機能は、クエリの選択条件としてはスキーマ内の特定の要素または属性が必要でも、生成される XML ドキュメントではこれらを返したくない場合に便利です。  
+  XSD スキーマに対して XPath クエリを実行すると、結果の XML ドキュメントにはスキーマで指定された要素と属性が含められます。 `sql:hide` 注釈を使用すると、スキーマでいくつかの要素と属性を非表示にするよう指定できます。 この機能は、クエリの選択条件としてはスキーマ内の特定の要素または属性が必要でも、生成される XML ドキュメントではこれらを返したくない場合に便利です。  
   
- 
-  `sql:hide` 注釈はブール値 (0 = false、1=true) をとります。 指定できる値は 0、1、true、false です。  
+ `sql:hide` 注釈はブール値 (0 = false、1=true) をとります。 指定できる値は 0、1、true、false です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、「 [SQLXML の例を実行するための要件](../sqlxml/requirements-for-running-sqlxml-examples.md)」を参照してください。  
   
 ### <a name="a-specifying-sqlhide-on-an-attribute"></a>A. 属性に sql:hide を指定する  
@@ -83,7 +81,7 @@ ms.locfileid: "66013836"
   
      詳細については、「ADO を使用した[SQLXML 4.0 クエリの実行](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
- 以下に結果セットを示します。  
+ 結果セットは次のようになります。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b038c1132cf8c1ccd31da2a5a1e2a600f2505624
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011954"
 ---
 # <a name="humanresourcesmyteam-sample-table-sql-server"></a>HumanResources.myTeam サンプル テーブル (SQL Server)
@@ -27,17 +27,16 @@ ms.locfileid: "66011954"
 > [!NOTE]  
 >  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] は [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のサンプル データベースの 1 つです。  
   
- 
-  **myTeam** には、次の列が含まれています。  
+ **myTeam** には、次の列が含まれています。  
   
-|列|データ型|NULL 値の許容|[説明]|  
+|列|データ型|NULL 値の許容|説明|  
 |------------|---------------|-----------------|-----------------|  
 |**EmployeeID**|`smallint`|不可|行の主キー。 チーム メンバーの従業員 ID。|  
 |**名前**|`nvarchar(50)`|不可|チーム メンバーの名前。|  
-|**題**|`nvarchar(50)`|Nullable|チームにおける従業員の肩書き。|  
+|**Title**|`nvarchar(50)`|Nullable|チームにおける従業員の肩書き。|  
 |**バックグラウンド**|`nvarchar(50)`|不可|行が最後に更新された日時 (既定値)。|  
   
- **Humanresources.employee を作成するには**  
+ **HumanResources.myTeam テーブルを作成するには**  
   
 -   次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用します。  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66011954"
     GO  
     ```  
   
- **Humanresources.employee を設定するには**  
+ **HumanResources.myTeam テーブルに行を設定するには**  
   
 -   次の `INSERT` ステートメントでは、テーブルに 2 つの行を設定します。  
   
@@ -73,6 +72,6 @@ ms.locfileid: "66011954"
     >  これらのステートメントでは、4 番目の列 `Background`がスキップされます。 この行には既定値が設定されています。 この列をスキップすると、この `INSERT` ステートメントを実行した際に、この列が空欄のままになります。  
   
 ## <a name="see-also"></a>参照  
- [データ &#40;SQL Server&#41;の一括インポートと一括エクスポート](bulk-import-and-export-of-data-sql-server.md)  
+ [データの一括インポートと一括エクスポート &#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)  
   
   

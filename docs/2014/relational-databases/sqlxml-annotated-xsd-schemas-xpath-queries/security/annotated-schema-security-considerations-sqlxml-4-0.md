@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 635c5c433f583ecad9f8dda1e35e4c981742212e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010575"
 ---
 # <a name="annotated-schema-security-considerations-sqlxml-40"></a>注釈付きスキーマのセキュリティに関する注意点 (SQLXML 4.0)
@@ -34,8 +34,7 @@ ms.locfileid: "66010575"
   
 -   注釈を使用して指定する明示的なマッピングでは、データベース情報 (テーブル名、列名など) が公開されます。 このため、これらのスキーマはだれもがアクセスできる場所に置かないことをお勧めします。  
   
--   
-  `max-depth` 注釈が大きな値に設定されており、再帰が行われるマッピング スキーマに対するクエリなど、実行に時間がかかるクエリがあります。 必要に応じて、[コマンドタイムアウト] プロパティを (秒単位で) 設定して、タイムアウトの制限を指定できます。 次に例を示します。  
+-   `max-depth` 注釈が大きな値に設定されており、再帰が行われるマッピング スキーマに対するクエリなど、実行に時間がかかるクエリがあります。 必要に応じて、[コマンドタイムアウト] プロパティを (秒単位で) 設定して、タイムアウトの制限を指定できます。 次に例を示します。  
   
     ```  
     cn.Open "Provider=SQLOLEDB;Server=localhost;Database=tempdb;Integrated Security=SSPI;Command Properties='Command Time Out=50';"  

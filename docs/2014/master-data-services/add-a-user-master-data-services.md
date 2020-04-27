@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dacfbba3ea17a46f68745850f2d51b3e016a2e08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483772"
 ---
 # <a name="add-a-user-master-data-services"></a>ユーザーを追加する (マスター データ サービス)
@@ -26,16 +26,13 @@ ms.locfileid: "65483772"
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
--   
-  **[ユーザー/グループの権限]** 機能領域にアクセスするための権限が必要です。  
+-   **[ユーザー/グループの権限]** 機能領域にアクセスするための権限が必要です。  
   
 ### <a name="to-add-a-user"></a>メンバーを追加するには  
   
-1.  
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[ユーザー/グループの権限]** をクリックします。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[ユーザー/グループの権限]** をクリックします。  
   
-2.  
-  **[ユーザー]** ページで **[ユーザーの追加]** をクリックします。  
+2.  **[ユーザー]** ページで **[ユーザーの追加]** をクリックします。  
   
 3.  *ドメイン*\\*user_name*または*コンピューター \ user_name*のように、Active Directory のドメイン名またはサーバーコンピューターの名前を指定して、ユーザー名を入力します。  
   
@@ -45,9 +42,9 @@ ms.locfileid: "65483772"
   
 ## <a name="next-steps"></a>次の手順  
   
--   [機能領域のアクセス許可を割り当て &#40;マスターデータサービス&#41;](assign-functional-area-permissions-master-data-services.md)  
+-   [機能領域の権限を割り当てる (マスター データ サービス)](assign-functional-area-permissions-master-data-services.md)  
   
 ## <a name="see-also"></a>参照  
- [セキュリティ &#40;マスターデータサービス&#41;](../../2014/master-data-services/security-master-data-services.md)  
+ [セキュリティ (マスター データ サービス)](../../2014/master-data-services/security-master-data-services.md)  
   
   

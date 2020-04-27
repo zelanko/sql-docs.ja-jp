@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5d35b70c157dc5285355fcd15b38739757f0be9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012579"
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>ロケーション パスでの選択述語の指定 (SQLXML 4.0)
@@ -39,8 +39,7 @@ ms.locfileid: "66012579"
 /child::Customer[attribute::CustomerID="ALFKI"]  
 ```  
   
- この XPath クエリでは、`child` と `attribute` は軸名で、 `Customer`はノードテストです。は、 `Customer`が** \<要素ノード>** である場合は TRUE になります。これは、 `child` ** \<要素>** が軸の主ノード型であるためです。 
-  `attribute::CustomerID="ALFKI"` は述語です。 述語`attribute`では、は軸で、 `CustomerID`はノードテストです ( **CustomerID**がコンテキストノードの属性である場合は TRUE になります。これは、 ** \<属性>** が軸の`attribute`主ノード型であるためです)。  
+ この XPath クエリでは、`child` と `attribute` は軸名で、 `Customer`はノードテストです。は、 `Customer`が** \<要素ノード>** である場合は TRUE になります。これは、 `child` ** \<要素>** が軸の主ノード型であるためです。 `attribute::CustomerID="ALFKI"` は述語です。 述語`attribute`では、は軸で、 `CustomerID`はノードテストです ( **CustomerID**がコンテキストノードの属性である場合は TRUE になります。これは、 ** \<属性>** が軸の`attribute`主ノード型であるためです)。  
   
  省略構文を使用した場合、XPath クエリは次のように指定できます。  
   
@@ -55,9 +54,7 @@ ms.locfileid: "66012579"
 /child::Customer/child::Order[attribute::SalesOrderID="1"]  
 ```  
   
- この XPath 式では、`child` と `attribute` は軸名で、 
-  `Customer`、`Order`、および `SalesOrderID` はノード テストです。 
-  `attribute::OrderID="1"` は述語です。  
+ この XPath 式では、`child` と `attribute` は軸名で、 `Customer`、`Order`、および `SalesOrderID` はノード テストです。 `attribute::OrderID="1"` は述語です。  
   
  省略構文を使用した場合、XPath クエリは次のように指定できます。  
   
@@ -74,8 +71,7 @@ child::Customer[child::ContactName]
   
  この例では、担当の** \<>** が、XML ドキュメント内** \<の Customer>** 要素の子要素であることを前提としています。これは、注釈付き XSD スキーマでは*要素中心のマッピング*と呼ばれています。  
   
- この XPath 式では、`child` が軸名で、 `Customer`ノードテストを示します。が`Customer` ** \<要素>** ノードの場合は TRUE になります。これは、 ** \<要素>** が軸の`child`主ノード型であるためです。 
-  `child::ContactName` は述語です。 述語では、 `child`は軸`ContactName`で、はノードテストです。が`ContactName` ** \<要素>** ノードの場合は TRUE になります。  
+ この XPath 式では、`child` が軸名で、 `Customer`ノードテストを示します。が`Customer` ** \<要素>** ノードの場合は TRUE になります。これは、 ** \<要素>** が軸の`child`主ノード型であるためです。 `child::ContactName` は述語です。 述語では、 `child`は軸`ContactName`で、はノードテストです。が`ContactName` ** \<要素>** ノードの場合は TRUE になります。  
   
  この式で返されるのは、 ** \<Customer>** 子要素** \<>** 子を持つコンテキストノードの子要素だけです。  
   
@@ -94,8 +90,7 @@ child::Customer[not(child::ContactName)]
   
  この例では、 ** \<>** の** \<ユーザー**が XML ドキュメント内の Customer>要素の子要素であり、データベースでは [担当側] フィールドが必須ではないことを前提としています。  
   
- この例では、`child` は軸で、 `Customer`はノードテストです。が`Customer` \<要素> ノードの場合は TRUE です。 
-  `not(child::ContactName)` は述語です。 述語では、 `child`は軸`ContactName`で、はノードテストです。が`ContactName` \<要素> ノードの場合は TRUE になります。  
+ この例では、`child` は軸で、 `Customer`はノードテストです。が`Customer` \<要素> ノードの場合は TRUE です。 `not(child::ContactName)` は述語です。 述語では、 `child`は軸`ContactName`で、はノードテストです。が`ContactName` \<要素> ノードの場合は TRUE になります。  
   
  省略構文を使用した場合、XPath クエリは次のように指定できます。  
   
@@ -110,8 +105,7 @@ Customer[not(ContactName)]
 child::Customer[attribute::CustomerID]  
 ```  
   
- この例では`child` 、は軸で`Customer` 、はノードテストです ( `Customer`が\<要素> ノードの場合は TRUE)。 
-  `attribute::CustomerID` は述語です。 述語では、 `attribute`は軸で、 `CustomerID`は述語です (が`CustomerID` ** \<属性>** ノードの場合は TRUE)。  
+ この例では`child` 、は軸で`Customer` 、はノードテストです ( `Customer`が\<要素> ノードの場合は TRUE)。 `attribute::CustomerID` は述語です。 述語では、 `attribute`は軸で、 `CustomerID`は述語です (が`CustomerID` ** \<属性>** ノードの場合は TRUE)。  
   
  省略構文を使用した場合、XPath クエリは次のように指定できます。  
   
@@ -120,8 +114,7 @@ Customer[@CustomerID]
 ```  
   
 ## <a name="selection-predicate-example-6"></a>選択述語 : 例 6  
- 
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 では、次の例に示すように、述語にクロス積を含む XPath クエリがサポートされています。  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 では、次の例に示すように、述語にクロス積を含む XPath クエリがサポートされています。  
   
 ```  
 Customer[Order/@OrderDate=Order/@ShipDate]  

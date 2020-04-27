@@ -14,20 +14,18 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: cb99c2ff07f30d268980c5c1c4d43a34904cdec9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014312"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>geometry インスタンスの作成、構築、およびクエリ
   平面空間データ型の `geometry` は、ユークリッド (平面) 座標系のデータを表します。 この型は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では共通言語ランタイム (CLR) のデータ型として実装されています。  
   
- 
-  `geometry` 型は、各データベースで使用できるように事前に定義されています。 型`geometry`のテーブル列を作成し、他の`geometry` CLR 型を使用する場合と同じ方法でデータを操作できます。  
+ `geometry` 型は、各データベースで使用できるように事前に定義されています。 型`geometry`のテーブル列を作成し、他の`geometry` CLR 型を使用する場合と同じ方法でデータを操作できます。  
   
- 
-  `geometry` によってサポートされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型 (平面) は、Open Geospatial Consortium (OGC) Simple Features for SQL Specification version 1.1.0 に準拠しています。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってサポートされている `geometry` データ型 (平面) は、Open Geospatial Consortium (OGC) Simple Features for SQL Specification version 1.1.0 に準拠しています。  
   
  OGC の仕様の詳細については、以下を参照してください。  
   
@@ -37,11 +35,10 @@ ms.locfileid: "66014312"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、次のスキーマで定義されている既存の GML 3.1 標準のサブセットをサポートしています: [https://schemas.microsoft.com/sqlserver/profiles/gml/SpatialGML.xsd](https://go.microsoft.com/fwlink/?LinkId=230959)。  
   
-##  <a name="creating"></a> 新しい geometry インスタンスの作成または構築  
+##  <a name="creating-or-constructing-a-new-geometry-instance"></a><a name="creating"></a> 新しい geometry インスタンスの作成または構築  
   
-###  <a name="existing"></a> 既存のインスタンスからの新しい geometry インスタンスの作成  
- 
-  `geometry` データ型には、既存のインスタンスに基づいて新しい `geometry` インスタンスを作成するために使用できる組み込みメソッドが数多く用意されています。  
+###  <a name="creating-a-new-geometry-instance-from-an-existing-instance"></a><a name="existing"></a> 既存のインスタンスからの新しい geometry インスタンスの作成  
+ `geometry` データ型には、既存のインスタンスに基づいて新しい `geometry` インスタンスを作成するために使用できる組み込みメソッドが数多く用意されています。  
   
  **geometry の周りにバッファーを作成するには**  
  [STBuffer &#40;geometry データ型&#41;](/sql/t-sql/spatial-geometry/stbuffer-geometry-data-type)  
@@ -71,9 +68,8 @@ ms.locfileid: "66014312"
   
   
   
-###  <a name="wkt"></a> Well-Known Text 入力からの geometry インスタンスの構築  
- 
-  `geometry` データ型には、Open Geospatial Consortium (OGC) WKT 表現からジオメトリを生成する組み込みのメソッドが数多く用意されています。 WKT 標準は geometry データをテキスト形式で交換できるテキスト文字列です。  
+###  <a name="constructing-a-geometry-instance-from-well-known-text-input"></a><a name="wkt"></a> Well-Known Text 入力からの geometry インスタンスの構築  
+ `geometry` データ型には、Open Geospatial Consortium (OGC) WKT 表現からジオメトリを生成する組み込みのメソッドが数多く用意されています。 WKT 標準は geometry データをテキスト形式で交換できるテキスト文字列です。  
   
  **WKT 入力から任意の型の geometry インスタンスを構築するには**  
  [STGeomFromText#40;geometry データ型&#41;](/sql/t-sql/spatial-geometry/stgeomfromtext-geometry-data-type)  
@@ -103,7 +99,7 @@ ms.locfileid: "66014312"
   
   
   
-###  <a name="wkb"></a> Well-Known Binary 入力からの geometry インスタンスの構築  
+###  <a name="constructing-a-geometry-instance-from-well-known-binary-input"></a><a name="wkb"></a> Well-Known Binary 入力からの geometry インスタンスの構築  
  WKB は、`geometry` データをアプリケーションと SQL データベース間で交換することができる、Open Geospatial Consortium (OGC) で指定されたバイナリ形式です。 次の関数は、WKB 入力を受け入れてジオメトリを構築します。  
   
  **WKB 入力から任意の型の geometry インスタンスを構築するには**  
@@ -132,7 +128,7 @@ ms.locfileid: "66014312"
   
   
   
-###  <a name="gml"></a> GML Text 入力からの geometry インスタンスの構築  
+###  <a name="constructing-a-geometry-instance-from-gml-text-input"></a><a name="gml"></a> GML Text 入力からの geometry インスタンスの構築  
  データ`geometry`型には、GML (ジオメトリックオブジェクト`geometry`の XML 表現) からインスタンスを生成するメソッドが用意されています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、GML のサブセットをサポートします。  
   
  **GML 入力から任意の型の geometry インスタンスを構築するには**  
@@ -140,7 +136,7 @@ ms.locfileid: "66014312"
   
   
   
-##  <a name="returning"></a> geometry インスタンスからの Well-Known Text および Well-Known Binary の取得  
+##  <a name="returning-well-known-text-and-well-known-binary-from-a-geometry-instance"></a><a name="returning"></a> geometry インスタンスからの Well-Known Text および Well-Known Binary の取得  
  次のメソッドを使用して、`geometry` インスタンスの WKT 形式または WKB 形式のいずれかを取得できます。  
   
  **geometry インスタンスの WKT 表現を取得するには**  
@@ -159,12 +155,11 @@ ms.locfileid: "66014312"
   
   
   
-##  <a name="querying"></a> geometry インスタンスのプロパティと動作のクエリ  
+##  <a name="querying-the-properties-and-behaviors-of-geometry-instances"></a><a name="querying"></a> geometry インスタンスのプロパティと動作のクエリ  
  すべて`geometry`のインスタンスには、が提供する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メソッドを使用して取得できるいくつかのプロパティがあります。 以下のトピックでは、geometry 型のプロパティおよび動作と、geometry 型のクエリを実行するためのメソッドについて説明します。  
   
-###  <a name="valid"></a> 有効性、インスタンスの型、および GeometryCollection 情報  
- 
-  `geometry` インスタンスを構築したら、次のメソッドを使用して、そのインスタンスが適切な形式であるかどうかを確認したり、インスタンスの型を取得することができます。また、コレクション インスタンスの場合は、特定の `geometry` インスタンスを取得できます。  
+###  <a name="validity-instance-type-and-geometrycollection-information"></a><a name="valid"></a> 有効性、インスタンスの型、および GeometryCollection 情報  
+ `geometry` インスタンスを構築したら、次のメソッドを使用して、そのインスタンスが適切な形式であるかどうかを確認したり、インスタンスの型を取得することができます。また、コレクション インスタンスの場合は、特定の `geometry` インスタンスを取得できます。  
   
  **geometry のインスタンスの型を取得するには**  
  [STGeometryType &#40;geometry データ型&#41;](/sql/t-sql/spatial-geometry/stgeometrytype-geometry-data-type)  
@@ -186,9 +181,8 @@ ms.locfileid: "66014312"
   
   
   
-###  <a name="number"></a> 点の数  
- 空`geometry`でないすべてのインスタンスは、*ポイント*で構成されます。 これらの点は、ジオメトリが描画される平面の X 座標と Y 座標を表します 
-  `geometry` には、インスタンスの点に対するクエリを実行するための組み込みメソッドが数多く用意されています。  
+###  <a name="number-of-points"></a><a name="number"></a> 点の数  
+ 空`geometry`でないすべてのインスタンスは、*ポイント*で構成されます。 これらの点は、ジオメトリが描画される平面の X 座標と Y 座標を表します `geometry` には、インスタンスの点に対するクエリを実行するための組み込みメソッドが数多く用意されています。  
   
  **インスタンスを構成する点の数を取得するには**  
  [STNumPoints &#40;geometry データ型&#41;](/sql/t-sql/spatial-geometry/stnumpoints-geometry-data-type)  
@@ -216,7 +210,7 @@ ms.locfileid: "66014312"
   
   
   
-###  <a name="dimension"></a> [ディメンション]  
+###  <a name="dimension"></a><a name="dimension"></a> [ディメンション]  
  空でない `geometry` インスタンスの次元は、0 次元、1 次元、2 次元のいずれかになります。 0 次元の `geometries` (`Point` や `MultiPoint` など) には長さや面積はありません。 1 次元のオブジェクト (`LineString, CircularString, CompoundCurve`、`MultiLineString` など) には長さがあります。 2 次元のインスタンス (`Polygon`、`CurvePolygon`、`MultiPolygon` など) には面積と長さがあります。 空のインスタンスの次元は -1 としてレポートされます。`GeometryCollection` でレポートされる面積は、その内容の型によって異なります。  
   
  **インスタンスの次元を取得するには**  
@@ -230,7 +224,7 @@ ms.locfileid: "66014312"
   
   
   
-###  <a name="empty"></a> 空  
+###  <a name="empty"></a><a name="empty"></a> 空  
  *空*`geometry`のインスタンスには点はありません。 空`LineString, CircularString`の、 `CompoundCurve`、および`MultiLineString`インスタンスの長さは0です。 空の `Polygon`、`CurvePolygon`、および `MultiPolygon` インスタンスの面積は 0 です。  
   
  **インスタンスが空かどうかを調べるには**  
@@ -238,7 +232,7 @@ ms.locfileid: "66014312"
   
   
   
-###  <a name="simple"></a> Simple  
+###  <a name="simple"></a><a name="simple"></a> Simple  
  `geometry`インスタンスを*単純*にするには、次の両方の要件を満たしている必要があります。  
   
 -   インスタンスの各図形が終点以外で自己交差していてはいけない。  
@@ -253,16 +247,14 @@ ms.locfileid: "66014312"
   
   
   
-###  <a name="boundary"></a> 境界、内部、および外部  
- インスタンスの内部は、インスタンスによって占有されている領域であり、*外部*は占有されていない領域です。 ** `geometry`  
+###  <a name="boundary-interior-and-exterior"></a><a name="boundary"></a> 境界、内部、および外部  
+ インスタンスの内部は、インスタンスによって占有されている領域であり、*外部*は占有されていない領域です。 *interior* `geometry`  
   
  *境界* は、OGC によって次のように定義されています。  
   
--   
-  `Point` インスタンスと `MultiPoint` インスタンスには境界はありません。  
+-   `Point` インスタンスと `MultiPoint` インスタンスには境界はありません。  
   
--   
-  `LineString` と `MultiLineString` の境界は、始点と終点 (偶数回出現するものを除く) によって形成されます。  
+-   `LineString` と `MultiLineString` の境界は、始点と終点 (偶数回出現するものを除く) によって形成されます。  
   
 ```  
 DECLARE @g geometry;  
@@ -270,8 +262,7 @@ SET @g = geometry::Parse('MULTILINESTRING((0 1, 0 0, 1 0, 0 1), (1 1, 1 0))');
 SELECT @g.STBoundary().ToString();  
 ```  
   
- 
-  `Polygon` インスタンスや `MultiPolygon` インスタンスの境界は、そのリングの集合です。  
+ `Polygon` インスタンスや `MultiPolygon` インスタンスの境界は、そのリングの集合です。  
   
 ```  
 DECLARE @g geometry;  
@@ -284,18 +275,16 @@ SELECT @g.STBoundary().ToString();
   
   
   
-###  <a name="envelope"></a> エンベロープ  
- インスタンスのエンベロープ (*境界ボックス*とも呼ばれます) は、インスタンスの最小値と最大値 (X, Y) 座標によって形成される、軸に沿った四角形です。 ** `geometry`  
+###  <a name="envelope"></a><a name="envelope"></a> エンベロープ  
+ インスタンスのエンベロープ (*境界ボックス*とも呼ばれます) は、インスタンスの最小値と最大値 (X, Y) 座標によって形成される、軸に沿った四角形です。 *envelope* `geometry`  
   
  **インスタンスのエンベロープを取得するには**  
  [STEnvelope](/sql/t-sql/spatial-geometry/stenvelope-geometry-data-type)  
   
   
   
-###  <a name="closure"></a> 閉鎖性  
- *閉じ*`geometry`たインスタンスは、始点と終点が同じである図形です。 
-  `Polygon` インスタンスは閉じていると見なされます。 
-  `Point` インスタンスは閉じていないと見なされます。  
+###  <a name="closure"></a><a name="closure"></a> 閉鎖性  
+ *閉じ*`geometry`たインスタンスは、始点と終点が同じである図形です。 `Polygon` インスタンスは閉じていると見なされます。 `Point` インスタンスは閉じていないと見なされます。  
   
  リングは、単純な閉じている `LineString` インスタンスです。  
   
@@ -316,7 +305,7 @@ SELECT @g.STBoundary().ToString();
   
   
   
-###  <a name="srid"></a> SRID (spatial reference ID)  
+###  <a name="spatial-reference-id-srid"></a><a name="srid"></a> SRID (spatial reference ID)  
  SRID (spatial reference ID) は、`geometry` インスタンスがどの座標系で表されているかを示す識別子です。 SRID が異なる 2 つのインスタンスを比較することはできません。  
   
  **インスタンスの SRID を設定または取得するには**  
@@ -326,9 +315,8 @@ SELECT @g.STBoundary().ToString();
   
   
   
-##  <a name="rel"></a> geometry インスタンス間の関係の特定  
- 
-  `geometry` データ型には、2 つの `geometry` インスタンスの関係を調べるために使用できる組み込みメソッドが数多く用意されています。  
+##  <a name="determining-relationships-between-geometry-instances"></a><a name="rel"></a> geometry インスタンス間の関係の特定  
+ `geometry` データ型には、2 つの `geometry` インスタンスの関係を調べるために使用できる組み込みメソッドが数多く用意されています。  
   
  **2 つのインスタンスが同じ点の集合で構成されているかどうかを調べるには**  
  [STEquals](/sql/t-sql/spatial-geometry/stequals-geometry-data-type)  
@@ -365,13 +353,10 @@ SELECT @g.STBoundary().ToString();
   
   
   
-##  <a name="defaultsrid"></a> geometry インスタンスの既定の SRID は 0  
- 
-  `geometry` の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの既定の SRID は 0 です。 
-  `geometry` 空間データでは、空間インスタンスに特定の SRID がなくても計算を実行できます。したがって、インスタンスは未定義の平面空間に存在することができます。 
-  `geometry`では、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] データ型のメソッドの計算で未定義の平面空間を表すために SRID 0 が使用されます。  
+##  <a name="geometry-instances-default-to-zero-srid"></a><a name="defaultsrid"></a> geometry インスタンスの既定の SRID は 0  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の `geometry` インスタンスの既定の SRID は 0 です。 `geometry` 空間データでは、空間インスタンスに特定の SRID がなくても計算を実行できます。したがって、インスタンスは未定義の平面空間に存在することができます。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]では、`geometry` データ型のメソッドの計算で未定義の平面空間を表すために SRID 0 が使用されます。  
   
-##  <a name="examples"></a> 使用例  
+##  <a name="examples"></a><a name="examples"></a> 使用例  
  次の 2 つの例は、geometry 型のデータの追加方法とクエリ方法を示しています。  
   
 -   最初の例では、ID 列と `geometry` 型の `GeomCol1`列を含むテーブルを作成します。 3 番目の列で、 `geometry` 型の列をその Open Geospatial Consortium (OGC) の Well-Known Text (WKT) 表現で示し、 `STAsText()` メソッドを使用します。 次に 2 つの行が挿入されます。1 つは、 `LineString` の `geometry`インスタンスを含む行で、もう 1 つは `Polygon` インスタンスを含む行です。  

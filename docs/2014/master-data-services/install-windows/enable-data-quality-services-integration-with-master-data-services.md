@@ -11,21 +11,18 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5cf9a81134af8d6e90a1b869f8cc011a17a4b93a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482923"
 ---
 # <a name="enable-data-quality-services-integration-with-master-data-services"></a>マスター データ サービスを使用した Data Quality Services 統合の有効化
-  
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]
-  [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]では、Data Quality Services (DQS) によって照合機能が提供されます。 この機能を使用するには、機能を有効にする必要があります。  
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]では、Data Quality Services (DQS) によって照合機能が提供されます。 この機能を使用するには、機能を有効にする必要があります。  
   
 ## <a name="prerequisites"></a>前提条件  
   
--   
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web アプリケーションとデータベースが存在する必要があります。  
+-   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web アプリケーションとデータベースが存在する必要があります。  
   
 -   Data Quality Services 機能と Data Quality クライアントは、MDS データベースをホストする同じ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス上にインストールする必要があります。 詳細については、「 [Data Quality Services のインストール](../../data-quality-services/install-windows/install-data-quality-services.md)」を参照してください。  
   
@@ -35,11 +32,9 @@ ms.locfileid: "65482923"
   
 2.  左ペインで **[Web の構成]** をクリックします。  
   
-3.  
-  **[Web の構成]** ページで、Web サイトと Web アプリケーションを選択します。  
+3.  **[Web の構成]** ページで、Web サイトと Web アプリケーションを選択します。  
   
-4.  
-  **[DQS 統合の有効化]** セクションで、 **[Data Quality Services との統合を有効化]** をクリックします。  
+4.  **[DQS 統合の有効化]** セクションで、 **[Data Quality Services との統合を有効化]** をクリックします。  
   
 5.  確認のダイアログ ボックスで **[OK]** をクリックします。  
   

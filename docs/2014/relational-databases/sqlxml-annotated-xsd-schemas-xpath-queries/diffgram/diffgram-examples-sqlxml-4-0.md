@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 38bee43ed5b727bca552c1b44010dd692012d823
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012972"
 ---
 # <a name="diffgram-examples-sqlxml-40"></a>DiffGram の例 (SQLXML 4.0)
@@ -345,9 +345,9 @@ ms.locfileid: "66012972"
   
 -   ** \<** ** \<** ** \<Before>** ブロックには、customer>要素 (例 **: id = "Customer2"**) があります。この要素には、(同じ id の) datainstance>ブロックに対応する customer>要素があります。 ** \<** Datainstance>ブロック内の要素では、次のように指定します。 **haschanges = "modified"**。 ** \<** これは更新操作であり、顧客 ANATR に対して、 ** \<datainstance>** block で指定された値を使用して、Cust テーブルの CompanyName との情報が更新されます。  
   
--   ** \<** ** \<** **** ** \<Datainstance>** ブロックには、Customer>要素 (Order3: id = "Customer3") と Order>要素 (**diffgram: id = ""**) があります。 これらの要素のどちらにも、 **diffgram: hasChanges**属性が指定されていません。 このため、DiffGram の処理ロジックで、これらの要素は無視されます。  
+-   ** \<** ** \<** **diffgr:id="Customer3"** ** \<Datainstance>** ブロックには、Customer>要素 (Order3: id = "Customer3") と Order>要素 (**diffgram: id = ""**) があります。 これらの要素のどちらにも、 **diffgram: hasChanges**属性が指定されていません。 このため、DiffGram の処理ロジックで、これらの要素は無視されます。  
   
--   ** \<** \< ** \<** **** ** \<Datainstance>** ブロックには、Customer>要素 (Order4 **: id = "Customer4"**) と Order>要素 () があります。この要素には、before> ブロックに対応する要素がありません。 Datainstance>ブロック内のこれらの要素は、次のように指定します **: haschanges = "inserted"**。 ** \<** このため、新しいレコードが Cust テーブルと Ord テーブルに追加されます。  
+-   ** \<** \< ** \<** **diffgr:id="Order4"** ** \<Datainstance>** ブロックには、Customer>要素 (Order4 **: id = "Customer4"**) と Order>要素 () があります。この要素には、before> ブロックに対応する要素がありません。 Datainstance>ブロック内のこれらの要素は、次のように指定します **: haschanges = "inserted"**。 ** \<** このため、新しいレコードが Cust テーブルと Ord テーブルに追加されます。  
   
 #### <a name="to-test-the-diffgram"></a>DiffGram をテストするには  
   

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2365ec137329675e2cd88e7f5bf7e1781aa3308f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63280492"
 ---
 # <a name="arguments-for-external-tools"></a>外部ツールの引数
@@ -25,7 +25,7 @@ ms.locfileid: "63280492"
   
  外部ツールの引数は、次の表のとおりです。  
   
-|Name|引数|[説明]|  
+|Name|引数|説明|  
 |----------|--------------|-----------------|  
 |**項目のパス**|$(ItemPath)|現在のソースの完全なファイル名 (ドライブ + パス + ファイル名として定義されます)。ソース以外のウィンドウがアクティブな場合は空白です。|  
 |**項目のディレクトリ**|$(ItemDir)|現在のソースのディレクトリ (ドライブ + パスとして定義されます)。ソース以外のウィンドウがアクティブな場合は空白です。|  

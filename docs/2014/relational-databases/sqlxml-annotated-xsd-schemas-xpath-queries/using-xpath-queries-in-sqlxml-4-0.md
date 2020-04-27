@@ -16,14 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 962d79dbee61fa498a6338c864366ec40ea7c759
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014570"
 ---
 # <a name="using-xpath-queries-in-sqlxml-40"></a>SQLXML 4.0 での XPath クエリの使用
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では注釈付き XSD スキーマがサポートされており、データベースに格納されているリレーショナル データの XML ビューを作成できます。 XPath 言語のサブセットを使用すると、注釈付き XSD スキーマで作成された XML ビューに対してクエリを実行できます。  
   
 > [!NOTE]  
@@ -40,8 +39,7 @@ ms.locfileid: "66014570"
  SQLXML 4.0 での XPath クエリの使用例を示します。  
   
  [&#40;SQLXML 4.0&#41;の XPath データ型](xpath-data-types-sqlxml-4-0.md)  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および XSD のデータ型とは大きく異なる、XPath データ型について説明します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および XSD のデータ型とは大きく異なる、XPath データ型について説明します。  
   
 ## <a name="see-also"></a>参照  
  [クライアント側の XML 書式設定 &#40;SQLXML 4.0&#41;](../sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)  

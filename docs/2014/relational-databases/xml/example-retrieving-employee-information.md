@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3d24f945eeb64975c71e416ed1e53d04fd5ffff9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63287838"
 ---
 # <a name="example-retrieving-employee-information"></a>例 : 従業員情報の取得
@@ -123,7 +123,7 @@ FOR XML EXPLICIT;
   
  結果の XML ツリーを生成する際、ユニバーサル テーブル内の行は、次のように処理されます。  
   
- 1 行目の `Tag` 列の値は `1`です。 これにより、 `Tag` 列に値 `1` が割り当てられた列グループとして `Employee!1!EmpID`が識別されます。 この列では、 `Employee` は要素名として識別されます。 その後、`Employee` 属性を持つ <`EmpID`> 要素が作成されます。 これらの属性には、対応する列の値が割り当てられます。  
+ 1 行目の `Tag` 列の値は `1`です。 これにより、 `Tag` 列に値 `1` が割り当てられた列グループとして `Employee!1!EmpID`が識別されます。 この列では、 `Employee` は要素名として識別されます。 その後、`EmpID` 属性を持つ <`Employee`> 要素が作成されます。 これらの属性には、対応する列の値が割り当てられます。  
   
  2 行目の `Tag` 列の値は `2`です。 これにより、 `Tag` 列に値 `2` が割り当てられた列グループとして `Name!2!FName`、 `Name!2!LName`が識別されます。 これらの列では、 `Name` が要素名として識別されます。 <`Name`> 要素の作成時には、`FName` 属性と `LName` 属性が識別されます。 これらの属性には、対応する列の値が割り当てられます。 この行の `1` 列には値 `Parent`が割り当てられています。 したがって、この要素は、1 行目の <`Employee`> 要素に子要素として追加されます。  
   

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9826143c68b8c1bd3edc6472156d140a6141968b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014384"
 ---
 # <a name="introduction-to-the-sqlxmloledb-provider-sqlxml-40"></a>SQLXMLOLEDB プロバイダーの概要 (SQLXML 4.0)
@@ -37,13 +37,13 @@ oTestCommand.Execute , , adExecuteStream
 ## <a name="sqlxmloledb-provider-specific-properties"></a>SQLXMLOLEDB プロバイダー固有のプロパティ  
  SQLXMLOLEDB プロバイダーでは、次のプロバイダー固有の接続プロパティへのアクセスが提供されます。  
   
-|接続<br /><br /> property|Default<br /><br /> (ある場合)|[説明]|  
+|Connection<br /><br /> property|Default<br /><br /> (ある場合)|説明|  
 |-----------------------------|----------------------------|-----------------|  
 |データ プロバイダー||OLE DB プロバイダーの PROGID を提供します。SQLXMLOLEDB ではこれを介してコマンドが実行されます。 SQLXML 4.0 および [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降、このプロバイダーは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 内に含まれているため、このプロパティ値は "SQLNCLI11" に制限されます。 詳細については、「 [SQL Server Native Client プログラミング](../../native-client/sql-server-native-client-programming.md)」を参照してください。|  
   
  SQLXMLOLEDB プロバイダーでは、次のプロバイダー固有のコマンド プロパティへのアクセスが提供されます。  
   
-|command<br /><br /> property|Default<br /><br /> (ある場合)|[説明]|  
+|コマンド<br /><br /> property|Default<br /><br /> (ある場合)|説明|  
 |--------------------------|----------------------------|-----------------|  
 |基本パス|""|基本ファイル パスを指定します。 基本ファイル パスは、XML Stylesheet Language (XSL) の場所またはマッピング スキーマ ファイルを指定するときに使用します。 基本ファイルパスは、xsl またはマッピングスキーマのプロパティで指定されている XSL またはマッピングスキーマファイルの相対パスを解決するためにも使用されます。<br /><br /> このプロパティを使用する例については、「 [SQLXMLOLEDB Provider&#41;&#40;XPath クエリの実行](executing-xpath-queries-sqlxmloledb-provider.md)」を参照してください。|  
 |ClientSideXML|False|行セットを XML に変換する処理をサーバーではなくクライアントで行う場合は、このプロパティを True に設定します。 これはパフォーマンスの負荷を中間層に移す場合に便利です。<br /><br /> このプロパティを使用する例については、「 [Sql クエリの実行 &#40;SQLXMLOLEDB provider&#41;](executing-sql-queries-sqlxmloledb-provider.md) 」または「 [Sql クエリを含むテンプレートの実行」 &#40;SQLXMLOLEDB provider&#41;](executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md)を参照してください。|  
@@ -56,7 +56,7 @@ oTestCommand.Execute , , adExecuteStream
   
  次の表に、ss ストリームフラグのプロパティ値の説明を示します。  
   
-|プロパティ値|[説明]|  
+|プロパティ値|説明|  
 |--------------------|-----------------|  
 |STREAM_FLAGS_DISALLOW_URL|マッピング スキーマまたは XSL に URL は指定できません。|  
 |STREAM_FLAGS_DISALLOW_ABSOLTE_PATH|マッピング スキーマまたは XSL に指定するパスは、テンプレート自身の基本パスに対して相対的である必要があります。|  

@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: aa4b0d73d1cba3d612da9f666bb548dfbc54102f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054120"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>非クラスター化インデックスのサイズの算出
@@ -181,7 +181,7 @@ ms.locfileid: "66054120"
   
 5.  次の式でインデックス行のサイズを計算します。  
   
-     ***Leaf_Row_Size***  = ****** Fixed_Leaf_Size + ****** Variable_Leaf_Size + ***Leaf_Null_Bitmap*** + 1 (インデックス行の行ヘッダーオーバーヘッド) + 6 (子ページ ID のポインター)  
+     ***Leaf_Row_Size***  = ***Fixed_Leaf_Size***Fixed_Leaf_Size + ***Variable_Leaf_Size***Variable_Leaf_Size + ***Leaf_Null_Bitmap*** + 1 (インデックス行の行ヘッダーオーバーヘッド) + 6 (子ページ ID のポインター)  
   
 6.  次の式で、1 ページあたりのインデックス行数を計算します (1 ページあたりの空きバイト数は 8,096 です)。  
   

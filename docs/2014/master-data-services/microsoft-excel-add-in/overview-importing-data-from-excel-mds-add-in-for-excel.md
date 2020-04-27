@@ -11,16 +11,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dd5046c9a307f498ffb585c99cba8044c7b18b3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479034"
 ---
 # <a name="publishing-data-mds-add-in-for-excel"></a>データのパブリッシュ (Excel 用 MDS アドイン)
-  
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]
-  [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]で、他のユーザーとデータを共有するには、データを MDS リポジトリにパブリッシュします。 パブリッシュされたデータはすぐに、他のアドイン ユーザーがダウンロードできるようになります。  
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]で、他のユーザーとデータを共有するには、データを MDS リポジトリにパブリッシュします。 パブリッシュされたデータはすぐに、他のアドイン ユーザーがダウンロードできるようになります。  
   
  データを発行すると、追加または更新したすべてのデータが MDS リポジトリに発行されます。 削除したデータは発行されません。データの削除は個別に行う必要があります。 詳細については、「 [行の削除 (Excel 用 MDS アドイン)](delete-a-row-mds-add-in-for-excel.md)」を参照してください。  
   
@@ -54,11 +52,11 @@ ms.locfileid: "65479034"
 |タスクの説明|トピック|  
 |----------------------|-----------|  
 |アクティブなワークシートのデータをパブリッシュして MDS リポジトリに戻します。|[Excel から MDS へのデータのパブリッシュ &#40;Excel 用 MDS アドイン&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
-|MDS リポジトリとワークシートから行を同時に削除します。|[行 &#40;Excel 用 MDS アドインの削除&#41;](delete-a-row-mds-add-in-for-excel.md)|  
+|MDS リポジトリとワークシートから行を同時に削除します。|[行の削除 (Excel 用 MDS アドイン)](delete-a-row-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   [データ &#40;Excel 用 MDS アドイン&#41;の更新](refreshing-data-mds-add-in-for-excel.md)  
+-   [データの更新 (Excel 用 MDS アドイン)](refreshing-data-mds-add-in-for-excel.md)  
   
 -   [Microsoft Excel 用マスター データ サービス アドイン](master-data-services-add-in-for-microsoft-excel.md)  
   
