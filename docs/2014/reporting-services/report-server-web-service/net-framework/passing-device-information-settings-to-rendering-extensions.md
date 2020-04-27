@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ea50de3955ab152cbd92d5fd50ef8b2281a67eb7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62518652"
 ---
 # <a name="passing-device-information-settings-to-rendering-extensions"></a>表示拡張機能にデバイス情報設定を渡す
@@ -55,7 +55,7 @@ http://<Server Name>/reportserver?/SampleReports/Sales Order Detail&rs:Command=R
   
 ## <a name="see-also"></a>参照  
  [表示拡張機能のデバイス情報設定 &#40;Reporting Services&#41;](../../device-information-settings-for-rendering-extensions-reporting-services.md)   
- [RSReportServer.Config で表示拡張機能パラメーターをカスタマイズする](../../customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [RSReportServer の表示拡張機能パラメーターをカスタマイズする](../../customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Web サービスと .NET Framework を使用してのアプリケーションの構築](building-applications-using-the-web-service-and-the-net-framework.md)  
   
   

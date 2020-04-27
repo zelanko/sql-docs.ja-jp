@@ -1,5 +1,5 @@
 ---
-title: 'IRowsetFastLoad:: InsertRow (OLE DB) |Microsoft Docs'
+title: IRowsetFastLoad::InsertRow (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9c4cd4aff0a8868b8870374fcffb8c7b7169fe2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62511631"
 ---
 # <a name="irowsetfastloadinsertrow-ole-db"></a>IRowsetFastLoad::InsertRow (OLE DB)
-  一括コピー行セットに行を追加します。 サンプルについては、「IROWSETFASTLOAD と ISEQUENTIALSTREAM &#40;OLE DB&#41;を使用して、 [IRowsetFastLoad &#40;OLE DB&#41;](../native-client-ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md)を使用して[BLOB データを SQL SERVER に送信](../native-client-ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)する」を参照してデータコピーください。  
+  一括コピー行セットに行を追加します。 サンプルについては、「[IRowsetFastLoad を使用したデータの一括コピー (OLE DB)](../native-client-ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md)」と「[IROWSETFASTLOAD と ISEQUENTIALSTREAM を使用した SQL SERVER への BLOB データの送信 (OLE DB)](../native-client-ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)」を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,10 +41,10 @@ pData
 ```  
   
 ## <a name="arguments"></a>引数  
- *Haccessor*[in]  
+ *hAccessor*[in]  
  一括コピーの行データを定義するアクセサーのハンドルを指定します。 参照されるアクセサーは行アクセサーで、データ値を保持するコンシューマー所有のメモリをバインドします。  
   
- *pData*[入力]  
+ *pData*[in]  
  データ値を保持するコンシューマー所有のメモリへのポインターを指定します。 詳細については、「[DBBINDING 構造体](https://go.microsoft.com/fwlink/?LinkId=65955)」を参照してください。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -55,8 +55,7 @@ pData
  エラーが発生しました。 エラー情報は、行セットのエラー インターフェイスから参照できます。  
   
  E_INVALIDARG  
- 
-  *pData* 引数に NULL ポインターが設定されました。  
+ *pData* 引数に NULL ポインターが設定されました。  
   
  E_OUTOFMEMORY  
  SQLNCLI11 では、要求を完了するのに必要なメモリを割り当てることができませんでした。  
@@ -70,13 +69,10 @@ pData
  DB_E_BADACCESSORTYPE   
  指定されたアクセサーが行アクセサーではなかったか、コンシューマー所有のメモリが指定されませんでした。  
   
-## <a name="remarks"></a>解説  
- コンシューマーデータを列の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型に変換するときにエラーが発生すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーから E_FAIL が返されます。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]InsertRow** メソッドを使用するか、** Commit** メソッドのみを使用して、データを ** に転送できます。 
-  **InsertRow** メソッドを使用する場合、コンシューマー アプリケーションは、データ型変換エラーの通知を受け取るまで、誤ったデータを使用してこのメソッドを何回も呼び出す可能性があります。 
-  **Commit** メソッドでは、すべてのデータがコンシューマーにより正しく指定されたことが保証されるので、コンシューマーは適切に **Commit** を使用することで、必要に応じてデータを検証できます。  
+## <a name="remarks"></a>Remarks  
+ コンシューマーデータを列の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型に変換するときにエラーが発生すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーから E_FAIL が返されます。 **InsertRow** メソッドを使用するか、**Commit** メソッドのみを使用して、データを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に転送できます。 **InsertRow** メソッドを使用する場合、コンシューマー アプリケーションは、データ型変換エラーの通知を受け取るまで、誤ったデータを使用してこのメソッドを何回も呼び出す可能性があります。 **Commit** メソッドでは、すべてのデータがコンシューマーにより正しく指定されたことが保証されるので、コンシューマーは適切に **Commit** を使用することで、必要に応じてデータを検証できます。  
   
- Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーの一括コピー行セットは書き込み専用です。 Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、行セットのコンシューマークエリを許可するメソッドを公開しません。 処理を終了する場合、コンシューマーは [Commit](irowsetfastload-ole-db.md) メソッドを呼び出さずに、**IRowsetFastLoad** インターフェイスの参照を解放できます。 コンシューマーが行セットに挿入した行にアクセスして値を変更する機能や、そのような行を行セットから個別に削除する機能はありません。  
+ Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーの一括コピー行セットは書き込み専用です。 Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、行セットのコンシューマークエリを許可するメソッドを公開しません。 処理を終了する場合、コンシューマーは **Commit** メソッドを呼び出さずに、[IRowsetFastLoad](irowsetfastload-ole-db.md) インターフェイスの参照を解放できます。 コンシューマーが行セットに挿入した行にアクセスして値を変更する機能や、そのような行を行セットから個別に削除する機能はありません。  
   
  一括コピーされる行は、サーバー上で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用に形式が設定されます。 行の形式は、ANSI_PADDING など、接続やセッションに設定されたオプションの影響を受けます。 このオプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを介して行われるすべての接続に対して既定で設定されます。  
   

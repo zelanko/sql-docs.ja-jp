@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6ed8a56892cfd70b43341ffff8349faa56094a97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62519142"
 ---
 # <a name="report-server-item-properties"></a>レポート サーバー アイテムのプロパティ
@@ -39,8 +39,8 @@ ms.locfileid: "62519142"
 |**ID**|レポート サーバー データベースのアイテムの ID。|  
 |**ModifiedBy**|レポート サーバー データベースのアイテムを最後に変更したユーザーの名前。|  
 |**ModifiedDate**|ユーザーがアイテムを最後に変更した日付と時刻。|  
-|**Name**|レポート サーバー データベースのアイテムの名前。|  
-|**[パス]**|アイテムの完全なパス名です。 レポート サーバー データベースのアイテムのパスの長さは最大 260 字です。|  
+|**名前**|レポート サーバー データベースのアイテムの名前。|  
+|**パス**|アイテムの完全なパス名です。 レポート サーバー データベースのアイテムのパスの長さは最大 260 字です。|  
 |**[サイズ]**|レポート サーバー データベースのアイテムのサイズ (バイト単位)。|  
 |**Type**|レポート サーバー データベースのアイテムの種類。|  
 |**VirtualPath**|レポート サーバー データベースのアイテムの仮想パス。 <xref:ReportService2010.CatalogItem.VirtualPath%2A> プロパティの値は、ユーザーがそのアイテムを表示するときに使用するパスです。 たとえば、report1 というレポートがユーザーの個人的な My Reports フォルダー内にある場合、仮想パスは /My Reports となります。 アイテムの実際のパスは /Users/username/My Reports です。|  
@@ -50,7 +50,7 @@ ms.locfileid: "62519142"
   
 |プロパティ|説明|  
 |--------------|-----------------|  
-|**Reserved**|フォルダーの <xref:ReportService2010.ReportingService2010.GetProperties%2A> メソッドが返す値は、レポート サーバーによって予約されています。 予約されたフォルダーには Users、My Reports、および / が含まれています。 予約されたフォルダーは、変更も削除もできません。|  
+|**予約済み**|フォルダーの <xref:ReportService2010.ReportingService2010.GetProperties%2A> メソッドが返す値は、レポート サーバーによって予約されています。 予約されたフォルダーには Users、My Reports、および / が含まれています。 予約されたフォルダーは、変更も削除もできません。|  
   
 ## <a name="report-properties"></a>レポート プロパティ  
  これまで説明したアイテム プロパティの他に、次のプロパティがレポート サーバー データベースのレポートに適用されます。  
@@ -69,9 +69,9 @@ ms.locfileid: "62519142"
 ## <a name="resource-properties"></a>リソース プロパティ  
  これまで説明したアイテム プロパティの他に、次のプロパティがレポート サーバー データベースのリソースに適用されます。  
   
-|プロパティ|[説明]|  
+|プロパティ|説明|  
 |--------------|-----------------|  
-|**Mime**|レポート サーバー データベースのリソースの MIME の種類。|  
+|**MimeType**|レポート サーバー データベースのリソースの MIME の種類。|  
   
 ## <a name="see-also"></a>参照  
  [Web サービスと .NET Framework を使用してのアプリケーションの構築](building-applications-using-the-web-service-and-the-net-framework.md)   

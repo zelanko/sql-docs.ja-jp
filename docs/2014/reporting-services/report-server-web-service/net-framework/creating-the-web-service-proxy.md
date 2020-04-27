@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: decf503b7da6fb4e3f3a3846a714b1062255f1a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62520381"
 ---
 # <a name="creating-the-web-service-proxy"></a>Web サービス プロキシの作成
@@ -29,10 +29,9 @@ ms.locfileid: "62520381"
  を使用して開発プロジェクトにプロキシクラスを追加するには、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]の WSDL ツール[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]を使用する方法と、で[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]Web 参照を追加する方法の2つがあります。 ここでは、これらの方法について詳しく説明します。  
   
 ## <a name="adding-the-proxy-using-the-wsdl-tool"></a>WSDL ツールを使用したプロキシの追加  
- 
-  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK には、Web サービス記述言語ツール (Wsdl.exe) が含まれています。これにより、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 開発環境で使用する Web サービス プロキシを生成できます。 Web サービスをサポートする言語 (現在は C# と[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) でクライアントプロキシを作成する最も一般的な方法は、WSDL ツールを使用することです。  
+ [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK には、Web サービス記述言語ツール (Wsdl.exe) が含まれています。これにより、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 開発環境で使用する Web サービス プロキシを生成できます。 Web サービスをサポートする言語 (現在は C# と[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) でクライアントプロキシを作成する最も一般的な方法は、WSDL ツールを使用することです。  
   
- **Wsdl.exe を使用してプロキシクラスをプロジェクトに追加するには**  
+ **Wsdl.exe を使用してプロキシ クラスをプロジェクトに追加するには**  
   
 1.  コマンド プロンプトから、Wsdl.exe を使用してプロキシ クラスを作成します。最低限レポート サーバー Web サービスへの URL を指定します。  
   
@@ -67,22 +66,17 @@ ReportingService2010 service = new ReportingService2010();
  完全な構文を含む Wsdl.exe ツールの詳細については、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK ドキュメントの「Web サービス記述言語ツール」を参照してください。 Web サービス プロキシの詳しい説明は、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK ドキュメントの「XML Web サービス プロキシの作成」を参照してください。  
   
 ## <a name="adding-the-proxy-using-a-web-reference-in-visual-studio"></a>Visual Studio で Web 参照を使用するプロキシの追加  
- Web 参照によって、プロジェクトで 1 つ以上の Web サービスを使用できます。 
-  [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] では、ユーザーが次の簡単な手順に従うことによって、Web サービスの参照をプロジェクトに追加できます。  
+ Web 参照によって、プロジェクトで 1 つ以上の Web サービスを使用できます。 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] では、ユーザーが次の簡単な手順に従うことによって、Web サービスの参照をプロジェクトに追加できます。  
   
- **プロジェクトに Web 参照を追加するには**  
+ **Web 参照をプロジェクトに追加するには**  
   
-1.  
-  **ソリューション エクスプローラー**で、Web サービスを使用するプロジェクトを選択します。  
+1.  **ソリューション エクスプローラー**で、Web サービスを使用するプロジェクトを選択します。  
   
-2.  
-  **[プロジェクト]** メニューの **[Web 参照の追加]** をクリックします。  
+2.  **[プロジェクト]** メニューの **[Web 参照の追加]** をクリックします。  
   
-     
-  **[Web 参照の追加]** ダイアログ ボックスが開きます。  
+     **[Web 参照の追加]** ダイアログ ボックスが開きます。  
   
-3.  
-  **[URL]** フィールドに、レポート サーバー Web サービスへの完全なパスを入力します。  
+3.  **[URL]** フィールドに、レポート サーバー Web サービスへの完全なパスを入力します。  
   
      レポート サーバー Web サービスのレポート実行エンドポイントの単純な URL は、次のようになります。  
   
@@ -99,16 +93,13 @@ ReportingService2010 service = new ReportingService2010();
   
 4.  プロジェクトでレポート サーバー Web サービスを使用できること、およびレポート サーバーにアクセスするための適切な権限を持っていることを確認します。  
   
-5.  
-  **[Web 参照名]** フィールドに、プログラムによってレポート サーバー Web サービスにアクセスする場合にコードで使用する名前を入力します。  
+5.  **[Web 参照名]** フィールドに、プログラムによってレポート サーバー Web サービスにアクセスする場合にコードで使用する名前を入力します。  
   
-6.  
-  **[参照の追加]** を選択し、アプリケーションで Web サービスへの参照を作成します。  
+6.  **[参照の追加]** を選択し、アプリケーションで Web サービスへの参照を作成します。  
   
      アクティブなプロジェクトの [Web 参照] ノードの下にある **[ソリューション エクスプローラー]** に、新しい参照が **[Web 参照名]** フィールドに指定した名前で表示されます。  
   
-7.  
-  **[ソリューション エクスプローラー]** で、[Web 参照] フォルダーを展開し、プロジェクトのアイテムで使用できる Web 参照クラスの名前空間をメモします。  
+7.  **[ソリューション エクスプローラー]** で、[Web 参照] フォルダーを展開し、プロジェクトのアイテムで使用できる Web 参照クラスの名前空間をメモします。  
   
      Web 参照をプロジェクトに追加した後、関連付けられたファイルが **[ソリューション エクスプローラー]** の [Web 参照] フォルダー内にあるフォルダーに表示されます。  
   
@@ -127,8 +118,7 @@ rs.Credentials = System.Net.CredentialCache.DefaultCredentials
   
 ```  
   
- 
-  **using** (** では **Import[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) ディレクティブをレポート サーバー Web サービス参照に追加することもできます。 このディレクティブを使用すると、型を名前空間で完全修飾する必要がありません。 このためには、次のコードをファイルに追加します。  
+ **using** ([!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] では **Import**) ディレクティブをレポート サーバー Web サービス参照に追加することもできます。 このディレクティブを使用すると、型を名前空間で完全修飾する必要がありません。 このためには、次のコードをファイルに追加します。  
   
 ```vb  
 Import myNamespace.myReferenceName  

@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c81ac6c0c8dcf7e24c80b426654164c668fcf3a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62468609"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>解釈された Transact-SQL を使用したメモリ最適化テーブルへのアクセス
@@ -36,14 +36,13 @@ ms.locfileid: "62468609"
   
  次の [!INCLUDE[tsql](../../includes/tsql-md.md)] 構造は、メモリ最適化テーブル内のデータにアクセスする、解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャでサポートされていません。  
   
-|領域|サポートされていません|  
+|領域|サポートされていない|  
 |----------|-----------------|  
 |テーブルへのアクセス|TRUNCATE TABLE<br /><br /> MERGE (ターゲットとしてのメモリ最適化テーブル)<br /><br /> 動的カーソルおよびキーセット カーソル (これらは自動的に静的カーソルに降格されます)。<br /><br /> コンテキスト接続を使用した CLR モジュールからのアクセス。<br /><br /> インデックス付きビューから、メモリ最適化されたテーブルへの参照。|  
-|複数のデータベース間|複数データベース間のクエリ<br /><br /> データベースにまたがるトランザクション<br /><br /> リンク サーバー|  
+|複数のデータベース間|複数データベースにまたがるクエリ<br /><br /> データベースにまたがるトランザクション<br /><br /> リンク サーバー|  
   
 ## <a name="table-hints"></a>テーブル ヒント  
- テーブル ヒントの詳細については、 [Transact-sql&#41;&#40;テーブルヒント](/sql/t-sql/queries/hints-transact-sql-table)。 
-  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] をサポートするために SNAPSHOT 分離が追加されました。  
+ テーブル ヒントの詳細については、 [Transact-sql&#41;&#40;テーブルヒント](/sql/t-sql/queries/hints-transact-sql-table)。 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] をサポートするために SNAPSHOT 分離が追加されました。  
   
  次のテーブル ヒントは、解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用してメモリ最適化テーブルにアクセスする場合はサポートされません。  
   

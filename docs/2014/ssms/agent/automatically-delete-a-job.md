@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7c5e165380c0f920ebf1366855e7801b6bb9089a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62472995"
 ---
 # <a name="automatically-delete-a-job"></a>Automatically Delete a Job
@@ -53,25 +53,22 @@ ms.locfileid: "62472995"
   
      [SQL Server 管理オブジェクト](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
  詳細については、「 [SQL Server エージェントのセキュリティの実装](implement-sql-server-agent-security.md)」をご覧ください。  
   
-##  <a name="SSMS"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-automatically-delete-a-job"></a>ジョブを自動的に削除するには  
   
-1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
+1.  **オブジェクト エクスプローラー**で、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  
-  **[SQL Server エージェント]** を展開し、 **[ジョブ]** を展開します。次に、編集するジョブを右クリックし、 **[プロパティ]** をクリックします。  
+2.  **[SQL Server エージェント]** を展開し、 **[ジョブ]** を展開します。次に、編集するジョブを右クリックし、 **[プロパティ]** をクリックします。  
   
-3.  
-  **[通知]** ページをクリックします。  
+3.  **[通知]** ページをクリックします。  
   
-4.  
-  **[自動的にジョブを削除]** チェック ボックスをオンにし、次のいずれかを選択します。  
+4.  **[自動的にジョブを削除]** チェック ボックスをオンにし、次のいずれかを選択します。  
   
     -   ジョブが正常に完了したときにジョブの状態を削除する場合は、 **[ジョブ成功時]** をクリックします。  
   
@@ -79,7 +76,7 @@ ms.locfileid: "62472995"
   
     -   完了時の状態にかかわらずジョブを削除する場合は、 **[ジョブ完了時]** をクリックします。  
   
-##  <a name="SMO"></a>SQL Server 管理オブジェクトの使用  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>SQL Server 管理オブジェクトの使用  
  **ジョブを自動的に削除するには**  
   
  Visual Basic、Visual C#、PowerShell などのプログラミング言語で `DeleteLevel` クラスの `Job` プロパティを使用します。 詳細については、「 [SQL Server 管理オブジェクト (SMO) プログラミング ガイド](https://msdn.microsoft.com/library/ms162169.aspx)」を参照してください。  

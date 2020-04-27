@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: daf80492cd6a0d8040d1497e71600c798e7ef96c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62524095"
 ---
 # <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>チュートリアル : 証明書を使用したストアド プロシージャへの署名
@@ -192,7 +192,7 @@ GO
   
  REVERT ステートメントの詳細については、「[REVERT (Transact-SQL)](/sql/t-sql/statements/revert-transact-sql)」 を参照してください。  
   
-##  <a name="CompleteExample"></a>完全な例  
+##  <a name="complete-example"></a><a name="CompleteExample"></a>完全な例  
  次に、完全なサンプル コードを示します。  
   
 ```  

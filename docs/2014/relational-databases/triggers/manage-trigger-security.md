@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: bcdc2af7f67c1ea4bda49e09cfe92eda43c9dea3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62524128"
 ---
 # <a name="manage-trigger-security"></a>トリガーのセキュリティの管理
@@ -47,8 +47,7 @@ ms.locfileid: "62524128"
     SELECT type, name, parent_class_desc FROM sys.server_triggers ;  
     ```  
   
--   
-  [DISABLE TRIGGER](/sql/t-sql/statements/disable-trigger-transact-sql) を使用して、トリガーが上位の特権の下で実行された場合に、データベースやサーバーの整合性に支障をきたす可能性のあるトリガーを無効にします。 次のステートメントは、現在のデータベースにあるすべてのデータベースレベルの DDL トリガーを無効にします。  
+-   [DISABLE TRIGGER](/sql/t-sql/statements/disable-trigger-transact-sql) を使用して、トリガーが上位の特権の下で実行された場合に、データベースやサーバーの整合性に支障をきたす可能性のあるトリガーを無効にします。 次のステートメントは、現在のデータベースにあるすべてのデータベースレベルの DDL トリガーを無効にします。  
   
     ```  
     DISABLE TRIGGER ALL ON DATABASE  

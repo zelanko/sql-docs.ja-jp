@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1d3791cc5250442555dd9b090dda549fe2b9feec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62524388"
 ---
 # <a name="delete-an-operator"></a>Delete an Operator
@@ -42,22 +42,21 @@ ms.locfileid: "62524388"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
  オペレーターを削除すると、そのオペレーターと関連するすべての通知も削除されます。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  オペレーターを削除できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-delete-an-operator"></a>オペレーターを削除するには  
   
-1.  
-  **オブジェクト エクスプローラー**で、削除するオペレーターを含むサーバーをプラス記号をクリックして展開します。  
+1.  **オブジェクト エクスプローラー**で、削除するオペレーターを含むサーバーをプラス記号をクリックして展開します。  
   
 2.  プラス記号をクリックして **[SQL Server エージェント]** を展開します。  
   
@@ -65,10 +64,9 @@ ms.locfileid: "62524388"
   
 4.  削除するオペレーターを右クリックして、 **[削除]** をクリックします。  
   
-5.  
-  **[オブジェクトの削除]** ダイアログ ボックスで、正しいオペレーターが選択されていることを確認し、 **[OK]** をクリックします。 削除したオペレーターに送信されていた警告およびジョブが別のオペレーターに送信されるようにする場合は、 **[再割り当てするオペレーター]** をオンにし、一覧からオペレーターを選択します。  
+5.  **[オブジェクトの削除]** ダイアログ ボックスで、正しいオペレーターが選択されていることを確認し、 **[OK]** をクリックします。 削除したオペレーターに送信されていた警告およびジョブが別のオペレーターに送信されるようにする場合は、 **[再割り当てするオペレーター]** をオンにし、一覧からオペレーターを選択します。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-delete-an-operator"></a>オペレーターを削除するには  
   

@@ -11,18 +11,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ca9df655e00b1f2fd1919f30bb1bb166e2556b91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62505130"
 ---
 # <a name="file-locations-for-default-and-named-instances-of-sql-server"></a>SQL Server の既定のインスタンスおよび名前付きインスタンスのファイルの場所
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールは、1 つ以上の別個のインスタンスで構成されます。 既定のインスタンスか名前付きインスタンスかにかかわらず、各インスタンスには、それぞれ専用のプログラム ファイルとデータ ファイルが用意されます。さらに、コンピューター上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのインスタンスが使用する共有ファイル セットもあります。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに [!INCLUDE[ssDE](../../includes/ssde-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]が含まれている場合は、これらの各コンポーネントで使用するデータと実行ファイルのセット、およびすべてのコンポーネントが使用する共有ファイルが用意されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに [!INCLUDE[ssDE](../../includes/ssde-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]が含まれている場合は、これらの各コンポーネントで使用するデータと実行ファイルのセット、およびすべてのコンポーネントが使用する共有ファイルが用意されます。  
   
  コンポーネントごとにインストール場所を分けるため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス内の各コンポーネントについて一意のインスタンス ID が生成されます。  
   
@@ -31,39 +29,31 @@ ms.locfileid: "62505130"
 >   
 >  システム データベース (master、model、MSDB、および tempdb) と [!INCLUDE[ssDE](../../includes/ssde-md.md)] のユーザー データベースは、ストレージ オプションとしてサーバー メッセージ ブロック (SMB) ファイル サーバーを指定してインストールできます。 これは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スタンドアロン インストールと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インストール (FCI) の両方に当てはまります。 詳細については、「 [SQL Server をストレージ オプションとして SMB ファイル共有にインストールする](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md)」を参照してください。  
 >   
->  Binn、Data、Ftdata、HTML、1033 の各ディレクトリとその内容は削除しないでください。 他のディレクトリは必要に応じて削除できますが、削除した機能やデータを元に戻すには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をいったんアンインストールしてからインストールし直す必要があります。 HTML ディレクトリ内のすべての .htm ファイルは、削除も修正もしないでください。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のツールを正常に機能させるには、これらのファイルが必要です。  
+>  Binn、Data、Ftdata、HTML、1033 の各ディレクトリとその内容は削除しないでください。 他のディレクトリは必要に応じて削除できますが、削除した機能やデータを元に戻すには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をいったんアンインストールしてからインストールし直す必要があります。 HTML ディレクトリ内のすべての .htm ファイルは、削除も修正もしないでください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のツールを正常に機能させるには、これらのファイルが必要です。  
   
-## <a name="shared-files-for-all-instances-of-includessnoversionincludesssnoversion-mdmd"></a>のすべてのインスタンスで共有されるファイル [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="shared-files-for-all-instances-of-ssnoversion"></a>のすべてのインスタンスで共有されるファイル [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  同じコンピューター上のすべてのインスタンスが使用する共通ファイルは、[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)] フォルダーにインストールされます (\<*ドライブ*> は、コンポーネントがインストールされているドライブ名です)。 既定値は、通常はドライブ C です。  
   
 ## <a name="file-locations-and-registry-mapping"></a>ファイルの場所とレジストリのマッピング  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップの実行時には、サーバー コンポーネントごとにインスタンス ID が生成されます。 この [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リリースのサーバー コンポーネントは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、および [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]です。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップの実行時には、サーバー コンポーネントごとにインスタンス ID が生成されます。 この [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リリースのサーバー コンポーネントは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、および [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]です。  
   
  既定のインスタンス ID は、次の形式を使用して作成されます。  
   
--   
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]を表す "MSSQL" に、メジャー バージョン番号、アンダースコアおよびマイナー番号 (該当する場合)、ピリオド、およびインスタンス名を連結した形式  
+-   [!INCLUDE[ssDE](../../includes/ssde-md.md)]を表す "MSSQL" に、メジャー バージョン番号、アンダースコアおよびマイナー番号 (該当する場合)、ピリオド、およびインスタンス名を連結した形式  
   
--   
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を表す "MSAS" に、メジャー バージョン番号、アンダースコアおよびマイナー番号 (該当する場合)、ピリオド、およびインスタンス名を連結した形式  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を表す "MSAS" に、メジャー バージョン番号、アンダースコアおよびマイナー番号 (該当する場合)、ピリオド、およびインスタンス名を連結した形式  
   
--   
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]を表す "MSRS" に、メジャー バージョン番号、アンダースコアおよびマイナー番号 (該当する場合)、ピリオド、およびインスタンス名を連結した形式  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]を表す "MSRS" に、メジャー バージョン番号、アンダースコアおよびマイナー番号 (該当する場合)、ピリオド、およびインスタンス名を連結した形式  
   
  このリリースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] における既定のインスタンス ID の例を次に示します。  
   
--   
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の既定のインスタンスの場合: MSSQL12.MSSQLSERVER。  
+-   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の既定のインスタンスの場合: MSSQL12.MSSQLSERVER。  
   
--   
-  [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] の既定のインスタンスの場合: MSAS12.MSSQLSERVER。  
+-   [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] の既定のインスタンスの場合: MSAS12.MSSQLSERVER。  
   
 -   "MyInstance" という名前の [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インスタンスの場合: MSSQL12.MyInstance。  
   
- 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssDE](../../includes/ssde-md.md)] を含み、名前が "MyInstance" で、インストール先が既定のディレクトリである [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の名前付きインスタンスの場合、ディレクトリ構造は次のようになります。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssDE](../../includes/ssde-md.md)] を含み、名前が "MyInstance" で、インストール先が既定のディレクトリである [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の名前付きインスタンスの場合、ディレクトリ構造は次のようになります。  
   
 -   C:\Program Files\Microsoft SQL Server\MSSQL12.MyInstance\  
   
@@ -71,17 +61,14 @@ ms.locfileid: "62505130"
   
  インスタンス ID には任意の値を指定できますが、特殊文字や予約されたキーワードは使用しないでください。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ時に、既定以外のインスタンス ID を指定できます。 ユーザーが既定のインストール ディレクトリを変更した場合は、\<Program Files>\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の代わりに \<カスタム パス>\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が使用されます。 アンダースコア (_) で始まるインスタンス ID、またはシャープ記号 (#) かドル記号 ($) を含むインスタンス ID はサポートされていないことに注意してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ時に、既定以外のインスタンス ID を指定できます。 ユーザーが既定のインストール ディレクトリを変更した場合は、\<Program Files>\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の代わりに \<カスタム パス>\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が使用されます。 アンダースコア (_) で始まるインスタンス ID、またはシャープ記号 (#) かドル記号 ($) を含むインスタンス ID はサポートされていないことに注意してください。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] とクライアント コンポーネントはインスタンス対応でないため、インスタンス ID は割り当てられません。 既定では、インスタンス対応でないコンポーネントが単一のディレクトリ [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]にインストールされます。 1 つの共有コンポーネントのインストール パスを変更すると、他の共有コンポーネントのパスも変更されます。 後続のインストールでは、最初のインストールと同じディレクトリに、インスタンス対応でないコンポーネントがインストールされます。  
+>  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] とクライアント コンポーネントはインスタンス対応でないため、インスタンス ID は割り当てられません。 既定では、インスタンス対応でないコンポーネントが単一のディレクトリ [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]にインストールされます。 1 つの共有コンポーネントのインストール パスを変更すると、他の共有コンポーネントのパスも変更されます。 後続のインストールでは、最初のインストールと同じディレクトリに、インスタンス対応でないコンポーネントがインストールされます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]は、インストール[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]後にインスタンスの名前を変更することをサポートする唯一のコンポーネントです。 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスの名前を変更しても、インスタンス ID は変更されません。 インスタンスの名前変更が完了した後も、ディレクトリとレジストリ キーは、インストール時に作成されたインスタンス ID を引き続き使用します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]は、インストール[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]後にインスタンスの名前を変更することをサポートする唯一のコンポーネントです。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスの名前を変更しても、インスタンス ID は変更されません。 インスタンスの名前変更が完了した後も、ディレクトリとレジストリ キーは、インストール時に作成されたインスタンス ID を引き続き使用します。  
   
- インスタンス対応のコンポーネントの場合は、HKLM\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<*Instance_ID*> の下にレジストリ ハイブが作成されます。 たとえば、次のように入力します。  
+ インスタンス対応のコンポーネントの場合は、HKLM\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<*Instance_ID*> の下にレジストリ ハイブが作成されます。 たとえば、  
   
 -   \\[!INCLUDE[msCoName](../../includes/msconame-md.md)]、Hklm\software\\\MSSQL12.[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]MyInstance  
   
@@ -104,26 +91,20 @@ ms.locfileid: "62505130"
   
 |コンポーネント|既定<sup>のパス1、2</sup>|構成可能な<sup>3</sup>または固定パス|  
 |---------------|---------------------------------|--------------------------------------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)]サーバーコンポーネント|[!INCLUDE[msCoName](../../includes/msconame-md.md)]\MSSQL12.\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\<InstanceID>\|構成可能|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)]データファイル|[!INCLUDE[msCoName](../../includes/msconame-md.md)]\MSSQL12.\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\<InstanceID>\|構成可能|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]server|\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]ファイル[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]名 \ msas12。\<InstanceID>\|構成可能|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データファイル|\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]ファイル[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]名 \ msas12。\<InstanceID>\|構成可能|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]レポートサーバー|\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]ファイル[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]名 \ msrs12。\<InstanceID> \ Reporting Services\ReportServer\Bin\|構成可能|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]レポートマネージャー|\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]ファイル[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]名 \ msrs12。\<InstanceID> \ Reporting Services\ReportManager\|固定パス|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] サーバー コンポーネント|[!INCLUDE[msCoName](../../includes/msconame-md.md)]\MSSQL12.\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\<InstanceID>\|構成可能|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] データ ファイル|[!INCLUDE[msCoName](../../includes/msconame-md.md)]\MSSQL12.\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\<InstanceID>\|構成可能|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバー (server)|\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]ファイル[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]名 \ msas12。\<InstanceID>\|構成可能|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ファイル|\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]ファイル[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]名 \ msas12。\<InstanceID>\|構成可能|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバー (report server)|\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]ファイル[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]名 \ msrs12。\<InstanceID> \ Reporting Services\ReportServer\Bin\|構成可能|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート マネージャー|\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]ファイル[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]名 \ msrs12。\<InstanceID> \ Reporting Services\ReportManager\|固定パス|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|\<インストールディレクトリ> \ 120\ DTS\|構成可能<sup>4</sup>|  
 |クライアント コンポーネント (bcp.exe および sqlcmd.exe を除く)|\<インストールディレクトリ> \ 120 \\|構成可能<sup>4</sup>|  
-|クライアント コンポーネント (bcp.exe および sqlcmd.exe)|
-  \<インストール ディレクトリ>\Client SDK\ODBC\110\Tools\Binn|固定パス|  
+|クライアント コンポーネント (bcp.exe および sqlcmd.exe)|\<インストール ディレクトリ>\Client SDK\ODBC\110\Tools\Binn|固定パス|  
 |レプリケーションおよびサーバー側 COM オブジェクト|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]COM\\<sup>5</sup>|固定パス|  
-|データ変換ランタイム エンジン、データ変換パイプライン エンジン、および [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コマンド プロンプト ユーティリティ用の `dtexec` コンポーネント DLL|
-  [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|固定パス|  
-|DLL。次のマネージド接続をサポート: [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|
-  [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Connections|固定パス|  
-|
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] がサポートする列挙子の型ごとの DLL|
-  [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\ForEachEnumerators|固定パス|  
-|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser Service、WMI プロバイダー|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]共有\|固定パス|  
+|データ変換ランタイム エンジン、データ変換パイプライン エンジン、および `dtexec` コマンド プロンプト ユーティリティ用の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コンポーネント DLL|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|固定パス|  
+|DLL。次のマネージド接続をサポート: [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Connections|固定パス|  
+|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] がサポートする列挙子の型ごとの DLL|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\ForEachEnumerators|固定パス|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser Service、WMI プロバイダー|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]共有\|固定パス|  
 |次のすべてのインスタンス間で共有されるコンポーネント: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]共有\|固定パス|  
   
  <sup>1</sup>\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]ファイル[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ フォルダーが制限されたアクセス許可で保護されていることを確認します。  
@@ -141,11 +122,9 @@ ms.locfileid: "62505130"
   
  セットアップ時にサーバー コンポーネントまたはデータ ファイルのインストール パスを指定する場合、プログラム ファイルとデータ ファイルについては、指定した場所に加えてインスタンス ID も使用されます。 ツールおよびその他の共有ファイルについては、インスタンス ID は使用されません。 また、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プログラム ファイルとデータ ファイルについてもインスタンス ID は使用されませんが、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] リポジトリについてはインスタンス ID が使用されます。  
   
- 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 機能のインストール パスを設定すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップではそのパスがルート ディレクトリとして使用されます。このルート ディレクトリは、SQL データ ファイルを含め、そのインストールで使用するすべてのインスタンス固有フォルダーに適用されます。 この場合、ルートを "C:\Program files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12." に設定すると、\<InstanceName> \ MSSQL\\)、インスタンス固有のディレクトリがそのパスの末尾に追加されます。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 機能のインストール パスを設定すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップではそのパスがルート ディレクトリとして使用されます。このルート ディレクトリは、SQL データ ファイルを含め、そのインストールで使用するすべてのインスタンス固有フォルダーに適用されます。 この場合、ルートを "C:\Program files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12." に設定すると、\<InstanceName> \ MSSQL\\)、インスタンス固有のディレクトリがそのパスの末尾に追加されます。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザード (セットアップ UI モード) で USESYSDB アップグレード機能の使用を選択すると、製品が再帰的フォルダー階層にインストールされることがよくあります。 たとえば、 \< *SQLProgramFiles*> \mssql12\mssql\ MSSQL10_50 \mssql\data\\のようになります。 USESYSDB 機能を使用する場合は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 機能ではなく、SQL データ ファイル機能のインストール パスを設定してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザード (セットアップ UI モード) で USESYSDB アップグレード機能の使用を選択すると、製品が再帰的フォルダー階層にインストールされることがよくあります。 たとえば、 \< *SQLProgramFiles*> \mssql12\mssql\ MSSQL10_50 \mssql\data\\のようになります。 USESYSDB 機能を使用する場合は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 機能ではなく、SQL データ ファイル機能のインストール パスを設定してください。  
   
 > [!NOTE]
 >  データ ファイルは、常に、Data という名前の子ディレクトリに格納されているものと見なされます。 たとえば、C:\Program files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12. を指定します。\<InstanceName> \ は、データファイルが C:\Program files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12. の下にある場合に、アップグレード時にシステムデータベースのデータディレクトリへのルートパスを指定します。\<InstanceName> \mssql\data  

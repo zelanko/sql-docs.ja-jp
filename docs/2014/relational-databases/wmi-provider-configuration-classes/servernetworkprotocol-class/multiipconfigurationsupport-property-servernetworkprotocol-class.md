@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3a6813371e7641af1369f94f875ca0d9f96ad3a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62470059"
 ---
 # <a name="multiipconfigurationsupport-property-servernetworkprotocol-class"></a>MultiIpConfigurationSupport プロパティ (ServerNetworkProtocol クラス)
@@ -37,13 +37,13 @@ object
 ```  
   
 ## <a name="parts"></a>要素  
- *素材*  
+ *object*  
  のインスタンスによって使用されるネットワークプロトコルを表す[Protocolname プロパティ (ServerNetworkProtocol クラス)](servernetworkprotocol-class.md) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  複数の IP アドレスがサーバー ネットワーク プロトコルによってサポートされるかどうかを指定するブール値。複数の IP アドレスがサーバー ネットワーク プロトコルによってサポートされる場合は `true`、複数の IP アドレスがサーバー ネットワーク プロトコルによってサポートされない場合は `false` です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>参照  
  [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

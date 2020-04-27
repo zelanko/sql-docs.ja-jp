@@ -1,5 +1,5 @@
 ---
-title: OLE DB データソースの列挙 (OLE DB) |Microsoft Docs
+title: OLE DB データ ソースの列挙 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d89447c98f8f74e68cd8ef563cbf049b4dcea7d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62468209"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>OLE DB データ ソースの列挙 (OLE DB)
@@ -31,30 +31,24 @@ ms.locfileid: "62468209"
  このサンプルには AdventureWorks サンプル データベースが必要です。このサンプル データベースは、[Microsoft SQL Server サンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホーム ページからダウンロードできます。  
   
 > [!IMPORTANT]  
->  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、 [Win32 CRYPTO API](https://go.microsoft.com/fwlink/?LinkId=64532)を使用して暗号化する必要があります。  
+>  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
   
 ### <a name="to-enumerate-ole-db-data-sources"></a>OLE DB データ ソースを列挙するには  
   
-1.  
-  `ISourceRowset::GetSourcesRowset` を呼び出して、ソースの行セットを取得します。  
+1.  `ISourceRowset::GetSourcesRowset` を呼び出して、ソースの行セットを取得します。  
   
-2.  
-  `GetColumnInfo::IColumnInfo` を呼び出して、列挙子の行セットの説明を検索します。  
+2.  `GetColumnInfo::IColumnInfo` を呼び出して、列挙子の行セットの説明を検索します。  
   
 3.  列情報からバインド構造体を作成します。  
   
-4.  
-  `IAccessor::CreateAccessor` を呼び出して、行セットのアクセサーを作成します。  
+4.  `IAccessor::CreateAccessor` を呼び出して、行セットのアクセサーを作成します。  
   
-5.  
-  `IRowset::GetNextRows` を呼び出して行をフェッチします。  
+5.  `IRowset::GetNextRows` を呼び出して行をフェッチします。  
   
-6.  
-  `IRowset::GetData` を呼び出して、行の行セットのコピーからデータを取得し、そのデータを処理します。  
+6.  `IRowset::GetData` を呼び出して、行の行セットのコピーからデータを取得し、そのデータを処理します。  
   
 ## <a name="example"></a>例  
- ole32.lib を使用して次の C++ コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
+ ole32.lib を使用して次の C++ コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
   
 ```  
 // compile with: ole32.lib  

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: bfc7cc16c9751ebdf64a8e9cd110547255c944ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62626049"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>ポリシー ベースの管理を使用したベスト プラクティスの監視と実行
@@ -61,7 +61,7 @@ ms.locfileid: "62626049"
 |Windows イベント ログのデバイス ドライバー制御エラー|[デバイス ドライバー制御エラー](device-driver-control-error.md)|  
 |Windows イベント ログのデバイス準備未完了エラー|[デバイス準備未完了エラー](device-not-ready-error.md)|  
 |Windows イベント ログの I_O 要求失敗エラー|[失敗した入力出力要求の検出](detect-failed-input-and-output-requests.md)|  
-|Windows イベント ログの I_O 遅延警告|[ディスクの入出力サブシステムで IO 遅延の問題を確認する](check-disk-input-and-output-subsystem-for-io-delay-problems.md)|  
+|Windows イベント ログの I_O 遅延警告|[ディスク I/O サブシステムの I/O 遅延問題の確認](check-disk-input-and-output-subsystem-for-io-delay-problems.md)|  
 |Windows イベント ログのハード ページ フォールト エラー時の I_O エラー|[ハード ページ フォールト中の I/O エラー](input-and-output-error-during-hard-page-fault.md)|  
 |Windows イベント ログの読み取り再試行エラー|[ディスク I/O サブシステムの読み取り再試行の問題の確認](check-disk-input-output-subsystem-for-read-retry-problems.md)|  
 |Windows イベント ログのストレージ システム I_O タイムアウト エラー|[ストレージ システムの入出力のタイムアウト](storage-system-input-output-time-out.md)|  

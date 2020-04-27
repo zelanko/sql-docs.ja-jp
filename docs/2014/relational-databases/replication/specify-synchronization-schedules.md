@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9bfbb62c58efea29df26cb9fc6e632bc4e2b3642
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62630804"
 ---
 # <a name="specify-synchronization-schedules"></a>同期スケジュールの指定
@@ -29,7 +29,7 @@ ms.locfileid: "62630804"
   
  **このトピックの内容**  
   
--   **同期スケジュールを指定する方法:**  
+-   **同期スケジュールを指定するために使用するもの:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -37,57 +37,52 @@ ms.locfileid: "62630804"
   
      [レプリケーション管理オブジェクト (RMO)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  サブスクリプションの新規作成ウィザードの **[同期スケジュール]** ページで同期スケジュールを指定します。 このウィザードへのアクセスの詳細については、「 [Create a Push Subscription](create-a-push-subscription.md) 」および「 [Create a Pull Subscription](create-a-pull-subscription.md)」を参照してください。  
   
- 
-  **[ジョブ スケジュールのプロパティ]** ダイアログ ボックスで同期スケジュールを変更します。このダイアログ ボックスは、 **の** [ジョブ] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] フォルダーおよびレプリケーション モニターのエージェントの詳細ウィンドウから使用できます。 レプリケーション モニターの起動の詳細については、「[Start the Replication Monitor](monitor/start-the-replication-monitor.md)」 (レプリケーション モニターの開始) を参照してください。  
+ **[ジョブ スケジュールのプロパティ]** ダイアログ ボックスで同期スケジュールを変更します。このダイアログ ボックスは、 **の** [ジョブ] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] フォルダーおよびレプリケーション モニターのエージェントの詳細ウィンドウから使用できます。 レプリケーション モニターの起動の詳細については、「[Start the Replication Monitor](monitor/start-the-replication-monitor.md)」 (レプリケーション モニターの開始) を参照してください。  
   
- 
-  **[ジョブ]** フォルダーからスケジュールを指定する場合は、次の表でエージェントのジョブ名を確認してください。  
+ **[ジョブ]** フォルダーからスケジュールを指定する場合は、次の表でエージェントのジョブ名を確認してください。  
   
 |エージェント|ジョブ名|  
 |-----------|--------------|  
-|プル サブスクリプションに対するマージ エージェント|**\<パブリッシャー>-\<\<パブリケーションデータベース>-パブリケーション>-\<サブスクライバー>-\<subscriptiondatabase>-\<整数>**|  
-|プッシュ サブスクリプションに対するマージ エージェント|**\<パブリッシャー>-\<\<パブリケーションデータベース>-パブリケーション>-\<サブスクライバー>-\<整数>**|  
-|プッシュ サブスクリプションに対するディストリビューション エージェント|**\<\<\<パブリッシャー>-パブリケーションデータベース>-パブリケーション>-サブスクライバー>-\<整数>1 \<** <sup></sup>|  
-|プル サブスクリプションに対するディストリビューション エージェント|**\<\<\<\<パブリッシャー>-\<パブリケーションデータベース>>-サブスクライバー>-subscriptiondatabase>-GUID>2 \<** <sup></sup>|  
-|SQL Server 以外のサブスクライバーへのプッシュ サブスクリプションに対するディストリビューション エージェント|**\<パブリッシャー>-\<\<パブリケーションデータベース>-パブリケーション>-\<サブスクライバー>-\<整数>**|  
+|プル サブスクリプションに対するマージ エージェント|**\<パブリッシャー>-\<PublicationDatabase>-\<パブリケーション>-\<サブスクライバー>-\<SubscriptionDatabase>-\<整数>**|  
+|プッシュ サブスクリプションに対するマージ エージェント|**\<パブリッシャー>-\<パブリケーション データベース>-\<パブリケーション>-\<サブスクライバー>-\<整数>**|  
+|プッシュ サブスクリプションに対するディストリビューション エージェント|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>** <sup>1</sup>|  
+|プル サブスクリプションに対するディストリビューション エージェント|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<GUID>** <sup>2</sup>|  
+|SQL Server 以外のサブスクライバーへのプッシュ サブスクリプションに対するディストリビューション エージェント|**\<パブリッシャー>-\<パブリケーション データベース>-\<パブリケーション>-\<サブスクライバー>-\<整数>**|  
   
- <sup>1</sup> Oracle パブリケーションに対するプッシュサブスクリプションの場合は** \<\<** 、パブリッシャー ** \<>-\<パブリケーションデータベース**ではなくパブリッシャーの>>>  
+ <sup>1</sup> Oracle パブリケーションに対するプッシュ サブスクリプションの場合は、" **\<パブリッシャー>-\<パブリケーション データベース>** " ではなく " **\<パブリッシャー>-\<パブリッシャー>** " になります  
   
- <sup>2</sup> Oracle パブリケーションに対するプルサブスクリプションの場合は** \<\<** 、パブリッシャー ** \<>\<-パブリケーションデータベース**ではなく、パブリッシャーの>> になり>  
+ <sup>2</sup> Oracle パブリケーションに対するプル サブスクリプションの場合は、" **\<パブリッシャー>-\<パブリケーション データベース>** " ではなく " **\<パブリッシャー>-\<ディストリビューション データベース>** " になります  
   
 #### <a name="to-specify-synchronization-schedules"></a>同期スケジュールを指定するには  
   
-1.  サブスクリプションの新規作成ウィザードの **[同期スケジュール]** ページで、作成する各サブスクリプションについて、**[エージェント スケジュール]** ボックスの一覧から以下のいずれかの値を選択します。  
+1.  サブスクリプションの新規作成ウィザードの **[同期スケジュール]** ページで、作成する各サブスクリプションについて、 **[エージェント スケジュール]** ボックスの一覧から以下のいずれかの値を選択します。  
   
-    -   **継続的に実行する**  
+    -   **[連続実行する]**  
   
-    -   **要求時にのみ実行**  
+    -   **[要求時にのみ実行する]**  
   
-    -   **\<スケジュールの定義... >**  
+    -   **[\<スケジュールの定義...>]**  
   
-2.  [スケジュールの** \<定義**] を選択し >場合は、[**ジョブスケジュールのプロパティ**] ダイアログボックスでスケジュールを指定し、[ **OK**] をクリックします。  
+2.  **[\<スケジュールの定義...>]** を選択した場合は、 **[ジョブ スケジュールのプロパティ]** ダイアログ ボックスでスケジュールを指定し、 **[OK]** をクリックします。  
   
-3.  ウィザードを終了します。  
+3.  ウィザードを完了します。  
   
 #### <a name="to-modify-a-synchronization-schedule-for-a-push-subscription-in-replication-monitor"></a>レプリケーション モニターでプッシュ サブスクリプションの同期スケジュールを変更するには  
   
 1.  レプリケーション モニターの左ペインのパブリッシャー グループを展開し、パブリッシャーを展開して、パブリケーションをクリックします。  
   
-2.  
-  **[すべてのサブスクリプション]** タブをクリックします。  
+2.  **[すべてのサブスクリプション]** タブをクリックします。  
   
 3.  サブスクリプションを右クリックし、 **[詳細表示]** をクリックします。  
   
 4.  [ **Subscription \< SubscriptionName>** ] ウィンドウで、[ **Action**] をクリックし、[ ** \<agentname> Job Properties**] をクリックします。  
   
-5.  
-  **[ジョブのプロパティ - **JobName>]** ダイアログ ボックスの \<[スケジュール]** ページで、**[編集]** をクリックします。  
+5.  **[ジョブのプロパティ -** JobName>] **ダイアログ ボックスの \<[スケジュール]** ページで、 **[編集]** をクリックします。  
   
-6.  
-  **[ジョブ スケジュールのプロパティ]** ダイアログ ボックスで、 **[スケジュールの種類]** ボックスの一覧の値を選択します。  
+6.  **[ジョブ スケジュールのプロパティ]** ダイアログ ボックスで、 **[スケジュールの種類]** ボックスの一覧の値を選択します。  
   
     -   エージェントを連続実行するには、 **[SQL Server エージェントの開始時に自動的に開始]** を選択します。  
   
@@ -95,26 +90,21 @@ ms.locfileid: "62630804"
   
     -   エージェントを要求時に実行するには、 **[指定日時]** を選択します。  
   
-7.  
-  **[定期的]** を選択した場合は、エージェントのスケジュールを指定します。  
+7.  **[定期的]** を選択した場合は、エージェントのスケジュールを指定します。  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 #### <a name="to-modify-a-synchronization-schedule-for-a-push-subscription-in-management-studio"></a>Management Studio でプッシュ サブスクリプションの同期スケジュールを変更するには  
   
-1.  
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]でディストリビューターに接続して、サーバー ノードを展開します。  
+1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]でディストリビューターに接続して、サーバー ノードを展開します。  
   
-2.  
-  **[SQL Server エージェント]** フォルダーを展開して、 **[ジョブ]** フォルダーを展開します。  
+2.  **[SQL Server エージェント]** フォルダーを展開して、 **[ジョブ]** フォルダーを展開します。  
   
 3.  サブスクリプションに関連付けられているディストリビューション エージェントまたはマージ エージェントのジョブを右クリックし、 **[プロパティ]** をクリックします。  
   
-4.  
-  **[ジョブのプロパティ - **JobName>]** ダイアログ ボックスの \<[スケジュール]** ページで、**[編集]** をクリックします。  
+4.  **[ジョブのプロパティ -** JobName>] **ダイアログ ボックスの \<[スケジュール]** ページで、 **[編集]** をクリックします。  
   
-5.  
-  **[ジョブ スケジュールのプロパティ]** ダイアログ ボックスで、 **[スケジュールの種類]** ボックスの一覧の値を選択します。  
+5.  **[ジョブ スケジュールのプロパティ]** ダイアログ ボックスで、 **[スケジュールの種類]** ボックスの一覧の値を選択します。  
   
     -   エージェントを連続実行するには、 **[SQL Server エージェントの開始時に自動的に開始]** を選択します。  
   
@@ -122,26 +112,21 @@ ms.locfileid: "62630804"
   
     -   エージェントを要求時に実行するには、 **[指定日時]** を選択します。  
   
-6.  
-  **[定期的]** を選択した場合は、エージェントのスケジュールを指定します。  
+6.  **[定期的]** を選択した場合は、エージェントのスケジュールを指定します。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 #### <a name="to-modify-a-synchronization-schedule-for-a-pull-subscription-in-management-studio"></a>Management Studio でプル サブスクリプションの同期スケジュールを変更するには  
   
-1.  
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]でサブスクライバーに接続して、サーバー ノードを展開します。  
+1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]でサブスクライバーに接続して、サーバー ノードを展開します。  
   
-2.  
-  **[SQL Server エージェント]** フォルダーを展開して、 **[ジョブ]** フォルダーを展開します。  
+2.  **[SQL Server エージェント]** フォルダーを展開して、 **[ジョブ]** フォルダーを展開します。  
   
 3.  サブスクリプションに関連付けられているディストリビューション エージェントまたはマージ エージェントのジョブを右クリックし、 **[プロパティ]** をクリックします。  
   
-4.  
-  **[ジョブのプロパティ - **JobName>]** ダイアログ ボックスの \<[スケジュール]** ページで、**[編集]** をクリックします。  
+4.  **[ジョブのプロパティ -** JobName>] **ダイアログ ボックスの \<[スケジュール]** ページで、 **[編集]** をクリックします。  
   
-5.  
-  **[ジョブ スケジュールのプロパティ]** ダイアログ ボックスで、 **[スケジュールの種類]** ボックスの一覧の値を選択します。  
+5.  **[ジョブ スケジュールのプロパティ]** ダイアログ ボックスで、 **[スケジュールの種類]** ボックスの一覧の値を選択します。  
   
     -   エージェントを連続実行するには、 **[SQL Server エージェントの開始時に自動的に開始]** を選択します。  
   
@@ -149,12 +134,11 @@ ms.locfileid: "62630804"
   
     -   エージェントを要求時に実行するには、 **[指定日時]** を選択します。  
   
-6.  
-  **[定期的]** を選択した場合は、エージェントのスケジュールを指定します。  
+6.  **[定期的]** を選択した場合は、エージェントのスケジュールを指定します。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  レプリケーション ストアド プロシージャを使用してプログラムで同期スケジュールを定義できます。 使用するストアド プロシージャは、レプリケーションの種類およびサブスクリプションの種類 (プルまたはプッシュ) によって異なります。  
   
  スケジュールを定義するには、次のスケジュール設定のパラメーターを使用します。これらのパラメーターの動作は、[sp_add_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql) から継承されます。  
@@ -187,7 +171,7 @@ ms.locfileid: "62630804"
   
 #### <a name="to-define-the-synchronization-schedule-for-a-push-subscription-to-a-transactional-publication"></a>トランザクション パブリケーションに対するプッシュ サブスクリプションの同期スケジュールを定義するには  
   
-1.  トランザクション パブリケーションに対して新しいプッシュ サブスクリプションを作成します。 詳細については、「 [Create a Push Subscription](create-a-push-subscription.md)」を参照してください。  
+1.  トランザクション パブリケーションに対して新しいプッシュ サブスクリプションを作成します。 詳細については、「 [プッシュ サブスクリプションの作成](create-a-push-subscription.md)」をご覧ください。  
   
 2.  サブスクライバーで、[sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql) を実行します。 、 **@subscriber** **@subscriber_db**、 **@publication**、およびサブスクライバーでのディストリビューションエージェントがおよび**@job_name** **@password**に対して実行するときに使用する Windows 資格情報を指定します。 サブスクリプションを同期するディストリビューション エージェント ジョブのスケジュールを定義する、上述の同期のパラメーターを指定します。  
   
@@ -199,11 +183,11 @@ ms.locfileid: "62630804"
   
 #### <a name="to-define-the-synchronization-schedule-for-a-push-subscription-to-a-merge-publication"></a>マージ パブリケーションに対するプッシュ サブスクリプションの同期スケジュールを定義するには  
   
-1.  マージ パブリケーションに対して新しいプッシュ サブスクリプションを作成します。 詳細については、「 [Create a Push Subscription](create-a-push-subscription.md)」を参照してください。  
+1.  マージ パブリケーションに対して新しいプッシュ サブスクリプションを作成します。 詳細については、「 [プッシュ サブスクリプションの作成](create-a-push-subscription.md)」をご覧ください。  
   
 2.  サブスクライバーで、 [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql)を実行します。 、 **@subscriber** **@subscriber_db**、 **@publication**、およびサブスクライバーでのマージエージェントがおよび**@job_name** **@password**に対して実行するときに使用する Windows 資格情報を指定します。 サブスクリプションを同期するマージ エージェント ジョブのスケジュールを定義する、上述の同期のパラメーターを指定します。  
   
-##  <a name="RMOProcedure"></a>レプリケーション管理オブジェクト (RMO) の使用  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
  レプリケーションは、SQL&#xA0;Server エージェントを使用して、スナップショットの生成やサブスクリプションの同期など、定期的に発生する動作のジョブをスケジュール設定します。 レプリケーション管理オブジェクト (RMO) をプログラムで使用して、レプリケーション エージェント ジョブのスケジュールを指定できます。  
   
 > [!NOTE]  
@@ -211,164 +195,129 @@ ms.locfileid: "62630804"
   
 #### <a name="to-define-a-replication-agent-schedule-when-you-create-a-push-subscription-to-a-transactional-publication"></a>トランザクション パブリケーションに対するプッシュ サブスクリプションを作成するレプリケーション エージェント スケジュールを定義するには  
   
-1.  作成するサブスクリプションに対して <xref:Microsoft.SqlServer.Replication.TransSubscription> クラスのインスタンスを作成します。 詳細については、「 [Create a Push Subscription](create-a-push-subscription.md)」を参照してください。  
+1.  作成するサブスクリプションに対して <xref:Microsoft.SqlServer.Replication.TransSubscription> クラスのインスタンスを作成します。 詳細については、「 [プッシュ サブスクリプションの作成](create-a-push-subscription.md)」をご覧ください。  
   
-2.  
-  <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>を呼び出す前に、 <xref:Microsoft.SqlServer.Replication.Subscription.AgentSchedule%2A> プロパティの次のフィールドを 1 つ以上設定します。  
+2.  <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>を呼び出す前に、 <xref:Microsoft.SqlServer.Replication.Subscription.AgentSchedule%2A> プロパティの次のフィールドを 1 つ以上設定します。  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> - エージェントのスケジュール設定時に使用する頻度の種類 (毎日、毎週など)。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> - エージェントのスケジュール設定時に使用する頻度の種類 (毎日、毎週など)。  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> - エージェントを実行する曜日。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> - エージェントを実行する曜日。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A>-エージェントを毎月実行するようにスケジュールされている特定の月の週。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A> - エージェントを月単位でスケジュール設定する場合の指定された月の週。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A>-同期の間に発生する頻度の種類の単位の数。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A> - 同期から同期の間に発生する頻度の種類の単位の数。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDay%2A>-エージェントを1日に複数回実行する頻度の単位。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDay%2A> - エージェントを 1 日に複数回実行する場合の頻度の単位。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A>-エージェントを1日に複数回実行する場合の頻度の単位。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A> - エージェントを 1 日に複数回実行する場合の頻度の単位。  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartTime%2A> - エージェントの実行を開始する特定の日の最も早い時刻。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartTime%2A> - エージェントの実行を開始する特定の日の最も早い時刻。  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndTime%2A> - エージェントの実行を開始する特定の日の最も遅い時刻。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndTime%2A> - エージェントの実行を開始する特定の日の最も遅い時刻。  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartDate%2A> - エージェント スケジュールが有効になっている最初の日。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartDate%2A> - エージェント スケジュールが有効になっている最初の日。  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> - エージェント スケジュールが有効になっている最後の日。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> - エージェント スケジュールが有効になっている最後の日。  
   
     > [!NOTE]  
     >  これらのプロパティを指定しなかった場合、既定値が設定されます。  
   
-3.  
-  <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> メソッドを呼び出してサブスクリプションを作成します。  
+3.  <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> メソッドを呼び出してサブスクリプションを作成します。  
   
 #### <a name="to-define-a-replication-agent-schedule-when-you-create-a-pull-subscription-to-a-transactional-publication"></a>トランザクション パブリケーションに対するプル サブスクリプションを作成するレプリケーション エージェント スケジュールを定義するには  
   
 1.  作成するサブスクリプションに対して <xref:Microsoft.SqlServer.Replication.TransPullSubscription> クラスのインスタンスを作成します。 詳細については、「 [プル サブスクリプションの作成](create-a-pull-subscription.md)」をご覧ください。  
   
-2.  
-  <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A>を呼び出す前に、 <xref:Microsoft.SqlServer.Replication.PullSubscription.AgentSchedule%2A> プロパティの次のフィールドを 1 つ以上設定します。  
+2.  <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A>を呼び出す前に、 <xref:Microsoft.SqlServer.Replication.PullSubscription.AgentSchedule%2A> プロパティの次のフィールドを 1 つ以上設定します。  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> - エージェントのスケジュール設定時に使用する頻度の種類 (毎日、毎週など)。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> - エージェントのスケジュール設定時に使用する頻度の種類 (毎日、毎週など)。  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> - エージェントを実行する曜日。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> - エージェントを実行する曜日。  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A> - エージェントを月単位でスケジュール設定する場合の指定された月の週。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A> - エージェントを月単位でスケジュール設定する場合の指定された月の週。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A>-同期の間に発生する頻度の種類の単位の数。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A> - 同期から同期の間に発生する頻度の種類の単位の数。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDay%2A>-エージェントを1日に複数回実行する頻度の単位。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDay%2A> - エージェントを 1 日に複数回実行する場合の頻度の単位。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A>-エージェントを1日に複数回実行する場合の頻度の単位。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A> - エージェントを 1 日に複数回実行する場合の頻度の単位。  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartTime%2A> - エージェントの実行を開始する特定の日の最も早い時刻。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartTime%2A> - エージェントの実行を開始する特定の日の最も早い時刻。  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndTime%2A> - エージェントの実行を開始する特定の日の最も遅い時刻。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndTime%2A> - エージェントの実行を開始する特定の日の最も遅い時刻。  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartDate%2A> - エージェント スケジュールが有効になっている最初の日。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartDate%2A> - エージェント スケジュールが有効になっている最初の日。  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> - エージェント スケジュールが有効になっている最後の日。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> - エージェント スケジュールが有効になっている最後の日。  
   
     > [!NOTE]  
     >  これらのプロパティを指定しなかった場合、既定値が設定されます。  
   
-3.  
-  <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A> メソッドを呼び出してサブスクリプションを作成します。  
+3.  <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A> メソッドを呼び出してサブスクリプションを作成します。  
   
 #### <a name="to-define-a-replication-agent-schedule-when-you-create-a-pull-subscription-to-a-merge-publication"></a>マージ パブリケーションに対するプル サブスクリプションを作成するレプリケーション エージェント スケジュールを定義するには  
   
 1.  作成するサブスクリプションに対して <xref:Microsoft.SqlServer.Replication.MergePullSubscription> クラスのインスタンスを作成します。 詳細については、「 [プル サブスクリプションの作成](create-a-pull-subscription.md)」をご覧ください。  
   
-2.  
-  <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A>を呼び出す前に、 <xref:Microsoft.SqlServer.Replication.PullSubscription.AgentSchedule%2A> プロパティの次のフィールドを 1 つ以上設定します。  
+2.  <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A>を呼び出す前に、 <xref:Microsoft.SqlServer.Replication.PullSubscription.AgentSchedule%2A> プロパティの次のフィールドを 1 つ以上設定します。  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> - エージェントのスケジュール設定時に使用する頻度の種類 (毎日、毎週など)。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> - エージェントのスケジュール設定時に使用する頻度の種類 (毎日、毎週など)。  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> - エージェントを実行する曜日。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> - エージェントを実行する曜日。  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A> - エージェントを月単位でスケジュール設定する場合の指定された月の週。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A> - エージェントを月単位でスケジュール設定する場合の指定された月の週。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A>-同期の間に発生する頻度の種類の単位の数。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A> - 同期から同期の間に発生する頻度の種類の単位の数。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDay%2A>-エージェントを1日に複数回実行する頻度の単位。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDay%2A> - エージェントを 1 日に複数回実行する場合の頻度の単位。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A>-エージェントを1日に複数回実行する場合の頻度の単位。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A> - エージェントを 1 日に複数回実行する場合の頻度の単位。  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartTime%2A> - エージェントの実行を開始する特定の日の最も早い時刻。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartTime%2A> - エージェントの実行を開始する特定の日の最も早い時刻。  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndTime%2A> - エージェントの実行を開始する特定の日の最も遅い時刻。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndTime%2A> - エージェントの実行を開始する特定の日の最も遅い時刻。  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartDate%2A> - エージェント スケジュールが有効になっている最初の日。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartDate%2A> - エージェント スケジュールが有効になっている最初の日。  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> - エージェント スケジュールが有効になっている最後の日。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> - エージェント スケジュールが有効になっている最後の日。  
   
     > [!NOTE]  
     >  これらのプロパティを指定しなかった場合、既定値が設定されます。  
   
-3.  
-  <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A> メソッドを呼び出してサブスクリプションを作成します。  
+3.  <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A> メソッドを呼び出してサブスクリプションを作成します。  
   
 #### <a name="to-define-a-replication-agent-schedule-when-you-create-a-push-subscription-to-a-merge-publication"></a>マージ パブリケーションに対するプッシュ サブスクリプションを作成するレプリケーション エージェント スケジュールを定義するには  
   
-1.  作成するサブスクリプションに対して <xref:Microsoft.SqlServer.Replication.MergeSubscription> クラスのインスタンスを作成します。 詳細については、「 [Create a Push Subscription](create-a-push-subscription.md)」を参照してください。  
+1.  作成するサブスクリプションに対して <xref:Microsoft.SqlServer.Replication.MergeSubscription> クラスのインスタンスを作成します。 詳細については、「 [プッシュ サブスクリプションの作成](create-a-push-subscription.md)」をご覧ください。  
   
-2.  
-  <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>を呼び出す前に、 <xref:Microsoft.SqlServer.Replication.Subscription.AgentSchedule%2A> プロパティの次のフィールドを 1 つ以上設定します。  
+2.  <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>を呼び出す前に、 <xref:Microsoft.SqlServer.Replication.Subscription.AgentSchedule%2A> プロパティの次のフィールドを 1 つ以上設定します。  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> - エージェントのスケジュール設定時に使用する頻度の種類 (毎日、毎週など)。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> - エージェントのスケジュール設定時に使用する頻度の種類 (毎日、毎週など)。  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> - エージェントを実行する曜日。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> - エージェントを実行する曜日。  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A> - エージェントを月単位でスケジュール設定する場合の指定された月の週。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A> - エージェントを月単位でスケジュール設定する場合の指定された月の週。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A>-同期の間に発生する頻度の種類の単位の数。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A> - 同期から同期の間に発生する頻度の種類の単位の数。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDay%2A>-エージェントを1日に複数回実行する頻度の単位。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDay%2A> - エージェントを 1 日に複数回実行する場合の頻度の単位。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A>-エージェントを1日に複数回実行する場合の頻度の単位。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A> - エージェントを 1 日に複数回実行する場合の頻度の単位。  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartTime%2A> - エージェントの実行を開始する特定の日の最も早い時刻。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartTime%2A> - エージェントの実行を開始する特定の日の最も早い時刻。  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndTime%2A> - エージェントの実行を開始する特定の日の最も遅い時刻。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndTime%2A> - エージェントの実行を開始する特定の日の最も遅い時刻。  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartDate%2A> - エージェント スケジュールが有効になっている最初の日。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartDate%2A> - エージェント スケジュールが有効になっている最初の日。  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> - エージェント スケジュールが有効になっている最後の日。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> - エージェント スケジュールが有効になっている最後の日。  
   
     > [!NOTE]  
     >  これらのプロパティを指定しなかった場合、既定値が設定されます。  
   
-3.  
-  <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> メソッドを呼び出してサブスクリプションを作成します。  
+3.  <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> メソッドを呼び出してサブスクリプションを作成します。  
   
-###  <a name="PShellExample"></a>例 (RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a> 例 (RMO)  
  次の例では、マージ パブリケーションに対するプッシュ サブスクリプションを作成して、サブスクリプションを同期するスケジュールを指定します。  
   
  [!code-csharp[HowTo#rmo_CreateMergePushSub](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_createmergepushsub)]  
@@ -376,10 +325,10 @@ ms.locfileid: "62630804"
  [!code-vb[HowTo#rmo_vb_CreateMergePushSub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createmergepushsub)]  
   
 ## <a name="see-also"></a>参照  
- [レプリケーションのセキュリティに関するベストプラクティス](security/replication-security-best-practices.md)   
- [パブリケーションをサブスクライブする](subscribe-to-publications.md)   
- [プッシュサブスクリプションの同期](synchronize-a-push-subscription.md)   
- [プルサブスクリプションの同期](synchronize-a-pull-subscription.md)   
+ [Replication Security Best Practices](security/replication-security-best-practices.md)   
+ [Subscribe to Publications](subscribe-to-publications.md)   
+ [プッシュ サブスクリプションの同期](synchronize-a-push-subscription.md)   
+ [プル サブスクリプションの同期](synchronize-a-pull-subscription.md)   
  [データの同期](synchronize-data.md)  
   
   

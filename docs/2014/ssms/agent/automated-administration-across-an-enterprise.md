@@ -21,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b3be16ea856b5d632ba5a0285bad2c4d2d93709c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62473150"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>エンタープライズ全体の管理の自動化
-  の複数の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスにわたって管理を自動化することを*マルチサーバー管理*といいます。 次の場合に、マルチサーバー管理を行います。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の複数のインスタンスにわたって管理を自動化することを *マルチサーバー管理*といいます。 次の場合に、マルチサーバー管理を行います。  
   
 -   2 台以上のサーバーを管理する場合  
   
@@ -61,8 +61,7 @@ ms.locfileid: "62473150"
  マスター サーバーおよびターゲット サーバーを作成および管理する方法について説明します。  
   
  [マルチサーバー環境に適した SQL Server エージェント サービス アカウントの選択](choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md)  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント サービスに管理者以外の Windows アカウントまたはローカル システム アカウントを使用することによる、マルチサーバー環境への影響について説明します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント サービスに管理者以外の Windows アカウントまたはローカル システム アカウントを使用することによる、マルチサーバー環境への影響について説明します。  
   
  [ターゲット サーバーでの暗号化オプションの設定](set-encryption-options-on-target-servers.md)  
  ターゲット サーバーの MsxEncryptChannelOptions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントのレジストリ サブキーの設定について説明します。  
@@ -83,7 +82,7 @@ ms.locfileid: "62473150"
  マルチサーバー環境で自動化された管理により [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の自己チューニング機能を活用する方法について説明します。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server データベースエンジン旧バージョンとの互換性](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
+ [SQL Server データベース エンジンの旧バージョンとの互換性](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
  [サーバーの登録](../register-servers/register-servers.md)   
  [sp_add_targetservergroup &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql)   
  [sp_delete_targetserver &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql)   

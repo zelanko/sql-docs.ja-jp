@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 07f8ecc0e6550fcec63a0b1ebb906cd5ffd3aaf1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62524335"
 ---
 # <a name="tutorial-getting-started-with-the-database-engine"></a>チュートリアル : データベース エンジンの概要
@@ -42,7 +42,7 @@ ms.locfileid: "62524335"
   
  このチュートリアルを使用するには、システムに以下のコンポーネントがインストールされている必要があります。  
   
--   [https://login.microsoftonline.com/consumers/]([!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]) [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]は、セットアップを実行[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]するか、 [Microsoft ダウンロードセンター](https://go.microsoft.com/fwlink/?LinkId=144346)からダウンロードしてインストールすることでインストールできます。  
+-   [https://login.microsoftonline.com/consumers/]([!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]) [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] セットアップを実行してインストールできます。または、 [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?LinkId=144346)からダウンロードしてインストールできます。  
   
 ## <a name="see-also"></a>参照  
  [チュートリアル: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  

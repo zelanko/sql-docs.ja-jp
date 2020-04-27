@@ -14,46 +14,39 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1a15690eb5aff48ec0f72df16e8342ed5c0522c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62524062"
 ---
 # <a name="create-clr-functions"></a>CLR 関数の作成
-  の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス内に、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]共通言語ランタイム (CLR) で作成されたアセンブリでプログラミングされているデータベースオブジェクトを作成できます。 共通言語ランタイムが提供する豊富なプログラミング モデルを利用できるデータベース オブジェクトには、集計関数、関数、ストアド プロシージャ、トリガー、型などがあります。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス内部には、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR (共通言語ランタイム) で作成されたアセンブリでプログラミングされたデータベース オブジェクトを作成できます。 共通言語ランタイムが提供する豊富なプログラミング モデルを利用できるデータベース オブジェクトには、集計関数、関数、ストアド プロシージャ、トリガー、型などがあります。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の CLR 関数を作成するには、次の手順に従います。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の CLR 関数を作成するには、次の手順に従います。  
   
--   
-  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]がサポートする言語のクラスの静的メソッドとして、関数を定義します。 共通言語ランタイムでの関数のプログラミング方法の詳細については、「 [CLR ユーザー定義関数](../clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)」を参照してください。 次に、適切な言語コンパイラを使用してクラスをコンパイルし、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] のアセンブリをビルドします。  
+-   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]がサポートする言語のクラスの静的メソッドとして、関数を定義します。 共通言語ランタイムでの関数のプログラミング方法の詳細については、「 [CLR ユーザー定義関数](../clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)」を参照してください。 次に、適切な言語コンパイラを使用してクラスをコンパイルし、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] のアセンブリをビルドします。  
   
--   CREATE ASSEMBLY ステートメントを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にアセンブリを登録します。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のアセンブリを使用した作業方法の詳細については、「[アセンブリ &#40;データベース エンジン&#41;](../clr-integration/assemblies-database-engine.md)」をご覧ください。  
+-   CREATE ASSEMBLY ステートメントを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にアセンブリを登録します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のアセンブリの詳細については、「[アセンブリ &#40;データベース エンジン&#41;](../clr-integration/assemblies-database-engine.md)」を参照してください。  
   
--   
-  [CREATE FUNCTION](/sql/t-sql/statements/create-function-transact-sql) ステートメントを使用して、登録したアセンブリを参照する関数を作成します。  
+-   [CREATE FUNCTION](/sql/t-sql/statements/create-function-transact-sql) ステートメントを使用して、登録したアセンブリを参照する関数を作成します。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]
-  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] で SQL Server プロジェクトを配置すると、そのプロジェクトで指定されたデータベースにアセンブリが登録されます。 また、プロジェクトを配置することで、`SqlFunction` 属性で注釈が付けられたすべてのメソッドの CLR 関数がデータベースに作成されます。 詳細については、「 [CLR データベース オブジェクトの配置](../clr-integration/deploying-clr-database-objects.md)」を参照してください。  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] で SQL Server プロジェクトを配置すると、そのプロジェクトで指定されたデータベースにアセンブリが登録されます。 また、プロジェクトを配置することで、`SqlFunction` 属性で注釈が付けられたすべてのメソッドの CLR 関数がデータベースに作成されます。 詳細については、「 [CLR データベース オブジェクトの配置](../clr-integration/deploying-clr-database-objects.md)」を参照してください。  
   
 > [!NOTE]  
 >  CLR コードを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能は、既定では無効になっています。 マネージド コード モジュールを参照するデータベース オブジェクトを作成、変更、削除することはできますが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_configure (Transact-SQL) [を使用して](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) clr enabled オプション [を有効にしないと、これらの参照は](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)で実行されません。  
   
 ## <a name="accessing-external-resources"></a>外部リソースへのアクセス  
- CLR 関数は、ファイル、ネットワーク リソース、Web サービス、他のデータベース ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のリモート インスタンスを含む) などの外部リソースへのアクセスに使用できます。 これは、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]、 `System.IO`、 `System.WebServices`など、 `System.Sql`のさまざまなクラスを使用して実現できます。 このためには、このような関数を含むアセンブリに、少なくとも EXTERNAL_ACCESS 権限セットを構成します。 詳細については、「 [CREATE ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-assembly-transact-sql)がサポートする言語のクラスの静的メソッドとして、関数を定義します。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のリモート インスタンスへのアクセスには、SQL クライアント マネージド プロバイダーを使用できます。 ただし、接続を開始したサーバーへのループバック接続は、CLR 関数ではサポートされていません。  
+ CLR 関数は、ファイル、ネットワーク リソース、Web サービス、他のデータベース ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のリモート インスタンスを含む) などの外部リソースへのアクセスに使用できます。 これは、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]、 `System.IO`、 `System.WebServices`など、 `System.Sql`のさまざまなクラスを使用して実現できます。 このためには、このような関数を含むアセンブリに、少なくとも EXTERNAL_ACCESS 権限セットを構成します。 詳細については、「 [CREATE ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-assembly-transact-sql)がサポートする言語のクラスの静的メソッドとして、関数を定義します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のリモート インスタンスへのアクセスには、SQL クライアント マネージド プロバイダーを使用できます。 ただし、接続を開始したサーバーへのループバック接続は、CLR 関数ではサポートされていません。  
   
- **SQL Server でアセンブリを作成、変更、または削除するには**  
+ **SQL Server のアセンブリを作成、変更、削除するには**  
   
--   [CREATE ASSEMBLY &#40;Transact-sql&#41;](/sql/t-sql/statements/create-assembly-transact-sql)  
+-   [CREATE ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-assembly-transact-sql)  
   
--   [ALTER ASSEMBLY &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-assembly-transact-sql)  
+-   [ALTER ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-assembly-transact-sql)  
   
--   [DROP ASSEMBLY &#40;Transact-sql&#41;](/sql/t-sql/statements/drop-assembly-transact-sql)  
+-   [DROP ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-assembly-transact-sql)  
   
  **CLR 関数を作成するには**  
   
@@ -63,10 +56,10 @@ ms.locfileid: "62524062"
  CLR 関数では、マネージド コードから PInvoke を使用することにより、C や C++ で記述されたコードなどのネイティブ (アンマネージド) コードにアクセスできます (詳細については、「[マネージド コードからのネイティブ関数の呼び出し](https://go.microsoft.com/fwlink/?LinkID=181929)」を参照してください)。 これにより、レガシ コードを CLR UDF として再利用したり、パフォーマンスが重要な UDF をネイティブ コードで記述したりできます。 そのためには、UNSAFE アセンブリを使用する必要があります。 UNSAFE アセンブリの使用に関する注意事項は、「 [CLR 統合のコード アクセス セキュリティ](../clr-integration/security/clr-integration-code-access-security.md) 」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [データベースエンジン &#40;のユーザー定義関数の作成&#41;](create-user-defined-functions-database-engine.md)   
+ [ユーザー定義関数の作成 &#40;データベース エンジン&#41;](create-user-defined-functions-database-engine.md)   
  [ユーザー定義集計の作成](create-user-defined-aggregates.md)   
  [ユーザー定義関数の実行](execute-user-defined-functions.md)   
  [ユーザー定義関数の表示](view-user-defined-functions.md)   
- [共通言語ランタイム &#40;CLR&#41; 統合プログラミングの概念](../clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
+ [CLR &#40;共通言語ランタイム&#41; 統合のプログラミング概念](../clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
   

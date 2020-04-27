@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: bee5ca4ded1b2fd5cbda0712cb766c825b9d0318
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62472847"
 ---
 # <a name="predicting-associations-intermediate-data-mining-tutorial"></a>アソシエーションの予測 (中級者向けデータ マイニング チュートリアル)
@@ -136,8 +136,7 @@ ms.locfileid: "62472847"
   
      グリッドが開いたペインに変わり、予測クエリ ビルダーで作成された DMX ステートメントを表示および変更できるようになります。  
   
-2.  
-  `SELECT` キーワードの後に、「`FLATTENED`」と入力します。  
+2.  `SELECT` キーワードの後に、「`FLATTENED`」と入力します。  
   
      クエリの全テキストは次のようになります。  
   

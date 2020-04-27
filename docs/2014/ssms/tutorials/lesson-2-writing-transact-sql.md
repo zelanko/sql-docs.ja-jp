@@ -11,18 +11,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bd776a778f56831fc63fef1ea040e3f69883eff3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62470029"
 ---
-# <a name="lesson-2-writing-transact-sql"></a>レッスン 2 : Transact-SQL の記述
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]は、、MDX、DMX、 [!INCLUDE[tsql](../../includes/tsql-md.md)]XML の各クエリおよび SQLCMD コマンドを記述するための統合開発環境です。 このチュートリアルでは、データベース エンジン クエリ エディターを使用した [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトの記述方法について説明します。  
+# <a name="lesson-2-writing-transact-sql"></a>レッスン 2: Transact-SQL の記述
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、MDX、DMX、XML の各クエリおよび SQLCMD コマンドを記述するための統合開発環境です。 このチュートリアルでは、データベース エンジン クエリ エディターを使用した [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトの記述方法について説明します。  
   
 > [!NOTE]  
->  このレッスンでは、Transact-SQL ツールの機能を中心に説明します。 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの作成に関するチュートリアルについては、「 [チュートリアル: TRANSACT-SQL ステートメントの作成](../../t-sql/tutorial-writing-transact-sql-statements.md)」を参照してください。  
+>  このレッスンでは、Transact-SQL ツールの機能を中心に説明します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの作成に関するチュートリアルについては、「 [チュートリアル: TRANSACT-SQL ステートメントの作成](../../t-sql/tutorial-writing-transact-sql-statements.md)」を参照してください。  
   
  このレッスンの内容は次のとおりです。  
   

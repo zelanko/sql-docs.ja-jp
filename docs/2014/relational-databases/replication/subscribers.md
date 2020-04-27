@@ -15,33 +15,30 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 725be263e30687a3f2ded90990e952e1cd97a185
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62629388"
 ---
 # <a name="subscribers"></a>[サブスクライバー]
   選択し[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]たパブリケーションへ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のサブスクリプションを受け取るサブスクライバーまたは以外のサブスクライバーを指定します。  
   
 ## <a name="options"></a>オプション  
- **[サブスクライバー]**  
- グリッドのチェックボックスをオンにして、[ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリケーション] ページ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で選択したパブリケーションへのサブスクライバーとして**** 、対応するデータソースまたは非データソースを有効にします。 サブスクライバーが一覧にない場合、 **[サブスクライバーの追加]** または **[SQL Server サブスクライバーの追加]** をクリックします。  
+ **[パブリッシャーのプロパティ]**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [パブリケーション][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ページで選択したパブリケーションへのサブスクライバーとして、 **のデータ ソースまたは** 以外のデータ ソースを有効にするには、グリッド内の対応するチェック ボックスをオンにします。 サブスクライバーが一覧にない場合、 **[サブスクライバーの追加]** または **[SQL Server サブスクライバーの追加]** をクリックします。  
   
- **サブスクリプションデータベース**  
+ **サブスクリプション データベース**  
  この列で表示される情報と実行できる操作は、 **[サブスクライバー]** 列に表示されているサブスクライバーの種類によって変わります。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブスクライバーの場合、 **[サブスクリプション データベース]** の一覧からサブスクリプション データベースを選択するか、同じ一覧から **[新しいデータベース]** コマンドを選択して新しいデータベースを作成します。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブスクライバーの場合、 **[サブスクリプション データベース]** の一覧からサブスクリプション データベースを選択するか、同じ一覧から **[新しいデータベース]** コマンドを選択して新しいデータベースを作成します。  
   
     > [!NOTE]  
     >  パブリッシャーをサブスクライバーとして有効にする場合、サブスクリプション データベースはパブリケーション データベースとは別にする必要があります。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーの場合、サブスクリプション データベースは表示されません。 
-  **[SQL Server 以外のサブスクライバーの追加]** ダイアログ ボックスの **[データ ソース名]** フィールドで、データベースおよび他の接続情報を指定します。 このダイアログ ボックスを開くには、 **[サブスクライバーの追加]** をクリックして **[SQL Server 以外のサブスクライバーの追加]** をクリックします。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーの場合、サブスクリプション データベースは表示されません。 **[SQL Server 以外のサブスクライバーの追加]** ダイアログ ボックスの **[データ ソース名]** フィールドで、データベースおよび他の接続情報を指定します。 このダイアログ ボックスを開くには、 **[サブスクライバーの追加]** をクリックして **[SQL Server 以外のサブスクライバーの追加]** をクリックします。  
   
- **サブスクライバーの追加**  
+ **[サブスクライバーの追加]**  
  サブスクライバーとして有効にできるサーバーの一覧に、サーバーを追加します。 このボタンは、次に示す条件がすべて満たされた場合に表示されます。  
   
 -   選択したパブリケーションが、サブスクリプションの更新をサポートしないスナップショット パブリケーションまたはトランザクション パブリケーションである。  
@@ -51,12 +48,11 @@ ms.locfileid: "62629388"
   
 -   サブスクリプションがプッシュ サブスクリプションである。  
   
--   選択したパブリケーションのパブリッシャーが[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降です。  
+-   選択したパブリケーションのパブリッシャーが、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンである。  
   
- 
-  **[サブスクライバーの追加]** をクリックすると、 **[SQL Server サブスクライバーの追加]** と **[SQL Server 以外のサブスクライバーの追加]** という 2 つの選択肢を持つメニューが表示されます。 Oracle または IBM DB2 のサブスクライバーを追加するには、 **[SQL Server 以外のサブスクライバーの追加]** をクリックします。  
+ **[サブスクライバーの追加]** をクリックすると、 **[SQL Server サブスクライバーの追加]** と **[SQL Server 以外のサブスクライバーの追加]** という 2 つの選択肢を持つメニューが表示されます。 Oracle または IBM DB2 のサブスクライバーを追加するには、 **[SQL Server 以外のサブスクライバーの追加]** をクリックします。  
   
- **SQL Server サブスクライバーの追加**  
+ **[SQL Server サブスクライバーの追加]**  
  サブスクライバーとして有効にできるサーバーの一覧に、サーバーを追加します。 このボタンは、次のいずれかの条件が満たされた場合に表示されます。  
   
 -   選択したパブリケーションが、サブスクリプションの更新をサポートするマージ パブリケーション、スナップショット パブリケーション、またはトランザクション パブリケーションである。  
@@ -72,9 +68,9 @@ ms.locfileid: "62629388"
     -   パブリケーションで匿名サブスクリプションが許可されている。  
   
 ## <a name="see-also"></a>参照  
- [プルサブスクリプションを作成する](create-a-pull-subscription.md)   
- [プッシュサブスクリプションを作成する](create-a-push-subscription.md)   
- [SQL Server 以外のサブスクライバー](non-sql/non-sql-server-subscribers.md)   
+ [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [ssSDSFull](create-a-push-subscription.md)   
+ [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)   
  [パブリケーションのサブスクライブ](subscribe-to-publications.md)  
   
   
