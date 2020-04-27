@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 42c7b7e876f244831920be390d97c88412eed63f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071665"
 ---
 # <a name="could-not-load-file-or-assembly-39microsoftanalysisservicessharepointintegration39"></a>Microsoft.analysisservices.sharepoint.integration.dll&#39; &#39;ファイルまたはアセンブリを読み込めませんでした
   PowerPivot for SharePoint がある SharePoint 2010 環境で、PowerPivot のアプリケーション レベルのソリューションが正しく配置されていない場合にこのエラーが発生します。  
   
-## <a name="details"></a>詳細  
+## <a name="details"></a>詳細情報  
   
 |||  
 |-|-|  
@@ -37,11 +37,9 @@ ms.locfileid: "66071665"
   
 1.  サーバーの全体管理で、[システム設定] の **[ファーム ソリューションの管理]** をクリックします。  
   
-2.  
-  **[Powerpivotwebapp]** をクリックします。  
+2.  **[Powerpivotwebapp]** をクリックします。  
   
-3.  
-  **[ソリューションの配置]** をクリックします。  
+3.  **[ソリューションの配置]** をクリックします。  
   
 4.  このエラーが発生している Web アプリケーションを選択します。 複数の Web アプリケーションがある場合は、そのすべてについてソリューションを再配置します。  
   

@@ -15,30 +15,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4ff5758d465703800cd4f847b03f87e1dd762043
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077660"
 ---
 # <a name="mining-structure-properties-dialog-analysis-services---data-mining"></a>[マイニング構造のプロパティ] ダイアログ (Analysis Services - データ マイニング)
+  **SQL Server Management Studio** の **[マイニング構造のプロパティ]** ダイアログ ボックスを使用すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースのマイニング構造のプロパティを設定できます。 **[マイニング構造のプロパティ]** ダイアログ ボックスを表示するには、 **オブジェクト エクスプローラー** でマイニング構造を右クリックし、コンテキスト メニューの **[プロパティ]** を選択します。  
   
-  **SQL Server Management Studio** の **[マイニング構造のプロパティ]** ダイアログ ボックスを使用すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースのマイニング構造のプロパティを設定できます。 
-  **[マイニング構造のプロパティ]** ダイアログ ボックスを表示するには、 **オブジェクト エクスプローラー** でマイニング構造を右クリックし、コンテキスト メニューの **[プロパティ]** を選択します。  
-  
- 
-  **[マイニング構造のプロパティ]** ダイアログ ボックスには、次のページがあります。  
+ **[マイニング構造のプロパティ]** ダイアログ ボックスには、次のページがあります。  
   
 ## <a name="pages"></a>ページ  
   
-|ページ|[説明]|  
+|ページ|説明|  
 |----------|-----------------|  
-|**全般**|
-  **[全般]** ページを使用して、マイニング構造の全般プロパティの表示と変更を行えます。 このページの詳細については、「[[全般] ([マイニング構造] ダイアログ ボックス) (Analysis Services - データ マイニング)](general-mining-structure-dialog-box-analysis-services-data-mining.md)」を参照してください。|  
-|**[エラーの構成]**|
-  **[エラーの構成]** ページを使用して、マイニング構造のエラー構成設定の表示と変更を行えます。 このページの詳細については、「[[エラーの構成] ([マイニング構造] ダイアログ ボックス) (Analysis Services - 多次元データ)](error-configuration-mining-structure-dialog-analysis-services-multidimensional-data.md)」を参照してください。|  
+|**全般**|**[全般]** ページを使用して、マイニング構造の全般プロパティの表示と変更を行えます。 このページの詳細については、「[[全般] ([マイニング構造] ダイアログ ボックス) (Analysis Services - データ マイニング)](general-mining-structure-dialog-box-analysis-services-data-mining.md)」を参照してください。|  
+|**[エラーの構成]**|**[エラーの構成]** ページを使用して、マイニング構造のエラー構成設定の表示と変更を行えます。 このページの詳細については、「[[エラーの構成] ([マイニング構造] ダイアログ ボックス) (Analysis Services - 多次元データ)](error-configuration-mining-structure-dialog-analysis-services-multidimensional-data.md)」を参照してください。|  
   
 ## <a name="see-also"></a>参照  
- [マイニング構造 &#40;Analysis Services-データマイニング&#41;](data-mining/mining-structures-analysis-services-data-mining.md)  
+ [マイニング構造 (Analysis Services - データ マイニング)](data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

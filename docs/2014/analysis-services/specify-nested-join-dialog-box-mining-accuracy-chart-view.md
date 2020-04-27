@@ -15,16 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 20106b002eba07a3eb9e2877c84dacb9a98b87b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068316"
 ---
 # <a name="specify-nested-join-dialog-box-mining-accuracy-chart-view"></a>[入れ子になった結合の指定] ダイアログ ボックス ([マイニング精度チャート] ビュー)
-  
-  **[入れ子になった結合の指定]** ダイアログ ボックスでは、入れ子になったテーブルとケース テーブルのリレーションシップを作成します。 
-  **[入れ子になった結合の指定]** ダイアログ ボックスを開くには、入れ子になったテーブルを選択し、 **[結合の変更]** をクリックします。  
+  **[入れ子になった結合の指定]** ダイアログ ボックスでは、入れ子になったテーブルとケース テーブルのリレーションシップを作成します。 **[入れ子になった結合の指定]** ダイアログ ボックスを開くには、入れ子になったテーブルを選択し、 **[結合の変更]** をクリックします。  
   
 ## <a name="options"></a>オプション  
  **[リレーションシップの追加]**  

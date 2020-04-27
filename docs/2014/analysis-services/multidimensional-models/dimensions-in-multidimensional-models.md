@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 520d6f11e5a472d5337a3747cc73c1d3656171c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075175"
 ---
 # <a name="dimensions-in-multidimensional-models"></a>多次元モデル内のディメンション
@@ -27,7 +27,7 @@ ms.locfileid: "66075175"
  キューブには、ユーザーがファクト データの分析の基準として使用する、すべてのディメンションが含まれています。 キューブ内のデータベース ディメンションのインスタンスは、キューブ ディメンションと呼ばれ、キューブ内の 1 つ以上のメジャー グループに関連しています。 データベース ディメンションは、キューブで何度も使用できます。 たとえば、ファクト テーブルに時間関連のファクトが複数含まれている場合は、時間関連の各ファクトを分析するために別々のキューブ ディメンションを定義できます。 ただし、時間関連のデータベース ディメンションは 1 つしか必要ありません。つまり、時間に基づく複数のキューブ ディメンションをサポートするために、時間関連のリレーショナル データベースも 1 つしか必要となりません。  
   
 > [!NOTE]  
->  ディメンション デザインに関連するパフォーマンスの問題については、「 [SQL Server 2008 R2 Analysis Services パフォーマンス ガイド](https://go.microsoft.com/fwlink/?LinkId=306717)」を参照してください。  
+>   ディメンション デザインに関連するパフォーマンスの問題ついては、「 [SQL Server 2008 R2 Analysis Services パフォーマンス ガイド](https://go.microsoft.com/fwlink/?LinkId=306717)」を参照してください。  
   
 ## <a name="defining-dimensions-attributes-and-hierarchies"></a>ディメンション、属性、および階層の定義  
  データベースとキューブのディメンション、属性、および階層を定義するための最も簡単な方法は、キューブ ウィザードを使用して、キューブの定義と同時にディメンションを作成することです。 キューブ ウィザードでは、データ ソース ビューのディメンション テーブルに基づいてディメンションを作成します。このディメンション テーブルは、キューブで使用するために、ウィザードで指定されたり、ユーザーが指定したりします。 その後、データベース ディメンションを作成して新しいキューブに追加すると、キューブ ディメンションが作成されます。  

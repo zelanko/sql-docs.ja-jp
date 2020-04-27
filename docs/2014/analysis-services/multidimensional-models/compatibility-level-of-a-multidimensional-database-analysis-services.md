@@ -11,14 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c5eedfb396b33d33ceb9fbfad0245c4eb730997
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076689"
 ---
 # <a name="set-the-compatibility-level-of-a-multidimensional-database-analysis-services"></a>多次元データベースの互換性レベルの設定 (Analysis Services)
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、データベース互換性レベル プロパティによって、データベースの機能レベルが決定されます。 互換性レベルは、各モデルの種類に固有です。 たとえば、の`1100`互換性レベルは、データベースが多次元か表形式かによって異なる意味を持ちます。  
   
  このトピックでは、多次元データベースの互換性レベルについてのみ説明します。 表形式ソリューションの詳細については、「[互換性レベル &#40;SSAS 表形式 SP1&#41;](../tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)」を参照してください。  
@@ -32,10 +31,9 @@ ms.locfileid: "66076689"
   
  多次元データベースの `CompatibilityLevel` プロパティの有効値を以下に示します。  
   
-|設定|[説明]|  
+|設定|説明|  
 |-------------|-----------------|  
-|`1050`|この値はスクリプトやツールには表示されませんが、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、または [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]で作成されたデータベースを表します。 
-  `CompatibilityLevel` が明示的に設定されていないデータベースはすべて、暗黙的に `1050` レベルで実行されます。|  
+|`1050`|この値はスクリプトやツールには表示されませんが、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、または [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]で作成されたデータベースを表します。 `CompatibilityLevel` が明示的に設定されていないデータベースはすべて、暗黙的に `1050` レベルで実行されます。|  
 |`1100`|これは、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]で作成した新しいデータベースの既定値です。 また、この値を以前のバージョンの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で作成されたデータベースに指定すると、この互換性レベルでのみサポートされている機能 (つまり、文字列データを含むディメンション属性や個別のカウント メジャーの大きくなった文字列ストレージ) を使用できるようになります。<br /><br /> データベースに`CompatibilityLevel` `1100`は、追加のプロパティ`StringStoresCompatibilityLevel`が設定されています。これにより、パーティションおよびディメンションの代替文字列ストレージを選択できます。|  
   
 > [!WARNING]  
@@ -91,9 +89,9 @@ ms.locfileid: "66076689"
 3.  サーバーの同期は、サーバーで同じバージョンとデータベース互換性レベルを共有している場合にのみサポートされます。  
   
 ## <a name="next-steps"></a>次の手順  
- データベース互換性レベルを上げると、`StringStoresCompatibilityLevel` で [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] プロパティを設定できるようになります。 これにより、メジャーとディメンションの文字列ストレージが大きくなります。 この機能の詳細については、「 [ディメンションおよびパーティションの文字列ストレージの構成](configure-string-storage-for-dimensions-and-partitions.md)」を参照してください。  
+ データベース互換性レベルを上げると、[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] で `StringStoresCompatibilityLevel` プロパティを設定できるようになります。 これにより、メジャーとディメンションの文字列ストレージが大きくなります。 この機能の詳細については、「 [ディメンションおよびパーティションの文字列ストレージの構成](configure-string-storage-for-dimensions-and-partitions.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [XMLA&#41;&#40;のデータベースのバックアップ、復元、および同期](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
+ [データベースのバックアップ、復元、および同期 &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
   
   

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b630442c1a47bcd4ebabee75b82cff9b8f64d006
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62901113"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>[SAP BW ソース エディター] ([接続マネージャー] ページ)
@@ -55,7 +55,7 @@ ms.locfileid: "62901113"
  **実行モード**  
  ソースからデータを抽出する方法を指定します。  
   
-|オプション|[説明]|  
+|オプション|説明|  
 |------------|-----------------|  
 |**P - プロセス チェーンをトリガー**|プロセス チェーンをトリガーします。 この場合、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージが抽出プロセスを開始します。|  
 |**W - 通知を待機**|SAP Netweaver BW システムから、データ抽出の開始する通知を待ちます。 この場合、SAP Netweaver BW システムが抽出プロセスを開始します。|  
@@ -83,8 +83,7 @@ ms.locfileid: "62901113"
  ゲートウェイ ホストのサーバー名または IP アドレスを入力します。 通常、IP アドレスの名前は、SAP アプリケーション サーバーの名前と同じです。  
   
  **ゲートウェイ サービス**  
- 
-  `sapgwNN` という形式でゲートウェイ サービスの名前を入力します。`NN` はシステム番号です。  
+ `sapgwNN` という形式でゲートウェイ サービスの名前を入力します。`NN` はシステム番号です。  
   
  **プログラム ID**  
  RFC 転送先に関連付けられているプログラム ID を入力します。  
@@ -110,8 +109,7 @@ ms.locfileid: "62901113"
  ゲートウェイ ホストのサーバー名または IP アドレスを入力します。 通常、IP アドレスの名前は、SAP アプリケーション サーバーの名前と同じです。  
   
  **ゲートウェイ サービス**  
- 
-  `sapgwNN` という形式でゲートウェイ サービスの名前を入力します。`NN` はシステム番号です。  
+ `sapgwNN` という形式でゲートウェイ サービスの名前を入力します。`NN` はシステム番号です。  
   
  **プログラム ID**  
  RFC 転送先に関連付けられているプログラム ID を入力します。  

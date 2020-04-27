@@ -18,31 +18,24 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 68f1f114002ab0ef38c7565a523723a06958048d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874350"
 ---
 # <a name="host-protection-attributes-and-clr-integration-programming"></a>ホスト保護属性と CLR 統合プログラミング
   CLR (共通言語ランタイム) には、.NET Framework の一部であるマネージド API (アプリケーション プログラミング インターフェイス) に、特定の属性で注釈を付けるメカニズムが用意されています。このような属性は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降) など CLR のホストのための属性です。 このような HPA (ホスト保護属性) の例としては、次のものがあります。  
   
--   
-  `SharedState`。共有状態 (静的なクラス フィールドなど) を作成または管理する機能が API で公開されるかどうかを示します。  
+-   `SharedState`。共有状態 (静的なクラス フィールドなど) を作成または管理する機能が API で公開されるかどうかを示します。  
   
--   
-  `Synchronization`。スレッド間で同期を実行する機能が API で公開されるかどうかを示します。  
+-   `Synchronization`。スレッド間で同期を実行する機能が API で公開されるかどうかを示します。  
   
--   
-  `ExternalProcessMgmt`。ホスト プロセスを制御する方法が API で公開されるかどうかを示します。  
+-   `ExternalProcessMgmt`。ホスト プロセスを制御する方法が API で公開されるかどうかを示します。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、これらの属性が与えられると、CAS (コード アクセス セキュリティ) を使用して、ホストされた環境で許可されない HPA の一覧を指定します。 CAS 要件は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 3 つの権限セット (`SAFE`、`EXTERNAL_ACCESS`、または `UNSAFE`) のいずれかで指定します。 アセンブリをサーバーに登録する際に、`CREATE ASSEMBLY` ステートメントを使用して、これら 3 つのセキュリティ レベルのいずれかを指定します。 
-  `SAFE` 権限セットまたは `EXTERNAL_ACCESS` 権限セット内で実行されるコードでは、`System.Security.Permissions.HostProtectionAttribute` 属性が適用される特定の型またはメンバーを使用しないようにする必要があります。 詳細については、「[アセンブリの作成](../clr-integration/assemblies/creating-an-assembly.md)」および「 [CLR 統合プログラミングモデルの制限](../clr-integration/database-objects/clr-integration-programming-model-restrictions.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、これらの属性が与えられると、CAS (コード アクセス セキュリティ) を使用して、ホストされた環境で許可されない HPA の一覧を指定します。 CAS 要件は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 3 つの権限セット (`SAFE`、`EXTERNAL_ACCESS`、または `UNSAFE`) のいずれかで指定します。 アセンブリをサーバーに登録する際に、`CREATE ASSEMBLY` ステートメントを使用して、これら 3 つのセキュリティ レベルのいずれかを指定します。 `SAFE` 権限セットまたは `EXTERNAL_ACCESS` 権限セット内で実行されるコードでは、`System.Security.Permissions.HostProtectionAttribute` 属性が適用される特定の型またはメンバーを使用しないようにする必要があります。 詳細については、「[アセンブリの作成](../clr-integration/assemblies/creating-an-assembly.md)」および「 [CLR 統合プログラミングモデルの制限](../clr-integration/database-objects/clr-integration-programming-model-restrictions.md)」を参照してください。  
   
- 
-  `HostProtectionAttribute` は、ホストで許可されないコード構文 (型またはメソッド) を特定するという点で、信頼性を向上するための手段がセキュリティ権限とは異なります。 
-  `HostProtectionAttribute` を使用すると、ホストの安定性確保に役立つプログラミング モデルを適用できます。  
+ `HostProtectionAttribute` は、ホストで許可されないコード構文 (型またはメソッド) を特定するという点で、信頼性を向上するための手段がセキュリティ権限とは異なります。 `HostProtectionAttribute` を使用すると、ホストの安定性確保に役立つプログラミング モデルを適用できます。  
   
 ## <a name="host-protection-attributes"></a>ホスト保護属性  
  HPA は、ホスト プログラミング モデルに適合しない型またはメンバーを識別して、次に示す信頼性に対する脅威を表します (リスクの低いものから順に並べています)。  
@@ -55,7 +48,7 @@ ms.locfileid: "62874350"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、、 `HostProtectionAttribute` 、、、、、、または`System.Security.Permissions.HostProtectionResource` `ExternalProcessMgmt` `ExternalThreading` `MayLeakOnAbort` `SecurityInfrastructure` `SelfAffectingProcessMgmnt` `SelfAffectingThreading` `SharedState` `Synchronization` `UI`の値を持つ列挙体を指定するを持つ型またはメンバーの使用を許可しません。 これにより、状態の共有を可能にしたり、同期を実行するメンバーをアセンブリから呼び出すことができなくなります。さらに、終了時にリソース リークを発生させたり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスの整合性に影響を与える可能性があるメンバーの呼び出しも禁止されます。  
   
-### <a name="disallowed-types-and-members"></a>許可されていない型とメンバー  
+### <a name="disallowed-types-and-members"></a>禁止されている型とメンバー  
  次のトピックでは、`HostProtectionResource` の値が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって許可されない型およびメンバーを示します。  
   
 > [!NOTE]  

@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 55520388424e110420ad96d329081ee7a61fe028
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62876084"
 ---
 # <a name="piecemeal-restores-sql-server"></a>段階的な部分復元 (SQL Server)
@@ -145,11 +145,11 @@ ms.locfileid: "62876084"
 ### <a name="applying-log-backups"></a>ログ バックアップの適用  
  読み取り専用ファイル グループがバックアップの作成前から読み取り専用だった場合は、ログ バックアップをファイル グループに適用する必要はないので、ファイルの復元の際にスキップされます。 読み取り/書き込みファイル グループの場合は、最新の完全復元または差分復元にチェーンが途切れていないログ バックアップを適用し、ファイル グループに現在のログ ファイルの状態を反映する必要があります。  
   
-### <a name="examples"></a>例  
+### <a name="examples"></a>使用例  
   
--   [例: データベース &#40;完全復旧モデルの段階的な部分復元&#41;](example-piecemeal-restore-of-database-full-recovery-model.md)  
+-   [例: データベースの段階的な部分復元 &#40;完全復旧モデル&#41;](example-piecemeal-restore-of-database-full-recovery-model.md)  
   
--   [例: 完全復旧モデル &#40;一部のファイルグループのみを復元する段階的な部分復元&#41;](example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
+-   [例: 一部のファイル グループのみを復元する段階的な部分復元 &#40;完全復旧モデル&#41;](example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
 ## <a name="performing-a-piecemeal-restore-of-a-database-whose-recovery-model-has-been-switched-from-simple-to-full"></a>復旧モデルを単純から完全に切り替えたデータベースの段階的な部分復元の実行  
  データベースの完全バックアップまたは部分バックアップ以降に単純復旧モデルから完全復旧モデルに切り替えたデータベースは、段階的な部分復元を実行できます。 たとえば、データベースで次の手順を実行した場合を検討します。  
@@ -174,9 +174,9 @@ ms.locfileid: "62876084"
   
 ## <a name="see-also"></a>参照  
  [トランザクションログバックアップの適用 &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
- [Transact-sql&#41;の復元 &#40;](/sql/t-sql/statements/restore-statements-transact-sql)   
+ [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [SQL Server データベースを &#40;完全復旧モデルの特定の時点に復元する&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
  [復元と復旧の概要 &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
- [完全復旧モデルを計画して復元シーケンスを実行 &#40;&#41;](plan-and-perform-restore-sequences-full-recovery-model.md)  
+ [復元シーケンスの計画と実行 &#40;完全復旧モデル&#41;](plan-and-perform-restore-sequences-full-recovery-model.md)  
   
   

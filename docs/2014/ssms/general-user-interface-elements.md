@@ -14,33 +14,29 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47ce33e0d0a8cf76a90beb1fa3cc6ddfda27606f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63316142"
 ---
 # <a name="general-user-interface-elements"></a>一般的なユーザー インターフェイス要素
-  [!INCLUDE[msCoName](../includes/msconame-md.md)]の[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]基本的な要素の一部は、**エディター**、[**プロパティ**] ウィンドウ、および**ツールボックス**です。  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の基本的な要素には、**エディター**、 **[プロパティ]** ウィンドウ、**ツールボックス**などがあります。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [[バージョン情報] ダイアログ ボックス](about-dialog-box.md)  
- 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 、およびそれを実行しているコンピューターに関する情報を提供するダイアログ ボックスについて説明します。  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 、およびそれを実行しているコンピューターに関する情報を提供するダイアログ ボックスについて説明します。  
   
  [SQL Server Management Studio の Web ブラウザー](sql-server-management-studio-web-browser.md)  
- 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] がドキュメント ウィンドウで Web ブラウザーをホストする方法について説明します。  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] がドキュメント ウィンドウで Web ブラウザーをホストする方法について説明します。  
   
  [[外部ツール] ダイアログ ボックス](external-tools-dialog-box.md)  
- 
-  **[ツール]** メニューに [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]の外部のツールを追加する方法について説明します。  
+ **[ツール]** メニューに [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]の外部のツールを追加する方法について説明します。  
   
  [[プロパティ] ウィンドウ &#40;Management Studio&#41;](properties-window-management-studio.md)  
  エディターやデザイナーで選択したオブジェクトのプロパティやイベントを表示する方法を説明します。 ファイル、プロジェクト、ソリューションのプロパティの編集や表示の方法についても説明します。 一部のプロパティは、[プロパティ] ウィンドウで編集できます。  
   
  [ツールボックスの使用](use-the-toolbox.md)  
- 
-  **ツールボックス** の操作方法と、ツールボックスを使用してコントロールをプロジェクトのデザイナーに追加する方法を説明します。 たとえば、 **ツールボックス** を使用して、メンテナンス タスクにステップを追加できます。  
+ **ツールボックス** の操作方法と、ツールボックスを使用してコントロールをプロジェクトのデザイナーに追加する方法を説明します。 たとえば、 **ツールボックス** を使用して、メンテナンス タスクにステップを追加できます。  
   
   

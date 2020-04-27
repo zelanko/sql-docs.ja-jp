@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f9240218b05af2c642ff374cb7e14d2a6c5dd616
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066609"
 ---
 # <a name="set-the-data-type-of-a-column-ssas-tabular"></a>列のデータ型の設定 (SSAS テーブル)
@@ -26,11 +26,9 @@ ms.locfileid: "66066609"
   
 2.  列の **[プロパティ]** ウィンドウで、次のいずれかの操作を行います。  
   
-    -   
-  **[データ形式]** プロパティで別のデータ形式を選択します。  
+    -   **[データ形式]** プロパティで別のデータ形式を選択します。  
   
-    -   
-  **[データ型]** プロパティで別のデータ型を選択します。  
+    -   **[データ型]** プロパティで別のデータ型を選択します。  
   
 ## <a name="considerations-when-changing-data-types"></a>データ型を変更するときの注意事項  
  列のデータ型を変更したり、データ変換を選択したりするときに、以下のいずれかのエラーが発生する場合があります。  
@@ -52,7 +50,7 @@ ms.locfileid: "66066609"
   
 |モデルのデータ型|  
 |----------------------|  
-|Text<br /><br /> 10 進数<br /><br /> 整数<br /><br /> Currency<br /><br /> TRUE または FALSE<br /><br /> Date|  
+|テキスト<br /><br /> 10 進数<br /><br /> 整数<br /><br /> 通貨<br /><br /> TRUE または FALSE<br /><br /> 日付|  
   
  インポートしたデータのデータ型が間違っていた場合や、目的のデータ型と違っていた場合は、次の選択肢があります。  
   
@@ -70,6 +68,6 @@ ms.locfileid: "66066609"
  Business Intelligence Semantic Model で使用されるデータ型、それらのデータ型の暗黙的な変換、および数式でさまざまなデータ型を使用する方法の詳細については、 [サポートされているデータ型 (SSAS テーブル)](data-types-supported-ssas-tabular.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [SSAS 表形式&#41;&#40;サポートされているデータ型](data-types-supported-ssas-tabular.md)  
+ [サポートされているデータ型 (SSAS テーブル)](data-types-supported-ssas-tabular.md)  
   
   

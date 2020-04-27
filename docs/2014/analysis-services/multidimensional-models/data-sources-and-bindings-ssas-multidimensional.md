@@ -34,10 +34,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b909423c431507d7709d814bfa4061eaf0a0e342
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076078"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>データ ソースとバインド (SSAS 多次元)
@@ -49,23 +49,21 @@ ms.locfileid: "66076078"
   
  データ ソースを表す方法は、データ ソースの種類によって異なります。 たとえば、リレーショナル データ ソースは接続文字列によって区別されます。 使用できるデータ ソースの詳細については、「 [多次元モデルのデータ ソース](data-sources-in-multidimensional-models.md)」を参照してください。  
   
- 使用しているデータ ソースにかかわらず、データ ソース ビュー (DSV) にはデータ ソースのメタデータが含まれています。 したがって、キューブまたは他の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトのバインドは DSV へのバインドとして表されます。 これらのバインドには、論理オブジェクト (ビュー、計算列、データソースに物理的に存在しないリレーションシップなど) へのバインドを含めることができます。 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、式をカプセル化する計算列を DSV に追加し、対応する OLAP メジャーを DSV のその列にバインドします。 DSV の詳細については、「 [多次元モデルのデータ ソース ビュー](data-source-views-in-multidimensional-models.md)」を参照してください。  
+ 使用しているデータ ソースにかかわらず、データ ソース ビュー (DSV) にはデータ ソースのメタデータが含まれています。 したがって、キューブまたは他の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトのバインドは DSV へのバインドとして表されます。 これらのバインドには、論理オブジェクト (ビュー、計算列、データソースに物理的に存在しないリレーションシップなど) へのバインドを含めることができます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、式をカプセル化する計算列を DSV に追加し、対応する OLAP メジャーを DSV のその列にバインドします。 DSV の詳細については、「 [多次元モデルのデータ ソース ビュー](data-source-views-in-multidimensional-models.md)」を参照してください。  
   
  データ ソースへのバインド方法は各 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトによって異なります。 また、これらのオブジェクトのデータ バインドとデータ ソースの定義は、データバインド オブジェクト (ディメンションなど) の定義と共にインラインで提供することも、個別の定義セットとして不一致で提供することも可能です。  
   
 ## <a name="analysis-services-data-types"></a>Analysis Services のデータ型  
- バインドで使用されるデータ型は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]でサポートされているデータ型と一致する必要があります。 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では次のデータ型が定義されています。  
+ バインドで使用されるデータ型は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]でサポートされているデータ型と一致する必要があります。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では次のデータ型が定義されています。  
   
-|Analysis Services のデータ型|[説明]|  
+|Analysis Services のデータ型|説明|  
 |---------------------------------|-----------------|  
 |BigInt|64 ビットの符号付き整数です。 このデータ型は、Microsoft [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の Int64 データ型と、OLE DB の DBTYPE_I8 データ型にマップされます。|  
-|Bool|ブール値。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の Boolean データ型と、OLE DB の DBTYPE_BOOL データ型にマップされます。|  
-|Currency|通貨単位の 1 万分の 1 までの精度を持つ -263 (-922,337,203,685,477.5808) ～ 263-1 (+922,337,203,685,477.5807) の通貨の値です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の Decimal データ型と、OLE DB の DBTYPE_CY データ型にマップされます。|  
-|Date|倍精度浮動小数点数として保存される日付データです。 整数部分は 1899 年 12 月 30 日からの日数で、小数部分は日の端数です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の DateTime データ型と、OLE DB の DBTYPE_DATE データ型にマップされます。|  
-|DOUBLE|-1.79E +308 ～ 1.79E +308 の範囲の倍精度浮動小数点数です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の Double データ型と、OLE DB の DBTYPE_R8 データ型にマップされます。|  
-|整数|32 ビットの符号付き整数です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の Int32 データ型と、OLE DB の DBTYPE_I4 データ型にマップされます。|  
+|Bool|ブール値です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の Boolean データ型と、OLE DB の DBTYPE_BOOL データ型にマップされます。|  
+|通貨|通貨単位の 1 万分の 1 までの精度を持つ -263 (-922,337,203,685,477.5808) ～ 263-1 (+922,337,203,685,477.5807) の通貨の値です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の Decimal データ型と、OLE DB の DBTYPE_CY データ型にマップされます。|  
+|日付|倍精度浮動小数点数として保存される日付データです。 整数部分は 1899 年 12 月 30 日からの日数で、小数部分は日の端数です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の DateTime データ型と、OLE DB の DBTYPE_DATE データ型にマップされます。|  
+|Double|-1.79E +308 ～ 1.79E +308 の範囲の倍精度浮動小数点数です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の Double データ型と、OLE DB の DBTYPE_R8 データ型にマップされます。|  
+|Integer|32 ビットの符号付き整数です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の Int32 データ型と、OLE DB の DBTYPE_I4 データ型にマップされます。|  
 |Single|-3.40E +38 ～ 3.40E +38 の範囲の単精度浮動小数点数です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の Single データ型と、OLE DB の DBTYPE_R4 データ型にマップされます。|  
 |SmallInt|16 ビットの符号付き整数です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の Int16 データ型と、OLE DB の DBTYPE_I2 データ型にマップされます。|  
 |TinyInt|8 ビットの符号付き整数です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の SByte データ型と、OLE DB の DBTYPE_I1 データ型にマップされます。<br /><br /> 注: データ ソースに tinyint データ型のフィールドが含まれ、AutoIncrement プロパティが True に設定されている場合、それらのフィールドはデータ ソース ビューで整数に変換されます。|  
@@ -74,8 +72,7 @@ ms.locfileid: "66076078"
 |UnsignedSmallInt|16 ビットの符号なし整数です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の UInt16 データ型と、OLE DB の DBTYPE_UI2 データ型にマップされます。|  
 |WChar|Unicode 文字の NULL 終了ストリームです。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の String データ型と、OLE DB の DBTYPE_WSTR データ型にマップされます。|  
   
- データ ソースから受け取るデータはすべて、(通常は処理中に) バインドで指定された [!INCLUDE[ssAS](../../includes/ssas-md.md)] の型に変換されます。 変換を実行できない場合 (たとえば、String から Int への変換など) はエラーが発生します。 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] では、バインドのデータ型は、通常、データ ソース内の変換元の型に最も適しているデータ型に設定されます。 たとえば、SQL 型の DateTime、SmallDateTime、DateTime2、DateTimeOffset は [!INCLUDE[ssAS](../../includes/ssas-md.md)] 型の Date にマップされ、SQL 型の Time は String にマップされます。  
+ データ ソースから受け取るデータはすべて、(通常は処理中に) バインドで指定された [!INCLUDE[ssAS](../../includes/ssas-md.md)] の型に変換されます。 変換を実行できない場合 (たとえば、String から Int への変換など) はエラーが発生します。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] では、バインドのデータ型は、通常、データ ソース内の変換元の型に最も適しているデータ型に設定されます。 たとえば、SQL 型の DateTime、SmallDateTime、DateTime2、DateTimeOffset は [!INCLUDE[ssAS](../../includes/ssas-md.md)] 型の Date にマップされ、SQL 型の Time は String にマップされます。  
   
 ## <a name="bindings-for-dimensions"></a>ディメンションのバインド  
  ディメンションの各属性は DSV の列にバインドされます。 ディメンションの属性はすべて 1 つのデータ ソースに基づいている必要がありますが、 バインドできるテーブルの列はさまざまです。 テーブル間のリレーションシップは DSV で定義されます。 同じテーブルに複数のリレーションシップセットが存在する場合は、' alias ' テーブルとして機能するように、DSV に名前付きクエリを導入することが必要になる場合があります。 式とフィルターは、DSV で名前付き計算と名前付きクエリを使用して定義されます。  
@@ -171,26 +168,22 @@ ms.locfileid: "66076078"
   
  不一致バインドは、処理コマンドと共にオプションの `Bindings` コレクション オブジェクトを含めることで指定します。 オプションの `Bindings` コレクションには次の要素が含まれています。  
   
-|プロパティ|Cardinality|種類|[説明]|  
+|プロパティ|Cardinality|種類|説明|  
 |--------------|-----------------|----------|-----------------|  
 |`Binding`|0-n|`Binding`|新しいバインドのコレクションを提供します。|  
 |`DataSource`|0-1|`DataSource`|サーバーの使用された `DataSource` を置き換えます。|  
 |`DataSourceView`|0-1|`DataSourceView`|サーバーの使用された `DataSourceView`<br /><br /> を置き換えます。|  
   
- 不一致バインドに関連する要素はすべてオプションです。 指定されていない要素については、ASSL では持続オブジェクトの DDL に含まれている指定が使用されます。 
-  `DataSource` コマンドの `DataSourceView` または `Process` の指定はオプションです。 
-  `DataSource` または `DataSourceView` が指定されている場合は、インスタンス化されず、`Process` コマンドの完了後は持続しません。  
+ 不一致バインドに関連する要素はすべてオプションです。 指定されていない要素については、ASSL では持続オブジェクトの DDL に含まれている指定が使用されます。 `DataSource` コマンドの `DataSourceView` または `Process` の指定はオプションです。 `DataSource` または `DataSourceView` が指定されている場合は、インスタンス化されず、`Process` コマンドの完了後は持続しません。  
   
 ### <a name="definition-of-the-out-of-line-binding-type"></a>不一致バインド型の定義  
  ASSL では、不一致 `Bindings` コレクション内で、複数のオブジェクトのバインドのコレクションである、各 `Binding` を使用できます。 各 `Binding` には拡張オブジェクト参照があります。これはオブジェクト参照に似ていますが、マイナー オブジェクト (たとえばディメンション属性やメジャー グループ属性) の参照も可能です。 このオブジェクト`Object`は、コマンド内`Process`の要素の標準の形式をとります。 \<ただし、 *object*>\<*/object*> タグは存在しません。  
   
  バインドが指定されている各オブジェクトは、フォーム\<*オブジェクト*>ID (など`DimensionID`) の XML 要素によって識別されます。 \<*オブジェクト>ID*の形式でできるだけ具体的にオブジェクトを特定したら、バインドを指定する要素を指定します。これは通常`Source`です。 一般に、属性の列バインドの場合のように、`Source` は `DataItem` のプロパティです。 この場合は、`DataItem` タグを指定しないで、バインドする列に直接存在するかのように `Source` プロパティを指定するだけです。  
   
- 
-  `KeyColumns` は、`KeyColumns` コレクション内の順序によって識別されます。 たとえば、属性の最初と 3 番目のキー列のみを指定することはできません。2 番目のキー列がスキップされることを示す方法がないからです。 不一致バインドでは、ディメンション属性のキー列のすべてが存在する必要があります。  
+ `KeyColumns` は、`KeyColumns` コレクション内の順序によって識別されます。 たとえば、属性の最初と 3 番目のキー列のみを指定することはできません。2 番目のキー列がスキップされることを示す方法がないからです。 不一致バインドでは、ディメンション属性のキー列のすべてが存在する必要があります。  
   
- 
-  `Translations` には ID がありませんが、その言語によって意味が識別されます。 したがって、`Translations` 内の `Binding` にその言語識別子を含める必要があります。  
+ `Translations` には ID がありませんが、その言語によって意味が識別されます。 したがって、`Translations` 内の `Binding` にその言語識別子を含める必要があります。  
   
  DDL に直接存在しない `Binding` 内で許容されるもう 1 つの要素は、`ParentColumnID` です。これはデータ マイニングの入れ子になったテーブルに使用されます。 この場合は、バインドを提供する入れ子になったテーブルの親列を指定する必要があります。  
   

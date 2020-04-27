@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 790e509dd29e388dfb697ba577958395a4a046ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072884"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Analysis Services データベースの ReadOnly モードと ReadWrite モードの切り替え
@@ -32,12 +32,11 @@ ms.locfileid: "66072884"
   
 -   XMLA を使用したスクリプト  
   
-## <a name="procedures"></a>手順  
+## <a name="procedures"></a>プロシージャ  
   
 #### <a name="to-switch-the-readwrite-mode-of-a-database-interactively-using-management-studio"></a>Management Studio を使用してデータベースの読み取り/書き込みモードを対話的に切り替えるには  
   
-1.  
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の左側または右側のペインで切り替えるデータベースを指定します。  
+1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の左側または右側のペインで切り替えるデータベースを指定します。  
   
 2.  データベースを右クリックし、[**プロパティ**] を選択します。 データベース フォルダーを検索し、場所を確認します。 データベースのストレージの場所が空の場合は、データベース フォルダーがサーバー データ フォルダー内にあることを示しています。  
   
@@ -52,8 +51,7 @@ ms.locfileid: "66072884"
   
 6.  [**データベース**] フォルダーを右クリックし、[**アタッチ**] を選択します。  
   
-7.  
-  **[フォルダー]** ボックスに、データベース フォルダーの元の場所を入力します。 または、参照ボタン ([.**..**]) を使用してデータベースフォルダーを検索することもできます。  
+7.  **[フォルダー]** ボックスに、データベース フォルダーの元の場所を入力します。 または、参照ボタン ([.**..**]) を使用してデータベースフォルダーを検索することもできます。  
   
 8.  データベースの読み取り/書き込みモードを選択します。  
   
@@ -127,16 +125,14 @@ ms.locfileid: "66072884"
   
 #### <a name="to-switch-the-readwrite-mode-to-a-database-by-script-using-xmla"></a>XMLA を使用したスクリプトでデータベースの読み取り/書き込みモードを切り替えるには  
   
-1.  
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の左側または右側のペインで切り替えるデータベースを指定します。  
+1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の左側または右側のペインで切り替えるデータベースを指定します。  
   
 2.  データベースを右クリックし、[**プロパティ**] を選択します。 データベース フォルダーを検索し、場所を確認します。 データベースのストレージの場所が空の場合は、データベース フォルダーがサーバー データ フォルダー内にあることを示しています。  
   
     > [!IMPORTANT]  
     >  データベースがデタッチされるとすぐに、[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] では、データベースの位置を取得できなくなります。  
   
-3.  
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、新しい XMLA タブを開きます。  
+3.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、新しい XMLA タブを開きます。  
   
 4.  次の XMLA 用のスクリプト テンプレートをコピーします。  
   
@@ -152,8 +148,7 @@ ms.locfileid: "66072884"
   
  `</Detach>`  
   
-1.  
-  `%dbName%` をデータベースの名前に置き換え、 `%password%` をパスワードに置き換えます。 テンプレートに含まれている文字 % は削除する必要があります。  
+1.  `%dbName%` をデータベースの名前に置き換え、 `%password%` をパスワードに置き換えます。 テンプレートに含まれている文字 % は削除する必要があります。  
   
 2.  XMLA コマンドを実行します。  
   
@@ -167,8 +162,7 @@ ms.locfileid: "66072884"
   
  `</Attach>`  
   
-1.  
-  `%dbFolder%` をデータベース フォルダーの完全な UNC パスに置き換え、`%ReadOnlyMode%` を対応する値 `ReadOnly` または `ReadWrite` に置き換え、`%password%` をパスワードに置き換えます。 テンプレートに含まれている文字 % は削除する必要があります。  
+1.  `%dbFolder%` をデータベース フォルダーの完全な UNC パスに置き換え、`%ReadOnlyMode%` を対応する値 `ReadOnly` または `ReadWrite` に置き換え、`%password%` をパスワードに置き換えます。 テンプレートに含まれている文字 % は削除する必要があります。  
   
 2.  XMLA コマンドを実行します。  
   

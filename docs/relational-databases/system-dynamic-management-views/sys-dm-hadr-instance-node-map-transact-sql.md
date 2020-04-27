@@ -21,10 +21,10 @@ ms.assetid: ccfaf62c-9f87-43cf-a5e7-8942e91dd041
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: edd2ea7a215f01c25539753dff4bd170cf9d422f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900415"
 ---
 # <a name="sysdm_hadr_instance_node_map-transact-sql"></a>dm_hadr_instance_node_map (Transact-sql)
@@ -36,7 +36,7 @@ ms.locfileid: "67900415"
   
 -   複数の SQL Server インスタンスが同じ WSFC ノードでホストされている場合、リソース DLL はこの動的管理ビューを使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]して、接続先ののインスタンスを決定します。  
    
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**ag_resource_id**|**nvarchar(256)**|WSFC 内のリソースとしての可用性グループの一意の ID。|  
 |**instance_name**|**nvarchar(256)**|名前-*サーバー*/*インスタンス*-可用性グループのレプリカをホストするサーバーインスタンス。|  
@@ -49,6 +49,6 @@ ms.locfileid: "67900415"
  [Always On 可用性グループの動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
  [Always On 可用性グループのカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
  [Transact-sql&#41;&#40;可用性グループの監視](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
- [Always On 可用性グループ &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
+ [AlwaysOn 可用性グループ &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
   

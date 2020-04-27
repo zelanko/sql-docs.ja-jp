@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e6153b78b0dda1a72e2f7dfd790fa8bcecd0bb37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074525"
 ---
 # <a name="creating-query-scoped-calculated-members-mdx"></a>クエリ スコープの計算されるメンバーの作成 (MDX)
@@ -41,8 +41,7 @@ ms.locfileid: "66074525"
   
 ```  
   
- WITH キーワードの構文で使用する `Member_Identifier` の値は、計算されるメンバーの完全修飾名です。 完全修飾名には、計算されるメンバーを関連付けるディメンションまたはレベルが含まれます。 
-  `MDX_Expression` の値は、その式の値が評価された後の計算されるメンバーの値を返します。 必要に応じて、 `MemberProperty_Identifier` の値にセル プロパティの名前を、 `Scalar_Expression` の値にセル プロパティの値を指定して、計算されるメンバーの固有セル プロパティの値を指定できます。  
+ WITH キーワードの構文で使用する `Member_Identifier` の値は、計算されるメンバーの完全修飾名です。 完全修飾名には、計算されるメンバーを関連付けるディメンションまたはレベルが含まれます。 `MDX_Expression` の値は、その式の値が評価された後の計算されるメンバーの値を返します。 必要に応じて、 `MemberProperty_Identifier` の値にセル プロパティの名前を、 `Scalar_Expression` の値にセル プロパティの値を指定して、計算されるメンバーの固有セル プロパティの値を指定できます。  
   
 ## <a name="with-keyword-examples"></a>WITH キーワードの例  
  次の MDX クエリは、計算されるメンバー `[Measures].[Special Discount]`を定義し、元の割引額に基づいて特殊な割引額を計算します。  
@@ -94,6 +93,6 @@ WHERE [Product].[Category].[Bikes]
 ## <a name="see-also"></a>参照  
  [Mdx 関数リファレンス &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
  [SELECT ステートメント &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
- [MDX&#41;&#40;のセッションスコープの計算されるメンバーの作成](mdx-calculated-members-session-scoped-calculated-members.md)  
+ [セッション スコープの計算されるメンバーの作成 &#40;MDX&#41;](mdx-calculated-members-session-scoped-calculated-members.md)  
   
   

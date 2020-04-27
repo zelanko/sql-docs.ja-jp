@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 847e9da07f8c255af8041071c63254b241490761
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074688"
 ---
 # <a name="calculation-context"></a>計算コンテキスト
@@ -30,8 +30,7 @@ ms.locfileid: "66074688"
 2.  WHERE 句 (該当する場合) : *スライサー軸*ともいいます。この軸に、クエリの列と行の軸で返されるメンバーを制限するセット、組、メンバーを指定します。 概念上、列または行の軸で明示的に指定されていないすべての属性階層の既定のメンバーは、スライサー軸の一部として使用されます。  
   
     > [!NOTE]  
-    >  特定の属性のセル座標がスライサー軸とそれ以外の軸で指定されている場合、軸のセットのメンバーを決定する際に、関数で指定されている座標が優先的に使用されることがあります。 
-  [Filter (MDX)](/sql/mdx/filter-mdx) 関数および [Order (MDX)](/sql/mdx/order-mdx) 関数はその例です。WHERE 句、または FROM 句の SELECT ステートメントによって計算コンテキストから除外された属性メンバーを使用して、結果の絞り込みや順序指定ができます。  
+    >  特定の属性のセル座標がスライサー軸とそれ以外の軸で指定されている場合、軸のセットのメンバーを決定する際に、関数で指定されている座標が優先的に使用されることがあります。 [Filter (MDX)](/sql/mdx/filter-mdx) 関数および [Order (MDX)](/sql/mdx/order-mdx) 関数はその例です。WHERE 句、または FROM 句の SELECT ステートメントによって計算コンテキストから除外された属性メンバーを使用して、結果の絞り込みや順序指定ができます。  
   
 3.  クエリまたは式で定義されている、名前付きセットと計算されるメンバー。  
   
@@ -73,6 +72,6 @@ WHERE (Customer.Country.France,
 ## <a name="see-also"></a>参照  
  [MDX&#41;&#40;クエリでのキューブコンテキストの確立](establishing-cube-context-in-a-query-mdx.md)   
  [MDX クエリの基礎 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
- [MDX &#40;Analysis Services の主な概念&#41;](../key-concepts-in-mdx-analysis-services.md)  
+ [MDX の主な概念 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)  
   
   

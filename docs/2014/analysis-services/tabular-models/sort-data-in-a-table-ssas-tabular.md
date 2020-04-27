@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc53b6ccc800e2986bf7a6bfdd01c0ef3c3208df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066657"
 ---
 # <a name="sort-data-in-a-table-ssas-tabular"></a>テーブル内のデータの並べ替え (SSAS テーブル)
@@ -49,6 +49,6 @@ ms.locfileid: "66066657"
 ## <a name="see-also"></a>参照  
  [SSAS 表形式&#41;&#40;データのフィルター処理と並べ替え](../filter-and-sort-data-ssas-tabular.md)   
  [SSAS テーブル&#41;&#40;パースペクティブ](perspectives-ssas-tabular.md)   
- [SSAS 表形式のロール &#40;&#41;](roles-ssas-tabular.md)  
+ [ロール (SSAS テーブル)](roles-ssas-tabular.md)  
   
   

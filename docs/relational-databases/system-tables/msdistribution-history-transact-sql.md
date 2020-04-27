@@ -18,10 +18,10 @@ ms.assetid: 55665bd2-9e1d-4efc-8f60-c63a24f66b28
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1053181486dba8c8119f9160d9c08cb8d2bbe56b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907391"
 ---
 # <a name="msdistribution_history-transact-sql"></a>MSdistribution_history (Transact-SQL)
@@ -31,14 +31,14 @@ ms.locfileid: "67907391"
   
 ## <a name="definition"></a>定義  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**int**|ディストリビューションエージェントの ID。|  
 |**runstatus**|**int**|実行中の状態:<br /><br /> **1** = 開始します。<br /><br /> **2** = 成功します。<br /><br /> **3** = 実行中です。<br /><br /> **4** = アイドル状態。<br /><br /> **5** = 再試行します。<br /><br /> **6** = 失敗。|  
-|**start_time**|**DATETIME**|ジョブの実行開始時刻です。|  
-|**time**|**DATETIME**|メッセージがログに記録される時刻。|  
-|**全**|**int**|メッセージ セッションの実行時間 (秒) です。|  
-|**comments**|**nvarchar(4000)**|メッセージ テキストです。|  
+|**start_time**|**datetime**|ジョブの実行開始時刻です。|  
+|**time**|**datetime**|メッセージがログに記録される時刻。|  
+|**duration**|**int**|メッセージ セッションの実行時間 (秒) です。|  
+|**コメント**|**nvarchar (4000)**|メッセージ テキストです。|  
 |**xact_seqno**|**varbinary(16)**|最後に処理されたトランザクション シーケンス番号です。|  
 |**current_delivery_rate**|**float**|最後の履歴エントリ以降に1秒間に配信されたコマンド数の平均値。|  
 |**current_delivery_latency**|**int**|最後の履歴エントリ以降、コマンドがディストリビューションデータベースに入ってからサブスクライバーに適用されるまでの待機時間。 単位はミリ秒。|  
@@ -54,6 +54,6 @@ ms.locfileid: "67907391"
   
 ## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

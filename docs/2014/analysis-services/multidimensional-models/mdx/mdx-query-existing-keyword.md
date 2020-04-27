@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a6c5e8dbe3e1b1ad44286bcbb79132010cad618a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073966"
 ---
 # <a name="existing-keyword-mdx"></a>EXISTING キーワード (MDX)
@@ -35,9 +35,8 @@ Existing Set_Expression
  *Set_Expression*  
  有効な多次元式 (MDX) セット式です。  
   
-## <a name="remarks"></a>解説  
- 既定では、セットの評価は、そのセットのメンバーを含むキューブのコンテキストで実行されます。 
-  `Existing` キーワードを指定すると、指定されているセットの評価が現在のコンテキストで行われます。  
+## <a name="remarks"></a>Remarks  
+ 既定では、セットの評価は、そのセットのメンバーを含むキューブのコンテキストで実行されます。 `Existing` キーワードを指定すると、指定されているセットの評価が現在のコンテキストで行われます。  
   
 ## <a name="example"></a>例  
  次の例では、`Aggregate`  関数を使用して評価された、ユーザー選択の State-Province メンバー値に基づいて、1 つ前の期よりも売上が減少した再販業者の数を返します。 Product ディメンションに含まれる製品カテゴリに関して減少した売上の値を返すために、 [Hierarchize (MDX)](/sql/mdx/hierarchize-mdx) 関数および [DrilldownLevel (MDX)](/sql/mdx/drilldownlevel-mdx) 関数を使用しています。 `Existing`キーワードを使用すると、 `Filter`関数内のセットが現在のコンテキストで評価されるようになります。つまり、ワシントンおよびオレゴン州の属性階層のオレゴンメンバーに対して評価されます。  
@@ -85,6 +84,6 @@ WHERE
  [MDX&#41;&#40;プロパティ](/sql/mdx/properties-mdx)   
  [MDX&#41;&#40;ドリルダウンレベル](/sql/mdx/drilldownlevel-mdx)   
  [Hierarchize &#40;MDX&#41;](/sql/mdx/hierarchize-mdx)   
- [Mdx 関数リファレンス &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
+ [MDX 関数リファレンス &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
   
   

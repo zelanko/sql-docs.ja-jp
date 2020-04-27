@@ -16,18 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: df6f25841231bbfc8821cb5a7c42c4687544f407
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077220"
 ---
 # <a name="rename-an-attribute"></a>属性名を変更する
-  
-  
-  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の属性の名前は、 **Name** プロパティによって定義されます。 属性名を変更するには、 **のディメンション デザイナーで** [ディメンション構造] **タブの** [属性] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]ペイン内の属性を右クリックして、 **[名前の変更]** をクリックします。 
-  **[属性]** ペインがグリッド ビューにある場合は、属性の名前をクリックして、グリッド内で直接編集します。 また、属性を選択し、 **[プロパティ]** ウィンドウでその **Name** プロパティを設定することもできます。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の属性の名前は、 **Name** プロパティによって定義されます。 属性名を変更するには、 **のディメンション デザイナーで** [ディメンション構造] **タブの** [属性] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]ペイン内の属性を右クリックして、 **[名前の変更]** をクリックします。 **[属性]** ペインがグリッド ビューにある場合は、属性の名前をクリックして、グリッド内で直接編集します。 また、属性を選択し、 **[プロパティ]** ウィンドウでその **Name** プロパティを設定することもできます。  
   
  属性名の変更の詳細については、「 [キー列への属性のバインド](attribute-properties-bind-an-attribute-to-a-key-column.md)」を参照してください。  
   

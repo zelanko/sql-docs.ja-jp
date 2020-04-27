@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ca4b3c0b2f2a6c63e62a44499d6e33e651ca9bae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075577"
 ---
 # <a name="define-linked-dimensions"></a>リンク ディメンションの定義
@@ -41,25 +41,21 @@ ms.locfileid: "66075577"
   
 1.  SQL Server Management Studio で Analysis Services サーバーに接続します。 オブジェクト エクスプローラーでサーバー名を右クリックし、 **[ファセット]** をクリックします。  
   
-2.  
-  **LinkedObjectsLinksFromOtherInstancesEnabled** を **True** に設定し、他のインスタンスで実行されるデータベース内に格納されたリンク オブジェクトに対してサーバーで要求を発行できるようにします。  
+2.  **LinkedObjectsLinksFromOtherInstancesEnabled** を **True** に設定し、他のインスタンスで実行されるデータベース内に格納されたリンク オブジェクトに対してサーバーで要求を発行できるようにします。  
   
-3.  
-  **LinkedObjectsLinksToOtherInstances** を **True** に設定し、他のインスタンスで実行されるデータベースのリンク オブジェクトに対してサーバーでデータを要求できるようにします。  
+3.  **LinkedObjectsLinksToOtherInstances** を **True** に設定し、他のインスタンスで実行されるデータベースのリンク オブジェクトに対してサーバーでデータを要求できるようにします。  
   
 ## <a name="create-a-linked-dimension-in-sql-server-data-tools"></a>SQL Server データ ツールでリンク ディメンションを作成するには  
   
-1.  ウィザードを開始します。 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、 **データベースまたはプロジェクトの** [ディメンション] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] フォルダーを右クリックし、 **[新しいリンク ディメンション]** をクリックします。  
+1.  ウィザードを開始します。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、 **データベースまたはプロジェクトの** [ディメンション] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] フォルダーを右クリックし、 **[新しいリンク ディメンション]** をクリックします。  
   
 2.  ディメンションを提供する Analysis Services データベースに接続します。 リンク オブジェクト ウィザードの **[データ ソースの選択]** ページで [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースを選択するか、新しいデータ ソースを作成します。  
   
 3.  ウィザードの **[オブジェクトの選択]** ページで、リモート データベース内でリンクするディメンションを選択します。  
   
-4.  
-  **[ウィザードの完了]** ページで、リンク オブジェクトをプレビューできます。 既に存在するディメンションと同じ名前のディメンションにリンクした場合は、序数 (最初の重複名の "1" から始まる数) が名前に追加されます。 ウィザードを完了すると、ディメンションが **[ディメンション]** フォルダーに追加されます。  
+4.  **[ウィザードの完了]** ページで、リンク オブジェクトをプレビューできます。 既に存在するディメンションと同じ名前のディメンションにリンクした場合は、序数 (最初の重複名の "1" から始まる数) が名前に追加されます。 ウィザードを完了すると、ディメンションが **[ディメンション]** フォルダーに追加されます。  
   
-##  <a name="bkmk_CreateNew"></a>Analysis Services データベースへの新しいデータソース接続の作成  
+##  <a name="create-a-new-data-source-connection-to-an-analysis-services-database"></a><a name="bkmk_CreateNew"></a>Analysis Services データベースへの新しいデータソース接続の作成  
  新しいデータ ソース ウィザードを使用して、ディメンションを提供する Analysis Services データベースに関するプロジェクト接続情報を追加します。 リンク オブジェクト ウィザードの [データ ソースの選択] ページにある **[新しいデータ ソース]** をクリックしてウィザードを起動できます。  
   
 1.  データ ソース ウィザードの [接続の定義方法を選択します] ページで **[新規作成]** をクリックします。  
@@ -70,13 +66,11 @@ ms.locfileid: "66075577"
   
 4.  接続には Windows 認証を使用します。  
   
-5.  
-  **[初期カタログ]** の下矢印をクリックしてこのサーバーのデータベースを選択します。  
+5.  **[初期カタログ]** の下矢印をクリックしてこのサーバーのデータベースを選択します。  
   
 6.  データ ソース ウィザードで **[次へ]** をクリックして次に進みます。  
   
-7.  [権限借用情報] ページで、 **[サービス アカウントを使用する]** をクリックします。 
-  **[次へ]** をクリックし、ウィザードを終了します。 リンク オブジェクト ウィザードでは、ここで定義した接続が選択されます。  
+7.  [権限借用情報] ページで、 **[サービス アカウントを使用する]** をクリックします。 **[次へ]** をクリックし、ウィザードを終了します。 リンク オブジェクト ウィザードでは、ここで定義した接続が選択されます。  
   
 ## <a name="next-steps"></a>次の手順  
  リンク ディメンションの構造は変更できないので、ディメンション デザイナーの **[ディメンション構造]** タブではリンク ディメンションの構造を表示できません。 リンクディメンションを処理すると、[**ブラウザー** ] タブで表示できます。名前を変更したり、名前の翻訳を作成したりすることもできます。  

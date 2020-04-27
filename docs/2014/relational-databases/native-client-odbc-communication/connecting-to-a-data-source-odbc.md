@@ -24,10 +24,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e0192e3b4bf295ad0590b26a6f3e77d94d76acd9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63075187"
 ---
 # <a name="connecting-to-a-data-source-odbc"></a>データ ソースへの接続 (ODBC)
@@ -78,7 +78,7 @@ ms.locfileid: "63075187"
   
  **SQLBrowseConnect**が成功した接続を完了すると、 **SQLDriverConnect**への後続の呼び出しで使用できる接続文字列が返されます。  
   
- Native Client ODBC ドライバーは、 **SQLConnect**、SQLDriverConnect、または**SQLBrowseConnect**が正常に実行された場合、常に SQL_SUCCESS_WITH_INFO を返します。 **** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL_SUCCESS_WITH_INFO 取得した後に ODBC アプリケーションが**SQLGetDiagRec**を呼び出すと、次のメッセージが表示されます。  
+ Native Client ODBC ドライバーは、 **SQLConnect**、SQLDriverConnect、または**SQLBrowseConnect**が正常に実行された場合、常に SQL_SUCCESS_WITH_INFO を返します。 **SQLDriverConnect** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL_SUCCESS_WITH_INFO 取得した後に ODBC アプリケーションが**SQLGetDiagRec**を呼び出すと、次のメッセージが表示されます。  
   
  5701  
  このメッセージは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が、ユーザーのコンテキストをデータ ソースで定義されている既定のデータベースに登録したことを示します。または、データ ソースに既定のデータベースが定義されていない場合は、接続で使用したログイン ID に対して定義されている既定のデータベースに登録したことを示します。  

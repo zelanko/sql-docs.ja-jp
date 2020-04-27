@@ -11,30 +11,29 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 58ba761f3e32f13ddcf81dc9875057195298c705
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078556"
 ---
 # <a name="lesson-6-create-calculated-columns"></a>レッスン 6: 計算列の作成
-  このレッスンでは､計算列を追加することによってモデルに新しいデータを作成します｡ 計算列は、モデル内の既存のデータに基づいて機能します。 詳細については、「[計算列 (SSAS テーブル)](tabular-models/ssas-calculated-columns.md)」を参照してください。  
+  このレッスンでは、計算列を追加して、モデル内に新しいデータを作成します。 計算列は、モデル内の既存のデータに基づいて機能します。 詳細については、「[計算列 (SSAS テーブル)](tabular-models/ssas-calculated-columns.md)」を参照してください。  
   
- 3 つのテーブルに 5 つの計算列を新しく作成します｡ 手順は､作業ごとに少しずつ異なります｡ ここでの目的は､新しい列の作成や列名の変更､テーブル内のさまざまな場所に列を配置する方法はいくつかあることを紹介することにあります｡  
+ 3 つのテーブルに 5 つの計算列を新しく作成します｡ 手順は実習ごとに少しずつ異なります。 これは、新しい列を作成したり、それらの名前を変更したり、それらをテーブル内のさまざまな場所へ配置するのには、いくつかの方法があることを示すためです。  
   
  このレッスンの推定所要時間: **15 分**  
   
 ## <a name="prerequisites"></a>前提条件  
- このトピックは、表形式モデルのチュートリアルの一部であり、順番に従って実行する必要があります。 このレッスンの実習を行う前に、前のレッスン「 [レッスン 5: リレーションシップの作成](lesson-4-create-relationships.md)」を完了している必要があります。  
+ このトピックは、表形式モデルのチュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンの実習を行う前に、前のレッスン「 [レッスン 5: リレーションシップの作成](lesson-4-create-relationships.md)」を完了している必要があります。  
   
 ## <a name="create-calculated-columns"></a>計算列の作成  
   
 #### <a name="create-a-month-calendar-calculated-column-in-the-date-table"></a>Date テーブル内に Month Calendar 計算列を作成する  
   
-1.  
-  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]で、 **[モデル]** メニューをクリックし、 **[モデル ビュー]** をポイントして、 **[データ ビュー]** をクリックします。  
+1.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]で、 **[モデル]** メニューをクリックし、 **[モデル ビュー]** をポイントして、 **[データ ビュー]** をクリックします。  
   
-     計算列は､Date View でモデル デザイナーを使用することによってのみ作成できます｡  
+     計算列は、モデル デザイナーのデータ ビューでのみ作成できます。  
   
 2.  モデル デザイナーで、 **Date** テーブル (タブ) をクリックします。  
   
@@ -59,8 +58,7 @@ ms.locfileid: "66078556"
   
 #### <a name="create-a-day-of-week-calculated-column-in-the-date-table"></a>Date テーブル内に Day of Week 計算列を作成する  
   
-1.  
-  **Date** テーブルがアクティブな状態のままで、 **[列]** メニューをクリックし、 **[列の追加]** をクリックします。  
+1.  **Date** テーブルがアクティブな状態のままで、 **[列]** メニューをクリックし、 **[列の追加]** をクリックします。  
   
      新しい列がテーブルの右端に追加されます。  
   
@@ -75,7 +73,7 @@ ms.locfileid: "66078556"
 4.  列見出しをクリックし、列を **Day Name** 列と **Day of Month** 列の間にドラッグします。  
   
     > [!TIP]  
-    >  テーブル内の列を移動すると､ナビゲートしやすくなります｡  
+    >  テーブル内の列を移動することで、列が参照しやすくなります。  
   
  Day of Week 計算列では、曜日を表す、並べ替え可能な名前が提供されます。  
   
@@ -97,8 +95,7 @@ ms.locfileid: "66078556"
   
 #### <a name="create-a-product-category-name-calculated-column-in-the-product-table"></a>Product テーブル内に Product Category Name 計算列を作成する  
   
-1.  
-  **Product** テーブルがアクティブな状態のままで、 **[列]** メニューをクリックし、 **[列の追加]** をクリックします。  
+1.  **Product** テーブルがアクティブな状態のままで、 **[列]** メニューをクリックし、 **[列の追加]** をクリックします。  
   
 2.  数式バーに次の式を入力します｡  
   
@@ -128,7 +125,7 @@ ms.locfileid: "66078556"
   
  Margin 計算列は、各 (製品) 行の利益率を分析するために使用されます。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
  このチュートリアルを続行するには、次のレッスン「 [レッスン 7: メジャーの作成](lesson-6-create-measures.md)」に進んでください。  
   
   

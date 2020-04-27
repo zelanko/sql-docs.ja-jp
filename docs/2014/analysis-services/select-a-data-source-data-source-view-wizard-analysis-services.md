@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: be1ceb4135118197317e7b8a320c7a82d09ffda5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069859"
 ---
 # <a name="select-a-data-source-data-source-view-wizard-analysis-services"></a>[データ ソースの選択] (データ ソース ビュー ウィザード) (Analysis Services)
-  
   **[データ ソースの選択]** ページを使用すると、データ ソース ビューのデータ ソースを選択できます。  
   
 ## <a name="options"></a>オプション  

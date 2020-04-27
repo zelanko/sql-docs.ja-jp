@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2bf1a8ee0d5dd3dde585a027fd08fd833fb40304
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079911"
 ---
 # <a name="install-analysis-services-in-tabular-mode"></a>表形式モードでの Analysis Services のインストール
@@ -45,20 +45,17 @@ ms.locfileid: "66079911"
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVERMODE=TABULAR /INSTANCENAME=ASTabular /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
 ```  
   
- 
-  `INSTANCENAME` は 17 文字未満にする必要があります。  
+ `INSTANCENAME` は 17 文字未満にする必要があります。  
   
  プレースホルダー アカウント値はすべて、有効なアカウントおよびパスワードに置き換える必要があります。  
   
  SQL Server Management Studio や [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] などのツールは、提供されているコマンド ライン構文の例ではインストールされません。 機能の追加の詳細については、「 [Install SQL Server 2014 from The Command Prompt](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)」を参照してください。  
   
- 
-  `ASSERVERMODE` では、大文字と小文字が区別されます。  値はすべて大文字で指定する必要があります。 次の表に、`ASSERVERMODE` の有効な値を示します。  
+ `ASSERVERMODE` では、大文字と小文字が区別されます。  値はすべて大文字で指定する必要があります。 次の表に、`ASSERVERMODE` の有効な値を示します。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
-|MULTIDIMENSIONAL|これが既定値です。 
-  `ASSERVERMODE` を設定しない場合、サーバーは多次元サーバー モードでインストールされます。|  
+|MULTIDIMENSIONAL|これは、既定値です。 `ASSERVERMODE` を設定しない場合、サーバーは多次元サーバー モードでインストールされます。|  
 |POWERPIVOT|この値は省略可能です。 実際には、`ROLE` パラメーターを設定した場合、サーバー モードは自動的に 1 に設定され、SharePoint のインストール時に PowerPivot の `ASSERVERMODE` が省略可能になります。 詳細については、「[コマンドプロンプトからの PowerPivot のインストール](../../../sql-server/install/install-powerpivot-from-the-command-prompt.md)」を参照してください。|  
 |TABULAR|コマンド ライン セットアップを使用して Analysis Services を表形式モードでインストールする場合、この値は必須です。|  
   

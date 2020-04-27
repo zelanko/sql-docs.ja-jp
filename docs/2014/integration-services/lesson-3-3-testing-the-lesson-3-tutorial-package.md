@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ac1aa0c45e8201d50ead862dd1631bbb3324c8e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891590"
 ---
-# <a name="step-3-testing-the-lesson-3-tutorial-package"></a>手順 3: レッスン 3 のチュートリアル パッケージのテスト
+# <a name="step-3-testing-the-lesson-3-tutorial-package"></a>手順 3:レッスン 3 のチュートリアル パッケージのテスト
   この実習では、Lesson 3.dtsx パッケージを実行します。 パッケージを実行すると、[ログ イベント] ウィンドウに、ログ ファイルに書き込まれているログ エントリの一覧が表示されます。 パッケージの実行が完了したら、ログ プロバイダーによって生成されたログ ファイルの内容を確認します。  
   
 ## <a name="checking-the-package-layout"></a>パッケージ レイアウトの確認  
@@ -27,16 +27,15 @@ ms.locfileid: "62891590"
   
  ![パッケージ内の制御フロー](../../2014/tutorials/media/task4lesson2control.gif "パッケージ内の制御フロー")  
   
- **Data Flow**  
+ **データ フロー**  
   
- ![パッケージ内のデータフロー](../../2014/tutorials/media/task9lesson1data.gif "パッケージ内のデータフロー")  
+ ![パッケージ内のデータ フロー](../../2014/tutorials/media/task9lesson1data.gif "パッケージ内のデータ フロー")  
   
 ### <a name="to-run-the-lesson-4-tutorial-package"></a>レッスン 4 のチュートリアル パッケージを実行するには  
   
 1.  [SSIS] メニューの [イベントの記録] をクリックします。  
   
-2.  
-  **[デバッグ]** メニューの **[デバッグ開始]** をクリックします。  
+2.  **[デバッグ]** メニューの **[デバッグ開始]** をクリックします。  
   
 3.  パッケージの実行が完了したら、 **[デバッグ]** メニューの **[デバッグの停止]** をクリックします。  
   
@@ -47,6 +46,6 @@ ms.locfileid: "62891590"
 -   イベント`PipelineExecutionPlan`および`PipelineExecutionTrees`イベントに対して生成される情報のセマンティクスについては、このチュートリアルでは説明しませんが、最初の行には、[ **SSIS ログの構成**] ダイアログボックスの [**詳細**] タブで指定された情報フィールドが一覧表示されていることがわかります。 また、Foreach ループが繰り返されるたびに、選択した 2 つのイベント、PipelineExecutionPlan および PipelineExecutionTrees が記録されていることも確認できます。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 4 : エラー フロー リダイレクションの追加](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
+ [レッスン 4:エラー フロー リダイレクトの追加](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
   
   

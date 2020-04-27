@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f85ec2a21b478771a9ace733c22ff93a521c8430
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068713"
 ---
 # <a name="set-dimension-intelligence-options-business-intelligence-wizard"></a>[ディメンション インテリジェンス オプションの設定] (ビジネス インテリジェンス ウィザード)
-  
   **[ディメンション インテリジェンス オプションの設定]** ページでは、ビジネス インテリジェンス ウィザードでディメンション インテリジェンスを適用するディメンションを選択できます。 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]では、製品ディメンションや勘定科目ディメンションなど、ディメンションおよび属性の標準的なビジネスタイプがいくつかサポートされてい[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]ます。 このビジネスの種類をクライアント アプリケーションで使用することで、ビジネス インテリジェンス ソリューションに新しい分析のサポートを加えることができます。 使用できるディメンションと属性の種類については、「 [ディメンションの種類](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md) 」と「 [属性と属性階層](multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)」を参照してください。  
   
 ## <a name="options"></a>オプション  

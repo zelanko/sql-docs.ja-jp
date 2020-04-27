@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2cf214691c2bcffeb617d3f7534fac94f8941db5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63144498"
 ---
 # <a name="open-log-file-viewer"></a>[ログ ファイルの表示] を開く
@@ -40,7 +40,7 @@ ms.locfileid: "63144498"
   
  [ログ ファイルの表示] は、表示する情報に応じていくつかの方法で開くことができます。  
   
-##  <a name="BeforeYouBegin"></a> Permissions  
+##  <a name="permissions"></a><a name="BeforeYouBegin"></a> Permissions  
  オンラインの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのログ ファイルにアクセスするには、securityadmin 固定サーバー ロールのメンバーシップが必要です。  
   
  オフラインの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのログ ファイルにアクセスするには、 **Root\Microsoft\SqlServer\ComputerManagement10** WMI 名前空間、およびログ ファイルの保存されているフォルダーの両方に対する読み取りアクセス権が必要です。 詳細については、「 [オフライン ログ ファイルの表示](view-offline-log-files.md)」トピックの「セキュリティ」セクションを参照してください。  

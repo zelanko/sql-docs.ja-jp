@@ -16,23 +16,20 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: bf30b06849c0384d118edf635a6361712c2d22f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874766"
 ---
 # <a name="transaction-promotion"></a>トランザクションの昇格
   トランザクションの*昇格*は、必要に応じて完全に再頒布可能なトランザクションに自動的に昇格できる、軽量のローカルトランザクションを記述します。 サーバー側で実行されているデータベース トランザクション内でマネージド ストアド プロシージャが呼び出されると、CLR (共通言語ランタイム) コードはローカル トランザクションのコンテキストで実行されます。  データベース トランザクション内でリモート サーバーへの接続が開かれると、リモート サーバーへの接続が分散トランザクションに参加し、ローカル トランザクションは自動的に分散トランザクションに昇格します。 トランザクションの昇格では、必要になるまで分散トランザクションの作成を遅延し、分散トランザクションのオーバーヘッドを最小限に抑えます。 トランザクションの昇格が `Enlist` キーワードを使用して有効になっている場合、トランザクションの昇格は自動的に行われるので、開発者の介入は必要ありません。 .NET Framework [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用データ プロバイダーでは、トランザクションの昇格がサポートされます。トランザクションの昇格は、.NET Framework の `System.Data.SqlClient` 名前空間のクラスによって行われます。  
   
 ## <a name="the-enlist-keyword"></a>参加キーワード  
- 
-  `ConnectionString` オブジェクトの `SqlConnection` プロパティでは、`Enlist` キーワードがサポートされます。このキーワードは、`System.Data.SqlClient` 名前空間で、トランザクション コンテキストを検出し、自動的に接続を分散トランザクションに参加させるかどうかを示すものです。 このキーワードが true に設定されている場合 (既定の設定)、開かれているスレッドの現在のトランザクション コンテキストに接続が自動参加します。 このキーワードが false に設定されている場合、SqlClient 接続は分散トランザクションとのやり取りを行いません。 接続文字列で `Enlist` キーワードが指定されていない場合は、接続が開かれたときに分散トランザクションが検出されると、接続は分散トランザクションに自動参加します。  
+ `ConnectionString` オブジェクトの `SqlConnection` プロパティでは、`Enlist` キーワードがサポートされます。このキーワードは、`System.Data.SqlClient` 名前空間で、トランザクション コンテキストを検出し、自動的に接続を分散トランザクションに参加させるかどうかを示すものです。 このキーワードが true に設定されている場合 (既定の設定)、開かれているスレッドの現在のトランザクション コンテキストに接続が自動参加します。 このキーワードが false に設定されている場合、SqlClient 接続は分散トランザクションとのやり取りを行いません。 接続文字列で `Enlist` キーワードが指定されていない場合は、接続が開かれたときに分散トランザクションが検出されると、接続は分散トランザクションに自動参加します。  
   
 ## <a name="distributed-transactions"></a>分散トランザクション  
- 通常、分散トランザクションでは、大量のシステム リソースが消費されます。 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散トランザクション コーディネーター (MS DTC) では、分散トランザクションを管理し、それらのトランザクションでアクセスされているすべてのリソース マネージャーを統合します。 これに対し、トランザクションの昇格は、`System.Transactions` トランザクションの特殊な形式であり、作業を単純な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] トランザクションに効率よく委任します。 
-  `System.Transactions`、`System.Data.SqlClient`、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、トランザクションの処理に関連する作業を調整し、必要に応じて、トランザクションを完全な分散トランザクションに昇格します。  
+ 通常、分散トランザクションでは、大量のシステム リソースが消費されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散トランザクション コーディネーター (MS DTC) では、分散トランザクションを管理し、それらのトランザクションでアクセスされているすべてのリソース マネージャーを統合します。 これに対し、トランザクションの昇格は、`System.Transactions` トランザクションの特殊な形式であり、作業を単純な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] トランザクションに効率よく委任します。 `System.Transactions`、`System.Data.SqlClient`、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、トランザクションの処理に関連する作業を調整し、必要に応じて、トランザクションを完全な分散トランザクションに昇格します。  
   
  トランザクションの昇格を使用するメリットとして、1 つのアクティブな `TransactionScope` で接続が開かれていて、他の接続が開かれていない場合、そのトランザクションは軽量なトランザクションとしてコミットされ、完全な分散トランザクションとしてのオーバーヘッドが発生しないという点があります。 の詳細につい`TransactionScope`ては、「 [Using](../native-client-ole-db-transactions/transactions.md)system.string」を参照してください。  
   

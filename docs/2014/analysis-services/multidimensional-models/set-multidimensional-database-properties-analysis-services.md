@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aa3e1544f625183df3240359aa22b117144244d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073001"
 ---
 # <a name="set-multidimensional-database-properties-analysis-services"></a>多次元データベースのプロパティ設定 (Analysis Services)
@@ -24,8 +24,7 @@ ms.locfileid: "66073001"
   
  このデザイナーでは、次の種類のタスクを実行できます。  
   
--   
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースにオンライン モードで接続している場合は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースの名前を変更できます。 プロジェクト モードで作業している場合は、プロジェクトの次の配置のためにデータベース名を変更できます。 詳細については、「[多次元データベース名の変更 (Analysis Services)](rename-a-multidimensional-database-analysis-services.md)」および「[Analysis Services プロジェクトのプロパティの構成 (SSDT)](configure-analysis-services-project-properties-ssdt.md)」を参照してください。  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースにオンライン モードで接続している場合は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースの名前を変更できます。 プロジェクト モードで作業している場合は、プロジェクトの次の配置のためにデータベース名を変更できます。 詳細については、「[多次元データベース名の変更 (Analysis Services)](rename-a-multidimensional-database-analysis-services.md)」および「[Analysis Services プロジェクトのプロパティの構成 (SSDT)](configure-analysis-services-project-properties-ssdt.md)」を参照してください。  
   
 -   ユーザーに表示するデータベースの説明を入力できます。 また、データベースの名前も表示できますが、変更はできません。 データベース名を変更するには、プロジェクトのプロパティを編集する必要があります。  
   
@@ -36,20 +35,17 @@ ms.locfileid: "66073001"
 ## <a name="database-properties"></a>データベース プロパティ  
  上記に加え、データベースのプロパティには、[プロパティ] ウィンドウで構成できるものが複数あります。  
   
-|プロパティ|[説明]|  
+|プロパティ|説明|  
 |--------------|-----------------|  
 |[集計プレフィックス]|データベース内のすべてのパーティションの集計名に使用される共通のプレフィックスです。 詳細については、「[AggregationPrefix 要素 (ASSL)](https://docs.microsoft.com/bi-reference/assl/properties/aggregationprefix-element-assl)」を参照してください。|  
-|照合順序|
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトを [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスに配置すると、ここで別の値を指定しない限り、データベースには Collation サーバー プロパティの値が継承されます。|  
+|照合順序|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトを [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスに配置すると、ここで別の値を指定しない限り、データベースには Collation サーバー プロパティの値が継承されます。|  
 |DataSourceImpersonationInfo|データベース内のすべてのデータ ソース オブジェクトに対して既定の権限借用モードを指定します。 これは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サービスで、オブジェクトの処理、サーバーの同期、および OpenQuery や SystemOpenSchema のデータ マイニング ステートメントの実行に使用するモードです。|  
-|[推定サイズ]|ディスク上のデータベース ファイルの推定サイズを提供します。 データが複数の場所に格納されている場合、この推定値はデータベース フォルダーの下に格納されているデータ ファイルのみに制限されます。<br /><br /> 
-  `EstimatedSize` は、メモリの推定の基礎としても使用できます。 通常、メモリ要件は、データベースがメモリに読み込まれるときに作成される追加のデータ構造により、ディスク上のデータのサイズよりも大きくなります。<br /><br /> メモリ要件を詳しく推定するには、データベースのメモリ要件を把握する手段として、タスク マネージャーを使用してデータベースを処理する前後の Analysis Services プロセス メモリを確認し、使用されたメモリを調べることもできます。|  
-|言語|
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトを [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスに配置すると、ここで別の値を指定しない限り、データベースには Language サーバー プロパティの値が継承されます。|  
+|[推定サイズ]|ディスク上のデータベース ファイルの推定サイズを提供します。 データが複数の場所に格納されている場合、この推定値はデータベース フォルダーの下に格納されているデータ ファイルのみに制限されます。<br /><br /> `EstimatedSize` は、メモリの推定の基礎としても使用できます。 通常、メモリ要件は、データベースがメモリに読み込まれるときに作成される追加のデータ構造により、ディスク上のデータのサイズよりも大きくなります。<br /><br /> メモリ要件を詳しく推定するには、データベースのメモリ要件を把握する手段として、タスク マネージャーを使用してデータベースを処理する前後の Analysis Services プロセス メモリを確認し、使用されたメモリを調べることもできます。|  
+|言語|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトを [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスに配置すると、ここで別の値を指定しない限り、データベースには Language サーバー プロパティの値が継承されます。|  
 |MasterDataSource ID|リモート パーティションで使用します。 詳細については、「 [リモート パーティション](../multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)」を参照してください。|  
   
 ## <a name="see-also"></a>参照  
  [[SSAS-多次元&#41;&#40;[データベースのプロパティ] ダイアログボックス](../database-properties-dialog-box-ssas-multidimensional.md)   
- [SSDT&#41;&#40;Analysis Services プロジェクトのプロパティを構成する](configure-analysis-services-project-properties-ssdt.md)  
+ [Analysis Services プロジェクトのプロパティの構成 (SSDT)](configure-analysis-services-project-properties-ssdt.md)  
   
   

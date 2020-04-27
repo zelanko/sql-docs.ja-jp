@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d1e09e439469f23412c84ea7bab65c0aa748f286
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081314"
 ---
 # <a name="fill-from-example-table-analysis-tools-for-excel"></a>自動推論 (Excel 用のテーブル分析ツール)
@@ -49,7 +49,7 @@ ms.locfileid: "66081314"
   
      また、新しい値を含む列が、元のデータ テーブルに自動的に追加されます。 挿入された値を元の状態と比較しながら確認できます。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  処理できるのは、列方向に格納されたデータだけです。 自動推論によって挿入する一連のデータが行として格納されている場合は、Excel の Paste、Transpose 関数を使用して、データを列形式に変換できます。  
   
 ## <a name="understanding-the-pattern-report"></a>パターン レポートについて  
@@ -59,7 +59,7 @@ ms.locfileid: "66081314"
   
  たとえば、注文の配送距離が記されたワークシートに対してデータを挿入しようとする場合、配送距離に強く影響するのは、配送先となる目的地です。 この場合、レポートには、次のような行が表示されます。  
   
-|列|Value|ライター|相対的影響|  
+|列|[値]|ライター|相対的影響|  
 |------------|-----------|------------|---------------------|  
 |StateProvinceCode|AB|>500 キロメートル|80%|  
   

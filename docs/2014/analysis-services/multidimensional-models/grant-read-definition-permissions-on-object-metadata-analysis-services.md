@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e03e55451c2340b5f0773e2873127c3551a82aab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074896"
 ---
 # <a name="grant-read-definition-permissions-on-object-metadata-analysis-services"></a>オブジェクト メタデータに対する定義の読み取り権限の付与 (Analysis Services)
@@ -36,16 +36,13 @@ ms.locfileid: "66074896"
   
 2.  [**全般**] タブで、 `Read Definition`オプションを選択します。  
   
-3.  
-  **[メンバーシップ]** ペインで、このロールを使用して Analysis Services に接続する Windows ユーザー アカウントおよびグループ アカウントを追加します。  
+3.  **[メンバーシップ]** ペインで、このロールを使用して Analysis Services に接続する Windows ユーザー アカウントおよびグループ アカウントを追加します。  
   
-4.  
-  **[OK]** をクリックして、ロールの作成を終了します。  
+4.  **[OK]** をクリックして、ロールの作成を終了します。  
   
 ## <a name="set-read-definition-permissions-on-individual-objects"></a>個々のオブジェクトに対する定義の読み取り権限の設定  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに接続し、 **[データベース]** フォルダーを開き、データベースを選択します。オブジェクト エクスプローラーでそのデータベースの **[ロール]** を展開し、データベース ロールをクリックするか、または新しいデータベース ロールを作成します。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに接続し、 **[データベース]** フォルダーを開き、データベースを選択します。オブジェクト エクスプローラーでそのデータベースの **[ロール]** を展開し、データベース ロールをクリックするか、または新しいデータベース ロールを作成します。  
   
 2.  **[全般**] ペインで、の`Read Definition`データベース権限を消去します。 この手順によって、権限継承が削除され、個々のオブジェクトに対する権限を設定できるようになります。  
   
@@ -57,14 +54,12 @@ ms.locfileid: "66074896"
   
     -   [マイニング構造] ペインで、データ`Read Definition`マイニング構造またはデータマイニングモデルのチェックボックスをオンにします。 `Read Definition`データモデルを参照するには、が必要です。 詳細については、「[データ マイニング構造およびデータ マイニング モデルに対する権限の付与 &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)」を参照してください。  
   
-4.  
-  **[メンバーシップ]** ペインで、このロールを使用して Analysis Services に接続する Windows ユーザー アカウントおよびグループ アカウントを追加します。  
+4.  **[メンバーシップ]** ペインで、このロールを使用して Analysis Services に接続する Windows ユーザー アカウントおよびグループ アカウントを追加します。  
   
-5.  
-  **[OK]** をクリックして、ロールの作成を終了します。  
+5.  **[OK]** をクリックして、ロールの作成を終了します。  
   
 ## <a name="see-also"></a>参照  
  [Analysis Services &#40;データベースのアクセス許可を付与&#41;](grant-database-permissions-analysis-services.md)   
- [プロセスのアクセス許可を付与 &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
+ [処理権限の付与 &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
   
   

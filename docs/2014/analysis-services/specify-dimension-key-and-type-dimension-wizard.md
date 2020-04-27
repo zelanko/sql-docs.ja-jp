@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 95ff2c99f01361f82b0ec29ee404958ca076d6ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068388"
 ---
 # <a name="specify-dimension-key-and-type-dimension-wizard"></a>[ディメンションのキーおよび種類を指定] (ディメンション ウィザード)
-  
   **[ディメンションのキーおよび種類を指定]** ページを使用すると、ディメンションのキー属性を定義でき、ディメンションが SCD (緩やかに変化するディメンション) であるかどうかを示すことができます。  
   
 > [!NOTE]  

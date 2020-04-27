@@ -13,18 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a103e3e81283badbee236d2c38e2809d36664d9d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069762"
 ---
 # <a name="select-a-data-source-linked-object-wizard"></a>[データ ソースの選択] (リンク オブジェクト ウィザード)
-  
   **[データ ソースの選択]** ページを使用すると、リンク元またはインポート元のオブジェクトを含む [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データ ソースを選択できます。  
   
 ## <a name="options"></a>オプション  
- **[Analysis Services データ ソース]**  
+ **データソースの Analysis Services**  
  リンク元のオブジェクトを含むデータ ソースを選択します。  
   
  **データソースのプロパティ**  

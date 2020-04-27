@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f90ea08269e79e57c623af41fc2f0fbc09e2fb42
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066637"
 ---
 # <a name="restore-from-powerpivot"></a>PowerPivot から復元
@@ -41,14 +41,11 @@ ms.locfileid: "66066637"
   
 2.  [ **PowerPivot から復元**] ダイアログボックスの [**復元元**] の [**バックアップファイル**] で、[**参照**] をクリックし、復元元の abf または .xslx ファイルを選択します。  
   
-3.  
-  **[復元対象]** の **[データベースの復元]** で、新しいデータベースまたは既存のデータベースの名前を入力します。 名前を指定しない場合は、ブック名が使用されます。  
+3.  **[復元対象]** の **[データベースの復元]** で、新しいデータベースまたは既存のデータベースの名前を入力します。 名前を指定しない場合は、ブック名が使用されます。  
   
-4.  
-  **[ストレージの場所]** で、 **[参照]** をクリックし、データベースを格納する場所を選択します。  
+4.  **[ストレージの場所]** で、 **[参照]** をクリックし、データベースを格納する場所を選択します。  
   
-5.  
-  **[オプション]** で、 **[セキュリティ情報を含める]** チェック ボックスをオンのままにします。 PowerPivot ブックから復元する場合は、この設定は適用されません。  
+5.  **[オプション]** で、 **[セキュリティ情報を含める]** チェック ボックスをオンのままにします。 PowerPivot ブックから復元する場合は、この設定は適用されません。  
   
 ## <a name="see-also"></a>参照  
  [SSAS 表形式&#41;&#40;テーブルモデルデータベース](tabular-model-databases-ssas-tabular.md)   

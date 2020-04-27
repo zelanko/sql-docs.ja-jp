@@ -26,10 +26,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 41ac7c11824457bd6d93a062344eb3b411c95b3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62900561"
 ---
 # <a name="fuzzy-grouping-transformation"></a>あいまいグループ化変換
@@ -81,8 +81,7 @@ ms.locfileid: "62900561"
 ## <a name="configuration-of-the-fuzzy-grouping-transformation"></a>あいまいグループ化変換の構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- 
-  **[あいまいグループ化変換エディター]** ダイアログ ボックスを使用して設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ **[あいまいグループ化変換エディター]** ダイアログ ボックスを使用して設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
 -   [[あいまいグループ化変換エディター] &#40;[接続マネージャー] タブ&#41;](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
   
@@ -90,8 +89,7 @@ ms.locfileid: "62900561"
   
 -   [[あいまいグループ化変換エディター] &#40;[詳細設定] タブ&#41;](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
   
- 
-  **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
 -   [共通プロパティ](../../common-properties.md)  
   

@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dc1bfce77a089b24e68613c94af6e2886e6b5952
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874468"
 ---
 # <a name="implementing-assemblies"></a>アセンブリの実装
@@ -35,7 +35,7 @@ ms.locfileid: "62874468"
   
  **Transact-SQL を使用してアセンブリを作成するには**  
   
--   [CREATE ASSEMBLY &#40;Transact-sql&#41;](/sql/t-sql/statements/create-assembly-transact-sql)  
+-   [CREATE ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-assembly-transact-sql)  
   
  **SQL Server Management Studio を使用してアセンブリを作成するには**  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62874468"
   
  **Transact-SQL を使用してアセンブリを変更するには**  
   
--   [ALTER ASSEMBLY &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-assembly-transact-sql)  
+-   [ALTER ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-assembly-transact-sql)  
   
  **SQL Server Management Studio を使用してアセンブリを変更するには**  
   
@@ -65,7 +65,7 @@ ms.locfileid: "62874468"
   
  **Transact-SQL を使用してアセンブリを削除するには**  
   
--   [DROP ASSEMBLY &#40;Transact-sql&#41;](/sql/t-sql/statements/drop-assembly-transact-sql)  
+-   [DROP ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-assembly-transact-sql)  
   
  **SQL Server Management Studio を使用してアセンブリを削除するには**  
   
@@ -77,15 +77,14 @@ ms.locfileid: "62874468"
   
 -   [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
   
-##  <a name="_managing"></a>アセンブリバージョンの管理  
+##  <a name="managing-assembly-versions"></a><a name="_managing"></a>アセンブリバージョンの管理  
  アセンブリを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにアップロードすると、そのアセンブリはデータベース システム カタログ内に格納され、管理されます。 でアセンブリの定義に加えられた変更は[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 、データベースカタログに格納されているアセンブリに反映される必要があります。  
   
  アセンブリを変更する必要がある場合は、ALTER ASSEMBLY ステートメントを実行してデータベース内のアセンブリを更新する必要があります。 これにより、アセンブリの実装を保持している [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] モジュールの最新のコピーにアセンブリが更新されます。  
   
  ALTER ASSEMBLY ステートメントの WITH UNCHECKED DATA 句は、データベース内の永続化されたデータが依存しているアセンブリも最新状態に更新するように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に指示します。 具体的には、次のいずれかが存在する場合、WITH UNCHECKED DATA を指定する必要があります。  
   
--   
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] の関数またはメソッドによってアセンブリ内のメソッドを直接または間接的に参照する、永続化された計算列。  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] の関数またはメソッドによってアセンブリ内のメソッドを直接または間接的に参照する、永続化された計算列。  
   
 -   アセンブリに依存する CLR ユーザー定義型の列と、**UserDefined** (非**ネイティブ**) シリアル化形式を実装する型の列。  
   
@@ -94,8 +93,7 @@ ms.locfileid: "62874468"
   
  WITH UNCHECKED DATA 句を使用して ALTER ASSEMBLY を実行できるのは、 **db_owner**および**db_ddlowner**固定データベースロールのメンバーだけです。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、テーブル内に未チェック データがある状態でアセンブリが変更されたというメッセージを Windows アプリケーション イベント ログに記録します。 さらに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、そのアセンブリに依存するデータを含んでいるすべてのテーブルに、未チェック データを含むテーブルであるというマークを付けます。 行カタログビューの**has_unchecked_assembly_data**列には、チェックされていないデータを含むテーブルの場合は値1、未チェックデータを含まないテーブルの場合は0が格納され**ます。**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、テーブル内に未チェック データがある状態でアセンブリが変更されたというメッセージを Windows アプリケーション イベント ログに記録します。 さらに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、そのアセンブリに依存するデータを含んでいるすべてのテーブルに、未チェック データを含むテーブルであるというマークを付けます。 行カタログビューの**has_unchecked_assembly_data**列には、チェックされていないデータを含むテーブルの場合は値1、未チェックデータを含まないテーブルの場合は0が格納され**ます。**  
   
  未チェック データの整合性を解決するには、未チェック データを含む各テーブルに対して DBCC CHECKTABLE を実行します。 DBCC CHECKTABLE が失敗した場合、無効なテーブル行を削除するか、問題を解決できるようにアセンブリ コードを変更して、新たな ALTER ASSEMBLY ステートメントを実行する必要があります。  
   
@@ -112,7 +110,7 @@ ms.locfileid: "62874468"
   
  **アセンブリのバージョンを更新するには**  
   
--   [ALTER ASSEMBLY &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-assembly-transact-sql)  
+-   [ALTER ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-assembly-transact-sql)  
   
 ## <a name="see-also"></a>参照  
  [アセンブリ &#40;データベースエンジン&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   

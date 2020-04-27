@@ -16,19 +16,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 607654924a9f7e2d071bbce1ee4797792cb760c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068938"
 ---
 # <a name="lock-manager-properties"></a>ロック マネージャーのプロパティ
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次の表に示すロック マネージャー サーバー プロパティがサポートされています。 その他のサーバー プロパティとその設定方法の詳細については、「 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)」を参照してください。  
   
- **適用対象:** 多次元および表形式サーバーモード  
+ **適用対象:** 多次元サーバー モードおよびテーブル サーバー モード  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
  `DefaultLockTimeoutMS`  
  内部ロック要求の既定のロック タイムアウトをミリ秒単位で定義する、符号付き 32 ビット整数のプロパティです。  
   
@@ -42,6 +41,6 @@ ms.locfileid: "66068938"
   
 ## <a name="see-also"></a>参照  
  [Analysis Services でのサーバープロパティの構成](server-properties-in-analysis-services.md)   
- [Analysis Services インスタンスのサーバーモードの決定](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Analysis Services インスタンスのサーバー モードの決定](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3bf7682ce42422efb0e47e4272e53933eba92a4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081559"
 ---
 # <a name="dmx-templates"></a>[DMX テンプレート]
@@ -72,7 +72,7 @@ ms.locfileid: "66081559"
   
 -   入れ子になったテーブルでの TOP 予測クエリ  
   
- **生成**  
+ **作成**  
   
  カスタム モデルおよびデータ構造を作成するには、これらのテンプレートを使用します。 ウィザードでサポートされているモデルに限定されません。接続先のの[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンスでサポートされているデータマイニングアルゴリズム (プラグインアルゴリズムを含む) を使用できます。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "66081559"
   
 -   マイニング構造のトレーニング  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  使用するテンプレートによっては、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] サーバーにアクセスしてクエリを実行するために管理権限が必要になります。  
   
 ## <a name="see-also"></a>参照  

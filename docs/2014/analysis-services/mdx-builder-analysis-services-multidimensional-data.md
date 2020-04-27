@@ -15,25 +15,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d13675196f3e6cf755033e85213b20220b20918d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078022"
 ---
 # <a name="mdx-builder-analysis-services---multidimensional-data"></a>MDX ビルダー (Analysis Services - 多次元データ)
-  
-  **または** の [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] [MDX ビルダー] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ダイアログ ボックスを使用すると、多次元式 (MDX) を作成できます。 [ **Mdx ビルダー** ] ダイアログボックスを表示するには、[**キューブコンテンツの読み取りを許可**する] オプション、[セル**の内容**の読み取りを許可する] オプション、または**ロールデザイナー**の [**セルデータ**] ページの [**キューブコンテンツの読み取りと書き込み**を許可する] オプションの [ **mdx の編集**] をクリックします。****  
+  **または** の [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] [MDX ビルダー] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ダイアログ ボックスを使用すると、多次元式 (MDX) を作成できます。 [ **Mdx ビルダー** ] ダイアログボックスを表示するには、[**キューブコンテンツの読み取りを許可**する] オプション、[セル**の内容**の読み取りを許可する] オプション、または**ロールデザイナー**の [**セルデータ**] ページの [**キューブコンテンツの読み取りと書き込み**を許可する] オプションの [ **mdx の編集**] をクリックします。**...**  
   
 ## <a name="options"></a>オプション  
   
-|期間|定義|  
+|用語|定義|  
 |----------|----------------|  
-|**式**|使用する MDX 式を入力します。|  
-|**オフ**|
-  **[式]** で定義された MDX 式をテストするには、 **[確認]** をクリックします。|  
-|**Metadata**|
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [式] **で定義された MDX 式に含めることができる現在の**オブジェクトのメタデータを表示します。<br /><br /> 選択されたアイテムの MDX 構文をコピーするには、アイテムを右クリックし、ショートカット メニューから **[コピー]** を選択するか、選択したアイテムを **[式]** にドラッグします。|  
+|**正規表現**|使用する MDX 式を入力します。|  
+|**オフ**|**[式]** で定義された MDX 式をテストするには、 **[確認]** をクリックします。|  
+|**Metadata**|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [式] **で定義された MDX 式に含めることができる現在の**オブジェクトのメタデータを表示します。<br /><br /> 選択されたアイテムの MDX 構文をコピーするには、アイテムを右クリックし、ショートカット メニューから **[コピー]** を選択するか、選択したアイテムを **[式]** にドラッグします。|  
 |**関数**|現在の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスで使用可能な MDX 関数を表示します。 一覧表示されたアイテムは、MDSCHEMA_FUNCTIONS スキーマ行セットから取得されます。<br /><br /> 選択されたアイテムの MDX 構文をコピーするには、アイテムを右クリックし、ショートカット メニューから **[コピー]** を選択するか、選択したアイテムを **[式]** にドラッグします。|  
   
 ## <a name="see-also"></a>参照  

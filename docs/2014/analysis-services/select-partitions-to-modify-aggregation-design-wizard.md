@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f33066c622e3d1d736b1e8b800db96b0e9c35fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069300"
 ---
 # <a name="select-partitions-to-modify-aggregation-design-wizard"></a>[変更するパーティションの選択] (集計のデザイン ウィザード)
-  
   **[変更するパーティションの選択]** ページを使用すると、集計をデザインするパーティションを選択できます。  
   
 ## <a name="options"></a>オプション  
@@ -29,13 +28,13 @@ ms.locfileid: "66069300"
   
  選択したパーティションのみに対する集計をデザインするには、パーティションのチェック ボックスをオンにします。  
   
- **パーティション名**  
+ **[パーティション名]**  
  パーティションの名前が表示されます。  
   
  **ソース**  
  パーティションのソース データを提供するために使用されるテーブルまたはクエリが表示されます。  
   
- **体**  
+ **集計**  
  パーティションで使用される集計デザインを説明する文字列が表示されます。  
   
 ## <a name="see-also"></a>参照  

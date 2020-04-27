@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3dadc054a3f9927c09e9e236044dd5ddee7f3a9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068680"
 ---
 # <a name="shopping-basket-analysis-table-analysistools-for-excel"></a>買い物かご分析 (Excel 用のテーブル分析ツール)
@@ -50,7 +50,7 @@ ms.locfileid: "66068680"
   
 5.  [**詳細**設定] をクリックして、[**詳細パラメーターの設定**] ダイアログボックスを開きます。 [**最小サポート**の値を大きくすると、アイテムセットとしてグループ化される製品の数が減少します。 ごく一般的なアイテムセットを除外するには、**ルールの確率の最小値**を増やします。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **買い物かご分析**ツールを使用するには、データが Excel テーブルに格納されている必要があり、次の列が含まれている必要があります。  
   
 -   トランザクションを表す一意の ID が格納された列。 ID は、各行の値が一意である限り、数値でもテキストでもかまいません。  

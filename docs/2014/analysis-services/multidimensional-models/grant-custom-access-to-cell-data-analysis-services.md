@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5db12886384089afe87ffb5fa659c34b09a9fe23
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074977"
 ---
 # <a name="grant-custom-access-to-cell-data-analysis-services"></a>セル データへのカスタム アクセス権の付与 (Analysis Services)
@@ -46,11 +46,9 @@ ms.locfileid: "66074977"
 ## <a name="allow-access-to-specific-measures"></a>特定のメジャーへのアクセスの許可  
  セルのセキュリティを使用すると、使用可能なメジャーを明示的に選択できます。 許可するメンバーを明確に特定すると、他のすべてのメジャーは使用できなくなります。 これは、次の手順に示すように、MDX スクリプトで実装されるシナリオの中でも特に単純なものです。  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに接続し、データベースを選択し、 **[ロール]** フォルダーを開き、データベース ロールをクリックします (または新しいデータベース ロールを作成します)。 メンバーシップは既に指定され、ロールにはキューブへの `Read` アクセス権があるはずです。 詳細については、「 [キューブ権限またはモデル権限の付与 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md) を参照してください。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに接続し、データベースを選択し、 **[ロール]** フォルダーを開き、データベース ロールをクリックします (または新しいデータベース ロールを作成します)。 メンバーシップは既に指定され、ロールにはキューブへの `Read` アクセス権があるはずです。 詳細については、「 [キューブ権限またはモデル権限の付与 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md) を参照してください。  
   
-2.  
-  **[セル データ]** で、キューブの選択を見て適切なキューブを選択していることを確認し、 **[Read 権限を有効にする]** を選択します。  
+2.  **[セル データ]** で、キューブの選択を見て適切なキューブを選択していることを確認し、 **[Read 権限を有効にする]** を選択します。  
   
      このチェック ボックスをオンにしただけで MDX 式を指定しなかった場合は、キューブのすべてのセルへのアクセスを拒否するのと同じ効果が得られます。 これは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] でキューブ セルのサブセットが解決されるときに常に既定で許可されるセットが空のセットであるためです。  
   
@@ -60,9 +58,7 @@ ms.locfileid: "66074977"
     (Measures.CurrentMember IS [Measures].[Reseller Sales Amount]) OR (Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])  
     ```  
   
-     この式は、ユーザーに表示されるメジャーを明示的に特定します。 このロールで接続しているユーザーは、それ以外のメジャーを使用することはできません。 
-  [CurrentMember (MDX)](/sql/mdx/current-mdx) でコンテキストが設定され、その後に許可されるメジャーが続くことに注意してください。 この式の効果として、現在のメンバーに **Reseller Sales Amount** と **Reseller Total Product Cost**のどちらかが含まれている場合は、値が表示されます。 それ以外の場合、アクセスが拒否されます。 式には複数の要素があり、各要素はかっこで囲まれています。 
-  `OR` 演算子は、複数のメジャーを指定するために使用します。  
+     この式は、ユーザーに表示されるメジャーを明示的に特定します。 このロールで接続しているユーザーは、それ以外のメジャーを使用することはできません。 [CurrentMember (MDX)](/sql/mdx/current-mdx) でコンテキストが設定され、その後に許可されるメジャーが続くことに注意してください。 この式の効果として、現在のメンバーに **Reseller Sales Amount** と **Reseller Total Product Cost**のどちらかが含まれている場合は、値が表示されます。 それ以外の場合、アクセスが拒否されます。 式には複数の要素があり、各要素はかっこで囲まれています。 `OR` 演算子は、複数のメジャーを指定するために使用します。  
   
 ## <a name="deny-access-to-specific-measures"></a>特定のメジャーへのアクセスの拒否  
  次の MDX 式は、 **Create Role** | **Cell Data** | (**キューブコンテンツの読み取りを許可する**) でも指定されていますが、これとは逆の影響があるため、特定のメジャーを使用できなくなります。 この例では、 `NOT`および`AND`演算子を使用して**割引額**と**割引率**を使用不可にしています。 他のすべてのメジャーは、このロールで接続しているユーザーに表示されます。  
@@ -90,8 +86,7 @@ AND (NOT Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])
  ![使用可能なセルと使用不可能なセルを含む Excel テーブル](../media/ssas-permscalculatedcells.png "使用可能なセルと使用不可能なセルを含む Excel テーブル")  
   
 ## <a name="set-read-contingent-permissions-on-calculated-measures"></a>計算メジャーに対する Read-Contingent 権限の設定  
- セルのセキュリティには、計算に参加する関連セルに権限を設定するための代替手段として Read-Contingent が用意されています。 もう一度 **Reseller Gross Profit** の例を検討します。 前のセクションで指定したのと同じ MDX 式を入力すると、[**ロール** | **セルデータ**の作成] ダイアログボックスの2番目のテキスト領域 (下のテキスト領域でセル**のセキュリティに関するセルの内容の読み取りが許可**されます) が、Excel で表示されたときに結果が明らかになります。 
-  **Reseller Gross Profit** は **Reseller Sales Amount** および **Reseller Total Product Cost**に基づくため、総利益の構成要素にアクセスできず、そのためこの時点では総利益にアクセスできません。  
+ セルのセキュリティには、計算に参加する関連セルに権限を設定するための代替手段として Read-Contingent が用意されています。 もう一度 **Reseller Gross Profit** の例を検討します。 前のセクションで指定したのと同じ MDX 式を入力すると、[**ロール** | **セルデータ**の作成] ダイアログボックスの2番目のテキスト領域 (下のテキスト領域でセル**のセキュリティに関するセルの内容の読み取りが許可**されます) が、Excel で表示されたときに結果が明らかになります。 **Reseller Gross Profit** は **Reseller Sales Amount** および **Reseller Total Product Cost**に基づくため、総利益の構成要素にアクセスできず、そのためこの時点では総利益にアクセスできません。  
   
 > [!NOTE]  
 >  同じロール内のセルに Read 権限と Read-Contingent 権限の両方を設定するとどうなりますか。 ロールによって、セルに対する Read 権限は設定されますが、Read-Contingent 権限は設定されません。  
@@ -107,6 +102,6 @@ AND (NOT Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])
  [プロセスのアクセス許可を付与 &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)   
  [ディメンションに対する権限の許可 &#40;Analysis Services&#41;](grant-permissions-on-a-dimension-analysis-services.md)   
  [ディメンションデータへのカスタムアクセス権の付与 &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
- [キューブまたはモデルの権限を &#40;Analysis Services に付与する&#41;](grant-cube-or-model-permissions-analysis-services.md)  
+ [キューブ権限またはモデル権限の付与 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)  
   
   

@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 545bbdb171388f06c28644e0b8caa48db95e7e7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074046"
 ---
 # <a name="creating-session-scoped-named-sets-mdx"></a>セッション スコープの名前付きセットの作成 (MDX)
@@ -35,12 +35,10 @@ ms.locfileid: "66074046"
 CREATE SESSION SET [CURRENTCUBE. | <cube name>.]<Set Identifier> AS <Set Expression>  
 ```  
   
- CREATE SET の構文において、 `cube name` パラメーターには、名前付きセットのメンバーを格納するキューブの名前が入ります。 
-  `cube name` パラメーターが指定されなかった場合は、名前付きセットのメンバーを格納するキューブとして、現在のキューブが使用されます。 さらに、 `Set_Identifier` パラメーターには名前付きセットの別名が入り、 `Set_Expression` パラメーターには名前付きセットの別名の参照先であるセット式が入ります。  
+ CREATE SET の構文において、 `cube name` パラメーターには、名前付きセットのメンバーを格納するキューブの名前が入ります。 `cube name` パラメーターが指定されなかった場合は、名前付きセットのメンバーを格納するキューブとして、現在のキューブが使用されます。 さらに、 `Set_Identifier` パラメーターには名前付きセットの別名が入り、 `Set_Expression` パラメーターには名前付きセットの別名の参照先であるセット式が入ります。  
   
 ## <a name="create-set-example"></a>CREATE SET の例  
- 次の例では、Store キューブに基づいて `SetCities_2_3` 名前付きセットを作成するために CREATE SET ステートメントを使用します。 
-  `SetCities_2_3` 名前付きセットのメンバーは、City&#xA0;2 および City&#xA0;3 にあるストアです。  
+ 次の例では、Store キューブに基づいて `SetCities_2_3` 名前付きセットを作成するために CREATE SET ステートメントを使用します。 `SetCities_2_3` 名前付きセットのメンバーは、City&#xA0;2 および City&#xA0;3 にあるストアです。  
   
 ```  
 create Session set [Store].[SetCities_2_3] as  
@@ -55,6 +53,6 @@ select SetCities_2_3 on 0 from [Store]
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX&#41;&#40;クエリスコープの名前付きセットの作成](mdx-named-sets-creating-query-scoped-named-sets.md)  
+ [クエリ スコープの名前付きセットの作成 &#40;MDX&#41;](mdx-named-sets-creating-query-scoped-named-sets.md)  
   
   

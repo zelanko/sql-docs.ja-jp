@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 4d559f7fb03b632fc5cfca573b2fedc72506fead
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899408"
 ---
 # <a name="sysdm_pdw_exec_sessions-transact-sql"></a>dm_pdw_exec_sessions (Transact-sql)
@@ -24,14 +24,14 @@ ms.locfileid: "67899408"
 
   アプライアンス上で現在または最近開いているすべてのセッションに関する情報を保持します。 セッションごとに1行が表示されます。  
   
-|列名|データ型|[説明]|Range|  
+|列名|データ型|説明|範囲|  
 |-----------------|---------------|-----------------|-----------|  
-|session_id|**nvarchar (32)**|現在のクエリまたは最後のクエリの id (セッションが終了し、終了時にクエリが実行されていた場合)。 このビューのキー。|システム内のすべてのセッション間で一意です。|  
+|session_id|**nvarchar(32)**|現在のクエリまたは最後のクエリの id (セッションが終了し、終了時にクエリが実行されていた場合)。 このビューのキー。|システム内のすべてのセッション間で一意です。|  
 |status|**nvarchar (10)**|現在のセッションでは、セッションが現在アクティブであるかアイドル状態であるかを識別します。 過去のセッションでは、セッションの状態が [終了] または [強制終了] になっている場合があります (セッションが強制的に閉じられた場合)。|' ACTIVE '、' CLOSED '、' IDLE '、' 終了 '|  
-|request_id|**nvarchar (32)**|現在のクエリまたは前回のクエリの実行の id。|システム内のすべての要求間で一意です。 何も実行されていない場合は Null です。|  
+|request_id|**nvarchar(32)**|現在のクエリまたは前回のクエリの実行の id。|システム内のすべての要求間で一意です。 何も実行されていない場合は Null です。|  
 |security_id|**varbinary (85)**|セッションを実行しているプリンシパルのセキュリティ ID。||  
-|login_name|**nvarchar(128**|セッションを実行しているプリンシパルのログイン名。|ユーザーの名前付け規則に準拠した任意の文字列。|  
-|login_time|**DATETIME**|ユーザーがログインし、このセッションが作成された日付と時刻。|現在の時刻より前の有効な**日時**。|  
+|login_name|**nvarchar(128)**|セッションを実行しているプリンシパルのログイン名。|ユーザーの名前付け規則に準拠した任意の文字列。|  
+|login_time|**datetime**|ユーザーがログインし、このセッションが作成された日付と時刻。|現在の時刻より前の有効な**日時**。|  
 |query_count|**int**|セッションが作成されてから実行されたクエリ/要求の数をキャプチャします。|0以上。|  
 |is_transactional|**bit**|セッションが現在トランザクション内にあるかどうかをキャプチャします。|自動コミットの場合は0、トランザクションの場合は1。|  
 |client_id|**nvarchar(255)**|セッションのクライアント情報をキャプチャします。|任意の有効な文字列。|  
@@ -41,8 +41,7 @@ ms.locfileid: "67899408"
  このビューで保持される最大行数の詳細については、「[容量制限](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata)」トピックの「メタデータ」セクションを参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
- 
-  `VIEW SERVER STATE` アクセス許可が必要です。  
+ `VIEW SERVER STATE` アクセス許可が必要です。  
   
 ## <a name="see-also"></a>参照  
  [SQL Data Warehouse および並列データウェアハウスの動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

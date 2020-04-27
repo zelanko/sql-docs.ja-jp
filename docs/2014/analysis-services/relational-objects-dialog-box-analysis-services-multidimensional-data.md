@@ -13,16 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0571271f347c2aebcc2a0e0e25f2fff09b98fa89
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070352"
 ---
 # <a name="relational-objects-dialog-box-analysis-services---multidimensional-data"></a>[リレーショナル オブジェクト] ダイアログ ボックス (Analysis Services - 多次元データ)
-  
-  **の** [リレーショナル オブジェクト] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを使用すると、プロアクティブ キャッシュを設定するデータ ソースから、テーブル、ビュー、その他のオブジェクトを選択できます。 
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] [ストレージのオプション]**ダイアログ ボックスの**[通知] **タブで、いずれかの** [追跡テーブルを指定する] **オプションの** [...] **ボタンをクリックすると、** にこのダイアログ ボックスが表示されます。  
+  **の** [リレーショナル オブジェクト] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを使用すると、プロアクティブ キャッシュを設定するデータ ソースから、テーブル、ビュー、その他のオブジェクトを選択できます。 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] [ストレージのオプション]**ダイアログ ボックスの**[通知] **タブで、いずれかの** [追跡テーブルを指定する] **オプションの** [...] **ボタンをクリックすると、** にこのダイアログ ボックスが表示されます。  
   
 ## <a name="options"></a>オプション  
  **[プロアクティブ キャッシュを設定するリレーショナル オブジェクトを選択します。]**  

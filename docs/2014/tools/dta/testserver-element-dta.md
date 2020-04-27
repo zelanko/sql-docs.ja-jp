@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 73f5cdd35404617be9563c33574b09f825a2c7ad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63138704"
 ---
 # <a name="testserver-element-dta"></a>TestServer 要素 (DTA)
@@ -36,12 +36,11 @@ ms.locfileid: "63138704"
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特徴|[説明]|  
+|特徴|説明|  
 |--------------------|-----------------|  
 |**データ型と長さ**|**string**、長さは無制限です。|  
 |**既定値**|[なし] :|  
-|**個数**|省略可能。 
-  `TuningOptions` 要素につき 1 回使用できます。|  
+|**個数**|省略可能。 `TuningOptions` 要素につき 1 回使用できます。|  
   
 ## <a name="element-relationships"></a>要素の関係  
   

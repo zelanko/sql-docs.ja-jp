@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c72cc6b3798d790b4787cb5fcfe3e560b6580fc2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075538"
 ---
 # <a name="define-semiadditive-behavior"></a>準加法の動作の定義
@@ -33,7 +33,7 @@ ms.locfileid: "66075538"
 ## <a name="define-semiadditive-behavior"></a>準加法の動作の定義  
  ウィザードの **[準加法の動作の定義]** ページで、次のいずれかのオプションを選択して、準加法の定義方法を決定します。  
   
- **準加法の動作を無効にする**  
+ **[準加法の動作を無効にする]**  
  準加法の動作が定義済みのキューブから準加法の動作を削除します。 メジャーが次のいずれかの種類の集計関数に設定されている場合にこのオプションを選択すると、メジャーは `SUM` にリセットされます。  
   
 -   By Account  
@@ -48,7 +48,7 @@ ms.locfileid: "66075538"
   
 -   First Nonempty Child  
   
--   なし  
+-   None  
   
  このオプションで`Sum`は、 `Min`標準の集計関数である、、 `Max`、 `Count`、または`Distinct``Count`のメジャーは変更されません。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "66075538"
 > [!NOTE]  
 >  ウィザードで Account 型のディメンションが検出された場合は、既定でこのオプションが選択されます。  
   
- **個々のメジャーに準加法の動作を定義する**  
+ **[個別のメジャーに準加法の動作を定義する]**  
  各メジャーの準加法の動作を個別に選択します。 既定の設定は、`SUM` (完全加法) です。  
   
 > [!NOTE]  
@@ -66,7 +66,7 @@ ms.locfileid: "66075538"
   
  各メジャーに対して、次の表に示した種類から準加法の機能を選択できます。  
   
-|準加法関数|[説明]|  
+|準加法関数|説明|  
 |---------------------------|-----------------|  
 |Average of Children|子の平均がメンバーの集計です。|  
 |[ByAccount]|勘定科目の種類に対して指定された準加法を読み取ります。|  
@@ -78,7 +78,7 @@ ms.locfileid: "66075538"
 |LastNonEmpty|メンバー値はデータを格納する時間ディメンションに従って最後の子の値として評価されます。|  
 |Max|標準最大集計関数が適用されます。|  
 |Min|標準最小集計関数が適用されます。|  
-|なし|集計は適用されません。|  
+|None|集計は適用されません。|  
 |SUM|標準の合計関数が適用されます。|  
   
  ウィザードを完了すると、既存の準加法の動作は上書きされます。  

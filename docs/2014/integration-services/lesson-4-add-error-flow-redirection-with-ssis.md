@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 636c199e84eae9bd141bcb33fc5c06f35eac760b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891332"
 ---
-# <a name="lesson-4-adding-error-flow-redirection"></a>レッスン 4 : エラー フロー リダイレクションの追加
+# <a name="lesson-4-adding-error-flow-redirection"></a>レッスン 4:エラー フロー リダイレクトの追加
   変換プロセスで発生する可能性のあるエラーを処理[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]するために、には、変換できないデータを処理する方法を、コンポーネントごと、および列ごとに決定する機能が用意されています。 特定の列で発生したエラーは無視し、変換に失敗した行全体をリダイレクトできます。または、この操作をコンポーネント単位で行うこともできます。 既定の構成では、エラーの発生時に [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のすべてのコンポーネントが変換に失敗したものと見なされます。 つまり、1 つのコンポーネントの変換が失敗すると、パッケージの変換が失敗されたものと見なされ、以降の処理が中断されます。  
   
  パッケージ全体の変換を中断する代わりに、変換エラーが発生したときに潜在的なエラー処理を行うように構成する方法があります。 エラーを無視してパッケージが確実に実行されるように設定することもできますが、多くの場合、失敗した行を別の処理フローにリダイレクトした方がよい結果が得られます。退避させたデータおよびエラーは後で検証し、再変換できます。  
@@ -34,17 +34,17 @@ ms.locfileid: "62891332"
 ## <a name="tasks-in-lesson"></a>レッスンでの作業  
  このレッスンの内容は次のとおりです。  
   
--   [手順 1: レッスン 3 のパッケージのコピー](lesson-4-1-copying-the-lesson-3-package.md)  
+-   [手順 1:レッスン 3 のパッケージのコピー](lesson-4-1-copying-the-lesson-3-package.md)  
   
--   [手順 2: 破損ファイルの作成](lesson-4-2-creating-a-corrupted-file.md)  
+-   [手順 2:破損ファイルの作成](lesson-4-2-creating-a-corrupted-file.md)  
   
--   [手順 3 : エラー フロー リダイレクトの追加](lesson-4-3-adding-error-flow-redirection.md)  
+-   [手順 3:エラー フロー リダイレクトの追加](lesson-4-3-adding-error-flow-redirection.md)  
   
--   [手順 4 : フラット ファイル変換先の追加](lesson-4-4-adding-a-flat-file-destination.md)  
+-   [手順 4:フラット ファイル変換先の追加](lesson-4-4-adding-a-flat-file-destination.md)  
   
--   [手順 5: レッスン 4 のチュートリアル パッケージのテスト](lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
+-   [手順 5:レッスン 4 のチュートリアル パッケージのテスト](lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>レッスンの開始  
- [手順 1: レッスン 3 のパッケージのコピー](lesson-4-1-copying-the-lesson-3-package.md)  
+ [手順 1:レッスン 3 のパッケージのコピー](lesson-4-1-copying-the-lesson-3-package.md)  
   
   

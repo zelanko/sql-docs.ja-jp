@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f0717d8a81cc89897de005144dd631d23da42137
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081031"
 ---
 # <a name="forecast-wizard-data-mining-add-ins-for-excel"></a>予測ウィザード (Excel 用データ マイニング アドイン)
@@ -65,7 +65,7 @@ ms.locfileid: "66081031"
   
     -   **一時的なモデルを使用**します。 このチェック ボックスをオンにすると、モデルがサーバーに保存されません。 一時的なモデルは、Excel の終了時に削除されます。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  データには、時系列として使用できる列が 1 列以上含まれている必要があります。 この列の値は一意であり、連続している必要があります。つまり、ギャップは存在しません。 ウィザードを実行する前に、時系列の列の昇順でデータを並べ替えてください。  
   
  データに時刻または日付の列が含まれていない場合は、任意の数値系列を割り当てるか、ウィザードで作成することができます。 ウィザードで系列の順序の列を作成する場合は、ウィザードを開始する前に、他の列が必要な順序で並べ替えられていることを確認してください。  

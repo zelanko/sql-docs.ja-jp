@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d6abfca98386ef691add200d433af827ed44836
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079743"
 ---
 # <a name="use-sql-server-extended-events-xevents-to-monitor-analysis-services"></a>SQL Server 拡張イベント (XEvent) を使用した Analysis Services の監視
@@ -63,8 +63,7 @@ ms.locfileid: "66079743"
  このトレースの一意識別子を定義します。  
   
  *trace_name*  
- このトレースに付ける名前を指定します (通常は、人間が判読できるトレースの定義です)。 
-  *trace_id* の値を名前として使用するのが一般的です。  
+ このトレースに付ける名前を指定します (通常は、人間が判読できるトレースの定義です)。 *trace_id* の値を名前として使用するのが一般的です。  
   
  *AS_event*  
  公開する Analysis Services イベントを指定します。 イベントの名前については、「 [Analysis Services トレース イベント](https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events) 」を参照してください。  

@@ -17,10 +17,10 @@ ms.assetid: 838502de-80f1-4eeb-8838-dd3d9403e567
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 992631b8fb3864b6d7404f86d2f65de222f0b1c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917416"
 ---
 # <a name="read-method"></a>Read メソッド
@@ -35,12 +35,12 @@ Variant = Stream.Read ( NumBytes)
   
 #### <a name="parameters"></a>パラメーター  
  *NumBytes*  
- 省略可能。 ファイルから読み取るバイト数、または既定の[Streamreadenum](../../../ado/reference/ado-api/streamreadenum.md)値**adreadall**を指定する**Long**値です。  
+ 任意。 ファイルから読み取るバイト数、または既定の[Streamreadenum](../../../ado/reference/ado-api/streamreadenum.md)値**adreadall**を指定する**Long**値です。  
   
 ## <a name="return-value"></a>戻り値  
  **Read**メソッドは、指定されたバイト数またはストリーム全体を**ストリーム**オブジェクトから読み取り、結果のデータを**バリアント**として返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  *Numbytes*が**ストリーム**の残りのバイト数よりも大きい場合は、残っているバイトだけが返されます。 読み取られたデータは、 *Numbytes*によって指定された長さと一致するように埋め込まれていません。 読み取るバイトが残っていない場合は、null 値を持つバリアントが返されます。 **Read**を使用して後方に読み取ることはできません。  
   
 > [!NOTE]

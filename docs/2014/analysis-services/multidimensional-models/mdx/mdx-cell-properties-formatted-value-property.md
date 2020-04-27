@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a116be708dd714a48d1cc936a08350237ca98ddf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074398"
 ---
 # <a name="language-and-format_string-on-formated_value"></a>FORMATED_VALUE の LANGUAGE と FORMAT_STRING
@@ -37,7 +37,7 @@ ms.locfileid: "66074398"
   
  FORMAT_STRING のテンプレートと LANGUAGE の指定が競合している場合は、FORMAT_STRING のテンプレートが LANGUAGE の指定をオーバーライドします。 たとえば、FORMAT_STRING="$ #0"、LANGUAGE=1034 (スペイン)、VALUE=123.456 の場合、書式設定テンプレートの値が言語の指定よりもオーバーライドされるため、FORMATTED_VALUE="€ 123" (予想される書式) ではなく FORMATTED_VALUE="$ 123" になります。  
   
-### <a name="examples"></a>例  
+### <a name="examples"></a>使用例  
  以下の例は、LANGUAGE と FORMAT_STRING を組み合わせて使用した場合に得られる出力を示しています。  
   
  1 つ目の例は数値の書式設定の例で、2 つ目の例は日付と時刻の値の書式設定の例です。  
@@ -74,8 +74,7 @@ ms.locfileid: "66074398"
   
  `cell properties VALUE, FORMAT_STRING, LANGUAGE, FORMATTED_VALUE`  
   
- 
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を使用して上の MDX クエリをロケール 1033 のサーバーとクライアントで実行すると、結果 (置き換え後) は次のようになります。  
+ [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を使用して上の MDX クエリをロケール 1033 のサーバーとクライアントで実行すると、結果 (置き換え後) は次のようになります。  
   
 |メンバー|FORMATTED_VALUE|説明|  
 |------------|----------------------|-----------------|  
@@ -125,8 +124,7 @@ ms.locfileid: "66074398"
   
  `cell properties VALUE, FORMAT_STRING, LANGUAGE, FORMATTED_VALUE`  
   
- 
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を使用して上の MDX クエリをロケール 1033 のサーバーとクライアントで実行すると、結果 (置き換え後) は次のようになります。  
+ [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を使用して上の MDX クエリをロケール 1033 のサーバーとクライアントで実行すると、結果 (置き換え後) は次のようになります。  
   
 |メンバー|FORMATTED_VALUE|説明|  
 |------------|----------------------|-----------------|  

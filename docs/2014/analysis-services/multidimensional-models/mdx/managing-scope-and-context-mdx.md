@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bec0dc51a4f91ba4ca8f71a0a3caba387d37bf1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074642"
 ---
 # <a name="managing-scope-and-context-mdx"></a>スコープとコンテキストの管理 (MDX)
@@ -41,10 +41,7 @@ ms.locfileid: "66074642"
 >  スクリプトの中で CALCULATE ステートメントが SCOPE ステートメントに入れられている場合、MDX は CALCULATE ステートメントの評価を、キューブ全体に対してではなく、SCOPE ステートメントで定義されるサブキューブのコンテキストの中で行います。  
   
 ## <a name="using-the-this-function"></a>This 関数の使用  
- 
-  `This` 関数により、MDX スクリプトの中で現在のサブキューブを取得できます。 
-  `This` 関数を使用すると、現在のサブキューブの中のセルの値を MDX 式にすばやく設定できます。 
-  `This` 関数を SCOPE ステートメントと併用して、特定の計算パスの間に特定のサブキューブの内容を変更することもできます。  
+ `This` 関数により、MDX スクリプトの中で現在のサブキューブを取得できます。 `This` 関数を使用すると、現在のサブキューブの中のセルの値を MDX 式にすばやく設定できます。 `This` 関数を SCOPE ステートメントと併用して、特定の計算パスの間に特定のサブキューブの内容を変更することもできます。  
   
 > [!NOTE]  
 >  スクリプトの中で `This` 関数が SCOPE ステートメントに入れられている場合、MDX は `This` 関数の評価を、キューブ全体に対してではなく、SCOPE ステートメントで定義されるサブキューブのコンテキストの中で行います。  
