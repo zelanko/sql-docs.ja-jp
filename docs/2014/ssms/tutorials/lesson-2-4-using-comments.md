@@ -11,27 +11,24 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f09d6099ea9c80e9ce237e3462cec93fa66626b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63164025"
 ---
 # <a name="using-comments"></a>コメントの使用
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用すると、スクリプトの一部を簡単にコメントアウトできます。  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、スクリプトの一部を簡単にコメント アウトできます。  
   
 ## <a name="commenting-out-part-of-a-script"></a>スクリプトの一部のコメント アウト  
   
 #### <a name="to-comment-out-a-portion-of-your-script"></a>スクリプトの一部をコメント アウトするには  
   
-1.  
-  `WHERE LastName = 'Sanchez'`というテキストをマウスで選択します。  
+1.  `WHERE LastName = 'Sanchez'`というテキストをマウスで選択します。  
   
-2.  
-  **[編集]** メニューの **[詳細設定]** をポイントし、 **[選択範囲のコメント]** をクリックします。 選択したテキストにダッシュ文字 (--) が付き、コメント アウトされます。  
+2.  **[編集]** メニューの **[詳細設定]** をポイントし、 **[選択範囲のコメント]** をクリックします。 選択したテキストにダッシュ文字 (--) が付き、コメント アウトされます。  
   
- 
-  **[編集]** メニューを使用するほか、次のいずれかの方法を使用してスクリプトの選択部分のコメント化/コメント解除を実行できます。  
+ **[編集]** メニューを使用するほか、次のいずれかの方法を使用してスクリプトの選択部分のコメント化/コメント解除を実行できます。  
   
 -   SQL エディター ツール バーのボタンをクリックします。  
   

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b6f66d1bab70619db1631117268e5d62c24c943f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63157127"
 ---
 # <a name="work-with-replication-agent-profiles"></a>レプリケーション エージェント プロファイルを操作する
@@ -63,9 +63,9 @@ ms.locfileid: "63157127"
   
 -   **補足情報:** [エージェント パラメーターを変更した後](#FollowUp)  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-###  <a name="Access_SSMS"></a> SQL Server Management Studio から [エージェント プロファイル] ダイアログ ボックスにアクセスするには  
+###  <a name="to-access-the-agent-profiles-dialog-box-from-sql-server-management-studio"></a><a name="Access_SSMS"></a> SQL Server Management Studio から [エージェント プロファイル] ダイアログ ボックスにアクセスするには  
   
 1.  **[ディストリビューターのプロパティ - \<Distributor>]** ダイアログ ボックスの **[全般]** ページで、 **[プロファイルの既定値]** をクリックします。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "63157127"
   
     2.  ディストリビューション エージェントとマージ エージェントのプロファイルの場合は、 **[すべてのサブスクリプション]** タブでサブスクリプションを右クリックし、 **[エージェント プロファイル]** をクリックします。 その他のエージェントの場合は、 **[エージェント]** タブでエージェントを右クリックし、 **[エージェント プロファイル]** をクリックします。  
   
-###  <a name="Specify_SSMS"></a> エージェントのプロファイルを指定するには  
+###  <a name="to-specify-a-profile-for-an-agent"></a><a name="Specify_SSMS"></a> エージェントのプロファイルを指定するには  
   
 1.  **[エージェント プロファイル]** ダイアログ ボックスにエージェントのプロファイルが複数表示されている場合は、エージェントを 1 つ選択します。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "63157127"
   
 3.  既存のパブリケーションまたはサブスクリプションに対して選択された種類のすべてのエージェントがこのプロファイルを使用するように指定するには、 **[既存のエージェントの変更]** をクリックします。  
   
-###  <a name="Modify_SSMS"></a> プロファイルに関連付けられたパラメーターを表示および編集するには  
+###  <a name="to-view-and-edit-the-parameters-associated-with-a-profile"></a><a name="Modify_SSMS"></a> プロファイルに関連付けられたパラメーターを表示および編集するには  
   
 1.  **[エージェント プロファイル]** ダイアログ ボックスにエージェントのプロファイルが複数表示されている場合は、エージェントを 1 つ選択します。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "63157127"
   
 4.  **[閉じる]** をクリックします。  
   
-###  <a name="Create_SSMS"></a> ユーザー定義プロファイルを作成するには  
+###  <a name="to-create-a-user-defined-profile"></a><a name="Create_SSMS"></a> ユーザー定義プロファイルを作成するには  
   
 1.  **[エージェント プロファイル]** ダイアログ ボックスにエージェントのプロファイルが複数表示されている場合は、エージェントを 1 つ選択します。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "63157127"
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-###  <a name="Delete_SSMS"></a> ユーザー定義プロファイルを削除するには  
+###  <a name="to-delete-a-user-defined-profile"></a><a name="Delete_SSMS"></a> ユーザー定義プロファイルを削除するには  
   
 1.  **[エージェント プロファイル]** ダイアログ ボックスにエージェントのプロファイルが複数表示されている場合は、エージェントを 1 つ選択します。  
   
@@ -132,11 +132,11 @@ ms.locfileid: "63157127"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-###  <a name="Create_tsql"></a> 新しいエージェント プロファイルを作成するには  
+###  <a name="to-create-a-new-agent-profile"></a><a name="Create_tsql"></a> 新しいエージェント プロファイルを作成するには  
   
-1.  ディストリビューターで、[sp_add_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql) を実行します。 を**@name**指定し、に**** は 1 **@profile_type**を、には次のいずれか**@agent_type**の値を指定します。  
+1.  ディストリビューターで、[sp_add_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql) を実行します。 を**@name**指定し、に**1**は 1 **@profile_type**を、には次のいずれか**@agent_type**の値を指定します。  
   
     -   **\@profile_type** - [Replication Snapshot Agent](replication-snapshot-agent.md)  
   
@@ -152,7 +152,7 @@ ms.locfileid: "63157127"
   
 2.  新しいプロファイルを作成したら、既定のパラメーターを追加、削除、変更してプロファイルをカスタマイズします。  
   
-###  <a name="Modify_tsql"></a> 既存のエージェント プロファイルを変更するには  
+###  <a name="to-modify-an-existing-agent-profile"></a><a name="Modify_tsql"></a> 既存のエージェント プロファイルを変更するには  
   
 1.  ディストリビューターで、[sp_help_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql) を実行します。 に**@agent_type**次のいずれかの値を指定します。  
   
@@ -183,7 +183,7 @@ ms.locfileid: "63157127"
   
     -   ディストリビューターで、[sp_add_agent_parameter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql) を実行します。 手順 1 **@profile_id**. で指定したプロファイル識別子、に追加**@parameter_name**する有効なパラメーターの名前、およびの**@parameter_value**パラメーターの値を指定します。  
   
-###  <a name="Delete_tsql"></a> エージェント プロファイルを削除するには  
+###  <a name="to-delete-an-agent-profile"></a><a name="Delete_tsql"></a> エージェント プロファイルを削除するには  
   
 1.  ディストリビューターで、[sp_help_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql) を実行します。 に**@agent_type**次のいずれかの値を指定します。  
   
@@ -201,7 +201,7 @@ ms.locfileid: "63157127"
   
 2.  ディストリビューターで、[sp_drop_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql) を実行します。 手順 1. で**@profile_id**指定したプロファイル id を指定します。  
   
-###  <a name="Synch_tsql"></a> 同期の際にエージェント プロファイルを使用するには  
+###  <a name="to-use-agent-profiles-during-synchronization"></a><a name="Synch_tsql"></a> 同期の際にエージェント プロファイルを使用するには  
   
 1.  ディストリビューターで、[sp_help_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql) を実行します。 に**@agent_type**次のいずれかの値を指定します。  
   
@@ -221,14 +221,14 @@ ms.locfileid: "63157127"
   
 3.  コマンドプロンプトからエージェントを起動する場合は、手順 1. `profile_name`で取得したの値を **-ProfileName**コマンドラインパラメーターの後に指定します。  
   
-###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 例 (Transact-SQL)  
  次の例では、 **custom_merge**という名前のマージ エージェント用のカスタム プロファイルを作成して、 **-UploadReadChangesPerBatch** パラメーターの値を変更し、 **-ExchangeType** パラメーターを新しく追加して、作成されたプロファイルに関する情報を返します。  
   
  [!code-sql[HowTo#sp_addagentprofileparam](../../../snippets/tsql/SQL15/replication/howto/tsql/createperfparammerge.sql#sp_addagentprofileparam)]  
   
-##  <a name="RMOProcedure"></a> RMO の使用  
+##  <a name="using-rmo"></a><a name="RMOProcedure"></a> RMO の使用  
   
-###  <a name="Create_RMO"></a> 新しいエージェント プロファイルを作成するには  
+###  <a name="to-create-a-new-agent-profile"></a><a name="Create_RMO"></a> 新しいエージェント プロファイルを作成するには  
   
 1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> クラスのインスタンスを使用して、ディストリビューターへの接続を作成します。  
   
@@ -244,7 +244,7 @@ ms.locfileid: "63157127"
   
     -   (省略可) <xref:Microsoft.SqlServer.Replication.AgentProfile.Description%2A> - プロファイルの説明。  
   
-    -   (省略可) <xref:Microsoft.SqlServer.Replication.AgentProfile.Default%2A> - この `true` の新しいエージェント ジョブすべてが、既定でこのプロファイルを使用する場合、このプロパティを <xref:Microsoft.SqlServer.Replication.AgentType> に設定します。  
+    -   (省略可) <xref:Microsoft.SqlServer.Replication.AgentProfile.Default%2A> - この <xref:Microsoft.SqlServer.Replication.AgentType> の新しいエージェント ジョブすべてが、既定でこのプロファイルを使用する場合、このプロパティを `true` に設定します。  
   
 4.  <xref:Microsoft.SqlServer.Replication.AgentProfile.Create%2A> メソッドを呼び出し、サーバーにプロファイルを作成します。  
   
@@ -252,7 +252,7 @@ ms.locfileid: "63157127"
   
 6.  既存のレプリケーション エージェント ジョブにプロファイルを割り当てるには、 <xref:Microsoft.SqlServer.Replication.AgentProfile.AssignToAgent%2A> メソッドを呼び出します。 ディストリビューション データベースの名前を *distributionDBName* に渡し、ジョブの ID を *agentID*に渡します。  
   
-###  <a name="Modify_RMO"></a> 既存のエージェント プロファイルを変更するには  
+###  <a name="to-modify-an-existing-agent-profile"></a><a name="Modify_RMO"></a> 既存のエージェント プロファイルを変更するには  
   
 1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> クラスのインスタンスを使用して、ディストリビューターへの接続を作成します。  
   
@@ -272,7 +272,7 @@ ms.locfileid: "63157127"
   
     -   <xref:Microsoft.SqlServer.Replication.AgentProfile.ChangeParameter%2A> - プロファイルの既存のパラメーターの設定を変更します。ここで、 *name* はエージェント パラメーターの名前、 *newValue* はパラメーターの変更後の値です。 プロファイルに定義されている現在のエージェント パラメーターをすべて列挙するには、 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameters%2A> メソッドを呼び出します。 このメソッドは、このプロファイルの既存のパラメーターを表す <xref:System.Collections.ArrayList> オブジェクトの <xref:Microsoft.SqlServer.Replication.AgentProfileParameter> を返します。 サポートされるエージェント パラメーターの設定をすべて列挙するには、 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameterInfo%2A> メソッドを呼び出します。 このメソッドは、すべてのパラメーターでサポートされる値を表す <xref:System.Collections.ArrayList> オブジェクトの <xref:Microsoft.SqlServer.Replication.AgentProfileParameterInfo> を返します。  
   
-###  <a name="Delete_RMO"></a> エージェント プロファイルを削除するには  
+###  <a name="to-delete-an-agent-profile"></a><a name="Delete_RMO"></a> エージェント プロファイルを削除するには  
   
 1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> クラスのインスタンスを使用して、ディストリビューターへの接続を作成します。  
   
@@ -284,7 +284,7 @@ ms.locfileid: "63157127"
   
 5.  <xref:Microsoft.SqlServer.Replication.AgentProfile.Remove%2A> メソッドを呼び出して、このオブジェクトで表されるユーザー定義プロファイルをサーバーから削除します。  
   
-##  <a name="FollowUp"></a>補足情報: エージェント パラメーターを変更した後  
+##  <a name="follow-up-after-changing-agent-parameters"></a><a name="FollowUp"></a>補足情報: エージェント パラメーターを変更した後  
  エージェント パラメーターの変更は、エージェントの次回起動時に反映されます。 エージェントを継続して実行している場合は、そのエージェントを停止して再起動する必要があります。  
   
 ## <a name="see-also"></a>参照  
@@ -293,6 +293,6 @@ ms.locfileid: "63157127"
  [レプリケーションログリーダーエージェント](replication-log-reader-agent.md)   
  [レプリケーションディストリビューションエージェント](replication-distribution-agent.md)   
  [レプリケーションマージエージェント](replication-merge-agent.md)   
- [レプリケーションキューリーダーエージェント](replication-queue-reader-agent.md)  
+ [Replication Queue Reader Agent](replication-queue-reader-agent.md)  
   
   

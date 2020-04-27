@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 249b338148dc762e091d0be47bc081fe87c72fcd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63162395"
 ---
 # <a name="configure-the-general-properties-of-policy-based-management"></a>ポリシー ベースの管理の全般プロパティの構成
@@ -30,35 +30,32 @@ ms.locfileid: "63162395"
   
      [セキュリティ](#Security)  
   
--   **ポリシーベースの管理を構成するために使用するもの:**  
+-   **ポリシー ベースの管理を構成するために使用するもの:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  PolicyAdministratorRole 固定データベース ロールのメンバーシップが必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-configure-policy-based-management"></a>ポリシー ベースの管理を構成するには  
   
-1.  
-  **オブジェクト エクスプローラー**で、プラス記号をクリックして、ポリシー ベースの管理のプロパティを構成するサーバーを展開します。  
+1.  **オブジェクト エクスプローラー**で、プラス記号をクリックして、ポリシー ベースの管理のプロパティを構成するサーバーを展開します。  
   
 2.  プラス記号をクリックして **[管理]** フォルダーを展開します。  
   
-3.  
-  **[ポリシー管理]** を右クリックし、 **[プロパティ]** をクリックします。  
+3.  **[ポリシー管理]** を右クリックし、 **[プロパティ]** をクリックします。  
   
-     
-  **[ポリシー管理のプロパティ]** ダイアログ ボックスでは、次のオプションを使用できます。  
+     **[ポリシー管理のプロパティ]** ダイアログ ボックスでは、次のオプションを使用できます。  
   
-     **有効**  
+     **Enabled**  
      ポリシー ベースの管理を有効にするかどうかを指定します。  
   
      **HistoryRetentionInDays**  
@@ -71,9 +68,9 @@ ms.locfileid: "63162395"
   
     -   この値が true の場合、成功したポリシー評価と失敗したポリシー評価の両方が記録されます。  
   
-4.  完了したら、 **[OK]** をクリックします。  
+4.  完了したら、[**OK**] をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-configure-policy-based-management"></a>ポリシー ベースの管理を構成するには  
   

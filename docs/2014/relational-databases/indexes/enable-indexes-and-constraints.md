@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7d68f329aecdd1284bac311db4139470bba55e41
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63162384"
 ---
 # <a name="enable-indexes-and-constraints"></a>インデックスと制約の有効化
@@ -41,9 +41,9 @@ ms.locfileid: "63162384"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   インデックスの再構築後、インデックスを無効にしたために無効になった制約を手動で有効にする必要があります。 PRIMARY KEY 制約と UNIQUE 制約については、関連するインデックスを再構築すると有効になります。 このインデックスを再構築しないと、PRIMARY KEY 制約や UNIQUE 制約を参照する FOREIGN KEY 制約を有効にすることはできません。 FOREIGN KEY 制約を有効にするには、ALTER TABLE CHECK CONSTRAINT ステートメントを使用します。  
   
@@ -68,12 +68,12 @@ ms.locfileid: "63162384"
     |DROP INDEX|操作は成功します。|操作は成功します。|  
     |CREATE INDEX WITH DROP_EXISTING|操作は失敗します。|操作は成功します。|  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  テーブルまたはビューに対する ALTER 権限が必要です。 DBCC DBREINDEX を使用している場合、ユーザーはテーブルを所有しているか、 **sysadmin** 固定サーバー ロールのメンバーであるか、 **db_ddladmin** 固定データベース ロールおよび **db_owner** 固定データベース ロールのメンバーである必要があります。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-enable-a-disabled-index"></a>無効なインデックスを有効にするには  
   
@@ -87,8 +87,7 @@ ms.locfileid: "63162384"
   
 5.  有効にするインデックスを右クリックし、 **[再構築]** を選択します。  
   
-6.  
-  **[インデックスの再構築]** ダイアログ ボックスで、 **[再構築するインデックス]** グリッドに目的のインデックスが表示されていることを確認し、 **[OK]** をクリックします。  
+6.  **[インデックスの再構築]** ダイアログ ボックスで、 **[再構築するインデックス]** グリッドに目的のインデックスが表示されていることを確認し、 **[OK]** をクリックします。  
   
 #### <a name="to-enable-all-indexes-on-a-table"></a>テーブルのすべてのインデックスを有効にするには  
   
@@ -98,17 +97,13 @@ ms.locfileid: "63162384"
   
 3.  プラス記号をクリックして、インデックスを有効にするテーブルを展開します。  
   
-4.  
-  **[インデックス]** フォルダーを右クリックし、 **[すべて再構築]** を選択します。  
+4.  **[インデックス]** フォルダーを右クリックし、 **[すべて再構築]** を選択します。  
   
-5.  
-  **[インデックスの再構築]** ダイアログ ボックスで、 **[再構築するインデックス]** グリッドに目的のインデックスが表示されていることを確認し、 **[OK]** をクリックします。 
-  **[再構築するインデックス]** グリッドからインデックスを削除するには、インデックスを選択し、Del キーを押します。  
+5.  **[インデックスの再構築]** ダイアログ ボックスで、 **[再構築するインデックス]** グリッドに目的のインデックスが表示されていることを確認し、 **[OK]** をクリックします。 **[再構築するインデックス]** グリッドからインデックスを削除するには、インデックスを選択し、Del キーを押します。  
   
- 
-  **[インデックスの再構築]** ダイアログ ボックスには、次の情報が表示されます。  
+ **[インデックスの再構築]** ダイアログ ボックスには、次の情報が表示されます。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-enable-a-disabled-index-using-alter-index"></a>無効にされたインデックスを ALTER INDEX を使用して有効にするには  
   

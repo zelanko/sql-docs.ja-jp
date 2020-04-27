@@ -17,14 +17,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3cea4731ee665e401429679d764832247b2a2242
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63155373"
 ---
 # <a name="create-clustered-indexes"></a>クラスター化インデックスの作成
-  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、テーブルにクラスター化インデックスを作成できます。 クラスター化インデックスは、いくつかの例外を除くすべてのテーブルに必要です。 クラスター化インデックスは、クエリ パフォーマンスを向上するだけではなく、必要に応じて再構築または再構成してテーブルの断片化を制御することができます。 また、クラスター化インデックスをビューに作成することもできます。 (クラスター化インデックスの定義は「 [クラスター化インデックスと非クラスター化インデックスの概念](clustered-and-nonclustered-indexes-described.md)」にあります。)  
   
  **このトピックの内容**  
@@ -43,9 +42,9 @@ ms.locfileid: "63155373"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Implementations"></a> 一般的な実装  
+###  <a name="typical-implementations"></a><a name="Implementations"></a> 一般的な実装  
  クラスター化インデックスは、次のように実装されます。  
   
 -   **PRIMARY KEY 制約と UNIQUE 制約**  
@@ -60,7 +59,7 @@ ms.locfileid: "63155373"
   
      非クラスター化主キー制約が指定された場合、主キー列以外の列にクラスター化インデックスを作成できます。  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   クラスター化インデックスの構造を作成する場合、古い (作成元の) 構造と新しい (作成先の) 構造の両方を格納するディスク領域が、それぞれのファイルとファイル グループで必要になります。 古い構造の割り当ては、トランザクション全体がコミットされるまで解除されません。 並べ替え操作用に、余分な一時ディスク領域が必要になる場合もあります。 詳細については、「 [Disk Space Requirements for Index DDL Operations](disk-space-requirements-for-index-ddl-operations.md)」をご参照ください。  
   
@@ -70,12 +69,12 @@ ms.locfileid: "63155373"
   
 -   クラスター化インデックスのインデックス キーには、ROW_OVERFLOW_DATA アロケーション ユニットに既存のデータを持つ `varchar` 列を含めることはできません。 クラスター化インデックスが `varchar` 列に作成され、その列の既存データが IN_ROW_DATA アロケーション ユニットにある場合、それ以後、既存データを行外に押し出すことになるような挿入や更新操作は失敗します。 行オーバーフロー データを含んでいる可能性のあるテーブルまたはインデックスに関する情報を取得するには、[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql) 動的管理関数を使用します。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  テーブルまたはビューに対する ALTER 権限が必要です。 実行するには、 **sysadmin** 固定サーバー ロール、または **db_ddladmin** 固定データベース ロールおよび **db_owner** 固定データベース ロールのメンバーである必要があります。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-create-a-clustered-index-by-using-object-explorer"></a>オブジェクト エクスプ ローラーを使用してクラスター化インデックスを作成するには  
   
@@ -87,7 +86,7 @@ ms.locfileid: "63155373"
   
 4.  **[インデックス キー列]** で、 **[追加]** をクリックします。  
   
-5.  [Table_name**から列を選択**__ ] ダイアログボックスで、クラスター化インデックスに追加するテーブル列のチェックボックスをオンにします。  
+5.  [Table_name**から列を選択**_table_name_ ] ダイアログボックスで、クラスター化インデックスに追加するテーブル列のチェックボックスをオンにします。  
   
 6.  **[OK]** をクリックします。  
   
@@ -113,9 +112,9 @@ ms.locfileid: "63155373"
   
 9. **[閉じる]** をクリックします。  
   
-10. [**ファイル**] メニューの [ ****_table_name_の保存] をクリックします。  
+10. **[ファイル]** メニューの **テーブル名**_の保存]_ をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-create-a-clustered-index"></a>クラスター化インデックスを作成するには  
   

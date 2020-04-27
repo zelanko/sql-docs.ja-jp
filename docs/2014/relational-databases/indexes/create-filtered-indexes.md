@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: de9a9d71a90f33db85636b1bd0344023f1a86c91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63155390"
 ---
 # <a name="create-filtered-indexes"></a>フィルター選択されたインデックスの作成
@@ -56,15 +56,15 @@ ms.locfileid: "63155390"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Design"></a> デザインに関する考慮事項  
+###  <a name="design-considerations"></a><a name="Design"></a> デザインに関する考慮事項  
   
 -   クエリに関連する少数の値だけが列に含まれている場合、値のサブセットにフィルター選択されたインデックスを作成できます。 たとえば、列の値がほとんど NULL の場合に、クエリで常に NULL 以外の値を選択するときは、NULL 以外のデータ行にフィルター選択されたインデックスを作成できます。 作成したインデックスは、同じキー列に定義されているテーブル全体の非クラスター化インデックスよりも小さく、メンテナンス コストが少なくなります。  
   
 -   テーブルに異種データの行が含まれている場合、1 つ以上のカテゴリのデータに対してフィルター選択されたインデックスを作成できます。 これにより、クエリのフォーカスをテーブルの特定の領域に狭めて、これらのデータに対するクエリのパフォーマンスを向上させることができます。 繰り返しになりますが、作成したインデックスは、テーブル全体の非クラスター化インデックスよりも小さく、メンテナンス コストが少なくなります。  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   フィルター選択されたインデックスをビューに作成することはできません。 ただし、クエリ オプティマイザーにとって、ビューで参照されているテーブルに定義されたフィルター選択されたインデックスは役立ちます。 クエリ オプティマイザーでは、クエリ結果が正しくなる場合、ビューから選択するクエリに対してフィルター選択されたインデックスが検討されます。  
   
@@ -90,12 +90,12 @@ ms.locfileid: "63155390"
   
 -   フィルター選択されたインデックスでは、その式に指定された比較演算子によって暗黙的または明示的なデータ変換が行われる場合、変換が比較演算子の左辺で行われると、エラーが発生します。 解決方法としては、比較演算子の右辺にデータ変換演算子 (CAST または CONVERT) を含む、フィルター選択されたインデックスの式を記述します。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  テーブルまたはビューに対する ALTER 権限が必要です。 実行するには、 **sysadmin** 固定サーバー ロール、または **db_ddladmin** 固定データベース ロールおよび **db_owner** 固定データベース ロールのメンバーである必要があります。 フィルター選択されたインデックスの式を変更するには、CREATE INDEX WITH DROP_EXISTING を使用します。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-create-a-filtered-index"></a>フィルター選択されたインデックスを作成するには  
   
@@ -105,25 +105,21 @@ ms.locfileid: "63155390"
   
 3.  プラス記号をクリックして、フィルター選択されたインデックスを作成するテーブルを展開します。  
   
-4.  
-  **[インデックス]** フォルダーを右クリックし、**[新しいインデックス]** をポイントし、**[非クラスター化インデックス]** を選択します。  
+4.  [**インデックス**] フォルダーを右クリックして [**新しいインデックス**] をポイントし、[**非クラスター化インデックス**] を選択します。  
   
-5.  
-  **[新しいインデックス]** ダイアログ ボックスの **[全般]** ページで、 **[インデックス名]** ボックスに新しいインデックスの名前を入力します。  
+5.  **[新しいインデックス]** ダイアログ ボックスの **[全般]** ページで、 **[インデックス名]** ボックスに新しいインデックスの名前を入力します。  
   
-6.  
-  **[インデックス キー列]** で、**[追加]** をクリックします。  
+6.  [**インデックスキー列**] で、[**追加**] をクリックします。  
   
-7.  [Table_name**から列を選択**__ ] ダイアログボックスで、一意のインデックスに追加するテーブル列のチェックボックスをオンにします。  
+7.  **table_name**_から列を選択]_ ダイアログ ボックスで、一意のインデックスに追加する 1 つまたは複数のテーブル列のチェック ボックスをオンにします。  
   
 8.  **[OK]** をクリックします。  
   
-9. 
-  **[フィルター]** ページで、**[フィルター式]** に、フィルター選択されたインデックスの作成に使用する SQL 式を入力します。  
+9. **[フィルター]** ページで、**[フィルター式]** に、フィルター選択されたインデックスの作成に使用する SQL 式を入力します。  
   
 10. **[OK]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-create-a-filtered-index"></a>フィルター選択されたインデックスを作成するには  
   
