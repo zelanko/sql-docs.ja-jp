@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b95fbb99affb91743d5b922f748cae5554736f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63164415"
 ---
 # <a name="deploying-a-delivery-extension"></a>配信拡張機能の配置
@@ -26,20 +26,18 @@ ms.locfileid: "63164415"
   
  配信拡張機能を置き換えたり、アップグレードしたりしても、配信拡張機能を参照するすべてのサブスクリプションは有効なままです。  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]配信拡張機能を作成して[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]ライブラリにコンパイルした後、拡張機能を適切なディレクトリにコピーし、適切な[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]構成ファイルにエントリを追加して、レポートサーバーがそれを見つけられるようにする必要があります。  
+ ご自分の [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の配信拡張機能を [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] のライブラリに書き込み、コンパイルした後、レポート サーバーがその拡張機能を検出できるように、その拡張機能を適切なディレクトリにコピーし、適切な [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の構成ファイルにエントリを追加する必要があります。  
   
 ## <a name="configuration-file-extension-element"></a>構成ファイルの Extension 要素  
  構成ファイルでは、レポート サーバーに配置する配信拡張機能を `Extension` 要素として入力する必要があります。 レポート サーバーの構成ファイルは、RSReportServer.config です。  
   
  次の表では、配信拡張機能の `Extension` 要素の属性について説明します。  
   
-|Attribute|[説明]|  
+|Attribute|説明|  
 |---------------|-----------------|  
-|`Name`|拡張機能の一意な名前 (たとえば、電子メール配信拡張機能の場合は "レポート サーバーの電子メール"、ファイル共有配信拡張機能の場合は "レポート サーバーのファイル共有")。 
-  `Name` 属性の最大文字数は 255 文字です。 名前は、構成ファイルの `Extension` 要素内のすべてのエントリの中で一意にする必要があります。 重複する名前がある場合には、レポート サーバーによってエラーが返されます。|  
+|`Name`|拡張機能の一意な名前 (たとえば、電子メール配信拡張機能の場合は "レポート サーバーの電子メール"、ファイル共有配信拡張機能の場合は "レポート サーバーのファイル共有")。 `Name` 属性の最大文字数は 255 文字です。 名前は、構成ファイルの `Extension` 要素内のすべてのエントリの中で一意にする必要があります。 重複する名前がある場合には、レポート サーバーによってエラーが返されます。|  
 |`Type`|アセンブリの名前と共に完全修飾名前空間を含むコンマ区切りの一覧。|  
-|`Visible`|
-  `false` の値は、配信拡張機能がユーザー インターフェイスに表示されないことを示します。 この属性が指定されない場合、既定値は `true` になります。|  
+|`Visible`|`false` の値は、配信拡張機能がユーザー インターフェイスに表示されないことを示します。 この属性が指定されない場合、既定値は `true` になります。|  
   
  RSReportServer.config ファイルの詳細については、「[Reporting Services 構成ファイル](../../report-server/reporting-services-configuration-files.md)」を参照してください。  
   
@@ -71,9 +69,7 @@ ms.locfileid: "63164415"
     <Extension Name="My Delivery Extension Name" Type="CompanyName.ExtensionName.MyDeliveryExtensionClass, AssemblyName" />  
     ```  
   
-     
-  `Name` の値は、配信拡張機能の一意な名前です。 
-  `Type` の値は、<xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> インターフェイスを実装するクラスの完全修飾名前空間のエントリを含むコンマ区切りの一覧であり、その後にアセンブリの名前 (.dll ファイル拡張子は付けない) が続きます。 既定では、配信拡張機能が表示されます。 レポート マネージャーなどのユーザー インターフェイスで拡張機能を非表示にするには、`Visible` 属性を `Extension` 要素に追加し、それを `false` に設定します。  
+     `Name` の値は、配信拡張機能の一意な名前です。 `Type` の値は、<xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> インターフェイスを実装するクラスの完全修飾名前空間のエントリを含むコンマ区切りの一覧であり、その後にアセンブリの名前 (.dll ファイル拡張子は付けない) が続きます。 既定では、配信拡張機能が表示されます。 レポート マネージャーなどのユーザー インターフェイスで拡張機能を非表示にするには、`Visible` 属性を `Extension` 要素に追加し、それを `false` に設定します。  
   
 5.  最後に、配信拡張機能の `FullTrust` 権限を与えるカスタム アセンブリのコード グループを追加します。 これを行うには、%ProgramFiles%\Microsoft SQL Server \ MSRS10_50 に既定で格納されている rssrvpolicy.config ファイルにコードグループを追加します。\<InstanceName> \ Reporting services\reportserver このコード グループは、次のようになります。  
   
@@ -90,8 +86,7 @@ ms.locfileid: "63164415"
     </CodeGroup>  
     ```  
   
-     URL 構成要素は、配信拡張機能に選択できる多くの構成要素条件のうちの 1 つにすぎません。 
-  [!INCLUDE[ssRS](../../../includes/ssrs.md)] のコード アクセス セキュリティの詳細については、「[セキュリティで保護された配置 &#40;Reporting Services&#41;](../secure-development/secure-development-reporting-services.md)」を参照してください。  
+     URL 構成要素は、配信拡張機能に選択できる多くの構成要素条件のうちの 1 つにすぎません。 [!INCLUDE[ssRS](../../../includes/ssrs.md)] のコード アクセス セキュリティの詳細については、「[セキュリティで保護された配置 &#40;Reporting Services&#41;](../secure-development/secure-development-reporting-services.md)」を参照してください。  
   
 ## <a name="deploying-the-extension-to-report-manager"></a>レポート マネージャーへの配信拡張機能の配置  
  配信拡張機能によって <xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl> インターフェイスを実装した場合、レポート マネージャーの [サブスクリプション] ページで配信拡張機能を使用できます。 サブスクリプションのユーザー インターフェイスを有効にするには、拡張機能をレポート マネージャーに配置する必要があります。  
@@ -118,13 +113,10 @@ ms.locfileid: "63164415"
     <Extension Name="My Delivery Extension Name" Type="CompanyName.ExtensionName.MyDeliveryUIExtensionClass, AssemblyName" />  
     ```  
   
-     
-  `Name` の値は、配信拡張機能の一意な名前です。 
-  `Type` の値は、<xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl> インターフェイスを実装するクラスの完全修飾名前空間のエントリを含むコンマ区切りの一覧であり、その後にアセンブリの名前 (.dll ファイル拡張子は付けない) が続きます。  
+     `Name` の値は、配信拡張機能の一意な名前です。 `Type` の値は、<xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl> インターフェイスを実装するクラスの完全修飾名前空間のエントリを含むコンマ区切りの一覧であり、その後にアセンブリの名前 (.dll ファイル拡張子は付けない) が続きます。  
   
     > [!IMPORTANT]  
-    >  
-  `Name` 属性の値は、レポート サーバーとレポート マネージャーの両方の構成ファイルのエントリに対して同一にする必要があります。 それらのエントリが同一でない場合は、サーバー構成が無効になります。  
+    >  `Name` 属性の値は、レポート サーバーとレポート マネージャーの両方の構成ファイルのエントリに対して同一にする必要があります。 それらのエントリが同一でない場合は、サーバー構成が無効になります。  
   
      最後に、配信拡張機能の `FullTrust` 権限を与えるカスタム アセンブリのコード グループを追加します。 これを行うには、コードグループを Rsmgrpolicy.config ファイルに追加します。このファイルは、既定では C:\Program の SQL Server \ MSRS10_50 にあります。\<InstanceName> \ Reporting services\reportmanager このコード グループは、次のようになります。  
   
