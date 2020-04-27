@@ -18,10 +18,10 @@ ms.assetid: 24200295-9a54-4cab-9922-fb2e88632721
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 74860a8f4c8dee263ea7ee0eea75679c721d1fa5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68032982"
 ---
 # <a name="sp_addapprole-transact-sql"></a>sp_addapprole (Transact-sql)
@@ -51,7 +51,7 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  以前のバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、ユーザー (およびロール) はスキーマと完全に区別されていませんでした。 以降で[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]は、スキーマはロールと完全に区別されています。 この新しいアーキテクチャは CREATE APPLICATION ROLE の動作に反映されています。 このステートメントは**sp_addapprole**を置き換えます。  
   
  以前のバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]との下位互換性を維持するために、 **sp_addapprole**は次の操作を実行します。  
@@ -72,7 +72,7 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
 ## <a name="permissions"></a>アクセス許可  
  データベースに対する ALTER ANY APPLICATION ROLE 権限が必要です。 新しいロールと同じ名前および同じ所有者のスキーマが存在しない場合は、そのデータベースに対する CREATE SCHEMA 権限も必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、パスワード`SalesApp` `x97898jLJfcooFUYLKm387gf3`を持つ新しいアプリケーションロールを現在のデータベースに追加します。  
   
 ```  
@@ -81,6 +81,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [Transact-sql&#41;&#40;アプリケーションロールを作成する](../../t-sql/statements/create-application-role-transact-sql.md)  
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)  
   
   

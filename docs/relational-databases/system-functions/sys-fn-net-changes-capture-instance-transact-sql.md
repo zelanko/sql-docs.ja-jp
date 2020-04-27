@@ -21,10 +21,10 @@ ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 556518a5fc2950ff69e6a872df5387b4c8367c6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68122569"
 ---
 # <a name="sysfn_net_changes_ltcapture_instancegt-transact-sql"></a>fn_net_changes_&lt;capture_instance&gt; (transact-sql)
@@ -61,12 +61,11 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
  このパラメーターには、次の2つの意味のいずれかを指定@closed_high_end_pointできます。 sp_cdc_generate_wrapper_function を呼び出して、ラッパー関数を作成するスクリプトを生成します。  
   
--   @closed_high_end_point= 1  
+-   @closed_high_end_point = 1  
   
      $Start _lsn に\_ \_値があり、対応するコミット時間が**start_time**以下の <capture_instance>_CT テーブルの行だけが結果セットに含まれています。  
   
--   
-  @closed_high_end_point = 0  
+-   @closed_high_end_point = 0  
   
      $Start _lsn に\_ \_値があり、対応するコミット時間が**start_time**よりも厳密に小さい場合は、<>_CT capture_instance 内の行だけが結果セットに含まれます。  
   
@@ -94,13 +93,13 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|列の型|[説明]|  
+|列名|列の型|説明|  
 |-----------------|-----------------|-----------------|  
-|\<> の@column_list列|**て**|ラッパーを作成するスクリプトを生成するために呼び出されたときに、 **column_list**引数で指定された sp_cdc_generate_wrapper_function の列。 *Column_list*が NULL の場合、すべての追跡対象のソース列が結果セットに表示されます。|  
+|\<> の@column_list列|**状況に応じて異なる**|ラッパーを作成するスクリプトを生成するために呼び出されたときに、 **column_list**引数で指定された sp_cdc_generate_wrapper_function の列。 *Column_list*が NULL の場合、すべての追跡対象のソース列が結果セットに表示されます。|  
 |__CDC_OPERATION|**nvarchar (2)**|ターゲット環境に行を適用するために必要な操作を示す操作コード。 操作は、次の呼び出しで指定された引数*row_filter_option*の値によって異なります。<br /><br /> *row_filter_option* = ' all ', ' all with mask '<br /><br /> ' D '-削除操作<br /><br /> ' I '-挿入操作<br /><br /> 'UN' : 更新操作<br /><br /> *row_filter_option* = ' all with merge '<br /><br /> ' D '-削除操作<br /><br /> 'M' : 挿入操作または更新操作|  
 |\<> の@update_flag_list列|**bit**|列名の後に "_uflag" が付加されている、ビット フラグです。 フラグが null 以外の値を使用するのは、 *row_filter_option* **= ' all with mask '** および\__CDC_OPERATION **= ' UN '** の場合のみです。 対応する列がクエリウィンドウ内で変更された場合は、1に設定されます。 それ以外の場合は、0 に設定されます。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  Fn_net_changes_<capture_instance> 関数は、cdc. fn_cdc_get_net_changes_<capture_instance のクエリ関数のラッパーとして機能します。 ラッパーのスクリプトを作成するには、sys.sp_cdc_generate_wrapper ストアド プロシージャを使用します。  
   
  ラッパー関数が自動的に作成されることはありません。 ラッパー関数を作成するには、次の 2 つを行う必要があります。  

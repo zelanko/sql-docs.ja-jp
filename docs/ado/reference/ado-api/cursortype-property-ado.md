@@ -16,10 +16,10 @@ ms.assetid: b62c66ca-58d5-430e-9257-eb38c65e48c2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4dc881b96a1e2641d4946340c9462455197f2043
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67919253"
 ---
 # <a name="cursortype-property-ado"></a>CursorType プロパティ (ADO)
@@ -28,7 +28,7 @@ ms.locfileid: "67919253"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  [カーソル Typeenum](../../../ado/reference/ado-api/cursortypeenum.md)値を設定または返します。 既定値は**adOpenForwardOnly**です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **CursorType**プロパティを使用して、**レコードセット**オブジェクトを開くときに使用するカーソルの種類を指定します。  
   
  [カーソル位置](../../../ado/reference/ado-api/cursorlocation-property-ado.md)プロパティが**adUseClient**に設定されている場合は、 **adopenstatic**の設定のみがサポートされます。 サポートされていない値が設定されている場合、エラーは発生しません。サポートされている最も近い**CursorType**が代わりに使用されます。  

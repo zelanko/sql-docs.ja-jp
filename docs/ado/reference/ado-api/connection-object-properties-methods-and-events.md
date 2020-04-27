@@ -13,10 +13,10 @@ ms.assetid: f571b74d-b796-4009-9c66-6a36ab995a2a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bd6c95c7c761e2aadf9d42befcd4e2f740877196
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67919513"
 ---
 # <a name="connection-object-properties-methods-and-events"></a>Connection オブジェクトのプロパティ、メソッド、およびイベント
@@ -60,7 +60,7 @@ ms.locfileid: "67919513"
   
  [OpenSchema メソッド](../../../ado/reference/ado-api/openschema-method.md)  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [BeginTransComplete、CommitTransComplete、および RollbackTransComplete イベント](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)  
   
  [ConnectComplete イベントと Disconnect イベント](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)  

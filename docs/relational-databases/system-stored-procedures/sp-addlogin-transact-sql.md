@@ -18,10 +18,10 @@ ms.assetid: 030f19c3-a5e3-4b53-bfc4-de4bfca0fddc
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 5868120af1e98c4b2f3be78f2cf7927df53b42d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68072665"
 ---
 # <a name="sp_addlogin-transact-sql"></a>sp_addlogin (Transact-SQL)
@@ -72,18 +72,17 @@ sp_addlogin [ @loginame = ] 'login'
  [ @encryptopt= ]'*encryption_option*'  
  パスワードを、クリア テキストとして渡すか、またはクリア テキスト パスワードのハッシュとして渡すかを指定します。 暗号化は行われないことに注意してください。 ここでは、"暗号化" という用語を旧バージョンとの互換性のために使用しています。 クリアテキストのパスワードが渡されると、ハッシュされます。 ハッシュは保存されます。 *encryption_option*は**varchar (20)** で、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
-|NULL|パスワードがクリア テキストで渡されます。 これが既定値です。|  
+|NULL|パスワードがクリア テキストで渡されます。 これは既定です。|  
 |**skip_encryption**|パスワードは既にハッシュされています。 は[!INCLUDE[ssDE](../../includes/ssde-md.md)] 、再ハッシュせずに値を格納する必要があります。|  
 |**skip_encryption_old**|指定されたパスワードは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のバージョンでハッシュされています。 は[!INCLUDE[ssDE](../../includes/ssde-md.md)] 、再ハッシュせずに値を格納する必要があります。 このオプションは、アップグレードのためだけに提供されています。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインの長さは 1 ～ 128 文字で、英字、記号、および数字を含めることができます。 ログインに円記号 (\\) を含めることはできません。予約済みのログイン名を指定します (例: sa または public)。または既に存在します。または NULL または空の文字列`''`() を指定します。  
+## <a name="remarks"></a>Remarks  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインの長さは 1 ～ 128 文字で、英字、記号、および数字を含めることができます。 ログインに円記号 (\\) を含めることはできません。予約済みのログイン名を指定します (例: sa または public)。または既に存在します。または NULL または空の文字列`''`() を指定します。  
   
  既定のデータベースの名前が指定されている場合は、USE ステートメントを実行せずに、指定されたデータベースに接続できます。 ただし、データベース所有者 ( [sp_adduser](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)または[sp_addrolemember](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)) または[sp_addrole](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)を使用してデータベースにアクセスできるようになるまで、既定のデータベースを使用することはできません。  
   
@@ -97,7 +96,7 @@ sp_addlogin [ @loginame = ] 'login'
   
  次の表は、sp_addlogin と共に使用されるストアド プロシージャを示しています。  
   
-|ストアド プロシージャ|[説明]|  
+|ストアド プロシージャ|説明|  
 |----------------------|-----------------|  
 |[sp_grantlogin](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)|Windows のユーザーまたはグループを追加します。|  
 |[sp_password](../../relational-databases/system-stored-procedures/sp-password-transact-sql.md)|ユーザーのパスワードを変更します。|  
@@ -126,14 +125,14 @@ GO
 ```  
   
 ### <a name="c-creating-a-sql-server-login-that-has-a-different-default-language"></a>C. 異なる既定の言語を持つ SQL Server ログインの作成  
- 次の例では、パスワード [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、既定のデータベース `TzTodorov`、および既定の言語 `709hLKH7chjfwv` を指定して、ユーザー `AdventureWorks2012` の `Bulgarian` ログインを作成します。  
+ 次の例では、パスワード `TzTodorov`、既定のデータベース `709hLKH7chjfwv`、および既定の言語 `AdventureWorks2012` を指定して、ユーザー `Bulgarian` の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを作成します。  
   
 ```  
 EXEC sp_addlogin 'TzTodorov', '709hLKH7chjfwv', 'AdventureWorks2012', N'български'  
 ```  
   
 ### <a name="d-creating-a-sql-server-login-that-has-a-specific-sid"></a>D. 特定の SID を持つ SQL Server ログインを作成する  
- 次の例では、パスワード [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、既定のデータベース `Michael`、既定の言語 `B548bmM%f6`、および SID `AdventureWorks2012` を指定して、ユーザー `us_english` の `0x0123456789ABCDEF0123456789ABCDEF` ログインを作成します。  
+ 次の例では、パスワード `Michael`、既定のデータベース `B548bmM%f6`、既定の言語 `AdventureWorks2012`、および SID `us_english` を指定して、ユーザー `0x0123456789ABCDEF0123456789ABCDEF` の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを作成します。  
   
 ```  
 EXEC sp_addlogin 'Michael', 'B548bmM%f6', 'AdventureWorks2012', 'us_english', 0x0123456789ABCDEF0123456789ABCDEF  

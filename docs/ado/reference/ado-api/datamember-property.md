@@ -16,10 +16,10 @@ ms.assetid: 2c8fb09e-10ad-49b5-ab41-2603771780d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 623f9b1f1e8873ddc4819bb8500c11edf09f5f76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67919218"
 ---
 # <a name="datamember-property"></a>DataMember プロパティ
@@ -28,14 +28,14 @@ ms.locfileid: "67919218"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  **文字列**値を設定または返します。 名前の大文字と小文字は区別されません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  このプロパティは、データ環境を使用してデータバインドコントロールを作成するために使用されます。 データ環境では、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトとして表される名前付きオブジェクト (データメンバー) を含むデータ (データソース) のコレクションを保持します。  
   
  **DataMember**プロパティと**DataSource**プロパティを一緒に使用する必要があります。  
   
  **DataMember**プロパティは、 **DataSource**プロパティによって指定されたオブジェクトを**レコードセット**オブジェクトとして表現します。 このプロパティを設定する前に、**レコードセット**オブジェクトを閉じる必要があります。 **Datasource**プロパティの前に**datamember**プロパティが設定されていない場合、または**datasource**プロパティで指定されたオブジェクトによって**datamember**名が認識されない場合は、エラーが生成されます。  
   
-## <a name="usage"></a>使用法  
+## <a name="usage"></a>使用方法  
   
 ```  
 Dim rs as New ADODB.Recordset  

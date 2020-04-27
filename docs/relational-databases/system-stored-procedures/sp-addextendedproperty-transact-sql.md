@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2600543715bffaba36e29305b0893a9f17cca59c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68072690"
 ---
 # <a name="sp_addextendedproperty-transact-sql"></a>sp_addextendedproperty (Transact-SQL)
@@ -57,8 +57,7 @@ sp_addextendedproperty
  追加するプロパティの名前を指定します。 *property_name*は**sysname**であり、NULL にすることはできません。 名前には、空白文字や英数字以外の文字列、およびバイナリ値を含めることもできます。  
   
  [ @value= ]{'*値*'}  
- プロパティに関連付ける値を指定します。 *値*は**sql_variant**,、既定値は NULL です。 
-  *value* のサイズは、7,500 バイト以下にする必要があります。  
+ プロパティに関連付ける値を指定します。 *値*は**sql_variant**,、既定値は NULL です。 *value* のサイズは、7,500 バイト以下にする必要があります。  
   
  [ @level0type= ]{'*level0_object_type*'}  
  レベル 0 のオブジェクトの種類です。 *level0_object_type*は**varchar (128)**,、既定値は NULL です。  
@@ -85,7 +84,7 @@ sp_addextendedproperty
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  拡張プロパティを指定するために、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース内のオブジェクトは、3 つのレベル (0、1、2) に分けられています。 レベル 0 は、データベース スコープに含まれる最上位レベルのオブジェクトとして定義されます。 レベル 1 のオブジェクトはスキーマ スコープまたはユーザー スコープに含まれ、レベル 2 のオブジェクトはレベル 1 のオブジェクトに含まれます。 これら、どのレベルのオブジェクトに対しても、拡張プロパティを定義できます。  
   
  1 つのレベルにあるオブジェクトを参照する場合は、そのオブジェクトを所有または格納する上位レベルのオブジェクトの名前で修飾する必要があります。 たとえば、拡張プロパティをテーブル列 (レベル 2) に追加する場合、その列を含むテーブル名 (レベル 1) とそのテーブルを含むスキーマ (レベル 0) も指定する必要があります。  

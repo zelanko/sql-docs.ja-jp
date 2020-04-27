@@ -21,10 +21,10 @@ ms.assetid: 405aa29c-8bd8-42d3-9f39-7494b643fc6f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c3573b876a10b4400969bf63200682e91bfc45fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68046340"
 ---
 # <a name="sysfn_cdc_map_lsn_to_time-transact-sql"></a>fn_cdc_map_lsn_to_time (Transact-sql)
@@ -46,13 +46,13 @@ sys.fn_cdc_map_lsn_to_time ( lsn_value )
  照合する LSN 値を指定します。 *lsn_value*は**binary (10)** です。  
   
 ## <a name="return-type"></a>戻り値の型  
- **DATETIME**  
+ **datetime**  
   
 ## <a name="remarks"></a>解説  
  この関数を使用すると、変更データの行に返された **__ $ start_lsn**値に基づいて、変更がコミットされた時刻を確認できます。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Public**ロールのメンバーシップが必要です。  
+ ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>例  
  次の例では、 `sys.fn_cdc_map_lsn_to_time`関数を使用して、 `HumanResources_Employee`キャプチャインスタンスの指定した LSN 間隔で最後に処理された変更に関連付けられたコミット時間を確認します。  

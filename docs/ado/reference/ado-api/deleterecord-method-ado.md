@@ -17,10 +17,10 @@ ms.assetid: 2726498c-dbd8-4266-983b-ae7d62c39142
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 409c4e21395b7b903cf4ff03726fbd37a2a218d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67919081"
 ---
 # <a name="deleterecord-method-ado"></a>DeleteRecord メソッド (ADO)
@@ -35,12 +35,12 @@ Record.DeleteRecord Source, Async
   
 #### <a name="parameters"></a>パラメーター  
  *ソース*  
- 省略可能。 削除するエンティティ (ファイルやディレクトリなど) を識別する URL を含む**文字列**値です。 *Source*を省略した場合、または空の文字列を指定した場合は、現在の[レコード](../../../ado/reference/ado-api/record-object-ado.md)によって表されるエンティティが削除されます。 レコードがコレクションレコード (ディレクトリなどの**Adcollectionrecord**の[RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md) ) である場合は、すべての子 (サブディレクトリなど) も削除されます。  
+ 任意。 削除するエンティティ (ファイルやディレクトリなど) を識別する URL を含む**文字列**値です。 *Source*を省略した場合、または空の文字列を指定した場合は、現在の[レコード](../../../ado/reference/ado-api/record-object-ado.md)によって表されるエンティティが削除されます。 レコードがコレクションレコード (ディレクトリなどの**Adcollectionrecord**の[RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md) ) である場合は、すべての子 (サブディレクトリなど) も削除されます。  
   
  *Io*  
- 省略可能。 **ブール**値。 **True**の場合、削除操作が非同期であることを指定します。  
+ 任意。 **ブール**値。 **True**の場合、削除操作が非同期であることを指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  このメソッドの完了後に、この**レコード**によって表されるオブジェクトに対する操作が失敗する可能性があります。 **DeleteRecord**を呼び出した後は、レコードがデータソースで**レコード**を更新するタイミングによってはレコードの動作が予測不能に**なる可能性が**あるため、**レコード**を閉じる必要があります。  
   
  この**レコード**が[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)から取得された場合、この操作の結果は**レコードセット**にすぐには反映されません。 レコードセットを閉じて再度開くか、**レコードセットの** [Requery](../../../ado/reference/ado-api/requery-method.md)メソッド、 [Update](../../../ado/reference/ado-api/update-method.md)メソッド、または[Resync](../../../ado/reference/ado-api/resync-method.md)メソッドを実行して、**レコードセット**を更新します。  

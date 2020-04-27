@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e6d3880c4be8925e6b85a20af1324537e3977ecc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68103283"
 ---
 # <a name="parameters-transact-sql"></a>パラメーター (Transact-sql)
@@ -33,43 +33,43 @@ ms.locfileid: "68103283"
   
  これらのビューから情報を取得するには、INFORMATION_SCHEMA の完全修飾名を指定し**ます。**_view_name_。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**SPECIFIC_CATALOG**|**nvarchar (** 128 **)**|パラメーターであるルーチンのカタログ名。|  
 |**SPECIFIC_SCHEMA**|**nvarchar (** 128 **)**|パラメーターの基になるルーチンのスキーマ名。<br /><br /> <strong> \*重要\* \* </strong>オブジェクトのスキーマを決定するために INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
 |**SPECIFIC_NAME**|**nvarchar (** 128 **)**|パラメーターの基になるルーチンの名前。|  
-|**ORDINAL_POSITION**|**int**|1から始まるパラメーターの序数位置。 関数の戻り値の場合、これは0です。|  
-|**PARAMETER_MODE**|**nvarchar (** 10 **)**|入力パラメーター、出力パラメーターの場合は OUT、入力/出力パラメーターの場合は INOUT を返します。|  
-|**IS_RESULT**|**nvarchar (** 10 **)**|関数であるルーチンの結果がである場合は YES を返します。 それ以外の場合、は NO を返します。|  
-|**AS_LOCATOR**|**nvarchar (** 10 **)**|ロケーターとして宣言されている場合は YES を返します。 それ以外の場合、は NO を返します。|  
+|**ORDINAL_POSITION**|**int**|パラメーターの位置を示す 1 から始まる序数。 関数の戻り値の場合、これは0です。|  
+|**PARAMETER_MODE**|**nvarchar (** 10 **)**|入力パラメーターでは IN が返され、出力パラメーターでは OUT が返され、I/O パラメーターでは INOUT が返されます。|  
+|**IS_RESULT**|**nvarchar (** 10 **)**|関数であるルーチンの結果がである場合は YES を返します。 その他の場合は NO が返されます。|  
+|**AS_LOCATOR**|**nvarchar (** 10 **)**|ロケーターとして宣言された場合は YES が返されます。 その他の場合は NO が返されます。|  
 |**PARAMETER_NAME**|**nvarchar (** 128 **)**|パラメーターの名前。 関数の戻り値に対応する場合は NULL です。|  
 |**DATA_TYPE**|**nvarchar (** 128 **)**|システム提供のデータ型。|  
-|**CHARACTER_MAXIMUM_LENGTH**|**int**|バイナリまたは文字データ型の最大文字数。<br /><br /> **xml**と大きな値の型のデータの場合は-1。 それ以外の場合は NULL を返します。|  
-|**CHARACTER_OCTET_LENGTH**|**int**|バイナリ型または文字型の最大バイト数。<br /><br /> **xml**と大きな値の型のデータの場合は-1。 それ以外の場合は NULL を返します。|  
+|**CHARACTER_MAXIMUM_LENGTH**|**int**|バイナリまたは文字データ型の文字列の最大長。<br /><br /> **xml**と大きな値の型のデータの場合は-1。 その他の場合は NULL が返されます。|  
+|**CHARACTER_OCTET_LENGTH**|**int**|バイナリ型または文字型の最大バイト数。<br /><br /> **xml**と大きな値の型のデータの場合は-1。 その他の場合は NULL が返されます。|  
 |**COLLATION_CATALOG**|**nvarchar (** 128 **)**|常に NULL が返されます。|  
 |**COLLATION_SCHEMA**|**nvarchar (** 128 **)**|常に NULL が返されます。|  
-|**COLLATION_NAME**|**nvarchar (** 128 **)**|パラメーターの照合順序の名前。 文字型の1つでない場合、は NULL を返します。|  
-|**CHARACTER_SET_CATALOG**|**nvarchar (** 128 **)**|パラメーターの文字セットのカタログ名。 文字型の1つでない場合、は NULL を返します。|  
+|**COLLATION_NAME**|**nvarchar (** 128 **)**|パラメーターの照合順序の名前。 文字型の 1 つでない場合は、NULL が返されます。|  
+|**CHARACTER_SET_CATALOG**|**nvarchar (** 128 **)**|パラメーターの文字セットのカタログ名。 文字型の 1 つでない場合は、NULL が返されます。|  
 |**CHARACTER_SET_SCHEMA**|**nvarchar (** 128 **)**|常に NULL が返されます。|  
-|**CHARACTER_SET_NAME**|**nvarchar (** 128 **)**|パラメーターの文字セットの名前。 文字型の1つでない場合、は NULL を返します。|  
-|**NUMERIC_PRECISION**|**tinyint**|概数データ、正確な数値データ、整数データ、または通貨データの有効桁数。 それ以外の場合は NULL を返します。|  
-|**NUMERIC_PRECISION_RADIX**|**smallint**|概数データ、真数データ、整数データ、または通貨データの有効桁数の基数。 それ以外の場合は NULL を返します。|  
-|**NUMERIC_SCALE**|**tinyint**|概数型データ、真数データ、整数データ、または通貨データの小数点以下桁数。 それ以外の場合は NULL を返します。|  
-|**DATETIME_PRECISION**|**smallint**|パラメーターの型が**datetime**または**smalldatetime**の場合の秒の小数部の有効桁数。 それ以外の場合は NULL を返します。|  
-|**INTERVAL_TYPE**|**nvarchar (** 30 **)**|NULL。 将来使用するために予約されています。|  
-|**INTERVAL_PRECISION**|**smallint**|NULL。 将来使用するために予約されています。|  
-|**USER_DEFINED_TYPE_CATALOG**|**nvarchar (** 128 **)**|NULL。 将来使用するために予約されています。|  
-|**USER_DEFINED_TYPE_SCHEMA**|**nvarchar (** 128 **)**|NULL。 将来使用するために予約されています。|  
-|**USER_DEFINED_TYPE_NAME**|**nvarchar (** 128 **)**|NULL。 将来使用するために予約されています。|  
-|**SCOPE_CATALOG**|**nvarchar (** 128 **)**|NULL。 将来使用するために予約されています。|  
-|**SCOPE_SCHEMA**|**nvarchar (** 128 **)**|NULL。 将来使用するために予約されています。|  
-|**SCOPE_NAME**|**nvarchar (** 128 **)**|NULL。 将来使用するために予約されています。|  
+|**CHARACTER_SET_NAME**|**nvarchar (** 128 **)**|パラメーターの文字セットの名前。 文字型の 1 つでない場合は、NULL が返されます。|  
+|**NUMERIC_PRECISION**|**tinyint**|数値データの概数、正確な数値データ、整数データ、または通貨データの有効桁数。 その他の場合は NULL が返されます。|  
+|**NUMERIC_PRECISION_RADIX**|**smallint**|数値データの概数、正確な数値データ、整数データ、または通貨データの有効桁数の基数。 その他の場合は NULL が返されます。|  
+|**NUMERIC_SCALE**|**tinyint**|数値データの概数、正確な数値データ、整数データ、または通貨データの桁数。 その他の場合は NULL が返されます。|  
+|**DATETIME_PRECISION**|**smallint**|パラメーターの型が**datetime**または**smalldatetime**の場合の秒の小数部の有効桁数。 その他の場合は NULL が返されます。|  
+|**INTERVAL_TYPE**|**nvarchar (** 30 **)**|NULL。 将来利用するために予約されています。|  
+|**INTERVAL_PRECISION**|**smallint**|NULL。 将来利用するために予約されています。|  
+|**USER_DEFINED_TYPE_CATALOG**|**nvarchar (** 128 **)**|NULL。 将来利用するために予約されています。|  
+|**USER_DEFINED_TYPE_SCHEMA**|**nvarchar (** 128 **)**|NULL。 将来利用するために予約されています。|  
+|**USER_DEFINED_TYPE_NAME**|**nvarchar (** 128 **)**|NULL。 将来利用するために予約されています。|  
+|**SCOPE_CATALOG**|**nvarchar (** 128 **)**|NULL。 将来利用するために予約されています。|  
+|**SCOPE_SCHEMA**|**nvarchar (** 128 **)**|NULL。 将来利用するために予約されています。|  
+|**SCOPE_NAME**|**nvarchar (** 128 **)**|NULL。 将来利用するために予約されています。|  
   
 ## <a name="see-also"></a>参照  
  [システムビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [情報スキーマビュー &#40;Transact-sql&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [&#40;Transact-sql&#41;の列](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [Transact-sql&#41;&#40;のパラメーター](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)  
+ [sys.parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)  
   
   

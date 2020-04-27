@@ -20,10 +20,10 @@ ms.assetid: 0e6202a1-e872-4f53-99d7-c16b6f712efc
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2acff9f5d78549fe1e00397d566053ec19f628a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68120238"
 ---
 # <a name="sysfn_hadr_distributed_ag_database_replica-transact-sql"></a>fn_hadr_distributed_ag_database_replica (Transact-sql)
@@ -50,11 +50,11 @@ sys.fn_hadr_distributed_ag_database_replica( lag_Id, database_id )
 ## <a name="tables-returned"></a>返されるテーブル  
  次の情報を返します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**group_database_id**|**UNIQUEIDENTIFIER**|ローカル可用性グループ内のデータベースの ID。|  
+|**group_database_id**|**uniqueidentifier**|ローカル可用性グループ内のデータベースの ID。|  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
   
 ### <a name="using-sysfn_hadr_distributed_ag_database_replica"></a>Fn_hadr_distributed_ag_database_replica の使用  
  次の例では、分散型可用性グループのデータベース ID を渡します。 このメソッドは、ローカル可用性グループに関連付けられているデータベース ID を含むテーブルを返します。  
@@ -71,7 +71,7 @@ GO
  [Always On 可用性グループの関数 &#40;Transact-sql&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
  [Always On 可用性グループ &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [分散型可用性グループ &#40;Always On 可用性グループ&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)   
- [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
+ [Transact-sql&#41;&#40;可用性グループの作成](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)  
   
   

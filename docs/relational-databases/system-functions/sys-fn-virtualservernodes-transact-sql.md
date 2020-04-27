@@ -24,10 +24,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: da218e1afeec389d69b1727160a420c889225783
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68059189"
 ---
 # <a name="sysfn_virtualservernodes-transact-sql"></a>fn_virtualservernodes (Transact-sql)
@@ -55,7 +55,7 @@ fn_virtualservernodes()
 ## <a name="permissions"></a>アクセス許可  
  ユーザーは、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに対する VIEW SERVER STATE 権限を持っている必要があります。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例で`fn_virtualservernodes`は、を使用して、クラスター化されたサーバーインスタンスに対してクエリを実行します。  
   
 ```  

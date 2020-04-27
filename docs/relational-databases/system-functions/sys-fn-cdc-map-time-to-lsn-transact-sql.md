@@ -21,10 +21,10 @@ ms.assetid: 6feb051d-77ae-4c93-818a-849fe518d1d4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7f4f6820aeeca8b600631810ed35933d2519b495
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68046330"
 ---
 # <a name="sysfn_cdc_map_time_to_lsn-transact-sql"></a>sys.fn_cdc_map_time_to_lsn (Transact-SQL)
@@ -58,9 +58,9 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
  照合する datetime 値を指定します。 *tracking_time*は**datetime**です。  
   
 ## <a name="return-type"></a>戻り値の型  
- **binary (10)**  
+ **binary(10)**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Fn_cdc_map_time_lsn**を使用して datetime 範囲を lsn 範囲にマップする方法を理解するには、次のシナリオを検討してください。 変更データを毎日抽出するとします。 つまり、特定の日の午前 0 時までに発生した変更を取得する必要があります。 時間範囲の下限は、前の日の深夜を含めずに最大になります。 上限は、指定された日の深夜を含む最大までの範囲です。 次の例では、 **fn_cdc_map_time_to_lsn**関数を使用して、この時間ベースの範囲を変更データキャプチャの列挙関数で必要な lsn ベースの範囲に体系的にマップし、その範囲内のすべての変更を返す方法を示しています。  
   
  `DECLARE @begin_time datetime, @end_time datetime, @begin_lsn binary(10), @end_lsn binary(10);`  
@@ -78,7 +78,7 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
  関係演算子 '`smallest greater than`' は、前日の午前0時より後に発生した変更を制限するために使用されます。 LSN 値が異なる複数のエントリが、 [lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)テーブル内の下限として識別された**tran_end_time**値を共有する場合、関数は、すべてのエントリが含まれていることを確認する最小の lsn を返します。 上限を設定するために、関係演算子`largest less than or equal to`' ' を使用して、午前0時を含むすべてのエントリを**tran_end_time**値として範囲に含めます。 LSN 値が異なる複数のエントリが上限として識別された**tran_end_time**値を共有している場合、関数は、すべてのエントリが含まれていることを保証する最大の lsn を返します。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Public**ロールのメンバーシップが必要です。  
+ ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>例  
  次の例では`sys.fn_cdc_map_time_lsn` 、関数を使用して、 [lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)テーブルに、 **tran_end_time**値が午前0時以上の行があるかどうかを確認します。 このクエリを使用すると、たとえば、その日の午前0時にコミットされた変更がキャプチャプロセスによって既に処理されているかどうかを判断し、その日の変更データの抽出を続行できます。  

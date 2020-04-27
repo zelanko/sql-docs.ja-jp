@@ -21,10 +21,10 @@ ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0a64db42ba04e864752559bb2d2b895625f2c9f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68122634"
 ---
 # <a name="sysfn_my_permissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
@@ -42,8 +42,8 @@ fn_my_permissions ( securable , 'securable_class' )
 ```  
   
 ## <a name="arguments"></a>引数  
- *<*  
- セキュリティ保護可能なリソースの名前を指定します。 セキュリティ保護可能なリソースがサーバーまたはデータベースの場合、この値は NULL に設定する必要があります。 *セキュリティ保護*可能な型**sysname**型のスカラー式です。 *セキュリティ保護*可能なマルチパート名を指定できます。  
+ *セキュリティ保護可能なリソース (securable)*  
+ セキュリティ保護可能なリソースの名前を指定します。 セキュリティ保護可能なリソースがサーバーまたはデータベースの場合、この値は NULL に設定する必要があります。 *securable* には **sysname** 型のスカラー式を指定します。 *セキュリティ保護*可能なマルチパート名を指定できます。  
   
  '*securable_class*'  
  権限を一覧表示する、セキュリティ保護可能なリソースのクラスの名前を指定します。 *securable_class*は**sysname**です。 *securable_class*は、アプリケーションロール、アセンブリ、非対称キー、証明書、コントラクト、データベース、エンドポイント、フルテキストカタログ、ログイン、メッセージの種類、オブジェクト、リモートサービスバインド、ロール、ルート、スキーマ、サーバー、サービス、対称キー、種類、ユーザー、XML スキーマコレクションのいずれかである必要があります。  
@@ -51,13 +51,13 @@ fn_my_permissions ( securable , 'securable_class' )
 ## <a name="columns-returned"></a>返される列  
  次の表に、 **fn_my_permissions**が返す列を示します。 返される各行によって、セキュリティ保護可能なリソースについて、現在のセキュリティ コンテキストで保持されている権限の詳細が示されます。 クエリが失敗した場合は NULL を返します。  
   
-|列名|種類|[説明]|  
+|列名|種類|説明|  
 |-----------------|----------|-----------------|  
 |entity_name へのアイテムの追加|**sysname**|リストされたアクセス許可が実質的に付与される、セキュリティ保護可能なリソースの名前。|  
 |subentity_name|**sysname**|セキュリティ保護可能な列に列がある場合は列名、それ以外の場合は NULL です。|  
 |permission_name|**nvarchar**|アクセス許可の名前。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  このテーブル値関数は、指定されたセキュリティ保護可能なリソースについて、呼び出し元のプリンシパルが保持している有効な権限の一覧を返します。 有効な権限は、次のいずれかになります。  
   
 -   プリンシパルに直接許可されており、拒否されていない権限。  
@@ -102,7 +102,7 @@ GO
 ```  
   
 ### <a name="c-listing-effective-permissions-on-a-view"></a>C. ビューに対する有効な権限を一覧表示する  
- 次の例では、`vIndividualCustomer` データベースの `Sales` スキーマにある [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ビューについて、呼び出し元が保持している有効な権限の一覧を返します。  
+ 次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースの `vIndividualCustomer` スキーマにある `Sales` ビューについて、呼び出し元が保持している有効な権限の一覧を返します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -166,6 +166,6 @@ GO
  [権限の階層 &#40;データベースエンジン&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [fn_builtin_permissions &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
  [セキュリティカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [Transact-sql&#41;として実行 &#40;](../../t-sql/statements/execute-as-transact-sql.md)  
+ [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)  
   
   

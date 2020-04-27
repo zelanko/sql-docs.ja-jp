@@ -21,10 +21,10 @@ ms.assetid: 7aa84474-16e5-49bd-a703-c8d1408ef107
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1c7bb6e33dfd2ee6640e9588011d3686a72a0188
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68140669"
 ---
 # <a name="managed_backupfn_available_backups-transact-sql"></a>managed_backup。 fn_available_backups (Transact-sql)
@@ -40,7 +40,7 @@ ms.locfileid: "68140669"
 managed_backup.fn_available_backups ([@database_name = ] 'database name')  
 ```  
   
-##  <a name="Arguments"></a>数値  
+##  <a name="arguments"></a><a name="Arguments"></a>数値  
  @database_name  
  データベースの名前。 @database_nameは NVARCHAR (512) です。  
   
@@ -49,7 +49,7 @@ managed_backup.fn_available_backups ([@database_name = ] 'database name')
 データベースを削除してから再作成すると、すべてのデータベースのバックアップ セットが返されます。 出力は、各データベースを一意に識別する database_guid に従って並べ替えられます。   
 LSN にギャップがある場合は、ログチェーンが中断されていることを意味します。テーブルには、欠落している LSN セグメントごとに特殊な行が含まれます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |Backup_path|NVARCHAR(260) COLLATE Latin1_General_CI_AS_KS_WS|バックアップファイルの URL。|  
 |backup_type|NVARCHAR (6)|データベースバックアップ用の ' DB ' (ログバックアップの場合)|  
@@ -73,7 +73,7 @@ LSN にギャップがある場合は、ログチェーンが中断されてい�
 ### <a name="permissions"></a>アクセス許可  
  この関数に対する**SELECT**権限が必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、データベース ' MyDB ' に[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]対してバックアップされている利用可能なすべてのバックアップを一覧表示します。  
   
 ```  
@@ -84,6 +84,6 @@ FROM managed_backup.fn_available_backups ('MyDB')
   
 ## <a name="see-also"></a>参照  
  [マネージバックアップを Microsoft Azure に SQL Server](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)   
- [Microsoft Azure に格納されているバックアップからの復元](../../relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md)  
+ [Microsoft Azure に格納されたバックアップからの復元](../../relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md)  
   
   

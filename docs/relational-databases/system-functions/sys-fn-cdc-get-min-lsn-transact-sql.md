@@ -21,10 +21,10 @@ ms.assetid: bd49e28a-128b-4f6b-8545-6a2ec3f4afb3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 52c6b8d2db395560524c2a9fa46aca680ca9eea2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68046404"
 ---
 # <a name="sysfn_cdc_get_min_lsn-transact-sql"></a>fn_cdc_get_min_lsn (Transact-sql)
@@ -46,9 +46,9 @@ sys.fn_cdc_get_min_lsn ( 'capture_instance_name' )
  キャプチャ インスタンスの名前を指定します。 *capture_instance_name*は**sysname**です。  
   
 ## <a name="return-types"></a>戻り値の型  
- **binary (10)**  
+ **binary(10)**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  キャプチャ インスタンスが存在しない場合、または、キャプチャ インスタンスに関連付けられた変更データにアクセスするための権限が呼び出し元にない場合は、0x00000000000000000000 が返されます。  
   
  通常、この関数は、キャプチャインスタンスに関連付けられた変更データキャプチャタイムラインの下端を識別するために使用されます。 また、この関数を使用すると、変更データを要求する前に、クエリ範囲のエンドポイントがキャプチャインスタンスのタイムライン内に収まることを検証することもできます。 変更テーブルでクリーンアップが実行されると、キャプチャ インスタンスの下端が変わるため、こうしたチェックを実行することは重要です。 変更データの要求間の時間が重要である場合、前の変更データ要求の最上位エンドポイントに設定されている低いエンドポイントでも、現在のタイムラインの外部にある可能性があります。  
@@ -96,6 +96,6 @@ GO
   
 ## <a name="see-also"></a>参照  
  [fn_cdc_get_max_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   
- [トランザクションログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)  
+ [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)  
   
   
