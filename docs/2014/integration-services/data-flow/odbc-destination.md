@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9de91ba98533e82fbf63376ed6d9c56ad73a000c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771028"
 ---
 # <a name="odbc-destination"></a>ODBC 入力先
@@ -26,7 +26,7 @@ ms.locfileid: "62771028"
   
  ODBC 入力先には、1 つの標準出力と 1 つのエラー出力があります。  
   
-##  <a name="BKMK_odbcdestination_loadoptions"></a> 読み込みオプション  
+##  <a name="load-options"></a><a name="BKMK_odbcdestination_loadoptions"></a> 読み込みオプション  
  ODBC 入力先先は、2 つのアクセス読み込みモジュールのうちどちらかを使用できます。 [ODBC ソース エディター &#40;[接続マネージャー] ページ&#41;](../odbc-source-editor-connection-manager-page.md)。 次の 2 つのモードがあります。  
   
 -   **バッチ**: このモードでは、ODBC 入力先は、把握した ODBC プロバイダーの機能に基づいて、最も効率的な挿入方法を使用します。 最新の ODBC プロバイダーの場合、これは、パラメーターを設定した INSERT ステートメントを準備し、行方向の配列パラメーター バインドを使用する方法です (このとき、配列のサイズは **BatchSize** プロパティによって制御します)。 **[バッチ]** を選択したが、この方法がプロバイダーでサポートされていない場合、ODBC 入力先は自動的に **[行ごと]** モードに切り替わります。  
@@ -75,11 +75,11 @@ ms.locfileid: "62771028"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [ODBC 変換先エディター &#40;エラー出力ページ&#41;](../odbc-destination-editor-error-output-page.md)  
+-   [ODBC 変換先エディター &#40;[エラー出力] ページ&#41;](../odbc-destination-editor-error-output-page.md)  
   
--   [ODBC 変換先エディター &#40;マッピングページ&#41;](../odbc-destination-editor-mappings-page.md)  
+-   [ODBC 変換先エディター &#40;[マッピング] ページ&#41;](../odbc-destination-editor-mappings-page.md)  
   
--   [ODBC 変換先エディター &#40;接続マネージャーページ&#41;](../odbc-destination-editor-connection-manager-page.md)  
+-   [ODBC 変換先エディター &#40;[接続マネージャー] ページ&#41;](../odbc-destination-editor-connection-manager-page.md)  
   
 -   [ODBC 入力先を使用したデータ読み込み](odbc-destination.md)  
   

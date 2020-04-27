@@ -19,14 +19,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 678b14b224f994c834630a398767fee1ea360870
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62768222"
 ---
 # <a name="install-integration-services"></a>Integration Services のインストール
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]には、を含む[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、すべてまたはすべてのコンポーネントをインストールするための単一のセットアッププログラムが用意されています。 セットアップによって、他の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コンポーネントと共にまたは単独で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を 1 台のコンピューターにインストールできます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]を含む任意またはすべてのコンポーネントを 1 つのセットアップ プログラムでインストールできます。 セットアップによって、他の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コンポーネントと共にまたは単独で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を 1 台のコンピューターにインストールできます。  
   
  このトピックでは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]をインストールする前に知っておく必要がある重要な注意点について説明します。 このトピックの情報を参考にして各インストール オプションを評価することにより、インストール時に適切な選択を行うことができます。  
   
@@ -44,111 +44,86 @@ ms.locfileid: "62768222"
 ## <a name="selecting-an-integration-services-configuration"></a>Integration Services の構成の選択  
  次の構成で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] をインストールできます。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のインスタンスが存在しないコンピューターに [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールできます。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のインスタンスが存在しないコンピューターに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] をインストールできます。  
   
--   
-  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] は、 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] または [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]の既存のインスタンスとサイド バイ サイドでインストールできます。  
+-   [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] は、 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] または [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]の既存のインスタンスとサイド バイ サイドでインストールできます。  
   
-     
-  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] の以前のバージョンのいずれかが既にインストールされているコンピューターで [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] にアップグレードすると、 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] は以前のバージョンに対してサイド バイ サイドでインストールされます。  
+     [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] の以前のバージョンのいずれかが既にインストールされているコンピューターで [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] にアップグレードすると、 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] は以前のバージョンに対してサイド バイ サイドでインストールされます。  
   
-     
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]のアップグレードの詳細については、「 [Integration Services のアップグレード](upgrade-integration-services.md)」を参照してください。 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]の旧バージョンとの互換性については、「 [Integration Services の旧バージョンとの互換性](../integration-services-backward-compatibility.md)」を参照してください。  
+     [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]のアップグレードの詳細については、「 [Integration Services のアップグレード](upgrade-integration-services.md)」を参照してください。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]の旧バージョンとの互換性については、「 [Integration Services の旧バージョンとの互換性](../integration-services-backward-compatibility.md)」を参照してください。  
   
 ## <a name="installing-integration-services"></a>Integration Services のインストール  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール要件を検討し、コンピューターがそれらの要件を満たしていることを確認したら、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]のインストールの準備は完了です。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール要件を検討し、コンピューターがそれらの要件を満たしていることを確認したら、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]のインストールの準備は完了です。  
   
 > [!NOTE]  
->  以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールすると、既定で Users グループの全ユーザーが [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスにアクセスできました。 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]をインストールした場合、ユーザーは [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスにアクセスできません。 このサービスは既定で保護されます。 を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インストールした後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、管理者は、DCOM 構成ツール (dcomcnfg.exe) を実行して、特定のユーザーに**SQL Server Integration Services 12.0**へのアクセス権を付与する必要があります。  
+>  以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールすると、既定で Users グループの全ユーザーが [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスにアクセスできました。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]をインストールした場合、ユーザーは [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスにアクセスできません。 このサービスは既定で保護されます。 を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インストールした後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、管理者は、DCOM 構成ツール (dcomcnfg.exe) を実行して、特定のユーザーに**SQL Server Integration Services 12.0**へのアクセス権を付与する必要があります。  
 >   
 >  アクセス許可を付与する方法については、「 [Grant Permissions to Integration Services Service](../grant-permissions-to-integration-services-service.md)」を参照してください。  
   
  セットアップ ウィザードを使用して [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]をインストールする場合は、一連のページを使用してコンポーネントとオプションを指定します。 次に、セットアップウィザードのページを示します。選択したオプションは、選択[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]に関する推奨事項を使用したのインストールに影響します。  
   
--   **特徴選択**  
+-   **機能の選択**  
   
-     
-  **サービスをインストールしてデザイン環境外部でパッケージを実行するには、** [Integration Services] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] を選択します。  
+     **サービスをインストールしてデザイン環境外部でパッケージを実行するには、** [Integration Services] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] を選択します。  
   
-     
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]の完全インストール (パッケージの開発と管理に必要なツールやドキュメントを含んだインストール) を実行するには、 **[Integration Services]** と次の **[共有機能]** の両方を選択します。  
+     [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]の完全インストール (パッケージの開発と管理に必要なツールやドキュメントを含んだインストール) を実行するには、 **[Integration Services]** と次の **[共有機能]** の両方を選択します。  
   
-    -   パッケージをデザインするためのツールをインストールする**SQL Server Data Tools**ます。  
+    -   **[[SQL Server Data Tools]]** : パッケージをデザインするためのツールをインストールします。  
   
-    -   **管理ツール-完全**にインストール[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]して、パッケージを管理します。  
+    -   **[管理ツール - 完全]** : パッケージを管理するための [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] をインストールします。  
   
-    -   **クライアントツール SDK** 。プログラミング用[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]にマネージアセンブリをインストールします。  
+    -   **[クライアント ツール SDK]** : [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プログラミング用にマネージド アセンブリをインストールします。  
   
      多くの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データウェアハウスソリューション[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]では、、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、などの追加コンポーネントをインストールする必要もあります。  
   
     > [!NOTE]  
-    >  セットアップ ウィザードの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][機能の選択]** ページでインストールを選ぶことができる一部の ** コンポーネントで、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コンポーネントのサブセットの一部がインストールされます。 これらのコンポーネントを使用して一部のタスクを実行することは可能ですが、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のすべての機能は使用できません。 たとえば、 **[データベース エンジン サービス]** オプションを選択すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] インポートおよびエクスポート ウィザードに必要な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントがインストールされます。 
-  **[SQL Server Data Tools]** オプションを選択すると、パッケージのデザインに必要な [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コンポーネントはインストールされますが、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスはインストールされないので、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]外でパッケージを実行することはできません。 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]を完全にインストールするには、 **[機能の選択]** ページで **[Integration Services]** を選択する必要があります。  
+    >  セットアップ ウィザードの **[機能の選択]** ページでインストールを選ぶことができる一部の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントで、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コンポーネントのサブセットの一部がインストールされます。 これらのコンポーネントを使用して一部のタスクを実行することは可能ですが、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のすべての機能は使用できません。 たとえば、 **[データベース エンジン サービス]** オプションを選択すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] インポートおよびエクスポート ウィザードに必要な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントがインストールされます。 **[SQL Server Data Tools]** オプションを選択すると、パッケージのデザインに必要な [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コンポーネントはインストールされますが、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスはインストールされないので、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]外でパッケージを実行することはできません。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]を完全にインストールするには、 **[機能の選択]** ページで **[Integration Services]** を選択する必要があります。  
   
-     **64 ビットコンピューターへののインストール**64ビットコンピューターで**Integration Services**を選択すると、64ビットのランタイムとツールのみがインストールされます。 パッケージを 32 ビット モードで実行する必要がある場合は、追加のオプションを選択して 32 ビットのランタイムとツールもインストールする必要があります。  
+     **64 ビット コンピューターでのインストール** 64 ビット コンピューターでは、 **[Integration Services]** を選択すると、64 ビットのランタイムとツールのみがインストールされます。 パッケージを 32 ビット モードで実行する必要がある場合は、追加のオプションを選択して 32 ビットのランタイムとツールもインストールする必要があります。  
   
     -   64ビットのコンピューターで x86 オペレーティングシステムが実行されている場合は、[ **SQL Server Data Tools** ] または [**管理ツール-完全**] を選択します。  
   
     -   64ビットのコンピューターで[!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]オペレーティングシステムが実行されている場合は、[**管理ツール-完全**] を選択します。  
   
-     **ETL 専用サーバーへ**ののインストールETL (抽出、変換、読み込み) プロセス専用のサーバーを使用するには、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインストール[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]時にのローカルインスタンスをインストールすることをお勧めします。 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、通常、パッケージを [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに格納し、このパッケージのスケジュールを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントに依存して設定します。 ETL サーバーに [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスが存在しない場合は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスが存在するサーバーからパッケージのスケジュール設定や実行を行う必要があります。 つまり、パッケージは、ETL サーバーではなく、パッケージが開始されたサーバーで実行されます。 その結果、専用の ETL サーバーのリソースは意図したとおりに使用されません。 さらに、他のサーバーのリソースが実行中の ETL プロセスによって使用される場合もあります。  
+     **ETL 専用のサーバーでのインストール** ETL (抽出、変換、読み込み) プロセス専用のサーバーを使用するには、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインストール時に [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]のローカル インスタンスをインストールすることをお勧めします。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、通常、パッケージを [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに格納し、このパッケージのスケジュールを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントに依存して設定します。 ETL サーバーに [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスが存在しない場合は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスが存在するサーバーからパッケージのスケジュール設定や実行を行う必要があります。 つまり、パッケージは、ETL サーバーではなく、パッケージが開始されたサーバーで実行されます。 その結果、専用の ETL サーバーのリソースは意図したとおりに使用されません。 さらに、他のサーバーのリソースが実行中の ETL プロセスによって使用される場合もあります。  
   
--   **[インスタンスの構成]**  
+-   **インスタンスの構成**  
   
-     
-  **[インスタンスの構成]** ページで行う選択は、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] または [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスに影響しません。  
+     **[インスタンスの構成]** ページで行う選択は、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] または [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスに影響しません。  
   
-     
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスのインスタンスは 1 台のコンピューターに 1 つだけインストールできます。 サービスに接続するには、コンピューター名を使用します。  
+     [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスのインスタンスは 1 台のコンピューターに 1 つだけインストールできます。 サービスに接続するには、コンピューター名を使用します。  
   
-     既定では、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは、 **と同時にインストールされるデータベース エンジンのインスタンスの** msdb [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]データベースに格納されているパッケージを管理するように構成されます。 データベース エンジンのインスタンスが [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]と同時にインストールされない場合、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは、 **の既定のローカル インスタンスの** msdb [!INCLUDE[ssDE](../../includes/ssde-md.md)]データベースに格納されているパッケージを管理するように構成されます。 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]の名前付きインスタンスまたはリモート インスタンス、あるいは [!INCLUDE[ssDE](../../includes/ssde-md.md)]の複数のインスタンスに格納されているパッケージを管理するには、構成ファイルを変更する必要があります。 この構成ファイルを変更する方法については、「[Integration Services サービスの構成 &#40;SSIS サービス&#41;](../service/integration-services-service-ssis-service.md)」を参照してください。  
+     既定では、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは、 **と同時にインストールされるデータベース エンジンのインスタンスの** msdb [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]データベースに格納されているパッケージを管理するように構成されます。 データベース エンジンのインスタンスが [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]と同時にインストールされない場合、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは、 **の既定のローカル インスタンスの** msdb [!INCLUDE[ssDE](../../includes/ssde-md.md)]データベースに格納されているパッケージを管理するように構成されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の名前付きインスタンスまたはリモート インスタンス、あるいは [!INCLUDE[ssDE](../../includes/ssde-md.md)]の複数のインスタンスに格納されているパッケージを管理するには、構成ファイルを変更する必要があります。 この構成ファイルを変更する方法については、「[Integration Services サービスの構成 &#40;SSIS サービス&#41;](../service/integration-services-service-ssis-service.md)」を参照してください。  
   
 -   **サーバーの構成**  
   
-     
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] [サーバーの構成] **ページの** [サービス アカウント] **タブで、** サービスの設定を確認します。  
+     [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] [サーバーの構成] **ページの** [サービス アカウント] **タブで、** サービスの設定を確認します。  
   
      Windows 7 または Windows Server 2008 R2 がインストールされ[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]ている場合、サービスは NT Services\MsDtsServer120 仮想アカウントで実行するように登録され、**スタートアップの種類**は [**自動**] になります。  仮想アカウントのパスワードを入力する必要はありません。 Microsoft Vista または Windows Server 2008 がインストールされている場合、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは、ネットワーク サービス ビルトイン アカウントを使用して実行するように登録されており、 **[スタートアップの種類]** は **[自動]** になっています。 ネットワーク サービス ビルトイン アカウントのパスワードを入力する必要はありません。  
   
- 既定では、新規インストールで、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] はパッケージの実行に関連するイベントをアプリケーション イベント ログに記録しないように構成されます。 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のデータ コレクター機能を使用すると、この設定により、大量のイベント ログ エントリは生成されません。 ログに記録されないイベントは、EventID 12288 の "パッケージが起動されました。" や EventID 12289 の "パッケージが正常に完了しました。" です。 これらのイベントをアプリケーション イベント ログに記録するには、レジストリを編集用に開きます。 次に、レジストリ内で HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\SSIS ノードを見つけ、LogPackageExecutionToEventLog 設定の DWORD 値を 0 から 1 に変更します。  
+ 既定では、新規インストールで、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] はパッケージの実行に関連するイベントをアプリケーション イベント ログに記録しないように構成されます。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のデータ コレクター機能を使用すると、この設定により、大量のイベント ログ エントリは生成されません。 ログに記録されないイベントは、EventID 12288 の "パッケージが起動されました。" や EventID 12289 の "パッケージが正常に完了しました。" です。 これらのイベントをアプリケーション イベント ログに記録するには、レジストリを編集用に開きます。 次に、レジストリ内で HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\SSIS ノードを見つけ、LogPackageExecutionToEventLog 設定の DWORD 値を 0 から 1 に変更します。  
   
 ## <a name="understanding-the-integration-services-service"></a>Integration Services サービスについて  
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] によって [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスがインストールされます。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] によって [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスがインストールされます。  
   
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] [機能の選択] **ページで** [Integration Services] **オプションを選択すると、** サービスがインストールされます。 
-  **[サーバーの構成]** ページで既定の設定をそのまま使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが有効になり、その **[スタートアップの種類]** が **[自動]** になります。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] [機能の選択] **ページで** [Integration Services] **オプションを選択すると、** サービスがインストールされます。 **[サーバーの構成]** ページで既定の設定をそのまま使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが有効になり、その **[スタートアップの種類]** が **[自動]** になります。  
   
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスのインスタンスは 1 台のコンピューターに 1 つだけインストールできます。 このサービスは、データベース エンジンの特定のインスタンスに固有ではありません。 サービスに接続するには、サービスが実行されているコンピューターの名前を使用します。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスのインスタンスは 1 台のコンピューターに 1 つだけインストールできます。 このサービスは、データベース エンジンの特定のインスタンスに固有ではありません。 サービスに接続するには、サービスが実行されているコンピューターの名前を使用します。  
   
 ## <a name="installing-integration-services-on-64-bit-computers"></a>64 ビット コンピューターへの Integration Services のインストール  
   
 ### <a name="integration-services-features-installed-on-64-bit-computers"></a>64 ビット コンピューターにインストールされる Integration Services 機能  
  セットアップにより、選択したセットアップ オプションに基づいてさまざまな [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 機能がインストールされます。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールし、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] をインストールするように選択した場合、使用可能な 64 ビットの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 機能とツールがすべてインストールされます。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールし、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] をインストールするように選択した場合、使用可能な 64 ビットの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 機能とツールがすべてインストールされます。  
   
--   
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデザイン時機能が必要な場合は、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]もインストールする必要があります。  
+-   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデザイン時機能が必要な場合は、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]もインストールする必要があります。  
   
 -   特定のパッケージを 32 ビット モードで実行するために 32 ビット版の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ランタイムおよびツールが必要な場合は、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]もインストールする必要があります。  
   
  64 ビット バージョンの機能は、 **Program Files** ディレクトリに格納されます。32 ビット バージョンの機能は、 **Program Files (x86)** ディレクトリに別個にインストールされます。 この動作は [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に固有の動作ではありません。  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの 32 ビット開発環境であるは、 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 64 ビット オペレーティング システムではサポートされていないので、 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] サーバーにはインストールされません。  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの 32 ビット開発環境であるは、 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 64 ビット オペレーティング システムではサポートされていないので、 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] サーバーにはインストールされません。  
   
   

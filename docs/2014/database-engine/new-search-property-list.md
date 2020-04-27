@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 2aff15a42c8bffeb5a54e92b9ce7a09ace282ce4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774504"
 ---
 # <a name="new-search-property-list"></a>新しい検索プロパティ リスト
@@ -26,16 +26,16 @@ ms.locfileid: "62774504"
  **[検索プロパティ リスト名]**  
  検索プロパティ リストの名前を入力します。  
   
- **[所有者]**  
+ **所有者**  
  検索プロパティ リストの所有者を指定します。 自分自身 (現在のユーザー) に所有権を割り当てる場合は、このフィールドを空のままにします。 別のユーザーを指定するには、参照ボタンをクリックします。  
   
 ### <a name="create-search-property-list-options"></a>検索プロパティ リストの作成オプション  
  以下のいずれかのオプションをクリックします。  
   
- **空の検索プロパティリストを作成する**  
+ **[空の検索プロパティ リストを作成する]**  
  プロパティが指定されていない検索プロパティ リストを作成します。  
   
- **既存の検索プロパティリストから作成する**  
+ **[既存の検索プロパティ リストから作成する]**  
  既存の検索のプロパティ リストのプロパティを新しいプロパティ リストにコピーします。 検索プロパティ リストはデータベース オブジェクトであるため、コピーするプロパティ リストを含むデータベースを指定する必要があります。  
   
  **ソースデータベース**  
@@ -53,6 +53,6 @@ ms.locfileid: "62774504"
 ## <a name="see-also"></a>参照  
  [Transact-sql&#41;&#40;の検索プロパティリストの作成](/sql/t-sql/statements/create-search-property-list-transact-sql)   
  [検索プロパティリストを使用したドキュメントプロパティの検索](../relational-databases/search/search-document-properties-with-search-property-lists.md)   
- [registered_search_property_lists &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql)  
+ [sys.registered_search_property_lists &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql)  
   
   

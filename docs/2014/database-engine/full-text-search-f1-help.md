@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 447b91ee1aa99642647dd1377976feef026b9a08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62778953"
 ---
 # <a name="full-text-search-f1-help"></a>フルテキスト検索の F1 ヘルプ
@@ -31,9 +31,9 @@ ms.locfileid: "62778953"
   
 ## <a name="see-also"></a>参照  
  [フルテキスト検索](../relational-databases/search/full-text-search.md)   
- [Transact-sql&#41;&#40;のフルテキストカタログの作成](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)   
- [Transact-sql&#41;&#40;のフルテキストインデックスの作成](/sql/t-sql/statements/create-fulltext-index-transact-sql)   
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)   
+ [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)   
  [Transact-sql&#41;&#40;のフルテキストストップリストの作成](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)   
- [Transact-sql&#41;&#40;の検索プロパティリストの作成](/sql/t-sql/statements/create-search-property-list-transact-sql)  
+ [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql)  
   
   

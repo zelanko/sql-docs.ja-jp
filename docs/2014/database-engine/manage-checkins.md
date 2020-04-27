@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 767e89a777fc530d4622a32f31c984d0e48004ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774294"
 ---
 # <a name="manage-checkins"></a>チェックインの管理
@@ -28,7 +28,7 @@ ms.locfileid: "62774294"
   
  このトピックでは、次の内容について紹介します。  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[ファイルのチェックイン](../../2014/database-engine/check-in-files.md)|修正したファイルをチェックインする方法を説明します。|  
 |[変更されたファイルの一覧表示](../../2014/database-engine/view-a-list-of-modified-files.md)|修正が加えられているファイルの一覧を表示する方法、および作業の終了時にそれらのファイルを一度にチェックインする方法を説明します。|  

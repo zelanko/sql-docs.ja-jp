@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4bf9e58296b70f29e3e328782b463ecbbf7f6aab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770345"
 ---
 # <a name="pivot-transformation"></a>ピボット変換
@@ -45,7 +45,7 @@ ms.locfileid: "62770345"
   
  入力データには重複する行が含まれる場合があります。重複する行があると、ピボット変換は失敗します。 "重複する行" とは、設定キー列およびピボット列に同じ値を持つ行のことです。 エラーを回避するには、エラー行をエラー出力にリダイレクトするように変換を構成するか、重複する行が存在しないように値を事前に集計しておくことができます。  
   
-##  <a name="options"></a> [ピボット] ダイアログ ボックスのオプション  
+##  <a name="options-in-the-pivot-dialog-box"></a><a name="options"></a> [ピボット] ダイアログ ボックスのオプション  
  ピボット操作を構成するには、 **[ピボット]** ダイアログ ボックスのオプションを設定します。 **[ピボット]** ダイアログ ボックスを開くには、 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]でパッケージにピボット変換を追加し、コンポーネントを右クリックして **[編集]** をクリックします。  
   
  **[ピボット]** ダイアログ ボックスのオプションは次のとおりです。  
@@ -62,8 +62,7 @@ ms.locfileid: "62770345"
  **一致しないピボット キー値を無視して DataFlow の実行後に報告する**  
  パッケージが実行されるときに、 **[ピボット キー]** 列に不明な値が含まれている行を無視して、ピボット キーの値をすべてログ メッセージに出力するようにピボット変換を構成するには、このオプションを選択します。  
   
- 
-  `PassThroughUnmatchedPivotKeys` カスタム プロパティを `True` に設定することで、値を出力するように変換を構成することもできます。  
+ `PassThroughUnmatchedPivotKeys` カスタム プロパティを `True` に設定することで、値を出力するように変換を構成することもできます。  
   
  **値からピボット出力列を生成**  
  ピボット変換によって出力列が値ごとに作成されるようにするには、このボックスにピボット キーの値を入力します。 パッケージを実行する前に値を入力するか、または次の操作を実行できます。  

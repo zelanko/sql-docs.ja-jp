@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f34631e979ded7a329939c23a758ccc0c9aea959
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773478"
 ---
 # <a name="specify-a-version-as-the-latest-version"></a>特定のバージョンを最新バージョンとして指定する
@@ -42,8 +42,7 @@ ms.locfileid: "62773478"
   
 4.  [ファイル>**の** \<履歴] ダイアログボックスで、最新バージョンとして指定するバージョンを選択し、[**ピン留め**] をクリックします。  
   
-     選択したバージョンの横に、それがファイルの最新バージョンであることを示すピンの記号が表示されます。 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] に別のバージョンが読み込まれている場合は、ファイルの再読み込みのための画面が表示されます。  
+     選択したバージョンの横に、それがファイルの最新バージョンであることを示すピンの記号が表示されます。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] に別のバージョンが読み込まれている場合は、ファイルの再読み込みのための画面が表示されます。  
   
 ### <a name="to-roll-back-to-a-version"></a>特定のバージョンにロールバックするには  
   

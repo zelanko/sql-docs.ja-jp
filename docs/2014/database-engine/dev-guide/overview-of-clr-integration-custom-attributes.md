@@ -17,14 +17,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8df7881dd5f38935628cb6653d57763a8846e60f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62781107"
 ---
 # <a name="overview-of-clr-integration-custom-attributes"></a>CLR 統合のカスタム属性の概要
-  
   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の CLR (共通言語ランタイム) では、属性という説明用のキーワードを使用できます。 これらの属性は、メソッドやクラスなどの多くの要素に関する追加情報を提供します。 属性はオブジェクトのメタデータと共にアセンブリに保存され、記述したコードを他の開発ツールに説明したり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部での実行時の動作に影響することを説明するために使用できます。  
   
  CLR ルーチンを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に登録すると、そのルーチンに関する一連のプロパティが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により抽出されます。 これらのプロパティによって、ルーチンにインデックスを作成できるかどうかなど、そのルーチンの機能が決まります。 たとえば、`DataAccess` プロパティを `DataAccessKind.Read` に設定すると、CLR 関数内から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザー テーブルのデータにアクセスできるようになります。 次の例は、ユーザーテーブル**table1**からの`DataAccess`データアクセスを容易にするために、プロパティが設定されている単純なケースを示しています。  
@@ -85,9 +84,7 @@ Public partial Class UserDefinedFunctions
 End Class  
 ```  
   
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] ルーチンの場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により、ルーチン定義から直接ルーチンのプロパティが抽出されます。 CLR ルーチンの場合は、これらのプロパティを抽出するときに、サーバーでルーチン本体が分析されません。 
-  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 言語で実装されているクラスとクラスのメンバーには、カスタム属性を使用できます。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] ルーチンの場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により、ルーチン定義から直接ルーチンのプロパティが抽出されます。 CLR ルーチンの場合は、これらのプロパティを抽出するときに、サーバーでルーチン本体が分析されません。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 言語で実装されているクラスとクラスのメンバーには、カスタム属性を使用できます。  
   
  CLR ルーチン、ユーザー定義型、およびユーザー定義集計に必要なカスタム属性は、`Microsoft.SqlServer.Server` 名前空間で定義します。  
   

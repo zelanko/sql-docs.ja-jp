@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2057c78f953645c9b1a5915b9912ab99263cb005
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773398"
 ---
 # <a name="undo-checkouts"></a>チェックアウトの取り消し
@@ -45,10 +45,10 @@ ms.locfileid: "62773398"
      **名前**  
      チェックアウトを取り消す項目の名前を表示します。 選択した項目の横にチェックボックスが表示されます。 項目のチェックアウトを取り消さない場合は、チェック ボックスをオフにします。  
   
-     **オプション**  
+     **[オプション]**  
      ボタンの右側の矢印をクリックすると、ソース管理のプラグインに固有のチェックアウトの取り消しオプションが表示されます。  
   
-     **並べ替え**  
+     **基づく**  
      表示列の順序を並べ替えます。  
   
      **[ツリー表示]**  

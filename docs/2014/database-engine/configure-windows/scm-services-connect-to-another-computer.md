@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4305438285ae5f3b51ab8ac51ec2b1d0699aee64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62810350"
 ---
 # <a name="connect-to-another-computer-sql-server-configuration-manager"></a>別のコンピューターへの接続 (SQL Server 構成マネージャー)
@@ -31,11 +31,9 @@ ms.locfileid: "62810350"
   
 #### <a name="to-connect-to-another-computer-with-windows-computer-management"></a>Windows のコンピューターの管理を使用して別のコンピューターに接続するには  
   
-1.  
-  **[スタート]** メニューで **[マイ コンピューター]** を右クリックし、 **[管理]** をクリックします。  
+1.  **[スタート]** メニューで **[マイ コンピューター]** を右クリックし、 **[管理]** をクリックします。  
   
-2.  
-  **[コンピューターの管理]** で **[コンピューターの管理 (ローカル)]** を右クリックし、 **[別のコンピューターへ接続]** をクリックします。  
+2.  **[コンピューターの管理]** で **[コンピューターの管理 (ローカル)]** を右クリックし、 **[別のコンピューターへ接続]** をクリックします。  
   
 3.  **[コンピューターの選択]** ダイアログ ボックスの **[別のコンピューター]** ボックスに管理するコンピューターの名前を入力し、 **[OK]** をクリックします。  
   
@@ -61,8 +59,7 @@ ms.locfileid: "62810350"
   
 8.  **[スナップインの追加と削除]** ウィンドウで **[OK]** をクリックします。  
   
-9. 
-  **[コンピューターの管理 (***\<コンピューター名>***)]**、**[サービスとアプリケーション]** の順に展開します。  
+9. **[コンピューターの管理 (***\<コンピューター名>***)]**、**[サービスとアプリケーション]** の順に展開します。  
   
 10. **[SQL Server 構成マネージャー]** を右クリックして、 **[ここから新しいウィンドウ]** をクリックします。  
   

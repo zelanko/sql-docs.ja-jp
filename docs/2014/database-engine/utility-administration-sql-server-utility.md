@@ -11,15 +11,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6da38b25ca23302c8b683a5c9b54ed2b6f88f6b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773754"
 ---
 # <a name="utility-administration-sql-server-utility"></a>ユーティリティの管理 (SQL Server ユーティリティ)
-  ユーティリティの管理の各タブでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティのポリシー設定、セキュリティ設定、およびデータ ウェアハウス設定を管理できます。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティの概念の詳細については、「 [SQL Server ユーティリティの機能とタスク](../relational-databases/manage/sql-server-utility-features-and-tasks.md)」を参照してください。  
+  ユーティリティの管理の各タブでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティのポリシー設定、セキュリティ設定、およびデータ ウェアハウス設定を管理できます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティの概念の詳細については、「 [SQL Server ユーティリティの機能とタスク](../relational-databases/manage/sql-server-utility-features-and-tasks.md)」を参照してください。  
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
  [ポリシー] タブ - このタブでは、グローバル監視ポリシーを表示または指定できます。  
@@ -63,7 +62,7 @@ ms.locfileid: "62773754"
 -   コンピューターのボリューム領域使用率の既定の最小値は 0% です。  
   
  [変動の激しいリソースによって生じるポリシー違反ノイズの軽減] : この機能のコントロールを表示するには、画面の右側にある下向き矢印をクリックします。  
- 詳細については、「[CPU 使用率のポリシーにおけるノイズの軽減 &#40;SQL Server ユーティリティ&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)」を参照してください。  
+ 詳細については、「 [CPU 使用率のポリシー &#40;SQL Server ユーティリティのノイズを減らす](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)」を参照してください&#41;  
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
  [セキュリティ] タブ - UCP の管理または読み取りの権限とログイン名が表示されます。  
@@ -71,8 +70,7 @@ ms.locfileid: "62773754"
  [Utility Reader ロールに追加される UCP のログインを選択する]  
  Utility Reader 特権があるユーザー アカウントでは、以下のことが可能です。  
   
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティに接続する  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティに接続する  
   
 -   SSMS のユーティリティ エクスプローラーで、すべてのビューポイントを表示する  
   
@@ -80,19 +78,16 @@ ms.locfileid: "62773754"
   
  ユーティリティ管理者は、SQL Server のインスタンスを SQL Server ユーティリティに登録したり、SQL Server のインスタンスを SQL Server ユーティリティから削除したりできるほか、マネージド インスタンスのポリシーの変更や UCP の管理設定の変更が可能です。  
   
- ユーティリティ管理者になるには、SQL Server のインスタンスに対する sysadmin 特権が必要です。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] UCP のユーザー アカウントを追加または変更するには、SSMS のオブジェクト エクスプローラーを使用して、SQL Server の UCP インスタンスのサーバー ログインにユーザーを追加します。 詳細については、「[sp_addlogin &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogin-transact-sql)」を参照してください。  
+ ユーティリティ管理者になるには、SQL Server のインスタンスに対する sysadmin 特権が必要です。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] UCP のユーザー アカウントを追加または変更するには、SSMS のオブジェクト エクスプローラーを使用して、SQL Server の UCP インスタンスのサーバー ログインにユーザーを追加します。 詳細については、「[sp_addlogin &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogin-transact-sql)」を参照してください。  
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
  [データ ウェアハウス] タブ - ユーティリティ管理データ ウェアハウスの構成の詳細が表示されます。  
   
  データ保有期間  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のマネージド インスタンス用に収集された使用率情報のデータ保有期間を指定します。 既定の期間は 1 年です。 最小値は 1 か月です。 指定可能な最長期間は 2 年です。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のマネージド インスタンス用に収集された使用率情報のデータ保有期間を指定します。 既定の期間は 1 年です。 最小値は 1 か月です。 指定可能な最長期間は 2 年です。  
   
  [ユーティリティ データ ウェアハウスの構成情報]  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のこのリリースで構成できない構成設定は次のとおりです。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のこのリリースで構成できない構成設定は次のとおりです。  
   
 -   UMDW name: Sysutility_mdw_\<GUID>_DATA.  
   
@@ -101,7 +96,7 @@ ms.locfileid: "62773754"
  UMDW ディレクトリ \<System drive>:\Program Files\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\ (通常、\<System drive> は C:\ ドライブ) は構成可能です。 ログ ファイル UMDW_\<GUID>_LOG は同じディレクトリにあります。  
   
 > [!NOTE]  
->  UMDW (sysutility_mdw) ファイルの場所を変更するには、デタッチとアタッチを使用する方法と ALTER DATABASE を使用する方法があります。 ALTER DATABASE の使用をお勧めします。 詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)」を参照してください。  
+>  UMDW (sysutility_mdw) ファイルの場所を変更するには、デタッチとアタッチを使用する方法と ALTER DATABASE を使用する方法があります。 ALTER DATABASE の使用をお勧めします。 詳細については、「 [ALTER DATABASE &#40;transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)」を参照してください。  
   
  [追加設定なしの既定値に戻す]  
  このタブの設定を既定値にリセットするには、 **[既定値に戻す]** ボタンをクリックし、 **[適用]** をクリックします。  

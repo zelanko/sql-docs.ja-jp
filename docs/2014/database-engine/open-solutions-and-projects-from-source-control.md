@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dc6e728ff40d61f2139115c642e0841a3685207f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774782"
 ---
 # <a name="open-solutions-and-projects-from-source-control"></a>ソース管理からソリューションやプロジェクトを開く方法
@@ -27,10 +27,9 @@ ms.locfileid: "62774782"
   
  このトピックでは、次の内容について紹介します。  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
-|[ソース管理からソリューションを開く](../../2014/database-engine/open-solutions-from-source-control.md)|
-  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 環境を使用してソリューションをソース管理から直接開く方法を説明しています。|  
+|[ソース管理からソリューションを開く](../../2014/database-engine/open-solutions-from-source-control.md)|[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 環境を使用してソリューションをソース管理から直接開く方法を説明しています。|  
 |[ソース管理からプロジェクトを開く](../../2014/database-engine/open-projects-from-source-control.md)|プロジェクトのファイルをチェックアウトして変更できるようにするため、ソース管理からプロジェクトを開く方法を説明しています。|  
   
 ## <a name="see-also"></a>参照  

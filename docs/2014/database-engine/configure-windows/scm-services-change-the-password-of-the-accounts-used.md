@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 865c23dc88571e0c9ee317eca280286a6c37118f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62810437"
 ---
 # <a name="change-the-password-of-the-accounts-used-by-sql-server-sql-server-configuration-manager"></a>SQL Server で使用されるアカウントのパスワードの変更 (SQL Server 構成マネージャー)
@@ -31,15 +31,15 @@ ms.locfileid: "62810437"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のパスワードを変更するには、「 [[パスワードの有効期限が切れました]](../password-expired.md)」を参照してください。  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスの設定を変更するように設計および承認されたツールです。 Windows サービス コントロール マネージャー ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]services.msc **) アプリケーションを使用して**サービスを変更すると、必要なすべての設定が変更されず、サービスが適切に機能しない場合があります。 ただし、クラスター環境では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用してアクティブ ノードのパスワードを変更した後、サービス コントロール マネージャーを使用してパッシブ ノードでパスワードを変更する必要があります。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  サービスで使用されるパスワードを変更するには、コンピューターの管理者である必要があります。  
   
-##  <a name="SSMSProcedure"></a> SQL Server 構成マネージャーの使用  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> SQL Server 構成マネージャーの使用  
   
 #### <a name="to-change-the-password-used-by-the-sql-server-database-engine-service"></a>SQL Server (データベース エンジン) サービスで使用されるパスワードを変更するには  
   
@@ -51,7 +51,7 @@ ms.locfileid: "62810437"
     >  -   **Windows 10**:  
     >          Configuration Manager を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]開くには、**スタートページ**で「「sqlservermanager12.msc」 (の場合[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])」と入力します。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の場合は、12 をより小さい数値に置き換えます。 SQLServerManager12.msc をクリックすると、構成マネージャーが開きます。 Configuration Manager をスタートページまたはタスクバーにピン留めするには、「Sqlservermanager12.msc」を右クリックし、[**ファイルの場所を開く**] をクリックします。 Windows エクスプローラーで「Sqlservermanager12.msc」を右クリックし、[**スタート画面にピン留めする**] または [**タスクバーにピン留め**する] をクリックします。  
     > -   **Windows 8**:  
-    >          Configuration Manager を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]開くには、**検索**チャームで、[**アプリ**] の下に「 **SQLServerManager\<version> .msc** 」 (など) **** `SQLServerManager12.msc`と入力し、enter キーを押します。  
+    >          Configuration Manager を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]開くには、**検索**チャームで、[**アプリ**] の下に「 **SQLServerManager\<version> .msc** 」 (など) **Enter** `SQLServerManager12.msc`と入力し、enter キーを押します。  
   
 2.  SQL Server 構成マネージャーで **[SQL Server のサービス]** をクリックします。  
   

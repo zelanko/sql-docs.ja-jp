@@ -15,17 +15,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 36f447ce365f25135a521ea7e1760599aa17f9bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62812596"
 ---
 # <a name="compare-files"></a>ファイルの比較
   ファイルを比較して、ファイルがどのような過程で現在の状態になったのかを確認できます。 たとえば、ソース ファイルのバージョンをチェックインした後に、コード プロジェクトのビルドで不具合を発見した場合、現在のファイル バージョンと以前のファイル バージョンを比較できます。 そうすれば、不具合を引き起こしたコードの位置を正確に検出できます。  
   
- 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を使用して、プロジェクトまたはファイルのローカル コピーと、ソース管理に格納されているバージョンを比較できます。2 つのローカル ファイルを比較することもできます。 また、 **History**コマンドを使用すると、ソース管理されている2つのバージョンを比較できます。  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を使用して、プロジェクトまたはファイルのローカル コピーと、ソース管理に格納されているバージョンを比較できます。2 つのローカル ファイルを比較することもできます。 また、 **History**コマンドを使用すると、ソース管理されている2つのバージョンを比較できます。  
   
 ### <a name="to-compare-files"></a>ファイルを比較するには  
   

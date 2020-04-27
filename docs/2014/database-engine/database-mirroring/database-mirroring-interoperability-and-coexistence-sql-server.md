@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2f38e7bac91c4d65e9c6209d693a598466096069
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62807308"
 ---
 # <a name="database-mirroring-interoperability-and-coexistence-sql-server"></a>データベース ミラーリング: 相互運用性と共存 (SQL Server)
@@ -25,7 +25,7 @@ ms.locfileid: "62807308"
   
 -   [AlwaysOn フェールオーバー クラスター インスタンス (SQL Server フェールオーバー クラスタリング)](database-mirroring-and-sql-server-failover-cluster-instances.md)  
   
--   [変更データキャプチャ (および変更の追跡)](../../relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md)  
+-   [変更データ キャプチャと変更の追跡](../../relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md)  
   
 -   [データベース スナップショット](../../relational-databases/databases/database-snapshots-sql-server.md)  
   
@@ -44,6 +44,6 @@ ms.locfileid: "62807308"
 -   [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]  
   
 ## <a name="see-also"></a>参照  
- [データベースミラーリング &#40;SQL Server&#41;](database-mirroring-sql-server.md)  
+ [データベース ミラーリング &#40;SQL Server&#41;](database-mirroring-sql-server.md)  
   
   

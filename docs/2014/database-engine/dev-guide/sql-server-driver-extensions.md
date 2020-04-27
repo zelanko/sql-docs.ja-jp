@@ -15,14 +15,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1cee588e7db1e219f3d2810e29bb77a68a21b7ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62780843"
 ---
 # <a name="sql-server-driver-extensions"></a>SQL Server ドライバーの拡張機能
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、ODBC アプリケーションから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能にアクセスできるようにするための、ドライバー固有の関数を実装しています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  

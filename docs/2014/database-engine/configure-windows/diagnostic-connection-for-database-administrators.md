@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5e8022dd9a7bd4f301ca55f60614e1b13369b804
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62810423"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>データベース管理者用の診断接続
@@ -115,24 +115,24 @@ ms.locfileid: "62810423"
   
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)  
   
- [sp_who &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql)  
+ [sp_who &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql)  
   
- [sp_lock &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-lock-transact-sql)  
+ [sp_lock &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-lock-transact-sql)  
   
- [KILL &#40;Transact-sql&#41;](/sql/t-sql/language-elements/kill-transact-sql)  
+ [KILL &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/kill-transact-sql)  
   
- [DBCC CHECKALLOC &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-checkalloc-transact-sql)  
+ [DBCC CHECKALLOC &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkalloc-transact-sql)  
   
- [DBCC CHECKDB &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)  
+ [DBCC CHECKDB &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)  
   
- [DBCC OPENTRAN &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-opentran-transact-sql)  
+ [DBCC OPENTRAN &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-opentran-transact-sql)  
   
- [DBCC INPUTBUFFER &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-inputbuffer-transact-sql)  
+ [DBCC INPUTBUFFER &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-inputbuffer-transact-sql)  
   
  [サーバー構成オプション &#40;SQL Server&#41;](server-configuration-options-sql-server.md)  
   
- [トランザクション関連の動的管理ビューおよび関数 &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql)  
+ [トランザクション関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql)  
   
- [Transact-sql&#41;&#40;トレースフラグ](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)  
+ [トレース フラグ &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)  
   
   

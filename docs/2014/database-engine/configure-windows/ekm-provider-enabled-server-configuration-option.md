@@ -15,14 +15,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 136056f848c85c2fbe8c572a5866c4e23b3a85b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62782221"
 ---
 # <a name="ekm-provider-enabled-server-configuration-option"></a>EKM provider enabled サーバー構成オプション
-  
   `EKM provider enabled` オプションは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] での拡張キー管理デバイスのサポートを制御します。 既定では、このオプションはオフになっています。  
   
  この機能を有効または無効にするには、次の `sp_configure` コマンドのいずれかを実行します。  

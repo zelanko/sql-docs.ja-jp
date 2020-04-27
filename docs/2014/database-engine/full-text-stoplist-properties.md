@@ -14,10 +14,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 4cfdd308ab7488633721ddaac55d3d926a276b0d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779409"
 ---
 # <a name="full-text-stoplist-properties"></a>[フルテキスト ストップリストのプロパティ]
@@ -28,7 +28,7 @@ ms.locfileid: "62779409"
 -   [フルテキスト検索に使用するストップワードとストップリストの構成と管理](../relational-databases/search/full-text-search.md)  
   
 ## <a name="options"></a>オプション  
- **アクション**  
+ **操作**  
  実行するアクションを指定します。  
   
  **[ストップワードの追加]**  
@@ -44,12 +44,10 @@ ms.locfileid: "62779409"
  すべての言語のストップワードをすべて削除することによって、ストップリストをクリアします。  
   
  **ストップワード**  
- 
-  **[ストップワードの追加]** または **[ストップワードの削除]** を選択した場合は、 **[ストップワード]** フィールドにストップワードを入力します。 新しいストップワードは一意である、つまり、選択した言語のこのストップリストにまだ含まれていない必要があります。  
+ **[ストップワードの追加]** または **[ストップワードの削除]** を選択した場合は、 **[ストップワード]** フィールドにストップワードを入力します。 新しいストップワードは一意である、つまり、選択した言語のこのストップリストにまだ含まれていない必要があります。  
   
  **[フルテキスト言語]**  
- 
-  **[ストップワードの追加]**、 **[ストップワードの削除]**、または **[すべてのストップワードの削除]** を選択した場合は、このリスト ボックスから、操作対象のストップワードの言語を選択します。 このリスト ボックスには、サーバー インスタンスでサポートされているすべてのフルテキスト言語が表示されます。  
+ **[ストップワードの追加]**、 **[ストップワードの削除]**、または **[すべてのストップワードの削除]** を選択した場合は、このリスト ボックスから、操作対象のストップワードの言語を選択します。 このリスト ボックスには、サーバー インスタンスでサポートされているすべてのフルテキスト言語が表示されます。  
   
 ## <a name="see-also"></a>参照  
  [fulltext_stopwords &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql)   
@@ -57,6 +55,6 @@ ms.locfileid: "62779409"
  [フルテキスト検索のためのストップワードとストップリストの構成と管理](../relational-databases/search/full-text-search.md)   
  [Transact-sql&#41;&#40;フルテキストストップリストの変更](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)   
  [Transact-sql&#41;&#40;のフルテキストストップリストの作成](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)   
- [Transact-sql&#41;&#40;のフルテキストストップリストの削除](/sql/t-sql/statements/drop-fulltext-stoplist-transact-sql)  
+ [DROP FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-fulltext-stoplist-transact-sql)  
   
   

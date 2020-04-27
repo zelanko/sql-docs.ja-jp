@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4ed2a24c72765c51e7d05fecaa5ab22c344013b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62789023"
 ---
 # <a name="agent-xps-server-configuration-option"></a>Agent XP サーバー構成オプション
@@ -36,7 +36,7 @@ ms.locfileid: "62789023"
   
  この設定は、サーバーを停止して再起動しなくてもすぐに有効になります。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの拡張ストアド プロシージャを有効にします。  
   
 ```  
@@ -52,6 +52,6 @@ GO
   
 ## <a name="see-also"></a>参照  
  [自動化された管理タスク &#40;SQL Server エージェント&#41;](../../ssms/agent/sql-server-agent.md)   
- [SQL Server エージェント サービスの開始、停止、または一時停止](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  
+ [Start, Stop, or Pause the SQL Server Agent Service](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  
   
   

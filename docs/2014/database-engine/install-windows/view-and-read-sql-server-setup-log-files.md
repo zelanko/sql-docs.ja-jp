@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d6a81258e87bf2422f3ae5a55afc5eb6429856b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774324"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>SQL Server セットアップ ログ ファイルの表示と読み取り
@@ -48,7 +48,7 @@ ms.locfileid: "62774324"
   
  次のセクションでは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップのログ ファイルを説明します。  
   
-## <a name="summary-text"></a>概要のテキスト  
+## <a name="summary-text"></a>概要テキスト  
   
 ### <a name="overview"></a>概要  
  このファイルは、セットアップ時に検出された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネント、オペレーティング システム環境、指定されているコマンド ライン パラメーター値、および実行された各 MSI/MSP の全体的な状態を示します。  
@@ -57,11 +57,9 @@ ms.locfileid: "62774324"
   
 -   実行全体の要約  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップが実行されたコンピューターのプロパティと構成  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップが実行されたコンピューターのプロパティと構成  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] そのコンピューターに以前にインストールされていた製品の機能  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] そのコンピューターに以前にインストールされていた製品の機能  
   
 -   インストールされたバージョンとインストール パッケージのプロパティ  
   
@@ -79,7 +77,7 @@ ms.locfileid: "62774324"
   
 -   ルール レポート ファイルの場所  
   
-### <a name="location"></a>Location  
+### <a name="location"></a>インストール先  
  %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Programfiles% \120\Setup Bootstrap\Log\\にあります。  
   
  概要テキスト ファイル内でエラーを見つけるには、"エラー" や "失敗" をキーワードにして検索できます。  
@@ -89,7 +87,7 @@ ms.locfileid: "62774324"
 ### <a name="overview"></a>概要  
  summary_engine の基本的なファイルは概要ファイルに似ていますが、メイン ワークフロー内で生成されます。  
   
-### <a name="location"></a>Location  
+### <a name="location"></a>インストール先  
  このファイルは、% programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\にあります。  
   
 ## <a name="summary_engine-base_yyyymmdd_hhmmss_componentupdatetxt"></a>Summary_engine-base_YYYYMMDD_HHMMss_ComponentUpdate.txt  
@@ -97,7 +95,7 @@ ms.locfileid: "62774324"
 ### <a name="overview"></a>概要  
  コンポーネントの更新概要ファイルは概要ファイルに似ていますが、コンポーネント更新ワークフロー内で生成されます。  
   
-### <a name="location"></a>Location  
+### <a name="location"></a>インストール先  
  このファイルは、% programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\にあります。  
   
 ## <a name="summary_engine-base_versionnumbermmdd_hhmmss_globalrulestxt"></a>Summary_engine-base_\<VersionNumber>MMDD_HHMMss_GlobalRules.txt  
@@ -105,7 +103,7 @@ ms.locfileid: "62774324"
 ### <a name="overview"></a>概要  
  グローバル ルール概要ファイルは概要ファイルに似ていますが、グローバル ルール ワークフロー内で生成されます。  
   
-### <a name="location"></a>Location  
+### <a name="location"></a>インストール先  
  このファイルは、% programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\にあります。  
   
 ## <a name="detailtxt"></a>Detail.txt  
@@ -113,7 +111,7 @@ ms.locfileid: "62774324"
 ### <a name="overview"></a>概要  
  Detail.txt はインストールやアップグレードなど、メイン ワークフロー内で生成され、実行の詳細を示します。 このファイル内のログは、インストールで各アクションが呼び出された時刻に基づいて生成され、アクションが実行された順序とその依存関係を示します。  
   
-### <a name="location"></a>Location  
+### <a name="location"></a>インストール先  
  % Programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup にあります。  
   
  Bootstrap\Log\\<YYYYMMDD_HHMM>\Detail.txt.  
@@ -125,7 +123,7 @@ ms.locfileid: "62774324"
 ### <a name="overview"></a>概要  
  Detail_ComponentUpdate.txt ファイルはコンポーネント更新ワークフローに対して生成され、Detail.txt に似ています。  
   
-### <a name="location"></a>Location  
+### <a name="location"></a>インストール先  
  このファイルは、% programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\にあります。  
   
 ## <a name="detail_globalrulestxt"></a>Detail_GlobalRules.txt  
@@ -133,7 +131,7 @@ ms.locfileid: "62774324"
 ### <a name="overview"></a>概要  
  Detail_GlobalRules.txt ファイルはグローバル ルール実行のために生成され、Detail.txt ファイルに似ています。  
   
-### <a name="location"></a>Location  
+### <a name="location"></a>インストール先  
  このファイルは、% programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\にあります。  
   
 ## <a name="msi-log-files"></a>MSI ログ ファイル  
@@ -143,16 +141,13 @@ ms.locfileid: "62774324"
   
  MSI ログ ファイルの種類  
   
--   
-  \<機能>_\<アーキテクチャ>\_\<相互作用>.log  
+-   \<機能>_\<アーキテクチャ>\_\<相互作用>.log  
   
--   
-  \<機能>_\<アーキテクチャ>\_\<言語>\_\<相互作用>.log  
+-   \<機能>_\<アーキテクチャ>\_\<言語>\_\<相互作用>.log  
   
--   
-  \<機能>_\<アーキテクチャ>\_\<相互作用>\_\<ワークフロー>.log  
+-   \<機能>_\<アーキテクチャ>\_\<相互作用>\_\<ワークフロー>.log  
   
-### <a name="location"></a>Location  
+### <a name="location"></a>インストール先  
  MSI\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログファイルは、% programfiles% \120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\<名\>.log にあります。  
   
  ファイルの終わりに実行の概要があり、成功したかどうかとプロパティを示します。 MSI ファイル内でエラーを見つけるには、"value 3" を検索します。通常、エラーはその文字列の近くで見つかります。  
@@ -162,7 +157,7 @@ ms.locfileid: "62774324"
 ### <a name="overview"></a>概要  
  構成ファイルにはインストール時に使用される入力の設定が含まれています。 手動で設定を入力しなくてもインストールを再起動できるようにするときに使用できます。 ただし、パスワード、PID、およびパラメーターの一部は構成ファイルには保存されません。 設定はファイルに追加できますが、コマンドラインまたはセットアップのインターフェイスを使って供給することもできます。 詳細については、「[構成ファイルを使用した SQL Server 2014 のインストール](install-sql-server-using-a-configuration-file.md)」を参照してください。  
   
-### <a name="location"></a>Location  
+### <a name="location"></a>インストール先  
  このファイルは、% programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\にあります。  
   
 ## <a name="systemconfigurationcheck_reporthtm"></a>SystemConfigurationCheck_Report.htm  
@@ -170,7 +165,7 @@ ms.locfileid: "62774324"
 ### <a name="overview"></a>概要  
  システム構成チェッカーのレポートには、実行された各ルールの簡単な記述と、実行ステータスが含まれています。  
   
-### <a name="location"></a>Location  
+### <a name="location"></a>インストール先  
  このファイルは、% programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\にあります。  
   
 ## <a name="see-also"></a>参照  

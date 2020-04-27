@@ -13,22 +13,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 34e4c29cb28f76c930f1f04152528ca1a8a89dfc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62775235"
 ---
 # <a name="validate-a-sql-server-installation"></a>SQL Server のインストールの検証
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の検出レポートは、コンピューターにインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能を確認するために使用できます。 **インストール済み[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]機能の検出レポート**には、ローカル[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]サーバー [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]にインストール[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]さ[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]れて[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]いる、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、、、、およびの各製品と機能のレポートが表示されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能の検出レポートは、 **インストール センターの** [ツール] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ページで利用できます。  
   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の検出レポートは、コンピューターにインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能を確認するために使用できます。 **インストール済み[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]機能の検出レポート**には、ローカル[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]サーバー [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]にインストール[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]さ[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]れて[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]いる、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、、、、およびの各製品と機能のレポートが表示されます。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能の検出レポートは、 **インストール センターの** [ツール] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ページで利用できます。  
+ **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能の検出レポートを実行するには**  
   
- **機能の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]検出レポートを実行するには:**  
-  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール センターを起動します。そのためには、**[スタート]** ボタンをクリックし、**[すべてのプログラム]**、[**[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \<バージョン名>]**、**[構成ツール]** の順にポイントし、**[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール センター]** をクリックします。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能の検出レポートを実行するには、**[** インストール センター]** の左側のナビゲーション領域にある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][ツール]** をクリックし、**[インストール済み [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能の検出レポート]** をクリックします。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][スタート] **メニューを使用し、** [すべてのプログラム] **、** [ **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョン名>]\<、** [構成ツール] **の順にポイントし、** [ **インストール センター][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をクリックして、** インストール センターを起動します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能の検出レポートを実行するには、 **[** インストール センター] **の左側のナビゲーション領域にある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][ツール]** をクリックし、 **[インストール済み [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能の検出レポート]** をクリックします。  
   
  検出[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]レポート\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、% ProgramFiles% \120\Setup Bootstrap\Log\\<最後のセットアップセッション\>に保存されます。  
   

@@ -13,18 +13,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d396dd41c7643991063bfa476059362c668673e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62808254"
 ---
 # <a name="continue-with-restore"></a>[復元の続行]
-  
   **[復元の続行]** ダイアログ ボックスを使用すると、次のバックアップ セットを復元するかどうかを指定できます。 テープを交換する場合など、復元操作を遅らせるには、続行する準備ができてから **[OK]** をクリックします。  
   
- 
-  **[いいえ]** をクリックすると、復元シーケンスが終了し、対象データベースは復元中の状態のままになります。 後で復元を続行するには、必要に応じて、 **[データベースの復元]** タスクまたは **[トランザクション ログの復元]** タスクのいずれかを使用します。  
+ **[いいえ]** をクリックすると、復元シーケンスが終了し、対象データベースは復元中の状態のままになります。 後で復元を続行するには、必要に応じて、 **[データベースの復元]** タスクまたは **[トランザクション ログの復元]** タスクのいずれかを使用します。  
   
 ## <a name="options"></a>オプション  
  **メディアセット**  
@@ -40,6 +38,6 @@ ms.locfileid: "62808254"
  [バックアップテープまたはファイル &#40;SQL Server の内容を表示&#41;](../relational-databases/backup-restore/view-the-contents-of-a-backup-tape-or-file-sql-server.md)   
  [論理バックアップデバイスのプロパティと内容を表示 &#40;SQL Server&#41;](../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)   
  [データベースバックアップを復元する &#40;SQL Server Management Studio&#41;](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)   
- [トランザクションログバックアップを復元 &#40;SQL Server&#41;](../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
+ [トランザクション ログ バックアップの復元 &#40;SQL Server&#41;](../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
   

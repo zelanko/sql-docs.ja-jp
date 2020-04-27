@@ -16,10 +16,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 98d595be891fbae75cfe90d06ceccec232e7e53e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62772291"
 ---
 # <a name="sql-server-2014-product-specifications"></a>SQL Server 2014 製品仕様
@@ -43,15 +43,13 @@ This HTML comment can be erased, if you like.
 -->
 
  [SQLServer のエディション別の計算容量制限](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の各エディションでサポートされるプロセッサの最大数  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の各エディションでサポートされるプロセッサの最大数  
   
  [SQL Server 2014 のエディションとコンポーネント](../sql-server/editions-and-components-of-sql-server-2016.md)  
  インストールするコンポーネントと機能の選択  
   
  [SQL Server 2014 の各エディションがサポートする機能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の各エディションでサポートされる機能  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の各エディションでサポートされる機能  
   
  [SQL Server の最大容量仕様](../sql-server/maximum-capacity-specifications-for-sql-server.md)  
  さまざまな [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オブジェクトに対する最大容量  

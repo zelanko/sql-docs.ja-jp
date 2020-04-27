@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1f49961a48c096cf01fbf7f09de0d76ac9fd4bfe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62781809"
 ---
 # <a name="sqlxml-managed-classes-object-model"></a>SQLXML マネージド クラス オブジェクト モデル
@@ -32,7 +32,6 @@ ms.locfileid: "62781809"
  パラメーターの名前と値を表します。  
   
  [SqlXmlAdapter オブジェクト &#40;SQLXML マネージクラス&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmladapter-object.md)  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework のデータセットと対話するためのメソッドを提供します。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework のデータセットと対話するためのメソッドを提供します。  
   
   

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 536dce64880c1e70b1b8a0c4b419811c1b32a975
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62772136"
 ---
 # <a name="azure-feature-pack"></a>Azure Feature Pack
@@ -37,7 +37,7 @@ SQL Server Integration Services (SSIS) Feature Pack for Azure は、このペー
     
     -   [Azure HDInsight 接続マネージャー](../../2014/integration-services/azure-hdinsight-connection-manager.md)
   
--   処理手順  
+-   タスク  
   
     -   [Azure BLOB のアップロード タスク](control-flow/azure-blob-upload-task.md)  
   
@@ -77,7 +77,7 @@ SQL Server Integration Services (SSIS) Feature Pack for Azure をダウンロー
 この機能パックをインストールする前に、次の前提条件をインストールする必要があります。  
   
 -   SQL Server Integration Services  
--   .Net Framework 4.5  
+-   .NET Framework 4.5  
   
 ## <a name="scenarios"></a>シナリオ  
   

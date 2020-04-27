@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: da9a2e5bf8338b8188f00f3c340d50ef32f1204f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771838"
 ---
 # <a name="adding-tasks-programmatically"></a>プログラムによるタスクの追加
@@ -43,8 +43,7 @@ ms.locfileid: "62771838"
  パッケージにタスクを追加するには、<xref:Microsoft.SqlServer.Dts.Runtime.Executables> の既存のコレクションを持つコンテナーが必要です。 ほとんどの場合、コレクションに追加するタスクはパッケージです。 新しいタスクの実行可能ファイルをそのコンテナーのコレクションに追加するには、<xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A> メソッドを呼び出します。 このメソッドには単一の文字列パラメーターがあり、CLSID、PROGID、STOCK モニカー、または、追加するタスクの <xref:Microsoft.SqlServer.Dts.Runtime.TaskInfo.CreationName%2A> が格納されます。  
   
 ## <a name="task-names"></a>タスク名  
- 名前または ID でタスクを指定できますが、`STOCK` メソッドで最もよく使用されるパラメーターは <xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A> モニカーです。 
-  `STOCK` モニカーによって識別される実行可能ファイルにタスクを追加するには、次の構文を使用します。  
+ 名前または ID でタスクを指定できますが、<xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A> メソッドで最もよく使用されるパラメーターは `STOCK` モニカーです。 `STOCK` モニカーによって識別される実行可能ファイルにタスクを追加するには、次の構文を使用します。  
   
 ```csharp  
 Executable exec = package.Executables.Add("STOCK:BulkInsertTask");  
@@ -413,7 +412,7 @@ End Module
 ## <a name="external-resources"></a>外部リソース  
  blogs.msdn.com のブログ「[EzAPI - Updated for SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=243223)」(EzAPI - SQL Server 2012 用の更新)  
   
-![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
  [プログラムによるタスクの接続](../building-packages-programmatically/connecting-tasks-programmatically.md)  

@@ -11,15 +11,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6b0b77ad5bb11b659e9f68eb7ff219b7844ad252
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774576"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-2014-setup"></a>SQL Server 2014 の別のエディションへのアップグレード (セットアップ)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のさまざまなエディション間でのエディションのアップグレードをサポートしています。 各エディションでサポートされるアップグレード パスについては、「 [サポートされているバージョンとエディションのアップグレード](supported-version-and-edition-upgrades.md)」をご覧ください。 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]インスタンスのエディションのアップグレードを開始する前に、次のトピックを確認してください。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のさまざまなエディション間でのエディションのアップグレードをサポートしています。 各エディションでサポートされるアップグレード パスについては、「 [サポートされているバージョンとエディションのアップグレード](supported-version-and-edition-upgrades.md)」をご覧ください。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]インスタンスのエディションのアップグレードを開始する前に、次のトピックを確認してください。  
   
 -   [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
@@ -40,7 +39,7 @@ ms.locfileid: "62774576"
   
 ## <a name="procedure"></a>手順  
   
-#### <a name="to-upgrade-to-a-different-edition-of-includesscurrentincludessscurrent-mdmd"></a>[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の別のエディションにアップグレードするには  
+#### <a name="to-upgrade-to-a-different-edition-of-sscurrent"></a>[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の別のエディションにアップグレードするには  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール メディアを挿入します。 ルート フォルダーの setup.exe をダブルクリックするか、構成ツールから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール センターを起動します。 ネットワーク共有からインストールするには、ネットワーク共有上のルート フォルダーに移動し、Setup.exe をダブルクリックします。  
   

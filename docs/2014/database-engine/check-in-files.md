@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5debb7c80e7365e67d8661709b09b16f5d25b7b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62812586"
 ---
 # <a name="check-in-files"></a>ファイルのチェックイン
@@ -38,7 +38,7 @@ ms.locfileid: "62812586"
      **[列]**  
      表示する列と、その表示順序を指定します。  
   
-     **説明**  
+     **コメント**  
      チェックイン操作に関連付けるコメントを追加します。  
   
      **[項目をチェックインするときにチェックイン ダイアログ ボックスを表示しない]**  
@@ -50,10 +50,10 @@ ms.locfileid: "62812586"
      **名前**  
      チェックインする項目の名前を表示します。 選択した項目の横にチェックボックスが表示されます。 特定の項目をチェックインしない場合は、そのチェック ボックスをオフにします。  
   
-     **オプション**  
+     **[オプション]**  
      ボタンの右側の矢印をクリックすると、ソース管理のプラグインに固有のチェックイン オプションが表示されます。  
   
-     **並べ替え**  
+     **基づく**  
      表示列の順序を並べ替えます。  
   
      **[ツリー表示]**  

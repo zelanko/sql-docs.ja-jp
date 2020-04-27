@@ -14,18 +14,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7dc540b21000766cd6e33ecb1811536993857f00
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815704"
 ---
 # <a name="add-solutions-to-source-control"></a>ソース管理へのソリューションの追加
-  通常、ソース管理にソリューションを追加する場合は、ソリューション全体、およびソリューションに含まれているすべてのプロジェクトを追加します。 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を使用して、ソース管理にソリューションを追加できます。  
+  通常、ソース管理にソリューションを追加する場合は、ソリューション全体、およびソリューションに含まれているすべてのプロジェクトを追加します。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を使用して、ソース管理にソリューションを追加できます。  
   
- 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] プロジェクトは、全体がローカル ディスクに存在します。 プロジェクトの編集、保存、およびビルドはローカルで行います。 ソース管理にプロジェクトを追加した後、 **[チェックアウト] コマンドを**使用して、プロジェクトのファイルをソース管理からチェックアウトできます。  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] プロジェクトは、全体がローカル ディスクに存在します。 プロジェクトの編集、保存、およびビルドはローカルで行います。 ソース管理にプロジェクトを追加した後、 **[チェックアウト] コマンドを**使用して、プロジェクトのファイルをソース管理からチェックアウトできます。  
   
 ### <a name="to-add-a-solution-to-source-control"></a>ソース管理にソリューションを追加するには  
   

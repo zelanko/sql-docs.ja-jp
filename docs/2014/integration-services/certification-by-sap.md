@@ -11,16 +11,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 06ae79e51fa7526ab0e6bad2747c32d0bc5ca6bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771605"
 ---
 # <a name="certification-by-sap"></a>SAP による認定
   Microsoft Connector 1.1 for SAP BW は、SAP から SAP NetWeaver との統合に関する認定を受けました。  
   
- ![証明される SAP - SAP NetWeaver での統合](media/sapcertifiedforssis11.gif "証明される SAP - SAP NetWeaver での統合")  
+ ![SAP 認定 - SAP NetWeaver との統合](media/sapcertifiedforssis11.gif "SAP 認定 - SAP NetWeaver との統合")  
   
  次の表に、認定の詳細について説明します。  
   

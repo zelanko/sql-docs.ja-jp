@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 51ad82519e8afd5e4a871046465e0cafec2f783e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774983"
 ---
 # <a name="installing-updates-from-the-command-prompt"></a>コマンド プロンプトからの更新プログラムのインストール
@@ -27,18 +27,15 @@ ms.locfileid: "62774983"
   
 -   セットアップでは、メインの製品と使用可能な更新プログラムが同時にインストールされるように、最新の製品の更新プログラムとメインの製品のインストールを統合できます。 製品の更新プログラムが含まれるデータベース エンジン インスタンスのインストールを準備するには、setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=PrepareImage /UpdateEnabled=True /UpdateEnabled=True /UpdateSource=\<更新プログラムがダウンロードされたパス> /INSTANCEID=\<インスタンス ID> /FEATURES=SQLEngine を実行します。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] や管理ツールなどの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 共有コンポーネントのみを更新するには、<package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch を実行します。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] や管理ツールなどの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 共有コンポーネントのみを更新するには、<package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch を実行します。  
   
 -   コンピューター上のすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスと、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] や管理ツールなどのすべての共有コンポーネントを更新するには、<package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /AllInstances を実行します。  
   
  コマンド プロンプトで更新プログラムを削除する際に、<package_name> の部分は実際の更新プログラム パッケージの名前に置き換えてください。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 1 つのインスタンスと、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] や管理ツールなどのすべての共有コンポーネントから更新プログラムを削除するには、<package_name>.exe /qs /Action=RemovePatch /InstanceName=MyInstance を実行します。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 1 つのインスタンスと、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] や管理ツールなどのすべての共有コンポーネントから更新プログラムを削除するには、<package_name>.exe /qs /Action=RemovePatch /InstanceName=MyInstance を実行します。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] や管理ツールなどの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 共有コンポーネントのみから更新プログラムを削除するには、<package_name>.exe /qs /Action=RemovePatch を実行します。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] や管理ツールなどの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 共有コンポーネントのみから更新プログラムを削除するには、<package_name>.exe /qs /Action=RemovePatch を実行します。  
   
     > [!NOTE]  
     >  更新プログラムのインストーラーによって、共有コンポーネントが常に最上位レベルのインスタンスのバージョンと同じかまたはそれ以上であることが保証されます。  
@@ -48,7 +45,7 @@ ms.locfileid: "62774983"
 > [!IMPORTANT]  
 >  セキュリティ資格情報は、できるだけ実行時に入力してください。 資格情報をスクリプト ファイルに含める必要がある場合は、不正なアクセスが行われないようにファイルをセキュリティで保護してください。  
   
-|Switch|[説明]|  
+|Switch|説明|  
 |------------|-----------------|  
 |**/?**|自動インストールのコマンド プロンプト ヘルプを表示します。|  
 |**/action=Patch または /action=RemovePatch**|インストール動作 (Patch または RemovePatch) を指定します。|  

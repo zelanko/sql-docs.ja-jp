@@ -11,14 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1969a3e30b31a21c380559a3e8898f87eb8848b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62786737"
 ---
 # <a name="collations-and-code-pages"></a>照合順序とコード ページ
-  
   [!INCLUDE[hek_2](../includes/hek-2-md.md)] には、メモリ最適化テーブルの (var)char 型の列のサポートされているコード ページと、インデックスおよびネイティブ コンパイル ストアド プロシージャで使用されるサポートされている照合順序に関して制限事項があります。  
   
  (var)char 値のコード ページにより、テーブルに格納されているバイト表現と文字との間のマッピングが決定されます。 たとえば、Windows の Latin 1 コード ページ (1252、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の既定値) の場合、文字 "a" はバイト 0x61 に対応します。  

@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 485f481819a9712f822f969c04d8e7050ad43bae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774419"
 ---
 # <a name="memory-optimized-table-variables"></a>メモリ最適化テーブル変数
@@ -60,8 +60,7 @@ WITH ( MEMORY_OPTIMIZED = ON );
   
  このサンプルは、メモリ最適化テーブル型の構文がディスク ベース テーブル型に類似していることを示しています。ただし、次の例外を除きます。  
   
--   
-  `MEMORY_OPTIMIZED=ON` は、テーブル型がメモリ最適化であることを示します。  
+-   `MEMORY_OPTIMIZED=ON` は、テーブル型がメモリ最適化であることを示します。  
   
 -   型には少なくとも 1 つのインデックスが必要です。 メモリ最適化テーブルの場合と同様に、ハッシュ インデックスと非クラスター化インデックスを使用できます。  
   

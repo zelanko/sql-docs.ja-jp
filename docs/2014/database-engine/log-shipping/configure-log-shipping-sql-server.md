@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7533eb253ba32dd8ef2d57c3182096b36a6e47b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774586"
 ---
 # <a name="configure-log-shipping-sql-server"></a>ログ配布の構成 (SQL Server)
@@ -42,20 +42,20 @@ ms.locfileid: "62774586"
   
 -   [関連タスク](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Prerequisites"></a> 前提条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
   
 -   プライマリ データベースでは、完全復旧モデルか一括ログ復旧モデルを使用する必要があります。単純復旧モデルにデータベースを切り替えると、ログ配布が機能しなくなります。  
   
 -   ログ配布を構成する前に、セカンダリ サーバーからトランザクション ログ バックアップを使用できるようにするための共有を作成する必要があります。 この共有は、トランザクション ログ バックアップを生成するディレクトリにします。 たとえば、トランザクション ログをディレクトリ c:\data\tlogs\\にバックアップする場合は、このディレクトリを基に \\\\*primaryserver*\tlogs という共有を作成します。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  ログ配布ストアド プロシージャには、 **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-configure-log-shipping"></a>ログ配布を構成するには  
   
@@ -99,40 +99,32 @@ ms.locfileid: "62774586"
   
 17. **[復元]** タブの **[バックアップ復元時のデータベース状態]** で、 **[復旧モードなし]** または **[スタンバイ モード]** を選択します。  
   
-18. 
-  **[スタンバイ モード]** を選択する場合は、復元操作の進行中にセカンダリ データベースからユーザーを切断するかどうかを選択します。  
+18. **[スタンバイ モード]** を選択する場合は、復元操作の進行中にセカンダリ データベースからユーザーを切断するかどうかを選択します。  
   
 19. セカンダリ サーバーの復元処理を遅延させる場合、 **[バックアップの復元を最低限次の期間遅延する]** で遅延時間を選択します。  
   
-20. 
-  **[復元が次の期間内に行われない場合は警告する]** で警告のしきい値を選択します。  
+20. **[復元が次の期間内に行われない場合は警告する]** で警告のしきい値を選択します。  
   
-21. 
-  **[復元ジョブ]** の **[スケジュール]** ボックスに表示される復元スケジュールを確認します。 スケジュールをカスタマイズする場合、 **[スケジュール]** をクリックして、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのスケジュールを必要に応じて調整します。 このスケジュールはバックアップ スケジュールに近い設定にします。  
+21. **[復元ジョブ]** の **[スケジュール]** ボックスに表示される復元スケジュールを確認します。 スケジュールをカスタマイズする場合、 **[スケジュール]** をクリックして、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのスケジュールを必要に応じて調整します。 このスケジュールはバックアップ スケジュールに近い設定にします。  
   
 22. **[OK]** をクリックします。  
   
-23. 
-  **[監視サーバー インスタンス]** の **[監視サーバー インスタンスを使用する]** チェック ボックスをオンにし、 **[設定]** をクリックします。  
+23. **[監視サーバー インスタンス]** の **[監視サーバー インスタンスを使用する]** チェック ボックスをオンにし、 **[設定]** をクリックします。  
   
     > [!IMPORTANT]  
     >  このログ配布構成を監視するには、ここで監視サーバーを追加する必要があります。 監視サーバーを後で追加するには、このログ配布構成を削除して、代わりに監視サーバーを含む新しい構成を用意します。  
   
-24. 
-  **[接続]** をクリックして、監視サーバーとして使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。  
+24. **[接続]** をクリックして、監視サーバーとして使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。  
   
-25. 
-  **[モニター接続]** で、バックアップ、コピー、復元の各ジョブで監視サーバーへの接続に使用する接続方法を指定します。  
+25. **[モニター接続]** で、バックアップ、コピー、復元の各ジョブで監視サーバーへの接続に使用する接続方法を指定します。  
   
-26. 
-  **[履歴の保有期間]** で、ログ配布の履歴レコードを保持する期間を指定します。  
+26. **[履歴の保有期間]** で、ログ配布の履歴レコードを保持する期間を指定します。  
   
 27. **[OK]** をクリックします。  
   
-28. 
-  **[データベースのプロパティ]** ダイアログ ボックスで **[OK]** をクリックし、構成処理を開始します。  
+28. **[データベースのプロパティ]** ダイアログ ボックスで **[OK]** をクリックし、構成処理を開始します。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-configure-log-shipping"></a>ログ配布を構成するには  
   
@@ -156,21 +148,21 @@ ms.locfileid: "62774586"
   
 10. セカンダリ サーバーでコピー ジョブと復元ジョブを有効にします。 詳細については、「 [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)」をご覧ください。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [ログ配布を SQL Server 2014 &#40;Transact-sql&#41;にアップグレードする](upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   
--   [ログ配布構成 &#40;SQL Server にセカンダリデータベースを追加&#41;](add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md)  
+-   [ログ配布構成へのセカンダリ データベースの追加 &#40;SQL Server&#41;](add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md)  
   
--   [ログ配布構成からセカンダリデータベースを削除する &#40;SQL Server&#41;](remove-a-secondary-database-from-a-log-shipping-configuration-sql-server.md)  
+-   [ログ配布構成からのセカンダリ データベースの削除 &#40;SQL Server&#41;](remove-a-secondary-database-from-a-log-shipping-configuration-sql-server.md)  
   
--   [ログ配布 &#40;SQL Server の削除&#41;](remove-log-shipping-sql-server.md)  
+-   [ログ配布の削除 &#40;SQL Server&#41;](remove-log-shipping-sql-server.md)  
   
--   [ログ配布レポート &#40;SQL Server Management Studio を表示&#41;](view-the-log-shipping-report-sql-server-management-studio.md)  
+-   [ログ配布レポートの表示 &#40;SQL Server Management Studio&#41;](view-the-log-shipping-report-sql-server-management-studio.md)  
   
--   [Transact-sql&#41;&#40;ログ配布の監視](monitor-log-shipping-transact-sql.md)  
+-   [ログ配布の監視 &#40;Transact-SQL&#41;](monitor-log-shipping-transact-sql.md)  
   
--   [ログ配布のセカンダリ &#40;SQL Server にフェールオーバーする&#41;](fail-over-to-a-log-shipping-secondary-sql-server.md)  
+-   [ログ配布のセカンダリへのフェールオーバー &#40;SQL Server&#41;](fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
 ## <a name="see-also"></a>参照  
  [ログ配布について &#40;SQL Server&#41;](about-log-shipping-sql-server.md)   

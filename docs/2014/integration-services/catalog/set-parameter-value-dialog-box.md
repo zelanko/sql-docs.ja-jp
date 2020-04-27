@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5e5bfe3faf83b0873a8b47c348df9cfd8138dacb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771638"
 ---
 # <a name="set-parameter-value-dialog-box"></a>[パラメーター値の設定] ダイアログ ボックス
@@ -26,7 +26,7 @@ ms.locfileid: "62771638"
   
 -   [オプションの構成](#option)  
   
-##  <a name="open_dialog"></a> [パラメーター値の設定] ダイアログ ボックスを開く  
+##  <a name="open-the-set-parameter-value-dialog-box"></a><a name="open_dialog"></a> [パラメーター値の設定] ダイアログ ボックスを開く  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]から [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに接続します。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62771638"
   
 4.  パッケージまたはプロジェクトを右クリックして **[構成]** をクリックし、 **[パラメーター]** タブまたは **[接続マネージャー]** タブの参照ボタンをクリックします。  
   
-##  <a name="option"></a> オプションの構成  
+##  <a name="configure-the-options"></a><a name="option"></a> オプションの構成  
  **パラメーター**  
  パラメーター名を一覧表示します。  
   

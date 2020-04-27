@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 818e1176cb5a4f81205a36dc7be6fd9fded286ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773670"
 ---
 # <a name="search-property-list-editor"></a>検索プロパティ リスト エディター
@@ -27,12 +27,11 @@ ms.locfileid: "62773670"
   
 ## <a name="options"></a>オプション  
  **プロパティ名**  
- フルテキスト クエリのプロパティを識別するために使用される名前を指定します。 プロパティ名の内部にはスペースを含めることができます。 
-  **プロパティ名** の長さは最大 256 文字です。 この名前は "作成者" や "ホーム アドレス" などのわかりやすい名前、または、Windows の正規のプロパティ名 (`System.Author` または `System.Contact.HomeAddress` など) にすることができます。 プロパティ**名**は、プロパティセット内でプロパティを一意に識別する必要があります。  
+ フルテキスト クエリのプロパティを識別するために使用される名前を指定します。 プロパティ名の内部にはスペースを含めることができます。 **プロパティ名** の長さは最大 256 文字です。 この名前は "作成者" や "ホーム アドレス" などのわかりやすい名前、または、Windows の正規のプロパティ名 (`System.Author` または `System.Contact.HomeAddress` など) にすることができます。 **プロパティ名** は、プロパティ セット内でプロパティを一意に識別する名前である必要があります。  
   
  開発者は、このプロパティ名を使って [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 述語のプロパティを識別します。 したがって、プロパティを追加する場合は、そのプロパティの意味を明確に表す名前を指定することが重要です。  
   
- **プロパティセット GUID**  
+ **[プロパティ セット GUID]**  
  プロパティが属するプロパティ セットの識別子を指定します。 これはグローバル一意識別子 (GUID) です。 プロパティ セットは論理的に関連するプロパティのグループです。 この値の取得に関する情報については、このトピックの「解説」を参照してください。  
   
  **[プロパティの整数の ID]**  
@@ -44,7 +43,7 @@ ms.locfileid: "62773670"
  **プロパティの説明**  
  必要に応じてプロパティの説明を指定します。 これは最大 512 文字までの文字列です。 説明には、たとえばプロパティのプロパティ セットに関する情報、または名前からはその内容がわかりにくいプロパティに関する情報などが含まれる場合があります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  検索プロパティ リストに検索プロパティを追加するには、プロパティが属するプロパティ セットのグローバル一意識別子 (GUID) とプロパティのプロパティ整数識別子を指定する必要があります。 これらの識別子の組み合わせが、検索プロパティ リスト内で一意である必要があります。 既存の組み合わせを追加しようとすると、操作が失敗しエラーが発生します。 つまり、1 つの名前は 1 つのプロパティに対してのみ構成できます。  
   
  このプロパティの説明は省略できます。  
@@ -59,6 +58,6 @@ ms.locfileid: "62773670"
 ## <a name="see-also"></a>参照  
  [ALTER SEARCH PROPERTY LIST &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql)   
  [検索プロパティリストを使用したドキュメントプロパティの検索](../relational-databases/search/search-document-properties-with-search-property-lists.md)   
- [registered_search_property_lists &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql)  
+ [sys.registered_search_property_lists &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql)  
   
   

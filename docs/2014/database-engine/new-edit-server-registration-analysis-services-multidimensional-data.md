@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9d3d13ac64edbdbec4f131a09949e5724ab2932b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774916"
 ---
 # <a name="new-or-edit-server-registration-general-tab-analysis-services---multidimensional-data"></a>[新規サーバーの登録] または [サーバー登録プロパティの編集] ([全般] タブ) (Analysis Services - 多次元データ)
@@ -24,7 +24,7 @@ ms.locfileid: "62774916"
   
  このページにアクセスするには、[登録済みサーバー] で、[登録済みサーバー] ツール バーの **[Analysis Services]** をクリックし、 **Analysis Services**などの登録済みサーバー グループを右クリックして、 **[新規作成]** をポイントし、 **[サーバーの登録]** をクリックします。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **サーバーの種類**  
  [登録済みサーバー] を使用してサーバーを登録する場合、 **[サーバーの種類]** ボックスは読み取り専用になり、[登録済みサーバー] ペインに表示されているサーバーの種類と一致する値が表示されます。 別の種類のサーバーを登録するには、 **[登録済みサーバー]** ツール バーで目的のサーバーをクリックした後で、新しいサーバーの登録を開始します。  
   
@@ -43,16 +43,16 @@ ms.locfileid: "62774916"
  **パスワードを保存する**  
  このオプションは、このリリースでは使用できません。  
   
- **登録済みサーバー名**  
+ **[登録済みサーバーの名前]**  
  [登録済みサーバー] に表示する名前です。 この名前は、 **[サーバー名]** ボックスの名前と一致する必要はありません。  
   
- **登録済みサーバーの説明**  
+ **[登録済みサーバーの説明]**  
  サーバーの説明をオプションで入力します。  
   
- **Test**  
+ **テスト**  
  クリックすると、 **[サーバー名]** で選択されたサーバーへの接続をテストします。  
   
- **保存**  
+ **および**  
  クリックすると、登録済みサーバーの設定を保存します。  
   
   

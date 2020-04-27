@@ -16,23 +16,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c52283ce9d512da6dc2e5ad05a4c8356524bef01
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62814058"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>レプリケーション、変更の追跡、変更データ キャプチャ、および AlwaysOn 可用性グループ (SQL Server)
-  
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]のレプリケーション、変更データ キャプチャ (CDC)、および変更の追跡 (CT) がサポートされています。 
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] は、高可用性と追加のデータベース復旧機能を提供します。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]のレプリケーション、変更データ キャプチャ (CDC)、および変更の追跡 (CT) がサポートされています。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] は、高可用性と追加のデータベース復旧機能を提供します。  
   
  
   
-##  <a name="Overview"></a>AlwaysOn 可用性グループでのレプリケーションの概要  
+##  <a name="overview-of-replication-on-alwayson-availability-groups"></a><a name="Overview"></a>AlwaysOn 可用性グループでのレプリケーションの概要  
   
-###  <a name="PublisherRedirect"></a>パブリッシャーのリダイレクト  
+###  <a name="publisher-redirection"></a><a name="PublisherRedirect"></a>パブリッシャーのリダイレクト  
  パブリッシュされたデータベースが [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]に対応している場合、パブリッシング データベースへのエージェント アクセス権を提供するディストリビューターは、redirected_publishers エントリで構成されます。 これらのエントリは、パブリッシャーとパブリッシング データベースへの接続に可用性グループ リスナー名を使用して、最初に構成されていたパブリッシャー/データベース ペアをリダイレクトします。 可用性グループ リスナー名を介して確立された接続は、フェールオーバーに失敗します。 フェールオーバー後にレプリケーション エージェントを再起動すると、接続は自動的に新しいプライマリにリダイレクトされます。  
   
  AlwaysOn 可用性グループでセカンダリ データベースをパブリッシャーにすることはできません。 レプリケーションを [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]と組み合わせている場合、再パブリッシュはサポートされません。  
@@ -42,9 +39,8 @@ ms.locfileid: "62814058"
 > [!NOTE]  
 >  セカンダリ レプリカにフェールオーバーした後、レプリケーション モニターは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のパブリッシング インスタンスの名前を調整できないため、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の元のプライマリ インスタンスの名前を引き続き使ってレプリケーション情報が表示されます。 フェールオーバー後は、トレーサー トークンはレプリケーション モニターを使用して入力できませんが、新しいパブリッシャーで [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して入力されたトレース トークンがレプリケーション モニターに表示されます。  
   
-###  <a name="Changes"></a>AlwaysOn 可用性グループをサポートするためのレプリケーションエージェントへの一般的な変更  
- 
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]をサポートするために、3 つのレプリケーション エージェントが変更されました。 ログ リーダー、スナップショット、およびマージ エージェントは、リダイレクトされたパブリッシャーについてディストリビューション データベースにクエリを実行し、リダイレクトされたパブリッシャーが宣言されていた場合は、返された可用性グループ リスナー名を使用してデータベース パブリッシャーに接続するように変更されました。  
+###  <a name="general-changes-to-replication-agents-to-support-alwayson-availability-groups"></a><a name="Changes"></a>AlwaysOn 可用性グループをサポートするためのレプリケーションエージェントへの一般的な変更  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]をサポートするために、3 つのレプリケーション エージェントが変更されました。 ログ リーダー、スナップショット、およびマージ エージェントは、リダイレクトされたパブリッシャーについてディストリビューション データベースにクエリを実行し、リダイレクトされたパブリッシャーが宣言されていた場合は、返された可用性グループ リスナー名を使用してデータベース パブリッシャーに接続するように変更されました。  
   
  既定では、エージェントがディストリビューターにクエリを実行して、元のパブリッシャーがリダイレクトされたかどうかを判断する場合、リダイレクトされたホストがエージェントに戻る前に、現在のターゲットまたはリダイレクトの適合性が検証されます。 これは推奨される動作です。 ただし、エージェントの起動が非常に頻繁に行われる場合、検証ストアド プロシージャに関連するオーバーヘッドのコストが高くなる可能性があります。 新しいコマンド ライン スイッチ *BypassPublisherValidation*が、ログ リーダー、スナップショット、およびマージ エージェントに追加されました。 スイッチが使用される場合、リダイレクトされたパブリッシャーはエージェントに即時に戻り、検証ストアド プロシージャの実行が省略されます。  
   
@@ -59,11 +55,11 @@ ms.locfileid: "62814058"
   
      パブリッシャーに AlwaysOn 可用性レプリカが 2 つ (プライマリが 1 つとセカンダリが 1 つ) しかない場合にフェールオーバーが発生すると、すべてのセカンダリ データベースがオンラインに戻るか、エラーが発生したセカンダリ レプリカが可用性グループから削除されるまでログ リーダーが前へ進まないため、元のプライマリ レプリカはダウンしたままになります。 AlwaysOn がセカンダリ データベースに変更を書き込むことができないので、セカンダリ データベースに対して実行されているログ リーダーは前へ進みません。 ディザスター リカバリー機能を維持しながら、ログ リーダーが前へ進めるようにするには、ALTER AVAILABITY GROUP <group_name> REMOVE REPLICA を使用して、元のプライマリ レプリカを可用性グループから削除します。 その後、新しいセカンダリ レプリカを可用性グループに追加します。  
   
--   **トレースフラグ1448**  
+-   **トレース フラグ 1448**  
   
      トレース フラグ 1448 は、非同期セカンダリ レプリカで変更の受信が確認されていない場合でも、レプリケーション ログ リーダーが前へ進めるようにします。 このトレース フラグが有効でも、ログ リーダーは常に同期セカンダリ レプリカを待機します。 ログ リーダーは同期セカンダリ レプリカの最小 ack を超えることはありません。 このトレース フラグは、可用性グループ、可用性データベース、またはログ リーダー インスタンスだけでなく、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスにも適用されます。 再起動しなくても、トレース フラグはすぐに有効になります。 このトレース フラグは、事前にアクティブにすることも、非同期セカンダリ レプリカで障害が発生したときにアクティブにすることもできます。  
   
-###  <a name="StoredProcs"></a>AlwaysOn をサポートするストアドプロシージャ  
+###  <a name="stored-procedures-supporting-alwayson"></a><a name="StoredProcs"></a>AlwaysOn をサポートするストアドプロシージャ  
   
 -   **sp_redirect_publisher**  
   
@@ -85,10 +81,10 @@ ms.locfileid: "62814058"
   
      このストアド プロシージャは、常に手動で実行されます。 呼び出し元は、ディストリビューターでの **sysadmin** であるか、ディストリビューション データベースの **dbowner** であるか、またはパブリッシャー データベースのパブリケーションの **パブリケーション アクセス リスト** のメンバーである必要があります。 また、呼び出し元のログインは、すべての可用性レプリカ ホストに対して有効なログインであり、パブリッシャー データベースに関連付けられている可用性データベースに対する select 特権を持っている必要があります。  
   
-###  <a name="CDC"></a>変更データキャプチャ  
+###  <a name="change-data-capture"></a><a name="CDC"></a>変更データキャプチャ  
  障害が発生してもデータベースを引き続き使用できるだけでなく、データベース テーブルへの変更も引き続き監視され、CDC 変更テーブルに格納されることを保証するために、変更データ キャプチャ (CDC) が有効になっているデータベースで [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] を利用できます。 CDC と [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の構成順序は重要ではありません。 CDC 対応データベースは [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]に追加でき、AlwaysOn 可用性グループのメンバーであるデータベースでは CDC を有効にできます。 ただし、どちらの場合も、CDC 構成は常に現在または目的のプライマリ レプリカで実行されます。 CDC はログ リーダー エージェントを使用するため、このトピックの「 **ログ リーダー エージェントの変更** 」に記載されているのと同じ制限事項があります。  
   
--   **レプリケーションを使用せずに変更データキャプチャの変更を取得する**  
+-   **レプリケーションなしでの変更データ キャプチャの変更の取得**  
   
      データベースで CDC が有効になっていて、レプリケーションは有効になっていない場合、ログから変更を取得して CDC 変更テーブルに格納するために使用されるキャプチャ プロセスは、CDC ホストで独自の SQL エージェント ジョブとして実行されます。  
   
@@ -100,11 +96,11 @@ ms.locfileid: "62814058"
     EXEC sys.sp_cdc_add_job @job_type = 'capture';  
     ```  
   
--   **レプリケーションを使用した変更データキャプチャの変更の取得**  
+-   **レプリケーションを使用した変更データ キャプチャの変更の取得**  
   
      データベースで CDC とレプリケーションの両方が有効になっている場合は、ログ リーダーが CDC 変更テーブルのデータ設定を処理します。 この場合、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] を利用するためにレプリケーションで使用される手法によって、フェールオーバー後も引き続き変更がログから取得され、CDC 変更テーブルに格納されることが保証されます。 変更テーブルにデータが設定されるようにするために、この構成の CDC に対して何も追加で行う必要はありません。  
   
--   **変更データキャプチャのクリーンアップ**  
+-   **変更データ キャプチャのクリーンアップ**  
   
      新しいプライマリ データベースで適切なクリーンアップが確実に行われるように、ローカル クリーアップ ジョブを必ず作成する必要があります。 次の例では、クリーンアップ ジョブを作成します。  
   
@@ -119,7 +115,7 @@ ms.locfileid: "62814058"
   
      CDC に対してテーブルを有効にした場合は、データベース ロールをキャプチャ インスタンスに関連付けることができます。 ロールが指定されている場合、CDC テーブル値関数を使用してテーブルの変更にアクセスするユーザーは、追跡されるテーブル列への選択アクセス権を持つだけでなく、名前付きロールのメンバーでもある必要があります。 指定したロールが存在しない場合は、ロールが作成されます。 AlwaysOn プライマリ データベースにデータベース ロールが自動的に追加されると、ロールは可用性グループのセカンダリ データベースにも反映されます。  
   
--   **CDC 変更データと Always On にアクセスするクライアントアプリケーション**  
+-   **CDC 変更データにアクセスするクライアント アプリケーションと Always On**  
   
      変更テーブル データにアクセスするためにテーブル値関数 (TVF) またはリンク サーバーを使用するクライアント アプリケーションには、フェールオーバー後に適切な CDC ホストを検索する機能も必要です。 可用性グループ リスナー名は、接続のターゲットを別のホストに透過的に再指定できるようにするために、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] によって提供されるメカニズムです。 可用性グループに関連付けられた可用性グループ リスナー名は、TCP 接続文字列で使用できるようになります。 2 つの異なる接続シナリオが、可用性グループ リスナー名を通じてサポートされます。  
   
@@ -142,11 +138,11 @@ ms.locfileid: "62814058"
     WHERE d.database_name = N'MyCDCDB';  
     ```  
   
--   **読み取り可能なセカンダリレプリカへのクエリ負荷のリダイレクト**  
+-   **読み取り可能なセカンダリ レプリカへのクエリ負荷のリダイレクト**  
   
      多くの場合、クライアント アプリケーションは常に現在のプライマリ レプリカに接続しようとしますが、これが [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]を利用する唯一の方法というわけではありません。 可用性グループが読み取り可能なセカンダリ レプリカをサポートするように構成されている場合、変更データはセカンダリ ノードからも収集できます。  
   
-     可用性グループが構成されている場合は、SECONDARY_ROLE に関連付けられている ALLOW_CONNECTIONS 属性を使用して、サポートされているセカンダリ アクセスの種類を指定します。 ALL として構成した場合、セカンダリへのすべての接続が許可されますが、成功するのは読み取り専用アクセスを必要とする接続だけです。 READ_ONLY として構成した場合、接続を成功させるには、セカンダリ データベースへの接続時に読み取り専用の目的を指定する必要があります。 詳細については、「 [可用性レプリカでの読み取り専用アクセスの構成 &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md)が存在する必要があります。  
+     可用性グループが構成されている場合は、SECONDARY_ROLE に関連付けられている ALLOW_CONNECTIONS 属性を使用して、サポートされているセカンダリ アクセスの種類を指定します。 ALL として構成した場合、セカンダリへのすべての接続が許可されますが、成功するのは読み取り専用アクセスを必要とする接続だけです。 READ_ONLY として構成した場合、接続を成功させるには、セカンダリ データベースへの接続時に読み取り専用の目的を指定する必要があります。 詳細については、「[可用性レプリカでの読み取り専用アクセスの構成 &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md)」を参照してください。  
   
      次のクエリを使用して、読み取り可能なセカンダリ レプリカに接続するために読み取り専用の目的が必要かどうかを確認できます。  
   
@@ -172,12 +168,11 @@ ms.locfileid: "62814058"
     @catalog=N'MY_DB_NAME';  
     ```  
   
--   **CDC 変更データとドメインログインへのクライアントアクセス**  
+-   **CDC 変更データとドメイン ログインへのクライアント アクセス**  
   
-     一般に、AlwaysOn 可用性グループのメンバーであるデータベースに存在する変更データへのクライアント アクセスには、ドメイン ログインを使用する必要があります。 フェールオーバー後に変更データへの継続的なアクセスを保証するには、ドメイン ユーザーに、可用性グループ レプリカをサポートするすべてのホストに対するアクセス権限が必要です。 データベース ユーザーがプライマリ レプリカのデータベースに追加され、ユーザーがドメイン ログインに関連付けられている場合、データベース ユーザーはセカンダリ データベースに反映され、引き続き指定されたドメイン ログインに関連付けられます。 新しいデータベース ユーザーが SQL Server 認証ログインに関連付けられている場合、セカンダリ データベースのユーザーはログインなしで反映されます。 関連付けられた [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証ログインを使用して、データベース ユーザーが最初に定義されたプライマリの変更データにアクセスできますが、ノードはアクセスが可能な唯一のノードです。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証ログインは、セカンダリ データベースのデータにアクセスすることも、データベース ユーザーが定義された元のデータベース以外の新しいプライマリ データベースのデータにアクセスすることもできません。  
+     一般に、AlwaysOn 可用性グループのメンバーであるデータベースに存在する変更データへのクライアント アクセスには、ドメイン ログインを使用する必要があります。 フェールオーバー後に変更データへの継続的なアクセスを保証するには、ドメイン ユーザーに、可用性グループ レプリカをサポートするすべてのホストに対するアクセス権限が必要です。 データベース ユーザーがプライマリ レプリカのデータベースに追加され、ユーザーがドメイン ログインに関連付けられている場合、データベース ユーザーはセカンダリ データベースに反映され、引き続き指定されたドメイン ログインに関連付けられます。 新しいデータベース ユーザーが SQL Server 認証ログインに関連付けられている場合、セカンダリ データベースのユーザーはログインなしで反映されます。 関連付けられた [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証ログインを使用して、データベース ユーザーが最初に定義されたプライマリの変更データにアクセスできますが、ノードはアクセスが可能な唯一のノードです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証ログインは、セカンダリ データベースのデータにアクセスすることも、データベース ユーザーが定義された元のデータベース以外の新しいプライマリ データベースのデータにアクセスすることもできません。  
   
-###  <a name="CT"></a>Change Tracking  
+###  <a name="change-tracking"></a><a name="CT"></a>Change Tracking  
  変更の追跡 (CT) が有効になっているデータベースは、AlwaysOn 可用性グループに含めることができます。 追加の構成は必要ありません。 変更データにアクセスするために CDC テーブル値関数 (TVF) を使用する変更の追跡クライアント アプリケーションには、フェールオーバー後にプライマリ レプリカを検索する機能が必要です。 クライアント アプリケーションが可用性グループ リスナー名を通じて接続する場合、接続要求は常に現在のプライマリ レプリカに適切に送られます。  
   
 > [!NOTE]  
@@ -187,7 +182,7 @@ ms.locfileid: "62814058"
 >   
 >  セカンダリ レプリカのメンバーであるデータベース (セカンダリ データベース) では、変更の追跡はサポートされていません。 変更の追跡クエリをプライマリ レプリカのデータベースに対して実行します。  
   
-##  <a name="Prereqs"></a>レプリケーションを使用するための前提条件、制限事項、および考慮事項  
+##  <a name="prerequisites-restrictions-and-considerations-for-using-replication"></a><a name="Prereqs"></a>レプリケーションを使用するための前提条件、制限事項、および考慮事項  
  ここでは、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]でレプリケーションを配置する際の前提条件、制限、推奨などの考慮事項について説明します。  
   
 ### <a name="prerequisites"></a>前提条件  
@@ -205,16 +200,15 @@ ms.locfileid: "62814058"
 -   パブリッシャーのインスタンスは、AlwaysOn 可用性グループに参加するために必要なすべての前提条件を満たす必要があります。 詳細については[、「AlwaysOn 可用性グループ &#40;SQL Server&#41;の前提条件、制限事項、および推奨事項](prereqs-restrictions-recommendations-always-on-availability.md)」を参照してください。  
   
 ### <a name="restrictions"></a>制限  
- 
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]のレプリケーションでサポートされている組み合わせは次のとおりです。  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]のレプリケーションでサポートされている組み合わせは次のとおりです。  
   
 |||||  
 |-|-|-|-|  
 ||**発行元**|**ディストリビューター** <sup>3</sup>|**サブスクライバー**|  
-|**トランザクション**|はい <sup>1</sup>|いいえ|可<sup>2</sup>|  
-|**ツー**|いいえ|いいえ|いいえ|  
-|**マージ**|はい|いいえ|可<sup>2</sup>|  
-|**スナップショット**|はい|いいえ|可<sup>2</sup>|  
+|**パブリケーション**|○<sup>1</sup>|いいえ|はい<sup>2</sup>|  
+|**P2P**|いいえ|いいえ|いいえ|  
+|**マージ**|はい|いいえ|はい<sup>2</sup>|  
+|**スナップショット**|はい|いいえ|はい<sup>2</sup>|  
   
  <sup>1</sup>双方向の相互トランザクションレプリケーションのサポートは含まれません。  
   
@@ -224,14 +218,13 @@ ms.locfileid: "62814058"
   
 ### <a name="considerations"></a>考慮事項  
   
--   
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] またはデータベース ミラーリングでディストリビューション データベースを使用することはできません。 レプリケーション構成は、ディストリビューターが構成された SQL Server インスタンスと結び付けられます。そのため、ディストリビューション データベースはミラー化またはレプリケートできません。 ディストリビューターの高可用性を実現するには、SQL Server のフェールオーバー クラスターを使用します。 詳細については、「[Always On フェールオーバー クラスター インスタンス (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)」を参照してください。  
+-   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] またはデータベース ミラーリングでディストリビューション データベースを使用することはできません。 レプリケーション構成は、ディストリビューターが構成された SQL Server インスタンスと結び付けられます。そのため、ディストリビューション データベースはミラー化またはレプリケートできません。 ディストリビューターの高可用性を実現するには、SQL Server のフェールオーバー クラスターを使用します。 詳細については、「[Always On フェールオーバー クラスター インスタンス (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)」を参照してください。  
   
 -   セカンダリ データベースへのサブスクライバーのフェールオーバーはサポートされていますが、かなり複雑な手動での手順になります。 手順は、ミラー化されたサブスクライバー データベースをフェールオーバーするために使用される方法と本質的には同じです。 可用性グループに参加するには、サブスクライバーは [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 以降を実行している必要があります。  
   
 -   ログイン、ジョブ、リンク サーバーなど、データベースの外部に存在するメタデータやオブジェクトはセカンダリ レプリカに反映されません。 フェールオーバー後に新しいプライマリ データベースでこれらのメタデータやオブジェクトが必要な場合は、手動でコピーする必要があります。 詳細については、「 [可用性グループのデータベースのためのログインとジョブの管理 &#40;SQL Server&#41;](../../logins-and-jobs-for-availability-group-databases.md)と呼ばれるプロセスで交換されることがあります。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
  **レプリケーション**  
   
 -   [AlwaysOn 可用性グループ用のレプリケーションの構成 (SQL Server)](always-on-availability-groups-sql-server.md)  
@@ -254,7 +247,7 @@ ms.locfileid: "62814058"
   
 -   [変更の追跡の管理 &#40;SQL Server&#41;](../../../relational-databases/track-changes/manage-change-tracking-sql-server.md)  
   
--   [Change Tracking &#40;SQL Server の操作&#41;](../../../relational-databases/track-changes/work-with-change-tracking-sql-server.md)  
+-   [変更の追跡のしくみ &#40;SQL Server&#41;](../../../relational-databases/track-changes/work-with-change-tracking-sql-server.md)  
   
 ## <a name="see-also"></a>参照  
  [レプリケーションサブスクライバーと AlwaysOn 可用性グループ &#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)   
@@ -262,9 +255,9 @@ ms.locfileid: "62814058"
  [AlwaysOn 可用性グループ &#40;SQL Server の概要&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性グループ: 相互運用性 (SQL Server)](always-on-availability-groups-interoperability-sql-server.md) [AlwaysOn フェールオーバークラスターインスタンス (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
  [変更データキャプチャについて &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
- [変更の追跡について &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
+ [Change Tracking &#40;SQL Server について&#41;](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [SQL Server レプリケーション](../../../relational-databases/replication/sql-server-replication.md)   
  [データ変更の追跡 &#40;SQL Server&#41;](../../../relational-databases/track-changes/track-data-changes-sql-server.md)   
- [sp_cdc_add_job &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql)  
+ [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql)  
   
   

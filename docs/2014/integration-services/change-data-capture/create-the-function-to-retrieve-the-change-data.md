@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 28878f96b843a8a557e95d6c4ddf10681f481b8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771438"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>変更データを取得する関数を作成する
@@ -209,16 +209,16 @@ go
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|`binary(10)`|変更のコミット トランザクションに関連付けられた LSN。<br /><br /> 同じトランザクションでコミットされたすべての変更は、同じコミット LSN を共有します。 たとえば、ソース テーブルの更新操作によって 2 つの異なる行が変更された場合、変更テーブルには、すべて同じ **__$start_lsn** 値を持った 4 つの行 (古い値を含む 2 行と新しい値を含む 2 行) が格納されます。|  
-|**__ $ seqval**|`binary(10)`|特定のトランザクションに含まれる行の変更を並べ替えるためのシーケンス値です。|  
-|**__ $ 操作**|`int`|変更に関連付けられているデータ操作言語 (DML) 操作。 以下のいずれかを指定できます。<br /><br /> 1 = 削除<br /><br /> 2 = 挿入<br /><br /> 3 = 更新 (更新操作前の値)<br /><br /> 4 = 更新 (更新操作後の値)|  
+|**__$seqval**|`binary(10)`|特定のトランザクションに含まれる行の変更を並べ替えるためのシーケンス値です。|  
+|**__ $ 操作**|`int`|変更に関連付けられているデータ操作言語 (DML) 操作。 次のいずれかを指定できます。<br /><br /> 1 = 削除<br /><br /> 2 = 挿入<br /><br /> 3 = 更新 (更新操作前の値)<br /><br /> 4 = 更新 (更新操作後の値)|  
 |**__ $ update_mask**|`varbinary(128)`|変更された列を識別する、変更テーブルの列序数に基づくビットマスク。 変更された列を特定する必要がある場合にこの値を調べることができます。|  
 |**\<キャプチャされたソーステーブルの列>**|多様|この関数によって返されるその他の列は、ソース テーブルの列のうち、キャプチャ インスタンスの作成時にキャプチャ対象として指定された列です。 キャプチャ対象列リストで列が最初に指定されなかった場合、ソース テーブルのすべての列が返されます。|  
   
  詳細については、「[cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql)」を参照してください。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
  変更データをクエリで取得するテーブル値関数を作成したら、次の手順で、パッケージのデータ フローのデザインを開始します。  
   
- **次のトピック:** [変更データの取得と理解](retrieve-and-understand-the-change-data.md)  
+ **次のトピック:** [変更データを取得および理解する](retrieve-and-understand-the-change-data.md)  
   
   

@@ -11,28 +11,24 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5f0eb497499eafe16756becfb9607b925add08e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773814"
 ---
 # <a name="utility-dashboard-sql-server-utility"></a>ユーティリティ ダッシュボード (SQL Server ユーティリティ)
-  
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティ ダッシュボードにデータを表示するには、ユーティリティ エクスプローラーのツリーで最上位ノード "Utility<UCP 名>\\(ComputerName\UCP)" を選択します。 ダッシュボードには、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のすべてのマネージド インスタンス、および [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティのすべてのデータ層アプリケーションに関する概要データと詳細データが表示されます。 ダッシュボードのデータを更新するには、ユーティリティ エクスプローラーのツリーで最上位ノードを右クリックし、 **[更新]** をクリックします。  
   
- ユーティリティ コントロール ポイントの作成方法については、「 [SQL Server ユーティリティ コントロール ポイントの作成 &#40;SQL Server ユーティリティ&#41;](../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md)をクリックします。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスを [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティに追加する方法については、「[Enroll an Instance of SQL Server &#40;SQL Server Utility&#41; (SQL Server のインスタンスの登録 &#40;SQL Server ユーティリティ&#41;)](../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)」を参照してください。  
+ ユーティリティ コントロール ポイントの作成方法については、「 [SQL Server ユーティリティ コントロール ポイントの作成 &#40;SQL Server ユーティリティ&#41;](../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md)をクリックします。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスを [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティに追加する方法については、「[Enroll an Instance of SQL Server &#40;SQL Server Utility&#41; (SQL Server のインスタンスの登録 &#40;SQL Server ユーティリティ&#41;)](../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)」を参照してください。  
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
  マネージド インスタンスの正常性  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスの正常性状態は、ユーティリティ エクスプローラーのコンテンツ ペインの左側に表示されます。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスの正常性状態は、ユーティリティ エクスプローラーのコンテンツ ペインの左側に表示されます。  
   
  マネージド インスタンスの正常性パラメーターは次のとおりです。  
   
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]インスタンスの CPU 使用率  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]インスタンスの CPU 使用率  
   
 -   データベース ファイルの使用率  
   
@@ -52,24 +48,21 @@ ms.locfileid: "62773814"
   
  各正常性パラメーターの詳細な状態は、スライド式インジケーターに一覧表示されます。 スライド式インジケーターの右側にある部分は、何個のマネージド インスタンスが各状態カテゴリに存在するかを示します。  
   
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスまたはデータ層アプリケーションについてフィルターを適用したビューを作成するには、ユーティリティ ダッシュボードのスライド式インジケーターの横にある使用率カテゴリのリンクをクリックします。 たとえば、 **ユーティリティ エクスプローラーのコンテンツ** ペインで **[使用率が高いインスタンス CPU]** をクリックすると、SSMS では、現在のポリシー設定に基づいてフィルターが適用され、CPU 使用率の高い [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスについてのリスト ビューが作成されます。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスまたはデータ層アプリケーションについてフィルターを適用したビューを作成するには、ユーティリティ ダッシュボードのスライド式インジケーターの横にある使用率カテゴリのリンクをクリックします。 たとえば、 **ユーティリティ エクスプローラーのコンテンツ** ペインで **[使用率が高いインスタンス CPU]** をクリックすると、SSMS では、現在のポリシー設定に基づいてフィルターが適用され、CPU 使用率の高い [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスについてのリスト ビューが作成されます。  
   
  使用率カテゴリのリンクをクリックすると、ユーティリティ エクスプローラー ナビゲーション ウィンドウの対応するノードに **(フィルター選択)** と表示されます。つまり、 **[マネージド インスタンス]** のラベルが **[マネージド インスタンス (フィルター選択)]** になります。 フィルターの設定を表示するには、ナビゲーション ウィンドウでノードを右クリックし、 **[フィルター]**、 **[フィルターの設定]** の順にクリックします。 フィルターの設定をクリアするには、ナビゲーション ウィンドウでノードを右クリックし、**[フィルター]**、**[フィルターの削除]** の順にクリックします。  
   
  個々の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスの正常性状態の表示と、ポリシー構成設定の表示または変更の詳細については、「[マネージド インスタンスの詳細 &#40;SQL Server ユーティリティ &#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)」を参照してください。  
   
  ユーティリティの概要  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスの数と、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティによって管理されるデータ層アプリケーションの数を表示します。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスの数と、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティによって管理されるデータ層アプリケーションの数を表示します。  
   
  データ層アプリケーションの正常性  
  データ層アプリケーションの正常性状態は、ユーティリティ エクスプローラーのコンテンツ ペインの右側に表示されます。  
   
  データ層アプリケーションの正常性パラメーターは次のとおりです。  
   
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]インスタンスの CPU 使用率  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]インスタンスの CPU 使用率  
   
 -   データベース ファイルの使用率  
   
@@ -90,7 +83,7 @@ ms.locfileid: "62773814"
  各正常性パラメーターの詳細な状態は、スライド式インジケーターに一覧表示されます。 スライド式インジケーターの右側にある部分は、何個のデータ層アプリケーションが各状態カテゴリに存在するかを示します。 個々のデータ層アプリケーションの正常性状態の表示と、ポリシー構成設定の表示または変更の詳細については、「[配置済みのデータ層アプリケーションの詳細 &#40;SQL Server ユーティリティ&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)」を参照してください。  
   
  ユーティリティの記憶域使用率の履歴  
- 使用率の履歴は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティ ダッシュボードの下部にある時間グラフに表示されます。 時間データとして、UCP のローカル日時が datetime データ型で表示されることに注意してください。 詳細については、SQL Server オンライン ブックの「[datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071)」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、SQL Server オンライン ブックの「[datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713)」を参照してください。  
+ 使用率の履歴は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティ ダッシュボードの下部にある時間グラフに表示されます。 時間データとして、UCP のローカル日時が datetime データ型で表示されることに注意してください。 詳細については、SQL Server オンライン ブックの「 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、SQL Server オンライン ブックの「 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 」を参照してください。  
   
  表示領域の左側にあるオプション ボタンを使用して、グラフ表示の対象期間を変更できます。  
   
@@ -112,6 +105,6 @@ ms.locfileid: "62773814"
 ## <a name="see-also"></a>参照  
  [ユーティリティエクスプローラーを使用して SQL Server ユーティリティを管理する](../relational-databases/manage/use-utility-explorer-to-manage-the-sql-server-utility.md)   
  [SQL Server &#40;SQL Server ユーティリティのインスタンスを登録する&#41;](../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)   
- [Resource Health ポリシー定義を変更する &#40;SQL Server ユーティリティ&#41;](../relational-databases/manage/modify-a-resource-health-policy-definition-sql-server-utility.md)  
+ [リソース正常性ポリシーの定義の変更 &#40;SQL Server Utility&#41;](../relational-databases/manage/modify-a-resource-health-policy-definition-sql-server-utility.md)  
   
   

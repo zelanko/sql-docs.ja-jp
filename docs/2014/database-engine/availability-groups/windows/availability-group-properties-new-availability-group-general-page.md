@@ -13,22 +13,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 248ffe57906052c0d7dafcd187bb1b2b34cd6e64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815655"
 ---
 # <a name="availability-group-properties-and-new-availability-group-general-page"></a>[可用性グループのプロパティ] と [新しい可用性グループ] ([全般] ページ)
-  このトピックは、 **[新しい可用性グループ]** ダイアログ ボックスと **[可用性グループのプロパティ]** ダイアログ ボックスの **[全般]** タブに該当します。  
-  **[新しい可用性グループ]** ダイアログ ボックスでは、 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]を使用せずに新しい可用性グループを作成できます。 
-  **[可用性グループのプロパティ]** ダイアログ ボックスでは、既存の可用性グループの構成を表示、変更できます。  
+   このトピックは、**[新しい可用性グループ]** ダイアログ ボックスと **[可用性グループのプロパティ]** ダイアログ ボックスの **[全般]** タブに該当します。  **[新しい可用性グループ]** ダイアログ ボックスでは、 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]を使用せずに新しい可用性グループを作成できます。 **[可用性グループのプロパティ]** ダイアログ ボックスでは、既存の可用性グループの構成を表示、変更できます。  
   
  **可用性グループのプロパティを表示するには**  
   
 -   [可用性グループのプロパティの表示 &#40;SQL Server&#41;](view-availability-group-properties-sql-server.md)  
   
--   [AlwaysOn ダッシュボード &#40;SQL Server Management Studio を使用&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [AlwaysOn ダッシュボードの使用 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
  **可用性グループ名**  
@@ -48,20 +46,20 @@ ms.locfileid: "62815655"
  **サーバーインスタンス**  
  このレプリカをホストし、既定ではないインスタンスの場合はレプリカのインスタンス名もホストしている、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスのサーバー名。  
   
- **果たす**  
- **プライマリ**  
+ **Role**  
+ **1 次式**  
  現在、プライマリ レプリカです。  
   
- **目**  
+ **セカンダリ**  
  現在、セカンダリ レプリカです。  
   
- **修復**  
+ **[解決中]**  
  現在、レプリカのロールは、プライマリ ロールとセカンダリ ロールのどちらかに解決中です。  
   
  **可用性モード**  
  レプリカの可用性モード。次のいずれかです。  
   
- **非同期コミット**  
+ **[非同期コミット]**  
  プライマリ レプリカは、セカンダリがログをディスクに書き込むのを待機することなくトランザクションをコミットできます。  
   
  **同期コミット**  
@@ -84,8 +82,8 @@ ms.locfileid: "62815655"
  **すべての接続を許可する**  
  プライマリ レプリカのデータベースに対するすべての接続が許可されます。 これが既定の設定です。  
   
- **読み取り/書き込み接続を許可する**  
- Application Intent 接続プロパティが **ReadOnly** に設定されている接続は許可されません。 Application Intent プロパティが **ReadWrite** に設定されている場合、または Application Intent 接続プロパティが設定されていない場合は、接続が許可されます。 "アプリケーションの目的" 接続プロパティの詳細については、「 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)」を参照してください。  
+ **[読み取り/書き込みの接続を許可]**  
+ アプリケーションの目的の接続プロパティが**ReadOnly**に設定されている接続は許可されません。 "アプリケーションの目的" プロパティが**ReadWrite**に設定されている場合、または "アプリケーションの目的" 接続プロパティが設定されていない場合は、接続が許可されます。 "アプリケーションの目的" 接続プロパティの詳細については、「 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)」を参照してください。  
   
  **読み取り可能なセカンダリ**  
  セカンダリ ロールを実行している (つまりセカンダリ レプリカとして機能している) 可用性レプリカがクライアントからの接続を受け入れることができるかどうか。以下のいずれかです。  
@@ -93,7 +91,7 @@ ms.locfileid: "62815655"
  **いいえ**  
  このレプリカのセカンダリ データベースに対する直接接続は禁止されます。 読み取りアクセスで利用することはできません。 これが既定の設定です。  
   
- **読み取りを目的とした場合のみ**  
+ **[読み取り目的のみ]**  
  このレプリカのセカンダリ データベースに対する直接接続は、読み取り専用でのみ許可されます。 セカンダリ データベースはすべて読み取りアクセスで利用できます。  
   
  **はい**  

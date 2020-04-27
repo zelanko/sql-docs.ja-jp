@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 316afc6d5f3a87ff7431240681066ac5ee66ede6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62780699"
 ---
 # <a name="program-exception-message-box"></a>例外メッセージ ボックスのプログラミング
@@ -33,8 +33,7 @@ ms.locfileid: "62780699"
   
 3.  予想される例外を処理する try-catch ブロックを作成します。  
   
-4.  
-  `catch` ブロック内に、<xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> クラスのインスタンスを作成します。 ブロックに<xref:System.Exception>よって`try` -処理されるオブジェクトを渡します。 `catch`  
+4.  `catch` ブロック内に、<xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> クラスのインスタンスを作成します。 ブロックに<xref:System.Exception>よって`try` -処理されるオブジェクトを渡します。 `catch`  
   
 5.  (省略可) <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> に次のプロパティを 1 つ以上設定します。  
   
@@ -46,8 +45,7 @@ ms.locfileid: "62780699"
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Symbol%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxSymbol>例外メッセージボックスに表示する記号を指定する列挙です。  
   
-6.  
-  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A> メソッドを呼び出します。 例外メッセージ ボックスが属する親ウィンドウを渡します。  
+6.  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A> メソッドを呼び出します。 例外メッセージ ボックスが属する親ウィンドウを渡します。  
   
 7.  Optionalユーザーがクリックした<xref:System.Windows.Forms.DialogResult>ボタンを判断する必要がある場合は、返された列挙体の値を確認します。  
   
@@ -57,16 +55,13 @@ ms.locfileid: "62780699"
   
 2.  Optional(C# `using` ) または`Imports` (Visual Basic .net) ディレクティブを追加して<xref:Microsoft.SqlServer.MessageBox> 、名前空間を使用します。  
   
-3.  
-  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> クラスのインスタンスを作成します。 
-  <xref:System.String> 値としてメッセージ テキストを渡します。  
+3.  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> クラスのインスタンスを作成します。 <xref:System.String> 値としてメッセージ テキストを渡します。  
   
 4.  (省略可) <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> に次のプロパティを 1 つ以上設定します。  
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Buttons%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons>例外メッセージボックスに表示するボタンを指定する列挙です。  
   
-    -   
-  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Caption%2A> - 例外メッセージ ボックスのダイアログ ボックスのキャプションです。  
+    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Caption%2A> - 例外メッセージ ボックスのダイアログ ボックスのキャプションです。  
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.DefaultButton%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDefaultButton>例外メッセージボックスのダイアログボックスの既定のボタンを指定する列挙です。  
   
@@ -74,8 +69,7 @@ ms.locfileid: "62780699"
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Symbol%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxSymbol>例外メッセージボックスに表示する記号を指定する列挙です。  
   
-5.  
-  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A> メソッドを呼び出します。 例外メッセージ ボックスが属する親ウィンドウを渡します。  
+5.  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A> メソッドを呼び出します。 例外メッセージ ボックスが属する親ウィンドウを渡します。  
   
 6.  (省略可) ユーザーがクリックしたボタンを判断する必要がある場合は、返された <xref:System.Windows.Forms.DialogResult> 列挙値に注意します。  
   
@@ -89,16 +83,13 @@ ms.locfileid: "62780699"
   
     -   ブロックに<xref:System.Exception>よって`try` -処理されるオブジェクトを渡します。 `catch`  
   
-    -   
-  <xref:System.String> 値としてメッセージ テキストを渡します。  
+    -   <xref:System.String> 値としてメッセージ テキストを渡します。  
   
-4.  
-  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Buttons%2A> に次のいずれかの値を設定します。  
+4.  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Buttons%2A> に次のいずれかの値を設定します。  
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.AbortRetryIgnore>-[**中止**]、[**再試行**]、および [**無視**] ボタンが表示されます。  
   
-    -   
-  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.Custom> - カスタム ボタンを表示します。  
+    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.Custom> - カスタム ボタンを表示します。  
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.OK>- **[OK** ] ボタンを表示します。  
   
@@ -112,8 +103,7 @@ ms.locfileid: "62780699"
   
 5.  (省略可) カスタム ボタンを使用する場合は、<xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.SetButtonText%2A> メソッドのオーバーロードの 1 つを呼び出し、最多で 5 つのカスタム ボタンのテキストを指定します。  
   
-6.  
-  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A> メソッドを呼び出します。 例外メッセージ ボックスが属する親ウィンドウを渡します。  
+6.  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A> メソッドを呼び出します。 例外メッセージ ボックスが属する親ウィンドウを渡します。  
   
 7.  (省略可) ユーザーがクリックしたボタンを判断する必要がある場合は、返された <xref:System.Windows.Forms.DialogResult> 列挙値に注意します。 カスタム ボタンを使用する場合に、ユーザーがクリックしたボタンを判断するには、<xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDialogResult> プロパティの <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CustomDialogResult%2A> の値に注意します。  
   
@@ -127,11 +117,9 @@ ms.locfileid: "62780699"
   
     -   ブロックに<xref:System.Exception>よって`try` -処理されるオブジェクトを渡します。 `catch`  
   
-    -   
-  <xref:System.String> 値としてメッセージ テキストを渡します。  
+    -   <xref:System.String> 値としてメッセージ テキストを渡します。  
   
-4.  
-  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.ShowCheckbox%2A> プロパティを `true` に設定します。  
+4.  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.ShowCheckbox%2A> プロパティを `true` に設定します。  
   
 5.  (省略可) 表示された例外メッセージ ボックスを再度表示するかどうかを確認するテキストを <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxText%2A> に指定します。 既定のテキストは、"今後、このメッセージを表示しない" です。  
   
@@ -141,14 +129,11 @@ ms.locfileid: "62780699"
   
     1.  CreateSubKe メソッドを呼び出して、アプリケーションが使用するカスタム レジストリ キーを開き、<xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxRegistryKey%2A> に返された RegistryKey オブジェクトを設定します。  
   
-    2.  
-  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxRegistryValue%2A> に使用するレジストリの名前を設定します。  
+    2.  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxRegistryValue%2A> に使用するレジストリの名前を設定します。  
   
-    3.  
-  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxRegistryMeansDoNotShowDialog%2A> を `true` に設定します。  
+    3.  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxRegistryMeansDoNotShowDialog%2A> を `true` に設定します。  
   
-    4.  
-  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A> メソッドを呼び出します。 指定したレジストリ キーが評価され、レジストリ キーに格納されているデータが 0 の場合にのみ、例外メッセージ ボックスが表示されます。 ダイアログ ボックスが表示され、ユーザーがボタンをクリックする前にチェック ボックスをオンにした場合は、レジストリ キーのデータが 1 に設定されます。  
+    4.  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A> メソッドを呼び出します。 指定したレジストリ キーが評価され、レジストリ キーに格納されているデータが 0 の場合にのみ、例外メッセージ ボックスが表示されます。 ダイアログ ボックスが表示され、ユーザーがボタンをクリックする前にチェック ボックスをオンにした場合は、レジストリ キーのデータが 1 に設定されます。  
   
 ## <a name="example"></a>例  
  この例では、例外メッセージボックスを **[OK** ] ボタンのみと共に使用して、処理された例外とアプリケーション固有の追加情報を含むアプリケーション例外の情報を表示します。  

@@ -13,15 +13,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: eca5e82b9d23709b45949cfe6af9022f1243ef08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774214"
 ---
 # <a name="new-full-text-stoplist-general-page"></a>[新しいフルテキスト ストップリスト] ([全般] ページ)
-  このダイアログ ボックスを使用すると、フルテキスト ストップリストを作成できます。 
-  *ストップリスト* とは、一般的に使用される単語のセットのことです。これらの単語は *ストップワード*と呼ばれ、ストップリストを使用するテーブルのフルテキスト インデックスから省略されます。 詳細については、「 [フルテキスト検索に使用するストップワードとストップリストの構成と管理](../relational-databases/search/full-text-search.md)」を参照してください。  
+  このダイアログ ボックスを使用すると、フルテキスト ストップリストを作成できます。 *ストップリスト* とは、一般的に使用される単語のセットのことです。これらの単語は *ストップワード*と呼ばれ、ストップリストを使用するテーブルのフルテキスト インデックスから省略されます。 詳細については、「 [フルテキスト検索に使用するストップワードとストップリストの構成と管理](../relational-databases/search/full-text-search.md)」を参照してください。  
   
  **SQL Server Management Studio を使用してストップリストを作成するには**  
   
@@ -31,7 +30,7 @@ ms.locfileid: "62774214"
  **[フルテキスト ストップリスト名]**  
  フルテキスト ストップリストの名前を入力します。  
   
- **[所有者]**  
+ **所有者**  
  フルテキスト ストップリストの所有者を指定します。 自分自身 (現在のユーザー) に所有権を割り当てる場合は、このフィールドを空のままにします。  
   
  別のユーザーを指定するには、参照ボタンをクリックします。  
@@ -39,14 +38,13 @@ ms.locfileid: "62774214"
 ### <a name="create-stoplist-options"></a>ストップリスト作成オプション  
  以下のいずれかの作成オプションをクリックします。  
   
- **空のストップリストを作成する**  
+ **[空のストップリストを作成する]**  
  新しいストップリストにストップワードは含まれません。  
   
- **システムストップリストから作成する**  
- 
-  [リソース データベース](../relational-databases/databases/resource-database.md)に既定で存在するストップリストから新しいストップリストを作成します。  
+ **[システム ストップリストから作成する]**  
+ [リソース データベース](../relational-databases/databases/resource-database.md)に既定で存在するストップリストから新しいストップリストを作成します。  
   
- **既存のフルテキストストップリストから作成する**  
+ **[既存のフルテキスト ストップリストから作成する]**  
  既存のストップリストをコピーして新しいストップリストを作成します。  
   
  **ソースデータベース**  
@@ -62,6 +60,6 @@ ms.locfileid: "62774214"
  [Transact-sql&#41;&#40;のフルテキストストップリストの作成](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)   
  [Transact-sql&#41;&#40;のフルテキストストップリストの削除](/sql/t-sql/statements/drop-fulltext-stoplist-transact-sql)   
  [フルテキスト検索のためのストップワードとストップリストの構成と管理](../relational-databases/search/full-text-search.md)   
- [fulltext_stoplists &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql)  
+ [sys.fulltext_stoplists &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql)  
   
   

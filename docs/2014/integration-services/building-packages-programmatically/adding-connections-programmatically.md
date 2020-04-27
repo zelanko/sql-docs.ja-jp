@@ -25,10 +25,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b1258797d76df49a2622335ee798120632706c78
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62772227"
 ---
 # <a name="adding-connections-programmatically"></a>プログラムによる接続の追加
@@ -41,7 +41,7 @@ ms.locfileid: "62772227"
   
  `ConnectionManagerAdoNetClass cmado = cm.InnerObject as ConnectionManagerAdoNet;`  
   
- これは、マネージド接続マネージャー オブジェクトを、その基になる接続オブジェクトにキャストします。 C++ を使用している場合、`QueryInterface` オブジェクトの <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> メソッドが呼び出され、基になる接続オブジェクトのインターフェイスが要求されます。  
+ これは、マネージド接続マネージャー オブジェクトを、その基になる接続オブジェクトにキャストします。 C++ を使用している場合、<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> オブジェクトの `QueryInterface` メソッドが呼び出され、基になる接続オブジェクトのインターフェイスが要求されます。  
   
  次の表は、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] が備えている接続マネージャーと `package.Connections.Add("xxx")` ステートメントで使用される文字列を示しています。 すべての接続マネージャーのリストについては、「[Integration Services &#40;SSIS&#41; の接続](../connection-manager/integration-services-ssis-connections.md)」を参照してください。  
   
@@ -209,7 +209,7 @@ End Class
 ## <a name="external-resources"></a>外部リソース  
  carlprothman.net の [接続文字列](https://go.microsoft.com/fwlink/?LinkId=220743)に関する技術記事  
   
-![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
  [SSIS&#41; 接続の Integration Services &#40;](../connection-manager/integration-services-ssis-connections.md)   

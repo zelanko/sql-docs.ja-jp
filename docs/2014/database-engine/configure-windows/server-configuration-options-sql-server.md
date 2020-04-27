@@ -28,14 +28,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 645aee1374f7dbf3c290500bb35ca47115983670
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62809570"
 ---
 # <a name="server-configuration-options-sql-server"></a>サーバー構成オプション (SQL Server)
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースの管理および最適化を行うには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または sp_configure システム ストアド プロシージャを使用して、構成オプションを設定します。 最も一般的に使用されるサーバー構成オプションは [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]から使用できます。また、sp_configure を使用するとすべての構成オプションにアクセスできます。 システムへの影響を慎重に検討したうえで、これらのオプションを設定してください。 詳細については、「[サーバー プロパティの表示または変更 &#40;SQL Server&#41;](view-or-change-server-properties-sql-server.md)」を参照してください。  
   
 > [!IMPORTANT]  
@@ -46,12 +45,11 @@ ms.locfileid: "62809570"
   
 -   オプションを設定し、RECONFIGURE ステートメントまたは場合によっては RECONFIGURE WITH OVERRIDE ステートメントを実行した直後。  
   
-     または  
+     \- または -  
   
 -   上の操作を行い、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを再起動した後。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の再起動を必要とするオプションについては、最初に、変更された値が value 列だけに表示されます。 再起動後に、その新しい値が value 列と value_in_use 列の両方に表示されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の再起動を必要とするオプションについては、最初に、変更された値が value 列だけに表示されます。 再起動後に、その新しい値が value 列と value_in_use 列の両方に表示されます。  
   
  オプションの中には、新しい構成を有効にするために、サーバーを再起動する必要があるものもあります。 新しい値を設定し sp_configure を実行した後にサーバーを再起動した場合、新しい値は構成オプションの value_in_use 列ではなく value 列に表示されます。 サーバーの再起動後は、新しい値が value_in_use  列に表示されます。  
   
@@ -68,77 +66,76 @@ ms.locfileid: "62809570"
   
     |構成オプション|最小値|最大値|Default|  
     |--------------------------|-------------------|-------------------|-------------|  
-    |[アクセス確認キャッシュバケット数](access-check-cache-server-configuration-options.md)(A)|0|16384|0|  
-    |[アクセス確認キャッシュクォータ](access-check-cache-server-configuration-options.md)(A)|0|2147483647|0|  
-    |アドホック[分散クエリ](ad-hoc-distributed-queries-server-configuration-option.md)(A)|0|1 で保護されたプロセスとして起動されました|0|  
-    |[affinity i/o mask](affinity-input-output-mask-server-configuration-option.md) (A、RR)|-2147483648|2147483647|0|  
-    |[affinity64 i/o mask](affinity64-input-output-mask-server-configuration-option.md) (A、64ビット版の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でのみ使用可能)|-2147483648|2147483647|0|  
-    |[関係マスク](affinity-mask-server-configuration-option.md)(A)|-2147483648|2147483647|0|  
-    |[affinity64 mask](affinity64-mask-server-configuration-option.md) (A、RR) は、64ビット版のでのみ使用できます。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|-2147483648|2147483647|0|  
-    |[エージェント XPs](agent-xps-server-configuration-option.md) (A)|0|1 で保護されたプロセスとして起動されました|0<br /><br /> ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが起動すると 1 に変わります。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが自動的に起動するようにセットアップ時に設定されている場合の既定値は 0 です。)|  
-    |[更新を許可](allow-updates-server-configuration-option.md)します (Obsolete。 使用しないでください。 再構成中にエラーが発生する原因になる場合があります。)|0|1 で保護されたプロセスとして起動されました|0|  
-    |[バックアップ チェックサムの既定](../backup-checksum-default.md)|0|1 で保護されたプロセスとして起動されました|0|  
-    |[バックアップの圧縮の既定値](view-or-configure-the-backup-compression-default-server-configuration-option.md)|0|1 で保護されたプロセスとして起動されました|0|  
-    |ブロックされた[プロセスのしきい値](blocked-process-threshold-server-configuration-option.md)(A)|0|86400|0|  
-    |[c2 audit mode](c2-audit-mode-server-configuration-option.md) (A、RR)|0|1 で保護されたプロセスとして起動されました|0|  
-    |[clr enabled](clr-enabled-server-configuration-option.md)|0|1 で保護されたプロセスとして起動されました|0|  
-    |[共通基準準拠の有効化](common-criteria-compliance-enabled-server-configuration-option.md)(A、RR)|0|1 で保護されたプロセスとして起動されました|0|  
+    |[access check cache bucket count](access-check-cache-server-configuration-options.md) (A)|0|16384|0|  
+    |[access check cache quota](access-check-cache-server-configuration-options.md) (A)|0|2147483647|0|  
+    |[ad hoc distributed queries](ad-hoc-distributed-queries-server-configuration-option.md) (A)|0|1|0|  
+    |[affinity I/O mask](affinity-input-output-mask-server-configuration-option.md) (A、RR)|-2147483648|2147483647|0|  
+    |[affinity64 I/O mask](affinity64-input-output-mask-server-configuration-option.md) (A、64 ビット版の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でのみ使用可能)|-2147483648|2147483647|0|  
+    |[affinity mask](affinity-mask-server-configuration-option.md) (A)|-2147483648|2147483647|0|  
+    |[affinity64 mask](affinity64-mask-server-configuration-option.md) (A、RR)、64 ビット版のでのみ使用可能 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|-2147483648|2147483647|0|  
+    |[Agent XPs](agent-xps-server-configuration-option.md) (A)|0|1|0<br /><br /> ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが起動すると 1 に変わります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが自動的に起動するようにセットアップ時に設定されている場合の既定値は 0 です。)|  
+    |[allow updates](allow-updates-server-configuration-option.md) (旧バージョンで使用。 使用しないでください。 再構成中にエラーが発生する原因になる場合があります。)|0|1|0|  
+    |[バックアップ チェックサムの既定](../backup-checksum-default.md)|0|1|0|  
+    |[backup compression default](view-or-configure-the-backup-compression-default-server-configuration-option.md)|0|1|0|  
+    |[blocked process threshold](blocked-process-threshold-server-configuration-option.md) (A)|0|86400|0|  
+    |[c2 audit mode](c2-audit-mode-server-configuration-option.md) (A、RR)|0|1|0|  
+    |[clr enabled](clr-enabled-server-configuration-option.md)|0|1|0|  
+    |[common criteria compliance enabled](common-criteria-compliance-enabled-server-configuration-option.md) (A、RR)|0|1|0|  
     |[contained database authentication](contained-database-authentication-server-configuration-option.md)|0||0|  
-    |[並列処理のコストしきい値](configure-the-cost-threshold-for-parallelism-server-configuration-option.md)(A)|0|32767|5|  
-    |[cross db ownership chaining](cross-db-ownership-chaining-server-configuration-option.md)|0|1 で保護されたプロセスとして起動されました|0|  
-    |[カーソルのしきい値](configure-the-cursor-threshold-server-configuration-option.md)(A)|-1|2147483647|-1|  
-    |[データベースメール XPs](database-mail-xps-server-configuration-option.md) (A)|0|1 で保護されたプロセスとして起動されました|0|  
-    |[既定のフルテキスト言語](configure-the-default-full-text-language-server-configuration-option.md)(A)|0|2147483647|1033|  
+    |[cost threshold for parallelism](configure-the-cost-threshold-for-parallelism-server-configuration-option.md) (A)|0|32767|5|  
+    |[cross db ownership chaining](cross-db-ownership-chaining-server-configuration-option.md)|0|1|0|  
+    |[cursor threshold](configure-the-cursor-threshold-server-configuration-option.md) (A)|-1|2147483647|-1|  
+    |[Database Mail XPs](database-mail-xps-server-configuration-option.md) (A)|0|1|0|  
+    |[default full-text language](configure-the-default-full-text-language-server-configuration-option.md) (A)|0|2147483647|1033|  
     |[既定の言語](configure-the-default-language-server-configuration-option.md)|0|9999|0|  
-    |[既定のトレースが有効](default-trace-enabled-server-configuration-option.md)(A)|0|1 で保護されたプロセスとして起動されました|1 で保護されたプロセスとして起動されました|  
-    |[トリガーからの結果を許可](disallow-results-from-triggers-server-configuration-option.md)しない (A)|0|1 で保護されたプロセスとして起動されました|0|  
-    |[EKM provider enabled](ekm-provider-enabled-server-configuration-option.md)|0|1 で保護されたプロセスとして起動されました|0|  
+    |[default trace enabled](default-trace-enabled-server-configuration-option.md) (A)|0|1|1|  
+    |[disallow results from triggers](disallow-results-from-triggers-server-configuration-option.md) (A)|0|1|0|  
+    |[EKM provider enabled](ekm-provider-enabled-server-configuration-option.md)|0|1|0|  
     |[filestream_access_level](filestream-access-level-server-configuration-option.md)|0|2|0|  
-    |[FILL FACTOR](configure-the-fill-factor-server-configuration-option.md) (A、RR)|0|100|0|  
+    |[fill factor](configure-the-fill-factor-server-configuration-option.md) (A、RR)|0|100|0|  
     |ft crawl bandwidth (max)、 [ft crawl bandwidth](ft-crawl-bandwidth-server-configuration-option.md)(A) を参照|0|32767|100|  
     |ft crawl bandwidth (min)、 [ft crawl bandwidth](ft-crawl-bandwidth-server-configuration-option.md)(A) を参照|0|32767|0|  
     |ft notify bandwidth (max)、 [ft notify bandwidth](ft-notify-bandwidth-server-configuration-option.md)(A) を参照|0|32767|100|  
     |ft notify bandwidth (min)、 [ft notify bandwidth](ft-notify-bandwidth-server-configuration-option.md)(A) を参照|0|32767|0|  
-    |[インデックス作成メモリ](configure-the-index-create-memory-server-configuration-option.md)(A、SC)|704|2147483647|0|  
-    |[インダウトのトランザクション解決](in-doubt-xact-resolution-server-configuration-option.md)(A)|0|2|0|  
-    |[簡易プーリング](lightweight-pooling-server-configuration-option.md)(A、RR)|0|1 で保護されたプロセスとして起動されました|0|  
+    |[index create memory](configure-the-index-create-memory-server-configuration-option.md) (A、SC)|704|2147483647|0|  
+    |[in-doubt xact resolution](in-doubt-xact-resolution-server-configuration-option.md) (A)|0|2|0|  
+    |[lightweight pooling](lightweight-pooling-server-configuration-option.md) (A、RR)|0|1|0|  
     |[locks](configure-the-locks-server-configuration-option.md) (A、RR、SC)|5000|2147483647|0|  
-    |[並列処理の最大限度](configure-the-max-degree-of-parallelism-server-configuration-option.md)(A)|0|32767|0|  
-    |[フルテキストクロールの最大範囲](max-full-text-crawl-range-server-configuration-option.md)(A)|0|256|4|  
+    |[max degree of parallelism](configure-the-max-degree-of-parallelism-server-configuration-option.md) (A)|0|32767|0|  
+    |[max full-text crawl range](max-full-text-crawl-range-server-configuration-option.md) (A)|0|256|4|  
     |[max server memory](server-memory-server-configuration-options.md) (A、SC)|16|2147483647|2147483647|  
-    |[テキスト repl の最大サイズ](configure-the-max-text-repl-size-server-configuration-option.md)|0|2147483647|65536|  
-    |[ワーカースレッドの最大数](configure-the-max-worker-threads-server-configuration-option.md)(A)|128|32767<br /><br /> (32 ビット版の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では 1024 が、64 ビット版の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では 2048 が推奨されます)|0<br /><br /> 0を指定する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と、プロセッサ数に応じて最大ワーカースレッド数が自動的に構成されます。32ビットの場合は 256 + (*\<プロセッサ>* -4) * 8)、64ビット[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の場合は2倍になります。|  
-    |[メディアの保有期間](configure-the-media-retention-server-configuration-option.md)(A、RR)|0|365|0|  
+    |[max text repl size](configure-the-max-text-repl-size-server-configuration-option.md)|0|2147483647|65536|  
+    |[max worker threads](configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> (32 ビット版の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では 1024 が、64 ビット版の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では 2048 が推奨されます)|0<br /><br /> 0を指定する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と、プロセッサ数に応じて最大ワーカースレッド数が自動的に構成されます。32ビットの場合は 256 + (*\<プロセッサ>* -4) * 8)、64ビット[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の場合は2倍になります。|  
+    |[media retention](configure-the-media-retention-server-configuration-option.md) (A、RR)|0|365|0|  
     |[min memory per query](configure-the-min-memory-per-query-server-configuration-option.md) (A)|512|2147483647|1024|  
     |[min server memory](server-memory-server-configuration-options.md) (A、SC)|0|2147483647|0|  
-    |[入れ子になったトリガー](configure-the-nested-triggers-server-configuration-option.md)|0|1 で保護されたプロセスとして起動されました|1 で保護されたプロセスとして起動されました|  
-    |[ネットワークパケットサイズ](configure-the-network-packet-size-server-configuration-option.md)(A)|512|32767|4096|  
-    |[Ole オートメーションプロシージャ](ole-automation-procedures-server-configuration-option.md)(A)|0|1 で保護されたプロセスとして起動されました|0|  
-    |[開い](open-objects-server-configuration-option.md)ているオブジェクト (A、RR、不使用)|0|2147483647|0|  
-    |アドホック[ワークロードの最適化](optimize-for-ad-hoc-workloads-server-configuration-option.md)(A)|0|1 で保護されたプロセスとして起動されました|0|  
-    |[PH_timeout](ph-timeout-server-configuration-option.md) (A)|1 で保護されたプロセスとして起動されました|3600|60|  
-    |[事前計算 rank](precompute-rank-server-configuration-option.md) (A)|0|1 で保護されたプロセスとして起動されました|0|  
+    |[入れ子になったトリガー](configure-the-nested-triggers-server-configuration-option.md)|0|1|1|  
+    |[network packet size](configure-the-network-packet-size-server-configuration-option.md) (A)|512|32767|4096|  
+    |[Ole Automation Procedures](ole-automation-procedures-server-configuration-option.md) (A)|0|1|0|  
+    |[open objects](open-objects-server-configuration-option.md) (A、RR、旧バージョンで使用)|0|2147483647|0|  
+    |[optimize for ad hoc workloads](optimize-for-ad-hoc-workloads-server-configuration-option.md) (A)|0|1|0|  
+    |[PH_timeout](ph-timeout-server-configuration-option.md) (A)|1|3600|60|  
+    |[precompute rank](precompute-rank-server-configuration-option.md) (A)|0|1|0|  
     |[priority boost](configure-the-priority-boost-server-configuration-option.md) (A、RR)|0|1|0|  
     |[query governor cost limit](configure-the-query-governor-cost-limit-server-configuration-option.md) (A)|0|2147483647|0|  
-    |[クエリの待機](configure-the-query-wait-server-configuration-option.md)(A)|-1|2147483647|-1|  
-    |[復旧間隔](configure-the-recovery-interval-server-configuration-option.md)(A、SC)|0|32767|0|  
-    |[リモートアクセス](configure-the-remote-access-server-configuration-option.md)(RR)|0|1 で保護されたプロセスとして起動されました|1 で保護されたプロセスとして起動されました|  
-    |[remote admin connections](remote-admin-connections-server-configuration-option.md)|0|1 で保護されたプロセスとして起動されました|0|  
+    |[query wait](configure-the-query-wait-server-configuration-option.md) (A)|-1|2147483647|-1|  
+    |[recovery interval](configure-the-recovery-interval-server-configuration-option.md) (A、SC)|0|32767|0|  
+    |[remote access](configure-the-remote-access-server-configuration-option.md) (RR)|0|1|1|  
+    |[remote admin connections](remote-admin-connections-server-configuration-option.md)|0|1|0|  
     |[リモートログインタイムアウト](configure-the-remote-login-timeout-server-configuration-option.md)|0|2147483647|10|  
-    |[リモート proc trans](configure-the-remote-proc-trans-server-configuration-option.md)|0|1 で保護されたプロセスとして起動されました|0|  
-    |[リモートクエリのタイムアウト](configure-the-remote-query-timeout-server-configuration-option.md)|0|2147483647|600|  
-    |[Replication XPs オプション](replication-xps-server-configuration-option.md)(A)|0|1 で保護されたプロセスとして起動されました|0|  
-    |[スタートアッププロシージャ](configure-the-scan-for-startup-procs-server-configuration-option.md)(A、RR) のスキャン|0|1 で保護されたプロセスとして起動されました|0|  
-    |[server trigger recursion](server-trigger-recursion-server-configuration-option.md)|0|1 で保護されたプロセスとして起動されました|1 で保護されたプロセスとして起動されました|  
-    |[ワーキングセットサイズの設定](set-working-set-size-server-configuration-option.md)(A、RR、廃止)|0|1|0|  
-    |[show advanced options](show-advanced-options-server-configuration-option.md)|0|1 で保護されたプロセスとして起動されました|0|  
-    |[SMO および DMO XPs](smo-and-dmo-xps-server-configuration-option.md) (A)|0|1 で保護されたプロセスとして起動されました|1 で保護されたプロセスとして起動されました|  
-    |[ノイズワードの変換](transform-noise-words-server-configuration-option.md)(A)|0|1 で保護されたプロセスとして起動されました|0|  
-    |[2 桁の年のカットオフ](configure-the-two-digit-year-cutoff-server-configuration-option.md)(A)|1753|9999|2049|  
-    |[ユーザー接続](configure-the-user-connections-server-configuration-option.md)(A、RR、SC)|0|32767|0|  
+    |[remote proc trans](configure-the-remote-proc-trans-server-configuration-option.md)|0|1|0|  
+    |[remote query timeout](configure-the-remote-query-timeout-server-configuration-option.md)|0|2147483647|600|  
+    |[Replication XPs](replication-xps-server-configuration-option.md) (A)|0|1|0|  
+    |[scan for startup procs](configure-the-scan-for-startup-procs-server-configuration-option.md) (A、RR)|0|1|0|  
+    |[server trigger recursion](server-trigger-recursion-server-configuration-option.md)|0|1|1|  
+    |[set working set size](set-working-set-size-server-configuration-option.md) (A、RR、旧バージョンで使用)|0|1|0|  
+    |[show advanced options](show-advanced-options-server-configuration-option.md)|0|1|0|  
+    |[SMO and DMO XPs](smo-and-dmo-xps-server-configuration-option.md) (A)|0|1|1|  
+    |[transform noise words](transform-noise-words-server-configuration-option.md) (A)|0|1|0|  
+    |[two digit year cutoff](configure-the-two-digit-year-cutoff-server-configuration-option.md) (A)|1753|9999|2049|  
+    |[user connections](configure-the-user-connections-server-configuration-option.md) (A、RR、SC)|0|32767|0|  
     |[ユーザーオプション](configure-the-user-options-server-configuration-option.md)|0|32767|0|  
-    |[xp_cmdshell](xp-cmdshell-server-configuration-option.md) (A)|0|1 で保護されたプロセスとして起動されました|0|  
+    |[xp_cmdshell](xp-cmdshell-server-configuration-option.md) (A)|0|1|0|  
   
 ## <a name="see-also"></a>参照  
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   

@@ -14,14 +14,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ec14f86b283fa8ccbc037feec4a8a54983126403
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774956"
 ---
 # <a name="open-projects-from-source-control"></a>ソース管理からプロジェクトを開く
-  
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を使用して、ソース管理からプロジェクトを直接開くことができます。 プロジェクトを直接開く場合は、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] によって、このプロジェクトの最新のバージョンが取得され、ローカル ディスクにコピーされます。 また、[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 環境によって、そのプロジェクトのソリューションが自動的に作成されます。  
   
  ソース管理からプロジェクトを開いた後、プロジェクト ファイルをチェックアウトして修正することができます。  

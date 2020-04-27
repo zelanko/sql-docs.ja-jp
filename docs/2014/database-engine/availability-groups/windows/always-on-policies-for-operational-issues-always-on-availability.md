@@ -14,19 +14,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 815f549cf9ab6dd7fe748c08ae7f32683c9d8551
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815757"
 ---
 # <a name="always-on-policies-for-operational-issues-with-always-on-availability-groups-sql-server"></a>AlwaysOn 可用性グループでの運用上の問題のポリシー ベースの管理 (SQL Server)
-  
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の正常性モデルは、定義済みポリシー ベースの管理 (PBM) ポリシーのセットを評価します。 これらのポリシーを使用すると、可用性グループとその可用性レプリカおよびデータベースの正常性を [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]で表示できます。  
   
  
   
-##  <a name="TermsAndDefinitions"></a>用語と定義  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a>用語と定義  
  AlwaysOn の定義済みのポリシー  
  一連の組み込みポリシーを使用して、データベース管理者は可用性グループとその可用性レプリカおよびデータベースが AlwaysOn ポリシーで定義されている状態に適合しているかどうかをチェックできます。  
   
@@ -35,7 +34,7 @@ ms.locfileid: "62815757"
  可用性グループ  
  ひとまとまりでフェールオーバーされる個別のユーザー データベースのセット ( *可用性データベース*) のコンテナー。  
   
- 可用性グループ  
+ 可用性レプリカ  
  可用性グループのインスタンス化。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の特定のインスタンスによってホストされ、可用性グループに属する各可用性データベースのローカル コピーを保持します。 可用性グループには、2 種類の可用性レプリカ ( *プライマリ レプリカ* と 1 ～ 4 つの *セカンダリ レプリカ*) があります。 可用性グループの可用性レプリカをホストするサーバー インスタンスは、同じ Windows Server フェールオーバー クラスタリング (WSFC) クラスター内の別のノードにある必要があります。  
   
  可用性データベース  
@@ -44,7 +43,7 @@ ms.locfileid: "62815757"
  AlwaysOn ダッシュボード  
  可用性グループの正常性をひとめで確認できるビューを提供する [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ダッシュボード。 詳細については、このトピックの「 [AlwaysOn ダッシュボード](#Dashboard)」を参照してください。  
   
-##  <a name="AlwaysOnPBM"></a>定義済みのポリシーと問題点  
+##  <a name="predefined-policies-and-issues"></a><a name="AlwaysOnPBM"></a>定義済みのポリシーと問題点  
  次の表は、定義済みのポリシーをまとめたものです。  
   
 |ポリシー名|問題|別**<sup>*</sup>**|ファセット|  
@@ -67,7 +66,7 @@ ms.locfileid: "62815757"
 > [!IMPORTANT]  
 >  **<sup>*</sup>** AlwaysOn ポリシーの場合、カテゴリ名は Id として使用されます。 AlwaysOn カテゴリの名前を変更すると、正常性評価の機能を使用できなくなります。 このため、AlwaysOn カテゴリの名前は変更しないでください。  
   
-##  <a name="Dashboard"></a>AlwaysOn ダッシュボード  
+##  <a name="alwayson-dashboard"></a><a name="Dashboard"></a>AlwaysOn ダッシュボード  
  AlwaysOn ダッシュボードには、可用性グループの正常性をひとめで確認できるビューが用意されています。 AlwaysOn ダッシュボードには、次の機能が含まれています。  
   
 -   指定された可用性グループ、その可用性レプリカ、およびそのデータベースの詳細情報を簡単に表示できます。  
@@ -82,21 +81,20 @@ ms.locfileid: "62815757"
   
 -   可用性グループのフェールオーバーで特定の問題を修復できる場合、リンクの開始ポイントである[可用性グループのフェールオーバー ウィザード](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)を提供します。 データベース管理者は、このウィザードを使用して手動フェールオーバー プロセスを実行します。  
   
-##  <a name="ExtendHealthModel"></a>AlwaysOn 正常性モデルの拡張  
- 
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の正常性モデルを拡張するには、独自のユーザー定義のポリシーを作成し、監視するオブジェクトの種類に基づいて特定のカテゴリに分類します。  いくつかの設定を変更した後、独自のユーザー定義のポリシーおよび AlwaysOn の定義済みのポリシーが、AlwaysOn ダッシュボードによって自動的に評価されます。  
+##  <a name="extending-the-alwayson-health-model"></a><a name="ExtendHealthModel"></a>AlwaysOn 正常性モデルの拡張  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の正常性モデルを拡張するには、独自のユーザー定義のポリシーを作成し、監視するオブジェクトの種類に基づいて特定のカテゴリに分類します。  いくつかの設定を変更した後、独自のユーザー定義のポリシーおよび AlwaysOn の定義済みのポリシーが、AlwaysOn ダッシュボードによって自動的に評価されます。  
   
  ユーザー定義ポリシーでは、AlwaysOn の定義済みポリシーで使用されているものを含め、使用可能なすべての PBM ファセットを使用できます (このトピックの「[定義済みのポリシーと問題点](#AlwaysOnPBM)」を参照してください)。 サーバーのファセットは、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の正常性状態の監視用に、`IsHadrEnabled` プロパティおよび `HadrManagerStatus` プロパティを提供します。 サーバーのファセットは、WSFC クラスター構成の監視用に、`ClusterQuorumType` プロパティおよび `ClusterQuorumState` プロパティも提供します。  
   
  詳細については、「[AlwaysOn の正常性モデル: パート 2: 正常性モデルの拡張](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)」を参照してください (SQL Server AlwaysOn チームのブログ)。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [AlwaysOn ポリシーを使用して、可用性グループ &#40;SQL Server の正常性を表示&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
--   [AlwaysOn ダッシュボード &#40;SQL Server Management Studio を使用&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [AlwaysOn ダッシュボードの使用 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
--   [WSFC の強制クォーラムによるディザスターリカバリー &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
+-   [WSFC の強制クォーラムによる災害復旧 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
   
 -   [クォーラムを使用せずに WSFC クラスターを強制的に起動する](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
@@ -104,7 +102,7 @@ ms.locfileid: "62815757"
   
 -   [失敗したファイルの追加操作のトラブルシューティング &#40;AlwaysOn 可用性グループ&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a> 関連コンテンツ  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 関連コンテンツ  
   
 -   [AlwaysOn の正常性モデル: パート 1: 正常性モデルのアーキテクチャ](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
   

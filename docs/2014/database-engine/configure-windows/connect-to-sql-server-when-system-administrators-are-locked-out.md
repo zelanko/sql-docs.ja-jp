@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 156a8e765812c14da0888148505311d52c267916
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62782385"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>システム管理者がロックアウトされた場合の SQL Server への接続
@@ -34,7 +34,7 @@ ms.locfileid: "62782385"
   
  アクセスを復旧する 1 つの方法は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再インストールし、すべてのデータベースを新しいインスタンスにアタッチすることです。 この解決方法は時間がかかるうえ、ログインを復旧するには、バックアップから master データベースを復元する必要が生じる場合があります。 master データベースのバックアップが古いと、一部の情報が含まれていない可能性があります。 master データベースのバックアップが新しいと、以前のインスタンスと同じログインが含まれているために管理者がロックアウトされたままになる可能性があります。  
   
-## <a name="resolution"></a>解決策  
+## <a name="resolution"></a>解像度  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -m **オプションまたは** -f **オプションを使用して、** のインスタンスをシングル ユーザー モードで起動します。 これにより、コンピューターのローカル Administrators グループのメンバーがすべて、固定サーバー ロール sysadmin のメンバーとして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続できるようになります。  
   
 > [!NOTE]  

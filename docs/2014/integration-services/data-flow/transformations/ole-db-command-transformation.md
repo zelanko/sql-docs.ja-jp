@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3a8ffc33de161c71c6f72eebf8616d1e814fb994
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770392"
 ---
 # <a name="ole-db-command-transformation"></a>OLE DB コマンド変換
@@ -47,8 +47,7 @@ ms.locfileid: "62770392"
  OLE DB コマンド変換による外部データ プロバイダーの呼び出しをログに記録できます。 このログ機能を使用すると、OLE DB コマンド変換による外部データ ソースへの接続およびコマンドに関するトラブルシューティングを行うことができます。 OLE DB コマンド変換による外部データ プロバイダーの呼び出しのログを記録するには、パッケージ ログ記録を有効にして、パッケージ レベルで **Diagnostic** イベントを選択する必要があります。 詳細については、「 [パッケージ実行のトラブルシューティング ツール](../../troubleshooting/troubleshooting-tools-for-package-execution.md)」を参照してください。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- 変換は、 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーまたはオブジェクト モデルを使用して構成できます。 
-  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーを使用して変換を構成する方法については、「  [OLE DB コマンド変換を構成する](../../configure-the-ole-db-command-transformation.md)」を参照してください。 プログラムによってこの変換を構成する方法の詳細については、開発者ガイドを参照してください。  
+ 変換は、 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーまたはオブジェクト モデルを使用して構成できます。 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーを使用して変換を構成する方法については、「  [OLE DB コマンド変換を構成する](../../configure-the-ole-db-command-transformation.md)」を参照してください。 プログラムによってこの変換を構成する方法の詳細については、開発者ガイドを参照してください。  
   
 ## <a name="see-also"></a>参照  
  [データフロー](../data-flow.md)   

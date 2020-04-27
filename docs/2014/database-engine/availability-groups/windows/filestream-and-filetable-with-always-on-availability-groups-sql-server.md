@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3fa149aa47c99418bd3109829bfffee698ab3f6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62814143"
 ---
 # <a name="filestream-and-filetable-with-alwayson-availability-groups-sql-server"></a>FILESTREAM および FileTable と AlwaysOn 可用性グループ (SQLServer)
@@ -28,23 +28,22 @@ ms.locfileid: "62814143"
   
  FileTable 機能は部分的にサポートされています。 フェールオーバー後、FileTable データはプライマリ レプリカ上でアクセスできますが、読み取り可能なセカンダリ レプリカ上ではアクセスできません。  
   
- **このトピックの内容:**  
+ **このトピックの内容**  
   
 -   [前提条件](#Prerequisites)  
   
--   [FILESTREAM および FileTable アクセスでの Virtual Network 名 (Vnn) の使用](#vnn)  
+-   [FILESTREAM および FileTable アクセスでの仮想ネットワーク名 (VNN) の使用](#vnn)  
   
--   [Related Tasks](#RelatedTasks)  
+-   [関連タスク](#RelatedTasks)  
   
 -   [関連コンテンツ](#RelatedContent)  
   
-##  <a name="Prerequisites"></a> 前提条件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
   
 -   FileTable を使用するかどうかにかかわらず、FILESTREAM を使用するデータベースを可用性グループに追加する前に、その可用性グループの可用性レプリカをホストするすべてのサーバー インスタンスで FILESTREAM が有効になっていることを確認してください。 詳細については、「 [Enable and Configure FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)」をご覧ください。  
   
-##  <a name="vnn"></a>FILESTREAM および FileTable アクセスでの Virtual Network 名 (Vnn) の使用  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスで FILESTREAM を有効にすると、インスタンス レベルでの共有が作成され、FILESTREAM データにアクセスできるようになります。 この共有にアクセスするには、次の形式でコンピューター名を使用します。  
+##  <a name="using-virtual-network-names-vnns-for-filestream-and-filetable-access"></a><a name="vnn"></a>FILESTREAM および FileTable アクセスでの Virtual Network 名 (Vnn) の使用  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスで FILESTREAM を有効にすると、インスタンス レベルでの共有が作成され、FILESTREAM データにアクセスできるようになります。 この共有にアクセスするには、次の形式でコンピューター名を使用します。  
   
  `\\<computer_name>\<filestream_share_name>`  
   
@@ -60,11 +59,9 @@ ms.locfileid: "62814143"
   
     1.  `\\<computer_name>\<filestream_share_name>`  
   
-    2.  
-  `\\<VNN1>\<filestream_share_name>` (可用性グループ 1 向け)。  
+    2.  `\\<VNN1>\<filestream_share_name>` (可用性グループ 1 向け)。  
   
-    3.  
-  `\\<VNN2>\<filestream_share_name>` (可用性グループ 2 向け)。  
+    3.  `\\<VNN2>\<filestream_share_name>` (可用性グループ 2 向け)。  
   
  これらの VNN スコープの共有は、すべてのセカンダリ レプリカにも反映されます。  
   
@@ -78,13 +75,13 @@ ms.locfileid: "62814143"
   
  データベースが可用性グループの一部ではない場合、アプリケーションで VNN スコープのパスを使用して共有にアクセスしようとすると、要求が正常に終了します。 この場合、仮想ネットワーク名は、コンピューター名に解決されます。 ただし、可用性グループが削除されると VNN スコープのパスの動作が停止するため、この使用法はお勧めしません。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [FILESTREAM の有効化と構成](../../../relational-databases/blob/enable-and-configure-filestream.md)  
   
 -   [FileTable の前提条件の有効化](../../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)  
   
-##  <a name="RelatedContent"></a> 関連コンテンツ  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 関連コンテンツ  
  [なし] :  
   
 ## <a name="see-also"></a>参照  

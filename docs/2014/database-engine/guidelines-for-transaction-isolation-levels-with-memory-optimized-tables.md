@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 26f0193d40a01858bc3fe651a23b389a4ffcb6ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779157"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>メモリ最適化テーブルのトランザクション分離レベルに関するガイドライン
@@ -37,11 +37,9 @@ ms.locfileid: "62779157"
  ディスク ベース テーブルでは、SNAPSHOT および READ_COMMITTED_SNAPSHOT の 2 つの分離レベルによる複数バージョン管理が可能です。 メモリ最適化テーブルでは、REPEATABLE READ と SERIALIZABLE も含め、すべての分離レベルが複数バージョン ベースになっています。  
   
 ## <a name="types-of-transactions"></a>トランザクションの種類  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のクエリはいずれも、トランザクションのコンテキストで実行されます。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のクエリはいずれも、トランザクションのコンテキストで実行されます。  
   
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のトランザクションの種類は、3 つに分けることができます。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のトランザクションの種類は、3 つに分けることができます。  
   
 -   自動コミット トランザクション。 アクティブなトランザクション コンテキストがなく、暗黙のトランザクションがセッションで ON に設定されていない場合には、各クエリに独自のトランザクション コンテキストがあります。 トランザクションは、ステートメントの実行が開始されると開始となり、ステートメントが終了すると終了します。  
   
@@ -129,8 +127,7 @@ COMMIT
   
  メモリ最適化テーブルではロックは使用しません。 REPEATABLE READ や SERIALIZABLE など、高度な分離レベルを使用して必要な保証を宣言できます。  
   
- ロック ヒントはサポートされていません。 代わりに、トランザクション分離レベルを使用して必要な保証を宣言します。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ではメモリ最適化テーブルにロックを使用しないため、NOLOCK がサポートされます。 ディスク ベース テーブルとは異なり、NOLOCK は、メモリ最適化テーブルに対する READ UNCOMMITTED 動作を示すわけではないことに注意してください。  
+ ロック ヒントはサポートされていません。 代わりに、トランザクション分離レベルを使用して必要な保証を宣言します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ではメモリ最適化テーブルにロックを使用しないため、NOLOCK がサポートされます。 ディスク ベース テーブルとは異なり、NOLOCK は、メモリ最適化テーブルに対する READ UNCOMMITTED 動作を示すわけではないことに注意してください。  
   
 ## <a name="see-also"></a>参照  
  [メモリ最適化テーブルのトランザクションについて](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   

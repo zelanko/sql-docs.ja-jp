@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a862c5c9cea1087f54a4dbff13b6c39eb5e39385
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62791991"
 ---
 # <a name="maintaining-an-alwayson-publication-database-sql-server"></a>AlwaysOn パブリケーション データベースのメンテナンス (SQL Server)
@@ -25,7 +25,7 @@ ms.locfileid: "62791991"
   
  
   
-##  <a name="MaintainPublDb"></a> 可用性グループでのパブリッシュされたデータベースのメンテナンス  
+##  <a name="maintaining-a-published-database-in-an-availability-group"></a><a name="MaintainPublDb"></a>可用性グループでのパブリッシュされたデータベースのメンテナンス  
  AlwaysOn パブリケーション データベースのメンテナンスは、通常のパブリケーション データベースのメンテナンスと基本的に同じです。ただし、次の点を考慮する必要があります。  
   
 -   管理は、プライマリ レプリカ ホストで行う必要があります。 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]では、プライマリ レプリカ ホストと読み取り可能なセカンダリ レプリカの **[ローカル パブリケーション]** フォルダーにパブリケーションが表示されます。 フェールオーバー後、プライマリに昇格したセカンダリが読み取り不可である場合は、変更を反映させるために [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] を手動で更新する必要がある場合があります。  
@@ -39,7 +39,7 @@ ms.locfileid: "62791991"
   
 -   フェールオーバー後に [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] でサブスクリプションを同期するには、サブスクライバーからプル サブスクリプションを同期し、アクティブなパブリッシャーからプッシュ サブスクリプションを同期します。  
   
-##  <a name="RemovePublDb"></a> 可用性グループからのパブリッシュされたデータベースの削除  
+##  <a name="removing-a-published-database-from-an-availability-group"></a><a name="RemovePublDb"></a> 可用性グループからのパブリッシュされたデータベースの削除  
  パブリッシュされたデータベースを可用性グループから削除する場合、またはパブリッシュされたメンバー データベースを含む可用性グループを削除する場合、次の点を考慮します。  
   
 -   元のパブリッシャーのパブリケーションデータベースを可用性グループのプライマリレプリカから削除する場合は、パブリッシャー/ `sp_redirect_publisher`データベースペアのリダイレクトを削除*@redirected_publisher*するために、パラメーターの値を指定せずにを実行する必要があります。  
@@ -68,8 +68,7 @@ ms.locfileid: "62791991"
     > [!NOTE]  
     >  メンバー データベースをパブリッシュした可用性グループを削除した場合、またはパブリッシュされたデータベースを可用性グループから削除した場合、パブリッシュされたデータベースのすべてのコピーは復旧中の状態のままとなります。 それぞれを復元すると、パブリッシュされたデータベースとして表示されます。 1 つのコピーだけをパブリケーション メタデータで保持する必要があります。 パブリッシュされたデータベース コピーのレプリケーションを無効にするには、最初にすべてのサブスクリプションとパブリケーションをデータベースから削除します。  
   
-     
-  `sp_dropsubscription` を実行してパブリケーション サブスクリプションを削除します。 ディストリビューターでアクティブなパブリッシングデータベース*@ignore_distributributor*のメタデータを保持するには、パラメーターを1に設定してください。  
+     `sp_dropsubscription` を実行してパブリケーション サブスクリプションを削除します。 ディストリビューターでアクティブなパブリッシングデータベース*@ignore_distributributor*のメタデータを保持するには、パラメーターを1に設定してください。  
   
     ```  
     USE MyDBName;  
@@ -82,8 +81,7 @@ ms.locfileid: "62791991"
         @ignore_distributor = 1;  
     ```  
   
-     
-  `sp_droppublication` を実行してすべてのパブリケーションを削除します。 ここでも、パラメーター *@ignore_distributor*を1に設定して、アクティブなパブリッシングデータベースのメタデータをディストリビューターで保持します。  
+     `sp_droppublication` を実行してすべてのパブリケーションを削除します。 ここでも、パラメーター *@ignore_distributor*を1に設定して、アクティブなパブリッシングデータベースのメタデータをディストリビューターで保持します。  
   
     ```  
     EXEC sys.sp_droppublication   
@@ -91,8 +89,7 @@ ms.locfileid: "62791991"
         @ignore_distributor = 1;  
     ```  
   
-     
-  `sp_replicationdboption` を実行してデータベースのレプリケーションを無効にします。  
+     `sp_replicationdboption` を実行してデータベースのレプリケーションを無効にします。  
   
     ```  
     EXEC sys.sp_replicationdboption  
@@ -103,7 +100,7 @@ ms.locfileid: "62791991"
   
      この時点で、パブリッシュされたデータベースのコピーを保持または削除できます。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [AlwaysOn 可用性グループ用のレプリケーションの構成 (SQL Server)](always-on-availability-groups-sql-server.md)  
   
@@ -117,6 +114,6 @@ ms.locfileid: "62791991"
  [AlwaysOn 可用性グループ &#40;SQL Server の前提条件、制限事項、推奨事項&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [AlwaysOn 可用性グループ &#40;SQL Server の概要&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性グループ: 相互運用性 (SQL Server)](always-on-availability-groups-interoperability-sql-server.md)   
- [SQL Server レプリケーション](../../../relational-databases/replication/sql-server-replication.md)  
+ [SQL Server のレプリケーション](../../../relational-databases/replication/sql-server-replication.md)  
   
   

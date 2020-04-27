@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: db1f62b6562d794cf35a7bca680e523401c4c8cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774836"
 ---
 # <a name="managing-memory-for-in-memory-oltp"></a>インメモリ OLTP のメモリ管理
@@ -22,14 +22,13 @@ ms.locfileid: "62774836"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|Section|[説明]|  
+|Section|説明|  
 |-------------|-----------------|  
 |[メモリ最適化テーブルのメモリ必要量の推定](../relational-databases/in-memory-oltp/memory-optimized-tables.md)|テーブルのメモリの必要量を推定します。|  
-|[メモリ最適化テーブルを持つデータベースのリソース プールへのバインド](../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)|データベースをリソース プールにバインドする手順を示すチュートリアル。|  
+|[データベースを作成してリソース プールにバインドする方法については、「](../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)|データベースをリソース プールにバインドする手順を示すチュートリアル。|  
 |[メモリ使用量の監視とトラブルシューティング](../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)|メモリ使用量を監視するために使用できるツール。 メモリ使用量が多くなりすぎた場合のトラブルシューティングについても説明します。|  
 |[メモリ不足の問題の解決](../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md)|OOM (メモリ不足) 状態から回復する手順。|  
-|[データベースの復元とリソース プールへのバインド](../relational-databases/in-memory-oltp/restore-a-database-and-bind-it-to-a-resource-pool.md)|
-  [!INCLUDE[hek_2](../includes/hek-2-md.md)] データベースを復元して名前付きリソース プールにバインドする手順。|  
+|[データベースの復元とリソース プールへのバインド](../relational-databases/in-memory-oltp/restore-a-database-and-bind-it-to-a-resource-pool.md)|[!INCLUDE[hek_2](../includes/hek-2-md.md)] データベースを復元して名前付きリソース プールにバインドする手順。|  
 |[インメモリ OLTP ガベージ コレクション](../relational-databases/in-memory-oltp/in-memory-oltp-garbage-collection.md)|削除された行でのガベージ コレクションの動作に関する理解を深めることができます。|  
   
 ## <a name="see-also"></a>参照  

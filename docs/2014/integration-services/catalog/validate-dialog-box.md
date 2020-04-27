@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8380b3ff1502088e0131b182149e90e31d2be42c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771653"
 ---
 # <a name="validate-dialog-box"></a>[検証] ダイアログ ボックス
@@ -31,7 +31,7 @@ ms.locfileid: "62771653"
   
 -   [[全般] ページのオプションの設定](#general)  
   
-##  <a name="open_dialog"></a> [検証] ダイアログ ボックスを開く  
+##  <a name="open-the-validate-dialog-box"></a><a name="open_dialog"></a> [検証] ダイアログ ボックスを開く  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]から [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに接続します。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62771653"
   
 5.  プロジェクトまたはパッケージを右クリックし、 **[検証]** をクリックします。  
   
-##  <a name="general"></a> [全般] ページのオプションの設定  
+##  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> [全般] ページのオプションの設定  
  **Environment**  
  プロジェクトまたはパッケージの検証に使用する環境を選択します。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "62771653"
  **コンテナー**  
  接続マネージャーを含むオブジェクトを一覧表示します。  
   
- **名前**  
+ **Name**  
  接続マネージャーの名前を一覧表示します。  
   
  **プロパティ名**  

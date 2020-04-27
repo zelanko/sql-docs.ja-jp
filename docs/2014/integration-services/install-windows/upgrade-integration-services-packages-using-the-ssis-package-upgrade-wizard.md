@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e44b755748dcbda6af30e0570b667f9ba3ee75a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62767891"
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>SSIS パッケージ アップグレード ウィザードを使用した Integration Services パッケージのアップグレード
@@ -42,8 +42,7 @@ ms.locfileid: "62767891"
 2.  ソリューション エクスプローラーで、 **[SSIS パッケージ]** ノードを右クリックして **[すべてのパッケージをアップグレード]** をクリックし、このノードの下のすべてのパッケージをアップグレードします。  
   
     > [!NOTE]  
-    >  
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージまたは [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] パッケージが含まれる [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] プロジェクトを開いた場合、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] によって [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ アップグレード ウィザードが自動的に開きます。  
+    >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージまたは [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] パッケージが含まれる [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] プロジェクトを開いた場合、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] によって [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ アップグレード ウィザードが自動的に開きます。  
   
 #### <a name="to-run-the-wizard-from-sql-server-management-studio"></a>SQL Server Management Studio からウィザードを実行するには  
   

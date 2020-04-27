@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b27a3cc8a768f60a5e2d430fe04ca514aafe1f37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771656"
 ---
 # <a name="project-properties-dialog-box"></a>[プロジェクトのプロパティ] ダイアログ ボックス
@@ -33,7 +33,7 @@ ms.locfileid: "62771656"
   
 -   [[権限] ページのオプションの設定](#permissions)  
   
-##  <a name="open_dialog"></a> [プロジェクトのプロパティ] ダイアログ ボックスを開く  
+##  <a name="open-the-project-properties-dialog-box"></a><a name="open_dialog"></a> [プロジェクトのプロパティ] ダイアログ ボックスを開く  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]から [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに接続します。  
   
@@ -47,10 +47,10 @@ ms.locfileid: "62771656"
   
 5.  プロジェクトを右クリックし、 **[プロパティ]** をクリックします。  
   
-##  <a name="general"></a> [全般] ページのオプションの設定  
+##  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> [全般] ページのオプションの設定  
  プロジェクトのプロパティを表示するには、[全般] ページを使用します。  
   
- **名前**  
+ **Name**  
  プロジェクト名を一覧表示します。  
   
  **識別子**  
@@ -65,13 +65,13 @@ ms.locfileid: "62771656"
  **配置日**  
  プロジェクトを配置または再配置した日付と時刻を一覧表示します。  
   
-##  <a name="permissions"></a> [権限] ページのオプションの設定  
+##  <a name="set-the-options-on-the-permissions-page"></a><a name="permissions"></a> [権限] ページのオプションの設定  
  プロジェクトの明示的な権限を表示および設定するには、 **[権限]** ページを使用します。  
   
  参照  
  **[参照]** をクリックすると、 **[すべてのプリンシパルを参照]** ダイアログ ボックスを使用して、権限を設定するユーザーおよびロールを選択できます。  
   
- **名前**  
+ **Name**  
  ユーザーまたはロールの名前を一覧表示します。  
   
  **Type**  

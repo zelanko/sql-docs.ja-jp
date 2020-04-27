@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13a863603353ee47639cd327c8c5eebd6df8e12a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62789844"
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>可用性レプリカに対するクライアント接続アクセスについて (SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "62789844"
 > [!NOTE]  
 >  クライアント接続要求を処理する可用性グループ リスナーの詳細については、「 [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)」をご参照ください。  
   
- **このトピックの内容:**  
+ **このトピックの内容**  
   
 -   [セカンダリロールでサポートされる接続アクセスの種類](#ConnectAccessForSecondary)  
   
@@ -42,11 +42,11 @@ ms.locfileid: "62789844"
   
 -   [接続アクセス構成がクライアント接続に与える影響](#HowConnectionAccessAffectsConnectivity)  
   
--   [Related Tasks](#RelatedTasks)  
+-   [関連タスク](#RelatedTasks)  
   
 -   [関連コンテンツ](#RelatedContent)  
   
-##  <a name="ConnectAccessForSecondary"></a>セカンダリロールでサポートされる接続アクセスの種類  
+##  <a name="types-of-connection-access-supported-by-the-secondary-role"></a><a name="ConnectAccessForSecondary"></a> セカンダリ ロールでサポートされる接続アクセスの種類  
  セカンダリ ロールは、次に示すように 3 種類のクライアント接続をサポートします。  
   
  接続不可  
@@ -60,9 +60,9 @@ ms.locfileid: "62789844"
  読み取り専用接続の許可  
  セカンダリ データベースは、すべて読み取りアクセス接続に利用できます。 このオプションでは、下位バージョンのクライアントを接続できます。  
   
- 詳細については、「 [可用性レプリカでの読み取り専用アクセスの構成 &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md)が存在する必要があります。  
+ 詳細については、「[可用性レプリカでの読み取り専用アクセスの構成 &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md)」を参照してください。  
   
-##  <a name="ConnectAccessForPrimary"></a>プライマリロールでサポートされる接続アクセスの種類  
+##  <a name="types-of-connection-access-supported-by-the-primary-role"></a><a name="ConnectAccessForPrimary"></a> プライマリ ロールでサポートされる接続アクセスの種類  
  プライマリ ロールは、次に示すように 2 種類のクライアント接続をサポートします。  
   
  すべての接続を許可する  
@@ -73,9 +73,9 @@ ms.locfileid: "62789844"
   
  この接続プロパティの詳細については、「 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)」を参照してください。  
   
- 詳細については、「 [可用性レプリカでの読み取り専用アクセスの構成 &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md)が存在する必要があります。  
+ 詳細については、「[可用性レプリカでの読み取り専用アクセスの構成 &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md)」を参照してください。  
   
-##  <a name="HowConnectionAccessAffectsConnectivity"></a>接続アクセス構成がクライアント接続に与える影響  
+##  <a name="how-the-connection-access-configuration-affects-client-connectivity"></a><a name="HowConnectionAccessAffectsConnectivity"></a> 接続アクセス構成がクライアント接続に与える影響  
  レプリカの接続アクセス設定によって、接続試行が失敗するか成功するかが決まります。 次の表に、特定の接続試行が成功するか失敗するかを接続アクセス設定別に示します。  
   
 |レプリカのロール|レプリカでサポートされる接続アクセス|接続の目的|接続の試行の結果|  
@@ -84,9 +84,9 @@ ms.locfileid: "62789844"
 |セカンダリ|なし (これは、セカンダリの既定の動作です)。|読み取り目的、読み取り/書き込み、または接続目的の指定なし|障害|  
 |セカンダリ|[読み取り目的のみ]|読み取り目的|成功|  
 |セカンダリ|[読み取り目的のみ]|読み取り/書き込み、または接続目的の指定なし|障害|  
-|プライマリ|すべて (これはプライマリの既定の動作です)|読み取りのみ、読み取り/書き込み、または接続目的の指定なし|成功|  
-|プライマリ|読み取り/書き込み|[読み取り目的のみ]|障害|  
-|プライマリ|読み取り/書き込み|読み取り/書き込み、または接続目的の指定なし|成功|  
+|1 次式|すべて (これはプライマリの既定の動作です)|読み取りのみ、読み取り/書き込み、または接続目的の指定なし|成功|  
+|1 次式|読み取り/書き込み|[読み取り目的のみ]|障害|  
+|1 次式|読み取り/書き込み|読み取り/書き込み、または接続目的の指定なし|成功|  
   
  クライアント接続要求を処理する可用性グループ リスナーの詳細については、「 [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)」をご参照ください。  
   
@@ -95,36 +95,36 @@ ms.locfileid: "62789844"
   
  この例の可用性グループには、メインのコンピューティング センターにある 2 つの同期コミット レプリカと、サテライト サイトにある 2 つの非同期コミット レプリカが含まれています。 プライマリ ロールに対しては、すべてのレプリカに読み取り/書き込みアクセスが構成され、どのような状況でもプライマリ レプリカへの読み取りを目的とした接続ができないようになっています。 同期コミットのセカンダリ ロールでは、既定の接続アクセス構成 ("なし") が使用されるため、セカンダリ ロールではすべてのクライアント接続が禁止されます。  一方、非同期コミット レプリカは、セカンダリ ロールでの読み取り目的の接続を許可するように構成されています。 次の表に、この例の構成をまとめます。  
   
-|レプリカ|コミット モード|初期ロール|セカンダリ ロールの接続アクセス|プライマリ ロールの接続アクセス|  
+|[レプリカ]|コミット モード|[初期ロール]|セカンダリ ロールの接続アクセス|プライマリ ロールの接続アクセス|  
 |-------------|-----------------|------------------|------------------------------------------|----------------------------------------|  
-|Replica1|同期|プライマリ|なし|読み取り/書き込み|  
-|Replica2|同期|セカンダリ|なし|読み取り/書き込み|  
+|Replica1|同期|1 次式|なし|読み取り/書き込み|  
+|Replica2|同期|セカンダリ|None|読み取り/書き込み|  
 |Replica3|非同期|セカンダリ|読み取り目的のみ|読み取り/書き込み|  
 |Replica4|非同期|セカンダリ|[読み取り目的のみ]|読み取り/書き込み|  
   
  一般的に、この例のシナリオでは、フェールオーバーは同期コミット レプリカ間でのみ実行され、フェールオーバーの直後に、読み取り目的のアプリケーションが非同期コミット セカンダリ レプリカの 1 つに再接続できます。 ただし、メインのコンピューティング センターで障害が発生した場合は両方の同期コミット レプリカが失われます。 サテライト サイトのデータベース管理者が、非同期コミット セカンダリ レプリカへの強制フェールオーバーを手動で実行して対処します。 残りのセカンダリ レプリカのセカンダリ データベースは強制フェールオーバーによって中断されるため、読み取り専用のワークロードで使用できなくなります。 読み取り/書き込み接続が構成されている新しいプライマリ レプリカでは、読み取り目的のワークロードと読み取り/書き込みワークロードが競合しません。 つまり、データベース管理者が残りの非同期コミット セカンダリ レプリカのセカンダリ データベースを再開するまでは、読み取り目的のクライアントはどの可用性レプリカにも接続できません。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [可用性レプリカでの読み取り専用アクセスの構成 &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
 -   [可用性グループの読み取り専用ルーティングの構成 &#40;SQL Server&#41;](configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
--   [Transact-sql&#41;&#40;可用性グループの監視](monitor-availability-groups-transact-sql.md)  
+-   [可用性グループの監視 &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)  
   
 -   [可用性レプリカのプロパティの表示 &#40;SQL Server&#41;](view-availability-replica-properties-sql-server.md)  
   
--   [[新しい可用性グループ] ダイアログボックスを使用すると &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
+-   [[新しい可用性グループ] ダイアログ ボックスの使用 &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
-##  <a name="RelatedContent"></a> 関連コンテンツ  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 関連コンテンツ  
   
 -   [高可用性と災害復旧のための Microsoft SQL Server AlwaysOn ソリューション ガイド](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server AlwaysOn チーム ブログ:SQL Server AlwaysOn チームのオフィシャル ブログ](https://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn チームのブログ: AlwaysOn チームの公式 SQL Server のブログ](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループ &#40;SQL Server の概要&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [可用性グループリスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [統計](../../../relational-databases/statistics/statistics.md)  
   
   

@@ -13,14 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 71d26e3f46034019d51bd69b86686f40eb9ce63e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779226"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>メモリ最適化テーブルでのインデックス使用のガイドライン
-  
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] テーブルのデータに効率的にアクセスするためにインデックスを使用します。 適切なインデックスを指定することにより、クエリのパフォーマンスが大幅に向上します。 たとえば、次のクエリについて考えてみます。  
   
 ```sql  
@@ -71,8 +70,8 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
 |Operation|メモリ最適化された非クラスター化ハッシュ インデックス|メモリ最適化された非クラスター化インデックス|ディスク ベース インデックス|  
 |---------------|-------------------------------------------------|------------------------------------------|-----------------------|  
 |インデックス スキャン、すべてのテーブルの行を取得する。|はい|はい|はい|  
-|等値述語 (=) に対するインデックス シーク。|はい<br /><br /> (フル キーが必要)|はい <sup>1</sup>|はい|  
-|非等値述語に対するインデックスシーク (> \<、<、=、>=、BETWEEN)。|不可 (インデックス スキャンの結果)|はい <sup>1</sup>|はい|  
+|等値述語 (=) に対するインデックス シーク。|はい<br /><br /> (フル キーが必要)|はい<sup>1</sup>|はい|  
+|非等値述語に対するインデックスシーク (> \<、<、=、>=、BETWEEN)。|不可 (インデックス スキャンの結果)|はい<sup>1</sup>|はい|  
 |インデックス定義に一致する並べ替え順序で行を取得する。|いいえ|はい|はい|  
 |インデックス定義の逆の並べ替え順序で行を取得する。|いいえ|いいえ|はい|  
   

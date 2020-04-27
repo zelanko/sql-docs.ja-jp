@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 521d40529501d761b8e50300c16a816284109695
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770889"
 ---
 # <a name="request-log"></a>[要求のログ]
@@ -48,7 +48,7 @@ ms.locfileid: "62770889"
  **Type**  
  記録されたイベントの種類を表示します。 次の表は、使用可能なイベントの種類を示しています。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |S|成功メッセージ|  
 |E|エラー メッセージ|  

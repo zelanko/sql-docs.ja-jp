@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8aefce0d5afe7bec37c5fe49ba63c3fec61f3747
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771545"
 ---
 # <a name="project-versions-dialog-box"></a>[プロジェクトのバージョン] ダイアログ ボックス
@@ -30,7 +30,7 @@ ms.locfileid: "62771545"
   
 -   [プロジェクトのバージョンの復元](#restore)  
   
-##  <a name="open_dialog"></a> [プロジェクトのバージョン] ダイアログ ボックスを開く  
+##  <a name="open-the-project-versions-dialog-box"></a><a name="open_dialog"></a> [プロジェクトのバージョン] ダイアログ ボックスを開く  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]から [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] サーバーに接続します。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62771545"
   
  **[プロジェクトのバージョン]** ダイアログ ボックスの **[バージョン]** テーブルには、サーバー上に配置されたプロジェクトのバージョン、バージョンが配置された日時、バージョンが復元された日時 (復元された場合)、バージョンの説明、およびバージョンの識別子の一覧が表示されます。 このテーブルでは、現在アクティブなバージョンの **[現在]** 列にチェック マークが付きます。  
   
-##  <a name="restore"></a> プロジェクトのバージョンの復元  
+##  <a name="restore-a-project-version"></a><a name="restore"></a> プロジェクトのバージョンの復元  
  以前のバージョンのプロジェクトを復元するには、 **[バージョン]** テーブルでバージョンを選択し、 **[選択したバージョンに復元]** をクリックします。 プロジェクトが選択したバージョンに復元され、 **[バージョン]** テーブルでは、そのバージョンの **[現在]** 列にチェック マークが付きます。  
   
   

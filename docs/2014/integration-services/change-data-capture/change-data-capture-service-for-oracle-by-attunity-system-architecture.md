@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 84ac0e6065fa3fb4845e0e3a47ce56816705e80d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771489"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-system-architecture"></a>Change Data Capture Service for Oracle by Attunity のシステム アーキテクチャ
@@ -28,8 +28,7 @@ ms.locfileid: "62771489"
   
 -   Oracle データベース: Oracle データベースのサポート対象バージョンが実行される任意のコンピューターです。 これには、Windows、Linux、またはインストールされた Oracle データベースのバージョンがサポートする他の任意のオペレーティング システムを実行するコンピューターが含まれます。 このプラットフォームは図で複数示されています。これは、単一の Oracle CDC Service で複数のソース Oracle データベースの変更をキャプチャできるためです。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 対象の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベース ( [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のサポート対象の SKU) が実行される任意のコンピューターです。 Oracle CDC Service は、変更テーブルおよびサービス構成を格納する 1 つの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ターゲットをサポートします。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] プラットフォームは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] のクラスター化されたインスタンスまたは [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] の **AlwaysOn** 機能を使用してミラー化されたインスタンスを表す場合もあります。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 対象の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベース ( [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のサポート対象の SKU) が実行される任意のコンピューターです。 Oracle CDC Service は、変更テーブルおよびサービス構成を格納する 1 つの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ターゲットをサポートします。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] プラットフォームは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] のクラスター化されたインスタンスまたは [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] の **AlwaysOn** 機能を使用してミラー化されたインスタンスを表す場合もあります。  
   
 -   Oracle CDC デザイナー: ソースの Oracle データベースと対象の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースにアクセスできる任意のサポート対象 Windows コンピューターです。  
   

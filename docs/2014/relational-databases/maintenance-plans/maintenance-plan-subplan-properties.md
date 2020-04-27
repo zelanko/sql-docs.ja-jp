@@ -14,17 +14,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c9dbc755d5ee95b74991b249bc037fb6fc5a9f11
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62806704"
 ---
 # <a name="maintenance-plan-subplan-properties"></a>[メンテナンス プラン] \([サブプランのプロパティ])
   **[メンテナンス プラン] ([サブプランのプロパティ])** ダイアログ ボックスでは、メンテナンス プランのサブプランの名前、説明、およびスケジュールを指定します。 このダイアログ ボックスを表示するには、メンテナンス プランの **[デザイン]** タブで **[サブプランのプロパティ]** をクリックするか、デザイナー グリッドでサブプランをダブルクリックします。  
   
 ## <a name="options"></a>オプション  
- **名前**  
+ **Name**  
  サブプランの名前を入力します。 名前の上限は 128 文字です。  
   
  **説明**  

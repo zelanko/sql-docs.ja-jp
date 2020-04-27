@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a1af9aea2b4088c2a8d3753fd55feaa0f43ae6ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62811394"
 ---
 # <a name="configure-the-scan-for-startup-procs-server-configuration-option"></a>scan for startup procs サーバー構成オプションの構成
@@ -28,7 +28,7 @@ ms.locfileid: "62811394"
   
      [Recommendations (推奨事項)](#Recommendations)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **以下を使用して scan for startup procs オプションを構成するには:**  
   
@@ -38,20 +38,20 @@ ms.locfileid: "62811394"
   
 -   **補足情報:** [scan for startup procs オプションを構成した後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Recommendations"></a> 推奨事項  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
   
 -   このオプションは詳細設定オプションであるため、熟練したデータベース管理者または認定された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 技術者だけが変更するようにしてください。  
   
 -   このオプションの値は **sp_configure**を使用して設定できますが、ストアド プロシージャを自動的に実行するかどうかを設定する **sp_procoption**を使用すれば、値が自動的に設定されます。 **sp_procoption** を使用して、最初のストアド プロシージャを autoproc として設定すると、このオプションの値は自動的に 1 に設定されます。 **sp_procoption** を使用して、最後のストアド プロシージャを autoproc として設定解除すると、このオプションの値は自動的に 0 に設定されます。 **sp_procoption** を使用して autoprocs として設定またはその設定を解除し、ストアド プロシージャを削除する前に必ず autoprocs の設定を解除すれば、このオプションを手動で設定する必要がなくなります。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  パラメーターなしで、または最初のパラメーターだけを指定して **sp_configure** を実行する権限は、既定ですべてのユーザーに付与されます。 両方のパラメーターを指定して **sp_configure** を実行し構成オプションを変更したり RECONFIGURE ステートメントを実行したりするには、ALTER SETTINGS サーバーレベル権限がユーザーに付与されている必要があります。 ALTER SETTINGS 権限は、 **sysadmin** 固定サーバー ロールと **serveradmin** 固定サーバー ロールでは暗黙のうちに付与されています。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-configure-the-scan-for-startup-procs-option"></a>[スタートアップ プロシージャのスキャン] オプションを構成するには  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62811394"
   
 3.  **[その他]** で、 **[スタートアップ プロシージャのスキャン]** オプションのドロップダウン リストから値を選択して、[True] または [False] を指定します。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-configure-the-scan-for-startup-procs-option"></a>[スタートアップ プロシージャのスキャン] オプションを構成するには  
   
@@ -85,7 +85,7 @@ GO
   
 ```  
   
-##  <a name="FollowUp"></a>補足情報: scan for startup procs オプションを構成した後  
+##  <a name="follow-up-after-you-configure-the-scan-for-startup-procs-option"></a><a name="FollowUp"></a>補足情報: scan for startup procs オプションを構成した後  
  設定を有効にするには、サーバーを再起動する必要があります。  
   
 ## <a name="see-also"></a>参照  

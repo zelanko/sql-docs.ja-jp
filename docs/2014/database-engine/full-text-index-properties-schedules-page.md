@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 067c77839a852965c7684359acf50fb328d21a6a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779032"
 ---
 # <a name="full-text-index-properties-schedules-page"></a>[フルテキスト インデックスのプロパティ] ([スケジュール] ページ)
@@ -36,13 +36,13 @@ ms.locfileid: "62779032"
  **[作成の種類]**  
  スケジュールされた各作成の種類を表示します。  
   
- **有効**  
+ **Enabled**  
  スケジュールされた作成が現在有効か無効かを示します。  
   
  **説明**  
  スケジュールの作成時に指定された説明を表示します。  
   
- **[新規作成]**  
+ **新しい**  
  フルテキスト インデックスの作成スケジュールを新規作成します。  
   
 ## <a name="see-also"></a>参照  

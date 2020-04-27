@@ -11,13 +11,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 36e07550b4a6990f8d4f4cfeb00400440f98ee7a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779698"
 ---
-# <a name="windows-management-instrumentation"></a>Windows Management Instrumentation (Windows Management Instrumentation)
+# <a name="windows-management-instrumentation"></a>Windows Management Instrumentation
   ここでは、次の項目について説明します。  
   
 -   [構成管理用の WMI プロバイダーの概念](../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)  

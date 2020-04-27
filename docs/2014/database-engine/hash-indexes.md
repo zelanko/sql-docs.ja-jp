@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 263fdcd4b09c4acc6c2bba4d67629f867d64c6b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779492"
 ---
 # <a name="hash-indexes"></a>ハッシュ インデックス
@@ -26,10 +26,9 @@ ms.locfileid: "62779492"
   
  ハッシュ インデックスに使用するハッシュ関数には、以下の特徴があります。  
   
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] には、あらゆるハッシュ インデックスに使用するハッシュ関数が 1 つ用意されています。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] には、あらゆるハッシュ インデックスに使用するハッシュ関数が 1 つ用意されています。  
   
--   ハッシュ関数は決定性があります。 インデックス キーが同じであれば、常にハッシュ インデックスの同じバケットにマッピングされます。  
+-   ハッシュ関数は決定的です。 インデックス キーが同じであれば、常にハッシュ インデックスの同じバケットにマッピングされます。  
   
 -   インデックス キーが違っても、同じハッシュ バケットにマッピングされることがあります。  
   
