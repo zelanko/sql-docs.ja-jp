@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0f3fb342593e24ce97a550186065a22ec3ee2498
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104722"
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Tablix データ領域部分 (レポート ビルダーおよび SSRS)
@@ -25,7 +25,7 @@ ms.locfileid: "66104722"
   
  デザイン画面では、選択した Tablix データ領域の 4 つの部分が点線で示されます。 次の図に Tablix 領域の部分を示します。入れ子になった行グループはカテゴリとサブカテゴリに基づいており、入れ子になった列グループは地理と国/地域に基づいており、隣接する列グループは年に基づいています。  
   
- ![Tablix データ領域領域](../media/rs-tablixareas.gif "Tablix データ領域領域")  
+ ![Tablix データ領域領域](../media/rs-tablixareas.gif "Tablix データ領域部分")  
   
  次の一覧では、各領域について説明します。  
   
@@ -41,16 +41,16 @@ ms.locfileid: "66104722"
   
  次の図は、Tablix データ領域をプレビューで示します。  
   
- ![プレビュー、Tablix コーナー、行 & 列グループ、本文](../media/rs-tablixareaspreview.gif "プレビュー、Tablix コーナー、行および列グループ、本体")  
+ ![プレビュー、Tablix コーナー、行および列グループ、本体](../media/rs-tablixareaspreview.gif "プレビュー、Tablix コーナー、行および列グループ、本体")  
   
  行グループ領域には、Clothing と Components の 2 つのカテゴリ グループ インスタンスが表示されます。 列グループ領域には、北米の地理グループ インスタンスと、カナダ (CA) および米国 (US) の入れ子になった 2 つの国/地域グループ インスタンスが表示されます。 さらに、隣接した列には 2003 年と 2004 年の 2 つの年度グループのインスタンスが表示されます。 合計列の行には行の合計が表示されます。カテゴリ グループで繰り返す合計行にはサブカテゴリの合計が表示され、総計行にはデータ領域のカテゴリ合計が 1 回表示されます。  
   
 ## <a name="see-also"></a>参照  
- [一覧 &#40;レポート ビルダーおよび SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [&#40;レポートビルダーと SSRS の一覧を表示&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [チュートリアル &#40;レポートビルダー&#41;](../report-builder-tutorials.md)   
- [テーブル &#40;レポート ビルダーおよび SSRS&#41;](tables-report-builder-and-ssrs.md)   
- [マトリックス &#40;レポート ビルダーおよび SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   
- [一覧 &#40;レポート ビルダーおよび SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [テーブル &#40;レポートビルダーと SSRS&#41;](tables-report-builder-and-ssrs.md)   
+ [マトリックス &#40;レポートビルダーと SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   
+ [&#40;レポートビルダーと SSRS の一覧を表示&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Tablix データ領域 &#40;レポート ビルダーおよび SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
   
   

@@ -29,10 +29,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2d1e804282459972b21303cf795a9c3a88ea93d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107035"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>レポート データ ソースに関する資格情報と接続情報を指定する
@@ -75,8 +75,7 @@ ms.locfileid: "66107035"
  要求された資格情報を使用するようにレポートのデータ ソース接続を構成した場合、レポートにアクセスするユーザーがデータを取得するには、それぞれがユーザー名とパスワードを入力する必要があります。 機密データを含むレポートには、この方法を使用することをお勧めします。 要求時に実行されるレポートでのみ、要求された資格情報を使用できます。 要求される資格情報は、Windows アカウントまたはデータベース ログインのいずれかです。 Windows 認証を使用するには、 **[データ ソースへの接続時に Windows 資格情報として使用する]** チェック ボックスをオンにする必要があります。 それ以外の場合、ユーザー認証のためにレポート サーバーからデータベース サーバーに資格情報が渡されます。 指定された資格情報をデータベース サーバーで認証できない場合、接続が失敗します。  
   
 ### <a name="windows-integrated-security"></a>Windows 統合セキュリティ  
- 
-  **[Windows 統合セキュリティ]** オプションがオンになっている場合、レポート サーバーから外部データ ソースをホストしているサーバーに、レポートにアクセスしているユーザーのセキュリティ トークンが渡されます。 この場合、ユーザーはユーザー名やパスワードを入力することを要求されません。 権限の借用機能と委任機能が有効な場合、この方法をお勧めします。 これらの機能が無効な場合、アクセスするすべてのサーバーが同じコンピューターに配置されている場合にのみ、この方法を使用してください。  
+ **[Windows 統合セキュリティ]** オプションがオンになっている場合、レポート サーバーから外部データ ソースをホストしているサーバーに、レポートにアクセスしているユーザーのセキュリティ トークンが渡されます。 この場合、ユーザーはユーザー名やパスワードを入力することを要求されません。 権限の借用機能と委任機能が有効な場合、この方法をお勧めします。 これらの機能が無効な場合、アクセスするすべてのサーバーが同じコンピューターに配置されている場合にのみ、この方法を使用してください。  
   
 ### <a name="stored-credentials"></a>保存された資格情報  
  外部データ ソースへのアクセスに使用する資格情報を保存することができます。 資格情報は、暗号化を元に戻せる状態でレポート サーバー データベースに保存されます。 レポートで使用されるデータ ソースごとに、1 セットの保存された資格情報を指定できます。 提供する資格情報によって、どのユーザーがレポートを実行しても同じデータが取得されます。  
@@ -92,26 +91,21 @@ ms.locfileid: "66107035"
   
 1.  レポート サーバー コンピューターで、 **[管理ツール]** の **[ローカル セキュリティ ポリシー]** を開きます。  
   
-2.  
-  **[セキュリティの設定]** の下の **[ローカル ポリシー]** を展開し、 **[ユーザー権利の割り当て]** をクリックします。  
+2.  **[セキュリティの設定]** の下の **[ローカル ポリシー]** を展開し、 **[ユーザー権利の割り当て]** をクリックします。  
   
 3.  詳細ペインで **[ローカル ログオンを許可する]** を右クリックし、 **[プロパティ]** をクリックします。  
   
-4.  
-  **[ユーザーまたはグループの追加]** をクリックします。  
+4.  **[ユーザーまたはグループの追加]** をクリックします。  
   
-5.  
-  **[場所]** をクリックし、検索するドメインまたは別の場所を指定して、 **[OK]** をクリックします。  
+5.  **[場所]** をクリックし、検索するドメインまたは別の場所を指定して、 **[OK]** をクリックします。  
   
 6.  対話的なログインを許可する Windows アカウントを入力し、 **[OK]** をクリックします。  
   
-7.  
-  **[ローカル ログオンを許可するのプロパティ]** ダイアログ ボックスで、 **[OK]** をクリックします。  
+7.  **[ローカル ログオンを許可するのプロパティ]** ダイアログ ボックスで、 **[OK]** をクリックします。  
   
 8.  選択したアカウントに、拒否する権限がないことを確認します。  
   
-    1.  
-  **[ローカルでログオンを拒否する]** を右クリックし、 **[プロパティ]** を右クリックします。  
+    1.  **[ローカルでログオンを拒否する]** を右クリックし、 **[プロパティ]** を右クリックします。  
   
     2.  該当するアカウントが表示されている場合は、そのアカウントを選択して **[削除]** をクリックします。  
   
@@ -132,20 +126,15 @@ ms.locfileid: "66107035"
   
  このような条件下では、レポート サーバーは、事前に定義する必要がある自動実行アカウントを使用して、リモート データ ソースに接続します。 レポート サーバーはそのサービス資格情報を使用してリモート サーバーに接続しないため、レポート サーバーが接続のために使用できるアカウントを指定する必要があります。 このアカウントの作成の詳細については、「[自動実行アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。  
   
-##  <a name="DataSourceConfigurationConnections"></a>データソースの構成とネットワーク接続  
+##  <a name="data-source-configuration-and-network-connections"></a><a name="DataSourceConfigurationConnections"></a> データ ソースの構成とネットワーク接続  
  次の表は、資格情報の種類とデータ処理拡張機能の特定の組み合わせにおける接続方法を示しています。 カスタム データ処理拡張機能を使用している場合は、「 [カスタム データ処理拡張機能の接続を指定する](specify-connections-for-custom-data-processing-extensions.md)」をご覧ください。  
   
-|**Type**|**ネットワーク接続のコンテキスト**|**データソースの種類**<br /><br /> **(SQL Server、Oracle、ODBC、OLE DB、Analysis Services、XML、SAP NetWeaver BI、Hyperion Essbase)**|  
+|**Type**|**ネットワーク接続のコンテキスト**|**データ ソースの種類**<br /><br /> **(SQL Server、Oracle、ODBC、OLE DB、Analysis Services、XML、SAP NetWeaver BI、Hyperion Essbase)**|  
 |--------------|----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|  
 |統合セキュリティ|現在のユーザーを借用します。|すべてのデータ ソースの種類で、現在のユーザー アカウントを使用して接続します。|  
-|Windows 資格情報|指定したユーザーの権限を借用します。|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC、および OLE DB の場合 : 権限を借用したユーザー アカウントを使用して接続します。|  
-|データベース資格情報|自動実行アカウントまたはサービス アカウントの権限を借用します。<br /><br /> (Reporting Services は、サービス ID を使用して接続要求を送信する際に管理者権限を削除します。)|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC、OLE DB の場合:<br /><br /> ユーザー名とパスワードを接続文字列に追加します。<br /><br /> 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] の場合:<br /><br /> TCP/IP プロトコルを使用している場合は、接続が正常に行われます。それ以外の場合は、失敗します。<br /><br /> XML の場合 :<br /><br /> データベース資格情報を使用している場合は、レポート サーバーで接続に失敗します。|  
-|なし|自動実行アカウントの権限を借用します。|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC、OLE DB の場合:<br /><br /> 接続文字列で定義されている資格情報を使用します。 自動実行アカウントが未定義の場合は、レポート サーバーで接続に失敗します。<br /><br /> 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] の場合:<br /><br /> 自動実行アカウントが定義されていても、資格情報が指定されていない場合は、必ず接続に失敗します。<br /><br /> XML の場合 :<br /><br /> 自動実行アカウントが定義されている場合は、匿名ユーザーとして接続します。それ以外の場合は、接続に失敗します。|  
+|Windows 資格情報|指定したユーザーの権限を借用します。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC、および OLE DB の場合 : 権限を借用したユーザー アカウントを使用して接続します。|  
+|データベース資格情報|自動実行アカウントまたはサービス アカウントの権限を借用します。<br /><br /> (Reporting Services は、サービス ID を使用して接続要求を送信する際に管理者権限を削除します。)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC、OLE DB の場合:<br /><br /> ユーザー名とパスワードを接続文字列に追加します。<br /><br /> [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] の場合:<br /><br /> TCP/IP プロトコルを使用している場合は、接続が正常に行われます。それ以外の場合は、失敗します。<br /><br /> XML の場合 :<br /><br /> データベース資格情報を使用している場合は、レポート サーバーで接続に失敗します。|  
+|None|自動実行アカウントの権限を借用します。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC、OLE DB の場合:<br /><br /> 接続文字列で定義されている資格情報を使用します。 自動実行アカウントが未定義の場合は、レポート サーバーで接続に失敗します。<br /><br /> [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] の場合:<br /><br /> 自動実行アカウントが定義されていても、資格情報が指定されていない場合は、必ず接続に失敗します。<br /><br /> XML の場合 :<br /><br /> 自動実行アカウントが定義されている場合は、匿名ユーザーとして接続します。それ以外の場合は、接続に失敗します。|  
   
 ## <a name="setting-credentials-programmatically"></a>プログラム上での資格情報の設定  
  コード内で資格情報を設定して、レポートおよびレポート サーバーへのアクセスを制御できます。 詳しくは、「 [データ ソースと接続のメソッド](../report-server-web-service/methods/data-sources-and-connection-methods.md)」をご覧ください。  
@@ -153,9 +142,9 @@ ms.locfileid: "66107035"
 ## <a name="see-also"></a>参照  
  [Reporting Services &#40;SSRS&#41;でサポートされるデータソース](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [Reporting Services のデータ接続、データソース、および接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [レポート データ ソースを管理する](../../integration-services/connection-manager/data-sources.md)   
+ [レポートデータソースの管理](../../integration-services/connection-manager/data-sources.md)   
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../report-manager-ssrs-native-mode.md)   
  [共有データソース &#40;レポートマネージャーの作成、削除、または変更&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [レポート &#40;レポートマネージャーのデータソースプロパティの構成&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
+ [レポートのデータ ソースのプロパティを構成する (レポート マネージャー)](configure-data-source-properties-for-a-report-report-manager.md)  
   
   

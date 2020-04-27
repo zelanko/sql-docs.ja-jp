@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 27942be9c32d4537f729adbd69df1c64a9c9ff6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109871"
 ---
 # <a name="check-for-updates-or-turn-updates-off-report-builder-and-ssrs"></a>更新を確認するまたは更新をオフにする (レポート ビルダーおよび SSRS)
@@ -36,7 +36,7 @@ ms.locfileid: "66109871"
 -   レポートの外部またはレポート本文でデザイン画面を右クリックし、[**更新プログラムの確認**] をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [レポート パーツ &#40;レポート ビルダーおよび SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
+ [レポートパーツ &#40;レポートビルダーと SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
  [レポートパーツ &#40;レポートビルダーと SSRS&#41;をパブリッシュおよび再パブリッシュする](report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)   
  [レポートパーツを参照し、既定のフォルダー &#40;レポートビルダーおよび SSRS に設定&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)   
  [レポートパーツ &#40;レポートビルダーと SSRS&#41;のトラブルシューティング](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   

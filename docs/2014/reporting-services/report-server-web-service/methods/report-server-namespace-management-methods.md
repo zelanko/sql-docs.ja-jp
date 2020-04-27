@@ -16,16 +16,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 64827063e6e406f91307e7db1b33d6b42a196168
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63283974"
 ---
 # <a name="report-server-namespace-management-methods"></a>レポート サーバー名前空間管理メソッド
   レポート サーバー管理 Web サービスには、レポート サーバー データベースのレポート、フォルダー、およびリソースの管理に使用できるメソッドが含まれています。  
   
-|方法|アクション|  
+|Method|アクション|  
 |------------|------------|  
 |<xref:ReportService2010.ReportingService2010.CancelJob%2A>|ジョブの実行を取り消します。|  
 |<xref:ReportService2010.ReportingService2010.CreateFolder%2A>|レポート サーバー データベースまたは SharePoint ライブラリにフォルダーを追加します。|  
@@ -60,8 +60,7 @@ ms.locfileid: "63283974"
 |<xref:ReportService2010.ReportingService2010.SetProperties%2A>|アイテムの 1 つ以上のプロパティを設定します。|  
 |<xref:ReportService2010.ReportingService2010.SetItemDefinition%2A>|指定したアイテムの定義またはコンテンツを設定します。 このメソッドは、アイテムの種類 `Report`、`Model`、`Dataset`、`Component`、`Resource`、および `DataSource` に適用されます。|  
 |<xref:ReportService2010.ReportingService2010.SetSystemProperties%2A>|レポート サーバーまたは SharePoint ファームの 1 つ以上のシステム プロパティを設定します。|  
-|<xref:ReportService2010.ReportingService2010.ValidateExtensionSettings%2A>|
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 拡張機能の設定を検証します。|  
+|<xref:ReportService2010.ReportingService2010.ValidateExtensionSettings%2A>|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 拡張機能の設定を検証します。|  
   
 ## <a name="see-also"></a>参照  
  [Web サービスと .NET Framework を使用してのアプリケーションの構築](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   

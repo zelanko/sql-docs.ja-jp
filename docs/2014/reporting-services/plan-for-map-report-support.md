@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: df796e2dd4e132164f00716a9cb12f7b498d8984
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108078"
 ---
 # <a name="plan-for-map-report-support"></a>マップ レポートのサポートを計画する
@@ -50,6 +50,6 @@ ms.locfileid: "66108078"
  詳細については、 [&#40;レポートビルダーと SSRS&#41;をマップ](report-design/maps-report-builder-and-ssrs.md)します。  
   
 ## <a name="see-also"></a>参照  
- [レポートのトラブルシューティング: マップレポート &#40;レポートビルダーと SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [レポートのトラブルシューティング: マップ レポート &#40;レポート ビルダーおよび SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

@@ -15,24 +15,21 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b0ea6e215b5192d1b9e84ed252708b188d5c5a59
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483951"
 ---
 # <a name="configure-business-rules-to-send-notifications-master-data-services"></a>通知を送信するようにビジネス ルールを構成する (マスター データ サービス)
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、属性値の変更をユーザーに通知する場合は、通知を送信するようにビジネス ルールを構成します。  
   
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
--   
-  **[システム管理]** および **[ユーザー/グループの権限]** 機能領域にアクセスする権限が必要です。 
-  **[ユーザー/グループの権限]** 機能領域に対する権限がないと、通知を送信するユーザーおよびグループの一覧を表示できません。  
+-   **[システム管理]** および **[ユーザー/グループの権限]** 機能領域にアクセスする権限が必要です。 **[ユーザー/グループの権限]** 機能領域に対する権限がないと、通知を送信するユーザーおよびグループの一覧を表示できません。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 (マスター データ サービス)](administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](administrators-master-data-services.md)」を参照してください。  
   
 -   検証アクションを使用するビジネス ルールが既に存在している必要があります。 詳細については、「[ビジネス ルールを作成しパブリッシュする (マスター データ サービス)](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)」を参照してください。  
   
@@ -42,21 +39,17 @@ ms.locfileid: "65483951"
   
 ### <a name="to-configure-business-rules-to-send-notifications"></a>通知を送信するようにビジネス ルールを構成するには  
   
-1.  
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
   
 2.  メニュー バーから **[管理]** をポイントして **[ビジネス ルール]** をクリックします。  
   
-3.  
-  **[ビジネス ルールのメンテナンス]** ページの **[モデル]** の一覧からモデルを選択します。  
+3.  **[ビジネス ルールのメンテナンス]** ページの **[モデル]** の一覧からモデルを選択します。  
   
-4.  
-  **[エンティティ]** の一覧からエンティティを選択します。  
+4.  **[エンティティ]** の一覧からエンティティを選択します。  
   
 5.  [**メンバーの種類**] ボックスの一覧から、メンバーの種類を選択します。  
   
-6.  
-  **[属性]** の一覧で、属性を選択するか、 **[すべて]** の既定値のままにします。  
+6.  **[属性]** の一覧で、属性を選択するか、 **[すべて]** の既定値のままにします。  
   
 7.  グリッドのビジネスルールの行で、[**通知**] フィールドをダブルクリックします。  
   
@@ -66,16 +59,16 @@ ms.locfileid: "65483951"
   
 -   以下のいずれかの手順でビジネス ルールをデータに適用します。  
   
-    -   [ビジネスルールに対して特定のメンバーを検証 &#40;マスターデータサービス&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
+    -   [ビジネス ルールに対して特定のメンバーを検証する (マスター データ サービス)](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
-    -   [ビジネスルールに対してバージョンを検証する &#40;マスターデータサービス&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+    -   [ビジネス ルールに対してバージョンを検証する (マスター データ サービス)](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
 -   電子メール プロトコルを次のように構成します。  
   
-    -   [マスターデータサービス&#41;&#40;電子メール通知を構成する](../../2014/master-data-services/configure-email-notifications-master-data-services.md)  
+    -   [電子メール通知を構成する (マスター データ サービス)](../../2014/master-data-services/configure-email-notifications-master-data-services.md)  
   
 ## <a name="see-also"></a>参照  
  [通知 &#40;マスターデータサービス&#41;](../../2014/master-data-services/notifications-master-data-services.md)   
- [マスターデータサービス&#41;&#40;電子メール通知を構成する](../../2014/master-data-services/configure-email-notifications-master-data-services.md)  
+ [電子メール通知を構成する (マスター データ サービス)](../../2014/master-data-services/configure-email-notifications-master-data-services.md)  
   
   

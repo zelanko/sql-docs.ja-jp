@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 910b06a5cd7af69cc668fb3054dfdfd98c3ae036
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109883"
 ---
 # <a name="choose-link-page-report-manager"></a>[リンクの選択] ページ (レポート マネージャー)
@@ -36,7 +36,7 @@ ms.locfileid: "66109883"
 4.  プロパティ ページの **[全般]** タブで、 **[リンクの変更]** をクリックします。  
   
 ## <a name="options"></a>オプション  
- **Location**  
+ **場所**  
  フォルダーのパスとレポート名を含む、パブリッシュされたレポートの完全な名前を指定します。 完全なレポート名を入力するか、ツリー ビューを使用して、使用するレポートに移動できます。  
   
  **ツリービュー**  

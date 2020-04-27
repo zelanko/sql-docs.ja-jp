@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: be1d0dcd37dba9b1025ba3e4a93aa60d2198b237
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110046"
 ---
 # <a name="querying-a-hierarchical-table-using-hierarchy-methods"></a>階層的な手法を使用した階層テーブルのクエリ
@@ -40,9 +40,7 @@ ms.locfileid: "66110046"
   
      結果には、Sariya と Wanida の両方が表示されます。 Sariya は、0 レべルの子孫であるために表示されています。 Wanida は 1 レベルの子孫です。  
   
-2.  
-  [GetAncestor](/sql/t-sql/data-types/getancestor-database-engine) メソッドを使用してこの情報に対してクエリを実行することもできます。 
-  `GetAncestor` 返そうとしているレベルの引数を受け取ります。 Wanida は Sariya よりも 1 つ下のレベルであるため、次のコードに示すように `GetAncestor(1)` を使用します。  
+2.  [GetAncestor](/sql/t-sql/data-types/getancestor-database-engine) メソッドを使用してこの情報に対してクエリを実行することもできます。 `GetAncestor` 返そうとしているレベルの引数を受け取ります。 Wanida は Sariya よりも 1 つ下のレベルであるため、次のコードに示すように `GetAncestor(1)` を使用します。  
   
     ```  
     DECLARE @CurrentEmployee hierarchyid  

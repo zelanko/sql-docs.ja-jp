@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 525e0286d8d82f501981c9e936caca581886b9b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65481236"
 ---
 # <a name="task-10-configuring-composite-domain-to-use-reference-data-service"></a>タスク 10: 参照データ サービスを使用して複合ドメインを構成する
@@ -46,9 +46,9 @@ ms.locfileid: "65481236"
   
      ![RDS スキーマ項目をドメインにマップする](../../2014/tutorials/media/et-configuringcdtouserds-05.jpg "RDS スキーマ項目をドメインにマップする")  
   
-9. [**OK**] をクリックして、ダイアログ ボックスを閉じます。  
+9. **[OK]** をクリックしてダイアログ ボックスを閉じます。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
  [タスク 11: ナレッジ ベースをパブリッシュする](../../2014/tutorials/task-11-publishing-the-knowledge-base.md)  
   
   

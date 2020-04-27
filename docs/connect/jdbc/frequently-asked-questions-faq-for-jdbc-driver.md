@@ -1,5 +1,6 @@
 ---
 title: JDBC ドライバーのよくあるご質問 (FAQ)
+description: このページでは、Microsoft SQL Server 用 JDBC Driver についてよく寄せられる質問に対する回答をご紹介します。
 ms.custom: ''
 ms.date: 03/24/2020
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 78fe63a54214ad7ff231ebf5df2353ef09d0fc09
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: 835b8850d68b49f1701767e314d08c843bd77fc3
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219154"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728315"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>JDBC ドライバーのよくあるご質問 (FAQ)
 

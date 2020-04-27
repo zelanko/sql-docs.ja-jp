@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 695515ddefa550d6d20476e681088d6bcd926a3a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104374"
 ---
 # <a name="report-properties-dialog-box-page-setup"></a>[ページ設定] ([レポートのプロパティ] ダイアログ ボックス)
@@ -40,17 +40,15 @@ ms.locfileid: "66104374"
  一覧からサイズを選択すると、[幅] および [高さ] コントロールに寸法が自動的に入力されます。 または、 **[カスタム サイズ]** を選択し、[幅] および [高さ] コントロールを変更して、使用するサイズに合わせます。  
   
  **Width**  
- 
-  **[用紙サイズ]** 一覧で選択した用紙サイズの幅が表示されます。  
+ **[用紙サイズ]** 一覧で選択した用紙サイズの幅が表示されます。  
   
  **Height**  
- 
-  **[用紙サイズ]** 一覧で選択した用紙サイズの高さが表示されます。  
+ **[用紙サイズ]** 一覧で選択した用紙サイズの高さが表示されます。  
   
  **ページのトップへ**  
  レポートの上端とレポートの先頭行の上部との距離を設定します。  
   
- **[下]**  
+ **最終**  
  レポートの下端とレポートの最終行の下部との距離を設定します。  
   
  **左側**  
@@ -60,7 +58,7 @@ ms.locfileid: "66104374"
  レポートの右端とレポートの行の右端との距離を設定します。  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services の改ページ &#40;レポート ビルダーおよび SSRS&#41;](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Reporting Services &#40;レポートビルダーおよび SSRS&#41;での改ページ](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [レポート デザインに関するヒント &#40;レポート ビルダーおよび SSRS&#41;](report-design/report-design-tips-report-builder-and-ssrs.md)  
   
   

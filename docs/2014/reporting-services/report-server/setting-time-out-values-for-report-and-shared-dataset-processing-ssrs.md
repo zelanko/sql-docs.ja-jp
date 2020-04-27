@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fdbca5818e3430c0445444f3fb98b426e5f8a79c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103208"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>レポートおよび共有データセット処理のタイムアウト値の設定 (SSRS)
@@ -55,8 +55,8 @@ ms.locfileid: "66103208"
 >  RSReportServer.config ファイルの `RunningRequestsDbCycle` 設定で、実行中のジョブが評価される頻度を変更できます。  
   
 ## <a name="see-also"></a>参照  
- [処理オプションの設定 &#40;Reporting Services の SharePoint 統合モード&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
- [Reporting Services レポートサーバー &#40;ネイティブモード&#41;](reporting-services-report-server-native-mode.md)   
+ [SharePoint 統合モードで Reporting Services &#40;処理オプションを設定&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [Reporting Services レポート サーバー (ネイティブ モード)](reporting-services-report-server-native-mode.md)   
  [実行中のプロセスを管理する](../subscriptions/manage-a-running-process.md)   
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../report-manager-ssrs-native-mode.md)  
   

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a575d2e0f366df452d37615c7d3076027f5c400a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102131"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>レポート サーバーで Windows 認証を構成する
@@ -45,10 +45,7 @@ ms.locfileid: "66102131"
  次に示す手順は、ネイティブ モードのレポート サーバーを対象としています。 レポート サーバーを SharePoint 統合モードで配置する場合は、Windows 統合セキュリティを指定する既定の認証設定を使用する必要があります。 レポート サーバーでは、既定の Windows 認証拡張機能の内部機能を使用して、SharePoint 統合モードのレポート サーバーがサポートされます。  
   
 ## <a name="extended-protection-for-authentication"></a>認証の拡張保護 (Extended Protection for Authentication)  
- 
-  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]以降では、認証の拡張保護がサポートされています。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能により、認証の拡張保護に対するチャネル バインドとサービス バインドの使用がサポートされます。 この [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 機能は、拡張保護がサポートされているオペレーティング システムで使用する必要があります。 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の拡張保護に対する構成は、RSReportServer.config ファイルの設定によって決まります。 このファイルは、ファイルを編集するか WMI API を使用して更新できます。 詳細については、「 [Reporting Services での認証の拡張保護](extended-protection-for-authentication-with-reporting-services.md)」を参照してください。  
+ [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]以降では、認証の拡張保護がサポートされています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能により、認証の拡張保護に対するチャネル バインドとサービス バインドの使用がサポートされます。 この [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 機能は、拡張保護がサポートされているオペレーティング システムで使用する必要があります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の拡張保護に対する構成は、RSReportServer.config ファイルの設定によって決まります。 このファイルは、ファイルを編集するか WMI API を使用して更新できます。 詳細については、「 [Reporting Services での認証の拡張保護](extended-protection-for-authentication-with-reporting-services.md)」をご覧ください。  
   
 ### <a name="to-configure-a-report-server-to-use-windows-integrated-security"></a>レポート サーバーを構成して Windows 統合セキュリティを使用するには  
   
@@ -56,8 +53,7 @@ ms.locfileid: "66102131"
   
 2.  <`Authentication`> を検索します。  
   
-3.  次に示す XML 構造の中でニーズに最も合うものをコピーします。 
-  `RSWindowsNegotiate`、`RSWindowsNTLM`、および `RSWindowsKerberos` は、任意の順序で指定できます。 個々の要求ではなく接続を認証する場合は、認証の永続化を有効にする必要があります。 認証の永続化を有効にすると、接続が続いている間は、認証を必要とするすべての要求が許可されます。  
+3.  次に示す XML 構造の中でニーズに最も合うものをコピーします。 `RSWindowsNegotiate`、`RSWindowsNTLM`、および `RSWindowsKerberos` は、任意の順序で指定できます。 個々の要求ではなく接続を認証する場合は、認証の永続化を有効にする必要があります。 認証の永続化を有効にすると、接続が続いている間は、認証を必要とするすべての要求が許可されます。  
   
      1 番目の XML 構造は、レポート サーバー サービス アカウントが NetworkService または LocalSystem である場合の既定の構成です。  
   
@@ -80,7 +76,7 @@ ms.locfileid: "66102131"
           <EnableAuthPersistence>true</EnableAuthPersistence>  
     ```  
   
-     \<認証>  
+     \</Authentication>  
   
      3 番目の XML 構造は、Windows 統合セキュリティで使用されるすべてのセキュリティ パッケージを指定します。  
   
@@ -102,8 +98,7 @@ ms.locfileid: "66102131"
   
 4.  <`Authentication`> の既存のエントリの上に貼り付けます。  
   
-     
-  `Custom` の各種類と `RSWindows` は併用できないので注意してください。  
+     `Custom` の各種類と `RSWindows` は併用できないので注意してください。  
   
 5.  必要に応じて拡張保護の設定を変更します。 既定では、拡張保護は無効になっています。  これらのエントリが存在しない場合は、拡張保護がサポートされているバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] が現在のコンピューターで実行されていない可能性があります。 詳細については、「 [Extended Protection for Authentication with Reporting Services](extended-protection-for-authentication-with-reporting-services.md)」をご覧ください。  
   
@@ -118,7 +113,7 @@ ms.locfileid: "66102131"
   
 8.  レポート サーバーを再起動して、現在開いているセッションを消去します。  
   
-##  <a name="proxyfirewallRSWindowsNegotiate"></a>レポートサーバーへの接続時の Kerberos 認証エラーの解決  
+##  <a name="resolving-kerberos-authentication-errors-when-connecting-to-a-report-server"></a><a name="proxyfirewallRSWindowsNegotiate"></a>レポートサーバーへの接続時の Kerberos 認証エラーの解決  
  ネゴシエート認証または Kerberos 認証が構成されているレポート サーバーでは、Kerberos 認証エラーが発生すると、レポート サーバーへのクライアント接続が失敗します。 Kerberos 認証エラーは、次の場合に発生します。  
   
 -   サービス プリンシパル名 (SPN) を登録していない Windows ドメイン ユーザー アカウントでレポート サーバー サービスが実行されたとき。  
@@ -143,8 +138,7 @@ ms.locfileid: "66102131"
  ログ情報に、Kerberos 関連の問題の解決に役立つものがいくつかあります。  
   
 ##### <a name="user-account-control-attribute"></a>User-Account-Control 属性  
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アカウントに Active Directory の十分な属性セットがあるかどうかを確認します。 Reporting Services サービスのトレース ログ ファイルで、ログに記録された UserAccountControl 属性の値を探します。 値は 10 進形式で記録されています。 10 進値を 16 進形式に変換し、その値を User-Account-Control 属性が記述された MSDN のトピックで検索する必要があります。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アカウントに Active Directory の十分な属性セットがあるかどうかを確認します。 Reporting Services サービスのトレース ログ ファイルで、ログに記録された UserAccountControl 属性の値を探します。 値は 10 進形式で記録されています。 10 進値を 16 進形式に変換し、その値を User-Account-Control 属性が記述された MSDN のトピックで検索する必要があります。  
   
 -   Reporting Services サービスのトレース ログのエントリは、次のように表示されます。  
   
@@ -157,8 +151,7 @@ ms.locfileid: "66102131"
 -   次に、「 [User-Account-Control 属性](https://go.microsoft.com/fwlink/?LinkId=183366) 」を参照して、サービス アカウントの属性を取得します。  
   
 ##### <a name="spns-configured-in-active-directory-for-the-reporting-services-service-account"></a>Reporting Services サービス アカウントに対して Active Directory で構成された SPN  
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービスのトレース ログ ファイルに SPN が記録されるようにするために、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の拡張保護機能を一時的に有効にすることができます。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービスのトレース ログ ファイルに SPN が記録されるようにするために、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の拡張保護機能を一時的に有効にすることができます。  
   
 -   構成ファイル `rsreportserver.config` を次のように設定して変更します。  
   
@@ -167,15 +160,13 @@ ms.locfileid: "66102131"
     <RSWindowsExtendedProtectionScenario>Any</RSWindowsExtendedProtectionScenario>  
     ```  
   
--   
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービスを再開し、トレース ログ ファイルで次のようなエントリを探します。  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービスを再開し、トレース ログ ファイルで次のようなエントリを探します。  
   
     ```  
     rshost!rshost!e44!01/14/2010-14:43:51:: i INFO: Registered valid SPNs list for endpoint 2: rshost!rshost!e44!01/14/2010-14:43:52:: i INFO: SPN Whitelist Added <Explicit> - <HTTP/sqlpod064-13.w2k3.net>.  
     ```  
   
--   
-  \<Explicit> の下に、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アカウントに対して Active Directory で構成された SPN の値が表示されます。  
+-   \<Explicit> の下に、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アカウントに対して Active Directory で構成された SPN の値が表示されます。  
   
  拡張保護の使用を止める場合は、構成値を既定に戻し、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アカウントを再開します。  
   
@@ -217,7 +208,7 @@ ms.locfileid: "66102131"
  [レポート サーバーでの認証](authentication-with-the-report-server.md)   
  [ネイティブ モードのレポート サーバーに対する権限の許可](granting-permissions-on-a-native-mode-report-server.md)   
  [RSReportServer 構成ファイル](../report-server/rsreportserver-config-configuration-file.md)   
- [レポート サーバーで基本認証を構成する](configure-basic-authentication-on-the-report-server.md)   
+ [レポートサーバーで基本認証を構成する](configure-basic-authentication-on-the-report-server.md)   
  [レポートサーバーでカスタム認証またはフォーム認証を構成する](configure-custom-or-forms-authentication-on-the-report-server.md)   
  [Reporting Services での認証の拡張保護](extended-protection-for-authentication-with-reporting-services.md)  
   

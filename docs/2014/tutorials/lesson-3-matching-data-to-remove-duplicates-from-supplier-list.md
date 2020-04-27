@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c59a2fce106b08f53722ce44ae69225b680d7925
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65484652"
 ---
 # <a name="lesson-3-matching-data-to-remove-duplicates-from-supplier-list"></a>レッスン 3: データを照合して仕入先の一覧から重複を削除する
@@ -24,7 +24,7 @@ ms.locfileid: "65484652"
   
  このレッスンでは、照合アクティビティを実行して、仕入先の一覧から重複するものを削除します。 まず、1 つのルールを含む照合ポリシーを作成し、仕入先の一覧の重複部分を識別して、ポリシーをナレッジ ベースにパブリッシュします。 次に、照合するデータ品質プロジェクトを作成および実行します。 最後に、照合アクティビティから、後でマスター データ サービス (MDS) にデータをアップロードする場合に使用する Excel ファイルに結果をエクスポートします。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
  [タスク 1: 照合ポリシーを定義する](../../2014/tutorials/task-1-defining-a-matching-policy.md)  
   
   

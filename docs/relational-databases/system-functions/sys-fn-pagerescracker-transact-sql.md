@@ -26,10 +26,10 @@ author: bluefooted
 ms.author: pamela
 manager: amitban
 ms.openlocfilehash: 6d8203979a0afdca1ae78b9bd51723c906c40ea2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68267074"
 ---
 # <a name="sysfn_pagerescracker-transact-sql"></a>fn_PageResCracker (Transact-sql)
@@ -50,13 +50,13 @@ sys.fn_PageResCracker ( page_resource )
   
 ## <a name="tables-returned"></a>返されるテーブル  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |db_id|**int**|データベース ID|  
 |file_id|**int**|ファイル ID|  
 |page_id|**int**|ページ ID|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
 `sys.fn_PageResCracker`は、データベースページの8バイトの16進数表現を、ページのデータベース ID、ファイル ID、およびページ ID を含む行セットに変換するために使用されます。   
 
 有効なページリソースを取得するには`page_resource` 、 [dm_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)動的管理ビューまた[&#40;は transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)システムビューの列を参照してください。 無効なページリソースが使用されている場合、戻り値は NULL になります。  
@@ -65,7 +65,7 @@ sys.fn_PageResCracker ( page_resource )
 ## <a name="permissions"></a>アクセス許可  
 ユーザーは、 `VIEW SERVER STATE`サーバーに対する権限が必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
 関数`sys.fn_PageResCracker`は、 [dm_db_page_info &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)と組み合わせて使用して、での[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ページ関連の待機とブロックに関するトラブルシューティングを行うことができます。  次のスクリプトは、特定の種類のページリソースで現在待機しているすべてのアクティブな要求について、データベースページ情報を収集するためにこれらの関数を使用する方法の例です。 
   
 ```sql  
@@ -78,6 +78,6 @@ CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id, 1) AS page_info
 ## <a name="see-also"></a>参照  
  [dm_db_page_info &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)  
  [Transact-sql&#41;&#40;の SQL-DMO](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
- [dm_exec_requests &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
+ [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
   

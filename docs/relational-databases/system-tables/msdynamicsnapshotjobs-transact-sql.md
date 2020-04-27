@@ -18,10 +18,10 @@ ms.assetid: 4f36a325-0e3c-46c4-aeeb-416346cce0bc
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f8822b0e7c56fe109a251365050f5aed9cdef178
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907366"
 ---
 # <a name="msdynamicsnapshotjobs-transact-sql"></a>MSdynamicsnapshotjobs (Transact-SQL)
@@ -29,12 +29,12 @@ ms.locfileid: "67907366"
 
   **Msdynamicsnapshotjobs**テーブルは、フィルター処理されたデータスナップショットを生成するために適用されるパラメーター化された行フィルター情報を追跡します。 このテーブルは、パブリケーションデータベースとサブスクリプションデータベースに格納されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**番号**|**int**|フィルター選択されたデータスナップショットジョブの ID です。|  
+|**id**|**int**|フィルター選択されたデータスナップショットジョブの ID です。|  
 |**name**|**sysname**|フィルター選択されたデータスナップショットジョブの名前。|  
-|**pubid**|**UNIQUEIDENTIFIER**|このパブリケーションの一意な識別番号です。|  
-|**job_id**|**UNIQUEIDENTIFIER**|ディストリビューター側の SQL Server エージェントジョブの ID。|  
+|**pubid**|**uniqueidentifier**|このパブリケーションの一意な識別番号です。|  
+|**job_id**|**uniqueidentifier**|ディストリビューター側の SQL Server エージェントジョブの ID。|  
 |**agent_id**|**int**|SQL Server エージェントの ID です。|  
 |**dynamic_filter_login**|**sysname**|パブリケーションに対して定義されたパラメーター化された行フィルター内の[SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md)関数を評価するために使用される値です。|  
 |**dynamic_filter_hostname**|**sysname**|パブリケーションに対して定義されたパラメーター化された行フィルター内の[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)関数を評価するために使用される値です。|  
@@ -42,6 +42,6 @@ ms.locfileid: "67907366"
 |**partition_id**|**int**|ジョブが属しているデータパーティションの ID。|  
   
 ## <a name="see-also"></a>参照  
- [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
+ [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

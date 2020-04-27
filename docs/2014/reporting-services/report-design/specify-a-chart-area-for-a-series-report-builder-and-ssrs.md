@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 14fc5556e430cf364b004cd02ebd0278da650867
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104968"
 ---
 # <a name="specify-a-chart-area-for-a-series-report-builder-and-ssrs"></a>系列のグラフ領域の指定 (レポート ビルダーおよび SSRS)
@@ -38,17 +38,15 @@ ms.locfileid: "66104968"
   
 2.  グラフの系列を右クリックするか、グラフ データ ペイン内の適切な領域にある系列またはデータ フィールドを右クリックして、 **[系列のプロパティ]** をクリックします。  
   
-3.  
-  **[軸とグラフ領域]** で、系列を表示するグラフ領域を選択します。  
+3.  **[軸とグラフ領域]** で、系列を表示するグラフ領域を選択します。  
   
-4.  (省略可) グラフ領域を垂直に揃えます。 これを行うには、グラフを右クリックし、表示されるオプションから **[グラフ領域のプロパティ]** を選択します。 
-  **[配置]** で、選択したグラフ領域に揃える別のグラフ領域を選択します。  
+4.  (省略可) グラフ領域を垂直に揃えます。 これを行うには、グラフを右クリックし、表示されるオプションから **[グラフ領域のプロパティ]** を選択します。 **[配置]** で、選択したグラフ領域に揃える別のグラフ領域を選択します。  
   
 ## <a name="see-also"></a>参照  
- [グラフ上の複数の系列 &#40;レポートビルダーと SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)   
+ [グラフ上の複数の系列 &#40;レポート ビルダーおよび SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)   
  [グラフでのデータ ポイントの書式設定 (レポート ビルダーおよび SSRS)](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [パレットを使用したグラフの色の定義 &#40;レポート ビルダーおよび SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
- [レポートビルダーおよび SSRS&#41;&#40;極座標グラフ](charts-report-builder-and-ssrs.md)   
+ [極座標グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [図形グラフ &#40;レポート ビルダーおよび SSRS&#41;](shape-charts-report-builder-and-ssrs.md)   
  [円グラフ &#40;レポート ビルダーおよび SSRS&#41;](pie-charts-report-builder-and-ssrs.md)  
   

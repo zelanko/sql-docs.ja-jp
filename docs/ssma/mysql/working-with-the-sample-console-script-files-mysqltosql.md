@@ -12,10 +12,10 @@ ms.assetid: 7e6aaa8a-5f5c-414d-9fb8-21e56b9ffaef
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 6dacba33ecbaa7bdeb51d0a31438c3cbdb21969f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67904895"
 ---
 # <a name="working-with-the-sample-console-script-files-mysqltosql"></a>サンプルのコンソールスクリプトファイルの操作 (MySQLToSQL)
@@ -54,7 +54,7 @@ ms.locfileid: "67904895"
   
     レポートの生成の詳細については、「[レポートの生成 &#40;MySQLToSQL&#41;](../../ssma/mysql/generating-reports-mysqltosql.md)」を参照してください。  
   
-    **注記**  
+    **注:**  
   
     -   変数値ファイルのコマンドライン引数がコンソールアプリケーションに渡され、変数がユーザーが指定した値で更新されていることを確認します。  
   

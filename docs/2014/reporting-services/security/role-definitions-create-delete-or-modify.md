@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 066c69298126cbc635d388d75659b98dcff95917
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101806"
 ---
 # <a name="create-delete-or-modify-a-role-management-studio"></a>ロールを作成、削除、または変更する (Management Studio)
@@ -47,8 +47,7 @@ ms.locfileid: "66101806"
   
 4.  ロールに対する一意の名前を入力します。 名前には、少なくとも 1 つの文字が含まれている必要があります。 スペースおよび記号を含めることもできますが、; ? : \@ & = +、$/* \< > |"または/です。  
   
-5.  必要に応じて、説明を入力します。 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] では、この説明はこのページでのみ表示されます。 レポート マネージャーを使用してこのアイテムを表示するユーザーは、この説明をレポート マネージャーで参照できます。  
+5.  必要に応じて、説明を入力します。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] では、この説明はこのページでのみ表示されます。 レポート マネージャーを使用してこのアイテムを表示するユーザーは、この説明をレポート マネージャーで参照できます。  
   
 6.  このロールのメンバーが実行できるタスクを選択します。  
   
@@ -62,8 +61,7 @@ ms.locfileid: "66101806"
   
 3.  アイテムレベルのロールの定義を削除または変更するには、[ロール] フォルダーを展開します。 以下のいずれかを行います。  
   
-    1.  ロールの定義を削除するには、アイテムを右クリックし、 **[削除]** をクリックします。 
-  **[オブジェクトの削除]** ダイアログ ボックスが表示されます。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+    1.  ロールの定義を削除するには、アイテムを右クリックし、 **[削除]** をクリックします。 **[オブジェクトの削除]** ダイアログ ボックスが表示されます。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
     2.  ロールの定義を変更するには、アイテムを右クリックし、 **[プロパティ]** をクリックします。 **[ユーザー ロールのプロパティ]** ダイアログ ボックスの [全般] ページが表示されます。  
   
@@ -71,17 +69,15 @@ ms.locfileid: "66101806"
   
 4.  システム レベルのロールの定義を削除または変更するには、 **[システム ロール]** フォルダーを展開します。 以下のいずれかを行います。  
   
-    1.  システム ロールの定義を削除するには、アイテムを右クリックし、 **[削除]** をクリックします。 
-  **[オブジェクトの削除]** ダイアログ ボックスが表示されます。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+    1.  システム ロールの定義を削除するには、アイテムを右クリックし、 **[削除]** をクリックします。 **[オブジェクトの削除]** ダイアログ ボックスが表示されます。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-    2.  システム ロールの定義を変更するには、アイテムを右クリックし、 **[プロパティ]** をクリックします。 
-  **[システム ロールのプロパティ]** ダイアログ ボックスの [全般] ページが表示されます。  
+    2.  システム ロールの定義を変更するには、アイテムを右クリックし、 **[プロパティ]** をクリックします。 **[システム ロールのプロパティ]** ダイアログ ボックスの [全般] ページが表示されます。  
   
          このロールのメンバーが実行できるタスクを選択し、 **[OK]** をクリックして変更を適用します。  
   
 ## <a name="see-also"></a>参照  
- [Management Studio でレポート サーバーに接続する](../tools/connect-to-a-report-server-in-management-studio.md)   
+ [Management Studio でレポートサーバーに接続する](../tools/connect-to-a-report-server-in-management-studio.md)   
  (create-and-manage-role-assignments.md)   
- [SSRS&#41;&#40;SQL Server Management Studio の Reporting Services](../tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
+ [SQL Server Management Studio の Reporting Services &#40;SSRS&#41;](../tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   

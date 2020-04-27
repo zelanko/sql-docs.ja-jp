@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 19e4ca323ff61f9a5629706e3dcfad7cb7c51688
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63316202"
 ---
 # <a name="close-a-trace-window-sql-server-profiler"></a>トレース ウィンドウを閉じる (SQL Server Profiler)
@@ -33,7 +33,7 @@ ms.locfileid: "63316202"
 >  トレース実行中は、トレース ウィンドウを閉じると関連するトレースが停止します。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server プロファイラーのテンプレートと権限](sql-server-profiler-templates-and-permissions.md)   
+ [SQL Server プロファイラーテンプレートとアクセス許可](sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](sql-server-profiler.md)  
   
   

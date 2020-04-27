@@ -14,14 +14,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e38a4c75ad6cf8c65d7120e0eb98163f7ee0fccc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482873"
 ---
 # <a name="lock-a-version-master-data-services"></a>バージョンをロックする (マスター データ サービス)
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でモデルのバージョンをロックして、モデルのメンバーおよびメンバーの属性に対する変更を防止します。  
   
 > [!NOTE]  
@@ -30,33 +29,30 @@ ms.locfileid: "65482873"
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
--   [**バージョン管理**] 機能領域にアクセスするためのアクセス許可が必要です。  
+-   **[バージョン管理]** 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 (マスター データ サービス)](administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](administrators-master-data-services.md)」を参照してください。  
   
 -   バージョンのステータスは、 **[未処理]** である必要があります。  
   
 ### <a name="to-lock-a-version"></a>バージョンをロックするには  
   
-1.  
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[バージョン管理]** をクリックします。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[バージョン管理]** をクリックします。  
   
-2.  
-  **[バージョンの管理]** ページで、ロックするバージョンの行を選択します。  
+2.  **[バージョンの管理]** ページで、ロックするバージョンの行を選択します。  
   
-3.  
-  **[ロック]** をクリックします。  
+3.  **[ロック]** をクリックします。  
   
 4.  確認のダイアログ ボックスで **[OK]** をクリックします。  
   
 ## <a name="next-steps"></a>次の手順  
   
--   [ビジネスルールに対してバージョンを検証する &#40;マスターデータサービス&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+-   [ビジネス ルールに対してバージョンを検証する (マスター データ サービス)](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
--   [マスターデータサービス &#40;のバージョンをコミット&#41;](../../2014/master-data-services/commit-a-version-master-data-services.md)  
+-   [バージョンをコミットする (マスター データ サービス)](../../2014/master-data-services/commit-a-version-master-data-services.md)  
   
 ## <a name="see-also"></a>参照  
  [バージョン &#40;マスターデータサービス&#41;](../../2014/master-data-services/versions-master-data-services.md)   
- [バージョン &#40;マスターデータサービスのロックを解除&#41;](../../2014/master-data-services/unlock-a-version-master-data-services.md)  
+ [バージョンをロック解除する (マスター データ サービス)](../../2014/master-data-services/unlock-a-version-master-data-services.md)  
   
   

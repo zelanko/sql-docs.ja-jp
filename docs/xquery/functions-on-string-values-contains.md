@@ -16,10 +16,10 @@ ms.assetid: 2c88c015-04fc-429b-84b2-835596a28b65
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 54b3603c18d814276d700a220fbee5e16ed77502
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899026"
 ---
 # <a name="functions-on-string-values---contains"></a>文字列値に使用する関数 - contains
@@ -41,22 +41,21 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
  *$arg 2*  
  検索するサブストリング。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  *$Arg 2*の値が長さ0の文字列の場合、この関数は**True**を返します。 *$Arg 1*の値が長さ0の文字列で、 *$arg 2*の値が長さ0の文字列ではない場合、関数は**False**を返します。  
   
  *$Arg 1*または *$arg 2*の値が空のシーケンスの場合、引数は長さ0の文字列として扱われます。  
   
  contains() 関数では、文字列の比較に XQuery の既定の Unicode コード ポイントの照合順序が使用されます。  
   
- *$Arg 2*に指定された部分文字列の値は、4000文字以下である必要があります。 指定された値が4000文字を超える場合、動的エラー条件が発生し、contains () 関数は、ブール値の**True**または**False**ではなく、空のシーケンスを返します。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では XQuery 式に対して動的なエラーは発生しません。  
+ *$Arg 2*に指定された部分文字列の値は、4000文字以下である必要があります。 指定された値が4000文字を超える場合、動的エラー条件が発生し、contains () 関数は、ブール値の**True**または**False**ではなく、空のシーケンスを返します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では XQuery 式に対して動的なエラーは発生しません。  
   
  大文字と小文字を区別しない比較を行う[には、大文字または](../xquery/functions-on-string-values-upper-case.md)小文字の関数を使用できます。  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>補助文字 (サロゲート ペア)  
  XQuery 関数のサロゲートペアの動作は、データベースの互換性レベルと、場合によっては、関数の既定の名前空間 URI に依存します。 詳細については、「 [SQL Server 2016 のデータベースエンジン機能の重大な変更](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)」の「XQuery 関数はサロゲート対応」を参照してください。 「 [ALTER DATABASE Compatibility Level &#40;transact-sql&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) 」と「 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)」も参照してください。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  このトピックでは、AdventureWorks データベースのさまざまな xml 型の列に格納されている XML インスタンスに対して XQuery の例を示します。  
   
 ### <a name="a-using-the-contains-xquery-function-to-search-for-a-specific-character-string"></a>A. contains() XQuery 関数を使用した特定の文字列の検索  
@@ -85,7 +84,7 @@ where CatalogDescription.exist('
     [contains(., "Aerodynamic")]') = 1  
 ```  
   
- [結果]  
+ 結果  
   
  `ProductModelID Result`  
   

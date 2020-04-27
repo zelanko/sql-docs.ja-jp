@@ -10,15 +10,14 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/10/2018
 ms.openlocfilehash: cb867bfdfc8d9ecb686d3ecc52c48c80bc60d9cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63261067"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>レポート サーバー サービス アカウントの構成 (SSRS 構成マネージャー)
 
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、レポート サーバー Web サービス、レポート マネージャー、およびスケジュールされたレポート処理とサブスクリプションの配信に使用されるバックグラウンド処理アプリケーションを含んだ単一のサービスとして実装されます。 このトピックでは、サービス アカウントを最初に構成する方法と、Reporting Services 構成ツールを使用してアカウントやパスワードを変更する方法について説明します。  
   
 ## <a name="initial-configuration"></a>初期構成
@@ -30,12 +29,11 @@ ms.locfileid: "63261067"
   
 ## <a name="changing-the-service-account"></a>サービス アカウントの変更
 
- サービス アカウント情報の表示と再構成には、常に [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを使用します。 サービス ID 情報は、内部の複数の場所に保存されています。 このツールを使用することで、アカウントまたはパスワードを変更するたびに、すべての参照がその変更に対応して確実に更新されます。 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールは、次に示す追加手順を実行することで、レポート サーバーを利用可能な状態に維持します。  
+ サービス アカウント情報の表示と再構成には、常に [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを使用します。 サービス ID 情報は、内部の複数の場所に保存されています。 このツールを使用することで、アカウントまたはパスワードを変更するたびに、すべての参照がその変更に対応して確実に更新されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールは、次に示す追加手順を実行することで、レポート サーバーを利用可能な状態に維持します。  
   
 - ローカル コンピューター上に作成されたレポート サーバー グループに、新しいアカウントを自動的に追加します。 このグループは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ファイルをセキュリティで保護するアクセス制御リスト (ACL) 内で指定されます。  
   
-- で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]は、レポートサーバーデータベースをホストするために使用されるインスタンスのログイン権限が自動的に更新されます。 新しいアカウントは **RSExecRole**に追加されます。  
+- レポート サーバー データベースをホストするために使用される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスのログイン権限を自動的に更新します。 新しいアカウントは **RSExecRole**に追加されます。  
   
      古いアカウントのデータベース ログインは自動的に削除されません。 使用されなくなったするアカウントは削除するようにしてください。 詳細については、SQL Server オンラインブックの「[レポート サーバー データベースの管理 &#40;SSRS ネイティブ モード&#41;](../report-server/report-server-database-ssrs-native-mode.md)」を参照してください。  
   
@@ -66,9 +64,9 @@ ms.locfileid: "63261067"
   
 - [サービスアカウント &#40;SSRS ネイティブモード&#41;](../../sql-server/install/service-account-ssrs-native-mode.md)です。  
   
-- SQL Server オンラインブックで[Windows サービスアカウントとアクセス許可を構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)します。  
+- SQL Server のオンライン ブックの「[Windows サービス アカウントと権限の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) 」。  
   
-- 「[サービスおよびサービスアカウントのセキュリティ計画ガイド」](http://usergroup.doubletake.com/file_cabinet/download/0x000021733)を参照してください。  
+- [サービスおよびサービス アカウントのセキュリティ計画ガイド](http://usergroup.doubletake.com/file_cabinet/download/0x000021733)。  
   
 ## <a name="updating-an-expired-password"></a>期限切れのパスワードの更新
 
@@ -84,15 +82,13 @@ ms.locfileid: "63261067"
   
 4. パスワードを変更したら、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを起動し、[サービス アカウント] ページでパスワードを更新します。 この追加の手順は、レポート サーバーによって内部的に保存されているアカウント情報を更新するために必要です。  
   
- 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]のサービス アカウントのパスワードの有効期限が切れると、レポート サーバーへの接続時に `rsReportServerDatabaseUnavailable` エラーが発生します。 パスワードを再設定すると、このエラーは解決されます。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]のサービス アカウントのパスワードの有効期限が切れると、レポート サーバーへの接続時に `rsReportServerDatabaseUnavailable` エラーが発生します。 パスワードを再設定すると、このエラーは解決されます。  
   
 ## <a name="configuring-the-report-server-service-for-a-sharepoint-integrated-report-server"></a>SharePoint 統合レポート サーバーのレポート サーバー サービスの構成
 
  SharePoint 統合モードでレポート サーバーを実行している場合は、次のいずれかの状況のときに、SharePoint 構成データベースに保存されているサービス アカウント情報を更新する必要があります。  
   
-- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アカウントを変更する場合 (たとえば、NetworkService からドメイン ユーザー アカウントに切り替える場合など)。  
+- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アカウントを変更する場合 (たとえば、NetworkService からドメイン ユーザー アカウントに切り替える場合など)。  
   
 - SharePoint ファームを拡張して追加の SharePoint Web アプリケーションを組み込む場合。 サーバー ファームがレポート サーバー統合用に構成されている場合に、新たに追加されたアプリケーションがファーム内の他のアプリケーションとは異なるユーザー アカウントで実行されるように構成されているときは、データベース アクセス情報を更新する必要があります。  
   
@@ -116,7 +112,7 @@ ms.locfileid: "63261067"
   
 9. サービスが停止するまで待ちます。  
   
-10. [**スタート**] をクリックします。  
+10. **[開始]** をクリックします。  
   
 > [!NOTE]  
 > SharePoint 製品およびテクノロジでは、reporting services SharePoint モードのようなサービス構成のためにドメインアカウントが必要です。  

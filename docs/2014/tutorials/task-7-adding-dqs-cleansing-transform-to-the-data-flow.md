@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 209659609c2cf19196cc35050fb32e39e079d1c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65488943"
 ---
 # <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>タスク 7: DQS クレンジング変換をデータ フローに追加する
@@ -34,7 +34,7 @@ ms.locfileid: "65488943"
   
 6.  [**テスト接続**] をクリックして DQS サーバーへの接続をテストします。  
   
-7.  [**OK**] をクリックして、ダイアログ ボックスを閉じます。  
+7.  **[OK]** をクリックしてダイアログ ボックスを閉じます。  
   
 8.  **データ品質ナレッジベース**の [**仕入先**] を選択します。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "65488943"
   
 11. 下のペインで、[**ドメイン**] 列のドロップダウンリストを使用してこれらの列をマップします。  
   
-    |列|Domain|  
+    |列|ドメイン|  
     |------------|------------|  
     |Supplier Name|Supplier Name|  
     |ContactEmailAddress|連絡先のメール アドレス|  
@@ -60,7 +60,7 @@ ms.locfileid: "65488943"
   
 12. [ **OK]** をクリックして [ **DQS クレンジング変換エディター** ] ダイアログボックスを閉じます。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
  [タスク 8: 条件分割変換を追加してクレンジング出力を分割する](../../2014/tutorials/task-8-adding-conditional-split-transform-to-split-cleansing-output.md)  
   
   

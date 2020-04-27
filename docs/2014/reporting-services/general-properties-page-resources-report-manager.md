@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 23c920f436ae48c8eb4abd8ccd69097a06557907
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109122"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>[全般] プロパティ ページ、リソース (レポート マネージャー)
@@ -33,7 +33,7 @@ ms.locfileid: "66109122"
   
 3.  ドロップダウン メニューの **[管理]** をクリックします。 この操作により、リソースの [全般] プロパティ ページが開きます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **名前**  
  リソースの名前を指定します。 名前には、少なくとも 1 つの英数字が含まれている必要があります。 また、スペースおよびいくつかの記号を含めることもできます。 名前を指定するときに、; ? : \@ & = +、$/* \< > |"またはの名前を指定する場合。  
   
@@ -46,13 +46,13 @@ ms.locfileid: "66109122"
  **Type**  
  リソースの MIME の種類を指定します。 このプロパティは読み取り専用です。  
   
- **[適用]**  
+ 適用****  
  変更を保存する場合にクリックします。  
   
- **デリート**  
+ **削除**  
  レポート サーバー データベースからリソースを削除する場合にクリックします。  
   
- **[詳細ビュー]**  
+ **合わせ**  
  レポート サーバーのフォルダー階層内でリソースを再配置する場合にクリックします。 このボタンをクリックすると、アイテムの移動ページが表示され、フォルダーを参照して新しい場所を選択できます。  
   
  **ら**  
@@ -62,6 +62,6 @@ ms.locfileid: "66109122"
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [ページ、リソース &#40;レポートマネージャーの表示&#41;](../../2014/reporting-services/view-page-resources-report-manager.md)   
  [レポートマネージャーの F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)   
- [[セキュリティ] プロパティページ、アイテム &#40;レポートマネージャー&#41;](../../2014/reporting-services/security-properties-page-items-report-manager.md)  
+ [[セキュリティのプロパティ] ページ、アイテム (レポート マネージャー)](../../2014/reporting-services/security-properties-page-items-report-manager.md)  
   
   

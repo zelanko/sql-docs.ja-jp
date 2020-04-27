@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0e357d8767178e2fb95c484d78248a08b51c2ebf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63281992"
 ---
 # <a name="display-the-query-window"></a>クエリ ウィンドウの表示
@@ -24,10 +24,9 @@ ms.locfileid: "63281992"
   
 #### <a name="to-view-multiple-query-windows"></a>複数のクエリ ウィンドウを表示するには  
   
-1.  ツール バーの **[データベース エンジン クエリ]** をクリックします。 
-  **[データベース エンジンへの接続]** ダイアログ ボックスで、 **[接続]** をクリックします。  
+1.  ツール バーの **[データベース エンジン クエリ]** をクリックします。 **[データベース エンジンへの接続]** ダイアログ ボックスで、 **[接続]** をクリックします。  
   
-2.  オブジェクト エクスプローラーでサーバーを右クリックし、 **[新しいクエリ]** をクリックします。 この場合、クエリ エディターは [登録済みサーバー] の接続情報を使用します。  
+2.  オブジェクトエクスプローラーで、サーバーを右クリックし、[**新しいクエリ**] をクリックします。 この場合、クエリ エディターは [登録済みサーバー] の接続情報を使用します。  
   
      ウィンドウがオブジェクト エクスプローラーの右側にタブ付きウィンドウとして表示されていることに注目してください。  
   

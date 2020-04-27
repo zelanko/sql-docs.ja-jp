@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b99676a9f51bf76dc9db294365a5a628dd25fa2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65488472"
 ---
 # <a name="lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base"></a>レッスン 2: Suppliers ナレッジ ベースを使用して仕入先データをクレンジングする
@@ -42,7 +42,7 @@ ms.locfileid: "65488472"
   
 6.  クレンジングプロジェクトからドメインに値をインポートして、新しいルール、値、修正などを使用してナレッジベースのナレッジを拡張します。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
  [タスク 1: データ品質プロジェクトを作成する](../../2014/tutorials/task-1-creating-a-data-quality-project.md)  
   
   

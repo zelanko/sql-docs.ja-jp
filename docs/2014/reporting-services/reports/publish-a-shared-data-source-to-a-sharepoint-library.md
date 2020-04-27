@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2866b0b8a72e48dbb6c93b37b2a1a83e20e12821
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102539"
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>SharePoint ライブラリへの共有データ ソースのパブリッシュ
@@ -30,13 +30,13 @@ ms.locfileid: "66102539"
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、既存または新規のレポート サーバー プロジェクトを開きます。  
   
-2.  **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 _[\<プロジェクト>_ **プロパティ ページ]** ダイアログ ボックスが開きます。  
+2.  **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 [ _ \<プロジェクト>_**プロパティページ**] ダイアログボックスが表示されます。  
   
 3.  SharePoint サイトへのパブリッシュに使用する **[構成]** を選択します。  
   
 4.  プロジェクトの共有データ ソースをパブリッシュし、以前にパブリッシュされた共有データ ソースを上書きするには、 **[OverwriteDataSources]** を **[True]** に設定します。  
   
-5.  (省略可) **[TargetDataSourceFolder]** には、SharePoint ライブラリまたはライブラリ フォルダーへの URL を入力します。 たとえば、 *http://TestServer/TestSite/Documents/DataSources*のようになります。  
+5.  (省略可) **[TargetDataSourceFolder]** には、SharePoint ライブラリまたはライブラリ フォルダーへの URL を入力します。 たとえば、 *http://TestServer/TestSite/Documents/DataSources* です。  
   
      値を指定しない場合は、 **[TargetReportFolder]** の値が使用されます。  
   
@@ -53,10 +53,10 @@ ms.locfileid: "66102539"
   
 ## <a name="see-also"></a>参照  
  [SharePoint ライブラリへのレポートのパブリッシュ](publish-a-report-to-a-sharepoint-library.md)   
- [SharePoint モードのレポート サーバー上のパブリッシュされたレポート アイテムの URL の例 &#40;SSRS&#41;](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
- [[プロパティ ページ] ダイアログ ボックス](../tools/project-property-pages-dialog-box.md)   
- [配置プロパティを設定する (Reporting Services)](../tools/set-deployment-properties-reporting-services.md)   
- [レポート サーバーへのレポートのパブリッシュ](publishing-reports-to-a-report-server.md)   
+ [SharePoint モードのレポートサーバー上のパブリッシュされたレポートアイテムの URL の例 &#40;SSRS&#41;](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
+ [[プロジェクトプロパティページ] ダイアログボックス](../tools/project-property-pages-dialog-box.md)   
+ [展開プロパティを設定 &#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md)   
+ [レポートサーバーへのレポートのパブリッシュ](publishing-reports-to-a-report-server.md)   
  [レポートで Office Data Connection &#40;.odc&#41; を使用する &#40;Reporting Services の SharePoint 統合モード&#41;](../report-data/use-an-office-data-connection-odc-with-reports.md)  
   
   

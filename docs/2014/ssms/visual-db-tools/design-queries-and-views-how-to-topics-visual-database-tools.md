@@ -21,20 +21,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca92258bb764014b6f985ea08aa1a2606037a019
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63316070"
 ---
 # <a name="design-queries-and-views-how-to-topics-visual-database-tools"></a>クエリおよびビューのデザインの操作方法に関するトピック (Visual Database Tools)
   クエリおよびビュー デザイナーを使用すると、アプリケーションのデータ取得部分およびデータ操作部分を作成および保守できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [クエリおよびビューデザイナー &#40;Visual Database Tools&#41;を開きます。](visual-database-tools.md)  
+ [クエリおよびビュー デザイナーを開く (Visual Database Tools)](visual-database-tools.md)  
  クエリおよびビュー デザイナーで新規、または既存のクエリ、またはビューを開く手順を説明します。  
   
- [クエリおよびビューデザイナーでの移動 &#40;Visual Database Tools&#41;](navigate-in-the-query-and-view-designer-visual-database-tools.md)  
+ [クエリおよびビュー デザイナーでの操作 (Visual Database Tools)](navigate-in-the-query-and-view-designer-visual-database-tools.md)  
  クエリおよびビュー デザイナーで使用できるショートカット キー、およびマウス操作を一覧形式で掲載しています。  
   
  [クエリおよびビュー デザイナー ツール (Visual Database Tools)](query-and-view-designer-tools-visual-database-tools.md)  

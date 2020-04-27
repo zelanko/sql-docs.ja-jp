@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d4baca63080a3f67c1f9e54a8a0aa955a27029df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63267428"
 ---
 # <a name="save-traces-and-trace-templates"></a>トレースとトレース テンプレートの保存
@@ -36,8 +36,7 @@ ms.locfileid: "63267428"
   
 -   トレース ファイルを使用してイベントをキャプチャし、そのトレース ファイルを分析のためにサポート プロバイダーに送信します。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のクエリ処理ツールを使用して、データにアクセスしたり、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]でデータを表示したりします。 ただし、トレース テーブルに直接アクセスできるのは、 **sysadmin** 固定サーバー ロールのメンバーとテーブルの作成者だけです。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のクエリ処理ツールを使用して、データにアクセスしたり、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]でデータを表示したりします。 ただし、トレース テーブルに直接アクセスできるのは、 **sysadmin** 固定サーバー ロールのメンバーとテーブルの作成者だけです。  
   
 > [!NOTE]  
 >  トレース データをテーブルにキャプチャすると、ファイルにキャプチャする場合と比べて操作に時間がかかります。 テーブルにキャプチャする代わりに、トレース データをファイルにキャプチャしておき、このトレース ファイルを開き、トレースをトレース テーブルとして保存する方法があります。  
@@ -45,32 +44,29 @@ ms.locfileid: "63267428"
  トレース ファイルを使用する場合、キャプチャしたイベント データ (トレース定義ではない) は [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] により [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] トレース (\*.trc) ファイルに保存されます。 この拡張子は、トレース ファイルを保存するときに、他の拡張子が指定されているかどうかに関係なくファイル名の終わりに自動的に付加されます。 たとえば、 **Trace.dat**という名前のトレース ファイルを指定すると、作成されるファイルの名前は **Trace.dat.trc**になります。  
   
 > [!IMPORTANT]  
->  SHOWPLAN 権限、ALTER TRACE 権限、または VIEW SERVER STATE 権限を持つユーザーは、プラン表示出力にキャプチャされたクエリを表示できます。 これらのクエリには、パスワードなどの機密情報が含まれている場合があります。 したがって、機密情報を表示する権限を持つユーザー ( **db_owner**固定データベースロールのメンバー、 **sysadmin**固定サーバーロールのメンバーなど) にのみ、これらの権限を付与することをお勧めします。 また、プラン表示ファイルまたはプラン表示関連のイベントを含むトレース ファイルのみを保存すること、保存先は NTFS ファイル システムが使用されている場所とすること、および機密情報を表示する権限を持つユーザーのみにアクセスを制限することをお勧めします。  
+>  SHOWPLAN 権限、ALTER TRACE 権限、または VIEW SERVER STATE 権限を持つユーザーは、プラン表示出力にキャプチャされたクエリを表示できます。 これらのクエリには、パスワードなどの機密情報が含まれている場合があります。 したがって、これらの権限は、機密情報を表示することが認められているユーザー (たとえば **db_owner** 固定データベース ロールのメンバーや **sysadmin** 固定サーバー ロールのメンバー) のみに付与することをお勧めします。 また、プラン表示ファイルまたはプラン表示関連のイベントを含むトレース ファイルのみを保存すること、保存先は NTFS ファイル システムが使用されている場所とすること、および機密情報を表示する権限を持つユーザーのみにアクセスを制限することをお勧めします。  
   
 ## <a name="saving-templates"></a>テンプレートの保存  
- トレースのテンプレート定義には、トレースの作成に使用するイベント クラス、データ列、フィルター、およびその他のすべてのプロパティ (キャプチャしたイベント データは除く) が含まれています。 
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] にはシステム テンプレートがあらかじめ定義されていて、これを使用することでトレースの一般的な作業、およびデータベース エンジン チューニング アドバイザーで物理的なデータベース デザインをチューニングするためのワークロードを作成するなどの特定の作業を行うことができます。 ユーザー定義テンプレートを作成して保存することもできます。  
+ トレースのテンプレート定義には、トレースの作成に使用するイベント クラス、データ列、フィルター、およびその他のすべてのプロパティ (キャプチャしたイベント データは除く) が含まれています。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] にはシステム テンプレートがあらかじめ定義されていて、これを使用することでトレースの一般的な作業、およびデータベース エンジン チューニング アドバイザーで物理的なデータベース デザインをチューニングするためのワークロードを作成するなどの特定の作業を行うことができます。 ユーザー定義テンプレートを作成して保存することもできます。  
   
 ### <a name="importing-and-exporting-templates"></a>テンプレートのインポートとエクスポート  
- 
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用して、サーバー間でテンプレートのインポートとエクスポートを行うことができます。 テンプレートをエクスポートすると、既存のテンプレートのコピーが指定したディレクトリに移動されます。 テンプレートをインポートすると、指定したテンプレートのコピーが作成されます。 インポートまたはエクスポートしたテンプレートは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]で表示したときにテンプレート名の後に "(ユーザー)" という語が付いて、システム テンプレートと区別されます。 あらかじめ定義されているシステム テンプレートを上書きしたり、直接変更したりすることはできません。  
+ [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用して、サーバー間でテンプレートのインポートとエクスポートを行うことができます。 テンプレートをエクスポートすると、既存のテンプレートのコピーが指定したディレクトリに移動されます。 テンプレートをインポートすると、指定したテンプレートのコピーが作成されます。 インポートまたはエクスポートしたテンプレートは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]で表示したときにテンプレート名の後に "(ユーザー)" という語が付いて、システム テンプレートと区別されます。 あらかじめ定義されているシステム テンプレートを上書きしたり、直接変更したりすることはできません。  
   
 ### <a name="analyzing-performance-with-templates"></a>テンプレートを使用したパフォーマンスの分析  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を頻繁に監視する場合は、テンプレートを使用してパフォーマンスを分析してください。 テンプレートを使用すれば、同一のイベント データを毎回キャプチャし、同一のトレース定義で同一のイベントを監視できます。 トレースを作成するたびにイベント クラスやデータ列を定義する必要はありません。 さらに、特定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] イベントを監視するために、テンプレートを他のユーザーに提供できます。 たとえば、サポート プロバイダーから顧客にテンプレートを提供できます。 顧客はこのテンプレートを使用して必要なイベント データをキャプチャし、キャプチャしたデータを分析のためサポート プロバイダーに送信します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を頻繁に監視する場合は、テンプレートを使用してパフォーマンスを分析してください。 テンプレートを使用すれば、同一のイベント データを毎回キャプチャし、同一のトレース定義で同一のイベントを監視できます。 トレースを作成するたびにイベント クラスやデータ列を定義する必要はありません。 さらに、特定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] イベントを監視するために、テンプレートを他のユーザーに提供できます。 たとえば、サポート プロバイダーから顧客にテンプレートを提供できます。 顧客はこのテンプレートを使用して必要なイベント データをキャプチャし、キャプチャしたデータを分析のためサポート プロバイダーに送信します。  
   
  **トレースをファイルに保存するには**  
   
- [トレース結果をファイル &#40;SQL Server プロファイラーに保存&#41;](save-trace-results-to-a-file-sql-server-profiler.md)  
+ [トレース結果のファイルへの保存 &#40;SQL Server Profiler&#41;](save-trace-results-to-a-file-sql-server-profiler.md)  
   
- [sp_trace_create &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-create-transact-sql)  
+ [sp_trace_create &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-create-transact-sql)  
   
 ## <a name="see-also"></a>参照  
- [トレース結果をテーブル &#40;SQL Server プロファイラー&#41;に保存する](save-trace-results-to-a-table-sql-server-profiler.md)   
+ [トレース結果のテーブルへの保存 &#40;SQL Server Profiler&#41;](save-trace-results-to-a-table-sql-server-profiler.md)   
  [トレース テンプレートの作成 &#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)   
  [実行中のトレースからのテンプレートの作成 &#40;SQL Server Profiler&#41;](derive-a-template-from-a-running-trace-sql-server-profiler.md)   
  [トレース ファイルまたはトレース テーブルからのテンプレートの作成 &#40;SQL Server Profiler&#41;](derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)   
  [トレース テンプレートのエクスポート &#40;SQL Server Profiler&#41;](export-a-trace-template-sql-server-profiler.md)   
- [トレーステンプレート &#40;SQL Server プロファイラーをインポートする&#41;](import-a-trace-template-sql-server-profiler.md)  
+ [トレース テンプレートのインポート &#40;SQL Server Profiler&#41;](import-a-trace-template-sql-server-profiler.md)  
   
   

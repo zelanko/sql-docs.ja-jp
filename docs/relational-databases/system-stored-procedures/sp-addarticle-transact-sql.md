@@ -16,10 +16,10 @@ ms.assetid: 0483a157-e403-4fdb-b943-23c1b487bef0
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: e337e04714b0d8dcc9a8227ca48ad9dc33dcc3dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68811386"
 ---
 # <a name="sp_addarticle-transact-sql"></a>sp_addarticle (Transact-SQL)
@@ -74,7 +74,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @source_table = ] 'source_table'`このパラメーターは非推奨とされました。代わりに*source_object*を使用してください。  
   
- *このパラメーターは、Oracle パブリッシャーに対してサポートされていません。*  
+ *このパラメーターは、Oracle パブリッシャーではサポートされていません。*  
   
 `[ @destination_table = ] 'destination_table'`*Source_table*またはストアドプロシージャと異なる場合に、インポート先 (サブスクリプション) テーブルの名前を指定します。 *destination_table*は**sysname**で、既定値は NULL です。これは、 *source_table*が*destination_table * ** と等しいことを意味します。  
   
@@ -86,7 +86,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @type = ] 'type'`アーティクルの種類を示します。 *種類*は**sysname**で、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**aggregate schema only**|スキーマのみを使用する集計関数。|  
 |**func スキーマのみ**|スキーマのみを使用する関数。|  
@@ -110,34 +110,34 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @ins_cmd = ] 'ins_cmd'`このアーティクルの挿入をレプリケートするときに使用されるレプリケーションコマンドの種類を示します。 *ins_cmd*は**nvarchar (255)** で、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**存在**|アクションは実行されません。|  
-|**CALL sp_MSins_**<br /> **_テーブル_**(既定値)<br /><br /> または<br /><br /> **CALL custom_stored_procedure_name**|サブスクライバー側で実行されるストアド プロシージャを呼び出します。 このレプリケーション方法を使用するには、 *schema_option*を使用してストアドプロシージャの自動作成を指定するか、アーティクルの各サブスクライバーの転送先データベースに指定されたストアドプロシージャを作成します。 *custom_stored_procedure*は、ユーザーが作成したストアドプロシージャの名前です。 <strong>sp_MSins_*table* </strong>には、パラメーターの *_table*部分の代わりに、コピー先のテーブルの名前が含まれています。 *Destination_owner*が指定されている場合は、コピー先のテーブル名の前に付加されます。 たとえば、サブスクライバーで**実稼働**スキーマによって所有さ`CALL sp_MSins_ProductionProductCategory`れている**productcategory**テーブルの場合、パラメーターはになります。 ピアツーピアレプリケーショントポロジ内のアーティクルの場合、 *_table*には GUID 値が付加されます。 *Custom_stored_procedure*の指定は、サブスクライバーの更新ではサポートされていません。|  
+|**CALL sp_MSins_**<br /> **_テーブル_**(既定値)<br /><br /> \- または -<br /><br /> **CALL custom_stored_procedure_name**|サブスクライバー側で実行されるストアド プロシージャを呼び出します。 このレプリケーション方法を使用するには、 *schema_option*を使用してストアドプロシージャの自動作成を指定するか、アーティクルの各サブスクライバーの転送先データベースに指定されたストアドプロシージャを作成します。 *custom_stored_procedure*は、ユーザーが作成したストアドプロシージャの名前です。 <strong>sp_MSins_*table* </strong>には、パラメーターの *_table*部分の代わりに、コピー先のテーブルの名前が含まれています。 *Destination_owner*が指定されている場合は、コピー先のテーブル名の前に付加されます。 たとえば、サブスクライバーで**実稼働**スキーマによって所有さ`CALL sp_MSins_ProductionProductCategory`れている**productcategory**テーブルの場合、パラメーターはになります。 ピアツーピアレプリケーショントポロジ内のアーティクルの場合、 *_table*には GUID 値が付加されます。 *Custom_stored_procedure*の指定は、サブスクライバーの更新ではサポートされていません。|  
 |**SQL**または NULL|INSERT ステートメントをレプリケートします。 INSERT ステートメントでは、アーティクル内にある、パブリッシュされるすべての列の値が指定されます。 次のコマンドは挿入時にレプリケートされます。<br /><br /> `INSERT INTO <table name> VALUES (c1value, c2value, c3value, ..., cnvalue)`|  
   
  詳細については、「[トランザクション アーティクルに変更を反映する方法の指定](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)」を参照してください。  
   
 `[ @del_cmd = ] 'del_cmd'`このアーティクルの削除をレプリケートするときに使用するレプリケーションコマンドの種類を示します。 *del_cmd*は**nvarchar (255)** で、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**存在**|アクションは実行されません。|  
-|**CALLsp_MSdel_**<br /> **_テーブル_**(既定値)<br /><br /> または<br /><br /> **CALL custom_stored_procedure_name**|サブスクライバー側で実行されるストアド プロシージャを呼び出します。 このレプリケーション方法を使用するには、 *schema_option*を使用してストアドプロシージャの自動作成を指定するか、アーティクルの各サブスクライバーの転送先データベースに指定されたストアドプロシージャを作成します。 *custom_stored_procedure*は、ユーザーが作成したストアドプロシージャの名前です。 <strong>sp_MSdel_*table* </strong>には、パラメーターの *_table*部分の代わりに、コピー先のテーブルの名前が含まれています。 *Destination_owner*が指定されている場合は、コピー先のテーブル名の前に付加されます。 たとえば、サブスクライバーで**実稼働**スキーマによって所有さ`CALL sp_MSdel_ProductionProductCategory`れている**productcategory**テーブルの場合、パラメーターはになります。 ピアツーピアレプリケーショントポロジ内のアーティクルの場合、 *_table*には GUID 値が付加されます。 *Custom_stored_procedure*の指定は、サブスクライバーの更新ではサポートされていません。|  
-|**XCALL sp_MSdel_**<br /> **_一覧_**<br /><br /> または<br /><br /> **XCALL custom_stored_procedure_name**|XCALL スタイルのパラメーターを使用してストアド プロシージャを呼び出します。 このレプリケーション方法を使用するには、 *schema_option*を使用してストアドプロシージャの自動作成を指定するか、アーティクルの各サブスクライバーの転送先データベースに指定されたストアドプロシージャを作成します。 ユーザーが作成したストアドプロシージャの指定は、サブスクライバーの更新では許可されていません。|  
+|**CALLsp_MSdel_**<br /> **_テーブル_**(既定値)<br /><br /> \- または -<br /><br /> **CALL custom_stored_procedure_name**|サブスクライバー側で実行されるストアド プロシージャを呼び出します。 このレプリケーション方法を使用するには、 *schema_option*を使用してストアドプロシージャの自動作成を指定するか、アーティクルの各サブスクライバーの転送先データベースに指定されたストアドプロシージャを作成します。 *custom_stored_procedure*は、ユーザーが作成したストアドプロシージャの名前です。 <strong>sp_MSdel_*table* </strong>には、パラメーターの *_table*部分の代わりに、コピー先のテーブルの名前が含まれています。 *Destination_owner*が指定されている場合は、コピー先のテーブル名の前に付加されます。 たとえば、サブスクライバーで**実稼働**スキーマによって所有さ`CALL sp_MSdel_ProductionProductCategory`れている**productcategory**テーブルの場合、パラメーターはになります。 ピアツーピアレプリケーショントポロジ内のアーティクルの場合、 *_table*には GUID 値が付加されます。 *Custom_stored_procedure*の指定は、サブスクライバーの更新ではサポートされていません。|  
+|**XCALL sp_MSdel_**<br /> **_一覧_**<br /><br /> \- または -<br /><br /> **XCALL custom_stored_procedure_name**|XCALL スタイルのパラメーターを使用してストアド プロシージャを呼び出します。 このレプリケーション方法を使用するには、 *schema_option*を使用してストアドプロシージャの自動作成を指定するか、アーティクルの各サブスクライバーの転送先データベースに指定されたストアドプロシージャを作成します。 ユーザーが作成したストアドプロシージャの指定は、サブスクライバーの更新では許可されていません。|  
 |**SQL**または NULL|DELETE ステートメントをレプリケートします。 DELETE ステートメントには、すべての主キー列の値が指定されています。 このコマンドは、削除時にレプリケートされます。<br /><br /> `DELETE FROM <table name> WHERE pkc1 = pkc1value AND pkc2 = pkc2value AND pkcn = pkcnvalue`|  
   
  詳細については、「[トランザクション アーティクルに変更を反映する方法の指定](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)」を参照してください。  
   
 `[ @upd_cmd = ] 'upd_cmd'`このアーティクルの更新をレプリケートするときに使用されるレプリケーションコマンドの種類を示します。 *upd_cmd*は**nvarchar (255)** で、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**存在**|アクションは実行されません。|  
-|**CALL sp_MSupd_**<br /> **_一覧_**<br /><br /> または<br /><br /> **CALL custom_stored_procedure_name**|サブスクライバー側で実行されるストアド プロシージャを呼び出します。 このレプリケーション方法を使用するには、 *schema_option*を使用してストアドプロシージャの自動作成を指定するか、アーティクルの各サブスクライバーの転送先データベースに指定されたストアドプロシージャを作成します。|  
-|**MCALL sp_MSupd_**<br /> **_一覧_**<br /><br /> または<br /><br /> **MCALL custom_stored_procedure_name**|MCALL スタイルパラメーターを取得するストアドプロシージャを呼び出します。 このレプリケーション方法を使用するには、 *schema_option*を使用してストアドプロシージャの自動作成を指定するか、アーティクルの各サブスクライバーの転送先データベースに指定されたストアドプロシージャを作成します。 *custom_stored_procedure*は、ユーザーが作成したストアドプロシージャの名前です。 <strong>sp_MSupd_*table* </strong>には、パラメーターの *_table*部分の代わりに、コピー先のテーブルの名前が含まれています。 *Destination_owner*が指定されている場合は、コピー先のテーブル名の前に付加されます。 たとえば、サブスクライバーで**実稼働**スキーマによって所有さ`MCALL sp_MSupd_ProductionProductCategory`れている**productcategory**テーブルの場合、パラメーターはになります。 ピアツーピアレプリケーショントポロジ内のアーティクルの場合、 *_table*には GUID 値が付加されます。 ユーザーが作成したストアドプロシージャの指定は、サブスクライバーの更新では許可されていません。|  
-|**SCALL sp_MSupd_**<br /> **_テーブル_**(既定値)<br /><br /> または<br /><br /> **SCALL custom_stored_procedure_name**|SCALL スタイルパラメーターを受け取るストアドプロシージャを呼び出します。 このレプリケーション方法を使用するには、 *schema_option*を使用してストアドプロシージャの自動作成を指定するか、アーティクルの各サブスクライバーの転送先データベースに指定されたストアドプロシージャを作成します。 *custom_stored_procedure*は、ユーザーが作成したストアドプロシージャの名前です。 <strong>sp_MSupd_*table* </strong>には、パラメーターの *_table*部分の代わりに、コピー先のテーブルの名前が含まれています。 *Destination_owner*が指定されている場合は、コピー先のテーブル名の前に付加されます。 たとえば、サブスクライバーで**実稼働**スキーマによって所有さ`SCALL sp_MSupd_ProductionProductCategory`れている**productcategory**テーブルの場合、パラメーターはになります。 ピアツーピアレプリケーショントポロジ内のアーティクルの場合、 *_table*には GUID 値が付加されます。 ユーザーが作成したストアドプロシージャの指定は、サブスクライバーの更新では許可されていません。|  
-|**XCALL sp_MSupd_**<br /> **_一覧_**<br /><br /> または<br /><br /> **XCALL custom_stored_procedure_name**|XCALL スタイルのパラメーターを使用してストアド プロシージャを呼び出します。 このレプリケーション方法を使用するには、 *schema_option*を使用してストアドプロシージャの自動作成を指定するか、アーティクルの各サブスクライバーの転送先データベースに指定されたストアドプロシージャを作成します。 ユーザーが作成したストアドプロシージャの指定は、サブスクライバーの更新では許可されていません。|  
+|**CALL sp_MSupd_**<br /> **_一覧_**<br /><br /> \- または -<br /><br /> **CALL custom_stored_procedure_name**|サブスクライバー側で実行されるストアド プロシージャを呼び出します。 このレプリケーション方法を使用するには、 *schema_option*を使用してストアドプロシージャの自動作成を指定するか、アーティクルの各サブスクライバーの転送先データベースに指定されたストアドプロシージャを作成します。|  
+|**MCALL sp_MSupd_**<br /> **_一覧_**<br /><br /> \- または -<br /><br /> **MCALL custom_stored_procedure_name**|MCALL スタイルパラメーターを取得するストアドプロシージャを呼び出します。 このレプリケーション方法を使用するには、 *schema_option*を使用してストアドプロシージャの自動作成を指定するか、アーティクルの各サブスクライバーの転送先データベースに指定されたストアドプロシージャを作成します。 *custom_stored_procedure*は、ユーザーが作成したストアドプロシージャの名前です。 <strong>sp_MSupd_*table* </strong>には、パラメーターの *_table*部分の代わりに、コピー先のテーブルの名前が含まれています。 *Destination_owner*が指定されている場合は、コピー先のテーブル名の前に付加されます。 たとえば、サブスクライバーで**実稼働**スキーマによって所有さ`MCALL sp_MSupd_ProductionProductCategory`れている**productcategory**テーブルの場合、パラメーターはになります。 ピアツーピアレプリケーショントポロジ内のアーティクルの場合、 *_table*には GUID 値が付加されます。 ユーザーが作成したストアドプロシージャの指定は、サブスクライバーの更新では許可されていません。|  
+|**SCALL sp_MSupd_**<br /> **_テーブル_**(既定値)<br /><br /> \- または -<br /><br /> **SCALL custom_stored_procedure_name**|SCALL スタイルパラメーターを受け取るストアドプロシージャを呼び出します。 このレプリケーション方法を使用するには、 *schema_option*を使用してストアドプロシージャの自動作成を指定するか、アーティクルの各サブスクライバーの転送先データベースに指定されたストアドプロシージャを作成します。 *custom_stored_procedure*は、ユーザーが作成したストアドプロシージャの名前です。 <strong>sp_MSupd_*table* </strong>には、パラメーターの *_table*部分の代わりに、コピー先のテーブルの名前が含まれています。 *Destination_owner*が指定されている場合は、コピー先のテーブル名の前に付加されます。 たとえば、サブスクライバーで**実稼働**スキーマによって所有さ`SCALL sp_MSupd_ProductionProductCategory`れている**productcategory**テーブルの場合、パラメーターはになります。 ピアツーピアレプリケーショントポロジ内のアーティクルの場合、 *_table*には GUID 値が付加されます。 ユーザーが作成したストアドプロシージャの指定は、サブスクライバーの更新では許可されていません。|  
+|**XCALL sp_MSupd_**<br /> **_一覧_**<br /><br /> \- または -<br /><br /> **XCALL custom_stored_procedure_name**|XCALL スタイルのパラメーターを使用してストアド プロシージャを呼び出します。 このレプリケーション方法を使用するには、 *schema_option*を使用してストアドプロシージャの自動作成を指定するか、アーティクルの各サブスクライバーの転送先データベースに指定されたストアドプロシージャを作成します。 ユーザーが作成したストアドプロシージャの指定は、サブスクライバーの更新では許可されていません。|  
 |**SQL**または NULL|UPDATE ステートメントをレプリケートします。 UPDATE ステートメントでは、すべての列の値と主キー列の値が指定されます。 このコマンドは更新時にレプリケートされます。<br /><br /> `UPDATE <table name> SET c1 = c1value, SET c2 = c2value, SET cn = cnvalue WHERE pkc1 = pkc1value AND pkc2 = pkc2value AND pkcn = pkcnvalue`|  
   
 > [!NOTE]  
@@ -149,10 +149,10 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @pre_creation_cmd = ] 'pre_creation_cmd'`このアーティクルのスナップショットを適用するときに、サブスクライバーで同じ名前の既存のオブジェクトが検出された場合にシステムが実行する操作を指定します。 *pre_creation_cmd*は**nvarchar (10)** で、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
-|**存在**|コマンドを使用しません。|  
-|**デリート**|スナップショットを適用する前に、レプリケーション先テーブルからデータを削除します。 アーティクルが行方向にフィルター選択されると、フィルター句によって指定された列のデータのみが削除されます。 行フィルターが定義されている場合は、Oracle パブリッシャーに対してはサポートされません。|  
+|"**なし**"|コマンドを使用しません。|  
+|**delete**|スナップショットを適用する前に、レプリケーション先テーブルからデータを削除します。 アーティクルが行方向にフィルター選択されると、フィルター句によって指定された列のデータのみが削除されます。 行フィルターが定義されている場合は、Oracle パブリッシャーに対してはサポートされません。|  
 |**drop** (既定値)|変換先テーブルを削除します。|  
 |**切捨て**|変換先テーブルを切り捨てます。 は、ODBC または OLE DB のサブスクライバーに対しては無効です。|  
   
@@ -163,11 +163,11 @@ sp_addarticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  この値が NULL の場合は、他のアーティクルのプロパティに応じて、アーティクルの有効なスキーマ オプションが自動生成されます。 「解説」に記載されている**既定のスキーマオプション**の表は、アーティクルの種類とレプリケーションの種類の組み合わせに基づいて選択される値を示しています。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**0x00**|スナップショットエージェントによるスクリプト作成を無効にし、 *creation_script*を使用します。|  
 |**0x01**|オブジェクト作成スクリプト (CREATE TABLE、CREATE PROCEDURE など) を生成します。 この値は、ストアドプロシージャアーティクルの既定値です。|  
-|**0x02**|定義されている場合、アーティクルの変更を反映するストアド プロシージャを生成します。|  
+|**除く**|定義されている場合、アーティクルの変更を反映するストアド プロシージャを生成します。|  
 |**0x04**|Id 列は、IDENTITY プロパティを使用してスクリプト化されます。|  
 |**0x08**|**タイムスタンプ**列をレプリケートします。 設定しない場合、**タイムスタンプ**列は**バイナリ**としてレプリケートされます。|  
 |**0x10**|対応するクラスター化インデックスを生成します。 このオプションが設定されていない場合でも、主キーと一意の制約に関連するインデックスは、パブリッシュされたテーブルで既に定義されている場合に生成されます。|  
@@ -221,15 +221,14 @@ sp_addarticle [ @publication = ] 'publication'
 |条件|対象オブジェクトの所有者|  
 |---------------|------------------------------|  
 |パブリケーションはネイティブ モードの一括コピーを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブスクライバーのみをサポートする初期スナップショットを生成します。|既定値は*source_owner*の値です。|  
-|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のパブリッシャーからパブリッシュされます。|既定では、転送先データベースの所有者になります。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のパブリッシャーからパブリッシュされます。|既定では、転送先データベースの所有者になります。|  
 |パブリケーションでは、キャラクターモードの一括コピーを使用して、以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーをサポートする初期スナップショットを生成します。|割り当てられていません。|  
   
  以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーをサポートするには、 *destination_owner*を NULL にする必要があります。  
   
 `[ @status = ] status`アーティクルがアクティブかどうか、および変更の反映方法に関する追加オプションを指定します。 *状態*は**tinyint**で、| を指定できます。 [(ビットごとの OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md)これらの値の1つ以上の積。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**1**|アーティクルはアクティブです。|  
 |**8**|INSERT ステートメントに列名を含めます。|  
@@ -251,9 +250,9 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @auto_identity_range = ] 'auto_identity_range'`パブリケーションの作成時に、パブリケーションに対する自動 id 範囲処理を有効または無効にします。 *auto_identity_range*は**nvarchar (5)** で、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
-|**本来**|自動 id 範囲の処理を有効にします|  
+|**true**|自動 id 範囲の処理を有効にします|  
 |**false**|自動 ID 範囲処理を無効にします。|  
 |NULL (既定値)|Id 範囲の処理は、 *identityrangemanagementoption*によって設定されます。|  
   
@@ -281,13 +280,13 @@ sp_addarticle [ @publication = ] 'publication'
  *Use_default_datatypes*が**0**に設定されている場合は、列マッピングが既定値から変更されるたびに、 [sp_changearticlecolumndatatype](../../relational-databases/system-stored-procedures/sp-changearticlecolumndatatype-transact-sql.md)を1回実行する必要があります。 すべてのカスタム列マッピングを定義した後、 [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)を実行する必要があります。  
   
 > [!NOTE]  
->  このパラメーターは、Oracle パブリッシャーに対してのみ使用してください。 パブリッシャーの use_default_datatypes を**0**に設定すると、エラーが生成されます。 ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+>  このパラメーターは、Oracle パブリッシャーに対してのみ使用してください。 パブリッシャーの use_default_datatypes を**0**に設定すると、エラーが生成されます。 *use_default_datatypes* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 `[ @identityrangemanagementoption = ] identityrangemanagementoption`アーティクルに対する id 範囲管理の処理方法を指定します。 *identityrangemanagementoption*は**nvarchar (10)**,、値は次のいずれかを指定することができます。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
-|**存在**|明示的な ID 範囲の管理は行われません。 このオプションは、以前のバージョンの SQL Server との下位互換性のためにのみ推奨されます。 ピアレプリケーションには許可されていません。|  
+|"**なし**"|明示的な ID 範囲の管理は行われません。 このオプションは、以前のバージョンの SQL Server との下位互換性のためにのみ推奨されます。 ピアレプリケーションには許可されていません。|  
 |**手動**|NOT FOR REPLICATION を使用して id 列をマークし、手動による id 範囲処理を有効にします。|  
 |**自動**|Id 範囲の自動管理を指定します。|  
 |NULL (既定値)|*Auto_identity_range*の値が**true**でない場合、既定値は**none**です。 既定では、ピアツーピアトポロジの既定値は [**手動**] になります (*auto_identity_range*は無視されます)。|  
@@ -299,14 +298,14 @@ sp_addarticle [ @publication = ] 'publication'
 `[ @publisher = ] 'publisher'`以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーを指定します。 *publisher*は**sysname**で、既定値は NULL です。  
   
 > [!NOTE]  
->  ** パブリッシャーにアーティクルを追加する場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーを使用しないでください。  
+>  *publisher*パブリッシャーにアーティクルを追加する場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーを使用しないでください。  
   
 `[ @fire_triggers_on_snapshot = ] 'fire_triggers_on_snapshot'`初期スナップショットが適用されるときに、レプリケートされたユーザートリガーが実行されるかどうかを示します。 *fire_triggers_on_snapshot*は**nvarchar (5)**,、既定値は FALSE です。 **true**は、スナップショットが適用されるときに、レプリケートされたテーブルのユーザートリガーが実行されることを意味します。 トリガーをレプリケートするには、 *schema_option*のビットマスク値に**0x100**という値を含める必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_addarticle**は、スナップショットレプリケーションまたはトランザクションレプリケーションで使用します。  
   
  既定では、列データ型がレプリケーションによってサポートされていない場合は、レプリケーションによってソース テーブル内の列がパブリッシュされることはありません。 このような列をパブリッシュする必要がある場合は、 [sp_articlecolumn](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)を実行して列を追加する必要があります。  
@@ -361,7 +360,7 @@ sp_addarticle [ @publication = ] 'publication'
 |**view schema only**|**0x01**|**0x01**|  
   
 > [!NOTE]
->  パブリケーションでキュー更新が有効になっている場合、 *schema_option*値**0x80**が、テーブルに表示される既定値に追加されます。 以外の** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリケーションの既定の Schema_option は**0x050d3**です。  
+>  パブリケーションでキュー更新が有効になっている場合、 *schema_option*値**0x80**が、テーブルに表示される既定値に追加されます。 以外の*schema_option* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリケーションの既定の Schema_option は**0x050d3**です。  
   
 ## <a name="valid-schema-options"></a>有効なスキーマ オプション  
  次の表では、レプリケーションの種類 (上部に表示) とアーティクルの種類 (最初の列) に基づいて、 *schema_option*の許容値を示します。  
@@ -384,7 +383,7 @@ sp_addarticle [ @publication = ] 'publication'
 |**インデックス付きビュースキーマのみ**|**0x01**、 **0x010**、 **0x020**、 **0x010**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x100000**、 **0x200000**、 **0x400000**、 **0x800000**、 **0x200000**、 **0x800000**、 **0x40000000**、および**0x80000000**|**0x01**、 **0x010**、 **0x020**、 **0x010**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x100000**、 **0x200000**、 **0x400000**、 **0x800000**、 **0x200000**、 **0x800000**、 **0x40000000**、および**0x80000000**|  
   
 > [!NOTE]
->  キュー更新パブリケーションの場合、 *schema_option*値**0x8000**および**0x80**を有効にする必要があります。 サポートさ** れていない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリケーションの schema_option 値は、 **0x01**、 **0x02**、 **0x10**、 **0x40**、 **0x80**、 **0x1000**、 **0x4000** 、 **0x8000**です。  
+>  キュー更新パブリケーションの場合、 *schema_option*値**0x8000**および**0x80**を有効にする必要があります。 サポートさ*schema_option*れていない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリケーションの schema_option 値は、 **0x01**、 **0x02**、 **0x10**、 **0x40**、 **0x80**、 **0x1000**、 **0x4000** 、 **0x8000**です。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_AddTranArticle](../../relational-databases/replication/codesnippet/tsql/sp-addarticle-transact-sql_1.sql)]  
@@ -402,6 +401,6 @@ sp_addarticle [ @publication = ] 'publication'
  [sp_helparticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
  [sp_helparticlecolumns &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)   
  [レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [データとデータベースオブジェクトのパブリッシュ](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
+ [データとデータベース オブジェクトのパブリッシュ](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   

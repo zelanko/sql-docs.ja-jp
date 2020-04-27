@@ -13,29 +13,28 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b9200880a9581b3903985c16fc2af129d19aceec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65481206"
 ---
 # <a name="options-query-results-and-dependency-services-page"></a>[オプション] ([クエリ結果] および [依存サービス] ページ)
   このページを使用すると、依存サービスのために接続するサーバーを指定できます。 依存サービスを使用すると、異なるサーバーに格納されている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] オブジェクトと [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オブジェクトの間の依存関係に関する情報を抽出できます。 オブジェクトの依存関係を表示するには、の [ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]**オブジェクトの依存関係**] ダイアログボックスを使用します。  
   
- **どの操作を行いますか。**  
+ **目的に合ったトピックをクリックしてください**  
   
 1.  [[オプション] ([クエリ結果]/[依存サービス] ページ) ダイアログ ボックスを開く](#open_dialog)  
   
-2.  [オプションを構成する](#options)  
+2.  [オプションの構成](#options)  
   
-##  <a name="open_dialog"></a>[オプション] ([クエリ結果]/[依存サービス] ページ) ダイアログボックスを開く  
+##  <a name="open-the-options-query-resultsdependency-services-page-dialog-box"></a><a name="open_dialog"></a>[オプション] ([クエリ結果]/[依存サービス] ページ) ダイアログボックスを開く  
   
 1.  で[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]、[**ツール**] メニューの [**オプション**] をクリックします。  
   
-2.  
-  **[クエリ結果]** を展開し、**[依存サービス]** をクリックします。  
+2.  **[クエリ結果]** を展開し、**[依存サービス]** をクリックします。  
   
-##  <a name="options"></a>オプションを構成する  
+##  <a name="configure-the-options"></a><a name="options"></a>オプションを構成する  
   
 ### <a name="options"></a>オプション  
  **[依存サービス サーバー]**  
@@ -52,5 +51,5 @@ ms.locfileid: "65481206"
  **パスワード**  
  SQL Server 認証を使用する場合は、パスワードを指定します。  
   
- **Test**  
+ **テスト**  
  クリックすると、接続がテストされます。

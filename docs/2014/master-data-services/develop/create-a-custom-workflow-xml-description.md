@@ -11,14 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a71ee85fc4dce4abd7d8ef91a8f22529ce8d5a0f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483013"
 ---
 # <a name="custom-workflow-xml-description-master-data-services"></a>カスタム ワークフロー XML の説明 (Master Data Services)
-  
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] では、ワークフローの開始時に、SQL Server MDS Workflow Integration Service によって <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> メソッドが呼び出されます。 このメソッドは、ワークフロー ビジネス ルールをトリガーしたアイテムに関するメタデータとデータを、XML のブロックとして受け取ります。 ワークフロー ハンドラーを実装するコードの例については、「[カスタム ワークフローの例 &#40;マスター データ サービス&#41;](create-a-custom-workflow-example.md)」を参照してください。  
   
  次の例は、ワークフロー ハンドラーに送られる XML の内容を示したものです。  
@@ -63,24 +62,20 @@ ms.locfileid: "65483013"
   
  次の表に、この XML に含まれるタグの一部を示します。  
   
-|タグ|[説明]|  
+|タグ|説明|  
 |---------|-----------------|  
-|\<型>|どのカスタム ワークフロー アセンブリを読み込むかを識別するために、** の **[ワークフローの種類][!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] ボックスに入力したテキスト。|  
-|\<SendData>|
-  ** の **[メッセージにメンバーのデータを含める][!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] チェック ボックスによって制御されるブール値。 値 1 は、\<MemberData> セクションが送信されることを示します。それ以外の場合、\<MemberData> セクションは送信されません。|  
-|<Server_URL>|
-  ** の **[ワークフロー サイト][!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] ボックスに入力したテキスト。|  
-|<Action_ID>|
-  ** の **[ワークフロー名][!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] ボックスに入力したテキスト。|  
-|
-  \<MemberData>|ワークフロー アクションをトリガーしたメンバーのデータが含まれます。 これは、\<SendData> の値が 1 の場合にのみ含められます。|  
+|\<Type>|どのカスタム ワークフロー アセンブリを読み込むかを識別するために、[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] の **[ワークフローの種類]** ボックスに入力したテキスト。|  
+|\<SendData>|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] の **[メッセージにメンバーのデータを含める]** チェック ボックスによって制御されるブール値。 値 1 は、\<MemberData> セクションが送信されることを示します。それ以外の場合、\<MemberData> セクションは送信されません。|  
+|<Server_URL>|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] の **[ワークフロー サイト]** ボックスに入力したテキスト。|  
+|<Action_ID>|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] の **[ワークフロー名]** ボックスに入力したテキスト。|  
+|\<MemberData>|ワークフロー アクションをトリガーしたメンバーのデータが含まれます。 これは、\<SendData> の値が 1 の場合にのみ含められます。|  
 |\<*Xxx*を入力>|このタグ セットには、メンバーの作成に関するメタデータ (作成日時や作成者など) が含まれます。|  
 |\<LastChg*xxx*>|このタグ セットには、メンバーへの最終変更に関するメタデータ (変更日時や変更者など) が含まれます。|  
-|\<名前>|変更されたメンバーの最初の属性。 この例のメンバーには、Name 属性と Code 属性のみが含まれています。|  
-|\<コード>|変更されたメンバーの次の属性。 この例のメンバーにさらに多くの属性が含まれていた場合、それらはこのタグの後に続きます。|  
+|\<Name>|変更されたメンバーの最初の属性。 この例のメンバーには、Name 属性と Code 属性のみが含まれています。|  
+|\<Code>|変更されたメンバーの次の属性。 この例のメンバーにさらに多くの属性が含まれていた場合、それらはこのタグの後に続きます。|  
   
 ## <a name="see-also"></a>参照  
  [カスタムワークフロー &#40;マスターデータサービスの作成&#41;](create-a-custom-workflow-master-data-services.md)   
- [カスタムワークフローの例 &#40;マスターデータサービス&#41;](create-a-custom-workflow-example.md)  
+ [カスタム ワークフローの例 &#40;マスター データ サービス&#41;](create-a-custom-workflow-example.md)  
   
   

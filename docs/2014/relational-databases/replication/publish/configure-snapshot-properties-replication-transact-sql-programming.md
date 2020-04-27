@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b03dd7f886cee5816d591034d1be63ece45d8d1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63021335"
 ---
 # <a name="configure-snapshot-properties-replication-transact-sql-programming"></a>スナップショットのプロパティの構成 (レプリケーション Transact-SQL プログラミング)
@@ -30,7 +30,7 @@ ms.locfileid: "63021335"
   
     -   **@alt_snapshot_folder**-このパブリケーションのスナップショットが、スナップショットの既定のフォルダーではなく、その場所からアクセスされる場合は、パスを指定します。  
   
-    -   **@compress_snapshot**-代替スナップショットフォルダー内**** のスナップショットファイルを[!INCLUDE[msCoName](../../../includes/msconame-md.md)] CAB ファイル形式で圧縮する場合は、値 true を指定します。  
+    -   **@compress_snapshot**-代替スナップショットフォルダー内**true**のスナップショットファイルを[!INCLUDE[msCoName](../../../includes/msconame-md.md)] CAB ファイル形式で圧縮する場合は、値 true を指定します。  
   
     -   **@pre_snapshot_script**-初期スナップショットが適用される前に、初期化中にサブスクライバーで実行される **.sql**ファイルのファイル名と完全パスを指定します。  
   
@@ -68,14 +68,14 @@ ms.locfileid: "63021335"
   
     -   **post_snapshot_script** -初期スナップショット**@value**が適用された後に、初期化時にサブスクライバーで実行される **.sql**ファイルのファイル名と完全パスを指定します。  
   
-    -   **snapshot_in_defaultfolder** -スナップショットを既定以外の場所でのみ使用可能にするかどうかを示す**true**または**false**の値も指定します。  
+    -   **snapshot_in_defaultfolder** - スナップショットを既定の場所に格納するかどうかを **true** または **false** で指定します。  
   
 2.  (省略可) パブリッシャーのパブリケーション データベースで [sp_changepublication_snapshot](/sql/relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql)を実行します。 を**@publication**指定し、1つまたは複数のスケジュールまたはセキュリティ資格情報のパラメーターを変更します。  
   
     > [!IMPORTANT]  
     >  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 スクリプト ファイルに資格情報を格納する必要がある場合は、不正アクセスを防ぐために、ファイルを保護します。  
   
-3.  コマンド プロンプトから [Replication Snapshot Agent](../agents/replication-snapshot-agent.md) を実行するか、スナップショット エージェント ジョブを起動して新しいスナップショットを生成します。 詳しくは、「 [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md)」をご覧ください。  
+3.  コマンド プロンプトから [Replication Snapshot Agent](../agents/replication-snapshot-agent.md) を実行するか、スナップショット エージェント ジョブを起動して新しいスナップショットを生成します。 詳しくは、「 [初期スナップショットの作成および適用](../create-and-apply-the-initial-snapshot.md)」をご覧ください。  
   
 ### <a name="to-modify-snapshot-properties-of-an-existing-merge-publication"></a>既存のマージ パブリケーションに対してスナップショットのプロパティを変更するには  
   
@@ -89,9 +89,9 @@ ms.locfileid: "63021335"
   
     -   **post_snapshot_script** -初期スナップショット**@value**が適用された後に、初期化時にサブスクライバーで実行される **.sql**ファイルのファイル名と完全パスを指定します。  
   
-    -   **snapshot_in_defaultfolder** -スナップショットを既定以外の場所でのみ使用可能にするかどうかを示す**true**または**false**の値も指定します。  
+    -   **snapshot_in_defaultfolder** - スナップショットを既定の場所に格納するかどうかを **true** または **false** で指定します。  
   
-2.  コマンド プロンプトから [Replication Snapshot Agent](../agents/replication-snapshot-agent.md) を実行するか、スナップショット エージェント ジョブを起動して新しいスナップショットを生成します。 詳しくは、「 [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md)」をご覧ください。  
+2.  コマンド プロンプトから [Replication Snapshot Agent](../agents/replication-snapshot-agent.md) を実行するか、スナップショット エージェント ジョブを起動して新しいスナップショットを生成します。 詳しくは、「 [初期スナップショットの作成および適用](../create-and-apply-the-initial-snapshot.md)」をご覧ください。  
   
 ## <a name="example"></a>例  
  次の例では、代替スナップショット フォルダーと圧縮スナップショットを使用したパブリケーションを作成します。  

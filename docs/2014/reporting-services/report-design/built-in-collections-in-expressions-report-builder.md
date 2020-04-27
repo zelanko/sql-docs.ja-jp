@@ -11,25 +11,24 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e572e6bd7070247c8e872283964f50ad734d4e32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106422"
 ---
 # <a name="built-in-collections-in-expressions-report-builder-and-ssrs"></a>式で使用される組み込みコレクション (レポート ビルダーおよび SSRS)
-  レポート内の式には、ReportItems、Parameters、Fields、DataSets、DataSources、Variables などの組み込みコレクションへの参照とレポート名などのグローバル情報の組み込みフィールドへの参照を含めることができます。 
-  **[式]** ダイアログ ボックスにすべてのコレクションが表示されるとは限りません。 DataSets コレクションと DataSources コレクションを使用できるのは、レポート サーバー上でパブリッシュされたレポートの実行時のみです。 ReportItems コレクションは、ページまたはページ ヘッダーのテキスト ボックスなど、レポート領域内のテキスト ボックスのコレクションです。  
+  レポート内の式には、ReportItems、Parameters、Fields、DataSets、DataSources、Variables などの組み込みコレクションへの参照とレポート名などのグローバル情報の組み込みフィールドへの参照を含めることができます。 **[式]** ダイアログ ボックスにすべてのコレクションが表示されるとは限りません。 DataSets コレクションと DataSources コレクションを使用できるのは、レポート サーバー上でパブリッシュされたレポートの実行時のみです。 ReportItems コレクションは、ページまたはページ ヘッダーのテキスト ボックスなど、レポート領域内のテキスト ボックスのコレクションです。  
   
  詳細については、「[式 (レポート ビルダーおよび SSRS)](expressions-report-builder-and-ssrs.md)」を参照してください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Collections"></a>組み込みコレクションについて  
+##  <a name="understanding-built-in-collections"></a><a name="Collections"></a> 組み込みコレクションについて  
  次の表は、式を記述するときに使用できる組み込みコレクションの一覧です。 各行に、プログラム上のコレクション名 (大文字と小文字は区別されます)、[式] ダイアログ ボックスを使用してコレクションへの参照を対話的に追加できるかどうか、使用例、および説明 (コレクションの値がいつ初期化され使用できるようになるかなど) を示します。  
   
-|組み込みコレクション|[式] ダイアログ ボックスのカテゴリ|例|[説明]|  
+|組み込みコレクション|[式] ダイアログ ボックスのカテゴリ|例|説明|  
 |--------------------------|-------------------------------------------|-------------|-----------------|  
 |`Globals`|組み込みフィールド|`=Globals.ReportName`<br /><br /> `- or -`<br /><br /> `=Globals.PageNumber`|レポート名またはページ番号など、レポートで役立つグローバル変数を表します。 常に使用可能です。<br /><br /> 詳細については、「[組み込み Globals および Users 参照 &#40;レポート ビルダーおよび SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md)」をご覧ください。|  
 |`User`|組み込みフィールド|`=User.UserID`<br /><br /> - または -<br /><br /> `=User.Language`|言語設定やユーザー ID など、レポートを実行しているユーザーに関するデータのコレクションを表します。 常に使用可能です。<br /><br /> 詳細については、「[組み込み Globals および Users 参照 &#40;レポート ビルダーおよび SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md)」をご覧ください。|  
@@ -40,19 +39,19 @@ ms.locfileid: "66106422"
 |`Variables`|`Variables`|`=Variables!CustomTimeStamp.Value`|レポート変数とグループ変数のコレクションを表します。 詳細については、「[レポート変数コレクションとグループ変数コレクションの参照 (レポート ビルダーおよび SSRS)](built-in-collections-report-and-group-variables-references-report-builder.md)」を参照してください。|  
 |`ReportItems`|表示されません|`=ReportItems("Textbox1").Value`|レポート アイテムのテキスト ボックスのコレクションを表します。 このコレクションは、ページ ヘッダーまたはページ フッターに含めるためにページ上のアイテムをまとめる場合に使用できます。 詳細については、「[ReportItems コレクションの参照 (レポート ビルダーおよび SSRS)](built-in-collections-reportitems-collection-references-report-builder.md)」を参照してください。|  
   
-##  <a name="Syntax"></a>式でのコレクション構文の使用  
+##  <a name="using-collection-syntax-in-an-expression"></a><a name="Syntax"></a> 式でのコレクション構文の使用  
  式からコレクションを参照するには、コレクション内[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]の項目に対して標準の構文を使用します。 次の表に、コレクション構文の例を示します。  
   
 |構文|例|  
 |------------|-------------|  
 |*表す!ObjectName. プロパティ*|`=Fields!Sales.Value`|  
 |*表す!ObjectName ("Property")*|`=Fields!Sales("Value")`|  
-|*コレクション ("ObjectName")。"*|`=Fields("Sales").Value`|  
-|*Collection ("Member")*|`=User("Language")`|  
+|*Collection("ObjectName").Property*|`=Fields("Sales").Value`|  
+|*Collection("Member")*|`=User("Language")`|  
 |*コレクション。 Member*|`=User.Language`|  
   
 ## <a name="see-also"></a>参照  
  [レポートビルダーおよび SSRS &#40;式を追加&#41;](add-an-expression-report-builder-and-ssrs.md)   
- [式の例 &#40;レポート ビルダーおよび SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
+ [式の例 (レポート ビルダーおよび SSRS)](expression-examples-report-builder-and-ssrs.md)  
   
   

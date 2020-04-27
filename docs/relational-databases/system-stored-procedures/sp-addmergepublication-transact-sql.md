@@ -16,10 +16,10 @@ ms.assetid: 28a629a1-7374-4614-9b04-279d290a942a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a296f5b4cb20768d5aa244646e584bede110d26a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "72278352"
 ---
 # <a name="sp_addmergepublication-transact-sql"></a>sp_addmergepublication (Transact-sql)
@@ -86,7 +86,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @sync_mode = ] 'sync_mode'`パブリケーションに対するサブスクライバーの初期同期モードを示します。 *sync_mode*は**nvarchar (10)** で、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**native** (既定値)|すべてのテーブルのネイティブモードの一括コピープログラム出力を生成します。|  
 |**記号**|すべてのテーブルのキャラクターモードの一括コピープログラム出力を生成します。 および以外の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーをサポートするために必要です。|  
@@ -162,9 +162,9 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @use_partition_groups = ] 'use_partition_groups'`同期プロセスを最適化するために事前計算済みパーティションを使用する必要があることを指定します。 *use_partition_groups*は**nvarchar (5)** で、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
-|**本来**|パブリケーションは事前計算済みパーティションを使用します。|  
+|**true**|パブリケーションは事前計算済みパーティションを使用します。|  
 |**false**|パブリケーションは事前計算済みパーティションを使用しません。|  
 |NULL (既定値)|システムがパーティション分割ストラテジを決定します。|  
   
@@ -172,7 +172,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @publication_compatibility_level = ] backward_comp_level`パブリケーションの旧バージョンとの互換性を示します。 *backward_comp_level*は**nvarchar (6)** で、次のいずれかの値を指定できます。  
   
-|Value|Version|  
+|[値]|バージョン|  
 |-----------|-------------|  
 |**90RTM**|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|  
 |**100RTM**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
@@ -200,12 +200,12 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @retention_period_unit = ] 'retention_period_unit'`*保有*期間によって設定された保有期間の単位を指定します。 *retention_period_unit*は**nvarchar (10)** で、次のいずれかの値を指定できます。  
   
-|Value|Version|  
+|[値]|バージョン|  
 |-----------|-------------|  
 |**day** (既定値)|保有期間は日数で指定します。|  
-|**前週**|保有期間は週単位で指定します。|  
-|**翌月**|保有期間は月単位で指定します。|  
-|**比**|保有期間は年単位で指定します。|  
+|**week**|保有期間は週単位で指定します。|  
+|**month**|保有期間は月単位で指定します。|  
+|**year**|保有期間は年単位で指定します。|  
   
 `[ @generation_leveling_threshold = ] generation_leveling_threshold`生成に含まれる変更の数を指定します。 生成とは、パブリッシャーまたはサブスクライバーに配信される変更のコレクションです。 *generation_leveling_threshold*は**int**,、既定値は1000です。  
   
@@ -216,18 +216,17 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @conflict_logging = ] 'conflict_logging'`競合レコードを格納する場所を指定します。 *conflict_logging*は**nvarchar (15)** で、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**文書**|競合レコードはパブリッシャーに格納されます。|  
-|**サブスクライバ**|競合レコードは、競合の原因となったサブスクライバーに保存されます。 
-  [!INCLUDE[ssEW](../../includes/ssew-md.md)] サブスクライバーではサポートされません。|  
-|**両方**|競合レコードは、パブリッシャーとサブスクライバーの両方に保存されます。|  
+|**サブスクライバ**|競合レコードは、競合の原因となったサブスクライバーに保存されます。 [!INCLUDE[ssEW](../../includes/ssew-md.md)] サブスクライバーではサポートされません。|  
+|**両方とも**|競合レコードは、パブリッシャーとサブスクライバーの両方に保存されます。|  
 |NULL (既定値)|レプリケーションでは、値*backward_comp_level*が**90rtm**で、その他すべての場合に**パブリッシャー**に対して、 *conflict_logging*が**自動的に設定**されます。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_addmergepublication**は、マージレプリケーションで使用します。  
   
  Add_to_active_directory パラメーターを使用して Active Directory にパブリケーションオブジェクトを一覧表示[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]するには、オブジェクトを Active Directory にあらかじめ作成しておく必要があります。 ** \@**  
@@ -245,11 +244,11 @@ sp_addmergepublication [ @publication = ] 'publication'
  **Sp_addmergepublication**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
- [パブリケーションを作成する](../../relational-databases/replication/publish/create-a-publication.md)   
+ [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [データとデータベースオブジェクトのパブリッシュ](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [sp_changemergepublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
  [sp_dropmergepublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
  [sp_helpmergepublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
- [レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

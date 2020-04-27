@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f0b9722ad68107c626f0b4e569ac6e7cbf8c3bf8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106091"
 ---
 # <a name="data-regions-and-maps-report-builder-and-ssrs"></a>データ領域とマップ (レポート ビルダーおよび SSRS)
-  データ領域は、レポート データセットのデータを表示するレポート内のオブジェクトです。 レポート データは、数字やテキストとしてテーブル、マトリックス、または一覧に表示することも、グラフまたはゲージでグラフィカルに表示することも、マップの地理的背景上に表示することもできます。 テーブル、マトリックス、および一覧は、すべて*tablix*データ領域に基づいています。これは、データセットのすべてのデータを表示するために必要に応じて拡張されます。 Tablix データ領域では、複数の行グループおよび列グループと、静的および動的な行と列がサポートされます。 グラフでは、複数の系列グループとカテゴリ グループをさまざまなグラフ形式で表示します。 ゲージでは、データセットの単一の値または集計値を表示します。 マップでは、データセットの集計データに基づいて表示を変更できるマップ要素として空間データを表示します。  
+  データ領域は、レポート データセットのデータを表示するレポート内のオブジェクトです。 レポート データは、数字やテキストとしてテーブル、マトリックス、または一覧に表示することも、グラフまたはゲージでグラフィカルに表示することも、マップの地理的背景上に表示することもできます。 テーブル、マトリックス、および一覧は、 *Tablix* データ領域に基づいており、データセットのデータをすべて表示するために必要に応じて拡張されます。 Tablix データ領域では、複数の行グループおよび列グループと、静的および動的な行と列がサポートされます。 グラフでは、複数の系列グループとカテゴリ グループをさまざまなグラフ形式で表示します。 ゲージでは、データセットの単一の値または集計値を表示します。 マップでは、データセットの集計データに基づいて表示を変更できるマップ要素として空間データを表示します。  
   
  データ領域やマップは、レポート パーツとして保存できます。 [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
@@ -52,7 +52,7 @@ ms.locfileid: "66106091"
  データ領域を他のデータ領域内に入れ子にすることができます。 たとえば、データベース内の各販売員ごとの売上記録を作成する場合、テキスト ボックスおよび画像を使用して一覧を作成し、従業員に関する情報を表示します。次に、この一覧にテーブルおよびグラフ データ領域を追加して従業員の売上記録を表示します。 詳細については、「 [入れ子になったデータ領域 &#40;レポート ビルダーおよび SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="multiple-data-regions-linked-to-the-same-dataset"></a>同じデータセットにリンクされた複数のデータ領域  
- 複数のデータ領域を同じデータセットにリンクすることで、同じデータをさまざまな形式で表示することができます。 たとえば、同じデータをテーブルやグラフで表示できます。 レポートのテーブルに対話的な並べ替えボタンを組み込むことで、テーブルを並べ替えたときにグラフも自動的に並べ替えられるようにすることができます。 詳細については、「[複数のデータ領域を同じデータセットにリンクする」 &#40;レポートビルダーと SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)」を参照してください。  
+ 複数のデータ領域を同じデータセットにリンクすることで、同じデータをさまざまな形式で表示することができます。 たとえば、同じデータをテーブルやグラフで表示できます。 レポートのテーブルに対話的な並べ替えボタンを組み込むことで、テーブルを並べ替えたときにグラフも自動的に並べ替えられるようにすることができます。 詳細については、「 [同じデータセットへの複数のデータ領域のリンク (レポート ビルダーおよび SSRS)](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="data-for-a-data-region"></a>データ領域のデータ  
  Tablix、グラフ、およびゲージはそれぞれ、単一のデータセットのデータを表示するために設計されています。 マップには、同じデータセットまたは異なるデータセットの空間データと分析データが表示されます。 また、以下のように、データ領域にリンクされていないデータセットの値を含めることもできます。  
@@ -65,8 +65,8 @@ ms.locfileid: "66106091"
   
 ## <a name="see-also"></a>参照  
  [レポート作成の概念 &#40;レポートビルダーと SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
- [レポート、レポート パーツ、およびレポート定義 (レポート ビルダーおよび SSRS)](reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
- [ページレイアウトと表示 &#40;レポートビルダーと SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)   
+ [レポート、レポートパーツ、およびレポート定義 &#40;レポートビルダーと SSRS&#41;](reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
+ [ページ レイアウトとレンダリング &#40;レポート ビルダーおよび SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)   
  [チュートリアル &#40;レポートビルダー&#41;](../report-builder-tutorials.md)   
  [Reporting Services チュートリアル &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)  
   

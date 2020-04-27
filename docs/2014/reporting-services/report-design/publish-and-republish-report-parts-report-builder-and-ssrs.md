@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9178caad90bff142996247b1c5befe6dd47c4933
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105413"
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>レポート パーツのパブリッシュおよび再パブリッシュ (レポート ビルダーおよび SSRS)
@@ -57,8 +57,8 @@ ms.locfileid: "66105413"
 >  新しいレポート パーツとしてパブリッシュすると、新しい一意の ID が割り当てられます。 元のレポート パーツが変更されても、更新されません。  
   
 ## <a name="see-also"></a>参照  
- [レポート パーツ &#40;レポート ビルダーおよび SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
- [レポート ビルダーのレポート パーツおよびデータセット](../report-data/report-parts-and-datasets-in-report-builder.md)   
+ [レポートパーツ &#40;レポートビルダーと SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
+ [レポートビルダー内のレポートパーツとデータセット](../report-data/report-parts-and-datasets-in-report-builder.md)   
  [レポートパーツ &#40;レポートビルダーと SSRS&#41;のトラブルシューティング](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
  [更新プログラムを確認するか、&#40;レポートビルダーおよび SSRS&#41;の更新プログラムを無効にする](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
  [レポート パーツの参照と既定のフォルダーの設定 &#40;レポート ビルダーおよび SSRS&#41;](browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  

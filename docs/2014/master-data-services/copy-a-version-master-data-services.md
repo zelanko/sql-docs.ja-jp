@@ -14,34 +14,30 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 70f328da53f2d346fe58f3416b0a3a0c331eb74c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479981"
 ---
 # <a name="copy-a-version-master-data-services"></a>バージョンをコピーする (マスター データ サービス)
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でモデルのバージョンをコピーして、新しいバージョンを作成します。  
   
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
--   [**バージョン管理**] 機能領域にアクセスするためのアクセス許可が必要です。  
+-   **[バージョン管理]** 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 (マスター データ サービス)](administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](administrators-master-data-services.md)」を参照してください。  
   
 ### <a name="to-copy-a-version"></a>バージョンをコピーするには  
   
-1.  
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[バージョン管理]** をクリックします。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[バージョン管理]** をクリックします。  
   
-2.  
-  **[バージョンの管理]** ページで、コピーするバージョンの行を選択します。  
+2.  **[バージョンの管理]** ページで、コピーするバージョンの行を選択します。  
   
     > [!NOTE]  
-    >  
-  [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]の設定によっては、コピーできるのは **[コミット]** (committed) 状態のバージョンだけである場合があります。 詳細については、「[システム設定 &#40;マスター データ サービス&#41;](../../2014/master-data-services/system-settings-master-data-services.md)」を参照してください。  
+    >  [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]の設定によっては、コピーできるのは **[コミット]** (committed) 状態のバージョンだけである場合があります。 詳細については、「[システム設定 &#40;マスター データ サービス&#41;](../../2014/master-data-services/system-settings-master-data-services.md)」を参照してください。  
   
 3.  [**コピー**] をクリックします。  
   
@@ -49,9 +45,9 @@ ms.locfileid: "65479981"
   
 ## <a name="next-steps"></a>次の手順  
   
--   [バージョン名を変更する &#40;マスターデータサービス&#41;](../../2014/master-data-services/change-a-version-name-master-data-services.md)  
+-   [バージョン名を変更する (マスター データ サービス)](../../2014/master-data-services/change-a-version-name-master-data-services.md)  
   
 ## <a name="see-also"></a>参照  
- [バージョン &#40;マスターデータサービス&#41;](../../2014/master-data-services/versions-master-data-services.md)  
+ [バージョン (マスター データ サービス)](../../2014/master-data-services/versions-master-data-services.md)  
   
   

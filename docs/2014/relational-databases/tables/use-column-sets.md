@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 89dd59aeff7a02f57ac0d34d347496cc97174e2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63298628"
 ---
 # <a name="use-column-sets"></a>列セットの使用
@@ -25,7 +25,7 @@ ms.locfileid: "63298628"
   
  テーブルに多数の列があり、その個別操作が煩雑である場合は、列セットの使用を検討してください。 多数の列を含むテーブルで列セットを使用してデータの選択や挿入を行うと、アプリケーションのパフォーマンスがある程度向上する場合があります。 ただし、テーブル内の列に多数のインデックスが定義されている場合は、列セットのパフォーマンスが低下することがあります。 これは、実行プランに必要なメモリ容量が増えるためです。  
   
- 列セットを定義するには、*CREATE TABLE* または [ALTER TABLE](/sql/t-sql/statements/create-table-transact-sql) ステートメントで [<column_set_name>](/sql/t-sql/statements/alter-table-transact-sql) FOR ALL_SPARSE_COLUMNS キーワードを使用します。  
+ 列セットを定義するには、[CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) または [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) ステートメントで *<column_set_name>* FOR ALL_SPARSE_COLUMNS キーワードを使用します。  
   
 ## <a name="guidelines-for-using-column-sets"></a>列セットの使用に関するガイドライン  
  列セットを使用する場合は、次のガイドラインを考慮してください。  
@@ -107,23 +107,21 @@ GO
  この例では、 `i`列に値が指定されていませんが、値 `0` が挿入されています。  
   
 ## <a name="using-the-sql_variant-data-type"></a>sql_variant データ型の使用  
- 
-  `sql_variant` データ型には、`int`、`char`、`date` などの種類の異なる複数のデータ型を格納できます。 列セットは、`sql_variant` 値に関連付けられている小数点以下桁数、有効桁数、ロケール情報などのデータ型情報を、生成された XML 列に属性として出力します。 これらの属性を、列セットでの挿入または更新操作の入力としてカスタム生成 XML ステートメントで指定しようとすると、一部の属性が必須となり、一部の属性に既定値が割り当てられます。 値が指定されなかったときにサーバーで生成されるデータ型と既定値の一覧を次の表に示します。  
+ `sql_variant` データ型には、`int`、`char`、`date` などの種類の異なる複数のデータ型を格納できます。 列セットは、`sql_variant` 値に関連付けられている小数点以下桁数、有効桁数、ロケール情報などのデータ型情報を、生成された XML 列に属性として出力します。 これらの属性を、列セットでの挿入または更新操作の入力としてカスタム生成 XML ステートメントで指定しようとすると、一部の属性が必須となり、一部の属性に既定値が割り当てられます。 値が指定されなかったときにサーバーで生成されるデータ型と既定値の一覧を次の表に示します。  
   
 |データ型|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|最大の長さ|Precision|スケール|  
 |---------------|----------------|-----------------------|-------------------------|---------------|--------------------|---------------|-----------|  
 |`char`, `varchar`, `binary`|-1|'Default'|0|0|8000|なし**|適用なし|  
-|`nvarchar`|-1|'Default'|0|0|4000|適用不可|適用なし|  
-|`decimal`, `float`, `real`|適用不可|適用なし|適用なし|適用なし|適用なし|18|0|  
-|`integer`, `bigint`, `tinyint`, `smallint`|適用不可|適用なし|適用なし|適用なし|適用なし|適用なし|適用なし|  
-|`datetime2`|適用なし|適用不可|適用なし|適用なし|適用なし|適用なし|7|  
-|`datetime offset`|適用なし|適用不可|適用不可|適用なし|適用なし|適用なし|7|  
-|`datetime`, `date`, `smalldatetime`|適用なし|適用不可|適用不可|適用なし|適用なし|適用なし|適用なし|  
-|`money`, `smallmoney`|適用なし|適用なし|適用不可|適用なし|適用なし|適用なし|適用なし|  
-|`time`|適用なし|適用なし|適用なし|適用不可|適用なし|適用なし|7|  
+|`nvarchar`|-1|'Default'|0|0|4000|適用なし|適用なし|  
+|`decimal`, `float`, `real`|適用なし|適用なし|適用なし|適用なし|適用なし|18|0|  
+|`integer`, `bigint`, `tinyint`, `smallint`|適用なし|適用なし|適用なし|適用なし|適用なし|適用なし|適用なし|  
+|`datetime2`|適用なし|適用なし|適用なし|適用なし|適用なし|適用なし|7|  
+|`datetime offset`|適用なし|適用なし|適用なし|適用なし|適用なし|適用なし|7|  
+|`datetime`, `date`, `smalldatetime`|適用なし|適用なし|適用なし|適用なし|適用なし|適用なし|適用なし|  
+|`money`, `smallmoney`|適用なし|適用なし|適用なし|適用なし|適用なし|適用なし|適用なし|  
+|`time`|適用なし|適用なし|適用なし|適用なし|適用なし|適用なし|7|  
   
- 
-  \*  localeID -1 は既定のロケールを意味します。 英語ロケールは 1033 です。  
+ \*  localeID -1 は既定のロケールを意味します。 英語ロケールは 1033 です。  
   
  **  なし = 列セットでの選択操作時に、対象の属性に対して値が出力されません。 挿入または更新操作で列セットに対して指定された XML 表記で呼び出し元がこの属性に値を指定すると、エラーが発生します。  
   
@@ -138,7 +136,7 @@ GO
   
 -   スパース列または列セットに対して REVOKE ステートメントを実行すると、セキュリティは、既定でその親オブジェクトのセキュリティに設定されます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、ドキュメント テーブルに `DocID` 列と `Title`列のセットが共通で含まれています。 製造グループは、すべての製造ドキュメントに `ProductionSpecification` 列と `ProductionLocation` 列を必要とします。 マーケティング グループは、マーケティング ドキュメントに `MarketingSurveyGroup` 列を必要とします。  
   
 ### <a name="a-creating-a-table-that-has-a-column-set"></a>A. 列セットを含むテーブルを作成する  

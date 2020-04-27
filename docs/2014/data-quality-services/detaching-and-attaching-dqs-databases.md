@@ -11,30 +11,29 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: aca595e33a831e472f06a349e12920aced6dd71f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480692"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>DQS データベースのデタッチとアタッチ
   ここでは、DQS データベースをデタッチおよびアタッチする方法について説明します。  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Limitations"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Limitations"></a> 制限事項と制約事項  
  制限事項と制約事項の一覧については、「 [データベースのデタッチとアタッチ &#40;SQL Server&#41;](../relational-databases/databases/database-detach-and-attach-sql-server.md)のデータベースをデタッチする方法について説明します。  
   
-###  <a name="Prerequisites"></a> 前提条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
   
 -   DQS で実行中のアクティビティまたはプロセスがないことを確認します。 これは **[アクティビティ監視]** 画面を使用して確認できます。 この画面の操作の詳細については、「 [Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md)」を参照してください。  
   
--   
-  [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]にログオンしているユーザーがいないことを確認します。  
+-   [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]にログオンしているユーザーがいないことを確認します。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
   
 -   DQS データベースをデタッチするには、Windows ユーザー アカウントが、SQL Server インスタンスの db_owner 固定サーバー ロールのメンバーであることが必要です。  
   
@@ -42,34 +41,29 @@ ms.locfileid: "65480692"
   
 -   DQS の実行中のアクティビティを終了させたり実行中のプロセスを停止させたりするには、DQS_MAIN データベースの dqs_administrator ロールが必要です。  
   
-##  <a name="Detach"></a>DQS データベースのデタッチ  
+##  <a name="detach-dqs-databases"></a><a name="Detach"></a>DQS データベースのデタッチ  
  SQL Server Management Studio を使用して DQS データベースをデタッチすると、デタッチされたファイルはコンピューターに残り、同じ SQL Server インスタンスに再アタッチすることも、別のサーバーに移動して、そこにアタッチすることもできます。 DQS データベースファイルは通常、Data Quality Services コンピューターの C:\Program are SQL Server\MSSQL12. にあります。*<Instance_Name>* \mssql\data  
   
 1.  Microsoft SQL Server Management Studio を起動し、適切な SQL Server インスタンスに接続します。  
   
 2.  オブジェクト エクスプローラーで、 **[データベース]** ノードを展開します。  
   
-3.  
-  **DQS_MAIN** データベースを右クリックして **[タスク]** をポイントし、 **[デタッチ]** をクリックします。 
-  **[データベースのデタッチ]** ダイアログ ボックスが表示されます。  
+3.  **DQS_MAIN** データベースを右クリックして **[タスク]** をポイントし、 **[デタッチ]** をクリックします。 **[データベースのデタッチ]** ダイアログ ボックスが表示されます。  
   
-4.  
-  **[削除]** 列の下にあるチェック ボックスをオンにし、 **[OK]** をクリックして DQS_MAIN データベースをデタッチします。  
+4.  **[削除]** 列の下にあるチェック ボックスをオンにし、 **[OK]** をクリックして DQS_MAIN データベースをデタッチします。  
   
 5.  DQS_PROJECTS データベースと DQS_STAGING_DATA データベースで手順 3. と 4. を繰り返し、それらをデタッチします。  
   
  Transact-SQL ステートメントで sp_detach_db ストアド プロシージャを使用して、DQS データベースをデタッチすることもできます。 Transact-SQL ステートメントを使用したデータベースのデタッチに関する詳細については、「 [Using Transact-SQL](../relational-databases/databases/detach-a-database.md#TsqlProcedure) 」の「 [Detach a Database](../relational-databases/databases/detach-a-database.md)」を参照してください。  
   
-##  <a name="Attach"></a>DQS データベースをアタッチする  
+##  <a name="attach-dqs-databases"></a><a name="Attach"></a>DQS データベースをアタッチする  
  次の手順を使用して、DQS データベースを (デタッチした場所から) 同じ SQL Server インスタンスまたは [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] がインストールされている別の SQL Server インスタンスにアタッチします。  
   
 1.  Microsoft SQL Server Management Studio を起動し、適切な SQL Server インスタンスに接続します。  
   
-2.  オブジェクト エクスプローラーで、 **[データベース]** を右クリックし、 **[アタッチ]** をクリックします。 
-  **[データベースのデタッチ]** ダイアログ ボックスが表示されます。  
+2.  オブジェクト エクスプローラーで、 **[データベース]** を右クリックし、 **[アタッチ]** をクリックします。 **[データベースのデタッチ]** ダイアログ ボックスが表示されます。  
   
-3.  アタッチするデータベースを指定するには、 **[追加]** をクリックします。 
-  **[データベース ファイルの検索]** ダイアログ ボックスが表示されます。  
+3.  アタッチするデータベースを指定するには、 **[追加]** をクリックします。 **[データベース ファイルの検索]** ダイアログ ボックスが表示されます。  
   
 4.  データベースが存在するディスク ドライブを選択し、ディレクトリ ツリーを展開してデータベースの .mdf ファイルを選択します。 たとえば、DQS_MAIN データベースの場合は、次のようになります。  
   
@@ -77,8 +71,7 @@ ms.locfileid: "65480692"
     C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\DQS_MAIN.mdf  
     ```  
   
-5.  
-  **[データベースの詳細]** (下部) ペインには、アタッチするファイルの名前が表示されます。 ファイルのパス名を確認または変更するには、**参照**ボタン [...] をクリックしてください。  
+5.  **[データベースの詳細]** (下部) ペインには、アタッチするファイルの名前が表示されます。 ファイルのパス名を確認または変更するには、**参照**ボタン ([...]) をクリックします。  
   
 6.  DQS_MAIN データベースをアタッチするには、 **[OK]** をクリックします。  
   

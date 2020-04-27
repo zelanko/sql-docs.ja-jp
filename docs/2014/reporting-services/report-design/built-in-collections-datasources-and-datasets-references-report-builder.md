@@ -11,31 +11,28 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b47503e9a7a2b09ea6e4d9f7f3ce309fd1b99f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106424"
 ---
 # <a name="datasources-and-datasets-collection-references-report-builder-and-ssrs"></a>DataSources コレクションと DataSets コレクションの参照 (レポート ビルダーおよび SSRS)
-  
   `DataSources` コレクションは、レポートで使用されているすべてのデータ ソースを表します。 同様に、`DataSets` コレクションは、レポート内のすべてのデータ ソースのデータセットすべてを表します。 参照するデータ ソース別に構成されているレポート データセットの階層ビューを表示するには、 **[レポート データ]** ペインを使用します。 これらのコレクションへの参照を含めても、レポートをプレビューしたときには値が表示されません。 このコレクションを使用できるのは、レポートがレポート サーバーにパブリッシュされた後だけです。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="datasources"></a>DataSources  
- 
-  `DataSources` コレクションは、パブリッシュ済みレポート定義で参照されるデータ ソースを表します。 この情報をレポートに含め、レポート データのソースを説明することもできます。 このコレクションは、 **プレビュー** モードでは使用できません。 次の表では、`DataSources` コレクション内の変数について説明します。  
+ `DataSources` コレクションは、パブリッシュ済みレポート定義で参照されるデータ ソースを表します。 この情報をレポートに含め、レポート データのソースを説明することもできます。 このコレクションは、 **プレビュー** モードでは使用できません。 次の表では、`DataSources` コレクション内の変数について説明します。  
   
 |**変数**|`Type`|**説明**|  
 |------------------|--------------|---------------------|  
 |`DataSourceReference`|`String`|レポート サーバー上のデータ ソース定義の完全パスです。 たとえば、レポートでレポート履歴の一部として使用されたすべてのデータ ソースの一覧を含める場合があります。 次の例では、AdventureWorks2012 という名前のデータ ソースの完全パスを示します。<br /><br /> `/DataSources/AdventureWorks2012`.|  
-|`Type`|`String`|データ ソースのデータ プロバイダーの種類です。 たとえば、「 `SQL` 」のように入力します。|  
+|`Type`|`String`|データ ソースのデータ プロバイダーの種類です。 たとえば、`SQL` のようにします。|  
   
 ## <a name="datasets"></a>DataSets  
- 
-  `DataSets` コレクションは、レポート定義で参照されるデータセットを表します。 レポートのクエリをテキスト ボックスに含めて、レポート内のデータに関心を持っているユーザーが元のコマンド テキストを参照できるようにすることもできます。 このコレクションは、 **プレビュー** モードでは使用できません。 次の表では、`DataSets` コレクションのメンバーについて説明します。  
+ `DataSets` コレクションは、レポート定義で参照されるデータセットを表します。 レポートのクエリをテキスト ボックスに含めて、レポート内のデータに関心を持っているユーザーが元のコマンド テキストを参照できるようにすることもできます。 このコレクションは、 **プレビュー** モードでは使用できません。 次の表では、`DataSets` コレクションのメンバーについて説明します。  
   
 |**メンバー**|`Type`|**説明**|  
 |----------------|--------------|---------------------|  
@@ -47,6 +44,6 @@ ms.locfileid: "66106424"
   
 ## <a name="see-also"></a>参照  
  [式 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [式の例 &#40;レポート ビルダーおよび SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
+ [式の例 (レポート ビルダーおよび SSRS)](expression-examples-report-builder-and-ssrs.md)  
   
   

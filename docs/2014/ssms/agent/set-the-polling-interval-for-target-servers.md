@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1578bbefc9ae17baae56799d943e5ae6186628ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63033642"
 ---
 # <a name="set-the-polling-interval-for-target-servers"></a>ターゲット サーバーのポーリング間隔の設定
@@ -26,43 +26,38 @@ ms.locfileid: "63033642"
   
 -   **作業を開始する準備:**  [セキュリティ](#Security)  
   
--   **対象サーバーのポーリング間隔を設定するために使用するもの:**  [SQL Server Management Studio](#SSMS)、 [transact-sql](#TSQL)  
+-   **ターゲット サーバーのポーリング間隔を設定するために使用するもの:**  [SQL Server Management Studio](#SSMS)、[Transact-SQL](#TSQL)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
  各ターゲット サーバーは、同じジョブのインスタンスを同時に実行できます。 各ターゲット サーバーからマスター サーバーに定期的にポーリングし、そのターゲット サーバーに割り当てられた新しいジョブのコピーをダウンロードした後、切断します。 ダウンロードされたジョブはターゲット サーバーでローカルに実行され、マスター サーバーに再接続してジョブ結果状態をアップロードします。  
   
 > [!NOTE]  
 >  ターゲット サーバーがジョブの状態をアップロードするときにマスター サーバーにアクセスできない場合、そのジョブの状態はマスター サーバーがアクセスできるようになるまでスプールされます。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
  詳細については、「 [Implement SQL Server Agent Security](implement-sql-server-agent-security.md) 」および「 [Choose the Right SQL Server Agent Service Account for Multiserver Environments](choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md)」を参照してください。  
   
-##  <a name="SSMS"></a> SQL Server Management Studio の使用  
- **対象サーバーのポーリング間隔を設定するには**  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> SQL Server Management Studio の使用  
+ **ターゲット サーバーのポーリング間隔を設定するには**  
   
-1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
+1.  **オブジェクト エクスプローラー**で、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  
-  **[SQL Server エージェント]** を右クリックし、**[マルチ サーバーの管理]** をポイントして、**[ターゲット サーバーの管理]** をクリックします。  
+2.  **[SQL Server エージェント]** を右クリックし、**[マルチ サーバーの管理]** をポイントして、**[ターゲット サーバーの管理]** をクリックします。  
   
-3.  
-  **[ターゲット サーバーの状態]** タブで、**[命令を通知]** をクリックします。  
+3.  **[ターゲット サーバーの状態]** タブで、**[命令を通知]** をクリックします。  
   
-4.  
-  **[命令の種類]** ボックスの一覧で、 **[ポーリング間隔の設定]** を選択します。  
+4.  **[命令の種類]** ボックスの一覧で、 **[ポーリング間隔の設定]** を選択します。  
   
-5.  
-  **[ポーリング間隔]** ボックスに、ターゲット サーバーがマスター サーバーをポーリングするまでの経過時間 (秒単位) を、10 から 28,800 までの範囲で入力します。  
+5.  **[ポーリング間隔]** ボックスに、ターゲット サーバーがマスター サーバーをポーリングするまでの経過時間 (秒単位) を、10 から 28,800 までの範囲で入力します。  
   
-6.  
-  **[受信者]** で、次のいずれかの操作を行います。  
+6.  **[受信者]** で、次のいずれかの操作を行います。  
   
     1.  すべてのターゲット サーバーで同じポーリング間隔を共有する場合は、 **[すべてのターゲット サーバー]** をクリックします。  
   
     2.  すべてのターゲット サーバーで同じポーリング間隔を共有しない場合は、**[特定のターゲット サーバー]** をクリックし、このポーリング間隔を使用するターゲット サーバーを選択します。  
   
-##  <a name="TSQL"></a> Transact-SQL の使用  
- **対象サーバーのポーリング間隔を設定するには**  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> Transact-SQL の使用  
+ **ターゲット サーバーのポーリング間隔を設定するには**  
   
 1.  オブジェクト エクスプローラーで、データベース エンジンのインスタンスに接続し、そのインスタンスを展開します。  
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fbca62a5d32ed6b7ec30eb5d6dba6a82a2b80c64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63298350"
 ---
 # <a name="database-element-for-configuration-dta"></a>Configuration の Database 要素 (DTA)
@@ -35,12 +35,11 @@ ms.locfileid: "63298350"
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特徴|[説明]|  
+|特徴|説明|  
 |--------------------|-----------------|  
 |**データ型と長さ**|[なし] :|  
 |**既定値**|[なし] :|  
-|**個数**|
-  `Server` 要素につき 1 回以上の出現が必要です。|  
+|**個数**|`Server` 要素につき 1 回以上の出現が必要です。|  
   
 ## <a name="element-relationships"></a>要素の関係  
   

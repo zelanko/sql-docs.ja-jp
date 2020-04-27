@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0f65d379076eb213971bba97b970b8aa866ca3a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66428877"
 ---
 # <a name="remove-statements-that-modify-system-objects"></a>システム オブジェクトを変更するステートメントを削除する
@@ -26,7 +26,7 @@ ms.locfileid: "66428877"
 ## <a name="component"></a>コンポーネント  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>[説明]  
+## <a name="description"></a>説明  
  システム カタログを直接更新できません。 システム カタログを直接更新しようとすると、次のエラーが生成されます。  
   
  `Server: Msg 259, Level 16, State 1, Line 1`  

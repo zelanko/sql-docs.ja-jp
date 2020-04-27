@@ -18,30 +18,26 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cef2943b2d7805a9738662bcd85c9602430a7e6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103538"
 ---
 # <a name="report-and-snapshot-size-limits"></a>レポートとスナップショットのサイズ制限
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の配置を管理する管理者は、このトピックの情報を参照することにより、レポート サーバーへのパブリッシュ時、レンダリング時 (実行時)、ファイル システムへの保存時のレポート サイズ制限を理解できます。 このトピックでは、レポート サーバー データベースのサイズを測定する方法の具体的な指針とサーバーのパフォーマンスのスナップショット サイズの効果についても説明します。  
   
 ## <a name="maximum-size-for-published-reports-and-models"></a>パブリッシュされたレポートとモデルの最大サイズ  
- レポート サーバー上のレポートとモデルのサイズは、レポート サーバーにパブリッシュされたレポート定義ファイル (.rdl) とレポート モデル ファイル (.smdl) のサイズに基づいています。 レポート サーバーでは、パブリッシュするレポートまたはモデルのサイズは制限されません。 ただし、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]では、サーバーにポストされる項目の最大サイズが設けられています。 既定では、この制限は 4 MB です。 この制限を超えるサイズのファイルをレポート サーバーにアップロードまたはパブリッシュすると、HTTP 例外が返されます。 この場合、Machine.config ファイルの `maxRequestLength` 要素の値を大きくすることで、既定値を変更することができます。  
+ レポート サーバー上のレポートとモデルのサイズは、レポート サーバーにパブリッシュされたレポート定義ファイル (.rdl) とレポート モデル ファイル (.smdl) のサイズに基づいています。 レポート サーバーでは、パブリッシュするレポートまたはモデルのサイズは制限されません。 ただし、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] により、サーバーに送信できるアイテムの最大サイズが制限されています。 既定では、この制限は 4 MB です。 この制限を超えるサイズのファイルをレポート サーバーにアップロードまたはパブリッシュすると、HTTP 例外が返されます。 この場合、Machine.config ファイルの `maxRequestLength` 要素の値を大きくすることで、既定値を変更することができます。  
   
  レポート モデルは非常に大きくなる場合がありますが、レポート定義が 4 MB を超えることはほとんどありません。 一般的なレポート サイズは、キロバイト (KB) 単位です。 ただし、埋め込み画像が含まれている場合は、これらの画像のエンコードによってレポート定義のサイズが大きくなり、既定の 4 MB を超える可能性があります。  
   
- 
-  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] では、サーバーに対するサービス拒否攻撃 (DoS) の脅威を低減するために、送信ファイルに最大サイズを設けています。 最大サイズの制限の値を大きくした場合、この制限による保護がある程度弱められます。 値を大きくすることで得られるメリットが、それに伴うセキュリティ リスクの増大よりも重要であると確信できる場合のみ、値を大きくしてください。  
+ [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] では、サーバーに対するサービス拒否攻撃 (DoS) の脅威を低減するために、送信ファイルに最大サイズを設けています。 最大サイズの制限の値を大きくした場合、この制限による保護がある程度弱められます。 値を大きくすることで得られるメリットが、それに伴うセキュリティ リスクの増大よりも重要であると確信できる場合のみ、値を大きくしてください。  
   
- 
-  `maxRequestLength` 要素に設定する値は、適用する実際のサイズ制限より大きい必要があることに注意してください。 すべてのパラメーターが SOAP エンベロープにカプセル化され、Base64 エンコードが <xref:ReportService2010.ReportingService2010.CreateReportEditSession%2A> メソッドや <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A> メソッドの定義パラメーターなどの特定のパラメーターに適用されると、必然的に HTTP 要求サイズまで増大するため、値を大きくする必要があります。 Base64 エンコードによって、元のデータのサイズより約 33% 大きくなります。 このため、`maxRequestLength` 要素に指定する値は、実際の使用可能なアイテムのサイズより約 33% 大きくする必要があります。 たとえば、`maxRequestLength` を 64 MB に指定した場合、実際にレポート サーバーに送信されるレポート ファイルの最大サイズは約 48 MB になると予測されます。  
+ `maxRequestLength` 要素に設定する値は、適用する実際のサイズ制限より大きい必要があることに注意してください。 すべてのパラメーターが SOAP エンベロープにカプセル化され、Base64 エンコードが <xref:ReportService2010.ReportingService2010.CreateReportEditSession%2A> メソッドや <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A> メソッドの定義パラメーターなどの特定のパラメーターに適用されると、必然的に HTTP 要求サイズまで増大するため、値を大きくする必要があります。 Base64 エンコードによって、元のデータのサイズより約 33% 大きくなります。 このため、`maxRequestLength` 要素に指定する値は、実際の使用可能なアイテムのサイズより約 33% 大きくする必要があります。 たとえば、`maxRequestLength` を 64 MB に指定した場合、実際にレポート サーバーに送信されるレポート ファイルの最大サイズは約 48 MB になると予測されます。  
   
 ## <a name="report-size-in-memory"></a>メモリ内のレポート サイズ  
- レポート実行時のレポート サイズは、レポートに返されるデータ量に出力ストリームのサイズを加えた値になります。 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、レンダリングされたレポートのサイズに対する最大値が設定されません。 サイズの上限は、システム メモリによって決まります。既定では、構成された使用可能なメモリがすべてレポートのレンダリング時に使用されますが、メモリのしきい値およびメモリ管理ポリシーを設定するための構成設定を指定できます。 詳細については、「 [レポート サーバー アプリケーションで利用可能なメモリの構成](../report-server/configure-available-memory-for-report-server-applications.md)」を参照してください。  
+ レポート実行時のレポート サイズは、レポートに返されるデータ量に出力ストリームのサイズを加えた値になります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、レンダリングされたレポートのサイズに対する最大値が設定されません。 サイズの上限は、システム メモリによって決まります。既定では、構成された使用可能なメモリがすべてレポートのレンダリング時に使用されますが、メモリのしきい値およびメモリ管理ポリシーを設定するための構成設定を指定できます。 詳細については、「 [レポート サーバー アプリケーションで利用可能なメモリの構成](../report-server/configure-available-memory-for-report-server-applications.md)」を参照してください。  
   
  いずれのレポートでも、返されるデータ量とレポートの表示形式に応じて、サイズが大幅に変化する可能性があります。 パラメーター化されたレポートは、パラメーター値がクエリの結果にどのように影響するかによって、サイズが増減する可能性があります。 選択したレポートの出力形式は、レポート サイズに次のように影響します。  
   
@@ -85,7 +81,7 @@ EXEC sp_spaceused
   
 ## <a name="see-also"></a>参照  
  [レポート処理プロパティの設定](set-report-processing-properties.md)   
- [レポート サーバー データベース &#40;SSRS ネイティブ モード&#41;](report-server-database-ssrs-native-mode.md)   
+ [レポートサーバーデータベース &#40;SSRS ネイティブモード&#41;](report-server-database-ssrs-native-mode.md)   
  [サイズの大きなレポートの処理](process-large-reports.md)  
   
   

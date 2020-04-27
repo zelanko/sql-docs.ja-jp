@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8245c048d4c1a1314835ad70fc7305c7afabd3f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63284473"
 ---
 # <a name="save-queries-visual-database-tools"></a>クエリの保存 (Visual Database Tools)
@@ -27,11 +27,10 @@ ms.locfileid: "63284473"
   
 1.  クエリを作成します。  
   
-2.  
-  **[ファイル]** メニューの **[<クエリ名> の保存]** をクリックします。  
+2.  **[ファイル]** メニューの **[<クエリ名> の保存]** をクリックします。  
   
     > [!NOTE]  
-    >  新しく作成されたクエリにシステム名が与えられます。 クエリに任意の名前を付ける場合は、**[名前を付けて <クエリ名> を保存]** を選択します。  
+    >  新しく作成されたクエリにシステム名が与えられます。 クエリに任意の名前を付ける場合は、 **[名前を付けて <クエリ名> を保存]** を選択します。  
   
 3.  クエリは、ソリューション エクスプローラーのプロジェクトの Queries フォルダーに保存されます。  
   

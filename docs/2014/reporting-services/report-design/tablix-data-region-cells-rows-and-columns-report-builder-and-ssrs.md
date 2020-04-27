@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f372bd5bcc538d861ddd556b3bb420c181d59717
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104646"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Tablix データ領域のセル、行、および列 (レポート ビルダーおよび SSRS)
@@ -38,14 +38,14 @@ ms.locfileid: "66104646"
 ### <a name="row-and-column-handles"></a>行ハンドルと列ハンドル  
  Tablix データ領域を選択すると、行ハンドルと列ハンドルのグラフィックが各行および列の目的を示します。 ハンドルは、グループ内に含まれている行および列、またはグループの外にある行および列を示します。 次の表で、さまざまなハンドル表示について説明します。  
   
-|アイコン|[説明]|  
+|アイコン|説明|  
 |----------|-----------------|  
 |![詳細行の 3 本の平行線がある行ハンドル](../media/rs-icontablix-detailsrow.gif "詳細行の 3 本の平行線がある行ハンドル")|行グループ階層に詳細グループのみ|  
 |![詳細行と 1 つの外部グループがある行ハンドル](../media/rs-icontablix-groupwithdetails.gif "詳細行と 1 つの外部グループがある行ハンドル")|1 つの外部グループと子詳細グループ|  
-|![入れ子になったグループを示す 2 つの平行なかっこ](../media/rs-icontablix-nestedgroupnodetails.gif "入れ子になったグループを示す 2 つの平行なかっこ")|1 つの外部グループ、1 つの内部グループがあり、詳細グループはなし|  
-|![入れ子になった & の詳細については、2つの角かっこ & 3 つの積み上げ線](../media/rs-icontablix-nestedgroupwithdetails.gif "入れ子と詳細を示す 2 つのかっこと三重線")|1 つの外部グループ、1 つの内部グループ、および子詳細グループ|  
+|![入れ子になったグループを示す 2 つの平行な角かっこ](../media/rs-icontablix-nestedgroupnodetails.gif "入れ子になったグループを示す 2 つの平行な角かっこ")|1 つの外部グループ、1 つの内部グループがあり、詳細グループはなし|  
+|![入れ子と詳細を示す 2 つの角かっこと三重線](../media/rs-icontablix-nestedgroupwithdetails.gif "入れ子と詳細を示す 2 つの角かっこと三重線")|1 つの外部グループ、1 つの内部グループ、および子詳細グループ|  
 |![フッター行がある 1 つの外部グループ、1 つの内部グループ](../media/rs-icontablix-nestedgroupwithparentfooter.gif "フッター行がある 1 つの外部グループ、1 つの内部グループ")|合計のフッター行のある 1 つの外部グループと、1 つの内部グループ|  
-|![外部グループのかっこ、内部グループのかっこ、詳細](../media/rs-icontablix-nestedgroupwithdetailsandtotals.gif "外部グループのかっこ、内部グループのかっこ、詳細")|合計のフッター行のある 1 つの外部グループ、合計のフッター行のある 1 つの内部グループ、および 1 つの詳細行|  
+|![外部グループの角かっこ、内部グループの角かっこ、詳細](../media/rs-icontablix-nestedgroupwithdetailsandtotals.gif "外部グループの角かっこ、内部グループの角かっこ、詳細")|合計のフッター行のある 1 つの外部グループ、合計のフッター行のある 1 つの内部グループ、および 1 つの詳細行|  
 |![親ヘッダーとフッター、および子グループ](../media/rs-icontablix-nestedgroupwithparentheaderandfooter.gif "親ヘッダーとフッター、および子グループ")|ラベルのヘッダーと合計のフッターのある 1 つの外部グループと、内部グループがあり、詳細グループはなし|  
   
 ### <a name="group-rows"></a>グループ行  

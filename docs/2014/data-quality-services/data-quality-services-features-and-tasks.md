@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1c3caf606e8cbf551d7b865b30996ae0f16450a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480702"
 ---
 # <a name="data-quality-services-features-and-tasks"></a>Data Quality Services の機能とタスク
@@ -25,9 +25,9 @@ ms.locfileid: "65480702"
   
  [DQS のナレッジ ベースとドメイン](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
- [DQS&#41;&#40;データ品質プロジェクト](../../2014/data-quality-services/data-quality-projects-dqs.md)  
+ [データ品質プロジェクト &#40;DQS&#41;](../../2014/data-quality-services/data-quality-projects-dqs.md)  
   
- [Data Cleansing](../../2014/data-quality-services/data-cleansing.md)  
+ [データクレンジング](../../2014/data-quality-services/data-cleansing.md)  
   
  [データ照合](../../2014/data-quality-services/data-matching.md)  
   

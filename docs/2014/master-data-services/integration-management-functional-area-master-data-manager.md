@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e3aec7e136b656b7f33646d50b746e410263059a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67284989"
 ---
 # <a name="integration-management-functional-area-master-data-manager"></a>[統合管理] 機能領域 (マスター データ マネージャー)
@@ -29,14 +29,14 @@ ms.locfileid: "67284989"
   
  [ステージング処理中に発生したエラーを表示 &#40;マスターデータサービス&#41;](view-errors-that-occur-during-staging-master-data-services.md)  
   
- [ステージング処理のトラブルシューティング (マスターデータサービス)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-the-staging-process-master-data-services.aspx)  
+ [ステージング処理のトラブルシューティング (マスター データ サービス)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-the-staging-process-master-data-services.aspx)  
   
 ## <a name="export-data"></a>データのエクスポート  
  [データのエクスポート &#40;マスターデータサービス&#41;](overview-exporting-data-master-data-services.md)  
   
  [サブスクリプションビュー &#40;マスターデータサービスを作成し&#41;](create-a-subscription-view-to-export-data-master-data-services.md)  
   
- [サブスクリプションビュー &#40;マスターデータサービスの削除&#41;](../../2014/master-data-services/delete-a-subscription-view-master-data-services.md)  
+ [サブスクリプション ビューを削除する &#40;マスター データ サービス&#41;](../../2014/master-data-services/delete-a-subscription-view-master-data-services.md)  
   
 ## <a name="see-also"></a>参照  
  [マスター データ マネージャー Web アプリケーション](../../2014/master-data-services/master-data-manager-web-application.md)  

@@ -13,18 +13,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 952043d5d001fe4fe65e6dd1aa7bb2001290429e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110071"
 ---
 # <a name="optimizing-the-neworg-table"></a>NewOrg テーブルの最適化
   「[既存の階層データを使用したテーブルの](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md)設定」タスクで作成した**neword**テーブルには、すべての従業員情報が含まれ`hierarchyid`ており、データ型を使用して階層構造を表しています。 ここでは、`hierarchyid` 列の検索をサポートする新しいインデックスを追加します。  
   
 ## <a name="clustered-index"></a>クラスター化インデックス  
- `hierarchyid`列 (**orgnode**) は、 **neworg**テーブルの主キーです。 
-  **OrgNode** 列に一意性を持たせるため、このテーブルには作成時に **PK_NewOrg_OrgNode** という名前のクラスター化インデックスが格納されています。 このクラスター化インデックスは、テーブルの深さ優先検索もサポートしています。  
+ `hierarchyid`列 (**orgnode**) は、 **neworg**テーブルの主キーです。 **OrgNode** 列に一意性を持たせるため、このテーブルには作成時に **PK_NewOrg_OrgNode** という名前のクラスター化インデックスが格納されています。 このクラスター化インデックスは、テーブルの深さ優先検索もサポートしています。  
   
 ## <a name="nonclustered-index"></a>非クラスター化インデックス  
  この手順では、一般的な検索をサポートする 2 つの非クラスター化インデックスを作成します。  
@@ -41,8 +40,7 @@ ms.locfileid: "66110071"
     GO  
     ```  
   
-2.  
-  **EmployeeID** 列に一意のインデックスを作成します。 これは、 **EmployeeID** の番号によって 1 人の従業員を検索する従来の単一参照です。 次のコードを実行すると、 **EmployeeID**のインデックスが作成されます。  
+2.  **EmployeeID** 列に一意のインデックスを作成します。 これは、 **EmployeeID** の番号によって 1 人の従業員を検索する従来の単一参照です。 次のコードを実行すると、 **EmployeeID**のインデックスが作成されます。  
   
     ```  
     CREATE UNIQUE INDEX EmpIDs_unq ON NewOrg(EmployeeID) ;  
@@ -97,7 +95,7 @@ ms.locfileid: "66110071"
   
      `/2/2/       0x6B40       2         8      norint`  
   
-     **Employeeid**優先のインデックス: 行は**EmployeeID**シーケンスに格納されます。  
+     **EmployeeID**優先のインデックス: 行は **EmployeeID** の順に格納されます。  
   
      `LogicalNode OrgNode    H_Level EmployeeID LoginID`  
   
@@ -126,18 +124,14 @@ ms.locfileid: "66110071"
   
 #### <a name="to-drop-the-unnecessary-columns"></a>不要な列を削除するには  
   
-1.  
-  **ManagerID** 列が表す従業員とマネージャーのリレーションシップは、現在は **OrgNode** 列によって表されるようになっています。 
-  **ManagerID** 列を必要とするアプリケーションが他にない場合は、次のステートメントを使用してこの列を削除することを検討します。  
+1.  **ManagerID** 列が表す従業員とマネージャーのリレーションシップは、現在は **OrgNode** 列によって表されるようになっています。 **ManagerID** 列を必要とするアプリケーションが他にない場合は、次のステートメントを使用してこの列を削除することを検討します。  
   
     ```  
     ALTER TABLE NewOrg DROP COLUMN ManagerID ;  
     GO  
     ```  
   
-2.  
-  **EmployeeID** 列も冗長です。 各従業員は、 **OrgNode** 列によって一意に識別されます。 
-  **EmployeeID** 列を必要とするアプリケーションが他にない場合は、次のコードを使用して、インデックスを削除した後に列を削除することを検討します。  
+2.  **EmployeeID** 列も冗長です。 各従業員は、 **OrgNode** 列によって一意に識別されます。 **EmployeeID** 列を必要とするアプリケーションが他にない場合は、次のコードを使用して、インデックスを削除した後に列を削除することを検討します。  
   
     ```  
     DROP INDEX EmpIDs_unq ON NewOrg ;  
@@ -165,6 +159,6 @@ ms.locfileid: "66110071"
     ```  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [まとめ : テーブルの階層構造への変換](lesson-1-4-summary-converting-a-table-to-a-hierarchical-structure.md)  
+ [概要: テーブルの階層構造への変換](lesson-1-4-summary-converting-a-table-to-a-hierarchical-structure.md)  
   
   

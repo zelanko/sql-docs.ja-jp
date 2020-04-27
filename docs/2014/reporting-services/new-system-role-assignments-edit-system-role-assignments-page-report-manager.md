@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 661ae0cafe5b484839bbee2531f82f3b62f72c75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108129"
 ---
 # <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>[新しいシステム ロールの割り当て]: [システム ロールの割り当てを編集] ページ (レポート マネージャー)
@@ -51,12 +51,11 @@ ms.locfileid: "66108129"
  **ロール**  
  他のユーザーに割り当てることができるシステム レベルのロールを指定します。 1 つのロールの割り当てに複数のロールを指定できます。  
   
- レポート マネージャーでは、各ロールのタスクは表示されず、タスクを追加または変更することもできません。 ロールは定義されているとおりに使用する必要があります。 ロールを作成、変更、または削除するには、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]を使用します。 詳細については、「 [ロールを作成、削除、または変更する &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md)」を参照してください。  
+ レポート マネージャーでは、各ロールのタスクは表示されず、タスクを追加または変更することもできません。 ロールは定義されているとおりに使用する必要があります。 ロールを作成、変更、または削除する[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]には、を使用します。 詳細については、「 [ロールを作成、削除、または変更する &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md)」を参照してください。  
   
- 
-  [!INCLUDE[ssExpressEd2005](../includes/ssexpressed2005-md.md)] with Advanced Services を使用している場合、提供されている既定のロールを使用する必要があります。  
+ [!INCLUDE[ssExpressEd2005](../includes/ssexpressed2005-md.md)] with Advanced Services を使用している場合、提供されている既定のロールを使用する必要があります。  
   
- **摘要**  
+ **説明**  
  ロールに関する詳細を表示します。 システム ユーザーやシステム管理者などの定義済みロールに関しては、各ロールでサポートされているタスクの要約が説明として提供されます。  
   
  **ロールの割り当ての削除**  

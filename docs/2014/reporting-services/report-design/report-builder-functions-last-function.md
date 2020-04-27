@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fcaad5c420af766d6c43bd5d57adeb6ce444257f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105260"
 ---
 # <a name="last-function-report-builder-and-ssrs"></a>Last 関数 (レポート ビルダーおよび SSRS)
@@ -41,11 +41,9 @@ Last(expression, scope)
  式の種類によって決まります。  
   
 ## <a name="remarks"></a>解説  
- 
-  `Last` 関数は、指定されたスコープですべての並べ替えおよびフィルター処理が適用された後、データセットの最後の値を返します。  
+ `Last` 関数は、指定されたスコープですべての並べ替えおよびフィルター処理が適用された後、データセットの最後の値を返します。  
   
- 
-  `Last` 関数は、現在 (既定) のスコープ以外のスコープを使用してグループ化フィルター式で使用することはできません。  
+ `Last` 関数は、現在 (既定) のスコープ以外のスコープを使用してグループ化フィルター式で使用することはできません。  
   
  また、ページ ヘッダーで `Last` を使用して、ページの `ReportItems` コレクションから最後の値を返し、各ページの最初と最後のエントリを表示する辞書形式のヘッダーを作成することもできます。  
   

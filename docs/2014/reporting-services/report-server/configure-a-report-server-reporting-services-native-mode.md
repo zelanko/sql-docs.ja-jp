@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 10e4a4befd8300863d8637a87e8c9bd03622d0af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104066"
 ---
 # <a name="configure-a-report-server-reporting-services-native-mode"></a>レポート サーバーの構成 (Reporting Services ネイティブ モード)
@@ -41,14 +41,11 @@ ms.locfileid: "66104066"
   
 1.  Reporting Services 構成マネージャーを起動して、レポート サーバー インスタンスに接続します。 手順については、「 [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)」を参照してください。  
   
-2.  
-  **[Web サービス URL]** をクリックして、レポート サーバーの URL を構成するページを開きます。 URL を定義する方法については、「[URL の構成 &#40;SSRS 構成マネージャー&#41;](../install-windows/configure-a-url-ssrs-configuration-manager.md)」を参照してください。  
+2.  **[Web サービス URL]** をクリックして、レポート サーバーの URL を構成するページを開きます。 URL を定義する方法については、「[URL の構成 &#40;SSRS 構成マネージャー&#41;](../install-windows/configure-a-url-ssrs-configuration-manager.md)」を参照してください。  
   
-3.  
-  **[データベース]** をクリックして、レポート サーバー データベースを作成します。 手順については、「[ネイティブ モード レポート サーバー データベースの作成 &#40;SSRS 構成マネージャー&#41;](../install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)」を参照してください。  
+3.  **[データベース]** をクリックして、レポート サーバー データベースを作成します。 手順については、「[ネイティブ モード レポート サーバー データベースの作成 &#40;SSRS 構成マネージャー&#41;](../install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)」を参照してください。  
   
-4.  
-  **[Web サービス URL]** ページに戻り、URL をクリックして機能するかどうかを検証します。  
+4.  **[Web サービス URL]** ページに戻り、URL をクリックして機能するかどうかを検証します。  
   
 5.  「次の手順」の指示に従って配置を完了します。  
   
@@ -62,10 +59,10 @@ ms.locfileid: "66104066"
  フォルダーを作成し、アイテムをアップロードし、レポートを実行してインストール状況を確認します。 インストール状況を確認するには、「 [Reporting Services のインストール状態の検証](../install-windows/verify-a-reporting-services-installation.md) 」の手順に従います。  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services ネイティブモードのレポートサーバーの管理](manage-a-reporting-services-native-mode-report-server.md)   
- [レポートサーバーアクセスに対するファイアウォールの構成](configure-a-firewall-for-report-server-access.md)   
- [ローカル管理用のネイティブモードのレポートサーバーを構成する &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md)   
- [リモート管理用にレポートサーバーを構成する](configure-a-report-server-for-remote-administration.md)   
+ [Reporting Services ネイティブ モードのレポート サーバーの管理](manage-a-reporting-services-native-mode-report-server.md)   
+ [レポート サーバー アクセスに対するファイアウォールの構成](configure-a-firewall-for-report-server-access.md)   
+ [ローカル管理用のネイティブ モードのレポート サーバー &#40;SSRS&#41; の構成](configure-a-native-mode-report-server-for-local-administration-ssrs.md)   
+ [リモート管理用のレポート サーバーの構成](configure-a-report-server-for-remote-administration.md)   
  [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   
   

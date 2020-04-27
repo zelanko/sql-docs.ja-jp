@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ebc5ee51dd32cb999f0e6551bb87c36eda8865c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109228"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>RDL サンドボックスの有効化と無効化
@@ -30,12 +30,11 @@ ms.locfileid: "66109228"
   
 -   レポート定義の** \<コード>** 要素内のカスタムコード。  
   
--   
-  [!INCLUDE[ssRSversion2005](../includes/ssrsversion2005-md.md)] カスタム レポート アイテムに対する RDL の下位互換性モード。  
+-   [!INCLUDE[ssRSversion2005](../includes/ssrsversion2005-md.md)] カスタム レポート アイテムに対する RDL の下位互換性モード。  
   
 -   式での名前付きパラメーター。  
   
- このトピックでは、RSReportServer. `RDLSandboxing` .config ファイルの <> 要素内の各要素について説明します。 このファイルの編集の詳細については、「[Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)」を参照してください。 RDL サンドボックス機能に関連した操作は、サーバー トレース ログに記録されます。 トレース ログの詳細については、「 [Report Server Service Trace Log](report-server/report-server-service-trace-log.md)」を参照してください。  
+ このトピックでは、RSReportServer. `RDLSandboxing` .config ファイルの <> 要素内の各要素について説明します。 このファイルの編集の詳細については、「[Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)」を参照してください。 RDL サンドボックス機能に関連した操作は、サーバー トレース ログに記録されます。 トレース ログの詳細については、「 [レポート サーバー サービスのトレース ログ](report-server/report-server-service-trace-log.md)」を参照してください。  
   
 ## <a name="example-configuration"></a>構成の例  
  次の例は、RSReportServer. .Config ファイルの <`RDLSandboxing`> 要素の設定と例の値を示しています。  
@@ -60,20 +59,17 @@ ms.locfileid: "66109228"
 ## <a name="configuration-settings"></a>構成設定  
  次の表では、構成設定に関する情報を示します。 構成ファイルに出現する順に、設定を示します。  
   
-|設定|[説明]|  
+|設定|説明|  
 |-------------|-----------------|  
-|**Max式の長さ**|RDL 式で許可される文字数の最大値です。<br /><br /> 既定: 1000|  
-|**MaxResourceSize 細分化**|外部リソースに許可されるサイズの最大値 (単位: KB) です。<br /><br /> 既定値: 100|  
+|**MaxExpressionLength**|RDL 式で許可される文字数の最大値です。<br /><br /> 既定: 1000|  
+|**MaxResourceSize**|外部リソースに許可されるサイズの最大値 (単位: KB) です。<br /><br /> 既定値: 100|  
 |**MaxStringResultLength**|RDL 式の戻り値で許可される文字数の最大値です。<br /><br /> 既定: 1000|  
 |**MaxArrayResultLength**|RDL 式の配列戻り値で許可されるアイテム数の最大値です。<br /><br /> 既定値: 100|  
-|**な**|RDL 式内で許可されるメンバーの一覧です。|  
-|**Allow**|RDL 式で許可される型または型のセットです。|  
-|**名前空間**|
-  **Allow** の属性の 1 つであり、Value に適用される 1 つ以上の型を含む名前空間です。 このプロパティでは、大文字と小文字が区別されません。|  
-|`AllowNew`|
-  **Allow** のブール属性であり、RDL 式内または RDL の **\<Class>** 要素内でその型の新しいインスタンスを作成できるかどうかを制御します。<br /><br /> 注: が`RDLSandboxing`有効になっている場合、の`AllowNew`設定に関係なく、RDL 式に新しい配列を作成することはできません。|  
-|**Value**|
-  **Allow** に対する値であり、RDL 式で許可される型の名前を示します。 値**\*** は、名前空間のすべての型が許可されることを示します。 このプロパティでは、大文字と小文字が区別されません。|  
+|**型**|RDL 式内で許可されるメンバーの一覧です。|  
+|**許可**|RDL 式で許可される型または型のセットです。|  
+|**Namespace**|**Allow** の属性の 1 つであり、Value に適用される 1 つ以上の型を含む名前空間です。 このプロパティでは、大文字と小文字が区別されません。|  
+|`AllowNew`|**Allow** のブール属性であり、RDL 式内または RDL の **\<Class>** 要素内でその型の新しいインスタンスを作成できるかどうかを制御します。<br /><br /> 注: が`RDLSandboxing`有効になっている場合、の`AllowNew`設定に関係なく、RDL 式に新しい配列を作成することはできません。|  
+|**Value**|**Allow** に対する値であり、RDL 式で許可される型の名前を示します。 値**\*** は、名前空間のすべての型が許可されることを示します。 このプロパティでは、大文字と小文字が区別されません。|  
 |**メンバー**|型>要素に含まれる型の一覧については、RDL 式で許可されないメンバー名の一覧です。 ** \<**|  
 |**Deny**|RDL 式で許可されないメンバーの名前です。 このプロパティでは、大文字と小文字が区別されません。<br /><br /> 注: メンバーに対して **Deny** が指定されている場合、この名前を持つすべての型のメンバーがすべて許可されません。|  
   

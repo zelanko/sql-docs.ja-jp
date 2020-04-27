@@ -14,14 +14,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c9f022f0ed2ba9b7bc320407526af0c12ce4073b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483918"
 ---
 # <a name="assign-a-flag-to-a-version-master-data-services"></a>バージョンにフラグを割り当てる (マスター データ サービス)
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、バージョンにフラグを割り当てて、ユーザーまたはサブスクライブ システムが使用する必要があるバージョンを示します。  
   
 > [!NOTE]  
@@ -30,19 +29,17 @@ ms.locfileid: "65483918"
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
--   [**バージョン管理**] 機能領域にアクセスするためのアクセス許可が必要です。  
+-   **[バージョン管理]** 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 (マスター データ サービス)](administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](administrators-master-data-services.md)」を参照してください。  
   
 -   割り当てるバージョン フラグを作成している必要があります。 詳細については、「 [バージョン フラグを作成する (マスター データ サービス)](../../2014/master-data-services/create-a-version-flag-master-data-services.md)」を参照してください。  
   
 ### <a name="to-assign-a-flag-to-a-version"></a>フラグをバージョンに割り当てるには  
   
-1.  
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[バージョン管理]** をクリックします。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[バージョン管理]** をクリックします。  
   
-2.  
-  **[バージョンの管理]** ページで、フラグを割り当てるバージョンの行の **[フラグ]** 列のセルをダブルクリックします。  
+2.  **[バージョンの管理]** ページで、フラグを割り当てるバージョンの行の **[フラグ]** 列のセルをダブルクリックします。  
   
 3.  一覧から、割り当てるフラグを選択します。  
   
@@ -53,6 +50,6 @@ ms.locfileid: "65483918"
   
 ## <a name="see-also"></a>参照  
  [バージョンフラグ &#40;マスターデータサービスを作成し&#41;](../../2014/master-data-services/create-a-version-flag-master-data-services.md)   
- [バージョン &#40;マスターデータサービス&#41;](../../2014/master-data-services/versions-master-data-services.md)  
+ [バージョン (マスター データ サービス)](../../2014/master-data-services/versions-master-data-services.md)  
   
   

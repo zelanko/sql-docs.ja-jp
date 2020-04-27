@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f47529726445cf52d280df78a6a96f18889fcd2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63272805"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>トランザクション レプリケーションにおけるパブリッシング ストアド プロシージャの実行
@@ -48,7 +48,7 @@ EXEC give_raise
 > [!IMPORTANT]  
 >  ストアド プロシージャのレプリケーションは、すべてのアプリケーションに適しているわけではありません。 サブスクライバーとは異なる行のセットがパブリッシャーに存在するようにアーティクルが行方向でフィルター選択される場合、両方で同じストアド プロシージャを実行すると異なる結果が返ります。 同様に、レプリケートされていない別のテーブルのサブクエリに基づいた更新の場合、パブリッシャー側とサブスクライバー側の両方で同じストアド プロシージャを実行しても異なる結果が返ります。  
   
- **ストアドプロシージャの実行をパブリッシュするには**  
+ **ストアド プロシージャの実行をパブリッシュするには**  
   
 -   SQL Server Management Studio: [トランザクション パブリケーションでストアド プロシージャの実行をパブリッシュする方法 &#40;SQL Server Management Studio&#41;](../publish/publish-execution-of-stored-procedure-in-transactional-publication.md)  
   
@@ -94,6 +94,6 @@ COMMIT TRANSACTION T2
  XACT_ABORT を OFF に設定する必要がある場合は、ディストリビューション エージェントの **-SkipErrors** パラメーターを指定してください。 これで、エラーが発生した場合でも、エージェントは引き続きサブスクライバーに変更を適用できます。  
   
 ## <a name="see-also"></a>参照  
- [トランザクションレプリケーションのアーティクルオプション](article-options-for-transactional-replication.md)  
+ [Article Options for Transactional Replication](article-options-for-transactional-replication.md)  
   
   

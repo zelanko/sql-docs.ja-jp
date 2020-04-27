@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3b49fc242eb8b2242269c5af33cc094937bbe0de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63312108"
 ---
 # <a name="lesson-4-executing-market-basket-predictions"></a>レッスン 4: マーケット バスケット予測の実行
@@ -30,8 +30,7 @@ ms.locfileid: "63312108"
   
  予測関数を使用すると、クエリを改良できます。 予測関数では、予測が発生する可能性などの追加の情報や、トレーニング データセットでの予測サポートが提供されます。 予測関数の詳細については、「 [functions &#40;DMX&#41;](/sql/dmx/functions-dmx)」を参照してください。  
   
- 
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で予測クエリ ビルダーを使用して、予測クエリを作成することもできます。  
+ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で予測クエリ ビルダーを使用して、予測クエリを作成することもできます。  
   
 ## <a name="singleton-prediction-join-statement"></a>単一 PREDICTION JOIN ステートメント  
  最初の手順では、 **SELECT FROM \<MODEL> 予測結合**構文を使用し、入力として1つの値セットを指定して、単一クエリを作成します。 単一ステートメントの汎用例を次に示します。  
@@ -81,8 +80,7 @@ SELECT <select list> FROM [<mining model>]
   
 1.  **オブジェクトエクスプローラー**で、の[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンスを右クリックし、[**新しいクエリ**] をポイントします。次に、[ **DMX** ] をクリックしてクエリエディターを開きます。  
   
-2.  
-  `PREDICTION JOIN` ステートメントの汎用例を空のクエリにコピーします。  
+2.  `PREDICTION JOIN` ステートメントの汎用例を空のクエリにコピーします。  
   
 3.  次の部分を探します。  
   
@@ -90,7 +88,7 @@ SELECT <select list> FROM [<mining model>]
     <select list>   
     ```  
   
-     を以下に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     PREDICT([Default Association].[Products],INCLUDE_STATISTICS,3)  
@@ -104,7 +102,7 @@ SELECT <select list> FROM [<mining model>]
     [<mining model>]   
     ```  
   
-     を以下に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     [Default Association]  
@@ -119,7 +117,7 @@ SELECT <select list> FROM [<mining model>]
         AS [<nested table>])  
     ```  
   
-     を以下に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     (SELECT (SELECT 'Mountain Bottle Cage' AS [Model]  
@@ -127,8 +125,7 @@ SELECT <select list> FROM [<mining model>]
       UNION SELECT 'Mountain-200' AS [Model]) AS [Products]) AS t  
     ```  
   
-     このステートメントでは、`UNION` ステートメントを使用して、予測された製品と共にショッピング カートに含まれる 3 つの製品を指定します。 
-  `SELECT` ステートメント内の Model 列は、入れ子になった製品テーブル内のモデル列に対応しています。  
+     このステートメントでは、`UNION` ステートメントを使用して、予測された製品と共にショッピング カートに含まれる 3 つの製品を指定します。 `SELECT` ステートメント内の Model 列は、入れ子になった製品テーブル内のモデル列に対応しています。  
   
      最終的なステートメントは次のようになります。  
   
@@ -157,8 +154,7 @@ SELECT <select list> FROM [<mining model>]
   
 1.  **オブジェクトエクスプローラー**で、の[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンスを右クリックし、[**新しいクエリ**] をポイントします。次に、[ **DMX** ] をクリックしてクエリエディターを開きます。  
   
-2.  
-  `PREDICTION JOIN` ステートメントの汎用例を空のクエリにコピーします。  
+2.  `PREDICTION JOIN` ステートメントの汎用例を空のクエリにコピーします。  
   
 3.  次の部分を探します。  
   
@@ -166,7 +162,7 @@ SELECT <select list> FROM [<mining model>]
     <select list>   
     ```  
   
-     を以下に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     PREDICT([Modified Association].[Products],INCLUDE_STATISTICS,3)  
@@ -178,7 +174,7 @@ SELECT <select list> FROM [<mining model>]
     [<mining model>]   
     ```  
   
-     を以下に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     [Modified Association]  
@@ -193,7 +189,7 @@ SELECT <select list> FROM [<mining model>]
         AS [<nested table>])  
     ```  
   
-     を以下に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     (SELECT (SELECT 'Mountain Bottle Cage' AS [Model]  
@@ -201,8 +197,7 @@ SELECT <select list> FROM [<mining model>]
       UNION SELECT 'Mountain-200' AS [Model]) AS [Products]) AS t  
     ```  
   
-     このステートメントでは、`UNION` ステートメントを使用して、予測された製品と共にショッピング カートに含まれる 3 つの製品を指定します。 
-  `[Model]` ステートメント内の `SELECT` 列は、入れ子になった製品テーブル内の列に対応しています。  
+     このステートメントでは、`UNION` ステートメントを使用して、予測された製品と共にショッピング カートに含まれる 3 つの製品を指定します。 `SELECT` ステートメント内の `[Model]` 列は、入れ子になった製品テーブル内の列に対応しています。  
   
      最終的なステートメントは次のようになります。  
   

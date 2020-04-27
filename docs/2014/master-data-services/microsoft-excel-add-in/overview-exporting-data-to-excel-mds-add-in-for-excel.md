@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3bbd3ac1bf97530d64760d1434b9e7e8f6a81d34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482798"
 ---
 # <a name="loading-data-mds-add-in-for-excel"></a>データの読み込み (Excel 用 MDS アドイン)
@@ -22,8 +22,7 @@ ms.locfileid: "65482798"
   
  読み込むことができるデータは、アクセスする権限があるデータに限定されます。 データにアクセスする権限は、 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションで設定するか、プログラムによって設定します。  
   
- 大量のデータを読み込む場合は、読み込みに長時間かかる可能性があるデータのときに表示される警告を設定できます。 この操作を行うには、 **[オプション]** グループの **[設定]** をクリックします。 
-  **[データ]** タブで、 **[大きなデータ セットの場合にフィルター警告を表示する]** を選択します。  
+ 大量のデータを読み込む場合は、読み込みに長時間かかる可能性があるデータのときに表示される警告を設定できます。 この操作を行うには、 **[オプション]** グループの **[設定]** をクリックします。 **[データ]** タブで、 **[大きなデータ セットの場合にフィルター警告を表示する]** を選択します。  
   
 > [!WARNING]  
 >  MDS が有効なブックは、Excel 用 MDS アドインを使用している Excel でのみ開き、更新する必要があります。 MDS Excel アドインがインストールされていないコンピューター上の Excel で、MDS が有効なブックを開くことはサポートされていませんし、ブック ファイルを破損する可能性があります。 他のユーザーとデータを共有したい場合は、ワークシートを保存して電子メールで送信するのではなく、ショートカット クエリ ファイルをそのユーザーに電子メールで送信します。 クエリの詳細については、「[ショートカット クエリ ファイルの電子メールでの送信 (Excel 用 MDS アドイン)](email-a-shortcut-query-file-mds-add-in-for-excel.md)」を参照してください。  
@@ -43,16 +42,16 @@ ms.locfileid: "65482798"
 |----------------------|-----------|  
 |Excel に読み込む前に MDS データをフィルター処理します。|[&#40;Excel 用 MDS アドインを読み込む前にデータをフィルター処理する&#41;](filter-data-before-exporting-mds-add-in-for-excel.md)|  
 |MDS データを Excel に読み込みます。|[MDS から Excel へのデータの読み込み](export-data-to-excel-from-master-data-services.md)|  
-|データをダウンロードする前に列の順序を変更します。|[列の並べ替え &#40;Excel 用 MDS アドイン&#41;](reorder-columns-mds-add-in-for-excel.md)|  
+|データをダウンロードする前に列の順序を変更します。|[列の並べ替え (Excel 用 MDS アドイン)](reorder-columns-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   [接続 &#40;Excel 用 MDS アドイン&#41;](connections-mds-add-in-for-excel.md)  
+-   [接続 (Excel 用 MDS アドイン)](connections-mds-add-in-for-excel.md)  
   
--   [ショートカットクエリファイル &#40;Excel 用 MDS アドイン&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
+-   [ショートカット クエリ ファイル (Excel 用 MDS アドイン)](shortcut-query-files-mds-add-in-for-excel.md)  
   
 -   [Microsoft Excel 用マスター データ サービス アドイン](master-data-services-add-in-for-microsoft-excel.md)  
   
--   [セキュリティ &#40;マスターデータサービス&#41;](../security-master-data-services.md)  
+-   [セキュリティ (マスター データ サービス)](../security-master-data-services.md)  
   
   

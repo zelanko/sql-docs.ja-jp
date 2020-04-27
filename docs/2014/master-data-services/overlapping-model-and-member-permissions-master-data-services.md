@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ca57d34a3dda2880f3882d1940c6852af0729fb7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482728"
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>モデル権限とメンバー権限の重複 (Master Data Services)
@@ -26,7 +26,7 @@ ms.locfileid: "65482728"
   
  メンバーに割り当てられている権限が、対応するモデル オブジェクトの権限とは異なる場合、次のルールが適用されます。  
   
--   **拒否**他のすべてのアクセス許可を上書きします。  
+-   **拒否** が他のどの権限をオーバーライドします。  
   
 -   **読み取り専用は** **Update**をオーバーライドします。  
   
@@ -37,11 +37,9 @@ ms.locfileid: "65482728"
 ## <a name="example-1"></a>例 1  
  ![mds_conc_overlap_model_1](../../2014/master-data-services/media/mds-conc-overlap-model-1.gif "mds_conc_overlap_model_1")  
   
- 
-  **[モデル]** タブで、Product エンティティに **更新** 権限が割り当てられています。 エンティティのすべての属性がこの権限を継承しています。  
+ **[モデル]** タブで、Product エンティティに **更新** 権限が割り当てられています。 エンティティのすべての属性がこの権限を継承しています。  
   
- 
-  **[階層メンバー]** タブで、派生階層の Mountain Bikes サブカテゴリ ノードに **更新** 権限が割り当てられています。  
+ **[階層メンバー]** タブで、派生階層の Mountain Bikes サブカテゴリ ノードに **更新** 権限が割り当てられています。  
   
  結果: **[エクスプローラー]** で、Mountain Bikes ノード内のすべてのメンバーについて、すべての属性値に対する **更新** 権限がユーザーに与えられます。 その他のメンバーと属性は、すべて非表示になります。  
   
@@ -50,8 +48,7 @@ ms.locfileid: "65482728"
 ## <a name="example-2"></a>例 2  
  ![mds_conc_overlap_model_2](../../2014/master-data-services/media/mds-conc-overlap-model-2.gif "mds_conc_overlap_model_2")  
   
- 
-  **[モデル]** タブで、Subcategory 属性に **更新** 権限が割り当てられています。  
+ **[モデル]** タブで、Subcategory 属性に **更新** 権限が割り当てられています。  
   
  [**階層メンバー** ] タブで、派生階層の [マウンテン Bikes サブカテゴリ] ノードには、明示的に**読み取り**専用権限が割り当てられます。  
   
@@ -64,8 +61,7 @@ ms.locfileid: "65482728"
   
  [**モデル**] タブでは、サブカテゴリ属性に**読み取り**専用アクセス許可が割り当てられています。  
   
- 
-  **[階層メンバー]** タブで、派生階層の Mountain Bikes サブカテゴリに **更新** 権限が明示的に割り当てられています。  
+ **[階層メンバー]** タブで、派生階層の Mountain Bikes サブカテゴリに **更新** 権限が明示的に割り当てられています。  
   
  結果: [**エクスプローラー**] で、属性値に対する**読み取り**専用権限がユーザーに与えられます。 その他のメンバーと属性は、すべて非表示になります。  
   
@@ -73,6 +69,6 @@ ms.locfileid: "65482728"
   
 ## <a name="see-also"></a>参照  
  [アクセス許可の決定方法 &#40;マスターデータサービス&#41;](how-permissions-are-determined-master-data-services.md)   
- [ユーザーおよびグループのアクセス許可の重複 &#40;マスターデータサービス&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md)  
+ [ユーザー権限とグループ権限の重複 (マスター データ サービス)](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md)  
   
   

@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
 ms.openlocfilehash: 7c7745d69e234f81c2a331d214789e93e9fd4014
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "64568266"
 ---
 # <a name="customize-style-sheets-for-html-viewer-and-report-manager"></a>HTML ビューアーとレポート マネージャーのスタイル シートのカスタマイズに関する記事 (ページ、サイトなどの場合もあります)
@@ -21,8 +21,7 @@ ms.locfileid: "64568266"
   
  スタイル シートの変更に誤りがあると、レポートを開いたときにエラーが発生する可能性があります。 スタイル シートの変更方法がわからない場合は、既定のスタイル シートを使用してください。 スタイル シートをカスタマイズする場合は、変更を行う前に、既定のすべての .css ファイルのバックアップを作成してください。  
   
- スタイル シートを変更しても、レポート サーバーで実行するパブリッシュされたレポートの外観には影響しません。 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]では、レポートはスタイル シートを参照しません。 レポート サーバーによって自動生成されるアドホック レポートは、レポート サーバーのプログラム ファイルに埋め込みリソースとして格納されているスタイル情報を使用します。 レポート デザイナーで作成するレポートでは、レポート定義で指定したフォント、色、およびレイアウトを使用します。 スタイルは、レイアウトのその他の部分と共にインラインで作成されます。  
+ スタイル シートを変更しても、レポート サーバーで実行するパブリッシュされたレポートの外観には影響しません。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]では、レポートはスタイル シートを参照しません。 レポート サーバーによって自動生成されるアドホック レポートは、レポート サーバーのプログラム ファイルに埋め込みリソースとして格納されているスタイル情報を使用します。 レポート デザイナーで作成するレポートでは、レポート定義で指定したフォント、色、およびレイアウトを使用します。 スタイルは、レイアウトのその他の部分と共にインラインで作成されます。  
   
 > [!NOTE]  
 >  定義済みのレポート スタイルを使用する場合は、レポート ウィザードを使用してレポートを作成します。 レポート ウィザードには、異なる色の組み合わせやフォントを使用した定型レポートの作成に利用できるさまざまなテーマが用意されています。 レポートのテーマを定義するスタイル テンプレートは変更できます。  
@@ -30,7 +29,7 @@ ms.locfileid: "64568266"
 ## <a name="reporting-services-style-sheets"></a>Reporting Services のスタイル シート  
  次の表に、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 環境で使用するスタイル シート (.css) ファイルの説明を示します。  
   
-|スタイル シート|[説明]|  
+|スタイル シート|説明|  
 |-----------------|-----------------|  
 |Htmlviewer.css|HTML ビューアーの **[レポート]** ツール バーのカスタム スタイルを作成するためにテンプレートとして使用できるサンプル スタイル シートを提供します。<br /><br /> HTML ビューアーが使用する既定のスタイルは、レポート サーバーにコンパイルされます。 Htmlviewer.css ファイルは、ビューアーが使用するスタイルのサンプルを提供します。|  
 |ReportingServices.css|レポート マネージャーのスタイルを定義します。|  
@@ -58,8 +57,7 @@ ms.locfileid: "64568266"
 ```  
   
 ### <a name="specifying-a-style-sheet-on-a-report-url"></a>レポートの URL でのスタイル シートの指定  
- 
-  `rc:StyleSheet` URL アクセス パラメーターを使用して、レポートの URL でカスタム スタイル シートを指定できます。 URL アクセスパラメーターを指定する方法の詳細については、「 [Url アクセスパラメーターリファレンス](url-access-parameter-reference.md)」を参照してください。  
+ `rc:StyleSheet` URL アクセス パラメーターを使用して、レポートの URL でカスタム スタイル シートを指定できます。 URL アクセスパラメーターを指定する方法の詳細については、「 [Url アクセスパラメーターリファレンス](url-access-parameter-reference.md)」を参照してください。  
   
  次の例は、カスタム スタイルを追加する方法を示しています。  
   
@@ -70,6 +68,6 @@ http://localhost/reportserver?/AdventureWorksSampleReports/Product+Line+Sales&rs
 ## <a name="see-also"></a>参照  
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [HTML ビューアーとレポートツールバー](html-viewer-and-the-report-toolbar.md)   
- [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md)  
+ [RSReportServer 構成ファイル](report-server/rsreportserver-config-configuration-file.md)  
   
   

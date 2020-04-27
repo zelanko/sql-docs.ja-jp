@@ -14,14 +14,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 637d4e648d4d2b5c64d4635af8f96d0f2258b2f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479934"
 ---
 # <a name="create-a-model-master-data-services"></a>モデルを作成する (マスター データ サービス)
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でモデルを作成してモデル オブジェクトを含めます。  
   
 ## <a name="prerequisites"></a>前提条件  
@@ -31,11 +30,9 @@ ms.locfileid: "65479934"
   
 ### <a name="to-create-a-model"></a>モデルを作成するには  
   
-1.  
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
   
-2.  
-  **[モデル ビュー]** ページのメニュー バーから **[管理]** をポイントして **[モデル]** をクリックします。  
+2.  **[モデル ビュー]** ページのメニュー バーから **[管理]** をポイントして **[モデル]** をクリックします。  
   
 3.  [**モデルのメンテナンス**] ページで、[**モデルの追加**] をクリックします。  
   
@@ -47,12 +44,11 @@ ms.locfileid: "65479934"
   
 7.  必要に応じて、[必須階層] を選択します (必須階層として明示的階層を作成するに**は、すべてのリーフメンバーが含ま**れます)。  
   
-8.  
-  **[モデルの保存]** をクリックします。  
+8.  **[モデルの保存]** をクリックします。  
   
 ## <a name="next-steps"></a>次の手順  
   
--   [エンティティ &#40;マスターデータサービスを作成し&#41;](create-an-entity-master-data-services.md)  
+-   [エンティティを作成する (マスター データ サービス)](create-an-entity-master-data-services.md)  
   
 ## <a name="see-also"></a>参照  
  [モデル &#40;マスターデータサービス&#41;](../../2014/master-data-services/models-master-data-services.md)   

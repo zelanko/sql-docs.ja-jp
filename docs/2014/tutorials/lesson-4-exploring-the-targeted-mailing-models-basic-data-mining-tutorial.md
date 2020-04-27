@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 97db61dc3b9adf2e345957c8e08aa752e51286e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63312151"
 ---
 # <a name="lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial"></a>レッスン 4: 絞り込みメール配信モデルの検証 (基本的なデータ マイニング チュートリアル)
@@ -22,10 +22,9 @@ ms.locfileid: "63312151"
   
  を使用[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]してモデルを探索すると、作成した各モデルが、データマイニングデザイナーの [**マイニングモデルビューアー** ] タブに一覧表示されます。 各種のビューアーを使用して、モデルを参照できます。 これらのビューアーは、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] でも使用できます。  
   
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のどのアルゴリズムを使用してモデルを作成したかによって、それぞれ結果が異なります。 したがって、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は、機械学習モデルの種類ごとにカスタム ビューアーを用意しています。  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のどのアルゴリズムを使用してモデルを作成したかによって、それぞれ結果が異なります。 したがって、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は、機械学習モデルの種類ごとにカスタム ビューアーを用意しています。  
   
- 詳細については、「 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] **汎用コンテンツツリービューアー**」と呼ばれる HTML ビューアーも用意されています。これにより、モデルデータと、検出されたパターンに関する詳細情報が半表形式で表示されます。 詳細については、「 [Microsoft 汎用コンテンツ ツリー ビューアーを使用したモデルの参照](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)」を参照してください。  
+ 詳細については、「 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] **汎用コンテンツツリービューアー**」と呼ばれる HTML ビューアーも用意されています。これにより、モデルデータと、検出されたパターンに関する詳細情報が半表形式で表示されます。 詳細については、「 [Microsoft 汎用コンテンツ ツリー ビューアーを使用したモデルの参照](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)」をご覧ください。  
   
  このレッスンでは、3 つのモデルを使用して結果を観察します。 モデルの種類ごとに、基になるアルゴリズムが異なり、データの検証方法も異なります。  
   
