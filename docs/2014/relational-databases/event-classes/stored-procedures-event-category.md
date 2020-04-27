@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47dc8180fd6c8f59050520477724ff8adbc46a6a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63061015"
 ---
 # <a name="stored-procedures-event-category"></a>Stored Procedures イベント カテゴリ
@@ -28,7 +28,7 @@ ms.locfileid: "63061015"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[RPC:Completed イベント クラス](rpc-completed-event-class.md)|リモート プロシージャ コール (RPC) が完了したことを示します。|  
 |[PreConnect:Completed イベント クラス](preconnect-completed-event-class.md)|リソース ガバナー分類子関数の実行が終了したことを示します。|  

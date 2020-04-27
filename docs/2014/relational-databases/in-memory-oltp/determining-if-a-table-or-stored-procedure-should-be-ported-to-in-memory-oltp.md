@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de6a778f9cdbfb7ab916f40a5250ca4f9e20c811
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63072382"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>テーブルまたはストアド プロシージャをインメモリ OLTP に移植する必要があるかどうかの確認
@@ -31,7 +31,7 @@ ms.locfileid: "63072382"
   
 -   パフォーマンス クリティカルなテーブルとストアド プロシージャを特定するためのトランザクション パフォーマンス分析レポートの生成。  
   
- 移行方法については、「[In-Memory OLTP - Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx)」(インメモリ OLTP - 一般的なワークロード パターンと移行に関する考慮事項) を参照してください。  
+ 移行方法の詳細については、「[インメモリ OLTP-一般的なワークロードパターンと移行に関する考慮事項](https://msdn.microsoft.com/library/dn673538.aspx)」を参照してください。  
   
  トランザクション パフォーマンス コレクターとトランザクション パフォーマンス分析レポートは、次の操作を実行するために使用できます。  
   
@@ -46,21 +46,18 @@ ms.locfileid: "63072382"
   
  のインストール[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]時に [**管理ツール-基本**] または [**管理ツール-詳細**] を選択すると、トランザクションパフォーマンスコレクターとトランザクションパフォーマンス分析レポートを生成する機能がインストールされます。  
   
-## <a name="best-practices"></a>ベスト プラクティス  
+## <a name="best-practices"></a>推奨する運用方法  
  推奨されるワークフローを、次のフローチャートで説明します。 黄色のノードは省略可能な手順を表しています。  
   
  ![AMR ワークフロー](../../database-engine/media/amr-1.gif "AMR ワークフロー")  
   
  パフォーマンス ベースラインは、任意の方法を使用して設定できます。このような方法には、パフォーマンス カウンターのログまたは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の利用状況モニターを使用する方法がありますが、これに限定されるものではありません。 パフォーマンス ベースラインと比較において使用する情報は次のとおりです。  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の CPU 消費量。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の CPU 消費量。  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のメモリ消費量。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のメモリ消費量。  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の I/O アクティビティ。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の I/O アクティビティ。  
   
 -   トランザクションの処理中のインスタンスのトランザクション スループット。  
   
@@ -98,12 +95,11 @@ ms.locfileid: "63072382"
   
 5.  ウィザードの次の手順では、ユーザーとログインを追加します。 MDW インスタンスのロールのメンバーシップにログインをマップできます。 ローカル インスタンスからデータを収集する場合は、この手順は必要ありません。 ローカル インスタンスからデータを収集しない場合、プロファイルされるトランザクションを実行するアカウントにデータベース ロール メンバーシップ `mdw_admin` を許可できます。 完了したら、[**次へ**] をクリックします。  
   
-6.  
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントが実行されていることを確認します。  
+6.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントが実行されていることを確認します。  
   
 7.  次の画面で、[**完了**] をクリックしてウィザードを終了します。  
   
-### <a name="configure-data-collection-on-a-local-includessnoversionincludesssnoversion-mdmd-instance"></a>ローカル [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスでのデータ収集の構成  
+### <a name="configure-data-collection-on-a-local-ssnoversion-instance"></a>ローカル [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスでのデータ収集の構成  
  データ コレクションを実行するには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントが起動されている必要があります。 サーバーでデータ コレクターを 1 つだけ構成する必要があります。  
   
  データコレクターは、SQL Server 2012 以降のバージョンの[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]で構成できます。  
@@ -120,15 +116,14 @@ ms.locfileid: "63072382"
   
 5.  **[有効にするデータコレクターセットを選択し**てください] というラベルの付いたボックスで、[**トランザクションパフォーマンスコレクションセット**] を選択します。 完了したら、**[次へ]** をクリックします。  
   
-6.  選択内容を確認します。 設定を変更するには、[**戻る**] をクリックします。 完了したら、[**完了**] をクリックします。  
+6.  選択内容を確認します。 設定を変更するには、[**戻る**] をクリックします。 終了したら **[完了]** をクリックします。  
   
-###  <a name="xxx"></a>リモート[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスでのデータ収集の構成  
+###  <a name="configure-data-collection-on-a-remote-ssnoversion-instance"></a><a name="xxx"></a>リモート[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスでのデータ収集の構成  
  データを収集するには、データを収集するインスタンスで [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントが開始されている必要があります。  
   
  データコレクターは、SQL Server 2012 以降のバージョンの[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]で構成できます。  
   
- トランザクションがプロファイルされる場所とは異なるインスタンス上の管理データ ウェアハウス データベースにデータ コレクターがデータをアップロードするためには、適切な資格情報が設定された [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント プロキシが必要です。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント プロキシを有効にするには、ドメイン対応のログインを持つ資格情報を最初に設定する必要があります。 ドメイン対応のログインは、管理データ ウェアハウス データベースの `mdw_admin` グループのメンバーである必要があります。 資格情報を作成する方法については[、「方法: 資格情報を作成する (SQL Server Management Studio)](../security/authentication-access/create-a-credential.md) 」を参照してください。  
+ トランザクションがプロファイルされる場所とは異なるインスタンス上の管理データ ウェアハウス データベースにデータ コレクターがデータをアップロードするためには、適切な資格情報が設定された [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント プロキシが必要です。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント プロキシを有効にするには、ドメイン対応のログインを持つ資格情報を最初に設定する必要があります。 ドメイン対応のログインは、管理データ ウェアハウス データベースの `mdw_admin` グループのメンバーである必要があります。 資格情報を作成する方法については[、「方法: 資格情報を作成する (SQL Server Management Studio)](../security/authentication-access/create-a-credential.md) 」を参照してください。  
   
  別のインスタンスの管理データ ウェアハウス データベースにアップロードするようにデータ コレクションを構成するには  
   

@@ -1,5 +1,5 @@
 ---
-title: '[パブリケーション](ピア ツー ピア レプリケーション) | Microsoft Docs'
+title: '[パブリケーション] (ピア ツー ピア レプリケーション) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,25 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 09aea8e66b76103c27bdc44ade4df48a1e505e7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63021625"
 ---
 # <a name="publication-peer-to-peer-replication"></a>[パブリケーション] (ピア ツー ピア レプリケーション)
-  
   **[パブリケーション]** ページでは、ピア ツー ピア レプリケーションに対して有効になっているトランザクション パブリケーションを表示します。 パブリケーションは、 **[パブリケーションのプロパティ]** ダイアログ ボックスの **[サブスクリプション オプション]** ページで有効になっています。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **発行元**  
  接続先のサーバーを表示します。 別のサーバーに接続するには、 **[SQL Server パブリッシャーの検索]** を選択します。  
   
- **データベースとパブリケーション**  
+ **[データベースとパブリケーション]**  
  ピア ツー ピア レプリケーションに対して有効になっている、1 つ以上のパブリケーションが含まれたサーバーのすべてのデータベースを表示します。 パブリケーションを選択して続行します。  
   
 ## <a name="see-also"></a>参照  
- [ピアツーピアトポロジの管理 &#40;レプリケーション Transact-sql プログラミング&#41;](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
- [ピアツーピアトランザクションレプリケーション](transactional/peer-to-peer-transactional-replication.md)  
+ [ピア ツー ピア トポロジの管理 &#40;レプリケーション Transact-SQL プログラミング&#41;](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
+ [ピア ツー ピア トランザクション レプリケーション](transactional/peer-to-peer-transactional-replication.md)  
   
   

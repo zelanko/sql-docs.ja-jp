@@ -20,14 +20,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3f2c16e66c03eee8c5e1616fdaa0f0d1b154b85e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63143588"
 ---
 # <a name="profiling-odbc-driver-performance"></a>ODBC ドライバーのパフォーマンスのプロファイル
-  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、次の 2 種類のパフォーマンス データをプロファイルできます。  
   
 -   実行時間の長いクエリ。  
@@ -59,14 +58,13 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
    the log file, logging disabled.  
 ```  
   
- ドライバーは、環境ハンドルが閉じられると、パフォーマンス データの収集を停止します。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client アプリケーションが、それぞれ固有の環境ハンドルを持つ複数の接続を保持している場合、関連付けられている環境ハンドルのいずれかが閉じられると、ドライバーはパフォーマンス データの収集を停止します。  
+ ドライバーは、環境ハンドルが閉じられると、パフォーマンス データの収集を停止します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client アプリケーションが、それぞれ固有の環境ハンドルを持つ複数の接続を保持している場合、関連付けられている環境ハンドルのいずれかが閉じられると、ドライバーはパフォーマンス データの収集を停止します。  
   
  ドライバーのパフォーマンス データは、SQLPERF データ構造体に保存するか、タブ区切り形式ファイルに記録できます。 このデータには、次の種類の統計情報が含まれます。  
   
 -   アプリケーション プロファイル  
   
--   接続  
+-   Connection  
   
 -   ネットワーク  
   
@@ -76,7 +74,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="application-profile-statistics"></a>アプリケーション プロファイル統計情報  
   
-|SQLPERF のフィールド|[説明]|  
+|SQLPERF のフィールド|説明|  
 |-------------------|-----------------|  
 |TimerResolution|ミリ秒単位で表されたサーバーのクロック時間の最小単位。 通常は 0 (ゼロ) が報告されます。大きな値が報告される場合のみ考慮する必要があります。 サーバー クロックの最小単位が、タイマベースの一部の統計で予想される間隔よりも大きい場合は、統計値が増加する可能性があります。|  
 |SQLidu|SQL_PERF_START 以降に処理された INSERT、DELETE、または UPDATE ステートメントの数。|  
@@ -114,7 +112,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="time-statistics"></a>時間統計情報  
   
-|SQLPERF フィールド|[説明]|  
+|SQLPERF フィールド|説明|  
 |-------------------|-----------------|  
 |msExecutionTime|SQL_PERF_START 以降、ドライバーが処理に要した累積時間。サーバーからの応答の待ち時間も含まれます。|  
 |msNetworkServerTime|ドライバーがサーバーからの応答待ちに要した累積時間。|  

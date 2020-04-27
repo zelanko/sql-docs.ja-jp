@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 81e4bafbd596894a8cecbeb707a5d8be698c1f3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63031936"
 ---
 # <a name="options-sql-server-object-explorer-scripting-page"></a>[オプション] ([SQL Server オブジェクトエクスプローラー] ページ)
@@ -39,12 +39,12 @@ ms.locfileid: "63031936"
   
 ### <a name="general-scripting-options"></a>[全般スクリプト作成オプション]  
  **[各ステートメントを区切る]**  
- バッチ区切り記号を使用して、個々の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを区切ります。 **クエリ エディター**の既定のバッチ区切り記号を変更するには、 **[ツール]** / **[オプション]** / **[クエリ実行]** / **[SQL Server]** / **[全般]** / **[バッチ区切り記号]** の順に選択します。 既定値は False です。 詳細については、「 [Transact &#40;transact-sql&#41;](/sql/t-sql/language-elements/sql-server-utilities-statements-go)」を参照してください。  
+ バッチ区切り記号を使用して、個々の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを区切ります。 **クエリ エディター**の既定のバッチ区切り記号を変更するには、 **[ツール]**/**[オプション]**/**[クエリ実行]**/**[SQL Server]**/**[全般]**/**[バッチ区切り記号]** の順に選択します。 既定値は False です。 詳細については、「 [Transact &#40;transact-sql&#41;](/sql/t-sql/language-elements/sql-server-utilities-statements-go)」を参照してください。  
   
  **[説明用ヘッダーを含める]**  
  スクリプトをオブジェクトごとのセクションに分割し、説明用のコメントを追加します。 既定値は True です。 詳細については、「[コメント &#40;transact-sql&#41;](/sql/t-sql/language-elements/comment-transact-sql)」を参照してください。  
   
- **Vardecimal オプションを含める**  
+ **[VarDecimal オプションを含める]**  
  vardecimal ストレージ オプションを含めます。 既定値は False です。 詳細については、「」および「 [transact-sql&#41;&#40;sp_db_vardecimal_storage_format ](/sql/relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql)」を参照してください。  
   
  **[変更の追跡のスクリプトを作成]**  
@@ -63,7 +63,7 @@ ms.locfileid: "63031936"
  **[依存オブジェクトのスクリプトを生成する]**  
  選択したオブジェクトのスクリプトを実行する際に必要な追加オブジェクトのスクリプトを生成します。 既定値は False です。  
   
- **If NOT EXISTS 句を含める**  
+ **[IF NOT EXISTS 句を含める]**  
  各オブジェクトを作成する前にデータベースにそのオブジェクトが存在しないことを確認するためのステートメントを含めます。 既定値は False です。 詳細について[は、それ以外](/sql/t-sql/language-elements/if-else-transact-sql)の場合は、transact-sql&#41;&#40;transact-sql [&#41;&#40;存在](/sql/t-sql/language-elements/exists-transact-sql)します。  
   
  **[オブジェクト名を修飾するスキーマ]**  
@@ -85,7 +85,7 @@ ms.locfileid: "63031936"
  ユーザー定義データ型を元の基本型に変換します。 スクリプトを実行するデータベースに、ソース データベースのユーザー定義データ型が存在しない場合は、True を使用します。 ユーザー定義データ型を保持する場合は、False を使用します。 既定値は False です。 詳細については、[CREATE TYPE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-type-transact-sql)を参照してください。  
   
  **[SET ANSI PADDING コマンドを生成する]**  
- 各 CREATE TABLE ステートメントの前後に SET ANSI_PADDING ステートメントを追加します。 既定値は True です。 詳細については、「[SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)」をご覧ください。  
+ 各 CREATE TABLE ステートメントの前後に SET ANSI_PADDING ステートメントを追加します。 既定値は True です。 詳細については、「[SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)」を参照してください。  
   
  **[照合順序を含める]**  
  列定義に照合順序を含めます。 既定値は True です。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  
@@ -135,7 +135,7 @@ ms.locfileid: "63031936"
  **[ビュー列のスクリプトを作成]**  
  ビュー ヘッダーにビュー列を宣言します。 既定値は False です。 詳細については、「[CREATE VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-view-transact-sql)」を参照してください。  
   
- **ScriptDriIncludeSystemNames**  
+ **[ScriptDriIncludeSystemNames]**  
  宣言参照整合性を適用するために、システムによって生成される制約名を含めます。 既定値は False です。 詳細については、「 [REFERENTIAL_CONSTRAINTS &#40;transact-sql&#41;](/sql/relational-databases/system-information-schema-views/referential-constraints-transact-sql)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

@@ -15,14 +15,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 833410b6daa15924f0875cee77ad432aa9fac369
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069488"
 ---
 # <a name="select-mining-structure-dialog-box-mining-accuracy-chart-view"></a>[マイニング構造の選択] ダイアログ ボックス ([マイニング精度チャート] ビュー)
-  
   **[マイニング構造の選択]** ダイアログ ボックスを使用すると、精度を比較またはテストするマイニング モデルを含むマイニング構造を選択できます。  
   
 > [!NOTE]  
@@ -33,6 +32,6 @@ ms.locfileid: "66069488"
 ## <a name="see-also"></a>参照  
  [マイニング精度チャートデザイナー &#40;データマイニング&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [テストと検証のタスクと操作方法 &#40;データマイニング&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [データマイニング&#41;のテストと検証 &#40;](data-mining/testing-and-validation-data-mining.md)  
+ [テストおよび検証 &#40;データ マイニング&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

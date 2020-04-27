@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: da7d6541f7bf31920519cc7462bdfd24a5f6dc0d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63067691"
 ---
 # <a name="sqlclosecursor"></a>SQLCloseCursor
-  **SqlcloSQLFreeStmt**は、 [](sqlfreestmt.md) *オプション*の値を SQL_CLOSE に置き換えます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC ドライバーでは、 **sqlcloの**受信時に保留中の結果セットの行が破棄されます。 ステートメントの列とパラメーターのバインド (存在する場合) は、 **Sqlcloに**よって変更されないことに注意してください。  
+  **SqlcloSQLFreeStmt**は、 [SQLFreeStmt](sqlfreestmt.md) *オプション*の値を SQL_CLOSE に置き換えます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC ドライバーでは、 **sqlcloの**受信時に保留中の結果セットの行が破棄されます。 ステートメントの列とパラメーターのバインド (存在する場合) は、 **Sqlcloに**よって変更されないことに注意してください。  
   
 ## <a name="see-also"></a>参照  
  [SQLCloseCursor](https://go.microsoft.com/fwlink/?LinkId=59331)   

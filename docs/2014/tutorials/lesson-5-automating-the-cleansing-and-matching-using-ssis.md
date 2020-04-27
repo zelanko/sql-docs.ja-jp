@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ec6f347cdbc6d14e8f621466a1708b8ee9fe7d36
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489752"
 ---
 # <a name="lesson-5-automating-the-cleansing-and-matching-using-ssis"></a>レッスン 5: SSIS を使用してクレンジングと照合を自動化する
@@ -34,7 +34,7 @@ ms.locfileid: "65489752"
   
 5.  SSIS パッケージによって作成された DQS クレンジング プロジェクトの結果を確認し、必要に応じてインタラクティブなクレンジングを実行して、ナレッジ ベースを拡充します。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
  [タスク 1 &#40;前提条件&#41;: MDS での仕入先データの削除](../../2014/tutorials/task-1-prerequisite-removing-supplier-data-in-mds.md)  
   
   

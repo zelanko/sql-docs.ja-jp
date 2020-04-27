@@ -15,17 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f4a17b9b6599a57275524308608ac6ef18a8e18e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63128659"
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
   この表は、 **SQLGetInfo**によって返される値を示しています。 返される値は、接続先サーバーのバージョン番号によって異なる場合があります。  
   
- **** Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の sqlgetinfo は、ODBC ドライバー ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sqlsrv32.dll) の**sqlgetinfo**とは異なります。DLL) SQL_KEYWORDS と0のバッファー長を使用して**SQLGetInfo**が呼び出された場合。  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ドライバーは SQL_SUCCESS を返しますが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC ドライバーは SQL_SUCCESS_WITH_INFO を返します。  ただし、出力キーワード文字列よりも小さい0以外のバッファー長を指定して呼び出さ**** れた[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]場合、Native Client の SQLGetInfo は SQL_SUCCESS_WITH_INFO と SQLState 01004 を返します。  
+ **SQLGetInfo** Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の sqlgetinfo は、ODBC ドライバー ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sqlsrv32.dll) の**sqlgetinfo**とは異なります。DLL) SQL_KEYWORDS と0のバッファー長を使用して**SQLGetInfo**が呼び出された場合。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ドライバーは SQL_SUCCESS を返しますが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC ドライバーは SQL_SUCCESS_WITH_INFO を返します。  ただし、出力キーワード文字列よりも小さい0以外のバッファー長を指定して呼び出さ**SQLGetInfo**れた[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]場合、Native Client の SQLGetInfo は SQL_SUCCESS_WITH_INFO と SQLState 01004 を返します。  
   
 |fInfoType|rgbInfoValue|  
 |---------------|------------------|  
@@ -91,8 +90,7 @@ ms.locfileid: "63128659"
 |SQL_DATA_SOURCE_READ_ONLY|接続属性 SQL_ATTR_ACCESS_MODE の設定によって異なります。|  
 |SQL_DATABASE_NAME|接続の現在のデータベース。|  
 |SQL_DBMS_NAME|"Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]"|  
-|SQL_DBMS_VER|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の接続されているインスタンスのバージョン番号。|  
+|SQL_DBMS_VER|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の接続されているインスタンスのバージョン番号。|  
 |SQL_DEFAULT_TXN_ISOLATION|SQL_TXN_READ_COMMITTED|  
 |SQL_DESCRIBE_PARAMETER|"Y"|  
 |SQL_DRIVER_NAME|"sqlncli11.dll"|  
@@ -119,15 +117,14 @@ ms.locfileid: "63128659"
 |SQL_IDENTIFIER_QUOTE_CHAR|" (二重引用符)|  
 |SQL_INDEX_KEYWORDS|SQL_IK_ASC、SQL_IK_DESC|  
 |SQL_INFO_SCHEMA_VIEWS|この要求はドライバーではサポートされません。|  
-|SQL_INFO_SS_NETLIB_NAME|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバー固有の属性。 接続で使用中のネットワーク ライブラリの名前。<br /><br /> 既定では、DBNETLIB が返されます。  この場合、DBNETLIB はネットワークライブラリを参照し、DBNETLIB には関連付けられていません。|  
+|SQL_INFO_SS_NETLIB_NAME|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバー固有の属性。 接続で使用中のネットワーク ライブラリの名前。<br /><br /> 既定では、DBNETLIB が返されます。  この場合、DBNETLIB はネットワークライブラリを参照し、DBNETLIB には関連付けられていません。|  
 |SQL_INTEGRITY|"Y"|  
 |SQL_KEYSET_CURSOR_ATTRIBUTES1|SQL_CA1_ABSOLUTE、SQL_CA1_BOOKMARK、SQL_CA1_BULK_ADD、SQL_CA1_BULK_DELETE_BY_BOOKMARK、SQL_CA1_BULK_FETCH_BY_BOOKMARK、SQL_CA1_BULK_UPDATE_BY_BOOKMARK、SQL_CA1_LOCK_NO_CHANGE、SQL_CA1_NEXT、SQL_CA1_POS_DELETE、SQL_CA1_POS_POSITION、SQL_CA1_POS_REFRESH、SQL_CA1_POS_UPDATE、SQL_CA1_POSITIONED_DELETE、SQL_CA1_POSITIONED_UPDATE、SQL_CA1_RELATIVE、SQL_CA1_SELECT_FOR_UPDATE|  
 |SQL_KEYSET_CURSOR_ATTRIBUTES2|SQL_CA2_CRC_EXACT、SQL_CA2_LOCK_CONCURRENCY、SQL_CA2_MAX_ROWS_CATALOG、SQL_CA2_MAX_ROWS_DELETE、SQL_CA2_MAX_ROWS_INSERT、SQL_CA2_MAX_ROWS_SELECT、SQL_CA2_MAX_ROWS_UPDATE、SQL_CA2_OPT_ROWVER_CONCURRENCY、SQL_CA2_OPT_VALUES_CONCURRENCY、SQL_CA2_READ_ONLY_CONCURRENCY、SQL_CA2_SENSITIVITY_ADDITIONS、SQL_CA2_SENSITIVITY_UPDATES、SQL_CA2_SIMULATE_UNIQUE|  
 |SQL_KEYWORDS|BREAK、BROWSE、BULK、CHECKPOINT、CLUSTERED、COMMITTED、COMPUTE、CONFIRM、CONTROLROW、DATABASE、DBCC、DISK、DISTRIBUTED、DUMMY、DUMP、ERRLVL、ERROREXIT、EXIT、FILE、FILLFACTOR、FLOPPY、HOLDLOCK、IDENTITY_INSERT、IDENTITYCOL、IF、KILL、LINENO、LOAD、MIRROREXIT、NONCLUSTERED、OFF、OFFSETS、ONCE、OVER、PERCENT、PERM、PERMANENT、PLAN、PRINT、PROC、PROCESSEXIT、RAISERROR、READ、READTEXT、RECONFIGURE、REPEATABLE、RETURN、ROWCOUNT、RULE、SAVE、SERIALIZABLE、SETUSER、SHUTDOWN、STATISTICS、TAPE、TEMP、TEXTSIZE、TRAN、TRIGGER、TRUNCATE、TSEQUEL、UNCOMMITTED、UPDATETEXT、USE、WAITFOR、WHILE、WRITETEXT|  
 |SQL_LIKE_ESCAPE_CLAUSE|"Y"|  
 |SQL_LOCK_TYPES|SQL_LCK_NO_CHANGE|  
-|SQL_MAX_ASYNC_CONCURRENT_STATEMENTS|1 で保護されたプロセスとして起動されました|  
+|SQL_MAX_ASYNC_CONCURRENT_STATEMENTS|1|  
 |SQL_MAX_BINARY_LITERAL_LEN|131072|  
 |SQL_MAX_CATALOG_NAME_LEN|128|  
 |SQL_MAX_CHAR_LITERAL_LEN|131072|  
@@ -137,7 +134,7 @@ ms.locfileid: "63128659"
 |SQL_MAX_COLUMNS_IN_ORDER_BY|16|  
 |SQL_MAX_COLUMNS_IN_SELECT|4000|  
 |SQL_MAX_COLUMNS_IN_TABLE|250|  
-|SQL_MAX_CONCURRENT_ACTIVITIES|1 で保護されたプロセスとして起動されました|  
+|SQL_MAX_CONCURRENT_ACTIVITIES|1|  
 |SQL_MAX_CURSOR_NAME_LEN|128|  
 |SQL_MAX_DRIVER_CONNECTIONS|0|  
 |SQL_MAX_IDENTIFIER_LEN|128|  
@@ -182,8 +179,7 @@ ms.locfileid: "63128659"
 |SQL_SCROLL_CONCURRENCY|SQL_SCCO_LOCK、SQL_SCCO_OPT_ROWVER、SQL_SCCO_OPT_VALUES、SQL_SCCO_READ_ONLY|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
 |SQL_SERVER_NAME|接続のサーバー名。|  
-|SQL_SPECIAL_CHARACTERS|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にインストールされている文字セットによって異なります。|  
+|SQL_SPECIAL_CHARACTERS|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にインストールされている文字セットによって異なります。|  
 |SQL_SQL92_DATETIME_FUNCTIONS|FALSE|  
 |SQL_SQL92_FOREIGN_KEY_DELETE_RULE|FALSE|  
 |SQL_SQL92_FOREIGN_KEY_UPDATE_RULE|FALSE|  
