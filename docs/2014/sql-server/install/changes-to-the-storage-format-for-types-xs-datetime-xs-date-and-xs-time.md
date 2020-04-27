@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0f631783aad92757edd4faae41cd43c06c431887
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096604"
 ---
 # <a name="changes-to-the-storage-format-for-types-xsdatetime-xsdate-and-xstime"></a>xs:dateTime 型、xs:date 型、および xs:time 型のストレージ形式の変更
@@ -28,7 +28,7 @@ ms.locfileid: "66096604"
 ## <a name="component"></a>コンポーネント  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>[説明]  
+## <a name="description"></a>説明  
  Xs: dateTime、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] xs: date、および xs: time 型ののストレージ形式が変更され、タイムゾーン情報の有無にかかわらず、タイムゾーンを保持できるようになりました。  
   
  XML スキーマ コレクションがこのいずれかの型を参照している場合は、コレクションに関連付けられているすべての列の XML インデックスが、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へのアップグレード後に無効になります。 これらの型に対しては、SELECT または XQUERIES (またはその両方) を使用してクエリを実行できますが、XML インデックスは使用されません。 負の年の値が検出された場合は、実行時エラーが発生します。  

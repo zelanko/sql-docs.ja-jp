@@ -11,14 +11,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e25553d57aabf32713e1369c75602ea7e12818db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096138"
 ---
 # <a name="complete---repair"></a>[完了 - 修復]
-  
   **[完了 - 修復]** ページを使用して、修復が完了したことを確認します。  
   
 ## <a name="options"></a>オプション  

@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e8c6534449ffc4e89efcd49c943726bf6ecd9f26
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096647"
 ---
 # <a name="changes-to-behavior-in-syslockinfo-and-sp_lock"></a>syslockinfo および sp_lock の動作に対する変更
@@ -28,12 +28,10 @@ ms.locfileid: "66096647"
 ## <a name="component"></a>コンポーネント  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>[説明]  
- で[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]は、 **syslockinfo**の**rsc_objid**列と**rsc_indid**列、および**sp_lock**の**objid**列と**indid**列は、常にオブジェクト ID とインデックス ID を返します。 
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] では、値 0 が返される場合があります。  
+## <a name="description"></a>説明  
+ で[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]は、 **syslockinfo**の**rsc_objid**列と**rsc_indid**列、および**sp_lock**の**objid**列と**indid**列は、常にオブジェクト ID とインデックス ID を返します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] では、値 0 が返される場合があります。  
   
- で[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]は、 **syslockinfo**と**sp_lock**は、1つのトランザクション内の特定のロックリソースに対して最大で2つの行を返します。 
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降では、ロックのパーティション分割が有効である場合、1 つのトランザクションで実行している同じリソースに対して複数行が返されることがあります。 返される行は最大 N + 1 行である場合があります。ここで、N は Cpu の数です。 さらに、同じリソースに対する GRANTED 要求および WAITING 要求を表示できます。[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] では、それらの要求を表示できませんでした。  
+ で[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]は、 **syslockinfo**と**sp_lock**は、1つのトランザクション内の特定のロックリソースに対して最大で2つの行を返します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降では、ロックのパーティション分割が有効である場合、1 つのトランザクションで実行している同じリソースに対して複数行が返されることがあります。 返される行は最大 N + 1 行である場合があります。ここで、N は Cpu の数です。 さらに、同じリソースに対する GRANTED 要求および WAITING 要求を表示できます。[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] では、それらの要求を表示できませんでした。  
   
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  

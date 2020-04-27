@@ -16,25 +16,21 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99418b11eecdb3077e3def746eae56e43bab2d60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096834"
 ---
 # <a name="accept-license-terms"></a>使用許諾条件への同意
-  
   **インストール ウィザードの** [使用許諾条件への同意] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ページを使用して、このリリースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の使用許諾条件に同意します。  
   
  使用許諾契約書を印刷することも、クリップボードにコピーすることもできます。 処理を続行するには、使用許諾条件に同意し、 **[次へ]** をクリックします。 インストールしない場合は、 **[キャンセル]** をクリックします。  
   
 ## <a name="customer-experience-improvement-program-ceip"></a>カスタマー エクスペリエンス向上プログラム (CEIP)  
- CEIP のレポートを有効にすると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は [!INCLUDE[msCoName](../../includes/msconame-md.md)]に定期的にレポートを送信するように構成されます。 レポートには、ハードウェア構成に関する情報と、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] およびコンポーネントがどのように使用されているかを示す情報が含められます。 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、機能の使用状況データを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能強化のために使用します。 この機能によって関しされる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントは次のとおりです。  
+ CEIP のレポートを有効にすると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は [!INCLUDE[msCoName](../../includes/msconame-md.md)]に定期的にレポートを送信するように構成されます。 レポートには、ハードウェア構成に関する情報と、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] およびコンポーネントがどのように使用されているかを示す情報が含められます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、機能の使用状況データを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能強化のために使用します。 この機能によって関しされる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントは次のとおりです。  
   
--   
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]
-  
+-   [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]  
   
@@ -46,7 +42,7 @@ ms.locfileid: "66096834"
   
 -   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セットアップ  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ  
   
  機能の使用に関する情報は [!INCLUDE[msCoName](../../includes/msconame-md.md)]に送信され、アクセスが制限された場所に格納されます。  
   
@@ -61,21 +57,17 @@ ms.locfileid: "66096834"
  このレジストリ キーの値には、収集を実行する時刻が 00:00 (午前 0 時) から何分後であるかが示されています。 たとえば、値が 60 の場合は収集が午前 1 時に実行され、1200 の場合は午後 8 時に実行されます。  
   
 ## <a name="error-reporting"></a>[エラー報告]  
- 
-  **に関する機能のエラーと使用状況のレポート機能を有効にするには、** インストール ウィザードの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [エラーと使用状況レポートの設定] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ページを使用します。  
+ **に関する機能のエラーと使用状況のレポート機能を有効にするには、** インストール ウィザードの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [エラーと使用状況レポートの設定] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ページを使用します。  
   
 ### <a name="options"></a>オプション  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定では、機能の使用状況データ収集およびエラー レポート機能は、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]とそのコンポーネントで無効になっています。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定では、機能の使用状況データ収集およびエラー レポート機能は、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]とそのコンポーネントで無効になっています。  
   
  [エラー報告]  
  エラー レポート機能を有効にすると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は次の [!INCLUDE[msCoName](../../includes/msconame-md.md)] コンポーネントに重大なエラーが発生した場合に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に自動的にレポートを送信するように構成されます。  
   
--   
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]
+-   [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-  
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]・  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]  
   
@@ -85,8 +77,7 @@ ms.locfileid: "66096834"
   
 -   レプリケーション  
   
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] はエラー レポートを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能の強化に使用し、すべての情報を機密情報として扱います。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] はエラー レポートを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能の強化に使用し、すべての情報を機密情報として扱います。  
   
  エラーに関する情報はセキュリティで保護された接続 (https) を経由して [!INCLUDE[msCoName](../../includes/msconame-md.md)]に送信され、情報はアクセスが制限された場所に格納されます。 また、エラー レポートを独自の企業内エラー報告サーバーに送信することもできます。  
   
@@ -102,11 +93,9 @@ ms.locfileid: "66096834"
   
 -   エラーの原因となったプロセスのメモリまたはファイルからの情報。  
   
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] は、使用者のファイル、名前、住所、電子メール アドレス、またはその他の形式の個人情報を意図的に収集することはありません。 ただし、エラーの原因となったプロセスのメモリまたはファイルに格納されている個人情報が、エラー レポートとして送信される場合もあります。 この情報を使用者の ID を判断するために使用できる可能性がありますが、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] はこの情報をそのような目的に使用することはありません。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] は、使用者のファイル、名前、住所、電子メール アドレス、またはその他の形式の個人情報を意図的に収集することはありません。 ただし、エラーの原因となったプロセスのメモリまたはファイルに格納されている個人情報が、エラー レポートとして送信される場合もあります。 この情報を使用者の ID を判断するために使用できる可能性がありますが、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] はこの情報をそのような目的に使用することはありません。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のプライバシーとデータ収集ポリシーについては、「 [Microsoft SQL Server のプライバシーに関する声明](../../../2014/getting-started/microsoft-sql-server-privacy-statement.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のプライバシーとデータ収集ポリシーについては、「 [Microsoft SQL Server のプライバシーに関する声明](../../../2014/getting-started/microsoft-sql-server-privacy-statement.md)」を参照してください。  
   
  エラー レポートを有効にしている場合に重大なエラーが発生すると、そのエラーに関する [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポート技術情報の記事を示す [!INCLUDE[msCoName](../../includes/msconame-md.md)] からの応答が Windows イベント ログに表示されることがあります。  
   

@@ -13,18 +13,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c6599a087efa16a1fa83a37e1a26b362b971cbc6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096454"
 ---
 # <a name="cluster-resource-group"></a>クラスター リソース グループ
   [クラスター リソース グループ] ページを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仮想サーバー リソースが配置されるディスクを指定します。  
   
 ## <a name="options"></a>オプション  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クラスター リソース グループ名を指定します。 2 つのオプションがあります。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クラスター リソース グループ名を指定します。 2 つのオプションがあります。  
   
 -   ドロップダウン リストを使用して、使用する既存のグループを指定します。  
   

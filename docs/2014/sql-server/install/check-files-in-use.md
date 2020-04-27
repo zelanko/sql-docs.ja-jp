@@ -11,14 +11,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 34b51b26454766498ee601baae3ccc52cd1c5768
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096531"
 ---
 # <a name="check-files-in-use"></a>使用中のファイルの確認
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新プログラムのインストール後に Windows が再起動されないようにするには、[使用中のファイルの確認] ページを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新プログラムのセットアップ プログラムで必要とされるファイルをロックしているプロセスを特定します。  
   
  更新する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続しているすべてのアプリケーションとサービスを停止します。 これには [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] および [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を停止することが含まれます。  
@@ -33,8 +32,7 @@ ms.locfileid: "66096531"
   
 -   プロセスの名前  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能の名前  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能の名前  
   
 -   プロセスの種類  
   
@@ -46,11 +44,11 @@ ms.locfileid: "66096531"
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
   
-|Name|[説明]|  
+|名前|説明|  
 |----------|-----------------|  
-|プロセス|更新対象のファイルを使用しているプロセスの完全な名前を表示します。|  
+|Process|更新対象のファイルを使用しているプロセスの完全な名前を表示します。|  
 |種類|プロセスの種類を表示します。|  
-|アカウント|プロセスが実行されているアカウントを表示します。|  
+|Account|プロセスが実行されているアカウントを表示します。|  
 |プロセス ID|プロセス ID を表示します。|  
   
   

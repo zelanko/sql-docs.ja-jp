@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f5a8508218ed6a2b4407943fe962959e3cd4f97d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086614"
 ---
 # <a name="cross-validation-tab-mining-accuracy-chart-view"></a>[相互検証] タブ ([マイニング精度チャート] ビュー)
@@ -39,8 +39,7 @@ ms.locfileid: "66086614"
   
 -   必要に応じて、予測の精度の評価方法を制御するパラメーターを設定します。  
   
--   
-  **[結果の取得]** をクリックして相互検証の結果を表示します。  
+-   **[結果の取得]** をクリックして相互検証の結果を表示します。  
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
  **フォールドカウント**  
@@ -53,11 +52,10 @@ ms.locfileid: "66086614"
 > [!NOTE]  
 >  フォールドの数を増やすほど、クロス検証の実行に必要な時間もその分だけ長くなります。 ケースの数が多く、 **[フォールド カウント]** の値も大きい場合は、パフォーマンス上の問題が発生する可能性があります。  
   
- **ケースの最大数**  
+ **[ケースの最大数]**  
  相互検証に使用するケースの最大数を指定します。 特定のフォールド内のケースの数は、 **[ケースの最大数]** の値を **[フォールド カウント]** の値で除算した結果と等しくなります。  
   
- 
-  **0**を指定した場合、ソース データ内のすべてのケースが相互検証に使用されます。  
+ **0**を指定した場合、ソース データ内のすべてのケースが相互検証に使用されます。  
   
  既定値はありません。  
   
@@ -92,8 +90,7 @@ ms.locfileid: "66086614"
  相互検証レポートに表示された結果の解釈方法の詳細については、「 [相互検証レポートのメジャー](data-mining/measures-in-the-cross-validation-report.md)」を参照してください。  
   
 ## <a name="setting-the-accuracy-threshold"></a>精度のしきい値の設定  
- 
-  **[対象の** **しきい値]** の値を設定することで、予測精度を測定する場合の基準を制御できます。 しきい値は、精度バーの種類を表します。 それぞれの予測に対して、予測される値が正しいと見なされる確率が割り当てられます。 したがって、**[対象の** **しきい値]** に 1 に近い値を設定した場合、確率が非常に高い特定の予測を良い予測として数えるように指定していることになります。 逆に、**[対象の** **しきい値]** に 0 に近い値を設定した場合、確率が低い予測であっても "良い" 予測として数えられます。  
+ **[対象の** **しきい値]** の値を設定することで、予測精度を測定する場合の基準を制御できます。 しきい値は、精度バーの種類を表します。 それぞれの予測に対して、予測される値が正しいと見なされる確率が割り当てられます。 したがって、**[対象の** **しきい値]** に 1 に近い値を設定した場合、確率が非常に高い特定の予測を良い予測として数えるように指定していることになります。 逆に、**[対象の** **しきい値]** に 0 に近い値を設定した場合、確率が低い予測であっても "良い" 予測として数えられます。  
   
  予測の確率はデータの量や予測の種類に依存するので、推奨されるしきい値はありません。 異なる確率レベルの予測を調査したうえで、データに適した精度バーを決定する必要があります。 この作業は重要です。なぜなら、**[対象の** **しきい値]** に設定する値は、測定されるモデルの精度に影響を与えるからです。  
   
@@ -105,6 +102,6 @@ ms.locfileid: "66086614"
  [データマイニング&#41;のテストと検証 &#40;](data-mining/testing-and-validation-data-mining.md)   
  [クロス検証 &#40;Analysis Services-データマイニング&#41;](data-mining/cross-validation-analysis-services-data-mining.md)   
  [相互検証レポートのメジャー](data-mining/measures-in-the-cross-validation-report.md)   
- [データマイニングストアドプロシージャ &#40;Analysis Services データマイニング&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
+ [データ マイニングのストアド プロシージャ (Analysis Services - データ マイニング)](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
   

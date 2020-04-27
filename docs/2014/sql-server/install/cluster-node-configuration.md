@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd1abb5a1bdce0e758d4f36c861917064b20fee9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096433"
 ---
 # <a name="cluster-node-configuration"></a>クラスター ノードの構成
@@ -26,6 +26,6 @@ ms.locfileid: "66096433"
 ## <a name="options"></a>オプション  
  [インスタンス名]-ドロップダウンリストを使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、変更するフェールオーバークラスターインスタンスを選択します。 ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **  
   
- [**このノードの名前**]-このフィールドには、セットアップを実行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]しているコンピューターの名前が入力されます。 このコンピューターが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスで追加または削除されるフェールオーバー クラスター ノードです。  
+ **[このノードの名前]** - このフィールドには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを実行しているコンピューターの名前が代入されます。 このコンピューターが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスで追加または削除されるフェールオーバー クラスター ノードです。  
   
   
