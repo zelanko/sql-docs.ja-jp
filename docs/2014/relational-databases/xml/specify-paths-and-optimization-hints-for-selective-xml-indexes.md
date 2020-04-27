@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fd0d493f71bd0a6ac0e2d81d1427027ccdb6496c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62679800"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>選択的 XML インデックスのパスと最適化ヒントの指定
@@ -28,7 +28,7 @@ ms.locfileid: "62679800"
   
  選択的 XML インデックスの詳細については、「 [選択的 XML インデックス &#40;SXI&#41;](../xml/selective-xml-indexes-sxi.md)」を参照してください。  
   
-##  <a name="untyped"></a> 型指定されていない XML での XQuery 型と SQL Server 型について  
+##  <a name="understanding-xquery-and-sql-server-types-in-untyped-xml"></a><a name="untyped"></a> 型指定されていない XML での XQuery 型と SQL Server 型について  
  選択的 XML インデックスは、XQuery 型と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型という 2 つの型システムをサポートします。 インデックスを設定するパスを使用して、XQuery 式、または XML データ型の value() メソッドの戻り値の型のいずれかと一致させることができます。  
   
 -   インデックスを設定するパスに注釈が設定されていない場合、または XQUERY キーワードを使用して注釈が設定されている場合、パスは XQuery 式と一致します。 XQUERY 注釈付きノード パスには 2 種類のバリエーションがあります。  
@@ -135,7 +135,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
 
   
-##  <a name="typed"></a> 型指定された XML に対する選択的 XML インデックスのサポートについて  
+##  <a name="understanding-selective-xml-index-support-for-typed-xml"></a><a name="typed"></a> 型指定された XML に対する選択的 XML インデックスのサポートについて  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の型指定された XML は、特定の XML ドキュメントに関連付けられたスキーマです。 このスキーマは、ノードの全体的なドキュメントの構造と型を定義します。 スキーマが存在する場合、選択的 XML インデックスは、ユーザーがパスを昇格したときのスキーマ構造を適用することで、パスの XQUERY 型を指定する必要がないようにします。  
   
  選択的 XML インデックスは、次の XSD 型をサポートします。  
@@ -209,7 +209,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
  最適化ヒントの詳細については、「 [最適化ヒントの指定](#hints)」を参照してください。  
   
-##  <a name="paths"></a> パスの指定  
+##  <a name="specifying-paths"></a><a name="paths"></a> パスの指定  
  選択的 XML インデックスを使用して、実行する予定のクエリに関連する格納された XML データから、ノードのサブセットにのみインデックスを設定できます。 関連するノードのサブセットが XML ドキュメント内のノードの総数よりも大幅に少ない場合、選択的 XML インデックスには、関連するノードだけが格納されます。 選択的 XML インデックスを有効利用するには、インデックスを設定する適切なノードのサブセットを識別します。  
   
 ### <a name="choosing-the-nodes-to-index"></a>インデックスを設定するノードの選択  
@@ -346,7 +346,7 @@ WHERE T.xmldata.exist('
   
 
   
-##  <a name="hints"></a> 最適化ヒントの指定  
+##  <a name="specifying-optimization-hints"></a><a name="hints"></a> 最適化ヒントの指定  
  省略可能な最適化ヒントを使用して、選択的 XML インデックスによってインデックス設定されるノードのマッピングの詳細を指定できます。 たとえば、ノードのデータ型とカーディナリティ、およびデータの構造に関する特定の情報を指定できます。 この追加情報により、マッピングに対するサポートが向上します。 さらに、パフォーマンスの向上またはストレージの節約、あるいはその両方が実現します。  
   
  最適化ヒントの使用は任意です。 常に既定のマッピングをそのまま使用できます。これらは信頼できますが、最適化されたパフォーマンスとストレージを提供しない場合があります。  
@@ -418,7 +418,7 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
   
 
   
-##  <a name="sample"></a> 例で参照されるサンプル XML ドキュメント  
+##  <a name="sample-xml-document-for-examples"></a><a name="sample"></a> 例で参照されるサンプル XML ドキュメント  
  このトピックの例では、次に示すサンプル XML ドキュメントが参照されています。  
   
 ```xml  

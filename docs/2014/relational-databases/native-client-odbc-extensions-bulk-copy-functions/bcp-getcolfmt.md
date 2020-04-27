@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db8b433652829b16890552a70bd1e0d08d1c1bc4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62689090"
 ---
 # <a name="bcp_getcolfmt"></a>bcp_getcolfmt
@@ -60,7 +60,7 @@ pcbLen
  *分野*  
  プロパティを取得する列番号です。  
   
- *"*  
+ *property*  
  プロパティ定数のいずれかを指定します。  
   
  *pValue*  
@@ -75,7 +75,7 @@ pcbLen
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  列形式のプロパティ値については、 [bcp_setcolfmt](bcp-setcolfmt.md)のトピックを参照してください。 列形式のプロパティ値は**bcp_setcolfmt**関数を呼び出すことによって設定され、 **bcp_getcolfmt**関数は列形式のプロパティ値を検索するために使用されます。  
   
  以前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のバージョンと比較して、( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]またはそれ以降の) サーバーコンピューターに接続するときに、動作の変更が検出される場合があります。 詳細については、「[メタデータの検出](../native-client/features/metadata-discovery.md)」を参照してください。  

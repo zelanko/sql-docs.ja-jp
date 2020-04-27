@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: de28a4353c5d690e30cd2cefc20f50e4911c6ff1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62655677"
 ---
 # <a name="specify-how-changes-are-propagated-for-transactional-articles"></a>トランザクション アーティクルに変更を反映する方法の指定
@@ -37,11 +37,11 @@ ms.locfileid: "62655677"
 ## <a name="default-and-custom-stored-procedures"></a>既定のストアド プロシージャとカスタム ストアド プロシージャ  
  各テーブル アーティクルに対して、既定でレプリケーションによって作成されるのは、次の 3 つのプロシージャです。  
   
--   **sp_MSins_\< ** **>** *tablename* 。挿入を処理します。  
+-   **sp_MSins_\<** *tablename* **>**。挿入処理を行います。  
   
--   **sp_MSupd_\< ** **>** *tablename* 。更新を処理します。  
+-   **sp_MSupd_\<** *tablename* **>**。更新処理を行います。  
   
--   **sp_MSdel_\< ** **>** *tablename* 。削除を処理します。  
+-   **sp_MSdel_\<** *tablename* **>**。削除処理を行います。  
   
  このプロシージャで使用される** \< ***tablename*** > **は、アーティクルがパブリケーションにどのように追加されたか、およびサブスクリプションデータベースに所有者が異なる同じ名前のテーブルが含まれているかどうかによって異なります。  
   
@@ -148,7 +148,7 @@ old-c1, old-c2, old-c3,... old-cn
 > [!NOTE]  
 >  XCALL は、 **text** 列および **image** 列の前イメージ値が NULL であるという前提で使用してください。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次のプロシージャは、 `Vendor Table` サンプル データベース内の [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)] に対して作成された既定のプロシージャです。  
   
 ```  
@@ -214,6 +214,6 @@ go
 ```  
   
 ## <a name="see-also"></a>参照  
- [トランザクションレプリケーションのアーティクルオプション](article-options-for-transactional-replication.md)  
+ [Article Options for Transactional Replication](article-options-for-transactional-replication.md)  
   
   

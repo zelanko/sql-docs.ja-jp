@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b0326330e3d2052e8e997a293f666a8fc725391b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62689078"
 ---
 # <a name="bcp_done"></a>bcp_done
@@ -46,7 +46,7 @@ hdbc
 ## <a name="returns"></a>戻り値  
  [Bcp_batch](bcp-batch.md)を最後に呼び出した後に完全に保存された行の数。エラーが発生した場合は-1。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  [Bcp_sendrow](bcp-sendrow.md)または[bcp_moretext](bcp-moretext.md)を最後に呼び出した後に**bcp_done**を呼び出します。 すべてのデータをコピーした後に**bcp_done**を呼び出さないと、エラーになります。  
   
 ## <a name="see-also"></a>参照  

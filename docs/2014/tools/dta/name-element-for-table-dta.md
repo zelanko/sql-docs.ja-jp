@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16e5145ff3338cb597813e26e480d92aa899a1c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62657247"
 ---
 # <a name="name-element-for-table-dta"></a>Table の Name 要素 (DTA)
@@ -35,10 +35,9 @@ ms.locfileid: "62657247"
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特徴|[説明]|  
+|特徴|説明|  
 |--------------------|-----------------|  
-|**データ型と長さ**|
-  `string`、1 ～ 255 文字。|  
+|**データ型と長さ**|`string`、1 ～ 255 文字。|  
 |**既定値**|[なし] :|  
 |**個数**|必須。 各`Table`要素につき1回。|  
   

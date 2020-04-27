@@ -11,14 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a8a1825f00676618b9bcc98c774e7facd6f0e078
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62753019"
 ---
-# <a name="lesson-3-working-with-templates-solutions-and-script-projects"></a>レッスン 3: テンプレート、ソリューション、およびスクリプト プロジェクトの操作
-  
+# <a name="lesson-3-working-with-templates-solutions-and-script-projects"></a>レッスン 3:テンプレート、ソリューション、およびスクリプト プロジェクトの操作
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、カスタム テンプレートの作成およびソリューションとスクリプト プロジェクトの作成を実行できます。  
   
  このレッスンの内容は次のとおりです。  

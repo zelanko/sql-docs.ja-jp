@@ -25,10 +25,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41e0a3fcf4348efcb2108a1205c1d2d8eabfb85c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62736395"
 ---
 # <a name="assl-xml-conventions"></a>ASSL XML 規則
@@ -135,13 +135,10 @@ ms.locfileid: "62736395"
   
 -   内部の空白文字は保持されます。  
   
- 
-  `Name` プロパティと `ID` プロパティには、文字列要素の有効な文字に特別な制限があります。 および規約の詳細については、「 [Assl オブジェクトとオブジェクトの特性](assl-objects-and-object-characteristics.md)」を参照してください。 `ID` `Name`  
+ `Name` プロパティと `ID` プロパティには、文字列要素の有効な文字に特別な制限があります。 および規約の詳細については、「 [Assl オブジェクトとオブジェクトの特性](assl-objects-and-object-characteristics.md)」を参照してください。 `ID` `Name`  
   
  `DateTime`  
- .NET Framework `DateTime`からの構造体。 
-  `DateTime` の値を NULL にすることはできません。 
-  `DataTime` データ型がサポートしている下限の日付は 1601 年 1 月 1 日です。プログラマはこの日付を `DateTime.MinValue` として使用できます。 サポートされている下限の日付は、`DateTime` の値が欠落していることを示します。  
+ .NET Framework `DateTime`からの構造体。 `DateTime` の値を NULL にすることはできません。 `DataTime` データ型がサポートしている下限の日付は 1601 年 1 月 1 日です。プログラマはこの日付を `DateTime.MinValue` として使用できます。 サポートされている下限の日付は、`DateTime` の値が欠落していることを示します。  
   
  `Boolean`  
  {true, false} や {0, 1} のように値が 2 つだけの列挙。  
@@ -153,7 +150,7 @@ ms.locfileid: "62736395"
 |-------------------|-------------------|  
 |`Boolean`|False|  
 |`String`|"" (空の文字列)|  
-|`Integer`もしくは`Long`|0 (ゼロ)|  
+|`Integer` または `Long`|0 (ゼロ)|  
 |`Timestamp`|12:00:00 AM、1/1/0001 (0 ティックを持つ .NET Framework `System.DateTime`に対応)|  
   
  要素が存在するが空の場合は、既定値ではなく NULL 文字列の値を含んでいるとして解釈されます。  

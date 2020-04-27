@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 340423e23037ae401b1e5749fbed38b1822cfb41
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62677021"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-condition"></a>ポリシー ベースの管理条件のプロパティの表示または変更
@@ -35,19 +35,18 @@ ms.locfileid: "62677021"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  msdb データベースの PolicyAdministratorRole ロールのメンバーシップが必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-view-or-modify-a-conditions-properties"></a>条件のプロパティを表示または変更するには  
   
-1.  
-  **オブジェクト エクスプローラー**で、表示または変更する条件を含むサーバーをプラス記号をクリックして展開します。  
+1.  **オブジェクト エクスプローラー**で、表示または変更する条件を含むサーバーをプラス記号をクリックして展開します。  
   
 2.  プラス記号をクリックして **[管理]** フォルダーを展開します。  
   
@@ -55,11 +54,11 @@ ms.locfileid: "62677021"
   
 4.  プラス記号をクリックして **[条件]** フォルダーを展開します。  
   
-5.  表示または編集する条件を右クリックし、 **[プロパティ]** をクリックします。 [_Condition_name_ **条件を開く**] ダイアログボックスで使用可能なオプションの詳細については、「[新しい条件の作成] または [条件を開く] ダイアログボックス[、[全般] ページ](../../integration-services/general-page-of-integration-services-designers-options.md)、[条件を開く] ダイアログボックス、[[説明] ページ](create-new-condition-or-open-condition-dialog-box-description-page.md)」、および[「高度な編集 &#40;条件&#41; ダイアログボックス](advanced-edit-condition-dialog-box.md)」を参照してください。 [](open-condition-dialog-box-dependent-policies-page.md)  
+5.  表示または編集する条件を右クリックし、 **[プロパティ]** をクリックします。 [_Condition_name_ **条件を開く**] ダイアログボックスで使用可能なオプションの詳細については、「[新しい条件の作成] または [条件を開く] ダイアログボックス[、[全般] ページ](../../integration-services/general-page-of-integration-services-designers-options.md)、[条件を開く] ダイアログボックス、[[説明] ページ](create-new-condition-or-open-condition-dialog-box-description-page.md)」、および[「高度な編集 &#40;条件&#41; ダイアログボックス](advanced-edit-condition-dialog-box.md)」を参照してください。 [Open Condition Dialog Box, Dependent Policies Page](open-condition-dialog-box-dependent-policies-page.md)  
   
-6.  完了したら、 **[OK]** をクリックします。  
+6.  完了したら、[**OK**] をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-view-a-conditions-properties"></a>条件のプロパティを表示するには  
   

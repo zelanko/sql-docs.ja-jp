@@ -34,14 +34,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7004f2cae60ab69c6c4bf94ceee47d270579570b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62631368"
 ---
 # <a name="xml-indexes-sql-server"></a>XML インデックス (SQL Server)
-  
   `xml` データ型の列には XML インデックスを作成できます。 列に保存されている XML インスタンスのすべてのタグ、値、およびパスにインデックスが設定されるので、クエリのパフォーマンスが向上します。 次のような場合、XML インデックスの効果が得られる可能性があります。  
   
 -   ワークロードで XML 列へのクエリが頻繁に行われる場合。 データ変更時の XML インデックスのメンテナンス コストを考慮する必要があります。  
@@ -54,8 +53,7 @@ ms.locfileid: "62631368"
   
 -   セカンダリ XML インデックス  
   
- 
-  `xml` 型の列の最初のインデックスは、プライマリ XML インデックスである必要があります。 プライマリ XML インデックスを使用している場合は、PATH、VALUE、および PROPERTY という種類のセカンダリ XML インデックスがサポートされます。 クエリの種類によって異なりますが、これらのセカンダリ XML インデックスを使用することで、クエリのパフォーマンス向上に役立つ場合があります。  
+ `xml` 型の列の最初のインデックスは、プライマリ XML インデックスである必要があります。 プライマリ XML インデックスを使用している場合は、PATH、VALUE、および PROPERTY という種類のセカンダリ XML インデックスがサポートされます。 クエリの種類によって異なりますが、これらのセカンダリ XML インデックスを使用することで、クエリのパフォーマンス向上に役立つ場合があります。  
   
 > [!NOTE]  
 >  XML インデックスを作成したり変更したりするには、`xml` データ型を操作できるようにデータベース オプションが正しく設定されている必要があります。 詳細については、「 [XML 列でのフルテキスト検索の使用](use-full-text-search-with-xml-columns.md)」を参照してください。  

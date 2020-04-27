@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a19c67f19c6b1b73947ef752a09516449eeec1a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62655355"
 ---
 # <a name="smo-syntax-conventions"></a>SMO 構文表記規則
@@ -27,8 +27,7 @@ ms.locfileid: "62655355"
   
 |表記|使用目的|  
 |----------------|--------------|  
-|UPPERCASE|
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、マクロ名、オペレーティング システム レベルで使用される用語、あるいはテキスト内でのファイル名。|  
+|UPPERCASE|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、マクロ名、オペレーティング システム レベルで使用される用語、あるいはテキスト内でのファイル名。|  
 |スペース|サンプルのコマンド ラインおよびプログラム コード。|  
 |*斜体*|テキストに記述されている変数、数式、または定義されている用語。 構文では、斜体文字はユーザーが指定する情報のプレースホルダーを示しています。|  
 |**太字**|SMO のオブジェクト、イベント、メソッド、プロパティなど。テキストに記述されているプログラミング用語。|  

@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f76ba993508807e57e73d5e53ea25a4cbe382529
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727447"
 ---
 # <a name="write-enabled-dimensions"></a>書き込み許可ディメンション
@@ -30,8 +30,7 @@ ms.locfileid: "62727447"
   
  ディメンション内のデータは通常、読み取り専用です。 ただし、シナリオによってはディメンションに書き込み許可を設定する必要が生じます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]は、ディメンションを書き込み可能にすることにより、ビジネスユーザーはディメンションの内容を変更し、ディメンションの階層に対する変更に対する直接的な影響を確認できます。 1 つのテーブルに基づいているすべてのディメンションへの書き込みを許可できます。 書き込み許可ディメンションでは、ビジネス ユーザーと管理者は、ディメンション内の属性メンバーの変更、移動、追加、および削除を行うことができます。 これらの更新は、まとめて*ディメンションの書き戻し*と呼ばれます。  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、すべてのディメンション属性に対するディメンションの書き戻しがサポートされており、ディメンションのすべてのメンバーを変更できます。 書き込み許可キューブや書き込み許可パーティションでは、更新はキューブのソース テーブルとは別に、書き戻しテーブルに格納されます。 ただし、書き込み許可ディメンションでは、更新はディメンションのテーブルに直接記録されます。 また、書き込み許可ディメンションが複数パーティションのキューブに含まれており、そのデータ ソースの一部またはすべてにディメンション テーブルのコピーがあると、書き戻しプロセスでは元のディメンション テーブルだけが更新されます。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、すべてのディメンション属性に対するディメンションの書き戻しがサポートされており、ディメンションのすべてのメンバーを変更できます。 書き込み許可キューブや書き込み許可パーティションでは、更新はキューブのソース テーブルとは別に、書き戻しテーブルに格納されます。 ただし、書き込み許可ディメンションでは、更新はディメンションのテーブルに直接記録されます。 また、書き込み許可ディメンションが複数パーティションのキューブに含まれており、そのデータ ソースの一部またはすべてにディメンション テーブルのコピーがあると、書き戻しプロセスでは元のディメンション テーブルだけが更新されます。  
   
  書き込み許可ディメンションと書き込み許可キューブは、互いに異なりますが補完的な特徴を備えています。 書き込み許可ディメンションでは、ビジネス ユーザーはメンバーを更新できますが、書き込み許可キューブではセル値を更新できます。 これらの 2 つの機能は補完的なものですが、両方を組み合わせて使用する必要はありません。 ディメンションの書き戻しを行うために、ディメンションがキューブに含まれている必要はありません。 書き込み許可ディメンションは、書き込みが許可されていないキューブに含めることもできます。 ディメンションとキューブの書き込みを許可するときと、そのセキュリティをメンテナンスするときには、異なる手順を使用します。  
   
@@ -63,6 +62,6 @@ ms.locfileid: "62727447"
 ## <a name="see-also"></a>参照  
  [データベースディメンションのプロパティ](database-dimension-properties.md)   
  [書き込み許可パーティション](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [ディメンション &#40;Analysis Services-多次元データ&#41;](dimensions-analysis-services-multidimensional-data.md)  
+ [ディメンション &#40;Analysis Services - 多次元データ&#41;](dimensions-analysis-services-multidimensional-data.md)  
   
   

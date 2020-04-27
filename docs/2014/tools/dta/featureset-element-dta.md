@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a4bf6fac03eab1e096c0ac5dc63285c11bd3f114
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62735755"
 ---
 # <a name="featureset-element-dta"></a>FeatureSet 要素 (DTA)
@@ -36,13 +36,12 @@ ms.locfileid: "62735755"
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特徴|[説明]|  
+|特徴|説明|  
 |--------------------|-----------------|  
 |**データ型と長さ**|`string`。最大長はありません。|  
 |**指定できる値**|**IDX_IV**<br /> インデックスおよびインデックス付きビュー。<br /><br /> **IDX**<br /> インデックスのみ。<br /><br /> **IV**<br /> インデックス付きビューのみ。<br /><br /> **NCL_IDX**<br /> 非クラスター化インデックスのみ。<br /><br /> この要素では、上記の値のいずれか 1 つを使用してください。|  
 |**既定値**|**IDX**|  
-|**個数**|要素が使用さ`TuningOptions`れている場合`DropOnlyMode`を除き、各要素につき1回の出現が必要です。 
-  `DropOnlyMode` を使用している場合は、`FeatureSet` を使用できません。 これらの要素を同時に指定することはできません。|  
+|**個数**|要素が使用さ`TuningOptions`れている場合`DropOnlyMode`を除き、各要素につき1回の出現が必要です。 `DropOnlyMode` を使用している場合は、`FeatureSet` を使用できません。 これらの要素を同時に指定することはできません。|  
   
 ## <a name="element-relationships"></a>要素の関係  
   

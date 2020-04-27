@@ -16,33 +16,27 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2f8f7264b63417d9dc337aec62ee5734dcf8ad98
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62761680"
 ---
 # <a name="understanding-database-engine-errors"></a>データベース エンジン エラーについて
-  によって発生[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]するエラーには、次の表で説明する属性があります。  
+  次の表で、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] によって発生したエラーの属性について説明します。  
   
-|Attribute|[説明]|  
+|Attribute|説明|  
 |---------------|-----------------|  
 |エラー番号|エラー メッセージには、それぞれ一意なエラー番号が付いています。|  
 |エラー メッセージ文字列|エラー メッセージには、エラーの原因についての診断情報が含まれています。 多くのエラー メッセージには、エラーが発生したオブジェクト名などの情報を挿入するための置換変数が用意されています。|  
 |重大度|重大度レベルは、エラーの重大度を示します。 1、2 など重大度レベルが低いエラーは情報メッセージ、または低レベル警告です。 重大度レベルが高いエラーは、できるだけ早く対処することが推奨される問題であることを示します。 重大度レベルの詳細については、「 [データベース エンジン エラーの重大度](database-engine-error-severities.md)」を参照してください。|  
-|State|エラー メッセージが [!INCLUDE[ssDE](../../includes/ssde-md.md)]のコード内の複数の場所で生成される場合があります。 たとえば、複数の異なる条件に対して 1105 エラーが生成されることがあります。 エラーを生成する特定の条件はそれぞれ一意の状態コードを割り当てます。<br /><br /> 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] のサポート技術情報など既知の問題に関する情報が含まれたデータベースを参照する場合は、状態番号を使用して、記録された問題と検出されたエラーが同じかどうかを判断することができます。 たとえば、サポート技術情報の記事が状態 2 の 1105 エラーについて説明しており、受け取った 1105 エラー メッセージが状態 3 の場合、このエラーは記事で報告されているエラーとは原因が異なる可能性が高いと考えられます。<br /><br /> 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] のサポート エンジニアがこのエラーの状態コードを使用して、エラー コードが生成されたソース コード内の場所を探すこともできます。 この情報が、問題に対する他の診断方法のヒントになる場合もあります。|  
+|State|エラー メッセージが [!INCLUDE[ssDE](../../includes/ssde-md.md)]のコード内の複数の場所で生成される場合があります。 たとえば、複数の異なる条件に対して 1105 エラーが生成されることがあります。 エラーを生成する特定の条件はそれぞれ一意の状態コードを割り当てます。<br /><br /> [!INCLUDE[msCoName](../../includes/msconame-md.md)] のサポート技術情報など既知の問題に関する情報が含まれたデータベースを参照する場合は、状態番号を使用して、記録された問題と検出されたエラーが同じかどうかを判断することができます。 たとえば、サポート技術情報の記事が状態 2 の 1105 エラーについて説明しており、受け取った 1105 エラー メッセージが状態 3 の場合、このエラーは記事で報告されているエラーとは原因が異なる可能性が高いと考えられます。<br /><br /> [!INCLUDE[msCoName](../../includes/msconame-md.md)] のサポート エンジニアがこのエラーの状態コードを使用して、エラー コードが生成されたソース コード内の場所を探すこともできます。 この情報が、問題に対する他の診断方法のヒントになる場合もあります。|  
 |プロシージャ名|エラーが発生したストアド プロシージャまたはトリガーの名前です。|  
 |行番号|バッチ、ストアド プロシージャ、トリガー、または関数内のどのステートメントでエラーが発生したかを示します。|  
   
- 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンス内のすべてのシステム エラー メッセージおよびユーザー定義のエラー メッセージは、 **sys.messages** カタログ ビューに含まれています。 RAISERROR ステートメントを使用すると、アプリケーションにユーザー定義エラーを返すことができます。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンス内のすべてのシステム エラー メッセージおよびユーザー定義のエラー メッセージは、 **sys.messages** カタログ ビューに含まれています。 RAISERROR ステートメントを使用すると、アプリケーションにユーザー定義エラーを返すことができます。  
   
- 
-  
-  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] **SQLClient** 名前空間、ActiveX Data Objects (ADO)、OLE DB、Open Database Connectivity (ODBC) などのデータベース API はすべて、基本的なエラー属性を報告します。 この情報には、エラー番号およびメッセージ文字列が含まれています。 ただし、すべての API で他のすべてのエラー属性が報告されるわけではありません。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] **SQLClient** 名前空間、ActiveX Data Objects (ADO)、OLE DB、Open Database Connectivity (ODBC) などのすべてのデータベース API で、基本的なエラー属性が報告されます。 この情報には、エラー番号およびメッセージ文字列が含まれています。 ただし、すべての API で他のすべてのエラー属性が報告されるわけではありません。  
   
  TRY...CATCH 構造の TRY ブロックの適用範囲内で発生したエラーの詳細は、関連付けられた CATCH ブロックの適用範囲内で ERROR_LINE、ERROR_MESSAGE、ERROR_NUMBER、ERROR_PROCEDURE、ERROR_SEVERITY、ERROR_STATE などの関数を使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] コードで取得することができます。 詳細については、「 [TRY...CATCH &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql)」を参照してください。  
   
@@ -63,15 +57,15 @@ SELECT
  詳細については、「 [sys.messages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Transact-sql&#41;&#40;のメッセージ](/sql/relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages)   
- [RAISERROR &#40;Transact-sql&#41;](/sql/t-sql/language-elements/raiserror-transact-sql)   
- [@@ERROR &#40;transact-sql&#41;](/sql/t-sql/functions/error-transact-sql)   
- [お試しください...CATCH &#40;Transact-sql&#41;](/sql/t-sql/language-elements/try-catch-transact-sql)   
- [ERROR_LINE &#40;Transact-sql&#41;](/sql/t-sql/functions/error-line-transact-sql)   
- [ERROR_MESSAGE &#40;Transact-sql&#41;](/sql/t-sql/functions/error-message-transact-sql)   
- [ERROR_NUMBER &#40;Transact-sql&#41;](/sql/t-sql/functions/error-number-transact-sql)   
- [ERROR_PROCEDURE &#40;Transact-sql&#41;](/sql/t-sql/functions/error-procedure-transact-sql)   
- [ERROR_SEVERITY &#40;Transact-sql&#41;](/sql/t-sql/functions/error-severity-transact-sql)   
- [ERROR_STATE &#40;Transact-sql&#41;](/sql/t-sql/functions/error-state-transact-sql)  
+ [sys.messages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages)   
+ [RAISERROR &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/raiserror-transact-sql)   
+ [@@ERROR &#40;Transact-SQL&#41;](/sql/t-sql/functions/error-transact-sql)   
+ [TRY...CATCH &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql)   
+ [ERROR_LINE &#40;Transact-SQL&#41;](/sql/t-sql/functions/error-line-transact-sql)   
+ [ERROR_MESSAGE &#40;Transact-SQL&#41;](/sql/t-sql/functions/error-message-transact-sql)   
+ [ERROR_NUMBER &#40;Transact-SQL&#41;](/sql/t-sql/functions/error-number-transact-sql)   
+ [ERROR_PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/functions/error-procedure-transact-sql)   
+ [ERROR_SEVERITY &#40;Transact-SQL&#41;](/sql/t-sql/functions/error-severity-transact-sql)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](/sql/t-sql/functions/error-state-transact-sql)  
   
   

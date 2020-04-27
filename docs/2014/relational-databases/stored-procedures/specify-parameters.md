@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f936853c284196b05b6da6369f4410bed2297d4d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62736365"
 ---
 # <a name="specify-parameters"></a>パラメーターの指定
@@ -60,13 +60,13 @@ GO
 ## <a name="specifying-parameter-names"></a>パラメーター名の指定  
  プロシージャを作成してパラメーター名を宣言する際には、パラメーター名の先頭を 1 つの \@ 文字にし、そのプロシージャのスコープ内でパラメーター名が一意になるようにする必要があります。  
   
- パラメーターに明示的に名前を付け、プロシージャ呼び出しで各パラメーターに適切な値を代入することで、パラメーターを任意の順序で指定できます。 たとえば、**my_proc** というプロシージャが **\@first**、**\@second**、および **\@third** という 3 つのパラメーターを必要とする場合、プロシージャに渡される値は、`EXECUTE my_proc @second = 2, @first = 1, @third = 3;` ようにパラメーター名に代入できます。  
+ パラメーターに明示的に名前を付け、プロシージャ呼び出しで各パラメーターに適切な値を代入することで、パラメーターを任意の順序で指定できます。 たとえば、**my_proc** というプロシージャが **\@first**、 **\@second**、および **\@third** という 3 つのパラメーターを必要とする場合、プロシージャに渡される値は、`EXECUTE my_proc @second = 2, @first = 1, @third = 3;` ようにパラメーター名に代入できます。  
   
 > [!NOTE]
->  1つのパラメーター値が form ** \@parameter =**_value_の形式で指定されている場合は、後続のすべてのパラメーターをこの方法で指定する必要があります。 パラメーター値が form ** \@parameter =**_value_の形式で渡されない場合は、CREATE PROCEDURE ステートメントに指定されているように、同じ順序 (左から右) で値を指定する必要があります。  
+>  1 つのパラメーター値を **\@parameter =** _value_ の形式で指定した場合は、後続のパラメーターもすべてこの形式で指定する必要があります。 パラメーター値を **\@parameter =** _value_ の形式で渡さない場合は、CREATE PROCEDURE ステートメント内のパラメーターと同じ順序 (左から右) で値を指定する必要があります。  
 > 
 > [!WARNING]
->  Parameter ** \@=**_value_の形式で渡されたパラメーターのスペルが間違っている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と、によってエラーが生成され、プロシージャの実行が防止されます。  
+>  **\@parameter =** _value_ の形式で渡すパラメーターのスペルが間違っていると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってエラーが生成され、プロシージャは実行されません。  
   
 ## <a name="specifying-parameter-data-types"></a>パラメーターのデータ型の指定  
  パラメーターを CREATE PROCEDURE ステートメントで宣言する場合は、パラメーターのデータ型を定義する必要があります。 パラメーターのデータ型により、プロシージャの呼び出し時にパラメーターとして指定できる値の型と範囲が決まります。 たとえば、`tinyint` データ型のパラメーターを定義した場合は、そのパラメーターに渡す値として 0 ～ 255 の範囲の数値だけを指定できます。 指定したデータ型と互換性がない値を使用してプロシージャを実行すると、エラーが返されます。  
@@ -164,8 +164,7 @@ GO
   
 ```  
   
- 
-  `usp_GetList` を実行し、原価が $700 未満である [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 製品 (自転車) の一覧を返します。 出力パラメーター ** \@cost**と** \@compareprices**は、フロー制御言語と共に使用して、[**メッセージ**] ウィンドウにメッセージを返します。  
+ `usp_GetList` を実行し、原価が $700 未満である [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 製品 (自転車) の一覧を返します。 出力パラメーター ** \@cost**と** \@compareprices**は、フロー制御言語と共に使用して、[**メッセージ**] ウィンドウにメッセージを返します。  
   
 > [!NOTE]  
 >  プロシージャの作成中にも変数の使用中にも、OUTPUT 変数を定義する必要があります。 パラメーター名と変数名が一致する必要はありません。 ただし、データ型とパラメーターの位置は一致している必要があります ( ** \@listprice =** _variable_が使用されている場合を除く)。  

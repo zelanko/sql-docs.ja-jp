@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 101badf320f72887d6eb9669224d24fff5b9a299
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62663647"
 ---
 # <a name="clr-event-category"></a>CLR イベント カテゴリ
@@ -28,10 +28,10 @@ ms.locfileid: "62663647"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
-|[Assembly Load イベント クラス](../../database-engine/assembly-load-event-class.md)|アセンブリの読み込み要求が実行されたことを示します。|  
-|[Assembly Load イベント クラス](../../database-engine/assembly-load-event-class.md)|アセンブリの読み込み要求が実行されるときに発生します。|  
+|[Assembly Load イベントクラス](../../database-engine/assembly-load-event-class.md)|アセンブリの読み込み要求が実行されたことを示します。|  
+|[Assembly Load イベントクラス](../../database-engine/assembly-load-event-class.md)|アセンブリの読み込み要求が実行されるときに発生します。|  
   
 ## <a name="see-also"></a>参照  
  [拡張イベント](../extended-events/extended-events.md)  

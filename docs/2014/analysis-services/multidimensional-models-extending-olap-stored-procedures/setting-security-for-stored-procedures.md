@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 88c4fedbce9dea4bbf50aadf4a9e91de362998ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702650"
 ---
 # <a name="setting-security-for-stored-procedures"></a>ストアド プロシージャのセキュリティの設定
-  ストアド プロシージャのセキュリティは、`PermissionSet` インスタンス (サーバー レベル)、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース、または [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトに対し、ストアド プロシージャの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロパティを使用して設定します。  
+  ストアド プロシージャのセキュリティは、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンス (サーバー レベル)、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース、または [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトに対し、ストアド プロシージャの `PermissionSet` プロパティを使用して設定します。  
   
 ## <a name="see-also"></a>参照  
  [多次元モデルのアセンブリの管理](../multidimensional-models/multidimensional-model-assemblies-management.md)   

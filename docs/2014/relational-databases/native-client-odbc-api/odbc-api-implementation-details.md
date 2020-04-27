@@ -16,17 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a8370db6cfcf3d410e563a0134221d0d48da09a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62715089"
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API 実装の詳細
   ここでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーで使用した場合に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固有の動作になる ODBC 関数について説明します。 ただし、ここではすべての ODBC 関数を記載しているわけではありません。 各トピックでは、ODBC 関数の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固有の問題点についてのみ説明します。 したがって、トピックは ODBC 関数の完全なリファレンスではありません。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは ODBC 3.51 仕様に準拠しています。また、Windows 7 SDK を使用している場合は ODBC 3.8 仕様に準拠しています。 包括的な ODBC リファレンスについては、オンラインで[Odbc プログラマーズリファレンス](https://go.microsoft.com/fwlink/?LinkId=45250)を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは ODBC 3.51 仕様に準拠しています。また、Windows 7 SDK を使用している場合は ODBC 3.8 仕様に準拠しています。 包括的な ODBC リファレンスについては、オンラインで[Odbc プログラマーズリファレンス](https://go.microsoft.com/fwlink/?LinkId=45250)を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

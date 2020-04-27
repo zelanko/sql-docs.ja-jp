@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9671447a2fba1cd57b021266f29de7af741f0de6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62688793"
 ---
 # <a name="bcp_setbulkmode"></a>bcp_setbulkmode
@@ -52,7 +52,7 @@ cbRow
  *hdbc*  
  一括コピーが有効な ODBC 接続ハンドルです。  
   
- *"*  
+ *property*  
  BYTE 型の定数です。 定数の一覧については、「解説」の表を参照してください。  
   
  *pField*  
@@ -70,15 +70,14 @@ cbRow
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  bcp_setbulkmode を使用すると、クエリまたはテーブルのいずれかから一括コピーできます。 Bcp_setbulkmode を使用してクエリステートメントを一括コピーする場合は、BCP_HINT で bcp_control を呼び出す前に、このステートメントを呼び出す必要があります。  
   
  bcp_setbulkmode は[bcp_setcolfmt](bcp-setcolfmt.md)と[bcp_columns](bcp-columns.md)を使用する代わりに、関数呼び出しごとに1つの列の形式を指定できるようにするためのものです。  
   
- 
-  *property* パラメーターとして使用できる定数の一覧を次の表に示します。  
+ *property* パラメーターとして使用できる定数の一覧を次の表に示します。  
   
-|プロパティ|[説明]|  
+|プロパティ|説明|  
 |--------------|-----------------|  
 |BCP_OUT_CHARACTER_MODE|文字出力モードを指定します。<br /><br /> BCP の-c オプションに対応しています。EXE を実行し、プロパティ`BCP_FMT_TYPE`をに`SQLCHARACTER`設定して bcp_setcolfmt します。|  
 |BCP_OUT_WIDE_CHARACTER_MODE|Unicode 出力モードを指定します。<br /><br /> BCP の-w オプションに対応しています。EXE と bcp_setcolfmt、 `BCP_FMT_TYPE`プロパティがに`SQLNCHAR`設定されています。|  

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0299be9a1cb480a567e0b166c990d25588598aba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62711059"
 ---
 # <a name="join-tables-manually-visual-database-tools"></a>手動でのテーブルの結合 (Visual Database Tools)
@@ -33,8 +33,7 @@ ms.locfileid: "62711059"
   
 1.  結合するオブジェクトを [ダイアグラム ペイン](diagram-pane-visual-database-tools.md) に追加します。  
   
-2.  最初のテーブルまたはテーブル構造オブジェクトの結合列の名前をドラッグし、2 番目のテーブルまたはテーブル結合オブジェクトの関連する列にドロップします。 
-  `text`、`ntext`、または i`mage` 型の列を結合することはできません。  
+2.  最初のテーブルまたはテーブル構造オブジェクトの結合列の名前をドラッグし、2 番目のテーブルまたはテーブル結合オブジェクトの関連する列にドロップします。 `text`、`ntext`、または i`mage` 型の列を結合することはできません。  
   
     > [!NOTE]  
     >  結合列のデータ型は、同じ型か互換性のある型である必要があります。 たとえば、最初のテーブルの結合列が日付型の場合は、2 番目のテーブルの結合列も日付型としてください。 一方、最初の結合列が整数型の場合、関連付ける結合列も整数型である必要がありますが、サイズは異なってもかまいません。 クエリおよびビュー デザイナーでは、結合の作成に使用した列のデータ型がチェックされることはありません。ただしデータ型に互換性がない場合、クエリの実行時にデータベースによってエラーが表示されます。  

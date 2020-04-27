@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5c70c0ba8e402f41a7936c4d70bd3d5ac9a51ad7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62699324"
 ---
 # <a name="server-objects-analysis-services---multidimensional-data"></a>Server オブジェクト (Analysis Services - 多次元データ)
@@ -24,8 +24,7 @@ ms.locfileid: "62699324"
 ## <a name="introducing-server-objects"></a>Server オブジェクトの導入  
  オブジェクト<xref:Microsoft.AnalysisServices.Server>は、使用するサーバーとの[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンスを表します。  
   
- 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のインスタンスに接続するとすぐに、次の情報を参照できるようになります。  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のインスタンスに接続するとすぐに、次の情報を参照できるようになります。  
   
 -   アクセスできるすべてのデータベース (コレクション)  
   

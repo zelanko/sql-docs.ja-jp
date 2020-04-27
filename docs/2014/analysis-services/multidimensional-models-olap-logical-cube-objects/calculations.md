@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 871d248eec557033c181bbd3d162cd17875dd30c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702693"
 ---
 # <a name="calculations"></a>[新しい名前付きセット]
@@ -31,8 +31,7 @@ ms.locfileid: "62702693"
   
  計算されるメンバーは、メジャー ディメンションを含むすべてのディメンションで定義できます。 メジャー ディメンションに作成された計算されるメンバーは、計算されるメジャーと呼ばれます。  
   
- 通常、計算されるメンバーはキューブの既存のデータに基づいていますが、データに算術演算子、数値、および関数を組み合わせて複雑な式を作成することもできます。 また、LookupCube などの MDX 関数を使用し、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースにある他のキューブのデータにアクセスすることも可能です。 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には標準化された Visual Studio 関数ライブラリが含まれているため、ストアド プロシージャを使用して、現在の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース以外のソースからデータを取得することができます。 ストアドプロシージャの詳細については、「[ストアドプロシージャの定義](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)」を参照してください。  
+ 通常、計算されるメンバーはキューブの既存のデータに基づいていますが、データに算術演算子、数値、および関数を組み合わせて複雑な式を作成することもできます。 また、LookupCube などの MDX 関数を使用し、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースにある他のキューブのデータにアクセスすることも可能です。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には標準化された Visual Studio 関数ライブラリが含まれているため、ストアド プロシージャを使用して、現在の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース以外のソースからデータを取得することができます。 ストアドプロシージャの詳細については、「[ストアドプロシージャの定義](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)」を参照してください。  
   
  たとえば、船会社の経営陣が積載量に対するコストに基づいて、利益の上がる貨物の種類を特定する場合を考えてみます。 経営陣が使用する Shipments キューブには、ディメンションとして Cargo、Fleet、および Time が含まれ、メジャーとして Price_to_Ship、Cost_to_Ship、および Volume_in_Cubic_Meters が含まれています。ただし、収益性に関するメジャーは含まれていません。 この場合、計算されるメンバーを Profit_per_Cubic_Meter という名前のメジャーとしてキューブに作成できます。その値を計算するには、次のように、式の中で既存のメジャーを組み合わせます。  
   

@@ -11,16 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7a45ff3544fa85f1bfe9cbe7bdd00968c004a3b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62634275"
 ---
 # <a name="change-the-environment-layout"></a>環境レイアウトの変更
-  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の各コンポーネントは画面スペースを共有しています。 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] コンポーネントを閉じる、非表示にする、または移動することにより、画面スペースをさらに確保できます。 このページの実習では、コンポーネントを別の場所に移動します。  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の各コンポーネントは画面スペースを共有しています。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] コンポーネントを閉じる、非表示にする、または移動することにより、画面スペースをさらに確保できます。 このページの実習では、コンポーネントを別の場所に移動します。  
   
 ## <a name="closing-and-hiding-components"></a>コンポーネントを閉じる、または非表示にする  
   
@@ -34,12 +32,10 @@ ms.locfileid: "62634275"
   
 4.  押しピンボタンをもう一度クリックすると、オブジェクト エクスプローラーが開いたまま固定されます。  
   
-5.  
-  **[表示]** メニューの **[登録済みサーバー]** をクリックすると、[登録済みサーバー] が再び表示されます。  
+5.  **[表示]** メニューの **[登録済みサーバー]** をクリックすると、[登録済みサーバー] が再び表示されます。  
   
 ## <a name="moving-components"></a>コンポーネントの移動  
- 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] のコンポーネントは移動が可能です。また、さまざまな構成でドッキングすることができます。  
+ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] のコンポーネントは移動が可能です。また、さまざまな構成でドッキングすることができます。  
   
 #### <a name="to-practice-moving-components"></a>コンポーネントを実際に移動するには  
   
@@ -48,8 +44,7 @@ ms.locfileid: "62634275"
 2.  [登録済みサーバー] を画面上のさまざまな場所にドラッグしてみましょう。 ドッキングできる場所は複数あり、その場所に移動すると青色のドッキング情報が表示されます。 各矢印は、その場所にコンポーネントをドロップするとウィンドウがドッキングされることを示します。矢印の向きに応じて、フレームの上部、下部、または左右にドッキングできます。 いずれかの矢印の上にカーソルを移動すると、ドッキング先の領域が暗色表示されます。 中央の円は、コンポーネントが他のコンポーネントとスペースを共有することを示します。 中央部分にドロップすると、使用可能なコンポーネントがタブとしてフレームに表示されます。  
   
 ## <a name="undocking-components"></a>コンポーネントのドッキング解除  
- 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] コンポーネントの表示をカスタマイズできます。  
+ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] コンポーネントの表示をカスタマイズできます。  
   
 #### <a name="to-dock-and-undock-components"></a>コンポーネントのドッキングとドッキング解除を行うには  
   
@@ -77,8 +72,7 @@ ms.locfileid: "62634275"
   
 6.  [オブジェクト エクスプローラー] のタイトル バーを右クリックし、 **[非表示]** をクリックします。  
   
-7.  
-  **[表示]** メニューの **[オブジェクト エクスプローラー]** をクリックすると、ウィンドウが再び表示されます。  
+7.  **[表示]** メニューの **[オブジェクト エクスプローラー]** をクリックすると、ウィンドウが再び表示されます。  
   
 8.  オブジェクト エクスプローラーのドッキングを解除するには、オブジェクト エクスプローラーのタイトル バーを右クリックし、 **[フローティング]** をクリックします。  
   

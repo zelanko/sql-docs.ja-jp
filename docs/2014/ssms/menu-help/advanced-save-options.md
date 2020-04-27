@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 175c1f5b1f507078f461a07e30c62fb68f7cfb02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62678996"
 ---
 # <a name="advanced-save-options"></a>[保存オプションの詳細設定]
@@ -28,7 +28,7 @@ ms.locfileid: "62678996"
  **[エンコード]**  
  このリスト ボックスを使用すると、新しい言語エンコード方式を対象のファイルに適用できます。  
   
- **行の終わり**  
+ **[行の終わり]**  
  対象のファイルが特定のオペレーティング システム上で実行されるようにするには、行末の文字として、復帰 (Macintosh システム)、改行 (Unix システム)、またはその両方の文字 ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows システム) を選択します。  
   
   

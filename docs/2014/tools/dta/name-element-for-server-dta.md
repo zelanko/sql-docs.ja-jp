@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 750911c19224ff088fee5c27272bf13c14875975
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62657266"
 ---
 # <a name="name-element-for-server-dta"></a>Server の Name 要素 (DTA)
@@ -35,10 +35,9 @@ ms.locfileid: "62657266"
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特徴|[説明]|  
+|特徴|説明|  
 |--------------------|-----------------|  
-|**データ型と長さ**|
-  `string`、1 ～ 255 文字。|  
+|**データ型と長さ**|`string`、1 ～ 255 文字。|  
 |**既定値**|[なし] :|  
 |**個数**|**Server** 要素につき 1 回の出現が必要です。|  
   

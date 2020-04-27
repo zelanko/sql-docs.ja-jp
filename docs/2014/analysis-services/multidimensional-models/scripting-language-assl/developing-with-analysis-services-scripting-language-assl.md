@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dfdce0d0db35d651d12670ffd3cb1c9437961cd1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62736519"
 ---
 # <a name="developing-with-analysis-services-scripting-language-assl"></a>Analysis Services スクリプト言語 (ASSL) での開発
@@ -25,15 +25,13 @@ ms.locfileid: "62736519"
   
 -   データ定義言語 (DDL) またはオブジェクト定義言語は、の[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンス、およびインスタンスに含まれるデータベースおよびデータベースオブジェクトを定義し、記述します。  
   
--   
-  `Create`、`Alter`、`Process` などのアクション コマンドを Analysis Services のインスタンスに送信するコマンド言語。 このコマンド言語については、「 [XML for Analysis &#40;XMLA&#41; リファレンス](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)」で説明されています。  
+-   `Create`、`Alter`、`Process` などのアクション コマンドを Analysis Services のインスタンスに送信するコマンド言語。 このコマンド言語については、「 [XML for Analysis &#40;XMLA&#41; リファレンス](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)」で説明されています。  
   
- 
-  [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] で多次元ソリューションを構成する ASSL を表示するには、プロジェクト レベルで [コードの表示] を使用します。 XMLA クエリ エディターを使用して、[!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] で ASSL スクリプトを作成または編集することもできます。 作成したスクリプトは、サーバーでのオブジェクトの管理やコマンドの実行に使用できます。  
+ [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] で多次元ソリューションを構成する ASSL を表示するには、プロジェクト レベルで [コードの表示] を使用します。 XMLA クエリ エディターを使用して、[!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] で ASSL スクリプトを作成または編集することもできます。 作成したスクリプトは、サーバーでのオブジェクトの管理やコマンドの実行に使用できます。  
   
 ## <a name="see-also"></a>参照  
  [ASSL オブジェクトとオブジェクトの特性](assl-objects-and-object-characteristics.md)   
  [ASSL XML 規則](assl-xml-conventions.md)   
- [SSAS 多次元&#41;&#40;データソースとバインド](../data-sources-and-bindings-ssas-multidimensional.md)  
+ [データ ソースとバインド &#40;SSAS 多次元&#41;](../data-sources-and-bindings-ssas-multidimensional.md)  
   
   

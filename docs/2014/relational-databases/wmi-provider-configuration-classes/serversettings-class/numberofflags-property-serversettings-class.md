@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 840379944950b83fe301929ba20c35678564b02f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62736015"
 ---
 # <a name="numberofflags-property-serversettings-class"></a>NumberOfFlags プロパティ (ServerSettings クラス)
@@ -37,15 +37,13 @@ object
 ```  
   
 ## <a name="parts"></a>要素  
- *素材*  
- 
-  [のインスタンス上のサーバー設定を表す](serversettings-class.md) ServerSettings クラス [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]オブジェクト。  
+ *object*  
+ [のインスタンス上のサーバー設定を表す](serversettings-class.md) ServerSettings クラス [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
- 
-  `uint32` のインスタンスに関連付けられた一般的なフラグの数を指定する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 値。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに関連付けられた一般的なフラグの数を指定する `uint32` 値。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>参照  
  [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

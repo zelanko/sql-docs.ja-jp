@@ -13,23 +13,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 98478b8ed61a49e74a70d576ccd3600319fce645
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62695673"
 ---
-# <a name="job-properties-new-job-schedules-page"></a>ジョブのプロパティ: [新しいジョブ] ([スケジュール] ページ)
+# <a name="job-properties-new-job-schedules-page"></a>[ジョブのプロパティ]:[新しいジョブ] ([スケジュール] ページ)
   このページを使用すると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントジョブのスケジュールを表示および整理できます。  
   
 ## <a name="options"></a>オプション  
- **スケジュールの一覧**  
+ **[スケジュールの一覧]**  
  このジョブのスケジュールの一覧を表示します。  
   
- **[新規作成]**  
+ **新しい**  
  新しいスケジュールを作成します。 スケジュールを作成すると、そのスケジュールはジョブに追加されます。  
   
- **拾い**  
+ **[選択]**  
  既存のスケジュールを選択します。 ジョブとスケジュールの所有者は同じである必要があるため、このオプションを使用しても自分が所有するスケジュールしか選択できません。  
   
  **[編集]**  

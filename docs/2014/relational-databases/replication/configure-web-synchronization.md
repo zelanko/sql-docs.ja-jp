@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 341066defb122e33e82cfde87a561bc9df1ed762
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62721655"
 ---
 # <a name="configure-web-synchronization"></a>Web 同期の構成
@@ -101,9 +101,7 @@ Web 同期は、バージョン 5.0 以降の IIS でサポートされます。
   
  初めてパブリッシャーを使用している場合は、ディストリビューターおよびスナップショット共有も構成する必要があります。 各サブスクライバー側のマージ エージェントには、スナップショット共有の読み取り権限が必要です。 詳細については、「[Configure Distribution](configure-distribution.md)」(ディストリビューションの構成) と「[Secure the Snapshot Folder](security/secure-the-snapshot-folder.md)」(スナップショット フォルダーのセキュリティ保護) をご覧ください。  
   
- 
-  `gen` は、websync xml ファイルの予約語です。 
-  `gen` という名前の列を含むテーブルをパブリッシュしようとしないでください。  
+ `gen` は、websync xml ファイルの予約語です。 `gen` という名前の列を含むテーブルをパブリッシュしようとしないでください。  
   
 ## <a name="configuring-the-subscription"></a>サブスクリプションの構成  
  パブリケーションを有効にし、IIS を構成した後、プル サブスクリプションを作成し、そのプル サブスクリプションが IIS を使用して同期するように指定します。 (Web 同期はプル サブスクリプションでのみサポートされます)。  

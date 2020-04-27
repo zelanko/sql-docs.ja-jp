@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 940b33cda3158e98c9fee519ea12f1193e615bca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62642578"
 ---
 # <a name="lesson-2-configuring-permissions-on-database-objects"></a>レッスン 2: データベース オブジェクトに対する権限の構成
@@ -28,7 +28,7 @@ ms.locfileid: "62642578"
   
 -   [データベースへのアクセス権の付与](lesson-2-2-granting-access-to-a-database.md)  
   
--   [ビューとストアド プロシージャの作成](lesson-2-3-creating-views-and-stored-procedures.md)  
+-   [ビューとストアドプロシージャの作成](lesson-2-3-creating-views-and-stored-procedures.md)  
   
 -   [データベース オブジェクトへのアクセス権の付与](lesson-2-4-granting-access-to-a-database-object.md)  
   

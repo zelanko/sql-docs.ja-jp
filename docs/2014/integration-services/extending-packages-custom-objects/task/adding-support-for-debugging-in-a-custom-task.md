@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 44b583c062280cb080228d7db3bd24a312a350fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62768538"
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>カスタム タスクにおけるデバッグのサポートの追加
@@ -40,8 +40,7 @@ ms.locfileid: "62768538"
  ブレークポイントを使用していないタスクでも、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> および <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> インターフェイスを実装する必要があります。 これにより、パッケージ内の他のオブジェクトが <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A> イベントを発生させた場合でも、タスクを正しく中断することができます。  
   
 ## <a name="idtsbreakpointsite-interface-and-breakpointmanager"></a>IDTSBreakpointSite インターフェイスおよび BreakpointManager  
- タスクは、<xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager.CreateBreakpointTarget%2A> の <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager> メソッドを呼び出し、整数 ID と説明のための文字列を提供することによって、ブレークポイント ターゲットを作成します。 タスクが、ブレークポイント ターゲットを含むコード内の地点に達すると、タスクは <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager.IsBreakpointTargetEnabled%2A> メソッドを使用してブレークポイント ターゲットを評価し、そのブレークポイントが有効かどうかを判別します。 
-  `true` の場合、タスクは <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A> イベントを発生させて、ランタイム エンジンに通知します。  
+ タスクは、<xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager.CreateBreakpointTarget%2A> の <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager> メソッドを呼び出し、整数 ID と説明のための文字列を提供することによって、ブレークポイント ターゲットを作成します。 タスクが、ブレークポイント ターゲットを含むコード内の地点に達すると、タスクは <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager.IsBreakpointTargetEnabled%2A> メソッドを使用してブレークポイント ターゲットを評価し、そのブレークポイントが有効かどうかを判別します。 `true` の場合、タスクは <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A> イベントを発生させて、ランタイム エンジンに通知します。  
   
  <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> インターフェイスは、タスクの作成中にランタイム エンジンによって呼び出される単一メソッド <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite.AcceptBreakpointManager%2A> を定義します。 メソッドは、パラメーターとして <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager> オブジェクトを提供し、このオブジェクトは各タスクでブレークポイントの作成や管理を行うために使用されます。 タスクは <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager> を `Validate` メソッドおよび `Execute` メソッドで使用するため、これをローカルで格納する必要があります。  
   
@@ -88,13 +87,11 @@ End Function
 ```  
   
 ## <a name="idtssuspend-interface"></a>IDTSSuspend インターフェイス  
- <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> インターフェイスは、タスクの実行が一時停止または再開されるときに、ランタイム エンジンによって呼び出されるメソッドを定義します。 
-  <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> インターフェイスは <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> インターフェイスによって実装され、この `Suspend` メソッドおよび `ResumeExecution` メソッドは、通常カスタム タスクによってオーバーライドされます。 ランタイム エンジンがタスクから `OnBreakpointHit` イベントを受け取ると、実行中の各タスクの `Suspend` メソッドを呼び出し、タスクに一時停止するよう通知します。 クライアントが実行を再開すると、ランタイム エンジンは中断しているタスクの `ResumeExecution` メソッドを呼び出します。  
+ <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> インターフェイスは、タスクの実行が一時停止または再開されるときに、ランタイム エンジンによって呼び出されるメソッドを定義します。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> インターフェイスは <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> インターフェイスによって実装され、この `Suspend` メソッドおよび `ResumeExecution` メソッドは、通常カスタム タスクによってオーバーライドされます。 ランタイム エンジンがタスクから `OnBreakpointHit` イベントを受け取ると、実行中の各タスクの `Suspend` メソッドを呼び出し、タスクに一時停止するよう通知します。 クライアントが実行を再開すると、ランタイム エンジンは中断しているタスクの `ResumeExecution` メソッドを呼び出します。  
   
  タスクの実行が中断および再開されると、タスクの実行スレッドも一時停止および再開されます。 マネージド コードでは、これは、.NET Framework の `ManualResetEvent` 名前空間の `System.Threading` クラスを使用することにより実現されます。  
   
- 次のコード サンプルは、タスクの実行を中断および再開します。 
-  `Execute` メソッドは上記のコード サンプルから変更され、ブレークポイントが発生すると実行スレッドが一時停止します。  
+ 次のコード サンプルは、タスクの実行を中断および再開します。 `Execute` メソッドは上記のコード サンプルから変更され、ブレークポイントが発生すると実行スレッドが一時停止します。  
   
 ```csharp  
 private ManualResetEvent m_suspended = new ManualResetEvent( true );  
@@ -343,7 +340,7 @@ Public Sub Suspend()
 End Sub  
 ```  
   
-![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
  [制御フローのデバッグ](../../troubleshooting/debugging-control-flow.md)  

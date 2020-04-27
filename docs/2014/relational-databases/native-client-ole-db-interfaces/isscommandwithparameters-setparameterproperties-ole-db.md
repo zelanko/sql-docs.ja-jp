@@ -1,5 +1,5 @@
 ---
-title: 'ISSCommandWithParameters:: SetParameterProperties (OLE DB) |Microsoft Docs'
+title: ISSCommandWithParameters::SetParameterProperties (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 778021ce007f0c1eac68197e0c07e2cb7b0bb001
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62638770"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties (OLE DB)
@@ -36,9 +36,8 @@ SSPARAMPROPS rgParamProperties[]);
 ```  
   
 ## <a name="arguments"></a>引数  
- *Cparams*[in]  
- 
-  *rgParamProperties* 配列内の SSPARAMPROPS 構造体の数。 この数値が0の場合`ISSCommandWithParameters::SetParameterProperties`は、コマンドのパラメーターに指定されている可能性のあるすべてのプロパティが削除されます。  
+ *cParams*[in]  
+ *rgParamProperties* 配列内の SSPARAMPROPS 構造体の数。 この数値が0の場合`ISSCommandWithParameters::SetParameterProperties`は、コマンドのパラメーターに指定されている可能性のあるすべてのプロパティが削除されます。  
   
  *rgParamProperties*[in]  
  設定する SSPARAMPROPS 構造体の配列。  
@@ -46,11 +45,10 @@ SSPARAMPROPS rgParamProperties[]);
 ## <a name="return-code-values"></a>リターン コードの値  
  この`ISSCommandWithParameters::SetParameterProperties`メソッドは、コア OLE DB **ICommandProperties:: SetProperties**メソッドと同じエラーコードを返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  このメソッドを使用してパラメーターのプロパティを設定できるのは、序数によってパラメーター `ISSCommandWithParameters::SetParameterProperties`ごとに指定するか、または SSPARC amprops がプロパティ配列から構築された1回の呼び出しで許可されます。  
   
- メソッドを`ISSCommandWithParameters::SetParameterProperties`呼び出す前に**setparameterinfo**メソッドを呼び出す必要があります。 
-  `SetParameterProperties(0, NULL)` を呼び出すと、指定したパラメーター プロパティがすべて消去されます。また、`SetParameterInfo(0,NULL,NULL)` を呼び出すと、パラメーターに関連付けられているすべてのプロパティを含めて、パラメーターに関するすべての情報が消去されます。  
+ メソッドを`ISSCommandWithParameters::SetParameterProperties`呼び出す前に**setparameterinfo**メソッドを呼び出す必要があります。 `SetParameterProperties(0, NULL)` を呼び出すと、指定したパラメーター プロパティがすべて消去されます。また、`SetParameterInfo(0,NULL,NULL)` を呼び出すと、パラメーターに関連付けられているすべてのプロパティを含めて、パラメーターに関するすべての情報が消去されます。  
   
  を`ISSCommandWithParameters::SetParameterProperties`呼び出して、DBTYPE_XML 型または DBTYPE_UDT 型ではないパラメーターのプロパティを指定すると、DB_E_ERRORSOCCURRED または DB_S_ERRORSOCCURRED が返され、そのパラメーターの SSPARAMPROPS に含まれるすべての dbprops の*dwstatus*フィールドが DBPROPSTATUS_NOTSET でマークされます。 DB_E_ERRORSOCCURRED または DB_S_ERRORSOCCURRED が指しているパラメーターを検出するには、SSPARAMPROPS に含まれている各 DBPROPSET の DBPROP 配列をすべて調べる必要があります。  
   
@@ -72,13 +70,12 @@ SSPARAMPROPS rgParamProperties[]);
   
  `};`  
   
- で始まるデータベースエンジンの機能強化[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ISSCommandWithParameters:: SetParameterProperties を使用すると、予期される結果についてより正確な説明を取得できます。 これらのより正確な結果は、以前のバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で ISSCommandWithParameters:: SetParameterProperties によって返される値とは異なる場合があります。 詳細については、「[メタデータの検出](../native-client/features/metadata-discovery.md)」を参照してください。  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降のデータベース エンジンの機能強化により、ISSCommandWithParameters::SetParameterProperties では、期待される結果のより正確な記述を取得できるようになりました。 結果がより正確になり、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で ISSCommandWithParameters::SetParameterProperties から返される値とは異なる可能性があります。 詳細については、「[メタデータの検出](../native-client/features/metadata-discovery.md)」を参照してください。  
   
-|メンバー|[説明]|  
+|メンバー|説明|  
 |------------|-----------------|  
 |*iOrdinal*|渡されるパラメーターの序数|  
-|*cPropertySets*|
-  *rgPropertySets* 内の DBPROPSET 構造体の数|  
+|*cPropertySets*|*rgPropertySets* 内の DBPROPSET 構造体の数|  
 |*rgPropertySets*|DBPROPSET 構造体の配列を返すメモリへのポインター|  
   
 ## <a name="see-also"></a>参照  

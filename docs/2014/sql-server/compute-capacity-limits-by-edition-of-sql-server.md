@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f457c901c4226b9a0ead23de57c2455c619f406e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62714766"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>SQLServer のエディション別の計算容量制限
@@ -28,10 +28,10 @@ ms.locfileid: "62714766"
   
  次の表では、上の図で使用されている表記について説明します。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |0..1|0 個または 1 個|  
-|1 で保護されたプロセスとして起動されました|1 個|  
+|1|1 個|  
 |1..*|1 個以上|  
 |0..*|0 個以上|  
 |1..2|1 つまたは 2 つ|  
@@ -70,8 +70,7 @@ ms.locfileid: "62714766"
   
 -   ただし、ハイパースレッド コアの 2 個の論理プロセッサの計算容量は、ハイパースレッディングが無効になっている同じコアの計算容量よりも大きくなります。  
   
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の各エディションには、次の 2 つの計算容量制限があります。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の各エディションには、次の 2 つの計算容量制限があります。  
   
 1.  ソケットの最大数 (物理プロセッサまたはソケットまたはプロセッサ パッケージと同じ)。  
   
@@ -81,10 +80,10 @@ ms.locfileid: "62714766"
   
  次の表に、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]の各エディションの 1 つのインスタンスに適用される計算容量制限を示します。  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Edition|1 つのインスタンスで使用される最大計算容量 ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|1 つのインスタンスで使用される最大計算容量 (AS、RS)|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディション|1 つのインスタンスで使用される最大計算容量 ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|1 つのインスタンスで使用される最大計算容量 (AS、RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
 |Enterprise Edition: コアベースのライセンス<sup>1</sup>|オペレーティング システムの最大容量|オペレーティング システムの最大容量|  
-|Developer|オペレーティング システムの最大容量|オペレーティング システムの最大容量|  
+|開発者|オペレーティング システムの最大容量|オペレーティング システムの最大容量|  
 |評価|オペレーティング システムの最大容量|オペレーティング システムの最大容量|  
 |ビジネス インテリジェンス|4 ソケットまたは 16 コアのいずれか小さいほうに制限|オペレーティング システムの最大容量|  
 |Standard|4 ソケットまたは 16 コアのいずれか小さいほうに制限|4 ソケットまたは 16 コアのいずれか小さいほうに制限|  

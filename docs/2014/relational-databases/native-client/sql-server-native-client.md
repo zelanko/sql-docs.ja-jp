@@ -11,22 +11,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d2a01b9d9d13bf5e9135d287553beb8b87c2dcd5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62638843"
 ---
 # <a name="what39s-new-in-sql-server-native-client"></a>SQL Server Native Client の新機能&#39;
+  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] は、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client をインストールします。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Native Client は存在しません。  
   
-  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] は、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client をインストールします。 
-  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Native Client は存在しません。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client の ODBC ドライバーにはこれ以上の更新プログラムがありません。 Windows の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC Driver 11 for [!INCLUDE[msCoName](../../includes/msconame-md.md)] と呼ばれる、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client の ODBC ドライバーに代わるものが [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] と共にインストールされます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC driver 11 For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on windows の詳細については、「 [Microsoft odbc Driver 11 for SQL Server-windows](https://www.microsoft.com/download/details.aspx?id=36434)」を参照してください。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client の ODBC ドライバーにはこれ以上の更新プログラムがありません。 Windows の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC Driver 11 for [!INCLUDE[msCoName](../../includes/msconame-md.md)] と呼ばれる、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client の ODBC ドライバーに代わるものが [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] と共にインストールされます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC driver 11 For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on windows の詳細については、「 [Microsoft odbc Driver 11 for SQL Server-windows](https://www.microsoft.com/download/details.aspx?id=36434)」を参照してください。  
-  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client の OLE DB プロバイダーは、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client で最終更新されています。 開発者が OLE DB プロバイダーを使用して最新バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続するには、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client に付属している OLE DB プロバイダーを使用する必要があります。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client の OLE DB プロバイダーは、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client で最終更新されています。 開発者が OLE DB プロバイダーを使用して最新バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続するには、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client に付属している OLE DB プロバイダーを使用する必要があります。  
   
  次のトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] における [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client の重要な新機能について説明します。  
   
@@ -54,8 +50,7 @@ ms.locfileid: "62638843"
   
 -   を呼び`ICommandWithParameters::SetParameterInfo`出す場合、 *pwszName*パラメーターに渡される値は有効な識別子である必要があります。 詳細については、「 [ICommandWithParameters](../native-client-ole-db-interfaces/icommandwithparameters.md)」を参照してください。  
   
--   
-  `SQLDescribeParam` は、ODBC 仕様に準拠した値を一貫して返すようになりました。 詳細については、「 [SQLDescribeParam](../native-client-odbc-api/sqldescribeparam.md)」を参照してください。  
+-   `SQLDescribeParam` は、ODBC 仕様に準拠した値を一貫して返すようになりました。 詳細については、「 [SQLDescribeParam](../native-client-odbc-api/sqldescribeparam.md)」を参照してください。  
   
 -   [文字変換処理での ODBC ドライバーの動作の変更](features/odbc-driver-behavior-change-when-handling-character-conversions.md)  
   

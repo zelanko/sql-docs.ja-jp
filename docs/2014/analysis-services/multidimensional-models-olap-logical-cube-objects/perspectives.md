@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2856bca26e8a49ffdb2ed5187479434c7762015b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702625"
 ---
 # <a name="perspectives"></a>パースペクティブ
@@ -50,7 +50,7 @@ ms.locfileid: "62702625"
   
 -   計算 (計算されるメンバー、名前付きセット、スクリプト コマンド)  
   
--   アクション  
+-   Actions  
   
  たとえば、 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)]サンプル[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データベースの**Adventure works**キューブには、11個のメジャーグループと、売上、売上予測、財務データを表す20個の異なるキューブディメンションが含まれています。 クライアント アプリケーションは完全なキューブを直接参照できますが、基本的な売上予測情報を抽出しようとしているユーザーにとって、このビューポイントでは扱いづらい可能性があります。 代わりに、同じユーザーが [ **Sales Targets** ] パースペクティブを使用して、 **Adventure works**キューブのビューを売上予測に関連するオブジェクトのみに制限することができます。  
   

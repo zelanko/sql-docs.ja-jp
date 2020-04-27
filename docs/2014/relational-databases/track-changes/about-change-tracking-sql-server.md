@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e2013a604c517ae93ee17640013e2260f50cf28e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62670928"
 ---
 # <a name="about-change-tracking-sql-server"></a>変更の追跡について (SQL Server)
@@ -68,9 +68,9 @@ ms.locfileid: "62670928"
  変更の追跡を使用して、各行に加えられた変更に関する情報を取得することもできます。 たとえば、変更を行った DML 操作の種類 (挿入、更新、または削除) や、更新操作の一環として変更された列などの情報を取得できます。  
   
 ## <a name="see-also"></a>参照  
- [変更の追跡の有効化と無効化 &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-tracking-sql-server.md)   
+ [Change Tracking &#40;SQL Server を有効または無効にする&#41;](../track-changes/enable-and-disable-change-tracking-sql-server.md)   
  [Change Tracking &#40;SQL Server の操作&#41;](../track-changes/work-with-change-tracking-sql-server.md)   
- [変更の追跡の管理 &#40;SQL Server&#41;](../track-changes/manage-change-tracking-sql-server.md)   
+ [Change Tracking &#40;SQL Server の管理&#41;](../track-changes/manage-change-tracking-sql-server.md)   
  [データ変更の追跡 &#40;SQL Server&#41;](../track-changes/track-data-changes-sql-server.md)  
   
   

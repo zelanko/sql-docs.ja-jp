@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aee5e7b94aaaca2b35e34f8c4d49c2834189f114
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62736617"
 ---
 # <a name="assl-objects-and-object-characteristics"></a>ASSL オブジェクトとオブジェクトの特性
@@ -45,7 +45,7 @@ ms.locfileid: "62736617"
   
 -   メジャー グループ  
   
--   [メジャー グループ]  
+-   メジャー グループ  
   
 -   パースペクティブ  
   
@@ -63,8 +63,7 @@ ms.locfileid: "62736617"
   
 -   `LastSchemaUpdate`  
   
--   
-  `LastProcessed` (必要な場合)  
+-   `LastProcessed` (必要な場合)  
   
 > [!NOTE]  
 >  オブジェクトを主要なオブジェクトとして分類すると、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のインスタンスによるオブジェクトの処理方法と、オブジェクト定義言語でのオブジェクトの処理方法に影響を与えます。 ただし、この分類によって、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 管理ツールおよび開発ツールでこれらのオブジェクトを単独作成、修正、または削除できることが保証されるわけではありません。  
@@ -85,23 +84,20 @@ ms.locfileid: "62736617"
 -   集計  
   
 ## <a name="object-expansion"></a>オブジェクトの展開  
- 
-  `ObjectExpansion` 制限は、サーバーから返される ASSL XML をどの程度展開するかを制御するために使用できます。 次の表には、この制限のオプションを示します。  
+ `ObjectExpansion` 制限は、サーバーから返される ASSL XML をどの程度展開するかを制御するために使用できます。 次の表には、この制限のオプションを示します。  
   
-|列挙値|Alter> \<に許可|[説明]|  
+|列挙値|Alter> \<に許可|説明|  
 |-----------------------|---------------------------|-----------------|  
-|*ReferenceOnly*|いいえ|要求されたオブジェクトおよび含まれているすべての主要なオブジェクトの名前、ID、およびタイムスタンプだけを再帰的に返します。|  
-|*ObjectProperties*|はい|要求されたオブジェクトと含まれいているマイナー オブジェクトを展開し、含まれている主要なオブジェクトは返しません。|  
-|*全場合*|いいえ|*Objectproperties*と同じですが、含まれている主要なオブジェクトの名前、ID、タイムスタンプも返されます。|  
-|*ExpandFull*|はい|要求されたオブジェクトと含まれているすべてのオブジェクトを再帰的に完全に展開します。|  
+|*ReferenceOnly*|×|要求されたオブジェクトおよび含まれているすべての主要なオブジェクトの名前、ID、およびタイムスタンプだけを再帰的に返します。|  
+|*ObjectProperties*|必須|要求されたオブジェクトと含まれいているマイナー オブジェクトを展開し、含まれている主要なオブジェクトは返しません。|  
+|*全場合*|×|*Objectproperties*と同じですが、含まれている主要なオブジェクトの名前、ID、タイムスタンプも返されます。|  
+|*ExpandFull*|必須|要求されたオブジェクトと含まれているすべてのオブジェクトを再帰的に完全に展開します。|  
   
  この ASSL リファレンスセクションでは、 *Expandfull*表現について説明します。 他のすべての `ObjectExpansion` レベルがこのレベルから派生します。  
   
 ## <a name="object-processing"></a>オブジェクト処理  
- ASSL には、`LastProcessed` インスタンスから読み取ることはできても、そのインスタンスにコマンド スクリプトが送信されるときに省略される読み取り専用の要素またはプロパティ ([!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] など) があります。 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]  では、読み取り専用の要素の変更された値を無視し、警告やエラーを返しません。  
+ ASSL には、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] インスタンスから読み取ることはできても、そのインスタンスにコマンド スクリプトが送信されるときに省略される読み取り専用の要素またはプロパティ (`LastProcessed` など) があります。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]  では、読み取り専用の要素の変更された値を無視し、警告やエラーを返しません。  
   
- また、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] では、不適切なプロパティや無関係なプロパティは無視し、検証エラーを返しません。 たとえば、Y 要素に特定の値がある場合、X 要素は存在する必要があります。 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] インスタンスでは、X 要素を無視し、Y 要素の値に対して X 要素を検証しません。  
+ また、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] では、不適切なプロパティや無関係なプロパティは無視し、検証エラーを返しません。 たとえば、Y 要素に特定の値がある場合、X 要素は存在する必要があります。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] インスタンスでは、X 要素を無視し、Y 要素の値に対して X 要素を検証しません。  
   
   

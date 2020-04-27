@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc9b813f5310acad9d6dfa2b844adae6168fc1f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702641"
 ---
 # <a name="cube-objects-analysis-services---multidimensional-data"></a>Cube オブジェクト (Analysis Services - 多次元データ)
@@ -33,7 +33,7 @@ ms.locfileid: "62702641"
 |||  
 |-|-|  
 |トピック||  
-|[アクション &#40;Analysis Services-多次元データ&#41;](../multidimensional-models/actions-analysis-services-multidimensional-data.md)||  
+|[アクション &#40;Analysis Services - 多次元データ&#41;](../multidimensional-models/actions-analysis-services-multidimensional-data.md)||  
 |[集計と集計デザイン](aggregations-and-aggregation-designs.md)||  
 |[[新しい名前付きセット]](calculations.md)||  
 |[キューブセル &#40;Analysis Services-多次元データ&#41;](cube-cells-analysis-services-multidimensional-data.md)||  
@@ -41,9 +41,9 @@ ms.locfileid: "62702641"
 |[Cube Storage &#40;Analysis Services-多次元データ&#41;](cube-storage-analysis-services-multidimensional-data.md)||  
 |[キューブの翻訳](cube-translations.md)||  
 |[ディメンション リレーションシップ](dimension-relationships.md)||  
-|[多次元モデルの Kpi&#41; &#40;主要業績評価指標](../multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)||  
+|[多次元モデルの主要業績評価指標 &#40;KPI&#41;](../multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)||  
 |[メジャーおよびメジャー グループ](../multidimensional-models/measures-and-measure-groups.md)||  
-|[パーティション &#40;Analysis Services-多次元データ&#41;](partitions-analysis-services-multidimensional-data.md)||  
+|[パーティション (Analysis Services - 多次元データ)](partitions-analysis-services-multidimensional-data.md)||  
 |[パースペクティブ](perspectives.md)||  
   
   

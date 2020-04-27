@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 81235bf4bf4f1234be3d1ffdc341d3239b8d2b35
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62655492"
 ---
 # <a name="updatable-subscriptions-for-transactional-replication"></a>Updatable Subscriptions for Transactional Replication
@@ -56,7 +56,7 @@ ms.locfileid: "62655492"
  **更新モードを切り替えるには**  
   
  更新モードを切り替えるには、両方の更新モードに対してパブリケーションとサブスクリプションを有効にしてから、必要に応じてこれらを切り替える必要があります。 詳細については、「  
-[更新可能なトランザクション サブスクリプションの更新モードを切り替える](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md):  
+[更新可能なトランザクションサブスクリプションの更新モードを切り替え](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)ます。  
   
 ### <a name="considerations-for-using-updatable-subscriptions"></a>更新可能なサブスクリプションの使用に関する注意点  
   
@@ -123,9 +123,9 @@ ms.locfileid: "62655492"
     -   競合が予想され、"サブスクライバー優先" の競合解決方法を使用する場合は、パブリッシャーまたはサブスクライバーで外部キーの制約は使用しないでください。"パブリッシャー優先" の競合解決方法を使用する場合は、サブスクライバーで外部キーの制約は使用しないでください。  
   
 ## <a name="see-also"></a>参照  
- [ピアツーピア トランザクション レプリケーション](peer-to-peer-transactional-replication.md)   
- [トランザクション レプリケーション](transactional-replication.md)   
- [データおよびデータベース オブジェクトのパブリッシュ](../publish/publish-data-and-database-objects.md)   
+ [ピアツーピアトランザクションレプリケーション](peer-to-peer-transactional-replication.md)   
+ [トランザクションレプリケーション](transactional-replication.md)   
+ [データとデータベースオブジェクトのパブリッシュ](../publish/publish-data-and-database-objects.md)   
  [Subscribe to Publications](../subscribe-to-publications.md)  
   
   

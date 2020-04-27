@@ -32,10 +32,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4d2b99362f242ff7f815e9ceb9f67db9c80983c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727648"
 ---
 # <a name="cube-properties"></a>キューブ プロパティ
@@ -46,7 +46,7 @@ ms.locfileid: "62727648"
   
  キューブのプロパティを設定する方法の詳細については、「[キューブデザイナー &#40;Analysis Services-多次元データ&#41;](../cube-designer-analysis-services-multidimensional-data.md)」を参照してください。  
   
-|プロパティ|[説明]|  
+|プロパティ|説明|  
 |--------------|-----------------|  
 |`AggregationPrefix`|集計名に使用する共通のプレフィックスを指定します。|  
 |`Collation`|Latin1_General_C1_AS のように、アンダースコアで区切られたロケール識別子 (LCID) と比較フラグを指定します。|  
@@ -58,9 +58,9 @@ ms.locfileid: "62727648"
 |`Language`|キューブの既定の言語識別子を指定します。|  
 |`Name`|キューブの表示名を指定します。|  
 |`ProactiveCaching`|キューブのプロアクティブ キャッシュ設定を定義します。|  
-|`ProcessingMode`|インデックス作成と集計を処理中に行うか、処理後に行うかを指定します。 オプションは**** 、標準`lazy`またはです。|  
+|`ProcessingMode`|インデックス作成と集計を処理中に行うか、処理後に行うかを指定します。 オプションは**regular** 、標準`lazy`またはです。|  
 |`ProcessingPriority`|レイジー集計やインデックス作成など、バックグラウンド操作中のキューブの処理の優先度を決定します。 既定値は**0**です。|  
-|`ScriptCacheProcessingMode`|スクリプト キャッシュのビルドを処理中に行うか、処理後に行うかを指定します。 オプションは**** 、regular `lazy`およびです。|  
+|`ScriptCacheProcessingMode`|スクリプト キャッシュのビルドを処理中に行うか、処理後に行うかを指定します。 オプションは**regular** 、regular `lazy`およびです。|  
 |`ScriptErrorHandlingMode`|エラー処理を決定します。 オプションは`IgnoreNone`またはです。`IgnoreAll`|  
 |`Source`|キューブに使用するデータ ソース ビューを表示します。|  
 |`StorageLocation`|キューブのファイル システムでのストレージ場所を指定します。 指定しない場合は、キューブ オブジェクトが含まれているデータベースから場所が継承されます。|  

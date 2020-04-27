@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e81ea0aac9cfe7676abba18bc7dffb2e1561597b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62678720"
 ---
 # <a name="workload-element-dta"></a>Workload 要素 (DTA)
@@ -36,12 +36,11 @@ ms.locfileid: "62678720"
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特徴|[説明]|  
+|特徴|説明|  
 |--------------------|-----------------|  
 |**データ型と長さ**|[なし] :|  
 |**既定値**|[なし] :|  
-|**個数**|
-  `DTAInput` 要素につき 1 回の出現が必要です。|  
+|**個数**|`DTAInput` 要素につき 1 回の出現が必要です。|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
@@ -58,7 +57,7 @@ ms.locfileid: "62678720"
  各チューニング セッションには 1 つのワークロードを指定する必要があります。  
   
 ## <a name="example"></a>例  
- 次のコード例では**** 、 `Workload`要素の MyDatabase トレーステーブルを指定します。 **TuningTable001** は SQL Server Profiler でチューニング テンプレートを使用し、トレース出力をテーブルとして保存することによって作成されたものです。  
+ 次のコード例では**MyDatabase.MyDBOwner.TuningTable001** 、 `Workload`要素の MyDatabase トレーステーブルを指定します。 **TuningTable001** は SQL Server Profiler でチューニング テンプレートを使用し、トレース出力をテーブルとして保存することによって作成されたものです。  
   
 ```  
 <DTAXML ...>  

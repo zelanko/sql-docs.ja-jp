@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1d449defa98112c87a4b5789f1cff6f764252e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62659580"
 ---
 # <a name="droponlymode-element-dta"></a>DropOnlyMode 要素 (DTA)
@@ -36,20 +36,18 @@ ms.locfileid: "62659580"
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特徴|[説明]|  
+|特徴|説明|  
 |--------------------|-----------------|  
-|**データ型と長さ**|[なし] :|  
-|**既定値**|[なし] :|  
-|**個数**|省略可能。 
-  `TuningOptions` 要素につき 1 回だけ使用できます。 
-  `TuningOptions` 要素内で以下の要素を指定する場合には使用できません。<br /><br /> [FeatureSet 要素 &#40;DTA&#41;](featureset-element-dta.md)<br /><br /> [DTA&#41;&#40;のパーティション分割要素](partitioning-element-dta.md)<br /><br /> [Keepexisting 要素 &#40;DTA&#41;](keepexisting-element-dta.md)が**ALL**に設定されています|  
+|**データ型と長さ**|なし。|  
+|**既定値**|なし。|  
+|**見つかる**|任意。 `TuningOptions` 要素につき 1 回だけ使用できます。 `TuningOptions` 要素内で以下の要素を指定する場合には使用できません。<br /><br /> [FeatureSet 要素 &#40;DTA&#41;](featureset-element-dta.md)<br /><br /> [Partitioning 要素 &#40;DTA&#41;](partitioning-element-dta.md)<br /><br /> [KeepExisting 要素 &#40;DTA&#41;](keepexisting-element-dta.md) が **ALL** に設定されている|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
 |リレーションシップ|要素|  
 |------------------|--------------|  
 |**親要素**|[TuningOptions 要素 &#40;DTA&#41;](tuningoptions-element-dta.md)|  
-|**子要素**|[なし] :|  
+|**子要素**|なし。|  
   
 ## <a name="example"></a>例  
  次の例は、データベース エンジン チューニング アドバイザーの XML 入力ファイルの、`TuningOptions` が指定された `DropOnlyMode` セクションを示しています。 この例では、チューニング時間は 24 時間 (1440 分) に制限されており、既存のクラスター化インデックスおよび非クラスター化インデックスはすべて削除することが検討されます。  

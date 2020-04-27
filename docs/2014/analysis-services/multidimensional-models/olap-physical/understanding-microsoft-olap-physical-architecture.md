@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 68e1bba4999f237d5b38ac3f475d2b67fc41959b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62724807"
 ---
 # <a name="physical-architecture-analysis-services---multidimensional-data"></a>物理アーキテクチャ (Analysis Services - 多次元データ)
@@ -24,12 +24,10 @@ ms.locfileid: "62724807"
 ## <a name="in-this-section"></a>このセクションの内容  
  次のトピックでは、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]ソリューションのアーキテクチャの詳細について説明します。  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
-|[OLAP エンジンのサーバー コンポーネント](olap-engine-server-components.md)|
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーのコンポーネントについて説明します。|  
+|[OLAP エンジンのサーバー コンポーネント](olap-engine-server-components.md)|[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーのコンポーネントについて説明します。|  
 |[ローカルキューブ &#40;Analysis Services-多次元データ&#41;](local-cubes-analysis-services-multidimensional-data.md)|スタンドアロンのキューブの実装方法と [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ソリューションにおけるこのような実装のスコープについて説明します。|  
-|[Analysis Services 開発に関するクライアント アーキテクチャの要件](client-architecture-requirements-for-analysis-services-development.md)|
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ソリューションからデータとメタデータにアクセスするためのクライアント アーキテクチャについて説明します。|  
+|[Analysis Services 開発に関するクライアント アーキテクチャの要件](client-architecture-requirements-for-analysis-services-development.md)|[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ソリューションからデータとメタデータにアクセスするためのクライアント アーキテクチャについて説明します。|  
   
   

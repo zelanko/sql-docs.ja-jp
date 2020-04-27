@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bcc0a95028b1f107f15752692d3dcad090fbe8b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62659585"
 ---
 # <a name="recommendation-element-dta"></a>Recommendation 要素 (DTA)
@@ -39,19 +39,18 @@ ms.locfileid: "62659585"
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特徴|[説明]|  
+|特徴|説明|  
 |--------------------|-----------------|  
 |**データ型と長さ**|[なし] :|  
 |**既定値**|[なし] :|  
-|**個数**|省略可能。 
-  `Table` 要素につき 1 回使用できます。|  
+|**個数**|省略可能。 `Table` 要素につき 1 回使用できます。|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
 |リレーションシップ|要素|  
 |------------------|--------------|  
 |**親要素**|[Schema の Table 要素 &#40;DTA&#41;](table-element-for-schema-dta.md)|  
-|**子要素**|[Create 要素 &#40;DTA&#41;](create-element-dta.md)<br /><br /> `Drop`element. 詳細については、 [データベース エンジン チューニング アドバイザーの XML スキーマ](https://go.microsoft.com/fwlink/?linkid=43100)を参照してください。|  
+|**子要素**|[Create 要素 &#40;DTA&#41;](create-element-dta.md)<br /><br /> `Drop` 要素。 詳細については、 [データベース エンジン チューニング アドバイザーの XML スキーマ](https://go.microsoft.com/fwlink/?linkid=43100)を参照してください。|  
   
 ## <a name="remarks"></a>解説  
  この要素は、データベース エンジン チューニング アドバイザー XML スキーマの **RecommendationTypecomplexType** の名前です。 仮想的な構成でのインデックスを指定するために使用します。 この `Recommendation` 要素を、パーティション分割を指定するための `RecommendationPType` やビューを指定するための `RecommendationViewType` という他の種類の要素と混同しないでください。 これらの要素の`Recommendation`種類の詳細については、「[データベースエンジンチューニングアドバイザー XML スキーマ](https://go.microsoft.com/fwlink/?linkid=43100)」を参照してください。  

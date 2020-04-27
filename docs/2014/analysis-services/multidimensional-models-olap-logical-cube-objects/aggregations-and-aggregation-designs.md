@@ -19,18 +19,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3897c5e41e16af0a8162b63794760aa4d740353d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727698"
 ---
 # <a name="aggregations-and-aggregation-designs"></a>集計と集計デザイン
-  
   <xref:Microsoft.AnalysisServices.AggregationDesign> オブジェクトは、複数のパーティションで共有できる集計定義のセットを定義します。  
   
- 
-  <xref:Microsoft.AnalysisServices.Aggregation> オブジェクトは、メジャー グループ データの概要を、ディメンションの特定の粒度で表します。  
+ <xref:Microsoft.AnalysisServices.Aggregation> オブジェクトは、メジャー グループ データの概要を、ディメンションの特定の粒度で表します。  
   
  簡単な <xref:Microsoft.AnalysisServices.Aggregation> オブジェクトは、基本情報およびディメンションで構成されます。 基本情報には、集計の名前、ID、注釈、および説明が含まれます。 ディメンションは、ディメンションの粒度属性の一覧を含む <xref:Microsoft.AnalysisServices.AggregationDimension> オブジェクトのコレクションです。  
   

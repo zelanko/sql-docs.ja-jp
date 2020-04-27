@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 224facf54b0cde09f97010be472e3cc28754e94b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62756992"
 ---
 # <a name="sql-server-2014-express-localdb"></a>SQL Server 2014 Express LocalDB
@@ -29,7 +29,7 @@ ms.locfileid: "62756992"
 ## <a name="installing-localdb"></a>LocalDB のインストール  
  をインストール`LocalDB`する主な方法は、SqlLocalDB プログラムを使用することです。 `LocalDB`は、の SKU をインストールする場合[!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]のオプションです。 の`LocalDB`インストール中に [**機能**の[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]選択] ページでを選択します。 メジャー `LocalDB` [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]バージョンごとに、バイナリファイルを1つだけインストールできます。 複数の [!INCLUDE[ssDE](../../includes/ssde-md.md)] プロセスを開始することができ、すべてのプロセスが使用するバイナリは同じです。 として開始[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]された`LocalDB`のインスタンスには、と同じ制限があります。[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]  
   
-## <a name="description"></a>[説明]  
+## <a name="description"></a>説明  
  `LocalDB`セットアッププログラムは、SqlLocalDB プログラムを使用して、コンピューターに必要なファイルをインストールします。 インストールが完了`LocalDB`すると、は[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]データベースを作成して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]開くことができるのインスタンスになります。 データベースのシステム データベース ファイルは、通常は非表示になっているユーザーのローカル AppData パスに格納されます。 たとえば、**C:\Users\\<user\>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\\** などです。 ユーザー データベース ファイルは、ユーザーが指定する場所、通常は **C:\Users\\<user\>\Documents\\** フォルダーに格納されます。  
   
  アプリケーション`LocalDB`にを含める方法の詳細については[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 、ドキュメント「[ローカルデータの概要](https://msdn.microsoft.com/library/ms233817\(VS.110\).aspx)」、「[チュートリアル: SQL Server localdb データベースの作成](https://msdn.microsoft.com/library/ms233763\(VS.110\).aspx)」、および「[チュートリアル: SQL Server localdb データベースのデータへの接続 (Windows フォーム)](https://msdn.microsoft.com/library/ms171890\(VS.110\).aspx)」を参照してください。  
@@ -59,8 +59,7 @@ ms.locfileid: "62756992"
  コンピューターの異なるユーザーが同じ名前のインスタンスを持つことができます。 各インスタンスは、別のユーザーとして実行している別のプロセスです。  
   
 ## <a name="shared-instances-of-localdb"></a>LocalDB の共有インスタンス  
- コンピューターの複数のユーザーがの1つの`LocalDB`インスタンスに接続する必要があるシナリオ`LocalDB`をサポートするために、はインスタンス共有をサポートしています。 インスタンスの所有者は、コンピューター上の他のユーザーに自分のインスタンスへの接続を許可することを選択できます。 の自動インスタンスと名前付き`LocalDB`インスタンスの両方を共有できます。 
-  `LocalDB` のインスタンスを共有するには、ユーザーがその共有名 (別名) を選択します。 共有名はコンピューターのすべてのユーザーから参照できるため、この共有名はコンピューター上で一意である必要があります。 の`LocalDB`インスタンスの共有名は、の`LocalDB`名前付きインスタンスと同じ形式です。  
+ コンピューターの複数のユーザーがの1つの`LocalDB`インスタンスに接続する必要があるシナリオ`LocalDB`をサポートするために、はインスタンス共有をサポートしています。 インスタンスの所有者は、コンピューター上の他のユーザーに自分のインスタンスへの接続を許可することを選択できます。 の自動インスタンスと名前付き`LocalDB`インスタンスの両方を共有できます。 `LocalDB` のインスタンスを共有するには、ユーザーがその共有名 (別名) を選択します。 共有名はコンピューターのすべてのユーザーから参照できるため、この共有名はコンピューター上で一意である必要があります。 の`LocalDB`インスタンスの共有名は、の`LocalDB`名前付きインスタンスと同じ形式です。  
   
  の共有インスタンスを作成できるの`LocalDB`は、コンピューターの管理者だけです。 の`LocalDB`共有インスタンスは、管理者またはの`LocalDB`共有インスタンスの所有者によって共有を解除できます。 の`LocalDB`インスタンスを共有および共有解除するには`LocalDBShareInstance` 、 `LocalDBUnShareInstance` `LocalDB` API のメソッドとメソッド、または SqlLocalDb ユーティリティの share オプションと share オプションを使用します。  
   
@@ -88,13 +87,13 @@ REM Gather information about the instance of LocalDB
   
 |||  
 |-|-|  
-|Name|"LocalDBApp1"|  
+|名前|"LocalDBApp1"|  
 |Version|\<現在のバージョン>|  
 |共有名|""|  
-|Owner|"\<Windows ユーザー>"|  
+|所有者|"\<Windows ユーザー>"|  
 |自動作成|いいえ|  
 |State|実行中|  
-|前回の開始時刻|\<日付と時刻の>|  
+|前回の開始時刻|\<日付と時刻>|  
 |インスタンス パイプ名|np:\\\\.\pipe\LOCALDB#F365A78E\tsql\query|  
   
 > [!NOTE]  

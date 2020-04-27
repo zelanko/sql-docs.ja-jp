@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2cbc3571aa26728fa94957bb0c2f207ff769f4c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62721794"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
@@ -154,8 +154,7 @@ ms.locfileid: "62721794"
   
 -   接続を作成し、サーバーに正常にログオンするための認証情報はすべて <xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクトで指定されます。  
   
--   既定は Windows 認証です。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用するには、<xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.LoginSecure%2A> を `false` に設定し、<xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.Login%2A> および <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.Password%2A> に有効な [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインおよびパスワードを設定する必要があります。 セキュリティ資格情報は常にセキュリティ保護された状態で保存し、処理する必要があります。可能な限り、実行時に入力するようにします。  
+-   既定は Windows 認証です。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用するには、<xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.LoginSecure%2A> を `false` に設定し、<xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.Login%2A> および <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.Password%2A> に有効な [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインおよびパスワードを設定する必要があります。 セキュリティ資格情報は常にセキュリティ保護された状態で保存し、処理する必要があります。可能な限り、実行時に入力するようにします。  
   
 -   マルチスレッド化されたアプリケーションの場合、各スレッドで別々の <xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクトを使用します。  
   
@@ -188,6 +187,6 @@ ms.locfileid: "62721794"
   
 ## <a name="see-also"></a>参照  
  [レプリケーションシステムストアドプロシージャの概念](replication-system-stored-procedures-concepts.md)   
- [レプリケーションプログラミングの概念](replication-programming-concepts.md)  
+ [レプリケーションのプログラミング概念](replication-programming-concepts.md)  
   
   

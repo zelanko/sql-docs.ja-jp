@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4c789ea6cececcfacbc428fda393c1c13684765
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62704852"
 ---
 # <a name="facet-properties-dialog-box-general-page"></a>[ファセットのプロパティ] ダイアログ ボックスの [全般] ページ
@@ -26,10 +26,10 @@ ms.locfileid: "62704852"
  **説明**  
  ファセットの概要を説明します。  
   
- **適用可能なターゲットの種類**  
+ **該当する対象の種類**  
  このファセットを使用して構成または評価できる対象の種類を表示します。  
   
- **Properties**  
+ **プロパティ**  
  各ファセット プロパティの名前と説明が表示されます。  
   
 ## <a name="see-also"></a>参照  

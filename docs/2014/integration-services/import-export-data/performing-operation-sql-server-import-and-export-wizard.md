@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ffb9c242b30c3b0ddfc1cadae20ea261c616475b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62767904"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>[操作を実行しています] (SQL Server インポートおよびエクスポート ウィザード)
@@ -27,22 +27,22 @@ ms.locfileid: "62767904"
  SQL Server インポートおよびエクスポート ウィザードの目的は、変換元から変換先にデータをコピーすることです。 また、このウィザードでは、変換先データベースと変換先テーブルも作成できます。 ただし、複数のデータベースやテーブルまたは他の種類のデータベース オブジェクトをコピーする必要がある場合は、データベース コピー ウィザードを使用してください。 詳細については、「 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)」を参照してください。  
   
 ## <a name="options"></a>オプション  
- **アクション**  
+ **操作**  
  操作の一部であるそれぞれのアクションを表示します。  
   
  **状態**  
  各アクションが成功したか、失敗したかを表示します。  
   
- **Message**  
+ **メッセージ**  
  アクションによって生成された表示メッセージおよびエラー メッセージを表示します。  
   
  **Assert**  
  エラー、警告、または成功したアクションのみを表示するかどうかを選択します。 [**すべてのアクションを表示]** を選択すると、既定の表示に戻すことができます。  
   
- **停止**  
+ **Stop**  
  必要に応じて、[**停止**] ボタンを使用して操作を中断します。  
   
- **Report**  
+ **レポート**  
  結果レポートを表示したり、ファイルに保存することができます。さらに、レポートをクリップボードにコピーすることも、電子メールで送信することもできます。  
   
   

@@ -15,21 +15,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bc4a06bd637d6fce460fb15739f8b291c95a3361
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702421"
 ---
 # <a name="dimensions-analysis-services---multidimensional-data"></a>ディメンション (Analysis Services - 多次元データ)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]は、ディメンションはキューブの基本コンポーネントです。 ディメンションは、顧客、店舗、従業員など、ユーザーが関心のある分野に関するデータを編成します。 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のディメンションには、ディメンション テーブルの列に対応する属性が含まれています。 これらの属性は属性階層として表現されます。またこれらの属性は、ユーザー定義階層に編成したり、基になるディメンション テーブルの列に基づいた親子階層として定義できます。 階層は、キューブに含まれるメジャーを編成するために使用されます。 次のトピックでは、ディメンション、属性、および階層の概要について説明します。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]は、ディメンションはキューブの基本コンポーネントです。 ディメンションは、顧客、店舗、従業員など、ユーザーが関心のある分野に関するデータを編成します。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のディメンションには、ディメンション テーブルの列に対応する属性が含まれています。 これらの属性は属性階層として表現されます。またこれらの属性は、ユーザー定義階層に編成したり、基になるディメンション テーブルの列に基づいた親子階層として定義できます。 階層は、キューブに含まれるメジャーを編成するために使用されます。 次のトピックでは、ディメンション、属性、および階層の概要について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
-|[ディメンションの概要 &#40;Analysis Services-多次元データ&#41;](dimensions-analysis-services-multidimensional-data.md)|ディメンションの概念について説明します。|  
+|[ディメンションの概要 &#40;Analysis Services - 多次元データ&#41;](dimensions-analysis-services-multidimensional-data.md)|ディメンションの概念について説明します。|  
 |[属性と属性階層](attributes-and-attribute-hierarchies.md)|属性および属性階層について説明します。|  
 |[ユーザー階層](user-hierarchies.md)|属性のユーザー定義階層について説明します。|  
 |[書き込み許可ディメンション](write-enabled-dimensions.md)|書き込み許可ディメンションについて説明します。|  
