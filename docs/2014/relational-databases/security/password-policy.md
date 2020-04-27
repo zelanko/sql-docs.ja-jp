@@ -33,10 +33,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 7b28043d797585496686dea6fd0c5fad276f16b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63187967"
 ---
 # <a name="password-policy"></a>パスワード ポリシー
@@ -64,12 +64,10 @@ ms.locfileid: "63187967"
  パスワードには最大 128 文字まで使用できます。 パスワードはできるだけ長く、複雑にすることをお勧めします。  
   
 ## <a name="password-expiration"></a>パスワードの有効期限  
- パスワードの有効期限のポリシーは、パスワードの寿命を管理します。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってパスワードの有効期限が適用されている場合、ユーザーは古いパスワードを変更するよう通知され、有効期限が切れたパスワードを持つアカウントは無効になります。  
+ パスワードの有効期限のポリシーは、パスワードの寿命を管理します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってパスワードの有効期限が適用されている場合、ユーザーは古いパスワードを変更するよう通知され、有効期限が切れたパスワードを持つアカウントは無効になります。  
   
 ## <a name="policy-enforcement"></a>ポリシーの適用  
- パスワード ポリシーの適用は、SQL Server ログインごとに個別に構成できます。 
-  [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql) を使用して、SQL Server ログインのパスワード ポリシー オプションを構成します。 パスワード ポリシーの適用を構成する際に、次の規則が当てはまります。  
+ パスワード ポリシーの適用は、SQL Server ログインごとに個別に構成できます。 [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql) を使用して、SQL Server ログインのパスワード ポリシー オプションを構成します。 パスワード ポリシーの適用を構成する際に、次の規則が当てはまります。  
   
 -   CHECK_POLICY を ON に変更した場合、次の動作が行われます。  
   
@@ -77,7 +75,7 @@ ms.locfileid: "63187967"
   
     -   パスワードの履歴が、現在のパスワード ハッシュの値に初期化されます。  
   
-    -   [アカウントロック**アウトの期間**]、[アカウントロックアウトの**しきい値**]、および [**アカウントロックアウトカウンターのリセット**] も有効になっています。  
+    -   **[アカウント ロックアウトの期間]**、 **[アカウント ロックアウトのしきい値]**、および **[ロックアウト カウンターのリセット]** も有効になります。  
   
 -   CHECK_POLICY を OFF に変更した場合、次の動作が行われます。  
   
@@ -85,8 +83,7 @@ ms.locfileid: "63187967"
   
     -   パスワード履歴は消去されます。  
   
-    -   
-  `lockout_time` の値がリセットされます。  
+    -   `lockout_time` の値がリセットされます。  
   
  ポリシー オプションの組み合わせには、サポートされないものがあります。  
   
@@ -113,9 +110,9 @@ ms.locfileid: "63187967"
   
  [ALTER USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-user-transact-sql)  
   
- [ログインの作成](authentication-access/create-a-login.md)  
+ [ログインを作成する](authentication-access/create-a-login.md)  
   
- [データベースユーザーの作成](authentication-access/create-a-database-user.md)  
+ [データベース ユーザーの作成](authentication-access/create-a-database-user.md)  
   
 ## <a name="related-content"></a>関連コンテンツ  
  [強力なパスワード](strong-passwords.md)  

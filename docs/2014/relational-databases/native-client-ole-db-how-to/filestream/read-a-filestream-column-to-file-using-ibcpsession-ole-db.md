@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db51298ccadb2dc3ef6b9060bc3d83987bb3c9ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63233144"
 ---
 # <a name="read-a-filestream-column-to-file-using-ibcpsession-ole-db"></a>IBCPSession を使用した FILESTREAM 列のファイルへの読み取り (OLE DB)
@@ -27,9 +27,9 @@ ms.locfileid: "63233144"
   
  次のいずれかのサンプルを使用して、このサンプルで読み取るテーブルを作成します。  
   
--   [ICommandText Parameter &#40;OLE DB にバインドされた ISequentialStream を使用して FILESTREAM 列にデータを送信&#41;](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
+-   [ICommandText パラメーターにバインドされた ISequentialStream を使用したデータの FILESTREAM 列への送信 (OLE DB)](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
   
--   [IRowsetFastUpload &#40;OLE DB を使用して FILESTREAM 列にデータを送信&#41;](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
+-   [IRowsetFastUpload を使用した FILESTREAM 列へのデータの送信 (OLE DB)](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
   
  1 つ目のコード リストをコピーし、ISSHelper.h という名前のファイルに貼り付けます。  
   

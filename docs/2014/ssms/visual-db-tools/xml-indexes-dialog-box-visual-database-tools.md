@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a0c946e0e195937dd2e722ac3f092a57e40427b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63228340"
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>[XML インデックス] ダイアログ ボックス (Visual Database Tools)
@@ -53,7 +53,7 @@ ms.locfileid: "63228340"
  **[IDENTITY] カテゴリ**  
  展開して、 **[オブジェクト名]** プロパティ フィールドと **[説明]** プロパティ フィールドを表示します。  
   
- **名前**  
+ **Name**  
  XML インデックスの名前を表示します。 新しいキーまたはインデックスを作成した場合、このプロパティには、テーブル デザイナーのアクティブ ウィンドウのテーブルに基づいて、既定の名前が設定されます。 名前はいつでも変更できます。  
   
  **説明**  

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9f5b5c233a482672a0cc225364dbf1e4f3b4b645
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63185407"
 ---
 # <a name="database-element-for-workload-dta"></a>Workload の Database 要素 (DTA)
@@ -36,12 +36,11 @@ ms.locfileid: "63185407"
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特徴|[説明]|  
+|特徴|説明|  
 |--------------------|-----------------|  
 |**データ型と長さ**|[なし] :|  
 |**既定値**|[なし] :|  
-|**個数**|他の種類のワークロードが指定されていない場合は、1 回の出現が必要です。 
-  `EventString` 親要素に対しては、`File`、`Database`、または `Workload` 子要素を指定する必要がありますが、使用できるのは 1 種類だけです。 たとえば、ワークロードを `Database` 要素で指定した場合、同じ XML 入力ファイル内でワークロードを `File` 要素で指定することはできません。|  
+|**個数**|他の種類のワークロードが指定されていない場合は、1 回の出現が必要です。 `EventString` 親要素に対しては、`File`、`Database`、または `Workload` 子要素を指定する必要がありますが、使用できるのは 1 種類だけです。 たとえば、ワークロードを `Database` 要素で指定した場合、同じ XML 入力ファイル内でワークロードを `File` 要素で指定することはできません。|  
   
 ## <a name="element-relationships"></a>要素の関係  
   

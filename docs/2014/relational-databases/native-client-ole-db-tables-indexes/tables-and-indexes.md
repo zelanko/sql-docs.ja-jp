@@ -1,5 +1,5 @@
 ---
-title: テーブルとインデックス |Microsoft Docs
+title: テーブルとインデックス | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a4f0b3fcf58f3f2767fbdc653327bec334545bdd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63213528"
 ---
 # <a name="tables-and-indexes"></a>テーブルとインデックス
@@ -33,10 +33,9 @@ ms.locfileid: "63213528"
   
  を対象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]とするほとんどのアプリケーションは、これら[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の Native Client OLE DB プロバイダーインターフェイスではなく、sql-dmo を使用します。 SQL-DMO は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべての管理機能をサポートする OLE オートメーション オブジェクトの集まりです。 複数の OLE DB プロバイダーを対象とするアプリケーションでは、さまざまな OLE DB プロバイダーでサポートされる、これらの汎用 OLE DB インターフェイスを使用します。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、プロバイダー固有の DBPROPSET_SQLSERVERCOLUMN プロパティ セットで、次のプロパティを定義しています。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、プロバイダー固有の DBPROPSET_SQLSERVERCOLUMN プロパティ セットで、次のプロパティを定義しています。  
   
-|プロパティ ID|[説明]|  
+|プロパティ ID|説明|  
 |-----------------|-----------------|  
 |SSPROP_COL_COLLATIONNAME|型 : VT_BSTR<br /><br /> R/W: 書き込み<br /><br /> 既定値 : NULL<br /><br /> 説明 : このプロパティは、**ITableDefinition** でのみ使用します。 このプロパティに指定した文字列は、[CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) ステートメントの作成時に<br /><br /> ステートメントの使用などがあります。|  
   

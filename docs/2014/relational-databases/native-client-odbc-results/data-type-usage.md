@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 170cbfffde1b28d60617f0e0166ca9f8e31f5fb6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63200185"
 ---
 # <a name="data-type-usage"></a>データ型の使用方法
@@ -32,12 +32,9 @@ ms.locfileid: "63200185"
 |---------------|----------------|  
 |日付リテラル|日付リテラルは、SQL_TYPE_TIMESTAMP 列 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime**または**smalldatetime**のデータ型) に格納されている場合、時刻の値は 12:00: 00.000 A.M. になります。|  
 |**money**と**smallmoney**|**Money**データ型と**smallmoney**データ型の整数部分のみが重要です。 データ型の変換中に SQL **money**データの小数部が切り捨てられ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]た場合、Native Client ODBC ドライバーはエラーではなく警告を返します。|  
-|SQL_BINARY (NULL 値を許容)|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.0 以前のインスタンスに接続していて、SQL_BINARY 型の列で NULL 値が許容される場合、データ ソースに格納されているデータには 0 が埋め込まれません。 このような列からデータを取得すると[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、NATIVE Client ODBC ドライバーによって、右側にゼロが埋め込まれます。 ただし、連結など、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により実行される操作で作成されるデータには、このような埋め込みは行われません。<br /><br /> また、データを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.0 以前のインスタンスの列に格納するときに、そのデータが長すぎて列に収まりきらない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はデータを右側から切り捨てます。 **注:** Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC ドライバーでは、6.5 以前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のバージョンへの接続がサポートされています。|  
-|SQL_CHAR (切り捨て)|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.0 以前のインスタンスに接続し、データを SQL_CHAR 型の列に格納するときに、そのデータが長すぎて列に収まりきらない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では警告を通知せずにデータを右側から切り捨てます。 **注:** Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC ドライバーでは、6.5 以前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のバージョンへの接続がサポートされています。|  
-|SQL_CHAR (NULL 値を許容)|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.0 以前のインスタンスに接続していて、SQL_CHAR 型の列で NULL 値が許容される場合、データ ソースに格納されているデータには空白が埋め込まれません。 このような列からデータを取得すると[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、NATIVE Client ODBC ドライバーによって、右側に空白が埋め込まれます。 ただし、連結など、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により実行される操作で作成されるデータには、このような埋め込みは行われません。 **注:** Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC ドライバーでは、6.5 以前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のバージョンへの接続がサポートされています。|  
+|SQL_BINARY (NULL 値を許容)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.0 以前のインスタンスに接続していて、SQL_BINARY 型の列で NULL 値が許容される場合、データ ソースに格納されているデータには 0 が埋め込まれません。 このような列からデータを取得すると[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、NATIVE Client ODBC ドライバーによって、右側にゼロが埋め込まれます。 ただし、連結など、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により実行される操作で作成されるデータには、このような埋め込みは行われません。<br /><br /> また、データを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.0 以前のインスタンスの列に格納するときに、そのデータが長すぎて列に収まりきらない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はデータを右側から切り捨てます。 **注:** Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC ドライバーでは、6.5 以前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のバージョンへの接続がサポートされています。|  
+|SQL_CHAR (切り捨て)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.0 以前のインスタンスに接続し、データを SQL_CHAR 型の列に格納するときに、そのデータが長すぎて列に収まりきらない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では警告を通知せずにデータを右側から切り捨てます。 **注:** Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC ドライバーでは、6.5 以前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のバージョンへの接続がサポートされています。|  
+|SQL_CHAR (NULL 値を許容)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.0 以前のインスタンスに接続していて、SQL_CHAR 型の列で NULL 値が許容される場合、データ ソースに格納されているデータには空白が埋め込まれません。 このような列からデータを取得すると[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、NATIVE Client ODBC ドライバーによって、右側に空白が埋め込まれます。 ただし、連結など、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により実行される操作で作成されるデータには、このような埋め込みは行われません。 **注:** Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC ドライバーでは、6.5 以前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のバージョンへの接続がサポートされています。|  
 |SQL_LONGVARBINARY、SQL_LONGVARCHAR、SQL_WLONGVARCHAR|複数の行に影響を与える SQL_LONGVARBINARY、SQL_LONGVARCHAR、または SQL_WLONGVARCHAR データ型の列の更新は、6の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに接続すると完全にサポートされます。*x*以降。 4.2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *x*のインスタンスに接続すると、S1000 エラー "部分的な挿入/更新" が発生します。 text または image 列の挿入または更新に失敗しました。" が返されます。 **注:** Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC ドライバーでは、6.5 以前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のバージョンへの接続がサポートされています。|  
 |文字列関数パラメーター|文字列関数の*string_exp*パラメーターは、データ型 SQL_CHAR または SQL_VARCHAR である必要があります。 SQL_LONG_VARCHAR データ型はサポートされません。 *Count*パラメーターは8000以下でなければなりません。 SQL_CHAR および SQL_VARCHAR のデータ型は最大8000文字までに制限されているためです。|  
 |時刻リテラル|時刻リテラルは、SQL_TIMESTAMP 列 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime**または**smalldatetime**のデータ型) に格納されている場合、1900年1月1日の日付値を持ちます。|  
@@ -46,10 +43,8 @@ ms.locfileid: "63200185"
 |別名データ型|4.2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *x*のインスタンスに接続されている場合、ODBC ドライバーは、列の null 値の許容属性を明示的に宣言しない列定義に NULL を追加します。 したがって、別名データ型の定義に格納されている NULL 値の許容属性は無視されます。<br /><br /> 4.2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *x*のインスタンスに接続されている場合、別名データ型を持つ列では、基本データ型が**char**または**binary**で、null 値の許容が宣言されていない列は、 **varchar**または**varbinary**として作成されます。 [Sqlcolattribute](../native-client-odbc-api/sqlcolattribute.md)、 [sqlcolumns](../native-client-odbc-api/sqlcolumns.md)、および[SQLDescribeCol](../native-client-odbc-api/sqldescribecol.md)は、これらの列のデータ型として SQL_VARCHAR または SQL_VARBINARY を返します。 これらの列から取得するデータには、埋め込みは行われません。 **注:** Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC ドライバーでは、6.5 以前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のバージョンへの接続がサポートされています。|  
 |LONG データ型|*実行時データ*パラメーターは、SQL_LONGVARBINARY と SQL_LONGVARCHAR の両方のデータ型に対して制限されます。|  
 |大きな値型|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client odbc ドライバーでは、 **varchar (max)** 型、 **varbinary (max)** 型、および**nvarchar (max)** 型が、SQL_VARCHAR、SQL_VARBINARY、および SQL_WVARCHAR (それぞれ、ODBC SQL データ型を受け入れるか返す api) で公開されます。|  
-|ユーザー定義型 (UDT)|UDT 列は SQL_SS_UDT としてマップされます。 SQL ステートメントで、UDT の ToString() メソッドまたは ToXMLString() メソッドを使用するか、CAST/CONVERT 関数を使用して UDT 列を明示的に別の型にマップする場合、結果セット内の列の型には変換された列の実際の型が反映されます。<br /><br /> Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC ドライバーは、UDT 列にバイナリとしてのみバインドできます。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされるのは、SQL_SS_UDT データ型と SQL_C_BINARY データ型の間の変換のみです。|  
-|XML|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、XML を Unicode テキストに自動的に変換します。 XML 型は SQL_SS_XML としてマップされます。|  
+|ユーザー定義型 (UDT)|UDT 列は SQL_SS_UDT としてマップされます。 SQL ステートメントで、UDT の ToString() メソッドまたは ToXMLString() メソッドを使用するか、CAST/CONVERT 関数を使用して UDT 列を明示的に別の型にマップする場合、結果セット内の列の型には変換された列の実際の型が反映されます。<br /><br /> Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC ドライバーは、UDT 列にバイナリとしてのみバインドできます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされるのは、SQL_SS_UDT データ型と SQL_C_BINARY データ型の間の変換のみです。|  
+|XML|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、XML を Unicode テキストに自動的に変換します。 XML 型は SQL_SS_XML としてマップされます。|  
   
 ## <a name="see-also"></a>参照  
  [ODBC&#41;&#40;結果の処理](processing-results-odbc.md)  

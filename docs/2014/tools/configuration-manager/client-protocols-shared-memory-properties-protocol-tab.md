@@ -14,16 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3d5f15222caab52732dff3d6c5faf37b11d4a057
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63192919"
 ---
 # <a name="client-protocols---shared-memory-properties-protocol-tab"></a>クライアント プロトコル - [共有メモリのプロパティ] ダイアログ ボックス ([プロトコル] タブ)
-  
-  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーでは、 **[共有メモリのプロパティ]** ダイアログ ボックスの **[プロトコル]** タブを使用して、共有メモリの表示や指定を行います。 接続文字列の詳細については、「 [共有メモリ プロトコルを使用した有効な接続文字列の作成](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)」を参照してください。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーでは、 **[共有メモリのプロパティ]** ダイアログ ボックスの **[プロトコル]** タブを使用して、共有メモリの表示や変更を行います。 接続文字列の詳細については、「 [共有メモリ プロトコルを使用した有効な接続文字列の作成](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)」を参照してください。  
   
 ## <a name="options"></a>オプション  
  **有効**  

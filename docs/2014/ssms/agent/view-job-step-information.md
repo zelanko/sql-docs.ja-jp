@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8123a523a0fa5212b4c0ffc8d98c6a90aef3396c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63245932"
 ---
 # <a name="view-job-step-information"></a>View Job Step Information
@@ -31,50 +31,43 @@ ms.locfileid: "63245932"
   
      [セキュリティ](#Security)  
   
--   **ジョブステップの情報を表示する方法:**  
+-   **ジョブ ステップの情報を表示する方法:**  
   
      [SQL Server Management Studio](#SSMS)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
  テーブルまたはファイルに出力を書き込むようにジョブ ステップが構成され、ジョブが 1 回でも実行されている場合は、 **[ジョブ ステップのプロパティ]** ダイアログ ボックスの **[詳細設定]** ページでジョブ ステップの出力を表示できます。 ジョブまたはジョブ ステップが削除されると、出力ログは自動的に削除されます。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
- 
-  **sysadmin** 固定サーバー ロールのメンバー以外は、所有するジョブしか表示できません。 このロールのメンバーは、すべてのジョブとジョブ ステップの詳細を表示できます。  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
+ **sysadmin** 固定サーバー ロールのメンバー以外は、所有するジョブしか表示できません。 このロールのメンバーは、すべてのジョブとジョブ ステップの詳細を表示できます。  
   
-##  <a name="SSMS"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-view-job-step-information"></a>ジョブ ステップの情報を表示するには  
   
-1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
+1.  **オブジェクト エクスプローラー**で、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  
-  **[SQL Server エージェント]**、 **[ジョブ]** の順に展開し、表示するジョブ ステップが含まれているジョブを右クリックします。次に、 **[プロパティ]** をクリックします。  
+2.  **[SQL Server エージェント]**、 **[ジョブ]** の順に展開し、表示するジョブ ステップが含まれているジョブを右クリックします。次に、 **[プロパティ]** をクリックします。  
   
-3.  
-  **[ジョブのプロパティ]** ダイアログ ボックスで、 **[ステップ]** ページをクリックします。  
+3.  **[ジョブのプロパティ]** ダイアログ ボックスで、 **[ステップ]** ページをクリックします。  
   
 4.  表示するジョブ ステップをクリックし、 **[編集]** をクリックします。  
   
-5.  
-  **[ジョブ ステップのプロパティ]** ダイアログ ボックスの **[全般]** ページで、ジョブ ステップの種類や説明を表示できます。  
+5.  **[ジョブ ステップのプロパティ]** ダイアログ ボックスの **[全般]** ページで、ジョブ ステップの種類や説明を表示できます。  
   
-6.  
-  **[詳細設定]** ページをクリックすると、ジョブ ステップが正常終了または異常終了した場合に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによって行われる操作、ジョブ ステップの試行回数、ジョブ ステップの出力の書き込み先、およびジョブ ステップを実行するユーザーが表示されます。  
+6.  **[詳細設定]** ページをクリックすると、ジョブ ステップが正常終了または異常終了した場合に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによって行われる操作、ジョブ ステップの試行回数、ジョブ ステップの出力の書き込み先、およびジョブ ステップを実行するユーザーが表示されます。  
   
 #### <a name="to-view-job-step-output"></a>ジョブ ステップの出力を表示するには  
   
-1.  
-  **[ジョブ ステップのプロパティ]** ダイアログ ボックスで、 **[詳細設定]** ページをクリックします。  
+1.  **[ジョブ ステップのプロパティ]** ダイアログ ボックスで、 **[詳細設定]** ページをクリックします。  
   
 2.  接続している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンに応じて、ジョブ ステップの出力ファイルまたは出力テーブルのいずれかを次のように表示できます。  
   
-    -   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以降に接続しているときは、 **[テーブルにログ記録する]** チェック ボックスがオンになっている場合のみ **[表示]** をクリックできます。 この場合、 **msdb** データベースの **sysjobstepslogs** テーブルにジョブ ステップの出力が書き込まれます。  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以降に接続しているときは、 **[テーブルにログ記録する]** チェック ボックスがオンになっている場合のみ **[表示]** をクリックできます。 この場合、 **msdb** データベースの **sysjobstepslogs** テーブルにジョブ ステップの出力が書き込まれます。  
   
     -   ジョブ ステップの出力がファイルに書き込まれるときは **[表示]** ボタンが無効になります。 ジョブ ステップの出力ファイルを表示するには、メモ帳を使用します。  
   

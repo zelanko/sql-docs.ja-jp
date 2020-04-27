@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 755685601bb97f7e0b8980024df07e27967f3cd3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63193065"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML データ型と列 (SQL Server)
@@ -57,8 +57,7 @@ ms.locfileid: "63193065"
 ## <a name="xml-storage-options"></a>XML ストレージ オプション  
  次に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] での XML のストレージ オプションを示します。  
   
--   
-  `xml` データ型としてのネイティブ ストレージ  
+-   `xml` データ型としてのネイティブ ストレージ  
   
      データの XML コンテンツを保持できる内部表現を使用してデータが保存されます。 内部表現には、包含階層、表示順、要素や属性の値に関する情報などがあります。 具体的には、XML データの InfoSet コンテンツが保持されます。 InfoSet の詳細については、「[http://www.w3.org/TR/xml-infoset](https://go.microsoft.com/fwlink/?LinkId=48843)」を参照してください。 InfoSet コンテンツでは、重要でない空白文字、属性の順序、名前空間プレフィックス、および XML 宣言が保持されないので、テキスト形式の XML のまったく同一のコピーにはならない場合があります。  
   
@@ -161,15 +160,13 @@ ms.locfileid: "63193065"
  たとえば、新旧の XML インスタンスの比較による BLOB (バイナリ ラージ オブジェクト) やインデックスの部分更新が新しくサポートされるようになったので、それにより XML インスタンスが更新されます。 BLOB (バイナリ ラージ オブジェクト) の部分更新は、2 つの XML インスタンスの差異を比較して差分のみを更新します。 インデックスの部分更新は、XML インデックスの変更が必要な行のみを変更します。  
   
 ## <a name="limitations-of-the-xml-data-type"></a>xml データ型の制限事項  
- 
-  `xml` データ型には、次の一般的な制限事項が適用されます。  
+ `xml` データ型には、次の一般的な制限事項が適用されます。  
   
 -   保存する `xml` データ型のインスタンスは 2 GB 以内である必要があります。  
   
 -   **sql_variant** インスタンスのサブタイプとしては使用できません。  
   
--   
-  `text` または `ntext` にキャストしたり、変換することはできません。 代わりに、`varchar(max)` タグまたは `nvarchar(max)` タグを使用してください。  
+-   `text` または `ntext` にキャストしたり、変換することはできません。 代わりに、`varchar(max)` タグまたは `nvarchar(max)` タグを使用してください。  
   
 -   比較や並べ替えはできません。 したがって、`xml` データ型は GROUP BY ステートメント内では使用できません。  
   

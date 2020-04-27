@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfilee
 ms.openlocfilehash: 893067e234d868ae6dde2f93d93bfd50458bfeb2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63217742"
 ---
 # <a name="creating-predictions-on-a-sequence-clustering-model-intermediate-data-mining-tutorial"></a>シーケンス クラスター モデルでの予測の作成 (中級者向けデータ マイニング チュートリアル)
@@ -54,7 +54,7 @@ ms.locfileid: "63217742"
   
 |$SEQUENCE|Line Number|モデル|  
 |---------------|-----------------|-----------|  
-|1 で保護されたプロセスとして起動されました||Mountain-200|  
+|1||Mountain-200|  
   
  この結果からわかることは何でしょうか。 入力を指定していないことに注意してください。 予測はケースの母集団全体に対して作成され、Analysis Services からは最も可能性の高い全体的な予測が返されます。  
   
@@ -65,13 +65,13 @@ ms.locfileid: "63217742"
   
 1.  予測クエリビルダーの左上隅にある [**デザイン**] ボタンをクリックして、クエリ作成グリッドに戻ります。  
   
-2.  [**単一クエリ入力**] ダイアログボックスで、の**** `Region`[値] ボックスをクリックし、[**ヨーロッパ**] を選択します。  
+2.  [**単一クエリ入力**] ダイアログボックスで、の**Value** `Region`[値] ボックスをクリックし、[**ヨーロッパ**] を選択します。  
   
 3.  [**結果**] ボタンをクリックすると、ヨーロッパの顧客の予測が表示されます。  
   
 4.  予測クエリビルダーの左上隅にある [**デザイン**] ボタンをクリックして、クエリ作成グリッドに戻ります。  
   
-5.  [**単一クエリ入力**] ダイアログボックスで、の**** `Region`[値] ボックスをクリックし、[**北米**] を選択します。  
+5.  [**単一クエリ入力**] ダイアログボックスで、の**Value** `Region`[値] ボックスをクリックし、[**北米**] を選択します。  
   
 6.  北米の顧客の予測を表示するには、[**結果**] ボタンをクリックします。  
   
@@ -117,8 +117,7 @@ NATURAL PREDICTION JOIN
   
      グリッドが開いたペインに変わり、予測クエリ ビルダーで作成された DMX ステートメントを表示および変更できるようになります。  
   
-2.  
-  `SELECT` キーワードの後に、「`FLATTENED`」と入力します。  
+2.  `SELECT` キーワードの後に、「`FLATTENED`」と入力します。  
   
      クエリの完全なテキストは、次のようになります。  
   
@@ -146,9 +145,9 @@ NATURAL PREDICTION JOIN
   
 1.  予測クエリビルダーの左上隅にある [**デザイン**] ボタンをクリックして、クエリ作成グリッドに戻ります。  
   
-2.  [**単一クエリ入力**] ダイアログボックスで、の**** `Region`[値] ボックスをクリックし、空の行を選択して、このフィールドの入力をクリアします。  
+2.  [**単一クエリ入力**] ダイアログボックスで、の**Value** `Region`[値] ボックスをクリックし、空の行を選択して、このフィールドの入力をクリアします。  
   
-3.  [**単一クエリ入力**] ダイアログボックスで、の**** `vAssocSeqLineItems`[値] ボックスをクリックし、[...] ボタンをクリックします。  
+3.  [**単一クエリ入力**] ダイアログボックスで、の**Value** `vAssocSeqLineItems`[値] ボックスをクリックし、[...] ボタンをクリックします。  
   
 4.  [**入れ子になったテーブルの入力**] ダイアログボックスで、[**追加**] をクリックします。  
   
@@ -160,7 +159,7 @@ NATURAL PREDICTION JOIN
   
 |$SEQUENCE|Line Number|モデル|  
 |---------------|-----------------|-----------|  
-|1 で保護されたプロセスとして起動されました||Touring Tire Tube|  
+|1||Touring Tire Tube|  
 |2||Sport-100|  
 |3||Long-Sleeve Logo Jersey|  
   
@@ -202,6 +201,6 @@ NATURAL PREDICTION JOIN
   
 ## <a name="see-also"></a>参照  
  [シーケンスクラスターモデルのクエリ例](../../2014/analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
- [シーケンスクラスターモデルのマイニングモデルコンテンツ &#40;Analysis Services データマイニング&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
+ [シーケンス クラスター モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

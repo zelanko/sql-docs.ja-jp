@@ -1,5 +1,5 @@
 ---
-title: Blob と OLE オブジェクト |Microsoft Docs
+title: BLOB と OLE オブジェクト | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,17 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e459682da63bac8359fa8310233c234e456f4e5b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63195220"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB と OLE オブジェクト
-  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、 **ISequentialStream**インターフェイスを公開して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ntext**、 **text**、 **image**、 **varchar (max)**、 **nvarchar (max**)、 **varbinary (max)**、および xml データ型へのコンシューマーアクセスをバイナリラージオブジェクト (blob) としてサポートします。 
-  **ISequentialStream** の **Read** メソッドを使用すると、扱いやすい単位で大量のデータを取得できます。  
+  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、 **ISequentialStream**インターフェイスを公開して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ntext**、 **text**、 **image**、 **varchar (max)**、 **nvarchar (max**)、 **varbinary (max)**、および xml データ型へのコンシューマーアクセスをバイナリラージオブジェクト (blob) としてサポートします。 **ISequentialStream** の **Read** メソッドを使用すると、扱いやすい単位で大量のデータを取得できます。  
   
- この機能を示すサンプルについては、「 [Large Data &#40;OLE DB&#41;の設定](../native-client-ole-db-how-to/set-large-data-ole-db.md)」を参照してください。  
+ この機能を示すサンプルについては、「[大きなデータの設定 (OLE DB)](../native-client-ole-db-how-to/set-large-data-ole-db.md)」を参照してください。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、コンシューマーがデータ変更のためにバインドされたアクセサーにインターフェイスポインターを提供するときに、コンシューマーが実装した**IStorage**インターフェイスを使用できます。  
   

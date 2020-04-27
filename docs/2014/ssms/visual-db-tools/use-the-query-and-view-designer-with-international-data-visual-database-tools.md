@@ -23,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 673ad13ff5688fb17eaa4b975644256f072a3aef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63204616"
 ---
 # <a name="use-the-query-and-view-designer-with-international-data-visual-database-tools"></a>クエリおよびビュー デザイナーで各種言語データを使用する方法 (Visual Database Tools)
-  [クエリおよびビューデザイナー](visual-database-tools.md)は、あらゆる言語のデータ、および Windows オペレーティングシステムの任意のバージョンで使用できます。 次のガイドラインでは、各種言語のアプリケーションの相違点を示し、そのデータを管理する方法について説明します。  
+  [クエリおよびビュー デザイナー](visual-database-tools.md) は、あらゆる言語のデータ、および Windows オペレーティング システムのすべてのバージョンのデータに対応しています。 次のガイドラインでは、各種言語のアプリケーションの相違点を示し、そのデータを管理する方法について説明します。  
   
 ## <a name="localized-information-in-the-criteria-and-sql-panes"></a>抽出条件ペインおよび SQL ペインのローカライズされた情報  
  抽出条件ペインを使用してクエリを作成する場合は、使用しているコンピューターの Windows 地域設定に対応する形式で情報を入力できます。 たとえば、データを検索する場合は、使い慣れている形式でデータを [抽出条件] 列に入力できます。ただし、次に示す場合を除きます。  

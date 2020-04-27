@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f7a06d30f25f5c78236fe30f148b254ee817dfc0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63232406"
 ---
 # <a name="use-nested-for-xml-queries"></a>入れ子になった FOR XML クエリの使用
@@ -39,7 +39,7 @@ SELECT @x
 --<row ProductModelID="119" Name="Bike Wash" />  
 ```  
   
- いずれかの `@x` データ型メソッドを使用して、変数 `xml` に返された XML にさらに処理を加えることができます。 たとえば、 `ProductModelID` value() メソッド [を使用して、](/sql/t-sql/xml/value-method-xml-data-type)属性の値を取得できます。  
+ いずれかの `xml` データ型メソッドを使用して、変数 `@x` に返された XML にさらに処理を加えることができます。 たとえば、 `ProductModelID` value() メソッド [を使用して、](/sql/t-sql/xml/value-method-xml-data-type)属性の値を取得できます。  
   
 ```  
 DECLARE @i int;  
@@ -47,7 +47,7 @@ SET @i = (SELECT @x.value('/row[1]/@ProductModelID[1]', 'int'));
 SELECT @i;  
 ```  
   
- 次の例では、`FOR XML` 句に `xml` ディレクティブが指定されているので、`TYPE` クエリの結果が `FOR XML` 型で返されます。  
+ 次の例では、`FOR XML` 句に `TYPE` ディレクティブが指定されているので、`FOR XML` クエリの結果が `xml` 型で返されます。  
   
 ```  
 SELECT ProductModelID, Name  

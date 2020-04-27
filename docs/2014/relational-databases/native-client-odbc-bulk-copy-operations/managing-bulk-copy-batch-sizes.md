@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 07f87bf0f231419e4f1345369211ba6ceebf1d12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63199174"
 ---
 # <a name="managing-bulk-copy-batch-sizes"></a>一括コピー バッチ サイズの管理
@@ -31,8 +31,7 @@ ms.locfileid: "63199174"
   
  大量の行を一括コピーする場合、1 つのバッチを構成する行数がパフォーマンスに大きな影響を与えることがあります。 推奨バッチ サイズは、実行する一括コピーの種類によって異なります。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への一括コピーを行う場合は、TABLOCK 一括コピー ヒントを指定し、大きなバッチ サイズを設定します。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への一括コピーを行う場合は、TABLOCK 一括コピー ヒントを指定し、大きなバッチ サイズを設定します。  
   
 -   TABLOCK を指定しない場合は、バッチ サイズを 1,000 行未満に制限します。  
   
@@ -49,6 +48,6 @@ results for another hstmt."
   
 ## <a name="see-also"></a>参照  
  [ODBC&#41;&#40;の一括コピー操作の実行](performing-bulk-copy-operations-odbc.md)   
- [データ &#40;SQL Server&#41;の一括インポートと一括エクスポート](../import-export/bulk-import-and-export-of-data-sql-server.md)  
+ [データの一括インポートと一括エクスポート &#40;SQL Server&#41;](../import-export/bulk-import-and-export-of-data-sql-server.md)  
   
   

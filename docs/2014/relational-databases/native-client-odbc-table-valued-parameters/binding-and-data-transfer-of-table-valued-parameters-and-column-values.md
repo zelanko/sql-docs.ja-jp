@@ -13,17 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 26bcf31c2d4e0d188e93587dd9bdec1a9ff382e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63199956"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>テーブル値パラメーターおよび列の値のバインドとデータ転送
   テーブル値パラメーターは、他のパラメーターと同様、サーバーに渡す前にバインドする必要があります。 アプリケーションは、他のパラメーターをバインドするのと同じ方法で、テーブル値パラメーターをバインドします。 SQLBindParameter を使用するか、SQLSetDescField または SQLSetDescRec の同等の呼び出しを使用します。 テーブル値パラメーター用のサーバーのデータ型は SQL_SS_TABLE です。 C 型は SQL_C_DEFAULT または SQL_C_BINARY として指定できます。  
   
- 
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降では、入力のテーブル値パラメーターのみがサポートされています。 そのため、SQL_DESC_PARAMETER_TYPE に SQL_PARAM_INPUT 以外の値を設定しようとすると、SQLSTATE = HY105 の SQL_ERROR が発生し、"パラメーターの型が無効です。" というメッセージが返されます。  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降では、入力のテーブル値パラメーターのみがサポートされています。 そのため、SQL_DESC_PARAMETER_TYPE に SQL_PARAM_INPUT 以外の値を設定しようとすると、SQLSTATE = HY105 の SQL_ERROR が発生し、"パラメーターの型が無効です。" というメッセージが返されます。  
   
  属性 SQL_CA_SS_COL_HAS_DEFAULT_VALUE を使用すると、テーブル値パラメーターのすべての列に既定値を割り当てることができます。 ただし、テーブル値パラメーターの個々の列値には、SQLBindParameter で*StrLen_or_IndPtr*の SQL_DEFAULT_PARAM を使用して既定値を割り当てることはできません。 テーブル値パラメーター全体を既定値に設定するには、with SQLBindParameter を*StrLen_or_IndPtr*で SQL_DEFAULT_PARAM を使用します。 これらの規則に従わないと、SQLExecute または SQLExecDirect は SQL_ERROR を返します。 生成される診断レコードは SQLSTATE = 07S01 で、"パラメーター \<p> に既定のパラメーターが正しく使用されてい\<ません" というメッセージが表示されます。ここで、p> はクエリステートメントの tvp の序数です。  
   

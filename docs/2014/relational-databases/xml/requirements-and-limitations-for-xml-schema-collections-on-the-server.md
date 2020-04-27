@@ -25,10 +25,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 245b844872070ee16104a90ecc0734462bdad3b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63241258"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>サーバー上の XML スキーマ コレクションの要件と制限
@@ -41,10 +41,8 @@ ms.locfileid: "63241258"
 |**\<xsd:include>**|現在、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこの要素をサポートしません。 この要素を含む XML スキーマはサーバーによって拒否されます。<br /><br /> 解決方法として、 **\<xsd:include>** ディレクティブを含む XML スキーマに前処理を行い、インクルードされるすべてのスキーマの内容をコピーおよびマージして 1 つのスキーマにすることで、サーバーにアップロードできます。 詳細については、「 [含まれているスキーマをマージするためのスキーマの前処理](preprocess-a-schema-to-merge-included-schemas.md)」を参照してください。|  
 |**\<xsd:key>** 、 **\<xsd:keyref>** 、および **\<xsd:unique>**|現在、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、一意性の強制や、キーおよびキー参照の確立を行うための、これらの XSD ベースの制約はサポートしません。 これらの要素を含む XML スキーマは登録できません。|  
 |**\<xsd:redefine>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこの要素をサポートしません。 スキーマを更新するための別の方法については、「 [&#60;xsd:redefine&#62; 要素](the-xsd-redefine-element.md)で機能するように XSD スキーマを変更するためのガイドラインを示しています。|  
-|**\<xsd:simpleType>** 値|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、`xs:time` および `xs:dateTime` 以外の秒部分を含む単純型はミリ秒単位の精度までしかサポートされず、`xs:time` および `xs:dateTime` は 100 ナノ秒単位の精度までサポートされます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、認識されるすべての XSD 単純型の列挙に制限を適用します。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **\<xsd:simpleType>** 宣言での "NaN" 値の使用はサポートしません。<br /><br /> 詳細については、「[&#60;xsd:simpleType&#62; 宣言の値](values-for-xsd-simpletype-declarations.md)で機能するように XSD スキーマを変更するためのガイドラインを示しています。|  
-|**xsi:schemaLocation** と **xsi:noNamespaceSchemaLocation**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型の列や変数に挿入された XML インスタンス データにこれらの属性が含まれている場合、`xml` ではこれらの属性が無視されます。|  
+|**\<xsd:simpleType>** 値|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、`xs:time` および `xs:dateTime` 以外の秒部分を含む単純型はミリ秒単位の精度までしかサポートされず、`xs:time` および `xs:dateTime` は 100 ナノ秒単位の精度までサポートされます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、認識されるすべての XSD 単純型の列挙に制限を適用します。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **\<xsd:simpleType>** 宣言での "NaN" 値の使用はサポートしません。<br /><br /> 詳細については、「[&#60;xsd:simpleType&#62; 宣言の値](values-for-xsd-simpletype-declarations.md)で機能するように XSD スキーマを変更するためのガイドラインを示しています。|  
+|**xsi:schemaLocation** と **xsi:noNamespaceSchemaLocation**|`xml` データ型の列や変数に挿入された XML インスタンス データにこれらの属性が含まれている場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこれらの属性が無視されます。|  
 |**xs:QName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、XML スキーマ制約要素を使用している **xs:QName** から派生した型はサポートしません。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、メンバー要素に **xs:QName** を指定した共用体型はサポートしません。<br /><br /> 詳細については、「 [The xs:QName Type](the-xs-qname-type.md)」を参照してください。|  
 |既存の置換グループへのメンバーの追加|XML スキーマ コレクション内の既存の置換グループにメンバーを追加することはできません。 XML スキーマの置換グループは先頭要素のみで使用するように制限されているので、同じ CREATE XML SCHEMA COLLECTION ステートメントまたは ALTER XML SCHEMA COLLECTION ステートメントで置換グループのすべてのメンバー要素を定義する必要があります。|  
 |正規の形式とパターン制限|値の正規表現は、その値の型のパターン制限に従う必要があります。 詳細については、「 [Canonical Forms and Pattern Restrictions](canonical-forms-and-pattern-restrictions.md)」を参照してください。|  
@@ -58,15 +56,13 @@ ms.locfileid: "63241258"
 |メモリ不足状態|大きな XML スキーマ コレクションの操作では、メモリが不足することがあります。 この問題の解決方法については、「 [大きな XML スキーマ コレクションとメモリ不足状態](large-xml-schema-collections-and-out-of-memory-conditions.md)」を参照してください。|  
 |繰り返される値|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、block 属性または final 属性で "restriction restriction" や "extension extension" のように値を繰り返すスキーマが拒否されます。|  
 |スキーマ コンポーネントの識別子|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、スキーマ コンポーネントの識別子の最大長を Unicode 文字 1,000 文字に制限します。 また、識別子に補助文字のペアを使用することはできません。|  
-|タイム ゾーン情報|
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンでは、`xs:date`、`xs:time`、および `xs:dateTime` の値について、XML スキーマ検証でタイム ゾーンの情報が完全にサポートされます。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 後方互換性モードでは、タイム ゾーン情報は常に協定世界時 (グリニッジ標準時) を基準として正規化されます。 
-  `dateTime` 型の要素の場合は、サーバー側でオフセット値 ("-05:00") を使用して対応する GMT 時を返すことによって、指定された時間を GMT に変換します。|  
+|タイム ゾーン情報|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンでは、`xs:date`、`xs:time`、および `xs:dateTime` の値について、XML スキーマ検証でタイム ゾーンの情報が完全にサポートされます。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 後方互換性モードでは、タイム ゾーン情報は常に協定世界時 (グリニッジ標準時) を基準として正規化されます。 `dateTime` 型の要素の場合は、サーバー側でオフセット値 ("-05:00") を使用して対応する GMT 時を返すことによって、指定された時間を GMT に変換します。|  
 |共用体型|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、共用体型からの制限はサポートしません。|  
 |可変精度の 10 進数|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、有効桁数が可変の 10 進数はサポートしません。 **xs:decimal** 型は任意の有効桁数の 10 進数を表します。 XML プロセッサに準拠するには、最低でも `totalDigits=18`以上の 10 進数をサポートする必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 `totalDigits=38,` をサポートしますが、小数部は 10 桁に制限されます。 インスタンス化されたすべての **xs:decimal** 値は、サーバーでは SQL 型数値 (38, 10) を使用して内部的に表現されます。|  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[正規の形式とパターン制限](canonical-forms-and-pattern-restrictions.md)|正規の形式とパターン制限について説明します。|  
 |[ワイルドカード コンポーネントと内容検証](wildcard-components-and-content-validation.md)|XML スキーマ コレクションでのワイルドカード文字、lax 検証、および anyType 要素の使用に関する制限について説明します。|  

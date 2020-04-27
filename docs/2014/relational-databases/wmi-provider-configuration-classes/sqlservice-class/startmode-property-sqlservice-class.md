@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: bf77e36824c05a0f07bc789c380cffbc1518669d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63187826"
 ---
 # <a name="startmode-property-sqlservice-class"></a>StartMode プロパティ (SqlService クラス)
@@ -37,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>要素  
- *素材*  
+ *object*  
  サービスを表す [SqlService クラス](sqlservice-class.md) オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
@@ -45,23 +45,22 @@ object
   
  値には、次のいずれかを指定できます。  
   
- ブート  
+ Boot  
  値 = 0。 オペレーティング システム ローダーによって開始されるサービスです。 このオプションは、ドライバー サービスにのみ有効です。  
   
  システム  
- 値 = 1。 
-  `IoInitSystem` メソッドによって開始されるサービスです。 このオプションは、ドライバー サービスにのみ有効です。  
+ 値 = 1。 `IoInitSystem` メソッドによって開始されるサービスです。 このオプションは、ドライバー サービスにのみ有効です。  
   
  自動  
  値 = 2。 システムの起動時にサービス コントロール マネージャーによって自動的に開始されるサービスです。  
   
- マニュアル  
+ 手動  
  値 = 3。 プロセスが `StartService` メソッドを呼び出すとコンピューター マネージャーによって開始されるサービスです。  
   
  無効  
  値 = 4。 サービスを開始できません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>参照  
  [サービスの開始および停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

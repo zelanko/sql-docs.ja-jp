@@ -11,14 +11,13 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8c5c6f1998cffc268a57318e0124f74d3411a3b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63249316"
 ---
 # <a name="sqlerrorlogfile-class"></a>SqlErrorLogFile クラス
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログ ファイルの情報の表示に関するプロパティを提供します。  
   
 ## <a name="syntax"></a>構文  
@@ -36,7 +35,7 @@ class SQLErrorLogFile
 };  
 ```  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
  SQLErrorLogFile クラスは、次のプロパティを定義します。  
   
 |||  
@@ -45,14 +44,14 @@ class SQLErrorLogFile
 |InstanceName|データ型: `string`<br /><br /> アクセスの種類: 読み取り専用<br /><br /> 修飾子: キー<br /><br /> <br /><br /> ログ ファイルが存在する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前。|  
 |LastModified|データ型: `datetime`<br /><br /> アクセスの種類: 読み取り専用<br /><br /> <br /><br /> ログ ファイルの最終変更日。|  
 |LogFileSize|データ型: `uint32`<br /><br /> アクセスの種類: 読み取り専用<br /><br /> <br /><br /> ログ ファイルのサイズ (バイト単位)。|  
-|Name|データ型: `string`<br /><br /> アクセスの種類: 読み取り専用<br /><br /> 修飾子: キー<br /><br /> <br /><br /> ログ ファイルの名前。|  
+|名前|データ型: `string`<br /><br /> アクセスの種類: 読み取り専用<br /><br /> 修飾子: キー<br /><br /> <br /><br /> ログ ファイルの名前。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 |||  
 |-|-|  
 |MOF|Sqlmgmprovider xpsp2up.mof|  
-|DLL|Sqlmgmprovider.dll|  
+|[DLL]|Sqlmgmprovider.dll|  
 |名前空間|\root\Microsoft\SqlServer\ComputerManagement10|  
   
 ## <a name="example"></a>例  
@@ -75,7 +74,7 @@ WScript.Echo "Instance Name:  " & logFile.InstanceName & vbNewLine _
 Next   
 ```  
   
-## <a name="comments"></a>説明  
+## <a name="comments"></a>備考  
  WQL ステートメントで*InstanceName*が指定されていない場合、クエリは既定のインスタンスの情報を返します。 たとえば、次の WQL ステートメントは、既定のインスタンス (MSSQLSERVER) からすべてのログ ファイルに関する情報を返します。  
   
 ```  

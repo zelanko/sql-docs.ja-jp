@@ -19,14 +19,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fcfbbdb1881662401e791ea197115120444cf855
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63225525"
 ---
 # <a name="bcp_columns"></a>bcp_columns
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] との一括コピー入出力に使用する、ユーザー ファイル内の合計列数を設定します。 bcp_columns と[bcp_colfmt](bcp-colfmt.md)の代わりに[bcp_setbulkmode](bcp-setbulkmode.md)を使用できます。  
   
 ## <a name="syntax"></a>構文  
@@ -53,7 +52,7 @@ nColumns
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この関数は、有効なファイル名を指定して[bcp_init](bcp-init.md)が呼び出された後にのみ呼び出すことができます。  
   
  この関数を呼び出す必要があるのは、既定とは異なる形式のユーザー ファイルを使用する場合のみです。 既定のユーザーファイル形式の詳細については、「 **bcp_init**」を参照してください。  

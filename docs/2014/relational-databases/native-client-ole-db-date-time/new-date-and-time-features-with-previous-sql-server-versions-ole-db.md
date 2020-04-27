@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc810ced25733ce77d80c7bec38b03e3aaf3753a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63233080"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>以前のバージョンの SQL Server における、新しい日付または時刻の機能の動作 (OLE DB)
@@ -31,19 +31,19 @@ ms.locfileid: "63233080"
   
 |OLE DB クライアントの型|SQL Server 2005 の型|SQL Server 2008 (またはそれ以降) の型|結果の変換 (サーバーからクライアントへ)|パラメーターの変換 (クライアントからサーバーへ)|  
 |------------------------|--------------------------|---------------------------------------|--------------------------------------------|-----------------------------------------------|  
-|DBTYPE_DBDATE|Datetime|Date|OK|OK|  
+|DBTYPE_DBDATE|Datetime|日付|[OK]|[OK]|  
 |DBTYPE_DBTIMESTAMP|||時刻フィールドは 0 に設定されます。|IRowsetChange は、時間フィールドが0以外の場合、文字列の切り捨てによって失敗します。|  
-|DBTYPE_DBTIME||Time(0)|OK|OK|  
+|DBTYPE_DBTIME||Time(0)|[OK]|[OK]|  
 |DBTYPE_DBTIMESTAMP|||日付フィールドは現在の日付に設定されます。|秒の小数部が0以外の場合、文字列の切り捨てによる IRowsetChange は失敗します。<br /><br /> 日付は無視されます。|  
-|DBTYPE_DBTIME||Time(7)|失敗しました-時刻リテラルが無効です。|OK|  
-|DBTYPE_DBTIMESTAMP|||失敗しました-時刻リテラルが無効です。|OK|  
-|DBTYPE_DBTIMESTAMP||Datetime2 (3)|OK|OK|  
-|DBTYPE_DBTIMESTAMP||Datetime2 (7)|OK|OK|  
-|DBTYPE_DBDATE|Smalldatetime|Date|OK|OK|  
+|DBTYPE_DBTIME||Time(7)|失敗しました-時刻リテラルが無効です。|[OK]|  
+|DBTYPE_DBTIMESTAMP|||失敗しました-時刻リテラルが無効です。|[OK]|  
+|DBTYPE_DBTIMESTAMP||Datetime2 (3)|[OK]|[OK]|  
+|DBTYPE_DBTIMESTAMP||Datetime2 (7)|[OK]|[OK]|  
+|DBTYPE_DBDATE|Smalldatetime|日付|[OK]|[OK]|  
 |DBTYPE_DBTIMESTAMP|||時刻フィールドは 0 に設定されます。|IRowsetChange は、時間フィールドが0以外の場合、文字列の切り捨てによって失敗します。|  
-|DBTYPE_DBTIME||Time(0)|OK|OK|  
+|DBTYPE_DBTIME||Time(0)|[OK]|[OK]|  
 |DBTYPE_DBTIMESTAMP|||日付フィールドは現在の日付に設定されます。|秒の小数部が0以外の場合、文字列の切り捨てによる IRowsetChange は失敗します。<br /><br /> 日付は無視されます。|  
-|DBTYPE_DBTIMESTAMP||Datetime2(0)|OK|OK|  
+|DBTYPE_DBTIMESTAMP||Datetime2(0)|[OK]|[OK]|  
   
  OK は、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で機能した場合には、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降でも引き続き機能することを意味します。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "63233080"
   
 -   日付と時刻に推奨されるデータ型なので `datetime2` に切り替えます。  
   
- ICommandWithParameters:: GetParameterInfo またはスキーマ行セットを通じて取得されたサーバーメタデータを使用するアプリケーションでは、ICommandWithParameters:: SetParameterInfo を介してパラメーターの型情報を設定しようとすると、クライアント変換中に、文字列変換元の型の表現が、変換先の型の文字列表現よりも大きくなっています。 たとえば、クライアントバインドが DBTYPE_DBTIMESTAMP を使用し、サーバー列が date の場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、Native client は値を "yyyy-mm-dd-mm hh: mm: ss" に変換しますが、サーバーメタデータはとして`nvarchar(10)`返されます。 その結果発生するオーバーフローが、DBSTATUS_E_CATCONVERTVALUE の原因となります。 行セットのメタデータは resultset メタデータから設定されるため、IRowsetChange によるデータ変換でも同様の問題が発生します。  
+ ICommandWithParameters:: GetParameterInfo またはスキーマ行セットを通じて取得されたサーバーメタデータを使用するアプリケーションは、クライアントの変換中に、ソース型の文字列形式が変換先の型の文字列表現よりも大きい場合に失敗します。 たとえば、クライアントバインドが DBTYPE_DBTIMESTAMP を使用し、サーバー列が date の場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、Native client は値を "yyyy-mm-dd-mm hh: mm: ss" に変換しますが、サーバーメタデータはとして`nvarchar(10)`返されます。 その結果発生するオーバーフローが、DBSTATUS_E_CATCONVERTVALUE の原因となります。 行セットのメタデータは resultset メタデータから設定されるため、IRowsetChange によるデータ変換でも同様の問題が発生します。  
   
 ### <a name="parameter-and-rowset-metadata"></a>パラメーターと行セットのメタデータ  
  ここでは、より[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]前のバージョンの Native Client でコンパイルされたクライアントのパラメーター、結果列、およびスキーマ行セットのメタデータについて説明します。  
@@ -65,10 +65,10 @@ ms.locfileid: "63233080"
   
 |パラメーターのタイプ|wType|ulParamSize|bPrecision|bScale|  
 |--------------------|-----------|-----------------|----------------|------------|  
-|date|DBTYPE_WSTR|10|~0|~0|  
+|日付|DBTYPE_WSTR|10|~0|~0|  
 |time|DBTYPE_WSTR|8、10..16|~0|~0|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
 |datetime2|DBTYPE_WSTR|19、21.. 27|~0|~0|  
 |datetimeoffset|DBTYPE_WSTR|26、28.. 34|~0|~0|  
   
@@ -79,22 +79,22 @@ ms.locfileid: "63233080"
   
 |列の型|DBCOLUMN_TYPE|DBCOLUMN_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE、DBCOLUMN_DATETIMEPRECISION|  
 |-----------------|--------------------|--------------------------|-------------------------|--------------------------------------------------|  
-|date|DBTYPE_WSTR|10|NULL|NULL|  
+|日付|DBTYPE_WSTR|10|NULL|NULL|  
 |time|DBTYPE_WSTR|8、10..16|NULL|NULL|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
 |datetime2|DBTYPE_WSTR|19、21.. 27|NULL|NULL|  
 |datetimeoffset|DBTYPE_WSTR|26、28.. 34|NULL|NULL|  
   
 #### <a name="columnsinfogetcolumninfo"></a>ColumnsInfo::GetColumnInfo  
  DBCOLUMNINFO 構造体は、次の情報を返します。  
   
-|パラメーターのタイプ|wType|ulColumnSize|bPrecision|bScale|  
+|パラメーターの型|wType|ulColumnSize|bPrecision|bScale|  
 |--------------------|-----------|------------------|----------------|------------|  
-|date|DBTYPE_WSTR|10|~0|~0|  
+|日付|DBTYPE_WSTR|10|~0|~0|  
 |time(1..7)|DBTYPE_WSTR|8、10..16|~0|~0|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
 |datetime2|DBTYPE_WSTR|19、21.. 27|~0|~0|  
 |datetimeoffset|DBTYPE_WSTR|26、28.. 34|~0|~0|  
   
@@ -106,10 +106,10 @@ ms.locfileid: "63233080"
   
 |列の型|DATA_TYPE|CHARACTER_MAXIMUM_LENGTH|CHARACTER_OCTET_LENGTH|DATETIME_PRECISION|  
 |-----------------|----------------|--------------------------------|------------------------------|-------------------------|  
-|date|DBTYPE_WSTR|10|20|NULL|  
+|日付|DBTYPE_WSTR|10|20|NULL|  
 |time|DBTYPE_WSTR|8、10..16|16、20.. 32|NULL|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|0|  
-|DATETIME|DBTYPE_DBTIMESTAMP|NULL|NULL|3|  
+|datetime|DBTYPE_DBTIMESTAMP|NULL|NULL|3|  
 |datetime2|DBTYPE_WSTR|19、21.. 27|38, 42.. 54|NULL|  
 |datetimeoffset|DBTYPE_WSTR|26、28.. 34|52、56.. 68|NULL|  
   
@@ -118,10 +118,10 @@ ms.locfileid: "63233080"
   
 |列の型|DATA_TYPE|CHARACTER_MAXIMUM_LENGTH|CHARACTER_OCTET_LENGTH|TYPE_NAME<br /><br /> LOCAL_TYPE_NAME|  
 |-----------------|----------------|--------------------------------|------------------------------|--------------------------------------|  
-|date|DBTYPE_WSTR|10|20|date|  
+|日付|DBTYPE_WSTR|10|20|date|  
 |time|DBTYPE_WSTR|8、10..16|16、20.. 32|time|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|smalldatetime|  
-|DATETIME|DBTYPE_DBTIMESTAMP|NULL|NULL|DATETIME|  
+|datetime|DBTYPE_DBTIMESTAMP|NULL|NULL|DATETIME|  
 |datetime2|DBTYPE_WSTR|19、21.. 27|38, 42.. 54|datetime2|  
 |datetimeoffset|DBTYPE_WSTR|26、28.. 34|52、56.. 68|datetimeoffset|  
   
@@ -166,6 +166,6 @@ ms.locfileid: "63233080"
  新しい日付型または時刻型に対しては、すべての比較演算子を使用できます。これは、日付型または時刻型ではなく文字列型と見なされるためです。  
   
 ## <a name="see-also"></a>参照  
- [OLE DB &#40;の日付と時刻の改善&#41;](date-and-time-improvements-ole-db.md)  
+ [日付と時刻の強化機能 &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
   
   

@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 076db2370f027b0d7dffeccb294899b48a065c40
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63188652"
 ---
 # <a name="understand-sql-server-management-studio-windows-management"></a>SQL Server Management Studio でのウィンドウの管理について
-  の[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]ツールウィンドウは、次のことを可能にする、非常に機能があり、柔軟性が高く、効率的なシステムです。  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のツール ウィンドウは、高機能で柔軟性の高い、効率的なシステムです。ツール ウィンドウでは、以下の操作を行えます。  
   
 -   開発および管理のためのユーザー ワークスペースを最大化する。  
   
@@ -33,8 +33,7 @@ ms.locfileid: "63188652"
   
  ウィンドウの操作は、 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 環境においてとても重要です。 ユーザーは、頻繁に使用するツールおよびウィンドウに簡単にアクセスすることができます。 また、さまざまな情報に対してどれだけのスペースを割り当てるかを制御でき、それに応じてクエリの編集時には、使用できるスペースが環境によって最大化されます。 ウィンドウは画面上の別の場所に移動できます。 多くのウィンドウは、ドッキングを解除して [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] フレームの外へドラッグすることができます。 この機能は、複数のモニターを使用している場合に特に便利です。  
   
- 機能性を保ちながら編集のためのスペースを広く使用するために、すべてのウィンドウには自動非表示という機能があります。この機能を使用すると、ウィンドウはメイン [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 環境の端にあるバーの中で、タブとして表示されます。 これらのタブのいずれかの上にポインターを置くと、下に隠れているウィンドウが表示されます。 ウィンドウの自動非表示機能は、ウィンドウの右上隅にあるプッシュピンの形をした **[自動的に隠す]** ボタンをクリックしてオンとオフを切り替えることができます。 
-  **[ウィンドウ]** メニューにも、 **[すべて自動的に隠す]** オプションが用意されています。  
+ 機能性を保ちながら編集のためのスペースを広く使用するために、すべてのウィンドウには自動非表示という機能があります。この機能を使用すると、ウィンドウはメイン [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 環境の端にあるバーの中で、タブとして表示されます。 これらのタブのいずれかの上にポインターを置くと、下に隠れているウィンドウが表示されます。 ウィンドウの自動非表示機能は、ウィンドウの右上隅にあるプッシュピンの形をした **[自動的に隠す]** ボタンをクリックしてオンとオフを切り替えることができます。 **[ウィンドウ]** メニューにも、 **[すべて自動的に隠す]** オプションが用意されています。  
   
  一部のコンポーネントでは、コンポーネントを同じ場所にドッキングしてタブとして表示するタブ モードを使用するか、各コンポーネントを別個のウィンドウで表示するマルチドキュメント インターフェイス (MDI) モードを使用するかを設定できます。 この機能を設定するには、 **[ツール]** メニューの **[オプション]** をクリックします。次に、 **[環境]** をクリックし、 **[全般]** をクリックします。  
   

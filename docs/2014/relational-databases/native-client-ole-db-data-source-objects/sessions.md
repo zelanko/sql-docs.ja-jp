@@ -1,5 +1,5 @@
 ---
-title: セッション |Microsoft Docs
+title: セッション | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f594ace96fc34a77adca244e79c55551f0ddb8d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63228973"
 ---
 # <a name="sessions"></a>セッション
@@ -27,8 +27,7 @@ ms.locfileid: "63228973"
   
  初期化されたデータ ソースで最初に作成されるセッション オブジェクトが、初期化時に確立された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続を受け取ります。 そのセッション オブジェクトのインターフェイスのすべての参照が解放されると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへの接続で、データ ソースで作成される別のセッション オブジェクトを使用できるようになります。  
   
- データ ソースで新たに作成されるセッション オブジェクトは、データ ソースでの指定に従って、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへの独自の接続を確立します。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへの接続は、そのセッションを作成したオブジェクトに対するすべての参照がアプリケーションによって解放された時点で削除されます。  
+ データ ソースで新たに作成されるセッション オブジェクトは、データ ソースでの指定に従って、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへの独自の接続を確立します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへの接続は、そのセッションを作成したオブジェクトに対するすべての参照がアプリケーションによって解放された時点で削除されます。  
   
  次の例は、Native Client OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロバイダーを使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースに接続する方法を示しています。  
   
@@ -187,6 +186,6 @@ EXIT:
 >  上記の例で **IDBCreateCommand** インターフェイスを使用したのは、**ICommand** インターフェイスに **GetDBSession** メソッドが実装されているためです。このメソッドは、オブジェクトが作成されたセッションを特定できる、コマンドまたは行セットのスコープ内にある唯一のメソッドです。 したがって、コマンド オブジェクトを使用すると、追加のセッションを作成できるデータ ソース オブジェクト ポインターをアプリケーションで取得できます。  
   
 ## <a name="see-also"></a>参照  
- [データソースオブジェクト &#40;OLE DB&#41;](data-source-objects-ole-db.md)  
+ [データ ソース オブジェクト &#40;OLE DB&#41;](data-source-objects-ole-db.md)  
   
   

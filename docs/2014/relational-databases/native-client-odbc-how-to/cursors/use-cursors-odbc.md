@@ -13,47 +13,43 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fb3662bbd1bff6c7c7deb3a8eac61108ea93074a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63200485"
 ---
 # <a name="use-cursors-odbc"></a>カーソルの使用 (OLE DB)
     
 ### <a name="to-use-cursors"></a>カーソルを使用するには  
   
-1.  
-  [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) を呼び出して、目的のカーソル属性を設定します。  
+1.  [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) を呼び出して、目的のカーソル属性を設定します。  
   
      SQL_ATTR_CURSOR_TYPE および SQL_ATTR_CONCURRENCY 属性を設定します (これは推奨オプションです)。  
   
-     または  
+     Or  
   
      SQL_CURSOR_SCROLLABLE および SQL_CURSOR_SENSITIVITY 属性を設定します。  
   
-2.  
-  [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) を呼び出して、SQL_ATTR_ROW_ARRAY_SIZE 属性を使用して行セットのサイズを設定します。  
+2.  [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) を呼び出して、SQL_ATTR_ROW_ARRAY_SIZE 属性を使用して行セットのサイズを設定します。  
   
 3.  WHERE CURRENT OF 句を使用して位置指定更新を実行する場合は、[SQLSetCursorName](https://go.microsoft.com/fwlink/?LinkId=58406) を呼び出して、カーソル名を設定することもできます。  
   
 4.  SQL ステートメントを実行します。  
   
-5.  WHERE CURRENT OF 句を使用して位置指定更新を実行する場合、手順 3. で [SQLSetCursorName](../../native-client-odbc-api/sqlgetcursorname.md) を使用してカーソル名を指定していなかったときは、[SQLGetCursorName](https://go.microsoft.com/fwlink/?LinkId=58406) を呼び出してカーソル名を取得することもできます。  
+5.  WHERE CURRENT OF 句を使用して位置指定更新を実行する場合、手順 3. で [SQLSetCursorName](https://go.microsoft.com/fwlink/?LinkId=58406) を使用してカーソル名を指定していなかったときは、[SQLGetCursorName](../../native-client-odbc-api/sqlgetcursorname.md) を呼び出してカーソル名を取得することもできます。  
   
-6.  
-  [SQLNumResultCols](../../native-client-odbc-api/sqlnumresultcols.md) を呼び出して、行セット内の列数 (C) を取得します。  
+6.  [SQLNumResultCols](../../native-client-odbc-api/sqlnumresultcols.md) を呼び出して、行セット内の列数 (C) を取得します。  
   
      列方向のバインドを使用します。  
   
-     \- - または -  
+     \- または  
   
      行方向のバインドを使用します。  
   
 7.  必要に応じてカーソルから行セットをフェッチします。  
   
-8.  
-  [SQLMoreResults](../../native-client-odbc-api/sqlmoreresults.md) を呼び出して、別の結果セットが使用可能かどうかを判断します。  
+8.  [SQLMoreResults](../../native-client-odbc-api/sqlmoreresults.md) を呼び出して、別の結果セットが使用可能かどうかを判断します。  
   
     -   SQL_SUCCESS が返された場合は、別の結果セットを使用できます。  
   
@@ -71,8 +67,7 @@ ms.locfileid: "63200485"
   
 10. 別の結果セットが使用できる場合は、手順 6. に進みます。  
   
-     手順 9. で、部分的に処理された結果セットで [SQLMoreResults](../../native-client-odbc-api/sqlmoreresults.md) を呼び出すと、残りの結果セットがクリアされます。 
-  [SQLCloseCursor](../../native-client-odbc-api/sqlclosecursor.md) を呼び出してクリアする方法もあります。  
+     手順 9. で、部分的に処理された結果セットで [SQLMoreResults](../../native-client-odbc-api/sqlmoreresults.md) を呼び出すと、残りの結果セットがクリアされます。 [SQLCloseCursor](../../native-client-odbc-api/sqlclosecursor.md) を呼び出してクリアする方法もあります。  
   
      使用するカーソルの種類を制御するには、SQL_ATTR_CURSOR_TYPE と SQL_ATTR_CONCURRENCY を設定するか、SQL_ATTR_CURSOR_SENSITIVITY と SQL_ATTR_CURSOR_SCROLLABLE を設定します。 カーソルの動作を指定するこの 2 つの方法を組み合わせて実行しないでください。  
   

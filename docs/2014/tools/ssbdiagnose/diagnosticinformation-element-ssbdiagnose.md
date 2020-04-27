@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 55da8efd6ee5b330e259ed78bdd152720403f310
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63186902"
 ---
 # <a name="diagnosticinformation-element-ssbdiagnose"></a>DiagnosticInformation 要素 (ssbdiagnose)
@@ -35,27 +35,26 @@ ms.locfileid: "63186902"
   
 ## <a name="element-attributes"></a>要素の属性  
   
-|Attribute|[説明]|  
+|Attribute|説明|  
 |---------------|-----------------|  
-|`None`|該当なし|  
+|`None`|なし|  
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特徴|[説明]|  
+|特徴|説明|  
 |--------------------|-----------------|  
-|**データ型と長さ**|[なし] :|  
-|**既定値**|[なし] :|  
-|**個数**|
-  **ssbdiagnose** XML 出力ファイルごとに 1 つ。|  
+|**データ型と長さ**|なし。|  
+|**既定値**|なし。|  
+|**見つかる**|**ssbdiagnose** XML 出力ファイルごとに 1 つ。|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
 |リレーションシップ|要素|  
 |------------------|--------------|  
-|**親要素**|[なし] :|  
+|**親要素**|なし。|  
 |**子要素**|[Banner 要素 &#40;ssbdiagnose&#41;](banner-element-ssbdiagnose.md)<br /><br /> [Issue 要素 &#40;ssbdiagnose&#41;](issue-element-ssbdiagnose.md)|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  XML 名前空間の詳細については、 [MSDN Library の「](https://go.microsoft.com/fwlink/?LinkId=7341) XML ドキュメントにおける名前空間 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 」を参照してください。  
   
 ## <a name="see-also"></a>参照  

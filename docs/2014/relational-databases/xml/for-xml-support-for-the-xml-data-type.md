@@ -14,15 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 015c52194ce17e70a25bfe627aaf6822acda3ce3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63205006"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>xml データ型に対する FOR XML サポート
-  FOR XML クエリによって SELECT 句で `xml` 型の列が指定された場合、ELEMENTS ディレクティブを指定したかどうかにかかわらず、返された XML では列の値が要素としてマップされます。 
-  `xml` 型の列内の XML 宣言はシリアル化されません。  
+  FOR XML クエリによって SELECT 句で `xml` 型の列が指定された場合、ELEMENTS ディレクティブを指定したかどうかにかかわらず、返された XML では列の値が要素としてマップされます。 `xml` 型の列内の XML 宣言はシリアル化されません。  
   
  たとえば、次のクエリでは`BusinessEntityID`、、 `FirstName`、および`LastName`の各列、および型の`AdditionalContactInfo` `xml`列からの電話番号など、顧客の連絡先情報を取得します。  
   
@@ -147,8 +146,7 @@ for xml auto;
   
 -   1 つの `xml` 型の列を持つテーブル  
   
--   
-  `xml` 型のインスタンス  
+-   `xml` 型のインスタンス  
   
  たとえば、次のユーザー定義関数は、`xm` 型の 1 つの列を持つテーブルを返します。  
   

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0c5c59a8802597b893110a5f2c26c919c16c8e83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63192961"
 ---
 # <a name="create-a-multiserver-environment"></a>マルチサーバー環境の作成
@@ -58,7 +58,7 @@ ms.locfileid: "63192961"
 ## <a name="related-tasks"></a>Related Tasks  
  次のトピックでは、マルチサーバー環境を作成するための一般的な作業について説明します。  
   
-|[説明]|トピック|  
+|説明|トピック|  
 |-----------------|-----------|  
 |マスター サーバーを作成する方法について説明します。|[Make a Master Server](make-a-master-server.md)|  
 |ターゲット サーバーを作成する方法について説明します。|[ターゲット サーバーの作成](make-a-target-server.md)|  

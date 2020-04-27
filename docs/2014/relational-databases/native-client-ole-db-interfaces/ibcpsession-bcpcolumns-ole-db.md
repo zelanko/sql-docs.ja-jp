@@ -1,5 +1,5 @@
 ---
-title: 'IBCPSession:: BCPColumns (OLE DB) |Microsoft Docs'
+title: IBCPSession::BCPColumns (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a7108760ebdb5e7e3e6367b801b07d4f8140a62d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63238735"
 ---
 # <a name="ibcpsessionbcpcolumns-ole-db"></a>IBCPSession::BCPColumns (OLE DB)
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブル内の列にバインドされるフィールド数を設定します。  
   
 ## <a name="syntax"></a>構文  
@@ -46,7 +45,7 @@ DBCOUNTITEMnColumns);
  独自のファイル形式を完全に定義するために、**BCPColumns** メソッドを呼び出した後、ユーザー ファイル内の列ごとに **BCPColFmt** メソッドを呼び出す必要があります。  
   
 ## <a name="arguments"></a>引数  
- *n 列*[in]  
+ *nColumns*[in]  
  ユーザー ファイル内のフィールドの総数です。 ユーザー ファイルから SQL Server テーブルへのデータの一括コピーを準備していて、ユーザー ファイル内のすべてのフィールドをコピーしない場合でも、*nColumns* 引数にユーザー ファイル内のフィールドの総数を設定する必要があります。 その後、スキップするフィールドを **BCPColFmt** を使って指定できます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  

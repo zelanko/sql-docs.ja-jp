@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b9dd83baa9139af4ea46940852e0b357f51e5a12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63209339"
 ---
 # <a name="systemstore-property-securitycertificate-class"></a>SystemStore プロパティ (SecurityCertificate クラス)
@@ -37,13 +37,13 @@ object
 ```  
   
 ## <a name="parts"></a>要素  
- *素材*  
+ *object*  
  セキュリティ証明書を表す [SecurityCertificate クラス](securitycertificate-class.md) オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  セキュリティ証明書に対応するシステム ストアを指定する文字列値。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>参照  
  [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

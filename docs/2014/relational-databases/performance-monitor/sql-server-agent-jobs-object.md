@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5bd37ab434dbefbb01862f1004ca62e673df0453
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63251029"
 ---
 # <a name="sql-server-agent-jobs-object"></a>SQL Server エージェントの Jobs オブジェクト
@@ -25,7 +25,7 @@ ms.locfileid: "63251029"
   
  次の表には **SQLAgent:Jobs** カウンターが含まれています。  
   
-|Name|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |**Active Jobs**|このカウンターは、現在実行中のジョブの数を報告します。|  
 |**Failed jobs**|このカウンターは、失敗して終了したジョブの数を報告します。|  
@@ -36,7 +36,7 @@ ms.locfileid: "63251029"
   
  オブジェクトの各カウンターには、次のインスタンスが含まれています。  
   
-|インスタンス|[説明]|  
+|インスタンス|説明|  
 |--------------|-----------------|  
 |**_Total**|すべてのジョブの情報です。|  
 |**警告**|警告によって開始されたジョブの情報です。|  

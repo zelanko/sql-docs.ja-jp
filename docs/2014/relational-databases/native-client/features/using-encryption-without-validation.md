@@ -1,5 +1,5 @@
 ---
-title: 検証を伴わない暗号化の使用 |Microsoft Docs
+title: 検証を伴わない暗号化の使用 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 443c6e0c556a7e69510796b1d58ab0f7b2567e6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63225494"
 ---
 # <a name="using-encryption-without-validation"></a>検証を伴わない暗号化の使用
-  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、常に、ログインに関連するネットワーク パケットを暗号化します。 サーバーの起動時に証明書がサーバーに提供されないと、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] はログイン パケットの暗号化に使用される自己署名入りの証明書を生成します。  
   
  アプリケーションでは、接続文字列キーワードまたは接続プロパティを使用して、すべてのネットワーク トラフィックの暗号化を要求することもできます。 キーワードは、 **IDataInitialize**で初期化文字列を使用する場合に、 **IDbInitialize:: Initialize**でプロバイダー文字列を使用する場合は ODBC と OLE DB、OLE DB ADO の場合は "データの暗号化" を使用する場合は "暗号化" を使用します。 これは、[プロトコルの[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **暗号化**を設定する] オプションを使用して Configuration Manager によって構成することもできます。 既定では、接続のネットワーク トラフィックをすべて暗号化するには、証明書をサーバーに提供する必要があります。  
@@ -48,7 +47,7 @@ ms.locfileid: "63225494"
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB プロバイダー  
  Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、DBPROPSET_SQLSERVERDBINIT プロパティセットに実装されている SSPROP_INIT_TRUST_SERVER_CERTIFICATE データソース初期化プロパティを追加することによって、検証を行わずに暗号化をサポートします。 また、新しい接続文字列のキーワードとして "TrustServerCertificate" が追加されました。 "TrustServerCertificate" は、yes または no を値として受け取ります。既定値は no です。 サービス コンポーネントを使用しているときは、"TrustServerCertificate" は true または false を値として受け取ります。既定値は false です。  
   
- DBPROPSET_SQLSERVERDBINIT プロパティセットに対する拡張機能の詳細については、「[初期化プロパティと承認プロパティ](../../native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md)」を参照してください。  
+ DBPROPSET_SQLSERVERDBINIT プロパティ セットに行われた機能強化の詳細については、「[初期化プロパティと承認プロパティ](../../native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md)」を参照してください。  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC ドライバー  
  Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client ODBC ドライバーでは、 [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md)および[sqlgetconnectattr](../../native-client-odbc-api/sqlgetconnectattr.md)関数への追加によって、検証なしの暗号化がサポートされています。 SQL_TRUST_SERVER_CERTIFICATE_YES または SQL_TRUST_SERVER_CERTIFICATE_NO を受け取る、SQL_COPT_SS_TRUST_SERVER_CERTIFICATE が追加されました。既定値は SQL_TRUST_SERVER_CERTIFICATE_NO です。 また、新しい接続文字列のキーワードとして "TrustServerCertificate" が追加されました。 "TrustServerCertificate" は、"yes" または "no" を値として受け取ります。既定値は "no" です。  

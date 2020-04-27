@@ -13,14 +13,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 181d07e187c6b1091d38ebbe0018c61ae856caf3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63204988"
 ---
 # <a name="generate-xml-from-rowsets-with-for-xml"></a>FOR XML を使用した行セットからの XML の生成
-  新しい Type ディレクティブを`xml`使用して FOR XML を使用することにより、行**** セットからデータ型のインスタンスを生成できます。  
+  新しい Type ディレクティブを`xml`使用して FOR XML を使用することにより、行**TYPE**セットからデータ型のインスタンスを生成できます。  
   
  結果は、 `xml`データ型の列、変数、またはパラメーターに割り当てることができます。 また、FOR XML を入れ子にして階層構造を作成することもできます。 入れ子にした FOR XML は FOR XML EXPLICIT よりも記述が容易ですが、階層が深いとパフォーマンスが低下する場合があります。 FOR XML には新しい PATH モードも導入されています。 この新しいモードで、列の値が現れる XML ツリーのパスを指定します。  
   

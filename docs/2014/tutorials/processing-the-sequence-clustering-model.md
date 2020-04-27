@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 63f46f2d548437a707922bb9cf8b58727061253b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63188145"
 ---
 # <a name="processing-the-sequence-clustering-model"></a>シーケンス クラスター モデルの処理
@@ -42,6 +42,6 @@ ms.locfileid: "63188145"
 ## <a name="see-also"></a>参照  
  [データマイニングデザイナー](../../2014/analysis-services/data-mining/data-mining-designer.md)   
  [Microsoft シーケンスクラスターアルゴリズム](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [データマイニング&#41;&#40;処理の要件と考慮事項](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [処理の要件および注意事項 &#40;データ マイニング&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e2bcb3cfa20948e6bb0964d29331ca1d426b8916
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63199915"
 ---
 # <a name="change-workload-group-settings"></a>ワークロード グループの設定の変更
@@ -29,7 +29,7 @@ ms.locfileid: "63199915"
   
 ## <a name="before-you-begin"></a>はじめに  
   
-###  <a name="LimitationsRestrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 制限事項と制約事項  
  既定のワークロード グループとユーザー定義のワークロード グループの設定を変更することができます。  
   
  **REQUEST_MAX_MEMORY_GRANT_PERCENT**  
@@ -38,10 +38,10 @@ ms.locfileid: "63199915"
   
  インデックス作成では、パフォーマンスを向上させるため、最初に許可されたメモリ量を超えるメモリ ワークスペースの使用が許可されます。 この特別な処理はリソース ガバナーでサポートされていますが、最初のメモリ許可も追加のメモリ許可も、ワークロード グループ設定およびリソース プール設定によって制限されます。  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  ワークロード グループの設定を変更するには、CONTROL SERVER 権限が必要です。  
   
-##  <a name="ChgWGProp"></a> SQL Server Management Studio を使用してワークロード グループの設定を変更する  
+##  <a name="change-workload-group-settings-using-sql-server-management-studio"></a><a name="ChgWGProp"></a> SQL Server Management Studio を使用してワークロード グループの設定を変更する  
  **ワークロード グループの設定を変更するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  オブジェクト エクスプローラーで、変更するワークロード グループを含む **ワークロード グループ** フォルダーまで **[管理]** ノードを再帰的に展開します。  
@@ -54,7 +54,7 @@ ms.locfileid: "63199915"
   
 5.  変更を保存するには、 **[OK]** をクリックします。  
   
-##  <a name="ChgWGTSQL"></a> Transact-SQL を使用してワークロード グループの設定を変更する  
+##  <a name="change-workload-group-settings-using-transact-sql"></a><a name="ChgWGTSQL"></a> Transact-SQL を使用してワークロード グループの設定を変更する  
  **Transact-SQL を使用してワークロード グループの設定を変更するには**  
   
 1.  変更するプロパティ値を指定する ALTER WORKLOAD GROUP ステートメントを実行します。  

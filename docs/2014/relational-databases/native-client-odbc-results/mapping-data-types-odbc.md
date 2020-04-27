@@ -20,18 +20,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bcca4bc6161526d1bd78e55bc9452f2d7d9d69d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63200004"
 ---
 # <a name="mapping-data-types-odbc"></a>データ型のマッピング (ODBC)
   Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client odbc ドライバーでは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、SQL データ型が odbc sql データ型にマップされます。 次のセクションでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL データ型とマップ先の ODBC SQL データ型について説明します。 また、ODBC SQL データ型と対応する ODBC C データ型、およびサポートされる変換と既定の変換についても説明します。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Timestamp 列の値は**datetime**値ではなく、行のアクティビティの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]シーケンスを示す**BINARY (8)** または**VARBINARY (8)** **値である**ため、 **timestamp**データ型は SQL_BINARY または SQL_VARBINARY ODBC データ型にマップされます。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、奇数バイトの SQL_C_WCHAR (Unicode) 型の値を処理する場合、末尾の奇数バイトが切り捨てられます。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Timestamp 列の値は**datetime**値ではなく、行のアクティビティの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]シーケンスを示す**BINARY (8)** または**VARBINARY (8)** **値である**ため、 **timestamp**データ型は SQL_BINARY または SQL_VARBINARY ODBC データ型にマップされます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、奇数バイトの SQL_C_WCHAR (Unicode) 型の値を処理する場合、末尾の奇数バイトが切り捨てられます。  
   
 ## <a name="dealing-with-sql_variant-data-type-in-odbc"></a>ODBC での sql_variant データ型の処理  
  **Sql_variant**データ型の列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]には、 **text**、 **ntext**、 **image**などのラージオブジェクト (lob) を除く、の任意のデータ型を含めることができます。 たとえば、列には、一部の行に対して**smallint**値、他の行の場合は**float**値、残りの場合は**char/nchar**値を含めることができます。  

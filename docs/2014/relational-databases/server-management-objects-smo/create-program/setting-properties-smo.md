@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f07d9b2f613ca1face8be3bb23bac78202da6655
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63192151"
 ---
 # <a name="setting-properties"></a>プロパティの設定
@@ -37,13 +37,11 @@ ms.locfileid: "63192151"
   
  次の理由によって、プロパティを使用できない場合があります。  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の以前のバージョンで、新しい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]機能を表すプロパティにアクセスしようとするなど、サーバーのバージョンがプロパティをサポートしていない場合。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の以前のバージョンで、新しい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]機能を表すプロパティにアクセスしようとするなど、サーバーのバージョンがプロパティをサポートしていない場合。  
   
 -   インストールされていない [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コンポーネントを表すプロパティにアクセスしようとするなど、サーバーがプロパティのデータを提供しない場合。  
   
- 
-  <xref:Microsoft.SqlServer.Management.Smo.UnknownPropertyException> および <xref:Microsoft.SqlServer.Management.Smo.PropertyCannotBeRetrievedException> の SMO 例外をキャッチすることによって、これらの状況に対処することができます。  
+ <xref:Microsoft.SqlServer.Management.Smo.UnknownPropertyException> および <xref:Microsoft.SqlServer.Management.Smo.PropertyCannotBeRetrievedException> の SMO 例外をキャッチすることによって、これらの状況に対処することができます。  
   
 ## <a name="setting-default-initialization-fields"></a>既定の初期化フィールドの設定  
  SMO は、オブジェクトの取得時に最適化を行います。 最適化によって、次の状態の間で自動的にスケーリングを行うことによって読み込まれるプロパティ数を最小限に抑えることができます。  
@@ -54,24 +52,20 @@ ms.locfileid: "63192151"
   
 3.  大量のメモリを使用するプロパティ。 これ以外の、多くのメモリを使用し、<xref:Microsoft.SqlServer.Management.Smo.Property.Expensive%2A> プロパティ値 (<xref:Microsoft.SqlServer.Management.Smo.Database.DataSpaceUsage%2A> など) の値が true であるプロパティは読み込まれません。 これらのプロパティは、明示的に参照された場合にのみ読み込まれます。  
   
- 部分的に読み込まれた状態で提供されたプロパティだけでなく、それ以外のプロパティもアプリケーションによってフェッチされる場合、これらの追加のプロパティを取得するクエリが送信され、完全に読み込まれた状態にスケール アップされます。 これにより、クライアントとサーバーの間に不要なトラフィックが発生する場合があります。 
-  <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> メソッドを呼び出すことにより、さらに最適化を行うことができます。 
-  <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> メソッドを使用すると、オブジェクトの初期化時に読み込まれるプロパティを指定することができます。  
+ 部分的に読み込まれた状態で提供されたプロパティだけでなく、それ以外のプロパティもアプリケーションによってフェッチされる場合、これらの追加のプロパティを取得するクエリが送信され、完全に読み込まれた状態にスケール アップされます。 これにより、クライアントとサーバーの間に不要なトラフィックが発生する場合があります。 <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> メソッドを呼び出すことにより、さらに最適化を行うことができます。 <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> メソッドを使用すると、オブジェクトの初期化時に読み込まれるプロパティを指定することができます。  
   
- 
-  <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> メソッドでは、アプリケーションの残り部分に対して、またはリセットされるまでの、プロパティの読み込み動作を設定することができます。 
-  <xref:Microsoft.SqlServer.Management.Smo.Server.GetDefaultInitFields%2A> メソッドを使用して、元の動作を保存し、必要に応じて復元することができます。  
+ <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> メソッドでは、アプリケーションの残り部分に対して、またはリセットされるまでの、プロパティの読み込み動作を設定することができます。 <xref:Microsoft.SqlServer.Management.Smo.Server.GetDefaultInitFields%2A> メソッドを使用して、元の動作を保存し、必要に応じて復元することができます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  
   
 ## <a name="getting-and-setting-a-property-in-visual-basic"></a>Visual Basic でのプロパティの取得および設定  
- このコード例では、<xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> オブジェクトの <xref:Microsoft.SqlServer.Management.Smo.Information> プロパティを取得する方法と、<xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> プロパティの <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> プロパティを `ExecuteSql` 列挙型の <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> メンバーに設定する方法を示します。  
+ このコード例では、<xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> オブジェクトの <xref:Microsoft.SqlServer.Management.Smo.Information> プロパティを取得する方法と、<xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> プロパティの <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> プロパティを <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> 列挙型の `ExecuteSql` メンバーに設定する方法を示します。  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBProperties1](SMO How to#SMO_VBProperties1)]  -->  
   
 ## <a name="getting-and-setting-a-property-in-visual-c"></a>Visual C# でのプロパティの取得および設定  
- このコード例では、<xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> オブジェクトの <xref:Microsoft.SqlServer.Management.Smo.Information> プロパティを取得する方法と、<xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> プロパティの <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> プロパティを `ExecuteSql` 列挙型の <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> メンバーに設定する方法を示します。  
+ このコード例では、<xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> オブジェクトの <xref:Microsoft.SqlServer.Management.Smo.Information> プロパティを取得する方法と、<xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> プロパティの <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> プロパティを <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> 列挙型の `ExecuteSql` メンバーに設定する方法を示します。  
   
 ```  
 {   
@@ -124,14 +118,14 @@ tb.Create();
 ```  
   
 ## <a name="iterating-through-all-properties-of-an-object-in-visual-basic"></a>Visual Basic でのオブジェクトのすべてのプロパティの反復処理  
- このコード例では、`Properties` オブジェクトの <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> コレクションが反復処理され、[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] の出力画面に表示されます。  
+ このコード例では、<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> オブジェクトの `Properties` コレクションが反復処理され、[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] の出力画面に表示されます。  
   
  この例では、<xref:Microsoft.SqlServer.Management.Smo.Property> オブジェクトは [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] のキーワードでもあるため、角かっこで囲まれています。  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBProperties3](SMO How to#SMO_VBProperties3)]  -->  
   
 ## <a name="iterating-through-all-properties-of-an-object-in-visual-c"></a>Visual C# でのオブジェクトのすべてのプロパティの反復処理  
- このコード例では、`Properties` オブジェクトの <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> コレクションが反復処理され、[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] の出力画面に表示されます。  
+ このコード例では、<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> オブジェクトの `Properties` コレクションが反復処理され、[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] の出力画面に表示されます。  
   
 ```  
 {   
@@ -154,20 +148,16 @@ sp.QuotedIdentifierStatus = false;
 ```  
   
 ## <a name="setting-default-initialization-fields-in-visual-basic"></a>Visual Basic での既定の初期化フィールドの設定  
- このコード例では、SMO プログラムで初期化されるオブジェクト プロパティの数を最小にする方法を示します。 
-  `using System.Collections.Specialized` オブジェクトを使用するには、<xref:System.Collections.Specialized.StringCollection> ステートメントを含める必要があります。  
+ このコード例では、SMO プログラムで初期化されるオブジェクト プロパティの数を最小にする方法を示します。 <xref:System.Collections.Specialized.StringCollection> オブジェクトを使用するには、`using System.Collections.Specialized` ステートメントを含める必要があります。  
   
- 
-  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] を使用すれば、この最適化によって [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに送信されるステートメントの数を比較することができます。  
+ [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] を使用すれば、この最適化によって [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに送信されるステートメントの数を比較することができます。  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBDefaultInitFields1](SMO How to#SMO_VBDefaultInitFields1)]  -->  
   
 ## <a name="setting-default-initialization-fields-in-visual-c"></a>Visual C# での既定の初期化フィールドの設定  
- このコード例では、SMO プログラムで初期化されるオブジェクト プロパティの数を最小にする方法を示します。 
-  `using System.Collections.Specialized` オブジェクトを使用するには、<xref:System.Collections.Specialized.StringCollection> ステートメントを含める必要があります。  
+ このコード例では、SMO プログラムで初期化されるオブジェクト プロパティの数を最小にする方法を示します。 <xref:System.Collections.Specialized.StringCollection> オブジェクトを使用するには、`using System.Collections.Specialized` ステートメントを含める必要があります。  
   
- 
-  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] を使用すれば、この最適化によって [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに送信されるステートメントの数を比較することができます。  
+ [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] を使用すれば、この最適化によって [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに送信されるステートメントの数を比較することができます。  
   
 ```  
 {   

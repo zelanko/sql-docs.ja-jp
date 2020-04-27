@@ -11,14 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9432d9ae69ff9802d41e376c06d86ebbd2d594b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63184457"
 ---
 # <a name="backward-compatibility-in-smo"></a>SMO の旧バージョンとの互換性
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のバージョンを使用して記述されている SMO アプリケーションは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の SMO を使用して再コンパイルできます。  
   
 ## <a name="migrating-smo-applications"></a>SMO アプリケーションの移行  

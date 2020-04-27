@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f04184e968b60a58c4adfa067d516b58b0a43292
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63200441"
 ---
 # <a name="fetch-and-update-rowsets-odbc"></a>行セットのフェッチおよび更新 (ODBC)
@@ -33,8 +33,7 @@ ms.locfileid: "63200441"
   
     -   [SQLGetData](../../native-client-odbc-api/sqlgetdata.md)を1回以上呼び出して、行セットの最後にバインドされた列の後にバインドされていない列のデータを取得します。 [SQLGetData](../../native-client-odbc-api/sqlgetdata.md)の呼び出しは、列番号の昇順にする必要があります。  
   
-    -   
-  [SQLGetData](../../native-client-odbc-api/sqlgetdata.md) を複数回呼び出して、text または image 列からデータを取得します。  
+    -   [SQLGetData](../../native-client-odbc-api/sqlgetdata.md) を複数回呼び出して、text または image 列からデータを取得します。  
   
 4.  実行時データ text または image 列をセットアップします。  
   

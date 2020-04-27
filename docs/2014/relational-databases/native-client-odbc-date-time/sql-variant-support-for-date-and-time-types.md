@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0cbde879e2b7f215c5044936dfbdacab9196f02d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63215964"
 ---
 # <a name="sql_variant-support-for-date-and-time-types"></a>sql_variant による日付型と時刻型のサポート
@@ -30,7 +30,7 @@ ms.locfileid: "63215964"
   
  SQL_SS_TIME2 パラメーターおよび SQL_SS_TIMESTAMPOFFSET パラメーターについては、次の表に示すように、ドライバーによって C 値が `sql_variant` 値に変換されます。 パラメーターが SQL_C_BINARY としてバインドされ、かつ、サーバー型が SQL_SS_VARIANT である場合、アプリケーションで SQL_CA_SS_VARIANT_SQL_TYPE が別の SQL 型に設定されていない限り、バイナリ値として扱われます。 この場合は、SQL_CA_SS_VARIANT_SQL_TYPE が優先されます。つまり、SQL_CA_SS_VARIANT_SQL_TYPE が設定されている場合、C 型からバリアントの SQL 型を推定するという既定の動作がオーバーライドされます。  
   
-|C 型|サーバーの種類|説明|  
+|C 型|サーバーの種類|備考|  
 |------------|-----------------|--------------|  
 |SQL_C_CHAR|varchar|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
 |SQL_C_WCHAR|nvarcar|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
@@ -38,9 +38,9 @@ ms.locfileid: "63215964"
 |SQL_C_STINYINT|smallint|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
 |SQL_C_SHORT|smallint|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
 |SQL_C_SSHORT|smallint|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
-|SQL_C_USHORT|INT|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
-|SQL_C_LONG|INT|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
-|SQL_C_SLONG|INT|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
+|SQL_C_USHORT|int|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
+|SQL_C_LONG|int|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
+|SQL_C_SLONG|int|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
 |SQL_C_ULONG|bigint|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
 |SQL_C_SBIGINT|bigint|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
 |SQL_C_FLOAT|real|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
@@ -50,7 +50,7 @@ ms.locfileid: "63215964"
 |SQL_C_BINARY|varbinary|SQL_CA_SS_VARIANT_SQL_TYPE は設定されません。|  
 |SQL_C_BINARY|time|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIME2<br /><br /> Scale が SQL_DESC_PRECISION (の`SQLBindParameter` *DecimalDigits*パラメーター) に設定されています。|  
 |SQL_C_BINARY|datetimeoffset|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIMESTAMPOFFSET<br /><br /> Scale が SQL_DESC_PRECISION (の`SQLBindParameter` *DecimalDigits*パラメーター) に設定されています。|  
-|SQL_C_TYPE_DATE|date|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
+|SQL_C_TYPE_DATE|日付|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
 |SQL_C_TYPE_TIME|time(0)|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
 |SQL_C_TYPE_TIMESTAMP|datetime2|Scale が SQL_DESC_PRECISION (の`SQLBindParameter` *DecimalDigits*パラメーター) に設定されています。|  
 |SQL_C_NUMERIC|decimal|有効桁数が SQL_DESC_PRECISION (の`SQLBindParameter` *columnsize*パラメーター) に設定されています。<br /><br /> スケールセットを SQL_DESC_SCALE (SQLBindParameter の*DecimalDigits*パラメーター) に設定します。|  

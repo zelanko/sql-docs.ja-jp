@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0c366cca32c8d441ff25f9688a841e2f0fac77a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63204565"
 ---
 # <a name="table-valued-object-properties-visual-database-tools"></a>テーブル値オブジェクトのプロパティ (Visual Database Tools)
@@ -31,7 +31,7 @@ ms.locfileid: "63204565"
  **[IDENTITY] カテゴリ**  
  展開すると、 **[オブジェクト名]** プロパティと **[TVO 型]** プロパティが表示されます。  
   
- **名前**  
+ **Name**  
  選択されたテーブル値オブジェクトの名前を表示します。  
   
  **[TVO 型]**  

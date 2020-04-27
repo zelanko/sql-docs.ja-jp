@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ff0086d6b8c724ef83575cde387217ad69549d56
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63213853"
 ---
 # <a name="schema-rowsets-changed-for-ole-db-table-valued-parameters"></a>OLE DB テーブル値パラメーター向けに変更されたスキーマ行セット
   テーブル値パラメーターをサポートするために変更または追加されたスキーマ行セットは次のとおりです。  
   
-|スキーマ行セット|[説明]|  
+|スキーマ行セット|説明|  
 |-------------------|-----------------|  
 |DBSCHEMA_PROCEDURE_PARAMETERS|SS_TYPE_CATALOG_NAME および SS_TYPE_SCHEMANAME という名前の 2 つの新しい列が、行セットの末尾に追加されました。 これらの列は、今後の型に再利用できます。 TYPE_NAME 列および LOCAL_TYPE_NAME 列には、テーブル値パラメーター TABLE 型の名前が含まれます。 DATA_TYPE 列には、テーブル値パラメーターの値 DBTYPE_TABLE = 143 が含まれます。|  
 |DBSCHEMA_TABLE_TYPES|この行セットは、テーブル値パラメーターをサポートするために追加されました。 これは、DBSCHEMA_TABLES と似ていますが、テーブル、ビュー、またはシノニムではなく、テーブル型のメタデータのみを返す点が異なります。 TABLE_TYPE 列の値は、'TABLE TYPE' になります。|  

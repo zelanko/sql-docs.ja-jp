@@ -19,14 +19,13 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b1c7cf9bed76a5fef2e9fda837a6df3f75687acd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63192645"
 ---
 # <a name="cinstance-class"></a>CInstance クラス
-  
   [CInstance クラス](cinstance-class.md) は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントのインスタンスを表します。  
   
  このクラスを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントのインスタンスに関連付けられたプロトコルおよびネットワーク ライブラリを管理することができます。  

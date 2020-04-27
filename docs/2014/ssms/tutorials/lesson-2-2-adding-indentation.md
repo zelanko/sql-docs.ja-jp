@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 009f61563548e0c060350a75e9627804e18a7c54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63222940"
 ---
 # <a name="adding-indentation"></a>インデントの追加
@@ -40,18 +40,15 @@ ms.locfileid: "63222940"
     GO  
     ```  
   
-3.  
-  `BusinessEntityID` から `LastName`までのテキストをすべて選択します。  
+3.  `BusinessEntityID` から `LastName`までのテキストをすべて選択します。  
   
-4.  
-  **[SQL エディター]** ツール バーの **[インデント]** をクリックし、すべての行に一括してインデントを適用します。  
+4.  **[SQL エディター]** ツール バーの **[インデント]** をクリックし、すべての行に一括してインデントを適用します。  
   
 #### <a name="to-change-the-default-indentation"></a>既定のインデントを変更するには  
   
 1.  **[ツール]** メニューの **[オプション]** をクリックします。  
   
-2.  
-  **[テキスト エディター]**、 **[すべての言語]** の順に展開し、 **[タブ]** をクリックして、適切なインデント幅を設定します。 インデント幅とタブのサイズを変更できるほか、タブをスペースに変換するかどうかも指定できます。  
+2.  **[テキスト エディター]**、 **[すべての言語]** の順に展開し、 **[タブ]** をクリックして、適切なインデント幅を設定します。 インデント幅とタブのサイズを変更できるほか、タブをスペースに変換するかどうかも指定できます。  
   
      ![[タブ] オプション ([オプション] ダイアログ ボックス)](media/tabsdialog.gif "[タブ] オプション ([オプション] ダイアログ ボックス)")  
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b2f425dd955e0c92daeaa0241e7ea01333222b75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63186871"
 ---
 # <a name="banner-element-ssbdiagnose"></a>Banner 要素 (ssbdiagnose)
@@ -36,29 +36,26 @@ ms.locfileid: "63186871"
   
 ## <a name="element-attributes"></a>要素の属性  
   
-|Attribute|[説明]|  
+|Attribute|説明|  
 |---------------|-----------------|  
-|`title`|
-  **ssbdiagnose** の XML 出力ファイルを生成したユーティリティを示します。|  
-|`product`|
-  **ssbdiagnose** の XML 出力ファイルを生成した製品を示します。|  
+|`title`|**ssbdiagnose** の XML 出力ファイルを生成したユーティリティを示します。|  
+|`product`|**ssbdiagnose** の XML 出力ファイルを生成した製品を示します。|  
 |`version`|XML 出力ファイルを生成したユーティリティのバージョンを示します。|  
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特徴|[説明]|  
+|特徴|説明|  
 |--------------------|-----------------|  
-|**データ型と長さ**|[なし] :|  
-|**既定値**|[なし] :|  
-|**個数**|
-  **ssbdiagnose** の出力 XML ファイルにつき 1 個。|  
+|**データ型と長さ**|なし。|  
+|**既定値**|なし。|  
+|**見つかる**|**ssbdiagnose** の出力 XML ファイルにつき 1 個。|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
 |リレーションシップ|要素|  
 |------------------|--------------|  
 |**親要素**|[DiagnosticInformation 要素 &#40;ssbdiagnose&#41;](diagnosticinformation-element-ssbdiagnose.md)|  
-|**子要素**|[なし] :|  
+|**子要素**|なし。|  
   
 ## <a name="example"></a>例  
  バナー要素の例を次に示します。  

@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c92391b1d8874da3a8901ccc5c6245e48334241
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63188517"
 ---
 # <a name="how-cursors-are-implemented"></a>カーソルの実装方法
@@ -45,7 +45,7 @@ ms.locfileid: "63188517"
   
 -   [サーバー カーソルの使用](using-server-cursors.md)  
   
--   [ODBC カーソル ライブラリ](odbc-cursor-library.md)  
+-   [ODBC カーソルライブラリ](odbc-cursor-library.md)  
   
 ## <a name="see-also"></a>参照  
  [ODBC&#41;&#40;カーソルの使用](../using-cursors-odbc.md)  

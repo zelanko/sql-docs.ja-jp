@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b70a819f941bc944e0cb830ec4795e4d614bf693
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63245621"
 ---
 # <a name="tune-automated-administration-across-an-enterprise"></a>企業全体の自動管理のチューニング
-  Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによるマルチサーバー管理では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の自己チューニング機能を活用しています。 したがって、通常の条件下では、新たにジョブのチューニングを行う必要はありません。 ただし、ジョブの実行、警告の生成、オペレーターへの通知などを行うと、ネットワークの負荷が増加します。 これらの動作によって生じるネットワーク トラフィックを最小限に抑えるために、企業全体の自動管理をチューニングできます。  
+  Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによるマルチサーバー管理では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の自己チューニング機能を活用しています。 したがって、通常の条件下では、新たにジョブのチューニングを行う必要はありません。 ただし、ジョブの実行、警告の生成、オペレーターへの通知などを行うと、ネットワークの負荷が増加します。 これらの動作によって生じるネットワーク トラフィックを最小限に抑えるために、企業全体の自動管理をチューニングできます。  
   
 ## <a name="see-also"></a>参照  
  [パフォーマンス カウンター](../../integration-services/performance/performance-counters.md)  

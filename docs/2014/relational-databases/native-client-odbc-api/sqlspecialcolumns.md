@@ -15,17 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1ea811151e9c81ed515b774f279297d236c608f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63188739"
 ---
 # <a name="sqlspecialcolumns"></a>SQLSpecialColumns
   行識別子 (*Identifiertype* SQL_BEST_ROWID) を要求すると、 **Sqlている列**は、SQL_SCOPE_CURROW 以外の要求されたスコープに対して空の結果セット (データ行がない) を返します。 生成される結果セットは、列がこのスコープ内でのみ有効であることを示します。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、識別子の擬似列がサポートされません。 **Sql特殊列**の結果セットでは、すべての列が SQL_PC_NOT_PSEUDO として識別されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、識別子の擬似列がサポートされません。 **Sql特殊列**の結果セットでは、すべての列が SQL_PC_NOT_PSEUDO として識別されます。  
   
  **Sql特殊な列**は、静的カーソルで実行できます。 更新可能な (キーセットドリブンまたは動的) で**sqlsp_helptext 列**を実行しようとすると、カーソルの種類が変更されたことを示す SQL_SUCCESS_WITH_INFO が返されます。  
   

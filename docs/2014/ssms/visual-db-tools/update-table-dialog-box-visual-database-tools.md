@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e8c5575f73ff75ef9276bab52571e8670f28e0be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63204680"
 ---
 # <a name="update-table-dialog-box-visual-database-tools"></a>[テーブルの更新] ダイアログ ボックス (Visual Database Tools)
@@ -25,7 +25,7 @@ ms.locfileid: "63204680"
   
  クエリの種類を UPDATE クエリに変更するときに、ダイアグラム ペインに複数のテーブルが表示される場合、このダイアログ ボックスが表示されます。  
   
- 更新するテーブルを選択し、 **[OK]** をクリックします。  
+ 更新するテーブルを選択し、[ **OK]** をクリックします。  
   
 > [!NOTE]  
 >  テーブルをレプリケーションのためにパブリッシュする場合は、Transact-SQL ステートメントの [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) または SQL Server 管理オブジェクト (SMO) を使用してスキーマを変更する必要があります。 テーブル デザイナーまたはデータベース ダイアグラム デザイナーを使用してスキーマを変更するとき、テーブルはいったん削除されてから再作成されます。 パブリッシュされたオブジェクトは削除できないので、スキーマの変更は失敗します。  

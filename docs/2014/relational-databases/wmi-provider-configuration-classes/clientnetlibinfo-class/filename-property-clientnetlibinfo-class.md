@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 770090cbef3c3e7b00d53164a986ffc80bfbd7c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63191177"
 ---
 # <a name="filename-property-clientnetlibinfo-class"></a>FileName プロパティ (ClientNetLibInfo クラス)
@@ -37,13 +37,13 @@ object
 ```  
   
 ## <a name="parts"></a>要素  
- *素材*  
+ *object*  
  クライアント ネットワーク ライブラリに関する情報を表す [ClientNetLibInfo クラス](clientnetlibinfo-class.md) オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  クライアント ネットワーク ライブラリ ファイルの名前を指定する文字列値。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>参照  
  [クライアント プロトコルの構成](https://technet.microsoft.com/library/ms181035.aspx)  

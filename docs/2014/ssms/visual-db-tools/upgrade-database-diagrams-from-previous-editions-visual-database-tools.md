@@ -19,14 +19,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 311285545abae9ae9f80b264204b88485aac71aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63205707"
 ---
 # <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>旧エディションのデータベース ダイアグラムのアップグレード (Visual Database Tools)
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でデータベース ダイアグラム化を設定すると、旧エディションの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]データベース上に作成されたデータベース ダイアグラムは自動的にアップグレードされます。 ダイアグラムを設定するための詳細な手順については、「 [Visual Database Tools&#41;&#40;データベースダイアグラムデザイナーのセットアップ](visual-database-tools.md)」を参照してください。  
   
 ### <a name="to-upgrade-legacy-database-diagrams"></a>レガシ データベース ダイアグラムをアップグレードするには  

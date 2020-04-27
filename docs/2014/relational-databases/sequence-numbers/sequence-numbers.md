@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a942136314702d5fe87c1997f20dcb19a74df13d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63184409"
 ---
 # <a name="sequence-numbers"></a>シーケンス番号
@@ -54,7 +54,7 @@ ms.locfileid: "63184409"
   
  シーケンス オブジェクトは、定義に従って番号を生成しますが、その番号がどのように使用されるかについては制御しません。 トランザクションがロールバックされたとき、シーケンス オブジェクトが複数のテーブルで共有されているとき、またはテーブルのシーケンス番号を使用することなくシーケンス番号が割り当てられたときは、非連続的なシーケンス番号がテーブルに挿入される可能性があります。 CACHE オプションを使用してシーケンス番号を作成する際に予期しないシャットダウン (電源障害など) が発生すると、キャッシュ内のシーケンス番号が失われる可能性があります。  
   
- 1 つの `NEXT VALUE FOR` ステートメント内で同じシーケンス ジェネレーターを指定する [!INCLUDE[tsql](../../../includes/tsql-md.md)] 関数のインスタンスが複数ある場合、これらすべてのインスタンスは、その [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントによって処理される特定の行について同じ値を返します。 この動作は、ANSI 標準と一貫性があります。  
+ 1 つの [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメント内で同じシーケンス ジェネレーターを指定する `NEXT VALUE FOR` 関数のインスタンスが複数ある場合、これらすべてのインスタンスは、その [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントによって処理される特定の行について同じ値を返します。 この動作は、ANSI 標準と一貫性があります。  
   
 ## <a name="typical-use"></a>一般的な使用方法  
  -2,147,483,648 ～ 2,147,483,647 まで 1 ずつ増分される整数のシーケンス番号を作成するには、次のステートメントを使用します。  
@@ -78,7 +78,7 @@ CREATE SEQUENCE Schema.SequenceName
 ## <a name="managing-sequences"></a>シーケンスの管理  
  シーケンスの詳細については、「 [sys.sequences](/sql/relational-databases/system-catalog-views/sys-sequences-transact-sql)」を参照してください。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  関連する例については、「[CREATE SEQUENCE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-sequence-transact-sql)」、「[NEXT VALUE FOR &#40;Transact-SQL&#41;](/sql/t-sql/functions/next-value-for-transact-sql)」、および「[sp_sequence_get_range](/sql/relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql)」を参照してください。  
   
 ### <a name="a-using-a-sequence-number-in-a-single-table"></a>A. 1 つのテーブルでシーケンス番号を使用する  
@@ -387,16 +387,15 @@ GO
   
 ```  
   
- 
-  [!INCLUDE[tsql](../../../includes/tsql-md.md)] を使用する `SELECT *` ステートメントは、最初の列としてではなく最後の列として、新しい列を受け取ります。 この動作を許容できない場合は、新しいテーブルを作成してデータをそこに移動した後、新しいテーブルに対する権限を再作成する必要があります。  
+ `SELECT *` を使用する [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントは、最初の列としてではなく最後の列として、新しい列を受け取ります。 この動作を許容できない場合は、新しいテーブルを作成してデータをそこに移動した後、新しいテーブルに対する権限を再作成する必要があります。  
   
 ## <a name="related-content"></a>関連コンテンツ  
- [CREATE SEQUENCE &#40;Transact-sql&#41;](/sql/t-sql/statements/create-sequence-transact-sql)  
+ [CREATE SEQUENCE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-sequence-transact-sql)  
   
- [ALTER SEQUENCE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-sequence-transact-sql)  
+ [ALTER SEQUENCE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-sequence-transact-sql)  
   
- [DROP SEQUENCE &#40;Transact-sql&#41;](/sql/t-sql/statements/drop-sequence-transact-sql)  
+ [DROP SEQUENCE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-sequence-transact-sql)  
   
- [ID &#40;プロパティ&#41; &#40;Transact-sql&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)  
+ [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)  
   
   

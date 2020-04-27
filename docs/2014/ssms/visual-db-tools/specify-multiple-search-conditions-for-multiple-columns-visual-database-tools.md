@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3580f6365866ce752191e285b14f7d793be0cad0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63204949"
 ---
 # <a name="specify-multiple-search-conditions-for-multiple-columns-visual-database-tools"></a>複数の列に対して複数の検索条件を指定する (Visual Database Tools)
@@ -37,8 +37,7 @@ ms.locfileid: "63204949"
   
 #### <a name="to-specify-an-or-condition-for-two-different-columns"></a>2 つの異なる列に OR 条件を指定するには  
   
-1.  
-  [抽出条件ペイン](visual-database-tools.md)に検索する列を追加します。  
+1.  [抽出条件ペイン](visual-database-tools.md)に検索する列を追加します。  
   
 2.  最初に検索する列の **[フィルター]** 列に最初の条件を指定します。  
   
@@ -60,8 +59,7 @@ ms.locfileid: "63204949"
   
 #### <a name="to-specify-an-and-condition-for-two-different-columns"></a>AND 条件を指定して 2 つの異なる列を検索するには  
   
-1.  
-  [抽出条件ペイン](visual-database-tools.md)に検索する列を追加します。  
+1.  [抽出条件ペイン](visual-database-tools.md)に検索する列を追加します。  
   
 2.  最初に検索するデータ列の **[フィルター]** 列に最初の条件を指定します。  
   

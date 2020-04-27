@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 173d0287ba1b63e8811e2d340448d03c3bbf961d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63213925"
 ---
 # <a name="diagnostic-records-and-fields"></a>診断レコードと診断フィールド
@@ -44,8 +44,7 @@ ms.locfileid: "63213925"
   
  **SQLGetDiagField**は、基になるドライバーからキャッシュするエラー情報を使用して、ODBC ドライバーマネージャーによって処理されます。 ODBC ドライバー マネージャーでは、接続が正しく確立されるまでドライバー固有の診断フィールドをキャッシュしません。 **SQLGetDiagField**は、正常に接続が完了する前にドライバー固有の診断フィールドを取得するために呼び出された場合に SQL_ERROR を返します。 ODBC 接続関数から SQL_SUCCESS_WITH_INFO が返されても、その接続関数のドライバー固有の診断フィールドはまだ使用できません。 接続関数の後に別の ODBC 関数呼び出しを行った後でのみ、ドライバー固有の診断フィールドに対して**SQLGetDiagField**の呼び出しを開始できます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC ドライバーによって報告されるほとんどのエラーは、 **SQLGetDiagRec**によって返された情報のみを使用して、効果的に診断することができます。 ただし、ドライバー固有の診断フィールドから返される情報がエラーを診断するうえで重要になることもあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC ドライバーを使用してアプリケーションの odbc エラーハンドラをコーディングする場合は、 **SQLGetDiagField**を使用して、少なくとも SQL_DIAG_SS_MSGSTATE および SQL_DIAG_SS_SEVERITY ドライバ固有のフィールドを取得することをお勧めします。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コード内の複数の箇所で特定のエラーが発生した可能性がある場合は、SQL_DIAG_SS_MSGSTATE により、エラーの厳密な発生箇所がマイクロソフトのサポート エンジニアに報告されます。この情報は、問題の診断に役立つことがあります。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC ドライバーによって報告されるほとんどのエラーは、 **SQLGetDiagRec**によって返された情報のみを使用して、効果的に診断することができます。 ただし、ドライバー固有の診断フィールドから返される情報がエラーを診断するうえで重要になることもあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC ドライバーを使用してアプリケーションの odbc エラーハンドラをコーディングする場合は、 **SQLGetDiagField**を使用して、少なくとも SQL_DIAG_SS_MSGSTATE および SQL_DIAG_SS_SEVERITY ドライバ固有のフィールドを取得することをお勧めします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コード内の複数の箇所で特定のエラーが発生した可能性がある場合は、SQL_DIAG_SS_MSGSTATE により、エラーの厳密な発生箇所がマイクロソフトのサポート エンジニアに報告されます。この情報は、問題の診断に役立つことがあります。  
   
 ## <a name="see-also"></a>参照  
  [エラーとメッセージの処理](handling-errors-and-messages.md)  

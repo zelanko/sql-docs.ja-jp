@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 08a46d5f73c485306be2f6d0b5086f715ebb00d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63245104"
 ---
 # <a name="propertyidx-property-clientnetworkprotocolproperty-class"></a>PropertyIdx プロパティ (ClientNetworkProtocolProperty クラス)
@@ -37,13 +37,13 @@ object
 ```  
   
 ## <a name="parts"></a>要素  
- *素材*  
+ *object*  
  クライアントによって[!INCLUDE[msCoName](../../../includes/msconame-md.md)]使用されるネットワークプロトコルの属性を表す[clientnetworkprotocolproperty クラス](clientnetworkprotocolproperty-class.md)オブジェクト。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  現在のプロパティの配列インデックス値を指定する `uint32` 値。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>参照  
  [クライアント プロトコルの構成](../../../database-engine/configure-windows/configure-client-protocols.md)  

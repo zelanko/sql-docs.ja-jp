@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 54a598ab383773a3ada43f0cc44892f42ac3ba2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63222534"
 ---
 # <a name="maximizing-query-editor"></a>クエリ エディターの最大化
@@ -36,8 +36,7 @@ ms.locfileid: "63222534"
   
 1.  クエリ エディター ウィンドウの任意の場所をクリックします。  
   
-2.  
-  **[ウィンドウ]** メニューの **[すべて自動的に隠す]** をクリックします。  
+2.  **[ウィンドウ]** メニューの **[すべて自動的に隠す]** をクリックします。  
   
 3.  ツール ウィンドウを復元して開いたままにするには、各ツールを開いて **[自動的に隠す]** ボタンをクリックします。  
   

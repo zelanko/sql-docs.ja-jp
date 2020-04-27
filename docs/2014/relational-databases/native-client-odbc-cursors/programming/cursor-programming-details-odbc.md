@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9138b9abc8b75107061e794f44341f628e58ac67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63207268"
 ---
 # <a name="cursor-programming-details-odbc"></a>カーソル プログラミングの詳細 (ODBC)
@@ -29,7 +29,7 @@ ms.locfileid: "63207268"
   
 -   [ODBC&#41;&#40;の暗黙的なカーソル変換](implicit-cursor-conversions-odbc.md)  
   
--   [autofetch と ODBC カーソルの併用](using-autofetch-with-odbc-cursors.md)  
+-   [Autofetch と ODBC カーソルの併用](using-autofetch-with-odbc-cursors.md)  
   
 -   [ODBC&#41;&#40;高速順方向専用カーソル](fast-forward-only-cursors-odbc.md)  
   

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2b489fda1c051ecd08b63f28d6232a0e213d9fcb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63188875"
 ---
 # <a name="modify-a-resource-health-policy-definition-sql-server-utility"></a>リソース正常性ポリシーの定義の変更 (SQL Server ユーティリティ)
@@ -24,7 +24,7 @@ ms.locfileid: "63188875"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのリソース使用率のポリシーは、データ層アプリケーション、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のマネージド インスタンス用に構成できます。 リソース使用率のポリシーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティで、データ層アプリケーション、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージド インスタンスすべてに対してグローバルに定義できます。また、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティで、データ層アプリケーションごと、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージド インスタンスごとに個別に定義することもできます。 さらに、グローバル ポリシーを実装し、個々のデータ層アプリケーションまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の個々のマネージド インスタンスを独自のポリシー定義を使用して構成することも可能です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="modify-global-resource-utilization-policies-in-a-sql-server-utility"></a>SQL Server ユーティリティによるグローバル リソース使用率のポリシーの変更  
   

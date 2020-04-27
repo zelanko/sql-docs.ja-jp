@@ -16,16 +16,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7834d2f5d0fc8a8e849f796eab93259682ea377c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63250667"
 ---
 # <a name="sql-server-database-mirroring-object"></a>SQL Server:Database Mirroring オブジェクト
   **SQLServer:Database Mirroring** パフォーマンス オブジェクトには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベース ミラーリングに関する情報を報告するパフォーマンス カウンターが含まれています。 次の表は、このオブジェクトに含まれているカウンターを示します。  
   
-|Name|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |**Bytes Received/sec**|1 秒間に受信されたバイト数。|  
 |**Bytes Sent/sec**|1 秒間に送信されたバイト数。|  

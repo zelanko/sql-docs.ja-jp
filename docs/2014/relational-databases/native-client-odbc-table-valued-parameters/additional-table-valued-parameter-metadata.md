@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f7b9aea58b56308764f907f8cf54bf74bb0663c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63200579"
 ---
 # <a name="additional-table-valued-parameter-metadata"></a>テーブル値パラメーターの追加メタデータ
@@ -29,16 +29,16 @@ ms.locfileid: "63200579"
 |-----------------|---------------|---------------------|  
 |DATA_TYPE|Smallint (NULL 以外)|SQL_SS_TABLE|  
 |TYPE_NAME|WVarchar(128) (NULL 以外)|テーブル値パラメーターの型名|  
-|COLUMN_SIZE|整数|NULL|  
-|BUFFER_LENGTH|整数|0|  
+|COLUMN_SIZE|Integer|NULL|  
+|BUFFER_LENGTH|Integer|0|  
 |DECIMAL_DIGITS|Smallint|NULL|  
 |NUM_PREC_RADIX|Smallint|NULL|  
 |NULLABLE|Smallint (NULL 以外)|SQL_NULLABLE|  
-|備考|Varchar|NULL|  
+|REMARKS|Varchar|NULL|  
 |COLUMN_DEF|WVarchar(4000)|NULL|  
 |SQL_DATA_TYPE|Smallint (NULL 以外)|SQL_SS_TABLE|  
 |SQL_DATETIME_SUB|Smallint|NULL|  
-|CHAR_OCTET_LENGTH|整数|NULL|  
+|CHAR_OCTET_LENGTH|Integer|NULL|  
 |ORDINAL_POSITION|Integer (NULL 以外)|パラメーターの序数位置。|  
 |IS_NULLABLE|Varchar|"YES"|  
 |SS_TYPE_CATALOG_NAME|WVarchar(128) (NULL 以外)|テーブル値パラメーターのテーブル型の型定義が格納されているカタログ。|  

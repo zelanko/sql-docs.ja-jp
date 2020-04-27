@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0f556bfccdd117b23db36bb9551e885f4c38614e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63241203"
 ---
 # <a name="retrieve-and-query-xml-data"></a>XML データの取得および XML データに対するクエリの実行
   このトピックでは、XML データのクエリを実行するために指定する必要があるクエリ オプションについて説明します。 また、XML インスタンスをデータベースに格納するときに保持されない部分についても説明します。  
   
-##  <a name="features"></a> 保持されない XML インスタンスの機能  
+##  <a name="features-of-an-xml-instance-that-are-not-preserved"></a><a name="features"></a> 保持されない XML インスタンスの機能  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、XML インスタンスの内容は保持されますが、XML データ モデルで重要と見なされない側面は保持されません。 つまり、取得した XML インスタンスは、サーバーに格納されたインスタンスと同一とは限りませんが、含まれている情報は同じです。  
   
 ### <a name="xml-declaration"></a>XML 宣言  
@@ -40,13 +40,11 @@ FROM T1
   
  結果は `<doc/>`です。  
   
- 
-  `<?xml version='1.0'?>` などの XML 宣言は、XML データを `xml` データ型インスタンスに格納するときに保持されません。 これは仕様です。 XML 宣言 () とその属性 (バージョン/エンコーディング/スタンドアロン) は、データを型`xml`に変換した後に失われます。 XML 宣言は、XML パーサーが使用するディレクティブとして扱われます。 XML データは、ucs-2 として内部的に保存されます。 XML インスタンスのその他すべての PI は保持されます。  
+ `<?xml version='1.0'?>` などの XML 宣言は、XML データを `xml` データ型インスタンスに格納するときに保持されません。 これは仕様です。 XML 宣言 () とその属性 (バージョン/エンコーディング/スタンドアロン) は、データを型`xml`に変換した後に失われます。 XML 宣言は、XML パーサーが使用するディレクティブとして扱われます。 XML データは、ucs-2 として内部的に保存されます。 XML インスタンスのその他すべての PI は保持されます。  
   
   
 ### <a name="order-of-attributes"></a>属性の順序  
- XML インスタンス内の属性の順序は保持されません。 
-  `xml` 型の列に格納されている XML インスタンスにクエリを実行する場合、結果の XML の属性の順序は元の XML インスタンスとは異なる場合があります。  
+ XML インスタンス内の属性の順序は保持されません。 `xml` 型の列に格納されている XML インスタンスにクエリを実行する場合、結果の XML の属性の順序は元の XML インスタンスとは異なる場合があります。  
   
   
 ### <a name="quotation-marks-around-attribute-values"></a>属性値を囲む引用符  
@@ -69,8 +67,7 @@ GO
   
   
 ### <a name="namespace-prefixes"></a>名前空間プレフィックス  
- 名前空間プレフィックスは保持されません。 
-  `xml` 型の列に対して XQuery を指定した場合、結果のシリアル化された XML は、異なる名前空間プレフィックスを返す可能性があります。  
+ 名前空間プレフィックスは保持されません。 `xml` 型の列に対して XQuery を指定した場合、結果のシリアル化された XML は、異なる名前空間プレフィックスを返す可能性があります。  
   
 ```  
 DECLARE @x xml  
@@ -89,7 +86,7 @@ GO
 ```  
   
   
-##  <a name="query"></a> 必要なクエリ オプションの設定  
+##  <a name="setting-required-query-options"></a><a name="query"></a> 必要なクエリ オプションの設定  
  データ型`xml`のメソッドを使用し`xml`て型の列または変数に対してクエリを実行する場合は、次のオプションを示すように設定する必要があります。  
   
 |SET オプション|設定する値|  

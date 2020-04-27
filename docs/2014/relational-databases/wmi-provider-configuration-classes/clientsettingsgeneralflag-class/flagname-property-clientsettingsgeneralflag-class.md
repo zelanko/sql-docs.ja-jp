@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 2186cd3718241aa9d145de99da9e59360b0a6418
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63242971"
 ---
 # <a name="flagname-property-clientsettingsgeneralflag-class"></a>FlagName プロパティ (ClientSettingsGeneralFlag クラス)
@@ -37,13 +37,13 @@ object
 ```  
   
 ## <a name="parts"></a>要素  
- *素材*  
+ *object*  
  サーバー設定に使用する一般的なフラグを表す [ClientSettingsGeneralFlag クラス](clientsettingsgeneralflag-class.md) オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  フラグの名前を指定する文字列値。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>参照  
  [クライアント プロトコルの構成](https://technet.microsoft.com/library/ms181035.aspx)  

@@ -14,28 +14,26 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 07bab8c30c138139dee50b349ac797e5c86fa5c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63238722"
 ---
 # <a name="publish-the-execution-of-a-stored-procedure-in-a-transactional-publication-sql-server-management-studio"></a>トランザクション パブリケーションでのストアド プロシージャの実行のパブリッシュ (SQL Server Management Studio)
-  (単なる定義ではなく) ストアドプロシージャの実行をパブリッシュするように指定するには、[**アーティクルのプロパティ-アーティクルの\<>** ] ダイアログボックスを使用します。 このダイアログ ボックスは、パブリケーションの新規作成ウィザードおよび **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスで使用できます。 ウィザードの使用およびダイアログ ボックスへのアクセスの詳細については、「[パブリケーションの作成](create-a-publication.md)」および「[View and Modify Publication Properties](view-and-modify-publication-properties.md)」 (パブリケーション プロパティの表示および変更) を参照してください。  
+   ストアド プロシージャの単なる定義ではなく、その実行をパブリッシュするように、**[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスで指定できます。 このダイアログ ボックスは、パブリケーションの新規作成ウィザードおよび **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスで使用できます。 ウィザードの使用およびダイアログ ボックスへのアクセスの詳細については、「[パブリケーションの作成](create-a-publication.md)」および「[View and Modify Publication Properties](view-and-modify-publication-properties.md)」 (パブリケーション プロパティの表示および変更) を参照してください。  
   
  プロシージャの定義 (CREATE PROCEDURE ステートメント) はサブスクリプションが初期化されるときにサブスクライバーにレプリケートされます。プロシージャがパブリッシャーで実行されるときに、レプリケーションは対応するプロシージャをサブスクライバーで実行します。  
   
 ### <a name="to-publish-the-execution-of-a-stored-procedure"></a>ストアド プロシージャの実行をパブリッシュするには  
   
-1.  パブリケーションの新規作成ウィザードまたは **[パブリケーションのプロパティ - **Publication>]** ダイアログ ボックスの \<[アーティクル]** ページで、ストアド プロシージャを選択します。  
+1.  パブリケーションの新規作成ウィザードまたは **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[アーティクル]** ページで、ストアド プロシージャを選択します。  
   
-2.  
-  **[アーティクルのプロパティ]** をクリックしてから、 **[反転表示されたストアド プロシージャのプロパティを設定]** をクリックします。  
+2.  **[アーティクルのプロパティ]** をクリックしてから、 **[反転表示されたストアド プロシージャのプロパティを設定]** をクリックします。  
   
-3.  
-  **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスで、**[レプリケート]** オプションの次のいずれかの値を指定します。  
+3.  **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスで、**[レプリケート]** オプションの次のいずれかの値を指定します。  
   
-    -   **ストアドプロシージャの実行**  
+    -   **[ストアド プロシージャの実行]**  
   
     -   **SP のシリアル化されたトランザクションでの実行**  
   

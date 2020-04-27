@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: df3cea50a8800cdca7fe0a5c846bc32556299e0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63209788"
 ---
 # <a name="fast-forward-only-cursors-odbc"></a>高速順方向専用カーソル (ODBC)
@@ -27,7 +27,7 @@ ms.locfileid: "63209788"
   
 -   [SQLGetData](../../native-client-odbc-api/sqlgetdata.md)はサポートされていません。 結果セットの列を、プログラム変数にバインドする必要があります。  
   
--   サーバーはカーソルの最後に達したことを検出すると、そのカーソルを自動的に閉じます。 アプリケーションは引き続き[SqlcloSQLFreeStmt](../../native-client-odbc-api/sqlclosecursor.md)または[](../../native-client-odbc-api/sqlfreestmt.md)(SQL_CLOSE) を呼び出す必要がありますが、ドライバーからサーバーにクローズ要求を送信する必要はありません。 この動作により、ネットワーク経由でのサーバーとのやり取りが抑えられます。  
+-   サーバーはカーソルの最後に達したことを検出すると、そのカーソルを自動的に閉じます。 アプリケーションは引き続き[SqlcloSQLFreeStmt](../../native-client-odbc-api/sqlclosecursor.md)または[SQLFreeStmt](../../native-client-odbc-api/sqlfreestmt.md)(SQL_CLOSE) を呼び出す必要がありますが、ドライバーからサーバーにクローズ要求を送信する必要はありません。 この動作により、ネットワーク経由でのサーバーとのやり取りが抑えられます。  
   
  アプリケーションでは、ドライバー固有のステートメント属性 SQL_SOPT_SS_CURSOR_OPTIONS を使用して高速順方向専用カーソルを要求します。 SQL_SOPT_SS_CURSOR_OPTIONS 属性に SQL_CO_FFO を設定すると、高速順方向専用カーソルが有効になりますが、autofetch オプションは有効になりません。 SQL_CO_FFO_AF を設定すると、autofetch オプションも有効になります。 Autofetch の詳細については、「 [Using autofetch WITH ODBC](using-autofetch-with-odbc-cursors.md)cursor」を参照してください。  
   

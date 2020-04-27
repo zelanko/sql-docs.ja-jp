@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 30f24ab457669f572189d2eb13deca3f672f5e18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63217886"
 ---
 # <a name="creating-predictions-for-the-call-center-models-intermediate-data-mining-tutorial"></a>コール センター モデルの予測の作成 (中級者向けデータ マイニング チュートリアル)
@@ -27,8 +27,7 @@ ms.locfileid: "63217886"
   
 #### <a name="to-create-a-singleton-query-by-using-the-neural-network-model"></a>ニューラル ネットワーク モデルを使用して単一クエリを作成するには  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で、使用するモデルが含まれているソリューションを開きます。  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で、使用するモデルが含まれているソリューションを開きます。  
   
 2.  データマイニングデザイナーで、[**マイニングモデル予測**] タブをクリックします。  
   
@@ -38,8 +37,7 @@ ms.locfileid: "63217886"
   
 5.  マイニング構造 Call Center Default を展開し、Call Center - LR という名前のニューラル ネットワーク モデルを選択します。  
   
-6.  
-  **[マイニング モデル]** メニューの **[単一クエリ]** を選択します。  
+6.  **[マイニング モデル]** メニューの **[単一クエリ]** を選択します。  
   
      [**単一クエリ入力**] ダイアログボックスが表示され、マイニングモデルの列にマップされた列が表示されます。  
   
@@ -85,7 +83,7 @@ ms.locfileid: "63217886"
   
 5.  空のデザインペインを右クリックし、[**新しい名前付きクエリ**] を選択します。  
   
-6.  [名前**付きクエリの作成**] ダイアログボックス**** の [名前`Shifts for Call Center`] に「」と入力します。  
+6.  [名前**付きクエリの作成**] ダイアログボックス**Name**の [名前`Shifts for Call Center`] に「」と入力します。  
   
      この名前は、名前付きクエリの名前としてデータ ソース ビュー デザイナーにのみ表示されます。  
   
@@ -118,8 +116,7 @@ ms.locfileid: "63217886"
   
      [**単一クエリ入力**] ダイアログボックスは、 **[入力テーブルの選択**] ダイアログボックスで置き換えられます。  
   
-4.  
-  **[ケース テーブルの選択]** をクリックします。  
+4.  **[ケース テーブルの選択]** をクリックします。  
   
 5.  **[テーブルの選択**] ダイアログボックスで、データソースの一覧から [シフト] を選択します。 [**テーブル名またはビュー名**] の一覧で、[コールセンターのシフト (自動的に選択される場合があります)] を選択し、[OK] をクリックし**ます。**  
   
@@ -131,8 +128,7 @@ ms.locfileid: "63217886"
   
 7.  [Level2 Operators] の横にある空のセルをクリックし、[ **Call Center. AvgOperators] の [シフト**] を選択します。  
   
-8.  [呼び出し] の横にある空のセルをクリックし、[ **Call Center. AvgCalls] の [シフト**] を選択します。 
-  **[OK]** をクリックします。  
+8.  [呼び出し] の横にある空のセルをクリックし、[ **Call Center. AvgCalls] の [シフト**] を選択します。 **[OK]** をクリックします。  
   
 ##### <a name="to-create-the-predictions-for-each-shift"></a>各シフトの予測を作成するには  
   
@@ -154,7 +150,7 @@ ms.locfileid: "63217886"
   
  次の表に、各シフトのサンプルの結果を示します。  
   
-|Shift|WageType|Predicted Service Grade|確率|  
+|シフト|WageType|Predicted Service Grade|確率|  
 |-----------|--------------|-----------------------------|-----------------|  
 |AM|holiday|0.165|0.377520666|  
 |midnight|holiday|0.105|0.364105573|  
@@ -184,7 +180,7 @@ ms.locfileid: "63217886"
   
  これ以外にも、このモデルに対してさまざまな予測クエリを作成できます。 たとえば、特定のサービスレベルを満たすために必要な演算子の数を予測したり、特定の数の着信呼び出しに応答したりすることができます。 ロジスティック回帰モデルには複数の出力を含めることができるため、数多くの別個のモデルを作成する必要なく、異なる独立変数を試してさまざまな結果を得ることができます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  Excel 2007 用データマイニングアドインにはロジスティック回帰ウィザードが用意されています。これにより、特定のシフトのターゲットレベルへのサービスグレードを向上させるために必要な Level 2 演算子の数など、複雑な質問に簡単に回答できるようになります。 データマイニングアドインは無料でダウンロードでき、ニューラルネットワークまたはロジスティック回帰アルゴリズムに基づいたウィザードが含まれています。 詳細については、次のリンクを参照してください。  
   
 -   [Office 2007 用データマイニングアドインの SQL Server 2005](https://www.microsoft.com/sql/technologies/dm/addins.mspx): ゴールシークと What If シナリオ分析  
@@ -200,6 +196,6 @@ ms.locfileid: "63217886"
  [ロジスティック回帰モデルのクエリ例](../../2014/analysis-services/data-mining/logistic-regression-model-query-examples.md)   
  [Microsoft ロジスティック回帰アルゴリズム](../../2014/analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
  [Microsoft ニューラルネットワークアルゴリズム](../../2014/analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
- [Neural Network Model Query Examples](../../2014/analysis-services/data-mining/neural-network-model-query-examples.md)  
+ [ニューラル ネットワーク モデルのクエリ例](../../2014/analysis-services/data-mining/neural-network-model-query-examples.md)  
   
   

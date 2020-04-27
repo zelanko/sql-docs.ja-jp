@@ -1,5 +1,5 @@
 ---
-title: 結果の処理 |Microsoft Docs
+title: 結果の処理 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9fdc66899f7d863cbfb3ae04ad0796614717a734
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63209663"
 ---
 # <a name="processing-results"></a>結果の処理
@@ -27,8 +27,7 @@ ms.locfileid: "63209663"
   
  行セットは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーが表形式でデータを公開できるようにするための重要な機能を持つオブジェクトです。 概念的には、行セットは行の集まりを表し、各行には列データが格納されています。 行セット オブジェクトでは、**IRowset** (行セットから順番に行をフェッチするメソッドを含みます)、**IAccessor** (コンシューマーのプログラム変数に表形式のデータをバインドする方法を指定する一連の列バインドの定義を許可します)、**IColumnsInfo** (行セット内の列に関する情報を提供します)、**IRowsetInfo** (行セットに関する情報を提供します) などのインターフェイスが公開されます。  
   
- コンシューマーは、**IRowset::GetData** メソッドを呼び出して、データ行を行セットからバッファーに取得できます。 
-  **GetData** を呼び出す前に、DBBINDING 構造体のセットを使用してバッファーを記述します。 各バインドは、行セット内の列をコンシューマーのバッファーに格納する方法を記述するもので、次の情報が含まれます。  
+ コンシューマーは、**IRowset::GetData** メソッドを呼び出して、データ行を行セットからバッファーに取得できます。 **GetData** を呼び出す前に、DBBINDING 構造体のセットを使用してバッファーを記述します。 各バインドは、行セット内の列をコンシューマーのバッファーに格納する方法を記述するもので、次の情報が含まれます。  
   
 -   バインドが適用される列 (パラメーター) の序数  
   
@@ -44,6 +43,6 @@ ms.locfileid: "63209663"
   
 ## <a name="see-also"></a>参照  
  [SQL Server Native Client OLE DB プロバイダーアプリケーションの作成](creating-a-sql-server-native-client-ole-db-provider-application.md)   
- [OLE DB の使用法に関するトピック](../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+ [OLE DB 方法に関するトピック](../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

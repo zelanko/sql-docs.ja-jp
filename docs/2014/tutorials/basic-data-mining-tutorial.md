@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d434df95a26485d4d7795d3ab960b8d2457b8ff6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63185576"
 ---
 # <a name="basic-data-mining-tutorial"></a>基本的なデータ マイニング チュートリアル
@@ -53,9 +53,9 @@ ms.locfileid: "63185576"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)]デシジョンツリー  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)]クラスター  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] クラスター  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)]Naive Bayes  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes  
   
  [レッスン 4: 「基本的なデータマイニングチュートリアル」 &#40;対象を絞ったメーリングモデルの調査&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
  このレッスンでは、ビューアーを使用して各モデルの結果を調査および解釈する方法を学習します。  
@@ -63,18 +63,17 @@ ms.locfileid: "63185576"
  [レッスン 5: モデルのテスト &#40;基本的なデータマイニングチュートリアル&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
  このレッスンでは、いずれかの絞り込みメール配信モデルのコピーを作成し、トレーニング データを制限するためのマイニング モデル フィルターを特定の顧客のセットに追加し、モデルの実行可能性を評価します。  
   
- [レッスン 6: 予測の作成と操作 &#40;基本的なデータマイニングチュートリアル&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [レッスン 6: 予測の作成と操作 &#40;基本的なデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
  「基本的なデータ マイニング チュートリアル」の最後のレッスンでは、モデルを使用して、自転車を購入する可能性が最も高い顧客を予測します。 次に、基になるケースをドリルスルーして連絡先情報を取得します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  次のソフトウェアがインストールされていることを確認してください。  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
--   
-  [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] データベース。  
+-   [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] データベース。  
   
  セキュリティ強化のため、サンプル データベースは [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] と一緒にインストールされません。 の[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]公式データベースをインストールするには、 [Microsoft SQL サンプルデータベース](https://go.microsoft.com/fwlink/?LinkId=88417)のページに[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]アクセスし、を選択してください。  
   
@@ -84,6 +83,6 @@ ms.locfileid: "63185576"
 ## <a name="see-also"></a>参照  
  [データマイニングソリューション](../../2014/analysis-services/data-mining/data-mining-solutions.md)   
  [マイニングモデルタスクと操作方法](../../2014/analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [DMX を使用したデータマイニングモデルの作成とクエリ: チュートリアル &#40;Analysis Services データマイニング&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+ [DMX を使用したデータ マイニング モデルの作成とクエリ : チュートリアル &#40;Analysis Services - データ マイニング&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
   
