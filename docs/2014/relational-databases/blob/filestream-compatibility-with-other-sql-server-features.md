@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: aba8bdc3182cd0e3784908a8af32b6f2fbebd6e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010193"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>FILESTREAM と SQL Server のその他の機能との互換性
@@ -25,11 +25,11 @@ ms.locfileid: "66010193"
   
 -   [SQL Server Integration Services (SSIS)](#ssis)  
   
--   [分散クエリとリンクサーバー](#distqueries)  
+-   [分散クエリおよびリンク サーバー](#distqueries)  
   
 -   [暗号化](#encryption)  
   
--   [データベース スナップショット](#DatabaseSnapshot)  
+-   [データベーススナップショット](#DatabaseSnapshot)  
   
 -   [レプリケーション](#Replication)  
   
@@ -39,25 +39,25 @@ ms.locfileid: "66010193"
   
 -   [フルテキストインデックス作成](#FullText)  
   
--   [フェールオーバークラスタリング](#FailoverClustering)  
+-   [フェールオーバー クラスタリング](#FailoverClustering)  
   
 -   [SQL Server Express](#SQLServerExpress)  
   
 -   [包含データベース](#contained)  
   
-##  <a name="ssis"></a> SQL Server Integration Services (SSIS)  
+##  <a name="sql-server-integration-services-ssis"></a><a name="ssis"></a> SQL Server Integration Services (SSIS)  
  SQL Server Integration Services (SSIS) では、DT_IMAGE SSIS データ型を使用して、他の BLOB データと同様にデータ フローの FILESTREAM データを処理します。  
   
  列インポート変換を使用すると、ファイル システムから FILESTREAM 列にファイルを読み込むことができます。 また、列エクスポート変換を使用すると、FILESTREAM 列からファイル システム内の別の場所にファイルを抽出できます。  
   
-##  <a name="distqueries"></a>分散クエリとリンクサーバー  
+##  <a name="distributed-queries-and-linked-servers"></a><a name="distqueries"></a>分散クエリとリンクサーバー  
  FILESTREAM データは、データとし`varbinary(max)`て扱うことによって、分散クエリおよびリンクサーバーを使用して操作できます。 4 部構成の名前を使用する分散クエリでは、FILESTREAM の **PathName()** 関数を使用することはできません。その名前がローカル サーバーを指し示す場合も同様です。 ただし、 **OPENQUERY()** を使用するパススルー クエリの内側のクエリでは **PathName()** を使用できます。  
   
-##  <a name="encryption"></a>よる  
+##  <a name="encryption"></a><a name="encryption"></a>よる  
  FILESTREAM データは、透過的なデータ暗号化が有効になっている場合でも暗号化されません。  
   
-##  <a name="DatabaseSnapshot"></a>データベーススナップショット  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、FILESTREAM ファイルグループの[データベーススナップショット](../databases/database-snapshots-sql-server.md)はサポートされていません。 CREATE DATABASE ON 句に FILESTREAM ファイル グループが含まれていると、ステートメントが失敗してエラーが発生します。  
+##  <a name="database-snapshots"></a><a name="DatabaseSnapshot"></a>データベーススナップショット  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、FILESTREAM ファイル グループの [データベース スナップショット](../databases/database-snapshots-sql-server.md) をサポートしていません。 CREATE DATABASE ON 句に FILESTREAM ファイル グループが含まれていると、ステートメントが失敗してエラーが発生します。  
   
  FILESTREAM を使用している場合は、標準の (FILESTREAM ファイル グループではない) ファイル グループのデータベース スナップショットを作成できます。 FILESTREAM ファイル グループは、それらのデータベース スナップショットに対してオフラインとしてマークされます。  
   
@@ -65,17 +65,16 @@ ms.locfileid: "66010193"
   
  `Could not continue scan with NOLOCK due to data movement.`  
   
-##  <a name="Replication"></a> レプリケーション  
- パブリッシャーで FILESTREAM 属性が有効になっている `varbinary(max)` 列は、FILESTREAM 属性を含めてサブスクライバーにレプリケートすることも、含めずにレプリケートすることもできます。 列をレプリケートする方法を指定するには、**[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスを使用するか、@schema_optionsp_addarticle[ または ](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)sp_addmergearticle[ の ](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) パラメーターを使用します。 FILESTREAM 属性を持たない `varbinary(max)` 列にレプリケートされるデータは、このデータ型の制限 (2 GB) を超えないようにする必要があります。この制限を超えると実行時エラーが発生します。 指定したスキーマオプションに関係なく、サブスクライバーに[!INCLUDE[ssVersion2005](../../includes/ssversion2000-md.md)]データをレプリケートしている場合を除き、FILESTREAM 属性をレプリケートすることをお勧めします。  
+##  <a name="replication"></a><a name="Replication"></a> レプリケーション  
+ パブリッシャーで FILESTREAM 属性が有効になっている `varbinary(max)` 列は、FILESTREAM 属性を含めてサブスクライバーにレプリケートすることも、含めずにレプリケートすることもできます。 列をレプリケートする方法を指定するには、**[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスを使用するか、[sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) または [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) の @schema_option パラメーターを使用します。 FILESTREAM 属性を持たない `varbinary(max)` 列にレプリケートされるデータは、このデータ型の制限 (2 GB) を超えないようにする必要があります。この制限を超えると実行時エラーが発生します。 指定したスキーマオプションに関係なく、サブスクライバーに[!INCLUDE[ssVersion2005](../../includes/ssversion2000-md.md)]データをレプリケートしている場合を除き、FILESTREAM 属性をレプリケートすることをお勧めします。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] から [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] サブスクライバーにレプリケートできるデータ値の大きさは、最大 256 MB に制限されています。 詳細については、「 [最大容量仕様](https://go.microsoft.com/fwlink/?LinkId=103810)」を参照してください。  
+>  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] から [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] サブスクライバーにレプリケートできるデータ値の大きさは、最大 256 MB に制限されています。 詳細については、「 [最大容量仕様](https://go.microsoft.com/fwlink/?LinkId=103810)」を参照してください。  
   
 ### <a name="considerations-for-transactional-replication"></a>トランザクション レプリケーションに関する注意点  
  トランザクション レプリケーション用にパブリッシュされるテーブルで FILESTREAM 列を使用する場合は、次のことに注意してください。  
   
--   FILESTREAM 属性を持つ列を含むテーブルがある場合は、*sp_addpublication* の * プロパティに対して値 *database snapshot@sync_method および [database snapshot character](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) を使用することはできません。  
+-   FILESTREAM 属性を持つ列を含むテーブルがある場合は、[sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) の @sync_method プロパティに対して値 *database snapshot* および *database snapshot character* を使用することはできません。  
   
 -   max text repl size オプションは、レプリケーション用にパブリッシュされる列に挿入できるデータの最大サイズを指定します。 このオプションを使用すると、レプリケートされる FILESTREAM データのサイズを制御できます。  
   
@@ -92,36 +91,35 @@ ms.locfileid: "66010193"
   
     -   NEWID() より NEWSEQUENTIALID() の方がパフォーマンスが高いため、マージ レプリケーションでは既定で NEWSEQUENTIALID() が使用されます。 マージ レプリケーション用にパブリッシュされるテーブルに `uniqueidentifier` 列を追加する場合は、NEWSEQUENTIALID() を既定値として指定してください。  
   
--   マージ レプリケーションには、ラージ オブジェクト型のレプリケーションを最適化する機能が含まれています。 この機能は、@stream_blob_columnssp_addmergearticle[ の ](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) パラメーターによって制御されます。 FILESTREAM 属性をレプリケートするスキーマ オプションを設定すると、@stream_blob_columns パラメーターの値が `true` に設定されます。 この値をオーバーライドするには、 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)を使用します。 このストアド プロシージャを使用すると、@stream_blob_columns を `false` に設定できます。 既にマージ レプリケーション用にパブリッシュされているテーブルに FILESTREAM 列を追加する場合は、sp_changemergearticle を使用してこのオプションを `true` に設定することをお勧めします。  
+-   マージ レプリケーションには、ラージ オブジェクト型のレプリケーションを最適化する機能が含まれています。 この機能は、[sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) の @stream_blob_columns パラメーターによって制御されます。 FILESTREAM 属性をレプリケートするスキーマ オプションを設定すると、@stream_blob_columns パラメーターの値が `true` に設定されます。 この値をオーバーライドするには、 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)を使用します。 このストアド プロシージャを使用すると、@stream_blob_columns を `false` に設定できます。 既にマージ レプリケーション用にパブリッシュされているテーブルに FILESTREAM 列を追加する場合は、sp_changemergearticle を使用してこのオプションを `true` に設定することをお勧めします。  
   
 -   アーティクルが作成された後に FILESTREAM のスキーマ オプションを有効にすると、FILESTREAM 列のデータが 2 GB を超えていて、レプリケーションの間に競合が発生した場合に、レプリケーションが失敗します。 この状況が発生することが予想される場合は、いったんテーブル アーティクルを削除して、適切な FILESTREAM スキーマ オプションを有効にした状態で再作成することをお勧めします。  
   
 -   マージ レプリケーションでは、 [Web 同期](../replication/merge/merge-replication.md)を使用して FILESTREAM データを HTTPS 接続経由で同期させることができます。 その際には、データが Web 同期の制限 (50 MB) に収まっている必要があります。データがこの制限を超えていると、実行時エラーが発生します。  
   
-##  <a name="LogShipping"></a>ログ配布  
- [ログ配布](../../database-engine/log-shipping/about-log-shipping-sql-server.md)は FILESTREAM をサポートしています。 プライマリ サーバーとセカンダリ サーバーの両方で [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以降のバージョンが実行されていて、FILESTREAM が有効になっている必要があります。  
+##  <a name="log-shipping"></a><a name="LogShipping"></a> ログ配布  
+ [ログ配布](../../database-engine/log-shipping/about-log-shipping-sql-server.md) は FILESTREAM をサポートしています。 プライマリ サーバーとセカンダリ サーバーの両方で [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以降のバージョンが実行されていて、FILESTREAM が有効になっている必要があります。  
   
-##  <a name="DatabaseMirroring"></a>データベースミラーリング  
+##  <a name="database-mirroring"></a><a name="DatabaseMirroring"></a>データベースミラーリング  
  データベース ミラーリングは FILESTREAM をサポートしていません。 プリンシパル サーバー上に FILESTREAM ファイル グループを作成することはできません。 FILESTREAM ファイル グループを含むデータベースに対してデータベース ミラーリングを構成することはできません。  
   
-##  <a name="FullText"></a>フルテキストインデックス作成  
+##  <a name="full-text-indexing"></a><a name="FullText"></a> フルテキスト インデックス作成  
  [フルテキストインデックス作成](../indexes/indexes.md)は、 `varbinary(max)`列と同じように FILESTREAM 列で動作します。 FILESTREAM テーブルに、各 FILESTREAM BLOB のファイル名拡張子を含む列が含まれている必要があります。 詳細については、「[フルテキスト検索でのクエリ](../search/query-with-full-text-search.md)」、「[検索用フィルターの構成と管理](../search/configure-and-manage-filters-for-search.md)」、および「[sys.fulltext_document_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql)」を参照してください。  
   
  フルテキスト エンジンは、FILESTREAM BLOB の内容のインデックスを作成します。 イメージなど、インデックスを作成しても役に立たないファイルもあります。 FILESTREAM BLOB が更新されると、インデックスが再作成されます。  
   
-##  <a name="FailoverClustering"></a>フェールオーバークラスタリング  
+##  <a name="failover-clustering"></a><a name="FailoverClustering"></a>フェールオーバークラスタリング  
  フェールオーバー クラスタリングでは、FILESTREAM ファイル グループが共有ディスク上に配置されている必要があります。 また、FILESTREAM インスタンスをホストするクラスターの各ノードで FILESTREAM が有効になっている必要もあります。 詳細については、「 [フェールオーバー クラスターでの FILESTREAM の設定](set-up-filestream-on-a-failover-cluster.md)」を参照してください。  
   
-##  <a name="SQLServerExpress"></a>SQL Server Express  
- 
-  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] は FILESTREAM をサポートしています。 FILESTREAM データ コンテナーは 10 GB のデータベース サイズの制限に含まれません。  
+##  <a name="sql-server-express"></a><a name="SQLServerExpress"></a>SQL Server Express  
+ [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] は FILESTREAM をサポートしています。 FILESTREAM データ コンテナーは 10 GB のデータベース サイズの制限に含まれません。  
   
-##  <a name="contained"></a>包含データベース  
+##  <a name="contained-databases"></a><a name="contained"></a>包含データベース  
  FILESTREAM 機能では、データベースの外部での構成が一部必要となります。 そのため、FILESTREAM または FileTable を使用するデータベースは完全包含ではありません。  
   
  包含データベースの特定の機能 (包含ユーザーなど) を使用する場合は、データベースの包含を PARTIAL に設定します。 ただし、この場合、一部のデータベース設定はデータベースに含まれないため、データベースを移動するときに自動的には移動されないことに注意してください。  
   
 ## <a name="see-also"></a>参照  
- [バイナリラージオブジェクト &#40;Blob&#41; データ &#40;SQL Server&#41;](binary-large-object-blob-data-sql-server.md)  
+ [バイナリ ラージ オブジェクト &#40;Blob&#41; データ &#40;SQL Server&#41;](binary-large-object-blob-data-sql-server.md)  
   
   

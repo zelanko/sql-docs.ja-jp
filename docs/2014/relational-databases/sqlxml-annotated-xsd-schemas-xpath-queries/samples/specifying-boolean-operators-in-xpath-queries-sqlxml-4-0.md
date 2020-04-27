@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 29404c4a3dc7b4b10106e7a3a8cb170ffe1e7a3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010627"
 ---
 # <a name="specifying-boolean-operators-in-xpath-queries-sqlxml-40"></a>XPath クエリ内での論理演算子の指定 (SQLXML 4.0)
@@ -35,8 +35,7 @@ ms.locfileid: "66010627"
 /child::Customer[attribute::CustomerID="13" or attribute::CustomerID="31"]  
 ```  
   
- 
-  `attribute` 軸は省略形 (@) で指定できます。また、`child` 軸は既定の軸なので省略できます。  
+ `attribute` 軸は省略形 (@) で指定できます。また、`child` 軸は既定の軸なので省略できます。  
   
 ```  
 /Customer[@CustomerID="13" or @CustomerID="31"]  

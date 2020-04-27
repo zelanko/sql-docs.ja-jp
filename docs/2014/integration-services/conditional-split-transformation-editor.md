@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 920ec41ae30d53853cfb757fb7fc33610953dc86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060893"
 ---
 # <a name="conditional-split-transformation-editor"></a>条件分割変換エディター
-  
   **[条件分割変換エディター]** を使用すると、式の作成、式が評価される順序の設定、条件分割の出力の名前付けを行うことができます。 このダイアログ ボックスには、式の作成に使用する、数学関数、文字列関数、日付/時刻関数や演算子が含まれています。 True として評価される最初の条件は、行が送信される出力を決定します。  
   
 > [!NOTE]  
@@ -31,25 +30,24 @@ ms.locfileid: "66060893"
  条件分割変換の詳細については、「 [条件分割変換](data-flow/transformations/conditional-split-transformation.md)」を参照してください。  
   
 ## <a name="options"></a>オプション  
- **Order**  
+ **注文**  
  行を選択し、右側の矢印キーを使用して、式を評価する順序を変更します。  
   
  **出力名**  
  出力名を指定します。 既定は数字の付いた場合の一覧ですが、一意のわかりやすい名前を選択することもできます。  
   
- **フィルター**  
+ **Condition**  
  式を入力するか、使用可能な列、変数、関数、および演算子の一覧からドラッグして式を作成します。  
   
  このプロパティの値は、プロパティ式を使用して指定することができます。  
   
- **関連トピック:**[Integration Services &#40;ssis&#41; 式](expressions/integration-services-ssis-expressions.md)、[演算子 &#40;Ssis 式&#41;](expressions/operators-ssis-expression.md)、および[関数 &#40;ssis 式](expressions/functions-ssis-expression.md)&#41;   
+ **: **  [Integration Services &#40;SSIS&#41; の式](expressions/integration-services-ssis-expressions.md)、[ &#40;SSIS 式&#41;](expressions/operators-ssis-expression.md)、および [ &#40;SSIS 式&#41;](expressions/functions-ssis-expression.md)  
   
- **既定の出力名**  
+ **[既定の出力名]**  
  既定の出力の名前を入力するか、既定を使用します。  
   
  **エラー出力の構成**  
- 
-  [[エラー出力の構成]](../../2014/integration-services/configure-error-output.md) ダイアログ ボックスを使用して、エラーの処理方法を指定します。  
+ [[エラー出力の構成]](../../2014/integration-services/configure-error-output.md) ダイアログ ボックスを使用して、エラーの処理方法を指定します。  
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   

@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2b43765b03ba42cede8c6879e749f1701f306d1f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013342"
 ---
 # <a name="record-generation-process-sqlxml-40"></a>レコードの生成処理 (SQLXML 4.0)
@@ -100,8 +100,7 @@ ms.locfileid: "66013342"
 >  このモデルでは、終了タグに達した (ノードがスコープ外に出た) ときにレコードが挿入されるため、レコードに関連付けるすべてのデータをノードのスコープ内に定義する必要があります。  
   
 ## <a name="record-subset-and-the-key-ordering-rule"></a>レコードのサブセットとキーの順序付け規則  
- 
-  `<sql:relationship>` を使用するマッピング スキーマを指定する場合、サブセットとは、リレーションシップの外部側で生成されたレコード セットを指します。 次の例では、CustOrder レコードが `<sql:relationship>` の外部側になります。  
+ `<sql:relationship>` を使用するマッピング スキーマを指定する場合、サブセットとは、リレーションシップの外部側で生成されたレコード セットを指します。 次の例では、CustOrder レコードが `<sql:relationship>` の外部側になります。  
   
  たとえば、データベースに次のテーブルが含まれているとします。  
   
@@ -219,8 +218,7 @@ ms.locfileid: "66013342"
 ## <a name="exceptions-to-the-record-generation-rule"></a>レコード生成の規則の例外  
  XML 一括読み込みでは、IDREF または IDREFS 型のノードがスコープ内に入っても、ノードのレコードは生成されません。 スキーマのどこかで、レコードを完全に記述するようにしてください。 IDREFS 型が無視されるのと同様に、`dt:type="nmtokens"` 注釈は無視されます。  
   
- たとえば、 ** \<顧客の>** と** \<注文>** 要素を記述する次の XSD スキーマについて考えてみます。 ** \<Customer>** 要素には、IDREFS 型の**orderlist**属性が含まれています。 
-  `<sql:relationship>` タグでは、顧客と注文リストの間の一対多のリレーションシップが指定されています。  
+ たとえば、 ** \<顧客の>** と** \<注文>** 要素を記述する次の XSD スキーマについて考えてみます。 ** \<Customer>** 要素には、IDREFS 型の**orderlist**属性が含まれています。 `<sql:relationship>` タグでは、顧客と注文リストの間の一対多のリレーションシップが指定されています。  
   
  スキーマは次のようになります。  
   

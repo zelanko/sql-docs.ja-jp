@@ -22,26 +22,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc3c063da7bb9133f8687a908c4bd7e0e13bae8f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013818"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>sql:key-fields を使用した、キー列の指定 (SQLXML 4.0)
-  XSD スキーマに対して XPath クエリを指定する場合、結果内に適切な入れ子を生成するには、多くの場合キー情報が必要です。 
-  `sql:key-fields` 注釈の指定は、適切な階層を確実に生成するための 1 つの方法です。  
+  XSD スキーマに対して XPath クエリを指定する場合、結果内に適切な入れ子を生成するには、多くの場合キー情報が必要です。 `sql:key-fields` 注釈の指定は、適切な階層を確実に生成するための 1 つの方法です。  
   
 > [!NOTE]  
->  適切な入れ子を生成するには、テーブルにマップする要素に `sql:key-fields` を指定することをお勧めします。 作成される XML は、基になる結果セットの順序指定に影響を受けます。 
-  `sql:key-fields` を指定しない場合、適切な XML が作成されない可能性があります。  
+>  適切な入れ子を生成するには、テーブルにマップする要素に `sql:key-fields` を指定することをお勧めします。 作成される XML は、基になる結果セットの順序指定に影響を受けます。 `sql:key-fields` を指定しない場合、適切な XML が作成されない可能性があります。  
   
- 
-  `sql:key-fields` の値で、リレーションの行を一意に識別する列を指定します。 行を一意に識別するために複数の列が必要な場合、列の値はスペースで区切られます。  
+ `sql:key-fields` の値で、リレーションの行を一意に識別する列を指定します。 行を一意に識別するために複数の列が必要な場合、列の値はスペースで区切られます。  
   
  要素に、要素`sql:key-fields`と子要素の間に定義されている** \<sql: relationship>** が含まれていても、親要素で指定されているテーブルの主キーが提供されていない場合は、注釈を使用する必要があります。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、「 [SQLXML の例を実行するための要件](../sqlxml/requirements-for-running-sqlxml-examples.md)」を参照してください。  
   
 ### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. Sql: relationship> が\<十分な情報を提供しない場合に適切な入れ子を生成する  
@@ -49,8 +46,7 @@ ms.locfileid: "66013818"
   
  次のスキーマについて考えてみます。 このスキーマでは、order ** \<>** 要素が親で、 ** \<customer>** 要素が子である、 ** \<order>** と** \<customer>** 要素の間の階層を指定します。  
   
- ** \<Sql: relationship>** タグは、親子のリレーションシップを指定するために使用されます。 このタグでは、Sales.SalesOrderHeader テーブルの CustomerID を親キーとして識別し、Sales.Customer テーブルの子キー CustomerID を参照します。 ** \<Sql: relationship>** で提供される情報は、親テーブル (SalesOrderHeader) 内の行を一意に識別するのに十分ではありません。 
-  `sql:key-fields` 注釈を指定しないと、不正確な階層が生成されます。  
+ ** \<Sql: relationship>** タグは、親子のリレーションシップを指定するために使用されます。 このタグでは、Sales.SalesOrderHeader テーブルの CustomerID を親キーとして識別し、Sales.Customer テーブルの子キー CustomerID を参照します。 ** \<Sql: relationship>** で提供される情報は、親テーブル (SalesOrderHeader) 内の行を一意に識別するのに十分ではありません。 `sql:key-fields` 注釈を指定しないと、不正確な階層が生成されます。  
   
  `sql:key-fields` ** \<>順序**で指定した場合、注釈は親 (SalesOrderHeader テーブル) 内の行を一意に識別し、その子要素はその親の下に表示されます。  
   
@@ -129,8 +125,7 @@ ms.locfileid: "66013818"
 ```  
   
 ### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>B. sql:key-fields を指定して結果内に適切な入れ子を生成する  
- 次のスキーマでは、 ** \<sql: relationship>** を使用して階層が指定されていません。 
-  `sql:key-fields` 注釈を指定して、HumanResources.Employee テーブルの従業員を一意に識別する必要があります。  
+ 次のスキーマでは、 ** \<sql: relationship>** を使用して階層が指定されていません。 `sql:key-fields` 注釈を指定して、HumanResources.Employee テーブルの従業員を一意に識別する必要があります。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

@@ -14,55 +14,50 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f4d18ef352c3e5ab6342e573d16bc3deaed5db72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211993"
 ---
 # <a name="create-a-resource-pool"></a>リソース プールの作成
   リソース プールを作成するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用します。  
   
--   **作業を開始する準備:**  [制限事項と制約](#LimitationsRestrictions)事項、[アクセス許可](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **リソースプールを作成するために使用するもの:**  [SQL Server Management Studio](#CreRPProp)、 [transact-sql](#CreRPTSQL)  
+-   **リソース プールの作成に使用するもの:**  [SQL Server Management Studio](#CreRPProp)、 [Transact-SQL](#CreRPTSQL)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="LimitationsRestrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 制限事項と制約事項  
  CPU の割合の最大値は、CPU の割合の最小値以上にする必要があります。 メモリの割合の最大値は、メモリの割合の最小値以上にする必要があります。  
   
  すべてのリソース プールの CPU の割合の最小値の合計およびメモリの割合の最小値の合計が、それぞれ 100 を超えないようにしてください。  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  リソース プールを作成するには、CONTROL SERVER 権限が必要です。  
   
-##  <a name="CreRPProp"></a>SQL Server Management Studio を使用してリソースプールを作成する  
- **を使用してリソースプールを作成するには[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
+##  <a name="create-a-resource-pool-using-sql-server-management-studio"></a><a name="CreRPProp"></a> SQL Server Management Studio を使用してリソース プールを作成する  
+ **を使用してリソース プールを作成するには [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でオブジェクト エクスプローラーを開き、 **[管理]** ノードを **[リソース ガバナー]** ノードまで再帰的に展開します。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でオブジェクト エクスプローラーを開き、 **[管理]** ノードを **[リソース ガバナー]** ノードまで再帰的に展開します。  
   
-2.  
-  **[リソース ガバナー]** を右クリックし、 **[プロパティ]** をクリックします。  
+2.  **[リソース ガバナー]** を右クリックし、 **[プロパティ]** をクリックします。  
   
-3.  
-  **[リソース プール]** グリッドで、空白行の最初の列をクリックします。 この列にアスタリスク (*) がラベルとして付加されます。  
+3.  **[リソース プール]** グリッドで、空白行の最初の列をクリックします。 この列にアスタリスク (*) がラベルとして付加されます。  
   
-4.  
-  **[名前]** 列の空のセルをダブルクリックします。 リソース プールに使用する名前を入力します。  
+4.  **[名前]** 列の空のセルをダブルクリックします。 リソース プールに使用する名前を入力します。  
   
 5.  変更する行の他のセルをクリックまたはダブルクリックし、新しい値を入力します。  
   
 6.  変更を保存するには、 **[OK]** をクリックします。  
   
-##  <a name="CreRPTSQL"></a>Transact-sql を使用してリソースプールを作成する  
- **を使用してリソースプールを作成するには[!INCLUDE[tsql](../../includes/tsql-md.md)]**  
+##  <a name="create-a-resource-pool-using-transact-sql"></a><a name="CreRPTSQL"></a>Transact-sql を使用してリソースプールを作成する  
+ **を使用してリソース プールを作成するには [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   
 1.  設定するプロパティ値を指定する `CREATE RESOURCE POOL` ステートメントを実行します。  
   
-2.  
-  **ALTER RESOURCE GOVERNOR RECONFIGURE** ステートメントを実行します。  
+2.  **ALTER RESOURCE GOVERNOR 再構成**ステートメントを実行します。  
   
 ### <a name="example-transact-sql"></a>例 (Transact-SQL)  
  次の例では、 `poolAdhoc`というリソース プールを作成します。  

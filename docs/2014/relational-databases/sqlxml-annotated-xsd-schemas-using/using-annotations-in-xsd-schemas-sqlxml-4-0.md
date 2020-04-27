@@ -18,14 +18,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7c62357496d0b143fcd8736bc61117d43c6a0fac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013597"
 ---
 # <a name="using-annotations-in-xsd-schemas-sqlxml-40"></a>XSD スキーマでの注釈の使用 (SQLXML 4.0)
-  
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 では、XML-Data Reduced (XDR) スキーマ言語で導入された注釈と同様に、XSD スキーマ言語で注釈がサポートされます。 XSD では、XDR でサポートされない追加の注釈も導入されています。  
   
  XSD スキーマでこれらの注釈を使用して、XML とリレーショナルのマッピングを指定できます。 これには、XSD スキーマ内の要素および属性から、データベース内のテーブル (ビュー) および列へのマッピングが含まれます。  
@@ -47,70 +46,55 @@ ms.locfileid: "66013597"
  既定のマッピングについて説明し、既定のマッピングに関連するタスクの例を示します。  
   
  [テーブルおよび列への XSD 要素と属性の明示的なマッピング &#40;SQLXML 4.0&#41;](explicit-mapping-xsd-elements-and-attributes-to-tables-and-columns.md)  
- 
-  `sql:relation` 注釈と `sql:field` 注釈の明示的なマッピングについて説明し、例を示します。  
+ `sql:relation` 注釈と `sql:field` 注釈の明示的なマッピングについて説明し、例を示します。  
   
  [Sql: relationship を使用したリレーションシップの指定 &#40;SQLXML 4.0&#41;](specifying-relationships-using-sql-relationship-sqlxml-4-0.md)  
- 
-  `sql:relationship` 注釈について説明し、例を示します。  
+ `sql:relationship` 注釈について説明し、例を示します。  
   
  [Sql: relationship での sql: 逆属性の指定 &#40;SQLXML 4.0&#41;](specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)  
- 
-  `sql:inverse` 注釈について説明します。  
+ `sql:inverse` 注釈について説明します。  
   
  [Sql を使用した定数要素の作成: &#40;SQLXML 4.0&#41;](creating-constant-elements-using-sql-is-constant-sqlxml-4-0.md)  
- 
-  `sql:is-constant` 注釈について説明し、例を示します。  
+ `sql:is-constant` 注釈について説明し、例を示します。  
   
  [Sql: マップト &#40;SQLXML 4.0&#41;を使用した結果の XML ドキュメントからのスキーマ要素の除外](excluding-schema-elements-from-the-xml-document-using-sql-mapped.md)  
- 
-  `sql:mapped` 注釈について説明し、例を示します。  
+ `sql:mapped` 注釈について説明し、例を示します。  
   
  [Sql: limit-field および sql: limit-value &#40;SQLXML 4.0&#41;を使用した値のフィルター処理](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-limit-field-and-sql-limit-value.md)  
- 
-  `sql:limit-field` 注釈と `sql:limit-value` 注釈について説明し、例を示します。  
+ `sql:limit-field` 注釈と `sql:limit-value` 注釈について説明し、例を示します。  
   
  [Sql: キーフィールド &#40;SQLXML 4.0&#41;を使用したキー列の識別](identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)  
- 
-  `sql:key-fields` 注釈について説明し、例を示します。  
+ `sql:key-fields` 注釈について説明し、例を示します。  
   
  [TargetNamespace 属性を使用してターゲットの名前空間を指定する &#40;SQLXML 4.0&#41;](specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-4-0.md)  
  について説明し、 **targetNamespace**属性の例を示します。  
   
  [Sql: prefix &#40;SQLXML 4.0&#41;を使用した有効な ID、IDREF、IDREFS 型の属性の作成](creating-valid-id-idref-and-idrefs-type-attributes-using-sql-prefix-sqlxml-4-0.md)  
- 
-  `sql:prefix` 注釈について説明し、例を示します。  
+ `sql:prefix` 注釈について説明し、例を示します。  
   
  [データ型の強制型変換と sql: datatype 注釈 &#40;SQLXML 4.0&#41;](data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md)  
- 
-  `sql:datatype` 注釈について説明し、例を示します。  
+ `sql:datatype` 注釈について説明し、例を示します。  
   
  [XSD データ型から XPath データ型へのマッピング &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md)  
  XSD、XDR、および XPath のデータ型の対照表と、関連する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 変換の一覧を示します。  
   
  [Sql を使用した CDATA セクションの作成: &#40;SQLXML 4.0&#41;](creating-cdata-sections-using-sql-use-cdata-sqlxml-4-0.md)  
- 
-  `sql:use-data` 注釈について説明し、例を示します。  
+ `sql:use-data` 注釈について説明し、例を示します。  
   
  [Sql: encode &#40;SQLXML 4.0&#41;を使用した BLOB データへの URL 参照の要求](requesting-url-references-to-blob-data-using-sql-encode-sqlxml-4-0.md)  
- 
-  `sql:encode` 注釈について説明し、例を示します。  
+ `sql:encode` 注釈について説明し、例を示します。  
   
  [Sql: overflow フィールドを使用した未使用データの取得 &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-overflow-field.md)  
- 
-  `sql:overflow-field` 注釈について説明し、例を示します。  
+ `sql:overflow-field` 注釈について説明し、例を示します。  
   
- [sql:hide による要素と属性の非表示](hiding-elements-and-attributes-by-using-sql-hide.md)  
- 
-  `sql:hide` 注釈について説明し、例を示します。  
+ [sql:hide を使用した要素と属性の非表示](hiding-elements-and-attributes-by-using-sql-hide.md)  
+ `sql:hide` 注釈について説明し、例を示します。  
   
  [sql:identity 注釈と sql:guid 注釈の使用](using-the-sql-identity-and-sql-guid-annotations.md)  
- 
-  `sql:identity` 注釈と `sql:guid` 注釈について説明し、例を示します。  
+ `sql:identity` 注釈と `sql:guid` 注釈について説明し、例を示します。  
   
  [sql:max-depth を使用した、再帰リレーションシップの深さの指定](specifying-depth-in-recursive-relationships-by-using-sql-max-depth.md)  
- 
-  `sql:max-depth` 注釈について説明し、例を示します。  
+ `sql:max-depth` 注釈について説明し、例を示します。  
   
 ## <a name="see-also"></a>参照  
  [SQLXML 4.0&#41;&#40;注釈付きスキーマのセキュリティに関する考慮事項](../sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)  

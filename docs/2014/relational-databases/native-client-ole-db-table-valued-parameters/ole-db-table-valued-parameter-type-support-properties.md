@@ -13,21 +13,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5cdd19895a1cf91e1c5c8608013cb52482f946c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046537"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>OLE DB テーブル値パラメーターの型のサポート (プロパティ)
   このトピックでは、テーブル値パラメーターの行セット オブジェクトに関連付けられている OLE DB プロパティおよびプロパティ セットについて説明します。  
   
-## <a name="properties"></a>Properties  
- 次に、テーブル値パラメーターの行セット オブジェクトの IRowsetInfo::GetProperties メソッドを使用して公開されるプロパティの一覧を示します。 テーブル値パラメーターの行セット プロパティはすべて読み取り専用であることに注意してください。 したがって、IOpenRowset:: OpenRowset または ITableDefinitionWithConstraints:: CreateTableWithConstraints メソッドを使用してプロパティを既定値以外の値に設定しようとすると、エラーが発生し、オブジェクトは作成されません。  
+## <a name="properties"></a>プロパティ  
+ 次に、テーブル値パラメーターの行セット オブジェクトの IRowsetInfo::GetProperties メソッドを使用して公開されるプロパティの一覧を示します。 テーブル値パラメーターの行セット プロパティはすべて読み取り専用であることに注意してください。 したがって、IOpenRowset::OpenRowset メソッドまたは ITableDefinitionWithConstraints::CreateTableWithConstraints メソッドを使用してプロパティを既定値以外の値に設定しようとすると、エラーが発生し、オブジェクトは作成されません。  
   
  テーブル値パラメーターの行セット オブジェクトで実装されていないプロパティは、次の一覧には含まれていません。 すべてのプロパティの一覧は、Windows Data Access Components の OLE DB に関するドキュメントを参照してください。  
   
-|プロパティ ID|Value|  
+|プロパティ ID|[値]|  
 |-----------------|-----------|  
 |DBPROP_ABORTPRESERVE|VARIANT_TRUE|  
 |DBPROP_ACCESSORDER|DBPROPVAL_AO_RANDOM|  
@@ -74,14 +74,14 @@ ms.locfileid: "63046537"
  次のプロパティ セットでは、テーブル値パラメーターがサポートされます。  
   
 ### <a name="dbpropset_sqlservercolumn"></a>DBPROPSET_SQLSERVERCOLUMN  
- このプロパティは、必要に応じて、DBCOLUMNDESC 構造体を使用して各列に対して ITableDefinitionWithConstraints:: CreateTableWithConstraints を使用することによって、コンシューマーがテーブル値パラメーターの行セットオブジェクトを作成するプロセスで使用されます。  
+ このプロパティは、テーブル値パラメーターの行セット オブジェクトを作成するプロセスでコンシューマーによって使用されます。このプロセスでは、必要に応じて、DBCOLUMNDESC 構造体から各列の ITableDefinitionWithConstraints::CreateTableWithConstraints を使用します。  
   
 |プロパティ ID|プロパティ値|  
 |-----------------|--------------------|  
 |SSPROP_COL_COMPUTED|R/W: 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 型 : VT_BOOL<br /><br /> 説明 : VARIANT_TRUE に設定された場合、その列が計算列であることを示します。 VARIANT_FALSE に設定された場合は、その列が計算列ではないことを示します。|  
   
 ### <a name="dbpropset_sqlserverparameter"></a>DBPROPSET_SQLSERVERPARAMETER  
- これらのプロパティはコンシューマーによって読み取られますが、ISSCommandWithParameters:: GetParameterProperties の呼び出しでテーブル値パラメーターの型情報を検出し、コンシューマーによって設定され、テーブル値パラメーターに関する特定のプロパティを設定します。ISSCommandWithParameters:: SetParameterProperties を使用します。  
+ これらのプロパティは、ISSCommandWithParameters::GetParameterProperties の呼び出しでテーブル値パラメーターの型情報の検出中にコンシューマーによって読み取られ、ISSCommandWithParameters::SetParameterProperties を使用してテーブル値パラメーターに関する特定のプロパティの設定中にコンシューマーによって設定されます。  
   
  次の表に、これらのプロパティの詳細を示します。  
   

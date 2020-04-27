@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b56bba0567a96b7bdd7b75ad191d553ffa019930
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010428"
 ---
 # <a name="access-filetables-with-transact-sql"></a>Transact SQL を使用した FileTable へのアクセス
   [!INCLUDE[tsql](../../includes/tsql-md.md)] データ操作言語 (DML) コマンドによる FileTable の操作について説明します。  
   
-##  <a name="BasicsInsert"></a> FileTable での INSERT 操作  
+##  <a name="insert-operations-on-filetables"></a><a name="BasicsInsert"></a> FileTable での INSERT 操作  
  FileTable で **INSERT** 操作を行う場合は、次の点に注意してください。  
   
 -   ファイル属性のすべての列には NOT NULL 制約があります。 明示的に値が設定されなかった場合は、適切な既定値が使用されます。  
@@ -31,7 +31,7 @@ ms.locfileid: "66010428"
   
 -   アプリケーションは、**GetPathLocator &#40;Transact-SQL&#41;** 関数にファイル システム パスを渡すことで、ファイルまたはディレクトリの [path_locator](/sql/relational-databases/system-functions/getpathlocator-transact-sql) を取得できます。  
   
-##  <a name="BasicsUpdate"></a> FileTable での UPDATE 操作  
+##  <a name="update-operations-on-filetables"></a><a name="BasicsUpdate"></a> FileTable での UPDATE 操作  
  FileTable で **UPDATE** 操作を行う場合は、次の点に注意してください。  
   
 -   すべてのユーザー定義データの更新が許可されます。  
@@ -40,14 +40,14 @@ ms.locfileid: "66010428"
   
 -   **file_stream** 列の FILESTREAM データは、他の列 (timestamps を含む) に一切影響を及ぼさずに更新することができます。  
   
-##  <a name="BasicsDelete"></a> FileTable での DELETE 操作  
+##  <a name="delete-operations-on-filetables"></a><a name="BasicsDelete"></a> FileTable での DELETE 操作  
  FileTable で **DELETE** 操作を行う場合は、次の点に注意してください。  
   
 -   行を削除すると、対応するファイルまたはディレクトリがファイル システムから削除されます。  
   
 -   対応するディレクトリに他のファイルまたはディレクトリが存在する場合、行の削除は失敗します。  
   
-##  <a name="BasicsConstraints"></a> DML での FileTable の操作の制約  
+##  <a name="constraints-that-are-enforced-for-dml-operations-on-filetables"></a><a name="BasicsConstraints"></a> DML での FileTable の操作の制約  
  システム定義の制約は、ファイル名前空間階層構造の整合性が DML アクションによって損なわれることのないように制御します。 適用される制約は、次のとおりです。  
   
 -   ファイルまたはディレクトリの **name** を設定または変更する場合:  

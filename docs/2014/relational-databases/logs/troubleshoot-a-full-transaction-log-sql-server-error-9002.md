@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2c0dc1566693ad8d8c86d7efe47403248788b076
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63144728"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>満杯になったトランザクション ログのトラブルシューティング (SQL Server エラー 9002)
@@ -53,14 +53,14 @@ ms.locfileid: "63144728"
 ### <a name="backing-up-the-log"></a>ログのバックアップ  
  完全復旧モデルまたは一括ログ復旧モデルでは、トランザクション ログを長期間バックアップしていないと、バックアップによりログの切り捨てが妨げられる場合があります。 これまでにログのバックアップをまったく行っていない場合は、2 つのログ バックアップを作成して、[!INCLUDE[ssDE](../../includes/ssde-md.md)]が最後にバックアップされた時点までログを切り捨てられるようにする必要があります。 ログを切り捨てると新しいログ レコード用の領域が解放されます。 ログが再び満杯にならないようにするには、ログを頻繁にバックアップするようにしてください。  
   
- **トランザクションログバックアップを作成するには**  
+ **トランザクション ログのバックアップを作成するには**  
   
 > [!IMPORTANT]  
 >  データベースが破損している場合、「[ログ末尾のバックアップ &#40;SQL Server&#41;](../backup-restore/tail-log-backups-sql-server.md)」を参照してください。  
   
--   [トランザクションログ &#40;SQL Server のバックアップ&#41;](../backup-restore/back-up-a-transaction-log-sql-server.md)  
+-   [トランザクション ログのバックアップ &#40;SQL Server&#41;](../backup-restore/back-up-a-transaction-log-sql-server.md)  
   
--   <xref:Microsoft.SqlServer.Management.Smo.Backup.SqlBackup%2A>SMO  
+-   <xref:Microsoft.SqlServer.Management.Smo.Backup.SqlBackup%2A> (SMO)  
   
 ### <a name="freeing-disk-space"></a>ディスク領域の解放  
  他のファイルを削除または移動することによって、データベースのトランザクション ログ ファイルが保存されているディスク ドライブのディスク領域を解放できる場合があります。 ディスク領域を解放すると、ログ ファイルは自動的に拡張します。  
@@ -97,9 +97,9 @@ ms.locfileid: "63144728"
 -   [データベースに対するデータ ファイルまたはログ ファイルの追加](../databases/add-data-or-log-files-to-a-database.md)  
   
 ## <a name="see-also"></a>参照  
- [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [トランザクションログファイルのサイズを管理する](manage-the-size-of-the-transaction-log-file.md)   
  [トランザクションログのバックアップ &#40;SQL Server&#41;](../backup-restore/transaction-log-backups-sql-server.md)   
- [sp_add_log_file_recover_suspect_db &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql)  
+ [sp_add_log_file_recover_suspect_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql)  
   
   

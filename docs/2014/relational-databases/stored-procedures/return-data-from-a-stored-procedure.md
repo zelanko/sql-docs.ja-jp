@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6b11f924ce5692378896f1fd7d50186861abf223
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63140445"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>ストアド プロシージャからデータを返す
@@ -27,8 +27,7 @@ ms.locfileid: "63140445"
  プロシージャの定義でパラメーターに OUTPUT キーワードを指定すると、プロシージャの終了時に、そのパラメーターの現在値を呼び出し元のプログラムに返すことができます。 呼び出し元のプログラムで使用できる変数にパラメーターの値を保存するには、呼び出し元のプログラムがプロシージャを実行する際に OUTPUT キーワードを使用する必要があります。 出力パラメーターとして使用できるデータ型の詳細については、「[CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)」を参照してください。  
   
 ### <a name="examples-of-output-parameter"></a>出力パラメーターの例  
- 次の例では、入力パラメーターと出力パラメーターを使用するプロシージャを示します。 
-  `@SalesPerson` パラメーターは、呼び出し元のプログラムによって指定された入力値を受け取ります。 SELECT ステートメントは、入力パラメーターに渡された値を使用して、適切な `SalesYTD` 値を取得します。 また、SELECT ステートメントは、その値を `@SalesYTD` 出力パラメーターに代入します。これにより、プロシージャの終了時にその値が呼び出し元のプログラムに返されます。  
+ 次の例では、入力パラメーターと出力パラメーターを使用するプロシージャを示します。 `@SalesPerson` パラメーターは、呼び出し元のプログラムによって指定された入力値を受け取ります。 SELECT ステートメントは、入力パラメーターに渡された値を使用して、適切な `SalesYTD` 値を取得します。 また、SELECT ステートメントは、その値を `@SalesYTD` 出力パラメーターに代入します。これにより、プロシージャの終了時にその値が呼び出し元のプログラムに返されます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -75,8 +74,7 @@ GO
  [!INCLUDE[tsql](../../../includes/tsql-md.md)]プロシージャでは、 `cursor`出力パラメーターにのみデータ型を使用できます。 パラメーターに`cursor`データ型が指定されている場合は、プロシージャの定義でそのパラメーターに対して VARYING キーワードと OUTPUT キーワードの両方を指定する必要があります。 パラメーターは出力のみとして指定できますが、VARYING キーワードがパラメーター宣言で指定されている場合、 `cursor`データ型はである必要があり、output キーワードも指定する必要があります。  
   
 > [!NOTE]  
->  
-  `cursor` データ型は OLE DB、ODBC、ADO、DB-Library などのデータベース API からアプリケーション変数にバインドすることができません。 アプリケーションでプロシージャを実行するには OUTPUT パラメーターがバインドされている必要があるので、`cursor` 型の OUTPUT パラメーターを指定したプロシージャはデータベース API から呼び出すことができません。 そのようなプロシージャは、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 型の OUTPUT 変数を `cursor` の [!INCLUDE[tsql](../../../includes/tsql-md.md)] 型のローカル変数に代入したときのみ、`cursor` バッチ、プロシージャ、またはトリガーから呼び出すことができます。  
+>  `cursor` データ型は OLE DB、ODBC、ADO、DB-Library などのデータベース API からアプリケーション変数にバインドすることができません。 アプリケーションでプロシージャを実行するには OUTPUT パラメーターがバインドされている必要があるので、`cursor` 型の OUTPUT パラメーターを指定したプロシージャはデータベース API から呼び出すことができません。 そのようなプロシージャは、`cursor` 型の OUTPUT 変数を [!INCLUDE[tsql](../../../includes/tsql-md.md)] の `cursor` 型のローカル変数に代入したときのみ、[!INCLUDE[tsql](../../../includes/tsql-md.md)] バッチ、プロシージャ、またはトリガーから呼び出すことができます。  
   
 ### <a name="rules-for-cursor-output-parameters"></a>cursor 出力パラメーターに関する規則  
  プロシージャの実行時には、次の規則が `cursor` 出力パラメーターに適用されます。  
@@ -154,8 +152,7 @@ DECLARE @result int;
 EXECUTE @result = my_proc;  
 ```  
   
- リターン コードは、可能性のあるエラー状態ごとにリターン コードの値を設定するために、プロシージャのフロー制御ブロックの中でよく使用されます。 
-  @ERROR ステートメントの後で @[!INCLUDE[tsql](../../../includes/tsql-md.md)] 関数を使用すると、ステートメントの実行中にエラーが発生したかどうかを検出できます。  
+ リターン コードは、可能性のあるエラー状態ごとにリターン コードの値を設定するために、プロシージャのフロー制御ブロックの中でよく使用されます。 [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントの後で @@ERROR 関数を使用すると、ステートメントの実行中にエラーが発生したかどうかを検出できます。  
   
 ### <a name="examples-of-return-codes"></a>リターン コードの例  
  次の例では、さまざまなエラーに特別なリターン コード値を設定するエラー処理を含む `usp_GetSalesYTD` プロシージャを示します。 次の表では、可能性のある各エラーに対してプロシージャによって割り当てられる整数値と、各値に相当する意味を示します。  
@@ -163,7 +160,7 @@ EXECUTE @result = my_proc;
 |リターン コードの値|意味|  
 |-----------------------|-------------|  
 |0|実行に成功しました。|  
-|1 で保護されたプロセスとして起動されました|必要なパラメーター値が指定されていません。|  
+|1|必要なパラメーター値が指定されていません。|  
 |2|指定されたパラメーター値が無効です。|  
 |3|売上高の値を取得中にエラーが発生しました。|  
 |4|販売員の売上高の値に NULL 値が検出されました。|  
@@ -257,11 +254,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [Transact-sql @local_variable&#41;の宣言 &#40;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)   
- [Transact-sql&#41;の印刷 &#40;](/sql/t-sql/language-elements/print-transact-sql)   
+ [DECLARE @local_variable &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)   
+ [PRINT &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/print-transact-sql)   
  [Transact-sql @local_variable&#41;の設定 &#40;](/sql/t-sql/language-elements/set-local-variable-transact-sql)   
  [求](../cursors.md)   
  [Transact-sql&#41;を返す &#40;](/sql/t-sql/language-elements/return-transact-sql)   
- [@@ERROR &#40;transact-sql&#41;](/sql/t-sql/functions/error-transact-sql)  
+ [@@ERROR &#40;Transact-SQL&#41;](/sql/t-sql/functions/error-transact-sql)  
   
   

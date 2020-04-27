@@ -13,10 +13,10 @@ author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
 ms.openlocfilehash: 939ff20fd0b708e949aee41d8aa2f3f59b63a9eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75247121"
 ---
 # <a name="overview-of-database-experimentation-assistant"></a>Database Experimentation Assistant の概要
@@ -113,6 +113,6 @@ DEA にはインターネット対応の機能があり、製品のエクスペ�
 
 DEA は、Microsoft の[プライバシー](https://aka.ms/dea-privacy)に関する声明によって管理されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - この記事では、2つの環境におけるワークロードの比較に関連するプロセスについて説明します。[ワークロード比較プロセスの概要](database-experimentation-assistant-get-started.md)について説明します。

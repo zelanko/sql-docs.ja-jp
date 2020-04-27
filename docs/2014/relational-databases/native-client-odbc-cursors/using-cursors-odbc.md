@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc53253c93f5f52c6bbe00941eadbf14b65d5f64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206822"
 ---
 # <a name="using-cursors-odbc"></a>カーソルの使用 (ODBC)
@@ -36,8 +36,7 @@ ms.locfileid: "68206822"
   
  ODBC アプリケーションでは、カーソルを宣言して開いたり、カーソル関連の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用することはほとんどありません。 ODBC では、SQL ステートメントから返されたすべての結果セットに対して自動的にカーソルを開きます。 カーソルの特性は、SQL ステートメントが実行される前に、 [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)で設定されたステートメント属性によって制御されます。 結果セットの処理に使用する ODBC API 関数では、フェッチ、スクロール、位置指定更新など、すべてのカーソル機能がサポートされます。  
   
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトと ODBC アプリケーションのカーソル操作の比較を次に示します。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトと ODBC アプリケーションのカーソル操作の比較を次に示します。  
   
 |アクション|[!INCLUDE[tsql](../../includes/tsql-md.md)]|ODBC|  
 |------------|------------------------|----------|  
@@ -47,9 +46,7 @@ ms.locfileid: "68206822"
 |位置指定更新を行う|UPDATE または DELETE の WHERE CURRENT OF 句|**SQLSetPos**|  
 |カーソルを閉じる|割り当て解除*CURSOR_NAME*終了|[SQLCloseCursor](../native-client-odbc-api/sqlclosecursor.md)|  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に実装されているサーバー カーソルでは、ODBC カーソル モデルの機能がサポートされます。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ドライバーでは、サーバー カーソルを使用して ODBC API のカーソル機能がサポートされます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に実装されているサーバー カーソルでは、ODBC カーソル モデルの機能がサポートされます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ドライバーでは、サーバー カーソルを使用して ODBC API のカーソル機能がサポートされます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
@@ -74,6 +71,6 @@ ms.locfileid: "68206822"
  [Transact-sql&#41;の割り当てを解除 &#40;](/sql/t-sql/language-elements/deallocate-transact-sql)   
  [Transact-sql&#41;&#40;カーソルの宣言](/sql/t-sql/language-elements/declare-cursor-transact-sql)   
  [Transact-sql&#41;をフェッチ &#40;](/sql/t-sql/language-elements/fetch-transact-sql)   
- [Transact-sql&#41;を開く &#40;](/sql/t-sql/language-elements/open-transact-sql)  
+ [OPEN &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/open-transact-sql)  
   
   

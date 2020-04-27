@@ -17,38 +17,31 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 558173381d88eac95fc2b6993e11a1104844abf7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022197"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 サブスクライバー
-  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host Integration Server に含まれている OLE DB プロバイダーを経由した IBM DB2/AS 400、DB2/MVS、および DB2/Universal Database へのプッシュ サブスクリプションをサポートします。  
   
 ## <a name="configuring-an-ibm-db2-subscriber"></a>IBM DB2 サブスクライバーの構成  
  IBM DB2 サブスクライバーを構成するには、次の手順を実行してください。  
   
-1.  
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] OLE DB Provider for DB2 の最新バージョンをディストリビューターにインストールします。  
+1.  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] OLE DB Provider for DB2 の最新バージョンをディストリビューターにインストールします。  
   
-    -   
-  [!INCLUDE[ssEnterpriseEd11](../../../includes/ssenterpriseed11-md.md)]を使用している場合は、 [SQL Server 2008 ダウンロード](https://go.microsoft.com/fwlink/?LinkId=149256) Web ページの「 **関連ダウンロード** 」セクションで、Microsoft SQL Server 2008 Feature Pack の最新バージョンのリンクをクリックします。 
-  **Microsoft SQL Server 2008 用 Feature Pack** の Web ページで、 **Microsoft OLE DB Provider for DB2**を検索します。  
+    -   [!INCLUDE[ssEnterpriseEd11](../../../includes/ssenterpriseed11-md.md)]を使用している場合は、 [SQL Server 2008 ダウンロード](https://go.microsoft.com/fwlink/?LinkId=149256) Web ページの「 **関連ダウンロード** 」セクションで、Microsoft SQL Server 2008 Feature Pack の最新バージョンのリンクをクリックします。 **Microsoft SQL Server 2008 用 Feature Pack** の Web ページで、 **Microsoft OLE DB Provider for DB2**を検索します。  
   
-    -   
-  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Standard を使用している場合は、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] (HIS) サーバーの最新バージョンをインストールしてください。この製品にプロバイダーが含まれています。  
+    -   [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Standard を使用している場合は、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] (HIS) サーバーの最新バージョンをインストールしてください。この製品にプロバイダーが含まれています。  
   
      プロバイダーのインストールに加えて、データ アクセス ツールをインストールすることをお勧めします。データ アクセス ツールは次の手順で使用します (データ アクセス ツールは、既定では、 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Enterprise のダウンロードでインストールされます)。 データ アクセス ツールのインストールと使用に関する詳細については、プロバイダーのドキュメントまたは HIS のドキュメントを参照してください。  
   
 2.  サブスクライバーの接続文字列を作成します。 この接続文字列は任意のテキスト エディターで作成できますが、データ アクセス ツールを使用することをお勧めします。 データ アクセス ツールで接続文字列を作成するには、次の手順を実行します。  
   
-    1.  
-  **[スタート]** ボタンをクリックし、 **[プログラム]** をポイントします。次に、 **[Microsoft OLE DB Provider for DB2]** をポイントし、 **[データ アクセス ツール]** をクリックします。  
+    1.  **[スタート]** ボタンをクリックし、 **[プログラム]** をポイントします。次に、 **[Microsoft OLE DB Provider for DB2]** をポイントし、 **[データ アクセス ツール]** をクリックします。  
   
-    2.  
-  **[データ アクセス ツール]** で、手順に従って DB2 サーバーに関する情報を指定します。 このツールを完了すると、関連付けられている接続文字列を使用してユニバーサル データ リンク (UDL) が作成されます (レプリケーションでは、実際にはこの UDL は使用されず、接続文字列が使用されます)。  
+    2.  **[データ アクセス ツール]** で、手順に従って DB2 サーバーに関する情報を指定します。 このツールを完了すると、関連付けられている接続文字列を使用してユニバーサル データ リンク (UDL) が作成されます (レプリケーションでは、実際にはこの UDL は使用されず、接続文字列が使用されます)。  
   
     3.  接続文字列にアクセスします。[データ アクセス ツール] で UDL を右クリックし、 **[接続文字列の表示]** を選択します。  
   
@@ -65,13 +58,11 @@ ms.locfileid: "63022197"
   
 3.  スナップショット パブリケーションまたはトランザクション パブリケーションを作成して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーに対して有効にしてから、サブスクライバーに対してプッシュ サブスクリプションを作成します。 詳細については、「 [SQL Server 以外のサブスクライバーのサブスクリプションの作成](../create-a-subscription-for-a-non-sql-server-subscriber.md)」を参照してください。  
   
-4.  必要に応じて、1 つ以上のアーティクルに対してカスタム作成スクリプトを指定します。 テーブルがパブリッシュされると、そのテーブルに対して CREATE TABLE スクリプトが作成されます。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーでは、このスクリプトが [!INCLUDE[tsql](../../../includes/tsql-md.md)] 言語で作成されます。その後、このスクリプトは、サブスクライバーで適用される前に、ディストリビューション エージェントによって、より汎用的な SQL 言語に翻訳されます。 カスタム作成スクリプトを指定するには、既存の [!INCLUDE[tsql](../../../includes/tsql-md.md)] スクリプトを変更するか、DB2 SQL 言語を使用する完全なスクリプトを作成します。DB2 スクリプトを作成する場合は、 **bypass_translation** ディレクティブを使用して、ディストリビューション エージェントがサブスクライバーでスクリプトを翻訳しないで適用できるようにします。  
+4.  必要に応じて、1 つ以上のアーティクルに対してカスタム作成スクリプトを指定します。 テーブルがパブリッシュされると、そのテーブルに対して CREATE TABLE スクリプトが作成されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーでは、このスクリプトが [!INCLUDE[tsql](../../../includes/tsql-md.md)] 言語で作成されます。その後、このスクリプトは、サブスクライバーで適用される前に、ディストリビューション エージェントによって、より汎用的な SQL 言語に翻訳されます。 カスタム作成スクリプトを指定するには、既存の [!INCLUDE[tsql](../../../includes/tsql-md.md)] スクリプトを変更するか、DB2 SQL 言語を使用する完全なスクリプトを作成します。DB2 スクリプトを作成する場合は、 **bypass_translation** ディレクティブを使用して、ディストリビューション エージェントがサブスクライバーでスクリプトを翻訳しないで適用できるようにします。  
   
-     スクリプトはさまざまな理由によって変更することができますが、最も一般的な理由はデータ型マッピングの変更です。 詳細については、このトピックの「データ型マッピングに関する注意点」を参照してください。 
-  [!INCLUDE[tsql](../../../includes/tsql-md.md)] スクリプトを変更する場合、変更はデータ型マッピングの変更に制限する必要があります (スクリプトにコメントを含めることもできません)。 より大きな変更を行う必要がある場合は、DB2 スクリプトを作成します。  
+     スクリプトはさまざまな理由によって変更することができますが、最も一般的な理由はデータ型マッピングの変更です。 詳細については、このトピックの「データ型マッピングに関する注意点」を参照してください。 [!INCLUDE[tsql](../../../includes/tsql-md.md)] スクリプトを変更する場合、変更はデータ型マッピングの変更に制限する必要があります (スクリプトにコメントを含めることもできません)。 より大きな変更を行う必要がある場合は、DB2 スクリプトを作成します。  
   
-     **アーティクルスクリプトを変更してカスタム作成スクリプトとして指定するには**  
+     **アーティクル スクリプトを変更し、それをカスタム作成スクリプトとして指定するには**  
   
     1.  スナップショットがパブリケーションに対して生成されたら、パブリケーションのスナップショット フォルダーに移動します。  
   
@@ -83,7 +74,7 @@ ms.locfileid: "63022197"
   
     5.  sp_changearticle を実行し、*creation_script* プロパティに対してファイルのパスと名前を指定します。 詳細については、「[sp_changearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql)」を参照してください。  
   
-     **アーティクルスクリプトを作成してカスタム作成スクリプトとして指定するには**  
+     **アーティクル スクリプトを作成し、それをカスタム作成スクリプトとして指定するには**  
   
     1.  DB2 SQL 言語を使用してアーティクル スクリプトを作成します。 ファイルの最初の行が **bypass_translation**であり、この行に他に記述がないことを確認します。  
   
@@ -96,10 +87,9 @@ ms.locfileid: "63022197"
   
 -   テーブル内の 1 つ以上の主キー列がデータ型 DECIMAL(32-38, 0-38) または NUMERIC(32-38, 0-38) である場合は、トランザクション レプリケーションを使用して DB2 サブスクライバーにテーブルをパブリッシュしないでください。 トランザクション レプリケーションは、主キーを使用して行を識別します。この結果、これらのデータ型はサブスクライバーでは VARCHAR(41) にマップされるため、エラーになります。 これらのデータ型を使用する主キーを持つテーブルは、スナップショット レプリケーションを使用してパブリッシュできます。  
   
--   サブスクライバーでテーブルを事前作成する場合は、レプリケーションによって作成するのではなく、replication support only オプションを使用します。 詳細については、「 [Initialize a Transactional Subscription Without a Snapshot](../initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。  
+-   サブスクライバーでテーブルを事前作成する場合は、レプリケーションによって作成するのではなく、replication support only オプションを使用します。 詳細については、「 [スナップショットを使用しないトランザクション サブスクリプションの初期化](../initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、DB2 よりも長いテーブル名と列名を使用できます。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、DB2 よりも長いテーブル名と列名を使用できます。  
   
     -   サブスクライバーの DB2 のバージョンでサポートされているテーブル名よりも長い名前のテーブルがパブリケーション データベースに含まれている場合、destination_table アーティクル プロパティに代替名を指定します。 パブリケーションの作成時のプロパティの設定の詳細については、「[Create a Publication](../publish/create-a-publication.md)」(パブリケーションの作成) および「[Define an Article](../publish/define-an-article.md)」(アーティクルの定義) を参照してください。  
   
@@ -117,7 +107,7 @@ ms.locfileid: "63022197"
 |`char(1-254)`|CHAR(1-254)|  
 |`char(255-8000)`|VARCHAR(255-8000)|  
 |`date`|DATE|  
-|`datetime`|TIMESTAMP|  
+|`datetime`|timestamp|  
 |`datetime2(0-7)`|VARCHAR(27)|  
 |`datetimeoffset(0-7)`|VARCHAR(34)|  
 |`decimal(1-31, 0-31)`|DECIMAL(1-31, 0-31)|  
@@ -136,11 +126,11 @@ ms.locfileid: "63022197"
 |`numeric(32-38, 0-38)`|VARCHAR(41)|  
 |`nvarchar(1-4000)`|VARCHAR(1-4000)|  
 |`nvarchar(max)`|VARCHAR (0)<sup>1</sup>|  
-|`real`|REAL|  
-|`smalldatetime`|TIMESTAMP|  
+|`real`|real|  
+|`smalldatetime`|timestamp|  
 |`smallint`|SMALLINT|  
 |`smallmoney`|DECIMAL(10,4)|  
-|`sql_variant`|該当なし|  
+|`sql_variant`|なし|  
 |`sysname`|VARCHAR(128)|  
 |`text`|VARCHAR (0)<sup>1</sup>|  
 |`time(0-7)`|VARCHAR(16)|  
@@ -176,7 +166,7 @@ ms.locfileid: "63022197"
      DB2 環境によっては[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char` 、データ項目が1バイト文字に制限されないことがあります。CHAR または VARCHAR 項目の長さは、この値を考慮する必要があります。 また、必要に応じて、 *シフト イン* 文字と *シフト アウト* 文字についても考慮する必要があります。 `nvarchar`列と列を含む`nchar`テーブルをレプリケートする場合は、カスタム作成スクリプトでデータ型の最大長を指定する必要があります。 カスタム作成スクリプトの指定の詳細については、このトピックの「IBM DB2 サブスクライバーの構成」の手順 5. を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server 以外のサブスクライバー](non-sql-server-subscribers.md)   
- [パブリケーションのサブスクライブ](../subscribe-to-publications.md)  
+ [Non-SQL Server Subscribers](non-sql-server-subscribers.md)   
+ [Subscribe to Publications](../subscribe-to-publications.md)  
   
   

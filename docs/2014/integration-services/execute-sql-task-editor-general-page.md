@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 96d211defa789888a3fd7b513b4dff60fa795cb6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058989"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>[SQL 実行タスク エディター] ([全般] タブ)
-  
   **[SQL 実行タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、SQL 実行タスクを構成したり、タスクが実行する SQL ステートメントを指定したりできます。  
   
  このタスクの詳細については、「[SQL 実行タスク](control-flow/execute-sql-task.md)」、「[SQL 実行タスクのパラメーターとリターン コード](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)」、および「[SQL 実行タスクにおける結果セット](../../2014/integration-services/result-sets-in-the-execute-sql-task.md)」を参照してください。 Transact-SQL クエリ言語の詳細については、「[Transact-SQL リファレンス &#40;データベース エンジン&#41;](/sql/t-sql/language-reference)」を参照してください。  
@@ -49,45 +48,42 @@ ms.locfileid: "66058989"
  **TypeConversionMode**  
  このプロパティを `Allowed` に設定すると、SQL 実行タスクは出力パラメーターとクエリ結果を結果が割り当てられている変数のデータ型に変換します。 この機能は、結果セットの種類が **単一行** の場合に適用されます。  
   
- **セット**  
- SQL ステートメントの実行によって予測される結果の型を指定します。 
-  **[単一行]**、 **[完全な結果セット]**、 **[XML]**、または **[なし]** から選択します。  
+ **ResultSet**  
+ SQL ステートメントの実行によって予測される結果の型を指定します。 **[単一行]**、 **[完全な結果セット]**、 **[XML]**、または **[なし]** から選択します。  
   
  **ConnectionType**  
  データ ソースへの接続に使用する接続マネージャーの種類を選択します。 使用可能な接続の種類は、 **[OLE DB]**、 **[ODBC]**、 **[ADO]**、 **[ADO.NET]** 、および **[SQLMOBILE]** です。  
   
- **関連トピック:** [OLE DB 接続マネージャー](connection-manager/ole-db-connection-manager.md)、 [ODBC 接続マネージャー](connection-manager/odbc-connection-manager.md)、 [ADO 接続マネージャー](connection-manager/ado-connection-manager.md)、 [ADO.NET connection manager](connection-manager/ado-net-connection-manager.md)、 [SQL Server Compact Edition 接続マネージャー](connection-manager/sql-server-compact-edition-connection-manager.md)  
+ **関連項目:** [OLE DB 接続マネージャー](connection-manager/ole-db-connection-manager.md)」、「 [ODBC 接続マネージャー](connection-manager/odbc-connection-manager.md)」、「 [ADO 接続マネージャー](connection-manager/ado-connection-manager.md)」、「 [ADO.NET 接続マネージャー](connection-manager/ado-net-connection-manager.md)」、「 [SQL Server Compact Edition 接続マネージャー](connection-manager/sql-server-compact-edition-connection-manager.md)  
   
  **接続**  
- 定義済みの接続マネージャーの一覧から接続を選択します。 新しい接続を作成するには、[\<**新しい接続...**>] を選択します。  
+ 定義済みの接続マネージャーの一覧から接続を選択します。 新しい接続を作成するには\<、[**新しい接続...**>] を選択します。  
   
- **[Sqlsourcetype]**  
+ **SQLSourceType**  
  タスクが実行する SQL ステートメントのソースの種類を選択します。  
   
  SQL 実行タスクが使用する接続マネージャーの種類によって、パラメーター化された SQL ステートメントで特定のパラメーター マーカーを使用する必要があります。  
   
- **関連項目:**[Sql 実行タスク](control-flow/execute-sql-task.md)の [パラメーター化された sql コマンドの実行] セクション  
+ **関連項目:** : 「 [SQL 実行タスク](control-flow/execute-sql-task.md)  
   
  このプロパティのオプションを次の表に示します。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
-|**直接入力**|Transact-SQL ステートメントをソースに設定します。 この値を選択すると、動的オプション **[SQLStatement]** が表示されます。|  
-|**ファイル接続**|Transact-SQL ステートメントを含んでいるファイルを選択します。 この値を設定すると、動的オプション **[ファイル接続]** が表示されます。|  
+|**[直接入力]**|Transact-SQL ステートメントをソースに設定します。 この値を選択すると、動的オプション **[SQLStatement]** が表示されます。|  
+|**[ファイル接続]**|Transact-SQL ステートメントを含んでいるファイルを選択します。 この値を設定すると、動的オプション **[ファイル接続]** が表示されます。|  
 |**変数**|Transact-SQL ステートメントを定義する変数をソースに設定します。 この値を選択すると、動的オプション **[SourceVariable]** が表示されます。|  
   
- **QueryIsStoredProcedure**  
+ **[QueryIsStoredProcedure]**  
  実行が指定された SQL ステートメントがストアド プロシージャかどうかを示します。 このプロパティは、タスクが ADO 接続マネージャーを使用する場合のみ、読み取り/書き込みになります。 それ以外の場合、このプロパティは読み取り専用となり、その値は `false` となります。  
   
- **BypassPrepare**  
- SQL ステートメントが準備されているかどうかを示します。  
-  `true` の場合は準備がスキップされ、`false` の場合は実行の前に SQL ステートメントが準備されます。 このオプションは、準備をサポートしている OLE DB 接続の場合のみ使用可能です。  
+ **[BypassPrepare]**  
+ SQL ステートメントが準備されているかどうかを示します。  `true` の場合は準備がスキップされ、`false` の場合は実行の前に SQL ステートメントが準備されます。 このオプションは、準備をサポートしている OLE DB 接続の場合のみ使用可能です。  
   
- **関連トピック:**  [実行の準備](../relational-databases/native-client-odbc-queries/executing-statements/prepared-execution.md)  
+ **関連項目:**  [実行の準備](../relational-databases/native-client-odbc-queries/executing-statements/prepared-execution.md)  
   
- **[参照]**  
- 
-  **[開く]** ダイアログ ボックスを使用して、SQL ステートメントを含むファイルの場所を指定します。 ファイルを選択して、ファイルの内容を SQL ステートメントとして **[SQLStatement]** プロパティにコピーします。  
+ **参照**  
+ **[開く]** ダイアログ ボックスを使用して、SQL ステートメントを含むファイルの場所を指定します。 ファイルを選択して、ファイルの内容を SQL ステートメントとして **[SQLStatement]** プロパティにコピーします。  
   
  **クエリの作成**  
  クエリの作成に使用するグラフィカルなツールである **[クエリ ビルダー]** ダイアログ ボックスを使用して SQL ステートメントを作成します。 このオプションは、 **[SQLSourceType]** オプションが **[直接入力]** に設定されている場合に使用可能です。  
@@ -99,19 +95,19 @@ ms.locfileid: "66058989"
   
 ### <a name="sqlsourcetype--direct-input"></a>[SQLSourceType] = [直接入力]  
  **SQLStatement**  
- 実行する SQL ステートメントをオプション ボックスに入力するか、参照ボタン ([...]) をクリックして **[SQL クエリの入力]** ダイアログ ボックスに SQL ステートメントを入力するか、**[クエリの作成]** をクリックして **[クエリ ビルダー]** ダイアログ ボックスでステートメントを作成します。  
+ 実行する SQL ステートメントをオプションボックスに入力するか、参照ボタン ([...]) をクリックして [ **Sql クエリの入力**] ダイアログボックスに sql ステートメントを入力するか、[**クエリの作成**] をクリックして [**クエリビルダー** ] ダイアログボックスを使用してステートメントを作成します。  
   
- **関連項目:** [クエリビルダー](../../2014/integration-services/query-builder.md)  
+ **関連項目:** [[クエリ ビルダー]](../../2014/integration-services/query-builder.md)  
   
 ### <a name="sqlsourcetype--file-connection"></a>[SQLSourceType] = [ファイル接続]  
- **[Fileconnection]**  
- 既存のファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
+ **[FileConnection]**  
+ 既存のファイル接続マネージャーを選択するか\<、[**新しい接続...**> をクリックして新しい接続マネージャーを作成します。  
   
- **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、[ファイル接続マネージャーエディター](../../2014/integration-services/file-connection-manager-editor.md)  
+ **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、 [ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="sqlsourcetype--variable"></a>[SQLSourceType] = [変数]  
- **SourceVariable**  
- 既存の変数を選択するか、[\<**新しい変数...**> をクリックして新しい変数を作成します。  
+ **[SourceVariable]**  
+ 既存の変数を選択するか\<、[**新しい変数...**>] をクリックして新しい変数を作成します。  
   
  **関連トピック:** [SSIS&#41; 変数の Integration Services &#40;](integration-services-ssis-variables.md)[変数の追加](../../2014/integration-services/add-variable.md)  
   

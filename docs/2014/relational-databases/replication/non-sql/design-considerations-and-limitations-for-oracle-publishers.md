@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 043bf26fb17a3433e59623b5b3bfddaaea8bc89f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022515"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Oracle パブリッシャーの設計上の注意点および制限
@@ -69,12 +69,11 @@ ms.locfileid: "63022515"
   
 -   シノニム  
   
- サポートされるデータ型の詳細については、「 [Data Type Mapping for Oracle Publishers](data-type-mapping-for-oracle-publishers.md)」を参照してください。  
+ サポートされるデータ型の詳細については、「[Oracle パブリッシャーのデータ型マッピング](data-type-mapping-for-oracle-publishers.md)」を参照してください。  
   
 ## <a name="differences-between-oracle-and-sql-server"></a>Oracle と SQL Server の違い  
   
--   Oracle では、一部のオブジェクトに対する最大サイズ制限が異なります。 Oracle パブリケーション データベースで作成されたオブジェクトは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の対応するオブジェクトの最大サイズ制限に従う必要があります。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の制限について詳しくは、「[SQL Server の最大容量仕様](../../../sql-server/maximum-capacity-specifications-for-sql-server.md)」をご覧ください。  
+-   Oracle では、一部のオブジェクトに対する最大サイズ制限が異なります。 Oracle パブリケーション データベースで作成されたオブジェクトは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の対応するオブジェクトの最大サイズ制限に従う必要があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の制限について詳しくは、「[SQL Server の最大容量仕様](../../../sql-server/maximum-capacity-specifications-for-sql-server.md)」をご覧ください。  
   
 -   既定では、Oracle のオブジェクト名は大文字で作成されます。 Oracle オブジェクトの名前が Oracle データベースで大文字となっている場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターでこれらをパブリッシュするときは、名前が大文字になっているかどうかを確認してください。 大文字および小文字を正しく指定しないと、オブジェクトが見つからないことを示すエラー メッセージが表示される可能性があります。  
   
@@ -89,15 +88,14 @@ ms.locfileid: "63022515"
   
 -   LOB の列に加え、LOB ではない列を行の更新に含めるか、同じ Oracle トランザクションの一部として、その行の LOB ではない列を更新します。 どちらの場合でも、LOB ではない列の更新により、トリガーが起動します。  
   
- LOB の詳細については、「 [Data Type Mapping for Oracle Publishers](data-type-mapping-for-oracle-publishers.md)」を参照してください。  
+ LOB の詳細については、「[Oracle パブリッシャーのデータ型マッピング](data-type-mapping-for-oracle-publishers.md)」を参照してください。  
   
 ### <a name="unique-indexes-and-constraints"></a>一意インデックスと制約  
  スナップショット レプリケーションとトランザクション レプリケーションの両方において、一意のインデックスおよび制約 (主キー制約を含む) に含まれる列は、特定の制限事項に従う必要があります。 これらの制限に従わない場合、制約またはインデックスはレプリケートされません。  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインデックスに許容される最大列数は 16 です。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインデックスに許容される最大列数は 16 です。  
   
--   一意の制約に含まれるすべての列は、サポートされているデータ型である必要があります。 データ型の詳細については、「 [Data Type Mapping for Oracle Publishers](data-type-mapping-for-oracle-publishers.md)」をご覧ください。  
+-   一意の制約に含まれるすべての列は、サポートされているデータ型である必要があります。 データ型の詳細については、「[Oracle パブリッシャーのデータ型マッピング](data-type-mapping-for-oracle-publishers.md)」をご覧ください。  
   
 -   一意の制約に含まれるすべての列は、パブリッシュする必要があります (フィルター選択はできません)。  
   
@@ -105,13 +103,11 @@ ms.locfileid: "63022515"
   
  以下の問題についても考慮に入れてください。  
   
--   Oracle および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、NULL の扱いが異なります。Oracle では、NULL を許容する列に NULL 値が指定された複数の行を許可し、一意の制約またはインデックスに含めることができます。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では一意性が強制され、同じ列に NULL 値のある行は 1 行だけ許可されます。 NULL を許容する一意の制約またはインデックスをパブリッシュすることはできません。パブリッシュされたテーブルで、インデックスまたは制約に含まれる列に NULL 値のある行が複数含まれる場合、サブスクライバーで制約違反が発生します。  
+-   Oracle および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、NULL の扱いが異なります。Oracle では、NULL を許容する列に NULL 値が指定された複数の行を許可し、一意の制約またはインデックスに含めることができます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では一意性が強制され、同じ列に NULL 値のある行は 1 行だけ許可されます。 NULL を許容する一意の制約またはインデックスをパブリッシュすることはできません。パブリッシュされたテーブルで、インデックスまたは制約に含まれる列に NULL 値のある行が複数含まれる場合、サブスクライバーで制約違反が発生します。  
   
 -   一意性をテストする場合、フィールドの後続の空白は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では無視されますが、Oracle では無視されません。  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のトランザクション レプリケーションと同様、Oracle のトランザクション パブリケーションのテーブルには主キーが必要です。主キーは上記のルールに基づき、一意である必要があります。 主キーが前の項目で示したルールに従わない場合、トランザクション レプリケーションに対し、テーブルをパブリッシュすることはできません。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のトランザクション レプリケーションと同様、Oracle のトランザクション パブリケーションのテーブルには主キーが必要です。主キーは上記のルールに基づき、一意である必要があります。 主キーが前の項目で示したルールに従わない場合、トランザクション レプリケーションに対し、テーブルをパブリッシュすることはできません。  
   
 ## <a name="differences-between-oracle-publishing-and-standard-transactional-replication"></a>Oracle パブリッシングと標準的なトランザクション レプリケーションの違い  
   
@@ -127,8 +123,7 @@ ms.locfileid: "63022515"
   
 -   ストアド プロシージャを使用して Oracle パブリッシャーを構成またはメンテナンスする場合、プロシージャを明示的なトランザクションに入れないでください。 これは Oracle パブリッシャーへの接続に使用するリンク サーバーではサポートされていません。  
   
--   ウィザードにより Oracle パブリケーションに対するプル サブスクリプションを作成する場合は、 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降で提供されたサブスクリプションの新規作成ウィザードを使用する必要があります。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]より古いバージョンの場合でも、ストアド プロシージャおよび SQL-DMO インターフェイスを使用して、Oracle パブリケーションに対するプル サブスクリプションを設定できます。  
+-   ウィザードにより Oracle パブリケーションに対するプル サブスクリプションを作成する場合は、 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降で提供されたサブスクリプションの新規作成ウィザードを使用する必要があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]より古いバージョンの場合でも、ストアド プロシージャおよび SQL-DMO インターフェイスを使用して、Oracle パブリケーションに対するプル サブスクリプションを設定できます。  
   
 -   ストアド プロシージャを使用して、サブスクライバーに変更を反映する場合 (既定)、MCALL 構文はサポートされていても、Oracle パブリッシャーからのパブリケーションである場合は、異なる動作をすることに注意してください。 通常、MCALL では、パブリッシャーで更新された列を示すビットマップを提供します。 Oracle パブリケーションの場合、ビットマップは常にすべての列が更新されたことを示しています。 ストアド プロシージャの使用に関する詳細については、「[トランザクション アーティクルに変更を反映する方法の指定](../transactional/transactional-articles-specify-how-changes-are-propagated.md)」を参照してください。  
   
@@ -140,16 +135,14 @@ ms.locfileid: "63022515"
   
 -   Oracle パブリケーションに対するサブスクライバーは、バックアップから自動的に初期化することはできません。  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、バイナリと行数の 2 種類の検証をサポートしています。 Oracle パブリッシャーでは、行数検証をサポートしています。 詳細については、「[レプリケートされたデータの検証](../validate-data-at-the-subscriber.md)」 を参照してください。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、バイナリと行数の 2 種類の検証をサポートしています。 Oracle パブリッシャーでは、行数検証をサポートしています。 詳細については、「[レプリケートされたデータの検証](../validate-data-at-the-subscriber.md)」を参照してください。  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、ネイティブ bcp モードとキャラクター モードの 2 種類のスナップショット形式が用意されています。 Oracle パブリッシャーでは、キャラクター モード スナップショットをサポートしています。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、ネイティブ bcp モードとキャラクター モードの 2 種類のスナップショット形式が用意されています。 Oracle パブリッシャーでは、キャラクター モード スナップショットをサポートしています。  
   
 -   パブリッシュされた Oracle テーブルへのスキーマ変更はサポートされていません。 スキーマ変更を行うには、まずパブリケーションを削除し、変更を行ってから、パブリケーションおよびサブスクリプションを再作成します。  
   
     > [!NOTE]  
-    >  パブリッシュされたテーブルが利用されていないときに、スキーマ変更とその後のパブリケーションおよびサブスクリプションの削除、再作成を一度に行う場合、サブスクリプションに対して [レプリケーションのサポートのみ] オプションを指定できます。 これにより、各サブスクライバーにスナップショットをコピーすることなく、サブスクリプションを同期させることができます。 詳細については、「 [Initialize a Transactional Subscription Without a Snapshot](../initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。  
+    >  パブリッシュされたテーブルが利用されていないときに、スキーマ変更とその後のパブリケーションおよびサブスクリプションの削除、再作成を一度に行う場合、サブスクリプションに対して [レプリケーションのサポートのみ] オプションを指定できます。 これにより、各サブスクライバーにスナップショットをコピーすることなく、サブスクリプションを同期させることができます。 詳細については、「 [スナップショットを使用しないトランザクション サブスクリプションの初期化](../initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。  
   
 ### <a name="replication-security-model"></a>レプリケーションのセキュリティ モデル  
  Oracle のパブリッシングのセキュリティ モデルは、標準的なトランザクション レプリケーションのセキュリティ モデルと同じですが、以下の点が異なります。  

@@ -18,10 +18,10 @@ ms.assetid: fed3adb0-4c15-4a1a-8acd-1b184aff558f
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: ad01313933cb2e04bf22257bcdd0eb93a1a755e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "72313747"
 ---
 # <a name="sp_addlinkedserver-transact-sql"></a>sp_addlinkedserver (Transact-sql)
@@ -44,7 +44,7 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
   
 ## <a name="arguments"></a>引数  
 [ @server = ]* \'サーバー\' *          
-作成するリンク サーバーの名前を指定します。 *サーバー*は**sysname**,、既定値はありません。  
+作成するリンク サーバーの名前を指定します。 *server* のデータ型は **sysname**で、既定値はありません。  
   
 [ @srvproduct = ]* \'product_name\' *          
 リンクサーバーとして追加する OLE DB データソースの製品名を指定します。 *product_name*は**nvarchar (** 128 **)**,、既定値は NULL です。 **SQL Server**の場合、 *provider_name*、 *data_source*、*場所*、 *provider_string*、および*カタログ*を指定する必要はありません。  
@@ -79,23 +79,22 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- [なし] :  
+ なし。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  次の表に、OLE DB を使用してアクセスできるデータソース用にリンクサーバーを設定する方法を示します。 リンクサーバーは、特定のデータソースに対して複数の方法で設定できます。1つのデータソースの種類に対して複数の行を指定できます。 このテーブルには、リンクサーバーの設定に使用される**sp_addlinkedserver**パラメーター値も表示されます。  
   
 |リモート OLE DB データ ソース|OLE DB プロバイダー|product_name|provider_name|data_source|location|provider_string|catalog|  
 |-------------------------------|---------------------|-------------------|--------------------|------------------|--------------|----------------------|-------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  Native Client OLE DB プロバイダー|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<sup>1</sup> (既定値)||||||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  Native Client OLE DB プロバイダー|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] <sup>1</sup> (既定値)||||||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  Native Client OLE DB プロバイダー||**SQLNCLI**|の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネットワーク名 (既定のインスタンスの場合)|||データベース名 (省略可能)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  Native Client OLE DB プロバイダー||**SQLNCLI**|*servername*\\*instancename* (特定のインスタンスの場合)|||データベース名 (省略可能)|  
 |Oracle、バージョン 8 以降|Oracle Provider for OLE DB|Any|**OraOLEDB.Oracle**|Oracle データベースに対する別名||||  
-|Access/Jet|Microsoft OLE DB Provider for Jet|Any|**Microsoft. OLEDB. 4.0**|Jet データベースファイルの完全なパス||||  
+|Access/Jet|Microsoft OLE DB Provider for Jet|Any|**Microsoft.Jet.OLEDB.4.0**|Jet データベースファイルの完全なパス||||  
 |ODBC データ ソース (ODBC data source)|Microsoft OLE DB Provider for ODBC|Any|**MSDASQL**|ODBC データソースのシステム DSN||||  
-|ODBC データ ソース (ODBC data source)|[!INCLUDE[msCoName](../../includes/msconame-md.md)]ODBC の OLE DB プロバイダー|Any|**MSDASQL**|||ODBC 接続文字列||  
+|ODBC データ ソース (ODBC data source)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for ODBC|Any|**MSDASQL**|||ODBC 接続文字列||  
 |ファイル システム|[!INCLUDE[msCoName](../../includes/msconame-md.md)]インデックスサービスの OLE DB プロバイダー|Any|**MSIDXS**|インデックスサービスのカタログ名||||  
-|
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel ワークシート|[!INCLUDE[msCoName](../../includes/msconame-md.md)]OLE DB Provider for Jet|Any|**Microsoft. OLEDB. 4.0**|Excel ファイルのフル パス||Excel 5.0||  
+|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel ワークシート|[!INCLUDE[msCoName](../../includes/msconame-md.md)]OLE DB Provider for Jet|Any|**Microsoft.Jet.OLEDB.4.0**|Excel ファイルのフル パス||Excel 5.0||  
 |IBM DB2 データベース|[!INCLUDE[msCoName](../../includes/msconame-md.md)]DB2 の OLE DB Provider|Any|**DB2OLEDB**|||OLE DB [!INCLUDE[msCoName](../../includes/msconame-md.md)] PROVIDER for DB2 のドキュメントを参照してください。|DB2 データベースのカタログ名|  
   
  <sup>1</sup>リンクサーバーを設定するこの方法では、リンクサーバーの名前がの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]リモートインスタンスのネットワーク名と同じになります。 *Data_source*を使用してサーバーを指定します。  
@@ -285,9 +284,8 @@ EXEC sp_addlinkedserver
        Default Schema=admin;';  
 ```  
   
-### <a name="g-add-a-includesssdsfullincludessssdsfull-mdmd-as-a-linked-server-for-use-with-distributed-queries-on-cloud-and-on-premises-databases"></a>G. クラウドと[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]オンプレミスのデータベースで分散クエリを使用するために、をリンクサーバーとして追加する  
- 
-  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] をリンク サーバーとして追加し、内部設置型データベースとクラウド データベースにまたがる分散クエリでそのサーバーを使用することができます。 これは、オンプレミスの企業ネットワークと Azure クラウドにまたがるデータベースハイブリッドソリューションのコンポーネントです。  
+### <a name="g-add-a-sssdsfull-as-a-linked-server-for-use-with-distributed-queries-on-cloud-and-on-premises-databases"></a>G. クラウドと[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]オンプレミスのデータベースで分散クエリを使用するために、をリンクサーバーとして追加する  
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] をリンク サーバーとして追加し、内部設置型データベースとクラウド データベースにまたがる分散クエリでそのサーバーを使用することができます。 これは、オンプレミスの企業ネットワークと Azure クラウドにまたがるデータベースハイブリッドソリューションのコンポーネントです。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Box 製品には、分散クエリ機能が含まれています。この機能を使用すると、リンクサーバーとして定義されているリモート[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ソース (データ以外のソースからのデータを含む) からローカルデータソースとデータのデータを結合するクエリを作成できます。 ( [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]仮想マスターを除く) ごとに個別のリンクサーバーとして追加し、データベースアプリケーションで他のデータベースとして直接使用することができます。  
   
@@ -334,6 +332,6 @@ SELECT * FROM myLinkedServer.myDatabase.dbo.myTable
  [sp_serveroption &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
  [sp_setnetname &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-setnetname-transact-sql.md)   
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [システムテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [システム テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

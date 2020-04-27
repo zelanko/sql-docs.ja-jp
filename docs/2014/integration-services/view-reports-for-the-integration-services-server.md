@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1cfce32afdb334ecba55f082dce80af580a73178
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054547"
 ---
 # <a name="view-reports-for-the-integration-services-server"></a>Integration Services サーバーのレポートの表示
@@ -22,11 +22,9 @@ ms.locfileid: "66054547"
   
 ### <a name="to-view-reports-for-the-integration-services-server"></a>Integration Services サーバーのレポートを表示するには  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]のオブジェクト エクスプローラーで、 **[Integration Services カタログ]** ノードを展開します。  
+1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]のオブジェクト エクスプローラーで、 **[Integration Services カタログ]** ノードを展開します。  
   
-2.  
-  **[SSISDB]** を右クリックし、 **[レポート]** をクリックして、 **[標準レポート]** をクリックします。  
+2.  **[SSISDB]** を右クリックし、 **[レポート]** をクリックして、 **[標準レポート]** をクリックします。  
   
 3.  レポートを表示するには、以下のいずれかをクリックします。  
   

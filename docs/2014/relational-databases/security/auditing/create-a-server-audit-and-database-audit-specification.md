@@ -16,10 +16,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 6b4aa4358259492e1b49672b054eddb8713c7473
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211984"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>サーバー監査の仕様およびデータベース監査の仕様を作成する方法
@@ -35,35 +35,34 @@ ms.locfileid: "68211984"
   
      [セキュリティ](#Security)  
   
--   **サーバー監査とデータベース監査の仕様を作成するために使用するもの:**  
+-   **サーバー監査とデータベース監査の仕様を作成する方法:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
  データベース監査仕様は、セキュリティ保護できないオブジェクトであり、特定のデータベースに保存されます。 作成されたデータベース監査仕様は無効な状態です。  
   
  ユーザー データベースでデータベース監査の仕様を作成または変更するときは、システム ビューなど、サーバー スコープ オブジェクトの監査アクションは含めないでください。 サーバー スコープ オブジェクトが含まれている場合、監査が作成されます。 ただし、サーバー スコープ オブジェクトは対象にならず、エラーは返されません。 サーバー スコープ オブジェクトを監査するには、master データベースのデータベース監査の仕様を使用してください。  
   
- 
-  `tempdb` システム データベースを除き、データベース監査の仕様は、その仕様が作成されるデータベースに存在します。  
+ `tempdb` システム データベースを除き、データベース監査の仕様は、その仕様が作成されるデータベースに存在します。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
   
 -   ALTER ANY DATABASE AUDIT 権限を持つユーザーは、データベース監査仕様を作成し、任意の監査にバインドできます。  
   
 -   データベース監査仕様の作成後は、CONTROL SERVER 権限または ALTER ANY DATABASE AUDIT 権限を持つプリンシパル、または sysadmin アカウントがその仕様を表示できます。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-create-a-server-audit"></a>サーバー監査を作成するには  
   
-1.  オブジェクト エクスプローラーで、 **[セキュリティ]** フォルダーを展開します。  
+1.  オブジェクトエクスプローラーで、[**セキュリティ**] フォルダーを展開します。  
   
 2.  [**監査**] フォルダーを右クリックし、[**新しい監査**] を選択します。詳細については、「[サーバー監査およびサーバー監査の仕様を作成する](create-a-server-audit-and-server-audit-specification.md)」を参照してください。  
   
@@ -75,11 +74,9 @@ ms.locfileid: "68211984"
   
 2.  [**セキュリティ**] フォルダーを展開します。  
   
-3.  
-  **[データベース監査の仕様]** フォルダーを右クリックし、**[新しいデータベース監査の仕様...]** を選択します。  
+3.  [**データベース監査の仕様**] フォルダーを右クリックし、[**新しいデータベース監査の仕様**] を選択します。  
   
-     
-  **[データベース監査の仕様の作成]** ダイアログ ボックスでは、次のオプションを使用できます。  
+     **[データベース監査の仕様の作成]** ダイアログ ボックスでは、次のオプションを使用できます。  
   
      **名前**  
      データベース監査の仕様の名前。 この名前は、新しいサーバー監査の仕様を作成すると自動的に生成されますが、編集可能です。  
@@ -93,13 +90,13 @@ ms.locfileid: "68211984"
      **[オブジェクト スキーマ]**  
      指定した **[オブジェクト名]** のスキーマを表示します。  
   
-     **[オブジェクト名]**  
+     **オブジェクト名**  
      監査するオブジェクトの名前。 これは監査アクションにのみ使用できます。監査グループには適用されません。  
   
      **省略記号 (...)**  
      指定した **[監査アクションの種類]** に基づいて、使用可能なオブジェクトを参照して選択するための **[オブジェクトの選択]** ダイアログ ボックスを開きます。  
   
-     **[プリンシパル名]**  
+     **プリンシパル名**  
      監査対象のオブジェクトで監査をフィルター選択するためのアカウント。  
   
      **省略記号 (...)**  
@@ -107,7 +104,7 @@ ms.locfileid: "68211984"
   
 4.  オプションの選択が完了したら、 **[OK]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-create-a-server-audit"></a>サーバー監査を作成するには  
   

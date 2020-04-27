@@ -15,14 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5636ac5193c13b58ec263b8aae3e17466d968fb7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63012277"
 ---
 # <a name="setting-the-item-namespace-for-the-getproperties-method"></a>GetProperties メソッドのアイテム名前空間の設定
-  <xref:ReportService2010.ItemNamespaceHeader> で [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SOAP ヘッダーを使用すると、アイテムの完全なパスとアイテムの ID という 2 つの異なる識別子に基づいてアイテムのプロパティを取得できます。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] で <xref:ReportService2010.ItemNamespaceHeader> SOAP ヘッダーを使用すると、アイテムの完全なパスとアイテムの ID という 2 つの異なる識別子に基づいてアイテムのプロパティを取得できます。  
   
  <xref:ReportService2010.ReportingService2010.GetProperties%2A> メソッドへの呼び出しを作成する場合、一般的にはプロパティを取得するアイテムの完全なパスを引数として渡します。 <xref:ReportService2010.ItemNamespaceHeader> を使用すると、メソッド呼び出しの SOAP ヘッダーを設定して、アイテムの ID を識別子として渡すことによって <xref:ReportService2010.ReportingService2010.GetProperties%2A> を使用できます。  
   
@@ -120,7 +120,7 @@ class Sample
 ```  
   
 ## <a name="see-also"></a>参照  
- [テクニカル リファレンス (SSRS)](../technical-reference-ssrs.md)   
- [Reporting Services SOAP ヘッダーの使用](using-reporting-services-soap-headers.md)  
+ [SSRS&#41;&#40;テクニカルリファレンス](../technical-reference-ssrs.md)   
+ [Reporting Services の SOAP ヘッダーの使用](using-reporting-services-soap-headers.md)  
   
   

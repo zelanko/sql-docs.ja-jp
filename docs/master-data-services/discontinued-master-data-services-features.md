@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: erikre
 ms.openlocfilehash: dc51405421a1fd9c5a7d233b3f50db41dfc44d99
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728251"
 ---
 # <a name="discontinued-master-data-services-features"></a>提供が中止されたマスター データ サービス機能
@@ -24,14 +24,12 @@ ms.locfileid: "73728251"
 
   このトピックでは、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] で使用できなくなった [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の機能について説明します。  
   
-## <a name="includesscurrentincludessscurrent-mdmd-discontinued-features"></a>
-  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 提供が中止された機能  
- 
-  [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] のステージング プロセスは [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]から削除されました。 データのインポートと変更には、エンティティ ベースのステージング プロセスを使用してください。 詳細については、「[概要: テーブルからのデータのインポート (マスター データ サービス)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)」を参照してください。  
+## <a name="sscurrent-discontinued-features"></a>[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 提供が中止された機能  
+ [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] のステージング プロセスは [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]から削除されました。 データのインポートと変更には、エンティティ ベースのステージング プロセスを使用してください。 詳細については、「[概要: テーブルからのデータのインポート &#40;マスターデータサービス&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)」を参照してください。  
   
  メタデータ モデルは使用できなくなります。 また、エクスプローラーの機能領域でメタデータを表示できなくなりました。  
   
 ## <a name="see-also"></a>参照  
- [非推奨のマスターデータサービス機能](../master-data-services/deprecated-master-data-services-features.md)  
+ [非推奨のマスター データ サービス機能](../master-data-services/deprecated-master-data-services-features.md)  
   
   

@@ -16,17 +16,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fd5ced641ee8fc17f0be7d7b6e19aff17dcb69bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011288"
 ---
 # <a name="get-started-with-full-text-search"></a>フルテキスト検索の概要
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベースでは、フルテキストが既定で有効になっています。 ただし、テーブルでフルテキスト インデックスを使用するには、Full-Text Engine を使用してアクセスするテーブルの列に対してフルテキスト インデックス作成機能をセットアップする必要があります。  
   
-##  <a name="configure"></a>フルテキスト検索のためのデータベースの構成  
+##  <a name="configuring-a-database-for-full-text-search"></a><a name="configure"></a>フルテキスト検索のためのデータベースの構成  
  どのシナリオでも、データベース管理者は次の基本的な手順を実行して、データベースでフルテキスト検索用のテーブル列を構成します。  
   
 1.  フルテキスト カタログを作成します。  
@@ -43,7 +42,7 @@ ms.locfileid: "66011288"
   
  フルテキスト検索では、ワード ブレーカー、ステマー、ストップワード (ノイズ ワードとも呼ばれます) を含んだストップリスト、類義語辞典ファイルの各*言語コンポーネント*を使用して、複数の言語がサポートされます。 類義語辞典ファイルと (場合によって) ストップリストは、データベース管理者が構成する必要があります。 特定の類義語辞典ファイルは、対応する言語を使用するすべてのフルテキスト インデックスをサポートし、特定のストップリストには任意の数のフルテキスト インデックスを関連付けることができます。  
   
-##  <a name="setup"></a>フルテキストカタログとインデックスの設定  
+##  <a name="setting-up-a-full-text-catalog-and-index"></a><a name="setup"></a>フルテキストカタログとインデックスの設定  
  この作業には、次の基本的な手順が含まれます。  
   
 1.  フルテキスト インデックスを格納するフルテキスト カタログを作成する。  
@@ -63,7 +62,7 @@ ms.locfileid: "66011288"
 |同じデータベース内で 1 つ以上のフルテキスト カタログにグループ化されます。|グループ化されません。|  
   
   
-##  <a name="options"></a>フルテキストインデックスのオプションの選択  
+##  <a name="choosing-options-for-a-full-text-index"></a><a name="options"></a>フルテキストインデックスのオプションの選択  
  ここでは、次について説明します。  
   
 -   列の言語の選択  
@@ -100,9 +99,7 @@ ms.locfileid: "66011288"
   
   
 ### <a name="associating-a-stoplist-with-the-full-text-index"></a>ストップリストとフルテキスト インデックスの関連付け  
- 
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] では、ストップリストが導入されています。 
-  *ストップリスト* は、ストップワード (ノイズ ワードとも呼ばれます) の一覧です。 ストップリストは各フルテキスト インデックスに関連付けられ、そのストップリスト内の単語がそのインデックスのフルテキスト クエリに適用されます。 既定では、システム ストップリストは、新しいフルテキスト インデックスに関連付けられます。 ただし、独自のストップリストを作成して使用することもできます。 詳細については、「 [フルテキスト検索に使用するストップワードとストップリストの構成と管理](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)」を参照してください。  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] では、ストップリストが導入されています。 *ストップリスト* は、ストップワード (ノイズ ワードとも呼ばれます) の一覧です。 ストップリストは各フルテキスト インデックスに関連付けられ、そのストップリスト内の単語がそのインデックスのフルテキスト クエリに適用されます。 既定では、システム ストップリストは、新しいフルテキスト インデックスに関連付けられます。 ただし、独自のストップリストを作成して使用することもできます。 詳細については、「 [フルテキスト検索に使用するストップワードとストップリストの構成と管理](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)」を参照してください。  
   
  たとえば、次の[CREATE フルテキストストップリスト](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)]ステートメントでは、システムストップリストからコピーすることによって、myStoplist3 という名前の新しいフルテキストストップリストを作成します。  
   
@@ -132,12 +129,10 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
  通常、カタログ全体の作成を実行している間は、結果として 1 が返されます。  
   
   
-##  <a name="example"></a>例: フルテキスト検索の設定  
- 次の 2 部構成の例では、AdventureWorks データベースに `AdvWksDocFTCat` という名前のフルテキスト カタログを作成し、次に、`Document` の [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] テーブルにフルテキスト インデックスを作成します。 このステートメントによって、セットアップ時に指定した既定のディレクトリ内にフルテキスト カタログが作成されます。 
-  `AdvWksDocFTCat` というフォルダーが既定のディレクトリ内にあります。  
+##  <a name="example-setting-up-full-text-search"></a><a name="example"></a>例: フルテキスト検索の設定  
+ 次の 2 部構成の例では、AdventureWorks データベースに `AdvWksDocFTCat` という名前のフルテキスト カタログを作成し、次に、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] の `Document` テーブルにフルテキスト インデックスを作成します。 このステートメントによって、セットアップ時に指定した既定のディレクトリ内にフルテキスト カタログが作成されます。 `AdvWksDocFTCat` というフォルダーが既定のディレクトリ内にあります。  
   
-1.  
-  `AdvWksDocFTCat`という名前のフルテキスト カタログを作成するために、この例では、 [CREATE FULLTEXT CATALOG](/sql/t-sql/statements/create-fulltext-catalog-transact-sql) ステートメントを使用します。  
+1.  `AdvWksDocFTCat`という名前のフルテキスト カタログを作成するために、この例では、 [CREATE FULLTEXT CATALOG](/sql/t-sql/statements/create-fulltext-catalog-transact-sql) ステートメントを使用します。  
   
     ```  
     USE AdventureWorks;  
@@ -169,48 +164,48 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
      この例で定義する TYPE COLUMN では、"Document" 列 (バイナリ型) の各行のドキュメント型が含まれる、テーブルの型列を指定します。 Type 列には、ユーザーが指定したファイル拡張子 (".doc"、".xls" など) が、特定の行のドキュメントに格納されます。 Full-Text Engine では、特定の行のファイル拡張子を使用して、その行のデータを解析するために使用する正しいフィルターを呼び出します。 その行のバイナリ データをフィルターが解析した後、指定されたワード ブレーカーがコンテンツを解析します (この例では、英語 (U.K.) のワード ブレーカーを使用します)。 フィルター処理が行われるのは、インデックス作成時か、フルテキスト インデックスへの自動変更追跡が有効になっている場合にユーザーがベース テーブルで列を挿入または列を更新したときだけである点に注意してください。 詳細については、「 [検索用フィルターの構成と管理](configure-and-manage-filters-for-search.md)」を参照してください。  
   
   
-##  <a name="tasks"></a>一般的なタスク  
+##  <a name="common-tasks"></a><a name="tasks"></a>一般的なタスク  
   
 ### <a name="to-create-a-full-text-catalog"></a>フルテキスト カタログを作成するには  
   
--   [Transact-sql&#41;&#40;のフルテキストカタログの作成](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  
+-   [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  
   
 -   [フルテキスト カタログの作成と管理](create-and-manage-full-text-catalogs.md)  
   
 ### <a name="to-view-the-indexes-of-a-table-or-view"></a>テーブル (またはビュー) のインデックスを表示するには  
   
--   [SQL&#41;&#40;Transact-sql のインデックス](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)  
+-   [sys.indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)  
   
 ### <a name="to-create-a-unique-index"></a>一意のインデックスを作成するには  
   
 -   [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)  
   
--   [Visual Database Tools &#40;テーブルデザイナーを開き&#41;](../../ssms/visual-db-tools/visual-database-tools.md)  
+-   [テーブル デザイナーを開く &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/visual-database-tools.md)  
   
 ### <a name="to-create-a-full-text-index"></a>フルテキスト インデックスを作成するには  
   
--   [Transact-sql&#41;&#40;のフルテキストインデックスの作成](/sql/t-sql/statements/create-fulltext-index-transact-sql)  
+-   [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)  
   
 -   [フルテキスト インデックスの作成と管理](create-and-manage-full-text-indexes.md)  
   
 ### <a name="to-view-information-about-a-full-text-index"></a>フルテキスト インデックスに関する情報を表示するには  
   
-|カタログ ビューまたは動的管理ビュー|[説明]|  
+|カタログ ビューまたは動的管理ビュー|説明|  
 |----------------------------------------|-----------------|  
-|[fulltext_index_catalog_usages &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql)|フルテキスト カタログからフルテキスト インデックスへの参照ごとに 1 行のデータを返します。|  
-|[fulltext_index_columns &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql)|フルテキスト インデックスの一部となっている列ごとに 1 行のデータを格納します。|  
-|[fulltext_index_fragments &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql)|フルテキスト インデックスでは、フルテキスト インデックス フラグメントと呼ばれる内部テーブルを使用して逆インデックスのデータを保存します。 このビューを使用すると、これらのフラグメントに関するメタデータをクエリできます。 このビューは、フルテキスト インデックスが含まれているすべてのテーブルのフルテキスト インデックス フラグメントごとに 1 行のデータを格納しています。|  
-|[fulltext_indexes &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql)|表形式オブジェクトのフルテキスト インデックスごとに 1 行のデータを保持します。|  
-|[dm_fts_index_keywords &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql)|指定されたテーブルのフルテキスト インデックスのコンテンツに関する情報を返します。|  
-|[dm_fts_index_keywords_by_document &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql)|指定されたテーブルについて、フルテキスト インデックスのドキュメント レベルのコンテンツに関連する情報を返します。 個々のキーワードは、複数のドキュメントに出現する場合があります。|  
-|[dm_fts_index_population &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql)|現在実行中の、フルテキスト インデックス設定に関する情報を返します。|  
+|[sys.fulltext_index_catalog_usages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql)|フルテキスト カタログからフルテキスト インデックスへの参照ごとに 1 行のデータを返します。|  
+|[sys.fulltext_index_columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql)|フルテキスト インデックスの一部となっている列ごとに 1 行のデータを格納します。|  
+|[sys.fulltext_index_fragments &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql)|フルテキスト インデックスでは、フルテキスト インデックス フラグメントと呼ばれる内部テーブルを使用して逆インデックスのデータを保存します。 このビューを使用すると、これらのフラグメントに関するメタデータをクエリできます。 このビューは、フルテキスト インデックスが含まれているすべてのテーブルのフルテキスト インデックス フラグメントごとに 1 行のデータを格納しています。|  
+|[sys.fulltext_indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql)|表形式オブジェクトのフルテキスト インデックスごとに 1 行のデータを保持します。|  
+|[sys.dm_fts_index_keywords &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql)|指定されたテーブルのフルテキスト インデックスのコンテンツに関する情報を返します。|  
+|[sys.dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql)|指定されたテーブルについて、フルテキスト インデックスのドキュメント レベルのコンテンツに関連する情報を返します。 個々のキーワードは、複数のドキュメントに出現する場合があります。|  
+|[sys.dm_fts_index_population &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql)|現在実行中の、フルテキスト インデックス設定に関する情報を返します。|  
   
   
 ## <a name="see-also"></a>参照  
- [Transact-sql&#41;&#40;のフルテキストカタログの作成](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)   
- [Transact-sql&#41;&#40;のフルテキストインデックスの作成](/sql/t-sql/statements/create-fulltext-index-transact-sql)   
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)   
+ [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)   
  [Transact-sql&#41;&#40;のフルテキストストップリストの作成](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)   
- [CREATE TABLE &#40;Transact-sql&#41;](/sql/t-sql/statements/create-table-transact-sql)   
+ [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)   
  [フルテキストインデックスの作成](populate-full-text-indexes.md)   
  [FULLTEXTCATALOGPROPERTY &#40;Transact-sql&#41;](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql)   
  [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](/sql/t-sql/functions/objectproperty-transact-sql)  

@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7a149e8940896210a408b36c7cb06814646fd322
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206600"
 ---
 # <a name="working-with-query-notifications"></a>クエリ通知の操作
@@ -73,7 +73,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 ### <a name="the-dbpropset_sqlserverrowset-property-set"></a>DBPROPSET_SQLSERVERROWSET プロパティ セット  
  OLE DB を使用したクエリ通知をサポート[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]するために、Native Client は、DBPROPSET_SQLSERVERROWSET プロパティセットに次の新しいプロパティを追加します。  
   
-|Name|種類|[説明]|  
+|名前|種類|説明|  
 |----------|----------|-----------------|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|クエリ通知をアクティブのままにしておく秒数。<br /><br /> 既定値は 432,000 秒 (5 日) です。 最小値は 1 秒であり、最大値は 2^31-1 秒です。|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|通知のメッセージ テキスト。 これはユーザーが定義するため、あらかじめ定義済みの書式はありません。<br /><br /> 既定では、文字列は空です。 1 ～ 2,000 文字を使用してメッセージを指定できます。|  
@@ -131,7 +131,7 @@ RECEIVE * FROM MyQueue
   
  バッチまたはストアド プロシージャに対するサブスクリプション要求を作成すると、そのバッチまたはストアド プロシージャ内で実行される各ステートメントに対して、別個のサブスクリプション要求が作成されます。 EXECUTE ステートメントは通知を登録せず、実行されるコマンドへ通知要求を送信します。 バッチの場合、実行されるステートメントに対してコンテキストが適用され、さらに同様のルールが適用されます。  
   
- 同じデータベースコンテキストで同じユーザーによって送信され、同じテンプレート、同じパラメーター値、同じ通知 ID、および既存のアクティブなサブスクリプションの配信場所が同じユーザーによって送信された通知のクエリを送信すると、既存のを更新します。[サブスクリプション]。指定した新しいタイムアウトをリセットします。これは、同一のクエリに対して通知が要求されると、1つの通知のみが送信されることを意味します。 バッチ内で重複するクエリや、ストアド プロシージャ内で複数回呼び出されたクエリにも、これが当てはまります。  
+ 同じデータベースコンテキストで同じユーザーによって送信され、同じテンプレート、同じパラメーター値、同じ通知 ID、および既存のアクティブなサブスクリプションと同じ配信場所を持つ通知のクエリを送信すると、既存のサブスクリプションが更新され、指定された新しいタイムアウトがリセットされます。これは、同一のクエリに対して通知が要求されると、1つの通知のみが送信されることを意味します。 バッチ内で重複するクエリや、ストアド プロシージャ内で複数回呼び出されたクエリにも、これが当てはまります。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Native Client の機能](sql-server-native-client-features.md)  

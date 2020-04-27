@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 4c244701d8a58765061ef3bde1f918c8be5a941d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63017177"
 ---
 # <a name="intermediate-data-mining-tutorial-analysis-services---data-mining"></a>中級者向けデータ マイニング チュートリアル (Analysis Services - データ マイニング)
@@ -52,24 +52,23 @@ ms.locfileid: "63017177"
   
  個々の地域向けのモデルを作成した後に、クロス予測に使用できる汎用モデルを作成します。  
   
- [レッスン 3: マーケットバスケットシナリオの構築 &#40;中級者向けデータマイニングチュートリアル&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [レッスン 3: マーケット バスケット シナリオの作成 (中級者向けデータ マイニング チュートリアル)](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
  このレッスンでは、新しいデータ ソース ビューを追加し、入れ子になったテーブルとキーを操作する方法について学習します。 このデータを基に、マーケット バスケット シナリオの一部として使用できるマイニング モデルを作成します。 また、[!INCLUDE[msCoName](../includes/msconame-md.md)] アソシエーション アルゴリズムを使用して作成されたマイニング モデルの調査も行います。  
   
  [レッスン 4: シーケンスクラスターシナリオの構築中級者向けデータマイニングチュートリアル &#40;&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
  このレッスンでは、シーケンス クラスター シナリオの一部として使用できるマイニング モデルを作成します。 また、[!INCLUDE[msCoName](../includes/msconame-md.md)] シーケンス クラスター アルゴリズムを使用して作成されたマイニング モデルを調査する方法についても学習します。  
   
- [レッスン 5: ニューラルネットワークとロジスティック回帰モデルの構築 &#40;中級者向けデータマイニングチュートリアル&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [レッスン 5: ニューラル ネットワークおよびロジスティック回帰モデルの作成 &#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
  このレッスンでは、Microsoft ニューラル ネットワーク アルゴリズムおよび Microsoft ロジスティック回帰アルゴリズムを使用して、関連するいくつかのマイニング モデルを作成します。 また、データ ソース ビューを操作して、モデルの基になるデータを調査する方法についても学習します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  次のソフトウェアがインストールされていることを確認してください。  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] と [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] データベース。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] と [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] データベース。  
   
  セキュリティ強化のため、既定ではサンプル データベースがインストールされません。 の[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]公式データベースをインストールするには、 [Microsoft SQL サンプル](https://go.microsoft.com/fwlink/?LinkId=88417)データベースのページにアクセスし、適切なバージョンのサンプルデータベースを選択します。  
   

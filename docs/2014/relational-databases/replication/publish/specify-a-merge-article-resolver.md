@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 388d400160e3fa7b3240c7a9c014bcf36ae25f3a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68212092"
 ---
 # <a name="specify-a-merge-article-resolver"></a>マージ アーティクル競合回避モジュールの指定
@@ -30,15 +30,15 @@ ms.locfileid: "68212092"
   
      [Recommendations (推奨事項)](#Recommendations)  
   
--   **マージアーティクル競合回避モジュールを指定する方法:**  
+-   **マージ アーティクル競合回避モジュールを指定するために使用するもの:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Recommendations"></a> 推奨事項  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
   
 -   マージ レプリケーションでは、以下の競合回避モジュールが使用できます。  
   
@@ -56,21 +56,18 @@ ms.locfileid: "68212092"
   
     -   Web 同期を使用するプル サブスクリプションの場合は [!INCLUDE[msCoName](../../../includes/msconame-md.md)] インターネット インフォメーション サービス (IIS) サーバー  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
- 競合回避モジュールを登録した後、**[アーティクルのプロパティ - **Article>]** ダイアログ ボックスの \<[競合回避モジュール]** タブでアーティクルが競合回避モジュールを使用するように指定します。このダイアログ ボックスは、パブリケーションの新規作成ウィザードおよび **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスから使用できます。 ウィザードの使用およびダイアログ ボックスへのアクセスの詳細については、「[パブリケーションの作成](create-a-publication.md)」および「[View and Modify Publication Properties](view-and-modify-publication-properties.md)」 (パブリケーション プロパティの表示および変更) を参照してください。  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+ 競合回避モジュールを登録した後、**[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスの **[競合回避モジュール]** タブでアーティクルが競合回避モジュールを使用するように指定します。このダイアログ ボックスは、パブリケーションの新規作成ウィザードおよび **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスから使用できます。 ウィザードの使用およびダイアログ ボックスへのアクセスの詳細については、「[パブリケーションの作成](create-a-publication.md)」および「[View and Modify Publication Properties](view-and-modify-publication-properties.md)」 (パブリケーション プロパティの表示および変更) を参照してください。  
   
 #### <a name="to-specify-a-resolver"></a>競合回避モジュールを指定するには  
   
 1.  パブリケーションの新規作成ウィザードの **[アーティクル]** ページまたは **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスで、テーブルを選択します。  
   
-2.  
-  **[アーティクルのプロパティ]** をクリックしてから、 **[反転表示されたテーブル アーティクルのプロパティを設定]** をクリックします。  
+2.  **[アーティクルのプロパティ]** をクリックしてから、 **[反転表示されたテーブル アーティクルのプロパティを設定]** をクリックします。  
   
-3.  
-  **[アーティクルのプロパティ - \<Article>]** ページで、**[競合回避モジュール]** タブをクリックします。  
+3.  **[アーティクルのプロパティ - \<Article>]** ページで、**[競合回避モジュール]** タブをクリックします。  
   
-4.  
-  **[ディストリビューターに登録されたカスタム競合回避モジュールを使用する]** を選択し、一覧から競合回避モジュールをクリックします。  
+4.  **[ディストリビューターに登録されたカスタム競合回避モジュールを使用する]** を選択し、一覧から競合回避モジュールをクリックします。  
   
 5.  競合回避モジュールが入力 (列名など) を必要とする場合は **[競合回避モジュールが必要とする情報の入力]** ボックスで指定します。  
   
@@ -78,7 +75,7 @@ ms.locfileid: "68212092"
   
 7.  競合回避モジュールを必要とする各アーティクルについて、この処理を繰り返します。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-register-a-custom-conflict-resolver"></a>カスタム競合回避モジュールを登録するには  
   
@@ -100,8 +97,7 @@ ms.locfileid: "68212092"
     -   カスタム競合回避モジュール DLL をプッシュ サブスクリプションのディストリビューター、またはプル サブスクリプションのサブスクライバーにコピーします。  
   
         > [!NOTE]  
-        >  
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] カスタム競合回避モジュールは、 [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM ディレクトリにあります。  
+        >  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] カスタム競合回避モジュールは、 [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM ディレクトリにあります。  
   
     -   regsvr32.exe を使用して、カスタム競合回避モジュール DLL をオペレーティング システムに登録します。 たとえば、次のコマンドをコマンド プロンプトから実行すると、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Additive Conflict Resolver が登録されます。  
   
@@ -120,8 +116,7 @@ ms.locfileid: "68212092"
   
 2.  パブリッシャーで、[sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) を実行し、結果セットの **value** フィールドに示された目的のカスタム競合回避モジュールの名前を確認します。  
   
-3.  パブリッシャー側のパブリケーション データベースに対して、[sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) を実行します。 手順 2. の競合回避モジュールの名前を**@article_resolver**に指定し、 **@resolver_info**パラメーターを使用してカスタム競合回避モジュールに必要な入力を指定します。 ストアドプロシージャベースのカスタム競合回避モジュール**@resolver_info**の場合は、ストアドプロシージャの名前を指定します。 
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] によって提供される競合回避モジュールの必須入力の詳細については、「[Microsoft COM ベースの競合回避モジュール](../merge/advanced-merge-replication-conflict-com-based-resolvers.md)」を参照してください。  
+3.  パブリッシャー側のパブリケーション データベースに対して、[sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) を実行します。 手順 2. の競合回避モジュールの名前を**@article_resolver**に指定し、 **@resolver_info**パラメーターを使用してカスタム競合回避モジュールに必要な入力を指定します。 ストアドプロシージャベースのカスタム競合回避モジュール**@resolver_info**の場合は、ストアドプロシージャの名前を指定します。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] によって提供される競合回避モジュールの必須入力の詳細については、「[Microsoft COM ベースの競合回避モジュール](../merge/advanced-merge-replication-conflict-com-based-resolvers.md)」を参照してください。  
   
 #### <a name="to-specify-or-change-a-custom-resolver-for-an-existing-merge-article"></a>既存のマージ アーティクルに対するカスタム競合回避モジュールを指定または変更するには  
   
@@ -129,15 +124,9 @@ ms.locfileid: "68212092"
   
 2.  パブリッシャーで、[sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) を実行し、結果セットの **value** フィールドに示された目的のカスタム競合回避モジュールの名前を確認します。  
   
-3.  パブリッシャー側のパブリケーション データベースに対して、[sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) を実行します。 
-  **
-  **
-  ** にビジネス ロジック ハンドラーの完全パスを含む @propertyarticle_resolver** の値を、**@value** に手順 2 の目的のカスタム競合回避モジュールの名前を指定します。  
+3.  パブリッシャー側のパブリケーション データベースに対して、[sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) を実行します。 **@property** にビジネス ロジック ハンドラーの完全パスを含む **article_resolver** の値を、**@value** に手順 2 の目的のカスタム競合回避モジュールの名前を指定します。  
   
-4.  カスタム競合回避モジュールの必須入力を変更するには、[sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) を再度実行します。 
-  **
-  **
-  ** に @propertyresolver_info** の値を、**@value** にカスタム競合回避モジュールの必須入力を指定します。 ストアドプロシージャベースのカスタム競合回避モジュール**@resolver_info**の場合は、ストアドプロシージャの名前を指定します。 必須入力の詳細については、「[Microsoft COM ベースの競合回避モジュール](../merge/advanced-merge-replication-conflict-com-based-resolvers.md)」を参照してください。  
+4.  カスタム競合回避モジュールの必須入力を変更するには、[sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) を再度実行します。 **@property** に **resolver_info** の値を、**@value** にカスタム競合回避モジュールの必須入力を指定します。 ストアドプロシージャベースのカスタム競合回避モジュール**@resolver_info**の場合は、ストアドプロシージャの名前を指定します。 必須入力の詳細については、「[Microsoft COM ベースの競合回避モジュール](../merge/advanced-merge-replication-conflict-com-based-resolvers.md)」を参照してください。  
   
 #### <a name="to-unregister-a-custom-conflict-resolver"></a>カスタム競合回避モジュールの登録を解除するには  
   
@@ -145,7 +134,7 @@ ms.locfileid: "68212092"
   
 2.  ディストリビューターで、[sp_unregistercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql) を実行します。 手順 1. で作成したカスタム競合回避モジュールの**@article_resolver**完全な名前をに指定します。  
   
-###  <a name="TsqlExample"></a>例 (Transact-sql)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a>例 (Transact-sql)  
  次の例では、新しいアーティクルを作成し、競合が発生したときに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] UnitPrice **列の平均の計算に** Averaging Conflict Resolver が使用されるように指定します。  
   
  [!code-sql[HowTo#sp_addmerge_resolver](../../../snippets/tsql/SQL15/replication/howto/tsql/mergearticleresolvers.sql#sp_addmerge_resolver)]  
@@ -156,6 +145,6 @@ ms.locfileid: "68212092"
   
 ## <a name="see-also"></a>参照  
  [マージレプリケーションの競合検出と解決の詳細](../merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
- [マージアーティクルのビジネスロジックハンドラーの実装](../implement-a-business-logic-handler-for-a-merge-article.md)  
+ [マージ アーティクルのビジネス ロジック ハンドラーの実装](../implement-a-business-logic-handler-for-a-merge-article.md)  
   
   

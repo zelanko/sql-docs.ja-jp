@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 06cefcdac192b715fe843f842088456f769cdd24
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63042667"
 ---
 # <a name="testing-accuracy-with-lift-charts-basic-data-mining-tutorial"></a>リフト チャートを使用した精度テスト (基本的なデータ マイニング チュートリアル)
@@ -26,7 +26,7 @@ ms.locfileid: "63042667"
   
 -   [精度チャートのパラメーターの構成](#BKMK_Selecting)  
   
-##  <a name="BKMK_InputData"></a>入力データの選択  
+##  <a name="choosing-the-input-data"></a><a name="BKMK_InputData"></a>入力データの選択  
  マイニング モデルの精度をテストするには、まず、テストに使用するデータ ソースを選択する必要があります。 テスト データに対するモデルの予測精度をテストし、その後で外部データに対してモデルを使用します。  
   
 #### <a name="to-select-the-data-set"></a>データ セットを選択するには  
@@ -37,7 +37,7 @@ ms.locfileid: "63042667"
   
      その他のオプションの詳細については、「[精度チャートの種類の選択」および「グラフのオプションの設定](../../2014/analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)」を参照してください。  
   
-##  <a name="BKMK_Selecting"></a>精度チャートのパラメーターの設定  
+##  <a name="setting-accuracy-chart-parameters"></a><a name="BKMK_Selecting"></a>精度チャートのパラメーターの設定  
  精度チャートを作成するには、次の 3 つの事項を定義する必要があります。  
   
 -   どのモデルを精度チャートに含めますか。  

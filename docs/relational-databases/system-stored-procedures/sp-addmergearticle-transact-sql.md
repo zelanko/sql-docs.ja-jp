@@ -16,10 +16,10 @@ ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a9163e6d34a0de6200eafd413d163bb6d92fd4a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "72174003"
 ---
 # <a name="sp_addmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
@@ -81,7 +81,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @type = ] 'type'`アーティクルの種類を示します。 *種類*は**sysname**で、既定値は**table**です。次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**テーブル**(既定値)|スキーマとデータを含むテーブル。 レプリケーションはテーブルを監視して、レプリケートするデータを特定します。|  
 |**func スキーマのみ**|スキーマのみを使用する関数。|  
@@ -101,12 +101,11 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @pre_creation_cmd = ] 'pre_creation_cmd'`スナップショットを適用するときに、サブスクライバーにテーブルが存在する場合にシステムが実行する処理を指定します。 *pre_creation_cmd*は**nvarchar (10)** で、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
-|**存在**|テーブルがサブスクライバーに既に存在する場合、アクションは実行されません。|  
-|**デリート**|サブセットフィルターの WHERE 句に基づいて削除を発行します。|  
-|**drop** (既定値)|テーブルを再作成する前に削除します。 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] のサブスクライバーをサポートするために必要です。|  
+|"**なし**"|テーブルがサブスクライバーに既に存在する場合、アクションは実行されません。|  
+|**delete**|サブセットフィルターの WHERE 句に基づいて削除を発行します。|  
+|**drop** (既定値)|テーブルを再作成する前に削除します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] のサブスクライバーをサポートするために必要です。|  
 |**切捨て**|変換先テーブルを切り捨てます。|  
   
 `[ @creation_script = ] 'creation_script'`サブスクリプションデータベースでアーティクルを作成するために使用する、オプションのアーティクルスキーマスクリプトのパスと名前を指定します。 *creation_script*は**nvarchar (255)**,、既定値は NULL です。  
@@ -116,7 +115,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @schema_option = ] schema_option`指定されたアーティクルのスキーマ生成オプションのビットマップです。 *schema_option*は**binary (8)** で、| を指定できます。 [(ビットごとの OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md)これらの値の1つ以上の積。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**0x00**|スナップショットエージェントによるスクリプト作成を無効にし、 *creation_script*で定義されているスキーマ作成前スクリプトを使用します。|  
 |**0x01**|オブジェクトの作成 (CREATE TABLE、CREATE PROCEDURE など) を生成します。 これは、ストアドプロシージャアーティクルの既定値です。|  
@@ -170,7 +169,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @article_resolver = ] 'article_resolver'`テーブルアーティクルまたはテーブルアーティクルでカスタムビジネスロジックを実行するために呼び出される .NET Framework アセンブリの競合を解決するために使用される COM ベースの競合回避モジュールです。 *article_resolver*は**varchar (255)**,、既定値は NULL です。 このパラメーターで利用できる値の一覧については、「[!INCLUDE[msCoName](../../includes/msconame-md.md)] カスタム競合回避モジュール」を参照してください。 指定した値が [!INCLUDE[msCoName](../../includes/msconame-md.md)] 競合回避モジュールの値でない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、システムに付属の競合回避モジュールの代わりに指定した競合回避モジュールが使用されます。 **Sp_enumcustomresolvers**を使用して、使用可能なカスタム競合回避モジュールの一覧を列挙します。 詳細については、「[マージ同期中のビジネスロジックの実行](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)」と「[マージレプリケーションの競合の検出と解決](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)」を参照してください。  
   
-`[ @resolver_info = ] 'resolver_info'`は、カスタム競合回避モジュールに必要な追加情報を指定するために使用されます。 一部の[!INCLUDE[msCoName](../../includes/msconame-md.md)]競合回避モジュールには、入力として指定された列が必要です。 *resolver_info*は**nvarchar (255)**,、既定値は NULL です。 詳細については、「 [Microsoft COM-Based Resolvers](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)」を参照してください。  
+`[ @resolver_info = ] 'resolver_info'`は、カスタム競合回避モジュールに必要な追加情報を指定するために使用されます。 一部の[!INCLUDE[msCoName](../../includes/msconame-md.md)]競合回避モジュールには、入力として指定された列が必要です。 *resolver_info*は**nvarchar (255)**,、既定値は NULL です。 詳細については、「 [Microsoft COM ベースの競合回避モジュール](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)」を参照してください。  
   
 `[ @source_owner = ] 'source_owner'`*Source_object*の所有者の名前を指定します。 *source_owner*は**sysname**,、既定値は NULL です。 NULL の場合、現在のユーザーは所有者であると見なされます。  
   
@@ -213,7 +212,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @check_permissions = ] check_permissions`マージエージェントがパブリッシャーに変更を適用するときに検証されるテーブルレベルの権限のビットマップです。 マージ処理が使用するパブリッシャーのログインまたはユーザー アカウントが正しいテーブル権限を持っていない場合、無効な変更は競合としてログに記録されます。 *check_permissions*は**int**で、| を指定できます。 [(ビットごとの OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md)次の1つ以上の値の積。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**0x00** (既定値)|権限は確認されません。|  
 |**0x10**|サブスクライバーで実行される挿入操作をアップロードする前に、パブリッシャー側で権限をチェックします。|  
@@ -254,21 +253,21 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @partition_options = ] partition_options`アーティクル内のデータをパーティション分割する方法を定義します。これにより、すべての行が1つのパーティションまたは1つのサブスクリプションのみに属している場合に、パフォーマンスを最適化できます。 *partition_options*は**tinyint**で、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**0** (既定値)|アーティクルのフィルター選択は、静的であるか、パーティションごとに一意のデータのサブセットを生成しません。つまり、"重複する" パーティションになります。|  
 |**1**|パーティションは重複しており、サブスクライバーで行われたデータ操作言語 (DML) の更新では、行が属するパーティションを変更することはできません。|  
 |**2**|アーティクルのフィルター選択によって重複しないパーティションが生成されますが、複数のサブスクライバーが同じパーティションを受け取ることができます。|  
-|**番**|アーティクルのフィルター選択により、各サブスクリプションに一意の重複しないパーティションが生成されます。|  
+|**3**|アーティクルのフィルター選択により、各サブスクリプションに一意の重複しないパーティションが生成されます。|  
   
 > [!NOTE]  
 >  アーティクルのソーステーブルが別のパブリケーションで既にパブリッシュされている場合、 *partition_options*の値は両方のアーティクルで同じである必要があります。  
   
 `[ @processing_order = ] processing_order`マージパブリケーション内のアーティクルの処理順序を示します。 *processing_order*は**int**,、既定値は0です。 **0**は、アーティクルが順序付けられていないことを示します。その他の値は、このアーティクルの処理順序の序数値を表します。 アーティクルは、最も小さい値から最も大きい値の順序で処理されます。 2つのアーティクルの値が同じである場合、処理順序は、 [sysmergearticles](../../relational-databases/system-tables/sysmergearticles-transact-sql.md)システムテーブルのアーティクルのニックネームの順序によって決まります。 詳細については、「[Specify Merge Replication properties](../../relational-databases/replication/merge/specify-merge-replication-properties.md)」 (マージ レプリケーションのプロパティの指定) を参照してください。  
   
-`[ @subscriber_upload_options = ] subscriber_upload_options`クライアントサブスクリプションを使用して、サブスクライバーで行われた更新に対する制限を定義します。 詳細については、「[ダウンロード専用アーティクルを使用したマージ レプリケーションのパフォーマンスの最適化](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)」を参照してください。 *subscriber_upload_options*は**tinyint**で、次のいずれかの値を指定できます。  
+`[ @subscriber_upload_options = ] subscriber_upload_options`クライアントサブスクリプションを使用して、サブスクライバーで行われた更新に対する制限を定義します。 詳細については、「[ダウンロード専用アーティクルを使用したマージ レプリケーションのパフォーマンス最適化](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)」を参照してください。 *subscriber_upload_options*は**tinyint**で、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**0** (既定値)|制限はありません。 サブスクライバー側で行われた変更は、パブリッシャーにアップロードされます。|  
 |**1**|サブスクライバーでの変更は許可されますが、パブリッシャーにはアップロードされません。|  
@@ -281,9 +280,9 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @identityrangemanagementoption = ] identityrangemanagementoption`アーティクルに対する id 範囲管理の処理方法を指定します。 *identityrangemanagementoption*は**nvarchar (10)**,、値は次のいずれかを指定することができます。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
-|**存在**|Id 範囲の管理を無効にします。|  
+|"**なし**"|Id 範囲の管理を無効にします。|  
 |**手動**|NOT FOR REPLICATION を使用して id 列をマークし、手動による id 範囲処理を有効にします。|  
 |**自動**|Id 範囲の自動管理を指定します。|  
 |NULL (既定値)|*Auto_identity_range*の値が**true**でない場合、既定値は**none**です。|  
@@ -314,7 +313,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_addmergearticle**は、マージレプリケーションで使用します。  
   
  オブジェクトをパブリッシュすると、その定義がサブスクライバーにコピーされます。 1つ以上の他のオブジェクトに依存するデータベースオブジェクトをパブリッシュする場合は、参照されているすべてのオブジェクトをパブリッシュする必要があります。 たとえば、テーブルに依存しているビューをパブリッシュする場合は、そのテーブルもパブリッシュする必要があります。  
@@ -335,7 +334,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**func スキーマのみ**|**0x01**|  
 |**インデックス付きビュースキーマのみ**|**0x01**|  
 |**proc スキーマのみ**|**0x01**|  
-|**一覧**|**0x0c034fd1**  -  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降の互換パブリケーションとネイティブモードのスナップショット。<br /><br /> **** -  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]キャラクターモードのスナップショットを使用した、0x08034ff1 以降の互換性のあるパブリケーション。|  
+|**テーブル**|**0x0c034fd1**  -  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降の互換パブリケーションとネイティブモードのスナップショット。<br /><br /> **0x08034FF1** -  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]キャラクターモードのスナップショットを使用した、0x08034ff1 以降の互換性のあるパブリケーション。|  
 |**view schema only**|**0x01**|  
   
 > [!NOTE]  
@@ -349,7 +348,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**func スキーマのみ**|**0x01**と**0x2000**|  
 |**インデックス付きビュースキーマのみ**|**0x01**、 **0x040,**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x1000000**、および**0x200000**|  
 |**proc スキーマのみ**|**0x01**と**0x2000**|  
-|**一覧**|すべてのオプション。|  
+|**テーブル**|すべてのオプション。|  
 |**view schema only**|**0x01**、 **0x040,**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x1000000**、および**0x200000**|  
   
 ## <a name="example"></a>例  
@@ -365,6 +364,6 @@ sp_addmergearticle [ @publication = ] 'publication'
  [sp_changemergearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
  [sp_dropmergearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
  [sp_helpmergearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
- [レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

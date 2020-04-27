@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 627ab54ed35cbc0a43c5a0eac26a1397199edbd8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014666"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>アップデートグラムでの注釈付きマッピング スキーマの指定 (SQLXML 4.0)
@@ -38,12 +38,11 @@ ms.locfileid: "66014666"
 ## <a name="dealing-with-data-types"></a>データ型の扱い  
  `image`スキーマで、 `binary`、、またはの`varbinary` [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]いずれかのデータ型`sql:datatype`を指定し、xml データ型を指定しない場合、アップデートグラムでは xml データ`binary base 64`型がであると想定されます。 データが `bin.base` 型の場合は、明示的に型 (`dt:type=bin.base` または `type="xsd:hexBinary"`) を指定する必要があります。  
   
- 
-  `dateTime`、`date`、または `time` の XSD データ型を指定する場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を使用して、対応する `sql:datatype="dateTime"` データ型も指定する必要があります。  
+ `dateTime`、`date`、または `time` の XSD データ型を指定する場合は、`sql:datatype="dateTime"` を使用して、対応する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型も指定する必要があります。  
   
  型の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `money`パラメーターを処理する場合は、マッピング`sql:datatype="money"`スキーマの適切なノードに明示的にを指定する必要があります。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例を使用して実際のサンプルを作成するには、 [SQLXML の例を実行するための要件](../../sqlxml/requirements-for-running-sqlxml-examples.md)を満たす必要があります。  
   
 ### <a name="a-creating-an-updategram-with-a-simple-mapping-schema"></a>A. 単純なマッピング スキーマを使用するアップデートグラムを作成する  
@@ -155,8 +154,7 @@ ms.locfileid: "66014666"
 </xsd:schema>  
 ```  
   
- 次のアップデートグラムでは、この XSD スキーマを使用して、注文43860の新しい注文明細レコード ( ** \<after>** ブロックに** \<OD>** 要素) を追加します。 
-  `mapping-schema` 属性は、アップデートグラム内でマッピング スキーマを指定するために使用されます。  
+ 次のアップデートグラムでは、この XSD スキーマを使用して、注文43860の新しい注文明細レコード ( ** \<after>** ブロックに** \<OD>** 要素) を追加します。 `mapping-schema` 属性は、アップデートグラム内でマッピング スキーマを指定するために使用されます。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -236,11 +234,9 @@ ms.locfileid: "66014666"
   
  この例では、次のテーブルが**tempdb**データベースにあることを前提としています。  
   
--   
-  `Cust (CustomerID, CompanyName)`。ここでは `CustomerID` は主キーです。  
+-   `Cust (CustomerID, CompanyName)`。ここでは `CustomerID` は主キーです。  
   
--   
-  `Ord (OrderID, CustomerID)`。ここでは `CustomerID` は外部キーで、`CustomerID` テーブル内の `Cust` 主キーを参照します。  
+-   `Ord (OrderID, CustomerID)`。ここでは `CustomerID` は外部キーで、`CustomerID` テーブル内の `Cust` 主キーを参照します。  
   
  このアップデートグラムでは次の XSD スキーマを使用して、Cust および Ord テーブルにレコードを挿入します。  
   

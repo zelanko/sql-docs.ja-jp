@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5547d5fb1c2b083a51837df5d9cacb1be393f555
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63144598"
 ---
 # <a name="view-offline-log-files"></a>オフライン ログ ファイルの表示
@@ -45,7 +45,7 @@ ms.locfileid: "63144598"
   
 -   [SqlErrorLogFile Class](../wmi-provider-configuration-classes/sqlerrorlogfile-class.md) (このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の指定されたインスタンス上のすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログ ファイルに関する情報を取得する方法について説明しています。)  
   
-##  <a name="BeforeYouBegin"></a> Permissions  
+##  <a name="permissions"></a><a name="BeforeYouBegin"></a> Permissions  
  オフラインのログ ファイルに接続するには、ローカルおよびリモートの両方のコンピューターで次の権限が必要です。  
   
 -   **Root\Microsoft\SqlServer\ComputerManagement12** WMI 名前空間への読み取りアクセス。 既定では、すべてのユーザーがアカウントの有効化権限による読み取りアクセスを持ちます。 詳細については、このセクションで後述する「WMI 権限を確認するには」を参照してください。  
@@ -62,7 +62,7 @@ ms.locfileid: "63144598"
   
     -   [**スタート**] ボタン`wmimgmt.msc`をクリックし、[**検索の開始**] ボックスに「」と入力して、enter キーを押します。  
   
-    -   [**スタート**] ボタン**** をクリックし`wmimgmt.msc`、[実行] をクリックして「」と入力し、enter キーを押します。  
+    -   [**スタート**] ボタン**Run**をクリックし`wmimgmt.msc`、[実行] をクリックして「」と入力し、enter キーを押します。  
   
 2.  既定では、WMI コントロール スナップインはローカル コンピューターを管理します。  
   
@@ -74,8 +74,7 @@ ms.locfileid: "63144598"
   
     3.  リモート コンピューター名を入力し、 **[OK]** をクリックします。  
   
-3.  
-  **[WMI コントロール (ローカル)]** または **[WMI コントロール (***RemoteComputerName***)]** を右クリックして、**[プロパティ]** をクリックします。  
+3.  **[WMI コントロール (ローカル)]** または **[WMI コントロール (***RemoteComputerName***)]** を右クリックして、 **[プロパティ]** をクリックします。  
   
 4.  **[WMI コントロールのプロパティ]** ダイアログ ボックスで、 **[セキュリティ]** タブをクリックします。  
   

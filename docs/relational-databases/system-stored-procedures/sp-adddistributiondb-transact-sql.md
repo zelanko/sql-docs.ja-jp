@@ -16,10 +16,10 @@ ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: ef595adcf3772dcac92c58764d99bca4374aeb0a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68771354"
 ---
 # <a name="sp_adddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
@@ -75,13 +75,13 @@ sp_adddistributiondb [ @database= ] 'database'
   
 `[ @security_mode = ] security_mode`ディストリビューターに接続するときに使用するセキュリティモードを示します。 *security_mode*は**int**,、既定値は1です。 **0**は[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証を指定します。**1** Windows 統合認証を指定します。  
   
-`[ @login = ] 'login'`ディストリビューションデータベースを作成するためにディストリビューターに接続するときに使用されるログイン名を指定します。 *Security_mode*が**0**に設定されている場合は、これが必要です。 *login*は**sysname**,、既定値は NULL です。  
+`[ @login = ] 'login'`ディストリビューションデータベースを作成するためにディストリビューターに接続するときに使用されるログイン名を指定します。 *Security_mode*が**0**に設定されている場合は、これが必要です。 *login* のデータ型は **sysname** で、既定値は NULL です。  
   
 `[ @password = ] 'password'`ディストリビューターに接続するときに使用するパスワードを入力します。 *Security_mode*が**0**に設定されている場合は、これが必要です。 *パスワード*は**sysname**,、既定値は NULL です。  
   
 `[ @createmode = ] createmode`*createmode*は**int**,、既定値は 1,、値は次のいずれかを指定することができます。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**1** (既定値)|データベースを作成するか、既存のデータベースを使用してから、 **instdist .sql**ファイルを適用して、ディストリビューションデータベースにレプリケーションオブジェクトを作成します。|  
@@ -97,7 +97,7 @@ sp_adddistributiondb [ @database= ] 'database'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_adddistributiondb**は、すべての種類のレプリケーションで使用されます。 ただし、このストアド プロシージャは、ディストリビューター側でのみ動作します。  
   
  **Sp_adddistributiondb**を実行する前に[sp_adddistributor](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)を実行してディストリビューターを構成する必要があります。  

@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 329fb8df41df5d97cfcc3750c2850d03278d3739
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013447"
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>XML 一括読み込みのガイドラインと制限 (SQLXML 4.0)
@@ -151,8 +151,7 @@ ms.locfileid: "66013447"
     </ROOT>  
     ```  
   
--   
-  `sql:url-encode` 注釈はサポートされません。  
+-   `sql:url-encode` 注釈はサポートされません。  
   
      XML データ入力に URL を指定して、その場所からデータの一括読み込みを行うことはできません。  
   
@@ -172,8 +171,6 @@ ms.locfileid: "66013447"
   
 -   XML 一括読み込みを使用して日付値を挿入する場合、値は (-)CCYY-MM-DD((+-)TZ) の形式で指定する必要があります。 これは日付の標準の XSD 形式です。  
   
--   一部のプロパティ フラグは、他のプロパティ フラグと互換性がありません。 たとえば、一括読み込みでは `Ignoreduplicatekeys=true` と `Keepidentity=false` の同時使用がサポートされていません。 
-  `Keepidentity=false` である場合、一括読み込みではサーバーがキー値を生成する必要があります。 各テーブルでは、キーに `IDENTITY` 制約が設定されている必要があります。 サーバーは重複キーを生成しないため、`Ignoreduplicatekeys` を `true` に設定する必要はありません。 
-  `Ignoreduplicatekeys` を `true` に設定しなければならないのは、複数の行があるテーブルに入力データから主キー値をアップロードすることによって主キー値の競合が発生する可能性がある場合だけです。  
+-   一部のプロパティ フラグは、他のプロパティ フラグと互換性がありません。 たとえば、一括読み込みでは `Ignoreduplicatekeys=true` と `Keepidentity=false` の同時使用がサポートされていません。 `Keepidentity=false` である場合、一括読み込みではサーバーがキー値を生成する必要があります。 各テーブルでは、キーに `IDENTITY` 制約が設定されている必要があります。 サーバーは重複キーを生成しないため、`Ignoreduplicatekeys` を `true` に設定する必要はありません。 `Ignoreduplicatekeys` を `true` に設定しなければならないのは、複数の行があるテーブルに入力データから主キー値をアップロードすることによって主キー値の競合が発生する可能性がある場合だけです。  
   
   

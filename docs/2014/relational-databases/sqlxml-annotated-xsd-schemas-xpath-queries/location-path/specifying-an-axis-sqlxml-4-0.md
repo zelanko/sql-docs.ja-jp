@@ -21,16 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8da239fd8a6bbf559f89ba5fd1b0fa0ab10ec190
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012650"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>軸の指定 (SQLXML 4.0)
     
--   軸によって、ロケーション ステップで選択されるノードと、コンテキスト ノードの間のツリー リレーションシップが指定されます。 
-  `child` 軸がサポートされます。  
+-   軸によって、ロケーション ステップで選択されるノードと、コンテキスト ノードの間のツリー リレーションシップが指定されます。 `child` 軸がサポートされます。  
   
      コンテキスト ノードの子を含みます。  
   
@@ -40,8 +39,7 @@ ms.locfileid: "66012650"
     child::Customer  
     ```  
   
-     この XPath クエリでは、`child` は軸で、 
-  `Customer` はノード テストです。  
+     この XPath クエリでは、`child` は軸で、 `Customer` はノード テストです。  
   
 -   `parent`  
   
@@ -53,8 +51,7 @@ ms.locfileid: "66012650"
     child::Customer/child::Order[parent::Customer/@customerID="ALFKI"]  
     ```  
   
-     これは、`child::Customer` を指定した場合と同じです。 この XPath クエリでは、`child` と `parent` は軸で、 
-  `Customer` と `Order` はノード テストです。  
+     これは、`child::Customer` を指定した場合と同じです。 この XPath クエリでは、`child` と `parent` は軸で、 `Customer` と `Order` はノード テストです。  
   
 -   `attribute`  
   

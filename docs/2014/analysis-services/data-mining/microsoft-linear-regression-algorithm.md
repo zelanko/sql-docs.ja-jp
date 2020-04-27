@@ -16,14 +16,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a855df4440f2c023380a97aa37e35047db27ebb9
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174421"
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Microsoft 線形回帰アルゴリズム
-  
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムの一種であり、従属変数と独立変数の間の線形の関係を計算し、その関係を予測に使用するのに役立ちます。
 
  この関係は、一連のデータを最もよく表す直線の式の形になります。 たとえば、次の図の直線は、データの最適な線形表現です。
@@ -40,23 +39,21 @@ ms.locfileid: "78174421"
  データ マイニング ツールを必要としない線形回帰の計算方法は多数ありますが、このタスクに [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムを使用することの利点は、変数間の考えられるすべての関係が自動的に計算され、テストされるということです。 最小二乗法の解決などの計算方法を選択する必要はありません。 ただし、線形回帰では、結果に影響を与える要因が複数存在するシナリオで、関係が過剰に簡素化される場合があります。
 
 ## <a name="how-the-algorithm-works"></a>アルゴリズムの動作
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムの一種です。 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムを選択すると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムの特殊なケースが、アルゴリズムの動作を制約して特定の入力データ型を要求するパラメーターを使用して起動されます。 さらに、標準のデシジョン ツリー モデルではデータが小さなサブセットまたはツリーに反復的に分割されるのに対し、線形回帰モデルではデータセット全体が最初のパスでの関係の計算に使用されます。
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムの一種です。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムを選択すると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムの特殊なケースが、アルゴリズムの動作を制約して特定の入力データ型を要求するパラメーターを使用して起動されます。 さらに、標準のデシジョン ツリー モデルではデータが小さなサブセットまたはツリーに反復的に分割されるのに対し、線形回帰モデルではデータセット全体が最初のパスでの関係の計算に使用されます。
 
 ## <a name="data-required-for-linear-regression-models"></a>線形回帰モデルに必要なデータ
  線形回帰モデルで使用するデータを用意する際には、特定のアルゴリズムの要件を把握しておいてください。 これには、必要なデータ量やデータの使用方法が含まれます。 このモデルの種類の要件は次のとおりです。
 
--   **1 つのキー列**各モデルには、各レコードを一意に識別する数値列またはテキスト列が1つ含まれている必要があります。 複合キーは使用できません。
+-   **単一キー列** : それぞれのモデルには、各レコードを一意に識別する数値列またはテキスト列が 1 つ含まれている必要があります。 複合キーは使用できません。
 
--   **予測可能列**少なくとも1つの予測可能列が必要です。 1 つのモデルに対し、複数の予測可能属性を含めることができます。ただし、予測可能属性は連続する数値データ型である必要があります。 データのネイティブ ストレージが数値であっても、datetime データ型を予測可能属性として使用することはできません。
+-   **予測可能列** : 少なくとも 1 つの予測可能列が必要です。 1 つのモデルに対し、複数の予測可能属性を含めることができます。ただし、予測可能属性は連続する数値データ型である必要があります。 データのネイティブ ストレージが数値であっても、datetime データ型を予測可能属性として使用することはできません。
 
--   **入力列**入力列には連続する数値データが含まれ、適切なデータ型が割り当てられている必要があります。
+-   **入力列** 入力列は連続する数値データを含み、適切なデータ型が割り当てられている必要があります。
 
  詳細については、「 [Microsoft 線形回帰アルゴリズム テクニカル リファレンス](microsoft-linear-regression-algorithm-technical-reference.md)」の「必要条件」を参照してください。
 
 ## <a name="viewing-a-linear-regression-model"></a>線形回帰モデルの表示
- モデルを参照するには、 **Microsoft ツリー ビューアー**を使用します。 線形回帰モデルのツリー構造は非常に単純であり、回帰式に関するすべての情報が単一のノードに含まれています。 詳細については、 [「Microsoft ツリー ビューアーを使用したモデルの参照」](browse-a-model-using-the-microsoft-tree-viewer.md)を参照してください。
+ モデルを参照するには、 **Microsoft ツリー ビューアー**を使用します。 線形回帰モデルのツリー構造は非常に単純であり、回帰式に関するすべての情報が単一のノードに含まれています。 詳細については、「 [Microsoft ツリー ビューアーを使用したモデルの参照](browse-a-model-using-the-microsoft-tree-viewer.md)」を参照してください。
 
  式の詳細を調べる場合は、 [Microsoft 汎用コンテンツ ツリー ビューアー](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)で係数およびその他の詳細を参照することもできます。
 
@@ -67,10 +64,9 @@ ms.locfileid: "78174421"
 
  マイニング モデルに対するクエリの作成方法については、「 [データ マイニング クエリ](data-mining-queries.md)」を参照してください。
 
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムを選択して線形回帰モデルを作成することに加えて、予測可能属性が連続する数値データ型である場合は、回帰を含むデシジョン ツリー モデルを作成することができます。 この場合、アルゴリズムが適切な分離ポイントを見つけたときにデータは分割されますが、データの一部の領域では、代わりに回帰式が作成されます。 デシジョン ツリー モデル内の回帰ツリーの詳細については、「[デシジョン ツリー モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)」を参照してください。
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムを選択して線形回帰モデルを作成することに加えて、予測可能属性が連続する数値データ型である場合は、回帰を含むデシジョン ツリー モデルを作成することができます。 この場合、アルゴリズムが適切な分離ポイントを見つけたときにデータは分割されますが、データの一部の領域では、代わりに回帰式が作成されます。 デシジョン ツリー モデル内の回帰ツリーの詳細については、「[デシジョン ツリー モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)」を参照してください。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 -   Predictive Model Markup Language (PMML) を使用したマイニング モデルの作成はサポートされていません。
 

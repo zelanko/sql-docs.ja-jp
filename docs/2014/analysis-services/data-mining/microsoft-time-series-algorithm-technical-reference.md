@@ -28,28 +28,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 03b4264e421756fb1234a306f3834ca89a97489b
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174724"
 ---
 # <a name="microsoft-time-series-algorithm-technical-reference"></a>Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス
-  
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムには、時系列を分析するための 2 つの異なるアルゴリズムが含まれています。
 
 -   ARTXP アルゴリズム。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]で導入されたアルゴリズムで、系列内で最も近い値の予測に適しています。
 
 -   ARIMA アルゴリズム。長期的な予測の精度を向上させるために [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] で追加されたアルゴリズムです。
 
- 既定では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は各アルゴリズムを別々に使用してモデルのトレーニングを行い、その結果を統合して、さまざまな数の予測に対して最適な予測を出力します。 使用するデータや予測の要件に基づいて、一方のアルゴリズムのみを使用するように選択することもできます。 
-  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]では、予測時のアルゴリズムの組み合わせを制御するカットオフ ポイントをカスタマイズすることもできます。
+ 既定では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は各アルゴリズムを別々に使用してモデルのトレーニングを行い、その結果を統合して、さまざまな数の予測に対して最適な予測を出力します。 使用するデータや予測の要件に基づいて、一方のアルゴリズムのみを使用するように選択することもできます。 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]では、予測時のアルゴリズムの組み合わせを制御するカットオフ ポイントをカスタマイズすることもできます。
 
  このトピックでは、各アルゴリズムがどのように実装されているのかについての追加情報を紹介し、パラメーターを設定してアルゴリズムをカスタマイズすることによって分析や予測の結果を微調整する方法を説明します。
 
 ## <a name="implementation-of-the-microsoft-time-series-algorithm"></a>Microsoft Time Series アルゴリズムの実装
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Research は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムに基づいた実装で、SQL Server 2005 で使用されていた最初の ARTXP アルゴリズムを開発しました。 そのため、ARTXP アルゴリズムは周期的な時系列データを表す自己回帰ツリー モデルとして説明できます。 このアルゴリズムでは、さまざまな数の過去のアイテムが、予測する現在の各アイテムに関連付けられます。 ARTXP という名前は、過去の不明な状態が複数ある場合に ART アルゴリズム (自己回帰ツリー法) が適用されることに由来しています。 ARTXP アルゴリズムの詳細については、「 [時系列分析の自動回帰ツリー モデル](https://go.microsoft.com/fwlink/?LinkId=45966)」を参照してください。
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Research は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムに基づいた実装で、SQL Server 2005 で使用されていた最初の ARTXP アルゴリズムを開発しました。 そのため、ARTXP アルゴリズムは周期的な時系列データを表す自己回帰ツリー モデルとして説明できます。 このアルゴリズムでは、さまざまな数の過去のアイテムが、予測する現在の各アイテムに関連付けられます。 ARTXP という名前は、過去の不明な状態が複数ある場合に ART アルゴリズム (自己回帰ツリー法) が適用されることに由来しています。 ARTXP アルゴリズムの詳細については、「 [時系列分析の自動回帰ツリー モデル](https://go.microsoft.com/fwlink/?LinkId=45966)」を参照してください。
 
  ARIMA アルゴリズムは、長期的な予測の精度を向上させるために SQL Server 2008 で Microsoft Time Series アルゴリズムに追加されたアルゴリズムです。 このアルゴリズムには、Box と Jenkins によって説明された自己回帰和分移動平均を計算するためのプロセスが実装されています。 ARIMA 法では、時間的に連続して行われる観測の依存関係を特定することが可能であり、モデルの一部としてランダム ショックを組み込むこともできます。 ARIMA 法はまた増殖性の周期もサポートします。 ARIMA アルゴリズムについて詳しく理解するには、Box と Jenkins による著書を読むことをお勧めします。このセクションは、Microsoft Time Series アルゴリズムに ARIMA 法がどのように実装されているかという点について、具体的に説明することを目的としています。
 
@@ -62,13 +59,11 @@ ms.locfileid: "78174724"
 
 -   Microsoft Time Series アルゴリズムに含まれる ARIMA 式は、 *自己回帰* と *移動平均* の両方の項を使用します。
 
--   タイム シリーズ モデルには、 *定常* モデルと *非定常*モデルがあります。 *固定モデル*とは、サイクルがあるにもかかわらず、*非固定*モデルには均衡がありません。また、*ショック*または外部変数によって導入される変動や変化が増える可能性があります。
+-   タイム シリーズ モデルには、 *定常* モデルと *非定常*モデルがあります。 *定常モデル* とは、周期性が存在する場合があっても平均レベルに復帰するモデルです。一方、 *非定常モデル* の場合は、平衡のポイントがなく、 *ショック*(外部変数) の影響による変動や変化が大きくなりやすいことが特徴です。
 
--   
-  *差分* の目的は、時系列を安定化させ、定常化させることです。
+-   *差分* の目的は、時系列を安定化させ、定常化させることです。
 
--   
-  *差分の次数* は、時系列用に値の差分が計算される回数を表します。
+-   *差分の次数* は、時系列用に値の差分が計算される回数を表します。
 
  Microsoft Time Series アルゴリズムでは、時系列内の値を取得し、そのデータを一定のパターンに近づけようとする処理が行われます。 データ系列がまだ定常化されていない場合、アルゴリズムは差分の次数を使用します。 差分の次数が増加するたびに、タイム シリーズがより定常化します。
 
@@ -87,29 +82,23 @@ ms.locfileid: "78174724"
  最後に、上で説明した式は、周期性のヒントが提供されていない簡易なケースであることに注意してください。 周期性のヒントが提供されている場合は、1 つの周期性のヒントごとに個別の AR 多項式の項が方程式の左側に追加されたうえで、同じ方法を使用して、差分計算済みの系列を不安定にする可能性がある項が除外されます。
 
 ## <a name="customizing-the-microsoft-time-series-algorithm"></a>Microsoft Time Series アルゴリズムのカスタマイズ
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムでは、結果として得られるマイニング モデルの動作、パフォーマンス、および精度に影響を与える次のパラメーターがサポートされています。
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムでは、結果として得られるマイニング モデルの動作、パフォーマンス、および精度に影響を与える次のパラメーターがサポートされています。
 
 > [!NOTE]
->  Microsoft Time Series アルゴリズムは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで利用できます。ただし、いくつかの高度な機能 (時系列分析をカスタマイズするためのパラメーターなど) は、特定のエディションの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]だけでサポートされています。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2012 の各エディションがサポートする機能](https://go.microsoft.com/fwlink/?linkid=232473)」を参照してください。
+>  Microsoft Time Series アルゴリズムは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで利用できます。ただし、いくつかの高度な機能 (時系列分析をカスタマイズするためのパラメーターなど) は、特定のエディションの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]だけでサポートされています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2012 の各エディションがサポートする機能](https://go.microsoft.com/fwlink/?linkid=232473)」を参照してください。
 
 ### <a name="detection-of-seasonality"></a>周期性の検出
- 周期性の検出は、ARIMA と ARTXP の両方のアルゴリズムでサポートされています。 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、高速フーリエ変換を使用してトレーニングの前に周期性を検出します。 ただし、アルゴリズム パラメーターを設定することで、周期性の検出や時系列分析の結果に影響を与えることができます。
+ 周期性の検出は、ARIMA と ARTXP の両方のアルゴリズムでサポートされています。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、高速フーリエ変換を使用してトレーニングの前に周期性を検出します。 ただし、アルゴリズム パラメーターを設定することで、周期性の検出や時系列分析の結果に影響を与えることができます。
 
--   
-  *AUTODETECT_SEASONALITY*の値を変更すると、生成される可能な時間単位の数に影響を与えることができます。
+-   *AUTODETECT_SEASONALITY*の値を変更すると、生成される可能な時間単位の数に影響を与えることができます。
 
--   
-  *PERIODICITY_HINT*に 1 つまたは複数の値を設定して、データの予測されるサイクルに関する情報をアルゴリズムに提供すると、検出の精度を高めることができる場合があります。
+-   *PERIODICITY_HINT*に 1 つまたは複数の値を設定して、データの予測されるサイクルに関する情報をアルゴリズムに提供すると、検出の精度を高めることができる場合があります。
 
 > [!NOTE]
 >  周期性のヒントは、ARTXP アルゴリズムと ARIMA アルゴリズムの両方に大きく影響します。 したがって、不適切なヒントを指定すると、結果に悪影響を与える可能性があります。
 
 ### <a name="choosing-an-algorithm-and-specifying-the-blend-of-algorithms"></a>アルゴリズムの選択と、アルゴリズムの組み合わせの指定
- 既定では (または MIXED オプションをオンにした場合は)、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって両方のアルゴリズムが同じ重み付けで組み合わされます。 しかし、[!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] では、特定のアルゴリズムを指定したり、各アルゴリズムの結果における割合をカスタマイズすることもできます。そのためには、結果に短期と長期の予測に対する重み付けを行うパラメーターを設定します。 
-  *FORECAST_METHOD* パラメーターは、既定では MIXED に設定されています。この場合、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は両方のアルゴリズムを使用して、各アルゴリズムの強みを最大限に活かすようにそれぞれの値に重みを付けます。
+ 既定では (または MIXED オプションをオンにした場合は)、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって両方のアルゴリズムが同じ重み付けで組み合わされます。 しかし、[!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] では、特定のアルゴリズムを指定したり、各アルゴリズムの結果における割合をカスタマイズすることもできます。そのためには、結果に短期と長期の予測に対する重み付けを行うパラメーターを設定します。 *FORECAST_METHOD* パラメーターは、既定では MIXED に設定されています。この場合、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は両方のアルゴリズムを使用して、各アルゴリズムの強みを最大限に活かすようにそれぞれの値に重みを付けます。
 
 -   アルゴリズムの選択を制御するには、 *FORECAST_METHOD* パラメーターを設定します。
 
@@ -119,18 +108,13 @@ ms.locfileid: "78174724"
 
 -   長期予測の精度を高める場合は、 *FORECAST_METHOD* を ARIMA に設定します。
 
- 
-  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で ARIMA アルゴリズムと ARTXP アルゴリズムをどのように組み合わせるかをカスタマイズすることもできます。 
-  *PREDICTION_SMOOTHING* パラメーターを設定することにより、組み合わせの開始点と変化率の両方を制御できます。
+ [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で ARIMA アルゴリズムと ARTXP アルゴリズムをどのように組み合わせるかをカスタマイズすることもできます。 *PREDICTION_SMOOTHING* パラメーターを設定することにより、組み合わせの開始点と変化率の両方を制御できます。
 
--   
-  *PREDICTION_SMOOTHING* を 0 に設定すると、モデルは ARTXP だけを使用します。
+-   *PREDICTION_SMOOTHING* を 0 に設定すると、モデルは ARTXP だけを使用します。
 
--   
-  *PREDICTION_SMOOTHING* を 1 に設定すると、モデルは ARIMA だけを使用します。
+-   *PREDICTION_SMOOTHING* を 1 に設定すると、モデルは ARIMA だけを使用します。
 
--   
-  *PREDICTION_SMOOTHING* を 0 と 1 の間の値に設定すると、ARTXP アルゴリズムが予測期間の "指数的に減少する関数" として重み付けされ、 ARIMA アルゴリズムが ARTXP の重みの 1 の補数として重み付けされます。 モデルでは、曲線を滑らかにするために正規化および安定化定数が使用されます。
+-   *PREDICTION_SMOOTHING* を 0 と 1 の間の値に設定すると、ARTXP アルゴリズムが予測期間の "指数的に減少する関数" として重み付けされ、 ARIMA アルゴリズムが ARTXP の重みの 1 の補数として重み付けされます。 モデルでは、曲線を滑らかにするために正規化および安定化定数が使用されます。
 
  一般に、予測するタイム スライスが 5 以下であれば、ほとんどの場合、ARTXP の方が適しています。 予測するタイム スライスが増えるにつれて、ARIMA を使用した方がより良い結果が得られるようになります。
 
@@ -145,36 +129,30 @@ ms.locfileid: "78174724"
 ### <a name="setting-algorithm-parameters"></a>アルゴリズム パラメーターの設定
  次の表は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムで使用できるパラメーターを示しています。
 
-|パラメーター|[説明]|
+|パラメーター|説明|
 |---------------|-----------------|
 |*AUTO_DETECT_PERIODICITY*|周期性を検出する [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] から 1 までの数値を指定します。 既定値は 0.6 です。<br /><br /> より [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]に近い値を設定すると、非常に周期的なデータのみを対象にして周期性が検出されます。<br /><br /> 1 に近い値を設定すると、多くのほぼ周期的なパターンの検出と、周期性のヒントの自動生成が行われます。<br /><br /> 注: 周期性のヒントを多数処理すると、モデルのトレーニングに非常に長い時間がかかりますが、精度の高いモデルになる可能性があります。|
 |*COMPLEXITY_PENALTY*|デシジョン ツリーの拡大を制御します。 既定値は 0.1 です。<br /><br /> 値を小さくすると、分割の可能性が増加します。 値を大きくすると、分割の可能性が減少します。<br /><br /> 注: このパラメーターは、一部のエディションの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]だけで使用できます。|
 |*FORECAST_METHOD*|分析および予測に使用するアルゴリズムを指定します。 指定できる値は、ARTXP、ARIMA、および MIXED です。 既定値は MIXED です。|
 |*HISTORIC_MODEL_COUNT*|作成する履歴モデルの数を指定します。 既定値は 1 です。<br /><br /> 注: このパラメーターは、一部のエディションの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]だけで使用できます。|
 |*HISTORICAL_MODEL_GAP*|2 つの連続した履歴モデル間のタイム ラグを指定します。 既定値は 10 です。 この値は、モデルによって定義される時間単位の数を表します。<br /><br /> たとえば、この値を g に設定すると、g、2*g、3\*g などの間隔でタイム スライスによって切り捨てられるデータに対して履歴モデルが作成されます。<br /><br /> 注: このパラメーターは、一部のエディションの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]だけで使用できます。|
-|*INSTABILITY_SENSITIVITY*|予測の分散が特定のしきい値を超えて ARTXP アルゴリズムの予測が中止されるポイントを制御します。 既定値は 1 です。<br /><br /> 注: このパラメーターは、ARIMA のみを使用するモデルには適用されません。<br /><br /> 既定値の 1 では、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]と同じ動作になります。 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、各予測の正規化された標準偏差を監視します。 この値がいずれかの予測のしきい値を超えると、タイム シリーズ アルゴリズムが NULL を返して予測処理が中止されます。<br /><br /> 値を [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] にすると、不安定性の検出が中止されます。 この場合は、偏差に関係なく予測を無制限に作成できます。<br /><br /> 注: このパラメーターは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise でのみ変更できます。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には既定値の 1 のみが使用されます。|
-|*MAXIMUM_SERIES_VALUE*|予測に使用する最大値を指定します。 このパラメーターを*MINIMUM_SERIES_VALUE*と共に使用して、予測を予想される範囲に制限します。 たとえば、日次の予測販売数量が製品の在庫数を超えないように指定することができます。<br /><br /> 注: このパラメーターは、一部のエディションの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]だけで使用できます。|
+|*INSTABILITY_SENSITIVITY*|予測の分散が特定のしきい値を超えて ARTXP アルゴリズムの予測が中止されるポイントを制御します。 既定値は 1 です。<br /><br /> 注: このパラメーターは、ARIMA のみを使用するモデルには適用されません。<br /><br /> 既定値の 1 では、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]と同じ動作になります。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、各予測の正規化された標準偏差を監視します。 この値がいずれかの予測のしきい値を超えると、タイム シリーズ アルゴリズムが NULL を返して予測処理が中止されます。<br /><br /> 値を [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] にすると、不安定性の検出が中止されます。 この場合は、偏差に関係なく予測を無制限に作成できます。<br /><br /> 注: このパラメーターは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise でのみ変更できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には既定値の 1 のみが使用されます。|
+|*MAXIMUM_SERIES_VALUE*|予測に使用する最大値を指定します。 このパラメーターを *MINIMUM_SERIES_VALUE*と共に使用すると、予測が所定の範囲内に制約されます。 たとえば、日次の予測販売数量が製品の在庫数を超えないように指定することができます。<br /><br /> 注: このパラメーターは、一部のエディションの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]だけで使用できます。|
 |*MINIMUM_SERIES_VALUE*|予測できる最小値を指定します。 このパラメーターを *MAXIMUM_SERIES_VALUE*と共に使用すると、予測が所定の範囲内に制約されます。 たとえば、販売数量の予測が負の値にならないように指定できます。<br /><br /> 注: このパラメーターは、一部のエディションの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]だけで使用できます。|
 |*MINIMUM_SUPPORT*|各タイム シリーズ ツリーで分割を生成するために必要なタイム スライスの最小数を指定します。 既定値は 10 です。|
-|*MISSING_VALUE_SUBSTITUTION*|履歴データのギャップを埋める方法を指定します。 既定では、データ内のギャップは許可されません。 データに複数のシリーズが含まれている場合は、シリーズの端を揃える必要もあります。 つまり、すべてのシリーズの開始点と終了点が同じである必要があります。 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] はこのパラメーターの値を、タイム シリーズ モデルで `PREDICTION JOIN` を実行する際に新しいデータのギャップを埋めるためにも使用します。 このパラメーターに指定できる値の一覧を次の表に示します。<br /><br /> None: 既定値。 トレーニング済みモデルの曲線に沿ってプロットされた値で不足値を置き換えます。<br /><br /> 前: 前のタイム スライスの値を繰り返します。<br /><br /> 平均: トレーニングに使用されたタイム スライスの移動平均を使用します。<br /><br /> 数値定数: 指定した数値を使用してすべての不足値を置き換えます。|
-|*PERIODICITY_HINT*|データの周期性に関して、アルゴリズムにヒントを提供します。 たとえば、売上が年ごとに異なり、シリーズの単位が月である場合、周期性は 12 です。 このパラメーターの形式は {n [, n]} です。ここで、n には正の値を指定します。<br /><br /> 角かっこ ([]) 内の n は省略可能で、必要なだけ繰り返すことができます。 たとえば、毎月提供されるデータに対して複数の周期性のヒントを指定して、年、四半期、および月のパターンを検出するには、「{12, 3, 1}」と入力します。 ただし、周期性はモデルの品質に大きな影響を与えるので注意してください。 指定したヒントが実際の周期性と異なると、結果が悪影響を受けることがあります。<br /><br /> 既定では、 {1}です。<br /><br /> 注: 中かっこが必要です。 また、このパラメーターは文字列データ型です。 したがって、このパラメーターをデータ マイニング拡張機能 (DMX) ステートメントの一部として入力する場合は、数字と中かっこを引用符で囲む必要があります。|
-|*PREDICTION_SMOOTHING*|予測を最適化するためにモデルを組み合わせる方法を指定します。 このパラメーターは、一部のエディションの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] だけで使用できます。 
-  [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] ～ 1 の任意の値を入力するか、次のいずれかの値を使用します。<br /><br /> 
-  [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]: 予測に ARTXP のみを使用するように指定します。 少数の予測に最適化されます。<br /><br /> 0.5: (既定値) 予測で両方のアルゴリズムを使用し、結果をブレンドするように指定します。<br /><br /> 1: 予測に ARIMA のみを使用するように指定します。 多数の予測に最適化されます。<br /><br /> <br /><br /> 注: トレーニングを制御するには、 *FORECAST_METHOD*パラメーターを使用します。|
+|*MISSING_VALUE_SUBSTITUTION*|履歴データのギャップを埋める方法を指定します。 既定では、データ内のギャップは許可されません。 データに複数のシリーズが含まれている場合は、シリーズの端を揃える必要もあります。 つまり、すべてのシリーズの開始点と終了点が同じである必要があります。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] はこのパラメーターの値を、タイム シリーズ モデルで `PREDICTION JOIN` を実行する際に新しいデータのギャップを埋めるためにも使用します。 このパラメーターに指定できる値の一覧を次の表に示します。<br /><br /> None: 既定値。 トレーニング済みモデルの曲線に沿ってプロットされた値で不足値を置き換えます。<br /><br /> 前: 前のタイム スライスの値を繰り返します。<br /><br /> 平均: トレーニングに使用されたタイム スライスの移動平均を使用します。<br /><br /> 数値定数: 指定した数値を使用してすべての不足値を置き換えます。|
+|*PERIODICITY_HINT*|データの周期性に関して、アルゴリズムにヒントを提供します。 たとえば、売上が年ごとに異なり、シリーズの単位が月である場合、周期性は 12 です。 このパラメーターの形式は {n [, n]} です。ここで、n には正の値を指定します。<br /><br /> 角かっこ ([]) 内の n は省略可能で、必要なだけ繰り返すことができます。 たとえば、毎月提供されるデータに対して複数の周期性のヒントを指定して、年、四半期、および月のパターンを検出するには、「{12, 3, 1}」と入力します。 ただし、周期性はモデルの品質に大きな影響を与えるので注意してください。 指定したヒントが実際の周期性と異なると、結果が悪影響を受けることがあります。<br /><br /> 既定値は、{1} です。<br /><br /> 注: 中かっこが必要です。 また、このパラメーターは文字列データ型です。 したがって、このパラメーターをデータ マイニング拡張機能 (DMX) ステートメントの一部として入力する場合は、数字と中かっこを引用符で囲む必要があります。|
+|*PREDICTION_SMOOTHING*|予測を最適化するためにモデルを組み合わせる方法を指定します。 このパラメーターは、一部のエディションの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] だけで使用できます。 [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] ～ 1 の任意の値を入力するか、次のいずれかの値を使用します。<br /><br /> [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]: 予測に ARTXP のみを使用するように指定します。 少数の予測に最適化されます。<br /><br /> 0.5: (既定値) 予測で両方のアルゴリズムを使用し、結果をブレンドするように指定します。<br /><br /> 1: 予測に ARIMA のみを使用するように指定します。 多数の予測に最適化されます。<br /><br /> <br /><br /> 注: トレーニングを制御するには、 *FORECAST_METHOD*パラメーターを使用します。|
 
 ### <a name="modeling-flags"></a>ModelingFlags
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムでは、次のモデリング フラグがサポートされています。 モデリング フラグは、マイニング構造やマイニング モデルを作成するときに定義し、分析時に各列の値をどのように処理するかを指定します。 詳細については、「[モデリング フラグ &#40;データ マイニング&#41;](modeling-flags-data-mining.md)」を参照してください。
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムでは、次のモデリング フラグがサポートされています。 モデリング フラグは、マイニング構造やマイニング モデルを作成するときに定義し、分析時に各列の値をどのように処理するかを指定します。 詳細については、「[モデリング フラグ &#40;データ マイニング&#41;](modeling-flags-data-mining.md)」を参照してください。
 
 |モデリング フラグ|説明|
 |-------------------|-----------------|
 |NOT NULL|列に NULL を含めることはできないことを示します。 モデルのトレーニング中に NULL が検出された場合はエラーが発生します。<br /><br /> マイニング構造列に適用されます。|
 |MODEL_EXISTENCE_ONLY|列が、Missing および Existing の 2 つの可能な状態を持つ列として扱われることを示します。 NULL は Missing 値になります。<br /><br /> マイニング モデル列に適用されます。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
  タイム シリーズ モデルには、一意の値を含む Key Time 列、入力列、および少なくとも 1 つの予測可能列が必要です。
 
 ### <a name="input-and-predictable-columns"></a>入力列と予測可能列

@@ -1,5 +1,5 @@
 ---
-title: カーソル ライブラリ コードの例 |マイクロソフトドキュメント
+title: カーソルライブラリのコード例 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ ms.assetid: 958a179c-97d9-4717-8d06-d33b715a9773
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: cdbc751ecf6ed2427809c70707226f335a7b8d4b
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81284682"
 ---
 # <a name="cursor-library-code-example"></a>カーソル ライブラリのコード例
 > [!IMPORTANT]  
->  この機能は、今後のバージョンの Windows で削除される予定です。 新しい開発作業でこの機能を使用することは避け、現在この機能を使用しているアプリケーションを変更する予定です。 マイクロソフトでは、ドライバーのカーソル機能を使用することをお勧めします。  
+>  この機能は、今後のバージョンの Windows では削除される予定です。 新しい開発作業ではこの機能の使用を避け、現在この機能を使用しているアプリケーションの変更を検討してください。 Microsoft では、ドライバーのカーソル機能を使用することをお勧めします。  
   
- 次の例では、カーソル ライブラリを使用して、ORDERS テーブルから各注文の ID、オープン日付、およびステータスを取得します。 その後、20 行のデータを表示します。 ユーザーがこのデータを更新すると、コードは行セット バッファーを更新し、位置指定更新ステートメントを実行します。 最後に、スクロールの方向をユーザーに求め、プロセスを繰り返します。  
+ 次の例では、カーソルライブラリを使用して、ORDERS テーブルから各注文の ID、open date、status を取得します。 その後、20行のデータが表示されます。 ユーザーがこのデータを更新した場合、コードは行セットバッファーを更新し、配置された update ステートメントを実行します。 最後に、スクロールする方向をユーザーに求め、プロセスを繰り返します。  
   
 ```  
 #define ROWS 20  

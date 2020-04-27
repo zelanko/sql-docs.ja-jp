@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 558236f7034588a544aa4fb78091c19475cc8f4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63025662"
 ---
 # <a name="complete-the-post-installation-steps"></a>インストール後の手順の実行
@@ -22,7 +22,7 @@ ms.locfileid: "63025662"
   
 ### <a name="to-complete-the-post-installation-steps"></a>インストール後の手順を実行するには  
   
-1.  **ファイアウォール規則の作成**: コントローラーとクライアントコンピューターで、対応するサービスのファイアウォール経由の受信トラフィックを許可する必要があります。 インストール フォルダーに配置されているサービス実行可能ファイルのファイアウォール ルールを指定します。  
+1.  **ファイアウォール ルールを作成する**: コントローラー コンピューターとクライアント コンピューターで、対応するサービスのファイアウォール経由の受信トラフィックを許可する必要があります。 インストール フォルダーに配置されているサービス実行可能ファイルのファイアウォール ルールを指定します。  
   
     1.  コントローラー サービスの場合は、インストール フォルダーにある **DReplayController.exe**のルールを作成します。 たとえば、次のコマンドを実行すると、このルールが有効になります ( `%InstallPath%` はサービスのインストール フォルダーです)。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "63025662"
   
          `netsh advfirewall firewall add rule name="allow dreplay client" dir=in program="%InstallPath%\DReplayClient\DReplayClient.exe" action=allow`  
   
-2.  **各クライアントに対象サーバーのアクセス許可を付与**する: クライアントコンピューターへのクライアントサービスのインストールが完了したら、クライアントサービスアカウントをの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ターゲットインスタンスの sysadmin ロールに手動で追加する必要があります。  
+2.  **ターゲット サーバーで各クライアントの権限を与える**: クライアント コンピューターへのクライアント サービスのインストールが完了したら、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の対象インスタンスの sysadmin ロールにクライアント サービス アカウントを手動で追加する必要があります。  
   
 ## <a name="net-framework-security"></a>.NET Framework のセキュリティ  
  分散再生の機能をインストールするには、管理権限が必要です。 sysadmin 権限を持つ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインのみが、テスト サーバーの sysadmin サーバー ロールにクライアント サービス アカウントを追加できます。 Distributed Replay のセキュリティ上の考慮事項の詳細については、「 [Distributed Replay のセキュリティ](distributed-replay-security.md)」を参照してください。  

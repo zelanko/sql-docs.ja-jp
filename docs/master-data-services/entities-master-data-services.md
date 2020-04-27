@@ -1,5 +1,5 @@
 ---
-title: '[エンティティ]'
+title: エンティティ
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -14,10 +14,10 @@ ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 9326cafa216ad11e7b7a818d34fe035220402c33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728155"
 ---
 # <a name="entities-master-data-services"></a>エンティティ (Master Data Services)
@@ -46,8 +46,7 @@ ms.locfileid: "73728155"
  ユーザーはエンティティ内のメンバーに属性を割り当てるときに、値の制約リストから属性を選択することができます。 これを行うには、エンティティを使用して属性用に値のリストを設定します。 これを、ドメイン ベースの属性といいます。 詳細については、「 [ドメインベースの属性 (マスター データ サービス)](../master-data-services/domain-based-attributes-master-data-services.md)」を参照してください。  
   
 ## <a name="base-entities"></a>ベース エンティティ  
- ベース エンティティは、モデル内でオブジェクト間を移動するときのユーザーの開始点です。 ユーザーが **[エクスプローラー]** 機能領域を開いてメニュー バーの **[エクスプローラー]** をクリックすると、ベース エンティティによって画面のレイアウトが決定されます。 エンティティをベース エンティティに指定するには、 **[システム管理]** 機能領域に移動します。 
-  **[モデル ビュー]** ページで、右側のツリー コントロールのエンティティを左側のツリー コントロールのモデルの名前にドラッグします。  
+ ベース エンティティは、モデル内でオブジェクト間を移動するときのユーザーの開始点です。 ユーザーが **[エクスプローラー]** 機能領域を開いてメニュー バーの **[エクスプローラー]** をクリックすると、ベース エンティティによって画面のレイアウトが決定されます。 エンティティをベース エンティティに指定するには、 **[システム管理]** 機能領域に移動します。 **[モデル ビュー]** ページで、右側のツリー コントロールのエンティティを左側のツリー コントロールのモデルの名前にドラッグします。  
   
 ## <a name="entity-security"></a>エンティティのセキュリティ  
  関連するモデル オブジェクトを含む、エンティティに対する権限をユーザーに付与できます。 詳細については、「[エンティティ権限 (マスター データ サービス)](../master-data-services/entity-permissions-master-data-services.md)」を参照してください。  
@@ -68,17 +67,17 @@ ms.locfileid: "73728155"
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|新規エンティティを作成する。|[エンティティ &#40;マスターデータサービスを作成し&#41;](../master-data-services/create-an-entity-master-data-services.md)|  
-|既存のエンティティの名前を変更する。|[エンティティ &#40;マスターデータサービスの編集&#41;](../master-data-services/edit-an-entity-master-data-services.md)|  
-|既存のエンティティを削除する。|[エンティティ &#40;マスターデータサービスの削除&#41;](../master-data-services/delete-an-entity-master-data-services.md)|  
-|エンティティに権限を割り当てる。|[モデルオブジェクト権限の割り当て &#40;マスターデータサービス&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)|  
+|新規エンティティを作成する。|[エンティティを作成する (マスター データ サービス)](../master-data-services/create-an-entity-master-data-services.md)|  
+|既存のエンティティの名前を変更する。|[エンティティを編集する (マスター データ サービス)](../master-data-services/edit-an-entity-master-data-services.md)|  
+|既存のエンティティを削除する。|[エンティティを削除する (マスター データ サービス)](../master-data-services/delete-an-entity-master-data-services.md)|  
+|エンティティに権限を割り当てる。|[モデル オブジェクト権限を割り当てる (マスター データ サービス)](../master-data-services/assign-model-object-permissions-master-data-services.md)|  
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   [モデル &#40;マスターデータサービス&#41;](../master-data-services/models-master-data-services.md)  
+-   [モデル (マスター データ サービス)](../master-data-services/models-master-data-services.md)  
   
--   [メンバー &#40;マスターデータサービス&#41;](../master-data-services/members-master-data-services.md)  
+-   [メンバー (マスター データ サービス)](../master-data-services/members-master-data-services.md)  
   
--   [属性 &#40;マスターデータサービス&#41;](../master-data-services/attributes-master-data-services.md)  
+-   [属性 (マスター データ サービス)](../master-data-services/attributes-master-data-services.md)  
   
   

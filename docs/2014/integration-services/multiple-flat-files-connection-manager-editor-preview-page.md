@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ae113a84c55c17c3ba4827fb9368435200a6f190
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057488"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-preview-page"></a>[複数フラット ファイル接続マネージャー エディター] ([プレビュー] ページ)
-  
   **[複数フラット ファイル接続マネージャー エディター]** ダイアログ ボックスの **[プレビュー]** ページを使用すると、最初に選択したソース ファイルの内容をユーザーの定義に従って列に分割して表示できます。  
   
  複数フラット ファイル接続マネージャーの詳細については、「 [Multiple Flat Files Connection Manager](connection-manager/multiple-flat-files-connection-manager.md)」を参照してください。  
@@ -34,16 +33,16 @@ ms.locfileid: "66057488"
  **説明**  
  接続の説明を記述します。 パッケージを自己文書化して目的を明確にし、保守が容易になるように、接続の目的について記述することをお勧めします。  
   
- **スキップするデータ行**  
+ **[スキップするデータ行数]**  
  フラット ファイルの冒頭でスキップする行数を指定します。  
   
- **行のプレビュー**  
+ **[プレビュー]**  
  最初に選択したフラット ファイルのサンプル データを、選択したオプションに従って列と行に分割して表示します。  
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[複数フラットファイル接続マネージャーエディター &#40;全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
  [[複数フラットファイル接続マネージャーエディター &#40;列] ページ&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   
- [[複数フラットファイル接続マネージャーエディター &#40;[詳細設定] ページ&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)  
+ [[複数フラット ファイル接続マネージャー エディター] ([詳細設定] ページ)](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)  
   
   
