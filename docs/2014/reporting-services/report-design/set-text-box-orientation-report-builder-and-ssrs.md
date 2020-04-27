@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6acffc286e913d35846b2eeb156cf1980b42fab3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104979"
 ---
 # <a name="set-text-box-orientation-report-builder-and-ssrs"></a>テキスト ボックスの方向の設定 (レポート ビルダーおよび SSRS)
@@ -38,10 +38,10 @@ ms.locfileid: "66104979"
     > [!NOTE]  
     >  プロパティ ペインのプロパティがカテゴリごとに整理されている場合、WritingMode は、 **[ローカライズ]** カテゴリ内にあります。  
   
-5.  リスト ボックスで **[横]** 、 **[縦]** 、 **[270 度回転]** のいずれかを選択します。  
+5.  リスト ボックスで **[横]**、 **[縦]**、 **[270 度回転]** のいずれかを選択します。  
   
 ## <a name="see-also"></a>参照  
- [テキスト ボックス &#40;レポート ビルダーおよび SSRS&#41;](text-boxes-report-builder-and-ssrs.md)   
+ [テキストボックス &#40;レポートビルダーおよび SSRS&#41;](text-boxes-report-builder-and-ssrs.md)   
  [チュートリアル: テキストの書式設定 &#40;レポート ビルダー&#41;](../tutorial-format-text-report-builder.md)  
   
   

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d9c0b0a2c6ca3c12ca020dcc79b5aa4cad46c825
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105818"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>グラフでのデータ ポイントの書式設定 (レポート ビルダーおよび SSRS)
@@ -58,7 +58,7 @@ ms.locfileid: "66105818"
 ## <a name="adding-keywords-for-data-point-labels-tooltips-and-legend-text"></a>データ ポイント ラベル、ツールヒント、および凡例テキストへのキーワードの追加  
  大文字と小文字の区別があるグラフに固有のキーワードを使用すると、グラフ内に存在する項目を表すことができます。 これらのキーワードは、ツールヒント、カスタムの凡例テキスト、データ ポイント ラベルのプロパティにのみ適用されます。 多くの場合、グラフ キーワードには同等の簡単な式がありますが、キーワードを入力する方がすばやく簡単です。 グラフ キーワードの一覧は次のとおりです。  
   
-|グラフ キーワード|[説明]|適用可能なグラフの種類|同等の簡単な式の例|  
+|グラフ キーワード|説明|適用可能なグラフの種類|同等の簡単な式の例|  
 |-------------------|-----------------|------------------------------|------------------------------------------------|  
 |#VALY|データ ポイントの Y 値|All|`=Fields!MyDataField.Value`|  
 |#VALY2|データ ポイントの Y 値の 2 番目の値|範囲、バブル|なし|  

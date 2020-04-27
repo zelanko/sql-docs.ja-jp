@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9cc4dda934496bbfa33306537b515870f0de23de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108174"
 ---
 # <a name="new-data-source-page-report-manager"></a>[新しいデータ ソース] ページ (レポート マネージャー)
@@ -29,7 +29,7 @@ ms.locfileid: "66108174"
   
 2.  ツール バーの **[新しいデータ ソース]** をクリックします。 共有データ ソースを作成するには、コンテンツ マネージャーの権限が必要です。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **名前**  
  共有データ ソースの名前を入力します。この名前は、レポート サーバーのフォルダー階層内のアイテムを識別するために使用されます。  
   
@@ -74,8 +74,7 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
   
  資格情報が Windows 認証の資格情報である場合は、 **[データ ソースへの接続時に Windows 資格情報として使用する]** を選択します。 データベース認証 (たとえば、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証) を使用している場合は、このチェック ボックスをオフにしてください。  
   
- データベース認証を使用する場合、 **[データ ソースへの接続が確立した後に、認証されているユーザーの権限を借用する]** を選択すると、データベース サーバーが権限借用をサポートする場合に限り、データベース資格情報の委任が可能になります。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースの場合、このオプションによって SETUSER 関数が設定されます。  
+ データベース認証を使用する場合、 **[データ ソースへの接続が確立した後に、認証されているユーザーの権限を借用する]** を選択すると、データベース サーバーが権限借用をサポートする場合に限り、データベース資格情報の委任が可能になります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースの場合、このオプションによって SETUSER 関数が設定されます。  
   
  **[Windows 統合セキュリティ] ([接続に使用する認証])**  
  現在のユーザーの Windows 資格情報を使用して、データ ソースにアクセスします。 データ ソースへのアクセスに使用される資格情報が、ネットワーク ドメインへのログオンに使用される資格情報と同じである場合に、このオプションを選択します。 Kerberos 認証が有効なドメインに参加している場合、またはレポート サーバーと同一のコンピューターにデータ ソースがある場合に、このオプションは最適です。 Kerberos 認証が無効になっている場合、Windows 資格情報を別のコンピューターに渡すこともできます。 別のコンピューターの接続が必要な場合に、想定されるデータではなく、エラーが返されます。  
@@ -89,7 +88,7 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
   
  このオプションを使用するには、レポート サーバーの配置用の自動実行アカウントをあらかじめ構成しておく必要があります。 自動実行アカウントは、他に使用できる資格情報のソースがない状況で外部データ ソースに接続するために使用します。 このオプションを指定していてアカウントが構成されていない場合、レポート データ ソースへの接続は失敗し、レポート処理は実行されません。 このアカウントの詳細については、「 [SSRS Configuration Manager&#41;の自動実行アカウント &#40;構成する](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。  
   
- **[OK]**  
+ **OK**  
  変更を保存する場合にクリックします。  
   
 ## <a name="see-also"></a>参照  

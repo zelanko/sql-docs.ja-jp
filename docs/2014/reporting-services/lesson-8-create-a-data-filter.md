@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5204cab43e3c801acf80113ec92c51e00c0f9d13
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108388"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>レッスン 8: データ フィルターを作成する
@@ -27,8 +27,7 @@ ms.locfileid: "66108388"
   
 -   子レポートの Tablix にフィルター式を追加します。  
   
--   
-  `PurchaseOrderDetail` テーブルからフィルター選択されていないデータを選択する関数を作成します。  
+-   `PurchaseOrderDetail` テーブルからフィルター選択されていないデータを選択する関数を作成します。  
   
 -   子レポートに `PurchaseOrderDetail` DataTable をバインドするイベント ハンドラーを追加します。  
   
@@ -42,7 +41,7 @@ ms.locfileid: "66108388"
   
 4.  [**式**] フィールドで、 `ProductID`ドロップダウンリストからをクリックします。 これは、フィルターを適用する列です。  
   
-5.  [演算子] ボックス**=** の一覧で、 **** 等号 () 演算子をクリックします。  
+5.  [演算子] ボックス**=** の一覧で、 **Operator**等号 () 演算子をクリックします。  
   
 6.  [**値**] フィールドの横にある式ボタンをクリックし、 **[カテゴリ**] 領域の [**パラメーター** ] `productid`をクリックして、[**値**] 領域内をダブルクリックします。 **[式の設定: 値]** フィールドに、 **=Parameters!productid.Value**のような式が表示されます。  
   
@@ -64,8 +63,7 @@ ms.locfileid: "66108388"
   
     4.  クエリを実行して、フィルター選択されていないデータを DataSet インスタンスに入力します。  
   
-    5.  
-  `PurchaseOrderDetail` DataTable を返します。  
+    5.  `PurchaseOrderDetail` DataTable を返します。  
   
          関数は次のようになります (これは単なる参考です。 任意のパターンに従って、子レポートに必要なデータをフェッチできます)。  
   
@@ -127,8 +125,7 @@ ms.locfileid: "66108388"
   
     2.  関数を呼び出します。`GetPurchaseOrderDetail`  
   
-    3.  
-  `PurchaseOrderDetail` DataTable をレポートの対応するデータ ソースにバインドする。  
+    3.  `PurchaseOrderDetail` DataTable をレポートの対応するデータ ソースにバインドする。  
   
          完成したイベント ハンドラーのコードは、次のようになります。  
   
@@ -158,8 +155,7 @@ ms.locfileid: "66108388"
 ## <a name="query-filter"></a>クエリ フィルター  
  クエリ フィルターを実装するには、次の操作を実行する必要があります。  
   
--   
-  `PurchaseOrderDetail` テーブルからフィルター選択されたデータを選択する関数を作成します。  
+-   `PurchaseOrderDetail` テーブルからフィルター選択されたデータを選択する関数を作成します。  
   
 -   パラメーター値を取得し、その`PurchaseOrdeDetail` DataTable を子レポートにバインドするイベントハンドラーを追加します。  
   
@@ -177,8 +173,7 @@ ms.locfileid: "66108388"
   
     4.  クエリを実行して、フィルター選択されたデータを DataSet インスタンスに入力します。  
   
-    5.  
-  `PurchaseOrderDetail` DataTable を返します。  
+    5.  `PurchaseOrderDetail` DataTable を返します。  
   
          関数は次のようになります (これは単なる参考です。 任意のパターンに従って、子レポートに必要なデータをフェッチできます)。  
   
@@ -243,8 +238,7 @@ ms.locfileid: "66108388"
   
     3.  パラメーターのコレクションに対して反復処理を行い、親レポートから渡された `ProductID` パラメーターの値を取得する。  
   
-    4.  
-  `GetPurchaseOrderDetail` 関数を呼び出し、`ProductID` パラメーターの値を渡す。  
+    4.  `GetPurchaseOrderDetail` 関数を呼び出し、`ProductID` パラメーターの値を渡す。  
   
     5.  `PurchaseOrderDetail` DataTable をレポートの対応するデータソースにバインドします。  
   

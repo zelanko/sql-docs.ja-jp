@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9d862ac509af3936a9f09cadd01667cbe81a679c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104848"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>軸の間隔の指定 (レポート ビルダーおよび SSRS)
@@ -34,8 +34,7 @@ ms.locfileid: "66104848"
   
 ### <a name="to-show-all-category-labels-on-the-x-axis"></a>X 軸のすべてのカテゴリのラベルを表示するには  
   
-1.  カテゴリ軸を右クリックし、 **[軸のプロパティ]** をクリックします。 
-  **[軸のプロパティ]** ダイアログ ボックスが表示されます。  
+1.  カテゴリ軸を右クリックし、 **[軸のプロパティ]** をクリックします。 **[軸のプロパティ]** ダイアログ ボックスが表示されます。  
   
 2.  [**軸のオプション**] `Interval`で、を**1**に設定します。 すべてのカテゴリ グループのラベルが表示されます。 X 軸でカテゴリ グループのラベルを交互に表示する場合は、「 **2**」と入力します。  
   
@@ -46,19 +45,18 @@ ms.locfileid: "66104848"
   
 ### <a name="to-enable-a-variable-interval-calculation-on-an-axis"></a>軸の可変間隔の計算を有効にするには  
   
-1.  変更するグラフ軸を右クリックし、 **[軸のプロパティ]** をクリックします。 
-  **[軸のプロパティ]** ダイアログ ボックスが表示されます。  
+1.  変更するグラフ軸を右クリックし、 **[軸のプロパティ]** をクリックします。 **[軸のプロパティ]** ダイアログ ボックスが表示されます。  
   
 2.  [**軸のオプション**] `Interval`で、[**自動**] に設定します。グラフには、軸に沿って表示できるカテゴリラベルの最適な数が表示されます。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>参照  
- [グラフの書式設定 (レポート ビルダーおよび SSRS)](formatting-a-chart-report-builder-and-ssrs.md)   
- [グラフでのデータ ポイントの書式設定 (レポート ビルダーおよび SSRS)](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
- [データ領域内のデータの並べ替え (レポート ビルダーおよび SSRS)](sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [[軸のプロパティ] ダイアログ ボックス、[軸のオプション] &#40;レポート ビルダーおよび SSRS&#41;](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)   
- [対数スケールの指定 &#40;レポート ビルダーおよび SSRS&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)   
- [セカンダリ軸 &#40;レポートビルダーおよび SSRS&#41;にデータをプロットする](plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)  
+ [グラフの書式設定 &#40;レポートビルダーと SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
+ [グラフ上のデータポイントの書式設定 &#40;レポートビルダーと SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [データ領域内のデータの並べ替え &#40;レポートビルダーと SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md)   
+ [[軸のオプション] ([軸のプロパティ] ダイアログボックス) &#40;レポートビルダーと SSRS&#41;](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)   
+ [レポートビルダーと SSRS の対数スケール &#40;を指定し&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)   
+ [セカンダリ軸へのデータのプロット &#40;レポート ビルダーおよび SSRS&#41;](plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)  
   
   

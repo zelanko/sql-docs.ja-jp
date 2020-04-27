@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 58a7e1a9d5ae71d659cfd214b46f3a004ea71101
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108010"
 ---
 # <a name="query-designers-report-builder"></a>クエリ デザイナー (レポート ビルダー)
@@ -26,11 +26,11 @@ ms.locfileid: "66108010"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [Analysis Services MDX クエリデザイナーのユーザーインターフェイス &#40;レポートビルダー&#41;](../../2014/reporting-services/analysis-services-mdx-query-designer-user-interface-report-builder.md)  
+-   [Analysis Services の MDX クエリ デザイナーのユーザー インターフェイス &#40;レポート ビルダー&#41;](../../2014/reporting-services/analysis-services-mdx-query-designer-user-interface-report-builder.md)  
   
 -   [テキストベースのクエリデザイナーのユーザーインターフェイス &#40;レポートビルダー&#41;](report-data/text-based-query-designer-user-interface-report-builder.md)  
   
--   [リレーショナルクエリデザイナーのユーザーインターフェイス &#40;レポートビルダー&#41;](report-data/relational-query-designer-user-interface-report-builder.md)  
+-   [リレーショナル クエリ デザイナーのユーザー インターフェイス &#40;レポート ビルダー&#41;](report-data/relational-query-designer-user-interface-report-builder.md)  
   
 -   [SAP NetWeaver BI Query Designer のユーザーインターフェイス &#40;レポートビルダー&#41;](../../2014/reporting-services/sap-netweaver-bi-query-designer-user-interface-report-builder.md)  
   

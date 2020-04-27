@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f45169a2fdc8fdc4d56cb27a8bf6348a3c3c1a29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108230"
 ---
 # <a name="model-item-security-page-report-manager"></a>[モデル アイテムのセキュリティ] ページ (レポート マネージャー)
@@ -58,8 +58,7 @@ ms.locfileid: "66108230"
   
 3.  ドロップダウン メニューの **[管理]** をクリックします。 この操作により、モデルの [全般] プロパティ ページが開きます。  
   
-4.  
-  **[モデル アイテムのセキュリティ]** タブをクリックします。  
+4.  **[モデル アイテムのセキュリティ]** タブをクリックします。  
   
 ## <a name="options"></a>オプション  
  **[このモデルのモデル アイテムは個別にセキュリティで保護する]**  

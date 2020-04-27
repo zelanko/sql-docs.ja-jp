@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e4c71d67b215732eae6e94af1d0c92d9231f4a01
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106267"
 ---
 # <a name="chart-types-report-builder-and-ssrs"></a>グラフの種類 (レポート ビルダーおよび SSRS)
@@ -30,7 +30,7 @@ ms.locfileid: "66106267"
   
  グラフの種類は、作成後に変更できます。 詳細については、「[グラフの種類の変更 &#40;レポート ビルダーおよび SSRS&#41;](change-a-chart-type-report-builder-and-ssrs.md)」を参照してください。  
   
- これらの種類のグラフについては、サンプル レポートに多くの例が含まれています。 サンプルレポートのダウンロードの詳細について[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]は、「[レポートビルダーおよびレポートデザイナーサンプルレポート](https://go.microsoft.com/fwlink/?LinkId=198283)」を参照してください。  
+ これらの種類のグラフについては、サンプル レポートに多くの例が含まれています。 サンプル レポートをダウンロードする方法の詳細については、「 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][レポート ビルダーおよびレポート デザイナーのサンプル レポート](https://go.microsoft.com/fwlink/?LinkId=198283)」を参照してください。  
   
 |グラフの種類|比率データの表示|株価データの表示|線形データの表示|複数値データの表示|  
 |----------------|------------------------|------------------------|-------------------------|-------------------------------|  
@@ -48,8 +48,8 @@ ms.locfileid: "66106267"
 |[株価チャート (レポート ビルダーおよび SSRS)](stock-charts-report-builder-and-ssrs.md)||![利用可能](../media/greencheck.gif "利用可能")||![利用可能](../media/greencheck.gif "利用可能")|  
   
 ## <a name="see-also"></a>参照  
- [グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [グラフ内の空のデータ ポイントおよび NULL データ ポイント (レポート ビルダーおよび SSRS)](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+ [グラフ &#40;レポートビルダーと SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [グラフ内の空のデータポイントおよび Null データポイント &#40;レポートビルダーと SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
  [レポートへのグラフの追加 &#40;レポート ビルダーおよび SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
   
   

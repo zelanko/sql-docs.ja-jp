@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 14ed49408c980b85e3a45902852f14f61534eec1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105307"
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>レポート作成の概念 (レポート ビルダーおよび SSRS)
@@ -30,13 +30,13 @@ ms.locfileid: "66105307"
  [レポート、レポート パーツ、およびレポート定義 (レポート ビルダーおよび SSRS)](reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)  
  初期定義、パブリッシュされたレポート、ユーザーに表示される表示レポートなど、レポートの異なる状態を示すさまざまな用語について説明します。  
   
- [埋め込みデータ接続または共有データ接続またはデータソース &#40;レポートビルダーと SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)  
+ [埋め込みおよび共有のデータ接続またはデータ ソース (レポート ビルダーおよび SSRS)](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)  
  レポート、レポート モデル、およびデータ ドリブン サブスクリプションで使用されるデータ ソースへの接続を定義する方法について説明します。  
   
- [レポートビルダーおよび SSRS&#41;&#40;埋め込みデータセットと共有データセット](../report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
+ [埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
  埋め込みデータセットと共有データセットの作成、格納、および管理の違いについて説明します。  
   
- [データ領域とマップ &#40;レポートビルダーと SSRS&#41;](maps-report-builder-and-ssrs.md)  
+ [データ領域とマップ &#40;レポート ビルダーおよび SSRS&#41;](maps-report-builder-and-ssrs.md)  
  レポート レイアウトに追加できるデータ領域の種類について説明します。 レポートの外観 (テーブル、マトリックス、一覧、グラフ) は、データ領域によって決まります。  
   
  [レポートパラメーターの概念 &#40;レポートビルダーと SSRS&#41;](report-parameters-concepts-report-builder-and-ssrs.md)  

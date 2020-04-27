@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3eb41d807a1b4678882c791a7bdeb7693de7b08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107921"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>PDF ファイルへのエクスポート (レポート ビルダーおよび SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66107921"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="FontRequirements"></a> フォント埋め込み  
+##  <a name="font-embedding"></a><a name="FontRequirements"></a>フォントの埋め込み  
  PDF 表示拡張機能は、可能な場合、レポートを PDF ファイルで表示するために必要な各フォントのサブセットを埋め込みます。 レポートに使用されているフォントが、レポート サーバーにインストールされている必要があります。 レポート サーバーは、レポートを PDF 形式で生成する際に、レポートで参照されるフォントに保存されている情報を使用して、PDF ファイル内の文字マッピングを作成します。 参照されているフォントがレポート サーバーにインストールされていないと、結果の PDF ファイルに適切なマッピングが作成されず、正しく表示されなくなる可能性があります。  
   
  フォントは、次の条件が該当する場合、PDF ファイルに埋め込まれます。  
@@ -57,25 +57,21 @@ ms.locfileid: "66107921"
   
  PDF ファイルに埋め込まれているフォントは、ファイルと共に保存される Fonts プロパティにメタデータとして追加されます。  
   
-##  <a name="Metadata"></a> メタデータ  
+##  <a name="metadata"></a><a name="Metadata"></a>Metadata  
  PDF 表示拡張機能では、レポート レイアウトに加えて PDF ドキュメント情報ディクショナリに次のメタデータを書き込みます。  
   
 |PDF プロパティ|作成元|  
 |------------------|------------------|  
-|`Title`|
-  `Name` RDL 要素の `Report` 属性です。|  
-|`Author`|
-  `Author` RDL 要素です。|  
-|`Subject`|
-  `Description` RDL 要素です。|  
-|`Creator`|
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 製品の名前およびバージョンです。|  
+|`Title`|`Name` RDL 要素の `Report` 属性です。|  
+|`Author`|`Author` RDL 要素です。|  
+|`Subject`|`Description` RDL 要素です。|  
+|`Creator`|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 製品の名前およびバージョンです。|  
 |`Producer`|表示拡張機能の名前とバージョンです。|  
 |`CreationDate`|PDF `datetime` 形式でのレポートの実行時間です。|  
   
   
   
-##  <a name="Interactivity"></a> 対話性  
+##  <a name="interactivity"></a><a name="Interactivity"></a>双  
  PDF では、いくつかの対話型要素がサポートされています。 具体的な動作について説明します。  
   
 ### <a name="show-and-hide"></a>表示/非表示  
@@ -97,7 +93,7 @@ ms.locfileid: "66107921"
   
   
   
-##  <a name="Compression"></a>機能  
+##  <a name="compression"></a><a name="Compression"></a>機能  
  画像の圧縮は、画像の元のファイルの種類に基づいて行われます。 PDF 表示拡張機能は、既定で PDF ファイルを圧縮します。  
   
  PDF ファイルに含まれる画像の圧縮を可能な限り保持するために、JPEG 画像は JPEG として保存され、その他の種類の画像はすべて BMP として保存されます。  
@@ -107,16 +103,16 @@ ms.locfileid: "66107921"
   
   
   
-##  <a name="DeviceInfo"></a> デバイス情報設定  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a>デバイス情報の設定  
  デバイス情報設定を変更することによって、このレンダラーの既定の設定の一部を変更することができます。 詳細については、「 [PDF Device Information Settings](../pdf-device-information-settings.md)」を参照してください。  
   
   
   
 ## <a name="see-also"></a>参照  
- [Reporting Services の改ページ &#40;レポート ビルダーおよび SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [レンダリングの動作 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [さまざまなレポート表示拡張機能の対話機能 &#40;レポート ビルダーおよび SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
- [レポート アイテムのレンダリング &#40;レポート ビルダーおよび SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [Reporting Services &#40;レポートビルダーおよび SSRS&#41;での改ページ](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [レポートビルダーおよび SSRS&#41;&#40;レンダリング動作](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [さまざまなレポート表示拡張機能の対話機能 &#40;レポートビルダーと SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [レポートビルダーおよび SSRS&#41;&#40;レポートアイテムのレンダリング](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
   

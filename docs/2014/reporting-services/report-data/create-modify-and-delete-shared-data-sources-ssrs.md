@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4a2239e07cc24842c5cbdf44c8743ea2d79ea7cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107398"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>共有データ ソースを作成、変更、および削除する (SSRS)
@@ -32,12 +32,11 @@ ms.locfileid: "66107398"
   
  共有データ ソースは、次の要素で構成されます。  
   
-|要素|[説明]|  
+|要素|説明|  
 |----------|-----------------|  
 |Name|レポート サーバーのフォルダー階層内にあるアイテムを識別する名前。|  
-|[説明]|レポート マネージャーでフォルダーの内容を参照したときに、アイテムと共に表示される説明です。|  
-|接続の種類|データ ソースで使用するデータ処理拡張機能です。 レポート サーバーに配置されているデータ処理拡張機能のみ使用できます。 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に含まれているデータ処理拡張機能については、「[Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)」を参照してください。|  
+|説明|レポート マネージャーでフォルダーの内容を参照したときに、アイテムと共に表示される説明です。|  
+|接続の種類|データ ソースで使用するデータ処理拡張機能です。 レポート サーバーに配置されているデータ処理拡張機能のみ使用できます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に含まれているデータ処理拡張機能については、「[Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)」を参照してください。|  
 |接続文字列|データベースの接続文字列です。 頻繁に使用されるデータソースに対する接続文字列の例については、「 [Reporting Services のデータ接続、データソース、および接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)」を参照してください。|  
 |資格情報の種類|接続に必要な資格情報をどのように取得するか、および、接続の確立後もそれらを使用するかどうかを指定します。 詳細については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](../../integration-services/connection-manager/data-sources.md)」をご覧ください。|  
   
@@ -48,9 +47,9 @@ ms.locfileid: "66107398"
   
  共有データ ソースの作成の詳細については、次のトピックを参照してください。  
   
--   [SSRS&#41;&#40;埋め込みデータソースまたは共有データソースを作成する](../create-an-embedded-or-shared-data-source-ssrs.md)  
+-   [埋め込みデータ ソースまたは共有データ ソースを作成する (SSRS)](../create-an-embedded-or-shared-data-source-ssrs.md)  
   
--   [SharePoint 統合モードで Reporting Services &#40;共有データソースを作成および管理&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)  
+-   [共有データ ソースを作成および管理する (Reporting Services の SharePoint 統合モード)](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)  
   
  レポート サーバーに共有データ ソースを作成した後は、その共有データ ソースに対するアクセスを制御するためのロール割り当てを作成できるほか、共有データ ソースを別の場所に移動したり、名前を変更したりできます。また、外部データ ソースでメンテナンス操作を実行しているときに、共有データ ソースをオフラインにして、レポート処理が行われないようにすることもできます。 共有データ ソース アイテムの名前を変更したり、レポート サーバーのフォルダー階層内の別の場所に共有データ ソース アイテムを移動すると、共有データ ソースを参照するすべてのレポートまたはサブスクリプションのパス情報が適宜更新されます。 共有データ ソースをオフラインにした場合、再度データ ソースを有効にするまで、レポート、モデル、およびサブスクリプションはすべて実行されなくなります。  
   
@@ -72,11 +71,11 @@ ms.locfileid: "66107398"
 ## <a name="see-also"></a>参照  
  [SharePoint 統合モードで Reporting Services &#40;共有データソースを作成および管理&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)   
  [Reporting Services のデータ接続、データソース、および接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [レポート データ ソースを管理する](manage-report-data-sources.md)   
+ [レポートデータソースの管理](manage-report-data-sources.md)   
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../report-manager-ssrs-native-mode.md)   
  [埋め込みデータ接続または共有データ接続またはデータソース &#40;レポートビルダーと SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [[データソース] プロパティページ &#40;レポートマネージャー&#41;](../data-sources-properties-page-report-manager.md)   
  [共有データソース &#40;レポートマネージャーの作成、削除、または変更&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [レポート &#40;レポートマネージャーのデータソースプロパティの構成&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
+ [レポートのデータ ソースのプロパティを構成する (レポート マネージャー)](configure-data-source-properties-for-a-report-report-manager.md)  
   
   

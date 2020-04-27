@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d282636b58352f0ffad1083077bdab9769bd6fdc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105612"
 ---
 # <a name="linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs"></a>同じデータセットへの複数のデータ領域のリンク (レポート ビルダーおよび SSRS)
@@ -30,8 +30,8 @@ ms.locfileid: "66105612"
  複数の行および列グループを含むマトリックスの表示は、カテゴリ グループと系列グループの両方がある面グラフ、横棒グラフ、または縦棒グラフを使用すると、最も効果的です。 マトリックスの列グループとグラフのカテゴリ グループに同じグループ式を使用し、マトリックスの行グループとグラフの系列グループに同じグループ式を使用します。 グループ インスタンスの数は、グラフの読みやすさに影響することに留意する必要があります。 範囲値に基づきグループを定義すると、レポート内のグループ インスタンスの数を減らすことができます。 詳細については、「 [グループ式の例 (レポート ビルダーおよび SSRS)](expression-examples-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [一覧 &#40;レポート ビルダーおよび SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [グラフ &#40;レポートビルダーと SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [&#40;レポートビルダーと SSRS の一覧を表示&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [入れ子になったデータ領域 (レポート ビルダーおよび SSRS)](nested-data-regions-report-builder-and-ssrs.md)  
   
   

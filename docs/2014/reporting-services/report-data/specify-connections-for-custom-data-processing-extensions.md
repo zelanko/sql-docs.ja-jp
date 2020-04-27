@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 734eca26e94b4b879590c889c6c3c479c155c7be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107052"
 ---
 # <a name="specify-connections-for-custom-data-processing-extensions"></a>カスタム データ処理拡張機能の接続を指定する
@@ -33,11 +33,9 @@ ms.locfileid: "66107052"
   
 -   カスタム [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダー (DB2.NET、Oracle、ODP.NET、または Teradata データ ソースからデータへアクセスしている場合は、カスタム .NET データ プロバイダーを使用している可能性があります)  
   
--   
-  <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> をサポートするカスタム データ処理拡張機能  
+-   <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> をサポートするカスタム データ処理拡張機能  
   
--   
-  <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension> をサポートするカスタム データ処理拡張機能  
+-   <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension> をサポートするカスタム データ処理拡張機能  
   
 > [!NOTE]  
 >  カスタム データ処理拡張機能の実装方法はサード パーティ プロバイダーに問い合わせてください。  
@@ -58,19 +56,15 @@ ms.locfileid: "66107052"
 |資格情報なし|カスタム .NET データ プロバイダーでは、資格情報なしのオプションを使用できます。 自動実行アカウントが指定されている場合、使用する資格情報は接続文字列によって決定されます。 レポート サーバーでは、自動実行アカウントの権限が借用され、接続が行われます。<br /><br /> 自動実行アカウントが定義されていない場合、レポート サーバーは接続に失敗します。 アカウントの定義の詳細については、「 [自動実行アカウントの構成 (SSRS 構成マネージャー)](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。|  
   
 ## <a name="connections-for-idbconnection"></a>IDbConnection の接続  
- 
-  <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> のみサポートするカスタム データ処理拡張機能を使用する場合、次の方法で接続を指定する必要があります。  
+ <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> のみサポートするカスタム データ処理拡張機能を使用する場合、次の方法で接続を指定する必要があります。  
   
-1.  自動実行アカウントを構成する。 
-  `IDbConnection` を使用する接続を行うためにはこのアカウントを構成する必要があります。 レポート サーバーでは、接続時にアカウントの権限が借用されます。  
+1.  自動実行アカウントを構成する。 `IDbConnection` を使用する接続を行うためにはこのアカウントを構成する必要があります。 レポート サーバーでは、接続時にアカウントの権限が借用されます。  
   
-2.  
-  **[資格情報なし]** を使用するためにデータ ソース プロパティをレポート上に構成します。  
+2.  **[資格情報なし]** を使用するためにデータ ソース プロパティをレポート上に構成します。  
   
 3.  データ ソースへの接続に使用した資格情報を接続文字列に指定します。  
   
- 
-  `IDbConnection` を使用する場合には、統合セキュリティ、Windows ユーザー アカウント、およびデータベース資格情報はサポートされません。 データ ソース接続にこれらのオプションを使用した場合、レポート サーバーは接続に失敗します。  
+ `IDbConnection` を使用する場合には、統合セキュリティ、Windows ユーザー アカウント、およびデータベース資格情報はサポートされません。 データ ソース接続にこれらのオプションを使用した場合、レポート サーバーは接続に失敗します。  
   
 ## <a name="connections-for-idbconnectionextension"></a>IDbConnectionExtension の接続  
  カスタム データ処理拡張機能を使用し、 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension>がサポートされる場合、次の方法で接続を指定できます。  
@@ -83,12 +77,12 @@ ms.locfileid: "66107052"
 |資格情報なし|自動実行アカウントが指定されている場合、使用する資格情報は接続文字列によって決定されます。<br /><br /> 自動実行アカウントが定義されていない場合、レポート サーバーは接続に失敗します。|  
   
 ## <a name="see-also"></a>参照  
- [SSRS Configuration Manager &#40;自動実行アカウントを構成&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
- [レポートデータソースの資格情報と接続情報を指定する](specify-credential-and-connection-information-for-report-data-sources.md)   
+ [自動実行アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+ [レポート データ ソースに関する資格情報と接続情報を指定する](specify-credential-and-connection-information-for-report-data-sources.md)   
  [Reporting Services のデータ接続、データソース、および接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [データ処理拡張機能の実装](../extensions/data-processing/implementing-a-data-processing-extension.md)   
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../report-manager-ssrs-native-mode.md)   
  [共有データソース &#40;レポートマネージャーの作成、削除、または変更&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [レポート &#40;レポートマネージャーのデータソースプロパティの構成&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
+ [レポートのデータ ソースのプロパティを構成する (レポート マネージャー)](configure-data-source-properties-for-a-report-report-manager.md)  
   
   

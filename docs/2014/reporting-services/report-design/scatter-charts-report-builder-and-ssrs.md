@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dde53428c738fc30595d17b62175b50835fe7ec2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105040"
 ---
 # <a name="scatter-charts-report-builder-and-ssrs"></a>散布図 (レポート ビルダーおよび SSRS)
@@ -29,9 +29,9 @@ ms.locfileid: "66105040"
   
 ## <a name="variations"></a>バリエーション  
   
--   **付い.** : バブル チャートでは、1 つのデータ ポイントの 2 つの値の差を、バブルのサイズに基づいて表示します。 バブルが大きいほど、2 つの値の差が大きくなります。  
+-   **バブル。** : バブル チャートでは、1 つのデータ ポイントの 2 つの値の差を、バブルのサイズに基づいて表示します。 バブルが大きいほど、2 つの値の差が大きくなります。  
   
--   **3-D バブル**。 バブル チャートが 3D で表示されます。  
+-   **3-D バブル**: バブル チャートが 3D で表示されます。  
   
 ## <a name="data-considerations-for-a-scatter-chart"></a>散布図のデータに関する注意点  
   

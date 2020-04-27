@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 35526e8928a98ccca2e2e61e88fb9361a6d00d6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105241"
 ---
 # <a name="level-function-report-builder-and-ssrs"></a>Level 関数 (レポート ビルダーおよび SSRS)
@@ -35,15 +35,12 @@ Level(scope)
  (`String`) (省略可)。 集計関数の適用先となるレポート アイテムを含むデータセット、グループ、またはデータ領域の名前です。 *scope* を指定しない場合、現在のスコープが使用されます。  
   
 ## <a name="return-type"></a>戻り値の型  
- 
-  `Integer` 値を返します。 *スコープ*がデータセットまたはデータ領域を指定した場合、または再帰的のグループ (つまり、 `Parent`要素のない`Level`グループ) を指定した場合、は0を返します。 *scope* を指定しない場合は、現在のスコープのレベルが返されます。  
+ `Integer` 値を返します。 *スコープ*がデータセットまたはデータ領域を指定した場合、または再帰的のグループ (つまり、 `Parent`要素のない`Level`グループ) を指定した場合、は0を返します。 *scope* を指定しない場合は、現在のスコープのレベルが返されます。  
   
 ## <a name="remarks"></a>解説  
- 
-  `Level` 関数から返される値は、0 を基準にしています。つまり、階層の最初のレベルは 0 です。  
+ `Level` 関数から返される値は、0 を基準にしています。つまり、階層の最初のレベルは 0 です。  
   
- 
-  `Level` 関数は、従業員一覧などの再帰型階層にインデントを付けるために使用できます。  
+ `Level` 関数は、従業員一覧などの再帰型階層にインデントを付けるために使用できます。  
   
  再帰的型階層については、「[複数の再帰型階層グループの作成 &#40;レポート ビルダーおよび SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)」を参照してください。  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1589f171fd8d402572408186a10b3e6f4ac97982
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107584"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>共有データセット デザイン ビュー (レポート ビルダー)
@@ -24,10 +24,10 @@ ms.locfileid: "66107584"
   
  レポート内のデータの操作の詳細については、「[レポートにデータを追加する &#40;レポートビルダーと SSRS&#41;](../report-data/report-datasets-ssrs.md)」を参照してください。  
   
-##  <a name="Ribbon"></a>リボン  
+##  <a name="the-ribbon"></a><a name="Ribbon"></a>リボン  
  リボンを使用すると、タスクの実行に必要なコマンドを簡単に見つけることができます。 コマンドは、接続、データセット、クエリ デザイナーの各論理グループに分類されています。  
   
-### <a name="connection"></a>接続  
+### <a name="connection"></a>Connection  
  レポートで共有データ ソースを選択するか、レポート サーバーで共有データ ソースを参照するには、接続グループの **[選択]** ボタンを使用します。  
   
 > [!NOTE]  
@@ -36,7 +36,7 @@ ms.locfileid: "66107584"
  詳細については、「 [データ接続、データ ソース、および接続文字列](../data-connections-data-sources-and-connection-strings-in-report-builder.md)」を参照してください。  
   
 ### <a name="dataset"></a>データセット  
- 共有データセット プロパティを設定するには、 **[オプションの設定]** ボタンを使用します。 コーディネートは次のとおりです。  
+ 共有データセット プロパティを設定するには、 **[オプションの設定]** ボタンを使用します。 次に例を示します。  
   
 -   フィールド。 フィールド コレクションのフィールドを追加または編集できます。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "66107584"
   
 
   
-##  <a name="DesignSurface"></a>クエリデザイナー画面  
+##  <a name="the-query-designer-surface"></a><a name="DesignSurface"></a>クエリデザイナー画面  
  クエリ デザイナーを使用すると、外部データ ソースに対して必要な構文でクエリを作成できます。  
   
  一部のデータ ソースの種類ではグラフィカル クエリ デザイナーが提供されます。グラフィカル クエリ デザイナーを使用すると、外部データ ソースのメタデータを検索できます。 メタデータ ペインからクエリ デザイン画面に名前を対話的にドラッグすることも、使用する名前を対話的に選択することもできます。  
@@ -72,7 +72,7 @@ ms.locfileid: "66107584"
   
 
   
-##  <a name="Results"></a>クエリ結果の表示  
+##  <a name="viewing-query-results"></a><a name="Results"></a>クエリ結果の表示  
  レポートの処理時には、共有データセット デザイン ビューで作成したクエリに基づいて、データ接続からデータが取得されます。  
   
  クエリを実行してデータ接続からサンプル データを表示し、期待した種類のデータが返されることを確認します。 結果セットの列は、データ接続のデータ スキーマのメタデータに基づいています。 列名がデータセット フィールド コレクションになります。 クエリの結果セットに示されるデータ値は、デザイン時のデータです。 共有データセットを共有データセット定義としてレポート サーバーに保存した後は、クエリ テキストのみが保存されます。 クエリの結果セットのデータは保存されません。  
@@ -90,14 +90,14 @@ ms.locfileid: "66107584"
   
 
   
-##  <a name="Save"></a>共有データセットを保存しています  
+##  <a name="saving-the-shared-dataset"></a><a name="Save"></a>共有データセットを保存しています  
  作成したクエリを保存するには、 **レポート ビルダー** のボタンの **[保存]** または **[名前を付けて保存]** をクリックします。 レポート サーバー上の適切なフォルダーに移動し、共有データセット定義を保存します。 レポート サーバーに保存しないと、共有データセットを他のユーザーが使用することはできません。  
   
 
   
 ## <a name="see-also"></a>参照  
  [レポート &#40;レポートビルダーおよび SSRS&#41;にデータを追加する](../report-data/report-datasets-ssrs.md)   
- [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)  
+ [データのフィルター処理、グループ化、並べ替え &#40;レポートビルダーと SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

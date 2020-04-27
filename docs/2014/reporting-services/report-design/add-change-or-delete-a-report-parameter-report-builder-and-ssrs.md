@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ebf333b49c20c7eadef4fdbcd54834c450d274c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106686"
 ---
 # <a name="add-change-or-delete-a-report-parameter-report-builder-and-ssrs"></a>レポート パラメーターの追加、変更、または削除 (レポート ビルダーおよび SSRS)
@@ -27,8 +27,7 @@ ms.locfileid: "66106686"
   
 ### <a name="to-add-or-edit-a-report-parameter"></a>レポート パラメーターを追加または編集するには  
   
-1.  
-  **レポート データ** ペインで、 **[パラメーター]** ノードを右クリックし、 **[パラメーターの追加]** をクリックします。 **[レポート パラメーターのプロパティ]** ダイアログ ボックスが表示されます。  
+1.  **レポート データ** ペインで、 **[パラメーター]** ノードを右クリックし、 **[パラメーターの追加]** をクリックします。 **[レポート パラメーターのプロパティ]** ダイアログ ボックスが表示されます。  
   
 2.  **[名前]** にパラメーターの名前を入力するか、既定の名前をそのまま使用します。  
   
@@ -59,16 +58,16 @@ ms.locfileid: "66106686"
 2.  レポート パラメーターを右クリックし、 **[削除]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [レポート パラメーターの値の追加、変更、または削除 &#40;レポート ビルダーおよび SSRS&#41;](add-change-or-delete-available-values-for-a-report-parameter.md)   
- [レポート パラメーターの既定値の追加、変更、または削除 &#40;レポート ビルダーおよび SSRS&#41;](add-change-or-delete-default-values-for-a-report-parameter.md)   
- [レポート パラメーターの順序の変更 &#40;レポート ビルダーおよび SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
- [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](report-parameters-report-builder-and-report-designer.md)   
+ [レポートパラメーターに使用できる値の追加、変更、または削除 &#40;レポートビルダーと SSRS&#41;](add-change-or-delete-available-values-for-a-report-parameter.md)   
+ [レポートパラメーターの既定値の追加、変更、または削除 &#40;レポートビルダーと SSRS&#41;](add-change-or-delete-default-values-for-a-report-parameter.md)   
+ [レポートパラメーター &#40;レポートビルダーと SSRS の順序を変更&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
+ [レポートパラメーター &#40;レポートビルダーとレポートデザイナー&#41;](report-parameters-report-builder-and-report-designer.md)   
  [ダイアログボックス、ペイン、およびウィザードのヘルプのレポートビルダー](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [カスケード型パラメーターのレポートへの追加 (レポート ビルダーおよび SSRS)](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
- [チュートリアル: レポートへのパラメーターの追加 &#40;レポート ビルダー&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [カスケード型パラメーターをレポートに追加する &#40;レポートビルダーと SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
+ [チュートリアル: レポートへのパラメーターの追加 &#40;レポートビルダー&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [チュートリアル &#40;レポートビルダー&#41;](../report-builder-tutorials.md)   
- [データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 (レポート ビルダーおよび SSRS)](add-dataset-filters-data-region-filters-and-group-filters.md)   
- [Parameters コレクションの参照 &#40;レポート ビルダーおよび SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md)   
+ [データセットフィルター、データ領域フィルター、およびグループフィルターを追加 &#40;レポートビルダーと SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [Parameters コレクションの参照 &#40;レポートビルダーと SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md)   
  [複数の値を持つパラメーターのレポートへの追加](add-a-multi-value-parameter-to-a-report.md)  
   
   

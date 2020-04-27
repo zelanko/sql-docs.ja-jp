@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a790f3951ce37e714346b8d280547e603cf48c23
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105452"
 ---
 # <a name="polar-charts-report-builder-and-ssrs"></a>極座標グラフ (レポート ビルダーおよび SSRS)
@@ -25,7 +25,7 @@ ms.locfileid: "66105452"
   
 ## <a name="variations"></a>バリエーション  
   
--   **レーダーチャート**。 レーダー チャートでは、系列が円形の線または領域で表示されます。 極座標グラフとは異なり、レーダー チャートでは、極座標の観点ではデータが表示されません。  
+-   **レーダー チャート**: レーダー チャートでは、系列が円形の線または領域で表示されます。 極座標グラフとは異なり、レーダー チャートでは、極座標の観点ではデータが表示されません。  
   
 ## <a name="data-considerations-for-polar-charts"></a>極座標グラフのデータに関する注意点  
   
@@ -43,20 +43,20 @@ ms.locfileid: "66105452"
 |低木|61|  
 |種|78|  
 |球根|60|  
-|木|38|  
+|ツリー|38|  
 |花|81|  
   
  この例では、名前フィールドがカテゴリ グループ領域に配置されます。 売上フィールドは値領域に配置されます。 売上フィールドをドロップすると、グラフの売上フィールドが自動的に計算されます。 レーダー チャートでは、売上フィールド内の値の数に基づいて、ラベルを配置する場所が計算されます。ここでは、5 つの値が含まれているため、円周上で等間隔に設定された 5 つの点にラベルが配置されます。 売上フィールドに 3 つの値が含まれている場合、円周上で等間隔に設定された 3 つの点にラベルが配置されます。  
   
  次の図は、提示されたデータに基づくレーダー チャートの例を示しています。  
   
- ![レーダーチャート](../media/rs-radarchart.gif "レーダー チャート")  
+ ![レーダー チャート](../media/rs-radarchart.gif "レーダー チャート")  
   
 ## <a name="see-also"></a>参照  
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [グラフの書式設定 (レポート ビルダーおよび SSRS)](formatting-a-chart-report-builder-and-ssrs.md)   
  [グラフの種類 &#40;レポート ビルダーおよび SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
- [折れ線グラフ &#40;レポートビルダーと SSRS&#41;](line-charts-report-builder-and-ssrs.md)   
+ [折れ線グラフ &#40;レポート ビルダーおよび SSRS&#41;](line-charts-report-builder-and-ssrs.md)   
  [グラフ内の空のデータ ポイントおよび NULL データ ポイント (レポート ビルダーおよび SSRS)](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
   
   

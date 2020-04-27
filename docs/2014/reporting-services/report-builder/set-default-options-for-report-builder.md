@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bae94dfd09495d271b668390b17059e067f092c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107616"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>[設定] (レポート ビルダーの [オプション] ダイアログ ボックス) (レポート ビルダー)
@@ -24,7 +24,7 @@ ms.locfileid: "66107616"
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
  **[既定で使用するレポート サーバーまたは SharePoint サイト]**  
- このオプションは、管理者によって設定されている可能性があります。 値には、 http:// または https:// で始まる整形式の URL を設定できます。 この設定によって、テーブル/マトリックス ウィザードやグラフ ウィザードで既定で表示されるデータ ソース接続が決まります。 また、レポートはこのサーバーで処理され、このサーバーのリソースを参照できます。  
+ このオプションは、管理者によって設定されている可能性があります。 値には、http:// または https:// で始まる整形式の URL を設定できます。 この設定によって、テーブル/マトリックス ウィザードやグラフ ウィザードで既定で表示されるデータ ソース接続が決まります。 また、レポートはこのサーバーで処理され、このサーバーのリソースを参照できます。  
   
  別のレポート サーバーを選択した場合、変更を有効にするにはレポート ビルダーの再起動が必要になることがあります。  
   
@@ -46,6 +46,6 @@ ms.locfileid: "66107616"
  最近使ったサイトとサーバー、共有データセット、共有データ ソース接続、およびドキュメントの現在の一覧をクリアします。  
   
 ## <a name="see-also"></a>参照  
- [ダイアログボックス、ペイン、およびウィザードのヘルプのレポートビルダー](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [レポート ビルダーのダイアログ ボックス、ペイン、およびウィザードに関するヘルプ](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

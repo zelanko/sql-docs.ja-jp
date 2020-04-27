@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7823ce29facb7f1c85a51a12b31ee2076a0d023b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107422"
 ---
 # <a name="configure-data-source-properties-for-a-report--report-manager"></a>レポートのデータ ソースのプロパティを構成する (レポート マネージャー)
@@ -34,14 +34,11 @@ ms.locfileid: "66107422"
   
 4.  [**データソース**] タブをクリックします。これにより、レポートの [データソース] プロパティページが開きます。  
   
-5.  
-  **[カスタム データ ソース]** をクリックして、レポート内のデータ ソース接続情報を指定します。  
+5.  **[カスタム データ ソース]** をクリックして、レポート内のデータ ソース接続情報を指定します。  
   
-6.  
-  **[接続の種類]** の一覧で、データ ソースから取得したデータの処理に使用するデータ処理拡張機能を指定します。  
+6.  **[接続の種類]** の一覧で、データ ソースから取得したデータの処理に使用するデータ処理拡張機能を指定します。  
   
-7.  
-  **[接続文字列]** でレポート サーバーがデータ ソースへの接続に使用する接続文字列を指定します。 接続文字列には資格情報を指定しないことをお勧めします。  
+7.  [**接続文字列**] には、レポートサーバーがデータソースへの接続に使用する接続文字列を指定します。 接続文字列には資格情報を指定しないことをお勧めします。  
   
      次の例は、ローカル[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベースに接続するための接続文字列を示しています。  
   
@@ -49,8 +46,7 @@ ms.locfileid: "66107422"
     data source=<localservername>; initial catalog=AdventureWorks2012  
     ```  
   
-8.  
-  **[接続に使用する認証]** では、レポートが実行される際に資格情報を取得する方法を指定します。  
+8.  **[接続に使用する認証]** では、レポートが実行される際に資格情報を取得する方法を指定します。  
   
     -   ユーザーにログオン名とパスワードを要求する場合は、 **[レポートの実行者により指定された資格情報]** をクリックします。  
   
@@ -66,8 +62,8 @@ ms.locfileid: "66107422"
  [[コンテンツ] ページ &#40;レポートマネージャー&#41;](../contents-page-report-manager.md)   
  [[新しいデータソース] ページ &#40;レポートマネージャー&#41;](../new-data-source-page-report-manager.md)   
  [SSRS&#41;&#40;共有データソースを作成、変更、および削除します。](create-modify-and-delete-shared-data-sources-ssrs.md)   
- [レポート データ ソースを管理する](manage-report-data-sources.md)   
+ [レポートデータソースの管理](manage-report-data-sources.md)   
  [共有データソース &#40;レポートマネージャーの作成、削除、または変更&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [[データソース] プロパティページ &#40;レポートマネージャー&#41;](../data-sources-properties-page-report-manager.md)  
+ [[データ ソース] プロパティ ページ &#40;レポート マネージャー&#41;](../data-sources-properties-page-report-manager.md)  
   
   

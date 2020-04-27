@@ -13,18 +13,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e5b8cc62556749a310f8c11a5efcae32eafbd8ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108604"
 ---
 # <a name="url-reservation-syntax--ssrs-configuration-manager"></a>URL 予約の構文 (SSRS 構成マネージャー)
   このトピックでは、レポート サーバー Web サービスとレポート マネージャーの URL 文字列の各部分について説明します。 内部的に格納される URL 文字列の構造は、ブラウザー ウィンドウのアドレス バーに入力する URL の構造とは異なります。 URL 予約文字列は、URL の構成時の Reporting Services 構成ツールの [結果] ウィンドウおよび RSReportServer.config ファイルに示されます。 URL 文字列の定義方法を理解しておくと、URL 予約の問題のトラブルシューティングや、サーバーで定義されている内部 URL 予約を表示するための HTTP.SYS に対するクエリを実行する場合に役立ちます。  
   
 ## <a name="url-syntax"></a>URL 構文  
- レポート サーバーの URL は、`UrlString` 要素と `VirtualDirectory` 要素に格納されます。 
-  `UrlString` と `VirtualDirectory` を個別の要素に分割するのは、URL 文字列は複数定義できますが、仮想ディレクトリ名は [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションごとに 1 つしか指定できないためです。  
+ レポート サーバーの URL は、`UrlString` 要素と `VirtualDirectory` 要素に格納されます。 `UrlString` と `VirtualDirectory` を個別の要素に分割するのは、URL 文字列は複数定義できますが、仮想ディレクトリ名は [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションごとに 1 つしか指定できないためです。  
   
  HTTP.SYS では、URL 予約に `UrlString` と `VirtualDirectory` の両方が含まれます。 URL 予約の構文は、次の各部で構成されます。  
   
@@ -32,7 +31,7 @@ ms.locfileid: "66108604"
   
  次の表では、各プロパティについて説明し、各プロパティで有効な値を示します。  
   
-|プロパティ|有効な値|[説明]|  
+|プロパティ|有効な値|説明|  
 |--------------|------------------|-----------------|  
 |Scheme|http または https|非 SSL 接続と SSL 接続のプレフィックスです。|  
 |hostname|(+) 強いワイルドカード。IP アドレスの **[(すべて割り当て)]** 値に相当します。<br /><br /> (\*) 弱いワイルドカード。 **[(すべて未割り当て)]** の IP アドレスに相当します。<br /><br /> 完全修飾ドメイン名<br /><br /> コンピューター名<br /><br /> IP アドレス (IPv4)<br /><br /> IP アドレス (IPv6)|ネットワーク上のサーバーを識別します。<br /><br /> (+) 強いワイルドカードが既定値です。 HTTP.SYS は、指定されたポートと仮想ディレクトリの組み合わせのすべてのネットワーク アダプターに対するすべての要求を受け入れます。 レポート サーバーは、ポートに対するすべての要求を受け入れます。<br /><br /> (\*) 弱いワイルドカードです。 HTTP.SYS は、指定されたポートと仮想ディレクトリの組み合わせのすべてのネットワーク アダプターに対する要求のうち、他の URL 予約によって処理されないすべての要求を受け入れます。<br /><br /> コンピューター名は、ネットワーク上のコンピューターの NetBIOS 名です。<br /><br /> 完全修飾ドメイン名には、ドメイン コントローラーまたはパブリック ドメイン ネーム サーバーに登録されているドメイン アドレスとサーバー名が含まれます。<br /><br /> IP アドレス (IPv4) は、コンピューターのネットワーク アダプターの *nnn.nnn.nnn.nnn*という IPv4 形式の IP アドレスです。<br /><br /> IP アドレス (IPv6) は、コンピューターのネットワーク アダプターの \<header>:\<header>:*nnn.nnn.nnn.nnn* という IPv6 形式の IP アドレスです。|  

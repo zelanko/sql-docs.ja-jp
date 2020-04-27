@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e44e658d2aaf8be9a9e591f627f60798f6ba4121
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105397"
 ---
 # <a name="range-charts-report-builder-and-ssrs"></a>範囲グラフ (レポート ビルダーおよび SSRS)
@@ -29,11 +29,11 @@ ms.locfileid: "66105397"
   
 ## <a name="variations"></a>バリエーション  
   
--   **Smooth range**。 平滑範囲グラフでは、直線ではなく曲線が表示されます。  
+-   **平滑範囲**: 平滑範囲グラフでは、直線ではなく曲線が表示されます。  
   
--   **列の範囲**。 範囲縦棒グラフでは、領域ではなく縦棒を使用して範囲を表示します。  
+-   **範囲縦棒**: 範囲縦棒グラフでは、領域ではなく縦棒を使用して範囲を表示します。  
   
--   **バーの範囲**。 範囲横棒グラフでは、領域ではなく横棒を使用して範囲を表示します。  
+-   **範囲横棒**: 範囲横棒グラフでは、領域ではなく横棒を使用して範囲を表示します。  
   
 ## <a name="data-considerations-for-range-charts"></a>範囲グラフのデータに関する注意点  
   

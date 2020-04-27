@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 0b0841e031ee1a98f4f678406f790996a709e90f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104480"
 ---
 # <a name="report-history-page-report-manager"></a>[レポート履歴] ページ (レポート マネージャー)
@@ -42,13 +42,13 @@ ms.locfileid: "66104480"
 3.  ドロップダウン メニューの **[レポート履歴の表示]** をクリックします。  
   
 ## <a name="options"></a>オプション  
- **デリート**  
+ **削除**  
  1 つ以上のスナップショットを削除する場合にクリックします。 削除するスナップショットの横のチェック ボックスをオンにしてから、 **[削除]** をクリックします。  
   
- **新しいスナップショット**  
+ **[新しいスナップショット]**  
  レポート履歴にスナップショットを追加する場合にクリックします。 レポートの [レポート履歴] プロパティ ページの **[レポート履歴の手動作成を許可する]** をオンにしたときに、このボタンが有効になります。  
   
- **前回の実行**  
+ **[最終実行]**  
  スナップショットが作成された日時が表示されます。 説明をクリックすると、特定のスナップショットが表示されます。  
   
  **[サイズ]**  
@@ -56,7 +56,7 @@ ms.locfileid: "66104480"
   
 ## <a name="see-also"></a>参照  
  [レポート履歴 &#40;レポートマネージャーの表示または削除&#41;](../../2014/reporting-services/view-or-delete-report-history-report-manager.md)   
- [レポート履歴へのスナップショットの追加 &#40;レポート マネージャー&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [レポート履歴へのスナップショットの追加 &#40;レポートマネージャー&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [[全般] プロパティページ、レポート &#40;レポートマネージャー&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [レポートマネージャーの F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)   
  [[スナップショットオプション] プロパティページ &#40;レポートマネージャー&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)

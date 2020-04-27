@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a10d92d8492f9f07f18d2edccd7f3074b7c584c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105091"
 ---
 # <a name="var-function-report-builder-and-ssrs"></a>Var 関数 (レポート ビルダーおよび SSRS)
@@ -38,8 +38,7 @@ Var(expression, scope, recursive)
  (`String`) 省略可。 この集計関数の適用先となるレポート アイテムを含むデータセット、グループ、またはデータ領域の名前を表す定数です。 *scope* を指定しない場合、現在のスコープが使用されます。  
   
  *再帰*  
- (**列挙型**) 省略可。 
-  `Simple` (既定値) または `RdlRecursive` です。 集計を再帰的に実行するかどうかを指定します。  
+ (**列挙型**) 省略可。 `Simple` (既定値) または `RdlRecursive` です。 集計を再帰的に実行するかどうかを指定します。  
   
 ## <a name="return-type"></a>戻り値の型  
  10 進数型の式には `Decimal` 値が、その他すべての式には `Double` 値が返されます。  

@@ -18,16 +18,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 208b1363de6b1c6892ba8f265365b1d304b6ceab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107157"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>標準 .NET Framework データ プロバイダーを登録する (SSRS)
   サード パーティの [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダーを使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート データセット用のデータを取得するには、レポート作成クライアントとレポート サーバーの 2 か所に [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダー アセンブリを配置し、登録する必要があります。 レポート作成クライアントでは、データ プロバイダーをデータ ソースの種類として登録し、それをクエリ デザイナーに関連付ける必要があります。 これにより、レポート データセットを作成する際に、データ ソースの種類としてこのデータ プロバイダーを選択できるようになります。 関連付けられているクエリ デザイナーが開き、それを利用してこのデータ ソースの種類に対するクエリを作成することができます。 レポート サーバーでは、データ プロバイダーをデータ ソースの種類として登録する必要があります。 そうすることで、このデータ プロバイダーを使用してデータ ソースからデータを取得するパブリッシュ済みレポートを処理することができます。  
   
- サード パーティのデータ プロバイダーには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能で使用できるすべての機能が用意されているわけではありません。 詳細については、「[Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)」をご覧ください。 .[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データプロバイダーについては、「[データ処理拡張機能の実装](../extensions/data-processing/implementing-a-data-processing-extension.md)」を参照してください。  
+ サード パーティのデータ プロバイダーには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能で使用できるすべての機能が用意されているわけではありません。 詳細については、「[Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)」をご覧ください。 .[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダーの機能の拡張については、「 [データ処理拡張機能の実装](../extensions/data-processing/implementing-a-data-processing-extension.md)」をご覧ください。  
   
  データ プロバイダーのインストールと登録を行うには、管理者の資格情報が必要です。  
   
@@ -58,12 +58,10 @@ ms.locfileid: "66107157"
   
 4.  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダー用のエントリを追加します。  
   
-    |Attribute|説明|  
+    |属性|説明|  
     |---------------|-----------------|  
-    |`Name`|データ プロバイダーの固有名を入力します (たとえば「 **MyNETDataProvider**」など)。 
-  `Name` 属性の最大文字数は 255 文字です。 名前は、構成ファイルの `Extension` 要素内のすべてのエントリの中で一意にする必要があります。 ここで指定した値は、新しいデータ ソースを作成する際にデータ ソースの種類を示すドロップダウン リストに表示されます。|  
-    |`Type`|
-  <xref:System.Data.IDbConnection> インターフェイスを実装するクラスの完全修飾名前空間と、その後に [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダー アセンブリの名前 (.dll ファイル名拡張子を含まない) を指定する、コンマ区切りのリストを入力します。|  
+    |`Name`|データ プロバイダーの固有名を入力します (たとえば「 **MyNETDataProvider**」など)。 `Name` 属性の最大文字数は 255 文字です。 名前は、構成ファイルの `Extension` 要素内のすべてのエントリの中で一意にする必要があります。 ここで指定した値は、新しいデータ ソースを作成する際にデータ ソースの種類を示すドロップダウン リストに表示されます。|  
+    |`Type`|<xref:System.Data.IDbConnection> インターフェイスを実装するクラスの完全修飾名前空間と、その後に [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダー アセンブリの名前 (.dll ファイル名拡張子を含まない) を指定する、コンマ区切りのリストを入力します。|  
   
      たとえば、DLL に関する次のようなエントリがレポート サーバーの bin ディレクトリに配置されているとします。  
   
@@ -85,8 +83,7 @@ ms.locfileid: "66107157"
   
 3.  rssrvpolicy.config ファイル内で `CodeGroup` 要素を探します。  
   
-4.  
-  `FullTrust` 権限を許可するデータ プロバイダー アセンブリ用のコード グループを追加します。 コード グループは次のようになります。  
+4.  `FullTrust` 権限を許可するデータ プロバイダー アセンブリ用のコード グループを追加します。 コード グループは次のようになります。  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  
@@ -112,8 +109,7 @@ ms.locfileid: "66107157"
   
 #### <a name="to-install-a-data-provider-assembly-on-the-report-designer-client"></a>レポート デザイナー クライアントにデータ プロバイダー アセンブリをインストールするには  
   
-1.  
-  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダーを使用するレポート デザイナー クライアントの PrivateAssemblies ディレクトリの既定の場所に移動します。 Privateassemblies ディレクトリの既定の場所は* \<、ドライブ>*: common7\ide\privateassemblies です。です。  
+1.  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダーを使用するレポート デザイナー クライアントの PrivateAssemblies ディレクトリの既定の場所に移動します。 Privateassemblies ディレクトリの既定の場所は* \<、ドライブ>*: common7\ide\privateassemblies です。です。  
   
 2.  ステージング場所からレポート デザイナー クライアントの PrivateAssemblies ディレクトリに、アセンブリをコピーします。 または、グローバル アセンブリ キャッシュ (GAC) にアセンブリを読み込みます。 詳細については、MSDN の [SDK ドキュメントの「](https://go.microsoft.com/fwlink/?linkid=63912) アセンブリとグローバル アセンブリ キャッシュの使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 」をご覧ください。  
   
@@ -121,8 +117,7 @@ ms.locfileid: "66107157"
   
 1.  PrivateAssemblies ディレクトリに RSReportDesigner.config ファイルのバックアップ コピーを作成します。  
   
-2.  
-  [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] またはメモ帳などの簡単なテキスト エディターを使用して、RSReportDesigner.config を開きます。  
+2.  [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] またはメモ帳などの簡単なテキスト エディターを使用して、RSReportDesigner.config を開きます。  
   
 3.  RSReportDesigner.config ファイル内で `Data` 要素を探します。 データ プロバイダー用のエントリは、次の場所に作成されます。  
   
@@ -136,12 +131,10 @@ ms.locfileid: "66107157"
   
 4.  データ プロバイダーのエントリを追加します。  
   
-    |Attribute|[説明]|  
+    |属性|説明|  
     |---------------|-----------------|  
-    |`Name`|データ プロバイダーの固有名を入力します (たとえば「 **MyNETDataProvider**」など)。 
-  `Name` 属性の最大文字数は 255 文字です。 名前は、構成ファイルの `Extension` 要素内のすべてのエントリの中で一意にする必要があります。 ここで指定した値は、新しいデータ ソースを作成する際にデータ ソースの種類を示すドロップダウン リストに表示されます。|  
-    |`Type`|
-  <xref:System.Data.IDbConnection> インターフェイスを実装するクラスの完全修飾名前空間と、その後に [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダー アセンブリの名前 (.dll ファイル名拡張子を含まない) を指定する、コンマ区切りのリストを入力します。|  
+    |`Name`|データ プロバイダーの固有名を入力します (たとえば「 **MyNETDataProvider**」など)。 `Name` 属性の最大文字数は 255 文字です。 名前は、構成ファイルの `Extension` 要素内のすべてのエントリの中で一意にする必要があります。 ここで指定した値は、新しいデータ ソースを作成する際にデータ ソースの種類を示すドロップダウン リストに表示されます。|  
+    |`Type`|<xref:System.Data.IDbConnection> インターフェイスを実装するクラスの完全修飾名前空間と、その後に [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダー アセンブリの名前 (.dll ファイル名拡張子を含まない) を指定する、コンマ区切りのリストを入力します。|  
   
      たとえば、DLL に関する次のようなエントリが [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] の PrivateAssemblies ディレクトリに配置されているとします。  
   
@@ -155,8 +148,7 @@ ms.locfileid: "66107157"
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly, Version=1.0.0.0, Culture=neutral, PublicKeyToken=MyPublicToken"/>  
     ```  
   
-5.  RSReportDesigner.config ファイル内で `Designer` 要素を探します。 
-  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダー用のエントリは、次の場所に作成されます。  
+5.  RSReportDesigner.config ファイル内で `Designer` 要素を探します。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダー用のエントリは、次の場所に作成されます。  
   
     ```  
     <Extensions>  
@@ -166,8 +158,7 @@ ms.locfileid: "66107157"
     </Extensions>  
     ```  
   
-6.  RSReportDesigner.config ファイルの `Designer` 要素の下に、次のエントリを追加します。 
-  `Name` 属性の名前を前のエントリで入力した名前に置き換えるだけです。  
+6.  RSReportDesigner.config ファイルの `Designer` 要素の下に、次のエントリを追加します。 `Name` 属性の名前を前のエントリで入力した名前に置き換えるだけです。  
   
     ```  
     <Extension Name="MyNETDataProvider" Type="Microsoft.ReportingServices.QueryDesigners.GenericQueryDesigner,Microsoft.ReportingServices.QueryDesigners"/>  
@@ -177,13 +168,11 @@ ms.locfileid: "66107157"
   
 1.  PrivateAssemblies ディレクトリに RSPreviewPolicy.config ファイルのバックアップ コピーを作成します。  
   
-2.  
-  [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] または単純なテキスト エディター (メモ帳など) を使用して、RSPreviewPolicy.config を開きます。  
+2.  [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] または単純なテキスト エディター (メモ帳など) を使用して、RSPreviewPolicy.config を開きます。  
   
 3.  RSPreviewPolicy.config ファイル内で `CodeGroup` 要素を探します。  
   
-4.  
-  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 権限を許可する `FullTrust` データ プロバイダー アセンブリ用のコード グループを追加します。 コード グループは次のようになります。  
+4.  `FullTrust` 権限を許可する [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダー アセンブリ用のコード グループを追加します。 コード グループは次のようになります。  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  
@@ -207,11 +196,9 @@ ms.locfileid: "66107157"
 ## <a name="platform-considerations"></a>プラットフォームに関する注意点  
  64 ビット (x64) プラットフォームでは、 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] は 32 ビット WOW モードで動作します。 x64 プラットフォームでレポートを作成する場合、レポートをプレビューするためには、レポート作成クライアントに 32 ビットのデータ プロバイダーをインストールする必要があります。 同じシステムでレポートをパブリッシュした場合、レポート マネージャーでレポートを表示するためには x64 データ プロバイダーが必要になります。  
   
- 
-  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] は、 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]ベースのプラットフォームではサポートされません。  
+ [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] は、 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]ベースのプラットフォームではサポートされません。  
   
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] と共にインストールするデータ処理拡張機能は、各プラットフォーム用にネイティブでコンパイルし、正しい場所にインストールする必要があります。 カスタム データ プロバイダーまたは標準の [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダーを登録する場合、適切なプラットフォーム用にネイティブでコンパイルし、適切な場所にインストールする必要があります。 32 ビット プラットフォームで実行する場合、データ プロバイダーを 32 ビット プラットフォーム用にコンパイルする必要があります。 64 ビット プラットフォームで実行する場合、データ プロバイダーを 64 ビット プラットフォーム用にコンパイルする必要があります。 64 ビット インターフェイスでラップした 32 ビット データ プロバイダーを 64 ビット プラットフォームで使用することはできません。 サード パーティ ソフトウェアを確認して、データ プロバイダーがインストール先のプラットフォームで動作するかどうか調べてください。 データ プロバイダーとプラットフォームのサポートの詳細については、「[Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)」をご覧ください。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] と共にインストールするデータ処理拡張機能は、各プラットフォーム用にネイティブでコンパイルし、正しい場所にインストールする必要があります。 カスタム データ プロバイダーまたは標準の [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダーを登録する場合、適切なプラットフォーム用にネイティブでコンパイルし、適切な場所にインストールする必要があります。 32 ビット プラットフォームで実行する場合、データ プロバイダーを 32 ビット プラットフォーム用にコンパイルする必要があります。 64 ビット プラットフォームで実行する場合、データ プロバイダーを 64 ビット プラットフォーム用にコンパイルする必要があります。 64 ビット インターフェイスでラップした 32 ビット データ プロバイダーを 64 ビット プラットフォームで使用することはできません。 サード パーティ ソフトウェアを確認して、データ プロバイダーがインストール先のプラットフォームで動作するかどうか調べてください。 データ プロバイダーとプラットフォームのサポートの詳細については、「[Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
  [レポート サーバーを構成および管理する &#40;SSRSネイティブ モード&#41;](../report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   

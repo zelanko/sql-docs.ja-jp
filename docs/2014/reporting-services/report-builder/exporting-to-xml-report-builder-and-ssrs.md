@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8e8809b53078387fa58a961458693122753698e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107896"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>XML へのエクスポート (レポート ビルダーおよび SSRS)
@@ -23,10 +23,10 @@ ms.locfileid: "66107896"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ReportItems"></a> レポート アイテム  
+##  <a name="report-items"></a><a name="ReportItems"></a> レポート アイテム  
  次の表で、レポート アイテムがどのように表示されるかについて説明します。  
   
-|アイテム|表示動作|  
+|Item|表示動作|  
 |----------|------------------------|  
 |レポート|XML ドキュメントのトップレベルの要素として表示されます。|  
 |データ領域|コンテナーの要素内部の要素として表示されます。 データ領域には、データをテキストおよびグラフとして表示するテーブル、マトリックス、一覧、およびデータを視覚化するデータ バー、スパークライン、ゲージ、インジケーターが含まれます。|  
@@ -51,28 +51,24 @@ ms.locfileid: "66107896"
   
 -   表示/非表示を切り替えても表示できない非表示アイテムはレンダリングされません。 最初に表示されているアイテムと、表示/非表示を切り替えると表示できる非表示アイテムは表示されます。  
   
--   
-  `Images, lines, and custom report items`画像、線、およびカスタム レポート アイテムは無視されます。  
+-   `Images, lines, and custom report items`画像、線、およびカスタム レポート アイテムは無視されます。  
   
-##  <a name="DataTypes"></a> データ型  
+##  <a name="data-types"></a><a name="DataTypes"></a>データ型  
  テキスト ボックスの要素または属性には、テキスト ボックスに表示される値に基づいた XSD データ型が割り当てられます。  
   
 |テキスト ボックスの値|割り当てられるデータ型|  
 |--------------------------------|---------------------------|  
 |`Int16`, `Int32`, `Int64`, `UInt16`, `UInt32`, `UInt64`, `Byte`, `SByte`|**xsd:integer**|  
-|
-  `Decimal` (または `Decimal` と任意の整数かバイト データ型)|**xsd:decimal**|  
-|
-  `Float` (または `Decimal` と任意の整数かバイト データ型)|**xsd:float**|  
-|
-  `Double` (または `Decimal` と任意の整数かバイト データ型)|**xsd:double**|  
-|`DateTime or DateTime Offset`|**xsd: dateTime**|  
-|`Time`|**xsd: 文字列**|  
-|`Boolean`|**xsd: boolean**|  
-|`String`, `Char`|**xsd: 文字列**|  
-|その他|**xsd: 文字列**|  
+|`Decimal` (または `Decimal` と任意の整数かバイト データ型)|**xsd:decimal**|  
+|`Float` (または `Decimal` と任意の整数かバイト データ型)|**xsd:float**|  
+|`Double` (または `Decimal` と任意の整数かバイト データ型)|**xsd:double**|  
+|`DateTime or DateTime Offset`|**xsd:dateTime**|  
+|`Time`|**xsd:string**|  
+|`Boolean`|**xsd:boolean**|  
+|`String`, `Char`|**xsd:string**|  
+|その他|**xsd:string**|  
   
-##  <a name="XMLSpecificRenderingRules"></a>XML 固有の表示規則  
+##  <a name="xml-specific-rendering-rules"></a><a name="XMLSpecificRenderingRules"></a>XML 固有の表示規則  
  次のセクションでは、レポート内のアイテムが XML 表示拡張機能によってどのように解釈されるかについて説明します。  
   
 ### <a name="report-body"></a>レポート本文  
@@ -80,11 +76,11 @@ ms.locfileid: "66107896"
   
  レポート要素には、XML 名前空間の定義とスキーマ参照属性も含まれます。 以下の例では、変数が太字で示されています。  
   
- \<**Report** xmlns = "**SchemaName**" xmlns: xsi = "<http://www.w3.org/2001/XMLSchema-instance>" xsi:**schemaLocation**= "**SchemaNameReportURL**&amp;rc% 3aSchema = true" Name = "ReportName" >  
+ \<**Report** xmlns="**SchemaName**" xmlns:xsi="<http://www.w3.org/2001/XMLSchema-instance>" xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc%3aSchema=true" Name="ReportName">  
   
  それぞれの変数の値は次のとおりです。  
   
-|Name|Value|  
+|名前|[値]|  
 |----------|-----------|  
 |レポート|Report.DataElementName|  
 |ReportURL|サーバー上のレポートに対する絶対 URL です。URL エンコードされます。|  
@@ -152,20 +148,20 @@ ms.locfileid: "66107896"
   
  DataElementOutput プロパティの値が Output と等しい場合、繰り返しアイテムのヘッダーが、detail 要素の子としてレンダリングされます。  
   
-##  <a name="CustomFormatsXSLTransformations"></a>カスタム書式と XSL 変換  
+##  <a name="custom-formats-and-xsl-transformations"></a><a name="CustomFormatsXSLTransformations"></a>カスタム書式と XSL 変換  
  XML 表示拡張機能で生成した XML ファイルは、XSL 変換 (XSLT) を使用してほとんどすべての形式に変換できます。 この機能を使用すると、既存の表示拡張機能ではサポートされていない形式でデータを生成できます。 独自の表示拡張機能の作成を試みる前に、XML 表示拡張機能および XSLT を使用することを検討してください。  
   
-##  <a name="DuplicateName"></a>重複する名前  
+##  <a name="duplicate-names"></a><a name="DuplicateName"></a>重複する名前  
  同じスコープ内に重複するデータ要素名が存在する場合、レンダラーからエラー メッセージが表示されます。  
   
-##  <a name="XSLTTransformations"></a>XSLT 変換  
+##  <a name="xslt-transformations"></a><a name="XSLTTransformations"></a>XSLT 変換  
  XML レンダラーでは、元の XML データに対し、サーバー側で XSLT 変換を適用できます。 XSLT が適用された場合、元の XML データの代わりに、変換済みのコンテンツが出力されます。 変換はクライアント側ではなく、サーバー側で実行されます。  
   
  出力結果に適用する XSLT は、レポート定義ファイル内で、レポートの DataTransform プロパティまたは XSLT の *DeviceInfo* パラメーターで定義します。 いずれかの値が設定されている場合、XML レンダラーを使用するたびに変換が実行されます。 サブスクリプションを使用する場合は、RDL DataTransform プロパティで XSLT を定義する必要があります。  
   
  DataTransform 定義プロパティおよびデバイス情報設定の両方で XSLT ファイルを指定した場合は、最初に DataTransform で指定された XSLT が適用され、続けて、デバイス情報設定による XSLT が適用されます。  
   
-###  <a name="DeviceInfo"></a> デバイス情報設定  
+###  <a name="device-information-settings"></a><a name="DeviceInfo"></a>デバイス情報の設定  
  デバイス情報設定を変更することによって、このレンダラーの既定の設定の一部を変更することができます。変更できる設定には、次のようなものがあります。  
   
 -   XML に適用する変換 (XSLT)  
@@ -185,8 +181,8 @@ ms.locfileid: "66107896"
  詳細については、「 [XML デバイス情報設定](../xml-device-information-settings.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services の改ページ &#40;レポート ビルダーおよび SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [レンダリングの動作 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [さまざまなレポート表示拡張機能の対話機能 &#40;レポート ビルダーおよび SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
- [レポート アイテムのレンダリング &#40;レポート ビルダーおよび SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [Reporting Services &#40;レポートビルダーおよび SSRS&#41;での改ページ](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [レポートビルダーおよび SSRS&#41;&#40;レンダリング動作](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [さまざまなレポート表示拡張機能の対話機能 &#40;レポートビルダーと SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [レポートビルダーおよび SSRS&#41;&#40;レポートアイテムのレンダリング](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  

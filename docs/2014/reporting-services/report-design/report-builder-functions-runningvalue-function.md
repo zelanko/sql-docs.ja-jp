@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a72673641fc0f67e22d88d5ea104089b273dedce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105159"
 ---
 # <a name="runningvalue-function-report-builder-and-ssrs"></a>RunningValue 関数 (レポート ビルダーおよび SSRS)
@@ -38,18 +38,15 @@ RunningValue(expression, function, scope)
  (`Enum`) 式に適用する集計関数の名前です (`Sum` など)。 この関数は、`RunningValue`、`RowNumber`、または `Aggregate` にすることはできません。  
   
  *スコープ (scope)*  
- (`String`) 集計を評価するコンテキストを示すデータセット、データ領域、またはグループの名前である文字列定数か、NULL (`Nothing` では [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) です。 
-  `Nothing` は、最も外側のコンテキスト (通常はレポート データセット) を示します。  
+ (`String`) 集計を評価するコンテキストを示すデータセット、データ領域、またはグループの名前である文字列定数か、NULL ([!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] では `Nothing`) です。 `Nothing` は、最も外側のコンテキスト (通常はレポート データセット) を示します。  
   
 ## <a name="return-type"></a>戻り値の型  
  *function* パラメーターに指定された集計関数によって決まります。  
   
 ## <a name="remarks"></a>解説  
- 
-  `RunningValue` の値は、スコープの新しいインスタンスごとに 0 にリセットされます。 グループが指定された場合は、累計値はグループ式の変更時にリセットされます。 データ領域が指定された場合は、累計値はデータ領域の新しいインスタンスごとにリセットされます。 データセットが指定された場合は、累計値はデータセット全体にわたってリセットされません。  
+ `RunningValue` の値は、スコープの新しいインスタンスごとに 0 にリセットされます。 グループが指定された場合は、累計値はグループ式の変更時にリセットされます。 データ領域が指定された場合は、累計値はデータ領域の新しいインスタンスごとにリセットされます。 データセットが指定された場合は、累計値はデータセット全体にわたってリセットされません。  
   
- 
-  `RunningValue` は、フィルター式または並べ替え式では使用できません。  
+ `RunningValue` は、フィルター式または並べ替え式では使用できません。  
   
  実行中の値が計算される一連のデータは、同じデータ型である必要があります。 複数の数値データ型のデータを同じデータ型に変換するには、`CInt`、`CDbl`、`CDec` などの変換関数を使用します。 詳細については、「 [データ型変換関数](https://go.microsoft.com/fwlink/?LinkId=96142)」を参照してください。  
   

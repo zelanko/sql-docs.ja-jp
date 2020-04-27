@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6ab8c48b9c02f7bcf9f2c9457b56cb2533125756
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105976"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions-report-builder-and-ssrs"></a>ドリルスルー、ドリルダウン、サブレポート、および入れ子になったデータ領域 (レポート ビルダーおよび SSRS)
@@ -35,7 +35,7 @@ ms.locfileid: "66105976"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="SummaryCharacteristics"></a>特性の概要  
+##  <a name="summary-of-characteristics"></a><a name="SummaryCharacteristics"></a> 特性の概要  
  次の表は、各方法のさまざまな特性についてまとめたものです。 詳細については、このトピックの後半で説明します。 ドリルダウンによる表示と非表示はどのレポート アイテムにも適用できるので、この表の比較にはドリルダウンは含まれていません。  
   
 |特性 (trait)|サブレポート|ドリルスルー|入れ子|  
@@ -51,38 +51,38 @@ ms.locfileid: "66105976"
   
 
   
-##  <a name="Details"></a>特性の詳細  
+##  <a name="details-of-characteristics"></a><a name="Details"></a> 特性の詳細  
   
-###  <a name="Datasets"></a>使用するデータセット  
+###  <a name="datasets-they-use"></a><a name="Datasets"></a> 使用するデータセット  
  サブレポートと詳細レポートでは、メイン レポートと同じデータセットを使用することも、メイン レポートとは別のデータセットを使用することもできます。 入れ子になったデータ領域では同じデータセットを使用します。  
   
-###  <a name="RetrieveData"></a>データの取得  
+###  <a name="retrieving-data"></a><a name="RetrieveData"></a> データの取得  
  サブレポートと入れ子になったデータ領域では、メイン レポートと同時にデータを取得します。 詳細レポートでは個別に取得します。 各詳細レポートでは、ユーザーがそれぞれのリンクをクリックしたときにデータが取得されます。 メイン レポートとその下位レポートのデータを同時に取得する必要がある場合は、この違いが重要になります。  
   
-###  <a name="ProcessRender"></a>処理とレンダリング  
+###  <a name="processing-and-rendering"></a><a name="ProcessRender"></a> 処理と表示  
  サブレポートは、メイン レポートの一部として処理されます。 たとえば、注文明細情報を表示するサブレポートが詳細行のテーブル セルに追加された場合、サブレポートはテーブルの行ごとに一度処理され、メイン レポートの一部として表示されます。 詳細レポートは、ユーザーがメインの要約レポート内のドリルスルー リンクをクリックしたときにだけ処理および表示されます。  
   
-###  <a name="Performance"></a>速度  
+###  <a name="performance"></a><a name="Performance"></a> パフォーマンス  
  どの方法を使用するかを決定する際は、サブレポートの代わりにデータ領域の使用を検討してください。ただし、サブレポートを複数のレポートで使用する場合はこの限りではありません。 サブレポートは、それぞれのインスタンスが個別のレポートとして処理されるので、レポート サーバーのパフォーマンスに影響することがあります。 データ領域はサブレポートと同じ機能の多くが提供され、柔軟性も同等ですが、パフォーマンスの点で優れています。 詳細レポートについても、メイン レポートとは別にデータを取得するので、サブレポートよりもパフォーマンスが優れています。  
   
-###  <a name="Parameters"></a>パラメーターの使用  
+###  <a name="use-of-parameters"></a><a name="Parameters"></a> パラメーターの使用  
  詳細レポートとサブレポートには、通常、表示するレポート データを指定するレポート パラメーターがあります。 たとえば、メイン レポートの販売注文番号をクリックすると、詳細レポートが開き、販売注文番号がパラメーターとして受け取られ、その販売注文のすべてのデータが表示されます。 メイン レポートにリンクを作成する場合は、詳細レポートにパラメーターとして渡す値を指定します。  
   
  詳細レポートまたはサブレポートを作成するには、まず対象の詳細レポートまたはサブレポートをデザインする必要があり、その後にメイン レポートに対してドリルスルー アクションを作成したり、参照を追加したりします。  
   
-###  <a name="Reusability"></a>再  
+###  <a name="reusability"></a><a name="Reusability"></a> 再利用性  
  サブレポートと詳細レポートは別個のレポートです。 したがって、これらのレポートは多数のレポートで使用することも、スタンドアロンのレポートとして表示することもできます。 入れ子になったデータ領域は再利用できません。 このデータ領域は別のデータ領域内に入れ子になっているので、レポート パーツとして保存することはできません。 入れ子になったデータ領域を格納しているデータ領域はレポート パーツとして保存できますが、入れ子になったデータ領域は保存できません。  
   
-###  <a name="Location"></a>設置  
+###  <a name="location"></a><a name="Location"></a> 場所  
  サブレポートと詳細レポートはどちらも別個のレポートであるため、メイン レポートの外部に保存されます。 サブレポートは同じレポート サーバーと別のレポート サーバーのどちらにあってもかまいませんが、詳細レポートは同じレポート サーバー上にある必要があります。 入れ子になったデータ領域はメイン レポートの一部です。  
   
-###  <a name="Display"></a>'95'5c  
+###  <a name="display"></a><a name="Display"></a> 表示  
  サブレポートと入れ子になったデータ領域は、メイン レポート内に表示されます。 詳細レポートは個別に表示されます。  
   
 
   
-##  <a name="InThisSection"></a> トピックの内容  
- [詳細レポート &#40;レポートビルダーと SSRS&#41;](drillthrough-reports-report-builder-and-ssrs.md)  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> トピックの内容  
+ [詳細レポート (レポート ビルダーおよび SSRS)](drillthrough-reports-report-builder-and-ssrs.md)  
  ユーザーがメイン レポート内のリンクをクリックすると開くレポートについて説明します。  
   
  [サブレポート (レポート ビルダーおよび SSRS)](subreports-report-builder-and-ssrs.md)  
@@ -91,10 +91,10 @@ ms.locfileid: "66105976"
  [入れ子になったデータ領域 (レポート ビルダーおよび SSRS)](nested-data-regions-report-builder-and-ssrs.md)  
  マトリックス内に入れ子になっているグラフなど、データ領域を別のデータ領域に入れ子にする方法について説明します。  
   
- [ドリルダウンアクション &#40;レポートビルダーと SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)  
+ [ドリルダウン アクション (レポート ビルダーおよび SSRS)](drilldown-action-report-builder-and-ssrs.md)  
  ドリルダウン アクションによるレポート アイテムの表示と非表示の切り替えについて説明します。  
   
- [外部アイテムへのパスの指定レポートビルダーと SSRS&#41;の &#40;](specifying-paths-to-external-items-report-builder-and-ssrs.md)  
+ [外部アイテムへのパスの指定 (レポート ビルダーおよび SSRS)](specifying-paths-to-external-items-report-builder-and-ssrs.md)  
  レポート定義ファイルの外部にあるアイテムを参照する方法について説明します。  
   
 ## <a name="see-also"></a>参照  

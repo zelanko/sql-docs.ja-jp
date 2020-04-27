@@ -11,14 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c66e8e8ce302044cac8caf488ca27a0c0c07651e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107800"
 ---
 # <a name="interactive-functionality-for-different-report-rendering-extensions-report-builder-and-ssrs"></a>さまざまなレポート表示拡張機能の対話機能 (レポート ビルダーおよび SSRS)
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、レポートを実行時に操作できるようにする対話的なレポート機能が用意されています。 すべてのレポート表示形式で、すべての対話機能をサポートしているわけではありません。 次の表を使用することで、それぞれの対話機能が特定の表示形式でどのように動作するのかを理解できます。  
   
 > [!NOTE]  
@@ -111,9 +110,9 @@ ms.locfileid: "66107800"
   
 ## <a name="see-also"></a>参照  
  [レポートのエクスポート &#40;レポートビルダーと SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
- [対話的な並べ替え、ドキュメント マップ、およびリンク &#40;レポート ビルダーおよび SSRS&#41;](../report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
- [マトリックス &#40;レポート ビルダーおよび SSRS&#41;](../report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [対話的な並べ替え、ドキュメントマップ、およびリンク &#40;レポートビルダーと SSRS&#41;](../report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [マトリックス &#40;レポートビルダーと SSRS&#41;](../report-design/create-a-matrix-report-builder-and-ssrs.md)   
+ [テーブル、マトリックス、および一覧 &#40;レポートビルダーと SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
   
   
