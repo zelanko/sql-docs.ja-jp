@@ -218,8 +218,10 @@
           items:
             - name: Kubernetes のトラブルシューティング
               href: big-data-cluster/cluster-troubleshooting-commands.md
-            - name: Active Directory グループのスコープ
+            - name: Active Directory 統合
               href: big-data-cluster/troubleshoot-active-directory.md
+            - name: HDFS 管理者権限
+              href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
     - name: リファレンス
       items:
         - name: BDC パートナー
