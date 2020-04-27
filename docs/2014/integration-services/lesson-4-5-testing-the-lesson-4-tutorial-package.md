@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fab91a2df7d0401e8301589b1dd0d21027e579c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891292"
 ---
-# <a name="step-5-testing-the-lesson-4-tutorial-package"></a>手順 5: レッスン 4 のチュートリアル パッケージのテスト
+# <a name="step-5-testing-the-lesson-4-tutorial-package"></a>手順 5:レッスン 4 のチュートリアル パッケージのテスト
   壊れているファイル Currency_BAD.txt を実行すると、CurrencyKey 参照変換の照合結果の生成に失敗します。 ただし、CurrencyKey 参照変換のエラー出力は、失敗した行を新しい [Failed Rows] 変換先へリダイレクトするように構成されています。したがって、コンポーネント自体は失敗せず、パッケージは正常に実行されます。 エラーがある行はすべて、ErrorOutput.txt に書き込まれます。  
   
  この実習では、パッケージを実行して、変更したエラー出力構成をテストします。 パッケージが正常に実行されたら、ErrorOutput.txt ファイルの内容を確認します。  
@@ -32,14 +32,13 @@ ms.locfileid: "62891292"
   
  ![パッケージ内の制御フロー](../../2014/tutorials/media/task4lesson2control.gif "パッケージ内の制御フロー")  
   
- **Data Flow**  
+ **データ フロー**  
   
- ![パッケージ内のデータフロー](../../2014/tutorials/media/task5lesson5data.gif "パッケージ内のデータフロー")  
+ ![パッケージ内のデータ フロー](../../2014/tutorials/media/task5lesson5data.gif "パッケージ内のデータ フロー")  
   
 ### <a name="to-run-the-lesson-4-tutorial-package"></a>レッスン 4 のチュートリアル パッケージを実行するには  
   
-1.  
-  **[デバッグ]** メニューの **[デバッグの開始]** をクリックします。  
+1.  [**デバッグ**] メニューの [**デバッグ開始**] をクリックします。  
   
 2.  パッケージの実行が完了したら、 **[デバッグ]** メニューの **[デバッグの停止]** をクリックします。  
   

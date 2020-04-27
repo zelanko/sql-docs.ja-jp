@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 56356fbf40939694a46f08c1cef5edc99049835e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62911673"
 ---
 # <a name="stopservice-method-sqlservice-class"></a>StopService メソッド (SqlService クラス)
@@ -38,14 +38,13 @@ object
 ```  
   
 ## <a name="parts"></a>要素  
- *素材*  
+ *object*  
  サービスを表す [SqlService クラス](sqlservice-class.md) オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
- 
-  `uint32` 値。`ResumeService` 要求が正常に受け入れられた場合は 0、要求がサポートされない場合は 1 になります。それ以外の数値はエラーを示します。  
+ `uint32` 値。`ResumeService` 要求が正常に受け入れられた場合は 0、要求がサポートされない場合は 1 になります。それ以外の数値はエラーを示します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>参照  
  [サービスの開始および停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

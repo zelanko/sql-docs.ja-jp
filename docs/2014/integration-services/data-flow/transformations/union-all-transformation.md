@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8cfbe5ab3a255367922195594063a1734b8c66b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62899875"
 ---
 # <a name="union-all-transformation"></a>全体結合変換
@@ -41,8 +41,7 @@ ms.locfileid: "62899875"
 ## <a name="configuration-of-the-union-all-transformation"></a>全体結合変換の構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- 
-  **[全体結合変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、「 [全体結合変換エディター](../../union-all-transformation-editor.md)」を参照してください。  
+ **[全体結合変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、「 [全体結合変換エディター](../../union-all-transformation-editor.md)」を参照してください。  
   
  プログラムによって設定できるプロパティの詳細については、「 [共通プロパティ](../../common-properties.md)」を参照してください。  
   

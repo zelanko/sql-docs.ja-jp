@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ccc7b96f4275b09b90b8120813b93f860ec07b9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62871060"
 ---
 # <a name="view-or-change-the-compatibility-level-of-a-database"></a>データベースの互換性レベルの表示または変更
@@ -36,14 +36,14 @@ ms.locfileid: "62871060"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  データベースに対する ALTER 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-view-or-change-the-compatibility-level-of-a-database"></a>データベースの互換性レベルを表示または変更するには  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62871060"
   
 5.  互換性レベルを変更するには、一覧から別のオプションを選択します。 選択できるのは、 **[SQL Server 2008 (100)]**、 **[SQL Server 2012 (110)]**、 **[SQL Server 2014 (120)]** のいずれかです。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-view-the-compatibility-level-of-a-database"></a>データベースの互換性レベルを表示するには  
   

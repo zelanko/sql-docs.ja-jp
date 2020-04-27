@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 32b95a5d156ae52394b7128b024c86b9a7e308b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891540"
 ---
-# <a name="step-5-adding-and-configuring-the-flat-file-source"></a>手順 5: フラット ファイル ソースの追加と構成
+# <a name="step-5-adding-and-configuring-the-flat-file-source"></a>手順 5:フラット ファイル ソースの追加と構成
   ここでは、フラット ファイル ソースをパッケージに追加し、構成します。 フラット ファイル ソースとは、フラット ファイル接続マネージャーにより定義されるメタデータを使用するデータ フロー コンポーネントです。フラット ファイル接続マネージャーは、変換処理によってフラット ファイルから取得されるデータの形式や構造を指定します。 フラット ファイル接続マネージャーに定義されているファイル形式を使用し、1 つのフラット ファイルからデータを取得するよう、フラット ファイル ソースを定義できます。  
   
  このチュートリアルでは、前に作成した`Sample Flat File Source Data`接続マネージャーを使用するようにフラットファイルソースを構成します。  
@@ -26,8 +26,7 @@ ms.locfileid: "62891540"
   
 1.  **データフローデザイナーを**開きます。そのためには、 `Extract Sample Currency Data`データフロータスクをダブルクリックするか、[**データフロー] タブ**をクリックします。  
   
-2.  
-  **[SSIS ツールボックス]** で **[その他の変換元]** を展開し、 **[フラット ファイル ソース]** を **[データ フロー]** タブのデザイン画面にドラッグします。  
+2.  **[SSIS ツールボックス]** で **[その他の変換元]** を展開し、 **[フラット ファイル ソース]** を **[データ フロー]** タブのデザイン画面にドラッグします。  
   
 3.  [**データフロー** ] デザイン画面で、新しく追加した**フラットファイルソース**を右クリックし **、[名前の変更**] `Extract Sample Currency Data`をクリックして、名前をに変更します。  
   
@@ -35,8 +34,7 @@ ms.locfileid: "62891540"
   
 5.  [**フラットファイル接続マネージャー** ] ボックスで、 `Sample Flat File Source Data`を選択します。  
   
-6.  
-  **[列]** をクリックし、列名が正しいことを確認します。  
+6.  **[列]** をクリックし、列名が正しいことを確認します。  
   
 7.  **[OK]** をクリックします。  
   
@@ -45,10 +43,10 @@ ms.locfileid: "62891540"
 9. [プロパティウィンドウで、 `LocaleID`プロパティが**英語 (米国)** に設定されていることを確認します。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [手順 6 : 参照変換の追加と構成](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
+ [手順 6:参照変換の追加と構成](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
 ## <a name="see-also"></a>参照  
  [フラットファイルソース](data-flow/flat-file-source.md)   
- [[フラットファイル接続マネージャーエディター] &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)  
+ [[フラット ファイル接続マネージャー エディター] &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)  
   
   

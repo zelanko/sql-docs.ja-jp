@@ -23,19 +23,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 085b1783214e7f629f1cb91084303edacd151c25
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874643"
 ---
 # <a name="retrieving-udt-data"></a>UDT データの取得
   クライアント側で UDT (ユーザー定義型) を作成するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに UDT として登録されたアセンブリをクライアント アプリケーションで使用できるようにしておく必要があります。 この UDT アセンブリは、アプリケーションと同じディレクトリまたは GAC (グローバル アセンブリ キャッシュ) に配置できます。 また、プロジェクト内で、このアセンブリへの参照を設定することもできます。  
   
 ## <a name="requirements-for-using-udts-in-adonet"></a>ADO.NET で UDT を使用するための要件  
- クライアント側で UDT を作成するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に読み込まれたアセンブリとクライアント側に存在するアセンブリとの間に互換性がなくてはなりません。 
-  `Native` シリアル化形式で定義した UDT の場合は、アセンブリの構造に互換性が必要です。 
-  `UserDefined` 形式で定義したアセンブリの場合は、そのアセンブリをクライアント側で使用できる必要があります。  
+ クライアント側で UDT を作成するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に読み込まれたアセンブリとクライアント側に存在するアセンブリとの間に互換性がなくてはなりません。 `Native` シリアル化形式で定義した UDT の場合は、アセンブリの構造に互換性が必要です。 `UserDefined` 形式で定義したアセンブリの場合は、そのアセンブリをクライアント側で使用できる必要があります。  
   
  テーブルの UDT 列からデータをそのまま取得するために、クライアントに UDT アセンブリをコピーする必要はありません。  
   
@@ -376,8 +374,7 @@ class GetRawBytes
  ADO.NET コードでは、UDT は入力パラメーターと出力パラメーターのどちらとしても使用することができます。  
   
 ## <a name="using-udts-in-query-parameters"></a>クエリ パラメーターでの UDT の使用  
- UDT は、`SqlParameter` オブジェクトの `System.Data.SqlClient.SqlCommand` を設定する際にパラメーター値として使用できます。 
-  `SqlDbType.Udt` オブジェクトの `SqlParameter` 列挙値は、`Add` コレクションに対して `Parameters` メソッドを呼び出す際、パラメーターが UDT であることを示すために使用します。 `SqlCommand`オブジェクト`UdtTypeName`のプロパティは、データベース内の UDT の完全修飾名を指定するために使用されます。 *schema_name object_name*構文を使用します。 必須ではありませんが、完全修飾名を使用すると、コードを明確にすることができます。  
+ UDT は、`SqlParameter` オブジェクトの `System.Data.SqlClient.SqlCommand` を設定する際にパラメーター値として使用できます。 `SqlDbType.Udt` オブジェクトの `SqlParameter` 列挙値は、`Add` コレクションに対して `Parameters` メソッドを呼び出す際、パラメーターが UDT であることを示すために使用します。 `SqlCommand`オブジェクト`UdtTypeName`のプロパティは、データベース内の UDT の完全修飾名を指定するために使用されます。 *schema_name object_name*構文を使用します。 必須ではありませんが、完全修飾名を使用すると、コードを明確にすることができます。  
   
 > [!NOTE]  
 >  クライアント プロジェクトが、UDT アセンブリのローカル コピーを使用できることが前提です。  

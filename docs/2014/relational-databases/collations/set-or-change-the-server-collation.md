@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d4501bc77a28746de3b0ce97b7b619889093650d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62918578"
 ---
 # <a name="set-or-change-the-server-collation"></a>サーバーの照合順序の設定または変更
@@ -51,8 +51,8 @@ ms.locfileid: "62918578"
   
 ## <a name="see-also"></a>参照  
  [照合順序と Unicode のサポート](collation-and-unicode-support.md)   
- [データベースの照合順序の設定または変更](set-or-change-the-database-collation.md)   
- [列の照合順序の設定または変更](set-or-change-the-column-collation.md)   
+ [データベースの照合順序を設定または変更する](set-or-change-the-database-collation.md)   
+ [列の照合順序を設定または変更する](set-or-change-the-column-collation.md)   
  [システム データベースの再構築](../databases/system-databases.md)  
   
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d125a725a9e1c0cab34c7066fd9554ef0099d6e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62901107"
 ---
 # <a name="odbc-source"></a>ODBC 入力元
@@ -70,28 +70,27 @@ ms.locfileid: "62901107"
   
  詳細については、次のいずれかのトピックを参照してください。  
   
--   [ODBC ソースエディター &#40;接続マネージャーのページ&#41;](../odbc-source-editor-connection-manager-page.md)  
+-   [ODBC ソース エディター ([接続マネージャー] ページ)](../odbc-source-editor-connection-manager-page.md)  
   
--   [ODBC ソースエディターの [列の &#40;] ページ&#41;](../odbc-source-editor-columns-page.md)  
+-   [[ODBC ソース エディター] &#40;[列] ページ&#41;](../odbc-source-editor-columns-page.md)  
   
--   [ODBC ソースエディター &#40;エラー出力ページ&#41;](../odbc-source-editor-error-output-page.md)  
+-   [[ODBC ソース エディター] &#40;[エラー出力] ページ&#41;](../odbc-source-editor-error-output-page.md)  
   
- **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが表示されます。  
+ [**詳細エディター** ] ダイアログボックスには、プログラムで設定できるプロパティが表示されます。  
   
  **[詳細エディター]** ダイアログ ボックスを開くには、次の操作を実行します。  
   
--   
-  **プロジェクトの** [データ フロー] [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 画面で、ODBC 入力元を右クリックし、 **[詳細エディターの表示]** をクリックします。  
+-   **プロジェクトの** [データ フロー] [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 画面で、ODBC 入力元を右クリックし、 **[詳細エディターの表示]** をクリックします。  
   
  [詳細エディター] ダイアログ ボックスで設定できるプロパティの詳細については、「 [ODBC 入力元のカスタム プロパティ](odbc-source-custom-properties.md)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [ODBC ソースエディター &#40;エラー出力ページ&#41;](../odbc-source-editor-error-output-page.md)  
+-   [[ODBC ソース エディター] &#40;[エラー出力] ページ&#41;](../odbc-source-editor-error-output-page.md)  
   
--   [ODBC ソースエディターの [列の &#40;] ページ&#41;](../odbc-source-editor-columns-page.md)  
+-   [[ODBC ソース エディター] &#40;[列] ページ&#41;](../odbc-source-editor-columns-page.md)  
   
--   [ODBC ソースエディター &#40;接続マネージャーのページ&#41;](../odbc-source-editor-connection-manager-page.md)  
+-   [ODBC ソース エディター ([接続マネージャー] ページ)](../odbc-source-editor-connection-manager-page.md)  
   
 -   [ODBC 入力元を使用したデータ抽出](odbc-source.md)  
   

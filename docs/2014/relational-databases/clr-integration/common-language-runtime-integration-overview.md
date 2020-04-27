@@ -19,23 +19,20 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a7764c6e8e45b56e43e592e70b1c85b8d4744b69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919313"
 ---
 # <a name="common-language-runtime-clr-integration-overview"></a>CLR (共通言語ランタイム) 統合の概要
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]では、Windows 用の[!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework の共通言語ランタイム (CLR) コンポーネントの統合が機能するようになりました。 CLR では、言語間の統合、コード アクセス セキュリティ、オブジェクトの有効期間の管理、デバッグとプロファイルのサポートなどのサービスがマネージド コードに提供されます。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のユーザーやアプリケーション開発者にとっての CLR 統合とは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic .NET や [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# などの .NET Framework 言語を使用して、ストアド プロシージャ、トリガー、ユーザー定義型、ユーザー定義関数 (スカラー関数とテーブル値関数)、ユーザー定義集計関数を記述できるようになることを意味します。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、.NET Framework Version 4 が付属します。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]では、Windows 用の[!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework の共通言語ランタイム (CLR) コンポーネントの統合が機能するようになりました。 CLR では、言語間の統合、コード アクセス セキュリティ、オブジェクトの有効期間の管理、デバッグとプロファイルのサポートなどのサービスがマネージド コードに提供されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のユーザーやアプリケーション開発者にとっての CLR 統合とは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic .NET や [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# などの .NET Framework 言語を使用して、ストアド プロシージャ、トリガー、ユーザー定義型、ユーザー定義関数 (スカラー関数とテーブル値関数)、ユーザー定義集計関数を記述できるようになることを意味します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、.NET Framework Version 4 が付属します。  
   
  次に、この統合の主な利点のいくつかを示します。  
   
 -   **優れたプログラミング モデル。** .NET Framework 言語では、以前 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の開発者が使用できなかった構造や機能が提供されるので、多くの点で Transact-SQL よりも優れています。 また、開発者は .NET Framework ライブラリの機能も使用できます。.NET Framework ライブラリには、プログラミングに関する問題を、迅速かつ効率的に解決する際に使用できる幅広いクラスのセットが用意されています。  
   
--   **安全性とセキュリティの強化。** マネージコードは、データベースエンジンによってホストされる共通言語ランタイム環境で実行されます。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ではこれを利用して、旧バージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 拡張ストアド プロシージャに代わる、より安全で確実な機能を提供します。  
+-   **安全性とセキュリティの強化。** マネージコードは、データベースエンジンによってホストされる共通言語ランタイム環境で実行されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ではこれを利用して、旧バージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 拡張ストアド プロシージャに代わる、より安全で確実な機能を提供します。  
   
 -   **データ型や集計関数を定義する機能。** ユーザー定義型とユーザー定義集計は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のストレージ機能とクエリ機能を拡張する新しい 2 つのマネージド データベース オブジェクトです。  
   

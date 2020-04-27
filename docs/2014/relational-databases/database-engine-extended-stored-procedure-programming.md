@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f4146e19c6306cbe83659390605f570561fcc08f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917821"
 ---
 # <a name="database-engine-extended-stored-procedure-programming"></a>データベース エンジン拡張ストアド プロシージャ プログラミング
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR 統合を使用してください。 詳細については、「[共通言語ランタイム &#40;CLR&#41; 統合のプログラミング概念](clr-integration/common-language-runtime-clr-integration-programming-concepts.md)」をご覧ください。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../includes/ssnotedepfuturedontuse-md.md)] 代わりに CLR Integration を使用してください。 詳細については、「[共通言語ランタイム &#40;CLR&#41; 統合のプログラミング概念](clr-integration/common-language-runtime-clr-integration-programming-concepts.md)」をご覧ください。  
   
  拡張[!INCLUDE[msCoName](../includes/msconame-md.md)]ストアドプロシージャ api には、機能を拡張[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]するためのサーバーベースのアプリケーションプログラミングインターフェイス (api) が用意されています。 この API は、拡張ストアド プロシージャおよびゲートウェイ アプリケーションのカテゴリでアプリケーションの構築に使用する C および C++ の関数とマクロで構成されています。  
   

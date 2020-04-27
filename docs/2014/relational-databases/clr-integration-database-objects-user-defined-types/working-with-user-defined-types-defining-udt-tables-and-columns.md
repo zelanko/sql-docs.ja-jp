@@ -23,18 +23,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1b87e497c6610a2d75daa9432246e4f4b4690bab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874446"
 ---
 # <a name="defining-udt-tables-and-columns"></a>UDT テーブルと UDT 列の定義
   ユーザー定義型 (UDT) 定義を含むアセンブリが[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースに登録されると、列定義で使用できます。  
   
 ## <a name="creating-tables-with-udts"></a>UDT を含むテーブルの作成  
- テーブルに UDT 列を作成するために特別な構文は用意されていません。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固有のデータ型であるかのように、列定義に UDT の名前を使用できます。 次の CREATE TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントでは、 **Points**という名前のテーブルを作成します。この列は`int` **id**列として定義され、テーブルの主キーとして定義されています。 2番目の列は**Pointvalue**という名前で、データ型は**point**です。 この例で使用するスキーマ名は**dbo**です。 この操作には、スキーマ名を指定する権限が必要です。 スキーマ名を省略すると、データベース ユーザーの既定のスキーマが使用されます。  
+ テーブルに UDT 列を作成するために特別な構文は用意されていません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固有のデータ型であるかのように、列定義に UDT の名前を使用できます。 次の CREATE TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントでは、 **Points**という名前のテーブルを作成します。この列は`int` **id**列として定義され、テーブルの主キーとして定義されています。 2番目の列は**Pointvalue**という名前で、データ型は**point**です。 この例で使用するスキーマ名は**dbo**です。 この操作には、スキーマ名を指定する権限が必要です。 スキーマ名を省略すると、データベース ユーザーの既定のスキーマが使用されます。  
   
 ```  
 CREATE TABLE dbo.Points   

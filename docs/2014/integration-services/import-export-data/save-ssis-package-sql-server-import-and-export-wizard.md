@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6af26cafd4f8dd9bf874ae7860c4f796bef48ae1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62892767"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>[SSIS パッケージの保存]\(SQL Server インポートおよびエクスポート ウィザード)
@@ -36,7 +36,7 @@ ms.locfileid: "62892767"
  **説明**  
  パッケージの説明を指定します。 パッケージを自己文書化して目的を明確にし、保守が容易になるように、パッケージの目的について記述することをお勧めします。  
   
- **接続**  
+ **移行先**  
  保存先ファイルとしてあらかじめ指定されているターゲット ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] またはファイル) を表示します。  
   
 ## <a name="target-dynamic-options"></a>保存先の動的オプション  
@@ -58,10 +58,10 @@ ms.locfileid: "62892767"
  保存先として [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を選択し、SQL Server 認証を使用してサーバーに接続することを指定した場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパスワードを入力します。  
   
 ### <a name="target--file-system"></a>[変換先] = [ファイル システム]  
- **ファイル名**  
+ **[ファイル名]**  
  ファイルの保存先を選択した場合は、変換先ファイルのパスを入力するか、[**参照**] ボタンを使用します。  
   
- **[参照]**  
+ **参照**  
  ファイルの保存先を選択したら、[**パッケージの保存**] ダイアログボックスを使用して目的のファイルを参照します。  
   
 ## <a name="see-also"></a>参照  

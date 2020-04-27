@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 5575b83803628f20568c86f44568fab909f7fdd9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919293"
 ---
 # <a name="assembly-properties-general-page"></a>[アセンブリのプロパティ] ([全般] ページ)
@@ -29,26 +29,26 @@ ms.locfileid: "62919293"
  **[アセンブリの所有者]**  
  所有者名またはスキーマ名を入力するか、一覧から選択します。  
   
- **権限セット**  
+ **アクセス許可セット**  
  アセンブリにセキュリティ レベルを設定します。 **安全**、**外部アクセス**、**安全でない**アクセスという3つのセキュリティレベルが提供されます。  
   
  **[アセンブリへのパス]**  
  アセンブリ ファイルへのパスを入力します。  
   
- **[参照]**  
+ **参照**  
  追加するアセンブリに移動します。 アセンブリファイルへのパスを入力しない場合は、[**参照**] をクリックします。  
   
 ## <a name="additional-properties-grid"></a>[追加のプロパティ] グリッド  
  **[作成日付]**  
  アセンブリが作成または登録された日時を表示します。  
   
- **[厳密な名前]**  
+ **厳密な名前**  
  アセンブリがデジタル署名されている場合は**True** 、デジタル署名されていない場合は**False**を表示します。  
   
- **バージョン**  
+ **Version**  
  アセンブリのバージョン番号を表示します。  
   
 ## <a name="see-also"></a>参照  
- [CREATE ASSEMBLY &#40;Transact-sql&#41;](/sql/t-sql/statements/create-assembly-transact-sql)  
+ [CREATE ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-assembly-transact-sql)  
   
   

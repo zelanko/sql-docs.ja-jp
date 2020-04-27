@@ -34,10 +34,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 19ea6e9f077b5097b8c5daa6d967a17336553ba7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919947"
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>SQL Server でのユーザー定義型の登録
@@ -59,14 +59,12 @@ ms.locfileid: "62919947"
 5.  [**ビルド**] メニューの [**配置**] をクリックします。 この結果、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースにアセンブリが登録され、型が作成されます。  
   
 ## <a name="using-transact-sql-to-deploy-udts"></a>Transact-SQL を使用した UDT の配置  
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY 構文は、UDT を使用するデータベースにアセンブリを登録する場合に使用します。 アセンブリは、ファイル システムに外部的に格納されるのではなく、データベース システム テーブルに内部的に格納されます。 UDT が外部アセンブリに依存する場合は、それらのアセンブリもデータベースに読み込む必要があります。 CREATE TYPE ステートメントは、UDT を使用するデータベースに UDT を作成する場合に使用します。 詳細については、[CREATE ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-assembly-transact-sql) と [CREATE TYPE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-type-transact-sql)。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY 構文は、UDT を使用するデータベースにアセンブリを登録する場合に使用します。 アセンブリは、ファイル システムに外部的に格納されるのではなく、データベース システム テーブルに内部的に格納されます。 UDT が外部アセンブリに依存する場合は、それらのアセンブリもデータベースに読み込む必要があります。 CREATE TYPE ステートメントは、UDT を使用するデータベースに UDT を作成する場合に使用します。 詳細については、[CREATE ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-assembly-transact-sql) と [CREATE TYPE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-type-transact-sql)。  
   
 ### <a name="using-create-assembly"></a>CREATE ASSEMBLY の使用  
  CREATE ASSEMBLY 構文では、UDT を使用するデータベースにアセンブリが登録されます。 アセンブリを登録すると、そのアセンブリに依存関係がなくなります。  
   
- 指定された 1 つのデータベースに複数のバージョンの同じアセンブリを作成することはできません。 ただし、特定の 1 つのデータベースに、カルチャに基づいて、複数のバージョンの同じアセンブリを作成することはできます。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに登録されているとおりに、異なる名前で、アセンブリの複数のカルチャ バージョンが区別されます。 詳細については、.NET Framework SDK の「厳密な名前付きアセンブリの作成と使用」を参照してください。  
+ 指定された 1 つのデータベースに複数のバージョンの同じアセンブリを作成することはできません。 ただし、特定の 1 つのデータベースに、カルチャに基づいて、複数のバージョンの同じアセンブリを作成することはできます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに登録されているとおりに、異なる名前で、アセンブリの複数のカルチャ バージョンが区別されます。 詳細については、.NET Framework SDK の「厳密な名前付きアセンブリの作成と使用」を参照してください。  
   
  SAFE 権限セットまたは EXTERNAL_ACCESS 権限セットを指定して CREATE ASSEMBLY を実行すると、アセンブリが検証可能でタイプ セーフであることを確認するためのチェックが行われます。 権限セットを指定しないと、SAFE が指定されていると想定されます。 UNSAFE 権限セットを指定したコードはチェックされません。 アセンブリの権限セットの詳細については、「[アセンブリのデザイン](../../relational-databases/clr-integration/assemblies-designing.md)」をご覧ください。  
   
@@ -179,7 +177,7 @@ ADD FILE FROM '\\Projects\Point\Point.cs' AS PointSource;
  **file_id**  
  各オブジェクトを識別する番号。特定の**assembly_id**に関連付けられた最初のオブジェクトは、値1を指定します。 同じ**assembly_id**に複数のオブジェクトが関連付けられている場合は、その後の各**file_id**値が1ずつインクリメントされます。  
   
- **情報**  
+ **content**  
  アセンブリまたはファイルの 16 進数表記。  
   
  CAST 関数または CONVERT 関数を使用すると、**コンテンツ**列の内容を読み取り可能なテキストに変換できます。 次のクエリでは、結果セットを 1 行に制限するために WHERE 句で name を使用して、Point.cs ファイルの内容を読み取り可能なテキストに変換しています。  
@@ -213,8 +211,7 @@ SELECT CAST(content AS varchar(8000))
   
 -   あるデータベース テーブルの UDT 列から UDT データを選択し、その UDT データを同一の UDT 列を使用して 2 つ目のデータベースに挿入する場合。  
   
- このような状況では、必要なすべての変換がサーバーで自動的に行われます。 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST 関数または CONVERT 関数を使用して、明示的に変換を実行することはできません。  
+ このような状況では、必要なすべての変換がサーバーで自動的に行われます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST 関数または CONVERT 関数を使用して、明示的に変換を実行することはできません。  
   
  では、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] **tempdb**システムデータベースに作業テーブルを作成するときに、udt を使用するための操作を行う必要はありません。 これには、カーソル、テーブル変数、および Udt を含み、 **tempdb**を透過的に使用するユーザー定義テーブル値関数の処理が含まれます。 ただし、UDT 列を定義する**tempdb**に一時テーブルを明示的に作成する場合は、ユーザーデータベースの場合と同じように、udt を**tempdb**に登録する必要があります。  
   

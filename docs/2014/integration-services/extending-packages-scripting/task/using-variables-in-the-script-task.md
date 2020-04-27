@@ -21,23 +21,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a15edc663d5f855a5aa217400e1c38376e292f4c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62894593"
 ---
 # <a name="using-variables-in-the-script-task"></a>スクリプト タスクでの変数の使用
   スクリプト タスクで変数を使用すると、パッケージ内の別のオブジェクトとデータを交換できます。 詳細については、「 [Integration Services &#40;SSIS&#41; の変数](../../integration-services-ssis-variables.md)」を参照してください。  
   
- スクリプト タスクは、<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> オブジェクトの `Dts` プロパティを使用して、パッケージ内の <xref:Microsoft.SqlServer.Dts.Runtime.Variable> オブジェクトからデータを読み取ったり、オブジェクトにデータを書き込みます。  
+ スクリプト タスクは、`Dts` オブジェクトの <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> プロパティを使用して、パッケージ内の <xref:Microsoft.SqlServer.Dts.Runtime.Variable> オブジェクトからデータを読み取ったり、オブジェクトにデータを書き込みます。  
   
 > [!NOTE]  
->  
-  <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A> クラスの <xref:Microsoft.SqlServer.Dts.Runtime.Variable> プロパティのデータ型は `Object` です。 スクリプト タスクでは `Option Strict` が有効なので、使用する前に、<xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A> プロパティを適切な型にキャストする必要があります。  
+>  <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A> クラスの <xref:Microsoft.SqlServer.Dts.Runtime.Variable> プロパティのデータ型は `Object` です。 スクリプト タスクでは `Option Strict` が有効なので、使用する前に、<xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A> プロパティを適切な型にキャストする必要があります。  
   
- 既存の変数は、<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadOnlyVariables%2A>[スクリプト タスク エディター]<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadWriteVariables%2A> の **の一覧および** の一覧に追加することにより、カスタム スクリプトで使用できるようになります。 変数名の大文字と小文字は区別されることに注意してください。 スクリプト内では、<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> オブジェクトの `Dts` プロパティを介して、両方の種類の変数にアクセスできます。 
-  `Value` プロパティを使用して、各変数に対する読み取りおよび書き込みを行います。 スクリプト タスクは、スクリプトが変数の値を読み取ったり変更するときに、ユーザーに意識させずにロックを管理します。  
+ 既存の変数は、<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadOnlyVariables%2A>[スクリプト タスク エディター]<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadWriteVariables%2A> の **の一覧および** の一覧に追加することにより、カスタム スクリプトで使用できるようになります。 変数名の大文字と小文字は区別されることに注意してください。 スクリプト内では、`Dts` オブジェクトの <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> プロパティを介して、両方の種類の変数にアクセスできます。 `Value` プロパティを使用して、各変数に対する読み取りおよび書き込みを行います。 スクリプト タスクは、スクリプトが変数の値を読み取ったり変更するときに、ユーザーに意識させずにロックを管理します。  
   
  <xref:Microsoft.SqlServer.Dts.Runtime.Variables.Contains%2A> プロパティによって返される <xref:Microsoft.SqlServer.Dts.Runtime.Variables> コレクションの <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> メソッドを使用すると、変数をコードで使用する前に、その変数の存在を確認できます。  
   
@@ -116,7 +114,7 @@ public class ScriptMain
   
 ```  
   
-![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
  [SSIS&#41; 変数の Integration Services &#40;](../../integration-services-ssis-variables.md)   

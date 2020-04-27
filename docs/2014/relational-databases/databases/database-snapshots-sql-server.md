@@ -19,40 +19,40 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d15db702cb196842a5ddba25dbc3fa9cc18df5f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917148"
 ---
 # <a name="database-snapshots-sql-server"></a>データベース スナップショット (SQL Server)
-  データベーススナップショットは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データベース (*ソースデータベース*) の読み取り専用の静的ビューです。 データベース スナップショットには、そのスナップショットを作成した時点でのソース データベースに対するトランザクションが反映されています。 データベース スナップショットは、常にそのソース データベースと同じサーバー インスタンス上に存在します。 ソース データベースが更新されると、データベース スナップショットが更新されます。 したがって、データベース スナップショットが長期間にわたって存在するほど、使用可能なディスク領域が使い尽くされる可能性が高くなります。  
+  データベース スナップショットは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベース ( *ソース データベース*) の読み取り専用の静的ビューです。 データベース スナップショットには、そのスナップショットを作成した時点でのソース データベースに対するトランザクションが反映されています。 データベース スナップショットは、常にそのソース データベースと同じサーバー インスタンス上に存在します。 ソース データベースが更新されると、データベース スナップショットが更新されます。 したがって、データベース スナップショットが長期間にわたって存在するほど、使用可能なディスク領域が使い尽くされる可能性が高くなります。  
   
  1 つのソース データベースには複数のスナップショットが存在できます。 各データベース スナップショットは、データベースの所有者によって明示的に削除されるまで保持されます。  
   
 > [!NOTE]  
 >  データベース スナップショットは、スナップショットのバックアップ、トランザクションのスナップショット分離、およびスナップショット レプリケーションとは無関係の機能です。  
   
- **このトピックの内容:**  
+ **このトピックの内容**  
   
 -   [機能の概要](#FeatureOverview)  
   
--   [データベーススナップショットの利点](#Benefits)  
+-   [データベース スナップショットの利点](#Benefits)  
   
 -   [用語と定義](#TermsAndDefinitions)  
   
--   [データベーススナップショットの前提条件と制限](#LimitationsRequirements)  
+-   [データベース スナップショットの前提条件と制限](#LimitationsRequirements)  
   
--   [Related Tasks](#RelatedTasks)  
+-   [関連タスク](#RelatedTasks)  
   
-##  <a name="FeatureOverview"></a>機能の概要  
+##  <a name="feature-overview"></a><a name="FeatureOverview"></a> 機能の概要  
  データベース スナップショットは、データページ レベルで動作します。 ソース データベースのページをユーザーが初めて変更する前に、元のページがソース データベースからスナップショットにコピーされます。 スナップショットには元のページが格納され、スナップショットの作成時点におけるデータ レコードの状態が保持されます。 初めて変更する各ページについて、同様の処理が繰り返されます。 データベース スナップショットに対する読み取り操作では、その格納場所にかかわらず、常に元のデータ ページにアクセスすることになります。したがって、データベース スナップショットはユーザーには不変なものとして映ります。  
   
  コピーされた元のページを格納するために、スナップショットでは *スパース ファイル*が使用されます。 スパース ファイルの最初の状態は、ユーザー データを一切含まず、ユーザー データ用のディスク領域も割り当てられていない空のファイルです。 スパース ファイルのサイズは、ソース データベースで更新されるページ数が増えるにつれて大きくなります。 次の図は、2 つの対照的な更新パターンがスナップショットのサイズにどのような影響を与えるかを示しています。 更新パターン A は、スナップショットの有効期間に元のページの 30% しか更新されない環境を反映し、 更新パターン B は、スナップショットの有効期間に元のページの 80% が更新される環境を反映しています。  
   
  ![更新の代替パターンとスナップショットのサイズ](../../database-engine/media/dbview-04.gif "更新の代替パターンとスナップショットのサイズ")  
   
-##  <a name="Benefits"></a>データベーススナップショットの利点  
+##  <a name="benefits-of-database-snapshots"></a><a name="Benefits"></a> データベース スナップショットの利点  
   
 -   スナップショットはレポート生成に使用できます。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "62917148"
   
      テスト環境でテスト プロトコルを繰り返し実行する場合は、各テスト ラウンドを開始する際に同一のデータをデータベースに格納しておくと便利です。 アプリケーション開発者やテスターは、最初のラウンドを実行する前に、テスト データベースのデータベース スナップショットを作成できます。 各テストの実行が完了したら、データベース スナップショットを戻すことにより、データベースを元の状態にすばやく戻すことができます。  
   
-##  <a name="TermsAndDefinitions"></a>用語と定義  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a> 用語と定義  
  データベース スナップショット (database snapshot)  
  データベース (ソース データベース) の読み取り専用の静的なビュー。トランザクションの一貫性が確保されます。  
   
@@ -103,20 +103,20 @@ ms.locfileid: "62917148"
  スパース ファイル (sparse file)  
  NTFS ファイル システムによって実現される、本来よりもはるかに少ないディスク領域しか必要としないファイル。 スパース ファイルは、データベース スナップショットにコピーされたページを保存する際に使用されます。 作成したばかりのスパース ファイルは、ディスク領域をほとんど使用しません。 データがデータベース スナップショットに書き込まれるにつれて、NTFS によって、対応するスパース ファイルにディスク領域が徐々に割り当てられます。  
   
-##  <a name="LimitationsRequirements"></a>データベーススナップショットの前提条件と制限  
- **このセクションの手順:**  
+##  <a name="prerequisites-for-and-limitations-on-database-snapshots"></a><a name="LimitationsRequirements"></a> データベース スナップショットの前提条件と制限  
+ **このセクションの内容**  
   
 -   [前提条件](#Prerequisites)  
   
--   [ソースデータベースに関する制限事項](#LimitsOnSourceDb)  
+-   [ソース データベースへの制限](#LimitsOnSourceDb)  
   
--   [データベーススナップショットに関する制限事項](#LimitsOnDbSS)  
+-   [データベース スナップショットへの制限](#LimitsOnDbSS)  
   
 -   [必要なディスク領域](#DiskSpace)  
   
--   [オフラインファイルグループを含むデータベーススナップショット](#OfflineFGs)  
+-   [オフライン ファイル グループを含むデータベース スナップショット](#OfflineFGs)  
   
-###  <a name="Prerequisites"></a> 前提条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
  任意の復旧モデルを使用できるソース データベースは、次の前提条件を満たす必要があります。  
   
 -   データベース スナップショットをサポートする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エディションでサーバー インスタンスが実行されている必要があります。 詳しくは「 [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」をご覧ください。  
@@ -136,7 +136,7 @@ ms.locfileid: "62917148"
 > [!NOTE]  
 >  すべての復旧モデルがデータベース スナップショットをサポートしています。  
   
-###  <a name="LimitsOnSourceDb"></a>ソースデータベースに関する制限事項  
+###  <a name="limitations-on-the-source-database"></a><a name="LimitsOnSourceDb"></a>ソースデータベースに関する制限事項  
  データベース スナップショットが存在する限り、スナップショットのソース データベースには次の制限事項があります。  
   
 -   データベースは削除、デタッチ、または復元できません。  
@@ -148,7 +148,7 @@ ms.locfileid: "62917148"
   
 -   ソース データベースまたはスナップショットからはファイルを削除できません。  
   
-###  <a name="LimitsOnDbSS"></a>データベーススナップショットに関する制限事項  
+###  <a name="limitations-on-database-snapshots"></a><a name="LimitsOnDbSS"></a>データベーススナップショットに関する制限事項  
  データベース スナップショットには、次の制限事項が適用されます。  
   
 -   データベース スナップショットは、ソース データベースと同じサーバー インスタンスに作成および保持される必要があります。  
@@ -161,8 +161,7 @@ ms.locfileid: "62917148"
   
 -   スナップショットは読み取り専用です。 読み取り専用であるため、アップグレードできません。 したがって、データベース スナップショットはアップグレード後は利用不可と想定されます。  
   
--   
-  **model**、 **master**、および **tempdb** の各データベースのスナップショットは禁止されています。  
+-   **model**、 **master**、および **tempdb** の各データベースのスナップショットは禁止されています。  
   
 -   データベース スナップショット ファイルの仕様は変更できません。  
   
@@ -193,9 +192,9 @@ ms.locfileid: "62917148"
     > [!NOTE]  
     >  データベース スナップショットで実行する SELECT ステートメントには、FILESTREAM 列を指定しないようにする必要があります。FILESTREAM 列が含まれていると、次のようなエラー メッセージが返されます。 `Could not continue scan with NOLOCK due to data movement.`  
   
--   読み取り専用スナップショットに関する統計が欠落しているか、古くなっている場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、tempdb に一時的な統計を作成して維持します。 詳細については、[統計](../statistics/statistics.md)に関する記事を参照してください。  
+-   読み取り専用スナップショットに関する統計が欠落しているか、古くなっている場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、tempdb に一時的な統計を作成して維持します。 詳細については、「[統計](../statistics/statistics.md)」を参照してください。  
   
-###  <a name="DiskSpace"></a>必要なディスク領域  
+###  <a name="disk-space-requirements"></a><a name="DiskSpace"></a>必要なディスク領域  
  データベース スナップショットはディスク領域を消費します。 データベース スナップショットによってディスク領域が足りなくなった場合、そのデータベース スナップショットは問題ありに設定されるので、削除する必要があります (ただし、ソース データベースは影響を受けず、操作は正常に続行されます)。しかし、データベースの完全なコピーと比較すると、スナップショットでは領域が非常に効率的に使用されます。 スナップショットにとって必要なのは、有効期間中に変化するページを格納する領域だけです。 通常はスナップショットが保持されている時間は限られているので、サイズはそれほど大きな問題ではありません。  
   
  ただし、スナップショットを保持する時間が長くなると、空き領域が消費される可能性が高くなります。 スパース ファイルを拡張できる最大サイズは、スナップショットの作成時の対応するソース データベース ファイルのサイズです。  
@@ -205,7 +204,7 @@ ms.locfileid: "62917148"
 > [!NOTE]  
 >  ファイル領域を除いて、データベース スナップショットはデータベースとほぼ同じくらいのリソースを消費します。  
   
-###  <a name="OfflineFGs"></a>オフラインファイルグループを含むデータベーススナップショット  
+###  <a name="database-snapshots-with-offline-filegroups"></a><a name="OfflineFGs"></a>オフラインファイルグループを含むデータベーススナップショット  
  ソース データベース内のオフライン ファイル グループは、次の操作を実行しようとすると、データベース スナップショットに影響を与えます。  
   
 -   スナップショットの作成  
@@ -224,19 +223,19 @@ ms.locfileid: "62917148"
   
      ソース データベースをデータベース スナップショットに戻すには、スナップショットの作成時にオフラインだったファイル グループを除くすべてのファイル グループがオンラインである必要があります。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
--   [Transact-sql&#41;&#40;データベーススナップショットを作成する](create-a-database-snapshot-transact-sql.md)  
+-   [データベース スナップショットの作成 &#40;Transact-SQL&#41;](create-a-database-snapshot-transact-sql.md)  
   
--   [データベーススナップショット &#40;SQL Server の表示&#41;](view-a-database-snapshot-sql-server.md)  
+-   [データベース スナップショットの表示 &#40;SQL Server&#41;](view-a-database-snapshot-sql-server.md)  
   
--   [Transact-sql&#41;&#40;データベーススナップショットのスパースファイルのサイズを表示する](view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)  
+-   [データベース スナップショットのスパース ファイルのサイズを表示する方法 &#40;Transact-SQL&#41;](view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)  
   
 -   [データベースをデータベース スナップショットに戻す](revert-a-database-to-a-database-snapshot.md)  
   
--   [Transact-sql&#41;&#40;データベーススナップショットを削除する](drop-a-database-snapshot-transact-sql.md)  
+-   [データベース スナップショットの削除 &#40;Transact-SQL&#41;](drop-a-database-snapshot-transact-sql.md)  
   
 ## <a name="see-also"></a>参照  
- [データベースミラーリングとデータベーススナップショット &#40;SQL Server&#41;](database-snapshots-sql-server.md)  
+ [データベース ミラーリングとデータベース スナップショット &#40;SQL Server&#41;](database-snapshots-sql-server.md)  
   
   

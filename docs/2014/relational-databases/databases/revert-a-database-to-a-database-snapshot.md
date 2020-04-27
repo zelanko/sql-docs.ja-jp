@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 357030c913888d299cbec06c212eb049383b4526
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62916710"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>データベースをデータベース スナップショットに戻す
@@ -29,13 +29,13 @@ ms.locfileid: "62916710"
   
      [前提条件](#Prerequisites)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **以下を使用して、データベースをデータベース スナップショットに戻す方法:** [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
  元に戻す操作は、次の状況ではサポートされません。  
   
 -   現在、データベースに、復帰する対象としてデータベース スナップショットが 1 つしかない。  
@@ -66,7 +66,7 @@ ms.locfileid: "62916710"
   
 -   復帰を行うと、すべてのフルテキスト カタログが削除されます。  
   
-###  <a name="Prerequisites"></a> 前提条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
  ソース データベースとデータベースの スナップショットが次の前提条件を満たすことを確認してください。  
   
 -   データベースが破損していないことを確認する。  
@@ -78,18 +78,18 @@ ms.locfileid: "62916710"
   
 -   データベース上に現在存在するその他のスナップショットをすべて削除する。 詳細については、「 [データベース スナップショットの削除 &#40;Transact-SQL&#41;](drop-a-database-snapshot-transact-sql.md)」を参照してください。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  ソース データベースで RESTORE DATABASE 権限を持つユーザーは、データベース スナップショットが作成されたときの状態に復帰させることができます。  
   
-##  <a name="TsqlProcedure"></a> データベースをデータベース スナップショットに戻す方法 (Transact-SQL の使用)  
+##  <a name="how-to-revert-a-database-to-a-database-snapshot-using-transact-sql"></a><a name="TsqlProcedure"></a> データベースをデータベース スナップショットに戻す方法 (Transact-SQL の使用)  
  **データベースをデータベース スナップショットに戻すには**  
   
 > [!NOTE]  
 >  この手順の例については、このセクションの後半の「 [例 (Transact-SQL)](#TsqlExample)」を参照してください。  
   
-1.  データベースを戻す対象になるデータベース スナップショットを特定します。 データベース内のスナップショットは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で参照できます (詳細については、「 [データベース スナップショットの表示 &#40;SQL Server&#41;](view-a-database-snapshot-sql-server.md)」を参照してください)。 また、 **sys.databases &#40;Transact-SQL&#41;** カタログ ビューの [sys.databases &amp;#40;Transact-SQL&amp;#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 列から、ビューのソース データベースを特定することもできます。  
+1.  データベースを戻す対象になるデータベース スナップショットを特定します。 データベース内のスナップショットは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で参照できます (詳細については、「 [データベース スナップショットの表示 &#40;SQL Server&#41;](view-a-database-snapshot-sql-server.md)」を参照してください)。 また、 **sys.databases &amp;#40;Transact-SQL&amp;#41;** カタログ ビューの [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 列から、ビューのソース データベースを特定することもできます。  
   
 2.  他のデータベース スナップショットを削除します。  
   
@@ -117,14 +117,14 @@ ms.locfileid: "62916710"
   
 6.  必要に応じて (特に、完全 (または一括ログ) 復旧モデルを使用している場合)、戻したデータベースをバックアップします。 データベースをバックアップするには、「[データベースの完全バックアップの作成 &#40;SQL Server&#41;](../backup-restore/create-a-full-database-backup-sql-server.md)」を参照してください。  
   
-###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 例 (Transact-SQL)  
  ここでは、データベースをデータベース スナップショットに戻す、次の例を示します。  
   
 -   A. [AdventureWorks データベースのスナップショットを戻す](#Reverting_AW)  
   
 -   B. [Sales データベースのスナップショットを戻す](#Reverting_Sales)  
   
-####  <a name="Reverting_AW"></a> A. AdventureWorks データベースのスナップショットを戻す  
+####  <a name="a-reverting-a-snapshot-on-the-adventureworks-database"></a><a name="Reverting_AW"></a> A. AdventureWorks データベースのスナップショットを戻す  
  この例では、現在、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースに 1 つだけスナップショットが存在することを想定しています。 データベースを戻す対象になるスナップショットを作成する例については、「 [データベース スナップショットの作成 &#40;Transact-SQL&#41;](create-a-database-snapshot-transact-sql.md)」を参照してください。  
   
 ```  
@@ -135,7 +135,7 @@ DATABASE_SNAPSHOT = 'AdventureWorks_dbss1800';
 GO  
 ```  
   
-####  <a name="Reverting_Sales"></a> B. Sales データベースのスナップショットを戻す  
+####  <a name="b-reverting-a-snapshot-on-the-sales-database"></a><a name="Reverting_Sales"></a> B. Sales データベースのスナップショットを戻す  
  この例では、現在、 **Sales** データベースに 2 つのスナップショット ( **sales_snapshot0600** および **sales_snapshot1200**) が存在することを想定しています。 古いスナップショットを削除し、新しいスナップショットにデータベースを戻します。  
   
  この例で使用するサンプル データベースおよびスナップショットを作成するためのコードについては、次の各トピックを参照してください。  
@@ -157,7 +157,7 @@ RESTORE DATABASE Sales FROM DATABASE_SNAPSHOT = 'sales_snapshot1200';
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [データベース スナップショットの作成 &#40;Transact-SQL&#41;](create-a-database-snapshot-transact-sql.md)  
   

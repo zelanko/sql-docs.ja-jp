@@ -16,10 +16,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 12ca3fcb00122313c1d1e4aae8b64733be9140c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62918996"
 ---
 # <a name="clr-integration-security"></a>CLR 統合のセキュリティ
@@ -27,15 +27,13 @@ ms.locfileid: "62918996"
   
  CLR 統合のセキュリティ モデルは、次のことを目標にしています。  
   
--   既定では、で[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]マネージユーザーコードを実行します。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の堅牢性を侵害する可能性のある操作の実行は、レベルの高い適切な権限によって保護されるようにする。  
+-   既定では、で[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]マネージユーザーコードを実行します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の堅牢性を侵害する可能性のある操作の実行は、レベルの高い適切な権限によって保護されるようにする。  
   
 -   マネージド ユーザー コードは、データベース内のユーザー データや他のユーザー コードに対して、未承認のアクセスを行わない。 ユーザー定義コードは、そのコードを呼び出したユーザー セッションのセキュリティ コンテキストで実行する。実行には、そのセキュリティ コンテキストにおける適切な特権を使用する。  
   
 -   ユーザー コードからサーバー外部のリソースへのアクセスを禁止するための制御機能を備える。ユーザー コードの使用は、ローカル データのアクセスおよびコンピューティングに限定する。  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] プロセスで実行することによって、ユーザー定義コードがシステム リソースへの未承認のアクセス手段を獲得してはならない。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] プロセスで実行することによって、ユーザー定義コードがシステム リソースへの未承認のアクセス手段を獲得してはならない。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]CLR のコードアクセスベースのセキュリティモデルを使用します。 このセクションでは、このようにセキュリティ モデルを組み合わせたアプローチによるメリットの一部を紹介します。  
   
@@ -48,8 +46,7 @@ ms.locfileid: "62918996"
  SAFE アセンブリと EXTERNAL_ACCESS アセンブリで許可されていないホスト保護属性 (HPA) の値に関する情報を提供します。  
   
  [CLR 統合のセキュリティのリンク](../../../database-engine/dev-guide/links-in-clr-integration-security.md)  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 内のユーザー コードが相互に呼び出すしくみを説明します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 内のユーザー コードが相互に呼び出すしくみを説明します。  
   
  [権限借用と CLR 統合のセキュリティ](../../../database-engine/dev-guide/impersonation-and-clr-integration-security.md)  
  権限借用を使用してマネージド コードが外部リソースにアクセスするしくみを説明します。  

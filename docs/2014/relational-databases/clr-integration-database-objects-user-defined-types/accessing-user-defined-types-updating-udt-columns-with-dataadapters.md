@@ -24,18 +24,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 82ac3490f80cf8683a6aebcea75004503a4d5ad4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919643"
 ---
 # <a name="updating-udt-columns-with-dataadapters"></a>データ アダプターによる UDT 列の更新
   UDT (ユーザー定義型) は、データの取得や変更を行う `System.Data.DataSet` と `System.Data.SqlClient.SqlDataAdapter` を使用することでサポートされます。  
   
 ## <a name="populating-a-dataset"></a>データセットの設定  
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントを使用して UDT 列の値を選択すれば、データ アダプターを使用してデータセットにデータを設定できます。 次の例では、次の構造といくつかのサンプルデータを使用して、 **Points**テーブルが定義されていることを前提としています。 次[!INCLUDE[tsql](../../includes/tsql-md.md)]のステートメントでは、 **Points**テーブルを作成し、いくつかの行を挿入します。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントを使用して UDT 列の値を選択すれば、データ アダプターを使用してデータセットにデータを設定できます。 次の例では、次の構造といくつかのサンプルデータを使用して、 **Points**テーブルが定義されていることを前提としています。 次[!INCLUDE[tsql](../../includes/tsql-md.md)]のステートメントでは、 **Points**テーブルを作成し、いくつかの行を挿入します。  
   
 ```  
 CREATE TABLE dbo.Points (id int PRIMARY Key, p Point);  
@@ -64,14 +63,11 @@ da.Fill(datTable);
 ```  
   
 ## <a name="updating-udt-data-in-a-dataset"></a>データセットの UDT データの更新  
- 
-  `DataSet` の UDT 列を更新するには、次の 2 つの方法を使用できます。  
+ `DataSet` の UDT 列を更新するには、次の 2 つの方法を使用できます。  
   
--   
-  `InsertCommand` オブジェクト用に独自の `UpdateCommand` オブジェクト、`DeleteCommand` オブジェクトおよび `SqlDataAdapter` オブジェクトを用意します。  
+-   `InsertCommand` オブジェクト用に独自の `UpdateCommand` オブジェクト、`DeleteCommand` オブジェクトおよび `SqlDataAdapter` オブジェクトを用意します。  
   
--   独自の INSERT コマンド、UPDATE コマンド、および DELETE コマンドを自動的に作成するために、コマンド ビルダー (`System.Data.SqlClient.SqlCommandBuilder`) を使用します。 競合を検出するために、UDT を含む `timestamp` テーブルに `rowversion` 列 (別名 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) を追加します。 
-  `timestamp` データ型によりテーブル内の行にバージョン スタンプが設定され、その行がデータベース内で一意になることが保証されます。 テーブル内の値が変更されると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではその変更の影響を受ける行の 8 バイトのバイナリ番号が自動的に更新されます。  
+-   独自の INSERT コマンド、UPDATE コマンド、および DELETE コマンドを自動的に作成するために、コマンド ビルダー (`System.Data.SqlClient.SqlCommandBuilder`) を使用します。 競合を検出するために、UDT を含む [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルに `timestamp` 列 (別名 `rowversion`) を追加します。 `timestamp` データ型によりテーブル内の行にバージョン スタンプが設定され、その行がデータベース内で一意になることが保証されます。 テーブル内の値が変更されると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではその変更の影響を受ける行の 8 バイトのバイナリ番号が自動的に更新されます。  
   
  基になるテーブルに `SqlCommandBuilder` がなければ、`timestamp` では競合の検出時に UDT を考慮しないことに注意してください。 UDT は比較できる場合も比較できない場合もあるので、コマンドの生成に "元の値の比較" オプションを使用しているときは、UDT が WHERE 句に含められません。  
   

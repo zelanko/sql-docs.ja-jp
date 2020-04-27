@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a78b177b1fb429535a4bb9b271d0b1dbc4eedc79
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921943"
 ---
 # <a name="file-restores-full-recovery-model"></a>ファイル復元 (完全復旧モデル)
@@ -54,7 +54,7 @@ ms.locfileid: "62921943"
   
   
   
-##  <a name="Overview"></a> 破損したファイルのファイル バックアップからの復元  
+##  <a name="restoring-damaged-files-from-file-backups"></a><a name="Overview"></a> 破損したファイルのファイル バックアップからの復元  
   
 1.  1 つ以上の破損したファイルを復元するには、 [ログ末尾のバックアップ](tail-log-backups-sql-server.md)を作成してください。  
   
@@ -120,7 +120,7 @@ RESTORE LOG database_name FROM <tail_log_backup>
   
 -   [例: プライマリ ファイル グループと他のファイル グループを 1 つオフラインで復元する &#40;完全復旧モデル&#41;](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
  **ファイルおよびファイル グループを復元するには**  
   
 -   [新しい場所へのファイルの復元 &#40;SQL Server&#41;](restore-files-to-a-new-location-sql-server.md)  

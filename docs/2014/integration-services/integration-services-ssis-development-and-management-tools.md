@@ -19,14 +19,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7c8f05c1b822cc3cad81ed910b71cb46621554eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62892455"
 ---
 # <a name="integration-services-ssis-and-studio-environments"></a>Integration Services (SSIS) と Studio の環境
-  
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]と組み合わせて活用できる 2 つの "Studio" が含まれています。  
   
 -   1 つは、ビジネス ソリューションに必要な[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] パッケージを開発するための [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] です。 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを使ってパッケージを作成します。  

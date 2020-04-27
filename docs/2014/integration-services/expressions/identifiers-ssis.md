@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a7913d82b471b50605c51fbfb61b3782cf135382
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62898860"
 ---
 # <a name="identifiers-ssis"></a>識別子 (SSIS)
@@ -112,7 +112,7 @@ ms.locfileid: "62898860"
 > [!IMPORTANT]  
 >  名前空間の組み合わせおよび修飾された変数名は、式エバリュエーターが変数を認識できるよう、角かっこで囲む必要があります。  
   
- **User**名前空間の**count**の値が10で、 **MyNamespace**の count の値が2の場合、式エバリュエーターが 2 `true`つの異なる変数を認識するため、式はに評価されます。 ****  
+ **User**名前空間の**count**の値が10で、 **MyNamespace**の count の値が2の場合、式エバリュエーターが 2 `true`つの異なる変数を認識するため、式はに評価されます。 **Count**  
   
  変数名が一意でない場合でもエラーは発生せず、 式エバリュエーターは、変数のインスタンスを 1 つのみ使用して式を評価し、間違った結果を返します。 たとえば、次の式は、2つの個別の**カウント**変数の値 (10 と 2) を比較するためのもの`false`ですが、式エバリュエーターでは**count**変数の同じインスタンスが2回使用されるため、式はと評価されます。  
   

@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16fa57c35c2c40d307b73809c21ccfbedc54f705
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917095"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>デタッチとアタッチを使用してデータベースを移動する方法 (Transact-SQL)
@@ -46,7 +46,7 @@ ms.locfileid: "62917095"
     > [!NOTE]  
     >  ログ ファイルを指定せずにデータベースのインポートを試みると、アタッチ操作は元の場所でログ ファイルを検索します。 ログのコピーが依然として元の場所にある場合は、そのコピーがアタッチされます。 元のログ ファイルが使用されないようにするには、新しいログ ファイルのパスを指定するか、ログ ファイルの元のコピーを (新しい場所にコピーした後で) 削除します。  
   
-3.  コピーしたファイルをアタッチします。 詳細については、「[データベースのアタッチ](attach-a-database.md)」をご覧ください。  
+3.  コピーしたファイルをアタッチします。 詳細については、「 [Attach a Database](attach-a-database.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次の例では、 [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)]ステートメントのコピーを、がアタッチされているサーバーインスタンスに接続されているクエリエディターウィンドウで実行します。  

@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0259f14bb814fd4157af95e4ce92f462d1fab68a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62877269"
 ---
 # <a name="back-up-and-restore-of-system-databases-sql-server"></a>システム データベースのバックアップと復元 (SQL Server)
@@ -28,7 +28,7 @@ ms.locfileid: "62877269"
   
  次の表に、すべてのシステム データベースの概要を示します。  
   
-|システム データベース|[説明]|バックアップの必要性|復旧モデル|説明|  
+|システム データベース|説明|バックアップの必要性|復旧モデル|説明|  
 |---------------------|-----------------|---------------------------|--------------------|--------------|  
 |[master](../databases/master-database.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムに関するシステム レベルのすべての情報を記録するデータベース。|はい|シンプル|**master** は、ビジネス ニーズを満たすのに十分なデータ保護を行うために必要な頻度でバックアップします。 定期的なバックアップ スケジュールの設定をお勧めします。大量の更新の後で追加のバックアップを行ってこれを補完することもできます。|  
 |[model](../databases/model-database.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス上に作成されるすべてのデータベースのテンプレート。|はい|ユーザー構成可能<sup>1</sup>|**model** は、データベース オプションをカスタマイズした直後など、ビジネス ニーズに応じて必要な場合のみバックアップします。<br /><br /> **ベスト プラクティス:** **model**については、必要なときにデータベースの完全バックアップのみを作成することをお勧めします。 **model** はサイズが小さく、変更頻度が低いため、ログのバックアップは必要ありません。|  
@@ -58,7 +58,7 @@ ms.locfileid: "62877269"
   
 -   状況によっては、モデル データベースを復旧する問題は、システム データベースの再構築、あるいはモデル データベースの mdf ファイルや ldf ファイルの置き換えが必要な場合があります。 詳細については、「 [システム データベースの再構築](../databases/system-databases.md)」を参照してください。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [データベースの完全バックアップの作成 &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
   

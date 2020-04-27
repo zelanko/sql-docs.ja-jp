@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a286c7d4c0ff42389830713a6c42c89a7273f1d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917729"
 ---
 # <a name="create-a-database-mail-account"></a>データベース メール アカウントの作成
@@ -29,15 +29,15 @@ ms.locfileid: "62917729"
   
 -   **補足情報:** [データベース メールを構成する次の手順](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Prerequisites"></a> 前提条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
   
 -   電子メールの送信に使用する SMTP (簡易メール転送プロトコル) サーバーの名前とポート番号を特定します。SMTP サーバーが認証を必要とする場合は、その SMTP サーバー用のユーザー名とパスワードを特定します。  
   
 -   サーバーの種類とそのサーバー用のポート番号を指定できます。この指定は省略できます。 送信メール用のサーバーの種類は、常に 'SMTP' になります。 ほとんどの SMTP サーバーは、既定のポート 25 を使用しています。  
   
-##  <a name="SSMSProcedure"></a> データベース メール構成ウィザードの使用  
+##  <a name="using-database-mail-configuration-wizard"></a><a name="SSMSProcedure"></a> データベース メール構成ウィザードの使用  
  **ウィザードを使用して、データベース メール アカウントを作成するには**  
   
 -   オブジェクト エクスプローラーで、データベース メールを構成する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続し、サーバー ツリーを展開します。  
@@ -54,7 +54,7 @@ ms.locfileid: "62917729"
   
 -   **[ウィザードの完了]** ページで、実行される動作を確認し、 **[完了]** をクリックして、新しいアカウントの作成を完了します。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  **Transact-SQL を使用して、データベース メール アカウントを作成するには**  
   
  **msdb.dbo.sysmail_add_account_sp** ストアド プロシージャを実行してアカウントを作成し、次の情報を指定します。  
@@ -84,7 +84,7 @@ EXECUTE msdb.dbo.sysmail_add_account_sp
     @mailserver_name = 'smtp.Adventure-Works.com' ;  
 ```  
   
-##  <a name="FollowUp"></a>補足情報: データベース メールを構成する次の手順  
+##  <a name="follow-up-next-steps-to-configuring-the-database-mail"></a><a name="FollowUp"></a>補足情報: データベース メールを構成する次の手順  
   
 -   [データベース メール プロファイルの作成](create-a-database-mail-profile.md)  
   

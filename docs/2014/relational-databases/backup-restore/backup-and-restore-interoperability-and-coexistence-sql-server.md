@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96fd1b081ec9d990014dc61db7938f745cffa041
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922437"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>バックアップと復元: 相互運用性と共存 (SQL Server)
@@ -40,7 +40,7 @@ ms.locfileid: "62922437"
   
 -   [関連タスク](#RelatedTasks)  
   
-##  <a name="FileRestoreAndDbStartup"></a> ファイル復元とデータベースの起動  
+##  <a name="file-restore-and-database-startup"></a><a name="FileRestoreAndDbStartup"></a> ファイル復元とデータベースの起動  
  ここで説明する内容は、複数のファイル グループを含む [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのみに適用されます。  
   
 > [!NOTE]  
@@ -52,14 +52,14 @@ ms.locfileid: "62922437"
   
  起動に成功した場合、オフライン ファイルが含まれるファイル グループはすべてオフライン状態で維持されます。  
   
-##  <a name="OnlineRestoreAndDisabledIndexes"></a> オンライン復元と無効化されたインデックス  
+##  <a name="online-restore-and-disabled-indexes"></a><a name="OnlineRestoreAndDisabledIndexes"></a> オンライン復元と無効化されたインデックス  
  ここで説明する内容は、複数のファイル グループを含むデータベースと、単純復旧モデルの場合の 1 つ以上の読み取り専用ファイル グループに適用されます。  
   
  これらのケースにおいて、データベースがオンラインの場合、インデックスの作成、削除、有効化や無効化を行うことができるのは、インデックスのいずれかの部分を保持しているファイル グループがすべてオンラインのときだけです。  
   
  オフラインのファイル グループを復元する方法については、「[オンライン復元 &#40;SQL Server&#41;](online-restore-sql-server.md)」を参照してください。  
   
-##  <a name="DbMandBnR"></a> データベース ミラーリングおよびバックアップと復元  
+##  <a name="database-mirroring-and-backup-and-restore"></a><a name="DbMandBnR"></a> データベース ミラーリングおよびバックアップと復元  
  ここで説明する内容は、複数のファイル グループを含む完全復旧モデルのデータベースだけに関連しています。  
   
 > [!NOTE]  
@@ -84,7 +84,7 @@ ms.locfileid: "62922437"
   
 -   プリンシパル データベースの復元は実行できません。  
   
-##  <a name="PiecemealAndFTIndexes"></a> 段階的な部分復元とフルテキスト インデックス  
+##  <a name="piecemeal-restore-and-full-text-indexes"></a><a name="PiecemealAndFTIndexes"></a> 段階的な部分復元とフルテキスト インデックス  
  ここで説明する内容は、複数のファイル グループを含むデータベースのみ (単純復旧モデルのデータベースでは、読み取り専用ファイル グループのみ) に適用されます。  
   
  フルテキスト インデックスは、データベース ファイル グループに格納され、段階的な部分復元による影響を受ける可能性があります。 関連するテーブル データのいずれかと同じファイル グループにフルテキスト インデックスが格納されている場合、段階的な部分復元は想定どおりに機能します。  
@@ -111,7 +111,7 @@ ms.locfileid: "62922437"
   
  ベース テーブルのファイル グループとフルテキスト インデックスのファイル グループの両方がオンラインになるとすぐに、一時停止中のフルテキスト作成がすべて再開されます。  
   
-##  <a name="FileBnRandCompression"></a> ファイル バックアップと復元と圧縮  
+##  <a name="file-backup-and-restore-and-compression"></a><a name="FileBnRandCompression"></a> ファイル バックアップと復元と圧縮  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、読み取り専用ファイル グループや読み取り専用データベースの NTFS ファイル システム データ圧縮がサポートされます。  
   
  圧縮された NTFS ファイルでは、読み取り専用ファイル グループのファイルの復元がサポートされます。 このようなファイル グループのバックアップや復元は、基本的には読み取り専用ファイル グループと同様に機能しますが、次の例外があります。  
@@ -123,7 +123,7 @@ ms.locfileid: "62922437"
 > [!NOTE]  
 >  読み取りと書き込みが可能なデータベースのログ ファイルは、圧縮されたファイル システムには配置しないでください。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   

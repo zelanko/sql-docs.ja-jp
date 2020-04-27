@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 96f5a873e8d172254e1ea18abbd0c570b27a35ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62918449"
 ---
 # <a name="start-or-stop-a-collection-set"></a>コレクション セットの開始または停止
@@ -41,28 +41,28 @@ ms.locfileid: "62918449"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   データ コレクターのストアド プロシージャとカタログ ビューは、 **msdb** データベースに格納されます。  
   
 -   通常のストアド プロシージャとは異なり、データ コレクターで使用するストアド プロシージャではパラメーターのデータ型が厳密に定義されており、データ型の自動変換はサポートされていません。 これらのパラメーターが、引数の説明で指定されている正しいデータ型で呼び出されないと、このストアド プロシージャではエラーが返されます。  
   
-###  <a name="Prerequisites"></a> 前提条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
   
 -   SQL Server エージェントが開始されている必要があります。  
   
-###  <a name="Recommendations"></a> 推奨事項  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
   
 -   コレクション セットに関する情報を取得するには、 [syscollector_collection_sets](/sql/relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql) カタログ ビューのクエリを実行します。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  **dc_operator** 固定データベース ロールのメンバーシップが必要です。 コレクション セットにプロキシ アカウントがない場合は、 **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-start-a-collection-set"></a>コレクション セットを開始するには  
   
@@ -80,7 +80,7 @@ ms.locfileid: "62918449"
   
      メッセージ ボックスにはこのアクションの結果が表示され、コレクション セットのアイコンに赤い丸が付いている場合は、コレクション セットが停止していることを示します。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-start-a-collection-set"></a>コレクション セットを開始するには  
   

@@ -16,22 +16,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ea923f72e0c9e505bc9e1f056d5ff4dbe36ad9a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62901033"
 ---
 # <a name="audit-transformation"></a>監査変換
-  監査変換により、パッケージが実行される環境に関するデータをパッケージ内のデータ フローに含めることができます。 たとえば、パッケージ、コンピューター、および演算子の名前をデータ フローに追加できます。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]には、この情報を提供するシステム変数が含まれてい[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]ます。  
+  監査変換により、パッケージが実行される環境に関するデータをパッケージ内のデータ フローに含めることができます。 たとえば、パッケージ、コンピューター、および演算子の名前をデータ フローに追加できます。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] には、この情報を提供するシステム変数が含まれています。  
   
 ## <a name="system-variables"></a>システム変数  
  次の表では、監査変換で使用できるシステム変数について説明します。  
   
-|システム変数|インデックス|[説明]|  
+|システム変数|インデックス|説明|  
 |---------------------|-----------|-----------------|  
 |`ExecutionInstanceGUID`|0|パッケージの実行インスタンスを識別する GUID です。|  
-|`PackageID`|1 で保護されたプロセスとして起動されました|パッケージの一意識別子です。|  
+|`PackageID`|1|パッケージの一意識別子です。|  
 |`PackageName`|2|パッケージの名前です。|  
 |`VersionID`|3|パッケージのバージョンです。|  
 |`ExecutionStartTime`|4|パッケージの実行を開始した時刻です。|  
@@ -47,17 +47,14 @@ ms.locfileid: "62901033"
   
  プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- 
-  **[監査変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、「 [Audit Transformation Editor](../../audit-transformation-editor.md)」を参照してください。  
+ **[監査変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、「 [Audit Transformation Editor](../../audit-transformation-editor.md)」を参照してください。  
   
- 
-  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 
-  **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
 -   [共通プロパティ](../../common-properties.md)  
   
 -   [変換のカスタム プロパティ](transformation-custom-properties.md)  
   
- データ フロー コンポーネントのプロパティの設定方法については、「 [データ フロー コンポーネントのプロパティを設定する](../set-the-properties-of-a-data-flow-component.md)」を参照してください。  
+ プロパティの設定方法の詳細については、「 [データ フロー コンポーネントのプロパティを設定する](../set-the-properties-of-a-data-flow-component.md)」を参照してください。  
   
   

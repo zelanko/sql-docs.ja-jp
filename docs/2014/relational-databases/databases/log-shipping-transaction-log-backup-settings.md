@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d2e1484107e4ee5e7f7f2a10eaa719b5c96c098e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62916890"
 ---
 # <a name="log-shipping-transaction-log-backup-settings"></a>[トランザクション ログのバックアップの設定]
@@ -24,7 +24,7 @@ ms.locfileid: "62916890"
   
  ログ配布の概念については、「 [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)」を参照してください。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **[バックアップ フォルダーのネットワーク パス (例: \\\\primaryserver\\backup)]**  
  このボックスに、バックアップ フォルダーへのネットワーク共有を入力します。 トランザクション ログ バックアップが保存されるローカル フォルダーを共有することにより、ログ配布コピー ジョブでこれらのファイルをセカンダリ サーバーにコピーできます。 セカンダリ サーバー インスタンスでコピー ジョブを実行できるように、このネットワーク共有での読み取り権限をプロキシ アカウントに与えてください。 既定では、このアカウントは、セカンダリ サーバー インスタンスの SQLServer エージェント サービス アカウントですが、管理者はジョブに対して別のプロキシ アカウントを選択できます。  
   

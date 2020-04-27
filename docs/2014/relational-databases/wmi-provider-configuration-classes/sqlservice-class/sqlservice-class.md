@@ -19,19 +19,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: c48db11ae347d1fb1c2a393e440aebb0c80def54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62912136"
 ---
 # <a name="sqlservice-class"></a>SqlService クラス
-  
   [SqlService クラス](sqlservice-class.md) は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスのインスタンスを表します。  
   
- 
-  [SqlService クラス](sqlservice-class.md) は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスをプログラムによって管理するために使用されます。 
-  [SqlService クラス](sqlservice-class.md) オブジェクトを使用すると、次のタスクを実行することができます。  
+ [SqlService クラス](sqlservice-class.md) は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスをプログラムによって管理するために使用されます。 [SqlService クラス](sqlservice-class.md) オブジェクトを使用すると、次のタスクを実行することができます。  
   
 -   サービスに接続します。  
   

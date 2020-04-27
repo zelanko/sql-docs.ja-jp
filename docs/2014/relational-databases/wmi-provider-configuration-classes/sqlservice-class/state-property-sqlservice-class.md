@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: cc1484a09929f4e4a8534b2c2acac2089adfbb97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62912187"
 ---
 # <a name="state-property-sqlservice-class"></a>State プロパティ (SqlService クラス)
@@ -37,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>要素  
- *素材*  
+ *object*  
  サービスを表す [SqlService クラス](sqlservice-class.md) オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
@@ -45,8 +45,8 @@ object
   
  値には、次のいずれかを指定できます。  
   
- 1 で保護されたプロセスとして起動されました  
- 停止中。 サービスは停止されています。  
+ 1  
+ 停止中。 サービスが停止しています。  
   
  2  
  開始保留中。 サービスは開始を待機しています。  
@@ -66,7 +66,7 @@ object
  7  
  一時停止。 サービスは一時停止しています。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>参照  
  [サービスの開始および停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bf554cac0bf20e93826c183c888b1b0176e6e7da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62900940"
 ---
 # <a name="sql-server-compact-edition-destination-custom-properties"></a>SQL Server Compact Edition 変換先のカスタム プロパティ
@@ -22,7 +22,7 @@ ms.locfileid: "62900940"
   
  次の表は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 変換先のカスタム プロパティを示しています。 すべてのプロパティは読み取り/書き込み可能です。  
   
-|プロパティ名|データ型|[説明]|  
+|プロパティ名|データ型|説明|  
 |-------------------|---------------|-----------------|  
 |TableName|String|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact データベース内の変換先テーブルの名前。<br /><br /> このプロパティの値は、プロパティ式を使用して指定することができます。|  
   

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 21f58cd6991b760edeefb81c37e02c617f8e09cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917009"
 ---
 # <a name="shrink-a-database"></a>データベースの圧縮
@@ -32,9 +32,9 @@ ms.locfileid: "62917009"
   
 
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   データベースは、そのデータベースの最小サイズより小さくすることはできません。 最小サイズは、データベースが最初に作成されたときに指定されたサイズか、DBCC SHRINKFILE などのファイル サイズ変更操作によって最後に明示的に設定されたサイズのいずれかになります。 たとえば、作成時にサイズを 10 MB に指定したデータベースが 100 MB まで拡張した場合、データベース内のすべてのデータを削除したとしても、縮小できる限界は 10 MB までです。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62917009"
   
 -   DBCC SHRINKDATABASE は、xVelocity メモリ最適化列ストア インデックスを検出すると失敗します。 列ストア インデックスを検出する前に完了した処理は成功するので、データベースが小さくなる場合があります。 DBCC SHRINKDATABASE を完了するには、DBCC SHRINKDATABASE を実行する前にすべての列ストア インデックスを無効にし、後で列ストア インデックスを再構築します。  
   
-###  <a name="Recommendations"></a> 推奨事項  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
   
 -   データベース内にある現在の空き (未割り当て) 領域の大きさを確認します。 詳細については、「 [データベースのデータ領域とログ領域情報の表示](display-data-and-log-space-information-for-a-database.md)」をご覧ください。  
   
@@ -56,40 +56,39 @@ ms.locfileid: "62917009"
   
     -   特別な要件がない限り、AUTO_SHRINK データベース オプションを ON に設定しないでください。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  **Sysadmin**固定サーバーロールまたは**db_owner**固定データベースロールのメンバーシップが必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-shrink-a-database"></a>データベースを圧縮するには  
   
 1.  **オブジェクトエクスプローラー**で、の[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]インスタンスに接続し、そのインスタンスを展開します。  
   
-2.  [**データベース**] を展開し、圧縮するデータベースを右クリックします。  
+2.  **[データベース]** を展開し、圧縮するデータベースを右クリックします。  
   
-3.  
-  **[タスク]**、 **[圧縮]** の順にポイントし、 **[データベース]** をクリックします。  
+3.  **[タスク]**、 **[圧縮]** の順にポイントし、 **[データベース]** をクリックします。  
   
      **[データベース]**  
      選択しているデータベースの名前が表示されます。  
   
-     **現在割り当てられている領域**  
+     **[現在割り当てられている領域]**  
      選択されているデータベースの使用済み領域と未使用領域の合計を表示します。  
   
-     **使用可能な空き領域**  
+     **[使用可能な空き領域]**  
      選択されているデータベースのログ ファイルおよびデータ ファイル内の空き領域の合計を表示します。  
   
-     **未使用領域を解放する前にファイルを再構成する**  
+     **[未使用領域の解放前にファイルを再構成する]**  
      このオプションをオンにすることは、目的のパーセント オプションを指定して DBCC SHRINKDATABASE を実行することと同じです。 このオプションをオフにすると、TRUNCATEONLY オプションを使用して DBCC SHRINKDATABASE を実行するのと同じ効果があります。 既定では、ダイアログが開いたときに、このオプションはオフに設定されます。 このオプションをオンにした場合、ユーザーは目的のパーセント オプションを指定する必要があります。  
   
-     **圧縮後のファイルの最大空き領域**  
+     **[圧縮後のファイルの最大空き領域]**  
      データベースを圧縮した後に、データベース ファイル内に残す空き領域の最大パーセンテージを入力します。 0 ～ 99 の値を指定できます。  
   
 4.  **[OK]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-shrink-a-database"></a>データベースを圧縮するには  
   
@@ -101,12 +100,12 @@ ms.locfileid: "62917009"
   
  [!code-sql[DBCC#DBCC_SHRINKDB1](../../snippets/tsql/SQL14/tsql/dbcc/transact-sql/dbcc_other.sql#dbcc_shrinkdb1)]  
   
-##  <a name="FollowUp"></a>補足情報: データベースを圧縮した後  
+##  <a name="follow-up-after-you-shrink-a-database"></a><a name="FollowUp"></a>補足情報: データベースを圧縮した後  
  ファイルを圧縮するために移動されたデータは、ファイル内のあらゆる使用可能な場所に分散される場合があります。 これにより、インデックスの断片化が発生し、広範なインデックスを検索するクエリのパフォーマンスが低下する場合があります。 断片化を解消するには、圧縮後にファイルのインデックスを再構築することを検討してください。  
   
 ## <a name="see-also"></a>参照  
  [ファイルの圧縮](shrink-a-file.md)   
- [データベース &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
+ [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
  [database_files &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
  [DBCC &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-transact-sql)   
  [DBCC SHRINKFILE &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql)   

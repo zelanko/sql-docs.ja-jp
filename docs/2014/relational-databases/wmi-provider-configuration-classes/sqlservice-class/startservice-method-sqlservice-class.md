@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d0a425bda3d32f19aca5be09dbb8ba4b7b6ac899
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62911719"
 ---
 # <a name="startservice-method-sqlservice-class"></a>StartService メソッド (SqlService クラス)
@@ -38,16 +38,16 @@ object
 ```  
   
 ## <a name="parts"></a>要素  
- *素材*  
+ *object*  
  サービスを表す [SqlService クラス](sqlservice-class.md) オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  次のスタートアップ状態のうちの 1 つを指定する uint32 値。  
   
  0  
- 成功。 要求が受け入れられました。  
+ 正常終了しました。 要求が受け入れられました。  
   
- 1 で保護されたプロセスとして起動されました  
+ 1  
  サポートされていません。 要求はサポートされていません。  
   
  2  
@@ -119,7 +119,7 @@ object
  24  
  サービスは既に一時停止しています。 サービスは現在システムで一時停止されています。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>参照  
  [サービスの開始および停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

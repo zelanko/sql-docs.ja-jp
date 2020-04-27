@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 517ba30e4565ec05e5fa15a650bb39909d24dd02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62894766"
 ---
 # <a name="save-and-execute-package-sql-server-import-and-export-wizard"></a>[パッケージの保存および実行] (SQL Server インポートおよびエクスポート ウィザード)
@@ -33,7 +33,7 @@ ms.locfileid: "62894766"
  **直ちに実行**  
  このオプションを選択すると、すぐにパッケージを実行します。  
   
- **SSIS パッケージの保存**  
+ **[SSIS パッケージの保存]**  
  パッケージをすぐに実行するためのオプションを使用して、パッケージを後で実行するために保存します。  
   
 > [!NOTE]  
@@ -45,7 +45,7 @@ ms.locfileid: "62894766"
 > [!NOTE]  
 >  このオプションは、[ **SSIS パッケージの保存**] オプションを選択した場合にのみ使用できます。  
   
- **ファイルシステム**  
+ **ファイル システム**  
  このオプションを選択して、.dtsx 拡張子を持つファイルとしてパッケージを保存します。  
   
 > [!NOTE]  
@@ -65,7 +65,7 @@ ms.locfileid: "62894766"
 > [!NOTE]  
 >  このオプションは、[**パッケージの保護レベル**] オプションで [**機微なデータをパスワードで暗号化**する] または [**すべてのデータをパスワードで暗号化**する] を設定した場合にのみ使用できます。  
   
- **パスワードの再入力**  
+ **[パスワードの再入力]**  
  パスワードを再度入力します。  
   
 > [!NOTE]  

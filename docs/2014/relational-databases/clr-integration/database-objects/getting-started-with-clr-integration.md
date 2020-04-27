@@ -26,10 +26,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: db3a72facf1676360e7c338663facac66840a113
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874122"
 ---
 # <a name="getting-started-with-clr-integration"></a>CLR 統合の概要
@@ -121,8 +121,7 @@ vbc /target:library helloworld.vb
 ## <a name="loading-and-running-the-hello-world-stored-procedure-in-sql-server"></a>"Hello World" ストアド プロシージャの SQL Server への読み込みと実行  
  サンプルプロシージャが正常にコンパイルされたら、それをテスト[!INCLUDE[ssNoVersion](../../../includes/ssmanstudiofull-md.md)]し、適切なテストデータベース (AdventureWorks サンプルデータベースなど) に接続して、新しいクエリを作成できます。  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、CLR (共通言語ランタイム) コードを実行する機能は、既定ではオフに設定されています。 CLR コードを有効にするには、 **sp_configure**システムストアドプロシージャを使用します。 詳細については、「 [CLR 統合の有効化](../clr-integration-enabling.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、CLR (共通言語ランタイム) コードを実行する機能は、既定ではオフに設定されています。 CLR コードを有効にするには、 **sp_configure**システムストアドプロシージャを使用します。 詳細については、「 [CLR 統合の有効化](../clr-integration-enabling.md)」を参照してください。  
   
  ストアド プロシージャにアクセスするには、アセンブリを作成する必要があります。 この例では、C:\ ディレクトリに helloworld.dll アセンブリが作成されているものとします。 クエリに次の [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントを追加します。  
   
@@ -143,7 +142,7 @@ EXTERNAL NAME helloworld.HelloWorldProc.HelloWorld
 -- EXTERNAL NAME helloworld.[MyNS.HelloWorldProc].HelloWorld  
 ```  
   
- 作成したプロシージャは、[!INCLUDE[tsql](../../../includes/tsql-md.md)] で記述された通常のストアド プロシージャと同様に実行できます。 次のコマンドを実行します。  
+ 作成したプロシージャは、[!INCLUDE[tsql](../../../includes/tsql-md.md)] で記述された通常のストアド プロシージャと同様に実行できます。 たとえば、次のコマンドを実行します。  
   
 ```  
 DECLARE @J nchar(25)  

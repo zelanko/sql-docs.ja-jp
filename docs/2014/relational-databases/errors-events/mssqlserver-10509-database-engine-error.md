@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 112d0297243ebdd778f21db69037b5a3cbd67d10
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62916265"
 ---
 # <a name="mssqlserver_10509"></a>MSSQLSERVER_10509
@@ -33,8 +33,7 @@ ms.locfileid: "62916265"
 |メッセージ テキスト|プラン ガイド '%.\*ls' を作成できません。`@stmt` または `@statement_start_offset` で指定したステートメントが構文エラーを含んでいるか、またはプラン ガイドでの使用に適していません。 有効な [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを 1 つだけ指定するか、またはバッチ内のステートメントの有効な開始位置を指定します。 有効な開始位置を取得するには、動的管理関数 sys.dm_exec_query_stats の statement_start_offset 列のクエリを実行します。|  
   
 ## <a name="explanation"></a>説明  
- 
-  `@stmt` または `@statement_start_offset` で指定したステートメントが構文エラーを含んでいるか、またはプラン ガイドでの使用に適していません。  
+ `@stmt` または `@statement_start_offset` で指定したステートメントが構文エラーを含んでいるか、またはプラン ガイドでの使用に適していません。  
   
 ## <a name="user-action"></a>ユーザーの操作  
  有効な [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを 1 つだけ指定するか、またはバッチ内のステートメントの有効な開始位置を指定します。 有効な開始位置を取得するには、動的管理関数 sys.dm_exec_query_stats の statement_start_offset 列のクエリを実行します。  

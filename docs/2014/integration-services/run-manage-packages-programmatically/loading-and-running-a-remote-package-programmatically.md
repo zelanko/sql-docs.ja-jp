@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d1cc7358a7058af9feb3f0540085ab140cfd8a7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62889636"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>プログラムによるリモート パッケージの読み込みと実行
@@ -29,17 +29,16 @@ ms.locfileid: "62889636"
   
  また、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] がインストールされているローカル コンピューターからリモート パッケージを実行することもできます。 詳細については、「[プログラムによるローカル パッケージの読み込みと実行](../run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)」を参照してください。  
   
-##  <a name="top"></a> リモート コンピューターでのリモート パッケージの実行  
+##  <a name="running-a-remote-package-on-the-remote-computer"></a><a name="top"></a> リモート コンピューターでのリモート パッケージの実行  
  上で説明しましたが、リモート サーバーでリモート パッケージを実行する方法は複数あります。  
   
 -   [SQL Server エージェントを使用して、プログラムでリモート パッケージを実行する](#agent)  
   
 -   [Web サービスまたはリモート コンポーネントを使用して、プログラムでリモート パッケージを実行する](#service)  
   
- このトピックでパッケージを読み込み、保存するために使用するほとんどすべてのメソッドには、`Microsoft.SqlServer.ManagedDTS` アセンブリへの参照が必要です。 例外は、このトピックで説明する ADO.NET アプローチであり、 **** へ`System.Data`の参照のみを必要とする sp_start_job ストアドプロシージャを実行する場合に使用します。 
-  `Microsoft.SqlServer.ManagedDTS` アセンブリへの参照を新しいプロジェクトに追加した後、<xref:Microsoft.SqlServer.Dts.Runtime> ステートメントまたは `using` ステートメントを使用して `Imports` 名前空間をインポートします。  
+ このトピックでパッケージを読み込み、保存するために使用するほとんどすべてのメソッドには、`Microsoft.SqlServer.ManagedDTS` アセンブリへの参照が必要です。 例外は、このトピックで説明する ADO.NET アプローチであり、 **sp_start_job**へ`System.Data`の参照のみを必要とする sp_start_job ストアドプロシージャを実行する場合に使用します。 `Microsoft.SqlServer.ManagedDTS` アセンブリへの参照を新しいプロジェクトに追加した後、`using` ステートメントまたは `Imports` ステートメントを使用して <xref:Microsoft.SqlServer.Dts.Runtime> 名前空間をインポートします。  
   
-###  <a name="agent"></a> SQL Server エージェントを使用した、サーバー上でのプログラムによるリモート パッケージの実行  
+###  <a name="using-sql-server-agent-to-run-a-remote-package-programmatically-on-the-server"></a><a name="agent"></a> SQL Server エージェントを使用した、サーバー上でのプログラムによるリモート パッケージの実行  
  次のコード例では、プログラムで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用して、サーバー上のリモート パッケージを実行する方法を示します。 このコード例では、**sp_start_job** システム ストアド プロシージャを呼び出し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを開始します。 プロシージャによって開始されるジョブの名前は `RunSSISPackage` で、このジョブはリモート コンピューターに保存されています。 その後、`RunSSISPackage` ジョブにより、リモート コンピューターでパッケージが実行されます。  
   
 > [!NOTE]  
@@ -146,7 +145,7 @@ namespace LaunchSSISPackageAgent_CS
   
  
   
-###  <a name="service"></a> Web サービスまたはリモート コンポーネントを使用した、プログラムによるリモート パッケージの実行  
+###  <a name="using-a-web-service-or-remote-component-to-run-a-remote-package-programmatically"></a><a name="service"></a> Web サービスまたはリモート コンポーネントを使用した、プログラムによるリモート パッケージの実行  
  上記のサーバー上でプログラムによってパッケージを実行するためのソリューションでは、サーバー上にカスタム コードを用意する必要はありません。 ただし、SQL Server エージェントに依存せずにパッケージを実行するソリューションが好ましいこともあります。 次の例では、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージをローカルで起動するためにサーバー上で作成できる Web サービスと、この Web サービスをクライアント コンピューターから呼び出すために使用できるテスト アプリケーションを示します。 Web サービスではなくリモート コンポーネントを作成する場合は、同じコード ロジックをほとんど変更せずにリモート コンポーネントで使用できます。 ただし、リモート コンポーネントを使用する場合は、Web サービスよりも広範な設定が必要になることがあります。  
   
 > [!IMPORTANT]  
@@ -423,7 +422,7 @@ namespace LaunchSSISPackageSvcTestCS
   
 -   technet.microsoft.com のビデオ「[SQL Server エージェントを使用して SSIS パッケージ実行を自動化する方法 (SQL Server ビデオ)](https://technet.microsoft.com/sqlserver/ff686764.aspx)」  
   
-![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
  [ローカル実行とリモート実行の違いについて](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   

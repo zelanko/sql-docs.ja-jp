@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f6c6afc1822e2f56189aace2836a15486d1b73b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921958"
 ---
 # <a name="manage-the-suspect_pages-table-sql-server"></a>suspect_pages テーブルの管理 (SQL Server)
@@ -30,9 +30,9 @@ ms.locfileid: "62921958"
   
  [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] がデータ ページの読み取りを試みたときに次のエラーのいずれかを検出すると、ページは "問題あり" と見なされます。  
   
--   ディスクエラー (特定のハードウェアエラー) など、オペレーティングシステムによって発行された巡回冗長検査 (CRC) によって発生した[823 エラー](../errors-events/mssqlserver-823-database-engine-error.md)  
+-   [823 エラー](../errors-events/mssqlserver-823-database-engine-error.md) : ディスク エラー (特定のハードウェア エラー) など、オペレーティング システムで実行された巡回冗長検査 (CRC) によって発生したエラーです。  
   
--   [824 エラー](../errors-events/mssqlserver-824-database-engine-error.md)(破損ページ (すべての論理エラー) など)  
+-   [824 エラー](../errors-events/mssqlserver-824-database-engine-error.md): 正しくないページ (すべての論理エラー) などです。  
   
  問題があると考えられるすべてのページのページ ID が **suspect_pages** テーブルに記録されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、次のような通常の処理中に検出された問題のあるページを記録します。  
   
@@ -58,9 +58,9 @@ ms.locfileid: "62921958"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Recommendations"></a> 推奨事項  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
   
 -   **suspect_pages テーブルに記録されるエラー**  
   
@@ -115,12 +115,12 @@ ms.locfileid: "62921958"
   
      データベース管理者は、レコードの挿入や更新も行うことができます。 たとえば、問題のあるページが実際には一貫性の取れている状態であることが確かであっても、しばらくレコードを残しておきたい場合に、行を更新できると便利です。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  **msdb** に対するアクセスを持つユーザー は、 **suspect_pages** テーブルのデータを読み取ることができます。 suspect_pages テーブルに対する UPDATE 権限を持つすべてのユーザーは、そのレコードを更新できます。 **msdb** の **db_owner** 固定データベース ロールのメンバーまたは **sysadmin** 固定サーバー ロールのメンバーは、レコードの挿入、更新、および削除を行うことができます。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-manage-the-suspect_pages-table"></a>suspect_pages テーブルを管理するには  
   
@@ -132,7 +132,7 @@ ms.locfileid: "62921958"
   
 4.  クエリ ウィンドウで、目的の行を編集、更新、または削除します。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-manage-the-suspect_pages-table"></a>suspect_pages テーブルを管理するには  
   

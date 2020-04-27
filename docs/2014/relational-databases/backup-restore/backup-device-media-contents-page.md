@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 524e6d8e5ec987a20d693cb1f7e06b30bc27c0b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62876694"
 ---
 # <a name="backup-device-media-contents-page"></a>[バックアップ デバイス] ([メディアの内容] ページ)
@@ -43,7 +43,7 @@ ms.locfileid: "62876694"
  **[メディア セット]**  
  メディア セットとは、一定の数のバックアップ デバイスを使用し、1 回以上のバックアップ操作で書き込まれたバックアップ メディアを番号順に並べた集合体です。  
   
- **名前**  
+ **Name**  
  メディア セットの名前を表示します (メディア セットが存在する場合)。  
   
  **説明**  
@@ -57,7 +57,7 @@ ms.locfileid: "62876694"
   
 |ヘッダー|値|  
 |------------|------------|  
-|**名前**|バックアップ セットの名前です。|  
+|**Name**|バックアップ セットの名前です。|  
 |**Type**|バックアップされるオブジェクト。[データベース]、[ファイル]、 *[\<空白>]* (トランザクション ログ用) のいずれかを指定します。|  
 |**コンポーネント**|実行されたバックアップの種類。[完全]、[差分]、[トランザクション ログ] のいずれかになります。|  
 |**[サーバー]**|バックアップ操作を実行した [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスの名前。|  
@@ -68,7 +68,7 @@ ms.locfileid: "62876694"
 |**ユーザー名**|バックアップ操作を実行したユーザーの名前。|  
 |**[有効期限]**|バックアップ セットの期限が切れる日付と時刻。|  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [ディスク ファイルの論理バックアップ デバイスの定義 &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
   

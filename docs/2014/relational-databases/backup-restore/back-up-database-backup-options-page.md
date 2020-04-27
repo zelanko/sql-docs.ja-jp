@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c8030a0005f0f5b949a3eecd12d73f3a3aa709c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62876865"
 ---
 # <a name="back-up-database-backup-options-page"></a>[データベースのバックアップ] ([バックアップ オプション] ページ)
@@ -40,7 +40,7 @@ ms.locfileid: "62876865"
 ### <a name="backup-set"></a>バックアップ セット  
  **[バックアップ セット]** パネルのオプションでは、バックアップ操作で作成されるバックアップ セットに関する情報を指定できます。  
   
- **名前**  
+ **Name**  
  バックアップ セット名を指定します。 データベース名とバックアップの種類に基づいて、既定の名前が自動的に表示されます。  
   
  バックアップ セットの詳細については、「[メディア セット、メディア ファミリ、およびバックアップ セット &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)」を参照してください。  

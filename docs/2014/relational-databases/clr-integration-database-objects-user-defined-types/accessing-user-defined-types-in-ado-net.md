@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 893b2c69a20974bb379cc032f442e5fcb3525ec5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919686"
 ---
 # <a name="accessing-user-defined-types-in-adonet"></a>ADO.NET でのユーザー定義型へのアクセス
@@ -26,22 +26,18 @@ ms.locfileid: "62919686"
   
  ADO.NET では、`System.Data.SqlClient` プロバイダーにより次の形態で UDT が公開されます。  
   
--   
-  `System.Data.SqlClient.SqlDataReader` によりオブジェクトとして。  
+-   `System.Data.SqlClient.SqlDataReader` によりオブジェクトとして。  
   
--   
-  `SqlDataReader` により生のバイト列として。  
+-   `SqlDataReader` により生のバイト列として。  
   
--   
-  `System.Data.SqlClient.SqlParameter` オブジェクトのパラメーターとして。  
+-   `System.Data.SqlClient.SqlParameter` オブジェクトのパラメーターとして。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [UDT データの取得](accessing-user-defined-types-retrieving-udt-data.md)  
  UDT データを取得する方法とパラメーターを指定する方法について説明します。  
   
  [データ アダプターによる UDT 列の更新](accessing-user-defined-types-updating-udt-columns-with-dataadapters.md)  
- 
-  `DataSets` 内の UDT を操作する方法と `DataAdapters` を使用して UDT データを更新する方法について説明します。  
+ `DataSets` 内の UDT を操作する方法と `DataAdapters` を使用して UDT データを更新する方法について説明します。  
   
 ## <a name="see-also"></a>参照  
  [CLR ユーザー定義型](clr-user-defined-types.md)  

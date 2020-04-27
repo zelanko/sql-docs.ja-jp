@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec7f81ec412a2ed597f8cd282b637fc5adf73ebf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62892660"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services のエラーおよびメッセージのリファレンス
@@ -43,9 +43,8 @@ ms.locfileid: "62892660"
   
 -   [データ フロー コンポーネントのエラー メッセージ (DTSBC_E_*)](#msgPipeline)  
   
-##  <a name="msgError"></a> エラー メッセージ  
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のエラー メッセージのシンボル名は、`DTS_E_` で始まります。  
+##  <a name="error-messages"></a><a name="msgError"></a> エラー メッセージ  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のエラー メッセージのシンボル名は、`DTS_E_` で始まります。  
   
 |16 進コード|10 進コード|シンボル名|説明|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -231,7 +230,7 @@ ms.locfileid: "62892660"
 |0xC0015005|-1073655803|DTS_E_NOROWSETRETURNED|結果行セットがこのクエリの実行に関連付けられていません。 結果が正しく指定されていません。|  
 |0xC0015105|-1073655547|DTS_E_DUMP_FAILED|デバッグ ダンプ ファイルを正しく生成できませんでした。 hresult は 0x%1!8.8X! です。|  
 |0xC0016001|-1073651711|DTS_E_INVALIDURL|指定された URL が無効です。 このエラーは、サーバーまたはプロキシの URL に NULL が指定されたか、または URL の形式が正しくない場合に発生する可能性があります。 有効な URL 形式は、 http://ServerName:Port/ResourcePath または https://ServerName:Port/ResourcePath です。|  
-|0xC0016002|-1073651710|DTS_E_INVALIDSCHEME|指定された URL %1 が無効です。 このエラーは、http または https 以外の構成が指定されたか、または URL の形式が正しくない場合に発生する可能性があります。 有効な URL 形式は、 http://ServerName:Port/ResourcePath または https://ServerName:Port/ResourcePath です。|  
+|0xC0016002|-1073651710|DTS_E_INVALIDSCHEME|指定された URL %1 が無効です。 このエラーは、http または https 以外の構成が指定されたか、または URL の形式が正しくない場合に発生する可能性があります。 有効な URL 形式は、http://ServerName:Port/ResourcePath または https://ServerName:Port/ResourcePath です。|  
 |0xC0016003|-1073651709|DTS_E_WINHTTPCANNOTCONNECT|サーバー %1 への接続を確立できません。 このエラーは、サーバーが存在しない場合、またはプロキシの設定が正しくない場合に発生する可能性があります。|  
 |0xC0016004|-1073651708|DTS_E_CONNECTIONTERMINATED|サーバーとの接続がリセットされたか、終了しました。 後で再試行してください。|  
 |0xC0016005|-1073651707|DTS_E_LOGINFAILURE|%1 のログインに失敗しました。 このエラーは、指定されたログイン資格情報が正しくない場合に発生します。 ログイン資格情報を確認してください。|  
@@ -1993,7 +1992,7 @@ ms.locfileid: "62892660"
 |0xC02092B6|-1071607114|DTS_E_USEBINARYFORMATREQUIRESANSIFILE|カスタム プロパティ "%1" (%2 上) は ANSI ファイルでのみ使用できます。|  
 |0xC02092B7|-1071607113|DTS_E_USEBINARYFORMATREQUIRESBYTES|カスタム プロパティ "%1" (%2 上) は DT_BYTES でのみ使用できます。|  
 |0xC0209302|-1071607038|DTS_E_OLEDB_NOPROVIDER_ERROR|SSIS エラー コード DTS_E_OLEDB_NOPROVIDER_ERROR。  要求された OLE DB プロバイダー %2 は登録されていません。 エラー コード:0x%1!8.8X!。|  
-|0xC0209303|-1071607037|DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR|SSIS エラー コード DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR。  要求された OLE DB プロバイダー %2 は登録されていません。使用できる 64 ビット プロバイダーが存在しない可能性があります。  エラー コード:0x%1!8.8X!。|  
+|0xC0209303|-1071607037|DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR|SSIS エラー コード DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR。  要求された OLE DB プロバイダー %2 は登録されていません。使用できる 64 ビット プロバイダーが存在しない可能性があります。  エラー コード: 0x%1!8.8X!。|  
 |0xC0209306|-1071607034|DTS_E_MULTICACHECOLMAPPINGS|キャッシュ列 "%1" が複数の列にマップされています。 重複する列マッピングを削除してください。|  
 |0xC0209307|-1071607033|DTS_E_COLNOTMAPPEDTOCACHECOL|%1 は有効なキャッシュ列にマップされていません。|  
 |0xC0209308|-1071607032|DTS_E_CACHECOLDATATYPEINCOMPAT|入力列 "%1" とキャッシュ列 "%2" は、データ型が一致しないため、マップすることができません。|  
@@ -2018,9 +2017,8 @@ ms.locfileid: "62892660"
 |||DTS_E_GETRTINTERFACEFAILED|COM コンポーネント カテゴリ マネージャーを作成できませんでした。エラー: 0x%1!8.8X! "%2!s!"。|  
 |||DTS_E_COMPONENTINITFAILED|エラー 0x%2!8.8X! " %3!s!" によって コンポーネント %1!s! の初期化に失敗しました 。|  
   
-##  <a name="msgWarning"></a> 警告メッセージ  
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の警告メッセージのシンボル名は、`DTS_W_` で始まります。  
+##  <a name="warning-messages"></a><a name="msgWarning"></a> 警告メッセージ  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の警告メッセージのシンボル名は、`DTS_W_` で始まります。  
   
 |16 進コード|10 進コード|シンボル名|説明|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2126,7 +2124,7 @@ ms.locfileid: "62892660"
 |0x8004801E|-2147188706|DTS_W_COULDNOTFINDCURRENTVERSION|コンポーネント %2 の "%1" 値が見つかりません。 コンポーネントの CurrentVersion 値が見つかりません。 このエラーは、DTSInfo セクションに CurrentVersion 値を含むようにコンポーネントのレジストリ情報が設定されていない場合に発生します。 このメッセージは、コンポーネントが正しく登録されていない状態で、コンポーネントを開発していたり、コンポーネントをパッケージで使用しているときに表示されます。|  
 |0x80049300|-2147183872|DTS_W_BUFFERGETTEMPFILENAME|バッファー マネージャーは一時ファイルの名前を取得できませんでした。|  
 |0x80049301|-2147183871|DTS_W_UNUSABLETEMPORARYPATH|バッファー マネージャーはパス "%1" に一時ファイルを作成できませんでした。 このパスは一時保存域として見なされません。|  
-|0x80049304|-2147183868|DTS_W_DF_PERFCOUNTERS_DISABLED|警告:パフォーマンス DLL と通信するためのグローバル共有メモリを開けなかったため、データ フロー パフォーマンス カウンターは使用できません。  解決するには、このパッケージを管理者として実行するか、システムのコンソールで実行してください。|  
+|0x80049304|-2147183868|DTS_W_DF_PERFCOUNTERS_DISABLED|警告: パフォーマンス DLL と通信するためのグローバル共有メモリを開けなかったため、データ フロー パフォーマンス カウンターは使用できません。  解決するには、このパッケージを管理者として実行するか、システムのコンソールで実行してください。|  
 |0x8020200F|-2145378289|DTS_W_PARTIALROWFOUNDATENDOFFILE|ファイルの末尾に不完全な行があります。|  
 |0x8020202B|-2145378261|DTS_W_ENDOFFILEREACHWHILEREADINGHEADERROWS|ヘッダー行の読み取り中に、データ ファイルの末尾に到達しました。 ヘッダー行の区切り記号とスキップするヘッダー行数が正しいことを確認してください。|  
 |0x80202066|-2145378202|DTS_W_CANTRETRIEVECODEPAGEFROMOLEDBPROVIDER|OLE DB プロバイダーから列コード ページ情報を取得できません。  コンポーネントで "%1" プロパティがサポートされている場合は、そのプロパティのコード ページを使用します。  現在の文字列のコード ページの値が正しくない場合は、プロパティの値を変更してください。  コンポーネントでこのプロパティがサポートされていない場合は、コンポーネントのロケール ID のコード ページを使用します。|  
@@ -2165,9 +2163,8 @@ ms.locfileid: "62892660"
 |0xC020822C|-1071611348|DTS_W_UNMAPPEDOUTPUTCOLUMN|%1 はマップされている入力列がありません。|  
 |0x930D|37645|DTS_W_EXTERNALTABLECOLSOUTOFSYNC|テーブル "%1" は変更されています。 このテーブルに新しい列が追加されている可能性があります。|  
   
-##  <a name="msgInfo"></a> 情報メッセージ  
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の情報メッセージのシンボル名は、`DTS_I_` で始まります。  
+##  <a name="informational-messages"></a><a name="msgInfo"></a> 情報メッセージ  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の情報メッセージのシンボル名は、`DTS_I_` で始まります。  
   
 |16 進コード|10 進コード|シンボル名|説明|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2265,9 +2262,8 @@ ms.locfileid: "62892660"
 |0x40209317|1075876631|DTS_I_CACHEFILEWRITESUCCEEDED|%1 により、ファイル "%2" にキャッシュを書き込みました。|  
 |0x4020F42C|1075901484|DTS_I_OLEDBDESTZEROMAXCOMMITSIZE|OLE DB 変換先 "%1" の挿入コミット サイズの最大値プロパティは 0 に設定されています。 このプロパティの設定により、実行中のパッケージは応答を停止する可能性があります。 詳細については、[OLE DB 変換先エディター] ([接続マネージャー] ページ) の F1 ヘルプ トピックを参照してください。|  
   
-##  <a name="msgGeneral"></a> 一般的なメッセージおよびイベント メッセージ  
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のエラー メッセージのシンボル名は、`DTS_MSG_` で始まります。  
+##  <a name="general-and-event-messages"></a><a name="msgGeneral"></a> 一般的なメッセージおよびイベント メッセージ  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のエラー メッセージのシンボル名は、`DTS_MSG_` で始まります。  
   
 |16 進コード|10 進コード|シンボル名|説明|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2305,9 +2301,8 @@ ms.locfileid: "62892660"
 |0x4010310D|1074802957|DTS_MSG_EVENTLOGENTRY_PACKAGEEND|イベント名: %1<br /><br /> メッセージ: %9<br /><br /> 演算子: %2<br /><br /> ソース名: %3<br /><br /> ソース ID: %4<br /><br /> 実行 ID: %5<br /><br /> 開始時刻: %6<br /><br /> 終了時刻: %7<br /><br /> データ コード: %8|  
 |0x4010310E|1074802958|DTS_MSG_EVENTLOGENTRY_INFORMATION|イベント名: %1<br /><br /> メッセージ: %9<br /><br /> 演算子: %2<br /><br /> ソース名: %3<br /><br /> ソース ID: %4<br /><br /> 実行 ID: %5<br /><br /> 開始時刻: %6<br /><br /> 終了時刻: %7<br /><br /> データ コード: %8|  
   
-##  <a name="msgSuccess"></a> 成功時のメッセージ  
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の成功時のメッセージのシンボル名は、`DTS_S_` で始まります。  
+##  <a name="success-messages"></a><a name="msgSuccess"></a> 成功時のメッセージ  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の成功時のメッセージのシンボル名は、`DTS_S_` で始まります。  
   
 |16 進コード|10 進コード|シンボル名|説明|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2315,9 +2310,8 @@ ms.locfileid: "62892660"
 |0x40005|262149|DTS_S_TRUNCATED|文字列値が切り捨てられました。 バッファーで列には長すぎる文字列を受け取ったため、バッファーにより文字列が切り捨てられました。|  
 |0x200001|2097153|DTS_S_EXPREVALTRUNCATIONOCCURRED|式の評価中に切り捨てが発生しました。 評価中に切り捨てが発生しました。たとえば、中間手順のある時点で発生した可能性があります。|  
   
-##  <a name="msgPipeline"></a> データ フロー コンポーネントのエラー メッセージ  
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のエラー メッセージのシンボル名は、`DTSBC_E_` で始まります。"BC" は、ほとんどの Microsoft データ フロー コンポーネントが派生しているネイティブ基本クラスであることを示します。  
+##  <a name="data-flow-component-error-messages"></a><a name="msgPipeline"></a> データ フロー コンポーネントのエラー メッセージ  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のエラー メッセージのシンボル名は、`DTSBC_E_` で始まります。"BC" は、ほとんどの Microsoft データ フロー コンポーネントが派生しているネイティブ基本クラスであることを示します。  
   
 |16 進コード|10 進コード|シンボル名|説明|  
 |----------------------|------------------|-------------------|-----------------|  

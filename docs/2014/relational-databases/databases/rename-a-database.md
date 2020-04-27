@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f014cb37c6c28a0c9a91bd811b9e94d734167e1e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62916772"
 ---
 # <a name="rename-a-database"></a>データベースの名前変更
@@ -29,7 +29,7 @@ ms.locfileid: "62916772"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **以下を使用してデータベースの名前を変更するには:**  
   
@@ -39,18 +39,18 @@ ms.locfileid: "62916772"
   
 -   **補足情報:** [データベースの名前を変更した後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   システム データベースの名前は変更できません。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  データベースに対する ALTER 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-rename-a-database"></a>データベースの名前を変更するには  
   
@@ -58,12 +58,11 @@ ms.locfileid: "62916772"
   
 2.  データベースを使用している人がいないことを確認し、 [データベースをシングル ユーザー モードに設定します](set-a-database-to-single-user-mode.md)。  
   
-3.  
-  **[データベース]** を展開し、名前を変更するデータベースを右クリックして、 **[名前の変更]** をクリックします。  
+3.  **[データベース]** を展開し、名前を変更するデータベースを右クリックして、 **[名前の変更]** をクリックします。  
   
 4.  新しいデータベース名を入力し、 **[OK]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-rename-a-database"></a>データベースの名前を変更するには  
   
@@ -82,11 +81,11 @@ GO
 ```  
   
 ###  <a name="TsqlExample"></a>   
-##  <a name="FollowUp"></a>補足情報: データベースの名前を変更した後  
+##  <a name="follow-up-after-renaming-a-database"></a><a name="FollowUp"></a> 補足情報: データベースの名前を変更した後  
  データベースの名前を変更した後は、 **master** データベースをバックアップします。  
   
 ## <a name="see-also"></a>参照  
- [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [データベース識別子](database-identifiers.md)  
   
   

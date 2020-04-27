@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7abc0b4dea4df1637b4ba9456dee6a897184f20a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62915768"
 ---
 # <a name="mssqlserver_1418"></a>MSSQLSERVER_1418
@@ -93,7 +93,7 @@ ms.locfileid: "62915768"
      **netstat -ano**  
   
 ## <a name="see-also"></a>参照  
- [ALTER ENDPOINT &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)   
+ [ALTER ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)   
  [データベースミラーリングエンドポイント &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [ミラーリング &#40;SQL Server のミラーデータベースを準備する&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)   
  [SERVERPROPERTY &#40;Transact-sql&#41;](/sql/t-sql/functions/serverproperty-transact-sql)   

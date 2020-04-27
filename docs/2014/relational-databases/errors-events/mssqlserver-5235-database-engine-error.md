@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d6cbfac91613c2374e42da5b33e75ed5cade2bcf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62913759"
 ---
 # <a name="mssqlserver_5235"></a>MSSQLSERVER_5235
@@ -52,14 +52,13 @@ ms.locfileid: "62913759"
 |エラー状態|ユーザー アクション|  
 |-----------------|-----------------|  
 |状態 0|バックアップからの復元を行います。|  
-|状態 1|
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] カスタマー サポート サービス (CSS) に問い合わせます。|  
+|状態 1|[!INCLUDE[msCoName](../../includes/msconame-md.md)] カスタマー サポート サービス (CSS) に問い合わせます。|  
 |状態 2|バックアップからの復元を行います。|  
 |状態 3|バックアップからの復元を行います。|  
 |状態 4|CSS に問い合わせます。|  
 |状態 5|コマンドを再実行します。 問題が解決しない場合は、CSS に問い合わせます。|  
   
 ## <a name="see-also"></a>参照  
- [DBCC &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-transact-sql)  
+ [DBCC &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-transact-sql)  
   
   

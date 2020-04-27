@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 89a988a5d664e460a3148cf910c0be31ba07a5dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62916761"
 ---
 # <a name="security-best-practices-with-contained-databases"></a>包含データベースでのセキュリティのベスト プラクティス
@@ -26,8 +26,7 @@ ms.locfileid: "62916761"
  権限を持つ包含データベースのユーザー ( **db_owner**のメンバー、固定データベースロールの**db_securityadmin**など) は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理者がナレッジまたは権限を持っていなくても、データベースへのアクセスを許可できます。 `ALTER ANY USER` ユーザーに包含データベースへのアクセスを許可すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス全体に対する潜在的な攻撃の危険性が高まります。 管理者はこのアクセス制御の委任について理解し、包含データベースのユーザーへの `ALTER ANY USER` 権限の許可については十分に注意する必要があります。 すべてのデータベース所有者は `ALTER ANY USER` 権限を持ちます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理者は、包含データベースのユーザーを定期的に監査する必要があります。  
   
 ### <a name="accessing-other-databases-using-the-guest-account"></a>guest アカウントによる他のデータベースへのアクセス  
- 
-  `ALTER ANY USER` 権限を持つデータベース所有者とデータベース ユーザーは、包含データベースのユーザーを作成できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスの包含データベースに接続した後で、包含データベースのユーザーは [!INCLUDE[ssDE](../../includes/ssde-md.md)]上の、 **guest** アカウントを有効にしている他のデータベースにアクセスできます。  
+ `ALTER ANY USER` 権限を持つデータベース所有者とデータベース ユーザーは、包含データベースのユーザーを作成できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスの包含データベースに接続した後で、包含データベースのユーザーは [!INCLUDE[ssDE](../../includes/ssde-md.md)]上の、 **guest** アカウントを有効にしている他のデータベースにアクセスできます。  
   
 ### <a name="creating-a-duplicate-user-in-another-database"></a>別のデータベースへの重複するユーザーの作成  
  アプリケーションによっては、1 人のユーザーが複数のデータベースにアクセスできるようにすることが必要な場合があります。 この操作を行うには、各データベースに同一の包含データベース ユーザーを作成します。 パスワードを持つ 2 番目のユーザーを作成するときは、SID オプションを使用します。 次の例では、2 つのデータベースに 2 人の同一ユーザーを作成します。  
@@ -46,8 +45,7 @@ CREATE USER Carlo WITH PASSWORD = '<same password>', SID = <SID from DB1>;
 GO  
 ```  
   
- データベースをまたがるクエリを実行するには、呼び出し元のデータベースに対して `TRUSTWORTHY` オプションを設定する必要があります。 たとえば、上で定義したユーザー (Carlo) が DB1 に存在する場合、`SELECT * FROM db2.dbo.Table1;` を実行するには、データベース DB1 に対して `TRUSTWORTHY` 設定が ON である必要があります。 
-  `TRUSTWORHTY` 設定を ON に設定するには、次のコードを実行します。  
+ データベースをまたがるクエリを実行するには、呼び出し元のデータベースに対して `TRUSTWORTHY` オプションを設定する必要があります。 たとえば、上で定義したユーザー (Carlo) が DB1 に存在する場合、`SELECT * FROM db2.dbo.Table1;` を実行するには、データベース DB1 に対して `TRUSTWORTHY` 設定が ON である必要があります。 `TRUSTWORHTY` 設定を ON に設定するには、次のコードを実行します。  
   
 ```  
 ALTER DATABASE DB1 SET TRUSTWORTHY ON;  
@@ -65,7 +63,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 -   包含データベースが存在する場合、包含データベースではないデータベースのユーザーは、初期カタログを使用せずに [!INCLUDE[ssDE](../../includes/ssde-md.md)] に接続するか、初期カタログとして非包含データベースの名前を指定する必要があります。 こうすることで、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] の管理者による直接的な制御が及ばない部分のある包含データベースへの接続を回避できます。  
   
 ### <a name="increasing-access-by-changing-the-containment-status-of-a-database"></a>データベースの包含状態の変更によるアクセスの増加  
- 権限を持つログイン ( **dbcreator**固定サーバーロールのメンバーなど) と、 `CONTROL DATABASE`権限を持つ非包含データベースのユーザー (db_owner 固定データベースロールのメンバーなど) は、データベースの包含設定を変更できます。 **** `ALTER ANY DATABASE` データベースの包含設定が `NONE` から `PARTIAL` または `FULL` に変更された場合、パスワードを持つ包含データベース ユーザーを作成することで、ユーザー アクセスを許可できるようになります。 これは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理者が認識せず、同意していないアクセスが可能になることを意味しています。 データベースが含まれないようにするには[!INCLUDE[ssDE](../../includes/ssde-md.md)] `contained database authentication` 、このオプションを0に設定します。 パスワードを持つ包含データベース ユーザーによる選択された包含データベースへの接続を防ぐには、ログイン トリガーを使用して、パスワードを持つ包含データベース ユーザーによるログイン試行を取り消します。  
+ 権限を持つログイン ( **dbcreator**固定サーバーロールのメンバーなど) と、 `CONTROL DATABASE`権限を持つ非包含データベースのユーザー (db_owner 固定データベースロールのメンバーなど) は、データベースの包含設定を変更できます。 **db_owner** `ALTER ANY DATABASE` データベースの包含設定が `NONE` から `PARTIAL` または `FULL` に変更された場合、パスワードを持つ包含データベース ユーザーを作成することで、ユーザー アクセスを許可できるようになります。 これは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理者が認識せず、同意していないアクセスが可能になることを意味しています。 データベースが含まれないようにするには[!INCLUDE[ssDE](../../includes/ssde-md.md)] `contained database authentication` 、このオプションを0に設定します。 パスワードを持つ包含データベース ユーザーによる選択された包含データベースへの接続を防ぐには、ログイン トリガーを使用して、パスワードを持つ包含データベース ユーザーによるログイン試行を取り消します。  
   
 ### <a name="attaching-a-contained-database"></a>包含データベースのインポート  
  包含データベースをアタッチすることにより、管理者が意図していないユーザーに [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスへのアクセスを許可する可能性があります。 この危険性を懸念する管理者は、データベースを `RESTRICTED_USER` モードでオンラインにすることができます。このモードでは、パスワードを持つ包含データベース ユーザーの認証を防ぐことができます。 ログインによって承認されたプリンシパルだけが、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]にアクセスできます。  

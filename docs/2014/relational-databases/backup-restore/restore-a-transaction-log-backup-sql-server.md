@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a0cfc68f78ae9ca4022abfb59a33d756e82a6f2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62875670"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>トランザクション ログ バックアップの復元 (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "62875670"
   
      [前提条件](#Prerequisites)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **トランザクション ログ バックアップを復元するために使用するもの:**  
   
@@ -45,9 +45,9 @@ ms.locfileid: "62875670"
   
 -   [関連タスク](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Prerequisites"></a> 前提条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
   
 -   バックアップは、作成された順序で復元する必要があります。 特定のトランザクション ログ バックアップを復元する前に、まず、次に示す以前のバックアップを復元する必要があります。ただし、コミットされていないトランザクションはロールバックしません (WITH NORECOVERY)。  
   
@@ -57,12 +57,12 @@ ms.locfileid: "62875670"
   
          トランザクション ログ バックアップの詳細については、「[トランザクション ログ バックアップ &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)」および「[トランザクション ログ バックアップの適用 &#40;SQL Server&#41;](apply-transaction-log-backups-sql-server.md)」を参照してください。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  RESTORE 権限は、サーバーでメンバーシップ情報を常に確認できるロールに与えられます。 固定データベース ロールのメンバーシップは、データベースがアクセス可能で破損していない場合にのみ確認することができますが、RESTORE の実行時にはデータベースがアクセス可能で損傷していないことが必ずしも保証されないため、 **db_owner** 固定データベース ロールのメンバーには RESTORE 権限は与えられません。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 > [!WARNING]  
 >  通常の復元処理では、データ バックアップおよび差分バックアップと共に、 **[データベースの復元]** ダイアログ ボックスでログ バックアップを選択します。  
@@ -96,10 +96,10 @@ ms.locfileid: "62875670"
   
      次の表は、グリッドの列ヘッダーとその値を示しています。  
   
-    |ヘッダー|Value|  
+    |ヘッダー|値|  
     |------------|-----------|  
     |**復元**|チェック ボックスをオンにしたバックアップ セットが復元されます。|  
-    |**Name**|バックアップ セットの名前。|  
+    |**名前**|バックアップ セットの名前。|  
     |**コンポーネント**|バックアップされるコンポーネント: **[データベース]** 、 **[ファイル]** 、または \<[空白>] (トランザクション ログ用)。|  
     |**[データベース]**|バックアップ操作に関係するデータベース名。|  
     |**[開始日]**|バックアップ操作の開始日時 (クライアントの地域設定に準拠)。|  
@@ -128,7 +128,7 @@ ms.locfileid: "62875670"
   
          次の表は、グリッドの列ヘッダーとその値を示しています。  
   
-        |ヘッダー|Value|  
+        |ヘッダー|値|  
         |------------|-----------|  
         |\<空白>|マークを選択するためのチェック ボックスを表示します。|  
         |**トランザクション マーク**|トランザクションがコミットされたときにユーザーによって指定された、マークされたトランザクションの名前。|  
@@ -189,7 +189,7 @@ ms.locfileid: "62875670"
   
 11. 必要に応じて、 **[スタンバイ ファイル]** ボックスで、スタンバイ ファイル名を指定します。 このオプションは、データベースを読み取り専用モードのままにする場合に必要です。 スタンバイ ファイルは参照して指定するか、またはテキスト ボックスにパス名を入力します。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 > [!IMPORTANT]  
 >  指定があいまいにならないよう、すべての RESTORE ステートメントにおいて WITH NORECOVERY または WITH RECOVERY を常に明示的に指定することをお勧めします。 これは、スクリプトを作成するときに特に重要です。  
@@ -234,7 +234,7 @@ ms.locfileid: "62875670"
     > [!IMPORTANT]  
     >  ミラー データベースを作成している場合は、復旧ステップを省略します。 ミラー データベースは、RESTORING 状態のままにする必要があります。  
   
-###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 例 (Transact-SQL)  
  既定では、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースは単純復旧モデルを使用します。 以下の例では、次に示すように、完全復旧モデルが使用されるようにデータベースを変更する必要があります。  
   
 ```sql  
@@ -287,7 +287,7 @@ RESTORE DATABASE AdventureWorks2012
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [トランザクション ログのバックアップ &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
   

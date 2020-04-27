@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: de23ecd1201d7ce0e24638cf9e64c63cb782face
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62912108"
 ---
 # <a name="audit-broker-login-event-class"></a>Audit Broker Login イベント クラス
@@ -26,7 +26,7 @@ ms.locfileid: "62912108"
   
 ## <a name="audit-broker-login-event-class-data-columns"></a>Audit Broker Login イベント クラスのデータ列  
   
-|データ列|種類|[説明]|列番号|フィルターの適用|  
+|データ列|Type|説明|列番号|フィルターの適用|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|このイベント クラスでは使用しません。|10|はい|  
 |**ClientProcessID**|**int**|このイベント クラスでは使用しません。|9|はい|  
@@ -37,7 +37,7 @@ ms.locfileid: "62912108"
 |**FileName**|**nvarchar**|リモート ブローカーの認証レベル。 リモート ブローカーのエンドポイントで構成されたサポート済みの認証方式。 複数の方式を使用できる場合は、受け入れ側 (対象) のエンドポイントにより、最初に試行される方式が決まります。 次のいずれかの値になります。<br /><br /> **なし**。 認証方式が構成されていません。<br /><br /> **NTLM**: NTLM 認証が必要です。<br /><br /> **KERBEROS**: Kerberos 認証が必要です。<br /><br /> **NEGOTIATE**: Windows が認証方式をネゴシエートします。<br /><br /> **CERTIFICATE**: エンドポイントに構成されている証明書が必要です。これは、 **master** データベースに格納されています。<br /><br /> **NTLM, CERTIFICATE**: NTLM または SSL 証明書による認証を受け付けます。<br /><br /> **KERBEROS, CERTIFICATE**: Kerberos またはエンドポイントの証明書による認証を受け付けます。<br /><br /> **NEGOTIATE, CERTIFICATE**: Windows が認証方式、または認証に使用できるエンドポイントの証明書をネゴシエートします。<br /><br /> **CERTIFICATE, NTLM**: エンドポイントの証明書または NTLM を認証方式として受け付けます。<br /><br /> **CERTIFICATE, KERBEROS**: エンドポイントの証明書または Kerberos を認証方式として受け付けます。<br /><br /> **CERTIFICATE, NEGOTIATE**: 認証にエンドポイントの証明書を受け付けるか、Windows が認証方式をネゴシエートします。|36|いいえ|  
 |**HostName**|**nvarchar**|このイベント クラスでは使用しません。|8|はい|  
 |**IsSystem**|**int**|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 はシステム、0 はユーザーです。|60|いいえ|  
-|**LoginSid**|**画像**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 各 SID はサーバーのログインごとに一意です。|41|はい|  
+|**LoginSid**|**image**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 各 SID はサーバーのログインごとに一意です。|41|はい|  
 |**NTDomainName**|**nvarchar**|ユーザーが属している Windows ドメイン。|7|はい|  
 |**NTUserName**|**nvarchar**|このイベントが生成された接続を所有するユーザーの名前。|6|はい|  
 |**ObjectName**|**nvarchar**|この接続に使用する接続文字列。|34|いいえ|  
@@ -53,7 +53,7 @@ ms.locfileid: "62912108"
   
  次の表に、このイベント クラスのサブクラス値を示します。  
   
-|id|サブクラス|[説明]|  
+|id|サブクラス|説明|  
 |--------|--------------|-----------------|  
 |1|Login Success|Login Success イベントは、隣接するブローカー ログイン プロセスが正常に完了したことを報告するイベントです。|  
 |2|Login Protocol Error|Login Protocol Error イベントは、形式は整形式でも、ログイン プロセスの現在状態では無効なメッセージをブローカーが受け取ったことを報告するイベントです。 このメッセージは、失われたか、誤った順序で送信されている可能性があります。|  

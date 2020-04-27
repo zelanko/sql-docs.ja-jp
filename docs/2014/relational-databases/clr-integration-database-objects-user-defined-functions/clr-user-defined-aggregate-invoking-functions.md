@@ -19,14 +19,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8f70a2df2fd824d8a0021a0985d6f75e79efce48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919602"
 ---
 # <a name="invoking-clr-user-defined-aggregate-functions"></a>CLR ユーザー定義集計関数の呼び出し
-  
   [!INCLUDE[tsql](../../includes/tsql-md.md)] の SELECT ステートメントでは、CLR (共通言語ランタイム) ユーザー定義集計を呼び出すことができます。CLR ユーザー定義集計には、システム集計関数に適用されるすべての規則が適用されます。  
   
  さらに、次の規則も適用されます。  
@@ -237,7 +236,7 @@ GROUP BY BookID;
   
 |BookID|AuthorName|  
 |------------|------------------|  
-|1 で保護されたプロセスとして起動されました|Johnson|  
+|1|Johnson|  
 |2|Taylor, Mayler|  
 |3|Roberts, Michaels, Steven|  
   

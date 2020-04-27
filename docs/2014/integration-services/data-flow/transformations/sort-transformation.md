@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dba1f3598abb8877721ff77d3dabcc8af8e0b94a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62899887"
 ---
 # <a name="sort-transformation"></a>並べ替え変換
@@ -43,12 +43,9 @@ ms.locfileid: "62899887"
 ## <a name="configuration-of-the-sort-transformation"></a>並べ替え変換の構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- 
-  **[並べ替え変換エディター]** ダイアログ ボックスで設定できるプロパティについては、「 [並べ替え変換エディター](../../sort-transformation-editor.md)」を参照してください。  
+ **[並べ替え変換エディター]** ダイアログ ボックスで設定できるプロパティについては、「 [並べ替え変換エディター](../../sort-transformation-editor.md)」を参照してください。  
   
- 
-  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 
-  **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
 -   [共通プロパティ](../../common-properties.md)  
   

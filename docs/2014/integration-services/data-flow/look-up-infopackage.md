@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 27063b71c307d1114f74977b81eac19130e70708
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62901779"
 ---
 # <a name="look-up-infopackage"></a>[インフォパッケージの参照]
@@ -59,7 +59,7 @@ ms.locfileid: "62901779"
  **Type**  
  インフォパッケージの種類を表示します。 次の表に、種類として使用できる値の一覧を示します。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |Trans.|トランザクション データ。|  
 |Attr.|属性データ。|  

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c763c6db472f52df320d0c89dc47483636bf9f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917969"
 ---
 # <a name="database-mail"></a>データベース メール
@@ -26,17 +26,14 @@ ms.locfileid: "62917969"
   
  
   
-##  <a name="Benefits"></a>データベースメールを使用する利点  
+##  <a name="benefits-of-using-database-mail"></a><a name="Benefits"></a>データベースメールを使用する利点  
  データベース メールは、信頼性、スケーラビリティ、セキュリティ、およびサポート性を念頭に置いて設計されています。  
   
-### <a name="reliability"></a>信頼性  
+### <a name="reliability"></a>[信頼性]  
   
--   データベース メールでは、標準的な簡易メール転送プロトコル (SMTP) を使用してメールを送信します。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を実行するコンピューターに拡張 MAPI クライアントをインストールしなくても、データベース メールを使用できます。  
+-   データベース メールでは、標準的な簡易メール転送プロトコル (SMTP) を使用してメールを送信します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を実行するコンピューターに拡張 MAPI クライアントをインストールしなくても、データベース メールを使用できます。  
   
--   プロセスの分離。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]への影響を最小限にするために、電子メールを配信するコンポーネントは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]外部の別個のプロセスで実行されます。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、外部プロセスが停止または失敗しても、電子メールのキューを続行します。 キューに登録されたメッセージは、外部プロセスまたは SMTP サーバーがオンラインになると送信されます。  
+-   プロセスの分離。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]への影響を最小限にするために、電子メールを配信するコンポーネントは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]外部の別個のプロセスで実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、外部プロセスが停止または失敗しても、電子メールのキューを続行します。 キューに登録されたメッセージは、外部プロセスまたは SMTP サーバーがオンラインになると送信されます。  
   
 -   フェールオーバー アカウント。 データベース メール プロファイルを使用すると、複数の SMTP サーバーを指定できます。 ある SMTP サーバーが使用できない場合は、別の SMTP サーバーにメールを配信できます。  
   
@@ -44,8 +41,7 @@ ms.locfileid: "62917969"
   
 ### <a name="scalability"></a>スケーラビリティ  
   
--   バックグラウンド配信: データベース メールでは、バックグラウンド配信または非同期配信が提供されています。 
-  **sp_send_dbmail** を呼び出してメッセージを送信すると、データベース メールによって [!INCLUDE[ssSB](../../includes/sssb-md.md)] のキューに要求が追加されます。 ストアド プロシージャが直ちに返されます。 外部の電子メール コンポーネントが要求を受信し、電子メールを配信します。  
+-   バックグラウンド配信: データベース メールでは、バックグラウンド配信または非同期配信が提供されています。 **sp_send_dbmail** を呼び出してメッセージを送信すると、データベース メールによって [!INCLUDE[ssSB](../../includes/sssb-md.md)] のキューに要求が追加されます。 ストアド プロシージャが直ちに返されます。 外部の電子メール コンポーネントが要求を受信し、電子メールを配信します。  
   
 -   複数のプロファイル: データベース メールを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内に複数のプロファイルを作成できます。 オプションで、メッセージを送信するときにデータベース メールが使用するプロファイルを選択できます。  
   
@@ -79,14 +75,14 @@ ms.locfileid: "62917969"
   
 
   
-##  <a name="VisualElement"></a>データベースメールアーキテクチャ  
+##  <a name="database-mail-architecture"></a><a name="VisualElement"></a>データベースメールアーキテクチャ  
  データベース メールは、Service Broker テクノロジを使用するキュー アーキテクチャを基に設計されています。 ユーザーが **sp_send_dbmail**を実行すると、アイテムがメール キューに挿入され、電子メール メッセージを格納したレコードが作成されます。 メール キューに新しいエントリが挿入されると、データベース メールの外部プロセス (DatabaseMail.exe) が起動します。 外部プロセスは、電子メール情報を読み取り、電子メール メッセージを適切な電子メール サーバーに送信します。 また、送信操作の結果の状態キューにアイテムを挿入します。 状態キューに新しいエントリが挿入されると、電子メール メッセージの状態を更新する内部ストアド プロシージャが起動します。 データベース メールは、システム テーブルに送信済み (または未送信) の電子メール メッセージを格納するだけでなく、電子メールの添付ファイルも記録します。 データベース メール ビューには、トラブルシューティングのためにメッセージの状態が表示されます。また、ストアド プロシージャにより、データベース メール キューの管理が可能になります。  
   
  ![msdb から SMTP メール サーバーへのメッセージ送信](../../database-engine/media/databasemail.gif "msdb から SMTP メール サーバーへのメッセージ送信")  
   
 
   
-##  <a name="ComponentsAndConcepts"></a>データベースメールコンポーネントの概要  
+##  <a name="introduction-to-database-mail-components"></a><a name="ComponentsAndConcepts"></a>データベースメールコンポーネントの概要  
  データベース メールは次に示す主要なコンポーネントで構成されています。  
   
 -   構成およびセキュリティ関連コンポーネント  
@@ -95,8 +91,7 @@ ms.locfileid: "62917969"
   
 -   メッセージング関連コンポーネント  
   
-     
-  **msdb** データベースは、データベース メールでの電子メール送信に使用されるメッセージング オブジェクトを保持するメール ホスト データベースとして機能します。 これらのオブジェクトには、 **sp_send_dbmail** ストアド プロシージャと、メッセージに関する情報を格納するデータ構造が含まれています。  
+     **msdb** データベースは、データベース メールでの電子メール送信に使用されるメッセージング オブジェクトを保持するメール ホスト データベースとして機能します。 これらのオブジェクトには、 **sp_send_dbmail** ストアド プロシージャと、メッセージに関する情報を格納するデータ構造が含まれています。  
   
 -   データベース メール実行可能ファイル  
   
@@ -106,15 +101,14 @@ ms.locfileid: "62917969"
   
      データベース メールは、 **msdb** データベースおよび [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アプリケーション イベント ログにログ情報を記録します。  
   
- **データベースメールを使用するようにエージェントを構成しています:**  
+ **データベース メールを使用するためのエージェントの構成:**  
   
  SQL Server エージェントは、データベース メールを使用するように構成できます。 警告通知およびジョブ完了時の自動通知には、この構成が必要です。  
   
 > [!WARNING]  
 >  また、ジョブ内の個別のジョブ ステップでは、データベース メールを使用するように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを構成しなくても、電子メールを送信できます。 たとえば、 [!INCLUDE[tsql](../../../includes/tsql-md.md)] ジョブ ステップでは、データベース メールを使用してクエリ結果を受信者の一覧に送信できます。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを構成して、次のような場合に電子メール メッセージが指定のオペレーターに送信されるように設定できます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを構成して、次のような場合に電子メール メッセージが指定のオペレーターに送信されるように設定できます。  
   
 -   警告が発生した場合。 特定のイベントが発生したときに電子メールによる通知を送信するように警告を構成できます。 たとえば、すぐに対処しなければならない可能性がある特定のデータベース イベントまたはオペレーティング システムの状態がオペレーターに通知されるように、警告を構成できます。 警告の構成の詳細については、「 [警告](../../ssms/agent/alerts.md)」を参照してください。  
   
@@ -122,7 +116,7 @@ ms.locfileid: "62917969"
   
  
   
-##  <a name="RelatedContent"></a>データベースメールコンポーネントに関するトピック  
+##  <a name="database-mail-component-topics"></a><a name="RelatedContent"></a>データベースメールコンポーネントに関するトピック  
   
 -   [データベース メール構成オブジェクト](database-mail-configuration-objects.md)  
   

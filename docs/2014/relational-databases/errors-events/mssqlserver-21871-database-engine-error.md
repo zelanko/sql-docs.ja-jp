@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 832ee3caa23a034f1c228d01ff8ec2ceda32de06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62915124"
 ---
 # <a name="mssqlserver_21871"></a>MSSQLSERVER_21871
@@ -36,7 +36,6 @@ ms.locfileid: "62915124"
  `sp_validate_replica_hosts_as_publishers` は、ディストリビューション データベースのテーブル MSredirected_publishers で、識別されたパブリッシャーおよびパブリッシャー データベースのエントリがあるかどうかをチェックします。  エントリが見つからない場合、`sp_validate_replica_hosts_as_publishers` はエラー 21871 を返します。  
   
 ## <a name="user-action"></a>ユーザーの操作  
- 
-  `sp_validate_replica_hosts_as_publishers` は、リダイレクトされたパブリッシャーにのみ関連しています。 パブリッシャー データベースが可用性グループのメンバーである場合、ストアド プロシージャ `sp_redirect_publisher` を使用して、パブリッシャーおよびパブリッシャー データベースを可用性グループの可用性グループ リスナー名に関連付けます。  
+ `sp_validate_replica_hosts_as_publishers` は、リダイレクトされたパブリッシャーにのみ関連しています。 パブリッシャー データベースが可用性グループのメンバーである場合、ストアド プロシージャ `sp_redirect_publisher` を使用して、パブリッシャーおよびパブリッシャー データベースを可用性グループの可用性グループ リスナー名に関連付けます。  
   
   

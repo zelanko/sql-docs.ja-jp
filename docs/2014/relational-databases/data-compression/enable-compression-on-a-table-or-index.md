@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8c3515610a0c833a17c78602ff48ed488b739ec5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62918304"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>テーブルまたはインデックスの圧縮の有効化
@@ -46,9 +46,9 @@ ms.locfileid: "62918304"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   システム テーブルで圧縮を有効にすることはできません。  
   
@@ -56,12 +56,12 @@ ms.locfileid: "62918304"
   
 -   固定されていないインデックスがテーブルにある場合、そのパーティションの圧縮設定を変更できません。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  テーブルまたはインデックスに対する ALTER 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-enable-compression-on-a-table-or-index"></a>テーブルまたはインデックスの圧縮を有効にするには  
   
@@ -197,7 +197,7 @@ ms.locfileid: "62918304"
   
      完了したら、 **[閉じる]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-enable-compression-on-a-table"></a>テーブルで圧縮を有効にするには  
   

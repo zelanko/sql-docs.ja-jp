@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7d9b75cc79f1f127858ce8547aa222524614ac09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62901555"
 ---
 # <a name="ole-db-destination"></a>OLE DB 変換先
@@ -48,22 +48,20 @@ ms.locfileid: "62901555"
  OLE DB 変換先で 2 バイト文字セット (DBCS) を使用するデータを読み込む際に、データ アクセス モードで高速読み込みオプションを使用せず、OLE DB 接続マネージャーが [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB) を使用している場合、そのデータは破損する可能性があります。 DBCS データの整合性を保持するには、OLE DB 接続マネージャーで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client を使用するように構成するか、 **[テーブルまたはビュー - 高速読み込み]** または **[テーブル名またはビュー名の変数 - 高速読み込み]** のうちいずれかの高速読み込みモードを使用する必要があります。 どちらのオプションも、 **[OLE DB 変換先エディター]** ダイアログ ボックスから使用できます。 [!INCLUDE[ssIS](../../includes/ssis-md.md)]オブジェクトモデルをプログラミングする場合は、accessmode プロパティをまたは`OpenRowset Using FastLoad` `OpenRowset Using FastLoad From Variable`に設定する必要があります。  
   
 > [!NOTE]  
->  
-  **デザイナーの** [OLE DB 変換先エディター] [!INCLUDE[ssIS](../../includes/ssis-md.md)] ダイアログ ボックスを使用して、OLE DB 変換先がデータを挿入する変換先テーブルを作成する際に、新しく作成したテーブルを手動で選択する必要がある場合があります。 手動で選択する必要があるのは、OLE DB provider for DB2 などの OLE DB プロバイダーが、スキーマの識別子を自動的にテーブル名に追加した場合です。  
+>  **デザイナーの** [OLE DB 変換先エディター] [!INCLUDE[ssIS](../../includes/ssis-md.md)] ダイアログ ボックスを使用して、OLE DB 変換先がデータを挿入する変換先テーブルを作成する際に、新しく作成したテーブルを手動で選択する必要がある場合があります。 手動で選択する必要があるのは、OLE DB provider for DB2 などの OLE DB プロバイダーが、スキーマの識別子を自動的にテーブル名に追加した場合です。  
   
 > [!NOTE]  
 >  変換先の種類に応じて、 **[OLE DB 変換先エディター]** ダイアログ ボックスによって生成される CREATE TABLE ステートメントの変更が必要になる場合があります。 たとえば、変換先によっては CREATE TABLE ステートメントで使用されるデータ型をサポートしない場合もあります。  
   
  OLE DB 変換先は、OLE DB 接続マネージャーを使用してデータ ソースに接続します。OLE DB 接続マネージャーでは、使用する OLE DB プロバイダーを指定します。 詳細については、「 [OLE DB 接続マネージャー](../connection-manager/ole-db-connection-manager.md)」を参照してください。  
   
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトでは、OLE DB 接続マネージャーを作成できるデータ ソース オブジェクトも用意されています。このオブジェクトは、データ ソースとデータ ソース ビューを OLE DB 変換先で使用できるようにします。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトでは、OLE DB 接続マネージャーを作成できるデータ ソース オブジェクトも用意されています。このオブジェクトは、データ ソースとデータ ソース ビューを OLE DB 変換先で使用できるようにします。  
   
  OLE DB 変換先には、入力列と変換先データ ソースの列との間のマッピングが含まれています。 入力列をすべての変換先列にマップする必要はありませんが、変換先列のプロパティによっては、変換先列にマップされる入力列がない場合、エラーが発生することがあります。 たとえば、入力先列で NULL 値が許容されていない場合は、入力列をその列にマップする必要があります。 また、マップされる列のデータ型には互換性がある必要があります。 たとえば、文字列データ型の入力列を数値データ型の変換先列にマップすることはできません。  
   
  OLE DB 変換先は、1 つの標準入力と 1 つのエラー出力をとります。  
   
- データ型の詳細については、「 [Integration Services のデータ型](integration-services-data-types.md)」を参照してください。  
+ データ型の詳細については、「 [Integration Services データ型](integration-services-data-types.md)」を参照してください。  
   
 ## <a name="fast-load-options"></a>高速読み込みオプション  
  OLE DB 変換先で高速読み込みデータ アクセス モードが使用される場合、 **[OLE DB 変換先エディター]** のユーザー インターフェイスで、変換先に対して次の高速読み込みオプションを指定できます。  
@@ -83,38 +81,33 @@ ms.locfileid: "62901555"
 > [!NOTE]  
 >  変換先で制約が失敗すると、FastLoadMaxInsertCommitSize で定義された行数のバッチ全体が失敗します。  
   
- 
-  **[OLE DB 変換先エディター]** ダイアログ ボックスで公開される高速読み込みオプションに加えて、 **[詳細エディター]** ダイアログ ボックスで、FastLoadOptions プロパティに次の一括読み込みオプションを入力することにより、それらのオプションを使用するように OLE DB 変換先を構成できます。  
+ **[OLE DB 変換先エディター]** ダイアログ ボックスで公開される高速読み込みオプションに加えて、 **[詳細エディター]** ダイアログ ボックスで、FastLoadOptions プロパティに次の一括読み込みオプションを入力することにより、それらのオプションを使用するように OLE DB 変換先を構成できます。  
   
-|高速読み込みオプション|[説明]|  
+|高速読み込みオプション|説明|  
 |----------------------|-----------------|  
 |KILOBYTES_PER_BATCH|挿入するサイズを KB 単位で指定します。 このオプション`KILOBYTES_PER_BATCH`  =  \<の形式は、正の**>** 整数値です。|  
 |FIRE_TRIGGERS|挿入テーブルでトリガーを起動するかどうかを指定します。 このオプションの形式は、 **FIRE_TRIGGERS**です。 このオプションが指定されている場合は、トリガーが起動されます。|  
 |ORDER|入力データの並べ替え方法を指定します。 このオプションの形式は、ORDER \<列名> ASC&#124;DESC です。 並べ替える列のリストには任意の数列を指定できます。並べ替え順序の指定は省略することもできます。 並べ替え順序を指定しなかった場合は、データを並べ替えないと見なして挿入操作が実行されます。<br /><br /> 注: ORDER オプションを使用してテーブル上のクラスター化インデックスに従って入力データを並べ替えると、パフォーマンスが向上する可能性があります。|  
   
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] キーワードは慣例として通常は大文字で入力しますが、これらのキーワードの大文字小文字は区別されません。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] キーワードは慣例として通常は大文字で入力しますが、これらのキーワードの大文字小文字は区別されません。  
   
  高速読み込みオプションの詳細については、「[BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)」を参照してください。  
   
 ## <a name="troubleshooting-the-ole-db-destination"></a>OLE DB 変換先のトラブルシューティング  
- OLE DB 変換先による外部データ プロバイダーの呼び出しをログに記録できます。 このログ機能を使用すると、OLE DB 変換先による外部データ ソースへのデータ保存に関するトラブルシューティングを行うことができます。 OLE DB 変換先による外部データ プロバイダーの呼び出しのログを記録するには、パッケージ ログ記録を有効にして、パッケージ レベルで **Diagnostic** イベントを選択します。 詳細については、「[パッケージ実行のトラブルシューティング ツール](../troubleshooting/troubleshooting-tools-for-package-execution.md)」を参照してください。  
+ OLE DB 変換先による外部データ プロバイダーの呼び出しをログに記録できます。 このログ機能を使用すると、OLE DB 変換先による外部データ ソースへのデータ保存に関するトラブルシューティングを行うことができます。 OLE DB 変換先による外部データ プロバイダーの呼び出しのログを記録するには、パッケージ ログ記録を有効にして、パッケージ レベルで **Diagnostic** イベントを選択します。 詳細については、「 [パッケージ実行のトラブルシューティング ツール](../troubleshooting/troubleshooting-tools-for-package-execution.md)」を参照してください。  
   
 ## <a name="configuring-the-ole-db-destination"></a>OLE DB 変換先の構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- 
-  **[OLE DB 変換先エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ **[OLE DB 変換先エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [OLE DB 変換先エディター &#40;[接続マネージャー] ページ&#41;](../ole-db-destination-editor-connection-manager-page.md)  
+-   [[OLE DB 変換先エディター] &#40;[接続マネージャー] ページ&#41;](../ole-db-destination-editor-connection-manager-page.md)  
   
--   [OLE DB 変換先エディター &#40;マッピング] ページ&#41;](../ole-db-destination-editor-mappings-page.md)  
+-   [[OLE DB 変換先エディター] &#40;[マッピング] ページ&#41;](../ole-db-destination-editor-mappings-page.md)  
   
--   [OLE DB 変換先エディター &#40;[エラー出力] ページ&#41;](../ole-db-destination-editor-error-output-page.md)  
+-   [[OLE DB 変換先エディター] &#40;[エラー出力] ページ&#41;](../ole-db-destination-editor-error-output-page.md)  
   
- 
-  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 
-  **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
 -   [共通プロパティ](../common-properties.md)  
   
@@ -129,8 +122,8 @@ ms.locfileid: "62901555"
 ## <a name="related-content"></a>関連コンテンツ  
  [OLE DB ソース](ole-db-source.md)  
   
- [SSIS&#41; 変数の Integration Services &#40;](../integration-services-ssis-variables.md)  
+ [Integration Services &#40;SSIS&#41; の変数](../integration-services-ssis-variables.md)  
   
- [Data Flow](data-flow.md)  
+ [データ フロー](data-flow.md)  
   
   

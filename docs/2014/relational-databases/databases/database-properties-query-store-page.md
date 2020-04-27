@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 51116c993cf795e6390ac463f67f75e2ddff3e0e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917213"
 ---
 # <a name="database-properties-query-store-page"></a>データベースのプロパティ (クエリのストアのページ)
@@ -24,14 +24,14 @@ ms.locfileid: "62917213"
   
 ||  
 |-|  
-|**適用対象**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。|  
+|**適用対象**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]|  
   
 ## <a name="options"></a>オプション  
- [有効化]  
+ 有効化  
  クエリのストアを有効化または無効化します。  
   
  操作モード  
- 有効な値は、READ_ONLY、READ_WRITE はします。 READ_WRITE モードでは、クエリのストアは、収集し、クエリ プランとランタイム実行の統計情報が引き続き発生すます。 READ_ONLY モードでは、クエリのストアから情報を読み取ることができますが、新しい情報は追加されません。 クエリのストアの割り当て済み最大領域が不足すると、クエリのストアは操作モードを READ_ONLY にします。  
+ 有効な値は、READ_ONLY、READ_WRITE はします。 READ_WRITE モードでは、クエリのストアでクエリ プランとランタイム実行の統計情報が収集および保持されます。 READ_ONLY モードでは、クエリのストアから情報を読み取ることができますが、新しい情報は追加されません。 クエリのストアの割り当て済み最大領域が不足すると、クエリのストアは操作モードを READ_ONLY にします。  
   
  操作モード (実際)  
  クエリのストアの実際の操作モードを取得します。  
@@ -59,11 +59,11 @@ ms.locfileid: "62917213"
   
  右側のグラフには、現在使用されているクエリのストアのクォータの部分が表示されます。 クォータは、左側のグラフには表示されないことにご注意ください。 クォータが、データベースの現在のサイズを超える場合があります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  クエリのストアの機能により、クエリ プランの選択やパフォーマンスに関する洞察が DBA に提供されます。 これにより、クエリ プランの変更によって生じるパフォーマンスの違いがすばやくわかるようになり、パフォーマンス上のトラブルシューティングを簡略化できます。 この機能により、クエリ、プラン、ランタイム統計情報の履歴が自動的にキャプチャされ、レビュー用に保持されます。 データは時間枠で区分されるため、データベースの使用パターンを表示して、サーバー上でクエリ プランが変わった時点を確認することができます。 クエリのストアは、クエリのストアのデータベース プロパティ ページを使用するか、 [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options) オプションを使用して構成できます。 クエリのストアは、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ダイアログ ボックスを使用して情報を表示します。 クエリのストアの詳細については、「 [Monitoring Performance By Using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
  [Transact-sql&#41;&#40;のストアドプロシージャのクエリストア](/sql/relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql)   
- [クエリストアカタログビュー &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/query-store-catalog-views-transact-sql)  
+ [クエリ ストアのカタログ ビュー &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/query-store-catalog-views-transact-sql)  
   
   

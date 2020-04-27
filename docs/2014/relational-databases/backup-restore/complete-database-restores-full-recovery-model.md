@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cb523d8e9b1dbbb136475d0aa739491935f755ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922160"
 ---
 # <a name="complete-database-restores-full-recovery-model"></a>データベースの全体復元 (完全復旧モデル)
@@ -32,20 +32,20 @@ ms.locfileid: "62922160"
  特に完全復旧モデルと一括ログ復旧モデルでは、データベースを復元するときに、単一の復元シーケンスを使用する必要があります。 *復元シーケンス* は、1 つ以上の復元フェーズによってデータを移動する、1 つ以上の復元操作で構成されます。  
   
 > [!IMPORTANT]  
->  不明なソースや信頼されていないソースからデータベースをアタッチまたは復元しないことをお勧めします。 そのようなデータベースには、意図しない [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを実行したり、スキーマまたは物理データベース構造を変更することによりエラーを発生させる悪意のあるコードが含まれている可能性があります。 不明または信頼できないソースのデータベースを使用する前に、実稼働していないサーバー上のデータベースに対して[DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)を実行し、データベース内のストアドプロシージャやその他のユーザー定義コードなどのコードを確認します。  
+>  不明なソースや信頼されていないソースからデータベースをアタッチまたは復元しないことをお勧めします。 そのようなデータベースには、意図しない [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを実行したり、スキーマまたは物理データベース構造を変更することによりエラーを発生させる悪意のあるコードが含まれている可能性があります。 不明または信頼できないソースのデータベースを使用する前に、運用サーバー以外のサーバーでそのデータベースに対し [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) を実行し、さらに、そのデータベースのストアド プロシージャやその他のユーザー定義コードなどのコードを調べます。  
   
- **このトピックの内容:**  
+ **このトピックの内容**  
   
--   [障害発生時点へのデータベースの復元](#PointOfFailure)  
+-   [障害発生時点へのデータベースの復旧](#PointOfFailure)  
   
--   [ログバックアップ内の特定の時点へのデータベースの復元](#PointWithinBackup)  
+-   [ログ バックアップ内の特定の時点へのデータベースの復元](#PointWithinBackup)  
   
--   [Related Tasks](#RelatedTasks)  
+-   [関連タスク](#RelatedTasks)  
   
 > [!NOTE]  
 >  以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からのバックアップに対するサポートの情報については、「 [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)」の「互換性サポート」のセクションを参照してください。  
   
-##  <a name="PointOfFailure"></a>障害発生時点へのデータベースの復元  
+##  <a name="restoring-a-database-to-the-point-of-failure"></a><a name="PointOfFailure"></a>障害発生時点へのデータベースの復元  
  通常、障害が発生した時点までデータベースを復旧するには、次の基本的な手順が必要です。  
   
 1.  アクティブなトランザクション ログ (ログの末尾と呼ばれます) をバックアップします。 これにより、ログ末尾のバックアップが作成されます。 アクティブなトランザクション ログを使用できない場合は、そのログ部分にあるすべてのトランザクションが失われます。  
@@ -67,12 +67,12 @@ ms.locfileid: "62922160"
   
  次の図に、この復元シーケンスを示します。 (1) 障害が発生した後、(2) ログ末尾のバックアップが作成されます。 次に、データベースが障害発生時点まで復元されます。 このときに、データベース バックアップと、それ以降の差分バックアップ、および、ログ末尾のバックアップを含め、差分バックアップ後に作成されたすべてのログ バックアップが復元されます。  
   
- ![障害発生時までのデータベースの全体復元](../../database-engine/media/bnrr-rmfull1-db-failure-pt.gif "障害発生時点へのデータベースの全体復元")  
+ ![障害発生時点へのデータベースの全体復元](../../database-engine/media/bnrr-rmfull1-db-failure-pt.gif "障害発生時点へのデータベースの全体復元")  
   
 > [!NOTE]  
 >  データベースのバックアップを別のサーバー インスタンスに復元する場合は、「 [バックアップと復元によるデータベースのコピー](../databases/copy-databases-with-backup-and-restore.md)」を参照してください。  
   
-###  <a name="TsqlSyntax"></a>基本的な Transact-sql RESTORE 構文  
+###  <a name="basic-transact-sql-restore-syntax"></a><a name="TsqlSyntax"></a> 基本的な Transact-SQL RESTORE 構文  
  前の図の復元シーケンスの基本的な[restore](/sql/t-sql/statements/restore-statements-transact-sql) [!INCLUDE[tsql](../../includes/tsql-md.md)]構文は次のとおりです。  
   
 1.  RESTORE DATABASE *database* FROM *full database backup* WITH NORECOVERY;  
@@ -85,12 +85,11 @@ ms.locfileid: "62922160"
   
 4.  RESTORE DATABASE *database* WITH RECOVERY;  
   
-###  <a name="ExampleToPoFTsql"></a>例: 障害発生時点への復旧 (Transact-sql)  
+###  <a name="example-recovering-to-the-point-of-failure-transact-sql"></a><a name="ExampleToPoFTsql"></a>例: 障害発生時点への復旧 (Transact-sql)  
  次の [!INCLUDE[tsql](../../includes/tsql-md.md)] の例は、データベースを障害発生時点まで復元する復元シーケンスに不可欠なオプションを示しています。 この例では、データベースのログ末尾のバックアップを作成します。 次に、データベースの完全バックアップとログ バックアップを復元してから、ログ末尾のバックアップを復元します。 最後に、別の手順でデータベースを復旧します。  
   
 > [!NOTE]  
->  この例では、「 [データベースの完全バックアップ &#40;SQL Server&#41;](full-database-backups-sql-server.md)」の「互換性サポート」のセクションを参照してください。 
-  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースは完全復旧モデルを使用するように、データベースのバックアップ前に設定されています。  
+>  この例では、「 [データベースの完全バックアップ &#40;SQL Server&#41;](full-database-backups-sql-server.md)」の「互換性サポート」のセクションを参照してください。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースは完全復旧モデルを使用するように、データベースのバックアップ前に設定されています。  
   
 ```  
 USE master;  
@@ -122,7 +121,7 @@ RESTORE DATABASE AdventureWorks2012 WITH RECOVERY;
 GO  
 ```  
   
-##  <a name="PointWithinBackup"></a>ログバックアップ内の特定の時点へのデータベースの復元  
+##  <a name="restoring-a-database-to-a-point-within-a-log-backup"></a><a name="PointWithinBackup"></a>ログバックアップ内の特定の時点へのデータベースの復元  
  一般に、完全復旧モデルでは、データベースの全体復元によって、特定の時点、マークされたトランザクション、またはログ バックアップ内の特定の LSN まで復元することができます。 ただし、一括ログ復旧モデルの場合は、一括ログ操作による変更がログ バックアップに含まれていると、特定の時点への復旧はできません。  
   
 ### <a name="sample-point-in-time-restore-scenarios"></a>特定の時点への復元のサンプル シナリオ  
@@ -149,36 +148,36 @@ GO
 > [!NOTE]  
 >  特定の時点への復元の例については、「 [SQL Server データベースを特定の時点に復元する方法 &#40;完全復旧モデル&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)」の「互換性サポート」のセクションを参照してください。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
  **データベースの完全バックアップを復元するには**  
   
 -   [データベースバックアップを復元する &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
   
--   [SQL Server &#40;新しい場所にデータベースを復元&#41;](restore-a-database-to-a-new-location-sql-server.md)  
+-   [データベースを新しい場所に復元する &#40;SQL Server&#41;](restore-a-database-to-a-new-location-sql-server.md)  
   
  **データベースの差分バックアップを復元するには**  
   
--   [データベースの差分バックアップを復元 &#40;SQL Server&#41;](restore-a-differential-database-backup-sql-server.md)  
+-   [データベースの差分バックアップの復元 &#40;SQL Server&#41;](restore-a-differential-database-backup-sql-server.md)  
   
- **トランザクションログバックアップを復元するには**  
+ **トランザクション ログ バックアップを復元するには**  
   
--   [トランザクションログバックアップを復元 &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)  
+-   [トランザクション ログ バックアップの復元 &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)  
   
  **SQL Server 管理オブジェクト (SMO) を使用してバックアップを復元するには**  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore%2A>  
   
- **ログバックアップ内の特定の時点にデータベースを復元するには**  
+ **ログ バックアップ内の特定の時点までデータベースを復元するには**  
   
--   [SQL Server データベースを &#40;完全復旧モデルの特定の時点に復元する&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
+-   [SQL Server データベースを特定の時点に復元する &#40;完全復旧モデル&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
 -   [マークされたトランザクションを含む関連データベースの復旧](recovery-of-related-databases-that-contain-marked-transaction.md)  
   
--   [ログシーケンス番号 &#40;SQL Server&#41;に回復する](recover-to-a-log-sequence-number-sql-server.md)  
+-   [ログ シーケンス番号への復旧 &#40;SQL Server&#41;](recover-to-a-log-sequence-number-sql-server.md)  
   
 ## <a name="see-also"></a>参照  
- [Transact-sql&#41;の復元 &#40;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [Transact-sql&#41;のバックアップ &#40;](/sql/t-sql/statements/backup-transact-sql)   
+ [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
+ [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [トランザクションログバックアップの適用 &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [sp_addumpdevice &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
  [データベースの完全バックアップ &#40;SQL Server&#41;](full-database-backups-sql-server.md)   

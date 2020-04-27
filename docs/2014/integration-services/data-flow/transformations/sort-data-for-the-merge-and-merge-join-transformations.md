@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 530cca00459ed1ae170272dfd20a54928f039b38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62900338"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>マージ変換およびマージ結合変換用にデータを並べ替える
@@ -51,8 +51,7 @@ ms.locfileid: "62900338"
 -   データが並べ替えられているかどうかを示す、出力の `IsSorted` プロパティ。 このプロパティは `True` に設定する必要があります。  
   
     > [!IMPORTANT]  
-    >  
-  `IsSorted` プロパティの値を `True` に設定しても、データは並べ替えられません。 このプロパティでは、データが既に並べ替えられている下流コンポーネントにヒントのみを提供します。  
+    >  `IsSorted` プロパティの値を `True` に設定しても、データは並べ替えられません。 このプロパティでは、データが既に並べ替えられている下流コンポーネントにヒントのみを提供します。  
   
 -   列を並べ替えるかどうか、並べ替える場合はその列の並べ替え順、および複数の列の並べ替えの順序を示す、出力列の `SortKeyPosition` プロパティ。 このプロパティは、並べ替えられるデータの各列に対して設定する必要があります。  
   
@@ -89,8 +88,7 @@ ms.locfileid: "62900338"
   
     -   既定値は 0 で、その列が並べ替えられないことを示します。 並べ替えに加えない出力列では、値を 0 のままにします。  
   
-     
-  `SortKeyPosition` プロパティの設定方法の例として、データを変換元に読み込む、次の Transact-SQL ステートメントについて考えてみます。  
+     `SortKeyPosition` プロパティの設定方法の例として、データを変換元に読み込む、次の Transact-SQL ステートメントについて考えてみます。  
   
      `SELECT * FROM MyTable ORDER BY ColumnA, ColumnB DESC, ColumnC`  
   

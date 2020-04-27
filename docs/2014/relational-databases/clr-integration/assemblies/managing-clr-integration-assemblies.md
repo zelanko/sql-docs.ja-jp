@@ -17,37 +17,33 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1e65bb5c651862a82d78faede158234d20392c1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919692"
 ---
 # <a name="managing-clr-integration-assemblies"></a>CLR 統合アセンブリの管理
   マネージド コードは、コンパイルされた後、アセンブリと呼ばれる単位で配置されます。 アセンブリは DLL ファイルまたは実行可能 (.exe) ファイルとしてパッケージ化されます。 実行可能ファイルが単独で実行できるのに対し、DLL は既存のアプリケーションでホストする必要があります。 マネージ DLL アセンブリは、に読み込んでホストする[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]ことができます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]CREATE ASSEMBLY ステートメントを使用して、データベースをプロセスに読み込み、使用する前に使用します。 アセンブリは、ALTER ASSEMBLY ステートメントを使用してより最近のバージョンから更新することも、DROP ASSEMBLY ステートメントを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] から削除することも可能です。  
   
- アセンブリ情報は、アセンブリがインストールされているデータベース内の `sys.assembly_files` テーブルに格納されます。 
-  `sys.assembly_files` テーブルには、次の列が含まれています。  
+ アセンブリ情報は、アセンブリがインストールされているデータベース内の `sys.assembly_files` テーブルに格納されます。 `sys.assembly_files` テーブルには、次の列が含まれています。  
   
-|列|[説明]|  
+|列|説明|  
 |------------|-----------------|  
 |assembly_id|アセンブリに定義される ID。 この番号は、同じアセンブリに関連するすべてのオブジェクトに割り当てられます。|  
 |name|オブジェクトの名前。|  
 |file_id|各オブジェクトを識別する番号。最初のオブジェクトは、値 1 が割り当てられている所定の `assembly_id` に関連付けられます。 複数のオブジェクトが同じ `assembly_id` に関連付けられている場合、その後に続く各 `file_id` 値は 1 ずつ増加します。|  
-|content|アセンブリまたはファイルの 16 進数表記。|  
+|コンテンツ|アセンブリまたはファイルの 16 進数表記。|  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [アセンブリの作成](creating-an-assembly.md)  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] における SAFE、EXTERNAL_ACCESS、および UNSAFE CLR アセンブリの作成について説明します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] における SAFE、EXTERNAL_ACCESS、および UNSAFE CLR アセンブリの作成について説明します。  
   
  [アセンブリの変更](altering-an-assembly.md)  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] における CLR アセンブリの更新について説明します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] における CLR アセンブリの更新について説明します。  
   
  [アセンブリの削除](dropping-an-assembly.md)  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] からの CLR アセンブリの削除について説明します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] からの CLR アセンブリの削除について説明します。  
   
 ## <a name="see-also"></a>参照  
  [CLR 統合のセキュリティ](../security/clr-integration-security.md)   

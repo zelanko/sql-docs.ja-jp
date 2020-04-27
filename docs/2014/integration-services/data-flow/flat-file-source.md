@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6338c7a306f163f786f2c1e7d44ae4dbc66504ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62902451"
 ---
 # <a name="flat-file-source"></a>フラット ファイル ソース
@@ -53,18 +53,15 @@ ms.locfileid: "62902451"
 ## <a name="configuration-of-the-flat-file-source"></a>フラット ファイル ソースの構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- 
-  **[フラット ファイル ソース エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ **[フラット ファイル ソース エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [[フラットファイルソースエディター] &#40;[接続マネージャー] ページ&#41;](../flat-file-source-editor-connection-manager-page.md)  
+-   [フラット ファイル ソース エディター &#40;[接続マネージャー] ページ&#41;](../flat-file-source-editor-connection-manager-page.md)  
   
--   [[フラットファイルソースエディター] &#40;[列] ページ&#41;](../flat-file-source-editor-columns-page.md)  
+-   [フラット ファイル ソース エディター ([列] ページ)](../flat-file-source-editor-columns-page.md)  
   
--   [フラットファイルソースエディター &#40;エラー出力ページ&#41;](../flat-file-source-editor-error-output-page.md)  
+-   [フラット ファイル ソース エディター ([エラー出力] ページ)](../flat-file-source-editor-error-output-page.md)  
   
- 
-  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 
-  **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
 -   [共通プロパティ](../common-properties.md)  
   
@@ -75,6 +72,6 @@ ms.locfileid: "62902451"
   
 ## <a name="see-also"></a>参照  
  [フラットファイル変換先](flat-file-destination.md)   
- [Data Flow](data-flow.md)  
+ [データ フロー](data-flow.md)  
   
   

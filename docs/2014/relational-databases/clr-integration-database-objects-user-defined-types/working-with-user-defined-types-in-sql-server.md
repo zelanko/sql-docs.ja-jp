@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1a6a226ae76f75a07b483b74a09ecafc0191eee2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919959"
 ---
 # <a name="working-with-user-defined-types-in-sql-server"></a>SQL Server でのユーザー定義型の使用
@@ -28,12 +28,10 @@ ms.locfileid: "62919959"
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [UDT テーブルと UDT 列の定義](working-with-user-defined-types-defining-udt-tables-and-columns.md)  
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、テーブルに UDT 列を作成する方法について説明します。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、テーブルに UDT 列を作成する方法について説明します。  
   
  [UDT データの操作](working-with-user-defined-types-manipulating-udt-data.md)  
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で UDT データを操作する方法について説明します。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で UDT データを操作する方法について説明します。  
   
 ## <a name="see-also"></a>参照  
  [CLR ユーザー定義型](clr-user-defined-types.md)  

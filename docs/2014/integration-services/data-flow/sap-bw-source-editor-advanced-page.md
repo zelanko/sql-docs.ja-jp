@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 80a3d1d0fa667821616909a327a946a4116d06de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62901048"
 ---
 # <a name="sap-bw-source-editor-advanced-page"></a>[SAP BW 変換元エディター] ([詳細設定] ページ)
@@ -44,13 +44,11 @@ ms.locfileid: "62901048"
  **文字列変換**  
  文字列変換に適用するルールを指定します。  
   
-|オプション|[説明]|  
+|オプション|説明|  
 |------------|-----------------|  
 |**自動文字列変換**|SAP Netweaver BW システムが Unicode システムの場合に、`nvarchar` にすべての文字列を変換します。 それ以外の場合は `varchar` にすべての文字列を変換します。|  
-|**文字列を varchar に変換**|
-  `varchar` にすべての文字列を変換します。|  
-|**文字列を nvarchar に変換**|
-  `nvarchar` にすべての文字列を変換します。|  
+|**文字列を varchar に変換**|`varchar` にすべての文字列を変換します。|  
+|**文字列を nvarchar に変換**|`nvarchar` にすべての文字列を変換します。|  
   
  **タイムアウト (秒)**  
  ソースが待機する最大秒数を指定します。  

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9ac9035865a472b4f6c019124f6b3fd337e27f77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62893171"
 ---
 # <a name="column-conversion-details-dialog-box-sql-server-import-and-export-wizard"></a>[列変換の詳細] ダイアログ ボックス (SQL Server インポートおよびエクスポート ウィザード)
@@ -24,13 +24,12 @@ ms.locfileid: "62893171"
   
  **[列変換の詳細] ダイアログ ボックスを開くには**  
   
-1.  インポートおよびエクスポートウィザードの [**データ型の問題の確認**] ページで、[テーブル] ボックスの一覧からテーブルを選択します。 **** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+1.  インポートおよびエクスポートウィザードの [**データ型の問題の確認**] ページで、[テーブル] ボックスの一覧からテーブルを選択します。 **Table** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 2.  [**データ型マッピング**] の一覧で、変換の詳細を表示する列が含まれている行をダブルクリックします。  
   
  インポートおよびエクスポートウィザードの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]詳細については、「 [SQL Server インポートおよびエクスポートウィザード](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)」を参照してください。 ウィザードを起動するためのオプション、およびウィザードを正常に実行するために必要な権限については、「 [run the SQL Server Import And Export wizard](start-the-sql-server-import-and-export-wizard.md)」を参照してください。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードの目的は、変換元から変換先にデータをコピーすることです。 また、このウィザードでは、変換先データベースと変換先テーブルも作成できます。 ただし、複数のデータベースやテーブルまたは他の種類のデータベース オブジェクトをコピーする必要がある場合は、データベース コピー ウィザードを使用してください。 詳細については、「 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードの目的は、変換元から変換先にデータをコピーすることです。 また、このウィザードでは、変換先データベースと変換先テーブルも作成できます。 ただし、複数のデータベースやテーブルまたは他の種類のデータベース オブジェクトをコピーする必要がある場合は、データベース コピー ウィザードを使用してください。 詳細については、「 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)」を参照してください。  
   
   

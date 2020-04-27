@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 542b7e3ffcc4a1db5b2053c840b785f775384fe1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891803"
 ---
-# <a name="step-4-adding-a-data-flow-task-to-the-package"></a>手順 4: パッケージへのデータ フロー タスクの追加
+# <a name="step-4-adding-a-data-flow-task-to-the-package"></a>手順 4:パッケージへのデータ フロー タスクの追加
   前の実習では、データ ソースおよび変換先データに接続するための接続マネージャーを作成しました。次の実習では、パッケージにデータ フロー タスクを追加します。 データ フロー タスクには、変換元と変換先の間でデータを移動させるデータ フロー エンジンがカプセル化されており、データを移動する際に、変換、クリーン、修正を行うことができます。 抽出、変換、読み込み (ETL) プロセスのほとんどが、このデータ フロー タスクで実行されます。  
   
 > [!NOTE]  
@@ -25,11 +25,9 @@ ms.locfileid: "62891803"
   
 ### <a name="to-add-a-data-flow-task"></a>データ フロー タスクを追加するには  
   
-1.  
-  **[制御フロー]** タブをクリックします。  
+1.  **[制御フロー]** タブをクリックします。  
   
-2.  
-  **[SSIS ツールボックス]** で **[お気に入り]** を展開し、 **[データ フロー タスク]** を **[制御フロー]** タブのデザイン画面上にドラッグします。  
+2.  **[SSIS ツールボックス]** で **[お気に入り]** を展開し、 **[データ フロー タスク]** を **[制御フロー]** タブのデザイン画面上にドラッグします。  
   
     > [!NOTE]  
     >  SSIS ツールボックスが表示されていない場合は、メイン メニューの [SSIS]、[SSIS ツールボックス] の順に選択し、SSIS ツールボックスを表示します。  
@@ -41,7 +39,7 @@ ms.locfileid: "62891803"
 4.  データフロータスクを右クリックし、[**プロパティ**] をクリックします。プロパティウィンドウで、 `LocaleID`プロパティが**英語 (米国)** に設定されていることを確認します。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [手順 5: フラット ファイル ソースの追加と構成](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
+ [手順 5:フラット ファイル ソースの追加と構成](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
 ## <a name="see-also"></a>参照  
  [[データ フロー タスク]](control-flow/data-flow-task.md)  

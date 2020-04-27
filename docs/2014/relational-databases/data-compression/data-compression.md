@@ -23,14 +23,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c52fa04c46ff41ce67094599a6a2f3f5074e8f03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62873554"
 ---
 # <a name="data-compression"></a>データ圧縮
-  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、行ストア インデックスおよびテーブルのための行およびページの圧縮がサポートされます。また、列ストアと、列ストアおよびインデックスのための列ストアの保存用圧縮もサポートされます。  
   
  行ストア テーブルおよびインデックスについては、データベースのサイズを小さくするためにデータ圧縮機能を使用してください。 領域を削減するだけでなく、データ圧縮を使用すると、データを格納するページ数が少なくなり、クエリがディスクから読み取る必要のあるページが少なくなるため、大量の I/O が発生する作業のパフォーマンスを向上できます。 ただし、アプリケーションとの間でデータが交換される間は、データの圧縮と圧縮解除のためデータベース サーバーで追加の CPU リソースが必要になります。 次のデータベース オブジェクトで行とページの圧縮を構成することができます。  
@@ -100,11 +99,10 @@ ms.locfileid: "62873554"
   
 -   大きな値のデータ型は、そのサイズが原因で、通常の行データとは別に特殊な目的のページに格納される場合があります。 データ圧縮は、別個に格納されているデータには使用できません。  
   
--   
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で vardecimal ストレージ形式を実装したテーブルは、アップグレード時にもその設定を保持します。 vardecimal ストレージ形式を使用するテーブルに行の圧縮を適用することができます。 ただし、行の圧縮は vardecimal ストレージ形式のスーパーセットなので、vardecimal ストレージ形式を保持する理由はありません。 vardecimal ストレージ形式と行の圧縮を組み合わせても、10 進値の圧縮は追加されません。 vardecimal ストレージ形式を使用するテーブルにページの圧縮を適用することができます。ただし、vardecimal ストレージ形式の列の圧縮が追加される可能性は低くなります。  
+-   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で vardecimal ストレージ形式を実装したテーブルは、アップグレード時にもその設定を保持します。 vardecimal ストレージ形式を使用するテーブルに行の圧縮を適用することができます。 ただし、行の圧縮は vardecimal ストレージ形式のスーパーセットなので、vardecimal ストレージ形式を保持する理由はありません。 vardecimal ストレージ形式と行の圧縮を組み合わせても、10 進値の圧縮は追加されません。 vardecimal ストレージ形式を使用するテーブルにページの圧縮を適用することができます。ただし、vardecimal ストレージ形式の列の圧縮が追加される可能性は低くなります。  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]は、vardecimal ストレージ形式をサポートしています。ただし、行レベルの圧縮は同じ目的を達成するため、vardecimal ストレージ形式は非推奨とされます。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+    >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] は vardecimal ストレージ形式をサポートしていますが、行レベルの圧縮で同じ目的が果たされるので、vardecimal ストレージ形式は非推奨とされます。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
 ## <a name="using-columnstore-and-columnstore-archive-compression"></a>列ストアおよび列ストアの保存用圧縮の使用  
   
@@ -121,7 +119,7 @@ ms.locfileid: "62873554"
   
  保存用圧縮を追加するには、REBUILD オプションと DATA COMPRESSION = COLUMNSTORE を指定して [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql) または [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql) を使用します。  
   
- 例:  
+ 次に例を示します。  
   
 ```  
 ALTER TABLE ColumnstoreTable1   
@@ -137,7 +135,7 @@ REBUILD PARTITION = ALL WITH (DATA_COMPRESSION =  COLUMNSTORE_ARCHIVE ON PARTITI
   
  保存用圧縮を削除して、データを列ストア圧縮に復元するには、REBUILD オプションと DATA COMPRESSION = COLUMNSTORE を指定して [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql) または [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql) を使用します。  
   
- 例:  
+ 次に例を示します。  
   
 ```  
 ALTER TABLE ColumnstoreTable1   
@@ -166,7 +164,7 @@ REBUILD PARTITION = ALL WITH (
   
  パフォーマンスは低下しますがストレージが少なくてすむため、頻繁にアクセスしないデータには便利です。 たとえば、各月のデータ用のパーティションがある場合、ほとんどアクティビティは最新の月のデータに対して実行されるため、古い月のデータをアーカイブして必要なストレージを削減できます。  
   
-### <a name="metadata"></a>Metadata  
+### <a name="metadata"></a>メタデータ  
  次のシステム ビューには、クラスター化インデックスのデータ圧縮に関する情報が含まれています。  
   
 -   [&#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) -列と`type_desc`列には、 `type`クラスター化列ストアと非クラスター化列ストアが含まれます。  
@@ -259,9 +257,9 @@ REBUILD PARTITION = ALL WITH (
  [Unicode 圧縮の実装](unicode-compression-implementation.md)   
  [CREATE PARTITION SCHEME &#40;Transact-sql&#41;](/sql/t-sql/statements/create-partition-scheme-transact-sql)   
  [CREATE PARTITION FUNCTION &#40;Transact-sql&#41;](/sql/t-sql/statements/create-partition-function-transact-sql)   
- [CREATE TABLE &#40;Transact-sql&#41;](/sql/t-sql/statements/create-table-transact-sql)   
- [ALTER TABLE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
+ [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)   
+ [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
- [ALTER INDEX &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-index-transact-sql)  
+ [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)  
   
   

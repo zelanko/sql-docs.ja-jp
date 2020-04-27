@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b7e2324fcfce6c560000bfef798aa966102d674b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62895511"
 ---
 # <a name="simulating-an-error-output-for-the-script-component"></a>スクリプト コンポーネントに対するエラー出力のシミュレート
@@ -34,22 +34,17 @@ ms.locfileid: "62895511"
   
 1.  新しいスクリプト コンポーネントの作成前に、接続マネージャーを作成し、AdventureWorks サンプル データベースから住所データを選択するデータ フローの変換元を構成します。 この例では CountryRegionName 列のみを調べるので、単純に Person.vStateCountryProvinceRegion ビューを使用できます。また、Person.Address、Person.StateProvince、および Person.CountryRegion の表を結合して、データを選択することもできます。  
   
-2.  新しいスクリプト コンポーネントを [データ フロー] デザイナー画面に追加し、変換として構成します。 
-  **[スクリプト変換エディター]** を開きます。  
+2.  新しいスクリプト コンポーネントを [データ フロー] デザイナー画面に追加し、変換として構成します。 **[スクリプト変換エディター]** を開きます。  
   
-3.  
-  **[スクリプト]** ページの **[ScriptLanguage]** プロパティに、スクリプトのコード作成に使用するスクリプト言語を設定します。  
+3.  **[スクリプト]** ページの **[ScriptLanguage]** プロパティに、スクリプトのコード作成に使用するスクリプト言語を設定します。  
   
-4.  
-  **[スクリプトの編集]** をクリックして、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) を開きます。  
+4.  **[スクリプトの編集]** をクリックして、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) を開きます。  
   
-5.  
-  `Input0_ProcessInputRow` メソッドに、以下に示すサンプル コードを入力するか貼り付けます。  
+5.  `Input0_ProcessInputRow` メソッドに、以下に示すサンプル コードを入力するか貼り付けます。  
   
 6.  VSTA を閉じます。  
   
-7.  
-  **[入力列]** ページで、スクリプト変換で処理する列を選択します。 この例では CountryRegionName 列のみを使用します。 選択しなかった使用可能な入力列は、データ フロー内で変更されず、そのまま渡されます。  
+7.  **[入力列]** ページで、スクリプト変換で処理する列を選択します。 この例では CountryRegionName 列のみを使用します。 選択しなかった使用可能な入力列は、データ フロー内で変更されず、そのまま渡されます。  
   
 8.  [**入力および出力**] ページで、新しい2番目の出力を追加し`SynchronousInputID` 、その値を入力の ID に設定します。これは、 `SynchronousInputID`既定の出力のプロパティの値でもあります。 両方の出力の `ExclusionGroup` プロパティを 0 以外の同じ値 (たとえば 1) に設定し、各行が 2 つの出力のうち一方のみに送られるようにします。 新しいエラー出力に、"MyErrorOutput" などのわかりやすい名前を付けます。  
   
@@ -57,8 +52,7 @@ ms.locfileid: "62895511"
   
 10. スクリプト コンポーネントがエラー状態を確認する入力列 (複数の場合もある) の ID 値を書き留めます。 この例では、この列 ID を使用して ErrorColumn 値を設定します。  
   
-11. 
-  **[スクリプト変換エディター]** を閉じます。  
+11. **[スクリプト変換エディター]** を閉じます。  
   
 12. スクリプト コンポーネントの出力を、適切な変換先にアタッチします。 アドホック テスト用に最も構成しやすいのは、フラット ファイル変換先です。  
   
@@ -105,7 +99,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
 }  
 ```  
   
-![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
  [データのエラー処理](../data-flow/error-handling-in-data.md)   

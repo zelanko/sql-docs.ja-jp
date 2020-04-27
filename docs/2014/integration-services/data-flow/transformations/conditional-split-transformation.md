@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dcfbbac9eacc96384a723088cf8f20cc939bdc48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62900826"
 ---
 # <a name="conditional-split-transformation"></a>条件分割変換
@@ -52,12 +52,9 @@ ms.locfileid: "62900826"
   
  プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- 
-  **[条件分割変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、「 [[条件分割変換エディター]](../../conditional-split-transformation-editor.md)」を参照してください。  
+ **[条件分割変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、「 [[条件分割変換エディター]](../../conditional-split-transformation-editor.md)」を参照してください。  
   
- 
-  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 
-  **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
 -   [共通プロパティ](../../common-properties.md)  
   

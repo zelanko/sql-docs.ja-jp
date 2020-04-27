@@ -25,15 +25,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 051f2ed14e8218a3909a43052f08e0e339138dab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62894806"
 ---
 # <a name="extending-the-data-flow-with-the-script-component"></a>スクリプト コンポーネントによるデータ フローの拡張
-  スクリプトコンポーネントは、パッケージの実行時に[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]コンパイルされて実行さ[!INCLUDE[msCoName](../../../includes/msconame-md.md)]れるカスタム[!INCLUDE[msCoName](../../../includes/msconame-md.md)]コードを Visual Basic または Visual C# で記述したパッケージのデータフロー機能を拡張します。 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] に含まれる変換元、変換、変換先を使用するだけでは完全に要求を満たせない場合でも、スクリプト コンポーネントを使用すれば、カスタムのデータ フロー変換元、変換、変換先を容易に開発できます。 コンポーネントに必要な入力および出力を設定すれば、必要なインフラストラクチャ コードが自動生成されるので、カスタム処理を実行するために必要なコードの記述に集中できます。  
+  スクリプト コンポーネントを使用すると、カスタム コードを [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic または [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Visual C# で記述し、パッケージの実行時にコンパイル、実行することにより、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] パッケージのデータ フロー処理能力を拡張できます。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] に含まれる変換元、変換、変換先を使用するだけでは完全に要求を満たせない場合でも、スクリプト コンポーネントを使用すれば、カスタムのデータ フロー変換元、変換、変換先を容易に開発できます。 コンポーネントに必要な入力および出力を設定すれば、必要なインフラストラクチャ コードが自動生成されるので、カスタム処理を実行するために必要なコードの記述に集中できます。  
   
  スクリプト コンポーネントは、プロジェクト アイテム `ComponentWrapper` および `BufferWrapper` に自動生成されたクラスを介して、コンポーネントに含まれるパッケージやデータ フローとやり取りします。このプロジェクト アイテムは、それぞれ、<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> クラスおよび <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> クラスのインスタンスです。 このクラスは、接続、変数、および型指定されたオブジェクトとして使用できるその他のパッケージ アイテムを作成し、入力および出力を管理します。 また、カスタム アセンブリだけでなく、[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 名前空間および [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] クラス ライブラリを使用して、スクリプト コンポーネントに独自の機能を実装することもできます。  
   
@@ -45,22 +44,19 @@ ms.locfileid: "62894806"
  次のトピックでは、スクリプト コンポーネントの詳細について説明します。  
   
  [スクリプト コンポーネント エディターでのスクリプト コンポーネントの構成](configuring-the-script-component-in-the-script-component-editor.md)  
- 
-  **[スクリプト変換エディター]** で設定したプロパティは、スクリプト コンポーネント コードの機能やパフォーマンスに影響します。  
+ **[スクリプト変換エディター]** で設定したプロパティは、スクリプト コンポーネント コードの機能やパフォーマンスに影響します。  
   
  [スクリプトコンポーネントのコーディングおよびデバッグ](coding-and-debugging-the-script-component.md  
- スクリプトコンポーネントに[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]含まれるスクリプトを開発するには、Tools for Applications (VSTA) 開発環境を使用します。  
+ スクリプト コンポーネントに含まれるスクリプトを開発するには、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 開発環境を使用します。  
   
  [スクリプト コンポーネントのオブジェクト モデルについて](understanding-the-script-component-object-model.md)  
  新しいスクリプト コンポーネント プロジェクトには、複数のクラスと自動生成されたプロパティおよびメソッドを含む 3 つのプロジェクト アイテムが含まれています。  
   
  [スクリプト コンポーネントでの変数の使用](using-variables-in-the-script-component.md)  
- 
-  `ComponentWrapper` プロジェクト アイテムには、パッケージ変数に対して厳密に型指定されたアクセサー プロパティが含まれています。  
+ `ComponentWrapper` プロジェクト アイテムには、パッケージ変数に対して厳密に型指定されたアクセサー プロパティが含まれています。  
   
  [スクリプト コンポーネントでのデータ ソースへの接続](connecting-to-data-sources-in-the-script-component.md)  
- 
-  `ComponentWrapper` プロジェクト アイテムには、パッケージで定義された接続に対して厳密に型指定されたアクセサー プロパティも含まれています。  
+ `ComponentWrapper` プロジェクト アイテムには、パッケージで定義された接続に対して厳密に型指定されたアクセサー プロパティも含まれています。  
   
  [スクリプト コンポーネントでのイベントの発生](raising-events-in-the-script-component.md)  
  イベントを発生させて、問題とエラーを通知することができます。  
@@ -74,8 +70,7 @@ ms.locfileid: "62894806"
  [その他のスクリプト コンポーネントの例](../../extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
  スクリプト コンポーネントのいくつかの使用方法を、簡単な例を使って説明します。  
   
-![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> 
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] が提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> [!INCLUDE[msCoName](../../../includes/msconame-md.md)] が提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
  [スクリプトコンポーネント](../../data-flow/transformations/script-component.md)   

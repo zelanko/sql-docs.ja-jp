@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 30f8f566dc04726076dd9eb7c4d91b56f687218d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62902464"
 ---
 # <a name="flat-file-destination"></a>フラット ファイル変換先
@@ -42,16 +42,13 @@ ms.locfileid: "62902464"
 ## <a name="configuration-of-the-flat-file-destination"></a>フラット ファイル変換先の構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- 
-  **[フラット ファイル ソース エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ **[フラット ファイル ソース エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [[フラットファイル変換先エディター] &#40;[接続マネージャー] ページ&#41;](../flat-file-destination-editor-connection-manager-page.md)  
+-   [[フラット ファイル変換先エディター] &#40;[接続マネージャー] ページ&#41;](../flat-file-destination-editor-connection-manager-page.md)  
   
--   [[フラットファイル変換先エディター] &#40;[マッピング] ページ&#41;](../flat-file-destination-editor-mappings-page.md)  
+-   [[フラット ファイル変換先エディター] &#40;[マッピング] ページ&#41;](../flat-file-destination-editor-mappings-page.md)  
   
- 
-  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 
-  **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
 -   [共通プロパティ](../common-properties.md)  
   
@@ -62,6 +59,6 @@ ms.locfileid: "62902464"
   
 ## <a name="see-also"></a>参照  
  [フラットファイルソース](flat-file-source.md)   
- [Data Flow](data-flow.md)  
+ [データ フロー](data-flow.md)  
   
   

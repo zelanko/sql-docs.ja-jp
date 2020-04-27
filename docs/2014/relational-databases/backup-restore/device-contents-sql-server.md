@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 890a03221888693c1696059ed5d31a9907ea2872
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62876049"
 ---
 # <a name="device-contents-sql-server"></a>デバイス コンテンツ (SQL Server)
@@ -41,7 +41,7 @@ ms.locfileid: "62876049"
  **[メディア セット]**  
  メディア セットとは、一定の数のバックアップ デバイスを使用し、1 回以上のバックアップ操作で書き込まれたバックアップ メディアを番号順に並べた集合体です。  
   
- **名前**  
+ **Name**  
  メディア セットの名前を表示します。  
   
  **説明**  
@@ -55,7 +55,7 @@ ms.locfileid: "62876049"
   
 |ヘッダー|値|  
 |------------|------------|  
-|**名前**|バックアップ セットの名前です。|  
+|**Name**|バックアップ セットの名前です。|  
 |**Type**|実行されたバックアップの種類。[完全]、[差分]、[トランザクション ログ] のいずれかになります。|  
 |**コンポーネント**|バックアップされるコンポーネント。[データベース]、[ファイル]、または *[\<空白>]* (トランザクション ログ用) のいずれかを指定します。|  
 |**[サーバー]**|バックアップ操作を実行した [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスの名前。|  

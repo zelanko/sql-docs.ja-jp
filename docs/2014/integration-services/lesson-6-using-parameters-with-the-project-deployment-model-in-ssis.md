@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d559defe1dd08f26077738cdd0aea219e8f7554b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62890547"
 ---
 # <a name="lesson-6-using-parameters-with-the-project-deployment-model"></a>レッスン 6: プロジェクト配置モデルを持つパラメーターを使用する
@@ -27,21 +27,20 @@ ms.locfileid: "62890547"
  パッケージを再度実行すると、Integration Services サービスはパラメーターを使用して変数の値を生成します。さらに、この変数は Directory プロパティを更新します。 結果として、パッケージ構成ファイルで設定されたフォルダーではなく、パラメーター値によって指定された新しいデータ フォルダーのファイルに対してパッケージが繰り返し実行されます。  
   
 > [!IMPORTANT]  
->  このチュートリアルには、 **AdventureWorksDW2012** サンプル データベースが必要です。 
-  **AdventureWorksDW2012**をインストールおよび配置する方法の詳細については、「 [SQL Server のサンプルとサンプル データベースのインストールに関する注意点](https://technet.microsoft.com/library/ms161556%28v=sql.105%29)」を参照してください。  
+>  このチュートリアルには、 **AdventureWorksDW2012** サンプル データベースが必要です。 **AdventureWorksDW2012**をインストールおよび配置する方法の詳細については、「 [SQL Server のサンプルとサンプル データベースのインストールに関する注意点](https://technet.microsoft.com/library/ms161556%28v=sql.105%29)」を参照してください。  
   
 ## <a name="lesson-tasks"></a>このレッスンの作業  
  このレッスンの内容は次のとおりです。  
   
-1.  [手順 1: レッスン 5 のパッケージのコピー](lesson-6-1-copying-the-lesson-5-package.md)  
+1.  [手順 1:レッスン 5 のパッケージのコピー](lesson-6-1-copying-the-lesson-5-package.md)  
   
-2.  [手順 2: プロジェクトをプロジェクト配置モデルに変換する](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
+2.  [手順 2:プロジェクトをプロジェクト配置モデルに変換する](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
   
-3.  [手順 3: レッスン 6 のパッケージのテスト](lesson-6-3-testing-the-lesson-6-package.md)  
+3.  [手順 3:レッスン 6 のパッケージのコピー](lesson-6-3-testing-the-lesson-6-package.md)  
   
-4.  [手順 4: レッスン 6 のパッケージの展開](lesson-6-4-deploying-the-lesson-6-package.md)  
+4.  [手順 4:レッスン 6 のパッケージの展開](lesson-6-4-deploying-the-lesson-6-package.md)  
   
 ## <a name="start-the-lesson"></a>レッスンの開始  
- [手順 1: レッスン 5 のパッケージのコピー](lesson-6-1-copying-the-lesson-5-package.md)  
+ [手順 1:レッスン 5 のパッケージのコピー](lesson-6-1-copying-the-lesson-5-package.md)  
   
   
