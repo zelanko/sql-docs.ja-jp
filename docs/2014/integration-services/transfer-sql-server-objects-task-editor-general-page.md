@@ -15,31 +15,27 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5fba4bafe61090e3b7bb89129e5ecefd0befc7d9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054893"
 ---
 # <a name="transfer-sql-server-objects-task-editor-general-page"></a>[SQL オブジェクトの転送タスク エディター] ([全般] ページ)
-  
   **[SQL オブジェクトの転送タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オブジェクトの転送タスクの名前と説明を入力できます。 このタスクの詳細については、「 [Transfer SQL Server Objects Task](control-flow/transfer-sql-server-objects-task.md)」を参照してください。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オブジェクトの転送タスクを作成するユーザーは、転送元サーバー オブジェクトをコピー用に選択するために必要な権限と、オブジェクトの転送先の転送先サーバー データベースにアクセスするために必要な権限を持っている必要があります。  
+>  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オブジェクトの転送タスクを作成するユーザーは、転送元サーバー オブジェクトをコピー用に選択するために必要な権限と、オブジェクトの転送先の転送先サーバー データベースにアクセスするために必要な権限を持っている必要があります。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **名前**  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オブジェクトの転送タスクの一意な名前を入力します。 この名前は、タスク アイコンのラベルとして使用されます。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オブジェクトの転送タスクの一意な名前を入力します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
 > [!NOTE]  
 >  タスク名はパッケージ内で一意である必要があります。  
   
  **説明**  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オブジェクトの転送タスクの説明を入力します。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オブジェクトの転送タスクの説明を入力します。  
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   

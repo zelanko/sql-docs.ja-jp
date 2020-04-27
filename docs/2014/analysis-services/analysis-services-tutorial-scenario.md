@@ -11,16 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 323c98b56e2d77c529fb2adf913b15e51bd77900
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062437"
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Analysis Services のチュートリアル シナリオ
-  このチュートリアルには、 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]という架空の会社が登場します。 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] は、特殊合金自転車を北アメリカ、ヨーロッパ、およびアジアの市場に供給する大規模な多国籍製造会社です。 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] はワシントン州のボセルに本社を置き、500 名の従業員を抱えています。 さらに、 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] の各市場には、その地域を担当する販売チームがいます。  
+  このチュートリアルには、 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]という架空の会社が登場します。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] は、特殊合金自転車を北米、ヨーロッパ、およびアジアの市場に供給する大規模な多国籍製造会社です。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] はワシントン州のボセルに本社を置き、500 名の従業員を抱えています。 さらに、 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] の各市場には、その地域を担当する販売チームがいます。  
   
  近年、 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] は、メキシコの小さな製造工場 Importadores Neptuno を買収しました。 Importadores Neptuno は、 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] の生産ラインにおけるいくつかの重要な部品を製造しています。 これらの部品はボセルに出荷され、そこで完成品が組み立てられます。 2005 年、同社は、ツーリング自転車製品群を独占的に製造、流通する企業に成長しました。  
   
@@ -29,8 +27,7 @@ ms.locfileid: "66062437"
 ## <a name="current-analysis-environment"></a>現在の分析環境  
  Adventure Works Cycles では、販売チーム、マーケティング チーム、および上級管理職のデータ分析ニーズに対応するため、トランザクション データ (取引データ) は [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] データベースから取り出し、販売量などの非トランザクション データはスプレッドシートから取り出して、これらの情報を **AdventureWorksDW2012** と呼ばれるリレーショナル データ ウェアハウスに統合しています。 しかし、リレーショナル データ ウェアハウスには次の問題があります。  
   
--   レポートが静的である。 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel のピボット テーブルなどと違い、データをインタラクティブに操作してレポートを生成できないので、詳細情報を取得できません。 既存の定義済みレポートで十分な情報を得られるユーザーも多いのですが、インタラクティブなクエリと専門的なレポートを使用する上級ユーザーは、データベースに直接クエリを送信する必要があります。 しかし、 **AdventureWorksDW2012** データベースは複雑であるため、効果的なクエリの作成方法を習得するにはかなりの時間がかかります。  
+-   レポートが静的である。 [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel のピボット テーブルなどと違い、データをインタラクティブに操作してレポートを生成できないので、詳細情報を取得できません。 既存の定義済みレポートで十分な情報を得られるユーザーも多いのですが、インタラクティブなクエリと専門的なレポートを使用する上級ユーザーは、データベースに直接クエリを送信する必要があります。 しかし、 **AdventureWorksDW2012** データベースは複雑であるため、効果的なクエリの作成方法を習得するにはかなりの時間がかかります。  
   
 -   クエリ パフォーマンスの落差が大きい。 たとえば、クエリによって、結果が数秒で返される場合と、数分かかる場合があります。  
   
@@ -66,6 +63,6 @@ ms.locfileid: "66062437"
  Analysis Services チュートリアルのレッスンには、これらのすべての目標に適したキューブ データベースを構築するためのガイダンスが用意されています。 まず、「 [レッスン 1: 新しいテーブル モデル プロジェクトの作成](lesson-1-create-a-new-tabular-model-project.md)」に進みます。  
   
 ## <a name="see-also"></a>参照  
- [Adventure Works チュートリアル &#40;の多次元モデリング&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
+ [多次元モデリング (Adventure Works チュートリアル)](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

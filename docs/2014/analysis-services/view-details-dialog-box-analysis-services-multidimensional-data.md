@@ -13,22 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 45ad2e961c9f53067b3e998dc2efcec8fb31b51d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065452"
 ---
 # <a name="view-details-dialog-box-analysis-services---multidimensional-data"></a>[詳細表示] ダイアログ ボックス (Analysis Services - 多次元データ)
+  **と** の [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] [詳細表示] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ダイアログ ボックスを使用すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のメッセージまたは操作についての詳細情報を表示できます。 **[詳細表示]** ダイアログ ボックスを表示するには、次の手順に従います。  
   
-  **と** の [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] [詳細表示] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ダイアログ ボックスを使用すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のメッセージまたは操作についての詳細情報を表示できます。 
-  **[詳細表示]** ダイアログ ボックスを表示するには、次の手順に従います。  
+-   **[処理の進行状況]** ダイアログ ボックスの **[状態] ツリー ビュー** 内の項目をダブルクリックするか、 **[処理の進行状況]** ダイアログ ボックスの **[状態] ツリー ビュー** 内の項目を選択して **[詳細表示]** をクリックします。  
   
--   
-  **[処理の進行状況]** ダイアログ ボックスの **[状態] ツリー ビュー** 内の項目をダブルクリックするか、 **[処理の進行状況]** ダイアログ ボックスの **[状態] ツリー ビュー** 内の項目を選択して **[詳細表示]** をクリックします。  
-  
--   
-  **の** [配置状況] **ウィンドウの** [状態] ツリー ビュー [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]内の項目をダブルクリックします。  
+-   **の** [配置状況] **ウィンドウの** [状態] ツリー ビュー [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]内の項目をダブルクリックします。  
   
 ## <a name="options"></a>オプション  
  **詳細**  

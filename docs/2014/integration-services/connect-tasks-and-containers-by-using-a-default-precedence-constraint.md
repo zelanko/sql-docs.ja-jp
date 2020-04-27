@@ -16,18 +16,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4e5c0ad2405c0d62b703dcb7fa668837e7e47386
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060428"
 ---
 # <a name="connect-tasks-and-containers-by-using-a-default-precedence-constraint"></a>既定の優先順位制約を使用してタスクとコンテナーを連結する
   優先順位制約は、2 つの実行可能ファイルを連結します。 実行可能ファイルには、任意のタスク、For ループ コンテナー、Foreach ループ コンテナー、またはシーケンス コンテナーが含まれます。 この手順では、優先順位制約の既定の動作を設定する方法と、既定の優先順位制約を使用して実行可能ファイルを連結する方法について説明します。  
   
 ## <a name="creating-default-precedence-constraints"></a>既定の優先順位制約の作成  
- 
-  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーを初めて使用する場合、優先順位制約の既定値は `Success` です。 別の既定値を使用するように [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーを構成するには、次の手順に従います。  
+ [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーを初めて使用する場合、優先順位制約の既定値は `Success` です。 別の既定値を使用するように [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーを構成するには、次の手順に従います。  
   
 #### <a name="to-set-the-default-value-for-precedence-constraints"></a>優先順位制約の既定値を設定するには  
   
@@ -35,11 +34,9 @@ ms.locfileid: "66060428"
   
 2.  **[ツール]** メニューの **[オプション]** をクリックします。  
   
-3.  
-  **[オプション]** ダイアログ ボックスで **[ビジネス インテリジェンス デザイナー]** を展開し、次に **[Integration Services デザイナー]** を展開します。  
+3.  **[オプション]** ダイアログ ボックスで **[ビジネス インテリジェンス デザイナー]** を展開し、次に **[Integration Services デザイナー]** を展開します。  
   
-4.  
-  **[制御フローの自動接続]** をクリックし、 **[選択した図形に新しい図形を既定で接続する]** をオンにします。  
+4.  **[制御フローの自動接続]** をクリックし、 **[選択した図形に新しい図形を既定で接続する]** をオンにします。  
   
 5.  ドロップダウン リストで、 **[新しい図形に失敗制約を使用]** または **[新しい図形に完了制約を使用]** を選択します。  
   
@@ -47,16 +44,13 @@ ms.locfileid: "66060428"
   
 #### <a name="to-create-a-default-precedence-constraint"></a>既定の優先順位制約を作成するには  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
 2.  ソリューション エクスプローラーで、パッケージをダブルクリックして開きます。  
   
-3.  
-  **[制御フロー]** タブをクリックします。  
+3.  **[制御フロー]** タブをクリックします。  
   
-4.  
-  **[制御フロー]** タブのデザイン画面で、タスクまたはコンテナーをクリックし、そのコネクタを、優先順位制約を適用する実行可能ファイルにドラッグします。  
+4.  **[制御フロー]** タブのデザイン画面で、タスクまたはコンテナーをクリックし、そのコネクタを、優先順位制約を適用する実行可能ファイルにドラッグします。  
   
 5.  更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   

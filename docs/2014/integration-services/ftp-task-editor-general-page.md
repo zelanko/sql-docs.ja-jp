@@ -15,28 +15,27 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ad2605902cb523c0147888e4aedee0df3c9f936e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058429"
 ---
 # <a name="ftp-task-editor-general-page"></a>[FTP タスク エディター] ([全般] ページ)
-  
   **[FTP タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、タスクの通信先の FTP サーバーに接続する FTP 接続マネージャーを指定できます。 また、FTP タスクの名前と説明を入力することもできます。  
   
  このタスクの詳細については、「 [FTP タスク](control-flow/ftp-task.md)」を参照してください。  
   
 ## <a name="options"></a>オプション  
- **FtpConnection**  
+ **[FtpConnection]**  
  既存の FTP 接続マネージャーを選択するか\<、[**新しい接続...**> をクリックして接続マネージャーを作成します。  
   
 > [!IMPORTANT]  
 >  FTP 接続マネージャーでは、匿名認証と基本認証のみがサポートされています。 Windows 認証はサポートされていません。  
   
- **関連トピック**: [ftp 接続マネージャー](connection-manager/ftp-connection-manager.md)、 [ftp 接続マネージャーエディター](../../2014/integration-services/ftp-connection-manager-editor.md)  
+ **関連トピック**: [FTP 接続マネージャー](connection-manager/ftp-connection-manager.md)、 [FTP 接続マネージャー エディター](../../2014/integration-services/ftp-connection-manager-editor.md)  
   
- **StopOnFailure**  
+ **[StopOnFailure]**  
  FTP 操作が失敗した場合に FTP タスクを終了するかどうかを示します。  
   
  **名前**  

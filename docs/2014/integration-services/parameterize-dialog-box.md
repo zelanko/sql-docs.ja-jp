@@ -13,14 +13,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7d60820ba7c384347aeeec80d8c41f934078eca8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056872"
 ---
 # <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
-  
   **[パラメーター化]** ダイアログ ボックスでは、新規または既存のパラメーターをタスクのプロパティと関連付けることができます。 このダイアログ ボックスを開くには、[!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーでタスクまたは [制御フロー] タブを右クリックし、**[パラメーター化]** をクリックします。 次の一覧では、このダイアログ ボックスの UI 要素について説明します。 パラメーターについて詳しくは、「[Integration Services &#40;SSIS&#41; パラメーター](integration-services-ssis-package-and-project-parameters.md)」をご覧ください。  
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
@@ -33,7 +32,7 @@ ms.locfileid: "66056872"
  **パラメーターを使用しない**  
  パラメーターへの参照を削除するには、このオプションを選択します。 パラメーターは削除されません。  
   
- **新しいパラメーターの作成**  
+ **新しいパラメーターを作成する**  
  タスクのプロパティと関連付ける新しいパラメーターを作成するには、このオプションを選択します。  
   
  **名前**  
@@ -45,7 +44,7 @@ ms.locfileid: "66056872"
  **Value**  
  パラメーターの既定値を指定します。 これは設計上の既定値とも呼ばれ、後で配置時にオーバーライドできます。  
   
- **スコープ**  
+ **Scope**  
  パラメーターのスコープとして、**[プロジェクト]** または **[パッケージ]** オプションを指定します。 プロジェクト パラメーターは、プロジェクトが受け取る外部入力をプロジェクト内の 1 つまたは複数のパッケージに指定するために使用します。 パッケージ パラメーターを使用すると、パッケージを編集したり再配置したりせずにパッケージ実行を変更できます。  
   
  **区別**  

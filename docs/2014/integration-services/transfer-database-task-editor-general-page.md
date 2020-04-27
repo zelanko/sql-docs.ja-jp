@@ -15,17 +15,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4a78fb3dd052a7e275b91073ccf2089510b97e44
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055097"
 ---
 # <a name="transfer-database-task-editor-general-page"></a>[データベース転送タスク エディター] ([全般] ページ)
-  
   **[データベース転送タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、データベース転送タスクの名前と説明を入力できます。 データベース転送タスクは、2 つの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスの間で [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]データベースをコピーまたは移動します。 このタスクを使用して、同じサーバー内でデータベースをコピーすることもできます。 このタスクの詳細については、「 [データベース転送タスク](control-flow/transfer-database-task.md)」を参照してください。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **名前**  
  データベース転送タスクの一意な名前を入力します。 この名前は、タスク アイコンのラベルとして使用されます。  
   

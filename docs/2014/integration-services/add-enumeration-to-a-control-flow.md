@@ -17,14 +17,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cad9c6a3537fb523a13f0206eed6c8eee837ed06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061909"
 ---
 # <a name="add-enumeration-to-a-control-flow"></a>制御フローに列挙を追加する
-  
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、Foreach ループ コンテナーが含まれています。Foreach ループ コンテナーとは制御フローの要素で、これを使用すると、パッケージの制御フロー内のファイルおよびオブジェクトを列挙するループ構造を簡単に含めることができます。 詳細については、「 [Foreach ループ コンテナー](control-flow/foreach-loop-container.md)」を参照してください。  
   
  Foreach ループ コンテナーに機能は用意されていません。繰り返し可能な制御フローの構築、列挙子の型の指定、および列挙子の構成を行う構造を提供するだけです。 コンテナーに機能を設定するには、Foreach ループ コンテナーに少なくとも 1 つのタスクを含める必要があります。 詳細については、「 [Integration Services のタスク](control-flow/integration-services-tasks.md)」を参照してください。  

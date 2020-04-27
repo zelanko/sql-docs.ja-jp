@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 38ebc261b8d1c5a2a134de7085c2e6f34a704b34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066288"
 ---
 # <a name="tabular-modeling-ssas-tabular"></a>テーブル モデリング (SSAS テーブル)
@@ -25,9 +25,9 @@ ms.locfileid: "66066288"
  表形式のモデルは、新しい表形式モデル プロジェクトのテンプレートを使用して [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で作成されます。 複数のソースからデータをインポートしてから、リレーションシップ、計算列、メジャー、KPI、および階層を追加すると、階層モデルを拡充できます。 モデルは、クライアント レポート アプリケーションの接続先の Analysis Services のインスタンスに配置できます。 配置済みのモデルは、SQL Server Management Studio で多次元モデルのように管理できます。 また、最適処理のためにパーティション分割したり、ロール ベースのセキュリティを使用して行レベルに保護したりすることもできます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [SSAS 表形式&#41;の表形式モデルソリューション &#40;](../tabular-model-solutions-ssas-tabular.md)  
+ [テーブル モデル ソリューション &#40;SSAS テーブル&#41;](../tabular-model-solutions-ssas-tabular.md)  
   
- [SSAS 表形式&#41;&#40;テーブルモデルデータベース](tabular-model-databases-ssas-tabular.md)  
+ [表形式モデルのデータベース (SSAS 表形式)](tabular-model-databases-ssas-tabular.md)  
   
  [テーブル モデル データ アクセス](tabular-model-data-access.md)  
   

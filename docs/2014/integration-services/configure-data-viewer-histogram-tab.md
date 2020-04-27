@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3df1a27d94c3da63e1760e890654dba4045b2f94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060709"
 ---
 # <a name="configure-data-viewer-histogram-tab"></a>[データ ビューアーの構成] ([ヒストグラム] タブ)
-  
   **[データ ビューアーの構成]** ダイアログ ボックスの **[ヒストグラム]** タブを使用すると、表示する列を指定できます。 ヒストグラムには、1 つの数値列のデータ値が値の分散として表示されます。 グラフには、1 つのバッファーの内容のみが反映されます。  
   
 ## <a name="options"></a>オプション  

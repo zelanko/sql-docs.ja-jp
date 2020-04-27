@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: abe35e51764a7d16c49c8d15d9e2031e0cdabe05
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067327"
 ---
 # <a name="delete-relationships-ssas-tabular"></a>リレーションシップの削除 (SSAS テーブル)
@@ -35,29 +35,24 @@ ms.locfileid: "66067327"
   
 #### <a name="to-delete-a-relationship-by-using-diagram-view"></a>ダイアグラム ビューを使用してリレーションシップを削除するには  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、 **[モデル]** メニューをクリックし、 **[モデル ビュー]** をポイントして、 **[ダイアグラム ビュー]** をクリックします。  
+1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、 **[モデル]** メニューをクリックし、 **[モデル ビュー]** をポイントして、 **[ダイアグラム ビュー]** をクリックします。  
   
 2.  2 つのテーブルの間のリレーションシップの線を右クリックし、 **[削除]** をクリックします。  
   
 #### <a name="to-delete-a-relationship-by-using-the-manage-relationships-dialog-box"></a>[リレーションシップの管理] ダイアログ ボックスを使用してリレーションシップを削除するには  
   
-1.  
-  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で、 **[テーブル]** メニューをクリックし、 **[リレーションシップの管理]** をクリックします。  
+1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で、 **[テーブル]** メニューをクリックし、 **[リレーションシップの管理]** をクリックします。  
   
-2.  
-  **[リレーションシップの管理]** ダイアログ ボックスで、一覧から 1 つまたは複数のリレーションシップを選択します。  
+2.  **[リレーションシップの管理]** ダイアログ ボックスで、一覧から 1 つまたは複数のリレーションシップを選択します。  
   
      複数のリレーションシップを選択するには、Ctrl キーを押しながら各リレーションシップをクリックします。  
   
-3.  
-  **[リレーションシップの削除]** をクリックします。  
+3.  **[リレーションシップの削除]** をクリックします。  
   
-4.  
-  **[リレーションシップの管理]** ダイアログ ボックスで、 **[閉じる]** をクリックします。  
+4.  **[リレーションシップの管理]** ダイアログ ボックスで、 **[閉じる]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [SSAS 表形式のリレーションシップ &#40;&#41;](relationships-ssas-tabular.md)   
- [SSAS 表形式&#41;&#40;2 つのテーブル間のリレーションシップを作成する](create-a-relationship-between-two-tables-ssas-tabular.md)  
+ [2 つのテーブル間のリレーションシップの作成 &#40;SSAS テーブル&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)  
   
   

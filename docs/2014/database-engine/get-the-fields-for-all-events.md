@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0838367ad699c1278bb6ec42f28161ba76c6fd5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064789"
 ---
 # <a name="get-the-fields-for-all-events"></a>すべてのイベントのフィールドを取得する
@@ -38,8 +38,7 @@ ms.locfileid: "66064789"
  バケット ターゲットを使用するイベント セッションを設定する場合は、上記の情報を使用できます。 詳細については、「 [SQL Server 拡張イベント ターゲット](../../2014/database-engine/sql-server-extended-events-targets.md)」を参照してください。  
   
 ## <a name="before-you-begin"></a>開始する前に  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 拡張イベント セッションを作成する前に、イベントに関連したフィールドについての情報を取得すると役立つことがあります。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 拡張イベント セッションを作成する前に、イベントに関連したフィールドについての情報を取得すると役立つことがあります。  
   
 ## <a name="to-get-the-fields-for-all-events-using-query-editor"></a>クエリ エディターを使用してすべてのイベントのフィールドを取得するには  
   

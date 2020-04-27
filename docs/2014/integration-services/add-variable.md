@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6799bc899a7e65082d83398f79996bea8d9dd2d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061785"
 ---
 # <a name="add-variable"></a>[変数の追加]
-  
   **[変数の追加]** ダイアログ ボックスを使用すると、新しい変数のプロパティを指定できます。  
   
 ## <a name="options"></a>オプション  
@@ -32,15 +31,14 @@ ms.locfileid: "66061785"
  **名前**  
  変数名を入力します。  
   
- **名前空間**  
+ **Namespace**  
  変数の名前空間を指定します。 既定で、ユーザー定義の変数は **User** 名前空間に置かれます。  
   
- **値の型**  
+ **値の種類**  
  データ型を選択します。  
   
  **Value**  
- 値を入力します。 
-  **[値の型]** オプションで指定したデータ型に適合する値を入力する必要があります。  
+ 値を入力します。 **[値の型]** オプションで指定したデータ型に適合する値を入力する必要があります。  
   
  **読み取り専用**  
  変数を読み取り専用にします。  

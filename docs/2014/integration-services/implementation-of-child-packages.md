@@ -13,14 +13,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1f9eb6860a40f6c47e65beb3fe109255d333d628
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058189"
 ---
 # <a name="implementation-of-child-packages"></a>子パッケージの実装
-  
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]を使用して負荷分散を実装すると、子パッケージが他のサーバーにインストールされ、利用可能な CPU 時間またはサーバー時間を活用することができます。 子パッケージを作成および実行するには、次の手順を実行します。  
   
 -   子パッケージをデザインします。  
@@ -40,8 +39,7 @@ ms.locfileid: "66058189"
 ## <a name="moving-the-child-package-to-the-remote-instance"></a>リモート インスタンスへの子パッケージの移動  
  パッケージを他のサーバーに移動する方法は何種類かあります。 次の 2 つの方法をお勧めします。  
   
--   
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]を使用してパッケージをエクスポートします。  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]を使用してパッケージをエクスポートします。  
   
 -   パッケージを配置します。パッケージを配置するには、配置するパッケージを含むプロジェクトの配置ユーティリティをビルドした後、パッケージ インストール ウィザードを実行し、パッケージをファイル システムまたは [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンスにインストールします。 詳細については、「[パッケージの配置 &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)」を参照してください。  
   
@@ -55,11 +53,9 @@ ms.locfileid: "66058189"
   
 -   [デバッグ] [ / **デバッグなしで開始**] を**クリックし**て、SSIS デザイナーで各子パッケージを実行します。  
   
--   
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]を使用してリモート コンピューター上の個別の SQL Server エージェント ジョブを実行し、パッケージが実行されていることを確認します。  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]を使用してリモート コンピューター上の個別の SQL Server エージェント ジョブを実行し、パッケージが実行されていることを確認します。  
   
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェントのジョブから実行するパッケージのトラブルシューティング方法については、 [サポート技術情報の「](https://support.microsoft.com/kb/918760) SQL Server エージェントのジョブ ステップから SSIS パッケージを呼び出したときに SSIS パッケージが実行されない [!INCLUDE[msCoName](../includes/msconame-md.md)] 」を参照してください。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェントのジョブから実行するパッケージのトラブルシューティング方法については、 [サポート技術情報の「](https://support.microsoft.com/kb/918760) SQL Server エージェントのジョブ ステップから SSIS パッケージを呼び出したときに SSIS パッケージが実行されない [!INCLUDE[msCoName](../includes/msconame-md.md)] 」を参照してください。  
   
  SQL Server エージェントは、ジョブ ステップを実行するたびに、プロキシに対してサブシステムのアクセス許可を確認し、プロキシへのアクセスを確立します。  
   

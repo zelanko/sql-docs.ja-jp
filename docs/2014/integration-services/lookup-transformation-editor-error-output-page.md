@@ -13,14 +13,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 12f1a73c1d21986d2089878bfe9d29dd4450f222
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057854"
 ---
 # <a name="lookup-transformation-editor-error-output-page"></a>[参照変換エディター] ([エラー出力] ページ)
-  
   **[参照変換エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを指定できます。  
   
  参照変換の詳細については、「 [Lookup Transformation](data-flow/transformations/lookup-transformation.md)」を参照してください。  
@@ -30,7 +29,7 @@ ms.locfileid: "66057854"
  入力の名前を表示します。  
   
  **列**  
- 使用されません。  
+ 使用されていません。  
   
  **Error**  
  参照データセットに一致するエントリがない行を処理したときに発生させるエラーの種類を指定します。  
@@ -43,7 +42,7 @@ ms.locfileid: "66057854"
   
  このオプションは、 **[エントリが一致しない行の処理方法を指定する]** ボックスの一覧で **[一致なしの出力に行をリダイレクトする]** を選択した場合には使用できません。 この一覧は、 **[参照変換エディター]** ダイアログ ボックスの **[全般]** ページにあります。  
   
- **関連トピック:** [データのエラー処理](data-flow/error-handling-in-data.md)  
+ **関連項目:** [データのエラー処理](data-flow/error-handling-in-data.md)  
   
  **切り捨て**  
  データの切り捨てが発生したときの動作を指定します。  
@@ -57,7 +56,7 @@ ms.locfileid: "66057854"
  **説明**  
  操作の説明を表示します。  
   
- **選択したセルをこの値に設定します**  
+ **[選択したセルに設定する値]**  
  エラーまたは切り捨てが発生したときのすべての選択済みセルの動作を指定します。  
   
 -   エラーを無視します。  
@@ -66,7 +65,7 @@ ms.locfileid: "66057854"
   
 -   コンポーネントを失敗させます。  
   
- **[適用]**  
+ 適用****  
  選択したセルにエラー処理オプションを適用します。  
   
 ## <a name="see-also"></a>参照  

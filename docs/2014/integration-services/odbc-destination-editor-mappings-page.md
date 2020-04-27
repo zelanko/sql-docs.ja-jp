@@ -13,14 +13,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6f5deb525654007248fbc5c97c07e3c368654ad5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057226"
 ---
 # <a name="odbc-destination-editor-mappings-page"></a>[ODBC 変換先エディター]\([マッピング] ページ)
-  
   **[ODBC 入力先エディター]** ダイアログ ボックスの **[マッピング]** ページを使用すると、入力列を変換先列にマップできます。  
   
  ODBC 入力先の詳細については、「 [ODBC Destination](data-flow/odbc-destination.md)」を参照してください。  
@@ -30,7 +29,7 @@ ms.locfileid: "66057226"
 ### <a name="available-input-columns"></a>[使用できる入力列]  
  使用できる入力列の一覧です。 使用できる変換先列に入力列をドラッグ アンド ドロップして、列をマップできます。  
   
-### <a name="available-destination-columns"></a>[使用できる入力列]  
+### <a name="available-destination-columns"></a>使用できる変換先列  
  使用できる変換先列の一覧です。 使用できる入力列に変換先列をドラッグ アンド ドロップして、列をマップできます。  
   
 ### <a name="input-column"></a>入力列  
@@ -41,6 +40,6 @@ ms.locfileid: "66057226"
   
 ## <a name="see-also"></a>参照  
  [ODBC 変換先エディター &#40;接続マネージャーページ&#41;](../../2014/integration-services/odbc-destination-editor-connection-manager-page.md)   
- [ODBC 変換先エディター &#40;エラー出力ページ&#41;](../../2014/integration-services/odbc-destination-editor-error-output-page.md)  
+ [ODBC 変換先エディター &#40;[エラー出力] ページ&#41;](../../2014/integration-services/odbc-destination-editor-error-output-page.md)  
   
   

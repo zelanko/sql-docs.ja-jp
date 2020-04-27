@@ -13,22 +13,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e35cf7db00effb5ce700a1ac883877f67650d3cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66063048"
 ---
 # <a name="attribute-characteristics-tab-mining-model-viewer"></a>[属性の特性] タブ (マイニング モデル ビューアー)
   Naïve Bayes モデルの結果と入力属性との関係を調べるには、 **[属性の特性]** ペインを使用します。 対象となる属性の値を選択した後、結果に対する影響が最も大きい入力属性の一覧を確認できます。  
   
- **詳細情報:** [Microsoft Naive Bayes Algorithm](data-mining/microsoft-naive-bayes-algorithm.md)、 [Microsoft Naive Bayes ビューアーを使用したモデルの参照](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
+ **詳細:** [Microsoft Naive Bayes アルゴリズム](data-mining/microsoft-naive-bayes-algorithm.md)、 [Microsoft Naive Bayes ビューアーを使用したモデルの参照](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
   
 ## <a name="options"></a>オプション  
  **[ビューアーのコンテンツを最新状態に更新]**  
  ビューアーにマイニング モデルを再読み込みします。  
   
- **マイニングモデル**  
+ **[マイニング モデル]**  
  現在のマイニング構造に含まれているマイニング モデルから、表示するものを選択します。 選択した種類のマイニング モデルに最適のカスタム ビューアーが開いてモデルが表示されます。  
   
  **[ビューアー]**  
@@ -38,17 +38,15 @@ ms.locfileid: "66063048"
  分析する予測可能な属性を選択します。  
   
  **Value**  
- 
-  **[属性]** に設定する予測可能な属性の状態を選択します。 Naive Bayes モデルは連続変数をサポートしないため、すべての対象となる属性は、不連続結果または分離された結果になります。 不明属性は、常に自動的にリストに追加されます。  
+ **[属性]** に設定する予測可能な属性の状態を選択します。 Naive Bayes モデルは連続変数をサポートしないため、すべての対象となる属性は、不連続結果または分離された結果になります。 不明属性は、常に自動的にリストに追加されます。  
   
  **予測可能\<な状態>の特性**  
  グラフには、入力属性の状態が、選択した予測可能な属性の状態とどのように関係するかを記述する次の列が含まれます。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**変数**|マイニング モデルの入力属性を一覧表示します。|  
-|**値**|
-  **[変数]** の入力属性の状態を一覧表示します。|  
+|**値**|**[変数]** の入力属性の状態を一覧表示します。|  
 |**確率**|バーは、その行の属性と値が、予測可能な属性の選択した状態に関連付けられている確率を表します。 パーセントで表される確率を表示するには、バーの上にマウス ポインターを置きます。|  
   
 ## <a name="see-also"></a>参照  

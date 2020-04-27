@@ -27,16 +27,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 404ae57711a7d8376774c4e5340017f784b916e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013880"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>テーブルおよび列への XSD 要素および属性の既定のマッピング (SQLXML 4.0)
   既定では、XSD 注釈付きスキーマの複合型の要素は、指定されたデータベース内の同じ名前のテーブル (ビュー) にマップされ、単純型の要素または属性は、テーブル内の同じ名前の列にマップされます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、「 [SQLXML の例を実行するための要件](../sqlxml/requirements-for-running-sqlxml-examples.md)」を参照してください。  
   
 ### <a name="a-specifying-default-mapping"></a>A. 既定のマッピングを指定する  
@@ -161,8 +161,7 @@ ms.locfileid: "66013880"
 </xsd:schema>  
 ```  
   
- 
-  `xml` データ型は、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で導入されました。  
+ `xml` データ型は、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で導入されました。  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>スキーマに対してサンプル XPath クエリをテストするには  
   

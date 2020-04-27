@@ -15,20 +15,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9c081064f3a0bcb2733f58df7e1b5550bf135c2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059886"
 ---
 # <a name="data-mining-model-training-editor-columns-tab"></a>[データ マイニング モデル トレーニング エディター] ([列] タブ)
-  
   **[データ マイニング モデル トレーニング エディター]** ダイアログ ボックスの **[列]** タブを使用すると、入力列をマイニング構造の列にマップできます。  
   
  データ マイニング モデル トレーニング変換先の詳細については、「 [Data Mining Model Training Destination](data-flow/data-mining-model-training-destination.md)」を参照してください。  
   
 ## <a name="options"></a>オプション  
- **使用できる入力列**  
+ **[使用できる入力列]**  
  使用できる入力列の一覧を表示します。 入力列をドラッグしてマイニング構造列にマップします。  
   
  **マイニング構造列**  
@@ -42,6 +41,6 @@ ms.locfileid: "66059886"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [データマイニングモデルトレーニングエディター &#40;[接続] タブ&#41;](../../2014/integration-services/data-mining-model-training-editor-connection-tab.md)  
+ [データ マイニング モデル トレーニング エディター ([接続] タブ)](../../2014/integration-services/data-mining-model-training-editor-connection-tab.md)  
   
   

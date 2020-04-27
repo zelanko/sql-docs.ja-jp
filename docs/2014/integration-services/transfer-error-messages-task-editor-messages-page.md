@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f753aaddbd2647b1d8874b0d34db415f75aa99b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055036"
 ---
 # <a name="transfer-error-messages-task-editor-messages-page"></a>[エラー メッセージ転送タスク エディター] ([メッセージ] ページ)
-  
   **[エラー メッセージ転送タスク エディター]** ダイアログ ボックスの **[メッセージ]** ページを使用すると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスからインスタンスへ、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーザー定義エラー メッセージをコピーする際のプロパティを指定できます。 このタスクの詳細については、「 [Transfer Error Messages Task](control-flow/transfer-error-messages-task.md)」を参照してください。  
   
 ## <a name="options"></a>オプション  
@@ -32,29 +31,27 @@ ms.locfileid: "66055036"
  **DestinationConnection**  
  SMO 接続マネージャーを一覧から選択するか、[ ** \<新しい接続... >** をクリックして、移行先サーバーへの新しい接続を作成します。  
   
- **IfObjectExists**  
+ **[IfObjectExists]**  
  転送先サーバーに同じ名前のエラー メッセージが既に存在していた場合に、既存のユーザー定義エラー メッセージを上書きするか、既存のメッセージをスキップするか、タスクを失敗させるかを選択します。  
   
- **TransferAllErrorMessages**  
+ **[TransferAllErrorMessages]**  
  転送元サーバーから転送先サーバーにすべてのユーザー定義メッセージをコピーするか、指定したユーザー定義メッセージだけをコピーするかを選択します。  
   
  このプロパティには、次の表に示すオプションがあります。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**本来**|すべてのユーザー定義メッセージをコピーします。|  
 |**False**|指定されたユーザー定義メッセージのみをコピーします。|  
   
- **Errorの一覧**  
- 
-  **[...]** ボタンをクリックして、コピーするエラー メッセージを選択します。  
+ **[ErrorMessagesList]**  
+ **[...]** ボタンをクリックして、コピーするエラー メッセージを選択します。  
   
 > [!NOTE]  
 >  コピーするエラー メッセージを選択する前に **[SourceConnection]** を指定する必要があります。  
   
- **ErrorMessageLanguagesList**  
- 
-  **[...]** ボタンをクリックして、転送先サーバーにコピーするユーザー定義エラー メッセージの言語を選択します。 us_english (コード ページ 1033) バージョンのメッセージが、他言語バージョンのメッセージを転送先サーバーに転送する前に、そのサーバーに既に存在している必要があります。  
+ **[ErrorMessageLanguagesList]**  
+ **[...]** ボタンをクリックして、転送先サーバーにコピーするユーザー定義エラー メッセージの言語を選択します。 us_english (コード ページ 1033) バージョンのメッセージが、他言語バージョンのメッセージを転送先サーバーに転送する前に、そのサーバーに既に存在している必要があります。  
   
 > [!NOTE]  
 >  コピーするエラー メッセージを選択する前に **[SourceConnection]** を指定する必要があります。  

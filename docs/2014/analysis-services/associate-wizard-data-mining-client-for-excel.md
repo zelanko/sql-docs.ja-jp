@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 15a86cc55e67b2000eabee62d02fa04de4874f59
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062309"
 ---
 # <a name="associate-wizard-data-mining-client-for-excel"></a>アソシエーション ウィザード (Excel 用データ マイニング クライアント)
@@ -84,12 +84,11 @@ ms.locfileid: "66062309"
 9. このウィザードは、すべての可能な組み合わせを分析し、アイテムセットとルールを含むレポートを作成します。  
   
 ## <a name="more-about-association-models"></a>アソシエーション モデルの詳細  
- 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] アソシエーション ルール アルゴリズムは、トレーニング データを調べて、トランザクション内で一緒に出現するアイテムを検索します。 アイテムの各*グループは、アイテムセット*を構成します。 次に、アルゴリズムは各アイテムセットの出現回数をカウントし、すべてのトランザクション間での各アイテムセットの相対的な重要度を計算します。  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] アソシエーション ルール アルゴリズムは、トレーニング データを調べて、トランザクション内で一緒に出現するアイテムを検索します。 アイテムの各*グループは、アイテムセット*を構成します。 次に、アルゴリズムは各アイテムセットの出現回数をカウントし、すべてのトランザクション間での各アイテムセットの相対的な重要度を計算します。  
   
  アルゴリズムは、アイテムセットに関するこの情報を使用して、アソシエーションの予測や提案に使用できるルールを生成します。 たとえば、"ユーザーが Author 1 の本および Author 2 の本を購入した場合、Author 3 の本も購入する可能性がある" というルールを生成します。 それぞれの提案に対して、アソシエーションの強さに基づいて確率が割り当てられます。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  関連付けウィザードを使用するには、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースに接続する必要があります。  
   
  ソース データをトランザクション テーブルとして編成する必要があります。 ソース データは、トランザクション識別子を含む列を 1 つ含む必要があります。 この列は、アイテムの各グループを識別します。 このトランザクション列は、2 番目のアイテム ID の列と 1 対他の関係にする必要があります。アイテム ID の列には、グループ内の個別のアイテムの名前または ID 番号が格納されています。  

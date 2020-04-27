@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ef503e88e66bd6f89cac8d235f7175fb4cefe4e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060338"
 ---
 # <a name="copy-project-items"></a>プロジェクト アイテムをコピーする
@@ -29,8 +29,7 @@ ms.locfileid: "66060338"
   
 ### <a name="to-copy-project-level-items"></a>プロジェクト レベルのアイテムをコピーするには  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で、作業対象とする [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトまたはソリューションを開きます。  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で、作業対象とする [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトまたはソリューションを開きます。  
   
 2.  コピー元のプロジェクトとアイテム フォルダーを展開します。  
   

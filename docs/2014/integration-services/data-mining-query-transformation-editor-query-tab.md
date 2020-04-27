@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 431e01df40ab3a531af21977b85253d84768118f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059752"
 ---
 # <a name="data-mining-query-transformation-editor-query-tab"></a>[データ マイニング クエリ変換エディター] ([クエリ] タブ)
-  
   **[データ マイニング クエリ変換エディター]** ダイアログ ボックスの **[クエリ]** タブを使用すると、予測クエリを作成できます。  
   
  データ マイニング クエリ変換の詳細については、「 [Data Mining Query Transformation](data-flow/transformations/data-mining-query-transformation.md)」を参照してください。  
@@ -31,12 +30,11 @@ ms.locfileid: "66059752"
  **データマイニングクエリ**  
  データ マイニング拡張機能 (DMX) クエリを、テキスト ボックスに直接入力します。  
   
- **新しいクエリの作成**  
- 
-  **[新しいクエリの作成]** をクリックし、グラフィカルなクエリ ビルダーを使用して、データ マイニング拡張機能 (DMX) クエリを作成します。  
+ **[新しいクエリの作成]**  
+ **[新しいクエリの作成]** をクリックし、グラフィカルなクエリ ビルダーを使用して、データ マイニング拡張機能 (DMX) クエリを作成します。  
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [データマイニングクエリ変換エディター &#40;[マイニングモデル] タブ&#41;](../../2014/integration-services/data-mining-query-transformation-editor-mining-model-tab.md)  
+ [[データ マイニング クエリ変換エディター] &#40;[マイニング モデル] タブ&#41;](../../2014/integration-services/data-mining-query-transformation-editor-mining-model-tab.md)  
   
   

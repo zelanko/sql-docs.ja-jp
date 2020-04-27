@@ -15,31 +15,29 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 37d09aa75c3f6c5dd61b257056127ca76b410487
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055134"
 ---
 # <a name="term-extraction-transformation-editor-term-extraction-tab"></a>[用語抽出変換エディター] ([用語抽出] タブ)
-  
   **[用語抽出変換エディター]** ダイアログ ボックスの **[用語抽出]** タブを使用すると、抽出するテキストを含むテキスト列を指定できます。  
   
  用語抽出変換の詳細については、「 [Term Extraction Transformation](data-flow/transformations/term-extraction-transformation.md)」を参照してください。  
   
 ## <a name="options"></a>オプション  
- **使用できる入力列**  
+ **[使用できる入力列]**  
  チェック ボックスを使用して、用語の抽出に使用するテキスト列を 1 つ選択します。  
   
- **期間**  
+ **用語**  
  抽出された用語を格納する出力列の名前を指定します。  
   
- **Score**  
+ **スコア**  
  抽出されたそれぞれの用語のスコアを格納する出力列の名前を指定します。  
   
  **[エラー出力の構成]**  
- 
-  [[エラー出力の構成]](../../2014/integration-services/configure-error-output.md) ダイアログ ボックスは、エラーが発生した行に対するエラー処理を指定するために使用します。  
+ [[エラー出力の構成]](../../2014/integration-services/configure-error-output.md) ダイアログ ボックスは、エラーが発生した行に対するエラー処理を指定するために使用します。  
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   

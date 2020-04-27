@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 73b71e83f3b0f0f895b2cc5b8fd3495fb4893a32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059623"
 ---
 # <a name="deploy-packages-by-using-the-deployment-utility"></a>配置ユーティリティを使用してパッケージを配置する
@@ -50,20 +50,15 @@ ms.locfileid: "66059623"
   
 1.  ターゲット コンピューターの配置フォルダーを開きます。  
   
-2.  
-  \<プロジェクト名>.SSISDeploymentManifest という名前のマニフェスト ファイルをダブルクリックしてパッケージ インストール ウィザードを起動します。  
+2.  \<プロジェクト名>.SSISDeploymentManifest という名前のマニフェスト ファイルをダブルクリックしてパッケージ インストール ウィザードを起動します。  
   
-3.  
-  **[SSIS パッケージの配置]** ページで、 **[SQL Server に配置]** オプションを選択します。  
+3.  **[SSIS パッケージの配置]** ページで、 **[SQL Server に配置]** オプションを選択します。  
   
 4.  必要に応じて、ターゲット サーバーにパッケージがインストールされた後で検証を行う場合は、**[インストール後にパッケージを検証する]** を選択します。  
   
-5.  
-  **[インストール先の SQL Server の指定]** ページで、パッケージをインストールする [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスを指定し、認証モードを選択します。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を選択する場合は、ユーザー名とパスワードを入力する必要があります。  
+5.  **[インストール先の SQL Server の指定]** ページで、パッケージをインストールする [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスを指定し、認証モードを選択します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を選択する場合は、ユーザー名とパスワードを入力する必要があります。  
   
-6.  
-  **[インストール フォルダーの選択]** ページで、パッケージの依存関係をインストールするファイル システムのフォルダーを指定します。  
+6.  **[インストール フォルダーの選択]** ページで、パッケージの依存関係をインストールするファイル システムのフォルダーを指定します。  
   
 7.  パッケージに構成が含まれる場合は、[パッケージの構成] ページで構成を編集して、 **[値]** の一覧の値を更新できます。  
   

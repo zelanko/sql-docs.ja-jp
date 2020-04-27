@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 33ad9ddda5b40abaafddbd6e31272ece1f8edaee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056055"
 ---
 # <a name="script-transformation-editor-inputs-and-outputs-page"></a>[スクリプト変換エディター] ([入力および出力] ページ)
-  
   **[スクリプト変換エディター]** ダイアログ ボックスの **[入力および出力]** ページを使用すると、スクリプト変換の入力および出力を追加、削除、構成できます。  
   
 > [!NOTE]  
@@ -44,7 +43,7 @@ ms.locfileid: "66056055"
  **列の追加**  
  新しい出力列を格納するフォルダーを選択して **[列の追加]** をクリックすると、列が追加されます。  
   
- **出力の削除**  
+ **[出力の削除]**  
  出力を選択した後、 **[出力の削除]** をクリックするとその出力が削除されます。  
   
  **列の削除**  

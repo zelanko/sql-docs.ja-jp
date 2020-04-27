@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b0090534872f0c2ae73e4047d30a6bcc0729b9d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056201"
 ---
 # <a name="script-transformation-editor-connection-managers-page"></a>[スクリプト変換エディター] ([接続マネージャー] ページ)
-  
   **[スクリプト変換エディター]** の **[接続マネージャー]** ページを使用すると、スクリプトで使用される接続を指定できます。  
   
  スクリプト コンポーネントの詳細については、「 [Script Component](data-flow/transformations/script-component.md) 」および「 [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)」を参照してください。 スクリプト コンポーネントのプログラミングの詳細については、「 [スクリプト コンポーネントによるデータ フローの拡張](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)」を参照してください。  
@@ -41,12 +40,10 @@ ms.locfileid: "66056201"
  接続の説明を入力します。  
   
  **追加**  
- 
-  **[接続マネージャー]** の一覧に、他の接続を追加します。  
+ **[接続マネージャー]** の一覧に、他の接続を追加します。  
   
  **Remove**  
- 
-  **[接続マネージャー]** の一覧から、選択した接続を削除します。  
+ **[接続マネージャー]** の一覧から、選択した接続を削除します。  
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   

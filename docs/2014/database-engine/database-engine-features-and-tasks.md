@@ -14,17 +14,17 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 43aa8a23a7d9322e6865b83e3aee4d77fa40e49e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064974"
 ---
 # <a name="database-engine-features-and-tasks"></a>データベース エンジンの機能とタスク
   だれでも、デザイナー、開発者、アナリスト、または管理者がデータベース[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を構築するために必要な情報を見つけることができます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [データベースエンジンインスタンス &#40;SQL Server&#41;](configure-windows/database-engine-instances-sql-server.md)  
+ [データベース エンジンのインスタンス &#40;SQL Server&#41;](configure-windows/database-engine-instances-sql-server.md)  
   
  [データベース機能](../relational-databases/database-features.md)  
   

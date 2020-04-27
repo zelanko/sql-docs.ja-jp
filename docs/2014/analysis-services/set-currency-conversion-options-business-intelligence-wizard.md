@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97e44dc259c79c7bb1aef5cc5cbff8b06dc6c48e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068745"
 ---
 # <a name="set-currency-conversion-options-business-intelligence-wizard"></a>[通貨換算オプションの設定] (ビジネス インテリジェンス ウィザード)
-  
   **[通貨換算オプションの設定]** ページを使用すると、換算レートを含むメジャー グループに対して通貨換算の計算を定義できます。  
   
 > [!NOTE]  

@@ -13,20 +13,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d005ef9666d9bac5355b7419cf2a9cbb9040e6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069260"
 ---
 # <a name="select-the-case-key-data-mining-wizard"></a>[ケース キーの選択] (データ マイニング ウィザード)
-  
   **[ケース キーの選択]** ページを使用すると、マイニング構造のキーとなるソース キューブ ディメンションの属性を選択できます。 この属性は、階層内にあるか、属性階層が有効になっている必要があります。  
   
 > [!NOTE]  
->  このページは、ウィザードの **[定義方法の選択]** ページで **[既存のキューブを使用する]** を選択した場合にのみ表示されます。  
+>   このページは、ウィザードの **[定義方法の選択]** ページで **[既存のキューブを使用する]** を選択した場合にのみ表示されます。  
   
- **詳細については、「** データマイニング[ウィザード &#40;Analysis Services データマイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)」、「[リレーショナルマイニング構造を作成する](data-mining/create-a-relational-mining-structure.md)」を参照してください。  
+ **詳細情報:** [データ マイニング ウィザード &#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[リレーショナル マイニング構造の作成](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>オプション  
  **属性**  

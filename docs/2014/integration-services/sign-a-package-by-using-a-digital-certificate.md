@@ -15,17 +15,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 31da686dbf25922205ea4d1b03ecaa3758457573
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055621"
 ---
 # <a name="sign-a-package-by-using-a-digital-certificate"></a>デジタル証明書を使用してパッケージに署名する
   このトピックでは、デジタル証明書を使用して [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージに署名する方法について説明します。 デジタル署名を他の設定と共に使用して、有効でないパッケージの読み込みや実行を防ぐことができます。  
   
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージに署名する前に、次のタスクを実行する必要があります。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージに署名する前に、次のタスクを実行する必要があります。  
   
 -   証明書と関連付ける秘密キーを作成または取得して、この秘密キーをローカル コンピューターに格納します。  
   
@@ -47,27 +46,21 @@ ms.locfileid: "66055621"
   
 ### <a name="to-sign-a-package"></a>パッケージに署名するには  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、署名するパッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、署名するパッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
 2.  ソリューション エクスプローラーで、パッケージをダブルクリックして開きます。  
   
-3.  
-  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーで **[SSIS]** メニューの **[デジタル署名]** をクリックします。  
+3.  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーで **[SSIS]** メニューの **[デジタル署名]** をクリックします。  
   
-4.  
-  **[デジタル署名]** ダイアログ ボックスで、 **[署名]** をクリックします。  
+4.  **[デジタル署名]** ダイアログ ボックスで、 **[署名]** をクリックします。  
   
-5.  
-  **[証明書の選択]** ダイアログ ボックスで、証明書を選択します。  
+5.  **[証明書の選択]** ダイアログ ボックスで、証明書を選択します。  
   
 6.  必要に応じて、 **[証明書の表示]** をクリックして証明書の情報を表示します。  
   
-7.  
-  **[OK]** をクリックして、 **[証明書の選択]** ダイアログ ボックスを閉じます。  
+7.  **[OK]** をクリックして、 **[証明書の選択]** ダイアログ ボックスを閉じます。  
   
-8.  
-  **[OK]** をクリックして、 **[デジタル署名]** ダイアログ ボックスを閉じます。  
+8.  **[OK]** をクリックして、 **[デジタル署名]** ダイアログ ボックスを閉じます。  
   
 9. 更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   

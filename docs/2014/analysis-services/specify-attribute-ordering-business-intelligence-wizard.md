@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0bc5468fed5c25b472be0bb5306b9da1b7e68eb1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068542"
 ---
 # <a name="specify-attribute-ordering-business-intelligence-wizard"></a>[属性の順序の指定] (ビジネス インテリジェンス ウィザード)
-  
   **[属性の順序の指定]** ページを使用すると、順序付け属性と、選択されたディメンションの属性に対する順序付け条件を指定できます。  
   
 ## <a name="options"></a>オプション  
@@ -35,12 +34,10 @@ ms.locfileid: "66068542"
  **条件**  
  対応する **[属性]** のメンバーの順序を並べ替えるために使用する条件を、 **[属性の並べ替え]** から指定します。 次の表に、使用できる条件を示します。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
-|**名前**|
-  **[属性の並べ替え]** の属性のメンバー名を使用して **[属性]** を並べ替えます。|  
-|**[キー]**|
-  **[属性の並べ替え]** の属性のメンバー キーを使用して **[属性]** を並べ替えます。|  
+|**名前**|**[属性の並べ替え]** の属性のメンバー名を使用して **[属性]** を並べ替えます。|  
+|**キー**|**[属性の並べ替え]** の属性のメンバー キーを使用して **[属性]** を並べ替えます。|  
   
 ## <a name="see-also"></a>参照  
  [ビジネスインテリジェンスウィザードの F1 ヘルプ](business-intelligence-wizard-f1-help.md)   

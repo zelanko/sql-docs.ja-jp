@@ -13,17 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cd6af62200b5d640c67321165eae941986e18892
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069347"
 ---
 # <a name="select-nested-table-key-add-new-nested-table-wizard"></a>[入れ子になったテーブル キーの選択] (入れ子になっている新しいテーブルの追加ウィザード)
-  
   **[入れ子になったテーブル キーの選択]** ページを使用すると、入れ子になったテーブルのキーとなる属性を選択できます。  
   
- **詳細については、「** データマイニング[ウィザード &#40;Analysis Services データマイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)」、「[リレーショナルマイニング構造を作成する](data-mining/create-a-relational-mining-structure.md)」を参照してください。  
+ **詳細情報:** [データ マイニング ウィザード &#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[リレーショナル マイニング構造の作成](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>オプション  
  **属性**  

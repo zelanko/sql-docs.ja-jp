@@ -13,16 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5afadecc745057344fd86df21b4479dabc1f7685
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068831"
 ---
 # <a name="set-advanced-properties-ssas"></a>[詳細プロパティの設定] (SSAS)
-  
-  **テーブルのインポート ウィザード** のこのページを使用すると、データ ソース接続のプロパティ設定を追加指定できます。 
-  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  
+  **テーブルのインポート ウィザード** のこのページを使用すると、データ ソース接続のプロパティ設定を追加指定できます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
  **プロバイダー**  
@@ -31,7 +29,7 @@ ms.locfileid: "66068831"
  **接続文字列**  
  モデル デザイナーがデータ ソースに対する接続を確立するときに使用する設定です。 この情報は、接続のトラブルシューティングに役立ちます。  
   
- **接続のテスト**  
+ **接続をテスト**  
  現在の設定を使用して、データ ソースに対する接続の確立を試みます。 接続が正常に確立されたかどうかを示すメッセージが表示されます。  
   
   

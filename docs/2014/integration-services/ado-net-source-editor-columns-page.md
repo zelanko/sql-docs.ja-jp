@@ -13,34 +13,30 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1eba4cb2f1f5c8825e9cae5751fe230fbe45a835
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061701"
 ---
 # <a name="ado-net-source-editor-columns-page"></a>[ADO NET 変換元エディター] ([列] ページ)
-  
   **[ADO NET 変換元エディター]** ダイアログ ボックスの **[列]** ページを使用すると、出力列をそれぞれの外部 (変換元) 列にマップできます。  
   
  ADO NET 変換元の詳細については、「 [ADO NET Source](data-flow/ado-net-source.md)」を参照してください。  
   
  **[列] ページを開くには**  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、ADO NET 変換元を含む [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージを開きます。  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、ADO NET 変換元を含む [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージを開きます。  
   
-2.  
-  **[データ フロー]** タブで、ADO NET 変換元をダブルクリックします。  
+2.  **[データ フロー]** タブで、ADO NET 変換元をダブルクリックします。  
   
-3.  
-  **[ADO NET 変換元エディター]** で、 **[列]** をクリックします。  
+3.  **[ADO NET 変換元エディター]** で、 **[列]** をクリックします。  
   
 ## <a name="options"></a>オプション  
  **使用できる外部列**  
  データ ソース内の使用できる外部列の一覧を表示します。 このテーブルを使用して列を追加または削除することはできません。  
   
- **[外部列]**  
+ **外部列**  
  ここで表示される外部 (変換元) 列の順序は、この変換元のデータを使用するコンポーネントを構成するときの列の表示順に反映されます。  
   
  **出力列**  

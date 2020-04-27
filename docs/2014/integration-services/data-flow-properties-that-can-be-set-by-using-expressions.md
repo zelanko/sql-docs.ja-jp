@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f70a956834108c21dd7b17bb9f3e04db38f29bfa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059941"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>式を使って設定できるデータ フロー プロパティ
@@ -33,12 +33,9 @@ ms.locfileid: "66059941"
   
  プロパティ式を使用して、パッケージを配置するインスタンスごとに構成をカスタマイズできます。 また、コマンド プロンプト ユーティリティ **dtexec** に **/set** オプションを付けて使用すると、プロパティ式を使用してパッケージの実行時制約を指定することもできます。 たとえば、並べ替え変換で使用される `MaximumThreads`、または、あいまいグループ化変換およびあいまい参照変換の `MaxMemoryUsage` を制約できます。 制約を行わないと、これらの変換により大容量のデータがメモリ内にキャッシュされる場合があります。  
   
- このトピックに示すデータ フロー オブジェクトのプロパティの 1 つに対するプロパティ式を指定するには、デザイナーの **[制御フロー]** 画面でデータ フロー タスクを選択するか、コンポーネントやパスを個別に選択せずにデザイナーの **[データ フロー]** タブを選択して、データ フロー タスクの **[プロパティ]** ウィンドウを表示します。 
-  **[式]** プロパティを選択し、省略記号 (...) をクリックして、 **[プロパティ式エディター]** ダイアログ ボックスを表示します。 
-  **[プロパティ]** の一覧からプロパティを選択し、 **[式]** テキスト ボックスに式を入力するか、省略記号 (...) をクリックして **[式ビルダー]** ダイアログ ボックスを表示します。  
+ このトピックに示すデータ フロー オブジェクトのプロパティの 1 つに対するプロパティ式を指定するには、デザイナーの **[制御フロー]** 画面でデータ フロー タスクを選択するか、コンポーネントやパスを個別に選択せずにデザイナーの **[データ フロー]** タブを選択して、データ フロー タスクの **[プロパティ]** ウィンドウを表示します。 **[式]** プロパティを選択し、省略記号 (...) をクリックして、 **[プロパティ式エディター]** ダイアログ ボックスを表示します。 **[プロパティ]** の一覧からプロパティを選択し、 **[式]** テキスト ボックスに式を入力するか、省略記号 (...) をクリックして **[式ビルダー]** ダイアログ ボックスを表示します。  
   
- 
-  **[プロパティ]** の一覧には、現在、デザイナーの **[データ フロー]** 画面に配置されているデータ フロー オブジェクトで使用できるプロパティのみが表示されます。 したがって、 **[プロパティ]** の一覧では、プロパティ式をサポートするデータ フロー オブジェクトのすべてのプロパティを表示することはできません。 たとえば、デザイナー画面に ADO NET ソースを配置した場合 **、プロパティの一覧に**は`[ADO NET Source].[SqlCommand]`プロパティのエントリが格納されます。 この一覧には、データ フロー タスク自体の多数のプロパティも表示されます。  
+ **[プロパティ]** の一覧には、現在、デザイナーの **[データ フロー]** 画面に配置されているデータ フロー オブジェクトで使用できるプロパティのみが表示されます。 したがって、 **[プロパティ]** の一覧では、プロパティ式をサポートするデータ フロー オブジェクトのすべてのプロパティを表示することはできません。 たとえば、デザイナー画面に ADO NET ソースを配置した場合 **、プロパティの一覧に**は`[ADO NET Source].[SqlCommand]`プロパティのエントリが格納されます。 この一覧には、データ フロー タスク自体の多数のプロパティも表示されます。  
   
 ## <a name="properties-of-data-flow-objects-that-support-property-expressions"></a>プロパティ式をサポートするデータ フロー オブジェクトのプロパティ  
  次の一覧にあるプロパティの値は、プロパティ式を使用して指定できます。  
@@ -73,9 +70,8 @@ ms.locfileid: "66059941"
 |----------------------|--------------|  
 |ADO NET 変換先|TableOrViewName プロパティ<br /><br /> BatchSize プロパティ<br /><br /> CommandTimeOut プロパティ|  
 |フラット ファイル変換先|Header プロパティ|  
-|
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact 変換先|TableName プロパティ|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]インストール|BulkInsertTableName プロパティ<br /><br /> BulkInsertFirstRow プロパティ<br /><br /> BulkInsertLastRow プロパティ<br /><br /> BulkInsertOrder プロパティ<br /><br /> Timeout プロパティ|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact 変換先|TableName プロパティ|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 変換先|BulkInsertTableName プロパティ<br /><br /> BulkInsertFirstRow プロパティ<br /><br /> BulkInsertLastRow プロパティ<br /><br /> BulkInsertOrder プロパティ<br /><br /> Timeout プロパティ|  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

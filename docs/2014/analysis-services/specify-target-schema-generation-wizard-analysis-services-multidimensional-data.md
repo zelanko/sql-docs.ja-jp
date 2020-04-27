@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e780758513aebc90dd35399894e78d0096cb0400
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068250"
 ---
 # <a name="specify-target-schema-generation-wizard-analysis-services---multidimensional-data"></a>[対象の指定] (スキーマ生成ウィザード) (Analysis Services - 多次元データ)
-  
   **[対象の指定]** ページを使用すると、リレーショナル スキーマを作成するデータ ソース ビューを指定できます。  
   
 ## <a name="options"></a>オプション  
@@ -33,13 +32,13 @@ ms.locfileid: "66068250"
 > [!NOTE]  
 >  このオプションは、 **[新しいデータ ソース ビューを作成する]** が選択されている場合にのみ有効になります。  
   
- **データソース**  
+ **データ ソース**  
  新しいデータ ソース ビューに関連付けるデータ ソースを選択します。  
   
 > [!NOTE]  
 >  このオプションは、 **[新しいデータ ソース ビューを作成する]** が選択されている場合にのみ有効になります。  
   
- **[新規作成]**  
+ **新しい**  
  クリックするとデータ ソース ウィザードが表示され、新しいデータ ソース ビューに関連付ける新しいデータ ソースを定義できます。  
   
  詳細については、「[データ ソース ウィザードの F1 ヘルプ (Analysis Services)](data-source-wizard-f1-help-analysis-services.md)」を参照してください。  

@@ -13,16 +13,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0f7921844b5d2281bd6ba9e51855ef37b816cc17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056576"
 ---
 # <a name="raw-file-destination-editor-columns-page"></a>[Raw ファイル変換先エディター] ([列] ページ)
   ファイルに RAW データを書き込むための RAW ファイル変換先を構成するには、RAW ファイル変換先エディターを使用します。  
   
- **どの操作を行いますか。**  
+ **目的に合ったトピックをクリックしてください**  
   
 -   [Raw ファイル変換先エディターを開く](#open)  
   
@@ -30,35 +30,33 @@ ms.locfileid: "66056576"
   
 -   [[列] タブのオプションの設定](#mapping)  
   
-##  <a name="open"></a>Raw ファイル変換先エディターを開く  
+##  <a name="open-the-raw-file-destination-editor"></a><a name="open"></a> RAW ファイル変換先エディターを開く  
   
-1.  
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]パッケージに RAW ファイル変換先を追加します。  
+1.  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]パッケージに RAW ファイル変換先を追加します。  
   
 2.  コンポーネントを右クリックし、 **[編集]** をクリックします。  
   
-##  <a name="connection"></a>[接続マネージャー] タブのオプションの設定  
+##  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> [接続マネージャー] タブのオプションの設定  
  **アクセスモード**  
  ファイル名の指定方法を選択します。 ファイル名とパスを直接入力するには **[ファイル名]** を選択します。ファイル名を含んでいる変数を指定するには、 **[変数からのファイル名]** を選択します。  
   
- **ファイル名**または**変数名**  
+ **[ファイル名]** または **[変数名]**  
  RAW ファイルの名前とパスを入力するか、またはファイル名を含んでいる変数を選択します。  
   
- **書き込みオプション**  
+ **[書き込みオプション]**  
  ファイルの作成およびファイルへの書き込みに使用するメソッドを選択します。  
   
- **初期 raw ファイルの生成**  
+ **[初期 RAW ファイルの生成]**  
  パッケージを実行せずに、列のみを含む空の RAW ファイル (メタデータのみのファイル) を生成するには、このボタンをクリックします。 RAW ファイル ソースの参照先を、メタデータのみのファイルにすることができます。  
   
  このボタンをクリックすると、列の一覧が表示されます。 [キャンセル] をクリックして列を変更するか、[OK] をクリックしてファイルの作成を続行することができます。  
   
-##  <a name="mapping"></a>[列] タブのオプションの設定  
- **使用できる入力列**  
+##  <a name="set-options-on-the-columns-tab"></a><a name="mapping"></a>[列] タブのオプションの設定  
+ **[使用できる入力列]**  
  RAW ファイルに書き込む 1 つ以上の入力列を選択します。  
   
  **入力列**  
- 
-  **[使用できる入力列]** から選択した場合、このテーブルに入力列が自動的に追加されます。入力列をこのテーブルで直接選択することもできます。  
+ **[使用できる入力列]** から選択した場合、このテーブルに入力列が自動的に追加されます。入力列をこのテーブルで直接選択することもできます。  
   
  **出力のエイリアス**  
  出力列に使用する代替名を指定します。  

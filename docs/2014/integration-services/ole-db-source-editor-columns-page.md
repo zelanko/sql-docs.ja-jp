@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 453bed2f366c4b2bd51fd706d5d56ea6ccf01f01
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057029"
 ---
 # <a name="ole-db-source-editor-columns-page"></a>[OLE DB ソース エディター] ([列] ページ)
-  
   **[OLE DB ソース エディター]** ダイアログ ボックスの **[列]** ページを使用すると、出力列をそれぞれの外部 (変換元) 列にマップできます。  
   
  OLE DB ソースの詳細については、「 [OLE DB Source](data-flow/ole-db-source.md)」を参照してください。  
@@ -31,7 +30,7 @@ ms.locfileid: "66057029"
  **使用できる外部列**  
  データ ソース内の使用できる外部列の一覧を表示します。 このテーブルを使用して列を追加または削除することはできません。  
   
- **[外部列]**  
+ **外部列**  
  ここで表示される外部 (変換元) 列の順序は、この変換元のデータを使用するコンポーネントを構成するときの列の表示順に反映されます。 この順序を変更するには、テーブルで選択した列を消去してから、別の順序で一覧から外部列を選択します。  
   
  **出力列**  

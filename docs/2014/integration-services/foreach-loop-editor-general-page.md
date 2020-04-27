@@ -13,19 +13,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 804e8ddca760be8734dd4862aed5c2edd6fc8caa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058518"
 ---
 # <a name="foreach-loop-editor-general-page"></a>[Foreach ループ エディター] ([全般] ページ)
-  
   **[Foreach ループ エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、Foreach ループ コンテナーの名前と説明を指定できます。これは、指定した列挙子を使用してコレクション内の各メンバーのワークフローを繰り返し処理するコンテナーです。  
   
  Foreach ループ コンテナーとその構成方法については、「 [Foreach ループ コンテナー](control-flow/foreach-loop-container.md) 」と「 [Foreach ループ コンテナーを構成する](../../2014/integration-services/configure-a-foreach-loop-container.md)」を参照してください。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **名前**  
  Foreach ループ コンテナーの一意な名前を指定します。 この名前は、タスク アイコンとログでラベルとして使用されます。  
   

@@ -15,30 +15,29 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3b9166e26129710a342411ab1da71b1c44c76239
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055948"
 ---
 # <a name="select-smo-enumeration-dialog-box"></a>[SMO 列挙の選択] ダイアログ ボックス
-  
   **[SMO 列挙の選択]** ダイアログ ボックスを使用すると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の特定のインスタンスの列挙対象となる [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) オブジェクトを指定し、列挙型を選択できます。  
   
 ## <a name="options"></a>オプション  
- **Ual**  
+ **[列挙]**  
  サーバーを展開して SMO オブジェクトを選択します。  
   
- **Objects**  
+ **オブジェクト**  
  Objects 列挙型を使用します。  
   
- **事前**  
+ **[事前作成]**  
  Objects 列挙型を指定して **[事前作成]** オプションを使用します。  
   
  **曜日**  
  Names 列挙型を使用します。  
   
- **Urn**  
+ **[URN]**  
  URN 列挙型を使用します。  
   
  **場所**  
@@ -46,6 +45,6 @@ ms.locfileid: "66055948"
   
 ## <a name="see-also"></a>参照  
  [Foreach ループコンテナー](control-flow/foreach-loop-container.md)   
- [SQL Server 管理オブジェクト &#40;SMO&#41; プログラミングガイド](../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
+ [SQL Server 管理オブジェクト &#40;SMO&#41; プログラミング ガイド](../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
   

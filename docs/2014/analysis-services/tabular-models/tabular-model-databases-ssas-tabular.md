@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 24c9487484857d61acede622b1467a1d8c0b7345
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066423"
 ---
 # <a name="tabular-model-databases-ssas-tabular"></a>表形式モデルのデータベース (SSAS 表形式)
@@ -24,20 +24,20 @@ ms.locfileid: "66066423"
  テーブル モデル データベースは多次元データベースよりも構築が容易であり、リレーショナル データベースのバックグラウンドがある場合は特に容易です。 バックグラウンドがない場合でも、管理タスクは多次元データベースのデータベース管理と同じではないものの類似しています。 同じツールとアプローチが適用されます。  
   
 ## <a name="related-content"></a>関連コンテンツ  
- [SSAS 表形式&#41;の表形式モデルソリューション &#40;](../tabular-model-solutions-ssas-tabular.md)  
+ [テーブル モデル ソリューション &#40;SSAS テーブル&#41;](../tabular-model-solutions-ssas-tabular.md)  
   
  [テーブル モデル データ アクセス](tabular-model-data-access.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [データベース、テーブル、またはパーティションの処理](process-database-table-or-partition-analysis-services.md)  
   
- [SSAS 表形式&#41;&#40;テーブルモデルロール](tabular-model-roles-ssas-tabular.md)  
+ [テーブル モデル ロール (SSAS テーブル)](tabular-model-roles-ssas-tabular.md)  
   
- [SSAS 表形式&#41;&#40;テーブルモデルパーティション](tabular-model-partitions-ssas-tabular.md)  
+ [テーブル モデル パーティション (SSAS テーブル)](tabular-model-partitions-ssas-tabular.md)  
   
  [テーブル モデルのデータベースの In-Memory または DirectQuery アクセスの構成](enable-directquery-mode-in-ssms.md)  
   
- [SSAS&#41;&#40;テーブルモデルデータベースへの接続](connect-to-a-tabular-model-database-ssas.md)  
+ [テーブル モデル データベースへの接続 &#40;SSAS&#41;](connect-to-a-tabular-model-database-ssas.md)  
   
  [PowerPivot から復元](restore-from-power-pivot.md)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66066423"
   
  [Analysis Services データベースの同期](../multidimensional-models/synchronize-analysis-services-databases.md)  
   
- [Analysis Services データベースを ReadOnly モードと ReadWrite モードの間で切り替える](../multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
+ [Analysis Services データベースの ReadOnly モードと ReadWrite モードの切り替え](../multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
  [Analysis Services データベースの変更または削除](../multidimensional-models/modify-or-delete-an-analysis-services-database.md)  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5a0a1527ed97570c715ff383837ebd5a9d5a3354
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066697"
 ---
 # <a name="relationships-ssas-tabular"></a>リレーションシップ (SSAS テーブル)
@@ -29,51 +29,51 @@ ms.locfileid: "66066697"
   
  このトピックのセクション:  
   
--   [効果](#what)  
+-   [メリット](#what)  
   
 -   [リレーションシップの要件](#requirements)  
   
--   [リレーションシップの推論](#detection)  
+-   [リレーションシップの推定](#detection)  
   
 -   [データのインポート時のリレーションシップの検出](#bkmk_detection)  
   
 -   [リレーションシップを手動で作成する](#bkmk_manually_create)  
   
--   [重複した値とその他のエラー](#bkmk_dupl_errors)  
+-   [値の重複などのエラー](#bkmk_dupl_errors)  
   
--   [Related Tasks](#bkmk_related_tasks)  
+-   [関連タスク](#bkmk_related_tasks)  
   
-##  <a name="what"></a>効果  
+##  <a name="benefits"></a><a name="what"></a>効果  
  リレーションシップは、各テーブル内の 1 つ以上の列に基づく、2 つのデータ テーブル間の接続を表します。 リレーションシップが有用である理由を理解するために、業務において顧客注文のデータを追跡する場合を考えます。 すべてのデータは、次のような構造を持つ単一のテーブルで追跡できます。  
   
-|CustomerID|Name|EMail|DiscountRate|OrderID|OrderDate|Product|Quantity|  
+|CustomerID|名前|EMail|DiscountRate|OrderID|OrderDate|Product|Quantity|  
 |----------------|----------|-----------|------------------|-------------|---------------|-------------|--------------|  
-|1 で保護されたプロセスとして起動されました|Ashton|chris.ashton@contoso.com|.05|256|2010-01-07|Compact Digital|11|  
-|1 で保護されたプロセスとして起動されました|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
+|1|Ashton|chris.ashton@contoso.com|.05|256|2010-01-07|Compact Digital|11|  
+|1|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
 |2|Jaworski|michal.jaworski@contoso.com|.10|254|2010-01-03|Budget Movie-Maker|27|  
   
  この方法でも機能しますが、すべての注文に対して顧客の電子メール アドレスなど冗長なデータを多数格納することになってしまいます。 ストレージは安価ですが、電子メール アドレスが変更された場合には、その顧客に関連する行をすべて更新する必要があります。 この問題に対する解決策の 1 つとして、データを複数のテーブルに分割し、それらのテーブル間のリレーションシップを定義する方法があります。 これは、 *などの* リレーショナル データベース [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で使用されている方法です。 たとえば、モデルにインポートしたデータベースでは、次の 3 つの関連テーブルを使用して注文データを表すことができます。  
   
 ### <a name="customers"></a>顧客  
   
-|CustomerID|Name|電子メール|  
+|CustomerID|名前|電子メール|  
 |--------------------|----------|-----------|  
-|1 で保護されたプロセスとして起動されました|Ashton|chris.ashton@contoso.com|  
+|1|Ashton|chris.ashton@contoso.com|  
 |2|Jaworski|michal.jaworski@contoso.com|  
   
 ### <a name="customerdiscounts"></a>CustomerDiscounts  
   
 |CustomerID|DiscountRate|  
 |--------------------|------------------|  
-|1 で保護されたプロセスとして起動されました|.05|  
+|1|.05|  
 |2|.10|  
   
-### <a name="orders"></a>注文  
+### <a name="orders"></a>Orders  
   
 |CustomerID|OrderID|OrderDate|Product|Quantity|  
 |--------------------|-------------|---------------|-------------|--------------|  
-|1 で保護されたプロセスとして起動されました|256|2010-01-07|Compact Digital|11|  
-|1 で保護されたプロセスとして起動されました|255|2010-01-03|SLR Camera|15|  
+|1|256|2010-01-07|Compact Digital|11|  
+|1|255|2010-01-03|SLR Camera|15|  
 |2|254|2010-01-03|Budget Movie-Maker|27|  
   
  これらのテーブルを同じデータベースからインポートした場合、テーブルのインポート ウィザードではテーブル間のリレーションシップを角かっこ ([ ]) で囲んで示した列に基づいて検出できるため、モデル デザイナーでこれらのリレーションシップを再現できます。 詳細については、このトピックの「 [リレーションシップの自動検出と自動推定](#detection) 」を参照してください。 複数のソースからテーブルをインポートした場合、「 [2 つのテーブル間のリレーションシップの作成 (SSAS テーブル)](create-a-relationship-between-two-tables-ssas-tabular.md)で使用されている方法です。  
@@ -83,11 +83,11 @@ ms.locfileid: "66066697"
   
  リレーショナル データベースの *キー*にはいくつかの種類があります。これらは通常、特殊なプロパティを含む単なる列です。 リレーショナル データベースでは次の 4 種類のキーを使用できます。  
   
--   *主キー*: Customers テーブルの CustomerID など、テーブル内の行を一意に識別します。  
+-   *主キー*: Customers テーブルの CustomerID のように、テーブル内の行を一意に識別します。  
   
--   *代替キー* (または*候補キー*): 主キー以外の一意の列。 たとえば、従業員 ID と社会保障番号が Employees テーブルに格納されることがありますが、これらは両方とも一意です。  
+-   *代替キー* ( *候補キー*): 主キー以外の一意の列。 たとえば、従業員 ID と社会保障番号が Employees テーブルに格納されることがありますが、これらは両方とも一意です。  
   
--   *外部キー*: Customers テーブルの customerid を参照する Orders テーブルの customerid など、別のテーブルの一意の列を参照する列。  
+-   *外部キー*: Customers テーブルの CustomerID を参照する Orders テーブルの CustomerID のように、別のテーブル内にある一意の列を参照する列。  
   
 -   *複合キー*: 複数の列で構成されるキー。 複合キーは、テーブル モデルではサポートされていません。 詳細については、このトピックの「複合キーと参照列」を参照してください。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "66066697"
 ### <a name="relationships-and-performance"></a>リレーションシップとパフォーマンス  
  通常、リレーションシップを作成した後は、新しく作成されたリレーションシップのテーブル内の列を使用する式をモデル デザイナーで再計算する必要があります。 データの量およびリレーションシップの複雑さによっては、この処理に時間がかかることがあります。  
   
-##  <a name="requirements"></a>リレーションシップの要件  
+##  <a name="requirements-for-relationships"></a><a name="requirements"></a> リレーションシップの要件  
  モデル デザイナーには、リレーションシップの作成時に従う必要がある要件がいくつかあります。  
   
 ### <a name="single-active-relationship-between-tables"></a>テーブル間に 1 つのアクティブなリレーションシップ  
@@ -137,7 +137,7 @@ ms.locfileid: "66066697"
   
  モデル デザイナーで 2 つのテーブル間のリレーションシップを作成する必要がある場合に、主キーと外部キーを定義する列が複数あるときは、リレーションシップを作成する前に、値を組み合わせて 1 つのキー列を作成しておく必要があります。 これはデータをインポートする前に行うことができます。また、モデル デザイナーで計算列を作成することによっても行うことができます。  
   
-###  <a name="bkmk_many_to_many"></a>多対多リレーションシップ  
+###  <a name="many-to-many-relationships"></a><a name="bkmk_many_to_many"></a> 多対多リレーションシップ  
  テーブル モデルは多対多リレーションシップをサポートしていないため、モデル デザイナー内に *交差テーブル* を追加することはできません。 ただし、DAX 関数を使用して、多対多リレーションシップをモデル化することができます。  
   
 ### <a name="self-joins-and-loops"></a>自己結合とループ  
@@ -153,7 +153,7 @@ ms.locfileid: "66066697"
   
  結果的にループが作成されるリレーションシップを作成しようとすると、エラーが生成されます。  
   
-##  <a name="detection"></a>リレーションシップの推論  
+##  <a name="inference-of-relationships"></a><a name="detection"></a>リレーションシップの推論  
  テーブル間のリレーションシップは、自動的に連結される場合もあります。 たとえば、次に示す最初の 2 セットのテーブルの間にリレーションシップを作成すると、他の 2 つのテーブルとの間にリレーションシップが存在すると推定され、自動的にリレーションシップが確立されます。  
   
  Products と Category: 手動で作成  
@@ -164,17 +164,17 @@ ms.locfileid: "66066697"
   
  リレーションシップを自動的に連結するには、上記のように、リレーションシップを一方向にする必要があります。 たとえば最初に、Sales と Products および Sales と Customers の間にリレーションシップが存在している場合は、リレーションシップは推定されません。 これは、Products と Customers の間のリレーションシップが多対多リレーションシップであるためです。  
   
-##  <a name="bkmk_detection"></a>データのインポート時のリレーションシップの検出  
+##  <a name="detection-of-relationships-when-importing-data"></a><a name="bkmk_detection"></a> データのインポート時のリレーションシップの検出  
  リレーショナル データ ソース テーブルからインポートすると、テーブルのインポート ウィザードによって、それらのソース テーブル内の既存のリレーションシップがソース スキーマ データに基づいて検出されます。 関連するテーブルがインポートされた場合は、それらのリレーションシップがモデルに複製されます。  
   
-##  <a name="bkmk_manually_create"></a>リレーションシップを手動で作成する  
+##  <a name="manually-create-relationships"></a><a name="bkmk_manually_create"></a> リレーションシップの手動作成  
  単一のリレーショナル データ ソース内のテーブル間のほとんどのリレーションシップは自動的に検出され、テーブル モデルで作成されますが、モデル テーブル間のリレーションシップを手動で作成する必要がある場合も数多くあります。  
   
  モデルに複数のソースのデータが含まれる場合は、リレーションシップの手動作成が必要になる可能性が高くなります。 たとえば、Customers、CustomerDiscounts、および Orders テーブルをリレーショナル データソースからインポートできます。 ソースでこれらのテーブル間に存在するリレーションシップは、モデルに自動的に作成されます。 たとえば、別のソースから別のテーブルを追加し、Microsoft Excel のブックに Geography テーブルの地域データをインポートできます。 次に、Customers テーブルの列と Geography テーブルの列との間にリレーションシップを手動で作成できます。  
   
  テーブル モデルでリレーションシップを手動で作成するには、ダイアグラム ビューのモデル デザイナーまたは [リレーションシップの管理] ダイアログ ボックスを使用できます。 ダイアグラム ビューでは、テーブル間のリレーションシップと共にグラフィカルな形式でテーブルが表示されます。 1 つのテーブルの列をクリックし、カーソルを別のテーブルにドラッグして、テーブル間のリレーションシップを正しい順序で簡単に作成できます。 [リレーションシップの管理] ダイアログ ボックスでは、テーブル間のリレーションシップが単純なテーブル形式で表示されます。 リレーションシップを手動で作成する方法については、「 [2 つのテーブル間のリレーションシップの作成 (SSAS テーブル)](create-a-relationship-between-two-tables-ssas-tabular.md)で使用されている方法です。  
   
-##  <a name="bkmk_dupl_errors"></a>重複した値とその他のエラー  
+##  <a name="duplicate-values-and-other-errors"></a><a name="bkmk_dupl_errors"></a>重複した値とその他のエラー  
  リレーションシップで使用できない列を選択すると、その列の横に赤い X が表示されます。 エラー アイコンの上にカーソルを置くと、問題の詳細を示すメッセージが表示されます。 選択した列間のリレーションシップを作成できない原因となる問題には、次のものがあります。  
   
 |問題またはメッセージ|解決方法|  
@@ -182,15 +182,15 @@ ms.locfileid: "66066697"
 |選択した両方の列に重複する値が含まれるため、リレーションシップを作成できない。|有効なリレーションシップを作成するには、選択したペアの少なくとも一方の列には一意の値のみが含まれている必要があります。<br /><br /> 列を編集して重複値を削除するか、一意の値を含む列が **[関連する参照列]** として使用されるように、列の順序を逆にすることができます。|  
 |列に NULL 値または空の値が含まれている。|データ列を NULL 値で相互に結合することはできません。 すべての行で、リレーションシップに使用されている両方の列に値が含まれている必要があります。|  
   
-##  <a name="bkmk_related_tasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="bkmk_related_tasks"></a> 関連タスク  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
-|[SSAS 表形式&#41;&#40;2 つのテーブル間のリレーションシップを作成する](create-a-relationship-between-two-tables-ssas-tabular.md)|2 つのテーブル間のリレーションシップを手動で作成する方法について説明します。|  
-|[SSAS 表形式&#41;&#40;のリレーションシップの削除](relationships-ssas-tabular.md)|リレーションシップを削除する方法とリレーションシップの削除がもたらす影響について説明します。|  
+|[2 つのテーブル間のリレーションシップの作成 &#40;SSAS テーブル&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)|2 つのテーブル間のリレーションシップを手動で作成する方法について説明します。|  
+|[リレーションシップの削除 (SSAS テーブル)](relationships-ssas-tabular.md)|リレーションシップを削除する方法とリレーションシップの削除がもたらす影響について説明します。|  
   
 ## <a name="see-also"></a>参照  
  [SSAS 表形式のテーブルと列 &#40;&#41;](tables-and-columns-ssas-tabular.md)   
- [SSAS 表形式&#41;&#40;データをインポートする](../import-data-ssas-tabular.md)  
+ [データのインポート &#40;SSAS テーブル&#41;](../import-data-ssas-tabular.md)  
   
   

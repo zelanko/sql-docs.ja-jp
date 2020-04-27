@@ -16,33 +16,29 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ee8ee5b2113d6fda6aaac72b407c899a610960bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055850"
 ---
 # <a name="set-or-change-the-protection-level-of-packages"></a>パッケージの保護レベルを設定または変更する
-  パッケージの内容やパッケージに含まれているパスワードなどの機密データへのアクセスを制御するには、`ProtectionLevel` プロパティの値を設定します。 プロジェクトをビルドするには、プロジェクトに含まれるパッケージの保護レベルがプロジェクトと同じである必要があります。 
-  `ProtectionLevel` プロパティ設定をプロジェクトで変更する場合は、パッケージのプロパティ設定を手動で更新する必要があります。  
+  パッケージの内容やパッケージに含まれているパスワードなどの機密データへのアクセスを制御するには、`ProtectionLevel` プロパティの値を設定します。 プロジェクトをビルドするには、プロジェクトに含まれるパッケージの保護レベルがプロジェクトと同じである必要があります。 `ProtectionLevel` プロパティ設定をプロジェクトで変更する場合は、パッケージのプロパティ設定を手動で更新する必要があります。  
   
- パッケージのライフサイクルのさまざまな`ProtectionLevel`段階でパッケージに適した設定を確認する方法については、「[パッケージ内の機密データの Access Control](security/access-control-for-sensitive-data-in-packages.md)」を参照してください。 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のセキュリティ機能の概要については、「[セキュリティの概要 #40; Integration Services & #41;](security/security-overview-integration-services.md)」を参照してください。  
+ パッケージのライフサイクルのさまざまな`ProtectionLevel`段階でパッケージに適した設定を確認する方法については、「[パッケージ内の機密データの Access Control](security/access-control-for-sensitive-data-in-packages.md)」を参照してください。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のセキュリティ機能の概要については、「[セキュリティの概要 #40; Integration Services & #41;](security/security-overview-integration-services.md)」を参照してください。  
   
  このトピックの手順では、[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] または dtutil コマンド プロンプト ユーティリティを使用して `ProtectionLevel` プロパティを変更する方法について説明します。  
   
 > [!NOTE]  
->  このトピックの手順に加えて、通常、パッケージのインポートまたはエクスポート時にパッケージの `ProtectionLevel` プロパティを設定または変更できます。 また、`ProtectionLevel` インポートおよびエクスポート ウィザードを使用してパッケージを保存するときにも、パッケージの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロパティを変更できます。  
+>  このトピックの手順に加えて、通常、パッケージのインポートまたはエクスポート時にパッケージの `ProtectionLevel` プロパティを設定または変更できます。 また、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードを使用してパッケージを保存するときにも、パッケージの `ProtectionLevel` プロパティを変更できます。  
   
 ### <a name="to-set-or-change-the-protection-level-of-a-package-in-sql-server-data-tools"></a>SQL Server データ ツールでパッケージの保護レベルを設定または変更するには  
   
 1.  トピックの`ProtectionLevel`プロパティで使用可能な値を確認し、パッケージ[の保護レベルを設定](security/access-control-for-sensitive-data-in-packages.md)して、パッケージの適切な値を決定します。  
   
-2.  
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、パッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
+2.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、パッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
-3.  
-  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーでパッケージを開きます。  
+3.  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーでパッケージを開きます。  
   
 4.  [プロパティ] ウィンドウにパッケージのプロパティが表示されない場合は、デザイン画面をクリックします。  
   
@@ -50,8 +46,7 @@ ms.locfileid: "66055850"
   
      パスワードを必要とする保護レベルを選択する場合は、 **[PackagePassword]** プロパティの値としてパスワードを入力します。  
   
-6.  
-  **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックして、変更したパッケージを保存します。  
+6.  **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックして、変更したパッケージを保存します。  
   
 ### <a name="to-set-or-change-the-protection-level-of-packages-at-the-command-prompt"></a>コマンド プロンプトでパッケージの保護レベルを設定または変更するには  
   

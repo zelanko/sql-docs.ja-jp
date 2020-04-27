@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8d3492cce19906322ef9b420718aae0ae9e0e62d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061111"
 ---
 # <a name="catalog-properties-dialog-box"></a>[カタログのプロパティ] ダイアログ ボックス
@@ -27,28 +27,26 @@ ms.locfileid: "66061111"
   
  SSISDB カタログを作成する方法の詳細については、「 [SSIS カタログの作成](catalog/ssis-catalog.md)」を参照してください。  
   
- **どの操作を行いますか。**  
+ **目的に合ったトピックをクリックしてください**  
   
--   [[カタログのプロパティ] ダイアログボックスを開く](#open_dialog)  
+-   [[カタログのプロパティ] ダイアログ ボックスを開く](#open_dialog)  
   
--   [オプションを構成する](#options)  
+-   [オプションの構成](#options)  
   
-##  <a name="open_dialog"></a>[カタログのプロパティ] ダイアログボックスを開く  
+##  <a name="open-the-catalog-properties-dialog-box"></a><a name="open_dialog"></a>[カタログのプロパティ] ダイアログボックスを開く  
   
-1.  
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
-  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]を開きます。  
+1.  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]を開きます。  
   
 2.  Microsoft SQL Server データベース エンジンに接続します。  
   
 3.  オブジェクト エクスプローラーで、 **[Integration Services]** ノードを展開します。 **[SSISDB]** を右クリックし、 **[プロパティ]** をクリックします。  
   
-##  <a name="options"></a>オプションを構成する  
+##  <a name="configure-the-options"></a><a name="options"></a>オプションを構成する  
   
 ### <a name="options"></a>オプション  
  次の表では、ダイアログ ボックスに示される特定のプロパティと、catalog.catalog_property ビュー内の対応するプロパティについて説明します。  
   
-|プロパティ名 ([カタログのプロパティ] ダイアログ ボックス)|プロパティ名 (catalog.catalog_property ビュー)|[説明]|  
+|プロパティ名 ([カタログのプロパティ] ダイアログ ボックス)|プロパティ名 (catalog.catalog_property ビュー)|説明|  
 |-----------------------------------------------------|------------------------------------------------------|-----------------|  
 |暗号化アルゴリズムの名前|ENCRYPTION_CLEANUP_ENABLED|カタログ内の機密性の高いパラメーター値を暗号化するために使用される暗号化の種類を指定します。 使用できる値を次に示します。<br /><br /> **DES**<br /><br /> **TRIPLE_DES**<br /><br /> **TRIPLE_DES_3KEY**<br /><br /> **DESPX**<br /><br /> **AES_128**<br /><br /> **AES_192**<br /><br /> **AES_256** (既定値)|  
 |検証のタイムアウト (秒)|VALIDATION_TIMEOUT|プロジェクトの検証またはパッケージの検証を停止するまで実行できる最大秒数を指定します。 既定値は 300 秒です。<br /><br /> 検証の実行は、非同期操作です。 プロジェクトまたはパッケージのサイズが大きくなるほど、検証に要する時間も長くなります。<br /><br /> プロジェクトとパッケージの検証方法の詳細については、「 [式における Integration Services データ型](expressions/integration-services-data-types-in-expressions.md)」を参照してください。|  

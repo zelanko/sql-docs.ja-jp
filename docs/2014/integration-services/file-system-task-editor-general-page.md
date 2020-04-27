@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 594b87b3e2d58ffe60bd3c31324811a66038c82b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058822"
 ---
 # <a name="file-system-task-editor-general-page"></a>[ファイル システム タスク エディター] \([全般] ページ)
-  
   **[ファイル システム タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、タスクで実行するファイル システム操作を構成できます。  
   
  このタスクの詳細については、「 [File System Task](control-flow/file-system-task.md)」(ファイル システム タスク) を参照してください。  
@@ -38,15 +37,15 @@ ms.locfileid: "66058822"
  さまざまな変数を使用する式を使用できます。  
   
 ## <a name="options"></a>オプション  
- **[Isdestinationpathvariable]**  
+ **[IsDestinationPathVariable]**  
  対象になるパスを変数に格納するかどうかを示します。 このプロパティのオプションを次の表に示します。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**本来**|対象になるパスは変数に格納されます。 この値を選択すると、動的オプション **[DestinationVariable]** が表示されます。|  
 |**False**|対象になるパスは、ファイル接続マネージャーで指定されます。 この値を`DestinationConnection`選択すると、動的オプションの [] が表示されます。|  
   
- **OverwriteDestination**  
+ **[OverwriteDestination]**  
  操作によって対象になるディレクトリ内のファイルを上書きできるかどうかを指定します。  
   
  **名前**  
@@ -58,16 +57,16 @@ ms.locfileid: "66058822"
  **説明**  
  ファイル システム タスクの説明を入力します。  
   
- **Operation**  
+ **操作**  
  実行するファイル システム操作を選択します。 このプロパティのオプションを次の表に示します。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**ディレクトリのコピー**|ディレクトリをコピーします。 この値を選択すると、ソースとターゲットを指定するための動的オプションが表示されます。|  
 |**ファイルのコピー**|ファイルをコピーします。 この値を選択すると、ソースとターゲットを指定するための動的オプションが表示されます。|  
-|**ディレクトリを作成する**|ディレクトリを作成します。 この値を選択すると、ソース ディレクトリとターゲット ディレクトリを指定するための動的オプションが表示されます。|  
+|**ディレクトリの作成**|ディレクトリを作成します。 この値を選択すると、ソース ディレクトリとターゲット ディレクトリを指定するための動的オプションが表示されます。|  
 |**ディレクトリの削除**|ディレクトリを削除します。 この値を選択すると、ソースを指定するための動的オプションが表示されます。|  
-|**ディレクトリコンテンツの削除**|ディレクトリのコンテンツを削除します。 この値を選択すると、ソースを指定するための動的オプションが表示されます。|  
+|**ディレクトリ コンテンツの削除**|ディレクトリのコンテンツを削除します。 この値を選択すると、ソースを指定するための動的オプションが表示されます。|  
 |**ファイルの削除**|ファイルを削除します。 この値を選択すると、ソースを指定するための動的オプションが表示されます。|  
 |**ディレクトリの移動**|ディレクトリを移動します。 この値を選択すると、ソースとターゲットを指定するための動的オプションが表示されます。|  
 |**ファイルの移動**|ファイルを移動します。 この値を選択すると、ソースとターゲットを指定するための動的オプションが表示されます。<br /><br /> 注: ファイルを移動する場合は、保存先として指定するディレクトリパスにファイル名を含めないでください。|  
@@ -77,7 +76,7 @@ ms.locfileid: "66058822"
  `IsSourcePathVariable`  
  対象になるパスを変数に格納するかどうかを示します。 このプロパティのオプションを次の表に示します。  
   
-|Value||  
+|[値]||  
 |-----------|-|  
 |**本来**|対象になるパスは変数に格納されます。 この値を選択すると、動的オプション **[SourceVariable]** が表示されます。|  
 |**False**|対象になるパスは、ファイル接続マネージャーで指定されます。 この値を選択すると、動的オプション **[DestinationVariable]** が表示されます。|  
@@ -85,41 +84,41 @@ ms.locfileid: "66058822"
 ## <a name="isdestinationpathvariable-dynamic-options"></a>[IsDestinationPathVariable] の動的オプション  
   
 ### <a name="isdestinationpathvariable--true"></a>[IsDestinationPathVariable] = [True]  
- **DestinationVariable**  
- 一覧から変数名を選択するか、\<[新しい変数...]**** をクリックして新しい変数を作成します。  
+ **[DestinationVariable]**  
+ 一覧から変数名を選択するか、[ \<**新しい変数**] をクリックして新しい変数を作成> ます。  
   
  **関連トピック:** [SSIS&#41; 変数の Integration Services &#40;](integration-services-ssis-variables.md)[変数の追加](../../2014/integration-services/add-variable.md)  
   
 ### <a name="isdestinationpathvariable--false"></a>[IsDestinationPathVariable] = [False]  
  `DestinationConnection`  
- ファイル接続マネージャーを一覧から選択するか、\<**[新しい接続...]** をクリックして新しい接続マネージャーを作成します。  
+ ファイル接続マネージャーを一覧から選択するか、[ \<**新しい接続...**> をクリックして新しい接続マネージャーを作成します。  
   
- **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、[ファイル接続マネージャーエディター](../../2014/integration-services/file-connection-manager-editor.md)  
+ **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、 [ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ## <a name="issourcepathvariable-dynamic-options"></a>[IsSourcePathVariable] の動的オプション  
   
 ### <a name="issourcepathvariable--true"></a>[IsSourcePathVariable] = [True]  
- **SourceVariable**  
- 一覧から変数名を選択するか、\<[新しい変数...]**** をクリックして新しい変数を作成します。  
+ **[SourceVariable]**  
+ 一覧から変数名を選択するか、[ \<**新しい変数**] をクリックして新しい変数を作成> ます。  
   
  **関連トピック:** [SSIS&#41; 変数の Integration Services &#40;](integration-services-ssis-variables.md)[変数の追加](../../2014/integration-services/add-variable.md)  
   
 ### <a name="issourcepathvariable--false"></a>[IsSourcePathVariable] = [False]  
  `SourceConnection`  
- ファイル接続マネージャーを一覧から選択するか、\<**[新しい接続...]** をクリックして新しい接続マネージャーを作成します。  
+ ファイル接続マネージャーを一覧から選択するか、[ \<**新しい接続...**> をクリックして新しい接続マネージャーを作成します。  
   
- **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、[ファイル接続マネージャーエディター](../../2014/integration-services/file-connection-manager-editor.md)  
+ **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、 [ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ## <a name="operation-dynamic-options"></a>[Operation] の動的オプション  
   
 ### <a name="operation--set-attributes"></a>[Operation] = [属性の設定]  
- **表示**  
+ **[非表示]**  
  ファイルまたはディレクトリを表示するかどうかを示します。  
   
  **ReadOnly**  
  ファイルが読み取り専用かどうかを示します。  
   
- **アイテム**  
+ **アーカイブ**  
  ファイルまたはディレクトリをアーカイブするかどうかを示します。  
   
  **システム**  
@@ -127,8 +126,7 @@ ms.locfileid: "66058822"
   
 ### <a name="operation--create-directory"></a>[Operation] = [ディレクトリの作成]  
  `UseDirectoryIfExists`  
- 
-  **[ディレクトリの作成]** 操作で、新しいディレクトリを作成せずに、指定された名前の既存のディレクトリを使用するかどうかを指定します。  
+ **[ディレクトリの作成]** 操作で、新しいディレクトリを作成せずに、指定された名前の既存のディレクトリを使用するかどうかを指定します。  
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   

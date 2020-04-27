@@ -15,20 +15,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e1a32dcbcee6704cb4fecef7b58cbff8354b910a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057894"
 ---
 # <a name="lookup-transformation-editor-columns-page"></a>[参照変換エディター] ([列] ページ)
-  
   **[参照変換エディター]** ダイアログ ボックスの **[列]** ページを使用すると、元のテーブルと参照テーブルの間に結合を指定したり、参照テーブルから参照列を選択したりできます。  
   
  参照変換の詳細については、「 [Lookup Transformation](data-flow/transformations/lookup-transformation.md)」を参照してください。  
   
 ## <a name="options"></a>オプション  
- **使用できる入力列**  
+ **[使用できる入力列]**  
  使用できる入力列の一覧を表示します。 入力列とは、データ フロー内の接続されているソースからの列です。 入力列と参照列のデータ型は一致している必要があります。  
   
  ドラッグ アンド ドロップ操作により、使用できる入力列を参照列にマップします。  
@@ -47,7 +46,7 @@ ms.locfileid: "66057894"
  **参照列**  
  選択した参照列を表示します。 選択内容は、 **[使用できる参照列]** テーブルのチェック ボックスの状態に反映されます。  
   
- **参照操作**  
+ **[参照操作]**  
  一覧から、参照列で実行する参照操作を選択します。  
   
  **出力のエイリアス**  

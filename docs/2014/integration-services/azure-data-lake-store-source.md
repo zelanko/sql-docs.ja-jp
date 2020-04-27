@@ -14,10 +14,10 @@ author: yualan
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 07ca2a75fa3f7e6329443bb4f71a23f52662f0f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061348"
 ---
 # <a name="azure-data-lake-store-source"></a>Azure Data Lake Store Source
@@ -27,15 +27,12 @@ ms.locfileid: "66061348"
   
 1.  Azure Data Lake Store のエディターを表示するには、データ フロー デザイナー上に **Azure Data Lake Store Source** をドラッグ アンド ドロップし、これをダブルクリックしてエディターを開きます。  
   
-2.  
-  **[Azure Data Lake Store connection manager (Azure Data Lake Store 接続マネージャー)]** フィールドに、既存の Azure Data Lake Store 接続マネージャーを指定するか、Azure Data Lake Store サービスを参照する新しいものを作成します。  
+2.  **[Azure Data Lake Store connection manager (Azure Data Lake Store 接続マネージャー)]** フィールドに、既存の Azure Data Lake Store 接続マネージャーを指定するか、Azure Data Lake Store サービスを参照する新しいものを作成します。  
   
-    1.  
-  **[ファイル パス]** フィールドには、Azure Data Lake Store のソース ファイルのファイル パスを指定します。   
+    1.  **[ファイル パス]** フィールドには、Azure Data Lake Store のソース ファイルのファイル パスを指定します。   
   
-    2.  
-  **[ファイル形式]** フィールドには、ソース ファイルのファイル形式を指定します。  
+    2.  **[ファイル形式]** フィールドには、ソース ファイルのファイル形式を指定します。  
   
-        ファイル形式がテキストの場合は、**列区切り文字**の値を指定する必要があります。 また、ファイルの最初の行に列名が含まれている場合は、**最初のデータ行で列名**を選択します。  
+        テキスト ファイル形式の場合は、 **[列の区切り文字]** に値を指定する必要があります。 さらに、ファイルの 1 行目に列名が含まれている場合は、 **[先頭データ行を列名として使用する]** も指定する必要があります。  
   
 3.  接続情報を指定した後、 **[列]** ページで、SSIS データ フローのマップ元の列をマップ先の列にマップします。  

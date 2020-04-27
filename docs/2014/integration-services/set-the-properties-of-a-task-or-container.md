@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 05e98e0a735cc54e129b82c65841c6db688953de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055670"
 ---
 # <a name="set-the-properties-of-a-task-or-container"></a>タスクまたはコンテナーのプロパティを設定する
@@ -26,39 +26,32 @@ ms.locfileid: "66055670"
   
 ### <a name="to-set-the-properties-of-a-task-or-container-by-using-the-properties-window"></a>[プロパティ] ウィンドウを使用してタスクまたはコンテナーのプロパティを設定するには  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
 2.  ソリューション エクスプローラーで、パッケージをダブルクリックして開きます。  
   
-3.  
-  **[制御フロー]** タブをクリックします。  
+3.  **[制御フロー]** タブをクリックします。  
   
-4.  
-  **[制御フロー]** タブのデザイン画面でタスクまたはコンテナーを右クリックし、 **[プロパティ]** をクリックします。  
+4.  **[制御フロー]** タブのデザイン画面でタスクまたはコンテナーを右クリックし、 **[プロパティ]** をクリックします。  
   
-5.  
-  **[プロパティ]** ウィンドウで、プロパティの値を更新します。  
+5.  **[プロパティ]** ウィンドウで、プロパティの値を更新します。  
   
     > [!NOTE]  
     >  ほとんどのプロパティは、テキスト ボックスに値を直接入力するか、一覧から値を選択することによって設定できます。 ただし、カスタムのプロパティ エディターが用意されている複雑なプロパティもあります。 このプロパティを設定するには、テキスト ボックス内をクリックしてから、作成ボタン ( **[...]** ) をクリックしてカスタム エディターを開きます。  
   
-6.  必要に応じて、タスクまたはコンテナーのプロパティを動的に更新するプロパティ式を作成します。 詳細については、「 [Add or Change a Property Expression](expressions/add-or-change-a-property-expression.md)」(プロパティ式を追加または変更する) を参照してください。  
+6.  必要に応じて、タスクまたはコンテナーのプロパティを動的に更新するプロパティ式を作成します。 詳細については、「 [プロパティ式を追加または変更する](expressions/add-or-change-a-property-expression.md)」を参照してください。  
   
 7.  更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
 ### <a name="to-set-the-properties-of-a-task-or-container-by-using-a-task-or-container-editor"></a>タスク エディターまたはコンテナー エディターを使用してタスクまたはコンテナーのプロパティを設定するには  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
 2.  ソリューション エクスプローラーで、パッケージをダブルクリックして開きます。  
   
-3.  
-  **[制御フロー]** タブをクリックします。  
+3.  **[制御フロー]** タブをクリックします。  
   
-4.  
-  **[制御フロー]** タブのデザイン画面でタスクまたはコンテナーを右クリックし、ショートカット メニューの **[編集]** をクリックして、対応するタスク エディターまたはコンテナー エディターを開きます。  
+4.  **[制御フロー]** タブのデザイン画面でタスクまたはコンテナーを右クリックし、ショートカット メニューの **[編集]** をクリックして、対応するタスク エディターまたはコンテナー エディターを開きます。  
   
      For ループ コンテナーの構成方法については、「 [Configure a For Loop Container](control-flow/for-loop-container.md)」(For ループ コンテナーを構成する) を参照してください。  
   
@@ -69,7 +62,7 @@ ms.locfileid: "66055670"
   
 5.  タスク エディターまたはコンテナー エディターに複数のノードがある場合、設定するプロパティが含まれるノードをクリックします。  
   
-6.  必要に応じて **[式]** をクリックし、 **[式]** ページで、タスクまたはコンテナーのプロパティを動的に更新するプロパティ式を作成します。 詳細については、「 [Add or Change a Property Expression](expressions/add-or-change-a-property-expression.md)」(プロパティ式を追加または変更する) を参照してください。  
+6.  必要に応じて **[式]** をクリックし、 **[式]** ページで、タスクまたはコンテナーのプロパティを動的に更新するプロパティ式を作成します。 詳細については、「 [プロパティ式を追加または変更する](expressions/add-or-change-a-property-expression.md)」を参照してください。  
   
 7.  プロパティ値を更新します。  
   

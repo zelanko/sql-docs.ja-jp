@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3398a56ef3428376ca8c50b0fbd2b53e75b9491e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057122"
 ---
 # <a name="ole-db-destination-editor-error-output-page"></a>[OLE DB 変換先エディター] ([エラー出力] ページ)
-  
   **[OLE DB 変換先エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを指定できます。  
   
  OLE DB 変換先の詳細については、「 [OLE DB Destination](data-flow/ole-db-destination.md)」を参照してください。  
@@ -32,15 +31,15 @@ ms.locfileid: "66057122"
  入力の名前を表示します。  
   
  **列**  
- 使用されません。  
+ 使用されていません。  
   
  **Error**  
  エラーが発生した場合に、障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
   
- **関連トピック:** [データのエラー処理](data-flow/error-handling-in-data.md)  
+ **関連項目:** [データのエラー処理](data-flow/error-handling-in-data.md)  
   
  **切り捨て**  
- 使用されません。  
+ 使用されていません。  
   
  **説明**  
  操作の説明を表示します。  
@@ -48,7 +47,7 @@ ms.locfileid: "66057122"
  **[選択したセルに設定する値]**  
  エラーまたは切り捨てが発生した場合に、選択したすべてのセルに対して障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
   
- **[適用]**  
+ 適用****  
  選択したセルにエラー処理オプションを適用します。  
   
 ## <a name="see-also"></a>参照  

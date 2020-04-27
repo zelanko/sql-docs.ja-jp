@@ -13,16 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d9d9f11b8713ea26cd79e95b9edc3f36c0bf3564
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066686"
 ---
 # <a name="rename-a-table-or-column-ssas-tabular"></a>テーブルまたは列名の変更 (SSAS テーブル)
-  
-  **テーブルのインポート ウィザード** の **[テーブルとビューの選択]** ページで **表示名**を入力することにより、インポート処理中にテーブルの名前を変更できます。 
-  **テーブルのインポート ウィザード** の **[SQL クエリの指定]** ページでクエリを指定してデータをインポートした場合は、テーブルおよび列の名前を変更することもできます。  
+  **テーブルのインポート ウィザード** の **[テーブルとビューの選択]** ページで **表示名**を入力することにより、インポート処理中にテーブルの名前を変更できます。 **テーブルのインポート ウィザード** の **[SQL クエリの指定]** ページでクエリを指定してデータをインポートした場合は、テーブルおよび列の名前を変更することもできます。  
   
  データをモデルに追加すると、テーブルの名前 (つまりタイトル) がモデル デザイナーの下部にあるテーブル タブに表示されます。 テーブルの名前は、より適切な名前に変更できます。 列の名前は、データをモデルに追加した後で変更することもできます。 このオプションは、複数のソースからデータをインポートして、別のテーブルの列にわかりやすい名前を付けたい場合に特に重要となります。  
   
@@ -33,8 +31,7 @@ ms.locfileid: "66066686"
 2.  新しい名前を入力します。  
   
     > [!NOTE]  
-    >  
-  **[テーブルのプロパティの編集]** ダイアログ ボックスを使用すると、接続情報や列マッピングなど、名前以外のテーブルのプロパティを編集できます。 ただし、このダイアログ ボックスでは、名前を変更できません。  
+    >  **[テーブルのプロパティの編集]** ダイアログ ボックスを使用すると、接続情報や列マッピングなど、名前以外のテーブルのプロパティを編集できます。 ただし、このダイアログ ボックスでは、名前を変更できません。  
   
 ### <a name="to-rename-a-column"></a>列名を変更するには  
   
@@ -61,6 +58,6 @@ ms.locfileid: "66066686"
 ## <a name="see-also"></a>参照  
  [SSAS 表形式のテーブルと列 &#40;&#41;](tables-and-columns-ssas-tabular.md)   
  [PowerPivot からのインポート &#40;SSAS 表形式&#41;](import-from-power-pivot-ssas-tabular.md)   
- [Analysis Services &#40;SSAS 表形式&#41;からのインポート](import-from-analysis-services-ssas-tabular.md)  
+ [Analysis Services からのインポート (SSAS テーブル)](import-from-analysis-services-ssas-tabular.md)  
   
   

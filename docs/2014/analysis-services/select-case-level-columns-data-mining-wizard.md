@@ -13,23 +13,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1f41b6138093b5ecbd6793a5c5210a9e8c6c412b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069661"
 ---
 # <a name="select-case-level-columns-data-mining-wizard"></a>[ケース レベル列の選択] (データ マイニング ウィザード)
-  
   **[ケース レベル列の選択]** ページを使用すると、マイニング構造のケース レベル列として使用する属性およびメジャーを、基になるソース キューブ ディメンションから選択できます。  
   
 > [!NOTE]  
->  このページは、ウィザードの **[定義方法の選択]** ページで **[既存のキューブを使用する]** を選択した場合にのみ表示されます。  
+>   このページは、ウィザードの **[定義方法の選択]** ページで **[既存のキューブを使用する]** を選択した場合にのみ表示されます。  
   
- **詳細については、「** データマイニング[ウィザード &#40;Analysis Services データマイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)」、「[リレーショナルマイニング構造を作成する](data-mining/create-a-relational-mining-structure.md)」を参照してください。  
+ **詳細情報:** [データ マイニング ウィザード &#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[リレーショナル マイニング構造の作成](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>オプション  
- **関連する属性とメジャー**  
+ **[関連する属性およびメジャー]**  
  マイニング構造のケース レベル列として使用する属性およびメジャーを選択します。 選択したすべての属性に階層を設定するか、属性階層を有効にする必要があります。  
   
 ## <a name="see-also"></a>参照  

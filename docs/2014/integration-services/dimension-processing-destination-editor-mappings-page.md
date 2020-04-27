@@ -15,28 +15,26 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6eaf39005e6c5d1d5cf401738fe82f3c97cdf693
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059407"
 ---
 # <a name="dimension-processing-destination-editor-mappings-page"></a>[ディメンション処理変換先エディター] ([マッピング] ページ)
-  
   **[ディメンション処理変換先エディター]** ダイアログ ボックスの **[マッピング]** ページを使用すると、入力列を変換先列にマップできます。  
   
  ディメンション処理変換先の詳細については、「 [Dimension Processing Destination](data-flow/dimension-processing-destination.md)」を参照してください。  
   
 ## <a name="options"></a>オプション  
- **使用できる入力列**  
+ **[使用できる入力列]**  
  使用できる入力列の一覧を表示します。 ドラッグ アンド ドロップ操作により、テーブル内の使用できる入力列を変換先列にマップします。  
   
  **使用できる変換先列**  
  使用できる変換先列の一覧を表示します。 ドラッグ アンド ドロップ操作により、テーブル内の使用できる変換先列を入力列にマップします。  
   
  **入力列**  
- 上の表で選択された入力列が表示されます。 
-  **[使用できる入力列]** ボックスの一覧を使用して、マッピングを変更できます。  
+ 上の表で選択された入力列が表示されます。 **[使用できる入力列]** ボックスの一覧を使用して、マッピングを変更できます。  
   
  **変換先列**  
  使用できる変換先列を表示し、それぞれがマップされるかどうかを示します。  
@@ -44,6 +42,6 @@ ms.locfileid: "66059407"
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[ディメンション処理変換先エディター] &#40;[接続マネージャー] ページ&#41;](../../2014/integration-services/dimension-processing-destination-editor-connection-manager-page.md)   
- [ディメンション処理変換先エディター &#40;詳細設定ページ&#41;](../../2014/integration-services/dimension-processing-destination-editor-advanced-page.md)  
+ [ディメンション処理変換先エディター &#40;[詳細設定] ページ&#41;](../../2014/integration-services/dimension-processing-destination-editor-advanced-page.md)  
   
   

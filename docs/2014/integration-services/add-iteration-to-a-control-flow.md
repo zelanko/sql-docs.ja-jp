@@ -18,15 +18,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b96f5f900e8c1a3adf136c7bdaf1b89f297e4921
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061979"
 ---
 # <a name="add-iteration-to-a-control-flow"></a>制御フローに繰り返しを追加する
-  
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には For ループ コンテナーが含まれています。For ループ コンテナーとは制御フローの要素で、これを使用すると、条件に応じてパッケージ内の制御フローを繰り返すループを、簡単に含めることができます。 詳細については、「 [For ループ コンテナー](control-flow/for-loop-container.md)」を参照してください。  
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には For ループ コンテナーが含まれています。For ループ コンテナーとは制御フローの要素で、これを使用すると、条件に応じてパッケージ内の制御フローを繰り返すループを、簡単に含めることができます。 詳細については、「 [For ループ コンテナー](control-flow/for-loop-container.md)に評価されるまでそのワークフローを繰り返します。  
   
  For ループ コンテナーは、ループの各繰り返しにおいて条件を評価し、条件が FALSE に評価されると停止します。 For ループ コンテナーに含まれる式によって、ループの初期化、繰り返される制御フローの実行を停止する評価条件の指定、評価条件の比較対象となる値を更新する式への値の代入を行います。 評価条件は必ず指定する必要がありますが、初期化式および代入式の指定は任意です。  
   
@@ -41,10 +40,9 @@ ms.locfileid: "66061979"
   
  式の内部で変数を指定する場合、変数名をアット マーク (@) で始める必要があります。 たとえば、という名前`Counter`の変数につい@Counterては、for ループコンテナーが使用する式にを入力します。 変数の名前空間のプロパティを含める場合は、変数と名前空間を角かっこで囲む必要があります。 たとえば、 `Counter` `MyNamespace`名前空間の変数の場合は、「[@MyNamespace::Counter]」と入力します。  
   
- For ループ コンテナーが使用する変数は、For ループ コンテナーのスコープ、またはパッケージ コンテナー階層において上位層にある任意のコンテナーのスコープ内で定義する必要があります。 たとえば、For ループ コンテナーは、それ自体のスコープ内で定義された変数と、パッケージ スコープ内で定義された変数を使用できます。 詳細については、「[Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](../../2014/integration-services/use-variables-in-packages.md)」を参照してください。  
+ For ループ コンテナーが使用する変数は、For ループ コンテナーのスコープ、またはパッケージ コンテナー階層において上位層にある任意のコンテナーのスコープ内で定義する必要があります。 たとえば、For ループ コンテナーは、それ自体のスコープ内で定義された変数と、パッケージ スコープ内で定義された変数を使用できます。 詳細については、「[Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](../../2014/integration-services/use-variables-in-packages.md)」をご覧ください。  
   
- 
-  [!INCLUDE[ssIS](../includes/ssis-md.md)] の式文法には、評価、初期化、または代入に使用する複雑な式を実装するための、演算子と関数の完全なセットが用意されています。 詳細については、「 [Integration Services (SSIS) 式](expressions/integration-services-ssis-expressions.md)に評価されるまでそのワークフローを繰り返します。  
+ [!INCLUDE[ssIS](../includes/ssis-md.md)] の式文法には、評価、初期化、または代入に使用する複雑な式を実装するための、演算子と関数の完全なセットが用意されています。 詳細については、「 [Integration Services (SSIS) 式](expressions/integration-services-ssis-expressions.md)に評価されるまでそのワークフローを繰り返します。  
   
 ### <a name="to-implement-a-for-loop-container-in-a-control-flow"></a>For ループ コンテナーを制御フローに実装するには  
   

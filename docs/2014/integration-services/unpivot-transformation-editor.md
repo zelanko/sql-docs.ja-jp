@@ -15,29 +15,28 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2a0222627860b70059163bff1dd989e230c1cb66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054839"
 ---
 # <a name="unpivot-transformation-editor"></a>[ピボット解除変換エディター]
-  
   **[ピボット解除変換エディター]** ダイアログ ボックスを使用すると、行でピボットする列を選択したり、データ列および新しいピボット値出力列を指定したりできます。  
   
 > [!NOTE]  
->  このトピックでは、「 [ピボット解除変換](data-flow/transformations/unpivot-transformation.md) 」に示されているピボット解除の例に基づいて、オプションの使用方法を説明します。  
+>   このトピックでは、「 [Unpivot Transformation](data-flow/transformations/unpivot-transformation.md) 」に示されているピボット解除の例に基づいて、オプションの使用方法を説明します。  
   
  ピボット解除変換の詳細については、「 [Unpivot Transformation](data-flow/transformations/unpivot-transformation.md)」を参照してください。  
   
 ## <a name="options"></a>オプション  
- **使用できる入力列**  
+ **[使用できる入力列]**  
  チェック ボックスを使用して、行でピボットする列を指定します。  
   
  **名前**  
  使用できる入力列の名前を表示します。  
   
- **パススルー**  
+ **[パススルー]**  
  ピボット解除された出力に列を含めるかどうかを示します。  
   
  **入力列**  
@@ -50,14 +49,14 @@ ms.locfileid: "66054839"
   
  「 [ピボット解除変換](data-flow/transformations/unpivot-transformation.md)」のピボット解除の例では、変換先列は数量 (**Qty**) 列です。  
   
- **ピボットキー値**  
+ **[ピボット キー値]**  
  ピボット値の名前を指定します。 既定は入力列の名前です。一意のわかりやすい名前を付けることもできます。  
   
  このプロパティの値は、プロパティ式を使用して指定することができます。  
   
  「 [Unpivot Transformation](data-flow/transformations/unpivot-transformation.md)」のピボット解除の例では、ピボット値は、 **[ピボット キー値の列名]** オプションで指定された新しい Product 列のテキスト値 **Ham**, **Soda**, **Milk**, **Beer**、および **Chips**として表示されます。  
   
- **ピボットキー値の列名**  
+ **[ピボット キー値の列名]**  
  ピボット値列の名前を指定します。 既定では [ピボット キー値] になりますが、わかりやすい一意な名前を選択することもできます。  
   
  「 [Unpivot Transformation](data-flow/transformations/unpivot-transformation.md)」のピボット解除の例では、ピボット キー値列の名前は **Product** です。これは、 **Product** 、 **Product**, **Product**, **Product**, **Product**の列のピボット解除が行われる新しい **Product** 列を示しています。  

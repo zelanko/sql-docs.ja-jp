@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 16c8a1d9023e0bcbb852974f11ebe4b89d36d93b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062639"
 ---
 # <a name="analysis-services-backward-compatibility"></a>Analysis Services の旧バージョンとの互換性
@@ -30,7 +30,7 @@ ms.locfileid: "66062639"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |------------|-----------------|  
 |[SQL Server 2014 に含まれている非推奨の Analysis Services 機能](deprecated-analysis-services-features-in-sql-server-2014.md)|現在のバージョンでは旧バージョンとの互換性を維持するために引き続き使用できるものの、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の今後のバージョンでは削除される予定になっている機能について説明します。|  
 |[SQL Server 2014 で提供が中止された Analysis Services の機能](discontinued-analysis-services-functionality-in-sql-server-2014.md)|以前のバージョンの  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] には存在したものの、以降のバージョンからは削除されている機能について説明します。|  

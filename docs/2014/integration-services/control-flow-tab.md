@@ -13,14 +13,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dd46efd60d81134f04a6bbc44e47c1fe8b5f342e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060360"
 ---
 # <a name="control-flow-tab"></a>[制御フロー] タブ
-  
   **デザイナーの** [制御フロー] [!INCLUDE[ssIS](../includes/ssis-md.md)] タブを使用すると、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージの制御フローを構築できます。  
   
  制御フローを作成するには、 [!INCLUDE[ssIS](../includes/ssis-md.md)] タスクおよびコンテナーを表すグラフィカル オブジェクトを、 **ツールボックス** から **[制御フロー]** タブのデザイン画面にドラッグします。次に、オブジェクトのコネクタを別のオブジェクトにドラッグしてオブジェクトどうしを接続します。 オブジェクトを接続しているそれぞれの線は、タスクおよびコンテナーの実行順序を指定する優先順位制約を表します。  
@@ -39,8 +38,7 @@ ms.locfileid: "66060360"
   
 -   ブレークポイントを構成する。  
   
- 
-  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーを使用してこれらの機能をそれぞれのタスクまたはコンテナーに追加するには、デザイン画面上でオブジェクトを右クリックし、目的のオプションを選択します。  
+ [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーを使用してこれらの機能をそれぞれのタスクまたはコンテナーに追加するには、デザイン画面上でオブジェクトを右クリックし、目的のオプションを選択します。  
   
 ## <a name="see-also"></a>参照  
  [優先順位制約](control-flow/precedence-constraints.md)   

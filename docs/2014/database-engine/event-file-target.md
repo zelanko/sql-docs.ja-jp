@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 53cf3aa4b23484bb22f4237fbf61874990381067
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064860"
 ---
 # <a name="event-file-target"></a>Event File Target
@@ -26,7 +26,7 @@ ms.locfileid: "66064860"
   
  次の表では、イベント ファイル ターゲットの構成に使用できるオプションについて説明します。  
   
-|オプション|使用できる値|[説明]|  
+|オプション|使用できる値|説明|  
 |------------|--------------------|-----------------|  
 |filename|260 文字までの任意の文字列。 この値は必須です。|ファイルの場所とファイル名。<br /><br /> 任意のファイル名拡張子を使用できます。|  
 |max_file_size|任意の 64 ビット整数。 この値は省略可能です。|ファイルの最大サイズ (MB)。 max_file_size を指定しない場合、ファイルはディスクがいっぱいになるまで拡張されます。 既定のファイル サイズは 1 GB です。<br /><br /> max_file_size は、セッション バッファーの現在のサイズを超えるサイズである必要があります。 そうでないと、ファイル ターゲットの初期化が失敗し、max_file_size が無効であるとレポートされます。 バッファーの現在のサイズを表示するには、 [sys.dm_xe_sessions](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-sessions-transact-sql) 動的管理ビューで buffer_size 列に対するクエリを発行します。<br /><br /> 既定のファイル サイズがセッション バッファー サイズ未満の場合は、max_file_size を、 [sys.server_event_sessions](/sql/relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql) カタログ ビューの max_memory 列に指定された値に設定することをお勧めします。<br /><br /> max_file_size をセッション バッファーのサイズを超えて設定した場合、セッション バッファーのサイズの最も近い倍数に丸められたサイズが使用されます。 その結果、max_file_size に指定した値に満たないターゲット ファイルが作成されることがあります。 たとえば、バッファー サイズが 100 MB のときに max_file_size を 150 MB に設定した場合、2 番目のバッファーが残りの 50 MB のスペースに収まらないため、結果のファイル サイズは 100 MB に丸められます。<br /><br /> 既定のファイル サイズがセッション バッファー サイズ未満の場合は、max_file_size を、 [sys.server_event_sessions](/sql/relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql) カタログ ビューの max_memory 列の値に設定することをお勧めします。|  
@@ -58,9 +58,9 @@ FROM sys.fn_xe_file_target_read_file('file_name*.xel', NULL, NULL, NULL)
 ```  
   
 ## <a name="see-also"></a>参照  
- [SQL Server 拡張イベント ターゲット](../../2014/database-engine/sql-server-extended-events-targets.md)   
+ [拡張イベントターゲットの SQL Server](../../2014/database-engine/sql-server-extended-events-targets.md)   
  [fn_xe_file_target_read_file &#40;Transact-sql&#41;](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)   
- [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
+ [Transact-sql&#41;&#40;のイベントセッションの作成](/sql/t-sql/statements/create-event-session-transact-sql)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)  
   
   

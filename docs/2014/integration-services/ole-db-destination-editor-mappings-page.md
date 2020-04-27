@@ -15,20 +15,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8c79715803d598b3f30eb5b54bd6ddcb77f1aae2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057091"
 ---
 # <a name="ole-db-destination-editor-mappings-page"></a>[OLE DB 変換先エディター] ([マッピング] ページ)
-  
   **[OLE DB 変換先エディター]** ダイアログ ボックスの **[マッピング]** ページを使用すると、入力列を変換先列にマップできます。  
   
  OLE DB 変換先の詳細については、「 [OLE DB Destination](data-flow/ole-db-destination.md)」を参照してください。  
   
 ## <a name="options"></a>オプション  
- **使用できる入力列**  
+ **[使用できる入力列]**  
  使用できる入力列の一覧を表示します。 ドラッグ アンド ドロップ操作により、テーブル内の使用できる入力列を変換先列にマップします。  
   
  **使用できる変換先列**  

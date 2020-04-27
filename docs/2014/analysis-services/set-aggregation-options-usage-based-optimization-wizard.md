@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8703ec6f199290185829a15a0079cd9b04e42fbc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068756"
 ---
 # <a name="set-aggregation-options-usage-based-optimization-wizard"></a>[集計オプションの設定] (使用法に基づく最適化ウィザード)
-  
   **[集計オプションの設定]** ページを使用すると、集計デザイン プロセスを開始し、使用法に基づく最適化ウィザードで生成された集計に対するストレージまたはパフォーマンスの制限を指定することができます。  
   
 ## <a name="options"></a>オプション  
@@ -33,13 +32,13 @@ ms.locfileid: "66068756"
  **[[停止] をクリックする]**  
  デザイン プロセス中に **[停止]** をクリックすることにより、集計デザインを制限します。  
   
- **[開始]**  
+ **Start**  
  集計デザイン プロセスを開始します。  
   
- **停止**  
+ **Stop**  
  集計デザイン プロセスを停止します。  
   
- **解除**  
+ **リセット**  
  このページのすべての集計オプションを既定値に戻します。  
   
 ## <a name="see-also"></a>参照  

@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c7ff5b4488eaa4563a2415d754853bc8e33803bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057681"
 ---
 # <a name="merge-transformation-editor"></a>マージ変換エディター
-  
   **[マージ変換エディター]** を使用すると、マージする 2 つの並べ替え済みデータのセットの列を指定できます。  
   
 > [!IMPORTANT]  
@@ -34,10 +33,10 @@ ms.locfileid: "66057681"
  **出力列の名前**  
  出力列の名前を指定します。  
   
- **マージの入力1**  
+ **[マージの入力 1]**  
  マージの入力の 1 つ目の列を選択します。  
   
- **マージの入力2**  
+ **[マージの入力 2]**  
  マージの入力の 2 つ目の列を選択します。  
   
 ## <a name="see-also"></a>参照  

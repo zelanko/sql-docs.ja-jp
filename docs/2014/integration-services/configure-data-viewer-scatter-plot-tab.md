@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9b1c002a7fcf0027f5169c4365c4ee1cd82f1a83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060675"
 ---
 # <a name="configure-data-viewer-scatter-plot-tab"></a>[データ ビューアーの構成] ([散布図] タブ)
-  
   **[データ ビューアーの構成]** ダイアログ ボックスの **[散布図 (x,y)]** タブを使用すると、互いに対してプロットする 2 つの列を指定できます。 散布図では、2 つの数値列のデータ値が互いにプロットされます。 それぞれのデータ レコードは、プロットで 1 つの点となります。 グラフには、1 つのバッファーの内容のみが反映されます。  
   
 ## <a name="options"></a>オプション  

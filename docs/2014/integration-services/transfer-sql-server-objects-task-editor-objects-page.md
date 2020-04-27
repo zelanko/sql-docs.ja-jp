@@ -15,76 +15,71 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3ae231e933e30613d45fe00eaa99d6a2d5c9c772
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054864"
 ---
 # <a name="transfer-sql-server-objects-task-editor-objects-page"></a>[SQL Server オブジェクトの転送タスク エディター] ([オブジェクト] ページ)
-  
   **[SQL Server オブジェクトの転送タスク エディター]** ダイアログ ボックスの **[オブジェクト]** ページを使用すると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンス間で 1 つまたは複数の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オブジェクトをコピーするためのプロパティを指定できます。 コピーできる [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オブジェクトには、テーブル、ビュー、ストアド プロシージャ、およびユーザー定義関数などがあります。 このタスクの詳細については、「 [Transfer SQL Server Objects Task](control-flow/transfer-sql-server-objects-task.md)」を参照してください。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オブジェクトの転送タスクを作成するユーザーは、転送元サーバー オブジェクトをコピー用に選択するために必要な権限と、オブジェクトの転送先の転送先サーバー データベースにアクセスするために必要な権限を持っている必要があります。  
+>  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オブジェクトの転送タスクを作成するユーザーは、転送元サーバー オブジェクトをコピー用に選択するために必要な権限と、オブジェクトの転送先の転送先サーバー データベースにアクセスするために必要な権限を持っている必要があります。  
   
 ## <a name="static-options"></a>静的オプション  
  **[Sourceconnection]**  
  SMO 接続マネージャーを一覧から選択するか、[ ** \<新しい接続... >** をクリックして、移行元サーバーへの新しい接続を作成します。  
   
- **SourceDatabase**  
+ **[SourceDatabase]**  
  オブジェクトのコピー元の転送元サーバー上のデータベースを選択します。  
   
  **DestinationConnection**  
  SMO 接続マネージャーを一覧から選択するか、[ ** \<新しい接続... >** をクリックして、移行先サーバーへの新しい接続を作成します。  
   
- **DestinationDatabase**  
+ **[DestinationDatabase]**  
  オブジェクトのコピー先の転送先サーバー上のデータベースを選択します。  
   
- **DropObjectsFirst**  
+ **[DropObjectsFirst]**  
  選択したオブジェクトをコピーを開始する前に転送先サーバー上で削除するかどうかを選択します。  
   
- **IncludeExtendedProperties**  
+ **[IncludeExtendedProperties]**  
  転送元サーバーから転送先サーバーにオブジェクトをコピーするときに拡張プロパティを含めるかどうかを選択します。  
   
- **CopyData**  
+ **[CopyData]**  
  転送元サーバーから転送先サーバーにオブジェクトをコピーするときにデータを含めるかどうかを選択します。  
   
- **ExistingData**  
+ **[ExistingData]**  
  転送先サーバーにデータをどのようにコピーするかを指定します。 このプロパティには、次の表に示すオプションがあります。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**ら**|転送先サーバー上のデータは上書きされます。|  
 |**Append**|転送元サーバーからコピーされたデータは、転送先サーバー上の既存のデータに追加されます。|  
   
 > [!NOTE]  
->  
-  **[ExistingData]** オプションは、 **[CopyData]** が **[True]** に設定されている場合にのみ使用できます。  
+>  **[ExistingData]** オプションは、 **[CopyData]** が **[True]** に設定されている場合にのみ使用できます。  
   
- **Copyschema]**  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オブジェクトの転送タスクによる処理中にスキーマをコピーするかどうかを選択します。  
+ **[CopySchema]**  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オブジェクトの転送タスクによる処理中にスキーマをコピーするかどうかを選択します。  
   
 > [!NOTE]  
->  **Copyschema**は、で[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のみ使用できます。  
+>  **[CopySchema]** は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]でのみ使用できます。  
   
- **UseCollation**  
+ **[UseCollation]**  
  転送元サーバー上で指定されている照合順序をオブジェクトの転送に含めるかどうかを選択します。  
   
- **IncludeDependentObjects**  
+ **[IncludeDependentObjects]**  
  コピーの対象として選択されたオブジェクトをコピーするときに、そのオブジェクトに依存している他のオブジェクトもコピーするかどうかを選択します。  
   
- **[Copyallobjects]**  
+ **[CopyAllObjects]**  
  指定した転送元データベース内のすべてのオブジェクトをコピーするか、選択したオブジェクトだけをコピーするかを選択します。  このオプションを [False] に設定すると、オブジェクトを転送するためのオプションが表示され、さらに **[CopyAllObjects]** セクションに動的オプションが表示されます。  
   
- **[Objectstocopy]**  
- 
-  **[ObjectsToCopy]** を展開して、転送元データベースから転送先データベースにコピーするオブジェクトを指定します。  
+ **[ObjectsToCopy]**  
+ **[ObjectsToCopy]** を展開して、転送元データベースから転送先データベースにコピーするオブジェクトを指定します。  
   
 > [!NOTE]  
->  **Objectstocopy**は、 **[copyallobjects]** が**False**に設定されている場合にのみ使用できます。  
+>  **[ObjectsToCopy]** は、 **[CopyAllObjects]** が **[False]** に設定されている場合にのみ使用できます。  
   
  次の種類のオブジェクトをコピーするオプションは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]でのみサポートされます。  
   
@@ -102,137 +97,116 @@ ms.locfileid: "66054864"
   
  XML スキーマ コレクション  
   
- **CopyDatabaseUsers**  
+ **[CopyDatabaseUsers]**  
  データベース ユーザーを転送に含めるかどうかを指定します。  
   
- **CopyDatabaseRoles**  
+ **[CopyDatabaseRoles]**  
  データベース ロールを転送に含めるかどうかを指定します。  
   
- **CopySqlServerLogins**  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ログインを転送に含めるかどうかを指定します。  
+ **[CopySqlServerLogins]**  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ログインを転送に含めるかどうかを指定します。  
   
- **CopyObjectLevelPermissions**  
+ **[CopyObjectLevelPermissions]**  
  オブジェクトレベルの権限を転送に含めるかどうかを指定します。  
   
- **CopyIndexes**  
+ **[CopyIndexes]**  
  インデックスを転送に含めるかどうかを指定します。  
   
- **CopyTriggers**  
+ **[CopyTriggers]**  
  トリガーを転送に含めるかどうかを指定します。  
   
- **CopyFullTextIndexes**  
+ **[CopyFullTextIndexes]**  
  フルテキスト インデックスを転送に含めるかどうかを指定します。  
   
- **CopyPrimaryKeys**  
+ **[CopyPrimaryKeys]**  
  主キーを転送に含めるかどうかを指定します。  
   
- **CopyForeignKeys**  
+ **[CopyForeignKeys]**  
  外部キーを転送に含めるかどうかを指定します。  
   
- **この形式の言語では、Unicode**  
+ **[GenerateScriptsInUnicode]**  
  転送スクリプトを Unicode 形式で生成するかどうかを指定します。  
   
 ## <a name="dynamic-options"></a>動的オプション  
   
 ### <a name="copyallobjects--false"></a>[CopyAllObjects] = [False]  
- **CopyAllTables**  
+ **[CopyAllTables]**  
  指定した転送元データベース内のすべてのテーブルをコピーするか、選択したテーブルだけをコピーするかを選択します。  
   
- **TablesList**  
- 
-  **[テーブルの選択]** ダイアログ ボックスが開きます。  
+ **[TablesList]**  
+ **[テーブルの選択]** ダイアログ ボックスが開きます。  
   
- **CopyAllViews**  
+ **[CopyAllViews]**  
  指定した転送元データベース内のすべてのビューをコピーするか、選択したビューだけをコピーするかを選択します。  
   
- **ViewsList**  
- 
-  **[ビューの選択]** ダイアログ ボックスが開きます。  
+ **[ViewsList]**  
+ **[ビューの選択]** ダイアログ ボックスが開きます。  
   
- **CopyAllStoredProcedures**  
+ **[CopyAllStoredProcedures]**  
  指定した転送元データベース内のすべてのユーザー定義ストアド プロシージャをコピーするか、選択したプロシージャだけをコピーするかを選択します。  
   
- **StoredProceduresList**  
- 
-  **[ストアド プロシージャの選択]** ダイアログ ボックスが開きます。  
+ **[StoredProceduresList]**  
+ **[ストアド プロシージャの選択]** ダイアログ ボックスが開きます。  
   
- **CopyAllUserDefinedFunctions**  
+ **[CopyAllUserDefinedFunctions]**  
  指定した転送元データベース内のすべてのユーザー定義関数 (UDF) をコピーするか、選択した UDF だけをコピーするかを選択します。  
   
- **Userdefinedの一覧**  
- 
-  **[ユーザー定義関数の選択]** ダイアログ ボックスが開きます。  
+ **[UserDefinedFunctionsList]**  
+ **[ユーザー定義関数の選択]** ダイアログ ボックスが開きます。  
   
- **CopyAllDefaults**  
+ **[CopyAllDefaults]**  
  指定した転送元データベース内のすべての既定値をコピーするか、選択した既定値だけをコピーするかを選択します。  
   
- **DefaultsList**  
- 
-  **[既定値の選択]** ダイアログ ボックスが開きます。  
+ **[DefaultsList]**  
+ **[既定値の選択]** ダイアログ ボックスが開きます。  
   
- **CopyAllUserDefinedDataTypes 型**  
+ **[CopyAllUserDefinedDataTypes]**  
  指定した転送元データベース内のすべてのユーザー定義データ型をコピーするか、選択したユーザー定義データ型だけをコピーするかを選択します。  
   
- **UserDefinedDataTypesList**  
- 
-  **[ユーザー定義データ型の選択]** ダイアログ ボックスが開きます。  
+ **[UserDefinedDataTypesList]**  
+ **[ユーザー定義データ型の選択]** ダイアログ ボックスが開きます。  
   
- **CopyAllPartitionFunctions**  
- 指定した転送元データベース内のすべてのユーザー定義パーティション関数をコピーするか、選択したパーティション関数だけをコピーするかを選択します。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]でのみサポートされます。  
+ **[CopyAllPartitionFunctions]**  
+ 指定した転送元データベース内のすべてのユーザー定義パーティション関数をコピーするか、選択したパーティション関数だけをコピーするかを選択します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]でのみサポートされます。  
   
- **Partitionの一覧**  
- 
-  **[パーティション関数の選択]** ダイアログ ボックスが開きます。  
+ **[PartitionFunctionsList]**  
+ **[パーティション関数の選択]** ダイアログ ボックスが開きます。  
   
- **CopyAllPartitionSchemes**  
- 指定した転送元データベース内のすべてのパーティション構成をコピーするか、選択したパーティション構成だけをコピーするかを選択します。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]でのみサポートされます。  
+ **[CopyAllPartitionSchemes]**  
+ 指定した転送元データベース内のすべてのパーティション構成をコピーするか、選択したパーティション構成だけをコピーするかを選択します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]でのみサポートされます。  
   
- **PartitionSchemesList**  
- 
-  **[パーティション構成の選択]** ダイアログ ボックスが開きます。  
+ **[PartitionSchemesList]**  
+ **[パーティション構成の選択]** ダイアログ ボックスが開きます。  
   
- **CopyAllSchemas**  
- 指定した転送元データベース内のすべてのスキーマをコピーするか、選択したスキーマだけをコピーするかを選択します。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]でのみサポートされます。  
+ **[CopyAllSchemas]**  
+ 指定した転送元データベース内のすべてのスキーマをコピーするか、選択したスキーマだけをコピーするかを選択します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]でのみサポートされます。  
   
- **SchemasList**  
- 
-  **[スキーマの選択]** ダイアログ ボックスが開きます。  
+ **[SchemasList]**  
+ **[スキーマの選択]** ダイアログ ボックスが開きます。  
   
- **CopyAllSqlAssemblies**  
- 指定した転送元データベース内のすべての SQL アセンブリをコピーするか、選択した SQL アセンブリだけをコピーするかを選択します。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]でのみサポートされます。  
+ **[CopyAllSqlAssemblies]**  
+ 指定した転送元データベース内のすべての SQL アセンブリをコピーするか、選択した SQL アセンブリだけをコピーするかを選択します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]でのみサポートされます。  
   
- **SqlAssembliesList**  
- 
-  **[SQL アセンブリの選択]** ダイアログ ボックスが開きます。  
+ **[SqlAssembliesList]**  
+ **[SQL アセンブリの選択]** ダイアログ ボックスが開きます。  
   
- **CopyAllUserDefinedAggregates**  
- 指定した転送元データベース内のすべてのユーザー定義集計をコピーするか、選択したユーザー定義集計だけをコピーするかを選択します。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]でのみサポートされます。  
+ **[CopyAllUserDefinedAggregates]**  
+ 指定した転送元データベース内のすべてのユーザー定義集計をコピーするか、選択したユーザー定義集計だけをコピーするかを選択します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]でのみサポートされます。  
   
- **Userdefined集積 Ateslist**  
- 
-  **[ユーザー定義集計の選択]** ダイアログ ボックスが開きます。  
+ **[UserDefinedAggregatesList]**  
+ **[ユーザー定義集計の選択]** ダイアログ ボックスが開きます。  
   
- **CopyAllUserDefinedTypes**  
- 指定した転送元データベース内のすべてのユーザー定義型 (UDT) をコピーするか、選択した UDT だけをコピーするかを選択します。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]でのみサポートされます。  
+ **[CopyAllUserDefinedTypes]**  
+ 指定した転送元データベース内のすべてのユーザー定義型 (UDT) をコピーするか、選択した UDT だけをコピーするかを選択します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]でのみサポートされます。  
   
- **UserDefinedTypes**  
- 
-  **[ユーザー定義型の選択]** ダイアログ ボックスが開きます。  
+ **[UserDefinedTypes]**  
+ **[ユーザー定義型の選択]** ダイアログ ボックスが開きます。  
   
- **CopyAllXmlSchemaCollections**  
- 指定した転送元データベース内のすべての XML スキーマ コレクションをコピーするか、選択した XML スキーマ コレクションだけをコピーするかを選択します。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]でのみサポートされます。  
+ **[CopyAllXmlSchemaCollections]**  
+ 指定した転送元データベース内のすべての XML スキーマ コレクションをコピーするか、選択した XML スキーマ コレクションだけをコピーするかを選択します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]でのみサポートされます。  
   
- **XmlSchemaCollectionsList**  
- 
-  **[XML スキーマ コレクションの選択]** ダイアログ ボックスが開きます。  
+ **[XmlSchemaCollectionsList]**  
+ **[XML スキーマ コレクションの選択]** ダイアログ ボックスが開きます。  
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   

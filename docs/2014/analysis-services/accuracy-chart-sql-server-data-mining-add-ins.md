@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ebe159aed7b27bf00ef47a110de1c7ec5ee70adb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062989"
 ---
 # <a name="accuracy-chart-sql-server-data-mining-add-ins"></a>精度チャート (SQL Server データ マイニング アドイン)
@@ -71,7 +71,7 @@ ms.locfileid: "66062989"
   
      ウィザードにより、リフト チャートおよび基になるデータを含んだレポートが作成されます。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  不連続の値を予測する場合は、予測対象のターゲット値を選択する必要があります。 たとえば、"Yes: Buy" という反応が 1 で、"No: Do Not Buy" という反応が 2 のようにデータが分類されている場合は、予測値として 1 または 2 を指定する必要があります。 これに対し、特定の範囲の値を予測する場合、一度に比較できる値は 2 つまでです。 たとえば、5 以上のスコアを予測する場合は、ソース データを再定義し、結果を 5 以上と 5 未満という 2 つのグループに分類する新しいモデルを作成する必要があります。 その上で、この 2 つのグループの精度を比較できます。  
   
 ## <a name="understanding-accuracy"></a>精度について  

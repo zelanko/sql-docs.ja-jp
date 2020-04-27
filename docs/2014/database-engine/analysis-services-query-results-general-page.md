@@ -13,16 +13,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 04dd01f5a91e95152b66247182027c0ba8b5025c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065251"
 ---
 # <a name="analysis-services-query-results-general-page"></a>Analysis Services クエリ結果 ([全般] ページ)
   このページを使用すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] クエリを実行するためのオプションを指定できます。  
   
- **実行タイムアウト**  
+ **[実行タイムアウト]**  
  クエリを取り消すまで待機する秒数を示します。  
   
  値 0 は、待ち時間が無限 (タイムアウトなし) であることを示します。  

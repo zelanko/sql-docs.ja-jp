@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e7cb19e3ba2f58a39ffd87bdabc6eb1ad18a1d18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061188"
 ---
 # <a name="bulk-insert-task-editor-options-page"></a>[一括挿入タスク エディター] ([オプション] ページ)
-  
   **[一括挿入タスク エディター]** ダイアログ ボックスの **[オプション]** ページを使用すると、一括挿入操作のプロパティを設定できます。 一括挿入タスクは、大量のデータを[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]テーブルまたはビューにコピーします。  
   
  一括挿入タスクについては、「[一括挿入タスク](control-flow/bulk-insert-task.md)」および「[「BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)」を参照してください。  
@@ -31,30 +30,29 @@ ms.locfileid: "66061188"
  **コードページ**  
  データ ファイル内のデータのコード ページを指定します。  
   
- **DataFileType**  
+ **[DataFileType]**  
  読み込み操作で使用するデータ型の値を指定します。  
   
  **BatchSize**  
- バッチ内の行数を指定します。 既定では、データ ファイル全体です。 
-  **[BatchSize]** を 0 に設定すると、データは単一のバッチに読み込まれます。  
+ バッチ内の行数を指定します。 既定では、データ ファイル全体です。 **[BatchSize]** を 0 に設定すると、データは単一のバッチに読み込まれます。  
   
- **LastRow**  
+ **[LastRow]**  
  コピーする最後の行を指定します。  
   
- **FirstRow**  
+ **[FirstRow]**  
  コピーを開始する最初の行を指定します。  
   
- **オプション**  
- |期間|定義|  
+ **[オプション]**  
+ |用語|定義|  
 |----------|----------------|  
 |**CHECK 制約**|テーブルおよび列に対する制約をチェックします。|  
-|**Null を保持する**|空の列に任意の既定値を挿入する代わりに、一括挿入操作中に NULL 値を保持します。|  
-|**Id 挿入を有効にする**|ID 列に既存の値を挿入します。|  
+|**[NULL を保持する]**|空の列に任意の既定値を挿入する代わりに、一括挿入操作中に NULL 値を保持します。|  
+|**ID 挿入を許可する**|ID 列に既存の値を挿入します。|  
 |**テーブルロック**|一括挿入中にテーブルをロックします。|  
-|**トリガーの起動**|テーブル上のすべての挿入トリガー、更新トリガー、および削除トリガーを起動します。|  
+|**[トリガーを起動する]**|テーブル上のすべての挿入トリガー、更新トリガー、および削除トリガーを起動します。|  
   
  **SortedData**  
- 一括挿入ステートメントに ORDER BY 句を指定します。 指定する列名は、挿入先テーブル内の有効な列でなければなりません。 既定では、 `false`です。 これは、データが ORDER BY 句によって並べ替えられないことを意味します。  
+ 一括挿入ステートメントに ORDER BY 句を指定します。 指定する列名は、挿入先テーブル内の有効な列でなければなりません。 既定値は、`false` です。 これは、データが ORDER BY 句によって並べ替えられないことを意味します。  
   
  **[MaxErrors]**  
  一括挿入操作が取り消されるまでに発生が許可される最大エラー数を指定します。 0 の値は、許可されるエラー数が無制限であることを示します。  

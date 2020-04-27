@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85d085472a8d904efb2b33b942ba9f0a67326fed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067248"
 ---
 # <a name="delete-a-table-ssas-tabular"></a>テーブルの削除 (SSAS テーブル)
@@ -33,6 +33,6 @@ ms.locfileid: "66067248"
 -   そのテーブルを使用して計算列を作成していた場合、そのテーブルの列も削除されます。削除対象のテーブル列を他のテーブルの計算列で使用している場合は、エラーが表示されます。  
   
 ## <a name="see-also"></a>参照  
- [SSAS 表形式のテーブルと列 &#40;&#41;](tables-and-columns-ssas-tabular.md)  
+ [テーブルと列 &#40;SSAS テーブル&#41;](tables-and-columns-ssas-tabular.md)  
   
   

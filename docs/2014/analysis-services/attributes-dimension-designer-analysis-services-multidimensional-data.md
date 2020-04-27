@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a9eab7de49abaf06446fbd03f7b80c381d102f20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064400"
 ---
 # <a name="attributes-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>[属性] ([ディメンション構造] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ)
@@ -26,8 +26,7 @@ ms.locfileid: "66064400"
   
  **[属性] ペインを表示するには**  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトを開き、目的のディメンションを開きます。  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトを開き、目的のディメンションを開きます。  
   
 2.  選択されていない場合は、 **[ディメンション構造]** タブをクリックします。  
   
@@ -56,10 +55,10 @@ ms.locfileid: "66064400"
  **使用方法**  
  選択した属性の使用法を設定します。 下向きの矢印をクリックして、次のいずれかを選択します。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
-|通常 |標準属性を表します。|  
-|キー|ディメンションのキー属性を表します。 これは、ディメンションのリーフ メンバーに対応しています。 キー属性は 1 つのディメンションにつき 1 つのみ存在します。 変更するには、**[プロパティ]** ペインで **[KeyColumns]** プロパティの横にある **[...]** ボタンをクリックします。|  
+|通常|標準属性を表します。|  
+|Key|ディメンションのキー属性を表します。 これは、ディメンションのリーフ メンバーに対応しています。 キー属性は 1 つのディメンションにつき 1 つのみ存在します。 変更するには、**[プロパティ]** ペインで **[KeyColumns]** プロパティの横にある **[...]** ボタンをクリックします。|  
 |Parent|親子リレーションシップにおける親属性を表します。 このリレーションシップの子属性は、常にキー属性である必要があります。|  
 |AccountType|勘定科目の種類の属性を表します。 これは、メジャーの集計関数が "ByAccount" に設定されているときに、サーバーまたはエンジンにより使用されます。|  
   
@@ -70,8 +69,7 @@ ms.locfileid: "66064400"
  基となる列のデータ型が表示されます。 新しい属性を作成する場合は、下向きの矢印をクリックして選択します。  
   
  **名前列**  
- 基となる列の場所が表示されます。 新しい属性を作成する場合は、下向きの矢印をクリックし、 **[キーと同一]** または **[分割列]** を選択します。 
-  **[分割列]** を選択した場合、 **[プロパティ]** ペインの **[NameColumn]** プロパティによって、属性に使用する名前を格納する列が設定されます。  
+ 基となる列の場所が表示されます。 新しい属性を作成する場合は、下向きの矢印をクリックし、 **[キーと同一]** または **[分割列]** を選択します。 **[分割列]** を選択した場合、 **[プロパティ]** ペインの **[NameColumn]** プロパティによって、属性に使用する名前を格納する列が設定されます。  
   
 ## <a name="see-also"></a>参照  
  [ディメンションデザイナー &#40;ディメンションデザイナーの&#41; &#40;Analysis Services-多次元データ&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   

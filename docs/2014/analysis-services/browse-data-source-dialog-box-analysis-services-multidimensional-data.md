@@ -15,14 +15,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c9dfc99a05b4da5d8ba5537529db4d25f6771038
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064546"
 ---
 # <a name="browse-data-source-dialog-box-analysis-services---multidimensional-data"></a>[データ ソースの参照] ダイアログ ボックス (Analysis Services - 多次元データ)
-  
   **の** データ ソースの参照 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを使用すると、選択したテーブルの最初の 1,000 個のレコードを表示できます。  
   
 ## <a name="options"></a>オプション  

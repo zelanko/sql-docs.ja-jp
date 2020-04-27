@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9e321507e8531f9732ae1096ebfc9c0d31031ec8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056088"
 ---
 # <a name="script-transformation-editor-input-columns-page"></a>[スクリプト変換エディター] ([入力列] ページ)
-  
   **[スクリプト変換エディター]** ダイアログ ボックスの **[入力列]** ページを使用すると、入力列のプロパティを設定できます。  
   
 > [!NOTE]  
@@ -34,7 +33,7 @@ ms.locfileid: "66056088"
  **入力名**  
  使用できる入力の一覧から選択します。  
   
- **使用できる入力列**  
+ **[使用できる入力列]**  
  チェック ボックスを使用して、スクリプト変換に使用する列を指定します。  
   
  **入力列**  

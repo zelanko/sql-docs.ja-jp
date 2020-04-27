@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b6343f26e6aa54fa6206c739d3d7b52b632e1519
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068526"
 ---
 # <a name="specify-a-unary-operator-business-intelligence-wizard"></a>[単項演算子の指定] (ビジネス インテリジェンス ウィザード)
-  
   **[単項演算子の指定]** ページを使用すると、単項演算子 (通常の集計に使用) または重み計数を表す値 (加重計算される集計に使用) を含む列の親子リレーションシップを指定できます。通常の加重計算される集計の詳細については、「 [集計と集計デザイン](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)」を参照してください。  
   
 > [!NOTE]  

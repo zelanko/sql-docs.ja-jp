@@ -13,20 +13,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 08d01bb328bcf3e693724475532b6c9a39c79be2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66063189"
 ---
 # <a name="attribute-relationships-dimension-designer-analysis-services---multidimensional-data"></a>[属性リレーションシップ] (ディメンション デザイナー) (Analysis Services - 多次元データ)
   ディメンション デザイナーの **[属性リレーションシップ]** タブを使用すると、選択したディメンションの属性リレーションシップを作成、変更、または削除できます。  
   
 ## <a name="panes"></a>ペイン  
- 
-  **[属性リレーションシップ]** ページには、次のペインがあります。  
+ **[属性リレーションシップ]** ページには、次のペインがあります。  
   
- [ツール バー](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Toolbar](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)  
  ディメンション デザイナーの **[属性リレーションシップ]** タブで操作を行う場合に使用します。  
   
  [属性リレーションシップ ダイアグラム](attribute-relationship-diagram-analysis-services-multidimensional-data.md)  

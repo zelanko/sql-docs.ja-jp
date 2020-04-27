@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0578dcb98e34f06db155fd5c3f1438209d8b2687
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057291"
 ---
 # <a name="odata-source-editor-error-output-page"></a>[OData ソース エディター] ([エラー出力] ページ)
@@ -32,7 +32,7 @@ ms.locfileid: "66057291"
  **Error**  
  エラーが発生した場合に、障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
   
- **関連トピック:** [データのエラー処理](data-flow/error-handling-in-data.md)  
+ **関連項目:** [データのエラー処理](data-flow/error-handling-in-data.md)  
   
  **切り捨て**  
  切り捨てが発生したときの処理方法 (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を指定します。  
@@ -43,7 +43,7 @@ ms.locfileid: "66057291"
  **[選択したセルに設定する値]**  
  エラーまたは切り捨てが発生した場合に、選択したすべてのセルに対して障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
   
- **[適用]**  
+ 適用****  
  選択したセルにエラー処理オプションを適用します。  
   
 ## <a name="see-also"></a>参照  

@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5346c808c7d724ae630bb3dd25016a9977af363e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060050"
 ---
 # <a name="data-conversion-transformation-editor"></a>データ変換変換エディター
-  
   **[データ変換変換エディター]** ダイアログ ボックスを使用すると、変換対象の列や列の変換先のデータ型を選択したり、変換属性を設定したりできます。  
   
 > [!NOTE]  
@@ -31,7 +30,7 @@ ms.locfileid: "66060050"
  データ変換の変換の詳細については、「 [データ変換の変換](data-flow/transformations/data-conversion-transformation.md)」を参照してください。  
   
 ## <a name="options"></a>オプション  
- **使用できる入力列**  
+ **[使用できる入力列]**  
  変換対象の列のチェック ボックスを使用して選択します。 選択した列が入力列として下のテーブルに追加されます。  
   
  **入力列**  
@@ -41,23 +40,22 @@ ms.locfileid: "66060050"
  それぞれの新しい列の別名を入力します。 既定では、入力列の名前の後に "`Copy of`" が追加された別名になりますが、固有のわかりやすい名前を選択することもできます。  
   
  **[データ型]**  
- 一覧から利用可能なデータ型を選択します。 詳細については、「 [Integration Services Data Types](data-flow/integration-services-data-types.md)」を参照してください。  
+ 一覧から利用可能なデータ型を選択します。 詳細については、「 [Integration Services データ型](data-flow/integration-services-data-types.md)」を参照してください。  
   
- **数**  
+ **[データ型]**  
  文字列データの列の長さを設定します。  
   
- **精度**  
+ **[精度]**  
  数値データの有効桁数を設定します。  
   
- **段階**  
+ **スケール**  
  数値データの小数点以下桁数を設定します。  
   
  **コード ページ**  
  DT_STR 型の列に適したコード ページを選択します。  
   
  **エラー出力の構成**  
- 
-  [[エラー出力の構成]](../../2014/integration-services/configure-error-output.md) ダイアログ ボックスを使用して、エラーの処理方法を指定します。  
+ [[エラー出力の構成]](../../2014/integration-services/configure-error-output.md) ダイアログ ボックスを使用して、エラーの処理方法を指定します。  
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   

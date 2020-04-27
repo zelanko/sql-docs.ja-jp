@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 118d68d1cacd5035535c6f1ac578542909356c7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057707"
 ---
 # <a name="merge-join-transformation-editor"></a>マージ結合変換エディター
-  
   **[マージ結合変換エディター]** ダイアログ ボックスを使用すると、結合の種類、結合列、および結合によって組み合わされた 2 つの入力をマージするための出力列を指定できます。  
   
 > [!IMPORTANT]  
@@ -31,14 +30,13 @@ ms.locfileid: "66057707"
  マージ結合変換の詳細については、「 [Merge Join Transformation](data-flow/transformations/merge-join-transformation.md)」を参照してください。  
   
 ## <a name="options"></a>オプション  
- **結合の種類**  
+ **[結合の種類]**  
  内部結合、左外部結合、または完全結合を使用するかどうかを指定します。  
   
- **入力の入れ替え**  
- 
-  **[入力の入れ替え]** ボタンを使用して、入力間の順序を切り替えます。 この選択は、左外部結合オプションで使用すると便利です。  
+ **[入力の入れ替え]**  
+ **[入力の入れ替え]** ボタンを使用して、入力間の順序を切り替えます。 この選択は、左外部結合オプションで使用すると便利です。  
   
- **代入**  
+ **入力**  
  出力をマージする各列は、使用できる入力の一覧から最初に選択します。  
   
  入力は 2 つの個別のテーブルに表示されます。 出力に含める列を選択します。 テーブル間の結合を作成する列をドラッグします。 結合を削除するには、選択してから Del キーを押します。  

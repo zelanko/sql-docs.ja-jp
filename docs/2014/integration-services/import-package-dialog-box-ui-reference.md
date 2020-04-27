@@ -15,18 +15,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3e36fae15f6f4220565bcc3d14c0e125ca6818f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058079"
 ---
 # <a name="import-package-dialog-box-ui-reference"></a>[パッケージのインポート] ダイアログ ボックスの UI リファレンス
-  
-  ** の **[パッケージのインポート][!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ダイアログ ボックスを使用すると、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージをインポートしたり、パッケージの保護レベルの設定や変更を行ったりできます。  
+  **の** [パッケージのインポート] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]ダイアログ ボックスを使用すると、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージをインポートしたり、パッケージの保護レベルの設定や変更を行ったりできます。  
   
 ## <a name="options"></a>オプション  
- **パッケージの場所**  
+ **[パッケージの場所]**  
  パッケージをインポートする格納場所の種類を選択します。 次のオプションを使用できます。  
   
  **SQL Server**  
@@ -35,7 +34,7 @@ ms.locfileid: "66058079"
   
  **SSIS パッケージストア**  
   
- **サーバー**  
+ **[サーバー]**  
  サーバー名を入力するか、サーバーを一覧から選択します。  
   
  **認証**  
@@ -48,15 +47,13 @@ ms.locfileid: "66058079"
  認証の種類を選択します。  
   
  **ユーザー名**  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用する場合は、ユーザー名を指定します。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用する場合は、ユーザー名を指定します。  
   
  **パスワード**  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用する場合は、パスワードを指定します。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用する場合は、パスワードを指定します。  
   
  **パッケージ パス**  
- パッケージのパスを入力するか、参照ボタン **[...]** をクリックしてパッケージを指定します。  
+ パッケージのパスを入力するか、参照ボタン **([...])** をクリックしてパッケージを指定します。  
   
  **パッケージ名**  
  オプションでパッケージの名前を変更できます。 既定の名前は、インポートするパッケージの名前です。  
@@ -68,6 +65,6 @@ ms.locfileid: "66058079"
  [パッケージのコピーの保存](../../2014/integration-services/save-copy-of-package.md)   
  [[パッケージのエクスポート] ダイアログボックスの UI リファレンス](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
  [パッケージの保存](save-packages.md)   
- [SSIS サービス&#41;&#40;パッケージをインポートおよびエクスポートする](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
+ [パッケージをインポートおよびエクスポートする &#40;SSIS サービス&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
   
   

@@ -15,24 +15,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e044d001c88edef9d1e8d4ab453b85853994cf7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059963"
 ---
 # <a name="data-flow-path-editor-general-page"></a>[データ フロー パス エディター] ([全般] ページ)
-  
   **[データ フロー パス エディター]** ダイアログ ボックスを使用すると、パス プロパティの設置、列メタデータの表示、およびパスにアタッチされるデータ ビューアーの管理を行うことができます。  
   
- 
-  **[データ フロー パス エディター]** ダイアログ ボックスの **[全般]** ノードを使用して、パスに名前を付けて説明を記述したり、パスの注釈のオプションを指定したりできます。  
+ **[データ フロー パス エディター]** ダイアログ ボックスの **[全般]** ノードを使用して、パスに名前を付けて説明を記述したり、パスの注釈のオプションを指定したりできます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **名前**  
  パスの一意な名前を指定します。  
   
- **id**  
+ **ID**  
  パスの系列 ID です。 このプロパティは読み取り専用です。  
   
  **[IdentificationString]**  
@@ -41,10 +39,10 @@ ms.locfileid: "66059963"
  **説明**  
  パスの説明を記述します。  
   
- **[Pathannotation**  
+ **[PathAnnotation]**  
  使用する注釈の種類を指定します。 注釈を無効にする場合は **[Never]** 、注釈を必要に応じて有効にする場合は **[AsNeeded]** 、 **[SourceName]** オプションの値を使用して自動的に注釈を付ける場合は **[SourceName]** 、 **[Name]** プロパティの値を使用して自動的に注釈を付ける場合は **[PathName]** を選択します。  
   
- **DestinationName**  
+ **[DestinationName]**  
  パスの末尾の入力を表示します。  
   
  **SourceName**  

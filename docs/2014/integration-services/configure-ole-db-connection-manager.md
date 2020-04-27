@@ -15,30 +15,28 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cef2c37c2775b1b5bd46e04f214d8ae77ee7b56d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060551"
 ---
 # <a name="configure-ole-db-connection-manager"></a>[OLE DB 接続マネージャーの構成]
-  
   **[OLE DB 接続マネージャーの構成]** ダイアログ ボックスを使用すると、データ ソースへの接続を追加できます。新しい接続を設定するか、既存の接続のコピーを使用できます。  
   
  OLE DB 接続マネージャーの詳細については、「 [OLE DB 接続マネージャー](connection-manager/ole-db-connection-manager.md)」を参照してください。  
   
 ## <a name="options"></a>オプション  
- **データ接続**  
+ **[データ接続]**  
  一覧から既存の OLE DB データ接続を選択します。  
   
- **データ接続のプロパティ**  
+ **[データ接続のプロパティ]**  
  選択した OLE DB データ接続のプロパティとその値を表示します。  
   
- **[新規作成]**  
- 
-  **[接続マネージャー]** ダイアログ ボックスを使用して、OLE DB データ接続を作成します。  
+ **新しい**  
+ **[接続マネージャー]** ダイアログ ボックスを使用して、OLE DB データ接続を作成します。  
   
- **デリート**  
+ **削除**  
  データ接続を選択して **[削除]** ボタンをクリックすると、接続が削除されます。  
   
 ## <a name="see-also"></a>参照  

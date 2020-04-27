@@ -13,21 +13,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e07e29c8b200984d5803007f3612f9a43824e261
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055976"
 ---
 # <a name="select-script-component-type"></a>[スクリプト コンポーネントの種類を選択]
-  
   **[スクリプト コンポーネントの種類を選択]** ダイアログ ボックスを使用すると、変換元、変換、または変換先として構成済みのスクリプト変換を作成するかどうかを指定できます。  
   
  スクリプト コンポーネントの詳細については、「 [Script Component](data-flow/transformations/script-component.md) 」および「 [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)」を参照してください。 スクリプト コンポーネントのプログラミングの詳細については、「 [スクリプト コンポーネントによるデータ フローの拡張](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)」を参照してください。  
   
 ## <a name="options"></a>オプション  
- 
-  **[変換元]**、 **[変換先]**、または **[変換]** のどれを選択するかに応じて、スクリプト変換の構成とスクリプト変換エディターのページが変わります。  
+ **[変換元]**、 **[変換先]**、または **[変換]** のどれを選択するかに応じて、スクリプト変換の構成とスクリプト変換エディターのページが変わります。  
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   

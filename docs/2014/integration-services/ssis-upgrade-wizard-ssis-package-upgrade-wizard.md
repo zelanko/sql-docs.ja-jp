@@ -13,22 +13,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec51fbd40031f330a85e8b1c0613c05ce90ae0e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055314"
 ---
 # <a name="ssis-upgrade-wizard-ssis-package-upgrade-wizard"></a>SSIS アップグレード ウィザード (SSIS パッケージ アップグレード ウィザード)
-  
   [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ アップグレード ウィザードを使用すると、 [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] および [!INCLUDE[ssISversion10](../includes/ssisversion10-md.md)] で開発されたパッケージを、現在のリリースの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で使用するパッケージ形式に移行できます。  
   
- **SSIS パッケージアップグレードウィザードを実行するには**  
+ **SSIS パッケージ アップグレード ウィザードを実行するには**  
   
 -   [SSIS パッケージ アップグレード ウィザードを使用した Integration Services パッケージのアップグレード](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
 ## <a name="options"></a>オプション  
- **次回からこのページを表示しない**  
+ **[次回からこのページを表示しない]**  
  次回ウィザードを起動するときに、このようこそページをスキップします。  
   
 ## <a name="see-also"></a>参照  

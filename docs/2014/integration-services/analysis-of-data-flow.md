@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e67c5448a6625b37c7fb17bc24ea6bdd7cb879ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061600"
 ---
 # <a name="analysis-of-data-flow"></a>データ フローの分析
@@ -36,7 +36,7 @@ order by source_component_name, destination_component_name
   
  以下の例では、特定の実行で各コンポーネントによって送信された 1 ミリ秒あたりの行数が計算されます。 計算される値は次のとおりです。  
   
--   **total_rows** -コンポーネントによって送信されたすべての行の合計  
+-   **total_rows** - コンポーネントによって送信されたすべての行の合計数  
   
 -   **wall_clock_time_ms** -各コンポーネントの実行時間の合計 (ミリ秒単位)  
   

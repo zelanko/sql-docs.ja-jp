@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7cfee2c2a79410d73eb6ca4da47f0fd361a24fb2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058340"
 ---
 # <a name="fuzzy-grouping-transformation-editor-connection-manager-tab"></a>[あいまいグループ化変換エディター] ([接続マネージャー] タブ)
-  
   **[あいまいグループ化変換エディター]** ダイアログ ボックスの **[接続マネージャー]** タブを使用すると、既存の接続を選択したり新しい接続を作成したりできます。  
   
 > [!NOTE]  
@@ -34,9 +33,8 @@ ms.locfileid: "66058340"
  **OLE DB 接続マネージャー**  
  既存の OLE DB 接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続を作成します。  
   
- **[新規作成]**  
- 
-  **[OLE DB 接続マネージャーの構成]** ダイアログ ボックスを使用して、新しい接続を作成します。  
+ **新しい**  
+ **[OLE DB 接続マネージャーの構成]** ダイアログ ボックスを使用して、新しい接続を作成します。  
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   

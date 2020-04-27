@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: df6622abc3a507d917aefd2a8a5a1bf9505a2622
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062259"
 ---
 # <a name="analyze-key-influencers-table-analysis-tools-for-excel"></a>主要な影響元の分析 (Excel 用のテーブル分析ツール)
@@ -92,7 +92,7 @@ ms.locfileid: "66062259"
   
 -   データの分布に関する主要な情報を格納するデータ構造を作成します。  
   
--   Microsoft Na&#239;&amp;lt;/ph&amp;gt;ve Bayes アルゴリズムを使用して、モデルが作成されます。  
+-   Microsoft Na&amp;#239;&lt;/ph&gt;ve Bayes アルゴリズムを使用して、モデルが作成されます。  
   
 -   データの各列を指定した結果に関連付ける予測を作成します。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "66062259"
   
 -   信頼スコア順に並べ替えて、主要な影響元を記述したレポートを作成します。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  ターゲット列に連続する数値が含まれている場合、このツールは自動的に数値をグループにセグメント化します。 これらのグループは、類似の特性を持つケースのクラスターを表します。 ただし、ユーザーにとってわかりやすいグループになるとは限りません。 たとえば、レポートに "\<12.85701" などのグループが含まれているとします。一方、通常、レポートユーザーは、10-19、20-29 など、整数を使用するグループを表示します。  
   
  数値データを異なる方法でグループ化する場合は、分析を作成する前にデータを必要な形にセグメント化しておく必要があります。 たとえば、Excel 用のデータマイニングクライアントのラベルの[書き換え](relabel-sql-server-data-mining-add-ins.md)ツールを使用して、別の列に新しいグループ化ラベルを作成し、その新しい列のみを分析で使用できます。  

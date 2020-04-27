@@ -15,19 +15,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 183862eadad3661353228bbcde132b6cd8241501
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061452"
 ---
 # <a name="analysis-services-processing-task-editor-general-page"></a>[Analysis Services 処理タスク エディター] ([全般] ページ)
-  
   **[Analysis Services 処理タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、Analysis Services 処理タスクの名前と説明を指定できます。  
   
  このタスクの詳細については、「 [Analysis Services 処理タスク](control-flow/analysis-services-processing-task.md)」をご覧ください。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **名前**  
  Analysis Services 処理タスクに一意の名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   

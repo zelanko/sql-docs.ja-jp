@@ -13,22 +13,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7e8d9593cd45ec5a92ea07051fe424698d8ece6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66063131"
 ---
 # <a name="attribute-discrimination-tab-mining-model-viewer"></a>[属性の識別] タブ (マイニング モデル ビューアー)
   入力属性の状態を比較して、それが結果属性とどのように関連しているかを確認するには、 **[属性の識別]** タブを使用します。 2 つの選択された予測可能属性の間で最も違いの大きい属性値が、一覧の先頭に表示されます。  
   
- **詳細情報:** [Microsoft Naive Bayes Algorithm](data-mining/microsoft-naive-bayes-algorithm.md)、 [Microsoft Naive Bayes ビューアーを使用したモデルの参照](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
+ **詳細:** [Microsoft Naive Bayes アルゴリズム](data-mining/microsoft-naive-bayes-algorithm.md)、 [Microsoft Naive Bayes ビューアーを使用したモデルの参照](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
   
 ## <a name="options"></a>オプション  
  **[ビューアーのコンテンツを最新状態に更新]**  
  ビューアーにマイニング モデルを再読み込みします。  
   
- **マイニングモデル**  
+ **[マイニング モデル]**  
  現在のマイニング構造に含まれているマイニング モデルから選択します。 マイニング モデルは、自動的に適切なカスタム ビューアーに表示されます。  
   
  **[ビューアー]**  
@@ -38,21 +38,18 @@ ms.locfileid: "66063131"
  予測可能な属性を選択します。  
   
  **値1**  
- 
-  **[値 2]** に指定された状態と比較する予測可能な属性の状態を選択します。  
+ **[値 2]** に指定された状態と比較する予測可能な属性の状態を選択します。  
   
  **値2**  
- 
-  **[値 1]** に指定された状態と比較する予測可能な属性の状態を選択します。 [**その他のすべての状態**] を選択して、**値 1**の値とその補数 (値1以外のすべての値) を比較することもできます。  
+ **[値 1]** に指定された状態と比較する予測可能な属性の状態を選択します。 [**その他のすべての状態**] を選択して、**値 1**の値とその補数 (値1以外のすべての値) を比較することもできます。  
   
  **値 1> \<と\<値2の識別スコア>**  
  グラフには、対象となる属性が入力属性の特定の状態とどのように関係するかを記述する次の列が含まれます。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**属性**|マイニング モデルの入力属性です。|  
-|**値**|
-  **[属性]** に表示される属性の状態です。|  
+|**値**|**[属性]** に表示される属性の状態です。|  
 |**値\<1>を優先する**|バーは、現在の属性と値が、**[値 1]** で選択した対象となる結果を優先するかどうかを示します。|  
 |**値\<2 を優先>**|バーは、現在の属性と値が、**[値 2]** で選択した対象となる結果を優先するかどうかを示します。|  
   

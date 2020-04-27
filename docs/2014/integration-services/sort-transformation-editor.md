@@ -15,20 +15,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: becd97e843909a5d7bc181dfdf1060988836ee3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055492"
 ---
 # <a name="sort-transformation-editor"></a>並べ替え変換エディター
-  
   **[並べ替え変換エディター]** ダイアログ ボックスを使用すると、並べ替える列を選択し、並べ替え順を設定して、重複する部分を削除するかどうかを指定できます。  
   
  並べ替え変換の詳細については、「 [Sort Transformation](data-flow/transformations/sort-transformation.md)」を参照してください。  
   
 ## <a name="options"></a>オプション  
- **使用できる入力列**  
+ **[使用できる入力列]**  
  このチェック ボックスを使用して、並べ替える列を指定します。  
   
  **名前**  
@@ -49,10 +48,10 @@ ms.locfileid: "66055492"
  **並べ替え順序**  
  列を並べ替える順序を示します。 各列に対して手動で設定する必要があります。  
   
- **比較フラグ**  
+ **[比較フラグ]**  
  文字列比較オプションについては、「 [文字列データの比較](data-flow/comparing-string-data.md)」を参照してください。  
   
- **重複する並べ替え値を持つ行を削除する**  
+ **[重複した並べ替え値を含む行を削除する]**  
  指定された文字列比較オプションに基づいて、重複した列を変換出力にコピーするか、すべての重複部分に対して 1 つのエントリを作成するかを示します。  
   
 ## <a name="see-also"></a>参照  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 941155a5e434457cdf9c79bd25c653c7207937a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067015"
 ---
 # <a name="import-from-powerpivot-ssas-tabular"></a>PowerPivot からのインポート (SSAS テーブル)
@@ -38,19 +38,16 @@ ms.locfileid: "66067015"
   
 #### <a name="to-create-a-new-tabular-model-project-from-a-powerpivot-for-excel-file"></a>PowerPivot for Excel ファイルから新しいテーブル モデル プロジェクトを作成するには  
   
-1.  
-  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]の **[ファイル]** メニューの **[新規作成]** をクリックし、 **[プロジェクト]** をクリックします。  
+1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]の **[ファイル]** メニューの **[新規作成]** をクリックし、 **[プロジェクト]** をクリックします。  
   
 2.  [**新しいプロジェクト**] ダイアログボックスの [**インストールされているテンプレート**] で [**ビジネスインテリジェンス**] をクリックし、[ **PowerPivot からのインポート**] をクリックします。  
   
-3.  
-  **[名前]** にプロジェクトの名前を入力し、場所とソリューション名を指定してから、 **[OK]** をクリックします。  
+3.  [**名前**] にプロジェクトの名前を入力し、場所とソリューション名を指定して、[ **OK**] をクリックします。  
   
-4.  
-  **[ファイルを開く]** ダイアログ ボックスで、インポートするモデル メタデータおよびデータを含む [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] ファイルを選択し、 **[開く]** をクリックします。  
+4.  **[ファイルを開く]** ダイアログ ボックスで、インポートするモデル メタデータおよびデータを含む [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] ファイルを選択し、 **[開く]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [ワークスペースデータベース &#40;SSAS 表形式&#41;](workspace-database-ssas-tabular.md)   
- [SSAS 表形式&#41;&#40;データのコピーと貼り付け](../copy-and-paste-data-ssas-tabular.md)  
+ [データのコピーと貼り付け &#40;SSAS テーブル&#41;](../copy-and-paste-data-ssas-tabular.md)  
   
   

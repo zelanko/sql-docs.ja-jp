@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f6677fad3df1d1f99e2f78257ea85551f8ae8db3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057338"
 ---
 # <a name="odata-source-editor-columns-page"></a>[OData ソース エディター] ([列] ページ)
@@ -26,7 +26,7 @@ ms.locfileid: "66057338"
  **使用できる外部列**  
  データ ソース内にある使用可能なソース列の一覧を表示します。 ページの下部にあるテーブルに対して列を追加または削除するには、一覧にあるチェック ボックスを使用します。 選択した列が、出力に追加されます。  
   
- **[外部列]**  
+ **外部列**  
  出力に含めるように選択したソース列を表示します。  
   
  **出力列**  

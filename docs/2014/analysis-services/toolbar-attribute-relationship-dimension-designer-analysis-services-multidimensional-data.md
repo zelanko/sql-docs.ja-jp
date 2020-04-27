@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 580641db4007f5a7e414f641a8a0495030405b38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066224"
 ---
 # <a name="toolbar-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>ツール バー ([属性リレーションシップ] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ)
@@ -32,21 +32,19 @@ ms.locfileid: "66066224"
   
  **[属性リレーションシップ] タブのツール バーを表示するには**  
   
--   
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]のソリューション エクスプローラーで、ディメンションをダブルクリックしてディメンション デザイナーを開き、 **[属性リレーションシップ]** タブをクリックします。  
+-   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]のソリューション エクスプローラーで、ディメンションをダブルクリックしてディメンション デザイナーを開き、 **[属性リレーションシップ]** タブをクリックします。  
   
 ## <a name="options"></a>オプション  
  **[ビジネス インテリジェンスの追加]**  
- 
-  **ビジネス インテリジェンス ウィザード** を開いて、ビジネス インテリジェンス機能を追加します。 詳細については、「 [ビジネス インテリジェンス ウィザードを使用したディメンションの拡張](use-the-business-intelligence-wizard-to-enhance-dimensions.md)」を参照してください。  
+ **ビジネス インテリジェンス ウィザード** を開いて、ビジネス インテリジェンス機能を追加します。 詳細については、「 [ビジネス インテリジェンス ウィザードを使用したディメンションの拡張](use-the-business-intelligence-wizard-to-enhance-dimensions.md)」を参照してください。  
   
  **プロセス**  
  オブジェクトを処理します。  
   
  **[新しい属性リレーションシップ]**  
- 新しい属性リレーションシップを定義できる、**[属性リレーションシップの作成]** ダイアログ ボックスを開きます。  
+ 新しい属性リレーションシップを定義できる、 **[属性リレーションシップの作成]** ダイアログ ボックスを開きます。  
   
- **[ズーム]**  
+ **Zoom**  
  ズームの倍率を切り替えたり、使用可能なズーム オプションの一覧を表示したりします。  
   
  **[すべての図形の展開]**  
@@ -68,7 +66,6 @@ ms.locfileid: "66066224"
  ディメンション デザイナーで使用される配置アルゴリズムに従って、ダイアグラム内の図形を自動的に整列します。 既定では、 **[図形の自動整列]** は有効になっています。  
   
  **[リスト ビューの表示]**  
- 
-  **[属性]** および **[属性リレーションシップ]** の一覧を表示または非表示にします。 これらの一覧は、属性リレーションシップ ダイアグラムを含むペインのすぐ下にあるそれぞれのペインに表示されます。  
+ **[属性]** および **[属性リレーションシップ]** の一覧を表示または非表示にします。 これらの一覧は、属性リレーションシップ ダイアグラムを含むペインのすぐ下にあるそれぞれのペインに表示されます。  
   
   

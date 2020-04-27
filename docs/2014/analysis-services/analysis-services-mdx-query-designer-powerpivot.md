@@ -1,5 +1,5 @@
 ---
-title: 分析サービス MDX クエリ デザイナー (PowerPivot) |マイクロソフトドキュメント
+title: Analysis Services MDX クエリデザイナー (PowerPivot) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cd6b880fc1908d973b4a78fdc04cb59ed9eca731
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062468"
 ---
 # <a name="analysis-services-mdx-query-designer-powerpivot"></a>Analysis Services MDX クエリ デザイナー (PowerPivot)
-  Analysis Services 多次元式 (MDX) クエリ デザイナーには、データ ソースの MDX クエリ[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]を作成するのに役立つグラフィカル ユーザー インターフェイスが用意されています。 MDX のグラフィカル クエリ デザイナーには、デザイン モードとクエリ モードという 2 つのモードがあります。 どちらのモードでもメタデータ ペインが表示されます。このペインから、選択したキューブのメンバーをドラッグすることによって、使用するデータを取得する MDX クエリを作成できます。  
+  Analysis Services 多次元式 (mdx) クエリデザイナーには、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]データソースに対する mdx クエリの作成に役立つグラフィカルユーザーインターフェイスが用意されています。 MDX のグラフィカル クエリ デザイナーには、デザイン モードとクエリ モードという 2 つのモードがあります。 どちらのモードでもメタデータ ペインが表示されます。このペインから、選択したキューブのメンバーをドラッグすることによって、使用するデータを取得する MDX クエリを作成できます。  
   
 > [!IMPORTANT]  
 >  ユーザーは、クエリを作成して実行する際にデータ ソースにアクセスします。 したがって、データ ソースに対する最小限の権限 (読み取り専用権限など) を付与する必要があります。  
@@ -34,7 +34,7 @@ ms.locfileid: "66062468"
   
  このモードのペインの一覧を次の表に示します。  
   
-|ペイン|関数|  
+|ペイン|機能|  
 |----------|--------------|  
 |キューブの選択ボタン (**[...]**)|現在選択されているキューブを表示します。|  
 |メタデータ ペイン|選択されたキューブで定義されているメジャー、主要業績評価指標 (KPI)、およびディメンションの階層リストを表示します。|  
@@ -73,7 +73,7 @@ ms.locfileid: "66062468"
 |![削除](media/rsqdicon-delete.gif "削除")|データ ペインで選択した列をクエリから削除します。|  
 |![[クエリ パラメーター] ダイアログ ボックスのアイコン](media/iconqueryparameter.gif "[クエリ パラメーター] ダイアログ ボックスのアイコン")|**[クエリ パラメーター]** ダイアログ ボックスを表示します。 クエリ パラメーターの値を指定する場合、同じ名前のパラメーターが自動的に作成されます。|  
 |![[クエリの準備] ボタン](media/rsqdicon-preparequery.gif "[クエリの準備] ボタン")|クエリを準備します。|  
-|![クエリの実行](media/rsqdicon-run.gif "クエリの実行")|クエリを実行し、結果をデータ ペインに表示します。|  
+|![クエリを実行する](media/rsqdicon-run.gif "クエリの実行")|クエリを実行し、結果をデータ ペインに表示します。|  
 |![クエリの取り消し](media/rsqdicon-cancel.gif "クエリの取り消し")|クエリを取り消します。|  
 |![デザイン モードに切り替える](media/rsqdicon-designmode.gif "デザイン モードに切り替える")|デザイン モードとクエリ モードを切り替えます。|  
   
@@ -86,7 +86,7 @@ ms.locfileid: "66062468"
   
  このモードのペインの一覧を次の表に示します。  
   
-|ペイン|関数|  
+|ペイン|機能|  
 |----------|--------------|  
 |キューブの選択ボタン (**[...]**)|現在選択されているキューブを表示します。|  
 |メタデータ/関数/テンプレート ペイン|選択されたキューブで定義されているメジャー、KPI、およびディメンションの階層リストを表示します。|  

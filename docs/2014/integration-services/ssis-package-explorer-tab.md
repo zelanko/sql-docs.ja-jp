@@ -13,14 +13,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ab5c3112bfeddd41c9c877365e36780e32b4241e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055390"
 ---
 # <a name="ssis-package-explorer-tab"></a>SSIS の [パッケージ エクスプローラー] タブ
-  
   **デザイナーの** [パッケージ エクスプローラー] [!INCLUDE[ssIS](../includes/ssis-md.md)] タブを使用すると、パッケージのすべての要素 (構成、接続、イベント ハンドラー、タスクやコンテナーなどの実行可能オブジェクト、ログ プロバイダー、優先順位制約、変数) の階層ビューを参照できます。 パッケージにデータ フロー タスクが含まれている場合、 **[パッケージ エクスプローラー]** タブにはデータ フロー コンポーネントの階層ビューを格納するノードが含まれます。  
   
  パッケージ要素を右クリックして、 **[プロパティ]** をクリックすると **[プロパティ]** ウィンドウに要素のプロパティが表示され、 **[削除]** をクリックすると要素が削除されます。  

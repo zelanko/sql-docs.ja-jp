@@ -16,14 +16,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 53c909caebfd6502b021a9a1abb4e1ecb29e3bb7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056947"
 ---
 # <a name="package-and-project-protection-level-dialog-box"></a>[パッケージの保護レベル] ダイアログ ボックス
-  
   **[パッケージの保護レベル]** ダイアログ ボックスを使用すると、パッケージの保護レベルを更新できます。 保護レベルによって、パッケージ保護の方法、パスワードまたはユーザー キー、適用範囲が決定されます。 保護対象には、すべてのデータを含めることも機密データのみを含めることもできます。  
   
  パッケージ セキュリティの要件およびオプションについて理解するには、「[パッケージ内の機微なデータへのアクセス制御](security/access-control-for-sensitive-data-in-packages.md)」および「[セキュリティの概要 (Integration Services)](security/security-overview-integration-services.md)」が参考になる場合があります。  
@@ -35,10 +34,10 @@ ms.locfileid: "66056947"
  **パスワード**  
  保護レベルとして **[機微なデータをパスワードで暗号化する]** または **[すべてのデータをパスワードで暗号化する]** を使用する場合は、パスワードを入力します。  
   
- **パスワードの再入力**  
+ **[パスワードの再入力]**  
  パスワードを再度入力します。  
   
 ## <a name="see-also"></a>参照  
- [SSIS&#41; パッケージ &#40;Integration Services](../../2014/integration-services/integration-services-ssis-packages.md)  
+ [Integration Services &#40;SSIS&#41; パッケージ](../../2014/integration-services/integration-services-ssis-packages.md)  
   
   

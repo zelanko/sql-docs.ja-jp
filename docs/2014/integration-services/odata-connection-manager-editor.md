@@ -13,28 +13,26 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8319699dd58039b918f0715e5b2293a7990108f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057382"
 ---
 # <a name="odata-connection-manager-editor"></a>[OData 接続マネージャー エディター]
-  
   **[OData 接続マネージャー エディター]** ダイアログ ボックスを使用して、OData ソースへの接続を追加するか、既存の接続を編集します。  
   
 ## <a name="options"></a>オプション  
  **接続マネージャー名**  
  接続マネージャーの名前です。  
   
- **サービスドキュメントの場所**  
- OData サービスに対応する URL。 (例: http://services.odata.org/V3/Northwind/Northwind.svc/)。  
+ **サービス ドキュメントの場所**  
+ OData サービスに対応する URL。 たとえば、 http://services.odata.org/V3/Northwind/Northwind.svc/と指定します。  
   
  **認証**  
- 
-  **[認証]** で、**[Windows 認証]** または **[次のユーザー名とパスワードを使用]** を選択します。 2 番目のオプションを選択した場合は、 **[ユーザー名]** と **[パスワード]** を入力します。  
+ **[認証]** で、**[Windows 認証]** または **[次のユーザー名とパスワードを使用]** を選択します。 2 番目のオプションを選択した場合は、 **[ユーザー名]** と **[パスワード]** を入力します。  
   
- **接続のテスト**  
+ **接続をテスト**  
  OData ソースへの接続をテストするには、このボタンをクリックします。  
   
 ## <a name="see-also"></a>参照  

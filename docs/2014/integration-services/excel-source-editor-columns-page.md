@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dba56ee39e710adc3973a00a0d84b1823ee74f1b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059210"
 ---
 # <a name="excel-source-editor-columns-page"></a>[Excel ソース エディター] ([列] ページ)
-  
   **[Excel ソース エディター]** ダイアログ ボックスの **[列]** ページを使用すると、出力列をそれぞれの外部 (変換元) 列にマップできます。  
   
  Excel ソースの詳細については、「 [Excel Source](data-flow/excel-source.md)」を参照してください。  
@@ -31,7 +30,7 @@ ms.locfileid: "66059210"
  **使用できる外部列**  
  データ ソース内の使用できる外部列の一覧を表示します。 このテーブルを使用して列を追加または削除することはできません。  
   
- **[外部列]**  
+ **外部列**  
  タスクで外部 (変換元) 列を読み取る順序を表示します。 この順序を変更するには、最初に上記のテーブル内で選択されている列を選択解除してから、一覧から外部列を別の順で選択します。  
   
  **出力列**  

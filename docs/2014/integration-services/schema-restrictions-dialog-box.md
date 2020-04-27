@@ -15,26 +15,25 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3da112ff268e824792bdd29160ec97331e5b0f7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056146"
 ---
 # <a name="schema-restrictions-dialog-box"></a>[スキーマの制限] ダイアログ ボックス
-  
   **[スキーマの制限]** ダイアログ ボックスを使用すると、Foreach ADO.NET Schema Rowset 列挙子に適用するスキーマの制限を設定できます。  
   
 ## <a name="options"></a>オプション  
- **制限**  
+ **制限事項**  
  スキーマに適用する制約を設定します。  
   
  **変数**  
- 制限を定義するために変数を使用します。 変数を一覧から選択するか、**[新しい変数]** をクリックして新しい変数を作成します。  
+ 制限を定義するために変数を使用します。 変数を一覧から選択するか、[**新しい変数...** ] をクリックして新しい変数を作成します。  
   
- **関連トピック:** [SSIS&#41; 変数の Integration Services &#40;](integration-services-ssis-variables.md) [変数の追加](../../2014/integration-services/add-variable.md)  
+ **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)  
   
- **Text**  
+ **[テキスト]**  
  制限を定義するテキストを入力します。  
   
 ## <a name="see-also"></a>参照  

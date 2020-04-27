@@ -13,20 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a135df3d3850aebdb9ac6dda08561a7fae21793f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069290"
 ---
 # <a name="select-related-tables-dimension-wizard"></a>[関連テーブルの選択] (ディメンション ウィザード)
-  
   **[関連テーブルの選択]** ページを使用すると、関連テーブル (データ ソース ビューでメイン ディメンション テーブルが関連付けられるテーブル) をディメンションに含めることができます。  
   
  **ディメンション ウィザードを開くには**  
   
--   
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]の **ソリューション エクスプローラー**で、 **プロジェクトの** [ディメンション] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] フォルダーを右クリックし、 **[新しいディメンション]** をクリックします。  
+-   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]の **ソリューション エクスプローラー**で、 **プロジェクトの** [ディメンション] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] フォルダーを右クリックし、 **[新しいディメンション]** をクリックします。  
   
 ## <a name="options"></a>オプション  
  **[関連テーブル]**  

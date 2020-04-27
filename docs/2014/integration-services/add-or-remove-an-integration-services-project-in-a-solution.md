@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9986384801788f907f42588ee298ba531fd13f95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061836"
 ---
 # <a name="add-or-remove-an-integration-services-project-in-a-solution"></a>ソリューション内の Integration Services プロジェクトを追加または削除する
@@ -33,16 +33,13 @@ ms.locfileid: "66061836"
   
 #### <a name="to-add-a-new-integration-services-project-to-a-solution"></a>新しい Integration Services プロジェクトをソリューションに追加するには  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で、新しい [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトの追加先となるソリューションを開き、次のいずれかの操作を行います。  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で、新しい [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトの追加先となるソリューションを開き、次のいずれかの操作を行います。  
   
     -   ソリューションを右クリックして **[追加]** をクリックし、**[新しいプロジェクト]** をクリックします。  
   
-    -   
-  **[ファイル]** メニューの **[追加]** をポイントし、**[新しいプロジェクト]** をクリックします。  
+    -   **[ファイル]** メニューの **[追加]** をポイントし、**[新しいプロジェクト]** をクリックします。  
   
-2.  
-  **[新しいプロジェクトの追加]** ダイアログ ボックスの **[テンプレート]** ペインで、**[Integration Services プロジェクト]** をクリックします。  
+2.  **[新しいプロジェクトの追加]** ダイアログ ボックスの **[テンプレート]** ペインで、**[Integration Services プロジェクト]** をクリックします。  
   
 3.  必要に応じて、プロジェクトの名前と場所を変更します。  
   
@@ -50,27 +47,22 @@ ms.locfileid: "66061836"
   
 #### <a name="to-add-an-existing-integration-services-project-to-a-solution"></a>既存の Integration Services プロジェクトをソリューションに追加するには  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で、既存の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを追加するソリューションを開き、次のいずれかの操作を行います。  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で、既存の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを追加するソリューションを開き、次のいずれかの操作を行います。  
   
     -   ソリューションを右クリックして **[追加]** をポイントし、**[既存のプロジェクト]** をクリックします。  
   
-    -   
-  **[ファイル]** メニューの **[追加]** をクリックし、**[既存のプロジェクト]** をクリックします。  
+    -   **[ファイル]** メニューの **[追加]** をクリックし、**[既存のプロジェクト]** をクリックします。  
   
-2.  
-  **[既存プロジェクトの追加]** ダイアログ ボックスで、追加するプロジェクトを選択して、**[開く]** をクリックします。  
+2.  **[既存プロジェクトの追加]** ダイアログ ボックスで、追加するプロジェクトを選択して、**[開く]** をクリックします。  
   
 3.  選択したプロジェクトが、**ソリューション エクスプローラー**のソリューション フォルダーに追加されます。  
   
 ## <a name="removing-an-integration-services-project"></a>Integration Services プロジェクトの削除  
- プロジェクトをソリューションから削除できるのは、そのソリューションが [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で表示されている場合のみです。 ソリューションが表示されていれば、1 つのプロジェクト以外はすべて削除できます。 
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] では、残りのプロジェクトが 1 つのみになった時点でソリューション フォルダーが表示されなくなるので、最後の 1 つのプロジェクトは削除できません。  
+ プロジェクトをソリューションから削除できるのは、そのソリューションが [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で表示されている場合のみです。 ソリューションが表示されていれば、1 つのプロジェクト以外はすべて削除できます。 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] では、残りのプロジェクトが 1 つのみになった時点でソリューション フォルダーが表示されなくなるので、最後の 1 つのプロジェクトは削除できません。  
   
 #### <a name="to-remove-an-integration-services-project-from-a-solution"></a>Integration Services プロジェクトをソリューションから削除するには  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを削除する対象となるソリューションを開きます。  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを削除する対象となるソリューションを開きます。  
   
 2.  ソリューション エクスプローラーでプロジェクトを右クリックし、**[プロジェクトのアンロード]** をクリックします。  
   

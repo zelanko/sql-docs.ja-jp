@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aaa2b608665e50b25b39d78a39a57bb08b55cf31
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066388"
 ---
 # <a name="tabular-model-partitions-ssas-tabular"></a>テーブル モデル パーティション (SSAS テーブル)
@@ -24,15 +24,15 @@ ms.locfileid: "66066388"
   
  このトピックのセクション:  
   
--   [効果](#bkmk_benefits)  
+-   [メリット](#bkmk_benefits)  
   
 -   [アクセス許可](#bkmk_permissions)  
   
 -   [パーティションの処理](#bkmk_process_partitions)  
   
--   [Related Tasks](#bkmk_related_tasks)  
+-   [関連タスク](#bkmk_related_tasks)  
   
-##  <a name="bkmk_benefits"></a>効果  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a>効果  
  効率的なモデル設計によるパーティションの活用によって、不必要な処理とその後の Analysis Services サーバーでのプロセッサ負荷が排除されます。同時に、データ ソースの大部分の最新のデータを反映できる頻度でデータが処理され更新されるようになります。  
   
  たとえば、あるテーブル モデルに現会計年度 (2011 年度) の売上データと過去の各会計年度の売上データを含む売上テーブルがあるとします。 モデルの Sales テーブルには、次の3つのパーティションがあります。  
@@ -51,25 +51,21 @@ ms.locfileid: "66066388"
   
  組織の表形式モデルのパーティション分割戦略を実装する方法は、ほとんどの場合、特定のモデルのデータ処理ニーズと使用可能なリソースに依存します。  
   
-##  <a name="bkmk_permissions"></a> Permissions  
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でパーティションを作成、管理、および処理するには、適切な Analysis Services 権限がセキュリティ ロールで定義されている必要があります。 各セキュリティ ロールには次のいずれかの権限があります。  
+##  <a name="permissions"></a><a name="bkmk_permissions"></a> Permissions  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でパーティションを作成、管理、および処理するには、適切な Analysis Services 権限がセキュリティ ロールで定義されている必要があります。 各セキュリティ ロールには次のいずれかの権限があります。  
   
-|権限|アクション|  
+|アクセス許可|Actions|  
 |----------------|-------------|  
-|管理者|読み取り、処理、作成、コピー、マージ、削除|  
-|プロセス|読み取り、処理|  
-|読み取り専用|Read|  
+|Administrator|読み取り、処理、作成、コピー、マージ、削除|  
+|Process|読み取り、処理|  
+|[読み取り専用]|Read|  
   
- 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] を使用してモデル作成時にロールを作成する方法の詳細については、「[ロール (SSAS テーブル)](roles-ssas-tabular.md)」を参照してください。 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して配置済みテーブル モデル ロールのロール メンバーを管理する方法の詳細については、「[テーブル モデル ロール (SSAS テーブル)](tabular-model-roles-ssas-tabular.md)」を参照してください。  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] を使用してモデル作成時にロールを作成する方法の詳細については、「[ロール (SSAS テーブル)](roles-ssas-tabular.md)」を参照してください。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して配置済みテーブル モデル ロールのロール メンバーを管理する方法の詳細については、「[テーブル モデル ロール (SSAS テーブル)](tabular-model-roles-ssas-tabular.md)」を参照してください。  
   
-##  <a name="bkmk_process_partitions"></a>パーティションの処理  
- 
-  **の** [パーティション] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ダイアログ ボックスを使用するか、スクリプトを使用すると、パーティションの処理 (更新) を他のパーティションに影響を与えずに行うことができます。 処理には次のオプションがあります。  
+##  <a name="process-partitions"></a><a name="bkmk_process_partitions"></a>パーティションの処理  
+ **の** [パーティション] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ダイアログ ボックスを使用するか、スクリプトを使用すると、パーティションの処理 (更新) を他のパーティションに影響を与えずに行うことができます。 処理には次のオプションがあります。  
   
-|モード|[説明]|  
+|モード|説明|  
 |----------|-----------------|  
 |既定の処理|パーティション オブジェクトの処理状態を検出して、未処理または部分的に処理されたパーティション オブジェクトを完全に処理された状態にするために必要な処理を実行します。 空のテーブルとパーティションのデータが読み込まれ、階層、計算列、およびリレーションシップが構築または再構築されます。|  
 |完全処理|パーティション オブジェクトとそこに含まれているすべてのオブジェクトを処理します。 既に処理されたオブジェクトに対して完全処理を実行すると、そのオブジェクト内のすべてのデータが [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって削除されてから、オブジェクトが処理されます。 この種の処理は、構造上の変更をオブジェクトに加えた場合に必要となります。|  
@@ -77,13 +73,11 @@ ms.locfileid: "66066388"
 |消去の処理|パーティションからすべてのデータを削除します。|  
 |追加の処理|パーティションを新しいデータで増分更新します。|  
   
-##  <a name="bkmk_related_tasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="bkmk_related_tasks"></a> 関連タスク  
   
-|タスク|[説明]|  
+|タスク|説明|  
 |----------|-----------------|  
-|[SSAS 表形式&#41;&#40;テーブルモデルパーティションの作成と管理](create-and-manage-tabular-model-partitions-ssas-tabular.md)|
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して配置済みテーブル モデルでパーティションを作成および管理する方法について説明します。|  
-|[SSAS 表形式&#41;&#40;テーブルモデルパーティションの処理](process-tabular-model-partitions-ssas-tabular.md)|
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して配置済みテーブル モデルでパーティションを処理する方法について説明します。|  
+|[テーブル モデル パーティションの作成および管理 (SSAS テーブル)](create-and-manage-tabular-model-partitions-ssas-tabular.md)|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して配置済みテーブル モデルでパーティションを作成および管理する方法について説明します。|  
+|[テーブル モデル パーティションの処理 (SSAS テーブル)](process-tabular-model-partitions-ssas-tabular.md)|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して配置済みテーブル モデルでパーティションを処理する方法について説明します。|  
   
   

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f59ed0eee86f17fdda568caa5c1a1dc7252c6d9c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055349"
 ---
 # <a name="ssis-package-format"></a>SSIS パッケージの形式
@@ -30,8 +30,7 @@ ms.locfileid: "66055349"
   
 -   他のオブジェクトで参照できるパッケージ内のほとんどのオブジェクトに、パッケージ XML で定義された `refId` 属性が割り当てられています。 系列 ID の代わりに `refID`が残っています。 系列 ID は今でもランタイム内で使用され、パッケージを読み込むと再生成されます。  
   
-     
-  `refId` 値は、GUID または整数値よりも読みやすくわかりやすい一意の文字列です。 この文字列は、以前のリリースの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]でパッケージ構成に使用されたパス値に似ています。  
+     `refId` 値は、GUID または整数値よりも読みやすくわかりやすい一意の文字列です。 この文字列は、以前のリリースの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]でパッケージ構成に使用されたパス値に似ています。  
   
      2 つのバージョンのパッケージ間の変更をマージする場合は、検索/置換操作で `refId` を使用して、そのオブジェクトへのすべての参照が正しく更新されたことを確認できます。  
   

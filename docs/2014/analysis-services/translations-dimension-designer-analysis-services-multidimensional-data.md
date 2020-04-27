@@ -13,25 +13,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7d879ffb8f02b41c4cc6c070946c737f9aea2c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065726"
 ---
 # <a name="translations-dimension-designer-analysis-services---multidimensional-data"></a>[翻訳] (ディメンション デザイナー) (Analysis Services - 多次元データ)
   ディメンション デザイナーの **[翻訳]** タブを使用すると、ディメンションの階層や属性と同様に、ディメンションの翻訳について定義したり管理したりできます。  
   
 ## <a name="panes"></a>ペイン  
- 
-  **[翻訳]** タブには、次のペインがあります。  
+ **[翻訳]** タブには、次のペインがあります。  
   
- [ツール バー](toolbar-translations-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Toolbar](toolbar-translations-dimension-designer-analysis-services-multidimensional-data.md)  
  ツール バーを使用すると、ディメンション デザイナーの **[翻訳]** タブで一般的な操作を実行できます。  
   
  [翻訳の詳細](translation-details-dimension-designer-analysis-services-multidimensional-data.md)  
- 
-  **翻訳の詳細** ペインを使用すると、ディメンションに関連付けられている翻訳を調査したり管理したりできます。  
+ **翻訳の詳細** ペインを使用すると、ディメンションに関連付けられている翻訳を調査したり管理したりできます。  
   
 ## <a name="see-also"></a>参照  
  [ディメンションデザイナー &#40;Analysis Services-多次元データ&#41;](dimension-designer-analysis-services-multidimensional-data.md)   

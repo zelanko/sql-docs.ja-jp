@@ -39,17 +39,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6b833fe2710ce04cb4a0c8b08fedc9a882c19add
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069028"
 ---
 # <a name="general-properties"></a>全般プロパティ
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次の表に示すサーバー プロパティがサポートされています。 このトピックでは、Security、Network、ThreadPool など、個別のセクションで取り上げることのできなかった、msmdsrv.ini ファイル内のサーバー プロパティについて説明しています。 その他のサーバー プロパティとその設定方法の詳細については、「 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)」を参照してください。  
   
- **適用対象:** 多次元および表形式サーバーモード (特に明記されていない場合)  
+ **適用対象:** 特に記載のない限り、多次元サーバー モードおよびテーブル サーバー モードが対象となります。  
   
 ## <a name="non-specific-category"></a>不特定カテゴリ  
  `AdminTimeout`  
@@ -100,10 +99,10 @@ ms.locfileid: "66069028"
   
  このプロパティの有効値を以下に示します。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
-|0|これが既定値です。 MOLAP、HOLAP、ROLAP の各ストレージ、およびデータ マイニング モデルを使用する多次元データベースの処理に使用される多次元モードを指定します。|  
-|1 で保護されたプロセスとして起動されました|PowerPivot for SharePoint 配置の一部としてインストールされた Analysis Services インスタンスを指定します。 PowerPivot for SharePoint インストールの一部である Analysis Services インスタンスの配置モード プロパティは変更しないでください。 モードを変更すると、PowerPivot データがサーバー上で実行されなくなります。|  
+|0|これは、既定値です。 MOLAP、HOLAP、ROLAP の各ストレージ、およびデータ マイニング モデルを使用する多次元データベースの処理に使用される多次元モードを指定します。|  
+|1|PowerPivot for SharePoint 配置の一部としてインストールされた Analysis Services インスタンスを指定します。 PowerPivot for SharePoint インストールの一部である Analysis Services インスタンスの配置モード プロパティは変更しないでください。 モードを変更すると、PowerPivot データがサーバー上で実行されなくなります。|  
 |2|インメモリ ストレージまたは DirectQuery ストレージを使用するテーブル モデル データベースをホストするために使用するテーブル モードを指定します。|  
   
  各モードは、他のモードと相互に排他的です。 テーブル モード用に構成されたサーバーでは、キューブおよびディメンションを含む Analysis Services データベースを実行できません。 基になるコンピューターのハードウェアでサポートできる場合は、Analysis Services の複数のインスタンスを同じコンピューターにインストールし、さまざまな配置モードを使用するように各インスタンスを構成できます。 Analysis Services はリソースを大量に消費するアプリケーションであることに注意してください。 同じシステム上に複数のインスタンスを配置する構成は、ハイエンド サーバーの場合のみお勧めします。  
@@ -132,8 +131,7 @@ ms.locfileid: "66069028"
  このプロパティの詳細については、「 [SQL Server 2008 R2 Analysis Services 操作ガイド](https://go.microsoft.com/fwlink/?LinkID=225539)」を参照してください。  
   
 > [!IMPORTANT]  
->  
-  `ForceCommitTimeout` は、キューブ処理コマンドと書き戻し操作に適用されます。  
+>  `ForceCommitTimeout` は、キューブ処理コマンドと書き戻し操作に適用されます。  
   
  `IdleConnectionTimeout`  
  アクティブでない接続のタイムアウトを秒単位で指定する整数のプロパティです。  
@@ -180,6 +178,6 @@ ms.locfileid: "66069028"
   
 ## <a name="see-also"></a>参照  
  [Analysis Services でのサーバープロパティの構成](server-properties-in-analysis-services.md)   
- [Analysis Services インスタンスのサーバーモードの決定](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Analysis Services インスタンスのサーバー モードの決定](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

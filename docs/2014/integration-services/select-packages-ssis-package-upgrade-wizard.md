@@ -13,35 +13,33 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ccf14ace0a160be4ca9ecc5287ca45f077ba7e16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056018"
 ---
 # <a name="select-packages-ssis-package-upgrade-wizard"></a>[パッケージの選択] (SSIS パッケージ アップグレード ウィザード)
-  
   **[パッケージの選択]** ページを使用すると、アップグレードするパッケージを選択できます。 このページには、ウィザードの **[ソースの場所を選択]** ページで指定した場所に格納されているパッケージが一覧表示されます。  
   
- **SSIS パッケージアップグレードウィザードを実行するには**  
+ **SSIS パッケージ アップグレード ウィザードを実行するには**  
   
 -   [SSIS パッケージ アップグレード ウィザードを使用した Integration Services パッケージのアップグレード](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
 ## <a name="options"></a>オプション  
- **既存のパッケージ名**  
+ **[既存のパッケージ名]**  
  アップグレードする 1 つ以上のパッケージを選択します。  
   
- **アップグレードパッケージ名**  
+ **[アップグレード パッケージ名]**  
  アップグレード先パッケージ名を指定するか、ウィザードによって提供される既定の名前を使用します。  
   
 > [!NOTE]  
->  パッケージのアップグレード後に、アップグレード先パッケージ名を変更することもできます。 
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] または [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]でアップグレード済みのパッケージを開き、パッケージ名を変更します。  
+>  パッケージのアップグレード後に、アップグレード先パッケージ名を変更することもできます。 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] または [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]でアップグレード済みのパッケージを開き、パッケージ名を変更します。  
   
  **パスワード**  
  選択したアップグレード パッケージの複号化に使用するパスワードを指定します。  
   
- **選択項目に適用**  
+ **[選択項目に適用]**  
  選択したアップグレード パッケージの復号化に、指定したパスワードを適用します。  
   
 ## <a name="see-also"></a>参照  

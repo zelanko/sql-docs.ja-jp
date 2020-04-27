@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0881624f421cba5bda5d2b0ba8f9d3732efd2497
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059266"
 ---
 # <a name="excel-connection-manager-editor"></a>Excel 接続マネージャー
@@ -36,13 +36,13 @@ ms.locfileid: "66059266"
 > [!WARNING]  
 >  Excel**変換先エディター**では、存在しないファイルをポイントする**excel 接続**を選択すると、excel ファイルが自動的に作成されます。その後、[ **excel シートの名前**] で [**新規**] をクリックします。  
   
- **[参照]**  
- [**開く**] ダイアログボックスを使用して、excel ファイルが存在するフォルダー、または新しいファイルを作成する場所に移動します。  
+ **参照**  
+ **[開く]** ダイアログ ボックスを使用して、Excel ファイルが存在するフォルダー、または新しいファイルを作成するフォルダーを指定します。  
   
  **[Excel バージョン]**  
  ファイルを作成するために使用した Microsoft Excel のバージョンを指定します。  
   
-|オプション|[説明]|  
+|オプション|説明|  
 |------------|-----------------|  
 |[Microsoft Excel 97-2005]|ファイルは Excel 97 以降を使用して作成されています。|  
 |Excel 3.0|ファイルは Excel 3.0 を使用して作成されました。|  

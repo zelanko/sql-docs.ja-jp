@@ -15,19 +15,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5e889c4da9e20a547f5a512f4aab1ee823bde5f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056180"
 ---
 # <a name="script-task-editor-general-page"></a>[スクリプト タスク エディター] \([全般] ページ)
-  
   **[スクリプト タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、スクリプト タスクの名前と説明を入力できます。  
   
  スクリプト タスクの詳細については、「 [Script Task](control-flow/script-task.md) 」および「 [スクリプト タスク エディターでのスクリプト タスクの構成](extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)」を参照してください。 スクリプト タスクのプログラミングの詳細については、「 [Extending the Package with the Script Task](extending-packages-scripting/task/extending-the-package-with-the-script-task.md)」を参照してください。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **名前**  
  スクリプト タスクの固有の名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   

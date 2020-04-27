@@ -15,20 +15,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 549ab9aa3a447c13939e352233acc42b974d92af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061816"
 ---
 # <a name="add-ssis-connection-manager"></a>[SSIS 接続マネージャーの追加] ダイアログ ボックス
-  
   **[SSIS 接続マネージャーの追加]** ダイアログ ボックスを使用すると、パッケージに追加する接続の種類を選択できます。  
   
  接続マネージャーの詳細については、「[Integration Services &#40;SSIS&#41; の接続](connection-manager/integration-services-ssis-connections.md)」を参照してください。  
   
 ## <a name="options"></a>オプション  
- **接続マネージャーの種類**  
+ **[接続マネージャーの種類]**  
  エディターを使用して接続の種類の接続プロパティを指定するには、接続の種類を選択して **[追加]** をクリックするか、接続の種類をダブルクリックします。  
   
  **追加**  

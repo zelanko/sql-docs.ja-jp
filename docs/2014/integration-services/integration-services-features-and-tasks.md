@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 64b1945ba990278241d38cebb029feab86d6d7bb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058028"
 ---
 # <a name="integration-services-features-and-tasks"></a>Integration Services の機能とタスク
@@ -26,25 +26,25 @@ ms.locfileid: "66058028"
 ## <a name="in-this-section"></a>このセクションの内容  
  [SSIS&#41; 環境と Studio 環境 &#40;Integration Services](integration-services-ssis-development-and-management-tools.md)  
   
- [SSIS&#41; パッケージ &#40;Integration Services](../../2014/integration-services/integration-services-ssis-packages.md)  
+ [Integration Services &#40;SSIS&#41; パッケージ](../../2014/integration-services/integration-services-ssis-packages.md)  
   
- [SSIS&#41; 接続の Integration Services &#40;](connection-manager/integration-services-ssis-connections.md)  
+ [Integration Services &#40;SSIS&#41; の接続](connection-manager/integration-services-ssis-connections.md)  
   
- [SSIS&#41; プロジェクトの Integration Services &#40;](integration-services-ssis-projects-and-solutions.md)  
+ [Integration Services (SSIS) プロジェクト](integration-services-ssis-projects-and-solutions.md)  
   
  [SSIS&#41; パラメーターの Integration Services &#40;](integration-services-ssis-package-and-project-parameters.md)  
   
  [SSIS&#41; クエリ &#40;Integration Services](integration-services-ssis-queries.md)  
   
- [SSIS&#41; 式の Integration Services &#40;](expressions/integration-services-ssis-expressions.md)  
+ [Integration Services &#40;SSIS&#41; 式](expressions/integration-services-ssis-expressions.md)  
   
- [SSIS&#41; 変数の Integration Services &#40;](integration-services-ssis-variables.md)  
+ [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)  
   
- [SSIS&#41; イベントハンドラーの Integration Services &#40;](integration-services-ssis-event-handlers.md)  
+ [Integration Services (SSIS) のイベント ハンドラー](integration-services-ssis-event-handlers.md)  
   
- [Integration Services サービス &#40;SSIS サービス&#41;](service/integration-services-service-ssis-service.md)  
+ [Integration Services サービス (SSIS サービス)](service/integration-services-service-ssis-service.md)  
   
- [SSIS&#41; サーバー &#40;Integration Services](catalog/integration-services-ssis-server-and-catalog.md)  
+ [Integration Services &#40;SSIS&#41; サーバー](catalog/integration-services-ssis-server-and-catalog.md)  
   
  [プロジェクトとパッケージの展開](packages/deploy-integration-services-ssis-projects-and-packages.md)  
   

@@ -15,18 +15,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 649c972b001a0627a568f0bd9e1ac2b42d5175ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056319"
 ---
 # <a name="save-copy-of-package"></a>[パッケージのコピーの保存]
-  
   **の** [パッケージのコピーの保存] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]ダイアログ ボックスを使用すると、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージのコピーを [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] から別の場所に保存し、必要に応じてパッケージの保護レベルを変更できます。  
   
 ## <a name="options"></a>オプション  
- **パッケージの場所**  
+ **[パッケージの場所]**  
  パッケージ コピーを保存する格納場所の種類を選択します。 次のオプションを使用できます。  
   
  **SQL Server**  
@@ -35,7 +34,7 @@ ms.locfileid: "66056319"
   
  **SSIS パッケージストア**  
   
- **サーバー**  
+ **[サーバー]**  
  サーバー名を入力するか、サーバーを一覧から選択します。 このオプションは、格納場所が **[SQL Server]** または **[SSIS パッケージ ストア]** の場合のみ使用できます。  
   
  **認証**  
@@ -48,12 +47,10 @@ ms.locfileid: "66056319"
  認証の種類を選択します。  
   
  **ユーザー名**  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用する場合は、ユーザー名を指定します。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用する場合は、ユーザー名を指定します。  
   
  **パスワード**  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用する場合は、パスワードを指定します。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用する場合は、パスワードを指定します。  
   
  **パッケージ パス**  
  パッケージのパスを入力するか、参照ボタン **([..** .]) をクリックして、パッケージを保存するフォルダーを指定します。  
@@ -65,6 +62,6 @@ ms.locfileid: "66056319"
  [[パッケージのインポート] ダイアログボックスの UI リファレンス](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
  [[パッケージのエクスポート] ダイアログボックスの UI リファレンス](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
  [パッケージの保存](save-packages.md)   
- [SSIS サービス&#41;&#40;パッケージをインポートおよびエクスポートする](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
+ [パッケージをインポートおよびエクスポートする &#40;SSIS サービス&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
   
   

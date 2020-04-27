@@ -58,14 +58,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 96106fc8bc50a2a1b19c54a6970eeeb72952d82d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069056"
 ---
 # <a name="data-mining-properties"></a>データ マイニング プロパティ
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次の表に示すデータ マイニング サーバー プロパティがサポートされています。 その他のサーバー プロパティとその設定方法の詳細については、「 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)」を参照してください。  
   
  **適用対象:** 多次元サーバーモードのみ  
@@ -121,6 +120,6 @@ ms.locfileid: "66069056"
 ## <a name="see-also"></a>参照  
  [物理アーキテクチャ &#40;Analysis Services-データマイニング&#41;](../data-mining/physical-architecture-analysis-services-data-mining.md)   
  [Analysis Services でのサーバープロパティの構成](server-properties-in-analysis-services.md)   
- [Analysis Services インスタンスのサーバーモードの決定](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Analysis Services インスタンスのサーバー モードの決定](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

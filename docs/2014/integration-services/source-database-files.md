@@ -13,26 +13,25 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ac7d4b590fa5c3efccd16deebf3bafab83b74f6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055534"
 ---
 # <a name="source-database-files"></a>[転送元のデータベース ファイル]
-  
   **[転送元のデータベース ファイル]** ダイアログ ボックスを使用すると、ソース サーバーのデータベース ファイルの名前と場所を表示したり、データベース転送タスクのネットワーク ファイル共有の場所を指定したりできます。 このタスクの詳細については、「 [データベース転送タスク](control-flow/transfer-database-task.md)」を参照してください。  
   
  このダイアログ ボックスにソース サーバーのデータベース ファイルの名前と場所を入力するには、最初に **[データベース転送タスク エディター]** ダイアログ ボックスの **[データベース]** ページで **[SourceConnection]** および **[SourceDatabaseName]** を指定します。  
   
 ## <a name="options"></a>オプション  
  **ソースファイル**  
- 転送する対象のソース サーバーのデータベース ファイル名です。 **ソースファイル**は読み取り専用です。  
+ 転送する対象のソース サーバーのデータベース ファイル名です。 **[転送元ファイル]** は読み取り専用です。  
   
- **ソースフォルダー**  
- 転送する対象データベース ファイルが存在する転送元サーバーのフォルダーです。 **ソースフォルダー**は読み取り専用です。  
+ **[同期元フォルダー]**  
+ 転送する対象データベース ファイルが存在する転送元サーバーのフォルダーです。 **[転送元フォルダー]** は読み取り専用です。  
   
- **ネットワークファイル共有**  
+ **[ネットワーク ファイル共有]**  
  データベース ファイルの転送元となるソース サーバーのネットワーク共有フォルダーです。 [**データベース転送タスクエディター** ] ダイアログボックスの [**データベース**] ページで [**メソッド**] に [ **databaseoffline** ] を指定して、データベースをオフラインモードで転送する場合は、[**ネットワークファイル共有**] を使用します。  
   
  ネットワーク ファイル共有の場所を入力するか、参照ボタン **([...])** をクリックしてネットワーク ファイル共有の場所を見つけます。  
@@ -42,6 +41,6 @@ ms.locfileid: "66055534"
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [データベース転送タスクエディター &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
- [[データベース転送タスクエディター] &#40;[データベース] ページ&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
+ [データベース転送タスク エディター ([データベース] ページ)](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
   
   

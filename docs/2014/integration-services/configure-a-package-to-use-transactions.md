@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 16d1f0f4c24f18327ee31da1fb85a74d19588384
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060858"
 ---
 # <a name="configure-a-package-to-use-transactions"></a>トランザクションを使用するようにパッケージを構成する
@@ -35,20 +35,17 @@ ms.locfileid: "66060858"
   
 #### <a name="to-configure-a-package-to-use-a-single-transaction"></a>1 つのトランザクションを使用するようにパッケージを構成するには  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、トランザクションを使用するように構成するパッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、トランザクションを使用するように構成するパッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
 2.  ソリューション エクスプローラーで、パッケージをダブルクリックして開きます。  
   
-3.  
-  **[制御フロー]** タブをクリックします。  
+3.  **[制御フロー]** タブをクリックします。  
   
 4.  制御フローのデザイン画面の背景で任意の場所を右クリックし、 **[プロパティ]** をクリックします。  
   
 5.  [**プロパティ**] ウィンドウで、transactionoption プロパティをに`Required`設定します。  
   
-6.  
-  **[制御フロー]** タブのデザイン画面で、トランザクションに登録するタスクまたはコンテナーを右クリックし、 **[プロパティ]** をクリックします。  
+6.  **[制御フロー]** タブのデザイン画面で、トランザクションに登録するタスクまたはコンテナーを右クリックし、 **[プロパティ]** をクリックします。  
   
 7.  [**プロパティ**] ウィンドウで、transactionoption プロパティをに`Supported`設定します。  
   
@@ -64,13 +61,11 @@ ms.locfileid: "66060858"
   
 #### <a name="to-configure-a-package-to-use-multiple-transactions"></a>複数のトランザクションを使用するようにパッケージを構成するには  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、複数のトランザクションを使用するように構成するパッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、複数のトランザクションを使用するように構成するパッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
 2.  ソリューション エクスプローラーで、パッケージをダブルクリックして開きます。  
   
-3.  
-  **[制御フロー]** タブをクリックします。  
+3.  **[制御フロー]** タブをクリックします。  
   
 4.  制御フローのデザイン画面の背景で任意の場所を右クリックし、 **[プロパティ]** をクリックします。  
   
@@ -79,8 +74,7 @@ ms.locfileid: "66060858"
     > [!NOTE]  
     >  パッケージでトランザクションがサポートされますが、トランザクションは、パッケージ内のタスクまたはコンテナーによって開始されます。  
   
-6.  
-  **[制御フロー]** タブのデザイン画面で、トランザクションを開始するパッケージ内のタスクまたはコンテナーを右クリックし、 **[プロパティ]** をクリックします。  
+6.  **[制御フロー]** タブのデザイン画面で、トランザクションを開始するパッケージ内のタスクまたはコンテナーを右クリックし、 **[プロパティ]** をクリックします。  
   
 7.  [**プロパティ**] ウィンドウで、transactionoption プロパティをに`Required`設定します。  
   

@@ -15,19 +15,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4c9fb11308ae60cf061f184ade467d814d6a10fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058307"
 ---
 # <a name="fuzzy-lookup-transformation-editor-reference-table-tab"></a>[あいまい参照変換エディター] ([参照テーブル] タブ)
-  
   **[あいまい参照変換エディター]** ダイアログ ボックスの **[参照テーブル]** タブを使用すると、参照に使用する変換元テーブルとインデックスを指定できます。 参照データ ソースは [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースのテーブルである必要があります。  
   
 > [!NOTE]  
->  あいまい参照変換では、参照テーブルの作業用コピーが作成されます。 以降に説明するインデックスは、通常の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インデックスではなく、特別なテーブルを使用してこの作業用テーブルに作成されるものです。 
-  **[保存されたインデックスを維持する]** を選択しないと、既存の変換元テーブルは変更されません。 この場合、参照テーブルに加えられた変更に基づいて作業用テーブルと参照インデックス テーブルを更新するトリガーが、参照テーブルに作成されます。  
+>  あいまい参照変換では、参照テーブルの作業用コピーが作成されます。 以降に説明するインデックスは、通常の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インデックスではなく、特別なテーブルを使用してこの作業用テーブルに作成されるものです。 **[保存されたインデックスを維持する]** を選択しないと、既存の変換元テーブルは変更されません。 この場合、参照テーブルに加えられた変更に基づいて作業用テーブルと参照インデックス テーブルを更新するトリガーが、参照テーブルに作成されます。  
   
 > [!NOTE]  
 >  あいまい`Exhaustive`参照変換`MaxMemoryUsage`のおよびプロパティは、[**あいまい参照変換エディター**] では使用できませんが、**詳細エディター**を使用して設定できます。 また、の`MaxOutputMatchesPerInput` 100 より大きい値は、**詳細エディター**でのみ指定できます。 これらのプロパティの詳細については、「 [変換のカスタム プロパティ](data-flow/transformations/transformation-custom-properties.md)」の「あいまい参照変換」を参照してください。  
@@ -38,42 +36,38 @@ ms.locfileid: "66058307"
  **OLE DB 接続マネージャー**  
  一覧から既存の OLE DB 接続マネージャーを選択するか、 **[新規作成]** をクリックして新しい接続を作成します。  
   
- **[新規作成]**  
- 
-  **[OLE DB 接続マネージャーの構成]** ダイアログ ボックスを使用して、新しい接続を作成します。  
+ **新しい**  
+ **[OLE DB 接続マネージャーの構成]** ダイアログ ボックスを使用して、新しい接続を作成します。  
   
- **新しいインデックスの生成**  
+ **[新しいインデックスを生成する]**  
  参照に使用する新しいインデックスを作成するように指定します。  
   
- **参照テーブル名**  
+ **[参照テーブル名]**  
  参照テーブルとして使用する既存のテーブルを選択します。  
   
- **新しいインデックスを格納する**  
+ **[新しいインデックスを保存する]**  
  新しい参照インデックスを保存する場合に、このオプションを選択します。  
   
- **新しいインデックス名**  
+ **[新しいインデックス名]**  
  新しい参照インデックスを保存するように指定した場合、そのインデックスの名前を入力します。  
   
- **保存されたインデックスの管理**  
+ **[保存されたインデックスを維持する]**  
  新しい参照インデックスを保存するように指定した場合、そのインデックスを [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] でも維持するかどうかを指定します。  
   
 > [!NOTE]  
->  
-  **[あいまい参照変換エディター]** ダイアログ ボックスの **[参照テーブル]** タブで **[保存されたインデックスを維持する]** を選択すると、変換ではマネージド ストアド プロシージャを使用してインデックスを維持します。 これらのマネージド ストアド プロシージャは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の共通言語ランタイム (CLR) 統合機能を使用します。 既定では、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の CLR 統合は無効です。 
-  **[保存されたインデックスを維持する]** 機能を使用するには、CLR 統合を有効にする必要があります。 詳細については、「 [CLR 統合の有効化](../relational-databases/clr-integration/clr-integration-enabling.md)」を参照してください。  
+>  **[あいまい参照変換エディター]** ダイアログ ボックスの **[参照テーブル]** タブで **[保存されたインデックスを維持する]** を選択すると、変換ではマネージド ストアド プロシージャを使用してインデックスを維持します。 これらのマネージド ストアド プロシージャは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の共通言語ランタイム (CLR) 統合機能を使用します。 既定では、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の CLR 統合は無効です。 **[保存されたインデックスを維持する]** 機能を使用するには、CLR 統合を有効にする必要があります。 詳細については、「 [CLR 統合の有効化](../relational-databases/clr-integration/clr-integration-enabling.md)」を参照してください。  
 >   
->  
-  **[保存されたインデックスを維持する]** オプションは CLR 統合を必要とするため、この機能を使用できるのは、CLR 統合が有効になっている [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスの参照テーブルを選択した場合だけです。  
+>  **[保存されたインデックスを維持する]** オプションは CLR 統合を必要とするため、この機能を使用できるのは、CLR 統合が有効になっている [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスの参照テーブルを選択した場合だけです。  
   
- **既存のインデックスを使用する**  
+ **[既存のインデックスを使用する]**  
  参照に既存のインデックスを使用するように指定します。  
   
- **既存のインデックスの名前**  
+ **[既存のインデックスの名前]**  
  以前に作成した参照インデックスを一覧から選択します。  
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [あいまい参照変換エディター &#40;[列] タブ&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-columns-tab.md)   
- [あいまい参照変換エディター &#40;[詳細設定] タブ&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-advanced-tab.md)  
+ [[あいまい参照変換エディター] &#40;[詳細設定] タブ&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-advanced-tab.md)  
   
   

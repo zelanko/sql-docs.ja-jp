@@ -13,18 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7af29b6a9ea8decb6739052ed1cb06f62547b46f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068573"
 ---
 # <a name="source-database-import-analysis-services-database-wizard"></a>[ソース データベース] (Analysis Services データベースのインポート ウィザード)
-  
   **[ソース データベース]** ページを使用すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトの作成に使用される [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスとデータベースを選択できます。  
   
 ## <a name="options"></a>オプション  
- **サーバー**  
+ **[サーバー]**  
  プロジェクトの作成に使用するデータベースが格納されている [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスを入力します。  
   
  **[データベース]**  

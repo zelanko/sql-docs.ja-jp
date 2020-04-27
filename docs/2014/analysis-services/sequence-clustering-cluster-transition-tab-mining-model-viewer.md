@@ -13,25 +13,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8a236805ac047b351aa49c2486b8acac84818017
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069078"
 ---
 # <a name="sequence-clustering-cluster-transition-tab-mining-model-viewer"></a>シーケンス クラスターの [状態遷移] タブ (マイニング モデル ビューアー)
-  
   **Microsoft シーケンス クラスター ビューアー** の **[状態遷移]** タブでは、選択したクラスターにおける属性と値のペア間または状態間の遷移を詳細に調べることができます。  
   
  パターンを表示するには、シーケンス クラスタリング モデルのこのビューを使用します。 ダイアグラム内のリンクは遷移の確率を表し、ノードはシーケンスの状態を表します。  
   
- **詳細情報:** [Microsoft](data-mining/microsoft-sequence-clustering-algorithm.md)シーケンスクラスターアルゴリズム、 [Microsoft シーケンスクラスタービューアーを使用したモデルの参照](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **詳細:** [Microsoft シーケンス クラスター アルゴリズム](data-mining/microsoft-sequence-clustering-algorithm.md)、 [Microsoft シーケンス クラスター ビューアーを使用したモデルの参照](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>オプション  
  **[ビューアーのコンテンツを最新状態に更新]**  
  ビューアーにマイニング モデルを再読み込みします。  
   
- **マイニングモデル**  
+ **[マイニング モデル]**  
  現在のマイニング構造に含まれているマイニング モデルから、表示するモデルを選択します。 関連付けられているビューアーが開き、マイニング モデルが表示されます。  
   
  **[ビューアー]**  

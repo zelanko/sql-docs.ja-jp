@@ -15,19 +15,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 743f8d8930652deadf3698ea16440b3361ae1789
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059073"
 ---
 # <a name="execute-process-task-editor-general-page"></a>[プロセス実行タスク エディター]\([全般] ページ)
-  
   **[プロセス実行タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、プロセス実行タスクの名前と説明を入力できます。  
   
  このタスクの詳細については、「 [Execute Process Task](control-flow/execute-process-task.md)」を参照してください。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **名前**  
  プロセス実行タスクの固有の名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   

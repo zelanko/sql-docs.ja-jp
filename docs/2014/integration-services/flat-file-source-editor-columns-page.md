@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f8fda95b51f568098b0ac9fc13b8a204adb71c51
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058612"
 ---
 # <a name="flat-file-source-editor-columns-page"></a>[フラット ファイル ソース エディター]\ ([列] ページ)
-  
   **[フラット ファイル ソース エディター]** ダイアログ ボックスの **[列]** ノードを使用すると、出力列を各外部 (変換元) 列にマップできます。  
   
 > [!NOTE]  
@@ -34,7 +33,7 @@ ms.locfileid: "66058612"
  **使用できる外部列**  
  データ ソース内の使用できる外部列の一覧を表示します。 このテーブルを使用して列を追加または削除することはできません。  
   
- **[外部列]**  
+ **外部列**  
  タスクで外部 (変換元) 列を読み取る順序を表示します。 この順序を変更するには、テーブルで選択した列を消去してから、別の順序で一覧から外部列を選択します。  
   
  **出力列**  

@@ -13,21 +13,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6825417c53e0b0f9eb79e42e1a38737f6a60ce63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069317"
 ---
 # <a name="select-objects-linked-object-wizard"></a>[オブジェクトの選択] (リンク オブジェクト ウィザード)
-  
   **[オブジェクトの選択]** ページを使用すると、リンクまたはインポートするオブジェクトを選択できます。  
   
 > [!NOTE]  
 >  ディメンションおよび (関連するメジャーを含む) メジャー グループがリンクされます。 アクション、主要業績評価指標 (KPI)、および計算がインポートされます。  
   
 ## <a name="options"></a>オプション  
- **[使用できるオブジェクト]**  
+ **Available objects**  
  リンクまたはインポートするオブジェクトを選択します。  
   
 > [!NOTE]  
