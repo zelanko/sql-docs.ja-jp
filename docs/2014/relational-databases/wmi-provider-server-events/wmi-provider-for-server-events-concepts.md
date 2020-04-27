@@ -17,10 +17,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3a0ef44b57e092c13b4046b250c99fca5eaea101
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211577"
 ---
 # <a name="wmi-provider-for-server-events-concepts"></a>WMI Provider for Server Events の概念
@@ -36,7 +36,7 @@ ms.locfileid: "68211577"
  [WMI Provider for Server Events と WQL の使用](using-wql-with-the-wmi-provider-for-server-events.md)  
  WQL (WMI Query Language) 構文について概要を示し、プロバイダーに対するプログラミングでこの構文を使用する方法について説明します。  
   
- [サンプル : WMI Provider for Server Events の使用による SQL Server エージェント警告の作成](sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md)  
+ [サンプル:WMI Provider for Server Events の使用による SQL Server エージェント警告の作成](sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md)  
  WMI プロバイダーを使用してトレース イベント情報を返し、これに対して SQL Server エージェント警告を作成する例を示します。  
   
  [サンプル : .NET Framework での WMI イベント プロバイダーの使用](sample-using-the-wmi-event-provider-with-the-net-framework.md)  

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f5fca9032df4f1327933580a306215fd2fd47854
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211815"
 ---
 # <a name="rename-columns-database-engine"></a>列名の変更 (データベース エンジン)
@@ -30,7 +30,7 @@ ms.locfileid: "68211815"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **列名を変更する方法:**  
   
@@ -38,17 +38,17 @@ ms.locfileid: "68211815"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
  列名を変更しても、その列に対する参照の名前は自動的には変更されません。 名前を変更した列を参照しているオブジェクトに対しては、手動で変更を加える必要があります。 たとえば、テーブルの列の名前を変更するとき、その列がトリガーで参照されている場合は、新しい列名が反映されるようにトリガーに変更を加える必要があります。 オブジェクトの名前を変更する前には、 [sys.sql_expression_dependencies](/sql/relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql) を使ってオブジェクトの従属関係を一覧表示できます。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  オブジェクトに対する ALTER 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-rename-a-column-using-object-explorer"></a>オブジェクト エクスプ ローラーを使用して列の名前を変更するには  
   
@@ -64,12 +64,12 @@ ms.locfileid: "68211815"
   
 2.  **[列名]** の下の変更する名前を選択して、新しい名前を入力します。  
   
-3.  **[ファイル]** メニューの **[<_テーブル名_> を保存]** をクリックします。  
+3.  **[ファイル]** メニューの **[_<テーブル名>_ を保存]** をクリックします。  
   
 > [!NOTE]  
 >  **[列のプロパティ]** タブで列の名前を変更することもできます。名前を変更する列を選択して、 **[名前]** に新しい値を入力します。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  **列名を変更するには**  
   
 #### <a name="to-rename-a-column"></a>列名を変更するには  
@@ -78,7 +78,7 @@ ms.locfileid: "68211815"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  3. 次の例では、`TerritoryID` テーブル内の `Sales.SalesTerritory` 列の名前を `TerrID` に変更します。 次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
+3.  3. 次の例では、`Sales.SalesTerritory` テーブル内の `TerritoryID` 列の名前を `TerrID` に変更します。 次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
     ```  
     USE AdventureWorks2012;  
@@ -87,6 +87,6 @@ ms.locfileid: "68211815"
     GO  
     ```  
   
- 詳細については、「 [sp_rename &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-rename-transact-sql)」を参照してください。  
+ 詳細については、「[sp_rename &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-rename-transact-sql)」を参照してください。  
   
   

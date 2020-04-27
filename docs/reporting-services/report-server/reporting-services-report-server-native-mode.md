@@ -1,6 +1,6 @@
 ---
 title: Reporting Services レポート サーバー (ネイティブ モード) | Microsoft Docs
-ms.date: 06/06/2019
+ms.date: 04/21/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4a0e3f521549bb309fcbd69fc7905746be09d84b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4d4a78281f9e42921f31f8d02c5f167dd13d06d5
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66826897"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82086841"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services Report Server (Native Mode)
   ネイティブ モード用に構成されたレポート サーバーは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]コンポーネントのみを通じてすべての処理機能と管理機能を提供するアプリケーション サーバーとして実行されます。  
@@ -50,9 +50,13 @@ ms.locfileid: "66826897"
 -   レポート サーバー コンピューターのローカル Administrator グループのメンバーシップ。 リモート コンピューターで実行されるサーバー機能がインストールに含まれている場合に、リモート接続を介してサーバーを管理するには、リモート コンピューターの管理者権限が必要です。  
   
 -   データベースをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのデータベース管理者権限。  
-  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をドメイン コントローラーにインストールする場合は、ドメイン管理者のアクセス許可が必要です。  
-  
+
+::: moniker-end
+
 ##  <a name="managing-content"></a><a name="bkmk_managecontent"></a> コンテンツの管理  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、コンテンツ管理はレポート、モデル、フォルダー、リソース、および共有データ ソースの管理を指します。 これらのすべてのアイテムは、プロパティおよびセキュリティの設定をとおして、個別に管理できます。 アイテムは、レポート サーバー フォルダー名前空間内のさまざまな場所に移動できます。 アイテムを効率的に管理するには、コンテンツ マネージャーで実行されるタスクを理解しておく必要があります。  
   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 509c2735475b7113887a2291ac6cdfb67dfc865a
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 70de1a4d2508a955510eb160af5622d7c1252520
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528726"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81727927"
 ---
 # <a name="using-advanced-data-types"></a>高度なデータ型の使用
 
@@ -77,7 +77,7 @@ rs.next();
 InputStream is = rs.getBinaryStream(2);  
 ```
 
-また、[getBytes](../../connect/jdbc/reference/getbytes-method-sqlserverresultset.md) メソッドを使用し、次のように byte 配列としてデータを読み取ることもできます。  
+また、[getBytes](reference/getbytes-method-sqlserverresultset.md) メソッドを使用し、次のように byte 配列としてデータを読み取ることもできます。  
 
 ```java
 ResultSet rs = stmt.executeQuery("SELECT photo FROM mypics");  
@@ -123,7 +123,7 @@ try (PreparedStatement pstmt = con.prepareStatement("INSERT INTO test1 (Col1, Co
 
 ### <a name="modifying-large-value-types-in-a-database"></a>データベースの大きな値の型の変更
 
-多くの場合、データベース上の大きい値を更新または変更する際は、`UPDATE`、`WRITE`、`SUBSTRING` などの [!INCLUDE[tsql](../../includes/tsql-md.md)] コマンドを使用して、[SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) クラスおよび [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) クラス経由でパラメーターを渡して行うことをお勧めします。  
+多くの場合、データベース上の大きい値を更新または変更する際は、`UPDATE`、`WRITE`、`SUBSTRING` などの [!INCLUDE[tsql](../../includes/tsql-md.md)] コマンドを使用して、[SQLServerPreparedStatement](reference/sqlserverpreparedstatement-class.md) クラスおよび [SQLServerCallableStatement](reference/sqlservercallablestatement-class.md) クラス経由でパラメーターを渡して行うことをお勧めします。  
 
 アーカイブされた HTML ファイルなどの大きいテキスト ファイル内で、ある単語を置き換える必要がある場合は、次のように Clob オブジェクトを使用することができます。  
 
@@ -173,12 +173,12 @@ JDBC ドライバーにおける **xml** データ型の実装では、以下の
   
 ## <a name="sql_variant-data-type"></a>Sql_variant データ型
 
-sql_variant データ型の詳細については、「[Sql_variant データ型の使用](../../connect/jdbc/using-sql-variant-datatype.md)」を参照してください。  
+sql_variant データ型の詳細については、「[Sql_variant データ型の使用](using-sql-variant-datatype.md)」を参照してください。  
 
 ## <a name="spatial-data-types"></a>空間データ型
 
-空間データ型の詳細については、「[空間データ型の使用](../../connect/jdbc/use-spatial-datatypes.md)」を参照してください。  
+空間データ型の詳細については、「[空間データ型の使用](use-spatial-datatypes.md)」を参照してください。  
 
 ## <a name="see-also"></a>関連項目
 
-[JDBC ドライバーのデータ型について](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+[JDBC ドライバーのデータ型について](understanding-the-jdbc-driver-data-types.md)  

@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5011daf52b7eb5a14fb97ff3d39691caf4a563c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68210775"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>スナップショット レプリケーションおよびトランザクション レプリケーションのバックアップと復元の方式
@@ -217,7 +217,7 @@ ms.locfileid: "68210775"
   
     2.  既定では、ディストリビューション エージェントが連続的に実行されるように設定されているため、すべてのノードに自動的にトークンが送信されます。 ディストリビューション エージェントが連続モードで実行されていない場合は、エージェントを実行します。 詳細については、「[レプリケーション エージェント実行可能ファイルの概念](../concepts/replication-agent-executables-concepts.md)」または「[レプリケーション エージェントを起動および停止する &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)」を参照してください。 手順 c. に進みます。  
   
-    3.  手順[](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql)b で取得し**@request_id**た値を指定して sp_helppeerresponses を実行します。 すべてのノードがピア要求を受信するまで待機します。 手順 d. に進みます。  
+    3.  手順[sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql)b で取得し**@request_id**た値を指定して sp_helppeerresponses を実行します。 すべてのノードがピア要求を受信するまで待機します。 手順 d. に進みます。  
   
     4.  [DBCC CHECKIDENT](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql) を使用してデータベース **B** の各テーブルを再作成し、適切な範囲が使用されていることを確認します。 手順 10 に進みます。  
   
@@ -233,7 +233,7 @@ ms.locfileid: "68210775"
   
     3.  既定では、ディストリビューション エージェントが連続的に実行されるように設定されているため、すべてのノードに自動的にトークンが送信されます。 ディストリビューション エージェントが連続モードで実行されていない場合は、エージェントを実行します。 手順 d. に進みます。  
   
-    4.  手順[](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql)b で取得し**@request_id**た値を指定して sp_helppeerresponses を実行します。 すべてのノードがピア要求を受信するまで待機します。 手順 e. に進みます。  
+    4.  手順[sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql)b で取得し**@request_id**た値を指定して sp_helppeerresponses を実行します。 すべてのノードがピア要求を受信するまで待機します。 手順 e. に進みます。  
   
     5.  データベース **C** のパブリケーションに対するサブスクリプションをデータベース **B**で再作成します。その際に、サブスクライバーにデータが格納済みであることを指定します。 手順 b. に進みます。  
   

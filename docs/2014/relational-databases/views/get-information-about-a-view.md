@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f439a52c1f2d13ed3d3d7fc96030df9c6e020b2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211644"
 ---
 # <a name="get-information-about-a-view"></a>ビューに関する情報の取得
@@ -46,14 +46,14 @@ ms.locfileid: "68211644"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  `sp_helptext` を使用してビューの定義を返すには、 **public** ロールのメンバーシップが必要です。 `sys.sql_expression_dependencies` を使用してビューのすべての依存関係を見つけるには、データベースに対する VIEW DEFINITION 権限とデータベースの `sys.sql_expression_dependencies` に対する SELECT 権限が必要です。 SELECT OBJECT_DEFINITION で返されるようなシステム オブジェクトの定義は公開されます。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="get-view-properties-by-using-object-explorer"></a>オブジェクト エクスプローラーを使用してビューのプロパティを取得する  
   
@@ -75,7 +75,7 @@ ms.locfileid: "68211644"
      **[作成日]**  
      ビューが作成された日付を表示します。  
   
-     **名前**  
+     **Name**  
      現在のビューの名前です。  
   
      **[スキーマ]**  
@@ -175,7 +175,7 @@ ms.locfileid: "68211644"
   
 4.  ビューによって参照されるオブジェクトを表示するには、 **[[ビュー名] が依存するオブジェクト]** を選択します。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-get-the-definition-and-properties-of-a-view"></a>ビューの定義およびプロパティを取得するには  
   

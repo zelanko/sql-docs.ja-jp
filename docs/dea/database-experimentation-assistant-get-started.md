@@ -13,10 +13,10 @@ ms.author: rajsell
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 36e36060e16ff85ba2b1fa58d9d900231cf6581f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75258520"
 ---
 # <a name="overview-of-the-workload-comparison-process"></a>ワークロード比較プロセスの概要
@@ -63,6 +63,6 @@ A/B テスト SQL Server の2番目の段階では、2つの対象サーバー�
 - 1つ以上のコンポーネントが不足している場合は、新しい分析レポートを生成しようとすると (インターネット接続が必要)、[前提条件] ページがダウンロードのリンクと共に表示されます。
 - 以前のバージョンのツールで生成されたレポートを表示するには、最初にスキーマを更新する必要があります。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - サーバーで発生するイベントのログを使用してトレースファイルを生成する方法については、「 [Database Experimentation Assistant でトレースをキャプチャ](database-experimentation-assistant-capture-trace.md)する」を参照してください。

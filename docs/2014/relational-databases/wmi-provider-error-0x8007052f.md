@@ -13,10 +13,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: c1668c2b4c96f23283f0eca87fdbac591f52b75f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211600"
 ---
 # <a name="wmi-error-0x8007052f"></a>WMI エラー 0x8007052f
@@ -29,7 +29,7 @@ ms.locfileid: "68211600"
 |イベント ID|0x8007052f|  
 |イベント ソース|WMI プロバイダー エラー|  
 |コンポーネント|SQL Server 構成マネージャー|  
-|シンボル名|NA|  
+|シンボル名|N/A|  
 |メッセージ テキスト|ログオン失敗: ユーザー アカウントの制限。 考えられる原因として、空のパスワードが許可されていない、ログオン時間制限、またはポリシーによる制限が適用されたことなどが挙げられます。|  
   
 ## <a name="explanation"></a>説明  

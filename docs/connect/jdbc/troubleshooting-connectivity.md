@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: adb1203276e64f21f1834fc0ce0f0b5bb12a9321
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 12abdfd169aaea9f2108d2b4776eb99cc4bd2ce7
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528336"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728391"
 ---
 # <a name="troubleshooting-connectivity"></a>接続性のトラブルシューティング
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "81528336"
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合、JDBC ドライバーでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が既定ではない [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証でインストールされている必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスをインストールまたは構成するときに、このオプションが選択されていることを確認します。  
   
 ## <a name="see-also"></a>関連項目  
- [JDBC ドライバーに関する問題の診断](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)   
- [JDBC ドライバーによる SQL Server への接続](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
+ [JDBC ドライバーに関する問題の診断](diagnosing-problems-with-the-jdbc-driver.md)   
+ [JDBC ドライバーによる SQL Server への接続](connecting-to-sql-server-with-the-jdbc-driver.md)  
   
   

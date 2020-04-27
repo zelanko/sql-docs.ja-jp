@@ -2,7 +2,6 @@
 title: 既定のスキーマを使用する OPENJSON の使用
 ms.date: 06/02/2016
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,17 +9,18 @@ helpviewer_keywords:
 ms.assetid: 8e28a8f8-71a8-4c25-96b8-0bbedc6f41c4
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: genemi
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3e4aac74ac35fc5d75320b420e85b130be110340
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 633737d8dd302d6546662fb048c3f3e1ea50c19b
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74096035"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087362"
 ---
-# <a name="use-openjson-with-the-default-schema-sql-server"></a>既定のスキーマを使用する OPENJSON の使用 (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="use-openjson-with-the-default-schema"></a>既定のスキーマを使用する OPENJSON の使用 
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   オブジェクトのプロパティごと、または配列内の要素ごとに 1 つの行が含まれたテーブルを返すには、既定のスキーマを使用して **OPENJSON** を使用します。  
   
@@ -39,7 +39,7 @@ FROM OPENJSON('{"name":"John","surname":"Doe","age":45}')
 |Key|値|  
 |---------|-----------|  
 |name|John|  
-|姓|Doe|  
+|surname|Doe|  
 |age|45|  
   
 ## <a name="example---return-each-element-of-an-array"></a>例 - 配列の各要素を返す  
@@ -85,7 +85,7 @@ FROM OPENJSON(@json,N'lax $.info')
   
  **結果**  
   
-|Key|値|種類|  
+|Key|値|Type|  
 |---------|-----------|----------|  
 |type|1|0|  
 |address|{ "town":"Bristol", "county":"Avon", "country":"England" }|5|  
