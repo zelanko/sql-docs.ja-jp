@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 32ee1539c734c549f89d5b3db8ec4add467a72b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070591"
 ---
 # <a name="profit-chart-sql-server-data-mining-add-ins"></a>利益チャート (SQL Server データ マイニング アドイン)
@@ -67,7 +67,7 @@ ms.locfileid: "66070591"
   
 7.  ウィザードによって、モデルのコストとメリットに関する分析のチャートが作成されます。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  不連続な数値を予測する場合は、予測する正確なターゲット値を選択する必要があります。  
   
 ## <a name="understanding-the-profit-chart"></a>利益チャートについて  

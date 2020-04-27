@@ -11,21 +11,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: eb70d7d495d88ee62e98bf27f2b92bf569c98387
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078190"
 ---
-# <a name="lesson-10-create-hierarchies"></a>レッスン 10: 階層の作成
-  このレッスンでは、階層を作成します。 階層は、レベルに分類された列のグループです。たとえば、Geography (地理的な場所) 階層には、Country (国)、State (州)、County (郡)、City (市) などの下位階層があります。 階層は、レポートするクライアント アプリケーションのフィールド リストにある他の列とは別に表示できます。階層を使用すれば、クライアント ユーザーが列をより簡単に探してレポートに含めることができます。 詳細については、[「階層 (SSAS テーブル)」](tabular-models/hierarchies-ssas-tabular.md) を参照してください。  
+# <a name="lesson-10-create-hierarchies"></a>レッスン 10: 階層を作成する
+  このレッスンでは、階層を作成します。 階層は、複数のレベルに分類された列のグループです。たとえば、Geography という階層に、Country、State、County、および City というサブレベルを含めることができます。 階層は、レポートするクライアント アプリケーションのフィールド リストにある他の列とは別に表示できます。階層を使用すれば、クライアント ユーザーが列をより簡単に探してレポートに含めることができます。 詳細については、[「階層 (SSAS テーブル)」](tabular-models/hierarchies-ssas-tabular.md) を参照してください。  
   
  階層を作成するには、 *ダイアグラム ビュー*のモデル デザイナーを使用します。 階層の作成と管理は、データ ビューのモデル デザイナーではサポートされていません。  
   
  このレッスンの推定所要時間: **20 分**  
   
 ## <a name="prerequisites"></a>前提条件  
- このトピックは、表形式モデルのチュートリアルの一部であり、順番に従って実行する必要があります。 このレッスンの実習を行う前に、前のレッスン [「レッスン 9: パースペクティブの作成」](lesson-8-create-perspectives.md)を完了している必要があります。  
+ このトピックは、表形式モデルのチュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンの実習を行う前に、前のレッスン [「レッスン 9: パースペクティブの作成」](lesson-8-create-perspectives.md)を完了している必要があります。  
   
 ## <a name="create-hierarchies"></a>階層を作成する  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66078190"
     > [!TIP]  
     >  モデル デザイナーの右上にあるミニマップ コントロールを使用すると、ダイアグラム ビューでのオブジェクトの表示方法を変更できます。 ダイアグラム ビューでモデルを移動した場合、プロジェクトを保存する際にそのビューが保持されます。  
   
-2.  モデルデザイナーで`Product`テーブルを右クリックし、[**階層の作成**] をクリックします。 テーブル ウィンドウの一番下に、新しい階層が表示されます。  
+2.  モデルデザイナーで`Product`テーブルを右クリックし、[**階層の作成**] をクリックします。 テーブル ウィンドウの下部に新しい階層が表示されます。  
   
 3.  階層名に「」と入力`Category`して階層の名前を変更し、enter キーを押します。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66078190"
 5.  階層で、 **Product Category Name**列を右クリックし、[名前の**変更**] をクリックし`Category`て「」と入力します。 `Category`  
   
     > [!NOTE]  
-    >  階層内で列の名前を変更しても、テーブル内でその列の名前は変更されません。 階層内の列は、テーブル内の列のみを表しています。  
+    >  階層内の列の名前を変更しても、テーブル内のその列の名前は変更されません。 階層内の列は、テーブル内の列の 1 つの表現形態に過ぎません。  
   
 6.  テーブルで、 **Product サブカテゴリ名**列を右クリックし、コンテキストメニューで [**階層に追加**] をポイントして、[] `Category`をクリックします。 `Product`  
   
@@ -63,18 +63,17 @@ ms.locfileid: "66078190"
   
     |列|変更後の名前|  
     |------------|----------------|  
-    |Calendar Year|年|  
+    |Calendar Year|Year|  
     |Calendar Semester|Semester|  
     |Calendar Quarter|Quarter|  
     |Month Calendar|月|  
     |Day Of Month|日|  
   
-4.  
-  **Date** テーブルで上記の手順を繰り返し、次の列を含んだ **Fiscal** 階層を作成します。  
+4.  **Date** テーブルで上記の手順を繰り返し、次の列を含んだ **Fiscal** 階層を作成します。  
   
     |列|変更後の名前|  
     |------------|----------------|  
-    |Fiscal Year|年|  
+    |Fiscal Year|Year|  
     |Fiscal Semester|Semester|  
     |Fiscal Quarter|Quarter|  
     |Month Calendar|月|  
@@ -84,8 +83,8 @@ ms.locfileid: "66078190"
   
     |列|変更後の名前|  
     |------------|----------------|  
-    |Calendar Year|年|  
-    |Week Number Of Year|週|  
+    |Calendar Year|Year|  
+    |Week Number Of Year|Week|  
     |Day Of Week|日|  
   
 ## <a name="next-steps"></a>次の手順  

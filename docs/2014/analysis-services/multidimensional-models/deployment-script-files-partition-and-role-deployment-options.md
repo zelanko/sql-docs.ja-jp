@@ -23,10 +23,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b9b36013f13360a2afcf9546cd1e286b35ae4acd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075352"
 ---
 # <a name="specifying-partition-and-role-deployment-options"></a>パーティションおよびロールの配置オプションの指定
@@ -41,7 +41,7 @@ ms.locfileid: "66075352"
 > [!NOTE]  
 >  パーティションが含まれているメジャー グループを削除すると、パーティションも自動的に削除されます。  
   
- **ロールの配置オプション**  
+ **ロール配置オプション**  
  \<*プロジェクト名*> deploymentoptions ファイルは、次のいずれかのロール配置オプションを指定します。  
   
 -   配置先データベースの既存のロールおよびロール メンバーは保持され、新しいロールおよびロール メンバーのみが配置されます。  
@@ -50,7 +50,7 @@ ms.locfileid: "66075352"
   
 -   配置先データベースの既存のロールおよびロール メンバーは保持され、新しいロールは配置されません。  
   
--   **メモ**既存のロールおよびメンバーが保持されている場合、それらのロールに関連付けられている権限は [なし] にリセットされます。 セキュリティ権限は、オブジェクトが関連付けられているセキュリティ ロールではなく、オブジェクト自体に含まれています。 Analysis Service 配置ウィザードを使用してこの動作を操作する方法の詳細については、Microsoft サポート技術情報の「ロールとメンバーの保持」を参照してください。  
+-   **注** 既存のロールおよびメンバーが保持される場合、これらのロールに関連付けられた権限はリセットされてなくなります。 セキュリティ権限は、オブジェクトが関連付けられているセキュリティ ロールではなく、オブジェクト自体に含まれています。 Analysis Service 配置ウィザードを使用してこの動作を操作する方法の詳細については、Microsoft サポート技術情報の「ロールとメンバーの保持」を参照してください。  
   
 ## <a name="modifying-the-partition-and-role-deployment-options"></a>パーティションおよびロールの配置オプションの変更  
  プロジェクト\<*名*> deploymentoptions ファイルに[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]格納されているものとは異なるパーティションおよびロールオプションを使用して、プロジェクトを配置することが必要になる場合があります。 たとえば、 \<*プロジェクト名*> deploymentoptions ファイルに示されている既存のすべてのパーティション、ロール、およびメンバーを置き換えるのではなく、既存のパーティション、ロール、およびロールメンバーを保持することができます。  
@@ -59,15 +59,13 @@ ms.locfileid: "66075352"
   
 #### <a name="to-change-the-deployment-of-partitions-or-roles-after-the-input-files-have-been-generated"></a>入力ファイルの生成後にパーティションまたはロールの配置を変更するには  
   
--   
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置ウィザードを対話形式で実行し、 **[パーティションとロールのオプションの指定]** ページで、パーティションおよびロールの新しい配置オプションを指定します。  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置ウィザードを対話形式で実行し、 **[パーティションとロールのオプションの指定]** ページで、パーティションおよびロールの新しい配置オプションを指定します。  
   
-     または  
+     \- または -  
   
--   
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置ウィザードをコマンド プロンプトで実行し、ウィザードを応答ファイル モードで実行するように設定します。 (応答ファイル モードの詳細については、「 [Analysis Services 配置ウィザードの実行](running-the-analysis-services-deployment-wizard.md)」を参照してください。)  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置ウィザードをコマンド プロンプトで実行し、ウィザードを応答ファイル モードで実行するように設定します。 (応答ファイルモードの詳細については、「 [Analysis Services 配置ウィザードの実行](running-the-analysis-services-deployment-wizard.md)」を参照してください)。  
   
-     または  
+     \- または -  
   
 -   \<任意のテキストエディターで*プロジェクト名*> deploymentoptions を開き、オプションを手動で変更します。  
   

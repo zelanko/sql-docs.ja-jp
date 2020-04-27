@@ -15,14 +15,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1eabb28250699305952d1d0746dc9487a1a25271
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076715"
 ---
 # <a name="configure-analysis-services-project-properties-ssdt"></a>Analysis Services プロジェクトのプロパティの構成 (SSDT)
-  
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの構築と配置に影響する既定のプロパティで定義されています。  
   
  プロジェクト プロパティを変更するには、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクト オブジェクトを右クリックし、 **[プロパティ]** をクリックします。 または、[プロジェクト] メニューの **[プロパティ]** をクリックすることもできます。  
@@ -30,7 +29,7 @@ ms.locfileid: "66076715"
 ## <a name="property-description"></a>[プロパティの説明]  
  次の表に、プロジェクトの各プロパティの説明、それらの既定値、および値の変更に関する情報を示します。  
   
-|プロパティ|既定の設定|[説明]|  
+|プロパティ|既定の設定|説明|  
 |--------------|---------------------|-----------------|  
 |構築 / 配置サーバーのエディション|プロジェクトの開発に使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエディション|最終的にプロジェクトを配置するサーバーのエディションを指定します。 1 つのプロジェクトに複数の開発者がいる場合、どの機能を [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトに組み込むかを知るには、開発者がサーバーのエディションを理解していることが必要です。|  
 |構築 / 配置サーバーのエディション|プロジェクトの開発に使用するバージョン|最終的にプロジェクトを配置するサーバーのバージョンを指定します。|  
@@ -52,6 +51,6 @@ ms.locfileid: "66076715"
   
 ## <a name="see-also"></a>参照  
  [ビルド Analysis Services プロジェクト &#40;SSDT&#41;](build-analysis-services-projects-ssdt.md)   
- [Analysis Services プロジェクト &#40;SSDT&#41;に配置する](deploy-analysis-services-projects-ssdt.md)  
+ [Analysis Services プロジェクトの配置 &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
   
   

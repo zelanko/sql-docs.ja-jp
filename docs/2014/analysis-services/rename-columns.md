@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80d9cae6deae4059327084f531f6a6d958a39ec6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070316"
 ---
-# <a name="lesson-3-rename-columns"></a>レッスン 3: 列名の変更
+# <a name="lesson-3-rename-columns"></a>レッスン 3:列名の変更
   このレッスンでは、インポートした各テーブル内の多くの列の名前を変更します。 名前を変更することで、列がより識別しやすくなり、モデル デザイナー内でも、またクライアント アプリケーションでユーザーがフィールドを選択する際にも、移動が行いやすくなります。 詳細については、「[テーブルまたは列名の変更 (SSAS テーブル)](tabular-models/rename-a-table-or-column-ssas-tabular.md)」を参照してください。  
   
 > [!IMPORTANT]  
@@ -26,7 +26,7 @@ ms.locfileid: "66070316"
  このレッスンの推定所要時間: **20 分**  
   
 ## <a name="prerequisites"></a>前提条件  
- このトピックは、表形式モデルのチュートリアルの一部であり、順番に従って実行する必要があります。 このレッスンの実習を行う前に、前のレッスン「 [レッスン 2: データの追加](lesson-2-add-data.md)」を完了している必要があります。  
+ このトピックは、表形式モデルのチュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンの実習を行う前に、前のレッスン「 [レッスン 2: データの追加](lesson-2-add-data.md)」を完了している必要があります。  
   
 ## <a name="rename-columns"></a>列名の変更  
   
@@ -41,8 +41,7 @@ ms.locfileid: "66070316"
     > [!TIP]  
     >  列の名前を変更するには、列の [**プロパティ**] ウィンドウまたはダイアグラムビューの [**列名**] プロパティを使用することもできます。  
   
-3.  
-  **Customer** テーブル内の残りの列と、その他のテーブル内の列についても、ソース名を次の表示名に置き換えて名前変更します。  
+3.  **Customer** テーブル内の残りの列と、その他のテーブル内の列についても、ソース名を次の表示名に置き換えて名前変更します。  
   
      **Customer テーブル**  
   
@@ -70,11 +69,11 @@ ms.locfileid: "66070316"
     |DateFirstPurchase|Date of First Purchase|  
     |CommuteDistance|Commute Distance|  
   
-     **予定**  
+     **Date**  
   
     |ソース名|フレンドリ名|  
     |-----------------|-------------------|  
-    |FullDateAlternateKey|Date|  
+    |FullDateAlternateKey|日付|  
     |DayNumberOfWeek|Day Number of Week|  
     |EnglishDayNameOfWeek|Day Name|  
     |DayNumberOfMonth|Day of Month|  
@@ -89,7 +88,7 @@ ms.locfileid: "66070316"
     |FiscalYear|Fiscal Year|  
     |FiscalSemester|Fiscal Semester|  
   
-     **Geography**  
+     **地理的な場所**  
   
     |ソース名|フレンドリ名|  
     |-----------------|-------------------|  
@@ -101,7 +100,7 @@ ms.locfileid: "66070316"
     |PostalCode|郵便番号|  
     |SalesTerritoryKey|Sales Territory Id|  
   
-     **Product**  
+     **梱包**  
   
     |ソース名|フレンドリ名|  
     |-----------------|-------------------|  
@@ -122,10 +121,10 @@ ms.locfileid: "66070316"
     |Dealer Price|Dealer Price|  
     |ModelName|Model Name|  
     |LargePhoto|Large Photo|  
-    |EnglishDescription|[説明]|  
+    |EnglishDescription|説明|  
     |StartDate|Product Start Date|  
     |EndDate|Product End Date|  
-    |Status|Product Status|  
+    |状態|Product Status|  
   
      **製品カテゴリ**  
   
@@ -144,7 +143,7 @@ ms.locfileid: "66070316"
     |EnglishProductSubcategoryName|Product Subcategory Name|  
     |ProductCategoryKey|Product Category Id|  
   
-     **インターネット販売**  
+     **Internet Sales**  
   
     |ソース名|フレンドリ名|  
     |-----------------|-------------------|  
@@ -171,7 +170,7 @@ ms.locfileid: "66070316"
     |DueDate|Due Date|  
     |ShipDate|Ship Date|  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
  このチュートリアルを続行するには、次のレッスン「 [レッスン 4: 日付テーブルとしてマーク](lesson-3-mark-as-date-table.md)」に進んでください。  
   
   

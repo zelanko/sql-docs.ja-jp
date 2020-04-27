@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3ff4e330950a3fca54ba8ab08456157156836c0f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077589"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>アクション (Analysis Services - 多次元データ)
@@ -40,8 +40,7 @@ ms.locfileid: "66077589"
   
  条件は、アクション イベント時に評価される、`Boolean` 型の MDX 式です。 条件が `true` と評価された場合に、アクションが実行されます。 それ以外の場合、アクションは実行されません。  
   
- 種類は、実行されるアクションの種類です。 
-  <xref:Microsoft.AnalysisServices.Action> は抽象クラスであるため、これを使用するにはその派生クラスのいずれかを使用する必要があります。 2 種類のアクションが事前定義されています。ドリルスルーおよびレポートです。 これらのアクションには次の対応する派生クラスがあります: <xref:Microsoft.AnalysisServices.DrillThroughAction> と <xref:Microsoft.AnalysisServices.ReportAction>」を参照してください。 その他のアクションは、 <xref:Microsoft.AnalysisServices.StandardAction> クラスに含まれます。  
+ 種類は、実行されるアクションの種類です。 <xref:Microsoft.AnalysisServices.Action> は抽象クラスであるため、これを使用するにはその派生クラスのいずれかを使用する必要があります。 2 種類のアクションが事前定義されています。ドリルスルーおよびレポートです。 これらのアクションには次の対応する派生クラスがあります: <xref:Microsoft.AnalysisServices.DrillThroughAction> と <xref:Microsoft.AnalysisServices.ReportAction>」を参照してください。 その他のアクションは、 <xref:Microsoft.AnalysisServices.StandardAction> クラスに含まれます。  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]は、アクションは、クライアントアプリケーションによって提供および使用されるストアド MDX ステートメントです。 つまり、アクションとは、サーバーで定義され格納されたクライアント コマンドです。 また、クライアント アプリケーションによって MDX ステートメントを表示および処理するタイミングと方法を指定する情報も含まれています。 アクションで指定される操作では、アクションに含まれる情報をパラメーターとして使用してアプリケーションを起動したり、アクションで指定される条件に基づいて情報を取得することができます。  
   
@@ -57,7 +56,7 @@ ms.locfileid: "66077589"
 ## <a name="types-of-actions"></a>アクションの種類  
  次の表に、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]に含まれているアクションの種類を示します。  
   
-|アクションの種類|[説明]|  
+|アクションの種類|説明|  
 |-----------------|-----------------|  
 |CommandLine|コマンド プロンプトでコマンドを実行します。|  
 |データセット|データセットをクライアント アプリケーションに返します。|  
@@ -73,6 +72,6 @@ ms.locfileid: "66077589"
  コマンド オブジェクトが定義されているオブジェクトにビジネス ユーザーがアクセスすると、アクションに関連付けられているステートメントが自動的に解決されます。このため、クライアント アプリケーションでそのステートメントを利用できるようになりますが、アクションが自動的に実行されるわけではありません。 アクションは、ビジネス ユーザーがそのアクションを開始するクライアント固有の操作をしたときにのみ実行されます。 たとえば、クライアント アプリケーションでは、ビジネス ユーザーが特定のメンバーまたはセルを右クリックしたときに、ポップアップ メニューとしてアクションの一覧を表示できます。  
   
 ## <a name="see-also"></a>参照  
- [多次元モデルでのアクション](actions-in-multidimensional-models.md)  
+ [多次元モデルのアクション](actions-in-multidimensional-models.md)  
   
   

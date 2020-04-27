@@ -13,19 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0cc1b7eec5ceb3b74e575dce9fd5d1d71897a3f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081658"
 ---
 # <a name="dimension-wizard-f1-help"></a>ディメンション ウィザードの F1 ヘルプ
-  プロジェクトに[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]データベースディメンションを作成するには、のディメンションウィザードを使用します。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベース ディメンションを作成した後は、ディメンション デザイナーを使用してそのプロパティを変更できます。 ディメンション デザイナーの詳細については、「[ディメンション デザイナー (Analysis Services - 多次元データ)](dimension-designer-analysis-services-multidimensional-data.md)」を参照してください。  
+  プロジェクトに[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]データベースディメンションを作成するには、のディメンションウィザードを使用します。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベース ディメンションを作成した後は、ディメンション デザイナーを使用してそのプロパティを変更できます。 ディメンション デザイナーの詳細については、「[ディメンション デザイナー &#40;Analysis Services - 多次元データ&#41;](dimension-designer-analysis-services-multidimensional-data.md)」を参照してください。  
   
  **ディメンション ウィザードを開くには**  
   
--   
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]の **ソリューション エクスプローラー**で、 **プロジェクトの** [ディメンション] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] フォルダーを右クリックし、 **[新しいディメンション]** をクリックします。  
+-   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]の **ソリューション エクスプローラー**で、 **プロジェクトの** [ディメンション] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] フォルダーを右クリックし、 **[新しいディメンション]** をクリックします。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

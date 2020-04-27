@@ -17,22 +17,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b46e9e42d212ca8f92f905c241915fdccec679f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075884"
 ---
 # <a name="modify-or-delete-a-database-dimension-in-solution-explorer"></a>ソリューション エクスプローラーでのデータベース ディメンションの変更または削除
-  
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のディメンション デザイナーを使用して、ディメンションを変更または削除することができます。 ディメンションを変更した場合、そのディメンションを処理するまでユーザーは変更内容を利用できません。 詳細については、「[多次元モデルオブジェクトの処理](processing-a-multidimensional-model-analysis-services.md)」を参照してください。  
   
 ### <a name="to-modify-a-dimension-in-sql-server-data-tools"></a>SQL Server データ ツールでディメンションを変更するには  
   
 1.  ソリューション エクスプローラーで、変更するディメンションを右クリックし、 **[開く]** をクリックします。  
   
-2.  
-  **[ディメンション構造]** タブの **[属性]**、 **[階層]**、または **[データ ソース ビュー]** のいずれかのペインで、変更するアイテムをクリックして変更します。  
+2.  **[ディメンション構造]** タブの **[属性]**、 **[階層]**、または **[データ ソース ビュー]** のいずれかのペインで、変更するアイテムをクリックして変更します。  
   
      行うことができる変更の種類の詳細については、「[多次元モデルオブジェクトの処理](processing-a-multidimensional-model-analysis-services.md)」を参照してください。  
   

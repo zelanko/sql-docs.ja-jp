@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0a0ca45681866e0ba96edaa81c21445a89f94275
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070698"
 ---
 # <a name="process-data-ssas-tabular"></a>データの処理 (SSAS テーブル)
@@ -24,9 +24,9 @@ ms.locfileid: "66070698"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
-|[SSAS 表形式&#41;&#40;データを手動で処理する](manually-process-data-ssas-tabular.md)|モデル ワークスペース データを手動で処理する方法について説明します。|  
-|[SSAS 表形式&#41;&#40;データ処理のトラブルシューティング](troubleshoot-process-data-ssas-tabular.md)|処理操作のトラブルシューティング方法について説明します。|  
+|[データの手動処理 (SSAS テーブル)](manually-process-data-ssas-tabular.md)|モデル ワークスペース データを手動で処理する方法について説明します。|  
+|[データの処理のトラブルシューティング &#40;SSAS テーブル&#41;](troubleshoot-process-data-ssas-tabular.md)|処理操作のトラブルシューティング方法について説明します。|  
   
   

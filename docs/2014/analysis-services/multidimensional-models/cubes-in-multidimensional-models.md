@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7ce00bc87ca17c97996023d7cb9a4745b9882f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076105"
 ---
 # <a name="cubes-in-multidimensional-models"></a>多次元モデルのキューブ
@@ -31,26 +31,26 @@ ms.locfileid: "66076105"
 ## <a name="components-of-cubes"></a>キューブのコンポーネント  
  キューブは次の要素から構成されます。  
   
-|要素|[説明]|  
+|要素|説明|  
 |-------------|-----------------|  
 |Dimensions|[多次元モデル内のディメンション](dimensions-in-multidimensional-models.md)|  
-|メジャーおよびメジャー グループ|[多次元モデルでのメジャーとメジャーグループの作成](create-measures-and-measure-groups-in-multidimensional-models.md)|  
-|[メジャー グループ]|[多次元モデル内のパーティション](partitions-in-multidimensional-models.md)|  
+|メジャーおよびメジャー グループ|[多次元モデル内のメジャーおよびメジャー グループの作成](create-measures-and-measure-groups-in-multidimensional-models.md)|  
+|メジャー グループ|[多次元モデル内のパーティション](partitions-in-multidimensional-models.md)|  
 |パースペクティブ|[多次元モデルのパースペクティブ](perspectives-in-multidimensional-models.md)|  
 |階層|[ユーザー定義階層の作成](user-defined-hierarchies-create.md)|  
-|アクション|[多次元モデルでのアクション](actions-in-multidimensional-models.md)|  
-|主要業績評価指標 (KPI)|[多次元モデルの Kpi&#41; &#40;主要業績評価指標](key-performance-indicators-kpis-in-multidimensional-models.md)|  
+|Actions|[多次元モデルのアクション](actions-in-multidimensional-models.md)|  
+|主要業績評価指標 (KPI)|[多次元モデルの主要業績評価指標 &#40;KPI&#41;](key-performance-indicators-kpis-in-multidimensional-models.md)|  
 |[新しい名前付きセット]|[多次元モデルの計算](calculations-in-multidimensional-models.md)|  
 |翻訳|[多次元モデルの翻訳](translations-in-multidimensional-models-analysis-services.md)|  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[キューブ ウィザードを使用したキューブの作成](create-a-cube-using-the-cube-wizard.md)|キューブ ウィザードを使用して、キューブ、ディメンション、ディメンション属性、ユーザー定義階層を定義する方法を説明します。|  
-|[多次元モデルでのメジャーとメジャーグループの作成](create-measures-and-measure-groups-in-multidimensional-models.md)|メジャー グループを定義する方法について説明します。|  
+|[多次元モデル内のメジャーおよびメジャー グループの作成](create-measures-and-measure-groups-in-multidimensional-models.md)|メジャー グループを定義する方法について説明します。|  
 |[多次元モデルの計算](calculations-in-multidimensional-models.md)|MDX スクリプトで計算を定義して構成する方法を説明します。|  
-|[多次元モデルでのアクション](actions-in-multidimensional-models.md)|アクションを定義して構成する方法を説明します。|  
+|[多次元モデルのアクション](actions-in-multidimensional-models.md)|アクションを定義して構成する方法を説明します。|  
 |[多次元モデルのパースペクティブ](perspectives-in-multidimensional-models.md)|パースペクティブを定義して構成する方法を説明します。|  
 |[ストアド プロシージャの定義](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)|ストアド プロシージャを操作する方法について説明します。|  
   

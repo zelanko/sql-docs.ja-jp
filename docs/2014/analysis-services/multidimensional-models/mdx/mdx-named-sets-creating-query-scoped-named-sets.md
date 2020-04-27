@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a611d3d20d269bb9c3fa3a1f764181b1660713b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074067"
 ---
 # <a name="creating-query-scoped-named-sets-mdx"></a>クエリ スコープの名前付きセットの作成 (MDX)
@@ -43,8 +43,7 @@ FROM <SELECT subcube clause>
   
 ```  
   
- WITH キーワードの構文で使用する `Set_Identifier` パラメーターには、名前付きセットの別名を指定します。 
-  `Set_Expression` パラメーターには、名前付きセットの別名が参照するセット式を指定します。  
+ WITH キーワードの構文で使用する `Set_Identifier` パラメーターには、名前付きセットの別名を指定します。 `Set_Expression` パラメーターには、名前付きセットの別名が参照するセット式を指定します。  
   
 ## <a name="with-keyword-example"></a>WITH キーワードの例  
  以下に示すのは、Microsoft SQL Server 2000 Analysis Services のサンプル データベース `FoodMart 2000` に登録されている Chardonnay ワインと Chablis ワインの売上数量を調べる MDX クエリです。 このクエリは、結果セットという観点からすれば非常にシンプルですが、クエリの管理という観点から見ると長すぎて扱いが厄介です。  
@@ -95,6 +94,6 @@ FROM Sales
   
 ## <a name="see-also"></a>参照  
  [SELECT ステートメント &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
- [MDX&#41;&#40;セッションスコープの名前付きセットを作成する](mdx-named-sets-creating-session-scoped-named-sets.md)  
+ [セッション スコープの名前付きセットの作成 (MDX)](mdx-named-sets-creating-session-scoped-named-sets.md)  
   
   

@@ -15,25 +15,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97b391e24f98b230dbfe352e0cf1a574c7549984
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070020"
 ---
 # <a name="save-data-mining-query-result-dialog-box-mining-model-prediction-view"></a>[データ マイニングのクエリ結果を保存] ダイアログ ボックス ([マイニング モデル予測] ビュー)
-  
   **[データ マイニングのクエリ結果を保存]** ダイアログ ボックスを使用すると、新しいテーブルに、データ マイニング クエリの結果を保存できます。  
   
  この新しいテーブルは、データ ソースで定義されたデータベースに作成されます。  
   
 ## <a name="options"></a>オプション  
- **Data Source**  
+ **データ ソース**  
  現在のプロジェクトからデータ ソースを選択します。 適切なデータ ソースがない場合には、 **[新規作成]** をクリックして新しいデータ ソースを作成します。  
   
- **[新規作成]**  
- 
-  **データ ソース ウィザード**を開きます。  
+ **新しい**  
+ **データ ソース ウィザード**を開きます。  
   
  **テーブル名**  
  新しいテーブルの名前を入力します。  
@@ -59,6 +57,6 @@ ms.locfileid: "66070020"
 ## <a name="see-also"></a>参照  
  [予測クエリビルダー &#40;データマイニング&#41;](prediction-query-builder-data-mining.md)   
  [データマイニングクエリインターフェイス](data-mining/data-mining-query-tools.md)   
- [DMX&#41; ステートメントリファレンス &#40;データマイニング拡張機能](/sql/dmx/data-mining-extensions-dmx-statements)  
+ [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](/sql/dmx/data-mining-extensions-dmx-statements)  
   
   

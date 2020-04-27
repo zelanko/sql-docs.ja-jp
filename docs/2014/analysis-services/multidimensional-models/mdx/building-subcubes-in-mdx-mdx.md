@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 197ee30aa65179e8a434d04d20a5f5b643b42efd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074716"
 ---
 # <a name="building-subcubes-in-mdx-mdx"></a>MDX でのサブキューブの作成 (MDX)
@@ -36,9 +36,7 @@ ms.locfileid: "66074716"
 CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression  
 ```  
   
- CREATE SUBCUBE の構文は非常に単純です。 
-  *Subcube_Identifier* パラメーターは、サブキューブの基になるキューブを識別します。 
-  *Subcube_Expression* パラメーターでは、サブキューブにするキューブの部分を選択します。  
+ CREATE SUBCUBE の構文は非常に単純です。 *Subcube_Identifier* パラメーターは、サブキューブの基になるキューブを識別します。 *Subcube_Expression* パラメーターでは、サブキューブにするキューブの部分を選択します。  
   
  サブキューブを作成すると、そのサブキューブは、セッションが閉じるまで、あるいは [DROP SUBCUBE](/sql/mdx/mdx-data-definition-drop-subcube) ステートメントを実行するまですべての MDX クエリのコンテキストになります。  
   

@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 12e2d2f543694a1da418f5e8eb4b900eaa123d97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074058"
 ---
 # <a name="specifying-the-contents-of-a-slicer-axis-mdx"></a>スライサー軸の内容の指定 (MDX)
@@ -38,7 +38,7 @@ ms.locfileid: "66074058"
 ### <a name="implicit-slicer-axis"></a>暗黙的なスライサー軸  
  キューブ内の階層のメンバーがクエリ軸に明示的に含まれていない場合は、その階層の既定のメンバーが暗黙的にスライサー軸に含まれます。 詳細については、「 [既定メンバーの定義](../attribute-properties-define-a-default-member.md)」を参照してください。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次のクエリは、WHERE 句を含んでおらず、すべての年の Internet Sales Amount メジャーの値を返します。  
   
 ```  

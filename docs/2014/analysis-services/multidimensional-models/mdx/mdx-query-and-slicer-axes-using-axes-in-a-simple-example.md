@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 53f48d8f23ef8809f9392b1a2c7ede65239e4985
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074025"
 ---
 # <a name="using-query-and-slicer-axes-in-a-simple-example-mdx"></a>クエリ軸とスライサー軸を使用する簡単な例 (MDX)
@@ -29,9 +29,7 @@ ms.locfileid: "66074025"
 ## <a name="the-query"></a>クエリ  
  クエリでは、Packages メジャーを各 Route や Time と比較できるマトリックスが用意されます。  
   
- 以下の MDX クエリの例では、Route および Time 階層がクエリ軸で、Measures ディメンションがスライサー軸です。 
-  [Members](/sql/mdx/members-set-mdx) 関数は、MDX が階層またはレベルのメンバーを使ってセットを構築することを示します。 
-  `Members` 関数を使用する場合、特定の階層またはレベルの各メンバーを MDX クエリ内で明示的に記述する必要はありません。  
+ 以下の MDX クエリの例では、Route および Time 階層がクエリ軸で、Measures ディメンションがスライサー軸です。 [Members](/sql/mdx/members-set-mdx) 関数は、MDX が階層またはレベルのメンバーを使ってセットを構築することを示します。 `Members` 関数を使用する場合、特定の階層またはレベルの各メンバーを MDX クエリ内で明示的に記述する必要はありません。  
   
 ```  
 SELECT  
@@ -51,6 +49,6 @@ WHERE ( [Measures].[Packages] )
   
 ## <a name="see-also"></a>参照  
  [MDX&#41;&#40;クエリ軸の内容の指定](mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)   
- [MDX&#41;&#40;スライサー軸の内容の指定](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
+ [スライサー軸の内容の指定 &#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
   
   

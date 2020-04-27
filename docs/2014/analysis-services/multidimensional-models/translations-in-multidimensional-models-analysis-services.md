@@ -13,23 +13,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a80c7950ec4079021bbcf03d9ccee6970d68786b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072743"
 ---
 # <a name="translations-in-multidimensional-models"></a>多次元モデルの翻訳
   での複数[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]言語のサポートは、翻訳を使用して実現されます。 翻訳には、複数の言語で表示可能な [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトのプロパティの言語識別子およびバインドが含まれます。 たとえば、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースの翻訳を、指定した言語でそのデータベースのキャプションと説明が表示されるように定義できます。 翻訳の詳細については、「[キューブの翻訳](../multidimensional-models-olap-logical-cube-objects/cube-translations.md)」を参照してください。  
   
 ## <a name="defining-translations"></a>翻訳の定義  
- 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で翻訳を定義するには、翻訳対象の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトに適したデザイナーを使用します。 翻訳を定義すると、該当する `Translation` オブジェクトに関連付けられた [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトが作成されます。この Translation オブジェクトには、関連付けられた [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトのプロパティに対応する、指定した言語の明示的なリテラル値が含まれています。  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で翻訳を定義するには、翻訳対象の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトに適したデザイナーを使用します。 翻訳を定義すると、該当する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトに関連付けられた `Translation` オブジェクトが作成されます。この Translation オブジェクトには、関連付けられた [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトのプロパティに対応する、指定した言語の明示的なリテラル値が含まれています。  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次のオブジェクトおよびプロパティに翻訳を関連付けることができます。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次のオブジェクトおよびプロパティに翻訳を関連付けることができます。  
   
-|Object|Properties|デザイナー|  
+|オブジェクト|プロパティ|Designer|  
 |------------|----------------|--------------|  
 |データベース|`Caption`, `Description`|[一般 &#40;データベースデザイナー&#41; &#40;Analysis Services-多次元データ&#41;](../general-database-designer-analysis-services-multidimensional-data.md)|  
 |Cube|`Caption`, `Description`|[キューブデザイナーの翻訳 &#40;&#41; &#40;Analysis Services-多次元データ&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
@@ -42,7 +40,7 @@ ms.locfileid: "66072743"
 |名前付きセット|`Caption`|[キューブデザイナーの翻訳 &#40;&#41; &#40;Analysis Services-多次元データ&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
 |計算されるメンバー|`Caption`|[キューブデザイナーの翻訳 &#40;&#41; &#40;Analysis Services-多次元データ&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
 |データベース ディメンション|`Caption`, `AttributeAllMember`|[翻訳 &#40;ディメンションデザイナー&#41; &#40;Analysis Services-多次元データ&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
-|Attribute|`Caption`、 `CaptionColumn` <sup>1</sup>、 `AttributeHierarchyDisplayFolder`、 `NamingTemplate`、`MembersWithDataCaption`|[翻訳 &#40;ディメンションデザイナー&#41; &#40;Analysis Services-多次元データ&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
+|属性|`Caption`、 `CaptionColumn` <sup>1</sup>、 `AttributeHierarchyDisplayFolder`、 `NamingTemplate`、`MembersWithDataCaption`|[翻訳 &#40;ディメンションデザイナー&#41; &#40;Analysis Services-多次元データ&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
 |Hierarchy|`Caption`, `AllMemberName`|[翻訳 &#40;ディメンションデザイナー&#41; &#40;Analysis Services-多次元データ&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
 |Level|`Caption`|[翻訳 &#40;ディメンションデザイナー&#41; &#40;Analysis Services-多次元データ&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
   
@@ -51,8 +49,7 @@ ms.locfileid: "66072743"
 ### <a name="defining-attribute-translations"></a>属性翻訳の定義  
  データベース ディメンション内の属性に関連付けられている翻訳は、他の翻訳とは異なり、次のように処理されます。  
   
--   
-  `CaptionColumn` プロパティには、明示的なリテラル値ではなく列バインドを関連付けることができ、その属性のメンバーのメンバー名を翻訳できます。  
+-   `CaptionColumn` プロパティには、明示的なリテラル値ではなく列バインドを関連付けることができ、その属性のメンバーのメンバー名を翻訳できます。  
   
 -   インスタンスについて指定されている照合順序以外の Windows 照合順序を使用して、翻訳で指定されている言語に合わせて、属性のメンバーを適切に並べ替えることができます。  
   
@@ -81,6 +78,6 @@ ms.locfileid: "66072743"
   
 ## <a name="see-also"></a>参照  
  [Analysis Services Multiidimensional のグローバリゼーションのシナリオ](../globalization-scenarios-for-analysis-services-multiidimensional.md)   
- [言語と照合順序 &#40;Analysis Services&#41;](../languages-and-collations-analysis-services.md)  
+ [言語および照合順序 (Analysis Services)](../languages-and-collations-analysis-services.md)  
   
   

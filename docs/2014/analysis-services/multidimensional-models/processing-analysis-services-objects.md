@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a9d83baaecbfdba3612acbdcf7a80c9093aac519
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073290"
 ---
 # <a name="processing-analysis-services-objects"></a>Analysis Services オブジェクトの処理
@@ -33,33 +33,32 @@ ms.locfileid: "66073290"
   
  [キューブの処理](#bkmk_proccube)  
   
- [メジャーグループの処理](#bkmk_procmeasure)  
+ [メジャー グループの処理](#bkmk_procmeasure)  
   
  [パーティションの処理](#bkmk_procpartition)  
   
- [データマイニング構造とデータマイニングモデルの処理](#bkmk_procdm)  
+ [データ マイニング構造とデータ マイニング モデルの処理](#bkmk_procdm)  
   
-##  <a name="bkmk_procdb"></a>データベースの処理  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、データベースにはデータではなく、オブジェクトが含まれています。 データベースを処理するとき、モデルにデータを格納するディメンション、パーティション、マイニング構造、マイニング モデルなどのオブジェクトを再帰的に処理するようサーバーに指示します。  
+##  <a name="processing-a-database"></a><a name="bkmk_procdb"></a>データベースの処理  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、データベースにはデータではなく、オブジェクトが含まれています。 データベースを処理するとき、モデルにデータを格納するディメンション、パーティション、マイニング構造、マイニング モデルなどのオブジェクトを再帰的に処理するようサーバーに指示します。  
   
  データベースを処理すると、データベースに含まれているパーティション、ディメンション、およびマイニング モデルの一部またはすべてが処理されます。 実際の処理の種類は、各オブジェクトの状態および選択した処理オプションによって異なります。 詳細については、「[処理オプションと設定 &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md)」を参照してください。  
   
-##  <a name="bkmk_proccube"></a>キューブの処理  
+##  <a name="processing-a-cube"></a><a name="bkmk_proccube"></a>キューブの処理  
  キューブは、メジャー グループおよびパーティションのラッパー オブジェクトと考えることができます。 キューブは、ディメンションと 1 つ以上のメジャーで構成されており、パーティションに保存されます。 ディメンションでは、データをキューブにレイアウトする方法を定義します。 キューブを処理すると、SQL クエリが実行されてファクト テーブルから値が取得され、キューブ内の各メンバーに適切なメジャー値が設定されます。 キューブ内のノード固有のパスとして、値または計算可能値を使用できます。  
   
  キューブを処理すると、キューブ内の未処理のディメンションと、キューブのメジャー グループ内の一部またはすべてのパーティションが [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって処理されます。 処理の詳細は、処理を開始したときのオブジェクトの状態および選択した処理オプションによって異なります。 処理オプションの詳細については、「[処理オプションと設定 &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md)」を参照してください。  
   
  キューブの処理によって、関連ファクト データを保存する機械処理可能なファイルが作成されます。 集計が作成されている場合は、集計データ ファイルに保存されます。 キューブは、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] のオブジェクト エクスプローラーまたは次のソリューション エクスプローラーから参照できます。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
   
-##  <a name="bkmk_procdim"></a>ディメンションの処理  
+##  <a name="processing-a-dimension"></a><a name="bkmk_procdim"></a>ディメンションの処理  
  ディメンションを処理すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって、ディメンション テーブルに対するクエリが作成および実行され、処理に必要な情報が返されます。  
   
 |Country|販売地域|State|  
 |-------------|------------------|-----------|  
-|米国|West|カリフォルニア|  
-|米国|West|オレゴン|  
-|米国|West|ワシントン|  
+|United States|West|カリフォルニア|  
+|United States|West|オレゴン|  
+|United States|West|ワシントン|  
   
  処理自体は、表形式のデータを、使用可能な階層に変換します。 これらの階層は、メンバー名をすべて連結したもので、内部的には一意の数値パスによって表されます。 次の例は、階層のテキスト表現です。  
   
@@ -75,20 +74,18 @@ ms.locfileid: "66073290"
   
  ディメンションを処理する場合は、そのディメンションが複数のキューブで使用されている可能性があるので注意が必要です。 ディメンションを処理すると、それらのキューブには未処理のマークが付き、クエリには使用できなくなります。 ディメンションと関連キューブを同時に処理するには、バッチ処理の設定を使用します。 詳細については、「 [バッチ処理 &#40;Analysis Services&#41;](batch-processing-analysis-services.md)」を参照してください。  
   
-##  <a name="bkmk_procmeasure"></a>メジャーグループの処理  
+##  <a name="processing-a-measure-group"></a><a name="bkmk_procmeasure"></a>メジャーグループの処理  
  メジャー グループを処理すると、メジャー グループ内の一部またはすべてのパーティションと、メジャー グループに含まれている未処理のディメンションが [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって処理されます。 処理ジョブの詳細は、選択した処理オプションによって異なります。 キューブ内の他のメジャー グループに影響を与えずに、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 内の 1 つまたは複数のメジャー グループを処理できます。  
   
 > [!NOTE]  
->  個々のメジャー グループは、プログラムによって処理するか、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]を使用して処理できます。 
-  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]では、個々のメジャー グループを処理できませんが、パーティション単位で処理できます。  
+>  個々のメジャー グループは、プログラムによって処理するか、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]を使用して処理できます。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]では、個々のメジャー グループを処理できませんが、パーティション単位で処理できます。  
   
-##  <a name="bkmk_procpartition"></a>パーティションの処理  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を効果的に管理するには、データをパーティション分割する必要があります。 パーティションの処理は、ハード ディスクの使用状況および空き領域の制約と、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]によるデータ構造の制約を考慮する必要があるため、独特な処理になります。 クエリの応答時間の速さと処理のスループットの高さを維持するには、定期的にパーティションの作成、処理、およびマージを行う必要があります。 パーティションのマージでは、冗長データの統合を考慮し、このようなデータの管理を行うことが非常に重要になります。 詳細については、「[Analysis Services でのパーティションのマージ &#40;SSAS - 多次元&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)」を参照してください。  
+##  <a name="processing-a-partition"></a><a name="bkmk_procpartition"></a>パーティションの処理  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を効果的に管理するには、データをパーティション分割する必要があります。 パーティションの処理は、ハード ディスクの使用状況および空き領域の制約と、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]によるデータ構造の制約を考慮する必要があるため、独特な処理になります。 クエリの応答時間の速さと処理のスループットの高さを維持するには、定期的にパーティションの作成、処理、およびマージを行う必要があります。 パーティションのマージでは、冗長データの統合を考慮し、このようなデータの管理を行うことが非常に重要になります。 詳細については、「[Analysis Services でのパーティションのマージ &#40;SSAS - 多次元&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)」を参照してください。  
   
  パーティションを処理する場合は、選択した処理オプションに応じて、パーティションとそのパーティションに含まれている未処理のディメンションが [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって処理されます。 パーティションの使用による処理上の利点がいくつかあります。 パーティションは、キューブ内の他のパーティションに影響を与えずに処理できます。 パーティションは、セルの書き戻しを必要とするデータの保存に便利です。 書き戻しは、新しいデータをパーティションに書き戻して予測される変更の影響を確認することによって、ユーザーが what-if 分析を実行できる機能です。 書き戻しパーティションは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のセルの書き戻し機能を使用する場合に必要です。 パーティションを並列処理すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって処理能力がより有効に使用され、合計処理時間を大幅に短縮できるので便利です。 パーティションは順番に処理することもできます。  
   
-##  <a name="bkmk_procdm"></a>データマイニング構造とデータマイニングモデルの処理  
+##  <a name="processing-data-mining-structures-and-models"></a><a name="bkmk_procdm"></a>データマイニング構造とデータマイニングモデルの処理  
  マイニング構造では、データ マイニング モデルの作成元となるデータ ドメインが定義されます。 1 つのマイニング構造に複数のマイニング モデルを含めることができます。 マイニング構造は、関連付けられたマイニング モデルとは別個に処理できます。 マイニング構造を別個に処理する場合、マイニング構造にはデータ ソースのトレーニング データが設定されます。  
   
  データ マイニング モデルを処理すると、トレーニング データがマイニング モデル アルゴリズムに渡され、そのデータ マイニング アルゴリズムを使用するモデルのトレーニングが行われ、コンテンツが作成されます。 データ マイニング モデル オブジェクトの詳細については、「[マイニング構造 &#40;Analysis Services - データ マイニング&#41;](../data-mining/mining-structures-analysis-services-data-mining.md)」を参照してください。  

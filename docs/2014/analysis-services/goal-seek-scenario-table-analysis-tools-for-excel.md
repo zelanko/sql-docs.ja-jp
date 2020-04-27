@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d547c52bc5d4cb02870fc647469b5f63af9ab7cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080736"
 ---
 # <a name="goal-seek-scenario-table-analysis-tools-for-excel"></a>ゴール シーク シナリオ (Excel 用のテーブル分析ツール)
@@ -59,7 +59,7 @@ ms.locfileid: "66080736"
   
 9. **この行で**オプションを選択した場合、分析の結果がダイアログボックスに出力され、確認できます。 さまざまな値や目標を引き続きテストすることができるように、このダイアログ ボックスは開いたままになります。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  このツールでは、数値または不連続値を処理できる Microsoft ロジスティック回帰アルゴリズムが使用されます。  
   
  予測を複数回実行し、そのたびに異なる列を選択することもできますが、目標と変更の複数の組み合わせを同時に計算することはできません。  

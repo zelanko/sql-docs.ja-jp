@@ -11,14 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 939186d48f7dd8a0cc33b24778bf8948f9938a70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079282"
 ---
 # <a name="defining-a-data-source-view"></a>データ ソース ビューの定義
-  
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトで使用するデータ ソースを定義した後は、一般に、プロジェクトのデータ ソース ビューを定義します。 データ ソース ビューは、指定したテーブルのメタデータと、プロジェクトのデータ ソースによって定義されているビューを 1 つに統合したものです。 データ ソース ビューにメタデータを格納すると、基になるデータ ソースへの接続を開かなくても、開発時にメタデータを操作することができます。 詳細については、 [「多次元モデルのデータ ソース ビュー」](multidimensional-models/data-source-views-in-multidimensional-models.md)を参照してください。  
   
  次の実習では、 **AdventureWorksDW2012** データ ソースの 5 つのテーブルを含むデータ ソース ビューを定義します。  
@@ -27,8 +26,7 @@ ms.locfileid: "66079282"
   
 1.  ソリューション エクスプローラー (Microsoft Visual Studio ウィンドウの右側) で、[ **データ ソース ビュー**] を右クリックし、[ **新しいデータ ソース ビュー**] をクリックします。  
   
-2.  
-  **[データ ソース ビュー ウィザードへようこそ]** ページで **[次へ]** をクリックします。 [ **データ ソースの選択** ] ページが表示されます。  
+2.  **[データ ソース ビュー ウィザードへようこそ]** ページで **[次へ]** をクリックします。 [ **データ ソースの選択** ] ページが表示されます。  
   
 3.  [ **リレーショナル データ ソース**] の一覧で、[ **Adventure Works DW 2012** ] データ ソースが選択されていることを確認します。 **[次へ]** をクリックします。  
   
@@ -68,9 +66,7 @@ ms.locfileid: "66079282"
   
     -   データ ソース ビュー デザイナーのツール バー  
   
-8.  
-  
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 開発環境を最大化するには、[ **最大化** ] ボタンをクリックします。  
+8.  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 開発環境を最大化するには、[ **最大化** ] ボタンをクリックします。  
   
 9. [ **ダイアグラム** ] ウィンドウ内のテーブルを 50% の大きさで表示するには、データ ソース ビュー デザイナーのツール バーにある [ **ズーム** ] アイコンをクリックします。 表示サイズを 50% にすると、各テーブルの列の詳細が非表示になります。  
   

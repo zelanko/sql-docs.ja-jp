@@ -13,19 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 26751f2cc00330716f160c115d0e839cc6d9527a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077826"
 ---
 # <a name="merge-partition-dialog-box-analysis-services---multidimensional-data"></a>[パーティションのマージ] ダイアログ ボックス (Analysis Services - 多次元データ)
-  
-  **SQL Server Management Studio** の **[パーティションのマージ]** ダイアログ ボックスを使用すると、キューブ内のメジャー グループのパーティションをマージできます。 
-  **[パーティションのマージ]** ダイアログ ボックスを表示するには、 **オブジェクト エクスプローラー** で [パーティション] フォルダーまたはパーティションを右クリックし、ショートカット メニューの **[パーティションのマージ]** をクリックします。  
+  **SQL Server Management Studio** の **[パーティションのマージ]** ダイアログ ボックスを使用すると、キューブ内のメジャー グループのパーティションをマージできます。 **[パーティションのマージ]** ダイアログ ボックスを表示するには、 **オブジェクト エクスプローラー** で [パーティション] フォルダーまたはパーティションを右クリックし、ショートカット メニューの **[パーティションのマージ]** をクリックします。  
   
 ## <a name="options"></a>オプション  
- **サーバー**  
+ **[サーバー]**  
  対象パーティションを含む Analysis Services インスタンスの名前を選択します。  
   
  **名前**  
@@ -42,14 +40,14 @@ ms.locfileid: "66077826"
   
  このグリッドには次の列が含まれています。  
   
-|列|[説明]|  
+|列|説明|  
 |------------|-----------------|  
 |**マージ**|選択すると、基になるパーティションを対象パーティションにマージできます。|  
-|**パーティション名**|基になるパーティションの名前を表示します。|  
+|**[パーティション名]**|基になるパーティションの名前を表示します。|  
 |**[最終処理]**|基になるパーティションが最後に処理された日時を表示します。|  
   
 ## <a name="see-also"></a>参照  
  [パーティション &#40;Analysis Services-多次元データ&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [Analysis Services &#40;SSAS のパーティションのマージ-多次元&#41;](multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [Analysis Services でのパーティションのマージ (SSAS - 多次元)](multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

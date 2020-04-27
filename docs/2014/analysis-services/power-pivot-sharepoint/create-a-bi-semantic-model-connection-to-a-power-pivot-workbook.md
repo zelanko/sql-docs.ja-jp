@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f525c45e71c290d3eaab410c0fa0fa62d1e9a61d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071643"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-powerpivot-workbook"></a>PowerPivot ブックへの BI セマンティック モデル接続の作成
@@ -28,13 +28,13 @@ ms.locfileid: "66071643"
   
  [接続を作成する](#bkmk_create)  
   
- [BI セマンティックモデル接続に対する SharePoint 権限の構成](#bkmk_permissions)  
+ [BI セマンティック モデル接続への SharePoint 権限の構成](#bkmk_permissions)  
   
- [ブックに対する SharePoint 権限の構成](#bkmk_userdb)  
+ [ブックへの SharePoint 権限の構成](#bkmk_userdb)  
   
- [次のステップ](#bkmk_next)  
+ [次の手順](#bkmk_next)  
   
-##  <a name="bkmk_prereq"></a>前提条件の確認  
+##  <a name="review-prerequisites"></a><a name="bkmk_prereq"></a>前提条件の確認  
  BI セマンティック モデル接続ファイルを作成するには、投稿権限以上の権限が必要です。  
   
  BI セマンティック モデル接続のコンテンツ タイプをサポートしているライブラリが必要です。 詳細については、「 [BI セマンティックモデル接続のコンテンツタイプをライブラリ &#40;PowerPivot for SharePoint&#41;に追加](add-bi-semantic-model-connection-content-type-to-library.md)する」を参照してください。  
@@ -43,7 +43,7 @@ ms.locfileid: "66071643"
   
  接続シーケンスに参加しているすべてのコンピューターとユーザーは、同じドメインまたは信頼されたドメイン (双方向の信頼関係) に属している必要があります。  
   
-##  <a name="bkmk_create"></a>接続を作成する  
+##  <a name="create-a-connection"></a><a name="bkmk_create"></a>接続を作成する  
   
 1.  BI セマンティック モデル接続の格納先となるライブラリで、SharePoint リボンの **[ドキュメント]** をクリックします。 [新しいドキュメント] の下矢印をクリックし、 **[BISM 接続ファイル]** を選択して、[新しい BI セマンティック モデル接続] ページを開きます。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66071643"
   
      ブックに対する SharePoint 権限を持っている場合は、必要に応じて、その場所が有効であるかどうかを確認するための追加の検証手順が実行されます。 データへのアクセス権限がない場合は、検証の応答なしで BI セマンティック モデル接続を保存するオプションが表示されます。  
   
-##  <a name="bkmk_permissions"></a>BI セマンティックモデル接続に対する SharePoint 権限の構成  
+##  <a name="configure-sharepoint-permissions-on-the-bi-semantic-model-connection"></a><a name="bkmk_permissions"></a>BI セマンティックモデル接続に対する SharePoint 権限の構成  
  BI セマンティック モデル接続を Excel ブックまたは Reporting Services レポートのデータ ソースとして使用するには、SharePoint ライブラリ内の BI セマンティック モデル接続アイテムに対する **読み取り** 権限が必要です。 読み取り権限レベルには、BI セマンティック モデル接続情報を Excel デスクトップ アプリケーションにダウンロードできるようにする **"アイテムを開く"** 権限が含まれます。  
   
  SharePoint で権限を付与するには、いくつかの方法があります。 次の手順では、 **読み取り** 権限レベルを持つ、 **BISM ユーザー** という名前の新しいグループを作成する方法について説明します。  
@@ -68,11 +68,9 @@ ms.locfileid: "66071643"
   
 1.  [サイトの操作] の **[サイトの権限]** をクリックします。  
   
-2.  
-  **[グループの作成]** をクリックして、新しいグループの名前を「 **BISM ユーザー**」と指定します。  
+2.  **[グループの作成]** をクリックして、新しいグループの名前を「 **BISM ユーザー**」と指定します。  
   
-3.  
-  **[読み取り]** 権限レベルを選択し、 **[作成]** をクリックします。  
+3.  **[読み取り]** 権限レベルを選択し、 **[作成]** をクリックします。  
   
 4.  [ユーザーとグループ] の **[BISM ユーザー]** を選択します。  
   
@@ -86,18 +84,16 @@ ms.locfileid: "66071643"
   
 2.  既定では、アイテムは権限を継承します。 このライブラリ内の個々のドキュメントの権限を変更するには、 **[権限の継承を中止]** をクリックします。  
   
-3.  
-  **[BISM ユーザー]** の横にあるチェック ボックスをオンにします。  
+3.  **[BISM ユーザー]** の横にあるチェック ボックスをオンにします。  
   
-4.  
-  **[ユーザー権限の削除]** をクリックします。  
+4.  **[ユーザー権限の削除]** をクリックします。  
   
-##  <a name="bkmk_userdb"></a>ブックに対する SharePoint 権限の構成  
+##  <a name="configure-sharepoint-permissions-on-the-workbook"></a><a name="bkmk_userdb"></a>ブックに対する SharePoint 権限の構成  
  Excel ブック内で PowerPivot データベースを使用している場合、BI セマンティック モデル接続を介したデータ アクセスは Excel ブックに対する SharePoint 権限によって決まります。 ブックを外部データ ソースとして使用するには、ブックにアクセスするすべてのユーザーにブックに対する読み取り権限が必要です。  
   
  前のセクションの手順に従って **[BISM ユーザー]** グループを作成した場合は、継承された権限をブックで使用すると想定して、ブックおよび BI セマンティック モデル接続ファイルに対する十分な権限が、 **BISM ユーザー** のメンバーであるユーザー アカウントとグループ アカウントに付与されます。  
   
-##  <a name="bkmk_next"></a>次のステップ  
+##  <a name="next-steps"></a><a name="bkmk_next"></a> 次のステップ  
  BI セマンティック モデル接続を作成し、セキュリティで保護したら、データ ソースとして指定できます。 詳細については、「 [Excel または Reporting Services での BI セマンティック モデル接続の使用](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

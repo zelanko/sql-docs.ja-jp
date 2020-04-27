@@ -13,16 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dbf47c696b33e368b5b957d2d6fcf961abf417b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080516"
 ---
 # <a name="import-summary-ssas"></a>[インポートの概要] (SSAS)
-  
-  **テーブルのインポート ウィザード** のこのページを使用すると、データ インポート用に指定されているフィルターを表示できます。 
-  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  
+  **テーブルのインポート ウィザード** のこのページを使用すると、データ インポート用に指定されているフィルターを表示できます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  
   
  フィルターは、 **[選択したテーブルのプレビュー]** ダイアログ ボックスで選択したオプションに基づいています。  
   

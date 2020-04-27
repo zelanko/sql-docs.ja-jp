@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05c0a25ceded07264e4dbe10467e9dc6f093f6c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077622"
 ---
 # <a name="model-tab-mining-model-viewers"></a>[モデル] タブ (マイニング モデル ビューアー)
@@ -24,13 +24,13 @@ ms.locfileid: "66077622"
   
  時系列分析に関する有用な情報を抽出するには、グラフの式、ARIMA 期間、および係数を含むタイム シリーズ モデルのこのビューを使用します。  
   
- **詳細情報:** microsoft タイムシリーズ[アルゴリズム](data-mining/microsoft-time-series-algorithm.md)、microsoft タイムシリーズ[ビューアーを使用したモデルの参照](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)、 [microsoft タイムシリーズアルゴリズム](data-mining/microsoft-time-series-algorithm.md)  
+ **詳細情報:** [Microsoft Time Series アルゴリズム](data-mining/microsoft-time-series-algorithm.md)、 [Microsoft タイム シリーズ ビューアーを使用したモデルの参照](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)、 [Microsoft Time Series アルゴリズム](data-mining/microsoft-time-series-algorithm.md)  
   
 ## <a name="options"></a>オプション  
  **[ビューアーのコンテンツを最新状態に更新]**  
  ビューアーにマイニング モデルを再読み込みします。  
   
- **マイニングモデル**  
+ **[マイニング モデル]**  
  表示するマイニング モデルを選択します。 関連付けられているビューアーが開き、マイニング モデルが表示されます。  
   
  **[ビューアー]**  

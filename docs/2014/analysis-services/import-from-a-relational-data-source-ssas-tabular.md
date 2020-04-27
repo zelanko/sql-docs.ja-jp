@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 61fb30ea21ea810eab8d30a3a040fac4a1bd2128
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080531"
 ---
 # <a name="import-from-a-relational-data-source-ssas-tabular"></a>リレーショナル データ ソースからのインポート (SSAS テーブル)
@@ -22,7 +22,7 @@ ms.locfileid: "66080531"
   
  テーブルのインポート ウィザードでは、次のデータ ソースからのデータのインポートがサポートされています。  
   
- **リレーショナル データベース**  
+ **リレーショナルデータベース**  
   
 -   Microsoft SQL Server データベース  
   
@@ -52,16 +52,14 @@ ms.locfileid: "66080531"
   
 ### <a name="to-import-data-from-a-database"></a>データベースからのデータをインポートするには  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で **[モデル]** メニューをクリックし、 **[データ ソースからのインポート]** をクリックします。  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で **[モデル]** メニューをクリックし、 **[データ ソースからのインポート]** をクリックします。  
   
-2.  
-  **[データ ソースへの接続]** ページで接続するデータベースの種類を選択し、 **[次へ]** をクリックします。  
+2.  **[データ ソースへの接続]** ページで接続するデータベースの種類を選択し、 **[次へ]** をクリックします。  
   
 3.  テーブルのインポート ウィザードの手順に従って操作します。 後続のページでは、 **[テーブルとビューの選択]** ページを使用するか、または **[SQL クエリの指定]** ページで SQL クエリを作成することにより、特定のテーブルおよびビューの選択や、フィルターの適用を行うことができます。  
   
 ## <a name="see-also"></a>参照  
  [SSAS 表形式&#41;&#40;データをインポートする](import-data-ssas-tabular.md)   
- [SSAS 表形式&#41;&#40;サポートされるデータソース](tabular-models/data-sources-supported-ssas-tabular.md)  
+ [サポートされているデータ ソース &#40;SSAS テーブル&#41;](tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

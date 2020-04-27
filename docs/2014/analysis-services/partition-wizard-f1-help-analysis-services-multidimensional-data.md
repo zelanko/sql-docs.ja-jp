@@ -13,18 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 86976ac183fc592deab50ebdf5599ef3e7231c28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072132"
 ---
 # <a name="partition-wizard-f1-help-analysis-services---multidimensional-data"></a>パーティション ウィザードの F1 ヘルプ (Analysis Services - 多次元データ)
   パーティション ウィザードを使用すると、キューブ内のメジャー グループにパーティションを定義できます。 既定では、キューブ内のメジャー グループ 1 つにつき 1 つのパーティションが定義されます。 しかし、パーティションが大きくなるとアクセスと処理のパフォーマンスが低下する場合があります。 メジャー グループのデータの一部を含むパーティションを複数作成することにより、そのメジャー グループのアクセスおよび処理のパフォーマンスを向上できます。  
   
 > [!CAUTION]  
->  
-  **[基になる情報の指定]** ページまたは **[行の制限]** ページに重複する行がある場合、不正確なデータを含むパーティションが作成される可能性があります。  
+>  **[基になる情報の指定]** ページまたは **[行の制限]** ページに重複する行がある場合、不正確なデータを含むパーティションが作成される可能性があります。  
   
  パーティション ウィザードでは、次の操作を行います。  
   
@@ -49,6 +48,6 @@ ms.locfileid: "66072132"
 -   [[リモートフォルダーの参照] ダイアログボックス &#40;Analysis Services-多次元データ&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)  
   
 ## <a name="see-also"></a>参照  
- [パーティション &#40;Analysis Services-多次元データ&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [パーティション (Analysis Services - 多次元データ)](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

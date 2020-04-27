@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 892198c217918fd2b2a374261c6eac5e31d0a428
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074081"
 ---
 # <a name="specifying-the-contents-of-a-query-axis-mdx"></a>クエリ軸の内容の指定 (MDX)
@@ -26,8 +26,7 @@ ms.locfileid: "66074081"
  クエリ軸を指定するには、 `<SELECT query axis clause>` を使用して特定のクエリ軸にセットを割り当てます。 それぞれの `<SELECT query axis clause>` の値によって、1 つのクエリ軸を定義します。 データセットの軸の数は、SELECT ステートメントの `<SELECT query axis clause>` 値の数と同じです。  
   
 ## <a name="query-axis-syntax"></a>クエリ軸の構文  
- 
-  `<SELECT query axis clause>`の構文は以下のとおりです。  
+ `<SELECT query axis clause>`の構文は以下のとおりです。  
   
 ```  
   
@@ -41,8 +40,7 @@ ms.locfileid: "66074081"
   
 ```  
   
- 各クエリ軸には番号が付いており、0 は X 軸、1 は Y 軸、2 は Z 軸のようになっています。 
-  `<SELECT query axis clause>`の構文では、 `Integer_Expression` の値によって軸の番号を指定します。 MDX クエリでは、最大 128 個まで軸を指定できます。ただし、5 つを超える軸を使用する MDX クエリはほとんどありません。 最初の 5 つの軸については、COLUMNS、ROWS、PAGES、SECTIONS、CHAPTERS という別名を使用することも可能です。  
+ 各クエリ軸には番号が付いており、0 は X 軸、1 は Y 軸、2 は Z 軸のようになっています。 `<SELECT query axis clause>`の構文では、 `Integer_Expression` の値によって軸の番号を指定します。 MDX クエリでは、最大 128 個まで軸を指定できます。ただし、5 つを超える軸を使用する MDX クエリはほとんどありません。 最初の 5 つの軸については、COLUMNS、ROWS、PAGES、SECTIONS、CHAPTERS という別名を使用することも可能です。  
   
  MDX クエリは、クエリ軸をスキップできません。 つまり、1 つ以上のクエリ軸を含むクエリでは、番号の小さい方の軸または中間の軸を除外できません。 たとえば、クエリで COLUMNS 軸を除外して ROWS 軸を指定することや、ROWS 軸を除外して COLUMNS 軸と PAGES 軸を指定することはできません。  
   
@@ -50,7 +48,7 @@ ms.locfileid: "66074081"
   
  上記のクエリ軸の構文では、 `Set_Expression` の値によって、クエリ軸の内容を定義するセットを指定します。 セットの詳細については、「[メンバー、組、およびセットの操作 &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)」を参照してください。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の単純な SELECT ステートメントは、COLUMNS 軸で Internet Sales Amount メジャーを返し、MDX の MEMBERS 関数を使って、ROWS 軸で Date ディメンションの Calendar 階層のすべてのメンバーを返します。  
   
 ```  
@@ -117,6 +115,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX&#41;&#40;スライサー軸の内容の指定](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
+ [スライサー軸の内容の指定 &#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
   
   

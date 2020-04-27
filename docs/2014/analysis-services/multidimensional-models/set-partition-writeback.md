@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3359e26ace467bbf8446aac6b68a0ef2716d09a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072902"
 ---
 # <a name="set-partition-writeback"></a>パーティションの書き戻しの設定
@@ -37,16 +37,14 @@ ms.locfileid: "66072902"
   
 -   キューブ デザイナーの [パーティション] タブで、パーティションを右クリックし、 **[書き戻しの設定]** をクリックします。  
   
--   
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、データベース | キューブ | メジャー グループを展開し、 **[書き戻し]** を右クリックして、 **[書き戻しの有効化]** をクリックします。  
+-   [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、データベース | キューブ | メジャー グループを展開し、 **[書き戻し]** を右クリックして、 **[書き戻しの有効化]** をクリックします。  
   
  書き戻しは、SUM 集計を使用するメジャーに対してのみサポートされます。 AdventureWorks サンプル データベースでは、Sales Targets メジャー グループを使用して、書き戻しの動作をテストできます。  
   
  パーティションを書き込み許可する場合は、書き戻しテーブルを保存するためのテーブル名とデータ ソースを指定します。 その後のメジャー グループの変更は、このテーブルに記録されます。  
   
 ## <a name="browse-writeback-data-in-a-partition"></a>パーティションの書き戻しデータの参照  
- 
-  **[データの参照]** ダイアログ ボックスでは、キューブの書き戻しテーブルの内容を参照できます。このダイアログ ボックスにアクセスするには、キューブ デザイナーの **[パーティション]** タブで、書き込み許可パーティションを右クリックします。  
+ **[データの参照]** ダイアログ ボックスでは、キューブの書き戻しテーブルの内容を参照できます。このダイアログ ボックスにアクセスするには、キューブ デザイナーの **[パーティション]** タブで、書き込み許可パーティションを右クリックします。  
   
 ## <a name="delete-writeback-data-or-disable-writeback"></a>書き戻しデータの削除と書き戻しの無効化  
  書き戻しデータを削除すると、ライトバック キャッシュが消去されます。つまり、データが削除されるとすぐに、追加の書き戻し作業が白紙の状態から実行されます。 キューブ パーティションの書き戻しを無効にすると、そのパーティションの書き戻しがオフになります。  
@@ -64,6 +62,6 @@ ms.locfileid: "66072902"
 ## <a name="see-also"></a>参照  
  [書き込み許可パーティション](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
  [Excel 2010 のセルレベルで OLAP キューブへの書き戻しを有効にする](https://go.microsoft.com/fwlink/p/?LinkId=394952)   
- [Analysis Services 書き戻しを使用したデータ入力の有効化とセキュリティ保護](https://go.microsoft.com/fwlink/p/?LinkId=394953)  
+ [Analysis Services の書き戻しを使用したデータ入力の有効化と保護](https://go.microsoft.com/fwlink/p/?LinkId=394953)  
   
   

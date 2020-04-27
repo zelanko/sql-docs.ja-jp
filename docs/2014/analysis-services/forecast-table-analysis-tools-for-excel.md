@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dc620811209d854af5a9c874956847236819f462
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081048"
 ---
 # <a name="forecast-table-analysis-tools-for-excel"></a>予測 (Excel 用のテーブル分析ツール)
@@ -51,7 +51,7 @@ ms.locfileid: "66081048"
   
 8.  予測グラフに新しい値を追加するには、予測値を含むように時系列を伸ばします。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  予測を実行する列には、通貨やその他の数値のような連続する数値データが格納されている必要があります。  
   
  可能な場合は、時刻や日付のような時系列もデータに含まれているとよいでしょう。 日付と時刻のデータではなく、数値系列 (1、2、3...) を使用できます。 ただし、系列の列の値は一意でなければなりません。 **予測**ツールで系列列の重複する値が検出されると、エラーが発生します。  

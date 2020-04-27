@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b437016cc29b2e4a85f781e3a422fb40c70f37c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074299"
 ---
 # <a name="using-drillthrough-to-retrieve-source-data-mdx"></a>DRILLTHROUGH を使用したソース データの取得 (MDX)
@@ -28,8 +28,7 @@ ms.locfileid: "66074299"
  キューブに対して `DRILLTHROUGH` ステートメントを実行するには、そのキューブに対するドリルスルー アクションを定義する必要があります。 ドリルスルー アクションを定義するには、 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]のキューブ デザイナーの **[アクション]** ペインで、ツール バーの **[新しいドリルスルー アクション]** をクリックします。 新しいドリルスルー アクションでは、アクションの名前、対象、条件を指定し、`DRILLTHROUGH` ステートメントによって返される列を指定します。  
   
 ## <a name="drillthrough-statement-syntax"></a>DRILLTHROUGH ステートメントの構文  
- 
-  `DRILLTHROUGH` ステートメントの構文は、以下のとおりです。  
+ `DRILLTHROUGH` ステートメントの構文は、以下のとおりです。  
   
 ```  
 <drillthrough> ::= DRILLTHROUGH [<Max_Rows>] [<First_Rowset>] <MDX select> [<Return_Columns>]  
@@ -38,8 +37,7 @@ ms.locfileid: "66074299"
    <Return_Columns> ::= RETURN <member or attribute> [, <member or attribute>]  
 ```  
   
- 
-  `SELECT` 句は、取得対象のソース データが入っているキューブ セルを識別します。 この `SELECT` 句は MDX の通常の `SELECT` ステートメントとほぼ同じですが、`SELECT` 句の場合、それぞれの軸上で 1 つのメンバーだけを指定できます。 1 つの軸で複数のメンバーが指定されている場合、エラーが発生します。  
+ `SELECT` 句は、取得対象のソース データが入っているキューブ セルを識別します。 この `SELECT` 句は MDX の通常の `SELECT` ステートメントとほぼ同じですが、`SELECT` 句の場合、それぞれの軸上で 1 つのメンバーだけを指定できます。 1 つの軸で複数のメンバーが指定されている場合、エラーが発生します。  
   
  構文 `<Max_Rows>` は、返されるそれぞれの行セットにおける行の最大数を指定します。 データ ソースとの接続に使われる OLE DB プロバイダーが `DBPROP_MAXROWS` をサポートしない場合、`<Max_Rows>` の設定は無視されます。  
   
@@ -58,6 +56,6 @@ RETURN [Department MeasureGroup].[Department Id], [Employee].[First Name]
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX&#41;&#40;データを操作する](mdx-data-manipulation-manipulating-data.md)  
+ [データの操作 (MDX)](mdx-data-manipulation-manipulating-data.md)  
   
   

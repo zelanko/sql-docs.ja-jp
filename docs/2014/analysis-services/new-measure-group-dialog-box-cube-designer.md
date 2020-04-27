@@ -15,21 +15,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 760a02da5fd98e558c6463d428d5018ccf65a5fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072273"
 ---
 # <a name="new-measure-group-dialog-box-cube-designer"></a>[新しいメジャー グループ] ダイアログ ボックス (キューブ デザイナー)
-  
-  **の** [新しいメジャー グループ] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを使用すると、キューブ デザイナーでキューブに新しいメジャー グループを追加できます。 
-  **[新しいメジャー グループ]** ダイアログ ボックスは次の方法で表示します。  
+  **の** [新しいメジャー グループ] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを使用すると、キューブ デザイナーでキューブに新しいメジャー グループを追加できます。 **[新しいメジャー グループ]** ダイアログ ボックスは次の方法で表示します。  
   
 -   キューブ デザイナーの **[キューブ構造]** タブの **[ツール バー]** ペインで **[新しいメジャー グループ]** をクリックします。  
   
--   
-  **[キューブ構造]** タブの **[メジャー]** ペインでメジャー グループまたはメジャーを右クリックし、ショートカット メニューの **[新しいメジャー グループ]** をクリックします。  
+-   **[キューブ構造]** タブの **[メジャー]** ペインでメジャー グループまたはメジャーを右クリックし、ショートカット メニューの **[新しいメジャー グループ]** をクリックします。  
   
 ## <a name="options"></a>オプション  
  **[データ ソース ビューからテーブルを選択]**  

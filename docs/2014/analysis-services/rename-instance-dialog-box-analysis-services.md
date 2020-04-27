@@ -13,20 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1f5196f8dd60dae731b7173730648d809438c262
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070367"
 ---
 # <a name="rename-instance-dialog-box-analysis-services"></a>[インスタンス名の変更] ダイアログ ボックス (Analysis Services)
-  
-  **[インスタンス名の変更]** ダイアログ ボックスを使用すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]の既存のインスタンスの名前を変更できます。 
-  **[インスタンス名の変更]** ダイアログ ボックスを表示するには、C:\Program Files\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE から **インスタンス名の変更** ツール (asinstancerename.exe) を起動します。  
+  **[インスタンス名の変更]** ダイアログ ボックスを使用すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]の既存のインスタンスの名前を変更できます。 **[インスタンス名の変更]** ダイアログ ボックスを表示するには、C:\Program Files\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE から **インスタンス名の変更** ツール (asinstancerename.exe) を起動します。  
   
 ## <a name="options"></a>オプション  
   
-|期間|定義|  
+|用語|定義|  
 |----------|----------------|  
 |**[名前を変更するインスタンス]**|名前を変更するインスタンスを選択します。|  
 |**[新しいインスタンス名]**|インスタンスの新しい名前を入力します。 サーバー名は含めないでください。 つまり\<<インスタンス名\\ \>>サーバー名を入力するのではなく、 \<インスタンス名> だけを入力します。<br /><br /> 名前を変更するインスタンスを既定の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスにする場合は、空白のままにします。|  

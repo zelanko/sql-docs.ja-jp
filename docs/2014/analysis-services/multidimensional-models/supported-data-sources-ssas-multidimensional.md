@@ -17,25 +17,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5a8cdeb912d1ead21571f1ec7f86e15b0d009514
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072857"
 ---
 # <a name="data-sources-supported-ssas-multidimensional"></a>サポートされるデータソース (SSAS 多次元)
   このトピックでは、多次元モデルで使用できるデータ ソースの種類について説明します。  
   
-##  <a name="bkmk_supported_ds"></a>サポートされるデータソース  
- 次の表のデータ ソースからデータを取得できます。 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]をインストールする際のセットアップで、各データ ソースに対して挙げられているプロバイダーはインストールされません。 プロバイダーは、他のアプリケーションと共にコンピューターに既にインストールされている場合もあれば、プロバイダーをダウンロードしてインストールしなくてはならない場合もあります。  
+##  <a name="supported-data-sources"></a><a name="bkmk_supported_ds"></a>サポートされるデータソース  
+ 次の表のデータ ソースからデータを取得できます。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]をインストールする際のセットアップで、各データ ソースに対して挙げられているプロバイダーはインストールされません。 プロバイダーは、他のアプリケーションと共にコンピューターに既にインストールされている場合もあれば、プロバイダーをダウンロードしてインストールしなくてはならない場合もあります。  
   
 > [!NOTE]  
 >  Oracle OLE DB プロバイダーなどのサード パーティ プロバイダーを使用して、サード パーティ製データベースと接続することもできます。ただし、その場合は、プロバイダーの提供元が使用するデータベースをサポートしていることが条件となります。  
   
 |||||  
 |-|-|-|-|  
-|source|バージョン|ファイルの種類|プロバイダー <sup>1</sup>|  
+|ソース|バージョン|ファイルの種類|プロバイダー <sup>1</sup>|  
 |Access データベース|Microsoft Access 2007、2010、2013|.accdb または .mdb|Microsoft Jet 4.0 OLE DB Provider|  
 |リレーショナルデータベースの SQL Server <sup>5</sup>|Microsoft SQL Server 2005、2008、2008 R2、2012、2014 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] <sup>2</sup>、SQL Server 並列データウェアハウス (PDW) <sup>3</sup>|(該当なし)|OLE DB Provider for SQL Server<br /><br /> SQL Server Native Client OLE DB プロバイダー<br /><br /> SQL Server Native 11.0 Client OLE DB プロバイダー<br /><br /> .NET Framework Data Provider for SQL Client|  
 |Oracle リレーショナル データベース|Oracle 9i、10g、11g|(該当なし)|Oracle OLE DB プロバイダー<br /><br /> .NET Framework Data Provider for Oracle Client<br /><br /> SQL Server 用の .NET Framework データ プロバイダー<br /><br /> MSDAORA OLE DB provider <sup>4</sup><br /><br /> OraOLEDB<br /><br /> MSDASQL|  

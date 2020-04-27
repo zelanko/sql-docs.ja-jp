@@ -13,16 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7ad326f5205aa7efc3be9aee79af3671d892130
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070528"
 ---
 # <a name="query-parameters-dialog-box-mdx"></a>[クエリ パラメーター] ダイアログ ボックス (MDX)
-  
-  **および** の [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] [クエリ パラメーター] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ダイアログ ボックスを使用すると、セット、ディメンション、およびサブキューブの定義に使用される MDX クエリにパラメーターを追加できます。 
-  **[クエリ パラメーター]** ダイアログ ボックスを表示するには、 **[MDX クエリ ビルダー]** ダイアログ ボックスの **[パラメーター]** アイコンをクリックします。  
+  **および** の [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] [クエリ パラメーター] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ダイアログ ボックスを使用すると、セット、ディメンション、およびサブキューブの定義に使用される MDX クエリにパラメーターを追加できます。 **[クエリ パラメーター]** ダイアログ ボックスを表示するには、 **[MDX クエリ ビルダー]** ダイアログ ボックスの **[パラメーター]** アイコンをクリックします。  
   
 ## <a name="options"></a>オプション  
  **パラメーター**  
@@ -35,9 +33,9 @@ ms.locfileid: "66070528"
  パラメーターが特定の階層に適用される場合は、一覧から階層を選択します。  
   
  **[複数の値]**  
- [説明]  
+ 説明  
   
- **Default**  
+ **[Default]**  
  パラメーターの既定値を指定します (ある場合)。 既定では、値は割り当てられていません。  
   
  **その他**  

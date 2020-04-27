@@ -13,26 +13,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 59bff3eac690b7352b75d02bd7b266dfa8f303f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070211"
 ---
 # <a name="restrict-rows-partition-wizard"></a>[行の制限] (パーティション ウィザード)
-  
   **[行の制限]** ページを使用すると、指定したテーブルから取得、集計されて、パーティションに含まれる行を制限できます。  
   
 > [!NOTE]  
->  このページは、 **[基になる情報の指定]** ページでテーブルを 1 つ選択した場合にのみ表示されます。  
+>   このページは、 **[基になる情報の指定]** ページでテーブルを 1 つ選択した場合にのみ表示されます。  
   
 > [!CAUTION]  
->  他のパーティションで使用されている **[基になる情報の指定]** ページの **[使用できるテーブル]** でテーブルを指定した場合は、 **[行の制限]** ページでクエリを指定するか、キューブでリスクの複製データを指定する必要があります。  
+>   他のパーティションで使用されている **[基になる情報の指定]** ページの **[使用できるテーブル]** でテーブルを指定した場合は、 **[行の制限]** ページでクエリを指定するか、キューブでリスクの複製データを指定する必要があります。  
   
 ## <a name="options"></a>オプション  
  **[クエリを指定して行を制限する]**  
- 
-  **[クエリ]** ボックスに、行を制限するクエリを入力します。  
+ **[クエリ]** ボックスに、行を制限するクエリを入力します。  
   
  このオプションを選択していて **[クエリ]** が空の場合、以前に選択したテーブルからすべての列と行を取得する SQL ステートメントと共に、オプションが設定されます。  
   
@@ -43,10 +41,9 @@ ms.locfileid: "66070211"
 >  WHERE 句を指定することにより、レコードのサブセットをこのパーティションで使用できます。 複数のパーティションが 1 つのファクト テーブルに基づいている場合は、データを複製しないでください。  
   
  **オフ**  
- 
-  **[クエリ]** のステートメントが有効な SQL ステートメントであることを確認します。  
+ **[クエリ]** のステートメントが有効な SQL ステートメントであることを確認します。  
   
 ## <a name="see-also"></a>参照  
- [パーティション &#40;Analysis Services-多次元データ&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [パーティション (Analysis Services - 多次元データ)](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

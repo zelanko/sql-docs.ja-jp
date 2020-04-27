@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9a69b2286abbc1ba4289fd482b1bbf5a2dfb3e7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070036"
 ---
 # <a name="sample-data-sql-server-data-mining-add-ins"></a>サンプル データ (SQL Server データ マイニング アドイン)
@@ -70,7 +70,7 @@ ms.locfileid: "66070036"
 ## <a name="related-options"></a>関連オプション  
  ウィザードに従って処理するときは、次のオプションがあります。  
   
-|オプション|説明|  
+|オプション|備考|  
 |-------------|--------------|  
 |[ソース データの選択] ダイアログ ボックス (Excel 用のデータ マイニング クライアント)|データが保存されている Excel 範囲またはテーブルを選択します。 外部データを使用する場合、リレーショナル データも使用できますが、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のデータ ソースに含まれている必要があります。 T|  
 |[サンプリングの種類の選択] ページ (Excel 用のデータ マイニング クライアント)|外部データソースを使用する場合、ランダムサンプリングオプションの使用に制限されます。 また、[**行数**] オプションを使用して、最終的なデータセットに作成する行の数を指定する必要があります。 ソース データの割合を指定することはできません。|  

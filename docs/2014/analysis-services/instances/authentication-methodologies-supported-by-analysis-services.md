@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a57aff903d41e8bcddef25e21def39a45e33d23f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080342"
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Analysis Services でサポートされる認証方法
@@ -34,19 +34,18 @@ ms.locfileid: "66080342"
   
  BI および Analysis Services の認証フローの詳細については、「 [Microsoft BI 認証と ID 委任](https://go.microsoft.com/fwlink/?LinkID=286576)」をご覧ください。  
   
-##  <a name="bkmk_auth"></a>認証方法を理解する  
+##  <a name="understanding-your-authentication-alternatives"></a><a name="bkmk_auth"></a> 別の認証手法について  
  Analysis Services データベースへの接続には、Windows ユーザーまたはグループの ID と、関連付けられた権限が必要です。 ID は、レポートを表示する必要のある任意のユーザーが使用する、一般的な目的のログインである場合もありますが、通常のシナリオでは、個々のユーザーの ID です。  
   
  多くの場合、表形式または多次元のモデルには、だれが要求しているかに応じて、オブジェクトごとに、またはデータ自体の内部にさまざまなレベルのデータ アクセスがあります。 この要件を満たすには、NTLM、Kerberos、EffectiveUserName、または基本認証を使用できます。 これらの手法はすべて、各接続で異なるユーザー ID を渡すための方法です。 ただし、これらのほとんどは、シングルホップの制限の対象です。 委任を伴う Kerberos でのみ、元のユーザー ID を、リモート サーバー上のバックエンド データ ストアへの複数のコンピューター接続にわたって使用できます。  
   
  **NTLM**  
   
- 
-  `SSPI=Negotiate`を指定した接続では、Kerberos ドメイン コントローラーを使用できない場合に、NTLM がバックアップ認証サブシステムとして使用されます。 NTLM では、あらゆるユーザーまたはクライアント アプリケーションがサーバー リソースにアクセスできます。ただし、要求がクライアントからサーバーへの直接接続で、接続を要求しているユーザーにリソースへのアクセス権があり、クライアント コンピューターとサーバー コンピューターが同じドメインにある場合に限ります。  
+ `SSPI=Negotiate`を指定した接続では、Kerberos ドメイン コントローラーを使用できない場合に、NTLM がバックアップ認証サブシステムとして使用されます。 NTLM では、あらゆるユーザーまたはクライアント アプリケーションがサーバー リソースにアクセスできます。ただし、要求がクライアントからサーバーへの直接接続で、接続を要求しているユーザーにリソースへのアクセス権があり、クライアント コンピューターとサーバー コンピューターが同じドメインにある場合に限ります。  
   
  多層ソリューションでは、NLTM のシングルホップ制限が大きな制約となる場合があります。 要求を行っているユーザー ID は、ただ 1 台のリモート サーバーでのみ権限を借用できます。それ以上は不可能です。 現在の操作に、複数のコンピューターで動作しているサービスが必要な場合は、セキュリティ トークンの再利用によって、同じ ID がバックエンド サーバーでも使用できるように、Kerberos の制約付き委任を構成する必要があります。 別の方法として、保存された資格情報または基本認証を使用して、シングルホップ接続上に新しい ID 情報を渡すこともできます。  
   
- **Kerberos 認証と Kerberos の制約付き委任**  
+ **Kerberos 認証および Kerberos 制約付き委任**  
   
  Kerberos 認証は、Active Directory ドメインの Windows 統合セキュリティの基礎です。 NTLM のように、委任を有効にしない限り、Kerberos での権限借用はシングルホップに制限されます。  
   

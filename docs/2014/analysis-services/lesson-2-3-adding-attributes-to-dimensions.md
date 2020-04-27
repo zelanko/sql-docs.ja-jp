@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7a30424ce322ed356870465422c4f82fb8d7d88d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079031"
 ---
 # <a name="adding-attributes-to-dimensions"></a>ディメンションへの属性の追加
@@ -28,15 +28,13 @@ ms.locfileid: "66079031"
   
 1.  Customer ディメンションのディメンション デザイナーを開きます。 これを行うには、ソリューション エクスプローラーの **[ディメンション]** ノードで **[Customer]** ディメンションをダブルクリックします。  
   
-2.  
-  **[属性]** ペインに、キューブ ウィザードによって作成された Customer Key 属性および Geography Key 属性が表示されます。  
+2.  **[属性]** ペインに、キューブ ウィザードによって作成された Customer Key 属性および Geography Key 属性が表示されます。  
   
-3.  
-  **[ディメンション構造]** タブのツール バーで、 **[データ ソース ビュー]** ペイン内のテーブルを表示するための [ズーム] アイコンが 100% に設定されていることを確認します。  
+3.  **[ディメンション構造]** タブのツール バーで、 **[データ ソース ビュー]** ペイン内のテーブルを表示するための [ズーム] アイコンが 100% に設定されていることを確認します。  
   
 4.  次の列を、 **[データ ソース ビュー]** ペインの **Customer** テーブルから **[属性]** ペインにドラッグします。  
   
-    -   **BirthDate**  
+    -   **誕生日**  
   
     -   **MaritalStatus**  
   
@@ -58,7 +56,7 @@ ms.locfileid: "66079031"
   
     -   **NumberCarsOwned**  
   
-    -   **Phone**  
+    -   **電話**  
   
     -   **DateFirstPurchase**  
   
@@ -66,15 +64,15 @@ ms.locfileid: "66079031"
   
 5.  次の列を、 **[データ ソース ビュー]** ペインの **Geography** テーブルから **[属性]** ペインにドラッグします。  
   
-    -   **City**  
+    -   **City (市)**  
   
-    -   **[Stateprovincename]**  
+    -   **StateProvinceName**  
   
     -   **EnglishCountryRegionName**  
   
     -   **住所**  
   
-6.  [ファイル] メニューの **[すべてを保存]** をクリックします。  
+6.  [ファイル] メニューの [ **すべてを保存**] をクリックします。  
   
 ## <a name="adding-attributes-to-the-product-dimension"></a>Product ディメンションへの属性の追加  
   
@@ -82,17 +80,15 @@ ms.locfileid: "66079031"
   
 1.  Product ディメンションのディメンション デザイナーを開きます。 ソリューション エクスプローラーで、 **Product** ディメンションをダブルクリックします。  
   
-2.  
-  **[属性]** ペインに、キューブ ウィザードによって作成された Product Key 属性が表示されます。  
+2.  **[属性]** ペインに、キューブ ウィザードによって作成された Product Key 属性が表示されます。  
   
-3.  
-  **[ディメンション構造]** タブのツール バーで、 **[データ ソース ビュー]** ペイン内のテーブルを表示するための [ズーム] アイコンが 100% に設定されていることを確認します。  
+3.  **[ディメンション構造]** タブのツール バーで、 **[データ ソース ビュー]** ペイン内のテーブルを表示するための [ズーム] アイコンが 100% に設定されていることを確認します。  
   
 4.  次の列を、 **[データ ソース ビュー]** ペインの **Product** テーブルから **[属性]** ペインにドラッグします。  
   
     -   **StandardCost**  
   
-    -   **Color**  
+    -   **色**  
   
     -   **SafetyStockLevel**  
   
@@ -104,7 +100,7 @@ ms.locfileid: "66079031"
   
     -   **SizeRange**  
   
-    -   **線**  
+    -   **Weight**  
   
     -   **DaysToManufacture**  
   
@@ -124,7 +120,7 @@ ms.locfileid: "66079031"
   
     -   **状態**  
   
-5.  [ファイル] メニューの **[すべてを保存]** をクリックします。  
+5.  [ファイル] メニューの [ **すべてを保存**] をクリックします。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [キューブとディメンションのプロパティの確認](lesson-2-4-reviewing-cube-and-dimension-properties.md)  

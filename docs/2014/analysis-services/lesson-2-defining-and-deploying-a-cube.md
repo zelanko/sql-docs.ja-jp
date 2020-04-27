@@ -11,19 +11,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 298f07b5a73e7dfd38ef8eef19893813d96e1892
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078934"
 ---
-# <a name="lesson-2-defining-and-deploying-a-cube"></a>レッスン 2 : キューブの定義と配置
+# <a name="lesson-2-defining-and-deploying-a-cube"></a>レッスン 2: キューブの定義と配置
   プロジェクトで[!INCLUDE[msCoName](../includes/msconame-md.md)]データソースビューを定義したら、初期[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]キューブを定義できます。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
  キューブ ウィザードでは、キューブとそのディメンションを一度に定義できます。 1 つ以上のディメンションを定義してから、キューブ ウィザードを使用して、そのディメンションを使用するキューブを定義することもできます。 複雑なソリューションを設計する場合は、通常、ディメンションの定義から始めます。 詳細については、 [「多次元モデル内のディメンション」](multidimensional-models/dimensions-in-multidimensional-models.md) または [「多次元モデルのキューブ」](multidimensional-models/cubes-in-multidimensional-models.md)を参照してください。  
   
 > [!NOTE]  
->  このチュートリアルの各レッスンの操作内容が反映されたプロジェクトを、オンラインで入手できます。 途中のレッスンから開始する場合は、前のレッスンの操作内容が反映されたプロジェクトを作業の開始点として使用できます。 このチュートリアルで使用するサンプルプロジェクトをダウンロードするには、[ここをクリックし](https://go.microsoft.com/fwlink/?LinkID=221866)てください。  
+>  このチュートリアルの各レッスンの操作内容が反映されたプロジェクトを、オンラインで入手できます。 途中のレッスンから開始する場合は、前のレッスンの操作内容が反映されたプロジェクトを作業の開始点として使用できます。 このチュートリアルのサンプル プロジェクトをダウンロードするには、[ここ](https://go.microsoft.com/fwlink/?LinkID=221866) をクリックしてください。  
   
  このレッスンの内容は次のとおりです。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66078934"
  この実習では、Excel または MDX クエリ デザイナーを使用して、キューブとディメンションのデータを表示します。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 3 : メジャー、属性、および階層の修正](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
+ [レッスン 3:メジャー、属性、および階層の修正](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
   
 ## <a name="see-also"></a>参照  
  [Analysis Services チュートリアルのシナリオ](analysis-services-tutorial-scenario.md)   
@@ -55,6 +55,6 @@ ms.locfileid: "66078934"
  [多次元モデルのキューブ](multidimensional-models/cubes-in-multidimensional-models.md)   
  [SSDT&#41;&#40;Analysis Services プロジェクトのプロパティを構成する](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)   
  [ビルド Analysis Services プロジェクト &#40;SSDT&#41;](multidimensional-models/build-analysis-services-projects-ssdt.md)   
- [Analysis Services プロジェクト &#40;SSDT&#41;に配置する](multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
+ [Analysis Services プロジェクトの配置 &#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
   

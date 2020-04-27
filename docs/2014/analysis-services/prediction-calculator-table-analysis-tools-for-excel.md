@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e57aee7142da5c256a213ddd2eb0390a0f3b042a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070860"
 ---
 # <a name="prediction-calculator-table-analysis-tools-for-excel"></a>予測計算 (Excel 用のテーブル分析ツール)
@@ -58,7 +58,7 @@ ms.locfileid: "66070860"
   
      レポートやスコアカードを含む新しいワークシートが作成されます。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **予測計算**ツールでは、Microsoft ロジスティック回帰アルゴリズムが使用されます。このアルゴリズムでは、不連続な値と、分離された連続する数値データを操作できます。  
   
 ## <a name="understanding-the-scoring-reports"></a>スコアリング レポートについて  
@@ -78,7 +78,7 @@ ms.locfileid: "66070860"
 #### <a name="table-for-specifying-costs-and-profits"></a>コストと利益を指定するためのテーブル  
  このレポートの左上にある最初のツールは、値の正確な予測や不正確な予測に関連するコストと利益を指定できるテーブルです。  これらのコストと利益は、計算の最適なスコアしきい値を算出するために必要です。  
   
-|アイテム|説明と例|  
+|Item|説明と例|  
 |----------|-----------------------------|  
 |偽陽性のコスト|モデルで予測された陽性の結果が実際には間違っているのに正しいと想定した場合のコスト。<br /><br /> たとえば、顧客が商品を購入するというモデルの予測に基づいて、その顧客を対象とするキャンペーンを企画した場合の、 顧客獲得に要するコストをここに入力します。|  
 |偽陰性のコスト|モデルで予測された陰性の結果が実際には間違っているのに正しいと想定した場合のコスト。<br /><br /> たとえば、年齢層の高い顧客は自転車を購入しないとモデルで予測されたが、モデルがゆがめられていたために、結果として年齢層の高い顧客を対象とする機会を逃すことになった場合の 顧客あたりのコストをここに入力します。|  
@@ -97,12 +97,12 @@ ms.locfileid: "66070860"
   
  **相対的影響**列の値は、パーセンテージで表される確率です。 この値が結果に与える影響を視覚的に表すために、セルが網掛けされます。  
   
-|Attribute|Value|相対的影響|  
+|属性|値|相対的影響|  
 |---------------|-----------|---------------------|  
 |Marital Status|Married|0|  
 |Marital Status|Single|71|  
-|性別|女性|13|  
-|性別|男性|0|  
+|性別|Female|13|  
+|性別|Male|0|  
   
  これらの要因は次のように解釈できます。  
   
@@ -127,10 +127,10 @@ ms.locfileid: "66070860"
   
  たとえば、レポートに次の値が含まれていた場合、自動車の値を 1 に減らし、その後さらに 0 に減らして、顧客の購買行動にどのように影響するのかを調べることができます。 **車両**の値を0に変更すると、下の予測が TRUE に変わります。  
   
-|Attribute|Value|相対的影響|  
+|属性|値|相対的影響|  
 |---------------|-----------|---------------------|  
 |Marital Status|Married|0|  
-|性別|男性|0|  
+|性別|Male|0|  
 |Income|39050 ~ 71062|117|  
 |Children|0|157|  
 |教育|Bachelors|22|  
@@ -175,8 +175,7 @@ ms.locfileid: "66070860"
 8.  シートの**合計**行の直後に印刷された条件を使用して、スコアを予測結果に変換します。  
   
 ## <a name="related-tools"></a>関連ツール  
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] には、この種類の分析に使用できる Microsoft ロジスティック回帰アルゴリズムが用意されています。 ロジスティック回帰について既によく理解している場合は、Excel 用のデータマイニングクライアントの **[詳細設定**] オプションを使用して、ロジスティック回帰モデルを簡単に作成できます。 詳細については、「 [Excel&#41;用の高度なモデリング &#40;データマイニングアドイン](advanced-modeling-data-mining-add-ins-for-excel.md)」を参照してください。 ロジスティック回帰モデルのオプションとパラメーターの詳細については、オンラインブックの[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 「Microsoft ロジスティック回帰アルゴリズム」を参照してください。  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] には、この種類の分析に使用できる Microsoft ロジスティック回帰アルゴリズムが用意されています。 ロジスティック回帰について既によく理解している場合は、Excel 用のデータマイニングクライアントの **[詳細設定**] オプションを使用して、ロジスティック回帰モデルを簡単に作成できます。 詳細については、「 [Excel&#41;用の高度なモデリング &#40;データマイニングアドイン](advanced-modeling-data-mining-add-ins-for-excel.md)」を参照してください。 ロジスティック回帰モデルのオプションとパラメーターの詳細については、オンラインブックの[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 「Microsoft ロジスティック回帰アルゴリズム」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [Excel 用テーブル分析ツール](table-analysis-tools-for-excel.md)  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: faa6198bc9fa42b55be63ec57ff49ed6703ef260
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081256"
 ---
 # <a name="filter-and-sort-data-ssas-tabular"></a>データのフィルター処理と並べ替え (SSAS テーブル)
@@ -24,7 +24,7 @@ ms.locfileid: "66081256"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[SSAS 表形式&#41;&#40;テーブル内のデータを並べ替える](tabular-models/sort-data-in-a-table-ssas-tabular.md)テーブル内のデータの並べ替え|このトピックのタスクでは、テーブル内のデータを文字または数字の順で並べ替える方法について説明します。|  
 |[SSAS 表形式&#41;&#40;テーブルのデータをフィルター処理する](tabular-models/filter-data-in-a-table-ssas-tabular.md)|このトピックのタスクでは、カスタム フィルターを適用して行の表示方法を制御する方法について説明します。|  

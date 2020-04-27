@@ -13,25 +13,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ac7fe46583c579c861de7b639fe72e58801f2e5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077138"
 ---
 # <a name="arrange-shapes-in-the-attribute-relationship-diagram"></a>属性リレーションシップ ダイアグラムでの図形の整列
-  
   **のディメンション デザイナーでは、[ディメンション構造] ビューの** [属性リレーションシップ] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]タブで図形の配置を変更できます。  
   
 ### <a name="to-arrange-shapes-in-the-attribute-relationship-diagram"></a>属性リレーションシップ ダイアグラムで図形を整列するには  
   
 1.  ディメンション デザイナーで、属性リレーションシップの作成対象となる属性が含まれているディメンションを開きます。  
   
-2.  
-  **[属性リレーションシップ]** タブのダイアグラムで、選択する図形をクリックし、図形の上端を新しい場所にドラッグします。  
+2.  **[属性リレーションシップ]** タブのダイアグラムで、選択する図形をクリックし、図形の上端を新しい場所にドラッグします。  
   
-     
-  **[図形の整列]** をクリックし、ディメンション デザイナーで使用される配置アルゴリズムに従ってすべての図形を自動的に整列することもできます。  
+     **[図形の整列]** をクリックし、ディメンション デザイナーで使用される配置アルゴリズムに従ってすべての図形を自動的に整列することもできます。  
   
 ## <a name="see-also"></a>参照  
  [属性リレーションシップ](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   

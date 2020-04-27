@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 959645223eacec6c000ddbfa23615b7949d10d5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077418"
 ---
 # <a name="define-a-default-member"></a>既定のメンバーの定義
@@ -44,6 +44,6 @@ ms.locfileid: "66077418"
  階層のレベルが自動的に集計される場合は、階層の他の属性に関係なく、階層のどの属性にも既定のメンバーを定義できます。 たとえば、"hierarchy Country-City" の場合、[City] など、City の既定のメンバーを定義できます。[モントリオール] State または Country の既定のメンバーを定義する必要はありません。  
   
 ## <a name="see-also"></a>参照  
- [属性階層のすべての&#41; レベル &#40;を構成する](database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+ [属性階層の &#40;All&#41; レベルの構成](database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

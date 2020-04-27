@@ -13,18 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f52ec05ddadc6bb23968f6b5f8ee7fda9adc65a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070219"
 ---
 # <a name="review-aggregation-usage-aggregation-design-wizard"></a>[集計使用法の確認] (集計のデザイン ウィザード)
-  
   **[集計使用法の確認]** ページを使用すると、集計使用法の設定を構成できます。  
   
 ## <a name="options"></a>オプション  
- **標準**  
+ **[Default]**  
  属性の集計使用法の設定を Default に設定する場合に選択します。 この設定を使用すると、属性およびディメンションの型に基づいて既定のルールが適用されます。  
   
  `Full`  

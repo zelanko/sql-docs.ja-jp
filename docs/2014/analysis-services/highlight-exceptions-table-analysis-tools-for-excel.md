@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 18bf54b7b97598c6c61d7e282ad5791d926cc25a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080762"
 ---
 # <a name="highlight-exceptions-table-analysis-tools-for-excel"></a>例外の強調表示 (Excel 用のテーブル分析ツール)
@@ -43,7 +43,7 @@ ms.locfileid: "66080762"
   
 5.  ハイライトの数を変更するには、[例外の**強調表示] レポート**の [**例外のしきい値**] 行にある上下の矢印をクリックします。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  外れ値が含まれていない列でも、その値が他の行の予測に貢献するのであれば、検出対象に含めることができます。 しかし、欠損値をあまりにも多く含む列については、選択を解除する必要があります。  
   
  選択したすべての列が、一般的なパターンの作成に使用されるので、次のような適切でない情報を含む入力列は使用しないようにしてください。  
@@ -63,8 +63,7 @@ ms.locfileid: "66080762"
   
 -   テーブル内の最新のデータに基づいてデータ マイニング構造を作成する。  
   
--   
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] クラスタリング アルゴリズムを使って新しいデータ マイニング モデルを作成する。  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] クラスタリング アルゴリズムを使って新しいデータ マイニング モデルを作成する。  
   
 -   パターンに基づく予測クエリを作成し、ワークシートに、あり得ない値が存在するかどうかを調べる。  
   
@@ -79,8 +78,7 @@ ms.locfileid: "66080762"
   
  **例外の強調表示**ツールで[!INCLUDE[msCoName](../includes/msconame-md.md)]は、クラスタリングアルゴリズムが使用されます。 クラスター モデルにより、似た特性を共有する行グループが検出されます。 Excel 用のデータマイニングクライアントには、グラフと特性プロファイルを使用して、クラスタリングによって作成されたデータマイニングモデルを調べるための [**参照**] ウィンドウが用意されています。 [**例外の強調表示**] ツールによって作成されたクラスターモデルを参照する方法については、「[モデルの参照 (Excel 用データマイニングクライアント)](highlight-exceptions-table-analysis-tools-for-excel.md)」を参照してください。  
   
- 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] クラスタリング アルゴリズムの詳細については、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックの「Microsoft クラスタリング アルゴリズム」を参照してください。  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] クラスタリング アルゴリズムの詳細については、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックの「Microsoft クラスタリング アルゴリズム」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [Excel 用テーブル分析ツール](table-analysis-tools-for-excel.md)  

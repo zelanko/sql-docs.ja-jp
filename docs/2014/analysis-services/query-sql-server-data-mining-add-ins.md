@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dcddeb64b14301f08a7dc723ef89737102f257ad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070480"
 ---
 # <a name="query-sql-server-data-mining-add-ins"></a>クエリ (SQL Server データ マイニング アドイン)
@@ -47,7 +47,7 @@ ms.locfileid: "66070480"
   
  いつでも、[**詳細設定**] をクリックして**データマイニング詳細クエリエディター**に切り替えることができます。これにより、DMX ステートメントの各部分をより細かく制御できます。 高度なクエリ編集ツールの使用方法の詳細については、「[高度なデータマイニングクエリエディター](advanced-data-mining-query-editor.md)」を参照してください。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **クエリ**ウィザードを使用するには、の[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンスに接続されている必要があります。 また、サーバーに適切な種類のデータ マイニング モデルが少なくとも 1 つ保存されている必要があります。 使用できるモデルが 1 つもない場合は、Excel 用のデータ マイニング クライアントのウィザードを使用して作成できます。 ウィザードを使用して新しいマイニングモードを作成する方法については、「[データマイニングモデルの作成](creating-a-data-mining-model.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

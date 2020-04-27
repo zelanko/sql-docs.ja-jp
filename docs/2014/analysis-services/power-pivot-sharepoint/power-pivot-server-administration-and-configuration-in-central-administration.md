@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: de72001ced1b7e2690f90b2de4c59bb35aca6ce4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071111"
 ---
 # <a name="powerpivot-server-administration-and-configuration-in-central-administration"></a>サーバーの全体管理での PowerPivot サーバーの管理と構成
@@ -55,15 +55,15 @@ ms.locfileid: "66071111"
 |[Excel Services で信頼できるデータ プロバイダーとして MSOLAP.5 を追加](add-msolap-5-as-a-trusted-data-provider-in-excel-services.md)|必須|この手順では、Analysis Services OLE DB プロバイダーを Excel Services の信頼できるプロバイダーとして追加します。|  
 |[SharePoint 2010 での PowerPivot データ更新](../powerpivot-data-refresh-with-sharepoint-2010.md)|推奨|データの更新は省略可能ですが推奨されます。 発行された Excel ブックで PowerPivot データに自動更新をスケジュールできます。|  
 |[PowerPivot 自動データ更新アカウント &#40;PowerPivot for SharePoint を構成し&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)|推奨|この手順では、サーバー上でデータの更新ジョブを実行するために使用できる特別な目的のアカウントを準備します。|  
-|[&#40;PowerPivot for SharePoint の使用状況データ収集の構成](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)|省略可能|使用状況データ コレクションは既定で構成されています。 これらの手順を使用して、既定の設定を変更できます。|  
-|[専用のデータ更新またはクエリ専用処理の構成 &#40;PowerPivot for SharePoint&#41;](../configure-dedicated-data-refresh-query-only-processing-powerpivot-sharepoint.md)|省略可能|PowerPivot インスタンスは、データ更新ジョブまたはクエリ専用にすることができます。 さらに、並列データ更新ジョブの既定の設定を変更できます。|  
-|[PowerPivot サービス アカウントの構成](configure-power-pivot-service-accounts.md)|省略可能|パスワードの更新とサービス アカウントの変更方法について説明します。|  
-|[サーバーの全体管理で PowerPivot サービスアプリケーションを SharePoint Web アプリケーションに接続する](connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)|省略可能|サービスの関連付けを変更する方法について説明します。|  
-|[サーバーの全体管理での PowerPivot サイト用の信頼できる場所の作成](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)|省略可能|PowerPivot ギャラリーを信頼できる場所として追加する方法について説明します。|  
-|[SharePoint ログファイルと診断ログ &#40;PowerPivot for SharePoint の構成と表示&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md)|省略可能|イベントのログ記録は既定で構成されています。 これらの手順を使用して、既定の設定を変更できます。|  
-|[PowerPivot の正常性ルール - 構成](configure-power-pivot-health-rules.md)|省略可能|サーバーの正常性ルールは既定で構成されています。 これらの手順を使用して、既定の設定の一部を変更できます。|  
-|[PowerPivot ギャラリーの作成およびカスタマイズ](create-and-customize-power-pivot-gallery.md)|省略可能|インストールを手動で構成している場合は、この手順で、格納している PowerPivot ブックのサムネイル画像を示す PowerPivot ギャラリー ライブラリの作成方法を説明します。|  
-|[BI セマンティックモデル接続のコンテンツタイプをライブラリ &#40;PowerPivot for SharePoint に追加&#41;](add-bi-semantic-model-connection-content-type-to-library.md)|省略可能|BI セマンティック モデル接続ファイルの作成をサポートするようにドキュメント ライブラリを拡張する方法について説明します。|  
+|[&#40;PowerPivot for SharePoint の使用状況データ収集の構成](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)|Optional|使用状況データ コレクションは既定で構成されています。 これらの手順を使用して、既定の設定を変更できます。|  
+|[専用のデータ更新またはクエリ専用処理の構成 &#40;PowerPivot for SharePoint&#41;](../configure-dedicated-data-refresh-query-only-processing-powerpivot-sharepoint.md)|Optional|PowerPivot インスタンスは、データ更新ジョブまたはクエリ専用にすることができます。 さらに、並列データ更新ジョブの既定の設定を変更できます。|  
+|[PowerPivot サービス アカウントの構成](configure-power-pivot-service-accounts.md)|Optional|パスワードの更新とサービス アカウントの変更方法について説明します。|  
+|[サーバーの全体管理で PowerPivot サービスアプリケーションを SharePoint Web アプリケーションに接続する](connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)|Optional|サービスの関連付けを変更する方法について説明します。|  
+|[サーバーの全体管理での PowerPivot サイト用の信頼できる場所の作成](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)|Optional|PowerPivot ギャラリーを信頼できる場所として追加する方法について説明します。|  
+|[SharePoint ログファイルと診断ログ &#40;PowerPivot for SharePoint の構成と表示&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md)|Optional|イベントのログ記録は既定で構成されています。 これらの手順を使用して、既定の設定を変更できます。|  
+|[PowerPivot の正常性ルール - 構成](configure-power-pivot-health-rules.md)|Optional|サーバーの正常性ルールは既定で構成されています。 これらの手順を使用して、既定の設定の一部を変更できます。|  
+|[PowerPivot ギャラリーの作成およびカスタマイズ](create-and-customize-power-pivot-gallery.md)|Optional|インストールを手動で構成している場合は、この手順で、格納している PowerPivot ブックのサムネイル画像を示す PowerPivot ギャラリー ライブラリの作成方法を説明します。|  
+|[BI セマンティックモデル接続のコンテンツタイプをライブラリ &#40;PowerPivot for SharePoint に追加&#41;](add-bi-semantic-model-connection-content-type-to-library.md)|Optional|BI セマンティック モデル接続ファイルの作成をサポートするようにドキュメント ライブラリを拡張する方法について説明します。|  
   
 ## <a name="see-also"></a>参照  
  [PowerPivot for SharePoint 2010 のインストール](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)   

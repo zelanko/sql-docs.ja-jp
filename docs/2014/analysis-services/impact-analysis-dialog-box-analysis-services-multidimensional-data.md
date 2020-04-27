@@ -13,16 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0c08690cd2f5b77471392cab3aad1587b4cb0f9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080751"
 ---
 # <a name="impact-analysis-dialog-box-analysis-services---multidimensional-data"></a>[影響分析] ダイアログ ボックス (Analysis Services - 多次元データ)
-  
-  **および** の [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] [影響分析] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ダイアログ ボックスを使用すると、 **[処理]** ダイアログ ボックスに一覧表示されているオブジェクトが処理された場合に影響を受ける依存オブジェクトを特定し、必要に応じて処理できます。 
-  **[影響分析]** ダイアログ ボックスを表示するには、 **[処理]** ダイアログ ボックスの **[影響分析]** をクリックします。  
+  **および** の [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] [影響分析] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ダイアログ ボックスを使用すると、 **[処理]** ダイアログ ボックスに一覧表示されているオブジェクトが処理された場合に影響を受ける依存オブジェクトを特定し、必要に応じて処理できます。 **[影響分析]** ダイアログ ボックスを表示するには、 **[処理]** ダイアログ ボックスの **[影響分析]** をクリックします。  
   
 > [!NOTE]  
 >  オブジェクトが複数回にわたって影響を受ける場合は、そのオブジェクトが複数回表示されます。  
@@ -31,20 +29,19 @@ ms.locfileid: "66080751"
  **オブジェクトの一覧**  
  依存オブジェクトの一覧をグリッドに表示します。 このグリッドには次の列が含まれています。  
   
- **[オブジェクト名]**  
+ **オブジェクト名**  
  処理する必要がある可能性がある依存オブジェクトの名前を表示します。 名前の左にあるアイコンはオブジェクトの種類を示しています。  
   
  **Type**  
  処理する必要がある可能性がある依存オブジェクトの種類を表示します。  
   
  **[影響の種類]**  
- 
-  **[処理]** ダイアログ ボックスに表示されているオブジェクトを処理することによって依存オブジェクトに与える影響を表示します。 次の表に、処理の影響と、その結果として警告またはエラーのどちらが生成されるかどうかを示します。  
+ **[処理]** ダイアログ ボックスに表示されているオブジェクトを処理することによって依存オブジェクトに与える影響を表示します。 次の表に、処理の影響と、その結果として警告またはエラーのどちらが生成されるかどうかを示します。  
   
 |影響|Message|  
 |------------|-------------|  
 |オブジェクトがクリアされます (処理されません)。|警告|  
-|オブジェクトが無効になります。|エラー|  
+|オブジェクトが無効になります。|Error|  
 |集計が削除されます。|警告|  
 |柔軟な集計が削除されます。|警告|  
 |インデックスが削除されます。|警告|  

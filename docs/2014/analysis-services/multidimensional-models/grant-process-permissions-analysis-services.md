@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 49b8a1c8ce566b18143b6b693a227fba4a5bd094
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074888"
 ---
 # <a name="grant-process-permissions-analysis-services"></a>処理権限の付与 (Analysis Services)
@@ -28,32 +28,27 @@ ms.locfileid: "66074888"
 > [!IMPORTANT]  
 >  ロールによって処理権限のみが付与されているユーザーは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] を使用して、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] に接続したり、オブジェクトを処理したりすることはできません。 これらのツールを使用するには、オブジェクト メタデータにアクセスするための`Read Definition`権限が必要となります。 どちらのツールも使用できない場合は、XMLA スクリプトを使用して処理操作を実行する必要があります。  
 >   
->  また、テスト目的で`Read Definition`権限も付与することをお勧めします。 
-  `Read Definition`権限と`Process Database`権限の両方を持つユーザーは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で対話的にオブジェクトを処理できます。 「 [オブジェクト メタデータに対する定義の読み取り権限の付与 &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md) 」を参照してください。  
+>  また、テスト目的で`Read Definition`権限も付与することをお勧めします。 `Read Definition`権限と`Process Database`権限の両方を持つユーザーは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で対話的にオブジェクトを処理できます。 「 [オブジェクト メタデータに対する定義の読み取り権限の付与 &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md) 」を参照してください。  
   
 ## <a name="set-processing-permissions-at-the-database-level"></a>データベース レベルでの処理権限の設定  
  ここでは、管理者以外のユーザーがデータベース内のすべてのキューブ、ディメンション、マイニング構造、およびマイニング モデルを処理できるようにする方法について説明します。  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに接続し、[データベース] フォルダーを開いてデータベースを選択します。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに接続し、[データベース] フォルダーを開いてデータベースを選択します。  
   
 2.  [**ロール** | ] [**新しいロール**] を右クリックします。 名前と説明を入力します。  
   
 3.  **[全般**] ペインで、 `Process Database`チェックボックスをオンにします。 また、など`Read Definition`の SQL Server ツールのいずれかを使用して対話型の処理を[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]有効にすることもできます。  
   
-4.  
-  **[メンバーシップ]** ペインで、このデータベースのすべてのオブジェクトを処理する権限のある Windows ユーザー アカウントおよびグループ アカウントを追加します。  
+4.  **[メンバーシップ]** ペインで、このデータベースのすべてのオブジェクトを処理する権限のある Windows ユーザー アカウントおよびグループ アカウントを追加します。  
   
-5.  
-  **[OK]** をクリックすると、ロール定義が完了します。  
+5.  **[OK]** をクリックすると、ロール定義が完了します。  
   
 ## <a name="set-processing-permissions-on-individual-objects"></a>個々のオブジェクトに対する処理権限の設定  
  個々のキューブ、ディメンション、データ マイニング構造、またはデータ マイニング モデルに対する処理権限を設定できます。  
   
  一緒に処理する必要があるオブジェクトを誤って除外した場合は、処理が失敗することがあります (たとえば、キューブに対する処理は有効にしたものの、その関連するディメンションに対する処理は有効にしなかった場合)。 オブジェクトの依存関係は見落とされやすいため、個々のオブジェクトに対する処理権限を設定するときには、徹底的にテストする必要があります。  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに接続し、[データベース] フォルダーを開いてデータベースを選択します。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに接続し、[データベース] フォルダーを開いてデータベースを選択します。  
   
 2.  [**ロール** | ] [**新しいロール**] を右クリックします。 名前と説明を入力します。  
   
@@ -63,17 +58,13 @@ ms.locfileid: "66074888"
   
 4.  処理する個々のオブジェクトを選択します。  
   
-    -   
-  **[キューブ]** ペインで、各キューブの **[処理]** チェック ボックスをオンにします。  
+    -   **[キューブ]** ペインで、各キューブの **[処理]** チェック ボックスをオンにします。  
   
-    -   
-  **[ディメンション]** ペインで、 **[すべてのデータベース ディメンション]** を選択し、各ディメンションの **[処理]** チェック ボックスをオンにします。 あるいは、すべての行を選択し、シフトクリックを使用してチェック ボックスの選択を切り替えます。  
+    -   **[ディメンション]** ペインで、 **[すべてのデータベース ディメンション]** を選択し、各ディメンションの **[処理]** チェック ボックスをオンにします。 あるいは、すべての行を選択し、シフトクリックを使用してチェック ボックスの選択を切り替えます。  
   
-5.  
-  **[メンバーシップ]** ペインで、これらのオブジェクトを処理する権限のある Windows ユーザー アカウントおよびグループ アカウントを追加します。  
+5.  **[メンバーシップ]** ペインで、これらのオブジェクトを処理する権限のある Windows ユーザー アカウントおよびグループ アカウントを追加します。  
   
-6.  
-  **[OK]** をクリックすると、ロール定義が完了します。  
+6.  **[OK]** をクリックすると、ロール定義が完了します。  
   
 ## <a name="test-processing"></a>処理のテスト  
   
@@ -88,25 +79,20 @@ ms.locfileid: "66074888"
   
  マイニングモデルと`Read Definition`マイニング構造の参照に使用される**ドリルスルー**と権限はアトミックであり、同じロールに追加することも、別のロールに分割することもできます。  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに接続し、[データベース] フォルダーを開いてデータベースを選択します。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに接続し、[データベース] フォルダーを開いてデータベースを選択します。  
   
-2.  [**ロール** | ] [**新しいロール**] を右クリックします。 名前と説明を入力します。 
-  **[全般]** ペインで、データベース権限のチェック ボックスがオフであることを確認します。 データベース権限によって、ロールのオプションがグレー表示されるか選択不可になることで、下位レベルのオブジェクトに対する権限の設定機能がオーバーライドされます。  
+2.  [**ロール** | ] [**新しいロール**] を右クリックします。 名前と説明を入力します。 **[全般]** ペインで、データベース権限のチェック ボックスがオフであることを確認します。 データベース権限によって、ロールのオプションがグレー表示されるか選択不可になることで、下位レベルのオブジェクトに対する権限の設定機能がオーバーライドされます。  
   
-3.  
-  **[マイニング構造]** ペインで、各マイニング構造の **[処理]** チェック ボックスをオンにします。  
+3.  **[マイニング構造]** ペインで、各マイニング構造の **[処理]** チェック ボックスをオンにします。  
   
-4.  
-  **[メンバーシップ]** ペインで、このデータベースのすべてのオブジェクトを処理する権限のある Windows ユーザー アカウントおよびグループ アカウントを追加します。  
+4.  **[メンバーシップ]** ペインで、このデータベースのすべてのオブジェクトを処理する権限のある Windows ユーザー アカウントおよびグループ アカウントを追加します。  
   
-5.  
-  **[OK]** をクリックすると、ロール定義が完了します。  
+5.  **[OK]** をクリックすると、ロール定義が完了します。  
   
 ## <a name="see-also"></a>参照  
  [データベース、テーブル、またはパーティションの処理](../tabular-models/process-database-table-or-partition-analysis-services.md)   
  [多次元モデルオブジェクトの処理](processing-a-multidimensional-model-analysis-services.md)   
  [Analysis Services &#40;データベースのアクセス許可を付与&#41;](grant-database-permissions-analysis-services.md)   
- [オブジェクトメタデータに対する定義の読み取り権限の付与 &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
+ [オブジェクト メタデータに対する定義の読み取り権限の付与 &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
   
   

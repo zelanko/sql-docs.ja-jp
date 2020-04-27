@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0bad2a2e65a65bbafa8218a3e0afbedd4b9f13b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081304"
 ---
 # <a name="explore-data-sql-server-data-mining-add-ins"></a>データの探索 (SQL Server データ マイニング アドイン)
@@ -28,7 +28,7 @@ ms.locfileid: "66081304"
   
  データに連続する数値データが含まれている場合は、次の 2 つのビューを切り替えることができます。  
   
--   **線グラフ。** このグラフは、データ値を X 軸、ケース数を Y 軸として表示します。  
+-   **折れ線グラフ。** このグラフは、データ値を X 軸、ケース数を Y 軸として表示します。  
   
 -   **横棒グラフ。** このグラフは、それぞれの値のケース数に基づいて値をグループ化します。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66081304"
   
 5.  オプションで、新しい列をデータに追加したり、データを分割する方法を変更したり、グラフを Excel にコピーしたりできます。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **データの探索**ウィザードを使用するには、Excel データテーブルにデータが含まれている必要があります。   
   
 ## <a name="see-also"></a>参照  

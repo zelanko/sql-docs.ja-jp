@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: def616b09e6d5378257c3e5c377f2724c9d09676
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077166"
 ---
 # <a name="set-usage-property"></a>使用法プロパティの設定
@@ -31,14 +31,13 @@ ms.locfileid: "66077166"
   
      既定では、 **[ディメンション構造]** ビューが表示されます。  
   
-2.  
-  **[属性]** で、使用法を設定する属性を右クリックし、 **[属性の使用法を設定]** をポイントして次のいずれかのオプションをクリックします。  
+2.  **[属性]** で、使用法を設定する属性を右クリックし、 **[属性の使用法を設定]** をポイントして次のいずれかのオプションをクリックします。  
   
-    -   **一般**  
+    -   **通常**  
   
-    -   **[キー]**  
+    -   **キー**  
   
-    -   **Parent**  
+    -   **所属**  
   
 ## <a name="see-also"></a>参照  
  [属性と属性階層](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   

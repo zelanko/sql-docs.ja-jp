@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 93ad2deb67e1b8526e14ea34eb165659f96fa066
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072060"
 ---
 # <a name="perspective-details-perspectives-tab-cube-designer-analysis-services---multidimensional-data"></a>パースペクティブの詳細 (キューブ デザイナーの [パースペクティブ] タブ) (Analysis Services - 多次元データ)
@@ -41,7 +41,7 @@ ms.locfileid: "66072060"
 ## <a name="context-menu"></a>コンテキスト メニュー  
  次に、 **パースペクティブの詳細** ペインで表示されるパースペクティブ内の任意のセルを右クリックして表示されるショートカット メニューでは、次のオプションを使用できます。  
   
-|オプション|[説明]|  
+|オプション|説明|  
 |------------|-----------------|  
 |**[新しいパースペクティブ]**|選択したキューブに新しいパースペクティブを作成します。|  
 |**[パースペクティブの削除]**|クリックすると、[**オブジェクトの削除**] ダイアログボックスが表示され、選択したパースペクティブを削除します。|  

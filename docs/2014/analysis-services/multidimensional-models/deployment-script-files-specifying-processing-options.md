@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ea766d26034b9ee0d1fcefbd215f41c19da1f9ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075224"
 ---
 # <a name="specifying-processing-options"></a>処理オプションの指定
@@ -29,15 +29,15 @@ ms.locfileid: "66075224"
 ## <a name="reviewing-the-processing-options-for-deployment"></a>配置に関する処理オプションの確認  
  \<*プロジェクト名*> deploymentoptions ファイル内に格納されている構成設定は次のとおりです。  
   
--   **処理方法**この設定は、配置されたオブジェクトを配置後に処理するかどうか、および実行する処理の種類を制御します。 処理オプションには次の 3 つがあります。  
+-   **処理方法** この設定では、配置するオブジェクトを配置後に処理するかどうかと、実行する処理の種類を制御します。 処理オプションには次の 3 つがあります。  
   
     -   既定の処理 (既定)  
   
     -   完全処理  
   
-    -   なし  
+    -   None  
   
--   **書き戻しテーブルのオプション**[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]プロジェクトで書き戻しが有効になっている場合、この設定によって書き戻しの処理方法が定義されます。 書き戻しテーブル オプションには次の 3 つがあります。  
+-   **書き戻しテーブル オプション**[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトで書き戻しが有効になっている場合、この設定では書き戻しの処理方法を定義します。 書き戻しテーブル オプションには次の 3 つがあります。  
   
     -   既定では、書き戻しテーブルが存在する場合、そのテーブルが使用されます。 書き戻しテーブルが存在しない場合は、新しい書き戻しテーブルが作成されます。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66075224"
   
     -   書き戻しテーブルが既に存在するかどうかにかかわらず、新しい書き戻しテーブルが作成されます。 この場合、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置ウィザードによって既存のテーブルが削除され、新しい書き戻しテーブルに置き換えられます。  
   
--   **トランザクション配置**この設定は、1つのトランザクションで、または別のトランザクションで、メタデータの変更および処理コマンドの配置を実行するかどうかを制御します。  
+-   **トランザクション配置** この設定では、メタデータ変更および処理コマンドの配置を 1 つのトランザクションで行うか、別々のトランザクションで行うかを制御します。  
   
     -   このオプションが `True` (既定) の場合、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ではすべてのメタデータ変更およびすべての処理コマンドが 1 つのトランザクションで配置されます。  
   
@@ -58,16 +58,13 @@ ms.locfileid: "66075224"
   
 #### <a name="to-change-processing-options-after-the-input-files-have-been-generated"></a>入力ファイルの生成後に処理オプションを変更するには  
   
--   
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置ウィザードを対話形式で実行します。 
-  **[処理オプション]** ページで、配置するプロジェクトの処理オプションを指定します。  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置ウィザードを対話形式で実行します。 **[処理オプション]** ページで、配置するプロジェクトの処理オプションを指定します。  
   
-     または  
+     \- または -  
   
--   
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置ウィザードをコマンド プロンプトで実行し、ウィザードを応答ファイル モードで実行するように設定します。 応答ファイルモードの詳細については、「 [Analysis Services 配置ウィザードの実行](running-the-analysis-services-deployment-wizard.md)」を参照してください。  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置ウィザードをコマンド プロンプトで実行し、ウィザードを応答ファイル モードで実行するように設定します。 応答ファイル モードの詳細については、「 [Analysis Services 配置ウィザードの実行](running-the-analysis-services-deployment-wizard.md)」を参照してください。  
   
-     または  
+     \- または -  
   
 -   任意の\<テキストエディターを使用して、*プロジェクト名*> deploymentoptions ファイルに変更します。  
   

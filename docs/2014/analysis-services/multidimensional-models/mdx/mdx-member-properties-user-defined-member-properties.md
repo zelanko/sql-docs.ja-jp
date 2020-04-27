@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ead5a45bf163ca4e7998c30ab5c83f94cca9075b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074260"
 ---
 # <a name="user-defined-member-properties-mdx"></a>ユーザー定義メンバー プロパティ (MDX)
@@ -37,8 +37,7 @@ ms.locfileid: "66074260"
   
  `DIMENSION PROPERTIES [Dimension.]Level.<Custom_Member_Property>`  
   
- 
-  `PROPERTIES` キーワードは、軸を指定するセット式の後に指定します。 たとえば、次の MDX クエリの `PROPERTIES` キーワードは `List Price` および `Dealer Price` ユーザー定義メンバー プロパティを取得するもので、1 月に販売された製品を示すセット式の後に指定されています。  
+ `PROPERTIES` キーワードは、軸を指定するセット式の後に指定します。 たとえば、次の MDX クエリの `PROPERTIES` キーワードは `List Price` および `Dealer Price` ユーザー定義メンバー プロパティを取得するもので、1 月に販売された製品を示すセット式の後に指定されています。  
   
 ```  
 SELECT   
@@ -69,6 +68,6 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>参照  
  [MDX&#41;&#40;メンバープロパティを使用する](mdx-member-properties.md)   
- [MDX&#41;&#40;プロパティ](/sql/mdx/properties-mdx)  
+ [プロパティ &#40;MDX&#41;](/sql/mdx/properties-mdx)  
   
   

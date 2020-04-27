@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3c2c3d4838d0e21a1520197612dd08c679df843a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074336"
 ---
 # <a name="using-cell-properties-mdx"></a>セル プロパティの使用 (MDX)
@@ -47,38 +47,25 @@ SELECT [<axis_specification>
 ## <a name="supported-intrinsic-cell-properties"></a>サポートされる固有セル プロパティ  
  次の表は、 `<property>` 値の中で使用可能な固有セル プロパティを示しています。  
   
-|プロパティ|[説明]|  
+|プロパティ|説明|  
 |--------------|-----------------|  
 |`ACTION_TYPE`|セルに対するアクションの種類を示すビットマスク。 このプロパティの値は、次のいずれか 1 つです。<br /><br /> **MDACTION_TYPE_URL**<br /><br /> **MDACTION_TYPE_HTML**<br /><br /> **MDACTION_TYPE_STATEMENT**<br /><br /> **MDACTION_TYPE_DATASET**<br /><br /> **MDACTION_TYPE_ROWSET**<br /><br /> **MDACTION_TYPE_COMMANDLINE**<br /><br /> **MDACTION_TYPE_PROPRIETARY**<br /><br /> **MDACTION_TYPE_REPORT**<br /><br /> **MDACTION_TYPE_DRILLTHROUGH**<br /><br /> <br /><br /> 注: WHERE 句内にセットを含むクエリの場合、ドリルスルー アクションは含まれません。|  
-|**BACK_COLOR**|
-  `VALUE` または `FORMATTED_VALUE` プロパティを表示するときの背景色。 詳しくは、「[FORE_COLOR および BACK_COLOR の内容 &#40;MDX&#41;](mdx-cell-properties-fore-color-and-back-color-contents.md)」をご覧ください。|  
+|**BACK_COLOR**|`VALUE` または `FORMATTED_VALUE` プロパティを表示するときの背景色。 詳しくは、「[FORE_COLOR および BACK_COLOR の内容 &#40;MDX&#41;](mdx-cell-properties-fore-color-and-back-color-contents.md)」をご覧ください。|  
 |`CELL_ORDINAL`|データセット内のセルの序数。|  
-|**FONT_FLAGS**|フォントの詳細な文字飾りを示すビットマスク。 たとえば、値 5 は、太字の (`MDFF_BOLD`) フォントと下線付きの (`MDFF_UNDERLINE`) フォントの文字飾りの組み合わせを表します。 この値は、次の 1 つ以上の定数に対するビットごとの OR 演算の結果です。<br /><br /> `MDFF_BOLD`= 1<br /><br /> 
-  `MDFF_ITALIC` = 2<br /><br /> 
-  `MDFF_UNDERLINE` = 4<br /><br /> 
-  `MDFF_STRIKEOUT` = 8|  
-|**FONT_NAME**|
-  `VALUE` または `FORMATTED_VALUE` プロパティの表示に使用するフォント。|  
-|**FONT_SIZE**|
-  `VALUE` または `FORMATTED_VALUE` プロパティの表示に使用するフォント サイズ。|  
-|**FORE_COLOR**|
-  `VALUE` または `FORMATTED_VALUE` プロパティを表示するときの前景色。 詳しくは、「[FORE_COLOR および BACK_COLOR の内容 &#40;MDX&#41;](mdx-cell-properties-fore-color-and-back-color-contents.md)」をご覧ください。|  
-|`FORMAT`|
-  `FORMAT_STRING` と同じ。|  
-|`FORMAT_STRING`|
-  `FORMATTED_VALUE` プロパティ値の作成に使用する書式文字列。 詳しくは、「[FORMAT_STRING の内容 &#40;MDX&#41;](mdx-cell-properties-format-string-contents.md)」をご覧ください。|  
-|`FORMATTED_VALUE`|
-  `VALUE` プロパティの表示の書式設定を表す文字列。|  
-|`LANGUAGE`|
-  `FORMAT_STRING` を適用するロケール。 
-  `LANGUAGE` は通常、通貨変換のために使用されます。|  
+|**FONT_FLAGS**|フォントの詳細な文字飾りを示すビットマスク。 たとえば、値 5 は、太字の (`MDFF_BOLD`) フォントと下線付きの (`MDFF_UNDERLINE`) フォントの文字飾りの組み合わせを表します。 この値は、次の 1 つ以上の定数に対するビットごとの OR 演算の結果です。<br /><br /> `MDFF_BOLD` = 1<br /><br /> `MDFF_ITALIC` = 2<br /><br /> `MDFF_UNDERLINE` = 4<br /><br /> `MDFF_STRIKEOUT` = 8|  
+|**FONT_NAME**|`VALUE` または `FORMATTED_VALUE` プロパティの表示に使用するフォント。|  
+|**FONT_SIZE**|`VALUE` または `FORMATTED_VALUE` プロパティの表示に使用するフォント サイズ。|  
+|**FORE_COLOR**|`VALUE` または `FORMATTED_VALUE` プロパティを表示するときの前景色。 詳しくは、「[FORE_COLOR および BACK_COLOR の内容 &#40;MDX&#41;](mdx-cell-properties-fore-color-and-back-color-contents.md)」をご覧ください。|  
+|`FORMAT`|`FORMAT_STRING` と同じ。|  
+|`FORMAT_STRING`|`FORMATTED_VALUE` プロパティ値の作成に使用する書式文字列。 詳しくは、「[FORMAT_STRING の内容 &#40;MDX&#41;](mdx-cell-properties-format-string-contents.md)」をご覧ください。|  
+|`FORMATTED_VALUE`|`VALUE` プロパティの表示の書式設定を表す文字列。|  
+|`LANGUAGE`|`FORMAT_STRING` を適用するロケール。 `LANGUAGE` は通常、通貨変換のために使用されます。|  
 |`UPDATEABLE`|セルが更新可能かどうかを示す値。 このプロパティの値は、次のいずれか 1 つです。<br /><br /> `MD_MASK_ENABLED`(0x00000000) セルを更新できます。<br /><br /> `MD_MASK_NOT_ENABLED`(0x10000000) セルを更新できません。<br /><br /> `CELL_UPDATE_ENABLED`(0x00000001) セルは、セルセットで更新できます。<br /><br /> `CELL_UPDATE_ENABLED_WITH_UPDATE`(0x00000002) update ステートメントを使用して、セルを更新できます。 書き込み可能でないリーフ セルが更新される場合、UPDATE は失敗する可能性があります。<br /><br /> `CELL_UPDATE_NOT_ENABLED_FORMULA`(0x10000001) セルの座標の間に計算されるメンバーがあるため、セルを更新できません。セルは、where 句でセットを使用して取得されました。 数式がセルの値に影響を与える、あるいは計算されるセルが集計パス上にあるとしても、セルの更新は行われます。 この場合、結果が計算に影響されるため、セルの最終的な値は更新後の値にならない可能性があります。<br /><br /> `CELL_UPDATE_NOT_ENABLED_NONSUM_MEASURE`(0x10000002) 非 sum メジャー (count、min、max、distinct count、準加法) は更新できないため、セルを更新できません。<br /><br /> `CELL_UPDATE_NOT_ENABLED_NACELL_VIRTUALCUBE`(0x10000003) セルは、メジャーとメジャーのメジャーグループに関連付けられていないディメンションのメンバーの交差部分にあるため、セルを更新できません。<br /><br /> `CELL_UPDATE_NOT_ENABLED_SECURE`(0x10000005) セルがセキュリティで保護されているため、セルを更新できません。<br /><br /> `CELL_UPDATE_NOT_ENABLED_CALCLEVEL`(0x10000006) 将来使用するために予約されています。<br /><br /> `CELL_UPDATE_NOT_ENABLED_CANNOTUPDATE`(0x10000007) 内部的な理由により、セルを更新することはできません。<br /><br /> `CELL_UPDATE_NOT_ENABLED_INVALIDDIMENSIONTYPE`(0x10000009) マイニングモデル、間接、またはデータマイニングディメンションでは更新がサポートされていないため、セルを更新できません。|  
 |`VALUE`|書式設定されていないセルの値。|  
   
  必須のセル プロパティは、`CELL_ORDINAL`、`FORMATTED_VALUE`、および `VALUE` だけです。 固有またはプロバイダー固有を問わず、すべてのセル プロパティは、そのデータ型およびプロバイダーのサポートを含めて、`PROPERTIES` スキーマ行セットで定義します。 スキーマ行セットの`PROPERTIES`詳細については、「 [MDSCHEMA_PROPERTIES 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-properties-rowset)」を参照してください。  
   
- 既定では、`CELL PROPERTIES` キーワードが使用されていない場合、返されるセル プロパティは `VALUE`、`FORMATTED_VALUE`、および `CELL_ORDINAL` です (この順番で返されます)。 
-  `CELL PROPERTIES` キーワードが使用されている場合は、キーワードで明示的に記述されたセル プロパティだけが返されます。  
+ 既定では、`CELL PROPERTIES` キーワードが使用されていない場合、返されるセル プロパティは `VALUE`、`FORMATTED_VALUE`、および `CELL_ORDINAL` です (この順番で返されます)。 `CELL PROPERTIES` キーワードが使用されている場合は、キーワードで明示的に記述されたセル プロパティだけが返されます。  
   
  次の例は、MDX クエリでの `CELL PROPERTIES` キーワードの使用法を示しています。  
   

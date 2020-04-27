@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ca81dda4ce34a498aa471ceed5ea86729b1df508
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079446"
 ---
 # <a name="kpi-form-editor-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI フォーム エディター (キューブ デザイナーの [KPI] タブ) (Analysis Services - 多次元データ)
@@ -25,14 +25,14 @@ ms.locfileid: "66079446"
 > [!NOTE]  
 >  このペインはフォーム ビューでのみ表示されます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **名前**  
  KPI の名前を入力します。  
   
- **関連付けられたメジャーグループ**  
+ **[関連付けられたメジャー グループ]**  
  KPI に関連付けられているメジャー グループを選択します。 クライアント アプリケーションでこの情報を使用して、ユーザーがこの KPI を参照するときに使用できるディメンションを判別できます。  
   
- **[値式]**  
+ **値式**  
  展開すると、KPI の値を返す多次元式 (MDX) を表示したり、編集したりできます。  
   
  KPI の値を返す MDX 式を入力します。  
@@ -65,7 +65,7 @@ ms.locfileid: "66079446"
 > [!NOTE]  
 >  -1 以上の値は使用できますが、サードパーティのクライアントアプリケーションで正しく解釈されない可能性があります。  
   
- **傾向**  
+ **加算**  
  展開すると、 **[傾向マーク]** および **[傾向式]** のオプションが表示されます。  
   
  **[傾向マーク]**  
@@ -90,7 +90,7 @@ ms.locfileid: "66079446"
  **[フォルダーの表示]**  
  表示のためにクライアント アプリケーションで使用される KPI の分類を入力します。  
   
- 表示フォルダー内のフォルダー名は円記号 (\\) を使用して区切り、複数の表示フォルダーはセミコロン (;) を使用して区切ります。 たとえば、「`Category\Goal\Scientific;Category\Goal\Metric`」を入力します。  
+ 表示フォルダー内のフォルダー名は円記号 (\\) を使用して区切り、複数の表示フォルダーはセミコロン (;) を使用して区切ります。 たとえば、「 `Category\Goal\Scientific;Category\Goal\Metric`」と入力します。  
   
  **[親 KPI]**  
  クライアント アプリケーションで使用する KPI を分類するための、既存の KPI を選択します。  
@@ -106,7 +106,7 @@ ms.locfileid: "66079446"
 > [!IMPORTANT]  
 >  この MDX 式では、 **[関連付けられたメジャー グループ]** で指定されたメジャー グループに関連付けられている時間ディメンション内の、メンバーの一意の名前が返される必要があります。  
   
- **線**  
+ **Weight**  
  展開すると、KPI の重み計数を返す MDX 式を表示したり、編集したりできます。  
   
  選択した要素を **[計算ツール]** ペインからこのオプションへドラッグして、選択した要素に対して MDX 構文を含めます。  

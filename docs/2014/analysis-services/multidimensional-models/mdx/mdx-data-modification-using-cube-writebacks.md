@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a79e98375c27c6a3570b2fafcf424965d7a97c8d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074216"
 ---
 # <a name="using-cube-writebacks-mdx"></a>キューブの書き戻しの使用 (MDX)
@@ -41,7 +41,7 @@ UPDATE [CUBE] <Cube_Name> SET <tuple>.VALUE = <value> [,<tuple>.VALUE = <value>.
  UPDATE CUBE ステートメントは、アトミック セルに対する個々のセルの一連の書き戻し操作を生成するサブルーチンのようなものと考えることができます。 その後、これらすべての個々の書き戻し操作は、指定された合計にロール アップします。  
   
 > [!NOTE]  
->  更新されるセルが重ならない場合は、`Update Isolation Level` 接続文字列プロパティを使用して、UPDATE CUBE のパフォーマンスを向上させることができます。 詳細については、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> を参照してください。  
+>  更新されるセルが重ならない場合は、`Update Isolation Level` 接続文字列プロパティを使用して、UPDATE CUBE のパフォーマンスを向上させることができます。 詳細については、「<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>」を参照してください。  
   
 ## <a name="example"></a>例  
  Adventure Works キューブの Sales Targets メジャー グループを使って UPDATE CUBE をテストできます。 このメジャー グループは、UPDATE CUBE の要件である SUM によって集計されたメジャーで構成されます。  
@@ -117,6 +117,6 @@ USE_EQUAL_ALLOCATION
 -   書き戻しに含まれるディメンションの粒度の変更。  
   
 ## <a name="see-also"></a>参照  
- [MDX&#41;&#40;のデータの変更](mdx-data-modification-modifying-data.md)  
+ [データの変更 &#40;MDX&#41;](mdx-data-modification-modifying-data.md)  
   
   

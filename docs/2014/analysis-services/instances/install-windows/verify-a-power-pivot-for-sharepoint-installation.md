@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c4ce1b1485885719bcd31cb085d43379239612d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079864"
 ---
 # <a name="verify-a-powerpivot-for-sharepoint-installation"></a>PowerPivot for SharePoint インストールの確認
   SharePoint ファームにインストールした PowerPivot for SharePoint インスタンスは、SharePoint サーバーの全体管理から管理されます。 PowerPivot のサーバー コンポーネントと機能が使用可能になっているかどうかは、少なくとも、サーバーの全体管理および SharePoint サイトのページを調べれば確認できます。 インストールを完全に確認するには、SharePoint にパブリッシュでき、ライブラリからアクセスできる PowerPivot ブックが必要になります。 テストの際には、既に PowerPivot データが含まれているサンプル ブックをパブリッシュし、それを使用して SharePoint 統合が正しく構成されているかどうかを確認できます。  
   
-##  <a name="verifyinstall"></a>サーバーの全体管理統合の確認  
+##  <a name="verify-central-administration-integration"></a><a name="verifyinstall"></a>サーバーの全体管理統合の確認  
  PowerPivot のサーバーの全体管理との統合を確認するには、次の操作を行います。  
   
 1.  [スタート] メニューの [**すべてのプログラム**] をクリックし、[Microsoft Sharepoint 2010 製品] を開いて、[ **sharepoint 2010 サーバーの全体管理**] をクリックします。  
@@ -33,28 +33,24 @@ ms.locfileid: "66079864"
   
     2.  [セキュリティ] タブの **[セキュリティ設定を表示または変更するゾーンを選択してください。]** セクションで、[信頼済みサイト] をクリックし、[サイト] をクリックします。  
   
-    3.  
-  **[このゾーンのサイトにはすべてサーバーの確認 (https:) を必要とする]** チェック ボックスをオフにします。  
+    3.  **[このゾーンのサイトにはすべてサーバーの確認 (https:) を必要とする]** チェック ボックスをオフにします。  
   
-    4.  
-  **[次の Web サイトをゾーンに追加する]** に、サイトの URL を入力し、 **[追加]** をクリックします。  
+    4.  **[次の Web サイトをゾーンに追加する]** に、サイトの URL を入力し、 **[追加]** をクリックします。  
   
-    5.  [**閉じる**] をクリックし、[**OK**] をクリックします。  
+    5.  [**閉じる**] をクリックしてから [**OK**] をクリックします。  
   
         > [!NOTE]  
         >  SharePoint のインストールに関するドキュメントには、プロキシ サーバーのエラーを解決する手順や、更新プログラムをダウンロードしてインストールできるように Internet Explorer セキュリティ強化の構成を無効にする手順も示されています。 詳細については、Microsoft Web サイトの「 **SQL Server を使用する単一サーバーを展開する (SharePoint Server 2010)** 」の「 [追加のタスクの実行](https://go.microsoft.com/fwlink/?LinkId=177754) 」を参照してください。  
   
 3.  サーバーの全体管理で、[システム設定] の **[ファーム機能の管理]** をクリックします。  
   
-4.  
-  **[PowerPivot 統合機能]** が **[アクティブ]** になっていることを確認します。  
+4.  **[PowerPivot 統合機能]** が **[アクティブ]** になっていることを確認します。  
   
 5.  サーバーの全体管理で、[システム設定] の [**サーバーのサービスの管理**] をクリックします。  
   
-6.  
-  **SQL Server Analysis Services** と **SQL Server PowerPivot System サービス** が開始されていることを確認します。  
+6.  **SQL Server Analysis Services** と **SQL Server PowerPivot System サービス** が開始されていることを確認します。  
   
-7.  サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの管理]** をクリックします。  
+7.  サーバーの全体管理で、[アプリケーション管理] の [**サービスアプリケーションの管理**] をクリックします。  
   
 8.  [**既定の Powerpivot サービスアプリケーション**] をクリックして、このアプリケーションの Powerpivot 管理ダッシュボードを開きます。 最初に使用するときは、ダッシュボードの読み込みに数分かかります。  
   
@@ -74,7 +70,7 @@ ms.locfileid: "66079864"
 ## <a name="verify-data-access-on-the-server"></a>サーバーでのデータ アクセスの確認  
  サーバーで PowerPivot データ アクセスを確認するには、次の操作を行います。  
   
-1.  Reporting Services チュートリアルに付属しているピクニックデータサンプルを[ダウンロード](https://go.microsoft.com/fwlink/?LinkID=219108)します。 このダウンロードに含まれるサンプル ブックを使用して、PowerPivot データのアクセスを確認します。 ファイルを解凍します。  
+1.  Reporting Services のチュートリアルにある Picnic のデータ サンプルを[ダウンロード](https://go.microsoft.com/fwlink/?LinkID=219108) します。 このダウンロードに含まれるサンプル ブックを使用して、PowerPivot データのアクセスを確認します。 ファイルを解凍します。  
   
 2.  Excel ブック (.xlsx) を Shared Documents にアップロードします。 ブックに埋め込み PowerPivot データが含まれます。  
   
@@ -92,8 +88,7 @@ ms.locfileid: "66079864"
   
 8.  [サーバー名] に、「 ** \<サーバー名>** を入力します。ここ** \<** で、サーバー名>は PowerPivot for SharePoint インストールされているコンピューターの名前です。  
   
-9. 
-  **[接続]** をクリックします。 これにより、Analysis Services サーバーが使用可能であることを確認します。  
+9. **[Connect]** をクリックします。 これにより、Analysis Services サーバーが使用可能であることを確認します。  
   
 10. オブジェクトエクスプローラーでは、[**データベース**] をクリックして、読み込まれている PowerPivot データファイルの一覧を表示できます。  
   

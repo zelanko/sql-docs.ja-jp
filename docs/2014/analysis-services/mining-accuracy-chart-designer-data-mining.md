@@ -13,18 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b27f1b3ae063cd1a464169f4ab5dbc85a4ce7466
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077779"
 ---
 # <a name="mining-accuracy-chart-designer-data-mining"></a>マイニング精度チャート デザイナー (データ マイニング)
-  
   **[マイニング精度チャート]** ビューを使用すると、選択したマイニング構造に基づいて構築されるマイニング モデルのパフォーマンスを比較できます。  
   
- 
-  **[マイニング精度チャート]** ビューには、次のタブがあります。  
+ **[マイニング精度チャート]** ビューには、次のタブがあります。  
   
 -   [[マイニング精度チャート] ビューの [入力の選択] タブ &#40;&#41;](input-selection-tab-mining-accuracy-chart-view.md)  
   
@@ -32,15 +30,13 @@ ms.locfileid: "66077779"
   
 -   [[リフトチャート] タブ &#40;マイニング精度チャートビュー&#41;](lift-chart-tab-mining-accuracy-chart-view.md)  
   
-     
-  `Input Selection` タブで選択したモデルのリフト チャート、利益チャート、または散布図を生成します。  
+     `Input Selection` タブで選択したモデルのリフト チャート、利益チャート、または散布図を生成します。  
   
 -   [[分類マトリックス] タブ &#40;マイニング精度チャートビュー&#41;](classification-matrix-tab-mining-accuracy-chart-view.md)  
   
-     
-  `Input Selection` タブで選択したモデルの分類マトリックスを表示します。  
+     `Input Selection` タブで選択したモデルの分類マトリックスを表示します。  
   
--   [[クロス検証] タブ &#40;マイニング精度チャートビュー&#41;](cross-validation-tab-mining-accuracy-chart-view.md)  
+-   [[相互検証] タブ &#40;[マイニング精度チャート] ビュー&#41;](cross-validation-tab-mining-accuracy-chart-view.md)  
   
      選択したマイニング構造のオプションを設定して、クロス検証の結果を生成します。  
   
@@ -64,6 +60,6 @@ ms.locfileid: "66077779"
  [マイニング構造ビュー &#40;データマイニングモデルデザイナー&#41;](mining-structure-view-data-mining-model-designer.md)   
  [マイニングモデルビュー &#40;データマイニングモデルデザイナー&#41;](mining-models-view-data-mining-model-designer.md)   
  [データマイニングモデルデザイナー &#40;のマイニングモデルビューアー&#41;](mining-model-viewers-data-mining-model-designer.md)   
- [予測クエリビルダー &#40;データマイニング&#41;](prediction-query-builder-data-mining.md)  
+ [予測クエリ ビルダー &#40;データ マイニング&#41;](prediction-query-builder-data-mining.md)  
   
   

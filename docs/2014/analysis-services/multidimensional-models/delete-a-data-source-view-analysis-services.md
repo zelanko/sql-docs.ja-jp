@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9750751a23e4322a4a48ec0c1c227cf2df16f1c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075434"
 ---
 # <a name="delete-a-data-source-view-analysis-services"></a>データ ソース ビューの削除 (Analysis Services)
@@ -34,6 +34,6 @@ ms.locfileid: "66075434"
   
 ## <a name="see-also"></a>参照  
  [多次元モデルのデータソースビュー](data-source-views-in-multidimensional-models.md)   
- [データソースビューのプロパティの変更 &#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md)  
+ [データ ソース ビューのプロパティの変更 &#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md)  
   
   

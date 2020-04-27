@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9a363336af1bee8c3f84ff620f667c7c0d510b73
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080728"
 ---
 # <a name="grant-permissions-on-stored-procedures-analysis-services"></a>ストアド プロシージャに対する権限の付与 (Analysis Services)
@@ -25,8 +25,7 @@ ms.locfileid: "66080728"
 ## <a name="security-context-for-stored-procedure-execution"></a>ストアド プロシージャの実行のセキュリティ コンテキスト  
  すべてのユーザーがストアド プロシージャを呼び出すことができます。 ストアド プロシージャは、その構成方法により、プロシージャを呼び出すユーザーのコンテキスト、または匿名ユーザーのコンテキストのいずれかで実行できます。 匿名ユーザーにはセキュリティ コンテキストがないため、匿名アクセスを許可するには、この機能を [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のインスタンスの構成と共に使用します。  
   
- ユーザーがストアド プロシージャを呼び出してから、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] でストアド プロシージャが実行されるまでに、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、ストアド プロシージャ内のアクションが評価されます。 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は、ユーザーに与えられた権限と、プロシージャの実行に使用される権限セットの共通部分に基づき、ストアド プロシージャ内のアクションを評価します。 ストアド プロシージャに、ユーザーのデータベース ロールでは実行できないアクションある場合、そのアクションは実行されません。  
+ ユーザーがストアド プロシージャを呼び出してから、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] でストアド プロシージャが実行されるまでに、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、ストアド プロシージャ内のアクションが評価されます。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は、ユーザーに与えられた権限と、プロシージャの実行に使用される権限セットの共通部分に基づき、ストアド プロシージャ内のアクションを評価します。 ストアド プロシージャに、ユーザーのデータベース ロールでは実行できないアクションある場合、そのアクションは実行されません。  
   
  ストアド プロシージャの実行に使用する権限セットを以下に示します。  
   

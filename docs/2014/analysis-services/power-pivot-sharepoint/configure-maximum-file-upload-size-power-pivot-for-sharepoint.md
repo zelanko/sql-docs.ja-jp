@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3b6e367d0bc73de31f46b8533cded824bdb19504
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071823"
 ---
 # <a name="configure-maximum-file-upload-size-powerpivot-for-sharepoint"></a>アップロードするファイルの最大サイズの構成 (PowerPivot for SharePoint)
@@ -28,17 +28,15 @@ ms.locfileid: "66071823"
   
 ### <a name="configure-maximum-file-size-for-excel-services"></a>Excel Services に対するファイルの最大サイズの構成  
   
-1.  サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの管理]** をクリックします。  
+1.  サーバーの全体管理で、[アプリケーション管理] の [**サービスアプリケーションの管理**] をクリックします。  
   
 2.  Excel Services アプリケーションの名前をクリックします。  
   
-3.  
-  **[信頼できるファイル保存場所]** をクリックします。  
+3.  **[信頼できるファイル保存場所]** をクリックします。  
   
 4.  プロパティを編集する場所をクリックします。 既定では、既定の Web アプリケーションは信頼できるサイトと見なされます。 既定の Web アプリケーションを使用している場合は、 **http://** をクリックして、この場所の構成ページを開きます。  
   
-5.  
-  **[ブックのプロパティ]** までスクロールします。  
+5.  **[ブックのプロパティ]** までスクロールします。  
   
 6.  [ブックの最大サイズ] で、ファイル サイズを 10 (既定値) から 50、または使用するファイルに対応できるさらに大きい値に増やします。  
   
@@ -50,7 +48,7 @@ ms.locfileid: "66071823"
   
 ### <a name="configure-maximum-file-size-for-a-sharepoint-web-application"></a>SharePoint Web アプリケーションに対するファイルの最大サイズの構成  
   
-1.  サーバーの全体管理で、[アプリケーション構成の管理] の **[Web アプリケーションの管理]** をクリックします。  
+1.  サーバーの全体管理で、[アプリケーション管理] の [ **web アプリケーションの管理**] をクリックします。  
   
     > [!NOTE]  
     >  以下の手順は、Excel Services の [ブックの最大サイズ] を大きい値に設定した場合にのみ実行してください。  
@@ -61,8 +59,7 @@ ms.locfileid: "66071823"
   
 4.  [**全般設定**] をクリックします。  
   
-5.  
-  **[アップロードの最大サイズ]** までスクロールします。  
+5.  **[アップロードの最大サイズ]** までスクロールします。  
   
 6.  Excel Services の [ブックの最大サイズ] 以上の値にプロパティを設定します。  
   

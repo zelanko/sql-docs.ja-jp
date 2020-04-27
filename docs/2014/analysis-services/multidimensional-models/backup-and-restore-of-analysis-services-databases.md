@@ -22,18 +22,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f591a5a8c8099e496c10958b43694e98ae7a24b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077027"
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Analysis Services データベースのバックアップと復元
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、特定の時点からデータベースとそのオブジェクトを復旧できるように、バックアップと復元機能が用意されています。 また、バックアップと復元は、アップグレードされたサーバーへのデータベースの移行、サーバー間でのデータベースの移動、実稼働サーバーへのデータベースの配置を行うための有効な方法でもあります。 バックアップ計画をまだ確立しておらず、重要なデータを保持している場合は、データ復旧のために、できるだけ早く計画を作成して実行してください。  
   
- バックアップと復元のコマンドは、配置済みの Analysis Services データベースで実行されます。 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のプロジェクトおよびソリューションの場合、ソース管理を使用して特定のバージョンのソース ファイルを復旧できるようにし、使用するソース管理システムのリポジトリのデータ復旧プランを作成する必要があります。  
+ バックアップと復元のコマンドは、配置済みの Analysis Services データベースで実行されます。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のプロジェクトおよびソリューションの場合、ソース管理を使用して特定のバージョンのソース ファイルを復旧できるようにし、使用するソース管理システムのリポジトリのデータ復旧プランを作成する必要があります。  
   
  ソース データを含む完全バックアップでは、詳細データを含むデータベースをバックアップする必要があります。 具体的には、ROLAP または DirectQuery データベース ストレージを使用している場合、詳細データは Analysis Services データベースとは異なる外部の SQL Server リレーショナル データベースに格納されます。 すべてのオブジェクトがテーブルまたは多次元の場合は、Analysis Services バックアップにはメタデータとソース データの両方が含まれます。  
   
@@ -41,21 +39,20 @@ ms.locfileid: "66077027"
   
  このトピックのセクションは次のとおりです。  
   
--   [バックアップの準備中](#bkmk_prep)  
+-   [バックアップの準備](#bkmk_prep)  
   
 -   [多次元データベースまたは表形式データベースのバックアップ](#bkmk_cube)  
   
 -   [Analysis Services データベースの復元](#bkmk_restore)  
   
-##  <a name="bkmk_prereq"></a> 前提条件  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 前提条件  
  Analysis Services インスタンス上に管理権限を持っている、またはバックアップしようとしているデータベース上に、フル コントロール (管理者) 権限を持っている必要があります。  
   
- 復元の場所は、バックアップが作成されたインスタンスと同じバージョン、またはそれよりも新しいバージョンの Analysis Services インスタンスである必要があります。 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インスタンスから以前のバージョンの Analysis Services にデータベースを復元することはできませんが、新しい [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インスタンスで SQL Server 2012 などの以前のバージョンのデータベースを復元するのはよくあることです。  
+ 復元の場所は、バックアップが作成されたインスタンスと同じバージョン、またはそれよりも新しいバージョンの Analysis Services インスタンスである必要があります。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インスタンスから以前のバージョンの Analysis Services にデータベースを復元することはできませんが、新しい [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インスタンスで SQL Server 2012 などの以前のバージョンのデータベースを復元するのはよくあることです。  
   
  復元の場所は、同じサーバーの種類である必要があります。 テーブル データベースは、表形式モードで実行されている Analysis Services にしか復元できません。 多次元データベースには、多次元モードで実行されているインスタンスが必要です。  
   
-##  <a name="bkmk_prep"></a>バックアップの準備中  
+##  <a name="preparing-for-backup"></a><a name="bkmk_prep"></a>バックアップの準備中  
  次のチェック リストに従って、バックアップの準備をします。  
   
 -   バックアップ ファイルを格納する場所を確認します。 リモートの場所を使用している場合は、UNC フォルダーとして指定する必要があります。 UNC パスにアクセスできることを確認します。  
@@ -66,7 +63,7 @@ ms.locfileid: "66077027"
   
 -   同じ名前の既存のファイルを確認してください。 同じ名前のファイルが既に存在する場合、ファイルを上書きするオプションを指定しないと、バックアップは失敗します。  
   
-##  <a name="bkmk_cube"></a>多次元データベースまたは表形式データベースのバックアップ  
+##  <a name="backing-up-a-multidimensional-or-a-tabular-database"></a><a name="bkmk_cube"></a> 多次元データベースまたはテーブル データベースのバックアップ  
  管理者は [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースのサイズにかかわらず、データベースを 1 つの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] バックアップ ファイル (.abf) にバックアップできます。 手順の詳細については、「 [Analysis Services データベースをバックアップする方法 (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Backup_an_Analysis_Services_Database.html) 」と「 [Analysis Services データベースのバックアップの自動化 (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Automate_Backup_of_Analysis_Services_Database.html)」を参照してください。  
   
 > [!NOTE]  
@@ -74,30 +71,24 @@ ms.locfileid: "66077027"
   
  **リモート パーティション**  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースにリモート パーティションが含まれている場合は、リモート パーティションもバックアップする必要があります。 リモート パーティションを含むデータベースをバックアップすると、各リモート サーバーのすべてのリモート パーティションが、各リモート サーバーにある 1 つのファイルにそれぞれバックアップされます。 このため、これらのリモート バックアップを各ホスト コンピューター以外の場所に作成する場合は、バックアップ ファイルを指定の記憶域に手動でコピーする必要があります。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースにリモート パーティションが含まれている場合は、リモート パーティションもバックアップする必要があります。 リモート パーティションを含むデータベースをバックアップすると、各リモート サーバーのすべてのリモート パーティションが、各リモート サーバーにある 1 つのファイルにそれぞれバックアップされます。 このため、これらのリモート バックアップを各ホスト コンピューター以外の場所に作成する場合は、バックアップ ファイルを指定の記憶域に手動でコピーする必要があります。  
   
- **バックアップファイルの内容**  
+ **バックアップ ファイルの内容**  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースをバックアップすると、データベース オブジェクトで使用されるストレージ モードに応じて内容が異なるバックアップ ファイルが作成されます。 バックアップ内容が異なる理由は、各ストレージ モードでは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース内の異なる情報のセットが格納されるためです。 たとえば、多次元ハイブリッド OLAP (HOLAP) パーティションおよびディメンションでは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースの集計とメタデータが格納されますが、リレーショナル OLAP (ROLAP) パーティションおよびディメンションでは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースのメタデータのみが格納されます。 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースの実際の内容は各パーティションのストレージ モードによって異なるので、バックアップ ファイルの内容も異なります。 次の表では、バックアップ ファイルの内容と、オブジェクトによって使用されるストレージ モードを関連付けています。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースをバックアップすると、データベース オブジェクトで使用されるストレージ モードに応じて内容が異なるバックアップ ファイルが作成されます。 バックアップ内容が異なる理由は、各ストレージ モードでは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース内の異なる情報のセットが格納されるためです。 たとえば、多次元ハイブリッド OLAP (HOLAP) パーティションおよびディメンションでは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースの集計とメタデータが格納されますが、リレーショナル OLAP (ROLAP) パーティションおよびディメンションでは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースのメタデータのみが格納されます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースの実際の内容は各パーティションのストレージ モードによって異なるので、バックアップ ファイルの内容も異なります。 次の表では、バックアップ ファイルの内容と、オブジェクトによって使用されるストレージ モードを関連付けています。  
   
 |ストレージ モード|バックアップ ファイルの内容|  
 |------------------|-----------------------------|  
 |多次元 MOLAP パーティションおよびディメンション|メタデータ、ソース データ、および集計|  
 |多次元 HOLAP パーティションおよびディメンション|メタデータおよび集計|  
-|多次元 ROLAP パーティションおよびディメンション|Metadata|  
+|多次元 ROLAP パーティションおよびディメンション|メタデータ|  
 |テーブル インメモリ モデル|メタデータとソース データ|  
 |テーブル DirectQuery モデル|メタデータのみ|  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースをバックアップしても、リレーショナル データベースなど、基になるデータ ソースのデータはバックアップされません。 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースの内容のみがバックアップされます。  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースをバックアップしても、リレーショナル データベースなど、基になるデータ ソースのデータはバックアップされません。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースの内容のみがバックアップされます。  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースをバックアップするときは、次のオプションを選択できます。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースをバックアップするときは、次のオプションを選択できます。  
   
 -   データベースのバックアップをすべて圧縮するかどうか。 既定ではバックアップは圧縮されます。  
   
@@ -106,10 +97,9 @@ ms.locfileid: "66077027"
     > [!IMPORTANT]  
     >  バックアップ ファイルごとに、バックアップ コマンドを実行するユーザーは、各ファイルに指定されたバックアップ場所に対する書き込み権限を持っている必要があります。 また、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスのサーバー ロールのメンバーであるか、バックアップするデータベースに対してフル コントロール (管理者) 権限を持つデータベース ロールのメンバーであることが条件となります。  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースのバックアップの詳細については、「 [バックアップ オプション](backup-options.md)」 (Backup Options) を参照してください。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースのバックアップの詳細については、「 [バックアップ オプション](backup-options.md)」 (Backup Options) を参照してください。  
   
-##  <a name="bkmk_restore"></a>Analysis Services データベースの復元  
+##  <a name="restoring-an-analysis-services-database"></a><a name="bkmk_restore"></a>Analysis Services データベースの復元  
  管理者は、1 つまたは複数のバックアップ ファイルから [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを復元できます。  
   
 > [!NOTE]  
@@ -126,14 +116,12 @@ ms.locfileid: "66077027"
 -   復元コマンドを使用して、復元する各パーティションの復元先フォルダーを変更できます。 ローカル パーティションは、データベースの復元先の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスに対してローカルな任意のフォルダーに復元できます。 リモート パーティションは、ローカル サーバー以外のサーバーにある任意のフォルダーに復元できます。リモート パーティションをローカルにすることはできません。  
   
     > [!IMPORTANT]  
-    >  バックアップ ファイルごとに、復元コマンドを実行するユーザーは、各ファイルに指定されたバックアップ場所から読み取る権限を持っている必要があります。 サーバーにインストールされていない [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを復元する場合、ユーザーは、その [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスのサーバー ロールのメンバーであることも必要です。 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを上書きするには、ユーザーは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスのサーバー ロールのメンバーか、復元するデータベースに対してフル コントロール (管理者) 権限を持つデータベース ロールのメンバーのいずれかである必要があります。  
+    >  バックアップ ファイルごとに、復元コマンドを実行するユーザーは、各ファイルに指定されたバックアップ場所から読み取る権限を持っている必要があります。 サーバーにインストールされていない [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを復元する場合、ユーザーは、その [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスのサーバー ロールのメンバーであることも必要です。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを上書きするには、ユーザーは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスのサーバー ロールのメンバーか、復元するデータベースに対してフル コントロール (管理者) 権限を持つデータベース ロールのメンバーのいずれかである必要があります。  
   
     > [!NOTE]  
     >  既存のデータベースを復元すると、データベースを復元したユーザーは、復元されたデータベースにアクセスできなくなる可能性があります。 バックアップの実行時に、ユーザーがサーバー ロールのメンバー、またはフル コントロール (管理者) 権限を持つデータベース ロールのメンバーではなかった場合、このようにアクセスできなくなることがあります。  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースの復元の詳細については、「 [復元オプション](restore-options.md)」 (Restore Options) を参照してください。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースの復元の詳細については、「 [復元オプション](restore-options.md)」 (Restore Options) を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [XMLA&#41;&#40;のデータベースのバックアップ、復元、および同期](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)   

@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: afe304e3fa76be805a64e9bd662bc21500ac2fa7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081589"
 ---
 # <a name="documenting-mining-models-data-mining-add-ins-for-excel"></a>マイニング モデルのドキュメント化とスケーリング (Excel 用データ マイニング アドイン)
@@ -70,7 +70,7 @@ ms.locfileid: "66081589"
 ||||  
 |-|-|-|  
 |**Metadata**|モデルのメタデータ|アルゴリズム パラメーターおよび値|  
-||列のメタデータ|列名<br /><br /> 使用法<br /><br /> データ型<br /><br /> Content type<br /><br /> 値 (不連続値の一覧または特定の範囲の値)|  
+||列のメタデータ|列名<br /><br /> 使用方法<br /><br /> データ型<br /><br /> コンテンツ タイプ<br /><br /> 値 (不連続値の一覧または特定の範囲の値)|  
 |**モデルの統計**|連続列|平均値<br /><br /> 最小値<br /><br /> 最大値<br /><br /> 2 乗平均平方根誤差<br /><br /> 平均絶対誤差<br /><br /> ログ スコア<br /><br /> 回帰式 (線形回帰モデルのみ)。|  
 ||不連続列|合格数<br /><br /> 不合格数<br /><br /> ログ スコア<br /><br /> リフト|  
   

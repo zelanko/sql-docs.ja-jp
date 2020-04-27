@@ -13,18 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 604a42cc0b3519f1034733e12f72dc1a7c969ce6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070573"
 ---
 # <a name="query-binding-detail-partition-source-dialog-box-analysis-services---multidimensional-data"></a>クエリ バインドの詳細 ([パーティション ソース] ダイアログ ボックス) (Analysis Services - 多次元データ)
-  
   **[パーティション ソース]** ダイアログ ボックスの **[クエリ バインド]** オプションを使用すると、パーティション用のデータを表示するクエリを指定できます。 このペインを表示するには、 **[パーティション ソース]** ダイアログ ボックスの **[バインドの種類]** オプションで **[クエリ バインド]** を選択します。  
   
 ## <a name="options"></a>オプション  
- **データソース**  
+ **データ ソース**  
  パーティションのファクト データを提供するためのクエリが実行されるデータ ソースを選択します。  
   
  **クエリ**  

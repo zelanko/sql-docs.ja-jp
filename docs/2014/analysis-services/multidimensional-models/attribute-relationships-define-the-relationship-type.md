@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d30cc8f7dd64af79617c2f4ffd06e584f3c6e85
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077076"
 ---
 # <a name="define-the-relationship-type-of-an-attribute-relationship"></a>属性リレーションシップの種類の定義
@@ -33,8 +33,7 @@ ms.locfileid: "66077076"
 2.  ダイアグラムまたは **[属性リレーションシップ]** ペインで、属性リレーションシップを右クリックし、 **[リレーションシップの種類]** をクリックして、 **[可変]** または **[固定]** をクリックします。  
   
     > [!NOTE]  
-    >  
-  **[属性リレーションシップ]** ペインを表示するには、ツール バーの **[リスト ビューの表示]** をクリックします。  
+    >  **[属性リレーションシップ]** ペインを表示するには、ツール バーの **[リスト ビューの表示]** をクリックします。  
   
      可変のリレーションシップでは、メンバー間のリレーションシップが時間の経過と共に変化します。 固定のリレーションシップでは、メンバー間のリレーションシップが時間の経過と共に変化しません。  
   

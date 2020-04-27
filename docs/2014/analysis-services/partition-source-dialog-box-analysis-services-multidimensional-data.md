@@ -13,31 +13,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2102d28a61a99ed9ed6786dd8f2dee196066045c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072149"
 ---
 # <a name="partition-source-dialog-box-analysis-services---multidimensional-data"></a>[パーティション ソース] ダイアログ ボックス (Analysis Services - 多次元データ)
-  
-  **の** [パーティション ソース] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを使用すると、パーティションのファクト テーブル データのソースを指定できます。 
-  **[パーティション ソース]** ダイアログ ボックスを表示するには、次の手順に従います。  
+  **の** [パーティション ソース] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを使用すると、パーティションのファクト テーブル データのソースを指定できます。 **[パーティション ソース]** ダイアログ ボックスを表示するには、次の手順に従います。  
   
 -   キューブ デザイナーの **[パーティション]** タブで、 **[メジャー グループ]** ペインにあるメジャー グループの **[パーティション]** グリッドを選択し、セル上の **[...]** ボタンをクリックします。  
   
--   
-  **の** [プロパティ] **ウィンドウで、** Partition **オブジェクトの** [Source] **プロパティ値の** [...] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]ボタンをクリックします。  
+-   **の** [プロパティ] **ウィンドウで、** Partition **オブジェクトの** [Source] **プロパティ値の** [...] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]ボタンをクリックします。  
   
 ## <a name="options"></a>オプション  
   
 |オプション|定義|  
 |------------|----------------|  
-|**バインドの種類**|バインドの種類を選択して、指定したパーティションのソースに使用します。 次のオプションを使用できます。<br /><br /> [**テーブルバインド**]:**テーブルバインドの詳細**ペインを表示し、パーティションがデータソースまたはデータソースビューのテーブルの内容にバインドされていることを示します。 
-  **[テーブル バインドの詳細]** ペインの詳細については、「[テーブル バインドの詳細 &#40;[パーティション ソース] ダイアログ ボックス&#41; &#40;Analysis Services - 多次元データ&#41;](table-binding-partition-source-dialog-analysis-services-multidimensional-data.md)」を参照してください。<br /><br /> **詳細**: [**クエリバインドの詳細**] ペインを表示し、データソースに対して実行されるクエリの内容にパーティションがバインドされていることを示します。 
-  **[クエリ バインドの詳細]** ペインの詳細については、「[ バインドの詳細 &#40;[パーティション ソース] ダイアログ ボックス&#41; &#40;Analysis Services - 多次元データ&#41;](query-binding-partition-source-dialog-analysis-services-multidimensional-data.md)」を参照してください。|  
-|**Detail**|
-  **[バインドの種類]** オプションの値に応じて、 **テーブル バインドの詳細** または **クエリ バインドの詳細** のどちらかを表示します。|  
+|**バインドの種類**|バインドの種類を選択して、指定したパーティションのソースに使用します。 次のオプションを使用できます。<br /><br /> [**テーブルバインド**]:**テーブルバインドの詳細**ペインを表示し、パーティションがデータソースまたはデータソースビューのテーブルの内容にバインドされていることを示します。 **[テーブル バインドの詳細]** ペインの詳細については、「[テーブル バインドの詳細 &#40;[パーティション ソース] ダイアログ ボックス&#41; &#40;Analysis Services - 多次元データ&#41;](table-binding-partition-source-dialog-analysis-services-multidimensional-data.md)」を参照してください。<br /><br /> **詳細**: [**クエリバインドの詳細**] ペインを表示し、データソースに対して実行されるクエリの内容にパーティションがバインドされていることを示します。 **[クエリ バインドの詳細]** ペインの詳細については、「[ バインドの詳細 &#40;[パーティション ソース] ダイアログ ボックス&#41; &#40;Analysis Services - 多次元データ&#41;](query-binding-partition-source-dialog-analysis-services-multidimensional-data.md)」を参照してください。|  
+|**Detail**|**[バインドの種類]** オプションの値に応じて、 **テーブル バインドの詳細** または **クエリ バインドの詳細** のどちらかを表示します。|  
   
 ## <a name="see-also"></a>参照  
  [パーティション &#40;キューブデザイナー&#41; &#40;Analysis Services-多次元データ&#41;](partitions-cube-designer-analysis-services-multidimensional-data.md)   

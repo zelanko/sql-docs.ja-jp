@@ -11,14 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 00d17af3ce46ee5b20a730e536321140bb69f4ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073328"
 ---
 # <a name="partitions-in-multidimensional-models"></a>多次元モデル内のパーティション
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、 *パーティション* は、メジャー グループに読み込まれるファクト データの物理ストレージを提供します。 各メジャー グループに対して 1 つのパーティションが自動的に作成されますが、さらにデータを分割する追加のパーティションを作成するのが一般的です。そうすることで、処理効率が上がり、クエリ パフォーマンスが向上します。  
   
  処理効率が上がるのは、1 つ以上のサーバーでパーティションを個別に処理することも並列処理することもできるためです。 クエリの実行速度が向上するのは、各パーティションを、結果として応答時間が短縮されるストレージ モードと集計の最適化を使用するように構成できるためです。 たとえば、新しいデータが含まれるパーティションに MOLAP ストレージを選択すると、通常は ROLAP よりも高速になります。 同様に、日付でパーティション分割する場合、新しいデータが含まれるパーティションは、アクセス頻度の低い古いデータが含まれるパーティションよりもさらに最適化されます。 パーティションごとにストレージと集計デザインが異なると、その後のマージ操作に悪影響を及ぼします。 個々のパーティションを最適化する前に、マージがパーティション管理の戦略に必要な要素であるかどうかを必ず検討してください。  
@@ -45,13 +44,13 @@ ms.locfileid: "66073328"
   
 ## <a name="related-topics"></a>関連トピック  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
-|[ローカルパーティション &#40;Analysis Services の作成と管理&#41;](create-and-manage-a-local-partition-analysis-services.md)|データが重複しないようにフィルターまたは異なるファクト テーブルを使用してデータをパーティション分割する方法について説明します。|  
-|[パーティションストレージ &#40;Analysis Services の設定-多次元&#41;](set-partition-storage-analysis-services-multidimensional.md)|パーティションのストレージの構成方法について説明します。|  
+|[ローカル パーティションの作成と管理 (Analysis Services)](create-and-manage-a-local-partition-analysis-services.md)|データが重複しないようにフィルターまたは異なるファクト テーブルを使用してデータをパーティション分割する方法について説明します。|  
+|[パーティション ストレージの設定 (Analysis Services - 多次元)](set-partition-storage-analysis-services-multidimensional.md)|パーティションのストレージの構成方法について説明します。|  
 |[パーティションの編集または削除 &#40;Analysis Services-多次元&#41;](edit-or-delete-partitions-analyisis-services-multidimensional.md)|パーティションを表示し、編集する方法について説明します。|  
-|[Analysis Services &#40;SSAS のパーティションのマージ-多次元&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)|データが重複しないように異なるファクト テーブルまたはデータ スライスを持つパーティションをマージする方法について説明します。|  
+|[Analysis Services でのパーティションのマージ (SSAS - 多次元)](merge-partitions-in-analysis-services-ssas-multidimensional.md)|データが重複しないように異なるファクト テーブルまたはデータ スライスを持つパーティションをマージする方法について説明します。|  
 |[パーティションの書き戻しの設定](set-partition-writeback.md)|パーティションへの書き込みを許可する手順について説明します。|  
-|[リモートパーティション &#40;Analysis Services の作成と管理&#41;](create-and-manage-a-remote-partition-analysis-services.md)|リモート パーティションを作成して管理する方法について説明します。|  
+|[リモート パーティションの作成と管理 (Analysis Services)](create-and-manage-a-remote-partition-analysis-services.md)|リモート パーティションを作成して管理する方法について説明します。|  
   
   
