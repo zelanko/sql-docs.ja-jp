@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4ceb9402780788d3a2a45e8d2b838c156c28faab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62832609"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>[列パターン プロファイル要求] のオプション (データ プロファイル タスク)
@@ -39,12 +39,11 @@ ms.locfileid: "62832609"
  区切り記号はすべて、トークン化処理の一部として 1 つの空白文字に正規化されます。一方、記号はそのまま保持されます。  
   
 ## <a name="understanding-the-use-of-the-tag-table"></a>タグ テーブルの使用方法について  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース内に作成した特別なテーブルにタグと関連用語を保存することで、1 つのタグを持つ関連トークンを必要に応じてグループ化することができます。 タグ テーブルには、"Tag" および "Term" という名前の 2 つの文字列型の列が必要です。 これらの列には、`char` 型、`nchar` 型、`varchar` 型、または `nvarchar` 型を指定できます。ただし、`text` 型と `ntext` 型は指定できません。 1 つのテーブルで複数のタグと対応する用語を結合できます。 1 つの列パターン プロファイル要求で使用できるタグ テーブルは 1 つのみです。 タグ テーブルには個別の [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーを使用して接続できます。 そのため、タグ テーブルは、ソース データとは異なるデータベースまたはサーバーに格納できます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース内に作成した特別なテーブルにタグと関連用語を保存することで、1 つのタグを持つ関連トークンを必要に応じてグループ化することができます。 タグ テーブルには、"Tag" および "Term" という名前の 2 つの文字列型の列が必要です。 これらの列には、`char` 型、`nchar` 型、`varchar` 型、または `nvarchar` 型を指定できます。ただし、`text` 型と `ntext` 型は指定できません。 1 つのテーブルで複数のタグと対応する用語を結合できます。 1 つの列パターン プロファイル要求で使用できるタグ テーブルは 1 つのみです。 タグ テーブルには個別の [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーを使用して接続できます。 そのため、タグ テーブルは、ソース データとは異なるデータベースまたはサーバーに格納できます。  
   
  たとえば、住所に含まれる可能性がある "East"、"West"、"North"、および "South" という値を、"Direction" という 1 つのタグでグループ化できます。 次の表に、このようなタグ テーブルの例を示します。  
   
-|タグ|期間|  
+|タグ|用語|  
 |---------|----------|  
 |Direction|East|  
 |Direction|West|  
@@ -53,7 +52,7 @@ ms.locfileid: "62832609"
   
  別のタグを使用して、住所の "通り" の概念を表すさまざまな単語をグループ化できます。  
   
-|タグ|期間|  
+|タグ|用語|  
 |---------|----------|  
 |Street|Street|  
 |Street|Avenue|  
@@ -70,14 +69,13 @@ ms.locfileid: "62832609"
  同じ用語を複数のタグに関連付けることができます。  
   
 ## <a name="request-properties-options"></a>[要求プロパティ] のオプション  
- 
-  **[要求プロパティ]** ペインに表示される **[列パターン プロファイル要求]** のオプション グループは次のとおりです。  
+ **[要求プロパティ]** ペインに表示される **[列パターン プロファイル要求]** のオプション グループは次のとおりです。  
   
--   **データ**( **tableorview**および**Column**オプションを含む)  
+-   **[データ]**( **[TableOrView]** オプション、 **[Column]** オプションなど)  
   
 -   **全般**  
   
--   **オプション**  
+-   **[オプション]**  
   
 ### <a name="data-options"></a>[データ] のオプション  
  **ConnectionManager**  
@@ -97,18 +95,17 @@ ms.locfileid: "62832609"
  **スキーマ**  
  選択したテーブルが属するスキーマを指定します。 このオプションは読み取り専用です。  
   
- **Table**  
+ **テーブル**  
  選択したテーブルの名前を表示します。 このオプションは読み取り専用です。  
   
 #### <a name="column-options"></a>[列] のオプション  
  **IsWildCard**  
- **(\*)** ワイルドカードが選択されているかどうかを指定します。 
-  **[(**)]** を選択してすべての列をプロファイルする場合、このオプションは \*[True]** に設定されます。 個々の列をプロファイル対象として選択した場合、このオプションは **[False]** になります。 このオプションは読み取り専用です。  
+ **(\*)** ワイルドカードが選択されているかどうかを指定します。 **[(\*)]** を選択してすべての列をプロファイルする場合、このオプションは **[True]** に設定されます。 個々の列をプロファイル対象として選択した場合、このオプションは **[False]** になります。 このオプションは読み取り専用です。  
   
- **ColumnName**  
+ **[ColumnName]**  
  選択した列の名前を表示します。 **(\*)** を選択してすべての列をプロファイルする場合、このオプションは空白になります。 このオプションは読み取り専用です。  
   
- **StringCompareOptions**  
+ **[StringCompareOptions]**  
  このオプションは、列パターン プロファイルには適用されません。  
   
 ### <a name="general-options"></a>[全般] のオプション  
@@ -116,37 +113,37 @@ ms.locfileid: "62832609"
  このプロファイル要求を識別するわかりやすい名前を入力します。 通常、自動生成された値を変更する必要はありません。  
   
 ### <a name="options"></a>オプション  
- **MaxNumberOfPatterns**  
+ **[MaxNumberOfPatterns]**  
  プロファイルで計算するパターンの最大数を指定します。 このオプションの既定値は 10 です。 最大値は 100 です。  
   
- **PercentageDataCoverageDesired**  
+ **[PercentageDataCoverageDesired]**  
  計算されたパターンでカバーするデータの割合を指定します。 このオプションの既定値は 95 (%) です。  
   
  **CaseSensitive**  
  パターンで大文字と小文字を区別するかどうかを示します。 このオプションの既定値は **[False]** です。  
   
- **区切り記号**  
+ **記号**  
  テキストをトークン化するときに、単語間の空白文字と同等のものとして処理する文字の一覧が表示されます。 既定では、 **[Delimiters]** の一覧には、空白文字、水平タブ文字 (\t)、改行文字 (\n)、および復帰文字 (\r) が含まれます。 追加の区切り記号を指定できますが、既定の区切り記号を削除することはできません。  
   
  詳細については、このトピックの「区切り記号と記号の使用方法について」を参照してください。  
   
- **文字**  
+ **シンボル**  
  パターンの一部として保持する記号の一覧が表示されます。 記号の例として、日付を表す "/"、時刻を表す ":"、電子メール アドレスを表す "@" などがあります。 既定では、**記号**の一覧には次の文字`,.;:-"'`が含まれています: ~ =&/@!?() <> []{}| # * ^% ' です。  
   
  詳細については、このトピックの「区切り記号と記号の使用方法について」を参照してください。  
   
- **TagTableConnectionManager**  
+ **[TagTableConnectionManager]**  
  タグ テーブルを含む [!INCLUDE[vstecado](../../includes/vstecado-md.md)] データベースに接続するには、.NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) を使用する既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続マネージャーを選択します。  
   
  詳細については、このトピックの「タグ テーブルの使用方法について」を参照してください。  
   
- **TagTableName**  
+ **[TagTableName]**  
  "Tag" および "Term" という名前の 2 つの文字列型の列を持つ既存のタグ テーブルを選択します。  
   
  詳細については、このトピックの「タグ テーブルの使用方法について」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [[データプロファイルタスクエディター] &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)   
- [単一テーブルクイックプロファイルフォーム &#40;データプロファイルタスク&#41;](single-table-quick-profile-form-data-profiling-task.md)  
+ [単一テーブル クイック プロファイル フォーム &#40;データ プロファイル タスク&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   
   

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fba97c2e348b238702206ebf194c2390f155ad16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62834644"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>CDC デザイナー コンソールの概要
@@ -37,7 +37,7 @@ ms.locfileid: "62834644"
 ## <a name="database-prerequisites"></a>データベースの前提条件  
  Change Data Capture Designer for Oracle by Attunity を使用するには、Oracle データベースを使用します。 Change Data Capture Designer for Oracle by Attunity でサポートされるバージョンは次のとおりです。  
   
- **Oracle Database**  
+ **Oracle データベース**  
   
 -   Oracle Database 10g Release 2: 10.2.0.1 ～ 10.2.0.5 (2010 年 4 月の時点のパッチセット)  
   
@@ -47,8 +47,7 @@ ms.locfileid: "62834644"
   
  **SQL Server データベース**  
   
--   
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のエディション  
+-   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のエディション  
   
 ## <a name="software-prerequisites"></a>ソフトウェアの必要なコンポーネント  
  次のソフトウェアが必要です。  
@@ -64,7 +63,7 @@ ms.locfileid: "62834644"
 ## <a name="running-the-installation-program"></a>インストール プログラムの実行  
  ここでは、CDC デザイナー コンソールをインストールする方法について説明します。  
   
- **CDC Designer コンソールをインストールするには**  
+ **CDC デザイナー コンソールをインストールするには**  
   
  CDC デザイナー コンソール インストール キットをダブルクリックし、インストール ウィザードの指示に従います。  
   

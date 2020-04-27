@@ -14,14 +14,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9f8405c9fcb04559b6f25d2244bc36dde760a182
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62844767"
 ---
 # <a name="open-solutions-from-source-control"></a>ソース管理からソリューションを開く
-  
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を使用して、ソース管理からソリューションを直接開くことができます。 直接ソリューションを開く場合は、Studio 環境によって、ソリューション ファイルの最新バージョンのコピーが指定した場所に作成されます。  
   
  ソリューションのローカル コピーがローカル ディスクに存在しない場合は、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を使用してソリューションをチェックアウトするか、ソリューション ファイルを取得する前に、ソース管理からプロジェクトを開く必要があります。  

@@ -19,17 +19,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 64dc9129373a57de2924b2983e14266a67d4915e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62873520"
 ---
 # <a name="write-international-transact-sql-statements"></a>国際化に対応した Transact-SQL ステートメントの記述
   以下のガイドラインに従うと、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用するデータベースやデータベース アプリケーションをある言語から別の言語に移行することが容易になり、複数の言語をサポートできます。  
   
--   
-  `char`、`varchar`、および `text` の各データ型を使用しているすべての個所をそれぞれ `nchar`、`nvarchar`、および `nvarchar(max)` データ型に置き換えます。 これを行うことにより、コード ページの変換の問題について考慮する必要がなくなります。 詳細については、「 [Collation and Unicode Support](collation-and-unicode-support.md)」を参照してください。  
+-   `char`、`varchar`、および `text` の各データ型を使用しているすべての個所をそれぞれ `nchar`、`nvarchar`、および `nvarchar(max)` データ型に置き換えます。 これを行うことにより、コード ページの変換の問題について考慮する必要がなくなります。 詳細については、「 [Collation and Unicode Support](collation-and-unicode-support.md)」を参照してください。  
   
 -   月単位または曜日単位で比較や操作を行う場合、名前の文字列ではない数字の日付要素を使用します。 言語設定が異なると、月や曜日の名前が異なります。 たとえば、DATENAME(MONTH,GETDATE()) は、言語の設定が英語 (U.S.) になっていれば "May" を返します。設定がドイツ語になっていれば "Mai"、フランス語になっていれば "mai" を返します。 代わりに、DATEPART のような関数を使用すると、月の名前の代わりに数字が返されます。 多くの場合、日付を数字で表記するよりも名前で表記する方がよりわかりやすくなるので、ユーザーに表示する結果セットを構築するときは、DATEPART 名を使用してください。 ただし、特定の言語の表示名に依存するロジックはコーディングしないでください。  
   
@@ -39,7 +38,7 @@ ms.locfileid: "62873520"
   
          **{ts '** yyyy**-**_mm_**-**_ddhh_**:**_mm_**:**_ss_[**.**_fff_**'}** 例: **{ts '** 1998**-** 09**-** 24 10 **:** 02 **:** 20 **'}**  
   
-         **{** d ' _yyyy_ **-** _mm_ **-** _dd_ **'}** (例: **{d '** 1998**-** 09**-** 24 **'}** )  
+         **{ d'** _yyyy_ **-** _mm_ **-** _dd_ **'}** such as: **{ d'** 1998**-** 09**-** 24 **'}**  
   
          **{t '** _hh_ **:** _mm_ **:** _ss_ **'}** (例: **{t '** 10:02:20 **'}** )  
   
@@ -53,6 +52,6 @@ ms.locfileid: "62873520"
         WHERE OrderDate = CONVERT(DATETIME, '20060719', 101)  
         ```  
   
-         詳細については、「[CAST および CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)」を参照してください。  
+         詳細については、「[CAST and CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)」を参照してください。  
   
   

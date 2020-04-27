@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eab0ef5519aea7f563104d61146ed5f441d15981
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62832457"
 ---
 # <a name="data-flow-task"></a>[データ フロー タスク]
@@ -44,20 +44,16 @@ ms.locfileid: "62832457"
  ![データ フロー](../media/mw-dts-09.gif "データ フロー")  
   
 ## <a name="log-entries"></a>ログ エントリ  
- 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] では、すべてのタスクで利用可能な一連のログ イベントを提供しています。 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] では、多くのタスクにカスタム ログ エントリも提供しています。 詳細については、「[Integration Services (SSIS) のログ記録](../performance/integration-services-ssis-logging.md)」と「[ログ記録用のカスタム メッセージ](../custom-messages-for-logging.md)」を参照してください。 データ フロー タスクには、次のカスタム ログ エントリが含まれています。  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] では、すべてのタスクで利用可能な一連のログ イベントを提供しています。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] では、多くのタスクにカスタム ログ エントリも提供しています。 詳しくは、「[Integration Services &#40;SSIS&#41; のログ記録](../performance/integration-services-ssis-logging.md)」と「[ログ記録用のカスタム メッセージ](../custom-messages-for-logging.md)」をご覧ください。 データ フロー タスクには、次のカスタム ログ エントリが含まれています。  
   
-|ログ エントリ|[説明]|  
+|ログ エントリ|説明|  
 |---------------|-----------------|  
 |`BufferSizeTuning`|データ フロー タスクでバッファーのサイズが変更されたことを示します。 このログ エントリはサイズ変更の理由を説明し、一時的な新しいバッファー サイズを表示します。|  
-|`OnPipelinePostEndOfRowset`|
-  `ProcessInput` メソッドの最終呼び出しで設定される、行セットの終了シグナルがコンポーネントに通知されたことを示します。 エントリは、データ フロー内で入力を処理するコンポーネントごとに書き込まれます。 このエントリには、コンポーネント名が含まれます。|  
+|`OnPipelinePostEndOfRowset`|`ProcessInput` メソッドの最終呼び出しで設定される、行セットの終了シグナルがコンポーネントに通知されたことを示します。 エントリは、データ フロー内で入力を処理するコンポーネントごとに書き込まれます。 このエントリには、コンポーネント名が含まれます。|  
 |`OnPipelinePostPrimeOutput`|コンポーネントが `PrimeOutput` メソッドの最終呼び出しを完了したことを示します。 データ フローによっては、複数のログ エントリが書き込まれる場合があります。 コンポーネントがソースの場合、このログ エントリは、コンポーネントが行の処理を完了したことを意味します。|  
 |`OnPipelinePreEndOfRowset`|コンポーネントが最後に`ProcessInput`メソッドを呼び出したときに設定された行セットの最後のシグナルを受信しようとしていることを示します。 エントリは、データ フロー内で入力を処理するコンポーネントごとに書き込まれます。 このエントリには、コンポーネント名が含まれます。|  
 |`OnPipelinePrePrimeOutput`|コンポーネントに、`PrimeOutput` メソッドからの呼び出しが通知されたことを示します。 データ フローによっては、複数のログ エントリが書き込まれる場合があります。|  
-|`OnPipelineRowsSent`|
-  `ProcessInput` メソッドの呼び出しによってコンポーネント入力に指定された行数を報告します。 ログ エントリにはコンポーネント名が含まれます。|  
+|`OnPipelineRowsSent`|`ProcessInput` メソッドの呼び出しによってコンポーネント入力に指定された行数を報告します。 ログ エントリにはコンポーネント名が含まれます。|  
 |`PipelineBufferLeak`|バッファー マネージャーの終了後もバッファーを保持しているコンポーネントに関する情報を提供します。 バッファーが保持されたままの場合、バッファー リソースは解放されていないので、メモリ リークが発生する可能性があります。 このログ エントリは、コンポーネントの名前とバッファーの ID を含みます。|  
 |`PipelineComponentTime`|主要な 5 つの処理手順 (Validate、PreExecute、PostExecute、ProcessInput、および ProcessOutput) それぞれにおいてコンポーネントが費やした時間 (ミリ秒) を報告します。|  
 |`PipelineExecutionPlan`|データ フローの実行プランを報告します。 この実行プランでは、バッファーをコンポーネントに送信する方法に関する情報を提供します。 この情報は、PipelineExecutionTrees ログ エントリと組み合わせて、データ フロー タスク内での実行内容を示します。|  
@@ -75,7 +71,7 @@ ms.locfileid: "62832457"
 ### <a name="sample-messages-from-a-data-flow-task"></a>データ フロー タスクからのサンプル メッセージ  
  次の表は、ごく単純なパッケージでのログ エントリのサンプル メッセージの一覧です。 このパッケージは、OLE DB ソースを使用してテーブルからデータを抽出し、並べ替え変換を使用してデータを並べ替え、さらに OLE DB 変換先を使用してデータを別のテーブルに書き込みます。  
   
-|ログ エントリ|メッセージ|  
+|ログ エントリ|Messages|  
 |---------------|--------------|  
 |`BufferSizeTuning`|`Rows in buffer type 0 would cause a buffer size greater than the configured maximum. There will be only 9637 rows in buffers of this type.`<br /><br /> `Rows in buffer type 2 would cause a buffer size greater than the configured maximum. There will be only 9497 rows in buffers of this type.`<br /><br /> `Rows in buffer type 3 would cause a buffer size greater than the configured maximum. There will be only 9497 rows in buffers of this type.`|  
 |`OnPipelinePostEndOfRowset`|`A component will be given the end of rowset signal. : 1180 : Sort : 1181 : Sort Input`<br /><br /> `A component will be given the end of rowset signal. : 1291 : OLE DB Destination : 1304 : OLE DB Destination Input`|  
@@ -92,7 +88,7 @@ ms.locfileid: "62832457"
   
  たとえば、次の表に含まれるメッセージ "行がデータ フロー コンポーネントに入力として指定されました。 :  : 1185 : OLE DB ソースの出力 : 1180 : 並べ替え : 1181 : 並べ替えの入力 : 76" は、列へと解析されています。 このメッセージは、OLE DB ソースから並べ替え変換に行が送信されるときに `OnPipelineRowsSent` イベントによって書き込まれました。  
   
-|列|[説明]|Value|  
+|列|説明|値|  
 |------------|-----------------|-----------|  
 |**PathID**|OLE DB ソースと並べ替え変換の間のパスの `ID` プロパティの値です。|1185|  
 |**PathName**|パスの `Name` プロパティの値です。|OLE DB ソースの出力|  

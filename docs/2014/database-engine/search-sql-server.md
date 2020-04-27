@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 441fbef735366b63ad56fc6652f79c977378ba2c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62843718"
 ---
 # <a name="search-sql-server"></a>検索 (SQL Server)
@@ -28,6 +28,6 @@ ms.locfileid: "62843718"
  テキストまたはドキュメント内のキー フレーズを特定し、似ているドキュメントや関連したドキュメントを検出します。さらに、ドキュメントの類似性や関連性を説明する情報を提供します。  
   
 ## <a name="see-also"></a>参照  
- [バイナリラージオブジェクト &#40;Blob&#41; データ &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
+ [バイナリ ラージ オブジェクト &#40;Blob&#41; データ &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
   
   

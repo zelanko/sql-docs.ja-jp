@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b6c7b5cff8b288e688f2744c615d62bd8417acf5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62856637"
 ---
 # <a name="job-activity-monitor-filter-settings"></a>[ジョブの利用状況モニター] ([フィルターの設定])
@@ -27,7 +27,7 @@ ms.locfileid: "62856637"
 ## <a name="all-jobs"></a>すべてのジョブ  
  このフィルター基準のグループは、ジョブの利用状況モニターをフィルタリングする場合に使用できます。  
   
- **名前**  
+ **Name**  
  ジョブを名前でフィルタリングします。  
   
  **[次の実行]**  

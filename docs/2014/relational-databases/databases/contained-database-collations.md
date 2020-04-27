@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1345051d06493a456172a183defce3a8bd555ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62872056"
 ---
 # <a name="contained-database-collations"></a>包含データベースの照合順序
@@ -85,8 +85,7 @@ JOIN #T2
   
  等しい操作の "Latin1_General_100_CI_AS_KS_WS_SC" と "Chinese_Simplified_Pinyin_100_CI_AS" 間での照合順序の競合を解決できません。  
   
- この問題は、一時テーブルの照合順序を明示的に指定することで解決できます。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、`DATABASE_DEFAULT` 句に `COLLATE` キーワードを用意することで、この操作を簡単に実行できるようにしています。  
+ この問題は、一時テーブルの照合順序を明示的に指定することで解決できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、`DATABASE_DEFAULT` 句に `COLLATE` キーワードを用意することで、この操作を簡単に実行できるようにしています。  
   
 ```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  

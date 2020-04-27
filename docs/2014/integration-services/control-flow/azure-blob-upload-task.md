@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 392fcbf3a46b48b2032b5792321e9a22b3027341
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62832786"
 ---
 # <a name="azure-blob-upload-task"></a>Azure BLOB のアップロード タスク
@@ -33,8 +33,7 @@ ms.locfileid: "62832786"
 |BlobContainer|アップロードしたファイルを BLOB として保持する BLOB コンテナーの名前を指定します。|  
 |BlobDirectory|アップロードしたファイルをブロック BLOB として格納する BLOB ディレクトリを指定します。 BLOB ディレクトリは仮想階層構造です。 BLOB が既に存在する場合は置き換えられます。|  
 |LocalDirectory|アップロードするファイルを含むローカル ディレクトリを指定します。|  
-|FileName|指定された名前のパターンを使用したファイルを選択するための名前フィルターを指定します。 例:  MySheet*.xls\* には、MySheet001.xls や MySheetABC.xlsx などのファイルが含まれます。|  
-|TimeRangeFrom/TimeRangeTo|時間範囲フィルターを指定します。 
-  **TimeRangeFrom** から **TimeRangeTo** までの間に変更されたファイルが含まれます。|  
+|FileName|指定された名前のパターンを使用したファイルを選択するための名前フィルターを指定します。 例: MySheet*.xls\* には、MySheet001.xls や MySheetABC.xlsx などのファイルが含まれます。|  
+|TimeRangeFrom/TimeRangeTo|時間範囲フィルターを指定します。 **TimeRangeFrom** から **TimeRangeTo** までの間に変更されたファイルが含まれます。|  
   
   

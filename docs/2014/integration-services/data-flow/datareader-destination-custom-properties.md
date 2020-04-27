@@ -11,23 +11,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 948ebbc696048915662caaa24b791e6258c459be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62827606"
 ---
 # <a name="datareader-destination-custom-properties"></a>DataReader 変換先のカスタム プロパティ
   DataReader 変換先には、カスタム プロパティと、すべてのデータ フロー コンポーネントとの共通プロパティの両方があります。  
   
- 次の表は、DataReader 変換先のカスタム プロパティを示しています。 
-  `DataReader` を除き、すべてのプロパティは読み取り/書き込み可能です。  
+ 次の表は、DataReader 変換先のカスタム プロパティを示しています。 `DataReader` を除き、すべてのプロパティは読み取り/書き込み可能です。  
   
-|プロパティ名|データ型|[説明]|  
+|プロパティ名|データ型|説明|  
 |-------------------|---------------|-----------------|  
 |DataReader|String|DataReader 変換先のクラス名。|  
-|FailOnTimeout|Boolean|
-  `ReadTimeout` が発生したときに失敗するかどうかを示します。 このプロパティの既定値は **False**です。|  
+|FailOnTimeout|Boolean|`ReadTimeout` が発生したときに失敗するかどうかを示します。 このプロパティの既定値は **False**です。|  
 |ReadTimeout|整数|タイムアウトが発生するまでの時間 (ミリ秒単位)。 このプロパティの既定値は 30000 (30 秒) です。|  
   
  DataReader 変換先の入力および入力列には、カスタム プロパティはありません。  

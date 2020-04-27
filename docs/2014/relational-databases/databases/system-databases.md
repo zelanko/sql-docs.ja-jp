@@ -16,16 +16,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 916fd6d996a1a5270173d290c61f262ddf3f797b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62871129"
 ---
 # <a name="system-databases"></a>システム データベース
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、次のシステム データベースが用意されています。  
   
-|システム データベース|[説明]|  
+|システム データベース|説明|  
 |---------------------|-----------------|  
 |[master データベース](master-database.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスのシステムレベルの情報をすべて記録します。|  
 |[msdb データベース](msdb-database.md)|警告やジョブのスケジュールを設定するために SQL Server エージェントにより使用されます。|  
@@ -34,23 +34,17 @@ ms.locfileid: "62871129"
 |[tempdb データベース](tempdb-database.md)|一時オブジェクトや生成途中の結果セットを保存するためのワークスペースです。|  
   
 ## <a name="modifying-system-data"></a>システム データの変更  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ユーザーは、システム テーブル、システム ストアド プロシージャ、カタログ ビューなどのシステム オブジェクトに含まれている情報を直接更新できません。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、代わりに完全な管理ツール セットが用意されています。ユーザーは、これらのツールを使用して、システムを完全に管理し、データベース内のすべてのユーザーとオブジェクトを管理できます。 コーディネートは次のとおりです。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ユーザーは、システム テーブル、システム ストアド プロシージャ、カタログ ビューなどのシステム オブジェクトに含まれている情報を直接更新できません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、代わりに完全な管理ツール セットが用意されています。ユーザーは、これらのツールを使用して、システムを完全に管理し、データベース内のすべてのユーザーとオブジェクトを管理できます。 次に例を示します。  
   
--   
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]などの管理ユーティリティ。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]などの管理ユーティリティ。  
   
 -   SQL-SMO API。 このツールを使用すると、プログラマはアプリケーションに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を管理するための完全な機能を含めることができます。  
   
--   
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトとストアド プロシージャ。 これらのツールでは、システム ストアド プロシージャと [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL ステートメントを使用できます。  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトとストアド プロシージャ。 これらのツールでは、システム ストアド プロシージャと [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL ステートメントを使用できます。  
   
- 上記のツールを使用すると、アプリケーションをシステム オブジェクトの変更による影響から保護できます。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、新しいバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に追加された新機能をサポートするために、そのバージョンのシステム テーブルを変更する必要があることがあります。 多くの場合、システム テーブルを直接参照する SELECT ステートメントを実行しているアプリケーションでは、旧形式のシステム テーブルに依存しています。 そのような場合、システム テーブルに対して SELECT ステートメントを実行するアプリケーションが作成し直されるまで、サイトを新しいバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にアップグレードできない可能性があります。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、システム ストアド プロシージャ、DDL、および SQL-SMO の公開された各インターフェイスを考慮し、これらの旧バージョンとの互換性を維持できるように機能します。  
+ 上記のツールを使用すると、アプリケーションをシステム オブジェクトの変更による影響から保護できます。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、新しいバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に追加された新機能をサポートするために、そのバージョンのシステム テーブルを変更する必要があることがあります。 多くの場合、システム テーブルを直接参照する SELECT ステートメントを実行しているアプリケーションでは、旧形式のシステム テーブルに依存しています。 そのような場合、システム テーブルに対して SELECT ステートメントを実行するアプリケーションが作成し直されるまで、サイトを新しいバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にアップグレードできない可能性があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、システム ストアド プロシージャ、DDL、および SQL-SMO の公開された各インターフェイスを考慮し、これらの旧バージョンとの互換性を維持できるように機能します。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム テーブルで定義されたトリガーでは、システムの動作が変更されることがあるので、このようなトリガーはサポートしていません。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム テーブルで定義されたトリガーでは、システムの動作が変更されることがあるので、このようなトリガーはサポートしていません。  
   
 > [!NOTE]  
 >  システム データベースを UNC 共有ディレクトリに置くことはできません。  
@@ -66,11 +60,10 @@ ms.locfileid: "62871129"
   
 -   カタログ関数、メソッド、属性、または、ADO、OLE DB、ODBC などのアプリケーションで使用されるデータ API のプロパティ。  
   
--   
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] システム ストアド プロシージャと組み込み関数。  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] システム ストアド プロシージャと組み込み関数。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [システムデータベースのバックアップと復元 &#40;SQL Server&#41;](../backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  
+ [システム データベースのバックアップと復元 &#40;SQL Server&#41;](../backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  
   
  [[オブジェクト エクスプローラーのシステム オブジェクトを非表示にする]](../../ssms/object/object-explorer.md)  
   

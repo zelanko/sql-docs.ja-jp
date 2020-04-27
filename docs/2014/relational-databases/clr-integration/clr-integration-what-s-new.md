@@ -11,20 +11,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 45e4f0578d06eeafc545bea2b6374a37b8ef7cbc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874067"
 ---
 # <a name="what39s-new-in-clr-integration"></a>CLR 統合の新機能&#39;
-  
   [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] の CLR 統合で新しくなった点は次のとおりです。  
   
 -   CLR のバージョン 4 では、破損状態の例外を CLR データベース オブジェクトはキャッチしません。 これらの例外は、CLR 統合ホスト層でキャッチされるようになりました。 これらの例外は、コード属性 ([\<legacyCorruptedStateExceptionsPolicy> 要素](https://go.microsoft.com/fwlink/?LinkId=204954)) を設定することによって、CLR データベースコンポーネントによってキャッチされることがあります。 ただし、破損状態の例外が発生した場合の結果には信頼性がないため、この設定はお勧めできません。  
   
--   
-  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] には厳しいセキュリティ要件があるため、CLR データベース コンポーネントには、今後も CLR バージョン 2.0 で定義されたコード アクセス セキュリティ モデルが使用されます。  
+-   [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] には厳しいセキュリティ要件があるため、CLR データベース コンポーネントには、今後も CLR バージョン 2.0 で定義されたコード アクセス セキュリティ モデルが使用されます。  
   
 -   CLR バージョン 4 では、`System.TimeSpan` 値の形式に誤りがあると、`System.FormatExceptions` が生成されます。 バージョン 4 未満の CLR では、`System.TimeSpan` 値の形式に誤りがあっても無視されていました。 CLR バージョン 4 未満の動作に依存するデータベース アプリケーションは、データベース互換性レベル (`ALTER DATABASE Compatibility Level`) を 100 以下にして実行する必要があります。 詳細については、「 [<TimeSpan_LegacyFormatMode> 要素](https://go.microsoft.com/fwlink/?LinkId=205109)」を参照してください。  
   

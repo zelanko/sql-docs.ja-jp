@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a9a20d1003e8b87179e2690fa35ad44b50894568
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62870581"
 ---
 # <a name="mssqlserver_10534"></a>MSSQLSERVER_10534
@@ -33,8 +33,7 @@ ms.locfileid: "62870581"
 |メッセージ テキスト|プラン ガイド '%.\*ls' を作成できません。`@params` に指定した値が無効です。 *parameter_name parameter_type* 形式の値を指定するか、NULL を指定してください。|  
   
 ## <a name="explanation"></a>説明  
- 
-  `@params` に指定した値が無効です。  
+ `@params` に指定した値が無効です。  
   
 ## <a name="user-action"></a>ユーザーの操作  
  *parameter_name parameter_type* 形式の値を指定するか、NULL を指定してください。  

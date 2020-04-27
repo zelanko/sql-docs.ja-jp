@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ab3cdf0079d0c01d95b73339e1fce8960658f93a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62836336"
 ---
 # <a name="package-properties-dialog-box"></a>[パッケージのプロパティ] ダイアログ ボックス
@@ -31,7 +31,7 @@ ms.locfileid: "62836336"
   
 -   [オプションの構成](#options)  
   
-##  <a name="open_dialog"></a> [パッケージのプロパティ] ダイアログ ボックスを開く  
+##  <a name="open-the-package-properties-dialog-box"></a><a name="open_dialog"></a> [パッケージのプロパティ] ダイアログ ボックスを開く  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]から [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに接続します。  
   
@@ -45,12 +45,12 @@ ms.locfileid: "62836336"
   
 5.  パッケージを右クリックし、 **[プロパティ]** をクリックします。  
   
-##  <a name="options"></a> オプションの構成  
+##  <a name="configure-the-options"></a><a name="options"></a> オプションの構成  
  **[全般]** ページでは、選択されているパッケージのプロパティを表示できます。  
   
  **[全般]** ページに表示されるすべてのプロパティは読み取り専用です。  
   
- **名前**  
+ **Name**  
  パッケージの名前が表示されます。  
   
  **識別子**  

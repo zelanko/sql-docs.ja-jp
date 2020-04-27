@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f37f2ce9ec367d136eb853ce3bffe81f22b2dc4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62869597"
 ---
 # <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
@@ -75,7 +75,7 @@ ms.locfileid: "62869597"
   
  エラー状態は他にも存在し、予期しない内部処理エラーを示します。  
   
- **その他の例外的な原因**  
+ **その他の特殊な原因**  
   
  エラーの理由は、 **SQL 認証を使用してログインしようとして失敗しました。サーバーは Windows 認証専用に構成されています。** 次の状況で返される場合があります。  
   
@@ -85,10 +85,10 @@ ms.locfileid: "62869597"
   
  この問題を解決するには、接続文字列に `TRUSTED_CONNECTION = TRUE` を含めます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  この例では、認証エラー状態は 8 です。 これは、パスワードが正しくないことを示します。  
   
-|Date|source|Message|  
+|日付|ソース|Message|  
 |----------|------------|-------------|  
 |2007-12-05 20:12:56.34|ログオン|エラー: 18456、重大度: 14、状態: 8。|  
 |2007-12-05 20:12:56.34|ログオン|ユーザー '<user_name>' はログインできませんでした。 [クライアント: \<ip アドレス>]|  
@@ -97,11 +97,9 @@ ms.locfileid: "62869597"
 >  Windows 認証モードを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールし、後で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証モードと Windows 認証モードに変更すると、**sa** ログインは最初は無効になります。 これにより、"ユーザー ' sa ' のログインに失敗しました。" という状態が発生します。**Sa**ログインを有効にするには、「[サーバーの認証モードの変更](../../database-engine/configure-windows/change-server-authentication-mode.md)」を参照してください。  
   
 ## <a name="user-action"></a>ユーザーの操作  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用して接続しようとしている場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が混合モード認証で構成されていることを確認します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用して接続しようとしている場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が混合モード認証で構成されていることを確認します。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用して接続しようとしている場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインが存在し、そのログインのスペルを正しく入力していることを確認します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用して接続しようとしている場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインが存在し、そのログインのスペルを正しく入力していることを確認します。  
   
  Windows 認証を使用して接続しようとしている場合は、正しいドメインに適切にログインしていることを確認します。  
   
@@ -109,8 +107,7 @@ ms.locfileid: "62869597"
   
  管理者の資格情報を使用して接続する場合、[**管理者として実行**] オプションを使用してアプリケーションを起動します。 接続したら、Windows ユーザーを個別のログインとして追加します。  
   
- 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]で包含データベースがサポートされる場合、包含データベース ユーザーへの移行後にそのログインが削除されていないことを確認してください。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]で包含データベースがサポートされる場合、包含データベース ユーザーへの移行後にそのログインが削除されていないことを確認してください。  
   
  ローカルの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続している場合、**NT AUTHORITY\NETWORK SERVICE** で実行されているサービスからの接続は、コンピューターの完全修飾ドメイン名を使用して認証する必要があります。 詳細については、「[How To: ASP.NET で Network Service アカウントを使用してリソースにアクセスする方法](https://msdn.microsoft.com/library/ff647402.aspx)」を参照してください。  
   

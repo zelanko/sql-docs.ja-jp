@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d829ef131bc8772ce2d84391513ffa52b2f2ff1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62873737"
 ---
 # <a name="clr-integration-code-access-security"></a>CLR 統合のコード アクセス セキュリティ
@@ -40,8 +40,7 @@ ms.locfileid: "62873737"
  内で実行するときにマネージコードに付与されるコードアクセスセキュリティの[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]アクセス許可のセットは、に[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]読み込まれたアセンブリにアクセス許可のセットを付与します。ユーザーコードに与えられる最終的なアクセス許可のセットは、ユーザーおよびコンピューターレベルのポリシーによってさらに制限される可能性があります。  
   
 ## <a name="sql-server-host-policy-level-permission-sets"></a>SQL Server ホスト ポリシー レベルの権限セット  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ホスト ポリシー レベルでアセンブリに許可されるコード アクセス セキュリティ権限のセットは、アセンブリの作成時にどの権限セットを指定するかによって決定されます。 `SAFE`権限セットには、、、 `EXTERNAL_ACCESS`および`UNSAFE`の3つがあります。[CREATE ASSEMBLY &#40;transact-sql&#41;](/sql/t-sql/statements/create-assembly-transact-sql)) の**PERMISSION_SET**オプションを使用して指定します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ホスト ポリシー レベルでアセンブリに許可されるコード アクセス セキュリティ権限のセットは、アセンブリの作成時にどの権限セットを指定するかによって決定されます。 `SAFE`権限セットには、、、 `EXTERNAL_ACCESS`および`UNSAFE`の3つがあります。[CREATE ASSEMBLY &#40;transact-sql&#41;](/sql/t-sql/statements/create-assembly-transact-sql)) の**PERMISSION_SET**オプションを使用して指定します。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. このポリシーは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が CLR のインスタンスを作成するときに有効になる、既定のアプリケーション ドメイン用ではありません。  
   
@@ -49,78 +48,52 @@ ms.locfileid: "62873737"
   
  CLR アセンブリと [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] システム アセンブリの固定ポリシーでは、これらのアセンブリを完全に信頼します。  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ホスト ポリシーのユーザー指定部分は、アセンブリの所有者がアセンブリごとに指定する 3 つの権限バケットのいずれかに基づきます。 次に示すセキュリティ権限の詳細については、.NET Framework SDK を参照してください。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ホスト ポリシーのユーザー指定部分は、アセンブリの所有者がアセンブリごとに指定する 3 つの権限バケットのいずれかに基づきます。 次に示すセキュリティ権限の詳細については、.NET Framework SDK を参照してください。  
   
 ### <a name="safe"></a>SAFE  
- 内部コンピューター処理とローカル データのアクセスだけが許可されます。 
-  `SAFE` は最も制限が厳しい権限セットです。 
-  `SAFE` 権限が設定されているアセンブリで実行されるコードは、ファイル、ネットワーク、環境変数、レジストリなどの外部システム リソースにアクセスできません。  
+ 内部コンピューター処理とローカル データのアクセスだけが許可されます。 `SAFE` は最も制限が厳しい権限セットです。 `SAFE` 権限が設定されているアセンブリで実行されるコードは、ファイル、ネットワーク、環境変数、レジストリなどの外部システム リソースにアクセスできません。  
   
- 
-  `SAFE` アセンブリには、次の権限および値が含まれます。  
+ `SAFE` アセンブリには、次の権限および値が含まれます。  
   
-|権限|値/説明|  
+|アクセス許可|値/説明|  
 |----------------|-----------------------------|  
-|`SecurityPermission`|
-  `Execution:` マネージド コードを実行する権限です。|  
-|`SqlClientPermission`|
-  `Context connection = true`、`context connection = yes`: context-connection のみを使用できます。接続文字列に指定できる値は、"context connection=true" または "context connection=yes" だけです。<br /><br /> **Allow空白パスワード = false:** 空のパスワードは許可されていません。|  
+|`SecurityPermission`|`Execution:` マネージド コードを実行する権限です。|  
+|`SqlClientPermission`|`Context connection = true`、`context connection = yes`: context-connection のみを使用できます。接続文字列に指定できる値は、"context connection=true" または "context connection=yes" だけです。<br /><br /> **Allow空白パスワード = false:** 空のパスワードは許可されていません。|  
   
 ### <a name="external_access"></a>EXTERNAL_ACCESS  
  EXTERNAL_ACCESS アセンブリは、アセンブリと`SAFE`同じアクセス許可を持ち、ファイル、ネットワーク、環境変数、レジストリなどの外部システムリソースにアクセスする機能が追加されています。  
   
- 
-  `EXTERNAL_ACCESS` アセンブリには、次の権限および値も含まれます。  
+ `EXTERNAL_ACCESS` アセンブリには、次の権限および値も含まれます。  
   
-|権限|値/説明|  
+|アクセス許可|値/説明|  
 |----------------|-----------------------------|  
 |`DistributedTransactionPermission`|`Unrestricted:`分散トランザクションは許可されます。|  
 |`DNSPermission`|`Unrestricted:`ドメインネームサーバーから情報を要求するアクセス許可。|  
-|`EnvironmentPermission`|
-  `Unrestricted:` システム環境変数およびユーザー環境変数への完全アクセスが許可されます。|  
-|`EventLogPermission`|
-  `Administer:` イベント ソースの作成、既存ログの読み取り、イベント ソースまたはログの削除、エントリに対する応答、イベント ログの消去、イベントの待機、およびすべてのイベント ログのコレクションへのアクセスが許可されます。|  
-|`FileIOPermission`|
-  `Unrestricted:` ファイルおよびフォルダーへの完全アクセスが許可されます。|  
-|`KeyContainerPermission`|
-  `Unrestricted:` キー コンテナーへの完全アクセスが許可されます。|  
-|`NetworkInformationPermission`|
-  `Access:` ping の実行が許可されます。|  
-|`RegistryPermission`|
-  `HKEY_CLASSES_ROOT`、`HKEY_LOCAL_MACHINE`、`HKEY_CURRENT_USER`、`HKEY_CURRENT_CONFIG`、および `HKEY_USERS.` への読み取り権限が許可されます。|  
-|`SecurityPermission`|
-  `Assertion:` このコードのすべての呼び出し元が操作に必要な権限を持っていることをアサートする機能です。<br /><br /> 
-  `ControlPrincipal:` プリンシパル オブジェクトを操作する機能です。<br /><br /> 
-  `Execution:` マネージド コードを実行する権限です。<br /><br /> 
-  `SerializationFormatter:` シリアル化サービスを提供する機能です。|  
-|**SmtpPermission**|
-  `Access:` SMTP ホストの 25 番ポートへの発信接続が許可されます。|  
-|`SocketPermission`|
-  `Connect:` トランスポート アドレスでの発信接続 (すべてのポートおよびプロトコル) が許可されます。|  
-|`SqlClientPermission`|
-  `Unrestricted:` データ ソースへの完全アクセスが許可されます。|  
-|`StorePermission`|
-  `Unrestricted:` X.509 証明書ストアへの完全アクセスが許可されます。|  
-|`WebPermission`|
-  `Connect:` Web リソースへの発信接続が許可されます。|  
+|`EnvironmentPermission`|`Unrestricted:` システム環境変数およびユーザー環境変数への完全アクセスが許可されます。|  
+|`EventLogPermission`|`Administer:` イベント ソースの作成、既存ログの読み取り、イベント ソースまたはログの削除、エントリに対する応答、イベント ログの消去、イベントの待機、およびすべてのイベント ログのコレクションへのアクセスが許可されます。|  
+|`FileIOPermission`|`Unrestricted:` ファイルおよびフォルダーへの完全アクセスが許可されます。|  
+|`KeyContainerPermission`|`Unrestricted:` キー コンテナーへの完全アクセスが許可されます。|  
+|`NetworkInformationPermission`|`Access:` ping の実行が許可されます。|  
+|`RegistryPermission`|`HKEY_CLASSES_ROOT`、`HKEY_LOCAL_MACHINE`、`HKEY_CURRENT_USER`、`HKEY_CURRENT_CONFIG`、および `HKEY_USERS.` への読み取り権限が許可されます。|  
+|`SecurityPermission`|`Assertion:` このコードのすべての呼び出し元が操作に必要な権限を持っていることをアサートする機能です。<br /><br /> `ControlPrincipal:` プリンシパル オブジェクトを操作する機能です。<br /><br /> `Execution:` マネージド コードを実行する権限です。<br /><br /> `SerializationFormatter:` シリアル化サービスを提供する機能です。|  
+|**SmtpPermission**|`Access:` SMTP ホストの 25 番ポートへの発信接続が許可されます。|  
+|`SocketPermission`|`Connect:` トランスポート アドレスでの発信接続 (すべてのポートおよびプロトコル) が許可されます。|  
+|`SqlClientPermission`|`Unrestricted:` データ ソースへの完全アクセスが許可されます。|  
+|`StorePermission`|`Unrestricted:` X.509 証明書ストアへの完全アクセスが許可されます。|  
+|`WebPermission`|`Connect:` Web リソースへの発信接続が許可されます。|  
   
 ### <a name="unsafe"></a>UNSAFE  
- UNSAFE では、アセンブリから [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の内外のリソースにも無制限にアクセスできます。 
-  `UNSAFE` アセンブリ内からコードを実行することによって、アンマネージ コードを呼び出すこともできます。  
+ UNSAFE では、アセンブリから [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の内外のリソースにも無制限にアクセスできます。 `UNSAFE` アセンブリ内からコードを実行することによって、アンマネージ コードを呼び出すこともできます。  
   
- 
-  `UNSAFE` アセンブリには、`FullTrust` が与えられます。  
+ `UNSAFE` アセンブリには、`FullTrust` が与えられます。  
   
 > [!IMPORTANT]  
->  
-  `SAFE` 外部のリソースにアクセスせずにコンピューター処理やデータ管理タスクを実行するアセンブリには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 権限を設定することをお勧めします。 `EXTERNAL_ACCESS`既定で[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]サービスアカウントとして実行されるアセンブリ`EXTERNAL_ACCESS`は、サービスアカウントとして実行するために信頼されているログインにのみ付与する必要があります。 セキュリティの点では、`EXTERNAL_ACCESS` アセンブリと `UNSAFE` アセンブリに変わりはありません。 ただし、`EXTERNAL_ACCESS` アセンブリには、`UNSAFE` アセンブリにはない、信頼性や堅牢性を目的としたさまざまな保護機能が備わっています。 を`UNSAFE`指定すると、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]アセンブリ内のコードはに対して無効な操作を実行できます。 で[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]clr アセンブリを作成する方法の詳細については、「 [clr 統合アセンブリの管理](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)」を参照してください。  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 外部のリソースにアクセスせずにコンピューター処理やデータ管理タスクを実行するアセンブリには、`SAFE` 権限を設定することをお勧めします。 `EXTERNAL_ACCESS`既定で[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]サービスアカウントとして実行されるアセンブリ`EXTERNAL_ACCESS`は、サービスアカウントとして実行するために信頼されているログインにのみ付与する必要があります。 セキュリティの点では、`EXTERNAL_ACCESS` アセンブリと `UNSAFE` アセンブリに変わりはありません。 ただし、`EXTERNAL_ACCESS` アセンブリには、`UNSAFE` アセンブリにはない、信頼性や堅牢性を目的としたさまざまな保護機能が備わっています。 を`UNSAFE`指定すると、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]アセンブリ内のコードはに対して無効な操作を実行できます。 で[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]clr アセンブリを作成する方法の詳細については、「 [clr 統合アセンブリの管理](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)」を参照してください。  
   
 ## <a name="accessing-external-resources"></a>外部リソースへのアクセス  
- UDT (ユーザー定義型)、ストアド プロシージャ、または他の種類のコンストラクト アセンブリを `SAFE` 権限セットで登録すると、コンストラクト内で実行しているマネージド コードから外部リソースにアクセスできなくなります。 
-  `EXTERNAL_ACCESS` または `UNSAFE` のいずれかの権限セットを指定し、マネージド コードから外部リソースにアクセスする場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] によって次の規則が適用されます。  
+ UDT (ユーザー定義型)、ストアド プロシージャ、または他の種類のコンストラクト アセンブリを `SAFE` 権限セットで登録すると、コンストラクト内で実行しているマネージド コードから外部リソースにアクセスできなくなります。 `EXTERNAL_ACCESS` または `UNSAFE` のいずれかの権限セットを指定し、マネージド コードから外部リソースにアクセスする場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] によって次の規則が適用されます。  
   
-|状況|対処|  
+|状況|THEN|  
 |--------|----------|  
 |実行コンテキストが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインに対応している場合。|外部リソースへのアクセスが拒否され、セキュリティ例外が発生します。|  
 |実行コンテキストが Windows ログインに対応していると同時に、本来の呼び出し元である場合。|外部リソースへのアクセスは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービス アカウントのセキュリティ コンテキストで行われます。|  
@@ -134,7 +107,7 @@ ms.locfileid: "62873737"
 |-|-|-|-|  
 ||`SAFE`|`EXTERNAL_ACCESS`|`UNSAFE`|  
 |`Code Access Security Permissions`|実行のみ|実行および外部リソースへのアクセス|無制限 (P/Invoke を含む)|  
-|`Programming model restrictions`|はい|はい|制限なし|  
+|`Programming model restrictions`|はい|はい|無制限|  
 |`Verifiability requirement`|はい|はい|いいえ|  
 |`Local data access`|はい|はい|はい|  
 |`Ability to call native code`|いいえ|いいえ|はい|  

@@ -17,17 +17,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0a895fd1dc3fe51296a110902fb1dd4c27d3d5a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62831888"
 ---
 # <a name="data-profiling-task"></a>データ プロファイル タスク
   データ プロファイル タスクでは、データ ソースについて詳細に理解し、解決する必要があるデータの問題を特定するために役立つさまざまなプロファイルが計算されます。  
   
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ内のデータ プロファイル タスクを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に格納されているデータをプロファイルし、発生する可能性のあるデータ品質の問題を特定することができます。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ内のデータ プロファイル タスクを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に格納されているデータをプロファイルし、発生する可能性のあるデータ品質の問題を特定することができます。  
   
 > [!NOTE]  
 >  このトピックでは、データ プロファイル タスクの機能と要件についてのみ説明します。 データ プロファイル タスクの使用方法のチュートリアルについては、「 [データ プロファイル タスクとビューアー](data-profiling-task-and-viewer.md)」を参照してください。  
@@ -50,7 +49,7 @@ ms.locfileid: "62831888"
   
  次の 5 つのプロファイルで、個々の列を分析できます。  
   
-|個々の列を分析するプロファイル|[説明]|  
+|個々の列を分析するプロファイル|説明|  
 |----------------------------------------------|-----------------|  
 |列長分布プロファイル|選択された列に含まれる文字列値の長さごとに、その長さと、テーブル内におけるその長さの行の比率を報告します。<br /><br /> このプロファイルを使用すると、無効な値などのデータの問題を特定できます。 たとえば、2 文字の米国州コードの列をプロファイルし、3 文字以上の値を検出できます。|  
 |列の NULL 比プロファイル|選択した列の NULL 値の比率を報告します。<br /><br /> このプロファイルを使用すると、列の NULL 値の比率が予想外に高いなどのデータの問題を特定できます。 たとえば、郵便番号列をプロファイルすると、許容範囲を超える欠落した郵便番号の比率を検出できます。|  
@@ -60,7 +59,7 @@ ms.locfileid: "62831888"
   
  次の 3 つのプロファイルで、複数の列または列とテーブル間のリレーションシップを分析できます。  
   
-|複数の列を分析するプロファイル|[説明]|  
+|複数の列を分析するプロファイル|説明|  
 |--------------------------------------------|-----------------|  
 |候補キー プロファイル|列または列のセットが、選択したテーブルのキーまたは近似キーであるかどうかを報告します。<br /><br /> このプロファイルを使用すると、キーとなる可能性がある列の重複値などのデータの問題を特定できます。|  
 |機能依存プロファイル|ある列 (依存列) の値が別の列または列のセット (決定列) の値にどの程度依存しているかを報告します。<br /><br /> このプロファイルを使用すると、無効な値などのデータの問題を特定することもできます。 たとえば、米国郵便番号を含む列と米国の州を含む列の間の依存関係をプロファイルできます。 郵便番号によって州が一意に決定されますが、このプロファイルでは、この依存関係の違反を検出できます。|  
@@ -76,18 +75,12 @@ ms.locfileid: "62831888"
 |-------------|------------------------|  
 |ColumnStatisticsProfile|数値型または `datetime` 型の列 (`mean` 列の `stddev` および `datetime` は除く)|  
 |ColumnNullRatioProfile|すべての列**|  
-|ColumnValueDistributionProfile|
-  `integer` 型、`char` 型、および `datetime` 型の列|  
-|ColumnLengthDistributionProfile|
-  `char` 型の列|  
-|ColumnPatternProfile|
-  `char` 型の列|  
-|CandidateKeyProfile|
-  `integer` 型、`char` 型、および `datetime` 型の列|  
-|FunctionalDependencyProfile|
-  `integer` 型、`char` 型、および `datetime` 型の列|  
-|InclusionProfile|
-  `integer` 型、`char` 型、および `datetime` 型の列|  
+|ColumnValueDistributionProfile|`integer` 型、`char` 型、および `datetime` 型の列|  
+|ColumnLengthDistributionProfile|`char` 型の列|  
+|ColumnPatternProfile|`char` 型の列|  
+|CandidateKeyProfile|`integer` 型、`char` 型、および `datetime` 型の列|  
+|FunctionalDependencyProfile|`integer` 型、`char` 型、および `datetime` 型の列|  
+|InclusionProfile|`integer` 型、`char` 型、および `datetime` 型の列|  
   
  \*有効`integer`なデータ型`char`の前の表では、、 `datetime`、、 `numeric`およびの各型に、次の特定のデータ型が含まれています。  
   
@@ -111,19 +104,19 @@ ms.locfileid: "62831888"
 ## <a name="features-of-the-data-profiling-task"></a>データ プロファイル タスクの機能  
  データ プロファイル タスクには、次のような便利な構成オプションがあります。  
   
--   **ワイルドカード列**プロファイル要求を構成する場合、タスクは列名の代わりに **(\*)** ワイルドカードを受け取ります。 これによって構成が容易になり、十分に理解していないデータの特性を検出しやすくなります。 タスクの実行時に、適切なデータ型の列がすべてプロファイルされます。  
+-   **ワイルドカード列** プロファイル要求を構成する際、このタスクでは列名の代わりにワイルドカード **(\*)** を使用できます。 これによって構成が容易になり、十分に理解していないデータの特性を検出しやすくなります。 タスクの実行時に、適切なデータ型の列がすべてプロファイルされます。  
   
--   **クイックプロファイル**[クイックプロファイル] を選択すると、タスクをすばやく構成できます。 [クイック プロファイル] では、すべての既定のプロファイルおよび既定の設定を使用してテーブルまたはビューがプロファイルされます。  
+-   **クイック プロファイル** [クイック プロファイル] を選択すると、タスクをすばやく構成できます。 [クイック プロファイル] では、すべての既定のプロファイルおよび既定の設定を使用してテーブルまたはビューがプロファイルされます。  
   
 ## <a name="custom-logging-messages-available-on-the-data-profililng-task"></a>データ プロファイル タスクで使用できるカスタム ログ メッセージ  
- 次の表は、データ プロファイル タスクのカスタム ログ エントリの一覧です。 詳細については、「[Integration Services (SSIS) のログ記録](../performance/integration-services-ssis-logging.md)」と「[ログ記録用のカスタム メッセージ](../custom-messages-for-logging.md)」を参照してください。  
+ 次の表は、データ プロファイル タスクのカスタム ログ エントリの一覧です。 詳しくは、「[Integration Services &#40;SSIS&#41; のログ記録](../performance/integration-services-ssis-logging.md)」と「[ログ記録用のカスタム メッセージ](../custom-messages-for-logging.md)」をご覧ください。  
   
-|ログ エントリ|[説明]|  
+|ログ エントリ|説明|  
 |---------------|-----------------|  
 |**DataProfilingTaskTrace**|タスクの状態に関する説明情報を提供します。 メッセージには次の情報が含まれます。<br /><br /> 処理要求の開始<br /><br /> クエリの開始<br /><br /> Query End<br /><br /> 計算要求の完了|  
   
 ## <a name="output-and-its-schema"></a>出力とそのスキーマ  
- データ プロファイル タスクでは、選択したプロファイルは DataProfile.xsd スキーマに従って構造化された XML に出力されます。 この XML 出力をファイルに保存するかパッケージ変数に保存するかを指定できます。 このスキーマをオンラインで表示する[https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/)には、「」を参照してください。 この Web ページから、スキーマのローカル コピーを保存できます。 その後、スキーマのローカル コピーを Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] やその他のスキーマ エディター、XML エディター、またはメモ帳などのテキスト エディターで表示できます。  
+ データ プロファイル タスクでは、選択したプロファイルは DataProfile.xsd スキーマに従って構造化された XML に出力されます。 この XML 出力をファイルに保存するかパッケージ変数に保存するかを指定できます。 [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/) でこのスキーマをオンラインで表示できます。 この Web ページから、スキーマのローカル コピーを保存できます。 その後、スキーマのローカル コピーを Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] やその他のスキーマ エディター、XML エディター、またはメモ帳などのテキスト エディターで表示できます。  
   
  データ品質情報に関するこのスキーマは、次の場合に役立ちます。  
   
@@ -131,7 +124,7 @@ ms.locfileid: "62831888"
   
 -   データ品質情報を処理するカスタム ツールを作成する場合  
   
- ターゲットの名前空間は、スキーマでは[https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/)として識別されます。  
+ ターゲットの名前空間は、スキーマで [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/) として識別されます。  
   
 ## <a name="output-in-the-conditional-workflow-of-a-package"></a>パッケージの条件ワークフローでの出力  
  データ プロファイル コンポーネントには、データ プロファイル タスクの出力に基づいて [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのワークフローに条件ロジックを実装する機能は組み込まれていません。 ただし、スクリプト タスクで最小限のプログラミングを行って、このロジックを簡単に追加することができます。 このコードでは、XML 出力に対して XPath クエリを実行し、その結果をパッケージ変数に保存します。 スクリプト タスクを後続のタスクに接続する優先順位制約では、ワークフローを決定する式を使用できます。 たとえば、スクリプト タスクによって、列の NULL 値の比率が特定のしきい値を超えていることを検出できます。 この条件が満たされた場合は、パッケージを中断し、問題を解決してから続行することができます。  
@@ -140,27 +133,25 @@ ms.locfileid: "62831888"
  データ プロファイル タスクを構成するには、 **[データ プロファイル タスク エディター]** を使用します。 このエディターには、次の 2 つのページがあります。  
   
  [[全般] ページ](../general-page-of-integration-services-designers-options.md)  
- 
-  **[全般]** ページでは、出力ファイルまたは変数を指定します。 また、**[クイック プロファイル]** を選択し、既定の設定を使用してプロファイルを計算するようにタスクをすばやく構成することもできます。 詳細については、「 [単一テーブル クイック プロファイル フォーム &#40;データ プロファイル タスク&#41;](data-profiling-task.md)」を参照してください。  
+ **[全般]** ページでは、出力ファイルまたは変数を指定します。 また、 **[クイック プロファイル]** を選択し、既定の設定を使用してプロファイルを計算するようにタスクをすばやく構成することもできます。 詳細については、「 [単一テーブル クイック プロファイル フォーム &#40;データ プロファイル タスク&#41;](data-profiling-task.md)」を参照してください。  
   
  [[プロファイル要求] ページ](data-profiling-task-editor-profile-requests-page.md)  
- 
-  **[プロファイル要求]** ページでは、データ ソースを指定して、計算するデータ プロファイルを選択および構成します。 構成できる各種プロファイルの詳細については、次のトピックを参照してください。  
+ **[プロファイル要求]** ページでは、データ ソースを指定して、計算するデータ プロファイルを選択および構成します。 構成できる各種プロファイルの詳細については、次のトピックを参照してください。  
   
--   [データプロファイルタスク&#41;&#40;候補キープロファイル要求オプション](candidate-key-profile-request-options-data-profiling-task.md)  
+-   [[候補キー プロファイル要求] のオプション (データ プロファイル タスク)](candidate-key-profile-request-options-data-profiling-task.md)  
   
--   [データプロファイルタスク&#41;&#40;列長分布プロファイル要求オプション](column-length-distribution-profile-request-options-data-profiling-task.md)  
+-   [[列長分布プロファイル要求] のオプション (データ プロファイル タスク)](column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [データプロファイルタスク&#41;&#40;列の Null 比プロファイル要求オプション](column-null-ratio-profile-request-options-data-profiling-task.md)  
+-   [[列の NULL 比プロファイル要求] のオプション (データ プロファイル タスク)](column-null-ratio-profile-request-options-data-profiling-task.md)  
   
--   [列パターンプロファイル要求オプション &#40;データプロファイルタスク&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
+-   [[列パターン プロファイル要求] のオプション (データ プロファイル タスク)](column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [データプロファイルタスク&#41;&#40;の列統計プロファイル要求オプション](column-statistics-profile-request-options-data-profiling-task.md)  
+-   [[候補キー プロファイル要求] のオプション (データ プロファイル タスク)](column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [データプロファイルタスク&#41;&#40;列値分布プロファイル要求オプション](column-value-distribution-profile-request-options-data-profiling-task.md)  
+-   [[列の値分布プロファイル要求] のオプション (データ プロファイル タスク)](column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [データプロファイルタスク&#41;&#40;の機能依存プロファイル要求オプション](functional-dependency-profile-request-options-data-profiling-task.md)  
+-   [[機能依存プロファイル要求] のオプション (データ プロファイル タスク)](functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [データプロファイルタスク &#40;の値包含プロファイル要求オプション&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [[値包含プロファイル要求] のオプション (データ プロファイル タスク)](value-inclusion-profile-request-options-data-profiling-task.md)  
   
   

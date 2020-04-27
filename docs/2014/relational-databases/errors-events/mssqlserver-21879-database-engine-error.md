@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 98bfedce41d05a613fe47941b86cfa3fa176ee5d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62869189"
 ---
 # <a name="mssqlserver_21879"></a>MSSQLSERVER_21879
@@ -33,8 +33,7 @@ ms.locfileid: "62869189"
 |メッセージ テキスト|元のパブリッシャー '%s' およびパブリッシャー データベース '%s' をリダイレクトされたサーバー '%s' でクエリできないため、リモート サーバーの名前を特定できません。エラー %d、エラー メッセージ '%s'。|  
   
 ## <a name="explanation"></a>説明  
- 
-  `sp_validate_redirected_publisher` は、リモート サーバーの名前を検出するため、一時リンク サーバーを作成し、これを使用してリダイレクトされたパブリッシャーに接続します。 リンク サーバー クエリが失敗すると、エラー 21879 が返されます。 リモート サーバー名を要求する呼び出しは通常、一時リンク サーバーを最初に使用するため、接続の問題がある場合はこの呼び出しで初めて問題が現れる可能性があります。 このリモート呼び出しは単に、リモート サーバーで select `@@servername` を実行します。  
+ `sp_validate_redirected_publisher` は、リモート サーバーの名前を検出するため、一時リンク サーバーを作成し、これを使用してリダイレクトされたパブリッシャーに接続します。 リンク サーバー クエリが失敗すると、エラー 21879 が返されます。 リモート サーバー名を要求する呼び出しは通常、一時リンク サーバーを最初に使用するため、接続の問題がある場合はこの呼び出しで初めて問題が現れる可能性があります。 このリモート呼び出しは単に、リモート サーバーで select `@@servername` を実行します。  
   
  リダイレクトされたパブリッシャーにクエリを実行するために使用されるリンク サーバーは、元のパブリッシャーに対して `sp_adddistpublisher` を呼び出したときに指定したセキュリティ モード、ログイン、およびパスワードを使用します。  
   
@@ -42,11 +41,9 @@ ms.locfileid: "62869189"
   
 -   Windows 認証を使用した場合 (セキュリティ モード 1)、接続にはセキュリティ接続が使用されます。  
   
-    -   
-  `sp_validate_redirected_publisher` がユーザーによって明示的に呼び出された場合、接続にはユーザーが実行している Windows ログインが使用されます。  
+    -   `sp_validate_redirected_publisher` がユーザーによって明示的に呼び出された場合、接続にはユーザーが実行している Windows ログインが使用されます。  
   
-    -   
-  `sp_validate_redirected_`publisher がレプリケーション エージェントによって `sp_get_redirected_publisher` から呼び出された場合、エージェントに関連付けられている Windows ログインが使用されます。  
+    -   `sp_validate_redirected_`publisher がレプリケーション エージェントによって `sp_get_redirected_publisher` から呼び出された場合、エージェントに関連付けられている Windows ログインが使用されます。  
   
  エラー 21879 は、リダイレクトされた対象のパブリッシャーで認識されないログインを使用して `sp_validate_redirected_publisher` が呼び出されたことを示している可能性があります。  
   

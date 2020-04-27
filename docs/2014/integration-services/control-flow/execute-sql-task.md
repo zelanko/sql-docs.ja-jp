@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6be23e1a45f2b2ed0cc055c5032a72ffe2387399
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62831770"
 ---
 # <a name="execute-sql-task"></a>SQL 実行タスク
@@ -42,7 +42,7 @@ ms.locfileid: "62831770"
 ## <a name="connecting-to-a-data-source"></a>データ ソースへの接続  
  SQL 実行タスクでは、さまざまな種類の接続マネージャーを使用して、SQL ステートメントまたはストアド プロシージャを実行するデータ ソースに接続できます。 このタスクが使用できる接続の種類の一覧を、次の表に示します。  
   
-|接続の種類|[接続マネージャー]|  
+|接続の種類|[ODBC 入力元エディター]|  
 |---------------------|------------------------|  
 |EXCEL|[Excel 接続マネージャー](../connection-manager/excel-connection-manager.md)|  
 |OLE DB (OLE DB)|[OLE DB 接続マネージャー](../connection-manager/ole-db-connection-manager.md)|  
@@ -54,10 +54,9 @@ ms.locfileid: "62831770"
 ## <a name="creating-sql-statements"></a>SQL ステートメントの作成  
  このタスクでは、タスクのプロパティを SQL ステートメントの実行元として使用できます。タスクのプロパティには、ステートメント、単数または複数のステートメントが含まれるファイルへの接続、またはステートメントが含まれる変数名を含めることができます。 SQL ステートメントは、実行元のデータベース管理システム (DBMS) の言語仕様に従って作成する必要があります。 詳細については、「[Integration Services &#40;SSIS&#41; のクエリ](../integration-services-ssis-queries.md)」を参照してください。  
   
- SQL ステートメントがファイルに格納されている場合、タスクはファイル接続マネージャーを使用してそのファイルに接続します。 詳細については、「 [File Connection Manager](../connection-manager/file-connection-manager.md)」を参照してください。  
+ SQL ステートメントがファイルに格納されている場合、タスクはファイル接続マネージャーを使用してそのファイルに接続します。 詳しくは「 [File Connection Manager](../connection-manager/file-connection-manager.md)」をご覧ください。  
   
- 
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでは、 **[SQL 実行タスク エディター]** ダイアログ ボックスを使用して SQL ステートメントを入力できます。また、SQL クエリを作成するためのグラフィカル ユーザー インターフェイスである **クエリ ビルダー**を使用することもできます。 詳細については、「[SQL 実行タスク エディター &#40;[全般] タブ&#41;](../execute-sql-task-editor-general-page.md)」と「[クエリ ](../query-builder.md)」を参照してください。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでは、 **[SQL 実行タスク エディター]** ダイアログ ボックスを使用して SQL ステートメントを入力できます。また、SQL クエリを作成するためのグラフィカル ユーザー インターフェイスである **クエリ ビルダー**を使用することもできます。 詳細については、「[SQL 実行タスク エディター &#40;[全般] タブ&#41;](../execute-sql-task-editor-general-page.md)」と「[クエリ ](../query-builder.md)」を参照してください。  
   
 > [!NOTE]  
 >  有効な SQL ステートメントが SQL 実行タスクの外部に記述されている場合、SQL 実行タスクは解析に失敗することがあります。  
@@ -68,7 +67,7 @@ ms.locfileid: "62831770"
 ## <a name="sending-multiple-statements-in-a-batch"></a>複数のステートメントの一括送信  
  SQL 実行タスクに複数のステートメントが含まれる場合、それらをグループ化してバッチとして実行できます。 バッチの開始と終了を知らせるには、GO コマンドを使用します。 2 つの GO コマンド間にあるすべての SQL ステートメントは、OLE DB プロバイダーにバッチで送信されて実行されます。 SQL コマンドには、GO コマンドで分割された複数のバッチを含めることができます。  
   
- グループ化してバッチに含めることができる SQL ステートメントの種類には制限があります。 詳細については、「[ステートメントのバッチ](../../relational-databases/native-client-odbc-queries/executing-statements/batches-of-statements.md)」を参照してください。  
+ グループ化してバッチに含めることができる SQL ステートメントの種類には制限があります。 詳細については、「 [ステートメントのバッチ](../../relational-databases/native-client-odbc-queries/executing-statements/batches-of-statements.md)」を参照してください。  
   
  SQL 実行タスクで SQL ステートメントのバッチを実行する場合、バッチには次の規則が適用されます。  
   
@@ -94,7 +93,7 @@ ms.locfileid: "62831770"
  SQL 実行タスクにおける SQL コマンドからの結果セットの取得については、「 [SQL 実行タスクにおける結果セット](../result-sets-in-the-execute-sql-task.md)」を参照してください。  
   
 ## <a name="troubleshooting-the-execute-sql-task"></a>SQL 実行タスクのトラブルシューティング  
- SQL 実行タスクによる外部データ プロバイダーの呼び出しをログに記録できます。 このログ機能を使用すると、SQL 実行タスクが実行する SQL コマンドに関するトラブルシューティングを行うことができます。 SQL 実行タスクによる外部データ プロバイダーの呼び出しのログを記録するには、パッケージ ログ記録を有効にして、パッケージ レベルで **Diagnostic** イベントを選択します。 詳細については、「[パッケージ実行のトラブルシューティング ツール](../troubleshooting/troubleshooting-tools-for-package-execution.md)」を参照してください。  
+ SQL 実行タスクによる外部データ プロバイダーの呼び出しをログに記録できます。 このログ機能を使用すると、SQL 実行タスクが実行する SQL コマンドに関するトラブルシューティングを行うことができます。 SQL 実行タスクによる外部データ プロバイダーの呼び出しのログを記録するには、パッケージ ログ記録を有効にして、パッケージ レベルで **Diagnostic** イベントを選択します。 詳細については、「 [パッケージ実行のトラブルシューティング ツール](../troubleshooting/troubleshooting-tools-for-package-execution.md)」を参照してください。  
   
  SQL コマンドまたはストアド プロシージャから、複数の結果セットが返される場合があります。 このような結果セットには、`SELECT` クエリの結果である行セットだけでなく、`RAISERROR` ステートメントまたは `PRINT` ステートメントのエラーの結果である単一値も含まれています。 1 つ目以外の結果セット内のエラーがタスクで無視されるかどうかは、使用する接続マネージャーの種類によって異なります。  
   
@@ -103,9 +102,9 @@ ms.locfileid: "62831770"
 -   ODBC 接続マネージャーおよび ADO.NET 接続マネージャーを使用する場合、1 つ目の結果セット以外も無視されません。 これらの接続マネージャーでは、2 つ目以降の結果セットにエラーが含まれていると、エラーが発生してタスクが失敗します。  
   
 ### <a name="custom-log-entries"></a>カスタム ログ エントリ  
- 次の表では、SQL 実行タスクのカスタム ログ エントリを説明します。 詳細については、「[Integration Services (SSIS) のログ記録](../performance/integration-services-ssis-logging.md)」と「[ログ記録用のカスタム メッセージ](../custom-messages-for-logging.md)」を参照してください。  
+ 次の表では、SQL 実行タスクのカスタム ログ エントリを説明します。 詳しくは、「[Integration Services &#40;SSIS&#41; のログ記録](../performance/integration-services-ssis-logging.md)」と「[ログ記録用のカスタム メッセージ](../custom-messages-for-logging.md)」をご覧ください。  
   
-|ログ エントリ|[説明]|  
+|ログ エントリ|説明|  
 |---------------|-----------------|  
 |`ExecuteSQLExecutingQuery`|SQL ステートメントの実行フェーズに関する情報を提供します。 タスクがデータベースへの接続を取得したとき、SQL ステートメントの準備が開始されたとき、および SQL ステートメントの実行が完了した後に、ログ エントリが書き込まれます。 準備フェーズのログ エントリには、タスクで使用される SQL ステートメントが含まれます。|  
   
@@ -126,8 +125,7 @@ ms.locfileid: "62831770"
   
  プロパティはプログラムによって設定するか、または [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから設定できます。  
   
- 
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
 -   [[SQL 実行タスクエディター] &#40;[全般] ページ&#41;](../execute-sql-task-editor-general-page.md)  
   
@@ -137,8 +135,7 @@ ms.locfileid: "62831770"
   
 -   [[式] ページ](../expressions/expressions-page.md)  
   
- 
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
 -   [タスクまたはコンテナーのプロパティを設定する](../set-the-properties-of-a-task-or-container.md)  
   
@@ -159,7 +156,7 @@ ms.locfileid: "62831770"
   
 -   [SQL 実行タスクにおける結果セット](../result-sets-in-the-execute-sql-task.md)  
   
--   [Transact-sql リファレンス &#40;データベースエンジン&#41;](/sql/t-sql/language-reference)  
+-   [TRANSACT-SQL リファレンス &#40;データベース エンジン&#41;](/sql/t-sql/language-reference)  
   
 -   mssqltips.com のブログ「 [SQL Server 2012 の新しい日付と時刻の関数](https://go.microsoft.com/fwlink/?LinkId=239783)」  
   

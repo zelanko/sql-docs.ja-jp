@@ -14,24 +14,22 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c2518404830577839bce3e84c4eac9b76c850cd3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62873770"
 ---
 # <a name="supported-net-framework-libraries"></a>サポートされている .NET Framework ライブラリ
-  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] にホストされている共通言語ランタイム (CLR) を使用すると、ストアド プロシージャ、トリガー、ユーザー定義関数、ユーザー定義型、およびユーザー定義集計をマネージド コードで作成できます。 .NET Framework クラス ライブラリに用意されている機能を使用すると、文字列操作、高度な算術演算、ファイル アクセス、暗号化などの機能を提供する組み込みのクラスにアクセスできます。 これらのクラスは、任意のマネージド ストアド プロシージャ、ユーザー定義型、トリガー、ユーザー定義関数、またはユーザー定義集計からアクセスできます。  
   
 > [!NOTE]  
->  グローバルアセンブリキャッシュ (GAC) でサポートされていないアセンブリをサービスまた[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]はアップグレードする場合は、を使用します。 アセンブリが[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR 統合内に存在する場合は。 GAC で、データベースにも登録されているアセンブリ (サポートされていない .NET Framework アセンブリを含む) を提供またはアップグレードする場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ステートメントを使用して `ALTER ASSEMBLY` データベース内でもアセンブリのコピーを提供またはアップグレードしてください。 詳細については、[サポート技術情報の記事 949080](https://support.microsoft.com/kb/949080)を参照してください。  
+>  グローバルアセンブリキャッシュ (GAC) でサポートされていないアセンブリをサービスまた[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]はアップグレードする場合は、を使用します。 アセンブリが[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR 統合内に存在する場合は。 GAC で、データベースにも登録されているアセンブリ (サポートされていない .NET Framework アセンブリを含む) を提供またはアップグレードする場合は、`ALTER ASSEMBLY` ステートメントを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベース内でもアセンブリのコピーを提供またはアップグレードしてください。 詳細については、[サポート技術情報の記事 949080](https://support.microsoft.com/kb/949080)を参照してください。  
   
 ## <a name="supported-libraries"></a>サポートされているライブラリ  
  以降で[!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)]は、サポートされる .NET Framework ライブラリの一覧が用意されています。これらのライブラリは、を使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]して、グローバルアセンブリキャッシュ (GAC) から直接読み込みます。  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の CLR 統合でサポートされるライブラリおよび名前空間を次に示します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の CLR 統合でサポートされるライブラリおよび名前空間を次に示します。  
   
 -   CustomMarshalers  
   
@@ -66,10 +64,9 @@ ms.locfileid: "62873770"
 -   System.Xml.Linq.dll  
   
 ## <a name="unsupported-libraries"></a>サポートされていないライブラリ  
- サポートされていないライブラリは、マネージド ストアド プロシージャ、トリガー、ユーザー定義関数、ユーザー定義型、およびユーザー定義集計から呼び出すことができます。 サポートされていないライブラリをコードで使用するには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ステートメントを使用して、これらのライブラリを `CREATE ASSEMBLY` データベースに登録する必要があります。 サポートされていないライブラリをサーバーに登録して実行する場合は、そのライブラリのセキュリティと信頼性を確認およびテストする必要があります。  
+ サポートされていないライブラリは、マネージド ストアド プロシージャ、トリガー、ユーザー定義関数、ユーザー定義型、およびユーザー定義集計から呼び出すことができます。 サポートされていないライブラリをコードで使用するには、`CREATE ASSEMBLY` ステートメントを使用して、これらのライブラリを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースに登録する必要があります。 サポートされていないライブラリをサーバーに登録して実行する場合は、そのライブラリのセキュリティと信頼性を確認およびテストする必要があります。  
   
- たとえば、`System.DirectoryServices` 名前空間はサポートされていません。 System.DirectoryServices.dll アセンブリをコードから呼び出す前に、このアセンブリを `UNSAFE` 権限で登録する必要があります。 
-  `UNSAFE` 名前空間内のクラスは `System.DirectoryServices` または `SAFE` の要件を満たさないため、`EXTERNAL_ACCESS` 権限が必要になります。 詳細については、「 [Clr 統合プログラミングモデルの制限事項](clr-integration-programming-model-restrictions.md)」と「 [Clr 統合コードアクセスセキュリティ](../security/clr-integration-code-access-security.md)」を参照してください。  
+ たとえば、`System.DirectoryServices` 名前空間はサポートされていません。 System.DirectoryServices.dll アセンブリをコードから呼び出す前に、このアセンブリを `UNSAFE` 権限で登録する必要があります。 `UNSAFE` 名前空間内のクラスは `System.DirectoryServices` または `SAFE` の要件を満たさないため、`EXTERNAL_ACCESS` 権限が必要になります。 詳細については、「 [Clr 統合プログラミングモデルの制限事項](clr-integration-programming-model-restrictions.md)」と「 [Clr 統合コードアクセスセキュリティ](../security/clr-integration-code-access-security.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [アセンブリの作成](../assemblies/creating-an-assembly.md)   

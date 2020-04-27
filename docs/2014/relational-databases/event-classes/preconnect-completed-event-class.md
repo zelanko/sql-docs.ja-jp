@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eaad0a80fd77257c6e79e092733d75c0c8df5df5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62827083"
 ---
 # <a name="preconnectcompleted-event-class"></a>PreConnect:Completed イベント クラス
@@ -26,7 +26,7 @@ ms.locfileid: "62827083"
   
 ## <a name="preconnectcompleted-event-class-data-columns"></a>PreConnect:Completed イベント クラスのデータ列  
   
-|データ列名|データ型|[説明]|列 ID|フィルターの適用|  
+|データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |EventClass|`int`|216|27|いいえ|  
 |SPID|`int`|このイベントを発生させるサーバー プロセスの ID。|12|はい|  
@@ -39,7 +39,7 @@ ms.locfileid: "62827083"
 |読み取り|`int`|論理読み取りの数。|16|はい|  
 |書き込み|`int`|論理書き込みの数。|17|はい|  
 |GroupID|`int`|分類されたワークロード グループの ID。|66|はい|  
-|エラー|`int`|ユーザー定義の分類子関数が実行に失敗した場合の最後のエラー番号。|31|はい|  
+|Error|`int`|ユーザー定義の分類子関数が実行に失敗した場合の最後のエラー番号。|31|はい|  
 |State|`int`|最後のエラーの状態。|30|はい|  
 |TargetUserName|`sysname`|対応するアクティブなグループをシステムが見つけられない場合は、ユーザー定義の分類子関数の戻り値 (ワークロード グループ名)。 それ以外の場合は、この列は NULL に設定されます。|39|はい|  
 |ObjectName|`nvarchar(256)`|ユーザー定義の分類子関数の 2 部構成の名前 (dbo.classifier など)。|34|はい|  

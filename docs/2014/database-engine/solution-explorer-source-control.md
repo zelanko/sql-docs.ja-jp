@@ -19,10 +19,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 788ce615f914dcc8a2a49fba7575061fff0df870
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62843114"
 ---
 # <a name="solution-explorer-source-control"></a>ソリューション エクスプローラーのソース管理
@@ -33,8 +33,7 @@ ms.locfileid: "62843114"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)]  
   
- ソース管理とは、サーバー ソフトウェアの主要部分がファイルのバージョンを格納および追跡し、ファイルへのアクセスを制御するシステムです。 標準的なソース管理システムは、1 つのソース管理プロバイダー、および 2 つ以上のソース管理クライアントで構成されます。 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] はソース管理サービスに統合することができます。 そのため、このツールはソース管理プロバイダーに対するクライアントとして使用できます。 環境を離れることなく、個人およびチームのプロジェクトを簡単に管理できます。 ソース管理プロバイダーは、[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] に含まれていません。  
+ ソース管理とは、サーバー ソフトウェアの主要部分がファイルのバージョンを格納および追跡し、ファイルへのアクセスを制御するシステムです。 標準的なソース管理システムは、1 つのソース管理プロバイダー、および 2 つ以上のソース管理クライアントで構成されます。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] はソース管理サービスに統合することができます。 そのため、このツールはソース管理プロバイダーに対するクライアントとして使用できます。 環境を離れることなく、個人およびチームのプロジェクトを簡単に管理できます。 ソース管理プロバイダーは、[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] に含まれていません。  
   
 #### <a name="to-select-a-source-control-provider"></a>ソース管理プロバイダーを選択するには  
   
@@ -48,13 +47,11 @@ ms.locfileid: "62843114"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[ソース管理の基礎](../../2014/database-engine/source-control-basics.md)|ソース管理に関する基本的な用語を定義し、プロジェクトでソース管理を使用する利点について説明します。|  
-|[ソース管理へのソリューションとプロジェクトの追加](../../2014/database-engine/add-solutions-and-projects-to-source-control.md)|
-  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 環境を使用して、ソース管理にソリューションおよびプロジェクトを追加する方法について説明します。|  
-|[ソース管理からソリューションやプロジェクトを開く方法](../../2014/database-engine/open-solutions-and-projects-from-source-control.md)|
-  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 環境を使用して、ソース管理の対象であるソリューションおよびプロジェクトを開く方法について説明します。|  
+|[ソース管理へのソリューションとプロジェクトの追加](../../2014/database-engine/add-solutions-and-projects-to-source-control.md)|[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 環境を使用して、ソース管理にソリューションおよびプロジェクトを追加する方法について説明します。|  
+|[ソース管理からソリューションやプロジェクトを開く方法](../../2014/database-engine/open-solutions-and-projects-from-source-control.md)|[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 環境を使用して、ソース管理の対象であるソリューションおよびプロジェクトを開く方法について説明します。|  
 |[チェックアウトの管理](../../2014/database-engine/manage-checkouts.md)|ソリューションやファイルをソース管理からチェックアウトする方法について説明します。|  
 |[チェックインの管理](../../2014/database-engine/manage-checkins.md)|ソリューションやファイルをソース管理にチェックインする方法について説明します。|  
 |[バージョン情報の設定と取得](../../2014/database-engine/set-and-retrieve-version-information.md)|プロジェクトや項目の履歴を取得したり、項目のローカル コピーを取得したり、2 つの項目のバージョンを比較したりする方法について説明します。|  

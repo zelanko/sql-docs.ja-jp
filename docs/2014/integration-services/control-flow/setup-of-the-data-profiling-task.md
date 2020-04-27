@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1d2378426a3cd55b6df183cac7782d63578e2ed0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62830223"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>データ プロファイル タスクのセットアップ
@@ -39,9 +39,7 @@ ms.locfileid: "62830223"
  詳細については、「 [パッケージ ワークフローでデータ プロファイル タスクを使用する](incorporate-a-data-profiling-task-in-package-workflow.md)」をご覧ください。  
   
 ## <a name="setup-of-the-task-output"></a>タスク出力の設定  
- データ プロファイル タスクがパッケージに追加されたら、タスクで計算するプロファイルの出力を設定します。 プロファイルの出力を設定するには、[データ プロファイル タスク エディター] の **[全般]** ページを使用します。 
-  **[全般]** ページでは、出力先の指定以外に、データのクイック プロファイルも実行できます。 
-  **[クイック プロファイル]** を選択すると、データ プロファイル タスクにより、一部またはすべての既定のプロファイルを既定の設定のまま使用してテーブルまたはビューがプロファイルされます。  
+ データ プロファイル タスクがパッケージに追加されたら、タスクで計算するプロファイルの出力を設定します。 プロファイルの出力を設定するには、[データ プロファイル タスク エディター] の **[全般]** ページを使用します。 **[全般]** ページでは、出力先の指定以外に、データのクイック プロファイルも実行できます。 **[クイック プロファイル]** を選択すると、データ プロファイル タスクにより、一部またはすべての既定のプロファイルを既定の設定のまま使用してテーブルまたはビューがプロファイルされます。  
   
  詳細については、「[データ プロファイル タスク エディター &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)」および「[単一テーブル クイック プロファイル フォーム &#40;データ プロファイル タスク&#41;](data-profiling-task.md)」をご覧ください。  
   
@@ -55,7 +53,7 @@ ms.locfileid: "62830223"
   
 |計算内容|特定できる問題|使用するプロファイル|  
 |----------------|-------------------------|----------------------|  
-|選択された列に含まれる文字列値の長さごとの、その長さと、テーブル内におけるその長さの行の比率。|**無効な文字列値**。たとえば、米国の州コードに2文字を使用することが想定されている列をプロファイルし、2文字より長い値を検出するとします。|**列長分布-** 次のいずれかのデータ型の列に対して有効です。<br /><br /> 文字データ型 : `char`、`nchar`、`varchar`、および `nvarchar`|  
+|選択された列に含まれる文字列値の長さごとの、その長さと、テーブル内におけるその長さの行の比率。|**無効な文字列値** - たとえば、米国州コードとして 2 文字を使用する列をプロファイルし、3 文字以上の値を検出できます。|**列長分布-** 次のいずれかのデータ型の列に対して有効です。<br /><br /> 文字データ型 : `char`、`nchar`、`varchar`、および `nvarchar`|  
 |文字列型の列に含まれる指定された比率の値に対応する一連の正規表現。<br /><br /> また、新しい値を検証するために将来使用できる正規表現も見つけます。|**有効でないか、正しい形式ではない文字列値-** たとえば、{5}郵便番号列のパターンプロファイルでは、\d-\d{4}、\d{5}、および \d{9}という正規表現が生成されます。 出力にその他の正規表現が示された場合、データに無効な値または形式が正しくない値が含まれています。|**列パターンプロファイル-** 次のいずれかのデータ型の列に対して有効です。<br /><br /> 文字データ型 : `char`、`nchar`、`varchar`、および `nvarchar`|  
 |選択した列の NULL 値の比率。|**列の null 値の比率が予想**外に高いたとえば、米国郵便番号を含むことが想定されている列をプロファイルしても、不足している郵便番号の割合が許容範囲内にないことがわかります。|**列の Null 比-** 次のデータ型の列に対して有効です。<br /><br /> 任意のデータ型。 これには、`image`、`text`、`xml`、ユーザー定義型、およびバリアント型が含まれます。|  
 |数値型列の最小値、最大値、平均値、標準偏差や、`datetime` 列の最小値、最大値などの統計。|**無効な数値と日付**-たとえば、過去の日付の列をプロファイルし、将来の日付の最大値を検出できます。|**列統計プロファイル-** 次のいずれかのデータ型の列に対して有効です。<br /><br /> 数値データ型 : 整数型 (`bit` は除く)、`money`、`smallmoney`、`decimal`、`float`、`real`、および `numeric`<br /><br /> 日付および時刻データ型 : `datetime`、`smalldatetime`、`timestamp`、`date`、`time`、`datetime2`、および `datetimeoffset`<br />注: 日付および時刻データ型を使用する列の場合、プロファイルでは最小値と最大値だけが計算されます。|  
@@ -66,8 +64,7 @@ ms.locfileid: "62830223"
   
  計算するプロファイルを選択するには、[データ プロファイル タスク エディター] の **[プロファイル要求]** ページを使用します。 詳細については、「[[データ プロファイル タスク エディター] &#40;[プロファイル要求] ページ&#41;](data-profiling-task-editor-profile-requests-page.md)」をご覧ください。  
   
- 
-  **[プロファイル要求]** ページでは、データ ソースの指定とデータ プロファイルの構成も行います。 タスクを構成する際は、次の点を考慮してください。  
+ **[プロファイル要求]** ページでは、データ ソースの指定とデータ プロファイルの構成も行います。 タスクを構成する際は、次の点を考慮してください。  
   
 -   構成を単純化し、未知のデータの特性を検出しやすくするために、個々の列名の代わりにワイルドカード **(\*)** を使用できます。 このワイルドカードを使用すると、タスクによって、適切なデータ型のすべての列をプロファイルするため、処理の速度が低下する場合があります。  
   
@@ -77,21 +74,21 @@ ms.locfileid: "62830223"
   
  利用可能な各データ プロファイルには、独自の構成オプションがあります。 オプションの詳細については、次のトピックを参照してください。  
   
--   [データプロファイルタスク&#41;&#40;候補キープロファイル要求オプション](candidate-key-profile-request-options-data-profiling-task.md)  
+-   [[候補キー プロファイル要求] のオプション (データ プロファイル タスク)](candidate-key-profile-request-options-data-profiling-task.md)  
   
--   [データプロファイルタスク&#41;&#40;列長分布プロファイル要求オプション](column-length-distribution-profile-request-options-data-profiling-task.md)  
+-   [[列長分布プロファイル要求] のオプション (データ プロファイル タスク)](column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [データプロファイルタスク&#41;&#40;列の Null 比プロファイル要求オプション](column-null-ratio-profile-request-options-data-profiling-task.md)  
+-   [[列の NULL 比プロファイル要求] のオプション (データ プロファイル タスク)](column-null-ratio-profile-request-options-data-profiling-task.md)  
   
--   [列パターンプロファイル要求オプション &#40;データプロファイルタスク&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
+-   [[列パターン プロファイル要求] のオプション (データ プロファイル タスク)](column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [データプロファイルタスク&#41;&#40;の列統計プロファイル要求オプション](column-statistics-profile-request-options-data-profiling-task.md)  
+-   [[候補キー プロファイル要求] のオプション (データ プロファイル タスク)](column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [データプロファイルタスク&#41;&#40;列値分布プロファイル要求オプション](column-value-distribution-profile-request-options-data-profiling-task.md)  
+-   [[列の値分布プロファイル要求] のオプション (データ プロファイル タスク)](column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [データプロファイルタスク&#41;&#40;の機能依存プロファイル要求オプション](functional-dependency-profile-request-options-data-profiling-task.md)  
+-   [[機能依存プロファイル要求] のオプション (データ プロファイル タスク)](functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [データプロファイルタスク &#40;の値包含プロファイル要求オプション&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [[値包含プロファイル要求] のオプション (データ プロファイル タスク)](value-inclusion-profile-request-options-data-profiling-task.md)  
   
 ## <a name="execution-of-the-package-that-contains-the-data-profiling-task"></a>データ プロファイル タスクを含むパッケージの実行  
  データ プロファイル タスクを設定したら、このタスクを実行できるようになります。 実行すると、データ プロファイルが計算され、XML 形式のこの情報がファイルまたはパッケージ変数に出力されます。 この XML の構造は、DataProfile.xsd スキーマに基づきます。 スキーマ[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]は、または別のスキーマエディター、XML エディター、またはメモ帳などのテキストエディターで開くことができます。 データ品質情報に関するこのスキーマは、次の目的に役立ちます。  
@@ -102,7 +99,7 @@ ms.locfileid: "62830223"
   
  ターゲットの名前空間は、スキーマでは[https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/)として識別されます。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
  [Data Profile Viewer](data-profile-viewer.md)。  
   
   

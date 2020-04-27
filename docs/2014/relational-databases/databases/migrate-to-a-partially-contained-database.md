@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0e535935da5c99668e39ab4f84eb98ccd5bab064
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62871731"
 ---
 # <a name="migrate-to-a-partially-contained-database"></a>Migrate to a Partially Contained Database
@@ -32,7 +32,7 @@ ms.locfileid: "62871731"
   
 -   [包含データベース ユーザーへのユーザーの移行](#users)  
   
-##  <a name="prepare"></a> データベースを移行する準備  
+##  <a name="preparing-to-migrate-a-database"></a><a name="prepare"></a> データベースを移行する準備  
  データベースを部分的包含データベース モデルに移行することを検討している場合は、次の点を確認してください。  
   
 -   部分的包含データベース モデルを理解している。 詳細については、「 [包含データベース](contained-databases.md)」を参照してください。  
@@ -47,7 +47,7 @@ ms.locfileid: "62871731"
   
 -   **database_uncontained_usage** XEvent を監視し、非包含機能がいつ使用されるかを確認する。  
   
-##  <a name="enable"></a> 包含データベースの有効化  
+##  <a name="enable-contained-databases"></a><a name="enable"></a> 包含データベースの有効化  
  包含データベースを作成するためには、あらかじめ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスで包含データベースを有効にしておく必要があります。  
   
 ### <a name="enabling-contained-databases-using-transact-sql"></a>Transact SQL を使用して包含データベースを有効にする  
@@ -69,7 +69,7 @@ GO
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="convert"></a> 部分的包含へのデータベースの変換  
+##  <a name="converting-a-database-to-partially-contained"></a><a name="convert"></a> 部分的包含へのデータベースの変換  
  データベースを包含データベースに変換するには、 **CONTAINMENT** オプションを変更します。  
   
 ### <a name="converting-a-database-to-partially-contained-using-transact-sql"></a>Transact-SQL を使用してデータベースを部分的包含に変換する  
@@ -91,7 +91,7 @@ GO
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="users"></a> 包含データベース ユーザーへのユーザーの移行  
+##  <a name="migrating-users-to-contained-database-users"></a><a name="users"></a> 包含データベース ユーザーへのユーザーの移行  
  次の例では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインに基づくすべてのユーザーを、パスワードを持つ包含データベース ユーザーに移行します。 有効になっていないログインは除外します。 この例は、包含データベースで実行する必要があります。  
   
 ```sql  
