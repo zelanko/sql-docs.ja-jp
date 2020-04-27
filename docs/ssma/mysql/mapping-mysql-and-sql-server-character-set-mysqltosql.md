@@ -10,10 +10,10 @@ ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 32d5e23579b99b323da870d2608b2d197520f99f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67909020"
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>MySQL と SQL Server 文字セットのマッピング (MySQLToSQL)
@@ -53,7 +53,7 @@ ms.locfileid: "67909020"
 > [!NOTE]  
 > 文字セットのマッピングを編集するために選択したタブには、異なるノードレベルでのマッピングに関係なく、3つのボタンが含まれています。  
 >   
-> 次に例を示します。  
+> これらは次のとおりです。  
 >   
 > 1.  **適用:** ユーザーによって行われた変更を適用します。これは、文字セットマッピングが編集され、まだ保存されていない場合にのみ有効です。  
 > 2.  **取り消し:** ユーザーによって行われた変更を取り消します。 このボタンは、文字セットマッピングが編集されていても保存されていない場合に有効になります。  

@@ -14,10 +14,10 @@ ms.assetid: 4e2bb601-0fe8-4d61-b00e-38341d85a6bb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e81fa9ffb28ba31f50d77cacf372bc24d09787ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917144"
 ---
 # <a name="resync-command-property-dynamic-ado"></a>Resync Command プロパティ - 動的 (ADO)
@@ -26,7 +26,7 @@ ms.locfileid: "67917144"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  コマンド文字列である**文字列**値を設定または返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトは、複数のベーステーブルに対して実行される結合操作の結果です。 影響を受ける行は、 [Resync](../../../ado/reference/ado-api/resync-method.md)メソッドの反映された*レコード*のパラメーターによって異なります。 [一意のテーブル](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)と再**同期コマンド**のプロパティが設定されていない場合は、標準の再**同期**メソッドが実行されます。  
   
  再**同期コマンド**プロパティのコマンド文字列は、更新対象の行を一意に識別するパラメーター化されたコマンドまたはストアドプロシージャで、更新する行と同じ数と順序の列を含む単一の行を返します。 コマンド文字列には、**一意テーブル**の主キー列ごとのパラメーターが含まれています。それ以外の場合は、実行時エラーが返されます。 パラメーターは、更新する行の主キーの値で自動的に入力されます。  

@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 50385161b417d02db2dc44ad1172910d31f198b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67905145"
 ---
 # <a name="syssp_drop_trusted_assembly-transact-sql"></a>sys.sp_drop_trusted_assembly (Transact-SQL)  
@@ -46,7 +46,7 @@ sp_drop_trusted_assembly
 [ @hash = ]'*value*'  
 サーバーの信頼されたアセンブリの一覧から削除するアセンブリの SHA2_512 ハッシュ値。 アセンブリが署名されていないか、データベースが信頼できるものとしてマークされていない場合でも、clr strict security を有効にすると、信頼されたアセンブリが読み込まれることがあります
 
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
 
 この手順では、アセンブリを[trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)から削除します。
 
@@ -54,7 +54,7 @@ sp_drop_trusted_assembly
 
 `sysadmin`固定サーバーロールまたは`CONTROL SERVER`権限のメンバーシップが必要です。
 
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
 
 次の例では、サーバーの信頼されたアセンブリの一覧からアセンブリハッシュを削除します。  
 

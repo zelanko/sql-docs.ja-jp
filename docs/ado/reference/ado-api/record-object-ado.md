@@ -16,16 +16,16 @@ ms.assetid: db83ed2c-a8e3-460c-8682-64667e4d5d01
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5ffc515350bfff4307da382c05aae50ed1930802
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917360"
 ---
 # <a name="record-object-ado"></a>Record オブジェクト (ADO)
 [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)またはデータプロバイダーの行、またはファイルやディレクトリなどの半構造化データプロバイダーによって返されるオブジェクトを表します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **レコード**オブジェクトは1行のデータを表し、1行の**レコードセット**と概念的に似ています。 プロバイダーの機能によっては、**レコード**オブジェクトが1行の**レコードセット**ではなく、プロバイダーから直接返される場合があります。たとえば、1つの行のみを選択する SQL クエリが実行された場合などです。 または、**レコード**オブジェクトを**レコードセット**オブジェクトから直接取得することもできます。 または、**レコード**をプロバイダーから、Microsoft Exchange OLE DB プロバイダーなどの半構造化データに直接返すことができます。  
   
  **レコードオブジェクト**に関連付けられているフィールドは、**レコード**オブジェクトの[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)コレクションを使用して表示できます。 ADO では、**レコード**オブジェクトの**Fields**コレクションで、レコード**セット**、 **SafeArray**、スカラー値を含むオブジェクト値列を使用できます。  

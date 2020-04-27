@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0d9486134e0a9103239853d8378e29aea688c7fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67046663"
 ---
 # <a name="drop-a-sql-server-2014-installation"></a>SQL Server 2014 のインストールの削除
@@ -46,7 +46,7 @@ ms.locfileid: "67046663"
   
 -   準備操作に失敗した後でフェールオーバー クラスター ノードを修復するには、 **[ノードの削除]** を使用してから準備手順をもう一度実行します。 詳細については、「[SQL Server フェールオーバー クラスターでのノードの追加または削除 &#40;Setup&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)」を参照してください。  
   
-### <a name="to-repair-a-failed-installation-of-includessnoversionincludesssnoversion-mdmd-from-the-installation-center"></a>インストール センターから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の失敗したインストールを修復するには  
+### <a name="to-repair-a-failed-installation-of-ssnoversion-from-the-installation-center"></a>インストール センターから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の失敗したインストールを修復するには  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール メディアから、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ プログラム (setup.exe) を起動します。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "67046663"
   
 8.  [修復の進行状況] ページに、修復操作の進行状況が表示されます。 [完了] ページでは、操作が完了したことが示されます。  
   
-### <a name="to-repair-a-failed-installation-of-includessnoversionincludesssnoversion-mdmd-using-command-prompt"></a>コマンド プロンプトを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の失敗したインストールを修復するには  
+### <a name="to-repair-a-failed-installation-of-ssnoversion-using-command-prompt"></a>コマンド プロンプトを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の失敗したインストールを修復するには  
   
 1.  コマンド プロンプトで次のコマンドを実行します。  
   

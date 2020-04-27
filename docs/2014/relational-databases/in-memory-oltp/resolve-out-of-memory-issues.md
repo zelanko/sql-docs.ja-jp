@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: e31f36624e8923722612810836df5d2a57b6b686
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67624406"
 ---
 # <a name="resolve-out-of-memory-issues"></a>メモリ不足の問題の解決
@@ -63,23 +63,20 @@ ms.locfileid: "67624406"
   
      MAX_MEMORY_PERCENT の最大値については、「[メモリ最適化テーブルとインデックスで使用可能なメモリの割合](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#percent-of-memory-available-for-memory-optimized-tables-and-indexes)」を参照してください。
   
--   
-      **max server memory** を再構成します。  
-
-  **max server memory** の構成については、「 [メモリ構成オプションを使用したサーバー パフォーマンスの最適化](https://technet.microsoft.com/library/ms177455\(v=SQL.105\).aspx)」をご覧ください。  
+-   **max server memory** を再構成します。  
+    **max server memory** の構成については、「 [メモリ構成オプションを使用したサーバー パフォーマンスの最適化](https://technet.microsoft.com/library/ms177455\(v=SQL.105\).aspx)」をご覧ください。  
   
 ## <a name="resolve-impact-of-low-memory-or-oom-conditions-on-the-workload"></a>低メモリまたは OOM 状態によるワークロードへの影響を解決する  
  言うまでもなく、低メモリまたは OOM (メモリ不足) の状態にならないことがベストです。 適切なプラン作成と監視によって、OOM 状態を回避することができます。 ただし、最適なプランを作成しても、実際に起こることを予測できるとは限らず、結果として低メモリまたは OOM の状態になる場合もあります。 OOM からの復旧には、次の 2 段階があります。  
   
 1.  [DAC (専用管理者接続) を開く](#open-a-dac-dedicated-administrator-connection) 
   
-2.  [是正措置を講じる](#take-corrective-action) 
+2.  [修正措置を行う](#take-corrective-action) 
   
 ### <a name="open-a-dac-dedicated-administrator-connection"></a>DAC (専用管理者接続) を開く  
  Microsoft SQL Server は、専用管理者接続 (DAC) を提供します。 DAC を使用すると、サーバーが他のクライアント接続に応答しない場合でも、SQL Server データベース エンジンの実行中のインスタンスにアクセスして、サーバーの問題をトラブルシューティングすることができます。 DAC は、 `sqlcmd` ユーティリティおよび SQL Server Management Studio (SSMS) を介して利用できます。  
   
- 
-  `sqlcmd` および DAC の使用方法については、「 [専用管理者接続の使用](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)」をご覧ください。 SSMS を介して DAC を使用する方法については、「 [SQL Server Management Studio で専用管理者接続を使用する方法](https://msdn.microsoft.com/library/ms178068.aspx)」をご覧ください。  
+ `sqlcmd` および DAC の使用方法については、「 [専用管理者接続の使用](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)」をご覧ください。 SSMS を介して DAC を使用する方法については、「 [SQL Server Management Studio で専用管理者接続を使用する方法](https://msdn.microsoft.com/library/ms178068.aspx)」をご覧ください。  
   
 ### <a name="take-corrective-action"></a>修正措置を行う  
  OOM 状態を解決するには、使用率を削減して既存メモリを解放するか、インメモリ テーブルに使用できるメモリ量を増やす必要があります。  
@@ -99,11 +96,9 @@ ms.locfileid: "67624406"
 #### <a name="increase-available-memory"></a>使用可能なメモリを増やす  
   
 ##### <a name="increase-value-of-max_memory_percent-on-the-resource-pool"></a>リソース プールの MAX_MEMORY_PERCENT 値を増やす  
- インメモリ テーブル用に名前付きリソース プールを作成していない場合は、作成して [!INCLUDE[hek_2](../../includes/hek-2-md.md)] データベースをバインドします。 
-  [データベースを作成してリソース プールにバインドする方法については、「](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md) メモリ最適化テーブルを持つデータベースのリソース プールへのバインド [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 」を参照してください。  
+ インメモリ テーブル用に名前付きリソース プールを作成していない場合は、作成して [!INCLUDE[hek_2](../../includes/hek-2-md.md)] データベースをバインドします。 [データベースを作成してリソース プールにバインドする方法については、「](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md) メモリ最適化テーブルを持つデータベースのリソース プールへのバインド [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 」を参照してください。  
   
- 
-  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] データベースがリソース プールにバインドされている場合は、プールがアクセスできるメモリのパーセントを増やせることがあります。 リソース プールの MIN_MEMORY_PERCENT および MAX_MEMORY_PERCENT の値を変更する方法については、サブトピック「 [既存のプール内での MIN_MEMORY_PERCENT と MAX_MEMORY_PERCENT の変更](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#change-min-memory-percent-and-max-memory-percent-on-an-existing-pool) 」をご覧ください。  
+ [!INCLUDE[hek_2](../../includes/hek-2-md.md)] データベースがリソース プールにバインドされている場合は、プールがアクセスできるメモリのパーセントを増やせることがあります。 リソース プールの MIN_MEMORY_PERCENT および MAX_MEMORY_PERCENT の値を変更する方法については、サブトピック「 [既存のプール内での MIN_MEMORY_PERCENT と MAX_MEMORY_PERCENT の変更](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#change-min-memory-percent-and-max-memory-percent-on-an-existing-pool) 」をご覧ください。  
   
  MAX_MEMORY_PERCENT の値を増やします。   
 このコード スニペットでは、リソース プール PoolHk の MAX_MEMORY_PERCENT を変更して、インストールされているメモリの 70% に設定します。  
@@ -133,7 +128,7 @@ GO
  MAX_MEMORY_PERCENT の最大値については、「 [メモリ最適化テーブルおよびインデックスで使用可能なメモリの割合](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#percent-of-memory-available-for-memory-optimized-tables-and-indexes)」をご覧ください。  
   
 ##### <a name="install-additional-memory"></a>追加メモリをインストールする  
- 可能であれば、最終的に最上のソリューションは、追加の物理メモリをインストールすることです。 その場合は、[ でそれ以上のメモリが必要である可能性は低いため、新しくインストールされたメモリのすべてがリソース プールで使用可能でない場合はそれを活用して、MAX_MEMORY_PERCENT 値 (サブトピック「](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#change-min-memory-percent-and-max-memory-percent-on-an-existing-pool)既存のプール内での MIN_MEMORY_PERCENT と MAX_MEMORY_PERCENT の変更[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]」を参照) も増やせる可能性があります。  
+ 可能であれば、最終的に最上のソリューションは、追加の物理メモリをインストールすることです。 これを行う場合は、より多くのメモリが必要になることはないため[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、MAX_MEMORY_PERCENT の値 (サブトピックの「[変更 MIN_MEMORY_PERCENT と MAX_MEMORY_PERCENT](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#change-min-memory-percent-and-max-memory-percent-on-an-existing-pool)を参照してください) を増やすこともできます。これにより、新しくインストールされたすべてのメモリをリソースプールで使用できるようになります。  
   
 > [!IMPORTANT]  
 >  サーバーが VM 上で実行されており、専用用途ではない場合は、MIN_MEMORY_PERCENT と MAX_MEMORY_PERCENT を同じ値に設定してください。   
@@ -150,6 +145,6 @@ GO
  [インメモリ OLTP のメモリの管理](../../database-engine/managing-memory-for-in-memory-oltp.md)   
  [メモリ使用量の監視とトラブルシューティング](monitor-and-troubleshoot-memory-usage.md)   
  [メモリ最適化テーブルを含むデータベースをリソースプールにバインドする](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
- [ベストプラクティス: VM 環境でのインメモリ OLTP の使用](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)  
+ [ベスト プラクティス: VM 環境でのインメモリ OLTP の使用](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)  
   
   

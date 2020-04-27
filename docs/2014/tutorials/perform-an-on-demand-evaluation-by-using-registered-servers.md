@@ -11,20 +11,18 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a3a79a6ec655e91264d6fcc00db5a920ad82a21e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66822374"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-registered-servers"></a>登録済みサーバーを使用した要求時評価の実行
 
-  
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の 1 つ以上のインスタンスに対して登録済みサーバーを使用して、ベスト プラクティス ポリシーの要求時評価を実行できます。 使用できるのは、ローカル サーバー グループまたは中央管理サーバーのいずれかです。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 以降のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を実行しているサーバー グループ メンバーに対して、ベスト プラクティス ポリシーの要求時評価を実行できます。 ただし、[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] または [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)] でサポートされていない一部のプロパティがポリシーによって参照される場合は、例外エラーが発生することがあります。  
+>  [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 以降のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を実行しているサーバー グループ メンバーに対して、ベスト プラクティス ポリシーの要求時評価を実行できます。 ただし、[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] または [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)] でサポートされていない一部のプロパティがポリシーによって参照される場合は、例外エラーが発生することがあります。  
   
 ## <a name="prerequisites"></a>前提条件  
  この作業を実行するには、登録済みサーバーでサーバー登録を 1 つ以上構成しておく必要があります。 詳細については、次のトピックを参照してください。  
@@ -37,8 +35,7 @@ ms.locfileid: "66822374"
   
 ### <a name="to-evaluate-best-practices-policies-against-a-server-group"></a>サーバー グループに対してベスト プラクティス ポリシーを評価するには  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]で、 **[表示]** メニューの **[登録済みサーバー]** をクリックします。  
+1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]で、 **[表示]** メニューの **[登録済みサーバー]** をクリックします。  
   
 2.  構成に応じて [**データベースエンジン**] を展開し、[**ローカルサーバーグループ**] または [**中央管理サーバー**] を展開します。  
   
@@ -53,7 +50,7 @@ ms.locfileid: "66822374"
   
 4.  [**ポリシーの評価**] ダイアログボックスの [**ソース**] ボックスの横にある省略記号ボタン ([**...**]) をクリックします。  
   
-5.  [**ソースの選択**] ダイアログボックスで、評価するポリシーファイルのソースとして [**ファイル**] または [**サーバー** ] を選択できます。 [**サーバー**] をクリックすると、以前にローカルサーバーまたはリモートサーバー上のポリシーベースの管理にインポートされたベストプラクティスポリシーの要求時評価を実行できます。 このチュートリアルでは、[**ファイル**] をクリックし、評価する個々のポリシーファイルを選択します。 そのためには、次の手順に従います。  
+5.  [**ソースの選択**] ダイアログボックスで、評価するポリシーファイルのソースとして [**ファイル**] または [**サーバー** ] を選択できます。 [**サーバー**] をクリックすると、以前にローカルサーバーまたはリモートサーバー上のポリシーベースの管理にインポートされたベストプラクティスポリシーの要求時評価を実行できます。 このチュートリアルでは、[**ファイル**] をクリックし、評価する個々のポリシーファイルを選択します。 これを行うには、次の手順に従います。  
   
     1.  [**ファイル**] をクリックします。  
   
@@ -79,7 +76,7 @@ ms.locfileid: "66822374"
 8.  ポリシーの詳細な結果を表示するには、[**結果**] テーブルでポリシーをクリックします。 [**対象の詳細**テーブルには、各インスタンスの詳細が表示されます。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 2 : スケジュールに基づくベスト プラクティス ポリシーの評価](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
+ [レッスン 2: スケジュールに基づくベスト プラクティス ポリシーの評価](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
   
 ## <a name="see-also"></a>参照  
  [ポリシーベースの管理を使用したベストプラクティスの監視と実施](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)   

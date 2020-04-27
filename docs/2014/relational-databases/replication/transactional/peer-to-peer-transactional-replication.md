@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 944d18abf073ffc5cb958e7139616e745504ce23
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67793925"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>@loopback_detection
@@ -61,7 +61,7 @@ ms.locfileid: "67793925"
   
 -   左側の図では、更新は 2 つのサーバー間でパーティション分割されています。 たとえば、データベースに製品カタログが含まれている場合、カスタム アプリケーションでは、A ～ M で始まる製品名についてはノード **A** に更新を送信し、N ～ Z で始まる製品名についてはノード **B** に更新を送信するようにできます。その後、更新は他のノードにレプリケートされます。  
   
--   右側では、すべての更新がノード**B**に送信されます。そこから、更新はノード**A**にレプリケートされます。**B**がオフラインの場合 (たとえば、メンテナンスの場合)、アプリケーションサーバーはすべて**の**アクティビティをに転送できます。**B**がオンラインに戻ると、更新プログラムがフローに反映され、アプリケーションサーバーはすべての更新を**B**に移動するか **、** に転送し続けることができます。  
+-   右側の図では、すべての更新がノード **B** に送信されます。そこから、更新はノード **A** にレプリケートされます。**B** がメンテナンスなどの理由でオフラインになると、アプリケーション サーバーはすべての処理を **A** に送信できます。**B** がオンラインに戻ると、更新は B に送られて、アプリケーション サーバーはすべての更新を **B** に移動することも、**A** への送信を維持することもできます。  
   
  ピア ツー ピア レプリケーションはどちらの方法もサポートしますが、右側の図にある中央の更新例は、標準トランザクション レプリケーションでも頻繁に使用されます。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "67793925"
   
     -   オブジェクト名、オブジェクト スキーマ、およびパブリケーション名が同一である必要があります。  
   
-    -   パブリケーションで、スキーマ変更のレプリケートが許可されている (これは、パブリケーションプロパティ**replicate_ddl**(既定の設定) に対して**1**に設定されています。詳細については、「[パブリケーションデータベースでのスキーマの変更](../publish/make-schema-changes-on-publication-databases.md)」を参照してください。  
+    -   パブリケーションで、スキーマ変更のレプリケートが許可されている (パブリケーション プロパティ **replicate_ddl** が既定の **1** に設定されている) 必要があります。詳細については、「[パブリケーション データベースでのスキーマの変更](../publish/make-schema-changes-on-publication-databases.md)」を参照してください。  
   
     -   行と列のフィルター処理はサポートされません。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "67793925"
   
 -   サブスクリプションを作成するには、パブリケーションをピア ツー ピア レプリケーションで有効にする必要があります。  
   
--   サブスクリプションは、バックアップを使用するか、 **[レプリケーションのサポートのみ]** オプションで初期化する必要があります。 詳細については、「 [Initialize a Transactional Subscription Without a Snapshot](../initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。  
+-   サブスクリプションは、バックアップを使用するか、 **[レプリケーションのサポートのみ]** オプションで初期化する必要があります。 詳細については、「 [スナップショットを使用しないトランザクション サブスクリプションの初期化](../initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。  
   
 -   ID 列の使用はお勧めできません。 ID を使用する場合は、各参加データベースのテーブルに割り当てられた範囲を手動で管理する必要があります。 詳細については、「[Replicate Identity Columns](../publish/replicate-identity-columns.md)」 (ID 列のレプリケート) で、"Assigning Ranges for Manual Identity Range Management" (手動で ID 範囲を管理する場合の範囲の割り当て) セクションを参照してください。  
   
@@ -123,8 +123,7 @@ ms.locfileid: "67793925"
   
 -   timestamp 列  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のパブリッシャーとサブスクライバー  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のパブリッシャーとサブスクライバー  
   
 -   即時更新とキュー更新サブスクリプション  
   

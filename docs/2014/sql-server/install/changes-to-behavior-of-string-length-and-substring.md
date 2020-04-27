@@ -11,16 +11,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 18643dfc11d2b1b1d875a19c478f9ec8cbdd5be6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66428846"
 ---
 # <a name="changes-to-behavior-of-string-length-and-substring"></a>string-length および substring の動作の変更
   [文字列長関数 &#40;xquery&#41;](/sql/xquery/functions-on-string-values-string-length)と[Substring 関数 &#40;xquery&#41;](/sql/xquery/functions-on-string-values-substring)関数は、サロゲート文字を含む XML データベースと共に使用すると、異なる結果を返す場合があります。  
   
-## <a name="description"></a>[説明]  
+## <a name="description"></a>説明  
  データベースがと[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]互換性があるように設定されている場合、[文字列長関数 &#40;xquery&#41;](/sql/xquery/functions-on-string-values-string-length)および[substring 関数](/sql/xquery/functions-on-string-values-substring)は、Unicode 補助文字を処理するときに、xquery&#41;関数の変更を &#40;ます。 U+FFFF より大きいコード ポイントで定義された各 Unicode 補助文字は、これらの関数では 1 文字としてカウントされます。前のバージョンでは 2 文字としてカウントされていました。  
   
  サロゲート文字の詳細については、「[サロゲートと補助文字](https://go.microsoft.com/fwlink/?LinkId=178317)」を参照してください。  

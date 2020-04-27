@@ -18,10 +18,10 @@ ms.assetid: 981e9903-0b4b-4508-ac6d-2ee4c813a3d0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: aa171f268fc6e39d584461dd0c2a4d69345706a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907382"
 ---
 # <a name="msdistributor-transact-sql"></a>MSdistributor (Transact-sql)
@@ -29,13 +29,13 @@ ms.locfileid: "67907382"
 
   **Msdistributor**テーブルには、ディストリビューターのプロパティが含まれています。 このテーブルは、 **msdb**データベースに格納されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**"**|**sysname**|プロパティの名前|  
-|**数値**|**nvarchar (3000)**|プロパティの値。|  
+|**property**|**sysname**|プロパティの名前|  
+|**value**|**nvarchar (3000)**|プロパティの値。|  
   
 ## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

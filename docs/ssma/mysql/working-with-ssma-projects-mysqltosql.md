@@ -15,10 +15,10 @@ ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 37a763c0acca891d8bbbc1a310edcb6f8b987436
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67904901"
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>SSMA プロジェクトでの作業 (MySQLToSQL)
@@ -67,10 +67,7 @@ MySQL データベースから SQL Server または SQL Azure にデータを移
   
 ##### <a name="to-create-a-new-project"></a>新しいプロジェクトを作成するには  
   
-1.  [**ファイル**] メニューの [**新しいプロジェクト**] をクリックします。 
-  **[新しいプロジェクト]** ダイアログ ボックスが表示されます。 
-  **[ファイル]** メニューの **[新しいプロジェクト]** を選択します。 
-  **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
+1.  [**ファイル**] メニューの [**新しいプロジェクト**] をクリックします。 **[新しいプロジェクト]** ダイアログ ボックスが表示されます。 **[ファイル]** メニューの **[新しいプロジェクト]** を選択します。 **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
   
 2.  [**名前**] ボックスに、プロジェクトの名前を入力します。  
   
@@ -78,11 +75,11 @@ MySQL データベースから SQL Server または SQL Azure にデータを移
   
 4.  [**移行先**] ドロップダウンで、移行に使用する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ターゲットのバージョンを選択します。 次の方法を使用できます。  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
   
@@ -108,7 +105,7 @@ SSMA により、プロジェクトファイルが作成されます。
   
 1.  [**メタデータが存在しません**] の状態を示すデータベースごとに、データベース名の横にあるチェックボックスをオンにします。 メタデータの保存には数分かかる場合があります。 この時点でメタデータを保存しない場合は、チェックボックスをオンにしないでください。  
   
-2.  **[保存]** をクリックします。  
+2.  **[Save]** (保存) をクリックします。  
   
 SSMA は MySQL スキーマを解析し、メタデータをプロジェクトファイルに保存します。  
   
@@ -131,7 +128,7 @@ SSMA は MySQL スキーマを解析し、メタデータをプロジェクト�
   
 4.  SQL Azure に再接続するには、[**ファイル**] メニューの [ **SQL Azure に再接続**] を選択します。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 移行プロセスの次のステップは、 [MySQL &#40;MySQLToSQL への接続&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
   
 ## <a name="see-also"></a>参照  

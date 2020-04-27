@@ -18,10 +18,10 @@ ms.assetid: 13289a0b-dfb0-4771-ad80-4c5f83cded99
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9a1042bb3aa7b6113121693cc66440ebbf81ce1b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907542"
 ---
 # <a name="msdbms_datatype_mapping-transact-sql"></a>MSdbms_datatype_mapping (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "67907542"
 
   **MSdbms_datatype_mapping**テーブルには、ソースデータベース管理システム (DBMS) のデータ型から、マップ先 DBMS の1つ以上の特定のデータ型への許容データ型マッピングが含まれています。 このテーブルは**msdb**データベースに格納され、異種データベースレプリケーションに使用されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**datatype_mapping_id**|**int**|個々のデータ型マッピングを一意に識別します。|  
 |**map_id**|**int**|変換元のデータ型を識別します。|  
@@ -44,6 +44,6 @@ ms.locfileid: "67907542"
  [異種データベースレプリケーション](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Oracle パブリッシャーのデータ型マッピングの指定](../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)   
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

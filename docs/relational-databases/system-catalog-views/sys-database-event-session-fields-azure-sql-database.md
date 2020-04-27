@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f5486fa6f9100e61dbd25ad029f1024115485111
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67915124"
 ---
 # <a name="sysdatabase_event_session_fields-azure-sql-database"></a>sys.database_event_session_fields (Azure SQL Database)
@@ -27,7 +27,7 @@ ms.locfileid: "67915124"
 |-|  
 |**に適用さ**れます: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 およびそれ以降のすべてのバージョン。|  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|イベントセッションの ID。 NULL 値は許可されません。|  
 |object_id|**int**|このフィールドに関連付けられているオブジェクトの ID。 NULL 値は許可されません。|  
@@ -37,12 +37,12 @@ ms.locfileid: "67915124"
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW DATABASE STATE 権限が必要です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  このビューには、次のリレーションシップ基数があります。  
   
 ||||  
 |-|-|-|  
-|移行元|To|リレーションシップ|  
+|ソース|終了|リレーションシップ|  
 |database_event_session_actions。 event_session_id|database_event_sessions。 event_session_id|多対一|  
 |database_event_session_actions。 event_id<br /><br /> database_event_session_actions。 object_id<br /><br /> database_event_session_actions。 event_session_id|database_event_session_events。 event_session_id<br /><br /> database_event_session_events。 event_id|多対一|  
 |database_event_session_actions。 event_session_id<br /><br /> database_event_session_actions。 object_id|database_event_session_targets。 event_session_id<br /><br /> database_event_session_targets。 target_id|多対一|  

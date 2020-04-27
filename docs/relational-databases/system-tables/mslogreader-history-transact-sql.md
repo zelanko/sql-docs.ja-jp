@@ -18,10 +18,10 @@ ms.assetid: 2e399fa1-3591-4c1c-96b7-7964fe82c7c4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9fbd2240bdeba50d8ae41bce8d3a8d58b28de036
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907296"
 ---
 # <a name="mslogreader_history-transact-sql"></a>MSlogreader_history (Transact-SQL)
@@ -29,14 +29,14 @@ ms.locfileid: "67907296"
 
   **MSlogreader_history**テーブルには、ローカルディストリビューターに関連付けられているログリーダーエージェントの履歴行が含まれています。 このテーブルは、ディストリビューションデータベースに格納されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**int**|ログリーダーエージェントの ID。|  
 |**runstatus**|**int**|実行ステータスです。<br /><br /> 1 = 開始します。<br /><br /> 2 = 成功します。<br /><br /> 3 = 実行中<br /><br /> 4 = アイドル状態。<br /><br /> 5 = 再試行<br /><br /> 6 = 失敗|  
-|**start_time**|**DATETIME**|ジョブの実行開始時刻です。|  
-|**time**|**DATETIME**|メッセージがログに記録される時刻。|  
-|**全**|**int**|メッセージ セッションの実行時間 (秒) です。|  
-|**comments**|**nvarchar(255)**|メッセージ テキストです。|  
+|**start_time**|**datetime**|ジョブの実行開始時刻です。|  
+|**time**|**datetime**|メッセージがログに記録される時刻。|  
+|**duration**|**int**|メッセージ セッションの実行時間 (秒) です。|  
+|**コメント**|**nvarchar(255)**|メッセージ テキストです。|  
 |**xact_seqno**|**varbinary(16)**|最後に処理されたトランザクション シーケンス番号です。|  
 |**delivery_time**|**int**|最初のトランザクションが配信された時刻。|  
 |**delivered_transactions**|**int**|セッションで配信されたトランザクションの合計数。|  
@@ -50,6 +50,6 @@ ms.locfileid: "67907296"
   
 ## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5a5525984fa4b1f1823f526097d271780a072bd4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67284809"
 ---
 # <a name="behavior-changes-to-analysis-services-features-in-sql-server-2014"></a>SQL Server 2014 における Analysis Services 機能の動作の変更
@@ -31,21 +31,18 @@ ms.locfileid: "67284809"
   
 -   [SQL Server 2012 での動作の変更](#bkmk_sql2012)  
   
-##  <a name="bkmk_sql2014"></a>での動作の変更[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+##  <a name="behavior-changes-in-sssql14"></a><a name="bkmk_sql2014"></a>での動作の変更[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  このリリースのテーブル、多次元、データ マイニング、 [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] 機能について新しい動作の変更は発表されていません。  しかし、  [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] は [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] と [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] のバージョンと非常によく似ているため、両方の以前のリリースからの動作変更について、 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]からアップグレードする場合の便宜を図って、ここに記載します。  
   
-##  <a name="bkmk_sql2012sp1"></a>での動作の変更[!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]  
+##  <a name="behavior-changes-in-sssql11sp1"></a><a name="bkmk_sql2012sp1"></a>での動作の変更[!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]  
  ここでは、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] での [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]機能に関する動作変更について説明します。 これらの変更は、 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]にも適用されます。  
   
-|問題|[説明]|  
+|問題|説明|  
 |-----------|-----------------|  
-|SQL Server 2008 R2 PowerPivot ブックを SQL Server 2012 SP1 PowerPivot for SharePoint 2013 で使用しているとき、モデルのアップグレードおよび更新が自動的に行われません。 そのため、SQL Server 2008 R2 PowerPivot ブックの定期データ更新が機能しません。|2008 R2 ブックは、 [!INCLUDE[ssGeminiShortvnext](../includes/ssgeminishortvnext-md.md)]で開きますが、定期更新は機能しません。 更新履歴を確認すると、次のようなエラー メッセージが表示されます。<br /> "ブックにサポートされていない PowerPivot モデルが含まれています。 ブックの PowerPivot モデルは、SQL Server 2008 R2 PowerPivot for Excel 2010 形式です。 サポートされている PowerPivot モデルは、 <br />SQL Server 2012 PowerPivot for Excel 2010 <br />SQL Server 2012 PowerPivot for Excel 2013 "<br /><br /> **ブックをアップグレードする方法:** スケジュールされた更新は、ブックを2012ブックにアップグレードするまで機能しません。 ブックとブックに含まれるモデルをアップグレードするには、次のいずれかの手順を実行します。<br /><br /> SQL Server 2012 PowerPivot for Excel アドインがインストールされた Microsoft Excel 2010 でブックをダウンロードして開きます。 ブックを保存して、SharePoint サーバーに再発行します。<br /><br /> Microsoft Excel 2013 でブックをダウンロードして開きます。 ブックを保存して、SharePoint サーバーに再発行します。<br /><br /> <br /><br /> ブックのアップグレードの詳細については、「 [SharePoint 2013&#41;&#40;ブックのアップグレードと定期データ更新](instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)」を参照してください。|  
-|DAX [ALL Function](/dax/all-function-dax)の動作の変更|
-  [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]より前のバージョンでは、タイム インテリジェンスでの使用のために "日付テーブルとしてマーク" で [Date] 列を指定した場合に、この [Date] 列が ALL 関数の引数として渡され、さらに CALCULATE 関数のフィルターとして渡されると、日付列のスライサーに関係なく、テーブルのすべての列に対してすべてのフィルターが無視されました。<br /><br /> たとえば、次のように入力します。<br /><br /> `= CALCULATE (<expression>, ALL (DateTable[Date]))`<br /><br /> 
-  [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]より前のバージョンでは、ALL の引数として渡された [Date] 列に関係なく、DateTable のすべての列に対してすべてのフィルターが無視されます。<br /><br /> 
-  [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] および PowerPivot in Excel 2013 では、ALL の引数として渡された指定の列に対してのみ、フィルターが無視されます。<br /><br /> この新しい動作に対処するには、つまりテーブル全体のフィルターとしてすべての列を無視するには、次のように引数から [Date] を除外します。<br /><br /> `=CALCULATE (<expression>, ALL(DateTable))`<br /><br /> これにより、 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]より前のバージョンと同じ動作になります。|  
+|SQL Server 2008 R2 PowerPivot ブックを SQL Server 2012 SP1 PowerPivot for SharePoint 2013 で使用しているとき、モデルのアップグレードおよび更新が自動的に行われません。 そのため、SQL Server 2008 R2 PowerPivot ブックの定期データ更新が機能しません。|2008 R2 ブックは、 [!INCLUDE[ssGeminiShortvnext](../includes/ssgeminishortvnext-md.md)]で開きますが、定期更新は機能しません。 更新履歴を確認すると、次のようなエラー メッセージが表示されます。<br /> "ブックにサポートされていない PowerPivot モデルが含まれています。 ブックの PowerPivot モデルは、SQL Server 2008 R2 PowerPivot for Excel 2010 形式です。 サポートされている PowerPivot モデルは、 <br />SQL Server 2012 PowerPivot for Excel 2010 <br />SQL Server 2012 PowerPivot for Excel 2013 "<br /><br /> **ブックをアップグレードする方法:** ブックを 2012 ブックにアップグレードするまで定期更新は機能しません。 ブックとブックに含まれるモデルをアップグレードするには、次のいずれかの手順を実行します。<br /><br /> SQL Server 2012 PowerPivot for Excel アドインがインストールされた Microsoft Excel 2010 でブックをダウンロードして開きます。 ブックを保存して、SharePoint サーバーに再発行します。<br /><br /> Microsoft Excel 2013 でブックをダウンロードして開きます。 ブックを保存して、SharePoint サーバーに再発行します。<br /><br /> <br /><br /> ブックのアップグレードの詳細については、「 [SharePoint 2013&#41;&#40;ブックのアップグレードと定期データ更新](instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)」を参照してください。|  
+|DAX [ALL Function](/dax/all-function-dax)の動作の変更|[!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]より前のバージョンでは、タイム インテリジェンスでの使用のために "日付テーブルとしてマーク" で [Date] 列を指定した場合に、この [Date] 列が ALL 関数の引数として渡され、さらに CALCULATE 関数のフィルターとして渡されると、日付列のスライサーに関係なく、テーブルのすべての列に対してすべてのフィルターが無視されました。<br /><br /> たとえば、<br /><br /> `= CALCULATE (<expression>, ALL (DateTable[Date]))`<br /><br /> [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]より前のバージョンでは、ALL の引数として渡された [Date] 列に関係なく、DateTable のすべての列に対してすべてのフィルターが無視されます。<br /><br /> [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] および PowerPivot in Excel 2013 では、ALL の引数として渡された指定の列に対してのみ、フィルターが無視されます。<br /><br /> この新しい動作に対処するには、つまりテーブル全体のフィルターとしてすべての列を無視するには、次のように引数から [Date] を除外します。<br /><br /> `=CALCULATE (<expression>, ALL(DateTable))`<br /><br /> これにより、 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]より前のバージョンと同じ動作になります。|  
   
-##  <a name="bkmk_sql2012"></a>での動作の変更[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+##  <a name="behavior-changes-in-sssql11"></a><a name="bkmk_sql2012"></a>での動作の変更[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  ここでは、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] での [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]の機能に関する動作変更について説明します。 これらの変更は、 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]にも適用されます。  
   
 ### <a name="analysis-services-multidimensional-mode"></a>Analysis Services、多次元モード  
@@ -79,18 +76,15 @@ ms.locfileid: "67284809"
   
 1.  下矢印をクリックして個々のドキュメントのメニューを開きます。  
   
-2.  
-  **[権限の管理]** をクリックします。  
+2.  **[権限の管理]** をクリックします。  
   
 3.  既定では、ライブラリは権限を継承します。 このライブラリ内の個々のブックの権限を変更するには、 **[権限の継承を中止]** をクリックします。  
   
 4.  PowerPivot ブックに対する追加の権限が必要なユーザーまたはグループ名のチェック ボックスをオンにします。 権限を追加することで、これらのユーザーは埋め込み PowerPivot データにリンクし、他のドキュメント内でそのデータを外部データ ソースとして使用できるようになります。  
   
-5.  
-  **[ユーザー権限の編集]** をクリックします。  
+5.  **[ユーザー権限の編集]** をクリックします。  
   
-6.  
-  **[読み取り]** 権限を選択し、 **[OK]** をクリックします。  
+6.  **[読み取り]** 権限を選択し、 **[OK]** をクリックします。  
   
 #### <a name="powerpivot-gallery-new-rules-for-snapshot-generation-for-some-powerpivot-workbooks"></a>PowerPivot ギャラリー: 一部の PowerPivot ブックのスナップショット生成に適用される新しい規則  
  今回のリリースでは、PowerPivot ギャラリーでスナップショット画像を生成する際の要件が追加されており、情報が公開される可能性が排除されています (つまり、表示権限がないデータ ソースに含まれるデータのスナップショットを表示できなくなりました)。 こうした要件は、外部データ ソースに接続する PowerPivot ブックを表示する際にのみ適用されます。 埋め込まれた PowerPivot データだけを視覚化するブックを使用する場合は、PowerPivot ギャラリーでのスナップショットの生成方法に違いはありません。  
@@ -108,8 +102,7 @@ ms.locfileid: "67284809"
 #### <a name="new-default-setting-for-load-balancing-requests-changed-from-round-robin-to-health-based"></a>ラウンド ロビン方式からヘルス ベース方式に変更された、要求の負荷分散の既定の設定  
  PowerPivot サービス アプリケーションには、PowerPivot データに対する要求をファーム内の複数の PowerPivot for SharePoint サーバー間でどのように分散するかを決める既定の設定があります。 以前のリリースでの既定の設定は **ラウンド ロビン**方式で、要求は使用可能なサーバー間で順番に分散されていました。 今回のリリースでは、既定の設定は **ヘルス ベース**方式になりました。 PowerPivot サービス アプリケーションは、使用可能なメモリや CPU などのサーバーの状態の統計を基に、次の要求を受け取るサーバー インスタンスを決定します。  
   
- サーバーを以前のリリースからアップグレードした場合、PowerPivot サービス アプリケーションには前の既定の設定 (**ラウンド ロビン**) が保持されています。 
-  **ヘルス ベース** の割り当て方式の設定を使用するには、構成設定を変更する必要があります。 詳しくは「 [Create and Configure a PowerPivot Service Application in Central Administration](power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)」をご覧ください。  
+ サーバーを以前のリリースからアップグレードした場合、PowerPivot サービス アプリケーションには前の既定の設定 (**ラウンド ロビン**) が保持されています。 **ヘルス ベース** の割り当て方式の設定を使用するには、構成設定を変更する必要があります。 詳しくは「 [Create and Configure a PowerPivot Service Application in Central Administration](power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
  [旧バージョンとの互換性](../../2014/getting-started/backward-compatibility.md)   

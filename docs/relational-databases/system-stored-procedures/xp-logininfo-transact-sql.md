@@ -18,10 +18,10 @@ ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2b3af47a1c09160faab97494d9749fd67c051cd4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67898408"
 ---
 # <a name="xp_logininfo-transact-sql"></a>xp_logininfo (Transact-sql)
@@ -56,30 +56,29 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**アカウント名**|**sysname**|完全修飾 Windows アカウント名。|  
 |**type**|**char (8)**|Windows アカウントの種類。 有効な値は、**ユーザー**または**グループ**です。|  
-|**持っ**|**char (9)**|の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]アクセス特権。 有効な値は、 **admin**、 **user**、または**null**です。|  
+|**持っ**|**char(9)**|の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]アクセス特権。 有効な値は、 **admin**、 **user**、または**null**です。|  
 |**mapped login name**|**sysname**|ユーザー特権を持つユーザーアカウントの場合、[マップされた**ログイン名**] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]には、このアカウントを使用してログインするときに、その前に追加したドメイン名を持つマップされた規則を使用してログインするときに使用する、マップされたログイン名が表示されます。|  
 |**permission path**|**sysname**|アカウントへのアクセスが許可されているグループメンバーシップ。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  *Account_name*が指定されている場合、 **xp_logininfo**は、指定された Windows ユーザーまたはグループの最上位の特権レベルを報告します。 Windows ユーザーがシステム管理者とドメインユーザーの両方としてアクセス権を持っている場合は、システム管理者として報告されます。 ユーザーが同じ権限レベルの複数の Windows グループのメンバーである場合、へのアクセスが最初に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]許可されたグループのみがレポートされます。  
   
  *Account_name*が[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインに関連付けられていない有効な Windows ユーザーまたはグループである場合は、空の結果セットが返されます。 *Account_name*が有効な Windows ユーザーまたはグループとして識別できない場合は、エラーメッセージが返されます。  
   
  *Account_name*と**all**が指定されている場合は、Windows ユーザーまたはグループのすべてのアクセス許可パスが返されます。 *Account_name*が複数のグループのメンバーであり、そのすべてにへ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のアクセスが許可されている場合は、複数の行が返されます。 **Admin**特権の行は、**ユーザー**特権行の前に返されます。特権レベルでは、対応する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインが作成された順序で行が返されます。  
   
- *Account_name*と**メンバー**が指定されている場合は、グループの次のレベルのメンバーの一覧が返されます。 *Account_name*がローカルグループの場合、一覧にはローカルユーザー、ドメインユーザー、およびグループを含めることができます。 *Account_name*がドメインアカウントの場合、一覧はドメインユーザーで構成されます。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではドメイン コントローラーに接続してグループのメンバーシップ情報を取得する必要があります。 サーバーがドメインコントローラに接続できない場合、情報は返されません。  
+ *Account_name*と**メンバー**が指定されている場合は、グループの次のレベルのメンバーの一覧が返されます。 *Account_name*がローカルグループの場合、一覧にはローカルユーザー、ドメインユーザー、およびグループを含めることができます。 *Account_name*がドメインアカウントの場合、一覧はドメインユーザーで構成されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではドメイン コントローラーに接続してグループのメンバーシップ情報を取得する必要があります。 サーバーがドメインコントローラに接続できない場合、情報は返されません。  
   
  **xp_logininfo**は、ユニバーサルグループではなく Active Directory グローバルグループからの情報のみを返します。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sysadmin**固定サーバーロールのメンバーシップ、または実行権限が付与された**master**データベースの**public**固定データベースロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、 `BUILTIN\Administrators` Windows グループに関する情報を表示します。  
   
 ```  

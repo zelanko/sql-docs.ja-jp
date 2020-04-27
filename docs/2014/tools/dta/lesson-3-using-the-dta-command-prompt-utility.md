@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e2881a2a118306f9d567236516f05bb29ad2d60a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68186568"
 ---
 # <a name="lesson-3-using-the-dta-command-prompt-utility"></a>レッスン 3 : dta コマンド プロンプト ユーティリティの使用
-  **Dta**コマンドプロンプトユーティリティには、データベースエンジンチューニングアドバイザーによって提供される機能に加えて、機能も用意されています。  
+  **dta** コマンド プロンプト ユーティリティは、データベース エンジン チューニング アドバイザーの機能以外にも機能があります。  
   
  データベース エンジン チューニング アドバイザーの XML スキーマを使用すれば、使い慣れた XML ツールで、このユーティリティへの入力ファイルを作成できます。 このスキーマは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール時にインストールされ、C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd に格納されます。  
   

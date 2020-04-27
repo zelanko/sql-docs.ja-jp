@@ -18,10 +18,10 @@ ms.assetid: 69bee937-7b2c-49ee-8866-7518c683fad4
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 192db2e6c074305ca258d76652351175c8a82751
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907156"
 ---
 # <a name="mapping-source-and-target-databases-accesstosql"></a>ソースデータベースとターゲットデータベースのマッピング (Sql server)
@@ -66,7 +66,7 @@ Access データベースと、 [!INCLUDE[ssNoVersion](../../includes/ssnoversio
   
 1.  [スキーママッピング] タブで、任意の行を選択し、[既定**値にリセット**] をクリックして既定のデータベースとスキーマに戻します。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 移行プロセスの次の手順では、[データベースオブジェクトを変換](converting-access-database-objects-accesstosql.md)します。  
   
 ## <a name="see-also"></a>参照  

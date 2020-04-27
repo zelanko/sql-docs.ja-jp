@@ -19,10 +19,10 @@ ms.assetid: 0d70184f-baa2-411b-a32d-a4c5af890edd
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: feaf2a222df364a41e51969a2c95a978f2d0a289
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900956"
 ---
 # <a name="sysdm_fts_index_keywords_position_by_document-transact-sql"></a>dm_fts_index_keywords_position_by_document (Transact-sql)
@@ -49,21 +49,21 @@ OBJECT_ID('table_name')
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列|データ型|[説明]|  
+|列|データ型|説明|  
 |------------|---------------|-----------------|  
 |キーワード (keyword)|**varbinary (128)**|キーワードを表すバイナリ文字列。|  
-|display_term|**nvarchar(4000)**|キーワードの人間が判読できる形式。 この形式は、フルテキストインデックスに格納されている内部形式から派生します。|  
+|display_term|**nvarchar (4000)**|キーワードの人間が判読できる形式。 この形式は、フルテキストインデックスに格納されている内部形式から派生します。|  
 |column_id|**int**|現在のキーワードがフルテキストインデックスを作成した列の ID。|  
 |document_id|**bigint**|現在の用語のフルテキストインデックスが作成されたドキュメントまたは行の ID。 この ID は、そのドキュメントまたは行のフルテキストキー値に対応します。|  
 |position|**int**|ドキュメント内のキーワードの位置。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  DMV を使用して、インデックス付きドキュメント内のインデックス付けされた単語の場所を特定します。 この DMV を使用すると、 **dm_fts_index_keywords_by_document システム**がフルテキストインデックスに含まれていることを示す場合に問題のトラブルシューティングを行うことができますが、これらの単語を使用してクエリを実行すると、ドキュメントは返されません。  
   
 ## <a name="permissions"></a>アクセス許可  
  フルテキスト インデックスに含まれる列に対する SELECT 権限と、CREATE FULL TEXT CATALOG 権限が必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、 `Production.Document` `AdventureWorks`サンプルデータベースのテーブルのフルテキストインデックスからキーワードを返します。  
   
 ```  
@@ -96,6 +96,6 @@ WHERE document_id = 7 AND display_term = 'performance';
  [Transact-sql&#41;&#40;のフルテキスト検索とセマンティック検索の動的管理ビューおよび関数](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
  [Transact-sql&#41;&#40;のフルテキスト検索およびセマンティック検索ストアドプロシージャ](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   
  [検索プロパティリストを使用したドキュメントプロパティの検索](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
- [dm_fts_index_keywords_by_document &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)  
+ [sys.dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)  
   
   

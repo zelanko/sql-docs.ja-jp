@@ -16,16 +16,16 @@ ms.assetid: b10a72fc-3c4b-4186-a70b-993dc9f7a092
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 04dbf3069896b9a7668d64a2f1d322f0b17ca5f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918684"
 ---
 # <a name="field-object"></a>Field オブジェクト
 共通のデータ型のデータ列を表します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  各**Field**オブジェクトは、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)内の列に対応します。 現在のレコードのデータを設定または取得するには、 **Field**オブジェクトの[Value](../../../ado/reference/ado-api/value-property-ado.md)プロパティを使用します。 プロバイダーが公開する機能によっては、**フィールド**オブジェクトの一部のコレクション、メソッド、またはプロパティが使用できないことがあります。  
   
  **Field**オブジェクトのコレクション、メソッド、およびプロパティを使用して、次の操作を実行できます。  

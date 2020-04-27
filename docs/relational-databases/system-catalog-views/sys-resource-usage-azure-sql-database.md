@@ -20,10 +20,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 3be4ff07923759af53b929852d4dbaa4088a77f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67904422"
 ---
 # <a name="sysresource_usage-azure-sql-database"></a>sys.resource_usage (Azure SQL データベース)
@@ -42,11 +42,11 @@ ms.locfileid: "67904422"
   
  各ユーザー データベースについて、毎時 1 行のデータが連続的に含まれます。 データベースがアイドル状態であった時間に対する行も含まれ、そのデータベースの usage_in_seconds 値は 0 になります。 対象時間のストレージの使用率および SKU 情報が適切にロール アップされます。  
   
-|[列]|データ型|[説明]|  
+|[列]|データ型|説明|  
 |-------------|---------------|-----------------|  
-|time|**DATETIME**|1 時間単位の時刻 (UTC) です。|  
+|time|**datetime**|1 時間単位の時刻 (UTC) です。|  
 |database_name|**nvarchar**|ユーザー データベースの名前です。|  
-|sku|**nvarchar**|SKU の名前です。 使用できる値を次に示します。<br /><br /> Web<br /><br /> 勤務先<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium|  
+|sku|**nvarchar**|SKU の名前です。 使用できる値を次に示します。<br /><br /> Web<br /><br /> ビジネス<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium|  
 |usage_in_seconds|**int**|1 時間の間隔において使用された CPU 時間の合計。<br /><br /> 注: この列は V11 では非推奨とされており、V12 には適用されません。 **値は常に0に設定されます。**|  
 |storage_in_megabytes|**decimal**|対象時間内のストレージの最大サイズです。データベース データ、インデックス、ストアド プロシージャ、およびメタデータを含みます。|  
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 8b880820ac633402d1d3cdd679b16a54d1be358e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899536"
 ---
 # <a name="sysdm_pdw_diag_processing_stats-transact-sql"></a>dm_pdw_diag_processing_stats (Transact-sql)
@@ -24,7 +24,7 @@ ms.locfileid: "67899536"
 
   管理者によって定義された診断セッションに組み込むことができるすべての内部診断イベントに関連する情報を表示します。 このビューにクエリを実行し、他のすべての Dmv の作成を推進する診断およびイベントサブシステムの背後にある統計を確認します。 各ノード上の各プロセスに対して、キューのグループがあります。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**pdw_node_id**|**int**|このログの基になっているアプライアンスノード。|  
 |**process_id**|**int**|この統計情報の送信を実行しているプロセスの識別子。|  

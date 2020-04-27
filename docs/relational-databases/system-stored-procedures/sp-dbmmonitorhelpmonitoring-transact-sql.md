@@ -19,10 +19,10 @@ ms.assetid: a085cf87-269f-454a-a146-21f80a113b72
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 91668795513969c9c0bda7a2a1a7203e557f1819
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899193"
 ---
 # <a name="sp_dbmmonitorhelpmonitoring-transact-sql"></a>sp_dbmmonitorhelpmonitoring (Transact-SQL)
@@ -40,19 +40,18 @@ sp_dbmmonitorhelpmonitoring
 ```  
   
 ## <a name="arguments"></a>引数  
- なし  
+ None  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- なし  
+ None  
   
 ## <a name="result-sets"></a>結果セット  
  現在の更新間隔、つまりデータベース ミラーリングの状態テーブルを更新する間隔 (分単位) を返します。 値の範囲は 1 ～ 120 分です。  
   
 ## <a name="permissions"></a>アクセス許可  
- 
-  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
+ **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、現在の更新間隔を返します。  
   
 ```  
@@ -61,6 +60,6 @@ EXEC sp_dbmmonitorhelpmonitoring;
   
 ## <a name="see-also"></a>参照  
  [データベースミラーリングの監視 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [sp_dbmmonitorresults &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)  
+ [sp_dbmmonitorresults &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)  
   
   

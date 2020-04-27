@@ -19,10 +19,10 @@ ms.assetid: 56c7743a-b568-4943-bd3b-73c57d9d641c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f43e03e482bb7125100ed7bed56337fb75a2e711
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900089"
 ---
 # <a name="sysdm_os_loaded_modules-transact-sql"></a>sys.dm_os_loaded_modules (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "67900089"
 > [!NOTE]  
 >  これをから[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼び出すには、 **dm_pdw_nodes_os_loaded_modules**という名前を使用します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**base_address**|**varbinary (8)**|プロセス内のモジュールのアドレス。|  
 |**file_version**|**varchar (23)**|ファイルのバージョン。 次の形式で表示されます。<br /><br /> x.x:x.x|  
@@ -47,13 +47,13 @@ ms.locfileid: "67900089"
 |**全社**|**nvarchar(256)**|モジュールを作成した会社の名前。|  
 |**記述**|**nvarchar(256)**|モジュールの説明。|  
 |**name**|**nvarchar(255)**|モジュールの名前。 モジュールの完全パスが含まれます。|  
-|**pdw_node_id**|**int**|**適用対象**:[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
+|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="see-also"></a>参照  
- [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [SQL Server オペレーティングシステム関連の動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   

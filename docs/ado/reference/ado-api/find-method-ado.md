@@ -17,10 +17,10 @@ ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9f394d5e3b3021ca240675d6979152c63b903190
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918627"
 ---
 # <a name="find-method-ado"></a>Find メソッド (ADO)
@@ -38,15 +38,15 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  検索で使用する列名、比較演算子、および値を指定するステートメントを含む**文字列**値です。  
   
  *SkipRows*  
- 省略可能。 現在の行または*開始*ブックマークからの行オフセットを指定する**Long**値。既定値は0です。 既定では、検索は現在の行で開始されます。  
+ 任意。 現在の行または*開始*ブックマークからの行オフセットを指定する**Long**値。既定値は0です。 既定では、検索は現在の行で開始されます。  
   
  *SearchDirection*  
- 省略可能。 検索を現在の行で開始するか、検索の方向で次に使用可能な行で開始するかを指定する[Searchdirection 列挙](../../../ado/reference/ado-api/searchdirectionenum.md)値。 値が**Adsearchforward**の場合、**レコードセット**の末尾で失敗した検索は停止します。 値が**Adsearchbackward**の場合、**レコードセット**の先頭で失敗した検索は停止します。  
+ 任意。 検索を現在の行で開始するか、検索の方向で次に使用可能な行で開始するかを指定する[Searchdirection 列挙](../../../ado/reference/ado-api/searchdirectionenum.md)値。 値が**Adsearchforward**の場合、**レコードセット**の末尾で失敗した検索は停止します。 値が**Adsearchbackward**の場合、**レコードセット**の先頭で失敗した検索は停止します。  
   
- *[開始]*  
- 省略可能。 検索の開始位置として機能する**Variant**ブックマーク。  
+ *Start*  
+ 任意。 検索の開始位置として機能する**Variant**ブックマーク。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  *条件*には、単一列の名前のみを指定できます。 このメソッドは、複数列の検索をサポートしていません。  
   
  *条件*としての比較演算子に**>** は、"" (より大きい**\<**)、"" (より小さい)、"=" (等しい)、">=" (以上)、"<=" (より大きいまたは等しい)、"<>" (不等号)、"like" (パターンマッチング) などがあります。  

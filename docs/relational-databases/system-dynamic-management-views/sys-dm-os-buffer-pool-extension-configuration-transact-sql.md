@@ -19,10 +19,10 @@ ms.assetid: d52cc481-4d29-4f33-b63d-231ec35d092f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 38e4e1ad85a5e968d4b0bb33a3a72a829942585b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900218"
 ---
 # <a name="sysdm_os_buffer_pool_extension_configuration-transact-sql"></a>dm_os_buffer_pool_extension_configuration (Transact-sql)
@@ -33,9 +33,9 @@ ms.locfileid: "67900218"
   
 
   
-| 列名 | データ型 | [説明] |
+| 列名 | データ型 | 説明 |
 | :---------- | :-------- | :---------- |
-|path|**nvarchar**(256)|バッファー プール拡張キャッシュのパスとファイル名。 NULL 値は許可されます。|  
+|パス|**nvarchar**(256)|バッファー プール拡張キャッシュのパスとファイル名。 NULL 値は許可されます。|  
 |file_id|**int**|バッファー プール拡張ファイルの ID。 NULL 値は許可されません。|  
 |state|**int**|バッファー プール拡張機能の状態。 NULL 値は許可されません。<br /><br /> 0 - バッファー プール拡張機能が無効<br /><br /> 1 - バッファー プール拡張機能の無効化<br /><br /> 2-将来使用するために予約されています<br /><br /> 3 - バッファー プール拡張機能の有効化<br /><br /> 4-将来使用するために予約されています<br /><br /> 5 - バッファー プール拡張機能が有効|  
 |state_description|**nvarchar**(60)|バッファー プール拡張機能の状態を説明します。 NULL 値が許可されます。<br /><br /> 0 = バッファー プール拡張機能が無効<br /><br /> 5 = バッファープール拡張機能が有効|
@@ -67,6 +67,6 @@ WHERE is_in_bpool_extension <> 0
   
 ## <a name="see-also"></a>参照  
  [バッファープール拡張機能](../../database-engine/configure-windows/buffer-pool-extension.md)   
- [dm_os_buffer_descriptors &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md)  
+ [sys.dm_os_buffer_descriptors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md)  
   
   

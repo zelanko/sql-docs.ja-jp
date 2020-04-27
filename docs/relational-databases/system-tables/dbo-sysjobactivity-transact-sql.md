@@ -20,10 +20,10 @@ ms.assetid: fd17cac9-5d1f-4b44-b2dc-ee9346d8bf1e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 52d929496bf3db83dc63cdde6d86bf1a2ee1a3f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67902219"
 ---
 # <a name="dbosysjobactivity-transact-sql"></a>dbo.sysjobactivity (Transact-SQL)
@@ -31,23 +31,22 @@ ms.locfileid: "67902219"
 
   現在の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブの利用状況と状態を記録します。  このテーブルは、 **msdb**データベースに格納されます。
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|**Msdb**データベースの**syssessions**テーブルに格納されているセッションの ID。|  
-|**job_id**|**UNIQUEIDENTIFIER**|ジョブの ID。|  
-|**run_requested_date**|**DATETIME**|ジョブの実行が要求された日付と時刻。|  
+|**job_id**|**uniqueidentifier**|ジョブの ID。|  
+|**run_requested_date**|**datetime**|ジョブの実行が要求された日付と時刻。|  
 |**run_requested_source**|**sysname (nvarchar (128))**|ジョブの実行要求の発生元。<br /><br /> **1** = SOURCE_SCHEDULER<br /><br /> **2** = SOURCE_ALERTER<br /><br /> **3** = SOURCE_BOOT<br /><br /> **4** = SOURCE_USER<br /><br /> **6** = SOURCE_ON_IDLE_SCHEDULE|  
-|**queued_date**|**DATETIME**|ジョブがキューに格納された日時。 ジョブが直接実行された場合、この列は NULL になります。|  
-|**start_execution_date**|**DATETIME**|ジョブの実行がスケジュールされている日付と時刻。|  
+|**queued_date**|**datetime**|ジョブがキューに格納された日時。 ジョブが直接実行された場合、この列は NULL になります。|  
+|**start_execution_date**|**datetime**|ジョブの実行がスケジュールされている日付と時刻。|  
 |**last_executed_step_id**|**int**|実行された最後のジョブ ステップの ID。|  
-|**last_executed_step_**<br /><br /> **date**|**DATETIME**|前回のジョブステップが実行を開始した日付と時刻。|  
-|**stop_execution_date**|**DATETIME**|ジョブの実行が終了した日付と時刻。|  
+|**last_executed_step_**<br /><br /> **date**|**datetime**|前回のジョブステップが実行を開始した日付と時刻。|  
+|**stop_execution_date**|**datetime**|ジョブの実行が終了した日付と時刻。|  
 |**job_history_id**|**int**|**Sysjobhistory**テーブル内の行を識別するために使用されます。|  
-|**next_scheduled_run_date**|**DATETIME**|ジョブを実行する予定の次の日付と時刻。|  
+|**next_scheduled_run_date**|**datetime**|ジョブを実行する予定の次の日付と時刻。|  
 
 ## <a name="example"></a>例
-この例では、すべての SQL Server エージェントジョブの実行時の状態を返します。  
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] で次の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を実行します。
+この例では、すべての SQL Server エージェントジョブの実行時の状態を返します。  [!INCLUDE[tsql](../../includes/tsql-md.md)] で次の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を実行します。
 ```sql
 SELECT sj.Name, 
     CASE

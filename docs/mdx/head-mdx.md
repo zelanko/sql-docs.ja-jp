@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 6e6d8da7a5813f7e99c022e19f18de2800598885
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67906009"
 ---
 # <a name="head-mdx"></a>Head (MDX)
@@ -31,10 +31,10 @@ Head(Set_Expression [ ,Count ] )
  *Set_Expression*  
  セットを返す有効な多次元式 (MDX) 式です。  
   
- *数*  
+ *Count*  
  返す組の数を指定する有効な数値式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Head**関数は、指定されたセットの先頭から指定された数の組を返します。 要素の順序は保持されます。 Count の既定値は 1 です。 指定された組数が1より小さい場合、 **Head**関数は空のセットを返します。 指定された組数がセット内の組数を超える場合は、元のセットを返します。  
   
 ## <a name="example"></a>例  
@@ -59,6 +59,6 @@ FROM [Adventure Works]
  [項目 &#40;組&#41; &#40;MDX&#41;](../mdx/item-tuple-mdx.md)   
  [項目 &#40;メンバー&#41; &#40;MDX&#41;](../mdx/item-member-mdx.md)   
  [MDX&#41;&#40;順位付け](../mdx/rank-mdx.md)   
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

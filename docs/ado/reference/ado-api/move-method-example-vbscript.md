@@ -15,16 +15,16 @@ ms.assetid: 29ec4b95-8986-4970-943f-3da3ecb207a2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8d2075987e8c3faae9003b0edc4010fe7e4cedb5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918164"
 ---
 # <a name="move-method-example-vbscript"></a>Move メソッドの例 (VBScript)
 この例では、 [Move](../../../ado/reference/ado-api/move-method-ado.md)メソッドを使用して、ユーザー入力に基づいてレコードポインターを配置します。  
   
- Active Server ページ (ASP) で次の例を使用します。 この完全に機能する例を表示するには、C:\Program た advworks-srv01 Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb にあるデータソース (SDK と共にインストールされます) があることを確認するか、コード例のパスを編集して反映させる必要があります。このファイルの実際の場所です。 これは、Microsoft Access データベースファイルです。  
+ Active Server ページ (ASP) で次の例を使用します。 この完全に機能する例を表示するには、C:\Program た advworks-srv01 Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb にあるデータソース (SDK と共にインストールされます) があるか、このファイルの実際の場所を反映するようにコード例のパスを編集する必要があります。 これは、Microsoft Access データベースファイルです。  
   
  [**検索**] を使用して Adovbs ファイルを検索し、使用する予定のディレクトリに配置します。 次のコードを切り取ってメモ帳または別のテキストエディターに貼り付け、 **Movevbs**として保存します。 結果は任意のブラウザーで表示できます。  
   

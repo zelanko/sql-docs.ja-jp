@@ -19,10 +19,10 @@ ms.assetid: 8b9e23d6-da62-437a-8c05-8ad2628b9441
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 4c2f5bc6953ab0e96397ca728391cbe22a73dd50
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67910690"
 ---
 # <a name="assessing-access-database-objects-for-conversion-accesstosql"></a>変換のためのアクセスデータベースオブジェクトの評価 (アクセス許可 Sql)
@@ -56,7 +56,7 @@ ms.locfileid: "67910690"
   
 エラーを修正してから、評価レポートを再実行するか、スキーマを変換する必要があります。 エラーを見つけるには、[メッセージ] ウィンドウの [**エラー** ] ボタンをクリックし、各エラーを展開して、エラーが発生したオブジェクトの一覧を表示します。 [メッセージ] ウィンドウでオブジェクトをクリックすると、そのオブジェクトのすべてのエラーと警告が詳細ウィンドウに表示されます。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 [Access データベース オブジェクトの変換](converting-access-database-objects-accesstosql.md)  
   
 ## <a name="see-also"></a>参照  

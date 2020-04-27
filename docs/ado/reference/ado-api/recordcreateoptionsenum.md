@@ -16,22 +16,22 @@ ms.assetid: 6d746670-0850-4065-9cd4-168dea1d3ea9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 65fe33b73cf77a27fcd69743ffb09cb05e197797
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917343"
 ---
 # <a name="recordcreateoptionsenum"></a>RecordCreateOptionsEnum
 既存の**レコード**を開くか、 [Record](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトの[Open](../../../ado/reference/ado-api/open-method-ado-record.md)メソッド用に新しい**レコード**を作成するかを指定します。 値は AND 演算子と組み合わせることができます。  
   
-|常時|値|[説明]|  
+|Constant|[値]|説明|  
 |--------------|-----------|-----------------|  
 |**adCreateCollection**|0x2000|既存の**レコード**を開く代わりに、 *Source*パラメーターで指定されたノードに新しい**レコード**を作成します。 ソースが既存のノードを指している場合、 **Adcreatecollection**が**Adopenifexists**または**adcreatecollection**と結合されていない限り、実行時エラーが発生します。|  
 |**adCreateNonCollection**|0|[Adsimplerecord](../../../ado/reference/ado-api/recordtypeenum.md)型の新しい**レコード**を作成します。|  
 |**adCreateOverwrite**|0x4000000|作成フラグ**Adcreatecollection**、 **adcreatenoncollection**、および**adCreateStructDoc**を変更します。 またはをこの値と共に使用し、作成フラグの値の1つを使用すると、ソース URL が既存のノードまたは**レコード**を指している場合は、既存のレコードが上書きされ、その代わりに新しい**レコード**が作成されます。 この値は、 **Adopenifexists**と一緒に使用することはできません。|  
 |**adCreateStructDoc**|0x80000000|既存の**レコード**を開く代わりに、 [adStructDoc](../../../ado/reference/ado-api/recordtypeenum.md)型の新しい**レコード**を作成します。|  
-|**adFailIfNotExists**|-1|既定。 *ソース*が存在しないノードを指している場合、実行時エラーが発生します。|  
+|**adFailIfNotExists**|-1|既定値。 *ソース*が存在しないノードを指している場合、実行時エラーが発生します。|  
 |**adOpenIfExists**|0x2000000|作成フラグ**Adcreatecollection**、 **adcreatenoncollection**、および**adCreateStructDoc**を変更します。 またはをこの値と共に使用し、作成フラグの値の1つを使用する場合、ソース URL が既存のノードまたは**レコード**オブジェクトを指している場合、プロバイダーは新しいレコードを作成するのではなく、既存の**レコード**を開く必要があります。 この値は**Adcreateoverwrite**と共に使用することはできません。|  
   
 ## <a name="adowfc-equivalent"></a>同等の ADO/WFC  

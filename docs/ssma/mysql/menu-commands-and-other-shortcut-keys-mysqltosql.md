@@ -10,10 +10,10 @@ ms.assetid: 9ae780dc-b33f-4861-a996-176bae9e7211
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 585243f46296808a5ed190c3e6d9448eec1c63da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67908797"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-mysqltosql"></a>メニュー コマンドやその他のショートカット キー (MySQLToSQL)
@@ -96,7 +96,7 @@ ms.locfileid: "67908797"
 |[カスタマーフィードバックのオプション] ダイアログボックスを表示します。|ALT + H + C|  
 |ヘルプウィンドウを表示します。|ALT + H + H または F1|  
   
-## <a name="context-menu-commands"></a>ショートカットメニューのコマンド  
+## <a name="context-menu-commands"></a>コンテキスト メニュー コマンド  
 オブジェクトエクスプローラーで選択されているオブジェクトのコンテキストメニューにアクセスするために使用されるショートカットキーは SHIFT + F10 または Apps キーです。  
   
 ## <a name="global-settings-dialog-box"></a>[グローバル設定] ダイアログボックス  

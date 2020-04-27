@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 052402d3a394e8da3e08828992127d3cd89b95ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900158"
 ---
 # <a name="sysdm_os_host_info-transact-sql"></a>dm_os_host_info (Transact-sql)
@@ -31,7 +31,7 @@ ms.locfileid: "67900158"
 
 オペレーティングシステムのバージョン情報を表示する1行を返します。  
   
-|列名 |データ型 |[説明] |  
+|列名 |データ型 |説明 |  
 |-----------------|---------------|-----------------|  
 |**host_platform** |**nvarchar(256)** |オペレーティングシステムの種類: Windows または Linux |
 |**host_distribution** |**nvarchar(256)** |オペレーティングシステムの説明。 |
@@ -40,7 +40,7 @@ ms.locfileid: "67900158"
 |**host_sku**|**int**|Windows 株価保持ユニット (SKU) ID。 SKU Id と説明の一覧については、「 [Getproductinfo 関数](https://msdn.microsoft.com/library/ms724358.aspx)」を参照してください。 NULL 値が許可されます。 <br> Linux の場合、は NULL を返します。 |  
 |**os_language_version**|**int**|オペレーティングシステムの Windows ロケール識別子 (LCID)。 LCID 値と説明の一覧については、「 [Microsoft によって割り当てられたロケール id](https://go.microsoft.com/fwlink/?LinkId=208080)」を参照してください。 null にすることはできません。|  
 
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
 このビューは、Windows と Linux を区別するために列を追加する dm_os_windows_info に似てい[ます。](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md)
   
 ## <a name="security"></a>Security  
@@ -52,7 +52,7 @@ ms.locfileid: "67900158"
 >  バージョン[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.3 以降では[!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] 、に`SELECT` [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]接続するため`sys.dm_os_host_info`に、バージョン17でに対するアクセス許可が必要です。 権限`SELECT`がから`public`取り消された場合、最新`VIEW SERVER STATE`バージョンの SSMS で接続できるのは、権限を持つログインのみです。 (などの他のツール`sqlcmd.exe`は、に`SELECT` `sys.dm_os_host_info`対する権限なしで接続できます)。
 
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、 **dm_os_host_info**ビューからすべての列を返します。  
   
 ```  

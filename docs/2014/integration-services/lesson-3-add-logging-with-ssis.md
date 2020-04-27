@@ -11,17 +11,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e716b808d5d9ada8aeaf50d92006cc6453c6e47d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67046764"
 ---
-# <a name="lesson-3-adding-logging"></a>レッスン 3 : ログ機能の追加
-  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]には、タスクとコンテナーイベントのトレースを提供することによって、パッケージの実行をトラブルシューティングおよび監視するためのログ機能が含まれています。 柔軟性に優れたこのログ機能では、パッケージごと、またはパッケージ内のタスクやコンテナーごとにログ記録を使用することができます。 ログを記録するイベントを複数選択すると、1 つのパッケージに対して複数のログが作成されます。  
+# <a name="lesson-3-adding-logging"></a>レッスン 3:ログ機能の追加
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、パッケージの実行を監視し、問題を解決するためのログ機能があります。このログを使用して、タスクやコンテナー イベントを追跡できます。 柔軟性に優れたこのログ機能では、パッケージごと、またはパッケージ内のタスクやコンテナーごとにログ記録を使用することができます。 ログを記録するイベントを複数選択すると、1 つのパッケージに対して複数のログが作成されます。  
   
- ログ記録は、ログ プロバイダーにより供給されます。 ログ プロバイダーごとに、異なる書式、および異なるファイル形式でログ情報を書き分けることができます。 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、次のログ プロバイダーを使用できます。  
+ ログ記録は、ログ プロバイダーにより供給されます。 ログ プロバイダーごとに、異なる書式、および異なるファイル形式でログ情報を書き分けることができます。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、次のログ プロバイダーを使用できます。  
   
 -   テキスト ファイル  
   
@@ -41,13 +40,13 @@ ms.locfileid: "67046764"
 ## <a name="lesson-tasks"></a>このレッスンの作業  
  このレッスンの内容は次のとおりです。  
   
--   [手順 1: レッスン 2 のパッケージのコピー](lesson-3-1-copying-the-lesson-2-package.md)  
+-   [手順 1:レッスン 2 のパッケージのコピー](lesson-3-1-copying-the-lesson-2-package.md)  
   
 -   [手順 2:ログ機能の追加と設定](lesson-3-2-adding-and-configuring-logging.md)  
   
--   [手順 3: レッスン 3 のチュートリアル パッケージのテスト](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
+-   [手順 3:レッスン 3 のチュートリアル パッケージのテスト](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>レッスンの開始  
- [手順 1: レッスン 2 のパッケージのコピー](lesson-3-1-copying-the-lesson-2-package.md)  
+ [手順 1:レッスン 2 のパッケージのコピー](lesson-3-1-copying-the-lesson-2-package.md)  
   
   

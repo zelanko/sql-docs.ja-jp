@@ -19,10 +19,10 @@ ms.assetid: adc81283-fdc2-46c0-bb48-abe82bbf2459
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d25713ba8fb298ce465910eae786befb710961d7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899592"
 ---
 # <a name="sysdm_os_windows_info-transact-sql"></a>dm_os_windows_info (Transact-sql)
@@ -32,12 +32,12 @@ ms.locfileid: "67899592"
   
   Windows で実行されている SQL Server にのみ適用されます。 Linux など、Windows 以外のホストで実行されている SQL Server について同様のについを表示するには、 [dm_os_host_info &#40;transact-sql&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md)を使用します。 
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**windows_release**|**nvarchar(256)**|Windows の場合は、リリース番号を返します。 値と説明の一覧については、「[オペレーティングシステムのバージョン (Windows)](/windows/desktop/SysInfo/operating-system-version)」を参照してください。 NULL にすることはできません。|  
-|**windows_service_pack_level**|**nvarchar(256)**| Windows の場合、Service Pack 番号を返します。 NULL にすることはできません。 |  
+|**windows_release**|**nvarchar(256)**|Windows の場合は、リリース番号を返します。 値と説明の一覧については、「[オペレーティングシステムのバージョン (Windows)](/windows/desktop/SysInfo/operating-system-version)」を参照してください。 Nll は指定できません。|  
+|**windows_service_pack_level**|**nvarchar(256)**| Windows の場合、Service Pack 番号を返します。 Nll は指定できません。 |  
 |**windows_sku**|**int**|Windows の場合は、Windows の在庫保持ユニット (SKU) ID を返します。 SKU Id と説明の一覧については、「 [Getproductinfo 関数](https://msdn.microsoft.com/library/ms724358.aspx)」を参照してください。 Null 値は許容されます。 |  
-|**os_language_version**|**int**| Windows の場合、オペレーティングシステムの Windows ロケール識別子 (LCID) を返します。 LCID 値と説明の一覧については、「 [Microsoft によって割り当てられたロケール id](https://go.microsoft.com/fwlink/?LinkId=208080)」を参照してください。 NULL にすることはできません。|  
+|**os_language_version**|**int**| Windows の場合、オペレーティングシステムの Windows ロケール識別子 (LCID) を返します。 LCID 値と説明の一覧については、「 [Microsoft によって割り当てられたロケール id](https://go.microsoft.com/fwlink/?LinkId=208080)」を参照してください。 Nll は指定できません。|  
   
   
 ## <a name="permissions"></a>アクセス許可  
@@ -46,7 +46,7 @@ ms.locfileid: "67899592"
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項
 Linux など、Windows 以外のホストで実行されている SQL のについを表示するには、 [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md)を使用 dm_os_host_info ます。 
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、 **dm_os_windows_info**ビューからすべての列を返します。  
   
 ```  

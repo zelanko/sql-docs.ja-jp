@@ -16,10 +16,10 @@ ms.assetid: 5696ee73-5d7c-4f26-b7ee-6831c9c3edf7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3dc89ce68529212246d85bdbafa8d9487b77a067
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67910236"
 ---
 # <a name="replication-tables-transact-sql"></a>レプリケーション テーブル (Transact-SQL)
@@ -141,5 +141,5 @@ ms.locfileid: "67910236"
 ## <a name="see-also"></a>参照  
  [パブリッシングおよびディストリビューションの構成](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [パブリッシングおよびディストリビューションを無効にする](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9412d01809402dfa23c116c93c80e0ab32bee747
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67284915"
 ---
 # <a name="calculations-ssas-tabular"></a>計算 (SSAS テーブル)
@@ -22,9 +22,9 @@ ms.locfileid: "67284915"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
-|[SSAS 表形式&#41;&#40;テーブルモデルの DAX について](understanding-dax-in-tabular-models-ssas-tabular.md)|テーブル モデルの計算列、メジャー、および行フィルターに対して計算を作成する際に使用される Data Analysis Expressions (DAX) の数式言語について説明します。|  
+|[テーブル モデルでの DAX について (SSAS テーブル)](understanding-dax-in-tabular-models-ssas-tabular.md)|テーブル モデルの計算列、メジャー、および行フィルターに対して計算を作成する際に使用される Data Analysis Expressions (DAX) の数式言語について説明します。|  
 |[DirectQuery モードでの数式の互換性](../dax-formula-compatibility-in-directquery-mode-ssas-2014.md)|相違点について説明し、DirectQuery モードではサポートされない関数、およびサポートはされるが異なる結果を返す可能性のある一連の関数を示します。|  
 |[データ分析式 &#40;DAX&#41; リファレンス](/dax/data-analysis-expressions-dax-reference)|このセクションでは、DAX の構文、演算子、および関数について詳しく説明します。|  
   

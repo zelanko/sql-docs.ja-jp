@@ -17,10 +17,10 @@ ms.assetid: cfd0e29c-8310-44ab-85c3-5761184b865d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a919bb377eee2da1c3c1a65e85ddfb9807ed8d50
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918036"
 ---
 # <a name="name-property-ado"></a>Name プロパティ (ADO)
@@ -29,7 +29,7 @@ ms.locfileid: "67918036"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  オブジェクトの名前を示す**文字列**値を設定または返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Name プロパティを**使用して、**コマンド**、**プロパティ**、**フィールド**、または**パラメーター**オブジェクトの名前を割り当てるか、名前を取得します。  
   
  この値は、 **Command**オブジェクトでは読み取り/書き込みが可能で、**プロパティ**オブジェクトでは読み取り専用です。  

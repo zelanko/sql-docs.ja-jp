@@ -16,16 +16,16 @@ ms.assetid: 8e17a7bc-b8a3-4ae2-b6c9-ce088ad31fdf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 15ae2aac2851c496b6cac9e47d37fe5fa26b8e34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918370"
 ---
 # <a name="isolationlevelenum"></a>IsolationLevelEnum
 [接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトのトランザクション分離レベルを指定します。  
   
-|常時|値|[説明]|  
+|Constant|[値]|説明|  
 |--------------|-----------|-----------------|  
 |**adXactUnspecified**|-1|プロバイダーが指定とは異なる分離レベルを使用しているが、レベルを特定できないことを示します。|  
 |**adXactChaos**|16|より高度な分離トランザクションからの保留中の変更を上書きできないことを示します。|  
@@ -40,7 +40,7 @@ ms.locfileid: "67918370"
 ## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
  パッケージ: **com. ms. wfc. データ**  
   
-|常時|  
+|Constant|  
 |--------------|  
 |AdoEnums. IsolationLevel|  
 |AdoEnums IsolationLevel|  

@@ -18,10 +18,10 @@ ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bc004c611c218324ce2d2d8b764b3ab05cb73e5d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67896594"
 ---
 # <a name="sp_procoption-transact-sql"></a>sp_procoption (Transact-SQL)
@@ -50,14 +50,13 @@ sp_procoption [ @ProcName = ] 'procedure'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) またはエラー番号 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  スタートアッププロシージャは、 **master**データベースに存在する必要があり、入力パラメーターまたは出力パラメーターを含めることはできません。 ストアドプロシージャの実行は、すべてのデータベースが復旧され、"復旧が完了しました" というメッセージが起動時にログに記録されると開始されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- 
-  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
+ **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例は、プロシージャの自動実行を設定します。  
   
 ```  
@@ -75,6 +74,6 @@ EXEC sp_procoption @ProcName = N'<procedure name>'
 ```  
   
 ## <a name="see-also"></a>参照  
- [ストアド プロシージャの実行](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)  
+ [ストアドプロシージャの実行](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)  
   
   

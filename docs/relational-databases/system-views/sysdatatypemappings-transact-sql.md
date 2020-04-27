@@ -18,10 +18,10 @@ ms.assetid: 5dfafb70-3e3d-4465-b293-1acff1f855b6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3d58525ec4bcedc4249466be93628a7c1baa21bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67910146"
 ---
 # <a name="sysdatatypemappings-transact-sql"></a>sysdatatypemappings (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "67910146"
 
   **Msdb.dbo.sysdatatypemappings**ビューは、SQL Server データベース管理システム (DBMS) の SQL Server データ型とデータ型の間のマッピングを示すために使用されます。 このビューは、 **msdb**データベースに格納されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**mapping_id**|**int**|データ型マッピングの ID。|  
 |**source_dbms**|**sysname**|データ型のマップ元となる DBMS の名前を示します。次のいずれかの値を指定できます。<br /><br /> **MSSQLSERVER** = ソースは SQL Server データベースです。<br /><br /> **Oracle** = ソースは oracle データベースです。|  

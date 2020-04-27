@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 76a154639a71b22bfe3f119233f3abbcd329f7c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899525"
 ---
 # <a name="sysdm_pdw_dms_cores-transact-sql"></a>dm_pdw_dms_cores (Transact-sql)
@@ -24,11 +24,11 @@ ms.locfileid: "67899525"
 
   アプライアンスの計算ノードで実行されているすべての DMS サービスに関する情報を保持します。 これには、サービスインスタンスごとに1行が表示されます。これは現在、ノードごとに1行です。  
   
-|列名|データ型|[説明]|Range|  
+|列名|データ型|説明|範囲|  
 |-----------------|---------------|-----------------|-----------|  
 |dms_core_id|**int**|この DMS コアに関連付けられている一意の数値 id。<br /><br /> このビューのキー。|この DMS コアが実行されているノードの pdw_node_id に設定します。|  
 |pdw_node_id|**int**|この DMS サービスが実行されているノードの ID。|『 [Transact-sql&#41;&#40;dm_pdw_nodes](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)の node_id を参照してください。|  
-|status|**nvarchar (32)**|DMS サービスの現在の状態。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|status|**nvarchar(32)**|DMS サービスの現在の状態。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
   
  このビューで保持される最大行数の詳細については、「[容量制限](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata)」トピックの「メタデータ」セクションを参照してください。  
   

@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 0649e167ebaa90267422594ccd193ba468838e6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68187296"
 ---
 # <a name="reading-the-data-in-a-table-tutorial"></a>テーブルのデータの読み取り (チュートリアル)
@@ -80,8 +80,8 @@ ms.locfileid: "68187296"
   
 |||  
 |-|-|  
-|[文字列関数 &#40;Transact-SQL&#41;](/sql/t-sql/functions/string-functions-transact-sql)|[日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)|  
-|[数学関数 &#40;Transact-SQL&#41;](/sql/t-sql/functions/mathematical-functions-transact-sql)|[テキスト関数とイメージ関数 (Transact-SQL)](/sql/t-sql/functions/text-and-image-functions-textptr-transact-sql)|  
+|[文字列関数 &#40;Transact-SQL&#41;](/sql/t-sql/functions/string-functions-transact-sql)|[日付と時刻のデータ型および関数 (Transact-SQL)](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)|  
+|[数学関数 &#40;Transact-SQL&#41;](/sql/t-sql/functions/mathematical-functions-transact-sql)|[テキスト関数とイメージ関数 &#40;Transact-SQL&#41;](/sql/t-sql/functions/text-and-image-functions-textptr-transact-sql)|  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [要約 : データベース オブジェクトの作成](lesson-1-5-summary-creating-database-objects.md)  

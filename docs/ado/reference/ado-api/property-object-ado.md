@@ -16,16 +16,16 @@ ms.assetid: b2a4767c-03c7-4935-a3bc-df3e1a38a009
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 43bfa816a9ca8a93cdc1188a98e54d3e0d9111b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917554"
 ---
 # <a name="property-object-ado"></a>Property オブジェクト (ADO)
 プロバイダーによって定義される ADO オブジェクトの動的特性を表します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ADO オブジェクトには、組み込みと動的の2種類のプロパティがあります。  
   
  組み込みプロパティは ADO で実装されるプロパティで、 `MyObject.Property`構文を使用して、新しいオブジェクトですぐに使用できます。 オブジェクトの[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションには**プロパティ**オブジェクトとして表示されません。そのため、値を変更することはできますが、その特性を変更することはできません。  

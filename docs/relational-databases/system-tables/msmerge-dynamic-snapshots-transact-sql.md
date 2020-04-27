@@ -18,10 +18,10 @@ ms.assetid: a5592b3c-731b-4fc9-ae4b-2602ed78248e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5a6b0660635812a216525665832b0f16f64538b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67894934"
 ---
 # <a name="msmerge_dynamic_snapshots-transact-sql"></a>MSmerge_dynamic_snapshots (Transact-SQL)
@@ -29,13 +29,13 @@ ms.locfileid: "67894934"
 
   **MSmerge_dynamic_snapshots**テーブルでは、パラメーター化された行フィルターを使用して、マージパブリケーションに対して定義されている各パーティションのフィルター選択されたデータスナップショットの場所を追跡します。 このテーブルは、**パブリケーション**データベースに格納されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**partition_id**|**int**|マージ パーティションの ID。|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|パーティションのフィルター選択されたデータスナップショットの場所です。|  
-|**last_updated**|**DATETIME**|フィルター選択されたデータスナップショットが更新された日付。|  
+|**last_updated**|**datetime**|フィルター選択されたデータスナップショットが更新された日付。|  
   
 ## <a name="see-also"></a>参照  
- [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
+ [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

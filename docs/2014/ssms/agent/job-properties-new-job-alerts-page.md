@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1853281863fe3d1e6f4fcc6b36f228f7df523bda
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68189281"
 ---
-# <a name="job-properties-new-job-alerts-page"></a>ジョブのプロパティ: [新しいジョブ] ([警告] ページ)
+# <a name="job-properties-new-job-alerts-page"></a>[ジョブのプロパティ]:[新しいジョブ] ([警告] ページ)
   このページを使用すると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントジョブのアラートを表示および整理できます。  
   
 ## <a name="options"></a>オプション  

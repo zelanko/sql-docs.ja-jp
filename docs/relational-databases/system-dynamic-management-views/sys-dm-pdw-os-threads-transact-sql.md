@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: a4b9028d30db3c36157ef3db628dcb7c1cbeda00
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899228"
 ---
 # <a name="sysdm_pdw_os_threads-transact-sql"></a>dm_pdw_os_threads (Transact-sql)
@@ -24,16 +24,16 @@ ms.locfileid: "67899228"
 
   
   
-|列名|データ型|[説明]|Range|  
+|列名|データ型|説明|範囲|  
 |-----------------|---------------|-----------------|-----------|  
 |pdw_node_id|**int**|影響を受けるノードの ID。<br /><br /> このビューのキーは pdw_node_id と thread_id によって形成されます。|『 [Transact-sql&#41;&#40;dm_pdw_nodes](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)の node_id を参照してください。|  
 |thread_id|**int**|このビューのキーは pdw_node_id と thread_id によって形成されます。||  
 |process_id|**int**|||  
 |name|**nvarchar(255)**|||  
 |priority|**int**|||  
-|start_time|**DATETIME**|||  
-|state|**nvarchar (32)**|||  
-|wait_reason|**nvarchar (32)**|||  
+|start_time|**datetime**|||  
+|state|**nvarchar(32)**|||  
+|wait_reason|**nvarchar(32)**|||  
 |total_processor_elapsed_time|**bigint**|スレッドによって使用されたカーネル時間の合計。||  
 |total_user_elapsed_time|**bigint**|スレッドによって使用された合計ユーザー時間||  
   

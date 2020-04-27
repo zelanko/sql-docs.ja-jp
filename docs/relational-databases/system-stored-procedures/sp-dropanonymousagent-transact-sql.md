@@ -16,10 +16,10 @@ ms.assetid: 4cb96efa-9358-44a3-a8ee-a7e181bed089
 ms.author: vanto
 author: VanMSFT
 ms.openlocfilehash: 7e82023ed750c77d87a2536debfb5fceb7321db4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67911951"
 ---
 # <a name="sp_dropanonymousagent-transact-sql"></a>sp_dropanonymousagent (Transact-sql)
@@ -44,7 +44,7 @@ sp_dropanonymousagent [ @subid= ] sub_id    , [ @type= ] type
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_dropanonymousagent**は、すべての種類のレプリケーションで使用されます。  
   
  このストアドプロシージャは、匿名サブスクリプションエージェントのみを削除するために使用され、既知のサブスクリプションを削除するためには使用できません。  
@@ -53,6 +53,6 @@ sp_dropanonymousagent [ @subid= ] sub_id    , [ @type= ] type
  **Sp_dropanonymousagent**を実行できるのは、ディストリビューションデータベースの**db_owner**固定データベースロールのメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
- [レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

@@ -16,10 +16,10 @@ ms.assetid: a1b04bb2-8c8b-47f9-8477-bfd0368b6f68
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c0ffc6fb258799b0ab0bb03e7acbd922f6a67d1f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918982"
 ---
 # <a name="editmode-property"></a>EditMode プロパティ
@@ -28,7 +28,7 @@ ms.locfileid: "67918982"
 ## <a name="return-value"></a>戻り値  
  [Editmodeenum](../../../ado/reference/ado-api/editmodeenum.md)値を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ADO は、現在のレコードに関連付けられている編集バッファーを保持します。 このプロパティは、このバッファーに変更が加えられたかどうか、または新しいレコードが作成されたかどうかを示します。 現在のレコードの編集状態を確認するには、 **EditMode**プロパティを使用します。 編集プロセスが中断されている場合は、保留中の変更をテストし、 [Update](../../../ado/reference/ado-api/update-method.md)または[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)メソッドを使用する必要があるかどうかを判断できます。  
   
  *即時更新モード*では、**更新**メソッドが正常に呼び出された後に、 **EditMode**プロパティが**adEditNone**にリセットされます。 [削除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)を呼び出すと、データソース内のレコードが正常に削除されない (参照整合性違反があるなど) 場合、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)は編集モード (**EditMode** = **adEditInProgress**) のままになります。 したがって、現在のレコードから移動する前に、 **CancelUpdate**を呼び出す必要があります (たとえば、 [Move](../../../ado/reference/ado-api/move-method-ado.md)、 [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)、 [Close](../../../ado/reference/ado-api/close-method-ado.md)など)。  

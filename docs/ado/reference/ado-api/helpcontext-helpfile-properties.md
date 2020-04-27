@@ -22,10 +22,10 @@ ms.assetid: 2b9ef441-993c-44d4-8f87-fac0979dac1d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ba441a52958e423308e648f15dd36e14d6d1d895
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918478"
 ---
 # <a name="helpcontext-helpfile-properties"></a>HelpContext、HelpFile プロパティ
@@ -37,7 +37,7 @@ ms.locfileid: "67918478"
   
 -   **HelpFile**ヘルプファイルへの完全に解決されたパスに評価される**文字列**値を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ヘルプファイルが**HelpFile**プロパティに指定されている場合、 **helpcontext**プロパティを使用して、識別するヘルプトピックが自動的に表示されます。 関連するヘルプトピックが使用できない場合、 **Helpcontext**プロパティは0を返し、 **HelpFile**プロパティは長さ0の文字列 ("") を返します。  
   
 ## <a name="applies-to"></a>適用対象  

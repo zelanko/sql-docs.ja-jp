@@ -17,10 +17,10 @@ ms.assetid: fc268e22-205b-44a3-9038-ffed51e23e10
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 43c5fef08d22364b9842c58fc82d46ba4bfa00bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918560"
 ---
 # <a name="getchunk-method-ado"></a>GetChunk メソッド (ADO)
@@ -40,7 +40,7 @@ variable = field.GetChunk(Size)
  *[サイズ]*  
  取得するバイト数または文字数と同じ**Long 型**の式。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Field**オブジェクトの**GetChunk**メソッドを使用して、その長いバイナリデータまたは文字データの一部またはすべてを取得します。 システムメモリが制限されている場合は、 **GetChunk**メソッドを使用して、全体ではなく、長い値を部分的に操作することができます。  
   
  **GetChunk**呼び出しによって返されるデータは、*変数*に代入されます。 *Size*が残りのデータよりも大きい場合、 **GetChunk**メソッドは、空のスペースを含む*変数*を埋めずに残りのデータだけを返します。 フィールドが空の場合、 **GetChunk**メソッドは null 値を返します。  

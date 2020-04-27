@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 274e801bfb8e627564f5586574c16ecd916e9859
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67910712"
 ---
 # <a name="sysdm_db_stats_properties-transact-sql"></a>sys.dm_db_stats_properties (Transact-SQL)
@@ -43,11 +43,11 @@ sys.dm_db_stats_properties (object_id, stats_id)
  統計のプロパティが要求された、現在のデータベース内にあるオブジェクトの ID です。 *object_id*は**int**です。  
   
  *stats_id*  
- 指定された *object_id*の統計情報の ID です。 統計 ID は、 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 動的管理ビューから取得できます。 *stats_id*は**int**です。  
+ 指定された *object_id*の統計情報の ID です。 統計 ID は、 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 動的管理ビューから取得できます。 *stats_id* は **int**です。  
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|統計オブジェクトのプロパティを返す対象のオブジェクト (テーブルまたはインデックス付きビュー) の ID。|  
 |stats_id|**int**|統計オブジェクトの ID。 テーブルまたはインデックス付きビュー内で一意です。 詳細については、「[sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)」を参照してください。|  
@@ -59,7 +59,7 @@ sys.dm_db_stats_properties (object_id, stats_id)
 |modification_counter|**bigint**|統計情報が前回更新されてから先頭の統計列 (構築するヒストグラムの基になる列) に対して行われた変更の総数。<br /><br /> メモリ最適化テーブル: この列[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]の先頭[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]と末尾には、統計が最後に更新された後、またはデータベースが再起動されてからの、テーブルに対する変更の合計数が含まれます。|  
 |persisted_sample_percent|**float**|サンプリングの割合を明示的に指定しない統計情報の更新に使用される永続化されたサンプルのパーセンテージです。 値がゼロの場合、永続化されたサンプルのパーセンテージがこの統計に設定されていません。<br /><br /> **適用対象:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4|  
   
-## <a name="Remarks"></a> 解説  
+## <a name="remarks"></a><a name="Remarks"></a> 解説  
  **dm_db_stats_properties**は、次のいずれかの条件に該当する場合に空の行セットを返します。  
   
 -   **object_id**または**stats_id**が NULL です。    
@@ -69,7 +69,7 @@ sys.dm_db_stats_properties (object_id, stats_id)
   
  この動作により、sys. **objects**や**sys**などのビューの行にクロス適用された場合に、 **dm_db_stats_properties**を安全に使用できるようになります。  
  
-統計の更新日付は、メタデータではなく[統計 BLOB オブジェクト](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)に[ヒストグラム](../../relational-databases/statistics/statistics.md#histogram)および[密度ベクトル](../../relational-databases/statistics/statistics.md#density)と共に格納されます。 統計データを生成するためのデータが読み取られない場合、統計 blob は作成されず、日付は使用できず、 *last_updated*列は NULL になります。 これは、述語が行を返さないフィルターされた統計や、新しい空のテーブルの場合です。
+統計の更新日付は、メタデータではなく[統計 BLOB オブジェクト](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)に[ヒストグラム](../../relational-databases/statistics/statistics.md#histogram)および[密度ベクトル](../../relational-databases/statistics/statistics.md#density)と共に格納されます。 統計データを生成するためのデータが読み取られない場合、統計 blob は作成されず、日付は使用できず、 *last_updated*列は NULL になります。 これは、述語が行を返さないフィルター選択された統計情報や、新しい空のテーブルの場合です。
   
 ## <a name="permissions"></a>アクセス許可  
  では、ユーザーが統計列に対する select 権限を持っているか、ユーザーがテーブルを所有して`sysadmin`いるか、固定サーバー `db_owner`ロール、固定データベースロール、 `db_ddladmin`または固定データベースロールのメンバーである必要があります。  
@@ -108,8 +108,8 @@ WHERE modification_counter > 1000;
  [DBCC SHOW_STATISTICS &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
  [SQLSERVER &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
  [オブジェクト関連の動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)   
- [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
+ [動的管理ビューおよび関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
  [sys.dm_db_incremental_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md)  
- [dm_db_stats_histogram (Transact-sql)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 
+ [sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 
   
 

@@ -21,10 +21,10 @@ ms.assetid: ece32b15-d63f-4f93-92b7-e2930333e97a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0b2475a3881cb73d9dd82ee7fc311e7288aa4738
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900648"
 ---
 # <a name="sysdm_hadr_cluster_networks-transact-sql"></a>dm_hadr_cluster_networks (Transact-sql)
@@ -37,9 +37,9 @@ ms.locfileid: "67900648"
  > [!TIP]
  > 以降で[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]は、この動的管理ビューは Always On 可用性グループに加えて Always On フェールオーバークラスターインスタンスをサポートしています。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**member_name**|**nvarchar(128**|WSFC クラスター内のノードのコンピューター名。|  
+|**member_name**|**nvarchar(128)**|WSFC クラスター内のノードのコンピューター名。|  
 |**network_subnet_ip**|**nvarchar (48)**|コンピューターが属するサブネットのネットワーク IP アドレス。 IPv4 または IPv6 アドレスを指定できます。|  
 |**network_subnet_ipv4_mask**|**nvarchar (45)**|IP アドレスが属するサブネットを指定するネットワークサブネットマスク。 [CREATE AVAILABILITY group](../../t-sql/statements/create-availability-group-transact-sql.md)または[ALTER availability group](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントの WITH dhcp 句で dhcp <network_subnet_option> オプションを指定するには、 **network_subnet_ipv4_mask**します。<br /><br /> NULL = IPv6 サブネット。|  
 ||||  
@@ -53,7 +53,7 @@ ms.locfileid: "67900648"
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="see-also"></a>参照  
- [フェールオーバー クラスタリングと Always On 可用性グループ &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)   
+ [フェールオーバークラスタリングと Always On 可用性グループ &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)   
  [Transact-sql&#41;&#40;可用性グループの監視](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [dm_os_cluster_nodes &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)   
  [SQL Server システムカタログに対するクエリについてよく寄せられる質問](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   

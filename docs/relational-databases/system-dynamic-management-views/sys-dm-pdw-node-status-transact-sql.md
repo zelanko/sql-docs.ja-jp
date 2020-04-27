@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4cd8788d19b06329d0280efc43a13a9a218e056c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899367"
 ---
 # <a name="sysdm_pdw_node_status-transact-sql"></a>dm_pdw_node_status (Transact-sql)
@@ -24,7 +24,7 @@ ms.locfileid: "67899367"
 
   すべてのアプライアンスノードのパフォーマンスと状態に関する追加情報 ( [dm_pdw_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)) を保持します。 アプライアンス内のノードごとに1行が一覧表示されます。  
   
-|列名|データ型|[説明]|Range|  
+|列名|データ型|説明|範囲|  
 |-----------------|---------------|-----------------|-----------|  
 |pdw_node_id|**int**|ノードに関連付けられている一意の数値 id。<br /><br /> このビューのキー。|種類に関係なく、アプライアンス全体で一意です。|  
 |process_id|**int**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
@@ -37,8 +37,8 @@ ms.locfileid: "67899367"
 |handle_count|**bigint**|このノードで使用されているハンドルの合計数。||  
 |total_elapsed_time|**bigint**|システムの開始または再起動からの経過時間の合計。|システムの開始または再起動からの経過時間の合計。 Total_elapsed_time が整数の最大値 (ミリ秒単位で24.8 日) を超えた場合、オーバーフローによる具体化エラーが発生します。<br /><br /> ミリ秒単位の最大値は24.8 日に相当します。|  
 |is_available|**bit**|このノードが使用可能かどうかを示すフラグです。||  
-|sent_time|**DATETIME**|ネットワークパッケージがこのノードによって最後に送信された時刻。||  
-|received_time|**DATETIME**|ネットワークパッケージがこのノードによって最後に受信された時刻。||  
+|sent_time|**datetime**|ネットワークパッケージがこのノードによって最後に送信された時刻。||  
+|received_time|**datetime**|ネットワークパッケージがこのノードによって最後に受信された時刻。||  
 |error_id|**nvarchar (36)**|このノードで発生した最後のエラーの一意の識別子。||  
   
 ## <a name="see-also"></a>参照  

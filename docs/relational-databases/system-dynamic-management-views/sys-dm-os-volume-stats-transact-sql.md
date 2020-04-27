@@ -19,10 +19,10 @@ ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e7ec8171b569adbf887c1e153fb2b41619778f48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899719"
 ---
 # <a name="sysdm_os_volume_stats-transact-sql"></a>dm_os_volume_stats (Transact-sql)
@@ -38,18 +38,18 @@ ms.locfileid: "67899719"
 sys.dm_os_volume_stats (database_id, file_id)  
 ```  
   
-##  <a name="Arguments"></a>数値  
+##  <a name="arguments"></a><a name="Arguments"></a>数値  
  *database_id*  
- データベースの ID です。 *database_id*は**int**,、既定値はありません。 NULL にすることはできません。  
+ データベースの ID です。 *database_id* は** int**, 、既定値はありません。 Nll は指定できません。  
   
  *file_id*  
- ファイルの ID。 *file_id*は**int**,、既定値はありません。 NULL にすることはできません。  
+ ファイルの ID。 *file_id*は**int**,、既定値はありません。 Nll は指定できません。  
   
 ## <a name="table-returned"></a>返されるテーブル  
   
 ||||  
 |-|-|-|  
-|**列**|**データ型**|**説明**|  
+|**列**|**データの種類**|**説明**|  
 |**database_id**|**int**|データベースの ID です。 null にすることはできません。|  
 |**file_id**|**int**|ファイルの ID。 null にすることはできません。|  
 |**volume_mount_point**|**nvarchar(512)**|ボリュームがルートとするマウント ポイント。 は空の文字列を返すことができます。|  
@@ -67,8 +67,7 @@ sys.dm_os_volume_stats (database_id, file_id)
 ## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>アクセス許可  
- 
-  `VIEW SERVER STATE` 権限が必要です。  
+ `VIEW SERVER STATE` 権限が必要です。  
   
 ## <a name="examples"></a>例  
   
@@ -92,6 +91,6 @@ CROSS APPLY sys.dm_os_volume_stats(DB_ID(f.name), f.file_id);
   
 ## <a name="see-also"></a>参照  
  [master_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
- [database_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)  
+ [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)  
   
   

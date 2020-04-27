@@ -18,10 +18,10 @@ ms.assetid: d7ffa9df-bf1d-41b8-837e-b762c17c2764
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 966a77ae53576488ca14c16b4464ebce2816eb02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907342"
 ---
 # <a name="msdistributiondbs-transact-sql"></a>Ms、Db (Transact-sql)
@@ -29,7 +29,7 @@ ms.locfileid: "67907342"
 
   **Msディストリビューション db**テーブルには、ローカルディストリビューターで定義されているディストリビューションデータベースごとに1行のデータが格納されます。 このテーブルは、 **msdb**データベースに格納されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|ディストリビューションデータベースの名前。|  
 |**min_distretention**|**int**|トランザクションが削除されるまでの最小保有期間 (時間単位)。|  
@@ -38,6 +38,6 @@ ms.locfileid: "67907342"
   
 ## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -19,14 +19,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7e7fb32de254729c4173fab260e5797db5f2cc2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67793299"
 ---
 # <a name="initialize-a-transactional-subscription-from-a-backup-replication-transact-sql-programming"></a>トランザクション サブスクリプションのバックアップからの初期化 (レプリケーション Transact-SQL プログラミング)
-  トランザクション パブリケーションのサブスクリプションは通常、スナップショットを使用して初期化されますが、レプリケーション ストアド プロシージャを使用して、バックアップからサブスクリプションを初期化することもできます。 詳細については、「 [Initialize a Transactional Subscription Without a Snapshot](initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。  
+  トランザクション パブリケーションのサブスクリプションは通常、スナップショットを使用して初期化されますが、レプリケーション ストアド プロシージャを使用して、バックアップからサブスクリプションを初期化することもできます。 詳細については、「 [スナップショットを使用しないトランザクション サブスクリプションの初期化](initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。  
   
 ### <a name="to-initialize-a-transactional-subscriber-from-a-backup"></a>トランザクション サブスクライバーをバックアップから初期化するには  
   
@@ -36,16 +36,14 @@ ms.locfileid: "67793299"
   
     -   この値が **0** の場合、パブリッシャー側のパブリケーション データベースに対して [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) を実行します。 値には、 ** \@プロパティ**に**allow_initialize_from_backup**を指定し、 `true`値に** \@はを指定します。**  
   
-2.  新しいパブリケーションの場合、パブリッシャー側のパブリケーション データベースに対して [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) を実行します。 Allow_initialize_from_backup には、 `true`の**** 値を指定します。 詳しくは、「 [Create a Publication](publish/create-a-publication.md)」をご覧ください。  
+2.  新しいパブリケーションの場合、パブリッシャー側のパブリケーション データベースに対して [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) を実行します。 Allow_initialize_from_backup には、 `true`の**allow_initialize_from_backup**値を指定します。 詳細については、「 [Create a Publication](publish/create-a-publication.md)」を参照してください。  
   
     > [!WARNING]  
     >  サブスクライバー データの欠落を回避するために、 **sp_addpublication** で `@allow_initialize_from_backup = N'true'`を使用する場合は、常に `@immediate_sync = N'true'`を使用します。  
   
-3.  
-  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql) ステートメントを使用して、パブリケーション データベースのバックアップを作成します。  
+3.  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql) ステートメントを使用して、パブリケーション データベースのバックアップを作成します。  
   
-4.  
-  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql) ステートメントを使用し、サブスクライバー上でバックアップを復元します。  
+4.  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql) ステートメントを使用し、サブスクライバー上でバックアップを復元します。  
   
 5.  パブリッシャー側のパブリケーション データベースに対して、ストアド プロシージャ [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) を実行します。 次のパラメーターを指定します。  
   

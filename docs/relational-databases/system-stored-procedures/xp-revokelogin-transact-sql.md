@@ -18,10 +18,10 @@ ms.assetid: b3fa7678-dba4-4537-be94-5ae63ca11f81
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: f4b5e0f04f893bd5f351857a5a1b655d52350c52
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67898350"
 ---
 # <a name="xp_revokelogin-transact-sql"></a>xp_revokelogin (Transact-sql)
@@ -47,7 +47,7 @@ xp_revokelogin {[@loginame=] 'login'}
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  代わりに DROP LOGIN を使用してください。  
   
 ## <a name="permissions"></a>アクセス許可  

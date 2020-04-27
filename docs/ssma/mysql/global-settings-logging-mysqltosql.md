@@ -10,10 +10,10 @@ ms.assetid: 0d033492-5ec3-473a-8de1-821894ec9518
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3d5188d701cd7930ff93c37aab74e11bba949d9b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67896391"
 ---
 # <a name="global-settings-logging--mysqltosql"></a>グローバル設定 (ログ) (MySQLToSQL)
@@ -25,13 +25,13 @@ ms.locfileid: "67896391"
 **メッセージレベル**  
 [**メッセージレベル**] では、次のオプションを使用できます。  
   
-|オプション|[説明]|  
+|オプション|説明|  
 |----------|---------------|  
 |**[すべてのカテゴリ]**|次のすべてのオプションのログ記録レベルを設定するために使用します。|  
 |**コレクター**|送信元スキーマに関するメタデータを収集し、プロジェクトに保存します。|  
-|**修復**|テーブルやストアドプロシージャなどのソースデータベースオブジェクトの構造を、対応する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]構造体に変換します。|  
+|**Converter**|テーブルやストアドプロシージャなどのソースデータベースオブジェクトの構造を、対応する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]構造体に変換します。|  
 |**データ migrator**|転送元データベースからにデータを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移行します。|  
-|**フォーマット**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]スキーマのスクリプトを生成するコンバーターのサブコンポーネント。|  
+|**フォーマッタ**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]スキーマのスクリプトを生成するコンバーターのサブコンポーネント。|  
 |**グラフィカルユーザーインターフェイス**|SSMA ツールを使用するときに表示されるメッセージ。|  
 |**リンカー**|SQL 識別子を解決し、他のコンポーネントに情報を提供します。|  
 |**その他**|他のカテゴリに含まれていないすべてのメッセージ。|  
@@ -46,7 +46,7 @@ ms.locfileid: "67896391"
 |**致命的なエラー**|致命的なエラーメッセージのみをログに書き込みます。|  
 |**Error**|エラーメッセージと致命的なエラーメッセージをログに書き込みます。|  
 |**警告**|警告、エラー、および致命的なエラーメッセージをログに書き込みます。|  
-|**インフォメーション**|情報、警告、エラー、および致命的なエラーメッセージをログに書き込みます。|  
+|**情報**|情報、警告、エラー、および致命的なエラーメッセージをログに書き込みます。|  
 |**デバッグ**|デバッグメッセージを含むすべてのメッセージをログに書き込みます。|  
   
 **ログファイルのパス**  

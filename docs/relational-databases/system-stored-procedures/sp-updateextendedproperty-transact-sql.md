@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2f1c1c856cadbb4f005a99d5a5d49dc0c1280a8e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67898413"
 ---
 # <a name="sp_updateextendedproperty-transact-sql"></a>sp_updateextendedproperty (Transact-sql)
@@ -82,7 +82,7 @@ sp_updateextendedproperty
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  拡張プロパティを指定するために、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース内のオブジェクトは3つのレベル (0、1、および 2) に分類されます。 レベル0は最上位レベルで、データベーススコープに含まれるオブジェクトとして定義されます。 レベル 1 のオブジェクトはスキーマ スコープまたはユーザー スコープに含まれ、レベル 2 のオブジェクトはレベル 1 のオブジェクトに含まれます。 これら、どのレベルのオブジェクトに対しても、拡張プロパティを定義できます。 1 つのレベルにあるオブジェクトを参照する場合は、そのオブジェクトを所有または格納する上位レベルのオブジェクトの名前で修飾する必要があります。  
   
  有効な*property_name*と*値*が指定されている場合、すべてのオブジェクトの種類と名前が null の場合、更新されたプロパティは現在のデータベースに属します。  

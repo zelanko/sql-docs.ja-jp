@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8d37dafd5501a289e45a119323eed61242707184
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68185814"
 ---
 # <a name="deploy-scheduled-policies-to-multiple-instances"></a>スケジュールされたポリシーの複数インスタンスへの配置
@@ -47,8 +47,7 @@ ms.locfileid: "68185814"
   
 1.  前のタスクでスケジュールされたポリシーを構成したサーバーで、[**管理**]、[**ポリシー管理**] の順に展開し、[**ポリシー**] をクリックします。  
   
-2.  
-  **[表示]** メニューの **[オブジェクト エクスプローラーの詳細]** をクリックします。  
+2.  **[表示]** メニューの **[オブジェクト エクスプローラーの詳細]** をクリックします。  
   
 3.  [**オブジェクトエクスプローラーの詳細**] ウィンドウで、登録済みサーバーを使用して他のサーバーに展開する、スケジュールされたすべてのベストプラクティスポリシーを選択します。  
   
@@ -65,8 +64,7 @@ ms.locfileid: "68185814"
   
 ### <a name="to-deploy-the-scheduled-policies-to-servers-that-are-managed-through-registered-servers"></a>登録済みサーバーで管理されているサーバーにスケジュールされたポリシーを配置するには  
   
-1.  
-  **[表示]** メニューの **[登録済みサーバー]** をクリックします。  
+1.  **[表示]** メニューの **[登録済みサーバー]** をクリックします。  
   
 2.  [**データベースエンジン**] を展開し、[**ローカルサーバーグループ**] または [**中央管理サーバー**] を展開して、ポリシーの展開先のノードを右クリックし、[**ポリシーのインポート**] をクリックします。  
   
@@ -94,7 +92,7 @@ ms.locfileid: "68185814"
 ## <a name="summary"></a>まとめ  
  このチュートリアルでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の 1 つ以上のインスタンスに対して、ベスト プラクティス ポリシーの評価を要求時および定期的に実行する方法について学習しました。  
   
-## <a name="next"></a>次へ  
+## <a name="next"></a>Next  
  このチュートリアルはこれで終了です。 開始に戻るには、「[チュートリアル: ポリシーベースの管理を使用したベストプラクティスの評価](../../2014/tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)」を参照してください。  
   
  チュートリアルの[!INCLUDE[ssDE](../includes/ssde-md.md)]一覧を表示するには、[[データベースエンジンチュートリアル](../relational-databases/database-engine-tutorials.md)] をクリックします。  

@@ -21,10 +21,10 @@ ms.assetid: 13ce70e4-9d43-4a80-a826-099e6213bf85
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e2d58132b71e16f31e7369ae8f5b09fa3dac240f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900663"
 ---
 # <a name="sysdm_hadr_cluster-transact-sql"></a>sys.dm_hadr_cluster (Transact-SQL)
@@ -34,10 +34,9 @@ ms.locfileid: "67900663"
  > [!TIP]
  > 以降で[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]は、この動的管理ビューは Always On 可用性グループに加えて Always On フェールオーバークラスターインスタンスをサポートしています。
 
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**cluster_name**|**nvarchar(128**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に対応した [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] のインスタンスをホストする WSFC クラスターの名前。|  
+|**cluster_name**|**nvarchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に対応した [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] のインスタンスをホストする WSFC クラスターの名前。|  
 |**quorum_type**|**tinyint**|この WSFC クラスターで使用されるクォーラムの種類。次のいずれかになります。<br /><br /> 0 = ノード マジョリティ。 このクォーラム構成では、ノードの半分 (切り上げ) から1を引いた数の障害に耐えることができます。 たとえば、7 つのノードから成るクラスターの場合、このクォーラム構成では 3 つのノードの障害に対する耐性があります。<br /><br /> 1 = ノードおよびディスク マジョリティ。 ディスク監視がオンラインのままの場合、このクォーラム構成では、クラスター内の半数のノード (切り上げ) の障害に耐えることができます。 たとえば、ディスク監視がオンラインの6ノードクラスターでは、3つのノード障害が発生する可能性があります。 ディスク監視がオフラインになった場合、または障害が発生した場合、このクォーラム構成では、ノードの半分 (切り上げ) から1を引いた障害に耐えることができます。 たとえば、障害が発生したディスク監視を使用する6ノードクラスターでは、2つ (3-1 = 2) のノード障害が発生する可能性があります。<br /><br /> 2 = ノードおよびファイル共有マジョリティ。 このクォーラム構成は "ノードおよびディスク マジョリティ" と同じように動作しますが、ディスク監視の代わりにファイル共有監視を使用します。<br /><br /> 3 = マジョリティなし: ディスクのみ。 クォーラムディスクがオンラインの場合、このクォーラム構成では、1つを除くすべてのノードの障害に耐えることができます。<br /><br /> 4 = 不明なクォーラム。 クラスターに不明なクォーラムがあります。<br /><br /> 5 = クラウド監視。 クラスターは、クォーラムの判別に Microsoft Azure を利用します。 クラウド監視が利用可能な場合、クラスターはノードの半分 (切り上げ) の障害に耐えることができます。|  
 |**quorum_type_desc**|**varchar (50)**|**Quorum_type**の説明。次のいずれかになります。<br /><br /> NODE_MAJORITY<br /><br /> NODE_AND_DISK_MAJORITY<br /><br /> NODE_AND_FILE_SHARE_MAJORITY<br /><br /> NO_MAJORITY: _DISK_ONLY <br /><br /> UNKNOWN_QUORUM <br /><br /> CLOUD_WITNESS|  
 |**quorum_state**|**tinyint**|WSFC クォーラムの状態。次のいずれかになります。<br /><br /> 0 = 不明なクォーラムの状態<br /><br /> 1 = 通常のクォーラム<br /><br /> 2 = 強制クォーラム|  
@@ -50,6 +49,6 @@ ms.locfileid: "67900663"
  [Always On 可用性グループの動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
  [Always On 可用性グループのカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
  [Transact-sql&#41;&#40;可用性グループの監視](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
- [dm_hadr_cluster_members &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md)  
+ [sys.dm_hadr_cluster_members &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md)  
   
   

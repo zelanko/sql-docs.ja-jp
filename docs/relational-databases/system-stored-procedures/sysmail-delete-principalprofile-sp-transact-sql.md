@@ -18,10 +18,10 @@ ms.assetid: 8fc14700-e17a-4073-9a96-7fc23e775c69
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 86f9566ce86423939aff22fc37331c5c9db89904
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67909210"
 ---
 # <a name="sysmail_delete_principalprofile_sp-transact-sql"></a>sysmail_delete_principalprofile_sp (Transact-SQL)
@@ -51,7 +51,7 @@ sysmail_delete_principalprofile_sp  { [ @principal_id = ] principal_id | [ @prin
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  パブリックプロファイルをプライベートプロファイルにするには、プリンシパル名に **' public '** を指定するか、プリンシパル id に**0**を指定します。  
   
  ユーザーの既定のプライベート プロファイルや、既定のパブリック プロファイルを削除する場合は慎重に行ってください。 既定のプロファイルが使用できない場合、 **sp_send_dbmail**にはプロファイルの名前を引数として指定する必要があります。 したがって、既定のプロファイルを削除すると、 **sp_send_dbmail**の呼び出しが失敗する可能性があります。 詳細については、「 [sp_send_dbmail &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md)」を参照してください。  
@@ -61,7 +61,7 @@ sysmail_delete_principalprofile_sp  { [ @principal_id = ] principal_id | [ @prin
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャの実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、 **msdb**データベースの Profile **AdventureWorks Administrator**と login **applicationuser**の関連付けを削除しています。  
   
 ```  

@@ -20,10 +20,10 @@ ms.assetid: a1e5f9cb-c350-4bb4-a04f-7394f6f25d62
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b4e6437a07aa571fc538f2630124dd52496d08e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67906171"
 ---
 # <a name="sysfn_hadr_distributed_ag_replica-transact-sql"></a>fn_hadr_distributed_ag_replica (Transact-sql)
@@ -50,11 +50,11 @@ sys.fn_hadr_distributed_ag_replica( lag_Id, replica_id )
 ## <a name="tables-returned"></a>返されるテーブル  
  次の情報を返します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**group_id**|**UNIQUEIDENTIFIER**|ローカル可用性グループの一意の識別子 (GUID)。|  
+|**group_id**|**uniqueidentifier**|ローカル可用性グループの一意の識別子 (GUID)。|  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
   
 ### <a name="using-sysfn_hadr_distributed_ag_replica"></a>Fn_hadr_distributed_ag_replica の使用  
  次の例では、指定された分散型可用性グループとレプリカに関連付けられているローカル可用性グループ識別子を含むテーブルを返します。  
@@ -71,7 +71,7 @@ GO
  [AlwaysOn 可用性グループ関数 &#40;Transact-sql&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
  [AlwaysOn 可用性グループ &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [分散型可用性グループ &#40;AlwaysOn 可用性グループ&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)  
- [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
+ [Transact-sql&#41;&#40;可用性グループの作成](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)  
   
   

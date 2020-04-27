@@ -18,10 +18,10 @@ ms.assetid: 2870e7ea-dbec-4636-9171-c2cee96018ac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 96b6c2599920c8d251b6d421cc18dc43c82fe521
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907253"
 ---
 # <a name="msmerge_articlehistory-transact-sql"></a>MSmerge_articlehistory (Transact-SQL)
@@ -29,15 +29,15 @@ ms.locfileid: "67907253"
 
   **MSmerge_articlehistory**テーブルは、マージエージェント同期セッション中にアーティクルに加えられた変更を追跡し、変更が行われた各アーティクルに対して1つの行を使用します。 このテーブルは、ディストリビューションデータベースに格納されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|[MSmerge_sessions](../../relational-databases/system-tables/msmerge-sessions-transact-sql.md)システムテーブル内のマージエージェントジョブセッションの ID。|  
 |**phase_id**|**int**|同期セッションのフェーズ。次のいずれかを指定できます。<br /><br /> **1** = アップロードします。<br /><br /> **2** = ダウンロード。<br /><br /> **4** = クリーンアップ。<br /><br /> **5** = シャットダウン。<br /><br /> **6** = スキーマの変更。<br /><br /> **7** = BCP。|  
 |**article_name**|**sysname**|変更が行われたアーティクルの名前。|  
-|**start_time**|**DATETIME**|エージェントがアーティクルの処理を開始した時刻です。|  
-|**全**|**int**|エージェントがアーティクルを処理した時間の長さ (秒単位)。|  
+|**start_time**|**datetime**|エージェントがアーティクルの処理を開始した時刻です。|  
+|**duration**|**int**|エージェントがアーティクルを処理した時間の長さ (秒単位)。|  
 |**ます**|**int**|同期中に特定のアーティクルに適用された挿入の数。 この値は同期プロセス中に増加し、終了値は合計数を表します。|  
-|**版**|**int**|同期中に特定のアーティクルに適用された更新数です。 この値は同期プロセス中に増加し、終了値は合計数を表します。|  
+|**更新プログラム**|**int**|同期中に特定のアーティクルに適用された更新数です。 この値は同期プロセス中に増加し、終了値は合計数を表します。|  
 |**削除**|**int**|同期中に特定のアーティクルに適用された削除の数。 この値は同期プロセス中に増加し、終了値は合計数を表します。|  
 |**重なっ**|**int**|同期中に発生した競合の数。 この値は同期プロセス中に増加し、終了値は合計数を表します。|  
 |**conflicts_resolved**|**int**|同期中に発生した競合のうち、解決された競合の数。 この値は同期プロセス中に増加し、終了値は合計数を表します。|  
@@ -47,6 +47,6 @@ ms.locfileid: "67907253"
 |**relative_cost**|**decimal**|この記事の変更を適用するために費やされた時間と、セッション全体の合計時間。|  
   
 ## <a name="see-also"></a>参照  
- [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
+ [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

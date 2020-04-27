@@ -11,13 +11,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: dc8da3880afe5cf107c7e6df260957e3df6ddc9d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68185747"
 ---
-# <a name="lesson-1-evaluate-best-practices-on-an-on-demand-basis"></a>レッスン 1 : 要求に基づくベスト プラクティスの評価
+# <a name="lesson-1-evaluate-best-practices-on-an-on-demand-basis"></a>レッスン 1:要求に基づくベスト プラクティスの評価
   要求に基づいた ("アドホック" の) ポリシー評価を使用すると、ベスト プラクティス ポリシーを迅速に評価して、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスがベスト プラクティスのガイドラインと推奨事項に適合しているかどうかを判断できます。  
   
  このレッスンでは、 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]の[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]1 つ以上のインスタンスでのベストプラクティスポリシーの要求時評価を実行します。  
@@ -32,6 +32,6 @@ ms.locfileid: "68185747"
  [オブジェクト エクスプローラーを使用した要求時評価の実行](../ssms/object/object-explorer.md)  
   
 ## <a name="see-also"></a>参照  
- [レッスン 2 : スケジュールに基づくベスト プラクティス ポリシーの評価](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
+ [レッスン 2: スケジュールに基づくベスト プラクティス ポリシーの評価](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
   
   

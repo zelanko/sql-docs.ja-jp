@@ -16,18 +16,18 @@ ms.assetid: c66aa6e6-d4f0-4f0f-9640-e08ae6cfdef3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 68aaa0bfb8aa72c9e94a8b5db65768fe85895f0e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917741"
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
 [パラメーター](../../../ado/reference/ado-api/parameter-object.md)が入力パラメーター、出力パラメーター、入力パラメーターと出力パラメーターの両方、またはストアドプロシージャからの戻り値を表すかどうかを指定します。  
   
-|常時|値|[説明]|  
+|Constant|[値]|説明|  
 |--------------|-----------|-----------------|  
-|**adParamInput**|1 で保護されたプロセスとして起動されました|既定。 パラメーターが入力パラメーターを表すことを示します。|  
+|**adParamInput**|1|既定値。 パラメーターが入力パラメーターを表すことを示します。|  
 |**adParamInputOutput**|3|パラメーターが入力パラメーターと出力パラメーターの両方を表すことを示します。|  
 |**adParamOutput**|2|パラメーターが出力パラメーターを表すことを示します。|  
 |**adParamReturnValue**|4|パラメーターが戻り値を表すことを示します。|  
@@ -36,7 +36,7 @@ ms.locfileid: "67917741"
 ## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
  パッケージ: **com. ms. wfc. データ**  
   
-|常時|  
+|Constant|  
 |--------------|  
 |AdoEnums ParameterDirection|  
 |AdoEnums. ParameterDirection. INPUTOUTPUT|  

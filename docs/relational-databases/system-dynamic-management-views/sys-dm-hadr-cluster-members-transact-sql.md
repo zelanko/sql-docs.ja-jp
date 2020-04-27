@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8b28b708aabfdf3ec4e569aab6d8a95e2330b370
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900763"
 ---
 # <a name="sysdm_hadr_cluster_members-transact-sql"></a>sys.dm_hadr_cluster_members (Transact-SQL)
@@ -45,13 +45,13 @@ ms.locfileid: "67900763"
  > [!TIP]
  > 以降で[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]は、この動的管理ビューは Always On 可用性グループに加えて Always On フェールオーバークラスターインスタンスをサポートしています。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**member_name**|**nvarchar(128**|メンバー名。コンピューター名、ドライブ文字、ファイル共有パスのいずれかになります。|  
+|**member_name**|**nvarchar(128)**|メンバー名。コンピューター名、ドライブ文字、ファイル共有パスのいずれかになります。|  
 |**member_type**|**tinyint**|メンバーの種類。次のいずれかになります。<br /><br /> 0 = WSFC ノード<br /><br /> 1 = ディスク監視<br /><br /> 2 = ファイル共有監視<br /><br /> 3 = クラウド監視|  
-|**member_type_desc**|**nvarchar(50)**|**Member_type**の説明。次のいずれかになります。<br /><br /> CLUSTER_NODE<br /><br /> DISK_WITNESS<br /><br /> FILE_SHARE_WITNESS<br /><br /> CLOUD_WITNESS|  
+|**member_type_desc**|**nvarchar (50)**|**Member_type**の説明。次のいずれかになります。<br /><br /> CLUSTER_NODE<br /><br /> DISK_WITNESS<br /><br /> FILE_SHARE_WITNESS<br /><br /> CLOUD_WITNESS|  
 |**member_state**|**tinyint**|メンバーの状態。次のいずれかになります。<br /><br /> 0 = オフライン<br /><br /> 1 = オンライン|  
-|**member_state_desc**|**nvarchar (60)**|**Member_state**の説明。次のいずれかになります。<br /><br /> UP<br /><br /> DOWN|  
+|**member_state_desc**|**nvarchar(60)**|**Member_state**の説明。次のいずれかになります。<br /><br /> UP<br /><br /> DOWN|  
 |**number_of_quorum_votes**|**tinyint**|このクォーラム メンバーが保有するクォーラムの投票数。 マジョリティなし: ディスクのみのクォーラムの場合、この値は既定で0に設定されます。 その他のクォーラムの種類の場合、この値は既定で 1 になります。|  
   
 ## <a name="permissions"></a>アクセス許可  

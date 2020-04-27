@@ -17,10 +17,10 @@ ms.assetid: 48919c74-86d4-462e-99b9-8854ceb8d683
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e35dd93e6d90a81934d8f272ea79c5eb7c8a97c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67913923"
 ---
 # <a name="value-property-ado"></a>Value プロパティ (ADO)
@@ -31,7 +31,7 @@ ms.locfileid: "67913923"
 
 オブジェクトの値を示す**バリアント**値を設定または返します。 既定値は[Type](../../../ado/reference/ado-api/type-property-ado.md)プロパティによって異なります。
   
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 **Value**プロパティを使用して、**フィールド**オブジェクトのデータを設定または取得します。また、**パラメーターオブジェクトを**使用してパラメーター値を設定または取得するか、プロパティオブジェクトを使用し**てプロパティ設定**を設定または取得します。 **値**プロパティが読み取り/書き込みか、読み取り専用かは、さまざまな要因によって決まります。 詳細については、各オブジェクトのトピックを参照してください。
 

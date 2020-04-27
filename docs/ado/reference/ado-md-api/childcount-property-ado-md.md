@@ -17,10 +17,10 @@ ms.assetid: 5463be22-ca50-43ea-9c92-468fc8eda280
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a8e6f6a7cb749ff2b22a1f7563b43ce07e060aab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67911551"
 ---
 # <a name="childcount-property-ado-md"></a>ChildCount プロパティ (ADO MD)
@@ -29,7 +29,7 @@ ms.locfileid: "67911551"
 ## <a name="return-values"></a>戻り値  
  **長**整数を返し、読み取り専用です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Childcount**プロパティを使用して、**メンバー**が持つ子の数の推定値を返します。 **メンバー**の実際の子は、 [children](../../../ado/reference/ado-md-api/children-property-ado-md.md)プロパティで返すことができます。  
   
  [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md)オブジェクトの**メンバー**オブジェクトの場合、返される最大値は65536です。 実際の子の数が65536を超えた場合、返される値は依然として65536になります。 このため、アプリケーションで65536は、 **Childcount**が65536の子以上であることを解釈する必要があります。  

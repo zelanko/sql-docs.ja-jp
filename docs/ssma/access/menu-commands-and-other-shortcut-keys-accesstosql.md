@@ -10,10 +10,10 @@ ms.assetid: 04bba43a-7bed-4d3c-bb62-8e9ab2adf9e3
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: cbfb9aa200560cf8d2b4ae42486f8a39b179e88b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907129"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-accesstosql"></a>メニューコマンドおよびその他のショートカットキー (キー操作 Sql)
@@ -105,7 +105,7 @@ ms.locfileid: "67907129"
 |[カスタマーフィードバックのオプション] ダイアログボックスを表示します。|ALT + H + C|  
 |ヘルプウィンドウを表示します。|ALT + H + H または F1|  
   
-## <a name="context-menu-commands"></a>ショートカットメニューのコマンド  
+## <a name="context-menu-commands"></a>コンテキスト メニュー コマンド  
 オブジェクトエクスプローラーで選択されているオブジェクトのコンテキストメニューにアクセスするために使用されるショートカットキーは SHIFT + F10 または Apps キーです。  
   
 ## <a name="global-settings-dialog-box"></a>[グローバル設定] ダイアログボックス  

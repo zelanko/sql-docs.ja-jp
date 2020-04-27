@@ -16,10 +16,10 @@ ms.assetid: d0e775d8-e353-46a1-ad10-ed4cc240dfaa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1b70920cd223223d5efb14925a6808168ca9cc16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67911677"
 ---
 # <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>一意のテーブル、一意のスキーマ、一意のカタログのプロパティ-動的 (ADO)
@@ -34,7 +34,7 @@ ms.locfileid: "67911677"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  テーブル、スキーマ、またはカタログの名前を示す**文字列**値を設定または返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  目的のベーステーブルは、そのカタログ名、スキーマ名、およびテーブル名によって一意に識別されます。 一意の**テーブル**プロパティが設定されている場合は、**一意のスキーマ**または一意の**カタログ**プロパティの値を使用してベーステーブルが検索されます。 一意の**テーブル**プロパティが設定される前に、一意の**スキーマ**と**一意のカタログ**プロパティのどちらかまたは両方が設定されていることを前提としていますが、必須ではありません。  
   
  **一意のテーブル**の主キーは、**レコードセット**全体の主キーとして扱われます。 これは、主キーを必要とする任意のメソッドに使用されるキーです。  

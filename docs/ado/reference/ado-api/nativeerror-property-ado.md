@@ -18,10 +18,10 @@ ms.assetid: b9b47e57-18a4-4186-aef5-5bd18d7b1d74
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 42888190dcd7b5e41987e6e8ec7194242549aa9c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918024"
 ---
 # <a name="nativeerror-property-ado"></a>NativeError プロパティ (ADO)
@@ -30,7 +30,7 @@ ms.locfileid: "67918024"
 ## <a name="return-value"></a>戻り値  
  エラーコードを示す**Long 型**の値を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  特定の**エラー**オブジェクトのデータベース固有のエラー情報を取得するには、"**エラー** " プロパティを使用します。 たとえば、Microsoft SQL Server データベースと共に Microsoft ODBC Provider for OLE DB を使用する場合、SQL Server からのネイティブエラーコードによって、ODBC および ODBC プロバイダーから ADO の "**エラー** " プロパティに渡されます。  
   
 ## <a name="applies-to"></a>適用対象  

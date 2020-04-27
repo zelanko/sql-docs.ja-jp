@@ -22,10 +22,10 @@ ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: fdf0086fe3a87823a419f3535888ea3211ee9ef1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67905171"
 ---
 # <a name="syssp_cdc_help_change_data_capture-transact-sql"></a>sp_cdc_help_change_data_capture (Transact-sql)
@@ -64,26 +64,25 @@ sys.sp_cdc_help_change_data_capture
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |source_schema|**sysname**|ソース テーブルのスキーマ名です。|  
 |source_table|**sysname**|ソーステーブルの名前。|  
 |capture_instance|**sysname**|キャプチャ インスタンスの名前です。|  
 |object_id|**int**|ソーステーブルに関連付けられている変更テーブルの ID。|  
 |source_object_id|**int**|ソーステーブルの ID。|  
-|start_lsn|**binary (10)**|変更テーブルをクエリする際の下端を表すログ シーケンス番号 (LSN) です。<br /><br /> NULL = 低いエンドポイントが確立されていません。|  
-|end_lsn|**binary (10)**|変更テーブルに対してクエリを実行するための高エンドポイントを表す LSN。 で[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]は、この列は常に NULL です。|  
+|start_lsn|**binary(10)**|変更テーブルをクエリする際の下端を表すログ シーケンス番号 (LSN) です。<br /><br /> NULL = 低いエンドポイントが確立されていません。|  
+|end_lsn|**binary(10)**|変更テーブルに対してクエリを実行するための高エンドポイントを表す LSN。 で[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]は、この列は常に NULL です。|  
 |supports_net_changes|**bit**|Net change サポートが有効になっています。|  
-|has_drop_pending|**bit**|
-  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] では使用されません。|  
+|has_drop_pending|**bit**|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] では使用されません。|  
 |role_name|**sysname**|変更データへのアクセスを制御するデータベース ロールの名前です。<br /><br /> NULL = ロールは使用されません。|  
 |index_name|**sysname**|ソーステーブル内の行を一意に識別するために使用されるインデックスの名前。|  
 |filegroup_name|**sysname**|変更テーブルが存在するファイルグループの名前。<br /><br /> NULL = 変更テーブルは、データベースの既定のファイルグループにあります。|  
-|create_date|**DATETIME**|キャプチャインスタンスが有効になった日付。|  
+|create_date|**datetime**|キャプチャインスタンスが有効になった日付。|  
 |index_column_list|**nvarchar(max)**|ソーステーブル内の行を一意に識別するために使用されるインデックス列の一覧です。|  
 |captured_column_list|**nvarchar(max)**|キャプチャ対象のソース列のリスト。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  *Source_schema*と*source_name*が既定で null に設定されているか、明示的に null が設定されている場合、このストアドプロシージャは、呼び出し元が選択したアクセス権を持つすべてのデータベースキャプチャインスタンスに関する情報を返します。 *Source_schema*および*source_name*が NULL 以外の場合は、特定の名前が有効になっているテーブルに関する情報のみが返されます。  
   
 ## <a name="permissions"></a>アクセス許可  

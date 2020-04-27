@@ -16,10 +16,10 @@ ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ff06bc27e765945d1cca74b5f8401e0caadf6b17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918635"
 ---
 # <a name="filter-property"></a>Filter プロパティ
@@ -35,7 +35,7 @@ ms.locfileid: "67918635"
   
 -   [Filtergroupenum](../../../ado/reference/ado-api/filtergroupenum.md)値。  
   
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 **フィルター**プロパティを使用して、レコード**セット**オブジェクトのレコードを選択的に表示します。 フィルター選択された**レコードセット**が現在のカーソルになります。 現在の**カーソル**に基づいて値を返すその他のプロパティは、 [ABSOLUTEPOSITION property (ado)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)、 [AbsolutePage property (ado)](../../../ado/reference/ado-api/absolutepage-property-ado.md)、 [RecordCount Property (ADO](../../../ado/reference/ado-api/recordcount-property-ado.md))、および[PageCount property (ado)](../../../ado/reference/ado-api/pagecount-property-ado.md)などの影響を受けます。 **Filter**プロパティを特定の新しい値に設定すると、現在のレコードが、新しい値を満たす最初のレコードに移動します。
   
@@ -56,7 +56,7 @@ ms.locfileid: "67918635"
 -   代わりに、次のようにこのフィルターを構築します。  
  `(LastName = 'Smith' AND FirstName = 'John') OR (LastName = 'Jones' AND FirstName = 'John')`  
   
--   **LIKE**句では、パターンの先頭と末尾にワイルドカードを使用できます。 たとえば、を使用`LastName Like '*mit*'`できます。 また、 **LIKE**では、パターンの最後でのみワイルドカードを使用できます。 たとえば、「 `LastName Like 'Smit*'` 」のように入力します。  
+-   **LIKE**句では、パターンの先頭と末尾にワイルドカードを使用できます。 たとえば、`LastName Like '*mit*'` を使用できます。 また、 **LIKE**では、パターンの最後でのみワイルドカードを使用できます。 たとえば、`LastName Like 'Smit*'` のようにします。  
   
  フィルター定数を使用すると、バッチ更新モード中に個々のレコードの競合を解決しやすくなります。たとえば、最後の[UpdateBatch メソッド](../../../ado/reference/ado-api/updatebatch-method.md)メソッド呼び出しの間に影響を受けたレコードだけを表示できます。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "67918635"
   
 **フィルター**プロパティが設定されている場合、現在のレコードの位置は、レコード**セット**内のフィルター処理されたレコードセット内の最初のレコードに移動します。 同様に、**フィルター**プロパティをクリアすると、現在のレコード位置がレコード**セット**内の最初のレコードに移動します。
 
-たとえば、sql_variant 型など、バリアント型のフィールドに基づいて**レコードセット**がフィルター処理されるとします。 条件文字列で使用されているフィールドとフィルター値のサブタイプが一致しない場合、エラー (DISP_E_TYPEMISMATCH または 80020005) が発生します。 たとえば、次のようになります。
+たとえば、sql_variant 型など、バリアント型のフィールドに基づいて**レコードセット**がフィルター処理されるとします。 条件文字列で使用されているフィールドとフィルター値のサブタイプが一致しない場合、エラー (DISP_E_TYPEMISMATCH または 80020005) が発生します。 たとえば、次のように想定します。
 
 - **レコードセット**オブジェクト (rs) には、sql_variant 型の列 (C) が含まれています。
 - この列のフィールドには、I4 型の値1が割り当てられています。 条件文字列は、フィールドで`rs.Filter = "C='A'"`に設定されます。
@@ -93,8 +93,8 @@ ms.locfileid: "67918635"
 ||非キー|1つのキー|複数のキー|
 |-|--------------|----------------|-------------------|
 |**非キー**|+|+|+|
-|**1つのキー**|+|-|該当なし|
-|**複数のキー**|+|該当なし|+|
+|**1つのキー**|+|-|なし|
+|**複数のキー**|+|なし|+|
 |||||
   
 ## <a name="applies-to"></a>適用対象

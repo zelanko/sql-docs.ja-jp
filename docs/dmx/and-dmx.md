@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e0c727e6a6f981dd2862575bfb4943b104196080
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67913746"
 ---
 # <a name="and-dmx"></a>AND (DMX)
@@ -37,7 +37,7 @@ Expression1 AND Expression2
 ## <a name="return-value"></a>戻り値  
  両方のパラメーターが TRUE と評価される場合に TRUE を返すブール値です。それ以外の場合は FALSE。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  どちらのパラメーターもブール値として処理されます (FALSE の場合は0、それ以外の場合は TRUE)。 次の表に、パラメーター値のさまざまな組み合わせに基づいて返される値を示します。  
   
 |Expression1|Expression2|戻り値はです。|  

@@ -18,16 +18,16 @@ ms.assetid: 497cae10-3913-422a-9753-dcbb0a639b1b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4e062c67f0dedf55d63a076725b46d4405918741
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917702"
 ---
 # <a name="parameters-collection-ado"></a>Parameters コレクション (ADO)
 [Command](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトのすべての[パラメーター](../../../ado/reference/ado-api/parameter-object.md)オブジェクトを含みます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Command**オブジェクトには、 **Parameter**オブジェクトで構成される**Parameters**コレクションがあります。  
   
  **Command**オブジェクトの**Parameters**コレクションに対して[Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)メソッドを使用すると、 **command**オブジェクトで指定されたストアドプロシージャまたはパラメーター化クエリのプロバイダーパラメーター情報が取得されます。 一部のプロバイダーでは、ストアドプロシージャ呼び出しまたはパラメーター化クエリをサポートしていません。このようなプロバイダーを使用するときに**Parameters**コレクションの**Refresh**メソッドを呼び出すと、エラーが返されます。  

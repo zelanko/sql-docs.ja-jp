@@ -16,10 +16,10 @@ ms.assetid: 99a2b2d4-e6b1-4205-b011-72d024ea7240
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0538a3afae1e4c0bf4159d8ef6a42872f21ff6ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67916868"
 ---
 # <a name="stat-method"></a>Stat メソッド
@@ -42,28 +42,28 @@ Long stream.Stat(StatStg, StatFlag)
  *StatFlag*  
  このメソッドが STATSTG 構造体の一部のメンバーを返さないことを指定します。これにより、メモリ割り当て操作が保存されます。 値は STATFLAG 列挙体から取得されます。 STATFLAG 列挙体には2つの値があります  
   
-|常時|Value|  
+|Constant|[値]|  
 |--------------|-----------|  
 |STATFLAG_DEFAULT|0|  
-|STATFLAG_NONAME|1 で保護されたプロセスとして起動されました|  
+|STATFLAG_NONAME|1|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ADO Stream オブジェクトに実装されている Stat メソッドのバージョンは、STATSTG 構造体の次のフィールドに入力します。  
   
  *pwcsName*  
  ストリームの名前が含まれていて、StatFlag 値 STATFLAG_NONAME が指定されていない場合は、その名前を格納している文字列。  
   
  *cbSize*  
- ストリームまたはバイト配列のサイズ (バイト単位) を指定します。  
+ ストリームまたはバイト配列のサイズをバイト単位で指定します。  
   
  *mtime*  
- このストレージ、ストリーム、またはバイト配列の最終変更時刻を示します。  
+ ストレージ、ストリーム、またはバイト配列に対する最後の変更時刻を示します。  
   
  *ctime*  
- このストレージ、ストリーム、またはバイト配列の作成時刻を示します。  
+ ストレージ、ストリーム、またはバイト配列の作成時刻を示します。  
   
  *atime*  
- このストレージ、ストリーム、またはバイト配列の最終アクセス時刻を示します。  
+ ストレージ、ストリーム、またはバイト配列に対する最後のアクセス時刻を示します。  
   
  StatFlag パラメーターに STATFLAG_NONAME が指定されている場合、ストリームの名前は返されません。  
   

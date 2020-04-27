@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6b79da95e2709e2bb5ff3a3d76cac06b2a4268f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68189382"
 ---
 # <a name="designate-an-events-forwarding-server-sql-server-management-studio"></a>Designate an Events Forwarding Server (SQL Server Management Studio)
@@ -30,42 +30,37 @@ ms.locfileid: "68189382"
   
      [セキュリティ](#Security)  
   
--   **イベント転送サーバーを指定するために使用するもの:**  
+-   **イベントの転送先サーバーを指定する方法:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
- 
-  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
+ **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-designate-an-events-forwarding-server"></a>イベントの転送先サーバーを指定するには  
   
-1.  
-  **オブジェクト エクスプ ローラー** で、プラス記号をクリックして、別のサーバーにイベントを転送するサーバーを展開します。  
+1.  **オブジェクト エクスプ ローラー** で、プラス記号をクリックして、別のサーバーにイベントを転送するサーバーを展開します。  
   
-2.  **SQL Server エージェント**を右クリックし、[**プロパティ**] を選択します。  
+2.  **[SQL Server エージェント]** を右クリックし、 **[プロパティ]** を選択します。  
 
-3.  [ **SQL Server エージェントのプロパティ-**_server_name_ ] ダイアログボックスの [**ページの選択**] で、[**詳細設定**] を選択します。  
+3.  **[SQL Server エージェントのプロパティ - **_<サーバー名>]_ ダイアログ ボックスの **[ページの選択]** で **[詳細設定]** を選択します。  
 
-4.  
-  **[SQL Server イベントの転送]** で、 **[イベントを別のサーバーに転送する]** チェック ボックスをオンにします。  
+4.  **[SQL Server イベントの転送]** で、 **[イベントを別のサーバーに転送する]** チェック ボックスをオンにします。  
   
-5.  
-  **[サーバー]** ボックスの一覧でサーバーを選択し、 **[イベント]** で次のいずれかの操作を行います。  
+5.  **[サーバー]** ボックスの一覧でサーバーを選択し、 **[イベント]** で次のいずれかの操作を行います。  
   
     -   ローカルの警告で処理されていないイベントのみを転送する場合は、 **[未処理のイベント]** をクリックします。  
   
     -   ローカルの警告によって処理されたかどうかにかかわらず、すべてのイベントを転送する場合は、 **[すべてのイベント]** をクリックします。  
   
-6.  
-  **[次のレベル以上のイベント発生時]** ボックスの一覧で、選択したサーバーにイベントを転送するときの重大度レベルをクリックします。  
+6.  **[次のレベル以上のイベント発生時]** ボックスの一覧で、選択したサーバーにイベントを転送するときの重大度レベルをクリックします。  
   
-7.  完了したら、 **[OK]** をクリックします。  
+7.  完了したら、[**OK**] をクリックします。  
   
   

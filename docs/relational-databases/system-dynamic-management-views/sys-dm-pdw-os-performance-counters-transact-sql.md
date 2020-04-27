@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 8f275d48131ef7011307f39f38d37a8bfff4ea18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899315"
 ---
 # <a name="sysdm_pdw_os_performance_counters-transact-sql"></a>dm_pdw_os_performance_counters (Transact-sql)
@@ -24,7 +24,7 @@ ms.locfileid: "67899315"
 
   のノードの Windows パフォーマンスカウンターに関する情報が[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]含まれています。  
   
-|列名|データ型|[説明]|Range|  
+|列名|データ型|説明|範囲|  
 |-----------------|---------------|-----------------|-----------|  
 |pdw_node_id|**int**|カウンターを含むノードの ID。<br /><br /> このビューのキーは pdw_node_id と counter_name によって形成されます。|『 [Transact-sql&#41;&#40;dm_pdw_nodes](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)の node_id を参照してください。|  
 |counter_name|**nvarchar(255)**|Windows パフォーマンスカウンターの名前。||  
