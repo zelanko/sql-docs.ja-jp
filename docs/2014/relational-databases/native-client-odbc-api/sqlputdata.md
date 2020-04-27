@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e15353cd9f4c4a837fe5978d00259ad5460d50d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046627"
 ---
 # <a name="sqlputdata"></a>SQLPutData
@@ -31,13 +31,12 @@ ms.locfileid: "63046627"
  を実行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]しているサーバーにブロック内のデータを提供する sqlputdata 呼び出しのシーケンスをキャンセルすると、バージョン6.5 以前を使用しているときに列の値が部分的に更新されます。 SQLCancel `text`が`ntext`呼び出され`image`たときに参照された、、または列は、中間プレースホルダー値に設定されます。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.5 以前のバージョンへの接続をサポートしません。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.5 以前のバージョンへの接続をサポートしません。  
   
 ## <a name="diagnostics"></a>診断  
  SQLPutData [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]には、Native Client 固有の SQLSTATE が1つあります。  
   
-|SQLSTATE|エラー|[説明]|  
+|SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
 |22026|文字列データの長さが合致しません|たとえば SQL_LEN_DATA_AT_EXEC (*n*) を使用して、送信されるデータの長さ (バイト単位) がアプリケーションによって指定されている場合 ( *n*が0を超える場合)、sqlputdata を使用してアプリケーションで指定されたバイト数の合計が、指定された長さと一致している必要があります。|  
   
@@ -62,8 +61,7 @@ ms.locfileid: "63046627"
  詳細については、「[日付と時刻の機能強化 &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)」を参照してください。  
   
 ## <a name="sqlputdata-support-for-large-clr-udts"></a>SQLPutData による大きな CLR UDT のサポート  
- 
-  `SQLPutData` は、大きな CLR ユーザー定義型 (UDT) をサポートしています。 詳細については、「[大容量の CLR ユーザー定義型 &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)」を参照してください。  
+ `SQLPutData` は、大きな CLR ユーザー定義型 (UDT) をサポートしています。 詳細については、「[大容量の CLR ユーザー定義型 &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQLPutData 関数](https://go.microsoft.com/fwlink/?LinkId=59365)   

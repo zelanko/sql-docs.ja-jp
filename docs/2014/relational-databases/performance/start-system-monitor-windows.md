@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: aeb073b7e44060c0382d3d641aa196b93fbb402d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150582"
 ---
 # <a name="start-system-monitor-windows"></a>システム モニターの起動 (Windows)
@@ -26,8 +26,7 @@ ms.locfileid: "63150582"
   
 ### <a name="to-start-system-monitor-in-windows"></a>Windows のシステム モニターを起動するには  
   
-1.  
-  **[スタート]** ボタンをクリックして **[ファイル名を指定して実行]** をクリックします。[ファイル名を指定して実行] ダイアログ ボックスで「 **perfmon** 」と入力し、 **[OK]** をクリックします。  
+1.  **[スタート]** ボタンをクリックして **[ファイル名を指定して実行]** をクリックします。[ファイル名を指定して実行] ダイアログ ボックスで「 **perfmon** 」と入力し、 **[OK]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [システム モニターの実行](../performance-monitor/run-system-monitor.md)  

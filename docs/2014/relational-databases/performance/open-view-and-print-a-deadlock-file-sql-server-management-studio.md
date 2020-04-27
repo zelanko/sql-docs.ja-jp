@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3ac5ac362522bed3102da25bff580e317202e0d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150693"
 ---
 # <a name="open-view-and-print-a-deadlock-file-sql-server-management-studio"></a>デッドロック ファイルを開く、表示、および印刷する方法 (SQL Server Management Studio)
@@ -33,15 +33,13 @@ ms.locfileid: "63150693"
   
 ### <a name="to-print-a-deadlock-file"></a>デッドロック ファイルを印刷するには  
   
-1.  
-  **で** [ファイル] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]メニューの **[開く]** をポイントし、 **[ファイル]** をクリックします。  
+1.  **で** [ファイル] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]メニューの **[開く]** をポイントし、 **[ファイル]** をクリックします。  
   
 2.  **[ファイルを開く]** ダイアログ ボックスで、 **[ファイルの種類]** ボックスの一覧から [SQL デッドロック ファイル] を選択します。 これにより、デッドロック ファイルだけが一覧表示されます。  
   
 3.  印刷するデッドロック ファイルを選択して、 **[開く]** をクリックします。  
   
-4.  
-  **[ファイル]** メニューの **[印刷]** をクリックします。  
+4.  **[ファイル]** メニューの **[印刷]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [デッドロックグラフを保存 &#40;SQL Server プロファイラー&#41;](save-deadlock-graphs-sql-server-profiler.md)  

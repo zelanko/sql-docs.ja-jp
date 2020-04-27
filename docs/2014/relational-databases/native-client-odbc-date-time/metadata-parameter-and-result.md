@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9b4e7650f6b36ddbfb8c06ebe6c9f776cfee5ea0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63032337"
 ---
 # <a name="parameter-and-result-metadata"></a>パラメーターと結果のメタデータ
@@ -40,7 +40,7 @@ ms.locfileid: "63032337"
 |SQL_DESC_TYPE_NAME|`date`|`time`|IRD では `smalldatetime`、IPD では `datetime2`|IRD では `datetime`、IPD では `datetime2`|`datetime2`|datetimeoffset|  
 |SQL_CA_SS_VARIANT_TYPE|SQL_C_TYPE_DATE|SQL_C_TYPE_BINARY|SQL_C_TYPE_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|SQL_C_TYPE_BINARY|  
 |SQL_CA_SS_VARIANT_SQL_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
-|SQL_CA_SS_SERVER_TYPE|該当なし|該当なし|SQL_SS_TYPE_SMALLDATETIME|SQL_SS_TYPE_DATETIME|SQL_SS_TYPE_DEFAULT|該当なし|  
+|SQL_CA_SS_SERVER_TYPE|なし|なし|SQL_SS_TYPE_SMALLDATETIME|SQL_SS_TYPE_DATETIME|SQL_SS_TYPE_DEFAULT|なし|  
   
  値の範囲が連続しない場合があります。 たとえば、"8,10..16" には 9 がありません。 有効桁数が 0 より大きい場合は、小数点が追加されるためです。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "63032337"
   
  SQL_CA_SS_VARIANT_SQL_TYPE は新しい記述子フィールドです。 このフィールドは、アプリケーションで `sqlvariant` (SQL_SSVARIANT) 列とパラメーターに関連付けられた値の型を指定できるようにするために IRD と IPD に追加されました。  
   
- SQL_CA_SS_SERVER_TYPE は新しい IPD 専用フィールドです。このフィールドによって、アプリケーションは SQL_TYPE_TYPETIMESTAMP (または C 型の SQL_C_TYPE_TIMESTAMP を持つ SQL_SS_VARIANT) としてバインドされるパラメーターの値がサーバーに送信される方法を制御できます。 SQLExecute または SQLExecDirect が呼び出されたときに SQL_DESC_CONCISE_TYPE が SQL_TYPE_TIMESTAMP (または SQL_SS_VARIANT で C 型が SQL_C_TYPE_TIMESTAMP) の場合、SQL_CA_SS_SERVER_TYPE の値によって、パラメーター値の表形式のデータストリーム (TDS) の型が決定されます。次に例を示します。  
+ SQL_CA_SS_SERVER_TYPE は新しい IPD 専用フィールドです。このフィールドによって、アプリケーションは SQL_TYPE_TYPETIMESTAMP (または C 型の SQL_C_TYPE_TIMESTAMP を持つ SQL_SS_VARIANT) としてバインドされるパラメーターの値がサーバーに送信される方法を制御できます。 SQLExecute または SQLExecDirect が呼び出されたときに SQL_DESC_CONCISE_TYPE が SQL_TYPE_TIMESTAMP (または SQL_SS_VARIANT で C 型が SQL_C_TYPE_TIMESTAMP) の場合、次のように SQL_CA_SS_SERVER_TYPE の値によって、パラメーター値の表形式のデータストリーム (TDS) の型が決定されます。  
   
 |SQL_CA_SS_SERVER_TYPE の値|SQL_DESC_PRECISION の有効な値|SQL_DESC_LENGTH の有効な値|TDS 型|  
 |----------------------------------------|-------------------------------------------|----------------------------------------|--------------|  

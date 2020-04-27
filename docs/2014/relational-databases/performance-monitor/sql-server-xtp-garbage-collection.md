@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5796cc1184e862b4e8afe42b4fa5f5babe8358dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151031"
 ---
 # <a name="xtp-garbage-collection"></a>XTP Garbage Collection
@@ -22,7 +22,7 @@ ms.locfileid: "63151031"
   
  次の表では、 **XTP ガベージコレクション**カウンターについて説明します。  
   
-|カウンター|[説明]|  
+|カウンター|説明|  
 |-------------|-----------------|  
 |**Dusty corner scan retries/sec (GC-issued)**|ガベージ コレクターによって発行されたダスティ コーナー スウィープ (詳細なクリーンアップ) の実行中に、書き込みの競合が原因で発生したスキャン再試行回数に関する 1 秒あたりの平均です。 これは非常に低レベルのカウンターであり、お客様による使用は想定されていません。|  
 |**Main GC work items/sec**|メイン GC スレッドで処理された作業項目の数です。|  

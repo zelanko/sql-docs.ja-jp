@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3342af1de84e922ce63848c8fdffe5aa30ec309a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150497"
 ---
 # <a name="set-up-a-sql-server-database-alert-windows"></a>SQL Server データベースの警告のセットアップ (Windows)
@@ -26,14 +26,11 @@ ms.locfileid: "63150497"
   
 ### <a name="to-set-up-a-sql-server-database-alert"></a>SQL Server データベースの警告をセットアップするには  
   
-1.  
-  [パフォーマンス] ウィンドウのナビゲーション ツリーで、**[パフォーマンス ログと警告]** を展開します。  
+1.  [パフォーマンス] ウィンドウのナビゲーション ツリーで、 **[パフォーマンス ログと警告]** を展開します。  
   
-2.  
-  **[警告]** を右クリックし、 **[新しい警告の設定]** をクリックします。  
+2.  **[警告]** を右クリックし、 **[新しい警告の設定]** をクリックします。  
   
-3.  
-  **[新しい警告の設定]** ダイアログ ボックスで、新しい警告の名前を入力し、 **[OK]** をクリックします。  
+3.  **[新しい警告の設定]** ダイアログ ボックスで、新しい警告の名前を入力し、 **[OK]** をクリックします。  
   
 4.  新しい警告のダイアログ ボックスの **[全般]** タブで、 **[コメント]** を追加し、 **[追加]** をクリックして警告にカウンターを追加します。  
   
@@ -47,14 +44,11 @@ ms.locfileid: "63150497"
   
      警告は、カウンターの値がしきい値を超えたとき、またはしきい値以下になったときに生成されます。これは **[Over (超過)]** または **[Under (以下)]** のどちらをクリックしたかによって決まります。  
   
-8.  
-  **[Sample data every (データのサンプル間隔)]** ボックスで、サンプリング周期を設定します。  
+8.  **[Sample data every (データのサンプル間隔)]** ボックスで、サンプリング周期を設定します。  
   
-9. 
-  **[アクション]** タブで、警告がトリガーされたときに実行される操作を設定します。  
+9. **[アクション]** タブで、警告がトリガーされたときに実行される操作を設定します。  
   
-10. 
-  **[スケジュール]** タブで、警告スキャンの開始と停止のスケジュールを設定します。  
+10. **[スケジュール]** タブで、警告スキャンの開始と停止のスケジュールを設定します。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server データベース警告の作成](../performance-monitor/create-a-sql-server-database-alert.md)  

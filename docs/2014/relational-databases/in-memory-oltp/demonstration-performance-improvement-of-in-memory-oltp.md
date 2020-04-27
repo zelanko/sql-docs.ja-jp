@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8c9477a318d2cb4f9886d67da8a4f8b5967cc180
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63071787"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>実証: インメモリ OLTP によるパフォーマンスの向上
@@ -187,7 +187,7 @@ SELECT CAST(@timems AS VARCHAR(10)) + ' ms (memory-optimized table with natively
  [メモリ最適化テーブル](memory-optimized-tables.md)   
  [ネイティブコンパイルストアドプロシージャ](natively-compiled-stored-procedures.md)   
  [メモリ最適化テーブルを使用するための要件](requirements-for-using-memory-optimized-tables.md)   
- [CREATE DATABASE &#40;SQL Server Transact-sql&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [Transact-sql&#41;&#40;の ALTER DATABASE の File および Filegroup オプション](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)   
  [プロシージャおよびメモリ最適化テーブルの作成](/sql/t-sql/statements/create-procedure-transact-sql)  
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4cd80e7d999314c549df4ebb5e51aa2a0ca2d3f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63154813"
 ---
 # <a name="group-rows-in-query-results-visual-database-tools"></a>クエリ結果内の行のグループ化 (Visual Database Tools)
@@ -72,10 +72,9 @@ GROUP BY pub_id, type
   
      集計する列に別名が自動的に割り当てられます。 この自動的に割り当てられた別名は、わかりやすい名前に変更することができます。 詳細については、「[列の別名の作成 (Visual Database Tools)](create-column-aliases-visual-database-tools.md)」を参照してください。  
   
-     ![クエリ結果セットに列の別名を追加](../../database-engine/media//dv3w9e3.gif "クエリ結果セットに列の別名を追加")  
+     ![クエリ結果セットへの列の別名の追加](../../database-engine/media//dv3w9e3.gif "クエリ結果セットへの列の別名の追加")  
   
-     
-  **SQL** ペインのステートメントは、次のようになります。  
+     **SQL** ペインのステートメントは、次のようになります。  
   
     ```  
     SELECT   pub_id, SUM(price) AS Totalprice  

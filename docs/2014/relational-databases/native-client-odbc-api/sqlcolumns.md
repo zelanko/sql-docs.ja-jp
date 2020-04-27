@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5815e4f3a0cdd0defb16c613f3d6e9444fdfaac7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63067729"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
@@ -27,16 +27,15 @@ ms.locfileid: "63067729"
 > [!NOTE]  
 >  大きな値型の場合、すべての長さパラメーターが SQL_SS_LENGTH_UNLIMITED という値で返されます。  
   
- 
-  `SQLColumns` は静的サーバー カーソルで実行できます。 更新可能なカーソル (動的カーソルまたはキーセット カーソル) で `SQLColumns` を実行しようとすると、カーソルの種類が変更されていることを示す SQL_SUCCESS_WITH_INFO が返されます。  
+ `SQLColumns` は静的サーバー カーソルで実行できます。 更新可能なカーソル (動的カーソルまたはキーセット カーソル) で `SQLColumns` を実行しようとすると、カーソルの種類が変更されていることを示す SQL_SUCCESS_WITH_INFO が返されます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC ドライバーでは、 *CatalogName*パラメーターに2つの部分で構成される名前を使用して、リンクサーバー上のテーブルに関する情報のレポートをサポートしています。 *Linked_Server_Name Catalog_Name*。  
   
- ODBC 2 の場合。*** *tablename*でワイルドカードを使用し`SQLColumns`ない x アプリケーションは、名前が*tablename*に一致し、現在のユーザーが所有しているテーブルに関する情報を返します。 現在のユーザーが*tablename*パラメーターと一致する名前を持つテーブルを`SQLColumns`所有していない場合、は、テーブル名が*tablename*パラメーターと一致する他のユーザーが所有しているテーブルに関する情報を返します。 ODBC 2 の場合。** ワイルドカードを使用する`SQLColumns` x アプリケーションは、名前が*TableName*に一致するすべてのテーブルを返します。 ODBC 3 の場合。*x*アプリケーション`SQLColumns`は、所有者に関係なく名前が*TableName*に一致するすべてのテーブル、またはワイルドカードを使用するかどうかを返します。  
+ ODBC 2 の場合。*** *tablename*でワイルドカードを使用し`SQLColumns`ない x アプリケーションは、名前が*tablename*に一致し、現在のユーザーが所有しているテーブルに関する情報を返します。 現在のユーザーが*tablename*パラメーターと一致する名前を持つテーブルを`SQLColumns`所有していない場合、は、テーブル名が*tablename*パラメーターと一致する他のユーザーが所有しているテーブルに関する情報を返します。 ODBC 2 の場合。*x*ワイルドカードを使用する`SQLColumns` x アプリケーションは、名前が*TableName*に一致するすべてのテーブルを返します。 ODBC 3 の場合。*x*アプリケーション`SQLColumns`は、所有者に関係なく名前が*TableName*に一致するすべてのテーブル、またはワイルドカードを使用するかどうかを返します。  
   
  次の表は、結果セットによって返される列の一覧です。  
   
-|列名|[説明]|  
+|列名|説明|  
 |-----------------|-----------------|  
 |DATA_TYPE|**VARCHAR (max)** データ型の SQL_VARCHAR、SQL_VARBINARY、または SQL_WVARCHAR を返します。|  
 |TYPE_NAME|**Varchar (max)**、 **varbinary (max)**、および**nvarchar (max)** データ型の "varchar"、"varbinary"、または "nvarchar" を返します。|  
@@ -73,13 +72,12 @@ ms.locfileid: "63067729"
  詳細については、「[日付と時刻の機能強化 &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)」を参照してください。  
   
 ## <a name="sqlcolumns-support-for-large-clr-udts"></a>SQLColumns による大きな CLR UDT のサポート  
- 
-  `SQLColumns` は、大きな CLR ユーザー定義型 (UDT) をサポートしています。 詳細については、「[大容量の CLR ユーザー定義型 &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)」を参照してください。  
+ `SQLColumns` は、大きな CLR ユーザー定義型 (UDT) をサポートしています。 詳細については、「[大容量の CLR ユーザー定義型 &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)」を参照してください。  
   
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>SQLColumns によるスパース列のサポート  
  SQLColumns の結果セットには、次の2つ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の特定の列が追加されています。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |SS_IS_SPARSE|`Smallint`|列がスパース列の場合は SQL_TRUE、それ以外の場合は SQL_FALSE になります。|  
 |SS_IS_COLUMN_SET|`Smallint`|列が `column_set` 列の場合は SQL_TRUE、それ以外の場合は SQL_FALSE になります。|  

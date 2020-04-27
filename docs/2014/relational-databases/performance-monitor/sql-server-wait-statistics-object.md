@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 28e7ee81273d47e285b9903575bdc40ccededbb5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151019"
 ---
 # <a name="sql-server-wait-statistics-object"></a>SQL Server: Wait Statistics オブジェクト
@@ -25,7 +25,7 @@ ms.locfileid: "63151019"
   
  Wait Statistics オブジェクトに含まれるカウンターを次の表に示します。  
   
-|SQL Server Wait Statistics カウンター|[説明]|  
+|SQL Server Wait Statistics カウンター|説明|  
 |-----------------------------------------|-----------------|  
 |**Lock waits**|ロックを待機しているプロセスの統計。|  
 |**Log buffer waits**|ログ バッファーが使用可能になるのを待機しているプロセスの統計。|  
@@ -42,7 +42,7 @@ ms.locfileid: "63151019"
   
  オブジェクトの各カウンターには、次のインスタンスが含まれています。  
   
-|アイテム|[説明]|  
+|アイテム|説明|  
 |----------|-----------------|  
 |**平均待機時間 (ミリ秒)**|選択した待機の種類の平均時間。|  
 |**1 秒あたりの累積待機時間 (ミリ秒)**|選択した待機の種類の 1 秒あたりに集計された待機時間。|  

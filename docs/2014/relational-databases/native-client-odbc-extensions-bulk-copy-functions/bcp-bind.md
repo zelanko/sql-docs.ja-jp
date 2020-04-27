@@ -19,14 +19,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 711c82bb627ca9ad1620cf1e11fdbc9dfa5f4351
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63140565"
 ---
 # <a name="bcp_bind"></a>bcp_bind
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に一括コピーするために、プログラム変数からテーブル列にデータをバインドします。  
   
 ## <a name="syntax"></a>構文  
@@ -126,8 +125,7 @@ bcp_bind(hdbc, szName, 0,
    sizeof(WCHAR), SQLNCHAR, 2)  
 ```  
   
- バインド[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]された列がワイド文字の場合、 [bcp_sendrow](bcp-sendrow.md)に対して変換は実行されません。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列が MBCS 文字型の場合、データが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に送信されるときに、ワイド文字がマルチバイト文字に変換されます。  
+ バインド[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]された列がワイド文字の場合、 [bcp_sendrow](bcp-sendrow.md)に対して変換は実行されません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列が MBCS 文字型の場合、データが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に送信されるときに、ワイド文字がマルチバイト文字に変換されます。  
   
  *cbTerm*  
  プログラム変数にターミネータがある場合は、そのターミネータを構成するバイト数です。 変数にターミネータがない場合は、 *Cbterm*を0に設定します。  
@@ -145,12 +143,12 @@ bcp_bind(hdbc, szName, 0,
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL。  
   
-## <a name="remarks"></a>解説  
- プログラム**** 変数からの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブルにデータをコピーする高速で効率的な方法には、bcp_bind を使用します。  
+## <a name="remarks"></a>Remarks  
+ プログラム**bcp_bind**変数からの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブルにデータをコピーする高速で効率的な方法には、bcp_bind を使用します。  
   
  このまたはその他の一括コピー関数を呼び出す前に[bcp_init](bcp-init.md)を呼び出してください。 **Bcp_init**を呼び出す[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と、一括コピーの対象テーブルが設定されます。 **Bcp_bind**と[bcp_sendrow](bcp-sendrow.md)で使用するために**bcp_init**を呼び出すと、データファイルを示す**BCP_INIT**の_szdatafile_ファイルパラメーターが NULL に設定されます。**bcp_init**_edirection_パラメーターが DB_IN に設定されています。  
   
- コピー先の**** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブル内のすべての列に対して、個別の bcp_bind 呼び出しを作成します。 必要な**bcp_bind**の呼び出しが行われたら、 **bcp_sendrow**を呼び出して、プログラム変数からに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ行を送信します。 列の再バインドはサポートされていません。  
+ コピー先の**bcp_bind** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブル内のすべての列に対して、個別の bcp_bind 呼び出しを作成します。 必要な**bcp_bind**の呼び出しが行われたら、 **bcp_sendrow**を呼び出して、プログラム変数からに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ行を送信します。 列の再バインドはサポートされていません。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]既に受信した行をコミットする場合は常に、 [bcp_batch](bcp-batch.md)を呼び出します。 たとえば、1000行が挿入されるたびに、またはその他の間隔で1回**bcp_batch**を呼び出します。  
   

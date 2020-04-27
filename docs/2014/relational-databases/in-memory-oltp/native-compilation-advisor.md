@@ -14,33 +14,29 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5174b5c859fa76ceeccdb99b7a46f510fd62d923
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63072771"
 ---
 # <a name="native-compilation-advisor"></a>ネイティブ コンパイル アドバイザー
   トランザクションパフォーマンスレポートツール (「[テーブルまたはストアドプロシージャをインメモリ OLTP に移植する必要](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)があるかどうかを判断する」を参照) は、ネイティブコンパイルを使用するように移植した場合にメリットが得られる、データベース内の解釈されたストアドプロシージャについて通知します。 ネイティブ コンパイルを使用するように移植するストアド プロシージャを特定した後に、ネイティブ コンパイル アドバイザーを使用すると、解釈されたストアド プロシージャをネイティブ コンパイルに移行する際に役立ちます。 ネイティブ コンパイル ストアド プロシージャの詳細については、「 [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md)」をご覧ください。  
   
- まず、解釈されたストアド プロシージャが格納されているインスタンスに接続します。 
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] のインスタンスに接続できます。 ただし、アドバイザーを使用して移行操作を実行する場合は、インメモリ OLTP 機能が有効になっている [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] インスタンスに接続する必要があります。 インメモリ OLTP の要件の詳細については、「 [Requirements for Using Memory-Optimized Tables](memory-optimized-tables.md)」を参照してください。  
+ まず、解釈されたストアド プロシージャが格納されているインスタンスに接続します。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] のインスタンスに接続できます。 ただし、アドバイザーを使用して移行操作を実行する場合は、インメモリ OLTP 機能が有効になっている [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] インスタンスに接続する必要があります。 インメモリ OLTP の要件の詳細については、「 [Requirements for Using Memory-Optimized Tables](memory-optimized-tables.md)」を参照してください。  
   
- 移行方法については、「[In-Memory OLTP - Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx)」(インメモリ OLTP - 一般的なワークロード パターンと移行に関する考慮事項) を参照してください。  
+ 移行方法の詳細については、「[インメモリ OLTP-一般的なワークロードパターンと移行に関する考慮事項](https://msdn.microsoft.com/library/dn673538.aspx)」を参照してください。  
   
 ## <a name="walkthrough-using-the-native-compilation-advisor"></a>ネイティブ コンパイル アドバイザーの使用に関するチュートリアル  
- 
-  **オブジェクト エクスプローラー**で、変換するストアド プロシージャを右クリックし、 **[ネイティブ コンパイル アドバイザー]** をクリックします。 これにより、 **[ストアド プロシージャのネイティブ コンパイル アドバイザー]** のようこそページが表示されます。 
-  **[次へ]** をクリックして、続行します。  
+ **オブジェクト エクスプローラー**で、変換するストアド プロシージャを右クリックし、 **[ネイティブ コンパイル アドバイザー]** をクリックします。 これにより、 **[ストアド プロシージャのネイティブ コンパイル アドバイザー]** のようこそページが表示されます。 **[次へ]** をクリックして、続行します。  
   
 ### <a name="stored-procedure-validation"></a>[ストアド プロシージャの検証]  
- このページでは、ストアド プロシージャでネイティブ コンパイルと互換性のない構造が使用されているかどうかがレポートされます。 
-  **[次へ]** をクリックすると、詳細を表示できます。 ネイティブ コンパイルと互換性のない構造がある場合は、 **[次へ]** をクリックすると、詳細を表示できます。  
+ このページでは、ストアド プロシージャでネイティブ コンパイルと互換性のない構造が使用されているかどうかがレポートされます。 **[次へ]** をクリックすると、詳細を表示できます。 ネイティブ コンパイルと互換性のない構造がある場合は、 **[次へ]** をクリックすると、詳細を表示できます。  
   
 ### <a name="stored-procedure-validation-result"></a>[ストアド プロシージャの検証結果]  
  ネイティブ コンパイルと互換性のない構造がある場合は、 **[ストアド プロシージャの検証結果]** ページに詳細が表示されます。 レポートを生成 ( **[レポートの生成]** をクリック) し、 **ネイティブ コンパイル アドバイザー**を終了して、ネイティブ コンパイルと互換性があるようにコードを更新できます。  
   
-## <a name="code-sample"></a>サンプル コード  
+## <a name="code-sample"></a>コード サンプル  
  次のサンプルは、解釈されたストアド プロシージャと、ネイティブ コンパイルに対する同等のストアド プロシージャを示しています。 次のサンプルでは、c:\data というディレクトリがあることを前提にしています。  
   
 ```sql  

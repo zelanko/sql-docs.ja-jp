@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7bcc8cdc62616dd26eb714b78ad07296a794b55f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63050968"
 ---
 # <a name="spcompleted-event-class"></a>SP:Completed イベント クラス
@@ -26,10 +26,9 @@ ms.locfileid: "63050968"
   
 ## <a name="spcompleted-event-class-data-columns"></a>SP:Completed イベント クラスのデータ列  
   
-|データ列名|データ型|[説明]|列 ID|フィルターの適用|  
+|データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|ApplicationName|`nvarchar`|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
+|ApplicationName|`nvarchar`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |ClientProcessID|`int`|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターが割り当てた ID。 クライアントによりクライアント プロセス ID が指定されると、このデータ列に値が格納されます。|9|はい|  
 |DatabaseID|`int`|ストアド プロシージャが実行されているデータベースの ID。 データベースに対応する値は、DB_ID 関数を使用して特定します。|3|はい|  
 |DatabaseName|`nvarchar`|ストアド プロシージャが実行されているデータベースの名前。|35|はい|  
@@ -56,12 +55,12 @@ ms.locfileid: "63050968"
 |SourceDatabaseID|`int`|オブジェクトが存在するデータベースの ID。|62|はい|  
 |SPID|`int`|イベントが発生したセッションの ID。|12|はい|  
 |StartTime|`datetime`|イベントの開始時刻 (取得できた場合)。|14|はい|  
-|TextData|`ntext`|ストアド プロシージャ呼び出しのテキスト。|1 で保護されたプロセスとして起動されました|はい|  
+|TextData|`ntext`|ストアド プロシージャ呼び出しのテキスト。|1|はい|  
 |TransactionID|`bigint`|システムによって割り当てられたトランザクション ID。|4|はい|  
 |XactSequence|`bigint`|現在のトランザクションを説明するトークン。|50|はい|  
   
 ## <a name="see-also"></a>参照  
  [拡張イベント](../extended-events/extended-events.md)   
- [sp_trace_setevent &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
+ [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

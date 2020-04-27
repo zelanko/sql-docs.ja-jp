@@ -13,24 +13,23 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 296cdebc8a7a290cf8cdd848359ad776fa290c30
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63057763"
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-general-page"></a>[新しい条件の作成] または [条件を開く] ダイアログ ボックスの [全般] ページ
-  このダイアログ ボックスを使用すると、ポリシー ベースの管理条件を作成または変更できます。 条件とは、ポリシー ベースの管理で管理する対象に許可されている状態のセットをファセットについて指定するブール式です。 
-  **[式]/[フィールド]** ボックスで選択できるプロパティは、使用するファセットによって異なります。 条件と各ファセットおよびポリシーとの関係の詳細については、「 [ポリシー ベースの管理を使用したサーバーの管理](administer-servers-by-using-policy-based-management.md)」を参照してください。  
+  このダイアログ ボックスを使用すると、ポリシー ベースの管理条件を作成または変更できます。 条件とは、ポリシー ベースの管理で管理する対象に許可されている状態のセットをファセットについて指定するブール式です。 **[式]/[フィールド]** ボックスで選択できるプロパティは、使用するファセットによって異なります。 条件と各ファセットおよびポリシーとの関係の詳細については、「 [ポリシー ベースの管理を使用したサーバーの管理](administer-servers-by-using-policy-based-management.md)」を参照してください。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **名前**  
  新しい条件の場合は、新しい条件名を入力します。 既存の条件の場合は、その名前が表示されます。  
   
  **面し**  
  この条件で使用されるファセット。  
   
- **AndOr**  
+ **[AndOr]**  
  複数の式を追加する場合は、 **And** または **Or**を使用して式を結合するかどうかを指定します。 式が 1 つだけしかない場合は空白になります。  
   
  **フィールド**  

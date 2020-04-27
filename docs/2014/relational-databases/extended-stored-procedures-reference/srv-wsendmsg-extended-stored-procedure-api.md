@@ -21,17 +21,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 18b166472cff011b3766645dde61f562c766ff2c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63140455"
 ---
 # <a name="srv_wsendmsg-extended-stored-procedure-api"></a>srv_wsendmsg (拡張ストアド プロシージャ API)
     
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
   
  クライアントに Unicode メッセージを送信します。  
   
@@ -60,29 +59,26 @@ msglen
  *Msgnum*  
  4 バイトのメッセージ番号です。  
   
- *重大度*  
+ *Severity*  
  エラーの重大度を指定します。 重大度が 10 以下の場合は情報メッセージと見なされ、10 より大きい場合はエラー メッセージと見なされます。  
   
- *メッセージ*  
+ *message*  
  クライアントに送信される Unicode 文字列を指すポインターです。  
   
  *msglen*  
- 
-  *message* の長さを文字数で指定します。  
+ *message* の長さを文字数で指定します。  
   
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この関数は、Unicode でメッセージを送信するために使用します。 この関数は **srv_sendmsg** と似ていますが、送信されるメッセージは DBCHAR 型ではなく WCHAR 型の文字列です。 メッセージの長さはバイト数ではなく文字数で報告され、*msglen* が SRV_NULLTERM とは等しくならないことに注意してください。  
   
  次の場合、この関数は FAIL を返します。  
   
--   
-  *msglen* が 0 から 32242 の範囲内にない場合。  
+-   *msglen* が 0 から 32242 の範囲内にない場合。  
   
--   
-  *msglen* が 0 で、メッセージ ポインターが NULL の場合。  
+-   *msglen* が 0 で、メッセージ ポインターが NULL の場合。  
   
 -   ネットワーク経由でエラー メッセージを送信するときにエラーが発生した場合。  
   
@@ -90,6 +86,6 @@ msglen
 >  拡張ストアド プロシージャのソース コードを十分に確認し、コンパイル済み DLL を、運用サーバーにインストールする前にテストする必要があります。 セキュリティの確認およびテストについて詳しくは、[Microsoft の Web サイト](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)をご覧ください。  
   
 ## <a name="see-also"></a>参照  
- [srv_sendmsg &#40;拡張ストアドプロシージャ API&#41;](srv-sendmsg-extended-stored-procedure-api.md)  
+ [srv_sendmsg &#40;拡張ストアド プロシージャ API&#41;](srv-sendmsg-extended-stored-procedure-api.md)  
   
   

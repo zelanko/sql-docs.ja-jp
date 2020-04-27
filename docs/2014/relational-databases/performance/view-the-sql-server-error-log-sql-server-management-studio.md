@@ -17,14 +17,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 494b57b50115b5ed3cf5089448215b89e9422ccb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150449"
 ---
 # <a name="view-the-sql-server-error-log-sql-server-management-studio"></a>SQL Server エラー ログの表示 (SQL Server Management Studio)
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログには、ユーザー定義のイベントや特定のシステム イベントが含まれています。 このエラー ログを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に関連する問題のトラブルシューティングを行うことができます。  
   
 ### <a name="to-view-the-sql-server-error-log"></a>SQL Server エラー ログを表示するには  

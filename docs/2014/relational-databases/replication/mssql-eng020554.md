@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 744ab7a10db83cffa098bc97aa0ceb2c615481fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63057122"
 ---
 # <a name="mssql_eng020554"></a>MSSQL_ENG020554
@@ -60,17 +60,15 @@ ms.locfileid: "63057122"
   
      場合によっては、エージェントの処理時間が短くなるように、アプリケーションを再設計する必要があります。  
   
-     
-  **[ジョブのプロパティ]** ダイアログ ボックスを使用してエージェントの状態を確認する間隔を長くすることができます。 レプリケーションジョブのこのダイアログボックスへのアクセスの詳細については、「[レプリケーションモニターを使用して情報を表示し、タスクを実行する](monitor/view-information-and-perform-tasks-replication-monitor.md)」を参照してください。  
+     **[ジョブのプロパティ]** ダイアログ ボックスを使用してエージェントの状態を確認する間隔を長くすることができます。 レプリケーションジョブのこのダイアログボックスへのアクセスの詳細については、「[レプリケーションモニターを使用して情報を表示し、タスクを実行する](monitor/view-information-and-perform-tasks-replication-monitor.md)」を参照してください。  
   
 -   エージェントがトポロジ内のコンピューターのいずれにもログインできない場合には、次の操作を実行します。  
   
-     
-  **-LoginTimeOut** の値を、レプリケーション エージェントの検査ジョブを実行する間隔よりも低い値に設定することをお勧めします。 場合によっては、ログインがタイムアウトする原因となるネットワークの問題により、 **-logintimeout**の値が高く設定されていることがあります。**-Logintimeout**が低に設定されている場合は、レプリケーションにより具体的なエラーが報告されるため、アクセス許可、ネットワークの問題、またはその他の問題によって発生する可能性のあるログインの問題をトラブルシューティングできます。 エージェント パラメーターは、エージェント プロファイルおよびコマンド ラインで指定できます。 詳細については、次を参照してください。  
+     **-LoginTimeOut** の値を、レプリケーション エージェントの検査ジョブを実行する間隔よりも低い値に設定することをお勧めします。 場合によっては、ログインがタイムアウトする原因となるネットワークの問題により、 **-logintimeout**の値が高く設定されていることがあります。**-Logintimeout**が低に設定されている場合は、レプリケーションにより具体的なエラーが報告されるため、アクセス許可、ネットワークの問題、またはその他の問題によって発生する可能性のあるログインの問題をトラブルシューティングできます。 エージェント パラメーターは、エージェント プロファイルおよびコマンド ラインで指定できます。 詳細については、次を参照してください。  
   
-    -   [レプリケーション エージェント プロファイルを操作する](agents/replication-agent-profiles.md)  
+    -   [レプリケーション エージェント プロファイルの操作](agents/replication-agent-profiles.md)  
   
-    -   [レプリケーションエージェントコマンドプロンプトパラメーターを表示および変更する &#40;SQL Server Management Studio&#41;](agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
+    -   [レプリケーション エージェント コマンド プロンプト パラメーターを表示および変更する &#40;SQL Server Management Studio&#41;](agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
     -   [レプリケーションエージェント実行可能ファイルの概念](concepts/replication-agent-executables-concepts.md)。  
   
@@ -81,6 +79,6 @@ ms.locfileid: "63057122"
  [レプリケーションログリーダーエージェント](agents/replication-log-reader-agent.md)   
  [レプリケーションマージエージェント](agents/replication-merge-agent.md)   
  [レプリケーションキューリーダーエージェント](agents/replication-queue-reader-agent.md)   
- [レプリケーションスナップショットエージェント](agents/replication-snapshot-agent.md)  
+ [レプリケーション スナップショット エージェント](agents/replication-snapshot-agent.md)  
   
   

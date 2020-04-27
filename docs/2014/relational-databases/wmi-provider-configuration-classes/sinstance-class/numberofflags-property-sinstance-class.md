@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6fe7d2bf1ef6b8932704242e94c377a2b11c0619
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63137242"
 ---
 # <a name="numberofflags-property-sinstance-class"></a>NumberOfFlags プロパティ (SInstance クラス)
@@ -37,14 +37,13 @@ object
 ```  
   
 ## <a name="parts"></a>要素  
- *素材*  
+ *object*  
  サーバーインスタンスを表す[Sinstance クラス](sinstance-class.md)オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
- 
-  `uint32` のインスタンスに対応するフラグの数を指定する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 値。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに対応するフラグの数を指定する `uint32` 値。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>参照  
  [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

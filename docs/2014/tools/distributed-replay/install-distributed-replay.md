@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 67d74db6faf9b40ad323ed2948c2c0a596a63016
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63149722"
 ---
 # <a name="install-distributed-replay-from-the-command-prompt"></a>コマンド プロンプトからの 分散再生のインストール
@@ -37,27 +37,27 @@ ms.locfileid: "63149722"
   
  次の表に示すパラメーターは、インストール用のコマンド ライン スクリプトを作成する場合に使用します。  
   
-|パラメーター|[説明]|サポートされる値|  
+|パラメーター|説明|サポートされる値|  
 |---------------|-----------------|----------------------|  
 |/CTLRSVCACCOUNT<br /><br /> **省略可能**|分散再生コントローラー サービスのサービス アカウント。|アカウントとパスワードのチェック|  
 |/CTLRSVCPASSWORD<br /><br /> **省略可能**|分散再生コントローラー のサービス アカウントのパスワード。|アカウントとパスワードのチェック|  
-|/CTLRSTARTUPTYPE<br /><br /> **省略可能**|分散再生コントローラー サービスのスタートアップの種類。|自動<br /><br /> 無効<br /><br /> マニュアル|  
-|/CTLRUSERS<br /><br /> **省略可能**|分散再生コントローラー サービスの権限を持つユーザーを指定します。|区切り記号に " " (スペース) を使用した、一連のユーザー アカウント文字列<br /><br /> **重要**: 分散再生コントローラーサービスを構成するときに、分散再生クライアントサービスを実行するために使用される1つ以上のユーザーアカウントを指定できます。 サポートされているアカウントの一覧を次に示します。<br /><br /> ドメイン ユーザー アカウント<br /><br /> ユーザーによって作成されたローカル ユーザー アカウント<br /><br /> 管理者<br /><br /> 仮想アカウントおよび管理されたサービス アカウント (MSA)<br /><br /> ネットワーク サービス、ローカル サービス、およびシステム<br /><br /> <br /><br /> グループ アカウント (ローカルまたはドメイン) およびその他の組み込みのアカウント (Everyone など) は使用できません。|  
+|/CTLRSTARTUPTYPE<br /><br /> **省略可能**|分散再生コントローラー サービスのスタートアップの種類。|自動<br /><br /> 無効<br /><br /> 手動|  
+|/CTLRUSERS<br /><br /> **省略可能**|分散再生コントローラー サービスの権限を持つユーザーを指定します。|区切り記号に " " (スペース) を使用した、一連のユーザー アカウント文字列<br /><br /> **重要**: 分散再生コントローラー サービスを構成するとき、分散再生クライアント サービスの実行に使用する 1 つ以上のユーザー アカウントを指定できます。 サポートされているアカウントの一覧を次に示します。<br /><br /> ドメイン ユーザー アカウント<br /><br /> ユーザーによって作成されたローカル ユーザー アカウント<br /><br /> Administrator<br /><br /> 仮想アカウントおよび管理されたサービス アカウント (MSA)<br /><br /> ネットワーク サービス、ローカル サービス、およびシステム<br /><br /> <br /><br /> グループ アカウント (ローカルまたはドメイン) およびその他の組み込みのアカウント (Everyone など) は使用できません。|  
 |/CLTSVCACCOUNT<br /><br /> **省略可能**|分散再生クライアント サービスのサービス アカウント。|アカウントとパスワードのチェック|  
 |/CLTSVCPASSWORD<br /><br /> **省略可能**|分散再生クライアント のサービス アカウントのパスワード。|アカウントとパスワードのチェック|  
-|/CLTSTARTUPTYPE<br /><br /> **省略可能**|分散再生クライアント サービスのスタートアップの種類。|自動<br /><br /> 無効<br /><br /> マニュアル|  
+|/CLTSTARTUPTYPE<br /><br /> **省略可能**|分散再生クライアント サービスのスタートアップの種類。|自動<br /><br /> 無効<br /><br /> 手動|  
 |/CLTCTLRNAME<br /><br /> **省略可能**|分散再生クライアント サービスと通信するクライアントのコンピューター名です。||  
 |/CLTWORKINGDIR<br /><br /> **省略可能**|分散再生クライアント サービス用の作業ディレクトリです。|有効なパス|  
 |/CLTRESULTDIR<br /><br /> **省略可能**|分散再生クライアント サービス用の結果ディレクトリです。|有効なパス|  
   
-### <a name="sample-syntax"></a>サンプル構文:   
- **分散再生コントローラーコンポーネントをインストールするには**  
+### <a name="sample-syntax"></a>サンプル構文:  
+ **分散再生コントローラー コンポーネントをインストールする場合**  
   
 ```  
 setup /q /ACTION=Install /FEATURES=DREPLAY_CTLR /IAcceptSQLServerLicenseTerms /CTLRUSERS="domain\user1" "domain\user2" /CTLRSVCACCOUNT="domain\svcuser" /CTLRSVCPASSWORD="password" /CTLRSTARTUPTYPE=Automatic  
 ```  
   
- **分散再生クライアントコンポーネントをインストールするには**  
+ **分散再生クライアント コンポーネントをインストールする場合**  
   
 ```  
 setup /q /ACTION=Install /FEATURES=DREPLAY_CLT /IAcceptSQLServerLicenseTerms /CLTSVCACCOUNT="domain\svcuser" /CLTSVCPASSWORD="password" /CLTSTARTUPTYPE=Automatic /CLTCTLRNAME=ControllerMachineName /CLTWORKINGDIR="C:\WorkingDir" /CLTRESULTDIR="C:\ResultDir  

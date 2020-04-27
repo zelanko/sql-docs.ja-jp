@@ -15,14 +15,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 22d560c8a65d5b9a7cebc4062ddd2d1ce936d5a2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63067748"
 ---
 # <a name="sqldriverconnect"></a>SQLDriverConnect
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、接続文字列のキーワードを置き換えたり、拡張したりするための接続属性を定義します。 接続文字列のいくつかのキーワードには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーが指定する既定値があります。  
   
  Native Client ODBC ドライバーで使用できるキーワードの一覧については、「 [SQL Server Native Client での接続文字列キーワードの使用](../native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
@@ -59,7 +58,7 @@ ms.locfileid: "63067748"
   
  Spn の詳細については、「[クライアント接続 &#40;ODBC&#41;のサービスプリンシパル名 &#40;spn&#41; ](../native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)」を参照してください。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の呼び出しは、に`SQLDriverConnect`必要なデータ量の最小値を示しています。  
   
 ```  
@@ -83,6 +82,6 @@ SQLDriverConnect(hdbc, hwnd,
  [ODBC API の実装の詳細](odbc-api-implementation-details.md)   
  [SET ANSI_NULLS &#40;Transact-sql&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
  [SET ANSI_PADDING &#40;Transact-sql&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)   
- [SET ANSI_WARNINGS &#40;Transact-sql&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql)  
+ [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql)  
   
   

@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ab8db976275a60cfbf1e0afb78457afad18fc366
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63012258"
 ---
 # <a name="accessing-the-soap-api"></a>SOAP API へのアクセス
@@ -34,14 +34,12 @@ ms.locfileid: "63012258"
 ## <a name="referencing-the-reporting-services-wsdl"></a>Reporting Services WSDL の参照  
  Web サービスを正常に呼び出すには、サービスへのアクセス方法、サービスがサポートする操作、サービスが想定するパラメーター、およびサービスが返すものを知っておく必要があります。 WSDL は、コンピューターで読み取り、処理できる XML ドキュメントでこのような情報を提供します。  
   
- レポート サーバー Web サービスは、3 つの異なるエンドポイントで公開されます。 WSDL ファイルの名前は、エンドポイントごとに異なります。 
-  <xref:ReportService2010> エンドポイントには、ネイティブ モードまたは SharePoint 統合モードでレポート サーバーのオブジェクトを管理するためのメソッドが含まれています。 このエンドポイントの WSDL には、`ReportService2010.asmx?wsdl.` を通してアクセスします。  
+ レポート サーバー Web サービスは、3 つの異なるエンドポイントで公開されます。 WSDL ファイルの名前は、エンドポイントごとに異なります。 <xref:ReportService2010> エンドポイントには、ネイティブ モードまたは SharePoint 統合モードでレポート サーバーのオブジェクトを管理するためのメソッドが含まれています。 このエンドポイントの WSDL には、`ReportService2010.asmx?wsdl.` を通してアクセスします。  
   
 > [!NOTE]  
->  <xref:ReportService2005> では、<xref:ReportService2006> エンドポイントと [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] エンドポイントは非推奨です。 <xref:ReportService2010> エンドポイントには、両方のエンドポイントの機能と追加の管理機能が含まれています。  
+>  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] では、<xref:ReportService2005> エンドポイントと <xref:ReportService2006> エンドポイントは非推奨です。 <xref:ReportService2010> エンドポイントには、両方のエンドポイントの機能と追加の管理機能が含まれています。  
   
--   
-  <xref:ReportExecution2005> エンドポイントでは、開発者がレポート サーバーのレポートをプログラムによって処理および表示できます。 このエンドポイントの WSDL には、`ReportExecution2005.asmx?wsdl` を通してアクセスします。  
+-   <xref:ReportExecution2005> エンドポイントでは、開発者がレポート サーバーのレポートをプログラムによって処理および表示できます。 このエンドポイントの WSDL には、`ReportExecution2005.asmx?wsdl` を通してアクセスします。  
   
  WSDL は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK などの SOAP および Web サービスをサポートする開発キットによって使用できます。  
   
@@ -53,7 +51,7 @@ http://server/reportserver/ReportService2010.asmx?wsdl
   
  次の表では、URL の各要素を説明します。  
   
-|URL の要素|[説明]|  
+|URL の要素|説明|  
 |-----------------|-----------------|  
 |*server*|レポート サーバーが配置されているサーバーの名前。|  
 |*reportserver*|XML Web サービスを含むフォルダーの名前。 これはセットアップ中に構成されます。|  

@@ -11,16 +11,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f53c456832e89aa96c0f7c9a1decd9fabbe96360
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151579"
 ---
 # <a name="administration-tool-command-line-options-distributed-replay-utility"></a>管理ツール コマンド ライン オプション (Distributed Replay Utility)
   分散再生管理ツール`DReplay.exe`は、分散再生コントローラーとの通信に使用できるコマンドラインツールです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理ツールを使用して、コントローラー上の操作を開始、監視、取り消しできます。  
   
- ![トピックリンクアイコン](../../database-engine/media/topic-link.gif "トピック リンク アイコン")管理ツールの構文で使用される構文表記規則の詳細については、「transact-sql[構文表記規則 &#40;transact-sql&#41;](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql)」を参照してください。  
+ ![トピック リンク アイコン](../../database-engine/media/topic-link.gif "トピック リンク アイコン") 管理ツールの構文で使用される構文表記規則の詳細については、「[Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql)」を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,30 +43,29 @@ Usage:
 ```  
   
 ## <a name="remarks"></a>解説  
- 
-  `DReplay.exe` では、次のコマンド ライン オプションを発行することができます。  
+ `DReplay.exe` では、次のコマンド ライン オプションを発行することができます。  
   
- **在庫**  
+ **preprocess**  
  前処理段階を開始します。 コントローラーは、ターゲット サーバーに対する再生のために、運用環境からキャプチャした入力トレース データの準備を行います。  
   
- **反射**  
+ **再生 (replay)**  
  イベント再生段階を開始します。 コントローラーは、指定されたクライアントに再生データをディスパッチし、分散再生を開始して、クライアントを同期します。 必要に応じて、選択された各クライアントは、再生アクティビティを記録し、結果トレース ファイルをローカルに保存します。  
   
- **オンライン**  
+ **status**  
  コントローラーにクエリし、現在の状態を表示します。  
   
- **キャンセル**  
+ **cancel**  
  コントローラーで実行されている現在の操作を取り消します。  
   
  コマンドの引数や例などの構文情報の詳細については、次のトピックを参照してください。  
   
--   [前処理オプション &#40;分散再生管理ツール&#41;](preprocess-option-distributed-replay-administration-tool.md)  
+-   [前処理オプション &#40;Distributed Replay 管理ツール&#41;](preprocess-option-distributed-replay-administration-tool.md)  
   
--   [再生オプション &#40;分散再生管理ツール&#41;](replay-option-distributed-replay-administration-tool.md)  
+-   [replay オプション &#40;Distributed Replay 管理ツール&#41;](replay-option-distributed-replay-administration-tool.md)  
   
--   [[状態] オプション &#40;分散再生管理ツール&#41;](status-option-distributed-replay-administration-tool.md)  
+-   [status オプション &#40;Distributed Replay 管理ツール&#41;](status-option-distributed-replay-administration-tool.md)  
   
--   [[キャンセル] オプション &#40;分散再生管理ツール&#41;](cancel-option-distributed-replay-administration-tool.md)  
+-   [cancel オプション &#40;Distributed Replay 管理ツール&#41;](cancel-option-distributed-replay-administration-tool.md)  
   
  RPC は、言語イベントとしてではなく RPC として再生されます。  
   

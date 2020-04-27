@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de5f805a9d722974adf7975f713436bc7b1ca4d0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63155150"
 ---
 # <a name="supported-data-types"></a>サポートされるデータ型
@@ -24,48 +24,48 @@ ms.locfileid: "63155150"
   
 |データ型|詳細情報|  
 |---------------|--------------------------|  
-|INT|[int、bigint、smallint、および tinyint &#40;Transact-sql&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)|  
-|bigint|[int、bigint、smallint、および tinyint &#40;Transact-sql&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)|  
-|smallint|[int、bigint、smallint、および tinyint &#40;Transact-sql&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)|  
-|tinyint|[int、bigint、smallint、および tinyint &#40;Transact-sql&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)|  
-|decimal|[decimal および numeric &#40;Transact-sql&#41;](/sql/t-sql/data-types/decimal-and-numeric-transact-sql)|  
-|numeric|[decimal および numeric &#40;Transact-sql&#41;](/sql/t-sql/data-types/decimal-and-numeric-transact-sql)|  
-|float|[Transact-sql&#41;の float 型と real 型の &#40;](/sql/t-sql/data-types/float-and-real-transact-sql)|  
-|real|[Transact-sql&#41;の float 型と real 型の &#40;](/sql/t-sql/data-types/float-and-real-transact-sql)|  
-|money|[money と smallmoney &#40;Transact-sql&#41;](/sql/t-sql/data-types/money-and-smallmoney-transact-sql)|  
-|smallmoney|[money と smallmoney &#40;Transact-sql&#41;](/sql/t-sql/data-types/money-and-smallmoney-transact-sql)|  
+|int|[int、bigint、smallint、tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)|  
+|bigint|[int、bigint、smallint、tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)|  
+|smallint|[int、bigint、smallint、tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)|  
+|tinyint|[int、bigint、smallint、tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)|  
+|decimal|[decimal 型と numeric 型 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/decimal-and-numeric-transact-sql)|  
+|numeric|[decimal 型と numeric 型 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/decimal-and-numeric-transact-sql)|  
+|float|[float と real &#40;Transact-SQL&#41;](/sql/t-sql/data-types/float-and-real-transact-sql)|  
+|real|[float と real &#40;Transact-SQL&#41;](/sql/t-sql/data-types/float-and-real-transact-sql)|  
+|money|[money および smallmoney &#40;Transact-SQL&#41;](/sql/t-sql/data-types/money-and-smallmoney-transact-sql)|  
+|smallmoney|[money および smallmoney &#40;Transact-SQL&#41;](/sql/t-sql/data-types/money-and-smallmoney-transact-sql)|  
   
  **文字列データ型**  
   
 |データ型|詳細情報|  
 |---------------|--------------------------|  
-|char(n)|[char および varchar &#40;Transact-sql&#41;](/sql/t-sql/data-types/char-and-varchar-transact-sql)|  
-|varchar (n) <sup>1</sup>|[char および varchar &#40;Transact-sql&#41;](/sql/t-sql/data-types/char-and-varchar-transact-sql)|  
-|nchar(n)|[nchar および nvarchar &#40;Transact-sql&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
-|nvarchar (n) <sup>1</sup>|[nchar および nvarchar &#40;Transact-sql&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
-|sysname|[nchar および nvarchar &#40;Transact-sql&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
+|char(n)|[char および varchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/char-and-varchar-transact-sql)|  
+|varchar (n) <sup>1</sup>|[char および varchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/char-and-varchar-transact-sql)|  
+|nchar(n)|[nchar および nvarchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
+|nvarchar (n) <sup>1</sup>|[nchar および nvarchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
+|sysname|[nchar および nvarchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
   
  <sup>1</sup>行の合計で8060バイトの制限があり、可変長型の場合はカウント (n) です。  
   
  サポートされている照合順序の詳細については、「[照合順序とコードページ](../../database-engine/collations-and-code-pages.md)」を参照してください。  
   
- **日付と時刻のデータ型**  
+ **日付および時刻のデータ型**  
   
 |データ型|詳細情報|  
 |---------------|--------------------------|  
-|date|[Transact-sql&#41;&#40;日付](/sql/t-sql/data-types/date-transact-sql)|  
-|time|[Transact-sql&#41;&#40;時間](/sql/t-sql/data-types/time-transact-sql)|  
-|DATETIME|[datetime &#40;Transact-sql&#41;](/sql/t-sql/data-types/datetime-transact-sql)|  
-|datetime2|[datetime2 &#40;Transact-sql&#41;](/sql/t-sql/data-types/datetime2-transact-sql)|  
-|smalldatetime|[smalldatetime &#40;Transact-sql&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|  
+|日付|[date &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|  
+|time|[time &#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql)|  
+|datetime|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql)|  
+|datetime2|[datetime2 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)|  
+|smalldatetime|[smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|  
   
  **バイナリ データ型**  
   
 |データ型|詳細情報|  
 |---------------|--------------------------|  
-|bit|[Transact-sql&#41;のビット &#40;](/sql/t-sql/data-types/bit-transact-sql)|  
-|binary(n)|[binary および varbinary &#40;Transact-sql&#41;](/sql/t-sql/data-types/binary-and-varbinary-transact-sql)|  
-|varbinary (n) <sup>1</sup>|[binary および varbinary &#40;Transact-sql&#41;](/sql/t-sql/data-types/binary-and-varbinary-transact-sql)|  
+|bit|[bit &#40;Transact-SQL&#41;](/sql/t-sql/data-types/bit-transact-sql)|  
+|binary(n)|[binary と varbinary &#40;Transact-SQL&#41;](/sql/t-sql/data-types/binary-and-varbinary-transact-sql)|  
+|varbinary (n) <sup>1</sup>|[binary と varbinary &#40;Transact-SQL&#41;](/sql/t-sql/data-types/binary-and-varbinary-transact-sql)|  
   
  <sup>1</sup>行の合計で8060バイトの制限があり、可変長型の場合はカウント (n) です。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "63155150"
   
 |データ型|詳細情報|  
 |---------------|--------------------------|  
-|UNIQUEIDENTIFIER|[uniqueidentifier &#40;Transact-sql&#41;](/sql/t-sql/data-types/uniqueidentifier-transact-sql)|  
+|UNIQUEIDENTIFIER|[一意識別子 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/uniqueidentifier-transact-sql)|  
   
  **サポートされていないデータ型**  
   

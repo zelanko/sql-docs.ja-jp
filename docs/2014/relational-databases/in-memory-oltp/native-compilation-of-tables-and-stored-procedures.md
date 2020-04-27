@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e70ab55fedcc5053cf82a78c040c850a23824eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63075198"
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>テーブルとストアド プロシージャのネイティブ コンパイル
@@ -46,8 +46,7 @@ where description = 'XTP Native DLL'
 >  データベースを起動している間に、SQL Server によってデータベースの復旧に必要なすべてのテーブルの Dll がコンパイルされます。 データベースを再起動する直前にテーブルが削除された場合、チェックポイント ファイルかトランザクション ログにテーブルの残存物が存在するため、データベースの起動中にテーブルの DLL が再コンパイルされる場合があります。 再起動後に DLL がアンロードされ、通常のクリーンアップ プロセスによってファイルが削除されます。  
   
 ## <a name="native-compilation-of-tables"></a>テーブルのネイティブ コンパイル  
- 
-  `CREATE TABLE` ステートメントを使用してメモリ最適化テーブルを作成すると、テーブル情報がデータベース メタデータに書き込まれ、テーブルとインデックス構造がメモリに作成されます。 また、テーブルは DLL にコンパイルされます。  
+ `CREATE TABLE` ステートメントを使用してメモリ最適化テーブルを作成すると、テーブル情報がデータベース メタデータに書き込まれ、テーブルとインデックス構造がメモリに作成されます。 また、テーブルは DLL にコンパイルされます。  
   
  データベースとメモリ最適化テーブルを作成する、次のサンプル スクリプトについて考えてみます。  
   

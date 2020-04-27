@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8e5b7592ba97f779d3c1aeb83f34317ef7c6833d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022247"
 ---
 # <a name="non-sql-server-subscribers"></a>Non-SQL Server Subscribers
@@ -43,8 +43,7 @@ ms.locfileid: "63022247"
  Oracle および IBM DB2, にサブスクリプションを作成する方法の詳細については、「 [Oracle サブスクライバー](oracle-subscribers.md) 」および「 [IBM DB2 Subscribers](ibm-db2-subscribers.md)を使用してソリューションを作成します。  
   
 ## <a name="considerations-for-non-sql-server-subscribers"></a>SQL Server 以外のサブスクライバーに関する注意点  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーにレプリケートする場合は、以下の点に留意してください。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーにレプリケートする場合は、以下の点に留意してください。  
   
 ### <a name="general-considerations"></a>一般的な考慮事項  
   
@@ -64,8 +63,7 @@ ms.locfileid: "63022247"
   
     -   IBM DB2 の場合、DB2 接続文字列によってデータベースを指定します。 詳細については、「 [SQL Server 以外のサブスクライバーのサブスクリプションの作成](../create-a-subscription-for-a-non-sql-server-subscriber.md)」を参照してください。  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターが 64 ビット プラットフォームで実行されている場合、該当する OLE DB プロバイダーの 64 ビット バージョンを使用する必要があります。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターが 64 ビット プラットフォームで実行されている場合、該当する OLE DB プロバイダーの 64 ビット バージョンを使用する必要があります。  
   
 -   レプリケーションでは、パブリッシャーおよびサブスクライバーで使用される照合順序やコード ページにかかわらず、データが Unicode 形式に変換されます。 パブリッシャーとサブスクライバーの間でレプリケートを行う場合は、互換性のある照合順序やコード ページを使用することをお勧めします。  
   
@@ -77,36 +75,28 @@ ms.locfileid: "63022247"
   
      他にも注意が必要なのは、列に対して NOT NULL が定義されている場合、NULL 値、空の文字列、および空白値がどのように扱われるかという点です。 Oracle サブスクライバーでのこの問題の対処方法の詳細については、「 [Oracle サブスクライバー](oracle-subscribers.md)」を参照してください。  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーからサブスクリプションが削除されても、レプリケーション関連のメタデータ (トランザクション シーケンス テーブル) は削除されません。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーからサブスクリプションが削除されても、レプリケーション関連のメタデータ (トランザクション シーケンス テーブル) は削除されません。  
   
 ### <a name="conforming-to-the-requirements-of-the-subscriber-database"></a>サブスクライバー データベースの要件への準拠  
   
 -   パブリッシュされたスキーマおよびデータは、サブスクライバーのデータベース要件に準拠する必要があります。 たとえば、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のデータベースの最大行サイズが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]よりも小さい場合、パブリッシュされるスキーマおよびデータがこのサイズを超えないようにする必要があります。  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーにレプリケートされたテーブルには、サブスクライバーのデータベースのテーブル名前付け規則が採用されます。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーにレプリケートされたテーブルには、サブスクライバーのデータベースのテーブル名前付け規則が採用されます。  
   
 -   DDL は、SQL Server 以外のサブスクライバーに対してはサポートされていません。 スキーマ変更の詳細については、「[パブリケーション データベースでのスキーマの変更](../publish/make-schema-changes-on-publication-databases.md)」を参照してください。  
   
 ### <a name="replication-feature-support"></a>レプリケーション機能のサポート  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、プッシュおよびプルの 2 種類のサブスクリプションがオファーされています。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーはプッシュ サブスクリプションを使用する必要があります。このサブスクリプションでは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターでディストリビューション エージェントが実行されます。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、プッシュおよびプルの 2 種類のサブスクリプションがオファーされています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーはプッシュ サブスクリプションを使用する必要があります。このサブスクリプションでは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターでディストリビューション エージェントが実行されます。  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、ネイティブ bcp モードとキャラクター モードの 2 種類のスナップショット形式が用意されています。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーでは、キャラクター モードのスナップショットを使用する必要があります。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、ネイティブ bcp モードとキャラクター モードの 2 種類のスナップショット形式が用意されています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーでは、キャラクター モードのスナップショットを使用する必要があります。  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーは、即時更新サブスクリプションおよびキュー更新サブスクリプションを使用できません。また、ピア ツー ピア トポロジのノードになることもできません。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーは、即時更新サブスクリプションおよびキュー更新サブスクリプションを使用できません。また、ピア ツー ピア トポロジのノードになることもできません。  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーをバックアップから自動的に初期化することはできません。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーをバックアップから自動的に初期化することはできません。  
   
 ## <a name="see-also"></a>参照  
  [異種データベースレプリケーション](heterogeneous-database-replication.md)   
- [パブリケーションのサブスクライブ](../subscribe-to-publications.md)  
+ [Subscribe to Publications](../subscribe-to-publications.md)  
   
   

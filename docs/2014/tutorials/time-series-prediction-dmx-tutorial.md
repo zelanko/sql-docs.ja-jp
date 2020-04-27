@@ -11,21 +11,19 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 1623f824c062c270268323fd45ebf0e9533c8788
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63044189"
 ---
 # <a name="time-series-prediction-dmx-tutorial"></a>時系列予測の DMX のチュートリアル
   このチュートリアルでは、時系列マイニング構造を作成し、3 つのカスタム時系列マイニング モデルを作成し、それらのモデルを使用して予測を行う方法を学習します。  
   
- マイニング モデルの作成は、[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] サンプル データベース内のデータに基づいて行います。このサンプル データベースには、架空の企業である [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] のデータが格納されています。 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] は、多国籍の大規模な製造企業です。  
+ マイニング モデルの作成は、[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] サンプル データベース内のデータに基づいて行います。このサンプル データベースには、架空の企業である [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] のデータが格納されています。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] は、多国籍の大規模な製造企業です。  
   
 ## <a name="tutorial-scenario"></a>チュートリアルのシナリオ  
- 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] は、データ マイニングを使用して売上予測を生成することにしました。 既にいくつかのリージョン予測モデルが構築されています。詳細については、「[レッスン 2: 予測シナリオの作成」 &#40;中級者向けデータマイニングチュートリアル&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)を参照してください。 営業部門で、そのデータ マイニング モデルを新しい売上データで定期的に更新できるようにする必要があります。 また、さまざまな予測が得られるようにモデルをカスタマイズしたいとも考えています。  
+ [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] は、データ マイニングを使用して売上予測を生成することにしました。 既にいくつかのリージョン予測モデルが構築されています。詳細については、「[レッスン 2: 予測シナリオの作成」 &#40;中級者向けデータマイニングチュートリアル&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)を参照してください。 営業部門で、そのデータ マイニング モデルを新しい売上データで定期的に更新できるようにする必要があります。 また、さまざまな予測が得られるようにモデルをカスタマイズしたいとも考えています。  
   
  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]には、このタスクを実行するために使用できるいくつかのツールが用意されてい[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]ます。  
   
@@ -33,12 +31,9 @@ ms.locfileid: "63044189"
   
 -   Microsoft タイムシリーズアルゴリズム  
   
--   
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のクエリ エディター  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のクエリ エディター  
   
- 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] タイム シリーズ アルゴリズムでは、時間に関するデータの予測に使用できるモデルが作成されます。 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] で提供されるデータ マイニング拡張機能 (DMX) は、マイニング モデルと予測クエリの作成に使用できるクエリ言語です。  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] タイム シリーズ アルゴリズムでは、時間に関するデータの予測に使用できるモデルが作成されます。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] で提供されるデータ マイニング拡張機能 (DMX) は、マイニング モデルと予測クエリの作成に使用できるクエリ言語です。  
   
 ## <a name="what-you-will-learn"></a>学習する内容  
  このチュートリアルでは、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] でマイニング モデルを作成するために使用するオブジェクトについて理解していることを前提にしています。 DMX を使用してマイニング構造またはマイニングモデルをまだ作成していない場合は、「[自転車購入者向け Dmx チュートリアル](../../2014/tutorials/bike-buyer-dmx-tutorial.md)」を参照してください。  
@@ -60,15 +55,14 @@ ms.locfileid: "63044189"
  [レッスン 5 : 時系列モデルの拡張](../../2014/tutorials/lesson-5-extending-the-time-series-model.md)  
  このレッスンでは、`EXTEND_MODEL_CASES` パラメーターを使用して、予測を行うときに新しいデータでモデルを更新する方法を学習します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  このチュートリアルを行う前に、次のソフトウェアがインストールされていることを確認してください。  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
--   
-  [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] データベース  
+-   [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] データベース  
   
  セキュリティ強化のため、既定ではサンプル データベースがインストールされません。 の[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]公式サンプルデータベースをインストールするには、 [http://www.CodePlex.com/MSFTDBProdSamples](https://go.microsoft.com/fwlink/?LinkId=88417) 「」の「Microsoft SQL Server のサンプルとコミュニティプロジェクト」のホームページにアクセスして Microsoft SQL Server 製品サンプルを参照してください。 [**データベース**] をクリックし、[**リリース**] タブをクリックして、目的のデータベースを選択します。  
   

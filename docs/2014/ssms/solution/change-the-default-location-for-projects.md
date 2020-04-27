@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a772a80e6cb0e51682880c0579ec07914948372b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62956136"
 ---
 # <a name="change-the-default-location-for-projects"></a>プロジェクトの既定の場所の変更
@@ -25,7 +25,7 @@ ms.locfileid: "62956136"
   
 ### <a name="to-change-the-default-location-for-projects"></a>プロジェクトの既定の場所を変更するには  
   
-1.  ファイルまたはプロジェクトを別の場所から開くと、既定の場所が変更されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]は、以前に開いたプロジェクトの場所を格納し、次にプロジェクトを開くときまたは保存するときに使用します。  
+1.  ファイルまたはプロジェクトを別の場所から開くと、既定の場所が変更されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は前回開いたプロジェクトの場所を記憶し、次回プロジェクトを開いたり保存したりする際に使用します。  
   
 ## <a name="see-also"></a>参照  
  [ソリューション エクスプローラー](solution-explorer.md)  

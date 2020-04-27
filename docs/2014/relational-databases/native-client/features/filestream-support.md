@@ -1,5 +1,5 @@
 ---
-title: FILESTREAM のサポート |Microsoft Docs
+title: FILESTREAM のサポート | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 33e447048f7058ee81b0b144f0aa94a370f6d670
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046265"
 ---
 # <a name="filestream-support"></a>FILESTREAM のサポート
-  FILESTREAM を使用すると、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を経由するか、Windows ファイル システムに直接アクセスすることで、大きなバイナリ値の格納やアクセスが可能になります。 大きなバイナリ値とは、2 ギガバイト (GB) よりも大きい値です。 拡張された FILESTREAM サポートの詳細については、「 [filestream &#40;SQL Server&#41;](../../blob/filestream-sql-server.md)」を参照してください。  
+  FILESTREAM を使用すると、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を経由するか、Windows ファイル システムに直接アクセスすることで、大きなバイナリ値の格納やアクセスが可能になります。 大きなバイナリ値とは、2 ギガバイト (GB) よりも大きい値です。 強化された FILESTREAM のサポートの詳細については、「[FILESTREAM &#40;SQL Server&#41;](../../blob/filestream-sql-server.md)」を参照してください。  
   
  データベース接続を開くと、`@@TEXTSIZE` が既定で -1 (無制限) に設定されます。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63046265"
   
  Filestream 列を作成したり、どの既存の列が FILESTREAM 列であるかを`is_filestream`検出したりするには[、[列カタログ]](/sql/relational-databases/system-catalog-views/sys-columns-transact-sql)ビューの列を使用します。  
   
- 例を次に示します。  
+ 以下に例を示します。  
   
 ```  
 -- Create a table with a FILESTREAM column.  

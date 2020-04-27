@@ -14,29 +14,27 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7bdd18641663003a1878fe0af0ac1d39a16eda1f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046026"
 ---
 # <a name="helplink-element"></a>HelpLink 要素
-  
   **Detail** プロパティの **HelpLink** 要素は、レポート サーバーで生成される URL 文字列です。 この URL は [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ヘルプとサポートで管理されている Web ページを指し、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] で発生する特定のエラーに関するヘルプとサポート技術情報の記事を提供します。 URL の構文は、次のようになっています。  
   
  **http://** www.microsoft.com**/** products**/** ee**/** transform **?Evtsrc**=_値_**&evtid**=_値_**&ProdName**=_値_**&ProdVer**=_値_  
   
  次の表は、**HelpLink** URL の引数を示しています。  
   
-|引数|Value|  
+|引数|[値]|  
 |--------------|-----------|  
 |**EvtSrc**|"Microsoft.ReportingServices.Diagnostics.ErrorStrings.resources.Strings"|  
 |**EvtID**|レポート サーバー エラー コード。たとえば、rsReservedItem。|  
 |**ProdName**|"Microsoft SQL%20Server%20Reporting%20Services"。 製品名の値は URL エンコードされています。|  
-|**ProdVer**|
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のバージョン番号。 値 "8.00" はを示し[!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]ます。|  
+|**ProdVer**|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のバージョン番号。 値 "8.00" はを示し[!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]ます。|  
   
- 次の例は、 **** エラーコード`rsReservedItem`に対して返される HelpLink URL を示しています。 このエラーは、ユーザーが [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の予約アイテムの変更または削除を試みたときに発生します。  
+ 次の例は、 **HelpLink**エラーコード`rsReservedItem`に対して返される HelpLink URL を示しています。 このエラーは、ユーザーが [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の予約アイテムの変更または削除を試みたときに発生します。  
   
 ```  
 https://www.microsoft.com/products/ee/transform.aspx?  

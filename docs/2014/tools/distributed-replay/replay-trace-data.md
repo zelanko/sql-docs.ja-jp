@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: efb54bb64481dc29c50976cb58df813bad411f9c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63149894"
 ---
 # <a name="replay-trace-data"></a>トレース データの再生
-  入力トレースデータを準備した後[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 、分散再生機能を使用して分散再生を開始できます。 詳細については、「 [入力トレース データの準備](prepare-the-input-trace-data.md)」を参照してください。  
+  入力トレース データが準備できたら、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分散再生機能を使用して、分散再生を開始できます。 詳細については、「 [入力トレース データの準備](prepare-the-input-trace-data.md)」を参照してください。  
   
  分散再生のイベント再生段階を開始するには、管理ツールの **replay** オプションを使用します。 この段階は、トレース データのディスパッチと、分散再生の開始および同期の 2 つの部分で構成されています。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "63149894"
   
 ### <a name="to-replay-the-trace"></a>トレースを再生するには  
   
-1.  **(省略可能) 再生の構成設定を変更**する: シーケンスモードや各種のスケーリング値など、再生の構成設定を変更する場合は、XML `<ReplayOptions>`ベースの再生構成ファイル`DReplay.exe.replay.config`の要素を変更する必要があります。 また、 `<OutputOptions>` 要素を変更すると、行数を記録するかどうかなどの出力設定を指定することもできます。 再生構成ファイルを変更する場合は、元のファイルではなく、コピーを変更することをお勧めします。 設定を変更するには、次の手順に従います。  
+1.  **(省略可能) 再生の構成設定を変更する**: シーケンス モード、各種のスケーリング値など、再生の構成設定を変更する場合は、XML ベースの再生構成ファイル `<ReplayOptions>` の `DReplay.exe.replay.config`要素を変更する必要があります。 また、 `<OutputOptions>` 要素を変更すると、行数を記録するかどうかなどの出力設定を指定することもできます。 再生構成ファイルを変更する場合は、元のファイルではなく、コピーを変更することをお勧めします。 設定を変更するには、次の手順に従います。  
   
     1.  既定の再生構成ファイル `DReplay.exe.replay.config`のコピーを作成し、新しいファイルの名前を変更します。 既定の再生構成ファイルは管理ツールのインストール フォルダーにあります。  
   
@@ -41,22 +41,19 @@ ms.locfileid: "63149894"
   
      再生構成ファイルの詳細については、「 [Distributed Replay の構成](configure-distributed-replay.md)」を参照してください。  
   
-2.  **イベント再生段階を開始**する: distributed replay を開始するには、 **replay**オプションを使用して管理ツールを実行する必要があります。 詳細については、「[replay オプション &#40;Distributed Replay 管理ツール&#41;](replay-option-distributed-replay-administration-tool.md)」を参照してください。  
+2.  **イベント再生段階を開始する**: 分散再生を開始するには、 **replay** オプションを使用して、管理ツールを実行する必要があります。 詳細については、「[replay オプション &#40;Distributed Replay 管理ツール&#41;](replay-option-distributed-replay-administration-tool.md)」を参照してください。  
   
     1.  Windows のコマンド プロンプト ユーティリティ (`CMD.exe`) を開き、Distributed Replay 管理ツール (`DReplay.exe`) のインストール場所に移動します。  
   
     2.  (省略可能) 管理ツールを実行するコンピューターとは別のコンピューター上でコントローラー サービスが実行されている場合、 *controller* パラメーター **-m**を使用して、コントローラーを指定します。  
   
-    3.  
-  *controller_working_directory* パラメーター **-d**を使用して、前処理段階でコントローラーに保存した中間ファイルの場所を指定します。  
+    3.  *controller_working_directory* パラメーター **-d**を使用して、前処理段階でコントローラーに保存した中間ファイルの場所を指定します。  
   
     4.  (省略可能) **-o** パラメーターを使用して、各クライアントで再生アクティビティを結果のトレース ファイルにキャプチャします。  
   
-    5.  (省略可能) *target_server* パラメーター **-s**を使用して、分散再生クライアントでトレース ワークロードを再生する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスを指定します。 
-  `<Server>` 要素を使用して、再生構成ファイルの `<ReplayOptions>` 要素でターゲット サーバーを指定している場合、このパラメーターは必要ありません。  
+    5.  (省略可能) *target_server* パラメーター **-s**を使用して、分散再生クライアントでトレース ワークロードを再生する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスを指定します。 `<Server>` 要素を使用して、再生構成ファイルの `<ReplayOptions>` 要素でターゲット サーバーを指定している場合、このパラメーターは必要ありません。  
   
-    6.  
-  *clients* パラメーター **-w**を使用して、再生に参加する分散再生クライアントを指定します。 クライアント コンピューター名はコンマで区切って指定します。 注: IP アドレスは指定できません。  
+    6.  *clients* パラメーター **-w**を使用して、再生に参加する分散再生クライアントを指定します。 クライアント コンピューター名はコンマで区切って指定します。 注: IP アドレスは指定できません。  
   
     7.  (省略可能) *config_file* パラメーター **-c**を使用して、再生構成ファイルの場所を指定します。 既定の再生構成ファイルのコピーを変更した場合は、このパラメーターを使用して、新しい構成ファイルを指定します。  
   
@@ -66,12 +63,11 @@ ms.locfileid: "63149894"
   
      `dreplay replay -d c:\WorkingDir -o -w client1,client2 -c c:\modifiedreplay.config`  
   
-3.  分散再生が終了すると、管理ツールから概要情報が返されます。 
-  **-o** オプションを指定した場合、各クライアントで再生アクティビティが結果のトレース ファイルに保存されます。 結果のトレース ファイルの詳細については、「 [再生結果の確認](review-the-replay-results.md)」を参照してください。  
+3.  分散再生が終了すると、管理ツールから概要情報が返されます。 **-o** オプションを指定した場合、各クライアントで再生アクティビティが結果のトレース ファイルに保存されます。 結果のトレース ファイルの詳細については、「 [再生結果の確認](review-the-replay-results.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [分散再生の要件](distributed-replay-requirements.md)   
- [管理ツールのコマンドラインオプション &#40;分散再生ユーティリティ&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
- [Configure Distributed Replay](configure-distributed-replay.md)  
+ [Distributed Replay Requirements](distributed-replay-requirements.md)   
+ [管理ツール コマンド ライン オプション &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+ [分散再生の構成](configure-distributed-replay.md)  
   
   

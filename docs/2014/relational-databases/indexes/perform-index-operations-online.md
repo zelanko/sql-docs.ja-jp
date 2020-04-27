@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b9eceaff8ea7fee16eac3afef8bdc560d7fb1642
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63036216"
 ---
 # <a name="perform-index-operations-online"></a>オンラインでのインデックス操作の実行
@@ -41,9 +41,9 @@ ms.locfileid: "63036216"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   1 日 24 時間、週 7 日間、常時稼動のビジネス環境では、オンラインでのインデックス操作を実行することをお勧めします。このような環境では、インデックスの操作中に、ユーザーが同時に操作できることが必要不可欠です。  
   
@@ -59,12 +59,12 @@ ms.locfileid: "63036216"
   
 -   オンラインでのインデックスの作成、再構築、または削除に関する制限と制約については、「 [オンライン インデックス操作のガイドライン](guidelines-for-online-index-operations.md)」を参照してください。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  テーブルまたはビューに対する ALTER 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-rebuild-an-index-online"></a>インデックスをオンラインで再構築するには  
   
@@ -88,7 +88,7 @@ ms.locfileid: "63036216"
   
 10. **[インデックスの再構築]** ダイアログ ボックスで、 **[再構築するインデックス]** グリッドに目的のインデックスが表示されていることを確認し、 **[OK]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-create-rebuild-or-drop-an-index-online"></a>インデックスをオンラインで作成、再構築、または削除するには  
   
@@ -110,6 +110,6 @@ ms.locfileid: "63036216"
   
      [!code-sql[IndexDDL#DropIndex4](../../snippets/tsql/SQL14/tsql/indexddl/transact-sql/dropindex.sql#dropindex4)]  
   
- 詳細については、「 [ALTER INDEX &#40;transact-sql&#41;](/sql/t-sql/statements/alter-index-transact-sql)」を参照してください。  
+ 詳細については、「[ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)」を参照してください。  
   
   

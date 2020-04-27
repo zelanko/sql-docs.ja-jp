@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 744e7a10c9c4dcd776d58b6234749f2be5aa1479
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63036231"
 ---
 # <a name="rename-indexes"></a>インデックスの名前変更
@@ -38,17 +38,17 @@ ms.locfileid: "63036231"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
  テーブルに PRIMARY KEY 制約または UNIQUE 制約を作成すると、制約と同じ名前のインデックスが自動的に作成されます。 インデックス名はテーブル内で一意になる必要があるので、そのテーブルに既存の PRIMARY KEY 制約または UNIQUE 制約と同じ名前のインデックスを作成したり、同じ名前を付けることはできません。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  インデックスに対する ALTER 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-rename-an-index-by-using-the-table-designer"></a>テーブル デザイナーを使用してインデックスの名前を変更するには  
   
@@ -82,7 +82,7 @@ ms.locfileid: "63036231"
   
 6.  新しいインデックス名を入力して、Enter キーを押します。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-rename-an-index"></a>インデックスの名前を変更するには  
   

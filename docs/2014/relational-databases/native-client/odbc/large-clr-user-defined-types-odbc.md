@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5af4f85652fc1a8a333912c741f96df014655ebe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63144310"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>大きな CLR ユーザー定義型 (ODBC)
@@ -34,7 +34,7 @@ ms.locfileid: "63144310"
   
  次の表に、パラメーターおよび結果セットでのデータ型のマッピングを示します。  
   
-|SQL Server のデータ型|SQL データ型|Value|  
+|SQL Server のデータ型|SQL データ型|[値]|  
 |--------------------------|-------------------|-----------|  
 |CLR UDT|SQL_SS_UDT|-151 (sqlncli.h)|  
   
@@ -130,7 +130,7 @@ ms.locfileid: "63144310"
 |変換対象|SQL_SS_UDT|  
 |-----------------------------|------------------|  
 |SQL_C_WCHAR|さ|  
-|SQL_C_BINARY|サポートされています|  
+|SQL_C_BINARY|サポート|  
 |SQL_C_CHAR|さ|  
   
  \*バイナリデータは16進数の文字列に変換されます。  
@@ -140,7 +140,7 @@ ms.locfileid: "63144310"
 |変換対象|SQL_SS_UDT|  
 |-----------------------------|------------------|  
 |SQL_C_WCHAR|さ|  
-|SQL_C_BINARY|サポートされています|  
+|SQL_C_BINARY|サポート|  
 |SQL_C_CHAR|さ|  
   
  \*16進文字列からバイナリデータへの変換が行われます。  
@@ -210,7 +210,7 @@ ms.locfileid: "63144310"
 ### <a name="sqlgetdescrec"></a>SQLGetDescRec  
  UDT に対して返される値は次のとおりです。  
   
-|SQL データ型|種類|SubType|Length|Precision|スケール|  
+|SQL データ型|種類|SubType|長さ|Precision|スケール|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (8,000 バイト以下の長さ)|SQL_SS_UDT|0|*n*|n|0|  
 |SQL_SS_UDT<br /><br /> (8,000 バイトを超える長さ)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -230,7 +230,7 @@ ms.locfileid: "63144310"
 ### <a name="sqlsetdescrec"></a>SQLSetDescRec  
  UDT に対して許可される値は次のとおりです。  
   
-|SQL データ型|種類|SubType|Length|Precision|スケール|  
+|SQL データ型|種類|SubType|長さ|Precision|スケール|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (8,000 バイト以下の長さ)|SQL_SS_UDT|0|*n*|*n*|0|  
 |SQL_SS_UDT<br /><br /> (8,000 バイトを超える長さ)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  

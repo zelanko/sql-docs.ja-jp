@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a23d307cc33e5b8e59111819b245bc9df1df67df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63063121"
 ---
 # <a name="deleting-database-objects"></a>データベース オブジェクトの削除
@@ -39,8 +39,7 @@ ms.locfileid: "63063121"
   
     ```  
   
-3.  
-  `DROP` データベースに対する `Mary` のアクセス権限を削除するには、 `TestData` ステートメントを使用します。  
+3.  `DROP` データベースに対する `Mary` のアクセス権限を削除するには、 `TestData` ステートメントを使用します。  
   
     ```  
     DROP USER Mary;  
@@ -48,8 +47,7 @@ ms.locfileid: "63063121"
   
     ```  
   
-4.  
-  `DROP` が `Mary` のこのインスタンスにアクセスする権限を削除するには、 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]ステートメントを使用します。  
+4.  `DROP` が `Mary` のこのインスタンスにアクセスする権限を削除するには、 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]ステートメントを使用します。  
   
     ```  
     DROP LOGIN [<computer_name>\Mary];  
@@ -73,8 +71,7 @@ ms.locfileid: "63063121"
   
     ```  
   
-7.  
-  `DELETE` テーブルからすべての行を削除するには、 `Products` ステートメントを使用します。  
+7.  `DELETE` テーブルからすべての行を削除するには、 `Products` ステートメントを使用します。  
   
     ```  
     DELETE FROM Products;  
@@ -82,8 +79,7 @@ ms.locfileid: "63063121"
   
     ```  
   
-8.  
-  `DROP` テーブルを削除するには、 `Products` ステートメントを使用します。  
+8.  `DROP` テーブルを削除するには、 `Products` ステートメントを使用します。  
   
     ```  
     DROP Table Products;  
@@ -114,6 +110,6 @@ ms.locfileid: "63063121"
  [DROP VIEW &#40;Transact-sql&#41;](/sql/t-sql/statements/drop-view-transact-sql)   
  [DELETE &#40;Transact-SQL&#41;](/sql/t-sql/statements/delete-transact-sql)   
  [DROP TABLE &#40;Transact-sql&#41;](/sql/t-sql/statements/drop-table-transact-sql)   
- [Transact-sql&#41;&#40;データベースの削除](/sql/t-sql/statements/drop-database-audit-specification-transact-sql)  
+ [DROP DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-database-audit-specification-transact-sql)  
   
   

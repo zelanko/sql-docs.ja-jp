@@ -13,30 +13,30 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca5b07a0cd6e6282e4d61075d86ca6af6a2abd70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63062150"
 ---
 # <a name="alert-properties-new-alert-general-page"></a>[警告のプロパティ]-[新しい警告] ([全般] ページ)
   このページを使用すると、エージェントの警告の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]全般プロパティを表示したり、変更したりできます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **名前**  
  警告の名前を変更します。  
   
- **[有効化]**  
+ **有効化**  
  警告を有効にします。 警告が有効でない場合、警告に指定されたアクションは発生しません。  
   
  **Type**  
  警告の種類を選択します。  
   
--   **SQL Server イベント警告**は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows イベントログのメッセージに応答します。  
+-   **SQL Server イベント警告** は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows イベント ログ内のメッセージに応答します。  
   
--   **SQL Server パフォーマンス条件の警告**は、パフォーマンスカウンターの特定の条件に応答します。  
+-   **SQL Server パフォーマンス条件警告** は、パフォーマンス カウンター内の特定の条件に応答します。  
   
--   **Wmi イベント警告**は、WINDOWS MANAGEMENT INSTRUMENTATION (wmi) イベントに応答します。  
+-   **WMI イベント警告** は、WMI (Windows Management Instrumentation) イベントに応答します。  
   
 ## <a name="sql-server-event-alert-options"></a>SQL Server イベント警告のオプション  
  **データベース名**  
@@ -45,35 +45,34 @@ ms.locfileid: "63062150"
  **エラー番号**  
  このイベントがエラーに応答することを指定し、エラー番号を指定します。  
   
- **重大度**  
+ **Severity**  
  このイベントが特定の重大度レベルのすべてのメッセージに応答することを指定し、重大度レベルを指定します。  
   
- **メッセージが含まれている場合にアラートを生成する**  
+ **[メッセージに次の内容が含まれている場合に警告する]**  
  特定の文字列でイベントをフィルター処理します。 このオプションを選択した場合、警告は特定の文字列が含まれるイベントに対してだけ応答します。  
   
  **メッセージテキスト**  
  イベントをフィルター処理するために使用する文字列を指定します。  
   
 ## <a name="sql-server-performance-condition-alerts"></a>SQL Server パフォーマンス条件警告  
- **Object**  
+ **素材**  
  監視対象のパフォーマンス オブジェクトを指定します。  
   
- **対抗**  
+ **カウンター**  
  監視対象のパフォーマンス オブジェクト内のカウンターを指定します。  
   
- **Instance**  
+ **インスタンス**  
  監視対象のカウンターのインスタンスを指定します。  
   
- **警告カウンター**  
+ **[警告カウンター]**  
  警告が応答するカウンターの動作を指定します。 たとえば、 **[Free space in tempdb (KB)]** カウンターの値が特定の値を下回る条件や、 **[SQL Compilations/sec]** が特定の値を上回る条件に応答するように警告を設定できます。  
   
  **Value**  
  カウンターの値を指定します。  
   
 ## <a name="wmi-event-alert-options"></a>WMI イベント警告のオプション  
- **名前空間**  
- WQL (WMI Query Language) ステートメントに使用する名前空間を指定します。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが実行されているコンピューター上の名前空間だけがサポートされます。  
+ **Namespace**  
+ WQL (WMI Query Language) ステートメントに使用する名前空間を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが実行されているコンピューター上の名前空間だけがサポートされます。  
   
  **クエリ**  
  警告が応答するイベントを識別する WQL ステートメントを指定します。  

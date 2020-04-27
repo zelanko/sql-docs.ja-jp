@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1ad7019b30555077d274af62156115cfb71944fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62938640"
 ---
 # <a name="audit-fulltext-event-class"></a>Audit Fulltext イベント クラス
@@ -22,7 +22,7 @@ ms.locfileid: "62938640"
   
 ## <a name="audit-fulltext-event-class-data-columns"></a>Audit Fulltext イベント クラスのデータ列  
   
-|データ列名|データ型|[説明]|列 ID|フィルターの適用|  
+|データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**Error**|**int**|(このイベントによってエラーが報告された場合) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー番号。|31|はい|  
 |**EventSequence**|**int**|要求内の特定のイベントのシーケンス。|51|いいえ|  

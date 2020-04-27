@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9666e611b9f0a0a4348cc75a2adb1e8b711c60fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63130268"
 ---
 # <a name="discard-changes-made-to-queries-visual-database-tools"></a>クエリに対する変更の破棄 (Visual Database Tools)
@@ -31,8 +31,7 @@ ms.locfileid: "63130268"
   
 1.  クエリを開いているクエリおよびビュー デザイナーで、 **[ファイル]** メニューの **[閉じる]** をクリックします。  
   
-2.  
-  **[Microsoft SQL Server Management Studio]** ダイアログ ボックスで **[いいえ]** を選択します。  
+2.  **[Microsoft SQL Server Management Studio]** ダイアログ ボックスで **[いいえ]** を選択します。  
   
      クエリの定義が前回保存した状態に戻ります。  
   

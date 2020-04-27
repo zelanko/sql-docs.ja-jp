@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6d88b48c1fc4166b32821da9cdaaa5eb7f6c2e60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63071003"
 ---
 # <a name="cursor-types"></a>カーソルの種類
@@ -29,8 +29,7 @@ ms.locfileid: "63071003"
   
 -   順方向専用カーソルではスクロールがサポートされず、カーソルの最初から最後まで行を順番にフェッチする機能だけがサポートされます。  
   
--   静的カーソルは、カーソルを開いたときに**tempdb**に構築されます。 静的カーソルは、常に、カーソルを開いた時点の結果セットを表示します。 データへの変更は反映されません。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の静的カーソルは常に読み取り専用です。 静的サーバーカーソルは作業テーブルとして**tempdb**に作成されるので、カーソルの結果セットのサイズは、で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]許容される最大行サイズを超えることはできません。  
+-   静的カーソルは、カーソルを開いたときに**tempdb**に構築されます。 静的カーソルは、常に、カーソルを開いた時点の結果セットを表示します。 データへの変更は反映されません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の静的カーソルは常に読み取り専用です。 静的サーバーカーソルは作業テーブルとして**tempdb**に作成されるので、カーソルの結果セットのサイズは、で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]許容される最大行サイズを超えることはできません。  
   
 -   キーセット ドリブン カーソルでは、カーソルを開くときに、結果セット内の行のメンバーシップと順序が固定されます。 非キー列の変更は、このカーソルを使用して表示されます。  
   

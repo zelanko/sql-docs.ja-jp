@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 34744bedb701155d2695f6efc5aab3c493e6cf48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63011269"
 ---
 # <a name="ole-automation-return-codes-and-error-information"></a>OLE オートメーションのリターン コードとエラー情報
@@ -26,8 +26,7 @@ ms.locfileid: "63011269"
   
  たとえば、無効なオブジェクト名 (SQLDMO) を渡すとします。Sqldmo.xyzzy など) を sp_OACreate にすると、プロシージャは`int` 2147221005 の HRESULT (16 進数では0x800401f3 です) を返します。  
   
- 
-  `CONVERT(binary(4), @hresult)` を使用すると、`int` 値の HRESULT を `binary` 値に変換できます。 ただし、 `CONVERT(char(10), CONVERT(binary(4), @hresult))` を使用すると HRESULT の各バイトが 1 文字の ASCII 文字に変換されるので、読みにくい文字列になります。 次のサンプル HexToChar ストアドプロシージャを使用すると、読み取り`int`可能な 16 `char`進数文字列を含む値に HRESULT を変換できます。  
+ `CONVERT(binary(4), @hresult)` を使用すると、`int` 値の HRESULT を `binary` 値に変換できます。 ただし、 `CONVERT(char(10), CONVERT(binary(4), @hresult))` を使用すると HRESULT の各バイトが 1 文字の ASCII 文字に変換されるので、読みにくい文字列になります。 次のサンプル HexToChar ストアドプロシージャを使用すると、読み取り`int`可能な 16 `char`進数文字列を含む値に HRESULT を変換できます。  
   
 ```  
 USE AdventureWorks2012;  

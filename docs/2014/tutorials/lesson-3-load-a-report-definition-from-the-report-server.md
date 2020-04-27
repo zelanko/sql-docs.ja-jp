@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: d4c51002c8c829417c63a0dd6c59a3538604fd81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63042518"
 ---
 # <a name="lesson-3-load-a-report-definition-from-the-report-server"></a>レッスン 3 : レポート サーバーからのレポート定義の読み込み
@@ -32,7 +32,7 @@ ms.locfileid: "63042518"
     Private m_report As Report  
     ```  
   
-2.  Program.cs ファイル (`LoadReportDefinition()` では Module1.vb) で、[!INCLUDE[vbprvb](../includes/vbprvb-md.md)] メソッドのコードを次のコードに置き換えます。  
+2.  Program.cs ファイル ([!INCLUDE[vbprvb](../includes/vbprvb-md.md)] では Module1.vb) で、`LoadReportDefinition()` メソッドのコードを次のコードに置き換えます。  
   
     ```csharp  
     private void LoadReportDefinition()  

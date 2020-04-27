@@ -16,14 +16,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: c2f1c5a8ae897284f07c3fd6c65d9735099a41fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63042788"
 ---
 # <a name="lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial"></a>レッスン 3: マーケット バスケット シナリオの作成 (中級者向けデータ マイニング チュートリアル)
-  
   [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] のマーケティング部門は、クロスセルを促進するため自社の Web サイトを改善しようとしています。 サイトの更新に伴い、顧客の買い物かごの中に入っている他製品に基づいてその顧客が購入する可能性がある製品を予測できるようにしたいと考えています。 さらに、顧客の購入行動をより深く理解して、一緒に購入される可能性があるアイテムが同時に表示されるように Web サイトを設計したいとも考えています。 彼らはこの種の *マーケット バスケット分析* にはデータ マイニングが非常に効果的であることを理解しており、あなたにデータ マイニング モデルの開発を依頼してきました。  
   
  このレッスンを完了すると、顧客のトランザクション履歴から商品のグループを表示する完全なマイニング モデルを作成できます。 さらに、このマイニング モデルを使用して、顧客が追加購入する可能性がある商品を予測できます。  
@@ -56,7 +55,7 @@ ms.locfileid: "63042788"
   
  [レッスン 4: シーケンスクラスターシナリオの構築中級者向けデータマイニングチュートリアル &#40;&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
   
- [レッスン 5: ニューラルネットワークとロジスティック回帰モデルの構築 &#40;中級者向けデータマイニングチュートリアル&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [レッスン 5: ニューラル ネットワークおよびロジスティック回帰モデルの作成 &#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>参照  
  [基本的なデータマイニングチュートリアル](../../2014/tutorials/basic-data-mining-tutorial.md)   

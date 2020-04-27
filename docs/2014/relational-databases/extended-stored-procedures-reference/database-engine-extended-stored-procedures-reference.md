@@ -16,17 +16,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 40a621af401b33394b996468c581e85e3635355c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63137607"
 ---
 # <a name="extended-stored-procedures-programmer39s-reference"></a>拡張ストアドプロシージャプログラマー&#39;s リファレンス
     
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
   
  拡張[!INCLUDE[msCoName](../../includes/msconame-md.md)]ストアドプロシージャ api は、既に Open Data Services に含まれており、機能を拡張[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]するためのサーバーベースのアプリケーションプログラミングインターフェイス (API) を提供します。 この API は、アプリケーションの構築に使用する C および C++ の関数とマクロで構成されています。  
   

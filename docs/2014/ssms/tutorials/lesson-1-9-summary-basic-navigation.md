@@ -11,18 +11,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f25cc02e61fceb42a8c02919d4deaab42c0ab586
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151504"
 ---
-# <a name="summary-basic-navigation"></a>まとめ : 基本操作
-  
+# <a name="summary-basic-navigation"></a>概要: 基本操作
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のデザイン画面は、各ユーザーの好みや作業要件に合わせてカスタマイズできます。  
   
- 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] のワークスペースを効果的に使用するには、次の操作が効果的です。  
+ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] のワークスペースを効果的に使用するには、次の操作が効果的です。  
   
 -   すぐには使用しないウィンドウを閉じます。  
   
@@ -33,6 +31,6 @@ ms.locfileid: "63151504"
 -   既定のレイアウトをカスタマイズするには、 **[スタートアップ時]** オプションを設定します。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 2 : Transact-SQL の記述](lesson-2-writing-transact-sql.md)  
+ [レッスン 2: Transact-SQL の記述](lesson-2-writing-transact-sql.md)  
   
   

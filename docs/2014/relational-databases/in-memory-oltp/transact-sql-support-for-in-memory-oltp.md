@@ -11,16 +11,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1db4c6895fb499458c198008319302a25b8cd34b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63156209"
 ---
 # <a name="transact-sql-support-for-in-memory-oltp"></a>Transact-SQL によるインメモリ OLTP のサポート
   Transact-SQL クエリまたは DML ステートメント (SELECT、INSERT、UPDATE、または DELETE)、アドホック ステートメント、および SQL モジュール (ストアド プロシージャ、テーブル-値関数、スカラー関数、トリガー、ビューなど) を使用して、メモリ最適化テーブルにアクセスできます。 詳細については、「解釈された[Transact-sql を使用したメモリ最適化テーブルへのアクセス](accessing-memory-optimized-tables-using-interpreted-transact-sql.md)」を参照してください。  
   
- メモリ最適化テーブルのみを参照するストアド プロシージャは、マシン コードにネイティブ コンパイルできます。これにより、一般に、インタープリタ式の (ディスク ベースの) ストアド プロシージャよりも大幅に高いパフォーマンスが得られます。 メモリ最適化テーブル アクセスを最適化するには、ネイティブ コンパイル ストアド プロシージャを使用します。 詳しくは、「[ネイティブ コンパイル ストアド プロシージャ](natively-compiled-stored-procedures.md)」をご覧ください。  
+ メモリ最適化テーブルのみを参照するストアド プロシージャは、マシン コードにネイティブ コンパイルできます。これにより、一般に、インタープリタ式の (ディスク ベースの) ストアド プロシージャよりも大幅に高いパフォーマンスが得られます。 メモリ最適化テーブル アクセスを最適化するには、ネイティブ コンパイル ストアド プロシージャを使用します。 詳細については、「[ネイティブコンパイルストアドプロシージャ](natively-compiled-stored-procedures.md)」を参照してください。  
   
  データベース オブジェクト (DDL ステートメント) を作成および変更する場合に、次のステートメントが修正されました。  
   
@@ -50,8 +50,8 @@ ms.locfileid: "63156209"
   
 ## <a name="see-also"></a>参照  
  [インメモリ OLTP &#40;インメモリ最適化&#41;](in-memory-oltp-in-memory-optimization.md)   
- [ネイティブ コンパイル ストアド プロシージャの移行に関する問題](migration-issues-for-natively-compiled-stored-procedures.md)   
+ [ネイティブコンパイルストアドプロシージャの移行に関する問題](migration-issues-for-natively-compiled-stored-procedures.md)   
  [サポートされている SQL Server 機能](unsupported-sql-server-features-for-in-memory-oltp.md)   
- [ネイティブ コンパイル ストアド プロシージャ](natively-compiled-stored-procedures.md)  
+ [ネイティブコンパイルストアドプロシージャ](natively-compiled-stored-procedures.md)  
   
   

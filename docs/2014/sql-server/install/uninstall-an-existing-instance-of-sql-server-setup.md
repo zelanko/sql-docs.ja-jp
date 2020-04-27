@@ -17,33 +17,28 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 484ef7dead58a6e8ae35639cdc6218d5c8223bd9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62990186"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>SQL Server の既存のインスタンスのアンインストール (セットアップ)
   ここでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のスタンドアロン インスタンスをアンインストールする方法について説明します。 また、このトピックの手順を実行してシステムを準備し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を再インストールできるようにします。  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスをアンインストールするには、サービスとしてログオンする権限を持つローカル管理者である必要があります。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスをアンインストールするには、サービスとしてログオンする権限を持つローカル管理者である必要があります。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターをアンインストールするには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップによって提供されるノードの削除機能を使用して、各ノードを個別に削除します。 詳細については、「 [SQL Server フェールオーバークラスターでのノードの追加または削除 &#40;セットアップ](../failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)」を参照してください&#41;  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターをアンインストールするには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップによって提供されるノードの削除機能を使用して、各ノードを個別に削除します。 詳細については、「[SQL Server フェールオーバー クラスターでのノードの追加または削除 &#40;セットアップ&#41;](../failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)」を参照してください。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をアンインストールする前に、次の重要な情報について検討してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をアンインストールする前に、次の重要な情報について検討してください。  
   
 -   必要最小限の物理メモリを搭載したコンピューターから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントを削除する場合、ページ ファイルのサイズが十分な大きさであることを確認してください。 ページ ファイルのサイズは、物理メモリの 2 倍である必要があります。 仮想メモリが不足した状況では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の削除が不完全になる場合があります。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを複数インストールしている場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser は [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の最後のインスタンスがアンインストールされるときに自動的にアンインストールされます。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを複数インストールしている場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser は [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の最後のインスタンスがアンインストールされるときに自動的にアンインストールされます。  
   
-     
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のすべてのコンポーネントをアンインストールするには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コントロール パネル **の** [プログラムと機能] **を使用して、** Browser コンポーネントを手動でアンインストールする必要があります。  
+     [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のすべてのコンポーネントをアンインストールするには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コントロール パネル **の** [プログラムと機能] **を使用して、** Browser コンポーネントを手動でアンインストールする必要があります。  
   
 ### <a name="before-you-uninstall"></a>アンインストールする前に  
   
@@ -75,32 +70,27 @@ ms.locfileid: "62990186"
   
     -   ReportServer[$InstanceName]TempDB (これは [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の既定の一時データベースです)  
   
-2.  **ローカルセキュリティグループを削除します。** 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をアンインストールする前に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントのローカル セキュリティ グループを削除します。  
+2.  **ローカル セキュリティ グループの削除。** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をアンインストールする前に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントのローカル セキュリティ グループを削除します。  
   
-3.  **すべて**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **のサービスを停止します。**   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントをアンインストールする前に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスをすべて停止することをお勧めします。 アクティブな接続が存在すると、アンインストールに失敗する場合があるためです。  
+3.  **すべての**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **サービスを停止します。** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントをアンインストールする前に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスをすべて停止することをお勧めします。 アクティブな接続が存在すると、アンインストールに失敗する場合があるためです。  
   
-4.  **適切なアクセス許可を持つアカウントを使用します。** 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントを使用するか、同等の権限を持つアカウントを使用して、サーバーにログオンします。 たとえば、ローカルの Administrators グループのメンバーであるアカウントを使用してサーバーにログオンできます。  
+4.  **適切な権限を持つアカウントの使用。** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントを使用するか、同等の権限を持つアカウントを使用して、サーバーにログオンします。 たとえば、ローカルの Administrators グループのメンバーであるアカウントを使用してサーバーにログオンできます。  
   
-### <a name="to-uninstall-an-instance-of-includessnoversionincludesssnoversion-mdmd"></a>のインスタンスをアンインストールするには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="to-uninstall-an-instance-of-ssnoversion"></a>のインスタンスをアンインストールするには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  アンインストール プロセスを開始するには、 **コントロール パネル** で **[プログラムと機能]** をクリックします。  
   
 2.  右クリック** [!INCLUDE[msCoName](../../includes/msconame-md.md)] **して [**アンインストール**] を選択します。 次に、 **[削除]** をクリックします。 これにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードが起動します。  
   
-     セットアップ サポート ルールが実行され、コンピューターの構成が確認されます。 続行するには、 **[次へ]** をクリックします。  
+     セットアップ サポート ルールが実行され、コンピューターの構成が確認されます。 続行するには、[**次へ**] をクリックします。  
   
-3.  [インスタンスの選択] ページのドロップダウン ボックスを使用して、削除する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを指定するか、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の共有機能と管理ツールだけを削除するオプションを指定します。 続行するには、 **[次へ]** をクリックします。  
+3.  [インスタンスの選択] ページのドロップダウン ボックスを使用して、削除する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを指定するか、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の共有機能と管理ツールだけを削除するオプションを指定します。 続行するには、[**次へ**] をクリックします。  
   
 4.  [機能の選択] ページで、指定した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスから削除する機能を指定します。  
   
      削除ルールが実行され、操作を正常に完了できることが確認されます。  
   
-5.  
-  **[削除の準備完了]** ページで、アンインストールされるコンポーネントおよび機能の一覧を確認します。 
-  **[削除]** をクリックしてアンインストールを開始します。  
+5.  **[削除の準備完了]** ページで、アンインストールされるコンポーネントおよび機能の一覧を確認します。 **[削除]** をクリックしてアンインストールを開始します。  
   
 6.  最後の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスをアンインストールした直後は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に関連付けられたその他のプログラムがまだ **[プログラムと機能]** のプログラムの一覧に表示されています。 ただし、 **[プログラムと機能]** を閉じ、次に **[プログラムと機能]** を開いたときには、プログラムの一覧は更新され、実際にインストールされているプログラムのみが表示されます。  
   
@@ -108,7 +98,7 @@ ms.locfileid: "62990186"
   
 1.  アンインストール プロセスが正常に完了しない場合は、アンインストールが失敗した原因となる問題の解決を試みます。 アンインストールの失敗の原因を把握するには、次の記事が役立ちます。  
   
-    -   [セットアップログファイルで SQL Server 2008 のセットアップに関する問題を特定する方法](https://support.microsoft.com/kb/955396/en-us)  
+    -   [セットアップ ログ ファイルで SQL Server 2008 のセットアップの問題を特定する方法](https://support.microsoft.com/kb/955396/en-us)  
   
     -   [SQL Server セットアップ ログ ファイルの表示と読み取り](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   

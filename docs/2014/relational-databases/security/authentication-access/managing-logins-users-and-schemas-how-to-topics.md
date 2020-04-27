@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2f09d633ccd8dfc8bdfdda27c75ac3a710475d93
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63011499"
 ---
 # <a name="managing-logins-users-and-schemas-how-to-topics"></a>ログイン、ユーザー、およびスキーマの管理方法に関するトピック
@@ -24,18 +24,18 @@ ms.locfileid: "63011499"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [ログインの作成](create-a-login.md)  
+-   [ログインを作成する](create-a-login.md)  
   
--   [データベースユーザーの作成](create-a-database-user.md)  
+-   [データベース ユーザーの作成](create-a-database-user.md)  
   
 -   [データベーススキーマの作成](create-a-database-schema.md)  
   
 -   [ロールに参加する](join-a-role.md)  
   
--   [プリンシパルに権限を付与する](grant-a-permission-to-a-principal.md)  
+-   [プリンシパルに対する権限の許可](grant-a-permission-to-a-principal.md)  
   
 ## <a name="see-also"></a>参照  
- [プリンシパル &#40;データベースエンジン&#41;](principals-database-engine.md)   
+ [プリンシパル &#40;データベース エンジン&#41;](principals-database-engine.md)   
  [SQL Server の保護](../securing-sql-server.md)  
   
   

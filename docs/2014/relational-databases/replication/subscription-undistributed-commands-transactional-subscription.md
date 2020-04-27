@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2a1f957c417c5c63766dfbffa923edd6935d1eb5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151481"
 ---
 # <a name="subscription-undistributed-commands-transactional-subscription-sql-server-2005-and-later"></a>サブスクリプション、[未配布のコマンド] (トランザクション サブスクリプション、SQL Server 2005 以降)
@@ -30,8 +30,8 @@ ms.locfileid: "63151481"
  コマンドをサブスクライバーに配布するのに要すると推定される時間を示します。 スナップショットを生成してサブスクライバーに適用するのに必要な時間よりもこの値が大きい場合は、サブスクライバーの再初期化を検討してください。 詳細については、「 [サブスクリプションの再初期化](reinitialize-subscriptions.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [レプリケーション モニターの開始](monitor/start-the-replication-monitor.md)   
- [レプリケーション モニターを使用したパフォーマンスの監視](monitor/monitor-performance-with-replication-monitor.md)   
+ [レプリケーションモニターを開始する](monitor/start-the-replication-monitor.md)   
+ [レプリケーションモニターを使用したパフォーマンスの監視](monitor/monitor-performance-with-replication-monitor.md)   
  [レプリケーションの監視](monitoring-replication.md)  
   
   

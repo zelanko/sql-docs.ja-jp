@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d9cb9439dd76c636df46b8ac3d737d79415b5ea5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63067668"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
@@ -26,14 +26,14 @@ ms.locfileid: "63067668"
   
 ## <a name="level-1"></a>[レベル 1]  
   
-|Keyword|一覧が返されるかどうか|省略できるかどうか|[説明]|  
+|キーワード|一覧が返されるかどうか|省略できるかどうか|説明|  
 |-------------|--------------------|---------------|-----------------|  
 |DSN (DSN)|該当なし|いいえ|**Sqldatasources**ソースによって返されるデータソースの名前。 DSN キーワードは、DRIVER キーワードと同時に使用できません。|  
 |DRIVER|該当なし|いいえ|Microsoft? [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC ドライバー名は {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client 11} です。 DRIVER キーワードは、DSN キーワードと同時に使用できません。|  
   
-## <a name="level-2"></a>Level 2  
+## <a name="level-2"></a>[レベル 2]  
   
-|Keyword|一覧が返されるかどうか|省略できるかどうか|[説明]|  
+|キーワード|一覧が返されるかどうか|省略できるかどうか|説明|  
 |-------------|--------------------|---------------|-----------------|  
 |SERVER|はい|いいえ|データ ソースがあるネットワーク上のサーバー名。 サーバー名には「(local)」と入力することもできます。これは、ネットワークに接続されていない [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカル コピーも使用できることを意味します。|  
 |UID|いいえ|はい|ユーザー ログイン ID。|  
@@ -43,17 +43,16 @@ ms.locfileid: "63067668"
   
 ## <a name="level-3"></a>レベル 3  
   
-|Keyword|一覧が返されるかどうか|省略できるかどうか|[説明]|  
+|キーワード|一覧が返されるかどうか|省略できるかどうか|説明|  
 |-------------|--------------------|---------------|-----------------|  
 |DATABASE|はい|はい|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースの名前。|  
-|LANGUAGE|はい|はい|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用される言語。|  
+|LANGUAGE|はい|はい|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用される言語。|  
   
  **SQLBrowseConnect**は、ODBC データソースの定義に格納されているデータベースと言語キーワードの値を無視します。 **SQLBrowseConnect**に渡された接続文字列で指定されたデータベースまたは言語が無効である場合、 **SQLBrowseConnect**は SQL_NEED_DATA とレベル3の接続属性を返します。  
   
  [SQLSetConnectAttr](sqlsetconnectattr.md)を呼び出すことによって設定される次の属性は、 **SQLBrowseConnect**によって返される結果セットを決定します。  
   
-|Attribute|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |SQL_COPT_SS_BROWSE_CONNECT|SQL_MORE_INFO_YES に設定されている場合、 **SQLBrowseConnect**はサーバープロパティの拡張文字列を返します。<br /><br /> **SQLBrowseConnect**によって返される拡張文字列の例を次に示します: ServerName\InstanceName;Clustered: いいえ、バージョン: 8.00.131<br /><br /> この文字列では、サーバーに関するさまざまな情報がセミコロンで区切られます。 コンマは、異なるサーバー インスタンスを区切るために使用します。|  
 |SQL_COPT_SS_BROWSE_SERVER|サーバー名が指定されている場合、 **SQLBrowseConnect**は指定されたサーバーの情報を返します。 SQL_COPT_SS_BROWSE_SERVER が NULL に設定されている場合、 **SQLBrowseConnect**はドメイン内のすべてのサーバーに関する情報を返します。<br /><br /> ネットワークの問題により、 **SQLBrowseConnect**は、すべてのサーバーからタイムリーな応答を受信できない可能性があります。 したがって、要求ごとに返されるサーバーの一覧が異なる可能性があります。|  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: de65fb7a85154f607cd8f266faec4621cdc41476
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63131747"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure"></a>レッスン 2: Bike Buyer マイニング構造へのマイニング モデルの追加
@@ -91,11 +91,9 @@ ADD MINING MODEL [<mining model name>]
 ## <a name="lesson-tasks"></a>このレッスンの作業  
  このレッスンでは、次のタスクを実行します。  
   
--   
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] デシジョン ツリー アルゴリズムを使用して、デシジョン ツリー マイニング モデルを Bike Buyer 構造に追加。  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] デシジョン ツリー アルゴリズムを使用して、デシジョン ツリー マイニング モデルを Bike Buyer 構造に追加。  
   
--   
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] クラスタリング アルゴリズムを使用して、クラスタリング マイニング モデルを Bike Buyer 構造に追加。  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] クラスタリング アルゴリズムを使用して、クラスタリング マイニング モデルを Bike Buyer 構造に追加。  
   
 -   すべてのケースの結果を表示する必要があるため、どちらのモデルにもまだフィルターを追加しません。  
   
@@ -114,7 +112,7 @@ ADD MINING MODEL [<mining model name>]
     <mining structure name>   
     ```  
   
-     を以下に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     [Bike Buyer]  
@@ -126,7 +124,7 @@ ADD MINING MODEL [<mining model name>]
     <mining model name>   
     ```  
   
-     を以下に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     Decision Tree  
@@ -138,7 +136,7 @@ ADD MINING MODEL [<mining model name>]
     <mining model columns>,  
     ```  
   
-     を以下に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     (  
@@ -166,7 +164,7 @@ ADD MINING MODEL [<mining model name>]
     USING <algorithm name>( <algorithm parameters> )   
     ```  
   
-     を以下に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     Using Microsoft_Decision_Trees  
@@ -220,7 +218,7 @@ ADD MINING MODEL [<mining model name>]
     <mining structure name>   
     ```  
   
-     を以下に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     [Bike Buyer]  
@@ -232,7 +230,7 @@ ADD MINING MODEL [<mining model name>]
     <mining model>   
     ```  
   
-     を以下に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     Clustering Model  
@@ -253,7 +251,7 @@ ADD MINING MODEL [<mining model name>]
     USING <algorithm name>( <algorithm parameters> )  
     ```  
   
-     を以下に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     USING Microsoft_Clustering  

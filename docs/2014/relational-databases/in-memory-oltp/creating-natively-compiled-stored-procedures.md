@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9525ef65973baa38ae19ba4681e4a93f949c004a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63071822"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャの作成
@@ -24,8 +24,7 @@ ms.locfileid: "63071822"
   
 -   ATOMIC ブロック。 詳細については、「 [Atomic Blocks](atomic-blocks-in-native-procedures.md)」を参照してください。  
   
--   ネイティブ コンパイル ストアド プロシージャのパラメーターおよび変数の `NOT NULL` 制約。 
-  `NULL` として宣言されているパラメーターまたは変数に `NOT NULL` 値を割り当てることはできません。 詳細については、「[DECLARE @local_variable &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)」を参照してください。  
+-   ネイティブ コンパイル ストアド プロシージャのパラメーターおよび変数の `NOT NULL` 制約。 `NULL` として宣言されているパラメーターまたは変数に `NOT NULL` 値を割り当てることはできません。 詳細については、「[DECLARE @local_variable &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)」を参照してください。  
   
 -   ネイティブ コンパイル ストアド プロシージャのスキーマ バインド。  
   
@@ -54,19 +53,17 @@ go
   
  コード サンプルの `NATIVE_COMPILATION` は、この [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャがネイティブ コンパイル ストアド プロシージャであることを示しています。 以下のオプションは必須です。  
   
-|オプション|[説明]|  
+|オプション|説明|  
 |------------|-----------------|  
-|`SCHEMABINDING`|ネイティブコンパイルストアドプロシージャは、参照するオブジェクトのスキーマにバインドされている必要があります。 これは、プロシージャによるテーブル参照を削除できないことを意味します。 プロシージャで参照されるテーブルにはスキーマ名が含まれて\*いる必要があり、クエリではワイルドカード () は使用できません。 このバージョンの `SCHEMABINDING` では、ネイティブ コンパイル ストアド プロシージャに対してのみ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] がサポートされます。|  
+|`SCHEMABINDING`|ネイティブコンパイルストアドプロシージャは、参照するオブジェクトのスキーマにバインドされている必要があります。 これは、プロシージャによるテーブル参照を削除できないことを意味します。 プロシージャで参照されるテーブルにはスキーマ名が含まれて\*いる必要があり、クエリではワイルドカード () は使用できません。 このバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、ネイティブ コンパイル ストアド プロシージャに対してのみ `SCHEMABINDING` がサポートされます。|  
 |`EXECUTE AS`|ネイティブ コンパイル ストアド プロシージャでは、既定の実行コンテキストである `EXECUTE AS CALLER` はサポートされません。 したがって、実行コンテキストの指定は必須です。 オプション`EXECUTE AS OWNER`、 `EXECUTE AS` *user*、および`EXECUTE AS SELF`がサポートされています。|  
 |`BEGIN ATOMIC`|ネイティブ コンパイル ストアド プロシージャの本体は、厳密に 1 つの ATOMIC ブロックで構成されている必要があります。 ATOMIC ブロックでは、ストアド プロシージャのアトミック実行が保証されます。 プロシージャをアクティブなトランザクションのコンテキストの外部で呼び出した場合、新しいトランザクションが開始され、ATOMIC ブロックの末尾でコミットされます。 ネイティブ コンパイル ストアド プロシージャの ATOMIC ブロックには、次の 2 つの必須オプションがあります。<br /><br /> `TRANSACTION ISOLATION LEVEL`. サポートされる分離レベルについては、「[トランザクション分離レベル](../../database-engine/transaction-isolation-levels.md)」を参照してください。<br /><br /> `LANGUAGE`. ストアド プロシージャの言語は、使用可能な言語または言語の別名の 1 つに設定されている必要があります。|  
   
- 
-  `EXECUTE AS` と Windows ログインについては、`EXECUTE AS` を通じて行われた権限借用によって、エラーが発生する場合があります。 ユーザー アカウントに対して Windows 認証が使用される場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに使用されるサービス アカウントと Windows ログインのドメインとの間に完全信頼が必要です。 完全に信頼されていない場合、ネイティブコンパイルストアドプロシージャの作成時に、メッセージ15404、Windows NT グループ/ユーザー ' username ' に関する情報を取得できませんでした。エラーコード0x5 が返されます。  
+ `EXECUTE AS` と Windows ログインについては、`EXECUTE AS` を通じて行われた権限借用によって、エラーが発生する場合があります。 ユーザー アカウントに対して Windows 認証が使用される場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに使用されるサービス アカウントと Windows ログインのドメインとの間に完全信頼が必要です。 完全に信頼されていない場合、ネイティブコンパイルストアドプロシージャの作成時に、メッセージ15404、Windows NT グループ/ユーザー ' username ' に関する情報を取得できませんでした。エラーコード0x5 が返されます。  
   
  このエラーを解決するには、次のいずれかを使用します。  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスの Windows ユーザーと同じドメインからのアカウントを使用します。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスの Windows ユーザーと同じドメインからのアカウントを使用します。  
   
 -   が[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Network Service や Local System などのコンピューターアカウントを使用している場合、そのコンピューターは Windows ユーザーを含むドメインによって信頼されている必要があります。  
   
@@ -113,6 +110,6 @@ go
  この方法の利点は、アプリケーションがオフラインにならないことです。 しかし、参照の保持と、ストアド プロシージャの最新バージョンを常にポイントさせるために、より多くの作業が必要となります。  
   
 ## <a name="see-also"></a>参照  
- [ネイティブ コンパイル ストアド プロシージャ](natively-compiled-stored-procedures.md)  
+ [ネイティブコンパイルストアドプロシージャ](natively-compiled-stored-procedures.md)  
   
   

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f7c3f609bd2b25fcb3e3553497ead2baad476f2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151045"
 ---
 # <a name="cardinality-estimation-sql-server"></a>カーディナリティ推定 (SQL Server)
@@ -45,11 +45,11 @@ ms.locfileid: "63151045"
 ## <a name="new-xevents"></a>新しい XEvent  
  新しいクエリ プランをサポートする、2 つの新しい query_optimizer_estimate_cardinality XEvent が存在します。  
   
--   *query_optimizer_estimate_cardinality*は、クエリオプティマイザーが関係式のカーディナリティを推定したときに発生します。  
+-   *query_optimizer_estimate_cardinality* は、クエリ オプティマイザーが関係式のカーディナリティを推定するときに発生します。  
   
--   *query_optimizer_force_both_cardinality_estimation*_behaviors は、トレースフラグ2312と9481の両方が有効になっており、新旧両方のカーディナリティ推定動作を同時に強制的に実行しようとした場合に発生します。  
+-   *query_optimizer_force_both_cardinality_estimation*の動作が発生するのは、トレース フラグ 2312 と 9481 の両方が有効になっていて、古いカーディナリティ推定動作と新しいカーディナリティ推定動作の両方を同時に適用しようとする場合です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、新しいカーディナリティ推定で加えられた変更の一部を示します。 カーディナリティを推定するコードを書き直しました。 ロジックは複雑であり、すべての変更を網羅した完全な一覧をここに示すことはできません。  
   
 > [!NOTE]  

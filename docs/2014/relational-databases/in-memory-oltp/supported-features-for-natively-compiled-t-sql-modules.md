@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b4fd1a406848006739b83c1b8a0886d5c2d4bdfa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63155719"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャ内でサポートされる構造
@@ -38,7 +38,7 @@ ms.locfileid: "63155719"
   
  サポートされない構造に関する詳細と、ネイティブ コンパイル ストアド プロシージャのサポートされない一部の機能に対処する方法については、「 [Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md)」を参照してください。 サポートされていない機能の詳細については、「 [インメモリ OLTP でサポートされていない Transact-SQL の構造](transact-sql-constructs-not-supported-by-in-memory-oltp.md)」をご覧ください。  
   
-##  <a name="pncsp"></a>ネイティブコンパイルストアドプロシージャでのプログラミング  
+##  <a name="programmability-in-natively-compiled-stored-procedures"></a><a name="pncsp"></a>ネイティブコンパイルストアドプロシージャでのプログラミング  
  サポート対象は次のとおりです。  
   
 -   BEGIN ATOMIC (ストアド プロシージャの外部レベル)、LANGUAGE、ISOLATION LEVEL、DATEFORMAT、および DATEFIRST。  
@@ -63,7 +63,7 @@ ms.locfileid: "63155719"
   
      パフォーマンスを最適化するには、ネイティブ コンパイル ストアド プロシージャ全体に対して 1 つの TRY/CATCH ブロックを使用します。  
   
-##  <a name="so"></a>サポートされる演算子  
+##  <a name="supported-operators"></a><a name="so"></a>サポートされる演算子  
  サポートされている演算子は次のとおりです。  
   
 -   [Transact-sql&#41;&#40;の比較演算子](/sql/t-sql/language-elements/comparison-operators-transact-sql)(たとえば、>、 \<、>=、および <=) は、条件 (IF、WHILE) でサポートされています。  
@@ -78,7 +78,7 @@ ms.locfileid: "63155719"
   
 -   ビット演算子 ~、&、|、および ^  
   
-##  <a name="bfncsp"></a>ネイティブコンパイルストアドプロシージャの組み込み関数  
+##  <a name="built-in-functions-in-natively-compiled-stored-procedures"></a><a name="bfncsp"></a>ネイティブコンパイルストアドプロシージャの組み込み関数  
  メモリ最適化テーブルの既定構造とネイティブ コンパイル ストアド プロシージャでは、次の関数がサポートされます。  
   
 -   数学関数: ACOS、ASIN、ATAN、ATN2、COS、COT、DEGREES、EXP、LOG、LOG10、PI、POWER、RADIANS、RAND、SIN、SQRT、SQUARE、および TAN  
@@ -99,7 +99,7 @@ ms.locfileid: "63155719"
   
 -   システム関数: @@rowcount。 ネイティブ コンパイル ストアド プロシージャ内のステートメントによって、@@rowcount が更新されます。ネイティブ コンパイル ストアド プロシージャ内で @@rowcount を使用し、ネイティブ コンパイル ストアド プロシージャ内で実行された最後のステートメントによる影響を受けた行の数を決定することができます。 ただし、ネイティブ コンパイル ストアド プロシージャの実行の開始時および終了時に、@@rowcount は 0 にリセットされます。  
   
-##  <a name="qsancsp"></a>ネイティブコンパイルストアドプロシージャのクエリ領域  
+##  <a name="query-surface-area-in-natively-compiled-stored-procedures"></a><a name="qsancsp"></a>ネイティブコンパイルストアドプロシージャのクエリ領域  
  サポート対象は次のとおりです。  
   
 -   BETWEEN  
@@ -134,14 +134,11 @@ ms.locfileid: "63155719"
   
  <sup>1</sup> ORDER BY と TOP はネイティブコンパイルストアドプロシージャでサポートされていますが、いくつかの制限があります。  
   
--   
-  `DISTINCT` 句または `SELECT` 句での `ORDER BY` のサポートはありません。  
+-   `DISTINCT` 句または `SELECT` 句での `ORDER BY` のサポートはありません。  
   
--   
-  `WITH TIES` 句での `PERCENT` または `TOP` のサポートはありません。  
+-   `WITH TIES` 句での `PERCENT` または `TOP` のサポートはありません。  
   
--   
-  `TOP` と `ORDER BY` の組み合わせでは、`TOP` 句内で定数を使用するときに 8,192 を超える値はサポートされません。 クエリに結合または集計関数が含まれている場合は、この制限値がさらに小さくなる場合があります (たとえば、1 回の結合 (2 つのテーブル) では、制限値は 4,096 行です。 2 回の結合 (3 つのテーブル) では、制限値は 2,730 行です)。  
+-   `TOP` と `ORDER BY` の組み合わせでは、`TOP` 句内で定数を使用するときに 8,192 を超える値はサポートされません。 クエリに結合または集計関数が含まれている場合は、この制限値がさらに小さくなる場合があります (たとえば、1 回の結合 (2 つのテーブル) では、制限値は 4,096 行です。 2 回の結合 (3 つのテーブル) では、制限値は 2,730 行です)。  
   
      変数内に行の数を格納すると、8,192 より多くの結果を取得できます。  
   
@@ -154,12 +151,12 @@ ms.locfileid: "63155719"
   
  これらの制限は、インタープリターによって処理される [!INCLUDE[tsql](../../includes/tsql-md.md)] によるメモリ最適化テーブルへのアクセスには適用されません。  
   
-##  <a name="auditing"></a>監査  
+##  <a name="auditing"></a><a name="auditing"></a>監査  
  プロシージャ レベルの監査はネイティブ コンパイル ストアド プロシージャでサポートされています。 ステートメント レベルの監査はサポートされていません。  
   
  監査の詳細については、「 [Create a Server Audit and Database Audit Specification](../security/auditing/create-a-server-audit-and-database-audit-specification.md)」を参照してください。  
   
-##  <a name="tqh"></a>テーブル、クエリ、および結合ヒント  
+##  <a name="table-query-and-join-hints"></a><a name="tqh"></a>テーブル、クエリ、および結合ヒント  
  サポート対象は次のとおりです。  
   
 -   テーブル ヒント構文またはクエリの [OPTION 句 &#40;Transact-SQL&#41;](/sql/t-sql/queries/option-clause-transact-sql) での INDEX、FORCESCAN、および FORCESEEK ヒント。  
@@ -172,9 +169,8 @@ ms.locfileid: "63155719"
   
  詳細については、「 [transact-sql&#41;&#40;ヒント](/sql/t-sql/queries/hints-transact-sql)」を参照してください。  
   
-##  <a name="los"></a>並べ替えに関する制限事項  
- 
-  [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) および [ORDER BY 句 &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql) を使用するクエリでは、8,000 を超える行の並べ替えを行うことができます。 ただし、[ORDER BY 句 &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql) を使用しない場合、[TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) で並べ替えができる行数は最大で 8,000 です (結合がある場合は、より少ない行数になります)。  
+##  <a name="limitations-on-sorting"></a><a name="los"></a> 並べ替えに関する制限事項  
+ [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) および [ORDER BY 句 &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql) を使用するクエリでは、8,000 を超える行の並べ替えを行うことができます。 ただし、[ORDER BY 句 &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql) を使用しない場合、[TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) で並べ替えができる行数は最大で 8,000 です (結合がある場合は、より少ない行数になります)。  
   
  クエリが [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) 演算子および [ORDER BY 句 &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql) を使用する場合、TOP 演算子には 8192 行まで指定できます。 8192 行を超える行を指定すると、"**メッセージ 41398、レベル 16、状態 1、プロシージャ *\<procedureName>*、行 *\<lineNumber>* TOP 演算子は、最大 8192 行を返すことができます。*\<number>* が要求されました**" というエラー メッセージが表示されます。  
   
@@ -224,7 +220,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```  
   
- **返される行に関する制限事項:** TOP 演算子によって返される行の数を減らす可能性のあるケースが2つあります。  
+ **返される行に関する制限事項:** TOP 演算子から返される行数を減らせる可能性がある場合が 2 つあります。  
   
 -   クエリで JOIN を使用します。  制限における JOIN の影響は、クエリ プランによって異なります。  
   

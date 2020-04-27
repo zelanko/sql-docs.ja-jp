@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b18643f97a328dfee94bc5bfe125d6eddeae4efe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150436"
 ---
 # <a name="view-the-windows-application-log-windows"></a>Windows アプリケーション ログの表示 (Windows)
@@ -31,8 +31,7 @@ ms.locfileid: "63150436"
   
 ### <a name="to-view-the-windows-application-log"></a>Windows アプリケーション ログを表示するには  
   
-1.  
-  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[管理ツール]** の順にポイントして、 **[イベント ビューアー]** をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[管理ツール]** の順にポイントして、 **[イベント ビューアー]** をクリックします。  
   
 2.  イベント ビューアーで **[アプリケーション]** をクリックします。  
   
@@ -40,9 +39,7 @@ ms.locfileid: "63150436"
   
 4.  別のコンピューターのログを表示するには、 **[イベント ビューアー]** を右クリックし、 **[別のコンピューターへ接続]** をクリックします。次に、 **[コンピューターの選択]** ダイアログ ボックスで必要な項目を設定します。  
   
-5.  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のイベントのみを表示する場合は、 **[表示]** メニューの **[フィルター]** をクリックし、 **[イベント ソース]** ボックスの一覧で **[MSSQLSERVER]** を選択します。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのイベントのみを表示するには、 **[イベント ソース]** ボックスの一覧で **[SQLSERVERAGENT]** を選択します。  
+5.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のイベントのみを表示する場合は、 **[表示]** メニューの **[フィルター]** をクリックし、 **[イベント ソース]** ボックスの一覧で **[MSSQLSERVER]** を選択します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのイベントのみを表示するには、 **[イベント ソース]** ボックスの一覧で **[SQLSERVERAGENT]** を選択します。  
   
 6.  イベントについての詳細情報を表示するには、イベントをダブルクリックします。  
   

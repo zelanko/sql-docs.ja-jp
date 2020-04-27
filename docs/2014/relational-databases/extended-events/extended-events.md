@@ -14,28 +14,26 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 485c748aad8b07a5e8b92a02c03d51a82e5f362a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62990703"
 ---
 # <a name="extended-events"></a>拡張イベント
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張イベントのアーキテクチャは高い拡張性と柔軟な構成を備えており、これによってユーザーは、トラブルシューティングまたはパフォーマンスの問題の特定に必要な量の情報を過不足なく収集できます。  
   
  拡張イベントの詳細については、「 [SQL Server 拡張イベント](https://blogs.msdn.com/b/extended_events/)」を参照してください。  
   
-## <a name="benefits-of-includessnoversionincludesssnoversion-mdmd-extended-events"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張イベントの利点  
- 拡張イベントは軽量なパフォーマンス監視システムであり、使用されるパフォーマンス リソースはごくわずかです。 拡張イベントには、セッションデータを作成、変更、表示、および分析するための2つのグラフィカルユーザーインターフェイス (**新しいセッションウィザード**と**新しいセッション**) が用意されています。  
+## <a name="benefits-of-ssnoversion-extended-events"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張イベントの利点  
+ 拡張イベントは軽量なパフォーマンス監視システムであり、使用されるパフォーマンス リソースはごくわずかです。 拡張イベントには、セッション データを容易かつ迅速に作成、変更、表示、および分析するためのグラフィカル ユーザー インターフェイスが 2 つ用意されています (**新規セッション ウィザード** と **[新しいセッション]**)。  
   
 ## <a name="extended-events-concepts"></a>拡張イベントの概念  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張イベントは、イベントやイベント コンシューマーなど、既存の概念を基にして、Event Tracing for Windows の概念や、新しい概念を導入したものです。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張イベントは、イベントやイベント コンシューマーなど、既存の概念を基にして、Event Tracing for Windows の概念や、新しい概念を導入したものです。  
   
  次の表は、拡張イベントにおける各種の概念を示しています。  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[SQL Server 拡張イベント パッケージ](sql-server-extended-events-packages.md)|拡張イベント パッケージについて説明します。拡張イベント パッケージには、拡張イベント セッションを実行する際、データの取得と処理に使用されるオブジェクトが含まれます。|  
 |[SQL Server 拡張イベント ターゲット](../../database-engine/sql-server-extended-events-targets.md)|イベント セッション中にデータを受け取ることができるイベント コンシューマーについて説明します。|  
@@ -75,7 +73,7 @@ ms.locfileid: "62990703"
   
 -   アクティブ プロセスを最小限の負荷で動的に監視する機能。  
   
--   パフォーマンスへの体感的な影響を伴わずに動作する既定のシステム正常性セッション。 このセッションは、パフォーマンスの問題をトラブルシューティングするのに役立つシステム データを収集します。 詳細については、「 [system_health セッションの使用](use-the-ssms-xe-profiler.md)」を参照してください。  
+-   パフォーマンスへの体感的な影響を伴わずに動作する既定のシステム正常性セッション。 このセッションは、パフォーマンスの問題をトラブルシューティングするのに役立つシステム データを収集します。 詳細については、「 [System_health セッションの使用](use-the-ssms-xe-profiler.md)」を参照してください。  
   
 ## <a name="extended-events-tasks"></a>拡張イベントのタスク  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] データ定義言語 (DDL) ステートメント、動的管理ビューおよび関数、カタログ ビューを実行することで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境の簡単、または複雑な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張イベント トラブルシューティング ソリューションを作成することができます。  
@@ -95,7 +93,7 @@ ms.locfileid: "62990703"
 |SQL トレースのイベントとそれに関連した列について、拡張イベントにおける等価なイベントとアクションを確認する方法について説明します。|[SQL トレースのイベント クラスと等価な拡張イベントを確認する](view-the-extended-events-equivalents-to-sql-trace-event-classes.md)|  
 |CREATE EVENT SESSION または ALTER EVENT SESSION で ADD TARGET 引数を使用する際に設定できるパラメーターを確認する方法について説明します。|[ADD TARGET 引数の構成可能パラメーターの取得](../../database-engine/get-the-configurable-parameters-for-the-add-target-argument.md)|  
 |既存の SQL トレース スクリプトを拡張イベント セッションに変換する方法について説明します。|[既存の SQL トレース スクリプトから拡張イベント セッションへの変換](convert-an-existing-sql-trace-script-to-an-extended-events-session.md)|  
-|ロックを保持しているクエリ、クエリのプラン、およびロックが取得されたときの [!INCLUDE[tsql](../../includes/tsql-md.md)] スタックを特定する方法について説明します。|[ロックを保持しているクエリの特定](determine-which-queries-are-holding-locks.md)|  
+|ロックを保持しているクエリ、クエリのプラン、およびロックが取得されたときの [!INCLUDE[tsql](../../includes/tsql-md.md)] スタックを特定する方法について説明します。|[ロックを保持しているクエリを特定する](determine-which-queries-are-holding-locks.md)|  
 |データベース パフォーマンスを低下させているロックのソースを特定する方法について説明します。|[ロックの大半を取得しているオブジェクトを見つける](find-the-objects-that-have-the-most-locks-taken-on-them.md)|  
 |拡張イベントを Event Tracing for Windows と共に使用してシステムの使用状況を監視する方法について説明します。|[拡張イベントを使用したシステムの使用状況の監視](monitor-system-activity-using-extended-events.md)|  
   

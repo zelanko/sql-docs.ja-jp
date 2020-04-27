@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dc317474384c59d396d5a0f1d5ee4f71883509d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63061197"
 ---
 # <a name="trace-file-close-event-class"></a>Trace File Close イベント クラス
@@ -26,7 +26,7 @@ ms.locfileid: "63061197"
   
 ## <a name="trace-file-close-event-class-data-columns"></a>Trace File Close イベント クラスのデータ列  
   
-|データ列名|データ型|[説明]|列 ID|フィルターの適用|  
+|データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**EventClass**|**int**|イベントの種類 = 150。|27|いいえ|  
 |**EventSequence**|**int**|このトレースで起動されたこのイベントの固有のタイムスタンプ。 この数字は、イベントが起動されるたびに単調に増加します。|51|いいえ|  

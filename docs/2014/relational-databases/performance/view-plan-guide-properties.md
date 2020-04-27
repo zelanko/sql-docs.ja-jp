@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b49b24db5dfa3c9b522247024e0cbb8dbd1a81d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151261"
 ---
 # <a name="view-plan-guide-properties"></a>プラン ガイド プロパティの表示
@@ -37,14 +37,14 @@ ms.locfileid: "63151261"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  カタログ ビューでのメタデータの表示が、ユーザーが所有しているかそのユーザーが権限を許可されている、セキュリティ保護可能なメタデータに制限されます。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-view-the-properties-of-a-plan-guide"></a>プラン ガイドのプロパティを表示するには  
   
@@ -62,7 +62,7 @@ ms.locfileid: "63151261"
      **[無効化]**  
      プラン ガイドの状態が表示されます。 指定できる値は、 **[True]** および **[False]** です。  
   
-     **名前**  
+     **Name**  
      プラン ガイドの名前が表示されます。  
   
      **パラメーター**  
@@ -85,7 +85,7 @@ ms.locfileid: "63151261"
   
 4.  **[OK]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-view-the-properties-of-a-plan-guide"></a>プラン ガイドのプロパティを表示するには  
   

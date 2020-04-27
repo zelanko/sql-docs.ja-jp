@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 89cdfa63bff88c4f4bb5954402034b31ad7f77ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63060987"
 ---
 # <a name="errorcontrol-property-sqlservice-class"></a>ErrorControl プロパティ (SqlService クラス)
@@ -37,13 +37,13 @@ object
 ```  
   
 ## <a name="parts"></a>要素  
- *素材*  
+ *object*  
  サービスを表す [SqlService クラス](sqlservice-class.md) オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  起動時にサービスが失敗した場合にレポートされるエラーの重大度を指定する文字列値。 次の表に、それぞれの値を示します。  
   
- 無視  
+ Ignore  
  ユーザーへの通知が行われません。  
   
  Normal  
@@ -58,7 +58,7 @@ object
  Unknown  
  重大度が不明です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  値は、失敗が発生した場合に、起動プログラムによって行われるアクションを示しています。 すべてのエラーは、コンピューター システムによって記録されます。  
   
 ## <a name="see-also"></a>参照  

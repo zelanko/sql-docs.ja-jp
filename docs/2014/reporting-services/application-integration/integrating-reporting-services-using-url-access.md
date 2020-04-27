@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fedf4ce3011d9caae9d673acf354265537115057
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63126132"
 ---
 # <a name="integrating-reporting-services-using-url-access"></a>URL アクセスを使用した Reporting Services の統合
@@ -37,6 +37,6 @@ ms.locfileid: "63126132"
   
 ## <a name="see-also"></a>参照  
  [アプリケーションへの Reporting Services の統合](../application-integration/integrating-reporting-services-into-applications.md)   
- [URL アクセス &#40;SSRS&#41;](../url-access-ssrs.md)  
+ [URL アクセス (SSRS)](../url-access-ssrs.md)  
   
   

@@ -15,23 +15,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: abd8dd7c3c23a13b1cdff7a2d6f76fb99375a641
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63155259"
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>クエリおよびビュー デザイナーでの結合の表示方法 (Visual Database Tools)
-  テーブルが結合されている場合、[クエリおよびビューデザイナー](visual-database-tools.md)は、[ダイアグラムペイン](diagram-pane-visual-database-tools.md)での結合と sql 構文を使用して、 [Sql ペイン](sql-pane-visual-database-tools.md)に結合を表示します。  
+  テーブルを結合すると、 [クエリおよびビュー デザイナー](visual-database-tools.md) は、 [ダイアグラム ペイン](diagram-pane-visual-database-tools.md) にその結合をグラフィカル表示します。また、SQL 構文を使用して [SQL ペイン](sql-pane-visual-database-tools.md)にも表示します。  
   
 ## <a name="diagram-pane"></a>ダイアグラム ペイン  
  ダイアグラム ペインでは、結合に関係するデータ列の間に結合線が引かれます。 結合条件ごとに 1 本の結合線が表示されます。 たとえば、次の図には結合された 2 つのテーブル間の結合線が示されています。  
   
- ![2 つのテーブル間のリレーションシップを示す結合行](../../database-engine/media//dv3wbig.gif "2 つのテーブル間のリレーションシップを示す結合行")  
+ ![2 つのテーブル間のリレーションシップを示す結合線](../../database-engine/media//dv3wbig.gif "2 つのテーブル間のリレーションシップを示す結合線")  
   
  複数の結合条件を使用してテーブルが結合されている場合は、次の図に示すように、複数の結合線が表示されます。  
   
- ![複数の結合条件で結合されたテーブル](../../database-engine/media//dv3w9n1.gif "複数の結合条件で結合されたテーブル")  
+ ![複数の結合条件で結合されたテーブル](../../database-engine/media//dv3w9n1.gif "複数の結合条件を使用して結合されたテーブル")  
   
  結合されたデータ列が表示されていない場合 (テーブルまたはテーブル構造オブジェクトを表す四角形が最小化されている場合や、結合に式が含まれる場合など)、クエリおよびビュー デザイナーは、テーブルまたはテーブル構造オブジェクトを表す四角形のタイトル バーに結合線を表示します。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "63155259"
   
  テーブルの結合に使用する構文オプションは、次のとおりです。  
   
--   **From 句の JOIN 修飾子**。   キーワード INNER および OUTER で結合の種類を指定します。 この構文は、ANSI 92 SQL の標準です。  
+-   **FROM 句の JOIN 修飾子**。   キーワード INNER および OUTER で結合の種類を指定します。 この構文は、ANSI 92 SQL の標準です。  
   
      たとえば、 `publishers` テーブルと `pub_info` テーブルを両方のテーブルの `pub_id` 列に基づいて結合する場合、SQL ステートメントは次のようになります。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "63155259"
   
      外部結合を作成する場合は、INNER の代わりに LEFT OUTER または RIGHT OUTER というキーワードが使用されます。  
   
--   **Where 句は、両方のテーブルの列を比較**します。   データベースが JOIN 構文をサポートしていない場合、またはユーザーが自分で入力した場合には、WHERE 句が使用されます。 WHERE 句で結合が作成される場合は、FROM 句で両方のテーブルの名前が指定されます。  
+-   **WHERE 句による両テーブルの列の比較**。   データベースが JOIN 構文をサポートしていない場合、またはユーザーが自分で入力した場合には、WHERE 句が使用されます。 WHERE 句で結合が作成される場合は、FROM 句で両方のテーブルの名前が指定されます。  
   
      たとえば、 `publishers` テーブルと `pub_info` テーブルを結合するステートメントは、次のようになります。  
   

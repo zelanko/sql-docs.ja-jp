@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ea11c177533a6101bb0654ca0450e85ea855d9a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150819"
 ---
 # <a name="plan-guides"></a>プラン ガイド
@@ -41,8 +41,7 @@ ms.locfileid: "63150819"
  OBJECT プラン ガイド  
  OBJECT プラン ガイドでは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャ、スカラー ユーザー定義関数、複数ステートメント テーブル値ユーザー定義関数、および DML トリガーのコンテキストで実行されるクエリが照合されます。  
   
- 
-  `@Country`_`region` パラメーターを受け取る次のストアド プロシージャが、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースに対して配置されたデータベース アプリケーションに存在するとします。  
+ `@Country`_`region` パラメーターを受け取る次のストアド プロシージャが、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースに対して配置されたデータベース アプリケーションに存在するとします。  
   
 ```  
 CREATE PROCEDURE Sales.GetSalesOrderByCountry (@Country_region nvarchar(60))  
@@ -98,8 +97,7 @@ sp_create_plan_guide
 ```  
   
 > [!IMPORTANT]  
->  
-  `@module_or_batch` ステートメントの `@params` 引数と `sp_create_plan guide` 引数に指定する値は、実際のクエリで送信される、対応するテキストと一致している必要があります。 詳細については、「 [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql) ステートメントの [SQL Server Profiler を使用したプラン ガイドの作成とテスト](plan-guides.md)の実際のクエリのテキストを直接変更することが不可能な場合や望ましくない場合に、プラン ガイドを使用してクエリのパフォーマンスを最適化することができます。  
+>  `@module_or_batch` ステートメントの `@params` 引数と `sp_create_plan guide` 引数に指定する値は、実際のクエリで送信される、対応するテキストと一致している必要があります。 詳細については、「 [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql) ステートメントの [SQL Server Profiler を使用したプラン ガイドの作成とテスト](plan-guides.md)の実際のクエリのテキストを直接変更することが不可能な場合や望ましくない場合に、プラン ガイドを使用してクエリのパフォーマンスを最適化することができます。  
   
  PARAMETERIZATION データベース オプションを FORCED に設定するか、またはクエリのクラスをパラメーター化するように指定して TEMPLATE プラン ガイドを作成すると、同じ形式にパラメーター化されるクエリに SQL プラン ガイドを作成することもできます。  
   
@@ -147,7 +145,7 @@ sp_create_plan_guide
 |プラン ガイドに固定クエリ プランを含める方法について説明します。|[プラン ガイドへの固定クエリ プランの適用](apply-a-fixed-query-plan-to-a-plan-guide.md)|  
 |プラン ガイドにクエリ ヒントを指定する方法について説明します。|[プラン ガイドへのクエリ ヒントのアタッチ](attach-query-hints-to-a-plan-guide.md)|  
 |プラン ガイドのプロパティを表示する方法について説明します。|[プラン ガイド プロパティの表示](view-plan-guide-properties.md)|  
-|プラン ガイドを作成およびテストするために SQL Server Profiler を使用する方法について説明します。|[SQL Server Profiler を使用したプラン ガイドの作成とテスト](plan-guides.md)|  
+|プラン ガイドを作成およびテストするために SQL Server Profiler を使用する方法について説明します。|[SQL Server プロファイラーを使用してプランガイドを作成およびテストする](plan-guides.md)|  
 |プラン ガイドを検証する方法について説明します。|[アップグレード後のプラン ガイドの検証](validate-plan-guides-after-upgrade.md)|  
   
 ## <a name="see-also"></a>参照  
@@ -155,6 +153,6 @@ sp_create_plan_guide
  [sp_create_plan_guide_from_handle &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)   
  [sp_control_plan_guide &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql)   
  [plan_guides &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-plan-guides-transact-sql)   
- [fn_validate_plan_guide &#40;Transact-sql&#41;](/sql/relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql)  
+ [sys.fn_validate_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql)  
   
   

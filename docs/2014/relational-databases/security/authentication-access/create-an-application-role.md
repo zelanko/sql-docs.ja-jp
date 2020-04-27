@@ -15,10 +15,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 032c371fd37bb66392761fff24bd30efb2bd5b37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63011949"
 ---
 # <a name="create-an-application-role"></a>アプリケーション ロールの作成
@@ -39,14 +39,14 @@ ms.locfileid: "63011949"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  データベースに対する ALTER ANY APPLICATION ROLE 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 ##### <a name="to-create-an-application-role"></a>アプリケーション ロールを作成するには  
   
@@ -75,7 +75,7 @@ ms.locfileid: "63011949"
   
 -   **[拡張プロパティ]** ページでは、カスタム プロパティをデータベース ユーザーに追加できます。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-create-an-application-role"></a>アプリケーション ロールを作成するには  
   

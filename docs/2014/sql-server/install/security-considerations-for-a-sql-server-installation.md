@@ -27,16 +27,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: eec38b5ecc524f0d3decd02c0832efd1909e8f00
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63127888"
 ---
 # <a name="security-considerations-for-a-sql-server-installation"></a>SQL Server インストールにおけるセキュリティの考慮事項
   セキュリティは、あらゆる製品、あらゆる企業にとって重要です。 単純なベスト プラクティスに従うことで、多くのセキュリティの脆弱性を避けることができます。 このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールする前と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をインストールした後の両方で考慮する必要があるセキュリティのベスト プラクティスについて説明します。 特定の機能のセキュリティについては、その機能の参照トピックで説明しています。  
   
-## <a name="before-installing-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  をインストールする前に  
+## <a name="before-installing-ssnoversion"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  をインストールする前に  
  サーバー環境をセットアップする場合、次のベスト プラクティスに従ってください。  
   
 -   [物理的なセキュリティの強化](#physical_security)  
@@ -51,7 +51,7 @@ ms.locfileid: "63127888"
   
 -   [ドメイン コントローラーへの SQL Server のインストール](../../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md#Install_DC)  
   
-###  <a name="physical_security"></a> Enhance Physical Security  
+###  <a name="enhance-physical-security"></a><a name="physical_security"></a> Enhance Physical Security  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセキュリティは、物理的な分離と論理的な分離に基づいています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストールの物理的なセキュリティを強化するには、次のタスクを実行します。  
   
 -   無許可の人が入れない部屋にサーバーを配置します。  
@@ -62,7 +62,7 @@ ms.locfileid: "63127888"
   
 -   すべてのデータを定期的にバックアップし、バックアップを安全な場所に保存します。  
   
-###  <a name="firewalls"></a> Use Firewalls  
+###  <a name="use-firewalls"></a><a name="firewalls"></a> Use Firewalls  
  ファイアウォールは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストールのセキュリティを確保するために重要です。 次のガイドラインに従った場合、ファイアウォールが最も効果的になります。  
   
 -   ファイアウォールをサーバーとインターネットの間に配置します。 ファイアウォールを有効にします。 ファイアウォールがオフになっている場合はオンにします。 ファイアウォールがオンになっている場合は、オフにしないでください。  
@@ -77,12 +77,12 @@ ms.locfileid: "63127888"
   
  Windows ファイアウォールの既定の設定に関する詳細と、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、および [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]に影響する TCP ポートの説明については、「 [SQL Server のアクセスを許可するための Windows ファイアウォールの構成](../../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)」をご覧ください。  
   
-###  <a name="isolated_services"></a> Isolate Services  
+###  <a name="isolate-services"></a><a name="isolated_services"></a> Isolate Services  
  サービスを分離すると、いずれかのサービスが停止した場合でも、その他のサービスに影響が及ぶのを防ぐことができます。 サービスを分離する場合は、次のガイドラインを考慮してください。  
   
 -   各 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを個別の Windows アカウントで実行します。 可能な場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスごとに権限の低い個別の Windows またはローカル ユーザー アカウントを使用します。 詳細については、「 [Windows サービス アカウントと権限の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)」を参照してください。  
   
-###  <a name="sa_with_least_privileges"></a> Configure a Secure File System  
+###  <a name="configure-a-secure-file-system"></a><a name="sa_with_least_privileges"></a> Configure a Secure File System  
  正しいファイル システムを使用することで、セキュリティは向上します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールには、次の作業を行う必要があります。  
   
 -   NTFS ファイル システム (NTFS) を使用します。 NTFS は、FAT ファイル システムに比べて安定性と復旧性が高いことから、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールのファイル システムとして推奨されています。 また、NTFS では、ファイルとディレクトリのアクセス制御リスト (ACL) や暗号化ファイル システム (EFS) によるファイル暗号化などのセキュリティ オプションを使用できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール時に NTFS が検出されると、レジストリ キーとファイルに対して適切な ACL が設定されます。 これらの権限は変更しないでください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の今後のリリースでは、FAT ファイル システムを使用するコンピューターへのインストールはサポートされない可能性があります。  
@@ -92,7 +92,7 @@ ms.locfileid: "63127888"
   
 -   重要なデータ ファイルには、RAID (Redundant Array of Independent Disks) を使用します。  
   
-###  <a name="disabled_protocols"></a> Disable NetBIOS and Server Message Block  
+###  <a name="disable-netbios-and-server-message-block"></a><a name="disabled_protocols"></a> Disable NetBIOS and Server Message Block  
  境界領域ネットワーク内のサーバーでは、NetBIOS とサーバー メッセージ ブロック (SMB) を含め、不要なプロトコルをすべて無効にする必要があります。  
   
  NetBIOS には次のポートを使用します。  
@@ -111,7 +111,7 @@ ms.locfileid: "63127888"
   
  Web サーバーとドメイン ネーム システム (DNS) サーバーは NetBIOS と SMB をいずれも必要としません。 これらのサーバーでは、両方のプロトコルを無効にしてユーザー列挙の脅威を緩和します。  
   
-###  <a name="Install_DC"></a> ドメイン コントローラーへの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール  
+###  <a name="installing-ssnoversion-on-a-domain-controller"></a><a name="Install_DC"></a> ドメイン コントローラーへの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール  
  セキュリティ上の理由から、ドメイン コントローラーには [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] をインストールしないことをお勧めします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ時にインストールが中止されることはありませんが、次の制限事項が適用されます。  
   
 -   ローカル サービス アカウントを使用して、ドメイン コントローラー上で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを実行することはできません。  
@@ -124,7 +124,7 @@ ms.locfileid: "63127888"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでは、読み取り専用ドメイン コントローラーにセキュリティ グループを作成したり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントを準備したりすることはできません。 この場合、セットアップは失敗します。  
   
-## <a name="during-or-after-installation-of-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  のインストール中またはインストール後  
+## <a name="during-or-after-installation-of-ssnoversion"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  のインストール中またはインストール後  
  インストール後にアカウントと認証モードに関する次のベスト プラクティスに従うと、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストールのセキュリティを強化できます。  
   
  **サービス アカウント**  
@@ -143,8 +143,7 @@ ms.locfileid: "63127888"
   
  **強力なパスワード**  
   
--   
-  `sa` アカウントには、必ず強力なパスワードを割り当てます。  
+-   `sa` アカウントには、必ず強力なパスワードを割り当てます。  
   
 -   パスワードの強度と有効期限に関するパスワード ポリシー チェックを必ず有効にします。  
   

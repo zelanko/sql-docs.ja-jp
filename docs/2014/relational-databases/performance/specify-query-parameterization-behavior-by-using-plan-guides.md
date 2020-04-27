@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: da60ceee93802b14b7d09392740a1f6b471e4ab1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150602"
 ---
 # <a name="specify-query-parameterization-behavior-by-using-plan-guides"></a>プラン ガイドを使用したクエリのパラメーター化動作の指定
@@ -35,8 +35,7 @@ ms.locfileid: "63150602"
   
 -   PARAMETERIZATION データベース オプションが FORCED に設定されている場合、ある種のクエリについては、強制パラメーター化ではなく簡易パラメーター化だけを行うように指定できます。 これには、強制パラメーター化された形式のクエリの TEMPLATE プラン ガイドを作成し、 **sp_create_plan_guide**に PARAMETERIZATION SIMPLE クエリ ヒントを指定します。  
   
- 
-  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースを対象とした次のクエリについて考えてみましょう。  
+ [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースを対象とした次のクエリについて考えてみましょう。  
   
 ```  
 SELECT pi.ProductID, SUM(pi.Quantity) AS Total  
@@ -49,14 +48,12 @@ GROUP BY pi.ProductID, pi.Quantity HAVING SUM(pi.Quantity) > 50;
   
  ここでは、データベース管理者が、データベースのすべてのクエリにパラメーター化を強制しないことに決定しました。 ただし、前のクエリと定数リテラル値だけが異なり、構文は同じクエリすべてにコンパイル コストが発生するのは避けたいと考えています。 つまり、クエリをパラメーター化し、この種のクエリのクエリ プランを再利用できるように考えています。 このような場合は、次の手順を実行します。  
   
-1.  パラメーター化された形式のクエリを取得します。 
-  **sp_create_plan_guide** で使用するためにこの値を安全に取得する唯一の方法は、 [sp_get_query_template](/sql/relational-databases/system-stored-procedures/sp-get-query-template-transact-sql) システム ストアド プロシージャを使う方法です。  
+1.  パラメーター化された形式のクエリを取得します。 **sp_create_plan_guide** で使用するためにこの値を安全に取得する唯一の方法は、 [sp_get_query_template](/sql/relational-databases/system-stored-procedures/sp-get-query-template-transact-sql) システム ストアド プロシージャを使う方法です。  
   
 2.  パラメーター化された形式のクエリのプラン ガイドを作成し、PARAMETERIZATION FORCED クエリ ヒントを指定します。  
   
     > [!IMPORTANT]  
-    >  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はクエリのパラメーター化処理の一環として、リテラルの値とサイズに従って、リテラル値を置き換えるパラメーターにデータ型を割り当てます。 **@stmt** **Sp_get_query_template**の出力パラメーターに渡される定数リテラルの値に対しても同じ処理が行われます。 **@params** **Sp_create_plan_guide**の引数で指定されたデータ型は、によっ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]てパラメーター化されるクエリと一致する必要があるため、クエリに使用できるパラメーター値の完全な範囲をカバーするために、複数のプランガイドを作成することが必要になる場合があります。  
+    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はクエリのパラメーター化処理の一環として、リテラルの値とサイズに従って、リテラル値を置き換えるパラメーターにデータ型を割り当てます。 **@stmt** **Sp_get_query_template**の出力パラメーターに渡される定数リテラルの値に対しても同じ処理が行われます。 **@params** **Sp_create_plan_guide**の引数で指定されたデータ型は、によっ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]てパラメーター化されるクエリと一致する必要があるため、クエリに使用できるパラメーター値の完全な範囲をカバーするために、複数のプランガイドを作成することが必要になる場合があります。  
   
  次のスクリプトを使用すると、パラメーター化クエリの取得と、このクエリのプラン ガイドの作成の両方の処理を行えます。  
   
