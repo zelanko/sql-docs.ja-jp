@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1100baa3cd72a04d208b2076d91ca4efed7d38e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098866"
 ---
 # <a name="upload-file-page-report-manager"></a>[ファイルのアップロード] ページ (レポート マネージャー)
@@ -46,7 +46,7 @@ ms.locfileid: "66098866"
  **[アップロードするファイル]**  
  ファイル システムからコピーするファイルへの完全修飾パスを表示します。  
   
- **[参照]**  
+ **参照**  
  ファイル システムからファイルを選択する場合にクリックします。  
   
  **名前**  

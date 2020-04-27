@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 575eab878e0ef9b4357c09a0a3deedf143c237b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098480"
 ---
 # <a name="generatedatabaserightsscript-method-wmi-msreportserver_configurationsetting"></a>GenerateDatabaseRightsScript メソッド (WMI MSReportServer_ConfigurationSetting)
@@ -43,7 +43,7 @@ out Int32 HRESULT);
 ```  
   
 ## <a name="parameters"></a>パラメーター  
- *ユーザー名*  
+ *UserName*  
  スクリプトで権限を与えるユーザーのユーザー名または Windows セキュリティ識別子 (SID)。  
   
  *DatabaseName*  
@@ -55,18 +55,17 @@ out Int32 HRESULT);
  *IsWindowsUser*  
  指定されたユーザー名が Windows ユーザーか [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザーかを示すブール値。  
   
- *小*  
+ *[スクリプト]*  
  [out] 生成された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スクリプトを含む文字列。  
   
  *HRESULT*  
  [out] 呼び出しの成功または失敗を示す値。  
   
 ## <a name="return-value"></a>戻り値  
- メソッド呼び出しの成功または失敗を示す*HRESULT*を返します。 値 0 は、メソッド呼び出しが成功したことを示します。 0 以外の値は、エラーが発生したことを示します。  
+ メソッド呼び出しの成功または失敗を示す *HRESULT* を返します。 値 0 は、メソッド呼び出しが成功したことを示します。 0 以外の値は、エラーが発生したことを示します。  
   
 ## <a name="remarks"></a>解説  
- 
-  *DatabaseName* が空の場合、 *IsRemote* は無視され、レポート サーバーの構成ファイルの値がデータベース名に使用されます。  
+ *DatabaseName* が空の場合、 *IsRemote* は無視され、レポート サーバーの構成ファイルの値がデータベース名に使用されます。  
   
  *Iswindowsuser*がに`true`設定されている場合、*ユーザー名*はドメイン\\><\>username の形式\<である必要があります。  
   
@@ -76,31 +75,22 @@ out Int32 HRESULT);
   
  次の表は、変換されるアカウントとそのリモート表現を示しています。  
   
-|変換されるアカウントまたは SID|一般的な名前|リモート名|  
+|変換されるアカウントまたは SID|共通名|リモート名|  
 |---------------------------------------|-----------------|-----------------|  
-|(S-1-5-18)|[ローカル システム]|
-  \<Domain>\\<ComputerName\>$|  
-|.\LocalSystem|[ローカル システム]|
-  \<Domain>\\<ComputerName\>$|  
-|ComputerName\LocalSystem|[ローカル システム]|
-  \<Domain>\\<ComputerName\>$|  
-|LocalSystem|[ローカル システム]|
-  \<Domain>\\<ComputerName\>$|  
-|(S-1-5-20)|Network Service|
-  \<Domain>\\<ComputerName\>$|  
-|NT AUTHORITY\NetworkService|Network Service|
-  \<Domain>\\<ComputerName\>$|  
+|(S-1-5-18)|[ローカル システム]|\<Domain>\\<ComputerName\>$|  
+|.\LocalSystem|[ローカル システム]|\<Domain>\\<ComputerName\>$|  
+|ComputerName\LocalSystem|[ローカル システム]|\<Domain>\\<ComputerName\>$|  
+|LocalSystem|[ローカル システム]|\<Domain>\\<ComputerName\>$|  
+|(S-1-5-20)|Network Service|\<Domain>\\<ComputerName\>$|  
+|NT AUTHORITY\NetworkService|Network Service|\<Domain>\\<ComputerName\>$|  
 |(S-1-5-19)|Local Service|エラー - 下記参照。|  
 |NT AUTHORITY\LocalService|Local Service|エラー - 下記参照。|  
   
- 
-  [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)]では、組み込みアカウントを使用し、レポート サーバー データベースがリモートである場合、エラーが返されます。  
+ [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)]では、組み込みアカウントを使用し、レポート サーバー データベースがリモートである場合、エラーが返されます。  
   
- 
-  `LocalService` 組み込みアカウントを指定し、レポート サーバー データベースがリモートである場合、エラーが返されます。  
+ `LocalService` 組み込みアカウントを指定し、レポート サーバー データベースがリモートである場合、エラーが返されます。  
   
- 
-  *IsWindowsUser* が true であり、 *UserName* に指定した値を変換する必要がある場合、WMI プロバイダーはレポート サーバー データベースが同じコンピューターにあるかリモート コンピューターにあるかを確認します。 インストールがローカルであるかどうかを確認するため、WMI プロバイダーは以下の値一覧に対して DatabaseServerName プロパティを評価します。 一致が見つかった場合、データベースはローカルです。 見つからなかった場合、リモートです。 比較では大文字と小文字は区別されません。  
+ *IsWindowsUser* が true であり、 *UserName* に指定した値を変換する必要がある場合、WMI プロバイダーはレポート サーバー データベースが同じコンピューターにあるかリモート コンピューターにあるかを確認します。 インストールがローカルであるかどうかを確認するため、WMI プロバイダーは以下の値一覧に対して DatabaseServerName プロパティを評価します。 一致が見つかった場合、データベースはローカルです。 見つからなかった場合、リモートです。 比較では大文字と小文字は区別されません。  
   
 |DatabaseServerName の値|例|  
 |---------------------------------|-------------|  
@@ -109,8 +99,7 @@ out Int32 HRESULT);
 |"LOCAL"||  
 |localhost||  
 |\<Machinename>|testlab14|  
-|
-  \<MachineFQDN>|example.redmond.microsoft.com|  
+|\<MachineFQDN>|example.redmond.microsoft.com|  
 |\<IPAddress>|180.012.345,678|  
   
  *Iswindowsuser*がに`true`設定されている場合、WMI プロバイダーは LookupAccountName を呼び出してアカウントの SID を取得し、lookupaccountsid 関数を呼び出して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]スクリプトに含める名前を取得します。 このようにすると、使用するアカウント名は必ず [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 検証に合格します。  
@@ -124,7 +113,7 @@ out Int32 HRESULT);
  生成されたスクリプトは、 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005、および [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]をサポートします。  
   
 ## <a name="requirements"></a>必要条件  
- **名前空間:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>参照  
  [MSReportServer_ConfigurationSetting メンバー](msreportserver-configurationsetting-members.md)  

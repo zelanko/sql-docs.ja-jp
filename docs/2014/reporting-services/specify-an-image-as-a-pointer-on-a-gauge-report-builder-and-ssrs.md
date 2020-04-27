@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c7a57987a5d1cd0ac7984db3b716521d9c7a09af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101147"
 ---
 # <a name="specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs"></a>画像をゲージのポインターとして指定する (レポート ビルダーおよび SSRS)
@@ -37,8 +37,7 @@ ms.locfileid: "66101147"
   
 2.  Optionalゲージにポインターが存在しない場合は、ゲージを右クリックし、[**ポインターの追加**] を選択します。 ポインターがゲージに追加されます。  
   
-3.  リボンの [**挿入**] タブをクリックし、[イメージ] アイコンをダブルクリックします。 
-  **[画像のプロパティ]** ダイアログ ボックスが表示されます。  
+3.  リボンの [**挿入**] タブをクリックし、[イメージ] アイコンをダブルクリックします。 **[画像のプロパティ]** ダイアログ ボックスが表示されます。  
   
 4.  画像をレポートに追加します。 詳細については、「[レポート &#40;レポートビルダーおよび SSRS&#41;に画像を埋め込む](report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -58,9 +57,9 @@ ms.locfileid: "66101147"
 10. **TransparentColor**で、画像から削除する色の値を選択します。 これで、ゲージのポインターのシームレスな外観が作成されます。  
   
 ## <a name="see-also"></a>参照  
- [ゲージのポインターの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
+ [ゲージのポインターの書式設定 &#40;レポートビルダーと SSRS&#41;](report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [ゲージをレポートに追加する &#40;レポートビルダーと SSRS&#41;](report-design/add-a-gauge-to-a-report-report-builder-and-ssrs.md)   
- [線、色、および画像の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
+ [レポートビルダーおよび SSRS&#41;&#40;線、色、および画像の書式設定](report-design/images-report-builder-and-ssrs.md)   
  [ゲージ (レポート ビルダーおよび SSRS)](report-design/gauges-report-builder-and-ssrs.md)  
   
   

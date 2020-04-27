@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aae8b41dbd3751b21a7dc015b0a8157cf650185a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099340"
 ---
 # <a name="troubleshoot-report-builder"></a>レポート ビルダーのトラブルシューティング
@@ -25,13 +25,13 @@ ms.locfileid: "66099340"
  次の各トピックは、レポートの作成者とレポート サーバー管理者にそれぞれ役立つ、レポートのトラブルシューティング方法を示しています。  
   
 ## <a name="report-authors"></a>レポートの作成者  
- [レポートのトラブルシューティング: マップレポート &#40;レポートビルダーと SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [レポートのトラブルシューティング: マップ レポート &#40;レポート ビルダーおよび SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
  [レポートパーツ &#40;レポートビルダーと SSRS&#41;のトラブルシューティング](report-parts-report-builder-and-ssrs.md)  
   
  [グラフのトラブルシューティング &#40;レポート ビルダーおよび SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)  
   
-## <a name="administrators"></a>管理者  
+## <a name="administrators"></a>Administrators  
  [レポート ビルダーのインストール、アンインストール、およびサポート](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)  
   
  また、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [オンラインブック](https://go.microsoft.com/fwlink/?linkid=121312)のドキュメントの次のトピックも参照してください。  

@@ -14,14 +14,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: df4585dfa4b1e45b2de9d396a59dcbf132b1a505
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100249"
 ---
 # <a name="format-a-reporting-services-script-file"></a>Reporting Services スクリプト ファイルを書式設定する
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のスクリプトは [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET コード ファイルであり、Web サービス記述言語 (WSDL) で構築されたプロキシに対して記述され、Reporting Services SOAP API を定義します。 スクリプト ファイルは、拡張子 .rss が付く Unicode または UTF-8 テキスト ファイルです。  
   
  スクリプト ファイルは [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] モジュールとして動作し、ユーザー定義プロシージャとモジュール レベル変数を含みます。 スクリプト ファイルを正常に実行するには、スクリプト ファイルに Main プロシージャが含まれている必要があります。 Main プロシージャは、スクリプト ファイルを実行したとき最初に呼び出されるプロシージャです。 Main で、Web サービスの操作を追加でき、ユーザー定義サブプロシージャを実行できます。 次のコードによって Main プロシージャを作成します。  
@@ -47,16 +46,15 @@ End Sub
 ```  
   
 > [!IMPORTANT]  
->  ユーザーの資格情報はスクリプト環境によって管理され、RS.exe の使用によりコマンド プロンプト引数をとおして渡されます。 
-  *rs* 変数を使用して Web サービスの認証を設定できますが、スクリプト環境を使用することをお勧めします。 スクリプト ファイル内自体では Web サービスを認証する必要がありません。 スクリプト環境の認証の詳細については、「 [RS.exe ユーティリティ &#40;SSRS&#41;](rs-exe-utility-ssrs.md)」を参照してください。  
+>  ユーザーの資格情報はスクリプト環境によって管理され、RS.exe の使用によりコマンド プロンプト引数をとおして渡されます。 *rs* 変数を使用して Web サービスの認証を設定できますが、スクリプト環境を使用することをお勧めします。 スクリプト ファイル内自体では Web サービスを認証する必要がありません。 スクリプト環境の認証の詳細については、「 [RS.exe ユーティリティ &#40;SSRS&#41;](rs-exe-utility-ssrs.md)」を参照してください。  
   
- スクリプト ファイル内では名前空間を宣言しません。 スクリプト環境では、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] namespaces available to you: **System.Web.Services**, **System.Web.Services.Protocols**, **System.Xml**, and **System.IO**.  
+ スクリプト ファイル内では名前空間を宣言しません。 スクリプト環境では、便利な [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 名前空間、**System.Web.Services**、**System.Web.Services.Protocols**、**System.Xml**、**System.IO** が利用できます。  
   
  スクリプトのサンプルについては、「 [SQL Server Reporting Services 製品サンプル](https://go.microsoft.com/fwlink/?LinkId=177889)」参照してください。  
   
 ## <a name="see-also"></a>参照  
  [レポート サーバー Web サービス](../report-server-web-service/report-server-web-service.md)   
  [テクニカル リファレンス (SSRS)](../technical-reference-ssrs.md)   
- [RS .exe ユーティリティ &#40;SSRS&#41;](rs-exe-utility-ssrs.md)  
+ [RS.exe ユーティリティ &#40;SSRS&#41;](rs-exe-utility-ssrs.md)  
   
   

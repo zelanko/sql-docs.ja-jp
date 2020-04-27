@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7602ce0ef0e75c3c2eb1ee5a5a47e3fe56b87f44
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102143"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>レポート サーバーでカスタム認証またはフォーム認証を構成する
@@ -49,8 +49,7 @@ ms.locfileid: "66102143"
   
 4.  <`Authentication`> の既存のエントリの上に貼り付けます。  
   
-     
-  `Custom` は他の認証の種類と併用できないので注意してください。  
+     `Custom` は他の認証の種類と併用できないので注意してください。  
   
 5.  ファイルを保存します。  
   
@@ -62,8 +61,7 @@ ms.locfileid: "66102143"
     <authentication mode = "Forms" />  
     ```  
   
-8.  
-  `identity impersonate` を探して、`False` を設定します。  
+8.  `identity impersonate` を探して、`False` を設定します。  
   
     ```  
     <identity impersonate = "false" />  
@@ -77,8 +75,7 @@ ms.locfileid: "66102143"
     <authentication mode = "Forms" />  
     ```  
   
-11. 
-  `identity impersonate` を探して、`False` を設定します。  
+11. `identity impersonate` を探して、`False` を設定します。  
   
     ```  
     <identity impersonate = "false" />  
@@ -96,7 +93,7 @@ ms.locfileid: "66102143"
  [セキュリティ拡張機能の実装](../extensions/security-extension/implementing-a-security-extension.md)   
  [レポート サーバーでの認証](authentication-with-the-report-server.md)   
  [RSReportServer 構成ファイル](../report-server/rsreportserver-config-configuration-file.md)   
- [レポート サーバーで基本認証を構成する](configure-basic-authentication-on-the-report-server.md)   
+ [レポートサーバーで基本認証を構成する](configure-basic-authentication-on-the-report-server.md)   
  [レポート サーバーで Windows 認証を構成する](configure-windows-authentication-on-the-report-server.md)  
   
   

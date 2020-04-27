@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7a73f3be75a7f0cadf633943aeafffb7217d8e29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101158"
 ---
 # <a name="snapshot-options-properties-page-report-manager"></a>[スナップショット オプション] プロパティ ページ (レポート マネージャー)
@@ -34,8 +34,7 @@ ms.locfileid: "66101158"
   
 3.  ドロップダウン メニューの **[管理]** をクリックします。 この操作により、レポートの [全般] プロパティ ページが開きます。  
   
-4.  
-  **[スナップショット オプション]** タブをクリックします。  
+4.  **[スナップショット オプション]** タブをクリックします。  
   
 ## <a name="options"></a>オプション  
  **[レポート履歴の手動作成を許可する]**  
@@ -58,11 +57,11 @@ ms.locfileid: "66101158"
   
  レポート履歴は、レポート サーバー データベースに格納されます。 履歴を保持するレポートのサイズが大きい場合や数が多い場合は、レポート サーバー データベースのディスク領域の要件を管理するためにレポート履歴の量を制限することを検討してください。  
   
- **[適用]**  
+ 適用****  
  変更を保存する場合にクリックします。  
   
 ## <a name="see-also"></a>参照  
- [レポート履歴へのスナップショットの追加 &#40;レポート マネージャー&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [レポート履歴へのスナップショットの追加 &#40;レポートマネージャー&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [レポート履歴のスナップショットの作成、変更および削除](report-server/create-modify-and-delete-snapshots-in-report-history.md)   
  [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)  

@@ -15,16 +15,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93a62ec076b9dc61cd01d18796f04bbaa04eb93b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100697"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Reporting Services での SharePoint ライブラリへの配信
   SharePoint 統合用に構成されているレポート サーバーでは、レポートを SharePoint ライブラリに送信する配信拡張機能を使用できます。  
   
- SharePoint 配信拡張機能を使用するには、SharePoint サイトのアプリケーション ページからサブスクリプションを作成し、配信の種類を **[SharePoint ドキュメント ライブラリ]** に設定します。 またはレポートマネージャーで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]作成したサブスクリプションに対して、SharePoint 配信拡張機能を使用することはできません。  
+ SharePoint 配信拡張機能を使用するには、SharePoint サイトのアプリケーション ページからサブスクリプションを作成し、配信の種類を **[SharePoint ドキュメント ライブラリ]** に設定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] またはレポート マネージャーで作成したサブスクリプションに対して、SharePoint 配信拡張機能を使用することはできません。  
   
 > [!NOTE]  
 >  レポート サーバーがネイティブ モードで動作している場合、配信拡張機能では SharePoint サイトへのレポートの配信がサポートされません。 ネイティブ モードのレポート サーバーに対して、プログラムから配信拡張機能を呼び出そうとすると、サーバーは `rsDeliveryExtensionNotFound` エラーを返し、レポート サーバーのログ ファイルに `rsOperationNotSupportedSharePointMode` エラーが記録されます。  
@@ -53,8 +53,7 @@ ms.locfileid: "66100697"
   
 2.  レポートを選択し、レポートの横にある下向きの矢印をクリックして、 **[サブスクリプションの管理]** をクリックします。  
   
-3.  
-  **[作成]**、 **[編集]**、または **[削除]** をクリックします。  
+3.  **[作成]** 、 **[編集]** 、または **[削除]** をクリックします。  
   
  [サブスクリプションの管理] リストの状態メッセージに、サブスクリプションの現在の情報が表示されます。この情報には、サブスクリプションの状態や、サブスクリプションの最終実行日時などが含まれます。  
   
@@ -71,7 +70,7 @@ ms.locfileid: "66100697"
  ファイル名と拡張子  
  対象ライブラリでレポートが表示されるときのファイル名と拡張子を指定します。 ファイル拡張子を指定しなければ、レポートの出力形式に基づいてレポート サーバーで拡張子が作成されます。 この値は必須です。 ファイル名に使用できない文字は、: \ / * ? " < > | # { } % です。 " \< > |# { } %  
   
- タイトル  
+ Title  
  対象ライブラリ内のレポートの `Title` プロパティ (オプション) を指定します。 これは、ライブラリに格納されているすべてのアイテムに対する標準プロパティです。 ユーザーは、SharePoint サイトでライブラリ コンテンツを表示するときに、このプロパティを表示するか非表示にするかを指定できます。  
   
  Path  
@@ -86,7 +85,7 @@ ms.locfileid: "66100697"
  [自動コピー] 機能を使用して、最新バージョンのファイルを複数の場所に自動コピーする場合、 **[上書き]** が有効な場合にのみファイルがコピーされます。 **Autoincrement**または**None**を使用した場合、配信は失敗`rsDeliveryError`し、エラーが発生します。  
   
 ## <a name="see-also"></a>参照  
- [SharePoint モードのレポートサーバーのサブスクリプションを作成および管理する](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
+ [Create and Manage Subscriptions for SharePoint Mode Report Servers](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
  [サブスクリプションと配信 &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [レポート データ ソースに関する資格情報と接続情報を指定する](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   

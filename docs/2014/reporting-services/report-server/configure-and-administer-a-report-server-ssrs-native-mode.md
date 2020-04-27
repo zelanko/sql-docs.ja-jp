@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e31465f0f1099536e262442db894e5d6bfd6d37e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103997"
 ---
 # <a name="configure-and-administer-a-report-server-ssrs-native-mode"></a>レポート サーバーを構成および管理する (SSRS ネイティブ モード)
@@ -60,6 +60,6 @@ ms.locfileid: "66103997"
  [Reporting Services 構成ファイル](reporting-services-configuration-files.md)   
  [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Reporting Services のセキュリティと保護](../security/reporting-services-security-and-protection.md)   
- [Reporting Services レポート サーバー &#40;ネイティブ モード&#41;](reporting-services-report-server-native-mode.md)  
+ [Reporting Services レポート サーバー (ネイティブ モード)](reporting-services-report-server-native-mode.md)  
   
   

@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e83f539e1ffad77a337fc3e0142379da2ff0f703
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104101"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>リモート管理用のレポート サーバーの構成
@@ -66,7 +66,7 @@ ms.locfileid: "66104101"
   
 ### <a name="to-configure-remote-connections-to-the-report-server-database"></a>レポート サーバー データベースへのリモート接続を構成するには  
   
-1.  **[スタート]** ボタンをクリックし、 **[プログラム]** 、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[プログラム]**、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
   
 2.  左側のペインで、 **[SQL Server ネットワークの構成]** を展開し、 **のインスタンスの** [プロトコル] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をクリックします。  
   
@@ -92,7 +92,8 @@ ms.locfileid: "66104101"
     netsh.exe firewall show state  
     ```  
   
-5.  コンピューターを再起動します。  
+5.  コンピューターを再起動します。
+  
   
 ### <a name="to-set-dcom-permissions-to-enable-remote-wmi-access-for-non-administrators"></a>DCOM 権限を設定して管理者以外のユーザーによるリモート WMI アクセスを有効にするには  
   
@@ -116,7 +117,7 @@ ms.locfileid: "66104101"
   
 9. 自分のアカウントの名前を入力して、 **[OK]** をクリックします。  
   
-10. **[\<ユーザーまたはグループ のアクセス許可>]** で、 **[許可]** 列の **[リモートからの起動]** と **[リモートからのアクティブ化]** をオンにして、 **[OK]** をクリックします。  
+10. **[\<ユーザーまたはグループ のアクセス許可>]** で、**[許可]** 列の **[リモートからの起動]** と **[リモートからのアクティブ化]** をオンにして、**[OK]** をクリックします。  
   
 ### <a name="to-set-permissions-on-the-report-server-wmi-namespace-for-non-administrators"></a>管理者以外のユーザーにレポート サーバーの WMI 名前空間に対する権限を設定するには  
   
@@ -144,7 +145,7 @@ ms.locfileid: "66104101"
   
 12. **[追加]** をクリックして、サーバーを管理するために使用するユーザー アカウントを入力します。  
   
-13. **[許可]** 列の **[アカウントの有効化]** 、 **[リモートの有効化]** 、 **[セキュリティの読み取り]** をオンにして、 **[OK]** をクリックします。  
+13. **[許可]** 列の **[アカウントの有効化]**、 **[リモートの有効化]**、 **[セキュリティの読み取り]** をオンにして、 **[OK]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  

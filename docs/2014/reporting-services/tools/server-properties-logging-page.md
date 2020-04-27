@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2a04c27fd790a1ad5c4ba453b43af5983a6440e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099529"
 ---
 # <a name="server-properties-logging-page"></a>[サーバーのプロパティ]\([ログ記録] ページ)
@@ -32,10 +32,10 @@ ms.locfileid: "66099529"
  レポート実行ログからログ エントリが削除されるまでの経過日数を指定します。 既定値は 60 日です。  
   
 ## <a name="see-also"></a>参照  
- [レポート サーバーのプロパティを設定する (Management Studio)](set-report-server-properties-management-studio.md)   
- [Management Studio でレポート サーバーに接続する](connect-to-a-report-server-in-management-studio.md)   
+ [レポートサーバーのプロパティ &#40;Management Studio の設定&#41;](set-report-server-properties-management-studio.md)   
+ [Management Studio でレポートサーバーに接続する](connect-to-a-report-server-in-management-studio.md)   
  [Reporting Services のログ ファイルとソース](../report-server/reporting-services-log-files-and-sources.md)   
- [Management Studio のレポート サーバーの F1 ヘルプ](report-server-in-management-studio-f1-help.md)   
+ [Management Studio F1 ヘルプのレポートサーバー](report-server-in-management-studio-f1-help.md)   
  [レポート サーバー実行ログと ExecutionLog3 ビュー](../report-server/report-server-executionlog-and-the-executionlog3-view.md)  
   
   

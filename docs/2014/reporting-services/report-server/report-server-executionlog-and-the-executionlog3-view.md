@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 649795e5e142563b64014f2ccf970f0df5de134b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103471"
 ---
 # <a name="report-server-execution-log-and-the-executionlog3-view"></a>レポート サーバー実行ログと ExecutionLog3 ビュー
@@ -25,7 +25,7 @@ ms.locfileid: "66103471"
   
  SharePoint モード用に構成されたレポート サーバーでは、SharePoint ULS ログも利用できます。 詳細については、「 [SharePoint トレース ログの Reporting Services イベントをオンにする (ULS)](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
   
-##  <a name="bkmk_top"></a> ログ情報の表示  
+##  <a name="viewing-log-information"></a><a name="bkmk_top"></a> ログ情報の表示  
  レポート サーバーは、レポート実行に関するデータのログを内部データベース テーブルに記録します。 このテーブルの情報は SQL Server ビューで参照できます。  
   
  レポート サーバー実行ログはレポート サーバー データベースに格納されます。このデータベースの既定の名前は **ReportServer**です。 実行ログの情報は、SQL ビューに表示されます。 より新しいリリースで追加された "2" および "3" のビューには、新しいフィールドが追加されています。また、以前のリリースよりもわかりやすい名前に変更されたフィールドもあります。 古いビューも引き続き利用できるため、それらに依存するカスタム アプリケーションへの影響はありません。 ExecutionLog などの古いビューに依存していない場合は、最新のビューである ExecutionLog**3**を使用することをお勧めします。  
@@ -44,7 +44,7 @@ ms.locfileid: "66103471"
   
 -   [ログのフィールド (ExecutionLog)](#bkmk_executionlog)  
   
-##  <a name="bkmk_sharepoint"></a> SharePoint モードのレポート サーバーの構成設定  
+##  <a name="configuration-settings-for-a-sharepoint-mode-report-server"></a><a name="bkmk_sharepoint"></a> SharePoint モードのレポート サーバーの構成設定  
  レポート実行のログ記録の有効と無効の切り替えは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションのシステム設定で行うことができます。  
   
  既定では、ログ エントリが 60 日間保持されます。 この期間を超えるエントリは、毎日午前 2 時に 削除されます。 長期間使用しているインストールでは、使用可能な情報は常に 60 日分のみになります。  
@@ -71,7 +71,7 @@ ms.locfileid: "66103471"
   
 2.  **ExecutionLogLevel** を **verbose**に変更します。 このフィールドはテキスト入力フィールドで、有効な値は **verbose** と **normal**の 2 つです。  
   
-##  <a name="bkmk_native"></a> ネイティブ モードのレポート サーバーの構成設定  
+##  <a name="configuration-settings-for-a-native-mode-report-server"></a><a name="bkmk_native"></a> ネイティブ モードのレポート サーバーの構成設定  
  レポート実行のログ記録の有効と無効の切り替えは、SQL Server Management Studio の [サーバーのプロパティ] ページで行うことができます。 詳細プロパティの **EnableExecutionLogging** を使用します。  
   
  既定では、ログ エントリが 60 日間保持されます。 この期間を超えるエントリは、毎日午前 2 時に 削除されます。 長期間使用しているインストールでは、使用可能な情報は常に 60 日分のみになります。  
@@ -98,7 +98,7 @@ ms.locfileid: "66103471"
   
 2.  **[ユーザー定義]** セクションで、 **ExecutionLogLevel** を **verbose**に変更します。 このフィールドはテキスト入力フィールドで、有効な値は **verbose** と **normal**の 2 つです。  
   
-##  <a name="bkmk_executionlog3"></a> ログのフィールド (ExecutionLog3)  
+##  <a name="log-fields-executionlog3"></a><a name="bkmk_executionlog3"></a> ログのフィールド (ExecutionLog3)  
  このビューの XML ベースの **AdditionalInfo** 列内に追加のパフォーマンス診断ノードが追加されました。 AdditionalInfo 列には、他の 1 つ以上の情報のフィールドから成る XML 構造が格納されています。 ExecutionLog3 ビューから行を取得する Transact-SQL ステートメントの例を次に示します。 この例では、レポート サーバー データベースの名前が **ReportServer**であることを前提にしています。  
   
 ```  
@@ -108,28 +108,28 @@ select * from ExecutionLog3 order by TimeStart DESC
   
  次の表に、レポート実行ログに取得されるデータを示します。  
   
-|列|[説明]|  
+|列|説明|  
 |------------|-----------------|  
 |InstanceName|要求を処理したレポート サーバー インスタンスの名前。 レポート サーバーが複数ある環境では、InstanceName のディストリビューションを分析することで、ネットワーク負荷分散を監視し、要求がレポート サーバー間で想定どおりに分散されているかどうかを確認することができます。|  
 |ItemPath|レポートまたはレポート アイテムの格納場所のパス。|  
 |UserName|ユーザー識別子。|  
 |[ExecutionID]|要求に関連付けられた内部識別子。 同じユーザー セッションの要求は、同じ実行 ID を共有します。|  
-|RequestType|有効値は次のとおりです。<br />**Interactive**<br />**サブスクリプション**<br /><br /> <br /><br /> RequestType=Subscription でフィルター処理したログ データを TimeStart で並べ替えて分析すると、サブスクリプションが集中している時間が見つかることがあります。この情報を基に、レポートのサブスクリプションの一部を別の時間に変更することができます。|  
+|RequestType|有効値は次のとおりです。<br />**対話**<br />**サブスクリプション**<br /><br /> <br /><br /> RequestType=Subscription でフィルター処理したログ データを TimeStart で並べ替えて分析すると、サブスクリプションが集中している時間が見つかることがあります。この情報を基に、レポートのサブスクリプションの一部を別の時間に変更することができます。|  
 |Format|表示形式。|  
 |パラメーター|レポート実行に使用するパラメーター値。|  
-|ItemAction|指定できる値<br /><br /> **Render**<br /><br /> **並べ替え**<br /><br /> **BookMarkNavigation**<br /><br /> **DocumentNavigation**<br /><br /> **GetDocumentMap**<br /><br /> **Findstring**<br /><br /> **おい**<br /><br /> **RenderEdit**|  
+|ItemAction|指定できる値<br /><br /> **Render**<br /><br /> **基づく**<br /><br /> **BookMarkNavigation**<br /><br /> **DocumentNavigation**<br /><br /> **GetDocumentMap**<br /><br /> **Findstring**<br /><br /> **実行**<br /><br /> **RenderEdit**|  
 |TimeStart|レポート処理の期間を示す開始時刻と終了時刻。|  
 |TimeEnd||  
 |TimeDataRetrieval|データの取得にかかった時間 (単位はミリ秒)。|  
 |TimeProcessing|レポートの処理にかかった時間 (単位はミリ秒)。|  
 |TimeRendering|レポートの表示にかかった時間 (単位はミリ秒)。|  
-|source|レポート実行のソース。 指定できる値<br /><br /> **ライブ**<br /><br /> **Cache**: キャッシュされた実行を示します。たとえば、データセットクエリはライブでは実行されません。<br /><br /> **スナップショット**<br /><br /> **履歴**<br /><br /> **アドホック**: ドリルスルーレポートに基づいて動的に生成されたレポートモデル、または処理と表示のためにレポートサーバーを使用しているクライアントでプレビューされているレポートビルダーレポートのいずれかを示します。<br /><br /> **Session**: 既に確立されたセッション内のフォローアップ要求を示します。  たとえば、最初の要求がページ 1 の表示であり、フォローアップ要求は現在のセッション状態での Excel へのエクスポートである場合などが考えられます。<br /><br /> **Rdce**: レポート定義のカスタマイズ拡張機能を示します。 RDCE カスタム拡張機能では、レポート実行時にレポート定義を処理エンジンに渡す前に動的にカスタマイズできます。|  
+|source|レポート実行のソース。 指定できる値<br /><br /> **ライブ**<br /><br /> **Cache**: キャッシュされた実行を示します。たとえば、データセットクエリはライブでは実行されません。<br /><br /> **スナップショット**<br /><br /> **HISTORY**<br /><br /> **アドホック**: ドリルスルーレポートに基づいて動的に生成されたレポートモデル、または処理と表示のためにレポートサーバーを使用しているクライアントでプレビューされているレポートビルダーレポートのいずれかを示します。<br /><br /> **Session**: 既に確立されたセッション内のフォローアップ要求を示します。  たとえば、最初の要求がページ 1 の表示であり、フォローアップ要求は現在のセッション状態での Excel へのエクスポートである場合などが考えられます。<br /><br /> **Rdce**: レポート定義のカスタマイズ拡張機能を示します。 RDCE カスタム拡張機能では、レポート実行時にレポート定義を処理エンジンに渡す前に動的にカスタマイズできます。|  
 |Status|状態 (rsSuccess またはエラー コード。複数のエラーが発生する場合は、最初のエラーのみ記録)。|  
 |ByteCount|表示されるレポートのサイズ (バイト単位)。|  
 |RowCount|クエリから返される行数。|  
 |AdditionalInfo:|実行に関する追加情報を格納する XML プロパティ バッグ。 内容は行ごとに異なります。|  
   
-##  <a name="bkmk_additionalinfo"></a> AdditionalInfo フィールド  
+##  <a name="the-additionalinfo-field"></a><a name="bkmk_additionalinfo"></a> AdditionalInfo フィールド  
  AdditionalInfo フィールドは、実行に関する追加情報を格納する XML プロパティ バッグ (構造) です。 内容はログの行ごとに異なります。  
   
  次の表は、標準と詳細の両方のログの AddtionalInfo フィールドの内容の例です。  
@@ -297,7 +297,7 @@ select * from ExecutionLog3 order by TimeStart DESC
   
     ```  
   
-##  <a name="bkmk_executionlog2"></a> ログのフィールド (ExecutionLog2)  
+##  <a name="log-fields-executionlog2"></a><a name="bkmk_executionlog2"></a> ログのフィールド (ExecutionLog2)  
  このビューにはフィールドがいくつか追加されたほか、一部のフィールドの名前が変更されています。 ExecutionLog2 ビューから行を取得する Transact-SQL ステートメントの例を次に示します。 この例では、レポート サーバー データベースの名前が **ReportServer**であることを前提にしています。  
   
 ```  
@@ -307,7 +307,7 @@ select * from ExecutionLog2 order by TimeStart DESC
   
  次の表に、レポート実行ログに取得されるデータを示します。  
   
-|列|[説明]|  
+|列|説明|  
 |------------|-----------------|  
 |InstanceName|要求を処理したレポート サーバー インスタンスの名前。|  
 |ReportPath|レポートのパス構造。  たとえば、"test" というレポートがレポート マネージャーのルート フォルダーにある場合、ReportPath は "/test" となります。<br /><br /> "test" という名前のレポートがレポート マネージャー "samples" フォルダーに保存されている場合は、ReportPath は "/Samples/test/" となります。|  
@@ -322,13 +322,13 @@ select * from ExecutionLog2 order by TimeStart DESC
 |TimeDataRetrieval|データの取得、レポートの処理、レポートの表示にかかった時間 (単位はミリ秒)。|  
 |TimeProcessing||  
 |TimeRendering||  
-|source|レポート実行のソース (1 = 実行中、2 = キャッシュ、3 = スナップショット、4 = 履歴)。|  
-|Status|状態 (rsSuccess またはエラー コード。複数のエラーが発生する場合は、最初のエラーのみ記録)。|  
+|ソース|レポート実行のソース (1 = 実行中、2 = キャッシュ、3 = スナップショット、4 = 履歴)。|  
+|状態|状態 (rsSuccess またはエラー コード。複数のエラーが発生する場合は、最初のエラーのみ記録)。|  
 |ByteCount|表示されるレポートのサイズ (バイト単位)。|  
 |RowCount|クエリから返される行数。|  
 |AdditionalInfo:|実行に関する追加情報を格納する XML プロパティ バッグ。|  
   
-##  <a name="bkmk_executionlog"></a> ログのフィールド (ExecutionLog)  
+##  <a name="log-fields-executionlog"></a><a name="bkmk_executionlog"></a> ログのフィールド (ExecutionLog)  
  ExecutionLog ビューから行を取得する Transact-SQL ステートメントの例を次に示します。 この例では、レポート サーバー データベースの名前が **ReportServer**であることを前提にしています。  
   
 ```  
@@ -339,7 +339,7 @@ select * from ExecutionLog order by TimeStart DESC
   
  次の表に、レポート実行ログに取得されるデータを示します。  
   
-|列|[説明]|  
+|列|説明|  
 |------------|-----------------|  
 |InstanceName|要求を処理したレポート サーバー インスタンスの名前。|  
 |ReportID|レポート識別子。|  
@@ -352,13 +352,13 @@ select * from ExecutionLog order by TimeStart DESC
 |TimeDataRetrieval|データの取得、レポートの処理、レポートの表示にかかった時間 (単位はミリ秒)。|  
 |TimeProcessing||  
 |TimeRendering||  
-|source|レポート実行のソース。 有効値: 1 = 実行中、2 = キャッシュ、3 = スナップショット、4 = 履歴、5 = アドホック、6 = セッション、7 = RDCE。|  
-|Status|有効値: rsSuccess、rsProcessingAborted、またはエラー コード。 複数のエラーが発生した場合は、最初のエラーだけが記録されます。|  
+|ソース|レポート実行のソース。 有効値: 1 = 実行中、2 = キャッシュ、3 = スナップショット、4 = 履歴、5 = アドホック、6 = セッション、7 = RDCE。|  
+|状態|有効値: rsSuccess、rsProcessingAborted、またはエラー コード。 複数のエラーが発生した場合は、最初のエラーだけが記録されます。|  
 |ByteCount|表示されるレポートのサイズ (バイト単位)。|  
 |RowCount|クエリから返される行数。|  
   
 ## <a name="see-also"></a>参照  
- [SharePoint トレース ログの Reporting Services イベントをオンにする (ULS)](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
+ [SharePoint トレースログの Reporting Services イベントをオンにする &#40;ULS&#41;](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
  [Reporting Services のログ ファイルとソース](../report-server/reporting-services-log-files-and-sources.md)   
  [エラーとイベントのリファレンス (Reporting Services)](../troubleshooting/errors-and-events-reference-reporting-services.md)  
   

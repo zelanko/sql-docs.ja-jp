@@ -19,15 +19,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9088ab3e90b4fb341cc8125e45d498783953039d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100576"
 ---
 # <a name="supported-access-report-features-ssrs"></a>サポートされる Access レポート機能 (SSRS)
-  レポート デザイナーにレポートをインポートすると、インポート処理の際に、[!INCLUDE[msCoName](../includes/msconame-md.md)] Access のレポートは、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のレポート定義言語 (RDL) ファイルに変換されます。 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] は Access のいくつかの機能をサポートしていますが、Access と [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の相違のため、アイテムの中には、若干変更されるものや、まったくサポートされないものがあります。 このトピックでは、Access のレポート機能を RDL に変換する方法を説明します。  
+  レポート デザイナーにレポートをインポートすると、インポート処理の際に、[!INCLUDE[msCoName](../includes/msconame-md.md)] Access のレポートは、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のレポート定義言語 (RDL) ファイルに変換されます。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] は Access のいくつかの機能をサポートしていますが、Access と [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の相違のため、アイテムの中には、若干変更されるものや、まったくサポートされないものがあります。 このトピックでは、Access のレポート機能を RDL に変換する方法を説明します。  
   
 ## <a name="importing-access-reports"></a>Access レポートのインポート  
  一部のクエリには、Access 固有のコードが含まれています。 Access のコードがレポートと一緒にインポートされることはありません。 また、クエリに埋め込み文字列が含まれている場合、レポートは正しくインポートされません。 これを修正するには、文字列を文字コードに置き換えます。 たとえば、コンマ (,) 文字を CHAR(34) に置き換えます。  
@@ -39,8 +38,7 @@ ms.locfileid: "66100576"
  インポートするレポートにクエリ パラメーターを含むクエリがある場合、このクエリはレポートのインポート時に変換されません。 レポートと一緒にクエリをインポートするには、Access レポート内のクエリ パラメーターをハードコードされた値に一時的に置き換え、レポートのインポート後にこれらのハードコード値をクエリ パラメーターに置き換えます。  
   
 ## <a name="page-layout"></a>ページ レイアウト  
- Access のページ レイアウトは [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のページ レイアウトと異なっています。 Access では、"集合" 単位でアイテムがページ上に配置されます。つまり、各セクションはページ上に縦方向に並べて配置されます。 このようなセクションには、レポート ヘッダー、レポート フッター、ページ ヘッダー、ページ フッター、グループ、詳細などがあります。 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、より柔軟にレイアウトできます。 データ領域では、グループ化と詳細を利用でき、レポート本文の希望する箇所に複数のデータ領域を配置することができます。横に並べて配置することもできます。 また、Access のページ ヘッダーおよびページ フッターと同様に、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] にもページ ヘッダーとページ フッターの "集合" があります。  
+ Access のページ レイアウトは [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のページ レイアウトと異なっています。 Access では、"集合" 単位でアイテムがページ上に配置されます。つまり、各セクションはページ上に縦方向に並べて配置されます。 このようなセクションには、レポート ヘッダー、レポート フッター、ページ ヘッダー、ページ フッター、グループ、詳細などがあります。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、より柔軟にレイアウトできます。 データ領域では、グループ化と詳細を利用でき、レポート本文の希望する箇所に複数のデータ領域を配置することができます。横に並べて配置することもできます。 また、Access のページ ヘッダーおよびページ フッターと同様に、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] にもページ ヘッダーとページ フッターの "集合" があります。  
   
  レポートを Access からレポート デザイナーにインポートする際に、Access レポートのページ ヘッダーとページ フッターは [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポートのページ ヘッダーとページ フッターに変換されます。 グループと詳細は、一覧データ領域に変換されます。 レポート ヘッダーとレポート フッターは、個別の集合ではなく、レポート本文に配置されます。 このため、項目の配置が Access レポートの配置とは若干異なる可能性があります。  
   
@@ -48,54 +46,49 @@ ms.locfileid: "66100576"
 >  一部の Access レポートでは、上下または左右に並べて配置されるようなレポート アイテムが実際には重なり合っていることがあります。 レポート デザイナーを使用してレポートをインポートすると、この重なりは修正されません。そのため、レポートの実行時に予期しない結果が発生する場合があります。  
   
 ## <a name="data-sources"></a>ソリューション エクスプローラー  
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] などの OLE DB データ ソースをサポートします。 Access プロジェクト (.adp) ファイルからレポートをインポートする場合は、データ ソースの接続文字列は、.adp ファイルの接続文字列から取得されます。 Access データベース (.mdb または .accdb) ファイルからレポートをインポートする場合は、データ ソースの接続文字列が Access データベースを指していることがあるため、レポートのインポート後に修正が必要になる可能性があります。 Access レポートのデータ ソースがクエリである場合は、クエリ情報は変更されることなく RDL に保存されます。 Access レポートのデータ ソースがテーブルである場合は、変換処理の際、テーブル名およびテーブル内のフィールドを基にクエリが作成されます。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] などの OLE DB データ ソースをサポートします。 Access プロジェクト (.adp) ファイルからレポートをインポートする場合は、データ ソースの接続文字列は、.adp ファイルの接続文字列から取得されます。 Access データベース (.mdb または .accdb) ファイルからレポートをインポートする場合は、データ ソースの接続文字列が Access データベースを指していることがあるため、レポートのインポート後に修正が必要になる可能性があります。 Access レポートのデータ ソースがクエリである場合は、クエリ情報は変更されることなく RDL に保存されます。 Access レポートのデータ ソースがテーブルである場合は、変換処理の際、テーブル名およびテーブル内のフィールドを基にクエリが作成されます。  
   
 ## <a name="reports-with-custom-modules"></a>カスタム モジュールを含むレポート  
  モジュール内にカスタム[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]コードが含まれている場合は、変換されません。 インポート処理中にレポートデザイナーがコードを検出すると、警告が生成され、[**タスク一覧**] ウィンドウに表示されます。  
   
 ## <a name="report-controls"></a>レポート コントロール  
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下の Access コントロールがサポートされ、これらは変換後のレポート定義に保持されます。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下の Access コントロールがサポートされ、これらは変換後のレポート定義に保持されます。  
   
 |||||  
 |-|-|-|-|  
 |Image|ラベル|Line|Rectangle|  
 |サブフォーム|ポート<br /><br /> **メモ**サブレポートコントロールはメインレポート内で変換されますが、サブレポート自体は個別に変換されます。|TextBox||  
   
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下のコントロールはサポートされません。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下のコントロールはサポートされません。  
   
 |||||  
 |-|-|-|-|  
 |連結オブジェクト フレーム|CheckBox|ComboBox|コマンド ボタン|  
 |カスタム コントロール|ListBox|オブジェクト フレーム|OptionButton|  
-|タブ コントロール|トグル ボタン|||  
+|TabControl|トグル ボタン|||  
   
  インポート処理中にこれらのコントロールのいずれかが検出さレポートデザイナーと、警告が生成され、[**タスク一覧**] ウィンドウに表示されます。  
   
  ActiveX や Office Web コンポーネントなどのその他のコントロールは、インポートされません。 たとえば、Access レポートに OWC Chart コントロールが含まれていても、インポート時に変換されません。  
   
 ## <a name="report-properties"></a>レポート プロパティ  
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、Access のユーザー インターフェイスから利用できる以下のプロパティがサポートされます。 コード内でしか利用できないプロパティは、サポートされません。また、そのようなプロパティは、次の一覧には含まれていません。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、Access のユーザー インターフェイスから利用できる以下のプロパティがサポートされます。 コード内でしか利用できないプロパティは、サポートされません。また、そのようなプロパティは、次の一覧には含まれていません。  
   
 |||||  
 |-|-|-|-|  
 |色|背景スタイル|境界線色|BorderStyle|  
 |境界線幅|下余白|印刷時拡張 (テキスト ボックス)|印刷時縮小 (テキスト ボックス)|  
 |Caption|フォント太字|フォント斜体|FontName|  
-|FontSize|フォント下線|フォント太さ|改ページ|  
-|前景色|高さ|重複データ非表示|基点|  
-|ハイパーリンクあり|IsVisible|同一ページ印刷 (グループ)|Left|  
+|フォントサイズ|フォント下線|フォント太さ|改ページ|  
+|前景色|[高さ]|重複データ非表示|ハイパーリンク|  
+|ハイパーリンクあり|可視|同一ページ印刷 (グループ)|Left|  
 |左余白|線傾斜|LineSpacing|リンク子フィールド|  
 |リンク親フィールド|改段|ページフッター|ページヘッダー|  
 |ページ|写真|ピクチャ全体表示 (レポート)|読みの順序|  
 |セクション繰り返し|右余白|集計実行|OLE サイズ|  
 |TextAlign|TOP|上余白|幅|  
   
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、Access のユーザー インターフェイスから利用できる以下のプロパティはサポートされません。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、Access のユーザー インターフェイスから利用できる以下のプロパティはサポートされません。  
   
 |||||  
 |-|-|-|-|  
@@ -113,20 +106,17 @@ ms.locfileid: "66100576"
  Access では、式を使用して、テキスト ボックスに表示する値を指定します。 Access では、いくつかの集計関数の他に、式の言語として [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] が使用されています。 レポート デザイナーは、これらの Access の式をレポートの式に変換します。  
   
 ### <a name="functions"></a>関数  
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のレポート定義では、[!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET がネイティブの式の言語として使用されていますが、Access 2002 では、Visual Basic が使用されています。 以下の一覧に、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] によってサポートされている関数を示します。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のレポート定義では、[!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET がネイティブの式の言語として使用されていますが、Access 2002 では、Visual Basic が使用されています。 以下の一覧に、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] によってサポートされている関数を示します。  
   
 #### <a name="array-functions"></a>配列関数  
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下の配列関数がサポートされています。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下の配列関数がサポートされています。  
   
 -   仮定  
   
 -   UBound  
   
 #### <a name="conversion-functions"></a>変換関数  
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下の変換関数がサポートされています。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下の変換関数がサポートされています。  
   
 |||||  
 |-|-|-|-|  
@@ -139,23 +129,20 @@ ms.locfileid: "66100576"
 |Oct$|Str|Str$|StrConv|  
 |Val||||  
   
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下の変換関数はサポートされません。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下の変換関数はサポートされません。  
   
 -   GUIDFromString  
   
 -   StringFromGUID  
   
 #### <a name="database-functions"></a>データベース関数  
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下のデータベース関数がサポートされています。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下のデータベース関数がサポートされています。  
   
 |||||  
 |-|-|-|-|  
 |CreateReport|GetObject|HyperlinkPart|Partition|  
   
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下のデータベース関数はサポートされません。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下のデータベース関数はサポートされません。  
   
 |||||  
 |-|-|-|-|  
@@ -165,21 +152,19 @@ ms.locfileid: "66100576"
 |SysCmd||||  
   
 #### <a name="datetime-functions"></a>日付/時刻関数  
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下の日付/時刻関数がサポートされています。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下の日付/時刻関数がサポートされています。  
   
 |||||  
 |-|-|-|-|  
-|Date|Date$|DateAdd|DateDiff|  
+|日付|Date$|DateAdd|DateDiff|  
 |DatePart|DateSerial|DateValue|日|  
 |時|分|月|MonthName|  
 |Now|秒|Time|Time$|  
 |Timer|TimeSerial|TimeValue|平日|  
-|WeekdayName|年|||  
+|WeekdayName|Year|||  
   
 #### <a name="ddeole-functions"></a>DDE/OLE 関数  
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下の DDE/OLE 関数はサポートされません。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下の DDE/OLE 関数はサポートされません。  
   
 |||||  
 |-|-|-|-|  
@@ -187,8 +172,7 @@ ms.locfileid: "66100576"
 |LoadPicture||||  
   
 #### <a name="domain-aggregate-functions"></a>定義域集計関数  
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下の定義域集計関数はサポートされません。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下の定義域集計関数はサポートされません。  
   
 |||||  
 |-|-|-|-|  
@@ -197,21 +181,18 @@ ms.locfileid: "66100576"
 |DStDevP|DSum|DVar|DVarP|  
   
 #### <a name="error-handling-functions"></a>エラー処理関数  
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下のエラー処理関数がサポートされています。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下のエラー処理関数がサポートされています。  
   
 |||||  
 |-|-|-|-|  
-|Err|エラー|Error$|IsError|  
+|Err|Error|Error$|IsError|  
   
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下のエラー処理関数はサポートされていません。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下のエラー処理関数はサポートされていません。  
   
 -   CVErr  
   
 #### <a name="financial-functions"></a>財務関数  
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下の財務関数がサポートされています。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下の財務関数がサポートされています。  
   
 |||||  
 |-|-|-|-|  
@@ -221,29 +202,26 @@ ms.locfileid: "66100576"
 |SYD||||  
   
 #### <a name="interaction-functions"></a>インタラクティブ関数  
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下のインタラクティブ関数がサポートされています。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下のインタラクティブ関数がサポートされています。  
   
 |||||  
 |-|-|-|-|  
-|command|Command$|CurDir|CurDir$|  
+|コマンド|Command$|CurDir|CurDir$|  
 |DeleteSetting|Dir|Dir$|Environ|  
 |Environ$|EOF|FileAttr|FileDateTime|  
 |FileLen|FreeFile|GetAllSettings|GetAttr|  
 |GetSetting|Loc|LOF|QBColor|  
-|RGB|SaveSetting|弁護士|SetAttr|  
-|シェル|Spc|Tab||  
+|RGB|SaveSetting|Seek|SetAttr|  
+|Shell|Spc|タブ||  
   
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下のインタラクティブ関数はサポートされません。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下のインタラクティブ関数はサポートされません。  
   
 |||||  
 |-|-|-|-|  
-|DoEvents|既定により、|入力|Input$|  
+|DoEvents|場所|入力|Input$|  
   
 #### <a name="inspection-functions"></a>特殊評価関数  
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下の特殊評価関数がサポートされています。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下の特殊評価関数がサポートされています。  
   
 |||||  
 |-|-|-|-|  
@@ -251,41 +229,36 @@ ms.locfileid: "66100576"
 |IsNull|IsNumeric|IsObject|TypeName|  
 |VarType||||  
   
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下の特殊評価関数はサポートされません。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下の特殊評価関数はサポートされません。  
   
 -   IsMissing  
   
-#### <a name="math-functions"></a>算術関数  
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下の算術関数がサポートされています。  
+#### <a name="math-functions"></a>数値演算関数  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下の算術関数がサポートされています。  
   
 |||||  
 |-|-|-|-|  
 |Abs|Atn|Cos|Exp|  
-|解決策|int|ログ|Rnd|  
+|Fix|int|ログ|Rnd|  
 |Round|Sgn|Sin|R-sqr|  
 |Tan||||  
   
 #### <a name="message-functions"></a>メッセージ関数  
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下のメッセージ関数はサポートされません。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下のメッセージ関数はサポートされません。  
   
 |||||  
 |-|-|-|-|  
 |InputBox|InputBox$|MsgBox||  
   
 #### <a name="program-flow-functions"></a>プログラム フロー関数  
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下のプログラム フロー関数がサポートされています。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下のプログラム フロー関数がサポートされています。  
   
 |||||  
 |-|-|-|-|  
-|選択|IIf|スイッチ||  
+|選択|IIf|Switch||  
   
 #### <a name="sql-aggregate-functions"></a>SQL 集計関数  
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下の SQL 集計関数がサポートされています。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下の SQL 集計関数がサポートされています。  
   
 |||||  
 |-|-|-|-|  
@@ -294,8 +267,7 @@ ms.locfileid: "66100576"
 |VarP||||  
   
 #### <a name="text-functions"></a>文字列関数  
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下の文字列関数がサポートされています。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下の文字列関数がサポートされています。  
   
 |||||  
 |-|-|-|-|  
@@ -303,7 +275,7 @@ ms.locfileid: "66100576"
 |LCase|LCase$|Left|Left$|  
 |Len|LTrim|LTrim$|Mid|  
 |Mid$|Replace|Right|Right$|  
-|RTrim|スペース|Space$|StrComp|  
+|RTrim|Space|Space$|StrComp|  
 |StrConv|String|String$|StrReverse|  
 |Trim|Trim$|UCase|UCase$|  
   
@@ -316,12 +288,10 @@ ms.locfileid: "66100576"
  ストアド プロシージャのデータ型は、常に string としてインポートされます。 レポートのインポート後、パラメーターを手動で変更して、正しいデータ型が使用されるようにする必要があります。  
   
 ### <a name="object-names"></a>オブジェクト名  
- Access ではフィールドにコントロールと同じ名前を付けることができますが、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ではできません。 
-  [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 6.0 では変数名にスペースを使用することができますが、Visual Basic .NET ではできません。 このようなオブジェクト名はすべて、インポート処理の際、有効な名前に置き換えられ、複数のオブジェクトが同じ名前の場合は一意の名前が割り当てられます。 各式はスキャンされ、名前が変更されたオブジェクトに対応する変数の名前は、新しい名前に置き換えられます。  
+ Access ではフィールドにコントロールと同じ名前を付けることができますが、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ではできません。 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 6.0 では変数名にスペースを使用することができますが、Visual Basic .NET ではできません。 このようなオブジェクト名はすべて、インポート処理の際、有効な名前に置き換えられ、複数のオブジェクトが同じ名前の場合は一意の名前が割り当てられます。 各式はスキャンされ、名前が変更されたオブジェクトに対応する変数の名前は、新しい名前に置き換えられます。  
   
 ## <a name="rectangles-and-containment"></a>四角形とその内容  
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のレポート定義では、四角形内に他のレポート アイテムを含めることができます。 レポート アイテムよりも大きく、レポート アイテムの領域のうち 90% を超える領域と重なっている四角形は、そのレポート アイテムのコンテナーになります。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のレポート定義では、四角形内に他のレポート アイテムを含めることができます。 レポート アイテムよりも大きく、レポート アイテムの領域のうち 90% を超える領域と重なっている四角形は、そのレポート アイテムのコンテナーになります。  
   
 ## <a name="bitmaps"></a>ビットマップ  
  レポート内に埋め込まれているビットマップはすべて、インポート時に .bmp 形式に変換されます。これらのビットマップの最初の形式は無視されます。 たとえば、レポートに .jpg ファイルおよび .gif ファイルが含まれていた場合、レポートと一緒にインポートされるリソースは .bmp ファイルになります。 ビットマップは、レポートの埋め込み画像として保存されます。 埋め込み画像の詳細については、「[イメージ &#40;レポートビルダーと SSRS&#41;](report-design/images-report-builder-and-ssrs.md)」を参照してください。  

@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4f86c02acfcefba4972769367649cfd6b2075107
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103620"
 ---
 # <a name="process-large-reports"></a>サイズの大きなレポートの処理
@@ -71,8 +71,8 @@ ms.locfileid: "66103620"
 ## <a name="see-also"></a>参照  
  [サブスクリプションと配信 &#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [レポート処理プロパティの設定](set-report-processing-properties.md)   
- [レポートデータソースの資格情報と接続情報を指定する](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [レポート データ ソースに関する資格情報と接続情報を指定する](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [レポート サーバー コンテンツの管理 &#40;SSRS ネイティブ モード&#41;](report-server-content-management-ssrs-native-mode.md)   
- [キャッシュ &#40;レポートマネージャーを事前に読み込む&#41;](preload-the-cache-report-manager.md)  
+ [キャッシュの事前読み込み &#40;レポート マネージャー&#41;](preload-the-cache-report-manager.md)  
   
   

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 46b8f7326578b9d8276c164577adf691accdd48e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099142"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Reporting Services エラー
@@ -35,7 +35,7 @@ ms.locfileid: "66099142"
  レポートのサブスクリプションをパブリッシュ、処理、ローカルでプレビュー、レポート サーバーから表示、または作成しているときに、1 つ以上のエラーが発生しました。 このエラー メッセージは、少なくとも 1 つのエラーが検出されたことを示しています。  
   
 ### <a name="possible-causes"></a>考えられる原因  
- 考えられる原因は次のとおりです。  
+ 次の原因が考えられます。  
   
 -   レポート サーバーで処理エラーが発生した。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66099142"
   
 -   Null 許容プロパティがに`False`設定されているパラメーターは、パラメーターに null 値を検出しました。  
   
--   データ領域の Hidden プロパティの式にエラーが含まれている。オブジェクト参照が、オブジェクトのインスタンスに設定されていない。  
+-   データ領域の Hidden プロパティの式に次のエラーが含まれています。オブジェクト参照がオブジェクト インスタンスに設定されていません。  
   
 -   無効な関数呼び出しまたは構文エラーが式に含まれていた。  
   
@@ -84,27 +84,25 @@ ms.locfileid: "66099142"
  複数値パラメーターには NULL を設定できません。 詳細については、「 [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../report-design/report-parameters-report-builder-and-report-designer.md)にあります。  
   
 ### <a name="main-report-with-subreport-could-not-be-processed"></a>サブレポートを含むメイン レポートを処理できなかった  
- サブレポートを含むレポートは、同一バージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート プロセッサで処理する必要があります。 レポートを最新バージョンのレポート定義スキーマにアップグレードする場合、メイン レポートとサブレポートは同時に更新されることもされないこともあります。 レポートとそのサブレポートの間でバージョンが一致しないと、"サブレポートを処理できませんでした。" というメッセージが表示されます。  
+ サブレポートを含むレポートは、同一バージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート プロセッサで処理する必要があります。 レポートを最新バージョンのレポート定義スキーマにアップグレードする場合、メイン レポートとサブレポートは同時に更新されることもされないこともあります。 レポートとそのサブレポートの間でバージョンが一致しないと、"サブレポートを処理できませんでした" というメッセージが表示されます。  
   
  すべてのレポートを同一バージョンのレポート プロセッサで処理できるように、メイン レポートまたはサブレポートのいずれかを変更する必要があります。 レポートをアップグレードできない場合の原因については、「 [レポートのアップグレード](../install-windows/upgrade-reports.md)」を参照してください。  
   
 ### <a name="verify-function-calls-are-visual-basic-and-not-sql"></a>関数呼び出しが SQL ではなく Visual Basic であることを確認する  
- リレーショナル データベースのクエリ テキストでは SQL 関数を使用できます。 
-  [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 関数はクエリ テキストで使用できません。  
+ リレーショナル データベースのクエリ テキストでは SQL 関数を使用できます。 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 関数はクエリ テキストで使用できません。  
   
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 関数、System.Math 関数、System.String 関数、完全に修飾された [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 関数、またはカスタム コードやカスタム アセンブリで指定したカスタム関数を式内で使用できます。 式で SQL 関数は使用できません。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 関数、System.Math 関数、System.String 関数、完全に修飾された [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 関数、またはカスタム コードやカスタム アセンブリで指定したカスタム関数を式内で使用できます。 式で SQL 関数は使用できません。  
   
  クエリ内および式内の関数呼び出しが有効であることを確認します。  
   
 ### <a name="cannot-compare-data-types-for-a-filter"></a>フィルターのデータ型を比較できない  
  フィルターの演算式では、フィルターの対象を定義するフィルター式とフィルター値は、比較できるように同じデータ型にする必要があります。 次のいずれかのエラーが表示された場合は、データ型が一致するようにフィールド式またはフィルター値を変更します。  
   
--   レポート* \<アイテム名>* に対する* \<レポートアイテムの種類>* の処理を実行できません。 型* \<>* と* \<型*のデータを比較することはできません>。 レポートアイテム名>によって返されたデータ型を確認してください。 * \< *  
+-   *\<report item name>* の *\<report item type>* の処理は実行できません。 データ型 *\<type>* と *\<type>* を比較できません。 *\<report item name>* によって返されたデータ型を確認してください。  
   
--   プロパティ名>を評価できませんでした。 * \< *  
+-   *\<property name>* を評価できませんでした。  
   
--   プロパティ名>を評価できませんでした。 * \< * エラーが* \<* 発生したデータセットフィールドを参照しています。エラー文字列>。  
+-   *\<property name>* を評価できませんでした。 次のエラーを含んでいるデータセット フィールドを参照しています。 *\<error string>* 。  
   
  詳細については、「 [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -113,9 +111,9 @@ ms.locfileid: "66099142"
   
  特定のスコープの名前を集計関数に渡すこともできます。 スコープでは、データセットの名前、データ領域、またはデータ階層のより上位のスコープの名前を参照できます。 これは、次のメッセージに当てはまります。  
   
--   * \<レポートアイテムの種類>* '*\<レポートアイテム名>*' に無効なスコープ "*\<スコープ名>*" が含まれています。 スコープは現在のスコープであるか、または現在のスコープ内に含まれている必要があります。  
+-   *\<report item type>* ' *\<report item name>* ' のスコープ " *\<scope name>* " が無効です。 スコープは現在のスコープであるか、または現在のスコープ内に含まれている必要があります。  
   
--   *レポートアイテムの種類>' report item name>' のプロパティ名>式には、集計関数に対して無効なスコープパラメーターが指定されています。 \<* * \<* *\< * スコープのパラメーターは、含まれるグループの名前、含まれるデータ領域の名前、またはデータセットの名前のいずれかと同じ文字列の定数に設定する必要があります。  
+-   *\<report item type>* ' *\<report item name>* ' の *\<property name>* 式に集計関数では使用できないスコープ パラメーターがあります。 スコープのパラメーターは、含まれるグループの名前、含まれるデータ領域の名前、またはデータセットの名前のいずれかと同じ文字列の定数に設定する必要があります。  
   
  累計を計算する集計関数 (`Previous`、`RunningValue`、または `RowNumber`) の場合、行グループ名または列グループ名をスコープのパラメーターに指定できますが、両方を指定することはできません。 これは、次のエラー メッセージに当てはまります。  
   
@@ -131,9 +129,9 @@ ms.locfileid: "66099142"
  [集計関数リファレンス &#40;レポート ビルダーおよび SSRS&#41;](../report-design/report-builder-functions-aggregate-functions-reference.md)   
  [式の例 (レポート ビルダーおよび SSRS)](../report-design/expression-examples-report-builder-and-ssrs.md)   
  [レポート &#40;レポートビルダーおよび SSRS&#41;にデータを追加する](../report-data/report-datasets-ssrs.md)   
- [一般的に使用されるフィルター &#40;レポートビルダーと SSRS&#41;](../report-design/commonly-used-filters-report-builder-and-ssrs.md)   
+ [一般的に使用されるフィルター &#40;レポート ビルダーおよび SSRS&#41;](../report-design/commonly-used-filters-report-builder-and-ssrs.md)   
  [データセット フィールド コレクション &#40;レポート ビルダーおよび SSRS&#41;](../report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [レポートデザイナー &#40;SSRS&#41;の式におけるカスタムコードおよびアセンブリ参照](../report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
+ [レポート デザイナーでカスタム コードやアセンブリを式から参照する (SSRS)](../report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
  [Parameters コレクションの参照 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   
   

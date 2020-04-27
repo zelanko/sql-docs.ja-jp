@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1607637630c507588602dd7e566917ce1eeb6080
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100922"
 ---
 # <a name="pause-report-and-subscription-processing"></a>レポートとサブスクリプションの処理を一時停止する
@@ -47,8 +47,8 @@ ms.locfileid: "66100922"
  レポートまたはサブスクリプションが共有スケジュールから実行される場合、スケジュールを一時停止して処理を中止できます。 スケジュールによって駆動されるすべてのレポートおよびサブスクリプションの処理は、スケジュールが再開されるまで延期されます。 詳細については、「[共有スケジュールの一時停止と再開](schedules.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services レポートサーバー &#40;ネイティブモード&#41;](../report-server/reporting-services-report-server-native-mode.md)   
+ [Reporting Services レポート サーバー (ネイティブ モード)](../report-server/reporting-services-report-server-native-mode.md)   
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../report-manager-ssrs-native-mode.md)   
- [[セキュリティ] プロパティページ、アイテム &#40;レポートマネージャー&#41;](../security-properties-page-items-report-manager.md)  
+ [[セキュリティのプロパティ] ページ、アイテム (レポート マネージャー)](../security-properties-page-items-report-manager.md)  
   
   

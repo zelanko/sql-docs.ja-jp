@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 723e8fe5f657d3b9eda2d6ab73966830a13a3aac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099132"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>チュートリアル: レポートへの縦棒グラフの追加 (レポート ビルダー)
@@ -30,12 +30,12 @@ ms.locfileid: "66099132"
   
  ![rs_TutorialColChartFinished](../../2014/tutorials/media/rs-tutorialcolchartfinished.gif "rs_TutorialColChartFinished")  
   
-##  <a name="BackToTop"></a>学習内容  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>学習内容  
  このチュートリアルでは、次の方法を学習します。  
   
 1.  [グラフ ウィザードからグラフ レポートを作成する](#Chart)  
   
-2.  [グラフの種類を選択します](#ChartType)  
+2.  [グラフの種類を選択する](#ChartType)  
   
 3.  [横軸の形式とラベルを設定する](#Horizontal)  
   
@@ -56,10 +56,10 @@ ms.locfileid: "66099132"
   
  このチュートリアルの推定所要時間: 15 分  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  要件の詳細については、[「チュートリアルの前提条件 (レポート ビルダー)」](../reporting-services/report-builder-tutorials.md) を参照してください。  
   
-##  <a name="Chart"></a>1. グラフウィザードからグラフレポートを作成する  
+##  <a name="1-create-a-chart-report-from-the-chart-wizard"></a><a name="Chart"></a>1. グラフウィザードからグラフレポートを作成する  
  [**はじめに**] ダイアログボックスで、グラフウィザードを使用して埋め込みデータセットを作成し、共有データソースを選択して、縦棒グラフを作成します。  
   
 > [!NOTE]  
@@ -67,8 +67,7 @@ ms.locfileid: "66099132"
   
 #### <a name="to-create-a-new-chart-report"></a>新しいグラフ レポートを作成するには  
   
-1.  
-  **[スタート]** ボタンをクリックし、 **[プログラム]**、 **[Microsoft SQL Server 2012 レポート ビルダー]** の順にポイントして、 **[レポート ビルダー]** をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[プログラム]**、 **[Microsoft SQL Server 2012 レポート ビルダー]** の順にポイントして、 **[レポート ビルダー]** をクリックします。  
   
      [**はじめに**] ダイアログボックスが表示されます。  
   
@@ -79,11 +78,9 @@ ms.locfileid: "66099132"
   
 3.  右ペインで、 **[グラフ ウィザード]** をクリックします。  
   
-4.  
-  **[データセットの選択]** ページで **[データセットを作成する]** をクリックし、 **[次へ]** をクリックします。  
+4.  [**データセットの選択] ページ**で、[**データセットの作成**] をクリックし、[**次へ**] をクリックします。  
   
-5.  
-  **[データ ソースへの接続の選択]** ページで、既存のデータ ソースを選択するか、レポート サーバーを参照してデータ ソースを選択し、 **[次へ]** をクリックします。 ユーザー名とパスワードの入力が必要な場合があります。  
+5.  **[データ ソースへの接続の選択]** ページで、既存のデータ ソースを選択するか、レポート サーバーを参照してデータ ソースを選択し、 **[次へ]** をクリックします。 ユーザー名とパスワードの入力が必要な場合があります。  
   
     > [!NOTE]  
     >  適切な権限を持っている限り、選択するデータ ソースは重要ではありません。 データ ソースからはデータを取得しません。 詳細については、[「別の方法でデータ接続を取得する &#40;レポート ビルダー&#41;」](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)を参照してください。  
@@ -115,16 +112,14 @@ ms.locfileid: "66099132"
   
 9. **[次へ]** をクリックします。  
   
-##  <a name="ChartType"></a>2. グラフの種類を選択する  
+##  <a name="2-choose-the-chart-type"></a><a name="ChartType"></a>2. グラフの種類を選択する  
  あらかじめ定義されているさまざまなグラフの種類から選択できます。  
   
 #### <a name="to-add-a-column-chart"></a>縦棒グラフを追加するには  
   
-1.  
-  **[グラフの種類の選択]** ページでは、縦棒グラフが既定のグラフの種類です。 **[次へ]** をクリックします。  
+1.  **[グラフの種類の選択]** ページでは、縦棒グラフが既定のグラフの種類です。 **[次へ]** をクリックします。  
   
-2.  
-  **[グラフのフィールドの配置]** ページで、SalesDate フィールドを **[カテゴリ]** にドラッグします。 カテゴリは横軸に表示されます。  
+2.  **[グラフのフィールドの配置]** ページで、SalesDate フィールドを **[カテゴリ]** にドラッグします。 カテゴリは横軸に表示されます。  
   
 3.  Sales フィールドを **[値]** にドラッグします。 販売の合計値の総計が 1 日ごとに集計されるので、 **[値]** ボックスには Sum(Sales) が表示されます。 値は縦軸に表示されます。  
   
@@ -142,7 +137,7 @@ ms.locfileid: "66099132"
   
 8.  **[実行]** をクリックして、レポートをプレビューします。  
   
-##  <a name="Horizontal"></a>3. 横軸の書式を設定してラベルを付ける  
+##  <a name="3-format-and-label-the-horizontal-axis"></a><a name="Horizontal"></a>3. 横軸の書式を設定してラベルを付ける  
  既定では、横軸の値が一般的な形式で表示されます。この場合、グラフのサイズに合わせて自動的にスケーリングされます。  
   
 #### <a name="to-format-a-date-on-the-horizontal-axis"></a>横軸に表示される日付の書式を変更するには  
@@ -155,8 +150,7 @@ ms.locfileid: "66099132"
   
 4.  [**カテゴリ**] で [**日付**] を選択します。  
   
-5.  
-  **[型]** ボックスで **[2000 年 1 月 31 日]** を選択します。  
+5.  **[型]** ボックスで **[2000 年 1 月 31 日]** を選択します。  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -180,8 +174,7 @@ ms.locfileid: "66099132"
   
 6.  [**軸ラベルの自動調整オプションの変更**] で、[**自動調整を無効にする**] を選択します。  
   
-7.  
-  **[ラベルの回転角度]** で **[-90]** を選択します。  
+7.  **[ラベルの回転角度]** で **[-90]** を選択します。  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -191,7 +184,7 @@ ms.locfileid: "66099132"
   
  グラフでは、ラベルが回転して 3 日ごとに表示されています。  
   
-##  <a name="Legend"></a>4. 凡例を移動する  
+##  <a name="4-move-the-legend"></a><a name="Legend"></a>4. 凡例を移動する  
  凡例は、カテゴリと系列データから自動的に作成されます。  
   
 #### <a name="to-move-the-legend-below-the-chart-area-of-a-column-chart"></a>凡例を縦棒グラフのグラフ領域の下に移動するには  
@@ -202,8 +195,7 @@ ms.locfileid: "66099132"
   
 3.  [**レイアウトと位置**] で、別の位置を選択します。 たとえば、下部中央の位置を選択します。  
   
-     凡例をグラフの上または下に配置すると、凡例のレイアウトが縦方向から横方向に変更されます。 
-  **[レイアウト]** ドロップダウン リストから、異なるレイアウトを選択できます。  
+     凡例をグラフの上または下に配置すると、凡例のレイアウトが縦方向から横方向に変更されます。 **[レイアウト]** ドロップダウン リストから、異なるレイアウトを選択できます。  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -211,7 +203,7 @@ ms.locfileid: "66099132"
   
 6.  **[実行]** をクリックして、レポートをプレビューします。  
   
-##  <a name="ChartTitle"></a>5. グラフのタイトルをする  
+##  <a name="5-title-the-chart"></a><a name="ChartTitle"></a>5. グラフのタイトルをする  
   
 #### <a name="to-change-the-chart-title-above-the-chart-area"></a>グラフ領域の上に表示されるグラフのタイトルを変更するには  
   
@@ -221,7 +213,7 @@ ms.locfileid: "66099132"
   
 3.  **[実行]** をクリックして、レポートをプレビューします。  
   
-##  <a name="Vertical"></a>6. 縦軸の形式とラベルを設定する  
+##  <a name="6-format-and-label-the-vertical-axis"></a><a name="Vertical"></a>6. 縦軸の形式とラベルを設定する  
  既定では、縦軸の値が一般的な形式で表示されます。この場合、グラフのサイズに合わせて自動的にスケーリングされます。  
   
 #### <a name="to-format-as-currency-the-numbers-on-the-vertical-axis"></a>縦軸に表示される数値を通貨形式に変更するには  
@@ -250,7 +242,7 @@ ms.locfileid: "66099132"
   
 12. **[実行]** をクリックして、レポートをプレビューします。  
   
-##  <a name="Average"></a>7. 移動平均を追加する  
+##  <a name="7-add-a-moving-average"></a><a name="Average"></a>7. 移動平均を追加する  
   
 #### <a name="to-add-a-moving-average"></a>移動平均を追加するには  
   
@@ -260,11 +252,9 @@ ms.locfileid: "66099132"
   
 3.  [**値**] 領域にある **[Sum (Sales)]** フィールドを右クリックし、[**計算系列の追加**] をクリックします。  
   
-4.  
-  **[数式]** で、 **[移動平均]** が選択されていることを確認します。  
+4.  **[数式]** で、 **[移動平均]** が選択されていることを確認します。  
   
-5.  
-  **[数式パラメーターの設定]** の **[期間]** で、 **[4]** を選択します。  
+5.  **[数式パラメーターの設定]** の **[期間]** で、 **[4]** を選択します。  
   
 6.  [**罫線**] をクリックします。  
   
@@ -276,7 +266,7 @@ ms.locfileid: "66099132"
   
  グラフに、4 日ごとに平均値を求めた日付別の売上合計の移動平均を示す線が表示されます。  
   
-##  <a name="Title"></a>8. レポートタイトルを追加する  
+##  <a name="8-add-a-report-title"></a><a name="Title"></a>8. レポートタイトルを追加する  
   
 #### <a name="to-add-a-report-title"></a>レポート タイトルを追加するには  
   
@@ -286,7 +276,7 @@ ms.locfileid: "66099132"
   
 3.  「 **Sales Chart**」と入力し、enter キーを押し、次のように**2009**入力します。  
   
-     **売上グラフ**  
+     **Sales Chart**  
   
      **January to December 2009**  
   
@@ -300,18 +290,17 @@ ms.locfileid: "66099132"
   
 7.  **[実行]** をクリックして、レポートをプレビューします。  
   
-##  <a name="Save"></a>9. レポートを保存する  
+##  <a name="9-save-the-report"></a><a name="Save"></a>9. レポートを保存する  
   
 #### <a name="to-save-the-report"></a>レポートを保存するには  
   
 1.  レポート デザイン ビューに切り替えます。  
   
-2.  レポート ビルダーのボタンの **[名前を付けて保存]** をクリックします。  
+2.  レポート ビルダー のボタンの **[名前を付けて保存]** をクリックします。  
   
-3.  
-  **[名前]** に「 **Sales Order Column Chart**」と入力します。  
+3.  **[名前]** に「 **Sales Order Column Chart**」と入力します。  
   
-4.  **[保存]** をクリックします。  
+4.  **[Save]** (保存) をクリックします。  
   
 ## <a name="next-steps"></a>次の手順  
  これで、「レポートへの縦棒グラフの追加」チュートリアルを終了します。 グラフの詳細については、「[グラフ (レポート ビルダーおよび SSRS)](report-design/charts-report-builder-and-ssrs.md)」と「[スパークラインとデータ バー (レポート ビルダーおよび SSRS)](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)」を参照してください。  

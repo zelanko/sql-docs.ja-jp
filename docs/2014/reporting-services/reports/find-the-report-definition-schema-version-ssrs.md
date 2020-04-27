@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 395392908055a41a8418f02ce3510c050a3447f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102645"
 ---
 # <a name="find-the-report-definition-schema-version-ssrs"></a>レポート定義スキーマのバージョンを確認する (SSRS)
@@ -39,22 +39,17 @@ ms.locfileid: "66102645"
   
 ### <a name="how-to-identify-the-rdl-schema-version-of-report-designer"></a>レポート デザイナーの RDL スキーマのバージョンを確認する方法  
   
-1.  新しいプロジェクトを開きます。 選択したプロジェクトのバージョンにより、RDL スキーマのバージョンが決まります。 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、複数のスキーマ バージョンがサポートされています。 詳細については、「 [SQL Server データ ツールの配置およびバージョン サポート (SSRS)](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)には含まれていません。  
+1.  新しいプロジェクトを開きます。 選択したプロジェクトのバージョンにより、RDL スキーマのバージョンが決まります。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、複数のスキーマ バージョンがサポートされています。 詳細については、「 [SQL Server データ ツールの配置およびバージョン サポート (SSRS)](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)には含まれていません。  
   
-2.  **[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。 
-  **[新しい項目の追加]** ダイアログ ボックスが表示されます。  
+2.  **[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。 **[新しい項目の追加]** ダイアログ ボックスが表示されます。  
   
-3.  
-  **[テンプレート]** ペインで **[レポート]** をクリックします。  
+3.  **[テンプレート]** ペインで **[レポート]** をクリックします。  
   
-4.  
-  **[名前]** にレポートの名前を入力するか、既定の名前をそのまま使用します。  
+4.  **[名前]** にレポートの名前を入力するか、既定の名前をそのまま使用します。  
   
 5.  **[追加]** をクリックします。 レポート デザイナーの [デザイン] ビューに新しい空のレポートが表示されます。  
   
-6.  
-  **[表示]** メニューの **[コード]** をクリックします。 レポート定義が XML ファイルとして表示されます。  
+6.  **[表示]** メニューの **[コード]** をクリックします。 レポート定義が XML ファイルとして表示されます。  
   
      スキーマ名前空間は XML の Report 要素で指定されます。 たとえば、次の Report 要素では、レポート デザイナーの名前空間とレポート定義の名前空間が指定されています。  
   

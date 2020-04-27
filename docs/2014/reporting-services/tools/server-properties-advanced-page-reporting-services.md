@@ -13,17 +13,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3991618e6f77eab9ae96b2879098f91dab5a748a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099656"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>[サーバーのプロパティ]\([詳細設定] ページ) - Reporting Services
   このページを使用して、レポート サーバーのシステム プロパティを設定します。 システム プロパティを設定する方法はいくつかあります。 このツールにはグラフィカル ユーザー インターフェイスが用意されているので、コードを記述しなくてもプロパティを設定できます。  
   
- このページを開くには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を起動してレポート サーバー インスタンスに接続し、レポート サーバー名を右クリックして **[プロパティ]** をクリックします。 
-  **[詳細設定]** をクリックするとこのページが開きます。  
+ このページを開くには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を起動してレポート サーバー インスタンスに接続し、レポート サーバー名を右クリックして **[プロパティ]** をクリックします。 **[詳細設定]** をクリックするとこのページが開きます。  
   
 ## <a name="options"></a>オプション  
  **EnableMyReports**  
@@ -44,11 +43,11 @@ ms.locfileid: "66099656"
  **SessionTimeout**  
  セッションがアクティブな状態になっている期間 (秒単位)。 既定値は `600` です。  
   
- **Sharepoint統合 Atedmode**  
+ **SharePointIntegratedMode**  
  これは、サーバー モードを示す読み取り専用プロパティです。 この値が False の場合、レポート サーバーはネイティブ モードで実行されます。  
   
  **SiteName**  
- レポート マネージャーのページ タイトルに表示されるレポート サーバー サイトの名前。 既定値は[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]です。 このプロパティには空の文字列を指定できます。 最大長は 8,000 文字です。  
+ レポート マネージャーのページ タイトルに表示されるレポート サーバー サイトの名前。 既定値は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] です。 このプロパティには空の文字列を指定できます。 最大長は 8,000 文字です。  
   
  **StoredParametersLifetime**  
  保存したパラメーターを保持できる最大日数を指定します。 有効値は `-1`、`+1` ～ `2,147,483,647` です。 既定値は `180` 日です。  
@@ -65,11 +64,11 @@ ms.locfileid: "66099656"
  **SnapshotCompression**  
  スナップショットの圧縮方法を定義します。 既定値は `SQL` です。 有効な値は次のとおりです。  
   
- **SQL =** スナップショットは、レポートサーバーデータベースに格納されるときに圧縮されます。 これは現在の動作です。  
+ **SQL** = スナップショットは、レポート サーバー データベースへの格納時に圧縮されます。 これは現在の動作です。  
   
- **None** = スナップショットは圧縮されません。  
+ **なし** = スナップショットは圧縮されません。  
   
- **All =** スナップショットは、レポートサーバーデータベースやファイルシステムなど、すべてのストレージオプションで圧縮されます。  
+ **すべて** = すべてのストレージ オプションのスナップショットが圧縮されます。このオプションには、レポート サーバー データベースやファイル システムが含まれます。  
   
  **SystemReportTimeout**  
  レポート サーバー名前空間で管理されているすべてのレポートの既定のレポート処理タイムアウト値 (秒単位)。 この値はレポート レベルでオーバーライドできます。 このプロパティを設定すると、レポート サーバーは指定された時間が経過した後、レポートの処理を停止しようとします。 有効値は `-1` ～ `2`、`147`、`483`、`647` です。 値に `-1` を設定すると、名前空間内のレポートが処理中にタイムアウトしません。 既定値は `1800` です。  
@@ -78,13 +77,11 @@ ms.locfileid: "66099656"
  レポートに格納されるスナップショットの最大数。 有効値は `-1` ～ `2`、`147`、`483`、`647` です。 値が `-1` の場合、スナップショットに制限はありません。  
   
  **EnableIntegratedSecurity**  
- Windows 統合セキュリティをレポート データ ソース接続でサポートするかどうかを決定します。 既定では、 `True`です。 有効な値は次のとおりです。  
+ Windows 統合セキュリティをレポート データ ソース接続でサポートするかどうかを決定します。 既定値は、`True` です。 有効な値は次のとおりです。  
   
- 
-  `True` = Windows 統合セキュリティが有効になります。  
+ `True` = Windows 統合セキュリティが有効になります。  
   
- 
-  `False` = Windows 統合セキュリティは無効になります。 Windows 統合セキュリティを使用するように構成されているレポート データ ソースは実行されません。  
+ `False` = Windows 統合セキュリティは無効になります。 Windows 統合セキュリティを使用するように構成されているレポート データ ソースは実行されません。  
   
  `EnableLoadReportDefinition`  
  ユーザーがレポート ビルダーのレポートからアドホック レポートを実行できるかどうかを指定するには、このオプションを選択します。 このオプションの設定によって、レポート サーバー上の `EnableLoadReportDefinition` プロパティの値が決まります。  
@@ -109,10 +106,10 @@ ms.locfileid: "66099656"
  ユーザーがレポート サーバーを使用してデータ ソース接続をテストする際に、クライアント コンピューターに詳細なエラー メッセージが送信されるようにするかどうかを指定します。 既定値は `true` です。 このオプションを `false` に設定した場合は、一般的なエラー メッセージだけが送信されます。  
   
 ## <a name="see-also"></a>参照  
- [レポート サーバーのプロパティを設定する (Management Studio)](set-report-server-properties-management-studio.md)   
- [Management Studio でレポート サーバーに接続する](connect-to-a-report-server-in-management-studio.md)   
+ [レポートサーバーのプロパティ &#40;Management Studio の設定&#41;](set-report-server-properties-management-studio.md)   
+ [Management Studio でレポートサーバーに接続する](connect-to-a-report-server-in-management-studio.md)   
  [Reporting Services のプロパティ](../report-server-web-service/net-framework/reporting-services-properties.md)   
- [Management Studio のレポート サーバーの F1 ヘルプ](report-server-in-management-studio-f1-help.md)   
+ [Management Studio F1 ヘルプのレポートサーバー](report-server-in-management-studio-f1-help.md)   
  [レポートサーバーのシステムプロパティ](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)   
  [配置タスクと管理タスクのスクリプトを作成する](script-deployment-and-administrative-tasks.md)   
  [個人用レポートの有効化と無効化](../report-server/enable-and-disable-my-reports.md)  

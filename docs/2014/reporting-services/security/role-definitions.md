@@ -16,27 +16,23 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6518a46c44a97fbb386b4479454e89a0eccb1a39
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101750"
 ---
 # <a name="role-definitions"></a>ロールの定義
-  
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、*ロール**の定義*は、ユーザーがレポート サーバー上で実行できる操作を定義する、一連の名前付きタスクです。 ロールの定義によって、レポート サーバーがセキュリティを強制的に適用する際に使用するルールが提供されます。 ユーザーがレポートのパブリッシュなどのタスクを試行すると、レポート サーバーでは、ユーザーのロールの割り当てを確認し、そのタスクがロールの定義に含まれているかどうかを判別します。 該当するタスクがロールの定義に含まれている場合、要求が送信されます。  
+  で[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]は、*ロール * * 定義*は、レポートサーバーで使用可能な操作を定義する名前付きのタスクのコレクションです。 ロールの定義によって、レポート サーバーがセキュリティを強制的に適用する際に使用するルールが提供されます。 ユーザーがレポートのパブリッシュなどのタスクを試行すると、レポート サーバーでは、ユーザーのロールの割り当てを確認し、そのタスクがロールの定義に含まれているかどうかを判別します。 該当するタスクがロールの定義に含まれている場合、要求が送信されます。  
   
 ## <a name="using-roles-to-authorize-access-to-a-report-server"></a>ロールを使用したレポート サーバーへのアクセスの承認  
  ロールは、ロールの割り当てで使用されている場合のみ有効になります。 ロールでセキュリティを提供する方法の詳細については、「 [ロールの割り当て](role-assignments.md)」を参照してください。  
   
 ## <a name="types-of-role-definitions"></a>ロールの定義の種類  
- ロールの定義は、アイテムレベルの定義またはシステムレベルの定義です。 
-  *アイテムレベルのロールの定義* には、レポート サーバーで格納および管理されているアイテムに関連するタスクが含まれています。 アイテムレベルのロールの定義に含めることのできるタスクには、"レポートの管理"、"フォルダーの表示"、および "個別のサブスクリプションを管理" などがあります。 
-  *システム ロールの定義* には、サイト全体に適用するタスクが含まれています。 システム ロールに含めるタスクには、"レポート サーバーのプロパティを表示" などがあります。  
+ ロールの定義は、アイテムレベルの定義またはシステムレベルの定義です。 *アイテムレベルのロールの定義* には、レポート サーバーで格納および管理されているアイテムに関連するタスクが含まれています。 アイテムレベルのロールの定義に含めることのできるタスクには、"レポートの管理"、"フォルダーの表示"、および "個別のサブスクリプションを管理" などがあります。 *システム ロールの定義* には、サイト全体に適用するタスクが含まれています。 システム ロールに含めるタスクには、"レポート サーバーのプロパティを表示" などがあります。  
   
 ## <a name="predefined-roles"></a>Predefined Roles  
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、ユーザーが実行するさまざまなレベルの操作に対応した定義済みロールが用意されています。 使用できる定義済みロールを次に示します。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、ユーザーが実行するさまざまなレベルの操作に対応した定義済みロールが用意されています。 使用できる定義済みロールを次に示します。  
   
 -   コンテンツ マネージャー、パブリッシャー、閲覧者、レポート ビルダー、および個人用レポートは、アイテムレベルのロールの定義であり、レポート サーバー コンテンツにアクセスするためのロールの割り当てを作成する際に使用できます。  
   
@@ -61,8 +57,8 @@ ms.locfileid: "66101750"
 ## <a name="see-also"></a>参照  
  [タスクと権限](tasks-and-permissions.md)   
  [ネイティブ モードのレポート サーバーに対する権限の許可](granting-permissions-on-a-native-mode-report-server.md)   
- [ロールを作成、削除、または変更する (Management Studio)](role-definitions-create-delete-or-modify.md)   
- [レポート サーバーへのユーザー アクセスを許可する (レポート マネージャー)](grant-user-access-to-a-report-server.md)   
+ [ロール &#40;Management Studio の作成、削除、または変更&#41;](role-definitions-create-delete-or-modify.md)   
+ [レポートサーバーへのユーザーアクセスを許可する &#40;レポートマネージャー&#41;](grant-user-access-to-a-report-server.md)   
  [ロールの割り当てを変更または削除する &#40;レポートマネージャー&#41;](role-assignments-modify-or-delete.md)   
  [SharePoint サイト上のレポート サーバー アイテムに対する権限の設定 &#40;Reporting Services の SharePoint 統合モード&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
   

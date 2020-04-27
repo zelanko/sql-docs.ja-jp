@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ea5016aa51a25bd296d2e77516b30b84a7a28cec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103928"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Reporting Services のクライアント側印刷機能の有効化と無効化
@@ -47,42 +47,35 @@ ms.locfileid: "66103928"
 ## <a name="enabling-and-disabling-client-side-printing"></a>クライアント側印刷機能の有効化と無効化  
  レポートサーバーの管理者は、レポートサーバーのシステムプロパティ**EnableClientPrinting**をに設定して、印刷`false`機能を無効にすることができます。 これにより、サーバーが管理しているすべてのレポートでクライアント側印刷機能が無効になります。 既定では、 **EnableClientPrinting**はに`true`設定されています。 クライアント側印刷機能は、次の方法で無効にすることができます。  
   
--   
-  **ネイティブ モードのレポート サーバー**の場合:  
+-   **ネイティブ モードのレポート サーバー**の場合:  
   
     1.  管理者特権を使用して [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を開始します。  
   
-    2.  
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]でレポート サーバー インスタンスに接続します。  
+    2.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]でレポート サーバー インスタンスに接続します。  
   
-    3.  レポート サーバー ノードを右クリックして、 **[プロパティ]** をクリックします。 
-  **[プロパティ]** オプションが無効になっている場合は、管理者特権を使用して [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を開始したことを確認してください。  
+    3.  レポート サーバー ノードを右クリックして、 **[プロパティ]** をクリックします。 **[プロパティ]** オプションが無効になっている場合は、管理者特権を使用して [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を開始したことを確認してください。  
   
     4.  [ **ActiveX クライアントの印刷コントロールのダウンロードを有効にする**] を選択します。  
   
     5.  **[OK]** をクリックします。  
   
--   
-  **SharePoint モードのレポート サーバー**の場合:  
+-   **SharePoint モードのレポート サーバー**の場合:  
   
     1.  SharePoint サーバーの全体管理で、 **[アプリケーション構成の管理]** をクリックします。  
   
-    2.  
-  **[サービス アプリケーションの管理]** をクリックします。  
+    2.  **[サービス アプリケーションの管理]** をクリックします。  
   
-    3.  サービスアプリケーションの名前をクリックし、SharePoint リボンの [管理] をクリックします。 **** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
+    3.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの名前をクリックし、SharePoint リボンで **[管理]** をクリックします。  
   
     4.  **[システム設定]** をクリックします。  
   
-    5.  
-  **[クライアントの印刷を有効にする]** を選択します。 
-  **[クライアントの印刷を有効にする]** オプションは、ページの下部付近にあります。  
+    5.  **[クライアントの印刷を有効にする]** を選択します。 **[クライアントの印刷を有効にする]** オプションは、ページの下部付近にあります。  
   
     6.  **[OK]** をクリックします。  
   
 -   レポートサーバーのシステムプロパティ**EnableClientPrinting**を設定するスクリプトまたはコードを作成します。`false.`  
   
- 次のサンプル スクリプトは、クライアント側印刷機能を無効にする方法の一例を示しています。 この [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] コードをコンパイルして実行すると、 **EnableClientPrinting** プロパティが **False**に設定されます。 コードの実行後、IIS を再起動してください。  
+ 次のサンプル スクリプトは、クライアント側印刷機能を無効にする方法の一例を示しています。 この [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] コードをコンパイルして実行すると、**EnableClientPrinting** プロパティが **False** に設定されます。 コードの実行後、IIS を再起動してください。  
   
 ### <a name="sample-script"></a>サンプル スクリプト  
   
