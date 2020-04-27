@@ -11,17 +11,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bfb5bfec0d7f1870242d30c4765de0ddc2193da2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109838"
 ---
 # <a name="chart-dialog-boxes-report-builder-and-ssrs"></a>グラフのダイアログ ボックス (レポート ビルダーおよび SSRS)
   ここでは、グラフの一部のダイアログ ボックスのヘルプについて説明します。 ヘルプを開くには、F1 キーを押すか、ダイアログ ボックスに表示される [ヘルプ] ボタンをクリックします。  
   
 ## <a name="see-also"></a>参照  
- [グラフ &#40;レポート ビルダーおよび SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
- [ダイアログボックス、ペイン、およびウィザードのヘルプのレポートビルダー](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [グラフ &#40;レポートビルダーと SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
+ [レポート ビルダーのダイアログ ボックス、ペイン、およびウィザードに関するヘルプ](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

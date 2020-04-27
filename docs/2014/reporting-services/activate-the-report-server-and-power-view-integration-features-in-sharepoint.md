@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e30ae6ea0e7fa314748c4da265650273c0a7d56e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110024"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>SharePoint でのレポート サーバーと Power View の統合機能のアクティブ化
@@ -30,19 +30,17 @@ ms.locfileid: "66110024"
   
  このトピックの内容:  
   
--   [レポートサーバーと Power View 統合サイトコレクション機能をアクティブ化するには、次のようにします。](#bkmk_features)  
+-   [レポート サーバーと Power View の統合サイト コレクション機能をアクティブ化するには](#bkmk_features)  
   
--   [Reporting Services の中央管理サイトコレクション機能をアクティブ化または非アクティブ化するには:](#bkmk_centraladmin)  
+-   [Reporting Services の全体管理のサイト コレクション機能をアクティブ化または非アクティブ化するには](#bkmk_centraladmin)  
   
-##  <a name="bkmk_features"></a>レポートサーバーと Power View 統合サイトコレクション機能をアクティブ化するには、次のようにします。  
+##  <a name="to-activate-the-report-server-and-power-view-integration-site-collection-features"></a><a name="bkmk_features"></a>レポートサーバーと Power View 統合サイトコレクション機能をアクティブ化するには、次のようにします。  
   
 1.  ブラウザーで、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の機能をアクティブ化するサイトを開きます。  
   
-2.  
-  **[サイトの操作]** をクリックします。  
+2.  **[サイトの操作]** をクリックします。  
   
-3.  
-  **[サイトの設定]** をクリックします。  
+3.  **[サイトの設定]** をクリックします。  
   
 4.  [サイト コレクションの管理] グループで **[サイト コレクションの機能]** をクリックします。  
   
@@ -52,15 +50,13 @@ ms.locfileid: "66110024"
   
  機能を非アクティブ化するには、 **[アクティブ化]** ではなく **[非アクティブ化]** をクリックする点を除き、同じ手順を実行します。  
   
-##  <a name="bkmk_centraladmin"></a>Reporting Services の中央管理サイトコレクション機能をアクティブ化または非アクティブ化するには:  
+##  <a name="to-activate-or-deactivate-reporting-services-central-administration-site-collection-feature"></a><a name="bkmk_centraladmin"></a>Reporting Services の中央管理サイトコレクション機能をアクティブ化または非アクティブ化するには:  
   
 1.  ブラウザーで SharePoint サーバーの全体管理を開きます。  
   
-2.  
-  **[サイトの操作]** をクリックします。  
+2.  **[サイトの操作]** をクリックします。  
   
-3.  
-  **[サイトの設定]** をクリックします。  
+3.  **[サイトの設定]** をクリックします。  
   
 4.  [サイト コレクションの管理] グループで **[サイト コレクションの機能]** をクリックします。  
   

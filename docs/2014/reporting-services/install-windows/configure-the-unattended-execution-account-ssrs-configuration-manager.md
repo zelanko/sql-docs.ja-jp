@@ -19,14 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 42299bce176f3fa93b9a145204ff95e292aed542
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108888"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>自動実行アカウントの構成 (SSRS 構成マネージャー)
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、自動レポート処理とネットワークを介した接続要求の送信に使用される特別なアカウントが用意されています。 アカウントは次の場合に使用します。  
   
 -   データベース認証を使用するレポートに対する接続要求のネットワーク経由での送信や、認証を必要としないまたは使用しない外部レポート データ ソースへの接続。 詳細については、SQL Server オンライン ブックの「 [レポート データ ソースに関する資格情報と接続情報を指定する](../../integration-services/connection-manager/data-sources.md) 」を参照してください。  
@@ -43,27 +42,24 @@ ms.locfileid: "66108888"
   
  アカウントを指定するには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールまたは **rsconfig** ユーティリティを使用できます。 自動実行アカウントを構成する最も簡単な方法は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを実行して、[実行アカウント] ページで資格情報を指定することです。  
   
-1.  
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを起動し、構成するレポート サーバー インスタンスに接続します。 手順については、「 [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)」を参照してください。  
+1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを起動し、構成するレポート サーバー インスタンスに接続します。 手順については、「 [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)」を参照してください。  
   
 2.  [実行アカウント] ページで、 **[実行アカウントの指定]** を選択します。  
   
 3.  アカウントとパスワードを入力し、パスワードを再入力して、 **[適用]** をクリックします。  
   
 ### <a name="using-rsconfig-utility"></a>RSCONFIG ユーティリティの使用  
- アカウントを設定するもう 1 つの方法は、 **rsconfig** ユーティリティを使用することです。 アカウントを指定するには、 **rsconfig** の **-e**引数を使用します。 
-  **rsconfig** に **-e** 引数を指定すると、構成ファイルにアカウント情報を書き込むようユーティリティに指示できます。 RSreportserver.config へのパスを指定する必要はありません。アカウントを構成するには、次の手順に従います。  
+ アカウントを設定するもう 1 つの方法は、 **rsconfig** ユーティリティを使用することです。 アカウントを指定するには、 **rsconfig** の **-e**引数を使用します。 **rsconfig** に **-e** 引数を指定すると、構成ファイルにアカウント情報を書き込むようユーティリティに指示できます。 RSreportserver.config へのパスを指定する必要はありません。アカウントを構成するには、次の手順に従います。  
   
 1.  レポート サーバーにデータまたはサービスを提供するコンピューターおよびサーバーに対してアクセス権を持つ、ドメイン アカウントを作成または選択します。 少ない権限を持つアカウントを使用することをお勧めします (たとえば、読み取り専用権限)。  
   
-2.  
-  **[スタート]** メニューの **[ファイル名を指定して実行]** をクリックし、 **「cmd」** と入力して **[OK]** をクリックして、コマンド プロンプトを開きます。  
+2.  **[スタート]** メニューの **[ファイル名を指定して実行]** をクリックし、 **「cmd」** と入力して **[OK]** をクリックして、コマンド プロンプトを開きます。  
   
 3.  次のコマンドを入力して、ローカル レポート サーバー インスタンス上でアカウントを構成します。  
   
-     **rsconfig-e-u\<ドメイン/ユーザー名>-\<p パスワード>**  
+     **rsconfig -e -u\<ドメイン/ユーザー名> -p\<パスワード>**  
   
- **rsconfig-e では、追加の引数が**サポートされます。 構文の詳細およびコマンド例については、SQL Server オンライン ブックの「[rsconfig ユーティリティ (SSRS)](../tools/rsconfig-utility-ssrs.md)」を参照してください。  
+ **rsconfig -e** では、他にも引数がサポートされています。 構文の詳細およびコマンド例については、SQL Server オンライン ブックの「[rsconfig ユーティリティ (SSRS)](../tools/rsconfig-utility-ssrs.md)」を参照してください。  
   
 ### <a name="how-account-information-is-stored"></a>アカウント情報の保存方法  
  アカウントを設定すると、ローカルまたはリモートのレポート サーバー インスタンス上の RSreportserver.config ファイル内で、暗号化された値として次の設定が指定されます。  
@@ -88,11 +84,9 @@ ms.locfileid: "66108888"
  接続の確立後に自動実行レポート処理アカウントを使用してデータを取得することもできますが、それは推奨されません。 このアカウントは、ごく特定の機能に対してだけ使用されることを意図しています。 データの取得に使用した場合、意図された目的に反することになります。  
   
 ## <a name="how-to-maintain-the-unattended-report-processing-account"></a>自動レポート処理アカウントのメンテナンス方法  
- 自動レポート処理アカウントを構成したら、アカウントとパスワードを最新の状態に保つ必要があります。 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを使用すると、このアカウントに関する情報を保存している構成設定を更新できます。  
+ 自動レポート処理アカウントを構成したら、アカウントとパスワードを最新の状態に保つ必要があります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを使用すると、このアカウントに関する情報を保存している構成設定を更新できます。  
   
-1.  
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを起動し、構成するレポート サーバー インスタンスに接続します。  
+1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを起動し、構成するレポート サーバー インスタンスに接続します。  
   
 2.  [実行アカウント] ページで、 **[実行アカウントの指定]** がオンになっていることを確認します。  
   
@@ -101,12 +95,11 @@ ms.locfileid: "66108888"
 ## <a name="how-to-delete-the-unattended-report-processing-account"></a>自動レポート処理アカウントの削除方法  
  アカウントを使用していない場合は、アカウントを削除すると、日常的なアカウント メンテナンス作業を行わずに済みます。  
   
-1.  
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを起動し、構成するレポート サーバー インスタンスに接続します。  
+1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを起動し、構成するレポート サーバー インスタンスに接続します。  
   
 2.  [実行アカウント] ページで、 **[実行アカウントの指定]** をオフにします。  
   
-3.  **[Apply]** をクリックします。  
+3.  **[適用]** をクリックします。  
   
  アカウント情報が RSReportServer.config ファイルから削除されます。  
   

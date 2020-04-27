@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7bb8790496efb1701baf1636e5c16769e6430aa0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109434"
 ---
 # <a name="data-source-selection-page-report-manager"></a>[データ ソースの選択] ページ (レポート マネージャー)
@@ -31,24 +31,23 @@ ms.locfileid: "66109434"
   
 3.  ドロップダウン メニューの **[管理]** をクリックします。 この操作により、レポートまたはモデルの [全般] プロパティ ページが開きます。  
   
-4.  
-  **[データ ソース]** タブをクリックします。  
+4.  **[データ ソース]** タブをクリックします。  
   
 5.  プロパティ ペインで **[共有データ ソース]** を選択し、 **[参照]** をクリックします。  
   
 ## <a name="options"></a>オプション  
- **Location**  
+ **場所**  
  共有データ ソース アイテムへの完全パスを、ルート フォルダー名から指定します。 共有データ ソース アイテムを参照する際は、パス名を入力することも、ツリー ビューを使用することもできます。  
   
  **ツリービュー**  
  レポート サーバー名前空間のフォルダー構造が表示されます。 共有データ ソース アイテムをクリックすると、 **[場所]** フィールドに完全なパスが追加されます。  
   
- **[OK]**  
+ **OK**  
  クリックすると、選択したデータ ソースが [データ ソース] プロパティ ページにコピーされます。  
   
 ## <a name="see-also"></a>参照  
- [レポート データ ソースを管理する](report-data/manage-report-data-sources.md)   
- [レポートデータソースの資格情報と接続情報を指定する](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [レポートデータソースの管理](report-data/manage-report-data-sources.md)   
+ [レポート データ ソースに関する資格情報と接続情報を指定する](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [[データソース] プロパティページ &#40;レポートマネージャー&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md)   
  [[新しいデータソース] ページ &#40;レポートマネージャー&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)   
  [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)  

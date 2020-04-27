@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d996463baaed3095b6866fa2da88ed811745878d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109796"
 ---
 # <a name="clickthrough-reports-page-report-manager"></a>[クリックスルー レポート] ページ (レポート マネージャー)
@@ -42,10 +42,9 @@ ms.locfileid: "66109796"
   
 2.  モデルの上にマウス ポインターを移動し、下矢印をクリックします。  
   
-3.  ドロップダウン メニューの **[管理]** をクリックします。 この操作により、モデルの **[全般]** プロパティ ページが開きます。  
+3.  ドロップダウン メニューの **[管理]** をクリックします。 これにより、モデルの **[全般**] プロパティページが開きます。  
   
-4.  
-  **[クリックスルー]** タブをクリックします。  
+4.  **[クリックスルー]** タブをクリックします。  
   
 ## <a name="options"></a>オプション  
  **モデル アイテムの階層**  

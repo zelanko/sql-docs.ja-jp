@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 862d8b90f3c91dffda35971677db7fdc231c1b63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108928"
 ---
 # <a name="import-reports-from-microsoft-access-reporting-services"></a>Microsoft Access からレポートをインポートする (Reporting Services)
@@ -26,8 +26,7 @@ ms.locfileid: "66108928"
  インポート機能を使用すると、Access データベースまたはプロジェクト ファイルのすべてのレポートがインポートされます。 Access ファイルに多数のレポートが含まれている場合は、レポートのインポート先に別のレポート プロジェクトを作成し、その後各 RDL ファイルをメインのレポート プロジェクトで開くことをお勧めします。 レポートは、レポート デザイナーにインポートした後に、編集できます。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、Access のレポート オブジェクトがすべてサポートされているわけではありません。 変換されていない項目は、[**タスク一覧**] ウィンドウに表示されます。 詳細については、「[サポートされているアクセスレポート機能 &#40;SSRS&#41;](../../2014/reporting-services/supported-access-report-features-ssrs.md)」を参照してください。  
+>  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、Access のレポート オブジェクトがすべてサポートされているわけではありません。 変換されていない項目は、[**タスク一覧**] ウィンドウに表示されます。 詳細については、「[サポートされているアクセスレポート機能 &#40;SSRS&#41;](../../2014/reporting-services/supported-access-report-features-ssrs.md)」を参照してください。  
   
 ### <a name="to-import-reports-from-microsoft-access"></a>Microsoft Access からレポートをインポートするには  
   

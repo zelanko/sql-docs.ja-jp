@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b987dd46f6a60a0d0cadc95cf187566eafa4f527
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109270"
 ---
 # <a name="embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs"></a>埋め込みおよび共有のデータ接続またはデータ ソース (レポート ビルダーおよび SSRS)
@@ -26,13 +26,13 @@ ms.locfileid: "66109270"
   
 -   **データ接続。** " *データ ソース*" とも呼ばれます。 データ接続には、名前と、接続の種類に依存する接続のプロパティが含まれます。 仕様上、データ接続に資格情報は含まれません。 データ接続では、どのデータを外部データ ソースから取得するかは指定されません。 これを行うには、データセットを作成するときにクエリを指定します。  
   
--   **データソース定義。** レポート データ ソースの XML 表現を含むファイル。 レポートをパブリッシュすると、そのデータ ソースは、レポート定義とは別にデータ ソース定義として、レポート サーバーまたは SharePoint サイトに保存されます。 たとえば、レポート サーバー管理者は、接続文字列や資格情報を更新することができます。 ネイティブのレポート サーバーでのファイルの種類は .rds です。 SharePoint サイトでのファイルの種類は .rsds です。  
+-   **データ ソースの定義:** レポート データ ソースの XML 表現を含むファイル。 レポートをパブリッシュすると、そのデータ ソースは、レポート定義とは別にデータ ソース定義として、レポート サーバーまたは SharePoint サイトに保存されます。 たとえば、レポート サーバー管理者は、接続文字列や資格情報を更新することができます。 ネイティブのレポート サーバーでのファイルの種類は .rds です。 SharePoint サイトでのファイルの種類は .rsds です。  
   
 -   **接続文字列。** 接続文字列は、データ ソースに接続するために必要な接続プロパティの文字列バージョンです。 接続プロパティはデータ接続の種類に応じて異なります。 例については、「 [データ接続、データ ソース、および接続文字列](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)」を参照してください。  
   
 -   **共有データソース。** レポート サーバーまたは SharePoint サイトにあり、複数のレポートで使用することができるデータ ソースです。  
   
--   **埋め込みデータソース。** " *レポート固有のデータ ソース*" とも呼ばれます。 1 つのレポート内で定義され、そのレポートのみで使用されるデータ ソースです。  
+-   **埋め込みデータ ソース:** " *レポート固有のデータ ソース*" とも呼ばれます。 1 つのレポート内で定義され、そのレポートのみで使用されるデータ ソースです。  
   
 -   **認証.** 資格情報は、外部データにアクセスするために指定する必要がある認証情報です。  
   
@@ -48,15 +48,15 @@ ms.locfileid: "66109270"
   
  レポート デザイナーでは、レポート サーバー上の共有データ ソースを参照できません。 共有データ ソースは、ソリューション エクスプローラーでプロジェクトの一部として作成し、レポート サーバーに配置するかどうかを選択できます。 使用しているコンピューターとレポート サーバーの資格情報の相違のため、これらをローカルでのみ使用するように選択する場合もあります。 詳細については、「[Reporting Services でのデータ接続、データ ソース、および接続文字列](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)」を参照してください。  
   
- 次のアイコンは、レポートサーバーのフォルダー階層内の共有データソースアイテムを示します。![共有データソースアイコン](media/hlp-16datasource.png "Shared data source icon")  
+ 次のアイコンは、レポートサーバーのフォルダー階層内の共有データソースアイテムを示します。![共有データソースアイコン](media/hlp-16datasource.png "共有データ ソースのアイコン")  
   
 ## <a name="embedded-data-sources"></a>埋め込みデータ ソース  
  埋め込みデータ ソースは、レポート定義に保存されるデータ接続です。 埋め込まれたデータ ソースの接続情報は、その情報が埋め込まれたレポートでのみ使用できます。 埋め込みデータ ソースを定義および管理するには、 **[データ ソースのプロパティ]** ダイアログ ボックスを使用します。  
   
-##  <a name="Comparing"></a>埋め込みデータソースと共有データソースの比較  
+##  <a name="comparing-embedded-and-shared-data-sources"></a><a name="Comparing"></a>埋め込みデータソースと共有データソースの比較  
  次の表は、埋め込みデータ ソースと共有データ ソースの違いをまとめたものです。  
   
-|[説明]|埋め込み<br /><br /> Data Source|共有<br /><br /> Data Source|  
+|説明|埋め込み<br /><br /> Data Source|Shared<br /><br /> Data Source|  
 |-----------------|------------------------------|----------------------------|  
 |データ接続がレポート定義に埋め込まれる|![利用可能](media/greencheck.gif "利用可能")||  
 |レポート サーバー上のデータ接続へのポインターがレポート定義に埋め込まれる||![利用可能](media/greencheck.gif "利用可能")|  
@@ -72,6 +72,6 @@ ms.locfileid: "66109270"
  [レポート作成の概念 &#40;レポートビルダーと SSRS&#41;](report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [Reporting Services &#40;SSRS&#41;でサポートされるデータソース](create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [データ接続またはデータソース &#40;レポートビルダーと SSRS&#41;に追加して検証する](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
- [レポートビルダーおよび SSRS&#41;&#40;埋め込みデータセットと共有データセット](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
+ [埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

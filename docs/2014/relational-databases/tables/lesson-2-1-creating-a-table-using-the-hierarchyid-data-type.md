@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 98ce16a3630032001a1191b09b1b0ade13aacb73
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110116"
 ---
 # <a name="creating-a-table-using-the-hierarchyid-data-type"></a>hierarchyid データ型を使用したテーブルの作成
@@ -34,8 +34,7 @@ ms.locfileid: "66110116"
   
 ### <a name="to-create-the-employeeorg-table"></a>EmployeeOrg テーブルを作成するには  
   
-1.  クエリ エディター ウィンドウで、次のコードを実行し、 `EmployeeOrg` テーブルを作成します。 
-  `OrgNode` 列を、クラスター化インデックスのある主キーとして指定すると、深さ優先のインデックスが作成されます。  
+1.  クエリ エディター ウィンドウで、次のコードを実行し、 `EmployeeOrg` テーブルを作成します。 `OrgNode` 列を、クラスター化インデックスのある主キーとして指定すると、深さ優先のインデックスが作成されます。  
   
     ```  
     USE AdventureWorks2012 ;  

@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b935a74dba93596e734537f62f2ccafd192f3523
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108922"
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment-ssrs-configuration-manager"></a>スケールアウト配置に関する暗号化キーの追加と削除 (SSRS 構成マネージャー)
@@ -37,10 +37,7 @@ ms.locfileid: "66108922"
   
 1.  レポート サーバー スケールアウト配置のメンバーであるレポート サーバーをホストするコンピューターで、 **rskeymgmt.exe** をローカルに実行します。  
   
-2.  
-  `-j` 引数を使用して、レポート サーバーをレポート サーバー データベースに結合します。 
-  `-m` 引数と `-n` 引数を使用して、配置に追加するリモート レポート サーバー インスタンスを指定します。 
-  `-u` 引数と `-v` 引数を使用して、リモート コンピューター上の管理者アカウントを指定します。 同じコンピューター上の複数のレポート サーバー インスタンスを使用してスケールアウト配置を作成する場合、使用する構文は若干異なります。 使用する必要がある構文の詳細については、「[rskeymgmt ユーティリティ &#40;SSRS&#41;](../tools/rskeymgmt-utility-ssrs.md)」を参照してください。  
+2.  `-j` 引数を使用して、レポート サーバーをレポート サーバー データベースに結合します。 `-m` 引数と `-n` 引数を使用して、配置に追加するリモート レポート サーバー インスタンスを指定します。 `-u` 引数と `-v` 引数を使用して、リモート コンピューター上の管理者アカウントを指定します。 同じコンピューター上の複数のレポート サーバー インスタンスを使用してスケールアウト配置を作成する場合、使用する構文は若干異なります。 使用する必要がある構文の詳細については、「[rskeymgmt ユーティリティ &#40;SSRS&#41;](../tools/rskeymgmt-utility-ssrs.md)」を参照してください。  
   
      次の例は、リモート レポート サーバーをスケールアウト配置に結合する場合に指定する必要がある引数を示しています (リモート コンピューターでの管理者権限がある場合は、資格情報を省略できます)。  
   
@@ -56,17 +53,16 @@ ms.locfileid: "66108922"
   
 2.  **rskeymgmt.exe**を実行します。 これは、レポート サーバー スケールアウト配置に含まれているどのレポート サーバーでも実行できます。  
   
-3.  
-  `-r` 引数を使用して、スケールアウト配置からレポート サーバー インスタンスを解放します。 指定する必要がある引数の例を次に示します。  
+3.  `-r` 引数を使用して、スケールアウト配置からレポート サーバー インスタンスを解放します。 指定する必要がある引数の例を次に示します。  
   
     ```  
     rskeymgmt -r <installation ID>  
     ```  
   
- これらの手順によってスケール アウト配置からレポート サーバーが削除されますが、レポート サーバーの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インスタンスはアンインストールされません。 スケール アウト配置からレポート サーバーを削除した後、サーバー上で [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] が不要になった場合は、そのサーバーから [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をアンインストールできます。 詳細については、[ オンライン ブックの「](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)SQL Server の既存のインスタンスのアンインストール &#40;セットアップ&#41;[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]」を参照してください。  
+ これらの手順によってスケール アウト配置からレポート サーバーが削除されますが、レポート サーバーの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インスタンスはアンインストールされません。 スケール アウト配置からレポート サーバーを削除した後、サーバー上で [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] が不要になった場合は、そのサーバーから [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をアンインストールできます。 詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「[SQL Server の既存のインスタンスのアンインストール &#40;セットアップ&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [暗号化キーの構成と管理 &#40;SSRS 構成マネージャー&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
+ [SSRS Configuration Manager &#40;暗号化キーの構成と管理&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
  [レポート サーバーの初期化 &#40;SSRS 構成マネージャー&#41;](ssrs-encryption-keys-initialize-a-report-server.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bf433f27a5d8dc7f5e0efcf6f5774ed292d1e1a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109066"
 ---
 # <a name="general-properties-page-shared-datasets-report-manager"></a>[全般] プロパティ ページ、共有データセット (レポート マネージャー)
@@ -35,7 +35,7 @@ ms.locfileid: "66109066"
   
 3.  ドロップダウン リストの **[管理]** をクリックします。 [全般] プロパティ ページが開きます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **名前**  
  共有データセットの名前を入力します。この名前は、レポート サーバーのフォルダー階層内のアイテムを識別するために使用されます。  
   
@@ -48,13 +48,13 @@ ms.locfileid: "66109066"
  **[クエリ実行タイムアウト]**  
  クエリがタイムアウトするまでの秒数を入力します。0の場合、クエリはタイムアウトしません。  
   
- **[適用]**  
+ 適用****  
  変更を保存します。  
   
- **デリート**  
+ **削除**  
  レポート サーバー データベースから共有データセットを削除します。 共有データセットを削除すると、レポートまたはキャッシュされたバージョンすべてが非アクティブ化されます。 レポートを再びアクティブ化するには、レポート作成ツールでレポートを 1 つずつ開き、同じ名前および同じフィールド コレクションでデータセットを指定する必要があります。 別の方法として、各データ領域の参照を更新し、同じフィールド コレクションで異なるデータセットを使用することもできます。  
   
- **[詳細ビュー]**  
+ **合わせ**  
  レポート サーバーのフォルダー階層内の共有データセットを再配置します。 このボタンをクリックすると、アイテムの移動ページが表示され、フォルダーを参照して新しい場所を選択できます。 詳細については、「[[アイテムの移動] ページ &#40;レポートマネージャー&#41;](../../2014/reporting-services/move-items-page-report-manager.md)」を参照してください。  
   
  **ダウンロード**  
@@ -69,7 +69,7 @@ ms.locfileid: "66109066"
  [レポートマネージャーの F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)   
  [キャッシュ更新オプション &#40;レポートマネージャー&#41;](../../2014/reporting-services/cache-refresh-options-report-manager.md)   
  [[キャッシュ] ページ、共有データセット &#40;レポートマネージャー&#41;](../../2014/reporting-services/caching-page-shared-datasets-report-manager.md)   
- [共有データセットを管理する](report-data/manage-shared-datasets.md)   
+ [共有データセットの管理](report-data/manage-shared-datasets.md)   
  [共有データセットのキャッシュ &#40;SSRS&#41;](report-server/cache-shared-datasets-ssrs.md)  
   
   

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7b67e2a7048520d8a411789e501dbbe545d3cc02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109673"
 ---
 # <a name="create-a-model-using-report-manager"></a>レポート マネージャーを使用してモデルを作成する
@@ -32,22 +32,17 @@ ms.locfileid: "66109673"
   
 1.  Web ブラウザーで、アドレス バーにレポート サーバーの URL を入力します。  
   
-2.  
-  **[新しいデータ ソース]** をクリックします。  
+2.  **[新しいデータ ソース]** をクリックします。  
   
-3.  
-  **[名前]** ボックスに、データ ソースの名前を入力します。  
+3.  **[名前]** ボックスに、データ ソースの名前を入力します。  
   
 4.  必要に応じて、 **[説明]** ボックスにモデルの簡単な説明を入力します。  
   
-5.  
-  **[このデータ ソースを有効にする]** チェック ボックスがオンになっていることを確認します。  
+5.  **[このデータ ソースを有効にする]** チェック ボックスがオンになっていることを確認します。  
   
-6.  
-  **[接続の種類]** ボックスの一覧で、接続先のデータ ソースの種類を選択します。 接続の種類は、 **[Oracle]**、 **[Microsoft SQL Server]** 、 **[Microsoft SQL Server Analysis Services]** のいずれかである必要があります。  
+6.  **[接続の種類]** ボックスの一覧で、接続先のデータ ソースの種類を選択します。 接続の種類は、 **[Oracle]**、 **[Microsoft SQL Server]** 、 **[Microsoft SQL Server Analysis Services]** のいずれかである必要があります。  
   
-7.  
-  **[接続文字列]** ボックスに、データベースを指す接続文字列を入力します。  
+7.  **[接続文字列]** ボックスに、データベースを指す接続文字列を入力します。  
   
 8.  レポート ビルダーのユーザーがデータベースに接続するために使用する必要のある接続方法を選択します。  
   
@@ -68,16 +63,13 @@ ms.locfileid: "66109673"
   
 2.  データ ソースに対して指定したオプションが必要かどうかを確認します。  
   
-3.  
-  **[モデルの生成]** をクリックします。  
+3.  **[モデルの生成]** をクリックします。  
   
      データ ソースの [全般] ページが表示されます。  
   
-4.  
-  **[名前]** ボックスに、レポート モデルの名前を入力します。  
+4.  **[名前]** ボックスに、レポート モデルの名前を入力します。  
   
-5.  
-  **[説明]** ボックスに、モデルの簡単な説明を入力します。  
+5.  **[説明]** ボックスに、モデルの簡単な説明を入力します。  
   
 6.  レポート モデルの保存先として新しい場所を指定するには、 **[場所の変更]** をクリックします。  
   
@@ -90,6 +82,6 @@ ms.locfileid: "66109673"
 ## <a name="see-also"></a>参照  
  [ネイティブ モードのレポート サーバーに対する権限の許可](security/granting-permissions-on-a-native-mode-report-server.md)   
  [Reporting Services のデータ接続、データソース、および接続文字列](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [[新しいデータソース] ページ &#40;レポートマネージャー&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)  
+ [[新しいデータ ソース] ページ &#40;レポート マネージャー&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)  
   
   

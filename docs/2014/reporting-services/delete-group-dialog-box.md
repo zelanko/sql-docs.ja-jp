@@ -16,14 +16,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 85b9387b5e60cdcdfd7af17bc3268f5ee475b739
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109318"
 ---
 # <a name="delete-group-dialog-box"></a>[グループの削除] ダイアログ ボックス
-  
   **[グループの削除]** ダイアログ ボックスを使用して、テーブル、マトリックス、または一覧の各データ領域からグループを削除します。 そのグループに行または列が関連付けられている場合は、それらの構造も削除できます。  
   
 ## <a name="options"></a>オプション  
@@ -35,7 +34,7 @@ ms.locfileid: "66109318"
   
 ## <a name="see-also"></a>参照  
  [レポートデザイナーの F1 ヘルプ](tools/report-designer-f1-help.md)   
- [グループについて &#40;レポート ビルダーおよび SSRS&#41;](report-design/understanding-groups-report-builder-and-ssrs.md)   
+ [レポートビルダーと SSRS&#41;&#40;グループについて](report-design/understanding-groups-report-builder-and-ssrs.md)   
  [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
   

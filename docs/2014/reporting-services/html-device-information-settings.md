@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c300945fee14b353e5c3be1b42a59440bdbfd4dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109039"
 ---
 # <a name="html-device-information-settings"></a>HTML デバイス情報設定
@@ -35,22 +35,19 @@ ms.locfileid: "66109039"
 |`ExpandContent`|レポートを、水平方向のサイズを抑えたテーブル構造に収めるかどうかを示します。|  
 |**FindString**|レポートの検索条件として使用する文字列。 このパラメーターの既定値は、空文字列です。|  
 |**GetImage (\*)**|HTML ビューアー ユーザー インターフェイス用の特定のアイコンを取得します。|  
-|`HTMLFragment`|完全な HTML ドキュメントの代わりに HTML 断片を作成するかどうかを示します。 HTML 断片には TABLE 要素のレポート コンテンツが含まれ、HTML 要素と BODY 要素は省略されます。 既定値は `false` です。 
-  `HTMLFragment` プロパティを `true` にして SOAP を使用して表示すると、画像の正しい要求に使用できるセッション情報が入った URL が作成されます。 画像はレポート サーバー データベースのアップロードされたリソースである必要があります。|  
+|`HTMLFragment`|完全な HTML ドキュメントの代わりに HTML 断片を作成するかどうかを示します。 HTML 断片には TABLE 要素のレポート コンテンツが含まれ、HTML 要素と BODY 要素は省略されます。 既定値は `false` です。 `HTMLFragment` プロパティを `true` にして SOAP を使用して表示すると、画像の正しい要求に使用できるセッション情報が入った URL が作成されます。 画像はレポート サーバー データベースのアップロードされたリソースである必要があります。|  
 |`ImageConsolidation`|表示するグラフ、マップ、ゲージ、およびインジケーターの画像を 1 つの大きな画像に結合するかどうかを示します。 レポートに多数のデータ視覚化用アイテムが含まれている場合、画像を結合することで、クライアント ブラウザーでのレポートのパフォーマンスが向上します。 最近のほとんどのブラウザーでの既定値は `true` です。|  
 |**JavaScript**|表示レポートで JavaScript がサポートされるかどうかを示します。 既定値は `true` です。|  
 |`LinkTarget`|レポートのハイパーリンクの対象。 ウィンドウまたはフレームを対象にするには、 `LinkTarget` = *window_name*のようにウィンドウの名前を指定するか、= _blank を`LinkTarget`使用して新しいウィンドウを対象にすることができます。 他に有効な対象名には、_self、_parent、および _top があります。|  
 |**OnlyVisibleStyles (\*)**|現在レンダリングされているページの共有スタイルのみが生成されることを示します。|  
 |`OutlookCompat`|Outlook でレポートの外観をよくする追加のメタデータを使用して表示するかどうかを示します。 それ以外の場合、既定値は `false` です。|  
-|**パラメーター**|ツール バーのパラメーター領域を表示するか非表示にするかを示します。 このパラメーターの値を `true` に設定すると、ツール バーのパラメーター領域が表示されます。 このパラメーターの既定値は `true` です。|  
-|`PrefixId`|
-  `HTMLFragment` と併用する場合、作成された HTML フラグメントのすべての `ID` 属性に指定したプレフィックスを追加します。|  
+|**Parameters**|ツール バーのパラメーター領域を表示するか非表示にするかを示します。 このパラメーターの値を `true` に設定すると、ツール バーのパラメーター領域が表示されます。 このパラメーターの既定値は `true` です。|  
+|`PrefixId`|`HTMLFragment` と併用する場合、作成された HTML フラグメントのすべての `ID` 属性に指定したプレフィックスを追加します。|  
 |**ReplacementRoot (\*)**|ReportViewer コントロールの外部に表示する場合、レポートのすべてのドリルスルー、トグル、およびブックマークのリンクの先頭に追加する文字列。 たとえば、ユーザーのクリックをカスタム ページにリダイレクトするために使用されます。|  
 |**ResourceStreamRoot (\*)**|切り替えや並べ替え用の画像など、すべての画像リソースの URL の先頭に追加する文字列。|  
-|**Section**|表示するレポートのページ番号。 
-  `0` の値は、レポートのすべてのセクションが表示されることを示します。 既定値は `1` です。|  
+|**セクション**|表示するレポートのページ番号。 `0` の値は、レポートのすべてのセクションが表示されることを示します。 既定値は `1` です。|  
 |**StreamRoot (\*)**|レポート サーバーが返す HTML レポートで IMG 要素の **src** 属性の値の前に付けるパス。 既定では、レポート サーバーがパスを提供します。 この設定を使用して、レポートの画像のルート パスを指定できます (たとえば、**http://\<サーバー名>/resources/companyimages**)。|  
-|**スタイルストリーム**|スタイルとスクリプトがドキュメント内ではなく、異なるストリームとして作成されるかどうかを示します。 既定値は `false` です。|  
+|**StyleStream**|スタイルとスクリプトがドキュメント内ではなく、異なるストリームとして作成されるかどうかを示します。 既定値は `false` です。|  
 |`Toolbar`|ツール バーを表示するか非表示にするかを示します。 このパラメーターの既定値は `true` です。 このパラメーターの値が `false` である場合は、残りのオプション (ドキュメント マップを除く) すべてが無視されます。 このパラメーターを省略すると、サポートされている表示形式でツール バーが自動的に表示されます。<br /><br /> URL アクセスを使用してレポートを表示すると、レポート ビューアー ツール バーが表示されます。 ツール バーは SOAP API によっては表示されません。 しかし、`Toolbar` デバイス情報設定は、SOAP の `Render` メソッドを使用したときにレポートの表示に反映されます。 SOAP を使用して HTML を表示するときにこのパラメーターの値が `true` である場合、レポートの最初のセクションのみが表示されます。 値が `false` である場合、HTML レポート全体が単一の HTML ページとして表示されます。|  
 |`UserAgent`|要求元ブラウザーの `user-agent` 文字列。HTTP 要求に含まれています。|  
 |**Zoom (\*)**|整数のパーセンテージまたは文字列定数としてのレポート ズーム値。 標準的な文字列値には `Page Width` と `Whole Page` などがあります。 Internet Explorer 5.0 よりも前の [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer および[!INCLUDE[msCoName](../includes/msconame-md.md)] 以外のすべてのブラウザーでは、このパラメーターが無視されます。 このパラメーターの既定値は `100` です。|  
@@ -58,7 +55,7 @@ ms.locfileid: "66109039"
   
 ## <a name="see-also"></a>参照  
  [表示拡張機能にデバイス情報設定を渡す](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [RSReportServer.Config で表示拡張機能パラメーターをカスタマイズする](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [RSReportServer の表示拡張機能パラメーターをカスタマイズする](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [テクニカル リファレンス (SSRS)](../../2014/reporting-services/technical-reference-ssrs.md)  
   
   

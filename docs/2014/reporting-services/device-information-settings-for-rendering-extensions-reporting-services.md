@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8866b6b8193ec61e08d20868ed88a21211fa2a32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109254"
 ---
 # <a name="device-information-settings-for-rendering-extensions-reporting-services"></a>表示拡張機能のデバイス情報設定 (Reporting Services)
@@ -22,7 +22,7 @@ ms.locfileid: "66109254"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[ATOM デバイス情報設定](../../2014/reporting-services/atom-device-information-settings.md)|Atom 準拠の表示出力に関連するデバイス情報設定について説明します。|  
 |[CSV デバイス情報設定](csv-device-information-settings.md)|CSV 表示出力に関連するデバイス情報設定について説明します。|  
