@@ -13,21 +13,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0c0d0f99ebd4fcd45d456cb25d256e230ec1194d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087716"
 ---
 # <a name="completing-the-wizard-cube-wizard"></a>[ウィザードの完了] (キューブ ウィザード)
-  
   **[ウィザードの完了]** ページを使用すると、キューブに名前を付け、ウィザードの完了時に作成されるキューブをプレビューできます。  
   
 ## <a name="options"></a>オプション  
  **キューブ名**  
  キューブの名前を入力します。  
   
- **プレビュー**  
+ **［プレビュー］**  
  ウィザードの完了時に作成されるキューブの構造を表示します。  
   
 ## <a name="see-also"></a>参照  

@@ -13,14 +13,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2828316739e53a94b248a8fffcf020ed16692241
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089780"
 ---
 # <a name="sql-server-profiler---edit-filter"></a>SQL Server Profiler - [フィルターの編集]
-  
   **[フィルターの編集]** ダイアログ ボックスを使用すると、トレース内のデータ列フィルターを作成および変更できます。 一覧のデータ列名をクリックすると、そのデータ列に使用できるフィルター条件が横のペインに表示されます。 フィルター条件を入力して **[OK]** をクリックすると、選択したデータ列にその条件が適用されます。 一覧のデータ列名の左側にフィルター アイコンが表示されている場合、その列には既にフィルターが構成されています。  
   
 > [!NOTE]  

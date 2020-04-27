@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9c2f11ecbdf90aeeb5e0e5a3ef097152898042d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086428"
 ---
 # <a name="data-mining-client-for-excel-sql-server-data-mining-add-ins"></a>Excel 用のデータ マイニング クライアント (SQL Server データ マイニング アドイン)
@@ -48,7 +48,7 @@ ms.locfileid: "66086428"
   
      Excel 用のデータ マイニング クライアントではサーバーへのアクティブな接続が維持されるので、作成したデータ マイニング モデルをサーバーに保存して以降のテストで使用できます。または、モデルを実稼働サーバーに保存するとスケーラビリティはさらに高くなります。  
   
-##  <a name="bkmk_Data"></a>データの操作  
+##  <a name="work-with-data"></a><a name="bkmk_Data"></a>データの操作  
  データ**準備**グループには、データマイニングタスクの準備としてデータを確認し、クリーンアップするための次のウィザードが含まれています。 また、ほとんどのウィザードでデータをトレーニング セットとテスト セットに分けることができます。  
   
  [データ &#40;SQL Server データマイニングアドインの探索&#41;](explore-data-sql-server-data-mining-add-ins.md)  
@@ -56,8 +56,7 @@ ms.locfileid: "66086428"
   
 -   モデルの格納および処理用の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] サーバーへの接続  
   
--   外部データ ソースへの接続 (オプション)。 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データ ソースとして定義されるあらゆる種類のデータを使用してモデルを構築できます。または、Excel の既存データを使用することも可能です。  
+-   外部データ ソースへの接続 (オプション)。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データ ソースとして定義されるあらゆる種類のデータを使用してモデルを構築できます。または、Excel の既存データを使用することも可能です。  
   
  [データ &#40;SQL Server データマイニングアドインの探索&#41;](explore-data-sql-server-data-mining-add-ins.md)  
  **データの探索**ウィザードを使用すると、選択した列の分布と値を一度にグラフ化することで、データテーブル内のデータの種類と量を理解できます。  
@@ -71,7 +70,7 @@ ms.locfileid: "66086428"
  [予測計算 &#40;Excel 用のテーブル分析ツール&#41;](prediction-calculator-table-analysis-tools-for-excel.md)  
  ラベルの変更ウィザードを使用する**と、分析**の結果をわかりやすくするために、データの新しいラベルを作成できます。 たとえば、データの範囲の名前をよりわかりやすい名前に変更したり、一覧から代表値を選択したりすることができます。  
   
-##  <a name="bkmk_Model"></a>モデルの構築と分析  
+##  <a name="build-models-and-analyze"></a><a name="bkmk_Model"></a>モデルの構築と分析  
  ツールバーの [**データモデリング**] セクションのオプションを使用すると、データからパターンを派生させることができます。属性に基づいてデータの行をグループ化するか、関連付けを探索します。 このツール リボンのウィザードは、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] で利用できる強力なデータ マイニング アルゴリズムに基づいています。 Excel 用のテーブル分析ツールの類似ツールと異なり、これらのウィザードでは、アルゴリズムの動作をカスタマイズしたり、さまざまなデータ ソースを使用したりできます。  
   
  [分類ウィザード &#40;Excel 用データマイニングアドイン&#41;](classify-wizard-data-mining-add-ins-for-excel.md)  
@@ -102,7 +101,7 @@ ms.locfileid: "66086428"
  [高度なモデリング &#40;Excel 用データマイニングアドイン&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)  
  データ マイニングの概念を既に理解している場合は、 **高度な**データモデリングオプションを使用すると、他のツールやウィザードに含まれていないカスタマイズを使用して、カスタムデータ構造を作成し、モデルを構築することができます。  
   
-##  <a name="bkmk_Validate"></a>モデルのテスト、クエリ、および検証  
+##  <a name="test-query-and-validate-models"></a><a name="bkmk_Validate"></a>モデルのテスト、クエリ、および検証  
  [**精度と検証**] ツールバーのウィザードを使用すると、業界標準のテストを使用してモデルの精度を検証したり、モデルを作成するためのデータセットの有効性を評価したりできます。  
   
  [Excel 用のテーブル分析ツール &#40;主要な影響元の分析&#41;](analyze-key-influencers-table-analysis-tools-for-excel.md)  
@@ -125,7 +124,7 @@ ms.locfileid: "66086428"
  [詳細データ マイニング クエリ エディター](advanced-data-mining-query-editor.md)  
  このツールは、上級ユーザー向けに DMX へのドラッグ アンド ドロップ インターフェイスを提供します。 予測クエリまたは新しいモデルを簡単に作成でき、構文について心配する必要はありません。  
   
-##  <a name="bkmk_ViewModels"></a>モデルの表示  
+##  <a name="view-models"></a><a name="bkmk_ViewModels"></a>モデルの表示  
  作成するモデルは参照用に自動的に開きます。 ただし、サーバー上でモデルを参照して、新しい視覚エフェクトを生成することもできます。 [Visio 図形](viewing-data-mining-models-in-visio-data-mining-add-ins.md)を使用して、モデル図をカスタマイズ可能なキャンバスにエクスポートします。  
   
  [Excel &#40;SQL Server データマイニングアドインのモデルの参照&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
@@ -134,7 +133,7 @@ ms.locfileid: "66086428"
  [Excel 用データマイニングアドイン &#40;マイニングモデルのドキュメント化&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md)  
  このウィザードでは、データ セットとモデルのメタデータに関する統計サマリーを提供するレポートが作成されます。このレポートを調査と解釈に役立てることができます。  
   
-##  <a name="bkmk_UsageMgmt"></a>管理、ドキュメント、展開  
+##  <a name="manage-document-and-deploy"></a><a name="bkmk_UsageMgmt"></a>管理、ドキュメント、展開  
  これらのツールを使用することで、データ マイニング サーバーに接続し、モデルを管理およびエクスポートして、データ マイニング アクティビティを監視できます。  
   
  [データマイニングアドイン SQL Server &#40;モデルの管理&#41;](manage-models-sql-server-data-mining-add-ins.md)  
@@ -151,7 +150,7 @@ ms.locfileid: "66086428"
  **作業の開始**  
  [**はじめに**] ボタンをクリックして構成ウィザードを起動します。このウィザードでは、のインスタンスへ[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]の接続を作成し、データマイニングに必要な権限を取得します。  
   
- **Help**  
+ **ヘルプ**  
  [**ヘルプ**] ドロップダウンメニューには、セットアップを完了してデータマイニングを開始するのに役立つオンラインヘルプ、Web サイト、および構成ウィザードへのリンクが用意されています。  
   
  ヘルプ ページには、アドインのヘルプ、追加のビデオ、デモ、サンプルなどのオンライン リソースへのリンクも記載されています。  

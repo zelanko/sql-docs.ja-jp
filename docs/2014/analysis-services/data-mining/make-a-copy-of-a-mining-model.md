@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7464c7d780a420b0f95b59ebde02494bd40661e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084218"
 ---
 # <a name="make-a-copy-of-a-mining-model"></a>マイニング モデルのコピーの作成
@@ -31,18 +31,15 @@ ms.locfileid: "66084218"
   
 ### <a name="to-create-a-related-mining-model"></a>関連マイニング モデルを作成するには  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のソリューション エクスプローラーで、マイニング モデルを含むマイニング構造をクリックします。  
+1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のソリューション エクスプローラーで、マイニング モデルを含むマイニング構造をクリックします。  
   
-2.  
-  **[マイニング モデル]** タブをクリックします。  
+2.  **[マイニング モデル]** タブをクリックします。  
   
 3.  モデルを選択し、右クリックしてショートカット メニューを開きます。  
   
-     または  
+     \- または -  
   
-     モデルを選択します。 
-  **[マイニング モデル]** メニューの **[新しいマイニング モデル]** をクリックします。  
+     モデルを選択します。 **[マイニング モデル]** メニューの **[新しいマイニング モデル]** をクリックします。  
   
 4.  新しいマイニング モデルの名前を入力し、アルゴリズムを選択します。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

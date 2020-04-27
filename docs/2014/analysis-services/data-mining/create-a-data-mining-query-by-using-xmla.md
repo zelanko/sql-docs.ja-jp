@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ec69c7225d4c509d93787e667612269c4de91e23
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085546"
 ---
 # <a name="create-a-data-mining-query-by-using-xmla"></a>XMLA を使用したデータ マイニング クエリの作成
@@ -30,23 +30,19 @@ ms.locfileid: "66085546"
   
 #### <a name="to-open-an-xmla-template"></a>XML/A テンプレートを開くには  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 **[表示]** メニューの **[テンプレート エクスプローラー]** をクリックします。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 **[表示]** メニューの **[テンプレート エクスプローラー]** をクリックします。  
   
 2.  キューブ アイコンをクリックして、Analysis Services テンプレートの一覧を開きます。  
   
 3.  テンプレート カテゴリの一覧で **[XMLA]**、 **[スキーマ行セット]** の順に展開し、 **[スキーマ行セットの発見]** をダブルクリックします。コード エディターにこのテンプレートが表示されます。  
   
-4.  
-  **[Analysis Services への接続]** ダイアログ ボックスで接続情報を指定し、 **[接続]** をクリックします。 新しいクエリ エディター ウィンドウが開き、 **[スキーマ行セットの発見]** テンプレートの内容が表示されます。  
+4.  **[Analysis Services への接続]** ダイアログ ボックスで接続情報を指定し、 **[接続]** をクリックします。 新しいクエリ エディター ウィンドウが開き、 **[スキーマ行セットの発見]** テンプレートの内容が表示されます。  
   
 #### <a name="to-discover-column-names-from-the-mining-model-content-schema-rowset"></a>MINING MODEL CONTENT スキーマ行セットから列名を検出するには  
   
-1.  
-  **[スキーマ行セットの発見]** テンプレートを開き、 **[実行]** をクリックします。  
+1.  **[スキーマ行セットの発見]** テンプレートを開き、 **[実行]** をクリックします。  
   
-     
-  **[結果]** ペインに返されるスキーマ行セットの一覧には、現在のインスタンスで入手できるすべての行セットの行セット名と行セット列が含まれます。  
+     **[結果]** ペインに返されるスキーマ行セットの一覧には、現在のインスタンスで入手できるすべての行セットの行セット名と行セット列が含まれます。  
   
 2.  **クエリ**ペインで、 ** \<制限リスト**の後にカーソルを>、enter キーを押して新しい行を追加します。  
   
@@ -64,15 +60,13 @@ ms.locfileid: "66085546"
   
      `</Restrictions>`  
   
-4.  [**実行**] をクリックします。  
+4.  **[実行]** をクリックします。  
   
-     
-  **[結果]** ペインに、指定したスキーマ行セットの列名の一覧が表示されます。  
+     **[結果]** ペインに、指定したスキーマ行セットの列名の一覧が表示されます。  
   
 #### <a name="to-create-a-content-query-using-the-mining-model-content-schema-rowset"></a>MINING MODEL CONTENT スキーマ行セットを使用してコンテンツ クエリを作成するには  
   
-1.  
-  **[スキーマ行セットの発見]** テンプレートで、"要求の種類" タグの内側のテキストを置き換えて、要求の種類を変更します。  
+1.  **[スキーマ行セットの発見]** テンプレートで、"要求の種類" タグの内側のテキストを置き換えて、要求の種類を変更します。  
   
      次の行を置き換えます。  
   
@@ -100,7 +94,7 @@ ms.locfileid: "66085546"
   
      `</Restrictions>`  
   
-5.  [**実行**] をクリックします。  
+5.  **[実行]** をクリックします。  
   
      [結果] ペインに、スキーマ定義および指定したモデルの値が表示されます。  
   

@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ca42f1dda184bf5cd99cad7d34f5ae9fce79478b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092961"
 ---
 # <a name="repair-a-distributed-replay-installation"></a>分散再生のインストールの修復
@@ -34,7 +34,6 @@ ms.locfileid: "66092961"
   
 3.  ウィザードの手順に従い、[**機能の選択**] ページで、修復する分散再生コンポーネントを選択し、[**次へ**] をクリックします。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
-4.  
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インストール ウィザードを完了すると、選択した 分散再生の機能が修復されます。  
+4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インストール ウィザードを完了すると、選択した 分散再生の機能が修復されます。  
   
   

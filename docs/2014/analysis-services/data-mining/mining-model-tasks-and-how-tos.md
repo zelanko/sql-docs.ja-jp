@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a41d72ce6c0234e6419b55a9fe1895226d884fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083491"
 ---
 # <a name="mining-model-tasks-and-how-tos"></a>マイニング モデル タスクと操作方法
@@ -35,7 +35,7 @@ ms.locfileid: "66083491"
   
 -   [マイニング モデルでの列の分離の変更](change-the-discretization-of-a-column-in-a-mining-model.md)  
   
--   [データマイニング&#41;&#40;モデリングフラグを表示または変更する](modeling-flags-data-mining.md)  
+-   [モデリング フラグの表示または変更 &#40;データ マイニング&#41;](modeling-flags-data-mining.md)  
   
 -   [モデルでリグレッサーとして使用する列の指定](specify-a-column-to-use-as-regressor-in-a-model.md)  
   

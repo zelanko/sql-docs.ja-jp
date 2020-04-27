@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc2df250b0728934f258c8217d29adfb91e66ff5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087912"
 ---
 # <a name="cluster-diagram-walkthrough-data-mining-add-ins"></a>クラスター ダイアグラムのチュートリアル (データ マイニング アドイン)
@@ -76,7 +76,7 @@ ms.locfileid: "66087912"
   
      ただし、このオプションはグラフデータに対するフィルターとして機能するため、後で項目の数を増やすことはできません。  
   
-8.  **[詳細設定]** をクリックします。  
+8.  [**詳細設定**] をクリックします。  
   
      [**クラスターのオプション**] ダイアログボックスでは、ダイアグラムで使用される図形の外観をカスタマイズできます。 グラフで使用する色と、クラスターに使用する図形を変更できます。  
   

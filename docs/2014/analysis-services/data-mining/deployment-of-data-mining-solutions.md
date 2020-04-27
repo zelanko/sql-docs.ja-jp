@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7dc221f6a81281970a9ad62ba7b16397e40e0648
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084721"
 ---
 # <a name="deployment-of-data-mining-solutions"></a>データ マイニング ソリューションの配置
@@ -36,7 +36,7 @@ ms.locfileid: "66084721"
   
  [データマイニングソリューションを配置するための要件](#bkmk_Reqs)  
   
- [リレーショナルソリューションの配置](#bkmk_RelationalSltn)  
+ [リレーショナル ソリューションの配置](#bkmk_RelationalSltn)  
   
  [多次元ソリューションの配置](#bkmk_MDSltn)  
   
@@ -47,28 +47,28 @@ ms.locfileid: "66084721"
   
  [データ マイニング オブジェクトのエクスポートおよびインポート](export-and-import-data-mining-objects.md)  
   
-##  <a name="bkmk_Reqs"></a>データマイニングソリューションを配置するための要件  
+##  <a name="requirements-for-deployment-of-data-mining-solutions"></a><a name="bkmk_Reqs"></a> データ マイニング ソリューションの配置の要件  
  ソリューションの配置先となる [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスは、多次元オブジェクトとデータ マイニング オブジェクトをサポートするモードで実行されている必要があります。つまり、テーブル モデルや PowerPivot データをホストするインスタンスにデータ マイニング オブジェクトを配置することはできません。  
   
  したがって、Visual Studio でデータ マイニング ソリューションを作成するときは、 **[Analysis Services 多次元およびデータ マイニング プロジェクト]** テンプレートを必ず使用してください。  
   
  ソリューションを配置すると、データ マイニングに使用されるオブジェクトが、指定された [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスに作成されます。作成先は、ソリューション ファイルと同じ名前のデータベースになります。  
   
-###  <a name="bkmk_RelationalSltn"></a>リレーショナルソリューションの配置  
+###  <a name="deploying-a-relational-solution"></a><a name="bkmk_RelationalSltn"></a>リレーショナルソリューションの配置  
  リレーショナル データ マイニング ソリューションを配置すると、必要なデータ マイニング オブジェクトが新しい [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース内に作成され、それらのオブジェクトは既定の設定で処理されます。 処理オプションは、構成プロパティの **[処理オプション]** を使用して変更できます。 詳細については、「 [Analysis Services プロジェクトのプロパティの構成 &#40;SSDT&#41;](../multidimensional-models/configure-analysis-services-project-properties-ssdt.md)のインスタンスに定義済みオブジェクトが作成されます。  
   
  既定では、増分変更だけが毎回配置されます。 つまり、マイニング モデルを変更すると、プロジェクトを再配置するときに、そのマイニング モデルだけが更新されます。 ただし、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを複数のクライアントが編集する場合は、このためにエラーが発生することがあります。 既定の配置モードを変更して、ソリューションが配置されるときにデータベース全体が更新されるようにするには、 **[配置モード]** プロパティを変更します。  
   
  リレーショナル データ マイニング ソリューションでは、配置しなければならないオブジェクトは、データ ソース定義、使用されたすべてのデータ ソース ビュー、マイニング構造、およびすべての依存マイニング モデルだけです。  
   
-###  <a name="bkmk_MDSltn"></a>多次元ソリューションの配置  
+###  <a name="deploying-a-multidimensional-solution"></a><a name="bkmk_MDSltn"></a>多次元ソリューションの配置  
  多次元データ マイニング ソリューションを配置すると、このソリューションによってデータ マイニング オブジェクトがソース キューブと同じデータベース内に作成されます。  
   
  マイニング構造またはマイニング モデルを処理するときには、ソース キューブも処理する必要があります。 このため、OLAP マイニング モデルを使用するソリューションの配置には、リレーショナル データ マイニング ソリューションよりも時間がかかる場合があります。  
   
  通常、データ マイニング オブジェクトも、キューブに使用するのと同じデータ ソースおよびデータ ソース ビューを使用します。 ただし、データ マイニングの対象となるデータ ソースとデータ ソース ビューを明示的に追加することもできます。 たとえば、通常、キューブは見込み顧客についてのデータや、多次元オブジェクトで使用されない外部データを含んでいません。  
   
-##  <a name="bkmk_Resources"></a>関連リソース  
+##  <a name="related-resources"></a><a name="bkmk_Resources"></a>関連リソース  
  [データ マイニング オブジェクトの移動](moving-data-mining-objects.md)  
   
  モデルがリレーショナル データのみに基づいている場合、モデルを移動するための最も簡単な方法は、DMX を使用してオブジェクトをエクスポートおよびインポートすることです。  
@@ -77,14 +77,13 @@ ms.locfileid: "66084721"
   
  モデルがデータ ソースとしてキューブを使用している場合、モデルおよびそれをサポートしているキューブ データを移動する方法の詳細については、このトピックを参照してください。  
   
- [Analysis Services プロジェクト &#40;SSDT&#41;に配置する](../multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
+ [Analysis Services プロジェクトの配置 &#40;SSDT&#41;](../multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの配置についての一般的な情報を提供し、プロジェクト構成の一部として設定できるプロパティについて説明しています。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの配置についての一般的な情報を提供し、プロジェクト構成の一部として設定できるプロパティについて説明しています。  
   
 ## <a name="see-also"></a>参照  
  [多次元モデルオブジェクトの処理](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [データマイニングクエリインターフェイス](data-mining-query-tools.md)   
- [データマイニング&#41;&#40;処理の要件と考慮事項](processing-requirements-and-considerations-data-mining.md)  
+ [処理の要件および注意事項 &#40;データ マイニング&#41;](processing-requirements-and-considerations-data-mining.md)  
   
   

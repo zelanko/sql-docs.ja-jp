@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6ebe206d4f4942e9a9456ba10b00d33514ef6212
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086397"
 ---
 # <a name="data-mining-shapes-for-visio"></a>Visio 用のデータ マイニング図形
@@ -59,7 +59,7 @@ ms.locfileid: "66086397"
   
  Visio モデル図を使用および強化する方法の詳細については、「 [visio でのデータマイニングモデルの表示 &#40;データマイニングアドイン](viewing-data-mining-models-in-visio-data-mining-add-ins.md)」を参照してください&#41;  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 -   テンプレートを使用するには、最初に [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスへの接続を作成する必要があります。  
   

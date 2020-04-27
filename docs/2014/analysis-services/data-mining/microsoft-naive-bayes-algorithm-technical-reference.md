@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d3623e9cd841feb3a82828c12ba32e2e691482a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083897"
 ---
 # <a name="microsoft-naive-bayes-algorithm-technical-reference"></a>Microsoft Naive Bayes アルゴリズム テクニカル リファレンス
@@ -36,12 +36,11 @@ ms.locfileid: "66083897"
  すべてのモデルにおいて可能性のある不足値を考慮するように確率を調整する方法については、「[Missing Values &#40;Analysis Services - Data Mining&#41;](missing-values-analysis-services-data-mining.md)」(不足値 &#40;Analysis Services - データ マイニング&#41;) を参照してください。  
   
 ### <a name="feature-selection"></a>特徴選択  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムでは、モデルを構築するときに考慮される値の数を制限するための自動的な機能選択が行われます。 詳細については、「[機能の選択 &#40;データ マイニング&#41;](feature-selection-data-mining.md)」を参照してください。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムでは、モデルを構築するときに考慮される値の数を制限するための自動的な機能選択が行われます。 詳細については、「[機能の選択 &#40;データ マイニング&#41;](feature-selection-data-mining.md)」を参照してください。  
   
-|アルゴリズム|分析の方法|説明|  
+|アルゴリズム|分析の方法|備考|  
 |---------------|------------------------|--------------|  
-|Naive Bayes|Shannon のエントロピ<br /><br /> K2 事前分布を指定したベイズ定理<br /><br /> 均一な事前分布を指定したベイズ ディリクレ等式 (既定値)|Naive Bayes で使用できる属性は、不連続属性と分離された属性だけです。したがって、興味深さのスコアは使用できません。|  
+|Naive Bayes|Shannon のエントロピー<br /><br /> K2 事前分布を指定したベイズ定理<br /><br /> 均一な事前分布を指定したベイズ ディリクレ等式 (既定値)|Naive Bayes で使用できる属性は、不連続属性と分離された属性だけです。したがって、興味深さのスコアは使用できません。|  
   
  このアルゴリズムは、処理時間が最短になり、最も重要な属性を効率よく選択できるように設計されています。ただし、次のようにパラメーターを設定することで、アルゴリズムが使用するデータを制御できます。  
   
@@ -52,12 +51,10 @@ ms.locfileid: "66083897"
 -   任意の 1 つの属性について考慮できる値の数を制限するには、MINIMUM_STATES の値を小さくします。  
   
 ## <a name="customizing-the-naive-bayes-algorithm"></a>Naive Bayes アルゴリズムのカスタマイズ  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムでは、結果として得られるマイニング モデルの動作、パフォーマンス、および精度に影響を与えるいくつかのパラメーターがサポートされています。 モデル列にモデリング フラグを設定してデータの処理方法を制御することも、マイニング構造にフラグを設定して不足値または NULL 値の処理方法を指定することもできます。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムでは、結果として得られるマイニング モデルの動作、パフォーマンス、および精度に影響を与えるいくつかのパラメーターがサポートされています。 モデル列にモデリング フラグを設定してデータの処理方法を制御することも、マイニング構造にフラグを設定して不足値または NULL 値の処理方法を指定することもできます。  
   
 ### <a name="setting-algorithm-parameters"></a>アルゴリズム パラメーターの設定  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムでは、結果として得られるマイニング モデルのパフォーマンスおよび精度に影響を与えるいくつかのパラメーターがサポートされています。 次の表では、各パラメーターについて説明します。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムでは、結果として得られるマイニング モデルのパフォーマンスおよび精度に影響を与えるいくつかのパラメーターがサポートされています。 次の表では、各パラメーターについて説明します。  
   
  *MAXIMUM_INPUT_ATTRIBUTES*  
  選択した機能を呼び出す前にアルゴリズムが処理できる入力属性の最大数を指定します。 この値を 0 に設定すると、入力属性に対する機能の選択が無効になります。  
@@ -77,23 +74,21 @@ ms.locfileid: "66083897"
  *MAXIMUM_STATES*  
  アルゴリズムによってサポートされる属性状態の最大数を指定します。 属性の状態の数が状態の最大数よりも大きい場合、アルゴリズムでは属性の最も一般的な状態が使用され、残りの状態は存在しないものとして扱われます。  
   
- 既定値は 100 です。  
+ 既定値は、100 です。  
   
 ### <a name="modeling-flags"></a>ModelingFlags  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムでは、次のモデリング フラグがサポートされています。 モデリング フラグは、マイニング構造やマイニング モデルを作成するときに定義し、分析時に各列の値をどのように処理するかを指定します。 詳細については、「[モデリング フラグ &#40;データ マイニング&#41;](modeling-flags-data-mining.md)」を参照してください。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムでは、次のモデリング フラグがサポートされています。 モデリング フラグは、マイニング構造やマイニング モデルを作成するときに定義し、分析時に各列の値をどのように処理するかを指定します。 詳細については、「[モデリング フラグ &#40;データ マイニング&#41;](modeling-flags-data-mining.md)」を参照してください。  
   
-|モデリング フラグ|[説明]|  
+|モデリング フラグ|説明|  
 |-------------------|-----------------|  
 |MODEL_EXISTENCE_ONLY|列が、Missing および Existing の 2 つの可能な状態を持つ列として扱われることを示します。 NULL は Missing 値になります。<br /><br /> マイニング モデル列に適用されます。|  
 |NOT NULL|列に NULL を含めることはできないことを示します。 モデルのトレーニング中に NULL が検出された場合はエラーが発生します。<br /><br /> マイニング構造列に適用されます。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  Naive Bayes ツリー モデルには、キー列、少なくとも 1 つの予測可能属性、および少なくとも 1 つの入力属性が必要です。 属性を連続にすることはできません。データに連続する数値データが含まれる場合は、無視または分離されます。  
   
 ### <a name="input-and-predictable-columns"></a>入力列と予測可能列  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムでは、次の表に示す特定の入力列と予測可能列がサポートされています。 マイニング モデルにおけるコンテンツの種類の意味については、「[コンテンツの種類 &#40;データ マイニング&#41;](content-types-data-mining.md)」を参照してください。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムでは、次の表に示す特定の入力列と予測可能列がサポートされています。 マイニング モデルにおけるコンテンツの種類の意味については、「[コンテンツの種類 &#40;データ マイニング&#41;](content-types-data-mining.md)」を参照してください。  
   
 |列|コンテンツの種類|  
 |------------|-------------------|  
@@ -106,6 +101,6 @@ ms.locfileid: "66083897"
 ## <a name="see-also"></a>参照  
  [Microsoft Naive Bayes アルゴリズム](microsoft-naive-bayes-algorithm.md)   
  [Naive Bayes モデルのクエリ例](naive-bayes-model-query-examples.md)   
- [Naive Bayes モデルのマイニングモデルコンテンツ &#40;Analysis Services データマイニング&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
+ [Naive Bayes モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   

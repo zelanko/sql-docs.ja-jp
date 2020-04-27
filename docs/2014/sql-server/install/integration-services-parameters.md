@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 100e796bb27d1e60db000a364a0432273dd5cafb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094242"
 ---
 # <a name="integration-services-parameters"></a>Integration Services パラメーター
@@ -24,14 +24,13 @@ ms.locfileid: "66094242"
   
 ## <a name="options"></a>オプション  
  **[コンピューターの SSIS パッケージを分析する]**  
- コンピューター上の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを分析するときは、このオプションを選択します。 既定では、このオプションはオンになっています。  
+ コンピューター上の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを分析するときは、このオプションを選択します。 既定では、このオプションが選択されています。  
   
  **[SSIS パッケージ ファイルを分析する]**  
  ファイル システムの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを分析するときは、このオプションを選択します。  
   
  **[SSIS パッケージのパス]**  
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージが保存されている UNC またはローカル パスを指定します。 ファイル名を含める必要はありません。 入力したパスにアクセスできない場合は、[**次へ**] をクリックすることはできません。 既定では、パスは空白です。 このフィールドは、[ **SSIS パッケージファイルの分析**] を選択した場合にのみ有効になります。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージが保存されている UNC またはローカル パスを指定します。 ファイル名を含める必要はありません。 入力したパスにアクセスできない場合は、[**次へ**] をクリックすることはできません。 既定では、パスは空白です。 このフィールドは、[ **SSIS パッケージファイルの分析**] を選択した場合にのみ有効になります。  
   
 ## <a name="see-also"></a>参照  
  [アップグレードアドバイザーの使用](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   

@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ed12525e1b27bd45aa1d6313ad6538a7856f17ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083299"
 ---
 # <a name="moving-data-mining-objects"></a>データ マイニング オブジェクトの移動
@@ -47,12 +47,11 @@ ms.locfileid: "66083299"
  Analysis Services ソリューションの配置の詳細については、「[Analysis Services プロジェクトの配置 &#40;SSDT&#41;](../multidimensional-models/deploy-analysis-services-projects-ssdt.md)」を参照してください。  
   
 ### <a name="scripting"></a>スクリプトの作成  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、オブジェクトのスクリプト作成に使用できる言語がいくつか用意されています。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、オブジェクトのスクリプト作成に使用できる言語がいくつか用意されています。  
   
--   **Xmla**: でオブジェクトを右クリックして、xmla を使用し[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]てオブジェクトのスクリプトを作成できます。 作成したスクリプトを実行するには、ターゲット サーバーの **XMLA クエリ** ウィンドウでスクリプトを開きます。  
+-   **XMLA:**[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でオブジェクトを右クリックして、XMLA を使用してオブジェクトのスクリプトを作成することができます。 作成したスクリプトを実行するには、ターゲット サーバーの **XMLA クエリ** ウィンドウでスクリプトを開きます。  
   
--   **DMX**: テンプレートを使用するか、および[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で提供されているいずれかのクエリビルダーを使用して、スクリプトを作成できます。  
+-   **DMX:**[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] および [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で用意されているテンプレートまたはいずれかのクエリ ビルダーを使用して、スクリプトを作成できます。  
   
  ただし、スクリプト言語によって、実行できるタスクはそれぞれ異なります。  
   
@@ -67,17 +66,16 @@ ms.locfileid: "66083299"
  詳細については、「 [Analysis Services スクリプト言語 (ASSL) での開発](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)」を参照してください。  
   
 ### <a name="backup-and-restore"></a>バックアップと復元  
- Analysis Services データベース全体のバックアップおよび復元は、データ マイニング ソリューションが OLAP オブジェクトに依存している場合に適しています。 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にはバックアップ/復元機能が用意されており、データベースをよりすばやく簡単にバックアップできます。  
+ Analysis Services データベース全体のバックアップおよび復元は、データ マイニング ソリューションが OLAP オブジェクトに依存している場合に適しています。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にはバックアップ/復元機能が用意されており、データベースをよりすばやく簡単にバックアップできます。  
   
  詳細については、「 [Analysis Services データベースのバックアップと復元](../multidimensional-models/backup-and-restore-of-analysis-services-databases.md)」を参照してください。  
   
 ### <a name="exporting-and-importing"></a>エクスポートとインポート  
  DMX ステートメントを使用してマイニング モデルとマイニング構造をエクスポートし、インポートし直す方法は、リレーショナル データ マイニング オブジェクトを個別に移動したりバックアップしたりする場合に最も簡単です。 これらの操作の DMX 構文の詳細については、次のトピックを参照してください。  
   
--   [DMX&#41;のエクスポート &#40;](/sql/dmx/export-dmx)  
+-   [エクスポート &#40;DMX&#41;](/sql/dmx/export-dmx)  
   
--   [DMX&#41;のインポート &#40;](/sql/dmx/import-dmx)  
+-   [インポート &#40;DMX&#41;](/sql/dmx/import-dmx)  
   
  INCLUDE DEPENDENCIES オプションを指定すると、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって必要なデータ ソース ビューの定義もエクスポートされます。この場合、モデルや構造をインポートすると、ターゲット サーバーにデータ ソース ビューが再作成されます。 モデルのインポートが完了したら、オブジェクトに対して必要なマイニング権限を設定する必要があります。  
   

@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 95d1ca08bcc92a8eeeebfcfbd1f8646cf5add4c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093538"
 ---
 # <a name="overview-of-upgrade-advisor"></a>アップグレード アドバイザーの概要
@@ -25,12 +25,10 @@ ms.locfileid: "66093538"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
-|[アップグレード プロセスの概要](../../../2014/sql-server/install/upgrade-process-overview.md)|
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードするための推奨プロセスを説明します。|  
-|[アップグレード アドバイザーの概要](../../../2014/sql-server/install/upgrade-advisor-overview.md)|
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の新しいツール "アップグレード アドバイザー" の概要を説明します。|  
+|[アップグレード プロセスの概要](../../../2014/sql-server/install/upgrade-process-overview.md)|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードするための推奨プロセスを説明します。|  
+|[アップグレード アドバイザーの概要](../../../2014/sql-server/install/upgrade-advisor-overview.md)|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の新しいツール "アップグレード アドバイザー" の概要を説明します。|  
 |[アップグレードアドバイザー &#40;ユーザーインターフェイス&#41;を実行しています](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)|アップグレード アドバイザー分析ウィザードとアップグレード アドバイザー レポート ビューアーの起動方法と実行方法について説明します。|  
 |[レポートの使用](../../../2014/sql-server/install/using-reports.md)|アップグレード アドバイザー レポート ビューアーによって生成されたレポートの表示方法と分析方法を説明します。|  
   

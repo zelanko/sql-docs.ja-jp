@@ -16,16 +16,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0de86b9690f0647803938218ce566508662da20e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094918"
 ---
 # <a name="how-to-install-upgrade-advisor"></a>アップグレード アドバイザーをインストールする方法
-  アップグレード アドバイザーでは、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 以外のサポートされているすべてのコンポーネントをリモートで分析できます。 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のインスタンスをスキャンしない場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続できる任意のコンピューターにアップグレード アドバイザーをインストールできます。 コンピューターはアップグレード アドバイザーの前提条件を満たしている必要もあります。 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のインスタンスをスキャンする場合は、アップグレード アドバイザーをレポート サーバーにインストールする必要があります。  
+  アップグレード アドバイザーでは、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 以外のサポートされているすべてのコンポーネントをリモートで分析できます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のインスタンスをスキャンしない場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続できる任意のコンピューターにアップグレード アドバイザーをインストールできます。 コンピューターはアップグレード アドバイザーの前提条件を満たしている必要もあります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のインスタンスをスキャンする場合は、アップグレード アドバイザーをレポート サーバーにインストールする必要があります。  
   
  詳細については、「 [Upgrade Advisor のインストール](../../../2014/sql-server/install/installing-upgrade-advisor.md)」を参照してください。  
   
@@ -33,7 +31,7 @@ ms.locfileid: "66094918"
   
 1.  次の方法のいずれかを使用してインストールを開始します。  
   
-    -   Web サイトからをインストールする場合は、[**ダウンロード**] リンクをクリックし、[実行] ボタンをクリックしてインストールを開始します。 **** [!INCLUDE[msCoName](../../includes/msconame-md.md)]  
+    -   Web サイトからをインストールする場合は、[**ダウンロード**] リンクをクリックし、[実行] ボタンをクリックしてインストールを開始します。 **Run** [!INCLUDE[msCoName](../../includes/msconame-md.md)]  
   
     -   製品メディアからをインストールする場合は、 **redist**フォルダーを開き、**アップグレードアドバイザー**フォルダーを開き、[ **sqlua .msi**] をダブルクリックします。  
   
@@ -52,8 +50,7 @@ ms.locfileid: "66094918"
   
 6.  [**プログラムのインストールの準備完了**] ページで、[**インストール**] をクリックしてアップグレードアドバイザーをインストールします。  
   
-7.  
-  **[完了]** をクリックして、ウィザードを終了します。  
+7.  **[完了]** をクリックして、ウィザードを終了します。  
   
 ## <a name="see-also"></a>参照  
  [アップグレード アドバイザーの前提条件](../../../2014/sql-server/install/upgrade-advisor-prerequisites.md)  

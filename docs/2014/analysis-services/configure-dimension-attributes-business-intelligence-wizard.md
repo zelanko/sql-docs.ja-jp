@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5fe43b53878744586c3d0d8ec5719d6241b0a302
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087446"
 ---
 # <a name="configure-dimension-attributes-business-intelligence-wizard"></a>[ディメンションの属性の構成] (ビジネス インテリジェンス ウィザード)
-  
   **[ディメンションの属性の構成]** ページでは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] で勘定科目ディメンションの属性の識別に使用される属性の種類に、ディメンションの属性をマップできます。  
   
 ## <a name="options"></a>オプション  
@@ -36,7 +35,7 @@ ms.locfileid: "66087446"
  **用意**  
  チェック ボックスをオンにすると、対応する属性の型がディメンションに追加されます。  
   
- **属性の種類**  
+ **属性の型**  
  ディメンションに含まれる既存のディメンションの属性にマップできる、属性の型が一覧表示されます。  
   
  **[ディメンションの属性]**  

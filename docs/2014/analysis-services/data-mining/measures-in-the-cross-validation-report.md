@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30f8daab91172863ba18c6b75529063555b61afc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084156"
 ---
 # <a name="measures-in-the-cross-validation-report"></a>相互検証レポートのメジャー
@@ -28,8 +28,7 @@ ms.locfileid: "66084156"
   
  レポートでは、データ内のフォールドの数や各フォールド内のデータの量に関するいくつかの基本情報に加えて、データの分布を示す一連の一般的な基準が表示されます。 それぞれのセクションに対する一般的な基準を比較することで、構造またはモデルの信頼性を評価できます。  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、マイニング モデルの一連の詳細メジャーも表示されます。 これらのメジャーは、分析するモデルの種類や、不連続であるか連続であるかなど属性の型によって異なります。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、マイニング モデルの一連の詳細メジャーも表示されます。 これらのメジャーは、分析するモデルの種類や、不連続であるか連続であるかなど属性の型によって異なります。  
   
  ここでは、 **[相互検証]** レポートに含まれるメジャーおよびその意味の一覧を示します。 各メジャーの計算方法の詳細については、「 [クロス検証の式](cross-validation-formulas.md)」を参照してください。  
   
@@ -46,6 +45,6 @@ ms.locfileid: "66084156"
 |集計|集計メジャーは、各パーティションの結果における分散を示します。<br /><br /> **平均**: 特定のメジャーのパーティション値の平均。<br /><br /> **標準偏差**: モデル内のすべてのパーティションにわたる、特定のメジャーの平均値からの偏差の平均です。 相互検証の場合、このスコアの値が高いことは、フォールドの間の変動が大きいことを意味します。|  
   
 ## <a name="see-also"></a>参照  
- [データマイニング&#41;のテストと検証 &#40;](testing-and-validation-data-mining.md)  
+ [テストおよび検証 &#40;データ マイニング&#41;](testing-and-validation-data-mining.md)  
   
   

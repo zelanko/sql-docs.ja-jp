@@ -11,26 +11,23 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c4df53093cf7d7dff00a8a5e16fb4bef58442213
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092387"
 ---
 # <a name="select-a-prepared-instance"></a>[準備済みインスタンスの選択]
-  
   **[準備済みインスタンスの選択]** ページを使用して、完了させる準備済みインスタンスを指定します。  
   
 ## <a name="options"></a>オプション  
- 
-  **[インスタンス ID の選択]** ボックスには、完了させることができる準備済みインスタンスが一覧表示されます。 完了させる準備済みインスタンスを選択します。  
+ **[インスタンス ID の選択]** ボックスには、完了させることができる準備済みインスタンスが一覧表示されます。 完了させる準備済みインスタンスを選択します。  
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
  **[インスタンス ID の選択]**  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップが実行されているコンピューター上の完了させることができるすべての準備済みインスタンスが一覧表示されます。 完了させる準備済みインスタンスを選択します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップが実行されているコンピューター上の完了させることができるすべての準備済みインスタンスが一覧表示されます。 完了させる準備済みインスタンスを選択します。  
   
- **インストール済みのインスタンス**  
+ **[インストール済みのインスタンス]**  
  インストールと準備が済んで完了したインスタンスが表示されます。  
   
   

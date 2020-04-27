@@ -13,27 +13,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e017a792f2554b757170a7669b83fada43dfb6a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082026"
 ---
 # <a name="define-scope-of-calculations-business-intelligence-wizard"></a>[計算範囲の定義] (ビジネス インテリジェンス ウィザード)
-  
   **[計算範囲の定義]** ページを使用すると、新しい時間計算に個別のメジャーを関連付けることができます。  
   
 ## <a name="options"></a>オプション  
  **[使用できるメジャー]**  
  時間計算を適用するメジャーを選択します。  
   
- **[すべて選択]**  
- 
-  **[使用できるメジャー]** に表示されているメジャーをすべて選択します。  
+ **すべて選択**  
+ **[使用できるメジャー]** に表示されているメジャーをすべて選択します。  
   
  **すべてクリア**  
- 
-  **[使用できるメジャー]** に表示されているメジャーをすべてオフにします。  
+ **[使用できるメジャー]** に表示されているメジャーをすべてオフにします。  
   
 ## <a name="see-also"></a>参照  
  [ビジネスインテリジェンスウィザードの F1 ヘルプ](business-intelligence-wizard-f1-help.md)   

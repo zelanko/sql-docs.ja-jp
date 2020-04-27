@@ -13,16 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 88f33a6e2ae78efbe64d7a84af676812df743e60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082574"
 ---
 # <a name="data-source-credentials-ssas"></a>[データ ソースの資格情報] (SSAS)
-  
-  **テーブルのインポート ウィザード** のこのページを使用すると、選択した既存のデータ ソース接続のユーザー名とパスワードを入力できます。 
-  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  
+  **テーブルのインポート ウィザード** のこのページを使用すると、選択した既存のデータ ソース接続のユーザー名とパスワードを入力できます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
  **ユーザー名**  

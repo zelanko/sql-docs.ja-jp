@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 78f8581839b6b4bdd761c25a1a207e942ae37f62
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087967"
 ---
 # <a name="classification-matrix-sql-server-data-mining-add-ins"></a>分類マトリックス (SQL Server データ マイニング アドイン)
@@ -39,7 +39,7 @@ ms.locfileid: "66087967"
 |ブロンズ|**94.45%**|15.18%|1.70%|  
 |ゴールド|2.72%|**84.82%**|0.00%|  
 |シルバー|1.84%|0.00%|**93.80%**|  
-|*正*|*95.45%*|*84.82%*|*98.30%*|  
+|*そうです*|*95.45%*|*84.82%*|*98.30%*|  
 |*分類ミス*|*4.55%*|*15.18%*|*1.70%*|  
   
 -   各列は、テスト データセット内の実際の値を示しています。  
@@ -74,7 +74,7 @@ ms.locfileid: "66087967"
   
      ウィザードにより、分類マトリックスおよび分析に関するその他の詳細を含むレポートが作成されます。 このレポートは、Excel のテーブルとして保存されます。レポートの概要には、正しく予測されたケースの数と、誤っていた予測の数が示されます。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   
 -   分類マトリックスを作成するには、精度の測定をサポートする既存のマイニング モデルにアクセスできる必要があります。 予測モデルおよびアソシエーション モデルは、このツールを使用して測定できません。  
   

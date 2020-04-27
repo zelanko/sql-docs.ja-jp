@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b7f41394c2adb8cbaaee2011e52ba6155a24e2e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082690"
 ---
 # <a name="view-or-change-algorithm-parameters"></a>アルゴリズム パラメーターの表示または変更
@@ -39,18 +39,13 @@ ms.locfileid: "66082690"
   
 ### <a name="change-an-algorithm-parameter"></a>アルゴリズム パラメーターを変更する  
   
-1.  
-  **のデータ マイニング デザイナーの** [マイニング モデル] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]タブで、アルゴリズムを調整するマイニング モデルのアルゴリズムの種類を右クリックし、 **[アルゴリズム パラメーターの設定]** をクリックします。  
+1.  **のデータ マイニング デザイナーの** [マイニング モデル] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]タブで、アルゴリズムを調整するマイニング モデルのアルゴリズムの種類を右クリックし、 **[アルゴリズム パラメーターの設定]** をクリックします。  
   
-     
-  **[アルゴリズム パラメーター]** ダイアログ ボックスが開きます。  
+     **[アルゴリズム パラメーター]** ダイアログ ボックスが開きます。  
   
-2.  
-  **[値]** 列で、変更するアルゴリズムの新しい値を設定します。  
+2.  **[値]** 列で、変更するアルゴリズムの新しい値を設定します。  
   
-     
-  **[値]** 列に値を入力しない場合、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ではパラメーターの既定値が使用されます。 
-  **[範囲]** 列には、入力可能な値が示されます。  
+     **[値]** 列に値を入力しない場合、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ではパラメーターの既定値が使用されます。 **[範囲]** 列には、入力可能な値が示されます。  
   
 3.  **[OK]** をクリックします。  
   
@@ -58,8 +53,7 @@ ms.locfileid: "66082690"
   
 ### <a name="view-the-parameters-used-in-an-existing-model"></a>既存のモデルで使用されているパラメーターを表示する  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、DMX クエリ ウィンドウを開きます。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、DMX クエリ ウィンドウを開きます。  
   
 2.  次のようなクエリを入力します。  
   

@@ -13,16 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dc6712598452b1957857509e6b3ff6f659a16c4b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087186"
 ---
 # <a name="connect-to-a-teradata-database-ssas"></a>[Teradata データベースへの接続] (SSAS)
-  
-  **テーブルのインポート ウィザード** のこのページを使用すると、Teradata データベースに接続するための設定を指定できます。 
-  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  
+  **テーブルのインポート ウィザード** のこのページを使用すると、Teradata データベースに接続するための設定を指定できます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  
   
  データ ソースに接続するには、適切なプロバイダーがコンピューターにインストールされている必要があります。  
   
@@ -45,13 +43,12 @@ ms.locfileid: "66087186"
  データベース接続に使用するパスワードを指定します。  
   
  **[パスワードを保存する]**  
- 
-  **[パスワード]** ボックスに入力したパスワードを保存する必要があるかどうかを指定します。  
+ **[パスワード]** ボックスに入力したパスワードを保存する必要があるかどうかを指定します。  
   
  **詳細設定**  
- **[詳細プロパティの設定**] ダイアログボックスを使用して、追加の接続プロパティを設定します。 詳細については、「[[詳細プロパティの設定] (SSAS)](set-advanced-properties-ssas.md)」を参照してください。  
+ **[詳細プロパティの設定]** ダイアログ ボックスを使用して追加の接続プロパティを設定します。 詳細については、「[[詳細プロパティの設定] (SSAS)](set-advanced-properties-ssas.md)」を参照してください。  
   
- **接続のテスト**  
+ **接続をテスト**  
  現在の設定を使用して、データ ソースに対する接続の確立を試みます。 接続が正常に確立されたかどうかを示すメッセージが表示されます。  
   
   

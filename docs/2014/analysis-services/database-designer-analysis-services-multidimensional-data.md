@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bf63755b657ae55085decc9c84e25ee1dd51c553
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082408"
 ---
 # <a name="database-designer-analysis-services---multidimensional-data"></a>データベース デザイナー (Analysis Services - 多次元データ)
@@ -24,15 +24,13 @@ ms.locfileid: "66082408"
  データベース デザイナーのタブは次のとおりです。  
   
  [全般](general-database-designer-analysis-services-multidimensional-data.md)  
- 
-  **[全般]** タブを使用して、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースのプロパティを変更します。  
+ **[全般]** タブを使用して、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースのプロパティを変更します。  
   
  [警告](warnings-database-designer-analysis-services-multidimensional-data.md)  
- 
-  **[警告]** タブを使用すると、ルールをグローバルに表示および消去したり、消去された警告の特定のインスタンスを表示して再度有効にしたりできます。  
+ **[警告]** タブを使用すると、ルールをグローバルに表示および消去したり、消去された警告の特定のインスタンスを表示して再度有効にしたりできます。  
   
 ## <a name="see-also"></a>参照  
  [多次元データ &#40;Analysis Services のデザイナーとダイアログボックス&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [SSAS&#41;&#40;多次元モデルデータベース](multidimensional-models/multidimensional-model-databases-ssas.md)  
+ [多次元モデル データベース &#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   

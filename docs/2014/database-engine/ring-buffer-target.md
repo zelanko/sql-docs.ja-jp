@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 920cc72a9d99da61575249559661c01826b0e89b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088957"
 ---
 # <a name="ring-buffer-target"></a>リング バッファー ターゲット
@@ -29,11 +29,11 @@ ms.locfileid: "66088957"
   
  次の表では、リング バッファー ターゲットの構成に使用できるオプションについて説明します。  
   
-|オプション|使用できる値|[説明]|  
+|オプション|使用できる値|説明|  
 |------------|--------------------|-----------------|  
 |max_memory|任意の32ビット整数。 この値は省略可能です。|使用するメモリの最大量 (KB)。 max_event_limit と max_memory のうち先に制限に達した方に基づいて、既存のイベントが削除されます。 最大値は 4194303 KB です。 では、他のメモリコンシューマーに影響を与える可能性があるため、リングバッファーサイズを GB 範囲の制限に設定する前に、慎重に考慮する必要があり SQL Server|  
 |max_event_limit|任意の32ビット整数。 この値は省略可能です。|ring_buffer に保持されるイベントの最大数。 max_event_limit と max_memory のうち先に制限に達した方に基づいて、既存のイベントが削除されます。 既定値は 1000 です。|  
-|occurrence_number|次のいずれかの値:<br /><br /> 0 (既定値) = ターゲットに割り当てられたメモリがすべて使用されると、最も古いイベントが破棄されます。<br /><br /> 任意の32ビット整数 = イベントごとの FIFO で破棄されるまでに、各種類のイベントの数を保持します。<br /><br /> <br /><br /> この値は省略可能です。|使用する FIFO モード。0 を超える値に設定した場合は、種類ごとにバッファーに保持するイベントの数を表します。|
+|occurrence_number|次のいずれかの値です。<br /><br /> 0 (既定値) = ターゲットに割り当てられたメモリがすべて使用されると、最も古いイベントが破棄されます。<br /><br /> 任意の32ビット整数 = イベントごとの FIFO で破棄されるまでに、各種類のイベントの数を保持します。<br /><br /> <br /><br /> この値は省略可能です。|使用する FIFO モード。0 を超える値に設定した場合は、種類ごとにバッファーに保持するイベントの数を表します。|
 | &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="adding-the-target-to-a-session"></a>セッションへのターゲットの追加  

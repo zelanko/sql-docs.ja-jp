@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 70049092909b625a1f304f16f153bf4287d5bcdf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084556"
 ---
 # <a name="exclude-a-column-from-a-mining-model"></a>マイニング モデルからの列の除外
@@ -28,8 +28,7 @@ ms.locfileid: "66084556"
   
 ### <a name="to-exclude-a-column-from-a-mining-model"></a>マイニング モデルから列を除外するには  
   
-1.  
-  **のデータ マイニング デザイナーの** [マイニング モデル] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]タブにある適切なマイニング モデルで、除外する列に対応するセルを選択します。  
+1.  **のデータ マイニング デザイナーの** [マイニング モデル] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]タブにある適切なマイニング モデルで、除外する列に対応するセルを選択します。  
   
 2.  ドロップダウン リスト ボックスから **[無視]** を選択します。  
   

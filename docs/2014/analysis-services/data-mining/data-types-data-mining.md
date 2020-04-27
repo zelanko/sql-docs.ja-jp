@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc810f56d552fa17cb027598a25bde114a696375
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084797"
 ---
 # <a name="data-types-data-mining"></a>データ型 (データ マイニング)
@@ -28,8 +28,7 @@ ms.locfileid: "66084797"
   
  たとえば、列に数値データが含まれる場合、数値データ型またはテキスト データ型のどちらとしてそのデータを処理するかを選択できます。 数値データ型を選択した場合は、いくつかの異なるコンテンツの種類を設定できます。数値を分離することも、連続値として処理することもできます。 すべてのコンテンツの種類の一覧については、「 [コンテンツの種類 (データ マイニング)](content-types-data-mining.md)」を参照してください。  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、では、マイニング構造列に対して次のデータ型がサポートされています。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、では、マイニング構造列に対して次のデータ型がサポートされています。  
   
 |データ型|サポートされているコンテンツの種類|  
 |---------------|-----------------------------|  

@@ -18,24 +18,22 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dd8ae8bb1080d92bb6a4ad1ba982f1dffc6d51f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093641"
 ---
 # <a name="other-replication-upgrade-issues"></a>レプリケーションのアップグレードに関するその他の問題
   このトピックでは、アップグレード アドバイザーによって報告されない多くのアップグレード問題について説明します。  
   
 ## <a name="versions-supported"></a>サポートされているバージョン  
- 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、レプリケートされたデータベースを以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からアップグレードできます。 ノードのアップグレード中に、その他のノードでの操作を停止する必要はありません。 トポロジでサポートされるバージョンに関する以下の規則に従っていることを確認してください。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、レプリケートされたデータベースを以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からアップグレードできます。 ノードのアップグレード中に、その他のノードでの操作を停止する必要はありません。 トポロジでサポートされるバージョンに関する以下の規則に従っていることを確認してください。  
   
  またはの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]異なるバージョン間でレプリケートする場合、通常は、使用されている最も古いバージョンの機能に制限されます。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のディスク上ストレージ形式は、64 ビット環境と 32 ビット環境で同じため、レプリケーション トポロジでは、32 ビット環境で実行されているサーバー インスタンスと 64 ビット環境で実行されているサーバー インスタンスを組み合わせることができます。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のディスク上ストレージ形式は、64 ビット環境と 32 ビット環境で同じため、レプリケーション トポロジでは、32 ビット環境で実行されているサーバー インスタンスと 64 ビット環境で実行されているサーバー インスタンスを組み合わせることができます。  
   
  どの種類のレプリケーションでも、ディストリビューターのバージョンがパブリッシャーのバージョン以上である必要があります  (多くの場合、ディストリビューターはパブリッシャーと同じインスタンスです)。  
   

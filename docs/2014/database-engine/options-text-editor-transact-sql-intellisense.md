@@ -16,19 +16,17 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: fd2cf2be2102aeed1c853ce1b9a198c2b196d26a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089820"
 ---
 # <a name="options-text-editor-transact-sql-intellisense"></a>オプション (テキストエディター、Transact-sql-IntelliSense)
-  
   **[オプション]** ダイアログ ボックスを使用すると、[!INCLUDE[ssDE](../includes/ssde-md.md)] クエリ エディターの IntelliSense の設定を変更できます。 この設定を変更するには、**[ツール]** メニューの **[オプション]** をクリックし、**[テキスト エディター]** フォルダー、**[Transact-SQL]** フォルダーの順に展開し、**[詳細設定]** をクリックします。  
   
 ## <a name="transact-sql-intellisense-settings"></a>[Transact-SQL IntelliSense の設定]  
- 
-  [!INCLUDE[ssDE](../includes/ssde-md.md)] クエリ エディターの IntelliSense のオプションを指定します。  
+ [!INCLUDE[ssDE](../includes/ssde-md.md)] クエリ エディターの IntelliSense のオプションを指定します。  
   
 ### <a name="enable-intellisense"></a>[IntelliSense を有効にする]  
  IntelliSense 機能を有効にします。 このボックスをオフにすると、特定の IntelliSense オプションを使用できなくなります。 既定では、このチェック ボックスはオンになっています。  

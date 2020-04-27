@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5204b27fb4745f8005a328dc62503f7db418387d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093850"
 ---
 # <a name="modify-stored-procedures-that-use-discontinued-full-text-search-properties"></a>廃止されたフルテキスト検索プロパティを使用するストアド プロシージャを変更する
@@ -26,7 +26,7 @@ ms.locfileid: "66093850"
 ## <a name="component"></a>コンポーネント  
  フルテキスト検索  
   
-## <a name="description"></a>[説明]  
+## <a name="description"></a>説明  
  以下のフルテキスト検索関連のプロパティおよび設定が削除されています。  
   
 -   **DataTimeout**  
@@ -41,8 +41,7 @@ ms.locfileid: "66093850"
   
 -   フルテキスト カタログの "パス"。 フルテキスト カタログは、システムでの特定のファイル パスを持たない論理オブジェクトになります。  
   
--   
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ではデータベースがフルテキスト検索に対して常に既定で有効になっているので、SP_FULLTEXT_DATABASE の有効化/無効化は効力がありません。  
+-   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ではデータベースがフルテキスト検索に対して常に既定で有効になっているので、SP_FULLTEXT_DATABASE の有効化/無効化は効力がありません。  
   
 ## <a name="corrective-action"></a>修正措置  
  お使いのストアド プロシージャを変更して、これらのプロパティを削除してください。  

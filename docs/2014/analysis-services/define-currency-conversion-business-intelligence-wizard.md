@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b463363e2e239c348c626cf1ef1d61e621877814
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082148"
 ---
 # <a name="define-currency-conversion-business-intelligence-wizard"></a>[通貨換算の定義] (ビジネス インテリジェンス ウィザード)
-  
   **[通貨換算の定義]** ページを使用すると、ビジネス インテリジェンス ウィザードで生成された通貨変換機能を含む多次元式 (MDX) スクリプトを確認できます。 ウィザードによって生成された MDX スクリプトを使用して、以前にキューブの MDX スクリプトに定義された通貨変換機能を上書きしたり、追加したりできます。  
   
 > [!NOTE]  

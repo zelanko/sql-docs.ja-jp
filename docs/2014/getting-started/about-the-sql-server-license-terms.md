@@ -14,25 +14,22 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 14fc681ea05e47d733c164588db817d903f8fd0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088633"
 ---
 # <a name="about-the-sql-server-license-terms"></a>SQL Server の使用許諾条件について
-  
   [!INCLUDE[msCoName](../includes/msconame-md.md)] ソフトウェア使用許諾条件は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインストール時にローカル コンピューターにコピーされます。 同じエディションと言語の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスを、同じコンピューターに複数インストールする場合、それらのエディションと言語のすべてのインスタンスに対して単一の使用許諾条件が適用されます。 ファイルの書き込み先:% ProgramFiles%\\[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、120 \ ライセンス条項 \ または% ProgramFiles (x86)% \\ 120 \ ライセンス条項\\ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
   
  同じ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディションと言語のインスタンスを、同じコンピューターに複数インストールする場合、それらのエディションと言語のすべてのインスタンスに対して単一の使用許諾条件が適用されます。  
   
  ライセンス条項ファイル名は、インストールされている [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のエディションと [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の言語を示します。 ライセンス条項のファイル名は、という形式に\<なります\<。 SQLServer2014_License_Edition_ の種類>_ LCID> .rtf です。 次に例を示します。  
   
--   
-  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Developer (英語版) の場合: SQLServer2014_License_DEV_1033.rtf  
+-   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Developer (英語版) の場合: SQLServer2014_License_DEV_1033.rtf  
   
--   
-  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Express (英語版) の場合: SQLServer2014_License_EXPR_1033.rtf  
+-   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Express (英語版) の場合: SQLServer2014_License_EXPR_1033.rtf  
   
  TYPE は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のエディションを示します。 ファイル名の次の部分は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のエディションを識別するために使用します。  
   
@@ -52,8 +49,7 @@ ms.locfileid: "66088633"
   
  LCID は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の言語ロケール ID を示す数字です。  ファイル名の次の部分は、対応する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の言語を識別するために使用します。  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]言語|
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の言語の省略形|LCID|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]言語|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の言語の省略形|LCID|  
 |----------------------------------------|---------------------------------------------------------|----------|  
 |英語|ENU|1033|  
 |日本語|JPN|1041|  
@@ -67,7 +63,7 @@ ms.locfileid: "66088633"
 |ポルトガル語 (ブラジル)|PTB|1046|  
 |ロシア語|RUS|1049|  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-licensing-options"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ライセンスオプション  
+## <a name="ssnoversion-licensing-options"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ライセンス オプション  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]価格およびライセンスオプションの詳細については、 [Microsoft SQL Server](https://www.microsoft.com/sqlserver/sql-server-2014.aspx) (https://www.microsoft.com/sqlserver/sql-server-2014.aspx) Web サイト) を参照してください。  
   
 ## <a name="see-also"></a>参照  

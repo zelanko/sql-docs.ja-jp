@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: fd68ebe406fc7168746c804e585fa7465ee8c527
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089276"
 ---
 # <a name="options-text-editor---plain-text---general-page"></a>[オプション] ([テキスト エディター]/[テキスト形式]/[全般] ページ)
@@ -30,7 +30,7 @@ ms.locfileid: "66089276"
  **[メンバーの詳細を非表示]**  
  テキスト形式エディターはこの機能をサポートしていません。  
   
- **パラメーター情報**  
+ **パラメータ情報**  
  テキスト形式エディターはこの機能をサポートしていません。  
   
 ## <a name="settings"></a>設定  
@@ -55,7 +55,7 @@ ms.locfileid: "66089276"
   
  行が空白でない場合、 **[コピー]** または **[切り取り]** の動作はこの設定の影響を受けません。 何も選択されていない場合、行全体がコピーまたは切り取られます。 その後で **[貼り付け]** をクリックすると、行全体のテキストと行末文字が貼り付けられます。  
   
-## <a name="display"></a>表示  
+## <a name="display"></a>ディスプレイ  
  **[行番号]**  
  テキストの各行の横に行番号を表示します。  
   

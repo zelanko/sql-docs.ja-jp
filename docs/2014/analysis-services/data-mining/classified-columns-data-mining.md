@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c96ee3cbaa5ae25404d61054dccd1860c6596f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085685"
 ---
 # <a name="classified-columns-data-mining"></a>分類済みの列 (データ マイニング)
@@ -33,8 +33,7 @@ ms.locfileid: "66085685"
  たとえば、数値データを含んだ 2 つの列があるとします。一方の列 [Yearly Purchases] には、特定の暦年における顧客ごとの年間合計購入金額が格納され、もう一方の [Standard Deviations] 列には、これらの値の標準偏差が格納されます。 この場合、[Yearly Purchases] 列を分類済みの列に指定すると、モデルはこのリレーションシップを分析で使用できるようになります。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] に用意されているアルゴリズムでは、分類済みの列の使用がサポートされていません。この機能はカスタム アルゴリズムの作成用に提供されています。  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] に用意されているアルゴリズムでは、分類済みの列の使用がサポートされていません。この機能はカスタム アルゴリズムの作成用に提供されています。  
   
 ## <a name="defining-a-classified-column"></a>分類済みの列の定義  
  分類済みの列のデータ型は、`Long` または `Double` にする必要があります。  
@@ -47,7 +46,7 @@ ms.locfileid: "66085685"
  **SV**  
  この列の値は、関連付けられている値の分散です。  
   
- **[STDEV]**  
+ **STDEV**  
  この列の値は、関連付けられている値の標準偏差です。  
   
  **PROBABILITY_VARIANCE**  
@@ -62,6 +61,6 @@ ms.locfileid: "66085685"
 ## <a name="see-also"></a>参照  
  [コンテンツの種類 &#40;データマイニング&#41;](content-types-data-mining.md)   
  [マイニング構造 &#40;Analysis Services-データマイニング&#41;](mining-structures-analysis-services-data-mining.md)   
- [データマイニング&#41;&#40;データ型](data-types-data-mining.md)  
+ [データ型 (データ マイニング)](data-types-data-mining.md)  
   
   

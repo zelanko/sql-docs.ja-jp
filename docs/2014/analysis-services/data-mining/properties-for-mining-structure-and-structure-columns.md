@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: daa647673653280bfc4cf52398751aedfd65b9c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083058"
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>マイニング構造と構造列のプロパティ
@@ -37,35 +37,33 @@ ms.locfileid: "66083058"
   
 ### <a name="properties-of-the-mining-structure"></a>マイニング構造のプロパティ  
   
-|プロパティ|[説明]|  
+|プロパティ|説明|  
 |--------------|-----------------|  
 |**CacheMode**|トレーニングに使用したケースを、トレーニングの完了後にキャッシュするか破棄するかを指定します。<br /><br /> 注: ドリルスルーと提示を有効`KeepTrainingCases`にするには、このプロパティをに設定する必要があります。|  
 |**Collation**|列の既定の照合順序を指定します。 照合順序を指定しない場合は、サーバーの照合順序が使用されます。|  
 |**説明**|マイニング構造について説明します。 構造のデータの目的と構成について説明することをお勧めします。|  
 |**ErrorConfiguration (既定)**|特別なエラー処理が行われる場合のオプションを指定します。|  
-|**HoldoutMaxCases**|テスト データセットとして予約できる構造ケースの最大数を指定します。  
-  **HoldoutMaxCases** と **HoldoutPercent**の両方に値を指定すると、それらの条件が結合されます。<br /><br /> 注: このプロパティを設定する<xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A>には、を`KeepTrainingCases`に設定する必要があります。|  
-|**HoldoutPercent**|テスト データセットとして予約する構造ケースの割合を指定します。 
-  **HoldoutMaxCases** と **HoldoutPercent**の両方に値を指定すると、それらの条件が結合されます。<br /><br /> 注: このプロパティを設定する<xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A>には、を`KeepTrainingCases`に設定する必要があります。|  
+|**HoldoutMaxCases**|テスト データセットとして予約できる構造ケースの最大数を指定します。  **HoldoutMaxCases** と **HoldoutPercent**の両方に値を指定すると、それらの条件が結合されます。<br /><br /> 注: このプロパティを設定する<xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A>には、を`KeepTrainingCases`に設定する必要があります。|  
+|**HoldoutPercent**|テスト データセットとして予約する構造ケースの割合を指定します。 **HoldoutMaxCases** と **HoldoutPercent**の両方に値を指定すると、それらの条件が結合されます。<br /><br /> 注: このプロパティを設定する<xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A>には、を`KeepTrainingCases`に設定する必要があります。|  
 |**HoldoutSeed**|提示されたテスト セットのパーティション分割を初期化するシードを指定して、テスト データセットを確実に再作成できるようにします。<br /><br /> 注: このプロパティを設定する<xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A>には、を`KeepTrainingCases`に設定する必要があります。|  
-|**id**|マイニング構造の一意識別子を表示します。<br /><br /> マイニング構造の作成時に構造に割り当てた名前が、ID として使用されます。 その後 `Name` プロパティに新しい値を入力して名前を変更した場合、新しい名前は別名としてのみ使用され、ID は変化しません。|  
+|**ID**|マイニング構造の一意識別子を表示します。<br /><br /> マイニング構造の作成時に構造に割り当てた名前が、ID として使用されます。 その後 `Name` プロパティに新しい値を入力して名前を変更した場合、新しい名前は別名としてのみ使用され、ID は変化しません。|  
 |**Language**|マイニング構造内のキャプションの言語を指定します。|  
 |`Name`|マイニング構造の名前または別名を指定します。<br /><br /> Name プロパティの値を変更した場合、新しい名前はキャプションまたは別名としてのみ使用されます。マイニング構造の識別子は変化しません。|  
 |**ソース**|データ ソースの名前と種類を表示します。|  
   
 ### <a name="properties-of-the-mining-structure-columns"></a>マイニング構造列のプロパティ  
   
-|プロパティ|[説明]|  
+|プロパティ|説明|  
 |--------------|-----------------|  
 |**ClassifiedColumns**|分類列が示す列を指定します。|  
 |**コンテンツ**|列のコンテンツの種類です。|  
 |**説明**|列を説明します。 列の説明では、列データの派生方法やデータ マイニング用の変更について情報を提供することをお勧めします。|  
 |**DiscretizationBucketCount**|離散化列のバケットの数を表示します。<br /><br /> コンテンツの種類が `Discretized` に設定されている場合にのみ有効です。<br /><br /> このプロパティは読み取り専用です。|  
 |**DiscretizationMethod**|列の離散化に使用されたメソッドを表示します。<br /><br /> コンテンツの種類が `Discretized` に設定されている場合にのみ有効です。<br /><br /> このプロパティは読み取り専用です。|  
-|**Distribution**|列のコンテンツの分布を指定します。|  
-|**id**|列の識別子を表示します。<br /><br /> 列の Name プロパティの値を変更しても、ID プロパティの値には影響を与えません。|  
+|**配布**|列のコンテンツの分布を指定します。|  
+|**ID**|列の識別子を表示します。<br /><br /> 列の Name プロパティの値を変更しても、ID プロパティの値には影響を与えません。|  
 |**IsKey**|列がキー列であるかどうかを示します。|  
-|**KeyColumns**|キーであるか、属性のキーの一部である列の定義を含みます。|  
+|**[KeyColumns]**|キーであるか、属性のキーの一部である列の定義を含みます。|  
 |**ModelingFlags**|アルゴリズムによって使用可能になる追加のパラメーターを設定します。|  
 |`Name`|列の名前です。|  
 |**NameColumn**|親要素の名前を指定する列を示します。|  

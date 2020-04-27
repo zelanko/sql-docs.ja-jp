@@ -13,20 +13,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 489c0aaa7a25c10e024c63a11c2bf98fdf46917a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087669"
 ---
 # <a name="completing-the-wizard-data-source-wizard-analysis-services"></a>[ウィザードの完了] (データ ソース ウィザード) (Analysis Services)
   ウィザードの **[ウィザードの完了]** ページを使用すると、接続文字列を確認し、新しいデータ ソースの名前を指定できます。  
   
 ## <a name="options"></a>オプション  
- **データソース名**  
+ **[データ ソース名]**  
  名前を入力するか、データ ソースの既定の名前を使用します。  
   
- **プレビュー**  
+ **［プレビュー］**  
  データ ソースの接続文字列を表示します。 これらの設定を変更するには、 **[戻る]** をクリックします。  
   
 ## <a name="see-also"></a>参照  

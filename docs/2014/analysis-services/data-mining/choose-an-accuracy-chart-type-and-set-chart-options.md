@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d9f375eb2d55c396000b7c2d7a14614153861e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085822"
 ---
 # <a name="choose-an-accuracy-chart-type-and-set-chart-options"></a>精度チャートの種類の選択とグラフのオプションの設定
@@ -33,7 +33,7 @@ ms.locfileid: "66085822"
   
  このトピックでは、各種の精度チャートの概要について説明します。  
   
- **メモ**グラフとその定義は保存されません。 グラフが含まれているウィンドウを閉じた場合は、グラフを作成し直す必要があります。  
+ **注:** グラフとその定義は保存されません。 グラフが含まれているウィンドウを閉じた場合は、グラフを作成し直す必要があります。  
   
 ## <a name="accuracy-chart-types"></a>精度チャートの種類  
  選択するグラフの種類によっては、さらにオプションを構成したり、グラフを参照したり、グラフをクリップボードにコピーして Excel でデータを操作したりできます。  

@@ -15,17 +15,17 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: f32377fffb26ac622dc4045d108e491adc2b0342
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089168"
 ---
 # <a name="options-text-editor---transact-sql--general-page"></a>[オプション] ([テキストエディター]/[Transact-sql]/[全般] ページ)
   [オプション] の **[全般]** ダイアログ ボックスを使用すると、 [!INCLUDE[ssDE](../includes/ssde-md.md)] スクリプトの編集に使用される [!INCLUDE[tsql](../includes/tsql-md.md)] クエリ エディターの全般的な編集の動作を変更できます。 これらの設定を表示するには、**[ツール]** メニューの **[オプション]** をクリックし、**[Transact-SQL]** サブフォルダーを展開して、**[全般]** をクリックします。  
   
 ## <a name="setting-options-in-multiple-locations"></a>複数の場所でのオプション設定  
- クエリエディターのオプションは、[すべての言語] の **[全般**] ダイアログで設定することもできます。 [!INCLUDE[ssDE](../includes/ssde-md.md)] [**すべての言語**] ダイアログボックスを使用して、DMX エディター [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]や MDX エディターなど、他のエディターに対して異なるオプションを[!INCLUDE[ssDE](../includes/ssde-md.md)]設定する場合は、このダイアログを使用してクエリエディターのオプションを設定し直す必要があります。  
+ [!INCLUDE[ssDE](../includes/ssde-md.md)] クエリ エディターのオプションは、[すべての言語] の [全般] **** ダイアログで設定することもできます。 ただし、DMX エディターや MDX エディターなど、他の **エディターに対し、** [すべての言語] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のダイアログを使用して異なるオプションを設定する場合は、ここで紹介したダイアログを使用して [!INCLUDE[ssDE](../includes/ssde-md.md)] クエリ エディターのオプションを設定し直す必要があります。  
   
 ## <a name="statement-completion"></a>[入力候補]  
  **[自動メンバー表示]**  
@@ -34,7 +34,7 @@ ms.locfileid: "66089168"
  **[メンバーの詳細を非表示]**  
  このチェック ボックスは使用できません。  
   
- **パラメーター情報**  
+ **パラメータ情報**  
  このチェック ボックスがオンの場合、挿入ポイント (カーソル) のすぐ左側にあるストアド プロシージャまたは関数のパラメーター情報が表示されます。 この情報には、使用可能なパラメーターの名前とデータ型の一覧が含まれます。  
   
 ## <a name="settings"></a>設定  
@@ -56,7 +56,7 @@ ms.locfileid: "66089168"
   
  行が空白でない場合、 **[コピー]** または **[切り取り]** の動作はこの設定の影響を受けません。 何も選択されていない場合、行全体がコピーまたは切り取られます。 その後で **[貼り付け]** をクリックすると、行全体のテキストと行末文字が貼り付けられます。  
   
-## <a name="display"></a>表示  
+## <a name="display"></a>ディスプレイ  
  **[行番号]**  
  このチェック ボックスがオンの場合、各コード行の横に行番号が表示されます。  
   

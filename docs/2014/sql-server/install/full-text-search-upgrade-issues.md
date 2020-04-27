@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d907c9b440053b0c0fc110fa02ca3de4e993905c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66095120"
 ---
 # <a name="full-text-search-upgrade-issues"></a>フルテキスト検索のアップグレードに関する問題
@@ -25,6 +25,6 @@ ms.locfileid: "66095120"
   
 ## <a name="see-also"></a>参照  
  [アップグレードアドバイザーの使用](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
- [アップグレードに関する問題とその対処方法](../../../2014/sql-server/install/resolving-upgrade-issues.md)  
+ [アップグレードに関する問題の解決](../../../2014/sql-server/install/resolving-upgrade-issues.md)  
   
   

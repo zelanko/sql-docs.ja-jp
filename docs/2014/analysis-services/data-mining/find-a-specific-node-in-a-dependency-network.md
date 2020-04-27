@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f27398948ed2c89578921bf6404244bcf5072652
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084376"
 ---
 # <a name="find-a-specific-node-in-a-dependency-network"></a>依存関係ネットワークでの特定のノードの検索
@@ -26,14 +26,11 @@ ms.locfileid: "66084376"
   
 ### <a name="to-find-a-specific-node-in-a-dependency-network"></a>依存関係ネットワークで特定のノードを検索するには  
   
-1.  
-  **の** データ マイニング デザイナー **の** [マイニング モデル ビューアー] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]タブで、マイニング モデル ビューアーの **[依存関係ネットワーク]** タブにあるツール バーの **[ノードの検索]** をクリックします。  
+1.  **の** データ マイニング デザイナー **の** [マイニング モデル ビューアー] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]タブで、マイニング モデル ビューアーの **[依存関係ネットワーク]** タブにあるツール バーの **[ノードの検索]** をクリックします。  
   
-     
-  **[ノードの検索]** ダイアログ ボックスが開きます。  
+     **[ノードの検索]** ダイアログ ボックスが開きます。  
   
-2.  
-  **[以下を含むノード名]** ボックスに、検索するノードの名前の一部を入力します。  
+2.  **[以下を含むノード名]** ボックスに、検索するノードの名前の一部を入力します。  
   
      ノードの一覧がフィルター選択され、検索パスの一部を含んでいるノードだけが表示されます。  
   

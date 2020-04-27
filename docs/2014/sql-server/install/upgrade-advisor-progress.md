@@ -18,26 +18,24 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 697f70d4435213a991e55adecb51a98120d8df1b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091560"
 ---
 # <a name="upgrade-advisor-progress"></a>アップグレード アドバイザーの進行状況
   アップグレード アドバイザー分析では、選択した各 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントの分析を実行する専用アナライザーから開始します。 コンポーネントが分析されると、**進行状況を示すダイアログボックス**が表示されます。  
   
 ## <a name="options"></a>オプション  
- **アクション**  
+ **操作**  
  分析対象として選択された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントを指定します。  
   
  **状態**  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントの進行状況インターフェイスから返された状態値が表示されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントの進行状況インターフェイスから返された状態値が表示されます。  
   
- **Message**  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 1 つのアナライザーから返されたエラー、失敗、または成功のメッセージが表示されます。  
+ **メッセージ**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 1 つのアナライザーから返されたエラー、失敗、または成功のメッセージが表示されます。  
   
 > [!NOTE]  
 >  分析所要時間が非常に長い場合、その分析を停止してアップグレード アドバイザー分析ウィザードを終了してから、そのウィザードを再実行できます。 分析時間を短縮するには、スキャンするコンポーネントを少なくします。  

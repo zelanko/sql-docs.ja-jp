@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e4d9b0eaa65eada55fec398b058d8e17aaa53a03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084369"
 ---
 # <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>Analysis Services インポート ウィザードを使用したデータ マイニング プロジェクトのインポート
@@ -37,36 +37,28 @@ ms.locfileid: "66084369"
   
 #### <a name="to-create-a-new-data-mining-project-by-importing-an-existing-data-mining-project"></a>既存のデータ マイニング プロジェクトをインポートして新しいデータ マイニング プロジェクトを作成するには  
   
-1.  
-  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]の **[ファイル]** メニューの **[新規作成]** をクリックし、 **[プロジェクト]** をクリックします。  
+1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]の **[ファイル]** メニューの **[新規作成]** をクリックし、 **[プロジェクト]** をクリックします。  
   
-2.  
-  **[新しいプロジェクト]** ダイアログ ボックスの **[インストールされているテンプレート]** で **[ビジネス インテリジェンス]** をクリックし、 **[Analysis Services]** をクリックして、 **[サーバーからインポート (多次元/データ マイニング)]** をクリックします。  
+2.  **[新しいプロジェクト]** ダイアログ ボックスの **[インストールされているテンプレート]** で **[ビジネス インテリジェンス]** をクリックし、 **[Analysis Services]** をクリックして、 **[サーバーからインポート (多次元/データ マイニング)]** をクリックします。  
   
-3.  
-  **[名前]** でプロジェクトの名前を入力し、場所とソリューション名を指定してから **[OK]** をクリックします。  
+3.  **[名前]** でプロジェクトの名前を入力し、場所とソリューション名を指定してから **[OK]** をクリックします。  
   
-     
-  **Analysis Services データベースのインポート ウィザード** が起動します。 [ようこそ] ページで [OK] をクリックして先に進みます。  
+     **Analysis Services データベースのインポート ウィザード** が起動します。 [ようこそ] ページで [OK] をクリックして先に進みます。  
   
-4.  
-  **[ソース データベースの選択]** ページで、インポートするソリューションが存在する **インスタンスを**[サーバー] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] に指定します。  
+4.  **[ソース データベースの選択]** ページで、インポートするソリューションが存在する **インスタンスを**[サーバー] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] に指定します。  
   
-     
-  **[データベース]** については、インポートするデータ マイニング オブジェクトが存在する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを選択します。  
+     **[データベース]** については、インポートするデータ マイニング オブジェクトが存在する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを選択します。  
   
     > [!WARNING]  
     >  インポートするオブジェクトを指定することはできません。既存の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを選択すると、多次元オブジェクトとデータ マイニング オブジェクトがすべてインポートされます。  
   
      **[次へ]** をクリックします。  
   
-5.  
-  **[ウィザードの完了]** ページに、インポート処理の進行状況が表示されます。 処理をキャンセルしたり、インポート対象のオブジェクトを変更したりすることはできません。 完了したら、[**完了**] をクリックします。  
+5.  **[ウィザードの完了]** ページに、インポート処理の進行状況が表示されます。 処理をキャンセルしたり、インポート対象のオブジェクトを変更したりすることはできません。 終了したら **[完了]** をクリックします。  
   
-     
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を使用して、新しいプロジェクトが自動的に表示されます。  
+     [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を使用して、新しいプロジェクトが自動的に表示されます。  
   
 ## <a name="see-also"></a>参照  
- [SSAS 表形式&#41;のプロジェクトプロパティ &#40;](../tabular-models/properties-ssas-tabular.md)  
+ [プロジェクトのプロパティ (SSAS テーブル)](../tabular-models/properties-ssas-tabular.md)  
   
   

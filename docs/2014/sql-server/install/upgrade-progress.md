@@ -11,14 +11,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f8d3ab415fbeedd26fa0c560c10eeff809787bca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091436"
 ---
 # <a name="upgrade-progress"></a>[アップグレードの進行状況]
-  
   **のアップグレード状況を監視するには、** インストール ウィザードの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [アップグレードの進行状況] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ページを使用します。  
   
 ## <a name="see-also"></a>参照  

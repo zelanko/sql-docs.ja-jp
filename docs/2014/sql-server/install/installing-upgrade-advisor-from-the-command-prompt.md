@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b694af5b760ae3c1ead1e4984c35ef61c0fa602
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094336"
 ---
 # <a name="installing-upgrade-advisor-from-the-command-prompt"></a>コマンド プロンプトからのアップグレード アドバイザーのインストール
@@ -32,7 +32,7 @@ ms.locfileid: "66094336"
   
  次の表では、最も一般的なオプションを示します。  
   
-|引数|[説明]|  
+|引数|説明|  
 |--------------|-----------------|  
 |/q [n&#124;b&#124;r&#124;f]|ユーザー インターフェイス (UI) レベルの設定:<br /><br /> n = UI なし<br /><br /> b = 基本 UI (進行状況のみ、プロンプトなし)<br /><br /> r = 一部 UI (インストール終了時のダイアログ ボックス)<br /><br /> f = 完全 UI|  
 |/L|ログ ファイル オプションを指定します。 すべてのメッセージを*log_file_name*に記録するには、 **-\*L v**_log_file_name_を使用します。 エラーメッセージのみを記録するに`-Le`は、 *log_file_name*を使用します。|  

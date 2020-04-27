@@ -11,17 +11,16 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: b1cf8c6f8442fc69669c10106f671040733e48ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092230"
 ---
 # <a name="setup-role"></a>セットアップ ロール
   [機能の選択] ページを使用して個々の機能を選択するか、セットアップ ロールを使用してインストールするかを指定するには、このページを使用します。  
   
- 
-  `setup role` とは、事前定義された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成の実装に必要なすべての機能および共有コンポーネントを選択するために用意されている設定です。  
+ `setup role` とは、事前定義された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成の実装に必要なすべての機能および共有コンポーネントを選択するために用意されている設定です。  
   
 ## <a name="options"></a>オプション  
  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]機能のインストール**  
@@ -39,14 +38,13 @@ ms.locfileid: "66092230"
  **[すべての機能に既定値を使用]**  
  このリリースで使用できるすべての機能をインストールするには、このセットアップ ロールを選択します。 PowerPivot for SharePoint はこのロールから除外される点に注意してください。 PowerPivot for SharePoint をインストールするには、PowerPivot for SharePoint セットアップ ロールを使用する必要があります。  
   
- 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] は **NT AUTHORITY\NETWORK SERVICE** アカウントを使用して開始するように構成されています。 現在のユーザーは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**sysadmin** ロールのメンバーとなります。 このオプションで設定した値は、他のコマンド ライン パラメーターを指定してオーバーライドできます。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] は **NT AUTHORITY\NETWORK SERVICE** アカウントを使用して開始するように構成されています。 現在のユーザーは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**sysadmin** ロールのメンバーとなります。 このオプションで設定した値は、他のコマンド ライン パラメーターを指定してオーバーライドできます。  
   
  オペレーティング システムがドメイン コントローラーでない場合、既定ではデータベース エンジンおよび Reporting Services は NTAUTHORITY\NETWORK SERVICE アカウントを、Integration Services は NTAUTHORITY\NETWORK SERVICE アカウントを、SQL フルテキスト フィルター デーモン ランチャーは NTAUTHORITY\LOCAL SERVICE アカウントを使用します。  
   
 ## <a name="see-also"></a>参照  
  [PowerPivot for SharePoint のインストール](https://go.microsoft.com/fwlink/?LinkId=206906)   
  [ハードウェアとソフトウェアの要件 (PowerPivot for SharePoint](https://go.microsoft.com/fwlink/?LinkId=216823)   
- [特徴選択](../../../2014/sql-server/install/feature-selection.md)  
+ [機能の選択](../../../2014/sql-server/install/feature-selection.md)  
   
   

@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 44e60d60764396361122ed16a4e34f76fc3a6ab6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084428"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>マイニング モデルのフィルター選択 (Analysis Services - データ マイニング)
@@ -48,14 +48,12 @@ ms.locfileid: "66084428"
 -   AMO を使用して、モデルのフィルター条件をプログラムによって設定します。  
   
 ### <a name="creating-model-filters-using-data-mining-designer"></a>データ マイニング デザイナーによるモデル フィルターの作成  
- データ マイニング デザイナーでは、マイニング モデルの `Filter` プロパティを変更することによってモデルをフィルター処理します。 
-  **[プロパティ]** ペインにフィルター式を直接入力することも、フィルターのダイアログ ボックスを開いて条件を作成することもできます。  
+ データ マイニング デザイナーでは、マイニング モデルの `Filter` プロパティを変更することによってモデルをフィルター処理します。 **[プロパティ]** ペインにフィルター式を直接入力することも、フィルターのダイアログ ボックスを開いて条件を作成することもできます。  
   
  フィルターのダイアログ ボックスは 2 つあります。 最初のダイアログ ボックスでは、ケース テーブルに適用する条件を作成できます。 データ ソースに複数のテーブルが含まれる場合は、まずテーブルを選択してから列を選択し、その列に適用する演算子と条件を指定します。 演算子を使用`AND` / `OR`すると、複数の条件をリンクできます。 値の定義に使用できる演算子は、列に含まれている値が不連続値か連続値かによって異なります。 たとえば、連続値には、`greater than` 演算子および `less than` 演算子を使用できます。 一方、不連続値に対しては、`= (equal to)` 演算子、`!= (not equal to)` 演算子、および `is null` 演算子のみを使用できます。  
   
 > [!NOTE]  
->  
-  `LIKE` キーワードはサポートされません。 複数の不連続属性を含める場合は、個々の条件を作成し、それらを `OR` 演算子で結合する必要があります。  
+>  `LIKE` キーワードはサポートされません。 複数の不連続属性を含める場合は、個々の条件を作成し、それらを `OR` 演算子で結合する必要があります。  
   
  条件が複雑な場合、2 番目のフィルター ダイアログ ボックスを使用して、一度に 1 つのテーブルを処理するように設定できます。 2 番目のフィルター ダイアログ ボックスを閉じると、式が評価された後、ケース テーブルの他の列で設定されたフィルター条件と結合されます。  
   
@@ -64,7 +62,7 @@ ms.locfileid: "66084428"
   
  たとえば、顧客に関連したケース テーブルがあり、入れ子になったテーブルに顧客が購入した製品が表示されている場合、入れ子になったテーブルのフィルターで `[ProductName]='Water Bottle' OR ProductName='Water Bottle Cage'`という構文を使用すると、特定の品目を購入した顧客を選択するフィルターを作成できます。  
   
- また、`EXISTS` または `NOT EXISTS` のキーワードとサブクエリを使用すると、入れ子になったテーブルに特定の値があるかどうかに基づいてフィルター処理を行うことができます。 これにより、 `EXISTS (SELECT * FROM Products WHERE ProductName='Water Bottle')`のような条件を作成できます。 入れ子になったテーブルに値 `EXISTS SELECT(<subquery>)` を持つ行が 1 つ以上含まれている場合、`true` から `Water Bottle` が返されます。  
+ また、`EXISTS` または `NOT EXISTS` のキーワードとサブクエリを使用すると、入れ子になったテーブルに特定の値があるかどうかに基づいてフィルター処理を行うことができます。 これにより、 `EXISTS (SELECT * FROM Products WHERE ProductName='Water Bottle')`のような条件を作成できます。 入れ子になったテーブルに値 `EXISTS SELECT(<subquery>)` を持つ行が 1 つ以上含まれている場合、`Water Bottle` から `true` が返されます。  
   
  ケース テーブルに対する条件と入れ子になったテーブルに対する条件は、結合することができます。 たとえば、次の構文には、ケース テーブルに対する条件 (`Age > 30` )、入れ子になったテーブルに対するサブクエリ (`EXISTS (SELECT * FROM Products)`)、および入れ子になったテーブルに対する複数の条件 (`WHERE ProductName='Milk'  AND Quantity>2`) が含まれています。  
   
@@ -74,8 +72,7 @@ ms.locfileid: "66084428"
   
  フィルターの作成が完了したら、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]によってフィルター テキストが評価され、DMX 式に変換された後、モデルと共に保存されます。  
   
- 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のフィルター ダイアログ ボックスの使用方法については、「 [マイニング モデルへのフィルターの適用](apply-a-filter-to-a-mining-model.md)」を参照してください。  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のフィルター ダイアログ ボックスの使用方法については、「 [マイニング モデルへのフィルターの適用](apply-a-filter-to-a-mining-model.md)」を参照してください。  
   
 ## <a name="managing-mining-model-filters"></a>マイニング モデルのフィルターの管理  
  データに基づくモデル フィルターを使用すると、同一の構造に基づく複数のモデルを簡単に作成できるため、マイニング構造とマイニング モデルの管理作業が大幅に簡素化されます。 既存のマイニング モデルをすばやくコピーして、フィルター条件だけを変更することもできます。 ただし、フィルターは混乱を招くこともあります。  
@@ -125,6 +122,6 @@ ms.locfileid: "66084428"
   
 ## <a name="see-also"></a>参照  
  [モデルフィルターの構文と例 &#40;Analysis Services データマイニング&#41;](model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [データマイニング&#41;のテストと検証 &#40;](testing-and-validation-data-mining.md)  
+ [テストおよび検証 &#40;データ マイニング&#41;](testing-and-validation-data-mining.md)  
   
   

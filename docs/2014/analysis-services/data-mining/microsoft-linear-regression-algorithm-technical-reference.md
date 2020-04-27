@@ -15,14 +15,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: db8b36fbccc4139071f54ddf9f73f876e9517799
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084056"
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Microsoft 線形回帰アルゴリズム テクニカル リファレンス
-  
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムは、連続属性のペアのモデリングに最適化された、特殊な Microsoft デシジョン ツリー アルゴリズムです。 このトピックでは、アルゴリズムの実装について説明し、アルゴリズムの動作をカスタマイズする方法を示します。モデルのクエリに関する追加情報へのリンクも示します。  
   
 ## <a name="implementation-of-the-linear-regression-algorithm"></a>線形回帰アルゴリズムの実装  
@@ -35,31 +34,29 @@ ms.locfileid: "66084056"
 ### <a name="scoring-methods-and-feature-selection"></a>スコアリング方法と機能の選択  
  すべての [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ マイニング アルゴリズムでは、分析の向上と処理負荷の削減のため、機能の選択が自動的に使用されます。 モデルでサポートされるのは連続列だけであるため、線形回帰の機能選択に使用される方法は興味深さのスコアです。 参考のため、次の表に線形回帰アルゴリズムとデシジョン ツリー アルゴリズムの機能選択の違いを示します。  
   
-|アルゴリズム|分析の方法|説明|  
+|アルゴリズム|分析の方法|備考|  
 |---------------|------------------------|--------------|  
-|線形回帰|興味深さのスコア|既定。<br /><br /> デシジョン ツリー アルゴリズムで使用できるその他の機能選択の方法は、離散変数のみに適用されるため、線形回帰モデルには適用できません。|  
-|デシジョン ツリー|興味深さのスコア<br /><br /> Shannon のエントロピ<br /><br /> K2 事前分布を指定したベイズ定理<br /><br /> 均一な事前分布を指定したベイズ ディリクレ等式 (既定値)|非バイナリの連続する値を含む列がある場合は、一貫性を保つため、すべての列に対して興味深さのスコアが使用されます。 それ以外の場合は、既定の方法か、指定した方法が使用されます。|  
+|線形回帰|興味深さのスコア|既定値。<br /><br /> デシジョン ツリー アルゴリズムで使用できるその他の機能選択の方法は、離散変数のみに適用されるため、線形回帰モデルには適用できません。|  
+|デシジョン ツリー|興味深さのスコア<br /><br /> Shannon のエントロピー<br /><br /> K2 事前分布を指定したベイズ定理<br /><br /> 均一な事前分布を指定したベイズ ディリクレ等式 (既定値)|非バイナリの連続する値を含む列がある場合は、一貫性を保つため、すべての列に対して興味深さのスコアが使用されます。 それ以外の場合は、既定の方法か、指定した方法が使用されます。|  
   
  デシジョン ツリー モデルに対する機能の選択を制御するアルゴリズム パラメーターは、MAXIMUM_INPUT_ATTRIBUTES と MAXIMUM_OUTPUT です。  
   
 ## <a name="customizing-the-linear-regression-algorithm"></a>線形回帰アルゴリズムのカスタマイズ  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムでは、結果として得られるマイニング モデルの動作、パフォーマンス、および精度に影響を与えるパラメーターがサポートされています。 マイニング モデル列またはマイニング構造列にモデリング フラグを設定して、データの処理方法を制御することもできます。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムでは、結果として得られるマイニング モデルの動作、パフォーマンス、および精度に影響を与えるパラメーターがサポートされています。 マイニング モデル列またはマイニング構造列にモデリング フラグを設定して、データの処理方法を制御することもできます。  
   
 ### <a name="setting-algorithm-parameters"></a>アルゴリズム パラメーターの設定  
  次の表に、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムで提供されるパラメーターを示します。  
   
-|パラメーター|[説明]|  
+|パラメーター|説明|  
 |---------------|-----------------|  
 |*MAXIMUM_INPUT_ATTRIBUTES*|選択した機能を呼び出す前にアルゴリズムが処理できる入力属性の数を定義します。 この値を 0 に設定すると、機能の選択がオフになります。<br /><br /> 既定値は 255 です。|  
 |*MAXIMUM_OUTPUT_ATTRIBUTES*|選択した機能を呼び出す前にアルゴリズムが処理できる出力属性の数を定義します。 この値を 0 に設定すると、機能の選択がオフになります。<br /><br /> 既定値は 255 です。|  
 |*FORCE_REGRESSOR*|アルゴリズムによって計算された列の重要度に関係なく、指定した列をアルゴリズムでリグレッサーとして使用するように設定します。|  
   
 ### <a name="modeling-flags"></a>ModelingFlags  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムでは、次のモデリング フラグがサポートされています。 モデリング フラグは、マイニング構造やマイニング モデルを作成するときに定義し、分析時に各列の値をどのように処理するかを指定します。 詳細については、「[モデリング フラグ &#40;データ マイニング&#41;](modeling-flags-data-mining.md)」を参照してください。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムでは、次のモデリング フラグがサポートされています。 モデリング フラグは、マイニング構造やマイニング モデルを作成するときに定義し、分析時に各列の値をどのように処理するかを指定します。 詳細については、「[モデリング フラグ &#40;データ マイニング&#41;](modeling-flags-data-mining.md)」を参照してください。  
   
-|モデリング フラグ|[説明]|  
+|モデリング フラグ|説明|  
 |-------------------|-----------------|  
 |NOT NULL|列に NULL を含めることはできないことを示します。 モデルのトレーニング中に NULL が検出された場合はエラーが発生します。<br /><br /> マイニング構造列に適用されます。|  
 |REGRESSOR|列には、分析中に潜在的な独立変数として扱われる連続する数値が含まれることを示します。<br /><br /> 注: 列にリグレッサーとしてフラグを設定しても、最終的なモデルでその列がリグレッサーとして使用されるかどうかは保証されません。<br /><br /> マイニング モデル列に適用されます。|  
@@ -73,12 +70,11 @@ ms.locfileid: "66084056"
   
  FORCED_REGRESSOR パラメーターを使用すると、アルゴリズムで特定のリグレッサーが使用されるようにすることができます。 このパラメーターは、Microsoft デシジョン ツリー アルゴリズムと Microsoft 線形回帰アルゴリズムで使用できます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  線形回帰モデルには、キー列、入力列、および少なくとも 1 つの予測可能列が必要です。  
   
 ### <a name="input-and-predictable-columns"></a>入力列と予測可能列  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムでは、次の表に示す特定の入力列と予測可能列がサポートされています。 マイニング モデルにおけるコンテンツの種類の意味については、「[コンテンツの種類 &#40;データ マイニング&#41;](content-types-data-mining.md)」を参照してください。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムでは、次の表に示す特定の入力列と予測可能列がサポートされています。 マイニング モデルにおけるコンテンツの種類の意味については、「[コンテンツの種類 &#40;データ マイニング&#41;](content-types-data-mining.md)」を参照してください。  
   
 |列|コンテンツの種類|  
 |------------|-------------------|  
@@ -91,6 +87,6 @@ ms.locfileid: "66084056"
 ## <a name="see-also"></a>参照  
  [Microsoft 線形回帰アルゴリズム](microsoft-linear-regression-algorithm.md)   
  [線形回帰モデルのクエリ例](linear-regression-model-query-examples.md)   
- [線形回帰モデルのマイニングモデルコンテンツ &#40;Analysis Services データマイニング&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [線形回帰モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

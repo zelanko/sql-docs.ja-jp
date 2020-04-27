@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 524400e9c9420fb54447220215d4660874ec6d69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091089"
 ---
 # <a name="warning-about-client-side-usage-of-geometry-geography-and-hierarchyid"></a>幾何学、地理学、HIERARCHYID のクライアント側の使用に関する警告
@@ -23,7 +23,7 @@ ms.locfileid: "66091089"
 ## <a name="component"></a>コンポーネント  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>[説明]  
+## <a name="description"></a>説明  
  空間データ型を含むアセンブリ**Microsoft. SqlServer. .dll**は、バージョン10.0 からバージョン11.0 にアップグレードされました。 このアセンブリを参照するカスタム アプリケーションは、次の条件に該当する場合に失敗します。  
   
 -   がインストールされているコンピューター [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]から、がインストールされているコンピューターにカスタムアプリケーションを移動すると、参照されているバージョン10.0 の**SqlTypes**アセンブリが存在しないため、アプリケーションは失敗します。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] この場合、次のエラー メッセージが返されることがあります: `"Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified."`  
@@ -32,17 +32,13 @@ ms.locfileid: "66091089"
   
 -   .NET 3.5、4、または4.5 を対象とするカスタムアプリケーションから**SqlTypes**アセンブリバージョン11.0 を参照する場合、アプリケーションは失敗します。これは、の仕様では、アセンブリのバージョン10.0 が読み込まれるためです。 このエラーは、アプリケーションが次のいずれかのメソッドを呼び出したときに発生します。  
   
-    -   
-  `GetValue` クラスの `SqlDataReader` メソッド  
+    -   `GetValue` クラスの `SqlDataReader` メソッド  
   
-    -   
-  `GetValues` クラスの `SqlDataReader` メソッド  
+    -   `GetValues` クラスの `SqlDataReader` メソッド  
   
-    -   
-  `SqlDataReader` クラスの角かっこインデックス演算子 []  
+    -   `SqlDataReader` クラスの角かっこインデックス演算子 []  
   
-    -   
-  `ExecuteScalar` クラスの `SqlCommand` メソッド  
+    -   `ExecuteScalar` クラスの `SqlCommand` メソッド  
   
 ## <a name="corrective-action"></a>修正措置  
  この問題は、次のいずれかの方法を使用して回避できます。  

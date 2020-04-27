@@ -13,19 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 01862762cdea7ea0ef49c12a3c82ee1fd1c972cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087082"
 ---
 # <a name="connect-to-database-dialog-box"></a>[データベースへの接続] ダイアログ ボックス
-  
   **[データベースへの接続]** ダイアログ ボックスを使用すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースに接続できます。  
   
 ## <a name="options"></a>オプション  
   
-|期間|定義|  
+|用語|定義|  
 |----------|----------------|  
 |**[既存のデータベースに接続する]**|既存のデータベースに接続するには、このオプションを選択します。 既存のデータベースの一覧で、接続するデータベースをクリックします。|  
 |**新しいデータベースの作成**|新しいデータベースを作成するには、このオプションを選択します。|  

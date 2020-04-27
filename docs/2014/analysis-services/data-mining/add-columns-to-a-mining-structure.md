@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85a713bb9da24a67ebe8fdd097535c5a9d5ac98e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086224"
 ---
 # <a name="add-columns-to-a-mining-structure"></a>マイニング構造への列の追加
@@ -33,14 +33,11 @@ ms.locfileid: "66086224"
   
 2.  マイニング構造を右クリックして **[列の追加]** を選択します。  
   
-     
-  **[列の選択]** ダイアログ ボックスが開きます。  
+     **[列の選択]** ダイアログ ボックスが開きます。  
   
-3.  
-  **[基になるテーブル]** で、列が格納されているデータ ソース ビュー内のテーブルを選択します。  
+3.  **[基になるテーブル]** で、列が格納されているデータ ソース ビュー内のテーブルを選択します。  
   
-4.  
-  **[基になる列]** で、マイニング構造に追加する列を選択します。  
+4.  **[基になる列]** で、マイニング構造に追加する列を選択します。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

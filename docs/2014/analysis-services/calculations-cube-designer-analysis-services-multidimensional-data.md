@@ -13,18 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 07138beba90f3f863d81a24c7c92b2d9fd4a4276
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088290"
 ---
 # <a name="calculations-cube-designer-analysis-services---multidimensional-data"></a>[計算] (キューブ デザイナー) (Analysis Services - 多次元データ)
   キューブ デザイナーの **[計算]** タブを使用すると、選択されているキューブの、計算されるメンバー、名前付きセット、および多次元式 (MDX) スクリプト コマンドなどの計算を表示したり編集したりできます。  
   
 ## <a name="form-view-and-script-view"></a>フォーム ビューとスクリプト ビュー  
- 
-  **[計算]** タブでは、計算を表示または編集するときに 2 つの異なるビューをサポートします。  
+ **[計算]** タブでは、計算を表示または編集するときに 2 つの異なるビューをサポートします。  
   
 -   フォーム ビュー  
   
@@ -35,7 +34,7 @@ ms.locfileid: "66088290"
      上級ユーザー向けに、このビューには、キューブに関連付けられている MDX スクリプト全体が表示されます。また、キューブで使用できるメタデータ、関数、およびツールも表示されます。  
   
 ## <a name="panes"></a>ペイン  
- **ツール バー**  
+ **Toolbar**  
  フォームビューとスクリプトビューの両方のツールバーを使用して、このタブで一般的な操作を実行します。このペインの詳細については、「[ツールバー &#40;の計算] タブ、キューブデザイナー&#41; &#40;Analysis Services-多次元データ&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)」を参照してください。  
   
  **[スクリプト オーガナイザー]**  

@@ -22,10 +22,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1cfc630ffc943a989348e350c3668452a2777298
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083376"
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>マイニング構造 (Analysis Services - データ マイニング)
@@ -35,11 +35,11 @@ ms.locfileid: "66083376"
   
  図内のマイニング構造は、CustomerID フィールドで結合された複数のテーブルまたはビューを含むデータ ソースを基にしています。 1 つのテーブルには顧客に関する情報 (地理的な領域、年齢、収入、性別など) が格納され、入れ子になった関連テーブルには各顧客の追加情報 (顧客が購入した製品など) を含む複数の行が格納されます。 この図は、同じマイニング構造から複数のモデルを作成し、それぞれのモデルに構造からさまざまな列を採用できることを示しています。  
   
- **モデル 1**CustomerID、所得、Age、Region を使用して、Region 上のデータをフィルター処理します。  
+ **モデル 1** CustomerID、Income、Age、Region を使用し、Region でデータをフィルタリングします。  
   
- **モデル 2**CustomerID、収入、Age、Region を使用し、年齢に応じてデータをフィルター処理します。  
+ **モデル 2** CustomerID、Income、Age、Region を使用し、Age でデータをフィルタリングします。  
   
- **モデル 3**CustomerID、Age、性別、および入れ子になったテーブル (フィルターなし) を使用します。  
+ **モデル 3** CustomerID、Age、Gender と入れ子になったテーブルを使用し、フィルターは適用しません。  
   
  それぞれのモデルは入力に異なる列を使用しており、うち 2 つのモデルはフィルター適用によってモデル内で使用するデータをさらに絞り込んでいるため、同じデータに基づいていても結果は著しく異なる場合があります。 CustomerID 列は、ケース キーとして使用できる唯一の有効な列であるため、すべてのモデルに必要となります。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "66083376"
   
 -   構造を処理します。  
   
- 以降のセクションでは、ここに挙げた手順について詳しく説明します。  
+ これらの手順は、以下のセクションで詳しく説明します。  
   
 ### <a name="data-sources-for-mining-structures"></a>マイニング構造のデータ ソース  
  マイニング構造を定義する際には、既存のデータ ソース ビューで使用できる列を指定します。 データ ソース ビューは、複数のデータ ソースをまとめて 1 つのデータ ソースとして使用することができる共有オブジェクトです。 元のデータ ソースはクライアント アプリケーションでは表示されません。データ型の変更や、集計列またはエイリアス列の作成には、データ ソース ビューのプロパティを使用できます。  
@@ -74,8 +74,7 @@ ms.locfileid: "66083376"
   
  マイニング構造には、入れ子になったテーブルを含めることもできます。 入れ子になったテーブルは、ケースのエンティティとその関連属性との間の一対多の関係を表します。 たとえば、顧客に関する情報と顧客の購入記録が別々のテーブルに格納されている場合は、入れ子になったテーブルを使用すると、これらの情報を単一のケースにまとめることができます。 この場合、顧客の識別子はエンティティで、購入記録は関連する属性となります。 入れ子になったテーブルを使用する場合詳細については、「[入れ子になったテーブル (Analysis Services - データ マイニング)](nested-tables-analysis-services-data-mining.md)」を参照してください。  
   
- 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でデータ マイニング モデルを作成するには、まずデータ マイニング構造を作成する必要があります。 データ マイニング ウィザードを使用すると、マイニング構造の作成、データの選択、およびマイニング モデルの追加の手順を段階的に実行できます。  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でデータ マイニング モデルを作成するには、まずデータ マイニング構造を作成する必要があります。 データ マイニング ウィザードを使用すると、マイニング構造の作成、データの選択、およびマイニング モデルの追加の手順を段階的に実行できます。  
   
  データ マイニング拡張機能 (DMX) を使用してマイニング モデルを作成する場合は、モデルとモデル内の列を指定すると、必要なマイニング構造が DMX によって自動的に作成されます。 詳細については、「[CREATE MINING MODEL (DMX)](/sql/dmx/create-mining-model-dmx)」を参照してください。  
   
@@ -94,8 +93,7 @@ ms.locfileid: "66083376"
 ### <a name="processing-mining-structures"></a>マイニング構造の処理  
  マイニング構造は、処理されるまでは単なるメタデータ コンテナーです。 マイニング構造を処理する際、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、データに関する統計値、連続属性を分離する方法に関する情報、および後でマイニング モデルが使用するその他の情報を格納するキャッシュを作成します。 マイニング モデル自体には、このサマリー情報は保存されませんが、代わりに、マイニング構造の処理時にキャッシュに保存された情報が参照されます。 したがって、既存の構造に新しいモデルを追加するたびに構造を再処理する必要はなく、モデルのみを処理できます。  
   
- キャッシュが非常に大きい場合や詳細データを削除したい場合は、処理後にこのキャッシュを破棄することもできます。 データをキャッシュしない場合は、マイニング構造の `CacheMode` プロパティを `ClearAfterProcessing` に変更できます。 これにより、モデルを処理した後にキャッシュが破棄されます。 
-  `CacheMode` プロパティを `ClearAfterProcessing` に設定すると、マイニング モデルからのドリルスルーが無効になります。  
+ キャッシュが非常に大きい場合や詳細データを削除したい場合は、処理後にこのキャッシュを破棄することもできます。 データをキャッシュしない場合は、マイニング構造の `CacheMode` プロパティを `ClearAfterProcessing` に変更できます。 これにより、モデルを処理した後にキャッシュが破棄されます。 `CacheMode` プロパティを `ClearAfterProcessing` に設定すると、マイニング モデルからのドリルスルーが無効になります。  
   
  ただし、キャッシュを破棄した後は、マイニング構造に新しいモデルを追加することはできません。 新しいマイニング モデルを追加したり、既存のモデルのプロパティを変更した場合は、マイニング構造を最初に再処理する必要があります。 詳細については、「[処理の要件および注意事項 (データ マイニング)](processing-requirements-and-considerations-data-mining.md)」を参照してください。  
   
@@ -104,8 +102,7 @@ ms.locfileid: "66083376"
   
  マイニング構造のデータを確認する場合、データ マイニング拡張機能 (DMX) を使用してクエリを作成できます。 たとえば、 `SELECT * FROM <structure>.CASES` というステートメントでは、マイニング構造のすべてのデータが返されます。 この情報を取得するには、マイニング構造が既に処理されていて、処理結果がキャッシュされている必要があります。  
   
- 
-  `SELECT * FROM <model>.CASES` というステートメントでは同じ列が返されますが、特定のモデルのケースのみです。 詳細については、「[SELECT FROM &#60;structure&#62;.CASES](/sql/dmx/select-from-structure-cases)」および「[SELECT FROM &#60;model&#62;.CASES (DMX)](/sql/dmx/select-from-model-content-dmx)」を参照してください。  
+ `SELECT * FROM <model>.CASES` というステートメントでは同じ列が返されますが、特定のモデルのケースのみです。 詳細については、「[SELECT FROM &#60;structure&#62;.CASES](/sql/dmx/select-from-structure-cases)」および「[SELECT FROM &#60;model&#62;.CASES (DMX)](/sql/dmx/select-from-model-content-dmx)」を参照してください。  
   
 ## <a name="using-data-mining-models-with-mining-structures"></a>データ マイニング モデルとマイニング構造の使用  
  データ マイニング モデルは、マイニング構造によって表されるデータにマイニング モデル アルゴリズムを適用します。 マイニング モデルは特定のマイニング構造に属するオブジェクトで、マイニング構造によって定義されるプロパティのすべての値を継承します。 マイニング モデルは、マイニング構造に含まれているすべての列またはその一部を使用することができます。 構造列の複数のコピーを構造に追加できます。 構造列の複数のコピーをモデルに追加し、モデルの各構造列に異なる名前、つまり *別名*を割り当てることもできます。 構造列の別名定義の詳細については、「 [モデル列の別名の作成](create-an-alias-for-a-model-column.md) 」および「 [マイニング モデルのプロパティ](mining-model-properties.md)」を参照してください。  
@@ -115,7 +112,7 @@ ms.locfileid: "66083376"
 ## <a name="related-tasks"></a>Related Tasks  
  マイニング構造の定義、管理、使用の詳細については、次のリンクを使用してください。  
   
-|処理手順|リンク|  
+|タスク|リンク|  
 |-----------|-----------|  
 |リレーショナル マイニング構造の操作|[新しいリレーショナル マイニング構造の作成](create-a-new-relational-mining-structure.md)<br /><br /> [マイニング構造への入れ子になったテーブルの追加](add-a-nested-table-to-a-mining-structure.md)|  
 |OLAP キューブに基づくマイニング構造の操作|[新規の OLAP マイニング構造の作成](create-a-new-olap-mining-structure.md)<br /><br /> [マイニング構造のソース キューブのフィルター選択](../filter-the-source-cube-for-a-mining-structure.md)|  
@@ -125,6 +122,6 @@ ms.locfileid: "66083376"
   
 ## <a name="see-also"></a>参照  
  [データベースオブジェクト &#40;Analysis Services-多次元データ&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [マイニングモデル &#40;Analysis Services-データマイニング&#41;](mining-models-analysis-services-data-mining.md)  
+ [マイニング モデル (Analysis Services - データ マイニング)](mining-models-analysis-services-data-mining.md)  
   
   

@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 99624a05ba543e59e6c85ea616c200c246371488
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087564"
 ---
 # <a name="completing-the-wizard-import-analysis-services-database-wizard"></a>[ウィザードの完了] (Analysis Services データベースのインポート ウィザード)
-  
   **[ウィザードの完了]** ページを使用すると、選択した [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースから取得したデータおよびメタデータを、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトにインポートするウィザードの進行状況を表示できます。  
   
 ## <a name="options"></a>オプション  

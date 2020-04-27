@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ec3175fd9979b6b0a781492fb7ae0cde532db366
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084514"
 ---
 # <a name="edit-the-data-source-view-used-for-a-mining-structure"></a>マイニング構造に使用されるデータ ソース ビューの編集
@@ -26,8 +26,7 @@ ms.locfileid: "66084514"
   
 ### <a name="to-access-data-source-view-designer-from-the-mining-structure-tab-in-data-mining-designer"></a>データ マイニング デザイナーの [マイニング構造] タブからデータ ソース ビュー デザイナーにアクセスするには  
   
--   
-  **[データ ソース ビュー]** ペインで右クリックし、 **[データ ソース ビューの編集]** をクリックします。  
+-   **[データ ソース ビュー]** ペインで右クリックし、 **[データ ソース ビューの編集]** をクリックします。  
   
      データ ソース ビュー デザイナーが [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の新しいタブで開きます。  
   

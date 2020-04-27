@@ -16,15 +16,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c5594aab7f7d21f10b3b20d42c61558984e71193
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094408"
 ---
 # <a name="installation-progress"></a>Installation Progress
-  
-  ** のセットアップ状況を監視するには、** インストール ウィザードの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][インストールの進行状況][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ページを使用します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ状況を監視するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードの **[インストールの進行状況]** ページを使用します。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server セットアップ ログ ファイルの表示と読み取り](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  

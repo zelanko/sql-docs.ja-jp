@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 894e7d4fb5a0234643cf237e767a8ae999e67496
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087421"
 ---
 # <a name="configure-the-powerpivot-unattended-data-refresh-account-powerpivot-for-sharepoint"></a>PowerPivot 自動データ更新アカウントの構成 (PowerPivot for SharePoint)
@@ -46,7 +46,7 @@ ms.locfileid: "66087421"
   
  [既存の PowerPivot 自動データ更新アカウントで使用する資格情報の更新](#bkmk_editUA)  
   
-##  <a name="bkmk_prereq"></a> 前提条件  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 前提条件  
  Secure Store Service を有効にして構成し、マスター キーを生成する必要があります。 その方法については、「 [SharePoint 2010 での PowerPivot データ更新](powerpivot-data-refresh-with-sharepoint-2010.md)」を参照してください。  
   
  PowerPivot 自動データ更新アカウントとして使用する Windows ドメイン ユーザー アカウントを事前に決めておく必要があります。 ここでは、使用方法を確認できるように、PowerPivot 自動データ更新アカウント専用に作成されたアカウントを使用する必要があります。  
@@ -71,9 +71,9 @@ ms.locfileid: "66087421"
   
 -   [データ更新の管理] スケジュール ページで、パブリッシュされた PowerPivot ブックのアカウントが使用できることを確認する。  
   
-###  <a name="bkmk_create"></a>手順 1: ターゲットアプリケーションを作成し、資格情報を設定する  
+###  <a name="step-1-create-a-target-application-and-set-the-credentials"></a><a name="bkmk_create"></a>手順 1: ターゲットアプリケーションを作成し、資格情報を設定する  
   
-1.  サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの管理]** をクリックします。  
+1.  サーバーの全体管理で、[アプリケーション管理] の [**サービスアプリケーションの管理**] をクリックします。  
   
 2.  [ **Secure Store Service**] をクリックします。  
   
@@ -108,9 +108,9 @@ ms.locfileid: "66087421"
   
 16. **[OK]** をクリックします。  
   
-###  <a name="bkmk_specifyUA"></a>手順 2: PowerPivot サーバー構成ページで自動アカウントを指定する  
+###  <a name="step-2-specify-the-unattended-account-in-powerpivot-server-configuration-pages"></a><a name="bkmk_specifyUA"></a>手順 2: PowerPivot サーバー構成ページで自動アカウントを指定する  
   
-1.  サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの管理]** をクリックします。  
+1.  サーバーの全体管理で、[アプリケーション管理] の [**サービスアプリケーションの管理**] をクリックします。  
   
 2.  PowerPivot サービス アプリケーションを探します。 サービス アプリケーションは、型で識別できます。 PowerPivot サービス アプリケーションの型は、 **[PowerPivot サービス アプリケーション]** です。  
   
@@ -122,15 +122,14 @@ ms.locfileid: "66087421"
   
 6.  **[OK]** をクリックします。  
   
-###  <a name="bkmk_grant"></a>手順 3: アカウントに投稿権限を付与する  
+###  <a name="step-3-grant-contribute-permissions-to-the-account"></a><a name="bkmk_grant"></a>手順 3: アカウントに投稿権限を付与する  
  PowerPivot 自動データ更新アカウントを使用する前に、使用する任意の PowerPivot ブックに対する投稿権限をこのアカウントに割り当てる必要があります。 この権限レベルは、ライブラリからブックを開き、データの更新後に再度ライブラリに保存するために必要です。  
   
  権限の割り当ては、サイト コレクションの管理者が実行する手順です。 SharePoint の権限は、ルート サイト コレクションで割り当てるか、ルート サイト コレクションより下位の任意のレベル (個々のドキュメントやアイテムを含む) で割り当てることができます。 権限の設定方法は、権限をどのくらい細かく設定する必要があるかによって異なります。 次の手順は、権限を付与する方法の一例を示しています。  
   
 1.  SharePoint サイトで、[サイトの操作] の [**サイトの権限**] をクリックします。  
   
-2.  
-  **[アクセス許可の付与]** をクリックします。  
+2.  **[アクセス許可の付与]** をクリックします。  
   
 3.  [ユーザーの選択] に、PowerPivot 自動データ更新アカウントとして指定した Windows ドメイン ユーザー アカウントの名前を入力します。 これは、Secure Store Service でターゲット アプリケーションに指定した Windows ドメイン ユーザー アカウントの名前です。  
   
@@ -138,7 +137,7 @@ ms.locfileid: "66087421"
   
 5.  [**投稿**] を選択し、[ **OK**] をクリックします。  
   
-###  <a name="bkmk_dbread"></a>手順 4: データ更新で使用される外部データソースにアクセスするための読み取り権限を付与する  
+###  <a name="step-4-grant-read-permissions-to-access-external-data-sources-used-in-data-refresh"></a><a name="bkmk_dbread"></a>手順 4: データ更新で使用される外部データソースにアクセスするための読み取り権限を付与する  
  データを PowerPivot ブックにインポートする場合、通常、外部データへの接続は、信頼関係接続か、(現在のユーザーの ID を使用してデータ ソースに接続する) 権限を借用した接続に基づきます。 これらの種類の接続は、現在のユーザーがインポートする対象のデータに対する読み取り権限を持つ場合にのみ有効です。  
   
  データ更新シナリオでは、データをインポートするために使用された接続文字列が、データを更新するために再利用されます。 接続文字列が現在のユーザーを想定している (たとえば、Integrated_Security=SSPI を含む文字列) 場合、PowerPivot System サービスは、PowerPivot 自動データ更新アカウントのユーザー ID を現在のユーザーとして渡します。 この接続は、外部データ ソースに対する読み取り権限が PowerPivot 自動データ更新アカウントに付与されている場合にのみ成功します。  
@@ -147,7 +146,7 @@ ms.locfileid: "66087421"
   
  組織で使用しているデータ ソースの管理者であれば、ログインを作成し、必要な権限を付与することができます。 管理者でない場合は、データの所有者に対してアカウント情報を連絡する必要があります。 PowerPivot 自動データ更新アカウントにマップされる Windows ドメイン ユーザー アカウントを必ず指定してください。 これは、このトピックの「(手順 1): ターゲットアプリケーションを作成し、資格情報を設定する」で指定したアカウントです。  
   
-###  <a name="bkmk_verify"></a>手順 5: データ更新構成ページでアカウントの可用性を確認する  
+###  <a name="step-5-verify-account-availability-in-data-refresh-configuration-pages"></a><a name="bkmk_verify"></a>手順 5: データ更新構成ページでアカウントの可用性を確認する  
   
 1.  PowerPivot データが含まれているパブリッシュ済みのブックのデータ更新構成ページを開きます。 ページを開く方法については、「 [PowerPivot for SharePoint&#41;&#40;データ更新をスケジュールする](schedule-a-data-refresh-powerpivot-for-sharepoint.md)」を参照してください。  
   
@@ -161,17 +160,17 @@ ms.locfileid: "66087421"
   
  トラブルシューティングの詳細については、TechNet Wiki の「 [PowerPivot データ更新のトラブルシューティング](https://go.microsoft.com/fwlink/p/?LinkID=223279)」を参照してください。  
   
-##  <a name="bkmk_use"></a>PowerPivot 自動データ更新アカウントの使用  
+##  <a name="using-the-powerpivot-unattended-data-refresh-account"></a><a name="bkmk_use"></a>PowerPivot 自動データ更新アカウントの使用  
  PowerPivot データ更新スケジュール ページの 3 つの資格情報オプションのうち、自動データ更新アカウントに対応するのは最初のオプションだけです。 データ更新スケジュールを設定する場合は、必ずこのオプションを選択してください。  
   
  ![SSAS_PowerpivotKJ_DataRefreshCreds](media/ssas-powerpivotkj-datarefreshcreds.gif "SSAS_PowerpivotKJ_DataRefreshCreds")  
   
  PowerPivot 自動データ更新アカウントへのアクセスには第 3 の資格情報オプション (ターゲット アプリケーション ID の入力を必要とするオプション) を使用しないでください。 このオプションで実行される追加の権限借用チェックにより、このオプションを PowerPivot 自動データ更新アカウント (または、[個人] アカウントの種類に基づくターゲット アプリケーション) と共に使用しようとすると検証エラーが発生します。 3番目のオプションの使用方法の詳細については、「 [PowerPivot データ更新用の保存された資格情報の構成 &#40;PowerPivot for SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)」を参照してください。  
   
-##  <a name="bkmk_editUA"></a>既存の PowerPivot 自動データ更新アカウントで使用される資格情報を更新する  
+##  <a name="update-the-credentials-used-by-an-existing-powerpivot-unattended-data-refresh-account"></a><a name="bkmk_editUA"></a>既存の PowerPivot 自動データ更新アカウントで使用される資格情報を更新する  
  セットアップまたは管理者によって自動データ更新アカウントが既に構成されている場合は、資格情報が保存されているターゲット アプリケーションを編集することで、ユーザー名またはパスワードを更新できます。 以前に PowerPivot 自動データ更新アカウントに関連付けられていた元の Windows ID は、Secure Store Service で資格情報を編集するときに表示されません。 期限切れのパスワードを更新するか、別のアカウントを指定するかにかかわらず、常に Secure Store Service でそのターゲット アプリケーションのユーザー名とパスワードの両方を再入力する必要があります。  
   
-1.  サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの管理]** をクリックします。  
+1.  サーバーの全体管理で、[アプリケーション管理] の [**サービスアプリケーションの管理**] をクリックします。  
   
 2.  [ **Secure Store Service**] をクリックします。  
   

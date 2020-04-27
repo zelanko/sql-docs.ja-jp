@@ -11,29 +11,23 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f095429070a16cb4a99dabd84ffe99d169ce35a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66095331"
 ---
 # <a name="feature-review"></a>[機能の確認]
   [機能の確認] ページは、準備された機能の読み取り専用の一覧です。これらの機能は、イメージの完了ステップの最後に構成されて完了となります。 機能一覧はイメージの準備ステップ時に選択されます。イメージの完了ステップで変更することはできません。 表示されている機能に加え、準備済みインスタンスには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Writer、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client も含まれます。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の準備済みインスタンスの構成が完了した後、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスの準備済みインスタンスに含まれていない他の機能を追加することができます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の準備済みインスタンスの構成が完了した後、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスの準備済みインスタンスに含まれていない他の機能を追加することができます。  
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
   
 |コンポーネント グループ|コンポーネントおよび機能|  
 |---------------------|-----------------------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] サービス|
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、データの格納、処理、セキュリティ確保のための中心的なサービスです。 
-  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]には、次のコンポーネントが含まれます。<br /><br /> レプリケーション: (オプション) レプリケーションは、あるデータベースから別のデータベースへデータ オブジェクトやデータベース オブジェクトのコピーと配布を行い、一貫性を維持するためにデータベース間の同期を行う一連のテクノロジです。<br /><br /> フルテキスト検索: (オプション) フルテキスト検索は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルのプレーン文字ベースのデータに対してフルテキスト クエリを実行するための機能を提供します。<br /><br /> 
-  [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (オプション): [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) は、データ ソース内で一貫性のない不適切なデータを発見できるデータ クレンジング ソリューションであり、データのクレンジングを自動的かつインタラクティブに行うことができます。|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、表形式、マトリックス形式、グラフィカル形式、および自由形式のレポートを作成、管理、配置するためのサーバー コンポーネントとクライアント コンポーネントが含まれます。 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、レポート アプリケーション開発用の拡張可能プラットフォームとしても使用できます。|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] サービス|[!INCLUDE[ssDE](../../includes/ssde-md.md)] は、データの格納、処理、セキュリティ確保のための中心的なサービスです。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]には、次のコンポーネントが含まれます。<br /><br /> レプリケーション: (オプション) レプリケーションは、あるデータベースから別のデータベースへデータ オブジェクトやデータベース オブジェクトのコピーと配布を行い、一貫性を維持するためにデータベース間の同期を行う一連のテクノロジです。<br /><br /> フルテキスト検索: (オプション) フルテキスト検索は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルのプレーン文字ベースのデータに対してフルテキスト クエリを実行するための機能を提供します。<br /><br /> [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (オプション): [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) は、データ ソース内で一貫性のない不適切なデータを発見できるデータ クレンジング ソリューションであり、データのクレンジングを自動的かつインタラクティブに行うことができます。|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、表形式、マトリックス形式、グラフィカル形式、および自由形式のレポートを作成、管理、配置するためのサーバー コンポーネントとクライアント コンポーネントが含まれます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、レポート アプリケーション開発用の拡張可能プラットフォームとしても使用できます。|  
   
 ## <a name="see-also"></a>参照  
  [SysPrep を使用した SQL Server 2014 のインストール](../../database-engine/install-windows/install-sql-server-using-sysprep.md)  

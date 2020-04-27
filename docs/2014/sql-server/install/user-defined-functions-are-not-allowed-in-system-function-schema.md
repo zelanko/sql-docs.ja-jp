@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 10813b7bc0a97f0ba8a81f3f48447142659cd596
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091329"
 ---
 # <a name="user-defined-functions-are-not-allowed-in-system_function_schema"></a>system_function_schema でユーザー定義関数が許可されない
@@ -26,7 +26,7 @@ ms.locfileid: "66091329"
 ## <a name="component"></a>コンポーネント  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>[説明]  
+## <a name="description"></a>説明  
  システム オブジェクトの格納とアクセスが次のように変更されました。  
   
 -   システムオブジェクトは読み取り専用の**リソース**データベースに格納され、システムオブジェクトを直接更新することはできません。  

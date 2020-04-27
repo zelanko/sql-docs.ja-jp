@@ -11,21 +11,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b955ade0251f43d6a482abe346c286c6bafd0ce7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084595"
 ---
 # <a name="drillthrough-on-mining-models"></a>マイニング モデルでのドリルスルー
-  *ドリルスルー*とは、マイニングモデルまたはマイニング構造に対してクエリを実行し、モデルで公開されていない詳細データを取得できることを意味します。  
+  *ドリルスルー* とは、マイニング モデルまたはマイニング構造に対してクエリを実行し、モデルで公開されていない詳細データを取得する機能です。  
   
- 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] は、ケース データへのドリルスルーの 2 つのオプションを提供します。 データの作成に使用されたケースにドリルスルーすることも、マイニング構造のケースにドリルスルーすることもできます。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] は、ケース データへのドリルスルーの 2 つのオプションを提供します。 データの作成に使用されたケースにドリルスルーすることも、マイニング構造のケースにドリルスルーすることもできます。  
   
 ## <a name="drillthrough-to-model-cases-vs-drillthrough-to-structure"></a>モデル ケースへのドリルスルーと構造へのドリルスルー  
- 
-  **モデル ケース** へのドリルスルーは、モデル内のルール、パターン、またはクラスターに関する詳細情報を探すのに役立ちます。 たとえば、クラスターモデルの分析に顧客の連絡先情報を使用しないでください。データが使用可能であったとしても、ドリルスルーを使用すると、モデルからその情報にアクセスできます。  
+ **モデル ケース** へのドリルスルーは、モデル内のルール、パターン、またはクラスターに関する詳細情報を探すのに役立ちます。 たとえば、クラスターモデルの分析に顧客の連絡先情報を使用しないでください。データが使用可能であったとしても、ドリルスルーを使用すると、モデルからその情報にアクセスできます。  
   
  対照的に、 **構造データへのドリルスルー** は、モデル内で使用できなかった情報へのアクセスを可能にすることが目的です。 たとえば、一部の構造列はデータ型に互換性がないかデータが分析に役立たないためにモデルから除外されていることがあります。  
   
@@ -56,13 +54,13 @@ ms.locfileid: "66084595"
 ## <a name="related-tasks"></a>Related Tasks  
  マイニング モデルでドリルスルーを使用する方法の詳細については、次のトピックを参照してください。  
   
-|処理手順|リンク|  
+|タスク|リンク|  
 |-----------|-----------|  
 |マイニング モデル ビューアーでドリルスルーを使用する|[モデル ビューアーからのドリルスルーの使用](use-drillthrough-from-the-model-viewers.md)|  
 |ドリルスルーを使用してモデルのケース データを取得する|[マイニング モデルからケース データへのドリルスルー](drill-through-to-case-data-from-a-mining-model.md)|  
 |既存のマイニング モデルのドリルスルーを有効にする|[マイニング モデルのドリルスルーの有効化](enable-drillthrough-for-a-mining-model.md)|  
-|特定のモデルの種類に対するドリルスルー クエリの例|[データ マイニング クエリ](data-mining-queries.md)|  
-|マイニング モデル ウィザードでドリルスルーを有効にする|[[ウィザードの完了] &#40;データマイニングウィザード&#41;](../completing-the-wizard-data-mining-wizard.md)。|  
+|特定のモデルの種類に対するドリルスルー クエリの例|[データマイニングクエリ](data-mining-queries.md)|  
+|マイニング モデル ウィザードでドリルスルーを有効にする|[[ウィザードの完了] (データ マイニング ウィザード)](../completing-the-wizard-data-mining-wizard.md)|  
   
 ## <a name="see-also"></a>参照  
  [マイニング構造でのドリルスルー](drillthrough-on-mining-structures.md)  

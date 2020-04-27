@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a1026597a0ae000b91e088d2457b3c9dd607044b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083114"
 ---
 # <a name="prediction-queries-data-mining"></a>Prediction Queries (Data Mining)
@@ -40,7 +40,7 @@ ms.locfileid: "66083114"
   
  [クエリ結果の操作](#bkmk_WorkResults)  
   
-##  <a name="bkmk_PredQuery"></a>予測クエリの基本デザイン  
+##  <a name="basic-prediction-query-design"></a><a name="bkmk_PredQuery"></a> 予測クエリの基本デザイン  
  予測を作成するときには、モデルに新しいデータを渡して、その新しいデータに基づいて予測を生成するように要求するのが一般的です。  
   
 -   バッチ予測クエリでは、 *予測結合*を使用してモデルを外部ソースのデータにマップします。  
@@ -55,12 +55,12 @@ ms.locfileid: "66083114"
   
  時系列モデルの場合、入力データは常に必要となるわけではありません。モデルに既に含まれるデータのみを使用して予測することができます。 ただし、新しい入力データを指定した場合は、新しいデータ更新を使用してモデルを更新して拡張するか、モデルで使用されていた元の系列データを置換するかを決定する必要があります。  これらのオプションの詳細については、「 [Time Series Model Query Examples](time-series-model-query-examples.md)」をご覧ください。  
   
-###  <a name="bkmk_PredFunc"></a>予測関数の追加  
+###  <a name="adding-prediction-functions"></a><a name="bkmk_PredFunc"></a>予測関数の追加  
  予測クエリをカスタマイズすると、値を予測するだけでなく、その予測に関連するさまざまな種類の情報を取得することができます。 たとえば、予測によりある顧客に推奨する製品の一覧を作成する場合、各予測が当たる確率を取得するのも良いでしょう。各予測をランク付けし、上位の推奨品だけをその顧客に勧めます。  
   
  これを行うには、クエリに *予測関数* を追加します。 サポートされる関数は、モデルやクエリの種類ごとに決まっています。 たとえばクラスター モデルでは、モデルによって作成されたクラスターに関する追加情報を提供する特殊な予測関数がサポートされています。一方、タイム シリーズ モデルには、時間経過に伴って生じる違いを計算する関数があります。 ほぼすべての種類のモデルで使用できる汎用の予測関数もあります。 さまざまな種類のクエリでサポートされる予測関数の一覧については、DMX リファレンスの「[一般的な予測関数 &#40;DMX&#41;](/sql/dmx/general-prediction-functions-dmx)」をご覧ください。  
   
-###  <a name="bkmk_SingletonQuery"></a>単一予測クエリの作成  
+###  <a name="creating-singleton-prediction-queries"></a><a name="bkmk_SingletonQuery"></a> 単一予測クエリの作成  
  単一予測クエリは、予測をリアルタイムですぐに作成する場合に便利です。 一般的な使用手順としては、Web サイトのフォームを使用して顧客から情報を取得し、そのデータを入力として単一予測クエリに提出します。 たとえば、顧客が一覧から製品を選択すると、その選択内容を、お勧め製品を予測するクエリの入力として使用できます。  
   
  単一予測クエリには、入力を格納する独立したテーブルは必要ありません。 代わりに、入力として 1 行以上の値をモデルに提供し、1 件以上の予測をリアルタイムに取得します。  
@@ -70,7 +70,7 @@ ms.locfileid: "66083114"
   
  単一予測クエリを作成するときには、新しいデータを PREDICTION JOIN の形式でモデルに渡す必要があります。 したがって、実際のテーブルにマップするわけではなくても、新しいデータをマイニング モデルの既存の列に必ず一致させる必要があります。 新しいデータ列と新しいデータが完全に一致する場合は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によってそれらの列が自動的にマップされます。 これを *NATURAL PREDICTION JOIN*と呼びます。 一方、列が一致しない場合 (モデルに含まれているのと同じ種類および量のデータが新しいデータに含まれていない場合) は、モデルのどの列を新しいデータにマップするのかを指定するか、不足値を指定する必要があります。  
   
-###  <a name="bkmk_BatchQuery"></a>バッチ予測クエリ  
+###  <a name="batch-prediction-queries"></a><a name="bkmk_BatchQuery"></a> バッチ予測クエリ  
  バッチ予測クエリが役立つのは、予測の作成に使用できる外部データがある場合です。 たとえば、オンラインでの操作と購入履歴に基づいて顧客を分類するモデルを構築したとします。 このモデルを、新しく獲得した見込み客の一覧に適用すると、売上予測の作成、または提案されたキャンペーンの目標設定を行うことができます。  
   
  予測結合を実行するときは、モデルの列を新しいデータ ソースの列にマップする必要があります。 このため、入力用に選択するデータ ソースは、モデルのデータと類似したデータである必要があります。 新しい情報は、厳密に一致する必要はなく、完全でなくてもかまいません。 たとえば、モデルが所得と年齢に関する情報を使用してトレーニングされ、予測に使用する顧客リストには年齢情報があり、所得に関する情報はないとします。 この状況でも、新しいデータをモデルにマップし、各顧客の予測を作成できます。 ただし、所得がモデルの重要な予測子である場合、完全な情報がないことは予測の品質に影響します。  
@@ -80,19 +80,18 @@ ms.locfileid: "66083114"
  関連するすべての列のマップが終了したらクエリを実行します。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって、モデル内のパターンに基づいて新しいデータの各行の予測が行われます。 外部データを含むデータ ソース ビューの新しいテーブルに結果を保存することができます。あるいは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用している場合は、データをコピーして貼り付けることができます。  
   
 > [!WARNING]  
->  
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のデザイナーを使用する場合は、先に外部データ ソースをデータ ソース ビューとして定義しておく必要があります。  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のデザイナーを使用する場合は、先に外部データ ソースをデータ ソース ビューとして定義しておく必要があります。  
   
  DMX を使用して予測結合を作成する場合は、OPENQUERY、OPENROWSET、または SHAPE の各コマンドを使用して外部データ ソースを指定できます。 DMX テンプレートの既定のデータ アクセス メソッドは OPENQUERY です。 これらのメソッドの詳細については、「[&#60;source data query&#62;](/sql/dmx/source-data-query)」をご覧ください。  
   
-###  <a name="bkmk_TSQuery"></a>タイムシリーズマイニングモデルの予測  
+###  <a name="predictions-in-time-series-mining-models"></a><a name="bkmk_TSQuery"></a> 時系列マイニング モデルの予測  
  時系列モデルは他の種類のモデルとは異なります。モデルをそのまま使用して予測を作成することも、モデルに新しいデータを渡し、モデルを更新して、最新の傾向に基づいて予測を作成することもできます。 新しいデータを追加する場合は、新しいデータの使用方法を指定できます。  
   
--   *モデルケースを拡張*することは、時系列モデルの既存のデータ系列に新しいデータを追加することを意味します。 その後、新しい組み合わせの系列に基づいて予測が行われます。 このオプションは、既存のモデルに追加するデータ ポイントが少ないときに適しています。  
+-   *モデル ケースの拡張* では、時系列モデルの既存のデータ系列に新しいデータを追加します。 その後、新しい組み合わせの系列に基づいて予測が行われます。 このオプションは、既存のモデルに追加するデータ ポイントが少ないときに適しています。  
   
      たとえば、前年の売上データでトレーニングされた既存の時系列モデルがあったとします。 新しい売上データを数か月にわたって収集した後、現在の年の売上予測を更新します。 この場合は、予測結合を作成して、新しいデータを追加してモデルを更新し、新しい予測が行われるようにモデルを拡張します。  
   
--   *モデルケースを置き換える*ことは、トレーニング済みのモデルを保持しながら、基になるケースを新しいケースデータのセットに置き換えることを意味します。 モデルの傾向を維持して、別のデータ系列に適用するときは、このオプションが便利です。  
+-   *モデル ケースの置換* では、トレーニング済みのモデルは保持されますが、基になるケースが新しいケース データのセットで置換されます。 モデルの傾向を維持して、別のデータ系列に適用するときは、このオプションが便利です。  
   
      たとえば、元のモデルが、売上高が非常に高いデータ セットでトレーニングされたとします。新しい系列 (売上高が低い店舗のデータ) で元のデータを置換すると、傾向は保持されますが、置換系列の値に基づいた予測が開始されます。  
   
@@ -100,14 +99,12 @@ ms.locfileid: "66083114"
   
  時系列モデルで予測結合を作成する方法の詳細については、「[タイム シリーズ モデルのクエリ例](time-series-model-query-examples.md)」または「[PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)」をご覧ください。  
   
-##  <a name="bkmk_WorkResults"></a>予測クエリの結果の操作  
+##  <a name="working-with-the-results-of-a-prediction-query"></a><a name="bkmk_WorkResults"></a> 予測クエリの結果の操作  
  データ マイニング予測クエリの結果を保存するオプションは、クエリの作成方法に応じて異なります。  
   
--   
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で予測クエリ ビルダーを使用してクエリを作成する場合は、予測クエリの結果を既存の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースに保存できます。 詳しくは、「 [予測クエリの結果の表示および保存](view-and-save-the-results-of-a-prediction-query.md)」をご覧ください。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で予測クエリ ビルダーを使用してクエリを作成する場合は、予測クエリの結果を既存の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースに保存できます。 詳しくは、「 [予測クエリの結果の表示および保存](view-and-save-the-results-of-a-prediction-query.md)」をご覧ください。  
   
--   
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の [クエリ] ペインで DMX を使用して予測クエリを作成する場合は、クエリの出力オプションを使用して結果をファイルに保存するか、[クエリ結果] ペインにテキストとして、またはグリッドに保存できます。 詳細については、「[クエリおよびテキスト エディター &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)」を参照してください。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の [クエリ] ペインで DMX を使用して予測クエリを作成する場合は、クエリの出力オプションを使用して結果をファイルに保存するか、[クエリ結果] ペインにテキストとして、またはグリッドに保存できます。 詳細については、「[クエリおよびテキスト エディター &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)」を参照してください。  
   
 -   Integration Services コンポーネントを使用して予測クエリを実行する場合、タスクでは、使用可能な ADO.NET 接続マネージャーまたは OLEDB 接続マネージャーを使用して結果をデータベースに書き込む機能が提供されます。 詳細については、「 [Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md)」をご参照ください。  
   
@@ -150,6 +147,6 @@ FROM
   
 ## <a name="see-also"></a>参照  
  [データマイニング &#40;コンテンツクエリ&#41;](content-queries-data-mining.md)   
- [データマイニング&#41;&#40;データ定義クエリ](data-definition-queries-data-mining.md)  
+ [データ定義クエリ &#40;データ マイニング&#41;](data-definition-queries-data-mining.md)  
   
   

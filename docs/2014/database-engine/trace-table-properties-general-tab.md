@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 79976111570e2f9cb153c853567f0f2091f77eb6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088740"
 ---
 # <a name="trace-table-properties-general-tab"></a>[トレース テーブルのプロパティ] ([全般] タブ)
@@ -30,24 +30,24 @@ ms.locfileid: "66088740"
  **テーブル名**  
  サーバー、データベース、スキーマ、表示しているトレース テーブルの名前を表示します。  
   
- **トレースプロバイダー名**  
+ **[トレース プロバイダー名]**  
  トレースの対象となった SQL Server のインスタンスの名前を表示します。  
   
- **トレースプロバイダーの種類**  
+ **[トレース プロバイダーの種類]**  
  トレースを提供したサーバーの種類を表示。  
   
- **バージョン**  
+ **version**  
  トレースを提供したサーバーのバージョンを表示。  
   
- **[行]**  
+ **削減**  
  トレース テーブルの行数を表示します。  
   
  **[データ サイズ (ページ)]**  
  トレース テーブルのデータ ページ数を表示します。  
   
 ## <a name="see-also"></a>参照  
- [トレース テーブルを開く &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
- [[SQL Server Profiler]](../tools/sql-server-profiler/sql-server-profiler.md)   
- [SQL Server プロファイラーのテンプレートとアクセス許可](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  
+ [トレーステーブル &#40;SQL Server プロファイラーを開き&#41;](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
+ [SQL Server プロファイラー](../tools/sql-server-profiler/sql-server-profiler.md)   
+ [SQL Server プロファイラーのテンプレートと権限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  
   
   

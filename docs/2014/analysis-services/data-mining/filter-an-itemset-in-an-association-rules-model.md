@@ -15,28 +15,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bef576a32bebc1c80b2ded8ee4831696811ba819
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084358"
 ---
 # <a name="filter-an-itemset-in-an-association-rules-model"></a>アソシエーション ルール モデルのアイテムセットのフィルター選択
-  
-  
-  
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、 **アソシエーション ルール ビューアーの** [アイテムセット] [!INCLUDE[msCoName](../../includes/msconame-md.md)] タブに表示されるアイテムセットをフィルター選択できます。  
   
 ### <a name="to-filter-an-itemset"></a>アイテムセットをフィルター選択するには  
   
-1.  
-  **のデータ マイニング デザイナーの** [マイニング モデル ビューアー] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]タブで、 **アソシエーション ルール ビューアー** の **[アイテムセット]** タブをクリックします。  
+1.  **のデータ マイニング デザイナーの** [マイニング モデル ビューアー] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]タブで、 **アソシエーション ルール ビューアー** の **[アイテムセット]** タブをクリックします。  
   
-2.  
-  **[アイテムセットのフィルター]** ボックスにルールの条件を入力します。 たとえば、「Touring-1000 = existing」などの条件を入力します。  
+2.  **[アイテムセットのフィルター]** ボックスにルールの条件を入力します。 たとえば、「Touring-1000 = existing」などの条件を入力します。  
   
-3.  
-  **Enter**をクリックします。  
+3.  **Enter**をクリックします。  
   
  これでアイテムセットにフィルターが適用され、選択されたアイテムを含んだアイテムセットのみが表示されます。 このボックスでは、大文字と小文字は区別されません。 フィルターはメモリに保存されるので、一覧から古いフィルターを選択することもできます。  
   

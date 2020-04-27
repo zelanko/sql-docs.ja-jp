@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9f0e4d1a384995c0c49c346102f8fddbcdf47f68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086788"
 ---
 # <a name="create-testing-set-data-mining-wizard"></a>テスト セットの作成 (データ マイニング ウィザード)
-  
   **[テスト セットの作成]** ページを使用すると、トレーニングに使用するデータの量、およびテスト セットとして使用するために予約するデータの量を指定できます。 マイニング構造を作成する際にデータをトレーニングとテストのセットに分割すると、後で作成するマイニング モデルの精度をより簡単に評価できるようになります。  
   
  テスト データの量を割合で指定することも、テストに使用するケースの数を制限する数値を指定することもできます。 テストに使用するケースの最大数と割合の両方を指定すると、両方の設定が使用され、テスト データセットには小さい方の数のケースが含められます。 既定では、データの 30% がテストに、70% がトレーニングに使用され、テスト ケースの最大数はありません。  
@@ -35,7 +34,7 @@ ms.locfileid: "66086788"
   
 -   入れ子になったテーブルに格納されている値を予測しようとしている場合、データをパーティション分割することはできません。  
   
- **詳細について**は、「[データマイニング&#41;のテストと検証 &#40;](data-mining/testing-and-validation-data-mining.md)」、「[リレーショナルマイニング構造の作成](data-mining/create-a-relational-mining-structure.md)」、「[基本的なデータマイニングチュートリアル](../../2014/tutorials/basic-data-mining-tutorial.md)」を参照してください。  
+ **詳細情報:** [テストおよび検証 &#40;データ マイニング&#41;](data-mining/testing-and-validation-data-mining.md)、[リレーショナル マイニング構造の作成](data-mining/create-a-relational-mining-structure.md)、[基本的なデータ マイニング チュートリアル](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
 ## <a name="options"></a>オプション  
  **[テスト用データの割合]**  

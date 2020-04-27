@@ -13,17 +13,17 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: ae595b42274e012032e79754650b573b5d80053b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089128"
 ---
 # <a name="options-text-editorxmltabs-page"></a>[オプション] ([テキスト エディター]: [XML]: [タブ] ページ)
   このダイアログ ボックスを使用すると、XML ドキュメントの編集に使用される XML エディターのタブの動作を変更できます。 この設定を表示するには、[ **ツール** ] メニューの [ **オプション** ] をクリックして、[ **テキスト エディター** ] フォルダーを展開し、さらに [ **XML** ] サブフォルダーを展開して、[ **タブ**] をクリックします。  
   
 ## <a name="setting-options-in-multiple-locations"></a>複数の場所でのオプション設定  
- XML エディターのオプションは、[すべての言語] の [全般] **** ダイアログで設定することもできます。 [**すべての言語**] ダイアログボックスを使用して、DMX エディター [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]や MDX エディターなど、他のエディターのさまざまなオプションを設定する場合は、このダイアログを使用して XML エディターのオプションを設定し直す必要があります。  
+ XML エディターのオプションは、[すべての言語] の [全般] **** ダイアログで設定することもできます。 ただし、DMX エディターや MDX エディターなど、他の **エディターに対し、** [すべての言語] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のダイアログを使用して異なるオプションを設定する場合は、ここで紹介したダイアログを使用して XML エディターのオプションを設定し直す必要があります。  
   
 ## <a name="indenting"></a>インデント  
  **なし**  

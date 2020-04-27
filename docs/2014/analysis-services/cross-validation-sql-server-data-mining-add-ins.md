@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0cc3a132792cca8ecdf5a33a2fe4e4d40116c497
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086650"
 ---
 # <a name="cross-validation-sql-server-data-mining-add-ins"></a>クロス検証 (SQL Server データ マイニング アドイン)
@@ -67,7 +67,7 @@ ms.locfileid: "66086650"
     > [!NOTE]  
     >  Microsoft Excel は、モデルがパーティション分割されて各分割がテストされている間、一時的に応答しなくなることがあります。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  クロス検証レポートを作成するには、データ マイニング構造と関連モデルを作成しておく必要があります。 ウィザードでは、ダイアログ ボックスを使用して既存の構造およびモデルから選択できます。  
   
  複数のマイニング モデルをサポートするマイニング構造を選択した場合、それらのモデルで異なる予測可能な属性が使用されていると、クロス検証ウィザードでは、同一の予測可能な属性を共有するモデルのみがテストされます。  
@@ -103,7 +103,7 @@ ms.locfileid: "66086650"
 #### <a name="classification-true-or-false-positives-and-negatives"></a>分類 : 真陽性、偽陽性、真陰性、偽陰性  
  このテストは、指定した対象を持つすべての分類モデルに対して使用されます。 このメジャーは、モデルで予測した対象と実際の結果に応じて、各ケースの分類方法を示します。  
   
-|Measure|[説明]|  
+|Measure|説明|  
 |-------------|-----------------|  
 |真陽性|以下の条件を満たしているケースの数です。<br /><br /> 対象の値がケースに含まれている。<br /><br /> 対象の値がケースに含まれていることがモデルで予測された。|  
 |偽陽性|以下の条件を満たしているケースの数です。<br /><br /> 実際の値が対象の値と等しい。<br /><br /> 対象の値がケースに含まれていることがモデルで予測された。|  

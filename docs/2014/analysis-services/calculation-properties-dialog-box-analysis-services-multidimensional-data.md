@@ -15,14 +15,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2a8dfe06f3f05dead3686d0319ba0958388994ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088316"
 ---
 # <a name="calculation-properties-dialog-box-analysis-services---multidimensional-data"></a>[計算プロパティ] ダイアログ ボックス (Analysis Services - 多次元データ)
-  
   **の** [計算プロパティ] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを使用すると、選択したキューブのキューブ デザイナーの **[計算]** タブで定義された計算に関する表示フォルダーや、その計算に関連付けられたメジャー グループのプロパティを表示したり編集したりできます。 キューブ デザイナーの **[計算]** タブの **[ツール バー]** ペインにある **[計算プロパティ]** をクリックして、 **[計算プロパティ]** ダイアログ ボックスを表示できます。  
   
 ## <a name="options"></a>オプション  
@@ -33,12 +32,10 @@ ms.locfileid: "66088316"
 >  スクリプト コマンドは表示されません。  
   
  **フォルダーの表示**  
- 
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] および [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]を含め、クライアント アプリケーションで計算が表示される、表示フォルダーの名前を入力します。  
+ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] および [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]を含め、クライアント アプリケーションで計算が表示される、表示フォルダーの名前を入力します。  
   
- **[関連付けられたメジャー グループ]**  
- 
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] や [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]などのクライアント アプリケーションで、計算されるメンバーまたは名前付きセットを表示するメジャー グループを選択します。  
+ **関連付けられたメジャーグループ**  
+ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] や [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]などのクライアント アプリケーションで、計算されるメンバーまたは名前付きセットを表示するメジャー グループを選択します。  
   
 ## <a name="see-also"></a>参照  
  [キューブデザイナーの計算 &#40;&#41; &#40;Analysis Services-多次元データ&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   

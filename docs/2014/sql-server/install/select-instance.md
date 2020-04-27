@@ -13,14 +13,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e5e74eba3479bdc722fdd45c99eb78592d6e8007
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092350"
 ---
 # <a name="select-instance"></a>インスタンスの選択
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードの [インスタンスの選択] ページを使用すると、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]にアップグレードする [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]のインスタンスを指定できます。  
   
 ## <a name="options"></a>オプション  
@@ -40,8 +39,7 @@ ms.locfileid: "66092350"
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
   
--   
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] - SharePoint  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] - SharePoint  
   
 -   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]  
   
@@ -49,6 +47,6 @@ ms.locfileid: "66092350"
   
 ## <a name="see-also"></a>参照  
  [アップグレードアドバイザーを使用してアップグレードを準備する](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)   
- [SQL Server の複数のバージョンおよびインスタンスの使用](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)  
+ [SQL Server の複数のバージョンおよびインスタンスの操作](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)  
   
   

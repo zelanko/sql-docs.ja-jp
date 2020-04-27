@@ -15,14 +15,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ae927a281db54697bbda49e28a58ea4c6e60326a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088727"
 ---
 # <a name="view-the-extended-events-targets-for-registered-packages"></a>登録パッケージの拡張イベント ターゲットの表示
-  
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 拡張イベント セッションを作成する前に、提供されている拡張イベント ターゲットを確認すると役立つことがあります。 この作業では、以降に示した手順を実行するために [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のクエリ エディターを使用します。  
   
  この手順でステートメントの実行を完了すると、クエリ エディターの **[結果]** タブに次の 2 つの列が表示されます。  
@@ -45,7 +44,7 @@ ms.locfileid: "66088727"
     ```  
   
 ## <a name="see-also"></a>参照  
- [SQL Server 拡張イベント ターゲット](../../2014/database-engine/sql-server-extended-events-targets.md)   
+ [拡張イベントターゲットの SQL Server](../../2014/database-engine/sql-server-extended-events-targets.md)   
  [dm_xe_objects &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql)   
  [sys.dm_xe_packages &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-packages-transact-sql)  
   

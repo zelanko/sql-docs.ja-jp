@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 598a317bdecb2ed3808a7b5af35316d95d3b87c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092010"
 ---
 # <a name="sql-server-agent-upgrade-issues"></a>SQL Server エージェントのアップグレードに関する問題
@@ -43,6 +43,6 @@ ms.locfileid: "66092010"
   
 ## <a name="see-also"></a>参照  
  [SQL Server 2014 Upgrade Advisor &#91;新しい&#93;](sql-server-2014-upgrade-advisor.md)   
- [アップグレードに関する問題とその対処方法](../../../2014/sql-server/install/resolving-upgrade-issues.md)  
+ [アップグレードに関する問題の解決](../../../2014/sql-server/install/resolving-upgrade-issues.md)  
   
   

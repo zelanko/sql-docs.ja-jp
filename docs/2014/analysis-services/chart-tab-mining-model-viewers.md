@@ -13,22 +13,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 57efea3fb5134312ac1ec3e7e9c719bb49872c5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088175"
 ---
 # <a name="chart-tab-mining-model-viewers"></a>[グラフ] タブ (マイニング モデル ビューアー)
   タイム シリーズ モデルのトレーニングで使用する履歴データを、予測される値と共に表示するには、 **[グラフ]** ペインを使用します。 グラフの縦軸はタイム シリーズの値を表し、横軸は時間を表します。 将来の予測は、点線によって表します。  
   
- **詳細情報:** [Microsoft タイムシリーズアルゴリズム](data-mining/microsoft-time-series-algorithm.md)、 [Microsoft タイムシリーズビューアーを使用したモデルの参照](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
+ **詳細情報:** [Microsoft Time Series アルゴリズム](data-mining/microsoft-time-series-algorithm.md)、 [Microsoft タイム シリーズ ビューアーを使用したモデルの参照](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
   
 ## <a name="options"></a>オプション  
  **[ビューアーのコンテンツを最新状態に更新]**  
  ビューアーにマイニング モデルを再読み込みします。  
   
- **マイニングモデル**  
+ **[マイニング モデル]**  
  現在のマイニング構造に含まれているマイニング モデルから選択します。 関連付けられているビューアーが開き、マイニング モデルが表示されます。  
   
  **[ビューアー]**  
@@ -44,8 +44,7 @@ ms.locfileid: "66088175"
  画面の大きさに合うようにグラフ全体を縮小します。  
   
  **絶対**  
- 2 つのグラフ ビューを切り替えます。デフォルト ビューでは、数値は全体分布に対するパーセンテージとしてグラフ化されます。 
-  **[Abs]** をクリックすると、数値は絶対値としてグラフ化されます。  
+ 2 つのグラフ ビューを切り替えます。デフォルト ビューでは、数値は全体分布に対するパーセンテージとしてグラフ化されます。 **[Abs]** をクリックすると、数値は絶対値としてグラフ化されます。  
   
  **[グラフをクリップボードにコピーします]**  
  グラフ全体をクリップボードにコピーします。  

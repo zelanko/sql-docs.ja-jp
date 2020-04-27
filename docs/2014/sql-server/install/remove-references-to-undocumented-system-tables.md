@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 06249aa1849a1be9af40e183724e85b0f318f3dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093144"
 ---
 # <a name="remove-references-to-undocumented-system-tables"></a>ドキュメントに記載されていないシステム テーブルへの参照の削除
@@ -26,7 +26,7 @@ ms.locfileid: "66093144"
 ## <a name="component"></a>コンポーネント  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>[説明]  
+## <a name="description"></a>説明  
  ドキュメントに記載されていない以下のシステム テーブルは削除されました。  
   
 -   **spt_datatype_info**  
@@ -80,7 +80,7 @@ ms.locfileid: "66093144"
 ## <a name="corrective-action"></a>修正措置  
  次の表に従ってアプリケーションを修正してください。  
   
-|以前のシステム ストアド プロシージャ|用途|  
+|以前のシステム ストアド プロシージャ|vmmblue_2|  
 |----------------|---------|  
 |**sysfulltextnotify**|OBJECTPROPERTYEX 関数の**TableFulltextPendingChanges**プロパティ。|  
 |**syslocks**|**dm_tran_locks**動的管理ビュー、sp_lock、または**syslockinfo**互換性ビュー。|  

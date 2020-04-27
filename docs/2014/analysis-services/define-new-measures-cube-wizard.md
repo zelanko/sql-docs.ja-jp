@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8f526c1327f67bdcf84dce44e670eb195de9a96a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082108"
 ---
 # <a name="define-new-measures-cube-wizard"></a>[新しいメジャーの定義] (キューブ ウィザード)
-  
   **[新しいメジャーの定義]** ページを使用すると、データ ソースを使用せずに作成されるキューブの新しいメジャーを作成できます。  
   
 > [!NOTE]  
@@ -89,7 +88,7 @@ ms.locfileid: "66082108"
   
  集計を変更するには、変更する集計をクリックして、一覧からデータ型を選択します。  
   
- **閉じる**  
+ **X**  
  キューブから新しいメジャーを削除します。  
   
  新しいメジャーをキューブから削除するには、削除するメジャーの **[X]** ボタンをクリックします。  

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b463035cc83fafd2b283d85a577616fa962fcd1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083621"
 ---
 # <a name="mining-model-content-for-logistic-regression-models-analysis-services---data-mining"></a>ロジスティック回帰モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)
@@ -72,9 +72,9 @@ ms.locfileid: "66083621"
  NODE_TYPE  
  ロジスティック回帰モデルでは、次のノードの種類が出力されます。  
   
-|ノードの種類の ID|[説明]|  
+|ノードの種類の ID|説明|  
 |------------------|-----------------|  
-|1 で保護されたプロセスとして起動されました|モデル。|  
+|1|モデル。|  
 |17|サブネットワークのオーガナイザー ノード。|  
 |18|入力層のオーガナイザー ノード。|  
 |19|非表示層のオーガナイザー ノード。 非表示層は空です。|  
@@ -167,7 +167,7 @@ ms.locfileid: "66083621"
  MSOLAP_NODE_SHORT_CAPTION  
  ロジスティック回帰モデルでは常に空白です。  
   
-##  <a name="bkmk_NodeIDs"></a>ノード名と Id の使用  
+##  <a name="using-node-names-and-ids"></a><a name="bkmk_NodeIDs"></a>ノード名と Id の使用  
  ロジスティック回帰モデルのノードの名前付けでは、モデル内のノード間のリレーションシップに関する追加情報が提供されます。 次の表に、各層のノードに割り当てられる ID の規則を示します。  
   
 |ノードの種類|ノード ID の規則|  

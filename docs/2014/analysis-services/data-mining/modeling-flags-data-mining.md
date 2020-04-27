@@ -23,10 +23,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 37263c42e4e9f37b1b782dc07b8df03f77092b14
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083309"
 ---
 # <a name="modeling-flags-data-mining"></a>モデリング フラグ (データ マイニング)
@@ -69,10 +69,9 @@ WHERE STRUCTURE_NAME = '<structure name>'
   
  モデルに使用されるモデリング フラグは、データ マイニング デザイナーを使用し、関連する列のプロパティを編集することによって追加または変更できます。 このような変更を行った場合、該当する構造またはモデルを再処理する必要があります。  
   
- 新しいマイニング構造またはマイニング モデルでモデリング フラグを指定するには、DMX を使用するか、AMO スクリプトまたは XMLA スクリプトを使用します。 ただし、DMX を使用して、既存のマイニング モデルやマイニング構造で使用されているモデリング フラグを変更することはできません。 
-  `ALTER MINING STRUCTURE....ADD MINING MODEL`構文を使用して新しいマイニング モデルを作成する必要があります。  
+ 新しいマイニング構造またはマイニング モデルでモデリング フラグを指定するには、DMX を使用するか、AMO スクリプトまたは XMLA スクリプトを使用します。 ただし、DMX を使用して、既存のマイニング モデルやマイニング構造で使用されているモデリング フラグを変更することはできません。 `ALTER MINING STRUCTURE....ADD MINING MODEL`構文を使用して新しいマイニング モデルを作成する必要があります。  
   
-##  <a name="bkmk_UseRegressors"></a>リグレッサーモデリングフラグの使用  
+##  <a name="uses-of-the-regressor-modeling-flag"></a><a name="bkmk_UseRegressors"></a> REGRESSOR モデリング フラグの使用  
  列に REGRESSOR モデリング フラグを設定すると、その列にリグレッサー候補が含まれていることがアルゴリズムに対して示されます。 モデルで使用される実際のリグレッサーはアルゴリズムによって決定されます。 予測可能な属性をモデル化しないリグレッサー候補は破棄できます。  
   
  データ マイニング ウィザードを使用してモデルを作成すると、連続列である入力列のすべてにリグレッサー候補のフラグが付けられます。 したがって、REGRESSOR フラグを明示的に設定していない列がモデルでリグレッサーとして使用される場合もあります。  
@@ -85,11 +84,10 @@ FROM $system.DMSCHEMA_MINING_COLUMNS
 WHERE MODEL_NAME = '<model name>'  
 ```  
   
- **メモ**マイニングモデルを変更し、列のコンテンツの種類を連続から不連続に変更した場合は、マイニング列のフラグを手動で変更してからモデルを再処理する必要があります。  
+ **注** マイニング モデルを変更して、列のコンテンツの種類を連続から不連続に変更した場合は、マイニング列のフラグを手動で変更してからモデルを再処理する必要があります。  
   
 ### <a name="regressors-in-linear-regression-models"></a>線形回帰モデルのリグレッサー  
- 線形回帰モデルは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムに基づいています。 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムを使用していない場合でも、連続属性の回帰を表すツリーやノードがデシジョン ツリー モデルに含まれることはあります。  
+ 線形回帰モデルは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムに基づいています。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムを使用していない場合でも、連続属性の回帰を表すツリーやノードがデシジョン ツリー モデルに含まれることはあります。  
   
  したがって、これらのモデルについては、連続列がリグレッサーを表すことを指定する必要はありません。 列に REGRESSOR フラグを設定しなくても、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムにより、データセットが意味のあるパターンを持つ領域に分割されます。 違いは、このモデリング フラグを設定すると、ツリーのノードのパターンに合う以下の形式の回帰式をアルゴリズムが見つけようとするということです。  
   
@@ -106,13 +104,13 @@ WHERE MODEL_NAME = '<model name>'
   
 |タスク|トピック|  
 |----------|-----------|  
-|データ マイニング デザイナーを使用してモデリング フラグを編集する|[データマイニング&#41;&#40;モデリングフラグを表示または変更する](modeling-flags-data-mining.md)|  
+|データ マイニング デザイナーを使用してモデリング フラグを編集する|[モデリング フラグの表示または変更 &#40;データ マイニング&#41;](modeling-flags-data-mining.md)|  
 |適切なリグレッサーを推奨するためのヒントをアルゴリズムに対して指定する|[モデルでリグレッサーとして使用する列の指定](specify-a-column-to-use-as-regressor-in-a-model.md)|  
-|特定のアルゴリズムでサポートされているモデリング フラグを確認する (各アルゴリズムのリファレンス トピックの「モデリング フラグ」セクション)|[データマイニングアルゴリズム &#40;Analysis Services-データマイニング&#41;](data-mining-algorithms-analysis-services-data-mining.md)|  
+|特定のアルゴリズムでサポートされているモデリング フラグを確認する (各アルゴリズムのリファレンス トピックの「モデリング フラグ」セクション)|[データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining-algorithms-analysis-services-data-mining.md)|  
 |マイニング構造列とそこに設定できるプロパティについて詳しく知る|[マイニング構造列](mining-structure-columns.md)|  
 |モデル レベルで適用できるマイニング モデル列とモデリング フラグについて知る|[マイニング モデル列](mining-model-columns.md)|  
-|モデリング フラグを DMX ステートメントで扱うための構文を確認する|[DMX&#41;&#40;のモデリングフラグ](/sql/dmx/modeling-flags-dmx)|  
-|不足値とその取り扱いの方法について知る|[欠損値 &#40;Analysis Services データマイニング&#41;](missing-values-analysis-services-data-mining.md)|  
+|モデリング フラグを DMX ステートメントで扱うための構文を確認する|[モデリング フラグ (DMX)](/sql/dmx/modeling-flags-dmx)|  
+|不足値とその取り扱いの方法について知る|[不足値 &#40;Analysis Services - データ マイニング&#41;](missing-values-analysis-services-data-mining.md)|  
 |モデルと構造の管理および使用法のプロパティの設定について知る|[データ マイニング オブジェクトの移動](moving-data-mining-objects.md)|  
   
   

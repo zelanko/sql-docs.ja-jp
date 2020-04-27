@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dd93707ef139b1751d918af43efed72574d58aa5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088505"
 ---
 # <a name="sql-server-backward-compatibility"></a>SQL Server の旧バージョンとの互換性
@@ -22,7 +22,7 @@ ms.locfileid: "66088505"
   
  このトピック領域に含まれる機能には、データ プログラミング、セキュリティ構成ツール、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] セットアップ、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] サービス、およびその他の幅広い機能の変更が含まれます。  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[SQL Server 2014 の非推奨の SQL Server 機能](../../2014/getting-started/deprecated-sql-server-features-in-sql-server-2014.md)|このリリースで非推奨とされた [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 機能。 このトピックでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の構成とセットアップ機能について説明します。|  
 |[SQL Server 2014 で提供が中止された機能](../../2014/getting-started/discontinued-sql-server-features-in-sql-server-2014.md)|このリリースで廃止された [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 機能。 このトピックでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の構成とセットアップ機能について説明します。|  

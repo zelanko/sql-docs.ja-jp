@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fd2506e835f634937d5bf135ed7eec7cfa259b5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083097"
 ---
 # <a name="process-a-mining-model"></a>マイニング モデルの処理
-  
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のデータ マイニング デザイナーにある [マイニング モデル] タブを使用すると、特定のマイニング モデル構造に関連するマイニング モデルを処理したり、その構造に関連するすべてのモデルを処理したりできます。  
   
  マイニング モデルは、次のツールを使用して処理できます。  
@@ -29,21 +28,19 @@ ms.locfileid: "66083097"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
- XMLA 処理コマンドを使用することもできます。 詳細については、「[処理するためのツールと方法 (Analysis Services)](../multidimensional-models/tools-and-approaches-for-processing-analysis-services.md)」を参照してください。  
+ XMLA 処理コマンドを使用することもできます。 詳細については、「 [&#40;Analysis Services&#41;を処理するためのツールと方法](../multidimensional-models/tools-and-approaches-for-processing-analysis-services.md)」を参照してください。  
   
 ### <a name="process-a-single-mining-model-using-sql-server-data-tools"></a>SQL Server データ ツールを使用した単一のマイニング モデルの処理  
   
 1.  データ マイニング デザイナーの **[マイニング モデル]** タブで、グリッドにある 1 つまたは複数のモデル列からマイニング モデルを 1 つ選択します。  
   
-2.  
-  **[マイニング モデル]** メニューの **[モデルの処理]** をクリックします。  
+2.  **[マイニング モデル]** メニューの **[モデルの処理]** をクリックします。  
   
      マイニング構造に変更を加えた場合は、モデルを処理する前に構造を再配置するように求められます。 **[はい]** をクリックします。  
   
 3.  [**マイニングモデルの処理- \<モデル>** ] ダイアログボックスで、[**実行**] をクリックします。  
   
-     
-  **[処理の進行状況]** ダイアログ ボックスが開き、モデル処理の詳細が表示されます。  
+     **[処理の進行状況]** ダイアログ ボックスが開き、モデル処理の詳細が表示されます。  
   
 4.  モデルの処理が問題なく終了したら、 **[処理の進行状況]** ダイアログ ボックスで **[閉じる]** をクリックします。  
   
@@ -59,8 +56,7 @@ ms.locfileid: "66083097"
   
 3.  [**マイニング構造の処理- \<構造>** ] ダイアログボックスで、[**実行**] をクリックします。  
   
-4.  
-  **[処理の進行状況]** ダイアログ ボックスが開き、モデル処理の詳細が表示されます。  
+4.  **[処理の進行状況]** ダイアログ ボックスが開き、モデル処理の詳細が表示されます。  
   
 5.  モデルの処理が問題なく終了したら、 **[処理の進行状況]** ダイアログ ボックスで **[閉じる]** をクリックします。  
   

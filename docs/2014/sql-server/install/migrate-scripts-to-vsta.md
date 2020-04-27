@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: cb44a7b635e24c0c2e3266c1cca98a9c4f6a347c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093986"
 ---
 # <a name="migrate-scripts-to-vsta"></a>VSTA へのスクリプトの移行
@@ -34,14 +34,13 @@ ms.locfileid: "66093986"
   
 -   VSA スクリプトのエントリ ポイント名が変更された。  
   
-     エントリ ポイントは、スクリプト タスク コードのエントリ ポイントとして `ScriptMain` ランタイムが呼び出す、VSTA プロジェクトの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] クラスのメソッドを指定します。 `ScriptMain`クラスは、スクリプトテンプレートによって生成される既定のクラスです。  
+     エントリ ポイントは、スクリプト タスク コードのエントリ ポイントとして [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ランタイムが呼び出す、VSTA プロジェクトの `ScriptMain` クラスのメソッドを指定します。 `ScriptMain`クラスは、スクリプトテンプレートによって生成される既定のクラスです。  
   
 -   VSA スクリプトにエントリ ポイントがないか、複数のエントリ ポイントがある。  
   
 -   アセンブリ参照を追加できなかった。  
   
--   
-  `ScriptMain` クラスが、`ScriptObjectModelSSIS` クラス以外にもクラスを継承するように変更された。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]では、多重継承はサポートされていません。  
+-   `ScriptMain` クラスが、`ScriptObjectModelSSIS` クラス以外にもクラスを継承するように変更された。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]では、多重継承はサポートされていません。  
   
  [!INCLUDE[vbprvblong](../../includes/vbprvblong-md.md)]を使用する VSA スクリプトを、を使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csharp_orcas_long](../../includes/csharp-orcas-long-md.md)]する VSTA スクリプトに変換することはできません。 ただし、を使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csharp_orcas_long](../../includes/csharp-orcas-long-md.md)]する新しい VSTA スクリプトを作成できます。 詳細については、「[スクリプト タスクのコーディングおよびデバッグ](../../integration-services/control-flow/script-task.md)」および「[スクリプト コンポーネントのコーディングおよびデバッグ](../../integration-services/data-flow/transformations/script-component.md)」を参照してください。  
   

@@ -13,27 +13,26 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5576e997023e5a00cdecc3c2079ce387c7062ebb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082376"
 ---
 # <a name="data-sources-from-existing-objects-data-source-wizard-analysis-services"></a>[既存のオブジェクトのデータ ソース] (データ ソース ウィザード) (Analysis Services)
-  
   **[既存のオブジェクトのデータ ソース]** ページを使用すると、新しいデータ ソースの基となる既存のデータ ソースまたはプロジェクトを指定できます。  
   
 ## <a name="options"></a>オプション  
  **[ソリューションの既存のデータ ソースに基づいてデータ ソースを作成する]**  
  新しいデータ ソースは、ソリューションの既存のデータ ソースに基づきます。 新しいデータ ソースを使用するプロジェクトが構築、更新、または配置される場合、この新しいデータ ソースの設定は、このオプションを選択したときに指定したデータ ソースから取得されます。  
   
- **データソース**  
+ **データ ソース**  
  プロジェクトによってグループ化されたデータ ソースの一覧から新しいデータ ソースの基になるデータ ソースを選択します。  
   
  **[Analysis Services プロジェクトに基づいてデータ ソースを作成する]**  
  現在のソリューション内の別[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のプロジェクトを参照する新しいデータソースを作成する場合に選択します。 新しいデータ ソースは、選択されたプロジェクトの `TargetServer` プロパティと `TargetDatabase` プロパティから設定を取得します。 新しいデータ ソースを使用するプロジェクトが構築、更新、または配置される場合、この新しいデータ ソースの設定は、このオプションを選択したときに指定したデータ ソースから取得されます。  
   
- **作品**  
+ **プロジェクト**  
  新しいデータ ソースで参照するプロジェクトを選択します。  
   
 ## <a name="see-also"></a>参照  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 468686314bb2446415a6883c6233708f9cbd1d2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087098"
 ---
 # <a name="connect-to-source-data-data-mining-client-for-excel"></a>ソース データへの接続 (Excel 用データ マイニング クライアント)
@@ -28,13 +28,12 @@ ms.locfileid: "66087098"
   
  **外部データ ソースへの接続。** モデルの作成時や結果の保存時に外部データへの接続を作成することもできます。 たとえば、あるサーバー上にデータ マイニング モデルを作成してから、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] の別のインスタンス、Excel データ テーブル、または [!INCLUDE[msCoName](../includes/msconame-md.md)] Access のような外部データ ソースに保存されているデータを使用して、作成したデータ マイニング モデルに基づく予測クエリを実行できます。 新しいデータ ソースにアクセスするたびに、ダイアログ ボックスを使用して接続を作成するように求められます。  
   
-##  <a name="bkmk_prereq2"></a> 前提条件  
+##  <a name="prerequisites"></a><a name="bkmk_prereq2"></a> 前提条件  
  このバージョンのアドインを使用するには、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のインスタンスが SQL Server 2012 であることが必要です。 以前のバージョンの [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] に接続する場合、それぞれのバージョンのアドインを使用できます。 SQL Server 2005、SQL Server 2008、SQL Server 2008 R2 をサポートするアドインのバージョンがあります。  
   
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースに接続するには、データベース サーバーにアクセスする権限が必要です。 また、データ マイニング セッションが有効にされていて、サーバーに格納されているデータベース オブジェクトに対する読み取り権限または読み取り/書き込み権限を有している必要があります。  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースに接続するには、データベース サーバーにアクセスする権限が必要です。 また、データ マイニング セッションが有効にされていて、サーバーに格納されているデータベース オブジェクトに対する読み取り権限または読み取り/書き込み権限を有している必要があります。  
   
-##  <a name="bkmk_connect"></a>データマイニングサーバー接続の作成  
+##  <a name="creating-data-mining-server-connections"></a><a name="bkmk_connect"></a>データマイニングサーバー接続の作成  
  Excel 用のデータマイニングクライアントおよび Excel 用のテーブル分析ツールの [**接続**] グループには、のインスタンスへの[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]接続を管理するためのツールが用意されています。  
   
 -   アドインをインストールするときに接続を作成できます。後で接続を追加することもできます。  
@@ -67,8 +66,7 @@ ms.locfileid: "66087098"
   
 7.  [**接続テスト**] をクリックして、サーバーとデータベースが使用可能であることを確認します。  
   
-8.  
-  **[OK]** をクリックし、 **[閉じる]** をクリックします。  
+8.  **[OK]** をクリックし、**[閉じる]** をクリックします。  
   
 ### <a name="connections-using-a-web-service"></a>Web サービスを使用した接続  
  仮想化アーキテクチャを使用してキューブとデータの[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]参照を有効にする場合は、Web サービスを使用して[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]サーバーへの接続を構成することもできます。 Web ベース クライアントの定義方法については、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックを参照してください。  
@@ -98,7 +96,7 @@ ms.locfileid: "66087098"
   
 4.  [**新規**] を選択した場合は、前に説明した手順に従って、サーバーとカタログ名を指定するか、Web サービス経由で接続します。  
   
-##  <a name="bkmk_change"></a>接続の変更  
+##  <a name="changing-connections"></a><a name="bkmk_change"></a>接続の変更  
  同じワークシート内に複数の接続を作成できますが、一度にアクティブにできるのは 1 つの接続のみです。 現在の接続の名前が [**接続**] ボタンに表示されます。  
   
  Excel 用のデータマイニングクライアントでは、[**トレース**] をクリックし、[**現在の接続**] をクリックして、現在の接続の接続文字列と状態を確認することもできます。  
@@ -121,7 +119,7 @@ ms.locfileid: "66087098"
   
      \<ドライブ: > \ ユーザー\\<myusername\>\AppData\Local\Microsoft\Data マイニングアドイン  
   
-##  <a name="bkmk_extconnections"></a>外部データソースへの接続  
+##  <a name="connecting-to-external-data-sources"></a><a name="bkmk_extconnections"></a>外部データソースへの接続  
  [**分析**] リボンのツールは Excel のデータと排他的に機能しますが、[**データマイニング**] リボンのツールを使用すると、外部データソースに直接接続して、モデルの入力またはサンプリングとして使用することができます。  
   
  これらのアドインにある以下のツールはデータ マイニング用外部データの使用をサポートしています。  
@@ -145,8 +143,7 @@ ms.locfileid: "66087098"
 -   [分類マトリックス &#40;SQL Server データマイニングアドイン&#41;](classification-matrix-sql-server-data-mining-add-ins.md)  
   
 ### <a name="using-analysis-services-as-a-data-source"></a>Analysis Services のデータ ソースとしての使用  
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] キューブまたはテーブル モデルに格納されたデータに直接アクセスすることはできません。 代わりに、Excel で [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] サーバーへの接続を作成し、そのデータを使用してモデルを作成します。  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] キューブまたはテーブル モデルに格納されたデータに直接アクセスすることはできません。 代わりに、Excel で [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] サーバーへの接続を作成し、そのデータを使用してモデルを作成します。  
   
 ### <a name="relational-data-sources"></a>リレーショナルデータソース  
  モデルへの入力としてリレーショナル ソースのデータを使用する場合は、次のバージョンの SQL Server に接続できます。  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f28d0503497fd066de2d328e75813f7b77026b2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085238"
 ---
 # <a name="create-drillthrough-queries-using-dmx"></a>DMX を使用したドリルスルー クエリの作成
@@ -32,7 +32,7 @@ SELECT <model column list>, StructureColumn('<structure column name') FROM <mode
   
  DMX クエリを使用してケース データを返す方法については、「[SELECT FROM &#60;model&#62;.CASES (DMX)](/sql/dmx/select-from-model-content-dmx)」と「[SELECT FROM &#60;structure&#62;.CASES](/sql/dmx/select-from-structure-cases)」を参照してください。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次に示す DMX クエリでは、タイム シリーズ モデルから特定の製品シリーズのケース データが返されます。 このクエリでは、`Amount` 列も返されます。この列はモデルでは使用されていませんが、マイニング構造では使用可能です。  
   
 ```  

@@ -19,14 +19,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef1595ff322979a150c8854a73db5088cd8e0139
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085469"
 ---
 # <a name="create-a-dmx-query-in-sql-server-management-studio"></a>SQL Server Management Studio で DMX クエリを作成する
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、マイニング モデルおよびマイニング構造に対する、予測クエリ、コンテンツ クエリ、およびデータ定義クエリを作成できる一連の機能が用意されています。  
   
 -   グラフィカルな予測クエリ ビルダーは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] と [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の両方で使用でき、予測クエリを記述し、データ セットをモデルにマッピングするプロセスを簡略化します。  
@@ -37,9 +36,8 @@ ms.locfileid: "66085469"
   
  ここでは、メタデータ エクスプローラーと DMX クエリ エディターを使用して、DMX クエリを作成する方法について説明します。  
   
-##  <a name="BKMK_Templates"></a>DMX クエリテンプレート  
- 基本的な DMX クエリを作成するためのテンプレートは、テンプレート エクスプローラーから利用できます。 
-  **DMX** フォルダーには、データ マイニング テンプレートが含まれています。テンプレートは、次のカテゴリに分類されます。  
+##  <a name="dmx-query-templates"></a><a name="BKMK_Templates"></a>DMX クエリテンプレート  
+ 基本的な DMX クエリを作成するためのテンプレートは、テンプレート エクスプローラーから利用できます。 **DMX** フォルダーには、データ マイニング テンプレートが含まれています。テンプレートは、次のカテゴリに分類されます。  
   
 -   **モデルコンテンツ**  
   
@@ -52,30 +50,25 @@ ms.locfileid: "66085469"
  頻繁に実行するクエリまたはコマンドのカスタム テンプレートを作成することもできます。  
   
 ## <a name="xmla-query-templates"></a>XMLA クエリ テンプレート  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、XMLA クエリのテンプレートも用意されています。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、XMLA クエリのテンプレートも用意されています。  
   
  XMLA と DMX を使用して実行できるクエリの種類は一部重複しています。 たとえば、モデル コンテンツ クエリは DMX またはデータ マイニング スキーマ行セットを使用して作成できますが、スキーマ行セットには DMX コンテンツ クエリでは公開されない情報が含まれている場合があります。  
   
  また、DMX と XMLA での操作の処理方法には、いくつかの重要な違いがあります。 たとえば、XMLA を使用して、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース全体のバックアップなどの管理操作を実行できますが、DMX には [EXPORT (DMX)](/sql/dmx/export-dmx) という簡単なコマンドが用意されています。1 つのマイニング モデルをバックアップする場合は、このコマンドの方が適しています。  
   
-##  <a name="BKMK_Building_Queries"></a>DMX クエリの作成と実行  
+##  <a name="build-and-run-a-dmx-query"></a><a name="BKMK_Building_Queries"></a>DMX クエリの作成と実行  
   
 #### <a name="open-a-new-dmx-query-window"></a>新しい DMX クエリ ウィンドウを開く  
   
-1.  
-  **で** [新しいクエリ] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]をクリックし、 **[新しい分析サーバー DMX クエリ]** を選択します。  
+1.  **で** [新しいクエリ] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]をクリックし、 **[新しい分析サーバー DMX クエリ]** を選択します。  
   
-2.  
-  **[サーバーへの接続]** ダイアログ ボックスが表示されたら、操作するマイニング モデルが含まれている [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスを選択します。  
+2.  **[サーバーへの接続]** ダイアログ ボックスが表示されたら、操作するマイニング モデルが含まれている [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスを選択します。  
   
 #### <a name="open-template-explorer"></a>テンプレート エクスプローラーを開く  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 **[表示]** メニューの **[テンプレート エクスプローラー]** をクリックします。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 **[表示]** メニューの **[テンプレート エクスプローラー]** をクリックします。  
   
-2.  
-  **[分析サーバー]** をクリックして、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]に適用するテンプレートのツリー ビューを表示します。  
+2.  **[分析サーバー]** をクリックして、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]に適用するテンプレートのツリー ビューを表示します。  
   
 #### <a name="apply-a-template-to-build-a-query"></a>テンプレートを適用したクエリの作成  
   
@@ -93,6 +86,6 @@ ms.locfileid: "66085469"
   
 ## <a name="see-also"></a>参照  
  [データマイニングクエリインターフェイス](data-mining-query-tools.md)   
- [DMX&#41; リファレンス &#40;データマイニング拡張機能](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [データ マイニング拡張機能 &#40;DMX&#41; リファレンス](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

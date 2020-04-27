@@ -13,23 +13,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cee721aca66f5266a29d3bf61babf9060e9aef32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082300"
 ---
 # <a name="decision-tree-tab-mining-model-viewer"></a>[デシジョン ツリー] タブ (マイニング モデル ビューアー)
-  
   **[デシジョン ツリー]** ペインは、デシジョン ツリー モデルで作成されたデシジョン ルールをビジュアルに表示します。 デシジョン ルールは、特定の結果に至るパスを記述します。  
   
- **詳細情報:** [Microsoft デシジョンツリーアルゴリズム](data-mining/microsoft-decision-trees-algorithm.md)、 [Microsoft ツリービューアーを使用したモデルの参照](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
+ **詳細:** [Microsoft デシジョン ツリー アルゴリズム](data-mining/microsoft-decision-trees-algorithm.md)」、「 [Microsoft ツリー ビューアーを使用したモデルの参照](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
 ## <a name="options"></a>オプション  
  **[ビューアーのコンテンツを最新状態に更新]**  
  ビューアーにマイニング モデルを再読み込みします。  
   
- **マイニングモデル**  
+ **[マイニング モデル]**  
  現在のマイニング構造に含まれているマイニング モデルから選択します。 関連付けられているビューアーが開き、マイニング モデルが表示されます。  
   
  **[ビューアー]**  
@@ -50,7 +49,7 @@ ms.locfileid: "66082300"
  **[サイズの自動調整]**  
  画面の大きさに合うようにツリー構造全体を縮小します。  
   
- **棒**  
+ **ヒストグラム**  
  各ノードのヒストグラムに表示できる状態の数を選択します。 モデルの状態数が選択した値よりも少ない場合でも、追加のバーは表示されません。  
   
  **ツリー**  

@@ -18,14 +18,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 451efaa1bb6968c2e2f43e5fad01646e507ae8ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082868"
 ---
 # <a name="testing-and-validation-tasks-and-how-tos-data-mining"></a>テスト、検証タスク、および操作方法 (データ マイニング)
-  
   **のデータ マイニング デザイナーの** [マイニング精度チャート] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] タブを使用すると、マイニング構造内のマイニング モデルの予測精度を比較できます。  
   
  次の 4 種類のグラフを作成することができます。  

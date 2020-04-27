@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e2bb9829f49f8ce777e98e3e43191a29466fc8c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093259"
 ---
 # <a name="ready-to-install"></a>インストールの準備完了
@@ -32,7 +32,7 @@ ms.locfileid: "66093259"
   
 -   インストール設定を変更するには、 **[戻る]** をクリックします。  
   
--   セットアップを終了するには、 **[キャンセル]** をクリックします。  
+-   セットアップを終了するには、[**キャンセル**] をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server セットアップ ログ ファイルの表示と読み取り](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  

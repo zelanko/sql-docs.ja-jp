@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1a8893960b5177563ccf98dbd21cb528ce399ea3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086727"
 ---
 # <a name="creating-a-data-mining-model"></a>データ マイニング モデルの作成
@@ -78,8 +78,7 @@ ms.locfileid: "66086727"
  [Excel 用のテーブル分析ツール &#40;のカテゴリの検出&#41;](detect-categories-table-analysis-tools-for-excel.md)  
   
 ## <a name="estimate-data-mining"></a>推定 (データ マイニング)  
- 推定ウィザードを使用すると、データのパターンを抽出し、そのパターンを基に、連続する数値、日付、または時刻の値を予測する推定モデルを構築できます。 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] のデシジョン ツリー アルゴリズムが使用されます。  
+ 推定ウィザードを使用すると、データのパターンを抽出し、そのパターンを基に、連続する数値、日付、または時刻の値を予測する推定モデルを構築できます。 [!INCLUDE[msCoName](../includes/msconame-md.md)] のデシジョン ツリー アルゴリズムが使用されます。  
   
  [推定ウィザード &#40;Excel 用データマイニングアドイン&#41;](estimate-wizard-data-mining-add-ins-for-excel.md)  
   

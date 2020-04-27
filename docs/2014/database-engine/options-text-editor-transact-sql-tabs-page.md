@@ -15,18 +15,17 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: cc649ee021012774a0f199b97ea3cbf6bae4adef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089135"
 ---
 # <a name="options-text-editor---transact-sql---tabs-page"></a>[オプション] ([テキストエディター]/[Transact-sql]/[タブ] ページ)
   このダイアログ ボックスを使用すると、[!INCLUDE[ssDE](../includes/ssde-md.md)] スクリプトのプログラミングに使用される[!INCLUDE[tsql](../includes/tsql-md.md)] クエリ エディターのタブの動作を変更できます。 この設定を表示するには、**[ツール]** メニューの **[オプション]** をクリックして、**[テキスト エディター]** フォルダーを展開し、さらに **[Transact-SQL]** サブフォルダーを展開して、**[タブ]** をクリックします。  
   
 ## <a name="setting-options-in-multiple-locations"></a>複数の場所でのオプション設定  
- 
-  [!INCLUDE[ssDE](../includes/ssde-md.md)] クエリ エディターのオプションは、**[すべての言語] の [タブ]** ダイアログで設定することもできます。 [**すべての言語**] ダイアログボックスを使用して、DMX エディター [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]や MDX エディターなど、他のエディターに対して異なるオプションを[!INCLUDE[ssDE](../includes/ssde-md.md)]設定する場合は、このダイアログを使用してクエリエディターのオプションを設定し直す必要があります。  
+ [!INCLUDE[ssDE](../includes/ssde-md.md)] クエリ エディターのオプションは、**[すべての言語] の [タブ]** ダイアログで設定することもできます。 ただし、DMX エディターや MDX エディターなど、他の **エディターに対し、** [すべての言語] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のダイアログを使用して異なるオプションを設定する場合は、ここで紹介したダイアログを使用して [!INCLUDE[ssDE](../includes/ssde-md.md)] クエリ エディターのオプションを設定し直す必要があります。  
   
 ## <a name="indenting"></a>インデント  
  **なし**  

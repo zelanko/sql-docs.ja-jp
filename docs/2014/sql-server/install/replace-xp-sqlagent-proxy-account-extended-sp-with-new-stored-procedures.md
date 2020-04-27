@@ -13,14 +13,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4faff8420e318f7250cfc67dda173197d8028f0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092757"
 ---
 # <a name="replace-usage-of-the-xp_sqlagent_proxy_account-extended-stored-procedure-with-new-stored-procedures"></a>xp_sqlagent_proxy_account 拡張ストアド プロシージャの代わりに新しいストアド プロシージャを使用する
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは複数のプロキシをサポートします。 これらのプロキシは新しい一連のストアド プロシージャを使用して定義します。 新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのストアド プロシージャの詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの以下のトピックを参照してください。  
   
 -   「sp_add_proxy ([!INCLUDE[tsql](../../includes/tsql-md.md)])」  
@@ -49,7 +48,7 @@ ms.locfileid: "66092757"
 >  に[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]アップグレードした後、 **xp_sqlagent_proxy_account**の拡張ストアドプロシージャを使用するステートメントは機能しません。 **Xp_cmdshell**にプロキシを設定するには、 **xp_sqlagent_proxy_account**ではなく**sp_xp_cmdshell_proxy_account**を使用します。  
   
 ## <a name="component"></a>コンポーネント  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]・  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント  
   
 ## <a name="see-also"></a>参照  
  [SQL Server エージェントのアップグレードに関する問題](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)  

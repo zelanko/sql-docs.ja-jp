@@ -13,17 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dd8a149582c15cfb9b216bf478d23e7d4de16a0a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087725"
 ---
 # <a name="completing-the-wizard-aggregation-design-wizard"></a>[ウィザードの完了] (集計のデザイン ウィザード)
-  
   **[ウィザードの完了]** ページを使用すると、選択したパーティションに集計デザインを保存できます。 オプションで、集計デザイン ウィザードが集計のデザインと保存を終了した後で、選択されたパーティションの配置および処理を行うことができます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **名前**  
  集計デザインの名前を入力します。  
   

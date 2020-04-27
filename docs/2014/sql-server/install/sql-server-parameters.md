@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e528b94e51238a06a9776e58693c3093f4bfb831
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091875"
 ---
 # <a name="sql-server-parameters"></a>SQL Server パラメーター
@@ -49,8 +49,7 @@ ms.locfileid: "66091875"
  [ **SQL バッチファイルの分析**] を有効にすると、パス名とファイル名を入力するまで **[次へ**] ボタンが無効になります。  
   
  **[SQL バッチ区切り記号]**  
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの個別のバッチに使用するテキストです。 既定値は **[** 実行] です。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの個別のバッチに使用するテキストです。 既定値は **[** 実行] です。  
   
 ## <a name="see-also"></a>参照  
  [アップグレードアドバイザーの使用](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   

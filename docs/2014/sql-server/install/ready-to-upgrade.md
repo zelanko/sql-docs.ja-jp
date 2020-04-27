@@ -11,14 +11,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 321ff064a21728727f46c253f58a05bc5c5d8c1e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093229"
 ---
 # <a name="ready-to-upgrade"></a>アップグレードの準備完了
-  
   **[アップグレードの準備完了]** ページを使用すると、このアップグレードに指定したオプションを確認できます。  
   
   

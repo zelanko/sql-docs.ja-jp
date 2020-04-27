@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bd75efa13d6761c058b9e3b1f1878036d3d3e928
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088090"
 ---
 # <a name="choosing-a-model"></a>モデルの選択
@@ -77,7 +77,7 @@ ms.locfileid: "66088090"
   
  Office 用 SQL Server データ マイニング アドインで使用されるアルゴリズムは、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] で提供されるアルゴリズムに基づいています。 接続しているのインスタンスがサードパーティのアルゴリズムを許可するように構成されている場合[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]は、データマイニング仕様の OLE DB に準拠するサードパーティのアルゴリズムを使用することもできます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  アルゴリズムが操作できるデータの種類は、アルゴリズムによって異なります。  
   
 -   線形回帰モデルは、数値しかモデリングできません。 入力変数と対象となる結果の両方が、連続する数値型である必要があります。 離散変数と連続変数を組み合わせる必要がある場合は、デシジョン ツリーまたは推定モデルを使用します。  
@@ -104,7 +104,7 @@ ms.locfileid: "66088090"
 ## <a name="list-of-supported-algorithms"></a>サポートされているアルゴリズムの一覧  
  既定では、次のアルゴリズムが用意されています。  
   
-|アルゴリズム名|[説明]|使用される場所|  
+|アルゴリズム名|説明|使用される場所|  
 |--------------------|-----------------|-------------|  
 |Microsoft アソシエーション ルール|トランザクション中に同時に出現する傾向が強いアイテムを記述するルールを作成します。|[関連付けウィザード &#40;Excel 用データマイニングクライアント&#41;](associate-wizard-data-mining-client-for-excel.md)<br /><br /> [買い物かご分析 &#40;テーブル AnalysisTools for Excel&#41;](shopping-basket-analysis-table-analysistools-for-excel.md)|  
 |Microsoft クラスタリング|一般レベルの観察では論理的に推論できないデータセット内の関係を識別します。 このアルゴリズムは、反復的な手法を使用して、類似の特性を持つクラスターにレコードをグループ化します。|[Excel 用のテーブル分析ツール &#40;のカテゴリの検出&#41;](detect-categories-table-analysis-tools-for-excel.md)<br /><br /> [クラスターウィザード &#40;Excel 用データマイニングアドイン&#41;](cluster-wizard-data-mining-add-ins-for-excel.md)|  

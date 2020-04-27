@@ -13,28 +13,26 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3831943533939f7b9f8e31f09b80c71cc61b8d3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094428"
 ---
 # <a name="install-sql-server-management-tools"></a>SQL Server 管理ツールのインストール
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理ツールには、次のコンポーネントが含まれます。  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
 -   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースチューニングアドバイザー  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース チューニング アドバイザー  
   
 -   sqlcmd.exe や osql.exe などのコマンド プロンプト ツール  
   
 -   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]アドイン[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]  
   
- 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール時の別個のオプションです。  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール時の別個のオプションです。  
   
  コンピューターにインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] または [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のインスタンス数にかかわらず、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 管理ツールは 1 つのみインストールされます。  
   

@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 87c638b2c5455a2f3a15051b0e62ee86685d4e5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087556"
 ---
 # <a name="completing-the-wizard-usage-based-optimization-wizard"></a>[ウィザードの完了] (使用法に基づく最適化ウィザード)
-  
   **[ウィザードの完了]** ページを使用すると、集計デザインを保存し、選択したパーティションに割り当てることができます。 オプションで、使用法に基づく最適化ウィザードによる集計のデザインと保存が完了した後に、選択したパーティションを処理するように指定することもできます。  
   
 ## <a name="options"></a>オプション  

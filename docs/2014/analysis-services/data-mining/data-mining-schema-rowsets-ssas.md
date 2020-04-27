@@ -18,14 +18,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30a4a503b16693a3774aa7f68771fb0f9dd70810
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084908"
 ---
 # <a name="querying-the-data-mining-schema-rowsets-analysis-services---data-mining"></a>データ マイニング スキーマ行セットのクエリ (Analysis Services - データ マイニング)
-  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、既存の OLE DB データ マイニング スキーマ行セットの多くが、データ マイニング拡張機能 (DMX) ステートメントを使用して照会できるシステム テーブルのセットとして公開されます。 データ マイニング スキーマ行セットに対するクエリを作成することによって、利用可能なサービスの特定、モデルおよび構造の状態の更新、モデル コンテンツまたはパラメーターに関する詳細の確認を行うことができます。 データ マイニング スキーマ行セットの説明については、「 [データ マイニング スキーマ行セット](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)」を参照してください。  
   
 > [!NOTE]  
@@ -34,7 +33,7 @@ ms.locfileid: "66084908"
 ## <a name="list-of-data-mining-schema-rowsets"></a>データ マイニング スキーマ行セットの一覧  
  次の表に、クエリおよび監視に役立つデータ マイニング スキーマ行セットの一覧を示します。  
   
-|行セット名|[説明]|  
+|行セット名|説明|  
 |-----------------|-----------------|  
 |DMSCHEMA_MINING_MODELS|現在のコンテキスト内のすべてのマイニング モデルの一覧が表示されます。<br /><br /> 作成日、モデルの作成に使用されたパラメーター、トレーニング セットのサイズなどの情報が含まれます。|  
 |DMSCHEMA_MINING_COLUMNS|現在のコンテキスト内のマイニング モデルで使用されるすべての列の一覧が表示されます。<br /><br /> マイニング構造ソース列へのマッピング、データ型、有効桁数、列で使用できる予測関数などの情報が含まれます。|  
@@ -49,7 +48,7 @@ ms.locfileid: "66084908"
 > [!NOTE]  
 >  表で示した内容がすべてではありません。トラブルシューティングに特に必要と思われる行セットのみを示しています。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次のセクションで、データ マイニング スキーマ行セットに対するクエリの例をいくつか示します。  
   
 ### <a name="example-1-list-data-mining-services"></a>例 1: データ マイニング サービスの一覧表示  

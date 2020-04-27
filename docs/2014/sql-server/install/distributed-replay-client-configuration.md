@@ -11,14 +11,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3eb00922b4f6e21dd4cfc8a46d8c0c27ed9a5be1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66095474"
 ---
 # <a name="distributed-replay-client-configuration"></a>分散再生クライアントの構成
-  
   **インストール ウィザードの** [分散再生クライアントの構成] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ページを使用して、分散再生クライアント サービスに対する管理権限を付与するユーザーを指定します。  
   
  管理権限を持つユーザーには、分散再生クライアント サービスへの無制限のアクセス許可が与えられます。  
@@ -38,11 +37,11 @@ ms.locfileid: "66095474"
  **作業ディレクトリ**  
  分散再生クライアント サービス用の作業ディレクトリを指定します。  
   
- 既定の作業ディレクトリは、\<*drive letter*>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\WorkingDir\\ です。  
+ 既定の作業ディレクトリは\< *、ドライブ文字*>:\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\dreplayclient\workingdir です\\です。  
   
  **[結果ディレクトリ]**  
  分散再生クライアント サービス用の結果ディレクトリを指定します。  
   
- 既定の結果ディレクトリは、\<*drive letter*>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\ResultDir\\ です。  
+ 既定の結果ディレクトリは\< *、ドライブ文字*>:\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\dreplayclient\resultdir です\\です。  
   
   

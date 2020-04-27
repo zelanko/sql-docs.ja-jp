@@ -13,23 +13,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c0b4a798f9a395741ae831d3b22fc06a71f55607
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087988"
 ---
 # <a name="cluster-characteristics-tab-mining-model-viewer"></a>[クラスターの特性] タブ (マイニング モデル ビューアー)
-  
   **[クラスターの特性]** タブを使用して、クラスター モデル内のクラスター特性またはモデル内のすべてのケースのセットを調査できます。 クラスターを定義する特性としての各属性と値のペアの重要度が、他のクラスターと比較したグラフとして表示されます。  
   
- **詳細情報:** [microsoft クラスタリングアルゴリズム](data-mining/microsoft-clustering-algorithm.md)、 [Microsoft クラスタービューアーを使用したモデルの参照](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ **詳細:** [Microsoft クラスター アルゴリズム](data-mining/microsoft-clustering-algorithm.md)、 [Microsoft クラスター ビューアーを使用したモデルの参照](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
 ## <a name="options"></a>オプション  
  **[ビューアーのコンテンツを最新状態に更新]**  
  ビューアーにマイニング モデルを再読み込みします。  
   
- **マイニングモデル**  
+ **[マイニング モデル]**  
  現在のマイニング構造に含まれているマイニング モデルから選択します。 マイニング モデルがカスタム ビューアーに表示されます。  
   
  **[ビューアー]**  
@@ -41,7 +40,7 @@ ms.locfileid: "66087988"
  **クラスター>\<の特性**  
  選択したクラスターの特性を記述する次の列がグラフに含まれます。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**変数**|選択したクラスターで見つかったマイニング モデルの属性を一覧表示します。|  
 |**値**|現在選択されているクラスターで見つかった現在の属性の値を一覧表示します。|  

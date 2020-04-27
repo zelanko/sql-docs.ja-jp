@@ -13,33 +13,30 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4efca206c40c685f81c2c4629714e285ba6119af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087596"
 ---
 # <a name="completing-the-wizard-dimension-wizard"></a>[ウィザードの完了] (ディメンション ウィザード)
-  
   **[ウィザードの完了]** ページを使用すると、次の手順を実行できます。  
   
 -   ディメンションに名前を付けます。  
   
--   
-  **[完了]** をクリックしたときに行われる変更を確認します。  
+-   **[完了]** をクリックしたときに行われる変更を確認します。  
   
 -   必要に応じて、ディメンションのサポートに必要なスキーマを生成します。  
   
  **ディメンション ウィザードを開くには**  
   
--   
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]の **ソリューション エクスプローラー**で、 **プロジェクトの** [ディメンション] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] フォルダーを右クリックし、 **[新しいディメンション]** をクリックします。  
+-   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]の **ソリューション エクスプローラー**で、 **プロジェクトの** [ディメンション] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] フォルダーを右クリックし、 **[新しいディメンション]** をクリックします。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **名前**  
  新しいディメンションの名前を入力します。  
   
- **プレビュー**  
+ **［プレビュー］**  
  新しいディメンション用に作成されるディメンションの属性と階層を表示します。  
   
  **[今すぐスキーマを生成する]**  

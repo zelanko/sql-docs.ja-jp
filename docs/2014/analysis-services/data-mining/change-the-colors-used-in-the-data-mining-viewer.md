@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c4a8124d929faa22ec9429ca8bf15e4f0148ab71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085928"
 ---
 # <a name="change-the-colors-used-in-the-data-mining-viewer"></a>データ マイニング ビューアーで使用する色の変更
@@ -24,16 +24,13 @@ ms.locfileid: "66085928"
   
 ### <a name="to-change-the-colors-used-in-the-data-mining-viewers"></a>データ マイニング ビューアーで使用する色を変更するには  
   
-1.  
-  **または** の [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] [ツール] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]メニューの **[オプション]** をクリックします。  
+1.  **または** の [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] [ツール] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]メニューの **[オプション]** をクリックします。  
   
-2.  
-  **[オプション]** ダイアログ ボックスで、 **[デザイナー]**、 **[データ マイニング ビューアー]** の順に展開します。  
+2.  **[オプション]** ダイアログ ボックスで、 **[デザイナー]**、 **[データ マイニング ビューアー]** の順に展開します。  
   
 3.  変更するビューアー プロパティを探して、現在の色の選択をクリックします。  
   
-4.  ボックスの一覧で新しい色を選択します。 
-  **[カスタム]** タブをクリックして、現在のコンピューターで使用できるカスタム色パレットから色を選択するか、 **[システム]** をクリックして、Windows の配色で指定された色の中から色を選択します。  
+4.  ボックスの一覧で新しい色を選択します。 **[カスタム]** タブをクリックして、現在のコンピューターで使用できるカスタム色パレットから色を選択するか、 **[システム]** をクリックして、Windows の配色で指定された色の中から色を選択します。  
   
     > [!NOTE]  
     >  カスタム色を使用する場合は、色アイコンと色の RGB 値によって色が表されます。 システム色または Web 色を使用する場合は、色アイコンと色の名前によって色が表されます。  

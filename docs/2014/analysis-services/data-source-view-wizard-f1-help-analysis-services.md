@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 01074111cd4944f9b74137dd371e00343e37f15b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082506"
 ---
 # <a name="data-source-view-wizard-f1-help-analysis-services"></a>データ ソース ビュー ウィザードの F1 ヘルプ (Analysis Services)
@@ -38,7 +38,7 @@ ms.locfileid: "66082506"
   
 -   データ ソース ビューに名前を付け、保存します。  
   
- データ ソース ビューを作成した後は、 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]でデータ ソース ビュー デザイナーを使用してビューのプロパティを変更できます。 データ ソース ビュー デザイナーの詳細については、「[データ ソース ビュー デザイナー (Analysis Services - 多次元データ)](data-source-view-designer-analysis-services-multidimensional-data.md)」を参照してください。  
+ データ ソース ビューを作成した後は、 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]でデータ ソース ビュー デザイナーを使用してビューのプロパティを変更できます。 データ ソース ビュー デザイナーの詳細については、「[データ ソース ビュー デザイナー &#40;Analysis Services - 多次元データ&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

@@ -16,20 +16,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 98f7dd23615cf86e4c20a84eae6bc39ff6489bc3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094348"
 ---
 # <a name="installation-prerequisites"></a>インストールの前提条件
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を正常にインストールするには、インストール対象のコンピューターに以下のソフトウェア コンポーネントが用意されている必要があります。 これらは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ プログラムによりインストールされます。  
   
--   
-  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Version 4.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のすべてのエディション)  
+-   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Version 4.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のすべてのエディション)  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セットアップサポートファイル  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ サポート ファイル  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client  
   

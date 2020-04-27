@@ -11,16 +11,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5b2b43d899041d501039ade4d0493a7fdbf0164
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094626"
 ---
 # <a name="install-distributed-replay-setup"></a>分散再生のインストール (セットアップ)
-  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生機能を [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インストール ウィザードでインストールします。 機能をインストールする場所を計画する際には、以下について検討してください。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生機能を [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インストール ウィザードでインストールします。 機能をインストールする場所を計画する際には、以下について検討してください。  
   
 -   管理ツールは、分散再生コントローラーと同じコンピューター上、または別のコンピューター上にインストールできます。  
   
@@ -35,9 +33,7 @@ ms.locfileid: "66094626"
 -   インストール後は、クライアント上で 分散再生クライアント サービスを開始する前に、コントローラー サービスである [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生コントローラーを実行する必要があります。  
   
 > [!NOTE]  
->  分散再生の機能を削除または変更するには、 **コントロール パネル** で Windows の **[プログラムと機能]** ウィンドウを使用します。 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [プログラムのアンインストールまたは変更] **ウィンドウで** を選択し、 **[削除]** をクリックして [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インストール ウィザードを開きます。 
-  **[機能の選択]** ページで、削除する分散再生機能を選択します。  
+>  分散再生の機能を削除または変更するには、 **コントロール パネル** で Windows の **[プログラムと機能]** ウィンドウを使用します。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [プログラムのアンインストールまたは変更] **ウィンドウで** を選択し、 **[削除]** をクリックして [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インストール ウィザードを開きます。 **[機能の選択]** ページで、削除する分散再生機能を選択します。  
   
  **応募**  
   
@@ -48,7 +44,7 @@ ms.locfileid: "66094626"
     > [!NOTE]  
     >  管理ツール、コントローラー サービス、およびクライアント サービスが同じコンピューター上で実行されている場合は、ローカル ユーザー アカウントを使用できます。  
   
- **インストール場所:**  
+ **インストール先:**  
   
  既定のファイルの場所と標準インストールを使用した場合、基本ディレクトリは C:\Program Files \Microsoft SQL Server になります。 その下の以下の場所に、バイナリとアセンブリがインストールされます。  
   
@@ -56,42 +52,33 @@ ms.locfileid: "66094626"
   
      [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]ツール  
   
-     \-もしくは  
+     \- または -  
   
-     
-  \<共有機能ディレクトリ>\Tools\\(ユーザーが指定した代替の共有機能ディレクトリ)  
+     \<共有機能ディレクトリ>\Tools\\(ユーザーが指定した代替の共有機能ディレクトリ)  
   
 -   64 ビット システムの場合:  
   
      C:\Program files\\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (x86) \ 120 \ ツール  
   
-     \-もしくは  
+     \- または -  
   
-     
-  \<共有機能ディレクトリ (x86)>\Tools\\(ユーザーが指定した代替の共有機能 (x86) ディレクトリ)  
+     \<共有機能ディレクトリ (x86)>\Tools\\(ユーザーが指定した代替の共有機能 (x86) ディレクトリ)  
   
 ### <a name="to-install-distributed-replay-features"></a>分散再生機能をインストールするには  
   
 1.  分散再生の機能のインストールを開始するには、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インストール ウィザードを開始します。  
   
-2.  
-  **[セットアップ サポート ルール]** ページでは、SQL Server セットアップ サポート ファイルをインストールするときに発生する可能性がある問題が特定されています。 セットアップを続行する前に、セットアップ サポートの失敗を修正する必要があります。  
+2.  **[セットアップ サポート ルール]** ページでは、SQL Server セットアップ サポート ファイルをインストールするときに発生する可能性がある問題が特定されています。 セットアップを続行する前に、セットアップ サポートの失敗を修正する必要があります。  
   
-3.  
-  **[プロダクト キー]** ページでオプション ボタンをクリックして、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の無償のエディション、または PID キーを持つ製品版のどちらをインストールするかを指定します。 詳細については、「 [SQL Server 2014 のエディションとコンポーネント](../editions-and-components-of-sql-server-2016.md)」を参照してください。  
+3.  **[プロダクト キー]** ページでオプション ボタンをクリックして、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の無償のエディション、または PID キーを持つ製品版のどちらをインストールするかを指定します。 詳細については、「 [SQL Server 2014 のエディションとコンポーネント](../editions-and-components-of-sql-server-2016.md)」を参照してください。  
   
-4.  
-  **[ライセンス条項]** ページで使用許諾契約書を読み、使用許諾条件に同意する場合は対応するチェック ボックスをオンにします。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の機能向上に役立てるため、機能の使用状況オプションを有効にしてレポートを [!INCLUDE[msCoName](../../includes/msconame-md.md)]に送信することもできます。  
+4.  **[ライセンス条項]** ページで使用許諾契約書を読み、使用許諾条件に同意する場合は対応するチェック ボックスをオンにします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の機能向上に役立てるため、機能の使用状況オプションを有効にしてレポートを [!INCLUDE[msCoName](../../includes/msconame-md.md)]に送信することもできます。  
   
-5.  
-  **[セットアップ サポート ファイル]** ページで **[インストール]** をクリックして、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のセットアップ サポート ファイルをインストールまたは更新します。  
+5.  **[セットアップ サポート ファイル]** ページで **[インストール]** をクリックして、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のセットアップ サポート ファイルをインストールまたは更新します。  
   
-6.  
-  **[セットアップ ロール]** ページで、 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能のインストール]** をクリックし、 **[次へ]** をクリックして **[機能の選択]** ページに進みます。  
+6.  [**セットアップロール**] ページで、[ ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]機能のインストール**] を選択し、[**次**へ] をクリックして [**機能の選択**] ページに進みます。  
   
-7.  
-  **[機能の選択]** ページで、どの機能をインストールするかを設定します。  
+7.  **[機能の選択]** ページで、どの機能をインストールするかを設定します。  
   
     -   管理ツールをインストールするには、 **[管理ツール - 基本]** を選択します。  
   
@@ -105,7 +92,7 @@ ms.locfileid: "66094626"
   
     -   ユーザーによって作成されたローカル ユーザー アカウント  
   
-    -   管理者  
+    -   Administrator  
   
     -   仮想アカウントおよび管理されたサービス アカウント (MSA)  
   
@@ -119,30 +106,26 @@ ms.locfileid: "66094626"
   
     2.  64ビットコンピューターでは、既定のインストールパスは**C:\Program files (x86)\\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。**  
   
-9. 終了したら **[次へ]** をクリックします。  
+9. 終了したら、**[次へ]** をクリックします。  
   
-10. 
-  **[インストール ルール]** ページで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップはコンピューターの構成を検証します。 検証プロセスが完了したら、 **[次へ]** をクリックします。  
+10. **[インストール ルール]** ページで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップはコンピューターの構成を検証します。 検証プロセスが完了したら、 **[次へ]** をクリックします。  
   
-11. [必要な**ディスク**領域] ページでは、指定した機能に必要なディスク領域が計算されます。 その後、必要なディスク領域が使用可能なディスク領域と比較されます。  
+11. **[必要なディスク領域]** ページでは、指定した機能に必要なディスク領域が計算されます。 その後、必要なディスク領域が使用可能なディスク領域と比較されます。  
   
-12. 
-  **[エラー レポート]** ページで、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] に送信する、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の強化に役立つ情報を指定します。 既定では、エラー レポートのオプションは有効になっています。  
+12. **[エラー レポート]** ページで、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] に送信する、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の強化に役立つ情報を指定します。 既定では、エラー レポートのオプションは有効になっています。  
   
-13. 
-  **[インストール構成ルール]** ページでは、システム構成チェッカーによって別のルール セットが実行され、コンピューターの構成と指定した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能が検証されます。  
+13. **[インストール構成ルール]** ページでは、システム構成チェッカーによって別のルール セットが実行され、コンピューターの構成と指定した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能が検証されます。  
   
-14. 
-  **[プログラムインストールの準備完了]** ページで、 **[インストール]** をクリックします。  
+14. **[プログラムインストールの準備完了]** ページで、 **[インストール]** をクリックします。  
   
     > [!IMPORTANT]  
     >  分散再生をインストールした後、コントローラー コンピューターとクライアント コンピューターのファイアウォール ルールを作成し、ターゲット サーバー上で各クライアント コンピューターの権限を付与する必要があります。 詳細については、「 [インストール後の手順の実行](../../tools/distributed-replay/complete-the-post-installation-steps.md)」を参照してください。  
   
  以下の追加のトピックでは、分散再生をインストールする他の方法が記載されています。  
   
--   [コマンド プロンプトからの 分散再生のインストール](../../tools/distributed-replay/install-distributed-replay-overview.md)  
+-   [コマンドプロンプトから分散再生をインストールする](../../tools/distributed-replay/install-distributed-replay-overview.md)  
   
--   [構成ファイルを使用した 分散再生のインストール](../../../2014/sql-server/install/install-distributed-replay-using-a-configuration-file.md)  
+-   [構成ファイルを使用した分散再生のインストール](../../../2014/sql-server/install/install-distributed-replay-using-a-configuration-file.md)  
   
 ## <a name="net-framework-security"></a>.NET Framework のセキュリティ  
  分散再生の機能をインストールするには、管理権限が必要です。 sysadmin 権限を持つ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインのみが、テスト サーバーの sysadmin サーバー ロールにクライアント サービス アカウントを追加できます。 Distributed Replay のセキュリティ上の考慮事項の詳細については、「 [Distributed Replay のセキュリティ](../../tools/distributed-replay/distributed-replay-security.md)」を参照してください。  
@@ -152,6 +135,6 @@ ms.locfileid: "66094626"
  [SQL Server 分散再生](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [分散再生の要件](../../tools/sql-server-profiler/replay-requirements.md)   
  [管理ツールのコマンドラインオプション &#40;分散再生ユーティリティ&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [Configure Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
+ [分散再生の構成](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

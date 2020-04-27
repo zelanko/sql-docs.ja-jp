@@ -14,14 +14,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7be4c1cc392516ffaf6d1e36fc10b93b517d772
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088870"
 ---
 # <a name="sql-server-extended-events-targets"></a>SQL Server 拡張イベント ターゲット
-  
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 拡張イベント ターゲットは、イベントのコンシューマーです。 ターゲットは、ファイルに書き込んだり、イベント データをメモリ バッファーに格納したり、イベント データを集計することができます。 ターゲットは、データを同期的または非同期的に処理できます。  
   
  拡張イベントの設計上、ターゲットは、セッションごとに 1 回だけイベントを受け取ります。  
@@ -40,10 +39,9 @@ ms.locfileid: "66088870"
   
      ロックの取得とロックの解放など、対で発生するイベントが数多く存在します。 指定された 1 対のイベントの組み合わせが一致するかどうかを判定します。 これは、非同期ターゲットです。  
   
--   [Event Tracing for Windows (ETW)](../relational-databases/extended-events/event-tracing-for-windows-target.md)  
+-   [Windows イベント トレーシング (ETW)](../relational-databases/extended-events/event-tracing-for-windows-target.md)  
   
-     
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] イベントを、Windows オペレーティング システムまたはアプリケーション イベント データと関連付けます。 これは、同期ターゲットです。  
+     [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] イベントを、Windows オペレーティング システムまたはアプリケーション イベント データと関連付けます。 これは、同期ターゲットです。  
   
 -   [ヒストグラム](../../2014/database-engine/histogram-target.md)  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3975bee14daad82291b5d343999ef4ebca7e6fbc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085078"
 ---
 # <a name="data-mining-architecture"></a>データ マイニングのアーキテクチャ
@@ -28,20 +28,20 @@ ms.locfileid: "66085078"
   
  [データベースの格納場所](../multidimensional-models/database-storage-location.md)  
   
- [Analysis Services データベースを ReadOnly モードと ReadWrite モードの間で切り替える](../multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
+ [Analysis Services データベースの ReadOnly モードと ReadWrite モードの切り替え](../multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
  ビジネス インテリジェンス ソリューションにデータ マイニングを実装する方法の詳細については、MSDN ライブラリの「ソリューション ガイド」セクションをご覧ください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [論理アーキテクチャ &#40;Analysis Services-データマイニング&#41;](logical-architecture-analysis-services-data-mining.md)  
+ [論理アーキテクチャ (Analysis Services - データ マイニング)](logical-architecture-analysis-services-data-mining.md)  
   
- [物理アーキテクチャ &#40;Analysis Services-データマイニング&#41;](physical-architecture-analysis-services-data-mining.md)  
+ [物理アーキテクチャ &#40;Analysis Services - データ マイニング&#41;](physical-architecture-analysis-services-data-mining.md)  
   
  [データ マイニング サービスおよびデータ ソース](data-mining-services-and-data-sources.md)  
   
  [データ マイニング ソリューションおよびオブジェクトの管理](management-of-data-mining-solutions-and-objects.md)  
   
- [データマイニング&#41;&#40;セキュリティの概要](security-overview-data-mining.md)  
+ [セキュリティの概要 &#40;データ マイニング&#41;](security-overview-data-mining.md)  
   
 ## <a name="see-also"></a>参照  
  [多次元モデルのプログラミング](../multidimensional-models/multidimensional-model-programming.md)   

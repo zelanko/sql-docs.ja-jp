@@ -14,14 +14,13 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 01098f2181085f17788429608afb7bdda15fb504
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089242"
 ---
 # <a name="options-text-editor-editor-tab-and-status-bar-page"></a>オプション ([テキスト エディター]: [エディターのタブとステータス バー] ページ)
-  
   **[エディターのタブとステータス バー]** ページでは、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] クエリ エディターによって表示される情報をカスタマイズできます。 クエリ エディター ウィンドウのタブおよびステータス バーに表示される情報のレベル、およびステータス バーをエディター ウィンドウの上部と下部のどちらに表示するかを指定することができます。  
   
 ## <a name="option-settings-by-editor"></a>エディターのオプション設定  
@@ -38,7 +37,7 @@ ms.locfileid: "66089242"
  **なし**  
  ステータス バーには時間の情報が表示されません。  
   
- **[終了]**  
+ **終わり**  
  スクリプトの実行中はステータス バーに現在の時刻が表示されます。 スクリプトが完了すると、スクリプトが完了した時刻が表示されます。  
   
  **切れる**  
@@ -71,7 +70,7 @@ ms.locfileid: "66089242"
  **ページのトップへ**  
  ステータス バーは、クエリ エディター ウィンドウの上部に表示されます。  
   
- **[下]**  
+ **最終**  
  ステータス バーは、クエリ エディター ウィンドウの下部に表示されます。  
   
 ## <a name="tab-text"></a>タブのテキスト  
