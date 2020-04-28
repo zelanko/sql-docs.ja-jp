@@ -1,5 +1,5 @@
 ---
-title: 拡張を設定して新しいデータ型を有効にするSQL |マイクロソフトドキュメント
+title: ExtendedAnsiSQL | を設定して新しいデータ型を有効にするMicrosoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.assetid: f2865543-7fff-44fa-9a6a-968bec33acdc
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: b703c5c14c4743e13feee139d16e5dfeb3c24c63
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303413"
 ---
 # <a name="enabling-new-data-types-by-setting-extendedansisql"></a>ExtendedAnsiSQL を設定して新しいデータ型の有効化
-Jet 4.0 データベースでは、ExtendedAnsiSQL フラグがオンになっている場合、SQL_DECIMALとSQL_NUMERICの 2 つの新しいデータ型を使用できます。 デフォルトの精度と位取りは、それぞれ 18 と 0 です。 SQL_DECIMALまたはSQL_NUMERICとして入力された ODBC を使用してアクセスされるデータは、通貨ではなく Microsoft Jet Decimal にマップされます。  
+ExtendedAnsiSQL フラグが有効になっている場合、Jet 4.0 データベースでは、SQL_DECIMAL と SQL_NUMERIC の2つの新しいデータ型を使用できます。 既定の有効桁数と小数点以下桁数はそれぞれ18と0です。 SQL_DECIMAL または SQL_NUMERIC として入力された ODBC を介してアクセスされるデータは、通貨ではなく Microsoft Jet Decimal にマップされます。  
   
- ExtendedAnsiSQL フラグがオフになっている場合、10 進数または数値型のテーブルを作成することはできません。 ただし、テーブルに新しいデータ型が含まれている場合は、正しいデータ型で使用できます。
+ ExtendedAnsiSQL フラグがオフになっている場合、decimal 型または numeric 型のテーブルを作成することはできません。これらの型は SQLGetTypeInfo () には表示されません。 ただし、テーブルに新しいデータ型が含まれている場合は、正しいデータ型で使用できます。

@@ -1,5 +1,5 @@
 ---
-title: データを取得する |マイクロソフトドキュメント
+title: SQLGetData |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -15,33 +15,33 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5ebda3de96cbd9a4a1ceadd62093420cc372a169
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302159"
 ---
 # <a name="sqlgetdata"></a>SQLGetData
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  **SQLGetData**は、列の値をバインドせずに結果セット データを取得するために使用されます。 **SQLGetData**を同じ列で連続して呼び出して、**テキスト** **、ntext**、または**イメージ**のデータ型を持つ列から大量のデータを取得できます。  
+  **SQLGetData**は、列の値をバインドせずに結果セットのデータを取得するために使用します。 **SQLGetData**を同じ列に対して連続して呼び出すと、 **text**、 **ntext**、または**image**データ型の列から大量のデータを取得できます。  
   
- アプリケーションでは、変数をバインドして結果セット データをフェッチする必要はありません。 任意の列のデータは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**、SQLGetData**を使用してネイティブ クライアント ODBC ドライバーから取得できます。  
+ アプリケーションでは、変数をバインドして結果セット データをフェッチする必要はありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQLGetData**を使用して、Native Client ODBC ドライバーから任意の列のデータを取得できます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアント ODBC ドライバーは **、SQLGetData**を使用してランダムな列の順序でデータを取得するをサポートしていません。 **SQLGetData**で処理されるすべての非バインド列は、結果セット内のバインドされた列よりも高い列序数を持つ必要があります。 アプリケーションでは、バインドされていない列の値を、列序数の小さい列から大きい列へと処理する必要があります。 前に処理した列よりも列序数が小さい列からデータを取得しようとすると、エラーが発生します。 アプリケーションで、結果セット行を報告するためにサーバー カーソルを使用している場合は、現在の行を再フェッチしてから列の値をフェッチできます。 既定の読み取り専用の前方専用カーソルでステートメントを実行する場合は **、SQLGetData**をバックアップするステートメントを再実行する必要があります。  
+ Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC ドライバーでは、ランダム列の順序でデータを取得するための**SQLGetData**の使用はサポートされていません。 **SQLGetData**で処理されるすべてのバインドされていない列には、結果セット内のバインドされた列よりも大きな列序数が必要です。 アプリケーションでは、バインドされていない列の値を、列序数の小さい列から大きい列へと処理する必要があります。 前に処理した列よりも列序数が小さい列からデータを取得しようとすると、エラーが発生します。 アプリケーションで、結果セット行を報告するためにサーバー カーソルを使用している場合は、現在の行を再フェッチしてから列の値をフェッチできます。 ステートメントが既定の読み取り専用、順方向専用カーソルで実行される場合、ステートメントを再実行して**SQLGetData**をバックアップする必要があります。  
   
- ネイティブ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアント ODBC ドライバは **、SQLGetData**を使用して取得した**テキスト** **、ntext、** および**イメージ**データの長さを正確に報告します。 アプリケーションは *、StrLen_or_IndPtr*パラメーターの戻りを利用して、長いデータを迅速に取得できます。  
+ Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC ドライバーでは、 **SQLGetData**を使用して取得した**text**型、 **ntext**型、および**image**型のデータの長さが正確に報告されます。 アプリケーションでは、 *StrLen_or_IndPtr*パラメーターの戻り値を使用して、長いデータを迅速に取得することができます。  
   
 > [!NOTE]  
->  大きな値型の場合 *、StrLen_or_IndPtr*はデータの切り捨て時にSQL_NO_TOTALを返します。  
+>  大きな値型の場合、 *StrLen_or_IndPtr*はデータの切り捨て時に SQL_NO_TOTAL を返します。  
   
 ## <a name="sqlgetdata-support-for-enhanced-date-and-time-features"></a>SQLGetData による機能強化された日付と時刻のサポート  
- 日付/時刻型の結果列値は[、「SQL から C への変換](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md)」で説明されているように変換されます。  
+ Date 型または time 型の結果列の値は、「 [SQL から C への変換](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md)」で説明されているように変換されます。  
   
- 詳細については、「 [ODBC&#41;&#40;日付と時刻の向上](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)」を参照してください。  
+ 詳細については、「[日付と時刻の機能強化 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)」を参照してください。  
   
 ## <a name="sqlgetdata-support-for-large-clr-udts"></a>SQLGetData による大きな CLR UDT のサポート  
- **SQLGetData は**、大規模な CLR ユーザー定義型 (UDT) をサポートしています。 詳細については、「 [ODBC&#41;&#40;大規模な CLR ユーザー定義型](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)」を参照してください。  
+ **SQLGetData**は、大きな CLR ユーザー定義型 (udt) をサポートしています。 詳細については、「[大容量の CLR ユーザー定義型 &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)」を参照してください。  
   
 ## <a name="example"></a>例  
   
@@ -97,7 +97,7 @@ while (SQLFetch(hStmt) == SQL_SUCCESS)
 ```  
   
 ## <a name="see-also"></a>参照  
- [関数](https://go.microsoft.com/fwlink/?LinkId=59350)   
+ [SQLGetData 関数](https://go.microsoft.com/fwlink/?LinkId=59350)   
  [ODBC API 実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

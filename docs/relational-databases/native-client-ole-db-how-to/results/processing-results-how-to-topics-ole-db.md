@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dbb3f4206351d7ff8aff6caec44fa35f07cb1343
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302179"
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>結果を処理する方法に関するトピック (OLE DB)
@@ -36,6 +36,6 @@ ms.locfileid: "81302179"
 -   [結果セットからの行のフェッチ (OLE DB)](../../../relational-databases/native-client-ole-db-how-to/results/fetch-rows-from-a-result-set-ole-db.md)  
   
 ## <a name="see-also"></a>参照  
- [OLE DB の使用法に関するトピック](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+ [OLE DB 方法に関するトピック](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

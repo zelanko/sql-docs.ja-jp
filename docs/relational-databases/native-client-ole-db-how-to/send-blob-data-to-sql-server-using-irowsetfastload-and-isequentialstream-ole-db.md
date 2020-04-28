@@ -1,5 +1,5 @@
 ---
-title: BLOB データを SQL に、IROWSETFASTLOAD、イシーケンシャル ストリームに変換します。
+title: BLOB データから SQL、IROWSETFASTLOAD、ISEQUENTIALSTREAM
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0ea3838f1353318461f6ad725ad31fc372759f4d
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303043"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>IROWSETFASTLOAD と ISEQUENTIALSTREAM を使用した SQL SERVER への BLOB データの送信 (OLE DB)
@@ -41,7 +41,7 @@ ms.locfileid: "81303043"
 ## <a name="example"></a>例  
  1 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストを実行して、アプリケーションで使用するテーブルを作成します。  
   
- ole32.lib と oleaut32.lib を使用して次の C++ コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数に sqlncli.h を含むディレクトリが含まれていることを確認します。  
+ ole32.lib と oleaut32.lib を使用して次の C++ コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
   
  3 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストを実行して、アプリケーションで使用したテーブルを削除します。  
   

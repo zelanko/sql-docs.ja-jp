@@ -1,5 +1,5 @@
 ---
-title: ストアド プロシージャ、ODBC コール、出力
+title: ストアドプロシージャ、ODBC 呼び出し、出力
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 11e50e3937137b44c273d10914968dde2cfefdc5
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302227"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>ODBC 呼び出しと処理の出力でのストアド プロシージャの実行
@@ -27,7 +27,7 @@ ms.locfileid: "81302227"
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のストアド プロシージャでは、整数のリターン コードと出力パラメーターを使用できます。 リターン コードと出力パラメーターはサーバーからの最後のパケットで送信されるため、行セットが完全に解放されるまでアプリケーションでは使用できません。 コマンドが複数の結果を返す場合は、**IMultipleResults::GetResult** が DB_S_NORESULT を返すか **IMultipleResults** インターフェイスが完全に解放されると、いずれか早いほうが発生した時点で、出力パラメーター データを使用できるようになります。  
   
 > [!IMPORTANT]  
->  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は[、Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)を使用して資格情報を暗号化する必要があります。  
+>  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、 [Win32 CRYPTO API](https://go.microsoft.com/fwlink/?LinkId=64532)を使用して暗号化する必要があります。  
   
 ### <a name="to-process-return-codes-and-output-parameters"></a>リターン コードと出力パラメーターを処理するには  
   
@@ -52,7 +52,7 @@ ms.locfileid: "81302227"
   
  1 つ目の ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) コード リストを実行して、アプリケーションで使用するストアド プロシージャを作成します。  
   
- ole32.lib と oleaut32.lib を使用して 2 つ目の (C++) コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数に sqlncli.h を含むディレクトリが含まれていることを確認します。  
+ ole32.lib と oleaut32.lib を使用して 2 つ目の (C++) コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
   
  3 つ目の ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) コード リストを実行して、アプリケーションで使用したストアド プロシージャを削除します。  
   

@@ -1,5 +1,5 @@
 ---
-title: コネクト (アクセス ドライバ) |マイクロソフトドキュメント
+title: SQLDriverConnect (Access Driver) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,26 +14,26 @@ ms.assetid: 9d133e9b-7545-464d-aa3c-677fa7e2a41d
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 7a679cbb16ece3f239b1d17daabc8a294b808287
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302913"
 ---
 # <a name="sqldriverconnect-access-driver"></a>SQLDriverConnect (Access ドライバー)
 > [!NOTE]  
->  このトピックでは、アクセス ドライバー固有の情報を提供します。 この関数の一般的な情報については[、ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)の該当するトピックを参照してください。  
+>  このトピックでは、ドライバー固有の情報にアクセスします。 この関数の一般的な情報については、「 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)」の該当するトピックを参照してください。  
   
- **データ ソース**(DSN) を作成せずにドライバーに接続することができます。  
+ **SQLDriverConnect**を使用すると、データソース (DSN) を作成せずにドライバーに接続できます。  
   
- すべてのドライバの接続文字列では **、DSN** **、DBQ** **、FIL**の各キーワードがサポートされています。  
+ すべてのドライバーの接続文字列では、 **DSN**、 **dbq**、および**FIL**の各キーワードがサポートされています。  
   
- **UID**キーワードおよび**PWD**キーワードもサポートされています。  
+ **UID**キーワードと**PWD**キーワードもサポートされています。  
   
- PWD キーワードには特殊文字を含めることはできません **(SQLGetInfo**戻り値のSQL_SPECIAL_CHARACTERSを参照してください)。  
+ PWD キーワードには、特殊文字を含めることはできません (「 **SQLGetInfo**が返す値の SQL_SPECIAL_CHARACTERS」を参照してください)。  
   
- 次の表は、各ドライバに接続するために必要な最小キーワードを示し **、SQLDriverConnect**で使用されるキーワードと値のペアの例を示しています。 ドライバID 値の完全な一覧については[、「SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)」を参照してください。  
+ 次の表は、各ドライバーに接続するために必要な最低限のキーワードと、 **SQLDriverConnect**で使用されるキーワードと値のペアの例を示しています。 DRIVERID 値の完全な一覧については、「 [Sqlconfigdatasource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)」を参照してください。  
   
-|Driver|必要なキーワード|使用例|  
+|ドライバー|キーワードが必要です|使用例|  
 |------------|-----------------------|--------------|  
-|Microsoft Access|ドライバ,DBQ|ドライバー={アクセスドライバー (*.mdb)}DBQ=c:\\\temp\\\サンプル.mdb|
+|Microsoft Access|ドライバー、DBQ|Driver = {Microsoft Access Driver (* .mdb)};DBQ = c:\\\temp\\、mdb|

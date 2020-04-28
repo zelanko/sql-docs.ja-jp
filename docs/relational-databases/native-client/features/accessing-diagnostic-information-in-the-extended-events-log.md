@@ -1,5 +1,5 @@
 ---
-title: 拡張イベント ログの診断情報
+title: 拡張イベントログの診断情報
 ms.date: 03/14/2017
 ms.reviewer: ''
 ms.prod: sql
@@ -10,26 +10,26 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dd7b912ef214d71a56bbd2771ef2326b80643d5a
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303895"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>拡張イベント ログの診断情報へのアクセス
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  ネイティブ クライアントとデータ アクセス トレース ([データ アクセス トレース](https://go.microsoft.com/fwlink/?LinkId=125805)) は、接続リング バッファから接続エラーに関する診断情報を取得しやすく、拡張イベント ログからアプリケーション のパフォーマンス情報を取得しやすくするために、更新されました。 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+  以降で[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]は[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 、Native Client とデータアクセスのトレース ([データアクセスのトレース](https://go.microsoft.com/fwlink/?LinkId=125805)) が更新され、接続リングバッファーおよび拡張イベントログからのアプリケーションのパフォーマンス情報からの接続エラーに関する診断情報を簡単に取得できるようになりました。  
   
  拡張イベント ログを表示する方法については、「[イベント セッション データの表示](https://msdn.microsoft.com/library/ac742a01-2a95-42c7-b65e-ad565020dc49)」を参照してください。  
   
 > [!NOTE]  
 >  この機能は、トラブルシューティングおよび診断用であるため、監査やセキュリティの用途には適さない場合があります。  
   
-## <a name="remarks"></a>解説  
- 接続操作では、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client はクライアント接続 ID を送信します。 接続に失敗した場合は、接続リング バッファー ([接続リング バッファーによる SQL Server 2008 での接続トラブルシューティング](https://go.microsoft.com/fwlink/?LinkId=207752)) にアクセスし、**ClientConnectionID** フィールドを見つけて、接続エラーに関する診断情報を取得することができます。 クライアント接続 ID は、エラーが発生した場合にのみリング バッファーに記録されます  (プリログイン パケットを送信する前に接続が失敗した場合、クライアント接続 ID は生成されません。クライアント接続 ID は 16 バイトの GUID です。 また、**client_connection_id** 操作を拡張イベント セッションのイベントに追加すると、拡張イベントの出力先でクライアント接続 ID を検索することもできます。 詳しい診断サポートが必要な場合は、データ アクセスのトレースを有効にして、接続コマンドを再実行し、失敗した操作のデータ アクセスのトレースで **ClientConnectionID** フィールドを調べます。  
+## <a name="remarks"></a>Remarks  
+ 接続操作では、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client はクライアント接続 ID を送信します。 接続に失敗した場合は、接続リング バッファー ([接続リング バッファーによる SQL Server 2008 での接続トラブルシューティング](https://go.microsoft.com/fwlink/?LinkId=207752)) にアクセスし、**ClientConnectionID** フィールドを見つけて、接続エラーに関する診断情報を取得することができます。 クライアント接続 ID は、エラーが発生した場合にのみリング バッファーに記録されます  (ログイン前パケットを送信する前に接続が失敗した場合、クライアント接続 ID は生成されません)。クライアント接続 ID は16バイトの GUID です。 また、**client_connection_id** 操作を拡張イベント セッションのイベントに追加すると、拡張イベントの出力先でクライアント接続 ID を検索することもできます。 詳しい診断サポートが必要な場合は、データ アクセスのトレースを有効にして、接続コマンドを再実行し、失敗した操作のデータ アクセスのトレースで **ClientConnectionID** フィールドを調べます。  
   
- ネイティブ クライアントで[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ODBC を使用していて接続が成功した場合は、 [SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)で**SQL_COPT_SS_CLIENT_CONNECTION_ID**属性を使用してクライアント接続 ID を取得できます。  
+ Native Client で[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC を使用していて、接続に成功した場合は、 [Sqlgetconnectattr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)で**SQL_COPT_SS_CLIENT_CONNECTION_ID**属性を使用して、クライアント接続 ID を取得できます。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client は、スレッド固有のアクティビティ ID も送信します。 アクティビティ ID は、TRACK_CAUSAILITY オプションを有効にしてセッションを開始した場合、拡張イベント セッションでキャプチャされます。 アクティブな接続に関するパフォーマンスの問題については、クライアントのデータ アクセスのトレース (**ActivityID** フィールド) からアクティビティ ID を取得し、このアクティビティ ID を拡張イベント出力で検索することができます。 拡張イベントのアクティビティ ID は、16 バイトの GUID (クライアント接続 ID の GUID とは異なります) に 4 バイトのシーケンス番号が付加されたものです。 シーケンス番号は、スレッド内の要求の順序を表し、スレッドのバッチ ステートメントと RPC ステートメントの相対順序を示します。 **ActivityID** は必要に応じて、データ アクセスのトレースが有効であり、データ アクセス トレース構成ワードの 18 番目のビットがオンである場合に、SQL バッチ ステートメントと RPC 要求に送信されます。  
   

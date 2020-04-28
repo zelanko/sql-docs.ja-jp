@@ -1,5 +1,5 @@
 ---
-title: クエリ通知の操作 |マイクロソフトドキュメント
+title: クエリ通知の操作 |Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2019
 ms.prod: sql
@@ -22,10 +22,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8561d6c0e48e37dba7e22939fd868376c0ebdc9a
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303239"
 ---
 # <a name="working-with-query-notifications"></a>クエリ通知の操作
@@ -47,7 +47,7 @@ ms.locfileid: "81303239"
   
  通知は、一度だけ送信されます。 データ変更の通知を連続して行う場合は、各通知が処理された後にクエリを再実行して、新しいサブスクリプションを作成する必要があります。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ネイティブ クライアント アプリケーションは通常[!INCLUDE[tsql](../../../includes/tsql-md.md)][、RECEIVE](../../../t-sql/statements/receive-transact-sql.md)コマンドを使用して通知を受信し、通知オプションで指定されたサービスに関連付けられたキューから通知を読み取ります。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ネイティブクライアントアプリケーションは、通常、通知オプション[!INCLUDE[tsql](../../../includes/tsql-md.md)]で指定されたサービスに関連付けられているキューから通知を読み取るために、 [receive](../../../t-sql/statements/receive-transact-sql.md)コマンドを使用して通知を受信します。  
   
 > [!NOTE]  
 >  通知を必要とするクエリ内のテーブル名は、`dbo.myTable` のように、修飾された名前にする必要があります。 テーブル名は、2 つの部分を持つ修飾名にする必要があります。 3 つまたは 4 つの部分を持つ名前を使用すると、サブスクリプションが無効になります。  
@@ -67,19 +67,19 @@ CREATE SERVICE myService ON QUEUE myQueue
 >  上記のように、サービスでは定義済みのコントラクト `https://schemas.microsoft.com/SQL/Notifications/PostQueryNotification` を使用する必要があります。  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB プロバイダー  
- ネイティブ[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]クライアント OLE DB プロバイダーは、行セットの変更に関するコンシューマー通知をサポートしています。 コンシューマーは、行セットの変更のすべてのフェーズで、任意の変更が試行されたときに通知を受け取ります。  
+ Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、行セットの変更に関するコンシューマー通知をサポートしています。 コンシューマーは、行セットの変更のすべてのフェーズで、任意の変更が試行されたときに通知を受け取ります。  
   
 > [!NOTE]  
->  ネイティブ クライアント OLE DB プロバイダーを使用してクエリ通知をサブスクライブする唯一の方法は **、ICommand::Execute**を使用してサーバーに通知クエリを[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]渡します。  
+>  **ICommand:: Execute**を使用してサーバーに通知クエリを渡すことは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでクエリ通知をサブスクライブする唯一の有効な方法です。  
   
 ### <a name="the-dbpropset_sqlserverrowset-property-set"></a>DBPROPSET_SQLSERVERROWSET プロパティ セット  
- OLE DB を介したクエリ通知を[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]サポートするために、ネイティブ クライアントは、次の新しいプロパティをDBPROPSET_SQLSERVERROWSETプロパティ セットに追加します。  
+ OLE DB を使用したクエリ通知をサポート[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]するために、Native Client は、DBPROPSET_SQLSERVERROWSET プロパティセットに次の新しいプロパティを追加します。  
   
 |名前|Type|説明|  
 |----------|----------|-----------------|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|クエリ通知をアクティブのままにしておく秒数。<br /><br /> 既定値は 432,000 秒 (5 日) です。 最小値は 1 秒であり、最大値は 2^31-1 秒です。|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|通知のメッセージ テキスト。 これはユーザーが定義するため、あらかじめ定義済みの書式はありません。<br /><br /> 既定では、文字列は空です。 1 ～ 2,000 文字を使用してメッセージを指定できます。|  
-|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|クエリ通知オプション。 これらは、*名前*=*値*構文を使用した文字列で指定されます。 ユーザーがサービスを作成して、キューから通知を読み取る必要があります。<br /><br /> 既定値は空の文字列です。|  
+|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|クエリ通知オプション。 これらは、*名前*=と*値*の構文を持つ文字列で指定されます。 ユーザーがサービスを作成して、キューから通知を読み取る必要があります。<br /><br /> 既定値は空の文字列です。|  
   
  ステートメントがユーザー トランザクションで実行されたか自動コミットで実行されたか、また、ステートメントが実行されたトランザクションがコミットされたかロールバックされたかに関係なく、通知サブスクリプションは必ずコミットされます。 サーバー通知は、次の無効通知条件のいずれかが最初に発生したときに起動します。通知条件は、基になるデータまたはスキーマが変更されるか、タイムアウト期間に到達するかです。 通知登録は、起動直後に削除されます。 したがって、通知を受け取った後も引き続き更新するには、アプリケーションで再度サブスクライブする必要があります。  
   
@@ -104,10 +104,10 @@ RECEIVE * FROM MyQueue
 > [!NOTE]  
 >  ステートメントの準備フェーズではサブスクリプションが開始されることはありません。サブスクリプションは、ステートメントを実行したときにのみ開始されます。また、OLE DB Core Services を使用してもクエリ通知は影響を受けません。  
   
- DBPROPSET_SQLSERVERROWSET プロパティ セットの詳細については、「[行セットのプロパティと動作](../../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)」を参照してください。  
+ DBPROPSET_SQLSERVERROWSET プロパティセットの詳細については、「[行セットのプロパティと動作](../../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)」を参照してください。  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC ドライバー  
- ネイティブ[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]クライアント ODBC ドライバーは[、SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md)関数と[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)関数に 3 つの新しい属性を追加してクエリ通知をサポートします。  
+ Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client ODBC ドライバーでは、 [SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md)関数と[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)関数に3つの新しい属性を追加することによって、クエリ通知をサポートしています。  
   
 -   SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT  
   
@@ -115,7 +115,7 @@ RECEIVE * FROM MyQueue
   
 -   SQL_SOPT_SS_QUERYNOTIFICATION_TIMEOUT  
   
- SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT と SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS が NULL 以外の場合、上記で定義された 3 つの属性を含むクエリ通知 TDS ヘッダーが、コマンドを実行するたびにサーバーに送信されます。 どちらかが NULL の場合、クエリ通知 TDS ヘッダーは送信されず、SQL_SUCCESS_WITH_INFO が返されます。 検証は[、SQLPrepare 関数](https://go.microsoft.com/fwlink/?LinkId=59360) **、SqlExecDirect**、および**SqlExecute**で行われ、属性が無効な場合は、すべて失敗します。 同様に、これらのクエリ通知属性が [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] に対して設定されている場合、SQL_SUCCESS_WITH_INFO によって実行が失敗します。  
+ SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT と SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS が NULL 以外の場合、上記で定義された 3 つの属性を含むクエリ通知 TDS ヘッダーが、コマンドを実行するたびにサーバーに送信されます。 どちらかが NULL の場合、クエリ通知 TDS ヘッダーは送信されず、SQL_SUCCESS_WITH_INFO が返されます。 検証は、 [SQLPrepare 関数](https://go.microsoft.com/fwlink/?LinkId=59360)、 **SqlExecDirect**、および**sqlexecute**に対して行われ、属性が有効でない場合はすべて失敗します。 同様に、これらのクエリ通知属性が [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] に対して設定されている場合、SQL_SUCCESS_WITH_INFO によって実行が失敗します。  
   
 > [!NOTE]  
 >  ステートメントの準備段階では、サブスクリプションが開始されることはありません。サブスクリプションを開始できるのは、ステートメントを実行したときのみです。  
@@ -125,15 +125,15 @@ RECEIVE * FROM MyQueue
   
 -   **text**  
   
--   **Ntext**  
+-   **ntext**  
   
--   **イメージ**  
+-   **image**  
   
  これらのいずれかのデータ型を返すクエリに対して通知要求を作成すると、通知サブスクリプションが不可能であるという通知が、すぐに発行されます。  
   
  バッチまたはストアド プロシージャに対するサブスクリプション要求を作成すると、そのバッチまたはストアド プロシージャ内で実行される各ステートメントに対して、別個のサブスクリプション要求が作成されます。 EXECUTE ステートメントは通知を登録せず、実行されるコマンドへ通知要求を送信します。 バッチの場合、実行されるステートメントに対してコンテキストが適用され、さらに同様のルールが適用されます。  
   
- 同じデータベース コンテキストで同じユーザーによって送信された通知のクエリの送信と同じテンプレート、同じパラメーター値、同じ通知 ID、および既存のアクティブなサブスクリプションの同じ配信場所を持つ既存のサブスクリプションが更新され、新しい指定されたタイムアウトがリセットされます。これは、同一のクエリに対して通知が要求された場合、1 つの通知のみが送信されることを意味します。 バッチ内で重複するクエリや、ストアド プロシージャ内で複数回呼び出されたクエリにも、これが当てはまります。  
+ 同じデータベースコンテキストで同じユーザーによって送信され、同じテンプレート、同じパラメーター値、同じ通知 ID、および既存のアクティブなサブスクリプションと同じ配信場所を持つ通知のクエリを送信すると、既存のサブスクリプションが更新され、指定された新しいタイムアウトがリセットされます。これは、同一のクエリに対して通知が要求されると、1つの通知のみが送信されることを意味します。 バッチ内で重複するクエリや、ストアド プロシージャ内で複数回呼び出されたクエリにも、これが当てはまります。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Native Client の機能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  

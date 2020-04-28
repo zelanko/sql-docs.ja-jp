@@ -1,5 +1,5 @@
 ---
-title: パラメータマーカー |マイクロソフトドキュメント
+title: パラメーターマーカー |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,29 +14,29 @@ author: David-Engel
 ms.author: v-daenge
 ms.reviewer: ''
 ms.openlocfilehash: 132473de586094f79dd34c999d44f6dd59aefaef
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303573"
 ---
 # <a name="parameter-markers"></a>パラメーター マーカー
-SQL-92 仕様に従って、アプリケーションは次の場所にパラメーター マーカーを配置できません。 より包括的なリストについては、SQL-92 仕様を参照してください。  
+SQL-92 仕様に従って、アプリケーションは次の場所にパラメーターマーカーを配置することはできません。 より包括的な一覧については、「SQL-92 の仕様」を参照してください。  
   
--   **SELECT**リスト内  
+-   **選択**リスト内  
   
--   *比較述部*の両方の*式*として  
+-   *比較述語*で両方の*式*として  
   
 -   二項演算子の両方のオペランドとして  
   
--   **BETWEEN**演算の第 1 オペランドと第 2 オペランドの両方として  
+-   **BETWEEN**演算の1番目と2番目のオペランドの両方として  
   
--   **BETWEEN**演算の最初と 3 番目のオペランドの両方として  
+-   **BETWEEN**演算の1番目と3番目のオペランドの両方として  
   
 -   **IN**演算の式と最初の値の両方として  
   
--   単項 + または - 演算のオペランドとして  
+-   単項演算のオペランドとしての。  
   
--   *セット関数参照の*引数として  
+-   *セット関数参照*の引数として  
   
- パラメーター・マーカーの詳細については、SQL-92 仕様を参照してください。 パラメータの詳細については、「ステートメント[パラメータ](../../../odbc/reference/develop-app/statement-parameters.md)」を参照してください。
+ パラメーターマーカーの詳細については、「SQL-92 の仕様」を参照してください。 パラメーターの詳細については、「[ステートメントパラメーター](../../../odbc/reference/develop-app/statement-parameters.md)」を参照してください。

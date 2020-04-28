@@ -1,5 +1,5 @@
 ---
-title: ODBC デスクトップ データベース ドライバ |マイクロソフトドキュメント
+title: Microsoft ODBC Desktop Database Drivers |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,31 +18,31 @@ ms.assetid: 4e505c65-a8dd-4283-ae28-313d8a3aa046
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 99da8943f738d879a0a1bb66f6cfdbd6156c17ee
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302983"
 ---
 # <a name="microsoft-odbc-desktop-database-drivers"></a>デスクトップのデータベースの Microsoft ODBC ドライバー
-ODBC は、データベース アクセス言語として構造化照会言語 (SQL) を使用する API です。 アプリケーションのソース コードに直接組み込まれているのと同じ ODBC ソース コードを使用して、さまざまなデータベース管理システム (DBMS) にアクセスできます。 ODBC デスクトップ データベース ドライバを使用すると、ODBC 対応アプリケーションのユーザーは、ODBC インターフェイスを使用してデスクトップ データベースを開いたり、クエリを実行したり、更新したりできます。  
+ODBC は、構造化照会言語 (SQL) をデータベースアクセス言語として使用する API です。 アプリケーションのソースコードに直接組み込まれているのと同じ ODBC ソースコードを使用して、さまざまなデータベース管理システム (Dbms) にアクセスできます。 Microsoft ODBC Desktop データベースドライバーを使用すると、ODBC 対応のアプリケーションのユーザーは、ODBC インターフェイスを使用してデスクトップデータベースを開いたり、クエリを実行したり、更新したりできます。  
   
- ODBC デスクトップ データベース ドライバは、マイクロソフトの Jet ベースの ODBC ドライバのセットです。 Microsoft ODBC デスクトップ データベース ドライバ 2.0 には 16 ビットと 32 ビットの両方のドライバが含まれていますが、バージョン 3.0 以降には、Windows 95 以降で動作する 32 ビット ドライバのみが含まれています。 これらのドライバーは、次の種類のデータ ソースへのアクセスを提供します。  
+ Microsoft ODBC Desktop データベースドライバーは、Microsoft Jet ベースの ODBC ドライバーのセットです。 Microsoft ODBC Desktop Database driver 2.0 には16ビットと32ビットの両方のドライバーが含まれていますが、バージョン3.0 以降では、Windows 95 以降、Windows NT Workstation または Server version 4.0、Windows 2000 Professional、または Windows 2000 Server で動作する32ビットドライバーのみが含まれます。 これらのドライバーは、次の種類のデータソースへのアクセスを提供します。  
   
 -   Microsoft Access  
   
 -   Microsoft Excel  
   
--   パラドックス  
+-   Paradox  
   
--   Dbase  
+-   dBASE  
   
--   Text  
+-   テキスト  
   
- [マイクロソフトビジュアル フォックスプロの ODBC ドライバー](../../odbc/microsoft/visual-foxpro-odbc-driver.md)に関する詳細なドキュメントについては®を参照してください。  
+ Microsoft Visual FoxPro® ODBC ドライバーに関する詳細なドキュメントについては、「 [Visual FOXPRO Odbc ドライバー](../../odbc/microsoft/visual-foxpro-odbc-driver.md) 」を参照してください。  
   
 > [!NOTE]  
->  ロータス 1-2-3、Microsoft Exchange、HTML などの他のデータ ソースへのアクセスは、インストール可能な ISAM (IISAM) ドライバによって有効になります。 これらのドライバの詳細については、『 Microsoft Jet データベース エンジン プログラマ リファレンス 』の「外部データへのアクセス」を*参照してください*。 ODBC デスクトップ データベース ドライバー 4.0 は、Btrieve および EMS データ形式をサポートしていません。  
+>  Lotus 1-2-3、Microsoft Exchange、HTML などの他のデータソースへのアクセスは、インストール可能な ISAM (IISAM) ドライバーによって有効になります。 これらのドライバーの詳細については、 *『 Microsoft Jet データベースエンジンプログラマーリファレンス*』の「外部データへのアクセス」を参照してください。 ODBC デスクトップデータベースドライバー4.0 は、Btrieve および EMS データ形式をサポートしていません。  
   
  このセクションでは、次のトピックを扱います。  
   

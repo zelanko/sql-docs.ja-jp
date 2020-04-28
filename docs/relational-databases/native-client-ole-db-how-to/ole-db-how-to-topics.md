@@ -14,16 +14,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 773d00c14953e14d680c75d06c11701bc654c06f
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302216"
 ---
 # <a name="ole-db-how-to-topics"></a>OLE DB の使用法に関するトピック
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  ネイティブ クライアント[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]OLE DB プロバイダーを使用するには、サーバーへの接続を確立し、コマンドを実行し、結果を処理する方法を理解する必要があります。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを使用するには、サーバーへの接続を作成し、コマンドを実行して結果を処理する方法を理解する必要があります。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

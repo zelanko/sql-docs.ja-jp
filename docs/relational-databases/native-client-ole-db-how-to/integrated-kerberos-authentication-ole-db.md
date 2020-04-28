@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0f86c41fb3884494f38f0b7817ff0eabe2d4dfcb
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302263"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>統合 Kerberos 認証 (OLE DB)
@@ -30,7 +30,7 @@ ms.locfileid: "81302263"
   
  また、顧客から提供された SPN を指定する必要があります。 .cpp ファイルで、"CPSPN" の部分を顧客から提供された SPN に変更してください。  
   
- INCLUDE 環境変数に sqlncli.h を含むディレクトリが含まれていることを確認します。 ole32.lib と oleaut32.lib を使用してコンパイルします。  
+ INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。 ole32.lib と oleaut32.lib を使用してコンパイルします。  
   
 ```  
 // compile with: ole32.lib oleaut32.lib  

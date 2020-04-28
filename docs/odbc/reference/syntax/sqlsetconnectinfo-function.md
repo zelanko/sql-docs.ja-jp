@@ -1,5 +1,5 @@
 ---
-title: 関数を接続する |マイクロソフトドキュメント
+title: SQLSetConnectInfo 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,18 +13,18 @@ ms.assetid: 0782a1c3-c5d1-499b-a8ba-134162db9990
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: b575e0d09f87ad21e1190b8081b6604349a98263
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301853"
 ---
 # <a name="sqlsetconnectinfo-function"></a>SQLSetConnectInfo 関数
-**適合 性**  
- バージョン導入: ODBC 3.81 標準準拠: ODBC  
+**互換性**  
+ 導入されたバージョン: ODBC 3.81 標準準拠: ODBC  
   
  **まとめ**  
- **SQLSetConnectInfo**は、アプリケーションの[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)呼び出しの接続情報トークンにデータ ソース、ユーザー ID、およびパスワードを設定するために使用されます。  
+ **SQLSetConnectInfo**は、データソース、ユーザー ID、およびパスワードを、アプリケーションの[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)呼び出しの接続情報トークンに設定するために使用されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,41 +41,41 @@ SQLRETURN  SQLSetConnectInfo(
 ```  
   
 ## <a name="arguments"></a>引数  
- *トークンハンドル*  
- [入力]トークン ハンドル。  
+ *TokenHandle*  
+ 代入トークンハンドル。  
   
  *ServerName*  
- [入力]データ ソース名。 データは、プログラムと同じコンピューター上に置くか、ネットワーク上の別のコンピューター上に配置されている可能性があります。 アプリケーションでデータ ソースを選択する方法については、「データ[ソースまたはドライバの選択](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)」を参照してください。  
+ 代入データソース名。 データが、プログラムと同じコンピューター、またはネットワーク上の別のコンピューターに配置されている可能性があります。 アプリケーションでデータソースを選択する方法の詳細については、「[データソースまたはドライバーの選択](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)」を参照してください。  
   
  *NameLength1*  
- [入力]**文字でのサーバー名*の長さ。  
+ 代入**ServerName*の長さ (文字数)。  
   
- *名*  
- [入力]ユーザー識別子。  
+ *ユーザー名*  
+ 代入ユーザー識別子。  
   
- *名前の長さ 2*  
- [入力]**文字数でのユーザー名*の長さ。  
+ *NameLength2*  
+ 代入**ユーザー名*の長さ (文字数)。  
   
  *認証*  
- [入力]認証文字列 (通常はパスワード)。  
+ 代入認証文字列 (通常はパスワード)。  
   
- *名前の長さ 3*  
- [入力]**文字での認証*の長さ。  
+ *NameLength3*  
+ 代入文字での **認証*の長さ。  
   
 ## <a name="returns"></a>戻り値  
- SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、またはSQL_INVALID_HANDLE。  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、または SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>診断  
- 入力検証エラーの[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)と同じですが、ドライバー マネージャーはハンドル**型**のSQL_HANDLE_DBC_INFO_TOKENと*hDbcInfoToken*の**ハンドル**を使用する点を除いて。  
+ 入力検証エラーの[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)と同じですが、Driver Manager では SQL_HANDLE_DBC_INFO_TOKEN の**Handletype**と*Hdbcinfotoken*の**ハンドル**が使用される点が異なります。  
   
-## <a name="remarks"></a>解説  
- ドライバーがSQL_ERRORまたはSQL_INVALID_HANDLEを返すたびに、ドライバー マネージャーはエラーをアプリケーションに返します[(SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)または[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)で)。  
+## <a name="remarks"></a>Remarks  
+ ドライバーが SQL_ERROR または SQL_INVALID_HANDLE を返すたびに、ドライバーマネージャーはそのエラーをアプリケーションに返します ( [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)または[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md))。  
   
- ドライバーがSQL_SUCCESS_WITH_INFOを返すたびに、ドライバー マネージャーは*hDbcInfoToken*から診断情報を取得し[、SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)と[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)でアプリケーションにSQL_SUCCESS_WITH_INFOを返します。  
+ ドライバーが SQL_SUCCESS_WITH_INFO を返すたびに、ドライバーマネージャーは*Hdbcinfotoken*から診断情報を取得し、SQL_SUCCESS_WITH_INFO を[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)および[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)のアプリケーションに返します。  
   
- アプリケーションはこの関数を直接呼び出さないでください。 ドライバー対応接続プールをサポートする ODBC ドライバーは、この関数を実装する必要があります。  
+ アプリケーションでは、この関数を直接呼び出すことはできません。 ドライバー対応接続プールをサポートする ODBC ドライバーでは、この関数を実装する必要があります。  
   
- ODBC ドライバ開発用に sqlspi.h を含めます。  
+ ODBC ドライバーの開発には sqlspi. h を含めます。  
   
 ## <a name="see-also"></a>参照  
  [ODBC ドライバーの開発](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   

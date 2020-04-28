@@ -24,10 +24,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 06e4964dcab38087119343ab2fbc900f29d60d14
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303153"
 ---
 # <a name="working-with-snapshot-isolation"></a>スナップショット分離を使用した作業
@@ -38,7 +38,7 @@ ms.locfileid: "81303153"
  スナップショット分離の下で開始されたトランザクションは、トランザクションの開始時点のデータベース スナップショットを読み取ります。 この結果、スナップショット トランザクション コンテキスト内でキーセット サーバー カーソル、動的サーバー カーソル、および静的サーバー カーソルを開くと、これらのカーソルはシリアル化可能なトランザクション内で開かれた静的カーソルとほぼ同様に動作します。 また、スナップショット分離レベルの下でカーソルが開かれると、ロックが設定されず、サーバーでのブロッキングを減少させることができます。  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB プロバイダー  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ネイティブ クライアント OLE DB プロバイダには、 で導入されたスナップショット分離を[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]利用する機能強化が追加されています。 具体的には、DBPROPSET_DATASOURCEINFO プロパティ セットと DBPROPSET_SESSION プロパティ セットへ変更が加えられています。  
+ Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーには、で[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]導入されたスナップショット分離を利用する拡張機能があります。 具体的には、DBPROPSET_DATASOURCEINFO プロパティ セットと DBPROPSET_SESSION プロパティ セットへ変更が加えられています。  
   
 ### <a name="dbpropset_datasourceinfo"></a>DBPROPSET_DATASOURCEINFO  
  DBPROP_SUPPORTEDTXNISOLEVELS プロパティで使用される DBPROPVAL_TI_SNAPSHOT 値が追加され、DBPROPSET_DATASOURCEINFO プロパティ セットではスナップショット分離レベルがサポートされるようになりました。 この新しい値は、データベースでバージョン管理が有効になっているかどうかにかかわらず、スナップショット分離レベルがサポートされることを示します。 次に、DBPROP_SUPPORTEDTXNISOLEVELS の値の一覧を示します。  
@@ -60,18 +60,18 @@ ms.locfileid: "81303153"
  トランザクションでスナップショット分離がサポートされる方法については、「[ローカル トランザクションのサポート](../../../relational-databases/native-client-ole-db-transactions/supporting-local-transactions.md)」を参照してください。  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC ドライバー  
- ネイティブ[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]クライアント ODBC ドライバーは、スナップショット分離のサポートを提供しますが[、SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)関数と[SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md)関数に対する機能強化が行われました。  
+ Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client ODBC ドライバーでは、 [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)関数と[SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md)関数が拡張されましたが、スナップショット分離がサポートされています。  
   
 ### <a name="sqlsetconnectattr"></a>SQLSetConnectAttr  
- **SQLSetConnectAttr**関数は、SQL_COPT_SS_TXN_ISOLATION属性の使用をサポートするようになりました。 SQL_COPT_SS_TXN_ISOLATION を SQL_TXN_SS_SNAPSHOT に設定すると、トランザクションがスナップショット分離レベルで実行されることが報告されます。  
+ **SQLSetConnectAttr**関数は、SQL_COPT_SS_TXN_ISOLATION 属性の使用をサポートするようになりました。 SQL_COPT_SS_TXN_ISOLATION を SQL_TXN_SS_SNAPSHOT に設定すると、トランザクションがスナップショット分離レベルで実行されることが報告されます。  
   
 ### <a name="sqlgetinfo"></a>SQLGetInfo  
- [SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md)関数は、SQL_TXN_ISOLATION_OPTION情報の種類に追加されたSQL_TXN_SS_SNAPSHOT値をサポートするようになりました。  
+ [SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md)関数は、SQL_TXN_ISOLATION_OPTION の情報の種類に追加された SQL_TXN_SS_SNAPSHOT 値をサポートするようになりました。  
   
- トランザクションでのスナップショット分離のサポート方法については、「[カーソル トランザクション分離レベル](../../../relational-databases/native-client-odbc-cursors/properties/cursor-transaction-isolation-level.md)」を参照してください。  
+ トランザクションでスナップショット分離がどのようにサポートされるかについては、「 [Cursor Transaction 分離レベル](../../../relational-databases/native-client-odbc-cursors/properties/cursor-transaction-isolation-level.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server ネイティブ クライアントの機能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
+ [SQL Server Native Client 機能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [行セットのプロパティと動作](../../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)  
   
   

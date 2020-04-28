@@ -1,5 +1,5 @@
 ---
-title: インデックス ステートメントの制限 |マイクロソフトドキュメント
+title: DROP INDEX ステートメントの制限事項 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,11 +14,11 @@ ms.assetid: a8ab9259-af47-438f-9fff-042e8ebb1c58
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: c1a8cf3bcb52258cad072efaa52245725850d931
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303443"
 ---
 # <a name="drop-index-statement-limitations"></a>DROP INDEX ステートメントの制限事項
-DROP INDEX ステートメントは、Excel またはテキスト ドライバーではサポートされていません。
+DROP INDEX ステートメントは、Microsoft Excel またはテキストドライバーではサポートされていません。

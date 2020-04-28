@@ -1,5 +1,5 @@
 ---
-title: インストール済みの Oracle コンポーネントの決定 |マイクロソフトドキュメント
+title: インストールされている Oracle コンポーネントの確認 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,17 +13,17 @@ ms.assetid: 3b018f6a-9db0-4aa1-8ec4-afc5f76d7cad
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 73a406487ea6a4e1ab00e0320923b0b276a359a6
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303493"
 ---
 # <a name="determining-installed-oracle-components"></a>インストールされる Oracle コンポーネントの決定
 > [!IMPORTANT]  
->  この機能は、今後のバージョンの Windows で削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、Oracle によって提供される ODBC ドライバーを使用します。  
+>  この機能は、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、Oracle によって提供される ODBC ドライバーを使用してください。  
   
- システムにインストールされているOracleコンポーネントとそのバージョンを確認するには、Oracleホームディレクトリの下にある \Orainst ディレクトリに移動します。 次のいずれかのテキスト ファイルを開きます。  
+ システムにインストールされている Oracle コンポーネント (およびそのバージョン) を確認するには、Oracle ホームディレクトリの下のディレクトリに移動します。 次のいずれかのテキストファイルを開きます: Nt .rgs、Win95 .rgs、または Win98。  
   
  ファイル形式は次のようになります。  
   
@@ -37,4 +37,4 @@ ms.locfileid: "81303493"
 69 w32plus80    all    "plus80"   "8.0.5.0.0"   "SQL*Plus"  
 ```  
   
- .rgs ファイルには、各コンポーネントのインストール情報と説明も含まれています。
+ .Rgs ファイルには、各コンポーネントのインストール情報と説明も含まれています。

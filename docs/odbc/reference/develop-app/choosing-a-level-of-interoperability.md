@@ -1,5 +1,5 @@
 ---
-title: 相互運用性のレベルを選択する |マイクロソフトドキュメント
+title: 相互運用性のレベルを選択する |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 1f915832-a7c1-41cd-8c4f-bf6d976951b0
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: aa04eea9821b024f9e8dadc8ad09f449d4fb14b5
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303358"
 ---
 # <a name="choosing-a-level-of-interoperability"></a>相互運用性のレベルの選択
-アプリケーションが ODBC を使用すると仮定すると、次の手順は、必要な相互運用性のレベルを決定することです。 基本的な相互運用性レベルは、通常、アプリケーションの種類の関数です: カスタム アプリケーションは相互運用可能ではない傾向があり、垂直アプリケーションは、限られた数の DBMS 間で相互運用可能である傾向があり、汎用アプリケーションはすべての DBMS 間で相互運用可能になる傾向があります。  
+アプリケーションで ODBC を使用する場合は、次の手順として、必要な相互運用性のレベルを決定します。 基本的な相互運用性のレベルは、通常、アプリケーションの種類の機能です。カスタムアプリケーションは相互運用できない傾向があり、垂直アプリケーションは限られた数の Dbms 間で相互運用できる傾向があり、汎用アプリケーションはすべての Dbms 間で相互運用できる傾向があります。  
   
  このセクションでは、次のトピックを扱います。  
   

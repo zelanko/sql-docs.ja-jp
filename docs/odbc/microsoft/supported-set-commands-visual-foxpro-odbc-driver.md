@@ -1,5 +1,5 @@
 ---
-title: サポートされている SET コマンド (ビジュアル フォックスプロ ODBC ドライバー) |マイクロソフトドキュメント
+title: サポートされている SET コマンド (Visual FoxPro ODBC ドライバー) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,24 +19,24 @@ ms.assetid: 43a821fb-97fd-4316-aafe-4ef2de783188
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: e4139751de61738903e4e152535fb75bf30a97a3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303133"
 ---
 # <a name="supported-set-commands-visual-foxpro-odbc-driver"></a>サポートされる SET コマンド (Visual FoxPro ODBC ドライバー)
-アプリケーションは、データ ソースに次の Visual FoxPro **SET**コマンドを送信できます。  
+アプリケーションでは、次の Visual FoxPro **SET**コマンドをデータソースに送信できます。  
   
- [ANSI を設定する](../../odbc/microsoft/set-ansi-command.md)  
+ [ANSI の設定](../../odbc/microsoft/set-ansi-command.md)  
   
- [ブロックサイズの設定](../../odbc/microsoft/set-blocksize-command.md)  
+ [BLOCKSIZE の設定](../../odbc/microsoft/set-blocksize-command.md)  
   
- [照合を設定する](../../odbc/microsoft/set-collate-command.md)  
+ [COLLATE の設定](../../odbc/microsoft/set-collate-command.md)  
   
- [削除を設定する](../../odbc/microsoft/set-deleted-command.md)  
+ [削除の設定](../../odbc/microsoft/set-deleted-command.md)  
   
- [正確な設定](../../odbc/microsoft/set-exact-command.md)  
+ [正確に設定](../../odbc/microsoft/set-exact-command.md)  
   
  [排他的に設定](../../odbc/microsoft/set-exclusive-command.md)  
   
@@ -46,4 +46,4 @@ ms.locfileid: "81303133"
   
  [再処理の設定](../../odbc/microsoft/set-reprocess-command.md)  
   
- [一意の設定](../../odbc/microsoft/set-unique-command.md)
+ [一意に設定](../../odbc/microsoft/set-unique-command.md)

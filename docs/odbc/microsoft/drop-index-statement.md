@@ -1,5 +1,5 @@
 ---
-title: インデックス ステートメントを削除する |マイクロソフトドキュメント
+title: DROP INDEX Statement |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ ms.assetid: cd0ff767-9254-413b-bd1a-bed26c6774f5
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 638bae6491c020519a0123ff56fe31e9a9ca1cf7
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303433"
 ---
 # <a name="drop-index-statement"></a>DROP INDEX ステートメント
-Access、dBASE、または Paradox ドライバを使用する場合、DROP INDEX ステートメントの構文は "DROP INDEX a on b" で、"a" はインデックスの名前、"b" はテーブルの名前 (DROP INDEX*インデックス名*ではない) です。  
+Microsoft Access、dBASE、または Paradox ドライバーが使用されている場合、DROP INDEX ステートメントの構文は "DROP INDEX a on b" になります。ここで、"a" はインデックスの名前、"b" はテーブルの名前 (DROP INDEX*インデックス名*ではありません) です。  
   
- Paradox ドライバを使用すると、DROP INDEX ステートメントによって Paradox セカンダリ インデックス ファイルが削除されます。  
+ Paradox ドライバーを使用すると、DROP INDEX ステートメントによって、Paradox セカンダリインデックスファイルが削除されます。  
   
- DROP INDEX ステートメントは、Excel またはテキスト ドライバーではサポートされていません。
+ DROP INDEX ステートメントは、Microsoft Excel またはテキストドライバーではサポートされていません。

@@ -1,5 +1,5 @@
 ---
-title: テーブルのドロップ コマンド |マイクロソフトドキュメント
+title: DROP TABLE コマンド |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,16 +13,16 @@ ms.assetid: bc50459b-8861-4889-84a9-129ae9065aa8
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 779c519f720027aea3a6f6cf2587d3c6e0b59b52
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303423"
 ---
 # <a name="drop-table-command"></a>DROP TABLE コマンド
-データ ソースで指定されたデータベースからテーブルを削除し、ディスクから削除します。  
+データソースで指定されたデータベースからテーブルを削除し、ディスクから削除します。  
   
- ビジュアル フォックスプロ ODBC ドライバーは、このコマンドのネイティブの Visual FoxPro 言語構文をサポートしています。 ドライバ固有の情報については、「解説」を参照してください。  
+ Visual FoxPro ODBC ドライバーでは、このコマンドのネイティブな Visual FoxPro 言語構文がサポートされています。 ドライバー固有の情報については、「解説」を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -31,23 +31,23 @@ ms.locfileid: "81303423"
 DROP TABLE TableName | FileName | ?  
 ```  
   
-## <a name="settings"></a>設定  
+## <a name="settings"></a>Settings  
  *TableName*  
- データ ソースで指定されたデータベースから削除し、ディスクから削除するテーブルを指定します。  
+ データソースで指定されたデータベースから削除するテーブルと、ディスクから削除するテーブルを指定します。  
   
  *FileName*  
- ディスクから削除する空きテーブルを指定します。  
+ ディスクから削除するフリーテーブルを指定します。  
   
  ?  
- [削除] ダイアログボックスを表示し、データ ソースで指定したデータベースから削除するテーブルを選択し、ディスクから削除できます。  
+ [削除] ダイアログを表示します。このダイアログボックスでは、データソースで指定されたデータベースから削除するテーブルを選択したり、ディスクから削除したりできます。  
   
-## <a name="remarks"></a>解説  
- DROP TABLE が発行されると、そのテーブルに関連付けられているすべてのプライマリ インデックス、デフォルト値、および検証規則も削除されます。 DROP TABLE は、削除するテーブルに関連付けられたルールまたはリレーションシップがテーブルに関連付けられている場合、データ ソースで指定されたデータベース内の他のテーブルにも影響します。 テーブルがデータベースから削除されると、ルールとリレーションは無効になります。  
+## <a name="remarks"></a>Remarks  
+ DROP TABLE が発行されると、テーブルに関連付けられているすべてのプライマリインデックス、既定値、および検証ルールも削除されます。 DROP TABLE は、削除するテーブルに関連付けられたルールまたはリレーションがテーブルにある場合に、データソースで指定されたデータベース内の他のテーブルにも影響します。 テーブルがデータベースから削除されても、ルールとリレーションは無効になります。  
   
-## <a name="driver-remarks"></a>ドライバの解説  
- アプリケーションが ODBC SQL ステートメント DROP TABLE をデータ ソースに送信すると、次の表に示す構文を使用して、Visual FoxPro ODBC ドライバーはコマンドを Visual FoxProDROP TABLE コマンドに変換します。  
+## <a name="driver-remarks"></a>ドライバーの解説  
+ アプリケーションが ODBC SQL ステートメントドロップテーブルをデータソースに送信すると、次の表に示す構文を使用して、Visual FoxPro ODBC ドライバーによってコマンドが Visual FoxProDROP TABLE コマンドに変換されます。  
   
-|ODBC 構文|データ ソース|ビジュアル フォックスプロの構文|  
+|ODBC 構文|データ ソース|Visual FoxPro の構文|  
 |-----------------|-----------------|--------------------------|  
-|ドロップ テーブル*ベース テーブル名*|データベース (.dbc ファイル)|テーブル*テーブル名の*削除|  
-||空きテーブルのディレクトリ (.dbf ファイル)|*イレースド・データベース名*<br /><br /> *消去 cdx 名*<br /><br /> *消去 fptName*|
+|DROP TABLE *-テーブル名*|データベース (dbc ファイル)|テーブル*TableName*削除の削除|  
+||フリーテーブル (.dbf ファイル) のディレクトリ|削除、 *Dbfname*<br /><br /> *CdxName*の消去<br /><br /> *Fptname*の消去|

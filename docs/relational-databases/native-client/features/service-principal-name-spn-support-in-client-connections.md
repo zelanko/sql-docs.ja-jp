@@ -1,5 +1,5 @@
 ---
-title: 接続内のサービス プリンシパル名
+title: 接続でのサービスプリンシパル名
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dfbd03d5a964ea9e997e2d5900b4b762d4dad49c
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303809"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>クライアント接続でのサービス プリンシパル名 (SPN) のサポート
@@ -35,7 +35,7 @@ ms.locfileid: "81303809"
 >  クライアント アプリケーションで指定された SPN は、Windows 統合セキュリティを使用して接続されている場合にのみ使用されます。  
   
 > [!TIP]  
->  **Kerberos 構成マネージャー[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のは、Kerberos 関連の接続問題のトラブルシューティングに役立つ診断ツールです。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Kerberos 認証の詳細については、「 [Microsoft® Kerberos Configuration Manager for SQL Server®](https://www.microsoft.com/download/details.aspx?id=39046)」をご覧ください。  
+>  の kerberos Configuration Manager は、での kerberos に[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]関連する接続**の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]問題のトラブルシューティングに役立つ診断ツールです。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ** Kerberos 認証の詳細については、「 [Microsoft® Kerberos Configuration Manager for SQL Server®](https://www.microsoft.com/download/details.aspx?id=39046)」をご覧ください。  
   
  Kerberos の詳細については、次の記事を参照してください。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "81303809"
   
 -   [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758)  
   
-## <a name="usage"></a>使用法  
+## <a name="usage"></a>使用方法  
  次の表では、セキュリティで保護された認証をクライアント アプリケーションで使用するための、最も一般的なシナリオについて説明します。  
   
 |シナリオ|説明|  
@@ -60,7 +60,7 @@ ms.locfileid: "81303809"
 ## <a name="failover"></a>[フェールオーバー]  
  SPN はフェールオーバー キャッシュに保存されないため、接続間で受け渡すことができません。 接続文字列または接続属性に SPN が指定されると、プリンシパルおよびパートナーへの接続が試行されるたびに SPN が使用されます。  
   
-## <a name="connection-pooling"></a>接続のプール  
+## <a name="connection-pooling"></a>接続プール  
  SPN をすべての文字列ではなく一部の接続文字列で指定すると、プールが断片化する原因となることがあるので、アプリケーションでは注意が必要です。  
   
  アプリケーションでは、接続文字列キーワードを指定する代わりに、プログラムによって SPN を接続属性として指定できます。 こうすると、接続プールの断片化を管理するうえで役立ちます。  
@@ -71,7 +71,7 @@ ms.locfileid: "81303809"
  新しい接続動作はクライアントで実装されるため、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のバージョンに固有ではありません。  
   
 ## <a name="linked-servers-and-delegation"></a>リンク サーバーと委任  
- リンク サーバーを作成するときに[、sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)の**\@provstr**パラメーターを使用して、サーバーとフェールオーバー パートナーの SPN を指定できます。 これを実行するメリットは、クライアント接続文字列で SPN を指定する場合と同じです。つまり、Kerberos 認証を使う接続を確立する方が、より簡単でより信頼性が高くなります。  
+ リンクサーバーを作成するときに、 [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)の** \@provstr**パラメーターを使用して、サーバーおよびフェールオーバーパートナーの spn を指定できます。 これを実行するメリットは、クライアント接続文字列で SPN を指定する場合と同じです。つまり、Kerberos 認証を使う接続を確立する方が、より簡単でより信頼性が高くなります。  
   
  リンク サーバーでの委任には、Kerberos 認証が必要です。  
   
@@ -93,13 +93,13 @@ ms.locfileid: "81303809"
   
 |構文|説明|  
 |------------|-----------------|  
-|を*指定します。*|TCP 以外のプロトコルが使用される場合に、既定のインスタンスに対してプロバイダーが生成する既定の SPN。<br /><br /> *fqdn*は完全修飾ドメイン名です。|  
-|ポート *:* *FQDN*|TCP が使用される場合にプロバイダーが生成する既定の SPN。<br /><br /> *port* は、TCP ポート番号です。|  
+|MSSQLSvc/*fqdn*|TCP 以外のプロトコルが使用される場合に、既定のインスタンスに対してプロバイダーが生成する既定の SPN。<br /><br /> *fqdn*は完全修飾ドメイン名です。|  
+|MSSQLSvc/*fqdn*:*port*|TCP が使用される場合にプロバイダーが生成する既定の SPN。<br /><br /> *port* は、TCP ポート番号です。|  
 |MSSQLSvc/*fqdn*:*InstanceName*|TCP 以外のプロトコルが使用される場合に、名前付きインスタンスに対してプロバイダーが生成する既定の SPN。<br /><br /> *InstanceName* は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの名前です。|  
 |HOST/*fqdn*<br /><br /> HOST/*MachineName*|Windows で自動的に登録されるビルトイン コンピューター アカウントにマップされる SPN。|  
 |*ユーザー名*@*ドメイン*|ドメイン アカウントの直接指定。<br /><br /> *Username* は、Windows ユーザー アカウントの名前です。<br /><br /> *Domain* は、Windows ドメイン名または完全修飾ドメイン名です。|  
-|*マシン名ドメイン*$@*Domain*|コンピューター アカウントの直接指定。<br /><br /> (接続先のサーバーが、LOCAL SYSTEM または NETWORK SERVICE アカウントで実行されている場合に Kerberos 認証を使用するには、 **ServerSPN** を *MachineName*$@*Domain* の形式で指定できます。)|  
-|*KDCキー*/*マシン名*|ユーザー指定の SPN。<br /><br /> *KDCKey* は、KDC キーの規則に従っている英数字の文字列です。|  
+|*MachineName*$@*ドメイン*|コンピューター アカウントの直接指定。<br /><br /> (接続先のサーバーが、LOCAL SYSTEM または NETWORK SERVICE アカウントで実行されている場合に Kerberos 認証を使用するには、 **ServerSPN** を *MachineName*$@*Domain* の形式で指定できます。)|  
+|*Kdckey*/*MachineName*|ユーザー指定の SPN。<br /><br /> *KDCKey* は、KDC キーの規則に従っている英数字の文字列です。|  
   
 ## <a name="odbc-and-ole-db-syntax-supporting-spns"></a>SPN をサポートする ODBC および OLE DB の構文  
  各構文の情報については、次のトピックを参照してください。  

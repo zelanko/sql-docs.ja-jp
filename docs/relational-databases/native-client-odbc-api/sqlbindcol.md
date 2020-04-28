@@ -1,5 +1,5 @@
 ---
-title: SQL バインドコル |マイクロソフトドキュメント
+title: SQLBindCol |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -15,35 +15,35 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 69457daccbc7868e58f91c71a48b4b25f15f5318
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302731"
 ---
 # <a name="sqlbindcol"></a>SQLBindCol
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  一般的な規則として **、SQLBindCol**を使用してデータ変換を行う場合の影響を考慮してください。 バインドによる変換はクライアント側のプロセスなので、たとえば文字型の列にバインドされた浮動小数点値を取得すると、ドライバーは行をフェッチするときにローカルで浮動小数点型から文字型への変換を行います。 [!INCLUDE[tsql](../../includes/tsql-md.md)] CONVERT 関数を使用すると、データ変換の負荷をサーバーに移すことができます。  
+  一般的な規則として、 **SQLBindCol**を使用してデータ変換を行う場合の影響について検討します。 バインドによる変換はクライアント側のプロセスなので、たとえば文字型の列にバインドされた浮動小数点値を取得すると、ドライバーは行をフェッチするときにローカルで浮動小数点型から文字型への変換を行います。 [!INCLUDE[tsql](../../includes/tsql-md.md)] CONVERT 関数を使用すると、データ変換の負荷をサーバーに移すことができます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスでは、1 回のステートメントの実行に対して複数の結果セット行を返すことができます。 各結果セットは個別にバインドされている必要があります。 複数の結果セットのバインディングの詳細については、「 [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスでは、1 回のステートメントの実行に対して複数の結果セット行を返すことができます。 各結果セットは個別にバインドされている必要があります。 複数の結果セットのバインドの詳細については、「 [Sqlmoreresults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md)」を参照してください。  
   
- 開発者は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *TargetType*値を使用して列を -固有の C データ型**に連結SQL_C_BINARY。** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固有の型にバインドされた列は移植できません。 また、定義済みの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固有の ODBC C データ型は DB-Library の型定義と一致するので、アプリケーションを移植する DB-Library 開発者はこの特性を利用できます。  
+ 開発者は、 *TargetType*値[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQL_C_BINARY**を使用して、列を特定の C データ型にバインドできます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固有の型にバインドされた列は移植できません。 また、定義済みの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固有の ODBC C データ型は DB-Library の型定義と一致するので、アプリケーションを移植する DB-Library 開発者はこの特性を利用できます。  
   
- データの切り捨てレポートは、ネイティブ クライアント[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ODBC ドライバーの負荷の高いプロセスです。 バインドされるすべてのデータ バッファーのサイズがデータを返すのに十分なサイズであれば、データの切り捨てを回避できます。 文字データの場合、文字列の終了に既定のドライバーの動作を使用するときは、データ バッファーの大きさに文字列ターミネータの領域も含める必要があります。 たとえば[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**、char(5)** カラムを 5 文字の配列にバインドすると、フェッチされる値ごとに切り捨てが行われます。 同じ列を 6 文字の配列にバインドすると、NULL ターミネータを格納する文字要素が用意されるため、切り捨てを回避できます。 [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)を使用すると、長い文字とバイナリ データを切り捨てずに効率的に取得できます。  
+ データの切り捨てのレポートは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC ドライバーではコストのかかるプロセスです。 バインドされるすべてのデータ バッファーのサイズがデータを返すのに十分なサイズであれば、データの切り捨てを回避できます。 文字データの場合、文字列の終了に既定のドライバーの動作を使用するときは、データ バッファーの大きさに文字列ターミネータの領域も含める必要があります。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **char (5)** 列を5文字の配列にバインドすると、フェッチされたすべての値が切り捨てられます。 同じ列を 6 文字の配列にバインドすると、NULL ターミネータを格納する文字要素が用意されるため、切り捨てを回避できます。 [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)を使用すると、長い文字とバイナリデータを切り捨てずに効率的に取得できます。  
   
- 大きな値のデータ型の場合、ユーザーが指定したバッファーが列の値全体を保持するのに十分な大きさでない場合 **、SQL_SUCCESS_WITH_INFO**が返され、"string data;「右の切り捨て」警告が発行されます。 **StrLen_or_IndPtr**引数には、バッファに格納されている文字数/バイト数が含まれます。  
+ 大きな値のデータ型の場合、ユーザーが指定したバッファーのサイズが列の値全体を保持するのに十分ではない場合、 **SQL_SUCCESS_WITH_INFO**が返され、"文字列データ;"右切り捨て" 警告が発行されます。 **StrLen_or_IndPtr**引数には、バッファーに格納されている文字数/バイト数が含まれます。  
   
 ## <a name="sqlbindcol-support-for-enhanced-date-and-time-features"></a>SQLBindCol による機能強化された日付と時刻のサポート  
- 日付/時刻型の結果列値は[、「SQL から C への変換](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md)」で説明されているように変換されます。時刻と日時オフセット列を対応する構造体 (**SQL_SS_TIME2_STRUCT**および**SQL_SS_TIMESTAMPOFFSET_STRUCT**) として取得するには、 *TargetType*を**SQL_C_DEFAULT**または**SQL_C_BINARY**として指定する必要があることに注意してください。  
+ Date 型または time 型の結果列の値は、「 [SQL から C への変換](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md)」で説明されているように変換されます。Time 列と datetimeoffset 列を対応する構造 (**SQL_SS_TIME2_STRUCT**および**SQL_SS_TIMESTAMPOFFSET_STRUCT**) として取得するには、 *TargetType*を**SQL_C_DEFAULT**または**SQL_C_BINARY**として指定する必要があることに注意してください。  
   
- 詳細については、「 [ODBC&#41;&#40;日付と時刻の向上](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)」を参照してください。  
+ 詳細については、「[日付と時刻の機能強化 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)」を参照してください。  
   
 ## <a name="sqlbindcol-support-for-large-clr-udts"></a>SQLBindCol による大きな CLR UDT のサポート  
- **大規模**な CLR ユーザー定義型 (UDT) をサポートしています。 詳細については、「 [ODBC&#41;&#40;大規模な CLR ユーザー定義型](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)」を参照してください。  
+ **SQLBindCol**は、大きな CLR ユーザー定義型 (udt) をサポートしています。 詳細については、「[大容量の CLR ユーザー定義型 &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [関数](https://go.microsoft.com/fwlink/?LinkId=59327)   
+ [SQLBindCol 関数](https://go.microsoft.com/fwlink/?LinkId=59327)   
  [ODBC API 実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

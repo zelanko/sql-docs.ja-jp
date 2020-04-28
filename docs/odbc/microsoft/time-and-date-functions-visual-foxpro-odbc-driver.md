@@ -1,5 +1,5 @@
 ---
-title: 時刻と日付の関数 (ビジュアル フォックスプロ ODBC ドライバー) |マイクロソフトドキュメント
+title: 日付と時刻の関数 (Visual FoxPro ODBC ドライバー) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,56 +18,56 @@ ms.assetid: c1fb63b7-af50-45d6-8dec-ae6ea7119527
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 86260f8e7245bed15122d4dbfc4649131674e17f
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303063"
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>時刻および日付関数 (Visual FoxPro ODBC ドライバー)
-次の表は、ビジュアル フォックスプロ ODBC ドライバーでサポートされている ODBC の時刻と日付の関数を一覧表示します。同じ関数の Visual FoxPro 文法が ODBC 構文と異なる場合は、対応するビジュアル FoxPro が一覧表示されます。  
+次の表は、Visual FoxPro ODBC ドライバーでサポートされている ODBC 時刻と日付の関数を示しています。同じ関数の Visual FoxPro 文法が ODBC 構文と異なる場合は、Visual FoxPro と同等のものが表示されます。  
   
-|ODBC 文法|ビジュアルフォックスプロ文法|  
+|ODBC 文法|Visual FoxPro の文法|  
 |------------------|---------------------------|  
-|カーデート *( )*|日付 *( )*|  
-|時間 *( )*|時間 *( )*|  
-|曜日 *(date_exp)*|CDOW *(date_exp)*|  
-|デイオブマンス *(date_exp)*|日 *( )*|  
+|CURDATE *()*|日付 *()*|  
+|CURTIME *()*|時刻 *()*|  
+|DAYNAME *(date_exp)*|CDOW います *(date_exp)*|  
+|DAYOFMONTH (*date_exp)*|DAY *()*|  
 |時間 *(time_exp)*||  
-|分 *(time_exp)*||  
+|MINUTE *(time_exp)*||  
 |月 *(time_exp)*||  
-|月名 *(date_exp)*|ク月 *(date_exp)*|  
-|今*すぐ ( )*|日時 *( )*|  
-|セカンド *(time_exp)*|SEC *(time_exp)*|  
-|週 *(date_exp)*||  
+|MONTHNAME *(date_exp)*|CMONTH *(date_exp)*|  
+|NOW *()*|DATETIME *()*|  
+|2番目 *(time_exp)*|秒 *(time_exp)*|  
+|WEEK *(date_exp)*||  
 |年 *(date_exp)*||  
   
- 次の日時関数はサポートされていません。  
+ 次の時刻と日付の関数はサポートされていません。  
   
- デイオブイヤー *(date_exp)*  
+ DAYOFYEAR *(date_exp)*  
   
  四半期 *(date_exp)*  
   
- タイムスタンプ追加 *(間隔、integer_exp、timestamp_exp)*  
+ タイムスタンプ ADD *(interval、integer_exp、timestamp_exp)*  
   
- タイムスタンプディフ *(間隔、timestamp_exp1、timestamp_exp2)*  
+ タイムスタンプ DIFF *(interval、timestamp_exp1、timestamp_exp2)*  
   
 ## <a name="odbc-escape-sequences"></a>ODBC エスケープ シーケンス  
- また、ドライバは日付データとタイムスタンプデータの ODBC エスケープシーケンスもサポートしています。 エスケープ句の構文は次のとおりです。  
+ ドライバーは、日付とタイムスタンプデータの ODBC エスケープシーケンスもサポートしています。 Escape 句の構文は次のとおりです。  
   
 ```  
 --(*vendor(Microsoft),product(ODBC) d 'value' *)-  
 --(*vendor(Microsoft),product(ODBC) ts ''value' *)-  
 ```  
   
- この構文では **、d**は*yyyy-mm-dd*形式の日付であることを示し **、ts**は*value**yyyy-mm-dd hh:mm:ss*のタイムスタンプであることを示します。 *value* *f.]* 形式。 日付とタイムスタンプのデータの短縮構文は次のとおりです。  
+ この構文では、 **d**は *、値*が*yyyy-mm-dd*形式の日付であることを示し、 **ts**はその*値*が*yyyy-mm-dd hh: mm: ss*のタイムスタンプであることを示します。*f...*]形式. 日付とタイムスタンプデータの短縮構文は次のとおりです。  
   
 ```  
 {d 'value'}  
 {ts 'value'}  
 ```  
   
- 例えば、以下の各ステートメントは、サポートされている SQL UPDATE コマンドで日付およびタイム・スタンプの短縮構文を使用して ALLTYPES 表を更新します。  
+ たとえば、次の各ステートメントは、サポートされている SQL UPDATE コマンドで日付とタイムスタンプの短縮構文を使用して ALLTYPES テーブルを更新します。  
   
 ```  
 UPDATE alltypes  
@@ -79,5 +79,5 @@ UPDATE alltypes
    WHERE KEY=111  
 ```  
   
-## <a name="remarks"></a>解説  
- エスケープ シーケンスの詳細については、『ODBC プログラマ リファレンス』の[「ODBC でのエスケープ シーケンス](../../odbc/reference/develop-app/escape-sequences-in-odbc.md)」を*参照してください*。
+## <a name="remarks"></a>Remarks  
+ エスケープシーケンスの詳細については、 *Odbc プログラマーズリファレンス*の「 [Odbc でのシーケンスのエスケープ](../../odbc/reference/develop-app/escape-sequences-in-odbc.md)」を参照してください。

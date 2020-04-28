@@ -1,5 +1,5 @@
 ---
-title: ファイルストリームからファイル、IBCP セッション (OLE DB)
+title: FILESTREAM to File、IBCPSession (OLE DB)
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4dd3cbfcd3ec491c116b3d71474d41526d7d893a
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302273"
 ---
 # <a name="read-a-filestream-column-to-file-using-ibcpsession-ole-db"></a>IBCPSession を使用した FILESTREAM 列のファイルへの読み取り (OLE DB)
@@ -23,10 +23,10 @@ ms.locfileid: "81302273"
 
   このサンプルでは、IBCPSession インターフェイスを使用して filestream 列をファイルに読み取り、フォーマット ファイルを作成します。  
   
- ファイルストリーム機能の詳細については、「 OLE [DB&#41;&#40;FILESTREAM サポート](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)」を参照してください。  
+ Filestream 機能の詳細については、「 [Filestream Support &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- INCLUDE 環境変数に sqlncli.h を含むディレクトリが含まれていることを確認します。  
+ INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
   
  次のいずれかのサンプルを使用して、このサンプルで読み取るテーブルを作成します。  
   

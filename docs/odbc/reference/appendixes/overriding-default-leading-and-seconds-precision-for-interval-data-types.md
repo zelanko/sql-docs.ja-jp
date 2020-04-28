@@ -1,5 +1,5 @@
 ---
-title: 間隔データ型の先頭および秒精度を上書きする |マイクロソフトドキュメント
+title: Interval データ型の先頭および秒の有効桁数を上書きする |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,27 +18,27 @@ ms.assetid: 3d65493f-dce7-4d29-9f59-c63a4e47918c
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 1e60d5d8fc696ad8e2bd4cfb0c082ff214e066d0
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303603"
 ---
 # <a name="overriding-default-leading-and-seconds-precision-for-interval-data-types"></a>Interval データ型での既定の先頭有効桁数と秒小数部分のオーバーライド
-ARD のSQL_DESC_TYPE フィールドが **、SQLBindCol**または**SQLSetDescField**を呼び出すことによって、日付時刻型または間隔 C 型に設定されている場合、SQL_DESC_PRECISION フィールド (秒の間隔の精度を含む) は、次の既定値に設定されます。  
+**SQLBindCol**または**SQLSetDescField**のいずれかを呼び出すことによって、の SQL_DESC_TYPE フィールドが Datetime または interval C 型に設定されている場合、SQL_DESC_PRECISION フィールド (秒の有効桁数を含む) は次の既定値に設定されます。  
   
--   2 番目のコンポーネントを持つタイムスタンプとすべての間隔データ型の場合は 6。  
+-   6 timestamp の場合は6、2番目のコンポーネントの場合はすべての interval データ型。  
   
--   その他すべてのデータ型の場合は 0。  
+-   他のすべてのデータ型の場合は0。  
   
- すべての間隔データ・タイプについて、SQL_DESC_DATETIME_INTERVAL_PRECISION記述子フィールドには、間隔先行フィールド精度が入っていますが、デフォルト値 2 が設定されます。  
+ すべての interval データ型について、SQL_DESC_DATETIME_INTERVAL_PRECISION 記述子フィールドには、先頭のフィールド有効桁数が含まれていますが、既定値は2に設定されています。  
   
- APD のSQL_DESC_TYPE フィールドが **、SQLBindParameter**または**SQLSetDescField**を呼び出すことによって、日付時刻型または間隔 C 型に設定されている場合、APD のSQL_DESC_PRECISIONフィールドとSQL_DESC_DATETIME_INTERVAL_PRECISION フィールドは、前に指定された既定値に設定されます。 これは入力パラメータに当てはまりますが、入出力パラメータや出力パラメータには当てはまりません。  
+ APD の SQL_DESC_TYPE フィールドが、 **SQLBindParameter**または**SQLSetDescField**のいずれかを呼び出すことによって Datetime または interval C 型に設定されている場合、APD 内の SQL_DESC_PRECISION フィールドと SQL_DESC_DATETIME_INTERVAL_PRECISION フィールドは、前に示した既定値に設定されます。 これは入力パラメーターに対しては true ですが、入力/出力パラメーターまたは出力パラメーターには当てはまりません。  
   
- **SQLSetDescRec**を呼び出すと、間隔の先行精度がデフォルトに設定されますが、間隔の秒精度 (SQL_DESC_PRECISION フィールド内) は、その*Precision*引数の値に設定されます。  
+ **SQLSetDescRec**を呼び出すと、間隔の先頭の有効桁数が既定値に設定されますが、間隔 (秒) の有効桁数 (SQL_DESC_PRECISION フィールド) は、*有効桁数*の引数の値に設定されます。  
   
- 前に指定した既定値のいずれかがアプリケーションに受け入れられない場合、アプリケーションは**SQLSetDescField**を呼び出してSQL_DESC_PRECISIONまたはSQL_DESC_DATETIME_INTERVAL_PRECISION フィールドを設定する必要があります。  
+ 以前に指定した既定値のいずれかがアプリケーションで許容されない場合は、 **SQLSetDescField**を呼び出して、SQL_DESC_PRECISION または SQL_DESC_DATETIME_INTERVAL_PRECISION フィールドを設定する必要があります。  
   
- アプリケーションが**SQLGetData**を呼び出してデータを日付時刻型または間隔 C 型に戻す場合、精度と秒間隔の精度を先頭にしたデフォルトの間隔が使用されます。 いずれかのデフォルトが受け入れられない場合、アプリケーションは**SQLSetDescField**を呼び出して記述子フィールドを設定するか **、SQLSetDescRec**を SQL_DESC_PRECISION設定する必要があります。 **SQLGetData**の呼び出しには、記述子フィールドの値を使用するSQL_ARD_TYPEの*ターゲット型*が必要です。  
+ アプリケーションが**SQLGetData**を呼び出して、データを datetime または interval C 型に返す場合は、既定の間隔の先頭の有効桁数と間隔の秒の有効桁数が使用されます。 既定値を使用できない場合は、アプリケーションで**SQLSetDescField**を呼び出して、いずれかの記述子フィールドを設定するか、または**SQLSetDescRec**を SQL_DESC_PRECISION に設定する必要があります。 記述子フィールドの値を使用するには、 **SQLGetData**の呼び出しに SQL_ARD_TYPE の*TargetType*が必要です。  
   
- **SQLPutData**が呼び出されると、実行時のデータ パラメーターまたは列に対応する記述子レコードのフィールド **(SQLBulkOperations**または**SQLSetPos**への呼び出しの APD フィールドである ) に対応する記述子レコードの**SQLBulkOperations**フィールドから、間隔の先行精度と秒間隔の精度が読み取**られます**。
+ **Sqlputdata**が呼び出されると、間隔の先頭の有効桁数と間隔の秒の有効桁数が、実行時データパラメーターまたは列に対応する記述子レコードのフィールドから読み取られます。これは、 **Sqlexecute**または**SQLExecDirect**の呼び出しの APD フィールドであるか、 **sqlputdata**または**SQLSetPos**の呼び出しのフィールドです。

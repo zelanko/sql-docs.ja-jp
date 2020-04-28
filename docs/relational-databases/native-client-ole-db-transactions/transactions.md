@@ -16,20 +16,20 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8779b68d6ab1070514f8ef6685ef378437d09539
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302536"
 ---
 # <a name="transactions"></a>トランザクション
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  ネイティブ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアントの OLE DB プロバイダーは、ローカル トランザクションのサポートを実装します。 コンシューマーは、MS DTC (Microsoft 分散トランザクション コーディネーター) を使用して、分散トランザクションまたはコーディネートされたトランザクションを使用できます。 複数のセッションにまたがるトランザクション制御を必要とするコンシューマの場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアント OLE DB プロバイダは、MS DTC によって開始および管理されるトランザクションに参加できます。  
+  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、ローカルトランザクションサポートを実装します。 コンシューマーは、MS DTC (Microsoft 分散トランザクション コーディネーター) を使用して、分散トランザクションまたはコーディネートされたトランザクションを使用できます。 複数のセッションにまたがるトランザクション制御を必要とする[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンシューマーの場合、Native Client OLE DB プロバイダーは MS DTC によって開始および管理されるトランザクションに参加できます。  
   
- 既定では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアント OLE DB プロバイダは自動コミット トランザクション モードを使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]し、コンシューマ セッションの各個別アクションは のインスタンスに対する完全なトランザクションで構成されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアント OLE DB プロバイダーの自動コミット モードはローカルであり、自動コミット トランザクションは 1 セッション以上に及ぶことはありません。  
+ 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは自動コミットトランザクションモードを使用します。このモードでは、コンシューマーセッションの各個別アクションが[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに対する完全なトランザクションで構成されます。 Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーの自動コミットモードはローカルであり、自動コミットトランザクションが1つ以上のセッションにまたがることはありません。  
   
- ネイティブ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアント OLE DB プロバイダは**ITransactionLocal**インターフェイスを公開し、コンシューマがのインスタンスへの単一の接続で明示的および暗黙的にトランザクション[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を開始できるようにします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアント OLE DB プロバイダーは、入れ子になったローカル トランザクションをサポートしていません。  
+ Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、 **ITransactionLocal**インターフェイスを公開します。これにより、コンシューマーは、のインスタンスへの1つの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続で、明示的かつ暗黙的にトランザクションを開始できます。 Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、入れ子になったローカルトランザクションをサポートしていません。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
