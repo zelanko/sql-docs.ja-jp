@@ -20,10 +20,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: b7674e3e7696d91170f9bf955808923d713479a1
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "77147411"
 ---
 # <a name="sysdm_os_job_object-azure-sql-database"></a>sys.dm_os_job_object (Azure SQL Database)
@@ -33,7 +33,7 @@ SQL Server プロセスを管理するジョブオブジェクトの構成と、
 
 ジョブオブジェクトは、オペレーティングシステムレベルで CPU、メモリ、および IO リソースガバナンスを実装する Windows コンストラクトです。 ジョブオブジェクトの詳細については、「 [Job objects](/windows/desktop/ProcThread/job-objects)」を参照してください。
   
-|[列]|データ型|[説明]|  
+|列|データ型|説明|  
 |-------------|---------------|-----------------|  
 |cpu_rate|**int**|SQL Server のスレッドが各スケジューリング間隔中に使用できるプロセッササイクルの部分を指定します。 この値は、1万サイクルのスケジュール間隔で、使用可能なサイクルの割合として報告されます。 たとえば、値100は、スレッドが CPU コアを使用できることを意味します。|
 |cpu_affinity_mask|**bigint**|SQL Server プロセスがプロセッサグループ内で使用できる論理プロセッサを示すビットマスク。 たとえば、cpu_affinity_mask 255 (バイナリでは 1111 1111) は、最初の8個の論理プロセッサを使用できることを意味します。 <br /><br />この列は、下位互換性のために用意されています。 プロセッサグループに64個を超える論理プロセッサが含まれている場合、プロセッサグループは報告されず、報告された値が正しくない可能性があります。 代わりに、 `process_physical_affinity`列を使用してプロセッサの関係を判断してください。|

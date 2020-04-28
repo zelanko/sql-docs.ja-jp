@@ -15,14 +15,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2a77024e62402cea0a37b945e0539274fee9a3c6
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173331"
 ---
 # <a name="report-data-pane-report-builder"></a>[レポート データ] ペイン (レポート ビルダー)
-  
   **[レポート データ]** ペインを使用すると、レポート内で現在定義されているパラメーター、データ ソース、データセット、フィールド コレクション、および画像が表示されます。 [レポート データ] では、レポート内のデータを表すアイテムの階層ビューが表示されます。 最上位のノードは、組み込みフィールド、パラメーター、画像、およびデータ ソース参照を表します。 データ アイテムを表示するには、各ノードを展開します。 たとえば、データ ソース ノードを展開すると、そのデータ ソース用に定義されたデータセットが表示されます。 データセットを展開すると、そのフィールド コレクションが表示されます。 データをレポート ページ上の選択したレポート アイテムにリンクするには、アイテムをレポート デザイン画面または [グループ化] ペインにドラッグします。 詳細については、「[レポート デザイン ビュー &#40;レポート ビルダー&#41;](report-builder/report-design-view-report-builder.md)」を参照してください。
 
 ## <a name="options"></a>オプション

@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 41a6ae9c6462beecaa244694bd8679df88aefc47
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176134"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Integration Services (SSIS) のイベント ハンドラー
@@ -45,8 +45,7 @@ ms.locfileid: "78176134"
 
  ![パッケージ、For ループ、タスク ホスト、および SQL 実行タスク](media/mw-dts-eventhandlerpkg.gif "パッケージ、For ループ、タスク ホスト、および SQL 実行タスク")
 
- 
-  `OnError` イベントに対するイベント ハンドラーを持つのは、パッケージのみです。 SQL 実行タスクの実行時にエラーが発生した場合、パッケージの `OnError` イベント ハンドラーが実行されます。 次の図は、パッケージの `OnError` イベント ハンドラーにより実行される呼び出しの順序を示しています。
+ `OnError` イベントに対するイベント ハンドラーを持つのは、パッケージのみです。 SQL 実行タスクの実行時にエラーが発生した場合、パッケージの `OnError` イベント ハンドラーが実行されます。 次の図は、パッケージの `OnError` イベント ハンドラーにより実行される呼び出しの順序を示しています。
 
  ![イベント ハンドラーのフロー](media/mw-dts-eventhandlers.gif "イベント ハンドラーのフロー")
 
@@ -72,9 +71,9 @@ ms.locfileid: "78176134"
 ## <a name="run-time-events"></a>実行時イベント
  次の表に、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で用意されているイベント ハンドラーの一覧を示します。また、イベント ハンドラーによって実行される実行時イベントについて説明します。
 
-|イベント ハンドラー|イベント|
+|イベント ハンドラー|event|
 |-------------------|-----------|
-|`OnError`|`OnError`イベントのイベントハンドラー。 このイベントは、エラー発生時に実行可能ファイルから発生します。|
+|`OnError`|`OnError` イベントのイベント ハンドラー。 このイベントは、エラー発生時に実行可能ファイルから発生します。|
 |**OnExecStatusChanged**|**OnExecStatusChanged** イベントのイベント ハンドラーです。 このイベントは、実行状態が変化したときに実行可能ファイルから発生します。|
 |**OnInformation**|**OnInformation** イベントのイベント ハンドラーです。 このイベントは、実行可能ファイルの検証時および実行時に、情報をレポートするために発生します。 このイベントは情報を伝達するだけのもので、エラーや警告は発生しません。|
 |**OnPostExecute**|**OnPostExecute** イベントのイベント ハンドラーです。 このイベントは、実行可能ファイルの実行完了直後に、実行可能ファイルから発生します。|
@@ -88,11 +87,11 @@ ms.locfileid: "78176134"
 |**OnWarning**|**OnWarning** イベントのイベント ハンドラーです。 このイベントは、警告の発生時に実行可能ファイルから発生します。|
 
 ## <a name="configuration-of-an-event-handler"></a>イベント ハンドラーの構成
- プロパティは、 **の** [プロパティ] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ウィンドウで設定することも、プログラムで設定することもできます。
+ プロパティを設定するには、 **の** [プロパティ] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ウィンドウで行うか、またはプログラムによって設定します。
 
  これらのプロパティを [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で設定する方法については、「 [タスクまたはコンテナーのプロパティを設定する](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)」を参照してください。
 
- これらのプロパティのプログラムでの設定については、「 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>」を参照してください。
+ プログラムによってこれらのプロパティを設定する方法については、 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>」を参照してください。
 
 ## <a name="related-tasks"></a>Related Tasks
  パッケージにイベント ハンドラーを追加する方法については、「 [パッケージにイベント ハンドラーを追加する](../../2014/integration-services/add-an-event-handler-to-a-package.md)」を参照してください。

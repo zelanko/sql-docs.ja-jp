@@ -23,10 +23,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d779c02d895088cff2ae59aff6722acd8db79adf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76971391"
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>ネイティブ モードのレポート サーバーに対する権限の許可
@@ -63,14 +63,14 @@ ms.locfileid: "76971391"
 ## <a name="tasks-and-tools-for-managing-permissions"></a>権限を管理するためのタスクとツール  
  ロールの定義と割り当てを管理するには、次のツールを使用します。  
   
-|ツール|処理手順|  
+|ツール|タスク|  
 |----------|-----------|  
 |Management Studio - ロールの定義を表示、変更、作成、および削除する場合に使用します。|[ロールを作成、削除、または変更する (Management Studio)](role-definitions-create-delete-or-modify.md)|  
 |レポート マネージャー - ユーザーおよびグループをロールに割り当てる場合に使用します。|[レポート サーバーへのユーザー アクセスを許可する (レポート マネージャー)](grant-user-access-to-a-report-server.md)<br /><br /> [ロールの割り当てを変更または削除する (レポート マネージャー)](role-assignments-modify-or-delete.md)|  
   
 ## <a name="see-also"></a>参照  
  [定義済みロール](role-definitions-predefined-roles.md)   
- [SharePoint サイトのレポート サーバー アイテムに対する権限の付与](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [SharePoint サイト上のレポートサーバーアイテムに対する権限の許可](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [レポート サーバーでの認証](authentication-with-the-report-server.md)   
  (create-and-manage-role-assignments.md)   
  [Reporting Services のセキュリティと保護](reporting-services-security-and-protection.md)   

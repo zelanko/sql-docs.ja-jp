@@ -23,10 +23,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 760e4c00401e42b6d6ccca8bd7c7acd7ec0d5b86
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176333"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>データ フロー コンポーネント用ユーザー インターフェイスの開発
@@ -87,8 +87,7 @@ End Class
  <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Edit%2A> メソッドの戻り値は、コンポーネントに加えられた変更が保存されたか、破棄されたかを示します。 このメソッドによって `false` が返される場合、変更はすべて破棄されます。`true` の場合、コンポーネントに対する変更が保存され、パッケージを保存する必要があることを示すマークが付けられます。
 
 ### <a name="using-the-services-of-the-ssis-designer"></a>SSIS デザイナーのサービスの使用
- 
-  `IServiceProvider` メソッドの <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> パラメーターにより、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーの、次のサービスにアクセスすることができます。
+ <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> メソッドの `IServiceProvider` パラメーターにより、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーの、次のサービスにアクセスすることができます。
 
 |サービス|説明|
 |-------------|-----------------|
@@ -282,7 +281,7 @@ Namespace Microsoft.Samples.SqlServer.Dts
 End Namespace
 ```
 
-![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
+![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
 
 ## <a name="see-also"></a>参照
  [カスタム データ フロー コンポーネントの作成](creating-a-custom-data-flow-component.md)

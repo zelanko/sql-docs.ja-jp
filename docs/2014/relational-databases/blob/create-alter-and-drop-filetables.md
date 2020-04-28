@@ -15,16 +15,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b810a3785c41356042639c4fdb79b4f6cf28d871
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76934798"
 ---
 # <a name="create-alter-and-drop-filetables"></a>FileTable の作成、変更、および削除
   新しい FileTable の作成や、既存の FileTable の変更または削除を行う方法について説明します。  
   
-##  <a name="BasicsCreate"></a>FileTable の作成  
+##  <a name="creating-a-filetable"></a><a name="BasicsCreate"></a> FileTable の作成  
  FileTable は、定義済みおよび固定のスキーマがある特殊なユーザー テーブルです。 このスキーマは、FILESTREAM データ、ファイルとディレクトリの情報、およびファイルの属性を格納します。 FileTable スキーマの詳細については、「 [FileTable Schema](filetable-schema.md)」を参照してください。  
   
  Transact-SQL または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して、新しい FileTable を作成することができます。 FileTable には固定スキーマがあるため、列の一覧を指定する必要はありません。 FileTable を作成するため、簡単な構文を指定することができます。  
@@ -35,8 +35,8 @@ ms.locfileid: "76934798"
   
 -   自動的に作成される 3 つの主キーと一意の制約で使用する名前。  
   
-###  <a name="HowToCreate"></a>方法: FileTable を作成する  
- **Transact-sql を使用して FileTable を作成する**  
+###  <a name="how-to-create-a-filetable"></a><a name="HowToCreate"></a> 方法: FileTable を作成する  
+ **Transact-SQL を使用して FileTable を作成する**  
  FileTable を作成するには、[AS FileTable](/sql/t-sql/statements/create-table-transact-sql) オプションを指定して **CREATE TABLE &#40;Transact-SQL&#41;** ステートメントを呼び出します。 FileTable には固定スキーマがあるため、列の一覧を指定する必要はありません。 新しい FileTable には次の設定を指定できます。  
   
 1.  **FILETABLE_DIRECTORY**。 FileTable に格納されたすべてのファイルおよびディレクトリのルート ディレクトリとなるディレクトリを指定します。 この名前は、データベース内のすべての FileTable ディレクトリ名の中で一意である必要があります。 一意性の比較では、現在の照合順序の設定とは関係なく、大文字と小文字は区別されません。  
@@ -53,8 +53,7 @@ ms.locfileid: "76934798"
   
     1.  指定した照合順序は、Windows のファイル名のセマンティクスに準拠するために、 **大文字と小文字を区別しない** 設定にする必要があります。  
   
-    2.  
-  **FILETABLE_COLLATE_FILENAME**の値を指定しない場合、または、 **database_default**を指定した場合は、現在のデータベースの照合順序が列に継承されます。 現在のデータベースの照合順序で大文字と小文字が区別される場合は、エラーが発生し、 **CREATE TABLE** 操作は失敗します。  
+    2.  **FILETABLE_COLLATE_FILENAME**の値を指定しない場合、または、 **database_default**を指定した場合は、現在のデータベースの照合順序が列に継承されます。 現在のデータベースの照合順序で大文字と小文字が区別される場合は、エラーが発生し、 **CREATE TABLE** 操作は失敗します。  
   
 3.  自動的に作成される 3 つの主キーと一意の制約で使用する名前を指定することもできます。 名前を指定しなかった場合、このトピックで後述するように、システムで名前が自動生成されます。  
   
@@ -84,13 +83,12 @@ CREATE TABLE DocumentStore AS FileTable;
 GO  
 ```  
   
- **を使用して FileTable を作成する SQL Server Management Studio**  
+ **SQL Server Management Studio を使用して FileTable を作成する**  
  オブジェクト エクスプローラーで、選択したデータベースのオブジェクトを展開し、 **[テーブル]** フォルダーを右クリックして **[新しい FileTable]** をクリックします。  
   
- このオプションを選択すると、新しいスクリプト ウィンドウが開き、FileTable を作成するためにカスタマイズして実行できる Transact-SQL スクリプト テンプレートが表示されます。 
-  **[クエリ]** メニューの **[テンプレート パラメーターの値の指定]** オプションを使用すると、スクリプトを簡単にカスタマイズできます。  
+ このオプションを選択すると、新しいスクリプト ウィンドウが開き、FileTable を作成するためにカスタマイズして実行できる Transact-SQL スクリプト テンプレートが表示されます。 **[クエリ]** メニューの **[テンプレート パラメーターの値の指定]** オプションを使用すると、スクリプトを簡単にカスタマイズできます。  
   
-###  <a name="ReqCreate"></a>FileTable を作成するための要件と制限  
+###  <a name="requirements-and-restrictions-for-creating-a-filetable"></a><a name="ReqCreate"></a> FileTable を作成するための要件と制限  
   
 -   既存のテーブルは、変更して FileTable に変換することはできません。  
   
@@ -98,21 +96,19 @@ GO
   
 -   FileTable には、FILESTREAM 列が含まれているため、有効な FILESTREAM ファイル グループが必要です。 必要に応じて、FileTable を作成する **CREATE TABLE** コマンドの一部として、FILESTREAM ファイル グループを指定することもできます。 ファイル グループが指定されていない場合、FileTable はデータベースの既定の FILESTREAM ファイル グループを使用します。 データベースに FILESTREAM ファイル グループがない場合は、エラーが発生します。  
   
--   
-  **CREATE TABLE...AS FILETABLE** ステートメントの一部としてテーブルの制約を作成することはできません。 ただし、制約を追加するには、後で **ALTER TABLE** ステートメントを使用します。  
+-   **CREATE TABLE...AS FILETABLE** ステートメントの一部としてテーブルの制約を作成することはできません。 ただし、制約を追加するには、後で **ALTER TABLE** ステートメントを使用します。  
   
--   
-  **tempdb** データベースまたはその他のシステム データベースに FileTable を作成することはできません。  
+-   **tempdb** データベースまたはその他のシステム データベースに FileTable を作成することはできません。  
   
 -   一時テーブルとして、FileTable を作成することはできません。  
   
-##  <a name="BasicsAlter"></a>FileTable の変更  
+##  <a name="altering-a-filetable"></a><a name="BasicsAlter"></a> FileTable の変更  
  FileTable は、定義済みおよび固定のスキーマがあるため、その列を追加または変更することはできません。 ただし、カスタム インデックス、トリガー、制約、およびその他のオプションを FileTable に追加することはできます。  
   
  ALTER TABLE ステートメントを使用して FileTable 名前空間 (システム定義の制約を含む) を有効または無効にする方法の詳細については、「 [FileTable の管理](manage-filetables.md)」を参照してください。  
   
-###  <a name="HowToChange"></a>方法: FileTable のディレクトリを変更する  
- **Transact-sql を使用して FileTable のディレクトリを変更する**  
+###  <a name="how-to-change-the-directory-for-a-filetable"></a><a name="HowToChange"></a> 方法: FileTable のディレクトリを変更する  
+ **Transact-SQL を使用して FileTable のディレクトリを変更する**  
  ALTER TABLE ステートメントを呼び出し、有効な新しい値を **FILETABLE_DIRECTORY** SET オプションに指定します。  
   
  **例**  
@@ -123,20 +119,18 @@ ALTER TABLE filetable_name
 GO  
 ```  
   
- **を使用して FileTable のディレクトリを変更する SQL Server Management Studio**  
- オブジェクト エクスプローラーで、FileTable を右クリックし、 **[プロパティ]** をクリックして、 **[テーブルのプロパティ]** ダイアログ ボックスを開きます。 
-  **[FileTable]** ページで、 **[FileTable ディレクトリ名]** に新しい値を入力します。  
+ **SQL Server Management Studio を使用して FileTable のディレクトリを変更する**  
+ オブジェクト エクスプローラーで、FileTable を右クリックし、 **[プロパティ]** をクリックして、 **[テーブルのプロパティ]** ダイアログ ボックスを開きます。 **[FileTable]** ページで、 **[FileTable ディレクトリ名]** に新しい値を入力します。  
   
-###  <a name="ReqAlter"></a>FileTable を変更するための要件と制限  
+###  <a name="requirements-and-restrictions-for-altering-a-filetable"></a><a name="ReqAlter"></a> FileTable を変更するための要件と制限  
   
--   
-  **FILETABLE_COLLATE_FILENAME**の値を変更することはできません。  
+-   **FILETABLE_COLLATE_FILENAME**の値を変更することはできません。  
   
 -   FileTable のシステムで定義された列を変更、削除、または無効にすることはできません。  
   
 -   新しいユーザー列、計算列、または保存される計算列を FileTable に追加することはできません。  
   
-##  <a name="BasicsDrop"></a>FileTable の削除  
+##  <a name="dropping-a-filetable"></a><a name="BasicsDrop"></a> FileTable の削除  
  FileTable を削除するには、[DROP TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-table-transact-sql) ステートメントの通常の構文を使用します。  
   
  FileTable を削除すると、次のオブジェクトも削除されます。  
@@ -147,7 +141,7 @@ GO
   
  FileTable のファイルの名前空間内に開いているファイル ハンドルがある場合、DROP TABLE コマンドは失敗します。 開いているハンドルを閉じる方法の詳細については、「 [FileTable の管理](manage-filetables.md)」を参照してください。  
   
-##  <a name="BasicsOtherObjects"></a>FileTable を作成すると、他のデータベースオブジェクトが作成されます。  
+##  <a name="other-database-objects-are-created-when-you-create-a-filetable"></a><a name="BasicsOtherObjects"></a> FileTable を作成したときに作成されるその他のデータベース オブジェクト  
  新しい FileTable を作成すると、システム定義のインデックスと制約もいくつか作成されます。 これらのオブジェクトを変更または削除することはできません。これらは、FileTable 自体が削除されると一緒に削除されます。 これらのオブジェクトの一覧を表示するには、カタログ ビュー [sys.filetable_system_defined_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql) に対してクエリを実行します。  
   
 ```sql  
@@ -167,7 +161,7 @@ GO
   
 |||  
 |-|-|  
-|**[列]**|**インデックスの種類**|  
+|**[列]**|**[インデックスの種類]**|  
 |[path_locator] ASC|主キー、非クラスター化|  
 |[parent_path_locator] ASC、<br /><br /> [name] ASC|一意、非クラスター化|  
 |[stream_id] ASC|一意、非クラスター化|  
@@ -181,11 +175,11 @@ GO
 |CHECK 制約|システム定義の CHECK 制約によって、次の要件が適用されます。<br /><br /> 有効なファイル名。<br /><br /> 有効なファイル属性。<br /><br /> 親オブジェクトをディレクトリにする。<br /><br /> 名前空間の階層は、ファイル操作中にロックされる。|  
   
  **システム定義の制約の名前付け規則**  
- 上記で説明したシステム定義の制約は、 ** \<constraintType>_\<tablename> [\_\<columnname>]\_\<uniquifier>** の形式で名前が付けられます。  
+ 上で説明したシステム定義の制約は、 **\<constraintType>_\<tablename>[\_\<columnname>]\_\<uniquifier>** という形式で名前が付けられます。  
   
--   *<constraint_type>* は、(check 制約)、DF (既定の制約)、FK (外部キー)、PK (主キー)、または uq (unique 制約) のいずれかになります。  
+-   *<constraint_type>* は CK (CHECK 制約)、DF (DEFAULT 制約)、FK (外部キー)、PK (主キー)、または UQ (一意制約) です。  
   
--   uniquifier>は、名前を一意にするための、システムによって生成される文字列です。 * \<* この文字列には、通常、FileTable の名前と一意の識別子が含まれています。  
+-   *\<uniquifier>* は、名前を一意にする、システムによって生成された文字列です。 この文字列には、通常、FileTable の名前と一意の識別子が含まれています。  
   
 ## <a name="see-also"></a>参照  
  [FileTable の管理](manage-filetables.md)  

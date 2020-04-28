@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b13e3d30ac0afce5293cc0e104aa2b291112647f
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177282"
 ---
 # <a name="task-3-cleansing-data-against-the-suppliers-knowledge-base"></a>タスク 3: Suppliers ナレッジ ベースに対してデータをクレンジングする
@@ -30,7 +30,7 @@ ms.locfileid: "78177282"
 
 3.  [**次へ**] をクリックし**て、[管理と結果の表示**] ページに切り替えます。
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
  [タスク 4: 結果を管理および表示する](../../2014/tutorials/task-4-manaing-and-viewing-results.md)
 
 

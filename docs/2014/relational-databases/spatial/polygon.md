@@ -13,22 +13,19 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: d03ce811c860b976d891dd096ec8e0a7d5507d3a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176632"
 ---
 # <a name="polygon"></a>多角形
   は`Polygon` 、外部境界リングと0個以上の内部リングを定義する一連の点として格納される2次元サーフェイスです。
 
 ## <a name="polygon-instances"></a>Polygon インスタンス
- 
-  `Polygon` インスタンスは、3 つ以上の異なる点を持つリングで形成され、 
-  `Polygon` インスタンスは空にすることもできます。
+ `Polygon` インスタンスは、3 つ以上の異なる点を持つリングで形成され、 `Polygon` インスタンスは空にすることもできます。
 
- 
-  `Polygon` の外部および内部のリングは、その境界を定義します。 リング内の空間は `Polygon` の内部を定義します。
+ `Polygon` の外部および内部のリングは、その境界を定義します。 リング内の空間は `Polygon` の内部を定義します。
 
  次の図は、`Polygon` インスタンスの例です。
 
@@ -51,14 +48,11 @@ ms.locfileid: "78176632"
 
  リングが許容されるためには、次の条件を満たす必要があります。
 
--   
-  `LineString` インスタンスが許容されていること。
+-   `LineString` インスタンスが許容されていること。
 
--   
-  `LineString` インスタンスに 4 つ以上の点があること。
+-   `LineString` インスタンスに 4 つ以上の点があること。
 
--   
-  `LineString` インスタンスの始点と終点が同じであること。
+-   `LineString` インスタンスの始点と終点が同じであること。
 
  次の例は、許容される `Polygon` インスタンスを示しています。
 
@@ -70,27 +64,23 @@ DECLARE @g4 geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(3 0, 6 0, 6 3, 
 DECLARE @g5 geometry = 'POLYGON((1 1, 1 1, 1 1, 1 1))';
 ```
 
- 
-  `@g4` および `@g5` が示すように、許容される `Polygon` インスタンスが有効な `Polygon` インスタンスではない場合があります。 `@g5` また、Polygon インスタンスが許容されるためには、4 つの点を持つリングのみが含まれている必要があることを示しています。
+ `@g4` および `@g5` が示すように、許容される `Polygon` インスタンスが有効な `Polygon` インスタンスではない場合があります。 `@g5` また、Polygon インスタンスが許容されるためには、4 つの点を持つリングのみが含まれている必要があることを示しています。
 
- 次の例では、`System.FormatException` インスタンスが許容されないため、`Polygon` がスローされます。
+ 次の例では、`Polygon` インスタンスが許容されないため、`System.FormatException` がスローされます。
 
 ```
 DECLARE @g1 geometry = 'POLYGON((1 1, 3 3, 1 1))';
 DECLARE @g2 geometry = 'POLYGON((1 1, 3 3, 3 1, 1 5))';
 ```
 
- 
-  `@g1` は、外部リングの `LineString` インスタンスが十分な数の点を含んでいないため、許容されません。 
-  `@g2` は、外部リングの `LineString` インスタンスの始点が終点と同じでないため、許容されません。 次の例では、外部リングは許容されますが、内部リングが許容されません。 この場合も `System.FormatException`がスローされます。
+ `@g1` は、外部リングの `LineString` インスタンスが十分な数の点を含んでいないため、許容されません。 `@g2` は、外部リングの `LineString` インスタンスの始点が終点と同じでないため、許容されません。 次の例では、外部リングは許容されますが、内部リングが許容されません。 この場合も `System.FormatException`がスローされます。
 
 ```
 DECLARE @g geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(0 0, 3 0, 0 0))';
 ```
 
 ### <a name="valid-instances"></a>有効なインスタンス
- 
-  `Polygon` の内部リングは、1 つの接点で自身および他の内部リングと接することができますが、`Polygon` の内部リングが互いに交差しているとインスタンスが無効になります。
+ `Polygon` の内部リングは、1 つの接点で自身および他の内部リングと接することができますが、`Polygon` の内部リングが互いに交差しているとインスタンスが無効になります。
 
  次の例は、有効な `Polygon` インスタンスを示しています。
 
@@ -152,8 +142,7 @@ SET @g = @g.MakeValid();
 SELECT @g.ToString()
 ```
 
- 上の例で返されるジオメトリ インスタンスは `Point(1 3)`です。  
-  `Polygon` が `POLYGON((1 3, 1 5, 1 3, 1 3))` の場合、 `MakeValid()` は `LINESTRING(1 3, 1 5)`を返します。
+ 上の例で返されるジオメトリ インスタンスは `Point(1 3)`です。  `Polygon` が `POLYGON((1 3, 1 5, 1 3, 1 3))` の場合、 `MakeValid()` は `LINESTRING(1 3, 1 5)`を返します。
 
 ## <a name="see-also"></a>参照
  [Starea &#40;Geometry データ型&#41;](/sql/t-sql/spatial-geometry/starea-geometry-data-type) [STExteriorRing &#40;](/sql/t-sql/spatial-geometry/stexteriorring-geometry-data-type) geometry データ型&#41;[STInteriorRingN](/sql/t-sql/spatial-geometry/stinteriorringn-geometry-data-type) &#40;geometry データ[型&#41;](/sql/t-sql/spatial-geometry/stnuminteriorring-geometry-data-type) [starea &#40;geometry](/sql/t-sql/spatial-geometry/stcentroid-geometry-data-type)データ型&#41;[stpointonsurface &#40;geometry データ](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type)型&#41;[multipolygon](../spatial/polygon.md) [空間データ &#40;](../spatial/spatial-data-sql-server.md)&#41;&#40;[starea SQL Server geography データ型&#41;](/sql/t-sql/spatial-geography/stisvalid-geography-data-type) [starea &#40;geometry データ型](/sql/t-sql/spatial-geometry/stisvalid-geometry-data-type)&#41;。 &#40;

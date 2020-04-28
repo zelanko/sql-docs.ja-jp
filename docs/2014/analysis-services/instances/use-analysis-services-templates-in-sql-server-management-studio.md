@@ -11,37 +11,35 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 019f0c2853006be8213d0f6766f9d462492b7105
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175225"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>SQL Server Management Studio での Analysis Services テンプレートの使用
-  
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、XMLA スクリプト、DMX クエリ、または MDX クエリの迅速な作成、キューブまたはテーブル モデルの KPI の作成、バックアップ操作および復元操作のスクリプト作成、および他の多数のタスクを実行するためのテンプレートのセットを提供します。 テンプレートは、 **の** テンプレート エクスプローラー [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]にあります。
 
  このトピックでは、多次元モデルとテーブル モデルのテンプレートの一覧を示し、メタデータ エクスプローラーとテンプレート エクスプローラーを使用して MDX クエリと XMLA ステートメントを構築する方法の例を示します。
 
  このトピックのセクションは次のとおりです。
 
- [Analysis Services テンプレートを開く](#bkmk_usingTE)
+ [Analysis Services テンプレートとして開く](#bkmk_usingTE)
 
- [テンプレートを使用してテーブルモデルに対して MDX クエリを作成および実行する](#BKMK_Building_Queries)
+ [テンプレートを使用してテーブル モデルで MDX クエリを構築および実行する](#BKMK_Building_Queries)
 
- [テンプレートからの XMLA スクリプトの作成](#bkmk_backup)
+ [テンプレートから XMLA スクリプトを作成する](#bkmk_backup)
 
- [XMLA テンプレートを使用してスキーマ行セットクエリを生成する](#bkmk_schemarowset)
+ [XMLA テンプレートを使用してスキーマ行セット クエリを生成する](#bkmk_schemarowset)
 
- [Analysis Services テンプレートリファレンス](#bkmk_Ref)
+ [Analysis Services テンプレート リファレンス](#bkmk_Ref)
 
  このトピックでは、DMX テンプレートについては説明しません。 テンプレートを使用してデータ マイニング クエリを作成する方法の例については、「 [SQL Server Management Studio で DMX クエリを作成する](../data-mining/create-a-dmx-query-in-sql-server-management-studio.md) 」または「 [テンプレートからの単一予測クエリの作成](../data-mining/create-a-singleton-prediction-query-from-a-template.md)」をご覧ください。
 
-##  <a name="bkmk_usingTE"></a>Analysis Services テンプレートを開く
+##  <a name="open-an-analysis-services-template"></a><a name="bkmk_usingTE"></a>Analysis Services テンプレートを開く
  データベース エンジン クエリおよび Analysis Services クエリとコマンドのすべてのテンプレートは、テンプレート エクスプローラーで利用可能です。
 
- 
-  **テンプレート エクスプローラー**を開くには、 **[表示]** メニューから選択します。 次に、キューブ アイコンをクリックして、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で使用できるテンプレートの一覧を表示します。
+ **テンプレート エクスプローラー**を開くには、 **[表示]** メニューから選択します。 次に、キューブ アイコンをクリックして、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で使用できるテンプレートの一覧を表示します。
 
  ![Analysis Services 用にフィルター処理されたテンプレート エクスプローラー](../media/ssas-templateexplorer.gif "Analysis Services 用にフィルター処理されたテンプレート エクスプローラー")
 
@@ -55,10 +53,9 @@ ms.locfileid: "78175225"
 
 -   画面の下部の **[結果]** タブに表示されるクエリの結果を確認します。
 
-     
-  **[メッセージ]** タブに切り替えて、クエリの実行に関連付けられている、返されるレコード、エラー、クエリ ステートメント、その他のメッセージの数を確認します。 たとえば、Direct Query モードで実行されるモデルに対して DAX ステートメントを実行した場合、xVelocity メモリ内分析エンジン (VertiPaq) によって生成される Transact-SQL ステートメントを確認できます。
+     **[メッセージ]** タブに切り替えて、クエリの実行に関連付けられている、返されるレコード、エラー、クエリ ステートメント、その他のメッセージの数を確認します。 たとえば、Direct Query モードで実行されるモデルに対して DAX ステートメントを実行した場合、xVelocity メモリ内分析エンジン (VertiPaq) によって生成される Transact-SQL ステートメントを確認できます。
 
-##  <a name="BKMK_Building_Queries"></a>テンプレートを使用してテーブルモデルに対して MDX クエリを作成および実行する
+##  <a name="build-and-run-an-mdx-query-on-a-tabular-model-using-a-template"></a><a name="BKMK_Building_Queries"></a>テンプレートを使用してテーブルモデルに対して MDX クエリを作成および実行する
  この例では、テーブル モデル データベースをデータ ソースとして使用することで、SQL Server Management Studio で MDX クエリを作成する方法を示しています。 お使いのコンピューターでこの例を繰り返すには、 [Adventureworks テーブル モデル サンプル プロジェクトをダウンロード](https://go.microsoft.com/fwlink/?LinkId=231183)してください。
 
 > [!WARNING]
@@ -66,13 +63,11 @@ ms.locfileid: "78175225"
 
 #### <a name="create-an-mdx-query-from-a-template"></a>MDX クエリをテンプレートから作成する
 
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、クエリするテーブル モデルが含まれているインスタンスを開きます。 データベース アイコンを右クリックし、 **[新しいクエリ]** をポイントして **[MDX]** をクリックします。
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、クエリするテーブル モデルが含まれているインスタンスを開きます。 データベース アイコンを右クリックし、 **[新しいクエリ]** をポイントして **[MDX]** をクリックします。
 
 2.  テンプレート ブラウザーで、Analysis Services テンプレートで **[MDX]** を開き、 **[クエリ]** を開きます。 クエリ ウィンドウに **[基本のクエリ]** をドラッグします。
 
-3.  
-  **メタデータ エクスプローラー**を使用して、次のフィールドとメジャーをクエリ テンプレートにドラッグします。
+3.  **メタデータ エクスプローラー**を使用して、次のフィールドとメジャーをクエリ テンプレートにドラッグします。
 
     1.  Row_axis \<、mdx_set> を **[製品カテゴリ] に置換します。 [製品カテゴリ名]**。
 
@@ -84,9 +79,8 @@ ms.locfileid: "78175225"
 
 4.  クエリはそのまま実行できますが、特定のメンバーを返す関数を追加するなど、変更を加えることもできます。 たとえば、 `.members` **[Product Category]. [の後に「」と入力します。製品カテゴリ名]**。 詳細については、「 [メンバー式の使用](/sql/mdx/using-member-expressions)」をご覧ください。
 
-##  <a name="bkmk_backup"></a>テンプレートからの XMLA スクリプトの作成
- テンプレート エクスプローラーで提供される XMLA コマンド テンプレートは、インスタンスが多次元モード、データ マイニング モード、テーブル モードのいずれにあっても、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトの監視と更新のためのスクリプトの作成に使用できます。 
-  **XMLA** テンプレートには、次の種類のスクリプトのサンプルが含まれます。
+##  <a name="create-xmla-script-from-a-template"></a><a name="bkmk_backup"></a>テンプレートからの XMLA スクリプトの作成
+ テンプレート エクスプローラーで提供される XMLA コマンド テンプレートは、インスタンスが多次元モード、データ マイニング モード、テーブル モードのいずれにあっても、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトの監視と更新のためのスクリプトの作成に使用できます。 **XMLA** テンプレートには、次の種類のスクリプトのサンプルが含まれます。
 
 -   バックアップ操作、復元操作、および同期操作
 
@@ -100,8 +94,7 @@ ms.locfileid: "78175225"
 
 #### <a name="create-a-backup-command-script-from-a-template"></a>バックアップ コマンド スクリプトをテンプレートから作成する
 
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、クエリするデータベースが含まれているインスタンスを開きます。 データベース アイコンを右クリックし、 **[新しいクエリ]** をポイントして **[XMLA]** をクリックします。
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、クエリするデータベースが含まれているインスタンスを開きます。 データベース アイコンを右クリックし、 **[新しいクエリ]** をポイントして **[XMLA]** をクリックします。
 
     > [!WARNING]
     >  制限リストを変更することで、または接続ダイアログでデータベースを指定することで、XMLA クエリのコンテキストを設定することはできません。 クエリを行うデータベースから XMLA クエリ ウィンドウを開く必要があります。
@@ -114,9 +107,8 @@ ms.locfileid: "78175225"
 
 5.  \<ファイル> 要素内のテキストをダブルクリックします。 ファイル拡張子として .abf を使用し、バックアップ ファイル名を入力します。 既定のバックアップの場所を使用しない場合は、ファイルの完全パスを指定します。 詳細については、「[データベースのバックアップ、復元、および同期 (XMLA)](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)」をご覧ください。
 
-##  <a name="bkmk_schemarowset"></a>XMLA テンプレートを使用してスキーマ行セットクエリを生成する
- 
-  **テンプレート エクスプローラー** には、スキーマ行セット クエリのテンプレートが 1 つだけ含まれています。 このテンプレートを使用するには、必要な要素、制限として使用できる列など、使用する個々のスキーマ行セットの要件を把握している必要があります。 詳細については、「 [Analysis Services のスキーマ行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)」をご覧ください。
+##  <a name="generate-a-schema-rowset-query-using-an-xmla-template"></a><a name="bkmk_schemarowset"></a>XMLA テンプレートを使用してスキーマ行セットクエリを生成する
+ **テンプレート エクスプローラー** には、スキーマ行セット クエリのテンプレートが 1 つだけ含まれています。 このテンプレートを使用するには、必要な要素、制限として使用できる列など、使用する個々のスキーマ行セットの要件を把握している必要があります。 詳細については、「 [Analysis Services のスキーマ行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)」をご覧ください。
 
  使いやすさのために、スキーマ行セットの多くが動的管理ビュー (DMV) としても公開されています。 対応する DMV を使用することで、Transact-SQL などの構文を使用してスキーマ行セットのクエリを実行できます。 たとえば、次のクエリは同じ結果を返しますが、1 つは XML 形式で、1 つはテーブル形式で返されます。 DMV の詳細については、「[動的管理ビュー (DMV) を使用した Analysis Services の監視](use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)」をご覧ください。
 
@@ -144,18 +136,16 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 
 #### <a name="get-a-list-of-data-sources-for-a-tabular-model-using-a-schema-rowset-query"></a>スキーマ行セット クエリを使用してテーブル モデルのデータ ソースの一覧を取得する
 
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、クエリするデータベースが含まれているインスタンスを開きます。 データベース アイコンを右クリックし、 **[新しいクエリ]** をポイントして **[XMLA]** をクリックします。
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、クエリするデータベースが含まれているインスタンスを開きます。 データベース アイコンを右クリックし、 **[新しいクエリ]** をポイントして **[XMLA]** をクリックします。
 
     > [!WARNING]
     >  制限リストを変更することで、または接続ダイアログでデータベースを指定することで、XMLA クエリのコンテキストを設定することはできません。 クエリを行うデータベースから XMLA クエリ ウィンドウを開く必要があります。
 
-2.  
-  **テンプレート エクスプローラー**を開き、 **[スキーマ行セットの発見]** テンプレートを空のクエリ ウィンドウにドラッグします。
+2.  **テンプレート エクスプローラー**を開き、 **[スキーマ行セットの発見]** テンプレートを空のクエリ ウィンドウにドラッグします。
 
 3.  テンプレートで、 [RequestType 要素 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla)要素を次のテキストに置き換えます。`<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`
 
-4.  [**実行**] をクリックします。
+4.  **[実行]** をクリックします。
 
      期待される結果:
 
@@ -172,7 +162,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 
     ```
 
-##  <a name="bkmk_Ref"></a>Analysis Services テンプレートリファレンス
+##  <a name="analysis-services-template-reference"></a><a name="bkmk_Ref"></a>Analysis Services テンプレートリファレンス
  次のテンプレートは、Analysis Services データベースや、マイニング構造、マイニング モデル、キューブ、テーブル モデルなどのデータベース内のオブジェクトと一緒に使用するように提供されています。
 
 |カテゴリ|項目テンプレート|説明|
@@ -206,8 +196,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||単一予測|DMX SELECT FROM \<model> の自然予測結合ステートメントを使用して、予測クエリで明示的に指定された単一の値を使用してマイニングモデルに対して予測クエリを実行する方法を示します。この列の名前は、マイニングモデルの列と一致します。|
 ||ストアド プロシージャ コール|DMX CALL ステートメントを使用してストアド プロシージャを呼び出す方法を示します。|
 |MDX\式|移動平均 - 固定|MDX `ParallelPeriod` 関数および `CurrentMember` 関数を自然な順序のセットと共に使用して、時間ディメンションの階層の一定期間においてメジャーの移動平均を提供する、計算メジャーの作成方法を示します。|
-||移動平均 - 可変|
-  `CASE` 関数内の MDX `Avg` ステートメントを使用して、時間ディメンションの階層の可変期間においてメジャーの移動平均を提供する、計算メジャーの作成方法を示します。|
+||移動平均 - 可変|`CASE` 関数内の MDX `Avg` ステートメントを使用して、時間ディメンションの階層の可変期間においてメジャーの移動平均を提供する、計算メジャーの作成方法を示します。|
 ||期間取得|計算メンバー内の MDX `PeriodsToDate` 関数の使用方法を示します。|
 ||親に対する比率|MDX `Parent` 関数を使用して、指定された階層内の親メンバーのそれぞれの子のメジャーの比率を表す、計算メジャーを作成する方法を示します。|
 ||合計に対する比率|すべてのメンバーを使用して、指定された階層内の各メンバーのメジャーの比率を表す、計算メジャーを作成する方法を示します。|
@@ -217,12 +206,12 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||計算されるメンバーあり|SELECT ステートメントで MDX WITH 句を使用して、MDX クエリの計算メンバーを定義する方法を示します。|
 ||名前付きセットあり|SELECT ステートメントで MDX WITH 句を使用して、MDX クエリの名前付きセットを定義する方法を示します。|
 |XMLA\管理|バックアップ|XMLA `Backup` コマンドを使用して、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースをファイルにバックアップする方法を示します。|
-||キャンセル|XMLA `Cancel` コマンドを使用して、現在のセッション、データベース、またはインスタンス上で実行しているすべての操作を取り消す方法を示します。現在のセッションは管理者またはサーバーの管理者以外のユーザー、データベースは管理者、インスタンスはサーバー管理者がキャンセルできます。|
+||Cancel|XMLA `Cancel` コマンドを使用して、現在のセッション、データベース、またはインスタンス上で実行しているすべての操作を取り消す方法を示します。現在のセッションは管理者またはサーバーの管理者以外のユーザー、データベースは管理者、インスタンスはサーバー管理者がキャンセルできます。|
 ||リモート パーティション データベースの作成|XMLA `Create` コマンドを [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] スクリプト言語 (ASSL) データベース要素と共に使用して、リモート パーティションを保存する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースおよびデータ ソースを作成する方法を示します。|
 ||削除|XMLA `Delete` コマンドを使用して、既存の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを削除する方法を示します。|
 ||ディメンションの処理|XMLA `Batch` コマンドを `Parallel` 要素および `Process` コマンドと組み合わせ、並列バッチ操作を使用してディメンションの属性を更新する方法を示します。|
 ||パーティションの処理|XMLA `Batch` コマンドを `Parallel` 要素および `Process` コマンドと組み合わせ、並列バッチ操作を使用してパーティションを完全に処理する方法を示します。|
-||[復元]|XMLA `Restore` コマンドを使用して、既存のバックアップ ファイルから [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを復元する方法を示します。|
+||復元|XMLA `Restore` コマンドを使用して、既存のバックアップ ファイルから [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを復元する方法を示します。|
 ||同期|XMLA `Synchronize` コマンドで、SynchronizeSecurity タグの SkipMembership オプションを使用して別の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを現在の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースと同期させる方法を示します。|
 |XMLA\スキーマ行セット|スキーマ行セットの検出|XMLA `Discover` メソッドを使用して、DISCOVER_SCHEMA_ROWSETS スキーマ行セットの内容を取得する方法を示します。|
 |XMLA\サーバー ステータス|接続|XMLA `Discover` メソッドを使用して、DISCOVER_CONNECTIONS スキーマ行セットの内容を取得する方法を示します。|

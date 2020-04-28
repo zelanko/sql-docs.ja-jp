@@ -24,10 +24,10 @@ helpviewer_keywords:
 - rank
 monikerRange: '>= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 4ee73a840be6ec29e3ac34c4c43fe0c8e87185f6
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "77903909"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
@@ -35,13 +35,13 @@ ms.locfileid: "77903909"
 
 データベース内の分類されたアイテムごとに1行のデータを返します。
 
-|列名|データ型|[説明]|
+|列名|データ型|説明|
 |-----------------|---------------|-----------------|  
-|**講義**|**int**|分類が存在する項目のクラスを識別します。 の値は常に 1 (列を表す) になります。|  
+|**class**|**int**|分類が存在する項目のクラスを識別します。 の値は常に 1 (列を表す) になります。|  
 |**class_desc**|**varchar (16)**|分類が存在する項目のクラスの説明。 の値は常にになり*OBJECT_OR_COLUMN*|  
 |**major_id**|**int**|All_objects に対応する、分類された列を含むテーブルの ID を表します。 object_id|  
 |**minor_id**|**int**|All_columns に対応する、分類が存在する列の ID を表します。 column_id|   
-|**タイトル**|**sysname**|秘密度の分類に割り当てられたラベル (人間が判読可能)|  
+|**label**|**sysname**|秘密度の分類に割り当てられたラベル (人間が判読可能)|  
 |**label_id**|**sysname**|ラベルに関連付けられた ID。 Azure Information Protection (AIP) などの情報保護システムで使用できます。|  
 |**information_type**|**sysname**|秘密度の分類に割り当てられた情報の種類 (人間が判読可能)|  
 |**information_type_id**|**sysname**|情報の種類に関連付けられた ID。 Azure Information Protection (AIP) などの情報保護システムで使用できます。|  
@@ -49,7 +49,7 @@ ms.locfileid: "77903909"
 |**rank_desc**|**sysname**|ランクのテキスト表現:  <br><br>なし、低、中、高、重大|  
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
 
 - このビューでは、データベースの分類状態を表示できます。 データベースの分類を管理したり、レポートを生成したりするために使用できます。
 - 現在、データベース列の分類のみがサポートされています。
@@ -78,12 +78,12 @@ left join sys.all_columns on sys.sensitivity_classifications.major_id = sys.all_
 ## <a name="permissions"></a>アクセス許可  
  [**すべての秘密度分類の表示**] アクセス許可が必要です。 
  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
 
 ## <a name="see-also"></a>参照  
 
-[感度の分類の追加 (Transact-sql)](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
+[ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
 
-[DROP 感度分類 (Transact-sql)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
+[DROP SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 
 [SQL Information Protection の概要](https://aka.ms/sqlip)

@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 968d1bb6ce5eee2d25860353586d14f31dc67807
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175913"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>メモリ使用量の監視とトラブルシューティング
@@ -23,16 +23,14 @@ ms.locfileid: "78175913"
  このトピックでは、 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] のメモリ使用量の監視について説明します。
 
 
-##  <a name="bkmk_CreateDB"></a>メモリ最適化テーブルを含むサンプルデータベースの作成
+##  <a name="create-a-sample-database-with-memory-optimized-tables"></a><a name="bkmk_CreateDB"></a>メモリ最適化テーブルを含むサンプルデータベースの作成
  既にメモリ最適化テーブルが含まれるデータベースがある場合は、このセクションを省略できます。
 
  以下の手順では、このトピックの残りのセクションで使用する、3 つのメモリ最適化テーブルが含まれるデータベースを作成します。 例では、メモリ最適化テーブルで使用できるメモリの量を制御できるように、データベースをリソース プールにマップしました。
 
-1.  
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]を起動します。
+1.  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]を起動します。
 
-2.  
-  **[新しいクエリ]** をクリックします。
+2.  **[新しいクエリ]** をクリックします。
 
 3.  次のコードを新しいクエリ ウィンドウに貼り付け、各セクションを実行します。
 
@@ -114,16 +112,13 @@ ms.locfileid: "78175913"
 
 ##  <a name="monitoring-memory-usage"></a>メモリ使用率の監視
 
-###  <a name="using-ssmanstudiofull"></a>
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を使用する
- 
-  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] には、インメモリ テーブルによって消費されるメモリを監視するための標準レポートが組み込まれています。 これらのレポートには、 [ここ](https://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx)で説明しているようにオブジェクト エクスプローラーを使用してアクセスできます。 オブジェクト エクスプローラーを使用すると、個々のメモリ最適化テーブルで消費されるメモリも監視できます。
+###  <a name="using-ssmanstudiofull"></a>[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を使用する
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] には、インメモリ テーブルによって消費されるメモリを監視するための標準レポートが組み込まれています。 これらのレポートには、 [ここ](https://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx)で説明しているようにオブジェクト エクスプローラーを使用してアクセスできます。 オブジェクト エクスプローラーを使用すると、個々のメモリ最適化テーブルで消費されるメモリも監視できます。
 
 #### <a name="consumption-at-the-database-level"></a>データベース レベルでの消費量
  次のように、データベース レベルでのメモリ使用を監視できます。
 
-1.  
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を起動し、サーバーに接続します。
+1.  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を起動し、サーバーに接続します。
 
 2.  オブジェクト エクスプローラーで、レポートが必要なデータベースを右クリックします。
 
@@ -238,8 +233,7 @@ memory_object_address pages_ in_bytes bytes_used type
  詳細については、「 [dm_os_memory_objects (transact-sql)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql)」を参照してください。
 
 #### <a name="memory-consumed-by-hek_2-engine-across-the-instance"></a>インスタンス全体で [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] エンジンによって消費されるメモリ
- 
-  [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] エンジンとメモリ最適化オブジェクトに割り当てられたメモリは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内の他のメモリ コンシューマーと同様に管理されます。 MEMORYCLERK_XTP 型のクラークによって、 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] エンジンに割り当てられたすべてのメモリについて確認できます。 次のクエリを使用して、 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] エンジンによって使用されるすべてのメモリを確認します。
+ [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] エンジンとメモリ最適化オブジェクトに割り当てられたメモリは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内の他のメモリ コンシューマーと同様に管理されます。 MEMORYCLERK_XTP 型のクラークによって、 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] エンジンに割り当てられたすべてのメモリについて確認できます。 次のクエリを使用して、 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] エンジンによって使用されるすべてのメモリを確認します。
 
 ```sql
 -- this DMV accounts for all memory used by the hek_2 engine

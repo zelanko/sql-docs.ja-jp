@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 537308a0486308ce3cb26227f415f487d69e6f54
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176217"
 ---
 # <a name="sending-an-html-mail-message-with-the-script-task"></a>スクリプト タスクによる HTML メール メッセージの送信
@@ -29,7 +29,7 @@ ms.locfileid: "78176217"
 > [!NOTE]
 >  複数のパッケージでより簡単に再利用できるタスクを作成する場合は、このスクリプト タスク サンプルのコードを基にした、カスタム タスクの作成を検討してください。 詳細については、「 [カスタム タスクの開発](../extending-packages-custom-objects/task/developing-a-custom-task.md)」を参照してください。
 
-## <a name="description"></a>[説明]
+## <a name="description"></a>説明
  次の例では、`System.Net.Mail` 名前空間を使用して、HTML メール メッセージを構成および送信します。 スクリプトは、電子メールの宛先、差出人、件名、および本文をパッケージ変数から取得し、これらを使用して新しい `MailMessag` を作成します。また、その `IsBodyHtml` プロパティに `True` を設定します。 次に、別のパッケージ変数から SMTP サーバー名を取得し、`System.Net.Mail.SmtpClient` のインスタンスを初期化し、そのインスタンスの `Send` メソッドを呼び出して HTML メッセージを送信します。 このサンプルでは、メッセージ送信機能をサブルーチンにカプセル化しているため、他のスクリプトで再利用できます。
 
 #### <a name="to-configure-this-script-task-example-without-an-smtp-connection-manager"></a>このスクリプト タスクの例を SMTP 接続マネージャーを使用せずに構成するには
@@ -52,8 +52,7 @@ ms.locfileid: "78176217"
 
  `SmtpServer=smtphost;UseWindowsAuthentication=False;EnableSsl=False;`
 
- 
-  `String.Split` メソッドを使用して、この引数リストをセミコロン (;) または等号 (=) で個々の文字列の配列に分割し、配列の 2 番目の引数 (subscript 1) をサーバー名として抽出することができます。
+ `String.Split` メソッドを使用して、この引数リストをセミコロン (;) または等号 (=) で個々の文字列の配列に分割し、配列の 2 番目の引数 (subscript 1) をサーバー名として抽出することができます。
 
 #### <a name="to-configure-this-script-task-example-with-an-smtp-connection-manager"></a>このスクリプト タスクの例を SMTP 接続マネージャーを使用して構成するには
 
@@ -151,7 +150,7 @@ public void Main()
         }
 ```
 
-![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
+![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
 
 ## <a name="see-also"></a>参照
  [メール送信タスク](../control-flow/send-mail-task.md)

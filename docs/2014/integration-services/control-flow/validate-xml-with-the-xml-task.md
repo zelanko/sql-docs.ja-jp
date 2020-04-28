@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a67ab14cbf756784f9e89112afb2893a157d6abd
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176502"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
@@ -25,10 +25,9 @@ ms.locfileid: "78176502"
 
  次のスクリーン ショットは、 **XML タスク エディター** と、XML 検証で詳細なエラー出力を取得するのに必要な設定を示しています。
 
- ![XML タスク エディターの XML タスク プロパティ](../media/xmltaskproperties.jpg "Xml タスクエディターの XML タスクプロパティ")
+ ![XML タスク エディターの XML タスク プロパティ](../media/xmltaskproperties.jpg "XML タスク エディターの XML タスク プロパティ")
 
- 
-  `ValidationDetails` プロパティが利用できるようになる前は、XML タスクによる XML 検証では、true や false のみの結果が返され、エラーやその場所に関する情報は返されませんでした。 これで、を true `ValidationDetails`に設定すると、出力ファイルには、行番号と位置を含むすべてのエラーに関する詳細情報が含まれるようになりました。 この情報を使って、XML ドキュメントのエラーを把握、特定、修正できます。
+ `ValidationDetails` プロパティが利用できるようになる前は、XML タスクによる XML 検証では、true や false のみの結果が返され、エラーやその場所に関する情報は返されませんでした。 これで、を true `ValidationDetails`に設定すると、出力ファイルには、行番号と位置を含むすべてのエラーに関する詳細情報が含まれるようになりました。 この情報を使って、XML ドキュメントのエラーを把握、特定、修正できます。
 
  この XML 検証機能は、大きなサイズの XML ドキュメントや大量のエラーにも、簡単に規模を変更して対応できます。 出力ファイル自体が XML 形式なので、出力に対するクエリの実行と分析が可能です。 たとえば、出力に大量のエラーが含まれている場合、このトピックで説明する方法で [!INCLUDE[tsql](../../../includes/tsql-md.md)] クエリを使用して、エラーをグループ化することができます。
 

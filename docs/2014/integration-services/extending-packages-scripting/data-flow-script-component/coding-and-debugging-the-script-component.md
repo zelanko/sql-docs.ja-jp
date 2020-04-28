@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d12dbcdf49fc34bdd37fca21635cbcd416efc36b
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176229"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>スクリプト コンポーネントのコーディングおよびデバッグ
@@ -49,19 +49,15 @@ ms.locfileid: "78176229"
  スクリプト コンポーネントの威力は、インフラストラクチャ コードを生成して、記述する必要のあるコード量を減らす機能にあります。 この機能を実現するには、入力と出力、およびその列とプロパティが固定され、既知である必要があります。 したがって、コンポーネントのメタデータに後で変更を加えた場合、記述したコードが無効になり、 パッケージの実行中にコンパイル エラーが発生する可能性があります。
 
 #### <a name="project-items-and-classes-in-the-script-component-project"></a>スクリプト コンポーネント プロジェクトのプロジェクト アイテムおよびクラス
- コード デザイン モードに切り替えると、VSTA IDE が開き、`ScriptMain` プロジェクト アイテムが表示されます。 
-  `ScriptMain` プロジェクト アイテムには、編集可能な `ScriptMain` クラスが含まれています。このクラスは、スクリプトのエントリ ポイントとしての役割を果たし、ここにコードを記述します。 このクラスのコード要素は、スクリプト タスクに対して選択したプログラミング言語に応じて異なります。
+ コード デザイン モードに切り替えると、VSTA IDE が開き、`ScriptMain` プロジェクト アイテムが表示されます。 `ScriptMain` プロジェクト アイテムには、編集可能な `ScriptMain` クラスが含まれています。このクラスは、スクリプトのエントリ ポイントとしての役割を果たし、ここにコードを記述します。 このクラスのコード要素は、スクリプト タスクに対して選択したプログラミング言語に応じて異なります。
 
  スクリプト プロジェクトには、次の 2 つの読み取り専用のプロジェクト アイテムが自動生成され、追加されます。
 
 -   次の 3 つのクラスを含む `ComponentWrapper` プロジェクト アイテム。
 
-    -   
-  `UserComponent` クラス。<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> から継承され、データの処理およびパッケージとのやり取りに使用するメソッドおよびプロパティが含まれています。 
-  `ScriptMain` クラスは `UserComponent` クラスから継承されます。
+    -   `UserComponent` クラス。<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> から継承され、データの処理およびパッケージとのやり取りに使用するメソッドおよびプロパティが含まれています。 `ScriptMain` クラスは `UserComponent` クラスから継承されます。
 
-    -   
-  `Connections` コレクション クラス。[スクリプト変換エディター] の [接続マネージャー] ページで選択された、接続への参照が含まれています。
+    -   `Connections` コレクション クラス。[スクリプト変換エディター] の [接続マネージャー] ページで選択された、接続への参照が含まれています。
 
     -   [ `Variables` **スクリプト変換エディター**] の [**スクリプト**] ページにある`ReadOnlyVariable`プロパティ`ReadWriteVariables`およびプロパティに入力された変数への参照を含むコレクションクラス。
 
@@ -172,15 +168,10 @@ public class ScriptMain : UserComponent
 
 |パッケージの機能|アクセス方法|
 |---------------------|-------------------|
-|変数:|
-  `Variables` プロジェクト アイテムの `ComponentWrapper` コレクション クラス内の、名前付きで型指定されたアクセサー プロパティを使用します。これは `Variables` クラスの `ScriptMain` プロパティを介して公開されています。<br /><br /> 
-  `PreExecute` メソッドでは、読み取り専用変数にのみアクセスできます。 
-  `PostExecute` メソッドでは、読み取り専用変数および読み取り/書き込み変数の両方にアクセスできます。|
-|接続|
-  `Connections` プロジェクト アイテムの `ComponentWrapper` コレクション クラス内の、名前付きで型指定されたアクセサー プロパティを使用します。これは `Connections` クラスの `ScriptMain` プロパティを介して公開されています。|
+|変数:|`Variables` プロジェクト アイテムの `ComponentWrapper` コレクション クラス内の、名前付きで型指定されたアクセサー プロパティを使用します。これは `Variables` クラスの `ScriptMain` プロパティを介して公開されています。<br /><br /> `PreExecute` メソッドでは、読み取り専用変数にのみアクセスできます。 `PostExecute` メソッドでは、読み取り専用変数および読み取り/書き込み変数の両方にアクセスできます。|
+|接続|`Connections` プロジェクト アイテムの `ComponentWrapper` コレクション クラス内の、名前付きで型指定されたアクセサー プロパティを使用します。これは `Connections` クラスの `ScriptMain` プロパティを介して公開されています。|
 |events|クラスの<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>プロパティとインターフェイスの**\<Fire X>** メソッドを使用して、イベントを発生させます。 `ScriptMain`|
-|ログ記録|
-  <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> クラスの `ScriptMain` メソッドを使用して、ログ記録を実行します。|
+|ログ記録|`ScriptMain` クラスの <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> メソッドを使用して、ログ記録を実行します。|
 
 ## <a name="debugging-the-script-component"></a>スクリプト コンポーネントのデバッグ
  スクリプト コンポーネントのコードをデバッグするには、コードに少なくとも 1 つのブレークポイントを設定し、VSTA IDE を閉じて [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] でパッケージを実行します。 パッケージが実行されてスクリプト コンポーネントが開始されると、VSTA IDE が再度開き、読み取り専用モードでコードが表示されます。 実行によりブレークポイントに到達したら、変数の値の検証や、残りのコードのステップ スルーができます。
@@ -195,7 +186,7 @@ public class ScriptMain : UserComponent
 
 -   実行を中断**し、system.string 名前空間**の`MessageBox.Show`メソッドを使用してモーダルメッセージを表示します。 デバッグが完了したら、このコードは削除してください。
 
--   情報メッセージ、警告、およびエラーを発生させます。 FireInformation、FireWarning、FireError の各メソッドでは、イベントの説明が Visual Studio の **[出力]** ウィンドウに表示されます。 ただし、FireProgress メソッド、Console.Write メソッド、および Console.WriteLine メソッドでは、 **[出力]** ウィンドウに情報は表示されません。 FireProgress イベントからのメッセージが [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーの **[進行状況]** タブに表示されます。 詳しくは、「[スクリプト コンポーネントでのイベントの発生](../../data-flow/transformations/script-component.md)」をご覧ください。
+-   情報メッセージ、警告、およびエラーを発生させます。 FireInformation、FireWarning、FireError の各メソッドでは、イベントの説明が Visual Studio の **[出力]** ウィンドウに表示されます。 ただし、FireProgress メソッド、Console.Write メソッド、および Console.WriteLine メソッドでは、 **[出力]** ウィンドウに情報は表示されません。 FireProgress イベントからのメッセージが **デザイナーの**[進行状況][!INCLUDE[ssIS](../../../includes/ssis-md.md)] タブに表示されます。 詳しくは、「[スクリプト コンポーネントでのイベントの発生](../../data-flow/transformations/script-component.md)」をご覧ください。
 
 -   イベントまたはユーザー定義のメッセージを、有効なログ プロバイダーに記録します。 詳しくは、「[スクリプト コンポーネントでのログ記録](logging-in-the-script-component.md)」をご覧ください。
 
@@ -214,7 +205,7 @@ public class ScriptMain : UserComponent
 
 -   blogs.msdn.com のブログ「[VSTA setup and configuration troubles for SSIS 2008 and R2 installations](https://go.microsoft.com/fwlink/?LinkId=215661)」(SSIS 2008 インストールおよび R2 インストールでの VSTA のセットアップと構成に関する問題)。
 
-![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
+![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
 
 ## <a name="see-also"></a>参照
  [スクリプト コンポーネント エディターでのスクリプト コンポーネントの構成](configuring-the-script-component-in-the-script-component-editor.md)

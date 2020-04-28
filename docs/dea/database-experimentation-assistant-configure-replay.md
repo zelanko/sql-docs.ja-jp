@@ -13,10 +13,10 @@ author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
 ms.openlocfilehash: ae7c3c2a987d9fb048c1c3fa494978626abce06a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76761536"
 ---
 # <a name="configure-distributed-replay-for-database-experimentation-assistant"></a>Database Experimentation Assistant の分散再生を構成する
@@ -126,6 +126,6 @@ A/B テストまたは実験を実行するには、2つの再生が必要です
 2. SQL Server インスタンスのデータベースにアクセスするためのアクセス許可をクライアントサービスアカウントユーザーに付与します。 SQL Server インスタンスでクエリを実行するには、権限が必要です。
 3. 再生を開始します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - アップグレードされたテスト環境でキャプチャされたトレースを再生する方法については、「 [Database Experimentation Assistant でトレースを再生](database-experimentation-assistant-replay-trace.md)する」を参照してください。

@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e297bad605e839dc37f757906df2367926eb522e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176272"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>スクリプト コンポーネントによる変換元の作成
@@ -57,8 +57,7 @@ ms.locfileid: "78176272"
 
 -   各出力に対する出力列は、手動で追加して設定する必要があります。 各出力に対する [出力列] フォルダーを選択し、 **[列の追加]** および **[列の削除]** ボタンを使用して、変換元コンポーネントの各出力に対する出力列を管理します。 後でスクリプト内で出力列を参照する際には、ここで割り当てた名前、および自動生成されたコードによって作成された、型指定されたアクセサー プロパティを使用します。
 
--   予期しない値を含む行に対するシミュレートされたエラー出力など、1 つ以上の出力を追加して作成できます。 **[出力の追加]** および **[出力の削除]** ボタンを使用して、変換元コンポーネントの出力を管理します。 すべての入力行は使用可能なすべての出力に送られます。ただし、出力の `ExclusionGroup` プロパティに 0 でない同じ値を指定すると、各行を、同じ `ExclusionGroup` の値を共有する出力のうちいずれか 1 つにのみ送ることもできます。 
-  `ExclusionGroup` に指定するために選択した整数値に、特別な意味はありません。
+-   予期しない値を含む行に対するシミュレートされたエラー出力など、1 つ以上の出力を追加して作成できます。 **[出力の追加]** および **[出力の削除]** ボタンを使用して、変換元コンポーネントの出力を管理します。 すべての入力行は使用可能なすべての出力に送られます。ただし、出力の `ExclusionGroup` プロパティに 0 でない同じ値を指定すると、各行を、同じ `ExclusionGroup` の値を共有する出力のうちいずれか 1 つにのみ送ることもできます。 `ExclusionGroup` に指定するために選択した整数値に、特別な意味はありません。
 
     > [!NOTE]
     >  すべての行を出力しない場合は、0 以外の `ExclusionGroup` プロパティ値を単一の出力で使用することもできます。 ただし、この場合は、出力に送信する各行について、**DirectRowTo\<outputbuffer>** メソッドを明示的に呼び出す必要があります。
@@ -86,52 +85,43 @@ ms.locfileid: "78176272"
 ### <a name="understanding-the-auto-generated-code"></a>自動生成されたコードについて
  変換元コンポーネントを作成、設定した後で VSTA IDE を開くと、コード エディターには `ScriptMain` クラスが編集可能な状態で表示されます。 この `ScriptMain` クラスにカスタム コードを記述します。
 
- 
-  `ScriptMain` クラスには、`CreateNewOutputRows` メソッドのスタブが含まれています。 
-  `CreateNewOutputRows` は、変換元コンポーネントの最重要メソッドです。
+ `ScriptMain` クラスには、`CreateNewOutputRows` メソッドのスタブが含まれています。 `CreateNewOutputRows` は、変換元コンポーネントの最重要メソッドです。
 
- VSTA で [**プロジェクトエクスプローラー** ] ウィンドウを開くと、スクリプトコンポーネントによって読み取り専用`BufferWrapper`および`ComponentWrapper`プロジェクト項目も生成されたことがわかります。 
-  `ScriptMain` クラスは、`UserComponent` プロジェクト アイテム内の `ComponentWrapper` クラスを継承します。
+ VSTA で [**プロジェクトエクスプローラー** ] ウィンドウを開くと、スクリプトコンポーネントによって読み取り専用`BufferWrapper`および`ComponentWrapper`プロジェクト項目も生成されたことがわかります。 `ScriptMain` クラスは、`UserComponent` プロジェクト アイテム内の `ComponentWrapper` クラスを継承します。
 
  実行時には、データ フロー エンジンが `PrimeOutput` クラスの `UserComponent` メソッドを呼び出します。これは親クラスである <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A> の <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> メソッドをオーバーライドします。 次に、`PrimeOutput` メソッドは次のメソッドを呼び出します。
 
-1.  
-  `CreateNewOutputRows` メソッド。これを `ScriptMain` でオーバーライドして、最初は空である出力バッファーに、データ ソースの行を追加します。
+1.  `CreateNewOutputRows` メソッド。これを `ScriptMain` でオーバーライドして、最初は空である出力バッファーに、データ ソースの行を追加します。
 
-2.  
-  `FinishOutputs` メソッド。既定では空です。 このメソッドを `ScriptMain` でオーバーライドして、出力を完了するために必要な処理を実行します。
+2.  `FinishOutputs` メソッド。既定では空です。 このメソッドを `ScriptMain` でオーバーライドして、出力を完了するために必要な処理を実行します。
 
-3.  
-  `MarkOutputsAsFinished` プライベート メソッド。これは、親クラス <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer.SetEndOfRowset%2A> の <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> メソッドを呼び出し、出力が完了したことをデータ フロー エンジンに通知します。 独自に記述するコード内で、`SetEndOfRowset` を呼び出す必要はありません。
+3.  `MarkOutputsAsFinished` プライベート メソッド。これは、親クラス <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer.SetEndOfRowset%2A> の <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> メソッドを呼び出し、出力が完了したことをデータ フロー エンジンに通知します。 独自に記述するコード内で、`SetEndOfRowset` を呼び出す必要はありません。
 
 ### <a name="writing-your-custom-code"></a>カスタム コードの記述
  カスタム変換元コンポーネントの作成を終了するには、必要に応じて `ScriptMain` クラスで使用できる次のメソッドにスクリプトを記述する場合があります。
 
 1.  外部データ ソースに接続する場合は、`AcquireConnections` メソッドをオーバーライドします。 接続マネージャーから、接続オブジェクトまたは必要な接続情報を抽出します。
 
-2.  変換元データをすべて同時に読み込める場合は、`PreExecute` メソッドをオーバーライドしてデータを読み込みます。 たとえば、`SqlCommand` データベースへの [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続に対して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行し、すべての変換元データを同時に `SqlDataReader` に読み込むことができます。 たとえば、テキスト ファイルを読み取る場合など、変換元データを 1 行ずつ読み込む必要がある場合は、`CreateNewOutputRows` の行をループするたびにデータを読み込むことができます。
+2.  変換元データをすべて同時に読み込める場合は、`PreExecute` メソッドをオーバーライドしてデータを読み込みます。 たとえば、[!INCLUDE[vstecado](../../includes/vstecado-md.md)] データベースへの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続に対して `SqlCommand` を実行し、すべての変換元データを同時に `SqlDataReader` に読み込むことができます。 たとえば、テキスト ファイルを読み取る場合など、変換元データを 1 行ずつ読み込む必要がある場合は、`CreateNewOutputRows` の行をループするたびにデータを読み込むことができます。
 
 3.  オーバーライドされた `CreateNewOutputRows` メソッドを使用して、空の出力バッファーに新しい行を追加し、新しい出力行に各列の値を格納します。 各出力バッファーの `AddRow` メソッドを使用して空の行を新しく追加し、各列の値を設定します。 通常は、外部ソースから読み込まれた列から値をコピーします。
 
-4.  
-  `PostExecute` メソッドをオーバーライドして、データの処理を終了します。 たとえば、データを読み込むために使用した `SqlDataReader` を閉じることができます。
+4.  `PostExecute` メソッドをオーバーライドして、データの処理を終了します。 たとえば、データを読み込むために使用した `SqlDataReader` を閉じることができます。
 
-5.  
-  `ReleaseConnections` メソッドを必要に応じてオーバーライドして、外部データ ソースとの接続を切断します。
+5.  `ReleaseConnections` メソッドを必要に応じてオーバーライドして、外部データ ソースとの接続を切断します。
 
 ## <a name="examples"></a>例
  次の例では、変換元コンポーネントを作成するために、`ScriptMain` クラスで必要なカスタム コードを示します。
 
 > [!NOTE]
->  これらの例で**** は、 `AdventureWorks`サンプルデータベースの Person テーブルを使用して、その第1列と第4列、つまり**intaddressid**列と**nvarchar (30) City**列をデータフローに渡します。 このセクションの変換元、変換、および変換先の例でも、同じデータが使用されます。 他の前提条件および仮定条件については、それぞれの例で説明します。
+>  これらの例で**Person.Address**は、 `AdventureWorks`サンプルデータベースの Person テーブルを使用して、その第1列と第4列、つまり**intaddressid**列と**nvarchar (30) City**列をデータフローに渡します。 このセクションの変換元、変換、および変換先の例でも、同じデータが使用されます。 他の前提条件および仮定条件については、それぞれの例で説明します。
 
 ### <a name="adonet-source-example"></a>ADO.NET ソースの例
  この例では、既存の [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルからデータを読み込み、データ フローに送る変換元コンポーネントを示します。
 
  このサンプル コードを実行する場合は、パッケージやコンポーネントを次のように構成する必要があります。
 
-1.  
-  [!INCLUDE[vstecado](../../includes/vstecado-md.md)] プロバイダーを使用する `SqlClient` 接続マネージャーを作成して、`AdventureWorks` データベースに接続します。
+1.  `SqlClient` プロバイダーを使用する [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーを作成して、`AdventureWorks` データベースに接続します。
 
 2.  新しいスクリプト コンポーネントを [データ フロー] デザイナー画面に追加し、変換元として構成します。
 
@@ -265,7 +255,7 @@ ms.locfileid: "78176272"
 
  このサンプル コードを実行する場合は、パッケージやコンポーネントを次のように構成する必要があります。
 
-1.  インポートおよびエクスポートウィザードを使用して、 `AdventureWorks`サンプルデータベースの Person テーブルをコンマ区切りフラットファイルにエクスポートします。 **** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] この例では、ファイル名を ExportedAddresses.txt とします。
+1.  インポートおよびエクスポートウィザードを使用して、 `AdventureWorks`サンプルデータベースの Person テーブルをコンマ区切りフラットファイルにエクスポートします。 **Person.Address** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] この例では、ファイル名を ExportedAddresses.txt とします。
 
 2.  エクスポートされたデータ ファイルに接続するフラット ファイル接続マネージャーを作成します。
 
@@ -396,7 +386,7 @@ ms.locfileid: "78176272"
     }
     ```
 
-![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
+![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
 
 ## <a name="see-also"></a>参照
  [スクリプトコンポーネントによる変換先の作成](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)[カスタム変換元コンポーネントの開発](../extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)

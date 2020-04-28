@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d705a02df8e133b5deb8242b1120a6ddd9f9cac9
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177220"
 ---
 # <a name="task-7-viewing-updates-made-using-master-data-manager-in-excel"></a>タスク 7: Excel でマスター データ マネージャーを使用して行った更新を表示する
@@ -30,7 +30,7 @@ ms.locfileid: "78177220"
 
      ![Excel - 更新された州のコードと名前](../../2014/tutorials/media/et-viewupdatesmadeusingmdminexcel-02.jpg "Excel - 更新された州のコードと名前")
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
  [タスク 8: Excel で State エンティティに新しい値を追加する](../../2014/tutorials/task-8-adding-a-new-value-for-state-entity-in-excel.md)
 
 

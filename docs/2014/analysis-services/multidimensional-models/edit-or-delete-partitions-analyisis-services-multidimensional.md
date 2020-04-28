@@ -14,15 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 089b99663753a9e9424e991ca5245c73ea577e49
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175761"
 ---
 # <a name="edit-or-delete-partitions-analyisis-services---multidimensional"></a>パーティションの編集または削除 (Analysis Services - 多次元)
-  キューブ パーティションを変更するには、 **でキューブ デザイナーの** [パーティション] [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]タブを使用します。 
-  **[パーティション]** タブには、キューブのすべてのメジャー グループのパーティションが一覧表示されます。 また、書き戻しが有効な書き戻しパーティションも表示されます。
+  キューブ パーティションを変更するには、 **でキューブ デザイナーの** [パーティション] [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]タブを使用します。 **[パーティション]** タブには、キューブのすべてのメジャー グループのパーティションが一覧表示されます。 また、書き戻しが有効な書き戻しパーティションも表示されます。
 
  メジャーグループのパーティションを編集するには、[**パーティション**] タブでメジャーグループを展開します。メジャーグループのパーティションは、次の表に示す列を含むテーブル形式の序数で一覧表示されます。
 

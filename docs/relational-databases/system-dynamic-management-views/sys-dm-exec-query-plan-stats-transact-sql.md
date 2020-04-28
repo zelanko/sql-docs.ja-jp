@@ -18,10 +18,10 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: 279f1a8fbe3ec78dc0cae30d9879615b169075bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75656994"
 ---
 # <a name="sysdm_exec_query_plan_stats-transact-sql"></a>dm_exec_query_plan_stats (Transact-sql)
@@ -41,11 +41,11 @@ sys.dm_exec_query_plan_stats(plan_handle)
 
 *Plan_handle*は、次の動的管理オブジェクトから取得できます。  
   
--   [dm_exec_cached_plans &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
+-   [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
--   [dm_exec_query_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
+-   [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
   
--   [dm_exec_requests &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
+-   [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
 
 -   [dm_exec_procedure_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
 
@@ -53,7 +53,7 @@ sys.dm_exec_query_plan_stats(plan_handle)
 
 ## <a name="table-returned"></a>返されるテーブル
 
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|
 |**dbid**|**smallint**|このプランに対応する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントがコンパイルされたときに有効であったコンテキスト データベースの ID。 アドホック SQL ステートメントおよび準備された SQL ステートメントの場合、ステートメントがコンパイルされたデータベースの ID。<br /><br /> NULL 値は許可されます。|  
 |**objectid**|**int**|ストアド プロシージャやユーザー定義関数など、クエリ プランのオブジェクトの ID。 アドホック バッチおよび準備されたバッチの場合、この列の値は **NULL** です。<br /><br /> NULL 値は許可されます。|  
@@ -61,11 +61,10 @@ sys.dm_exec_query_plan_stats(plan_handle)
 |**暗号**|**bit**|対応するプロシージャが暗号化されているかどうか。<br /><br /> 0 = 暗号化されていない<br /><br /> 1 = 暗号化されている<br /><br /> NULL 値は許可されません。|  
 |**query_plan**|**xml**|*Plan_handle*で指定された実際のクエリ実行プランの最後に認識されたランタイム Showplan 表現を格納します。 プラン表示は XML 形式です。 アドホック [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、ストアド プロシージャ コール、ユーザー定義関数コールなどを含むバッチごとに、1 つのプランが生成されます。<br /><br /> NULL 値は許可されます。| 
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 このシステム関数は、 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4 以降で使用できます。
 
-これはオプトイン機能であり、有効にするには[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 が必要です。 
-  [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5 以降でデータベース レベルでこれを行う方法については、「[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)」の LAST_QUERY_PLAN_STATS オプションをご覧ください。
+これはオプトイン機能であり、有効にするには[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 が必要です。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5 以降でデータベース レベルでこれを行う方法については、「[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)」の LAST_QUERY_PLAN_STATS オプションをご覧ください。
 
 このシステム関数は、**ライトウェイト**クエリ実行統計のプロファイルインフラストラクチャで動作します。 詳細については、「[クエリプロファイリングインフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)」を参照してください。  
 
@@ -149,6 +148,6 @@ GO
 
 ## <a name="see-also"></a>参照
   [トレースフラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
- [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [実行関連の動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
 

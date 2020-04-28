@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 318f4404467814c95e778d19aa793107a3ad0945
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176176"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>スクリプト タスクのコーディングおよびデバッグ
@@ -47,11 +47,9 @@ ms.locfileid: "78176176"
  スクリプト タスクに格納されているスクリプトを作成または変更する場合、VSTA は空の新しいプロジェクトを開くか、または既存のプロジェクトを再度開きます。 この VSTA プロジェクトを作成しても、パッケージの配置に影響はありません。このプロジェクトはパッケージ ファイル内部に保存され、スクリプト タスクは追加ファイルを作成しないためです。
 
 ### <a name="project-items-and-classes-in-the-script-task-project"></a>スクリプト タスク プロジェクトのプロジェクト アイテムおよびクラス
- VSTA の [プロジェクト エクスプローラー] ウィンドウに表示されるスクリプト タスク プロジェクトには、既定で `ScriptMain` という単一のアイテムが格納されます。 
-  `ScriptMain` アイテムには、同じく `ScriptMain` という名前の単一のクラスが格納されます。 このクラスのコード要素は、スクリプト タスクに対して選択したプログラミング言語に応じて異なります。
+ VSTA の [プロジェクト エクスプローラー] ウィンドウに表示されるスクリプト タスク プロジェクトには、既定で `ScriptMain` という単一のアイテムが格納されます。 `ScriptMain` アイテムには、同じく `ScriptMain` という名前の単一のクラスが格納されます。 このクラスのコード要素は、スクリプト タスクに対して選択したプログラミング言語に応じて異なります。
 
--   スクリプト タスクが [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] プログラミング言語用に構成されている場合は、`ScriptMain` クラスにパブリック サブルーチン `Main` が含まれます。 
-  `ScriptMain.Main` サブルーチンは、ユーザーのスクリプト タスクを実行するときにランタイムが呼び出すメソッドです。
+-   スクリプト タスクが [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] プログラミング言語用に構成されている場合は、`ScriptMain` クラスにパブリック サブルーチン `Main` が含まれます。 `ScriptMain.Main` サブルーチンは、ユーザーのスクリプト タスクを実行するときにランタイムが呼び出すメソッドです。
 
      既定では、新しいスクリプトの `Main` サブルーチン内にあるコードは、行 `Dts.TaskResult = ScriptResults.Success` のみです。 この行は、タスクの処理が正常に実行されたことをランタイムに通知します。 プロパティ`Dts.TaskResult`は、「[スクリプトタスクから結果を返す](../../extending-packages-scripting/task/returning-results-from-the-script-task.md)」で説明されています。
 
@@ -59,8 +57,7 @@ ms.locfileid: "78176176"
 
      既定では、`Main` メソッドに `Dts.TaskResult = (int)ScriptResults.Success` という行が含まれます。 この行は、タスクの処理が正常に実行されたことをランタイムに通知します。
 
- 
-  `ScriptMain` アイテムには、`ScriptMain` クラス以外のクラスを格納できます。 クラスは、そのクラスが含まれているスクリプト タスクでのみ使用できます。
+ `ScriptMain` アイテムには、`ScriptMain` クラス以外のクラスを格納できます。 クラスは、そのクラスが含まれているスクリプト タスクでのみ使用できます。
 
  既定では、`ScriptMain` プロジェクト アイテムには、次のコードが自動生成されます。 コード テンプレートでも、スクリプト タスクの概要、および、変数、イベント、接続など、SSIS オブジェクトを取得および操作する方法に関する追加情報を提供します。
 
@@ -209,7 +206,7 @@ To open Help, press F1.
 >  プロジェクト参照は、VSTA IDE の **[クラス ビュー]** または**プロジェクト エクスプローラー**で表示できます。 どちらのウィンドウも **[表示]** メニューから開きます。 新しい参照は、 **[プロジェクト]** メニュー、**プロジェクト エクスプローラー**、または **[クラス ビュー]** から追加できます。
 
 ## <a name="interacting-with-the-package-in-the-script-task"></a>スクリプト タスク内でのパッケージとの対話
- スクリプト タスクは、`Dts` クラスのインスタンスであるグローバル オブジェクト <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel>、およびそのメンバーを使用して、内部のパッケージや [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ランタイムとやり取りします。
+ スクリプト タスクは、<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> クラスのインスタンスであるグローバル オブジェクト `Dts`、およびそのメンバーを使用して、内部のパッケージや [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ランタイムとやり取りします。
 
  次の表は、<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> クラスのプリンシパルのパブリック メンバーの一覧です。このクラスは、グローバル オブジェクト `Dts` を介してスクリプト タスクのコードに公開されます。 このセクションのトピックでは、これらのメンバーを使用する方法についてさらに詳しく説明します。
 
@@ -217,8 +214,7 @@ To open Help, press F1.
 |------------|-------------|
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A>|パッケージで定義されている接続マネージャーへのアクセスを提供します。|
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A>|スクリプト タスクでエラー、警告、および情報メッセージを発生させるためのイベント インターフェイスを提供します。|
-|<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.ExecutionValue%2A>|
-  `TaskResult` のほか、ワークフローの分岐にも使用できる単一のオブジェクトをランタイムに返す簡単な方法を提供します。|
+|<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.ExecutionValue%2A>|`TaskResult` のほか、ワークフローの分岐にも使用できる単一のオブジェクトをランタイムに返す簡単な方法を提供します。|
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A>|タスクの進行状況や結果などの情報を、有効なログ プロバイダーに記録します。|
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.TaskResult%2A>|タスクの成功または失敗をレポートします。|
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Transaction%2A>|タスクのコンテナーを実行しているトランザクションが存在する場合、それを提供します。|
@@ -249,8 +245,7 @@ To open Help, press F1.
 
 -   blogs.msdn.com のブログ「[VSTA setup and configuration troubles for SSIS 2008 and R2 installations](https://go.microsoft.com/fwlink/?LinkId=215661)」(SSIS 2008 インストールおよび R2 インストールでの VSTA のセットアップと構成に関する問題)。
 
-![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> 
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] が提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
+![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> [!INCLUDE[msCoName](../../../includes/msconame-md.md)] が提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
 
 ## <a name="see-also"></a>参照
  スクリプト[ソリューションでの他のアセンブリの参照](../referencing-other-assemblies-in-scripting-solutions.md)[スクリプトタスクエディターでのスクリプトタスクの構成](configuring-the-script-task-in-the-script-task-editor.md)

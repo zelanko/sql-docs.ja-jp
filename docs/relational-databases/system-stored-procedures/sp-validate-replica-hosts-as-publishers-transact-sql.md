@@ -17,10 +17,10 @@ ms.assetid: 45001fc9-2dbd-463c-af1d-aa8982d8c813
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9375be2a2af2b7653b3f0f036405533f1571ff3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75320006"
 ---
 # <a name="sp_validate_replica_hosts_as_publishers-transact-sql"></a>sp_validate_replica_hosts_as_publishers (Transact-SQL)
@@ -51,9 +51,9 @@ sp_validate_replica_hosts_as_publishers
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- [なし] :  
+ なし。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  パブリッシャーとパブリッシングデータベースのエントリが存在しない場合、 **sp_validate_redirected_publisher**出力パラメーター * \@redirected_publisher*に null が返されます。 それ以外の場合は、成功と失敗の両方で、関連するリダイレクトされたパブリッシャーが返されます。  
   
  検証が成功した場合、 **sp_validate_redirected_publisher**は成功を示す値を返します。  
@@ -61,7 +61,7 @@ sp_validate_replica_hosts_as_publishers
  検証が失敗した場合は、適切なエラーが発生します。  **sp_validate_redirected_publisher**では、最初に発生した問題だけでなく、すべての問題を発生させることができます。  
   
 > [!NOTE]  
->  読み取りアクセスが許可されていない、または読み取りの目的を指定する必要があるセカンダリレプリカのホストを検証するときに、 **sp_validate_replica_hosts_as_publishers**が失敗し、次のエラーが表示されます。  
+>  セカンダリ レプリカのホストで読み取りアクセスが許可されていない場合や、読み取りを目的としたアクセスを指定する必要がある場合、**sp_validate_replica_hosts_as_publishers** による検証は失敗し、次のエラー メッセージが表示されます。  
 >   
 >  メッセージ 21899、レベル 11、状態 1、プロシージャ **sp_hadr_verify_subscribers_at_publisher**、行 109  
 >   

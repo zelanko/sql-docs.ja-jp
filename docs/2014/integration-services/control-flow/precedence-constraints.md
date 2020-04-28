@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bc23747a13ee2e5b126b7e57ba7121878d05643d
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176472"
 ---
 # <a name="precedence-constraints"></a>優先順位制約
@@ -79,14 +79,12 @@ ms.locfileid: "78176472"
 ## <a name="configuration-of-the-precedence-constraint"></a>優先順位制約の構成
  プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。
 
- 
-  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーで設定できるプロパティについては、「 [優先順位制約エディター](../precedence-constraint-editor.md)」を参照してください。
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーで設定できるプロパティについては、「 [優先順位制約エディター](../precedence-constraint-editor.md)」を参照してください。
 
- これらのプロパティのプログラムでの設定については、「 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>」を参照してください。
+ プログラムによってこれらのプロパティを設定する方法については、 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>」を参照してください。
 
 ## <a name="related-tasks"></a>Related Tasks
- 
-  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法の詳細については、次のトピックのいずれかを参照してください。
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法の詳細については、次のトピックのいずれかを参照してください。
 
 -   [優先順位制約のプロパティを設定する](../set-the-properties-of-a-precedence-constraint.md)
 

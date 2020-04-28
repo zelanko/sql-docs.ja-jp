@@ -17,10 +17,10 @@ ms.assetid: df5b955a-feb0-4863-9b3b-7f71e9653b3d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a493ef87ad2f980f21a99c50da1cb39dfdcda8cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75319987"
 ---
 # <a name="sp_replmonitorsubscriptionpendingcmds-transact-sql"></a>sp_replmonitorsubscriptionpendingcmds (Transact-sql)
@@ -55,14 +55,14 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
   
 `[ @subscription_type = ] subscription_type`サブスクリプションの種類。 *publication_type*は**int**,、既定値はありませんこれらの値のいずれかを指定することができます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**0**|プッシュ サブスクリプション|  
 |**1**|プルサブスクリプション|  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**pendingcmdcount**|**int**|サブスクリプションで保留中のコマンドの数。|  
 |**estimatedprocesstime**|**int**|保留中のすべてのコマンドをサブスクライバーに配信するために必要な秒数の見積もり。|  
@@ -70,7 +70,7 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_replmonitorsubscriptionpendingcmds**は、トランザクションレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  

@@ -17,18 +17,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5ca879d51f947ec078b3c1b7e14842ea926f0240
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174851"
 ---
 # <a name="view-reporting-services-reports-on-microsoft-surface-devices-and--apple-ios-devices"></a>Microsoft Surface デバイスと Apple iOS デバイスでの Reporting Services レポートの表示
   このトピックでは、Microsoft Surface デバイス、Apple iOS 6 と Apple Safari を搭載したデバイス (iPad など) でサポートされる [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の機能とワークフローについて説明します。
 
 ## <a name="view-and-interact-with-reports"></a>レポートの表示および操作
- 
-  [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)]以降の [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、Microsoft Surface デバイス、Apple iOS 6 と Apple Safari ブラウザーを搭載したデバイス (iPad など) でのレポートの表示と基本的な対話操作がサポートされます。 Microsoft Surface デバイスを使用してレポートをパブリッシュすることもできます。
+ [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)]以降の [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、Microsoft Surface デバイス、Apple iOS 6 と Apple Safari ブラウザーを搭載したデバイス (iPad など) でのレポートの表示と基本的な対話操作がサポートされます。 Microsoft Surface デバイスを使用してレポートをパブリッシュすることもできます。
 
  ![IPad デスクトップ](media/videothumbnail.jpg "IPad デスクトップ")IPad でレポートを表示する方法のデモをご覧ください。
 
@@ -57,10 +56,9 @@ ms.locfileid: "78174851"
         > [!IMPORTANT]
         >  iPad の場合は、Safari の **[プライベート ブラウズ]** プロパティがオフになっていることを確認します。
 
-    -   **SharePoint web パーツ:** Web パーツが SharePoint ページに追加されている場合は、レポート[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]を表示できます。
+    -   **SharePoint Web パーツ:** Web パーツが SharePoint ページに追加されている場合は、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のレポートを表示できます。
 
-3.  Microsoft Surface デバイスでは、レポート マネージャーを使用してレポートを開くこともできます。 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート マネージャーでディレクトリを参照し、レポート名をタップしてレポートを開きます。
+3.  Microsoft Surface デバイスでは、レポート マネージャーを使用してレポートを開くこともできます。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート マネージャーでディレクトリを参照し、レポート名をタップしてレポートを開きます。
 
     > [!IMPORTANT]
     >  iPad では、レポート マネージャーでのレポートの表示はサポートされていません。
@@ -125,8 +123,7 @@ ms.locfileid: "78174851"
 -   レポート マネージャーを開き、 **[ファイルのアップロード]** をタップして、レポート サーバー データベースにレポート定義ファイルをアップロードします。
 
 ## <a name="additional-information"></a>追加情報
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] およびサポートされているブラウザーの詳細については、以下を参照してください。
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] およびサポートされているブラウザーの詳細については、以下を参照してください。
 
 -   [Reporting Services と Power View のブラウザーサポートの計画 &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)
 

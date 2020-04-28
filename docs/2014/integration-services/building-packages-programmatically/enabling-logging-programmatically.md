@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bff8df8004c4553d5fa07ebb5ca46863a998bd85
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176562"
 ---
 # <a name="enabling-logging-programmatically"></a>プログラムによるログ記録の有効化
@@ -39,12 +39,11 @@ ms.locfileid: "78176562"
  ログ記録を実行できる各コンテナーにある <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingMode%2A> プロパティは、コンテナーのイベント情報をイベント ログに記録するかどうかを指定します。 このプロパティには <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode> 構造の値が割り当てられ、既定でコンテナーの親オブジェクトから継承されます。 コンテナーがパッケージである、つまり親オブジェクトがない場合は、プロパティは <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode.UseParentSetting> の値を使用します。既定値は `Disabled` です。
 
 ### <a name="selecting-a-log-provider"></a>ログ プロバイダーの選択
- 
-  <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingMode%2A> プロパティを `Enabled` に設定したら、コンテナーの <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders> コレクションにログ プロバイダーを追加し、処理を完了します。 <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders> オブジェクトでは <xref:Microsoft.SqlServer.Dts.Runtime.LoggingOptions> コレクションが使用可能で、これにはコンテナーで選択されたログ プロバイダーが含まれています。 プロバイダーを作成し、コレクションに追加するには、<xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders.Add%2A> メソッドを呼び出します。 このメソッドは、コレクションに追加されたログ プロバイダーを返します。 それぞれのプロバイダーには、そのプロバイダーに特有の構成設定があります。これらのプロパティは、<xref:Microsoft.SqlServer.Dts.Runtime.LogProvider.ConfigString%2A> プロパティを使用して設定します。
+ <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingMode%2A> プロパティを `Enabled` に設定したら、コンテナーの <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders> コレクションにログ プロバイダーを追加し、処理を完了します。 <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders> オブジェクトでは <xref:Microsoft.SqlServer.Dts.Runtime.LoggingOptions> コレクションが使用可能で、これにはコンテナーで選択されたログ プロバイダーが含まれています。 プロバイダーを作成し、コレクションに追加するには、<xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders.Add%2A> メソッドを呼び出します。 このメソッドは、コレクションに追加されたログ プロバイダーを返します。 それぞれのプロバイダーには、そのプロバイダーに特有の構成設定があります。これらのプロパティは、<xref:Microsoft.SqlServer.Dts.Runtime.LogProvider.ConfigString%2A> プロパティを使用して設定します。
 
  次の表に、使用可能なログ プロバイダー、説明、および <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider.ConfigString%2A> 情報を示します。
 
-|プロバイダー|[説明]|ConfigString プロパティ|
+|プロバイダー|説明|ConfigString プロパティ|
 |--------------|-----------------|---------------------------|
 |SQL Server プロファイラー|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler でキャプチャおよび表示される SQL トレースを生成します。 このプロバイダーで使用されるファイル名の既定の拡張子は、.trc です。|構成は必要ありません。|
 |SQL Server|イベント ログ エントリを **データベースの**sysssislog[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルに書き込みます。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロバイダーの場合は、データベースへの接続と対象データベースの名前を指定する必要があります。|
@@ -52,8 +51,7 @@ ms.locfileid: "78176562"
 |Windows イベント ログ|ローカル コンピューター上のアプリケーション ログの標準 Windows イベント ログにログを記録します。|構成は必要ありません。|
 |XML ファイル|イベント ログ エントリを XML 形式ファイルに書き込みます。 このプロバイダーの既定のファイル名拡張子は .xml です。|ファイル接続マネージャーの名前。|
 
- イベント ログにイベントを含めたり除外するには、コンテナーの `EventFilterKind` プロパティおよび `EventFilter` プロパティを設定します。 
-  `EventFilterKind` 構造には `ExclusionFilter` および `InclusionFilter` の 2 つの値があります。これはそれぞれ、`EventFilter` に追加されたイベントが、イベント ログに含まれるかどうかを示します。 次に、フィルター選択の対象となるイベントの名前を含む文字配列を `EventFilter` プロパティに割り当てます。
+ イベント ログにイベントを含めたり除外するには、コンテナーの `EventFilterKind` プロパティおよび `EventFilter` プロパティを設定します。 `EventFilterKind` 構造には `ExclusionFilter` および `InclusionFilter` の 2 つの値があります。これはそれぞれ、`EventFilter` に追加されたイベントが、イベント ログに含まれるかどうかを示します。 次に、フィルター選択の対象となるイベントの名前を含む文字配列を `EventFilter` プロパティに割り当てます。
 
  次のコードは、パッケージのログ記録を有効にし、<xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders> コレクションにテキスト ファイルのログ プロバイダーを追加し、ログ出力に含めるイベントの一覧を指定します。
 
@@ -116,9 +114,9 @@ Module Module1
 End Module
 ```
 
-![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
+![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
 
 ## <a name="see-also"></a>参照
- [SSIS&#41; ログ &#40;Integration Services](../performance/integration-services-ssis-logging.md)
+ [Integration Services &#40;SSIS&#41; のログ記録](../performance/integration-services-ssis-logging.md)
 
 

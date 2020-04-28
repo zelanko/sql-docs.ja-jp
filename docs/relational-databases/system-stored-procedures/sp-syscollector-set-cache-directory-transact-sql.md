@@ -19,10 +19,10 @@ ms.assetid: df56d5a5-8961-494f-a745-d752ca63805a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 03236c2882cad61e42ffa0fcdeb322d4ada53c2a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76910045"
 ---
 # <a name="sp_syscollector_set_cache_directory-transact-sql"></a>sp_syscollector_set_cache_directory (Transact-SQL)
@@ -45,7 +45,7 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  キャッシュ ディレクトリの構成を変更する前に、データ コレクターを無効にする必要があります。 データ コレクターが有効になっている場合、このストアド プロシージャは失敗します。 詳細については、「[データコレクションの有効化または無効化](../../relational-databases/data-collection/enable-or-disable-data-collection.md)」と「[データコレクションの管理](../../relational-databases/data-collection/manage-data-collection.md)」を参照してください。  
   
  指定されたディレクトリは、sp_syscollector_set_cache_directory の実行時に存在する必要はありません。ただし、ディレクトリが作成されるまで、データを正常にキャッシュおよびアップロードすることはできません。 このストアド プロシージャを実行する前に、ディレクトリを作成することをお勧めします。  
@@ -53,7 +53,7 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャを実行するには、dc_admin (EXECUTE 権限を持つ) 固定データベースロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、データコレクターを無効にし、データコレクターのキャッシュ`D:\tempdata`ディレクトリをに設定してから、データコレクターを有効にします。  
   
 ```sql  
@@ -69,6 +69,6 @@ GO
   
 ## <a name="see-also"></a>参照  
  [データコレクターストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [sp_syscollector_set_cache_window &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-window-transact-sql.md)  
+ [sp_syscollector_set_cache_window &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-window-transact-sql.md)  
   
   

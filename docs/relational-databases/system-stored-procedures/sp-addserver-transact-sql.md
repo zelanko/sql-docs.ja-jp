@@ -21,18 +21,16 @@ ms.assetid: 160a6b29-5e80-44ab-80ec-77d4280f627c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1d89da6675fba33af3c6e2d1c054273b6e420ec3
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78172250"
 ---
 # <a name="sp_addserver-transact-sql"></a>sp_addserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のローカル インスタンスの名前を定義します。 をホスト[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]しているコンピューターの名前を変更したら、 **sp_addserver**を[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]使用して、新しいコンピューター名ののインスタンスに通知します。 このプロシージャは、コンピューターでホストされている、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のすべてのインスタンスで実行する必要があります。 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスの名前は変更できません。 名前付きインスタンスのインスタンス名を変更するには、指定した名前で新しいインスタンスをインストールし、古いインスタンスからデータベース ファイルをデタッチし、新しいインスタンスにデータベースをアタッチして古いインスタンスをドロップします。 または、クライアント コンピューター上でクライアント別名を作成して、サーバー コンピューター上のインスタンス名を変更せずに、接続を別のサーバーとインスタンス名か **サーバー:ポート** の組み合せにリダイレクトできます。
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のローカル インスタンスの名前を定義します。 をホスト[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]しているコンピューターの名前を変更したら、 **sp_addserver**を[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]使用して、新しいコンピューター名ののインスタンスに通知します。 このプロシージャは、コンピューターでホストされている、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のすべてのインスタンスで実行する必要があります。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスの名前は変更できません。 名前付きインスタンスのインスタンス名を変更するには、指定した名前で新しいインスタンスをインストールし、古いインスタンスからデータベース ファイルをデタッチし、新しいインスタンスにデータベースをアタッチして古いインスタンスをドロップします。 または、クライアント コンピューター上でクライアント別名を作成して、サーバー コンピューター上のインスタンス名を変更せずに、接続を別のサーバーとインスタンス名か **サーバー:ポート** の組み合せにリダイレクトできます。
 
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -46,35 +44,32 @@ sp_addserver [ @server = ] 'server' ,
 ```
 
 ## <a name="arguments"></a>引数
-`[ @server = ] 'server'`サーバーの名前を指定します。 サーバー名は一意で、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows のコンピューター名の規則に従っている必要があります。ただし、スペースは使用できません。 *サーバー*は**sysname**,、既定値はありません。
+`[ @server = ] 'server'`サーバーの名前を指定します。 サーバー名は一意で、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows のコンピューター名の規則に従っている必要があります。ただし、スペースは使用できません。 *server* のデータ型は **sysname**で、既定値はありません。
 
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンスがコンピューターにインストールされている場合、インスタンスは別のサーバー上にあるように動作します。 *サーバー*を*servername\instancename*として参照し、名前付きインスタンスを指定します。
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンスがコンピューターにインストールされている場合、インスタンスは別のサーバー上にあるように動作します。 *サーバー*を*servername\instancename*として参照し、名前付きインスタンスを指定します。
 
 `[ @local = ] 'LOCAL'`ローカルサーバーとして追加されるサーバーを指定します。 local は**varchar (10)**,、既定値は NULL です。 ** \@** Local ** \@as** **local**を指定すると、ローカルサーバーの名前として** \@サーバー**が@SERVERNAME定義され、@ 関数によって*サーバー*の値が返されます。
 
  インストール中、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップによってこの変数がコンピューター名に設定されます。 既定では、追加構成を行うことなく、ユーザーはこのコンピューター名を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続できます。
 
- ローカル定義は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] を再起動した後に有効になります。 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]の各インスタンスでは、1 つのローカル サーバーだけを定義できます。
+ ローカル定義は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] を再起動した後に有効になります。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の各インスタンスでは、1 つのローカル サーバーだけを定義できます。
 
 `[ @duplicate_ok = ] 'duplicate_OK'`重複するサーバー名を許可するかどうかを指定します。 duplicate_OK は**varchar (13)**,、既定値は NULL です。 ** \@** duplicate_OK には、値**duplicate_OK**または NULL のみを指定できます。 ** \@** **Duplicate_OK**が指定されていて、追加されるサーバー名が既に存在する場合、エラーは発生しません。 名前付きパラメーターを使用しない場合は、 ** \@local**を指定する必要があります。
 
 ## <a name="return-code-values"></a>リターン コードの値
  0 (成功) または 1 (失敗)
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
  サーバーオプションを設定またはクリアするには、 **sp_serveroption**を使用します。
 
  **sp_addserver**は、ユーザー定義のトランザクション内では使用できません。
 
- リモートサーバーを追加するために**sp_addserver**を使用することは廃止されました。 代わりに[sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)を使用してください。
+ リモートサーバーを追加するために**sp_addserver**を使用することは廃止されました。  代わりに [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) を使用してください。
 
 ## <a name="permissions"></a>アクセス許可
- 
-  **setupadmin** 固定サーバー ロールのメンバーシップが必要です。
+ **setupadmin** 固定サーバー ロールのメンバーシップが必要です。
 
-## <a name="examples"></a>例
+## <a name="examples"></a>使用例
  次の例では、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] をホストしているコンピューターの名前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エントリを `ACCOUNTS`に変更します。
 
 ```

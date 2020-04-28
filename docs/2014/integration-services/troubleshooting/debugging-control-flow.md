@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3a7417a3f5792be0838d421ca0115935ae190f49
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176608"
 ---
 # <a name="debugging-control-flow"></a>制御フローのデバッグ
@@ -97,7 +97,7 @@ ms.locfileid: "78176608"
 
  次の図は、 **[進行状況]** タブを示しています。
 
- ![SSIS デザイナーの [進行状況] タブ](../media/mw-dtsflow04.gif "SSIS デザイナーの [進捗状況] タブ")
+ ![SSIS デザイナーの [進行状況] タブ](../media/mw-dtsflow04.gif "SSIS デザイナーの [進行状況] タブ")
 
 ## <a name="debug-windows"></a>デバッグ ウィンドウ
  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] には、ブレークポイントの処理、およびブレークポイントが含まれるパッケージのデバッグに使用できる多数のウィンドウがあります。 各ウィンドウの詳細については、ウィンドウを開いて F1 キーを押し、目的のウィンドウのヘルプを参照してください。
@@ -109,7 +109,7 @@ ms.locfileid: "78176608"
 |ウィンドウ|説明|
 |------------|-----------------|
 |ブレークポイント|パッケージ内のブレークポイントを一覧表示し、ブレークポイントの有効化および削除のオプションを提供します。|
-|Output|[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]の機能に関する状態メッセージを表示します。|
+|出力|[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]の機能に関する状態メッセージを表示します。|
 |即時|式をデバッグして評価し、変数の値を出力するのに使用されます。|
 
 ## <a name="see-also"></a>参照

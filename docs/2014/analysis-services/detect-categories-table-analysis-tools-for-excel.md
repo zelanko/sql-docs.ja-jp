@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1c54c6f369d519812bb79cacf51bd1ad00a1dfb5
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175231"
 ---
 # <a name="detect-categories-table-analysis-tools-for-excel"></a>カテゴリの検出 (Excel 用のテーブル分析ツール)
@@ -71,7 +71,7 @@ ms.locfileid: "78175231"
 
  ![カテゴリの検出ツールによって作成されたレポート](media/dm13-tat-detectcat-report3.gif "カテゴリの検出ツールによって作成されたレポート")
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
  **カテゴリの検出**ツールには、データの量や種類に関する要件はありません。
 
 > [!NOTE]

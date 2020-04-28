@@ -8,10 +8,10 @@ ms.topic: article
 ms.date: 1/22/2020
 ms.author: alexiva
 ms.openlocfilehash: 9a8ca5c7dfdda98e1c005c3851d061957cf67449
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76762826"
 ---
 # <a name="emulating-oracle-package-variables"></a>Oracle パッケージ変数のエミュレーション
@@ -19,7 +19,7 @@ ms.locfileid: "76762826"
 Oracle では、変数、型、ストアドプロシージャ、および関数をパッケージにカプセル化できます。 Oracle パッケージを変換する場合は、次の変換を行う必要があります。
 
 * プロシージャと関数-パブリックとプライベートの両方
-* 変数:
+* 変数
 * カーソル
 * 初期化ルーチン
 

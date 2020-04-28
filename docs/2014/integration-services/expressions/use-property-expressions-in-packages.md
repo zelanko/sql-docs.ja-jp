@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2a926405f2c35ff62b3589003ebe015fe920b743
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176422"
 ---
 # <a name="use-property-expressions-in-packages"></a>パッケージでプロパティ式を使用する
@@ -92,7 +92,7 @@ ms.locfileid: "78176422"
  プロパティ式は、パッケージ構成が読み込まれた後に読み込まれます。 たとえば変数は、対応する構成でまず更新されてから、その変数を使用するプロパティ式が評価され読み込まれます。 つまり、プロパティ式が使用する変数の値は常に、構成によって設定された値です。
 
 > [!NOTE]
->  Dtexec ユーティリティのオプション`Set`を使用し**** てプロパティ式を設定することはできません。
+>  Dtexec ユーティリティのオプション`Set`を使用し**dtexec**てプロパティ式を設定することはできません。
 
  次の表に、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のプロパティ式が評価され読み込まれるタイミングをまとめます。
 
@@ -106,12 +106,9 @@ ms.locfileid: "78176422"
 ## <a name="using-property-expressions-in-the-foreach-loop"></a>Foreach ループでのプロパティ式の使用
  多くの場合、Foreach ループ コンテナー内部で使用される接続マネージャーの `ConnectionString` プロパティ値を設定するには、プロパティ式の実装が役立ちます。 ループの各反復処理で列挙子の現在値が変数にマップされた後、プロパティ式でこの変数の値を使用して `ConnectionString` プロパティの値を動的に更新できます。
 
- Foreach ループで使用されるファイル、複数のファイル、フラット ファイル、および複数フラット ファイル接続マネージャーの `ConnectionString` プロパティでプロパティ式を使用する場合は、いくつかの点について考慮する必要があります。 
-  `MaxConcurrentExecutables` プロパティを 1 より大きな値または -1 に設定することにより、複数の実行可能ファイルが同時に実行されるようにパッケージを構成できます。 値が -1 の場合は、同時に実行できる実行可能ファイルの最大数が、プロセッサの総数に 2 を加えた数と等しいことを意味します。 実行可能ファイルを並列実行することに起因する不適切な結果を回避するには、値 `MaxConcurrentExecutables` を 1 に設定することをお勧めします。 
-  `MaxConcurrentExecutables` を 1 に設定しないと、`ConnectionString` プロパティの値を保証できず、結果を予測できません。
+ Foreach ループで使用されるファイル、複数のファイル、フラット ファイル、および複数フラット ファイル接続マネージャーの `ConnectionString` プロパティでプロパティ式を使用する場合は、いくつかの点について考慮する必要があります。 `MaxConcurrentExecutables` プロパティを 1 より大きな値または -1 に設定することにより、複数の実行可能ファイルが同時に実行されるようにパッケージを構成できます。 値が -1 の場合は、同時に実行できる実行可能ファイルの最大数が、プロセッサの総数に 2 を加えた数と等しいことを意味します。 実行可能ファイルを並列実行することに起因する不適切な結果を回避するには、値 `MaxConcurrentExecutables` を 1 に設定することをお勧めします。 `MaxConcurrentExecutables` を 1 に設定しないと、`ConnectionString` プロパティの値を保証できず、結果を予測できません。
 
- たとえば、フォルダー内のファイルを列挙し、ファイル名を取得し、SQL 実行タスクを使用してテーブルに各ファイル名を挿入する Foreach ループを考えます。 
-  `MaxConcurrentExecutables` を 1 に設定しないと、SQL 実行タスクの 2 つのインスタンスが同時にテーブルへの書き込みを行う場合、書き込みが競合する可能性があります。
+ たとえば、フォルダー内のファイルを列挙し、ファイル名を取得し、SQL 実行タスクを使用してテーブルに各ファイル名を挿入する Foreach ループを考えます。 `MaxConcurrentExecutables` を 1 に設定しないと、SQL 実行タスクの 2 つのインスタンスが同時にテーブルへの書き込みを行う場合、書き込みが競合する可能性があります。
 
 ## <a name="sample-property-expressions"></a>サンプルのプロパティ式
  プロパティ式でのシステム変数、演算子、関数、および文字列リテラルの使い方を次のサンプル式に示します。
@@ -139,11 +136,11 @@ ms.locfileid: "78176422"
 
  Rows Processed:
 
- NASDAQ:7058
+ NASDAQ: 7058
 
- NYSE:3528
+ NYSE: 3528
 
- AMEX:1102
+ AMEX: 1102
 
 ### <a name="property-expression-for-the-executable-property-of-an-execute-process-task"></a>プロセス実行タスクの Executable プロパティ用のプロパティ式
  次のプロパティ式を使用すると、プロセス実行タスクの Executable プロパティを設定できます。 この式では、文字列リテラル、演算子、および関数の組み合わせを使用しています。 この式では、DATEPART 関数、GETDATE 関数、および条件演算子を使用しています。

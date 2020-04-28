@@ -15,14 +15,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5d11ac65a565df23332f24eef8a3e4ddb4e476a5
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175711"
 ---
 # <a name="refresh-the-schema-in-a-data-source-view-analysis-services"></a>データ ソース ビューでのスキーマの更新 (Analysis Services)
-  
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] プロジェクトまたはデータベースでデータ ソース ビュー (DSV) を定義した後に、基になるデータ ソースのスキーマが変更される場合があります。 開発プロジェクトでは、これらの変更は自動的に検出または更新されません。 さらに、プロジェクトをサーバーに配置した場合に、Analysis Services が外部データ ソースに接続できないという処理エラーが発生します。
 
  外部データ ソースと一致するように DSV を更新するには、Business Intelligence Development Studio (BIDS) で DSV を更新します。 DSV を更新すると、DSV の基になる外部データ ソースへの変更が検出され、外部データ ソース内の追加と削除を列挙した変更リストが構築されます。 その後、再配置を行う DSV への一連の変更を、基になるデータ ソースに適用できます。 DSV を使用するプロジェクトでキューブとディメンションをさらに更新するために、追加の作業が必要になることがよくあります。
@@ -31,9 +30,9 @@ ms.locfileid: "78175711"
 
  [更新でサポートされている変更](#bkmk_changlist)
 
- [SQL Server Data Tools で DSV を更新する](#bkmk_DSVrefresh)
+ [SQL Server Data Tools での DSV の更新](#bkmk_DSVrefresh)
 
-##  <a name="bkmk_changlist"></a>更新でサポートされている変更
+##  <a name="changes-supported-in-refresh"></a><a name="bkmk_changlist"></a>更新でサポートされている変更
  DSV 更新には、次のアクションを含めることができます。
 
 -   テーブル、列、およびリレーションシップの削除。
@@ -44,11 +43,10 @@ ms.locfileid: "78175711"
 
  更新によって DSV に新しいテーブルが追加されることはありません。 新しいテーブルを追加する場合は、手動で追加する必要があります。 詳細については、「 [データ ソース ビューでのテーブルまたはビューの追加または削除 (Analysis Services)](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)内のソリューション エクスプローラーでデータ ソース ビュー ウィザードを実行します。
 
-##  <a name="bkmk_DSVrefresh"></a>SQL Server Data Tools で DSV を更新する
+##  <a name="refresh-a-dsv-in-sql-server-data-tools"></a><a name="bkmk_DSVrefresh"></a>SQL Server Data Tools で DSV を更新する
  DSV を更新するには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のソリューション エクスプローラーで [DSV] をダブルクリックしてから、[データ ソース ビューを最新状態に更新] をクリックするか、[データ ソース ビュー] メニューの **[更新]** をクリックします。
 
- 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] では、更新中、基になるリレーショナル データ ソースのすべてにクエリして、DSV に含まれているテーブルやビューが変更されたかどうかを調べます。 基になるデータ ソースのすべてに接続を確立できる場合は、変更されていれば **[データ ソース ビューを最新状態に更新]** ダイアログ ボックスに表示されます。
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] では、更新中、基になるリレーショナル データ ソースのすべてにクエリして、DSV に含まれているテーブルやビューが変更されたかどうかを調べます。 基になるデータ ソースのすべてに接続を確立できる場合は、変更されていれば **[データ ソース ビューを最新状態に更新]** ダイアログ ボックスに表示されます。
 
  ![[データソースビューの更新] ダイアログボックス](../media/ssas-olapdsv-refresh.gif "[データ ソース ビューを最新状態に更新] ダイアログ ボックス")
 

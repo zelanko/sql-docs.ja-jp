@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6dba2c6637c9a637e60583b926b9e80671c043be
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173531"
 ---
 # <a name="add-an-additional-reporting-services-web-front-end-to-a-farm"></a>ファームへの Reporting Services Web フロントエンドの追加
@@ -58,8 +58,7 @@ ms.locfileid: "78173531"
 |SharePoint Server 2010 SP1 をインストールします。|既存の SharePoint ファームに SharePoint 2010 SP1 がインストールされている場合は、から[https://support.microsoft.com/kb/2460045](https://go.microsoft.com/fwlink/p/?linkID=219697)SHAREPOINT 2010 sp1 をダウンロードしてインストールします。<br /><br /> SharePoint 2010 SP1 の詳細については、「 [Office 2010 SP1 および SharePoint 2010 SP1 インストール時の既知の問題](https://support.microsoft.com/kb/2532126)」を参照してください。|
 |SharePoint 製品の構成ウィザードを実行して、ファームにサーバーを追加します。|1) **Microsoft sharepoint 2010 製品**のプログラムグループで、[ **Microsoft Sharepoint 2010 製品構成ウィザード**] をクリックします。<br /><br /> 2) [**サーバーファームへの接続**] ページで、[**既存のファームへの接続**] を選択し、[**次へ**] をクリックします。<br /><br /> 3) [**構成データベースの設定の指定**] ページで、既存のファームに使用するデータベースサーバーの名前と構成データベースの名前を入力します。 **[次へ]** をクリックします。<br />**&#42;&#42; の重要な &#42;&#42;** 次のようなエラーメッセージが表示され、アクセス許可があることを確認した場合は、 **SQL Server Configuration Manager**で SQL Server ネットワーク構成に対して有効になっているプロトコルを確認します。 "データベースサーバーに接続できませんでした。 データベースが存在し、Sql Server であること、およびサーバーにアクセスするための適切なアクセス許可があることを確認してください。 "<br />**&#42;&#42; の重要な &#42;&#42;**[**サーバーファームの製品と修正プログラムの状態**] ページが表示された場合は、ファームへのサーバーの参加を続行する前に、ページ上の情報を確認し、必要なファイルでサーバーを更新する必要があります。<br /><br /> 4) [**ファームのセキュリティ設定の指定**] ページで、ファームのパスフレーズを入力し、[**次へ**] をクリックします。 確認ページで **[次へ]** をクリックして、ウィザードを実行します。<br /><br /> 5) [**次へ**] をクリックして、**ファーム構成ウィザード**を実行します。|
 |サーバーが SharePoint ファームに追加されたことを確認します。|1) SharePoint サーバーの全体管理で、 **[システム設定]** の **[このファームのサーバーの管理]** をクリックします。<br /><br /> 2) 新しいサーバーが追加され、状態が正しいことを確認します。<br /><br /> 3) このサーバーを WFE ロールから削除するには、[**サーバーのサービスの管理**] をクリックし、 **Microsoft SharePoint Foundation Web アプリケーション**サービスを停止します。|
-|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 2010 製品用アドインをインストールします。|アドインをインストールするには、いくつかの方法があります。 次の手順では、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] セットアップ ウィザードを使用します。 アドインのインストールの詳細については、「sharepoint [&#40;sharepoint 2010 および sharepoint 2013&#41;の Reporting Services アドインのインストールまたはアンインストール](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)」を参照してください。 インストール[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の実行:<br /><br /> 1) **[セットアップ ロール]** ページで、 **[SQL Server 機能のインストール]** を選択します。<br /><br /> 2) [**機能の選択**] ページで、[ **SharePoint 製品用の Reporting Services アドイン**] を選択します。<br /><br /> 3) 次のいくつかのページで [**次**へ] をクリックして、セットアップオプションを完了します。<br /><br /> 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の詳細については、「 [SharePoint 2010 用 Reporting Services の SharePoint モードのインストール](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)」を参照してください。|
+|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 2010 製品用アドインをインストールします。|アドインをインストールするには、いくつかの方法があります。 次の手順では、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] セットアップ ウィザードを使用します。 アドインのインストールの詳細については、「sharepoint [&#40;sharepoint 2010 および sharepoint 2013&#41;の Reporting Services アドインのインストールまたはアンインストール](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)」を参照してください。 インストール[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の実行:<br /><br /> 1) **[セットアップ ロール]** ページで、 **[SQL Server 機能のインストール]** を選択します。<br /><br /> 2) [**機能の選択**] ページで、[ **SharePoint 製品用の Reporting Services アドイン**] を選択します。<br /><br /> 3) 次のいくつかのページで [**次**へ] をクリックして、セットアップオプションを完了します。<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の詳細については、「 [SharePoint 2010 用 Reporting Services の SharePoint モードのインストール](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)」を参照してください。|
 |新しいサーバーが稼働することを確認します。|1) SharePoint サーバーの全体管理で、 **[システム設定]** の **[このファームのサーバーの管理]** をクリックします。<br /><br /> 2) 新しいサーバーが一覧に含まれていることを確認します。|
 |NLB ソリューションを更新します。|該当する場合は、ハードウェアまたはソフトウェア NLB 環境を更新し、新しいサーバーを環境に含めます。|
 

@@ -17,10 +17,10 @@ ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fdcf5a9dcd462562886c7815b500c43145b749a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75322229"
 ---
 # <a name="sp_replmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold (Transact-sql)
@@ -54,7 +54,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
   
 `[ @publication_type = ] publication_type`パブリケーションの種類。 *publication_type*は**int**,、これらの値のいずれかを指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**0**|トランザクションパブリケーション。|  
 |**1**|スナップショットパブリケーション。|  
@@ -63,14 +63,14 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
   
 `[ @metric_id = ] metric_id`変更するパブリケーションしきい値の ID を示します。 *metric_id*は**int**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|Value|メトリックの名前|  
+|値|メトリックの名前|  
 |-----------|-----------------|  
-|**1**|**有効期限**-トランザクションパブリケーションに対するサブスクリプションの期限が迫っていないかを監視します。|  
-|**2**|**latency** -トランザクションパブリケーションに対するサブスクリプションのパフォーマンスを監視します。|  
-|**4**|**mergeexpiration 期限**-マージパブリケーションに対するサブスクリプションの期限が迫っていないかを監視します。|  
-|**5/5**|**mergeslowrunduration** -低帯域 (ダイヤルアップ) 接続でのマージ同期の期間を監視します。|  
+|**1**|**expiration** - トランザクション パブリケーションへのサブスクリプションに期限が迫っていないかを監視します。|  
+|**2**|**latency** - トランザクション パブリケーションへのサブスクリプションのパフォーマンスを監視します。|  
+|**4**|**mergeexpiration** - マージ パブリケーションへのサブスクリプションに期限が迫っていないかを監視します。|  
+|**5**|**mergeslowrunduration** -低帯域 (ダイヤルアップ) 接続でのマージ同期の期間を監視します。|  
 |**6**|**mergefastrunduration** -高帯域幅ローカルエリアネットワーク (LAN) 接続でのマージ同期の期間を監視します。|  
-|**7**|**mergefastrunspeed** -高帯域 (LAN) 接続でのマージ同期の同期率を監視します。|  
+|**7**|**mergefastrunspeed** : 高帯域幅 (LAN) 接続経由でのマージ同期の同期速度を監視します。|  
 |**8**|**mergeslowrunspeed** -低帯域 (ダイヤルアップ) 接続でのマージ同期の同期率を監視します。|  
   
  *Metric_id*または*thresholdmetricname*のいずれかを指定する必要があります。 *Thresholdmetricname*を指定する場合は、 *metric_id*を NULL にする必要があります。  
@@ -86,7 +86,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_replmonitorchangepublicationthreshold**は、すべての種類のレプリケーションで使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  

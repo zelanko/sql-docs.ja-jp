@@ -17,10 +17,10 @@ ms.assetid: 7947a788-3fd7-469f-84db-b03ba89a153c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6c5c3c2573465072de0d1f0a7c08d47df5d387b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75321806"
 ---
 # <a name="sp_mschange_snapshot_agent_properties-transact-sql"></a>sp_MSchange_snapshot_agent_properties (Transact-sql)
@@ -65,22 +65,21 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
   
 `[ @frequency_type = ] frequency_type`スナップショットエージェントを実行する頻度を指定します。 *frequency_type*は**int**,、これらの値のいずれかを指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|1 度|  
 |**2**|オン デマンド|  
 |**4**|毎日|  
 |**8**|週単位|  
-|**種類**|月単位|  
+|**10**|月 1 回|  
 |**20@@**|frequency_interval を基準とした月単位|  
-|**40**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの起動時|  
+|**40**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの起動時|  
   
 `[ @frequency_interval = ] frequency_interval`*Frequency_type*によって設定された頻度に適用する値を指定します。 *frequency_interval*は**int**,、既定値はありません。  
   
 `[ @frequency_subday = ] frequency_subday`*Freq_subday_interval*の単位です。 *frequency_subday*は**int**,、これらの値のいずれかを指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|1 度|  
 |**2**|秒|  
@@ -121,9 +120,9 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
   
 `[ @publisher_type = ] 'publisher_type'`パブリッシャーがの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスで実行されていない場合のパブリッシャーの種類を指定します。 *publisher_type*は**sysname**で、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|**MS**|パブリッシャーを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定します。|  
+|**MSSQLSERVER**|パブリッシャーを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定します。|  
 |**ORACLE11I**|標準の Oracle パブリッシャーを指定します。|  
 |**ORACLE GATEWAY **|Oracle ゲートウェイ パブリッシャーを指定します。|  
   
@@ -132,7 +131,7 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_MSchange_snapshot_agent_properties**は、スナップショットレプリケーション、トランザクションレプリケーション、およびマージレプリケーションで使用します。  
   
  **Sp_MSchange_snapshot_agent_properties**を実行するときは、すべてのパラメーターを指定する必要があります。 [Sp_helppublication_snapshot](../../relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql.md)を実行して、スナップショットエージェントジョブの現在のプロパティを返します。  
@@ -143,6 +142,6 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
  **Sp_MSchange_snapshot_agent_properties**を実行できるのは、ディストリビューター側の固定サーバーロール**sysadmin**のメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
- [sp_addpublication_snapshot &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)  
+ [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)  
   
   

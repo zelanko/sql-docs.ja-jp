@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4058a059f1f8690f636e00ac1c68957b68c85f76
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176296"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>スクリプト コンポーネントによる変換先の作成
@@ -82,11 +82,9 @@ ms.locfileid: "78176296"
 ### <a name="understanding-the-auto-generated-code"></a>自動生成されたコードについて
  変換先コンポーネントを作成、構成した後で VSTA IDE を開くと、コード エディターには `ScriptMain` クラスが編集可能な状態で表示されます。また、`ProcessInputRow` メソッドがスタブとして表示されます。 カスタム コードは `ScriptMain` クラスに記述します。また、`ProcessInputRow` は変換先コンポーネントの最重要メソッドです。
 
- VSTA で [**プロジェクトエクスプローラー** ] ウィンドウを開くと、スクリプトコンポーネントによって読み取り専用`BufferWrapper`および`ComponentWrapper`プロジェクト項目も生成されたことがわかります。 
-  `ScriptMain` クラスは、`UserComponent` プロジェクト アイテム内の `ComponentWrapper` クラスを継承します。
+ VSTA で [**プロジェクトエクスプローラー** ] ウィンドウを開くと、スクリプトコンポーネントによって読み取り専用`BufferWrapper`および`ComponentWrapper`プロジェクト項目も生成されたことがわかります。 `ScriptMain` クラスは、`UserComponent` プロジェクト アイテム内の `ComponentWrapper` クラスを継承します。
 
- 実行時には、データ フロー エンジンが `ProcessInput` クラスの `UserComponent` メソッドを呼び出します。これは親クラスである <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> の <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> メソッドをオーバーライドします。 
-  `ProcessInput` メソッドは、入力バッファーに格納された行を順にループし、各行で 1 回ずつ `ProcessInputRow` メソッドを呼び出します。
+ 実行時には、データ フロー エンジンが `ProcessInput` クラスの `UserComponent` メソッドを呼び出します。これは親クラスである <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> の <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> メソッドをオーバーライドします。 `ProcessInput` メソッドは、入力バッファーに格納された行を順にループし、各行で 1 回ずつ `ProcessInputRow` メソッドを呼び出します。
 
 ### <a name="writing-your-custom-code"></a>カスタム コードの記述
  カスタム変換先コンポーネントの作成を終了するには、必要に応じて `ScriptMain` クラスで使用できる次のメソッドにスクリプトを記述する場合があります。
@@ -103,18 +101,16 @@ ms.locfileid: "78176296"
  次の例では、変換先コンポーネントを作成するために `ScriptMain` クラスで必要なコードを示します。
 
 > [!NOTE]
->  これらの例で**** は、 `AdventureWorks`サンプルデータベースの Person テーブルを使用して、その第1列と第4列、つまり**int * addressid*** および**nvarchar (30) City**列をデータフローに渡します。 このセクションの変換元、変換、および変換先の例でも、同じデータが使用されます。 他の前提条件および仮定条件については、それぞれの例で説明します。
+>  これらの例で**Person.Address**は、 `AdventureWorks`サンプルデータベースの Person テーブルを使用して、その第1列と第4列、つまり**int * addressid*** および**nvarchar (30) City**列をデータフローに渡します。 このセクションの変換元、変換、および変換先の例でも、同じデータが使用されます。 他の前提条件および仮定条件については、それぞれの例で説明します。
 
 ### <a name="adonet-destination-example"></a>ADO.NET 変換先の例
  この例では、既存の [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーを使用して、データ フローのデータを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルに保存する変換先コンポーネントを示します。
 
  このサンプル コードを実行する場合は、パッケージやコンポーネントを次のように構成する必要があります。
 
-1.  
-  [!INCLUDE[vstecado](../../includes/vstecado-md.md)] プロバイダーを使用する `SqlClient` 接続マネージャーを作成して、`AdventureWorks` データベースに接続します。
+1.  `SqlClient` プロバイダーを使用する [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーを作成して、`AdventureWorks` データベースに接続します。
 
-2.  
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] データベースで次の `AdventureWorks` コマンドを実行して、変換先テーブルを作成します。
+2.  `AdventureWorks` データベースで次の [!INCLUDE[tsql](../../includes/tsql-md.md)] コマンドを実行して、変換先テーブルを作成します。
 
     ```
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,
@@ -353,7 +349,7 @@ public class ScriptMain:
 }
 ```
 
-![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
+![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
 
 ## <a name="see-also"></a>参照
  [スクリプトコンポーネントによる変換元の作成](../extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)[カスタム変換先コンポーネントの開発](../extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)

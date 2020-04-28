@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 23fd1a0c896436dad27ab771e2ed04c775938091
-ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "77429016"
 ---
 # <a name="sysdm_exec_query_stats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
@@ -37,15 +37,15 @@ ms.locfileid: "77429016"
 > - またはから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]これを[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼び出すには、 **dm_pdw_nodes_exec_query_stats**という名前を使用します。    
 
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**sql_handle**|**varbinary (64)**  |クエリが含まれているバッチまたはストアドプロシージャを一意に識別するトークンです。<br /><br /> **sql_handle**を**statement_start_offset**と**statement_end_offset**と共に使用すると、 **dm_exec_sql_text**動的管理関数を呼び出すことによって、クエリの sql テキストを取得できます。|  
+|**sql_handle**|**varbinary(64)**  |クエリが含まれているバッチまたはストアドプロシージャを一意に識別するトークンです。<br /><br /> **sql_handle** を **statement_start_offset** および **statement_end_offset** と共に使用し、**sys.dm_exec_sql_text** 動的管理関数を呼び出して、クエリの SQL テキストを取得できます。|  
 |**statement_start_offset**|**int**|バッチまたは保存されるオブジェクトのテキスト内での、行が示すクエリの開始位置 (バイト単位)。0 で始まります。|  
 |**statement_end_offset**|**int**|バッチまたは保存されるオブジェクトのテキスト内での、行が示すクエリの終了位置 (バイト単位)。0 で始まります。 以前[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]のバージョンでは、値-1 はバッチの終了を示します。 末尾のコメントは削除されました。|  
 |**plan_generation_num**|**bigint**|再コンパイル後、プランのインスタンスを区別するために使用できるシーケンス番号。|  
-|**plan_handle**|**varbinary (64)**|は、実行され、そのプランがプランキャッシュに存在するか、現在実行中のバッチのクエリ実行プランを一意に識別するトークンです。 この値を [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) 動的管理関数に渡して、クエリ プランを取得できます。<br /><br /> ネイティブ コンパイル ストアド プロシージャがメモリ最適化テーブルに対してクエリを実行するときは、常に 0x000 になります。|  
-|**creation_time**|**DATETIME**|プランがコンパイルされた時刻。|  
-|**last_execution_time**|**DATETIME**|前回プランの実行が開始された時刻。|  
+|**plan_handle**|**varbinary(64)**|は、実行され、そのプランがプランキャッシュに存在するか、現在実行中のバッチのクエリ実行プランを一意に識別するトークンです。 この値を [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) 動的管理関数に渡して、クエリ プランを取得できます。<br /><br /> ネイティブ コンパイル ストアド プロシージャがメモリ最適化テーブルに対してクエリを実行するときは、常に 0x000 になります。|  
+|**creation_time**|**datetime**|プランがコンパイルされた時刻。|  
+|**last_execution_time**|**datetime**|前回プランの実行が開始された時刻。|  
 |**execution_count**|**bigint**|前回のコンパイル時以降に、プランが実行された回数。|  
 |**total_worker_time**|**bigint**|コンパイル後にプランの実行で使用された CPU 時間の合計 (マイクロ秒単位)。ただし、精度はミリ秒単位までです。<br /><br /> ネイティブ コンパイル ストアド プロシージャに関して、多くの実行が 1 ミリ秒未満である場合は、 **total_worker_time** は精度が高くない可能性があります。|  
 |**last_worker_time**|**bigint**|プランを前回実行したときに使用された CPU 時間 (マイクロ秒単位)。ただし、精度はミリ秒単位までです。 <sup>1</sup>|  
@@ -77,7 +77,7 @@ ms.locfileid: "77429016"
 |**last_rows**|**bigint**|クエリの前回の実行で返された行数。 null にすることはできません。<br /><br /> ネイティブ コンパイル ストアド プロシージャがメモリ最適化テーブルに対してクエリを実行するときは、常に 0 になります。|  
 |**min_rows**|**bigint**|1回の実行中にクエリによって返される行の最小数。 null にすることはできません。<br /><br /> ネイティブ コンパイル ストアド プロシージャがメモリ最適化テーブルに対してクエリを実行するときは、常に 0 になります。|  
 |**max_rows**|**bigint**|1回の実行中にクエリによって返される行の最大数。 null にすることはできません。<br /><br /> ネイティブ コンパイル ストアド プロシージャがメモリ最適化テーブルに対してクエリを実行するときは、常に 0 になります。|  
-|**statement_sql_handle**|**varbinary (64)**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。<br /><br /> クエリストアが有効になっていて、その特定のクエリの統計情報を収集している場合にのみ、NULL 以外の値が設定されます。|  
+|**statement_sql_handle**|**varbinary(64)**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。<br /><br /> クエリストアが有効になっていて、その特定のクエリの統計情報を収集している場合にのみ、NULL 以外の値が設定されます。|  
 |**statement_context_id**|**bigint**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。<br /><br /> クエリストアが有効になっていて、その特定のクエリの統計情報を収集している場合にのみ、NULL 以外の値が設定されます。|  
 |**total_dop**|**bigint**|並列処理の次数の合計。このプランはコンパイルされた後に使用されます。 メモリ最適化テーブルに対してクエリを実行する場合は、常に0になります。<br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降。|  
 |**last_dop**|**bigint**|このプランが最後に実行されたときの並列処理の次数。 メモリ最適化テーブルに対してクエリを実行する場合は、常に0になります。<br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降。|  
@@ -128,7 +128,7 @@ ms.locfileid: "77429016"
 で[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]は、 `VIEW SERVER STATE`権限が必要です。   
 Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、データベース`VIEW DATABASE STATE`の権限が必要です。 Standard [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
    
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ビュー内の統計は、クエリが完了したときに更新されます。  
   
 ## <a name="examples"></a>例  
@@ -173,13 +173,13 @@ WHERE qt.text like '%SELECT%'
 ORDER BY qs.execution_count DESC;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [実行関連の動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)    
 [dm_exec_sql_text &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)    
 [dm_exec_query_plan &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
 [dm_exec_procedure_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)     
 [dm_exec_trigger_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)     
-[dm_exec_cached_plans &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)    
+[sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)    
   
 
 

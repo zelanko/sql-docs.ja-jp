@@ -17,10 +17,10 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: e2bd7a4ce174d547d0cb8d0f9bcb89d23e6543db
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78180093"
 ---
 # <a name="sysdm_exec_query_statistics_xml-transact-sql"></a>dm_exec_query_statistics_xml (Transact-sql)
@@ -46,15 +46,15 @@ sys.dm_exec_query_statistics_xml(session_id)
 
 ## <a name="table-returned"></a>返されるテーブル
 
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|
 |session_id|**smallint**|セッションの ID。 Null 値は許容されません。|
 |request_id|**int**|要求の ID。 Null 値は許容されません。|
-|sql_handle|**varbinary (64)**|クエリが含まれているバッチまたはストアドプロシージャを一意に識別するトークンです。 NULL 値は許可されます。|
-|plan_handle|**varbinary (64)**|現在実行中のバッチのクエリ実行プランを一意に識別するトークンです。 NULL 値は許可されます。|
+|sql_handle|**varbinary(64)**|クエリが含まれているバッチまたはストアドプロシージャを一意に識別するトークンです。 NULL 値は許可されます。|
+|plan_handle|**varbinary(64)**|現在実行中のバッチのクエリ実行プランを一意に識別するトークンです。 NULL 値は許可されます。|
 |query_plan|**xml**|部分統計を含む*plan_handle*で指定されたクエリ実行プランのランタイム Showplan 表現を格納します。 プラン表示は XML 形式です。 アドホック [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、ストアド プロシージャ コール、ユーザー定義関数コールなどを含むバッチごとに、1 つのプランが生成されます。 NULL 値は許可されます。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 このシステム関数は、 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降で使用できます。 KB [3190871](https://support.microsoft.com/help/3190871)を参照
 
 このシステム関数は、**標準**および**簡易**クエリ実行統計プロファイルインフラストラクチャの両方で動作します。 詳細については、「[クエリプロファイリングインフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)」を参照してください。  
@@ -63,8 +63,7 @@ sys.dm_exec_query_statistics_xml(session_id)
   
 -   指定された*session_id*に対応するクエリプランが実行されなくなった場合、返されるテーブルの**query_plan**列は null になります。 たとえば、プランハンドルがキャプチャされてから、 **dm_exec_query_statistics_xml**で使用された時間の間に遅延がある場合に、この状態が発生する可能性があります。  
     
-**Xml**データ型で許可されている入れ子になったレベルの数に制限があるため、 **dm_exec_query_statistics_xml**は入れ子になった要素の128レベル以上のクエリプランを返すことができません。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のバージョンでは、この条件が原因でクエリ プランが返されず、エラー 6335 が生成されます。 Service [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Pack 2 以降のバージョンでは、 **query_plan**列には NULL が返されます。   
+**Xml**データ型で許可されている入れ子になったレベルの数に制限があるため、 **dm_exec_query_statistics_xml**は入れ子になった要素の128レベル以上のクエリプランを返すことができません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のバージョンでは、この条件が原因でクエリ プランが返されず、エラー 6335 が生成されます。 Service [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Pack 2 以降のバージョンでは、 **query_plan**列には NULL が返されます。   
 
 ## <a name="permissions"></a>アクセス許可  
 で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、 `VIEW SERVER STATE`サーバーに対する権限が必要です。  
@@ -98,7 +97,7 @@ GO
 ```   
   
 ## <a name="see-also"></a>参照
-  [トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
- [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+  [トレースフラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
+ [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Transact-sql&#41;&#40;データベース関連の動的管理ビュー](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
 

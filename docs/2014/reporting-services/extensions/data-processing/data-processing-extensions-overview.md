@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7a40d8b72dbac45e4546281198e4af000032a94c
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173831"
 ---
 # <a name="data-processing-extensions-overview"></a>データ処理拡張機能の概要
@@ -48,8 +48,7 @@ ms.locfileid: "78173831"
 
 -   拡張機能固有の機能をユーザーに直接提示できます。
 
--   
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 内のデータ ソースにユーザーが直接アクセスするための固有のインターフェイスです。
+-   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 内のデータ ソースにユーザーが直接アクセスするための固有のインターフェイスです。
 
 ## <a name="data-extension-process-flow"></a>データ拡張機能の処理フロー
  カスタム データ拡張機能を開発する前に、レポート サーバーがデータ拡張機能を使用してどのようにデータを処理するか理解しておく必要があります。 レポート サーバーによって呼び出されるコンストラクターとメソッドも理解してください。
@@ -65,15 +64,13 @@ ms.locfileid: "78173831"
 3.  コマンド オブジェクトとパラメーターを処理した後、データ リーダーを生成します。データ リーダーによって、結果セットが返され、レポート サーバーがレポート データをレポート レイアウトに関連付けることができます。
 
 ## <a name="developer-requirements"></a>開発者要件
- 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] データ処理拡張機能を開発するための要件は次のとおりです。
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] データ処理拡張機能を開発するための要件は次のとおりです。
 
 -   レポート デザイナーまたはレポート サーバーがインストールされた配置用コンピューター
 
 -   [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)]以上、または[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]ソフトウェア開発キット (SDK) がインストールされている開発用コンピューター。
 
--   
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の機能についてよく理解していること
+-   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の機能についてよく理解していること
 
 -   アーキテクチャ、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]データプロバイダー、ADO.NET DataSet オブジェクト、および共通[!INCLUDE[vstecado](../../../includes/vstecado-md.md)]インターフェイスについての理解を深めます。
 

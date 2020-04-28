@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 644fa33aa0a9fd8bd51521270cfb89636ac63791
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173201"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>共有データセットまたは埋め込みデータセットの作成 (レポート ビルダーおよび SSRS)
@@ -28,8 +28,7 @@ ms.locfileid: "78173201"
 
 -   レポート サーバーまたは SharePoint サイトにデータセットを直接保存します。
 
- 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で、レポート デザイナーを使用して、次の作業を行います。
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で、レポート デザイナーを使用して、次の作業を行います。
 
 1.  ソリューション エクスプローラーで共有データセットを作成します。 共有データセットには、ソリューション エクスプローラーの [共有データ ソース] フォルダーのデータ ソースを使用する必要があります。
 
@@ -57,7 +56,7 @@ ms.locfileid: "78173201"
 
 4.  クエリ デザイナーで、データセットに含めるフィールドを指定します。
 
-5.  **[実行]** ( **!** ) をクリックしてクエリを実行します。
+5.  [**実行**] (**!**) をクリックしてクエリを実行します。
 
 6.  **レポート ビルダー** のボタンの **[保存]** または **[名前を付けて保存]** をクリックして、共有データセットをレポート サーバーに保存します。
 
@@ -112,6 +111,6 @@ ms.locfileid: "78173201"
      データセットとそのフィールド コレクションがレポート データ ペインのデータ ソース ノードの下に表示されます。
 
 ## <a name="see-also"></a>参照
- [レポート埋め込みデータセットと共有データセット &#40;レポートビルダーと ssrs&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) [データセットフィールドコレクション &#40;レポートビルダーと Ssrs&#41;](dataset-fields-collection-report-builder-and-ssrs.md) [クエリデザイナー &#40;](../query-designers-report-builder.md)レポートビルダー&#41;レポートビルダーと Ssrs &#40;[の](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)[データ接続、データソース、および接続文字列レポートビルダー&#41;と ssrs レポートビルダーのデータ接続、データソース、および接続文字列](../data-connections-data-sources-and-connection-strings-in-report-builder.md) [](embedded-and-shared-datasets-report-builder-and-ssrs.md) [をレポートに追加](report-datasets-ssrs.md)&#40;
+ [レポート埋め込みデータセットと共有データセット &#40;レポートビルダーと ssrs&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) [データセットフィールドコレクション &#40;レポートビルダーと Ssrs&#41;](dataset-fields-collection-report-builder-and-ssrs.md) [クエリデザイナー &#40;](../query-designers-report-builder.md)レポートビルダー&#41;レポートビルダーと Ssrs &#40;[の](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)[データ接続、データソース、および接続文字列レポートビルダー&#41;と ssrs レポートビルダーのデータ接続、データソース、および接続文字列](../data-connections-data-sources-and-connection-strings-in-report-builder.md) [Embedded and Shared Datasets &#40;Report Builder and SSRS&#41;](embedded-and-shared-datasets-report-builder-and-ssrs.md) [をレポートに追加](report-datasets-ssrs.md)&#40;
 
 

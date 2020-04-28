@@ -14,14 +14,13 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 43cecce8e173c0135a7a37ee5800c7cf658c1f1a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175381"
 ---
 # <a name="technical-reference-database-engine"></a>テクニカル リファレンス (データベース エンジン)
-  
   [!INCLUDE[ssDE](../includes/ssde-md.md)] の [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]には、ツール、言語、および管理プログラミングのリファレンス ドキュメントがあります。
 
  ![小さいファイルフォルダーアイコン](../../2014/integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")**機能参照**[登録済みサーバーの F1 ヘルプ](../ssms/register-servers/registered-servers-f1-help.md)

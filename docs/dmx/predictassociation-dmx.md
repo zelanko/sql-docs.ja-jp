@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ea0a9915e062d7b6f15b63e18976e88cc339202d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76939504"
 ---
 # <a name="predictassociation-dmx"></a>PredictAssociation (DMX)
@@ -35,7 +35,7 @@ PredictAssociation(<table column reference>, option1, option2, n ...)
 ## <a name="return-type"></a>戻り値の型  
  \<テーブル式の>  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **PredictAssociation**関数のオプションには、EXCLUDE_NULL、INCLUDE_NULL、包含、排他 (既定)、INPUT_ONLY、INCLUDE_STATISTICS、および INCLUDE_NODE_ID があります。  
   
 > [!NOTE]  
@@ -51,7 +51,7 @@ PredictAssociation(colref, [$AdjustedProbability], n)
   
  **$AdjustedProbability**を含めた場合、ステートメントは、 **$AdjustedProbability**に基づいて上位*n*の値を返します。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、 **PredictAssociation**関数を使用して、一緒に販売される可能性が最も高い Adventure works データベースの4つの製品を返します。  
   
 ```  

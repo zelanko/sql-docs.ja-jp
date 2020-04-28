@@ -15,18 +15,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5fe4f8527bf23ac1af36b6661f2d8f98350a96e7
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176362"
 ---
 # <a name="working-with-data-types-in-the-data-flow"></a>データ フロー内のデータ型の処理
   Integration Services のカスタム データ フロー コンポーネント開発には、データ フロー バッファーにデータをコピーしたり、データ フロー バッファーからデータを取得したり、値を変換したりするなど、常にデータ型の処理が伴います。 このトピックでは、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] データ型の正しい選択と、それを扱うための適切なメソッドの使用について説明します。
 
 ## <a name="inserting-data-into-the-data-flow"></a>データ フローへのデータの挿入
- 
-  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> クラスには、データをバッファー列にコピーするための一連の `Set` メソッドと、これらに対応して、データをバッファー列から取得するための一連の `Get` メソッドが用意されています。 次の表は、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] の各種データ型と使用できるメソッドの対応関係を示しています。
+ <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> クラスには、データをバッファー列にコピーするための一連の `Set` メソッドと、これらに対応して、データをバッファー列から取得するための一連の `Get` メソッドが用意されています。 次の表は、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] の各種データ型と使用できるメソッドの対応関係を示しています。
 
 ### <a name="set-methods-to-use-with-data-types"></a>データ型に対して使用する Set メソッド
  次の表は、データ型と `Set` メソッドおよび `Get` メソッドの対応関係を一覧にしたものです。
@@ -156,7 +155,7 @@ ms.locfileid: "78176362"
 > [!NOTE]
 >  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A> メソッドでは、DT_DBTIMESTAMPOFFSET データ型の値が返されず、<xref:Microsoft.SqlServer.Dts.Pipeline.UnsupportedBufferDataTypeException> が発生します。 DT_DBTIMESTAMPOFFSET データ型は、マネージド データ型にマップできる、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のいずれかの日付/時刻データ型に変換する必要があります。 マネージド データ型にマップできる [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 日付/時刻データ型の一覧については、前のセクション「Integration Services とマネージド データ型とのマッピング」の表を参照してください。 変換するデータ型については、「[Integration Services のデータ型](../../data-flow/integration-services-data-types.md)」を参照してください。
 
-![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
+![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
 
 ## <a name="see-also"></a>参照
  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A> <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A> 

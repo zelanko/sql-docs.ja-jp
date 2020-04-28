@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e6cc08adc2682b65b1e2de9a2c3fd1d483a33c92
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176487"
 ---
 # <a name="connect-components-with-paths"></a>パスを使用してコンポーネントを連結する
@@ -26,7 +26,7 @@ ms.locfileid: "78176487"
 
  次の図は、1 つの変換元コンポーネント、2 つの変換、1 つの変換先コンポーネント、およびこれらを連結するパスを持つ、簡単なデータ フローを示しています。
 
- ![データフロー](media/mw-dts-08.gif "データ フロー")
+ ![データ フロー](media/mw-dts-08.gif "データ フロー")
 
  2 つのコンポーネントを連結したら、パスを移動するデータのメタデータおよびパスのプロパティを、 **[データ フロー パス エディター]** で表示できます。 詳細については、「 [Integration Services のパス](data-flow/integration-services-paths.md)」を参照してください。
 

@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e56a5229f0f26dfe701a425653b3d7f5a4ece842
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78171941"
 ---
 # <a name="status-option-distributed-replay-administration-tool"></a>status オプション (Distributed Replay 管理ツール)
@@ -34,15 +34,13 @@ dreplay status [-mcontroller] [-fstatus_interval]
 #### <a name="parameters"></a>パラメーター
  **-m** *コントローラー*コントローラーのコンピューター名を指定します。 "`localhost`" または "`.`" を使用してローカル コンピューターを参照できます。
 
- 
-  **-m** パラメーターが指定されていない場合、ローカル コンピューターが使用されます。
+ **-m** パラメーターが指定されていない場合、ローカル コンピューターが使用されます。
 
  **-f** *status_interval*状態を表示する頻度 (秒単位) を指定します。
 
- 
-  **-f** パラメーターを指定しない場合は、既定の間隔は 30 秒です。
+ **-f** パラメーターを指定しない場合は、既定の間隔は 30 秒です。
 
-## <a name="examples"></a>例
+## <a name="examples"></a>使用例
  次の例では、現在の状態は 60 秒ごとに表示されます。 値 `localhost` は、コントローラー サービスが管理ツールと同じコンピューターで実行されていることを示します。
 
 ```

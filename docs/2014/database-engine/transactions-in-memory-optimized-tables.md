@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c953060e082ade1e325589cc712f723dabb4909d
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175413"
 ---
 # <a name="transactions-in-memory-optimized-tables"></a>メモリ最適化テーブルでのトランザクション
@@ -50,8 +50,7 @@ ms.locfileid: "78175413"
  これに加えて、トランザクション (TxA) がコミット処理中の他のトランザクション (TxB) で挿入または変更された行を読み取る場合、コミットの発生を待機する代わりに他のトランザクションがコミットされると仮定します。 この場合、トランザクション TxA は、トランザクション TxB に対するコミット依存関係を適用します。
 
 ## <a name="conflict-detection-validation-and-commit-dependency-checks"></a>競合検出、検証、コミットの依存関係の確認
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、分離レベルの違反を検出すると共に、同時実行トランザクション間の競合を検出し、競合状態のトランザクションの一方を終了します。 このトランザクションは再試行する必要があります。 (詳細については、「[メモリ最適化テーブルでのトランザクションの再試行ロジックのガイドライン](../relational-databases/in-memory-oltp/memory-optimized-tables.md)」を参照してください)。
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、分離レベルの違反を検出すると共に、同時実行トランザクション間の競合を検出し、競合状態のトランザクションの一方を終了します。 このトランザクションは再試行する必要があります。 (詳細については、「[メモリ最適化テーブルでのトランザクションの再試行ロジックのガイドライン](../relational-databases/in-memory-oltp/memory-optimized-tables.md)」を参照してください)。
 
  システムでは、競合もトランザクション分離の違反もないとオプティミスティックに仮定します。 データベースの一貫性が損なわれる可能性がある競合や、トランザクション分離に違反する可能性がある競合が発生した場合は、それらの競合が検出されて、そのトランザクションは終了します。
 
@@ -61,7 +60,7 @@ ms.locfileid: "78175413"
 
 ### <a name="error-conditions-for-transactions-accessing-memory-optimized-tables"></a>メモリ最適化テーブルにアクセスするトランザクションのエラー状態。
 
-|エラー|シナリオ|
+|Error|シナリオ|
 |-----------|--------------|
 |書き込みの競合。 トランザクションの開始以降に更新されたレコードを更新しようとしています。|同時実行トランザクションによって更新または削除された行を更新または削除します。|
 |REPEATABLE READ の検証の失敗。|トランザクションで読み取った行が、トランザクションの開始以降に変更 (更新または削除) されています。 REPEATABLE READ および SERIALIZABLE トランザクション分離レベルを使用する際には通常、REPEATABLE READ の検証が行われます。|
@@ -83,7 +82,7 @@ ms.locfileid: "78175413"
 
  このエラーが発生すると、(XACT_ABORT が OFF の場合でも) トランザクションが破棄されます。つまり、トランザクションはユーザー セッションの終了時にロールバックされます。 失敗したトランザクションはコミットできません。ログに書き込まず、メモリ最適化テーブルにアクセスしない読み取り操作のみがサポートされます。
 
-#####  <a name="cd"></a>コミットの依存関係
+#####  <a name="commit-dependencies"></a><a name="cd"></a>コミットの依存関係
  通常の処理中、トランザクションでは、検証またはコミット フェーズであるがまだコミットされていない、他のトランザクションによって書き込まれた行を読み取ることができます。 トランザクションの論理的終了時刻が検証フェーズの開始時に割り当てられているため、行が表示されます。
 
  コミットされていない行をトランザクションで読み取る場合は、そのトランザクションに対するコミット依存関係を使用します。 これには 2 つの主要な関連事項があります。

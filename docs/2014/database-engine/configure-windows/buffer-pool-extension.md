@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9e435ab4cec86d439a7e2fba31f6099bf8668ec0
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175435"
 ---
 # <a name="buffer-pool-extension"></a>バッファー プール拡張
@@ -25,7 +25,7 @@ ms.locfileid: "78175435"
 
  データ ページとインデックス ページがディスクからバッファー プールに読み込まれ、変更されたページ (ダーティ ページとも呼ばれます) がディスクに書き戻されます。 サーバー チェックポイントおよびデータベース チェックポイントでメモリ不足が発生すると、バッファー キャッシュ内のホットな (アクティブな) ダーティ ページがキャッシュから削除され、機械式ディスクに書き込まれた後、再度キャッシュに読み込まれます。 通常、これらの I/O 操作は、4 ～ 16 KB という小規模なデータのランダム読み取り/書き込みです。 小規模なランダム I/O パターンの場合、頻繁なシークが発生して機械式ディスクのアームが動き続けるため、I/O 待機時間が長くなり、システムの総 I/O スループットが低下します。
 
- このような I/O ボトルネックを解決するための一般的な方法は、DRAM を増設するか、または高パフォーマンス SAS スピンドルを追加する方法です。 これらのオプションは効果的ですが、重大な欠点があります。DRAM は、データ ストレージ ドライブよりも高価です。スピンドル数を追加すると、ハードウェアの購入経費が増えるだけでなく、電力消費量の増加およびコンポーネントの故障の可能性の増加に伴い運用コストが増加します。
+ このような I/O ボトルネックを解決するための一般的な方法は、DRAM を増設するか、または高パフォーマンス SAS スピンドルを追加する方法です。 これらのオプションは効果的ですが、重要な欠点があります。DRAM は、データ ストレージ ドライブよりも高価です。スピンドル数を追加すると、ハードウェアの購入経費が増えるだけでなく、電力消費量の増加およびコンポーネントの故障の可能性の拡大に伴い運用コストが増加します。
 
  バッファー プール拡張機能は、不揮発性ストレージ (通常は SSD) でバッファー プール キャッシュを拡張します。 この拡張により、より大きなデータベースのワーキング セットをバッファー プールに格納でき、その結果、RAM と SSD の間の I/O のページングが強制的に実行されます。 これによって、小規模なランダム I/O の処理が実質的に機械式ディスクから SSD に移行されます。 SSD は待機時間が短くランダム I/O のパフォーマンスに優れているため、バッファー プール拡張によって I/O スループットが大幅に向上します。
 
@@ -57,11 +57,11 @@ ms.locfileid: "78175435"
 
  次の図は、バッファー プールのアーキテクチャを他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントに関連して示した概要図です。
 
- ![SSD バッファー プールの拡張機能アーキテクチャ](../media/ssdbufferpoolextensionarchitecture.gif "SSD バッファー プールの拡張機能アーキテクチャ")
+ ![SSD バッファー プール拡張機能のアーキテクチャ](../media/ssdbufferpoolextensionarchitecture.gif "SSD バッファー プール拡張機能のアーキテクチャ")
 
  有効な場合、バッファー プール拡張は、SSD 上のバッファー プール キャッシュ ファイルのサイズおよびファイル パスを指定します。 このファイルは SSD 上のストレージの連続的なエクステントで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスの起動時に静的に構成されます。 ファイルの構成パラメーターの変更は、バッファー プール拡張機能が無効になっている場合にのみ実行できます。 バッファー プール拡張を無効にすると、すべての関連する構成設定がレジストリから削除されます。 バッファー プール拡張ファイルは、SQL Server インスタンスがシャットダウンされると削除されます。
 
-## <a name="best-practices"></a>ベスト プラクティス
+## <a name="best-practices"></a>推奨する運用方法
  次のベスト プラクティスに従うことをお勧めします。
 
 -   初めてバッファー プール拡張を有効にした後は、パフォーマンス上の利点を最大限に活用するために SQL Server インスタンスを再起動することをお勧めします。
@@ -73,9 +73,9 @@ ms.locfileid: "78175435"
 ## <a name="return-information-about-the-buffer-pool-extension"></a>バッファー プール拡張に関する情報の取得
  次の動的管理ビューを使用して、バッファー プール拡張の構成を表示し、拡張のデータ ページに関する情報を取得できます。
 
--   [dm_os_buffer_pool_extension_configuration &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)
+-   [sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)
 
--   [dm_os_buffer_descriptors &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)
+-   [sys.dm_os_buffer_descriptors &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)
 
  SQL Server ではパフォーマンス カウンターが用意されており、Buffer Manager オブジェクトを使用して、バッファー プール拡張ファイル内のデータ ページを追跡することができます。 詳細については、「 [バッファー プール拡張のパフォーマンス カウンター](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)」を参照してください。
 
@@ -93,9 +93,9 @@ ms.locfileid: "78175435"
 |||
 |-|-|
 |**タスクの説明**|**トピック**|
-|バッファー プール拡張を有効化および構成する|[ALTER SERVER CONFIGURATION &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)|
-|バッファー プール拡張の構成を変更する|[ALTER SERVER CONFIGURATION &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)|
-|バッファー プール拡張の構成を表示する|[dm_os_buffer_pool_extension_configuration &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)|
-|バッファー プール拡張を監視する|[dm_os_buffer_descriptors &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)<br /><br /> [パフォーマンスカウンター](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)|
+|バッファー プール拡張を有効化および構成する|[ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)|
+|バッファー プール拡張の構成を変更する|[ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)|
+|バッファー プール拡張の構成を表示する|[sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)|
+|バッファー プール拡張を監視する|[sys.dm_os_buffer_descriptors &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)<br /><br /> [パフォーマンス カウンター](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)|
 
 

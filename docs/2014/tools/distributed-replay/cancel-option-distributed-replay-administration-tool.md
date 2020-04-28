@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ce29f56d7877712dd99553968b364b1c33471c2b
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177329"
 ---
 # <a name="cancel-option-distributed-replay-administration-tool"></a>cancel オプション (Distributed Replay 管理ツール)
@@ -34,15 +34,13 @@ dreplay cancel [-mcontroller] [-q]
 #### <a name="parameters"></a>パラメーター
  **-m** *コントローラー*コントローラーのコンピューター名。 "`localhost`" または "`.`" を使用してローカル コンピューターを参照できます。
 
- 
-  **-m** パラメーターが指定されていない場合、ローカル コンピューターが使用されます。
+ **-m** パラメーターが指定されていない場合、ローカル コンピューターが使用されます。
 
  **-q**Quiet モード。 確認のプロンプトは表示されません。
 
- 
-  **-q** パラメーターは省略可能です。
+ **-q** パラメーターは省略可能です。
 
-## <a name="examples"></a>例
+## <a name="examples"></a>使用例
  次の例では、非表示モードでキャンセル要求が送信されます。 値 `localhost` は、コントローラー サービスが管理ツールと同じコンピューターで実行されていることを示します。
 
 ```

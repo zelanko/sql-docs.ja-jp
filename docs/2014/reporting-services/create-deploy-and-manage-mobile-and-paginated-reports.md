@@ -17,25 +17,22 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3e67d718c928785d85712eb5307130af22570c26
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173911"
 ---
 # <a name="reporting-services-ssrs"></a>Reporting Services (SSRS)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]には、組織のレポートの作成、展開、および管理に役立つ、すぐに使用できるツールとサービスが用意されています。 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、プログラミング機能を使用し、レポート作成機能を拡張したりカスタマイズしたりすることも可能です。
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]には、組織のレポートの作成、展開、および管理に役立つ、すぐに使用できるツールとサービスが用意されています。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、プログラミング機能を使用し、レポート作成機能を拡張したりカスタマイズしたりすることも可能です。
 
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]は、さまざまなデータソースに対して包括的なレポート機能を提供する、サーバーベースのレポートプラットフォームです。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] に付属する完全なツール セットを使用してレポートを作成、管理、配布でき、付属する API を使用すると開発者はカスタム アプリケーションでデータおよびレポートの処理を統合および拡張できます。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]ツールは[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]環境内で動作し、ツールおよび[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]コンポーネントと完全に統合されています。
 
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、リレーショナル データ ソース、多次元データ ソース、または XML ベースのデータ ソースから、対話形式、表形式、グラフィカル形式、または自由形式のレポートを作成できます。 レポートには、グラフ、地図、スパークラインなどの豊富なデータの可視化を含めることができます。 レポートを発行し、レポート処理のスケジュールを設定し、レポートにオン デマンドでアクセスできます。 さまざまな表示形式から選択でき、[!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] などの他のアプリケーションにレポートをエクスポートしたり、パブリッシュしたレポートをサブスクライブすることができます。 作成したレポートは、Web ベースの接続によって表示することも、[!INCLUDE[msCoName](../includes/msconame-md.md)] Windows アプリケーションや SharePoint サイトの一部として表示することも可能です。 また、SharePoint サイトに発行されるレポートでデータ警告を作成したり、レポートのデータが変化したときに電子メール メッセージを受信したりすることもできます。
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、リレーショナル データ ソース、多次元データ ソース、または XML ベースのデータ ソースから、対話形式、表形式、グラフィカル形式、または自由形式のレポートを作成できます。 レポートには、グラフ、地図、スパークラインなどの豊富なデータの可視化を含めることができます。 レポートを発行し、レポート処理のスケジュールを設定し、レポートにオン デマンドでアクセスできます。 さまざまな表示形式から選択でき、[!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] などの他のアプリケーションにレポートをエクスポートしたり、パブリッシュしたレポートをサブスクライブすることができます。 作成したレポートは、Web ベースの接続によって表示することも、[!INCLUDE[msCoName](../includes/msconame-md.md)] Windows アプリケーションや SharePoint サイトの一部として表示することも可能です。 また、SharePoint サイトに発行されるレポートでデータ警告を作成したり、レポートのデータが変化したときに電子メール メッセージを受信したりすることもできます。
 
  の[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]新機能の詳細については、「[新機能 &#40;Reporting Services&#41;](../../2014/reporting-services/what-s-new-reporting-services.md)」を参照してください。
 
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のコンポーネント、ツール、およびリソースについては、 [SQL Server オンライン ブック](../2014-toc/index.yml)を参照してください。
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のコンポーネント、ツール、およびリソースについては、 [SQL Server オンライン ブック](../2014-toc/index.yml)を参照してください。
 
  [レポートサーバー Reporting Services](../../2014/reporting-services/reporting-services-report-server.md)領域![フォルダー](media/hlp-16folder.gif "フォルダー アイコン") **別にコンテンツを参照**する
 
@@ -59,7 +56,7 @@ ms.locfileid: "78173911"
 
  ![フォルダーアイコン](media/hlp-16folder.gif "フォルダー アイコン") [URL アクセス &#40;SSRS&#41;](url-access-ssrs.md)
 
- ![](media/hlp-16folder.gif "フォルダー アイコン") [SSRS&#41;&#40;フォルダーアイコン拡張機能](extensions-ssrs.md)
+ ![Folder icon](media/hlp-16folder.gif "フォルダー アイコン") [SSRS&#41;&#40;フォルダーアイコン拡張機能](extensions-ssrs.md)
 
  ![フォルダーアイコン](media/hlp-16folder.gif "フォルダー アイコン") [Reporting Services ツール](tools/reporting-services-tools.md)
 
@@ -68,6 +65,6 @@ ms.locfileid: "78173911"
  ![フォルダーアイコン](media/hlp-16folder.gif "フォルダー アイコン")[機能の参照 &#40;Reporting Services&#41;](feature-reference-reporting-services.md)
 
 ## <a name="see-also"></a>参照
- [SQL Server リソースセンター](https://go.microsoft.com/fwlink/?linkID=219676)
+ [SQL Server リソース センター](https://go.microsoft.com/fwlink/?linkID=219676)
 
 

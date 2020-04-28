@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 49b642d60da57192bc0c6bf842a16b0d12d529d5
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175551"
 ---
 # <a name="what-if-scenario-table-analysis-tools-for-excel"></a>What-If シナリオ (Excel 用のテーブル分析ツール)
@@ -48,7 +48,7 @@ ms.locfileid: "78175551"
 
 8.  [**テーブル全体**] を選択すると、ダイアログボックスにステータスメッセージが表示され、元のデータテーブルに2つの新しい列が追加されます。 ワークシート内の完全な結果を表示するには、[**閉じる**] をクリックします。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
  このツールでは、数値または不連続値の予測をサポートする Microsoft ロジスティック回帰アルゴリズムが使用されます。 ただし、最適な結果を得るために、次のベスト プラクティスに従うことをお勧めします。
 
 -   有用な情報を含む列を分析対象として選択します。

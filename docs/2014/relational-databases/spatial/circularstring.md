@@ -11,14 +11,13 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: e14aafe004ffd94f0711161fac73ce59c57cd810
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176722"
 ---
 # <a name="circularstring"></a>CircularString
-  
   `CircularString` は、0 個以上の連続する円弧セグメントのコレクションです。 円弧セグメントは、2 次元平面内の 3 つの点によって定義された曲線セグメントです。最初のポイントを 3 番目のポイントと同じにすることはできません。 円弧セグメントの 3 つのポイントすべてが同一線上にある場合は、円弧セグメントが直線セグメントとして扱われます。
 
 > [!IMPORTANT]
@@ -38,8 +37,7 @@ DECLARE @g2 geometry = 'CIRCULARSTRING(1 1, 2 0, -1 1)';
 DECLARE @g3 geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 2 0, 1 1)';
 ```
 
- 
-  `@g3` の場合、`CircularString` インスタンスは許容されることがありますが、有効ではありません。 次に示す CircularString インスタンスの宣言は許容されません。 この宣言は `System.FormatException`をスローします。
+ `@g3` の場合、`CircularString` インスタンスは許容されることがありますが、有効ではありません。 次に示す CircularString インスタンスの宣言は許容されません。 この宣言は `System.FormatException`をスローします。
 
 ```sql
 DECLARE @g geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1)';
@@ -56,8 +54,7 @@ DECLARE @g geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1)';
 
 -   このインスタンス自体を間隔に重ねることはできない。
 
--   
-  `CircularString` が直線セグメントを含んでいてもかまわないが、これらの直線セグメントは、3 つ同一線上のポイントで定義する。
+-   `CircularString` が直線セグメントを含んでいてもかまわないが、これらの直線セグメントは、3 つ同一線上のポイントで定義する。
 
  次の例は、有効な `CircularString` インスタンスを示しています。
 
@@ -69,9 +66,7 @@ DECLARE @g4 geometry = 'CIRCULARSTRING(1 1, 2 2, 2 2)';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(),@g4.STIsValid();
 ```
 
- 
-  `CircularString` インスタンスでは、完全な円を定義するためには、少なくとも 2 つの円弧セグメントを含める必要があります。 
-  `CircularString` インスタンスでは、(1 1, 3 1, 1 1) など 1 つの円弧セグメントを使用して完全な円を定義することはできません。 (1 1, 2 2, 3 1, 2 0, 1 1) を使用して円を定義してください。
+ `CircularString` インスタンスでは、完全な円を定義するためには、少なくとも 2 つの円弧セグメントを含める必要があります。 `CircularString` インスタンスでは、(1 1, 3 1, 1 1) など 1 つの円弧セグメントを使用して完全な円を定義することはできません。 (1 1, 2 2, 3 1, 2 0, 1 1) を使用して円を定義してください。
 
  次の例は、無効な CircularString インスタンスを示しています。
 
@@ -124,8 +119,7 @@ SELECT 'Circumference = ' + CAST(@g.STLength() AS NVARCHAR(10));
 Circumference = 6.28319
 ```
 
- 
-  `LineString` の代わりに `CircularString` が使用される場合は出力結果を比較してください。
+ `LineString` の代わりに `CircularString` が使用される場合は出力結果を比較してください。
 
 ```sql
 DECLARE @g geometry;
@@ -164,6 +158,6 @@ SET @g = geometry::STGeomFromText('CIRCULARSTRING(0 0, 1 2, 2 4)', 0);
 ```
 
 ## <a name="see-also"></a>参照
- [空間データ型の概要](spatial-data-types-overview.md) [CompoundCurve](compoundcurve.md) [makevalid &#40;geography データ型&#41;](/sql/t-sql/spatial-geography/makevalid-geography-data-type) [makevalid &#40;geometry データ型&#41;](/sql/t-sql/spatial-geometry/makevalid-geometry-data-type) [stisvalid &#40;geometry](/sql/t-sql/spatial-geometry/stisvalid-geometry-data-type)データ型&#41;[Stisvalid &#40;geography データ](/sql/t-sql/spatial-geography/stisvalid-geography-data-type)型&#41;[stisvalid &#40;geometry データ](/sql/t-sql/spatial-geometry/stlength-geometry-data-type)[型&#41;データ](/sql/t-sql/spatial-geometry/ststartpoint-geometry-data-type)型 &#40;[stpointn&#41;](/sql/t-sql/spatial-geometry/stpointn-geometry-data-type) geometry データ[型 &#40;](/sql/t-sql/spatial-geometry/stendpoint-geometry-data-type) [stnumpoints&#41;geometry](/sql/t-sql/spatial-geometry/stnumpoints-geometry-data-type)データ型 &#40;[stisring&#41;geometry データ型&#41;](/sql/t-sql/spatial-geometry/stisring-geometry-data-type) [stisclosed &#40;Geometry データ型&#41;](/sql/t-sql/spatial-geometry/stisclosed-geometry-data-type) [stpointonsurface &#40;geometry データ型&#41;](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type) [LineString](linestring.md)
+ [空間データ型の概要](spatial-data-types-overview.md) [CompoundCurve](compoundcurve.md) [makevalid &#40;geography データ型&#41;](/sql/t-sql/spatial-geography/makevalid-geography-data-type) [makevalid &#40;geometry データ型&#41;](/sql/t-sql/spatial-geometry/makevalid-geometry-data-type) [stisvalid &#40;geometry データ型&#41;](/sql/t-sql/spatial-geometry/stisvalid-geometry-data-type) [Stisvalid &#40;geography データ](/sql/t-sql/spatial-geography/stisvalid-geography-data-type)型&#41;[stisvalid &#40;geometry データ型&#41;](/sql/t-sql/spatial-geometry/stlength-geometry-data-type) [STStartPoint &#40;geometry データ型&#41;](/sql/t-sql/spatial-geometry/ststartpoint-geometry-data-type) [stisvalid &#40;geometry データ型&#41;](/sql/t-sql/spatial-geometry/stendpoint-geometry-data-type) [stpointn &#40;geometry データ型&#41;](/sql/t-sql/spatial-geometry/stpointn-geometry-data-type) [stnumpoints](/sql/t-sql/spatial-geometry/stnumpoints-geometry-data-type) &#40;geometry データ型&#41;stisring &#40;geometry データ型&#41;[STIsRing &#40;geometry Data Type&#41;](/sql/t-sql/spatial-geometry/stisring-geometry-data-type) [stisclosed](/sql/t-sql/spatial-geometry/stisclosed-geometry-data-type) &#40;geometry データ型&#41;[stpointonsurface &#40;geometry](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type)データ型&#41;[LineString](linestring.md)
 
 

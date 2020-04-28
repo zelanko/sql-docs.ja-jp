@@ -12,10 +12,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 75cf9c751afb03b963eb888a6dbe6ed03ed4003a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176662"
 ---
 # <a name="spatial-indexes-overview"></a>空間インデックスの概要
@@ -24,9 +24,9 @@ ms.locfileid: "78176662"
 > [!IMPORTANT]
 >  空間インデックスに影響を及ぼす機能を含め、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]で導入された空間機能の詳細な説明とサンプルについては、ホワイト ペーパー『 [New Spatial Features in SQL Server 2012 (SQL Server 2012 の新しい空間機能)](https://go.microsoft.com/fwlink/?LinkId=226407)』をダウンロードしてご覧ください。
 
-##  <a name="about"></a> 空間インデックスについて
+##  <a name="about-spatial-indexes"></a><a name="about"></a> 空間インデックスについて
 
-###  <a name="decompose"></a> インデックスを作成する空間のグリッド階層への分解
+###  <a name="decomposing-indexed-space-into-a-grid-hierarchy"></a><a name="decompose"></a> インデックスを作成する空間のグリッド階層への分解
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]では、空間インデックスは B ツリーを使用して構築されます。したがって、インデックスでは、B ツリーの線形な順序で 2 次元の空間データを表現する必要があります。 このため、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、データを空間インデックスに読み取る前に、空間を階層に均一に分解します。 このインデックス作成プロセスでは、空間が 4 つのレベルから成る *グリッド階層* に *分解*されます。 これらのレベルはそれぞれ、 *レベル 1* (最上位レベル)、 *レベル 2*、 *レベル 3*、および *レベル 4*と呼ばれます。
 
  各レベルでは、1 つ上のレベルがさらに分解されます。したがって、上のレベルのセルに次のレベルの完全なグリッドが含まれます。 特定のレベルのすべてのグリッドは、両方の軸に沿って同じ数のセルを持ちます (4 × 4、8 × 8 など)。それらのセルのサイズはすべて同じです。
@@ -60,7 +60,7 @@ ms.locfileid: "78176662"
 > [!NOTE]
 >  空間インデックスのグリッド密度は、データベース互換性レベルが 100 以下に設定されている場合、 [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) カタログ ビューの level_1_grid、level_2_grid、level_3_grid、level_4_grid の各列で確認できます。 テセレーション`GEOMETRY_AUTO_GRID` / `GEOGRAPHY_AUTO_GRID`スキームのオプションでは、これらの列は設定されません。 自動グリッドオプションが使用さ`NULL`れている場合、spatial_index_tessellations カタログビューにはこれらの列の値があります。
 
-###  <a name="tessellation"></a>テセレーション
+###  <a name="tessellation"></a><a name="tessellation"></a> テセレーション
  インデックスを作成する空間がグリッド階層に分解された後、空間列のデータが行単位で読み取られます。 空間オブジェクト (インスタンス) のデータの読み取りが完了すると、空間インデックスによってそのオブジェクトに対して *テセレーション プロセス* が実行されます。 テセレーション プロセスでは、オブジェクトを、そのオブジェクトが接する一連のグリッド セル (*接するセル*) に関連付けることによって、オブジェクトをグリッド階層に当てはめます。 テセレーション プロセスはグリッド階層のレベル 1 で開始され、 *幅優先* でレベル全体にわたって続けられます。 このプロセスは、場合によっては 4 つのレベルすべてにわたって続けられます (一度に 1 レベルずつ処理されます)。
 
  テセレーション プロセスが終了すると、そのオブジェクトについて、一連の接するセルが空間インデックスに記録されます。 空間インデックスでは、記録されたそれらのセルを参照することにより、空間内のオブジェクトの場所を、同じくインデックスに格納されている空間列の他のオブジェクトを基準にして特定できます。
@@ -87,7 +87,7 @@ ms.locfileid: "78176662"
 #### <a name="covering-rule"></a>カバリング ルール
  オブジェクトがセルを完全に覆っている場合、そのセルはオブジェクトに *覆われている* と言います。 たとえば次の図では、レベル 2 のセルの 1 つ (15.11) が八角形の中心部分に完全に覆われています。
 
- ![カバリングの最適化](../../database-engine/media/spndx-opt-covering.gif "カバリングによる最適化")
+ ![カバリングによる最適化](../../database-engine/media/spndx-opt-covering.gif "カバリングによる最適化")
 
  覆われているセルはカウントされ、インデックスに記録されます。そのセルはそれ以上テセレーションされません。
 
@@ -110,9 +110,8 @@ ms.locfileid: "78176662"
 
  ![最下位のセルによる最適化](../../database-engine/media/spndx-opt-deepest-cell.gif "最下位のセルによる最適化")
 
-###  <a name="schemes"></a>テセレーションスキーム
- 空間インデックスの動作の一部は、 *テセレーション スキーム*によって決まります。 テセレーション スキームはデータ型固有です。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]では、空間インデックスで次の 2 つのテセレーション スキームがサポートされています。
+###  <a name="tessellation-schemes"></a><a name="schemes"></a> テセレーション スキーム
+ 空間インデックスの動作の一部は、 *テセレーション スキーム*によって決まります。 テセレーション スキームはデータ型固有です。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]では、空間インデックスで次の 2 つのテセレーション スキームがサポートされています。
 
 -   *ジオメトリグリッドテセレーション*。これは、 `geometry`データ型のスキームです。
 
@@ -122,33 +121,32 @@ ms.locfileid: "78176662"
 >  空間インデックスの **tessellation_scheme** 設定は、 [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) カタログ ビューで確認できます。
 
 #### <a name="geometry-grid-tessellation-scheme"></a>ジオメトリ グリッド テセレーション スキーム
- GEOMETRY_AUTO_GRID テセレーションは、`geometry` 以降の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型用の既定のテセレーション スキームです。  GEOMETRY_GRID テセレーションは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の geometry データ型で使用できる唯一のテセレーション スキームです。 ここでは、空間インデックスの操作に関連するジオメトリ グリッド テセレーションの特徴 (サポートされるメソッドと境界ボックス) について説明します。
+ GEOMETRY_AUTO_GRID テセレーションは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以降の `geometry` データ型用の既定のテセレーション スキームです。  GEOMETRY_GRID テセレーションは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の geometry データ型で使用できる唯一のテセレーション スキームです。 ここでは、空間インデックスの操作に関連するジオメトリ グリッド テセレーションの特徴 (サポートされるメソッドと境界ボックス) について説明します。
 
 > [!NOTE]
 >  [CREATE 空間インデックス](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)]ステートメントの using (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) 句を使用して、このテセレーションスキームを明示的に指定することができます。
 
 ##### <a name="the-bounding-box"></a>境界ボックス
- 幾何データで用いられる平面は無限に広がっていますが、 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の空間インデックスは有限の空間を必要とします。 ジオメトリ グリッド テセレーション スキームでは、分解のための有限の空間を確立するために、四角形の *境界ボックス*が必要になります。 境界ボックスは、空間インデックスのプロパティと`(`して格納さ_れる、_`)` _x-min_**、**_y min_ `)` 、および`(` _x-max_**の**4 つの座標によって定義されます。 各座標の意味は次のとおりです。
+ 幾何データで用いられる平面は無限に広がっていますが、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の空間インデックスは有限の空間を必要とします。 ジオメトリ グリッド テセレーション スキームでは、分解のための有限の空間を確立するために、四角形の *境界ボックス*が必要になります。 境界ボックスは、空間インデックスのプロパティと`(`して格納さ_れる、_`)` _x-min_**、**_y min_ `)` 、および`(` _x-max_**の**4 つの座標によって定義されます。 各座標の意味は次のとおりです。
 
--   *x-min*は、境界ボックスの左下隅の x 座標です。
+-   *x-min* は、境界ボックスの左下隅の x 座標です。
 
--   *y-min*は左下隅の y 座標です。
+-   *y-min* は、左下隅の y 座標です。
 
--   *x-max*は、右上隅の x 座標です。
+-   *x-max* は、右上隅の x 座標です。
 
--   *y-max*は、右上隅の y 座標です。
+-   *y-max* は、右上隅の y 座標です。
 
 > [!NOTE]
 >  これらの座標は、 [CREATE 空間インデックス](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)]ステートメントの BOUNDING_BOX 句によって指定されます。
 
- `(` _X-min_**、**_y-min_ `)` 、および`(` _x-max_****__ `)`座標は、境界ボックスの配置と大きさを決定します。 境界ボックスの外側の空間は、番号 0 の 1 つのセルとして扱われます。
+ `(` _X-min_**、**_y-min_ `)` 、および`(` _x-max_**,**_y-max_ `)`座標は、境界ボックスの配置と大きさを決定します。 境界ボックスの外側の空間は、番号 0 の 1 つのセルとして扱われます。
 
  空間インデックスは、境界ボックスの内側の空間を分解します。 境界ボックスがグリッド階層のレベル 1 のグリッドで満たされ、 幾何オブジェクトをグリッド階層に配置するためにオブジェクトの座標が境界ボックスの座標と比較されます。
 
- 次の図は、境界ボックスの x の`(`_最小値_**、**_y の最小_`)`値`(`**、および**__ `)` _x-最大_座標によって定義される点を示しています。 また、グリッド階層の最上位レベルが 4 × 4 のグリッドとして示されています。 下位のレベルはわかりやすくするために省略されています。 境界ボックスの外側の空間はゼロ (0) によって示されています。 オブジェクト A はボックスから一部はみ出しており、オブジェクト B は完全にボックスの外側 (セル 0) にあります。
+ 次の図は、境界ボックスの x の`(`_最小値_**、**_y の最小_`)`値`(`**、および**_y-max_ `)` _x-最大_座標によって定義される点を示しています。 また、グリッド階層の最上位レベルが 4 × 4 のグリッドとして示されています。 下位のレベルはわかりやすくするために省略されています。 境界ボックスの外側の空間はゼロ (0) によって示されています。 オブジェクト A はボックスから一部はみ出しており、オブジェクト B は完全にボックスの外側 (セル 0) にあります。
 
- ![座標とセル0を表示する境界ボックス。](../../database-engine/media/spndx-bb-4x4-objects.gif "座標とセル 0 を表示している境界ボックス。")
+ ![座標とセル 0 を表示している境界ボックス。](../../database-engine/media/spndx-bb-4x4-objects.gif "座標とセル 0 を表示している境界ボックス。")
 
  境界ボックスは、アプリケーションの空間データの一部分に対応します。 空間列に格納されているデータがインデックスの境界ボックスに完全に含まれるか、一部のみが含まれるかは、アプリケーションによって異なります。 空間インデックスの恩恵を受けることができるのは、完全に境界ボックスの内側にあるオブジェクトに対して計算される操作だけです。 したがって、`geometry` 列の空間インデックスの利点を最大限に活用するためには、ほとんどすべてのオブジェクトが含まれるように境界ボックスを指定する必要があります。
 
@@ -162,8 +160,7 @@ ms.locfileid: "78176662"
 >  [CREATE 空間インデックス](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)]ステートメントの using (GEOGRAPHY_AUTO_GRID/GEOGRAPHY_GRID) 句を使用して、このテセレーションスキームを明示的に指定することができます。
 
 ##### <a name="projection-of-the-geodetic-space-onto-a-plane"></a>測地空間の平面への投影
- 
-  `geography` インスタンス (オブジェクト) の計算では、オブジェクトを含む空間を測地の楕円体として扱います。 地理グリッド テセレーション スキームでは、この空間を分解するために、まず、楕円体の表面が上下の半球に分割されます。その後、次の手順が実行されます。
+ `geography` インスタンス (オブジェクト) の計算では、オブジェクトを含む空間を測地の楕円体として扱います。 地理グリッド テセレーション スキームでは、この空間を分解するために、まず、楕円体の表面が上下の半球に分割されます。その後、次の手順が実行されます。
 
 1.  各半球を四角錐の面に投影します。
 
@@ -179,9 +176,9 @@ ms.locfileid: "78176662"
 
  ![レベル 1 地理グリッド](../../database-engine/media/spndx-geodetic-level1grid.gif "レベル 1 地理グリッド")
 
-##  <a name="methods"></a>空間インデックスでサポートされるメソッド
+##  <a name="methods-supported-by-spatial-indexes"></a><a name="methods"></a> 空間インデックスでサポートされるメソッド
 
-###  <a name="geometry"></a>空間インデックスでサポートされるジオメトリメソッド
+###  <a name="geometry-methods-supported-by-spatial-indexes"></a><a name="geometry"></a>空間インデックスでサポートされるジオメトリメソッド
  空間インデックスは、特定の条件下で、STContains()、STDistance()、STEquals()、STIntersects()、STOverlaps()、STTouches()、STWithin() というセット指向のジオメトリ メソッドをサポートします。 空間インデックスでサポートされるために、これらのメソッドは、クエリの WHERE 句または JOIN ON 句内で、次の一般的な述語の形式で使用する必要があります。
 
  *geometry1*。*method_name*(*geometry2*)*comparison_operator * * valid_number*
@@ -190,23 +187,23 @@ ms.locfileid: "78176662"
 
  空間インデックスは、次の述語形式をサポートします。
 
--   *geometry1*。[Stcontains](/sql/t-sql/spatial-geometry/stcontains-geometry-data-type)(*geometry2*) = 1
+-   *geometry1*.[STContains](/sql/t-sql/spatial-geometry/stcontains-geometry-data-type)(*geometry2*) = 1
 
 -   *geometry1*。[Stdistance](/sql/t-sql/spatial-geometry/stdistance-geometry-data-type)(*geometry2*) <*番号*
 
--   *geometry1*。[Stdistance](/sql/t-sql/spatial-geometry/stdistance-geometry-data-type)(*geometry2*) <= *number*
+-   *geometry1*.[STDistance](/sql/t-sql/spatial-geometry/stdistance-geometry-data-type)(*geometry2*) <= *数値*
 
--   *geometry1*。[Stequals](/sql/t-sql/spatial-geometry/stequals-geometry-data-type)(*geometry2*) = 1
+-   *geometry1*.[STEquals](/sql/t-sql/spatial-geometry/stequals-geometry-data-type)(*geometry2*)= 1
 
--   *geometry1*。[Stintersects](/sql/t-sql/spatial-geometry/stintersects-geometry-data-type)(*geometry2*) = 1
+-   *geometry1*.[STIntersects](/sql/t-sql/spatial-geometry/stintersects-geometry-data-type)(*geometry2*)= 1
 
--   *geometry1.* [Stoverlaps](/sql/t-sql/spatial-geometry/stoverlaps-geometry-data-type) *(geometry2) = 1*
+-   *geometry1.* [STOverlaps](/sql/t-sql/spatial-geometry/stoverlaps-geometry-data-type) *(geometry2) = 1*
 
--   *geometry1*。[Sttouches](/sql/t-sql/spatial-geometry/sttouches-geometry-data-type)(*geometry2*) = 1
+-   *geometry1*.[STTouches](/sql/t-sql/spatial-geometry/sttouches-geometry-data-type)(*geometry2*) = 1
 
--   *geometry1*。[Stwithin](/sql/t-sql/spatial-geometry/stwithin-geometry-data-type)(*geometry2*) = 1
+-   *geometry1*.[STWithin](/sql/t-sql/spatial-geometry/stwithin-geometry-data-type)(*geometry2*)= 1
 
-###  <a name="geography"></a>空間インデックスでサポートされている Geography メソッド
+###  <a name="geography-methods-supported-by-spatial-indexes"></a><a name="geography"></a>空間インデックスでサポートされている Geography メソッド
  空間インデックスは、特定の条件下で、STIntersects()、STEquals()、STDistance() というセット指向の地理メソッドをサポートします。 空間インデックスでサポートされるために、これらのメソッドは、クエリの WHERE 句内で、次の一般的な述語の形式で使用する必要があります。
 
  *geography1*。*method_name*(*geography2*)*comparison_operator * * valid_number*
@@ -215,13 +212,13 @@ ms.locfileid: "78176662"
 
  空間インデックスは、次の述語形式をサポートします。
 
--   *geography1*。[Stintersects](/sql/t-sql/spatial-geography/stintersects-geography-data-type)(*geography2*) = 1
+-   *geography1*.[STIntersects](/sql/t-sql/spatial-geography/stintersects-geography-data-type)(*geography2*)= 1
 
--   *geography1*。[Stequals](/sql/t-sql/spatial-geography/stequals-geography-data-type)(*geography2*) = 1
+-   *geography1*.[STEquals](/sql/t-sql/spatial-geography/stequals-geography-data-type)(*geography2*)= 1
 
 -   *geography1*。[Stdistance](/sql/t-sql/spatial-geography/stdistance-geography-data-type)(*geography2*) <*番号*
 
--   *geography1*。[Stdistance](/sql/t-sql/spatial-geography/stdistance-geography-data-type)(*geography2*) <= *number*
+-   *geography1*.[STDistance](/sql/t-sql/spatial-geography/stdistance-geography-data-type)(*geography2*) <= *数値*
 
 ### <a name="queries-that-use-spatial-indexes"></a>空間インデックスを使用するクエリ
  空間インデックスは、`WHERE` 句にインデックス付き空間演算子を含むクエリのみでサポートされています。 たとえば、次のような構文を考えてみます。

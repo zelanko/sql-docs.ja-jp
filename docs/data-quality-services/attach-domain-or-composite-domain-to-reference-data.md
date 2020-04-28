@@ -15,10 +15,10 @@ ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: df671e83d80175f154a4008270c3b68dc2581b59
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75557917"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data---data-quality-services-dqs"></a>参照データへのドメインまたは複合ドメインのアタッチ-Data Quality Services (DQS)
@@ -39,46 +39,37 @@ ms.locfileid: "75557917"
   
 ## <a name="before-you-begin"></a>はじめに  
   
-###  <a name="Prerequisites"></a> 前提条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
  参照データ サービスを使用するように [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) を構成しておく必要があります。 「[参照データを使用する DQS の構成](../data-quality-services/configure-dqs-to-use-reference-data.md)」をご覧ください。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
 #### <a name="permissions"></a>アクセス許可  
  参照データにドメインをマップするには、DQS_MAIN データベースの dqs_kb_editor ロールが必要です。  
   
-##  <a name="Map"></a>Melissa データの参照データにドメインをマップする  
+##  <a name="map-domains-to-reference-data-from-melissa-data"></a><a name="Map"></a> Melissa Data の参照データへのドメインのマップ  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client アプリケーションを実行](../data-quality-services/run-the-data-quality-client-application.md)します。  
   
-2.  
-  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で、 **[ナレッジ ベース管理]** の **[新しいナレッジ ベース]** をクリックします。  
+2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で、 **[ナレッジ ベース管理]** の **[新しいナレッジ ベース]** をクリックします。  
   
-3.  
-  **[新しいナレッジ ベース]** 画面で、新しいナレッジ ベースの名前を入力し、 **[ドメイン管理]** アクティビティをクリックして **[作成]** をクリックします。  
+3.  **[新しいナレッジ ベース]** 画面で、新しいナレッジ ベースの名前を入力し、 **[ドメイン管理]** アクティビティをクリックして **[作成]** をクリックします。  
   
-4.  
-  **[ドメイン管理]** 画面で、 **[ドメインの作成]** アイコンをクリックしてドメインを作成します。 作成するドメインは、 **Address Line**、 **City**、 **State**、および **Zip**の 4 つです。  
+4.  **[ドメイン管理]** 画面で、 **[ドメインの作成]** アイコンをクリックしてドメインを作成します。 作成するドメインは、 **Address Line**、 **City**、 **State**、および **Zip**の 4 つです。  
   
-5.  
-  **[複合ドメインの作成]** アイコンをクリックして複合ドメインを作成します。 
-  **[複合ドメインの作成]** ダイアログ ボックスで、 **[複合ドメイン名]** ボックスに「 **Address Verification** 」と入力し、手順 3. で作成したすべてのドメインを複合ドメインに含めます。 **[OK]** をクリックします。  
+5.  **[複合ドメインの作成]** アイコンをクリックして複合ドメインを作成します。 **[複合ドメインの作成]** ダイアログ ボックスで、 **[複合ドメイン名]** ボックスに「 **Address Verification** 」と入力し、手順 3. で作成したすべてのドメインを複合ドメインに含めます。 **[OK]** をクリックします。  
   
 6.  左側の **[ドメイン]** ペインで、 **[Address Verification]** をクリックして複合ドメインを選択し、右側の **[参照データ]** タブをクリックします。  
   
-7.  
-  **[参照]** アイコンをクリックします。  
+7.  **[参照]** アイコンをクリックします。  
   
-8.  
-  **[オンライン参照データ プロバイダーのカタログ]** ダイアログ ボックスで以下を行います。  
+8.  **[オンライン参照データ プロバイダーのカタログ]** ダイアログ ボックスで以下を行います。  
   
-    1.  
-  **[DataMarket Data Quality Services]** で **[メリッサ データ - アドレスをチェック]** ボックスをオンにします。  
+    1.  **[DataMarket Data Quality Services]** で **[メリッサ データ - アドレスをチェック]** ボックスをオンにします。  
   
     2.  Melissa Data - Address Check 参照データ サービスの列を適切なドメイン (Address Line、City、State、および Zip) にマップします。 列をマップするには、 **[RDS スキーマ]** 列で参照データ サービス列を選択し、 **[ドメイン]** 列で適切なドメインを選択します。 テーブルに行を追加するには、 **[スキーマ エントリの追加]** アイコンをクリックします。  
   
-    3.  
-  **[OK]** をクリックして変更を保存し、 **[オンライン参照データ プロバイダーのカタログ]** ダイアログ ボックスを閉じます。  
+    3.  **[OK]** をクリックして変更を保存し、 **[オンライン参照データ プロバイダーのカタログ]** ダイアログ ボックスを閉じます。  
   
          ![[オンライン参照データ プロバイダーのカタログ] ダイアログ ボックス](../data-quality-services/media/dqs-onlinereferencedataproviderscatalog.gif "[オンライン参照データ プロバイダーのカタログ] ダイアログ ボックス")  
   
@@ -87,18 +78,17 @@ ms.locfileid: "75557917"
   
 9. [**参照データ**] タブに戻ります。[**プロバイダーの設定**] 領域で、必要に応じて、次のボックスの値を変更します。  
   
-    -   **自動修正しきい**値: 信頼レベルがこのしきい値を超える参照データサービスの修正は、自動的に実行されます。 割合値に相当する値を 10 進数表記で入力します。 たとえば、90% であれば「0.9」と入力します。  
+    -   **[自動修正しきい値]**: 参照データ サービスの修正のうち、信頼レベルがこのしきい値を超える修正は自動的に実行されます。 割合値に相当する値を 10 進数表記で入力します。 たとえば、90% であれば「0.9」と入力します。  
   
-    -   **提案**された候補: 参照データサービスから提示される候補の数。  
+    -   **[提案された候補]**: 参照データ サービスから提案された候補を表示する数です。  
   
-    -   **最小信頼**: 参照データサービスから、この値よりも低い信頼レベルの提案は無視されます。 割合値に相当する値を 10 進数表記で入力します。 たとえば、60% であれば「0.6」と入力します。  
+    -   **[最小信頼度]**: 参照データ サービスの提案のうち、信頼レベルがこの値に満たない提案は無視されます。 割合値に相当する値を 10 進数表記で入力します。 たとえば、60% であれば「0.6」と入力します。  
   
-10. 
-  **[完了]** をクリックしてナレッジ ベースを発行します。 ナレッジ ベースが正常に発行されると、確認のメッセージが表示されます。  
+10. **[完了]** をクリックしてナレッジ ベースを発行します。 ナレッジ ベースが正常に発行されると、確認のメッセージが表示されます。  
   
  これで、このナレッジベースをデータ品質プロジェクトのクレンジングアクティビティに使用できるようになりました。これにより、Azure Marketplace を介して Melissa Data によって提供されるナレッジに基づいて、ソースデータの米国の住所を標準化およびクレンジングできます。  
   
-##  <a name="FollowUp"></a>補足情報: 参照データにドメインをマップした後  
+##  <a name="follow-up-after-mapping-a-domain-to-reference-data"></a><a name="FollowUp"></a> 補足情報: 参照データにドメインをマップした後  
  データ品質プロジェクトを作成し、このトピックで作成したナレッジ ベースと照らし合わせて、米国の住所を含むソース データに対するクレンジング アクティビティを実行します。 「[参照データ &#40;外部&#41; のナレッジを使用したデータのクレンジング](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  

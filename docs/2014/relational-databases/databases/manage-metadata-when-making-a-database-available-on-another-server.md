@@ -35,17 +35,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0b87c66eab08243a6339f1eb2bc1912e469f2b80
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76929905"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server-instance-sql-server"></a>データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理 (SQL Server)
   このトピックは、次の状況に関連しています。  
   
--   
-  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 可用性グループの可用性レプリカを構成する場合。  
+-   [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 可用性グループの可用性レプリカを構成する場合。  
   
 -   データベースのデータベース ミラーリングを設定する場合。  
   
@@ -55,36 +54,36 @@ ms.locfileid: "76929905"
   
 -   別のサーバー インスタンスにデータベースのコピーをアタッチする場合。  
   
- アプリケーションによっては、シングル ユーザー データベースのスコープの外部にある情報、エンティティ、オブジェクトに依存することがあります。 通常、アプリケーションには、 **master**データベース、 **msdb**データベース、およびユーザーデータベースに対する依存関係があります。 ユーザー データベースの外部に格納される (ユーザー データベースを正しく機能させるために必要な) すべてのデータは、対象のサーバー インスタンスで使用できるようにする必要があります。 たとえば、アプリケーションのログインは、 **master**データベースにメタデータとして格納され、移行先サーバーで再作成する必要があります。 アプリケーションまたはデータベースのメンテナンス プランが、メタデータが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースに格納される** エージェント ジョブに依存する場合、対象のサーバー インスタンスでこれらのジョブを再作成する必要があります。 同様に、サーバーレベルのトリガーのメタデータは**master**に格納されます。  
+ アプリケーションによっては、シングル ユーザー データベースのスコープの外部にある情報、エンティティ、オブジェクトに依存することがあります。 通常、アプリケーションには、 **master** データベースと **msdb** データベースに対する依存関係があります。また、ユーザー データベースにも依存関係があります。 ユーザー データベースの外部に格納される (ユーザー データベースを正しく機能させるために必要な) すべてのデータは、対象のサーバー インスタンスで使用できるようにする必要があります。 たとえば、アプリケーションのログインが、 **master** データベースにメタデータとして格納されているため、それらを移行先サーバーで再作成する必要があります。 アプリケーションまたはデータベースのメンテナンス プランが、メタデータが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースに格納される** エージェント ジョブに依存する場合、対象のサーバー インスタンスでこれらのジョブを再作成する必要があります。 同様に、サーバーレベルのトリガーのメタデータは **master**に格納されます。  
   
- アプリケーションのデータベースを別のサーバーインスタンスに移動する場合は、対象のサーバーインスタンスの**master**および**msdb**にある依存エンティティとオブジェクトのすべてのメタデータを再作成する必要があります。 たとえば、データベース アプリケーションでサーバーレベルのトリガーを使用している場合、そのデータベースを新しいシステムでアタッチまたは復元するだけでは不十分です。 これらのトリガーのメタデータを**master**データベースに手動で再作成しない限り、データベースは想定どおりに動作しません。  
+ アプリケーションのデータベースを別のサーバー インスタンスに移動するときは、移行先サーバー インスタンス上の**マスター**および **msdb** に、依存しているエンティティとオブジェクトのすべてのメタデータを再作成する必要があります。 たとえば、データベース アプリケーションでサーバーレベルのトリガーを使用している場合、そのデータベースを新しいシステムでアタッチまたは復元するだけでは不十分です。 このデータベースは、 **master** データベース内にこれらのトリガーのメタデータを手動で再作成しない限り、正常に動作しません。  
   
-##  <a name="information_entities_and_objects"></a>ユーザーデータベースの外部に格納される情報、エンティティ、およびオブジェクト  
+##  <a name="information-entities-and-objects-that-are-stored-outside-of-user-databases"></a><a name="information_entities_and_objects"></a> ユーザー データベースの外部に格納される情報、エンティティ、およびオブジェクト  
  ここからは、別のサーバー インスタンスで使用できるようにしたデータベースに影響を及ぼすことが考えられる問題の概要を説明します。 次の一覧に示す情報、エンティティ、またはオブジェクトのうち、1 種類以上の項目を再作成する必要が生じる場合があります。 概要を参照するには、該当する項目のリンクをクリックしてください。  
   
 -   [サーバーの構成設定](#server_configuration_settings)  
   
 -   [資格情報](#credentials)  
   
--   [複数データベースにまたがるクエリ](#cross_database_queries)  
+-   [複数データベース間のクエリ](#cross_database_queries)  
   
 -   [データベースの所有権](#database_ownership)  
   
--   [分散クエリ/リンクサーバー](#distributed_queries_and_linked_servers)  
+-   [分散クエリおよびリンク サーバー](#distributed_queries_and_linked_servers)  
   
--   [暗号化されたデータ](#encrypted_data)  
+-   [暗号化データ](#encrypted_data)  
   
--   [ユーザー定義エラーメッセージ](#user_defined_error_messages)  
+-   [[ユーザー定義エラー メッセージ]](#user_defined_error_messages)  
   
--   [イベント通知と Windows Management Instrumentation (WMI) イベント (サーバーレベル)](#event_notif_and_wmi_events)  
+-   [イベント通知と Windows Management Instrumentation (WMI) イベント (サーバー レベル)](#event_notif_and_wmi_events)  
   
 -   [拡張ストアド プロシージャ](#extended_stored_procedures)  
   
--   [SQL Server プロパティ用のフルテキストエンジン](#ifts_service_properties)  
+-   [Full-Text Engine for SQL Server プロパティ](#ifts_service_properties)  
   
 -   [ジョブ](#jobs)  
   
--   [Login](#logins)  
+-   [ログイン](#logins)  
   
 -   [アクセス許可](#permissions)  
   
@@ -92,53 +91,48 @@ ms.locfileid: "76929905"
   
 -   [Service Broker アプリケーション](#sb_applications)  
   
--   [スタートアッププロシージャ](#startup_procedures)  
+-   [スタートアップ プロシージャ](#startup_procedures)  
   
--   [トリガー (サーバーレベル)](#triggers)  
+-   [トリガー (サーバー レベル)](#triggers)  
   
-##  <a name="server_configuration_settings"></a>サーバー構成の設定  
- 
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンでは、主要なサービスや機能のインストールと開始を選択的に行います。 これにより、外部からのアクセスを制限し、攻撃を防ぐことができます。 新規インストール時の既定の構成では、多くの機能が有効化されていません。 データベースが、既定で無効になっているサービスまたは機能に依存している場合、対象のサーバー インスタンスでそのサービスまたは機能を有効にする必要があります。  
+##  <a name="server-configuration-settings"></a><a name="server_configuration_settings"></a> Server Configuration Settings  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンでは、主要なサービスや機能のインストールと開始を選択的に行います。 これにより、外部からのアクセスを制限し、攻撃を防ぐことができます。 新規インストール時の既定の構成では、多くの機能が有効化されていません。 データベースが、既定で無効になっているサービスまたは機能に依存している場合、対象のサーバー インスタンスでそのサービスまたは機能を有効にする必要があります。  
   
  これらの設定、およびその有効化と無効化に関する詳細については、「[サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)」を参照してください。  
   
- [&#91;上&#93;](#information_entities_and_objects)  
+ [&#91;先頭に戻る&#93;](#information_entities_and_objects)  
   
-##  <a name="credentials"></a>認証  
+##  <a name="credentials"></a><a name="credentials"></a>認証  
  資格情報は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]外部のリソースへの接続に必要な認証情報を含むレコードです。 多くの資格情報は、Windows ログインとパスワードで構成されています。  
   
  この機能の詳細については、「[資格情報 &#40;データベース エンジン&#41;](../security/authentication-access/credentials-database-engine.md)」を参照してください。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシ アカウントでは資格情報を使用します。 プロキシ アカウントの資格情報 ID については、 [sysproxies](/sql/relational-databases/system-tables/dbo-sysproxies-transact-sql) システム テーブルを使用してください。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシ アカウントでは資格情報を使用します。 プロキシ アカウントの資格情報 ID については、 [sysproxies](/sql/relational-databases/system-tables/dbo-sysproxies-transact-sql) システム テーブルを使用してください。  
   
- [&#91;上&#93;](#information_entities_and_objects)  
+ [&#91;先頭に戻る&#93;](#information_entities_and_objects)  
   
-##  <a name="cross_database_queries"></a>複数データベースにまたがるクエリ  
- DB_CHAINING データベース オプションと TRUSTWORTHY データベース オプションは、既定では OFF になっています。 これらのオプションのいずれかが元のデータベースで ON に設定されていると、対象のサーバー インスタンスのデータベースで、これらの設定を有効にする必要がある場合があります。 詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)」を参照してください。  
+##  <a name="cross-database-queries"></a><a name="cross_database_queries"></a>複数データベースにまたがるクエリ  
+ DB_CHAINING データベース オプションと TRUSTWORTHY データベース オプションは、既定では OFF になっています。 これらのオプションのいずれかが元のデータベースで ON に設定されていると、対象のサーバー インスタンスのデータベースで、これらの設定を有効にする必要がある場合があります。 詳細については、「 [ALTER DATABASE &#40;transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)」を参照してください。  
   
  アタッチおよびデタッチ操作により、複数データベースにまたがる組み合わせ所有権が無効になります。 チェーンを有効にする方法については、「 [cross db ownership chaining サーバー構成オプション](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md)」を参照してください。  
   
  詳細については、「[TRUSTWORTHY プロパティを使用するようにミラー データベースを設定する方法 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)」も参照してください  
   
- [&#91;上&#93;](#information_entities_and_objects)  
+ [&#91;先頭に戻る&#93;](#information_entities_and_objects)  
   
-##  <a name="database_ownership"></a>データベースの所有権  
+##  <a name="database-ownership"></a><a name="database_ownership"></a>データベースの所有権  
  データベースを別のコンピューターに復元すると、復元操作を開始した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン ユーザーまたは Windows ユーザーが自動的に新しいデータベースの所有者になります。 復元されたデータベースのシステム管理者または新しいデータベース所有者は、そのデータベースの所有権を変更できます。  
   
-##  <a name="distributed_queries_and_linked_servers"></a>分散クエリとリンクサーバー  
+##  <a name="distributed-queries-and-linked-servers"></a><a name="distributed_queries_and_linked_servers"></a>分散クエリとリンクサーバー  
  分散クエリおよびリンク サーバーは OLE DB アプリケーションでサポートされます。 分散クエリは、同一コンピューター上または異なるコンピューター上の複数の異種データ ソースのデータにアクセスします。 リンク サーバーを構成すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はリモート サーバー上の OLE DB データ ソースに対してコマンドを実行できます。 詳しくは、「[リンク サーバー &#40;データベース エンジン&#41;](../linked-servers/linked-servers-database-engine.md)」を参照してください。  
   
- [&#91;上&#93;](#information_entities_and_objects)  
+ [&#91;先頭に戻る&#93;](#information_entities_and_objects)  
   
-##  <a name="encrypted_data"></a>暗号化されたデータ  
- 別のサーバー インスタンスで使用できるようにするデータベースに暗号化データが含まれていて、データベース マスター キーが、元のサーバーのサービス マスター キーによって保護されている場合、そのサービス マスター キーを再度暗号化することが必要になる場合があります。 
-  *データベース マスター キー* は対称キーで、証明書の秘密キーや暗号化されたデータベース内の非対称キーを保護するときに使用します。 データベース マスター キーを作成するときには、トリプル DES アルゴリズムとユーザー指定のパスワードを使用してデータベース マスター キーを暗号化します。  
+##  <a name="encrypted-data"></a><a name="encrypted_data"></a>暗号化されたデータ  
+ 別のサーバー インスタンスで使用できるようにするデータベースに暗号化データが含まれていて、データベース マスター キーが、元のサーバーのサービス マスター キーによって保護されている場合、そのサービス マスター キーを再度暗号化することが必要になる場合があります。 *データベース マスター キー* は対称キーで、証明書の秘密キーや暗号化されたデータベース内の非対称キーを保護するときに使用します。 データベース マスター キーを作成するときには、トリプル DES アルゴリズムとユーザー指定のパスワードを使用してデータベース マスター キーを暗号化します。  
   
- サーバー インスタンスでデータベース マスター キーの暗号化を自動的に解除できるようにするには、サービス マスター キーを使用してデータベース マスター キーのコピーを暗号化します。 この暗号化されたコピーをデータベースと **master**データベースの両方に格納します。 通常、master に格納されているコピーは、マスターキーが変更されるたびに暗黙的に**更新され**ます。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により、インスタンスのサービス マスター キーを使用して、データベース マスター キーの暗号化解除が最初に試行されます。 暗号化解除が失敗した場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では資格情報ストア内で、マスター キーが必要なデータベースと同じファミリ GUID のマスター キー資格情報が検索されます。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、次に、一致した資格情報を順に使用してデータベースのマスター キーの暗号化解除が試行されます。これは暗号化解除が成功するか、資格情報がなくなった時点で終了します。 サービス マスター キーによって暗号化されていないマスター キーは、OPEN MASTER KEY ステートメントとパスワードを使用して開かれている必要があります。  
+ サーバー インスタンスでデータベース マスター キーの暗号化を自動的に解除できるようにするには、サービス マスター キーを使用してデータベース マスター キーのコピーを暗号化します。 この暗号化されたコピーをデータベースと **master**データベースの両方に格納します。 通常、master に格納されているコピーは、マスターキーが変更されるたびに暗黙的に**更新され**ます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により、インスタンスのサービス マスター キーを使用して、データベース マスター キーの暗号化解除が最初に試行されます。 暗号化解除が失敗した場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では資格情報ストア内で、マスター キーが必要なデータベースと同じファミリ GUID のマスター キー資格情報が検索されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、次に、一致した資格情報を順に使用してデータベースのマスター キーの暗号化解除が試行されます。これは暗号化解除が成功するか、資格情報がなくなった時点で終了します。 サービス マスター キーによって暗号化されていないマスター キーは、OPEN MASTER KEY ステートメントとパスワードを使用して開かれている必要があります。  
   
  暗号化されたデータベースがコピー、復元、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新しいインスタンスにアタッチされた場合、サービス マスター キーによって暗号化されたデータベース マスター キーのコピーは、対象のサーバー インスタンスの **master** データベースに格納されません。 対象のサーバー インスタンスで、データベースのマスター キーを開く必要があります。 マスター キーを開くには、OPEN MASTER KEY DECRYPTION BY PASSWORD **='***password***'** ステートメントを実行します。 次に、ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY ステートメントを実行して、データベース マスター キーの自動暗号化解除を有効にすることをお勧めします。 この ALTER MASTER KEY ステートメントにより、サービス マスター キーを使用して暗号化されたデータベース マスター キーのコピーが対象のサーバー インスタンスに提供されます。 詳細については、「[OPEN MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/open-master-key-transact-sql)」と「[ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql)」を参照してください。  
   
@@ -150,16 +144,16 @@ ms.locfileid: "76929905"
   
 -   [暗号化されたミラー データベースの設定](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)  
   
--   [2 台のサーバーでの同じ対称キーの作成](../security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
+-   [2つのサーバーに同一の対称キーを作成する](../security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
   
- [&#91;上&#93;](#information_entities_and_objects)  
+ [&#91;先頭に戻る&#93;](#information_entities_and_objects)  
   
-##  <a name="user_defined_error_messages"></a>ユーザー定義エラーメッセージ  
+##  <a name="user-defined-error-messages"></a><a name="user_defined_error_messages"></a> User-defined Error Messages  
  ユーザー定義エラー メッセージは、 [sys.messages](/sql/relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages) カタログ ビューに存在します。 このカタログ ビューは、 **master**データベースに格納されています。 データベース アプリケーションがユーザー定義エラー メッセージに依存していて、データベースを別のサーバー インスタンスで使用できる場合は、 [sp_addmessage](/sql/relational-databases/system-stored-procedures/sp-addmessage-transact-sql) を使用してユーザー定義エラー メッセージを対象のサーバー インスタンスに追加できます。  
   
- [&#91;上&#93;](#information_entities_and_objects)  
+ [&#91;先頭に戻る&#93;](#information_entities_and_objects)  
   
-##  <a name="event_notif_and_wmi_events"></a>イベント通知と Windows Management Instrumentation (WMI) イベント (サーバーレベル)  
+##  <a name="event-notifications-and-windows-management-instrumentation-wmi-events-at-server-level"></a><a name="event_notif_and_wmi_events"></a>イベント通知と Windows Management Instrumentation (WMI) イベント (サーバーレベル)  
   
 ### <a name="server-level-event-notifications"></a>サーバーレベルのイベント通知  
  サーバーレベルのイベント通知は **msdb**に格納されます。 したがって、データベース アプリケーションがサーバーレベルのイベント通知に依存している場合、そのイベント通知を対象のサーバー インスタンスで再作成する必要があります。 サーバー インスタンスでイベント通知を表示するには、 [sys.server_event_notifications](/sql/relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql) カタログ ビューを使用します。 詳しくは、「 [Event Notifications](../service-broker/event-notifications.md)」をご覧ください。  
@@ -187,15 +181,14 @@ ms.locfileid: "76929905"
   
 -   発信側サービスがミラー化されたデータベースにある場合、発信先に、受信確認や応答の配信のために発信側サービスに戻るミラー化されたルートがあること。 ただし、発信側は通常のルートで発信先に戻れること。  
   
- [&#91;上&#93;](#information_entities_and_objects)  
+ [&#91;先頭に戻る&#93;](#information_entities_and_objects)  
   
-##  <a name="extended_stored_procedures"></a>拡張ストアドプロシージャ  
+##  <a name="extended-stored-procedures"></a><a name="extended_stored_procedures"></a>拡張ストアドプロシージャ  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに[CLR 統合](../clr-integration/common-language-runtime-integration-overview.md)を使用してください。  
   
- 拡張ストアド プロシージャは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張ストアド プロシージャ API を使用してプログラミングされます。 
-  **sysadmin** 固定サーバー ロールのメンバーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを使用して拡張ストアド プロシージャを登録し、ユーザーにその拡張ストアド プロシージャを実行する権限を与えることができます。 拡張ストアド プロシージャは、 **master** データベースにのみ追加できます。  
+ 拡張ストアド プロシージャは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張ストアド プロシージャ API を使用してプログラミングされます。 **sysadmin** 固定サーバー ロールのメンバーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを使用して拡張ストアド プロシージャを登録し、ユーザーにその拡張ストアド プロシージャを実行する権限を与えることができます。 拡張ストアド プロシージャは、 **master** データベースにのみ追加できます。  
   
  拡張ストアド プロシージャは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスのアドレス空間で直接実行されるので、メモリ リークや、サーバーのパフォーマンスと信頼性を低下させるその他の問題が発生する原因になる場合があります。 参照データを含んでいる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスとは別のインスタンスに拡張ストアド プロシージャを格納することを検討してください。 また、データベースへのアクセスには分散クエリを使用することも検討してください。  
   
@@ -204,9 +197,9 @@ ms.locfileid: "76929905"
   
  詳細については、「[GRANT (オブジェクトの権限の許可) &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-object-permissions-transact-sql)」、「[DENY (オブジェクトの権限の拒否) &#40;Transact-SQL&#41;](/sql/t-sql/statements/deny-object-permissions-transact-sql)」、および「[REVOKE (オブジェクトの権限の取り消し) &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-object-permissions-transact-sql)」を参照してください。  
   
- [&#91;上&#93;](#information_entities_and_objects)  
+ [&#91;先頭に戻る&#93;](#information_entities_and_objects)  
   
-##  <a name="ifts_service_properties"></a>SQL Server プロパティ用のフルテキストエンジン  
+##  <a name="full-text-engine-for-sql-server-properties"></a><a name="ifts_service_properties"></a>SQL Server プロパティ用のフルテキストエンジン  
  Full-Text Engine のプロパティは、 [sp_fulltext_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)によって設定されます。 対象のサーバー インスタンスで、これらのプロパティに必要な設定が行われていることを確認してください。 これらのプロパティの詳細については、「[FULLTEXTSERVICEPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/fulltextserviceproperty-transact-sql)」を参照してください。  
   
  さらに、 [ワード ブレーカーとステマー](../search/configure-and-manage-word-breakers-and-stemmers-for-search.md) のコンポーネント、または [フルテキスト検索フィルター](../search/configure-and-manage-filters-for-search.md) コンポーネントのバージョンが、元のサーバー インスタンスと対象のサーバー インスタンスで異なると、フルテキスト インデックスおよびクエリの動作が異なる場合があります。 また、 [類義語辞典](../search/full-text-search.md) はインスタンス固有のファイルに格納されています。 それらのファイルのコピーを対象のサーバー インスタンスの該当する場所にコピーするか、新しいインスタンス上でこれらのファイルを再作成する必要があります。  
@@ -218,83 +211,76 @@ ms.locfileid: "76929905"
   
 -   [フルテキスト カタログとフルテキスト インデックスのバックアップおよび復元](../search/back-up-and-restore-full-text-catalogs-and-indexes.md)  
   
--   [データベースミラーリングとフルテキストカタログの &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-full-text-catalogs-sql-server.md)  
+-   [データベース ミラーリングとフルテキスト カタログ &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-full-text-catalogs-sql-server.md)  
   
- [&#91;上&#93;](#information_entities_and_objects)  
+ [&#91;先頭に戻る&#93;](#information_entities_and_objects)  
   
-##  <a name="jobs"></a>職務  
+##  <a name="jobs"></a><a name="jobs"></a>職務  
  データベースが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブに依存する場合、対象のサーバー インスタンス上でそれらの SQL Server エージェント ジョブを再作成する必要があります。 ジョブは環境に依存します。 対象のサーバー インスタンス上で既存のジョブを再作成する場合、元のサーバー インスタンス上のジョブの環境に一致するように対象のサーバー インスタンスを変更することが必要になる場合があります。 次の環境的要因は重要です。  
   
 -   ジョブによって使用されるログイン  
   
-     
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを作成または実行するには、まず、ジョブに必要なすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを対象のサーバー インスタンスに追加する必要があります。 詳細については、「 [SQL Server エージェント ジョブ ステップを作成および管理するユーザーの構成](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)」を参照してください。  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを作成または実行するには、まず、ジョブに必要なすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを対象のサーバー インスタンスに追加する必要があります。 詳細については、「 [SQL Server エージェント ジョブ ステップを作成および管理するユーザーの構成](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)」を参照してください。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのサービス開始アカウント  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのサービス開始アカウント  
   
-     サービス開始アカウントにより、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] エージェントを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows アカウントとそのネットワーク権限が定義されます。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、指定されたユーザー アカウントで実行されます。 SQL Server エージェント サービスのコンテキストは、ジョブとその実行環境の設定に影響します。 アカウントは、ジョブで必要とされるネットワーク共有などのリソースにアクセスできる必要があります。 サービス開始アカウントの選択方法と変更方法の詳細については、「 [SQL Server エージェント サービスのアカウントの選択](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md)」を参照してください。  
+     サービス開始アカウントにより、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] エージェントを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows アカウントとそのネットワーク権限が定義されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、指定されたユーザー アカウントで実行されます。 SQL Server エージェント サービスのコンテキストは、ジョブとその実行環境の設定に影響します。 アカウントは、ジョブで必要とされるネットワーク共有などのリソースにアクセスできる必要があります。 サービス開始アカウントの選択方法と変更方法の詳細については、「 [SQL Server エージェント サービスのアカウントの選択](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md)」を参照してください。  
   
      正しく稼働するには、適切なドメイン、ファイル システム、およびレジストリの権限を持つようにサービス開始アカウントを構成する必要があります。 また、サービス アカウント用に構成する必要がある共有ネットワーク リソースがジョブで必要になる場合があります。 詳細については、「 [Windows サービス アカウントと権限の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)」を参照してください。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の特定のインスタンスに関連付けられている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント サービスには独自のレジストリ ハイブが設定されているので、SQL Server エージェント サービスのジョブは、通常、このレジストリ ハイブの 1 つ以上の設定に依存します。 ジョブが適切に動作するには、それらのレジストリ設定が必要です。 スクリプトを使用して別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスにジョブを再作成した場合、その SQL Server エージェント サービスのレジストリには、再作成されたジョブに適したレジストリ設定が行われない場合があります。 再作成したジョブを対象のサーバー インスタンスで適切に動作させるには、元の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスと対象の SQL Server エージェント サービスのレジストリ設定が同じである必要があります。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の特定のインスタンスに関連付けられている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント サービスには独自のレジストリ ハイブが設定されているので、SQL Server エージェント サービスのジョブは、通常、このレジストリ ハイブの 1 つ以上の設定に依存します。 ジョブが適切に動作するには、それらのレジストリ設定が必要です。 スクリプトを使用して別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスにジョブを再作成した場合、その SQL Server エージェント サービスのレジストリには、再作成されたジョブに適したレジストリ設定が行われない場合があります。 再作成したジョブを対象のサーバー インスタンスで適切に動作させるには、元の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスと対象の SQL Server エージェント サービスのレジストリ設定が同じである必要があります。  
   
     > [!CAUTION]  
     >  現在のレジストリ設定が他のジョブで必要な場合、ジョブの再作成を処理するために対象の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスのレジストリ設定を変更すると、問題が発生する可能性があります。 さらに、レジストリを誤って編集すると、システムに重大な障害が発生する場合があります。 レジストリを変更する前に、コンピューター上の重要なすべてのデータをバックアップすることをお勧めします。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシ  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシ  
   
-     
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシでは、指定されたジョブ ステップのセキュリティ コンテキストを定義します。 ジョブを対象のサーバー インスタンス上で実行する場合、そのジョブに必要なすべてのプロキシをそのインスタンス上で手動で再作成する必要があります。 詳細については、「 [SQL Server エージェント プロキシの作成](../../ssms/agent/create-a-sql-server-agent-proxy.md) 」および「 [プロキシを使用するマルチサーバー ジョブのトラブルシューティング](../../ssms/agent/troubleshoot-multiserver-jobs-that-use-proxies.md)」を参照してください。  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシでは、指定されたジョブ ステップのセキュリティ コンテキストを定義します。 ジョブを対象のサーバー インスタンス上で実行する場合、そのジョブに必要なすべてのプロキシをそのインスタンス上で手動で再作成する必要があります。 詳細については、「 [SQL Server エージェント プロキシの作成](../../ssms/agent/create-a-sql-server-agent-proxy.md) 」および「 [プロキシを使用するマルチサーバー ジョブのトラブルシューティング](../../ssms/agent/troubleshoot-multiserver-jobs-that-use-proxies.md)」を参照してください。  
   
  詳細については、次のトピックも参照してください。  
   
 -   [ジョブの実装](../../ssms/agent/implement-jobs.md)  
   
--   [役割の交代後のログインとジョブの管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md) (データベースミラーリング用)  
+-   [役割の交代後のログインとジョブの管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md) (データベース ミラーリングの場合)  
   
--   [Windows サービスアカウントと権限の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)(の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスをインストールする場合)  
+-   [Windows サービス アカウントと権限の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスをインストールする場合)  
   
--   [SQL Server エージェントの構成](../../ssms/agent/sql-server-agent.md)(の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスをインストールする場合)  
+-   [SQL Server エージェントの構成](../../ssms/agent/sql-server-agent.md) ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスをインストールする場合)  
   
 -   [SQL Server エージェントのセキュリティの実装](../../ssms/agent/implement-sql-server-agent-security.md)  
   
- **既存のジョブとそのプロパティを表示するには**  
+ **既存のジョブと各ジョブのプロパティを表示するには**  
   
 -   [ジョブの利用状況の監視](../../ssms/agent/monitor-job-activity.md)  
   
--   [sp_help_job &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-help-job-transact-sql)  
+-   [sp_help_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-job-transact-sql)  
   
 -   [View Job Step Information](../../ssms/agent/view-job-step-information.md)  
   
--   [sysjobs &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/dbo-sysjobs-transact-sql)  
+-   [dbo.sysjobs &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobs-transact-sql)  
   
  **ジョブを作成するには**  
   
--   [ジョブを作成する](../../ssms/agent/create-a-job.md)  
+-   [ジョブの作成](../../ssms/agent/create-a-job.md)  
   
--   [ジョブを作成する](../../ssms/agent/create-a-job.md)  
+-   [ジョブの作成](../../ssms/agent/create-a-job.md)  
   
 #### <a name="best-practices-for-using-a-script-to-re-create-a-job"></a>ジョブを再作成するスクリプトを使用する場合の推奨事項  
  まず、簡単なジョブのスクリプトを作成し、別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスでジョブを再作成し、そのジョブを実行して適切に動作するかどうかを確認することをお勧めします。 これにより、互換性のない部分を確認し、それらの解決に取り組むことができます。 スクリプト化したジョブが新しい環境で正常に動作しない場合、新しい環境で正常に動作する同等のジョブを作成することをお勧めします。  
   
- [&#91;上&#93;](#information_entities_and_objects)  
+ [&#91;先頭に戻る&#93;](#information_entities_and_objects)  
   
-##  <a name="logins"></a>ログイン  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにログインするには、有効な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインが必要です。 このログインは、プリンシパルが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに接続できるかどうかを確認する認証プロセスで使用されます。 対応する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインが未定義のデータベース ユーザー、またはサーバー インスタンスで適切に定義されていないデータベース ユーザーは、インスタンスにログインできません。 このようなユーザーは、そのサーバー インスタンスのデータベースの *孤立ユーザー* と呼ばれます。 データベースを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の別のインスタンスに復元、アタッチ、またはコピーした後、データベース ユーザーが孤立する可能性があります。  
+##  <a name="logins"></a><a name="logins"></a>ログイン  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにログインするには、有効な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインが必要です。 このログインは、プリンシパルが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに接続できるかどうかを確認する認証プロセスで使用されます。 対応する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインが未定義のデータベース ユーザー、またはサーバー インスタンスで適切に定義されていないデータベース ユーザーは、インスタンスにログインできません。 このようなユーザーは、そのサーバー インスタンスのデータベースの *孤立ユーザー* と呼ばれます。 データベースを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の別のインスタンスに復元、アタッチ、またはコピーした後、データベース ユーザーが孤立する可能性があります。  
   
  元のデータベースのコピーに含まれている一部またはすべてのオブジェクトに対するスクリプトは、SQL Server スクリプト生成ウィザードを使用して、 **[スクリプト オプションの選択]** ページで **[スクリプト ログイン]** オプションを **[True]** に設定することで作成できます。  
   
 > [!NOTE]  
 >  ミラー化されたデータベースのログインを設定する方法については、「[データベース ミラーリングまたは AlwaysOn 可用性グループのログイン アカウントの設定 &#40;SQL Server&#41;](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md)」および「[役割の交代後のログインとジョブの管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)」を参照してください。  
   
- [&#91;上&#93;](#information_entities_and_objects)  
+ [&#91;先頭に戻る&#93;](#information_entities_and_objects)  
   
-##  <a name="permissions"></a> Permissions  
+##  <a name="permissions"></a><a name="permissions"></a> Permissions  
  次の種類の権限は、データベースが別のサーバー インスタンスで使用できるようになったときに影響を受ける場合があります。  
   
 -   システム オブジェクトに対する GRANT 権限、REVOKE 権限、または DENY 権限  
@@ -307,10 +293,9 @@ ms.locfileid: "76929905"
  元のデータベースのコピーに含まれている一部またはすべてのオブジェクトに対するスクリプトは、スクリプト生成ウィザードを使用して、 **[スクリプト オプションの選択]** ページで **[オブジェクトレベル権限のスクリプトを作成]** オプションを **[True]** に設定することで作成できます。  
   
 > [!IMPORTANT]  
->  ログインのスクリプトを作成する場合、パスワードはスクリプトに含まれません。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用するログインがある場合、対象のサーバー インスタンスでスクリプトを変更する必要があります。  
+>  ログインのスクリプトを作成する場合、パスワードはスクリプトに含まれません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用するログインがある場合、対象のサーバー インスタンスでスクリプトを変更する必要があります。  
   
- システム オブジェクトは、 [sys.system_objects](/sql/relational-databases/system-catalog-views/sys-system-objects-transact-sql) カタログ ビューで確認できます。 システムオブジェクトに対する権限は、 **master**データベースの[database_permissions](/sql/relational-databases/system-catalog-views/sys-database-permissions-transact-sql)カタログビューに表示されます。 これらのカタログ ビューに対するクエリの実行およびシステム オブジェクト権限の付与に関する詳細については、「[GRANT (システム オブジェクトの権限の許可) &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-system-object-permissions-transact-sql)」を参照してください。 詳細については、「[REVOKE (サーバーの権限の取り消し) &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-system-object-permissions-transact-sql)」および「[DENY (サーバーの権限の拒否) &#40;Transact-SQL&#41;](/sql/t-sql/statements/deny-system-object-permissions-transact-sql)」を参照してください。  
+ システム オブジェクトは、 [sys.system_objects](/sql/relational-databases/system-catalog-views/sys-system-objects-transact-sql) カタログ ビューで確認できます。 システム オブジェクトの権限は、 [master](/sql/relational-databases/system-catalog-views/sys-database-permissions-transact-sql) データベースの **sys.database_permissions** カタログ ビューで確認できます。 これらのカタログ ビューに対するクエリの実行およびシステム オブジェクト権限の付与に関する詳細については、「[GRANT (システム オブジェクトの権限の許可) &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-system-object-permissions-transact-sql)」を参照してください。 詳細については、「[REVOKE (サーバーの権限の取り消し) &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-system-object-permissions-transact-sql)」および「[DENY (サーバーの権限の拒否) &#40;Transact-SQL&#41;](/sql/t-sql/statements/deny-system-object-permissions-transact-sql)」を参照してください。  
   
 ### <a name="grant-revoke-and-deny-permissions-on-a-server-instance"></a>サーバー インスタンスに対する GRANT 権限、REVOKE 権限、および DENY 権限  
  サーバー スコープの権限は **master** データベースに格納されるので、対象のサーバー インスタンスで構成する必要があります。 サーバー インスタンスのサーバー権限の詳細については [sys.server_permissions](/sql/relational-databases/system-catalog-views/sys-server-permissions-transact-sql) カタログ ビュー、サーバー プリンシパルの詳細については [sys.server_principals](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql)カタログ ビュー、サーバー ロールのメンバーシップの詳細については [sys.server_role_members](/sql/relational-databases/system-catalog-views/sys-server-role-members-transact-sql) カタログ ビューに対してクエリを実行してください。  
@@ -337,36 +322,35 @@ ms.locfileid: "76929905"
   
  **マップされたログインに権限を割り当てるには**  
   
--   [Transact-sql&#41;&#40;サーバー権限を付与する](/sql/t-sql/statements/grant-server-permissions-transact-sql)  
+-   [GRANT (サーバーの権限の許可) &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-server-permissions-transact-sql)  
   
  証明書および非対称キーの詳細については、「 [Encryption Hierarchy](../security/encryption/encryption-hierarchy.md)」を参照してください。  
   
- [&#91;上&#93;](#information_entities_and_objects)  
+ [&#91;先頭に戻る&#93;](#information_entities_and_objects)  
   
-##  <a name="replication_settings"></a>レプリケーションの設定  
+##  <a name="replication-settings"></a><a name="replication_settings"></a>レプリケーションの設定  
  レプリケートされたデータベースのバックアップを別のサーバーまたはデータベースに復元する場合は、レプリケーションの設定は保存できません。 この場合、バックアップの復元後にすべてのパブリケーションおよびサブスクリプションを再作成する必要があります。 この処理を簡単にするには、現在のレプリケーションの設定を行うスクリプトと、レプリケーションの有効化および無効化を行うスクリプトを作成します。 レプリケーションの設定の再作成を容易にするには、これらのスクリプトをコピーし、対象のサーバー インスタンスで動作するようにサーバー名の参照を変更します。  
   
  詳細については、「[レプリケートされたデータベースのバックアップと復元](../replication/administration/back-up-and-restore-replicated-databases.md)」、「[データベース ミラーリングとレプリケーション &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)」、および「[ログ配布とレプリケーション &#40;SQL Server&#41;](../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md)」を参照してください。  
   
- [&#91;上&#93;](#information_entities_and_objects)  
+ [&#91;先頭に戻る&#93;](#information_entities_and_objects)  
   
-##  <a name="sb_applications"></a>Service Broker アプリケーション  
- 
-  [!INCLUDE[ssSB](../../includes/sssb-md.md)] アプリケーションに関連する多くの要素は、データベースに伴って使用できます。 ただし、アプリケーションの一部の要素は、新しい場所で再作成または再構成する必要があります。  
+##  <a name="service-broker-applications"></a><a name="sb_applications"></a>Service Broker アプリケーション  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] アプリケーションに関連する多くの要素は、データベースに伴って使用できます。 ただし、アプリケーションの一部の要素は、新しい場所で再作成または再構成する必要があります。  
   
- [&#91;上&#93;](#information_entities_and_objects)  
+ [&#91;先頭に戻る&#93;](#information_entities_and_objects)  
   
-##  <a name="startup_procedures"></a>スタートアッププロシージャ  
+##  <a name="startup-procedures"></a><a name="startup_procedures"></a>スタートアッププロシージャ  
  スタートアップ プロシージャは、自動的に実行するように設定され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を起動するたびに実行されるストアド プロシージャです。 データベースがスタートアップ プロシージャに依存している場合、それらのスタートアップ プロシージャを対象のサーバー インスタンスで定義し、スタートアップ時に自動的に実行されるように構成する必要があります。  
   
- [&#91;上&#93;](#information_entities_and_objects)  
+ [&#91;先頭に戻る&#93;](#information_entities_and_objects)  
   
-##  <a name="triggers"></a>トリガー (サーバーレベル)  
+##  <a name="triggers-at-server-level"></a><a name="triggers"></a>トリガー (サーバーレベル)  
  DDL トリガーにより、さまざまなデータ定義言語 (DDL) イベントに応答してストアド プロシージャが起動されます。 これらのイベントは、主にキーワード CREATE、ALTER、および DROP で始まる [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントに対応します。 DDL と同様の操作を実行する特定のシステム ストアド プロシージャも DDL トリガーを起動できます。  
   
  この機能の詳細については、「 [DDL Triggers](../triggers/ddl-triggers.md)」を参照してください。  
   
- [&#91;上&#93;](#information_entities_and_objects)  
+ [&#91;先頭に戻る&#93;](#information_entities_and_objects)  
   
 ## <a name="see-also"></a>参照  
  [包含データベース](contained-databases.md)   
@@ -376,6 +360,6 @@ ms.locfileid: "76929905"
  [データベースミラーリングセッション中の役割の交代 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [暗号化されたミラーデータベースを設定する](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)   
  [SQL Server 構成マネージャー](../sql-server-configuration-manager.md)   
- [孤立ユーザー &#40;SQL Server のトラブルシューティング&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)  
+ [孤立ユーザーのトラブルシューティング &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)  
   
   

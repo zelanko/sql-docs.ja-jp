@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f2b5bb55452333014aa3ccf5a797d19667dca753
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75244892"
 ---
 # <a name="edit-a-breakpoint-location"></a>ブレークポイントの位置の編集
@@ -38,7 +38,7 @@ ms.locfileid: "75244892"
      **をデバッグする場合、** [元のバージョンと異なるソース コードを許可する] [!INCLUDE[tsql](../../includes/tsql-md.md)]オプションは無効です。  
   
 ## <a name="see-also"></a>参照  
- [ヒット カウントの指定](specify-a-hit-count.md)   
+ [ヒットカウントの指定](specify-a-hit-count.md)   
  [ブレークポイントアクションの指定](specify-a-breakpoint-action.md)   
  [ブレークポイント条件の指定](specify-a-breakpoint-condition.md)   
  [ブレークポイント フィルターの指定](specify-a-breakpoint-filter.md)  

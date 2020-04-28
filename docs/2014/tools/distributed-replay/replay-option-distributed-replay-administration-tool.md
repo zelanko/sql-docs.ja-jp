@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7ffe6a854e24240c6298dfbf7b4c195d787e07c7
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78172041"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>replay オプション (Distributed Replay 管理ツール)
@@ -36,11 +36,9 @@ ms.locfileid: "78172041"
 #### <a name="parameters"></a>パラメーター
  **-m** *コントローラー*コントローラーのコンピューター名を指定します。 "`localhost`" または "`.`" を使用してローカル コンピューターを参照できます。
 
- 
-  **-m** パラメーターが指定されていない場合、ローカル コンピューターが使用されます。
+ **-m** パラメーターが指定されていない場合、ローカル コンピューターが使用されます。
 
- **-d** *controller_working_dir*中間ファイルを格納するコントローラー上のディレクトリを指定します。 
-  **-d** パラメーターは必須です。
+ **-d** *controller_working_dir*中間ファイルを格納するコントローラー上のディレクトリを指定します。 **-d** パラメーターは必須です。
 
  これには次の要件があります。
 
@@ -54,8 +52,7 @@ ms.locfileid: "78172041"
 
  **-o**クライアントの再生アクティビティをキャプチャし、クライアント構成ファイルの`<ResultDirectory>`要素によって指定されたパスの結果トレースファイルに保存`DReplayClient.xml`します。
 
- 
-  **-o** パラメーターが指定されていない場合は、結果トレース ファイルは生成されません。 コンソール出力は再生の最後に概要情報を返しますが、他の再生統計情報は提供されません。
+ **-O**パラメーターが指定されていない場合、結果トレースファイルは生成されません。 コンソール出力は再生の最後に概要情報を返しますが、他の再生統計情報は提供されません。
 
  **-s** *target_server*分散ワークロードの再生[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に使用するの対象インスタンスを指定します。 このパラメーターは、 **server_name[\instance name]** の形式で指定します。
 
@@ -63,8 +60,7 @@ ms.locfileid: "78172041"
 
  再生構成ファイル **の** セクションに `<Server>` 要素が指定されている場合、 `<ReplayOptions>` -s `DReplay.exe.replay.config`パラメーターは必要ありません。
 
- 
-  **-s** パラメーターが使用されている場合、再生構成ファイルの `<Server>` セクションの `<ReplayOptions>` 要素は無視されます。
+ **-s** パラメーターが使用されている場合、再生構成ファイルの `<Server>` セクションの `<ReplayOptions>` 要素は無視されます。
 
  **-w** *クライアント*この必須パラメーターは、分散再生に参加するクライアントのコンピューター名を指定するコンマ区切りのリスト (スペースなし) です。 IP アドレスは指定できません。 コントローラーにクライアントが既に登録されている必要があることに注意してください。
 
@@ -77,26 +73,20 @@ ms.locfileid: "78172041"
 
  **-f** *status_interval*状態を表示する頻度 (秒単位) を指定します。
 
- 
-  **-f** を指定しない場合は、既定の間隔は 30 秒です。
+ **-f** を指定しない場合は、既定の間隔は 30 秒です。
 
-## <a name="examples"></a>例
+## <a name="examples"></a>使用例
  この例の分散再生では、変更された再生構成ファイル `DReplay.exe.replay.config`から多くの動作が派生しています。
 
--   
-  **-m** パラメーターは、 `controller1` というコンピューターがコントローラーとして動作するように指定しています。 コントローラー サービスが別のコンピューターで実行されている場合は、コンピューター名を指定する必要があります。
+-   **-m** パラメーターは、 `controller1` というコンピューターがコントローラーとして動作するように指定しています。 コントローラー サービスが別のコンピューターで実行されている場合は、コンピューター名を指定する必要があります。
 
--   
-  **-d** パラメーターは、コントローラーの中間ファイルの場所として `c:\WorkingDir`を指定しています。
+-   **-d** パラメーターは、コントローラーの中間ファイルの場所として `c:\WorkingDir`を指定しています。
 
--   
-  **-o** パラメーターは、指定された各クライアントが再生アクティビティをキャプチャし、それを結果トレース ファイルに保存するように指定しています。 注 : 構成ファイル内の `<ResultTrace>` 要素は、行数と結果セットが記録される場合に使用できます。
+-   **-o** パラメーターは、指定された各クライアントが再生アクティビティをキャプチャし、それを結果トレース ファイルに保存するように指定しています。 注 : 構成ファイル内の `<ResultTrace>` 要素は、行数と結果セットが記録される場合に使用できます。
 
--   
-  **-w** パラメーターは、 `client1` から `client4` までのコンピューターがクライアントとして分散再生に参加するように指定しています。
+-   **-w** パラメーターは、 `client1` から `client4` までのコンピューターがクライアントとして分散再生に参加するように指定しています。
 
--   
-  **-c** パラメーターは、変更された構成ファイル `DReplay.exe.replay.config`を指すために使用されています。
+-   **-c** パラメーターは、変更された構成ファイル `DReplay.exe.replay.config`を指すために使用されています。
 
 -   再生構成ファイル **の** 要素で `<Server>` 要素が指定されているため、 `<ReplayOptions>` -s `DReplay.exe.replay.config`パラメーターは必要ありません。
 
@@ -129,8 +119,7 @@ dreplay replay -m controller1 -d c:\WorkingDir -o -w client1,client2,client3,cli
 </Options>
 ```
 
- ストレス シーケンス モードを指定するために、 `<SequencingMode>` ファイルの `DReplay.exe.replay.config` 要素が値 `stress`と同じに設定されます。 
-  `<ConnectTimeScale>` および `<ThinkTimeScale>` 要素が値 `50` に設定されます (50% を指定する場合)。 接続時間と待ち時間の詳細については、「 [Configure Distributed Replay](configure-distributed-replay.md)」を参照してください。 これらの変更を示したものが、次の XML 例です。
+ ストレス シーケンス モードを指定するために、 `<SequencingMode>` ファイルの `DReplay.exe.replay.config` 要素が値 `stress`と同じに設定されます。 `<ConnectTimeScale>` および `<ThinkTimeScale>` 要素が値 `50` に設定されます (50% を指定する場合)。 接続時間と待ち時間の詳細については、「 [Configure Distributed Replay](configure-distributed-replay.md)」を参照してください。 これらの変更を示したものが、次の XML 例です。
 
 ```
 <?xml version='1.0'?>

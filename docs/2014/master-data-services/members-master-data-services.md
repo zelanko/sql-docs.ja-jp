@@ -18,14 +18,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 76b452e5ee362aeb2e66d8949a12ed910489f990
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176001"
 ---
 # <a name="members-master-data-services"></a>メンバー (マスター データ サービス)
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、メンバーは物理マスター データです。 たとえば、Product エンティティの Road-150 バイクや、Customer エンティティの特定の顧客をメンバーにすることができます。
 
 ## <a name="how-members-relate-to-other-model-objects"></a>メンバーと他のモデル オブジェクトの関連付け
@@ -62,29 +61,29 @@ ms.locfileid: "78176001"
 
 |タスクの説明|トピック|
 |----------------------|-----------|
-|新しいリーフ メンバーを作成する。|[リーフメンバー &#40;マスターデータサービスを作成&#41;](../../2014/master-data-services/create-a-leaf-member-master-data-services.md)|
-|新しい統合メンバーを作成する。|[統合メンバー &#40;マスターデータサービスを作成&#41;](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)|
-|既存のメンバーまたはコレクションを削除する。|[マスターデータサービス &#40;のメンバーまたはコレクションを削除&#41;](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)|
-|削除したメンバーまたはコレクションを再アクティブ化する。|[メンバーまたはコレクションを再アクティブ化する &#40;マスターデータサービス&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)|
-|メンバーの属性値を更新する。|[属性の種類 &#40;Excel 用 MDS アドインに変更&#41;](microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|
+|新しいリーフ メンバーを作成する。|[リーフ メンバーを作成する &#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-leaf-member-master-data-services.md)|
+|新しい統合メンバーを作成する。|[統合メンバーを作成する (マスター データ サービス)](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)|
+|既存のメンバーまたはコレクションを削除する。|[メンバーまたはコレクションを削除する (マスター データ サービス)](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)|
+|削除したメンバーまたはコレクションを再アクティブ化する。|[メンバーまたはコレクションを再アクティブ化する (マスター データ サービス)](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)|
+|メンバーの属性値を更新する。|[属性の型の変更 (Excel 用 MDS アドイン)](microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|
 |階層内のメンバーを移動する。|[階層内のメンバーを移動する &#40;マスターデータサービス&#41;](../../2014/master-data-services/move-members-within-a-hierarchy-master-data-services.md)|
 
 ## <a name="related-content"></a>関連コンテンツ
 
 -   [マスター データ サービス概要](master-data-services-overview-mds.md)
 
--   [エンティティ &#40;マスターデータサービス&#41;](../../2014/master-data-services/entities-master-data-services.md)
+-   [エンティティ (マスター データ サービス)](../../2014/master-data-services/entities-master-data-services.md)
 
--   [属性 &#40;マスターデータサービス&#41;](../../2014/master-data-services/attributes-master-data-services.md)
+-   [属性 (マスター データ サービス)](../../2014/master-data-services/attributes-master-data-services.md)
 
--   [階層 &#40;マスターデータサービス&#41;](hierarchies-master-data-services.md)
+-   [階層 (マスター データ サービス)](hierarchies-master-data-services.md)
 
--   [コレクション &#40;マスターデータサービス&#41;](../../2014/master-data-services/collections-master-data-services.md)
+-   [コレクション (マスター データ サービス)](../../2014/master-data-services/collections-master-data-services.md)
 
--   [リーフアクセス許可 &#40;マスターデータサービス&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)
+-   [リーフ権限 (マスター データ サービス)](../../2014/master-data-services/leaf-permissions-master-data-services.md)
 
 -   [統合アクセス許可 &#40;マスターデータサービス&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)
 
--   [フィルター演算子 &#40;マスターデータサービス&#41;](../../2014/master-data-services/filter-operators-master-data-services.md)
+-   [フィルター演算子 (マスター データ サービス)](../../2014/master-data-services/filter-operators-master-data-services.md)
 
 

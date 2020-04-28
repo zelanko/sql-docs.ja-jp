@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dc29f3b9acf52172aa3d9fedecac752d419b2e55
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176412"
 ---
 # <a name="developing-a-custom-destination-component"></a>カスタム変換先コンポーネントの開発
@@ -38,7 +38,7 @@ ms.locfileid: "78176412"
  変換先コンポーネントのデザイン時の機能を実装する作業には、外部データ ソースへの接続の指定、およびコンポーネントが正しく設定されているかどうかの検証が含まれます。 定義上、変換先コンポーネントには 1 つの入力と、場合によって 1 つのエラー出力があります。
 
 ### <a name="creating-the-component"></a>コンポーネントの作成
- 変換先コンポーネントは、パッケージで定義された <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> オブジェクトを使用して、外部データ ソースに接続します。 変換先コンポーネントは、接続マネージャーに関する要求を [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーやコンポーネントのユーザーに示すため、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> の <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> コレクションに要素を追加します。 このコレクションには 2 つの目的があります。1 つは、接続マネージャーの必要性を [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーに通知することで、もう 1 つは、ユーザーが接続マネージャーを選択または作成した後に、コンポーネントが使用する、パッケージ内の接続マネージャーへの参照を保持することです。 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> がコレクションに追加されると、 **[詳細エディター]** は **[接続プロパティ]** タブを表示します。このタブでは、コンポーネントが使用する接続をパッケージ内で選択したり、新しく作成したりすることができます。
+ 変換先コンポーネントは、パッケージで定義された <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> オブジェクトを使用して、外部データ ソースに接続します。 変換先コンポーネントは、接続マネージャーに関する要求を [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーやコンポーネントのユーザーに示すため、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> の <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> コレクションに要素を追加します。 このコレクションには 2 つの目的があります。1 つは、接続マネージャーの必要性を [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーに通知することで、もう 1 つは、ユーザーが接続マネージャーを選択または作成した後に、コンポーネントが使用する、パッケージ内の接続マネージャーへの参照を保持することです。 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> がコレクションに追加されると、 **[詳細エディター]** は **[接続プロパティ]** タブを表示します。このタブでは、コンポーネントが使用する接続をパッケージ内で選択したり、新しく作成したりすることができます。
 
  次のコード例は、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A> に入力を追加し、次に <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> オブジェクトを追加する <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> の実装を示します。
 
@@ -166,8 +166,7 @@ End Sub
 ### <a name="validating-the-component"></a>コンポーネントの検証
  [コンポーネントの検証](../extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md)で説明しているように、変換先コンポーネントの開発者は検証を実行する必要があります。 また、コンポーネントの入力列コレクションで定義されている列のデータ型プロパティが、外部データ ソースの列と一致することを検証する必要もあります。 ただし、コンポーネントまたは [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーが接続されていない状態の場合や、サーバーへのラウンド トリップが許可されない場合など、外部データ ソースに対する入力列の検証が不可能または望ましくないこともあります。 このような状況でも、入力オブジェクトの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100.ExternalMetadataColumnCollection%2A> を使用して、入力列コレクションの列を検証することができます。
 
- このコレクションは入力オブジェクトおよび出力オブジェクトの両方に存在し、コンポーネント開発者が外部データ ソースの列から設定します。 
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーがオフラインである場合、コンポーネントが接続されていない場合、または <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> プロパティが `false` である場合は、このコレクションを使用して入力列を検証できます。
+ このコレクションは入力オブジェクトおよび出力オブジェクトの両方に存在し、コンポーネント開発者が外部データ ソースの列から設定します。 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーがオフラインである場合、コンポーネントが接続されていない場合、または <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> プロパティが `false` である場合は、このコレクションを使用して入力列を検証できます。
 
  次のコード例は、既存の入力列に基づく外部メタデータ列を追加します。
 
@@ -482,7 +481,7 @@ Namespace BlobDst
 End Namespace
 ```
 
-![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
+![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
 
 ## <a name="see-also"></a>参照
  [カスタム変換元コンポーネントの開発](../extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)[スクリプトコンポーネントによる変換先の作成](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)

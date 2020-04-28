@@ -14,19 +14,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 77f7fdb2689d910d6fe9534a5f1f65e1c381b351
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175451"
 ---
 # <a name="sql-server-database-engine"></a>SQL Server データベース エンジン
-  
-  [!INCLUDE[ssDE](../includes/ssde-md.md)] は、データの格納、処理、セキュリティ確保のための中心的なサービスです。 
-  [!INCLUDE[ssDE](../includes/ssde-md.md)]は、アクセス制御と高速トランザクション処理を提供しており、これらを活用すれば、企業内で最も大規模なデータ処理アプリケーションの要件にも対応できます。
+  [!INCLUDE[ssDE](../includes/ssde-md.md)] は、データの格納、処理、セキュリティ確保のための中心的なサービスです。 [!INCLUDE[ssDE](../includes/ssde-md.md)]は、アクセス制御と高速トランザクション処理を提供しており、これらを活用すれば、企業内で最も大規模なデータ処理アプリケーションの要件にも対応できます。
 
- 
-  [!INCLUDE[ssDE](../includes/ssde-md.md)]を使用すると、オンライン トランザクション処理やオンライン分析処理のデータのリレーショナル データベースを作成できます。 これには、データを格納するためのテーブル、インデックスなどのデータベース オブジェクト、ビュー、およびデータの表示、管理、セキュリティ保護のためのストアド プロシージャの作成が含まれます。 データベース オブジェクトの管理には [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を、サーバー イベントのキャプチャには [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] を使用できます。
+ [!INCLUDE[ssDE](../includes/ssde-md.md)]を使用すると、オンライン トランザクション処理やオンライン分析処理のデータのリレーショナル データベースを作成できます。 これには、データを格納するためのテーブル、インデックスなどのデータベース オブジェクト、ビュー、およびデータの表示、管理、セキュリティ保護のためのストアド プロシージャの作成が含まれます。 データベース オブジェクトの管理には [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を、サーバー イベントのキャプチャには [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] を使用できます。
 
  領域の![小さいファイルフォルダー](../../2014/integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン") **を参照**するアイコン[新機能 (データベースエンジン)](whats-new-in-sql-server-2016.md)
 
@@ -43,6 +40,6 @@ ms.locfileid: "78175451"
  ![小さいファイルフォルダーアイコン](../../2014/integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン") [XQuery リファレンス](/sql/xquery/xquery-language-reference-sql-server)
 
 ## <a name="see-also"></a>参照
- [SQL Server リソースセンター](https://go.microsoft.com/fwlink/?LinkId=219676)
+ [SQL Server リソース センター](https://go.microsoft.com/fwlink/?LinkId=219676)
 
 

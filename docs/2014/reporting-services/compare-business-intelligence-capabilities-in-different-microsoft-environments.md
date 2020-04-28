@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 12/15/2019
 ms.openlocfilehash: a5f9e9b52186a2d4569ac30a591ae95acfa36101
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75656589"
 ---
 # <a name="compare-business-intelligence-capabilities-in-different-microsoft-environments"></a>さまざまな Microsoft 環境での Business Intelligence 機能の比較
@@ -26,20 +26,18 @@ SharePoint Server と SharePoint Online の比較に関する詳細について�
   
 ||SQL Server 2014 & SharePoint Server 2013|SharePoint Online Plan 2|Office 365 用 BI 機能|  
 |-|----------------------------------------------|------------------------------|-----------------------------|  
-|BI サイト|[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]デザイン|いいえ|Power BI サイト|  
+|BI サイト|[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] ギャラリー|いいえ|Power BI サイト|  
 |データ スチュワードシップおよびクエリの共有と管理|いいえ|いいえ|はい** <sup>1</sup>**|  
 |Master Data Services (MDS) と Data Quality Services (DQS) との統合|はい|いいえ|いいえ|  
 |定期データ更新|可 (ただし Power Query データを含むブックはサポートしない)|いいえ|はい|  
 |自然言語クエリ (Q&A)|いいえ|いいえ|はい** <sup>2</sup>**|  
-|予測される予測|いいえ|いいえ|はい** <sup>3</sup>**|  
-|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]結合|はい|いいえ|いいえ|  
-|
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 統合 (多次元および表形式)|はい|いいえ|いいえ|  
+|予測される予測|いいえ|いいえ|可 **<sup>3</sup>**|  
+|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 統合|はい|いいえ|いいえ|  
+|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 統合 (多次元および表形式)|はい|いいえ|いいえ|  
 |対話型の Power View ダッシュボードを PowerPoint プレゼンテーションにエクスポートする|はい|いいえ|いいえ|  
 |ブラウザー内のダッシュ ボードの作成|はい|いいえ|いいえ|  
 |利用状況の監視|はい|いいえ|はい|  
-|
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] キューブの行ベースのセキュリティの活用|はい|いいえ|いいえ|  
+|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] キューブの行ベースのセキュリティの活用|はい|いいえ|いいえ|  
 |||||
 
  **<sup>1</sup>**  [データ管理とビデオにおけるデータスチュワードの役割について理解する](https://support.office.com/Article/Understanding-the-Role-of-Data-Stewards-in-Data-Management-ae3352f3-4389-45e8-a682-7fd6edb92524?ui=en-US&rs=en-US&ad=US) [: Power BI 情報管理とデータ管理](https://www.youtube.com/watch?v=8dHOj68ts7c)。  
@@ -55,26 +53,25 @@ SharePoint Server と SharePoint Online の比較に関する詳細について�
 |ブラウザーで Microsoft Excel ブックを表示する|可 (ブックのサイズが 2 GB より小さい場合)|可 (ブックのサイズが 10 MB より小さい場合)|可 (ブックのサイズが 250 MB より小さい場合)|  
 |HTML5 でのブラウザー内のデータ探索|いいえ|いいえ|はい|  
 |レポートとダッシュ ボードにリモートでアクセスするモバイル BI アプリ|いいえ|いいえ|はい** <sup>1</sup>**|  
-|
-  [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] をデータ ソースとする Excel ブック **<sup>2</sup>**|はい|いいえ|いいえ|  
-|機能をさまざまなブラウザーやバージョンで使用するための機能|可 (Power View の視覚化以外の場合) **<sup>3</sup>**|可 (ブック ファイルのサイズが 10 MB より小さい場合) **<sup>3</sup>**|はい** <sup>3</sup>**|  
+|[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] をデータ ソースとする Excel ブック **<sup>2</sup>**|はい|いいえ|いいえ|  
+|機能をさまざまなブラウザーやバージョンで使用するための機能|可 (Power View の視覚化以外の場合) **<sup>3</sup>**|可 (ブック ファイルのサイズが 10 MB より小さい場合) **<sup>3</sup>**|可 **<sup>3</sup>**|  
 |||||
 
  **<sup>1</sup>**  [Microsoft Power BI](https://apps.microsoft.com/windows/app/microsoft-power-bi/b7e7c94d-2ea3-4fa6-a277-9d19a1f697ba)。  
   
- **<sup>2</sup>**  [データソースとしての PowerPivot ブック](https://support.office.com/article/Power-Pivot-Powerful-data-analysis-and-data-modeling-in-Excel-A9C2C6E2-CC49-4976-A7D7-40896795D045)  
+ **<sup>2</sup>**  [データ ソースとしての PowerPivot ブック](https://support.office.com/article/Power-Pivot-Powerful-data-analysis-and-data-modeling-in-Excel-A9C2C6E2-CC49-4976-A7D7-40896795D045)  
   
  **<sup>3</sup>**  [ビジネスインテリジェンス (BI) ツールでのモバイルサポート](https://msdn.microsoft.com/library/dn151146\(v=sql.110\).aspx)と、 [Reporting Services と Power View のブラウザーサポートの計画 (Reporting Services 2014)](https://msdn.microsoft.com/library/ms156511.aspx)」を参照してください。  
   
-## <a name="more-information"></a>詳細情報  
+## <a name="more-information"></a>説明  
   
 - [Excel および Office 365 の BI 機能](https://support.office.com/article/BI-capabilities-in-Excel-and-Office-365-26c0548e-124c-4fd3-aab3-5f64568cb743)。  
   
 - シノニムを使用するための要件の詳細については、「pragmaticworks.com での[シノニム & 言い回しを使用した Power BI Q&の最適化](https://blog.pragmaticworks.com/optimizing-power-bi-qa-with-synonyms-phrasing-using-cloud-modeling)」を参照してください。  
   
-- [Office Online では、企業のソーシャルネットワーク (Yammer またはニュースフィード) を選択](https://support.office.com/article/Pick-your-enterprise-social-network-Yammer-or-Newsfeed-21954c85-4384-47d4-96c2-dfa1c9d56e66?ui=en-US&rs=en-US&ad=US)します。  
+- [Office Online の「エンタープライズ ソーシャル ネットワーク:Yammer またはニュースフィード](https://support.office.com/article/Pick-your-enterprise-social-network-Yammer-or-Newsfeed-21954c85-4384-47d4-96c2-dfa1c9d56e66?ui=en-US&rs=en-US&ad=US)」。  
   
-- [Power BI for Office 365](https://www.microsoft.com/powerbi/default.aspx)。  
+- 「[Power BI for Office 365](https://www.microsoft.com/powerbi/default.aspx)」。  
   
 - [Power BI 料金](https://www.microsoft.com/powerBI/pricing.aspx)。  
   

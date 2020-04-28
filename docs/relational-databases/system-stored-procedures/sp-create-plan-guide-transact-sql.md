@@ -18,10 +18,10 @@ ms.assetid: 5a8c8040-4f96-4c74-93ab-15bdefd132f0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e55b45cf43e34982033d941ad9626f75afdec554
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75688222"
 ---
 # <a name="sp_create_plan_guide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
@@ -54,18 +54,18 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  プランガイドの名前を指定します。 プラン ガイド名は現在のデータベースに対して有効です。 *plan_guide_name*は、[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があり、番号記号 (#) で始めることはできません。 *Plan_guide_name*の最大長は124文字です。  
   
  [ \@stmt =]N '*statement_text*'  
- プランガイド[!INCLUDE[tsql](../../includes/tsql-md.md)]を作成するステートメントを指定します。 Statement_text に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一致するクエリがクエリオプティマイザーに** よって認識されると、 *plan_guide_name*が有効になります。 プランガイドの作成を成功させるには** 、 \@type、 \@module_or_batch、および\@params パラメーターで指定されたコンテキストに statement_text が指定されている必要があります。  
+ プランガイド[!INCLUDE[tsql](../../includes/tsql-md.md)]を作成するステートメントを指定します。 Statement_text に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一致するクエリがクエリオプティマイザーに*statement_text*よって認識されると、 *plan_guide_name*が有効になります。 プランガイドの作成を成功させるには*statement_text* 、 \@type、 \@module_or_batch、および\@params パラメーターで指定されたコンテキストに statement_text が指定されている必要があります。  
   
- *statement_text*は、クエリオプティマイザーが、module_or_batch および\@ \@params で識別されるバッチまたはモジュール内で指定された対応するステートメントと照合できるように指定する必要があります。 詳細については、「解説」セクションを参照してください。 *Statement_text*のサイズは、サーバーの使用可能なメモリによってのみ制限されます。  
+ *statement_text*は、クエリオプティマイザーが、module_or_batch および\@ \@params で識別されるバッチまたはモジュール内で指定された対応するステートメントと照合できるように指定する必要があります。 詳細については、「解説」を参照してください。 *Statement_text*のサイズは、サーバーの使用可能なメモリによってのみ制限されます。  
   
  [\@type =]N ' {OBJECT |SQL |テンプレート} '  
  *Statement_text*が表示されるエンティティの種類を指定します。 これにより、一致する*statement_text*のコンテキストが*plan_guide_name*に指定されます。  
   
  OBJECT  
- 現在** のデータベースの[!INCLUDE[tsql](../../includes/tsql-md.md)]ストアドプロシージャ、スカラー関数、複数ステートメントのテーブル値関数、または[!INCLUDE[tsql](../../includes/tsql-md.md)] DML トリガーのコンテキストで statement_text が表示されることを示します。  
+ 現在*statement_text*のデータベースの[!INCLUDE[tsql](../../includes/tsql-md.md)]ストアドプロシージャ、スカラー関数、複数ステートメントのテーブル値関数、または[!INCLUDE[tsql](../../includes/tsql-md.md)] DML トリガーのコンテキストで statement_text が表示されることを示します。  
   
  SQL  
- 任意** のメカニズムを通じてに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]送信できるスタンドアロンのステートメントまたはバッチのコンテキストで statement_text 表示されることを示します。 [!INCLUDE[tsql](../../includes/tsql-md.md)]共通言語ランタイム (CLR) オブジェクト、拡張ストアドプロシージャ、または EXEC N '*sql_string*' を使用して送信されたステートメントは、サーバー上でバッチとして処理さ\@れる**=** ため、型 ' sql ' として識別される必要があります。 SQL が指定されている場合、クエリヒントのパラメーター化 {FORCED |SIMPLE} を\@ヒントパラメーターに指定することはできません。  
+ 任意*statement_text*のメカニズムを通じてに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]送信できるスタンドアロンのステートメントまたはバッチのコンテキストで statement_text 表示されることを示します。 [!INCLUDE[tsql](../../includes/tsql-md.md)]共通言語ランタイム (CLR) オブジェクト、拡張ストアドプロシージャ、または EXEC N '*sql_string*' を使用して送信されたステートメントは、サーバー上でバッチとして処理さ\@れる**=** ため、型 ' sql ' として識別される必要があります。 SQL が指定されている場合、クエリヒントのパラメーター化 {FORCED |SIMPLE} を\@ヒントパラメーターに指定することはできません。  
   
  テンプレート  
  *Statement_text*に示されている形式にパラメーター化されるクエリに対して、プランガイドが適用されることを示します。 TEMPLATE が指定されている場合は、パラメーター化 {FORCED |SIMPLE} クエリヒントは、 \@hint パラメーターで指定できます。 テンプレートプランガイドの詳細については、「[プランガイドを使用してクエリのパラメーター化の動作を指定](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)する」を参照してください。  
@@ -98,10 +98,8 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  NULL  
  クエリの OPTION 句で指定した既存のヒントがクエリに適用されないことを示します。 詳細については、「 [OPTION 句 &#40;transact-sql&#41;](../../t-sql/queries/option-clause-transact-sql.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
- sp_create_plan_guide の引数は、表示される順序で指定する必要があります。 
-  **sp_create_plan_guide**のパラメーターに値を指定する場合、パラメーター名はすべて明示的に指定するか、すべて指定しないかのいずれかにする必要があります。 たとえば、 ** \@name =** が指定されている場合は、 ** \@stmt =** 、 ** \@type =** なども指定する必要があります。 同様に、 ** \@name =** を省略し、パラメーター値だけを指定した場合は、残りのパラメーター名も省略し、値だけを指定する必要があります。 引数の名前は、構文を理解しやすくするための説明目的のものです。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、指定したパラメーター名と、その名前が使用されている位置にあるパラメーターの名前が一致しているかどうかは確認されません。  
+## <a name="remarks"></a>Remarks  
+ sp_create_plan_guide の引数は、表示される順序で指定する必要があります。 **sp_create_plan_guide**のパラメーターに値を指定する場合、パラメーター名はすべて明示的に指定するか、すべて指定しないかのいずれかにする必要があります。 たとえば、 ** \@name =** が指定されている場合は、 ** \@stmt =** 、 ** \@type =** なども指定する必要があります。 同様に、 ** \@name =** を省略し、パラメーター値だけを指定した場合は、残りのパラメーター名も省略し、値だけを指定する必要があります。 引数の名前は、構文を理解しやすくするための説明目的のものです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、指定したパラメーター名と、その名前が使用されている位置にあるパラメーターの名前が一致しているかどうかは確認されません。  
   
  同一のクエリとバッチまたはモジュールに対し、複数の OBJECT または SQL プラン ガイドを作成できます。 ただし、有効にできるプラン ガイドは常に 1 つだけです。  
   
@@ -284,8 +282,7 @@ EXEC sp_cursorprepexec @p1 output,@p2 output,N'@P1 varchar(255),@P2 varchar(255)
 SELECT @p1, @p2, @p5, @p6, @p7;  
 ```  
   
- このデータを見ると、`SELECT` の呼び出しの `sp_cursorprepexec` クエリに対するプランでマージ結合を使用していることがわかりますが、ハッシュ結合を使用するとします。 を使用`sp_cursorprepexec`して送信されたクエリは、クエリ文字列とパラメーター文字列の両方を含むパラメーター化されます。 
-  `sp_cursorprepexec` の呼び出しで、表示されているとおり完全に同じであるクエリ文字列とパラメーター文字列を使用して、次のプラン ガイドを作成し、プランの選択を変更できます。  
+ このデータを見ると、`SELECT` の呼び出しの `sp_cursorprepexec` クエリに対するプランでマージ結合を使用していることがわかりますが、ハッシュ結合を使用するとします。 を使用`sp_cursorprepexec`して送信されたクエリは、クエリ文字列とパラメーター文字列の両方を含むパラメーター化されます。 `sp_cursorprepexec` の呼び出しで、表示されているとおり完全に同じであるクエリ文字列とパラメーター文字列を使用して、次のプラン ガイドを作成し、プランの選択を変更できます。  
   
 ```sql  
 EXEC sp_create_plan_guide   

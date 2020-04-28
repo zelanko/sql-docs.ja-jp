@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: af3478e254f01f7cf53d5a09b6febab3b1e85e8b
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176304"
 ---
 # <a name="developing-a-custom-log-provider"></a>カスタム ログ プロバイダーの開発
@@ -41,8 +41,7 @@ ms.locfileid: "78176304"
 ## <a name="related-topics"></a>関連トピック
 
 ### <a name="information-common-to-all-custom-objects"></a>すべてのカスタム オブジェクトに共通の情報
- 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] で作成可能なカスタム オブジェクトのすべての種類に共通の情報については、次のトピックを参照してください。
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] で作成可能なカスタム オブジェクトのすべての種類に共通の情報については、次のトピックを参照してください。
 
  [Integration Services 用のカスタムオブジェクトの開発](../developing-custom-objects-for-integration-services.md)のすべての種類のカスタムオブジェクトを実装するため[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]の基本的な手順について説明します。
 
@@ -51,8 +50,7 @@ ms.locfileid: "78176304"
  [カスタムオブジェクトのビルド、配置、およびデバッグ](../building-deploying-and-debugging-custom-objects.md)カスタムオブジェクトのビルド、署名、配置、およびデバッグの手法について説明します。
 
 ### <a name="information-about-other-custom-objects"></a>その他のカスタム オブジェクトに関する情報
- 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] で作成可能なその他の種類のカスタム オブジェクトについては、次のトピックを参照してください。
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] で作成可能なその他の種類のカスタム オブジェクトについては、次のトピックを参照してください。
 
  [カスタムタスクの開発](../task/developing-a-custom-task.md)カスタムタスクをプログラミングする方法について説明します。
 
@@ -62,6 +60,6 @@ ms.locfileid: "78176304"
 
  [カスタムデータフローコンポーネントの開発](../data-flow/developing-a-custom-data-flow-component.md)カスタムデータフローの変換元、変換、および変換先をプログラミングする方法について説明します。
 
-![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
+![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
 
 

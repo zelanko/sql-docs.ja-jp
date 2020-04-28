@@ -1,5 +1,5 @@
 ---
-title: WSUS の構成
+title: WSUS を構成する
 description: ここでは、Windows Server Update Services (WSUS) 構成ウィザードを使用して、Analytics Platform System 用に WSUS を構成する手順について説明します。
 author: mzaman1
 ms.prod: sql
@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 089b76d7167b8561c93b01837dc2189c833362fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76761906"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Analytics Platform System での Windows Server Update Services (WSUS) の構成
@@ -35,7 +35,7 @@ WSUS を構成するには、次のことを行う必要があります。
   
 -   アプライアンスが上流サーバーまたは Microsoft Update にアクセスするためにプロキシサーバーを使用する場合は、プロキシサーバーの IP アドレスを確認します。  
   
--   ほとんどの場合、WSUS はアプライアンスの外部のサーバーにアクセスする必要があります。 この使用シナリオをサポートするには、分析プラットフォームシステムのホストと Virtual Machines (Vm) が外部 DNS サーバーを使用して外部 DNS サーバーを使用して外部の名前を解決できるようにする外部名フォワーダーをサポートするように、Analytics Platform システム DNS を構成します。nas. 詳細については、「 [Dns フォワーダーを使用してアプライアンス以外の Dns 名を解決する」 &#40;Analytics Platform System&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)」を参照してください。  
+-   ほとんどの場合、WSUS はアプライアンスの外部のサーバーにアクセスする必要があります。 この使用シナリオをサポートするために、Analytics platform system DNS を構成して、Analytics Platform システムホストと Virtual Machines (Vm) が外部 DNS サーバーを使用してアプライアンスの外部にある名前を解決できるようにすることができます。 詳細については、「 [Dns フォワーダーを使用してアプライアンス以外の Dns 名を解決する」 &#40;Analytics Platform System&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)」を参照してください。  
   
 ## <a name="to-configure-windows-server-update-services-wsus"></a>Windows Server Update Services を構成するには (WSUS)  
   
@@ -109,16 +109,15 @@ WSUS を構成するには、次のことを行う必要があります。
   
     ![WSUS: プロキシ](./media/configure-windows-server-update-services-wsus/WSUS_Wiz5a.png "WSUS_Wiz5a")  
   
-    #### <a name="to-configure-proxy-server-settings"></a>プロキシサーバーの設定を構成するには  
+    #### <a name="to-configure-proxy-server-settings"></a>プロキシ サーバー設定を構成するには  
   
     1.  構成ウィザードの [**プロキシサーバーの指定**] ページで、[**同期時にプロキシサーバーを使用**する] チェックボックスをオンにし、対応するボックスにプロキシサーバーの IP アドレス (名前以外) とポート番号 (既定ではポート 80) を入力します。  
   
-    2.  特定のユーザー資格情報を使用してプロキシ サーバーに接続する場合は、**[ユーザーの資格情報を使用して、プロキシ サーバーに接続する]** チェック ボックスをオンにし、対応するボックスにユーザーの名前、ドメイン、およびパスワードを入力します。 プロキシサーバーに接続しているユーザーの基本認証を有効にする場合は、[**基本認証を許可する (クリアテキストでパスワードを送信する)** ] チェックボックスをオンにします。  
+    2.  特定のユーザー資格情報を使用してプロキシ サーバーに接続する場合は、**[ユーザーの資格情報を使用して、プロキシ サーバーに接続する]** チェック ボックスをオンにし、対応するボックスにユーザーの名前、ドメイン、およびパスワードを入力します。 [プロキシ サーバーに接続しているユーザーに対して基本認証を有効にする場合、 **基本認証を許可する (パスワードはクリア テキストで送信)** チェック ボックスをオンします。  
   
         ![WSUS: プロキシの資格情報](./media/configure-windows-server-update-services-wsus/WSUS_Wiz5b.png "WSUS_Wiz5b")  
   
-    3.  この時点で、プロキシサーバーの構成が完了しました。 
-  **[次へ]** をクリックして次のページに進むと、同期プロセスの設定を開始できます。  
+    3.  この時点で、プロキシサーバーの構成が完了しました。 **[次へ]** をクリックして次のページに進むと、同期プロセスの設定を開始できます。  
   
 6.  接続を開始します。  
   
@@ -173,7 +172,7 @@ WSUS を構成するには、次のことを行う必要があります。
   
     **[完了]** をクリックします。  
   
-## <a name="bkmk_WSUSGroup"></a>WSUS でアプライアンスサーバーをグループ化する  
+## <a name="group-the-appliance-servers-in-wsus"></a><a name="bkmk_WSUSGroup"></a>WSUS でアプライアンスサーバーをグループ化する  
 Analytics Platform System の WSUS を構成した後、次の手順ではアプライアンスサーバーをグループ化します。 すべてのアプライアンスサーバーをグループに追加することで、WSUS はアプライアンス内のすべてのサーバーにソフトウェアの更新を適用できるようになります。  
   
 > [!NOTE]  

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c6953214bd5e5353643cb16b75ed51ac18783256
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78171771"
 ---
 # <a name="task-3-creating-and-running-a-data-quality-project-for-matching"></a>タスク 3: 照合するデータ品質プロジェクトを作成および実行する
@@ -32,8 +32,7 @@ ms.locfileid: "78171771"
 
 5.  **[次へ]** をクリックします。
 
-6.  
-  **[マップ]** ページの **[データ ソース]** で **[Excel ファイル]** を選択します。
+6.  **[マップ]** ページの **[データ ソース]** で **[Excel ファイル]** を選択します。
 
 7.  [**参照**] をクリックして、クレンジングアクティビティの出力ファイルである [クレンジングされた**Supplier List .xls**] を選択します。
 
@@ -47,7 +46,7 @@ ms.locfileid: "78171771"
 
 12. [**次へ**] をクリックして、[**エクスポート**] ページに移動します。
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
  [タスク 4: 照合アクティビティから Excel ファイルに結果をエクスポートする](../../2014/tutorials/task-4-exporting-the-results-from-matching-activity-to-an-excel-file.md)
 
 

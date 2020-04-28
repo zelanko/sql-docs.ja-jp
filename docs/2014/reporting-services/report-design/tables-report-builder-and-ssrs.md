@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 74346c2563366300058c1a33bd625162aec7121e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78172621"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>テーブル (レポート ビルダーおよび SSRS)
@@ -25,13 +25,12 @@ ms.locfileid: "78172621"
 
  テーブルの使用をすぐに開始するには、「[チュートリアル: 基本的な表レポートの作成 (レポート ビルダー)](../tutorial-creating-a-basic-table-report-report-builder.md)」または「[基本的なテーブル レポートの作成 (SSRS チュートリアル)](../create-a-basic-table-report-ssrs-tutorial.md)」を参照してください。
 
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のサンプル レポートには、テーブルを使用したレポートが多数含まれています。 テーブルに関する知識は、レポート ビルダーまたはレポート デザイナーでサンプル レポートのレポート定義を詳しく調べるか、表示されたレポートをレポート ビルダーまたはレポート デザイナーでプレビューすることによって身に付けることができます。 サンプル レポートのダウンロードの詳細については、「 [(SSRS) Reporting Services のサンプル](https://go.microsoft.com/fwlink/?LinkID=198283)」を参照してください。
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のサンプル レポートには、テーブルを使用したレポートが多数含まれています。 テーブルに関する知識は、レポート ビルダーまたはレポート デザイナーでサンプル レポートのレポート定義を詳しく調べるか、表示されたレポートをレポート ビルダーまたはレポート デザイナーでプレビューすることによって身に付けることができます。 サンプル レポートのダウンロードの詳細については、「 [(SSRS) Reporting Services のサンプル](https://go.microsoft.com/fwlink/?LinkID=198283)」を参照してください。
 
 > [!NOTE]
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
 
-##  <a name="AddingTable"></a>詳細データを表示するテーブルの追加
+##  <a name="adding-a-table-to-display-detail-data"></a><a name="AddingTable"></a> 詳細データを表示するテーブルの追加
  リボンの [挿入] タブからデザイン画面にテーブルを追加します。 テーブルを追加するには、テーブル ウィザードまたはマトリックス ウィザードを使用して、データ ソース接続とデータセットを作成し、そのテーブルを構成するか、テーブル テンプレートに基づいてテーブルを作成し、手動で構成します。
 
 > [!NOTE]
@@ -47,7 +46,7 @@ ms.locfileid: "78172621"
 
  ![デザイン画面上のテーブル テンプレート、選択](../media/rs-tabletemplatenewselected.gif "デザイン画面上のテーブル テンプレート、選択")
 
- データ行の行ハンドルには、詳細シンボル (![詳細行の3本の平行線がある行ハンドル](../media/rs-icontablix-detailsrow.gif "詳細行の 3 本の平行線がある行ハンドル")) が表示されます。 これらの行にデータを表示するには、レポート データ ペインからヘッダーまたは詳細行のテーブル セルにフィールドをドラッグします。 両方の行に同時にデータが表示されます。 列を追加するには、挿入ポイントが表示されるまでフィールドをテーブルにドラッグします。 テーブルにデータセット フィールドを追加した後、日付と通貨の既定の書式を変更して、これらの値がレポートに表示される方法を制御できます。 次の図に、Date、Order、Product、Qty、および Line Total フィールドを含むテーブル データ領域を示します。
+ データ行の行ハンドルは、詳細シンボル (![詳細行の 3 本の平行線がある行ハンドル](../media/rs-icontablix-detailsrow.gif "詳細行の 3 本の平行線がある行ハンドル")) を示します。 これらの行にデータを表示するには、レポート データ ペインからヘッダーまたは詳細行のテーブル セルにフィールドをドラッグします。 両方の行に同時にデータが表示されます。 列を追加するには、挿入ポイントが表示されるまでフィールドをテーブルにドラッグします。 テーブルにデータセット フィールドを追加した後、日付と通貨の既定の書式を変更して、これらの値がレポートに表示される方法を制御できます。 次の図に、Date、Order、Product、Qty、および Line Total フィールドを含むテーブル データ領域を示します。
 
  ![デザイン、列ヘッダーが太字のテーブル](../media/rs-basictabledetailsformatteddesign.gif "デザイン、列ヘッダーが太字のテーブル")
 
@@ -68,7 +67,7 @@ ms.locfileid: "78172621"
 
  詳細については、「[グループまたは Tablix データ領域への合計の追加 (レポート ビルダーおよび SSRS)](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)」を参照してください。
 
-##  <a name="AddingRowGroups"></a>テーブルへの行グループの追加
+##  <a name="adding-row-groups-to-a-table"></a><a name="AddingRowGroups"></a>テーブルへの行グループの追加
  レポート データ ペインからセルにフィールドをドラッグして詳細データを表示できるのと同様に、フィールドをグループ化ペインにドラッグしてグループを追加できます。 テーブルの行グループ ペインにフィールドをドラッグします。 グループを追加すると、テーブルの行グループ領域の新しい列にセルが自動的に追加され、グループ値が表示されます。 領域の詳細については、「[Tablix データ領域部分 (レポート ビルダーおよび SSRS)](tablix-data-region-areas-report-builder-and-ssrs.md)」を参照してください。
 
  次の図に、入れ子になっている 2 つの行グループを含むテーブルの [デザイン] ビューを示します。 行グループは、Order フィールドと Date フィールドを順に行グループ ペインにドラッグし、各グループを既存のグループの親として挿入して作成されています。 この図は、日付に基づいた親グループ、注文番号に基づいた子グループ、および既定で定義されている詳細グループを示します。
@@ -92,7 +91,7 @@ ms.locfileid: "78172621"
 
  詳細については、「[グループまたは Tablix データ領域への合計の追加 (レポート ビルダーおよび SSRS)](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)」を参照してください。
 
-##  <a name="RemovingHidingRows"></a>詳細行の削除または非表示
+##  <a name="removing-or-hiding-detail-rows"></a><a name="RemovingHidingRows"></a>詳細行の削除または非表示
  レポートでテーブルをプレビューした後、既存の詳細行を削除することに決めたとします。 また、詳細行を既定で非表示にして、ドリルダウン レポートのようにユーザーが詳細の表示と非表示を切り替えることができるようにする場合も考えられます。
 
  テーブルから詳細行を削除するには、グループ化ペインを使用します。 詳細グループを選択し、ショートカット メニューを使用して、詳細データを表示するグループと行を削除します。 次の図に、日付と注文番号でグループ化されたテーブルの [デザイン] ビューを示します。詳細行は含まれていません。 このテーブルには合計行は追加されていません。

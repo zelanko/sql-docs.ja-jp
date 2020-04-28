@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: eff79fb144c2bbc4d31a21b2dc263c4ccb087104
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177240"
 ---
 # <a name="task-6-adding-excel-source-to-the-data-flow"></a>タスク 6: Excel ソースをデータ フローに追加する
@@ -40,14 +40,14 @@ ms.locfileid: "78177240"
 
 8.  Excel ファイルでデータをプレビューするには、[**プレビュー** ] をクリックします。
 
-9. [**OK**] をクリックして、ダイアログ ボックスを閉じます。
+9. **[OK]** をクリックしてダイアログ ボックスを閉じます。
 
 10. [ **SSIS ツールボックス**] の**他の変換**で**DQS クレンジング**変換を [**データフロー** ] タブにドラッグアンドドロップします。 [ **Excel ファイルから Supplier データを読み取る**] の下にあります。 DQS クレンジング変換では、Data Quality Services (DQS) を使用し、ナレッジ ベースの承認済みのルールを適用することで、データを修正します。 この変換は、実行時に、DQS サーバー上に DQS クレンジング プロジェクトを作成します。 詳細については、「 [DQS クレンジング変換](https://msdn.microsoft.com/library/ee677619.aspx)」を参照してください。
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 [タスク 7: DQS クレンジング変換をデータ フローに追加する](task-7-adding-dqs-cleansing-transform-to-the-data-flow.md)
 
 ### <a name="see-also"></a>参照
 
-[Data Flow](../integration-services/data-flow/data-flow.md)
+[データ フロー](../integration-services/data-flow/data-flow.md)

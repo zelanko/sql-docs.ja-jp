@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 061daaa3b44c151a1f77b075bef66ef90570af98
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176352"
 ---
 # <a name="developing-a-custom-data-flow-component"></a>カスタム データ フロー コンポーネントの開発
@@ -67,8 +67,7 @@ ms.locfileid: "78176352"
 ## <a name="related-sections"></a>関連項目
 
 ### <a name="information-common-to-all-custom-objects"></a>すべてのカスタム オブジェクトに共通の情報
- 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] で作成可能なカスタム オブジェクトのすべての種類に共通の情報については、次のトピックを参照してください。
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] で作成可能なカスタム オブジェクトのすべての種類に共通の情報については、次のトピックを参照してください。
 
  [Integration Services 用のカスタムオブジェクトの開発](../../extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)のすべての種類のカスタムオブジェクトを実装するため[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]の基本的な手順について説明します。
 
@@ -77,8 +76,7 @@ ms.locfileid: "78176352"
  [カスタムオブジェクトのビルド、配置、およびデバッグ](../../extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)カスタムオブジェクトのビルド、署名、配置、およびデバッグの手法について説明します。
 
 ### <a name="information-about-other-custom-objects"></a>その他のカスタム オブジェクトに関する情報
- 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] で作成可能なその他の種類のカスタム オブジェクトについては、次のトピックを参照してください。
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] で作成可能なその他の種類のカスタム オブジェクトについては、次のトピックを参照してください。
 
  [カスタムタスクの開発](../../extending-packages-custom-objects/task/developing-a-custom-task.md)カスタムタスクをプログラミングする方法について説明します。
 
@@ -88,7 +86,7 @@ ms.locfileid: "78176352"
 
  [カスタム ForEach 列挙子の開発](../../extending-packages-custom-objects/foreach-enumerator/developing-a-custom-foreach-enumerator.md)カスタム列挙子をプログラミングする方法について説明します。
 
-![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
+![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
 
 ## <a name="see-also"></a>参照
  [スクリプトコンポーネントによるデータフローの拡張](../../extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md[スクリプトソリューションとカスタムオブジェクトの比較](../../extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)

@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 956a73f76e113eb0a50f628150e47ed33791cc97
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176241"
 ---
 # <a name="finding-installed-printers-with-the-script-task"></a>スクリプト タスクによるインストールされたプリンターの検索
@@ -39,8 +39,7 @@ ms.locfileid: "78176241"
 
 #### <a name="to-configure-this-script-task-example"></a>このスクリプト タスクの例を構成するには
 
-1.  
-  `PrinterList` という名前の、`Object` 型の変数を作成します。
+1.  `PrinterList` という名前の、`Object` 型の変数を作成します。
 
 2.  **[スクリプト タスク エディター]** の **[スクリプト]** ページで、ReadWriteVariables プロパティに追加します。
 
@@ -142,7 +141,7 @@ public void Main()
         }
 ```
 
-![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
+![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
 
 ## <a name="see-also"></a>参照
  [スクリプト タスクの例](../extending-packages-scripting-task-examples/script-task-examples.md)

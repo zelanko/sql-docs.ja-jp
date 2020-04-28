@@ -17,10 +17,10 @@ ms.assetid: 7dac5e68-bf84-433a-a531-66921f35126f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1a2e2e3c0074c3fcc53298c2556c786c9b7057db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75322277"
 ---
 # <a name="sp_mschange_distribution_agent_properties-transact-sql"></a>sp_MSchange_distribution_agent_properties (Transact-SQL)
@@ -60,7 +60,7 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
   
  次の表では、変更可能なディストリビューションエージェントジョブのプロパティと、それらのプロパティの値に関する制限について説明します。  
   
-|プロパティ|値|[説明]|  
+|プロパティ|値|説明|  
 |--------------|-----------|-----------------|  
 |**distrib_job_login**||エージェントを実行する [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントのログイン。|  
 |**distrib_job_password**||エージェントジョブを実行する Windows アカウントのパスワード。|  
@@ -72,10 +72,10 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
 |**subscriber_provider**||[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データソース以外の OLE DB プロバイダーが登録されている一意のプログラム識別子 (PROGID)。 *このプロパティは、* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外のサブスクライバーに対してのみ有効です *。*|  
 |**subscriber_providerstring**||データソースを識別する OLE DB プロバイダー固有の接続文字列。 *このプロパティは、SQL Server 以外のサブスクライバーに対してのみ有効です。*|  
 |**subscriber_security_mode**|**1**|Windows 認証。<br /><br /> [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]|  
-||**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証.|  
+||**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証。|  
 |**subscriber_type**|**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバ|  
 ||**1**|ODBC データソースサーバー|  
-||**番**|OLE DB プロバイダー|  
+||**3**|OLE DB プロバイダー|  
 |**subscriptionstreams**||変更のバッチをサブスクライバーに並列的に適用するために、ディストリビューション エージェントごとに許可される接続の数を表します。 *以外*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の*サブスクライバー、Oracle パブリッシャー、またはピアツーピアサブスクリプションでは*サポートされていません。|  
   
 > [!NOTE]  
@@ -84,7 +84,7 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_MSchange_distribution_agent_properties**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
  パブリッシャーが以降のバージョンの[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]インスタンスで実行されている場合は、 [sp_changesubscription](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)を使用して、ディストリビューターで実行されるプッシュサブスクリプションを同期するマージエージェントジョブのプロパティを変更する必要があります。  

@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2599fc6f5373b7bf048ab173bccd9c44be6ae58e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176262"
 ---
 # <a name="creating-a-synchronous-transformation-with-the-script-component"></a>スクリプト コンポーネントによる同期変換の作成
@@ -78,7 +78,7 @@ ms.locfileid: "78176262"
  **[スクリプト変換エディター]** の **[スクリプト]** ページの詳細については、「[[スクリプト変換エディター] &#40;[スクリプト] ページ&#41;](../script-transformation-editor-script-page.md)」を参照してください。
 
 ## <a name="scripting-a-synchronous-transformation-component-in-code-design-mode"></a>コード デザイン モードでの同期変換コンポーネントのスクリプト作成
- コンポーネントのメタデータを構成した後、カスタム スクリプトを記述できます。 **[スクリプト変換エディター]** の **[スクリプト]** ページで **[スクリプトの編集]** をクリックし、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE を開いて、カスタム スクリプトを追加できます。 使用するスクリプト言語は、 **[スクリプト]** ページの **[ScriptLanguage]** プロパティで、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic と [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# のどちらをスクリプト言語として選択したかによって決まります。
+ コンポーネントのメタデータを構成した後、カスタム スクリプトを記述できます。 **[スクリプト変換エディター]** の **[スクリプト]** ページで **[スクリプトの編集]** をクリックし、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE を開いて、カスタム スクリプトを追加できます。 使用するスクリプト言語は、[!INCLUDE[msCoName](../../includes/msconame-md.md)][スクリプト][!INCLUDE[msCoName](../../includes/msconame-md.md)] ページの **[ScriptLanguage]** プロパティで、**Visual Basic と** Visual C# のどちらをスクリプト言語として選択したかによって決まります。
 
  スクリプト コンポーネントを使用して作成されたすべての種類のコンポーネントに適用される重要な情報については、「[スクリプト コンポーネントのコーディングおよびデバッグ](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)」を参照してください。
 
@@ -87,8 +87,7 @@ ms.locfileid: "78176262"
 
  VSTA で [**プロジェクトエクスプローラー** ] ウィンドウを開くと、スクリプトコンポーネントによって読み取り専用`BufferWrapper`および`ComponentWrapper`プロジェクト項目も生成されたことがわかります。 クラス`ScriptMain`は、 `ComponentWrapper`プロジェクト項目`UserComponent`のクラスから継承されます。
 
- 実行時には、データ フロー エンジンが `ProcessInput` クラスの `UserComponent` メソッドを呼び出します。これは親クラスである <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> の <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> メソッドをオーバーライドします。 
-  `ProcessInput` メソッドは、入力バッファーに格納された行を順にループし、各行で 1 回ずつ `ProcessInputRow` メソッドを呼び出します。
+ 実行時には、データ フロー エンジンが `ProcessInput` クラスの `UserComponent` メソッドを呼び出します。これは親クラスである <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> の <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> メソッドをオーバーライドします。 `ProcessInput` メソッドは、入力バッファーに格納された行を順にループし、各行で 1 回ずつ `ProcessInputRow` メソッドを呼び出します。
 
 ### <a name="writing-your-custom-code"></a>カスタム コードの記述
  同期出力型の変換コンポーネントは、記述するすべてのデータ フロー コンポーネントの中で最も単純です。 たとえば、このトピックの単一出力の例は、次のカスタム コードで構成されています。
@@ -137,7 +136,7 @@ else
  この例では、同期変換コンポーネントを作成するために、`ScriptMain` クラスで必要なカスタム コードを示します。
 
 > [!NOTE]
->  これらの例で**** は、 `AdventureWorks`サンプルデータベースの Person テーブルを使用して、その第1列と第4列、つまり**intaddressid**列と**nvarchar (30) City**列をデータフローに渡します。 このセクションの変換元、変換、および変換先の例でも、同じデータが使用されます。 他の前提条件および仮定条件については、それぞれの例で説明します。
+>  これらの例で**Person.Address**は、 `AdventureWorks`サンプルデータベースの Person テーブルを使用して、その第1列と第4列、つまり**intaddressid**列と**nvarchar (30) City**列をデータフローに渡します。 このセクションの変換元、変換、および変換先の例でも、同じデータが使用されます。 他の前提条件および仮定条件については、それぞれの例で説明します。
 
 ### <a name="single-output-synchronous-transformation-example"></a>単一出力の同期変換の例
  この例では、単一の出力が含まれる同期変換コンポーネントを示します。 この変換では **AddressID** 列をパススルーして、**City** 列を大文字に変換します。
@@ -154,8 +153,7 @@ else
 
 5.  **[スクリプト]** ページで、 **[スクリプトの編集]** をクリックし、続きのスクリプトを入力します。 その後、スクリプト開発環境と **[スクリプト変換エディター]** を閉じます。
 
-6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の変換先、または「[スクリプト コンポーネントによる変換先の作成](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)」で説明されている変換先コンポーネントの例など、**AddressID** および **City** 列が予期される変換先コンポーネントを作成して構成します。 変換の出力を変換先コンポーネントに接続します。 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] データベースで次の `AdventureWorks` コマンドを実行して、変換先テーブルを作成できます。
+6.  **の変換先、または「** スクリプト コンポーネントによる変換先の作成 **」で説明されている変換先コンポーネントの例など、** AddressID[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [City](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md) 列が予期される変換先コンポーネントを作成して構成します。 変換の出力を変換先コンポーネントに接続します。 `AdventureWorks` データベースで次の [!INCLUDE[tsql](../../includes/tsql-md.md)] コマンドを実行して、変換先テーブルを作成できます。
 
     ```
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,
@@ -209,7 +207,7 @@ public class ScriptMain:
 
 6.  **[スクリプト]** ページで、 **[スクリプトの編集]** をクリックし、続きのスクリプトを入力します。 その後、スクリプト開発環境と **[スクリプト変換エディター]** を閉じます。
 
-7.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の変換先、フラット ファイル変換先、または「[スクリプト コンポーネントによる変換先の作成](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)」で説明されている変換先コンポーネントの例など、**AddressID** および **City** 列が予期される 2 つの変換先コンポーネントを作成して構成します。 変換の各出力をいずれかの変換先コンポーネントに接続します。 変換先テーブルを作成するには、[!INCLUDE[tsql](../../includes/tsql-md.md)] データベースで次の `AdventureWorks` コマンドと同様のコマンド (一意のテーブル名を使用) を実行します。
+7.  **の変換先、フラット ファイル変換先、または「** スクリプト コンポーネントによる変換先の作成 **」で説明されている変換先コンポーネントの例など、** AddressID[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [City](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md) 列が予期される 2 つの変換先コンポーネントを作成して構成します。 変換の各出力をいずれかの変換先コンポーネントに接続します。 変換先テーブルを作成するには、`AdventureWorks` データベースで次の [!INCLUDE[tsql](../../includes/tsql-md.md)] コマンドと同様のコマンド (一意のテーブル名を使用) を実行します。
 
     ```
     CREATE TABLE [Person].[Address2](
@@ -260,7 +258,7 @@ public override void MyAddressInput_ProcessInputRow(MyAddressInputBuffer Row)
 }
 ```
 
-|![](./media/creating-a-synchronous-transformation-with-the-script-component/dts-16.gif)  **Integration Services で最新情報を入手する**<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/msconame-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
+|![](./media/creating-a-synchronous-transformation-with-the-script-component/dts-16.gif)  **Integration Services で最新情報を入手する**<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/msconame-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
 
 ## <a name="see-also"></a>参照
  [同期変換と非同期変換につい](../understanding-synchronous-and-asynchronous-transformations.md)[てスクリプトコンポーネントによる非同期変換の作成](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)[同期出力型のカスタム変換コンポーネントの開発](../extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)

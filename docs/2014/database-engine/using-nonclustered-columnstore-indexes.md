@@ -11,14 +11,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c190e95df57c80d29428b39b72a4115ac7d23de1
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175351"
 ---
 # <a name="using-nonclustered-columnstore-indexes"></a>非クラスター化列ストア インデックスの使用
-  
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] テーブルの非クラスター化 columnstore インデックスを使用するキー タスクについて説明します。
 
  列ストアインデックスの概要については、「[列ストアインデックス](../relational-databases/indexes/columnstore-indexes-described.md)の概要」を参照してください。
@@ -31,12 +30,12 @@ ms.locfileid: "78175351"
 
 -   [非クラスター化列ストアインデックスのデータを変更する](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#change)
 
-##  <a name="load"></a>非クラスター化列ストアインデックスを作成する
+##  <a name="create-a-nonclustered-columnstore-index"></a><a name="load"></a>非クラスター化列ストアインデックスを作成する
  データを非クラスター化列ストアインデックスに読み込むには、まず、ヒープまたはクラスター化インデックスとして格納されている従来の行ストアテーブルにデータを読み込み、次に[CREATE 列ストアインデックス &#40;transact-sql&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)を使用して列ストアインデックスを作成します。
 
  ![列ストア インデックスへのデータの読み込み](../../2014/database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "列ストア インデックスへのデータの読み込み")
 
-##  <a name="change"></a>非クラスター化列ストアインデックスのデータを変更する
+##  <a name="change-the-data-in-a-nonclustered-columnstore-index"></a><a name="change"></a>非クラスター化列ストアインデックスのデータを変更する
  テーブルに非クラスター化列ストア インデックスを作成すると、そのテーブル内のデータは変更できなくなります。 INSERT、UPDATE、DELETE、または MERGE を使用するクエリは失敗し、エラーメッセージが返されます。 そのテーブル内のデータを追加または変更するには、次のいずれかの操作を行います。
 
 -   列ストアインデックスを無効にします。 その後、テーブル内のデータを更新できます。 列ストア インデックスを無効にした場合、データの更新の終了時に列ストア インデックスを再構築できます。 次に例を示します。

@@ -15,20 +15,18 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 77d613e89d78b64147c9e93d2338bd11debb90d3
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176081"
 ---
 # <a name="derived-hierarchies-with-explicit-caps-master-data-services"></a>明示的なキャップを持つ派生階層 (Master Data Services)
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]の、派生階層の最上位レベルとして使用される明示的階層のレベルは、明示的なキャップを持つ派生階層と呼ばれます。
 
  明示的階層は、派生階層の最上位のエンティティと同じエンティティに基づく必要があります。
 
- 
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] のユーザー インターフェイス (UI) で明示的階層を派生階層の最上位にドラッグして、この種類の階層を作成します。
+ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] のユーザー インターフェイス (UI) で明示的階層を派生階層の最上位にドラッグして、この種類の階層を作成します。
 
  ![mds_conc_explicit_cap_UI_structure](../../2014/master-data-services/media/mds-conc-explicit-cap-ui-structure.gif "mds_conc_explicit_cap_UI_structure")
 
@@ -51,15 +49,15 @@ ms.locfileid: "78176081"
 
 |タスクの説明|トピック|
 |----------------------|-----------|
-|派生階層を作成する。|[派生階層 &#40;マスターデータサービスを作成し&#41;](create-a-derived-hierarchy-master-data-services.md)|
-|明示的階層を作成する。|[明示的階層 &#40;マスターデータサービスを作成し&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)|
-|既存の派生階層を削除する。|[派生階層 &#40;マスターデータサービスの削除&#41;](../../2014/master-data-services/delete-a-derived-hierarchy-master-data-services.md)|
+|派生階層を作成する。|[派生階層を作成する (マスター データ サービス)](create-a-derived-hierarchy-master-data-services.md)|
+|明示的階層を作成する。|[明示的階層を作成する (マスター データ サービス)](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)|
+|既存の派生階層を削除する。|[派生階層を削除する (マスター データ サービス)](../../2014/master-data-services/delete-a-derived-hierarchy-master-data-services.md)|
 |||
 
 ## <a name="related-content"></a>関連コンテンツ
 
--   [派生階層 &#40;マスターデータサービス&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)
+-   [派生階層 (マスター データ サービス)](../../2014/master-data-services/derived-hierarchies-master-data-services.md)
 
--   [明示的階層 &#40;マスターデータサービス&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)
+-   [明示的階層 (マスター データ サービス)](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)
 
 

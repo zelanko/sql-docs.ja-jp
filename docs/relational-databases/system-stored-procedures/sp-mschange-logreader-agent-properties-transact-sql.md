@@ -17,10 +17,10 @@ ms.assetid: 925df9d3-a041-4046-8e17-c47f40edb86d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 37a36218b4e9e93a761c776e76a6596f40a6c0eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75322289"
 ---
 # <a name="sp_mschange_logreader_agent_properties-transact-sql"></a>sp_MSchange_logreader_agent_properties (Transact-sql)
@@ -65,15 +65,15 @@ sp_MSchange_logreader_agent_properties [ @publisher = ] 'publisher'
   
 `[ @publisher_type = ] 'publisher_type'`パブリッシャーがの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスで実行されていない場合のパブリッシャーの種類を指定します。 *publisher_type*は**sysname**で、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|**MS**|パブリッシャーを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定します。|  
+|**MSSQLSERVER**|パブリッシャーを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定します。|  
 |**ORACLE11I**|標準の Oracle パブリッシャーを指定します。|  
 |**ORACLE GATEWAY **|Oracle ゲートウェイ パブリッシャーを指定します。|  
   
  Oracle パブリッシャーと Oracle ゲートウェイパブリッシャーの相違点の詳細については、「 [Oracle パブリッシングの概要](../../relational-databases/replication/non-sql/oracle-publishing-overview.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_MSchange_logreader_agent_properties**は、トランザクションレプリケーションで使用します。  
   
  **Sp_MSchange_logreader_agent_properties**を実行するときは、すべてのパラメーターを指定する必要があります。 [&#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md)を実行 sp_helplogreader_agent て、ログリーダーエージェントジョブの現在のプロパティを返します。  
@@ -86,6 +86,6 @@ sp_MSchange_logreader_agent_properties [ @publisher = ] 'publisher'
  **Sp_MSchange_logreader_agent_properties**を実行できるのは、ディストリビューター側の固定サーバーロール**sysadmin**のメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
- [sp_addlogreader_agent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)  
+ [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)  
   
   

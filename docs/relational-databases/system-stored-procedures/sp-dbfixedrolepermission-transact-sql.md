@@ -18,10 +18,10 @@ ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2a51fcc7108c7f6af6237d77cbad73c87ed7c6e6
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78180117"
 ---
 # <a name="sp_dbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-sql)
@@ -49,12 +49,12 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**DbFixedRole**|**sysname**|固定データベース ロールの名前。|  
-|**権限**|**nvarchar (70)**|**Dbfixedrole**に関連付けられている権限|  
+|[**アクセス許可**]|**nvarchar (70)**|**Dbfixedrole**に関連付けられている権限|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  固定データベースロールの一覧を表示するには、 **sp_helpdbfixedrole**を実行します。 次の表は、固定データベースロールを示しています。  
   
 |固定データベースロール|説明|  
@@ -74,7 +74,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
  結果セットには、 [!INCLUDE[tsql](../../includes/tsql-md.md)]実行可能なステートメントと、データベースロールのメンバーによって実行可能なその他の特別な操作が含まれます。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Public**ロールのメンバーシップが必要です。  
+ ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>例  
  次のクエリでは、固定データベースロールが指定されていないため、すべての固定データベースロールの権限が返されます。  
@@ -90,6 +90,6 @@ GO
  [sp_droprolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [sp_helpdbfixedrole &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql.md)   
  [sp_srvrolepermission &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-srvrolepermission-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

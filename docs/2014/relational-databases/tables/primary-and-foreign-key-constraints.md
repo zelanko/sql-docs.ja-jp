@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fcda1522fdb8be83ec61df04898d19600ad04a3e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176817"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>主キー制約と外部キー制約
@@ -33,7 +33,7 @@ ms.locfileid: "78176817"
 
  [関連タスク](../tables/primary-and-foreign-key-constraints.md#Tasks)
 
-##  <a name="PKeys"></a> 主キー制約
+##  <a name="primary-key-constraints"></a><a name="PKeys"></a> 主キー制約
  テーブルには通常、テーブルの各行を一意に識別する値が格納された単一の列または複数の列の組み合わせがあります。 この列、または列の組み合わせを、テーブルの主キー (PK) と呼び、テーブルのエンティティが整合性を持つようにします。 主キー制約は一意なデータを保証するものであるため、通常は ID 列に対して定義されます。
 
  主キー制約をテーブルに対して指定すると、重複のないインデックスを [!INCLUDE[ssDE](../../includes/ssde-md.md)] が主キー列に対して自動的に作成し、データが一意になるようにします。 また、クエリの中で主キーが使用された場合は、このインデックスによってデータに高速にアクセスできます。 複数の列に一意キー制約が定義されている場合は、1 つの列内で値が重複してもかまいませんが、一意キー制約が定義された列に格納される値の組み合わせは一意である必要があります。
@@ -54,7 +54,7 @@ ms.locfileid: "78176817"
 
 -   CLR ユーザー定義型の列に対して主キーを定義する場合は、型の実装でバイナリ順がサポートされている必要があります。
 
-##  <a name="FKeys"></a> Foreign Key Constraints
+##  <a name="foreign-key-constraints"></a><a name="FKeys"></a> Foreign Key Constraints
  外部キー (FK) は、2 つのテーブルのデータ間にリンクを確立および設定することによって外部キー テーブルに格納できるデータを制御するための単一の列または複数の列の組み合わせです。 外部キー参照では、1 つのテーブルの主キー値が格納されている列が別のテーブルの 1 つ以上の列によって参照されたときに、2 つのテーブル間にリンクが作成されます。 この列は、2 番目のテーブルの外部キーになります。
 
  たとえば、 **Sales.SalesOrderHeader** テーブルには、 **Sales.SalesPerson** テーブルへの外部キー リンクが存在します。これは、販売注文と販売員の間に論理リレーションシップが存在するからです。 **SalesOrderHeader** テーブルの **SalesPersonID** 列は、 **SalesPerson** テーブルの主キー列と一致します。 また、 **SalesOrderHeader** テーブルの **SalesPersonID** 列は、 **SalesPerson** テーブルに対する外部キーです。 この外部キー リレーションシップを作成することによって、 **SalesPerson** テーブル内に存在しない **SalesPersonID** の値を **SalesOrderHeader** テーブルに挿入することはできなくなります。
@@ -82,8 +82,7 @@ ms.locfileid: "78176817"
 
  親テーブルの対応する行が更新または削除された場合に、外部キーを構成するすべての値が既定値に設定されるように設定します。 この制約を実行するには、すべての外部キー列に既定値が定義されている必要があります。 列が NULL 値を許容し、明示的な既定値が設定されていない場合は、列の既定値として NULL が暗黙的に使用されます。 INSTEAD OF UPDATE トリガーが設定されているテーブルには指定できません。
 
- CASCADE、SET NULL、SET DEFAULT および NO ACTION は、互いに参照関係にあるテーブルに対して組み合わせて使用することができます。 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] が NO ACTION を検出すると、関連する CASCADE、SET NULL および SET DEFAULT 操作が停止されロールバックされます。 DELETE ステートメントの実行によって、CASCADE、SET NULL、SET DEFAULT および NO ACTION 操作の組み合わせが適用される場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] が NO ACTION があるかどうかを調べる前にすべての CASCADE、SET NULL および SET DEFAULT 操作が適用されます。
+ CASCADE、SET NULL、SET DEFAULT および NO ACTION は、互いに参照関係にあるテーブルに対して組み合わせて使用することができます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] が NO ACTION を検出すると、関連する CASCADE、SET NULL および SET DEFAULT 操作が停止されロールバックされます。 DELETE ステートメントの実行によって、CASCADE、SET NULL、SET DEFAULT および NO ACTION 操作の組み合わせが適用される場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] が NO ACTION があるかどうかを調べる前にすべての CASCADE、SET NULL および SET DEFAULT 操作が適用されます。
 
 ### <a name="triggers-and-cascading-referential-actions"></a>トリガーと連鎖参照動作
  連鎖参照動作によって、AFTER UPDATE トリガーまたは AFTER DELETE トリガーは次のように起動します。
@@ -104,7 +103,7 @@ ms.locfileid: "78176817"
 
 -   INSTEAD OF トリガーを含んだテーブルに、連鎖動作を指定する REFERENCES 句を同時に指定することはできません。 ただし、連鎖動作の対象になるテーブルの AFTER トリガーは、別のテーブルやビューに対して INSERT、UPDATE、または DELETE ステートメントを実行し、そのオブジェクトに定義されている INSTEAD OF トリガーを起動できます。
 
-##  <a name="Tasks"></a> 関連タスク
+##  <a name="related-tasks"></a><a name="Tasks"></a> 関連タスク
  次の表は、主キー制約および外部キー制約に関連した一般的なタスクの一覧です。
 
 |タスク|トピック|

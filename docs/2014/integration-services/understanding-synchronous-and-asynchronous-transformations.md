@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 33037538a773d27c32522238b14e6ebfc2557eaf
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176101"
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>同期および非同期変換について
@@ -30,8 +30,7 @@ ms.locfileid: "78176101"
 
  同期変換の例としては、データ変換の変換があります。 受信した各行について、指定した列の値を変換し、その過程で行を送信します。 不連続の各変換操作は、データ セット内の他のすべての行とは無関係です。
 
- スクリプト[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]とプログラミングでは、コンポーネントの入力の ID を検索し、コンポーネントの出力の`SynchronousInputID`プロパティに割り当てることによって、同期変換を指定します。 これにより、入力内の各行を処理し、各行を指定された出力に自動的に送信するように、データ フロー エンジンに指示します。 各行を各出力に送信する場合、データを出力するための追加のコードを記述する必要はありません。 
-  `ExclusionGroup` プロパティを使用して、条件分割変換のように行を特定の出力グループのみに送信するように指定するには、`DirectRow` メソッドを呼び出して、各行に対して適切な送信先を選択する必要があります。 エラー出力がある場合は、`DirectErrorRow` を呼び出して、問題のある行を既定の出力ではなくエラー出力に送信する必要があります。
+ スクリプト[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]とプログラミングでは、コンポーネントの入力の ID を検索し、コンポーネントの出力の`SynchronousInputID`プロパティに割り当てることによって、同期変換を指定します。 これにより、入力内の各行を処理し、各行を指定された出力に自動的に送信するように、データ フロー エンジンに指示します。 各行を各出力に送信する場合、データを出力するための追加のコードを記述する必要はありません。 `ExclusionGroup` プロパティを使用して、条件分割変換のように行を特定の出力グループのみに送信するように指定するには、`DirectRow` メソッドを呼び出して、各行に対して適切な送信先を選択する必要があります。 エラー出力がある場合は、`DirectErrorRow` を呼び出して、問題のある行を既定の出力ではなくエラー出力に送信する必要があります。
 
 ## <a name="asynchronous-transformations"></a>非同期変換
  各行を他のすべての行と無関係に処理できない場合、デザインに非同期変換が必要になることがあります。 つまり、各行を処理するときにデータ フローに各行を渡すことはできませんが、データを非同期で、つまり入力とは異なるタイミングで出力する必要がある場合です。 たとえば、次のシナリオでは非同期変換が必要です。
@@ -49,7 +48,7 @@ ms.locfileid: "78176101"
 
  各入力行を出力に明示的にコピーすることによって、同期変換をエミュレートする非同期変換を作成することもできます。 この方法では、列の名前を変更したり、データ タイプやフォーマットを変換したりできます。 ただし、この方法を使用するとパフォーマンスは低下します。 Copy Column や Data Conversion などの組み込みの Integration Services コンポーネントを使用することによって、より高いパフォーマンスで同じ結果を得ることができます。
 
-![Integration Services アイコン (小)](media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
+![Integration Services アイコン (小)](media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
 
 ## <a name="see-also"></a>参照
  [スクリプトコンポーネントを使用した同期変換の作成](data-flow/transformations/script-component.md)[スクリプトコンポーネントを使用した非同期変換の作成](extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)[同期出力型のカスタム変換コンポーネントの開発](extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)[非同期出力型のカスタム変換コンポーネントの開発](extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)

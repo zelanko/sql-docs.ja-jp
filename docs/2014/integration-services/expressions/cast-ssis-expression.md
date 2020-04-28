@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b19b2e960aa2383568d3977d19368576f4178949
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176442"
 ---
 # <a name="cast-ssis-expression"></a>Cast (SSIS 式)
@@ -40,23 +40,22 @@ ms.locfileid: "78176442"
  *式*有効な式です。
 
 ## <a name="result-types"></a>戻り値の型
- 
-  *type_spec*のデータ型です。 詳細については、「 [Integration Services Data Types](../data-flow/integration-services-data-types.md)」を参照してください。
+ *type_spec*のデータ型です。 詳細については、「 [Integration Services データ型](../data-flow/integration-services-data-types.md)」を参照してください。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
  次の図は、有効なキャスト演算を示しています。
 
  ![データ型間の有効および無効なキャスト](../media/data-conversion.gif "データ型間の有効および無効なキャスト")
 
  一部のデータ型にキャストする場合、パラメーターが必要となります。 次の表に、パラメーターが必要なデータ型とそのパラメーターの一覧を示します。
 
-|データ型|パラメーター|例|
+|データの種類|パラメーター|例|
 |---------------|---------------|-------------|
 |DT_STR|*charcount*<br /><br /> *コードページ*|(DT_STR,30,1252) は、1252 コード ページを使用して、30 バイトまたは 30 文字を DT_STR データ型にキャストします。|
 |DT_WSTR|*Charcount*|(DT_WSTR,20) は、20 バイト ペアまたは 20 Unicode 文字を DT_WSTR データ型にキャストします。|
 |DT_BYTES|*Bytecount*|(DT_BYTES,50) は、50 バイトを DT_BYTES データ型にキャストします。|
-|DT_DECIMAL|*段階*|(DT_DECIMAL,2) は、数値を小数点以下 2 桁の DT_DECIMAL データ型にキャストします。|
-|DT_NUMERIC|*精度*<br /><br /> *段階*|(DT_NUMERIC,10,3) は、数値を有効桁数 10 桁で小数点以下 3 桁の DT_NUMERIC データ型にキャストします。|
+|DT_DECIMAL|*スケール*|(DT_DECIMAL,2) は、数値を小数点以下 2 桁の DT_DECIMAL データ型にキャストします。|
+|DT_NUMERIC|*[精度]*<br /><br /> *スケール*|(DT_NUMERIC,10,3) は、数値を有効桁数 10 桁で小数点以下 3 桁の DT_NUMERIC データ型にキャストします。|
 |DT_TEXT|*コードページ*|(DT_TEXT,1252) は、1252 コード ページを使用して、値を DT_TEXT データ型にキャストします。|
 
  文字列を DT_DATE にキャストする場合、またはその逆のキャストを行う場合、変換のロケールが使用されます。 ただし、ロケール設定で ISO 形式を使用するかどうかにかかわらず、日付は YYYY-MM-DD の ISO 形式となります。

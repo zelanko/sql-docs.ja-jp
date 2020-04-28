@@ -13,10 +13,10 @@ author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
 ms.openlocfilehash: f2640e9018f29385851839932572aeaa3ee91ad9
-ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "77600122"
 ---
 # <a name="run-database-experimentation-assistant-at-a-command-prompt"></a>コマンドプロンプトで Database Experimentation Assistant を実行する
@@ -44,7 +44,7 @@ ms.locfileid: "77600122"
 
 `Deacmd.exe`コマンドを使用して新しいワークロードキャプチャを開始するときに、次の追加オプションを使用できます。
 
-| オプション| [説明] |  
+| オプション| 説明 |  
 | --- | --- |
 | -n, --name | 必要トレースファイル名 |
 | -x、--format | 必要トレースの形式 (Trace = 0、Xevent = 1) |
@@ -72,7 +72,7 @@ ms.locfileid: "77600122"
 
 3. StartReplayCaptureTrace を使用して SQL Server を実行しているターゲットコンピューターでトレースキャプチャを開始します。
 
-    a.  SQL Server Management Studio (SSMS) で、<Dea_InstallPath\>\Scripts\StartReplayCaptureTrace.sql. を開きます。
+    a。  SQL Server Management Studio (SSMS) で、<Dea_InstallPath\>\Scripts\StartReplayCaptureTrace.sql. を開きます。
 
     b.  を`Set @durationInMins=0`実行して、指定した時間が経過するとトレースキャプチャが自動的に停止しないようにします。
 
@@ -86,7 +86,7 @@ ms.locfileid: "77600122"
 
     `DReplay replay -m "dreplaycontroller" -d "<Folder Path on Dreplay Controller>\IrfFolder" -o -s "SQL2016Target" -w "dreplaychild1,dreplaychild2,dreplaycild3,dreplaychild4"`
 
-    a.  ステータスを監視するには、コマンドプロンプトでを`DReplay status -f 1`実行します。
+    a。  ステータスを監視するには、コマンドプロンプトでを`DReplay status -f 1`実行します。
 
     b.  再生を停止するには (たとえば、パス% が予想より低い場合)、コマンドプロンプトでを実行`DReplay cancel`します。
 
@@ -115,7 +115,7 @@ ms.locfileid: "77600122"
 
 DEA コマンドを使用してトレースを分析する場合は、次の追加オプションを使用できます。
 
-| オプション| [説明] |  
+| オプション| 説明 |  
 | --- | --- |
 | -a、--traceA | 必要インスタンスのイベントファイルへのファイルパス。 C:\traces\Sql2008trace.trc. の例  ファイルのバッチがある場合は、最初のファイルを選択し、DEA がロールオーバーファイルを自動的にチェックします。 ファイルが blob 内にある場合は、イベントファイルをローカルに保存するフォルダーのパスを指定します。  C:\traces\ の例 |
 | -b、--traceB | 必要B インスタンスのイベントファイルへのファイルパス。 C:\traces\Sql2014trace.trc. の例 ファイルのバッチがある場合は、最初のファイルを選択し、DEA がロールオーバーファイルを自動的にチェックします。 ファイルが blob 内にある場合は、イベントファイルをローカルに保存するフォルダーのパスを指定します。  C:\traces\ の例 |

@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 19a30107af159c1cd87324290844172371f02752
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175571"
 ---
 # <a name="trace-data-mining-client-for-excel"></a>トレース (Excel 用のデータ マイニング クライアント)
@@ -48,8 +48,7 @@ ms.locfileid: "78175571"
  いずれかのテーブル分析ツールを使用して作業を保持する場合は、[**セッションモデルを使用**する] オプションをオフにして、モデルをサーバーに永続的に保存することができます。 また、[**トレーサー** ] ペインのステートメントをファイルにコピーして、後で作業を再作成できるようにすることもできます。
 
 ## <a name="understanding-sessions"></a>セッションについて
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のインスタンスに接続すると、データ マイニング アドインによりセッションが開始されます。 それぞれのセッションは、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンス上の既存のセッションを識別するセッション識別子を受け取ります。 ただし、セッション識別子は、セッションが有効であることを保証するわけではありません。 セッションは、タイムアウトした場合やセッションに関連付けられた接続が解除された場合に期限切れとなります。 セッションが期限切れとなり有効でなくなった場合、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は、セッションを終了し、進行中のトランザクションをロールバックします。 無効になったセッション識別子でメッセージを送信した場合は、指定したセッションが見つからないことを示すエラーが発生して、そのメッセージは失敗します。
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のインスタンスに接続すると、データ マイニング アドインによりセッションが開始されます。 それぞれのセッションは、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンス上の既存のセッションを識別するセッション識別子を受け取ります。 ただし、セッション識別子は、セッションが有効であることを保証するわけではありません。 セッションは、タイムアウトした場合やセッションに関連付けられた接続が解除された場合に期限切れとなります。 セッションが期限切れとなり有効でなくなった場合、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は、セッションを終了し、進行中のトランザクションをロールバックします。 無効になったセッション識別子でメッセージを送信した場合は、指定したセッションが見つからないことを示すエラーが発生して、そのメッセージは失敗します。
 
  一部のデータ マイニング モデルはサーバー上に明示的に格納されますが、セッション マイニング モデルおよび構造は格納されず、セッション データ マイニング アクティビティのレコードも保存されません。 一時的なマイニング モデルおよび構造はセッションを終了するとすぐに削除されるため、必要な作業を保存するまでは Excel ブックを閉じないように注意してください。
 

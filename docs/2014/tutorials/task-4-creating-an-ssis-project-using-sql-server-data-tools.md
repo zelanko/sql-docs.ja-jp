@@ -11,20 +11,18 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bcf16dc7d63e6a4acca6c30871666d1ffe996192
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78171721"
 ---
 # <a name="task-4-creating-an-ssis-project-using-sql-server-data-tools"></a>タスク 4: SQL Server Data Tools を使用して SSIS プロジェクトを作成する
   このタスクでは、 **SQL Server Data Tools**を使用して、クレンジングを自動化し、仕入先データを照合することにより、SSIS プロジェクトを作成します。
 
-1.  
-  **SQL Server Data Tools**を起動します。 [スタート] をクリックし、[**すべてのプログラム**]、[ **Microsoft SQL Server 2012**] の順にポイントし、[ **SQL Server Data Tools**] をクリックします。
+1.  **SQL Server Data Tools**を起動します。 [スタート] をクリックし、[**すべてのプログラム**]、[ **Microsoft SQL Server 2012**] の順にポイントし、[ **SQL Server Data Tools**] をクリックします。
 
-2.  
-  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。
+2.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。
 
 3.  [**インストールされたテンプレート**] ペインで [**ビジネスインテリジェンス**] を展開し、[ **Integration Services**] を選択します。
 
@@ -40,7 +38,7 @@ ms.locfileid: "78171721"
 
 7.  「 **.Dtsx** 」と入力し、 **enter**キーを押します。 **拡張子**が **.dtsx**のままであることを確認します。
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
  [タスク 5: データ フロー タスクを追加する](task-5-adding-data-flow-task.md)
 
 

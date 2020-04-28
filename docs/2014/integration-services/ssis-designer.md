@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 34079d17fd847b2a522b74f7ecdddcf3a0342b2c
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176111"
 ---
 # <a name="ssis-designer"></a>SSIS デザイナー
@@ -87,18 +87,16 @@ ms.locfileid: "78176111"
 ### <a name="package-explorer-tab"></a>[パッケージ エクスプローラー] タブ
  パッケージは、タスク、接続マネージャー、変数、その他の要素が多数含まれていて複雑な場合があります。 パッケージをエクスプローラー ビューで表示すると、パッケージ要素の全一覧を確認できます。
 
- 詳細については、「[パッケージ オブジェクトを表示する](view-package-objects.md)」を参照してください。
+ 詳細については、「 [パッケージ オブジェクトを表示する](view-package-objects.md)」を参照してください。
 
 #### <a name="progressexecution-result-tab"></a>[進行状況] タブと [実行結果] タブ
  パッケージの実行中は、 **[進行状況]** タブにパッケージの実行の進行状況が表示されます。 パッケージの実行が完了すると、 **[実行結果]** タブに実行結果が表示され、そのまま使用できます。
 
 > [!NOTE]
->  
-  **[進行状況]** タブでのメッセージの表示を有効または無効にするには、 **[SSIS]** メニューの **[進行状況レポートのデバッグ]** オプションを切り替えます。
+>  **[進行状況]** タブでのメッセージの表示を有効または無効にするには、 **[SSIS]** メニューの **[進行状況レポートのデバッグ]** オプションを切り替えます。
 
 ##### <a name="connection-managers-area"></a>[接続マネージャー] 領域
- パッケージで使用する接続マネージャーを追加および変更するには、 **[接続マネージャー]** 領域を使用します。 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、テキスト ファイル、OLE DB データベース、.NET プロバイダーなど、さまざまなデータ ソースに接続するための接続マネージャーがあります。
+ パッケージで使用する接続マネージャーを追加および変更するには、 **[接続マネージャー]** 領域を使用します。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、テキスト ファイル、OLE DB データベース、.NET プロバイダーなど、さまざまなデータ ソースに接続するための接続マネージャーがあります。
 
  詳細については、「[Integration Services (SSIS) の接続](connection-manager/integration-services-ssis-connections.md)」および「[接続マネージャーを作成する](../../2014/integration-services/create-connection-managers.md)」を参照してください。
 

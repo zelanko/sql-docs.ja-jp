@@ -21,10 +21,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e7e79307e2c913841ae1e017e6a5c180dfd55b6b
-ms.sourcegitcommit: 9b8b71cab6e340f2cb171397f66796d7a76c497e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "77213967"
 ---
 # <a name="clr-stored-procedures"></a>CLR ストアド プロシージャ
@@ -42,18 +42,13 @@ ms.locfileid: "77213967"
  CLR ストアド プロシージャに渡すパラメーターには、マネージド コード内に同等のパラメーターを持つネイティブの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型であればどの型でも使用できます。 プロシージャを作成する [!INCLUDE[tsql](../../includes/tsql-md.md)] 構文では、これらの型には最も適切なネイティブ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と同等の型を指定する必要があります。 型変換の詳細については、「 [CLR パラメーターデータのマッピング](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)」を参照してください。  
   
 ### <a name="table-valued-parameters"></a>テーブル値パラメーター  
- テーブル値パラメーター (TVP) とは、プロシージャや関数に渡されるユーザー定義のテーブル型です。TVP を使用すると、複数行のデータを効率的にサーバーに渡すことができます。 TVP の機能はパラメーター配列に似ていますが、より柔軟性が高く、[!INCLUDE[tsql](../../includes/tsql-md.md)] との統合も緊密です。 テーブル値パラメーターを使用するとパフォーマンスが向上する可能性もあります。 また、サーバーへのラウンド トリップを減らすのにも役立ちます。 スカラー パラメーターのリストを使用するなどしてサーバーに複数の要求を送信する代わりに、データを TVP としてサーバーに送信できます。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のプロセスで実行されているマネージド ストアド プロシージャやマネージド関数にユーザー定義のテーブル型をテーブル値パラメーターとして渡したり、戻り値として受け取ったりすることはできません。 Tvp の詳細については、「[データベースエンジン&#41;&#40;テーブル値パラメーターの使用](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)」を参照してください。  
+ テーブル値パラメーター (TVP) とは、プロシージャや関数に渡されるユーザー定義のテーブル型です。TVP を使用すると、複数行のデータを効率的にサーバーに渡すことができます。 TVP の機能はパラメーター配列に似ていますが、より柔軟性が高く、[!INCLUDE[tsql](../../includes/tsql-md.md)] との統合も緊密です。 テーブル値パラメーターを使用するとパフォーマンスが向上する可能性もあります。 また、サーバーへのラウンド トリップを減らすのにも役立ちます。 スカラー パラメーターのリストを使用するなどしてサーバーに複数の要求を送信する代わりに、データを TVP としてサーバーに送信できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のプロセスで実行されているマネージド ストアド プロシージャやマネージド関数にユーザー定義のテーブル型をテーブル値パラメーターとして渡したり、戻り値として受け取ったりすることはできません。 Tvp の詳細については、「[データベースエンジン&#41;&#40;テーブル値パラメーターの使用](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)」を参照してください。  
   
 ## <a name="returning-results-from-clr-stored-procedures"></a>CLR ストアド プロシージャから結果を返す  
- 
-  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ストアド プロシージャからの情報はいくつかの形式で返すことができます。 出力パラメーター、表形式の結果、およびメッセージの形式を使用できます。  
+ [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ストアド プロシージャからの情報はいくつかの形式で返すことができます。 出力パラメーター、表形式の結果、およびメッセージの形式を使用できます。  
   
 ### <a name="output-parameters-and-clr-stored-procedures"></a>OUTPUT パラメーターと CLR ストアド プロシージャ  
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャと同様に、OUTPUT パラメーターを使用して [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ストアド プロシージャから情報を返すことができます。 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャの作成に使用する [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] DML 構文は、[!INCLUDE[tsql](../../includes/tsql-md.md)] で記述されたストアド プロシージャの作成に使用する構文と同じです。 
-  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] クラスの実装コードの対応するパラメーターは、引数として参照渡しのパラメーターを使用する必要があります。 Visual Basic では、C# と同じように出力パラメーターがサポートされないことに注意してください。 次に示すように、パラメーターを参照渡し\<で指定し、出力パラメーターを表す Out () > 属性を適用する必要があります。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャと同様に、OUTPUT パラメーターを使用して [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ストアド プロシージャから情報を返すことができます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャの作成に使用する [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] DML 構文は、[!INCLUDE[tsql](../../includes/tsql-md.md)] で記述されたストアド プロシージャの作成に使用する構文と同じです。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] クラスの実装コードの対応するパラメーターは、引数として参照渡しのパラメーターを使用する必要があります。 Visual Basic では、C# と同じように出力パラメーターがサポートされないことに注意してください。 次に示すように、パラメーターを参照渡し\<で指定し、出力パラメーターを表す Out () > 属性を適用する必要があります。  
   
 ```vb
 Imports System.Runtime.InteropServices  
@@ -140,15 +135,12 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
  *Sum*が`int` SQL Server データ型として宣言され、clr ストアドプロシージャで定義されている*値*パラメーターが`SqlInt32` clr データ型として指定されていることに注意してください。 呼び出し元のプログラムが clr ストアドプロシージャを実行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]すると、 `SqlInt32`によって自動的に`int` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] clr データ型がデータ型に変換されます。  変換できる CLR データ型と変換できない CLR データ型の詳細については、「 [Clr パラメーターデータのマッピング](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)」を参照してください。  
   
 ### <a name="returning-tabular-results-and-messages"></a>表形式の結果とメッセージを返す  
- 表形式の結果とメッセージは、`SqlPipe` クラスの `Pipe` プロパティを使用して取得した `SqlContext` オブジェクトを使用してクライアントに返されます。 
-  `SqlPipe` オブジェクトには `Send` メソッドがあります。 
-  `Send` メソッドを呼び出すことにより、パイプ経由で呼び出し側のアプリケーションにデータを送信できます。  
+ 表形式の結果とメッセージは、`SqlPipe` クラスの `Pipe` プロパティを使用して取得した `SqlContext` オブジェクトを使用してクライアントに返されます。 `SqlPipe` オブジェクトには `Send` メソッドがあります。 `Send` メソッドを呼び出すことにより、パイプ経由で呼び出し側のアプリケーションにデータを送信できます。  
   
  次に示すのは、`SqlPipe.Send` を送信したり、単純にテキスト文字列を送信するために使用する、`SqlDataReader` メソッドのオーバーロードです。  
   
 ###### <a name="returning-messages"></a>メッセージを返す  
- 
-  `SqlPipe.Send(string)` はクライアント アプリケーションへのメッセージの送信に使用します。 メッセージのテキストの上限は 8,000 文字です。 メッセージが 8,000 文字を超えると、そのメッセージは切り詰められます。  
+ `SqlPipe.Send(string)` はクライアント アプリケーションへのメッセージの送信に使用します。 メッセージのテキストの上限は 8,000 文字です。 メッセージが 8,000 文字を超えると、そのメッセージは切り詰められます。  
   
 ###### <a name="returning-tabular-results"></a>表形式の結果を返す  
  クエリの結果を直接クライアントに送信するには、`Execute` オブジェクトの `SqlPipe` メソッドのいずれかのオーバーロードを使用します。 マネージド メモリにコピーされることなくデータがネットワーク バッファーに転送されるので、これはクライアントに結果を返す最も効率的な方法です。 次に例を示します。  
@@ -389,8 +381,7 @@ vbc /t:library /out:MyFirstUdp.dll MyFirstUdp.vb
 ```  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降では、`/clr:pure` を指定してコンパイルした Visual C++ のデータベース オブジェクト (ストアド プロシージャなど) は実行できません。  
+>  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降では、`/clr:pure` を指定してコンパイルした Visual C++ のデータベース オブジェクト (ストアド プロシージャなど) は実行できません。  
   
  生成されるアセンブリは登録でき、次の DDL を使用してエントリ ポイントを呼び出すことができます。  
   

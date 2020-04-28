@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 40f354f190093c0c689e708301bed9fcba8c87c3
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176225"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>スクリプト コンポーネント エディターでのスクリプト コンポーネントの構成
@@ -77,11 +77,9 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
 >  エラー行の自動処理のスクリプト コンポーネントでエラー出力として出力を直接構成することはできませんが、別の出力を作成するか、可能な場合はスクリプトを使用してこの出力に行を送信することによって、エラー出力の機能を再現することができます。 詳細については、「[スクリプト コンポーネントに対するエラー出力のシミュレート](../../data-flow/transformations/script-component.md)」を参照してください。
 
 #### <a name="exclusiongroup-and-synchronousinputid-properties-of-outputs"></a>出力の ExclusionGroup プロパティおよび SynchronousInputID プロパティ
- 
-  `ExclusionGroup` プロパティは、同期出力型の変換でのみ、0 以外の値になります。この場合、コードはフィルターまたは分岐を実行し、各行を、`ExclusionGroup` の 0 以外の同じ値を共有する出力の 1 つに送ります。 たとえば変換は、行を既定の出力またはエラー出力のどちらかに送信できます。 この場合に追加の出力を作成するには、`SynchronousInputID` プロパティの値が、コンポーネントの入力の `ID` と一致する整数に設定されていることを確認します。
+ `ExclusionGroup` プロパティは、同期出力型の変換でのみ、0 以外の値になります。この場合、コードはフィルターまたは分岐を実行し、各行を、`ExclusionGroup` の 0 以外の同じ値を共有する出力の 1 つに送ります。 たとえば変換は、行を既定の出力またはエラー出力のどちらかに送信できます。 この場合に追加の出力を作成するには、`SynchronousInputID` プロパティの値が、コンポーネントの入力の `ID` と一致する整数に設定されていることを確認します。
 
- 
-  `SynchronousInputID` プロパティは、同期出力型の変換でのみ、0 以外の値になります。 このプロパティの値が 0 の場合、出力が非同期型であることを示します。 同期出力では、新しい行を追加せず、選択した出力に行が渡されます。このプロパティには、コンポーネントの入力の `ID` が含まれている必要があります。
+ `SynchronousInputID` プロパティは、同期出力型の変換でのみ、0 以外の値になります。 このプロパティの値が 0 の場合、出力が非同期型であることを示します。 同期出力では、新しい行を追加せず、選択した出力に行が渡されます。このプロパティには、コンポーネントの入力の `ID` が含まれている必要があります。
 
 > [!NOTE]
 >  [**スクリプト変換エディター** ] によって最初の出力が作成さ`SynchronousInputID`れると、エディターによっ`ID`て、出力のプロパティがコンポーネントの入力のに設定されます。 しかし、その後の出力時には、出力の `SynchronousInputID` プロパティが 0 に設定されます。
@@ -102,8 +100,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
 >  [!INCLUDE[ssISversion10](../../../includes/ssisversion10-md.md)] およびそれ以降のバージョンでは、すべてのスクリプトがプリコンパイル済みです。 以前のバージョンでは、タスクの `Precompile` プロパティを設定することによって、スクリプトをプリコンパイルするかどうかを指定していました。
 
 #### <a name="validateexternalmetadata-property"></a>ValidateExternalMetadata プロパティ
- 
-  `ValidateExternalMetadata` プロパティのブール値は、コンポーネントがデザイン時に外部データ ソースに対する検証を実行するかどうか、または実行時まで検証を延期するかどうかを指定します。 既定では、このプロパティの値は `True` です。つまり、外部メタデータはデザイン時と実行時の両方で検証されます。 外部データ ソースをデザイン時に使用しない場合、たとえば、パッケージの実行時にのみ外部データ ソースをダウンロードしたり、変換先を作成する場合には、このプロパティの値を `False` に設定できます。
+ `ValidateExternalMetadata` プロパティのブール値は、コンポーネントがデザイン時に外部データ ソースに対する検証を実行するかどうか、または実行時まで検証を延期するかどうかを指定します。 既定では、このプロパティの値は `True` です。つまり、外部メタデータはデザイン時と実行時の両方で検証されます。 外部データ ソースをデザイン時に使用しない場合、たとえば、パッケージの実行時にのみ外部データ ソースをダウンロードしたり、変換先を作成する場合には、このプロパティの値を `False` に設定できます。
 
 #### <a name="readonlyvariables-and-readwritevariables-properties"></a>ReadOnlyVariables プロパティおよび ReadWriteVariables プロパティ
  既存の変数をコンマ区切りリストとして、これらのプロパティの値に入力すると、スクリプト コンポーネントのコード内で、その変数に読み取り専用アクセスまたは読み取り/書き込みアクセスできるようになります。 変数には、自動生成された基本クラスの <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadOnlyVariables%2A> および <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadWriteVariables%2A> プロパティを介して、コード内でアクセスします。 詳しくは、「[スクリプト コンポーネントでの変数の使用](using-variables-in-the-script-component.md)」をご覧ください。
@@ -120,7 +117,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
 ### <a name="connection-managers-page-of-the-script-transformation-editor"></a>[スクリプト変換エディター] の [接続マネージャー] ページ
  **[スクリプト変換エディター]** の **[接続マネージャー]** ページでは、カスタム スクリプトで使用する接続マネージャーを追加および削除します。 通常、変換元または変換先コンポーネントを作成する場合は、接続マネージャーを参照する必要があります。
 
- このメタデータに基づいて生成されるコード プロジェクトの `ComponentWrapper` プロジェクト アイテムには、選択した各接続マネージャー用の型指定されたアクセサー プロパティを格納する `Connections` コレクション クラスが含まれます。 型指定された各アクセサー プロパティの名前は、接続マネージャー自体の名前と同じであり、<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSConnectionManager100> のインスタンスとして、接続マネージャーへの参照を返します。 たとえば、エディターの **[接続マネージャー]** ページに `MyADONETConnection` という名前の接続マネージャーを追加した場合、次のコードを使用して、スクリプト内のその接続マネージャーへの参照を取得できます。
+ このメタデータに基づいて生成されるコード プロジェクトの `ComponentWrapper` プロジェクト アイテムには、選択した各接続マネージャー用の型指定されたアクセサー プロパティを格納する `Connections` コレクション クラスが含まれます。 型指定された各アクセサー プロパティの名前は、接続マネージャー自体の名前と同じであり、<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSConnectionManager100> のインスタンスとして、接続マネージャーへの参照を返します。 たとえば、エディターの `MyADONETConnection`[接続マネージャー]**ページに** という名前の接続マネージャーを追加した場合、次のコードを使用して、スクリプト内のその接続マネージャーへの参照を取得できます。
 
 ```vb
 Dim myADONETConnectionManager As IDTSConnectionManager100 = _
@@ -129,7 +126,7 @@ Dim myADONETConnectionManager As IDTSConnectionManager100 = _
 
  詳しくは、「[スクリプト コンポーネントでのデータ ソースへの接続](connecting-to-data-sources-in-the-script-component.md)」をご覧ください。
 
-![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
+![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
 
 ## <a name="see-also"></a>参照
  [スクリプト コンポーネントのコーディングおよびデバッグ](coding-and-debugging-the-script-component.md)

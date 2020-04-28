@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4499a0a099c92a9b1802cc905da3d0a473808eeb
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177230"
 ---
 # <a name="task-6-setting-synonyms"></a>タスク 6: シノニムを設定する
@@ -36,7 +36,7 @@ ms.locfileid: "78177230"
 
      ![シノニムとしての米国と USA](../../2014/tutorials/media/et-settingsynonyms-02.jpg "シノニムとしての米国と USA")
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
  [タスク 7: 複合ドメインを作成する](../../2014/tutorials/task-7-creating-a-composite-domain.md)
 
 

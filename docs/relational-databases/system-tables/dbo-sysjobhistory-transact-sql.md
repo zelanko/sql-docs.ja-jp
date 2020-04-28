@@ -20,33 +20,31 @@ ms.assetid: 1b1fcdbb-2af2-45e6-bf3f-e8279432ce13
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cc488958513f4a84ac776ff26f1fe2c867f8fa74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76761836"
 ---
 # <a name="dbosysjobhistory-transact-sql"></a>dbo. sysjobhistory (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで実行予定のジョブに関する情報を格納します。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで実行予定のジョブに関する情報を格納します。
   
 > [!NOTE]
 > ほとんどの場合、データは、ジョブステップが完了した後にのみ更新されます。テーブルには、通常、現在進行中のジョブステップのレコードが含まれていませんが、場合によっては、基に*なるプロセスが*進行中のジョブステップに関する情報を提供します。
 
 このテーブルは、 **msdb**データベースに格納されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|行の一意識別子。|  
-|**job_id**|**UNIQUEIDENTIFIER**|ジョブ ID。|  
+|**job_id**|**uniqueidentifier**|ジョブ ID。|  
 |**step_id**|**int**|ジョブ ステップの ID。|  
 |**step_name**|**sysname**|ステップの名前。|  
 |**sql_message_id**|**int**|ジョブが失敗[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]した場合に返されるエラーメッセージの ID。|  
 |**sql_severity**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラーの重大度。|  
-|**メッセージ**|**nvarchar(4000)**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラーのテキスト (存在する場合)。|  
+|**message**|**nvarchar (4000)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラーのテキスト (存在する場合)。|  
 |**run_status**|**int**|ジョブ実行のステータス。<br /><br /> **0** = 失敗<br /><br /> **1** = 成功<br /><br /> **2** = 再試行<br /><br /> **3** = キャンセル<br /><br />**4** = 実行中|  
 |**run_date**|**int**|ジョブまたはステップの実行を開始した日付。 進行中の履歴については、履歴が書き込まれた日付/時刻です。|  
 |**run_time**|**int**|ジョブまたはステップが**HHMMSS**形式で開始された時刻。|  

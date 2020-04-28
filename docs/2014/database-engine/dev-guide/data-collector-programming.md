@@ -13,14 +13,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 889158e04cbadb63c712ead73a61a7002ea61eae
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175371"
 ---
 # <a name="data-collector-programming"></a>データ コレクターのプログラミング
-  
   <xref:Microsoft.SqlServer.Management.Collector> のデータ コレクター API を使用すると、オブジェクト モデルを通じてすべての構成操作をプログラムで制御できます。 また、API を使用するデータ収集操作の多くは、サーバーにインストールされているストアド プロシージャとして実装されます。
 
  次の図では、データ コレクター オブジェクト モデルの主要な要素を示します。

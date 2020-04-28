@@ -15,16 +15,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3d1ad35a40e4218bfef44daeec01ee03fc0c7c78
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175991"
 ---
 # <a name="data-import-master-data-services"></a>データのインポート (Master Data Services)
-  
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]内のデータのモデルを作成すると、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースでデータの追加と変更ができるようになります。   
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ステージング テーブル、ストアド プロシージャ、マスター データ マネージャーを使います。
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]内のデータのモデルを作成すると、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースでデータの追加と変更ができるようになります。   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ステージング テーブル、ストアド プロシージャ、マスター データ マネージャーを使います。
 
  また、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]を使用して、MDS リポジトリ ([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]データベース) にデータを追加することもできます。 詳細については、「[データ &#40;Excel 用 MDS アドイン&#41;のパブリッシュ](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)」を参照してください。
 
@@ -38,16 +36,14 @@ ms.locfileid: "78175991"
 
  データの追加と更新には、次の主要なタスクが含まれます。
 
-1.  
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースのステージング テーブルにデータを読み込みます。
+1.  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースのステージング テーブルにデータを読み込みます。
 
 2.  ステージング テーブルから適切な [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] テーブルにデータを読み込みます。
 
      ステージング ストアド プロシージャや [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] を使って、データを読み込みます。
 
 > [!NOTE]
->  
-  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]では、 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] ステージング プロセスのサポートは推奨されなくなりました。
+>  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] では、[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] ステージング プロセスのサポートは非推奨とされました。
 
 ## <a name="deactivating-and-deleting-members"></a>メンバーの非アクティブ化と削除
  非アクティブにしたメンバーは、再びアクティブにできます。 メンバーを再びアクティブにすると、階層およびコレクションにおける属性とメンバーシップが復元されます。 以前のトランザクションはすべてそのままです。 マスター データ マネージャーの **[バージョン管理]** 機能領域の管理者は、非アクティブになっているトランザクションを表示できます。
@@ -71,14 +67,13 @@ ms.locfileid: "78175991"
 -   リーフ メンバーまたは統合メンバーの兄弟として統合メンバー。
 
 ## <a name="staging-tables-and-stored-procedures"></a>ステージング テーブルとストアド プロシージャ
- 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースには、データを設定できる、次の種類のステージング テーブルが含まれています。
+ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースには、データを設定できる、次の種類のステージング テーブルが含まれています。
 
--   [リーフメンバーステージングテーブル &#40;マスターデータサービス&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)
+-   [リーフ メンバー ステージング テーブル (マスター データ サービス)](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)
 
--   [統合メンバーステージングテーブル &#40;マスターデータサービス&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)
+-   [統合メンバー ステージング テーブル (マスター データ サービス)](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)
 
--   [リレーションシップステージングテーブル &#40;マスターデータサービス&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md)
+-   [リレーションシップ ステージング テーブル (マスター データ サービス)](../../2014/master-data-services/relationship-staging-table-master-data-services.md)
 
  モデル内の各エンティティには、ステージング テーブルがあります。 テーブル名は、対応するエンティティと、リーフ メンバーなどのエンティティ型を示します。 次の画像は、通貨、顧客、製品のエンティティのステージング テーブルを示しています。
 
@@ -86,8 +81,7 @@ ms.locfileid: "78175991"
 
  テーブルの名前はエンティティの作成時に指定され、変更できません。 ステージング テーブルの名前に _1 またはその他の数値が含まれる場合は、エンティティの作成時にその名前のテーブルが既に存在していたことを示します。
 
- 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] には、次の種類のステージング ストアド プロシージャが含まれています。
+ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] には、次の種類のステージング ストアド プロシージャが含まれています。
 
 -   stg.udp_\<name>_Leaf
 
@@ -104,13 +98,12 @@ ms.locfileid: "78175991"
 ## <a name="logging-transactions"></a>トランザクションのログ記録
  データまたはリレーションシップのインポート時または更新時に発生するトランザクションは、すべてログに記録することができます。 ストアド プロシージャのオプションによって、このログ記録が可能になります。 ステージング処理を [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]から開始する場合、ログ記録は行われません。
 
- 
-  [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]では、 **[すべてのステージング トランザクションをログに記録]** 設定がステージング データのこのメソッドに適用されません。
+ [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]では、 **[すべてのステージング トランザクションをログに記録]** 設定がステージング データのこのメソッドに適用されません。
 
 ## <a name="related-content"></a>関連コンテンツ
 
--   [検証 &#40;マスターデータサービス&#41;](../../2014/master-data-services/validation-master-data-services.md)
+-   [検証 (マスター データ サービス)](../../2014/master-data-services/validation-master-data-services.md)
 
--   [ビジネスルール &#40;マスターデータサービス&#41;](../../2014/master-data-services/business-rules-master-data-services.md)
+-   [ビジネス ルール (マスター データ サービス)](../../2014/master-data-services/business-rules-master-data-services.md)
 
 

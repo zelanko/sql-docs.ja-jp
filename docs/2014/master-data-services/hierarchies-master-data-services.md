@@ -14,14 +14,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e2b606fae657fdc7d5652e4f33c6d14ccff690c9
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176021"
 ---
 # <a name="hierarchies-master-data-services"></a>階層 (Master Data Services)
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]の階層とは、次の処理に使用できるツリー構造です。
 
 -   編成を目的として、類似するメンバーをグループ化する。
@@ -58,20 +57,20 @@ ms.locfileid: "78176021"
 |タスクの説明|トピック|
 |----------------------|-----------|
 |明示的階層とコレクションに対してエンティティを有効にする。|[明示的階層およびコレクションに対してエンティティを有効にする &#40;マスターデータサービス&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|
-|明示的階層を作成する。|[明示的階層 &#40;マスターデータサービスを作成し&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)|
-|派生階層を作成する。|[派生階層 &#40;マスターデータサービスを作成し&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)|
-|既存の派生階層のレベルを非表示にするか、または削除する。|[派生階層のレベルの非表示または削除 &#40;マスターデータサービス&#41;](../../2014/master-data-services/hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md)|
+|明示的階層を作成する。|[明示的階層を作成する (マスター データ サービス)](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)|
+|派生階層を作成する。|[派生階層を作成する (マスター データ サービス)](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)|
+|既存の派生階層のレベルを非表示にするか、または削除する。|[派生階層のレベルを非表示にするか削除する (マスター データ サービス)](../../2014/master-data-services/hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md)|
 
 ## <a name="related-content"></a>関連コンテンツ
 
--   [明示的階層 &#40;マスターデータサービス&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)
+-   [明示的階層 (マスター データ サービス)](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)
 
--   [派生階層 &#40;マスターデータサービス&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)
+-   [派生階層 (マスター データ サービス)](../../2014/master-data-services/derived-hierarchies-master-data-services.md)
 
--   [再帰型階層 &#40;マスターデータサービス&#41;](../../2014/master-data-services/recursive-hierarchies-master-data-services.md)
+-   [再帰型階層 (マスター データ サービス)](../../2014/master-data-services/recursive-hierarchies-master-data-services.md)
 
--   [明示的なキャップを持つ派生階層 &#40;マスターデータサービス&#41;](../../2014/master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)
+-   [明示的なキャップを持つ派生階層 (マスター データ サービス)](../../2014/master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)
 
--   [コレクション &#40;マスターデータサービス&#41;](collections-master-data-services.md)
+-   [コレクション (マスター データ サービス)](collections-master-data-services.md)
 
 

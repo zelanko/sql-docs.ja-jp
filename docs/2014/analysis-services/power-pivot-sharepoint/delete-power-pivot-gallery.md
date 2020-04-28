@@ -11,14 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1236a9cdffc4dd06764da1f2988df80d568798c
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175651"
 ---
 # <a name="delete-powerpivot-gallery"></a>PowerPivot ギャラリーの削除
-  
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーを削除すると、ギャラリーのアイテムもすべて削除されます。削除されるアイテムには、スケジュール設定されたデータ更新が構成されている [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックのデータ更新履歴が含まれます。
 
 > [!NOTE]
@@ -30,8 +29,7 @@ ms.locfileid: "78175651"
 
 1.  [設定] [ ![SharePoint の設定](../media/as-sharepoint2013-settings-gear.gif "SharePoint の設定")] をクリックし、[**サイトの設定**] をクリックします。
 
-2.  
-  **[サイトの設定]** をクリックします。
+2.  **[サイトの設定]** をクリックします。
 
 3.  [サイトの管理] の **[サイトのライブラリとリスト]** をクリックします。
 
@@ -41,11 +39,9 @@ ms.locfileid: "78175651"
 
 ### <a name="delete-powerpivot-gallery-sharepoint-2010"></a>SharePoint 2010 で PowerPivot ギャラリーを削除する
 
-1.  
-  **[サイトの操作]** をクリックします。
+1.  **[サイトの操作]** をクリックします。
 
-2.  
-  **[サイトの設定]** をクリックします。
+2.  **[サイトの設定]** をクリックします。
 
 3.  [サイトの管理] の **[サイトのライブラリとリスト]** をクリックします。
 

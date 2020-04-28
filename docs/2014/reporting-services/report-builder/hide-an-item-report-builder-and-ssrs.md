@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d0eb06c9136179a075057791f88bf2d80e187026
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176883"
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>アイテムを非表示にする (レポート ビルダーおよび SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "78176883"
     > [!NOTE]
     >  テーブルまたはマトリックス データ領域全体を選択するには、領域内をクリックして選択し、行ハンドル、列ハンドル、またはコーナー ハンドルを右クリックして、 **[Tablix のプロパティ]** をクリックします。
 
-2.  **[表示]** をクリックします。
+2.  [**表示] をクリックします。**
 
 3.  **[レポートの初期実行時]** で、レポートを初めて表示する際にアイテムを非表示にするかどうかを指定します。
 
@@ -51,7 +51,7 @@ ms.locfileid: "78176883"
         >  表示/非表示を設定する式を指定する場合、次の図のように、レポート アイテムの Hidden プロパティを設定します。 この値が False の場合、式の評価によってレポート アイテムが表示され、値が True の場合、レポート アイテムは非表示になります。 
         > ![[プロパティ] の [表示] のダイアログと [非表示] プロパティ](../media/hiddenproperty-propertiesvisibility.png "[プロパティ] の [表示] のダイアログと [非表示] プロパティ")
 
-4.  **[OK]** を 2 回クリックします。
+4.  [**OK**] を 2 回クリックします。
 
 ### <a name="to-hide-static-rows-in-a-table-matrix-or-list"></a>テーブル、マトリックス、または一覧の静的行を非表示にするには
 

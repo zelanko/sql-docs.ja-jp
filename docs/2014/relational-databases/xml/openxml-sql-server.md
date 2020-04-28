@@ -24,10 +24,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a40eb3451ed249cf1ac582179fbda67e04fdfb3e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174051"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQLServer)
@@ -44,7 +44,7 @@ ms.locfileid: "78174051"
 
  次の図は、この処理を示しています。
 
- ![OPENXML で XML を解析する](../../database-engine/media/xmlsp.gif "OPENXML で解析された XML")
+ ![OPENXML で XML を解析する](../../database-engine/media/xmlsp.gif "OPENXML で XML を解析する")
 
  OPENXML を理解するには、XPath クエリと XML を詳しく理解している必要があります。 SQL Server での XPath のサポートの詳細については、「 [SQLXML 4.0 での XPath クエリの使用](../sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md)」を参照してください。
 

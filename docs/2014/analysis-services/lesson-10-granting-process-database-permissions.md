@@ -11,14 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aca2cd956850de245f507e8cf24b93e87404429b
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174295"
 ---
 # <a name="granting-process-database-permissions"></a>データベースの処理権限の許可
-  
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のインスタンスをインストールすると、そのインスタンス内の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] サーバー管理者ロールのすべてのメンバーは、サーバー全体について [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のインスタンス内で任意のタスクを実行する権限を与えられます。 既定では、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンス内のオブジェクトを管理および表示する権限は他のユーザーに一切与えられません。
 
  サーバー管理者ロールのメンバーは、他のユーザーをロールのメンバーにすることにより、サーバー全体にわたる管理アクセス権をそのユーザーに許可できます。 また、データベース レベルで制限付きの、または完全な管理権限やアクセス権を他のユーザーに付与することで、より狭い範囲の権限をそのユーザーに与えることもできます。 制限付きの管理権限として、データベース レベル、キューブ レベル、またはディメンション レベルでの定義の処理権限や読み取り権限があります。
@@ -29,8 +28,7 @@ ms.locfileid: "78174295"
 
 1.  ソリューション エクスプローラーで **[ロール]** を右クリックし、 **[新しいロール]** をクリックして、ロール デザイナーを開きます。
 
-2.  
-  **[データベースの処理]** チェック ボックスをオンにします。
+2.  **[データベースの処理]** チェック ボックスをオンにします。
 
 3.  プロパティウィンドウで、この新しいロールの**Name**プロパティをに`Process Database Objects Role`変更します。
 
@@ -50,8 +48,7 @@ ms.locfileid: "78174295"
 
      このロールのメンバーにはこのデータベース内のすべてのディメンション オブジェクトを処理する権限が与えられ、既定では、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial データベース内の各ディメンション オブジェクトにアクセスするための読み取り権限も与えられます。
 
-8.  
-  **[ビルド]** メニューの **[Analysis Services Tutorial の配置]** をクリックします。
+8.  **[ビルド]** メニューの **[Analysis Services Tutorial の配置]** をクリックします。
 
      これで、Process Database Objects セキュリティ ロールが正常に定義され、配置されました。 キューブが実稼働環境に配置された後、その配置されたキューブの管理者は、ユーザーをこのロールに追加することにより、処理作業を必要に応じて特定のユーザーに委任することができます。
 
@@ -59,6 +56,6 @@ ms.locfileid: "78174295"
 >  レッスン 10 の操作内容が反映されたプロジェクトを入手するには、サンプルをダウンロードしてインストールしてください。 詳細については、「 [Analysis Services 多次元モデリング チュートリアル用のサンプル データおよびプロジェクトのインストール](install-sample-data-and-projects.md)」を参照してください。
 
 ## <a name="see-also"></a>参照
- [ロールとアクセス許可 &#40;Analysis Services&#41;](multidimensional-models/roles-and-permissions-analysis-services.md)
+ [ロールと権限 &#40;Analysis Services&#41;](multidimensional-models/roles-and-permissions-analysis-services.md)
 
 

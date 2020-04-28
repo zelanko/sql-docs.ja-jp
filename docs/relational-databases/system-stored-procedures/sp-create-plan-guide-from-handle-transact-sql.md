@@ -18,10 +18,10 @@ ms.assetid: 02cfb76f-a0f9-4b42-a880-1c3e7d64fe41
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a5e4ad5d6f3d0b2e35633694d65e58dd782cc3ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75688254"
 ---
 # <a name="sp_create_plan_guide_from_handle-transact-sql"></a>sp_create_plan_guide_from_handle (Transact-sql)
@@ -53,7 +53,7 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
   
  NULL を指定した場合や、ステートメント オフセットを指定しない場合は、指定したプラン ハンドルのクエリ プランを使用してバッチ内の各ステートメントに対してプラン ガイドが作成されます。 結果として得られるプランガイドは、USE PLAN クエリヒントを使用して特定のプランを強制的に使用するプランガイドに相当します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  すべての種類のステートメントに対してプラン ガイドを作成できるわけではありません。 プラン ガイドを作成できないステートメントがバッチ内にあった場合、そのステートメントは無視されて、バッチ内の次のステートメントが処理されます。 ステートメントが同じバッチ内で複数回出現する場合は、最後に発生したプランが有効になり、ステートメントの前のプランは無効になります。 プランガイドでバッチ内のステートメントを使用できない場合、エラー10532が発生し、ステートメントは失敗します。 このエラーを回避するため、常に sys.dm_exec_query_stats 動的管理ビューからプラン ハンドルを取得することをお勧めします。  
   
 > [!IMPORTANT]  
@@ -63,8 +63,7 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
  sp_create_plan_guide_from_handle では、sp_create_plan_guide と同様に、対象となるバッチやモジュールのクエリ プランがプラン キャッシュから削除されます。 これは、新しいプラン ガイドがすべてのユーザーによって使用されるようにするための措置です。 1つのクエリプラン内の複数のステートメントに対してプランガイドを作成する場合は、明示的なトランザクションですべてのプランガイドを作成することによって、キャッシュからプランの削除を延期できます。 これにより、そのトランザクションが完了して、指定した各ステートメントのプラン ガイドが作成されるまで、プランがキャッシュに保持されます。 例 B を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
- 
-  `VIEW SERVER STATE` 権限が必要です。 その他、sp_create_plan_guide_from_handle を使用して作成するプラン ガイドごとに必要な個々の権限があります。 OBJECT 型のプランガイドを作成するに`ALTER`は、参照先のオブジェクトに対する権限が必要です。 SQL または TEMPLATE 型のプランガイドを作成する`ALTER`には、現在のデータベースに対する権限が必要です。 作成されるプランガイドの種類を決定するには、次のクエリを実行します。  
+ `VIEW SERVER STATE` 権限が必要です。 その他、sp_create_plan_guide_from_handle を使用して作成するプラン ガイドごとに必要な個々の権限があります。 OBJECT 型のプランガイドを作成するに`ALTER`は、参照先のオブジェクトに対する権限が必要です。 SQL または TEMPLATE 型のプランガイドを作成する`ALTER`には、現在のデータベースに対する権限が必要です。 作成されるプランガイドの種類を決定するには、次のクエリを実行します。  
   
 ```sql  
 SELECT cp.plan_handle, sql_handle, st.text, objtype   
@@ -127,6 +126,6 @@ GO
  [sp_create_plan_guide &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [dm_exec_sql_text &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
  [dm_exec_text_query_plan &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)   
- [sp_control_plan_guide &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
+ [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
   
   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 423cbb00f8c28cc1abca309c5a2d518da4511f1a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175845"
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>論理レコードによる関連行への変更のグループ化
@@ -35,9 +35,7 @@ ms.locfileid: "78175845"
 
  ![列名のみを持つ 3 つのテーブルの論理レコード](../media/logical-records-01.gif "列名のみを持つ 3 つのテーブルの論理レコード")
 
- 
-  **Customers** テーブルは、このリレーションシップの親テーブルであり、主キー列 **CustID**を持ちます。 
-  **Orders** テーブルは、主キー列 **OrderID**を持ちます。また、 **Customers** テーブルの **CustID** 列を参照する **CustID** 列に、外部キー制約が設定されています。 同様に、 **OrderItems** テーブルは主キー列 **OrderItemID**を持ちます。また、 **Orders** テーブルの **OrderID** 列を参照する **OrderID** 列に、外部キー制約が設定されています。
+ **Customers** テーブルは、このリレーションシップの親テーブルであり、主キー列 **CustID**を持ちます。 **Orders** テーブルは、主キー列 **OrderID**を持ちます。また、 **Customers** テーブルの **CustID** 列を参照する **CustID** 列に、外部キー制約が設定されています。 同様に、 **OrderItems** テーブルは主キー列 **OrderItemID**を持ちます。また、 **Orders** テーブルの **OrderID** 列を参照する **OrderID** 列に、外部キー制約が設定されています。
 
  この例の論理レコードは、単一の **CustID** 値に関連付けられている **Orders** テーブルのすべての行と、 **Orders** テーブル内の行に関連付けられている **OrderItems** テーブルのすべての行で構成されます。 次の図は、Customer2 の論理レコードに含まれる、3 つのテーブルのすべての行を示しています。
 
@@ -57,8 +55,7 @@ ms.locfileid: "78175845"
 
  ![値を持つ 3 つのテーブルの論理レコード](../media/logical-records-04.gif "値を持つ 3 つのテーブルの論理レコード")
 
- 
-  **OrderID** = 6 の **Orders** 行の処理を完了後、 **OrderItems** 10 および 11 の処理が完了するまでの間にレプリケーション処理が中断されると、論理レコードを使用していない場合、 **OrderID** = 6 の **OrderTotal** 値は、 **OrderItems** 行の **OrderAmount** 値の合計とは一致しません。 論理レコードを使用している場合、 **OrderID** = 6 の **Orders** 行は、関連する **OrderItems** の変更がレプリケートされるまで、コミットされません。
+ **OrderID** = 6 の **Orders** 行の処理を完了後、 **OrderItems** 10 および 11 の処理が完了するまでの間にレプリケーション処理が中断されると、論理レコードを使用していない場合、 **OrderID** = 6 の **OrderTotal** 値は、 **OrderItems** 行の **OrderAmount** 値の合計とは一致しません。 論理レコードを使用している場合、 **OrderID** = 6 の **Orders** 行は、関連する **OrderItems** の変更がレプリケートされるまで、コミットされません。
 
  別のシナリオで、論理レコードを使用していて、だれかがマージ処理による変更の適用中にテーブルに対してクエリを実行した場合、そのユーザーには、変更がすべて完了するまで、部分的にレプリケートされた変更は表示されません。 たとえば、レプリケーション処理で **OrderID** = 6 の Orders 行をアップロードしても、 **OrderItems** 行がレプリケートされる前にユーザーがテーブルに対してクエリを実行した場合、 **OrderTotal** 値は、 **OrderAmount** 値の合計とは一致しません。 論理レコードを使用している場合、 **Orders** 行は、 **OrderItems** 行の処理が完了し、トランザクションが 1 つの単位としてコミットされるまで表示されません。
 
@@ -82,11 +79,11 @@ ms.locfileid: "78175845"
 
 -   論理レコードでは、次のデータ型の列は参照できません。
 
-    -   `varchar(max)`そして`nvarchar(max)`
+    -   `varchar(max)` および `nvarchar(max)`
 
     -   `varbinary(max)`
 
-    -   `text`そして`ntext`
+    -   `text` および `ntext`
 
     -   `image`
 
@@ -136,8 +133,7 @@ ms.locfileid: "78175845"
 
 -   パブリケーションに循環結合フィルター リレーションシップを含めることはできません。
 
-     
-  **Customers**テーブル、 **Orders**テーブル、および **OrderItems**テーブルの例でいうと、 **Orders** テーブルに **OrderItems** テーブルを参照する外部キー制約もある場合、論理レコードは使用できません。
+     **Customers**テーブル、 **Orders**テーブル、および **OrderItems**テーブルの例でいうと、 **Orders** テーブルに **OrderItems** テーブルを参照する外部キー制約もある場合、論理レコードは使用できません。
 
 ## <a name="performance-implications-of-logical-records"></a>論理レコードのパフォーマンスへの影響
  論理レコード機能を使用すると、パフォーマンスに影響を与えます。 論理レコードを使用しない場合、レプリケーション エージェントは特定のアーティクルに対するすべての変更を同時に処理できます。また、変更は行ごとに適用されるため、変更を適用するために必要なロックおよびトランザクション ログの要件は、最小限になります。
@@ -145,6 +141,6 @@ ms.locfileid: "78175845"
  論理レコードを使用する場合、マージ エージェントは各論理レコード全体に対する変更をまとめて処理する必要があります。 これにより、マージ エージェントが行をレプリケートするためにかかる時間に影響を与えます。 さらに、エージェントは各論理レコードに対して個別にトランザクションを開くため、ロックの要件が増大します。
 
 ## <a name="see-also"></a>参照
- [マージレプリケーションのアーティクルオプション](article-options-for-merge-replication.md)
+ [マージ レプリケーションのアーティクルのオプション](article-options-for-merge-replication.md)
 
 

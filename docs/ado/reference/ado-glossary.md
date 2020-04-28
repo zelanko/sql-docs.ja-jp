@@ -13,10 +13,10 @@ ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f9677e62a9efbaa36f03c5cde253b79aa5d401c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76925598"
 ---
 # <a name="ado-glossary"></a>ADO の用語集
@@ -164,7 +164,7 @@ ms.locfileid: "76925598"
   
  *列挙定数*とも呼ばれます。 「*定数*」も参照してください。  
   
- イベント  
+ event  
  応答するコードを記述できるオブジェクトによって認識されるアクション。 イベントは、コマンドの実行、トランザクションの完了、レコードセットのナビゲーション、データの更新などの操作によって生成できます。 「*イベントハンドラー*」も参照してください。  
   
  イベント ハンドラー (event handler)  
@@ -186,11 +186,11 @@ ms.locfileid: "76925598"
  ISAPI (インターネットサーバーアプリケーションプログラミングインターフェイス)  
  Microsoft®インターネットインフォメーションサービス (IIS) を実行している Windows NT® Server/Windows 2000 サーバーなど、インターネットサーバー用の一連の関数。  
   
- キー  
+ Key  
  行を一意に識別する、テーブル内の1つ以上の列。多くの場合、テーブルのインデックス作成に使用されます。  
   
 ## <a name="m"></a>M  
- マーシャリング  
+ marshaling  
  スレッドまたはプロセスの境界を越えて、インターフェイスメソッドのパラメーターをパッケージ化、送信、および unpackaging するプロセス。  
   
  中間層  
