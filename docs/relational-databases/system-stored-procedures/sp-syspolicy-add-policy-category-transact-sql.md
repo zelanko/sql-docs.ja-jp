@@ -18,10 +18,10 @@ ms.assetid: b682fac4-23c6-4662-8d05-c38f3b45507e
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 7489b68c8e41ca90acc83e0a0ea0b4fe5783ed9e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68010520"
 ---
 # <a name="sp_syspolicy_add_policy_category-transact-sql"></a>sp_syspolicy_add_policy_category (Transact-SQL)
@@ -50,7 +50,7 @@ sp_syspolicy_add_policy_category [ @name = ] 'name'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  sp_syspolicy_add_policy_category は msdb システム データベースのコンテキストで実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -59,7 +59,7 @@ sp_syspolicy_add_policy_category [ @name = ] 'name'
 > [!IMPORTANT]  
 >  資格情報が昇格される可能性について: PolicyAdministratorRole ロールに割り当てられているユーザーは、サーバー トリガーを作成して、[!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスの動作に影響する可能性があるポリシーの実行をスケジュールできます。 たとえば、PolicyAdministratorRole ロールに割り当てられているユーザーは、ほとんどのオブジェクトが[!INCLUDE[ssDE](../../includes/ssde-md.md)]で作成されないようにすることができるポリシーを作成できます。 このような資格情報が昇格される可能性があるため、Policy管理者ロールロールは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の構成の制御によって信頼されているユーザーのみに付与する必要があります。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、カテゴリに対するサブスクリプションが必須ではないポリシーカテゴリを作成します。 これは、カテゴリ内のポリシーをオプトインまたはオプトアウトするように個々のデータベースを構成できることを意味します。  
   
 ```  

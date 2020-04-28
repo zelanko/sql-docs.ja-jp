@@ -19,10 +19,10 @@ ms.assetid: 1ba0d113-dc05-4431-8689-e14a8821bafd
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 6c35168f1c77f0574b202b77da515dab497a3ec7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006660"
 ---
 # <a name="connecting-to-azure-sql-db-accesstosql"></a>Azure SQL DB への接続 (Sql server への接続)
@@ -63,8 +63,7 @@ Access データベースオブジェクトを SQL Azure 構文に変換する�
   
 6.  SSMA では、SQL Azure への暗号化接続を推奨しています。  
   
-7.  
-  **[接続]** をクリックします。  
+7.  **[Connect]** をクリックします。  
   
 > [!IMPORTANT]  
 > SSMA for Access は、SQL Azure の**master**データベースへの接続をサポートしていません。  
@@ -96,7 +95,7 @@ SQL Azure への接続は、プロジェクトを閉じるまでアクティブ�
   
 SQL Azure に再接続する手順は、接続を確立する手順と同じです。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 移行の次のステップは、プロジェクトのニーズによって異なります。  
   
 -   Access スキーマと SQL Azure データベースおよびスキーマ間のマッピングをカスタマイズするには、「 [SQL Server スキーマへの Access データベースのマッピング](mapping-source-and-target-databases-accesstosql.md)」を参照してください。  

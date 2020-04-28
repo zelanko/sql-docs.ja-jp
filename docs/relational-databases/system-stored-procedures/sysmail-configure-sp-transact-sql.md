@@ -18,10 +18,10 @@ ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7984fba52f813644c9dcb25bca2beb123be85622
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017723"
 ---
 # <a name="sysmail_configure_sp-transact-sql"></a>sysmail_configure_sp (Transact-SQL)
@@ -54,14 +54,14 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ None  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  データベース メールでは次のパラメーターが使用されます。  
   
 ||||  
 |-|-|-|  
-|パラメーター名|[説明]|既定値|  
+|パラメーター名|説明|Default value|  
 |*AccountRetryAttempts*|指定したプロファイル内の各アカウントを使用して、外部メール処理が電子メール メッセージの送信を試行する回数。|**1**|  
 |*AccountRetryDelay*|外部メール処理が次回のメッセージ送信の試行を待機する時間 (秒単位)。|**5000**|  
 |*DatabaseMailExeMinimumLifeTime*|外部メール処理がアクティブな状態にとどまる最小時間 (秒単位)。 データベースメールが多数のメッセージを送信している場合は、この値を大きくしてデータベースメールアクティブにして、頻繁な起動と停止のオーバーヘッドを回避します。|**600**|  
@@ -75,7 +75,7 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャの実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  **A. 各アカウントに対して 10 回再試行するようデータベース メールを設定する**  
   
  次の例では、アカウントに到達できないことを考慮する前に、各アカウントを10回再試行するようにデータベースメールを設定しています。  

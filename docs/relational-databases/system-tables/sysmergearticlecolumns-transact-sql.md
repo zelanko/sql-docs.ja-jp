@@ -18,10 +18,10 @@ ms.assetid: 1ad8663f-a624-42a2-8641-fefac3433c97
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2edf9a5656eaf9dd3f18adff28562e279db892e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029963"
 ---
 # <a name="sysmergearticlecolumns-transact-sql"></a>sysmergearticlecolumns (Transact-sql)
@@ -29,13 +29,13 @@ ms.locfileid: "68029963"
 
   **Sysmergearticlecolumns**テーブルは、マージパブリケーションでパブリッシュされるテーブル列ごとに1行のデータを格納し、各列をマージアーティクルにマップします。 このテーブルは、パブリケーションデータベースに格納されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**artid**|**int**|アーティクルを識別します。|  
 |**colid**|**smallint**|アーティクル内の列を識別します。|  
   
 ## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

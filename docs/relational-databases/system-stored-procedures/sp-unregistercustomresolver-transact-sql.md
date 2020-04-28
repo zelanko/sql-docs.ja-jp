@@ -16,10 +16,10 @@ ms.assetid: 08bd20c8-c6be-4be2-be9f-2b5e1d7bee43
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3e84fb602c253f5ee6dd247c01bbbd64bda1d2f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017865"
 ---
 # <a name="sp_unregistercustomresolver-transact-sql"></a>sp_unregistercustomresolver (Transact-SQL)
@@ -42,7 +42,7 @@ sp_unregistercustomresolver [ @article_resolver = ] 'article_resolver'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_unregistercustomresolver**は、マージレプリケーションで使用します。  
   
  レプリケーショントポロジ内の任意のサーバーで[sp_enumcustomresolvers](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md)を使用して、トポロジで使用可能な登録済みカスタムビジネスロジックモジュールまたは COM 競合回避モジュールの一覧を返します。  
@@ -53,6 +53,6 @@ sp_unregistercustomresolver [ @article_resolver = ] 'article_resolver'
 ## <a name="see-also"></a>参照  
  [sp_lookupcustomresolver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-lookupcustomresolver-transact-sql.md)   
  [sp_registercustomresolver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

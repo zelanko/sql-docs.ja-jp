@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 84cbfafdba3bca9b06f250ed9996f0a87e71a18c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026857"
 ---
 # <a name="sysdm_db_xtp_checkpoint_stats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
@@ -41,10 +41,10 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
   
 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]は、より新しいバージョンとは大幅に異なります。 [SQL Server 2014](#bkmk_2014)のトピックでは、この点について説明します。**
   
-## <a name="includesssql15includessssql15-mdmd-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降  
+## <a name="sssql15-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降  
  次の表では、で`sys.dm_db_xtp_checkpoint_stats`始まるの列**[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** について説明します。  
   
-|列名|種類|[説明]|  
+|列名|Type|説明|  
 |-----------------|----------|-----------------|  
 |last_lsn_processed|**bigint**|コントローラーによって表示される最後の LSN。|  
 |end_of_log_lsn|**数値 (38)**|ログの末尾の LSN。|  
@@ -66,7 +66,7 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 |checkpoints_closed|**bigint**|データベースの再起動以降に閉じられたチェックポイントの数。|  
 |last_closed_checkpoint_ts|**bigint**|最後に閉じられたチェックポイントのタイムスタンプ。|  
 |hardened_recovery_lsn|**数値 (38)**|この LSN から復旧が開始されます。|  
-|hardened_root_file_guid|**UNIQUEIDENTIFIER**|最後に完了したチェックポイントの結果として書き込まれたルートファイルの GUID。|  
+|hardened_root_file_guid|**uniqueidentifier**|最後に完了したチェックポイントの結果として書き込まれたルートファイルの GUID。|  
 |hardened_root_file_watermark|**bigint**|**内部のみ**。 ルートファイルをどこまで読み取ることができるか (これは、内部的に関連する型のみの BSN と呼ばれます)。|  
 |hardened_truncation_lsn|**数値 (38)**|切り捨てポイントの LSN。|  
 |log_bytes_since_last_close|**bigint**|最後から現在のログの最後までのバイト数。|  
@@ -79,14 +79,14 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 |recovery_checkpoint_id|**bigint**|復旧に使用するチェックポイントの ID。|  
 |recovery_checkpoint_ts|**bigint**|回復チェックポイントのタイムスタンプ。|  
 |bootstrap_recovery_lsn|**数値 (38)**|ブートストラップの復旧 LSN。|  
-|bootstrap_root_file_guid|**UNIQUEIDENTIFIER**|ブートストラップのルートファイルの GUID。|  
+|bootstrap_root_file_guid|**uniqueidentifier**|ブートストラップのルートファイルの GUID。|  
 |internal_error_code|**bigint**|コントローラー、シリアライザー、閉じる、およびマージスレッドによってエラーが発生しました。|
 |bytes_of_large_data_serialized|**bigint**|シリアル化されたデータの量。 |  
   
-##  <a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
+##  <a name="sssql14"></a><a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  次の表では、の`sys.dm_db_xtp_checkpoint_stats` **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** 列について説明します。  
   
-|列名|種類|[説明]|  
+|列名|Type|説明|  
 |-----------------|----------|-----------------|  
 |log_to_process_in_bytes|**bigint**|スレッドの現在のログシーケンス番号 (LSN) とログの末尾との間のログバイト数。|  
 |total_log_blocks_processed|**bigint**|サーバーの起動後に処理されたログブロックの合計数。|  
@@ -108,6 +108,6 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
  サーバーに対する `VIEW DATABASE STATE` 権限が必要です。  
   
 ## <a name="see-also"></a>参照  
- [メモリ最適化テーブルの動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [メモリ最適化テーブルの動的管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

@@ -13,10 +13,10 @@ ms.assetid: 89c23aad-bfee-4917-bc16-175288390ac0
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2951d4c3bf1eae73ffd066d796b0e3dda4d28cf6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68020961"
 ---
 # <a name="selecting-and-configuring-objects-to-test-sybasetosql"></a>テストするオブジェクトの選択と構成 (SybaseToSQL)
@@ -79,7 +79,7 @@ SSMA Tester がテスト用に選択されたオブジェクトのいずれか�
 ## <a name="specify-input-values-for-procedures-and-functions-call-values"></a>プロシージャと関数の入力値を指定する (呼び出し値)  
 [**呼び出しの値**] ページで入力パラメーターの値を指定できます。 [**呼び出しの追加**] ボタンをクリックすると、空のパラメーター値を持つ新しい呼び出しが追加されます。 [**呼び出しの削除**] ボタンをクリックすると、現在の呼び出しが削除されます。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 [影響を受けるオブジェクトの選択と構成 &#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)  
   
 ## <a name="see-also"></a>参照  

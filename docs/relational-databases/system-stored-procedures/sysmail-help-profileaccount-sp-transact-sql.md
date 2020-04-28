@@ -18,10 +18,10 @@ ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c4f0ceb580ddc7538dd1ea98b9e08a82cd8d35b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68044487"
 ---
 # <a name="sysmail_help_profileaccount_sp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
@@ -59,14 +59,14 @@ sysmail_help_profileaccount_sp
   
 ||||  
 |-|-|-|  
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |**profile_id**|**int**|プロファイルのプロファイル ID。|  
 |**profile_name**|**sysname**|プロファイルの名前。|  
 |**account_id**|**int**|アカウントのアカウント ID。|  
 |**account_name**|**sysname**|アカウントの名前。|  
 |**sequence_number**|**int**|プロファイル内のアカウントのシーケンス番号。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  *Profile_id*または*profile_name*が指定されていない場合、このストアドプロシージャは、インスタンス内のすべてのプロファイルに関する情報を返します。  
   
  ストアドプロシージャ**sysmail_help_profileaccount_sp**は**msdb**データベースにあり、 **dbo**スキーマが所有しています。 現在のデータベースが**msdb**でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
@@ -74,7 +74,7 @@ sysmail_help_profileaccount_sp
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャの実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  **A. 特定のプロファイルのアカウントを名前順に一覧表示する**  
   
  次の例では、プロファイル名を`AdventureWorks Administrator`指定して、プロファイルの情報を一覧表示します。  

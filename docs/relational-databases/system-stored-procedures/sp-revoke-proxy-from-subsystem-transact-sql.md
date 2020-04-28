@@ -18,10 +18,10 @@ ms.assetid: b87bc8ba-3ea8-4aed-b54b-32c3d82d9d2a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 8901c46c5654b6c633e03d62e8eaec2a3e903e02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022270"
 ---
 # <a name="sp_revoke_proxy_from_subsystem-transact-sql"></a>sp_revoke_proxy_from_subsystem (Transact-SQL)
@@ -49,37 +49,37 @@ sp_revoke_proxy_from_subsystem
   
 `[ @subsystem_id = ] id`アクセスを取り消すサブシステムの id 番号。 *Subsystem_id*は**int**,、既定値は NULL です。 *Subsystem_id*または*subsystem_name*のいずれかを指定する必要がありますが、両方を指定することはできません。 次の表に、各サブシステムの値を示します。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**2**| ActiveX スクリプト<br /><br /> ** \*重要\* \* **ActiveX スクリプティングサブシステムは、の将来[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョンでエージェントから削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。|  
-|**番**|オペレーティング システム (CmdExec)|  
+|**3**|オペレーティング システム (CmdExec)|  
 |**4**|レプリケーション スナップショット エージェント|  
-|**5/5**|レプリケーション ログ リーダー エージェント|  
+|**5**|レプリケーション ログ リーダー エージェント|  
 |**6**|レプリケーション ディストリビューション エージェント|  
-|**7**|レプリケーション マージ エージェント|  
+|**7**|Replication Merge Agent|  
 |**8**|Replication Queue Reader Agent|  
 |**9**|Analysis Services コマンド|  
-|**種類**|Analysis Services クエリ|  
-|**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)]パッケージの実行|  
+|**10**|Analysis Services クエリ|  
+|**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ実行|  
 |**12**|PowerShell スクリプト|  
   
 `[ @subsystem_name = ] 'subsystem_name'`アクセスを取り消すサブシステムの名前。 *Subsystem_name*は**sysname**で、既定値は NULL です。 *Subsystem_id*または*subsystem_name*のいずれかを指定する必要がありますが、両方を指定することはできません。 次の表に、各サブシステムの値を示します。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |ActiveScripting| ActiveX スクリプト|  
 |CmdExec|オペレーティング システム (CmdExec)|  
 |スナップショット|レプリケーション スナップショット エージェント|  
 |LogReader|レプリケーション ログ リーダー エージェント|  
 |Distribution|レプリケーション ディストリビューション エージェント|  
-|Merge|レプリケーション マージ エージェント|  
+|Merge|Replication Merge Agent|  
 |QueueReader|Replication Queue Reader Agent|  
 |ANALYSISQUERY|Analysis Services コマンド|  
 |ANALYSISCOMMAND|Analysis Services クエリ|  
-|Dts|[!INCLUDE[ssIS](../../includes/ssis-md.md)]パッケージの実行|  
+|Dts|[!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ実行|  
 |PowerShell|PowerShell スクリプト|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  サブシステムへのアクセスを取り消しても、プロキシで指定されたプリンシパルのアクセス許可は変更されません。  
   
 > [!NOTE]  
@@ -88,8 +88,8 @@ sp_revoke_proxy_from_subsystem
 ## <a name="permissions"></a>アクセス許可  
  **Sp_revoke_proxy_from_subsystem**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="examples"></a>例  
- 次の例では、プロキシ [!INCLUDE[ssIS](../../includes/ssis-md.md)] が持つ `Catalog application proxy` サブシステムへのアクセス権を取り消します。  
+## <a name="examples"></a>使用例  
+ 次の例では、プロキシ `Catalog application proxy` が持つ [!INCLUDE[ssIS](../../includes/ssis-md.md)] サブシステムへのアクセス権を取り消します。  
   
 ```  
 USE msdb ;  

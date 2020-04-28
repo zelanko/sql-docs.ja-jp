@@ -16,10 +16,10 @@ ms.assetid: da564112-f769-4e67-9251-5699823e8c86
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0e5f044482d3e46e4e20279a437b8d9459d1d3bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68002644"
 ---
 # <a name="sp_helpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-sql)
@@ -55,17 +55,17 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
   
 `[ @subscription_type = ] 'subscription_type'`サブスクリプションの種類を示します。 *subscription_type*は**nvarchar (15)** で、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**push** (既定値)|プッシュ サブスクリプション|  
 |**だとすると**|プルサブスクリプション|  
-|**両方**|プッシュおよびプル サブスクリプションの両方|  
+|**両方とも**|プッシュおよびプル サブスクリプションの両方|  
   
 `[ @found = ] 'found'OUTPUT`は、行を返すことを示すフラグです。 *見つかった*は**int**と出力パラメーターで、既定値は NULL です。 **1**は、パブリケーションが見つかったことを示します。 **0**は、パブリケーションが見つからないことを示します。  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**subscription_name**|**sysname**|サブスクリプションの名前。|  
 |**レプリケーション**|**sysname**|パブリケーションの名前。|  
@@ -73,18 +73,18 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**publisher_db**|**sysname**|パブリッシャーデータベースの名前。|  
 |**サブスクライバ**|**sysname**|サブスクライバーの名前。|  
 |**subscriber_db**|**sysname**|サブスクリプションデータベースの名前。|  
-|**オンライン**|**int**|サブスクリプションの状態:<br /><br /> **0** = すべてのジョブが開始を待機しています<br /><br /> **1** = 1 つ以上のジョブが開始されています<br /><br /> **2** = すべてのジョブが正常に実行されました<br /><br /> **3** = 少なくとも1つのジョブが実行されています<br /><br /> **4** = すべてのジョブがスケジュールされ、アイドル状態になっている<br /><br /> **5** = 少なくとも1つのジョブが前回のエラーの発生後に実行しようとしています<br /><br /> **6** = 少なくとも1つのジョブを正常に実行できませんでした|  
+|**status**|**int**|サブスクリプションの状態:<br /><br /> **0** = すべてのジョブが開始を待機しています<br /><br /> **1** = 1 つ以上のジョブが開始されています<br /><br /> **2** = すべてのジョブが正常に実行されました<br /><br /> **3** = 少なくとも1つのジョブが実行されています<br /><br /> **4** = すべてのジョブがスケジュールされ、アイドル状態になっている<br /><br /> **5** = 少なくとも1つのジョブが前回のエラーの発生後に実行しようとしています<br /><br /> **6** = 少なくとも1つのジョブを正常に実行できませんでした|  
 |**subscriber_type**|**int**|サブスクライバーの種類。|  
 |**subscription_type**|**int**|サブスクリプションの種類:<br /><br /> **0** = プッシュ<br /><br /> **1** = プル<br /><br /> **2** = 両方|  
 |**的**|**float (8)**|サブスクリプションの優先度を示す数値。|  
 |**sync_type**|**tinyint**|サブスクリプションの同期の種類。|  
 |**記述**|**nvarchar(255)**|マージ サブスクリプションの簡単な説明。|  
-|**merge_jobid**|**バイナリ (16)**|マージエージェントのジョブ ID。|  
+|**merge_jobid**|**binary(16)**|マージエージェントのジョブ ID。|  
 |**full_publication**|**tinyint**|サブスクリプションが完全またはフィルター選択されたパブリケーションであるかどうか。|  
 |**offload_enabled**|**bit**|レプリケーションエージェントのオフロード実行がサブスクライバーで実行されるように設定されているかどうかを指定します。 NULL の場合、実行はパブリッシャー側で実行されます。|  
 |**offload_server**|**sysname**|エージェントが動作しているサーバーの名前。|  
 |**use_interactive_resolver**|**int**|調整時に対話型の競合回避モジュールを使用するかどうかを示します。 **0**の場合、インタラクティブ競合回避モジュールは使用されません。|  
-|**名**|**sysname**|サブスクリプションが[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)関数の値によってフィルター処理されるときに指定される値。|  
+|**hostname**|**sysname**|サブスクリプションが[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)関数の値によってフィルター処理されるときに指定される値。|  
 |**subscriber_security_mode**|**smallint**|サブスクライバーのセキュリティモードを指定します。 **1**は Windows 認証を、 **0**は[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証を意味します。|  
 |**subscriber_login**|**sysname**|サブスクライバーのログイン名を指定します。|  
 |**subscriber_password**|**sysname**|実際のサブスクライバーパスワードは返されません。 結果は**\*\*\*"\*" という文字列でマスクされます。\***|  
@@ -92,7 +92,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_helpmergesubscription**は、パブリッシャーまたは再パブリッシュサブスクライバーに格納されているサブスクリプション情報を返すために、マージレプリケーションで使用されます。  
   
  匿名サブスクリプションの場合、 *subscription_type*値は常に**1** (プル) です。 ただし、匿名サブスクリプションに関する情報を表示するには、サブスクライバーで[sp_helpmergepullsubscription](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)を実行する必要があります。  
@@ -104,6 +104,6 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
  [sp_addmergesubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
  [sp_changemergesubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
  [sp_dropmergesubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

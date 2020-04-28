@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7a8c92a4b6a76cb9d15048d6f058038363970cb8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68036593"
 ---
 # <a name="toppercent-mdx"></a>TopPercent (MDX)
@@ -31,7 +31,7 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
  *Set_Expression*  
  セットを返す有効な多次元式 (MDX) 式です。  
   
- *税率*  
+ *パーセント*  
  返される組の割合を指定する有効な数値式です。  
   
 > [!IMPORTANT]  
@@ -40,7 +40,7 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
  *Numeric_Expression*  
  有効な数値式です。通常は、数値を返すセル座標の多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **TopPercent**関数は、指定されたセットに対して評価される指定された数値式の合計を計算し、セットを降順に並べ替えます。 次に、合計値の累積割合が指定されている割合以上になるように、最も値の大きい方から要素を返します。 この関数は、累積合計が指定した割合以上になるセットの最小サブセットを返します。 要素は大きい方から順に返されます。  
   
 > [!WARNING]  
@@ -69,10 +69,10 @@ WHERE([Product].[Product Categories].[Bikes])
   
 ||Reseller Sales Amount|  
 |-|---------------------------|  
-|トロント|$3508904.84|  
-|ロンドン|$1521530.09|  
-|シアトル|$1209418.16|  
-|パリ|$1170425.18|  
+|Toronto|$3508904.84|  
+|London|$1521530.09|  
+|Seattle|$1209418.16|  
+|Paris|$1170425.18|  
   
  元のデータセットは、次のクエリを使用して取得し、588行を返すことができます。  
   
@@ -127,6 +127,6 @@ FROM [Adventure Works]
 |ツーリング-2000 Blue、50|$157444.56|$163112.57|($5668.01)|  
   
 ## <a name="see-also"></a>参照  
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

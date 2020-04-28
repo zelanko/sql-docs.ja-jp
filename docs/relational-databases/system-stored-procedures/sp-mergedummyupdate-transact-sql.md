@@ -16,10 +16,10 @@ ms.assetid: b834f7f6-9588-4d59-a3e2-83d8e8e722e1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 209a41ff29f8063ec6c46fe1fb5e821be1419cd6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68019980"
 ---
 # <a name="sp_mergedummyupdate-transact-sql"></a>sp_mergedummyupdate (Transact-sql)
@@ -44,7 +44,7 @@ sp_mergedummyupdate [ @source_object =] 'source_object', [ @rowguid =] 'rowguid'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_mergedummyupdate**は、マージレプリケーションで使用します。  
   
  **sp_mergedummyupdate**は、レプリケーション競合表示モジュール (Wzcnflct) に独自の代替手段を記述する場合に便利です。  
@@ -53,6 +53,6 @@ sp_mergedummyupdate [ @source_object =] 'source_object', [ @rowguid =] 'rowguid'
  **Sp_mergedummyupdate**を実行できるのは、 **db_owner**固定データベースロールのメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

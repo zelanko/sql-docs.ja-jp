@@ -13,16 +13,16 @@ ms.assetid: 35ef396f-9f98-429d-9fc5-4f413d08fb37
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: ece41e157ddad4f62a041d8e06dde073f681d274
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029362"
 ---
 # <a name="creating-the-server-connection-files-sybasetosql"></a>サーバー接続ファイルの作成 (SybaseToSQL)
 サーバー情報は、スクリプトファイルの [サーバー] セクションで、または別のサーバー接続ファイルで指定できます。 サーバー接続ファイルのコマンドラインパラメーターは、 `-c <serverconnectionfile>`です。 スクリプトファイルとサーバー接続ファイルの両方に同じサーバー id が存在する場合は、スクリプトファイル内のサーバー定義が考慮されます。  
   
-**よう**  
+**例:**  
   
 ```  
 1.<!--Sample of server connection file commands -->  
@@ -104,7 +104,7 @@ ms.locfileid: "68029362"
 ## <a name="server-connection-file-validation"></a>サーバー接続ファイルの検証  
 ユーザーは、' スキーマ ' フォルダーで使用可能なスキーマ定義ファイル**S2SSConsoleScriptServersSchema**に対して、サーバー接続ファイルを簡単に検証できます。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 コンソールを操作する次の手順では、 [SSMA コンソール &#40;SybaseToSQL&#41;を実行](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)しています。  
   
 ## <a name="see-also"></a>参照  

@@ -15,10 +15,10 @@ ms.assetid: 5187c97b-6866-474d-8bdb-a082634039cc
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 1e844425f0c512cfe7c15354bf1aeb100d6104e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004523"
 ---
 # <a name="general-xquery-use-cases"></a>XQuery の一般的な使用例
@@ -223,7 +223,7 @@ WHERE ProductModelID=19
 ```  
   
 ### <a name="e-retrieve-product-model-feature-descriptions"></a>E. 製品モデルの特徴の説明の取得  
- 次のクエリでは、<`Product`の> 要素を含む XML を構築します。この要素には、 **ProductModelName**属性と、最初の2つの製品機能が含まれています。 **** 具体的には、最初の2つの製品機能は、<`Features`> 要素の最初の2つの子要素です。 その他の機能がある場合は、空の`There-is-more/` <> 要素を返します。  
+ 次のクエリでは、<`Product`の> 要素を含む XML を構築します。この要素には、 **ProductModelName**属性と、最初の2つの製品機能が含まれています。 **ProducModelID** 具体的には、最初の2つの製品機能は、<`Features`> 要素の最初の2つの子要素です。 その他の機能がある場合は、空の`There-is-more/` <> 要素を返します。  
   
 ```  
 SELECT CatalogDescription.query('  

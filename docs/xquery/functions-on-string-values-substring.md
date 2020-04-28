@@ -16,10 +16,10 @@ ms.assetid: 2b3b8651-de51-46dc-af82-c86c45eac871
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 2188cff20411fe90d4858763f65cff7f6fe9c9d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004643"
 ---
 # <a name="functions-on-string-values---substring"></a>文字列値に使用する関数 - substring
@@ -49,7 +49,7 @@ fn:substring($sourceString as xs:string?,
  *$length*  
  optional取得する文字数。 指定しない場合は、 *$startingLoc*で指定された位置から文字列の末尾までのすべての文字が返されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この関数で引数を 3 つとも指定した場合、`$sourceString` 内で、次の範囲内の位置 `$p` から文字列が返されます。  
   
  `fn:round($startingLoc) <= $p < fn:round($startingLoc) + fn:round($length)`  
@@ -68,7 +68,7 @@ fn:substring($sourceString as xs:string?,
   
  SQL Server を使用すると、 *$startingLoc*と *$length*を空のシーケンスにすることができます。これは、空のシーケンスが () にマップされる動的エラーの結果として有効な値であるためです。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  このトピックでは、 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]データベース内のさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
 ### <a name="a-using-the-substring-xquery-function-to-retrieve-partial-summary-product-model-descriptions"></a>A. Substring () XQuery 関数を使用した部分的な概要の製品モデルの説明の取得  

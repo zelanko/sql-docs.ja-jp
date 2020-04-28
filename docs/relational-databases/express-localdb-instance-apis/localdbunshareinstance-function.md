@@ -16,10 +16,10 @@ ms.assetid: 54012ccb-eded-43f7-8ea5-da5ce79224c6
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 9eacc8a0dc5801ad2642dc7ffec0b31c3de040f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022025"
 ---
 # <a name="localdbunshareinstance-function"></a>LocalDBUnshareInstance 関数
@@ -66,7 +66,7 @@ HRESULT LocalDBUnShareInstance(
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
  予期しないエラーが発生しました。 詳細をイベント ログで確認してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  LocalDB API を使用するコードサンプルについては、 [Localdb リファレンスの SQL Server Express](../../relational-databases/sql-server-express-localdb-reference.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  

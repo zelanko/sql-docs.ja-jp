@@ -16,10 +16,10 @@ ms.assetid: b6e9e0d2-9144-434d-88af-4874f2582399
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fe6bfe4c93ccabfaaec27739f7a1fd0e09348526
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017903"
 ---
 # <a name="sp_unregister_custom_scripting-transact-sql"></a>sp_unregister_custom_scripting (Transact-SQL)
@@ -41,11 +41,11 @@ sp_unregister_custom_scripting [ @type  = ] 'type'
 ## <a name="arguments"></a>引数  
 `[ @type = ] 'type'`削除するカスタムストアドプロシージャまたはスクリプトの種類を設定します。 *型*は**varchar (16)**,、既定値はありません、次の値のいずれかを指定することができます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**insert**|登録されたカスタムストアドプロシージャまたはスクリプトは、INSERT ステートメントがレプリケートされるときに実行されます。|  
 |**update**|登録済みのカスタムストアドプロシージャまたはスクリプトは、UPDATE ステートメントがレプリケートされるときに実行されます。|  
-|**デリート**|登録済みのカスタムストアドプロシージャまたはスクリプトは、DELETE ステートメントがレプリケートされるときに実行されます。|  
+|**delete**|登録済みのカスタムストアドプロシージャまたはスクリプトは、DELETE ステートメントがレプリケートされるときに実行されます。|  
 |**custom_script**|登録済みのカスタムストアドプロシージャまたはスクリプトは、データ定義言語 (DDL) トリガーの最後に実行されます。|  
   
 `[ @publication = ] 'publication'`カスタムストアドプロシージャまたはスクリプトを削除するパブリケーションの名前。 *publication*は**sysname**,、既定値は NULL です。  
@@ -55,7 +55,7 @@ sp_unregister_custom_scripting [ @type  = ] 'type'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_unregister_custom_scripting**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  

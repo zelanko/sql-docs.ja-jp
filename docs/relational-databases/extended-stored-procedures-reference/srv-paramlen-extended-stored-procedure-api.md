@@ -20,18 +20,17 @@ ms.assetid: d1fe92ff-cad6-4396-8216-125e5642e81e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 5c89a9ddc1020f29bbcd661ec4c9672ba37f7770
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68005702"
 ---
 # <a name="srv_paramlen-extended-stored-procedure-api"></a>srv_paramlen (拡張ストアド プロシージャ API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
   
  リモート ストアド プロシージャ呼び出しのパラメーターのデータ長を返します。 この関数に代わって **srv_paraminfo** 関数が使用されるようになりました。  
   
@@ -56,28 +55,25 @@ n
  パラメーターの番号を示します。 最初のパラメーターは 1 です。  
   
 ## <a name="returns"></a>戻り値  
- パラメーター データの実際の長さをバイト数で返します。 
-  *n* 番目のパラメーターがない場合、またはリモート ストアド プロシージャがない場合は、-1 を返します。 
-  *n* 番目のパラメーターが NULL である場合は 0 を返します。  
+ パラメーター データの実際の長さをバイト数で返します。 *n* 番目のパラメーターがない場合、またはリモート ストアド プロシージャがない場合は、-1 を返します。 *n* 番目のパラメーターが NULL である場合は 0 を返します。  
   
  パラメーターが次[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]のシステムデータ型のいずれかである場合、この関数は次の値を返します。  
   
 |新しいデータ型|入力データ長|  
 |--------------------|-----------------------|  
 |**BITN**|**NULL:** 1<br /><br /> **0:** 1<br /><br /> **>= 255:** 該当なし<br /><br /> **<255:** 該当なし|  
-|**BIGVARCHAR**|**NULL:** 0<br /><br /> **0:** 1<br /><br /> **>= 255:** 255<br /><br /> **<255:** 実際の*長さ*|  
-|**BIGCHAR**|**NULL:** 0<br /><br /> **ゼロ:** 255<br /><br /> **>= 255:** 255<br /><br /> **<255:** 255|  
-|**BIGBINARY**|**NULL:** 0<br /><br /> **ゼロ:** 255<br /><br /> **>= 255:** 255<br /><br /> **<255:** 255|  
-|**BIGVARBINARY**|**NULL:** 0<br /><br /> **0:** 1<br /><br /> **>= 255:** 255<br /><br /> **<255:** 実際の*長さ*|  
-|**NCHAR**|**NULL:** 0<br /><br /> **ゼロ:** 255<br /><br /> **>= 255:** 255<br /><br /> **<255:** 255|  
-|**NVARCHAR**|**NULL:** 0<br /><br /> **0:** 1<br /><br /> **>= 255:** 255<br /><br /> **<255:** 実際の*長さ*|  
-|**NTEXT**|**NULL:** -1<br /><br /> **0:** -1<br /><br /> **>= 255:** -1<br /><br /> 255:-1 ** \<**|  
+|**BIGVARCHAR**|**NULL:** 0<br /><br /> **0:** 1<br /><br /> **>= 255:** 255<br /><br /> **<255:** 実際の *len*|  
+|**BIGCHAR**|**NULL:** 0<br /><br /> **ZERO:** 255<br /><br /> **>= 255:** 255<br /><br /> **<255:** 255|  
+|**BIGBINARY**|**NULL:** 0<br /><br /> **ZERO:** 255<br /><br /> **>= 255:** 255<br /><br /> **<255:** 255|  
+|**BIGVARBINARY**|**NULL:** 0<br /><br /> **0:** 1<br /><br /> **>= 255:** 255<br /><br /> **<255:** 実際の *len*|  
+|**NCHAR**|**NULL:** 0<br /><br /> **ZERO:** 255<br /><br /> **>= 255:** 255<br /><br /> **<255:** 255|  
+|**NVARCHAR**|**NULL:** 0<br /><br /> **0:** 1<br /><br /> **>= 255:** 255<br /><br /> **<255:** 実際の *len*|  
+|**NTEXT**|**NULL:** -1<br /><br /> **ZERO:** -1<br /><br /> **>= 255:** -1<br /><br /> 255:-1 ** \<**|  
   
- \*実際の*len* = マルチバイト文字列の長さ (cch)  
+ \*   実際の *len* とは、マルチバイト文字列 (cch) の長さを示します  
   
-## <a name="remarks"></a>解説  
- リモート ストアド プロシージャ パラメーターのデータ長には、それぞれ実際値および最大値があります。 NULL 値を許容しない標準固定長データ型では、長さの実際値と最大値は等しくなります。 可変長データ型では、この 2 つの値が異なる場合があります。 たとえば、**varchar(30)** として宣言したパラメーターには、長さが 10 バイトしかないデータを格納することが可能です。 このパラメーターは実際の長さが 10 で、最大の長さが 30 です。 
-  **srv_paramlen** 関数は、リモート ストアド プロシージャの実際のデータ長をバイト数で取得します。 パラメーターの最大のデータ長を取得するには、**srv_parammaxlen** を使用します。  
+## <a name="remarks"></a>Remarks  
+ リモート ストアド プロシージャ パラメーターのデータ長には、それぞれ実際値および最大値があります。 NULL 値を許容しない標準固定長データ型では、長さの実際値と最大値は等しくなります。 可変長データ型では、この 2 つの値が異なる場合があります。 たとえば、**varchar(30)** として宣言したパラメーターには、長さが 10 バイトしかないデータを格納することが可能です。 このパラメーターは実際の長さが 10 で、最大の長さが 30 です。 **srv_paramlen** 関数は、リモート ストアド プロシージャの実際のデータ長をバイト数で取得します。 パラメーターの最大のデータ長を取得するには、**srv_parammaxlen** を使用します。  
   
  パラメーターを指定してリモート ストアド プロシージャを呼び出す場合、パラメーターは名前で指定することも、名前を使用せずにその位置を指定して渡すこともできます。 名前によるパラメーター指定と位置によるパラメーター指定を混合してリモート ストアド プロシージャを呼び出すと、エラーが発生します。 SRV_RPC ハンドラーはまだ呼び出されていますが、パラメーターがなかったかのように見え、 **srv_rpcparams** 0 を返します。  
   
@@ -86,6 +82,6 @@ n
   
 ## <a name="see-also"></a>参照  
  [srv_paraminfo &#40;拡張ストアドプロシージャ API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-paraminfo-extended-stored-procedure-api.md)   
- [srv_rpcparams &#40;拡張ストアドプロシージャ API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-rpcparams-extended-stored-procedure-api.md)  
+ [srv_rpcparams &#40;拡張ストアド プロシージャ API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-rpcparams-extended-stored-procedure-api.md)  
   
   

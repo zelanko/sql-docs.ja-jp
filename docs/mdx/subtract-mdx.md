@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 3b8003bdeddea32f80636dc10a78e200d6b0e0be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68036684"
 ---
 # <a name="--subtract-mdx"></a>- (減算) (MDX)
@@ -34,10 +34,10 @@ Numeric_Expression - Numeric_Expression
 ## <a name="return-value"></a>戻り値  
  優先順位の高いパラメーターのデータ型を持つ値。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  両方の式は、同じデータ型でなければなりません。または、一方の式をもう一方の式のデータ型に暗黙的に変換できる必要があります。 1つの式が null 値に評価される場合、演算子は null 以外の式の結果を返します。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  この演算子の使用例を次に示します。  
   
 ```  

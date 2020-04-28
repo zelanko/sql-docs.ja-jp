@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 89f7545af0d98de2a6bd97630a893057aac36b12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68037048"
 ---
 # <a name="rollupchildren-mdx"></a>RollupChildren (MDX)
@@ -34,7 +34,7 @@ RollupChildren(Member_Expression, Unary_Operator)
  *Unary_Operator*  
  単項演算子を指定する有効な文字列式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Rollupchildren**関数は、指定された単項演算子を使用して、指定されたメンバーの子の値をロールアップします。  
   
  次の表では、この関数の有効な単項演算子について説明します。  
@@ -60,6 +60,6 @@ RollupChildren
 ```  
   
 ## <a name="see-also"></a>参照  
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

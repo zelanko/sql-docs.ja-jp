@@ -10,10 +10,10 @@ ms.assetid: 2698fb3a-f9e6-4e04-94e0-dad289d7ed0a
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d7b16bdf3717fa14f91af41663cbd65365eac52a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028660"
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>プロジェクトの設定 (型のマッピング) (SybaseToSQL)
@@ -52,12 +52,12 @@ ms.locfileid: "68028660"
 |ASE データ型|SQL Server データ型|  
 |-----------------|------------------------|  
 |**bigint**|**bigint**|  
-|**binary**|**binary**|  
+|**[バイナリ]**|**[バイナリ]**|  
 |**バイナリ [\*..8000]**|**binary [\*]**|  
 |**バイナリ [8001..\*]**|**varbinary(max)**|  
 |**bit**|**bit**|  
 |**char**|**char**|  
-|**文字の変化**|**varchar**|  
+|**char varying**|**varchar**|  
 |**char varying [\*..8000]**|**varchar [\*]**|  
 |**文字の変化 [8001.\*.]**|**varchar(max)**|  
 |**char [\*..8000]**|**char [\*]**|  
@@ -69,7 +69,7 @@ ms.locfileid: "68028660"
 |**文字 [\*..8000]**|**char [\*]**|  
 |**文字 [8001..\*]**|**varchar(max)**|  
 |**date**|**date**|  
-|**DATETIME**|**datetime2 [3]**|  
+|**datetime**|**datetime2 [3]**|  
 |**alpha**|**decimal**|  
 |**dec [\*..\*]**|**decimal [\*]**|  
 |**dec [\*..\*][\*..\*]**|**decimal [\*] [\*]**|  
@@ -80,9 +80,9 @@ ms.locfileid: "68028660"
 |**float**|**float [53]**|  
 |**float [\*..最大**|**float [24]**|  
 |**float [16..\*]**|**float [53]**|  
-|**絵**|**絵**|  
+|**image**|**image**|  
 |**int**|**int**|  
-|**整数 (integer)**|**int**|  
+|**integer**|**int**|  
 |**longsysname**|**nvarchar [255]**|  
 |**money**|**money**|  
 |**national char**|**nchar**|  
@@ -106,19 +106,19 @@ ms.locfileid: "68028660"
 |**nchar の変化 [4001.\*.]**|**nvarchar(max)**|  
 |**nchar [\*..4000]**|**nchar [\*]**|  
 |**nchar [4001..\*]**|**nvarchar(max)**|  
-|**番号**|**番号**|  
+|**numeric**|**numeric**|  
 |**数値 [\*..\*]**|**数値 [\*]**|  
 |**数値 [\*..\*][\*..\*]**|**数値 [\*] [\*]**|  
 |**nvarchar**|**nvarchar**|  
 |**nvarchar [\*..4000]**|**nvarchar [\*]**|  
 |**nvarchar [4001..\*]**|**nvarchar(max)**|  
-|**本当の**|**float [24]**|  
+|**real**|**float [24]**|  
 |**smalldatetime**|**smalldatetime**|  
 |**smallint**|**smallint**|  
 |**smallmoney**|**smallmoney**|  
 |**sysname**|**nvarchar [128]**|  
 |**sysname [\*..\*]**|**nvarchar [255]**|  
-|**本文**|**本文**|  
+|**text**|**text**|  
 |**time**|**時刻 [3]**|  
 |**timestamp**|**rowversion**|  
 |**tinyint**|**tinyint**|  

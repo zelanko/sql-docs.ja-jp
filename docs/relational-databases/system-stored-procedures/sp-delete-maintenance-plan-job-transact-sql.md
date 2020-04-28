@@ -18,10 +18,10 @@ ms.assetid: 1c2148c3-2928-4d9b-b1c8-3512cfbd6a63
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c67731907d105c6fb2cc48ecf3232d2c9d89c5b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68009210"
 ---
 # <a name="sp_delete_maintenance_plan_job-transact-sql"></a>sp_delete_maintenance_plan_job (Transact-SQL)
@@ -52,7 +52,7 @@ sp_delete_maintenance_plan_job [ @plan_id = ] 'plan_id' ,
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_delete_maintenance_plan_job**は、 **msdb**データベースから実行する必要があります。  
   
  すべてのジョブをメンテナンスプランから削除した場合、ユーザーは**sp_delete_maintenance_plan_db**を実行して、プランから残りのデータベースを削除することをお勧めします。  
@@ -60,7 +60,7 @@ sp_delete_maintenance_plan_job [ @plan_id = ] 'plan_id' ,
 ## <a name="permissions"></a>アクセス許可  
  **Sp_delete_maintenance_plan_job**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  この例では、メンテナンスプランからジョブ "B8FCECB1-E22C-11D2-AA64-00C04F688EAE" を削除します。  
   
 ```  

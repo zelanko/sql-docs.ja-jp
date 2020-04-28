@@ -18,10 +18,10 @@ ms.assetid: 18b2c985-47b8-49c8-82d1-8a4af3d7d33a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7a2a4e8a7cf58f8c4519d15ae46e2b278fcd1383
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68008965"
 ---
 # <a name="sp_delete_schedule-transact-sql"></a>sp_delete_schedule (Transact-sql)
@@ -54,9 +54,9 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ None  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  既定では、スケジュールがジョブに関連付けられている場合、スケジュールを削除することはできません。 ジョブに関連付けられているスケジュールを削除するには、 *force_delete*に値**1**を指定します。 スケジュールを削除しても、現在実行中のジョブは停止されません。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -103,6 +103,6 @@ GO
   
 ## <a name="see-also"></a>参照  
  [ジョブの実装](../../ssms/agent/implement-jobs.md)   
- [sp_add_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)  
+ [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)  
   
   

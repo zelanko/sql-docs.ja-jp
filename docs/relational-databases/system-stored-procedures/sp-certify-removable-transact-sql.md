@@ -18,10 +18,10 @@ ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c39665f54a915282a6c59fe7d57b24d0cde0a5e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68045930"
 ---
 # <a name="sp_certify_removable-transact-sql"></a>sp_certify_removable (Transact-SQL)
@@ -50,7 +50,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  データベースが正しく構成されている場合、 **sp_certify_removable**は次の処理を実行します。  
   
 -   ファイルをコピーできるように、データベースをオフラインに設定します。  
@@ -77,12 +77,12 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
 -   **Auto**値を指定して**sp_certify_removable**を実行するだけです。  
   
- このストアドプロシージャでは、ユーザーとユーザーの権限のみがチェックされることに注意してください。 データベースにはグループを追加でき、そのグループに権限を与えることができます。 詳細については、「 [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)と共に使用できるように構成する方法について説明します。  
+ このストアドプロシージャでは、ユーザーとユーザーの権限のみがチェックされることに注意してください。 データベースにはグループを追加でき、そのグループに権限を与えることができます。 詳細については、「 [GRANT &#40;transact-sql&#41;](../../t-sql/statements/grant-transact-sql.md)」を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
  実行権限は、 **sysadmin**固定サーバーロールのメンバーに制限されています。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、`inventory` データベースを削除できるかどうかを確認します。  
   
 ```  
@@ -92,8 +92,8 @@ EXEC sp_certify_removable inventory, AUTO;
 ## <a name="see-also"></a>参照  
  [データベースのデタッチとアタッチ &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [sp_create_removable &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-create-removable-transact-sql.md)   
- [ALTER DATABASE &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [sp_dbremove &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

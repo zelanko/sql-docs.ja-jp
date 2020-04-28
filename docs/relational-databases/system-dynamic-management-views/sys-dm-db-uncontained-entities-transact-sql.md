@@ -19,10 +19,10 @@ ms.assetid: f417efd4-8c71-4f81-bc9c-af13bb4b88ad
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 625c6134c91a9b452b8df2b7e235b78126c1354e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026921"
 ---
 # <a name="sysdm_db_uncontained_entities-transact-sql"></a>sys.dm_db_uncontained_entities (Transact-SQL)
@@ -35,8 +35,8 @@ ms.locfileid: "68026921"
 ||||  
 |-|-|-|  
 |**列名**|**Type**|**説明**|  
-|*講義*|**int**|1 = オブジェクトまたは列 (モジュール、XP、ビュー、シノニム、およびテーブルを含む)。<br /><br /> 4 = データベースプリンシパル<br /><br /> 5 = アセンブリ<br /><br /> 6 = 型<br /><br /> 7 = インデックス (フルテキスト インデックス)<br /><br /> 12 = データベース DDL トリガー<br /><br /> 19 = ルート<br /><br /> 30 = 監査の仕様|  
-|*class_desc*|**nvarchar (120)**|エンティティのクラスの説明。 クラスに一致する次のいずれかです。<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **ASSEMBLY**<br /><br /> **TYPE**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROUTE**<br /><br /> **AUDIT_SPECIFICATION**|  
+|*class*|**int**|1 = オブジェクトまたは列 (モジュール、XP、ビュー、シノニム、およびテーブルを含む)。<br /><br /> 4 = データベースプリンシパル<br /><br /> 5 = アセンブリ<br /><br /> 6 = 型<br /><br /> 7 = インデックス (フルテキスト インデックス)<br /><br /> 12 = データベース DDL トリガー<br /><br /> 19 = ルート<br /><br /> 30 = 監査の仕様|  
+|*class_desc*|**nvarchar(120)**|エンティティのクラスの説明。 クラスに一致する次のいずれかです。<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **ASSEMBLY**<br /><br /> **種類**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROUTE**<br /><br /> **AUDIT_SPECIFICATION**|  
 |*major_id*|**int**|エンティティの ID。<br /><br /> *Class*が1の場合は、object_id<br /><br /> *Class*が4の場合は、database_principals principal_id です。<br /><br /> *Class* = 5 の場合は、assembly_id ます。<br /><br /> *Class*が6の場合は、user_type_id ます。<br /><br /> *Class*が7の場合は、index_id ます。<br /><br /> *Class*が12の場合は、object_id ます。<br /><br /> *Class*が19の場合は、route_id ます。<br /><br /> *Class*が30の場合は、sys です。 database_audit_specifications。 database_specification_id。|  
 |*statement_line_number*|**int**|クラスがモジュールの場合は、非包含エンティティの使用が見つかった行番号を返します。  それ以外の場合、値は null になります。|  
 |*statement_ offset_begin*|**int**|クラスがモジュールの場合は、非包含エンティティの使用が開始する開始位置 (バイト単位) が 0 で始まることを示します。 それ以外の場合、戻り値は null になります。|  
@@ -45,7 +45,7 @@ ms.locfileid: "68026921"
 |*feature_ 名*|**nvarchar(256)**|オブジェクトの外部名を返します。|  
 |*feature_type_name*|**nvarchar(256)**|機能の種類を返します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  dm_db_uncontained_entities には、データベースの境界を越える可能性のあるエンティティが表示されます。 データベースの外部のオブジェクトを使用する可能性のあるユーザー エンティティが返されます。  
   
  次の機能の種類が報告されます。  
@@ -67,7 +67,7 @@ ms.locfileid: "68026921"
 ### <a name="permissions"></a>アクセス許可  
  sys.dm_db_uncontained_entities は、ユーザーが何らかの権限を持っているオブジェクトのみを返します。 データベースの包含を完全に評価するには、 **sysadmin**固定サーバーロールのメンバーや**db_owner**ロールのメンバーなど、高い特権を持つユーザーがこの関数を使用する必要があります。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、P1 という名前のプロシージャを作成し、 `sys.dm_db_uncontained_entities`にクエリを実行します。 このクエリは、P1 がデータベースの外部にある **sys.endpoints** を使用していることを報告します。  
   
 ```sql  

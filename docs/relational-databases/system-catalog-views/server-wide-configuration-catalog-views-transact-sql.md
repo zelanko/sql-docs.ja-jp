@@ -16,10 +16,10 @@ ms.assetid: fa039662-6eb6-47d9-952c-229a4dffa81d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9f9c089e1e0c0c9b8788922ad566a1ee6bcd9c6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68018283"
 ---
 # <a name="server-wide-configuration-catalog-views-transact-sql"></a>サーバー全体の構成のカタログビュー (Transact-sql)
@@ -35,7 +35,7 @@ ms.locfileid: "68018283"
 |[sys.trace_categories](../../relational-databases/system-catalog-views/sys-trace-categories-transact-sql.md)|[sys.trace_subclass_values](../../relational-databases/system-catalog-views/sys-trace-subclass-values-transact-sql.md)|  
   
 ## <a name="see-also"></a>参照  
- [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [システムビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

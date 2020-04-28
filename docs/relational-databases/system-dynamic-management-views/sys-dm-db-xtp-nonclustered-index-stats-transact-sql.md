@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 726fd7d44ed64dfee609ad29181a2077364d72e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026789"
 ---
 # <a name="sysdm_db_xtp_nonclustered_index_stats-transact-sql"></a>dm_db_xtp_nonclustered_index_stats (Transact-sql)
@@ -40,15 +40,15 @@ ms.locfileid: "68026789"
   
  メモリ最適化された非クラスター化インデックスの詳細については、 [SQL Server インメモリ OLTP の概要](https://t.co/T6zToWc6y6)、ページ17を参照してください。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|オブジェクトの ID。|  
 |xtp_object_id|**bigint**|メモリ最適化テーブルの ID。|  
 |index_id|**int**|インデックスの ID。|  
 |delta_pages|**bigint**|ツリー内のこのインデックスに対するデルタページの合計数。|  
-|internal_pages|**bigint**|内部使用のみ。 ツリー内のこのインデックスに対する内部ページの合計数。|  
+|internal_pages|**bigint**|内部使用です。 ツリー内のこのインデックスに対する内部ページの合計数。|  
 |leaf_pages|**bigint**|ツリー内のこのインデックスに対するリーフページの合計数。|  
-|outstanding_retired_nodes|**bigint**|内部使用のみ。 内部構造のこのインデックスに対するノードの合計数。|  
+|outstanding_retired_nodes|**bigint**|内部使用です。 内部構造のこのインデックスに対するノードの合計数。|  
 |page_update_count|**bigint**|インデックス内のページを更新する操作の累積数。|  
 |page_update_retry_count|**bigint**|インデックス内のページを更新する操作の再試行の累積数。|  
 |page_consolidation_count|**bigint**|インデックス内のページ統合の累積数。|  
@@ -66,6 +66,6 @@ ms.locfileid: "68026789"
  現在のデータベースに対する VIEW DATABASE STATE 権限が必要です。  
   
 ## <a name="see-also"></a>参照  
- [メモリ最適化テーブルの動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [メモリ最適化テーブルの動的管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: a86eb4f5-1f7b-493e-af55-3d15cf878228
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6d7fb57743726a59c0b501544802ecc7c701da20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029756"
 ---
 # <a name="syspublications-transact-sql"></a>syspublications (Transact-sql)
@@ -29,15 +29,15 @@ ms.locfileid: "68029756"
 
   データベースで定義されているパブリケーションごとに1行のデータを格納します。 このテーブルは、パブリケーションデータベースに格納されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**記述**|**nvarchar(255)**|パブリケーションの説明エントリです。|  
+|**description**|**nvarchar(255)**|パブリケーションの説明エントリです。|  
 |**name**|**sysname**|パブリケーションに関連付けられている一意の名前です。|  
 |**pubid**|**int**|パブリケーションの一意の ID を提供する id 列。|  
 |**repl_freq**|**tinyint**|レプリケーションの頻度:<br /><br /> **0** = トランザクションベース。<br /><br /> **1** = テーブルの定期更新。|  
-|**オンライン**|**tinyint**|状態:<br /><br /> **0** = 非アクティブ。<br /><br /> **1** = アクティブ。|  
+|**status**|**tinyint**|状態:<br /><br /> **0** = 非アクティブ。<br /><br /> **1** = アクティブ。|  
 |**sync_method**|**tinyint**|同期方法:<br /><br /> **0** = ネイティブモードの一括コピープログラムユーティリティ (**BCP**)。<br /><br /> **1** = キャラクターモードの BCP。<br /><br /> **3** = 同時実行。ネイティブモードの BCP が使用されますが、スナップショットの実行中にテーブルがロックされることはありません。<br /><br /> **4** = Concurrent_c。キャラクターモードの BCP が使用されますが、スナップショットの実行中にテーブルがロックされることはありません。|  
-|**snapshot_jobid**|**バイナリ (16)**|スケジュールされたタスク ID。|  
+|**snapshot_jobid**|**binary(16)**|スケジュールされたタスク ID。|  
 |**independent_agent**|**bit**|このパブリケーションに対して、スタンドアロンのディストリビューション エージェントがあるかどうかを示します。<br /><br /> **0** = パブリケーションは共有ディストリビューションエージェントを使用し、各パブリッシャーデータベース/サブスクライバーデータベースのペアには1つの共有エージェントがあります。<br /><br /> **1** = このパブリケーションには、スタンドアロンのディストリビューションエージェントがあります。|  
 |**immediate_sync**|**bit**|スナップショットエージェントを実行するたびに同期ファイルを作成または再作成するかどうかを示します。 **1**は、エージェントを実行するたびに同期ファイルが作成されることを意味します。|  
 |**enabled_for_internet**|**bit**|ファイル転送プロトコル (FTP) およびその他のサービスを介して、パブリケーションの同期ファイルがインターネットに公開されているかどうかを示します。 **1**は、インターネットからアクセスできることを意味します。|  
@@ -63,14 +63,14 @@ ms.locfileid: "68029756"
 |**allow_subscription_copy**|**bit**|このパブリケーションをサブスクライブするサブスクリプションデータベースをコピーする機能が有効になっているかどうかを指定します。 **1**は、コピーが許可されることを意味します。|  
 |**centralized_conflicts**|**bit**|競合レコードがパブリッシャーに格納されるかどうかを示します。<br /><br /> **0** = 競合レコードは、競合の原因となったパブリッシャーとサブスクライバーの両方に格納されます。<br /><br /> **1** = 競合レコードはパブリッシャーに格納されます。|  
 |**conflict_retention**|**int**|競合の保有期間を日数で指定します。|  
-|**conflict_policy**|**int**|キュー更新サブスクライバーオプションを使用する場合の競合解決ポリシーを指定します。 次のいずれかの値を指定できます。<br /><br /> **1** = パブリッシャー優先。<br /><br /> **2** = サブスクライバー優先。<br /><br /> **3** = サブスクリプションは再初期化されます。|  
-|**queue_type**|**int**|使用されるキューの種類。 次のいずれかの値を指定できます。<br /><br /> **1** = msmq は、メッセージ[!INCLUDE[msCoName](../../includes/msconame-md.md)]キューを使用してトランザクションを格納します。<br /><br /> **2** = sql: を使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]してトランザクションを格納します。<br /><br /> 注: メッセージ[!INCLUDE[msCoName](../../includes/msconame-md.md)]キューの使用は推奨されておらず、使用できなくなりました。|  
+|**conflict_policy**|**int**|キュー更新サブスクライバーオプションを使用する場合の競合解決ポリシーを指定します。 次のいずれかの値を指定します。<br /><br /> **1** = パブリッシャー優先。<br /><br /> **2** = サブスクライバー優先。<br /><br /> **3** = サブスクリプションは再初期化されます。|  
+|**queue_type**|**int**|使用されるキューの種類。 次のいずれかの値を指定します。<br /><br /> **1** = msmq は、メッセージ[!INCLUDE[msCoName](../../includes/msconame-md.md)]キューを使用してトランザクションを格納します。<br /><br /> **2** = sql: を使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]してトランザクションを格納します。<br /><br /> 注: メッセージ[!INCLUDE[msCoName](../../includes/msconame-md.md)]キューの使用は推奨されておらず、使用できなくなりました。|  
 |**ad_guidname**|**sysname**|パブリケーションが[!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory でパブリッシュされるかどうかを指定します。 有効なグローバル一意識別子 (GUID) は、パブリケーションが Active Directory にパブリッシュされることを指定します。 GUID は、対応する Active Directory パブリケーションオブジェクトの**objectGUID**です。 NULL の場合、パブリケーションは Active Directory でパブリッシュされません。|  
-|**backward_comp_level**|**int**|データベースの互換性レベル。次のいずれかの値になります。<br /><br /> **** = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。<br /><br /> **** = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]。<br /><br /> **** = 110[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。<br /><br /> **** = 120[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]。|  
-|**allow_initialize_from_backup**|**bit**|サブスクライバーが、初期スナップショットではなくバックアップから、このパブリケーションに対するサブスクリプションを初期化できるかどうかを示します。 **1**は、サブスクリプションをバックアップから初期化できることを意味します。 **0**は、サブスクリプションが使用できないことを意味します。 詳細については、「 [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。|  
-|**min_autonosync_lsn**|**binary**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**backward_comp_level**|**int**|データベースの互換性レベル。次のいずれかの値になります。<br /><br /> **90** = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。<br /><br /> **100** = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]。<br /><br /> **110** = 110[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。<br /><br /> **120** = 120[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]。|  
+|**allow_initialize_from_backup**|**bit**|サブスクライバーが、初期スナップショットではなくバックアップから、このパブリケーションに対するサブスクリプションを初期化できるかどうかを示します。 **1**は、サブスクリプションをバックアップから初期化できることを意味します。 **0**は、サブスクリプションが使用できないことを意味します。 詳細については、「 [スナップショットを使用しないトランザクション サブスクリプションの初期化](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。|  
+|**min_autonosync_lsn**|**[バイナリ]**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**replicate_ddl**|**int**|パブリケーションでスキーマレプリケーションがサポートされているかどうかを示します。 **1**は、パブリッシャーで実行されるデータ定義言語 (DDL) ステートメントがレプリケートされることを示し、 **0**は ddl ステートメントがレプリケートされないことを示します。 詳細については、「[パブリケーション データベースでのスキーマの変更](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)」を参照してください。|  
-|**オプション**|**int**|追加のパブリッシングオプションを指定するビットマップ。ビットごとのオプションの値は次のとおりです。<br /><br /> **0x1** -ピアツーピアレプリケーションに対して有効になります。<br /><br /> **0x2** -ピアツーピアレプリケーションのローカル変更のみをパブリッシュします。<br /><br /> **0x4** -以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーに対して有効です。<br /><br /> **0x8** -ピアツーピア競合検出に対して有効です。|  
+|**options**|**int**|追加のパブリッシングオプションを指定するビットマップ。ビットごとのオプションの値は次のとおりです。<br /><br /> **0x1** -ピアツーピアレプリケーションに対して有効になります。<br /><br /> **0x2** -ピアツーピアレプリケーションのローカル変更のみをパブリッシュします。<br /><br /> **0x4** -以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーに対して有効です。<br /><br /> **0x8** -ピアツーピア競合検出に対して有効です。|  
 |**originator_id**|**smallint**|競合検出のためにピア ツー ピア レプリケーション トポロジの各ノードを識別します。 詳細については、「 [ピア ツー ピア レプリケーションにおける競合検出](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)」を参照してください。|  
   
 ## <a name="see-also"></a>参照  
@@ -78,6 +78,6 @@ ms.locfileid: "68029756"
  [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addpublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
- [sp_helppublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)  
+ [sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)  
   
   

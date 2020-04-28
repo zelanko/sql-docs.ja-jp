@@ -20,18 +20,17 @@ ms.assetid: 1a53d707-7b06-49cc-a0df-ac727cfe953f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f44209b2fb700bf885575f2ed4c0d2c65b82329b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68005666"
 ---
 # <a name="srv_paramname-extended-stored-procedure-api"></a>srv_paramname (拡張ストアド プロシージャ API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
   
  リモート ストアド プロシージャ呼び出しのパラメーターの名前を返します。  
   
@@ -51,20 +50,18 @@ SRV_PROC * srvproc,intn, int *len );
  パラメーターの番号を示します。 最初のパラメーターは 1 です。  
   
  *len*  
- パラメーター名の長さ (バイト数) を格納した **int** 変数へのポインターです。 
-  *len* が NULL である場合、リモート ストアド プロシージャのパラメーター名の長さは返されていません。  
+ パラメーター名の長さ (バイト数) を格納した **int** 変数へのポインターです。 *len* が NULL である場合、リモート ストアド プロシージャのパラメーター名の長さは返されていません。  
   
 ## <a name="returns"></a>戻り値  
- パラメーター名を格納した NULL 終端文字列を指すポインターを返します。 パラメーター名の長さは、*len* に格納されます。 
-  *n* 番目のパラメーターがない場合、またはリモート ストアド プロシージャがない場合は NULL を返し、*len* が -1 に設定され、情報エラー メッセージが送信されます。 パラメーター名が NULL である場合、*len* は 0 に設定され、NULL 終端の空文字列が返されます。  
+ パラメーター名を格納した NULL 終端文字列を指すポインターを返します。 パラメーター名の長さは、*len* に格納されます。 *n* 番目のパラメーターがない場合、またはリモート ストアド プロシージャがない場合は NULL を返し、*len* が -1 に設定され、情報エラー メッセージが送信されます。 パラメーター名が NULL である場合、*len* は 0 に設定され、NULL 終端の空文字列が返されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この関数は、リモート ストアド プロシージャ呼び出しのパラメーターの名前を取得します。 パラメーターを指定してリモート ストアド プロシージャを呼び出す場合、パラメーターは名前で指定することも、名前を使用せずにその位置を指定して渡すこともできます。 名前によるパラメーター指定と位置によるパラメーター指定を混合してリモート ストアド プロシージャを呼び出すと、エラーが発生します。 エラーが発生しても SRV_RPC ハンドラーは呼び出されますが、パラメーターが存在しないと見なされ、**srv_rpcparams** は 0 を返します。  
   
 > [!IMPORTANT]  
 >  拡張ストアド プロシージャのソース コードを十分に確認し、コンパイル済み DLL を、運用サーバーにインストールする前にテストする必要があります。 セキュリティの確認およびテストについて詳しくは、[Microsoft の Web サイト](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)をご覧ください。  
   
 ## <a name="see-also"></a>参照  
- [srv_rpcparams &#40;拡張ストアドプロシージャ API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-rpcparams-extended-stored-procedure-api.md)  
+ [srv_rpcparams &#40;拡張ストアド プロシージャ API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-rpcparams-extended-stored-procedure-api.md)  
   
   

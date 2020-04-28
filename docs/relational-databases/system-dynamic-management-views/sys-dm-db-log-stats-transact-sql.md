@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b23eea391c7de1f02eacec7f8c8625211dfeea3d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004838"
 ---
 # <a name="sysdm_db_log_stats-transact-sql"></a>sys.dm_db_log_stats (Transact-SQL)   
@@ -43,16 +43,16 @@ ms.locfileid: "68004838"
 
 *database_id* |NULL |**既定**
 
-データベースの ID を示します。 `database_id`が`int`です。 有効な入力値は、データベースの ID 番号`NULL`、、 `DEFAULT`またはです。 既定では、 `NULL`です。 `NULL`と`DEFAULT`は、現在のデータベースのコンテキストでは同等の値です。  
+データベースの ID を示します。 `database_id` は `int` です。 有効な入力値は、データベースの ID 番号`NULL`、、 `DEFAULT`またはです。 既定値は、`NULL` です。 `NULL`と`DEFAULT`は、現在のデータベースのコンテキストでは同等の値です。  
 組み込み関数 [DB_ID](../../t-sql/functions/db-id-transact-sql.md) を指定できます。 データベース名`DB_ID`を指定せずにを使用する場合は、現在のデータベースの互換性レベルが90以上である必要があります。
 
   
 ## <a name="tables-returned"></a>返されるテーブル  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |database_id    |**int**    |データベース ID |  
-|recovery_model |**nvarchar (60)**   |   データベースの復旧モデル。 指定できる値は、次のとおりです。 <br /> SIMPLE<br /> BULK_LOGGED <br /> FULL |  
+|recovery_model |**nvarchar(60)**   |   データベースの復旧モデル。 指定できる値は、次のとおりです。 <br /> SIMPLE<br /> BULK_LOGGED <br /> FULL |  
 |log_min_lsn    |**nvarchar(24)**   |   トランザクションログの現在の開始[ログシーケンス番号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) 。|  
 |log_end_lsn    |**nvarchar(24)**   |   トランザクションログに記録されている最後のログレコードの[ログシーケンス番号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) 。|  
 |current_vlf_sequence_number    |**bigint** |   実行時の現在の[仮想ログファイル (列)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)のシーケンス番号。|  
@@ -61,8 +61,8 @@ ms.locfileid: "68004838"
 |total_log_size_mb  |**float**  |   トランザクションログの合計サイズ (MB)。 |  
 |active_vlf_count   |**bigint** |   トランザクションログ内のアクティブな[仮想ログファイル (vlf)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)の合計数。|  
 |active_log_size_mb |**float**  |   アクティブなトランザクションログの合計サイズ (MB)。|  
-|log_truncation_holdup_reason   |**nvarchar (60)**   |   ログの切り捨てホールドアップ理由。 値は、の`log_reuse_wait_desc` `sys.databases`列と同じです。  (これらの値の詳細については、「[トランザクションログ](../../relational-databases/logs/the-transaction-log-sql-server.md)」を参照してください)。 <br />指定できる値は、次のとおりです。 <br />NOTHING<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />レプリケーション<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />その他の一時的な |  
-|log_backup_time    |**DATETIME**   |   トランザクションログの最後のバックアップ時刻。|   
+|log_truncation_holdup_reason   |**nvarchar(60)**   |   ログの切り捨てホールドアップ理由。 値は、の`log_reuse_wait_desc` `sys.databases`列と同じです。  (これらの値の詳細については、「[トランザクションログ](../../relational-databases/logs/the-transaction-log-sql-server.md)」を参照してください)。 <br />指定できる値は、次のとおりです。 <br />NOTHING<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />レプリケーション<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />その他の一時的な |  
+|log_backup_time    |**datetime**   |   トランザクションログの最後のバックアップ時刻。|   
 |log_backup_lsn |**nvarchar(24)**   |   最後のトランザクションログバックアップ[ログシーケンス番号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)。|   
 |log_since_last_log_backup_mb   |**float**  |   最後のトランザクションログバックアップ[ログシーケンス番号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)以降のログサイズ (MB)。|  
 |log_checkpoint_lsn |**nvarchar(24)**   |   最後のチェックポイント[ログシーケンス番号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)。|  
@@ -72,7 +72,7 @@ ms.locfileid: "68004838"
 |recovery_vlf_count |**bigint** |   フェールオーバーまたはサーバーの再起動があった場合に、回復する[仮想ログファイル (vlf)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)の合計数。 |  
 
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 セカンダリレプリカ`sys.dm_db_log_stats`として可用性グループに参加しているデータベースに対して実行する場合は、上記で説明したフィールドのサブセットのみが返されます。  現在、セカンダリ`database_id`データベース`recovery_model`に対し`log_backup_time`て実行すると、、、およびのみが返されます。   
 
 ## <a name="permissions"></a>アクセス許可  
@@ -80,7 +80,7 @@ ms.locfileid: "68004838"
   
 ## <a name="examples"></a>例  
 
-### <a name="a-determining-databases-in-a-includessnoversionincludesssnoversion-mdmd-instance-with-high-number-of-vlfs"></a>A. 多数の Vlf を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]持つインスタンス内のデータベースの特定   
+### <a name="a-determining-databases-in-a-ssnoversion-instance-with-high-number-of-vlfs"></a>A. 多数の Vlf を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]持つインスタンス内のデータベースの特定   
 次のクエリでは、ログファイルに 100 Vlf を超えるデータベースが返されます。 多数の Vlf が、データベースの起動、復元、および復旧時間に影響を与える可能性があります。
 
 ```sql  
@@ -90,7 +90,7 @@ CROSS APPLY sys.dm_db_log_stats(s.database_id)
 WHERE total_vlf_count  > 100;
 ```   
 
-### <a name="b-determining-databases-in-a-includessnoversionincludesssnoversion-mdmd-instance-with-transaction-log-backups-older-than-4-hours"></a>B. 4時間を経過[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]したトランザクションログバックアップを使用してインスタンス内のデータベースを特定する   
+### <a name="b-determining-databases-in-a-ssnoversion-instance-with-transaction-log-backups-older-than-4-hours"></a>B. 4時間を経過[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]したトランザクションログバックアップを使用してインスタンス内のデータベースを特定する   
 次のクエリでは、インスタンス内のデータベースの最後のログバックアップ時刻を決定します。
 
 ```sql  
@@ -100,8 +100,8 @@ CROSS APPLY sys.dm_db_log_stats(s.database_id);
 ```
 
 ## <a name="see-also"></a>参照  
-[動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+[Transact-sql&#41;&#40;の動的管理ビューおよび関数](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
 [Transact-sql&#41;&#40;データベース関連の動的管理ビュー](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
 [dm_db_log_space_usage &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
-[dm_db_log_info &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
+[sys.dm_db_log_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c6828b77af36b5dbbc50fbca0210961a7f2ed20c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68041923"
 ---
 # <a name="predictsequence-dmx"></a>PredictSequence (DMX)
@@ -32,14 +32,14 @@ PredictSequence(\<table column reference, n-start, n-end>)
 ## <a name="return-type"></a>戻り値の型  
  \<テーブル式>。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  *N*パラメーターを指定すると、次の値が返されます。  
   
 -   *N*が0より大きい場合は、次の*n*ステップで最も可能性の高いシーケンス値です。  
   
 -   *N 開始*と*n エンド*の両方が指定されている場合は、 *n から開始*まで*のシーケンス値です。*  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、シーケンスクラスターマイニングモデルに基づいて、 [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]データベース内の顧客によって購入される可能性が最も高い5つの製品のシーケンスを返します。  
   
 ```  

@@ -18,10 +18,10 @@ ms.assetid: 9c143b6c-27ac-4ab7-98d1-3b7b265f3963
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 279492503ba8ce31e3c5d4027d8fd184c4a81587
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68045961"
 ---
 # <a name="sp_can_tlog_be_applied-transact-sql"></a>sp_can_tlog_be_applied (Transact-sql)
@@ -43,7 +43,7 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
 ## <a name="arguments"></a>引数  
 `[ @backup_file_name = ] 'backup_file_name'`バックアップファイルの名前を指定します。 *backup_file_name*は**nvarchar (128)** です。  
   
-`[ @database_name = ] 'database_name'`データベースの名前を指定します。 *database_name*は**sysname**です。  
+`[ @database_name = ] 'database_name'`データベースの名前を指定します。 *database_name* は **sysname** です。  
   
 `[ @result = ] _result_ OUTPUT`トランザクションログをデータベースに適用できるかどうかを示します。 *結果*は**bit**です。  
   
@@ -57,7 +57,7 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_can_tlog_be_applied**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、結果を格納するローカル変数 `@MyBitVar` を宣言します。  
   
 ```  
@@ -73,6 +73,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

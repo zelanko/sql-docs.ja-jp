@@ -12,10 +12,10 @@ ms.assetid: 2f574a34-4bab-40a4-89a8-ad4907ffc3fd
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: c084db939482fe57e150d4beb22eab4d5e6decb9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006549"
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>データベースの検索ウィザード ([ファイルの選択])
@@ -26,16 +26,16 @@ ms.locfileid: "68006549"
 SSMA に追加するファイルを選択するには、ファイル名の横にあるチェックボックスをオンにします。 ファイルの選択が完了したら、[**次へ**] をクリックして [完了] ページを表示します。  
   
 ## <a name="options"></a>オプション  
-**すべて選択**  
+**すべて選択する**  
 一覧内のすべてのデータベースを選択するには、このチェックボックスをオンにします。  
   
 **すべて選択解除**  
 一覧内のすべてのデータベースの選択を解除するには、このチェックボックスをオンにします。  
   
-**ファイル名**  
+**[ファイル名]**  
 SSMA に追加する Access データベースファイルの名前を表示します。  
   
-**[所有者]**  
+**所有者**  
 ファイルの所有者を表示します。  
   
 **[ファイル パス]**  
@@ -44,10 +44,10 @@ Access データベースファイルのパスが表示されます。
 **[サイズ]**  
 データベースのサイズ (バイト単位)。  
   
-**作成済み**  
+**作成**  
 データベースが作成された日付と時刻。  
   
-**修正済み**  
+**[更新日時]**  
 データベースが最後に更新された日時。  
   
 ## <a name="see-also"></a>参照  

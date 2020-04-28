@@ -19,10 +19,10 @@ ms.assetid: a85aca1b-8135-4c81-9a05-da5aec76f1ed
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 445d1c0e9d220e4dc9a2d8806bae8d7a7f8bfdc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68010622"
 ---
 # <a name="sp_syscollector_set_warehouse_database_name-transact-sql"></a>sp_syscollector_set_warehouse_database_name (Transact-SQL)
@@ -46,7 +46,7 @@ sp_syscollector_set_warehouse_database_name [ @database_name = ] 'database_name'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  データコレクター全体の構成を変更する前に、データコレクターを無効にする必要があります。 データコレクターが有効になっている場合、このプロシージャは失敗します。  
   
  現在のデータベース名を表示するには、 [syscollector_config_store](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md)システムビューに対してクエリを実行します。  
@@ -54,7 +54,7 @@ sp_syscollector_set_warehouse_database_name [ @database_name = ] 'database_name'
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャを実行するには、dc_admin (EXECUTE 権限を持つ) 固定データベースロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、管理データウェアハウスの名前を`RemoteMDW`に設定します。  
   
 ```  
@@ -65,6 +65,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

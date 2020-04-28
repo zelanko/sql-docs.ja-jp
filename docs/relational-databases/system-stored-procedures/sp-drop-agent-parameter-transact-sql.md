@@ -16,10 +16,10 @@ ms.assetid: b99e65ff-9cca-4dce-a2ce-2968de23a76a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8356ee01b0c14a9cb87542d750a93ea537fac5cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68016533"
 ---
 # <a name="sp_drop_agent_parameter-transact-sql"></a>sp_drop_agent_parameter (Transact-sql)
@@ -45,7 +45,7 @@ sp_drop_agent_parameter [ @profile_id = ] profile_id
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_drop_agent_parameter**は、すべての種類のレプリケーションで使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -54,6 +54,6 @@ sp_drop_agent_parameter [ @profile_id = ] profile_id
 ## <a name="see-also"></a>参照  
  [sp_add_agent_parameter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
  [sp_help_agent_parameter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

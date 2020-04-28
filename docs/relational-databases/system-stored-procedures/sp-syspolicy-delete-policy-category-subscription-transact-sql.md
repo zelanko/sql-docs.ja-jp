@@ -18,10 +18,10 @@ ms.assetid: eeab0120-c869-4c95-a79d-6dc418d0b23a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 1cc965b55cb1f7216d4711c129a5e99bb4da067f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68010496"
 ---
 # <a name="sp_syspolicy_delete_policy_category_subscription-transact-sql"></a>sp_syspolicy_delete_policy_category_subscription (Transact-SQL)
@@ -44,7 +44,7 @@ sp_syspolicy_delete_policy_category_subscription [ @policy_category_subscription
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  sp_syspolicy_delete_policy_category_subscription は msdb システム データベースのコンテキストで実行する必要があります。  
   
  サブスクリプションが必須の場合は、ポリシー カテゴリのサブスクリプションを削除できません。  
@@ -61,7 +61,7 @@ INNER JOIN msdb.dbo.syspolicy_policy_categories AS b
 ON a.policy_category_id = b.policy_category_id;  
 ```  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、ID が 1 であるポリシー カテゴリのサブスクリプションを削除します。  
   
 ```  

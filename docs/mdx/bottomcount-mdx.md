@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: bd09c823e09270ebf7c9851b3c6760baf720db39
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68016949"
 ---
 # <a name="bottomcount-mdx"></a>下端数 (MDX)
@@ -31,13 +31,13 @@ BottomCount(Set_Expression, Count [,Numeric_Expression])
  *Set_Expression*  
  セットを返す有効な多次元式 (MDX) 式です。  
   
- *数*  
+ *Count*  
  返す組の数を指定する有効な数値式です。  
   
  *Numeric_Expression*  
  有効な数値式です。通常は、数値を返すセル座標の多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  数値式が指定されている場合、この関数は、セットに対して評価される指定された数値式の値に基づいて、指定されたセット内の組を昇順で並べ替えます。 次に、下の**count**関数は、指定された数の組を最小値で返します。  
   
 > [!IMPORTANT]  
@@ -61,6 +61,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>参照  
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

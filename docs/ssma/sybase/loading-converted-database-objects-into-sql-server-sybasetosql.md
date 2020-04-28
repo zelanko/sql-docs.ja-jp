@@ -12,10 +12,10 @@ ms.assetid: 4c59256f-99a8-4351-9559-a455813dbd06
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 5185e8b1364fe2a5bae92c40c99e8f52bcd32ba7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028931"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-sybasetosql"></a>SQL Server への変換されたデータベース オブジェクトの読み込み (SybaseToSQL)
@@ -76,8 +76,7 @@ SSMA を使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]デ
   
 **スクリプトを変更するには**  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **[ファイル]** メニューの **[開く]** をポイントし、 **[ファイル]** をクリックします。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **[ファイル]** メニューの **[開く]** をポイントし、 **[ファイル]** をクリックします。  
   
 2.  [**開く**] ダイアログボックスで、に移動してスクリプトファイルを選択し、[ **OK**] をクリックします。  
   
@@ -92,8 +91,7 @@ SSMA を使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]デ
   
 **スクリプトを実行するには**  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **[ファイル]** メニューの **[開く]** をポイントし、 **[ファイル]** をクリックします。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **[ファイル]** メニューの **[開く]** をポイントし、 **[ファイル]** をクリックします。  
   
 2.  [**開く**] ダイアログボックスで、に移動してスクリプトファイルを選択し、[ **OK**] をクリックします。  
   
@@ -108,7 +106,7 @@ SSMA を使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]デ
 ## <a name="securing-objects-in-sql-server"></a>SQL Server でのオブジェクトのセキュリティ保護  
 変換されたデータベースオブジェクトをに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]読み込むと、それらのオブジェクトに対する権限を許可および拒否できます。 これは、データをに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移行する前に行うことをお勧めします。 で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オブジェクトをセキュリティで保護する方法の詳細については、オンラインブックの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 「データベースおよびデータベースアプリケーションのセキュリティに関する考慮事項」を参照してください。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 移行プロセスの次の手順では、 [SYBASE ASE データを SQL Server/SQL Azure (SybaseToSQL) に移行](https://msdn.microsoft.com/54a39f5e-9250-4387-a3ae-eae47c799811)します。  
   
 ## <a name="see-also"></a>参照  

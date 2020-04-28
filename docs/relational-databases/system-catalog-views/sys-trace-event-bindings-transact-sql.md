@@ -20,30 +20,29 @@ ms.assetid: 22f534e1-4ed6-4b3e-9ead-1d1001a1b0f5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d74fd55d4d2bf230cbb190cad428b371807f32ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022607"
 ---
 # <a name="systrace_event_bindings-transact-sql"></a>trace_event_bindings (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **Trace_event_bindings**カタログビューには、イベントと列の使用可能なすべての使用法の組み合わせの一覧が含まれています。 [ **Trace_event_id** ] 列に表示されている各イベントについて、使用可能なすべての列が [ **trace_column_id** ] 列に一覧表示されます。 特定のイベントが発生するたびに、使用可能なすべての列が設定されるわけではありません。 
-  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のバージョンによっては、これらの値は変化しません。  
+  **Trace_event_bindings**カタログビューには、イベントと列の使用可能なすべての使用法の組み合わせの一覧が含まれています。 [ **Trace_event_id** ] 列に表示されている各イベントについて、使用可能なすべての列が [ **trace_column_id** ] 列に一覧表示されます。 特定のイベントが発生するたびに、使用可能なすべての列が設定されるわけではありません。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のバージョンによっては、これらの値は変化しません。  
   
  サポートされているトレースイベントの完全な一覧については、「 [SQL Server イベントクラスのリファレンス](../../relational-databases/event-classes/sql-server-event-class-reference.md)」を参照してください。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに拡張イベントカタログビューを使用します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**trace_event_id**|**smallint**|トレース イベントの ID。 この列は、 **trace_events**カタログビューにも含まれています。|  
 |**trace_column_id**|**smallint**|トレース列の ID。 この列は、 **trace_columns**カタログビューにも含まれています。|  
   
 ## <a name="permissions"></a>アクセス許可  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   

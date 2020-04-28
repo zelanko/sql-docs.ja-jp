@@ -18,10 +18,10 @@ ms.assetid: 92ca7488-29db-414e-8e36-08b0a8f542bb
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 246081eb5c362cb76a4c037693ee6c40b999fcdd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68037327"
 ---
 # <a name="sysmail_update_profileaccount_sp-transact-sql"></a>sysmail_update_profileaccount_sp (Transact-SQL)
@@ -56,9 +56,9 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ None  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  指定されたアカウントが、指定されたプロファイルに関連付けられていない場合、エラーを返します。  
   
  シーケンス番号によって、データベース メールではプロファイル内のアカウントがどの順番で使用されるかが決まります。 新しい電子メール メッセージの場合、データベース メールでは、一番小さなシーケンス番号の付いたアカウントから処理が開始されます。 そのアカウントが失敗すると、データベース メールでは、このアカウントよりも大きいシーケンス番号を持つアカウントに処理が移ります。このように、データベース メールによってメッセージが正常に送信されるか、一番大きなシーケンス番号のアカウントが失敗するまで順に処理されます。 一番大きなシーケンス番号のアカウントが失敗した場合、電子メール メッセージは失敗します。  
@@ -70,7 +70,7 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャの実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、 **msdb**データベースのプロファイル`Admin-BackupServer` `AdventureWorks Administrator`内のアカウントのシーケンス番号を変更します。 このコードを実行すると、アカウントのシーケンス番号は `3` になります。これは、最初の 2 つのアカウントが失敗した場合に試行されることを示します。  
   
 ```  

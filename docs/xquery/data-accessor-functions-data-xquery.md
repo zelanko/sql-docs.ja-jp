@@ -16,10 +16,10 @@ ms.assetid: 511b5d7d-c679-4cb2-a3dd-170cc126f49d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7376c57f809fa97168b27b158678d931a696b5df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038971"
 ---
 # <a name="data-accessor-functions---data-xquery"></a>データ アクセサー関数 - data (XQuery)
@@ -38,7 +38,7 @@ fn:data ($arg as item()*) as xdt:untypedAtomic*
  *$arg*  
  型指定された値を返す対象となるアイテムのシーケンス。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  型指定された値には、次のことが当てはまります。  
   
 -   アトミック値の型指定された値はアトミック値です。  
@@ -75,7 +75,7 @@ set @x = ''
 select @x.query('data(<SomeNode>value</SomeNode>)')  
 ```  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
 ### <a name="a-using-the-data-xquery-function-to-extract-typed-value-of-a-node"></a>A. data() XQuery 関数によるノードの型指定された値の抽出  

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e78241252733e8298c0bc727f9c45dd6df2768ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68008214"
 ---
 # <a name="operators---arithmetic"></a>演算子 - 算術
@@ -22,7 +22,7 @@ ms.locfileid: "68008214"
   
  次の表は、DMX がサポートする算術演算子を示しています。  
   
-|演算子|[説明]|  
+|演算子|説明|  
 |--------------|-----------------|  
 |[+ &#40;&#41; &#40;DMX&#41;を追加する](../dmx/add-dmx.md)|2 つの数値を加算します。|  
 |[-&#40;&#41; &#40;DMX&#41;を減算する](../dmx/subtract-dmx.md)|ある数値から別の数値を減算します。|  

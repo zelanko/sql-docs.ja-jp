@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: cad8fec605a56a60cfcc7024739225e474fd42f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68036692"
 ---
 # <a name="strtovalue-mdx"></a>StrToValue (MDX)
@@ -31,7 +31,7 @@ StrToValue(MDX_Expression [,CONSTRAINED] )
  *MDX_Expression*  
  直接的または間接的に 1 つのセルに解決される有効な文字列式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Strtovalue**関数は、MDX 式によって指定された数値を返します。 **Strtovalue**関数は、通常、ユーザー定義関数と共に使用して、mdx 式を外部関数から mdx ステートメントに返し、1つのセルに解決できるようにします。  
   
 -   CONSTRAINED フラグを使用する場合、MDX 式にはスカラー値のみを含める必要があります。 CONSTRAINED フラグは、指定された文字列によるインジェクション攻撃の危険性を軽減するために使用します。 直接スカラー値に解決できない MDX 式を指定すると、"STRTOVALUE 関数の CONSTRAINED フラグによって設定された制限に違反しました。" というエラー メッセージが表示されます。  
@@ -57,6 +57,6 @@ WHERE [Product].[Product Categories].[Bikes]
 ```  
   
 ## <a name="see-also"></a>参照  
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

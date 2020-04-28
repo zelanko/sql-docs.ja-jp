@@ -18,10 +18,10 @@ ms.assetid: da04df2a-f7a1-41e7-a1ef-2d5d68919892
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 73638d41c7a24a37c068d365771b4d0469a174d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68041026"
 ---
 # <a name="syssp_xtp_merge_checkpoint_files-transact-sql"></a>sp_xtp_merge_checkpoint_files (Transact-sql)
@@ -56,15 +56,15 @@ sys.sp_xtp_merge_checkpoint_files database_name, @transaction_lower_bound, @tran
  [SQL&#41;&#40;dm_db_xtp_checkpoint_files](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md)に示すように、データファイルのトランザクションの (bigint) 上限。 無効な transactonId 値に対してエラーが生成されました。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- なし  
+ None  
   
 ## <a name="cursors-returned"></a>返されるカーソル  
- なし  
+ None  
   
 ## <a name="permissions"></a>アクセス許可  
  sysadmin 固定サーバー ロールと db_owner 固定データベース ロールが必要です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  有効な範囲内のすべてのデータとデルタ ファイルをマージして、1 つのデータとデルタ ファイルを生成します。 この手順は、マージポリシーには適用されません。  
   
 ## <a name="see-also"></a>参照  

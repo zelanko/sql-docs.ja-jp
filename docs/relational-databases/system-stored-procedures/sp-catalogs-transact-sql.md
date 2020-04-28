@@ -18,10 +18,10 @@ ms.assetid: ebb29ee2-be65-4e09-9c53-e3c6d12633e1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0844001016f67d227b4612176b2804dcda0a3d29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68045941"
 ---
 # <a name="sp_catalogs-transact-sql"></a>sp_catalogs (Transact-sql)
@@ -43,7 +43,7 @@ sp_catalogs [ @server_name = ] 'linked_svr'
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**Catalog_name**|**nvarchar (** 128 **)**|カタログの名前。|  
 |**説明**|**nvarchar (** 4000 **)**|カタログの説明|  
@@ -51,7 +51,7 @@ sp_catalogs [ @server_name = ] 'linked_svr'
 ## <a name="permissions"></a>アクセス許可  
  スキーマに対する SELECT 権限が必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、`OLE DB ODBC Linked Server #3` というリンク サーバーのカタログ情報を返します。  
   
 > [!NOTE]  
@@ -73,6 +73,6 @@ EXEC sp_catalogs 'OLE DB ODBC Linked Server #3';
  [sp_primarykeys &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
  [sp_tables_ex &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
  [sp_table_privileges &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

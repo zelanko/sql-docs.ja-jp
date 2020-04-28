@@ -18,10 +18,10 @@ ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5bc48bb3edbeaad5593f574676e61ab2ca7f727f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68044520"
 ---
 # <a name="sysmail_help_principalprofile_sp-transact-sql"></a>sysmail_help_principalprofile_sp (Transact-SQL)
@@ -57,21 +57,20 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
   
 ||||  
 |-|-|-|  
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |**principal_id**|**int**|データベース ユーザーの ID|  
 |**principal_name**|**sysname**|データベースユーザーの名前。|  
 |**profile_id**|**int**|データベースメールプロファイルの ID 番号。|  
 |**profile_name**|**sysname**|データベースメールプロファイルの名前。|  
 |**is_default**|**bit**|このプロファイルがユーザーの既定のプロファイルかどうかを示すフラグ|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  パラメーターを指定せずに**sysmail_help_principalprofile_sp**が呼び出された場合、返される結果セットには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス内のすべての関連付けが一覧表示されます。 それ以外の場合、結果セットには、指定されたパラメーターに一致するアソシエーションの情報が含まれます。 たとえば、プロファイル名が指定されている場合、このプロシージャはプロファイルのすべての関連付けを一覧表示します。  
   
  **sysmail_help_principalprofile_sp**は**msdb**データベースにあり、 **dbo**スキーマが所有しています。 現在のデータベースが**msdb**でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- 
-  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
+ **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>例  
   

@@ -18,10 +18,10 @@ ms.assetid: 8a91df6a-eb84-4512-9a17-4a6e32a9538a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1b3015651dc263d95aa80e6108db2e8017e112d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032831"
 ---
 # <a name="sp_start_job-transact-sql"></a>sp_start_job (Transact-sql)
@@ -61,9 +61,9 @@ sp_start_job
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ None  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  このストアドプロシージャは**msdb**データベースにあります。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -79,7 +79,7 @@ sp_start_job
   
  **SQLAgentUserRole**と**SQLAgentReaderRole**のメンバーは、自分が所有するジョブのみを開始できます。 **Sqlagentoperatorrole**のメンバーは、他のユーザーによって所有されているものも含め、すべてのローカルジョブを開始できます。 **Sysadmin**のメンバーは、すべてのローカルジョブとマルチサーバージョブを開始できます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、と`Weekly Sales Data Backup`いう名前のジョブを開始します。  
   
 ```  
@@ -95,6 +95,6 @@ GO
  [sp_help_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
  [sp_stop_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md)   
  [sp_update_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

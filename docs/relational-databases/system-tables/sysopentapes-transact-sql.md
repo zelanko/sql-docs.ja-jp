@@ -19,10 +19,10 @@ ms.assetid: c066ca9b-9cfd-46b1-90a3-5c8dc9e7b6ae
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 813592ffa5b67a4926dff611c2ba0e0faf36d273
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029799"
 ---
 # <a name="sysopentapes-transact-sql"></a>sysopentapes (Transact-sql)
@@ -37,7 +37,7 @@ ms.locfileid: "68029799"
 >  **Sysopentapes**ビューを削除することはできません。  
 
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**openTape**|**nvarchar (64)**|開いているテープ デバイスの物理ファイル名。 テープデバイスを開いて解放する方法の詳細については、「 [transact-sql&#41;のバックアップ &#40;](../../t-sql/statements/backup-transact-sql.md) 」および「 [&#40;Transact-sql&#41;の復元](../../t-sql/statements/restore-statements-transact-sql.md)」を参照してください。|  
   

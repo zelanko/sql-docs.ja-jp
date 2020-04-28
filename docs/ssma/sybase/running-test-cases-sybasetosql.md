@@ -12,10 +12,10 @@ ms.assetid: 195ffdef-cfde-4bf4-a3ae-e7402bb07972
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 73047e0741d4dee12ecec3e83df308e3f7abd343
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68021023"
 ---
 # <a name="running-test-cases-sybasetosql"></a>テスト ケースの実行 (SybaseToSQL)
@@ -37,14 +37,14 @@ SSMA Tester がテストケースを実行すると、テスト用に選択さ�
 ### <a name="prerequisites"></a>前提条件  
 SSMA Tester は、テストを開始する前に、テストの実行ですべての前提条件が満たされているかどうかを確認します。 条件が満たされていない場合は、エラーメッセージが表示されます。  
   
-### <a name="initialization"></a>初期化する  
+### <a name="initialization"></a>初期化  
 この手順では、SSMA Tester が Sybase と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の両方に補助オブジェクト (テーブル、トリガー、およびビュー) を作成します。 テーブル比較モードが変更された場合に**のみ**、検証対象として選択された影響を受けるテーブルでの変更のトレースを許可します。  
   
 検証されたテーブルに USER_TABLE という名前が付けられているとします。 このようなテーブルの場合、Sybase では次の補助オブジェクトが作成されます。  
   
 次のオブジェクトは、Sybase の SSMATESTER2005db データベースまたは SSMATESTER2008db データベース、および[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ssmatesterdb_syb データベースに作成されます。  
   
-|Name|種類|[説明]|  
+|名前|Type|説明|  
 |--------|--------|---------------|  
 |USER_TABLE $ Trg|トリガー|検証されたテーブルの変更の監査をトリガーします。|  
 |USER_TABLE $ Aud|テーブル|削除された行と上書きされた行が保存されるテーブル。|  
@@ -56,7 +56,7 @@ SSMA Tester は、テストを開始する前に、テストの実行ですべ�
   
 次のオブジェクトは、Sybase と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で検証済みテーブルのデータベースに作成されます。  
   
-|Name|種類|[説明]|  
+|名前|Type|説明|  
 |--------|--------|---------------|  
 |USER_TABLE $ Trg|トリガー|検証されたテーブルの変更の監査をトリガーします。|  
   
@@ -66,7 +66,7 @@ SSMA Tester は、テストを開始する前に、テストの実行ですべ�
 ### <a name="finalization"></a>最終  
 終了処理中に、**初期化**ステップで作成された補助オブジェクトがクリーンアップされます。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 [テストケースレポートの表示 &#40;SybaseToSQL&#41;](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md)  
   
 ## <a name="see-also"></a>参照  

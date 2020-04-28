@@ -18,10 +18,10 @@ ms.assetid: 70c10922-9345-4190-ba69-808a43f760da
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 5aa9801d312e5f862cb6274659496aff10c774ad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68010499"
 ---
 # <a name="sp_syspolicy_configure-transact-sql"></a>sp_syspolicy_configure (Transact-sql)
@@ -69,7 +69,7 @@ sp_syspolicy_configure [ @name = ] 'name'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  msdb システム データベースのコンテキストで sp_syspolicy_configure を実行する必要があります。  
   
  これらの設定の現在の値を表示するには、syspolicy_configuration システムビューにクエリを実行します。  
@@ -80,7 +80,7 @@ sp_syspolicy_configure [ @name = ] 'name'
 > [!IMPORTANT]  
 >  資格情報が昇格される可能性について: PolicyAdministratorRole ロールに割り当てられているユーザーは、サーバー トリガーを作成して、[!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスの動作に影響する可能性があるポリシーの実行をスケジュールできます。 たとえば、PolicyAdministratorRole ロールに割り当てられているユーザーは、ほとんどのオブジェクトが[!INCLUDE[ssDE](../../includes/ssde-md.md)]で作成されないようにすることができるポリシーを作成できます。 このような資格情報が昇格される可能性があるため、Policy管理者ロールロールは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の構成の制御によって信頼されているユーザーのみに付与する必要があります。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、ポリシーベースの管理を有効にします。  
   
 ```  

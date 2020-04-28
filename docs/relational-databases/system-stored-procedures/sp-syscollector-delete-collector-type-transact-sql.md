@@ -19,10 +19,10 @@ ms.assetid: 3f32905e-0005-42cb-aef1-7bd04c51fbac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c22170fff456a2ed65c295a1974539da20499c52
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68000862"
 ---
 # <a name="sp_syscollector_delete_collector_type-transact-sql"></a>sp_syscollector_delete_collector_type (Transact-SQL)
@@ -48,7 +48,7 @@ sp_syscollector_delete_collector_type [[ @collector_type_uid = ] 'collector_type
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  *Collector_type_uid*または*名前*には値を指定する必要があります。どちらも NULL にすることはできません。  
   
  このコレクション型のコレクションアイテムが存在する場合、このプロシージャはエラーをスローします。  

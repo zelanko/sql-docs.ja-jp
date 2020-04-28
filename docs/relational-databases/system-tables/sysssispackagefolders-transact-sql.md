@@ -18,10 +18,10 @@ ms.assetid: ddc4833f-27bf-4610-b739-d257961d17ac
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: d2ff4537f5db246dd9bcdc114b02005402f8745f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029592"
 ---
 # <a name="sysssispackagefolders-transact-sql"></a>sysssispackagefolders (Transact-sql)
@@ -36,10 +36,10 @@ ms.locfileid: "68029592"
  このテーブルは、 **msdb**データベースに格納されます。  
 
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**folderid**|**UNIQUEIDENTIFIER**|フォルダーの GUID。|  
-|**parentfolderid**|**UNIQUEIDENTIFIER**|親フォルダーであるフォルダーの GUID。|  
+|**folderid**|**uniqueidentifier**|フォルダーの GUID。|  
+|**parentfolderid**|**uniqueidentifier**|親フォルダーであるフォルダーの GUID。|  
 |**名**|**sysname**|フォルダーの名前。 これは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でフォルダー階層に表示される名前です。|  
   
   

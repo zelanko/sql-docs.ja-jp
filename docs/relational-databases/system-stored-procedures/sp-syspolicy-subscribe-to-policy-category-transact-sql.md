@@ -18,10 +18,10 @@ ms.assetid: de88cc49-bcc8-4dc6-8e59-ad85cfbfb2fb
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c5bc3b603c7dba345def7132e37d46a7554e864f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68035407"
 ---
 # <a name="sp_syspolicy_subscribe_to_policy_category-transact-sql"></a>sp_syspolicy_subscribe_to_policy_category (Transact-sql)
@@ -46,13 +46,13 @@ sp_syspolicy_subscribe_to_policy_category [ @policy_category = ] 'policy_categor
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  sp_syspolicy_subscribe_to_policy_category は、ポリシー カテゴリを追加するデータベースのコンテキストで実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  db_owner 固定データベース ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、指定したデータベースの 'Finance' ポリシーのカテゴリにサブスクリプションを追加します。  
   
 ```  

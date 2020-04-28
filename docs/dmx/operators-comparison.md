@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: fcbfb95070783db002d34870e5508df5322210d7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68008201"
 ---
 # <a name="operators---comparison"></a>演算子 - 比較
@@ -22,7 +22,7 @@ ms.locfileid: "68008201"
   
  次の表は、DMX がサポートしている比較演算子について示しています。  
   
-|演算子|[説明]|  
+|演算子|説明|  
 |--------------|-----------------|  
 |[&#60; &#40;&#41; &#40;DMX&#41;](../dmx/less-than-dmx.md)|NULL 以外の値として評価される引数では、左の引数の値が右の引数の値より小さい場合に TRUE を返します。そうでない場合は FALSE を返します。 いずれかの引数または両方の引数が null 値に評価される場合、演算子は null 値を返します。|  
 |[&#41; &#40;DMX&#41;より大きい&#62; &#40;](../dmx/greater-than-dmx.md)|Null 以外の値に評価される引数の場合、左の引数の値が右の引数の値より大きい場合は TRUE を返します。それ以外の場合は FALSE を返します。 いずれかの引数または両方の引数が null 値に評価される場合、演算子は null 値を返します。|  

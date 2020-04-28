@@ -16,10 +16,10 @@ ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e8ae792ba7f8422e841abbbe2f80b096497df993
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022451"
 ---
 # <a name="sp_addscriptexec-transact-sql"></a>sp_addscriptexec (Transact-sql)
@@ -53,12 +53,12 @@ sp_addscriptexec [ @publication = ] publication
 `[ @publisher = ] 'publisher'`以外[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のパブリッシャーを指定します。 *publisher*は**sysname**で、既定値は NULL です。  
   
 > [!NOTE]  
->  ** パブリッシャーからパブリッシュする場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーを使用しないでください。  
+>  *publisher*パブリッシャーからパブリッシュする場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーを使用しないでください。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_addscriptexec**は、トランザクションレプリケーションおよびマージレプリケーションで使用します。  
   
  **sp_addscriptexec**は、スナップショットレプリケーションには使用されません。  
@@ -72,7 +72,7 @@ sp_addscriptexec [ @publication = ] publication
 > [!NOTE]  
 >  スキップされたエラーは、参照のためにエージェント履歴に引き続き記録されます。  
   
- スナップショット**** 配信に FTP を使用してパブリケーションのスクリプトファイルをポストするために sp_addscriptexec [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用することは、サブスクライバーに対してのみサポートされています。  
+ スナップショット**sp_addscriptexec**配信に FTP を使用してパブリケーションのスクリプトファイルをポストするために sp_addscriptexec [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用することは、サブスクライバーに対してのみサポートされています。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_addscriptexec**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
@@ -80,6 +80,6 @@ sp_addscriptexec [ @publication = ] publication
 ## <a name="see-also"></a>参照  
  [同期中にスクリプトを実行 &#40;レプリケーション Transact-sql プログラミング&#41;](../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md)   
  [データの同期](../../relational-databases/replication/synchronize-data.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -19,10 +19,10 @@ ms.assetid: 4668cfb7-462f-40d0-948c-8f740a792a4d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3e09efe938dabb031e1c57020f051cd5ab03e55a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68010570"
 ---
 # <a name="sp_syscollector_stop_collection_set-transact-sql"></a>sp_syscollector_stop_collection_set (Transact-SQL)
@@ -57,13 +57,13 @@ sp_syscollector_stop_collection_set
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  sp_syscollector_create_collection_set は、msdb システム データベースのコンテキストで実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャを実行するには、(EXECUTE 権限を持つ) dc_operator 固定データベース ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、識別子を使用してコレクションセットを停止します。  
   
 ```  
@@ -74,6 +74,6 @@ EXEC sp_syscollector_stop_collection_set @collection_set_id = 1;
   
 ## <a name="see-also"></a>参照  
  [データコレクション](../../relational-databases/data-collection/data-collection.md)   
- [データコレクターストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)  
+ [データ コレクター ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)  
   
   

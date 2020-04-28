@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 2e49fc5a7ffd4c0adff38628a143ded695785e29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68016894"
 ---
 # <a name="bottomsum-mdx"></a>BottomSum (MDX)
@@ -31,20 +31,20 @@ BottomSum(Set_Expression, Value, Numeric_Expression)
  *Set_Expression*  
  セットを返す有効な多次元式 (MDX) 式です。  
   
- *Value*  
+ *[値]*  
  各組の比較対象となる値を指定する有効な数値式です。  
   
  *Numeric_Expression*  
  有効な数値式です。通常は、数値を返すセル座標の多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **BottomSum**関数は、指定されたセットに対して評価される指定されたメジャーの合計を計算し、セットを昇順に並べ替えます。 次に、関数は、指定された数値式の合計が指定された値 (sum) 以上である、最小値を持つ要素を返します。 この関数は、累積合計が指定値以上になるセットの最小サブセットを返します。 返される要素は、最小値から最大値に順に並べ替えられます。  
   
 > [!IMPORTANT]  
 >  **BottomSum**関数は、 [TopSum](../mdx/topsum-mdx.md)関数と同様に、常に階層を解除します。  
   
-## <a name="examples"></a>例  
- 次の例では、自転車カテゴリの場合、2003会計年度の Geography ディメンションの Geography 階層に含まれる City レベルの最小のメンバーのセットが返されます。また、販売店の Sales Amount メジャーを使用している累積合計は、少なくとも合計である5万 (このセットのメンバーのうち、最も少ない売上数で始まる):  
+## <a name="examples"></a>使用例  
+ 次の例では、自転車カテゴリの場合、2003会計年度の Geography ディメンションの Geography 階層にある City レベルの最小のメンバーのセットが返されます。また、販売店の Sales Amount メジャーを使用している累積合計は、少なくとも5万の合計になります (このセットのメンバーのうち、最も少ない売り上げの数)。  
   
  `SELECT`  
   
@@ -65,6 +65,6 @@ BottomSum(Set_Expression, Value, Numeric_Expression)
  `WHERE([Measures].[Reseller Sales Amount],[Date].[Fiscal].[Fiscal Year].[FY 2003])`  
   
 ## <a name="see-also"></a>参照  
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

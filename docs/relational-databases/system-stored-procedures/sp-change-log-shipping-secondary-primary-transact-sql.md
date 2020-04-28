@@ -18,10 +18,10 @@ ms.assetid: 5bcb4df7-6df3-4f2b-9207-b97b5addf2a6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 757d842dfe0521bd8195bf85e02a3ed0eee2b5b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68045806"
 ---
 # <a name="sp_change_log_shipping_secondary_primary-transact-sql"></a>sp_change_log_shipping_secondary_primary (Transact-SQL)
@@ -71,9 +71,9 @@ sp_change_log_shipping_secondary_primary
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ None  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_change_log_shipping_secondary_primary**は、セカンダリサーバーの**master**データベースから実行する必要があります。 このストアド プロシージャでは次の処理が行われます。  
   
 1.  **Log_shipping_secondary**レコードの設定を必要に応じて変更します。  
@@ -85,6 +85,6 @@ sp_change_log_shipping_secondary_primary
   
 ## <a name="see-also"></a>参照  
  [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

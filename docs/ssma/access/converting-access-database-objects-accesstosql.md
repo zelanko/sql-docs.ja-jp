@@ -30,10 +30,10 @@ ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 56c55dbc5df61bfdb9013e505335af16fccbeecd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006630"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Access データベースオブジェクトの変換 (アクセス許可 Sql)
@@ -55,15 +55,15 @@ Access データベースを追加し、または SQL Azure [!INCLUDE[ssNoVersio
   
 |Access オブジェクト|結果の SQL Server オブジェクト|  
 |-----------------|-------------------------------|  
-|テーブル|テーブル|  
+|table|table|  
 |column|column|  
 |インデックス (index)|インデックス (index)|  
 |外部キー (foreign key)|外部キー (foreign key)|  
-|クエリ|view<br /><br />ほとんどの SELECT クエリはビューに変換されます。 更新クエリなどの他のクエリは移行されません。<br /><br />パラメーターを受け取るクエリは変換されません。また、クロス集計クエリも選択できません。|  
+|query|view<br /><br />ほとんどの SELECT クエリはビューに変換されます。 更新クエリなどの他のクエリは移行されません。<br /><br />パラメーターを受け取るクエリは変換されません。また、クロス集計クエリも選択できません。|  
 |report|未変換|  
 |form|未変換|  
 |マクロ|未変換|  
-|第|未変換|  
+|name|未変換|  
 |既定値|既定値|  
 |長さ0の列プロパティを許可する|check 制約|  
 |列検証ルール|check 制約|  
@@ -77,7 +77,7 @@ Access データベースオブジェクトを変換するには、まず、変�
   
 1.  Access Metadata Explorer で、[**アクセス-メタベース**] を展開し、[**データベース**] を展開します。  
   
-2.  以下のいずれかの操作を行います。  
+2.  次のうち1 つ以上を行います。  
   
     -   すべてのデータベースを変換するには、[**データベース**] の横にあるチェックボックスをオンにします。  
   
@@ -110,11 +110,11 @@ Access データベースオブジェクトを変換するには、まず、変�
   
     変更されたプロパティセルからカーソルを移動します。 これを行うには、別の行をクリックするか、Tab キーを押します。  
   
-3.  **[Apply]** をクリックします。  
+3.  **[適用]** をクリックします。  
   
 これで、コードの変更を [ **SQL** ] タブで確認できるようになりました。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 移行プロセスの次の手順では、 [SQL Server に変換](loading-converted-database-objects-into-sql-server-accesstosql.md)されたデータベースオブジェクトを読み込みます。  
   
 ## <a name="see-also"></a>参照  

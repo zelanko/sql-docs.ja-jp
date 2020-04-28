@@ -18,10 +18,10 @@ ms.assetid: 1436fe21-ad00-4a98-aca1-1451a5e571d2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fac327d88aa8a6d74e153c1c7b2f3d637bf6f936
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68046024"
 ---
 # <a name="sp_bindsession-transact-sql"></a>sp_bindsession (Transact-sql)
@@ -30,8 +30,7 @@ ms.locfileid: "68046024"
   セッションをの同じインスタンス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]内の他のセッションにバインドまたはバインド解除します。 バインドセッションを使用すると、2つ以上のセッションを同じトランザクションに参加させ、ROLLBACK TRANSACTION または COMMIT TRANSACTION が実行されるまで、そのロックを共有できます。  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに、複数のアクティブな結果セット (MARS) または分散トランザクションを使用してください。 詳細については、「[複数のアクティブな結果セット &#40;MARS&#41; の使用](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)」を参照してください。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに、複数のアクティブな結果セット (MARS) または分散トランザクションを使用してください。 詳細については、「[複数のアクティブな結果セット &#40;MARS&#41; の使用](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,20 +48,19 @@ sp_bindsession { 'bind_token' | NULL }
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  バインドされている2つのセッションは、トランザクションとロックのみを共有します。 各セッションは独自の分離レベルを保持し、1つのセッションで新しい分離レベルを設定しても、もう一方のセッションの分離レベルには影響しません。 各セッションは、そのセキュリティアカウントによって識別され、アカウントにアクセス許可が付与されているデータベースリソースにのみアクセスできます。  
   
  **sp_bindsession**は、バインドトークンを使用して、2つ以上の既存のクライアントセッションをバインドします。 これらのクライアントセッションは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]バインドトークンが取得されたの同じインスタンス上にある必要があります。 セッションとは、コマンドを実行するクライアントです。 バインドされたデータベースセッションは、トランザクションとロック領域を共有します。  
   
- 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]の 1 つのインスタンスから取得したバインド トークンは、DTC トランザクションの場合でも、別のインスタンスに接続するクライアント セッションには使用できません。 バインドトークンは、各インスタンス内でのみローカルに有効であり、複数のインスタンス間で共有することはできません。 の別のインスタンスでクライアントセッションをバインド[!INCLUDE[ssDE](../../includes/ssde-md.md)]するには、 **sp_getbindtoken**を実行して別のバインドトークンを取得する必要があります。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]の 1 つのインスタンスから取得したバインド トークンは、DTC トランザクションの場合でも、別のインスタンスに接続するクライアント セッションには使用できません。 バインドトークンは、各インスタンス内でのみローカルに有効であり、複数のインスタンス間で共有することはできません。 の別のインスタンスでクライアントセッションをバインド[!INCLUDE[ssDE](../../includes/ssde-md.md)]するには、 **sp_getbindtoken**を実行して別のバインドトークンを取得する必要があります。  
   
  アクティブでないトークンが使用されている場合、 **sp_bindsession**はエラーで失敗します。  
   
  *Bind_token*を指定せずに**sp_bindsession**を使用するか*bind_token*で NULL を渡すことによって、セッションからバインドを解除します。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Public**ロールのメンバーシップが必要です。  
+ ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>例  
  次の例では、指定したバインドトークンを現在のセッションにバインドします。  
@@ -78,8 +76,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [sp_getbindtoken &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql.md)   
+ [sp_getbindtoken &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql.md)   
  [srv_getbindtoken &#40;拡張ストアドプロシージャ API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-getbindtoken-extended-stored-procedure-api.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

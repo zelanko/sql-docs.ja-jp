@@ -14,10 +14,10 @@ ms.assetid: 43219dbe-bcfa-427d-9242-f07b1455f15f
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: bad08c06028a64a0423135b15641ebf6fa4e895e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029110"
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>SSMA for Sybase コンソールを使用したはじめに (SybaseToSQL)
@@ -56,7 +56,7 @@ SSMA スクリプトコマンドとオプションを実行すると、コンソ
   
 コンソール出力の色の解釈を次の表に示します。  
   
-|Color|[説明]|  
+|Color|説明|  
 |---------|---------------|  
 |[赤]|実行中に致命的なエラーが発生した|  
 |グレー|日付と時刻のタイムスタンプ、ユーザーへのメッセージ|  
@@ -65,5 +65,5 @@ SSMA スクリプトコマンドとオプションを実行すると、コンソ
 |[緑]|ユーザー入力を要求する|  
 |シアン|操作の開始、終了、および結果|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [SSMA for SAP ASE のインストール &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)  

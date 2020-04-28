@@ -19,10 +19,10 @@ ms.assetid: eed9232c-2b0a-4b6a-8ba0-76b7c99f48dc
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: eb5b4b9dce229a028be45565203bce90883e21f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68010532"
 ---
 # <a name="sp_syscollector_upload_collection_set-transact-sql"></a>sp_syscollector_upload_collection_set (Transact-sql)
@@ -51,7 +51,7 @@ sp_syscollector_upload_collection_set [[ @collection_set_id = ] collection_set_i
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  *Collection_set_id*または*名前*のいずれかに値を指定する必要があります。両方を NULL にすることはできません。  
   
  このプロシージャは、実行中のコレクションセットのオンデマンドアップロードを開始するために使用できます。 キャッシュモードのデータ収集とアップロード用に構成されているコレクションセットに対してのみ使用できます。 このプロシージャを使用すると、ユーザーは分析に必要なデータを、予定されているアップロードを待たずに取得できます。  
@@ -60,8 +60,7 @@ sp_syscollector_upload_collection_set [[ @collection_set_id = ] collection_set_i
  このプロシージャを実行するには、 **dc_operator** (EXECUTE 権限を持つ) 固定データベースロールのメンバーシップが必要です。  
   
 ## <a name="example"></a>例  
- 
-  `Simple Collection Set` という名前のコレクション セットのオンデマンドのアップロードを実行します。  
+ `Simple Collection Set` という名前のコレクション セットのオンデマンドのアップロードを実行します。  
   
 ```  
 USE msdb;  

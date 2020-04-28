@@ -19,10 +19,10 @@ ms.assetid: ea8950b7-fabc-4aa4-89f8-9573a2617d70
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 602bc0ac1584f9ff369efa8a2484a16a97a92285
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029153"
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>SSMA コンソールの実行 (SybaseToSQL)
@@ -178,7 +178,7 @@ Microsoft では、SSMA アクティビティを実行および制御するた�
 <reconnect-target-database  server="<server-unique-name>"/>  
 ```  
   
-## <a name="report-commands"></a>レポートコマンド  
+## <a name="report-commands"></a>レポート コマンド  
 このレポートコマンドでは、さまざまな SSMA コンソールアクティビティのパフォーマンスに関するレポートが生成されます。  
   
 ### <a name="generate-assessment-report"></a>生成-評価-レポート  
@@ -660,7 +660,7 @@ or
 />  
 ```  
   
-## <a name="next-steps"></a>次のステップ  
+## <a name="next-steps"></a>次の手順  
 コマンドラインオプションの詳細については、 [SSMA コンソールのコマンドラインオプション](../access/command-line-options-in-ssma-console-accesstosql.md)に関する情報を参照してください。  
   
 サンプルコンソールスクリプトファイルの詳細については、「 [Working Basetosql &#40;サンプルコンソールスクリプトファイルの操作](../../ssma/sybase/working-with-the-sample-console-script-files-sybasetosql.md)」を参照してください&#41;  

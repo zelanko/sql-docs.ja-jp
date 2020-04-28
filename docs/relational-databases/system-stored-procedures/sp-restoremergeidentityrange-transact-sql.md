@@ -16,10 +16,10 @@ ms.assetid: 7923e422-2748-40c0-b5a8-6410c48d5b70
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5160e0f734f68450f868f3b1c670b1e5647524ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68041047"
 ---
 # <a name="sp_restoremergeidentityrange-transact-sql"></a>sp_restoremergeidentityrange (Transact-sql)
@@ -45,7 +45,7 @@ sp_restoremergeidentityrange [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_restoremergeidentityrange**は、マージレプリケーションで使用します。  
   
  **sp_restoremergeidentityrange**は、ディストリビューターから最大 id 範囲割り当て情報を取得し、自動 id 範囲管理を使用するアーティクルの[MSmerge_identity_range_allocations &#40;transact-sql&#41;](../../relational-databases/system-tables/msmerge-identity-range-allocations-transact-sql.md)の**max_used**列の値を更新します。  

@@ -16,10 +16,10 @@ ms.assetid: bdc8aaa0-ff2d-40c2-84b2-4ba513ced279
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a96c75084b3a3730c3d302a7bf620a5185b57a75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032682"
 ---
 # <a name="sp_subscription_cleanup-transact-sql"></a>sp_subscription_cleanup (Transact-sql)
@@ -51,7 +51,7 @@ sp_subscription_cleanup [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_subscription_cleanup**は、トランザクションレプリケーションとスナップショットレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -60,6 +60,6 @@ sp_subscription_cleanup [ @publisher = ] 'publisher'
 ## <a name="see-also"></a>参照  
  [sp_expired_subscription_cleanup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-expired-subscription-cleanup-transact-sql.md)   
  [sp_mergesubscription_cleanup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

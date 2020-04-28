@@ -18,10 +18,10 @@ ms.assetid: 42797510-aa5d-4564-85ac-27418419af9c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2ac7ec92a47f56982300e81395d24fc5b197ed64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67997492"
 ---
 # <a name="sp_helprolemember-transact-sql"></a>sp_helprolemember (Transact-SQL)
@@ -46,13 +46,13 @@ sp_helprolemember [ [ @rolename = ] 'role' ]
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**DbRole**|**sysname**|現在のデータベース内のロールの名前。|  
 |**MemberName**|**sysname**|DbRole のメンバーの名前 **。**|  
 |**MemberSID**|**varbinary (85)**|MemberName のセキュリティ識別子 **。**|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  データベースに入れ子になったロールが含まれている場合、 **MemberName**にはロールの名前を指定できます。 **sp_helprolemember**には、入れ子になったロールで取得したメンバーシップは表示されません。 たとえば、User1 が Role1 のメンバーで、Role1 が Role2 のメンバーである場合、 `EXEC sp_helprolemember 'Role2'`は Role1 を返しますが、Role1 のメンバー (この例では User1) は返しません。 入れ子になったメンバーシップを返すには、入れ子になったロールごとに**sp_helprolemember**を繰り返し実行する必要があります。  
   
  **Sp_helpsrvrolemember**を使用すると、固定サーバーロールのメンバーを表示できます。  
@@ -60,7 +60,7 @@ sp_helprolemember [ [ @rolename = ] 'role' ]
  [IS_ROLEMEMBER &#40;transact-sql&#41;](../../t-sql/functions/is-rolemember-transact-sql.md)を使用して、指定されたユーザーのロールメンバーシップを確認します。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Public**ロールのメンバーシップが必要です。  
+ ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>例  
  次の例では、ロール `Sales` のメンバーを表示します。  
@@ -75,6 +75,6 @@ EXEC sp_helprolemember 'Sales';
  [sp_droprolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [sp_helprole &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
  [sp_helpsrvrolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

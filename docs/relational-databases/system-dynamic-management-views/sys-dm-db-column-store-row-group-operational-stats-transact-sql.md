@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 03e97e38eb396aa24c9779d07f269a60f117ab09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68005046"
 ---
 # <a name="sysdm_db_column_store_row_group_operational_stats-transact-sql"></a>dm_db_column_store_row_group_operational_stats (Transact-sql)
@@ -28,7 +28,7 @@ ms.locfileid: "68005046"
  インメモリ列ストアインデックスは、この DMV には表示されません。  
  
  
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|列ストアインデックスを持つテーブルの ID。|  
 |**index_id**|**int**|列ストアインデックスの ID。|  
@@ -55,7 +55,7 @@ ms.locfileid: "68005046"
  詳細については、「 [transact-sql&#41;&#40;動的管理ビューと関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Transact-sql&#41;&#40;インデックス関連の動的管理ビューおよび関数](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [パフォーマンスの監視とチューニング](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
  [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
@@ -63,7 +63,7 @@ ms.locfileid: "68005046"
  [dm_os_latch_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)   
  [dm_db_partition_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
  [allocation_units &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
- [SQL&#41;&#40;Transact-sql のインデックス](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
+ [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   
   
 

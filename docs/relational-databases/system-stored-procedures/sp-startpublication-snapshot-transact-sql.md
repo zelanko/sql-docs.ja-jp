@@ -16,10 +16,10 @@ ms.assetid: 2cf568ee-0679-4d19-a394-27210bff61e5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ab1b3487c3a1affe7a0dc40f62d241d19b29186b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032762"
 ---
 # <a name="sp_startpublication_snapshot-transact-sql"></a>sp_startpublication_snapshot (Transact-sql)
@@ -40,13 +40,12 @@ sp_startpublication_snapshot [ @publication = ] 'publication'
 ## <a name="arguments"></a>引数  
 `[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *publication*は**sysname**,、既定値はありません。  
   
-`[ @publisher = ] 'publisher'`以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーの名前を指定します。 *publisher*は**sysname**で、既定値は NULL です。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パブリッシャーの場合はこのパラメーターを指定しないでください。  
+`[ @publisher = ] 'publisher'`以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーの名前を指定します。 *publisher*は**sysname**で、既定値は NULL です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パブリッシャーの場合はこのパラメーターを指定しないでください。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_startpublication_snapshot**は、すべての種類のレプリケーションで使用されます。  
   
  以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーの場合、このストアドプロシージャはディストリビューター側でディストリビューションデータベースに対して実行されます。  

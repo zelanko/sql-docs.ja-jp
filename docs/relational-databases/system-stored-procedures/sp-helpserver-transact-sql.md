@@ -18,10 +18,10 @@ ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 844e96d765f9ed06f88b140b906b78eb4ea16ea0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67997433"
 ---
 # <a name="sp_helpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
@@ -45,18 +45,18 @@ sp_helpserver [ [ @server = ] 'server' ]
   
 `[ @optname = ] 'option'`サーバーを説明するオプションです。 *オプション*は**varchar (** 35 **)**,、既定値は NULL の場合、これらの値のいずれかを指定する必要があります。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**照合順序互換**|リンクサーバーに対する分散クエリの実行に影響します。 このオプションを true に設定した場合、|  
 |**データアクセス**|分散クエリ アクセスに対してリンク サーバーを有効または無効にします。|  
-|**dist**|ディストリビューター。|  
+|**dist**|ディストリビューターです。|  
 |**dpub**|リモートパブリッシャーをこのディストリビューターに発行します。|  
 |**lazy schema validation (lazy schema validation)**|クエリ開始時のリモート テーブルのスキーマ チェックをスキップします。|  
 |**pub**|文書.|  
 |**rpc-epmap**|指定されたサーバーからの RPC を有効にします。|  
 |**rpc 出力**|指定されたサーバーへの RPC を有効にします。|  
-|**サブ**|サブスクライバ.|  
-|**system**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**sub**|サブスクライバ.|  
+|**システム**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**リモート照合順序を使用する**|ローカルサーバーの照合順序ではなく、リモート列の照合順序を使用します。|  
   
 `[ @show_topology = ] 'show_topology'`指定したサーバーと他のサーバーとの関係を指定します。 *show_topology*は**varchar (** 1 **)**,、既定値は NULL です。 *Show_topology*が**t**と等しくない場合、またはが NULL の場合、 **sp_helpserver**結果セットセクションに一覧表示された列を返します。 *Show_topology*が**t**と等しい場合、結果セットに示されている列に加えて、 **sp_helpserver** **topx**および**topx**情報も返されます。  
@@ -66,17 +66,17 @@ sp_helpserver [ [ @server = ] 'server' ]
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|サーバー名。|  
 |**network_name**|**sysname**|サーバーのネットワーク名|  
-|**オンライン**|**varchar (** 70 **)**|サーバーの状態。|  
-|**番号**|**char (** 4 **)**|サーバーの識別番号|  
+|**status**|**varchar (** 70 **)**|サーバーの状態。|  
+|**id**|**char (** 4 **)**|サーバーの識別番号|  
 |**collation_name**|**sysname**|サーバーの照合順序。|  
 |**connect_timeout**|**int**|リンクサーバーに接続するためのタイムアウト値。|  
 |**query_timeout**|**int**|リンク サーバーに対するクエリのタイムアウト値|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  1 つのサーバーについて複数の状態値が返されることもあります。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -114,6 +114,6 @@ EXEC sp_helpserver 'SEATTLE2';
  [sp_helpremotelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
  [sp_helpsubscriberinfo &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
  [sp_serveroption &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -16,10 +16,10 @@ ms.assetid: c901ef5d-89c5-482a-bf64-3eefbcf3098d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 382bbc9aeedacf37c7fe38abd592bcee7e154f5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038872"
 ---
 # <a name="functions-on-nodes---local-name"></a>ノードの関数 - local-name
@@ -38,7 +38,7 @@ fn:local-name($arg as node()?) as xs:string
  *$arg*  
  ローカル名の部分を取得するノードの名前。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 -   SQL Server では、引数が指定されていない**fn: ローカル名 ()** は、コンテキストに依存する述語のコンテキストでのみ使用できます。 具体的には、角かっこ (`[ ]`) 内でのみ使用できます。  
   
@@ -46,7 +46,7 @@ fn:local-name($arg as node()?) as xs:string
   
 -   ターゲットノードがドキュメントノード、コメント、またはテキストノードであるために名前がない場合、関数は長さ0の文字列を返します。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
 ### <a name="a-retrieve-local-name-of-a-specific-node"></a>A. 特定のノードのローカル名を取得する  

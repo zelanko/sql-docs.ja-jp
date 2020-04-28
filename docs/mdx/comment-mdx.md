@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: f0aa1455ffd9f52fd917f68d2bb0bb80e3f25a94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006276"
 ---
 # <a name="comment-mdx"></a>コメント (MDX)
@@ -31,13 +31,12 @@ ms.locfileid: "68006276"
  *Comment_Text*  
  コメントのテキストを含む文字列です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  サーバーでは、コメント文字 (/* と\*/) の間のテキストは評価されません。 コメントは、別の行に挿入することも、多次元式 (MDX) ステートメント内に挿入することもできます。 複数行のコメントは、/\*および\*/で示す必要があります。  
   
- コメントの長さには制限がありません。 
-  `/* Test /*Comment*/ Text*/` のようにコメントを入れ子にすることもできます。  
+ コメントの長さには制限がありません。 `/* Test /*Comment*/ Text*/` のようにコメントを入れ子にすることもできます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  この演算子の使用例を次に示します。  
   
 ```  

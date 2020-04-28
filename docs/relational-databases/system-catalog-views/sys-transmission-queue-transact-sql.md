@@ -20,10 +20,10 @@ ms.assetid: f3515d1a-be8f-4a27-8058-8865f0919838
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7bd461a677a7bfab145846baaf09c0a8a62d6f8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022597"
 ---
 # <a name="systransmission_queue-transact-sql"></a>transmission_queue (Transact-sql)
@@ -31,23 +31,23 @@ ms.locfileid: "68022597"
 
   このカタログ ビューは、転送キュー内のメッセージごとに 1 行のデータを格納します。ビューの内容を次の表に示します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**conversation_handle**|**UNIQUEIDENTIFIER**|このメッセージが属するメッセージ交換の識別子。 NULL 値は許容されません。|  
+|**conversation_handle**|**uniqueidentifier**|このメッセージが属するメッセージ交換の識別子。 NULL 値は許容されません。|  
 |**to_service_name**|**nvarchar(256)**|このメッセージの対象となるサービスの名前。 NULLABLE.|  
-|**to_broker_instance**|**nvarchar(128**|このメッセージの送信先となるサービスをホストするブローカーの識別子。 NULLABLE.|  
+|**to_broker_instance**|**nvarchar(128)**|このメッセージの送信先となるサービスをホストするブローカーの識別子。 NULLABLE.|  
 |**from_service_name**|**nvarchar(256)**|このメッセージの差出人となるサービスの名前。 NULLABLE.|  
 |**service_contract_name**|**nvarchar(256)**|このメッセージのメッセージ交換が従うコントラクトの名前。 NULLABLE.|  
-|**enqueue_time**|**DATETIME**|メッセージがキューに入った時刻。 この値には、インスタンスのローカルのタイム ゾーンに関係なく UTC が使用されます。 NULL 値は許容されません。|  
+|**enqueue_time**|**datetime**|メッセージがキューに入った時刻。 この値には、インスタンスのローカルのタイム ゾーンに関係なく UTC が使用されます。 NULL 値は許容されません。|  
 |**message_sequence_number**|**bigint**|メッセージのシーケンス番号。 NULL 値は許容されません。|  
 |**message_type_name**|**nvarchar(256)**|メッセージの種類の名前。 NULLABLE.|  
 |**is_conversation_error**|**bit**|このメッセージがエラーメッセージであるかどうか。<br /><br /> 0 = エラーメッセージではありません。<br /><br /> 1 = エラー メッセージです。<br /><br /> NULL 値は許容されません。|  
 |**is_end_of_dialog**|**bit**|このメッセージがメッセージ交換の終了メッセージかどうかを示します。 NULL 値は許容されません。<br /><br /> 0 = メッセージ交換の終了メッセージではありません。<br /><br /> 1 = メッセージ交換の最後のメッセージです。<br /><br /> NULL 値は許容されません。|  
 |**message_body**|**varbinary(max)**|メッセージの本文。 NULLABLE.|  
-|**transmission_status**|**nvarchar(4000)**|メッセージがキューにある理由。 これは通常、メッセージ送信が失敗した理由を示すエラー メッセージです。 空白の場合、メッセージはまだ送信されていません。 NULLABLE.|  
+|**transmission_status**|**nvarchar (4000)**|メッセージがキューにある理由。 これは通常、メッセージ送信が失敗した理由を示すエラー メッセージです。 空白の場合、メッセージはまだ送信されていません。 NULLABLE.|  
 |**的**|**tinyint**|このメッセージに割り当てられている優先度レベル。 NULL 値は許容されません。|  
   
 ## <a name="permissions"></a>アクセス許可  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
   

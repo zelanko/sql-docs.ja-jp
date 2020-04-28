@@ -16,10 +16,10 @@ ms.assetid: 7cd69c8b-cf2c-478c-b9a3-e0e14e1aa8aa
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 12ae1efbf900a505a5f257f9684842a0ad9ff21f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004654"
 ---
 # <a name="functions-on-string-values---string-length"></a>文字列値に使用する関数 - string-length
@@ -39,7 +39,7 @@ fn:string-length($arg as xs:string?) as xs:integer
  *$arg*  
  長さが計算されるソース文字列。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  *$Arg*の値が空のシーケンスの場合、 **xs: integer**値0が返されます。  
   
  XQuery 関数におけるサロゲート ペアの動作は、データベースの互換性レベルに左右されます。 互換性レベルが110以上の場合は、各サロゲートペアが1文字としてカウントされます。 互換性レベルがこれ未満の場合は、2 文字としてカウントされます。 詳細については、「 [ALTER DATABASE 互換性レベル &#40;transact-sql&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)と[照合順序と Unicode のサポート](../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  
@@ -57,7 +57,7 @@ SELECT @x.query('/ROOT[string-length()=5]');
 ## <a name="supplementary-characters-surrogate-pairs"></a>補助文字 (サロゲート ペア)  
  XQuery 関数のサロゲートペアの動作は、データベースの互換性レベルと、場合によっては、関数の既定の名前空間 URI に依存します。 詳細については、「 [SQL Server 2016 のデータベースエンジン機能の重大な変更](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)」の「XQuery 関数はサロゲート対応」を参照してください。 「 [ALTER DATABASE Compatibility Level &#40;transact-sql&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) 」と「 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)」も参照してください。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
 ### <a name="a-using-the-string-length-xquery-function-to-retrieve-products-with-long-summary-descriptions"></a>A. 文字列長 () の XQuery 関数を使用して、長い概要の説明を含む製品を取得する  

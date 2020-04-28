@@ -19,10 +19,10 @@ ms.assetid: 5320fcd4-bed1-468f-b784-a5e10fcfaeb6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6e21096971b9a0891d2c51c5fce34c119b454f0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68010593"
 ---
 # <a name="sp_syscollector_set_warehouse_instance_name-transact-sql"></a>sp_syscollector_set_warehouse_instance_name (Transact-sql)
@@ -48,7 +48,7 @@ sp_syscollector_set_warehouse_instance_name [ @instance_name = ] 'instance_name'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  データコレクター全体の構成を変更する前に、データコレクターを無効にする必要があります。 データコレクターが有効になっている場合、このプロシージャは失敗します。  
   
  現在のインスタンス名を表示するには、 [syscollector_config_store](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md)システムビューに対してクエリを実行します。  
@@ -56,7 +56,7 @@ sp_syscollector_set_warehouse_instance_name [ @instance_name = ] 'instance_name'
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャを実行するには、dc_admin (EXECUTE 権限を持つ) 固定データベースロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、リモート サーバー上の管理データ ウェアハウスのインスタンスを使用するようにデータ コレクターを構成する方法を示します。 この例において、リモート サーバーの名前は `RemoteSERVER` で、データベースは既定のインスタンスにインストールされています。  
   
 ```  
@@ -68,6 +68,6 @@ GO
   
 ## <a name="see-also"></a>参照  
  [データコレクターストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [syscollector_config_store &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md)  
+ [syscollector_config_store &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md)  
   
   

@@ -20,10 +20,10 @@ ms.assetid: 1a384a2c-5556-4d12-a2ba-4da781363143
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fb7f4f6b017b1251b873f0e45ab7688d9fd2c6bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68001154"
 ---
 # <a name="sysassembly_files-transact-sql"></a>sys.assembly_files (Transact-SQL)
@@ -31,19 +31,19 @@ ms.locfileid: "68001154"
 
   アセンブリを構成するファイルごとに 1 行のデータを保持します。  
     
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**assembly_id**|**int**|このファイルが属するアセンブリの ID。|  
-|**name**|**nvarchar (260)**|アセンブリファイルの名前。|  
+|**name**|**nvarchar(260)**|アセンブリファイルの名前。|  
 |**file_id**|**int**|ファイルの ID。 はアセンブリ内で一意です。 ファイル ID 1 はアセンブリ DLL を表します。|  
-|**情報**|**varbinary(max)**|ファイルの内容。|  
+|**content**|**varbinary(max)**|ファイルの内容。|  
   
 ## <a name="permissions"></a>アクセス許可  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [CLR アセンブリカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/clr-assembly-catalog-views-transact-sql.md)   
- [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [ASSEMBLYPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/assemblyproperty-transact-sql.md)  
   
   

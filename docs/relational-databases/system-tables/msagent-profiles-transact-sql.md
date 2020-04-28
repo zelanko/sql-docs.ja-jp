@@ -18,10 +18,10 @@ ms.assetid: 4ab1b2ae-b6d9-42b7-9b31-98547dbb7f99
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5147ef1f482850b55a5d01a476b1981dfa012e5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68021048"
 ---
 # <a name="msagent_profiles-transact-sql"></a>MSagent_profiles (Transact-sql)
@@ -29,7 +29,7 @@ ms.locfileid: "68021048"
 
   **MSagent_profiles**テーブルには、定義されているレプリケーションエージェントプロファイルごとに1つの行が含まれています。 このテーブルは、 **msdb**データベースに格納されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**profile_id**|**int**|プロファイル ID。|  
 |**profile_name**|**sysname**|エージェントの種類に固有のプロファイル名です。|  
@@ -40,6 +40,6 @@ ms.locfileid: "68021048"
   
 ## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

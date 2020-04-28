@@ -10,17 +10,17 @@ ms.assetid: 5ad9e12c-2cdb-4dd2-8703-05a23242d19d
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 1fbc3a8f74b21bd5a53bdd874b5c41ef522e29f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029008"
 ---
 # <a name="installing-ssma-components-on-sql-server-sybasetosql"></a>SQL Server での SSMA コンポーネントのインストール (SybaseToSQL)
 SSMA のインストールに加えて、サーバー側のデータ移行を使用するために、を実行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]しているコンピューターにコンポーネントをインストールする必要もあります。 これらのコンポーネントには、データの移行をサポートする SSMA 拡張パックと、サーバーとサーバー間の接続を有効にする Sybase プロバイダーが含まれます。  
   
 ## <a name="ssma-for-sybase-extension-pack"></a>SSMA for Sybase Extension Pack  
-SSMA 拡張パックは、指定されたインスタンスに**** データベース、 **sysdb** 、および ssmatesterdb_syb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を追加します。 **Sysdb**データベースには、データの移行に必要なテーブルとストアドプロシージャが含まれています。 **Ssmatester_syb**データベースには、ssma tester コンポーネントによって使用されるオブジェクト (テーブル、トリガー、ビュー) が作成されるスキーマ**ssma_sybase_utilities**が含まれています。  
+SSMA 拡張パックは、指定されたインスタンスに**ssmatesterdb_syb**データベース、 **sysdb** 、および ssmatesterdb_syb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を追加します。 **Sysdb**データベースには、データの移行に必要なテーブルとストアドプロシージャが含まれています。 **Ssmatester_syb**データベースには、ssma tester コンポーネントによって使用されるオブジェクト (テーブル、トリガー、ビュー) が作成されるスキーマ**ssma_sybase_utilities**が含まれています。  
   
 また、データをに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移行するときに、サーバー [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]側のデータ移行エンジンを使用してデータを移行するときに、ssma によってエージェントジョブが作成されます。  
   

@@ -19,10 +19,10 @@ ms.assetid: 660f2749-392f-46bf-89f3-27764d848507
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 80462381e058c4cb9107aa4ac07138e42d27e677
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68010635"
 ---
 # <a name="sp_syscollector_set_cache_window-transact-sql"></a>sp_syscollector_set_cache_window (Transact-SQL)
@@ -44,7 +44,7 @@ sp_syscollector_set_cache_window [ @cache_window = ] cache_window
  [ @cache_window = ]*cache_window*  
  管理データ ウェアハウスへのデータのアップロード時にエラーが発生した場合、データが失われるのを回避するためにアップロードを再試行する回数を指定します。 *cache_window*は**int**で、既定値は1です。 *cache_window*には、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |-1|アップロード エラーが発生した場合にそのすべてのアップロード データをキャッシュします。|  
 |0|アップロードエラーのデータをキャッシュしないでください。|  
@@ -53,13 +53,13 @@ sp_syscollector_set_cache_window [ @cache_window = ] cache_window
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  キャッシュ ウィンドウの構成を変更する前に、データ コレクターを無効にする必要があります。 データ コレクターが有効になっている場合、このストアド プロシージャは失敗します。 詳細については、「[データコレクションの有効化または無効化](../../relational-databases/data-collection/enable-or-disable-data-collection.md)」と「[データコレクションの管理](../../relational-databases/data-collection/manage-data-collection.md)」を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャを実行するには、dc_admin (EXECUTE 権限を持つ) 固定データベースロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、データコレクターを無効にし、最大3回のアップロードでデータを保持するようにキャッシュウィンドウを構成してから、データコレクターを有効にします。  
   
 ```sql  
@@ -74,6 +74,6 @@ EXECUTE dbo.sp_syscollector_enable_collector;
   
 ## <a name="see-also"></a>参照  
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sp_syscollector_set_cache_directory &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-directory-transact-sql.md)  
+ [sp_syscollector_set_cache_directory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-directory-transact-sql.md)  
   
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d2d8f37d37b0e895752934aa1b469e03d957c187
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68033902"
 ---
 # <a name="mdx-statement-reference-mdx"></a>MDX ステートメント リファレンス (MDX)
@@ -22,13 +22,13 @@ ms.locfileid: "68033902"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
-|[Mdx&#41;&#40;MDX スクリプトステートメント](../mdx/mdx-scripting-statements-mdx.md)|MDX スクリプト内のクエリ コンテキスト、スコープ、フロー制御を管理する MDX スクリプト ステートメントについて説明します。|  
+|[MDX スクリプト ステートメント &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)|MDX スクリプト内のクエリ コンテキスト、スコープ、フロー制御を管理する MDX スクリプト ステートメントについて説明します。|  
 |[Mdx&#41;&#40;mdx データ定義ステートメント](../mdx/mdx-data-definition-statements-mdx.md)|多次元オブジェクトの作成、削除、操作を行う MDX データ定義ステートメントについて説明します。|  
 |[Mdx&#41;&#40;MDX データ操作ステートメント](../mdx/mdx-data-manipulation-statements-mdx.md)|多次元オブジェクトからデータを取得して操作する MDX データ操作ステートメントについて説明します。|  
   
 ## <a name="see-also"></a>参照  
- [Mdx 言語リファレンス &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
+ [MDX 言語リファレンス &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
   
   

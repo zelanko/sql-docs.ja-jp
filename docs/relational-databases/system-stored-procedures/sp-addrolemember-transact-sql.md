@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c9e0d3152c6d60faff4c1c42410374287bd7d111
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68030900"
 ---
 # <a name="sp_addrolemember-transact-sql"></a>sp_addrolemember (Transact-SQL)
@@ -52,7 +52,7 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  sp_addrolemember を使用してロールに追加されたメンバーは、ロールの権限を継承します。 新しいメンバーが、対応するデータベースユーザーのない Windows レベルのプリンシパルである場合は、データベースユーザーが作成されますが、そのログインに完全にマップされていない可能性があります。 ログインが存在し、そのログインがデータベースへのアクセス権を持っていることを必ず確認してください。  
   
  ロールには、ロール自体をメンバーとして含めることはできません。 このような "循環" 定義は、1 つ以上の中間メンバーシップを介して間接的にメンバーシップが与えられる場合でも無効です。  
@@ -78,9 +78,7 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
  次の例では、Windows `Contoso\Mary5`ログインを`AdventureWorks2012`ユーザー `Mary5`としてデータベースに追加します。 その後`Mary5` 、ユーザーが`Production`ロールに追加されます。  
   
 > [!NOTE]  
->  
-  `Contoso\Mary5` はデータベース `Mary5` のデータベース ユーザー [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] として設定されているので、ユーザー名 `Mary5` を指定する必要があります。 
-  `Contoso\Mary5` のログインが存在しない場合、このステートメントは失敗します。 ドメインからのログインを使用してテストします。  
+>  `Contoso\Mary5` はデータベース [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] のデータベース ユーザー `Mary5` として設定されているので、ユーザー名 `Mary5` を指定する必要があります。 `Contoso\Mary5` のログインが存在しない場合、このステートメントは失敗します。 ドメインからのログインを使用してテストします。  
   
 ```  
 USE AdventureWorks2012;  
@@ -96,14 +94,13 @@ GO
 EXEC sp_addrolemember 'Production', 'Mary5';  
 ```  
   
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sspdw"></a>例: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-adding-a-windows-login"></a>C. Windows ログインの追加  
  次の例では、 `LoginMary`ログインを`AdventureWorks2008R2`ユーザー `UserMary`としてデータベースに追加します。 その後`UserMary` 、ユーザーが`Production`ロールに追加されます。  
   
 > [!NOTE]  
->  ログイン`LoginMary`は`UserMary` [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベースのデータベースユーザーとして知られているので、 `UserMary`ユーザー名を指定する必要があります。 
-  `Mary5` のログインが存在しない場合、このステートメントは失敗します。 通常、ログインとユーザーの名前は同じです。 この例では、ログインとユーザーに影響するアクションを区別するために、異なる名前を使用しています。  
+>  ログイン`LoginMary`は`UserMary` [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベースのデータベースユーザーとして知られているので、 `UserMary`ユーザー名を指定する必要があります。 `Mary5` のログインが存在しない場合、このステートメントは失敗します。 通常、ログインとユーザーの名前は同じです。 この例では、ログインとユーザーに影響するアクションを区別するために、異なる名前を使用しています。  
   
 ```  
 -- Uses AdventureWorks  
@@ -126,6 +123,6 @@ EXEC sp_addrolemember 'Production', 'UserMary'
  [sp_droprolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [sp_grantdbaccess &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [データベースレベルのロール](../../relational-databases/security/authentication-access/database-level-roles.md)  
+ [データベース レベルのロール](../../relational-databases/security/authentication-access/database-level-roles.md)  
   
   

@@ -17,10 +17,10 @@ ms.assetid: 43ab0d1b-ead4-471c-85f3-f6c4b9372aab
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 77fb03c71bd0773cc8f004a89c28c1925284876b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68043045"
 ---
 # <a name="cdcfn_cdc_get_net_changes_ltcapture_instancegt-transact-sql"></a>cdc. fn_cdc_get_net_changes_&lt;capture_instance&gt; (transact-sql)
@@ -74,13 +74,13 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  merge を使用したすべて  
  行に対する最終的な変更の LSN が、メタデータ列 __$start_lsn に返されます。 列\_ \_$operation は2つの値のいずれかになります。削除の場合は1、変更を適用するために必要な操作が挿入または更新のいずれかであることを示す5。 _Mask 列\_ \_$update は常に NULL です。  
   
- 特定の変更の正確な操作を決定するロジックによってクエリの複雑さが増すため、このオプションは、変更データを適用するために必要な操作が挿入または更新のいずれかであることを示すのに十分な場合に、クエリのパフォーマンスを向上させるように設計されています。ですが、この2つを明示的に区別する必要はありません。 このオプションは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]環境など、マージ操作を直接利用できるターゲット環境で最も魅力的です。  
+ 特定の変更に対する正確な操作を決定するロジックによってクエリの複雑さが増すため、このオプションは、変更データを適用するために必要な操作が挿入または更新のいずれかであることを示すのに十分な場合に、クエリのパフォーマンスを向上させるように設計されています。 このオプションは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]環境など、マージ操作を直接利用できるターゲット環境で最も魅力的です。  
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|__$start_lsn|**binary (10)**|変更のコミット トランザクションに関連付けられた LSN。<br /><br /> 同じトランザクションでコミットされたすべての変更は、同じコミット LSN を共有します。 たとえば、ソーステーブルの更新操作によって2つの行の2つの列が変更された場合、変更テーブルには、それぞれ同じ __ $ start_lsnvalue を持つ4つの行が含まれます。|  
+|__$start_lsn|**binary(10)**|変更のコミット トランザクションに関連付けられた LSN。<br /><br /> 同じトランザクションでコミットされたすべての変更は、同じコミット LSN を共有します。 たとえば、ソーステーブルの更新操作によって2つの行の2つの列が変更された場合、変更テーブルには、それぞれ同じ __ $ start_lsnvalue を持つ4つの行が含まれます。|  
 |__$operation|**int**|変更データの行をターゲットデータソースに適用するために必要なデータ操作言語 (DML) 操作を識別します。<br /><br /> row_filter_option パラメーターの値が all または all with mask である場合、この列の値には、次のいずれかの値を指定できます。<br /><br /> 1 = 削除<br /><br /> 2 = 挿入<br /><br /> 4 = 更新<br /><br /> row_filter_option パラメーターの値が all with merge である場合、この列の値には、次のいずれかの値を指定できます。<br /><br /> 1 = 削除|  
 |__$update_mask|**varbinary (128)**|キャプチャ インスタンスに対して指定された各キャプチャ対象列に対応するビットを持ったビット マスク。 この値には、__ $ operation が1または2の場合に、定義済みのすべてのビットが1に設定されます。 $Operation \_ \_が3または4の場合、変更された列に対応するビットだけが1に設定されます。|  
 |*\<キャプチャされたソーステーブルの列>*|多様|この関数によって返されるその他の列は、ソース テーブルの列のうち、キャプチャ インスタンスの作成時にキャプチャ対象として指定された列です。 キャプチャ対象列リストで列が指定されなかった場合、ソース テーブルのすべての列が返されます。|  
@@ -88,12 +88,12 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 ## <a name="permissions"></a>アクセス許可  
  Sysadmin 固定サーバーロールまたは db_owner 固定データベースロールのメンバーシップが必要です。 他のすべてのユーザーに対して、ソーステーブルのすべてのキャプチャ対象列に対する SELECT 権限が必要です。また、キャプチャインスタンスのゲートロールが定義されている場合は、そのデータベースロールのメンバーシップが必要です。 呼び出し元にソースデータを表示するアクセス許可がない場合、関数はエラー 208 (無効なオブジェクト名) を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  指定した LSN 範囲が、キャプチャ インスタンスの変更追跡時間外に該当した場合、エラー 208 (無効なオブジェクト名) が返されます。
 
  行の一意の識別子を変更すると、fn_cdc_get_net_changes によって最初の更新コマンドが削除され、その後 INSERT コマンドが表示されるようになります。  この動作は、変更前と変更後の両方のキーを追跡するために必要です。
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、 `cdc.fn_cdc_get_net_changes_HR_Department`関数を使用して、特定の時間間隔`HumanResources.Department`中にソーステーブルに対して行われた差分変更を報告します。  
   
  まず、 `GETDATE`関数を使用して、時間間隔の開始をマークします。 ソース テーブルに対して複数の DML ステートメントを適用した後、再び `GETDATE` 関数を呼び出して期間の終わりを指定します。 次に、関数[sys. fn_cdc_map_time_to_lsn](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)を使用して、lsn 値で制限された変更データキャプチャのクエリ範囲に時間間隔をマップします。 最後に、`cdc.fn_cdc_get_net_changes_HR_Department` 関数を呼び出して、該当期間中に行われたソース テーブルへの差分変更を取得します。 挿入され、削除された行は、関数によって返される結果セットには表示されないことに注意してください。 たとえ行を追加しても、同じ期間内に削除されれば、その期間におけるソース テーブルへの差分変更とはならないためです。 この例を実行する前に、最初に例 B を実行する必要があり[ます sys. sp_cdc_enable_table &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)です。  
@@ -130,6 +130,6 @@ SELECT * FROM cdc.fn_cdc_get_net_changes_HR_Department(@from_lsn, @to_lsn, 'all'
  [fn_cdc_map_time_to_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)   
  [sp_cdc_enable_table &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
  [sp_cdc_help_change_data_capture &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
- [変更データキャプチャについて &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
+ [変更データ キャプチャについて &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   
   

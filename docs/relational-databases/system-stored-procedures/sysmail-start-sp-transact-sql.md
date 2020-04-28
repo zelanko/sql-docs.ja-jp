@@ -18,10 +18,10 @@ ms.assetid: 25fd7bb6-cfdd-463f-bea8-c6fcb805d3f5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e15996a9db6e1b782875f2dd3d73d0e3e514c8f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68044442"
 ---
 # <a name="sysmail_start_sp-transact-sql"></a>sysmail_start_sp (Transact-SQL)
@@ -39,15 +39,15 @@ sysmail_start_sp
 ```  
   
 ## <a name="arguments"></a>引数  
- なし  
+ None  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ None  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  データベース メールは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール時に有効化またはインストールされません。 データベース メール オブジェクトを有効化およびインストールするには、データベース メール構成ウィザードを使用します。  
   
  このストアドプロシージャは**msdb**データベースにあります。 このストアド プロシージャは、送信メッセージ要求を保持しているデータベース メール キューを開始し、外部プログラムに対する [!INCLUDE[ssSB](../../includes/sssb-md.md)] のアクティブ化を有効にします。  
@@ -60,7 +60,7 @@ sysmail_start_sp
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャの実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、 **msdb**データベースのデータベースメールを開始します。 この例では、データベースメールが有効になっていることを前提としています。  
   
 ```  

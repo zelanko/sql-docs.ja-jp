@@ -19,10 +19,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 65e42e6303b467abd38ddadb6be0c0d0fece46e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68018189"
 ---
 # <a name="stretch-database-catalog-views---sysremote_data_archive_tables"></a>Stretch Database カタログビュー-sys. remote_data_archive_tables
@@ -30,14 +30,14 @@ ms.locfileid: "68018189"
 
   Stretch が有効なローカルテーブルのデータを格納するリモートテーブルごとに1行のデータを格納します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Stretch が有効なローカルテーブルのオブジェクト ID。|  
 |**remote_database_id**|**int**|リモートデータベースの自動生成されたローカル識別子。|  
 |**remote_table_name**|**sysname**|Stretch が有効なローカルテーブルに対応するリモートデータベースのテーブルの名前。|  
 |**filter_predicate**|**nvarchar(max)**|移行するテーブル内の行を識別するフィルター述語 (存在する場合)。 値が null の場合、テーブル全体が移行の対象になります。<br /><br /> 詳細については、「[テーブルの Stretch Database を有効にする](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)」および「[フィルター述語を使用して移行する行を選択](~/sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)する」を参照してください。|  
 |**migration_direction**|**tinyint**|データが現在移行されている方向。 使用できる値は次のとおりです。<br/>1 (送信)<br/>2 (受信)|  
-|**migration_direction_desc**|**nvarchar (60)**|データが現在移行されている方向の説明。 使用できる値は次のとおりです。<br/>送信 (1)<br/>受信 (2)|  
+|**migration_direction_desc**|**nvarchar(60)**|データが現在移行されている方向の説明。 使用できる値は次のとおりです。<br/>送信 (1)<br/>受信 (2)|  
 |**is_migration_paused**|**bit**|移行が現在一時停止されているかどうかを示します。|  
 |**is_reconciled**|**bit**| リモートテーブルと SQL Server テーブルが同期されているかどうかを示します。<br/><br/>**Is_reconciled**の値が 1 (true) の場合、リモートテーブルと SQL Server テーブルが同期され、リモートデータを含むクエリを実行できます。<br/><br/>**Is_reconciled**の値が 0 (false) の場合、リモートテーブルと SQL Server テーブルは同期されていません。最近移行された行は、再度移行する必要があります。 このエラーは、リモートの Azure データベースを復元した場合、またはリモートテーブルから手動で行を削除した場合に発生します。 テーブルを調整するまで、リモートデータを含むクエリを実行することはできません。 テーブルを調整するには、 [sp_rda_reconcile_batch](../../relational-databases/system-stored-procedures/sys-sp-rda-reconcile-batch-transact-sql.md)を実行します。 |  
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c026da3551448faf7cf204dbdde1e794d5b12967
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68033907"
 ---
 # <a name="mdx-operator-reference-mdx"></a>MDX 演算子リファレンス (MDX)
@@ -22,9 +22,9 @@ ms.locfileid: "68033907"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
-|[--&#40;コメント&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)|ユーザーによって指定されたコメントテキストを示します。|  
+|[-- &#40;コメント&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)|ユーザーによって指定されたコメントテキストを示します。|  
 |[-&#41; &#40;MDX&#41;を除く &#40;](../mdx/except-mdx-operator.md)|2 つのセットの重複メンバーを削除して差集合を返すセット演算を実行します。|  
 |[-&#40;負の&#41; &#40;MDX&#41;](../mdx/negative-mdx.md)|数値式の負の値を返す単項演算を実行します。|  
 |[-&#40;&#41; &#40;MDX&#41;を減算する](../mdx/subtract-mdx.md)|ある数値を別の数値から減算する算術演算を実行します。|  
@@ -32,8 +32,8 @@ ms.locfileid: "68033907"
 |[&#41; &#40;MDX&#41;を乗算&#42; &#40;](../mdx/multiply-mdx.md)|2つの数値を乗算する算術演算を実行します。|  
 |[MDX&#41;&#41; &#40;分割&#40;](../mdx/divide-mdx-operator-reference.md)|1つの数値を別の数値で除算する算術演算を実行します。|  
 |[^ &#40;Power&#41; &#40;MDX&#41;](../mdx/power-mdx.md)|1つの数値を別の数値で累乗した算術演算を実行します。|  
-|[MDX&#41;にコメント &#40;](../mdx/comment-mdx.md)|ユーザーによって指定されたコメントテキストを示します。|  
-|[&#40;コメント&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md)|ユーザーが入力したテキストを示します。|  
+|[コメント &#40;MDX&#41;](../mdx/comment-mdx.md)|ユーザーによって指定されたコメントテキストを示します。|  
+|[(コメント) (MDX)](../mdx/comment-mdx-double-slash.md)|ユーザーが入力したテキストを示します。|  
 |[: &#40;範囲&#41; &#40;MDX&#41;](../mdx/range-mdx.md)|自然な順序で並べたセットを返すセット演算を実行します。指定された 2 つのメンバーが終端になり、その 2 つのメンバーの間にあるすべてのメンバーがセットのメンバーに含まれます。|  
 |[+ &#40;&#41; &#40;MDX&#41;を追加する](../mdx/add-mdx.md)|2つの数値を加算する算術演算を実行します。|  
 |[+ &#40;肯定的&#41; &#40;MDX&#41;](../mdx/positive-mdx.md)|数値式の正の値を返す単項演算を実行します。|  
@@ -52,6 +52,6 @@ ms.locfileid: "68033907"
 |[XOR &#40;MDX&#41;](../mdx/xor-mdx.md)|2つの数値式に対して論理的な除外を実行します。|  
   
 ## <a name="see-also"></a>参照  
- [Mdx 言語リファレンス &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
+ [MDX 言語リファレンス &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
   
   

@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6e6370f4cbfcbc38478e562c3b74ff24ffde962f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026832"
 ---
 # <a name="sysdm_db_xtp_index_stats-transact-sql"></a>sys.dm_db_xtp_index_stats (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68026832"
  詳細については、「イン[メモリ OLTP &#40;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)メモリ最適化テーブルでの[インデックスの使用に関するガイドライン](https://msdn.microsoft.com/library/16ef63a4-367a-46ac-917d-9eebc81ab29b)&#41;」を参照してください。  
 
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |object_id|**bigint**|このインデックスが所属するオブジェクトの ID。|  
 |xtp_object_id|**bigint**|オブジェクトの現在のバージョンに対応する内部 ID。<br /><br /> 注: に[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]適用されます。|  
@@ -60,6 +60,6 @@ ms.locfileid: "68026832"
  現在のデータベースに対する VIEW DATABASE STATE 権限が必要です。  
   
 ## <a name="see-also"></a>参照  
- [メモリ最適化テーブルの動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [メモリ最適化テーブルの動的管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

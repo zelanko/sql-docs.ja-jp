@@ -19,10 +19,10 @@ ms.assetid: 7a0d36c8-c6e9-431d-a5a4-6c1802bce846
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 791c20214ff3eda4b5bb1f2bd3214b25ea972d74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68010564"
 ---
 # <a name="sp_syscollector_update_collection_item-transact-sql"></a>sp_syscollector_update_collection_item (Transact-sql)
@@ -66,9 +66,8 @@ sp_syscollector_update_collection_item
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
- コレクション セットが非キャッシュ モードに設定されている場合、このモードではコレクション セットに指定されたスケジュールでデータ収集とアップロードが行われるため、頻度を変更しても無視されます。 コレクションセットの状態を表示するには、次のクエリを実行します。 
-  `<collection_item_id>` は、更新するコレクション アイテムの ID に置き換えてください。  
+## <a name="remarks"></a>Remarks  
+ コレクション セットが非キャッシュ モードに設定されている場合、このモードではコレクション セットに指定されたスケジュールでデータ収集とアップロードが行われるため、頻度を変更しても無視されます。 コレクションセットの状態を表示するには、次のクエリを実行します。 `<collection_item_id>` は、更新するコレクション アイテムの ID に置き換えてください。  
   
 ```  
 USE msdb;  
@@ -89,7 +88,7 @@ WHERE collection_item_id = <collection_item_id>;
   
 -   @parameters  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例は、「 [sp_syscollector_create_collection_item &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)」で定義されている例で作成したコレクションアイテムに基づいています。  
   
 ### <a name="a-changing-the-collection-frequency"></a>A. 収集頻度を変更する  
@@ -117,8 +116,7 @@ GO
 ```  
   
 ### <a name="c-changing-the-parameters-of-a-collection-item"></a>C. コレクション アイテムのパラメーターを変更する  
- 次の例では、コレクションアイテムに関連付けられているパラメーターを変更します。 
-  `<Value>` 属性内で定義されているステートメントを変更し、`UseSystemDatabases` 属性を false に設定します。 このアイテムの現在のパラメーターを表示するには、syscollector_collection_items システム ビューの parameters 列にクエリを実行します。 の`@collection_item_id`値を変更することが必要になる場合があります。  
+ 次の例では、コレクションアイテムに関連付けられているパラメーターを変更します。 `<Value>` 属性内で定義されているステートメントを変更し、`UseSystemDatabases` 属性を false に設定します。 このアイテムの現在のパラメーターを表示するには、syscollector_collection_items システム ビューの parameters 列にクエリを実行します。 の`@collection_item_id`値を変更することが必要になる場合があります。  
   
 ```  
 USE msdb;  
@@ -143,6 +141,6 @@ GO
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [データコレクション](../../relational-databases/data-collection/data-collection.md)   
  [sp_syscollector_create_collection_item &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)   
- [syscollector_collection_items &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  
+ [syscollector_collection_items &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  
   
   

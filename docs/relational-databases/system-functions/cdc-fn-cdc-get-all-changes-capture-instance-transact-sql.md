@@ -17,10 +17,10 @@ ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0a4e0e62121d289f9eb897c79abb2991a57890a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68043050"
 ---
 # <a name="cdcfn_cdc_get_all_changes_ltcapture_instancegt--transact-sql"></a>cdc. fn_cdc_get_all_changes_&lt;capture_instance&gt; (transact-sql)
@@ -68,26 +68,26 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**__ $ start_lsn**|**binary (10)**|変更のコミット順序を保持する変更に関連付けられているコミット LSN。 同じトランザクションでコミットされた変更は、同じコミット LSN 値を共有します。|  
-|**__ $ seqval**|**binary (10)**|トランザクション内の行への変更を順序付けるために使用されるシーケンス値。|  
-|**__ $ 操作**|**int**|変更データの行をターゲットデータソースに適用するために必要なデータ操作言語 (DML) 操作を識別します。 以下のいずれかを指定できます。<br /><br /> 1 = 削除<br /><br /> 2 = 挿入<br /><br /> 3 = 更新 (キャプチャされる列値は更新操作前の値)。 この値が該当するのは、行フィルター オプションに 'all update old' を指定した場合だけです。<br /><br /> 4 = 更新 (キャプチャされた列の値は更新操作後の値)|  
+|**__$start_lsn**|**binary(10)**|変更のコミット順序を保持する変更に関連付けられているコミット LSN。 同じトランザクションでコミットされた変更は、同じコミット LSN 値を共有します。|  
+|**__$seqval**|**binary(10)**|トランザクション内の行への変更を順序付けるために使用されるシーケンス値。|  
+|**__ $ 操作**|**int**|変更データの行をターゲットデータソースに適用するために必要なデータ操作言語 (DML) 操作を識別します。 次のいずれかを指定できます。<br /><br /> 1 = 削除<br /><br /> 2 = 挿入<br /><br /> 3 = 更新 (キャプチャされる列値は更新操作前の値)。 この値が該当するのは、行フィルター オプションに 'all update old' を指定した場合だけです。<br /><br /> 4 = 更新 (キャプチャされた列の値は更新操作後の値)|  
 |**__ $ update_mask**|**varbinary (128)**|キャプチャ インスタンスに対して指定された各キャプチャ対象列に対応するビットを持ったビット マスク。 この値には、 **__ $ operation**が1または2の場合に、定義済みのすべてのビットが1に設定されます。 **__ $ Operation**が3または4の場合、変更された列に対応するビットだけが1に設定されます。|  
 |**\<キャプチャされたソーステーブルの列>**|多様|関数によって返されるその他の列は、キャプチャインスタンスの作成時に特定されたキャプチャ対象列です。 キャプチャ対象列リストで列が指定されなかった場合、ソース テーブルのすべての列が返されます。|  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sysadmin**固定サーバーロールまたは**db_owner**固定データベースロールのメンバーシップが必要です。 他のすべてのユーザーに対して、ソーステーブルのすべてのキャプチャ対象列に対する SELECT 権限が必要です。また、キャプチャインスタンスのゲートロールが定義されている場合は、そのデータベースロールのメンバーシップが必要です。 呼び出し元にソースデータを表示するアクセス許可がない場合、関数はエラー 229 ("オブジェクト ' fn_cdc_get_all_changes_... '、データベース '\<DatabaseName> '、スキーマ ' cdc '.") に対して "SELECT 権限が拒否されました。" を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  指定した LSN 範囲がキャプチャインスタンスの変更追跡タイムライン内に収まらない場合、関数はエラー 208 ("プロシージャまたは関数 cdc. fn_cdc_get_all_changes に指定された引数の数が不足しています。") を返します。  
   
  **__ $ Operation** = 1 または **__ $ operation** = 3 の場合、データ型**image**、 **text**、および**ntext**の列には常に NULL 値が割り当てられます。 データ型**varbinary (max)**、 **varchar (max)**、または**nvarchar (max)** の列は、更新中に列が変更されない限り、 **__ $ operation** = 3 の場合は NULL 値が割り当てられます。 **__ $ Operation** = 1 の場合、これらの列には削除時に値が割り当てられます。 キャプチャ インスタンスに含まれる計算列の値は、常に NULL になります。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  変更[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]データキャプチャのクエリ関数の使用方法を示すいくつかのテンプレートが用意されています。 これらのテンプレートは、の [**表示**] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]メニューで使用できます。 詳細については、「[テンプレートエクスプローラー](../../ssms/template/template-explorer.md)」を参照してください。  
   
- この例は、`Enumerate All Changes for Valid Range Template` を示しています。 この例では、関数 `cdc.fn_cdc_get_all_changes_HR_Department` を使用して、`HR_Department` データベース内の HumanResources.Department ソース テーブルに対して定義されているキャプチャ インスタンス [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] で現在使用できる変更をすべてレポートします。  
+ この例は、`Enumerate All Changes for Valid Range Template` を示しています。 この例では、関数 `cdc.fn_cdc_get_all_changes_HR_Department` を使用して、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベース内の HumanResources.Department ソース テーブルに対して定義されているキャプチャ インスタンス `HR_Department` で現在使用できる変更をすべてレポートします。  
   
 ```  
 -- ========  
@@ -110,6 +110,6 @@ GO
  [sp_cdc_get_ddl_history &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)   
  [sp_cdc_get_captured_columns &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md)   
  [sp_cdc_help_change_data_capture &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
- [変更データキャプチャについて &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
+ [変更データ キャプチャについて &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   
   

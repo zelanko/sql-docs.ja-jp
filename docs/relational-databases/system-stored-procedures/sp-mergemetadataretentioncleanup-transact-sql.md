@@ -16,10 +16,10 @@ ms.assetid: 4e8d6343-2a38-421d-a3f3-c37d437a0f88
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 41c3a6848d71d7ba8f22667c117686485bb569b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68019975"
 ---
 # <a name="sp_mergemetadataretentioncleanup-transact-sql"></a>sp_mergemetadataretentioncleanup (Transact-sql)
@@ -51,7 +51,7 @@ sp_mergemetadataretentioncleanup [ [ @num_genhistory_rows = ] num_genhistory_row
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
 >  データベースに複数のパブリケーションが存在し、それらのパブリケーションのいずれかが無期限のパブリケーション保有期間を使用する場合、 **sp_mergemetadataretentioncleanup**を実行しても、データベースのマージレプリケーション変更追跡メタデータはクリーンアップされません。 このため、無期限のパブリケーション保有期間は注意して使用してください。 パブリケーションに無期限の保有期間が設定されているかどうかを確認するには、パブリッシャーで[transact-sql&#41;を実行 &#40;sp_helpmergepublication](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)を実行し、**保有**期間に**0**を指定して結果セット内のすべてのパブリケーションを確認します。  
@@ -60,6 +60,6 @@ sp_mergemetadataretentioncleanup [ [ @num_genhistory_rows = ] num_genhistory_row
  **Sp_mergemetadataretentioncleanup**を実行できるのは、 **db_owner**固定データベースロールのメンバー、またはパブリッシュされたデータベースのパブリケーションアクセスリスト内のユーザーだけです。  
   
 ## <a name="see-also"></a>参照  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

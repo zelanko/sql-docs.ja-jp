@@ -15,10 +15,10 @@ ms.assetid: 98562d0e-d0e0-4f62-b001-90acbac67277
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7f64c9ff6664410983d9c3ce7ebdbf07e493ca03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038993"
 ---
 # <a name="constructor-functions-xquery"></a>コンストラクター関数 (XQuery)
@@ -43,7 +43,7 @@ TYP($atomicvalue as xdt:anyAtomicType?
  *TYP*  
  任意の組み込み XSD 型。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  コンストラクターは基本データ型、および派生されたアトミック XSD 型に対してサポートされています。 ただし、 **xs: duration**のサブタイプ ( **Xdt: yearMonthDuration、Xdt: daytimeduration**、 **xs: QName**、 **XS: NMTOKEN**、および**xs: NOTATION**を含む) はサポートされていません。 関連するスキーマコレクションで使用可能なユーザー定義のアトミック型は、次の型から直接または間接的に派生している場合にも使用できます。  
   
 #### <a name="supported-base-types"></a>サポートされている基本型  
@@ -134,7 +134,7 @@ TYP($atomicvalue as xdt:anyAtomicType?
   
 -   引数が別の型のリテラルである場合、式はコンパイル時に評価されます。 値が型制約を満たしていない場合は、空のシーケンスが返されます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
 ### <a name="a-using-the-datetime-xquery-function-to-retrieve-older-product-descriptions"></a>A. dateTime() XQuery 関数を使用して、製品の説明の古いバージョンを取得する  

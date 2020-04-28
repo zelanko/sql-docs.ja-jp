@@ -18,10 +18,10 @@ ms.assetid: c71b21c0-ec04-4fbd-9735-01128b736935
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8435e203eedb74c3b91d788158e28c810fdce44d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68009150"
 ---
 # <a name="sp_delete_log_shipping_secondary_database-transact-sql"></a>sp_delete_log_shipping_secondary_database (Transact-sql)
@@ -46,9 +46,9 @@ sp_delete_log_shipping_secondary_database
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- [なし] :  
+ なし。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_delete_log_shipping_secondary_database**は、セカンダリサーバーの**master**データベースから実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -56,6 +56,6 @@ sp_delete_log_shipping_secondary_database
   
 ## <a name="see-also"></a>参照  
  [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -19,10 +19,10 @@ ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d665b16c6b635da8b267ac0549ab8d918af8c06b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038917"
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>式コンテキストとクエリの評価 (XQuery)
@@ -77,9 +77,9 @@ ms.locfileid: "68038917"
   
      これらすべての名前空間のバインドは、静的コンテキストの初期化時に解決されます。  
   
--   型指定された**xml**列または変数に対してクエリを実行する場合は、列または変数に関連付けられている xml スキーマコレクションのコンポーネントが静的コンテキストにインポートされます。 詳しくは、「型指定された[xml と型指定](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)されていない Xml の比較」をご覧ください。  
+-   型指定された**xml**列または変数に対してクエリを実行する場合は、列または変数に関連付けられている xml スキーマコレクションのコンポーネントが静的コンテキストにインポートされます。 詳細については、「 [型指定された XML と型指定されていない XML の比較](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)」を参照してください。  
   
--   インポートされたスキーマのすべてのアトミック型についても、キャスト関数が静的コンテキストで使用可能になります。 これを次の例に示します。 この例では、型指定された**xml**変数に対してクエリを指定しています。 この変数に関連付けられている XML スキーマ コレクションでは、アトミック型である myType が定義されています。 この型に対応する、キャスト関数**myType ()** は、スタティック分析中に使用できます。 クエリ式 (`ns:myType(0)`) は、myType の値を返します。  
+-   インポートされたスキーマのすべてのアトミック型についても、キャスト関数が静的コンテキストで使用可能になります。 この例を次に示します。 この例では、型指定された**xml**変数に対してクエリを指定しています。 この変数に関連付けられている XML スキーマ コレクションでは、アトミック型である myType が定義されています。 この型に対応する、キャスト関数**myType ()** は、スタティック分析中に使用できます。 クエリ式 (`ns:myType(0)`) は、myType の値を返します。  
   
     ```  
     -- DROP XML SCHEMA COLLECTION SC  
@@ -192,7 +192,7 @@ ms.locfileid: "68038917"
   
 ## <a name="see-also"></a>参照  
  [XQuery の基礎](../xquery/xquery-basics.md)   
- [型指定された XML と型指定のない XML の比較](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
- [XML スキーマコレクション &#40;SQL Server&#41;](../relational-databases/xml/xml-schema-collections-sql-server.md)  
+ [型指定された XML と型指定されていない XML の比較](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
+ [XML スキーマ コレクション &#40;SQL Server&#41;](../relational-databases/xml/xml-schema-collections-sql-server.md)  
   
   

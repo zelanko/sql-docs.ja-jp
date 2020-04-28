@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 918f545dd0ea0ca30524a307f1ae6d30c3fafb61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68046048"
 ---
 # <a name="sp_bindefault-transact-sql"></a>sp_bindefault (Transact-sql)
@@ -59,7 +59,7 @@ sp_bindefault [ @defname = ] 'default' ,
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Sp_bindefault**を使用すると、新しい既定値を列にバインドできます。ただし、既定の制約を使用することをお勧めします。または、既存の既定値をアンバインドせずに別名データ型に対して使用することもできます。 古い既定値はオーバーライドされます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]システムデータ型または CLR ユーザー定義型に既定値をバインドすることはできません。 既定値がバインド先の列と互換性がない場合、バインド時では[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]なく、既定値を挿入しようとするとエラーメッセージが返されます。  
   
  別名データ型の既存の列は、既定値が直接バインドされているか、 *futureonly_flag*または**futureonly**として指定されていない限り、新しい既定値を継承します。 別名データ型の新しい列は、常に既定値を継承します。  
@@ -72,8 +72,7 @@ sp_bindefault [ @defname = ] 'default' ,
 ## <a name="examples"></a>例  
   
 ### <a name="a-binding-a-default-to-a-column"></a>A. 列への既定値のバインド  
- 既定値の`today` CREATE default を使用して、現在のデータベースでという名前の既定値が定義さ`HireDate`れてい`Employee`ます。次の例では、テーブルの列に既定値をバインドしています。 
-  `Employee` テーブルに行を追加するときに、`HireDate` 列の入力がなければ、この列にデフォルト `today` が入力されます。  
+ 既定値の`today` CREATE default を使用して、現在のデータベースでという名前の既定値が定義さ`HireDate`れてい`Employee`ます。次の例では、テーブルの列に既定値をバインドしています。 `Employee` テーブルに行を追加するときに、`HireDate` 列の入力がなければ、この列にデフォルト `today` が入力されます。  
   
 ```  
 USE master;  
@@ -82,8 +81,7 @@ EXEC sp_bindefault 'today', 'HumanResources.Employee.HireDate';
 ```  
   
 ### <a name="b-binding-a-default-to-an-alias-data-type"></a>B. 別名データ型に既定値をバインドする  
- 
-  `def_ssn` という名前のデフォルトと、`ssn` という別名データ型が既に存在しています。 次の例では、 `def_ssn`既定`ssn`のをにバインドしています。 テーブルが作成されると、別名データ型`ssn`が割り当てられているすべての列によって、既定値が継承されます。 **Ssn**型の既存の列も既定の**def_ssn**を継承します。ただし、 *futureonly_flag*値に**futureonly**が指定されていない場合、または列に既定のが直接バインドされている場合を除きます。 列にバインドされているデフォルトは、データ型にバインドされているデフォルトより常に優先します。  
+ `def_ssn` という名前のデフォルトと、`ssn` という別名データ型が既に存在しています。 次の例では、 `def_ssn`既定`ssn`のをにバインドしています。 テーブルが作成されると、別名データ型`ssn`が割り当てられているすべての列によって、既定値が継承されます。 **Ssn**型の既存の列も既定の**def_ssn**を継承します。ただし、 *futureonly_flag*値に**futureonly**が指定されていない場合、または列に既定のが直接バインドされている場合を除きます。 列にバインドされているデフォルトは、データ型にバインドされているデフォルトより常に優先します。  
   
 ```  
 USE master;  
@@ -116,9 +114,9 @@ EXEC sp_bindefault 'default1', '[t.1].c1' ;
   
 ## <a name="see-also"></a>参照  
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [CREATE DEFAULT &#40;Transact-sql&#41;](../../t-sql/statements/create-default-transact-sql.md)   
+ [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
  [DROP DEFAULT &#40;Transact-sql&#41;](../../t-sql/statements/drop-default-transact-sql.md)   
  [sp_unbindefault &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

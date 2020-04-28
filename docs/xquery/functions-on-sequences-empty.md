@@ -16,10 +16,10 @@ ms.assetid: 46da89a8-0cd9-4913-8521-4087589a04ba
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 888739807a79163a8188f3b2f27b7f7860032bc4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004675"
 ---
 # <a name="functions-on-sequences---empty"></a>シーケンスの関数 - empty
@@ -38,10 +38,10 @@ fn:empty($arg as item()*) as xs:boolean
  *$arg*  
  項目のシーケンス。 シーケンスが空の場合、関数は True を返します。 それ以外の場合、関数は False を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Fn: exists ()** 関数はサポートされていません。 代わりに、 **not ()** 関数を使用することもできます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
 ### <a name="a-using-the-empty-xquery-function-to-determine-if-an-attribute-is-present"></a>A. Empty () XQuery 関数を使用して、属性が存在するかどうかを判断する  
@@ -112,6 +112,6 @@ ProductModelID Result
   
 ## <a name="see-also"></a>参照  
  [Xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)   
- [xml データ型 &#40;&#40;&#41; メソッドが存在&#41;](../t-sql/xml/exist-method-xml-data-type.md)  
+ [exist&#40;&#41; メソッド &#40;xml データ型&#41;](../t-sql/xml/exist-method-xml-data-type.md)  
   
   

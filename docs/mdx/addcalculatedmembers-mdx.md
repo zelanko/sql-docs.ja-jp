@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 982484b729b59a7106b6195e361110c1d4012653
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017183"
 ---
 # <a name="addcalculatedmembers-mdx"></a>AddCalculatedMembers (MDX)
@@ -31,13 +31,13 @@ AddCalculatedMembers(Set_Expression)
  *Set_Expression*  
  セットを返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  既定では、MDX は、セット関数を解決するときに、計算されるメンバーを除外します。 **Add演算メンバー**関数は、 *Set_Expression*で指定されたセット式を調べ、そのセット式のスコープ内に含まれるメンバーの兄弟である計算されるメンバーを含みます。  
   
 > [!NOTE]  
 >  この関数で使用できるのは、1 次元のセット式だけです。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  この関数の使用例を次に示します。  
   
 ```  
@@ -60,6 +60,6 @@ FROM
 ```  
   
 ## <a name="see-also"></a>参照  
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

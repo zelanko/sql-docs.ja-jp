@@ -18,10 +18,10 @@ ms.assetid: 0fe7d554-6b67-4d55-9d3e-4096802c47f8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ecbfba038b1954565839a3d931ef96431b77f50b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68008938"
 ---
 # <a name="sp_oasetproperty-transact-sql"></a>sp_OASetProperty (Transact-SQL)
@@ -48,7 +48,7 @@ sp_OASetProperty objecttoken , propertyname , newvalue [ , index... ]
  *newvalue*  
  プロパティの新しい値を指定します。指定する場合は、適切なデータ型の値にする必要があります。  
   
- *インデックス*  
+ *index*  
  はインデックスパラメーターです。 指定する場合、*インデックス*は、適切なデータ型の値である必要があります。  
   
  一部のプロパティにはパラメーターがあります。 これらのプロパティはインデックス付きプロパティと呼ばれ、パラメーターはインデックスパラメーターと呼ばれます。 プロパティは、複数のインデックスパラメーターを持つことができます。  
@@ -64,7 +64,7 @@ sp_OASetProperty objecttoken , propertyname , newvalue [ , index... ]
 ## <a name="permissions"></a>アクセス許可  
  **Sysadmin**固定サーバーロールのメンバーシップ、またはこのストアドプロシージャに対して直接実行権限が必要です。 `Ole Automation Procedures`OLE オートメーションに関連するシステムプロシージャを使用するには、構成を**有効**にする必要があります。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では`HostName` 、以前に作成した**SQLServer**オブジェクトのプロパティを新しい値に設定します。  
   
 ```  

@@ -20,27 +20,25 @@ ms.assetid: 978b8205-535b-461c-91f3-af9b08eca467
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 13cf57e181c3fbb1371c10b554eb9da344a951d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004735"
 ---
 # <a name="dbosysjobsteps-transact-sql"></a>dbo.sysjobsteps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによって実行されるジョブ内の各ステップに関する情報を格納します。 このテーブルは、 **msdb**データベースに格納されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**job_id**|**UNIQUEIDENTIFIER**|ジョブの ID。|  
+|**job_id**|**uniqueidentifier**|ジョブの ID。|  
 |**step_id**|**int**|ジョブ ステップの ID。|  
 |**step_name**|**sysname**|ジョブステップの名前。|  
-|**サブ**|**nvarchar (40)**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントがジョブ ステップを実行するために使用するサブシステムの名前。|  
+|**サブ**|**nvarchar(40)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントがジョブ ステップを実行するために使用するサブシステムの名前。|  
 |**メニュー**|**nvarchar(max)**|**サブシステム**によって実行されるコマンドです。|  
-|**示す**|**int**|予約済み。|  
+|**flags**|**int**|予約済み。|  
 |**additional_parameters**|**ntext**|予約済み。|  
 |**cmdexec_success_code**|**int**|**CmdExec**サブシステムのステップによって返された、成功を示すエラーレベルの値。|  
 |**on_success_action**|**tinyint**|ステップが正常に実行されたときに実行されるアクション。|  
@@ -60,7 +58,7 @@ ms.locfileid: "68004735"
 |**last_run_date**|**int**|ステップの実行を最後に開始した日付 (yyyymmdd)。|  
 |**last_run_time**|**int**|ステップの実行を最後に開始した時刻 (hhmmss)。|  
 |**proxy_id**|**int**|ジョブステップのプロキシ。|  
-|**step_uid**|**UNIQUEIDENTIFIER**|ジョブステップの識別子。|  
+|**step_uid**|**uniqueidentifier**|ジョブステップの識別子。|  
   
 ## <a name="see-also"></a>参照  
  [SQL Server エージェントテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  

@@ -22,10 +22,10 @@ ms.assetid: f84cf007-ddf1-4396-a07c-3e0729abc769
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 4630ae8d92dbf0e9b1c5bf615dd82d436a5751f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006649"
 ---
 # <a name="connecting-to-sql-server-accesstosql"></a>SQL Server への接続 (SQL server)
@@ -80,8 +80,7 @@ Access データベースオブジェクトを構文に[!INCLUDE[ssNoVersion](..
   
 6.  セキュリティで保護された接続の場合は、2つのコントロールが追加され、[**接続の暗号化**] チェックボックスと [ **trustservercertificate** ] チェックボックスが **暗号化接続**チェックボックスがオンになっている場合にのみ、 **trustservercertificate**チェックボックスが表示されます。 [**暗号化接続**] がオンになっていて (true)、 **trustservercertificate**がオフになっている場合 (false)、は SQL Server の SSL 証明書を検証します。 サーバー証明書の検証は、SSL ハンドシェイクの一部であり、接続先のサーバーが適切なサーバーであることを保証します。 これを実現するには、証明書をクライアント側とサーバー側の両方にインストールする必要があります。  
   
-7.  
-  **[接続]** をクリックします。  
+7.  **[Connect]** をクリックします。  
   
 **より新しいバージョンの互換性**  
   
@@ -98,11 +97,11 @@ Access データベースオブジェクトを構文に[!INCLUDE[ssNoVersion](..
 ||||||||
 |-|-|-|-|-|-|-|
 |**プロジェクトの種類 Vs ターゲットサーバーのバージョン**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005 (バージョン: 1.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008 (バージョン:10 .x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012 (バージョン: 2.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 (バージョン: 2.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016 (バージョン:13. x)|SQL Azure|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005|はい|はい|はい|はい|はい||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008||はい|はい|はい|はい||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012|||はい|はい|はい||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|はい|はい|はい|はい|はい||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||はい|はい|はい|はい||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||はい|はい|はい||
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||||はい|はい||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016|||||はい||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|||||はい||
 |SQL Azure||||||はい|
   
 > [!IMPORTANT]  
@@ -120,7 +119,7 @@ Access データベースオブジェクトを構文に[!INCLUDE[ssNoVersion](..
   
 に再接続する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]手順は、接続を確立する手順と同じです。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>次のステップ  
 ソースデータベースとターゲットデータベース間のマッピングをカスタマイズする場合は、「[ソースデータベースとターゲットデータベースのマッピング](mapping-source-and-target-databases-accesstosql.md)」を参照してください。次[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の手順では、データベースオブジェクトの[変換](converting-access-database-objects-accesstosql.md)を使用してデータベースオブジェクトを構文に変換します。  
   
 ## <a name="see-also"></a>参照  

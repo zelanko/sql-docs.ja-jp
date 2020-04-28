@@ -12,10 +12,10 @@ ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3aa7ccc8d559f7017fd2a9bf0bc20bc7ae191c46
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68020992"
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>影響を受けるオブジェクトの選択と構成 (SybaseToSQL)
@@ -45,7 +45,7 @@ SSMA Tester がこれらのオブジェクトのいずれかを確認できな�
   
 -   Nullable  
   
-## <a name="sql"></a>SQL  
+## <a name="sql"></a>Sql  
 [SQL] タブには、選択したテーブルの "Create table" SQL が含まれています。  
   
 ## <a name="data"></a>データ  
@@ -114,7 +114,7 @@ SSMA Tester によって生成された SELECT ステートメントは、[ **SQ
   
 これらの SELECT ステートメントを編集して、カスタム検証を行うことができます。 Sybase および[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ステートメントで変更を保存するには、ソースとターゲットの SQL の下にある [**適用**] ボタンを使用します。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 [呼び出し順序のカスタマイズ &#40;SybaseToSQL&#41;](../../ssma/sybase/customizing-calls-order-sybasetosql.md)  
   
 ## <a name="see-also"></a>参照  

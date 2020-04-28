@@ -21,31 +21,30 @@ ms.assetid: 28285f3d-3889-439f-8b24-3bdef08e46b4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b1530e58597947a7e19f4ca264808fbfefd164ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68033113"
 ---
 # <a name="data-tier-application-views---dbosysdac_instances"></a>データ層アプリケーションビュー-dbo. sysdac_instances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  
   [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに配置されたデータ層アプリケーション (DAC) インスタンスごとに 1 行を表示します。 sysdac_instances は、msdb データベースの dbo スキーマに属しています。 次の表では、sysdac_instances ビューの列について説明します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|instance_id|**UNIQUEIDENTIFIER**|DAC インスタンスの識別子。|  
+|instance_id|**uniqueidentifier**|DAC インスタンスの識別子。|  
 |instance_name|**sysname**|DAC の配置時に指定された DAC インスタンスの名前。|  
 |type_name|**sysname**|DAC パッケージの作成時に指定された DAC の名前。|  
 |type_version|**nvarchar (64)**|DAC パッケージの作成時に指定された DAC のバージョン。|  
-|description|**nvarchar(4000)**|DAC パッケージの作成時に指定された DAC の説明。|  
+|description|**nvarchar (4000)**|DAC パッケージの作成時に指定された DAC の説明。|  
 |type_stream|**varbinary(max)**|DAC に含まれるテーブルやビューなどの論理オブジェクトのエンコードされた表現を含むビットストリーム。|  
-|date_created|**DATETIME**|DAC インスタンスが作成された日付と時刻。|  
+|date_created|**datetime**|DAC インスタンスが作成された日付と時刻。|  
 |created_by|**sysname**|DAC インスタンスを作成したログイン。|  
 |database_name|**sysname**|DAC インスタンスのために作成したデータベースの名前。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  DAC には、テーブルやビューなどのアプリケーションによって使用される論理データ層オブジェクトの定義である DAC 型が含まれています。 DAC パッケージは、DAC を配置するために使用されるファイルです。 DAC パッケージは、DAC 型に含まれるすべての論理オブジェクトの表現を含んでいます。 DAC パッケージは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]dac の1つ以上のコピー (インスタンス) をのインスタンスに配置するために使用できます。 同じ DAC パッケージから配置された各 DAC インスタンスは同じ種類を共有しますが、一意のインスタンス名と識別子が割り当てられます。  
   
 ## <a name="permissions"></a>アクセス許可  

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 311a71926aa2eacae9aa7754b778c037b69d35e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68008119"
 ---
 # <a name="operators---unary"></a>演算子 - 単項
@@ -22,7 +22,7 @@ ms.locfileid: "68008119"
   
  次の表は、DMX がサポートする単項演算子を示しています。  
   
-|演算子|[説明]|  
+|演算子|説明|  
 |--------------|-----------------|  
 |[-&#40;負の&#41; &#40;MDX&#41;](../mdx/negative-mdx.md)|数値式の負の値を返します。|  
 |[+ &#40;肯定的&#41; &#40;MDX&#41;](../mdx/positive-mdx.md)|数値式の正の値を返します。|  

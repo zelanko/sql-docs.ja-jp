@@ -18,10 +18,10 @@ ms.assetid: 777f0e09-8ee5-4cb2-a3ac-939d02c3cd22
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2c927bdff462922d1846188366fbb92ce0d3663c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022418"
 ---
 # <a name="sp_addsrvrolemember-transact-sql"></a>sp_addsrvrolemember (Transact-SQL)
@@ -49,7 +49,7 @@ sp_addsrvrolemember [ @loginame= ] 'login'
  [ @rolename **=** ] **'**_role_**'**  
  ログインを追加する固定サーバーロールの名前を指定します。 *role*の部分は**sysname**で、既定値は NULL です。次のいずれかの値を指定する必要があります。  
   
--   sysadmin  
+-   [sysadmin]  
   
 -   securityadmin  
   
@@ -68,7 +68,7 @@ sp_addsrvrolemember [ @loginame= ] 'login'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ログインを固定サーバー ロールに追加すると、そのロールに関係付けられている権限がログインに与えられます。  
   
  sa ログインと public のロール メンバーシップを変更することはできません。  
@@ -80,7 +80,7 @@ sp_addsrvrolemember [ @loginame= ] 'login'
 ## <a name="permissions"></a>アクセス許可  
  新しいメンバーを追加するロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、Windows `Corporate\HelenS`ログインを`sysadmin`固定サーバーロールに追加します。  
   
 ```  
@@ -95,6 +95,6 @@ GO
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [セキュリティ関数 &#40;Transact-sql&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
  [Transact-sql&#41;&#40;サーバーの役割を作成する](../../t-sql/statements/create-server-role-transact-sql.md)   
- [Transact-sql&#41;&#40;サーバーロールを削除する](../../t-sql/statements/drop-server-role-transact-sql.md)  
+ [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md)  
   
   

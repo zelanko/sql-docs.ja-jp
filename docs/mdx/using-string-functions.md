@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 74eec478baad335cb5be6a78ec1faea2d15030ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68037996"
 ---
 # <a name="using-string-functions"></a>文字列関数の使用
@@ -22,7 +22,7 @@ ms.locfileid: "68037996"
   
  最も広く使用されている文字列関数は、 **Name**と**Uniquename**です。 これらの関数はそれぞれ、オブジェクトの名前と一意の名前を返します。 ほとんどの場合、これらは、計算をデバッグする際に、関数によって返されるメンバーを検出するために使用されます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次のクエリ例では、これらの関数の使用方法を示しています。  
   
  `WITH`  

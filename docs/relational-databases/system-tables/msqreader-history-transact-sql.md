@@ -18,10 +18,10 @@ ms.assetid: c5c91d39-513c-4a77-870b-c8ef74a1cd6b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f21873e8db662bc77bd1acbb5d48c6af49aba404
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032530"
 ---
 # <a name="msqreader_history-transact-sql"></a>MSqreader_history (Transact-sql)
@@ -29,16 +29,16 @@ ms.locfileid: "68032530"
 
   **MSqreader_history**テーブルには、ローカルディストリビューターに関連付けられているキューリーダーエージェントの履歴行が含まれています。 このテーブルは、ディストリビューションデータベースに格納されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**int**|キュー リーダー エージェントの ID|  
 |**publication_id**|**int**|パブリケーションの ID です。|  
 |**runstatus**|**int**|エージェントの実行状態。<br /><br /> **1** = 開始します。<br /><br /> **2** = 成功します。<br /><br /> **3** = 実行中です。<br /><br /> **4** = アイドル状態。<br /><br /> **5** = 再試行します。<br /><br /> **6** = 失敗。|  
-|**start_time**|**DATETIME**|エージェントセッションが開始された日付と時刻。|  
-|**time**|**DATETIME**|最後にメッセージがログに記録された日時。|  
-|**全**|**int**|ログに記録されたセッションのアクティビティの経過時間 (秒単位)。|  
-|**comments**|**nvarchar(255)**|説明のテキスト。|  
-|**transaction_id**|**nvarchar (40)**|メッセージと共に格納されるトランザクション ID (該当する場合)。|  
+|**start_time**|**datetime**|エージェントセッションが開始された日付と時刻。|  
+|**time**|**datetime**|最後にメッセージがログに記録された日時。|  
+|**duration**|**int**|ログに記録されたセッションのアクティビティの経過時間 (秒単位)。|  
+|**コメント**|**nvarchar(255)**|説明のテキスト。|  
+|**transaction_id**|**nvarchar(40)**|メッセージと共に格納されるトランザクション ID (該当する場合)。|  
 |**transaction_status **|**int**|トランザクションの状態。|  
 |**transactions_processed**|**int**|セッションで処理されたトランザクションの累積数。|  
 |**commands_processed**|**int**|セッション中に処理されたコマンド数の累計。|  
@@ -51,6 +51,6 @@ ms.locfileid: "68032530"
   
 ## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 2d28df68512f9c97faebf3ee00b2aa34a2b8d1a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028672"
 ---
 # <a name="update-dmx"></a>更新 (DMX)
@@ -37,9 +37,9 @@ SET NODE_CAPTION='new caption'
  **NODE_CAPTION**列の新しい名前を含む文字列。  
   
  *条件式*  
- 省略可能。 列リストから返される値を制限する条件。  
+ 任意。 列リストから返される値を制限する条件。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、 **UPDATE**ステートメントによって、クラスター `Cluster 1` `001`の既定の名前がよりわかりやすい名前`Likely Customers`に変更されます。  
   
 ```  
@@ -51,6 +51,6 @@ WHERE NODE_UNIQUE_NAME = '001'
 ## <a name="see-also"></a>参照  
  [DMX&#41; データ定義ステートメント &#40;のデータマイニング拡張機能](../dmx/dmx-statements-data-definition.md)   
  [DMX&#41; データ操作ステートメントを &#40;データマイニング拡張機能](../dmx/dmx-statements-data-manipulation.md)   
- [DMX&#41; ステートメントリファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-statements.md)  
+ [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

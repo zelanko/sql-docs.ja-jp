@@ -18,10 +18,10 @@ ms.assetid: 124756a4-463a-4a81-bf5b-de7e8ffc7a62
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8f080f5defd5143d3822e86eeeb3c7242b51d08d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029585"
 ---
 # <a name="ihextendedsubscriptionview-transact-sql"></a>IHextendedSubscriptionView (Transact-SQL)
@@ -29,20 +29,20 @@ ms.locfileid: "68029585"
 
   **IHextendedSubscriptionView**ビューでは、非 SQL Server パブリケーションのサブスクリプションに関する情報が公開されます。 このビューは、**ディストリビューション**データベースに格納されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**article_id**|**int**|アーティクルの一意識別子。|  
 |**dest_db**|**sysname**|転送先データベースの名前。|  
 |**srvid**|**smallint**|サブスクライバーの一意の識別子です。|  
 |**login_name**|**sysname**|サブスクライバーへの接続に使用されるログインです。|  
-|**distribution_jobid**|**binary**|ディストリビューションエージェントジョブを識別します。|  
+|**distribution_jobid**|**[バイナリ]**|ディストリビューションエージェントジョブを識別します。|  
 |**publisher_database_id**|**int**|パブリケーションデータベースを識別します。|  
 |**subscription_type**|**int**|サブスクリプションの種類。<br /><br /> **0** = プッシュ-ディストリビューションエージェントはサブスクライバーで実行されます。<br /><br /> **1** = プル-ディストリビューションエージェントはディストリビューターで実行されます。|  
 |**sync_type**|**tinyint**|初期同期の種類。<br /><br /> **1** = 自動<br /><br /> **2** = なし|  
-|**オンライン**|**tinyint**|サブスクリプションの状態。<br /><br /> **0** = 非アクティブ<br /><br /> **1** = サブスクライブ済み<br /><br /> **2** = アクティブ|  
+|**status**|**tinyint**|サブスクリプションの状態。<br /><br /> **0** = 非アクティブ<br /><br /> **1** = サブスクライブ済み<br /><br /> **2** = アクティブ|  
 |**snapshot_seqno_flag**|**bit**|スナップショットシーケンス番号が使用されているかどうかを示します。|  
 |**independent_agent**|**bit**|このパブリケーションに対して、スタンドアロンのディストリビューション エージェントがあるかどうかを示します。<br /><br /> **0** = パブリケーションは共有ディストリビューションエージェントを使用し、各パブリッシャーデータベース/サブスクライバーデータベースのペアには1つの共有エージェントがあります。<br /><br /> **1** = このパブリケーションには、スタンドアロンのディストリビューションエージェントがあります。|  
-|**subscription_time**|**DATETIME**|内部使用のみです。|  
+|**subscription_time**|**datetime**|内部使用のみです。|  
 |**loopback_detection**|**bit**|双方向トランザクションレプリケーショントポロジの一部であるサブスクリプションに適用されます。 ディストリビューション エージェントが、サブスクライバーで発生したトランザクションをサブスクライバーに戻すかどうかを示します。<br /><br /> **1** = を返しません。<br /><br /> **0** = 返送します。|  
 |**agent_id**|**int**|ディストリビューションエージェントの一意の識別子。|  
 |**update_mode**|**tinyint**|更新モードの種類を示します。以下のいずれかを指定できます。<br /><br /> **0** = 読み取り専用。<br /><br /> **1** = 即時更新。<br /><br /> **2** = メッセージキューを使用した更新がキューに登録されました。<br /><br /> **3** = メッセージキューを使用して、フェールオーバーとしてキュー更新を使用する即時更新。<br /><br /> **4** = SQL Server キューを使用したキュー更新。<br /><br /> **5** = キュー更新フェールオーバーを使用した即時更新。 SQL Server キューを使用します。|  
@@ -52,6 +52,6 @@ ms.locfileid: "68029585"
 ## <a name="see-also"></a>参照  
  [異種データベースレプリケーション](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

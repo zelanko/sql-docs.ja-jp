@@ -18,10 +18,10 @@ ms.assetid: e4546c13-9fba-4bab-8b42-d6f18b33ec25
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0aad616275d635ac32d6e81dbc5321db0db58b34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68019939"
 ---
 # <a name="sp_revoke_login_from_proxy-transact-sql"></a>sp_revoke_login_from_proxy (Transact-SQL)
@@ -51,13 +51,13 @@ sp_revoke_login_from_proxy
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ログインによって所有されるジョブがこのプロキシを参照する場合、そのジョブは実行できなくなります。  
   
 ## <a name="permissions"></a>アクセス許可  
  このストアド プロシージャを実行するには、 **sysadmin** 固定サーバー ロールのメンバーであることが必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、ログイン `terrid` に対して、プロキシ `Catalog application proxy` へのアクセスを禁止します。  
   
 ```  

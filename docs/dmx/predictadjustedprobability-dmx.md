@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c2ae90886d6469802543f62bf5636ccaafeb32fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68008092"
 ---
 # <a name="predictadjustedprobability-dmx"></a>PredictAdjustedProbability (DMX)
@@ -33,14 +33,14 @@ PredictAdjustedProbability(<scalar column reference>, [<predicted state>])
 ## <a name="return-type"></a>戻り値の型  
  スカラー値。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  予測された状態が省略されている場合、省略した状態バケットを除いて、最も予測可能性が高い状態が使用されます。 欠落状態のバケットを含めるには、 \<予測された状態の> を**INCLUDE_NULL**に設定します。  
   
  欠損状態の調整済みの確率を返すには、 \<予測された状態> を NULL に設定します。  
   
  **PredictAdjustedProbability**関数は、データ[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]マイニング仕様の[!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB の拡張機能です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例は、自然予測結合を使用して、個人が TM Decision Tree マイニング モデルに基づいた自転車購入者である可能性を判断します。また、予測の調整済みの確率も判断します。  
   
 ```  

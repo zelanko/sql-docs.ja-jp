@@ -18,10 +18,10 @@ ms.assetid: 93f50869-2627-4642-899f-8f626f8833f4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 11d71139786ac1442588f016bf8c576b92853cf3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67997581"
 ---
 # <a name="sp_helpremotelogin-transact-sql"></a>sp_helpremotelogin (Transact-sql)
@@ -30,7 +30,7 @@ ms.locfileid: "67997581"
   ローカルサーバーで定義されている特定のリモートサーバーまたはすべてのリモートサーバーのリモートログインに関する情報をレポートします。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]代わりに、リンクサーバーとリンクサーバーストアドプロシージャを使用します。  
+>  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]代わりに、リンク サーバーとリンク サーバー ストアド プロシージャを使用してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,14 +54,14 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |server|**sysname**|ローカルサーバーで定義されているリモートサーバーの名前。|  
 |local_user_name|**sysname**|サーバーからのリモートログインがマップされているローカルサーバーでログインします。|  
 |remote_user_name|**sysname**|local_user_name にマップされているリモート サーバー上のログイン。|  
 |options|**sysname**|Trusted = リモートログインは、リモートサーバーからローカルサーバーに接続するときにパスワードを入力する必要はありません。<br /><br /> 信頼されていない (または空白) = リモートサーバーからローカルサーバーに接続するときに、リモートログインにパスワードの入力が求められます。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ローカル サーバーで定義されているリモート サーバーの名前を表示するには、sp_helpserver を使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -88,6 +88,6 @@ EXEC sp_helpremotelogin;
  [sp_dropremotelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
  [sp_helpserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_remoteoption &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-remoteoption-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

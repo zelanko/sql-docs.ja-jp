@@ -21,10 +21,10 @@ ms.assetid: 695a796d-087e-4bc8-99d0-ddc342604c75
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: be0f8e7b410abb2e9027ce0b773d1a1ad5a14465
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68041003"
 ---
 # <a name="syssp_xtp_unbind_db_resource_pool-transact-sql"></a>sp_xtp_unbind_db_resource_pool (Transact-sql)
@@ -63,7 +63,7 @@ Database 'Hekaton_DB' does not have a binding to a resource pool.
 sys.sp_xtp_unbind_db_resource_pool 'Hekaton_DB'  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 -   によって`database_name`指定されたデータベースには[!INCLUDE[hek_2](../../includes/hek-2-md.md)] 、リソースプールへのバインドが必要です。  
   
@@ -71,6 +71,6 @@ sys.sp_xtp_unbind_db_resource_pool 'Hekaton_DB'
   
 ## <a name="see-also"></a>参照  
  [メモリ最適化テーブルを含むデータベースをリソースプールにバインドする](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
- [sp_xtp_bind_db_resource_pool &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)  
+ [sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)  
   
   

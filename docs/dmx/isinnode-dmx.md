@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 6e4c7df84bc7bf3a4804db76d952b1219100ef5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68008363"
 ---
 # <a name="isinnode-dmx"></a>IsInNode (DMX)
@@ -28,12 +28,12 @@ IsInNode(<NodeID>)
 ```  
   
 ## <a name="return-type"></a>戻り値の型  
- ブール型。  
+ ブール型です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **IsInNode**は、 [SELECT FROM &#60;model&#62; でのみ使用されます。DMX&#41;&#40;ケース](../dmx/select-from-model-cases-dmx.md)は[&#60;モデル&#62; から選択します。DMX&#41;クエリを &#40;SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md)します。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、IsInNode 関数で指定されたノードに関連付けられているモデルの作成に使用されたすべてのケースを返します。  
   
 ```  

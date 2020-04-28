@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4ab1797fabd8fb7d77eab85c97604b77e72f25c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68042762"
 ---
 # <a name="freetexttable-transact-sql"></a>FREETEXTTABLE (Transact-SQL)
@@ -39,8 +39,7 @@ ms.locfileid: "68042762"
  FREETEXTTABLE を使用するクエリでは、各行の関連順位値 (RANK) とフルテキストキー (キー) が返されます。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされているフルテキスト検索の形式については、「[フルテキスト検索でのクエリ](../../relational-databases/search/query-with-full-text-search.md)」を参照してください。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされているフルテキスト検索の形式については、「[フルテキスト検索でのクエリ](../../relational-databases/search/query-with-full-text-search.md)」を参照してください。  
   
 (https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
   
@@ -57,7 +56,7 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
 ```  
   
 ## <a name="arguments"></a>引数  
- *一覧*  
+ *テーブル*  
  フルテキストクエリ用にマークされているテーブルの名前を指定します。 *テーブル*または*ビュー*には、1、2、または3つの要素で構成されるデータベースオブジェクト名を指定できます。 ビューに対してクエリを実行する場合は、フルテキスト インデックスが作成されたベース テーブルを 1 つだけ指定できます。  
   
  *テーブル*にサーバー名を指定することはできません。また、リンクサーバーに対するクエリでは使用できません。  
@@ -66,40 +65,33 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
  FROM 句で指定したテーブルのフルテキスト インデックス付きの列の名前を指定します。 列には、**char**、**varchar**、**nchar**、**nvarchar**、**text**、**ntext**、**image**、**xml**、**varbinary**、**varbinary(max)** のいずれかの型を指定できます。  
   
  *column_list*  
- コンマ区切りで複数の列を指定できます。 *column_list*はかっこで囲む必要があります。 
-  *language_term* を指定しない場合、*column_list* で指定するすべての列の言語は同じにする必要があります。  
+ コンマ区切りで複数の列を指定できます。 *column_list* は、かっこで囲む必要があります。 *language_term* を指定しない場合、*column_list* で指定するすべての列の言語は同じにする必要があります。  
   
  \*  
  フルテキスト検索用に登録されているすべての列を使用して、指定した *freetext_string* を検索します。 *Language_term*が指定されていない限り、テーブル内のすべてのフルテキストインデックス列の言語は同じである必要があります。  
   
  *freetext_string*  
- 
-  *column_name* で検索するテキストです。 単語、フレーズ、文など、あらゆるテキストを入力できます。 用語または一定の形式になっている用語がフルテキスト インデックス内に見つかった場合、一致するものと判断されます。  
+ *column_name* で検索するテキストです。 単語、フレーズ、文など、あらゆるテキストを入力できます。 用語または一定の形式になっている用語がフルテキスト インデックス内に見つかった場合、一致するものと判断されます。  
   
  CONTAINS 検索条件とは異なり、とはキーワードで、 *freetext_string*で使用されている場合、"and" はノイズワード ([ストップワード](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) と見なされ、破棄されます。  
   
- WEIGHT、FORMSOF、ワイルドカード、NEAR、その他の構文は使用できません。 *freetext_string*は、語幹、類義語辞典によって渡されます。  
+ WEIGHT、FORMSOF、ワイルドカード、NEAR、その他の構文は使用できません。 *freetext_string* は単語、語幹に分割され、類義語がチェックされて渡されます。  
   
  LANGUAGE *language_term*  
- クエリにおいて、単語区切り、語幹への分割、類義語のチェック、ストップワードの破棄を行うときに使用する言語リソースの言語を指定します。 このパラメーターは省略可能で、言語のロケール識別子 (LCID) に対応する文字列、整数、または 16 進数の値を指定できます。 
-  *language_term* を指定した場合、その言語は検索条件のすべての要素に適用されます。 値を指定しなかった場合は、列のフルテキストの言語が使用されます。  
+ クエリにおいて、単語区切り、語幹への分割、類義語のチェック、ストップワードの破棄を行うときに使用する言語リソースの言語を指定します。 このパラメーターは省略可能で、言語のロケール識別子 (LCID) に対応する文字列、整数、または 16 進数の値を指定できます。 *language_term* を指定した場合、その言語は検索条件のすべての要素に適用されます。 値を指定しなかった場合は、列のフルテキストの言語が使用されます。  
   
- 1 つの列に言語の異なる複数のドキュメントが BLOB (Binary Large Object) として格納されている場合、そのインデックスの作成に使用される言語は、そのドキュメントのロケール識別子 (LCID) によって決まります。 そのような列に対してクエリを実行する場合は、*LANGUAGE language_term* を指定すると検索結果の一致率が高まります。  
+ 1 つの列に言語の異なる複数のドキュメントが BLOB (Binary Large Object) として格納されている場合、そのインデックスの作成に使用される言語は、そのドキュメントのロケール識別子 (LCID) によって決まります。 このような列に対してクエリを実行するときに、*言語 language_term*を指定すると、一致する確率が高くなる可能性があります。  
   
- 
-  *language_term* を文字列で指定する場合は、**sys.syslanguages &#40;Transact-SQL&#41;** 互換性ビューの [alias](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 列の値と同じ値を指定します。  文字列は、'*language_term*' のように、単一引用符で囲む必要があります。 
-  *language_term* を整数で指定する場合は、その言語を表す実際の LCID を指定します。 
-  *language_term* を 16 進数の値で指定する場合は、「0x」の後に LCID の 16 進数の値を指定します。 16 進数の値は、先頭の 0 を含め、8 桁以内で指定してください。  
+ *language_term* を文字列で指定する場合は、[sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 互換性ビューの **alias** 列の値と同じ値を指定します。  文字列の場合は、'*language_term*' のように引用符 (') で囲む必要があります。 *language_term* を整数で指定する場合は、その言語を表す実際の LCID を指定します。 *language_term* を 16 進数の値で指定する場合は、「0x」の後に LCID の 16 進数の値を指定します。 16 進数の値は、先頭の 0 を含め、8 桁以内で指定してください。  
   
- 値を 2 バイト文字セット (DBCS) の形式で指定すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で Unicode に変換されます。  
+ 値が2バイト文字セット (DBCS) 形式の場合、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]はそれを Unicode に変換します。  
   
  指定した言語が無効であるか、その言語に該当するリソースがインストールされていない場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によりエラーが返されます。 ニュートラル言語リソースを使用するには、*language_term* に「0x0」を指定してください。  
   
  *top_n_by_rank*  
- 一致したものの中から、降順で順位の高い方から*n 個*だけを返すことを指定します。 整数値*n*が指定されている場合にのみ適用されます。 
-  *top_n_by_rank* を他のパラメーターと組み合わせた場合、クエリから返される行数は、実際にすべての述語に一致する行数より少なくなります。 *top_n_by_rank*を使用すると、最も関連性の高いヒットだけを再度呼び出すことで、クエリのパフォーマンスを向上させることができます。  
+ 一致したものの中から、降順で順位の高い方から*n 個*だけを返すことを指定します。 整数値*n*が指定されている場合にのみ適用されます。 *top_n_by_rank* を他のパラメーターと組み合わせた場合、クエリから返される行数は、実際にすべての述語に一致する行数より少なくなります。 *top_n_by_rank*を使用すると、最も関連性の高いヒットだけを再度呼び出すことで、クエリのパフォーマンスを向上させることができます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  フルテキストの述語と関数の対象は、FROM 述語で示される 1 つのテーブルです。 複数のテーブルを検索するには、FROM 句で結合テーブルを使用して、複数のテーブルが組み合わされた結果セットを検索します。  
   
  FREETEXTTABLE では、FREETEXT 述語と同じ検索条件が使用されます。  
@@ -174,18 +166,18 @@ GO
   
 ## <a name="see-also"></a>参照  
  [フルテキスト検索の概要](../../relational-databases/search/get-started-with-full-text-search.md)   
- [フルテキストカタログの作成と管理](../../relational-databases/search/create-and-manage-full-text-catalogs.md)   
- [Transact-sql&#41;&#40;のフルテキストカタログの作成](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
- [Transact-sql&#41;&#40;のフルテキストインデックスの作成](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
- [フルテキストインデックスの作成と管理](../../relational-databases/search/create-and-manage-full-text-indexes.md)   
- [フルテキスト検索を使用したクエリ](../../relational-databases/search/query-with-full-text-search.md)   
- [Visual Database Tools &#40;のフルテキスト検索クエリの作成&#41;](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
+ [フルテキスト カタログの作成と管理](../../relational-databases/search/create-and-manage-full-text-catalogs.md)   
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
+ [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
+ [フルテキスト インデックスの作成と管理](../../relational-databases/search/create-and-manage-full-text-indexes.md)   
+ [フルテキスト検索でのクエリ](../../relational-databases/search/query-with-full-text-search.md)   
+ [フルテキスト検索クエリの作成 &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
  [Transact-sql&#41;を含む &#40;](../../t-sql/queries/contains-transact-sql.md)   
- [CONTAINSTABLE &#40;Transact-sql&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
- [FREETEXT &#40;Transact-sql&#41;](../../t-sql/queries/freetext-transact-sql.md)   
+ [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
+ [FREETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/freetext-transact-sql.md)   
  [行セット関数 &#40;Transact-sql&#41;](../../t-sql/functions/rowset-functions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [Transact-sql&#41;&#40;場所](../../t-sql/queries/where-transact-sql.md)   
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
  [precompute rank サーバー構成オプション](../../database-engine/configure-windows/precompute-rank-server-configuration-option.md)  
   
   

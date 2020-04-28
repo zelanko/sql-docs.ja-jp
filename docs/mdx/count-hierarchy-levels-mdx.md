@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 17fe804de8bf2c20581ca5c00bee3a28dbce4d55
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68045207"
 ---
 # <a name="count-hierarchy-levels-mdx"></a>Count (階層レベル) (MDX)
@@ -31,7 +31,7 @@ Hierarchy_Expression.Levels.Count
  *Hierarchy_Expression*  
  階層を返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  階層内のレベル数を返します。`[All]` レベルがある場合はこれも含みます。  
   
 > [!IMPORTANT]  
@@ -51,6 +51,6 @@ FROM [Adventure Works]
  [&#40;ディメンション&#41; &#40;MDX&#41;のカウント](../mdx/count-dimension-mdx.md)   
  [MDX&#41;&#41; &#40;組 &#40;数](../mdx/count-tuple-mdx.md)   
  [MDX&#41;&#41; &#40;設定 &#40;数](../mdx/count-set-mdx.md)   
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

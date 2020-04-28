@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 76d1572e1f99162c8daebeafadb0c8d75a53a4d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68046027"
 ---
 # <a name="sp_bindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
@@ -47,8 +47,7 @@ sp_bindrule [ @rulename = ] 'rule' ,
 ## <a name="arguments"></a>引数  
 `[ @rulename = ] 'rule'`CREATE RULE ステートメントによって作成されたルールの名前を指定します。 *rule*は**nvarchar (776)**,、既定値はありません。  
   
-`[ @objname = ] 'object_name'`テーブルと列、またはルールをバインドする別名データ型を指定します。 
-  **text**、**ntext**、**image**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)**、**xml**、CLR ユーザー定義型、**timestamp** の列には、ルールをバインドできません。 ルールは計算列にバインドできません。  
+`[ @objname = ] 'object_name'`テーブルと列、またはルールをバインドする別名データ型を指定します。 **text**、**ntext**、**image**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)**、**xml**、CLR ユーザー定義型、**timestamp** の列には、ルールをバインドできません。 ルールは計算列にバインドできません。  
   
  *object_name*は**nvarchar (776)** で、既定値はありません。 *Object_name*が1つの部分で構成される名前である場合、別名データ型として解決されます。 2部構成または3部構成の名前の場合は、最初にテーブルと列として解決されます。この解決が失敗した場合、別名データ型として解決されます。 既定では、列に規則が直接バインドされていない限り、別名データ型の既存の列は*rule*を継承します。  
   
@@ -63,9 +62,8 @@ sp_bindrule [ @rulename = ] 'rule' ,
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
- 新しいルールを列にバインドすることができます (CHECK 制約を使用することをお勧めします)。または、既存のルールをバインド解除せずに**sp_bindrule**の別名データ型にバインドすることもできます。 元のルールはオーバーライドされます。 既に CHECK 制約のある列にルールをバインドすると、すべての制限が評価されます。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型にはルールをバインドできません。  
+## <a name="remarks"></a>Remarks  
+ 新しいルールを列にバインドすることができます (CHECK 制約を使用することをお勧めします)。または、既存のルールをバインド解除せずに**sp_bindrule**の別名データ型にバインドすることもできます。 元のルールはオーバーライドされます。 既に CHECK 制約のある列にルールをバインドすると、すべての制限が評価されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型にはルールをバインドできません。  
   
  このルールは、バインドではなく、INSERT ステートメントが試行されたときに適用されます。 文字ルールを**数値**データ型の列にバインドすることはできますが、このような挿入操作は無効です。  
   
@@ -88,8 +86,7 @@ EXEC sp_bindrule 'today', 'HumanResources.Employee.HireDate';
 ```  
   
 ### <a name="b-binding-a-rule-to-an-alias-data-type"></a>B. 別名データ型にルールをバインドする  
- 
-  `rule_ssn` という名前のルールがあり、`ssn` という名前の別名データ型があるものとします。次の例では、`rule_ssn` を `ssn` にバインドします。 CREATE TABLE ステートメントでは、型`ssn`の列がルール`rule_ssn`を継承します。 *Futureonly_flag*に対して`ssn` **futureonly**が指定されていない場合、または`ssn`ルールが直接バインドされている場合を除き、型の既存の列も`rule_ssn`ルールを継承します。 列にバインドされたルールは、データ型にバインドされたルールよりも常に優先されます。  
+ `rule_ssn` という名前のルールがあり、`ssn` という名前の別名データ型があるものとします。次の例では、`rule_ssn` を `ssn` にバインドします。 CREATE TABLE ステートメントでは、型`ssn`の列がルール`rule_ssn`を継承します。 *Futureonly_flag*に対して`ssn` **futureonly**が指定されていない場合、または`ssn`ルールが直接バインドされている場合を除き、型の既存の列も`rule_ssn`ルールを継承します。 列にバインドされたルールは、データ型にバインドされたルールよりも常に優先されます。  
   
 ```  
 USE master;  
@@ -98,8 +95,7 @@ EXEC sp_bindrule 'rule_ssn', 'ssn';
 ```  
   
 ### <a name="c-using-the-futureonly_flag"></a>C. Futureonly_flag の使用  
- 次の例では、`rule_ssn` ルールを別名データ型 `ssn` にバインドします。 
-  `futureonly` が指定されているため、`ssn` 型の既存の列は影響を受けません。  
+ 次の例では、`rule_ssn` ルールを別名データ型 `ssn` にバインドします。 `futureonly` が指定されているため、`ssn` 型の既存の列は影響を受けません。  
   
 ```  
 USE master;  
@@ -124,9 +120,9 @@ EXEC sp_bindrule rule1, '[t.2].c1' ;
 ## <a name="see-also"></a>参照  
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [CREATE RULE &#40;Transact-sql&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
+ [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
  [DROP RULE &#40;Transact-sql&#41;](../../t-sql/statements/drop-rule-transact-sql.md)   
  [sp_unbindrule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

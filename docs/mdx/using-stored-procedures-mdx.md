@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 4daa38f185569e1579413870cc929a8b1b3b6570
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038007"
 ---
 # <a name="using-stored-procedures-mdx"></a>ストアド プロシージャの使用 (MDX)
@@ -35,8 +35,7 @@ WHERE [Measures].[Reseller Freight Cost]
 >  *ストアドプロシージャ*は、これらの種類[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]の関数で使用される用語です。 以前のバージョン[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のでは、これらの型の関数を*ユーザー定義関数*と呼びました。  
   
 ## <a name="types-of-stored-procedures"></a>ストアドプロシージャの種類  
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は COM アセンブリと CLR アセンブリの両方をサポートします。 Clr アセンブリで使用可能なセキュリティが強化されているため、CLR アセンブリを使用することをお勧めします。 サーバーに Microsoft Office Excel がインストールされている場合、Excel 関数も使用可能です。  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は COM アセンブリと CLR アセンブリの両方をサポートします。 Clr アセンブリで使用可能なセキュリティが強化されているため、CLR アセンブリを使用することをお勧めします。 サーバーに Microsoft Office Excel がインストールされている場合、Excel 関数も使用可能です。  
   
 > [!NOTE]  
 >  Microsoft Visual Basic for Applications (VBA) COM アセンブリは自動的に登録されます。  

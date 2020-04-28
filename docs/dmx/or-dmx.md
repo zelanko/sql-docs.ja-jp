@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 76b1f8ac9a5f7ad584f42110f2c3b22e5c1918ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68008145"
 ---
 # <a name="or-dmx"></a>OR (DMX)
@@ -37,7 +37,7 @@ Expression1 OR Expression2
 ## <a name="return-value"></a>戻り値  
  いずれかまたは両方の引数が TRUE に評価される場合に TRUE を返すブール値です。それ以外の場合は FALSE。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  両方の引数は、演算子が論理和を実行する前に、ブール値 (FALSE の場合は0、それ以外の場合は TRUE) として扱われます。 いずれかの引数または両方の引数が TRUE に評価された場合、演算子は TRUE を返します。 *Expression1*が true と評価され、 *Expression2*が FALSE と評価された場合、演算子は true を返します。  
   
  次の表は、論理和の実行方法を示しています。  

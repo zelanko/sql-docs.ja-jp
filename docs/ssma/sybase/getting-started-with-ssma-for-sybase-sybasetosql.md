@@ -10,10 +10,10 @@ ms.assetid: c4098516-f0fc-4690-97bb-3766dfd43156
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: f07f230f52fee5707084c01060e92220b35cb75c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029125"
 ---
 # <a name="getting-started-with-ssma-for-sap-ase-sybasetosql"></a>SSMA for SAP ASE でのはじめに (SybaseToSQL)
@@ -82,24 +82,24 @@ SSMA には、[プロジェクト] ツールバーと [移行] ツールバー�
 #### <a name="the-migration-toolbar"></a>[移行] ツールバー  
 [移行] ツールバーには、次のコマンドがあります。  
   
-|ボタン|Function|  
+|Button|関数|  
 |----------|------------|  
 |**レポートの作成**|選択した SAP ASE オブジェクトを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]構文に変換し、変換が成功したかどうかを示すレポートを作成します。<br /><br />このコマンドは、Sybase メタデータエクスプローラーでオブジェクトが選択されている場合にのみ使用できます。|  
 |**スキーマの変換**|選択した SAP ASE オブジェクトを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL Database オブジェクトに変換します。<br /><br />このコマンドは、Sybase メタデータエクスプローラーでオブジェクトが選択されている場合にのみ使用できます。|  
 |**データの移行**|SAP ASE データベースからまたは Azure SQL Database に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データを移行します。 このコマンドを実行する前に、SAP ASE スキーマをまたは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure SQL Database スキーマに変換し、オブジェクトをまたは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure SQL Database に読み込む必要があります。<br /><br />このコマンドは、Sybase メタデータエクスプローラーでオブジェクトが選択されている場合にのみ使用できます。|  
-|**停止**|オブジェクトをまたは Azure SQL Database 構文に変換する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]など、現在のプロセスを停止します。|  
+|**Stop**|オブジェクトをまたは Azure SQL Database 構文に変換する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]など、現在のプロセスを停止します。|  
   
 ### <a name="menus"></a>メニュー  
 SSMA には、次のメニューが含まれています。  
   
-|メニュー|[説明]|  
+|メニュー|説明|  
 |--------|---------------|  
-|**拡張子**|プロジェクトを操作したり、SAP ASE に接続したり、または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure SQL Database に接続したりするためのコマンドが含まれています。|  
+|**[最近使ったファイル]**|プロジェクトを操作したり、SAP ASE に接続したり、または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure SQL Database に接続したりするためのコマンドが含まれています。|  
 |**[編集]**|[SQL の詳細] ペインからコピー [!INCLUDE[tsql](../../includes/tsql-md.md)]するなど、詳細ページ内のテキストを検索して操作するためのコマンドが含まれています。 には、[**ブックマークの管理**] オプションもあります。このオプションでは、既存のブックマークの一覧が表示されます。 ダイアログの右側にあるボタンを使用して、ブックマークを管理できます。|  
-|**モード**|**メタデータエクスプローラーの同期**コマンドを含みます。 これにより、Sybase メタデータエクスプローラーと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure メタデータエクスプローラー間でオブジェクトが同期されます。 には、**出力**ペインおよび**エラー一覧**ウィンドウの表示と非表示を切り替えるコマンドと、レイアウトを管理するためのオプション**レイアウト**も含まれています。|  
+|**表示**|**メタデータエクスプローラーの同期**コマンドを含みます。 これにより、Sybase メタデータエクスプローラーと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure メタデータエクスプローラー間でオブジェクトが同期されます。 には、**出力**ペインおよび**エラー一覧**ウィンドウの表示と非表示を切り替えるコマンドと、レイアウトを管理するためのオプション**レイアウト**も含まれています。|  
 |**ツール**|レポートの作成、データのエクスポート、およびオブジェクトとデータの移行を行うためのコマンドが含まれています。 [**グローバル設定**] および [プロジェクトの**設定**] ダイアログボックスへのアクセスも提供します。|  
 |**テスト担当者**|テストケースを作成したり、テスト結果を表示したり、データベースバックアップ管理のコマンドを表示したりするためのコマンドが含まれています。|  
-|**Help**|SSMA ヘルプおよび [**バージョン情報**] ダイアログボックスへのアクセスを提供します。|  
+|**ヘルプ**|SSMA ヘルプおよび [**バージョン情報**] ダイアログボックスへのアクセスを提供します。|  
   
 ### <a name="output-pane-and-error-list-pane"></a>出力ウィンドウとエラー一覧ペイン  
 [**表示**] メニューには、[出力] ウィンドウと [エラー一覧] ウィンドウの表示を切り替えるためのコマンドが用意されています。  
@@ -108,6 +108,6 @@ SSMA には、次のメニューが含まれています。
   
 -   エラー一覧ペインには、エラー、警告、および情報の各メッセージが一覧に表示され、並べ替えることができます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [SAP ASE データベースの SQL Server Azure SQL Database &#40;SybaseToSQL&#41;への移行](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
 [ユーザーインターフェイスリファレンス &#40;SybaseToSQL&#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)  

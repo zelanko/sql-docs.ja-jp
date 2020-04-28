@@ -21,21 +21,20 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c9579de52a155bd3d5eaa26862f1a7da93d7b19f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026821"
 ---
 # <a name="sysdm_db_xtp_memory_consumers-transact-sql"></a>dm_db_xtp_memory_consumers (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] データベース エンジンのデータベース レベルのメモリ コンシューマーを報告します。 ビューは、データベースエンジンが使用するメモリコンシューマーごとに1行のデータを返します。 この DMV を使用して、さまざまな内部オブジェクト間でメモリがどのように分散されているかを確認します。  
   
  詳細については、「[インメモリ OLTP &#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)」を参照してください。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |memory_consumer_id|**bigint**|メモリコンシューマーの ID (内部)。|  
 |memory_consumer_type|**int**|メモリコンシューマーの種類。<br /><br /> 0=集計  (2 つ以上のコンシューマーのメモリ使用量を集計します。 表示することはできません)<br /><br /> 2 = VARHEAP (可変長ヒープのメモリ使用量を追跡します)<br /><br /> 3=HASH (インデックスのメモリ使用量を追跡します)<br /><br /> 5 = DB ページプール (実行時操作に使用されるデータベースページプールのメモリ使用量を追跡します。 たとえば、テーブル変数および一部のシリアル化可能なスキャンが対象になります。 この種類のメモリコンシューマーはデータベースごとに1つだけ存在します。)|  
@@ -54,7 +53,7 @@ ms.locfileid: "68026821"
 |memory_consumer_address|**varbinary**|コンシューマーの内部アドレス。 内部使用専用です。|  
 |xtp_object_id|**bigint**|メモリ最適化テーブルに対応するインメモリ OLTP オブジェクト ID。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  出力では、データベース レベルのアロケーターは、ユーザー テーブル、インデックス、およびシステム テーブルを参照します。 object_id = NULL の VARHEAP は、可変長列を含むテーブルに割り当てられたメモリを参照します。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -68,7 +67,7 @@ ms.locfileid: "68026821"
  メモリ最適化テーブルに列ストアインデックスがある場合、システムでは、一部のメモリを消費する内部テーブルを使用して、列ストアインデックスのデータを追跡します。 これらの内部テーブルと、メモリ使用量を示すサンプルクエリの詳細については、「 [memory_optimized_tables_internal_attributes (transact-sql)](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)」を参照してください。
  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
   
 ```  
 -- memory consumers (database level)  
@@ -125,6 +124,6 @@ total_allocated_MB   total_used_MB
 ```  
   
 ## <a name="see-also"></a>参照  
- [メモリ最適化テーブルの動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [メモリ最適化テーブルの動的管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

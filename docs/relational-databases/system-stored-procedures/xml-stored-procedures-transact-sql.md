@@ -16,10 +16,10 @@ ms.assetid: 11c84ddb-662b-43a6-9625-9eaa589f0966
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 66f944e1be0edec50492f0eb732bdd03575891f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68037216"
 ---
 # <a name="xml-stored-procedures-transact-sql"></a>XML ストアドプロシージャ (Transact-sql)
@@ -32,6 +32,6 @@ ms.locfileid: "68037216"
 |[sp_xml_preparedocument](../../relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)|[sp_xml_removedocument](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)|  
   
 ## <a name="see-also"></a>参照  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

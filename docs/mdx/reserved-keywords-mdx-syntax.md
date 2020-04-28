@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d88e78e49a52919ff710cd123ab2b25022aa5d1b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68037063"
 ---
 # <a name="reserved-keywords-mdx-syntax"></a>予約されたキーワード (MDX 構文)
@@ -22,14 +22,13 @@ ms.locfileid: "68037063"
   
  予約済みキーワードは次のガイドラインに従います。  
   
--   
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] によって定義される場所を除いて、多次元式 (MDX) ステートメントに予約されたキーワードを含めることはできません。  
+-   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] によって定義される場所を除いて、多次元式 (MDX) ステートメントに予約されたキーワードを含めることはできません。  
   
 -   データベース内のオブジェクトに、予約済みのキーワードに一致する名前を指定することはできません。 このような名前が存在する場合は、区切られた識別子を使用してオブジェクトを参照する必要があります。 この方法を使用すれば予約語と同じ名前のオブジェクトも使用できますが、オブジェクトの名前にはキーワードを使用しないことをお勧めします。  
   
 -   予約されたキーワードを使用しない名前付け規則を使用してください。 オブジェクト名が予約済みキーワードのように見える場合は、子音または母音を削除できます。  
   
 ## <a name="see-also"></a>参照  
- [Mdx 構文要素 &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [MDX 構文の要素 &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

@@ -20,10 +20,10 @@ ms.assetid: 542b19ca-61c8-41ca-aa2e-0aba8906cc24
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a099d67d337544a33bfc922fe14e07af39bd619d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022623"
 ---
 # <a name="systrace_subclass_values-transact-sql"></a>sys.trace_subclass_values (Transact-SQL)
@@ -36,15 +36,15 @@ ms.locfileid: "68022623"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに拡張イベントカタログビューを使用します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**trace_event_id**|**smallint**|トレース イベントの ID。 このパラメーターは、 **trace_events**カタログビューにもあります。|  
 |**trace_column_id**|**smallint**|列挙に使用されるトレース列の ID。 このパラメーターは、 **trace_columns**カタログビューにもあります。|  
-|**subclass_name**|**nvarchar(128**|列の値の意味。|  
+|**subclass_name**|**nvarchar(128)**|列の値の意味。|  
 |**subclass_value**|**smallint**|列の値。|  
   
 ## <a name="permissions"></a>アクセス許可  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   

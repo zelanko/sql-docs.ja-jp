@@ -19,10 +19,10 @@ ms.assetid: 53ff2b0d-b7da-4e3d-8f3d-35e857bc3720
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ab6087b68fba057e6acd91f43804b0e324992e1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68000806"
 ---
 # <a name="sp_syscollector_enable_collector-transact-sql"></a>sp_syscollector_enable_collector (Transact-sql)
@@ -40,18 +40,18 @@ dbo.sp_syscollector_enable_collector
 ```  
   
 ## <a name="arguments"></a>引数  
- なし  
+ None  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  既定値は、サーバー上のデータコレクターです。  
   
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャを実行するには、(EXECUTE 権限を持つ) **dc_admin** または **dc_operator** 固定データベース ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、データ コレクターを有効にします。  
   
 ```sql  

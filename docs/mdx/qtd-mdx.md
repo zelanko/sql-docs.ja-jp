@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7a8856b28d8eec76d2bc262c4209b007c0a7fa04
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68020637"
 ---
 # <a name="qtd-mdx"></a>Qtd (MDX)
@@ -31,7 +31,7 @@ Qtd( [ Member_Expression ] )
  *Member_Expression*  
  メンバーを 1 つ返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  メンバー式が指定されていない場合、既定値は、メジャーグループ内の*Time*型の最初の次元で、*四半期*型のレベルを持つ最初の階層の現在のメンバーになります。  
   
  **Qtd**関数は、 [PeriodsToDate &#40;MDX&#41;](../mdx/periodstodate-mdx.md)関数の、レベル式の引数が*Quarter*に設定されている関数のショートカット関数です。 つまり、`Qtd(Member_Expression)` と `PeriodsToDate(Quarter_Level_Expression, Member_Expression)` は機能的に等価です。  
@@ -54,6 +54,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>参照  
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: 5709667f-e3e4-48a2-93ec-af5e22a2ac58
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 6613c4e94ce8c802e45fe003ac73e51b3f38072b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032811"
 ---
 # <a name="sp_srvrolepermission-transact-sql"></a>sp_srvrolepermission (Transact-sql)
@@ -44,15 +44,15 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
 ## <a name="arguments"></a>引数  
 `[ @srvrolename = ] 'role'`権限を返す固定サーバーロールの名前を指定します。 *role*の部分は**sysname**で、既定値は NULL です。 ロールが指定されていない場合は、すべての固定サーバーロールの権限が返されます。 *ロール*は、次のいずれかの値を持つことができます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**sysadmin**|システム管理者|  
 |**securityadmin**|セキュリティ管理者|  
-|**serveradmin**|サーバー管理者|  
+|**serveradmin**|サーバー管理者。|  
 |**setupadmin**|セットアップ管理者|  
 |**processadmin**|プロセス管理者|  
 |**diskadmin**|ディスク管理者|  
-|**dbcreator**|データベース作成者|  
+|**dbcreator**|データベース作成者。|  
 |**bulkadmin**|BULK INSERT ステートメントを実行できます|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -60,18 +60,18 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**ServerRole**|**sysname**|固定サーバーロールの名前|  
-|**権限**|**sysname**|**ServerRole**に関連付けられたアクセス許可|  
+|[**アクセス許可**]|**sysname**|**ServerRole**に関連付けられたアクセス許可|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  表示される権限には、固定サーバー ロールのメンバーが実行できる、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントとその他の特別な操作が含まれます。 固定サーバーロールの一覧を表示するには、 **sp_helpsrvrole**を実行します。  
   
  **Sysadmin**固定サーバーロールには、他のすべての固定サーバーロールの権限が与えられています。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Public**ロールのメンバーシップが必要です。  
+ ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>例  
  次のクエリでは、固定サーバー ロール `sysadmin` に関連する権限が返されます。  
@@ -86,6 +86,6 @@ GO
  [sp_addsrvrolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
  [sp_dropsrvrolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
  [sp_helpsrvrole &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

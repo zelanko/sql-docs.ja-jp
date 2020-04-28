@@ -18,10 +18,10 @@ ms.assetid: 256ec8a5-3031-40a8-9fdb-99db42ea453d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 69ed86e55cadf6c594ca764874bc1257c6d1a9a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68035344"
 ---
 # <a name="cdcindex_columns-transact-sql"></a>cdc. index_columns (Transact-sql)
@@ -32,7 +32,7 @@ ms.locfileid: "68035344"
  システムテーブルに対して直接クエリを実行しないことをお勧めします。 代わりに、 [sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)ストアドプロシージャを実行します。  
 
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|変更テーブルの ID。|  
 |**column_name**|**sysname**|インデックス列の名前。|  

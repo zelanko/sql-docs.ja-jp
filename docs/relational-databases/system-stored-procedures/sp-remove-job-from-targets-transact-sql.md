@@ -18,10 +18,10 @@ ms.assetid: b8171fb1-c11d-4244-8618-a12e28a150ce
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1ba55c2744d1fad0b6453e0f1d1cd2ea96934bfa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006969"
 ---
 # <a name="sp_remove_job_from_targets-transact-sql"></a>sp_remove_job_from_targets (Transact-SQL)
@@ -56,7 +56,7 @@ sp_remove_job_from_targets [ @job_id = ] job_id
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャの実行権限は、既定では **sysadmin** 固定サーバー ロールのメンバーに与えられています。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、以前`Weekly Sales Backups`に作成し`Servers Processing Customer Orders`たジョブを対象サーバーグループ、 `SEATTLE1`および`SEATTLE2`サーバーから削除します。  
   
 ```  
@@ -73,6 +73,6 @@ GO
 ## <a name="see-also"></a>参照  
  [sp_apply_job_to_targets &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
  [sp_delete_jobserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

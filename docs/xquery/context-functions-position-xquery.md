@@ -16,10 +16,10 @@ ms.assetid: f1bab9e4-1715-4c06-9cb0-06c7e0c9c97f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: de9f30c3c63030aa956366c222b7cbda94e2becb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038982"
 ---
 # <a name="context-functions---position-xquery"></a>コンテキスト関数 - position (XQuery)
@@ -34,10 +34,10 @@ ms.locfileid: "68038982"
 fn:position() as xs:integer  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  で[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]は、 **fn: position ()** は、コンテキストに依存する述語のコンテキストでのみ使用できます。 具体的には、角かっこ ([]) 内でのみ使用できます。この関数と比較しても、静的な型の推論時にカーディナリティが減少することはありません。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  このトピックでは、 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
 ### <a name="a-using-the-position-xquery-function-to-retrieve-the-first-two-product-features"></a>A. Position () XQuery 関数を使用した最初の2つの製品機能の取得  

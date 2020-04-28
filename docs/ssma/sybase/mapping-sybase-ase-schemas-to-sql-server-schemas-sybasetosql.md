@@ -12,10 +12,10 @@ ms.assetid: 2c927003-c49d-4fe1-8e3e-5b2899166268
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 5c39e81f8faffed606e6ca94315c47d383174c91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028872"
 ---
 # <a name="mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql"></a>Sybase ASE スキーマの SQL Server スキーマへのマッピング (SybaseToSQL)
@@ -60,7 +60,7 @@ ASE スキーマと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ま�
   
 1.  [スキーママッピング] タブで、任意の行を選択し、[既定**値にリセット**] をクリックして既定のデータベースとスキーマに戻します。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>次のステップ  
 Sybase ASE オブジェクトからオブジェクトへの変換または SQL Azure オブジェクト[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]への変換を分析する場合は、[変換レポートを作成](assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md)できます。 それ以外の場合は[、ASE データベースオブジェクト定義](converting-sybase-ase-database-objects-sybasetosql.md)をまたは SQL Azure オブジェクト定義に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]変換できます。  
   
 ## <a name="see-also"></a>参照  

@@ -18,10 +18,10 @@ ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7db43df5d500e56e58e3e8465ac03158fe7e4d21
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67997473"
 ---
 # <a name="sp_helprotect-transact-sql"></a>sp_helprotect (Transact-sql)
@@ -62,17 +62,17 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**[所有者]**|**sysname**|オブジェクト所有者の名前。|  
+|**所有者**|**sysname**|オブジェクト所有者の名前。|  
 |**Object**|**sysname**|オブジェクトの名前。|  
 |**権限**|**sysname**|権限が許可されたプリンシパルの名前。|  
-|**Grantor**|**sysname**|指定された権限付与対象ユーザーに権限を許可したプリンシパルの名前。|  
+|**権限**|**sysname**|指定された権限付与対象ユーザーに権限を許可したプリンシパルの名前。|  
 |**ProtectType**|**nvarchar (10)**|保護の種類の名前:<br /><br /> 取り消しの許可|  
-|**アクション**|**nvarchar (60)**|アクセス許可の名前。 有効な権限ステートメントは、オブジェクトの種類によって異なります。|  
+|**動作**|**nvarchar(60)**|アクセス許可の名前。 有効な権限ステートメントは、オブジェクトの種類によって異なります。|  
 |**列**|**sysname**|アクセス許可の種類:<br /><br /> All = オブジェクトの現在の列すべてに対する権限<br /><br /> 新規 = アクセス許可は、後でオブジェクトに対して変更される可能性のある新しい列 (ALTER ステートメントを使用) を対象とします。<br /><br /> All+New = All と New を組み合わせた権限<br /><br /> 権限の種類が列に適用されない場合は、ピリオドを返します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  次のプロシージャでは、すべてのパラメーターが省略可能です。 パラメーターを使用せずに`sp_helprotect`実行すると、現在のデータベースで許可または拒否されたすべての権限が表示されます。  
   
  すべてではなく一部のパラメーターだけを指定する場合は、特定のパラメーターを示す名前付きのパラメーターを使用するか、プレースホルダーとして `NULL` を使用します。 たとえば、データベース所有者 (`dbo`) のすべてのアクセス許可を報告するには、次のように実行します。  
@@ -90,9 +90,9 @@ EXEC sp_helprotect @grantorname = 'dbo';
  出力レポートは、権限カテゴリ、所有者、オブジェクト、権限付与対象ユーザー、許可者、保護の種類のカテゴリ、保護の種類、アクション、列のシーケンシャル ID によって並べ替えられます。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Public**ロールのメンバーシップが必要です。  
+ ロール **public** のメンバーシップが必要です。  
   
- 返される情報には、メタデータへのアクセスに関する制限が適用されます。 プリンシパルに権限がないエンティティは表示されません。 詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ 返される情報には、メタデータへのアクセスに関する制限が適用されます。 プリンシパルに権限がないエンティティは表示されません。  詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="examples"></a>例  
   
@@ -136,6 +136,6 @@ EXEC sp_helprotect @name = 'CREATE TABLE';
  [Transact-sql&#41;の拒否 &#40;](../../t-sql/statements/deny-transact-sql.md)   
  [GRANT &#40;Transact-sql&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [&#40;Transact-sql&#41;を取り消す](../../t-sql/statements/revoke-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

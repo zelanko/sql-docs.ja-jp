@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 4e3aa00334d98af02521005679174feb3b28c55f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68001511"
 ---
 # <a name="comparison-operators"></a>比較演算子
@@ -26,7 +26,7 @@ ms.locfileid: "68001511"
   
  MDX では、次の表に示す比較演算子がサポートされています。  
   
-|演算子|[説明]|  
+|演算子|説明|  
 |--------------|-----------------|  
 |[= (等しい)](../mdx/equal-to-mdx.md)|Null 以外の引数については、左の引数が右の引数と等しい場合に TRUE を返します。それ以外の場合は FALSE。<br /><br /> いずれかまたは両方の引数が null 値に評価される場合、比較`0=null`が行われない限り、演算子は null 値を返します。この場合、ブール値は TRUE を含みます。|  
 |[<>  (等しくない)](../mdx/not-equal-to-mdx.md)|Null 以外の引数については、左の引数が右の引数と等しくない場合に TRUE を返します。それ以外の場合は FALSE。<br /><br /> いずれかまたは両方の引数が null 値に評価される場合、演算子は null 値を返します。|  

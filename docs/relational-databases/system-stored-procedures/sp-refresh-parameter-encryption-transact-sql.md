@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a5f699f21b1f28537da2e2f0033fe6b17908186a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68002464"
 ---
 # <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-sql)
@@ -46,16 +46,16 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 ## <a name="arguments"></a>引数
 
-`[ @name = ] 'module_name'`ストアドプロシージャ、ユーザー定義関数、ビュー、DML トリガー、データベースレベルの DDL トリガー、またはサーバーレベルの DDL トリガーの名前を指定します。 *module_name*を共通言語ランタイム (clr) ストアドプロシージャまたは clr 関数にすることはできません。 *module_name*をスキーマバインドにすることはできません。 ** の module_name `nvarchar`はで、既定値はありません。 *module_name*にはマルチパート識別子を指定できますが、参照できるのは現在のデータベース内のオブジェクトだけです。
+`[ @name = ] 'module_name'`ストアドプロシージャ、ユーザー定義関数、ビュー、DML トリガー、データベースレベルの DDL トリガー、またはサーバーレベルの DDL トリガーの名前を指定します。 *module_name*を共通言語ランタイム (clr) ストアドプロシージャまたは clr 関数にすることはできません。 *module_name*をスキーマバインドにすることはできません。 *module_name*の module_name `nvarchar`はで、既定値はありません。 *module_name*にはマルチパート識別子を指定できますが、参照できるのは現在のデータベース内のオブジェクトだけです。
 
-`[ @namespace = ] ' < class > '`は、指定されたモジュールのクラスです。 *Module_name*が DDL トリガーである場合`<class>`は、が必要です。 `<class>`が`nvarchar(20)`です。 有効な入力`DATABASE_DDL_TRIGGER`値`SERVER_DDL_TRIGGER`は、とです。    
+`[ @namespace = ] ' < class > '`は、指定されたモジュールのクラスです。 *Module_name*が DDL トリガーである場合`<class>`は、が必要です。 `<class>` は `nvarchar(20)` です。 有効な入力`DATABASE_DDL_TRIGGER`値`SERVER_DDL_TRIGGER`は、とです。    
 
 ## <a name="return-code-values"></a>リターン コードの値  
 
 0 (成功) または0以外の数値 (失敗)
 
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 次の場合、モジュールのパラメーターの暗号化メタデータが古くなる可能性があります。   
 * モジュールが参照しているテーブル内の列の暗号化プロパティが更新されました。 たとえば、列が削除され、同じ名前の新しい列が存在しますが、別の暗号化の種類、暗号化キー、または暗号化アルゴリズムが追加されています。  
@@ -80,7 +80,7 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 `EXECUTE AS`句を使用して定義されて`IMPERSONATE`いるモジュールの場合、指定されたプリンシパルに対する権限が必要です。 一般に、オブジェクトを更新しても`EXECUTE AS`プリンシパルは変更されません。 `EXECUTE AS USER`ただし、モジュールがで定義されていて、プリンシパルのユーザー名が、モジュールが作成されたときとは別のユーザーに解決されるようになった場合を除きます。
  
-## <a name="examples"></a>例
+## <a name="examples"></a>使用例
 
 次の例では、テーブルと、テーブルを参照するプロシージャを作成し、Always Encrypted を構成して、テーブル`sp_refresh_parameter_encryption`を変更してプロシージャを実行する方法を示します。  
 

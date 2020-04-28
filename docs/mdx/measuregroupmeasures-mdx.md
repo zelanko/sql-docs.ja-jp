@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 45d7adc5e1f4e103790d9d067bc4876fb5b134d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68033874"
 ---
 # <a name="measuregroupmeasures-mdx"></a>MeasureGroupMeasures (MDX)
@@ -31,7 +31,7 @@ MEASUREGROUPMEASURES(MeasureGroupName)
  *MeasureGroupName*  
  メジャーのセットの取得元となるメジャー グループの名前が格納されている有効な文字列式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  指定する文字列は、メジャー グループの名前と正確に一致する必要があります。 スペースを含むメジャー グループ名を角かっこで囲む必要はありません。  
   
 ## <a name="example"></a>例  
@@ -43,6 +43,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

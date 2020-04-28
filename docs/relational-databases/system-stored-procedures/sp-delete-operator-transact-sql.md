@@ -18,10 +18,10 @@ ms.assetid: ff6c2c4b-e9fe-4d0c-bbc2-a2ddcc1acb95
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: adeed3012f6009ac174d758e7fdd3464fc3d2320
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68009121"
 ---
 # <a name="sp_delete_operator-transact-sql"></a>sp_delete_operator (Transact-SQL)
@@ -48,15 +48,15 @@ sp_delete_operator [ @name = ] 'name'
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ None  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  オペレーターを削除すると、そのオペレーターと関連するすべての通知も削除されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sysadmin**固定サーバーロールのメンバーは**sp_delete_operator**を実行できます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では`François Ajenstat`、演算子を削除します。  
   
 ```  
@@ -71,6 +71,6 @@ GO
  [sp_add_operator &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [sp_help_operator &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
  [sp_update_operator &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

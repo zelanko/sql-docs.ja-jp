@@ -18,10 +18,10 @@ ms.assetid: b44277c6-81e8-4b4d-85b3-a2f04d602e7a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 764b6154885dbd361f7d7d4a09d8e340b4a62ef5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68044463"
 ---
 # <a name="sysmail_help_status_sp-transact-sql"></a>sysmail_help_status_sp (Transact-SQL)
@@ -43,14 +43,14 @@ sysmail_help_status_sp
   
 ## <a name="result-set"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**状態**|**nvarchar (7)**|データベースメールの状態。 指定できる値は、[**開始**] と [**停止**] です。|  
   
 ## <a name="permissions"></a>アクセス許可  
  既定では、 **sysadmin**固定サーバーロールのメンバーだけがこのプロシージャにアクセスできます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、データベースメールの状態を表示します。  
   
 ```  
@@ -69,6 +69,6 @@ STARTED
 ## <a name="see-also"></a>参照  
  [データベースメール外部プログラム](../../relational-databases/database-mail/database-mail-external-program.md)   
  [sysmail_start_sp &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)   
- [sysmail_stop_sp &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)  
+ [sysmail_stop_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)  
   
   

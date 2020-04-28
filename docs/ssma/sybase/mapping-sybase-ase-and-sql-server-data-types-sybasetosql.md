@@ -13,10 +13,10 @@ ms.assetid: 784365d3-df4e-47ab-8ee0-d8392b52f510
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 79313d2344f6feb978a064f3fbd92e1f7bc7dce5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028893"
 ---
 # <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>Sybase ASE と SQL Server データ型とのマッピング (SybaseToSQL)
@@ -67,7 +67,7 @@ SSMA の [**型マッピング**] タブを表示すると、背景は、継承�
   
 3.  データ型のマッピングを編集するには、次の手順を実行します。  
   
-    1.  [**編集**] をクリックします。  
+    1.  **[編集]** をクリックします。  
   
     2.  [**ソースの種類**] で、マップする ASE データ型を選択します。  
   
@@ -83,11 +83,11 @@ SSMA の [**型マッピング**] タブを表示すると、背景は、継承�
   
     1.  [型マッピング] ボックスの一覧で、削除するデータ型マッピングが含まれている行を選択します。  
   
-    2.  **[削除]** をクリックします。  
+    2.  **[除去]** をクリックします。  
   
         継承されたマッピングを削除することはできません。 ただし、継承されたマッピングは、特定のオブジェクトまたはオブジェクトカテゴリのカスタムマッピングによって上書きされます。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>次のステップ  
 移行プロセスの次の手順では、[評価レポートを作成](assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md)するか、 [Sybase ASE データベースオブジェクトを SQL Server または SQL Azure 構文に変換](converting-sybase-ase-database-objects-sybasetosql.md)します。 評価レポートを作成する場合、Sybase ASE オブジェクトは評価中に自動的に変換されます。  
   
 ## <a name="see-also"></a>参照  

@@ -19,10 +19,10 @@ ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e859ed97afdc3dfbb4e39a93b8691d044ceca37d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032640"
 ---
 # <a name="sp_syscollector_create_collection_set-transact-sql"></a>sp_syscollector_create_collection_set (Transact-sql)
@@ -112,7 +112,7 @@ sp_syscollector_create_collection_set
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  sp_syscollector_create_collection_set は、msdb システム データベースのコンテキストで実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -159,6 +159,6 @@ EXEC dbo.sp_syscollector_create_collection_set
  [データコレクション](../../relational-databases/data-collection/data-collection.md)   
  [Transact-sql &#40;ジェネリック T-sql Query コレクター型を使用するカスタムコレクションセットを作成し&#41;](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)   
  [データコレクターストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [syscollector_collection_sets &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  
+ [syscollector_collection_sets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  
   
   

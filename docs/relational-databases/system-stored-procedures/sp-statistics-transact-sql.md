@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b4e3e25dbab53f31e354dcff537b6bfb9a6b433d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032737"
 ---
 # <a name="sp_statistics-transact-sql"></a>sp_statistics (Transact-SQL)
@@ -66,7 +66,7 @@ sp_statistics [ @table_name = ] 'table_name'
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**TABLE_QUALIFIER**|**sysname**|テーブル修飾子の名前。 この列は NULL にすることができます。|  
 |**TABLE_OWNER**|**sysname**|テーブル所有者の名前。 この列は常に値が返されます。|  
@@ -74,19 +74,18 @@ sp_statistics [ @table_name = ] 'table_name'
 |**NON_UNIQUE**|**smallint**|NOT NULL。<br /><br /> 0 = 一意<br /><br /> 1 = 一意ではない|  
 |**INDEX_QUALIFIER**|**sysname**|インデックス所有者の名前。 一部の DBMS 製品では、テーブル所有者以外のユーザーがインデックスを作成できます。 で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、この列は常に**TABLE_NAME**と同じです。|  
 |**INDEX_NAME**|**sysname**|インデックスの名前です。 この列は常に値が返されます。|  
-|**TYPE**|**smallint**|この列は常に値を返します。<br /><br /> 0 = テーブルの統計<br /><br /> 1 = クラスター化<br /><br /> 2 = ハッシュされる<br /><br /> 3 = 非クラスター化|  
+|**種類**|**smallint**|この列は常に値を返します。<br /><br /> 0 = テーブルの統計<br /><br /> 1 = クラスター化<br /><br /> 2 = ハッシュされる<br /><br /> 3 = 非クラスター化|  
 |**SEQ_IN_INDEX**|**smallint**|インデックス内での列の位置。|  
 |**COLUMN_NAME**|**sysname**|返される**TABLE_NAME**の各列の列名。 この列は常に値が返されます。|  
 |**規則**|**char (1)**|照合順序で使用されている並べ替え順。 次の値をとります。<br /><br /> A = 昇順<br /><br /> D = 降順<br /><br /> NULL = 適用なし|  
 |**基数**|**int**|テーブルの行数またはインデックス内の一意の値。|  
 |**トピック**|**int**|インデックスまたはテーブルを格納するページ数。|  
-|**FILTER_CONDITION**|**varchar(128)**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では値は返されません。|  
+|**FILTER_CONDITION**|**varchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では値は返されません。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- なし  
+ None  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  結果セットのインデックスは、 **NON_UNIQUE**、**型**、 **INDEX_NAME**、および**SEQ_IN_INDEX**列の昇順で表示されます。  
   
  クラスター化インデックス型は、テーブルのデータがインデックスの順に格納されているインデックス型を指します。 これは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クラスター化インデックスに対応します。  
@@ -98,7 +97,7 @@ sp_statistics [ @table_name = ] 'table_name'
 ## <a name="permissions"></a>アクセス許可  
  スキーマに対する SELECT 権限が必要です。  
   
-## <a name="example-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]および[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="example-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]および[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、 `DimEmployee`テーブルに関する情報を返します。  
   
 ```  
@@ -109,7 +108,7 @@ EXEC sp_statistics DimEmployee;
   
 ## <a name="see-also"></a>参照  
  [Transact-sql&#41;&#40;のカタログストアドプロシージャ](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
 

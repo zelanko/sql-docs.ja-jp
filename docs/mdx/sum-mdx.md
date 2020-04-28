@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: eb4e9d55ef2228404dd9113170066e4a3612a0a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68036676"
 ---
 # <a name="sum-mdx"></a>Sum (MDX)
@@ -34,13 +34,13 @@ Sum( Set_Expression [ , Numeric_Expression ] )
  *Numeric_Expression*  
  有効な数値式です。通常は、数値を返すセル座標の多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  数値式を指定すると、指定した数値式がセット全体で評価され、合計されます。 数値式を指定しなかった場合、指定したセットがセットのメンバーの現在のコンテキストで評価されてから、合計が算出されます。 SUM 関数を数値式ではない式に適用した場合、結果は不確定になります。  
   
 > [!NOTE]  
 >  Analysis Services では、数値セットの合計が計算される際、NULL 値は無視されます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、2002 2001 暦年の属性階層のすべてのメンバーについて、再販業者の売上金額の合計を返します。  
   
 ```  
@@ -93,6 +93,6 @@ FROM [Adventure Works]
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>参照  
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

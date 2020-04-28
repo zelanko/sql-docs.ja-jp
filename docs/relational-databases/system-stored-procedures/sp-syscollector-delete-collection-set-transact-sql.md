@@ -19,10 +19,10 @@ ms.assetid: 29c63a74-4db4-4068-bd57-9fb519b0c598
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e60fb13244d6740b7d52c568835e54155eeb8c46
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68000877"
 ---
 # <a name="sp_syscollector_delete_collection_set-transact-sql"></a>sp_syscollector_delete_collection_set (Transact-SQL)
@@ -50,7 +50,7 @@ sp_syscollector_delete_collection_set [[ @collection_set_id = ] collection_set_i
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  sp_syscollector_delete_collection_set は、msdb システム データベースのコンテキストで実行する必要があります。  
   
  *Collection_set_id*または*名前*には値を指定する必要があります。どちらも NULL にすることはできません。 これらの値を取得するには、syscollector_collection_set システム ビューにクエリを実行します。  
@@ -60,7 +60,7 @@ sp_syscollector_delete_collection_set [[ @collection_set_id = ] collection_set_i
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャを実行するには、dc_admin (EXECUTE 権限を持つ) 固定データベースロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、 *collection_set_id*を指定して、ユーザー定義のコレクションセットを削除します。  
   
 ```  
@@ -73,6 +73,6 @@ EXEC dbo.sp_syscollector_delete_collection_set
 ## <a name="see-also"></a>参照  
  [データコレクターストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [データコレクション](../../relational-databases/data-collection/data-collection.md)   
- [syscollector_collection_sets &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  
+ [syscollector_collection_sets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  
   
   

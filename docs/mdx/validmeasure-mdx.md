@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b3bce4baf3dc3499621f67defd40a4579e9cd460
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68037955"
 ---
 # <a name="validmeasure-mdx"></a>ValidMeasure (MDX)
@@ -31,7 +31,7 @@ ValidMeasure(Tuple_Expression)
  *Tuple_Expression*  
  組を返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Validmeasure**関数は、組の値を返します。タプルが返す値を持つメジャーグループとのリレーションシップを持たない属性は無視されます。 属性にメジャーとの間のリレーションシップが存在しない理由は 2 つ考えられます。  
   
 -   属性のディメンションに、タプル内のメジャーのメジャーグループとのリレーションシップがありません。  
@@ -49,7 +49,7 @@ ValidMeasure(Tuple_Expression)
 -   関連しない属性は、(メジャーに基づいて) All メンバーに移動されます。  
   
 ## <a name="example"></a>例  
- 次のクエリは、ValidMeasure 関数を使用して、Ignoreun関連性のある Dimensions プロパティの動作をオーバーライドする方法を示しています。 Adventure Works キューブでは、Sales Targets メジャーグループは Ignoreun関連性のあるディメンションを False に設定しています。Date ディメンションは Calendar Quarter の粒度でこのメジャーグループに結合されるので、Sales Quota メジャーは既定では、Calendar Quarter の下に null を返します (ただし、MDX スクリプトには値を割り当てる計算もあります)。月レベルまで)。 計算されるメジャーで ValidMeasure 関数を使用すると、Sales Quota メジャーは IgnoreUnrelatedDimensions が True に設定されている場合と同じように動作し、Sales Quota が現在の Calendar Quarter の値を表示するように強制できます。  
+ 次のクエリは、ValidMeasure 関数を使用して、Ignoreun関連性のある Dimensions プロパティの動作をオーバーライドする方法を示しています。 Adventure Works キューブでは、Sales Targets メジャーグループは Ignoreun関連性のあるディメンションを False に設定しています。Date ディメンションは Calendar Quarter の粒度でこのメジャーグループに結合されるので、Sales Quota メジャーは既定では、Calendar Quarter の下に null を返します (ただし、MDX スクリプトには、月レベルに値を割り当てる計算もあります)。 計算されるメジャーで ValidMeasure 関数を使用すると、Sales Quota メジャーは IgnoreUnrelatedDimensions が True に設定されている場合と同じように動作し、Sales Quota が現在の Calendar Quarter の値を表示するように強制できます。  
   
 ```  
 WITH MEMBER MEASURES.VTEST AS VALIDMEASURE([Measures].[Sales Amount Quota])  
@@ -69,6 +69,6 @@ FROM [Adventure Works]
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>参照  
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

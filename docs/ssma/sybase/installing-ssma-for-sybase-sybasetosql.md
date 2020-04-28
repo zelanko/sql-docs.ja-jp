@@ -10,10 +10,10 @@ ms.assetid: 8d5a4ce6-b747-46e3-9184-645d56e8b35c
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 91a4dfcf8add3900c51e33a6e40fa874ce9f9798
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028974"
 ---
 # <a name="installing-ssma-for-sap-ase-sybasetosql"></a>SSMA for SAP ASE のインストール (SybaseToSQL)
@@ -28,11 +28,11 @@ SSMA for SAP ASE の新しいバージョンにアップグレードする場合
   
 ## <a name="contents"></a>内容  
   
-|[アーティクル]|[説明]|  
+|[アーティクル]|説明|  
 |---------|---------------|  
 |[SSMA for SAP ASE クライアント &#40;SybaseToSQL&#41;のインストール](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)|SSMA for SAP ASE クライアントをインストールするための情報と手順について説明します。|  
 |[SSMA コンポーネントの SQL Server &#40;SybaseToSQL&#41;のインストール](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)|の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに拡張機能パックをインストールするための情報と手順について説明します。|  
 |[SSMA for SAP ASE コンポーネントの削除 &#40;SybaseToSQL&#41;](../../ssma/sybase/removing-ssma-for-sybase-components-sybasetosql.md)|クライアントプログラムと拡張機能パックをアンインストールする手順について説明します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [SAP ASE データベースの SQL Server Azure SQL Database &#40;SybaseToSQL&#41;への移行](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  

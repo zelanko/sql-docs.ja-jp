@@ -12,10 +12,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 47d7aca62ddbf2637b54d77171a08817b842555c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68008911"
 ---
 # <a name="sp_pdw_database_encryption-sql-data-warehouse"></a>sp_pdw_database_encryption (SQL Data Warehouse)
@@ -43,7 +43,7 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Sp_pdw_database_encryption**を使用して tde を有効にすると、tempdb データベースが削除、再作成、および暗号化されます。 そのため、別のアクティブなセッションが tempdb を使用しているときに、アプライアンスで TDE を有効にすることはできません。 アプライアンスで TDE を有効または無効にする操作は、アプライアンスの状態を変更するアクションです。ほとんどの場合、アプライアンスの有効期間内に1回実行することが想定されており、アプライアンスにトラフィックがないときに実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  

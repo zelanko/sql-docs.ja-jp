@@ -18,10 +18,10 @@ ms.assetid: 9fe96e9a-4758-4e4a-baee-3e1217c4426c
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: dd9644253302c6a577c6cc3923bb3a9e3a0d8c0e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68037380"
 ---
 # <a name="sysmail_update_principalprofile_sp-transact-sql"></a>sysmail_update_principalprofile_sp (Transact-SQL)
@@ -55,9 +55,9 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ None  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  このストアド プロシージャでは、指定したプロファイルを、データベース ユーザーの既定のプロファイルにするかどうかを変更します。 データベース ユーザーが持つことのできる既定のプライベート プロファイルは 1 つだけです。  
   
  アソシエーションのプリンシパル名が**public**の場合、またはアソシエーションのプリンシパル id が**0**の場合、このストアドプロシージャはパブリックプロファイルを変更します。 既定のパブリック プロファイルは 1 つしか存在できません。  
@@ -69,7 +69,7 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャの実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  **A. プロファイルをデータベースの既定のパブリック プロファイルに設定する**  
   
  次の例では、 `General Use Profile`プロファイルを、 **msdb**データベースのユーザーの既定のパブリックプロファイルに設定します。  

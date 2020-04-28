@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: eb939c45d298117fa81b05d6188aa3a4c5cd7c4b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68008163"
 ---
 # <a name="predict-dmx"></a>Predict (DMX)
@@ -43,7 +43,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
 > [!NOTE]  
 >  包含、排他、INPUT_ONLY、INCLUDE_STATISTICS はテーブル列参照にのみ適用され、EXCLUDE_NULL と INCLUDE_NULL はスカラー列参照にのみ適用されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  オプションには、EXCLUDE_NULL (既定)、INCLUDE_NULL、INCLUSIVE、EXCLUSIVE (既定)、INPUT_ONLY、および INCLUDE_STATISTICS が含まれています。  
   
 > [!NOTE]  
@@ -66,7 +66,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
   
  テーブル値列の予測に INCLUDE_STATISTICS を渡すと、列 **$Probability**と **$Support**が結果のテーブルに追加されます。 これらの列は、入れ子になった入れ子になったテーブルレコードに存在する確率を示します。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、Predict 関数を使用して、一緒に販売される可能性が最も高い Adventure Works データベースの4つの製品を返します。 関数は、アソシエーションルールマイニングモデルに対して予測を行うため、前に説明したように**PredictAssociation**関数を自動的に使用します。  
   
 ```  

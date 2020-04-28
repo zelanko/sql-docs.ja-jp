@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ee74778b48476328b21c7bdfe4d4e5dd895d8204
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68027659"
 ---
 # <a name="sp_unprepare-transact-sql"></a>sp_unprepare (Transact-SQL)
@@ -42,7 +42,7 @@ sp_unprepare handle
  *扱え*  
  Sp_prepare によって返される*ハンドル*値です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、単純なステートメントを準備し、実行し、準備を解除します。  
   
 ```SQL  
@@ -54,7 +54,7 @@ EXEC sp_execute @P1, N'tempdb', N'ONLINE';
 EXEC sp_unprepare @P1;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、単純なステートメントを準備し、実行し、準備を解除します。  
   
 ```SQL  

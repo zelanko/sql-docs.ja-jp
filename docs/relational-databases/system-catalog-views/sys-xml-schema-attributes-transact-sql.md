@@ -20,10 +20,10 @@ ms.assetid: dd0c98aa-5e72-4df6-96d9-482786c8dbb1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1d9c4ebe7b997ae9ba72249bd431b37ff0fee2f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68037412"
 ---
 # <a name="sysxml_schema_attributes-transact-sql"></a>sys.xml_schema_attributes (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68037412"
 
   属性である XML スキーマコンポーネントごとに 1**行のを返します。の** **symbol_space**です。  
 
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**\<継承された列>**|--|[Xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md)から継承します。|  
 |**is_default_fixed**|**bit**|1 = 既定値は固定値です。 この値を XML インスタンスでオーバーライドすることはできません。<br /><br /> 0 = デフォルト値は属性の固定値ではありません  (既定値)。|  
@@ -39,7 +39,7 @@ ms.locfileid: "68037412"
 |**default_value**|**nvarchar**<br /><br /> **(4000)**|属性の既定値。 既定値が指定されていない場合は NULL になります。|  
   
 ## <a name="permissions"></a>アクセス許可  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [Xml スキーマ &#40;XML 型システム&#41; カタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)   

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c82970caa25089320a1dc5daf68076f27478081f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032843"
 ---
 # <a name="sp_special_columns-transact-sql"></a>sp_special_columns (Transact-sql)
@@ -70,28 +70,28 @@ sp_special_columns [ @table_name = ] 'table_name'
  使用する ODBC のバージョンを指定します。 *Odbcver*は**int (** 4 **)**,、既定値は2です。 既定値は ODBC Version 2.0 を示します。 Odbc バージョン2.0 と ODBC バージョン3.0 の相違点の詳細については、odbc version 3.0 の ODBC Sqlsee Columns の仕様を参照してください。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- なし  
+ None  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |SCOPE|**smallint**|行 ID の実際のスコープ。 0、1、または2を指定できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]常に0を返します。 このフィールドは常に値を返します。<br /><br /> 0 = SQL_SCOPE_CURROW。 行 ID は、その行に位置している場合にのみ有効であることが保証されます。 その行が別のトランザクションによって更新または削除された場合は、後でその行 ID を使って再度選択しても行は返されません。<br /><br /> 1 = SQL_SCOPE_TRANSACTION。 行 ID は、現在のトランザクションの間有効であることが保証されます。<br /><br /> 2 = SQL_SCOPE_SESSION。 行 ID は、セッションの間 (トランザクションの境界を越えて) 有効であることが保証されます。|  
 |COLUMN_NAME|**sysname**|返された*テーブル*の各列の列名。 このフィールドは常に値を返します。|  
 |DATA_TYPE|**smallint**|ODBC SQL データ型。|  
 |TYPE_NAME|**sysname**|データソースに依存するデータ型の名前。たとえば、 **char**、 **varchar**、 **money**、 **text**などです。|  
-|PRECISION|**通り**|データソースの列の有効桁数。 このフィールドは常に値を返します。|  
-|LENGTH|**通り**|データソース内のバイナリ形式のデータ型に必要な長さ (バイト単位)。たとえば、 **char (** 10 **)** の場合は10、**整数**の場合は4、 **smallint**の場合は2になります。|  
+|PRECISION|**Int**|データソースの列の有効桁数。 このフィールドは常に値を返します。|  
+|LENGTH|**Int**|データソース内のバイナリ形式のデータ型に必要な長さ (バイト単位)。たとえば、 **char (** 10 **)** の場合は10、**整数**の場合は4、 **smallint**の場合は2になります。|  
 |SCALE|**smallint**|データソース上の列の小数点以下桁数。 小数点以下桁数が適用されないデータ型に対しては NULL が返されます。|  
 |PSEUDO_COLUMN|**smallint**|その列が疑似列であるかどうかを示します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]常に1を返します。<br /><br /> 0 = SQL_PC_UNKNOWN<br /><br /> 1 = SQL_PC_NOT_PSEUDO<br /><br /> 2 = SQL_PC_PSEUDO|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  sp_special_columns は ODBC の SQLSpecialColumns に相当します。 返される結果は、スコープによって並べ替えられます。  
   
 ## <a name="permissions"></a>アクセス許可  
  スキーマに対する SELECT 権限が必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、 `HumanResources.Department`テーブル内の行を一意に識別する列に関する情報を返します。  
   
 ```sql  
@@ -103,6 +103,6 @@ EXEC sp_special_columns @table_name = 'Department'
   
 ## <a name="see-also"></a>参照  
  [Transact-sql&#41;&#40;のカタログストアドプロシージャ](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

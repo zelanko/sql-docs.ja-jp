@@ -14,10 +14,10 @@ ms.assetid: 17a77e24-d8b8-4f8a-8a7c-05d6c5d32d96
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 732f1f84d7bc336969d2484f18eb2dae8ebfab76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68018039"
 ---
 # <a name="always-on-availability-groups-dynamic-management-views---functions"></a>Always On 可用性グループの動的管理ビュー-関数
@@ -40,6 +40,6 @@ ms.locfileid: "68018039"
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループ &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性グループカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
- [Transact-sql&#41;&#40;可用性グループの監視](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
+ [可用性グループの監視 &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
   
   

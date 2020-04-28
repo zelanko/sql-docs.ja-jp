@@ -19,10 +19,10 @@ ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0a351eaa746654d26d7f51536a41fc2677a2f67e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68010551"
 ---
 # <a name="sp_syscollector_update_collection_set-transact-sql"></a>sp_syscollector_update_collection_set (Transact-sql)
@@ -112,7 +112,7 @@ sp_syscollector_update_collection_set
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  sp_syscollector_update_collection_set は、msdb システム データベースのコンテキストで実行する必要があります。  
   
  *Collection_set_id*または*名前*には値を指定する必要があります。どちらも NULL にすることはできません。 これらの値を取得するには、syscollector_collection_sets システム ビューにクエリを実行します。  

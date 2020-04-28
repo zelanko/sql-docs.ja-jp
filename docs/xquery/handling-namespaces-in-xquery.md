@@ -17,10 +17,10 @@ ms.assetid: 542b63da-4d3d-4ad5-acea-f577730688f1
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 07158d4131c60cf46f49a860721333c78213c982
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004534"
 ---
 # <a name="handling-namespaces-in-xquery"></a>XQuery での名前空間の処理

@@ -20,10 +20,10 @@ ms.assetid: 5c48eb09-9e9b-45dd-b151-ca39b026ece5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: bda45d55505356594f23a8bb1ece2e95153206a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022656"
 ---
 # <a name="systrace_columns-transact-sql"></a>sys.trace_columns (Transact-SQL)
@@ -36,18 +36,18 @@ ms.locfileid: "68022656"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに拡張イベントカタログビューを使用します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**trace_column_id**|**smallint**|この列の一意の ID。|  
-|**name**|**nvarchar(128**|この列の一意な名前。 このパラメーターはローカライズされていません。|  
-|**type_name**|**nvarchar(128**|この列のデータ型名です。|  
+|**name**|**nvarchar(128)**|この列の一意な名前。 このパラメーターはローカライズされていません。|  
+|**type_name**|**nvarchar(128)**|この列のデータ型名です。|  
 |**max_size**|**int**|この列の最大データサイズ (バイト単位)。|  
 |**is_filterable**|**bit**|フィルターの指定に列を使用できるかどうか。<br /><br /> 0 = false<br /><br /> 1 = true|  
 |**is_repeatable**|**bit**|"繰り返し列" のデータで列を参照できるかどうか。<br /><br /> 0 = false<br /><br /> 1 = true|  
 |**is_repeated_base**|**bit**|繰り返しデータを参照する一意のキーとして、この列を使用できるかどうか。<br /><br /> 0 = false<br /><br /> 1 = true|  
   
 ## <a name="permissions"></a>アクセス許可  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   

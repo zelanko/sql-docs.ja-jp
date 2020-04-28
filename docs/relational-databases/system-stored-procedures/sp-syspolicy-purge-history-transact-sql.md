@@ -18,10 +18,10 @@ ms.assetid: 6db414e7-4946-4bd2-8264-6b490810b306
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 946ffe13439bcaf86ade71e0333d59249b1101b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67997325"
 ---
 # <a name="sp_syspolicy_purge_history-transact-sql"></a>sp_syspolicy_purge_history (Transact-sql)
@@ -44,7 +44,7 @@ sp_syspolicy_purge_history
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  msdb システム データベースのコンテキストで sp_syspolicy_purge_history を実行する必要があります。  
   
  履歴の保有間隔を表示するには、次のクエリを使用できます。  
@@ -65,7 +65,7 @@ GO
 > [!IMPORTANT]  
 >  資格情報が昇格される可能性について: PolicyAdministratorRole ロールに割り当てられているユーザーは、サーバー トリガーを作成して、[!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスの動作に影響する可能性があるポリシーの実行をスケジュールできます。 たとえば、PolicyAdministratorRole ロールに割り当てられているユーザーは、ほとんどのオブジェクトが[!INCLUDE[ssDE](../../includes/ssde-md.md)]で作成されないようにすることができるポリシーを作成できます。 このような資格情報が昇格される可能性があるため、Policy管理者ロールロールは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の構成の制御によって信頼されているユーザーのみに付与する必要があります。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、ポリシー評価履歴を削除します。  
   
 ```  

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 73a2bf2973d8c4f8f9bf9ac886728fb45250343f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038137"
 ---
 # <a name="mdx-data-definition---update-member"></a>MDX データ操作 - UPDATE MEMBER
@@ -46,7 +46,7 @@ UPDATE MEMBER Cube_Name.Member_Name
  *Property_Value*  
  計算されるメンバーのプロパティ値を指定する有効なスカラー式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  UPDATE MEMBER ステートメントは、他の計算に対して、このメンバーの相対的な優先順位を維持したまま、既存の計算されるメンバーを更新します。 したがって、SOLVEORDER を変更するために UPDATE MEMBER ステートメントを使用することはできません。  
   
  キューブの MDX スクリプトでは、UPDATE MEMBER ステートメントを指定できません。  
@@ -58,10 +58,10 @@ UPDATE MEMBER Cube_Name.Member_Name
 ## <a name="standard-properties"></a>標準のプロパティ  
  各メンバーには、一連の既定のプロパティがあります。 これらの既定のプロパティを次の表に示します。  
   
-|プロパティの識別子|意味|  
+|プロパティの識別子|説明|  
 |-------------------------|-------------|  
 |FORMAT_STRING|クライアントアプリケーションがセル値を表示するために使用できる Office スタイルの書式指定文字列。|  
-|さ|計算されるメンバーがスキーマ行セットに表示されるかどうかを示す値です。 表示される計算されるメンバーは、 [Add演算メンバー](../mdx/addcalculatedmembers-mdx.md)関数を使用してセットに追加できます。 0以外の値は、計算されるメンバーが表示されることを示します。 このプロパティの既定値が*表示*されます。<br /><br /> 一般に、表示されない計算されるメンバーは、より複雑な計算されるメンバーの中間手順として使用されます。 これらの計算されるメンバーは、メジャーなど、他の種類のメンバーによって参照することもできます。|  
+|表示|計算されるメンバーがスキーマ行セットに表示されるかどうかを示す値です。 表示される計算されるメンバーは、 [Add演算メンバー](../mdx/addcalculatedmembers-mdx.md)関数を使用してセットに追加できます。 0以外の値は、計算されるメンバーが表示されることを示します。 このプロパティの既定値が*表示*されます。<br /><br /> 一般に、表示されない計算されるメンバーは、より複雑な計算されるメンバーの中間手順として使用されます。 これらの計算されるメンバーは、メジャーなど、他の種類のメンバーによって参照することもできます。|  
 |NON_EMPTY_BEHAVIOR|空のセルを解決する場合の計算されるメンバーの動作を決定するために MDX が使用するメジャーまたはセットです。|  
 |キャプション|メンバーを表示するためにクライアントアプリケーションが使用するキャプションを指定する文字列値。|  
 |DISPLAY_FOLDER|クライアントアプリケーションによってメンバーが表示される、表示フォルダーのパスを指定する文字列値。 フォルダー レベルの区切り記号は、クライアント アプリケーションによって定義されます。 によって[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]提供されるツールとクライアントの場合\\、レベル区切り記号として円記号 () を使用します。 定義されたメンバーで複数の表示フォルダーを指定するには、セミコロン (;) を使用してフォルダーを区切ります。|  

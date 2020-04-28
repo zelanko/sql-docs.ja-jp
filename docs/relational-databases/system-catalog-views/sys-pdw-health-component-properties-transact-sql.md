@@ -11,10 +11,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: c2bca7f0deef9a5cb137525e165670404cad65ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68016553"
 ---
 # <a name="syspdw_health_component_properties-transact-sql"></a>pdw_health_component_properties (Transact-sql)
@@ -22,15 +22,15 @@ ms.locfileid: "68016553"
 
   デバイスを記述するプロパティを格納します。 一部のプロパティにはデバイスの状態が表示され、一部のプロパティはデバイス自体について説明します。  
   
-|列名|データ型|[説明]|Range|  
+|列名|データ型|説明|範囲|  
 |-----------------|---------------|-----------------|-----------|  
 |property_id|**int**|コンポーネントのプロパティを表す一意の識別子。<br /><br /> このビューのキーは property_id と component_id によって形成されます。|NOT NULL|  
 |component_id|**int**|コンポーネントの ID。 「 [Sys. pdw_health_components &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md)」を参照してください。<br /><br /> このビューのキーは property_id と component_id によって形成されます。|NOT NULL|  
 |property_name|**nvarchar(255)**|プロパティの名前。|NOT NULL|  
-|physical_name|**nvarchar (32)**|製造元によって定義されたプロパティ名。|NOT NULL|  
+|physical_name|**nvarchar(32)**|製造元によって定義されたプロパティ名。|NOT NULL|  
 |is_key|**bit**|デバイスインスタンスが一意であるかどうかを判断します。|NOT NULL<br /><br /> 0-デバイスインスタンスは一意です。<br /><br /> 1-デバイスインスタンスが一意ではありません。|  
   
 ## <a name="see-also"></a>参照  
- [SQL Data Warehouse および並列データウェアハウスのカタログビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [SQL Data Warehouse and Parallel Data Warehouse Catalog Views (SQL Data Warehouse および Parallel Data Warehouse のカタログ ビュー)](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

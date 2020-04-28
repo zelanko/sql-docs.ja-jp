@@ -16,10 +16,10 @@ ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7c50409ea35809c52de718a8281bf76f75a5a0e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004585"
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>QNames に関係する関数 - expanded-QName
@@ -40,7 +40,7 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
  *$paramLocal*  
  QName のローカル名部分です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  次の例は、**拡張 QName ()** 関数に適用されます。  
   
 -   指定された *$paramLocal*値が Xs: NCName 型の正しい構文形式でない場合、空のシーケンスが返され、動的なエラーを表します。  
@@ -49,7 +49,7 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
   
 -   既存の QName 型の値を変更または比較することができます。 たとえば、は`/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")` 、要素の値 <`e`> を、展開された**qname ()** 関数によって返された qname と比較します。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  このトピックでは、 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
 ### <a name="a-replacing-a-qname-type-node-value"></a>A. QName 型ノードの値を置換する  
@@ -132,7 +132,7 @@ go
 ```  
   
 ### <a name="b-dealing-with-the-limitations-when-using-the-expanded-qname-function"></a>B. 拡張 QName () 関数を使用する場合の制限事項に対処する  
- **拡張 QName**関数は、XML の構築では使用できません。 これを次の例に示します。 この制限を回避するために、この例では最初にノードを挿入してから、そのノードを変更しています。  
+ **拡張 QName**関数は、XML の構築では使用できません。 次の例を使って説明します。 この制限を回避するために、この例では最初にノードを挿入してから、そのノードを変更しています。  
   
 ```  
 -- if exists drop the table T  

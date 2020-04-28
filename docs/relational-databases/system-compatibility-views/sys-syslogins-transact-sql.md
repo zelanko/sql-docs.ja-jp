@@ -21,10 +21,10 @@ ms.assetid: 4cb34f17-a4bb-469f-a218-71f074e6308f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 5745d3f98741d4a414c7bb69d8f9865258d47e34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68020007"
 ---
 # <a name="syssyslogins-transact-sql"></a>sys. syslogins (Transact-sql)
@@ -37,21 +37,21 @@ ms.locfileid: "68020007"
   
 **に適用さ**れます: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658))。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**sid**|**varbinary (85)**|セキュリティ識別子。|  
-|**オンライン**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**createdate**|**DATETIME**|ログインが追加された日付です。|  
-|**updatedate**|**DATETIME**|ログインが更新された日付です。|  
-|**更新日**|**DATETIME**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**すべての cpu**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**status**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**createdate**|**datetime**|ログインが追加された日付です。|  
+|**updatedate**|**datetime**|ログインが更新された日付です。|  
+|**accdate**|**datetime**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**totcpu**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**totio**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**スペースの制限**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**spacelimit**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**timelimit**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**resultlimit**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**name**|**sysname**|ユーザーのログイン名。|  
 |**dbname**|**sysname**|接続が確立されたときのユーザーの既定のデータベース名。|  
-|**入力**|**nvarchar(128**|NULL を返します。|  
+|**password**|**nvarchar(128)**|NULL を返します。|  
 |**言語**|**sysname**|ユーザーの既定の言語です。|  
 |**denylogin**|**int**|1 = ログインは [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ユーザーまたはグループであり、アクセスは拒否されました。|  
 |**hasaccess**|**int**|1 = ログインには、サーバーへのアクセスが許可されています。|  
@@ -66,10 +66,10 @@ ms.locfileid: "68020007"
 |**diskadmin**|**int**|1 = ログインは、 **diskadmin**固定サーバーロールのメンバーです。|  
 |**dbcreator**|**int**|1 = ログインは**dbcreator**固定サーバーロールのメンバーです。|  
 |**bulkadmin**|**int**|1 = ログインは、 **bulkadmin**固定サーバーロールのメンバーです。|  
-|**ログイン**|**nvarchar(128**|ユーザーのログイン名。 これは旧バージョンとの互換性のために用意されています。|  
+|**ログイン**|**nvarchar(128)**|ユーザーのログイン名。 これは旧バージョンとの互換性のために用意されています。|  
   
 ## <a name="see-also"></a>参照  
  [システムビューへのシステムテーブルのマッピング &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [互換性ビュー &#40;Transact-sql&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [互換性ビュー &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

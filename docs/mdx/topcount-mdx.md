@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e0f607f3111c150bff3d5dc562c77901a381bedc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68036604"
 ---
 # <a name="topcount-mdx"></a>TopCount (MDX)
@@ -31,13 +31,13 @@ TopCount(Set_Expression,Count [ ,Numeric_Expression ] )
  *Set_Expression*  
  セットを返す有効な多次元式 (MDX) 式です。  
   
- *数*  
+ *Count*  
  返す組の数を指定する有効な数値式です。  
   
  *Numeric_Expression*  
  有効な数値式です。通常は、数値を返すセル座標の多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  数値式を指定した場合、 **TopCount**関数は、指定されたセットに対して評価されるように、数値式で指定された値に基づいて、指定されたセットの組を降順で並べ替えます。 セットを並べ替えた後、 **TopCount**関数は、最大値を持つ指定された数の組を返します。  
   
 > [!IMPORTANT]  
@@ -45,7 +45,7 @@ TopCount(Set_Expression,Count [ ,Numeric_Expression ] )
   
  数値式が指定されていない場合、関数は、並べ替えを行わずに、 [Head (MDX)](../mdx/head-mdx.md)関数のような自然な順序でメンバーのセットを返します。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、Internet Sales Amount によって上位10件の日付が返されます。  
   
  `SELECT [Measures].[Internet Sales Amount] ON 0,`  
@@ -71,6 +71,6 @@ WHERE([Product].[Product Categories].Bikes)
 ```  
   
 ## <a name="see-also"></a>参照  
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

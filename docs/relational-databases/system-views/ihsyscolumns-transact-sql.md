@@ -18,10 +18,10 @@ ms.assetid: 263452f1-9708-48f0-9536-402a89e7f5bf
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a432685809676f997049940ea5aa1ce43dc38a60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029629"
 ---
 # <a name="ihsyscolumns-transact-sql"></a>IHsyscolumns (Transact-SQL)
@@ -29,14 +29,14 @@ ms.locfileid: "68029629"
 
   **IHsyscolumns**ビューは、SQL Server 以外のパブリッシャーからパブリッシュされたアーティクルの列情報を公開します。 このビューは、このデータベースに格納されています。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|列またはプロシージャ パラメーターの名前です。|  
-|**番号**|**int**|この列が所属するテーブルのオブジェクト ID、またはこのパラメーターが使用されているストアド プロシージャの ID です。|  
+|**id**|**int**|この列が所属するテーブルのオブジェクト ID、またはこのパラメーターが使用されているストアド プロシージャの ID です。|  
 |**xtype**|**tinyint**|Systypes の物理ストレージの種類は、 [transact-sql&#41;&#40;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md)ます。|  
 |**typestat**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xusertype**|**tinyint**|拡張ユーザー定義データ型の ID です。|  
-|**数**|**bigint**|Systypes からの最大物理ストレージ長は、 [transact-sql&#41;&#40;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md)です。|  
+|**length**|**bigint**|Systypes からの最大物理ストレージ長は、 [transact-sql&#41;&#40;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md)です。|  
 |**xprec**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xscale**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**colid**|**int**|列またはパラメーター ID。|  
@@ -49,10 +49,10 @@ ms.locfileid: "68029629"
 |**number**|**int**|プロシージャがグループ化されたときのサブプロシージャ番号 (プロシージャ以外のエントリの場合は**0** )。|  
 |**colorder**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**autoval**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**影**|**int**|この列が表示される行のオフセット。|  
+|**offset**|**int**|この列が表示される行のオフセット。|  
 |**collationid**|**int**|列の照合順序の ID。 文字ベース以外の列の場合は NULL です。|  
 |**言語**|**int**|列の言語識別子。|  
-|**オンライン**|**int**|列またはパラメーターのプロパティを記述するために使用されるビットマップ。<br /><br /> **0x08** = 列は null 値を許容します。<br /><br /> **0x10** = **varchar**または**varbinary**列が追加されたときに、ANSI padding が有効になりました。 **Varchar**の後続の空白は保持され、 **varbinary**列の後続のゼロは保持されます。<br /><br /> **0x40** = パラメーターは出力パラメーターです。<br /><br /> **0x80** = 列は id 列です。|  
+|**status**|**int**|列またはパラメーターのプロパティを記述するために使用されるビットマップ。<br /><br /> **0x08** = 列は null 値を許容します。<br /><br /> **0x10** = **varchar**または**varbinary**列が追加されたときに、ANSI padding が有効になりました。 **Varchar**の後続の空白は保持され、 **varbinary**列の後続のゼロは保持されます。<br /><br /> **0x40** = パラメーターは出力パラメーターです。<br /><br /> **0x80** = 列は id 列です。|  
 |**type**|**int**|Systypes の物理ストレージの種類は、 [transact-sql&#41;&#40;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md)ます。|  
 |**usertype**|**tinyint**|Systypes からのユーザー定義データ型の ID [&#40;transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md)。|  
 |**printfmt**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

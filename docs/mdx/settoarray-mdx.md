@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c52c2641d21c20c91ec7548cafc969e506801b08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68036993"
 ---
 # <a name="settoarray-mdx"></a>SetToArray (MDX)
@@ -37,7 +37,7 @@ SetToArray(Set_Expression1 [ ,Set_Expression2,...n ][ ,Numeric_Expression ] )
  *Numeric_Expression*  
  有効な数値式です。通常は、数値を返すセル座標の多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Settoarray**関数は、ユーザー定義関数で使用する1つ以上のセットを配列に変換します。 結果の配列内のディメンションの数は、指定されたセットの数と同一になります。  
   
  省略可能な数値式では、配列セルの値を指定できます。 数値式が指定されていない場合は、セットのクロス結合が現在のコンテキストで評価されます。  
@@ -60,6 +60,6 @@ SetToArray([Geography].[Geography].Members, [Measures].[Internet Sales Amount])
 ```  
   
 ## <a name="see-also"></a>参照  
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
