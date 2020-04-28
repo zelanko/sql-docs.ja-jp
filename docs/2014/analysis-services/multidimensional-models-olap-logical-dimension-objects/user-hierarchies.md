@@ -26,28 +26,28 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e65da7af45aa2c5dbb18a560b05a5d943a9e64c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72811602"
 ---
 # <a name="user-hierarchies"></a>ユーザー階層
   ユーザー定義階層は、ディメンションのメンバーを階層構造に整理し、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]キューブ内にナビゲーションパスを提供するためにで使用される属性のユーザー定義階層です。 たとえば、次のテーブルでは、時間ディメンションにディメンション テーブルを定義します。 ディメンション テーブルは、年、四半期、月という 3 つの属性をサポートしています。  
   
-|年|Quarter|月|  
+|Year|Quarter|月|  
 |----------|-------------|-----------|  
-|1999|第1四半期|Jan|  
-|1999|第1四半期|Feb|  
-|1999|第1四半期|Mar|  
-|1999|第2四半期|Apr|  
-|1999|第2四半期|May|  
-|1999|第2四半期|Jun|  
-|1999|第3四半期|Jul|  
-|1999|第3四半期|Aug|  
+|1999|第1四半期|1 月|  
+|1999|第1四半期|2 月|  
+|1999|第1四半期|3 月|  
+|1999|第2四半期|4 月|  
+|1999|第2四半期|5 月|  
+|1999|第2四半期|6 月|  
+|1999|第3四半期|7 月|  
+|1999|第3四半期|8 月|  
 |1999|第3四半期|9 月|  
 |1999|第 4 四半期|Oct|  
-|1999|第 4 四半期|Nov|  
+|1999|第 4 四半期|11 月|  
 |1999|第 4 四半期|Dec|  
   
  年、四半期、月の各属性は、時間ディメンションに Calendar というユーザー定義階層を作成するために使用されます。 次の図は、Calendar ディメンション (標準のディメンション) のレベルとメンバーの関係を示しています。  
@@ -61,8 +61,7 @@ ms.locfileid: "72811602"
  親子階層の例外を除いて、階層内のメンバーの位置は、階層定義の属性の順序に制御されます。 階層定義内の各属性によって階層のレベルが作成されます。 レベル内のメンバーの位置は、レベルの作成に使用された属性の順序によって決まります。 ユーザー定義階層のメンバー構造は、メンバー間の関係によって、4 つの基本形式のいずれかになります。  
   
 ### <a name="balanced-hierarchies"></a>均衡階層  
- 均衡階層では、階層のすべての分岐は同じレベルに至り、各メンバーの論理上の親はそのメンバーのすぐ上のレベルです。 
-  [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] サンプルの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースが示す Product ディメンションの Product Categories 階層は、均衡階層の好例です。 Product Name レベルの各メンバーは Subcategory レベルに親メンバーがあり、Subcategory レベルは Category レベルに親メンバーがあります。 また、階層内の各分岐には Product Name レベルのリーフ メンバーがあります。  
+ 均衡階層では、階層のすべての分岐は同じレベルに至り、各メンバーの論理上の親はそのメンバーのすぐ上のレベルです。 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] サンプルの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースが示す Product ディメンションの Product Categories 階層は、均衡階層の好例です。 Product Name レベルの各メンバーは Subcategory レベルに親メンバーがあり、Subcategory レベルは Category レベルに親メンバーがあります。 また、階層内の各分岐には Product Name レベルのリーフ メンバーがあります。  
   
 ### <a name="unbalanced-hierarchies"></a>不均衡階層  
  不均衡階層では、階層の分岐はさまざまなレベルに至ります。 親子階層は不均衡階層です。 たとえば、[!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] サンプルの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースの Organization ディメンションには、各従業員のメンバーが含まれています。 CEO は階層の最上位メンバーで、部長と役員秘書は CEO の直下にあります。 部長は従属メンバーですが、役員秘書は直属です。  

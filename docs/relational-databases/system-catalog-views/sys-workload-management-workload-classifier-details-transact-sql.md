@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
 ms.openlocfilehash: 58b3f3315309a734a22e2732af5207b64e2f0a9d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73632927"
 ---
 # <a name="sysworkload_management_workload_classifier_details-transact-sql"></a>workload_management_workload_classifier_details (Transact-sql)
@@ -25,7 +25,7 @@ ms.locfileid: "73632927"
 
   各分類子の詳細を返します。  
   
-|列名|データ型|[説明]|Range|  
+|列名|データ型|説明|範囲|  
 |-----------------|---------------|-----------------|-----------|
 |classifier_id|**int**|分類子の ID。  NULL 値は許可されません。|
 |classifier_type|**sysname**|[Workload_management_workload_classifiers](sys-workload-management-workload-classifiers-transact-sql.md)に参加しています。|`membername`</br>`wlm_label`</br>`wlm_context`</br>`start_time`</br>`end_time`|

@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: 64c8416a15afd685559fe2d05c436c2e5fc1382d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73632854"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Data Migration Assistant の概要
@@ -49,14 +49,14 @@ DMA をインストールするには、 [Microsoft ダウンロードセンタ�
 - アップグレード後にデータベースが恩恵を受けることのできるターゲット SQL Server プラットフォームの新機能について説明します。 これらは、機能に関する推奨事項として説明されており、次のカテゴリに分類されています。
 
   - パフォーマンス
-  - Security
+  - セキュリティ
   - ストレージ
 
 - オンプレミスの SQL Server インスタンスを、オンプレミスでホストされている最新の SQL Server インスタンスに、またはオンプレミスネットワークからアクセス可能な Azure 仮想マシン (VM) に移行します。 Azure VM には、VPN またはその他のテクノロジを使用してアクセスできます。 移行ワークフローは、次のコンポーネントを移行するのに役立ちます。
 
   - データベースのスキーマ
   - データとユーザー
-  - サーバー ロール
+  - サーバーの役割
   - SQL Server と Windows ログイン
 
 - 移行が成功すると、アプリケーションはターゲット SQL Server データベースにシームレスに接続できるようになります。
@@ -71,11 +71,11 @@ DMA をインストールするには、 [Microsoft ダウンロードセンタ�
 
 評価を実行するには、SQL Server **sysadmin**ロールのメンバーである必要があります。
 
-## <a name="supported-source-and-target-versions"></a>サポートされているソースとターゲットのバージョン
+## <a name="supported-source-and-target-versions"></a>サポートされているソース バージョンとターゲット バージョン
 
 DMA を使用すると、以前のバージョンの SQL Server アップグレードアドバイザーがすべて置き換えられます。ほとんどの SQL Server バージョンでは、アップグレードに使用する必要があります。 サポートされているソースとターゲットのバージョンは次のとおりです。
 
-**文書**
+**Sources**
 
 - SQL Server 2005
 - SQL Server 2008
@@ -85,7 +85,7 @@ DMA を使用すると、以前のバージョンの SQL Server アップグレ�
 - SQL Server 2016
 -  Windows 上の SQL Server 2017
 
-**対象サーバー**
+**ターゲット**
 
 - SQL Server 2012
 - SQL Server 2014
@@ -96,7 +96,7 @@ DMA を使用すると、以前のバージョンの SQL Server アップグレ�
 - Azure SQL Database マネージド インスタンス
 - Azure 仮想マシンで実行されている SQL server
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [SQL Server の移行を評価する](../dma/dma-assesssqlonprem.md)
 

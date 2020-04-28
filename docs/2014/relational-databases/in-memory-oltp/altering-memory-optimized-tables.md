@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4d1ae35d9dae03292edf31cd2b06acf97dc0db0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783241"
 ---
 # <a name="altering-memory-optimized-tables"></a>メモリ最適化テーブルの変更
@@ -77,21 +77,15 @@ ms.locfileid: "72783241"
   
 7.  新しいインデックスを含むスクリプトで、新しいテーブル (`T`) を作成します。  
   
-8.  
-  `T_copy` から `T` にデータをコピーします。  
+8.  `T_copy` から `T` にデータをコピーします。  
   
 9. 参照しているスキーマ バインド オブジェクトを再作成し、権限を適用します。  
   
-10. 
-  `T` のワークロードを起動します。  
+10. `T` のワークロードを起動します。  
   
- <sup>1</sup>この例`T_copy`では、がディスクに保存されていることに注意してください。 
-  `T` のバックアップが使用可能であれば、`T_copy` に一時的または持続性のないテーブルを指定することもできます。  
+ <sup>1</sup>この例`T_copy`では、がディスクに保存されていることに注意してください。 `T` のバックアップが使用可能であれば、`T_copy` に一時的または持続性のないテーブルを指定することもできます。  
   
- <sup>2</sup>に`T_copy`十分なメモリが必要です。 
-  `DROP TABLE` ではメモリがすぐには解放されません。 
-  `T_copy` がメモリ最適化されている場合は、`T` のコピーを 2 つ作成するための十分なメモリが必要です。 
-  `T_copy` がディスク ベース テーブルの場合は、`T` の古いバージョンを削除した後にガベージ コレクターによって補完されるため、`T` の付加的なコピーを 1 つ作成するためのメモリがあれば問題ありません。  
+ <sup>2</sup>に`T_copy`十分なメモリが必要です。 `DROP TABLE` ではメモリがすぐには解放されません。 `T_copy` がメモリ最適化されている場合は、`T` のコピーを 2 つ作成するための十分なメモリが必要です。 `T_copy` がディスク ベース テーブルの場合は、`T` の古いバージョンを削除した後にガベージ コレクターによって補完されるため、`T` の付加的なコピーを 1 つ作成するためのメモリがあれば問題ありません。  
   
 ## <a name="changing-schema-powershell"></a>スキーマの変更 (PowerShell)  
  次の PowerShell スクリプトは、テーブルや関連する権限のスクリプトを作成することで、スキーマの変更に備えます。  

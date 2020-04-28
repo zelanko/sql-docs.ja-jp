@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 8959b1ca4ea719ce571cb8609b817bba965185bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798331"
 ---
 # <a name="install-powerpivot-from-the-command-prompt"></a>コマンド プロンプトからの PowerPivot のインストール
@@ -27,7 +27,7 @@ ms.locfileid: "72798331"
   
  コンピューターが SharePoint ファームと同じドメインに参加する必要があります。  
   
-##  <a name="Commands"></a>/ROLE ベースのインストールオプション  
+##  <a name="role-based-installation-options"></a><a name="Commands"></a>/ROLE ベースのインストールオプション  
  PowerPivot for SharePoint の配置では `/ROLE` パラメーターの代わりに `/FEATURES` パラメーターが使用されます。 有効な値は、次のとおりです。  
   
 -   `SPI_AS_ExistingFarm`  
@@ -53,7 +53,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_Existing
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/SQLSVCACCOUNT=<DomainName\UserName> /SQLSVCPASSWORD=<StrongPassword> /SQLSYSADMINACCOUNTS=<DomainName\UserName> /AGTSVCACCOUNT=<DomainName\UserName> /AGTSVCPASSWORD=<StrongPassword> /ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
 ```  
   
-##  <a name="Join"></a>コマンドの構文の変更  
+##  <a name="modifying-the-command-syntax"></a><a name="Join"></a>コマンドの構文の変更  
  次の手順に従って、コマンド構文の例を変更します。  
   
 1.  次のコマンドをコピーして、メモ帳に貼り付けます。  
@@ -62,24 +62,17 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
     Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_ExistingFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
     ```  
   
-     
-  `/q` パラメーターは、セットアップを非表示モードで実行します。この場合、ユーザー インターフェイスは表示されません。  
+     `/q` パラメーターは、セットアップを非表示モードで実行します。この場合、ユーザー インターフェイスは表示されません。  
   
-     
-  `/IAcceptSQLServerLicenseTerms` は、自動インストールのために `/q` パラメーターまたは `/qs` パラメーターを指定する場合に必要です。  
+     `/IAcceptSQLServerLicenseTerms` は、自動インストールのために `/q` パラメーターまたは `/qs` パラメーターを指定する場合に必要です。  
   
-     
-  `/action` パラメーターは、インストールを実行するようにセットアップに命令します。  
+     `/action` パラメーターは、インストールを実行するようにセットアップに命令します。  
   
-     
-  `/role` パラメーターは、PowerPivot for SharePoint に必要な Analysis Services のプログラム ファイルと構成ファイルをインストールするようにセットアップに命令します。 また、既存のファーム接続情報を検出し、それを使用して SharePoint 構成データベースにアクセスします。 このパラメーターは必須です。 
-  `/features` パラメーターの代わりにこのパラメーターを使用して、インストールするコンポーネントを指定します。  
+     `/role` パラメーターは、PowerPivot for SharePoint に必要な Analysis Services のプログラム ファイルと構成ファイルをインストールするようにセットアップに命令します。 また、既存のファーム接続情報を検出し、それを使用して SharePoint 構成データベースにアクセスします。 このパラメーターは必須です。 `/features` パラメーターの代わりにこのパラメーターを使用して、インストールするコンポーネントを指定します。  
   
-     
-  `/instancename` パラメーターは、名前付きインスタンスとして 'PowerPivot' を指定します。 この値はハードコードされていて変更できません。 ここでは、サービスのインストール方法を示すために指定されています。  
+     `/instancename` パラメーターは、名前付きインスタンスとして 'PowerPivot' を指定します。 この値はハードコードされていて変更できません。 ここでは、サービスのインストール方法を示すために指定されています。  
   
-     
-  `/indicateprogress` パラメーターは、コマンド プロンプト ウィンドウで進行状況を監視できるようにします。  
+     `/indicateprogress` パラメーターは、コマンド プロンプト ウィンドウで進行状況を監視できるようにします。  
   
 2.  ここでは、`PID` パラメーターが省略されているため、Evaluation Edition がインストールされます。 Enterprise Edition をインストールする場合は、セットアップ コマンドに PID を追加して、有効なプロダクト キーを指定します。  
   

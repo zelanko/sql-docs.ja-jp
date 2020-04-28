@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 663bab775aff9a04a4a9d93f2bcbd0e193b18f37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783062"
 ---
 # <a name="deleting-backup-blob-files-with-active-leases"></a>アクティブなリースを保持しているバックアップ BLOB ファイルの削除
@@ -29,16 +29,16 @@ ms.locfileid: "72783062"
 ## <a name="managing-orphaned-blobs"></a>孤立した BLOB の管理  
  次の手順では、バックアップ動作または復元動作の失敗後にクリーンアップする方法について説明します。 すべての手順は、PowerShell スクリプトを使用して実行することもできます。 コード例については、次のセクションに示します。  
   
-1.  **リースがある blob の識別:** バックアッププロセスを実行するスクリプトまたはプロセスがある場合は、スクリプトまたはプロセス内のエラーをキャプチャし、それを使用して blob をクリーンアップできる可能性があります。   また、LeaseStats プロパティと LeastState プロパティを使用して、それらのプロパティに対してリースを保持している BLOB を識別することもできます。 BLOB を識別したら、一覧を確認し、BLOB を削除する前にバックアップ ファイルが有効かどうかを確認することをお勧めします。  
+1.  **リースを保持している BLOB の識別:** バックアップ プロセスを実行するスクリプトまたはプロセスがあると、スクリプトまたはプロセス内のエラーをキャプチャし、それを使用して BLOB をクリーンアップできる場合があります。   また、LeaseStats プロパティと LeastState プロパティを使用して、それらのプロパティに対してリースを保持している BLOB を識別することもできます。 BLOB を識別したら、一覧を確認し、BLOB を削除する前にバックアップ ファイルが有効かどうかを確認することをお勧めします。  
   
-2.  **リースを中断します。** 承認された要求では、リース ID を指定せずにリースを解除できます。 詳細について[は、こちら](https://go.microsoft.com/fwlink/?LinkID=275664)を参照してください。  
+2.  **リースの終了:** 承認された要求では、リース ID を指定せずにリースを終了できます。 詳細については、 [こちら](https://go.microsoft.com/fwlink/?LinkID=275664) をご覧ください。  
   
     > [!TIP]  
     >  SQL Server は、復元操作中にリース ID を発行して排他アクセスを確立します。 復元のリース ID は BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2 です。  
   
-3.  **Blob を削除しています:** アクティブなリースを持つ blob を削除するには、最初にリースを解除する必要があります。  
+3.  **BLOB の削除:** アクティブなリースを保持している BLOB を削除するには、最初にリースを終了する必要があります。  
   
-###  <a name="Code_Example"></a>PowerShell スクリプトの例  
+###  <a name="powershell-script-example"></a><a name="Code_Example"></a> PowerShell スクリプトの例  
  ** \*重要\* \* **PowerShell 2.0 を実行している場合は、Microsoft Windowsazure.servicebus アセンブリの読み込みで問題が発生する可能性があります。 この問題を解決するには、PowerShell 3.0 にアップグレードすることをお勧めします。 また、PowerShell 2.0 では次の回避策を使用することもできます。  
   
 -   次のスクリプトを使用して実行時に .NET 2.0 アセンブリと .NET 4.0 アセンブリを読み込むように powershell.exe.config ファイルを作成または変更する:  
@@ -73,11 +73,11 @@ ms.locfileid: "72783062"
   
 2.  リースがロックされている BLOB がない場合は、次のメッセージが表示されます。  
   
-     **ロックされたリースの状態の blob はありません**  
+     **ロックされたリースの状態の BLOB はありません**  
   
      リースがロックされている BLOB がある場合は、次のメッセージが表示されます。  
   
-     **重大なリース**  
+     **リースを終了しています**  
   
      **Blob> の\<リースのリースは復元リースです。このメッセージは、まだアクティブな復元リースを持つ Blob がある場合にのみ表示されます。**  
   

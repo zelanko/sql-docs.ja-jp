@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8303c387ff38ab5448d15e478534df165e05bddf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637656"
 ---
 # <a name="hello-world-ready-sample"></a>Hello World Ready サンプル
@@ -22,27 +22,22 @@ ms.locfileid: "73637656"
   
 1.  XML ファイルの変更 (.`resx` ファイル) を参照してください。  
   
-2.  
-  `resgen` を使用して、カルチャに応じたリソース ファイルをビルドします。  
+2.  `resgen` を使用して、カルチャに応じたリソース ファイルをビルドします。  
   
 3.  そのカルチャに関して更新されたサテライト DLL をビルドします。  
   
 4.  このアセンブリを SQL Server でいったん削除してから、追加します。  
   
- CLR ストアド プロシージャ自体のソース コードおよびアセンブリは変更されません。 リソース アセンブリのコンパイル方法とリンク方法を示す `build.cmd` スクリプトが用意されています。アプリケーションのソース コードによって、現在実行しているアセンブリに基づいたリソース マネージャーが作成されますが、ストアド プロシージャを含む DLL にカルチャ ニュートラル リソースを埋め込む必要はありません。 
-  `System.Resources.NeutralResourcesLanguage attribute` によって、カルチャ ニュートラル リソースがサテライト DLL に存在することが許可されます。 この目的でそれぞれ別の DLL を使用すると、ローカライズ済みテキストの追加や変更が必要な場合でも、CLR ストアド プロシージャを含んでいるプライマリ DLL の変更が必要なくなるため非常に便利です。 これは、型の削除と再追加を困難にするような列やその他の依存関係を含んでいることのある、CLR ユーザー定義型には特に役立ちます。通常、サテライト DLL バージョンはメイン アセンブリ バージョンと同じである必要があります。 ただし、`SatelliteContractVersion` 属性を使用して、サテライト アセンブリを更新せずにメイン アセンブリの更新を許可することもできます。 詳細については、Microsoft .NET のドキュメントで `ResourceManager` クラスを参照してください。  
+ CLR ストアド プロシージャ自体のソース コードおよびアセンブリは変更されません。 リソース アセンブリのコンパイル方法とリンク方法を示す `build.cmd` スクリプトが用意されています。アプリケーションのソース コードによって、現在実行しているアセンブリに基づいたリソース マネージャーが作成されますが、ストアド プロシージャを含む DLL にカルチャ ニュートラル リソースを埋め込む必要はありません。 `System.Resources.NeutralResourcesLanguage attribute` によって、カルチャ ニュートラル リソースがサテライト DLL に存在することが許可されます。 この目的でそれぞれ別の DLL を使用すると、ローカライズ済みテキストの追加や変更が必要な場合でも、CLR ストアド プロシージャを含んでいるプライマリ DLL の変更が必要なくなるため非常に便利です。 これは、型の削除と再追加を困難にするような列やその他の依存関係を含んでいることのある、CLR ユーザー定義型には特に役立ちます。通常、サテライト DLL バージョンはメイン アセンブリ バージョンと同じである必要があります。 ただし、`SatelliteContractVersion` 属性を使用して、サテライト アセンブリを更新せずにメイン アセンブリの更新を許可することもできます。 詳細については、Microsoft .NET のドキュメントで `ResourceManager` クラスを参照してください。  
   
 ## <a name="prerequisites"></a>前提条件  
  このサンプルは、SQL Server 2005 以降のバージョンでのみ動作します。  
   
  このプロジェクトを作成して実行するには、次のソフトウェアがインストールされている必要があります。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express ドキュメントとサンプルの [Web サイト](https://www.microsoft.com/sql-server/sql-server-editions-express)から無償で入手できます。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express ドキュメントとサンプルの [Web サイト](https://www.microsoft.com/sql-server/sql-server-editions-express)から無償で入手できます。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] デベロッパー [Web サイト](https://go.microsoft.com/fwlink/?linkid=62796)から入手できる AdventureWorks データベース。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] デベロッパー [Web サイト](https://go.microsoft.com/fwlink/?linkid=62796)から入手できる AdventureWorks データベース。  
   
 -   .NET Framework SDK 2.0 以降または Microsoft Visual Studio 2005 以降。 .NET Framework SDK は無償で入手できます。  
   
@@ -153,8 +148,7 @@ ms.locfileid: "73637656"
   
     -   `sqlcmd -E -I -i test.sql`  
   
-18. 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] クリーンアップ スクリプトをファイルにコピーし、`cleanup.sql` としてサンプル ディレクトリに保存します。  
+18. [!INCLUDE[tsql](../../includes/tsql-md.md)] クリーンアップ スクリプトをファイルにコピーし、`cleanup.sql` としてサンプル ディレクトリに保存します。  
   
 19. 次のコマンドを使用してこのスクリプトを実行します。  
   
@@ -457,6 +451,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [CLR&#41; 統合 &#40;共通言語ランタイムの使用シナリオと例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+ [CLR &#40;共通言語ランタイム&#41; 統合の使用シナリオと例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

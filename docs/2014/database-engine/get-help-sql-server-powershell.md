@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 705512f54feae3bf60317c18b8c260ef484abebc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797877"
 ---
 # <a name="get-help-sql-server-powershell"></a>Get Help SQL Server PowerShell
@@ -27,34 +27,26 @@ ms.locfileid: "72797877"
 ## <a name="before-you-begin"></a>はじめに  
  Windows PowerShell について学習するには、「 [Windows PowerShell ファースト ステップ ガイド](https://technet.microsoft.com/library/hh857337.aspx)」をご覧ください。  
   
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コマンドレットおよびプロバイダーの概要については、「 [SQL Server PowerShell](../powershell/sql-server-powershell.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コマンドレットおよびプロバイダーの概要については、「 [SQL Server PowerShell](../powershell/sql-server-powershell.md)」を参照してください。  
   
 ### <a name="help-in-the-windows-powershell-environment"></a>Windows PowerShell 環境でのヘルプ  
- Windows PowerShell 環境でヘルプを参照するには、 **Get-Help** コマンドレットを使用します。 **Get-help**は、windows powershell 言語の基本的なヘルプと、windows powershell で使用できるさまざまなコマンドレットとプロバイダーを提供します。  
+ Windows PowerShell 環境でヘルプを参照するには、 **Get-Help** コマンドレットを使用します。 **Get-Help** では、Windows PowerShell 言語および Windows PowerShell で使用できるさまざまなコマンドレットやプロバイダーの基本的なヘルプが提供されます。  
   
- 
-  **Get-Help**の使用方法の詳細については、「 [ヘルプの表示: Get-Help](https://go.microsoft.com/fwlink/?LinkId=102136)」を参照してください。  
+ **Get-Help**の使用方法の詳細については、「 [ヘルプの表示: Get-Help](https://go.microsoft.com/fwlink/?LinkId=102136)」を参照してください。  
   
 ### <a name="sql-server-powershell-provider-help"></a>SQL Server PowerShell プロバイダーのヘルプ  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell プロバイダーは、SQLSERVER:\SQL、SQLSERVER:\DAC フォルダーなど、SQLSERVER 仮想ドライブ上のいくつかのフォルダーを実装します。 各フォルダーは、SQL Server 管理オブジェクト モデルの 1 つに関連付けられています。 SQL Server パスの各ノードに関連付けられているメソッドとプロパティを一覧表示することはできますが、PowerShell 環境でそれらのヘルプを参照することはできません。 フォルダーと、関連するプログラミング リファレンスへのリンクの表については、「 [SQL Server PowerShell Provider](../powershell/sql-server-powershell-provider.md)」をご覧ください。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell プロバイダーは、SQLSERVER:\SQL、SQLSERVER:\DAC フォルダーなど、SQLSERVER 仮想ドライブ上のいくつかのフォルダーを実装します。 各フォルダーは、SQL Server 管理オブジェクト モデルの 1 つに関連付けられています。 SQL Server パスの各ノードに関連付けられているメソッドとプロパティを一覧表示することはできますが、PowerShell 環境でそれらのヘルプを参照することはできません。 フォルダーと、関連するプログラミング リファレンスへのリンクの表については、「 [SQL Server PowerShell Provider](../powershell/sql-server-powershell-provider.md)」をご覧ください。  
   
 ### <a name="invoke-sqlcmd-help"></a>Invoke-Sqlcmd のヘルプ  
- 
-  **Invoke-Sqlcmd** コマンドレットは、 **sqlcmd** ユーティリティで実行できる任意のクエリまたはスクリプト ファイルを入力として受け取ります。 
-  **Get-Help** を使用すると **Invoke-Sqlcmd** とそのパラメーターに関する情報を取得できますが、 **sqlcmd** クエリは **Get-Help** に対応していません。  
+ **Invoke-Sqlcmd** コマンドレットは、 **sqlcmd** ユーティリティで実行できる任意のクエリまたはスクリプト ファイルを入力として受け取ります。 **Get-Help** を使用すると **Invoke-Sqlcmd** とそのパラメーターに関する情報を取得できますが、 **sqlcmd** クエリは **Get-Help** に対応していません。  
   
- 
-  *-Query* または *-QueryFromFile* の入力には以下が含まれます。  
+ *-Query* または *-QueryFromFile* の入力には以下が含まれます。  
   
--   **sqlcmd**の変数とコマンド。 これらの変数とコマンドについては、「 [sqlcmd Utility](../tools/sqlcmd-utility.md)」の「解説」をご覧ください。  
+-   **sqlcmd** の変数とコマンド。 これらの変数とコマンドについては、「 [sqlcmd Utility](../tools/sqlcmd-utility.md)」の「解説」をご覧ください。  
   
--   [!INCLUDE[tsql](../includes/tsql-md.md)]命令. 
-  [!INCLUDE[tsql](../includes/tsql-md.md)] 言語の詳細については、「[TRANSACT-SQL リファレンス &#40;データベース エンジン&#41;](/sql/t-sql/language-reference)」を参照してください。  
+-   [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメント。 [!INCLUDE[tsql](../includes/tsql-md.md)] 言語の詳細については、「[TRANSACT-SQL リファレンス &#40;データベース エンジン&#41;](/sql/t-sql/language-reference)」を参照してください。  
   
--   XQuery ステートメント。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] でサポートされる XQuery 言語の詳細については、「[XQuery 言語リファレンス &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server)」を参照してください。  
+-   XQuery ステートメント。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] でサポートされる XQuery 言語の詳細については、「[XQuery 言語リファレンス &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server)」を参照してください。  
   
 ## <a name="get-help-for-a-sql-server-cmdlet"></a>SQL Server コマンドレットのヘルプの参照  
  **コマンドレットのヘルプを表示するには**  
@@ -97,7 +89,7 @@ Get-Help -Category provider
 ```  
   
 ## <a name="get-help-about-the-sql-server-provider"></a>SQL Server プロバイダーのヘルプの参照  
- **プロバイダーに関するヘルプを表示するには**  
+ **プロバイダーのヘルプを参照するには**  
   
 1.  名前を SQLServer と指定して、Get-Help を実行します。  
   
@@ -109,7 +101,7 @@ Get-Help SQLServer
 ```  
   
 ## <a name="list-methods-and-properties"></a>メソッドとプロパティの一覧表示  
- **SQL Server プロバイダーパス内のノードのメソッドとプロパティを一覧表示するには**  
+ **SQL Server プロバイダーのパス内のノードのメソッドとプロパティを一覧表示するには**  
   
 1.  SQL Server パスのノードに CD するか、その場所を設定された変数を作成します。  
   

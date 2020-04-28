@@ -20,10 +20,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: ca6e7485e85665f06c2410438b902fa0647418ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73593758"
 ---
 # <a name="sp_enclave_send_keys-transact-sql"></a>sp_enclave_send_keys (Transact-SQL)
@@ -63,15 +63,15 @@ sp_enclave_send_keys
 
  データベースの`VIEW ANY COLUMN ENCRYPTION KEY DEFINITION`および`VIEW ANY COLUMN MASTER KEY DEFINITION`権限が必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
   
 ```sql
 EXEC sp_enclave_send_keys;  
 ```
 
-## <a name="see-also"></a>参照
-- [セキュア エンクレーブを使用する Always Encrypted](../security/encryption/always-encrypted-enclaves.md) 
+## <a name="see-also"></a>関連項目
+- [セキュリティで保護されたエンクレーブが設定された Always Encrypted](../security/encryption/always-encrypted-enclaves.md) 
  
-- [セキュリティで保護されたエンクレーブ列が設定された Always Encrypted でのインデックスの作成と使用](../security/encryption/always-encrypted-enclaves-create-use-indexes.md)
+- [セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する列でインデックスを作成して使用する](../security/encryption/always-encrypted-enclaves-create-use-indexes.md)
 
-- [チュートリアル:ランダム化された暗号化を使用してエンクレーブ対応の列でインデックスを作成して使用する](../security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)
+- [チュートリアル: ランダム化された暗号化を使用してエンクレーブ対応の列にインデックスを作成して使用する](../security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)

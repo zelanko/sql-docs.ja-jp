@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: efbe03a4aab65f792b352eeb5b6c5130c4c32335
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783212"
 ---
 # <a name="access-the-reporting-services-wmi-provider"></a>Reporting Services WMI プロバイダーへのアクセス
@@ -32,7 +32,7 @@ ms.locfileid: "72783212"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] リリース以降では、WMI プロバイダーはネイティブ モードのレポート サーバーに対してのみサポートされています。 SharePoint モードのレポート サーバーは、SharePoint サーバーの全体管理ページおよび PowerShell スクリプトを使用して管理できます。  
   
-|クラス|名前空間|[説明]|  
+|クラス|名前空間|説明|  
 |-----------|---------------|-----------------|  
 |MSReportServer_Instance|root\microsoft\sqlserver\reportserver\ RS_*\<encodedinstancename>* \ v11|インストールされているレポート サーバーに接続するための基本情報をクライアントに提供します。|  
 |MSReportServer_ConfigurationSetting|root\microsoft\sqlserver\reportserver\ RS_*\<encodedinstancename>* \ v11\ Admin|レポート サーバー インスタンスのインストール パラメーターとランタイム パラメーターを表します。 これらのパラメーターはレポート サーバーの構成ファイルに格納されています。<br /><br /> **\*\* 重要 \*\*** このクラスは管理者権限でのみアクセス可能です。|  
@@ -87,5 +87,5 @@ $rsconfig.GetAdminSiteUrl()
 ```  
   
 ## <a name="see-also"></a>参照
- [Reporting Services WMI プロバイダー ライブラリ リファレンス (SSRS)](../wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)   
- [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)  
+ [Reporting Services WMI プロバイダーライブラリリファレンス &#40;SSRS&#41;](../wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)   
+ [RSReportServer 構成ファイル](../report-server/rsreportserver-config-configuration-file.md)  

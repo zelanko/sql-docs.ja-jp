@@ -13,10 +13,10 @@ ms.author: rortloff
 manager: craigg
 monikerRange: = azure-sqldw-latest||= sqlallproducts-allversions
 ms.openlocfilehash: 6e77239d019cb51e66a34a3a5b909e01c28a7faa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73633436"
 ---
 # <a name="sysdm_workload_management_workload_groups_stats-transact-sql"></a>dm_workload_management_workload_groups_stats (Transact-sql)
@@ -24,11 +24,11 @@ ms.locfileid: "73633436"
 
 ワークロードグループの統計と、のワークロードグループの有効[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]な値を返します。  
   
-|列名|データ型|[説明]|Range|  
+|列名|データ型|説明|範囲|  
 |-----------------|---------------|-----------------|-----------|  
 |group_id|**int**|ワークロード グループの一意の ID。||
 |name|**sysname**|ワークロードグループの名前。||
-|statistics_start_time|**DATETIME**|ワークロードグループの統計コレクションが開始された時刻。  この値は、ワークロードグループが作成されたとき、またはインスタンスが一時停止またはスケーリングされたときのいずれかになります。||
+|statistics_start_time|**datetime**|ワークロードグループの統計コレクションが開始された時刻。  この値は、ワークロードグループが作成されたとき、またはインスタンスが一時停止またはスケーリングされたときのいずれかになります。||
 |total_request_count|**bigint**|ワークロードグループ内の完了した要求の累積数。||
 |total_shared_resource_reqeusts|**bigint**|共有プールからリソースを使用したワークロードグループ内の完了した要求の累積数。||
 |total_queued_request_count|**bigint**|Max_concurrency の制限に達した後にキューに登録された要求の累積数。||
@@ -39,6 +39,6 @@ ms.locfileid: "73633436"
 |effective_request_max_resource_grant_percent|**decimal (5, 2)**|ワークロードグループの request_max_resource_grant_percent の有効なランタイム値は、すべてのワークロードグループの構成を検討しています。||
 |||||
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
  [SQL Data Warehouse および並列データウェアハウスの動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

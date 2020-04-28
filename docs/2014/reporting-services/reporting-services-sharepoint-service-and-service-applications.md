@@ -11,32 +11,31 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93a8092dc9ed731349a1948a74e3950eb32f4f47
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783158"
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Reporting Services の SharePoint サービスとサービス アプリケーション
-  
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint モードは、SharePoint サービス アーキテクチャ上に構築されており、SharePoint サービスと一対多のサービス アプリケーションを利用します。 サービス アプリケーションを作成すると、サービスが使用可能になり、サービス アプリケーション データベースが生成されます。 複数の Reporting Services サービス アプリケーションを作成することができますが、ほとんどの配置シナリオではサービス アプリケーションは 1 つで十分です。  
   
  このトピックの内容は次のとおりです。  
   
--   [Reporting Services サービスアプリケーションの作成](#bkmk_createapp)  
+-   [Reporting Services サービス アプリケーションの作成](#bkmk_createapp)  
   
--   [プロキシグループを使用したサービスアプリケーションの関連付けの変更](#bkmk_associations)  
+-   [プロキシ グループを使用したサービス アプリケーションの関連付けの変更](#bkmk_associations)  
   
 -   [サービスアプリケーションのプロパティの編集](#bkmk_editserviceapplication)  
   
--   [PowerShell を使用して Reporting Services サービスアプリケーションを作成するには](#bkmk_powershell_create_ssrs_serviceapp)  
+-   [PowerShell を使用して Reporting Services サービス アプリケーションを作成するには](#bkmk_powershell_create_ssrs_serviceapp)  
   
--   [Related Tasks](#bkmk_related)  
+-   [関連タスク](#bkmk_related)  
   
-##  <a name="bkmk_createapp"></a>Reporting Services サービスアプリケーションの作成  
- SharePoint サーバーの全体管理または PowerShell スクリプトを使用して、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーションを作成できます。 SharePoint サーバーの全体管理の使用方法の詳細については、「sharepoint [2010 用 Reporting Services Sharepoint モードのインストール](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)」の「Reporting Services サービスアプリケーションの作成」セクションを参照してください。 サービス アプリケーションを作成するための PowerShell スクリプトの例は、このトピックの後半の PowerShell のセクションを参照してください。  
+##  <a name="creating-a-reporting-services-service-application"></a><a name="bkmk_createapp"></a>Reporting Services サービスアプリケーションの作成  
+ SharePoint サーバーの全体管理または PowerShell スクリプトを使用して、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーションを作成できます。 SharePoint サーバーの全体管理を使用する方法の詳細については、「[SharePoint 2010 用 Reporting Services の SharePoint モードのインストール](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)」の「Reporting Services サービス アプリケーションの作成」セクションを参照してください。 サービス アプリケーションを作成するための PowerShell スクリプトの例は、このトピックの後半の PowerShell のセクションを参照してください。  
   
-##  <a name="bkmk_associations"></a>プロキシグループを使用したサービスアプリケーションの関連付けの変更  
+##  <a name="modify-the-associations-of-the-service-application-with-a-proxy-group"></a><a name="bkmk_associations"></a>プロキシグループを使用したサービスアプリケーションの関連付けの変更  
  サービス アプリケーションを作成するための [新規作成] ページには、 **[Web アプリケーションの関連付け]** セクションがあります。 このセクションでは、サービス アプリケーションの作成時に関連付けを行うことができます。 関連付けを変更してカスタム構成をサービス アプリケーションに割り当てるには、次の手順を使用します。 同じ一般的なプロセスは、サービス アプリケーションとカスタム グループとの関連付けを変更せずに、プロキシを既定のグループに追加する場合にも使用できます。  
   
 1.  SharePoint サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの関連付けの構成]** をクリックします。  
@@ -49,16 +48,16 @@ ms.locfileid: "72783158"
   
 5.  プロキシのチェック ボックスをオンにして、 **[OK]** をクリックします。  
   
-##  <a name="bkmk_editserviceapplication"></a>サービスアプリケーションのプロパティの編集  
+##  <a name="edit-service-application-properties"></a><a name="bkmk_editserviceapplication"></a> サービス アプリケーションのプロパティの編集  
  サービス アプリケーションのプロパティ ページを開き直してプロパティを変更することができます。  
   
-1.  SharePoint サーバーの全体管理で、[アプリケーション管理] グループの [**サービスアプリケーションの管理**] をクリックします。  
+1.  SharePoint サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの管理]** をクリックします。  
   
 2.  サービス アプリケーションを選択するには、型列をクリックして行全体を選択します。 アプリケーションの名前をクリックすると、サービス アプリケーションのプロパティが開く代わりに、サービスの管理オプション ページが開きます。  
   
 3.  [サービス アプリケーション] リボンで、 **[プロパティ]** をクリックします。  
   
-##  <a name="bkmk_powershell_create_ssrs_serviceapp"></a>PowerShell を使用して Reporting Services サービスアプリケーションを作成するには  
+##  <a name="to-create-a-reporting-services-service-application-using-powershell"></a><a name="bkmk_powershell_create_ssrs_serviceapp"></a>PowerShell を使用して Reporting Services サービスアプリケーションを作成するには  
  PowerShell を使用して Service アプリケーションとプロキシを作成することができます。 次のサンプルでは、使用するサービス アプリケーションをどのアプリケーション プールに構成するかがわかっていることを前提としています。  
   
 1.  アプリケーション プール名のアプリケーション プール オブジェクトを、New アクションに渡される変数に追加します。  
@@ -79,7 +78,7 @@ ms.locfileid: "72783158"
     Get-SPRSServiceApplication -name MyServiceApplication | New-SPRSServiceApplicationProxy "MyServiceApplicationProxy"  
     ```  
   
-##  <a name="bkmk_related"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="bkmk_related"></a> 関連タスク  
   
 |タスク|Link|  
 |----------|----------|  

@@ -18,10 +18,10 @@ ms.assetid: 9e09f419-947c-4d4b-9a49-2d3396c847cd
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: fbccc720f30bd98660e48d7c82a132f76dcf1a26
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660844"
 ---
 # <a name="state-property-sqlservice-class"></a>State プロパティ (SqlService クラス)
@@ -36,7 +36,7 @@ object.State [= value]
 ```  
   
 ## <a name="parts"></a>要素  
- *素材*  
+ *object*  
  サービスを表す [SqlService クラス](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
@@ -44,8 +44,8 @@ object.State [= value]
   
  値には、次のいずれかを指定できます。  
   
- 1 で保護されたプロセスとして起動されました  
- 停止中。 サービスは停止されています。  
+ 1  
+ 停止中。 サービスが停止しています。  
   
  2  
  開始保留中。 サービスは開始を待機しています。  
@@ -65,7 +65,7 @@ object.State [= value]
  7  
  一時停止。 サービスは一時停止しています。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>参照  
  [サービスの開始および停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

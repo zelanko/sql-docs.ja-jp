@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f7a18a44a0f71254342f8fc29c38f0993fc05bfb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637893"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>検索プロパティのプロパティ セット GUID およびプロパティ整数 ID の取得
@@ -35,33 +35,30 @@ ms.locfileid: "73637893"
   
  このトピックでは、使用可能なプロパティ (特にマイクロソフトによって定義されているプロパティ) に関する情報を取得するための一般的な方法について説明します。 サード パーティによって定義されているプロパティについては、サード パーティのドキュメントを参照するか、ベンダーに問い合わせてください。  
   
-##  <a name="wellknown"></a> 広く使用され、知られている Microsoft プロパティについての情報の入手  
+##  <a name="finding-information-about-widely-used-well-known-microsoft-properties"></a><a name="wellknown"></a> 広く使用され、知られている Microsoft プロパティについての情報の入手  
  マイクロソフトでは、さまざまなコンテキストで使用できる何百ものドキュメント プロパティを定義していますが、それぞれのファイル形式で使用できるプロパティはごくわずかです。 頻繁に使用される Windows プロパティの中に、少数の汎用プロパティがあります。 よく知られている汎用プロパティの一部の例を次の表に示します。 この表では、よく知られている名前、Windows の正規名 (マイクロソフトが公開するプロパティの説明で使用)、プロパティ セット GUID、プロパティ整数識別子、および簡単な説明を示します。  
   
-|よく知られている名前|Windows の正規名|プロパティ セット GUID|整数 ID|[説明]|  
+|よく知られている名前|Windows の正規名|プロパティ セット GUID|整数 ID|説明|  
 |----------------------|----------------------------|-----------------------|----------------|-----------------|  
 |Authors|`System.Author`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|4|特定のアイテムの作成者。|  
-|タグ|`System.Keywords`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|アイテムに割り当てられる一連のキーワード (タグとも呼ばれます)。|  
-|種類|`System.PerceivedType`|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|正規の種類に基づいて認識されるファイルの種類。|  
+|Tags|`System.Keywords`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|アイテムに割り当てられる一連のキーワード (タグとも呼ばれます)。|  
+|Type|`System.PerceivedType`|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|正規の種類に基づいて認識されるファイルの種類。|  
 |タイトル|`System.Title`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|アイテムのタイトル。 たとえば、ドキュメントのタイトル、メッセージの件名、写真のキャプション、または音楽トラックの名前。|  
   
  ファイル形式間で一貫性を保持するため、マイクロソフトでは、頻繁に使用される、優先度の高いドキュメントのプロパティのサブセットを、いくつかのドキュメントのカテゴリとして特定しています。 これらには、通信、連絡先、ドキュメント、音楽ファイル、画像、およびビデオがあります。 各カテゴリの上位のプロパティの詳細については、Windows サーチに関するドキュメントの「 [カスタム ファイル形式のシステム定義プロパティ](https://go.microsoft.com/fwlink/?LinkId=144336) 」を参照してください。  
   
  特定のファイル形式では、以下の 3 種類のプロパティが実装される場合があります。  
   
--   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]によって定義された汎用プロパティ  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)]によって定義された汎用プロパティ  
   
--   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]によって定義された、カテゴリに固有のプロパティ  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)]によって定義された、カテゴリに固有のプロパティ  
   
 -   ソフトウェア ベンダーによって定義された、アプリケーション固有のカスタム プロパティ  
   
-##  <a name="filtdump"></a>FILTDUMP を使用して、使用可能なプロパティに関する情報を検索します。EXCEL.EXE  
+##  <a name="finding-information-about-available-properties-by-using-filtdumpexe"></a><a name="filtdump"></a>FILTDUMP を使用して、使用可能なプロパティに関する情報を検索します。EXCEL.EXE  
  インストールされた IFilter で検出および抽出されるプロパティを調べるには、 **Windows SDK に含まれている** filtdump.exe [!INCLUDE[msCoName](../../includes/msconame-md.md)] ユーティリティをインストールして実行してください。  
   
- 
-  **filtdump.exe** はコマンド プロンプトから実行し、1 つの引数を指定します。 この引数は、インストールした IFilter が対象とする種類のファイルの個別の名前です。 このユーティリティは、IFilter で検出された、ドキュメント内のすべてのプロパティと、そのプロパティ セット GUID、整数 ID、および追加情報の一覧を表示します。  
+ **filtdump.exe** はコマンド プロンプトから実行し、1 つの引数を指定します。 この引数は、インストールした IFilter が対象とする種類のファイルの個別の名前です。 このユーティリティは、IFilter で検出された、ドキュメント内のすべてのプロパティと、そのプロパティ セット GUID、整数 ID、および追加情報の一覧を表示します。  
   
  このソフトウェアをインストールする方法の詳細については、「 [Windows 7 および .NET Framework 4 用 Microsoft Windows SDK](https://www.microsoft.com/download/details.aspx?id=8279)」を参照してください。 SDK をダウンロードしてインストールした後、以下のフォルダーで filtdump.exe ユーティリティを見つけてください。  
   
@@ -69,11 +66,10 @@ ms.locfileid: "73637893"
   
 -   32 ビット バージョンの場合は、 `C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin`にあります。  
   
-##  <a name="propdesc"></a>Windows プロパティの説明からの検索プロパティの値の検索  
+##  <a name="finding-values-for-a-search-property-from-a-windows-property-description"></a><a name="propdesc"></a>Windows プロパティの説明からの検索プロパティの値の検索  
  よく知られた Windows 検索プロパティについては、プロパティの説明 (`formatID`) の `propID` 属性および `propertyDescription` 属性から必要な情報を入手できます。  
   
- 次の例では、一般的なマイクロソフト プロパティの関連する部分 (この例では、 `System.Author` ) を示します。 
-  `formatID` 属性はプロパティ セット GUID の `F29F85E0-4FF9-1068-AB91-08002B27B3D9`を指定し、 `propID` 属性は、プロパティの整数 ID `4.` を指定します。 `name` 属性は、Windows の正規のプロパティ名である `System.Author`を示すことに注意してください (この例では、関係のない列プロパティ説明部分を省略しています)。  
+ 次の例では、一般的なマイクロソフト プロパティの関連する部分 (この例では、 `System.Author` ) を示します。 `formatID` 属性はプロパティ セット GUID の `F29F85E0-4FF9-1068-AB91-08002B27B3D9`を指定し、 `propID` 属性は、プロパティの整数 ID `4.` を指定します。 `name` 属性は、Windows の正規のプロパティ名である `System.Author`を示すことに注意してください (この例では、関係のない列プロパティ説明部分を省略しています)。  
   
 ```  
 .  
@@ -89,7 +85,7 @@ propID = 4
   
  Windows プロパティの完全な一覧については、Windows サーチに関するドキュメントの「 [Windows プロパティ](https://go.microsoft.com/fwlink/?LinkId=215013)」を参照してください。  
   
-##  <a name="examples"></a>検索プロパティリストへのプロパティの追加  
+##  <a name="adding-a-property-to-a-search-property-list"></a><a name="examples"></a>検索プロパティリストへのプロパティの追加  
  次の例では、プロパティを検索プロパティ リストに追加する方法を示します。 この例では、 [ALTER SEARCH PROPERTY LIST](/sql/t-sql/statements/alter-search-property-list-transact-sql) ステートメントを使用して、 `System.Author` プロパティを `PropertyList1`という名前の検索プロパティ リストに追加し、 `Author`という表示名を指定します。  
   
 ```  

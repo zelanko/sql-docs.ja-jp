@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 373b2b9d90512293e1776d06ab5797faaf47a210
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797770"
 ---
 # <a name="encode-and-decode-sql-server-identifiers"></a>SQL Server 識別子のエンコードとデコード
@@ -22,24 +22,22 @@ ms.locfileid: "72797770"
   
 1.  **作業を開始する準備:**  [制限事項と制約事項](#LimitationsRestrictions)  
   
-2.  **特殊文字を処理する:**  [識別子のエンコード](#EncodeIdent)、[識別子のデコード](#DecodeIdent)  
+2.  **特殊文字を処理する方法:**  [識別子のエンコード](#EncodeIdent)、 [識別子のデコード](#DecodeIdent)  
   
 ## <a name="before-you-begin"></a>はじめに  
- Windows PowerShell パス名でサポートされない文字は、" **%** xx" のように、"%" 文字の後に文字を表すビット パターンの 16 進値を付加して表す、つまりエンコードすることができます。 エンコードは、Windows PowerShell パスでサポートされない文字を処理する場合にいつでも使用できます。  
+ Windows PowerShell のパス名でサポートされていない文字は、"**%** xx" のように、"%" 文字の後に文字を表すビットパターンの16進数値として表すか、エンコードすることができます。 エンコードは、Windows PowerShell パスでサポートされない文字を処理する場合にいつでも使用できます。  
   
  **Encode-SqlName** コマンドレットは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 識別子を入力として受け取ります。 また、Windows PowerShell 言語ではサポートされないすべての文字が "%xx" でエンコードされた文字列を出力します。 **Decode-SqlName** コマンドレットは、エンコードされた [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 識別子を入力として受け取り、元の識別子を返します。  
   
-###  <a name="LimitationsRestrictions"></a> 制限事項と制約事項  
- 
-  `Encode-Sqlname` コマンドレットと `Decode-Sqlname` コマンドレットでエンコードまたはデコードできるのは、SQL Server の区切られた識別子ではサポートされるが PowerShell パスではサポートされない文字のみです。 
-  **Encode-SqlName** によってエンコードされ、 **Decode-sqlname**によってデコードされる文字を次に示します。  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 制限事項と制約事項  
+ `Encode-Sqlname` コマンドレットと `Decode-Sqlname` コマンドレットでエンコードまたはデコードできるのは、SQL Server の区切られた識別子ではサポートされるが PowerShell パスではサポートされない文字のみです。 **Encode-SqlName** によってエンコードされ、 **Decode-sqlname**によってデコードされる文字を次に示します。  
   
 |||||||||||||  
 |-|-|-|-|-|-|-|-|-|-|-|-|  
 |**文字**|\ |/|:|%|\<|>|*|?|[|]|&#124;|  
 |**16 進エンコード**|%5C|%2F|%3A|%25|%3C|%3E|%2A|%3F|%5B|%5D|%7C|  
   
-##  <a name="EncodeIdent"></a> 識別子のエンコード  
+##  <a name="encoding-an-identifier"></a><a name="EncodeIdent"></a> 識別子のエンコード  
  **PowerShell パス内で SQL Server 識別子をエンコードするには**  
   
 -   SQL Server 識別子をエンコードするには、次の 2 つの方法のいずれかを使用します。  
@@ -61,7 +59,7 @@ Set-Location Table%3ATest
 Set-Location (Encode-SqlName "Table:Test")  
 ```  
   
-##  <a name="DecodeIdent"></a> 識別子のデコード  
+##  <a name="decoding-an-identifier"></a><a name="DecodeIdent"></a> 識別子のデコード  
  **PowerShell パスの SQL Server 識別子をデコードするには**  
   
  16 進数エンコードを、そのエンコードが表す文字に置換するには、`Decode-Sqlname` コマンドレットを使用します。  

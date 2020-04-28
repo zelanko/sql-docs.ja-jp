@@ -16,10 +16,10 @@ ms.assetid: d73ad03c-e5b3-4606-a0ee-7d75e12762a6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 932a54323ad8f6ffafbe8ff8f4a7f3c2dc58b0e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73632983"
 ---
 # <a name="sp_validatemergesubscription-transact-sql"></a>sp_validatemergesubscription (Transact-SQL)
@@ -48,16 +48,16 @@ sp_validatemergesubscription [@publication=] 'publication'
   
 `[ @level = ] 'level'`実行する検証の種類を示します。 *レベル*は**tinyint**,、既定値はありません。 レベルには次のいずれかの値を指定できます。  
   
-|レベルの値|[説明]|  
+|レベルの値|説明|  
 |-----------------|-----------------|  
 |**1**|行数のみの検証。|  
 |**2**|行数とチェックサムの検証。|  
-|**番**|行数とバイナリ チェックサムの検証。|  
+|**3**|行数とバイナリ チェックサムの検証。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_validatemergesubscription**は、マージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  

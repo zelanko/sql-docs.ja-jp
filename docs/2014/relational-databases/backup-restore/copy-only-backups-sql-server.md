@@ -15,14 +15,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96267b98d7e17b920e0a7cee70b69e4c964584e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798009"
 ---
 # <a name="copy-only-backups-sql-server"></a>コピーのみのバックアップ (SQL Server)
-  *コピーのみのバックアップ*は、従来[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のバックアップのシーケンスから独立したバックアップです。 通常、バックアップを行うとデータベースが変更され、その後のバックアップの復元方法に影響します。 ただし、データベース全体のバックアップや復元の手順に影響を与えない、特殊な目的にバックアップを行うと役に立つ場合があります。 このため、コピーのみのバックアップが導入されました。  
+  *コピーのみのバックアップ*は、従来の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップのシーケンスから独立した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップです。 通常、バックアップを行うとデータベースが変更され、その後のバックアップの復元方法に影響します。 ただし、データベース全体のバックアップや復元の手順に影響を与えない、特殊な目的にバックアップを行うと役に立つ場合があります。 このため、コピーのみのバックアップが導入されました。  
   
  コピーのみのバックアップには、次の種類があります。  
   
@@ -41,15 +41,13 @@ ms.locfileid: "72798009"
  コピーのみのバックアップは、 **backupset** テーブルの [is_copy_only](/sql/relational-databases/system-tables/backupset-transact-sql) 列に記録されます。  
   
 ## <a name="to-create-a-copy-only-backup"></a>コピーのみのバックアップを作成するには  
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、または PowerShell を使用してコピーのみのバックアップを作成できます。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、または PowerShell を使用してコピーのみのバックアップを作成できます。  
   
-###  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-1.  
-  **[データベースのバックアップ]** ダイアログ ボックスの **[全般]** ページで、**[バックアップのみコピーする]** オプションを選択します。  
+1.  **[データベースのバックアップ]** ダイアログ ボックスの **[全般]** ページで、**[バックアップのみコピーする]** オプションを選択します。  
   
-###  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  必須の [!INCLUDE[tsql](../../../includes/tsql-md.md)] 構文は次のとおりです。  
   
 -   コピーのみの完全バックアップの場合:  
@@ -61,28 +59,27 @@ ms.locfileid: "72798009"
   
 -   コピーのみのログ バックアップの場合:  
   
-     バックアップログ** を backup_device *\<**>* に database_name...COPY_ONLY...  
+     バックアップログ*database_name*を backup_device *\<**>* に database_name...COPY_ONLY...  
   
-###  <a name="PowerShellProcedure"></a>PowerShell の使用  
+###  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell の使用  
   
-
-  `Backup-SqlDatabase` パラメーターを指定して `-CopyOnly` コマンドレットを使用します。  
+`Backup-SqlDatabase` パラメーターを指定して `-CopyOnly` コマンドレットを使用します。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
 
 ### <a name="to-create-a-full-or-log-backup"></a>完全バックアップまたはログ バックアップを作成するには
   
--   [データベースの完全バックアップを作成する &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
+-   [データベースの完全バックアップの作成 &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
   
--   [トランザクションログ &#40;SQL Server のバックアップ&#41;](back-up-a-transaction-log-sql-server.md)  
+-   [トランザクション ログのバックアップ &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
   
 ### <a name="to-view-copy-only-backups"></a>コピーのみのバックアップを表示するには
   
--   [backupset &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/backupset-transact-sql)  
+-   [backupset &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/backupset-transact-sql)  
   
 ### <a name="to-set-up-and-use-the-sql-server-powershell-provider"></a>SQL Server PowerShell プロバイダーを設定して使用するには
   
--   [SQL Server PowerShell Provider](../../powershell/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell プロバイダー](../../powershell/sql-server-powershell-provider.md)  
 
 ## <a name="see-also"></a>参照  
  [バックアップの概要 &#40;SQL Server&#41;](backup-overview-sql-server.md)   

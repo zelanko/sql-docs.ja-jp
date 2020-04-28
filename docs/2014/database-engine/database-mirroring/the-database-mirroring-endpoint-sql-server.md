@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1afac17b04c968c6685e356e3bbc8101161a36b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797896"
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>データベース ミラーリング エンドポイント (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "72797896"
 >  データベース ミラーリング機能は、将来のバージョンの Microsoft SQL Server では削除される予定です。 新しい開発作業ではこの機能の使用を避け、現在データベース ミラーリングを使用しているアプリケーションでは、代わりに [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] を使用するようにアプリケーションを修正することを計画してください。  
   
   
-##  <a name="ServerNetworkAddress"></a> サーバー ネットワーク アドレス  
+##  <a name="server-network-address"></a><a name="ServerNetworkAddress"></a> サーバー ネットワーク アドレス  
  サーバー インスタンスのネットワーク アドレス (サーバー インスタンスの *サーバー ネットワーク アドレス* または *エンドポイント URL*) には、そのサーバー インスタンスのホスト コンピューターのシステム名とドメイン名以外に、そのサーバー インスタンスのエンドポイントのポート番号も含まれています。 このポート番号は、特定のサーバー インスタンスを一意に識別します。  
   
  次の図に、同じサーバー上の 2 つのサーバー インスタンスを一意に識別するしくみを示します。 どちらのサーバー インスタンスのサーバー ネットワーク アドレスにも、同じシステム名 `MYSYSTEM`とドメイン名 `Adventure-Works.MyDomain.com`が含まれています。 システム側でサーバー インスタンスまでルーティングできるように、サーバー ネットワーク アドレスには、特定のサーバー インスタンスのミラーリング エンドポイントに関連付けられたポート番号が含まれています。  
@@ -53,7 +53,7 @@ ms.locfileid: "72797896"
 >  使用中のデータベース ミラーリング エンドポイントは再構成しないでください。 サーバー インスタンスは、互いのエンドポイントを使用して、他のシステムの状態を調べます。 エンドポイントを再構成すると、そのエンドポイントは再起動されます。これにより、他のサーバー インスタンスではエラーが発生したように見えることがあります。 これは、自動フェールオーバー モードでは特に重要です。この場合、パートナーでエンドポイントを再構成すると、フェールオーバーが発生する可能性があります。  
   
   
-##  <a name="EndpointAuthenticationTypes"></a> データベース ミラーリング エンドポイント用の Windows 認証の種類の決定  
+##  <a name="determining-the-authentication-type-for-a-database-mirroring-endpoint"></a><a name="EndpointAuthenticationTypes"></a> データベース ミラーリング エンドポイント用の Windows 認証の種類の決定  
  データベース ミラーリング エンドポイントに使用できる認証の種類は、サーバー インスタンスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントによって次のように決定されることを理解しておく必要があります。  
   
 -   サーバー インスタンスがドメイン サービス アカウントで実行中の場合は、データベース ミラーリング エンドポイントで Windows 認証を使用できます。 同じドメイン ユーザー アカウントですべてのサーバー インスタンスを実行した場合は、自動的に両方の **マスター** データベースに正しいユーザー ログインが存在します。 可用性データベースのセキュリティ構成が単純化されるので、こちらの方法をお勧めします。  
@@ -70,31 +70,31 @@ ms.locfileid: "72797896"
      証明書を使用してデータベース ミラーリング セキュリティを自動的に構成する方法は用意されていません。 CREATE ENDPOINT [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントまたは `New-SqlHadrEndpoint` PowerShell コマンドレットのいずれかを使用する必要があります。 詳細については、「[CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)」を参照してください。 サーバーインスタンスで証明書の認証を有効にする方法については、「[データベースミラーリングエンドポイントでの証明書の使用 &#40;transact-sql&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)」を参照してください。  
   
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
 
 ### <a name="to-configure-a-database-mirroring-endpoint"></a>データベース ミラーリング エンドポイントを構成するには
   
--   [Windows 認証 &#40;Transact-sql&#41;のデータベースミラーリングエンドポイントを作成する](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
+-   [Windows 認証でのデータベース ミラーリング エンドポイントの作成 &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
--   [Transact-sql&#41;&#40;データベースミラーリングエンドポイントに証明書を使用する](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
+-   [データベース ミラーリング エンドポイントでの証明書の使用 &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
-    -   [データベースミラーリングエンドポイントで、Transact-sql&#41;&#40;の送信接続に証明書を使用できるようにする](database-mirroring-use-certificates-for-outbound-connections.md)  
+    -   [データベース ミラーリング エンドポイントで発信接続に証明書を使用できるようにする &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md)  
   
-    -   [データベースミラーリングエンドポイントが受信接続に証明書を使用できるようにするには &#40;Transact-sql&#41;](database-mirroring-use-certificates-for-inbound-connections.md)  
+    -   [データベース ミラーリング エンドポイントで着信接続に証明書を使用できるようにする &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-inbound-connections.md)  
   
--   [データベースミラーリング &#40;サーバーネットワークアドレスを指定し&#41;](specify-a-server-network-address-database-mirroring.md)  
+-   [サーバー ネットワーク アドレスの指定 &#40;データベース ミラーリング&#41;](specify-a-server-network-address-database-mirroring.md)  
   
--   [可用性レプリカを追加または変更するときにエンドポイント URL を指定する &#40;SQL Server&#41;](../availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [可用性レプリカを追加または変更する場合のエンドポイント URL の指定 &#40;SQL Server&#41;](../availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
--   [可用性グループウィザードを使用して &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)  
+-   [可用性グループ ウィザードの使用 &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)  
   
  **データベース ミラーリング エンドポイントに関する情報を表示するには**  
   
--   [database_mirroring_endpoints &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)  
+-   [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)  
   
   
 ## <a name="see-also"></a>参照  
  [データベースミラーリングと AlwaysOn 可用性グループ &#40;SQL Server のトランスポートセキュリティ&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [データベースミラーリング構成 &#40;SQL Server のトラブルシューティング&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
  [dm_hadr_availability_replica_states &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)   
- [dm_db_mirroring_connections &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)  
+ [sys.dm_db_mirroring_connections &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)  

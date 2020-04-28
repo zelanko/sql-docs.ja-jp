@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 37a148393d66a7434fda4461b704ee81b7e05223
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798083"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>SQL Server のインスタンスの登録 (SQL Server ユーティリティ)
@@ -86,17 +86,17 @@ ms.locfileid: "72798083"
   
 -   [SQL Server インスタンスの登録](#Enrolling)  
   
-##  <a name="Welcome"></a> インスタンスの登録ウィザードの概要  
+##  <a name="introduction-to-enroll-instance-wizard"></a><a name="Welcome"></a> インスタンスの登録ウィザードの概要  
  このウィザードを起動するには、ユーティリティ エクスプローラーのツリーでユーティリティ コントロール ポイントを展開し、 **[マネージド インスタンス]** ノードを右クリックして、 **[マネージド インスタンスの追加]** をクリックします。  
   
  続行するには、 **[次へ]** をクリックします。  
   
-##  <a name="Instance_name"></a> SQL Server インスタンスの指定  
+##  <a name="specify-the-instance-of-sql-server"></a><a name="Instance_name"></a> SQL Server インスタンスの指定  
  接続ダイアログ ボックスで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを選択するには、 **[接続]** をクリックします。ComputerName\InstanceName の形式でコンピューター名と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス名を指定します。 詳細については、「[サーバーへの接続 &#40;データベース エンジン&#41;](../../ssms/f1-help/connect-to-server-database-engine.md)」を参照してください。  
   
  続行するには、 **[次へ]** をクリックします。  
   
-##  <a name="Connection_dialog"></a> 接続ダイアログ  
+##  <a name="connection-dialog"></a><a name="Connection_dialog"></a> 接続ダイアログ  
  [サーバーへの接続] ダイアログ ボックスで、サーバーの種類、コンピューター名、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス名の情報を確認します。 詳細については、「[サーバーへの接続 &#40;データベース エンジン&#41;](../../ssms/f1-help/connect-to-server-database-engine.md)」を参照してください。  
   
 > [!NOTE]  
@@ -104,7 +104,7 @@ ms.locfileid: "72798083"
   
  続行するには、 **[接続]** をクリックします。  
   
-##  <a name="Proxy_configuration"></a> ユーティリティ コレクション セットのアカウント  
+##  <a name="utility-collection-set-account"></a><a name="Proxy_configuration"></a> ユーティリティ コレクション セットのアカウント  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ コレクション セットを実行する Windows ドメイン アカウントを指定します。 このアカウントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ コレクション セットの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシ アカウントとして使用されます。 また、既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス アカウントを使用することもできます。 検証の要件を満たすには、次のガイドラインに従ってアカウントを指定します。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス アカウントのオプションを指定する場合は、次のガイドラインに従います。  
@@ -113,7 +113,7 @@ ms.locfileid: "72798083"
   
  続行するには、 **[次へ]** をクリックします。  
   
-##  <a name="Validation_rules"></a> SQL Server インスタンスの検証  
+##  <a name="sql-server-instance-validation"></a><a name="Validation_rules"></a> SQL Server インスタンスの検証  
  このリリースでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティに登録する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで、次の条件が満たされている必要があります：  
   
 |条件|修正措置|  
@@ -140,7 +140,7 @@ ms.locfileid: "72798083"
   
  続行するには、 **[次へ]** をクリックします。  
   
-##  <a name="Summary"></a> インスタンス登録の概要  
+##  <a name="summary-of-instance-enrollment"></a><a name="Summary"></a> インスタンス登録の概要  
  概要ページには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティに追加する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの情報が表示されます。  
   
  マネージド インスタンスの設定は次のとおりです。  
@@ -151,7 +151,7 @@ ms.locfileid: "72798083"
   
  続行するには、 **[次へ]** をクリックします。  
   
-##  <a name="Enrolling"></a> SQL Server インスタンスの登録  
+##  <a name="enrolling-the-instance-of-sql-server"></a><a name="Enrolling"></a> SQL Server インスタンスの登録  
  登録ページでは、次のように、処理の進行状況が表示されます。  
   
 -   インスタンスを登録する準備をしています。  
@@ -182,7 +182,7 @@ ms.locfileid: "72798083"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティからマネージド インスタンスを削除するには、 **ユーティリティ エクスプローラーのナビゲーション** ウィンドウで **[マネージド インスタンス]** を選択してマネージド インスタンスのリスト ビューを設定し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ エクスプローラーのコンテンツ **ウィンドウのリスト ビューで** インスタンス名を右クリックして、 **[マネージド インスタンスを削除]** を選択します。  
   
-##  <a name="PowerShell_enroll"></a> PowerShell を使用した SQL Server インスタンスの登録  
+##  <a name="enroll-an-instance-of-sql-server-using-powershell"></a><a name="PowerShell_enroll"></a> PowerShell を使用した SQL Server インスタンスの登録  
  次の例を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティに登録します:  
   
 ```powershell

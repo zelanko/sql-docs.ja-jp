@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4a04e581758748d55b9defcab3beaa6a86f0eecf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797799"
 ---
 # <a name="manage-authentication-in-database-engine-powershell"></a>データベース エンジン PowerShell での認証の管理
@@ -22,38 +22,32 @@ ms.locfileid: "72797799"
   
 1.  **作業を開始する準備:**  [アクセス許可](#Permissions)  
   
-2.  **認証を設定するには:**[仮想ドライブ](#SQLAuthVirtDrv)を使用し、を[呼び出し](#SQLAuthInvSqlCmd)ます。    
+2.  **認証を設定する方法:**  [仮想ドライブ](#SQLAuthVirtDrv)、 [–Password](#SQLAuthInvSqlCmd)  
   
-##  <a name="Permissions"></a> Permissions  
- 
-  [!INCLUDE[ssDE](../includes/ssde-md.md)] のインスタンスで実行できるすべての操作は、そのインスタンスへの接続に使用された認証資格情報に付与されている権限によって制御されます。 既定では、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロバイダーとコマンドレットは、それが実行されている Windows アカウントを使用して、 [!INCLUDE[ssDE](../includes/ssde-md.md)]への Windows 認証接続を行います。  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
+ [!INCLUDE[ssDE](../includes/ssde-md.md)] のインスタンスで実行できるすべての操作は、そのインスタンスへの接続に使用された認証資格情報に付与されている権限によって制御されます。 既定では、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロバイダーとコマンドレットは、それが実行されている Windows アカウントを使用して、 [!INCLUDE[ssDE](../includes/ssde-md.md)]への Windows 認証接続を行います。  
   
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証接続を行うには、SQL Server 認証のログイン ID およびパスワードを指定する必要があります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]プロバイダーを使用する場合は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ログイン資格情報を仮想ドライブに関連付けてから、ディレクトリの変更コマンド (`cd`) を使用してそのドライブに接続する必要があります。 Windows PowerShell では、セキュリティ資格情報は仮想ドライブにのみ関連付けることができます。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証接続を行うには、SQL Server 認証のログイン ID およびパスワードを指定する必要があります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]プロバイダーを使用する場合は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ログイン資格情報を仮想ドライブに関連付けてから、ディレクトリの変更コマンド (`cd`) を使用してそのドライブに接続する必要があります。 Windows PowerShell では、セキュリティ資格情報は仮想ドライブにのみ関連付けることができます。  
   
-##  <a name="SQLAuthVirtDrv"></a>仮想ドライブを使用した認証の SQL Server  
+##  <a name="sql-server-authentication-using-a-virtual-drive"></a><a name="SQLAuthVirtDrv"></a>仮想ドライブを使用した認証の SQL Server  
  **SQL Server 認証ログインに関連付けられた仮想ドライブを作成するには**  
   
 1.  次のような関数を作成します。  
   
     1.  仮想ドライブに与える名前、ログイン ID、および仮想ドライブに関連付けるプロバイダー パスのためのパラメーターを持っている。  
   
-    2.  
-  `read-host` を使用して、ユーザーにパスワードの入力を求める。  
+    2.  `read-host` を使用して、ユーザーにパスワードの入力を求める。  
   
-    3.  
-  `new-object` を使用して、資格情報オブジェクトを作成する。  
+    3.  `new-object` を使用して、資格情報オブジェクトを作成する。  
   
-    4.  
-  `new-psdrive` を使用して、指定された資格情報で仮想ドライブを作成する。  
+    4.  `new-psdrive` を使用して、指定された資格情報で仮想ドライブを作成する。  
   
 2.  関数を呼び出して、指定された資格情報で仮想ドライブを作成します。  
   
 ### <a name="example-virtual-drive"></a>例 (仮想ドライブ)  
  次の例は、指定された **認証ログインおよびインスタンスに関連付けられる仮想ドライブを作成するための、** sqldrive [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] という名前の関数を作成します。  
   
- 
-  **sqldrive** 関数は、ユーザーにログインのパスワードの入力を求め、入力されるパスワードをマスクします。 次に、ディレクトリの変更コマンド (`cd`) を使用して仮想ドライブ名を使用してパスに接続するたびに、ドライブの作成[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]時に指定した認証ログイン資格情報を使用してすべての操作が実行されます。  
+ **sqldrive** 関数は、ユーザーにログインのパスワードの入力を求め、入力されるパスワードをマスクします。 次に、ディレクトリの変更コマンド (`cd`) を使用して仮想ドライブ名を使用してパスに接続するたびに、ドライブの作成[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]時に指定した認証ログイン資格情報を使用してすべての操作が実行されます。  
   
 ```powershell
 ## Create a function that specifies the login and prompts for the password.  
@@ -73,11 +67,10 @@ sqldrive SQLAuth
 cd SQLAuth  
 ```  
   
-##  <a name="SQLAuthInvSqlCmd"></a>Invoke を使用して認証を SQL Server する-Sqlcmd  
- **SQL Server 認証で呼び出し Sqlcmd を使用するには**  
+##  <a name="sql-server-authentication-using-invoke-sqlcmd"></a><a name="SQLAuthInvSqlCmd"></a>Invoke を使用して認証を SQL Server する-Sqlcmd  
+ **SQL Server 認証で Invoke-Sqlcmd を使用するには**  
   
-1.  
-  `-Username` パラメーターでログイン ID を指定し、`-Password` パラメーターで関連付けられているパスワードを指定します。  
+1.  `-Username` パラメーターでログイン ID を指定し、`-Password` パラメーターで関連付けられているパスワードを指定します。  
   
 ### <a name="example-invoke-sqlcmd"></a>例 (Invoke-Sqlcmd)  
  この例では、read-host コマンドレットを使用してユーザーにパスワードの入力を求め、SQL Server 認証を使用して接続します。  

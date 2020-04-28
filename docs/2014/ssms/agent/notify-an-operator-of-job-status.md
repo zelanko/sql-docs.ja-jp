@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ff9340d7c9fb768f9e057d00868a9e238421a5f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798202"
 ---
 # <a name="notify-an-operator-of-job-status"></a>Notify an Operator of Job Status
@@ -31,9 +31,9 @@ ms.locfileid: "72798202"
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
--   **オペレーターにジョブの状態を通知するために使用するもの:**  
+-   **オペレーターにジョブの状態を通知する方法:**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -41,48 +41,46 @@ ms.locfileid: "72798202"
   
      [SQL Server 管理オブジェクト](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
  詳細については、「 [SQL Server エージェントのセキュリティの実装](implement-sql-server-agent-security.md)」をご覧ください。  
   
-##  <a name="SSMS"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-notify-an-operator-of-job-status"></a>オペレーターにジョブの状態を通知するには  
   
-1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
+1.  **オブジェクト エクスプローラー**で、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  
-  **[SQL Server エージェント]**、 **[ジョブ]** の順に展開し、編集するジョブを右クリックして、 **[プロパティ]** をクリックします。  
+2.  **[SQL Server エージェント]**、 **[ジョブ]** の順に展開し、編集するジョブを右クリックして、 **[プロパティ]** をクリックします。  
   
-3.  
-  **[ジョブのプロパティ]** ダイアログ ボックスで、 **[通知]** ページをクリックします。  
+3.  **[ジョブのプロパティ]** ダイアログ ボックスで、 **[通知]** ページをクリックします。  
   
 4.  オペレーターに電子メールで通知する場合、 **[電子メール]** チェック ボックスをオンにして一覧からオペレーターを選択し、次のいずれかをクリックします。  
   
-    -   ジョブが**成功**した場合、ジョブが正常に完了したことをオペレーターに通知します。  
+    -   **[ジョブ成功時]** : ジョブが正常に完了した場合にオペレーターに通知します。  
   
-    -   ジョブが正常に完了しなかったときにオペレーターに通知する**ジョブが失敗した場合**。  
+    -   **[ジョブ失敗時]** : ジョブが正常に完了しなかった場合にオペレーターに通知します。  
   
-    -   **ジョブが**完了したら、完了ステータスに関係なくオペレーターに通知します。  
+    -   **[ジョブ完了時]** : 完了時の状態とは関係なくオペレーターに通知します。  
   
 5.  オペレーターにポケットベルで通知する場合、 **[ポケットベル]** チェック ボックスをオンにして一覧からオペレーターを選択し、次のいずれかをクリックします。  
   
-    -   ジョブが**成功**した場合、ジョブが正常に完了したことをオペレーターに通知します。  
+    -   **[ジョブ成功時]** : ジョブが正常に完了した場合にオペレーターに通知します。  
   
-    -   ジョブが正常に完了しなかったときにオペレーターに通知する**ジョブが失敗した場合**。  
+    -   **[ジョブ失敗時]** : ジョブが正常に完了しなかった場合にオペレーターに通知します。  
   
-    -   **ジョブが**完了したら、完了ステータスに関係なくオペレーターに通知します。  
+    -   **[ジョブ完了時]** : 完了時の状態とは関係なくオペレーターに通知します。  
   
 6.  オペレーターに net send で通知する場合、 **[Net Send]** チェック ボックスをオンにして一覧からオペレーターを選択し、次のいずれかをクリックします。  
   
-    -   ジョブが**成功**した場合、ジョブが正常に完了したことをオペレーターに通知します。  
+    -   **[ジョブ成功時]** : ジョブが正常に完了した場合にオペレーターに通知します。  
   
-    -   ジョブが正常に完了しなかったときにオペレーターに通知する**ジョブが失敗した場合**。  
+    -   **[ジョブ失敗時]** : ジョブが正常に完了しなかった場合にオペレーターに通知します。  
   
-    -   **ジョブが**完了したら、完了ステータスに関係なくオペレーターに通知します。  
+    -   **[ジョブ完了時]** : 完了時の状態とは関係なくオペレーターに通知します。  
   
-##  <a name="TSQL"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> Transact-SQL の使用  
   
 #### <a name="to-notify-an-operator-of-job-status"></a>オペレーターにジョブの状態を通知するには  
   
@@ -106,7 +104,7 @@ ms.locfileid: "72798202"
   
  詳細については、「 [sp_add_notification &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)」を参照してください。  
   
-##  <a name="SMO"></a>SQL Server 管理オブジェクトの使用  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>SQL Server 管理オブジェクトの使用  
  **オペレーターにジョブの状態を通知するには**  
   
  Visual Basic、 `Job` Visual C#、PowerShell など、選択したプログラミング言語でクラスを使用します。 詳細については、「 [SQL Server 管理オブジェクト (SMO) プログラミング ガイド](https://msdn.microsoft.com/library/ms162169.aspx)」を参照してください。  

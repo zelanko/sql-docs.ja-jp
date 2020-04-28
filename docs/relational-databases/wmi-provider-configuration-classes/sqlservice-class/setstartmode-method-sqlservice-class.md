@@ -18,10 +18,10 @@ ms.assetid: f6f198b4-f9a4-468c-8977-76462ef06e61
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: edd3b4a5fa4d787292f1978da80c5f7803242010
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660911"
 ---
 # <a name="setstartmode-method-sqlservice-class"></a>SetStartMode メソッド (SqlService クラス)
@@ -36,11 +36,11 @@ object.SetStartMode(StartMode)
 ```  
   
 ## <a name="parts"></a>要素  
- *素材*  
+ *object*  
  サービスを表す [SqlService クラス](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) オブジェクト。  
   
 #### <a name="parameters"></a>パラメーター  
- *開始モード*  
+ *StartMode*  
  サービスインスタンスの開始モードを指定する**uint32**値。  
   
  有効な値は次のとおりです。  
@@ -58,7 +58,7 @@ object.SetStartMode(StartMode)
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  **Uint32**値。サービスが正常に変更された場合は0、要求がサポートされていない場合は1になります。 それ以外の数値はエラーを示します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>参照  
  [サービスの開始および停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

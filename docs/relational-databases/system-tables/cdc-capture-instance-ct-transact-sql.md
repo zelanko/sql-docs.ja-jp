@@ -18,10 +18,10 @@ ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6595fa2a2462463b9ecc64778af1d72e588477d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72908396"
 ---
 # <a name="cdcltcapture_instancegt_ct-transact-sql"></a>cdc.&lt;capture_instance&gt;_CT (transact-sql)
@@ -33,17 +33,17 @@ ms.locfileid: "72908396"
   
 
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**__ $ start_lsn**|**binary (10)**|変更のコミット トランザクションに関連付けられたログ シーケンス番号 (LSN)。<br /><br /> 同じトランザクションでコミットされたすべての変更は、同じコミット LSN を共有します。 たとえば、ソーステーブルに対する削除操作によって2つの行が削除された場合、変更テーブルには、同じ **__ $ start_lsn**値を持つ2つの行が含まれます。|  
-|**__ $ end_lsn**|**binary (10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> で[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]は、この列は常に NULL です。|  
-|**__ $ seqval**|**binary (10)**|トランザクション内の行の変更を並べ替えるために使用されるシーケンス値。|  
-|**__ $ 操作**|**int**|変更に関連付けられているデータ操作言語 (DML) 操作を識別します。 以下のいずれかを指定できます。<br /><br /> 1 = 削除<br /><br /> 2 = 挿入<br /><br /> 3 = 更新 (古い値)<br /><br /> 列データには、更新ステートメントを実行する前の行の値が割り当てられます。<br /><br /> 4 = 更新 (新しい値)<br /><br /> 列データには、更新ステートメントを実行した後の行の値が割り当てられます。|  
+|**__$start_lsn**|**binary(10)**|変更のコミット トランザクションに関連付けられたログ シーケンス番号 (LSN)。<br /><br /> 同じトランザクションでコミットされたすべての変更は、同じコミット LSN を共有します。 たとえば、ソーステーブルに対する削除操作によって2つの行が削除された場合、変更テーブルには、同じ **__ $ start_lsn**値を持つ2つの行が含まれます。|  
+|**__ $ end_lsn**|**binary(10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> で[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]は、この列は常に NULL です。|  
+|**__$seqval**|**binary(10)**|トランザクション内の行の変更を並べ替えるために使用されるシーケンス値。|  
+|**__ $ 操作**|**int**|変更に関連付けられているデータ操作言語 (DML) 操作を識別します。 次のいずれかを指定できます。<br /><br /> 1 = 削除<br /><br /> 2 = 挿入<br /><br /> 3 = 更新 (古い値)<br /><br /> 列データには、更新ステートメントを実行する前の行の値が割り当てられます。<br /><br /> 4 = 更新 (新しい値)<br /><br /> 列データには、更新ステートメントを実行した後の行の値が割り当てられます。|  
 |**__ $ update_mask**|**varbinary (128)**|変更された列を識別する、変更テーブルの列序数に基づくビットマスク。|  
 |*\<キャプチャされたソーステーブルの列>*|多様|変更テーブルの残りの列は、キャプチャインスタンスの作成時にキャプチャされた列として識別された、ソーステーブルの列です。 キャプチャ対象列リストで列が指定されなかった場合、ソース テーブルのすべての列がこのテーブルに格納されます。|  
 |**__ $ command_id** |**int** |トランザクション内の操作の順序を追跡します。 |  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
 
 列`__$command_id`の列は、バージョン2012から2016の累積的な更新プログラムで導入されました。 バージョンおよびダウンロードの情報については、 [Microsoft SQL Server データベースに対して変更データキャプチャを有効にした後に、更新された行の変更テーブルの順序が正しく設定さ](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you)れ3030352ていないことを確認してください。  詳細については、 [SQL Server 2012、2014、2016の最新の CU にアップグレードした後に、CDC の機能が停止する場合があり](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/)ます。
 

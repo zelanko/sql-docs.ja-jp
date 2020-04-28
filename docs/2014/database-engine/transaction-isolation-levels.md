@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eea34b8ad278447d9e9085d99acb8500d14d5e7a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637782"
 ---
 # <a name="transaction-isolation-levels-in-memory-optimized-tables"></a>メモリ最適化テーブルのトランザクション分離レベル
@@ -39,8 +39,7 @@ ms.locfileid: "73637782"
   
 -   メモリ最適化テーブルにアクセスするためにより高い分離レベルのヒントを明示的に指定する (WITH (SNAPSHOT) など)。  
   
--   
-  `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT` 設定オプションを指定する。これにより、(各メモリ最適化テーブルに WITH(SNAPSHOT) ヒントを含めた場合のように) メモリ最適化テーブルの分離レベルが SNAPSHOT に設定されます。 の詳細につい`MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`ては、「 [ALTER database SET Options &#40;transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)」を参照してください。  
+-   `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT` 設定オプションを指定する。これにより、(各メモリ最適化テーブルに WITH(SNAPSHOT) ヒントを含めた場合のように) メモリ最適化テーブルの分離レベルが SNAPSHOT に設定されます。 の詳細につい`MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`ては、「 [ALTER database SET Options &#40;transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)」を参照してください。  
   
  または、セッションの分離レベルが READ COMMITTED である場合は、自動コミット トランザクションを使用できます。  
   
@@ -51,7 +50,7 @@ ms.locfileid: "73637782"
  ディスク ベース テーブルの場合、ほとんどの分離レベルの保証は、ブロックを通じて競合を回避するロックを使用して実装されます。 メモリ最適化テーブルの場合、保証は競合検出メカニズムを使用して適用され、ロックを使用する必要はなくなります。 例外は、ディスク ベース テーブルでの SNAPSHOT 分離です。 この場合は、競合検出メカニズムを使用して、メモリ最適化テーブルでの SNAPSHOT 分離と同じように実装されます。  
   
  SNAPSHOT  
- この分離レベルでは、トランザクションの任意のステートメントによって読み取られるデータが、トランザクションの開始時に存在していたトランザクション上の一貫性のあるバージョンのデータであることを指定します。 データの変更は、トランザクションの開始前にコミットされたものだけが認識されます。 現在のトランザクションの開始後に他のトランザクションによって行われたデータ変更は、現在のトランザクションで実行されているステートメントには認識されません。 トランザクション内のステートメントは、トランザクションの開始時に存在していたコミット済みデータのスナップショットを取得します。  
+ この分離レベルでは、トランザクションの任意のステートメントによって読み取られるデータが、トランザクションの開始時に存在していたトランザクション上の一貫性のあるバージョンのデータであることを指定します。 データの変更は、トランザクションの開始前にコミットされたものだけが認識されます。 現在のトランザクションの開始後に、他のトランザクションによってデータが変更されても、現在のトランザクションを実行しているステートメントではデータの変更は認識されません。 トランザクション内のステートメントは、トランザクションの開始時に存在していたコミット済みデータのスナップショットを取得します。  
   
  書き込み操作 (更新、挿入、および削除) は、他のトランザクションから常に完全に分離されます。 したがって、SNAPSHOT トランザクションの書き込み操作は、他のトランザクションの書き込み操作と競合する場合があります。 現在のトランザクションの開始以降にコミットされた他のトランザクションによって更新または削除された行を現在のトランザクションで更新または削除しようとすると、トランザクションは次のエラー メッセージにより終了されます。  
   

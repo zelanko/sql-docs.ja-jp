@@ -11,10 +11,10 @@ ms.assetid: d39d3474-20e7-429f-9c8d-fcc4eb0854fc
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 51465b3f3ae7193d925d30203c5a831a03b8d51a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73727927"
 ---
 # <a name="rollback-member-revision-history-master-data-services"></a>メンバー リビジョン履歴のロールバック (マスター データ サービス)
@@ -29,19 +29,18 @@ ms.locfileid: "73727927"
   
 -   リビジョン履歴は、エンティティのトランザクション ログの種類がメンバーである場合にのみ使用できます。  
   
- **メンバーリビジョン履歴をロールバックするには**  
+ **メンバー リビジョン履歴をロールバックするには**  
   
 1.  マスター データ マネージャーで、[エクスプローラー] をクリックします。  
   
 2.  ロールバックするエンティティとメンバーを選択します。  
   
-3.  
-  **[履歴の表示]** をクリックします。  
+3.  **[履歴の表示]** をクリックします。  
   
 4.  ロールバックするリビジョンを選択し、 **[ロールバック]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [メンバーリビジョン履歴 &#40;マスターデータサービス&#41;](../master-data-services/member-revision-history-master-data-services.md)   
- [エンティティのトランザクションログの種類 &#40;マスターデータサービスに変更&#41;](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)  
+ [エンティティのトランザクション ログの種類の変更 (マスター データ サービス)](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)  
   
   

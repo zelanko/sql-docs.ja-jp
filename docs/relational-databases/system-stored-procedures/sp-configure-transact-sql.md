@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 09f5a26493600fd346192f6ba7ebbc73ea7ed184
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73536214"
 ---
 # <a name="sp_configure-transact-sql"></a>sp_configure (Transact-SQL)
@@ -60,11 +60,11 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @configname = ] 'option_name'`構成オプションの名前を指定します。 *option_name*は**varchar (35)**,、既定値は NULL です。 は[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 、構成名の一部である一意の文字列を認識します。 指定しない場合、オプションの完全な一覧が返されます。  
+`[ @configname = ] 'option_name'`構成オプションの名前を指定します。 *option_name* は **varchar(35)**、既定値は NULL です。 は[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 、構成名の一部である一意の文字列を認識します。 指定しない場合、オプションの完全な一覧が返されます。  
   
  使用可能な構成オプションとその設定の詳細については、「[サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)」を参照してください。  
   
-`[ @configvalue = ] 'value'`新しい構成設定を示します。 *値*は**int**,、既定値は NULL です。 最大値はオプションごとに異なります。  
+`[ @configvalue = ] 'value'`新しい構成設定を示します。 *value* のデータ型は **int**で、既定値は NULL です。 最大値はオプションごとに異なります。  
   
  各オプションの最大値を確認するには、[**構成**] カタログビューの [**最大**] 列を参照してください。  
   
@@ -76,15 +76,15 @@ RECONFIGURE
   
  **Config_value**と**run_value**の値は、自動的には等価ではありません。 **Sp_configure**を使用して構成設定を更新した後、システム管理者は、上書きを使用して再構成または再構成のいずれかを使用して、実行中の構成値を更新する必要があります。 詳細については、「解説」を参照してください。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**name**|**nvarchar (35)**|構成オプションの名前。|  
+|**name**|**nvarchar(35)**|構成オプションの名前。|  
 |**以降**|**int**|構成オプションの最小値。|  
 |**個**|**int**|構成オプションの最大値。|  
 |**config_value**|**int**|**Sp_configure**を使用して構成オプションが設定された値 ( **sys. 構成**の値)。 これらのオプションの詳細については、次を参照してください。[サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)および[&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)です。|  
 |**run_value**|**int**|構成オプションの現在実行中の値 ( **value_in_use**)。<br /><br /> 詳細については、「 [sys &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)」を参照してください。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  サーバーレベルの設定を表示または変更するには、 **sp_configure**を使用します。 データベースレベルの設定を変更するには、ALTER DATABASE を使用します。 現在のユーザー セッションのみに影響する設定を変更するには、SET ステートメントを使用します。  
   
 ### [!INCLUDE [ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]
@@ -131,8 +131,7 @@ EXEC sp_configure 'show advanced option', '1';
   
  "構成オプション ' show advanced options ' が0から1に変更されました。 再構成ステートメントを実行してインストールします。 "  
   
- 
-  `RECONFIGURE` を実行し、すべての構成オプションを表示します。  
+ `RECONFIGURE` を実行し、すべての構成オプションを表示します。  
   
 ```sql  
 RECONFIGURE;  
@@ -149,7 +148,7 @@ EXEC sp_configure 'recovery interval', '3';
 RECONFIGURE WITH OVERRIDE;  
 ```  
   
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sspdw"></a>例: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-list-all-available-configuration-settings"></a>C. すべての使用可能な構成設定を一覧表示する  
  次の例では、すべての構成オプションを一覧表示する方法を示します。  
@@ -158,8 +157,7 @@ RECONFIGURE WITH OVERRIDE;
 EXEC sp_configure;  
 ```  
   
- 結果は、オプションの最小値と最大値が続くオプション名を返します。 **Config_value**は、再構成が[!INCLUDE[ssDW](../../includes/ssdw-md.md)]完了したときにが使用する値です。 
-  **run_value** は、現在使用されている値です。 値が変更中のプロセスではない限り、 **config_value** と **run_value** は、通常は同じ値です。  
+ 結果は、オプションの最小値と最大値が続くオプション名を返します。 **Config_value**は、再構成が[!INCLUDE[ssDW](../../includes/ssdw-md.md)]完了したときにが使用する値です。 **run_value** は、現在使用されている値です。 値が変更中のプロセスではない限り、 **config_value** と **run_value** は、通常は同じ値です。  
   
 ### <a name="d-list-the-configuration-settings-for-one-configuration-name"></a>D. 1 つの構成名の構成設定を一覧表示する  
   
@@ -172,9 +170,9 @@ EXEC sp_configure @configname='hadoop connectivity';
   
 ## <a name="see-also"></a>参照  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
- [SET ステートメント &#40;Transact-sql&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
+ [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
- [ALTER DATABASE &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [構成 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
  [ALTER DATABASE スコープ構成 &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)   

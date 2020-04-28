@@ -18,20 +18,17 @@ ms.assetid: ecac7a16-c638-4703-ab08-753b63295f3a
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 772a7640f93fa11d6596511bc72ec9d1d5e2e1c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660887"
 ---
 # <a name="sqlservice-class"></a>SqlService クラス
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  
   [SqlService クラス](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスのインスタンスを表します。  
   
- 
-  [SqlService クラス](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスをプログラムによって管理するために使用されます。 
-  [SqlService クラス](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) オブジェクトを使用すると、次のタスクを実行することができます。  
+ [SqlService クラス](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスをプログラムによって管理するために使用されます。 [SqlService クラス](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) オブジェクトを使用すると、次のタスクを実行することができます。  
   
 -   サービスに接続します。  
   

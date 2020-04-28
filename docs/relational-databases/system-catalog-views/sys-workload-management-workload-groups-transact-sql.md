@@ -14,10 +14,10 @@ ms.author: rortloff
 manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
 ms.openlocfilehash: 76b5b09a07189db127c970e75dac2894fdbea1ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73633446"
 ---
 # <a name="sysworkload_management_workload_groups-transact-sql"></a>workload_management_workload_groups (Transact-sql)
@@ -26,19 +26,19 @@ ms.locfileid: "73633446"
 
  ワークロードグループの詳細を返します。  
   
-|列名|データ型|[説明]|Range|  
+|列名|データ型|説明|範囲|  
 |-----------------|---------------|-----------------|-----------|
 |group_id|**int**|ワークロード グループの一意の ID。 NULL 値は許可されません。||
 |name|**sysname**|ワークロードグループの名前。 インスタンスに対して一意である必要があります。  NULL 値は許可されません。||
-|importance|**nvarchar(128**|は、このワークロードグループ内の要求の相対的な重要度であり、共有リソースの複数のワークロードグループにまたがっています。 NULL 値は許可されません。|low、below_normal、normal (既定)、above_normal、high||
+|importance|**nvarchar(128)**|は、このワークロードグループ内の要求の相対的な重要度であり、共有リソースの複数のワークロードグループにまたがっています。 NULL 値は許可されません。|low、below_normal、normal (既定)、above_normal、high||
 |min_percentage_resource|**tinyint**|ワークロードグループ内の要求に対して確保されるリソースの量。 リソースは、他のワークロードグループと共有されません。 NULL 値は許可されません。||
 |cap_percentage_resource|**tinyint**|ワークロードグループ内の要求に対するリソース割り当ての割合 (%)。 指定されたレベルに割り当てられるリソースの最大数を制限します。 value の許容範囲は 1 ～ 100 です。||
 |request_min_resource_grant_percent|**decimal (5, 2)**|要求に割り当てられるリソースの最小量を指定します。 値の許容範囲は 0.75 ~ 100 です。||
 |request_max_resource_grant_percent |**decimal (5, 2)**|要求に割り当てられるリソースの最大量を指定します。||
 |query_execution_timeout_sec|**int**|クエリが取り消されるまでの実行時間の長さ (秒単位)。  実行の戻りフェーズに達した後は、クエリを取り消すことはできません。  query_execution_timeout_sec には、キューに置かれた時間は含まれません。|
 |query_wait_timeout_sec|**int**|INTERNAL||
-|create_time|**DATETIME**|ワークロードグループが作成された時刻。 NULL 値は許可されません。||
-modify_time|**DATETIME**|ワークロードグループが最後に変更された時刻。 NULL 値は許可されません。||
+|create_time|**datetime**|ワークロードグループが作成された時刻。 NULL 値は許可されません。||
+modify_time|**datetime**|ワークロードグループが最後に変更された時刻。 NULL 値は許可されません。||
 |&nbsp;||||
   
 ## <a name="permissions"></a>アクセス許可

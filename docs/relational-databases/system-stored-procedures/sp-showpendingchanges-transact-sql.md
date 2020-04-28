@@ -16,10 +16,10 @@ ms.assetid: 8013a792-639d-4550-b262-e65d30f9d291
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6b09069cb5289e28d978a4f3b3483e14e63cebb2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73632743"
 ---
 # <a name="sp_showpendingchanges-transact-sql"></a>sp_showpendingchanges (Transact-SQL)
@@ -53,7 +53,7 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
   
 ## <a name="result-set"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |destination_server|**sysname**|変更がレプリケートされるサーバーの名前。|  
 |pub_name|**sysname**|パブリケーションの名前を指定します。|  
@@ -63,12 +63,12 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 |pending_deletes|**int**|レプリケートを待機している削除の数。|  
 |pending_ins_and_upd|**int**|レプリケートを待機している挿入と更新の数。|  
 |is_delete|**bit**|保留中の変更が削除かどうかを示します。 値が**1**の場合は、変更が削除であることを示します。 では、 @show_rowsに**1**を指定する必要があります。|  
-|rowguid|**UNIQUEIDENTIFIER**|変更された行を識別する GUID です。 では、 @show_rowsに**1**を指定する必要があります。|  
+|rowguid|**uniqueidentifier**|変更された行を識別する GUID です。 では、 @show_rowsに**1**を指定する必要があります。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  sp_showpendingchanges は、マージ レプリケーションで使用します。  
   
  sp_showpendingchanges は、マージレプリケーションのトラブルシューティングを行うときに使用します。  
@@ -81,6 +81,6 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
  sp_showpendingchanges を実行できるのは、固定サーバー ロール sysadmin または固定データベース ロール db_owner のメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
- [レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

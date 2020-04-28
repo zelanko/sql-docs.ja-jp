@@ -17,14 +17,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ab9c51ba125a7489d693a1af6b16e432e8fb7099
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73632736"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>アップグレード アドバイザーを使用したアップグレードの準備
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アップグレード アドバイザーは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へのアップグレードの準備に役立ちます。 アップグレード アドバイザーでは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でインストールされたコンポーネントが分析され、アップグレードの前または後に修正する必要がある問題を示すレポートが生成されます。  
   
 ## <a name="how-upgrade-advisor-works"></a>アップグレード アドバイザーの機能  
@@ -57,24 +56,19 @@ ms.locfileid: "73632736"
 >  レポートに "アップグレードに関するその他の問題" という項目が示される場合があります。 この項目は、サーバーやアプリケーションに存在する可能性があってもアップグレード アドバイザーでは検出されない問題の一覧にリンクされています。 この検出できない問題の一覧を確認し、これらの問題のためにサーバーやアプリケーションを変更する必要があるかどうかを判断してください。  
   
 ## <a name="how-to-install-and-run-upgrade-advisor"></a>アップグレード アドバイザーのインストールおよび実行方法  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アップグレード アドバイザーのインストール先は、分析対象のコンポーネントによって異なります。 アップグレード アドバイザーでは、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 以外のサポートされているすべてのコンポーネントをリモートで分析できます。 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のインスタンスをスキャンしない場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続でき、かつアップグレード アドバイザーの前提条件を満たす任意のコンピューターにアップグレード アドバイザーをインストールできます。 詳細については、「[サポートされているバージョンとエディションのアップグレード](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)」を参照してください。 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のインスタンスをスキャンする場合は、アップグレード アドバイザーをレポート サーバーにインストールする必要があります。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アップグレード アドバイザーのインストール先は、分析対象のコンポーネントによって異なります。 アップグレード アドバイザーでは、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 以外のサポートされているすべてのコンポーネントをリモートで分析できます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のインスタンスをスキャンしない場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続でき、かつアップグレード アドバイザーの前提条件を満たす任意のコンピューターにアップグレード アドバイザーをインストールできます。 詳細については、「 [サポートされているバージョンとエディションのアップグレード](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)」をご覧ください。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のインスタンスをスキャンする場合は、アップグレード アドバイザーをレポート サーバーにインストールする必要があります。  
   
  アップグレード アドバイザーは機能パックで提供されています。  
   
  アップグレード アドバイザーをインストールして実行するための前提条件は、次のとおりです。  
   
--   
-  [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2、Windows 7 SP1、および [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1。  
+-   [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2、Windows 7 SP1、および [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1。  
   
 -   Windows インストーラー 4.5 以降のバージョン。 [Windows インストーラー Web サイト](https://www.microsoft.com/download/details.aspx?id=8483)から Windows インストーラーをインストールできます。  
   
 -   Microsoft .NET Framework 4。 .NET Framework 4 は、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]製品メディアおよび[.NET Framework 4 ダウンロードページ](https://go.microsoft.com/fwlink/?LinkId=209895)から入手できます。  
   
-    -   
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] メディアから .NET Framework 4 をインストールするには、ディスク ドライブのルートに移動します。 次に、[]、[redist] フォルダーの順にダブルクリックし、[DotNetFrameworks] フォルダーをダブルクリックして dotNetFx40_Full_x86_x64 (32 ビットオペレーティングシステムの場合は、64ビットオペレーティングシステムの場合) を実行します。  
+    -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] メディアから .NET Framework 4 をインストールするには、ディスク ドライブのルートに移動します。 次に、[]、[redist] フォルダーの順にダブルクリックし、[DotNetFrameworks] フォルダーをダブルクリックして dotNetFx40_Full_x86_x64 (32 ビットオペレーティングシステムの場合は、64ビットオペレーティングシステムの場合) を実行します。  
   
  アップグレード アドバイザーを Web からインストールするには、ダウンロード ページのダウンロード ボタンをクリックします。 その後すぐにインストールを実行するか、または SQLUA.msi ファイルを保存して後から実行できます。 製品ディスクからをインストールする場合は、製品ディスクから直接 SQLUA .msi を実行します。  
   

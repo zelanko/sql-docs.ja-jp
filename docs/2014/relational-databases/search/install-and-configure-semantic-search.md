@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 164ae15bdd93034ebcca109a01142b3106a78592
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637918"
 ---
 # <a name="install-and-configure-semantic-search"></a>セマンティック検索のインストールと構成
@@ -25,7 +25,7 @@ ms.locfileid: "73637918"
   
 ## <a name="installing-semantic-search"></a>セマンティック検索のインストール  
   
-###  <a name="HowToCheckInstalled"></a>方法: セマンティック検索がインストールされているかどうかを確認する  
+###  <a name="how-to-check-whether-semantic-search-is-installed"></a><a name="HowToCheckInstalled"></a>方法: セマンティック検索がインストールされているかどうかを確認する  
  [SERVERPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql) メタデータ関数の **IsFullTextInstalled** プロパティに対してクエリを実行します。  
   
  戻り値 1 は、データベースに対してフルテキスト検索とセマンティック検索がインストールされていることを示します。戻り値 0 は、フルテキスト検索とセマンティック検索がインストールされていないことを示します。  
@@ -35,7 +35,7 @@ SELECT SERVERPROPERTY('IsFullTextInstalled');
 GO  
 ```  
   
-###  <a name="BasicsSemanticSearch"></a>方法: セマンティック検索をインストールする  
+###  <a name="how-to-install-semantic-search"></a><a name="BasicsSemanticSearch"></a>方法: セマンティック検索をインストールする  
  セマンティック検索をインストールするには、セットアップ中、 **[インストールする機能]** ページで **[検索のためのフルテキスト抽出とセマンティック抽出]** を選択します。  
   
  セマンティック検索はフルテキスト検索に依存します。 この [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の 2 つのオプション機能は一緒にインストールされます。  
@@ -43,7 +43,7 @@ GO
 ## <a name="installing-or-removing-the-semantic-language-statistics-database"></a>セマンティック言語統計データベースをインストールまたは削除する  
  セマンティック検索は、別途、"セマンティック言語統計データベース" と呼ばれる外部の機能に依存しています。 このデータベースには、セマンティック検索で必要な統計的言語モデルが含まれています。 1 つのセマンティック言語統計データベースには、セマンティック インデックス作成でサポートされるすべての言語の言語モデルが含まれています。  
   
-###  <a name="HowToCheckDatabase"></a>方法: セマンティック言語統計データベースがインストールされているかどうかを確認する  
+###  <a name="how-to-check-whether-the-semantic-language-statistics-database-is-installed"></a><a name="HowToCheckDatabase"></a>方法: セマンティック言語統計データベースがインストールされているかどうかを確認する  
  カタログ ビュー [sys.fulltext_semantic_language_statistics_database &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql) に対してクエリを実行します。  
   
  実行対象のインスタンスにセマンティック言語統計データベースがインストールされ登録されている場合、クエリ結果には、そのデータベースに関する単一行から成る情報が格納されています。  
@@ -53,7 +53,7 @@ SELECT * FROM sys.fulltext_semantic_language_statistics_database;
 GO  
 ```  
   
-###  <a name="HowToInstallModel"></a>方法: セマンティック言語統計データベースをインストール、アタッチ、および登録する  
+###  <a name="how-to-install-attach-and-register-the-semantic-language-statistics-database"></a><a name="HowToInstallModel"></a>方法: セマンティック言語統計データベースをインストール、アタッチ、および登録する  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のセットアップ プログラムでは、セマンティック言語統計データベースはインストールされません。 セマンティック インデックス作成の前提条件であるセマンティック言語統計データベースをセットアップするには、次の作業を実行します。  
   
  **1.セマンティック言語統計データベースをインストールします。**  
@@ -74,11 +74,10 @@ GO
 > [!IMPORTANT]  
 >  セマンティック言語統計データベースの抽出時に、ファイル システム内の既定の場所にあるデータベース ファイルおよびログ ファイルに制限付きの権限が割り当てられます。 そのため、データベースを既定の場所に残した場合、ユーザーによってはデータベースにアタッチする権限がない可能性があります。 データベースをアタッチしようとしたときにエラーが発生した場合は、ファイルを移動するか、ファイル システムの権限を確認し、必要に応じて修正してください。  
   
- **2. セマンティック言語統計データベースをアタッチします。**  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を使用するか、[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]CREATE DATABASE &#40;SQL Server Transact-SQL&#41;[ を ](/sql/t-sql/statements/create-database-sql-server-transact-sql)FOR ATTACH** 構文で呼び出して、** のインスタンスにデータベースをアタッチします。 詳細については、「[データベースのデタッチとアタッチ &#40;SQL Server&#41;](../databases/database-detach-and-attach-sql-server.md)」を参照してください。  
+ **2.セマンティック言語統計データベースをアタッチします。**  
+ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用するか、[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql) を **FOR ATTACH** 構文で呼び出して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスにデータベースをアタッチします。 詳細については、「[データベースのデタッチとアタッチ &#40;SQL Server&#41;](../databases/database-detach-and-attach-sql-server.md)」を参照してください。  
   
- 既定では、データベースの名前が **semanticsdb**になります。 データベースをアタッチする際、必要に応じて、別の名前を付けてください。 この名前は、後続の手順でデータベースを登録する際に必要になります。  
+ 既定では、データベースの名前は**semanticsdb になり**です。 データベースをアタッチする際、必要に応じて、別の名前を付けてください。 この名前は、後続の手順でデータベースを登録する際に必要になります。  
   
 ```sql  
 CREATE DATABASE semanticsdb  
@@ -90,7 +89,7 @@ GO
   
  このコード例では、データベースを既定の場所から新しい場所に移動済みであることを前提としています。  
   
- **3. セマンティック言語統計データベースを登録します。**  
+ **3.セマンティック言語統計データベースを登録します。**  
  データベースのアタッチ時に指定した名前を使用して、ストアド プロシージャ [sp_fulltext_semantic_register_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql) を次のように呼び出します。  
   
 ```sql  
@@ -98,7 +97,7 @@ EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = N'semanticsd
 GO  
 ```  
   
-###  <a name="HowToUnregister"></a>方法: セマンティック言語統計データベースを登録解除、デタッチ、および削除する  
+###  <a name="how-to-unregister-detach-and-remove-the-semantic-language-statistics-database"></a><a name="HowToUnregister"></a>方法: セマンティック言語統計データベースを登録解除、デタッチ、および削除する  
  **セマンティック言語統計データベースの登録を解除します。**  
  ストアド プロシージャ [sp_fulltext_semantic_unregister_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql) を呼び出します。 セマンティック言語統計データベースは 1 つのインスタンスにつき 1 つしか存在しないため、データベースの名前を指定する必要はありません。  
   
@@ -121,10 +120,9 @@ GO
  **セマンティック言語統計データベースを削除します。**  
  データベースの登録を解除し、デタッチした後は、データベース ファイルを簡単に削除できます。 アンインストール プログラムはありません。また、コントロール パネルの **[プログラムと機能]** のエントリもありません。  
   
-###  <a name="reqinstall"></a>セマンティック言語統計データベースをインストールおよび削除するための要件と制限  
+###  <a name="requirements-and-restrictions-for-installing-and-removing-the-semantic-language-statistics-database"></a><a name="reqinstall"></a>セマンティック言語統計データベースをインストールおよび削除するための要件と制限  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスでアタッチおよび登録できるセマンティック言語統計データベースは 1 つのみです。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスでアタッチおよび登録できるセマンティック言語統計データベースは 1 つのみです。  
   
      1 台のコンピューターに存在する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の各インスタンスには、それぞれ、セマンティック言語統計データベースの物理コピーが必要です。 個々のコピーをそれぞれのインスタンスにアタッチしてください。  
   
@@ -136,7 +134,7 @@ GO
   
 ## <a name="installing-optional-support-for-newer-document-types"></a>新しいドキュメントの種類のオプション サポートをインストールする  
   
-###  <a name="office"></a>方法: Microsoft Office およびその他の Microsoft ドキュメントの種類の最新のフィルターをインストールする  
+###  <a name="how-to-install-the-latest-filters-for-microsoft-office-and-other-microsoft-document-types"></a><a name="office"></a>方法: Microsoft Office およびその他の Microsoft ドキュメントの種類の最新のフィルターをインストールする  
  このリリースの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] の最新のワード ブレーカーとステマーがインストールされますが、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office ドキュメントおよびその他の [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ドキュメントの種類の最新のフィルターはインストールされません。 これらのフィルターは、最新バージョンの [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office およびその他の [!INCLUDE[msCoName](../../../includes/msconame-md.md)] アプリケーションで作成されたドキュメントのインデックスを作成するために必要です。 最新のフィルターをダウンロードするには、「 [Microsoft Office 2010 フィルター パック](https://www.microsoft.com/download/details.aspx?id=17062)」を参照してください。  
   
   

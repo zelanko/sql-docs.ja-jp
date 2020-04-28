@@ -18,10 +18,10 @@ ms.assetid: d772da67-e04e-4499-9f80-7a5e94829b5c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: cc6bad2dc55c611d45b728de4a23cf60c4b151cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660449"
 ---
 # <a name="securitycertificate-class"></a>SecurityCertificate クラス
@@ -32,11 +32,9 @@ ms.locfileid: "73660449"
   
 -   セキュリティ証明書のプロパティの表示  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の指定インスタンスに対する、指定された SHA サムプリントを持つセキュリティ証明書の設定  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の指定インスタンスに対する、指定された SHA サムプリントを持つセキュリティ証明書の設定  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の指定インスタンスに対する、SHA サムプリントの検証  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の指定インスタンスに対する、SHA サムプリントの検証  
   
 ## <a name="see-also"></a>参照  
  [暗号化階層](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
