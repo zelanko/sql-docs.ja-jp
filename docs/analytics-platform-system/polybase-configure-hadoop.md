@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019, seo-lt-2019
 ms.openlocfilehash: dc796ff58c5320e60011dc46dd45468177a98ed8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75245391"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Hadoop 内の外部データにアクセスするように PolyBase を構成する
@@ -49,7 +49,7 @@ PolyBase は、Hortonworks Data Platform (HDP) と Cloudera Distributed Hadoop (
 
 2. [アプライアンス Configuration Manager](launch-the-configuration-manager.md)の [サービスの状態] ページを使用して、APS リージョンを再起動します。
   
-## <a id="pushdown"></a>プッシュダウン計算を有効にする  
+## <a name="enable-pushdown-computation"></a><a id="pushdown"></a> プッシュダウン計算を有効にする  
 
 クエリ パフォーマンスを高めるには、Hadoop クラスターへのプッシュダウン計算を有効にします。  
   
@@ -227,7 +227,7 @@ Hadoop データ ソース内のデータのクエリを実行するには、Tra
    WITH IDENTITY = '<hadoop_user_name>', Secret = '<hadoop_password>';  
    ```
 
-3. [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md) を使用して外部データ ソースを作成します。
+3. [CREATE EXTERNAL DATA source](../t-sql/statements/create-external-data-source-transact-sql.md)を使用して外部データソースを作成します。
 
    ```sql
    -- LOCATION (Required) : Hadoop Name Node IP address and port.  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef00476e7c469a98532e58302c560c805669421d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74683588"
 ---
 # <a name="powerpivot-for-sharepoint-ssas"></a>PowerPivot for SharePoint (SSAS)
@@ -53,7 +53,7 @@ ms.locfileid: "74683588"
   
  SharePoint 統合モードの Analysis Service サーバー インスタンスで、配置が完了します。 データの読み込み、クエリ、アンロードを行います。 ブックに PowerPivot データ更新が構成されている場合、データの処理も行います。  各インスタンスは、同じインストールに含まれるローカルの PowerPivot System サービスと緊密に連携します。  
   
-##  <a name="bkmk_RelatedContent"></a> トピックの内容  
+##  <a name="in-this-section"></a><a name="bkmk_RelatedContent"></a>このセクションの説明  
  [サーバーの全体管理での PowerPivot サーバーの管理と構成](power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
  [Windows PowerShell を使用した PowerPivot の構成](power-pivot-configuration-using-windows-powershell.md)  
@@ -76,7 +76,7 @@ ms.locfileid: "74683588"
   
  [PowerPivot BI セマンティックモデル接続 &#40;。 bism&#41;](power-pivot-bi-semantic-model-connection-bism.md)  
   
- **その他のセクションの内容**  
+ **他のセクション**  
   
 ## <a name="additional-topics"></a>関連トピック  
  [PowerPivot for SharePoint のアップグレード](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)  

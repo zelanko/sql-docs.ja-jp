@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c27ed8abfd66cb896182cd5a795965163e5c8618
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243231"
 ---
 # <a name="specify-a-breakpoint-condition"></a>ブレークポイント条件の指定
@@ -37,11 +37,11 @@ ms.locfileid: "75243231"
   
 2.  **[ブレークポイントの条件]** ダイアログ ボックスで、 **[条件]** ボックスに有効なブール式を入力します。  
   
-3.  式**** がに`true`評価されたときに中断する場合は [true]、式の値が変更されたときに中断する場合は [**変更済み**] を選択します。  
+3.  式**Is true**がに`true`評価されたときに中断する場合は [true]、式の値が変更されたときに中断する場合は [**変更済み**] を選択します。  
   
     > [!NOTE]  
     >  デバッガーは、初めてブレークポイントに達するまでブール式を評価しません。 **[変更された場合]** を選択した場合、デバッガーは最初の評価を変更とは見なさないため、最初の評価でブレークすることはありません。  
   
 ## <a name="see-also"></a>参照  
- [ヒット カウントの指定](specify-a-hit-count.md)   
+ [ヒットカウントの指定](specify-a-hit-count.md)   
  [ブレークポイント アクションの指定](specify-a-breakpoint-action.md)  

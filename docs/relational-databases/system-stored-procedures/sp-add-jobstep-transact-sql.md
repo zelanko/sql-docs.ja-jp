@@ -18,10 +18,10 @@ ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c312f8798ba4ad42eed327123c9adc5feacba8a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74412848"
 ---
 # <a name="sp_add_jobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "74412848"
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
   > [!IMPORTANT]  
-  > [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)では、ほとんどの SQL Server エージェントジョブの種類はサポートされていません。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
+  > [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)では、ほとんどの SQL Server エージェントジョブの種類はサポートされていません。 詳細については[、「Azure SQL Database Managed Instance t-sql の相違 SQL Server 点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
   
 ## <a name="syntax"></a>構文  
   
@@ -75,7 +75,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @subsystem = ] 'subsystem'`エージェントサービスが[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *コマンド*を実行するために使用するサブシステム。 *サブシステム*は**nvarchar (40)**,、これらの値のいずれかを指定することができます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |'**ACTIVESCRIPTING**'|アクティブスクリプト<br /><br /> ** \*重要\* \* **[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |'**CMDEXEC**'|オペレーティング システム コマンドまたは実行可能なプログラム|  
@@ -86,16 +86,16 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |'**QueueReader**'|レプリケーションキューリーダーエージェントジョブ|  
 |'**ANALYSISQUERY**'|Analysis Services クエリ (MDX、DMX)。|  
 |'**ANALYSISCOMMAND**'|Analysis Services コマンド (XMLA)|  
-|'**Dts**'|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]パッケージの実行|  
+|'**Dts**'|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ実行|  
 |'**PowerShell**'|PowerShell スクリプト|  
-|'**TSQL**' (既定値)|[!INCLUDE[tsql](../../includes/tsql-md.md)]諸表|  
+|'**TSQL**' (既定値)|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント|  
   
 `[ @command = ] 'command'`*サブシステム*を介して**SQLServerAgent**サービスによって実行されるコマンドです。 *コマンド*は**nvarchar (max)**,、既定値は NULL です。 SQL Server エージェントでは、ソフトウェア プログラムを記述するときの変数と同じような柔軟性を持つトークン置換を使用できます。  
   
 > [!IMPORTANT]  
 >  エスケープマクロには、ジョブステップで使用されるすべてのトークンが含まれている必要があります。そうでない場合、これらのジョブステップは失敗します。 さらに、トークン名をかっこで囲み、トークン構文の先頭にドル記号`$`() を付ける必要があります。 次に例を示します。  
 >   
->  `$(ESCAPE_`*マクロ名*`(DATE))`  
+>  `$(ESCAPE_` *マクロ名* `(DATE))`  
   
  これらのトークンの詳細と、新しいトークン構文を使用するジョブステップの更新については、「[ジョブステップでのトークンの使用](../../ssms/agent/use-tokens-in-job-steps.md)」を参照してください。  
   
@@ -110,22 +110,22 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @on_success_action = ] success_action`ステップが成功した場合に実行するアクション。 *success_action*は**tinyint**で、次のいずれかの値を指定できます。  
   
-|Value|説明 (アクション)|  
+|値|説明 (アクション)|  
 |-----------|----------------------------|  
 |**1** (既定値)|成功時に終了|  
 |**2**|失敗した状態で終了します。|  
-|**番**|次のステップに進みます。|  
+|**3**|次のステップに進みます。|  
 |**4**|手順に進む*on_success_step_id*|  
   
 `[ @on_success_step_id = ] success_step_id`ステップが成功し*success_action*が**4**の場合に実行する、このジョブのステップの ID。 *success_step_id*は**int**,、既定値は**0**です。  
   
 `[ @on_fail_action = ] fail_action`ステップが失敗した場合に実行するアクション。 *fail_action*は**tinyint**で、次のいずれかの値を指定できます。  
   
-|Value|説明 (アクション)|  
+|値|説明 (アクション)|  
 |-----------|----------------------------|  
 |**1**|成功時に終了|  
 |**2** (既定値)|失敗した状態で終了します。|  
-|**番**|次のステップに進みます。|  
+|**3**|次のステップに進みます。|  
 |**4**|手順に進む*on_fail_step_id*|  
   
 `[ @on_fail_step_id = ] fail_step_id`ステップが失敗し、 *fail_action*が**4**の場合に実行する、このジョブのステップの ID。 *fail_step_id*は**int**,、既定値は**0**です。  
@@ -146,7 +146,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @flags = ] flags`は、動作を制御するオプションです。 *フラグ*は**int**,、これらの値のいずれかを指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**0** (既定値)|出力ファイルを上書きする|  
 |**2**|出力ファイルに追加|  
@@ -164,9 +164,9 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ None  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_add_jobstep**は、 **msdb**データベースから実行する必要があります。  
   
  SQL Server Management Studio は、簡単かつ直観的な方法でジョブを管理するためのツールで、ジョブ体系の作成および管理に最適です。  
@@ -188,7 +188,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
  ジョブステップの作成者は、ジョブステップのプロキシへのアクセス権を持っている必要があります。 **Sysadmin**固定サーバーロールのメンバーは、すべてのプロキシにアクセスできます。 他のユーザーには、明示的にプロキシへのアクセスを許可する必要があります。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、Sales データベースのデータベースアクセスを読み取り専用に変更するジョブステップを作成します。 さらに、この例では、5分間待機した後に再試行が5回発生する5回の再試行が指定されています。  
   
 > [!NOTE]  
@@ -215,6 +215,6 @@ GO
  [sp_help_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
  [sp_help_jobstep &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
  [sp_update_jobstep &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

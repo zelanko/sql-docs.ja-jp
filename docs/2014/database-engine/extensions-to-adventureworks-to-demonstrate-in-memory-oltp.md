@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4b317ffdb38c06cafe09ff786004b7ac144d0b18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75228473"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>インメモリ OLTP を実証する AdventureWorks の拡張
@@ -41,13 +41,13 @@ ms.locfileid: "75228473"
   
 -   [サンプルにおけるメモリおよびディスク領域の使用率](#MemoryandDiskSpaceUtilizationintheSample)  
   
-##  <a name="Prerequisites"></a> 前提条件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
   
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]RTM-評価版、Developer edition、または Enterprise edition  
   
 -   運用環境と仕様が似ているサーバー (パフォーマンス テスト用)。 このサンプルでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に使用できるメモリが 16 GB 以上必要です。 の[!INCLUDE[hek_2](../includes/hek-2-md.md)]ハードウェアに関する一般的なガイドラインについては、次のブログ投稿を参照してください。[https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
   
-##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a>AdventureWorks に[!INCLUDE[hek_2](../includes/hek-2-md.md)]基づくサンプルのインストール  
+##  <a name="installing-the-hek_2-sample-based-on-adventureworks"></a><a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a>AdventureWorks に[!INCLUDE[hek_2](../includes/hek-2-md.md)]基づくサンプルのインストール  
  サンプルをインストールするには、次の手順を実行します。  
   
 1.  AdventureWorks2014 データベースの完全バックアップのアーカイブをダウンロードします。  
@@ -56,8 +56,7 @@ ms.locfileid: "75228473"
   
     2.  メッセージが表示されたら、ファイルをローカル フォルダーに保存します。  
   
-2.  
-  **AdventureWorks2014.bak** ファイルを C:\temp などのローカル フォルダーに解凍します。  
+2.  **AdventureWorks2014.bak** ファイルを C:\temp などのローカル フォルダーに解凍します。  
   
 3.  [!INCLUDE[tsql](../includes/tsql-md.md)] または [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]を使用して、データベース バックアップを復元します  
   
@@ -122,7 +121,7 @@ ms.locfileid: "75228473"
   
         4.  [実行] ボタンをクリックしてスクリプトを実行します  
   
-##  <a name="Descriptionofthesampletablesandprocedures"></a> サンプル テーブルおよびプロシージャの説明  
+##  <a name="description-of-the-sample-tables-and-procedures"></a><a name="Descriptionofthesampletablesandprocedures"></a>サンプルテーブルとプロシージャの説明  
  サンプルでは、AdventureWorks の既存のテーブルに基づいて、製品および販売注文ごとに新しいテーブルを作成します。 新しいテーブルのスキーマは既存のテーブルと似ていますが、以下に示すように、異なる点がいくつかあります。  
   
  新しいメモリ最適化テーブルには、"_inmem" というサフィックスが付いています。 また、サンプルにはこれに対応するテーブルも含まれており、このテーブルには "_ondisk" というサフィックスが付いています。これらのテーブルを使用することで、システム上のメモリ最適化テーブルのパフォーマンスと、ディスク ベース テーブルのパフォーマンスを一対一で比較できます。  
@@ -183,20 +182,20 @@ ms.locfileid: "75228473"
   
 -   *既定の制約* はメモリ最適化テーブルでサポートされ、そのほとんどがそのまま移行されています。 ただし、元の Sales.SalesOrderHeader テーブルには、現在の日付を取得する既定の制約が 2 つあります。OrderDate 列の制約と ModifiedDate 列の制約です。 コンカレンシーが多くスループットが高い注文処理ワークロードでは、グローバル リソースが競合ポイントになる可能性があります。 たとえば、このようなグローバル リソースにはシステム時刻があります。販売注文を挿入する [!INCLUDE[hek_2](../includes/hek-2-md.md)] ワークロードを実行しているとき、特に、販売注文ヘッダーおよび販売注文の詳細に含まれる複数の列に対して、システム時刻を取得する必要がある場合は、このシステム時刻がボトルネックになることがわかっています。 このサンプルでは、挿入された販売注文ごとに 1 度だけシステム時刻を取得することで問題に対処します。そして、ストアド プロシージャ Sales.usp_InsertSalesOrder_inmem で、SalesOrderHeader_inmem と SalesOrderDetail_inmem にある datetime 列に対して、その値を使用します。  
   
--   *別名 udt* -元のテーブルでは、2つの別名ユーザー定義データ型 (udt) dbo が使用されます。OrderNumber および dbo。Dbo.accountnumber 列と AccountNumber 列の AccountNumber。 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] では、メモリ最適化テーブルに対してエイリアス UDT がサポートされていません。したがって、新しいテーブルでは、システム データ型 nvarchar(25) と nvarchar(15) が個別に使用されます。  
+-   *エイリアス UDT* - 元のテーブルでは、2 つのエイリアス ユーザー定義データ型 (UDT) が使用されます。1 つは dbo.OrderNumber で、これは PurchaseOrderNumber 列に対して使用されます。もう 1 つは dbo.AccountNumber で、AccountNumber 列に対して使用されます。 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] では、メモリ最適化テーブルに対してエイリアス UDT がサポートされていません。したがって、新しいテーブルでは、システム データ型 nvarchar(25) と nvarchar(15) が個別に使用されます。  
   
 -   *インデックス キーの NULL 値を許容する列* - 元のテーブルでは、SalesPersonID 列は NULL 値を許容しますが、新しいテーブルのこの列では NULL 値が許容されず、既定の制約として値 -1 が設定されています。 これは、メモリ最適化テーブルのインデックスでは、インデックス キーに NULL 値を許容する列を使用できないためです。この場合は、-1 が NULL のサロゲートです。  
   
 -   *計算列* - [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] のメモリ最適化テーブルでは計算列がサポートされていないため、計算列である SalesOrderNumber および TotalDue は省略されます。 新しい Sales.vSalesOrderHeader_extended_inmem ビューには、SalesOrderNumber 列と TotalDue 列が反映されています。 したがって、これらの列が必要な場合は、このビューを使用します。  
   
--   *Foreign key 制約*は、の[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]メモリ最適化テーブルではサポートされていません。 また、SalesOrderHeader_inmem はサンプル ワークロードのホット テーブルであり、外部キー制約には、すべての DML 操作に対して追加の処理が必要です。これは、このテーブルには、この制約で参照される他のすべてのテーブル内の参照が必要だからです。 したがって、アプリによって参照整合性が確保されているものと見なされ、行の挿入時には参照整合性は検証されません。 このテーブルのデータの参照整合性は、ストアド プロシージャ dbo.usp_ValidateIntegrity を使用して、次のスクリプトで確認できます。  
+-   "外部キー制約"** は、 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]のメモリ最適化テーブルではサポートされていません。 また、SalesOrderHeader_inmem はサンプル ワークロードのホット テーブルであり、外部キー制約には、すべての DML 操作に対して追加の処理が必要です。これは、このテーブルには、この制約で参照される他のすべてのテーブル内の参照が必要だからです。 したがって、アプリによって参照整合性が確保されているものと見なされ、行の挿入時には参照整合性は検証されません。 このテーブルのデータの参照整合性は、ストアド プロシージャ dbo.usp_ValidateIntegrity を使用して、次のスクリプトで確認できます。  
   
     ```  
     DECLARE @o int = object_id(N'Sales.SalesOrderHeader_inmem')  
     EXEC dbo.usp_ValidateIntegrity @o  
     ```  
   
--   *Check 制約*は、SQ サーバー2014のメモリ最適化テーブルではサポートされていません。 ドメインの整合性は、次のスクリプトを使用して、参照整合性と共に検証されます。  
+-   "CHECK 制約"** は、SQL Server 2014 のメモリ最適化テーブルではサポートされていません。 ドメインの整合性は、次のスクリプトを使用して、参照整合性と共に検証されます。  
   
     ```  
     DECLARE @o int = object_id(N'Sales.SalesOrderHeader_inmem')  
@@ -228,7 +227,7 @@ ms.locfileid: "75228473"
   
 -   *Rowguid* - rowguid 列は省略されます。 詳細については、SalesOrderHeader テーブルの説明を参照してください。  
   
--   *Unique*、 *Check* 、および*Foreign Key 制約*については、次の2つの方法で考慮されます。ストアドプロシージャ product. usp_InsertProduct_inmem と product. usp_DeleteProduct_inmem を使用して、製品を挿入および削除できます。これらのプロシージャはドメインと参照整合性を検証し、整合性に違反した場合は失敗します。 次のスクリプトを使用して、ドメインと参照整合性をそのままの状態で検証することもできます。  
+-   "UNIQUE 制約"**, ** 、および "外部キー制約" ** are accounted for in two ways: the stored procedures Product.usp_InsertProduct_inmem 、および "外部キー制約" Product.usp_DeleteProduct_inmem can be used to insert 、および "外部キー制約" delete products; these procedures validate domain 、および "外部キー制約" referential integrity, 、および "外部キー制約" will fail if integrity is violated. 次のスクリプトを使用して、ドメインと参照整合性をそのままの状態で検証することもできます。  
   
     ```  
     DECLARE @o int = object_id(N'Production.Product')  
@@ -239,7 +238,7 @@ ms.locfileid: "75228473"
   
  Sales.SpecialOffer  
   
--   *Check* *制約と Foreign Key 制約*については、次の2つの方法で考慮されます。ストアドプロシージャ Sales. usp_InsertSpecialOffer_inmem と sales. usp_DeleteSpecialOffer_inmem を使用して、特別プランを挿入および削除できます。これらのプロシージャはドメインと参照整合性を検証し、整合性に違反した場合は失敗します。 次のスクリプトを使用して、ドメインと参照整合性をそのままの状態で検証することもできます。  
+-   "CHECK 制約"** と "外部キー制約" ** are accounted for in two ways: the stored procedures Sales.usp_InsertSpecialOffer_inmem と "外部キー制約" Sales.usp_DeleteSpecialOffer_inmem can be used to insert と "外部キー制約" delete special offers; these procedures validate domain と "外部キー制約" referential integrity, と "外部キー制約" will fail if integrity is violated. 次のスクリプトを使用して、ドメインと参照整合性をそのままの状態で検証することもできます。  
   
     ```  
     DECLARE @o int = object_id(N'Sales.SpecialOffer_inmem')  
@@ -250,7 +249,7 @@ ms.locfileid: "75228473"
   
  Sales.SpecialOfferProduct  
   
--   *Foreign Key 制約*は、次の2つの方法で考慮されます。ストアドプロシージャ Sales. usp_InsertSpecialOfferProduct_inmem を使用すると、特別なプランと製品の間にリレーションシップを挿入できます。このプロシージャは参照整合性を検証し、整合性に違反した場合は失敗します。 次のスクリプトを使用して、参照整合性をそのままの状態で検証することもできます。  
+-   "外部キー制約"** は、2 つの方法で説明されます。ストアド プロシージャ Sales.usp_InsertSpecialOfferProduct_inmem を使用すると、特価品と製品の関係を挿入できます。このプロシージャは参照整合性を検証し、整合性に違反すると失敗します。 次のスクリプトを使用して、参照整合性をそのままの状態で検証することもできます。  
   
     ```  
     DECLARE @o int = object_id(N'Sales.SpecialOfferProduct_inmem')  
@@ -324,7 +323,7 @@ ms.locfileid: "75228473"
   
         -   @ShipMethodID [int]  
   
-        -   @SalesOrderDetailsSalesOrderDetailType_inmem-注文の品目を含む TVP  
+        -   @SalesOrderDetails Sales.SalesOrderDetailType_inmem - 注文の品目が含まれる TVP  
   
     -   入力パラメーター (省略可能):  
   
@@ -386,7 +385,7 @@ ms.locfileid: "75228473"
   
     -   これはヘルパー プロシージャ dbo.usp_GenerateCKCheck、dbo.usp_GenerateFKCheck、および dbo.GenerateUQCheck を使用して、整合性チェックの実行に必要な T-SQL を生成します。  
   
-##  <a name="PerformanceMeasurementsusingtheDemoWorkload"></a> デモ ワークロードを使用したパフォーマンス測定  
+##  <a name="performance-measurements-using-the-demo-workload"></a><a name="PerformanceMeasurementsusingtheDemoWorkload"></a>デモワークロードを使用したパフォーマンス測定  
  ostress は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] の CSS [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] サポート チームによって開発されたコマンド ライン ツールです。 このツールを使用すると、クエリやストアド プロシージャを並列実行できます。 指定された T-SQL ステートメントが並列実行されるようにスレッドの数を構成できるほか、そのスレッドでステートメントを実行する回数を指定できます。ostress はスレッドをスピン アップし、すべてのスレッド内のステートメントを並列実行します。 すべてのスレッドに対する実行が完了したら、その実行が完了するまでの所要時間を報告します。  
   
 ### <a name="installing-ostress"></a>ostress のインストール  
@@ -520,8 +519,7 @@ ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @
   
  合計 8 個の物理 (16 個の論理) コアを備えたテスト サーバーでの所要時間は 41 分 25 秒でした。 合計 24 個の物理 (48 個の論理) コアを備えた 2 台目のテスト サーバーでの所要時間は 52 分 16 秒でした。  
   
- ディスク ベース テーブルを使用していると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では CPU をフルに活用できません。これが主な要因となり、このテストでは、メモリ最適化テーブルとディスク ベース テーブルのパフォーマンスに差が生じました。 CPU をフル活用できない原因はラッチ競合です。同時実行トランザクションは同じデータ ページに書き込もうとしますが、ラッチにより、一度に 1 つのトランザクションしかページに書き込むことができなくなります。 
-  [!INCLUDE[hek_2](../includes/hek-2-md.md)] エンジンはラッチ フリーで、データ行はページ単位で整理されていません。 このため、同時実行トランザクションでは、互いの挿入がブロック[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]されることはないため、が CPU を完全に利用できるようになります。  
+ ディスク ベース テーブルを使用していると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では CPU をフルに活用できません。これが主な要因となり、このテストでは、メモリ最適化テーブルとディスク ベース テーブルのパフォーマンスに差が生じました。 CPU をフル活用できない原因はラッチ競合です。同時実行トランザクションは同じデータ ページに書き込もうとしますが、ラッチにより、一度に 1 つのトランザクションしかページに書き込むことができなくなります。 [!INCLUDE[hek_2](../includes/hek-2-md.md)] エンジンはラッチ フリーで、データ行はページ単位で整理されていません。 このため、同時実行トランザクションでは、互いの挿入がブロック[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]されることはないため、が CPU を完全に利用できるようになります。  
   
  ワークロードの実行中、タスク マネージャーなどを使用して、CPU の使用率を確認できます。 ディスク ベース テーブルの CPU 使用率が、100% からはかけ離れていることがわかります。 16 個の論理プロセッサを備えたテスト構成では、使用率は 24% 前後で推移します。  
   
@@ -538,7 +536,7 @@ ostress.exe -S. -E -dAdventureWorks2014 -Q"EXEC Demo.usp_DemoReset"
   
  デモの実行が完了するたびに、リセットすることをお勧めします。 このワークロードは挿入のみであるため、実行のたびに多くのメモリを消費します。このため、メモリ不足が発生しないようにリセットが必要です。 実行後に消費されるメモリ量について、セクション「 [ワークロード実行後のメモリ使用率](#Memoryutilizationafterrunningtheworkload)」で説明しています。  
   
-###  <a name="Troubleshootingslow-runningtests"></a> 実行速度の遅いテストのトラブルシューティング  
+###  <a name="troubleshooting-slow-running-tests"></a><a name="Troubleshootingslow-runningtests"></a>実行速度の遅いテストのトラブルシューティング  
  テスト結果は、通常、ハードウェアと、テスト実行で使用されたコンカレンシーのレベルによって変わります。 期待した結果を得られない場合に確認することをいくつか次に示します。  
   
 -   同時実行トランザクションの数: 1 つのスレッドでワークロードを実行すると、 [!INCLUDE[hek_2](../includes/hek-2-md.md)] によるパフォーマンス向上が 2 倍に満たない場合があります。 高レベルのコンカレンシーがある場合、唯一大きな問題になるのがラッチ競合です。  
@@ -547,15 +545,14 @@ ostress.exe -S. -E -dAdventureWorks2014 -Q"EXEC Demo.usp_DemoReset"
   
     -   現象: ディスク ベース テーブルでワークロードを実行しているときに CPU 使用率が高い場合、競合の数はそれほど多くありません。これは、コンカレンシーが不足していることを示します。  
   
--   ログ ドライブの速度:ログ ドライブが、システム内のトランザクション スループット レベルに対応できない場合、ワークロードはログ IO でボトルネックになります。 
-  [!INCLUDE[hek_2](../includes/hek-2-md.md)]でのログ記録は効率的ですが、ログ IO がボトルネックになっていると、パフォーマンス向上の可能性は限られます。  
+-   ログ ドライブの速度: ログ ドライブが、システム内のトランザクション スループット レベルに対応できない場合、ワークロードはログ IO でボトルネックになります。 [!INCLUDE[hek_2](../includes/hek-2-md.md)]でのログ記録は効率的ですが、ログ IO がボトルネックになっていると、パフォーマンス向上の可能性は限られます。  
   
     -   現象: メモリ最適化テーブルでワークロードを実行しているとき、CPU 使用率が 100% からかけ離れている場合、または、その変動が激しい場合は、ログ IO ボトルネックが存在する可能性があります。 これを確認するには、リソース モニターを開き、ログ ドライブのキュー長を確認します。  
   
-##  <a name="MemoryandDiskSpaceUtilizationintheSample"></a> サンプルにおけるメモリおよびディスク領域の使用率  
+##  <a name="memory-and-disk-space-utilization-in-the-sample"></a><a name="MemoryandDiskSpaceUtilizationintheSample"></a>サンプルでのメモリとディスク領域の使用率  
  ここでは、サンプル データベースのメモリおよびディスク領域の使用率に関して期待すべき事項について説明します。 また、16 個の論理コアを備えたテスト サーバーでの結果も示します。  
   
-###  <a name="Memoryutilizationforthememory-optimizedtables"></a> メモリ最適化テーブルのメモリ使用率  
+###  <a name="memory-utilization-for-the-memory-optimized-tables"></a><a name="Memoryutilizationforthememory-optimizedtables"></a>メモリ最適化テーブルのメモリ使用率  
   
 #### <a name="overall-utilization-of-the-database"></a>データベースの全体的な使用率  
  次のクエリを使用すると、システムの [!INCLUDE[hek_2](../includes/hek-2-md.md)] の合計メモリ使用率を取得できます。  
@@ -608,7 +605,7 @@ WHERE t.type='U'
   
  ここで印象的なのは、インデックスに割り当てられているメモリのサイズです (テーブル データのサイズと比較)。 このサイズになるのは、サンプルのハッシュ インデックスが、大きなデータ サイズに合わせて事前にサイズ調整されているためです。 ハッシュ インデックスのサイズは固定されているため、テーブルのデータのサイズに合わせて大きくなることはありません。  
   
-####  <a name="Memoryutilizationafterrunningtheworkload"></a> ワークロード実行後のメモリ使用率  
+####  <a name="memory-utilization-after-running-the-workload"></a><a name="Memoryutilizationafterrunningtheworkload"></a>ワークロードの実行後のメモリ使用率  
  1,000 万個の販売注文を挿入した後の全体的なメモリ使用率は次のようになります。  
   
 ```  
@@ -655,7 +652,7 @@ WHERE t.type='U'
 #### <a name="after-demo-reset"></a>デモのリセット後  
  ストアド プロシージャ Demo.usp_DemoReset を使用すると、デモをリセットできます。 これにより SalesOrderHeader_inmem テーブルと SalesOrderDetail_inmem テーブルのデータが削除され、元の SalesOrderHeader テーブルと SalesOrderDetail テーブルからデータが再送信されます。  
   
- この時点でテーブルの行は削除されていますが、メモリはすぐに再利用されるわけではありません。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]は、必要に応じて、メモリ最適化テーブル内の削除された行のメモリをバックグラウンドで再利用します。 デモのリセット後すぐにこれがわかります。システムにトランザクション ワークロードがない場合、削除された行のメモリはまだ再利用されていません。  
+ この時点でテーブルの行は削除されていますが、メモリはすぐに再利用されるわけではありません。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、メモリは、メモリ最適化テーブルの削除された行から、必要に応じてバックグラウンドで再利用されます。 デモのリセット後すぐにこれがわかります。システムにトランザクション ワークロードがない場合、削除された行のメモリはまだ再利用されていません。  
   
 ```  
 SELECT type  
@@ -745,10 +742,10 @@ ORDER BY state, file_type
 |**state_desc**|**file_type_desc**|**count**|**on-disk size MB**|  
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
-|UNDER CONSTRUCTION|DATA|1 で保護されたプロセスとして起動されました|128|  
-|UNDER CONSTRUCTION|DELTA|1 で保護されたプロセスとして起動されました|8|  
+|UNDER CONSTRUCTION|DATA|1|128|  
+|UNDER CONSTRUCTION|DELTA|1|8|  
   
- 領域のほとんどが、事前作成されたデータとデルタ ファイルによって使用されていることがわかります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]論理プロセッサごとに (データ、デルタ) ファイルの1組のペアを事前に作成しました。 また、さらに効率よくデータを挿入できるように、データ ファイルは 128 MB に、デルタ ファイルは 8 MB に事前にサイズ調整されています。  
+ 領域のほとんどが、事前作成されたデータとデルタ ファイルによって使用されていることがわかります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] により、1 組のファイル ペア (データとデルタ) が論理プロセッサごとに事前作成されます。 また、さらに効率よくデータを挿入できるように、データ ファイルは 128 MB に、デルタ ファイルは 8 MB に事前にサイズ調整されています。  
   
  メモリ最適化テーブルの実際のデータは、1 つのデータ ファイルにあります。  
   
@@ -791,8 +788,8 @@ ORDER BY state, file_type
 |**state_desc**|**file_type_desc**|**count**|**on-disk size MB**|  
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
-|UNDER CONSTRUCTION|DATA|1 で保護されたプロセスとして起動されました|128|  
-|UNDER CONSTRUCTION|DELTA|1 で保護されたプロセスとして起動されました|8|  
+|UNDER CONSTRUCTION|DATA|1|128|  
+|UNDER CONSTRUCTION|DELTA|1|8|  
   
  事前作成された 16 組のファイル ペアはまだあり、チェックポイントが閉じているので、準備状態です。  
   

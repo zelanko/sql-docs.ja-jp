@@ -15,10 +15,10 @@ author: chugugrace
 ms.author: chugu
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 1652d5eec9d6419e7b39f96a8b854eef8651bf26
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74687160"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>Data Migration Assistant を使用して SQL Server 統合サービスの移行評価を実行する
@@ -44,8 +44,7 @@ SQL Server 統合サービス (SSIS) パッケージを評価するには、以�
 
     ソースを**SQL Server**として選択し、対象サーバーの種類を**Azure SQL Database**または**Azure SQL Database マネージインスタンス**として設定します。
 
-1. 
-  **[作成]** をクリックします。
+1. **[作成]** をクリックします。
 
     ![評価の作成](media/dma-assess-ssis/dma-assess-ssis-create.png)
 
@@ -63,9 +62,8 @@ SQL Server 統合サービス (SSIS) パッケージを評価するには、以�
 1. 評価する SSIS パッケージのストレージの種類を選択し、[**追加**] を選択します。
 ![ソースの追加](media/dma-assess-ssis/dma-assess-ssis-addsource-type.png)
 1. [**ソースの追加**] を選択して接続のフライアウトメニューを開きます (複数のフォルダーを評価する必要がある場合)。
-1. 
-    **[Start Assessment]** (評価の開始) をクリックします。
-![評価の開始](media/dma-assess-ssis/dma-assess-ssis-assess.png)
+1. **[Start Assessment]** (評価の開始) をクリックします。
+  ![評価の開始](media/dma-assess-ssis/dma-assess-ssis-assess.png)
 
 ## <a name="view-results"></a>結果の表示
 
@@ -76,5 +74,5 @@ SQL Server 統合サービス (SSIS) パッケージを評価するには、以�
 ## <a name="next-steps"></a>次のステップ
 
 - [オンプレミスの SSIS ワークロードを ADF の SSIS に移行する方法の概要](https://docs.microsoft.com/azure/data-factory/scenario-ssis-migration-overview)
-- [SQL Server Integration Services パッケージを Azure SQL Database マネージドインスタンスに移行する](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance)
+- [SQL Server Integration Services パッケージを Azure SQL Database マネージド インスタンスに移行する](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance)
 - [SQL Server Integration Services パッケージを Azure SQL Database に再デプロイする](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages)

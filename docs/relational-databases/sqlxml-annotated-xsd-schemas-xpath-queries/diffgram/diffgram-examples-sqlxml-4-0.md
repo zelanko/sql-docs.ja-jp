@@ -17,10 +17,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6fe05c49f44bc0e210687b63e0eb8878b479a07f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75257265"
 ---
 # <a name="diffgram-examples-sqlxml-40"></a>DiffGram の例 (SQLXML 4.0)
@@ -347,9 +347,9 @@ ms.locfileid: "75257265"
   
 -   ** \<** ** \<** ** \<Before>** ブロックには、customer>要素 (例 **: id = "Customer2"**) があります。この要素には、(同じ id の) datainstance>ブロックに対応する customer>要素があります。 ** \<** Datainstance>ブロック内の要素では、次のように指定します。 **haschanges = "modified"**。 ** \<** これは更新操作であり、顧客 ANATR に対して、 ** \<datainstance>** block で指定された値を使用して、Cust テーブルの CompanyName との情報が更新されます。  
   
--   ** \<** ** \<** **** ** \<Datainstance>** ブロックには、Customer>要素 (Order3: id = "Customer3") と Order>要素 (**diffgram: id = ""**) があります。 これらの要素のどちらにも、 **diffgram: hasChanges**属性が指定されていません。 このため、DiffGram の処理ロジックで、これらの要素は無視されます。  
+-   ** \<** ** \<** **diffgr:id="Customer3"** ** \<Datainstance>** ブロックには、Customer>要素 (Order3: id = "Customer3") と Order>要素 (**diffgram: id = ""**) があります。 これらの要素のどちらにも、 **diffgram: hasChanges**属性が指定されていません。 このため、DiffGram の処理ロジックで、これらの要素は無視されます。  
   
--   ** \<** \< ** \<** **** ** \<Datainstance>** ブロックには、Customer>要素 (Order4 **: id = "Customer4"**) と Order>要素 () があります。この要素には、before> ブロックに対応する要素がありません。 Datainstance>ブロック内のこれらの要素は、次のように指定します **: haschanges = "inserted"**。 ** \<** このため、新しいレコードが Cust テーブルと Ord テーブルに追加されます。  
+-   ** \<** \< ** \<** **diffgr:id="Order4"** ** \<Datainstance>** ブロックには、Customer>要素 (Order4 **: id = "Customer4"**) と Order>要素 () があります。この要素には、before> ブロックに対応する要素がありません。 Datainstance>ブロック内のこれらの要素は、次のように指定します **: haschanges = "inserted"**。 ** \<** このため、新しいレコードが Cust テーブルと Ord テーブルに追加されます。  
   
 #### <a name="to-test-the-diffgram"></a>DiffGram をテストするには  
   

@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: cec604ff1a93213fc6308455cadda90e6efa2d61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401422"
 ---
 # <a name="appliance-monitoring-for-analytics-platform-system"></a>分析プラットフォームシステムのアプライアンス監視
 このアプライアンス監視ガイドでは、Analytics Platform System アプライアンスを監視するためのツールとタスクについて説明します。  
   
-## <a name="Basics"></a>監視の基本とツール  
+## <a name="monitoring-basics-and-tools"></a><a name="Basics"></a>監視の基本とツール  
 SQL Server PDW アプライアンスで監視できる値と情報は広範囲にわたっています。 たとえば、一般的な監視タスクを次に示します。  
   
 -   SQL Server PDW によって発行されたアラートを確認します。  
@@ -38,7 +38,7 @@ SQL Server PDW アプライアンスで監視できる値と情報は広範囲�
 アプライアンスの監視に使用できるツールは複数あります。  
   
 管理コンソール  
-SQL Server PDW には管理コンソールがあります。 これは、クエリ、読み込み、バックアップと復元、ロック、セッション、アラート、およびアプライアンスの状態に関する情報を表示する web ベースのツールです。 管理コンソールはアプライアンス上で実行されます。ユーザーは、Internet Explorer を使用して管理コンソールに接続します。 詳細については、次を参照してください。  
+SQL Server PDW には管理コンソールがあります。 これは、クエリ、読み込み、バックアップと復元、ロック、セッション、アラート、およびアプライアンスの状態に関する情報を表示する web ベースのツールです。 管理コンソールはアプライアンス上で実行されます。ユーザーは、Internet Explorer を使用して管理コンソールに接続します。 詳細については次を参照してください:  
   
 -   [管理コンソール &#40;Analytics Platform System&#41;を使用してアプライアンスを監視する](monitor-the-appliance-by-using-the-admin-console.md)  
   
@@ -61,9 +61,9 @@ SQL Server PDW は、Systems Center Operations Manager と広範囲に統合さ�
   
 -   [SQL Server PDW のための電源シェルの監視の例](https://go.microsoft.com/fwlink/?LinkId=248020)  
    
-## <a name="Tasks"></a>関連する監視タスク  
+## <a name="related-monitoring-tasks"></a><a name="Tasks"></a>関連する監視タスク  
   
-|監視タスク|[説明]|  
+|監視タスク|説明|  
 |-------------------|---------------|  
 |管理コンソールを使用してアプライアンスを監視します。|[管理コンソール &#40;Analytics Platform System&#41;を使用してアプライアンスを監視する](monitor-the-appliance-by-using-the-admin-console.md)|  
 |システムビューを使用してアプライアンスを監視します。|[システムビュー &#40;Analytics Platform System&#41;を使用してアプライアンスを監視する](monitor-the-appliance-by-using-system-views.md)|  

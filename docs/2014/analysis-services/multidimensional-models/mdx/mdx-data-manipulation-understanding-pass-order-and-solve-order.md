@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d7c17bf520f1feaf454d784658c8abc423dbe7a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75229430"
 ---
 # <a name="understanding-pass-order-and-solve-order-mdx"></a>パス順序と解決順序の概要 (MDX)
@@ -67,8 +67,7 @@ ms.locfileid: "75229430"
  解決順序がどれほど複雑なものになることがあるかを示すために、個別のクエリとしては解決順序を考慮する必要のない 2 つのクエリで始まる一連の MDX クエリを次に示します。 それらの 2 つのクエリを組み合わせると、解決順序を考慮しなければならないクエリになります。  
   
 > [!NOTE]  
->  Adventure Works サンプル多次元データベースに対してこれらの MDX クエリを実行できます。 
-  [AdventureWorks Multidimensional Models SQL Server 2012](https://msftdbprodsamples.codeplex.com/releases/view/55330) サンプルは、CodePlex サイトからダウンロードできます。  
+>  Adventure Works サンプル多次元データベースに対してこれらの MDX クエリを実行できます。 [AdventureWorks Multidimensional Models SQL Server 2012](https://msftdbprodsamples.codeplex.com/releases/view/55330) サンプルは、CodePlex サイトからダウンロードできます。  
   
 ### <a name="query-1-differences-in-income-and-expenses"></a>クエリ 1-収益と経費の違い  
  1 番目の MDX クエリとして、年ごとの売上とコストの差を計算するために、次の例のような単純な MDX クエリを作成します。  
@@ -93,7 +92,7 @@ FROM [Adventure Works]
 |-|---------------------------|---------------------------------|  
 |**CY 2007**|$9,791,060.30|$5,718,327.17|  
 |**CY 2008**|$9,770,899.74|$5,721,205.24|  
-|**年の差**|($20,160.56)|$2,878.06|  
+|**Year Difference**|($20,160.56)|$2,878.06|  
   
 ### <a name="query-2-percentage-of-income-after-expenses"></a>クエリ 2-経費後の収益の割合  
  2 番目のクエリとして、年ごとの経費差し引き後の収益のパーセンテージを計算するために、次の MDX クエリを使用します。  
@@ -126,12 +125,9 @@ FROM [Adventure Works]
 ### <a name="query-3-combined-year-difference-and-net-income-calculations"></a>クエリ 3-年の差と純利益の計算の組み合わせ  
  最後のクエリでは、前の 2 つの例を 1 つの MDX クエリに結合します。このとき、列と行の両方で計算を行うため、解決順序が重要になります。 計算が正しい順序で確実に行われるように、`SOLVE_ORDER` キーワードを使用して計算の行われる順序を定義します。  
   
- 
-  `SOLVE_ORDER` キーワードは、MDX クエリまたは `CREATE MEMBER` コマンド内の計算されるメンバーの解決順序を指定します。 
-  `SOLVE_ORDER` キーワードで使用される整数値は相対値であり、0 で始まる必要はありません。また、連続値である必要もありません。 この値は、より高い値を持つメンバーを計算して得られる値に基づいてそのメンバーを計算するように MDX に指示するだけです。 計算されるメンバーの定義に `SOLVE_ORDER` キーワードが含まれていない場合、その計算されるメンバーの既定値は 0 です。  
+ `SOLVE_ORDER` キーワードは、MDX クエリまたは `CREATE MEMBER` コマンド内の計算されるメンバーの解決順序を指定します。 `SOLVE_ORDER` キーワードで使用される整数値は相対値であり、0 で始まる必要はありません。また、連続値である必要もありません。 この値は、より高い値を持つメンバーを計算して得られる値に基づいてそのメンバーを計算するように MDX に指示するだけです。 計算されるメンバーの定義に `SOLVE_ORDER` キーワードが含まれていない場合、その計算されるメンバーの既定値は 0 です。  
   
- たとえば、最初の 2 つの例のクエリで使用されている計算を結合すると、計算対象となる 2 つのメンバーである `Year Difference` と `Profit Margin`は、MDX クエリの例の結果データセット内にある 1 つのセルで交差します。 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] がこのセルをどのように評価するかを決定する唯一の方法は、解決順序を指定することです。 このセルを作成するために使用する数式は、2 つの計算されるメンバーの解決順序に応じて、異なる結果を作成します。  
+ たとえば、最初の 2 つの例のクエリで使用されている計算を結合すると、計算対象となる 2 つのメンバーである `Year Difference` と `Profit Margin`は、MDX クエリの例の結果データセット内にある 1 つのセルで交差します。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] がこのセルをどのように評価するかを決定する唯一の方法は、解決順序を指定することです。 このセルを作成するために使用する数式は、2 つの計算されるメンバーの解決順序に応じて、異なる結果を作成します。  
   
  まず、最初の 2 つのクエリで使用されている計算を次の MDX クエリのように結合してみます。  
   
@@ -153,14 +149,13 @@ ON ROWS
 FROM [Adventure Works]  
 ```  
   
- この結合された MDX クエリの例では、 `Profit Margin` が最も高い解決順序を持つため、2 つの式が相互作用するときに優先されます。 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] は、問題のセルを `Profit Margin` の数式を使用して評価します。 この入れ子にされた計算は、次の表に示すような結果を作成します。  
+ この結合された MDX クエリの例では、 `Profit Margin` が最も高い解決順序を持つため、2 つの式が相互作用するときに優先されます。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] は、問題のセルを `Profit Margin` の数式を使用して評価します。 この入れ子にされた計算は、次の表に示すような結果を作成します。  
   
 ||Internet Sales Amount|Internet Total Product Cost|利益率|  
 |-|---------------------------|---------------------------------|-------------------|  
 |**CY 2007**|$9,791,060.30|$5,718,327.17|41.60%|  
 |**CY 2008**|$9,770,899.74|$5,721,205.24|41.45%|  
-|**年の差**|($20,160.56)|$2,878.06|114.28%|  
+|**Year Difference**|($20,160.56)|$2,878.06|114.28%|  
   
  共有されるセルの結果は、 `Profit Margin`の数式に基づいています。 つまり、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] は共有されるセルの結果を `Year Difference` のデータを使用して計算し、次の数式を作成します。結果はわかりやすくするために丸めてあります。  
   
@@ -200,7 +195,7 @@ FROM [Adventure Works]
 |-|---------------------------|---------------------------------|-------------------|  
 |**CY 2007**|$9,791,060.30|$5,718,327.17|41.60%|  
 |**CY 2008**|$9,770,899.74|$5,721,205.24|41.45%|  
-|**年の差**|($20,160.56)|$2,878.06|(0.15%)|  
+|**Year Difference**|($20,160.56)|$2,878.06|(0.15%)|  
   
  このクエリは `Year Difference` の数式を使用し、 `Profit Margin` のデータをその数式に使用するため、共有されるセルの数式は次の計算のようになります。  
   
@@ -214,13 +209,12 @@ FROM [Adventure Works]
 0.4145 - 0.4160= -0.15  
 ```  
   
-## <a name="additional-considerations"></a>追加の考慮事項  
- 解決順序の問題は、計算されるメンバー、カスタム ロールアップ式、または計算されるセルの関係するディメンションが多数あるキューブの場合は特に、非常に複雑になります。 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] が MDX クエリを評価するとき、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] は、MDX クエリで指定されているキューブのディメンションも含め、特定のパスに関係するものすべての解決順序の値を考慮します。  
+## <a name="additional-considerations"></a>その他の注意点  
+ 解決順序の問題は、計算されるメンバー、カスタム ロールアップ式、または計算されるセルの関係するディメンションが多数あるキューブの場合は特に、非常に複雑になります。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] が MDX クエリを評価するとき、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] は、MDX クエリで指定されているキューブのディメンションも含め、特定のパスに関係するものすべての解決順序の値を考慮します。  
   
 ## <a name="see-also"></a>参照  
  [計算 Ationcurrentpass &#40;MDX&#41;](/sql/mdx/calculationcurrentpass-mdx)   
  [MDX&#41;&#40;計算 Ationpass 値](/sql/mdx/calculationpassvalue-mdx)   
  [CREATE MEMBER ステートメント &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)   
- [MDX&#41;&#40;データを操作する](mdx-data-manipulation-manipulating-data.md)  
+ [データの操作 (MDX)](mdx-data-manipulation-manipulating-data.md)  
   

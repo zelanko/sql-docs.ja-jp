@@ -10,23 +10,23 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 67029d235a1bc65b5ee0ab6f01f51dea42ebcc8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401300"
 ---
 # <a name="configure-system-center-operations-manager-scom-to-monitor-analytics-platform-system"></a>Analytics Platform System を監視するように System Center Operations Manager (SCOM) を構成する
 Analytics Platform System の System Center Operations Manager (SCOM) 管理パックを構成するには、次の手順に従います。 SCOM から Analytics Platform System を監視するには、管理パックが必要です。  
   
-## <a name="BeforeBegin"></a>はじめに  
-**前提条件**  
+## <a name="before-you-begin"></a><a name="BeforeBegin"></a>開始する前に  
+**必要条件**  
   
 System Center Operations Manager 2007 R2 がインストールされ、実行されている必要があります。  
   
 管理パックをインストールして構成する必要があります。 「 [Scom 管理パック &#40;Analytics Platform system&#41;をインストールする](install-the-scom-management-packs.md)」および「 [PDW &#40;analytics platform SYSTEM&#41;の scom 管理パックをインポート](import-the-scom-management-pack-for-pdw.md)する」を参照してください。  
   
-## <a name="ConfigureRunAsProfile"></a>System Center での実行プロファイルの構成  
+## <a name="configure-run-as-profile-in-system-center"></a><a name="ConfigureRunAsProfile"></a>System Center での実行プロファイルの構成  
 System Center を構成するには、次の手順を実行する必要があります。  
   
 -   **APS 監視**ドメインユーザーの実行アカウントを作成し、 **Microsoft aps ウォッチャーアカウント**にマップします。  
@@ -41,8 +41,7 @@ System Center を構成するには、次の手順を実行する必要があり
   
         ![ConfigureScomCreateRunAsAccount](./media/configure-scom-to-monitor-analytics-platform-system/ConfigureScomCreateRunAsAccount.png "ConfigureScomCreateRunAsAccount")  
   
-    2.  [**実行アカウントの作成ウィザード**] ダイアログボックスが開きます。 
-  **[説明]** ページで **[次へ]** をクリックします。  
+    2.  [**実行アカウントの作成ウィザード**] ダイアログボックスが開きます。 **[説明]** ページで **[次へ]** をクリックします。  
   
     3.  [**全般プロパティ**] ページで、[**実行アカウントの種類**] で [ **Windows** ] を選択し、**表示名**として "APS Watcher" を指定します。  
   
@@ -72,7 +71,7 @@ System Center を構成するには、次の手順を実行する必要があり
   
     3.  [**実行プロファイルウィザード**] ダイアログボックスが開きます。 [**次へ**] をクリックして、[**はじめ**に] ページをスキップします。  
   
-    4.  [**全般プロパティ**] ページで、[**次へ**] をクリックします。  
+    4.  **[全般プロパティ]** ページで、 **[次へ]** をクリックします。  
   
     5.  [**実行アカウント**] ページで、[**追加**] ボタンをクリックし、以前に作成した**APS ウォッチャー**の実行アカウントを選択します。  
   
@@ -112,7 +111,7 @@ System Center を構成するには、次の手順を実行する必要があり
   
         ![RunAsProfileWizardAdd2](./media/configure-scom-to-monitor-analytics-platform-system/RunAsProfileWizardAdd2.png "RunAsProfileWizardAdd2")  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 管理パックの構成が完了したので、アプライアンスの監視を開始する準備ができました。 詳細については、「 [System Center Operations Manager &#40;Analytics Platform System&#41;を使用したアプライアンスの監視](monitor-the-appliance-by-using-system-center-operations-manager.md)」を参照してください。  
   
 <!-- MISSING LINKS ## See Also  

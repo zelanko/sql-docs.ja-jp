@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4dd4fba91b1507f711a66a88f40b2fa2ea35e1ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401358"
 ---
 # <a name="backup-and-loading-hardware-overview---parallel-data-warehouse"></a>ハードウェアのバックアップと読み込みの概要-並列データウェアハウス
@@ -25,7 +25,7 @@ ms.locfileid: "74401358"
 PDW データベースをバックアップするには、1つまたは複数のバックアップサーバーが必要です。 既存のハードウェアを使用することも、新しいハードウェアを購入することもできます。 詳細については、「[バックアップサーバーの取得と構成](acquire-and-configure-backup-server.md)」を参照してください。 これらの手順には、backup [server の容量計画ワークシート](backup-capacity-planning-worksheet.md)が含まれており、バックアップのための適切なソリューションを計画するのに役立ちます。  
   
 ## <a name="acquire-and-configure-loading-servers"></a>読み込み中のサーバーの取得と構成  
-![処理の読み込み](media/loading-process.png "処理の読み込み")  
+![読み込みプロセス](media/loading-process.png "処理の読み込み")  
   
 データを読み込むには、1つまたは複数の読み込みサーバーが必要です。 独自の既存の ETL や他のサーバーを使用することも、新しいサーバーを購入することもできます。 詳細については、「[読み込みサーバーの取得と構成](acquire-and-configure-loading-server.md)」を参照してください。 これらの手順には、読み込みのための適切なソリューションを計画する際に役立つ、[サーバー容量計画の読み込みワークシート](loading-server-capacity-planning-worksheet.md)が含まれています。  
   

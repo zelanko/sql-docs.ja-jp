@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3994a9d0bc863367edf5b1844772b94a63f19d4d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75257249"
 ---
 # <a name="introduction-to-diffgrams-in-sqlxml-40"></a>SQLXML 4.0 の DiffGram の概要
@@ -61,7 +61,7 @@ ms.locfileid: "75257249"
 ## <a name="diffgram-annotations"></a>DiffGram の注釈  
  これらの注釈は、DiffGram 名前空間 **"urn: schema-01"** で定義されています。  
   
- **番号**  
+ **id**  
  この属性は、 ** \<>** と** \<datainstance>** ブロックの前にある要素をペアにするために使用されます。  
   
  **hasChanges**  
@@ -73,7 +73,7 @@ ms.locfileid: "75257249"
 ## <a name="understanding-the-diffgram-processing-logic"></a>DiffGram の処理ロジックについて  
  DiffGram の処理ロジックでは、一定の規則に従い、挿入、更新、削除のうちどの操作であるかが判断されます。 次の表は、この規則についてまとめたものです。  
   
-|Operation|[説明]|  
+|Operation|説明|  
 |---------------|-----------------|  
 |挿入|DiffGram は、要素が** \<datainstance>** block に存在するが、対応** \<する before>** ブロックに含まれていない場合に挿入操作を示します。また、要素には、**次のよう**に、変更後の属性が指定されています (**diffgram gr: haschanges = inserted**)。 この場合、DiffGram は** \<datainstance>** block に指定されたレコードインスタンスをデータベースに挿入します。<br /><br /> 次の**よう**に、属性が指定されていない場合、要素は処理ロジックによって無視され、挿入は実行されません。 実際のサンプルについては、「 [DiffGram の例 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)」を参照してください。|  
 |更新|DiffGram は、 ** \<datainstance>** ブロックに対応する要素が存在\<する (つまり、両方の**要素の値**が同じ値である)> ブロックの前に要素がある場合に、 ** \<datainstance>** block 内の要素で変更された値を使用して、変更**後****の属性が**指定されている場合に、更新操作を示します。<br /><br /> Datainstance>block の要素で、**次のように変更**属性が指定されていない場合、処理ロジックによってエラーが返されます。 ** \<** 実際のサンプルについては、「 [DiffGram の例 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)」を参照してください。<br /><br /> [ ** \<前の>** ブロック] で [を使用する] が指定**されている場合、** **parentid**によって指定された要素の親子リレーションシップは、レコードの更新順序を決定するために使用されます。|  

@@ -23,10 +23,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 98f2ee047bccf7cd3843fe34aaf8f5caec0dc11a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75257476"
 ---
 # <a name="data-type-conversions-and-the-sqldatatype-annotation-sqlxml-40"></a>データ型の変換と sql: datatype 注釈 (SQLXML 4.0)
@@ -42,8 +42,8 @@ ms.locfileid: "75257476"
   
 |XSD データ型|SQL Server の変換|  
 |-------------------|---------------------------|  
-|Boolean|CONVERT(bit, COLUMN)|  
-|Date|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
+|ブール型|CONVERT(bit, COLUMN)|  
+|日付|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
 |decimal|CONVERT(money, COLUMN)|  
 |id/idref/idrefs|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
 |nmtoken/nmtokens|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
@@ -54,37 +54,36 @@ ms.locfileid: "75257476"
 >  に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]よって返される値の中には、 **xsd: type**を使用して指定された XML データ型との互換性がない場合があります (たとえば、"XYZ" を**decimal**データ型に変換するなど)。または、値がそのデータ型の範囲を超えている (たとえば、-10万が**unsignedshort** xsd 型に変換される) 互換性のない型を変換しようとすると、無効な XML ドキュメントが生成されるか、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラーになる可能性があります。  
   
 ## <a name="mapping-from-sql-server-data-types-to-xsd-data-types"></a>SQL Server データ型から XSD データ型へのマッピング  
- 次の表は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型から XSD データ型への明確なマッピングです。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型がわかっている場合は、XSD スキーマで指定できる、対応する XSD 型をこの表で確認してください。  
+ 次の表は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型から XSD データ型への明確なマッピングです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型がわかっている場合は、XSD スキーマで指定できる、対応する XSD 型をこの表で確認してください。  
   
 |SQL Server のデータ型|XSD データ型|  
 |--------------------------|-------------------|  
-|**bigint**|**長い**|  
-|**binary**|**base64Binary**|  
+|**bigint**|**long**|  
+|**[バイナリ]**|**base64Binary**|  
 |**bit**|**boolean**|  
-|**char**|**文字列**|  
-|**DATETIME**|**/**|  
+|**char**|**string**|  
+|**datetime**|**dateTime**|  
 |**decimal**|**decimal**|  
 |**float**|**double**|  
-|**絵**|**base64Binary**|  
+|**image**|**base64Binary**|  
 |**int**|**int**|  
 |**money**|**decimal**|  
-|**nchar**|**文字列**|  
-|**ntext**|**文字列**|  
-|**nvarchar**|**文字列**|  
-|**番号**|**decimal**|  
-|**本当の**|**float**|  
-|**smalldatetime**|**/**|  
+|**nchar**|**string**|  
+|**ntext**|**string**|  
+|**nvarchar**|**string**|  
+|**numeric**|**decimal**|  
+|**real**|**float**|  
+|**smalldatetime**|**dateTime**|  
 |**smallint**|**short**|  
 |**smallmoney**|**decimal**|  
-|**sql_variant**|**文字列**|  
-|**sysname**|**文字列**|  
-|**本文**|**文字列**|  
-|**timestamp**|**/**|  
+|**sql_variant**|**string**|  
+|**sysname**|**string**|  
+|**text**|**string**|  
+|**timestamp**|**dateTime**|  
 |**tinyint**|**unsignedByte**|  
 |**varbinary**|**base64Binary**|  
-|**varchar**|**文字列**|  
-|**UNIQUEIDENTIFIER**|**文字列**|  
+|**varchar**|**string**|  
+|**uniqueidentifier**|**string**|  
   
 ## <a name="sqldatatype-annotation"></a>sql:datatype 注釈  
  **Sql: datatype**注釈は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型を指定するために使用されます。この注釈は、次の場合に指定する必要があります。  
@@ -97,7 +96,7 @@ ms.locfileid: "75257476"
   
  一般に、スキーマには**sql: datatype**を指定することをお勧めします。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、「 [SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)」を参照してください。  
   
 ### <a name="a-specifying-xsdtype"></a>A. xsd:type を指定する  
@@ -124,7 +123,7 @@ ms.locfileid: "75257476"
   
 -   **ShipDate**属性で**xsd: type = time**を指定します。 **ShipDate**属性に対してによって[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返される値の時刻部分が表示されます。  
   
--   DueDate 属性に**xsd: type**が指定**** されていません。によって[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返されたのと同じ値が表示されます。  
+-   DueDate 属性に**xsd: type**が指定**DueDate**されていません。によって[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返されたのと同じ値が表示されます。  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>スキーマに対してサンプル XPath クエリをテストするには  
   

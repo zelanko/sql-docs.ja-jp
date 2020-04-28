@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4c56efd6c79b7ce7d74af621963f4b12e734d5f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75252169"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>SQLXML 4.0 での xml データ型のサポート
@@ -36,7 +36,7 @@ ms.locfileid: "75252169"
   
 ## <a name="guidelines-and-limitations"></a>ガイドラインと制限  
   
--   **xsd: 任意の>を xml データ型を含む列にマップすることはできません。 \<** **** このシナリオの SQLXML でのサポートは、 **sql: overflow フィールド**注釈を通じて提供されます。 もう1つの回避策は、 **xml**データ型のフィールドを**xsd: anyType**の要素としてマップすることです。 この方法は、上の表の例 "XML 要素を XML データ型の列にマップする" に示されています。  
+-   **xsd: 任意の>を xml データ型を含む列にマップすることはできません。 \<** **xml** このシナリオの SQLXML でのサポートは、 **sql: overflow フィールド**注釈を通じて提供されます。 もう1つの回避策は、 **xml**データ型のフィールドを**xsd: anyType**の要素としてマップすることです。 この方法は、上の表の例 "XML 要素を XML データ型の列にマップする" に示されています。  
   
 -   **Xml**データ型の列の内容に対する XPath クエリはサポートされていません。  
   

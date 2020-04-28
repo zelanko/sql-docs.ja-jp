@@ -27,10 +27,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c60edd0423dbba712d6185a1bfe417b2067378bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75232227"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>BACPAC ファイルのインポートによる新しいユーザー データベースの作成
@@ -85,7 +85,7 @@ ms.locfileid: "75232227"
   
     -   [[結果] ページ](#Results)  
   
-###  <a name="Introduction"></a> [説明] ページ  
+###  <a name="introduction-page"></a><a name="Introduction"></a> [説明] ページ  
  このページには、データ層アプリケーションのインポート ウィザードの手順が表示されます。  
   
  **[オプション]**  
@@ -96,7 +96,7 @@ ms.locfileid: "75232227"
   
 -   **[キャンセル]** : 操作を取り消し、ウィザードを閉じます。  
   
-###  <a name="Import_settings"></a> [インポートの設定] ページ  
+###  <a name="import-settings-page"></a><a name="Import_settings"></a> [インポートの設定] ページ  
  このページを使用して、インポートする .bacpac ファイルの場所を指定します。  
   
 -   **[ローカル ディスクからインポート]** : **[参照]** をクリックしてローカル コンピューター内を参照するか、用意されている領域にパスを指定します。 パス名には、ファイル名および .bacpac 拡張子を含める必要があります。  
@@ -107,7 +107,7 @@ ms.locfileid: "75232227"
   
      続行するには、インポートする .bacpac ファイルを指定し、 **[開く]** をクリックします。  
   
-###  <a name="Database_settings"></a> [データベースの設定] ページ  
+###  <a name="database-settings-page"></a><a name="Database_settings"></a> [データベースの設定] ページ  
  このページを使用すると、作成されるデータベースの詳細を指定できます。  
   
  **SQLServer のローカル インスタンスの場合**  
@@ -124,27 +124,26 @@ ms.locfileid: "75232227"
   
 -   [**新しいデータベース名**-インポートされたデータベースの名前を指定します。  
   
--   エディション-Business また[!INCLUDE[ssSDS](../../includes/sssds-md.md)]は[!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web を指定します。 ** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ** 
-  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]のエディションの詳細については、Web サイト「 [SQL データベース](https://www.windowsazure.com/home/tour/database/) 」を参照してください。  
+-   エディション-Business また[!INCLUDE[ssSDS](../../includes/sssds-md.md)]は[!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web を指定します。 ** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ** [!INCLUDE[ssSDS](../../includes/sssds-md.md)]のエディションの詳細については、Web サイト「 [SQL データベース](https://www.windowsazure.com/home/tour/database/) 」を参照してください。  
   
 -   [**データベースの最大サイズ (GB)** ]: ドロップダウンメニューを使用して、データベースの最大サイズを指定します。  
   
- 続行するには、 **[次へ]** をクリックします。  
+ 続行するには、[**次へ**] をクリックします。  
   
 ### <a name="validation-page"></a>[検証] ページ  
  このページを使用して、操作の妨げとなる問題を確認します。 続行するには、妨げとなる問題を解決し、 **[検証の再実行]** をクリックして、検証が成功したことを確認します。  
   
- 続行するには、 **[次へ]** をクリックします。  
+ 続行するには、[**次へ**] をクリックします。  
   
-###  <a name="Summary"></a>[概要] ページ  
+###  <a name="summary-page"></a><a name="Summary"></a> [概要] ページ  
  このページを使用すると、操作の指定ソースとターゲットの設定を確認できます。 指定した設定でインポート操作を実行するには、 **[完了]** をクリックします。 インポート操作をキャンセルしてウィザードを終了するには、 **[キャンセル]** をクリックします。  
   
-###  <a name="Progress"></a>[進行状況] ページ  
+###  <a name="progress-page"></a><a name="Progress"></a>[進行状況] ページ  
  このページには、操作の進行状況を示す進行状況バーが表示されます。 詳細な状態を表示するには、 **[詳細表示]** をクリックします。  
   
- 続行するには、 **[次へ]** をクリックします。  
+ 続行するには、[**次へ**] をクリックします。  
   
-###  <a name="Results"></a>[結果] ページ  
+###  <a name="results-page"></a><a name="Results"></a>[結果] ページ  
  このページでは、データベースのインポートや作成操作の成功と失敗が報告され、各アクションの成功または失敗が示されます。 エラーが発生したアクションには、 **[結果]** 列にリンクが表示されます。 そのアクションのエラーのレポートを表示するには、リンクをクリックします。  
   
  [**閉じる**] をクリックしてウィザードを閉じます。  

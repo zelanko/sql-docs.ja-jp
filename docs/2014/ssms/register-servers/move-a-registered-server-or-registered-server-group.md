@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: 23683b70d5b0de7b2852187969842702dd925da4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75241330"
 ---
 # <a name="move-a-registered-server-or-registered-server-group-sql-server-management-studio"></a>登録済みサーバーまたは登録済みサーバー グループの移動 (SQL Server Management Studio)
@@ -32,8 +32,7 @@ ms.locfileid: "75241330"
   
 1.  [登録済みサーバー] で、サーバーまたはサーバー グループを右クリックし、 **[移動]** をクリックします。  
   
-2.  
-  **[サーバー登録の移動]** ダイアログ ボックスでサーバー グループの一覧を展開し、サーバーまたはサーバー グループを表示するノードをクリックし、 **[OK]** をクリックします。  
+2.  **[サーバー登録の移動]** ダイアログ ボックスでサーバー グループの一覧を展開し、サーバーまたはサーバー グループを表示するノードをクリックし、 **[OK]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [サーバーの登録](register-servers.md)   

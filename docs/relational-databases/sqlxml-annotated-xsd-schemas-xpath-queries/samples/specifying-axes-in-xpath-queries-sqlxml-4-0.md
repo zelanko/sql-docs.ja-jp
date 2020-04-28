@@ -20,10 +20,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8b582b9f31245c13ec2c20e91736f794f19efd53
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75252598"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>XPath クエリ内での軸の指定 (SQLXML 4.0)
@@ -43,8 +43,7 @@ ms.locfileid: "75252598"
   
  このクエリでは`child` 、は軸で`Contact` 、はノードテストです (が`Contact` ** \<要素>** ノードの場合は TRUE \<、要素> は`child`軸に関連付けられているプライマリノード型であるため)。  
   
- 
-  `child` 軸は既定の軸です。 したがって、クエリは次のように指定できます。  
+ `child` 軸は既定の軸です。 したがって、クエリは次のように指定できます。  
   
 ```  
 /Contact  
@@ -257,8 +256,7 @@ ms.locfileid: "75252598"
   
  `attribute::CustomerID`述語では、 `attribute`は軸`CustomerID`で、はノードテストです (が`CustomerID`属性の場合、ノードテストは TRUE になります。これは、 ** \<属性>** ノードが`attribute`軸のプライマリノードであるためです)。  
   
- 
-  `attribute` 軸は省略形 (@) で指定できます。また、`child` 軸は既定の軸なので、クエリから省略できます。  
+ `attribute` 軸は省略形 (@) で指定できます。また、`child` 軸は既定の軸なので、クエリから省略できます。  
   
 ```  
 /Customer[@CustomerID="1"]  

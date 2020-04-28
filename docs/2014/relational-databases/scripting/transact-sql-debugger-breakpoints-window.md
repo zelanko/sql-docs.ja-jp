@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4e3cce22873b00e47c5d03d18cbcd58c29399afc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243107"
 ---
 # <a name="breakpoints-window"></a>[ブレークポイント] ウィンドウ
@@ -30,22 +30,19 @@ ms.locfileid: "75243107"
 ## <a name="breakpoints-window-columns"></a>[ブレークポイント] ウィンドウの列  
  既定では、 **[ブレークポイント]** ウィンドウには次の列が表示されます。  
   
- **名前**  
+ **Name**  
  ブレークポイントの名前が表示されます。 ブレークポイント名はデバッガーによって指定されます。 この名前には、そのブレークポイントを含むデータベース エンジンのクエリ エディター ウィンドウの名前、およびそのブレークポイントが設定されているクエリ エディター内の行番号が含まれます。  
   
  **Condition**  
- **[(条件なし)]** が表示されます。 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーは、ブレークポイント条件の設定をサポートしていません。  
+ **[(条件なし)]** が表示されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーは、ブレークポイント条件の設定をサポートしていません。  
   
  **[ヒット カウント]**  
- 
-  **[breaks always (常に中断)]** が表示されます。  
+ **[breaks always (常に中断)]** が表示されます。  
   
  **[列]** ボックスの一覧で次の列を選択して、それらの列を追加したり、削除したりできます。  
   
  **Assert**  
- **[(なし)]** が表示されます。 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーは、ブレークポイント フィルターの設定をサポートしていません。  
+ **[(なし)]** が表示されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーは、ブレークポイント フィルターの設定をサポートしていません。  
   
  **[ヒット時]**  
  **[中断]** が表示されます。  
@@ -60,8 +57,7 @@ ms.locfileid: "75243107"
  ブレークポイントを含むソース ファイルの名前、およびブレークポイントが設定されている行番号が表示されます。  
   
  **アドレス**  
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーはこの機能をサポートしていません。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーはこの機能をサポートしていません。  
   
  **[処理]**  
  **プロセスであることを示す** [SQL] [!INCLUDE[ssDE](../../includes/ssde-md.md)] が表示されます。 この後に、コードが実行される [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスの名前が表示されます。  

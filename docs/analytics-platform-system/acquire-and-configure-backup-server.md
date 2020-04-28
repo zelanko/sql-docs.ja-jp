@@ -10,17 +10,17 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: e160c606b19933934ec844b477ffec08475307d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401490"
 ---
 # <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>並列データウェアハウスのバックアップサーバーを取得して構成する
 この記事では、Analytics Platform System (APS) と Parallel Data Warehouse (PDW) のバックアップおよび復元機能で使用するために、非アプライアンス Windows システムをバックアップサーバーとして構成する方法について説明します。  
   
   
-## <a name="Basics"></a>Backup server の基礎  
+## <a name="backup-server-basics"></a><a name="Basics"></a>Backup server の基礎  
 バックアップサーバー:  
   
 -   は、独自の IT チームによって提供および管理されます。  
@@ -35,12 +35,12 @@ ms.locfileid: "74401490"
   
 -   は、サーバーメッセージブロック (SMB) アプリケーションレベルのネットワークプロトコルを使用する Windows ファイル共有であるバックアップファイル共有をホストします。 バックアップファイル共有のアクセス許可は、Windows ドメインユーザー (通常は専用のバックアップユーザー) に対して、共有に対するバックアップ操作と復元操作を実行する機能を提供します。 Windows ドメインユーザーのユーザー名とパスワードの資格情報は PDW に格納されるので、PDW でバックアップファイル共有に対するバックアップおよび復元操作を実行できます。  
   
-## <a name="Step1"></a>手順 1: 容量の要件を決定する  
+## <a name="step-1-determine-capacity-requirements"></a><a name="Step1"></a>手順 1: 容量の要件を決定する  
 バックアップサーバーのシステム要件は、実際のワークロードにほぼ完全に依存します。 バックアップサーバーを購入またはプロビジョニングする前に、容量の要件を把握しておく必要があります。 バックアップサーバーは、ワークロードのパフォーマンスとストレージの要件を処理できる限り、バックアップ専用である必要はありません。 また、複数のバックアップサーバーを使用して、各データベースを複数のサーバーのいずれかにバックアップおよび復元することもできます。  
   
 容量の要件を決定するには、[バックアップサーバーの容量計画ワークシート](backup-capacity-planning-worksheet.md)を使用します。  
   
-## <a name="Step2"></a>手順 2: バックアップサーバーを取得する  
+## <a name="step-2-acquire-the-backup-server"></a><a name="Step2"></a>手順 2: バックアップサーバーを取得する  
 容量の要件を十分に理解できるようになったので、購入またはプロビジョニングする必要があるサーバーとネットワークコンポーネントを計画することができます。 次の要件の一覧を購入計画に組み込み、サーバーを購入するか、既存のサーバーをプロビジョニングします。  
   
 ### <a name="software-requirements"></a>ソフトウェア要件  
@@ -61,7 +61,7 @@ Windows ファイル共有 (SMB) プロトコルを使用する任意のファ�
   
 3.  2つのポートカード用の FDR InfiniBand ケーブルを購入するか、単一のポートカードに対して 1 FDR InfiniBand ケーブルを購入します。 FDR InfiniBand ケーブルは、ロードサーバーをアプライアンス InfiniBand ネットワークに接続します。 ケーブルの長さは、使用している環境に応じて、読み込みサーバーとアプライアンス InfiniBand スイッチの距離によって異なります。  
   
-## <a name="Step3"></a>手順 3: サーバーを InfiniBand ネットワークに接続する  
+## <a name="step-3-connect-the-server-to-the-infiniband-networks"></a><a name="Step3"></a>手順 3: サーバーを InfiniBand ネットワークに接続する  
 ロードサーバーを InfiniBand ネットワークに接続するには、次の手順に従います。 サーバーが InfiniBand ネットワークを使用していない場合は、この手順をスキップします。  
   
 1.  アプライアンス InfiniBand ネットワークに接続できるように、サーバーをアプライアンスに近づけます。  
@@ -76,7 +76,7 @@ Windows ファイル共有 (SMB) プロトコルを使用する任意のファ�
   
 5.  ネットワークアダプターの InfiniBand と DNS の設定を構成します。 構成の手順については、「 [Configure InfiniBand Network Adapters](configure-infiniband-network-adapters.md)」を参照してください。  
   
-## <a name="Step4"></a>手順 4: バックアップファイル共有を構成する  
+## <a name="step-4-configure-the-backup-file-share"></a><a name="Step4"></a>手順 4: バックアップファイル共有を構成する  
 PDW は UNC ファイル共有を使用してバックアップサーバーにアクセスします。 ファイル共有を設定するには:  
   
 1.  バックアップを格納するためのフォルダーをバックアップサーバーに作成します。  
@@ -101,7 +101,7 @@ PDW は UNC ファイル共有を使用してバックアップサーバーに�
   
     -   [sp_pdw_remove_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)  
   
-## <a name="Step5"></a>手順 5: データのバックアップを開始する  
+## <a name="step-5-start-backing-up-your-data"></a><a name="Step5"></a>手順 5: データのバックアップを開始する  
 これで、バックアップサーバーへのデータのバックアップを開始する準備ができました。  
   
 データをバックアップするには、クエリクライアントを使用して SQL Server PDW に接続し、データベースのバックアップまたはデータベースの復元コマンドを実行します。 DISK = 句を使用して、バックアップサーバーとバックアップの場所を指定します。  
@@ -118,13 +118,13 @@ RESTORE DATABASE Invoices2013Full
 FROM DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full'  
 ```  
   
-詳細については、次を参照してください。 
+詳細については次を参照してください: 
   
 -   [BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)   
   
--   [データベースの復元](../t-sql/statements/restore-database-parallel-data-warehouse.md)  
+-   [RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)  
   
-## <a name="Security"></a>セキュリティに関する通知  
+## <a name="security-notices"></a><a name="Security"></a>セキュリティに関する通知  
 バックアップサーバーがアプライアンスのプライベートドメインに参加していません。 独自のネットワーク内にあり、独自のドメインとプライベートのアプライアンスドメインとの間に信頼関係がありません。  
   
 PDW のバックアップはアプライアンスに格納されていないため、IT チームはバックアップセキュリティのすべての側面を管理する責任があります。 たとえば、バックアップデータのセキュリティ、バックアップの保存に使用するサーバーのセキュリティ、およびバックアップサーバーを APS アプライアンスに接続するネットワークインフラストラクチャのセキュリティを管理することができます。  

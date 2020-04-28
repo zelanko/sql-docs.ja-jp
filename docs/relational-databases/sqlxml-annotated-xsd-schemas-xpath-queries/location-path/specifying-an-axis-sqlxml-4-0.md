@@ -22,10 +22,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a219c2093832b979171584d5559da359b574552e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75253063"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>軸の指定 (SQLXML 4.0)
@@ -41,10 +41,9 @@ ms.locfileid: "75253063"
     child::Customer  
     ```  
   
-     この XPath クエリでは、`child` は軸で、 
-  `Customer` はノード テストです。  
+     この XPath クエリでは、`child` は軸で、 `Customer` はノード テストです。  
   
--   **所属**  
+-   **parent**  
   
      コンテキスト ノードの親を含みます。  
   
@@ -54,8 +53,7 @@ ms.locfileid: "75253063"
     child::Customer/child::Order[parent::Customer/@customerID="ALFKI"]  
     ```  
   
-     これは、`child::Customer` を指定した場合と同じです。 この XPath クエリでは、`child` と `parent` は軸で、 
-  `Customer` と `Order` はノード テストです。  
+     これは、`child::Customer` を指定した場合と同じです。 この XPath クエリでは、`child` と `parent` は軸で、 `Customer` と `Order` はノード テストです。  
   
 -   **属性**  
   

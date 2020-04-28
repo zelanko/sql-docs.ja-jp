@@ -11,29 +11,29 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d9f97b1682fa8a2e04b5f1afcc2a552a326a9e43
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75242099"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>スクリプトの生成 (SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを生成するための 2 つのメカニズムが用意されています。 **スクリプトの生成とパブリッシュウィザード**を使用して、複数のオブジェクトのスクリプトを作成できます。 また、個々のオブジェクトまたは複数のオブジェクト用のスクリプトを、 **オブジェクト エクスプローラー** の **[スクリプト化]** メニューを使用して生成することもできます。  
   
-1.  **メソッドの選択:**[スクリプトの生成とパブリッシュウィザード](#GenPubScriptWiz)、[オブジェクトエクスプローラースクリプトをメニューとして](#OEScriptAsMenu)作成    
+1.  **方法の選択:**  [スクリプトの生成とパブリッシュ ウィザード](#GenPubScriptWiz)、 [オブジェクト エクスプローラーの [スクリプト化] メニュー](#OEScriptAsMenu)  
   
-2.  [**スクリプト化] メニューを使用するには:**[単一オブジェクトのスクリプト](#ScriptSingleObject)作成、[オブジェクトエクスプローラーを使用した2つ](#ScriptTwoObjectsOE)のオブジェクトのスクリプト作成、[オブジェクトエクスプローラーの詳細を使用した2つのオブジェクトのスクリプト](#ScriptTwoObjectsOED)化    
+2.  **[スクリプト化] メニューの使用方法:**  [単一オブジェクトのスクリプトの生成](#ScriptSingleObject)、 [オブジェクト エクスプローラーによる 2 つのオブジェクトのスクリプトの生成](#ScriptTwoObjectsOE)、 [[オブジェクト エクスプローラーの詳細] による 2 つのオブジェクトのスクリプトの生成](#ScriptTwoObjectsOED)  
   
 ## <a name="before-you-begin"></a>はじめに  
  要件に最も適したメカニズムを選択します。  
   
-###  <a name="GenPubScriptWiz"></a> スクリプトの生成とパブリッシュ ウィザード  
+###  <a name="generate-and-publish-scripts-wizard"></a><a name="GenPubScriptWiz"></a> スクリプトの生成とパブリッシュ ウィザード  
  **スクリプトの生成とパブリッシュ ウィザード** を使用し、多数のオブジェクトの [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを作成できます。 このウィザードでは、データベース内の全オブジェクトのスクリプトを生成することも、選択したオブジェクトのサブセットのスクリプトを生成することもできます。 ウィザードには、権限、照合順序、制約、その他を含めるかどうかなど、スクリプトのさまざまなオプションがあります。 ウィザードの使用方法の詳細については、「 [スクリプトの生成とパブリッシュ ウィザード](generate-and-publish-scripts-wizard.md)」を参照してください。  
   
-###  <a name="OEScriptAsMenu"></a> オブジェクト エクスプローラーの [スクリプト化] メニュー  
+###  <a name="object-explorer-script-as-menu"></a><a name="OEScriptAsMenu"></a> オブジェクト エクスプローラーの [スクリプト化] メニュー  
  オブジェクト エクスプローラーの **[スクリプト化]** メニューを使用し、単一オブジェクト、複数オブジェクト、または単一オブジェクトの複数のステートメントのスクリプトを作成できます。 いずれか 1 つのスクリプト タイプを選択できます。たとえば、オブジェクトの作成、変更、削除を選択できます。 スクリプトは、クエリ エディター ウィンドウ、ファイル、またはクリップボードに保存できます。 スクリプトは Unicode 形式で作成されます。  
   
-##  <a name="ScriptSingleObject"></a> 単一のオブジェクトのスクリプトを生成するには  
+##  <a name="to-generate-a-script-of-a-single-object"></a><a name="ScriptSingleObject"></a> 単一のオブジェクトのスクリプトを生成するには  
  **単一のオブジェクトのスクリプトを生成するには**  
   
 1.  オブジェクト エクスプローラーで、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
@@ -48,8 +48,8 @@ ms.locfileid: "75242099"
   
 6.  スクリプトを保存する場所を選択します。 **[新しいクエリ エディター ウィンドウ]** や **[クリップボード]** などを選択します。  
   
-##  <a name="ScriptTwoObjectsOE"></a>オブジェクトエクスプローラーを使用して2つのオブジェクトのスクリプトを生成するには  
- **オブジェクトエクスプローラーを使用して2つのオブジェクトのスクリプトを作成するには**  
+##  <a name="to-generate-a-script-of-two-objects-using-object-explorer"></a><a name="ScriptTwoObjectsOE"></a>オブジェクトエクスプローラーを使用して2つのオブジェクトのスクリプトを生成するには  
+ **オブジェクト エクスプローラーで 2 つのオブジェクトのスクリプトを生成するには**  
   
  プロシージャを削除した後でプロシージャを作成したり、テーブルを作成した後でテーブルを変更するなど、1 つのスクリプトで複数のオプションを実行させたい場合もあります。 テーブル、ビュー、ストアド プロシージャなど、異なる種類のオブジェクトを参照するスクリプトを作成する必要がある場合は、複数のオブジェクトのスクリプトを生成する次の手順を実行することもできます。  
   
@@ -65,11 +65,10 @@ ms.locfileid: "75242099"
   
 6.  最初のオブジェクトで開いたクエリ エディター ウィンドウに、2 番目のオブジェクトのスクリプトをクリップボードから貼り付けます。  
   
-##  <a name="ScriptTwoObjectsOED"></a>オブジェクトエクスプローラーの詳細を使用して2つのオブジェクトのスクリプトを生成するには  
- **オブジェクトエクスプローラーの詳細を使用して2つのオブジェクトのスクリプトを作成するには**  
+##  <a name="to-generate-a-script-of-two-objects-using-object-explorer-details"></a><a name="ScriptTwoObjectsOED"></a>オブジェクトエクスプローラーの詳細を使用して2つのオブジェクトのスクリプトを生成するには  
+ **[オブジェクト エクスプローラーの詳細] で 2 つのオブジェクトのスクリプトを生成するには**  
   
- 
-  **[オブジェクト エクスプローラーの詳細]** ペインを使用し、同じカテゴリに含まれる複数のオブジェクトのスクリプトを生成できます。  
+ **[オブジェクト エクスプローラーの詳細]** ペインを使用し、同じカテゴリに含まれる複数のオブジェクトのスクリプトを生成できます。  
   
 1.  オブジェクト エクスプローラーで、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   

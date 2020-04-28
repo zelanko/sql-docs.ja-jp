@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1883e88b03b205a2fb272a7cb890c79c607b29fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75232303"
 ---
 # <a name="creating-an-assembly"></a>アセンブリの作成
@@ -37,8 +37,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
   
  FROM 句では、作成するアセンブリのパス名を指定します。 このパスには、UNC (汎用名前付け規則) パスか、コンピューターにローカルの物理ファイル パスを指定できます。  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、名前、カルチャ、および公開キーが同じでありバージョンが異なるアセンブリの登録を許可していません。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、名前、カルチャ、および公開キーが同じでありバージョンが異なるアセンブリの登録を許可していません。  
   
  他のアセンブリを参照するアセンブリを作成することもできます。 で[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]アセンブリが作成されると、参照先のアセンブリがデータベースにまだ作成されていない場合は、ルートレベルのアセンブリによって参照されるアセンブリも作成されます。  
   
@@ -51,12 +50,9 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 -   呼び出し先または参照先のアセンブリが同じデータベースに作成されている。  
   
 ## <a name="specifying-security-when-creating-assemblies"></a>アセンブリ作成時のセキュリティの指定  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースにアセンブリを作成する際には、コードの実行時に適用する異なる 3 つのセキュリティ レベル (`SAFE`、`EXTERNAL_ACCESS`、`UNSAFE`) のうちの 1 つを指定できます。 
-  `CREATE ASSEMBLY` ステートメントを実行する際には、アセンブリによる登録を失敗させる可能性があるコード アセンブリに対し、特定のチェックがサーバー上で実行されます。 詳細については、 [CodePlex](https://msftengprodsamples.codeplex.com/)の Impersonation サンプルを参照してください。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースにアセンブリを作成する際には、コードの実行時に適用する異なる 3 つのセキュリティ レベル (`SAFE`、`EXTERNAL_ACCESS`、`UNSAFE`) のうちの 1 つを指定できます。 `CREATE ASSEMBLY` ステートメントを実行する際には、アセンブリによる登録を失敗させる可能性があるコード アセンブリに対し、特定のチェックがサーバー上で実行されます。 詳細については、 [CodePlex](https://msftengprodsamples.codeplex.com/)の Impersonation サンプルを参照してください。  
   
- 
-  `SAFE` は、ほとんどのシナリオに使用できる既定の権限セットです。 特定のセキュリティ レベルを指定するには、CREATE ASSEMBLY ステートメントの構文を次のように変更します。  
+ `SAFE` は、ほとんどのシナリオに使用できる既定の権限セットです。 特定のセキュリティ レベルを指定するには、CREATE ASSEMBLY ステートメントの構文を次のように変更します。  
   
 ```  
 CREATE ASSEMBLY SQLCLRTest  
@@ -71,18 +67,14 @@ CREATE ASSEMBLY SQLCLRTest
 FROM 'C:\MyDBApp\SQLCLRTest.dll';  
 ```  
   
- 
-  `SAFE` 権限セットで実行されるアセンブリ内のコードでは、インプロセス マネージド プロバイダーを経由して、計算とサーバーのデータへのアクセスのみを実行できます。  
+ `SAFE` 権限セットで実行されるアセンブリ内のコードでは、インプロセス マネージド プロバイダーを経由して、計算とサーバーのデータへのアクセスのみを実行できます。  
   
 ### <a name="creating-external_access-and-unsafe-assemblies"></a>EXTERNAL_ACCESS および UNSAFE アセンブリの作成  
- 
-  `EXTERNAL_ACCESS` は、ファイル、ネットワーク、レジストリ、環境変数など、サーバー外部のリソースにコードからアクセスする必要がある場合に使用します。 サーバーから外部リソースにアクセスする場合、常にマネージド コードの呼び出し元のユーザーのセキュリティ コンテキストが借用されます。  
+ `EXTERNAL_ACCESS` は、ファイル、ネットワーク、レジストリ、環境変数など、サーバー外部のリソースにコードからアクセスする必要がある場合に使用します。 サーバーから外部リソースにアクセスする場合、常にマネージド コードの呼び出し元のユーザーのセキュリティ コンテキストが借用されます。  
   
- 
-  `UNSAFE` コード権限は、アセンブリが安全であると検証できない場合や、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Win32 API などの制限付きのリソースへの追加アクセスが必要な場合に使用します。  
+ `UNSAFE` コード権限は、アセンブリが安全であると検証できない場合や、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Win32 API などの制限付きのリソースへの追加アクセスが必要な場合に使用します。  
   
- 
-  `EXTERNAL_ACCESS` で `UNSAFE` または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] アセンブリを作成するには、次の 2 つの条件のいずれかが満たされている必要があります。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で `EXTERNAL_ACCESS` または `UNSAFE` アセンブリを作成するには、次の 2 つの条件のいずれかが満たされている必要があります。  
   
 1.  アセンブリが、厳密な名前で署名されているか、または証明書を使用して Authenticode で署名されている。 この厳密な名前 (または証明書) は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 内部で非対称キー (または証明書) として作成され、それに対応する、`EXTERNAL ACCESS ASSEMBLY` 権限 (外部アクセス アセンブリの場合) または `UNSAFE ASSEMBLY` 権限 (安全でないアセンブリの場合) を持つログインが存在します。  
   
@@ -107,8 +99,7 @@ GO
 > [!NOTE]  
 >  非対称キーに関連付ける新しいログインを作成する必要があります。 このログインは、権限を許可するためにのみ使用します。このログインをユーザーに関連付けたり、アプリケーション内で使用したりする必要はありません。  
   
- 
-  `EXTERNAL ACCESS` アセンブリを作成するには、作成者に `EXTERNAL ACCESS` 権限が許可されている必要があります。 この権限は、アセンブリの作成時に次のように指定します。  
+ `EXTERNAL ACCESS` アセンブリを作成するには、作成者に `EXTERNAL ACCESS` 権限が許可されている必要があります。 この権限は、アセンブリの作成時に次のように指定します。  
   
 ```  
 CREATE ASSEMBLY SQLCLRTest  
@@ -143,6 +134,6 @@ WITH PERMISSION_SET = UNSAFE;
  [アセンブリを変更する](altering-an-assembly.md)   
  [アセンブリの削除](dropping-an-assembly.md)   
  [CLR 統合のコードアクセスセキュリティ](../security/clr-integration-code-access-security.md)   
- [信頼可能データベースのプロパティ](../../security/trustworthy-database-property.md)   
+ [TRUSTWORTHY データベース プロパティ](../../security/trustworthy-database-property.md)   
  [部分的に信頼される呼び出し元の許容](../../../database-engine/dev-guide/allowing-partially-trusted-callers.md)  
   

@@ -10,17 +10,17 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 75399480879623a39da542c68f036389c645f6ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401356"
 ---
 # <a name="backup-and-restore"></a>バックアップと復元
 
 並列データウェアハウス (PDW) でのデータのバックアップと復元のしくみについて説明します。 バックアップ操作と復元操作は、ディザスターリカバリーのために使用されます。 バックアップと復元を使用すると、1つのアプライアンスから別のアプライアンスにデータベースをコピーすることもできます。  
     
-## <a name="BackupRestoreBasics"></a>バックアップと復元の基本
+## <a name="backup-and-restore-basics"></a><a name="BackupRestoreBasics"></a>バックアップと復元の基本
 
 PDW*データベースバックアップ*は、形式で格納されたアプライアンスデータベースのコピーであり、元のデータベースをアプライアンスに復元するために使用できます。  
   
@@ -36,7 +36,7 @@ PDW では、SQL Server バックアップテクノロジを使用して、ア�
   
 バックアップは、Windows ファイルシステムの一連のファイルとしてバックアップサーバーに格納されます。 PDW データベースのバックアップは、PDW にのみ復元できます。 ただし、標準の Windows ファイルバックアッププロセスを使用して、バックアップサーバーから別の場所にデータベースのバックアップをアーカイブすることができます。 バックアップサーバーの詳細については、「[バックアップサーバーの取得と構成](acquire-and-configure-backup-server.md)」を参照してください。  
   
-## <a name="BackupTypes"></a>データベースバックアップの種類
+## <a name="database-backup-types"></a><a name="BackupTypes"></a>データベースバックアップの種類
 
 バックアップを必要とするデータには、ユーザーデータベースとシステムデータベース (master データベースなど) の2種類があります。 PDW では、トランザクションログはバックアップされません。  
   
@@ -50,7 +50,7 @@ PDW では、SQL Server バックアップテクノロジを使用して、ア�
   
 アプライアンス全体をバックアップするには、すべてのユーザーデータベースのバックアップと、master データベースのバックアップを実行する必要があります。  
   
-## <a name="BackupProc"></a>データベースのバックアッププロセス
+## <a name="database-backup-process"></a><a name="BackupProc"></a>データベースのバックアッププロセス
 
 次の図は、データベースバックアップ中のデータフローを示しています。  
   
@@ -82,9 +82,9 @@ PDW では、SQL Server バックアップテクノロジを使用して、ア�
   
     -   バックアップを復元できるのは、計算ノード数が等しいかそれより多い PDW アプライアンスのみです。  
   
-    -   復元を実行する前に、バックアップの名前を変更することはできません。 バックアップディレクトリの名前は、バックアップの元の名前と同じ名前にする必要があります。 バックアップの元の名前は、バックアップディレクトリ内のバックアップ .xml ファイルにあります。 データベースを別の名前に復元するには、restore コマンドで新しい名前を指定します。 (例: `RESTORE DATABASE MyDB1 FROM DISK = ꞌ\\10.192.10.10\backups\MyDB2ꞌ`)。  
+    -   復元を実行する前に、バックアップの名前を変更することはできません。 バックアップディレクトリの名前は、バックアップの元の名前と同じ名前にする必要があります。 バックアップの元の名前は、バックアップディレクトリ内のバックアップ .xml ファイルにあります。 データベースを別の名前に復元するには、restore コマンドで新しい名前を指定します。 たとえば、 `RESTORE DATABASE MyDB1 FROM DISK = ꞌ\\10.192.10.10\backups\MyDB2ꞌ`と指定します。  
   
-## <a name="RestoreModes"></a>データベースの復元モード
+## <a name="database-restore-modes"></a><a name="RestoreModes"></a>データベースの復元モード
 
 データベースの完全復元では、データベースバックアップのデータを使用して PDW データベースが再作成されます。 データベースの復元を実行するには、最初に完全バックアップを復元してから、必要に応じて1つの差分バックアップを復元します。 データベースの復元には、データベースユーザーとデータベースロールが含まれます。  
   
@@ -92,7 +92,7 @@ PDW では、SQL Server バックアップテクノロジを使用して、ア�
   
 アプライアンスの復元とは、アプライアンス全体を復元することです。 これには、すべてのユーザーデータベースと master データベースの復元が含まれます。  
   
-## <a name="RestoreProc"></a>復元プロセス
+## <a name="restore-process"></a><a name="RestoreProc"></a>復元プロセス
 
 次の図は、データベースの復元中のデータフローを示しています。  
   
@@ -130,11 +130,11 @@ PDW では、SQL Server バックアップテクノロジを使用して、ア�
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|バックアップと復元のタスク|[説明]|  
+|バックアップと復元のタスク|説明|  
 |---------------------------|---------------|  
 |サーバーをバックアップサーバーとして準備します。|[バックアップ サーバーの取得と構成](acquire-and-configure-backup-server.md)|  
 |データベースをバックアップします。|[BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)|  
-|データベースを復元します。|[データベースの復元](../t-sql/statements/restore-database-parallel-data-warehouse.md)|    
+|データベースを復元します。|[RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)|    
 
 <!-- MISSING LINKS
 

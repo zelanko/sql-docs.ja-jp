@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6c9a0a29b543eb287c7e233d6b1ea77bb2a0d45c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401262"
 ---
 # <a name="configure-parallel-data-warehouse-for-remote-table-copies"></a>リモートテーブルコピー用に並列データウェアハウスを構成する
@@ -28,7 +28,7 @@ ms.locfileid: "74401262"
   
 -   移行先サーバーのホスト名または IP 名を確認します。  
   
-## <a name="HowToPDW"></a>リモートテーブルのコピー用に SQL Server PDW を構成する: DNS でホスト名を更新する  
+## <a name="configure-sql-server-pdw-for-remote-table-copy-update-host-names-in-dns"></a><a name="HowToPDW"></a>リモートテーブルのコピー用に SQL Server PDW を構成する: DNS でホスト名を更新する  
 リモートテーブルのコピーに使用される**CREATE REMOTE table**ステートメントでは、SMP Windows システムの ip アドレスまたは ip 名を使用して、移行先サーバーを指定します。 IP 名を使用するには、DNS サーバーに名前解決を成功させるためのエントリを追加する必要があります。  
   
 次の手順では、DNS サーバーを更新する方法を説明します。  

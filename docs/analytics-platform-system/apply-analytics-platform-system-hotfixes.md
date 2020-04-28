@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: fd62413ec8542aba9f3973d0e8483cb9c5c9128a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401371"
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>Analytics Platform System の修正プログラムの適用
@@ -34,7 +34,7 @@ ms.locfileid: "74401371"
   
 -   _<domain_name>_ **-HST01**ノードに接続するためのファブリックドメイン管理者アカウントの情報。  
   
-## <a name="HowToInstallPDW"></a>Analytics Platform System 修正プログラムを適用するには  
+## <a name="to-apply-a-analytics-platform-system-hotfix"></a><a name="HowToInstallPDW"></a>Analytics Platform System 修正プログラムを適用するには  
 Microsoft の更新プログラムとは異なり、Analytics プラットフォームシステムソフトウェアの修正プログラムは WSUS では処理されません。 これらのユーザーには、ワークフローが異なり、修正プログラムパッケージを実行してインストールされます。  
   
 1.  **アプライアンスの状態インジケーターを確認します。**  

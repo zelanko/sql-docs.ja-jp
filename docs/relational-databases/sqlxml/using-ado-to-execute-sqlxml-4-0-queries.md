@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 436ec564e4cf5de21647eb5cd667741ce246e99d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75254141"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>ADO を使用した、SQLXML 4.0 クエリの実行
@@ -95,7 +95,7 @@ ms.locfileid: "75254141"
   
     -   "`@@FILE_NAME@@`" をテンプレート ファイルの名前に置き換えます。  
   
-    -   "`@@SERVER_NAME@@`" を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前 (`(local)` をローカルで実行している場合は "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]" など) に置き換えます。  
+    -   "`@@SERVER_NAME@@`" を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をローカルで実行している場合は "`(local)`" など) に置き換えます。  
   
     -   "`@@DATABASE_NAME@@`" をデータベースの名前 ("`AdventureWorks2012`" や "`tempdb`" など) に置き換えます。  
   

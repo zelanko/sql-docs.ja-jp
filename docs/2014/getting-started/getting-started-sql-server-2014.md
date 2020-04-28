@@ -11,14 +11,13 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: eb81724c8feb5ca34736b16aeb8f8d65b1018300
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74683500"
 ---
 # <a name="getting-started-sql-server-2014"></a>はじめに (SQL Server 2014)
-  
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] の情報、システム要件、インストール手順などの情報ソースは次のとおりです。  
   
  [SQL Server 2014 の製品仕様](sql-server-2014-product-specifications.md)  

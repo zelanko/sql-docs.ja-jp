@@ -10,10 +10,10 @@ ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 94b2529323e5a075b6fd423fd8c69ece7a0535c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75258852"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>DQS データベースのバックアップと復元
@@ -22,9 +22,9 @@ ms.locfileid: "75258852"
 
   このトピックでは、DQS データベースのバックアップと復元を行う方法について説明します。  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Prerequisites"></a> 前提条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
   
 -   DQS サーバーのインストール中に入力したデータベース マスター キーのパスワードを知っている必要があります。  
   
@@ -32,15 +32,15 @@ ms.locfileid: "75258852"
   
 -   DQS サーバーにログオンしているユーザーがないことを確認します。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
   
 -   バックアップおよび復元操作を実行するには、使用する Windows ユーザー アカウントが、SQL Server インスタンスの sysadmin 固定サーバー ロールのメンバーであることが必要です。  
   
 -   DQS の実行中のアクティビティを終了させたり実行中のプロセスを停止させたりするには、DQS_MAIN データベースの dqs_administrator ロールが必要です。  
   
-##  <a name="BackupRestore"></a>DQS データベースのバックアップと復元  
+##  <a name="backup-and-restore-dqs-databases"></a><a name="BackupRestore"></a>DQS データベースのバックアップと復元  
   
 1.  Microsoft SQL Server Management Studio を起動し、適切な SQL Server インスタンスに接続します。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "75258852"
   
     ```  
   
-12. F5 キーを押してステートメントを実行します。 [**結果**] ウィンドウで、ステートメントが正常に実行されたことを確認します。  
+12. F5 キーを押してステートメントを実行します。 **[結果]** ペインを確認してステートメントが正常に実行されたことを確認します。  
   
 ## <a name="see-also"></a>参照  
  [Manage DQS Databases](../data-quality-services/manage-dqs-databases.md)  

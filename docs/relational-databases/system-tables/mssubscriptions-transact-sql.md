@@ -18,10 +18,10 @@ ms.assetid: b7e8301d-d115-41f6-8d4f-e0d25f453b25
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ca4364709462eee9df62baa8193dec9f8ea36241
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74866044"
 ---
 # <a name="mssubscriptions-transact-sql"></a>MSsubscriptions (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "74866044"
 
   **Mssubscriptions**テーブルには、ローカルディストリビューターによってサービスが提供されるサブスクリプション内のパブリッシュされたアーティクルごとに1行のレコードが含まれます。 このテーブルは、ディストリビューションデータベースに格納されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**publisher_database_id**|**int**|パブリッシャーデータベースの ID。|  
 |**publisher_id**|**smallint**|パブリッシャーの ID。|  
@@ -40,11 +40,11 @@ ms.locfileid: "74866044"
 |**subscriber_db**|**sysname**|サブスクリプションデータベースの名前。|  
 |**subscription_type**|**int**|サブスクリプションの種類。<br /><br /> **0** = プッシュ。<br /><br /> **1** = プル。<br /><br /> **2** = 匿名。|  
 |**sync_type**|**tinyint**|同期の種類。<br /><br /> **1** = 自動。<br /><br /> **2** = 同期なし。|  
-|**オンライン**|**tinyint**|サブスクリプションの状態。<br /><br /> **0** = 非アクティブ。<br /><br /> **1** = サブスクライブ済み。<br /><br /> **2** = アクティブ。|  
+|**status**|**tinyint**|サブスクリプションの状態。<br /><br /> **0** = 非アクティブ。<br /><br /> **1** = サブスクライブ済み。<br /><br /> **2** = アクティブ。|  
 |**subscription_seqno**|**varbinary(16)**|スナップショットトランザクションのシーケンス番号です。|  
 |**snapshot_seqno_flag**|**bit**|スナップショットトランザクションのシーケンス番号のソースを示します。値が**1**の場合、 **subscription_seqno**がスナップショットのシーケンス番号であることを意味します。|  
 |**independent_agent**|**bit**|このパブリケーションに対してスタンドアロンのディストリビューションエージェントがあるかどうかを示します。|  
-|**subscription_time**|**DATETIME**|内部使用のみです。|  
+|**subscription_time**|**datetime**|内部使用のみです。|  
 |**loopback_detection**|**bit**|双方向トランザクションレプリケーショントポロジの一部であるサブスクリプションに適用されます。 ディストリビューション エージェントが、サブスクライバーで発生したトランザクションをサブスクライバーに戻すかどうかを示します。<br /><br /> **1** = を返しません。<br /><br /> **0** = 返送します。<br /><br />|  
 |**agent_id**|**int**|エージェントの ID。|  
 |**update_mode**|**tinyint**|更新の種類。|  

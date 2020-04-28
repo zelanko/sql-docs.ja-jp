@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 837d41cc929d90b2494682645127f985b5768546
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401314"
 ---
 # <a name="configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband---parallel-data-warehouse"></a>InfiniBand-Parallel Data Warehouse を使用してリモートテーブルコピーを受信するように外部 Windows システムを構成する
@@ -33,7 +33,7 @@ SQL Server PDW のリモートテーブルコピー機能で使用するため�
   
 3.  InfiniBand ケーブルと InfiniBand ネットワークアダプターを、アプライアンスハードウェアベンダーから購入します。 エクスポートされたデータを受信する場合は、フォールトトレランスのために2つのポートを持つネットワークアダプターを購入することをお勧めします。 2つのポートネットワークアダプターをお勧めしますが、これは必須ではありません。  
   
-## <a name="HowToWindows"></a>リモートテーブルコピーを受信するように外部 Windows システムを構成する  
+## <a name="configure-an-external-windows-system-to-receive-remote-table-copies"></a><a name="HowToWindows"></a>リモートテーブルコピーを受信するように外部 Windows システムを構成する  
 外部 Windows システムを構成するには、次の手順に従います。  
   
 1.  Windows システムに InfiniBand ネットワークアダプターをインストールします。  

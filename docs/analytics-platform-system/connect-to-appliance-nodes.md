@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: e1182d174e3281fda944c0b6490b114d4b6f2244
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401245"
 ---
 # <a name="connect-to-appliance-nodes-in-analytics-platform-system"></a>Analytics Platform System のアプライアンスノードへの接続
@@ -22,7 +22,7 @@ ms.locfileid: "74401245"
 ## <a name="connecting-with-hadoop"></a>Hadoop を使用した接続  
 SQL Server PDW で Hadoop を使用する前に、SQL Server PDW に Java Runtime Environment をインストールするようアプライアンス管理者に依頼してください。 手順については、「アプライアンス操作ガイド」の「[外部データへの PolyBase 接続の構成 &#40;Analytics Platform System&#41;](configure-polybase-connectivity-to-external-data.md) 」を参照してください。  
   
-## <a name="ConnectingToIndividualNodes"></a>アプライアンスノードへの接続  
+## <a name="connecting-to-appliance-nodes"></a><a name="ConnectingToIndividualNodes"></a>アプライアンスノードへの接続  
 各アプライアンスノードは、特定の使用シナリオおよび特定のユーザーの種類によってのみ直接アクセスされます。 次の表は、各アプライアンスノードと、ユーザーがそのノードに直接接続するシナリオを示しています。  
   
 <!-- MISSING LINKS For information on the purpose of each node, see [Understanding SQL Server PDW &#40;SQL Server PDW&#41;](../sqlpdw/understanding-sql-server-pdw-sql-server-pdw.md).  -->  

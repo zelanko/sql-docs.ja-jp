@@ -15,10 +15,10 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 79b262bc97cf674c98361d72b0ceedcaef90bb91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75244517"
 ---
 # <a name="link-to-programming-samples"></a>プログラミング サンプルへのリンク
@@ -26,7 +26,7 @@ ms.locfileid: "75244517"
   
  サンプルをインストールする方法の詳細については、「 [AdventureWorks for SQL Server 2012](https://msftdbprodsamples.codeplex.com/releases/view/55330)」を参照してください。  
   
-|タイトル|[説明]|  
+|タイトル|説明|  
 |-----------|-----------------|  
 |BackRest|データベースのバックアップと復元の方法を示します。|  
 |ChangeTableOwner|dbo ではないすべてのテーブルの所有者を dbo に変更する方法を説明します。|  
@@ -38,21 +38,15 @@ ms.locfileid: "75244517"
 |ManageDatabases|データベースの作成、変更、および削除を行う方法を示します。 新しいファイル グループとログ ファイルの追加を含みます。|  
 |ManageDatabaseUsers|ユーザーの追加、変更、および削除を行う方法を示します。|  
 |ManageTables|テーブルの作成、変更、および削除を行う方法を示します。|  
-|ScriptJobs|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブの削除および作成をスクリプトで行う方法を示します。|  
+|ScriptJobs|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブの削除および作成をスクリプトで行う方法を示します。|  
 |ScriptTable|テーブルの削除、または作成をスクリプトで行う方法を示します。|  
-|ServerConnect |
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムへの接続方法を示します。|  
+|ServerConnect |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムへの接続方法を示します。|  
 |ServerInfo |選択した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのサーバーと接続のプロパティのリストを表示します。|  
 |SMOPing |選択した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへ接続し、選択したプロパティをダンプするコンソール アプリケーションです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続を確認するために使用できます。|  
-|SQLServerList|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の利用可能なインスタンスの一覧を列挙します。|  
+|SQLServerList|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の利用可能なインスタンスの一覧を列挙します。|  
 |SQLService |開始、停止、一時停止、および再開が可能な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサービスを表示します。|  
-|Tracer|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスからトレース情報の読み込みと表示を行います。|  
+|Tracer|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスからトレース情報の読み込みと表示を行います。|  
 |トリガー|データベース トリガーが表示されます。|  
-|UtilityConversion |
-  `LoadRegAssembly` で使用されます。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と共に使用するための共通言語ランタイム (CLR) 関数の使用方法も含まれています。|  
+|UtilityConversion |`LoadRegAssembly` で使用されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と共に使用するための共通言語ランタイム (CLR) 関数の使用方法も含まれています。|  
 |VerifyBackup|データがデータベースの復元に使用できることを確認するため、バックアップ デバイスのバックアップを確認します。|  
   

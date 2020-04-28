@@ -14,10 +14,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9eb717968b191bb7d80f5d68542178bf32734b00
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75241297"
 ---
 # <a name="guidelines-and-limitations-of-xml-updategrams-sqlxml-40"></a>XML アップデートグラムのガイドラインと制限 (SQLXML 4.0)
@@ -46,8 +46,7 @@ ms.locfileid: "75241297"
   
 -   アップデートグラムでは、**イメージ**の種類のデータを更新中にパラメーターとして渡すことは許可されていません。  
   
--   **Text/ntext**および image のようなバイナリラージオブジェクト (BLOB) 型は、 ** \<** updategrams を使用する場合、の before>ブロックでは使用しないでください。これには、同時実行制御で使用するためのものが含まれます。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で、BLOB 型の比較の制限によって問題が発生する可能性があります。 たとえば、 **text**データ型の列を比較するには、WHERE 句で LIKE キーワードを使用します。ただし、データのサイズが8K を超える BLOB 型の場合、比較は失敗します。  
+-   **Text/ntext**および image のようなバイナリラージオブジェクト (BLOB) 型は、 ** \<** updategrams を使用する場合、の before>ブロックでは使用しないでください。これには、同時実行制御で使用するためのものが含まれます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で、BLOB 型の比較の制限によって問題が発生する可能性があります。 たとえば、 **text**データ型の列を比較するには、WHERE 句で LIKE キーワードを使用します。ただし、データのサイズが8K を超える BLOB 型の場合、比較は失敗します。  
   
 -   **Ntext**データ内の特殊文字は、BLOB 型の比較の制限により、SQLXML 4.0 で問題が発生する可能性があります。 たとえば、 ** \<>以前**のでは、 **ntext**型の列の同時実行制御チェックで使用されたときに "[Serializable]" を使用しているときに "[Serializable]" を使用すると、次の SQLOLEDB エラーの説明で失敗します。  
   

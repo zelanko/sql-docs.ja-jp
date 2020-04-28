@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ef49bb86c8e16600f2ff1bf2d1c7a92ecc5af964
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401487"
 ---
 # <a name="acquire-and-configure-a-loading-server-for-parallel-data-warehouse"></a>並列データウェアハウスの読み込みサーバーを取得して構成する
 この記事では、データの読み込みを並列データウェアハウス (PDW) に送信するために、非アプライアンス Windows システムとして読み込みサーバーを取得して構成する方法について説明します。  
   
-## <a name="Basics"></a>方  
+## <a name="basics"></a><a name="Basics"></a>基本  
 読み込み中のサーバー:  
   
 -   は、1台のサーバーである必要はありません。 複数の読み込みサーバーを同時に読み込むことができます。  
@@ -32,18 +32,18 @@ ms.locfileid: "74401487"
   
 -   は、アプライアンスドメインではなく、独自の顧客ドメインにあります。 お客様のドメインとアプライアンスドメインとの間に信頼関係はありません。  
   
-## <a name="Step1"></a>手順 1: 容量の要件を決定する  
+## <a name="step-1-determine-capacity-requirements"></a><a name="Step1"></a>手順 1: 容量の要件を決定する  
 読み込みシステムは、同時読み込みを実行する1つ以上の読み込みサーバーとして設計できます。 各読み込みサーバーは、ワークロードのパフォーマンスとストレージの要件を処理できる限り、読み込み専用である必要はありません。  
   
 読み込みサーバーのシステム要件は、実際のワークロードにほぼ完全に依存します。 容量の要件を決定するには、[読み込みサーバーの容量計画ワークシート](loading-server-capacity-planning-worksheet.md)を使用します。  
   
-## <a name="Step2"></a>手順 2: sServer を取得する  
+## <a name="step-2-acquire-the-sserver"></a><a name="Step2"></a>手順 2: sServer を取得する  
 容量の要件を十分に理解できるようになったので、購入またはプロビジョニングする必要があるサーバーとネットワークコンポーネントを計画することができます。 次の要件の一覧を購入計画に組み込み、サーバーを購入するか、既存のサーバーをプロビジョニングします。  
   
-### <a name="R"></a>ソフトウェア要件  
+### <a name="software-requirements"></a><a name="R"></a>ソフトウェア要件  
 サポートされているオペレーティング システム:   
   
--   Windows Server 2012 または Windows Server 2012 R2。 これらのオペレーティングシステムには、FDR ネットワークアダプターが必要です。  
+-   Windows Server 2012 または Windows Server 2012 R2。 これらのオペレーティングシステムには、FDR ネットワークアダプターが必要です。  
   
 -   Windows Server 2008 R2。 この OS には、DDR ネットワークアダプターが必要です。  
   
@@ -60,7 +60,7 @@ Windows Server 2012 または Windows Server 2012 R2 の InfiniBand 接続を準
   
 3.  2つのポートカード用の FDR InfiniBand ケーブルを購入するか、単一のポートカードに対して 1 FDR InfiniBand ケーブルを購入します。 FDR InfiniBand ケーブルは、ロードサーバーをアプライアンス InfiniBand ネットワークに接続します。 ケーブルの長さは、使用している環境に応じて、読み込みサーバーとアプライアンス InfiniBand スイッチの距離によって異なります。  
   
-## <a name="Step3"></a>手順 3: サーバーを InfiniBand ネットワークに接続する  
+## <a name="step-3-connect-the-server-to-the-infiniband-networks"></a><a name="Step3"></a>手順 3: サーバーを InfiniBand ネットワークに接続する  
 ロードサーバーを InfiniBand ネットワークに接続するには、次の手順に従います。 サーバーが InfiniBand ネットワークを使用していない場合は、この手順をスキップします。  
   
 1.  アプライアンス InfiniBand ネットワークに接続できるように、サーバーをアプライアンスに近づけます。  
@@ -75,7 +75,7 @@ Windows Server 2012 または Windows Server 2012 R2 の InfiniBand 接続を準
   
 5.  ネットワークアダプターの InfiniBand と DNS の設定を構成します。 構成の手順については、「 [Configure InfiniBand network adapters](configure-infiniband-network-adapters.md)」を参照してください。  
   
-## <a name="Step4"></a>手順 4: 読み込みツールをインストールする  
+## <a name="step-4-install-the-loading-tools"></a><a name="Step4"></a>手順 4: 読み込みツールをインストールする  
 クライアントツールは、Microsoft ダウンロードセンターからダウンロードできます。 
 
 Dwloader をインストールするには、クライアントツールから dwloader のインストールを実行します。
@@ -85,8 +85,8 @@ Dwloader をインストールするには、クライアントツールから d
 <!-- To install the des[Install Integration Services Destination Adapters](install-integration-services-destination-adapters.md). 
 --> 
   
-## <a name="Step5"></a>手順 5: 読み込みを開始する  
-これで、データの読み込みを開始する準備ができました。 詳細については、次を参照してください。  
+## <a name="step-5-start-loading"></a><a name="Step5"></a>手順 5: 読み込みを開始する  
+これで、データの読み込みを開始する準備ができました。 詳細については次を参照してください:  
   
 1.  [dwloader コマンドライン読み込みツール](dwloader.md)  
   
@@ -95,7 +95,7 @@ Dwloader をインストールするには、クライアントツールから d
 ## <a name="performance"></a>パフォーマンス  
 Windows Server 2012 以降で最適な読み込みパフォーマンスを得るには、ファイルの瞬時初期化を有効にします。これにより、データが上書きされても、オペレーティングシステムによって既存のデータがゼロで上書きされることはありません。 以前のデータがディスクにまだ存在しているためにセキュリティ上のリスクがある場合は、ファイルの瞬時初期化を無効にしてください。  
   
-## <a name="Security"></a>セキュリティに関する通知  
+## <a name="security-notices"></a><a name="Security"></a>セキュリティに関する通知  
 読み込むデータはアプライアンスに格納されていないため、IT チームは、データの読み込みに関するセキュリティのすべての側面を管理する責任があります。 たとえば、読み込まれるデータのセキュリティ、負荷の格納に使用されるサーバーのセキュリティ、および読み込みサーバーを SQL Server PDW アプライアンスに接続するネットワークインフラストラクチャのセキュリティを管理することができます。  
   
 > [!IMPORTANT]  

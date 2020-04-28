@@ -16,10 +16,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 8b3f046017aa54f5db96878f8bfb6c435409d839
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74957236"
 ---
 # <a name="enable-tde-using-ekm"></a>EKM を使用して TDE を有効にする
@@ -33,26 +33,25 @@ ms.locfileid: "74957236"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   [Transact-SQL を使用して、EKM による TDE を可能にするには](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   データベース暗号化キーの作成およびデータベースの暗号化は、高い特権を持つユーザー (システム管理者など) が行う必要があります。 このユーザーは、EKM モジュールが認証できるユーザーである必要があります。  
   
--   
-  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] は、起動時にデータベースを開く必要があります。 これを行うには、EKM によって認証される資格情報を作成し、非対称キーに基づくログインにその資格情報を追加する必要があります。 ユーザーがこのログインを使用してログインすることはできませんが、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] は EKM デバイスで自身を認証することができます。  
+-   [!INCLUDE[ssDE](../../../includes/ssde-md.md)] は、起動時にデータベースを開く必要があります。 これを行うには、EKM によって認証される資格情報を作成し、非対称キーに基づくログインにその資格情報を追加する必要があります。 ユーザーがこのログインを使用してログインすることはできませんが、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] は EKM デバイスで自身を認証することができます。  
   
 -   EKM モジュールに格納されている非対称キーが失われている場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]はデータベースを開くことができません。 EKM プロバイダーを使用して非対称キーをバックアップできる場合は、バックアップを作成して安全な場所に保存しておく必要があります。  
   
 -   EKM プロバイダーによって要求されるオプションとパラメーターは、次のコード例に含まれるものとは異なっている場合があります。 詳細については、EKM プロバイダーを参照してください。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  このトピックでは、次の権限を使用します。  
   
 -   構成オプションを変更して RECONFIGURE ステートメントを実行するには、ALTER SETTINGS サーバーレベル権限が与えられている必要があります。 ALTER SETTINGS 権限は、 **sysadmin** 固定サーバー ロールと **serveradmin** 固定サーバー ロールでは暗黙のうちに付与されています。  
@@ -65,7 +64,7 @@ ms.locfileid: "74957236"
   
 -   データベースを暗号化するには、データベースに対する CONTROL 権限が必要です。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-enable-tde-using-ekm"></a>EKM を使用して TDE を有効にするには  
   

@@ -18,14 +18,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c6410e6b21ec3ebbb3cfb01fa78ffe80b2196a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74479248"
 ---
 # <a name="replicate-identity-columns"></a>ID 列のレプリケート
-  Id プロパティを列に割り当てると、によっ[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]て、id 列を含むテーブルに挿入された新しい行の連続する番号が自動的に生成されます。 詳細については、「[IDENTITY &#40;プロパティ&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)」を参照してください。 ID 列は主キーの一部に含まれる場合があるため、ID 列の値が重複しないようにすることが重要です。 複数のノードで更新されるレプリケーション トポロジで ID 列を使用するには、レプリケーション トポロジ内の各ノードで異なる範囲の ID 値を使用して、重複が生じないようにする必要があります。  
+  IDENTITY プロパティを列に割り当てると、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、その ID 列を含むテーブルに挿入された新しい行に対して連続する番号が自動的に生成されます。 詳細については、「[IDENTITY &#40;プロパティ&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)」を参照してください。 ID 列は主キーの一部に含まれる場合があるため、ID 列の値が重複しないようにすることが重要です。 複数のノードで更新されるレプリケーション トポロジで ID 列を使用するには、レプリケーション トポロジ内の各ノードで異なる範囲の ID 値を使用して、重複が生じないようにする必要があります。  
   
  たとえば、パブリッシャーに 1 ～ 100 の範囲を、サブスクライバー A に 101 ～ 200 の範囲を、サブスクライバー B に 201 ～ 300 の範囲を、それぞれ割り当てることができます。 パブリッシャーに行が挿入され、ID 値がたとえば 65 の場合、この値が各サブスクライバーにレプリケートされます。 レプリケーションによって各サブスクライバーにデータが挿入されると、サブスクライバー テーブル内の ID 列の値は増えずに、リテラル値 65 が挿入されます。 ID 列の値が増えるのは、ユーザーによる挿入のみで、レプリケーション エージェントの挿入では増えません。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "74479248"
 |`smallint`|-2^15 (-32,768) ～ 2^15-1 (32,767)|  
 |`int`|-2^31 (-2,147,483,648) ～ 2^31-1 (2,147,483,647)|  
 |`bigint`|-2^63 (-9,223,372,036,854,775,808) ～ 2^63-1 (9,223,372,036,854,775,807)|  
-|`decimal`そして`numeric`|-10^38+1 ～ 10^38-1|  
+|`decimal` および `numeric`|-10^38+1 ～ 10^38-1|  
   
 > [!NOTE]  
 >  複数のテーブルで使用できる自動的に増分する番号、またはテーブルを参照せずにアプリケーションから呼び出すことができる自動的に増分する番号を作成するには、「[シーケンス番号](../../sequence-numbers/sequence-numbers.md)」を参照してください。  
@@ -81,11 +81,9 @@ ms.locfileid: "74479248"
   
 -   Threshold パラメーター。または以前のバージョンの[!INCLUDE[ssEW](../../../includes/ssew-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に対するサブスクリプションに新しい id 範囲が必要な場合に、このパラメーターを使用して判断します。 ** \@**  
   
- たとえば、 ** \@identity_range**の場合は1万、 ** \@pub_identity_range**の場合は50万を指定できます。 
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降のバージョンを実行しているパブリッシャーとすべてのサブスクライバー (サーバー サブスクリプションを使用するサブスクライバーを含む) には、プライマリ範囲として 10,000 が割り当てられます。 サーバーサブスクリプションを使用するサブスクライバーには、50万のプライマリ範囲も割り当てられます。この範囲は、再パブリッシュサブスクライバーと同期するサブスクライバーで使用できます (再パブリッシュサブスクライバーのパブリケーションのアーティクルに対して、 ** \@identity_range**、 ** \@pub_identity_range**、および** \@しきい値**も指定する必要があります)。  
+ たとえば、 ** \@identity_range**の場合は1万、 ** \@pub_identity_range**の場合は50万を指定できます。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降のバージョンを実行しているパブリッシャーとすべてのサブスクライバー (サーバー サブスクリプションを使用するサブスクライバーを含む) には、プライマリ範囲として 10,000 が割り当てられます。 サーバーサブスクリプションを使用するサブスクライバーには、50万のプライマリ範囲も割り当てられます。この範囲は、再パブリッシュサブスクライバーと同期するサブスクライバーで使用できます (再パブリッシュサブスクライバーのパブリケーションのアーティクルに対して、 ** \@identity_range**、 ** \@pub_identity_range**、および** \@しきい値**も指定する必要があります)。  
   
- 
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降のバージョンを実行している各サブスクライバーは、セカンダリ ID 範囲も受け取ります。 セカンダリ範囲のサイズはプライマリ範囲のサイズと同じです。プライマリ範囲がすべて使用されると、セカンダリ範囲が使用されて、マージ エージェントによって新しい範囲がサブスクライバーに割り当てられます。 新しい範囲はセカンダリ範囲となり、サブスクライバーで ID 値が使用される限りこのプロセスは継続されます。  
+ [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降のバージョンを実行している各サブスクライバーは、セカンダリ ID 範囲も受け取ります。 セカンダリ範囲のサイズはプライマリ範囲のサイズと同じです。プライマリ範囲がすべて使用されると、セカンダリ範囲が使用されて、マージ エージェントによって新しい範囲がサブスクライバーに割り当てられます。 新しい範囲はセカンダリ範囲となり、サブスクライバーで ID 値が使用される限りこのプロセスは継続されます。  
   
   
 ### <a name="transactional-replication-with-queued-updating-subscriptions"></a>キュー更新サブスクリプションを使用するトランザクション レプリケーション  
@@ -125,10 +123,10 @@ ms.locfileid: "74479248"
     >  ID 列の値が増分ではなく減分に設定されている場合は、検出された最も低い値を記録してから、その値から新しい範囲を設定します。  
   
 ## <a name="see-also"></a>参照  
- [Transact-sql&#41;のバックアップ &#40;](/sql/t-sql/statements/backup-transact-sql)   
+ [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [DBCC CHECKIDENT &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql)   
  [IDENT_CURRENT &#40;Transact-sql&#41;](/sql/t-sql/functions/ident-current-transact-sql)   
- [ID &#40;プロパティ&#41; &#40;Transact-sql&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)   
- [sp_adjustpublisheridentityrange &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql)  
+ [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)   
+ [sp_adjustpublisheridentityrange &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql)  
   
   

@@ -11,20 +11,18 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: be20c79c4c44d65b4d6b1177d06cea5ef66c164b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75242055"
 ---
 # <a name="tutorials-for-sql-server-2014"></a>SQL Server 2014 チュートリアル
-  
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] では、多数の新しいテクノロジと機能が導入されています。  
   
  今後、追加のチュートリアルを提供する予定があります。 それまでの間は、[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] のチュートリアルを使用して学習を継続できます。 場合によっては、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] と [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] のユーザー インターフェイスに違いがあったり、チュートリアルの前提条件に多少の違いがあることがあります。 チュートリアルで [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] データベースが使用される場合は、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] バージョンをダウンロードして使用する必要があります。  
   
- 
-  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] サーバーを使用している場合は、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] データ プロバイダーがインストールされています。 チュートリアルの作業を正常に実行するには、それらのプロバイダーと連携する [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] サンプル データベースか、または [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] バージョンのサンプル データベースと連携する [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] データ プロバイダーが必要です。  
+ [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] サーバーを使用している場合は、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] データ プロバイダーがインストールされています。 チュートリアルの作業を正常に実行するには、それらのプロバイダーと連携する [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] サンプル データベースか、または [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] バージョンのサンプル データベースと連携する [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] データ プロバイダーが必要です。  
   
 -   チュートリアルで[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]使用するサンプルをダウンロードするには、CodePlex の「 [samples for SQL Server](https://social.technet.microsoft.com/wiki/contents/articles/3735.sql-server-samples-readme.aspx#About_Crescent_Sample_Images) 」を参照してください。  
   
@@ -42,7 +40,7 @@ ms.locfileid: "75242055"
 ## <a name="in-this-section"></a>このセクションの内容  
  チュートリアルは、以下の [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] テクノロジに対して使用できます。  
   
-|テクノロジ|[説明]|  
+|テクノロジ|説明|  
 |----------------|-----------------|  
 |[Analysis Services チュートリアル (SSAS)](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] テーブルまたは多次元モデルを開発および配置する方法について説明します。 また、PowerPivot などのツールを使用して、モデル内のデータを分析する方法についても説明します。|  
 |[Reporting Services チュートリアル &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|基本的なレポートとサブスクリプションを作成する方法について説明します。|  

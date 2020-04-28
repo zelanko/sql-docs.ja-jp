@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 689c3a734a5b4eb424511da52032dc348b5757ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75231804"
 ---
 # <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-azure"></a>レッスン 6: オンプレミスのソース コンピューターから Azure のターゲット コンピューターにデータベースを移行する
@@ -48,8 +48,7 @@ ms.locfileid: "75231804"
   
         1.  ソース コンピューターの SQL Server Management Studio 経由でターゲット コンピューターに接続します。  または、ターゲット コンピューターで SQL Server Management Studio を直接起動します。  
   
-        2.  
-  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
+        2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
         3.  次の例をコピーしてクエリ ウィンドウに貼り付け、必要に応じて変更します。 次のステートメントは、ストレージコンテナーの共有アクセス証明書を格納するための SQL Server 資格情報を作成します。  
   
@@ -127,7 +126,7 @@ ms.locfileid: "75231804"
   
  SQL Server Management Studio ユーザーインターフェイスを使用して Azure Storage 内の既存のファイルを指すデータファイルとログファイルを含むデータベースを作成するには、次の手順を実行します。  
   
-1.  **オブジェクトエクスプローラー**で、SQL Server データベースエンジンのインスタンスに接続し、そのインスタンスを展開します。  
+1.  **オブジェクト エクスプローラー**で、SQL Server データベース エンジンのインスタンスに接続し、そのインスタンスを展開します。  
   
 2.  [**データベース**] を右クリックし、[**新しいデータベース**] をクリックします。 次に [TestDB1] を右クリックします。 [タスク] をクリックし、[デタッチ] をクリックします。 [デタッチ] ダイアログ ウィンドウで、[接続の削除] チェック ボックスをオンにします。 **[OK]** をクリックします。  
   

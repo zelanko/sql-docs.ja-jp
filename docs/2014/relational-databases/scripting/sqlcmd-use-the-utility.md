@@ -18,23 +18,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bb14d7809eba496ede8c8e0aa6e7133c2ad9c524
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243179"
 ---
 # <a name="use-the-sqlcmd-utility"></a>sqlcmd ユーティリティの使用
-  
-  `sqlcmd` ユーティリティは、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントおよびスクリプトを対話形式でアドホック実行したり、[!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト タスクを自動化したりするためのコマンドライン ユーティリティです。 
-  `sqlcmd` を対話形式で使用したり、`sqlcmd` を使用して実行できるスクリプト ファイルを作成したりするには、ユーザーが [!INCLUDE[tsql](../../includes/tsql-md.md)] を理解している必要があります。 
-  `sqlcmd` ユーティリティは一般的に次のように使用されます。  
+  `sqlcmd` ユーティリティは、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントおよびスクリプトを対話形式でアドホック実行したり、[!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト タスクを自動化したりするためのコマンドライン ユーティリティです。 `sqlcmd` を対話形式で使用したり、`sqlcmd` を使用して実行できるスクリプト ファイルを作成したりするには、ユーザーが [!INCLUDE[tsql](../../includes/tsql-md.md)] を理解している必要があります。 `sqlcmd` ユーティリティは一般的に次のように使用されます。  
   
 -   コマンド プロンプトでの操作と同様、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを対話形式で入力します。 結果はコマンド プロンプトに表示されます。 コマンド プロンプト ウィンドウを開くには、 **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** をポイントします。次に **[アクセサリ]** をポイントし、 **[コマンド プロンプト]** をクリックします。 コマンド プロンプトで「`sqlcmd`」と入力し、その後に必要なオプションのリストを入力します。 で`sqlcmd`サポートされているオプションの完全な一覧については、「 [sqlcmd ユーティリティ](../../tools/sqlcmd-utility.md)」を参照してください。  
   
--   実行する `sqlcmd` ステートメントを 1 つ指定するか、実行する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの入ったテキスト ファイルをユーティリティに指定して、[!INCLUDE[tsql](../../includes/tsql-md.md)] ジョブを実行します。 出力先はコマンド プロンプトにすることもできますが、通常はテキスト ファイルに出力されます。  
+-   実行する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを 1 つ指定するか、実行する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの入ったテキスト ファイルをユーティリティに指定して、`sqlcmd` ジョブを実行します。 出力先はコマンド プロンプトにすることもできますが、通常はテキスト ファイルに出力されます。  
   
--   クエリエディターの[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [SQLCMD モード](edit-sqlcmd-scripts-with-query-editor.md)。  
+-   [クエリ エディターの](edit-sqlcmd-scripts-with-query-editor.md) SQLCMD モード [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
 -   SQL Server 管理オブジェクト (SMO)  
   
@@ -48,8 +45,7 @@ ms.locfileid: "75243179"
 -   認証オプション (**-E**、 **-U**、 **-P**)。のインスタンスへの`sqlcmd` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続に使用する資格情報を指定します。  
   
     > [!NOTE]  
-    >  
-  **-E** オプションは既定値なので、指定する必要はありません。  
+    >  **-E** オプションは既定値なので、指定する必要はありません。  
   
 -   入力の場所`sqlcmd`を示す入力オプション (**-q**、 **-q**、 **-i**)。  
   
@@ -97,37 +93,30 @@ ms.locfileid: "75243179"
     sqlcmd -Q "SELECT * FROM AdventureWorks2012.Person.Person" -o MyOutput.txt  
     ```  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用して名前付きインスタンスに接続し、[!INCLUDE[tsql](../../includes/tsql-md.md)] からパスワードの入力を求めて `sqlcmd` ステートメントを対話的に実行します。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用して名前付きインスタンスに接続し、`sqlcmd` からパスワードの入力を求めて [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを対話的に実行します。  
   
     ```  
     sqlcmd -U MyLogin -S <ComputerName>\<InstanceName>  
     ```  
   
     > [!NOTE]  
-    >  
-  `sqlcmd` ユーティリティでサポートされているオプションの一覧を表示するには、`sqlcmd -?` を実行してください。  
+    >  `sqlcmd` ユーティリティでサポートされているオプションの一覧を表示するには、`sqlcmd -?` を実行してください。  
   
 ## <a name="running-transact-sql-statements-interactively-by-using-sqlcmd"></a>sqlcmd を使用した Transact-SQL ステートメントの対話的な実行  
  コマンド プロンプト ウィンドウでは、`sqlcmd` ユーティリティを対話的に使用して、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行できます。 を使用`sqlcmd`し[!INCLUDE[tsql](../../includes/tsql-md.md)]てステートメントを対話的に実行するには、 **-q**、 **-q**、 **-Z**、または **-i**オプションを使用せずに、入力ファイルまたはクエリを指定するために、ユーティリティを実行します。 次に例を示します。  
   
  `sqlcmd -S <ComputerName>\<InstanceName>`  
   
- 入力ファイルやクエリを指定せずにこのコマンドを実行すると、`sqlcmd` は指定された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続した後、新しい行に `1>` と表示し、その隣でアンダースコアを点滅させます。これを `sqlcmd` プロンプトと呼びます。 
-  `1` は、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの最初の行であることを示します。この `sqlcmd` プロンプトが [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの入力開始位置になります。  
+ 入力ファイルやクエリを指定せずにこのコマンドを実行すると、`sqlcmd` は指定された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続した後、新しい行に `1>` と表示し、その隣でアンダースコアを点滅させます。これを `sqlcmd` プロンプトと呼びます。 `1` は、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの最初の行であることを示します。この `sqlcmd` プロンプトが [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの入力開始位置になります。  
   
- 
-  `sqlcmd` プロンプトでは、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントと、`sqlcmd` や `GO` などの `EXIT` コマンドの両方を入力できます。 各 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントは、ステートメント キャッシュと呼ばれるバッファーに格納されます。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コマンドを入力し、Enter キーを押すと、これらのステートメントが `GO` に送信されます。 を終了`sqlcmd`するに`EXIT`は`QUIT` 、新しい行の先頭に「」または「」と入力します。  
+ `sqlcmd` プロンプトでは、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントと、`sqlcmd` や `GO` などの `EXIT` コマンドの両方を入力できます。 各 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントは、ステートメント キャッシュと呼ばれるバッファーに格納されます。 `GO` コマンドを入力し、Enter キーを押すと、これらのステートメントが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に送信されます。 を終了`sqlcmd`するに`EXIT`は`QUIT` 、新しい行の先頭に「」または「」と入力します。  
   
- ステートメント キャッシュをクリアするには、「`:RESET`」と入力します。 「 `^C` 」 `sqlcmd`と入力すると、が終了します。 
-  `^C` は、`GO` コマンドが実行された後に、ステートメント キャッシュの実行を停止するためにも使用できます。  
+ ステートメント キャッシュをクリアするには、「`:RESET`」と入力します。 「 `^C` 」 `sqlcmd`と入力すると、が終了します。 `^C` は、`GO` コマンドが実行された後に、ステートメント キャッシュの実行を停止するためにも使用できます。  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)]対話型セッションで入力されたステートメントは、 **: ED**コマンドと`sqlcmd`プロンプトを入力することによって編集できます。 起動したエディターで [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを編集して、エディターを終了すると、変更された [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントがコマンド ウィンドウに表示されます。 を`GO`入力して、実行[!INCLUDE[tsql](../../includes/tsql-md.md)]するステートメントを実行します。  
   
 ## <a name="quoted-strings"></a>引用符で囲まれた文字列  
- 引用符で囲まれた文字列は、前処理がまったく行われずそのまま使用されます。ただし、例外として、2 つの連続する引用符を入力することで、引用符自体を文字列に挿入できます。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、この文字の並びを 1 つの引用符として扱います (ただし、この変換はサーバーで行われます)。スクリプト変数が文字列内に存在する場合は展開されません。  
+ 引用符で囲まれた文字列は、前処理がまったく行われずそのまま使用されます。ただし、例外として、2 つの連続する引用符を入力することで、引用符自体を文字列に挿入できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、この文字の並びを 1 つの引用符として扱います (ただし、この変換はサーバーで行われます)。スクリプト変数が文字列内に存在する場合は展開されません。  
   
  次に例を示します。  
   
@@ -142,8 +131,7 @@ ms.locfileid: "75243179"
  `Length: 5" 7'`  
   
 ## <a name="strings-that-span-multiple-lines"></a>複数行の文字列  
- 
-  `sqlcmd` では、複数行の文字列になるスクリプトがサポートされています。 たとえば、次の `SELECT` ステートメントは複数行にわたって記述されていますが、「 `GO`」と入力して &lt;localizedText&gt;Enter&lt;/localizedText&gt; キーを押すと、1 つの文字列として実行されます。  
+ `sqlcmd` では、複数行の文字列になるスクリプトがサポートされています。 たとえば、次の `SELECT` ステートメントは複数行にわたって記述されていますが、「 `GO`」と入力して &lt;localizedText&gt;Enter&lt;/localizedText&gt; キーを押すと、1 つの文字列として実行されます。  
   
  `SELECT First line`  
   
@@ -154,8 +142,7 @@ ms.locfileid: "75243179"
  `GO`  
   
 ## <a name="interactive-sqlcmd-example"></a>対話的な sqlcmd の例  
- 
-  `sqlcmd` を対話的に実行する例を次に示します。  
+ `sqlcmd` を対話的に実行する例を次に示します。  
   
  コマンド プロンプト ウィンドウを開くと、次のような行が表示されます。  
   
@@ -169,8 +156,7 @@ ms.locfileid: "75243179"
   
  `1> _`  
   
- これは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスへの接続が確立され、 `sqlcmd` で [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントと `sqlcmd` コマンドを実行できるようになったことを示しています。 
-  `1>` の隣で点滅しているアンダースコアは、入力したステートメントやコマンドが表示される位置を示す `sqlcmd` プロンプトです。 ここで、 `USE AdventureWorks2012` 「」と入力し、enter `GO`キーを押して、「」と入力し、enter キーを押します。 コマンド プロンプト ウィンドウの内容は次のようになります。  
+ これは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスへの接続が確立され、 `sqlcmd` で [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントと `sqlcmd` コマンドを実行できるようになったことを示しています。 `1>` の隣で点滅しているアンダースコアは、入力したステートメントやコマンドが表示される位置を示す `sqlcmd` プロンプトです。 ここで、 `USE AdventureWorks2012` 「」と入力し、enter `GO`キーを押して、「」と入力し、enter キーを押します。 コマンド プロンプト ウィンドウの内容は次のようになります。  
   
  `sqlcmd`  
   
@@ -184,8 +170,7 @@ ms.locfileid: "75243179"
   
  `1> _`  
   
- 「 `USE AdventureWorks2012` 」と入力した後で &lt;localizedText&gt;Enter&lt;/localizedText&gt; キーを押すことにより、新しい行を開始するよう `sqlcmd` に要求します。 「 `GO,` 」と入力してから Enter キーを押すことにより、 `sqlcmd` ステートメントを `USE AdventureWorks2012` のインスタンスに送信するよう [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に指示します。 
-  `sqlcmd` により、 `USE` ステートメントが正常に完了したことを示すメッセージが返されます。その後、 `1>` プロンプトが表示され、新しいステートメントやコマンドを入力できるようになります。  
+ 「 `USE AdventureWorks2012` 」と入力した後で &lt;localizedText&gt;Enter&lt;/localizedText&gt; キーを押すことにより、新しい行を開始するよう `sqlcmd` に要求します。 「 `GO,` 」と入力してから Enter キーを押すことにより、 `sqlcmd` ステートメントを `USE AdventureWorks2012` のインスタンスに送信するよう [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に指示します。 `sqlcmd` により、 `USE` ステートメントが正常に完了したことを示すメッセージが返されます。その後、 `1>` プロンプトが表示され、新しいステートメントやコマンドを入力できるようになります。  
   
  次の例では、 `SELECT` ステートメント、 `GO` を実行するための `SELECT`、および `EXIT` を終了するための `sqlcmd`を入力した場合に、コマンド プロンプト ウィンドウに表示される内容を示します。  
   
@@ -222,14 +207,11 @@ ms.locfileid: "75243179"
  行 `3> GO` の後の行は、 `SELECT` ステートメントの出力です。 出力の生成後、 `sqlcmd` により `sqlcmd` プロンプトがリセットされ、 `1>`が表示されます。 行 `EXIT` で「 `1>`」と入力すると、最初にコマンド プロンプト ウィンドウを開いたときと同じ行が表示されます。 これは、 `sqlcmd` のセッションを終了したことを示します。 その状態で再度 `EXIT` コマンドを入力すると、コマンド プロンプト ウィンドウを閉じることができます。  
   
 ## <a name="running-transact-sql-script-files-by-using-sqlcmd"></a>sqlcmd を使用した Transact-SQL スクリプト ファイルの実行  
- 
-  `sqlcmd` を使用してデータベース スクリプト ファイルを実行できます。 スクリプトファイルは、 [!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント、 `sqlcmd`コマンド、およびスクリプト変数が混在したテキストファイルです。 変数をスクリプト化する方法の詳細については、「 [sqlcmd でのスクリプト変数の使用](sqlcmd-use-with-scripting-variables.md)」をご覧ください。 スクリプト ファイル内のステートメント、コマンド、およびスクリプト変数に対して `sqlcmd` で行われる処理は、対話的に入力したステートメントやコマンドの処理と似ています。 
-  `sqlcmd` が対話入力の場合と大きく異なる点は、ユーザーがステートメント、コマンド、およびスクリプト変数を入力するまで待機するのではなく、入力ファイルを最後まで中断することなく読み取るという点です。  
+ `sqlcmd` を使用してデータベース スクリプト ファイルを実行できます。 スクリプトファイルは、 [!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント、 `sqlcmd`コマンド、およびスクリプト変数が混在したテキストファイルです。 変数をスクリプト化する方法の詳細については、「 [sqlcmd でのスクリプト変数の使用](sqlcmd-use-with-scripting-variables.md)」をご覧ください。 スクリプト ファイル内のステートメント、コマンド、およびスクリプト変数に対して `sqlcmd` で行われる処理は、対話的に入力したステートメントやコマンドの処理と似ています。 `sqlcmd` が対話入力の場合と大きく異なる点は、ユーザーがステートメント、コマンド、およびスクリプト変数を入力するまで待機するのではなく、入力ファイルを最後まで中断することなく読み取るという点です。  
   
  データベース スクリプト ファイルの作成方法はいくつかあります。  
   
--   
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ステートメントのセットを対話的に作成およびデバッグして、クエリ ウィンドウの内容をスクリプト ファイルとして保存する。  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ステートメントのセットを対話的に作成およびデバッグして、クエリ ウィンドウの内容をスクリプト ファイルとして保存する。  
   
 -   メモ帳などのテキスト エディターを使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを含んだテキスト ファイルを作成する。  
   
@@ -248,8 +230,7 @@ ms.locfileid: "75243179"
   
  `GO`  
   
- 
-  `MyFolder` というフォルダーを作成し、スクリプトを `MyScript.sql` ファイルとして `C:\MyFolder`フォルダーに保存します。 コマンド プロンプトで、次のコマンドを入力してスクリプトを実行し、結果を `MyOutput.txt` の `MyFolder`に出力します。  
+ `MyFolder` というフォルダーを作成し、スクリプトを `MyScript.sql` ファイルとして `C:\MyFolder`フォルダーに保存します。 コマンド プロンプトで、次のコマンドを入力してスクリプトを実行し、結果を `MyOutput.txt` の `MyFolder`に出力します。  
   
  `sqlcmd -i C:\MyFolder\MyScript.sql -o C:\MyFolder\MyOutput.txt`  
   
@@ -288,8 +269,7 @@ ms.locfileid: "75243179"
   
  `(1 rows affected)`  
   
- 
-  `sqlcmd` を使用してブロック中のプロセスを終了します。  
+ `sqlcmd` を使用してブロック中のプロセスを終了します。  
   
  `1> KILL 64;`  
   
@@ -330,8 +310,7 @@ ms.locfileid: "75243179"
   
  `SET NOCOUNT OFF`  
   
- 
-  `sqlcmd` プロンプトで次のコマンドを入力します。  
+ `sqlcmd` プロンプトで、次のコマンドを入力します。  
   
  `C:\sqlcmd`  
   
@@ -356,8 +335,7 @@ ms.locfileid: "75243179"
   
  `BACKUP DATABASE [$(db)] TO DISK='$(bakfile)';`  
   
- 
-  `sqlcmd` プロンプトで次のコマンドを入力します。  
+ `sqlcmd` プロンプトで、次のコマンドを入力します。  
   
  `C:\ >sqlcmd`  
   
@@ -508,8 +486,7 @@ ms.locfileid: "75243179"
   
 -   サーバーの証明書を信頼し、その有効性を検証しないように設定するには、クライアント側で -C スイッチを使用します。 このオプションは、ADO.net オプションの `TRUSTSERVERCERTIFICATE = true`と同等です。  
   
- 
-  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] サービスは、SQL Server インスタンスで使用できるすべての `SET` オプションをサポートするわけではありません。 次の `SET` オプションを `ON` または `OFF`に設定すると、エラーがスローされます。  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] サービスは、SQL Server インスタンスで使用できるすべての `SET` オプションをサポートするわけではありません。 次の `SET` オプションを `ON` または `OFF`に設定すると、エラーがスローされます。  
   
 -   [SET ANSI_DEFAULTS]  
   
