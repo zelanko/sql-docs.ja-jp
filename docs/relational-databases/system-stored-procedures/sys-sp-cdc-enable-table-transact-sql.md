@@ -22,10 +22,10 @@ ms.assetid: 26150c09-2dca-46ad-bb01-3cb3165bcc5d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b846ff31d4acbc9d87f66a76a19f688384c88982
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106459"
 ---
 # <a name="syssp_cdc_enable_table-transact-sql"></a>sys.sp_cdc_enable_table (Transact-SQL)
@@ -70,7 +70,7 @@ sys.sp_cdc_enable_table
   
  ソーステーブルには、最大2つのキャプチャインスタンスを含めることができます。 詳細については、「 [sp_cdc_help_change_data_capture &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)」を参照してください。  
   
-`[ @supports_net_changes = ] supports_net_changes`差分変更のクエリのサポートをこのキャプチャインスタンスで有効にするかどうかを示します。 テーブルに**** 主キーがある場合、またはテーブルに@index_nameパラメーターを使用して識別された一意のインデックスがある場合、 *supports_net_changes*はビットの既定値は1です。 それ以外の場合、既定値は 0 になります。  
+`[ @supports_net_changes = ] supports_net_changes`差分変更のクエリのサポートをこのキャプチャインスタンスで有効にするかどうかを示します。 テーブルに**bit**主キーがある場合、またはテーブルに@index_nameパラメーターを使用して識別された一意のインデックスがある場合、 *supports_net_changes*はビットの既定値は1です。 それ以外の場合、既定値は 0 になります。  
   
  0の場合は、すべての変更をクエリするサポート関数のみが生成されます。  
   
@@ -103,9 +103,9 @@ sys.sp_cdc_enable_table
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ None  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  テーブルで変更データキャプチャを有効にするには、その前にデータベースを有効にする必要があります。 データベースで変更データキャプチャが有効になっているかどうかを確認するには、[データベースカタログビューの](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) **is_cdc_enabled**列に対してクエリを実行します。 データベースを有効にするには、 [sp_cdc_enable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md)ストアドプロシージャを使用します。  
   
  テーブルに対して変更データ キャプチャを有効にすると、変更テーブルと 1 つまたは 2 つのクエリ関数が生成されます。 変更テーブルは、キャプチャ プロセスによってトランザクション ログから抽出されたソース テーブルの変更に関するリポジトリとして機能します。 クエリ関数は、変更テーブルからデータを抽出するために使用されます。 これらの関数の名前は、次の方法で*capture_instance*パラメーターから派生します。  

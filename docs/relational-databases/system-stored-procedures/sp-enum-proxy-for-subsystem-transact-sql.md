@@ -18,17 +18,16 @@ ms.assetid: 580cc3be-1068-4a96-8d15-78ca3a5bb719
 ms.author: vanto
 author: VanMSFT
 ms.openlocfilehash: 93a55b28325bd9b04af569120ad34baeb689e8f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124659"
 ---
 # <a name="sp_enum_proxy_for_subsystem-transact-sql"></a>sp_enum_proxy_for_subsystem (Transact-sql)
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシがサブシステムにアクセスするための権限を一覧表示します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -57,7 +56,7 @@ sp_enum_proxy_for_subsystem
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**subsystem_id**|**int**|サブシステムの識別番号。|  
 |**subsystem_name**|**sysname**|サブシステムの名前。|  
@@ -65,7 +64,7 @@ sp_enum_proxy_for_subsystem
 |**proxy_name**|**sysname**|プロキシの名前。|  
 | &nbsp; | &nbsp; | &nbsp; |
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  パラメーターが指定されていない場合、 **sp_enum_proxy_for_subsystem**は、すべてのサブシステムについて、インスタンス内のすべてのプロキシに関する情報を一覧表示します。  
   
  プロキシ id またはプロキシ名を指定すると、 **sp_enum_proxy_for_subsystem**はプロキシがアクセスできるサブシステムの一覧を表示します。 サブシステム id またはサブシステムの名前を指定すると、 **sp_enum_proxy_for_subsystem**そのサブシステムへのアクセス権を持つプロキシが一覧表示されます。  

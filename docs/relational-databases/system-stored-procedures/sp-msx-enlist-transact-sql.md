@@ -18,10 +18,10 @@ ms.assetid: ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 905ec9c26fe84ceaf1230665c3ff13e2e7ffe9f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108032"
 ---
 # <a name="sp_msx_enlist-transact-sql"></a>sp_msx_enlist (Transact-SQL)
@@ -51,12 +51,12 @@ sp_msx_enlist [@msx_server_name =] 'msx_server'
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ None  
   
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャの実行権限は、既定では **sysadmin** 固定サーバー ロールのメンバーに与えられています。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、現在のサーバーを `AdventureWorks1` マスター サーバーに追加します。 現在のサーバーの場所は`Building 21, Room 309, Rack 5`です。  
   
 ```  

@@ -18,10 +18,10 @@ ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f5127d041817a41dcf2d6fb4ed65070c87d05dd4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108482"
 ---
 # <a name="sp_cursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
@@ -41,7 +41,7 @@ sp_cursoropen cursor OUTPUT, stmt
 ```  
   
 ## <a name="arguments"></a>引数  
- *g*  
+ *cursor*  
  SQL Server で生成されたカーソル識別子。 *cursor*は、カーソルに関連する後続のすべてのプロシージャ (sp_cursorfetch など) で指定する必要がある*ハンドル*値です。 *cursor*は、 **int**戻り値を持つ必須パラメーターです。  
   
  *カーソル*を使用すると、1つのデータベース接続で複数のカーソルをアクティブにすることができます。  
@@ -52,7 +52,7 @@ sp_cursoropen cursor OUTPUT, stmt
  *scrollopt*  
  スクロール オプションです。 *scrollopt*は省略可能なパラメーターで、次のいずれかの**int**入力値を必要とします。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -74,7 +74,7 @@ sp_cursoropen cursor OUTPUT, stmt
  *ccopt*  
  同時実行制御オプション。 *ccopt*は省略可能なパラメーターで、次のいずれかの**int**入力値を必要とします。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (以前の LOCKCC)|  
@@ -135,7 +135,7 @@ sp_cursoropen cursor OUTPUT, stmt
  0  
  プロシージャが正常に実行されました。  
   
- 1 で保護されたプロセスとして起動されました  
+ 1  
  プロシージャが失敗しました。  
   
  2  
@@ -147,7 +147,7 @@ sp_cursoropen cursor OUTPUT, stmt
 > [!NOTE]  
 >  Sp_cursoropen プロシージャが正常に実行された場合、RPC の戻りパラメーターと TDS 列形式の情報 (0xa0 & 0xa1 messages) を含む結果セットが送信されます。 失敗した場合は、1つまたは複数の TDS エラーメッセージが送信されます。 どちらの場合も、行データは返されず、 *done*メッセージカウントはゼロになります。 7.0 より前の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョンを使用している場合、0xa0、0XA1 (SELECT ステートメントの標準) は、0xa5 および0xa5 のトークンストリームと共に返されます。 7.0 を使用し[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ている場合は、0xa5 および0xa5 のトークンストリームと共に0x81 が返されます (SELECT ステートメントの標準)。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="stmt-parameter"></a>stmt パラメーター  
  *Stmt*でストアドプロシージャの実行を指定する場合、入力パラメーターは、 *stmt*文字列の一部として、または*boundparam*引数として指定することによって、定数として定義することができます。 宣言された変数は、この方法でバインドされたパラメーターとして渡すことができます。  
@@ -169,7 +169,7 @@ sp_cursoropen cursor OUTPUT, stmt
   
  AUTO_FETCH と AUTO_CLOSE は、または FAST_FORWARD にリンクできます。  
   
- CHECK_ACCEPTED_TYPES がオンになっている場合は、最後の** 5 つの scrollopt`,`値 (KEYSET_ACCEPTABLE DYNAMIC_ACCEPTABLE、FORWARD_ONLY_ACCEPTABLE、STATIC_ACCEPTABLE、または FAST_FORWARD_ACCEPTABLE) の少なくとも1つが on である必要があります。  
+ CHECK_ACCEPTED_TYPES がオンになっている場合は、最後の*scrollopt* 5 つの scrollopt`,`値 (KEYSET_ACCEPTABLE DYNAMIC_ACCEPTABLE、FORWARD_ONLY_ACCEPTABLE、STATIC_ACCEPTABLE、または FAST_FORWARD_ACCEPTABLE) の少なくとも1つが on である必要があります。  
   
  静的カーソルは常に READ_ONLY として開かれます。 したがって、このカーソルを使用して基になるテーブルを更新することはできません。  
   
@@ -201,7 +201,7 @@ sp_cursoropen cursor OUTPUT, stmt
 ## <a name="rpc-considerations"></a>RPC に関する考慮事項  
  RPC RETURN_METADATA 入力フラグを0x0001 に設定して、カーソル選択リストのメタデータを TDS ストリームで返すように要求することができます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
   
 ### <a name="bound_param-parameter"></a>bound_param パラメーター  
  5番目以降のパラメーターは、入力パラメーターとしてステートメントプランに渡されます。 最初のパラメーターは、次の形式の文字列である必要があります。  
@@ -212,6 +212,6 @@ sp_cursoropen cursor OUTPUT, stmt
   
 ## <a name="see-also"></a>参照  
  [sp_cursorfetch &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

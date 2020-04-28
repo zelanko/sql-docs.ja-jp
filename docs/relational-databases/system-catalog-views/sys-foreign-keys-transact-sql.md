@@ -21,10 +21,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b78466b0c2c20bc3b59fb372870bbad87aef0e74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133891"
 ---
 # <a name="sysforeign_keys-transact-sql"></a>foreign_keys (Transact-sql)
@@ -32,7 +32,7 @@ ms.locfileid: "68133891"
 
   FOREIGN KEY 制約であるオブジェクトごとに1行の値を格納します。 **type** = F.  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**\<Sys. オブジェクトから継承された列>**||このビューが継承する列の一覧については、「 [sys. objects &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)」を参照してください。|  
 |**referenced_object_id**|**int**|参照されるオブジェクトの ID。|  
@@ -41,16 +41,16 @@ ms.locfileid: "68133891"
 |**is_not_for_replication**|**bit**|FOREIGN KEY 制約は、NOT FOR REPLICATION オプションを使用して作成されました。|  
 |**is_not_trusted**|**bit**|外部キー制約がシステムによって検証されていません。|  
 |**delete_referential_action**|**tinyint**|削除が発生したときに、この外部キーに対して宣言された参照アクション。<br /><br /> 0 = 操作なし<br /><br /> 1 = Cascade<br /><br /> 2 = null に設定<br /><br /> 3 = 既定値に設定|  
-|**delete_referential_action_desc**|**nvarchar (60)**|削除が発生したときに FOREIGN KEY に対して宣言された参照操作の説明。<br /><br /> NO_ACTION<br /><br /> CASCADE<br /><br /> SET_NULL<br /><br /> SET_DEFAULT|  
+|**delete_referential_action_desc**|**nvarchar(60)**|削除が発生したときに FOREIGN KEY に対して宣言された参照操作の説明。<br /><br /> NO_ACTION<br /><br /> CASCADE<br /><br /> SET_NULL<br /><br /> SET_DEFAULT|  
 |**update_referential_action**|**tinyint**|更新が発生したときに FOREIGN KEY に対して宣言された参照操作。<br /><br /> 0 = 操作なし<br /><br /> 1 = Cascade<br /><br /> 2 = null に設定<br /><br /> 3 = 既定値に設定|  
-|**update_referential_action_desc**|**nvarchar (60)**|更新が発生したときに、この外部キーに対して宣言された参照操作の説明。<br /><br /> NO_ACTION<br /><br /> CASCADE<br /><br /> SET_NULL<br /><br /> SET_DEFAULT|  
+|**update_referential_action_desc**|**nvarchar(60)**|更新が発生したときに、この外部キーに対して宣言された参照操作の説明。<br /><br /> NO_ACTION<br /><br /> CASCADE<br /><br /> SET_NULL<br /><br /> SET_DEFAULT|  
 |**is_system_named**|**bit**|1 = システムによって名前が生成されました。<br /><br /> 0 = ユーザーによって指定された名前。|  
   
 ## <a name="permissions"></a>アクセス許可  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [SQL Server システム カタログに対するクエリに関してよく寄せられる質問](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   

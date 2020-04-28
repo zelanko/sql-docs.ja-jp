@@ -18,10 +18,10 @@ ms.assetid: 508c686d-2bd4-41ba-8602-48ebca266659
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0f6ffcb7a43fbfc2a840cbbbeb95de4bbb875cbe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108209"
 ---
 # <a name="sp_dbcmptlevel-transact-sql"></a>sp_dbcmptlevel (Transact-sql)
@@ -65,7 +65,7 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
   
  *Name*が指定されて*いない場合、は* [!INCLUDE[ssDE](../../includes/ssde-md.md)] 、指定されたデータベースの現在の互換性レベルを表示するメッセージを返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  互換性レベルの詳細については、「 [ALTER Database Compatibility Level &#40;transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -73,8 +73,8 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
   
 ## <a name="see-also"></a>参照  
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [ALTER DATABASE &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [予約済みキーワード &#40;Transact-sql&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [予約済みキーワード &#40;Transact-SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md)   
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

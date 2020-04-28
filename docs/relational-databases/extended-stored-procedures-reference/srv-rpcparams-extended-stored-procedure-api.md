@@ -20,18 +20,17 @@ ms.assetid: 96a5e6f6-d320-4623-b96e-0a856e3abebb
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 34f847d8a20ee52b680e69a28c07539e73c8b499
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68131573"
 ---
 # <a name="srv_rpcparams-extended-stored-procedure-api"></a>srv_rpcparams (拡張ストアド プロシージャ API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
   
  現在のリモート ストアド プロシージャのパラメーター数を返します。  
   
@@ -51,7 +50,7 @@ srvproc
 ## <a name="returns"></a>戻り値  
  リモート ストアド プロシージャ内のパラメーター数を返します。 リモート ストアド プロシージャにパラメーターがない場合、または現在のリモート ストアド プロシージャがない場合は、-1 を返し、情報エラーを生成します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この関数は現在のリモート ストアド プロシージャのパラメーター数を返します。 通常、この関数はリモート ストアド プロシージャから呼び出されます。  
   
  パラメーターを指定してリモート ストアド プロシージャを呼び出す場合、パラメーターは名前で指定することも、名前を使用せずにその位置を指定して渡すこともできます。 名前によるパラメーター指定と位置によるパラメーター指定を混合してリモート ストアド プロシージャを呼び出すと、エラーが発生します。 このエラーが発生してもリモート ストアド プロシージャ ハンドラーは呼び出されますが、ハンドラーはパラメーターを受け取らず、**srv_rpcparams** は 0 を返します。  

@@ -19,10 +19,10 @@ ms.assetid: 17be755b-673d-4cd4-9544-6ecb4220bed3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 70df2ef47b4d74ef2a4316da4809aecf2005e15e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108112"
 ---
 # <a name="sp_dbmmonitorchangemonitoring-transact-sql"></a>sp_dbmmonitorchangemonitoring (Transact-SQL)
@@ -48,24 +48,23 @@ sp_dbmmonitorchangemonitoring parameter
   
  データベース モニタリングの状態テーブルの更新間隔 (分単位) です。 既定の時間は 1 分です。  
   
- *数値*  
+ *value*  
  変更するパラメーターの新しい値を指定します。  
   
 |パラメーター|値の説明|  
 |---------------|--------------------------|  
-|1 で保護されたプロセスとして起動されました|新しい更新間隔 (分単位) を表す 1 ～ 120 の範囲の整数。|  
+|1|新しい更新間隔 (分単位) を表す 1 ～ 120 の範囲の整数。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- なし  
+ None  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ None  
   
 ## <a name="permissions"></a>アクセス許可  
- 
-  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
+ **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、更新間隔を 5 分に変更します。  
   
 ```  
@@ -77,6 +76,6 @@ EXEC sp_dbmmonitorchangemonitoring 1, 5 ;
  [sp_dbmmonitoraddmonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)   
  [sp_dbmmonitordropmonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)   
  [sp_dbmmonitorhelpmonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   
- [sp_dbmmonitorresults &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)  
+ [sp_dbmmonitorresults &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)  
   
   

@@ -16,10 +16,10 @@ ms.assetid: 64450e4d-844d-4176-874e-f3845536f7d2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 478d483da545a6b149a0fb2b03c41f106a73da60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68123977"
 ---
 # <a name="sp_getmergedeletetype-transact-sql"></a>sp_getmergedeletetype (Transact-sql)
@@ -43,19 +43,19 @@ sp_getmergedeletetype [ @source_object = ] 'source_object', [ @rowguid =] 'rowgu
   
 `[ @delete_type = ] delete_type OUTPUT`削除の種類を示すコードを指定します。 *delete_type*は**int**,、既定値はありません。 *delete_type*は出力パラメーターでもあり、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|ユーザーの削除|  
-|**5/5**|部分削除|  
+|**5**|部分削除|  
 |**6**|システムの削除|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_getmergedeletetype**は、マージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_getmergedeletetype**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

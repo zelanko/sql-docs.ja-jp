@@ -16,10 +16,10 @@ ms.assetid: 5df7d86b-d343-4d9b-88b1-74429ed092e6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cc6205eb5487b89db55488bcdf36fbb036595d57
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68129647"
 ---
 # <a name="sp_resetsnapshotdeliveryprogress-transact-sql"></a>sp_resetsnapshotdeliveryprogress (Transact-SQL)
@@ -45,13 +45,13 @@ sp_resetsnapshotdeliveryprogress [ [ @verbose_level = ] verbose_level ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_resetsnapshotdeliveryprogress**は、 **Mssnapshotdeliveryprogress**テーブル内のすべての行を削除します。 これにより、スナップショット配信プロセスで行われた以前の進行状況によって、サブスクリプションデータベースで残されているすべてのメタデータが実質的に削除されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_resetsnapshotdeliveryprogress**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
- [レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

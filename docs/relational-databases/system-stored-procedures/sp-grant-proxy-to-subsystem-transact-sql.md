@@ -18,10 +18,10 @@ ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 96e044b94244492202058d6dc2b2f048a9c1db6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68123819"
 ---
 # <a name="sp_grant_proxy_to_subsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
@@ -47,40 +47,39 @@ sp_grant_proxy_to_subsystem
   
 `[ @subsystem_id = ] id`アクセスを許可するサブシステムの id 番号。 *Subsystem_id*は**int**,、既定値は NULL です。 *Subsystem_id*または*subsystem_name*のいずれかを指定する必要がありますが、両方を指定することはできません。 次の表に、各サブシステムの値を示します。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|**2**|
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX スクリプト<br /><br /> ** \*重要\* \* **ActiveX スクリプティングサブシステムは、の将来[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョンでエージェントから削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。|  
-|**番**|オペレーティングシステム (**CmdExec**)|  
+|**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX スクリプト<br /><br /> ** \*重要\* \* **ActiveX スクリプティングサブシステムは、の将来[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョンでエージェントから削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。|  
+|**3**|オペレーティングシステム (**CmdExec**)|  
 |**4**|レプリケーション スナップショット エージェント|  
-|**5/5**|レプリケーション ログ リーダー エージェント|  
+|**5**|レプリケーション ログ リーダー エージェント|  
 |**6**|レプリケーション ディストリビューション エージェント|  
-|**7**|レプリケーション マージ エージェント|  
+|**7**|Replication Merge Agent|  
 |**8**|Replication Queue Reader Agent|  
 |**9**|Analysis Services クエリ|  
-|**種類**|Analysis Services コマンド|  
-|**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)]パッケージの実行|  
+|**10**|Analysis Services コマンド|  
+|**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ実行|  
 |**12**|PowerShell スクリプト|  
 | &nbsp; | &nbsp; |
   
 `[ @subsystem_name = ] 'subsystem_name'`アクセスを許可するサブシステムの名前。 **Subsystem_name**は**sysname**で、既定値は NULL です。 *Subsystem_id*または*subsystem_name*のいずれかを指定する必要がありますが、両方を指定することはできません。 次の表に、各サブシステムの値を示します。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**ActiveScripting**| ActiveX スクリプト|  
 |**CmdExec**|オペレーティングシステム (**CmdExec**)|  
 |**スナップショット**|レプリケーション スナップショット エージェント|  
 |**リーダー**|レプリケーション ログ リーダー エージェント|  
 |**Distribution**|レプリケーションディストリビューションエージェント|  
-|**マージ**|レプリケーション マージ エージェント|  
+|**マージ**|Replication Merge Agent|  
 |**QueueReader**|Replication Queue Reader Agent|  
 |**ANALYSISQUERY**|Analysis Services クエリ|  
 |**ANALYSISCOMMAND**|Analysis Services コマンド|  
-|**Dts**|SSIS パッケージの実行|  
+|**Dts**|SSIS パッケージ実行|  
 |**PowerShell**|PowerShell スクリプト|  
 | &nbsp; | &nbsp; |
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  サブシステムへのプロキシアクセスを許可しても、プロキシで指定されたプリンシパルのアクセス許可は変更されません。  
   
 ## <a name="permissions"></a>アクセス許可  

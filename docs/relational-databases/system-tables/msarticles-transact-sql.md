@@ -18,10 +18,10 @@ ms.assetid: 1acd79a5-b3e2-4161-9592-7acc2a41ba38
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 81598b65daf5fa7370004c890ab775e5b29b518f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68132096"
 ---
 # <a name="msarticles-transact-sql"></a>MSarticles (Transact-sql)
@@ -29,7 +29,7 @@ ms.locfileid: "68132096"
 
   **Msarticles**テーブルには、パブリッシャーによってレプリケートされるアーティクルごとに1行の情報が格納されます。 このテーブルは、ディストリビューションデータベースに格納されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|パブリッシャーの ID。|  
 |**publisher_db**|**sysname**|パブリッシャーデータベースの名前。|  
@@ -44,6 +44,6 @@ ms.locfileid: "68132096"
   
 ## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

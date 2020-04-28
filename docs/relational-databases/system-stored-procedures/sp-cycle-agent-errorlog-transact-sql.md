@@ -18,10 +18,10 @@ ms.assetid: 8aa96182-60b7-4d7b-b2a7-ccce70378c6e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c95cc2db84bdf059437a45e2719bbc63d6eb6829
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108350"
 ---
 # <a name="sp_cycle_agent_errorlog-transact-sql"></a>sp_cycle_agent_errorlog (Transact-sql)
@@ -42,9 +42,9 @@ sp_cycle_agent_errorlog
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ None  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントが起動されるたびに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]現在のエージェントエラーログの名前が SQLAgent に変更され**ます。 1**;**Sqlagent**は sqlagent になります。 **2**、 **sqlagent. 2**が**sqlagent. 3**になります。 **sp_cycle_agent_errorlog**を使用すると、サーバーを停止して起動しなくてもエラーログファイルを循環することができます。  
   
  このストアドプロシージャは、 **msdb**データベースから実行する必要があります。  
@@ -52,7 +52,7 @@ sp_cycle_agent_errorlog
 ## <a name="permissions"></a>アクセス許可  
  **Sp_cycle_agent_errorlog**の実行権限は、 **sysadmin**固定サーバーロールのメンバーに制限されています。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント エラー ログを使い回します。  
   
 ```  

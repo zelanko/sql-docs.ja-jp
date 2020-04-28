@@ -22,10 +22,10 @@ ms.assetid: 176d83b3-493d-43cd-800e-aa123c3bdf17
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 87cb8f207d85220b88ef00d65fd4704b21becf63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106504"
 ---
 # <a name="syssp_cdc_enable_db-transact-sql"></a>sp_cdc_enable_db (Transact-sql)
@@ -49,9 +49,9 @@ sys.sp_cdc_enable_db
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ None  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  [システムデータベース](../../relational-databases/databases/system-databases.md)またはディストリビューションデータベースでは、変更データキャプチャを有効にできません。  
   
  sys.sp_cdc_enable_db を実行すると、メタデータ テーブルや DDL トリガーなど、データベース全体のスコープを持つ変更データ キャプチャ オブジェクトが作成されます。 また、cdc スキーマと cdc データベースユーザーを作成し、データベースエントリの [is_cdc_enabled] 列を [ [sys. データベース](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)] カタログビューに1に設定します。  
@@ -59,7 +59,7 @@ sys.sp_cdc_enable_db
 ## <a name="permissions"></a>アクセス許可  
  sysadmin 固定サーバー ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、変更データキャプチャを有効にします。  
   
 ```  

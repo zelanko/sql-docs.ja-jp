@@ -16,10 +16,10 @@ ms.assetid: a96e365f-5967-4580-9d79-5bacf2d12211
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6875e745cc05735b9f116c2d4afa5e5218defb99
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122389"
 ---
 # <a name="sp_helpmergealternatepublisher-transact-sql"></a>sp_helpmergealternatepublisher (Transact-sql)
@@ -45,7 +45,7 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**alternate_publisher**|**sysname**|代替パブリッシャーの名前です。|  
 |**alternate_publisher_db**|**sysname**|パブリケーションデータベースの名前。|  
@@ -57,7 +57,7 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_helpmergealternatepublisher**は、マージレプリケーションで使用します。  
   
  マージ セッションごとに、システムではパブリッシャーとサブスクライバーの両方に対し、代替パブリッシャーの一覧を求めるクエリが実行されます。 マージ処理では代替パブリッシャーの一覧に対してエントリの追加や削除が行われ、サブスクライバーとパブリッシャーの両方に一致する代替パブリッシャーの一覧が生成されます。  
@@ -66,6 +66,6 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
  **Sp_helpmergealternatepublisher**を実行できるのは、パブリケーションのパブリケーションアクセスリストのメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

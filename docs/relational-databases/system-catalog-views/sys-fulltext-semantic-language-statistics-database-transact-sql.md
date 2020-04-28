@@ -20,10 +20,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: e1d2e60ce41cd3c57af209123471696cf02a03ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133789"
 ---
 # <a name="sysfulltext_semantic_language_statistics_database-transact-sql"></a>fulltext_semantic_language_statistics_database (Transact-sql)
@@ -37,11 +37,10 @@ ms.locfileid: "68133789"
 ||||  
 |-|-|-|  
 |**列名**|**Type**|**説明**|  
-|**database_id**|**int**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス内で一意のデータベースの ID です。|  
-|**register_date**|**DATETIME**|データベースがセマンティック処理用に登録された日付。|  
+|**database_id**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス内で一意のデータベースの ID です。|  
+|**register_date**|**datetime**|データベースがセマンティック処理用に登録された日付。|  
 |**registered_by**|**int**|セマンティック処理のためにデータベースを登録したサーバープリンシパルの ID。|  
-|**バージョン**|**nvarchar(128**|セマンティック言語統計データベースに固有の最新バージョン情報。|  
+|**version**|**nvarchar(128)**|セマンティック言語統計データベースに固有の最新バージョン情報。|  
   
 ## <a name="general-remarks"></a>全般的な解説  
  詳細については、「 [セマンティック検索のインストールと構成](../../relational-databases/search/install-and-configure-semantic-search.md)」を参照してください。  
@@ -54,8 +53,8 @@ ms.locfileid: "68133789"
 ### <a name="permissions"></a>アクセス許可  
  カタログ ビューでのメタデータの表示が、ユーザーが所有しているかそのユーザーが権限を許可されている、セキュリティ保護可能なメタデータに制限されます。  
   
-## <a name="examples"></a>例  
- 次の例では、の**** 現在のインスタンスに登録されているセマンティック言語統計データベースに関する情報を取得[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]するために、fulltext_semantic_language_statistics_database のクエリを実行する方法を示します。  
+## <a name="examples"></a>使用例  
+ 次の例では、の**sys.fulltext_semantic_language_statistics_database**現在のインスタンスに登録されているセマンティック言語統計データベースに関する情報を取得[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]するために、fulltext_semantic_language_statistics_database のクエリを実行する方法を示します。  
   
 ```  
 SELECT * FROM sys.fulltext_semantic_language_statistics_database;  

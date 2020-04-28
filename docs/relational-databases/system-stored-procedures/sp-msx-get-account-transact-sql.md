@@ -18,10 +18,10 @@ ms.assetid: 7b478049-e2d0-4bac-865a-b97fd1d8dfbc
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3dab15a076200e464e82d0b01ef6a156447a537f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108039"
 ---
 # <a name="sp_msx_get_account-transact-sql"></a>sp_msx_get_account (Transact-sql)
@@ -44,20 +44,20 @@ sp_msx_get_account
 ## <a name="result-sets"></a>結果セット  
  次の結果セットを返します。  
   
-|列名|種類|[説明]|  
+|列名|Type|説明|  
 |-----------------|----------|-----------------|  
 |msx_connection|**int**|マスターサーバーの接続番号。|  
 |msx_credential_id|**int**|このマスターサーバー接続に使用される資格情報の ID。|  
 |msx_credential_name|**sysname**|このマスターサーバー接続に使用される資格情報の名前。|  
-|msx_login_name|**nvarchar(4000)**|資格情報に関する Windows ユーザーのドメイン名とユーザー名。|  
+|msx_login_name|**nvarchar (4000)**|資格情報に関する Windows ユーザーのドメイン名とユーザー名。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ターゲット サーバーに対して指定された資格情報がない場合、空の結果セットを返します。 資格情報を設定するには、sp_msx_set_account を使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
  sysadmin 固定サーバー ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、このターゲット サーバーがマスター サーバーにログインする場合に使用する資格情報を一覧表示します。  
   
 ```  
@@ -78,7 +78,7 @@ GO
   
 ## <a name="see-also"></a>参照  
  [Transact-sql&#41;&#40;のストアドプロシージャの SQL Server エージェント](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
+ [Transact-sql&#41;&#40;の資格情報の作成](../../t-sql/statements/create-credential-transact-sql.md)   
  [sp_msx_set_account &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-msx-set-account-transact-sql.md)  
   
   

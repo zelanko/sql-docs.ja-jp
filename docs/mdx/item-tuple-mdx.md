@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5740095752b482430cd718d0e2bff813449d92ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68105220"
 ---
 # <a name="item-tuple-mdx"></a>Item (組) (MDX)
@@ -44,7 +44,7 @@ Set_Expression.Item(String_Expression1 [ ,String_Expression2,...n])
  *化*  
  返されるセット内の位置によって特定の組を指定する有効な数値式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Item**関数は、指定されたセットから組を返します。 **Item**関数を呼び出すには、次の3つの方法があります。  
   
 -   1つの文字列式が指定されている場合、 **Item**関数は、指定された組を返します。 たとえば、"([2005]) のようになります。Q3、[Store05]) "。  
@@ -53,7 +53,7 @@ Set_Expression.Item(String_Expression1 [ ,String_Expression2,...n])
   
 -   整数が指定されている場合、 **Item**関数は、 *Index*で指定された0から始まる位置にある組を返します。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、([1996], Sales) が返されます。  
   
  `{([1996],Sales), ([1997],Sales), ([1998],Sales)}.Item(0)`  
@@ -78,6 +78,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

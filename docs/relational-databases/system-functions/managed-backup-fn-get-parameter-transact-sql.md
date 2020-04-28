@@ -21,10 +21,10 @@ ms.assetid: ed94e54d-4516-4806-a8ce-f013d3a04122
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 18a42273218bb73de55694b9b54877a4f2e0f669
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68140652"
 ---
 # <a name="managed_backupfn_get_parameter-transact-sql"></a>managed_backup。 fn_get_parameter (Transact-sql)
@@ -44,13 +44,13 @@ ms.locfileid: "68140652"
 managed_backup.fn_get_parameter ('parameter_name' | '' | NULL )  
 ```  
   
-##  <a name="Arguments"></a>数値  
+##  <a name="arguments"></a><a name="Arguments"></a>数値  
  parameter_name  
  パラメーターの名前。 parameter_name は**NVARCHAR (128)** です。 関数に NULL または空の文字列が引数として指定されている場合は、構成されているすべてのスマート管理パラメーターの名前と値のペアが返されます。  
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |parameter_name|NVARCHAR (128)|パラメーターの名前。 返されるパラメーターの現在の一覧を次に示します。<br/><br/>**FileRetentionDebugXevent**<br/><br/>**SSMBackup2WADebugXevent**<br/><br/>**SSMBackup2WANotificationEmailIds**<br/><br/>**SSMBackup2WAEnableUserDefinedPolicy**<br/><br/>**SSMBackup2WAEverConfigured**<br/><br/>**StorageOperationDebugXevent**|  
 |parameter_value|NVARCHAR (128)|パラメーターの現在設定されている値。|  
@@ -60,7 +60,7 @@ managed_backup.fn_get_parameter ('parameter_name' | '' | NULL )
 ### <a name="permissions"></a>アクセス許可  
  この関数に対する SELECT 権限が必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、少なくとも1回構成されているすべてのパラメーターと、それらの現在の値を返します。  
   
 ```  
@@ -82,6 +82,6 @@ FROM managed_backup.fn_get_parameter ('SSMBackup2WANotficationEmailIds')
 ```  
   
 ## <a name="see-also"></a>参照  
- [Microsoft Azure への SQL Server マネージド バックアップ](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
+ [マネージバックアップを Microsoft Azure に SQL Server](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: 61a40eb4-573f-460c-9164-bd1bbfaf8b25
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: a2984479c8a1be35f8ccfa63d14b3250939f56c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68117904"
 ---
 # <a name="sp_adduser-transact-sql"></a>sp_adduser (Transact-sql)
@@ -53,7 +53,7 @@ sp_adduser [ @loginame = ] 'login'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  また、 **sp_adduser**では、ユーザーの名前を持つスキーマも作成されます。  
   
  ユーザーが追加されたら、GRANT、DENY、および REVOKE ステートメントを使用して、ユーザーが実行するアクティビティを制御するアクセス許可を定義します。  
@@ -107,6 +107,6 @@ EXEC sp_adduser 'BjornR', 'Bjorn', 'Production';
  [sp_dropuser &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
  [sp_grantdbaccess &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
  [sp_grantlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

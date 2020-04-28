@@ -20,10 +20,10 @@ ms.assetid: 792724dc-402e-4b17-9f2c-029d910bf88e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 43f5a4ca7dbad88fe98734576fd23368cc280fa2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68125019"
 ---
 # <a name="sysserver_audit_specification_details-transact-sql"></a>server_audit_specification_details (Transact-sql)
@@ -31,23 +31,23 @@ ms.locfileid: "68125019"
 
   サーバー インスタンス上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 監査に含まれるサーバー監査仕様の詳細 (アクション) に関する情報を含みます。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。 すべての audit_action_id とその名前の一覧については、 [dm_audit_actions &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)をクエリします。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |server_specification_id|**int**|監査サーバーの仕様の ID|  
 |audit_action_id|**int**|監査アクションの ID|  
 |audit_action_name|**sysname**|グループ名または監査アクションの名前|  
 |class|**tinyint**|予約済み|  
-|class_desc|**nvarchar (60)**|予約済み|  
+|class_desc|**nvarchar(60)**|予約済み|  
 |major_id|**int**|予約済み|  
 |minor_id|**int**|予約済み|  
 |audited_principal_id|**int**|予約済み|  
-|audited_result|**nvarchar (60)**|監査結果:<br /><br /> - SUCCESS AND FAILURE (成功および失敗)<br /><br /> - SUCCESS (成功)<br /><br /> -失敗|  
+|audited_result|**nvarchar(60)**|監査結果:<br /><br /> - SUCCESS AND FAILURE (成功および失敗)<br /><br /> - SUCCESS (成功)<br /><br /> -失敗|  
 |is_group|**bit**|監査対象オブジェクトがグループかどうか:<br /><br /> 0 - グループではない<br /><br /> 1 - グループ|  
   
 ## <a name="permissions"></a>アクセス許可  
  **ALTER ANY SERVER AUDIT**または**VIEW any DEFINITION**権限を持つプリンシパルは、このカタログビューにアクセスできます。 また、プリンシパルに**対して VIEW ANY DEFINITION**権限を拒否することはできません。  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [セキュリティカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   

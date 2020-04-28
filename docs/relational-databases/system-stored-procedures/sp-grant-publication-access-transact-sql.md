@@ -16,10 +16,10 @@ ms.assetid: 17993952-def6-4a16-b1c1-323ec42967f8
 ms.author: vanto
 author: VanMSFT
 ms.openlocfilehash: 4a94c22c7f524572a4b629c27d49ad35a84c3b02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68123810"
 ---
 # <a name="sp_grant_publication_access-transact-sql"></a>sp_grant_publication_access (Transact-sql)
@@ -47,7 +47,7 @@ sp_grant_publication_access [ @publication = ] 'publication', [ @login = ] 'logi
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_grant_publication_access**は、スナップショットレプリケーション、トランザクションレプリケーション、およびマージレプリケーションで使用します。  
   
  このストアドプロシージャは、繰り返し呼び出すことができます。  
@@ -59,6 +59,6 @@ sp_grant_publication_access [ @publication = ] 'publication', [ @login = ] 'logi
  [sp_help_publication_access &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md)   
  [sp_revoke_publication_access &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
  [パブリッシャーのセキュリティ保護](../../relational-databases/replication/security/secure-the-publisher.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

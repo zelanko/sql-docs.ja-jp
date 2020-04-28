@@ -18,10 +18,10 @@ ms.assetid: 82fbb48b-603a-4016-a7fb-1ce17fb76919
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a1641685bfe017ab7bc3adfda5c667684a70b786
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68130648"
 ---
 # <a name="sp_delete_jobschedule-transact-sql"></a>sp_delete_jobschedule (Transact-sql)
@@ -32,7 +32,7 @@ ms.locfileid: "68130648"
  **sp_delete_jobschedule**は、旧バージョンとの互換性のためだけに用意されています。  
   
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ジョブスケジュールをジョブとは別に管理できるようになりました。 ジョブからスケジュールを削除するには、 **sp_detach_schedule**を使用します。 スケジュールを削除するには、 **sp_delete_schedule**を使用します。  
   
 > **注: sp_delete_jobschedule**では、複数のジョブにアタッチされているスケジュールはサポートされていません。 既存のスクリプトが**sp_delete_jobschedule**を呼び出して、複数のジョブにアタッチされているスケジュールを削除すると、エラーが返されます。  
@@ -57,6 +57,6 @@ ms.locfileid: "68130648"
  [sp_add_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [sp_help_jobschedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-jobschedule-transact-sql.md)   
  [sp_update_jobschedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-jobschedule-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

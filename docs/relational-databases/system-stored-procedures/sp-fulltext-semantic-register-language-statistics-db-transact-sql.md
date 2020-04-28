@@ -18,16 +18,15 @@ ms.assetid: bef1b104-5a44-4327-9ae4-45eae3000f7e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 59cf70574a73827887542221f556e65e46090395
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124209"
 ---
 # <a name="sp_fulltext_semantic_register_language_statistics_db-transact-sql"></a>sp_fulltext_semantic_register_language_statistics_db (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の現在のインスタンスで、事前にデータが設定されているセマンティック言語統計データベースを登録します。  
   
  セマンティック抽出は、この言語統計データベースをアタッチし、このストアドプロシージャを使用して登録した後にのみ開始できます。 このタスクは、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスごとに1回だけ実行する必要があります。  
@@ -42,7 +41,7 @@ EXEC sp_fulltext_semantic_register_language_statistics_db
 GO  
 ```  
   
-##  <a name="Arguments"></a>数値  
+##  <a name="arguments"></a><a name="Arguments"></a>数値  
  [ @dbname = ]'*database_name*'  
  の現在の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに登録するセマンティック言語統計データベースの名前を指定します。 データベースが既にアタッチされている必要があります。 *database_name*は**sysname**であり、NULL にすることはできません。  
   
@@ -50,7 +49,7 @@ GO
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-set"></a>結果セット  
- [なし] :  
+ なし。  
   
 ## <a name="general-remarks"></a>全般的な解説  
  セマンティック言語統計データベースには、テキストコンテンツのセマンティック処理に必要な言語関連の統計情報が含まれています。  
@@ -81,7 +80,7 @@ GO
 ### <a name="permissions"></a>アクセス許可  
  CONTROL SERVER 権限が必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、 **sp_fulltext_semantic_register_language_statistics_db**を呼び出して、セマンティック言語統計データベースを登録する方法を示します。  
   
 ```sql  

@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ef8bd6cfbcc10fa0625b4925da618ab275331a32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124238"
 ---
 # <a name="sp_fulltext_keymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
@@ -46,32 +46,30 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
  フルテキスト インデックスが設定されたテーブルのオブジェクト ID。 無効な*table_id*を指定すると、エラーが返されます。 テーブルのオブジェクト ID を取得する方法の詳細については、「 [OBJECT_ID &#40;transact-sql&#41;](../../t-sql/functions/object-id-transact-sql.md)」を参照してください。  
   
  *docid*  
- キー値に対応する内部ドキュメント識別子 (DocId)。 
-  *docid* 値が無効な場合、結果は返されません。  
+ キー値に対応する内部ドキュメント識別子 (DocId)。 *docid* 値が無効な場合、結果は返されません。  
   
- *レジストリ*  
- 指定したテーブルからのフルテキスト キー値。 
-  *key* 値が無効な場合、結果は返されません。 フルテキストキー値の詳細については、「[フルテキストインデックスの管理](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)」を参照してください。  
+ *key*  
+ 指定したテーブルからのフルテキスト キー値。 *key* 値が無効な場合、結果は返されません。 フルテキストキー値の詳細については、「[フルテキストインデックスの管理](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)」を参照してください。  
   
 > [!IMPORTANT]  
 >  1 つ、2 つ、または 3 つのパラメーターを使用する方法の詳細については、後の「解説」を参照してください。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- [なし] :  
+ なし。  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |DocId|**bigint**|キー値に対応する内部ドキュメント識別子 (DocId) 列。|  
-|キー|*|指定したテーブルからのフルテキスト キー値。<br /><br /> マッピング テーブルにフルテキスト キーが存在しない場合は、空の行セットが返されます。|  
+|Key|*|指定したテーブルからのフルテキスト キー値。<br /><br /> マッピング テーブルにフルテキスト キーが存在しない場合は、空の行セットが返されます。|  
   
  <sup>*</sup>キーのデータ型は、ベーステーブルのフルテキストキー列のデータ型と同じです。  
   
 ## <a name="permissions"></a>アクセス許可  
  この関数はパブリックであり、特別な権限は必要ありません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  次の表に、1 つ、2 つ、または 3 つのパラメーターを使用した場合の効果を示します。  
   
 |このパラメーターリスト...|次の結果がある...|  
@@ -88,7 +86,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
   
 -   NULL 以外の値が許可されるパラメーターについて NULL が検出された場合。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
   
 > [!NOTE]  
 >  このセクションの例では、 `Production.ProductReview` サンプル データベースの [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] テーブルを使用します。 このインデックスを作成するには、「 `ProductReview` [CREATE フルテキストインデックス &#40;transact-sql&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)」の表に示されている例を実行します。  

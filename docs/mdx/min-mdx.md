@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 83061ff3e9923e65f231675c1bc5b1913a5156fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68114381"
 ---
 # <a name="min-mdx"></a>Min (MDX)
@@ -34,12 +34,11 @@ Min( Set_Expression [ , Numeric_Expression ] )
  *Numeric_Expression*  
  有効な数値式です。通常は、数値を返すセル座標の多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  数値式を指定した場合、この数値式がセットに対して評価されてから、その評価で得られる最小値が返されます。 数値式が指定されていない場合、指定されたセットは、セットのメンバーの現在のコンテキストで評価され、その評価からの最小値を返します。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、数値セットの最小値が計算される際、NULL 値は無視されます。  
+>  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、数値セットの最小値が計算される際、NULL 値は無視されます。  
   
 ## <a name="example"></a>例  
  次の例では、Adventure Works キューブの各サブカテゴリと各国について、四半期ごとの最小売上が返されます。  
@@ -59,6 +58,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

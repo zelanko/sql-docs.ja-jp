@@ -18,10 +18,10 @@ ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5adcaab96bfe9af3945b479e4bff5180ca8140d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108579"
 ---
 # <a name="sp_cursor_list-transact-sql"></a>sp_cursor_list (Transact-sql)
@@ -47,21 +47,21 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
  [ @cursor_scope= ]*cursor_scope*  
  レポートするカーソルのレベルを指定します。 *cursor_scope*は**int**,、既定値はありませんが、これらの値のいずれかを指定することができます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|1 で保護されたプロセスとして起動されました|すべてのローカル カーソルをレポートします。|  
+|1|すべてのローカル カーソルをレポートします。|  
 |2|すべてのグローバル カーソルをレポートします。|  
 |3|ローカル カーソルとグローバル カーソルの両方をレポートします。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- なし  
+ None  
   
 ## <a name="cursors-returned"></a>返されるカーソル  
  sp_cursor_list は、結果セットとしてではなく、[!INCLUDE[tsql](../../includes/tsql-md.md)] カーソル出力パラメーターとしてレポートを返します。 これに[!INCLUDE[tsql](../../includes/tsql-md.md)]より、バッチ、ストアドプロシージャ、およびトリガーは、一度に1行ずつ出力を処理できます。 また、データベース API 関数からプロシージャを直接呼び出すことができなくなります。 Cursor 出力パラメーターはプログラム変数にバインドする必要がありますが、データベース Api では、カーソルパラメーターまたは変数のバインドがサポートされていません。  
   
  以下は、sp_cursor_list から返されるカーソルの形式です。 このカーソルの形式は、sp_describe_cursor から返される形式と同じです。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |reference_name|**sysname**|カーソルを参照するために使用される名前。 DECLARE CURSOR ステートメントで指定された名前を使用してカーソルを参照した場合、参照名はカーソル名と同じになります。 カーソルへの参照が変数を介して行われた場合、参照名はカーソル変数の名前になります。|  
 |cursor_name|**sysname**|DECLARE CURSOR ステートメントに指定されたカーソルの名前です。 で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、カーソル変数をカーソルに設定することによってカーソルが作成された場合、 **cursor_name**はカーソル変数の名前を返します。  以前のリリースでは、この出力列にはシステムによって生成された名前が返されていました。|  
@@ -78,7 +78,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 |last_operation|**smallint**|カーソルに対して最後に実行された操作:<br /><br /> 0 = カーソルに対して操作が実行されていません。<br /><br /> 1 = OPEN <br /><br /> 2 = FETCH <br /><br /> 3 = 挿入<br /><br /> 4 = UPDATE <br /><br /> 5 = 削除<br /><br /> 6 = 閉じる<br /><br /> 7 = DEALLOCATE|  
 |cursor_handle|**int**|サーバーのスコープ内でカーソルを識別する一意の値です。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  sp_cursor_list は、接続によってオープンされた現在のサーバー カーソルの一覧を作成し、カーソルのスクロール機能や更新機能など、各カーソルにとってグローバルな属性を示します。 sp_cursor_list によってレポートされるカーソルは次のとおりです。  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバーカーソル。  
@@ -90,7 +90,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 ## <a name="permissions"></a>アクセス許可  
  実行権限は、既定で public ロールに設定されています。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、グローバル カーソルを開き、`sp_cursor_list` を使用してカーソルの属性をレポートします。  
   
 ```  
@@ -130,6 +130,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

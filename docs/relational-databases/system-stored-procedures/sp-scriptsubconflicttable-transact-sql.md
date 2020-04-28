@@ -16,10 +16,10 @@ ms.assetid: 13867145-3dad-47a4-8d50-a65175418479
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 806209b4f881576c680c14b0bc17ec4fd04a086c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68126368"
 ---
 # <a name="sp_scriptsubconflicttable-transact-sql"></a>sp_scriptsubconflicttable (Transact-sql)
@@ -46,11 +46,11 @@ sp_scriptsubconflicttable [@publication =] 'publication'    , [@article =] 'arti
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**cmdtext**|**nvarchar(4000)**|キューに登録されたサブスクリプション アーティクルのサブスクライバー上に競合テーブルを作成するための [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを返します。 このスクリプトは、サブスクリプションデータベースのサブスクライバーで実行されます。|  
+|**cmdtext**|**nvarchar (4000)**|キューに登録されたサブスクリプション アーティクルのサブスクライバー上に競合テーブルを作成するための [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを返します。 このスクリプトは、サブスクリプションデータベースのサブスクライバーで実行されます。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_scriptsubconflicttable**は、初期スナップショットが手動で適用されるサブスクリプションを持つサブスクライバーに対して使用します。 競合テーブルは、サブスクライバー側のオプションのテーブルです。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -58,6 +58,6 @@ sp_scriptsubconflicttable [@publication =] 'publication'    , [@article =] 'arti
   
 ## <a name="see-also"></a>参照  
  [キュー更新の競合の検出と解決](../../relational-databases/replication/transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

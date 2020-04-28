@@ -21,10 +21,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6ef3a2d6bca9591637223aa4f5659e42ac27c5d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68115048"
 ---
 # <a name="sysxml_schema_collections-transact-sql"></a>sys.xml_schema_collections (Transact-SQL)
@@ -32,20 +32,20 @@ ms.locfileid: "68115048"
 
   XML スキーマコレクションごとに1行の値を返します。 XML スキーマ コレクションは、名前付きの XSD 定義セットです。 XML スキーマ コレクション自体はリレーショナル スキーマに含まれ、スキーマ スコープの [!INCLUDE[tsql](../../includes/tsql-md.md)] 名で識別されます。 xml_collection_id、schema_id、および name の組は一意です。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |xml_collection_id|**int**|XML スキーマコレクションの ID。 データベース内で一意です。|  
 |schema_id|**int**|XML スキーマ コレクションを含むリレーショナル スキーマの ID。|  
 |principal_id|**int**|スキーマの所有者と異なる場合は、個々の所有者の ID。 既定では、スキーマに含まれるオブジェクトはスキーマの所有者によって所有されます。 ただし、ALTER AUTHORIZATION ステートメントを使用して所有権を変更することによって、代替所有者を指定できます。<br /><br /> NULL = 別の個別所有者ではありません。|  
 |name|**sysname**|XML スキーマコレクションの名前。|  
-|create_date|**DATETIME**|XML スキーマコレクションが作成された日付。|  
-|modify_date|**DATETIME**|XML スキーマ コレクションが最後に変更された日付。|  
+|create_date|**datetime**|XML スキーマコレクションが作成された日付。|  
+|modify_date|**datetime**|XML スキーマ コレクションが最後に変更された日付。|  
   
 ## <a name="permissions"></a>アクセス許可  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Xml スキーマ &#40;XML 型システム&#41; カタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)   
  [SQL Server システム カタログに対するクエリに関してよく寄せられる質問](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   

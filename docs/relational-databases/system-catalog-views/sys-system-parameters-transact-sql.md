@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: da8d2bb7be2c3da502065d9ee210c4c1ef8c2094
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108809"
 ---
 # <a name="syssystem_parameters-transact-sql"></a>sys.system_parameters (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68108809"
 
   パラメーターを持つシステムオブジェクトごとに1行のレコードを格納します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|このパラメーターが属するオブジェクトの ID。|  
 |**name**|**sysname**|パラメーターの名前。 は、オブジェクト内で一意です。<br /><br /> オブジェクトがスカラー関数の場合、パラメーター名は、戻り値を表す行の空の文字列になります。|  
@@ -40,21 +40,21 @@ ms.locfileid: "68108809"
 |**system_type_id**|**tinyint**|パラメーターのシステム型の ID。|  
 |**user_type_id**|**int**|ユーザーによって定義されたパラメーターの型の ID。<br /><br /> 型の名前を返すには、この列の[型](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)のカタログビューに結合します。|  
 |**max_length**|**smallint**|パラメーターの最大長 (バイト単位)。 列のデータ型が**varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、または**xml**の場合、の値は-1 になります。|  
-|**精度**|**tinyint**|数値ベースの場合のパラメーターの有効桁数。それ以外の場合は0です。|  
+|**有効桁数 (precision)**|**tinyint**|数値ベースの場合のパラメーターの有効桁数。それ以外の場合は0です。|  
 |**scale**|**tinyint**|数値ベースの場合はパラメーターの小数点以下桁数。それ以外の場合は0です。|  
 |**is_output**|**bit**|1 = パラメーターは output (または return) です。それ以外の場合は0です。|  
 |**is_cursor_ref**|**bit**|1 = パラメーターはカーソル参照パラメーターです。|  
-|**has_default_value**|**bit**|1 = パラメーターには既定値があります。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、このカタログビュー内の CLR オブジェクトの既定値のみを保持します。したがって、オブジェクトの場合[!INCLUDE[tsql](../../includes/tsql-md.md)] 、この列の値は常に0になります。 オブジェクトのパラメーターの既定値を表示するには、 [sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)カタログビューの定義列に対してクエリを実行するか、 [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md)システム関数を使用します。 **** [!INCLUDE[tsql](../../includes/tsql-md.md)]|  
+|**has_default_value**|**bit**|1 = パラメーターには既定値があります。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、このカタログビュー内の CLR オブジェクトの既定値のみを保持します。したがって、オブジェクトの場合[!INCLUDE[tsql](../../includes/tsql-md.md)] 、この列の値は常に0になります。 オブジェクトのパラメーターの既定値を表示するには、 [sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)カタログビューの定義列に対してクエリを実行するか、 [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md)システム関数を使用します。 **definition** [!INCLUDE[tsql](../../includes/tsql-md.md)]|  
 |**is_xml_document**|**bit**|1 = コンテンツは完全な XML ドキュメントです。<br /><br /> 0 = コンテンツがドキュメントフラグメントであるか、列のデータ型が**xml**ではありません。|  
 |**default_value**|**sql_variant**|**Has_default_value**が1の場合、この列の値はパラメーターの既定値になります。それ以外の場合は NULL。|  
 |**xml_collection_id**|**int**|パラメーターのデータ型が**xml**で xml が型指定されている場合は0以外の値。 値は、パラメーターの検証 XML スキーマ名前空間を含むコレクションの ID です。<br /><br /> 0 = XML スキーマコレクションがありません。|  
   
 ## <a name="permissions"></a>アクセス許可  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [SQL Server システムカタログに対するクエリについてよく寄せられる質問](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [Transact-sql&#41;&#40;のパラメーター](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)   
  [all_parameters &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-all-parameters-transact-sql.md)  

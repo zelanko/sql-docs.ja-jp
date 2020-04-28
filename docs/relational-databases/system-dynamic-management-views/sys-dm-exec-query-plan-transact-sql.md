@@ -19,10 +19,10 @@ ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3d4ccd016c32e197c75026c1039e5ff4c21eef32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68135180"
 ---
 # <a name="sysdm_exec_query_plan-transact-sql"></a>dm_exec_query_plan (Transact-sql)
@@ -46,11 +46,11 @@ sys.dm_exec_query_plan(plan_handle)
 
 *Plan_handle*は、次の動的管理オブジェクトから取得できます。
   
--   [dm_exec_cached_plans &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
+-   [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
--   [dm_exec_query_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
+-   [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
   
--   [dm_exec_requests &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
+-   [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
 
 -   [dm_exec_procedure_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
 
@@ -58,7 +58,7 @@ sys.dm_exec_query_plan(plan_handle)
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**dbid**|**smallint**|このプランに対応する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントがコンパイルされたときに有効であったコンテキスト データベースの ID。 アドホック SQL ステートメントおよび準備された SQL ステートメントの場合、ステートメントがコンパイルされたデータベースの ID。<br /><br /> NULL 値は許可されます。|  
 |**objectid**|**int**|ストアド プロシージャやユーザー定義関数など、クエリ プランのオブジェクトの ID。 アドホック バッチおよび準備されたバッチの場合、この列の値は **NULL** です。<br /><br /> NULL 値は許可されます。|  
@@ -66,7 +66,7 @@ sys.dm_exec_query_plan(plan_handle)
 |**暗号**|**bit**|対応するプロシージャが暗号化されているかどうか。<br /><br /> 0 = 暗号化されていない<br /><br /> 1 = 暗号化されている<br /><br /> NULL 値は許可されません。|  
 |**query_plan**|**xml**|*Plan_handle*で指定されたクエリ実行プランのコンパイル時のプラン表示表現を格納します。 プラン表示は XML 形式です。 アドホック [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、ストアド プロシージャ コール、ユーザー定義関数コールなどを含むバッチごとに、1 つのプランが生成されます。<br /><br /> NULL 値は許可されます。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  次の場合、**sys.dm_exec_query_plan** で返されるテーブルの **query_plan** 列にはプラン表示の出力は返されません。  
   
 -   *Plan_handle*を使用して指定されたクエリプランがプランキャッシュから削除されている場合、返されるテーブルの**query_plan**列は null になります。 たとえば、プラン ハンドルがキャプチャされてから **sys.dm_exec_query_plan** に使用されるまでに遅延が生じると、クエリ プランがキャッシュから削除されることがあります。  
@@ -78,24 +78,21 @@ sys.dm_exec_query_plan(plan_handle)
  アドホック クエリで簡易または強制のパラメーター化を行う場合、**query_plan** 列にはステートメント テキストのみが格納され、実際のクエリ プランは格納されません。 クエリ プランを返すには、**sys.dm_exec_query_plan** を呼び出して、準備されたパラメーター化クエリのプラン ハンドルを取得します。 クエリがパラメーター化されたかどうかを判断するには、[sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) ビューの **sql** 列、または [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) 動的管理ビューの text 列を参照します。  
   
 > [!NOTE] 
-> **Xml**データ型で許可されている入れ子になったレベルの数に制限があるため、 **dm_exec_query_plan**は入れ子になった要素の128レベル以上のクエリプランを返すことができません。 
->   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のバージョンでは、この条件が原因でクエリ プランが返されず、エラー 6335 が生成されます。 Service [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Pack 2 以降のバージョンでは、 **query_plan**列には NULL が返されます。   
-[Dm_exec_text_query_plan &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)動的管理関数を使用すると、クエリプランの出力をテキスト形式で返すことができます。  
+> **Xml**データ型で許可されている入れ子になったレベルの数に制限があるため、 **dm_exec_query_plan**は入れ子になった要素の128レベル以上のクエリプランを返すことができません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のバージョンでは、この条件が原因でクエリ プランが返されず、エラー 6335 が生成されます。 Service [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Pack 2 以降のバージョンでは、 **query_plan**列には NULL が返されます。   
+> [Dm_exec_text_query_plan &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)動的管理関数を使用すると、クエリプランの出力をテキスト形式で返すことができます。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Dm_exec_query_plan**を実行するには、ユーザーが**sysadmin**固定サーバーロールのメンバーであるか、または`VIEW SERVER STATE`サーバーに対する権限を持っている必要があります。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例は、**sys.dm_exec_query_plan** 動的管理ビューの使用方法を示しています。  
   
  XML プラン表示を表示するには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のクエリ エディターで次のクエリを実行した後、**sys.dm_exec_query_plan** によって返されるテーブルの **query_plan** 列で **[ShowPlanXML]** をクリックします。 XML プラン表示は、[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の概要ペインに表示されます。 XML プラン表示をファイルに保存するには、[ **query_plan** ] 列の [ **showplan XML** ] を右クリックし、[結果に名前を付け**て保存**] をクリックして、ファイルの形式を\< *file_name*> を指定します。たとえば、MyXMLShowplan. sqlplan のようになります。  
   
 ### <a name="a-retrieve-the-cached-query-plan-for-a-slow-running-transact-sql-query-or-batch"></a>A. 実行速度の遅い Transact-sql クエリまたはバッチのキャッシュされたクエリプランを取得する  
- アドホック バッチ、ストアド プロシージャ、ユーザー定義関数などの各種 [!INCLUDE[tsql](../../includes/tsql-md.md)] バッチのクエリ プランは、プラン キャッシュと呼ばれるメモリ領域にキャッシュされます。 キャッシュされたそれぞれのクエリ プランは、プラン ハンドルと呼ばれる一意識別子で識別されます。 
-  **sys.dm_exec_query_plan** 動的管理ビューでは、このプラン ハンドルを指定して、特定の [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリまたはバッチの実行プランを取得できます。  
+ アドホック バッチ、ストアド プロシージャ、ユーザー定義関数などの各種 [!INCLUDE[tsql](../../includes/tsql-md.md)] バッチのクエリ プランは、プラン キャッシュと呼ばれるメモリ領域にキャッシュされます。 キャッシュされたそれぞれのクエリ プランは、プラン ハンドルと呼ばれる一意識別子で識別されます。 **sys.dm_exec_query_plan** 動的管理ビューでは、このプラン ハンドルを指定して、特定の [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリまたはバッチの実行プランを取得できます。  
   
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バッチが、特定の  との接続において長時間実行されている場合は、このクエリやバッチの実行プランを取得して、遅延の原因を調べることができます。 次の例では、実行速度の遅いクエリまたはバッチに対して XML プラン表示を取得する方法を示します。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バッチが、特定の  との接続において長時間実行されている場合は、このクエリやバッチの実行プランを取得して、遅延の原因を調べることができます。 次の例では、実行速度の遅いクエリまたはバッチに対して XML プラン表示を取得する方法を示します。  
   
 > [!NOTE]  
 >  この例を実行するには、 *session_id*と*plan_handle*の値を実際のサーバー固有の値に置き換えます。  
@@ -109,9 +106,7 @@ exec sp_who;
 GO  
 ```  
   
- 
-  `sp_who` によって返される結果セットでは、SPID の値が `54` であることが示されます。 
-  `sys.dm_exec_requests` 動的管理ビューで、この SPID を使用して次のクエリを実行すると、プラン ハンドルを取得できます。  
+ `sp_who` によって返される結果セットでは、SPID の値が `54` であることが示されます。 `sys.dm_exec_requests` 動的管理ビューで、この SPID を使用して次のクエリを実行すると、プラン ハンドルを取得できます。  
   
 ```sql  
 USE master;  
@@ -168,7 +163,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [dm_exec_cached_plans &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [dm_exec_query_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  [dm_exec_requests &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   

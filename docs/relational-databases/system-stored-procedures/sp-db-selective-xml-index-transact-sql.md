@@ -18,16 +18,15 @@ ms.assetid: 017301a2-4a23-4e68-82af-134f3d4892b3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1648cca415f37f9c54f13857d25af90a65372c04
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108229"
 ---
 # <a name="sp_db_selective_xml_index-transact-sql"></a>sp_db_selective_xml_index (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに対して選択的 XML インデックス機能を有効または無効にします。 パラメーターを指定しないでストアド プロシージャを呼び出すと、選択的 XML インデックスが特定のデータベースで有効になっている場合は 1 が返されます。  
   
 > [!NOTE]  

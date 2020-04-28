@@ -18,10 +18,10 @@ ms.assetid: 63ea7d0d-a567-456e-a778-bee99e21d16c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a9a6812e12366900dfc1c5808eaede727c05f958
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68120050"
 ---
 # <a name="sp_delete_category-transact-sql"></a>sp_delete_category (Transact-sql)
@@ -42,7 +42,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ## <a name="arguments"></a>引数  
 `[ @class = ] 'class'`カテゴリのクラス。 *クラス*は**varchar (8)**,、既定値はありませんが、次のいずれかの値を持つ必要があります。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**補足**|ジョブカテゴリを削除します。|  
 |**アラート**|アラートカテゴリを削除します。|  
@@ -54,9 +54,9 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ None  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_delete_category**は、 **msdb**データベースから実行する必要があります。  
   
  カテゴリを削除すると、そのカテゴリのすべてのジョブ、警告、または演算子が、クラスの既定のカテゴリに recategorizes ます。  
@@ -64,7 +64,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャを実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、`AdminJobs` というジョブ カテゴリを削除します。  
   
 ```  
@@ -77,10 +77,10 @@ EXEC dbo.sp_delete_category
 GO   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_add_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
  [sp_help_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
  [sp_update_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

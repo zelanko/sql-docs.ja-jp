@@ -19,10 +19,10 @@ ms.assetid: 8c99c3db-0b04-46c3-aa59-d6f680522fdd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: dd242370cc3d2c200e4d8b3983d47e396be3004a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106652"
 ---
 # <a name="sql-server-profiler-stored-procedures-transact-sql"></a>SQL Server Profiler のストアド プロシージャ (Transact-SQL)
@@ -39,8 +39,8 @@ ms.locfileid: "68106652"
  トレース ストアド プロシージャを使用した例については、「[トレースの作成 &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server イベント クラスの参照](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
+ [SQL Server イベントクラスのリファレンス](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [SQL トレース](../../relational-databases/sql-trace/sql-trace.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

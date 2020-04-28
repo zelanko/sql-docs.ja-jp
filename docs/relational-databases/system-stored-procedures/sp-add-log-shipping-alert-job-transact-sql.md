@@ -18,10 +18,10 @@ ms.assetid: dd95d96e-8963-4aa9-bdcc-3e4b1bc002d3
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9793b26bbd45e08aa3bc488071bd3b26a3f1cfc9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68140462"
 ---
 # <a name="sp_add_log_shipping_alert_job-transact-sql"></a>sp_add_log_shipping_alert_job (Transact-SQL)
@@ -46,15 +46,15 @@ sp_add_log_shipping_alert_job
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ None  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_add_log_shipping_alert_job**は、監視サーバーの**master**データベースから実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャを実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  この例では、 **sp_add_log_shipping_alert_job**を実行して警告ジョブ ID を作成します。  
   
 ```  
@@ -65,6 +65,6 @@ EXEC sp_add_log_shipping_alert_job;
   
 ## <a name="see-also"></a>参照  
  [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

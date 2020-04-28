@@ -18,10 +18,10 @@ ms.assetid: 69531611-113f-46b5-81a6-7bf496d0353c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5af11c14c7b0bf3b8e32d503c4b77e59623ce9ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68140447"
 ---
 # <a name="sp_add_log_shipping_primary_database-transact-sql"></a>sp_add_log_shipping_primary_database (Transact-SQL)
@@ -95,15 +95,15 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
   
  1 = 有効。 ログバックアップは常に圧縮します。  
   
- 2 = [ビューの設定[] または [backup compression Default サーバー構成オプションの構成]](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)を使用します。 これが既定値です。  
+ 2 = [ビューの設定[] または [backup compression Default サーバー構成オプションの構成]](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)を使用します。 これは、既定値です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ None  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_add_log_shipping_primary_database**は、プライマリサーバーの**master**データベースから実行する必要があります。 このストアドプロシージャは、次の機能を実行します。  
   
 1.  プライマリ ID を生成し、指定された引数を使用して**log_shipping_primary_databases**テーブルにプライマリデータベースのエントリを追加します。  
@@ -119,7 +119,7 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャを実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、ログ配布構成のプライマリ データベースとして、データベース [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] を追加します。  
   
 ```  
@@ -147,6 +147,6 @@ GO
   
 ## <a name="see-also"></a>参照  
  [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -16,10 +16,10 @@ ms.assetid: 2ea27001-74f4-463e-bf1b-b6b5a86b9219
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e9d5e0e22f5dcca3611923782786a83ada1672ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68117936"
 ---
 # <a name="sp_addtabletocontents-transact-sql"></a>sp_addtabletocontents (Transact-sql)
@@ -48,7 +48,7 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_addtabletocontents**は、マージレプリケーションでのみ使用されます。  
   
  *Table_name*内の行は**rowguidcol**によって参照され、その参照がマージ追跡テーブルに追加されます。 **sp_addtabletocontents**は、マージレプリケーションを使用してパブリッシュされたテーブルにデータを一括コピーした後に使用する必要があります。 このストアド プロシージャは、コピーされた行のトラッキングを実行し、次の同期処理の際に新しい行を確実に挿入します。  
@@ -57,6 +57,6 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
  **Sp_addtabletocontents**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

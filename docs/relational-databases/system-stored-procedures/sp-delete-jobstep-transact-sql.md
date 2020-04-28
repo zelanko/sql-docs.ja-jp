@@ -18,10 +18,10 @@ ms.assetid: 421ede8e-ad57-474a-9fb9-92f70a3e77e3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8e55465dfe2424144d74bc40492fdb897d4aa72b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68130623"
 ---
 # <a name="sp_delete_jobstep-transact-sql"></a>sp_delete_jobstep (Transact-SQL)
@@ -53,9 +53,9 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ None  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ジョブ ステップを削除すると、削除したステップを参照する他のジョブ ステップは自動的に更新されます。  
   
  特定のジョブに関連付けられている手順の詳細については、 **sp_help_jobstep**を実行してください。  
@@ -77,7 +77,7 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
  別のユーザーが所有するジョブステップを削除できるのは、 **sysadmin**のメンバーだけです。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、 `1`ジョブからジョブ`Weekly Sales Data Backup`ステップを削除します。  
   
 ```  
@@ -95,6 +95,6 @@ GO
  [sp_add_jobstep &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
  [sp_update_jobstep &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
  [sp_help_jobstep &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: 7bb4d408-d764-4ef6-802c-f271c8d39c2a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 96927e2c0a773674cbc4b8dabee804870d6559e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68119258"
 ---
 # <a name="cdccaptured_columns-transact-sql"></a>cdc.captured_columns (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68119258"
   
  **システムテーブルに対して直接クエリを実行しない**ことをお勧めします。 代わりに、 [sp_cdc_get_source_columns](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md)ストアドプロシージャを実行します。  
    
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|キャプチャされた列が属するソーステーブルの ID。|  
 |**column_name**|**sysname**|キャプチャされた列の名前です。|  

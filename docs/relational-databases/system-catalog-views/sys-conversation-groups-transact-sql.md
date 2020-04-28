@@ -20,10 +20,10 @@ ms.assetid: 3f35815e-2de4-42a2-a972-8f0141dad0b3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7c822d5f405b353a9c07902fc1ef8f9272ad4353
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68109492"
 ---
 # <a name="sysconversation_groups-transact-sql"></a>conversation_groups (Transact-sql)
@@ -31,13 +31,13 @@ ms.locfileid: "68109492"
 
   メッセージ交換グループごとに 1 行のデータを格納するカタログ ビューです。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**conversation_group_id**|**UNIQUEIDENTIFIER**|メッセージ交換グループの識別子。 NULL 値は許容されません。|  
+|**conversation_group_id**|**uniqueidentifier**|メッセージ交換グループの識別子。 NULL 値は許容されません。|  
 |**service_id**|**int**|このグループのメッセージ交換で使用されるサービスの識別子。 NULL 値は許容されません。|  
 |**is_system**|**bit**|システム インスタンスであるかどうかを示します。 NULLABLE.|  
   
 ## <a name="permissions"></a>アクセス許可  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
   

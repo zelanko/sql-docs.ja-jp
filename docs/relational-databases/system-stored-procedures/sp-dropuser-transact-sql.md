@@ -18,10 +18,10 @@ ms.assetid: e28f18f9-7ecf-4568-89f4-fe5c520df386
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 42628ab49e30a4c6dada2eafb505435b8b389de6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124720"
 ---
 # <a name="sp_dropuser-transact-sql"></a>sp_dropuser (Transact-sql)
@@ -47,7 +47,7 @@ sp_dropuser [ @name_in_db = ] 'user'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_dropuser**は**sp_revokedbaccess**を実行して、現在のデータベースからユーザーを削除します。  
   
  現在のデータベースから削除できるユーザー名の一覧を表示するには、 **sp_helpuser**を使用します。  
@@ -61,7 +61,7 @@ sp_dropuser [ @name_in_db = ] 'user'
 ## <a name="permissions"></a>アクセス許可  
  データベースに対する ALTER ANY USER 権限が必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、 `Albert`ユーザーを現在のデータベースから削除します。  
   
 ```  
@@ -74,6 +74,6 @@ GO
  [sp_grantdbaccess &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
  [ユーザー &#40;Transact-sql&#41;を削除します。](../../t-sql/statements/drop-user-transact-sql.md)   
  [sp_revokedbaccess &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-revokedbaccess-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

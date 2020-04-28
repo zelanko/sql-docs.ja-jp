@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: f253dad526c509edff5c837b61ae2faae07d5758
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68105364"
 ---
 # <a name="intersect-mdx"></a>Intersect (MDX)
@@ -34,7 +34,7 @@ Intersect(Set_Expression1 , Set_Expression2 [ , ALL ] )
  *Set_Expression2*  
  セットを返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Intersect**関数は、2つのセットの積集合を返します。 既定では、関数は、セットの交差前に両方のセットから重複部分を削除します。 指定された 2 つのセットの次元は同一である必要があります。  
   
  省略可能な**ALL**フラグは、重複部分を保持します。 **ALL**が指定されている場合、 **Intersect**関数は重複しない要素と同じように交差します。また、2番目のセットに一致する重複がある最初のセット内の重複部分と交差します。 指定された 2 つのセットの次元は同一である必要があります。  
@@ -73,6 +73,6 @@ Intersect(Set_Expression1 , Set_Expression2 [ , ALL ] )
  `[Adventure Works]`  
   
 ## <a name="see-also"></a>参照  
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

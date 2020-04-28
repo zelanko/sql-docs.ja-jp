@@ -16,10 +16,10 @@ ms.assetid: 8abaa8c1-d99e-4788-970f-c4752246c577
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: acbbd043080b107a5d545408fabe271d62015e54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68105085"
 ---
 # <a name="sp_articlecolumn-transact-sql"></a>sp_articlecolumn (Transact-SQL)
@@ -82,7 +82,7 @@ sp_articlecolumn [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_articlecolumn**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
  **Sp_articlecolumn**を使用してフィルター処理できるのは、サブスクライブされていないアーティクルだけです。  
@@ -103,6 +103,6 @@ sp_articlecolumn [ @publication = ] 'publication'
  [sp_droparticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
  [sp_helparticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
  [sp_helparticlecolumns &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)   
- [レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

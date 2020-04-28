@@ -20,10 +20,10 @@ ms.assetid: f6a86766-e2a9-4d9f-a073-1b59e888ba7d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c9685b9733c1d13b79ef2a19ee2f19bbe3130426
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106675"
 ---
 # <a name="systrace_categories-transact-sql"></a>sys.trace_categories (Transact-SQL)
@@ -33,16 +33,16 @@ ms.locfileid: "68106675"
   
  サポートされているトレースイベントの完全な一覧については、「 [SQL Server イベントクラスのリファレンス](../../relational-databases/event-classes/sql-server-event-class-reference.md)」を参照してください。  
   
-> **大事な！** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに拡張イベントカタログビューを使用します。  
+> **重要:** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに拡張イベントカタログビューを使用します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**smallint**|このカテゴリの一意の ID。 この列は、 **trace_events**カタログビューにも含まれています。|  
-|**name**|**nvarchar(128**|カテゴリの一意な名前。 このパラメーターはローカライズされていません。|  
+|**name**|**nvarchar(128)**|カテゴリの一意な名前。 このパラメーターはローカライズされていません。|  
 |**type**|**tinyint**|カテゴリの種類:<br /><br /> 0 = 通常<br /><br /> 1 = 接続<br /><br /> 2 = エラー|  
   
 ## <a name="permissions"></a>アクセス許可  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   

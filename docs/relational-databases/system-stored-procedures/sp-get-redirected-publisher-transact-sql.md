@@ -14,10 +14,10 @@ ms.assetid: d47a9ab5-f2cc-42a8-8be9-a33895ce44f0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a3972d2d92274c3454f8add9fb7b92a001dda359
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124045"
 ---
 # <a name="sp_get_redirected_publisher-transact-sql"></a>sp_get_redirected_publisher (Transact-sql)
@@ -49,14 +49,14 @@ sp_get_redirected_publisher
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**redirected_publisher**|**sysname**|リダイレクト後のパブリッシャーの名前。|  
 |**error_number**|**int**|検証エラーのエラー番号。|  
 |**error_severity**|**int**|検証エラーの重大度。|  
-|**error_message**|**nvarchar(4000)**|検証エラーメッセージのテキスト。|  
+|**error_message**|**nvarchar (4000)**|検証エラーメッセージのテキスト。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  *redirected_publisher*は、現在の発行元の名前を返します。 パブリッシャーおよびパブリッシングデータベースが**sp_redirect_publisher**を使用してリダイレクトされていない場合は null を返します。  
   
  検証が要求されていない場合、またはパブリッシャーとパブリッシングデータベースのエントリが存在しない場合、 *error_number*と*error_severity*は0を返し、 *error_message*は null を返します。  

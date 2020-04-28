@@ -22,10 +22,10 @@ ms.assetid: 8c16ecdf-68f4-4a2a-b594-086e3344e58a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 44ab2e3106610f7b7130f997e9641e4aba685fd1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68127927"
 ---
 # <a name="messages-for-errors-catalog-views---sysmessages"></a>メッセージ (エラー用) のカタログ ビュー - sys.messages
@@ -33,20 +33,20 @@ ms.locfileid: "68127927"
 
   システム定義メッセージとユーザー定義メッセージの両方について、システム内のエラーメッセージの**message_id**または**language_id**ごとに1行の値を格納します。 詳細については、「[sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)」を参照してください。  
    
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**message_id**|**int**|メッセージの ID。 これはサーバー内で一意です。 5万未満のメッセージ Id はシステムメッセージです。|  
 |**language_id**|**smallint**|**Sys.syslanguages**で定義されているように、**テキスト**内のテキストが使用される言語 ID。 これは、指定された**message_id**に対して一意です。|  
-|**順**|**tinyint**|メッセージの重大度レベル (1 ~ 25)。 これは、 **message_id**内のすべてのメッセージ言語で同じです。|  
+|**severity**|**tinyint**|メッセージの重大度レベル (1 ~ 25)。 これは、 **message_id**内のすべてのメッセージ言語で同じです。|  
 |**is_event_logged**|**bit**|1 = メッセージは、エラーが発生するとイベントがログに記録されます。 これは、 **message_id**内のすべてのメッセージ言語で同じです。|  
-|**本文**|**nvarchar (2048)**|対応する**language_id**がアクティブな場合に使用されるメッセージのテキスト。|  
+|**text**|**nvarchar(2048)**|対応する**language_id**がアクティブな場合に使用されるメッセージのテキスト。|  
   
 ## <a name="permissions"></a>アクセス許可  
- **Public**ロールのメンバーシップが必要です。 詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ ロール **public** のメンバーシップが必要です。  詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Transact-sql&#41;をスロー &#40;](../../t-sql/language-elements/throw-transact-sql.md)   
- [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [THROW &#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)   
+ [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [エラーのメッセージ &#40;&#41; カタログビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/8ac78c53-7b97-41b3-9cbd-5f97c179f1f2)   
  [例外メッセージボックスのプログラミング](https://msdn.microsoft.com/library/0b1ba514-6959-4e69-bfd2-3cf3c1ac4b9c)   
  [エラーメッセージ](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   

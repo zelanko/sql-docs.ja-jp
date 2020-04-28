@@ -29,10 +29,10 @@ ms.assetid: e944c740-4c8a-4bc1-b0ed-be57bc06dced
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 39df13a3cab2d842a313ca37fc4a98d0c331ba83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68104213"
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>Access データベースファイルの追加と削除 (アクセス許可 Sql)
@@ -76,7 +76,7 @@ SSMA プロジェクトに1つ以上のデータベースを追加する場合�
     > [!IMPORTANT]  
     > [**ファイル名] テキストボックスの全体または一部**がワイルドカード文字をサポートしていません。  
   
-5.  [**スキャン**] をクリックします。  
+5.  **[スキャン]** をクリックします。  
   
     スキャンページが表示されます。 これにより、検出されたデータベースと検索の進行状況が表示されます。 検索を停止するには、[**停止**] をクリックします。  
   
@@ -127,10 +127,10 @@ Access データベースをプロジェクトに追加すると、Access メタ
   
 2.  データベースを右クリックし、[データベースの**削除**] を選択します。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 移行プロセスの次の手順では、 [SQL Server に接続](https://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)します。  
   
 ## <a name="see-also"></a>参照  
 [Access データベースの SQL Server への移行](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
-[プロジェクトの作成および管理](creating-and-managing-projects-accesstosql.md)  
+[プロジェクトの作成と管理](creating-and-managing-projects-accesstosql.md)  
   

@@ -10,10 +10,10 @@ ms.assetid: e7e939a8-5e76-4509-beaf-5acd1cab505e
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 1e9baab08f4295b2c51fd942f6153cc9425dd958
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68141007"
 ---
 # <a name="mapping-db2-and-sql-server-data-types-db2tosql"></a>DB2 と SQL Server のデータ型のマッピング (DB2ToSQL)
@@ -64,7 +64,7 @@ SSMA の [**型マッピング**] タブを表示すると、背景は、継承�
   
 3.  データ型のマッピングを変更するには、次の手順を実行します。  
   
-    1.  [**編集**] をクリックします。  
+    1.  **[編集]** をクリックします。  
   
     2.  [**ソースの種類**] で、マップする DB2 データ型を選択します。  
   
@@ -80,11 +80,11 @@ SSMA の [**型マッピング**] タブを表示すると、背景は、継承�
   
     1.  [型マッピング] ボックスの一覧で、削除するデータ型マッピングが含まれている行を選択します。  
   
-    2.  **[削除]** をクリックします。  
+    2.  **[除去]** をクリックします。  
   
         継承されたマッピングを削除することはできません。 ただし、継承されたマッピングは、特定のオブジェクトまたはオブジェクトカテゴリのカスタムマッピングによって上書きされます。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>次のステップ  
 移行プロセスの次の手順では、[評価レポート &#40;DB2ToSQL&#41;](../../ssma/db2/assessment-report-db2tosql.md) 、または[DB2 スキーマ &#40;DB2ToSQL&#41;に変換](../../ssma/db2/converting-db2-schemas-db2tosql.md)します。 評価レポートを作成する場合、DB2 オブジェクトは評価中に自動的に変換されます。  
   
 ## <a name="see-also"></a>参照  

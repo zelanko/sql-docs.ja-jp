@@ -16,10 +16,10 @@ ms.assetid: e55789d1-43fb-4a37-9e5e-60ccef122a5d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a3ce46249670f9c290a07418b78c7c3296d7855b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68137620"
 ---
 # <a name="sp_helppeerresponses-transact-sql"></a>sp_helppeerresponses (Transact-SQL)
@@ -41,17 +41,17 @@ sp_helppeerresponses [ @request_id = ] request_id
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**request_id**|**int**|状態要求の ID。|  
 |**家**|**sysname**|応答を生成したピアの名前。|  
 |**peer_db**|**sysname**|応答を生成したピアのデータベース名。|  
-|**received_date**|**DATETIME**|要求元が送信先のピアから応答を受信した日付と時刻。|  
+|**received_date**|**datetime**|要求元が送信先のピアから応答を受信した日付と時刻。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_helppeerresponses**は、ピアツーピアトランザクションレプリケーションで使用されます。  
   
  **sp_helppeerresponses**プロシージャは、ピアツーピアトポロジでパブリッシュされたデータベースを復元する場合に使用します。  

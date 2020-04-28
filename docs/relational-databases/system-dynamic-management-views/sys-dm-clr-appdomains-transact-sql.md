@@ -19,10 +19,10 @@ ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3ebcda61d95cc5131048ab32701d9d68228646ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68138409"
 ---
 # <a name="sysdm_clr_appdomains-transact-sql"></a>dm_clr_appdomains (Transact-sql)
@@ -34,37 +34,37 @@ ms.locfileid: "68138409"
   
  詳細については、「[アプリケーションドメイン](https://go.microsoft.com/fwlink/p/?LinkId=299658)」を参照してください。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**appdomain_address**|**varbinary (8)**|**AppDomain**のアドレス。 ユーザーが所有するすべての管理対象データベースオブジェクトは、常に同じ**AppDomain**に読み込まれます。 この列を使用して、この**AppDomain**に現在読み込まれているすべてのアセンブリを**dm_clr_loaded_assemblies**に参照できます。|  
 |**appdomain_id**|**int**|**AppDomain**の ID。 各**AppDomain**には一意の ID があります。|  
 |**appdomain_name**|**varchar (386)**|によっ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]て割り当てられた**AppDomain**の名前。|  
-|**creation_time**|**DATETIME**|**AppDomain**が作成された時刻。 **AppDomains**はキャッシュされ、パフォーマンス向上のために再利用されるため、 **creation_time**は必ずしもコードが実行された時間とは限りません。|  
+|**creation_time**|**datetime**|**AppDomain**が作成された時刻。 **AppDomains**はキャッシュされ、パフォーマンス向上のために再利用されるため、 **creation_time**は必ずしもコードが実行された時間とは限りません。|  
 |**db_id**|**int**|この**AppDomain**が作成されたデータベースの ID。 2つの異なるデータベースに格納されているコードは、1つの**AppDomain**を共有できません。|  
 |**user_id**|**int**|この**AppDomain**でオブジェクトを実行できるユーザーの ID。|  
-|**状態**|**nvarchar(128**|**AppDomain**の現在の状態の記述子。 AppDomain は、作成から削除まで、さまざまな状態になることがあります。 詳細については、このトピックの「解説」を参照してください。|  
+|**state**|**nvarchar(128)**|**AppDomain**の現在の状態の記述子。 AppDomain は、作成から削除まで、さまざまな状態になることがあります。 詳細については、このトピックの「解説」を参照してください。|  
 |**strong_refcount**|**int**|この**AppDomain**への強い参照の数。 これは、この**AppDomain**を使用している現在実行中のバッチの数を反映します。 このビューを実行すると、**強力な refcount**が作成されることに注意してください。が現在実行されているコードがない場合でも、 **strong_refcount**の値は1になります。|  
 |**weak_refcount**|**int**|この**AppDomain**への弱参照の数。 これは、 **AppDomain**内のキャッシュされているオブジェクトの数を示します。 マネージデータベースオブジェクトを実行すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]後で再利用するために、によって**AppDomain**内にキャッシュされます。 これにより、パフォーマンスが向上します。|  
 |**cost**|**int**|**AppDomain**のコスト。 コストが高いほど、この**AppDomain**がメモリ不足でアンロードされる可能性が高くなります。 通常、コストは、この**AppDomain**を再作成するために必要なメモリ量によって異なります。|  
-|**数値**|**int**|**AppDomain**の値。 値が小さいほど、この**AppDomain**がメモリ不足でアンロードされる可能性が高くなります。 通常、値は、この**AppDomain**を使用している接続またはバッチの数によって異なります。|  
+|**value**|**int**|**AppDomain**の値。 値が小さいほど、この**AppDomain**がメモリ不足でアンロードされる可能性が高くなります。 通常、値は、この**AppDomain**を使用している接続またはバッチの数によって異なります。|  
 |**total_processor_time_ms**|**bigint**|プロセスの開始後、現在のアプリケーション ドメインでの実行中にすべてのスレッドによって使用された、ミリ秒単位の合計プロセッサ時間です。 これは、 **System. MonitoringTotalProcessorTime**と同じです。|  
 |**total_allocated_memory_kb**|**bigint**|アプリケーション ドメインの作成後、それによって行われたすべてのメモリ割り当ての、KB 単位の合計サイズです。収集されたメモリ量も差し引かれません。 これは、 **MonitoringTotalAllocatedMemorySize**に相当します。|  
 |**survived_memory_kb**|**bigint**|最後の完全なブロッキングコレクションの後に残っていた、現在のアプリケーションドメインによって参照されていることがわかっているキロバイト数。 これは、 **MonitoringSurvivedMemorySize**に相当します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Dm_clr_appdomains appdomain_address**と**dm_clr_loaded_assemblies appdomain_address**の間には、一対一のリレーションシップがあります。  
   
  次の表に、使用可能な**状態**の値とその説明、およびそれらが**AppDomain**のライフサイクルで発生するタイミングを示します。 この情報を使用すると、 **appdomain**のライフサイクルに従い、Windows イベントログを解析することなく、疑わしいまたは繰り返しの**appdomain**インスタンスのアンロードを監視できます。  
   
 ## <a name="appdomain-initialization"></a>AppDomain の初期化  
   
-|State|[説明]|  
+|State|説明|  
 |-----------|-----------------|  
 |E_APPDOMAIN_CREATING|**AppDomain**を作成しています。|  
   
 ## <a name="appdomain-usage"></a>AppDomain の使用状況  
   
-|State|[説明]|  
+|State|説明|  
 |-----------|-----------------|  
 |E_APPDOMAIN_SHARED|ランタイム**AppDomain**は、複数のユーザーが使用できる状態になっています。|  
 |E_APPDOMAIN_SINGLEUSER|DDL 操作で**AppDomain**を使用する準備ができました。 これらは E_APPDOMAIN_SHARED とは異なり、CLR 統合の実行に DDL 操作ではなく共有 AppDomain が使用されます。 このような AppDomains は、他の同時実行操作から分離されています。|  
@@ -72,7 +72,7 @@ ms.locfileid: "68138409"
   
 ## <a name="appdomain-cleanup"></a>AppDomain のクリーンアップ  
   
-|State|[説明]|  
+|State|説明|  
 |-----------|-----------------|  
 |E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]CLR が**AppDomain**をアンロードするように要求しました。通常は、マネージデータベースオブジェクトを含むアセンブリが変更または削除されたことが原因です。|  
 |E_APPDOMAIN_UNLOADED|CLR によって**AppDomain**がアンロードされました。 これは、通常、 **Threadabort**、 **OutOfMemory**、またはユーザーコードでのハンドルされない例外によるエスカレーション手順の結果です。|  
@@ -83,7 +83,7 @@ ms.locfileid: "68138409"
 ## <a name="permissions"></a>アクセス許可  
  データベースに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例は、特定のアセンブリの**AppDomain**の詳細を表示する方法を示しています。  
   
 ```  

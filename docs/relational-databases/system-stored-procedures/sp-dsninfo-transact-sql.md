@@ -16,10 +16,10 @@ ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cb67524304807eba6765387590fd53a52b92f19a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124705"
 ---
 # <a name="sp_dsninfo-transact-sql"></a>sp_dsninfo (Transact-SQL)
@@ -45,7 +45,7 @@ sp_dsninfo [ @dsn =] 'dsn'
   
 `[ @infotype = ] 'info_type'`返される情報の種類を示します。 *Info_type*が指定されていない場合、または NULL が指定されている場合は、すべての情報の種類が返されます。 *info_type*は**varchar (128)**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**DBMS_NAME**|データソースのベンダ名を指定します。|  
 |**DBMS_VERSION**|データソースのバージョンを指定します。|  
@@ -58,22 +58,22 @@ sp_dsninfo [ @dsn =] 'dsn'
   
 `[ @dso_type = ] dso_type`データソースの種類を入力します。 *dso_type*は**int**,、これらの値のいずれかを指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**1** (既定値)|ODBC データ ソース (ODBC data source)|  
-|**番**|OLE DB データ ソース|  
+|**3**|OLE DB データ ソース|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**情報の種類**|**nvarchar (64)**|DBMS_NAME、DBMS_VERSION、DATABASE_NAME、SQL_SUBSCRIBER などの情報の種類です。|  
-|**Value**|**nvarchar(512)**|関連付けられている情報の種類の値。|  
+|**[値]**|**nvarchar(512)**|関連付けられている情報の種類の値。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_dsninfo**は、すべての種類のレプリケーションで使用されます。  
   
  **sp_dsninfo**は、データベースをレプリケーションまたはクエリに使用できるかどうかを示す ODBC または OLE DB データソース情報を取得します。  
@@ -83,6 +83,6 @@ sp_dsninfo [ @dsn =] 'dsn'
   
 ## <a name="see-also"></a>参照  
  [sp_enumdsn &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-enumdsn-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

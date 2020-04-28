@@ -16,10 +16,10 @@ ms.assetid: 37bd503e-46c4-47c6-996e-be7ffe636fe8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5b9e2a370c9acc9c22dac7e5e60ceb10e08e46ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68137630"
 ---
 # <a name="sp_helppeerrequests-transact-sql"></a>sp_helppeerrequests (Transact-SQL)
@@ -44,17 +44,17 @@ sp_helppeerrequests [ @publication = ] 'publication'
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**番号**|**int**|要求を識別します。|  
+|**id**|**int**|要求を識別します。|  
 |**レプリケーション**|**sysname**|ステータス要求が送信されたパブリケーションの名前。|  
-|**sent_date**|**DATETIME**|ステータス要求が送信された日付と時刻。|  
-|**記述**|**nvarchar(4000)**|個々の状態要求を識別するために使用できるユーザー定義情報。|  
+|**sent_date**|**datetime**|ステータス要求が送信された日付と時刻。|  
+|**記述**|**nvarchar (4000)**|個々の状態要求を識別するために使用できるユーザー定義情報。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_helppeerrequests**は、ピアツーピアトランザクションレプリケーションで使用されます。  
   
  **sp_helppeerrequests**は、ピアツーピアトポロジでパブリッシュされたデータベースを復元する場合に使用します。  

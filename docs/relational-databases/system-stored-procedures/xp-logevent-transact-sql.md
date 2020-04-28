@@ -18,10 +18,10 @@ ms.assetid: 7b379ad0-5b12-4d2e-9c52-62465df1fdbd
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 77275ee539a6367d7e2e04d03354155a5eff721d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68116639"
 ---
 # <a name="xp_logevent-transact-sql"></a>xp_logevent (Transact-sql)
@@ -56,13 +56,13 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
   
  `The command(s) completed successfully.`  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  プロシージャ、トリガー、バッチ[!INCLUDE[tsql](../../includes/tsql-md.md)]などからメッセージを送信する場合は、xp_logevent ではなく RAISERROR ステートメントを使用します。 xp_logevent は、クライアントのメッセージハンドラーを呼び出さず、@@ERRORを設定します。 のインスタンス内の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Windows イベントビューアーおよびエラーログファイルにメッセージを書き込むには、RAISERROR ステートメントを実行します。  
   
 ## <a name="permissions"></a>アクセス許可  
  Master データベースの db_owner 固定データベースロールのメンバーシップ、または sysadmin 固定サーバーロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、Windows イベントビューアーのメッセージに渡された変数を使用して、メッセージをログに記録します。  
   
 ```  
@@ -77,8 +77,8 @@ EXEC xp_logevent 60000, @@MESSAGE, informational;
 ```  
   
 ## <a name="see-also"></a>参照  
- [Transact-sql&#41;の印刷 &#40;](../../t-sql/language-elements/print-transact-sql.md)   
- [RAISERROR &#40;Transact-sql&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
+ [PRINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/print-transact-sql.md)   
+ [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;&#40;の一般的な拡張ストアドプロシージャ](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
   

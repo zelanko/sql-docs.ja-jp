@@ -16,10 +16,10 @@ ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d291288c44341c3a707696b0b3baecdcd15779ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68137647"
 ---
 # <a name="sp_helpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
@@ -62,7 +62,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |id|**int**|結果セットリスト内のパブリケーションの順序。|  
 |name|**sysname**|パブリケーションの名前。|  
@@ -77,8 +77,8 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |priority|**float (8)**|ループバック サブスクリプションの優先度。|  
 |snapshot_ready|**tinyint**|このパブリケーションのスナップショットが使用できる状態にあるかどうかを示します。<br /><br /> **0** = スナップショットは使用する準備ができています。<br /><br /> **1** = スナップショットは使用する準備ができていません。|  
 |publication_type|**int**|パブリケーションの種類:<br /><br /> **0** = スナップショット。<br /><br /> **1** = トランザクション。<br /><br /> **2** = Merge。|  
-|pubid|**UNIQUEIDENTIFIER**|このパブリケーションの一意識別子です。|  
-|snapshot_jobid|**バイナリ (16)**|スナップショット エージェントのジョブ ID。 [Sysjobs](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)システムテーブルでスナップショットジョブのエントリを取得するには、この16進値を**uniqueidentifier**に変換する必要があります。|  
+|pubid|**uniqueidentifier**|このパブリケーションの一意識別子です。|  
+|snapshot_jobid|**binary(16)**|スナップショット エージェントのジョブ ID。 [Sysjobs](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)システムテーブルでスナップショットジョブのエントリを取得するには、この16進値を**uniqueidentifier**に変換する必要があります。|  
 |enabled_for_internet|**int**|パブリケーションがインターネットに対して有効になっているかどうかを判断します。 **1**の場合、パブリケーションの同期ファイルは`C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\Ftp`ディレクトリに格納されます。 ユーザーは、ファイル転送プロトコル (FTP) ディレクトリを作成する必要があります。 **0**の場合、パブリケーションはインターネットアクセスに対して有効になっていません。|  
 |dynamic_filter|**int**|パラメーター化された行フィルターが使用されていることを示します。 **0**は、パラメーター化された行フィルターを使用しないことを意味します。|  
 |has_subscription|**bit**|パブリケーションにサブスクリプションがあるかどうかを示します。 **0**は、このパブリケーションに対するサブスクリプションが現在存在しないことを示します。|  
@@ -96,7 +96,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |allow_subscription_copy|**int**|このパブリケーションをサブスクライブするサブスクリプションデータベースをコピーする機能が有効になっているかどうかを指定します。 値**0**は、コピーが許可されていないことを意味します。|  
 |allow_synctoalternate|**int**|代替同期パートナーがこのパブリッシャーと同期できるようにするかどうかを指定します。 値**0**は、同期パートナーが許可されていないことを意味します。|  
 |validate_subscriber_info|**nvarchar (500)**|サブスクライバー情報を取得し、パラメーター化された行フィルター条件をサブスクライバーで検証するために使用される関数の一覧を示します。 は、各マージで情報が一貫してパーティション分割されていることを確認するのに役立ちます。|  
-|backward_comp_level|**int**|データベースの互換性レベルは、次のいずれかになります。<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **** =  90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1<br /><br /> **** =  90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+|backward_comp_level|**int**|データベースの互換性レベルは、次のいずれかになります。<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **90** =  90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1<br /><br /> **90** =  90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_activedirectory|**bit**|パブリケーション情報が Active Directory にパブリッシュされるかどうかを指定します。 値が**0**の場合は、Active Directory からパブリケーション情報を取得できないことを意味します。<br /><br /> このパラメーターは非推奨とされており、スクリプトの旧バージョンとの互換性のためにのみサポートされています。 Active Directory にパブリケーション情報を追加できなくなりました。|  
 |max_concurrent_merge|**int**|同時マージプロセスの数。 **0**の場合、特定の時点で同時に実行されているマージプロセスの数に制限はありません。|  
 |max_concurrent_dynamic_snapshots|**int**|マージパブリケーションに対して実行できる、フィルター選択されたデータスナップショットセッションの最大数。 **0**の場合、任意の時点でパブリケーションに対して同時に実行できるフィルター選択されたデータスナップショットセッションの最大数に制限はありません。|  
@@ -117,7 +117,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  sp_helpmergepublication は、マージ レプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -127,10 +127,10 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
  [!code-sql[HowTo#sp_helpmergepublication](../../relational-databases/replication/codesnippet/tsql/sp-helpmergepublication-_1.sql)]  
   
 ## <a name="see-also"></a>参照  
- [パブリケーションのプロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
+ [パブリケーション プロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [sp_addmergepublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
  [sp_changemergepublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
  [sp_dropmergepublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
- [レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

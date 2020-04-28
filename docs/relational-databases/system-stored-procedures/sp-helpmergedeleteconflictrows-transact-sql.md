@@ -16,10 +16,10 @@ ms.assetid: 222be651-5690-4341-9dfb-f9ec1d80c970
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 86e8d3d21246cbb308db5b698a29f2b02ce45ac3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68137748"
 ---
 # <a name="sp_helpmergedeleteconflictrows-transact-sql"></a>sp_helpmergedeleteconflictrows (Transact-SQL)
@@ -50,27 +50,27 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**source_object**|**nvarchar (386)**|削除競合のソースオブジェクト。|  
-|**rowguid**|**UNIQUEIDENTIFIER**|削除競合の行識別子。|  
+|**rowguid**|**uniqueidentifier**|削除競合の行識別子。|  
 |**conflict_type**|**int**|競合の種類を示すコード:<br /><br /> **1** = UpdateConflict: 行レベルで競合が検出されました。<br /><br /> **2** = ColumnUpdateConflict: 列レベルで競合が検出されました。<br /><br /> **3** = UpdateDeleteWinsConflict: Delete は競合を優先します。<br /><br /> **4** = UpdateWinsDeleteConflict: 競合が失われた削除済みの rowguid がこのテーブルに記録されます。<br /><br /> **5** = uploadinsertfailed: サブスクライバーからの挿入をパブリッシャーで適用できませんでした。<br /><br /> **6** = downloadinsertfailed: パブリッシャーからの挿入をサブスクライバーで適用できませんでした。<br /><br /> **7** = uploaddeletefailed: サブスクライバーでの削除をパブリッシャーにアップロードできませんでした。<br /><br /> **8** = downloaddeletefailed: パブリッシャーでの削除をサブスクライバーにダウンロードできませんでした。<br /><br /> **9** = uploadupdatefailed: サブスクライバーでの更新をパブリッシャーで適用できませんでした。<br /><br /> **10** = downloadupdatefailed: パブリッシャーでの更新をサブスクライバーに適用できませんでした。|  
-|**reason_code**|**通り**|状況に依存する可能性があるエラーコード。|  
+|**reason_code**|**Int**|状況に依存する可能性があるエラーコード。|  
 |**reason_text**|**varchar (720)**|状況依存のエラーの説明。|  
-|**origin_datasource**|**varchar (255)**|競合の発生元。|  
-|**pubid**|**UNIQUEIDENTIFIER**|パブリケーション識別子。|  
-|**MSrepl_create_time**|**DATETIME**|競合情報が追加された時刻。|  
+|**origin_datasource**|**varchar(255)**|競合の発生元。|  
+|**pubid**|**uniqueidentifier**|パブリケーション識別子。|  
+|**MSrepl_create_time**|**datetime**|競合情報が追加された時刻。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_helpmergedeleteconflictrows**は、マージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_helpmergedeleteconflictrows**を実行できるのは、 **sysadmin**固定サーバーロールおよび**db_owner**固定データベースロールのメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

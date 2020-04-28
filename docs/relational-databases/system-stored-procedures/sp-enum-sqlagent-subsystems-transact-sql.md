@@ -18,10 +18,10 @@ ms.assetid: 019a3c9d-bac3-495b-a70a-2c19f1d2e20e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 963cbcea93091eb48b8c73214ee3bc509f118e67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124673"
 ---
 # <a name="sp_enum_sqlagent_subsystems-transact-sql"></a>sp_enum_sqlagent_subsystems (Transact-sql)
@@ -39,26 +39,26 @@ sp_enum_sqlagent_subsystems
 ```  
   
 ## <a name="arguments"></a>引数  
- なし  
+ None  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**サブ**|**nvarchar (40)**|サブシステムの名前。|  
+|**サブ**|**nvarchar(40)**|サブシステムの名前。|  
 |**記述**|**nvarchar(512)**|サブシステムの説明。|  
 |**subsystem_dll**|**nvarchar (510)**|サブシステムを格納している DLL モジュール|  
 |**agent_exe**|**nvarchar (510)**|サブシステムによって使用される実行可能モジュール。|  
-|**start_entry_point**|**nvarchar (30)**|ジョブステップの実行中に SQL Server エージェント呼び出しを行う手順。|  
-|**event_entry_point**|**nvarchar (30)**|ジョブステップの実行中に SQL Server エージェント呼び出しを行う手順。|  
-|**stop_entry_point**|**nvarchar (30)**|ジョブステップの実行中に SQL Server エージェント呼び出しを行う手順。|  
+|**start_entry_point**|**nvarchar(30)**|ジョブステップの実行中に SQL Server エージェント呼び出しを行う手順。|  
+|**event_entry_point**|**nvarchar(30)**|ジョブステップの実行中に SQL Server エージェント呼び出しを行う手順。|  
+|**stop_entry_point**|**nvarchar(30)**|ジョブステップの実行中に SQL Server エージェント呼び出しを行う手順。|  
 |**max_worker_threads**|**int**|このサブシステムに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]対してエージェントが開始するスレッドの最大数。|  
 |**subsystem_id**|**int**|サブシステムの識別子|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この手順では、インスタンスで使用可能なサブシステムの一覧を示します。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -68,6 +68,6 @@ sp_enum_sqlagent_subsystems
   
 ## <a name="see-also"></a>参照  
  [SQL Server エージェントセキュリティを実装する](../../ssms/agent/implement-sql-server-agent-security.md)   
- [sp_add_jobstep &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)  
+ [sp_add_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)  
   
   

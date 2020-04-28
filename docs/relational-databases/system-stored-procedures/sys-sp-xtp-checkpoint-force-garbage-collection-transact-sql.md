@@ -18,10 +18,10 @@ ms.assetid: 82b35b2b-edbd-44ac-9fc8-80695f2fd1df
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3b230fb659b41f16541fd841f1ff8b6f03d19cee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68120036"
 ---
 # <a name="syssp_xtp_checkpoint_force_garbage_collection-transact-sql"></a>sys.sp_xtp_checkpoint_force_garbage_collection (Transact-SQL)
@@ -48,7 +48,7 @@ sys.sp_xtp_checkpoint_force_garbage_collection [[ @dbname=database_name]
 ## <a name="result-set"></a>結果セット  
  返される行には次の情報が含まれます。  
   
-|列|[説明]|  
+|列|説明|  
 |------------|-----------------|  
 |num_collected_items|Filestream ガベージコレクションに移動されたファイルの数を示します。 これらのファイルのログ シーケンス番号 (LSN) は、ログの切り捨てポイントの LSN よりも小さい値になっています。|  
 |num_marked_for_collection_items|ログの最後の LSN のログブロック id を使用して LSN が更新されたデータ/デルタファイルの数を示します。|  

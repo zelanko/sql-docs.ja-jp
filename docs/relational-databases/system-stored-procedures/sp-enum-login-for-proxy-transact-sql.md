@@ -18,10 +18,10 @@ ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
 ms.author: vanto
 author: VanMSFT
 ms.openlocfilehash: ee6b6a701d4ff81863973c4c8e098bd9ed49c967
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124679"
 ---
 # <a name="sp_enum_login_for_proxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
@@ -53,15 +53,15 @@ sp_enum_login_for_proxy
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|プロキシの識別番号。|  
 |**proxy_name**|**sysname**|プロキシの名前。|  
 |**name**|**sysname**|関連付けのセキュリティプリンシパルの名前。|  
-|**示す**|**int**|セキュリティ プリンシパルの種類<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン<br /><br /> **1** = 固定システムロール<br /><br /> **2** = **msdb**のデータベースロール|  
+|**flags**|**int**|セキュリティ プリンシパルの種類<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン<br /><br /> **1** = 固定システムロール<br /><br /> **2** = **msdb**のデータベースロール|  
 | &nbsp; | &nbsp; | &nbsp; |
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  パラメーターが指定されていない場合、 **sp_enum_login_for_proxy**は、すべてのプロキシのインスタンス内のすべてのログインに関する情報を一覧表示します。  
   
  プロキシ id またはプロキシ名を指定すると、 **sp_enum_login_for_proxy**プロキシにアクセスできるログインが一覧表示されます。 ログイン名が指定されている場合、 **sp_enum_login_for_proxy**には、そのログインがアクセスできるプロキシが一覧表示されます。  

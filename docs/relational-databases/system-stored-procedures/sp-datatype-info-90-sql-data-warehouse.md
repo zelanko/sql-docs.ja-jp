@@ -12,10 +12,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 7919dac422a0033d9bac02a928da2ff7445c6cc9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108321"
 ---
 # <a name="sp_datatype_info_90-sql-data-warehouse"></a>sp_datatype_info_90 (SQL Data Warehouse)
@@ -23,7 +23,7 @@ ms.locfileid: "68108321"
 
   現在の環境でサポートされているデータ型に関する情報を返します。  
   
- ![トピックリンクアイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン")Transact-sql[構文表記規則 &#40;transact-sql&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,11 +40,11 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 `[ @ODBCVer = ] odbc_version`使用する ODBC のバージョンを示します。 *odbc_version*は**tinyint**,、既定値は2です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- なし  
+ None  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |TYPE_NAME|**sysname**|DBMS に依存するデータ型です。|  
 |DATA_TYPE|**smallint**|このデータ型のすべての列がマップされる ODBC 型のコードです。|  
@@ -63,17 +63,17 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 |MAXIMUM_SCALE|**smallint**|データ ソースでのデータ型の最大小数点以下桁数です。 最大小数点以下桁数がデータソースで個別に定義されておらず、最大有効桁数と同じになるように定義されている場合、この列には PRECISION 列と同じ値が格納されます。|  
 |SQL_DATA_TYPE|**smallint**|記述子の TYPE フィールドでの SQL データ型の値です。 この列は、 **datetime**および ANSI **interval**データ型を除き、DATA_TYPE 列と同じです。 このフィールドは常に値を返します。|  
 |SQL_DATETIME_SUB|**smallint**|SQL_DATA_TYPE の値が SQL_DATETIME または SQL_INTERVAL の場合は、 **datetime**または ANSI **interval**サブコード。 **Datetime**および ANSI **interval**以外のデータ型の場合、このフィールドは NULL になります。|  
-|NUM_PREC_RADIX|**int**|列が保持できる最大数を計算するビット数または桁数。 データ型が概数型である場合、この列に含まれる値は 2 で、複数のビットを示します。 真数型の場合、この列には10進数を示す値10が含まれます。 それ以外の場合、この列は NULL になります。 アプリケーションは、基数と精度を組み合わせて、その列が保持できる最大数を計算できます。|  
+|NUM_PREC_RADIX|**int**|列が保持できる最大数を計算するビット数または桁数。 データ型が概数型である場合、この列に含まれる値は 2 で、複数のビットを示します。 真数型の場合、この列には10進数を示す値10が含まれます。 その他の場合、この列は NULL になります。 アプリケーションは、基数と精度を組み合わせて、その列が保持できる最大数を計算できます。|  
 |INTERVAL_PRECISION|**smallint**|*Data_type*が**interval**の場合の間隔の先頭の有効桁数の値。それ以外の場合は NULL。|  
 |USERTYPE|**smallint**|systypes テーブルの**usertype**値。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  sp_datatype_info は、ODBC の SQLGetTypeInfo に相当します。 結果は、まず DATA_TYPE の順序で、次にデータ型が対応する ODBC SQL データ型にどれだけ正確にマップされているのかに基づいて返されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  public ロールのメンバーシップが必要です。  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、 *data_type*の`-9`値を指定して、 **sysname**および**nvarchar**データ型の情報を取得します。  
   
 ```  
@@ -85,7 +85,7 @@ GO
   
 ## <a name="see-also"></a>参照  
  [ストアドプロシージャの SQL Data Warehouse](../../relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md)   
- [データ型 &#40;Transact-sql&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
+ [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
   
   
 

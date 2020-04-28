@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e0bb7d109323f4eb4a33181ab45b4b17d15faf54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108609"
 ---
 # <a name="sp_createstats-transact-sql"></a>sp_createstats (Transact-sql)
@@ -62,7 +62,7 @@ sp_createstats
 ## <a name="result-sets"></a>結果セット  
  新しい各統計オブジェクトには、作成された列と同じ名前が付けられます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  sp_createstats は、既存の統計オブジェクトの最初の列である列の統計を作成または更新しません。 これには、インデックス用に作成された統計の最初の列、AUTO_CREATE_STATISTICS オプションで生成された単一列統計を持つ列、および CREATE STATISTICS ステートメントを使用して作成された統計の最初の列が含まれます。 sp_createstats は、その列が別の有効なインデックスで使用されていない限り、無効になったインデックスの最初の列に対して統計を作成しません。 sp_createstats では、無効になっているクラスター化インデックスを持つテーブルに対する統計は作成されません。  
   
  テーブルに列セットが含まれている場合、sp_createstats ではスパース列に対する統計は作成されません。 列セットとスパース列の詳細については、「[列セットの使用](../../relational-databases/tables/use-column-sets.md)」および「[スパース列の使用](../../relational-databases/tables/use-sparse-columns.md)」を参照してください。  
@@ -91,11 +91,11 @@ GO
 ## <a name="see-also"></a>参照  
  [値](../../relational-databases/statistics/statistics.md)   
  [Transact-sql&#41;&#40;の統計の作成](../../t-sql/statements/create-statistics-transact-sql.md)   
- [ALTER DATABASE SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [Transact-sql&#41;&#40;の ALTER DATABASE SET オプション](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [DBCC SHOW_STATISTICS &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
  [DROP STATISTICS &#40;Transact-sql&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
  [UPDATE STATISTICS &#40;Transact-sql&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

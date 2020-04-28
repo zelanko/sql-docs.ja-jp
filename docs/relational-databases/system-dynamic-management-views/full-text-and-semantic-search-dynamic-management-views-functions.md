@@ -15,10 +15,10 @@ ms.assetid: 199dbd5a-29f6-4ef0-8e65-86e32c0aaa3a
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: ff24122c1a551d6da1ce4ad1ddbb7771e2183c70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68130769"
 ---
 # <a name="full-text-and-semantic-search-dynamic-management-views---functions"></a>フルテキストおよびセマンティック検索の動的管理ビュー-関数
@@ -27,7 +27,7 @@ ms.locfileid: "68130769"
   ここでは、フルテキスト検索とセマンティック検索に関連する次の動的管理ビューおよび関数について説明します。  
   
 ## <a name="full-text-search-dynamic-management-views-and-functions"></a>フルテキスト検索の動的管理ビューおよび関数  
- [dm_fts_active_catalogs &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-active-catalogs-transact-sql.md)  
+ [sys.dm_fts_active_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-active-catalogs-transact-sql.md)  
  サーバー上でいくつかの作成アクティビティが進行中のフルテキストカタログに関する情報を返します。  
   
  [sys.dm_fts_fdhosts](../../relational-databases/system-dynamic-management-views/sys-dm-fts-fdhosts-transact-sql.md)  
@@ -64,11 +64,11 @@ ms.locfileid: "68130769"
  現在実行中のフルテキストインデックスの作成に関連する特定の範囲に関する情報を返します。  
   
 ## <a name="semantic-search-dynamic-management-views-and-functions"></a>セマンティック検索の動的管理ビューおよび関数  
- [dm_fts_semantic_similarity_population &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql.md)  
+ [sys.dm_fts_semantic_similarity_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql.md)  
  関連付けられたセマンティックインデックスを持つ各テーブルの各類似性インデックスについて、ドキュメントの類似性のインデックスの作成に関するステータス情報の1行を返します。  
   
 ## <a name="see-also"></a>参照  
- [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [システムビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

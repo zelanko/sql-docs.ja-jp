@@ -15,10 +15,10 @@ ms.assetid: 6d337c2f-71e9-4e0c-8877-9780baa7699d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6fb0b49bc25b8c5ac73224a41198d50b6e8099ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68130859"
 ---
 # <a name="extended-events-dynamic-management-views"></a>拡張イベントの動的管理ビュー
@@ -35,6 +35,6 @@ ms.locfileid: "68130859"
 |[sys.dm_xe_session_event_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-event-actions-transact-sql.md)||  
   
 ## <a name="see-also"></a>参照  
- [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
+ [動的管理ビューおよび関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

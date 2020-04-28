@@ -16,10 +16,10 @@ ms.assetid: 4678a2b9-9a5f-4193-a20d-2e11fc896c3a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 85e75e1ce52866eb04b3c410f021db8de392239a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122327"
 ---
 # <a name="sp_helpmergearticleconflicts-transact-sql"></a>sp_helpmergearticleconflicts (Transact-SQL)
@@ -47,12 +47,12 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**記事**|**sysname**|アーティクルの名前。|  
 |**source_owner**|**sysname**|ソース オブジェクトの所有者です。|  
 |**source_object**|**nvarchar (386)**|ソース オブジェクトの名前です。|  
-|**conflict_table**|**nvarchar (258)**|挿入または更新の競合を格納するテーブルの名前。|  
+|**conflict_table**|**nvarchar(258)**|挿入または更新の競合を格納するテーブルの名前。|  
 |**guidcolname**|**sysname**|ソースオブジェクトの RowGuidCol の名前。|  
 |**centralized_conflicts**|**int**|指定されたパブリッシャーに競合レコードが格納されているかどうか。|  
   
@@ -61,13 +61,13 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_helpmergearticleconflicts**は、マージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_helpmergearticleconflicts**を実行できるのは、 **sysadmin**固定サーバーロールおよび**db_owner**固定データベースロールのメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -20,10 +20,10 @@ ms.assetid: d9e230fb-d3ff-486f-86ef-44898f0a703e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 99e3a647c55380e1731b97c267eb754a1f3c6a32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122742"
 ---
 # <a name="syshash_indexes-transact-sql"></a>hash_indexes (Transact-sql)
@@ -33,13 +33,13 @@ ms.locfileid: "68122742"
   
  Hash_indexes ビューには、sys ビューと同じ列と、 **bucket_count**という名前の追加の列が含まれています。 Hash_indexes ビューのその他の列の詳細については、「 [sys &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)」を参照してください。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**\<継承された列>**||は[、SQL&#41;&#40;transact-sql](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)の列を継承します。|  
 |**bucket_count**|**int**|ハッシュインデックスのハッシュバケットの数。<br /><br /> 値を設定するためのガイドラインなど、bucket_count の値の詳細については、「 [transact-sql&#41;&#40;CREATE TABLE ](../../t-sql/statements/create-table-transact-sql.md)」を参照してください。|  
   
 ## <a name="permissions"></a>アクセス許可  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]. 詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)].  詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="examples"></a>例  
   

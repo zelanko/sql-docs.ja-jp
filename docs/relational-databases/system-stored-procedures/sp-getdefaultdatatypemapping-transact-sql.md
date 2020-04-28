@@ -16,10 +16,10 @@ ms.assetid: b8401de1-f135-41d0-ba79-ce8fe1f48c00
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 32fe9edf5c3d8621046a27937d83f642b1689d1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68123991"
 ---
 # <a name="sp_getdefaultdatatypemapping-transact-sql"></a>sp_getdefaultdatatypemapping (Transact-SQL)
@@ -53,9 +53,9 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
 ## <a name="arguments"></a>引数  
 `[ @source_dbms = ] 'source_dbms'`データ型のマップ元となる DBMS の名前を指定します。 *source_dbms*は**sysname**で、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|**MS**|ソースは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースです。|  
+|**MSSQLSERVER**|ソースは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースです。|  
 |**ORACLE11I**|マップ元は Oracle データベース。|  
   
  このパラメーターを指定する必要があります。  
@@ -74,9 +74,9 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
   
 `[ @destination_dbms = ] 'destination_dbms'`マップ先 DBMS の名前を指定します。 *destination_dbms*は**sysname**で、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|**MS**|マップ先は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース。|  
+|**MSSQLSERVER**|マップ先は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース。|  
 |**ORACLE11I**|変換先は、Oracle データベースです。|  
 |**DB2**|マップ先は IBM DB2 データベース。|  
 |**SYBASE**|コピー先は Sybase データベースです。|  
@@ -100,7 +100,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_getdefaultdatatypemapping**は、と以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DBMS の間のすべての種類のレプリケーションで使用されます。  
   
  **sp_getdefaultdatatypemapping**は、指定された変換元データ型に最も一致する、既定の変換先データ型を返します。  
@@ -113,6 +113,6 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
  [sp_setdefaultdatatypemapping &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)   
  [Oracle パブリッシャーのデータ型マッピング](../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
  [IBM DB2 サブスクライバー](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)   
- [Oracle サブスクライバー](../../relational-databases/replication/non-sql/oracle-subscribers.md)  
+ [Oracle Subscribers](../../relational-databases/replication/non-sql/oracle-subscribers.md)  
   
   

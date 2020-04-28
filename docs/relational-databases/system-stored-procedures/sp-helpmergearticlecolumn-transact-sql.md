@@ -16,10 +16,10 @@ ms.assetid: 651c017b-9e9a-48f2-a0bd-6fc896eab334
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: da2eec998176dfd46ab261fa405ecaa4b6e90044
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68126442"
 ---
 # <a name="sp_helpmergearticlecolumn-transact-sql"></a>sp_helpmergearticlecolumn (Transact-sql)
@@ -44,7 +44,7 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**column_id**|**sysname**|列を識別します。|  
 |**column_name**|**sysname**|テーブルまたはビューの列の名前を指定します。|  
@@ -53,13 +53,13 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_helpmergearticlecolumn**は、マージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_helpmergearticlecolumn**を実行できるのは、ディストリビューションデータベースの**replmonitor**固定データベースロールのメンバー、またはパブリケーションのパブリケーションアクセスリストのメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

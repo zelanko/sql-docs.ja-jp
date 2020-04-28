@@ -18,10 +18,10 @@ ms.assetid: b41ca3a5-7222-4c22-a012-e66a577a82f6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9f951aaee96bccf0c2876c781aaebdd2a009b51d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68140477"
 ---
 # <a name="sp_add_log_file_recover_suspect_db-transact-sql"></a>sp_add_log_file_recover_suspect_db (Transact-SQL)
@@ -64,12 +64,12 @@ sp_add_log_file_recover_suspect_db [ @dbName= ] 'database' ,
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ None  
   
 ## <a name="permissions"></a>アクセス許可  
  実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。 これらのアクセス許可は転送できません。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、ログ`db1`領域が不足しているため、復旧中にデータベースが問題ありとマークされています (エラー 9002)。  
   
 ```  
@@ -82,8 +82,8 @@ EXEC sp_add_log_file_recover_suspect_db db1, logfile2,
 ```  
   
 ## <a name="see-also"></a>参照  
- [ALTER DATABASE &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [sp_add_data_file_recover_suspect_db &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-data-file-recover-suspect-db-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

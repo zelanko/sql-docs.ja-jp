@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 17e43f9739b0306a42c4c454cf93fdf92b255177
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122527"
 ---
 # <a name="sp_helpindex-transact-sql"></a>sp_helpindex (Transact-SQL)
@@ -47,7 +47,7 @@ sp_helpindex [ @objname = ] 'name'
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**index_name**|**sysname**|インデックス名。|  
 |**index_description**|**varchar (210)**|インデックスが配置されているファイルグループを含むインデックスの説明。|  
@@ -55,13 +55,13 @@ sp_helpindex [ @objname = ] 'name'
   
  降順のインデックス付き列は、名前の後にマイナス記号 (-) を付けて結果セットに一覧表示されます。既定の昇順のインデックス列は、名前だけで一覧表示されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  UPDATE STATISTICS の NORECOMPUTE オプションを使用してインデックスが設定されている場合、その情報は**index_description**列に含まれます。  
   
  **sp_helpindex**は、順序付け可能インデックス列のみを公開します。そのため、XML インデックスや空間インデックスに関する情報は公開されません。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Public**ロールのメンバーシップが必要です。  
+ ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>例  
  次の例では、`Customer` テーブルのインデックスの種類に関するレポートを表示します。  
@@ -78,6 +78,6 @@ GO
  [SQL&#41;&#40;Transact-sql のインデックス](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [index_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [UPDATE STATISTICS &#40;Transact-sql&#41;](../../t-sql/statements/update-statistics-transact-sql.md)  
+ [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)  
   
   

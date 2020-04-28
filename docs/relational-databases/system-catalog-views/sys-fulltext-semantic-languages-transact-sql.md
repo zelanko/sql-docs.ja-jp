@@ -20,10 +20,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: c060f08ff70e04a22af1eb9de09aeb1e3bf4ff71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133778"
 ---
 # <a name="sysfulltext_semantic_languages-transact-sql"></a>fulltext_semantic_languages (Transact-sql)
@@ -36,7 +36,7 @@ ms.locfileid: "68133778"
 ||||  
 |-|-|-|  
 |**列名**|**Type**|**説明**|  
-|lcid|INT|言語の Microsoft Windows ロケール識別子 (LCID) です。|  
+|lcid|int|言語の Microsoft Windows ロケール識別子 (LCID) です。|  
 |name|sysname|は、 **lcid**の値に対応する[&#41;&#40;sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)の別名の値、または数値の lcid の文字列形式のいずれかです。|  
   
 ## <a name="general-remarks"></a>全般的な解説  
@@ -50,7 +50,7 @@ ms.locfileid: "68133778"
 ### <a name="permissions"></a>アクセス許可  
  カタログ ビューでのメタデータの表示が、ユーザーが所有しているかそのユーザーが権限を許可されている、セキュリティ保護可能なメタデータに制限されます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、 **fulltext_semantic_languages**クエリを実行し、の現在の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスでセマンティックインデックス作成に登録されているすべての言語モデルに関する情報を取得する方法を示します。  
   
 ```  

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 021a6e689dfc109f8a58ca080956aec7efc49291
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124473"
 ---
 # <a name="sp_execute_remote-azure-sql-database"></a>sp_execute_remote (Azure SQL Database)
@@ -70,10 +70,9 @@ sp_execute_remote [ @data_source_name = ] datasourcename
  最初の SQL ステートメントから結果セットを返します。  
   
 ## <a name="permissions"></a>アクセス許可  
- 
-  `ALTER ANY EXTERNAL DATA SOURCE` 権限が必要です。  
+ `ALTER ANY EXTERNAL DATA SOURCE` 権限が必要です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  `sp_execute_remote`パラメーターは、前の「構文」セクションで説明されているように、特定の順序で入力する必要があります。 パラメーターが順序どおりに入力されていない場合は、エラーメッセージが表示されます。  
   
  `sp_execute_remote`には、バッチと名前のスコープに関して、 [transact-sql&#41;の実行 &#40;](../../t-sql/language-elements/execute-transact-sql.md)と同じ動作があります。 Sp_execute_remote * \@stmt*パラメーター内の transact-sql ステートメントまたはバッチは、sp_execute_remote ステートメントが実行されるまでコンパイルされません。  
@@ -82,7 +81,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
   
  `sp_execute_remote`は、 [transact-sql&#41;&#40;sp_executesql](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md)と同様に使用できます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
 ### <a name="simple-example"></a>簡単な例  
  次の例では、リモートデータベースに対して単純な SELECT ステートメントを作成して実行します。  
   
@@ -104,6 +103,6 @@ EXEC sp_execute_remote @data_source_name  = N'PointToMaster',
 
 ## <a name="see-also"></a>参照:
 
-[データベーススコープ資格情報の作成](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)  
-[CREATE EXTERNAL DATA SOURCE (Transact-sql)](../../t-sql/statements/create-external-data-source-transact-sql.md)  
+[CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)  
+[CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)  
     

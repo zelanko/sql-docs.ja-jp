@@ -20,10 +20,10 @@ ms.assetid: a740be59-cd52-4707-9ad2-5203669a63ac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 791bba2f5ec1830e343acff24fd55628a3f13d2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68134002"
 ---
 # <a name="sysfiletables-transact-sql"></a>sys.filetables (Transact-SQL)
@@ -31,16 +31,16 @@ ms.locfileid: "68134002"
 
   内[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の各 FileTable の行を返しますです。 FileTables について詳しくは、「[FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)」をご覧ください。    
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**object_id**||オブジェクト ID 番号。 データベース内で一意です。<br /><br /> 詳細については、「 [transact-sql&#41;&#40;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)」を参照してください。|  
 |**is_enabled**|**bit**|1 = FileTable は "有効" 状態です。|  
-|**directory_name**|**varchar (255)**|FileTable のルートディレクトリの名前。|  
+|**directory_name**|**varchar(255)**|FileTable のルートディレクトリの名前。|  
 |**filename_collation_id**||FileTable に対して定義されている照合順序識別子を指定します。|  
 |**filename_collation_name**||FileTable に対して定義されている照合順序名を指定します。|  
   
 ## <a name="see-also"></a>参照  
  [Filetable の管理](../../relational-databases/blob/manage-filetables.md)   
- [Filetable &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)  
+ [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)  
   
   

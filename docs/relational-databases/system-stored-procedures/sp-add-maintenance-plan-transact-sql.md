@@ -18,10 +18,10 @@ ms.assetid: 01ab1834-6260-47cb-a1b7-20722217b062
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: aa33e418b81cb2f77a39f20d36bba7a25caffb4c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68104581"
 ---
 # <a name="sp_add_maintenance_plan-transact-sql"></a>sp_add_maintenance_plan (Transact-sql)
@@ -47,19 +47,19 @@ sp_add_maintenance_plan [ @plan_name = ] 'plan_name' ,
 ## <a name="arguments"></a>引数  
 `[ @plan_name = ] 'plan_name'`追加するメンテナンスプランの名前を指定します。 *plan_name*は**varchar (128)** です。  
   
- ** ** @plan_id = '** plan_id **'**  
+ *plan_id* ** @plan_id = '** plan_id **'**  
  メンテナンスプランの ID を指定します。 *plan_id*は**uniqueidentifier**です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_add_maintenance_plan**は、 **msdb**データベースから実行する必要があり、新しい (空の) メンテナンスプランを作成します。 1つ以上のデータベースを追加し、ジョブまたはジョブに関連付けるには、 **sp_add_maintenance_plan_db**を実行し、 **sp_add_maintenance_plan_job**します。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_add_maintenance_plan**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  Myplan というメンテナンス プランを作成します。  
   
 ```  

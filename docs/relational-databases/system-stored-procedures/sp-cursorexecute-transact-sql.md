@@ -18,10 +18,10 @@ ms.assetid: 6a204229-0a53-4617-a57e-93d4afbb71ac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5d0979ba7df97ebc9fc5b79d8fd0cbd34b6a59a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108530"
 ---
 # <a name="sp_cursorexecute-transact-sql"></a>sp_cursorexecute (Transact-sql)
@@ -45,7 +45,7 @@ sp_cursorexecute prepared_handle, cursor
  *prepared_handle*  
  Sp_cursorprepare によって返される、準備されたステートメント*ハンドル*の値を指定します。 *prepared_handle*は、 **int**入力値を必要とする必須パラメーターです。  
   
- *g*  
+ *cursor*  
  SQL Server 生成されたカーソル識別子を示します。 *cursor*は、カーソルに対して動作する後続のすべてのプロシージャ (など) で指定する必要がある必須のパラメーターです sp_cursorfetch  
   
  *scrollopt*  
@@ -79,12 +79,12 @@ sp_cursorexecute prepared_handle, cursor
 ## <a name="code-return-value"></a>コードの戻り値  
  *rowcount*は次の値を返す場合があります。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |-1|不明な行の数。|  
 |-n|非同期設定が有効になっています。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="scrollopt-and-ccopt-parameters"></a>scrollopt パラメーターと ccopt パラメーター  
  *scrollopt*と*ccopt*は、キャッシュされたプランがサーバーキャッシュに対して割り込まれる場合に役立ちます。つまり、ステートメントを識別する準備済みハンドルを再コンパイルする必要があります。 *Scrollopt*および*ccopt*パラメーターの値は、元の要求で sp_cursorprepare に送信された値と一致している必要があります。  
@@ -100,6 +100,6 @@ sp_cursorexecute prepared_handle, cursor
 ## <a name="see-also"></a>参照  
  [sp_cursoropen &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
  [sp_cursorfetch &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

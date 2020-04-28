@@ -21,10 +21,10 @@ ms.assetid: 75986e91-1fc7-4f14-98ac-4e90154a74db
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9ac3c2bd13b5f89ea8d87336e579e196e3754c5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133225"
 ---
 # <a name="sysserver_event_session_events-transact-sql"></a>sys.server_event_session_events (Transact-SQL)
@@ -32,30 +32,30 @@ ms.locfileid: "68133225"
 
   イベント セッションのイベントごとに行を返します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|イベントセッションの ID。 NULL 値は許可されません。|  
 |event_id|**int**|イベントの ID。 この ID は、イベントセッションオブジェクト内で一意です。 NULL 値は許可されません。|  
 |name|**sysname**|イベントの名前です。 NULL 値は許可されません。|  
-|パッケージ|**sysname**|イベントを含むイベント パッケージの名前。 NULL 値は許可されません。|  
-|第|**sysname**|イベントが格納されているモジュールの名前。 NULL 値は許可されません。|  
+|package|**sysname**|イベントを含むイベント パッケージの名前。 NULL 値は許可されません。|  
+|name|**sysname**|イベントが格納されているモジュールの名前。 NULL 値は許可されません。|  
 |predicate|**nvarchar (3000)**|イベントに適用される述語式。 NULL 値が許可されます。|  
 |predicate_xml|**nvarchar (3000)**|イベントに適用される XML 述語式。 NULL 値が許可されます。|  
   
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  このビューには、次のリレーションシップ基数があります。  
   
 ||||  
 |-|-|-|  
-|移行元|To|リレーションシップ|  
+|ソース|終了|リレーションシップ|  
 |sys.server_event_session_events.event_session_id|server_event_sessions。 event_session_id|多対一|  
   
 ## <a name="see-also"></a>参照  
- [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Extended Events Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [拡張イベントのカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [拡張イベント](../../relational-databases/extended-events/extended-events.md)  
   
   

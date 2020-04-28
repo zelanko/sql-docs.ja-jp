@@ -12,10 +12,10 @@ ms.assetid: 2a56a003-3b0f-453a-963c-00c9e40933ec
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: ae9210444311267569d5f240d40252d4fe024877
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139205"
 ---
 # <a name="assessing-mysql-databases-for-conversion-mysqltosql"></a>変換のための MySQL データベースの評価 (MySQLToSQL)
@@ -78,7 +78,7 @@ ms.locfileid: "68139205"
   
 -   オブジェクトを移行から除外することができます。 また[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は SQL Azure メタデータエクスプローラーおよび Mysql メタデータエクスプローラーで、項目の横のチェックボックスをオフにして[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、mysql からのオブジェクトの読み込みまたは SQL Azure と移行を実行します。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 [MySQL データベース &#40;MySQLToSQL&#41;に変換しています](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
 ## <a name="see-also"></a>参照  

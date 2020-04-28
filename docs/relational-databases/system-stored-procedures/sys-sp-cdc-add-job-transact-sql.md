@@ -20,10 +20,10 @@ ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7dd10d28855cc4c10f5496c74f1f39a91826052f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106545"
 ---
 # <a name="syssp_cdc_add_job-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
@@ -82,14 +82,14 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ None  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  クリーンアップジョブは、データベースの最初のテーブルで変更データキャプチャが有効になっている場合に、既定値を使用して作成されます。 キャプチャ ジョブは、データベースの最初のテーブルの変更データ キャプチャを有効にしたとき、そのデータベースにトランザクション パブリケーションが存在しなかった場合に、既定値を使って作成されます。 トランザクション パブリケーションが存在する場合、トランザクション ログ リーダーを使ってキャプチャ メカニズムが実現されます。別個のキャプチャ ジョブは必要ありません (使用することもできません)。  
   
  クリーンアップ ジョブとキャプチャ ジョブは既定で作成されるため、このストアド プロシージャが必要となるのは、ジョブを明示的に削除した後で、再び作成する必要が生じた場合だけです。  
   
- ジョブの名前は**cdc です。****** _\_データベース名\>のクリーンアップ\<_ または cdc。**\_**** _\_データベース名\>のキャプチャ。ここで<database_name>は現在のデータベース\<_ の名前です。**\_** 同じ名前のジョブが既に存在する場合、名前にはピリオド (**.**) と一意の識別子 (例: cdc) が付加されます。 **AdventureWorks_capture。A1ACBDED-13FC-428C-8302-10100EF74F52**。  
+ ジョブの名前は**cdc です。****cdc.** _\_データベース名\>のクリーンアップ\<_ または cdc。**\_***<database_name>* _\_データベース名\>のキャプチャ。ここで<database_name>は現在のデータベース\<_ の名前です。**\_** 同じ名前のジョブが既に存在する場合、名前にはピリオド (**.**) と一意の識別子 (例: cdc) が付加されます。 **AdventureWorks_capture。A1ACBDED-13FC-428C-8302-10100EF74F52**。  
   
  クリーンアップジョブまたはキャプチャジョブの現在の構成を表示するには、 [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)を使用します。 ジョブの構成を変更するには、 [sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md)を使用します。  
   
@@ -123,6 +123,6 @@ EXEC sys.sp_cdc_add_job
 ## <a name="see-also"></a>参照  
  [dbo. cdc_jobs &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
  [sp_cdc_enable_table &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
- [変更データキャプチャについて &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
+ [変更データ キャプチャについて &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   
   

@@ -16,10 +16,10 @@ ms.assetid: ff837209-e2b3-481a-a48f-8530bfe53d97
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b6ecac979077dd83d6549b408c8c9e4d2bd4402f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122440"
 ---
 # <a name="sp_helplogreader_agent-transact-sql"></a>sp_helplogreader_agent (Transact-sql)
@@ -41,21 +41,21 @@ sp_helplogreader_agent [ [ @publisher = ] 'publisher' ]
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**番号**|**int**|エージェントの ID。|  
+|**id**|**int**|エージェントの ID。|  
 |**name**|**nvarchar (100)**|エージェントの名前。|  
-|**publisher_security_mode**|**smallint**|パブリッシャーに接続するときにエージェントによって使用されるセキュリティモード。次のいずれかになります。<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証<br /><br /> **1** = Windows 認証。|  
+|**publisher_security_mode**|**smallint**|パブリッシャーに接続するときにエージェントによって使用されるセキュリティモード。次のいずれかになります。<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証<br /><br /> **1** = Windows 認証。|  
 |**publisher_login**|**sysname**|パブリッシャーに接続するときに使用されるログインです。|  
 |**publisher_password**|**nvarchar (524)**|セキュリティ上の理由から、 ** \* \* \* \* \* \* \*の\*値は常に返されます。 \* **|  
-|**job_id**|**UNIQUEIDENTIFIER**|エージェントジョブの一意の ID。|  
+|**job_id**|**uniqueidentifier**|エージェントジョブの一意の ID。|  
 |**job_login**|**nvarchar(512)**|ログリーダーエージェントを実行する Windows アカウントを指定します。このアカウントは、*ドメイン*\\*ユーザー名*の形式で返されます。|  
 |**job_password**|**sysname**|セキュリティ上の理由から、 ** \* \* \* \* \* \* \*の\*値は常に返されます。 \* **|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_helplogreader_agent**は、トランザクションレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  

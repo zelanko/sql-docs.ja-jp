@@ -18,10 +18,10 @@ ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cd5cae24b30840ea08ec2ae025b021fcf70f2dc6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108574"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor (Transact-SQL)
@@ -44,18 +44,18 @@ sp_cursor  cursor, optype, rownum, table
 ```  
   
 ## <a name="arguments"></a>引数  
- *g*  
+ *cursor*  
  カーソル ハンドルです。 *cursor*は、 **int**入力値を必要とする必須パラメーターです。 *cursor*は SQL Server によって生成され、sp_cursoropen プロシージャによって返される*ハンドル*値です。  
   
  *optype*  
  カーソルが実行する操作を指定する必須のパラメーターです。 *optype*には、次のいずれかの**int**入力値が必要です。  
   
-|Value|Name|[説明]|  
+|値|名前|説明|  
 |-----------|----------|-----------------|  
 |0X0001|UPDATE|は、フェッチバッファー内の1つ以上の行を更新するために使用されます。  *Rownum*で指定した行には、再度アクセスして更新します。|  
 |0x0002|DELETE|は、フェッチバッファー内の1つ以上の行を削除するために使用されます。 *Rownum*で指定した行には、再度アクセスして削除します。|  
 |0X0004|INSERT|SQL の**insert**ステートメントを作成せずにデータを挿入します。|  
-|0X0008|[最新の情報に更新]|は、基になるテーブルからバッファーを補充するために使用されます。オプティミスティック同時実行制御によって、または更新後に更新または削除が失敗した場合に、行を更新するために使用できます。|  
+|0X0008|REFRESH|は、基になるテーブルからバッファーを補充するために使用されます。オプティミスティック同時実行制御によって、または更新後に更新または削除が失敗した場合に、行を更新するために使用できます。|  
 |0X10|LOCK|指定された行を含むページで SQL Server U ロックを取得します。 このロックは、S ロックと互換性がありますが、X ロックやその他の U ロックとは互換性がありません。 短期間のロックを実装する場合に使用できます。|  
 |0X20|SETPOSITION|は、プログラムが後続の SQL Server 位置指定 DELETE または UPDATE ステートメントを実行する場合にのみ使用されます。|  
 |0X40|ABSOLUTE|UPDATE または DELETE との組み合わせでのみ使用できます。  ABSOLUTE は KEYSET カーソルでのみ使用されます (DYNAMIC カーソルでは無視されます。STATIC カーソルは更新できません)。<br /><br /> 注: フェッチされていないキーセット内の行に対して ABSOLUTE が指定されている場合、この操作は同時実行チェックに失敗し、返される結果を保証できません。|  
@@ -68,7 +68,7 @@ sp_cursor  cursor, optype, rownum, table
   
  *rownum*は、 **int**入力値を必要とする必須パラメーターです。  
   
- 1 で保護されたプロセスとして起動されました  
+ 1  
  フェッチバッファーの最初の行を示します。  
   
  2  
@@ -86,10 +86,10 @@ sp_cursor  cursor, optype, rownum, table
 > [!NOTE]  
 >  は、UPDATE、DELETE、REFRESH、または LOCK *optype*値と共に使用する場合にのみ有効です。  
   
- *一覧*  
+ *テーブル*  
  *Optype*が適用されるテーブルを識別するテーブル名。カーソル定義が結合またはあいまいな列名を含む場合、*値*パラメーターによって返されます。 特定のテーブルを指定しない場合、既定値は FROM 句の最初のテーブルになります。 *table*は、文字列入力値を必要とする省略可能なパラメーターです。 文字列は任意の文字または UNICODE データ型として指定できます。 *テーブル*には、マルチパートテーブル名を指定できます。  
   
- *数値*  
+ *value*  
  値を挿入または更新する場合に使用します。 *値*の文字列パラメーターは、UPDATE および INSERT の*optype*値でのみ使用されます。 文字列は任意の文字または UNICODE データ型として指定できます。  
   
 > [!NOTE]  
@@ -98,7 +98,7 @@ sp_cursor  cursor, optype, rownum, table
 ## <a name="return-code-values"></a>リターン コードの値  
  RPC を使用する場合、位置指定の DELETE または UPDATE 操作にバッファー番号0を指定すると、フェッチバッファー内のすべての行について、*行数*が 0 (失敗) または 1 (成功) の完了メッセージが返されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="optype-parameter"></a>optype パラメーター  
  SETPOSITION と UPDATE、DELETE、REFRESH、または LOCK の組み合わせを除きます。または、UPDATE または DELETE のいずれかを使用する場合、 *optype*値は相互に排他的です。  
@@ -129,7 +129,7 @@ sp_cursor  cursor, optype, rownum, table
   
 2.  パラメーターを使用して、完全な UPDATE または INSERT ステートメントを送信するか、複数のパラメーターを使用して UPDATE ステートメントまたは INSERT ステートメントの一部を送信します。このとき、SQL Server が完全なステートメントに組み込まれます。 この例については、このトピックで後述する「例」のセクションを参照してください。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
   
 ### <a name="alternative-value-parameter-uses"></a>代替値パラメーターの使用  
  更新プログラム:  
@@ -176,6 +176,6 @@ sp_cursor  cursor, optype, rownum, table
 ## <a name="see-also"></a>参照  
  [sp_cursoropen &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
  [sp_cursorfetch &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

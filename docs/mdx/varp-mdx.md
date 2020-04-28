@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: bb28851863864520a67cacbb2cb9a2a84d9fd6a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68135061"
 ---
 # <a name="varp-mdx"></a>VarP (MDX)
@@ -34,12 +34,12 @@ VarP(Set_Expression [ ,Numeric_Expression ] )
  *Numeric_Expression*  
  有効な数値式です。通常は、数値を返すセル座標の多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **VarP**関数は、指定されたセットに対して評価される、指定された数値式のバイアスをかけた分散を返します。  
   
  **VarP**関数は、バイアスをかける母集団の公式を使用し、 [Var](../mdx/var-mdx.md)関数はバイアスを使用しない母集団の公式を使用します。  
   
 ## <a name="see-also"></a>参照  
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

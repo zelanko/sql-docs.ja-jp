@@ -18,10 +18,10 @@ ms.assetid: 06e36ae5-f70d-4a26-9a7f-ee4b9360b355
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d6f842b96a9b179548688a4c655a566087ba1ebf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108619"
 ---
 # <a name="sp_create_removable-transact-sql"></a>sp_create_removable (Transact-SQL)
@@ -81,9 +81,9 @@ sp_create_removable
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ None  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  データベースのコピーをコンパクト ディスクなどのリムーバブル メディアに作成し、他のユーザーにデータベースを配布する場合は、このストアド プロシージャを使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -103,7 +103,7 @@ sp_create_removable
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、データ ファイルとログ ファイルの権限は設定されません。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、 `inventory`データベースをリムーバブルデータベースとして作成します。  
   
 ```  
@@ -121,11 +121,11 @@ EXEC sp_create_removable 'inventory',
 ## <a name="see-also"></a>参照  
  [データベースのデタッチとアタッチ &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [sp_certify_removable &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-certify-removable-transact-sql.md)   
- [ALTER DATABASE &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [sp_dbremove &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
  [sp_detach_db &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
  [sp_helpfile &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
  [sp_helpfilegroup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

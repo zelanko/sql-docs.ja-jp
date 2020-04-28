@@ -19,10 +19,10 @@ ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ccd72de184115929483a43fd69d133abe0e195af
-ms.sourcegitcommit: a17245869c2d3df97ec8cf083608f754f4b2f40f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68117911"
 ---
 # <a name="sp_addumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
@@ -49,11 +49,10 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 ## <a name="arguments"></a>引数  
 `[ @devtype = ] 'device_type'`バックアップデバイスの種類を示します。 *device_type*は**varchar (20)** で、既定値はありません。次のいずれかの値を指定できます。  
   
-|Value|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**ディスク**|バックアップデバイスとしてのハードディスクファイル。|  
-|**tape**|
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows でサポートされるテープ デバイス。<br /><br /> 注: テープ バックアップ デバイスは、将来のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でサポートされなくなる予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。|  
+|**tape**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows でサポートされるテープ デバイス。<br /><br /> 注: テープ バックアップ デバイスは、将来のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でサポートされなくなる予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。|  
   
 `[ @logicalname = ] 'logical_name'`BACKUP ステートメントおよび RESTORE ステートメントで使用するバックアップデバイスの論理名を指定します。 *logical_name*は**sysname**であり、既定値はありません。 NULL にすることはできません。  
   
@@ -74,16 +73,14 @@ sp_addumpdevice [ @devtype = ] 'device_type'
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ None  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_addumpdevice**により、バックアップデバイスが**backup_devices**カタログビューに追加されます。 その後、そのデバイスを BACKUP ステートメントや RESTORE ステートメントで論理的に参照できるようになります。 **sp_addumpdevice**では、物理デバイスへのアクセスは一切実行されません。 BACKUP ステートメントや RESTORE ステートメントが実行されるときにだけ、指定されたデバイスにアクセスされます。 論理バックアップデバイスを作成すると、BACKUP ステートメントと RESTORE ステートメントが簡略化されます。デバイス名を指定する場合は、"TAPE =" または "DISK =" 句を使用してデバイスパスを指定します。  
   
- 所有権とアクセス許可の問題によって、ディスクまたはファイルバックアップデバイスの使用が妨げられることがあります。 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]を起動する Windows アカウントに適切なファイル権限が付与されているかどうかを確認してください。  
+ 所有権とアクセス許可の問題によって、ディスクまたはファイルバックアップデバイスの使用が妨げられることがあります。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]を起動する Windows アカウントに適切なファイル権限が付与されているかどうかを確認してください。  
   
- 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]では、Windows でサポートされているテープ デバイスへのバックアップがサポートされます。 Windows でサポートされるテープ デバイスの詳細については、Windows のハードウェア互換性リストを参照してください。 コンピューターで使用できるテープ デバイスを表示するには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用します。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]では、Windows でサポートされているテープ デバイスへのバックアップがサポートされます。 Windows でサポートされるテープ デバイスの詳細については、Windows のハードウェア互換性リストを参照してください。 コンピューターで使用できるテープ デバイスを表示するには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用します。  
   
  ドライブの製造元によって提案された特定のテープドライブに対して、推奨されるテープのみを使用します。 DAT (digital audio tape) ドライブを使用している場合は、コンピューター用の DAT テープ (Digital Data Storage-DDS) を使用してください。  
   
@@ -92,8 +89,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
  デバイスを削除するには、 [sp_dropdevice](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)または[SQL Server Management Studio](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md)を使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
- 
-  **diskadmin** 固定サーバー ロールのメンバーシップが必要です。  
+ **diskadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
  ディスクに対する書き込み権限が必要です。  
   
@@ -109,8 +105,7 @@ EXEC sp_addumpdevice 'disk', 'mydiskdump', 'c:\dump\dump1.bak';
 ```  
   
 ### <a name="b-adding-a-network-disk-backup-device"></a>B. ネットワークディスクバックアップデバイスを追加する  
- 次の例では、`networkdevice` というリモートのディスク バックアップ デバイスを追加します。 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]を起動する名前には、そのリモート ファイル (`\\<servername>\<sharename>\<path>\<filename>.bak`) を扱う権限が必要です。  
+ 次の例では、`networkdevice` というリモートのディスク バックアップ デバイスを追加します。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]を起動する名前には、そのリモート ファイル (`\\<servername>\<sharename>\<path>\<filename>.bak`) を扱う権限が必要です。  
   
 ```  
 USE master;  
@@ -151,6 +146,6 @@ GO
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [sp_dropdevice &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
  [backup_devices &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

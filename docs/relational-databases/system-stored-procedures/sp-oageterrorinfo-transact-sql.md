@@ -18,10 +18,10 @@ ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e263308713a80ffaad4bfd9c484d061f5c19b94e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68107914"
 ---
 # <a name="sp_oageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-sql)
@@ -69,15 +69,15 @@ sp_OAGetErrorInfo [ objecttoken ]
 ## <a name="result-sets"></a>結果セット  
  出力パラメーターを指定しない場合、エラー情報は結果セットとしてクライアントに返されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |------------------|---------------|-----------------|  
-|**Error**|**バイナリ (4)**|エラー番号のバイナリ表現。|  
+|**エラー**|**バイナリ (4)**|エラー番号のバイナリ表現。|  
 |**ソース**|**nvarchar (nn)**|エラーのソース。|  
 |**説明**|**nvarchar (nn)**|エラーの説明。|  
 |**ヘルプ**|**nvarchar (nn)**|ソースのヘルプファイルです。|  
 |**HelpID**|**int**|ヘルプソースファイル内のヘルプコンテキスト ID。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  OLE オートメーションストアドプロシージャを呼び出すたびに ( **sp_OAGetErrorInfo**を除く)、エラー情報がリセットされます。したがって、 **sp_OAGetErrorInfo**は、最新の OLE オートメーションストアドプロシージャ呼び出しのエラー情報のみを取得します。 **Sp_OAGetErrorInfo**によってエラー情報がリセットされないため、同じエラー情報を取得するために複数回呼び出すことができます。  
   
  次の表は、OLE オートメーション エラーと一般的な原因の一覧です。  
@@ -97,7 +97,7 @@ sp_OAGetErrorInfo [ objecttoken ]
 ## <a name="permissions"></a>アクセス許可  
  **Sysadmin**固定サーバーロールのメンバーシップ、またはこのストアドプロシージャに対して直接実行権限が必要です。 `Ole Automation Procedures`OLE オートメーションに関連するシステムプロシージャを使用するには、構成を**有効**にする必要があります。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、OLE オートメーションのエラー情報を表示します。  
   
 ```  

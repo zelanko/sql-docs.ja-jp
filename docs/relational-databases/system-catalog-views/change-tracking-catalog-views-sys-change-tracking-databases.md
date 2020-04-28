@@ -22,10 +22,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9d3f2f92e9be7b6d4f38edff7cb36aa67e055788
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68136540"
 ---
 # <a name="change-tracking-catalog-views---syschange_tracking_databases"></a>Change Tracking カタログビュー-sys. change_tracking_databases
@@ -33,12 +33,12 @@ ms.locfileid: "68136540"
 
   変更の追跡が有効なデータベースごとに 1 行のデータを返します。  
 
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|データベースの ID です。 これは、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス内で一意です。|  
 |is_auto_cleanup_on|**bit**|構成された保有期間が経過した後に、変更追跡データが自動的にクリーンアップされるかどうかを示します。<br /><br /> 0 = オフ<br /><br /> 1 = On|  
 |retention_period|**int**|自動クリーンアップが使用されている場合に、変更追跡データをデータベースに保持する期間を示します。|  
-|retention_period_units_desc|**nvarchar (60)**|保有期間の説明を指定します。<br /><br /> 分<br /><br /> 時間<br /><br /> 日数|  
+|retention_period_units_desc|**nvarchar(60)**|保有期間の説明を指定します。<br /><br /> 分<br /><br /> 時間<br /><br /> 日数|  
 |retention_period_units|**tinyint**|保有期間の時間の単位です。<br /><br /> 1 = 分<br /><br /> 2 = 時間<br /><br /> 3 = 日|  
   
 ## <a name="permissions"></a>アクセス許可  

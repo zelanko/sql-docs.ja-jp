@@ -16,10 +16,10 @@ ms.assetid: df169b21-d10a-41df-b3a1-654cfb58bc21
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: da5579c52d1ffe1400e3b4c8c01210ca5856597b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124575"
 ---
 # <a name="sp_enumeratependingschemachanges-transact-sql"></a>sp_enumeratependingschemachanges (Transact-SQL)
@@ -44,19 +44,19 @@ sp_enumeratependingschemachanges [ @publication = ] 'publication'
   
 ## <a name="result-set"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**article_name**|**sysname**|スキーマ変更が適用されるアーティクルの名前、またはパブリケーション全体に適用されるスキーマ変更の場合は**パブリケーション全体**。|  
 |**schemaversion**|**int**|保留中のスキーマ変更の数。|  
 |**schematype**|**sysname**|スキーマ変更の種類を表すテキスト値。|  
 |**スキーマのスキーマ**|**nvarchar(max)**|[!INCLUDE[tsql](../../includes/tsql-md.md)]スキーマの変更について説明します。|  
 |**schemastatus**|**nvarchar (10)**|スキーマ変更がアーティクルに対して保留になっているかどうかを示します。次のいずれかの値をとります。<br /><br /> **active** = スキーマの変更は保留中です<br /><br /> **inactive** = スキーマ変更が非アクティブ<br /><br /> **skip** = スキーマの変更はレプリケートされません|  
-|**schemaguid**|**UNIQUEIDENTIFIER**|スキーマの変更を識別します。|  
+|**schemaguid**|**uniqueidentifier**|スキーマの変更を識別します。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_enumeratependingschemachanges**は、マージレプリケーションで使用します。  
   
  [sp_markpendingschemachange](../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md)と共に使用される**sp_enumeratependingschemachanges**は、マージレプリケーションのサポートを目的としており、再初期化などの他の是正措置によって状況を修正できなかった場合にのみ使用してください。  

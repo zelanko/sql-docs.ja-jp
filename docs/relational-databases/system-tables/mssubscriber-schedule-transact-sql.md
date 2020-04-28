@@ -18,10 +18,10 @@ ms.assetid: ff428306-0ef4-49a3-b536-07ccdf6e2196
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 04ad122f6fc999aa285513d41e71bfc347dbfb82
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139797"
 ---
 # <a name="mssubscriber_schedule-transact-sql"></a>MSsubscriber_schedule (Transact-sql)
@@ -32,7 +32,7 @@ ms.locfileid: "68139797"
 > [!NOTE]
 >  このシステムテーブルは非推奨とされており、以前のバージョン[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のをサポートするために保持されています。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**文書**|**sysname**|パブリッシャーの名前です。|  
 |**サブスクライバ**|**sysname**|サブスクライバーの名前です。|  
@@ -50,6 +50,6 @@ ms.locfileid: "68139797"
   
 ## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

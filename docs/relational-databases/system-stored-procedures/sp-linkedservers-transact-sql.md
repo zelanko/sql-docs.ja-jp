@@ -18,10 +18,10 @@ ms.assetid: d8f82f78-8a1f-4831-bcee-7c36c6e7dfbb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 675707453fbc79f3f9c578469ed5e78b73d2fbfa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139830"
 ---
 # <a name="sp_linkedservers-transact-sql"></a>sp_linkedservers (Transact-sql)
@@ -43,7 +43,7 @@ sp_linkedservers
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**SRV_NAME**|**sysname**|リンク サーバーの名前|  
 |**SRV_PROVIDERNAME**|**nvarchar (** 128 **)**|指定されたリンクサーバーへのアクセスを管理している OLE DB プロバイダーのフレンドリ名。|  

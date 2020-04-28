@@ -16,10 +16,10 @@ ms.assetid: 64f111fd-fb7d-4459-93f7-65f0f8dd7efe
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: eb9fdd324ba6275cd20f99a32f0a82aa112626b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68117877"
 ---
 # <a name="sp_adjustpublisheridentityrange-transact-sql"></a>sp_adjustpublisheridentityrange (Transact-SQL)
@@ -48,7 +48,7 @@ sp_adjustpublisheridentityrange [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_adjustpublisheridentityrange**は、すべての種類のレプリケーションで使用されます。  
   
  自動 ID 範囲が有効になっているパブリケーションの場合は、ディストリビューション エージェントまたはマージ エージェントが、パブリケーションのしきい値に基づいてパブリケーションの ID 範囲を自動的に調整します。 ただし、何らかの理由でディストリビューションエージェントまたはマージエージェントが一定期間実行されていない場合や、id 範囲のリソースがしきい値のポイントまで頻繁に使用されている場合、ユーザーは**sp_adjustpublisheridentityrange**を呼び出して、パブリッシャーの新しい範囲の値を割り当てることができます。  
@@ -60,6 +60,6 @@ sp_adjustpublisheridentityrange [ [ @publication = ] 'publication' ]
   
 ## <a name="see-also"></a>参照  
  [Id 列のレプリケート](../../relational-databases/replication/publish/replicate-identity-columns.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: 02b4f7c1-480a-436c-8bae-7a2488be45d2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fcc4a42307ccb11923460bb9c01c5cf7bdd8f8df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133675"
 ---
 # <a name="sp_helpntgroup-transact-sql"></a>sp_helpntgroup (Transact-SQL)
@@ -46,18 +46,18 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**NTGroupName**|**sysname**|Windows グループの名前。|  
 |**NTGroupId**|**smallint**|グループの識別子 (ID)。|  
 |**SID**|**varbinary (85)**|**Ntgroupname**のセキュリティ識別子 (SID)。|  
 |**HasDbAccess**|**int**|1 = Windows グループには、データベースにアクセスする権限があります。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  現在のデータベースの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ロールの一覧を表示するには、 **sp_helprole**を使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Public**ロールのメンバーシップが必要です。  
+ ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>例  
  次の例では、現在のデータベースへのアクセス権を持つ Windows グループの一覧を出力します。  
@@ -71,6 +71,6 @@ EXEC sp_helpntgroup;
  [sp_grantdbaccess &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
  [sp_helprole &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
  [sp_revokedbaccess &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-revokedbaccess-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

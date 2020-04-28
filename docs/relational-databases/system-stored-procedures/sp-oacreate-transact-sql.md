@@ -18,10 +18,10 @@ ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2ad8059466ac520b6f9f793af7670cbd73b96b38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68107932"
 ---
 # <a name="sp_oacreate-transact-sql"></a>sp_OACreate (Transact-sql)
@@ -40,7 +40,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
 ## <a name="arguments"></a>引数  
  *progid*  
- 作成する OLE オブジェクトのプログラム識別子 (ProgID) を示します。 この文字列は、OLE オブジェクトのクラスについて説明し、" ****_OLEComponent_" という形式になってい**ます**。_オブジェクト_**'**  
+ 作成する OLE オブジェクトのプログラム識別子 (ProgID) を示します。 この文字列は、OLE オブジェクトのクラスについて説明し、" **'**_OLEComponent_" という形式になってい**ます**。_オブジェクト_**'**  
   
  *OLEComponent*は ole オートメーションサーバーのコンポーネント名で、 *object*は ole オブジェクトの名前です。 指定された OLE オブジェクトは有効である必要があり、 **IDispatch**インターフェイスをサポートしている必要があります。  
   
@@ -77,7 +77,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
  HRESULT のリターンコードの詳細については、「 [OLE オートメーションのリターンコードとエラー情報](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  OLE オートメーションプロシージャが有効になっている場合、 **sp_OACreate**を呼び出すと、ole オートメーションの共有実行環境が開始されます。 OLE オートメーションを有効にする方法の詳細については、「 [Ole Automation Procedures サーバー構成オプション](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)」を参照してください。  
   
  作成された OLE オブジェクトは、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント バッチの最後に自動的に破棄されます。  

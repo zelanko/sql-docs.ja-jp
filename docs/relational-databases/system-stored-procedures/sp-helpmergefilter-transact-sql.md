@@ -16,10 +16,10 @@ ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5a743b03d379276e6842b72e44d346cc1356cf7a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68137688"
 ---
 # <a name="sp_helpmergefilter-transact-sql"></a>sp_helpmergefilter (Transact-SQL)
@@ -47,7 +47,7 @@ sp_helpmergefilter [ @publication= ] 'publication'
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**join_filterid**|**int**|結合フィルターの ID。|  
 |**filtername**|**sysname**|フィルターの名前。|  
@@ -64,7 +64,7 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_helpmergefilter**は、マージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -74,6 +74,6 @@ sp_helpmergefilter [ @publication= ] 'publication'
  [sp_addmergefilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
  [sp_changemergefilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
  [sp_dropmergefilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: 619716b5-95dc-4538-82ae-4b90b9da8ebc
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6fe9798b6a9f560621eba9806e25081f72e316c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122544"
 ---
 # <a name="sp_helpfilegroup-transact-sql"></a>sp_helpfilegroup (Transact-SQL)
@@ -46,7 +46,7 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**groupname**|**sysname**|ファイルグループの名前。|  
 |**groupid**|**smallint**|数値ファイル グループ識別子です。|  
@@ -54,17 +54,17 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
   
  *Name*を指定した場合は、ファイルグループ内のファイルごとに1つの行が返されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**file_in_group**|**sysname**|ファイルグループ内のファイルの論理名。|  
 |**fileid**|**smallint**|数値ファイル識別子。|  
 |**/db**|**nchar (260)**|ディレクトリパスを含むファイルの物理名。|  
-|**幅**|**nvarchar (15)**|ファイル サイズ (KB 単位) です。|  
+|**size**|**nvarchar (15)**|ファイル サイズ (KB 単位) です。|  
 |**maxsize**|**nvarchar (15)**|ファイルの最大サイズ。<br /><br /> この値は、ファイルのサイズの上限です。 このフィールドの値が UNLIMITED である場合、ディスクがいっぱいになるまでファイルを拡張できることを示します。|  
 |**成長**|**nvarchar (15)**|ファイルの拡張増分値。 これは、新しい領域が必要になるたびにファイルに追加される領域の量を示します。<br /><br /> 0 = ファイルのサイズは固定されており、容量を追加することはできません。|  
   
 ## <a name="permissions"></a>アクセス許可  
- **Public**ロールのメンバーシップが必要です。  
+ ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>例  
   
@@ -79,7 +79,7 @@ GO
 ```  
   
 ### <a name="b-returning-all-files-in-a-filegroup"></a>B. ファイルグループ内のすべてのファイルを返す  
- 次の例は、`PRIMARY` サンプル データベースの [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ファイル グループにあるすべてのファイルの情報を返します。  
+ 次の例は、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースの `PRIMARY` ファイル グループにあるすべてのファイルの情報を返します。  
   
 ```sql  
 USE AdventureWorks2012;  

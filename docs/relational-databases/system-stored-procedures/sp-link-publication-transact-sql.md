@@ -16,10 +16,10 @@ ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 17c1c2a5ccb7ef9e7c4a3d843f63edde1f134016
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139898"
 ---
 # <a name="sp_link_publication-transact-sql"></a>sp_link_publication (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68139898"
   パブリッシャーへの接続時に即時更新サブスクリプションの同期トリガーによって使用される構成およびセキュリティ情報を設定します。 このストアドプロシージャは、サブスクライバー側のサブスクリプションデータベースで実行されます。  
   
 > [!IMPORTANT]
->  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベースエンジン &#40;SQL Server 構成マネージャー&#41;への暗号化接続の有効化](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
+>  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
 > 
 > [!IMPORTANT]
 >  特定の条件下で、サブスクライバーが Service Pack 1 以降を実行[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]していて、パブリッシャーが以前のバージョンを実行している場合、このストアドプロシージャは失敗する可能性があります。 このシナリオでストアドプロシージャが失敗した場合は、パブリッシャー [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]を Service Pack 1 以降にアップグレードしてください。  
@@ -57,13 +57,13 @@ sp_link_publication [ @publisher = ] 'publisher'
   
 `[ @security_mode = ] security_mode`サブスクライバーが即時更新のためにリモートパブリッシャーに接続するために使用するセキュリティモードを示します。 *security_mode*は**int**,、これらの値のいずれかを指定できます。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**0**|で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、*ログイン*と*パスワード*として、このストアドプロシージャで指定されたログインで認証を使用します。<br /><br /> 注: 以前のバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、このオプションを使用して動的リモートプロシージャ呼び出し (RPC) を指定していました。|  
 |**1**|サブスクライバーで変更を行う[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザーのセキュリティコンテキスト (認証または Windows 認証) を使用します。<br /><br /> 注: このアカウントは、十分な特権を持つパブリッシャーにも存在する必要があります。 Windows 認証を使用する場合は、セキュリティアカウントの委任がサポートされている必要があります。|  
 |**2**|**Sp_link_publication**を使用して作成された、既存のユーザー定義のリンクサーバーログインを使用します。|  
   
-`[ @login = ] 'login'`ログインを示します。 *login*は**sysname**,、既定値は NULL です。 *Security_mode*が**0**の場合は、このパラメーターを指定する必要があります。  
+`[ @login = ] 'login'`ログインを示します。 *login* のデータ型は **sysname** で、既定値は NULL です。 *Security_mode*が**0**の場合は、このパラメーターを指定する必要があります。  
   
 `[ @password = ] 'password'`パスワードを入力します。 *パスワード*は**sysname**,、既定値は NULL です。 *Security_mode*が**0**の場合は、このパラメーターを指定する必要があります。  
   
@@ -72,7 +72,7 @@ sp_link_publication [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_link_publication**は、トランザクションレプリケーションで即時更新サブスクリプションによって使用されます。  
   
  **sp_link_publication**は、プッシュサブスクリプションとプルサブスクリプションの両方に使用できます。 サブスクリプションが作成される前または後に呼び出すことができます。 [MSsubscription_properties &#40;transact-sql&#41;](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md)システムテーブルにエントリが挿入または更新されます。  
@@ -91,6 +91,6 @@ sp_link_publication [ @publisher = ] 'publisher'
  [sp_droppullsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
  [sp_helpsubscription_properties &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)   
  [sp_subscription_cleanup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9841e7815f31af26aeeb3ed0f4783d3a36d83030
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124082"
 ---
 # <a name="sp_get_query_template-transact-sql"></a>sp_get_query_template (Transact-sql)
@@ -51,7 +51,7 @@ sp_get_query_template
  @parameters  
  は、に@templatetextよってパラメーター化されたパラメーター名とデータ型の文字列リテラルを受け取る、 **nvarchar (max)** 型の出力パラメーターです。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  sp_get_query_template は、以下のことが発生した場合にエラーを返します。  
   
 -   *Query_text*の定数リテラル値をパラメーター化しません。  
@@ -63,7 +63,7 @@ sp_get_query_template
 ## <a name="permissions"></a>アクセス許可  
  public データベース ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、2 つの定数リテラル値が含まれたパラメーター化形式のクエリが返されます。  
   
 ```  

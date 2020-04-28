@@ -20,16 +20,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d46e178fc1872a84bb573f16629803c59f2fb6c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122509"
 ---
 # <a name="sp_helplanguage-transact-sql"></a>sp_helplanguage (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] での特定の代替言語、またはすべての言語に関する情報を報告します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -49,22 +48,22 @@ sp_helplanguage [ [ @language = ] 'language' ]
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**langid**|**smallint**|言語 ID 番号です。|  
-|**dateformat**|**nchar (3)**|日付の形式。|  
+|**dateformat**|**nchar(3)**|日付の形式。|  
 |**datefirst**|**tinyint**|週の最初の曜日: 1 の場合は1、火曜日の場合は2、日曜日の場合は7です。|  
 |**増設**|**int**|この言語を使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の最新アップグレード バージョンです。|  
 |**name**|**sysname**|言語名。|  
-|**エイリアス**|**sysname**|言語の別名です。|  
-|**前月**|**nvarchar (372)**|月の名前。|  
-|**shortmonths**|**nvarchar (132)**|短い月の名前。|  
-|**日時**|**nvarchar (217)**|曜日名。|  
+|**alias**|**sysname**|言語の別名です。|  
+|**months**|**nvarchar(372)**|月の名前。|  
+|**shortmonths**|**nvarchar(132)**|短い月の名前。|  
+|**days**|**nvarchar(217)**|曜日名。|  
 |**lcid**|**int**|この言語を使用する  Windows のロケール ID。|  
 |**msglangid**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メッセージグループ ID。|  
   
 ## <a name="permissions"></a>アクセス許可  
- **Public**ロールのメンバーシップが必要です。  
+ ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>例  
   
@@ -84,8 +83,8 @@ sp_helplanguage;
   
 ## <a name="see-also"></a>参照  
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [@@LANGUAGE &#40;transact-sql&#41;](../../t-sql/functions/language-transact-sql.md)   
+ [@@LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/functions/language-transact-sql.md)   
  [SET LANGUAGE &#40;Transact-sql&#41;](../../t-sql/statements/set-language-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: f8413a44-8fcc-4899-84f2-b4afe0f8ec08
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6bd1622e898d6554d5eb9fbc66fae729f5a8e973
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68130478"
 ---
 # <a name="sysdbmaintplan_databases-transact-sql"></a>sysdbmaintplan_databases (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68130478"
   
  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**plan_id**|**一意**|メンテナンスプラン ID。|  
 |**database_name**|**sysname**|データベースメンテナンスプランに関連付けられているデータベースの名前。|  

@@ -19,10 +19,10 @@ ms.author: vanto
 author: VanMSFT
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7123c1bd3fee61a3d0671a0d8fbe27c2943ba7ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124847"
 ---
 # <a name="sp_droprolemember-transact-sql"></a>sp_droprolemember (Transact-SQL)
@@ -60,7 +60,7 @@ sp_droprolemember 'role' ,
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  sp_droprolemember は、sysmembers テーブルから行を削除することにより、データベース ロールからメンバーを削除します。 メンバーがロールから削除されると、メンバーはそのロールのメンバーシップによって与えられた権限を失います。  
   
  ユーザーを固定サーバー ロールから削除するには、sp_dropsrvrolemember を使用します。 public ロールからユーザーを削除することはできません。また、どのロールからも dbo は削除できません。  
@@ -70,14 +70,14 @@ sp_droprolemember 'role' ,
 ## <a name="permissions"></a>アクセス許可  
  ロールに対する ALTER 権限が必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、ロール `JonB` からユーザー `Sales` を削除します。  
   
 ```sql
 EXEC sp_droprolemember 'Sales', 'Jonb';  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、ロール `JonB` からユーザー `Sales` を削除します。  
   
 ```sql
@@ -90,7 +90,7 @@ EXEC sp_droprolemember 'Sales', 'JonB'
  [sp_droprole &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)   
  [sp_dropsrvrolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
  [sp_helpuser &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
 

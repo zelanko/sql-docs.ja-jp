@@ -19,10 +19,10 @@ ms.assetid: 6f2d552d-bfd7-47a5-8dcb-05560aa1a32d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cd9c138cd574e22d1ce658c4749f2a61c34d8e73
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108075"
 ---
 # <a name="sp_dbmmonitordropmonitoring-transact-sql"></a>sp_dbmmonitordropmonitoring (Transact-sql)
@@ -40,19 +40,18 @@ sp_dbmmonitordropmonitoring
 ```  
   
 ## <a name="arguments"></a>引数  
- なし  
+ None  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- なし  
+ None  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ None  
   
 ## <a name="permissions"></a>アクセス許可  
- 
-  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
+ **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、サーバーインスタンス上のすべてのミラー化されたデータベースについて、データベースミラーリングの監視を削除します。  
   
 ```  
@@ -64,6 +63,6 @@ EXEC sp_dbmmonitordropmonitoring ;
  [sp_dbmmonitorchangemonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
  [sp_dbmmonitoraddmonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)   
  [sp_dbmmonitorhelpmonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   
- [sp_dbmmonitorresults &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)  
+ [sp_dbmmonitorresults &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)  
   
   

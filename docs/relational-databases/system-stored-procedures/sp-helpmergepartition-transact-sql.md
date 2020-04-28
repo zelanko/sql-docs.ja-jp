@@ -16,10 +16,10 @@ ms.assetid: 184188cc-f519-445d-97ce-aae38f1eb550
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 01155b1fb294660c92bfa975bc04de8f748b730f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68137660"
 ---
 # <a name="sp_helpmergepartition-transact-sql"></a>sp_helpmergepartition (Transact-sql)
@@ -53,19 +53,19 @@ sp_helpmergepartition [ @publication= ] 'publication'
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**partition**|**int**|サブスクライバーパーティションを識別します。|  
 |**host_name**|**sysname**|サブスクライバー側の[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)関数の値によってフィルター処理されるサブスクリプションのパーティションを作成するときに使用される値です。|  
 |**suser_sname**|**sysname**|サブスクライバー側の[SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md)関数の値によってフィルター処理されるサブスクリプションのパーティションを作成するときに使用される値です。|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|サブスクライバーのパーティションに対してフィルター選択されたデータスナップショットの場所です。|  
-|**date_refreshed**|**DATETIME**|前回スナップショット ジョブが実行され、パーティションのフィルター選択されたデータ スナップショットが生成された日付です。|  
-|**dynamic_snapshot_jobid**|**UNIQUEIDENTIFIER**|パーティションのフィルター選択されたデータスナップショットを作成するジョブを識別します。|  
+|**date_refreshed**|**datetime**|前回スナップショット ジョブが実行され、パーティションのフィルター選択されたデータ スナップショットが生成された日付です。|  
+|**dynamic_snapshot_jobid**|**uniqueidentifier**|パーティションのフィルター選択されたデータスナップショットを作成するジョブを識別します。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_helpmergepartition**は、マージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  

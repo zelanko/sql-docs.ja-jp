@@ -20,10 +20,10 @@ ms.assetid: be7d8a59-3c00-4f1b-b4b0-3dcd5572e002
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c226b3c5daef98c9a34c7ac25934a94abc8baabc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133000"
 ---
 # <a name="sysserver_trigger_events-transact-sql"></a>sys.server_trigger_events (Transact-SQL)
@@ -31,14 +31,14 @@ ms.locfileid: "68133000"
 
   サーバー レベル (同期) トリガーが起動されるイベントごとに 1 行のデータを格納します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**継承された列**||[Server_events](../../relational-databases/system-catalog-views/sys-server-events-transact-sql.md)からすべての列を継承します。|  
 |**is_first**|**bit**|トリガーは、このイベントに対して最初に起動するようにマークされています。|  
 |**is_last**|**bit**|トリガーは、このイベントに対して最後に起動されるようにマークされています。|  
   
 ## <a name="permissions"></a>アクセス許可  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   

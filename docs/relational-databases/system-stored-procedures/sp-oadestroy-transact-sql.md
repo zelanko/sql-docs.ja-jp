@@ -18,10 +18,10 @@ ms.assetid: 0bd1cff4-ceff-4095-9ae4-e1e65a80f5d6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 98907614a132cfafd297e48f0ef625bc8eb4155d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68107903"
 ---
 # <a name="sp_oadestroy-transact-sql"></a>sp_OADestroy (Transact-SQL)
@@ -47,13 +47,13 @@ sp_OADestroy objecttoken
   
  HRESULT のリターンコードの詳細については、「 [OLE オートメーションのリターンコードとエラー情報](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Sp_OADestroy**が呼び出されていない場合、作成された OLE オブジェクトはバッチの最後に自動的に破棄されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sysadmin**固定サーバーロールのメンバーシップ、またはこのストアドプロシージャに対して直接実行権限が必要です。 `Ole Automation Procedures`OLE オートメーションに関連するシステムプロシージャを使用するには、構成を**有効**にする必要があります。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、以前に作成した**SQLServer**オブジェクトを破棄します。  
   
 ```  

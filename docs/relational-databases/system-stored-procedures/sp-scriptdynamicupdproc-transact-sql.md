@@ -16,10 +16,10 @@ ms.assetid: b4c18863-ed92-4aa2-a04f-7ed832fc9e07
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 67ba388871720ff804063f27a378b838d300baf0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68126389"
 ---
 # <a name="sp_scriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc (Transact-sql)
@@ -42,13 +42,13 @@ sp_scriptdynamicupdproc [ @artid =] artid
 ## <a name="result-sets"></a>結果セット  
  1つの**nvarchar (4000)** 列で構成される結果セットを返します。 結果セットは、カスタムストアドプロシージャの作成に使用される CREATE PROCEDURE ステートメント全体を形成します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_scriptdynamicupdproc**は、トランザクションレプリケーションで使用します。 既定の MCALL スクリプト作成ロジックでは、UPDATE ステートメント内のすべての列を対象に、ビットマップを使用して、変更された列が特定されます。 列が変更されていない場合は、列がそれ自体に戻されます。この場合、通常は問題は発生しません。 列にインデックスが作成されている場合、追加の処理が発生します。 動的なアプローチには、変更された列のみが含まれます。これにより、最適な更新文字列が提供されます。 ただし、動的更新ステートメントがビルドされると、実行時に余分な処理が発生します。 動的な方法と静的な方法の両方をテストし、最適な方を選択することをお勧めします。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_scriptdynamicupdproc**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、 **pubs**データベースの**authors**テーブルで ( *artid*が**1**に設定された) アーティクルを作成し、UPDATE ステートメントが実行するカスタムプロシージャであることを指定します。  
   
 ```  
@@ -123,6 +123,6 @@ if @@rowcount = 0
  このストアド プロシージャを実行した後、結果のスクリプトを使用して、サブスクライバー側で手動でストアド プロシージャを作成できます。  
   
 ## <a name="see-also"></a>参照  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

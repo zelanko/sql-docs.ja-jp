@@ -18,10 +18,10 @@ ms.assetid: dbc1737f-261e-4017-b9cd-703b9fc4ac78
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8518c787f876152787ee30a20b9f25f936b9fa86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139777"
 ---
 # <a name="mssubscription_articles-transact-sql"></a>MSsubscription_articles (Transact-sql)
@@ -29,7 +29,7 @@ ms.locfileid: "68139777"
 
   **MSsubscription_articles**テーブルには、キューに登録されたサブスクリプション内のアーティクルに関する情報が含まれています。 このテーブルは、レプリケーションの種類がキュー更新の場合と、フェールオーバーとしてキュー更新を行う即時更新の場合にのみ設定されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**int**|アーティクルを処理するエージェントの ID|  
 |**artid**|**int**|**Sysarticles**テーブルのアーティクル ID です。|  
@@ -40,6 +40,6 @@ ms.locfileid: "68139777"
   
 ## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

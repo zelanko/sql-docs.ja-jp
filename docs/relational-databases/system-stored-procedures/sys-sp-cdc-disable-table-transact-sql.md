@@ -22,10 +22,10 @@ ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 693c449679433b733cfc3a45e2bbedf3f1d92185
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106509"
 ---
 # <a name="syssp_cdc_disable_table-transact-sql"></a>sp_cdc_disable_table (Transact-sql)
@@ -62,15 +62,15 @@ sys.sp_cdc_disable_table
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ None  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  指定したソーステーブルおよびキャプチャインスタンスに関連付けられている変更データキャプチャの変更テーブルとシステム関数を削除するには、sp_cdc_disable_table によって削除され**ます。** このメソッドは、指定されたキャプチャインスタンスに関連付けられているすべての行を変更データキャプチャのシステムテーブルから削除し、テーブルのエントリの**is_tracked_by_cdc**列を、[テーブルカタログビュー](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)を0に設定します。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Db_owner**固定データベースロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、 `HumanResources.Employee`テーブルの変更データキャプチャを無効にします。  
   
 ```  

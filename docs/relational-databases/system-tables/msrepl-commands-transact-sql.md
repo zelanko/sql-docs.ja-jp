@@ -18,10 +18,10 @@ ms.assetid: 53b9f9cd-9429-47a0-aba2-908fc60e7036
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c02a0201483617966d7d1c8aadfbad4ab39971e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68127432"
 ---
 # <a name="msrepl_commands-transact-sql"></a>MSrepl_commands (Transact-sql)
@@ -29,7 +29,7 @@ ms.locfileid: "68127432"
 
   **MSrepl_commands**テーブルには、レプリケートされたコマンドの行が含まれています。 このテーブルは、ディストリビューションデータベースに格納されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**publisher_database_id**|**int**|パブリッシャーデータベースの ID。|  
 |**xact_seqno**|**varbinary(16)**|トランザクションのシーケンス番号。|  
@@ -45,6 +45,6 @@ ms.locfileid: "68127432"
 ## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_replcmds &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)  
+ [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)  
   
   

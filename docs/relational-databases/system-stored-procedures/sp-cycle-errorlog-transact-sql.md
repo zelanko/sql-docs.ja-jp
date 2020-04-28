@@ -18,10 +18,10 @@ ms.assetid: 61a12cbf-78a3-4052-8604-3b29d07573fd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c15a36678bf0bd1ff5fc933eb79bff96b6780b60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108345"
 ---
 # <a name="sp_cycle_errorlog-transact-sql"></a>sp_cycle_errorlog (Transact-SQL)
@@ -42,15 +42,15 @@ sp_cycle_errorlog
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ None  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が開始されるたびに、現在のエラーログの名前が "エラーログ" に変更され**ます。 1**;**エラーログ 1**は**エラーログ**になります。2、**エラーログ**2 は**エラーログ 3**になります。 **sp_cycle_errorlog**を使用すると、サーバーを停止して起動しなくてもエラーログファイルを循環することができます。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_cycle_errorlog**の実行権限は、 **sysadmin**固定サーバーロールのメンバーに制限されています。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログを使い回します。  
   
 ```  

@@ -18,10 +18,10 @@ ms.assetid: 240eeeb9-6d8b-4930-b912-1d273ca0ab38
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6efc0b620dcec300b5342ea5a0f63358fcdfadc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68107880"
 ---
 # <a name="sp_oagetproperty-transact-sql"></a>sp_OAGetProperty (Transact-SQL)
@@ -58,7 +58,7 @@ sp_OAGetProperty objecttoken , propertyname
   
  *Propertyvalue*が指定されていても、プロパティが値を返さない場合は、エラーが発生します。 プロパティが3次元以上の配列を返す場合、エラーが発生します。  
   
- *インデックス*  
+ *index*  
  はインデックスパラメーターです。 指定する場合、*インデックス*は、適切なデータ型の値である必要があります。  
   
  一部のプロパティにはパラメーターがあります。 これらのプロパティはインデックス付きプロパティと呼ばれ、パラメーターはインデックスパラメーターと呼ばれます。 プロパティは、複数のインデックスパラメーターを持つことができます。  
@@ -82,16 +82,16 @@ sp_OAGetProperty objecttoken , propertyname
   
  列内のすべてのデータ値が同じデータ型を共有する場合は、そのデータ型を列全体で使用します。 列のデータ値のデータ型が異なる場合、列全体のデータ型が次のグラフに基づいて選択されます。  
   
-||INT|float|money|DATETIME|varchar|nvarchar|  
+||int|float|money|DATETIME|varchar|nvarchar|  
 |------|---------|-----------|-----------|--------------|-------------|--------------|  
 |**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**money**|**money**|**money**|**money**|**varchar**|**varchar**|**nvarchar**|  
-|**DATETIME**|**varchar**|**varchar**|**varchar**|**DATETIME**|**varchar**|**nvarchar**|  
+|**datetime**|**varchar**|**varchar**|**varchar**|**datetime**|**varchar**|**nvarchar**|  
 |**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**nvarchar**|  
 |**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  また、 **sp_OAMethod**を使用してプロパティ値を取得することもできます。  
   
 ## <a name="permissions"></a>アクセス許可  

@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e20bd7ecc783e0449a1deaa21c9f3db6e07abbc7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122670"
 ---
 # <a name="sysindex_columns-transact-sql"></a>sys.index_columns (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68122670"
 
   **Sys**インデックスまたは順序なしテーブル (ヒープ) の一部である列ごとに1行の値を格納します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|インデックスが定義されているオブジェクトの ID。|  
 |**index_id**|**int**|列が定義されているインデックスの ID です。|  
@@ -46,9 +46,9 @@ ms.locfileid: "68122670"
   
 ## <a name="permissions"></a>アクセス許可
 
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="examples"></a>例
+## <a name="examples"></a>使用例
 
  次の例では、`Production.BillOfMaterials` テーブルのすべてのインデックスおよびインデックス列を返します。  
   
@@ -85,7 +85,7 @@ IX_BillOfMaterials_UnitMeasureCode                         UnitMeasureCode    1 
   
 ## <a name="see-also"></a>参照  
  [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [SQL&#41;&#40;Transact-sql のインデックス](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   

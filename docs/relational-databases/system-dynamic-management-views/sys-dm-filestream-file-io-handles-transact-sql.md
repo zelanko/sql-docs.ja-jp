@@ -19,10 +19,10 @@ ms.assetid: e59632f4-3292-419f-9217-ca375749f1a5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a96bcedaa3922ebb0691ac949f9eb15ed28336b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68103301"
 ---
 # <a name="sysdm_filestream_file_io_handles-transact-sql"></a>dm_filestream_file_io_handles (Transact-sql)
@@ -30,7 +30,7 @@ ms.locfileid: "68103301"
 
   名前空間の所有者 (NSO) が認識しているファイルハンドルを表示します。 **Opensqlfilestream**を使用してクライアントが受け取った Filestream ハンドルは、このビューに表示されます。  
   
-|列|種類|[説明]|  
+|列|Type|説明|  
 |------------|----------|-----------------|  
 |**handle_context_address**|**varbinary (8)**|クライアントのハンドルに関連付けられた内部 NSO 構造体のアドレスを表示します。 NULL 値が許可されます。|  
 |**creation_request_id**|**int**|このハンドルの作成に使用された REQ_PRE_CREATE i/o 要求のフィールドを表示します。 NULL 値は許可されません。|  
@@ -39,7 +39,7 @@ ms.locfileid: "68103301"
 |**creation_client_thread_id**|**varbinary (8)**|このハンドルの作成に使用された REQ_PRE_CREATE i/o 要求のフィールドを表示します。 NULL 値が許可されます。|  
 |**creation_client_process_id**|**varbinary (8)**|このハンドルの作成に使用された REQ_PRE_CREATE i/o 要求のフィールドを表示します。 NULL 値が許可されます。|  
 |**filestream_transaction_id**|**varbinary (128)**|特定のハンドルに関連付けられているトランザクションの ID を示します。 これは、 **get_filestream_transaction_context**関数によって返される値です。 このフィールドを使用して、 **dm_filestream_file_io_requests**ビューに結合します。 NULL 値が許可されます。|  
-|**access_type**|**nvarchar (60)**|NULL 値は許可されません。|  
+|**access_type**|**nvarchar(60)**|NULL 値は許可されません。|  
 |**logical_path**|**nvarchar(256)**|このハンドルによって開かれたファイルの論理パス名を示します。 これは、によって返されるパス名と同じ**です。** **Varbinary**(**Max**) filestream の PathName メソッド。 NULL 値が許可されます。|  
 |**physical_path**|**nvarchar(256)**|ファイルの実際の NTFS パス名を示します。 これは、によって返されるパス名と同じ**です。** **Varbinary**(**Max**) filestream の physicalpathname メソッド。 トレースフラグ5556によって有効にされます。 NULL 値が許可されます。|  
   

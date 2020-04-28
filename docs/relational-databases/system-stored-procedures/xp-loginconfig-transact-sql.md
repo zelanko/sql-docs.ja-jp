@@ -18,10 +18,10 @@ ms.assetid: d380e799-2857-408a-bcbf-5e73a8e6aa5a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 7abf136187b4f45a03cebc92fd23ee544dddb117
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68116686"
 ---
 # <a name="xp_loginconfig-transact-sql"></a>xp_loginconfig (Transact-sql)
@@ -45,11 +45,11 @@ xp_loginconfig ['config_name']
  **'** *config_name* **'**  
  表示する構成値を指定します。 *Config_name*が指定されていない場合は、すべての構成値が報告されます。 *config_name*は**sysname**で、既定値は NULL です。次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**login mode**|ログインセキュリティモード。 使用できる値は、 **Mixed**と**Windows 認証**です。<br /><br /> 置換後の方法:<br /><br /> `SELECT SERVERPROPERTY('IsIntegratedSecurityOnly'); GO`|  
 |**default login**|信頼関係接続が許可されているユーザー (ログイン名が照合されないユーザー) に対する、既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン ID の名前。 既定のログインは**guest**です。 この値は、旧バージョンとの互換性のために用意されています。|  
-|**既定のドメイン**|信頼関係接続のネットワークユーザーの既定の Windows ドメインの名前。 既定のドメインは、Windows および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているコンピューターのドメインです。 この値は、旧バージョンとの互換性のために用意されています。|  
+|**[既定のドメイン]**|信頼関係接続のネットワークユーザーの既定の Windows ドメインの名前。 既定のドメインは、Windows および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているコンピューターのドメインです。 この値は、旧バージョンとの互換性のために用意されています。|  
 |**監査レベル**|監査レベル。 指定できる値は、 **none**、 **success**、 **failure**、および**all**です。 監査はエラー ログや Windows イベント ビューアーに書き込まれます。|  
 |**set hostname**|クライアントのログイン レコードのホスト名が、Windows ネットワーク ユーザー名と置き換えられるかどうかを示します。 指定できる値は、 **true**または**false**です。 これが設定されている場合、ネットワークユーザー名は**sp_who**の出力に表示されます。|  
 |**付け**|有効[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]なアンダースコア文字 (_) にマップされている特殊な Windows 文字を報告します。 指定できる値は、**ドメイン区切り記号**(既定値)、**スペース**、 **null**、または任意の1文字です。 この値は、旧バージョンとの互換性のために用意されています。|  
@@ -61,12 +61,12 @@ xp_loginconfig ['config_name']
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|構成値。|  
 |**config value**|**sysname**|構成値の設定|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **xp_loginconfig**を使用して構成値を設定することはできません。  
   
  ログインモードと監査レベルを設定するには[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、を使用します。  

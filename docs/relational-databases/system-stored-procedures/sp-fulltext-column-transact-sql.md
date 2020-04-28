@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9e17a87a04c8c4286a66c6e7a0746f2d7de48d72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124338"
 ---
 # <a name="sp_fulltext_column-transact-sql"></a>sp_fulltext_column (Transact-sql)
@@ -56,9 +56,9 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
   
 `[ @action = ] 'action'`実行するアクションを指定します。 *アクション*は**varchar (20)**,、既定値はありません、次の値のいずれかを指定することができます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|**アドイン**|テーブルの非アクティブなフルテキストインデックスに*qualified_table_name*の*column_name*を追加します。 この操作により、列でフルテキストインデックスを作成できるようになります。|  
+|**add**|テーブルの非アクティブなフルテキストインデックスに*qualified_table_name*の*column_name*を追加します。 この操作により、列でフルテキストインデックスを作成できるようになります。|  
 |**」**|テーブルの非アクティブなフルテキストインデックスから*qualified_table_name*の*column_name*を削除します。|  
   
 `[ @language = ] 'language_term'`列に格納されているデータの言語を示します。 に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]含まれる言語の一覧については、「 [fulltext_languages &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)」を参照してください。  
@@ -72,9 +72,9 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ None  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  フルテキストインデックスがアクティブな場合、実行中の作成は停止されます。 また、アクティブなフルテキスト インデックスを持つテーブルで変更の追跡が有効になっている場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では現在のインデックスが維持されます。 たとえば [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、あるテーブルに対して現在行われているインデックス作成がすべて停止され、既存のインデックスの削除、および新しいインデックスの作成が開始されます。  
   
  変更の追跡がオンになっていて、インデックスを保持しながら列をフルテキストインデックスから追加または削除する必要がある場合は、テーブルを非アクティブ化し、必要な列を追加または削除する必要があります。 この操作では、インデックスは変化しません。 作成を開始することが実用的な場合は、テーブルを後でアクティブにすることができます。  
@@ -82,7 +82,7 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 ## <a name="permissions"></a>アクセス許可  
  ユーザーは、 **db_ddladmin**固定データベースロールのメンバーであるか、 **db_owner**固定データベースロールのメンバーであるか、テーブルの所有者である必要があります。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、`DocumentSummary` テーブルの `Document` 列を、テーブルのフルテキスト インデックスに追加します。  
   
 ```  

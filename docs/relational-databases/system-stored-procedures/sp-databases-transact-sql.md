@@ -18,10 +18,10 @@ ms.assetid: 2a83b92a-9ecc-43c4-8ff4-e91e3a940b5a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c338fb8057c2d58727f18e0bb69e2fa825e71559
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108332"
 ---
 # <a name="sp_databases-transact-sql"></a>sp_databases (Transact-sql)
@@ -39,17 +39,17 @@ sp_databases
 ```  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- なし  
+ None  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**DATABASE_NAME**|**sysname**|データベースの名前。 では[!INCLUDE[ssDE](../../includes/ssde-md.md)]、この列は、データベース名を表します。この名前は、**データベースカタログビュー**に格納されています。|  
+|**DATABASE_NAME**|**sysname**|データベースの名前です。 では[!INCLUDE[ssDE](../../includes/ssde-md.md)]、この列は、データベース名を表します。この名前は、**データベースカタログビュー**に格納されています。|  
 |**DATABASE_SIZE**|**int**|データベースのサイズ (kb 単位)。|  
-|**」**|**varchar (254)**|では[!INCLUDE[ssDE](../../includes/ssde-md.md)]、このフィールドは常に NULL を返します。|  
+|**備考**|**varchar (254)**|では[!INCLUDE[ssDE](../../includes/ssde-md.md)]、このフィールドは常に NULL を返します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  返されるデータベース名は、現在のデータベース状況を変更するために USE ステートメントでパラメーターとして使えます。  
   
  **sp_databases**には OPEN DATABASE CONNECTIVITY (ODBC) に相当するものはありません。  
@@ -57,7 +57,7 @@ sp_databases
 ## <a name="permissions"></a>アクセス許可  
  CREATE DATABASE、ALTER ANY DATABASE、または VIEW ANY DEFINITION 権限が必要です。また、データベースへのアクセス権限が必要です。 VIEW ANY DEFINITION 権限を拒否することはできません。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では`sp_databases`、を実行しています。  
   
 ```sql  
@@ -67,7 +67,7 @@ EXEC sp_databases;
 ```  
   
 ## <a name="see-also"></a>参照  
- [データベース &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
+ [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [HAS_DBACCESS &#40;Transact-sql&#41;](../../t-sql/functions/has-dbaccess-transact-sql.md)  
   
   

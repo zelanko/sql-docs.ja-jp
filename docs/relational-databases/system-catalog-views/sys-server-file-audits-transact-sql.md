@@ -20,10 +20,10 @@ ms.assetid: 553288a0-be57-4d79-ae53-b7cbd065e127
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7b3ed8e08d333c4aed2576154c645a0050ebf4df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133130"
 ---
 # <a name="sysserver_file_audits-transact-sql"></a>server_file_audits (Transact-sql)
@@ -31,18 +31,18 @@ ms.locfileid: "68133130"
 
   サーバーインスタンス上の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]監査に含まれるファイル監査の種類に関する拡張情報を格納します。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |audit_id|**int**|監査の ID。|  
 |name|**sysname**|監査の名前。|  
-|audit_guid|**UNIQUEIDENTIFIER**|監査の GUID。|  
-|create_date|**DATETIME**|ファイル監査が作成された UTC 日付。|  
+|audit_guid|**uniqueidentifier**|監査の GUID。|  
+|create_date|**datetime**|ファイル監査が作成された UTC 日付。|  
 |modify_date|**datatime**|ファイル監査が最後に変更された UTC 日付。|  
 |principal_id|**int**|サーバーに登録されている監査の所有者の ID。|  
-|型|**char (2)**|監査の種類。<br /><br /> 0 = NT セキュリティ イベント ログ<br /><br /> 1 = NT アプリケーションイベントログ<br /><br /> 2 = ファイル システムのファイル|  
-|type_desc|**nvarchar (60)**|監査の種類の説明。|  
+|type|**char(2)**|監査の種類。<br /><br /> 0 = NT セキュリティ イベント ログ<br /><br /> 1 = NT アプリケーションイベントログ<br /><br /> 2 = ファイル システムのファイル|  
+|type_desc|**nvarchar(60)**|監査の種類の説明。|  
 |on_failure|**tinyint**|エラー状態時:<br /><br /> 0 = 続行<br /><br /> 1 = サーバー インスタンスのシャットダウン<br /><br /> 2 = 失敗の操作|  
-|on_failure_desc|**nvarchar (60)**|アクションエントリの書き込みに失敗した場合:<br /><br /> CONTINUE<br /><br /> サーバーインスタンスのシャットダウン<br /><br /> 失敗した操作|  
+|on_failure_desc|**nvarchar(60)**|アクションエントリの書き込みに失敗した場合:<br /><br /> CONTINUE<br /><br /> サーバーインスタンスのシャットダウン<br /><br /> 失敗した操作|  
 |is_state_enabled|**tinyint**|0 = 無効<br /><br /> 1 = 有効|  
 |queue_delay|**int**|ディスクに書き込む前に待機する最大時間をミリ秒単位で提示します。 0 の場合は、イベントが続行する前に必ず書き込みが行われます。|  
 |predicate|**nvarchar (8000)**|イベントに適用される述語式。|  
@@ -50,13 +50,13 @@ ms.locfileid: "68133130"
 |max_rollover_files|**int**|ロールオーバーオプションと共に使用するファイルの最大数。|  
 |max_files|**int**|ロールオーバーオプションを指定せずに使用するファイルの最大数。|  
 |reserved_disk_space|**int**|ファイルごとに予約するディスク領域のサイズ。|  
-|log_file_path|**nvarchar (260)**|監査が配置される場所のパス。 ファイル監査のファイルパス、アプリケーションログ監査のアプリケーションログパス。|  
-|log_file_name|**nvarchar (260)**|CREATE AUDIT DDL で提供されるログ ファイルの基本名。 base_log_name ファイルにサフィックスとして連番が付加されて、ログ ファイル名が作成されます。|  
+|log_file_path|**nvarchar(260)**|監査が配置される場所のパス。 ファイル監査のファイルパス、アプリケーションログ監査のアプリケーションログパス。|  
+|log_file_name|**nvarchar(260)**|CREATE AUDIT DDL で提供されるログ ファイルの基本名。 base_log_name ファイルにサフィックスとして連番が付加されて、ログ ファイル名が作成されます。|  
   
 ## <a name="permissions"></a>アクセス許可  
  **ALTER ANY SERVER AUDIT**または**VIEW any DEFINITION**権限を持つプリンシパルは、このカタログビューにアクセスできます。 また、プリンシパルに**対して VIEW ANY DEFINITION**権限を拒否することはできません。  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [CREATE SERVER AUDIT &#40;Transact-sql&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   

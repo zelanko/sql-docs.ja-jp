@@ -24,10 +24,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 295d924422410bbf247d9b96d27b705fdfe3b5d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133817"
 ---
 # <a name="sysfulltext_index_fragments-transact-sql"></a>fulltext_index_fragments (Transact-sql)
@@ -36,7 +36,7 @@ ms.locfileid: "68133817"
   フルテキストインデックスでは、*フルテキストインデックスフラグメント*と呼ばれる内部テーブルを使用して、逆インデックスデータを格納します。 このビューを使用すると、これらのフラグメントに関するメタデータをクエリできます。 このビューは、フルテキスト インデックスが含まれているすべてのテーブルのフルテキスト インデックス フラグメントごとに 1 行のデータを格納しています。  
  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |table_id|**int**|フルテキスト インデックス フラグメントが含まれているテーブルのオブジェクト ID。|  
 |fragment_object_id|**int**|フラグメントに関連付けられている内部テーブルのオブジェクト ID。|  
@@ -46,7 +46,7 @@ ms.locfileid: "68133817"
 |row_count|**int**|フラグメント内の個々の行の数。|  
 |status|**int**|フラグメントの状態。次のいずれかになります。<br /><br /> 0 = 新たに作成され、まだ使用されていません。<br /><br /> 1 = フルテキストインデックスの作成時またはマージ時に挿入に使用される<br /><br /> 4 = 閉じています。 クエリの準備完了<br /><br /> 6 = マージ入力のために使用されています。クエリを実行できます。<br /><br /> 8 = 削除用にマークされています。 クエリおよびマージソースには使用されません。<br /><br /> 状態が4または6の場合、フラグメントは論理フルテキストインデックスの一部であるため、クエリを実行できます。つまり、*クエリ*可能なフラグメントです。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  sys.fulltext_index_fragments カタログ ビューを使用すると、フルテキスト インデックスを構成するフラグメントの数を照会できます。 フルテキスト クエリのパフォーマンスに問題がある場合は、次のように、sys.fulltext_index_fragments を使用してフルテキスト インデックス内のクエリ可能なフラグメント (状態が 4 または 6 のフラグメント) の数を照会します。  
   
 ```  

@@ -18,10 +18,10 @@ ms.assetid: bc65cd70-6ef2-4c17-be11-877ecf4efe50
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f780199361d9e5741187dd4e5346abb2df98b9cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68130441"
 ---
 # <a name="sysdbmaintplan_jobs-transact-sql"></a>sysdbmaintplan_jobs (Transact-sql)
@@ -33,9 +33,9 @@ ms.locfileid: "68130441"
   
 
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**plan_id**|**UNIQUEIDENTIFIER**|データベースメンテナンスプランの ID。|  
-|**job_id**|**UNIQUEIDENTIFIER**|データベースメンテナンスプランに関連付けられているジョブの ID。|  
+|**plan_id**|**uniqueidentifier**|データベースメンテナンスプランの ID。|  
+|**job_id**|**uniqueidentifier**|データベースメンテナンスプランに関連付けられているジョブの ID。|  
   
   

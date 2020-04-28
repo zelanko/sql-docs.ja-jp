@@ -20,10 +20,10 @@ ms.assetid: c2c4a000-1127-46a8-b1e9-947fd1136e1e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0a00f6843a0ef379c12aa1d1d00df9380efbd139
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68125003"
 ---
 # <a name="sysserver_audits-transact-sql"></a>server_audits (Transact-sql)
@@ -31,26 +31,26 @@ ms.locfileid: "68125003"
 
   サーバー インスタンス内の各 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 監査について行を 1 つずつ含みます。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**audit_id**|**int**|監査の ID。|  
 |**name**|**sysname**|監査の名前。|  
-|**audit_guid**|**UNIQUEIDENTIFIER**|サーバーの起動時およびデータベースのアタッチ操作中に、メンバーサーバー&#124;データベース監査の仕様による監査を列挙するために使用される監査の GUID。|  
-|**create_date**|**DATETIME**|監査が作成された UTC 日付。|  
-|**modify_date**|**DATETIME**|監査が最後に変更された UTC 日付。|  
+|**audit_guid**|**uniqueidentifier**|サーバーの起動時およびデータベースのアタッチ操作中に、メンバーサーバー&#124;データベース監査の仕様による監査を列挙するために使用される監査の GUID。|  
+|**create_date**|**datetime**|監査が作成された UTC 日付。|  
+|**modify_date**|**datetime**|監査が最後に変更された UTC 日付。|  
 |**principal_id**|**int**|サーバーに登録されている監査の所有者の ID。|  
-|**type**|**char (2)**|監査の種類。<br /><br /> SL-NT セキュリティイベントログ<br /><br /> AL-NT アプリケーションイベントログ<br /><br /> ファイルシステム上の FL ファイル|  
-|**type_desc**|**nvarchar (60)**|SECURITY LOG<br /><br /> APPICATION ログ<br /><br /> FILE|  
+|**type**|**char(2)**|監査の種類。<br /><br /> SL-NT セキュリティイベントログ<br /><br /> AL-NT アプリケーションイベントログ<br /><br /> ファイルシステム上の FL ファイル|  
+|**type_desc**|**nvarchar(60)**|SECURITY LOG<br /><br /> APPICATION ログ<br /><br /> FILE|  
 |**on_failure**|**tinyint**|アクションエントリの書き込みに失敗した場合:<br /><br /> 0-続行<br /><br /> 1-サーバーインスタンスのシャットダウン<br /><br /> 2-失敗した操作|  
-|**on_failure_desc**|**nvarchar (60)**|アクションエントリの書き込みに失敗した場合:<br /><br /> CONTINUE<br /><br /> サーバーインスタンスのシャットダウン<br /><br /> FAIL_OPERATION|  
+|**on_failure_desc**|**nvarchar(60)**|アクションエントリの書き込みに失敗した場合:<br /><br /> CONTINUE<br /><br /> サーバーインスタンスのシャットダウン<br /><br /> FAIL_OPERATION|  
 |**is_state_enabled**|**tinyint**|0-無効<br /><br /> 1 - 有効|  
 |**queue_delay**|**int**|ディスクに書き込むまでの最大待機時間 (ミリ秒単位)。 0の場合、イベントが続行される前に、監査によって書き込みが保証されます。|  
-|**述語**|**nvarchar (3000)**|イベントに適用される述語式。|  
+|**predicate**|**nvarchar (3000)**|イベントに適用される述語式。|  
   
 ## <a name="permissions"></a>アクセス許可  
  **ALTER ANY SERVER AUDIT**または**VIEW any DEFINITION**権限を持つプリンシパルは、このカタログビューにアクセスできます。 また、プリンシパルに**対して VIEW ANY DEFINITION**権限を拒否することはできません。  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [CREATE SERVER AUDIT &#40;Transact-sql&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   

@@ -18,10 +18,10 @@ ms.assetid: cafd954a-92f8-44cb-a5d0-dce9aafa5ee1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b00a2e83839724c2b6e5193e2ca08d5c6d3eced9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106311"
 ---
 # <a name="msmerge_subscriptions-transact-sql"></a>MSmerge_subscriptions (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68106311"
 
   **MSmerge_subscriptions**テーブルには、サブスクライバーでマージエージェントによって提供されるサブスクリプションごとに1つの行が含まれています。 このテーブルは、ディストリビューションデータベースに格納されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|パブリッシャーの ID。|  
 |**publisher_db**|**sysname**|パブリッシャーデータベースの名前。|  
@@ -38,11 +38,11 @@ ms.locfileid: "68106311"
 |**subscriber_db**|**sysname**|サブスクリプションデータベースの名前。|  
 |**subscription_type**|**int**|サブスクリプションの種類。<br /><br /> 0 = プッシュ。<br /><br /> 1 = プル<br /><br /> 2 = 匿名。|  
 |**sync_type**|**tinyint**|同期の種類。<br /><br /> 1 = 自動同期<br /><br /> 2 = 同期なし。|  
-|**オンライン**|**tinyint**|サブスクリプションの状態です。|  
-|**subscription_time**|**DATETIME**|サブスクリプションが追加された時刻。|  
+|**status**|**tinyint**|サブスクリプションの状態です。|  
+|**subscription_time**|**datetime**|サブスクリプションが追加された時刻。|  
   
 ## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   
