@@ -15,10 +15,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/14/2017
 ms.openlocfilehash: 7075bf87ed64686750bc4a267af431268987ff35
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71708209"
 ---
 # <a name="import-and-export-bulk-data-by-using-the-bcp-utility-sql-server"></a>bcp ユーティリティを使用した一括データのインポートとエクスポート (SQL Server)
@@ -44,39 +44,37 @@ ms.locfileid: "71708209"
 > [!NOTE]  
 >  bcp ユーティリティは ODBC 一括コピーを使用して書き込まれます。  
   
- 
-  **bcp** コマンドの構文の説明については、「 [bcp Utility](../../tools/bcp-utility.md)」を参照してください。  
+ **bcp** コマンドの構文の説明については、「 [bcp Utility](../../tools/bcp-utility.md)」を参照してください。  
   
 ## <a name="examples"></a>例
 
- 
-  **bcp** の例については、次のトピックを参照してください。  
+ **bcp** の例については、次のトピックを参照してください。  
   
 -   [bcp ユーティリティ](../../tools/bcp-utility.md)  
   
--   [フォーマットファイル &#40;SQL Server を作成し&#41;](create-a-format-file-sql-server.md)  
+-   [フォーマット ファイルの作成 &#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
   
 -   [XML ドキュメントの一括インポートと一括エクスポートの例 &#40;SQL Server&#41;](examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
   
--   [データを一括インポートするときに Id 値を保持する &#40;SQL Server&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
+-   [データの一括インポート時の ID 値の保持 &#40;SQL Server&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
   
--   [一括インポート中に Null を保持するか、既定値を使用 &#40;SQL Server&#41;](keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)  
+-   [一括インポート中の NULL の保持または既定値の使用 &#40;SQL Server&#41;](keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)  
   
--   [SQL Server &#40;のフィールドターミネータと行ターミネータを指定し&#41;](specify-field-and-row-terminators-sql-server.md)  
+-   [フィールド ターミネータと行ターミネータの指定 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
   
--   [フォーマットファイルを使用して SQL Server &#40;データを一括インポートする&#41;](use-a-format-file-to-bulk-import-data-sql-server.md)  
+-   [データの一括インポートでのフォーマット ファイルの使用 &#40;SQL Server&#41;](use-a-format-file-to-bulk-import-data-sql-server.md)  
   
--   [文字形式を使用してデータをインポートまたはエクスポート &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
+-   [文字形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
   
--   [ネイティブ形式を使用してデータをインポートまたはエクスポート &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
+-   [ネイティブ形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
   
--   [Unicode 文字形式を使用してデータをインポートまたはエクスポート &#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
+-   [Unicode 文字形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
--   [Unicode ネイティブ形式を使用してデータをインポートまたはエクスポート &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
+-   [Unicode ネイティブ形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
 
 ## <a name="see-also"></a>参照
 
-[](/sql/t-sql/statements/insert-transact-sql) 
+[INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql) 
 Transact-sql&#41;
  [bcp ユーティリティ](../../tools/bcp-utility.md)&#40;の transact-sql&#41;[SELECT 句](/sql/t-sql/queries/select-clause-transact-sql)の挿入 &#40;   
 [データの一括インポートの準備 SQL Server&#41;](prepare-to-bulk-import-data-sql-server.md) 

@@ -17,10 +17,10 @@ ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 69b3b9eae6c292b9501dfbe74b84d7399304a291
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72305155"
 ---
 # <a name="syssp_rda_test_connection-transact-sql"></a>sp_rda_test_connection (Transact-sql)
@@ -68,17 +68,17 @@ EXECUTE sys.sp_rda_test_connection
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|link_state|INT|次のいずれかの値。 **link_state_desc**の値に対応します。<br /><br /> -0<br />-1<br />-2<br />-3<br />-4|  
+|link_state|int|次のいずれかの値。 **link_state_desc**の値に対応します。<br /><br /> -0<br />-1<br />-2<br />-3<br />-4|  
 |link_state_desc|varchar(32)|次のいずれかの値。 **link_state**の前の値に対応します。<br /><br /> -正常<br />     SQL Server とリモート Azure サーバーの間のが正常な状態です。<br />-ERROR_AZURE_FIREWALL<br />     Azure ファイアウォールによって、SQL Server とリモート Azure サーバー間のリンクが妨げられています。<br />-ERROR_NO_CONNECTION<br />     SQL Server は、リモートの Azure サーバーに接続することはできません。<br />-ERROR_AUTH_FAILURE<br />     認証エラーにより、SQL Server とリモート Azure サーバーの間のリンクが妨げられています。<br />-エラー<br />     認証の問題、接続の問題、またはファイアウォールの問題ではないエラーにより、SQL Server とリモート Azure サーバーの間のリンクが妨げられています。|  
-|error_number|INT|エラーの番号。 エラーがない場合、このフィールドは NULL になります。|  
+|error_number|int|エラーの番号。 エラーがない場合、このフィールドは NULL になります。|  
 |error_message|nvarchar(1024)|エラー メッセージ。 エラーがない場合、このフィールドは NULL になります。|  
   
 ## <a name="permissions"></a>アクセス許可  
  Db_owner のアクセス許可が必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
   
 ### <a name="check-the-connection-from-sql-server-to-the-remote-azure-server"></a>SQL Server からリモート Azure サーバーへの接続を確認する  
   
@@ -108,7 +108,7 @@ GO
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|1 で保護されたプロセスとして起動されました|ERROR_AZURE_FIREWALL|*\<ファイアウォール関連のエラー番号>*|*\<ファイアウォール関連のエラーメッセージ>*|  
+|1|ERROR_AZURE_FIREWALL|*\<ファイアウォール関連のエラー番号>*|*\<ファイアウォール関連のエラーメッセージ>*|  
   
 ### <a name="check-authentication-credentials"></a>認証資格情報の確認  
   

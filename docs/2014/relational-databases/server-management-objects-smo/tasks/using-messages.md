@@ -15,18 +15,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 43ff94bf10dee2bda0a61b573b87621fa5d3256b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72781799"
 ---
 # <a name="using-messages"></a>メッセージの使用
-  SMO では、システム メッセージは、<xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection> オブジェクトに属する `Server` オブジェクトで表現します。 システム メッセージは変更することができないため、`SystemMessage` オブジェクト プロパティは読み込み専用となります。  
+  SMO では、システム メッセージは、`Server` オブジェクトに属する <xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection> オブジェクトで表現します。 システム メッセージは変更することができないため、`SystemMessage` オブジェクト プロパティは読み込み専用となります。  
   
  SMO では、プログラム上では <xref:Microsoft.SqlServer.Management.Smo.UserDefinedMessageCollection> オブジェクトを使用してユーザー定義メッセージを表現します。 既存のユーザー定義メッセージは、コレクションを反復処理することで検索することができます。 新しいユーザー定義メッセージは、新しい `UserDefinedMessage` オブジェクトをインスタンス化し、適切なプロパティの設定を行うことによって作成することができます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次のコード例では、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual studio .net での VISUAL BASIC Smo プロジェクトの作成](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)」および「visual [Studio .Net で VISUAL C&#35; Smo プロジェクトを作成](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)する」を参照してください。  
   
 ## <a name="finding-a-particular-system-message-in-visual-basic"></a>Visual Basic での特定のシステム メッセージの検索  

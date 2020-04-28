@@ -17,10 +17,10 @@ ms.assetid: 3030c86a-0a74-4fed-ac0f-392e244cb965
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 862f54351eb67d2170d8e9806347eb8608178c23
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71342040"
 ---
 # <a name="sql-server-operating-system-related-dynamic-management-views-transact-sql"></a>SQL Server オペレーティングシステム関連の動的管理ビュー (Transact-sql)
@@ -39,7 +39,7 @@ SQLOS Dmv が目次に一覧表示されます。 これらのほとんどは、
 |**dm_os_worker_local_storage**||  
   
 ## <a name="see-also"></a>参照  
- [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
+ [動的管理ビューおよび関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   
 

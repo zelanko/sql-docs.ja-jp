@@ -18,10 +18,10 @@ ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 06dbee74cfb3e2d5e697ea9594d46c98557de8ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70810496"
 ---
 # <a name="sp_add_jobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "70810496"
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
   > [!IMPORTANT]  
-  > [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
+  > [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)では、ほとんどの SQL Server エージェント機能は現在サポートされていません。 詳細については[、「Azure SQL Database Managed Instance t-sql の相違 SQL Server 点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
 
 ## <a name="syntax"></a>構文  
   
@@ -67,19 +67,19 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 `[ @freq_type = ] frequency_type`ジョブがいつ実行されるかを示す値。 *frequency_type*は**int**,、既定値は**0**,、値は次のいずれかを指定することができます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|1 度|  
 |**4**|毎日|  
 |**8**|週単位|  
-|**まで**|月単位|  
+|**まで**|月 1 回|  
 |**32**|毎月、frequency_interval を基準と*します。*|  
 |**64**|エージェントサービスが[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]開始されたときに実行します。|  
 |**128**|コンピューターがアイドル状態のときに実行します。|  
   
 `[ @freq_interval = ] frequency_interval`ジョブが実行された日。 *frequency_interval*は**int**で、既定値は0です。次の表に示すように、 *frequency_type*の値に依存します。  
   
-|Value|効果|  
+|値|結果|  
 |-----------|------------|  
 |**1** (1 回)|*frequency_interval*は使用されていません。|  
 |**4** (毎日)|*Frequency_interval*日ごと。|  
@@ -91,7 +91,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 `[ @freq_subday_type = ] frequency_subday_type`*Frequency_subday_interval*の単位を指定します。 *frequency_subday_type*は**int**,、既定値はありませんは、次のいずれかの値を指定します。  
   
-|Value|説明 (単位)|  
+|値|説明 (単位)|  
 |-----------|--------------------------|  
 |**0x1**|指定された時間|  
 |**0x4**|分|  
@@ -103,7 +103,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
  *frequency_relative_interval*は**int**,、既定値はありませんは、次のいずれかの値を指定します。  
   
-|Value|説明 (単位)|  
+|値|説明 (単位)|  
 |-----------|--------------------------|  
 |**1**|First (先頭へ)|  
 |**2**|秒|  
@@ -133,9 +133,9 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ None  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ジョブスケジュールをジョブとは別に管理できるようになりました。 ジョブにスケジュールを追加するには、 **sp_add_schedule**を使用してスケジュールを作成し、 **sp_attach_schedule**してスケジュールをジョブにアタッチします。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -170,6 +170,6 @@ EXEC msdb.dbo.sp_add_jobschedule
  [sp_update_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
  [sp_delete_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
  [sp_help_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
- [sp_attach_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
+ [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
   
   

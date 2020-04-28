@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a960df20b7b07bffab900589ae4d520541d720c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72688662"
 ---
 # <a name="call-stored-procedures-odbc"></a>ストアド プロシージャの呼び出し (ODBC)
@@ -44,6 +44,6 @@ ms.locfileid: "72688662"
  [ストアドプロシージャ呼び出しのバッチ処理](../native-client-odbc-stored-procedures/batching-stored-procedure-calls.md)   
  [ストアドプロシージャの実行](../native-client-odbc-stored-procedures/running-stored-procedures.md)   
  [ストアドプロシージャの呼び出し](../native-client-odbc-stored-procedures/calling-a-stored-procedure.md)   
- [手順](../native-client-odbc-queries/executing-statements/procedures.md)  
+ [プロシージャ](../native-client-odbc-queries/executing-statements/procedures.md)  
   
   

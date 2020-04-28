@@ -21,10 +21,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 0a0789ebd9a5aa4bd10605d69afa59a586ce75b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70155540"
 ---
 # <a name="sysdatabase_usage-azure-sql-database"></a>sys.database_usage (Azure SQL データベース)
@@ -36,16 +36,16 @@ ms.locfileid: "70155540"
   
  **Database_usage**ビューには、次の列が含まれています。  
   
-|列名|[説明]|  
+|列名|説明|  
 |-----------------|-----------------|  
 |time|使用状況イベントが発生した日付。|  
 |sku|データベースのサービス階層の種類: **Web**、 **Business**、 **Basic**、 **Standard**、 **Premium**|  
-|quantity|その日に存在した、SKU の種類のデータベースの最大数。|  
+|数量|その日に存在した、SKU の種類のデータベースの最大数。|  
   
 ## <a name="permissions"></a>アクセス許可  
  このビューへの読み取り専用アクセスは、 **master**データベースに接続する権限を持つすべてのユーザーが使用できます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Database_usage**ビューでは、サブスクリプションの日ごとに1つの行が返されます。  
   
 ## <a name="see-also"></a>参照  

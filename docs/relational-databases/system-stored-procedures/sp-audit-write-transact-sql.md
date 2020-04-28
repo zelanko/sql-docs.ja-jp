@@ -18,10 +18,10 @@ ms.assetid: 4c523848-1ce6-49ad-92b3-e0e90f24f1c2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9bef63c267bdf5b7d0c2603ed7a93af329d1992c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72251971"
 ---
 # <a name="sp_audit_write-transact-sql"></a>sp_audit_write (Transact-SQL)
@@ -55,7 +55,7 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
   
  失敗の原因となるのは、正しくない入力パラメーターや、監査ログへの書き込みのエラーです。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **USER_DEFINED_AUDIT_GROUP**がサーバー監査の仕様またはデータベース監査の仕様のいずれかに追加されると、 **sp_audit_write**によってトリガーされたイベントが監査ログに含まれます。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -88,6 +88,6 @@ EXEC sp_audit_write 27, 0;
  [sp_dropuser &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
  [sp_grantdbaccess &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
  [sp_grantlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

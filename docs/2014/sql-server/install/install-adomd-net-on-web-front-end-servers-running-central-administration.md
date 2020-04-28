@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: f36e00a9393dcbdf1f8cbfe878b8382e6a8dac9d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952151"
 ---
 # <a name="install-adomdnet-on-web-front-end-servers-running-central-administration"></a>サーバーの全体管理を実行している Web フロントエンド サーバーに ADOMD.NET をインストールする
@@ -28,8 +28,7 @@ ms.locfileid: "71952151"
   
 1.  [ [SQL Server 2014 Feature Pack] ページ](https://go.microsoft.com/fwlink/?LinkID=296473)で、Microsoft ADOMD.NET を見つけます。  
   
-2.  
-  `SQL_AS_ADOMD.msi` インストール プログラムの x64 パッケージをダウンロードします。  
+2.  `SQL_AS_ADOMD.msi` インストール プログラムの x64 パッケージをダウンロードします。  
   
 3.  .Msi を実行して、ライブラリをインストールします。  
   
@@ -41,8 +40,7 @@ ms.locfileid: "71952151"
   
 2.  Microsoft.analysisservices.sharepoint.integration.dll を右クリックし、[**プロパティ**] を選択します。  
   
-3.  
-  **[バージョン]** をクリックします。  
+3.  **[バージョン]** をクリックします。  
   
 4.  バージョンに12.00 が含まれていることを確認します。\<ビルド番号>、説明は microsoft.analysisservice.adomdclient になります。  
   

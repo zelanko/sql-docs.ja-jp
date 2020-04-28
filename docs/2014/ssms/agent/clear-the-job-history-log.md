@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d6d4943bf3884933cd60e1c0ef51a54771ee00af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782772"
 ---
 # <a name="clear-the-job-history-log"></a>Clear the Job History Log
@@ -30,9 +30,9 @@ ms.locfileid: "72782772"
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
--   **次のものを使用してジョブ履歴ログを消去するには:**  
+-   **ジョブ履歴ログを消去する方法:**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -40,35 +40,30 @@ ms.locfileid: "72782772"
   
      [SQL Server 管理オブジェクト](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
  詳細については、「 [SQL Server エージェントのセキュリティの実装](implement-sql-server-agent-security.md)」をご覧ください。  
   
-##  <a name="SSMS"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-clear-the-job-history-log"></a>ジョブ履歴ログを消去するには  
   
-1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
+1.  **オブジェクト エクスプローラー**で、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  
-  **[SQL Server エージェント]** を展開し、 **[ジョブ]** を展開します。  
+2.  **[SQL Server エージェント]** を展開し、 **[ジョブ]** を展開します。  
   
 3.  ジョブを右クリックし、 **[履歴の表示]** をクリックします。  
   
-4.  
-  **[ログ ファイルの表示]** ダイアログ ボックスで、履歴を消去するジョブを選択し、次のいずれかの手順を実行します。  
+4.  **[ログ ファイルの表示]** ダイアログ ボックスで、履歴を消去するジョブを選択し、次のいずれかの手順を実行します。  
   
-    -   
-  **[削除]** をクリックし、 **[履歴の削除]** ダイアログ ボックスの **[すべての履歴を削除する]** をクリックします。 すべてのジョブ履歴を削除することも、指定日よりも古い履歴のみを削除することもできます。 すべてのジョブ履歴を削除するには、 **[すべての履歴を削除する]** をクリックします。 指定日よりも古いジョブ履歴ログを削除するには、 **[次の日付以前の履歴を削除する]** をクリックしてから日付を指定します。  
+    -   **[削除]** をクリックし、 **[履歴の削除]** ダイアログ ボックスの **[すべての履歴を削除する]** をクリックします。 すべてのジョブ履歴を削除することも、指定日よりも古い履歴のみを削除することもできます。 すべてのジョブ履歴を削除するには、 **[すべての履歴を削除する]** をクリックします。 指定日よりも古いジョブ履歴ログを削除するには、 **[次の日付以前の履歴を削除する]** をクリックしてから日付を指定します。  
   
-    -   マルチサーバー ジョブの履歴ログを消去するには、 **[ジョブ ステータス]** をクリックします。 
-  **[ジョブ]** をクリックしてからジョブ名をクリックし、 **[ジョブ履歴の表示]** をクリックします。  
+    -   マルチサーバー ジョブの履歴ログを消去するには、 **[ジョブ ステータス]** をクリックします。 **[ジョブ]** をクリックしてからジョブ名をクリックし、 **[ジョブ履歴の表示]** をクリックします。  
   
-5.  
-  **[削除]** をクリックします。  
+5.  **[削除]** をクリックします。  
   
-##  <a name="TSQL"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> Transact-SQL の使用  
   
 #### <a name="to-clear-the-job-history-log"></a>ジョブ履歴ログを消去するには  
   
@@ -88,7 +83,7 @@ ms.locfileid: "72782772"
     GO  
     ```  
   
-##  <a name="SMO"></a>SQL Server 管理オブジェクトの使用  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>SQL Server 管理オブジェクトの使用  
  **ジョブ履歴ログを消去するには**  
   
  Visual Basic、 `PurgeJobHistory` Visual C#、 `JobServer` PowerShell など、選択したプログラミング言語を使用して、クラスのメソッドを使用します。 詳細については、「 [SQL Server 管理オブジェクト (SMO) プログラミング ガイド](https://msdn.microsoft.com/library/ms162169.aspx)」を参照してください。  

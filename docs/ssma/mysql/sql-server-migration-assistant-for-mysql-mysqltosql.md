@@ -11,10 +11,10 @@ author: Jtoland
 ms.author: Jtoland
 manager: murato
 ms.openlocfilehash: 61f1edc662e7b4a510d616dbee47cfaa615b9c0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72252143"
 ---
 # <a name="sql-server-migration-assistant-for-mysql-mysqltosql"></a>MySQL の SQL Server Migration Assistant (MySQLToSQL)
@@ -25,7 +25,7 @@ ms.locfileid: "72252143"
   
 ## <a name="contents"></a>内容  
   
-|Section|[説明]|
+|Section|説明|
 |-----------|---------------|
 |[SSMA for MySQL の新機能](https://msdn.microsoft.com/1451a0b0-6713-4d0c-954f-ea3d8fce1d31)|SSMA for MySQL のこのバージョンの新機能|  
 |[SSMA for MySQL のインストール &#40;MySqlToSql&#41;](../../ssma/mysql/installing-ssma-for-mysql-mysqltosql.md)|SQL Server を実行しているコンピューターに SSMA for MySQL クライアントおよび必須コンポーネントをインストールするための前提条件と手順を説明する記事が含まれています。|  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 1d0b1d2ef6eed113061cd0f79508a637ec078495
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952614"
 ---
 # <a name="checklists-for-installing-bi-features-with-sharepoint"></a>SharePoint を使用した BI 機能のインストール用チェック リスト
@@ -27,6 +27,6 @@ ms.locfileid: "71952614"
   
  [配置のチェック リスト: PowerPivot for SharePoint 2010 のマルチサーバー インストール](../../../2014/sql-server/install/deployment-checklist-multiserver-installation-powerpivot-sharepoint-2010.md)  
   
- [配置のチェックリスト: 既存の SharePoint ファームへの Reporting Services のインストール](../../../2014/sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md)  
+ [配置のチェック リスト: 既存の SharePoint ファームへの Reporting Services のインストール](../../../2014/sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md)  
   
   

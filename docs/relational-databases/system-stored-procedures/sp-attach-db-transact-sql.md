@@ -18,10 +18,10 @@ ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 88b0dffa84674b2d7e55895830f28cf1b95cd3dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72305266"
 ---
 # <a name="sp_attach_db-transact-sql"></a>sp_attach_db (Transact-sql)
@@ -36,7 +36,7 @@ ms.locfileid: "72305266"
 >  複数のログファイルを再構築するには、1つまたは複数の場所に新しい場所がある場合は、CREATE DATABASE *database_name* FOR ATTACH_REBUILD_LOG を使用します。  
   
 > [!IMPORTANT]  
->  不明なソースや信頼されていないソースからデータベースをアタッチまたは復元しないことをお勧めします。 こうしたデータベースには、意図しない [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを実行したり、スキーマまたは物理データベース構造を変更してエラーを発生させるような、悪意のあるコードが含まれている可能性があります。 不明または信頼できないソースのデータベースを使用する前に、実稼働していないサーバー上のデータベースに対して[DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)を実行し、データベース内のストアドプロシージャやその他のユーザー定義コードなどのコードを確認します。  
+>  不明なソースや信頼されていないソースからデータベースをアタッチまたは復元しないことをお勧めします。 こうしたデータベースには、意図しない [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを実行したり、スキーマまたは物理データベース構造を変更してエラーを発生させるような、悪意のあるコードが含まれている可能性があります。 不明または信頼できないソースのデータベースを使用する前に、運用サーバー以外のサーバーでそのデータベースに対し [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) を実行し、さらに、そのデータベースのストアド プロシージャやその他のユーザー定義コードなどのコードを調べます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -60,9 +60,9 @@ sp_attach_db [ @dbname= ] 'dbname'
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ None  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Sp_attach_db**ストアドプロシージャは、明示的な**sp_detach_db**操作またはコピーしたデータベースに対してデータベースサーバーから以前にデタッチされたデータベースでのみ実行する必要があります。 16個を超えるファイルを指定する必要がある場合は、CREATE DATABASE *database_name* FOR ATTACH または create database *database_name* FOR_ATTACH_REBUILD_LOG を使用します。 詳細については、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)」を参照してください。  
   
  指定されていないファイルは、最後の既知の場所にあると見なされます。 異なる場所にあるファイルを使用するには、新しい場所を指定する必要があります。  
@@ -85,7 +85,7 @@ sp_attach_db [ @dbname= ] 'dbname'
 ## <a name="permissions"></a>アクセス許可  
  データベースがアタッチされているときの権限の処理方法については、「 [CREATE database &#40;SQL Server transact-sql&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)」を参照してください。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]から現在のサーバーにファイルをアタッチします。  
   
 ```  
@@ -101,6 +101,6 @@ N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\Adventure
  [sp_detach_db &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
  [sp_helpfile &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
  [sp_removedbreplication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

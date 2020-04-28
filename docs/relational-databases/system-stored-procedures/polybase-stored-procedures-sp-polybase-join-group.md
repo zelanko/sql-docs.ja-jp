@@ -15,10 +15,10 @@ ms.assetid: 48066431-fed2-4a8a-85af-ac704689e183
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: ba22ffe282e6b4248ed58bed850bc6ac08255df5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72278113"
 ---
 # <a name="sp_polybase_join_group-transact-sql"></a>sp_polybase_join_group (Transact-sql)
@@ -55,7 +55,7 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
 ## <a name="permissions"></a>アクセス許可  
  CONTROL SERVER 権限が必要です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ストアドプロシージャを実行した後、PolyBase エンジンをシャットダウンし、マシン上の PolyBase Data Movement サービスを再起動します。 検証するには、ヘッドノードで次の DMV を実行します: **dm_exec_compute_nodes**。  
   
 ## <a name="example"></a>例  
@@ -67,6 +67,6 @@ EXEC sp_polybase_join_group N'HST01', 16450, N'MSSQLSERVER'
   
 ## <a name="see-also"></a>参照  
  [PolyBase を使ってみる](../../relational-databases/polybase/get-started-with-polybase.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

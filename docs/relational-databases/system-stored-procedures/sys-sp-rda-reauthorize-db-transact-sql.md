@@ -17,10 +17,10 @@ ms.assetid: f6f3e4b2-8c72-4d23-a5de-fe671ca5c5cd
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 01809f0d4eb494d58f035d23846025578aada7c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72251262"
 ---
 # <a name="syssp_rda_reauthorize_db-transact-sql"></a>sys.sp_rda_reauthorize_db (Transact-SQL)
@@ -56,7 +56,7 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
 ## <a name="permissions"></a>アクセス許可  
  Db_owner のアクセス許可が必要です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  [Sp_rda_reauthorize_db (transact-sql)](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md)を実行してリモートの Azure データベースに再接続すると、この操作によってクエリモードが自動的に LOCAL_AND_REMOTE にリセットされます。これは Stretch Database の既定の動作です。 つまり、クエリはローカルとリモートの両方のデータから結果を返します。  
   
 ## <a name="example"></a>例  

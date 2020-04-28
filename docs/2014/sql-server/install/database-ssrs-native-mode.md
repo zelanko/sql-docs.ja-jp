@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 7dff59c26c057caec1df1f5850be41dcc6f85711
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952309"
 ---
 # <a name="database-ssrs-native-mode"></a>データベース (SSRS ネイティブ モード)
@@ -43,7 +43,7 @@ ms.locfileid: "71952309"
  **データベースの変更**  
  レポート サーバー データベースの作成または選択に必要なすべての手順を示すウィザードを起動します。  
   
- **資格情報の種類**  
+ **[資格情報の種類]**  
  レポート サーバーがレポート サーバー データベースへの接続に使用する資格情報を指定します。 指定できる資格情報の種類には、サービス アカウント、Windows ドメイン ユーザー、Windows ローカル ユーザー、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ログインがあります。 資格情報の選択の詳細については、「 [SSRS Configuration Manager&#41;&#40;レポートサーバーデータベース接続の構成](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)」を参照してください。  
   
  **ユーザー名**  
@@ -58,7 +58,7 @@ ms.locfileid: "71952309"
 ## <a name="see-also"></a>参照  
  [SSRS Configuration Manager &#40;ネイティブモードのレポートサーバーデータベースを作成&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
  [Reporting Services Configuration Manager F1 ヘルプトピック &#40;SSRS ネイティブモード&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
- [レポート サーバー データベース &#40;SSRS ネイティブ モード&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
+ [レポートサーバーデータベース &#40;SSRS ネイティブモード&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
  [レポート サーバー データベース接続の構成 &#40;SSRS構成マネージャー&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
   
   

@@ -16,10 +16,10 @@ ms.assetid: af45e2b2-57fb-4bcd-a58b-e61401fb3b26
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6062522ca6c5c3a311ba2f2c796f791c47e874ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72252117"
 ---
 # <a name="sp_redirect_publisher-transact-sql"></a>sp_redirect_publisher (Transact-sql)
@@ -50,9 +50,9 @@ sp_redirect_publisher
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ None  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_redirect_publisher**は、パブリッシャー/データベースペアを可用性グループのリスナーに関連付けることによって、レプリケーションパブリッシャーを Always On 可用性グループの現在のプライマリにリダイレクトできるようにするために使用します。 パブリッシュされたデータベースを含む可用性グループに対して AG リスナーが構成された後に、 **sp_redirect_publisher**を実行します。  
   
  元のパブリッシャーのパブリケーションデータベースが、プライマリレプリカの可用性グループから削除されている場合は、 * \@redirected_publisher*パラメーターの値を指定せずに**sp_redirect_publisher**を実行して、パブリッシャー/データベースペアのリダイレクトを削除します。 を使用した場合のパブリッシャーのリダイレクトの詳細については、「 [AlwaysOn パブリケーションデータベースのメンテナンス &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)」を参照してください。  

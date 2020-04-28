@@ -18,10 +18,10 @@ ms.assetid: 993c12da-41e5-4e53-a188-0323feb70c67
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f84e84ed7801beb20bdaca5c92d333133fad3b63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70745352"
 ---
 # <a name="sysmail_unsentitems-transact-sql"></a>sysmail_unsentitems (Transact-SQL)
@@ -41,21 +41,21 @@ ms.locfileid: "70745352"
   
  データベースメールによって処理されるすべてのメッセージを表示するには[sysmail_allitems &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)を使用します。 失敗した状態のメッセージだけを表示するには、 [sysmail_faileditems &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)を使用します。 送信されたメッセージだけを表示するには、 [sysmail_sentitems &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md)を使用します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**mailitem_id**|**int**|メールキュー内のメールアイテムの識別子。|  
 |**profile_id**|**int**|メッセージの送信に使用されるプロファイルの識別子。|  
 |**recipients**|**varchar(max)**|メッセージの受信者の電子メールアドレス。|  
 |**copy_recipients**|**varchar(max)**|メッセージのコピーを受信するユーザーの電子メールアドレス。|  
 |**blind_copy_recipients**|**varchar(max)**|メッセージのコピーを受信したが、その名前がメッセージヘッダーに表示されない電子メールアドレス。|  
-|**subject**|**nvarchar (510)**|メッセージの件名行。|  
-|**部位**|**varchar(max)**|メッセージの本文|  
+|**件名**|**nvarchar (510)**|メッセージの件名行。|  
+|**body**|**varchar(max)**|メッセージの本文|  
 |**body_format**|**varchar (20)**|メッセージの本文形式。 指定できる値は、 **TEXT**と**HTML**です。|  
 |**importance**|**varchar (6)**|メッセージの**重要度**パラメーター。|  
 |**区別**|**varchar (12)**|メッセージの**感度**パラメーター。|  
 |**file_attachments**|**varchar(max)**|電子メール メッセージに添付されたファイル名の、セミコロン区切りの一覧。|  
 |**attachment_encoding**|**varchar (20)**|メールの添付ファイルの種類。|  
-|**照会**|**varchar(max)**|メールプログラムによって実行されるクエリ。|  
+|**query**|**varchar(max)**|メールプログラムによって実行されるクエリ。|  
 |**execute_query_database**|**sysname**|メールプログラムによってクエリが実行されたデータベースコンテキスト。|  
 |**attach_query_result_as_file**|**bit**|値が0の場合、クエリ結果は、本文の内容の後に電子メールメッセージの本文に含まれていました。 値が 1 の場合、結果が添付ファイルとして返されたことを示します。|  
 |**query_result_header**|**bit**|値が1の場合、クエリ結果には列ヘッダーが含まれます。 値が 0 の場合、クエリの結果に列のヘッダーが含まれていないことを示します。|  
@@ -63,15 +63,15 @@ ms.locfileid: "70745352"
 |**query_result_separator**|**char (1)**|クエリの出力で列の区切りに使用された文字。|  
 |**exclude_query_output**|**bit**|メッセージの**exclude_query_output**パラメーター。 詳細については、「 [sp_send_dbmail &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md)」を参照してください。|  
 |**append_query_error**|**bit**|メッセージの**append_query_error**パラメーター。 0 は、クエリにエラーがあった場合、データベース メールで電子メール メッセージが送信されないことを示します。|  
-|**send_request_date**|**DATETIME**|メッセージがメールキューに置かれた日付と時刻。|  
+|**send_request_date**|**datetime**|メッセージがメールキューに置かれた日付と時刻。|  
 |**send_request_user**|**sysname**|メッセージを送信したユーザー。 これは、メッセージの [**差出人**] フィールドではなく、データベースメールプロシージャのユーザーコンテキストです。|  
 |**sent_account_id**|**int**|メッセージの送信に使用されるデータベースメールアカウントの識別子。 このビューでは常に NULL です。|  
 |**sent_status**|**varchar (8)**|データベースメールがメールを送信しようとしていない場合は、**送信**されません。 データベースメールがメッセージの送信に失敗したが、再試行している場合は、**再試行**されます。|  
-|**sent_date**|**DATETIME**|データベースメールが最後にメールを送信しようとした日付と時刻。 データベース メールでメッセージの送信が試行されていない場合は NULL になります。|  
-|**last_mod_date**|**DATETIME**|行が最後に変更された日付と時刻。|  
+|**sent_date**|**datetime**|データベースメールが最後にメールを送信しようとした日付と時刻。 データベース メールでメッセージの送信が試行されていない場合は NULL になります。|  
+|**last_mod_date**|**datetime**|行が最後に変更された日付と時刻。|  
 |**last_mod_user**|**sysname**|行を最後に変更したユーザー。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  データベース メールのトラブルシューティングを行うとき、このビューでは送信済みのメッセージ数とメッセージの待機時間を確認できるので、問題の性質を特定するのに役立ちます。 メッセージが 1 つも送信されていない場合は、データベース メール外部プログラムが動作していないか、ネットワークの問題によってデータベース メールから SMTP サーバーへの接続に障害が発生している可能性があります。 未送信のメッセージの多くが同じ**profile_id**を持っている場合は、SMTP サーバーに問題がある可能性があります。 プロファイルにアカウントを追加することを検討してください。 メッセージが送信されているにもかかわらず、メッセージがキューに過剰[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に時間を費やしている場合は、必要なメッセージの量を処理するためにより多くのリソースが必要になることがあります。  
   
 ## <a name="permissions"></a>アクセス許可  

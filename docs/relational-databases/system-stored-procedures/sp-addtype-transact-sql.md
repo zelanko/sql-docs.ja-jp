@@ -18,10 +18,10 @@ ms.assetid: ed72cd8e-5ff7-4084-8458-2d8ed279d817
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ab825ce5eb1310f3ff502965e409731b8741932e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72305138"
 ---
 # <a name="sp_addtype-transact-sql"></a>sp_addtype (Transact-sql)
@@ -51,23 +51,23 @@ sp_addtype [ @typename = ] type,
 ||||  
 |-|-|-|  
 |**bigint**|**binary(n)**|**bit**|  
-|**char(n)**|**DATETIME**|**decimal**|  
-|**float**|**絵**|**int**|  
-|**money**|**nchar(n)**|**ntext**|  
-|**番号**|**nvarchar(n)**|**本当の**|  
+|**char(n)**|**datetime**|**decimal**|  
+|**float**|**image**|**int**|  
+|**money**|**nchar (n)**|**ntext**|  
+|**numeric**|**nvarchar (n)**|**real**|  
 |**smalldatetime**|**smallint**|**smallmoney**|  
-|**sql_variant**|**本文**|**tinyint**|  
-|**UNIQUEIDENTIFIER**|**varbinary(n)**|**varchar(n)**|  
+|**sql_variant**|**text**|**tinyint**|  
+|**uniqueidentifier**|**varbinary(n)**|**varchar(n)**|  
   
  空白または句読点が埋め込まれているすべてのパラメーターには引用符が必要です。 使用できるデータ型の詳細については、「 [transact-sql&#41;&#40;データ型](../../t-sql/data-types/data-types-transact-sql.md)」を参照してください。  
   
  *n*  
  選択したデータ型の長さを示す負以外の整数を指定します。  
   
- *Irtran-p*  
+ *P*  
  小数点の左側と右側に格納できる 10 進数の最大合計桁数を示す、負以外の整数を指定します。 詳しくは、「[decimal 型と numeric 型 &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)」をご覧ください。  
   
- *s*  
+ *2$s*  
  小数点の右側に格納できる10進数の最大桁数を示す負以外の整数で、有効桁数以下である必要があります。 詳しくは、「[decimal 型と numeric 型 &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)」をご覧ください。  
   
 `[ @nulltype = ] 'null_type'`別名データ型が null 値を処理する方法を示します。 *null_type*は**varchar (** 8 **)**,、既定値は null の場合、単一引用符で囲む必要があります (' null '、' not NULL '、または ' NONULL ')。 **Sp_addtype**によって*null_type*明示的に定義されていない場合は、現在の既定の null 値の許容属性に設定されます。 GETANSINULL システム関数を使用して、現在の既定の null 値の許容属性を決定します。 これは、SET ステートメントまたは ALTER DATABASE を使用して調整できます。 NULL 値の許容属性は、明示的に定義してください。 場合** \@phy**は**ビット**,、 ** \@nulltype**が指定されていない、既定値は NULL ではありません。  
@@ -79,9 +79,9 @@ sp_addtype [ @typename = ] type,
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ None  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  別名データ型の名前は、データベース内で一意であることが必要ですが、異なる名前の別名データ型で同じ定義を使用することは可能です。  
   
  **Sp_addtype**を実行すると、特定のデータベースの**タイプ**カタログビューに表示される別名データ型が作成されます。 別名データ型をすべての新しいユーザー定義データベースで使用できるようにする必要がある場合は、それを**モデル**に追加します。 作成した別名データ型は、CREATE TABLE または ALTER TABLE で使用できます。別名データ型にデフォルトやルールをバインドすることもできます。 **Sp_addtype**を使用して作成されるすべてのスカラー別名データ型は、 **dbo**スキーマに含まれています。  
@@ -99,11 +99,9 @@ sp_addtype [ @typename = ] type,
 ## <a name="examples"></a>例  
   
 ### <a name="a-creating-an-alias-data-type-that-does-not-allow-for-null-values"></a>A. Null 値を許容しない別名データ型を作成する  
- 次の例では、指定され`ssn`た[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **varchar**データ型に基づいて、(社会保障番号) という名前の別名データ型を作成します。 
-  `ssn` 型は、11 桁の社会保障番号 (999-99-9999) を格納する列で使用されます。 この列で NULL 値は許容されません。  
+ 次の例では、指定され`ssn`た[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **varchar**データ型に基づいて、(社会保障番号) という名前の別名データ型を作成します。 `ssn` 型は、11 桁の社会保障番号 (999-99-9999) を格納する列で使用されます。 この列で NULL 値は許容されません。  
   
- 
-  `varchar(11)` には区切り記号 (かっこ) が含まれているため、単一引用符で囲みます。  
+ `varchar(11)` には区切り記号 (かっこ) が含まれているため、単一引用符で囲みます。  
   
 ```  
 USE master;  
@@ -136,14 +134,14 @@ GO
 ## <a name="see-also"></a>参照  
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;&#40;型の作成](../../t-sql/statements/create-type-transact-sql.md)   
- [CREATE DEFAULT &#40;Transact-sql&#41;](../../t-sql/statements/create-default-transact-sql.md)   
- [CREATE RULE &#40;Transact-sql&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
+ [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
+ [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
  [sp_bindefault &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
  [sp_bindrule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
  [sp_droptype &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droptype-transact-sql.md)   
- [sp_rename &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
+ [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
  [sp_unbindefault &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
  [sp_unbindrule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7de13f529dc0aab0c897ebe3dc1cb19220b13fd7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154583"
 ---
 # <a name="databases"></a>データベース
@@ -40,11 +40,11 @@ ms.locfileid: "70154583"
   
 |||  
 |-|-|  
-|[システム データベース](system-databases.md)|[データまたはログ ファイルのデータベースからの削除](delete-data-or-log-files-from-a-database.md)|  
+|[システムデータベース](system-databases.md)|[データまたはログ ファイルのデータベースからの削除](delete-data-or-log-files-from-a-database.md)|  
 |[包含データベース](contained-databases.md)|[データベースのデータ領域とログ領域情報の表示](display-data-and-log-space-information-for-a-database.md)|  
-|[Azure 内の SQL Server データ ファイル](sql-server-data-files-in-microsoft-azure.md)|[データベースのサイズを大きくする](increase-the-size-of-a-database.md)|  
-|[データベース ファイルとファイル グループ](database-files-and-filegroups.md)|[データベースの名前変更](rename-a-database.md)|  
-|[データベースの状態](database-states.md)|[データベースをシングル ユーザー モードに設定する](set-a-database-to-single-user-mode.md)|  
+|[Azure でのデータファイルの SQL Server](sql-server-data-files-in-microsoft-azure.md)|[データベースのサイズを大きくする](increase-the-size-of-a-database.md)|  
+|[データベース ファイルとファイル グループ](database-files-and-filegroups.md)|[データベースの名前を変更する](rename-a-database.md)|  
+|[データベースの状態](database-states.md)|[データベースをシングルユーザー モードに設定する](set-a-database-to-single-user-mode.md)|  
 |[ファイルの状態](file-states.md)|[データベースの圧縮](shrink-a-database.md)|  
 |[データベース サイズの見積もり](estimate-the-size-of-a-database.md)|[ファイルの圧縮](shrink-a-file.md)|  
 |[他のサーバーへのデータベースのコピー](copy-databases-to-other-servers.md)|[データベースのプロパティの表示または変更](view-or-change-the-properties-of-a-database.md)|  
@@ -52,13 +52,13 @@ ms.locfileid: "70154583"
 |[データベースに対するデータ ファイルまたはログ ファイルの追加](add-data-or-log-files-to-a-database.md)|[データベースの互換性レベルの表示または変更](view-or-change-the-compatibility-level-of-a-database.md)|  
 |[データベースの構成設定の変更](change-the-configuration-settings-for-a-database.md)|[メンテナンス プラン ウィザードの使用](../maintenance-plans/use-the-maintenance-plan-wizard.md)|  
 |[データベースの作成](create-a-database.md)|[ユーザー定義データ型の別名の作成](create-a-user-defined-data-type-alias.md)|  
-|[データベースの削除](delete-a-database.md)|[データベーススナップショット &#40;SQL Server&#41;](database-snapshots-sql-server.md)|  
+|[データベースの削除](delete-a-database.md)|[Database Snapshots &#40;SQL Server&#41;](database-snapshots-sql-server.md)|  
   
 ## <a name="related-content"></a>関連コンテンツ  
  [インデックス](../indexes/indexes.md)  
   
- [表示モード](../views/views.md)  
+ [ビュー](../views/views.md)  
   
- [ストアドプロシージャ &#40;データベースエンジン&#41;](../stored-procedures/stored-procedures-database-engine.md)  
+ [ストアド プロシージャ &#40;データベース エンジン&#41;](../stored-procedures/stored-procedures-database-engine.md)  
   
   

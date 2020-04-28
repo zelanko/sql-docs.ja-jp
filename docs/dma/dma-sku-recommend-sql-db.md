@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: d6d329b97946d9d8042641653ed0167510a19b17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72586735"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>オンプレミスデータベースの適切な Azure SQL Database/Managed Instance SKU を特定する
@@ -46,7 +46,7 @@ SKU の推奨事項機能を使用すると、データベースをホストし�
 - パフォーマンスカウンターを収集するために必要な PowerShell ファイル**SkuRecommendationDataCollectionScript**が、DMA フォルダーにインストールされていることを確認します。
 - このプロセスを実行するコンピューターに、データベースをホストしているコンピューターに対する管理者権限があることを確認します。
 
-## <a name="collect-performance-counters"></a>パフォーマンスカウンターの収集
+## <a name="collect-performance-counters"></a>パフォーマンス カウンターを収集します。
 
 プロセスの最初の手順では、データベースのパフォーマンスカウンターを収集します。 パフォーマンスカウンターを収集するには、データベースをホストするコンピューターで PowerShell コマンドを実行します。 DMA はこの PowerShell ファイルのコピーを提供しますが、独自の方法を使用してコンピューターからパフォーマンスカウンターをキャプチャすることもできます。
 
@@ -102,7 +102,7 @@ DMA CLI を使用して SKU の推奨事項を取得するには、コマンド�
     - **/Azureauthenticationtenantid**: 認証テナント。
     - **/Azureauthenticationclientid**: 認証に使用される AAD アプリのクライアント ID。
     - 次のいずれかの認証オプション。
-      - Interactive
+      - Interactive (対話型)
         - **Azureauthenticationinteractiveauthentication**: 認証ポップアップウィンドウの場合は true に設定されます。
       - 証明書ベース
         - **AzureAuthenticationCertificateStoreLocation**: 証明書ストアの場所 (例: "CurrentUser") に設定します。

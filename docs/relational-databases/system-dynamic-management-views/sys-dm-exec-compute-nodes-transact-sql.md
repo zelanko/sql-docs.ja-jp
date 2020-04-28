@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 44664805dc9b728ecbd48acbf38c4565601c631a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71326146"
 ---
 # <a name="sysdm_exec_compute_nodes-transact-sql"></a>dm_exec_compute_nodes (Transact-sql)
@@ -36,16 +36,16 @@ ms.locfileid: "71326146"
   
  この DMV を使用すると、スケールアウトクラスター内のすべてのノードの一覧と、それらのロール、名前、および IP アドレスが表示されます。  
   
-|列名|データ型|[説明]|Range|  
+|列名|データ型|説明|範囲|  
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|**int**|ノードに関連付けられている一意の数値 id。 このビューのキー。|種類に関係なく、スケールアウトクラスター全体で一意です。|  
-|型|**nvarchar (32)**|ノードの種類。|' COMPUTE '、' HEAD '|  
-|name|**nvarchar (32)**|ノードの論理名。|適切な長さの任意の文字列。|  
-|address|**nvarchar (32)**|このノードの IP アドレス。|IP アドレスの範囲|  
+|type|**nvarchar(32)**|ノードの種類。|' COMPUTE '、' HEAD '|  
+|name|**nvarchar(32)**|ノードの論理名。|適切な長さの任意の文字列。|  
+|address|**nvarchar(32)**|このノードの IP アドレス。|IP アドレスの範囲|  
   
 ## <a name="see-also"></a>参照  
  [動的管理ビューを使用した PolyBase のトラブルシューティング](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
- [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Transact-sql&#41;&#40;データベース関連の動的管理ビュー](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

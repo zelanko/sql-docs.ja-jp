@@ -16,38 +16,33 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a040993001a60c410cc1da83f8efae2a4d163162
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70175416"
 ---
 # <a name="building-applications-with-sql-server-native-client"></a>SQL Server Native Client を使用したアプリケーションのビルド
-  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ライブラリを使用するアプリケーションを開発する際には、いくつかの課題があります。 このセクションのトピックでは、MDAC から [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client へのアップグレード、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ヘッダー ファイルやライブラリ ファイルの使用など、これらの課題の多くについて説明します。また、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client と併用できるさまざまな接続文字列の概要についても説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [SQL Server Native Client のインストール](installing-sql-server-native-client.md)  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client をインストールする方法、各種コンポーネントがインストールされる場所、および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client をアンインストールする方法について説明します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client をインストールする方法、各種コンポーネントがインストールされる場所、および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client をアンインストールする方法について説明します。  
   
  [SQL Server Native Client のコンポーネント](components-of-sql-server-native-client.md)  
  ライブラリ ファイル、リソース ファイル、ヘルプ ファイル、ヘッダー ファイルなど、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client を構成するコンポーネントについて説明します。  
   
  [SQL Server Native Client での接続文字列キーワードの使用](using-connection-string-keywords-with-sql-server-native-client.md)  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 経由でデータベースに接続するときに使用できる、さまざまな接続文字列について説明します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 経由でデータベースに接続するときに使用できる、さまざまな接続文字列について説明します。  
   
  [SQL Server Native Client ヘッダー ファイルとライブラリ ファイルの使用](using-the-sql-server-native-client-header-and-library-files.md)  
  アプリケーション内で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ヘッダー ファイルとライブラリ ファイルを使用する方法について説明します。  
   
  [MDAC から SQL Server Native Client へのアプリケーションの更新](updating-an-application-to-sql-server-native-client-from-mdac.md)  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client と MDAC の違い、および MDAC から [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client にアップグレードするときに考慮すべき点について説明します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client と MDAC の違い、および MDAC から [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client にアップグレードするときに考慮すべき点について説明します。  
   
  [SQL Server 2005 Native Client からアプリケーションを更新する](updating-an-application-from-sql-server-2005-native-client.md)  
- 
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Native Client から [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client にアップグレードするときに考慮すべき点について説明します。  
+ [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Native Client から [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client にアップグレードするときに考慮すべき点について説明します。  
   
  [SQL Server Native Client と ADO の併用](using-ado-with-sql-server-native-client.md)  
  ADO で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の機能にアクセスし、それらの機能を使用する方法について説明します。  
@@ -56,12 +51,11 @@ ms.locfileid: "70175416"
  さまざまなデータ アクセス コンポーネントを、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client の各バージョンで使用する方法について説明します。  
   
  [SQL Server Native Client を使用した Azure SQL データベースへの接続](connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md)  
- 
-  [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] Native Client を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に接続する方法について説明します。  
+ [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] Native Client を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に接続する方法について説明します。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Native Client プログラミング](../sql-server-native-client-programming.md)   
  [ODBC の操作方法に関するトピック](../../native-client-odbc-how-to/odbc-how-to-topics.md)   
- [OLE DB の使用法に関するトピック](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+ [OLE DB 方法に関するトピック](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

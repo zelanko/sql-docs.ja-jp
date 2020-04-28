@@ -16,10 +16,10 @@ ms.assetid: eaecd6e0-8486-4e5d-ace7-8ae75768c0a8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d51f29399487ee156210e96fe598c38288755913
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72381709"
 ---
 # <a name="sp_copymergesnapshot-transact-sql"></a>sp_copymergesnapshot (Transact-SQL)
@@ -44,7 +44,7 @@ sp_copymergesnapshot [ @publication = ] 'publication', [ @destination_folder = ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_copymergesnapshot**は、マージレプリケーションで使用します。 バージョン 7.0 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以前を実行しているサブスクライバーでは、代替スナップショットの場所を使用できません。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -52,6 +52,6 @@ sp_copymergesnapshot [ @publication = ] 'publication', [ @destination_folder = ]
   
 ## <a name="see-also"></a>参照  
  [代替スナップショットフォルダーの場所](../../relational-databases/replication/snapshot-options.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

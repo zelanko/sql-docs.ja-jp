@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 26aa24e28714f8fc89c7e384a122638d9773a262
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70911115"
 ---
 # <a name="using-table-and-index-partitioning"></a>テーブルおよびインデックスのパーティション分割の使用
@@ -31,8 +31,7 @@ ms.locfileid: "70911115"
 ## <a name="index-and-table-partitioning"></a>インデックスとテーブルのパーティション分割  
  この機能によって、インデックス データおよびテーブル データを、パーティション内の複数のファイル グループに分散させることができます。 パーティション関数は、パーティション分割列と呼ばれる特定の列の値に基づいて、テーブルまたはインデックスの行を一連のパーティションにどのようにマップするかを定義します。 パーティション構成は、パーティション関数によって指定された各パーティションをファイル グループにマップします。 これにより、複数のファイル グループにまたがってテーブルを拡張できるような、したがって物理デバイスもまたがって拡張できるような、アーカイブ戦略を開発することができます。  
   
- 
-  <xref:Microsoft.SqlServer.Management.Smo.Database> オブジェクトには、実装されたパーティション関数を表す <xref:Microsoft.SqlServer.Management.Smo.PartitionFunction> オブジェクトのコレクション、およびファイル グループへのデータのマップ方法を記述する <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> オブジェクトのコレクションが含まれています。  
+ <xref:Microsoft.SqlServer.Management.Smo.Database> オブジェクトには、実装されたパーティション関数を表す <xref:Microsoft.SqlServer.Management.Smo.PartitionFunction> オブジェクトのコレクション、およびファイル グループへのデータのマップ方法を記述する <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> オブジェクトのコレクションが含まれています。  
   
  各 <xref:Microsoft.SqlServer.Management.Smo.Table> オブジェクトおよび <xref:Microsoft.SqlServer.Management.Smo.Index> オブジェクトは、どのパーティション構成を使用するかを <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> プロパティで指定し、列を <xref:Microsoft.SqlServer.Management.Smo.PartitionSchemeParameterCollection> で指定します。  
   

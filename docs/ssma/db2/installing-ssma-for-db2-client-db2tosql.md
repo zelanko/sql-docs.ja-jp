@@ -10,10 +10,10 @@ ms.assetid: 3ae2a470-6afd-4512-b6d1-fcbe6afe88ad
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 1623430eed752db7fa387caf33124082eb318490
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70774185"
 ---
 # <a name="installing-ssma-for-db2-client-db2tosql"></a>SSMA for DB2 クライアントのインストール (DB2ToSQL)
@@ -22,8 +22,7 @@ SSMA クライアントは、次のタスクを実行するプログラムファ
   
 - DB2 データベースに接続します。  
   
-- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続する。  
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続する。  
   
 - DB2 データベースオブジェクトを構文[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に変換します。  
   
@@ -63,8 +62,7 @@ SSMA クライアントをインストールするには:
   
 1. SSMA for DB2 *n*をダブルクリックします。Setup.exe をインストールします。ここで、 *n*はビルド番号です。  
   
-2. 
-  **[ようこそ]** ページで **[次へ]** をクリックします。  
+2. **[ようこそ]** ページで **[次へ]** をクリックします。  
   
    前提条件がインストールされていない場合は、最初に必要なコンポーネントをインストールする必要があることを示すメッセージが表示されます。 すべての前提条件がインストールされていることを確認してから、インストールプログラムを再実行してください。  
   
@@ -72,15 +70,14 @@ SSMA クライアントをインストールするには:
   
 4. [**セットアップの種類の選択**] ページで、[**標準**] を選択します。  
   
-5. 
-  **[インストール]** を選択します。  
+5. **[インストール]** を選択します。  
   
 > [!IMPORTANT]  
 > 新しいバージョンをインストールする前に、SSMA for DB2 の以前のバージョンをすべてアンインストールしてください。
   
 既定のインストール場所は、DB2 の場合は C:\Program の SQL Server Migration Assistant です。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [SQL Server &#40;DB2ToSQL&#41;での SSMA コンポーネントのインストール](../../ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md)  
 [DB2 データベースを SQL Server &#40;DB2ToSQL&#41;に移行する](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  

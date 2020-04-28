@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c500967b83581cc3bc108232f12c9a0f4d008da6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71199335"
 ---
 # <a name="sysdm_exec_describe_first_result_set_for_object-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
@@ -44,7 +44,7 @@ sys.dm_exec_describe_first_result_set_for_object
   
 ## <a name="arguments"></a>引数  
  *\@object_id*  
- ストアドプロシージャまたは@object_id [!INCLUDE[tsql](../../includes/tsql-md.md)]トリガーの。 [!INCLUDE[tsql](../../includes/tsql-md.md)] @object_idの型は**int**です。  
+ ストアドプロシージャまたは@object_id [!INCLUDE[tsql](../../includes/tsql-md.md)]トリガーの。 [!INCLUDE[tsql](../../includes/tsql-md.md)] @object_id のデータ型は **int** 型です。  
   
  *\@include_browse_information*  
  @include_browse_informationの型は**bit**です。 1 に設定すると、各クエリは FOR BROWSE オプションが指定されているように分析されます。 追加のキー列とソース テーブル情報を返します。  
@@ -52,7 +52,7 @@ sys.dm_exec_describe_first_result_set_for_object
 ## <a name="table-returned"></a>返されるテーブル  
  この共通メタデータは、結果のメタデータの各列に対する 1 行の結果セットとして返されます。 各行には、列の種類と NULL 値の許容属性が次のセクションに示す形式で記述されます。 各コントロールのパスに最初のステートメントが存在しない場合は、0 行の結果セットが返されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**bit**|この列が、参照および情報提供の目的で追加された余分な列で、実際に結果セットには表示されないかどうかを示します。|  
 |**column_ordinal**|**int**|結果セット内の列の位置を示す序数を格納します。 最初の列の位置は 1 で指定されます。|  
@@ -61,14 +61,14 @@ sys.dm_exec_describe_first_result_set_for_object
 |**system_type_id**|**int**|に指定されている列のデータ型の system_type_id が含まれています。型です。 CLR 型の場合は、system_type_name 列が NULL を返しても、この列は値 240 を返します。|  
 |**system_type_name**|**nvarchar(256)**|データ型の名前を格納します。 列のデータ型に指定されている引数 (長さ、有効桁数、小数点以下桁数など) を含みます。 データ型がユーザー定義の別名型の場合は、基になるシステム型がここで指定されます。 CLR ユーザー定義型の場合は、この列には NULL が返されます。|  
 |**max_length**|**smallint**|列の最大長 (バイト単位) です。<br /><br /> -1 = 列のデータ型は**varchar (max)**,、 **nvarchar (max)**,、 **varbinary (max)**,、または**xml**です。<br /><br /> **テキスト**列の場合、 **max_length**値は16か**sp_tableoption ' text in row '** によって設定された値になります。|  
-|**精度**|**tinyint**|数値ベースの場合は、列の有効桁数です。 それ以外の場合は 0 を返します。|  
+|**有効桁数 (precision)**|**tinyint**|数値ベースの場合は、列の有効桁数です。 それ以外の場合は 0 を返します。|  
 |**scale**|**tinyint**|数値ベースの場合は、列の小数点以下桁数です。 それ以外の場合は 0 を返します。|  
 |**collation_name**|**sysname**|文字ベースの場合は、列の照合順序の名前です。 それ以外の場合は NULL を返します。|  
 |**user_type_id**|**int**|CLR 型と別名型の場合、sys.types で指定された列のデータ型の user_type_id を格納します。 それ以外の場合は NULL です。|  
 |**user_type_database**|**sysname**|CLR 型と別名型の場合、その型が定義されたデータベースの名前を格納します。 それ以外の場合は NULL です。|  
 |**user_type_schema**|**sysname**|CLR 型と別名型の場合、その型が定義されたスキーマの名前を格納します。 それ以外の場合は NULL です。|  
 |**user_type_name**|**sysname**|CLR 型と別名型の場合、その型の名前を格納します。 それ以外の場合は NULL です。|  
-|**assembly_qualified_type_name**|**nvarchar(4000)**|CLR 型の場合、その型を定義するアセンブリの名前とクラスを返します。 それ以外の場合は NULL です。|  
+|**assembly_qualified_type_name**|**nvarchar (4000)**|CLR 型の場合、その型を定義するアセンブリの名前とクラスを返します。 それ以外の場合は NULL です。|  
 |**xml_collection_id**|**int**|sys.columns で指定された列のデータ型の xml_collection_id を格納します。 この列は、返される型が XML スキーマ コレクションに関連付けられていない場合は NULL を返します。|  
 |**xml_collection_database**|**sysname**|この型に関連付けられている XML スキーマ コレクションが定義されているデータベースを格納します。 この列は、返される型が XML スキーマ コレクションに関連付けられていない場合は NULL を返します。|  
 |**xml_collection_schema**|**sysname**|この型に関連付けられている XML スキーマ コレクションが定義されているスキーマを格納します。 この列は、返される型が XML スキーマ コレクションに関連付けられていない場合は NULL を返します。|  
@@ -94,17 +94,17 @@ sys.dm_exec_describe_first_result_set_for_object
 |**error_state**|**int**|関数によって返される状態メッセージが格納されます。 エラーが発生しなかった場合は。 列には NULL が含まれます。|  
 |**error_message**|**nvarchar (4,096)**|関数によって返されるメッセージが格納されます。 エラーが発生しなかった場合は、NULL が格納されます。|  
 |**error_type**|**int**|返されるエラーを表す整数が格納されます。 error_type_desc にマップされます。 解説の下の一覧を参照してください。|  
-|**error_type_desc**|**nvarchar (60)**|返されるエラーを表す短い大文字の文字列が格納されます。 error_type にマップされます。 解説の下の一覧を参照してください。|  
+|**error_type_desc**|**nvarchar(60)**|返されるエラーを表す短い大文字の文字列が格納されます。 error_type にマップされます。 解説の下の一覧を参照してください。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この関数は、**sp_describe_first_result_set** と同じアルゴリズムを使用します。 詳細については、[sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) を参照してください。  
   
  次の表に、エラーの種類とその説明を示します。  
   
-|error_type|error_type|[説明]|  
+|error_type|error_type|説明|  
 |-----------------|-----------------|-----------------|  
-|1 で保護されたプロセスとして起動されました|MISC|他の項目に記載されていないすべてのエラー。|  
-|2|構文|バッチ内で構文エラーが発生しました。|  
+|1|MISC|他の項目に記載されていないすべてのエラー。|  
+|2|SYNTAX|バッチ内で構文エラーが発生しました。|  
 |3|CONFLICTING_RESULTS|2 つの有効な最初のステートメント間に競合があるため、結果を特定できませんでした。|  
 |4|DYNAMIC_SQL|動的 SQL が最初の結果を返す可能性があるため、結果を特定できませんでした。|  
 |5|CLR_PROCEDURE|CLR ストアド プロシージャが最初の結果を返す可能性があるため、結果を特定できませんでした。|  
@@ -138,7 +138,7 @@ GO
 ```  
   
 ### <a name="b-combining-the-sysdm_exec_describe_first_result_set_for_object-function-and-a-table-or-view"></a>B. Dm_exec_describe_first_result_set_for_object 関数とテーブルまたはビューの結合  
- 次の例では、両方のシステムカタログビューを使用し**** て、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース内のすべてのストアドプロシージャの結果セットのメタデータを表示する、dm_exec_describe_first_result_set_for_object 関数。  
+ 次の例では、両方のシステムカタログビューを使用し**sys.dm_exec_describe_first_result_set_for_object**て、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース内のすべてのストアドプロシージャの結果セットのメタデータを表示する、dm_exec_describe_first_result_set_for_object 関数。  
   
 ```  
 USE AdventureWorks2012;  

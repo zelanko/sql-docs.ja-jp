@@ -18,10 +18,10 @@ ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7f0196a710f9349e109bcf956eca6e2310c1e051
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72252196"
 ---
 # <a name="sp_oamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
@@ -92,16 +92,16 @@ sp_OAMethod objecttoken , methodname
   
  列内のすべてのデータ値が同じデータ型を共有する場合は、そのデータ型を列全体で使用します。 列のデータ値のデータ型が異なる場合、列全体のデータ型が次のグラフに基づいて選択されます。  
   
-||INT|float|money|DATETIME|varchar|nvarchar|  
+||int|float|money|DATETIME|varchar|nvarchar|  
 |------|---------|-----------|-----------|--------------|-------------|--------------|  
 |**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**money**|**money**|**money**|**money**|**varchar**|**varchar**|**nvarchar**|  
-|**DATETIME**|**varchar**|**varchar**|**varchar**|**DATETIME**|**varchar**|**nvarchar**|  
+|**datetime**|**varchar**|**varchar**|**varchar**|**datetime**|**varchar**|**nvarchar**|  
 |**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**nvarchar**|  
 |**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  また、 **sp_OAMethod**を使用してプロパティ値を取得することもできます。  
   
 ## <a name="permissions"></a>アクセス許可  

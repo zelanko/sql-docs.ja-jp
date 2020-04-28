@@ -11,14 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: e7a66be0d4e002643ffe1c72ce8c44aa50f61c0e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952623"
 ---
 # <a name="deployment-checklist-install-reporting-services-into-an-existing-sharepoint-farm"></a>配置のチェック リスト: 既存の SharePoint ファームへの Reporting Services のインストール
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint レポート サーバーは、新規または既存の SharePoint ファームにインストールできます。 このトピックでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を既存の SharePoint ファームにインストールする場合に想定されるシナリオとベスト プラクティスについて説明します。  
   
 ## <a name="prerequisites"></a>前提条件  
@@ -36,7 +35,7 @@ ms.locfileid: "71952623"
   
 |構成の開始|ワークフロー|構成の終了|説明|  
 |----------------------------|--------------|--------------------------|--------------|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]ローカルモードの場合|インストール|接続モードの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]||  
+|ローカル モードの [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|インストール|接続モードの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]||  
 |接続モードの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] または [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|インプレース アップグレード|接続モードの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]||  
 |接続モードの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] または [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|移行|接続モードの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]||  
   
@@ -52,7 +51,7 @@ ms.locfileid: "71952623"
 |**追加の構成**||  
 |ドキュメント ライブラリに SSRS のコンテンツの種類を追加します。|[SharePoint 統合モードの &#40;Reporting Services ライブラリにレポートサーバーのコンテンツの種類を追加&#41;](../../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)|  
 |SQL Server エージェントを準備します。|[SSRS サービス アプリケーションを使用するためのサブスクリプションと警告の準備](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)|  
-|サービス アプリケーションの電子メール設定を構成します。|[SharePoint 2010 および SharePoint 2013 &#40;Reporting Services サービスアプリケーションの電子メールを構成&#41;](../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|  
+|サービス アプリケーションの電子メール設定を構成します。|[Reporting Services サービス アプリケーションの電子メールの構成 (SharePoint 2010 および SharePoint 2013)](../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|  
 |Claims to Windows Token Service (C2WTS) を構成します。|[Windows トークンサービスに対するクレーム &#40;C2WTS&#41; と Reporting Services](../../../2014/sql-server/install/claims-to-windows-token-service-c2wts-and-reporting-services.md)|  
   
 ## <a name="migration-checklist"></a>移行のチェック リスト  
@@ -60,19 +59,16 @@ ms.locfileid: "71952623"
   
 |手順|Link|  
 |----------|----------|  
-|新規サーバーをインストールおよび構成します。 この製品には次のツールが含まれています。<br /><br /> SharePoint 製品準備ツール<br /><br /> SharePoint 2010 製品<br /><br /> SharePoint 2010 SP1<br /><br /> SharePoint モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]<br /><br /> SharePoint 2010 製品用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドイン|[SharePoint 2010 用 Reporting Services SharePoint モードのインストール](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)|  
+|新規サーバーをインストールおよび構成します。 これには、次の内容が含まれます。<br /><br /> SharePoint 製品準備ツール<br /><br /> SharePoint 2010 製品<br /><br /> SharePoint 2010 SP1<br /><br /> SharePoint モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]<br /><br /> SharePoint 2010 製品用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドイン|[SharePoint 2010 用 Reporting Services SharePoint モードのインストール](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)|  
 |少なくとも 1 つの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションを作成します。||  
-|
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データベースをバックアップします。||  
-|
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 暗号化キーをバックアップします。||  
-|
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データベースと暗号化キーを復元します。||  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データベースをバックアップします。||  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 暗号化キーをバックアップします。||  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データベースと暗号化キーを復元します。||  
 |すべての Web アプリケーションを新規 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]サービス アプリケーションにマップします。|これで新しいインストールが **機能**します。|  
 |古いサーバーの統合 URL を削除します。|SharePoint サーバーの全体管理の **[アプリケーションの全般設定]** ページで、 **[Reporting Services 統合]** をクリックします。|  
 |必要に応じて、古いインストールから [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をアンインストールします。||  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>次のステップ  
   
 ## <a name="see-also"></a>参照  
  [Sharepoint モードのインストール Reporting Services sharepoint 2010 および SharePoint 2013&#41;&#40;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   

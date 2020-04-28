@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cbfa717aa70bb057734a285e2b6d84fdc6f4961a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71163932"
 ---
 # <a name="sysserver_permissions-transact-sql"></a>sys.server_permissions (Transact-SQL)
@@ -32,18 +32,18 @@ ms.locfileid: "71163932"
 
   サーバーレベルの権限ごとに1行の値を返します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**講義**|**tinyint**|権限が存在するリソースのクラスの識別子。<br /><br /> 100 = サーバー<br /><br /> 101 = サーバープリンシパル<br /><br /> 105 = エンドポイント|  
-|**class_desc**|**nvarchar (60)**|権限が存在するクラスの説明です。 次のいずれかの値:<br /><br /> **SERVER**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **ENDPOINT**|  
+|**class**|**tinyint**|権限が存在するリソースのクラスの識別子。<br /><br /> 100 = サーバー<br /><br /> 101 = サーバープリンシパル<br /><br /> 105 = エンドポイント|  
+|**class_desc**|**nvarchar(60)**|権限が存在するクラスの説明です。 次のいずれかの値です。<br /><br /> **SERVER**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **ENDPOINT**|  
 |**major_id**|**int**|権限が存在するセキュリティ保護可能なリソースの ID。クラスに基づいて解釈されます。 ほとんどの場合、これはクラスが表すものに適用される ID の種類にすぎません。 標準以外のリソースに対する解釈は、次のようになります。<br /><br /> 100 = 常に0|  
 |**minor_id**|**int**|権限が存在するセカンダリ ID。クラスに従って解釈されます。|  
 |**grantee_principal_id**|**int**|権限が付与されているサーバープリンシパル ID。|  
 |**grantor_principal_id**|**int**|サーバープリンシパル-これらのアクセス許可の権限の許可の付与の ID。|  
 |**type**|**char (4)**|サーバー権限の種類。 権限の種類の一覧については、次の表を参照してください。|  
-|**permission_name**|**nvarchar(128**|アクセス許可の名前。|  
-|**状態**|**char (1)**|アクセス許可の状態:<br /><br /> D = 拒否<br /><br /> R = 取り消し<br /><br /> G = 許可<br /><br /> W = grant With Grant option|  
-|**state_desc**|**nvarchar (60)**|権限の状態の説明。<br /><br /> DENY<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
+|**permission_name**|**nvarchar(128)**|アクセス許可の名前。|  
+|**state**|**char (1)**|アクセス許可の状態:<br /><br /> D = 拒否<br /><br /> R = 取り消し<br /><br /> G = 許可<br /><br /> W = grant With Grant option|  
+|**state_desc**|**nvarchar(60)**|権限の状態の説明。<br /><br /> DENY<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
   
 |アクセス許可の種類|アクセス許可名|適用されるセキュリティ保護可能なリソース|  
 |---------------------|---------------------|--------------------------|  
@@ -91,9 +91,9 @@ ms.locfileid: "71163932"
 ## <a name="permissions"></a>アクセス許可  
  すべてのユーザーは自分の権限を参照できます。 他のログインの権限を表示するには、VIEW DEFINITION、ALTER ANY LOGIN、またはログインに対する権限が必要です。 ユーザー定義サーバーロールを表示するには、ALTER ANY SERVER ROLE または ROLE のメンバーシップが必要です。  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次のクエリは、サーバープリンシパルに対して明示的に許可または拒否された権限を一覧表示します。  
   
 > [!IMPORTANT]  
@@ -110,6 +110,6 @@ JOIN sys.server_permissions AS pe
 ## <a name="see-also"></a>参照  
  [セキュリティカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Securables](../../relational-databases/security/securables.md)   
- [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [アクセス許可 &#40;データベースエンジン&#41;](../../relational-databases/security/permissions-database-engine.md)   
- [権限の階層 &#40;データベースエンジン&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)  
+ [権限の階層 &#40;データベース エンジン&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)  

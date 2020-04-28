@@ -10,10 +10,10 @@ ms.assetid: 9e77e4b0-40c0-455c-8431-ca5d43849aa7
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 10be1dc3652c944b9de08a01b0f4cdff5ae5849a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70176239"
 ---
 # <a name="connecting-to-azure-sql-db-sybasetosql"></a>Azure SQL DB への接続 (SybaseToSQL)
@@ -54,8 +54,7 @@ Sybase データベースオブジェクトを Azure SQL DB 構文に変換す�
   
 6.  SSMA では、Azure SQL DB への暗号化接続を推奨しています。  
   
-7.  
-  **[接続]** をクリックします。  
+7.  **[Connect]** をクリックします。  
   
 > [!IMPORTANT]  
 > SSMA for Sybase は、Azure SQL DB の**master**データベースへの接続をサポートしていません。  
@@ -73,7 +72,7 @@ Azure SQL DB データベースに関するメタデータは自動的に更新�
   
 3.  [データベース]、または個々のデータベースまたはデータベーススキーマを右クリックし、[**データベースとの同期**] を選択します。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 移行の次のステップは、プロジェクトのニーズによって異なります。  
   
 -   Sybase スキーマと Azure SQL DB データベースおよびスキーマ間のマッピングをカスタマイズするには、「 [SYBASE ASE スキーマを SQL Server スキーマ &#40;SybaseToSQL&#41;にマップ](../../ssma/sybase/mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md)する」を参照してください。  

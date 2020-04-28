@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c320db0f568b7182a48e5b1719f68d17ade11629
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72688898"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>メモリ最適化テーブルのテーブルと行のサイズ
@@ -34,7 +34,7 @@ ms.locfileid: "72688898"
   
  次の図は、インデックスと行を含むテーブルを示しています。行には行ヘッダーと行本文が含まれています。  
   
- ![メモリ最適化テーブル。](../../database-engine/media/hekaton-guide-1.gif "メモリ最適化テーブル。")  
+ ![メモリ最適化テーブル](../../database-engine/media/hekaton-guide-1.gif "メモリ最適化テーブル")  
 インデックスと行で構成されたメモリ最適化テーブル。  
   
  テーブルのメモリ内サイズ (バイト単位) は、次のように計算されます。  
@@ -56,7 +56,7 @@ ms.locfileid: "72688898"
 [row header size] = 24 + 8 * [number of indices]  
 ```  
   
- **行本文のサイズ**  
+ **行本文サイズ**  
   
  行本文サイズ (row body size) の計算について、次の表で説明します。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "72688898"
   
  [実際の行本文サイズ] = SUM([シャロー型のサイズ]) + 2 + 2 * [ディープ型の列の数] として指定した場合、行本文サイズの計算について、次の表で説明します。  
   
-|Section|Size|説明|  
+|セクション|サイズ|説明|  
 |-------------|----------|--------------|  
 |シャロー型の列|SUM([シャロー型のサイズ] (size of shallow types))<br /><br /> **個々の型のサイズは次のとおりです。**<br /><br /> Bit &#124; 1<br /><br /> Tinyint &#124; 1<br /><br /> Smallint &#124; 2<br /><br /> Int &#124; 4<br /><br /> Real &#124; 4<br /><br /> Smalldatetime &#124; 4<br /><br /> Smallmoney &#124; 4<br /><br /> Bigint &#124; 8<br /><br /> Datetime &#124; 8<br /><br /> Datetime2 &#124; 8<br /><br /> Float 8<br /><br /> Money 8<br /><br /> Numeric (precision <= 18) &#124; 8<br /><br /> Time &#124; 8<br /><br /> 数値 (有効桁数>18) &#124; 16<br /><br /> Uniqueidentifier &#124; 16||  
 |シャロー列の余白|設定可能な値は、次のとおりです。<br /><br /> ディープ型の列が存在し、シャロー列の合計データ サイズが奇数になる場合は 1。<br /><br /> それ以外の場合は、0。|ディープ型は、(var)binary 型と (n)(var)char 型です。|  
@@ -82,7 +82,7 @@ ms.locfileid: "72688898"
 |可変長のディープ型の列の [計算されたサイズ]|SUM([可変長のディープ型の列の計算されたサイズ])<br /><br /> 個々の列の計算されたサイズは次のとおりです。<br /><br /> varchar(i) および varbinary(i) の場合は i。<br /><br /> nvarchar(i) の場合は 2 * i。|この行は、[計算された行本文サイズ] (computed row body size) にのみ適用されます。<br /><br /> 可変長のディープ型の列では、列の型が varchar(i)、nvarchar(i)、または varbinary(i) です。 計算されたサイズは、列の最大長 (i) で決まります。|  
 |可変長のディープ型の列の [実際のサイズ]|SUM([可変長のディープ型の列の実際のサイズ])<br /><br /> 個々の列の実際のサイズは次のとおりです。<br /><br /> varchar(i) の場合は n (ここで n は列に格納されている文字数)。<br /><br /> nvarchar(i) の場合は 2 * n (ここで n は列に格納されている文字数)。<br /><br /> varbinary(i) の場合は n (ここで n は列に格納されているバイト数)。|この行は、[実際の行本文サイズ] (actual row body size) にのみ適用されます。<br /><br /> 実際のサイズは、行の列内に格納されているデータで決まります。|  
   
-##  <a name="bkmk_RowStructure"></a>行構造  
+##  <a name="row-structure"></a><a name="bkmk_RowStructure"></a> 行構造  
  メモリ最適化テーブルの行は、次のコンポーネントを備えています。  
   
 -   行ヘッダーは、行のバージョン管理を実装するために必要なタイムスタンプを格納したものです。 行ヘッダーにはほかにも、(上で説明した) ハッシュ バケットの行のチェーン関係を実装するためのインデックス ポインターが格納されています。  
@@ -91,13 +91,13 @@ ms.locfileid: "72688898"
   
  次の図は、2 種類のインデックスを備えたテーブルの行構造を示したものです。  
   
- ![2 つのインデックスがあるテーブルの行構造。](../../database-engine/media/hekaton-tables-4.gif "2 つのインデックスがあるテーブルの行構造。")  
+ ![2 つのインデックスがあるテーブルの行構造](../../database-engine/media/hekaton-tables-4.gif "2 つのインデックスがあるテーブルの行構造")  
   
  開始タイムスタンプおよび終了タイムスタンプは、特定の行バージョンが有効である期間を示します。 この間隔で開始されるトランザクションで、この行バージョンが使用されることがあります。 詳細については、「[メモリ最適化テーブルを使用するトランザクション](memory-optimized-tables.md)」を参照してください。  
   
  インデックス ポインターは、ハッシュ バケットに属しているチェーン内の次の行を参照します。 次の図は、(名前と都市の) 2 列があり、名前の列用と都市の列用にそれぞれ 1 つのインデックスを備えたテーブルの構造を示しています。  
   
- ![2 つの列とインデックスを持つテーブルの構造。](../../database-engine/media/hekaton-tables-5.gif "2 つの列とインデックスを持つテーブルの構造。")  
+ ![2 つの列とインデックスを持つテーブルの構造](../../database-engine/media/hekaton-tables-5.gif "2 つの列とインデックスを持つテーブルの構造")  
   
  この図では、John と Jane の名前がハッシュされ、最初のバケットに格納されます。 Susan は、ハッシュされて 2 番目のバケットに格納されます。 Beijing と Bogota の各都市は、ハッシュされて最初のバケットに格納されます。 Paris と Prague は、ハッシュされて 2 番目のバケットに格納されます。  
   
@@ -117,20 +117,20 @@ ms.locfileid: "72688898"
   
  時間が 200 より大きくなると、テーブルには次の行が含まれます。  
   
-|Name|City|  
+|名前|City|  
 |----------|----------|  
 |John|北京|  
 |Jane|Prague|  
   
  ただし、開始時刻が 100 のアクティブなトランザクションでは、以下のバージョンのテーブルが表示されます。  
   
-|Name|City|  
+|名前|City|  
 |----------|----------|  
-|John|パリ|  
+|John|Paris|  
 |Jane|Prague|  
 |Susan|Bogata|  
   
-##  <a name="bkmk_ExampleComputation"></a>例: テーブルと行のサイズの計算  
+##  <a name="example-table-and-row-size-computation"></a><a name="bkmk_ExampleComputation"></a> 例: テーブルと行のサイズの計算  
  ハッシュ インデックスの場合、実際のバケット数は最も近い 2 のべき乗に切り上げられます。 たとえば、指定された bucket_count が 100,000 の場合、インデックスの実際のバケット数は 131,072 です。  
   
  次の定義を含む Orders テーブルがあるとします。  

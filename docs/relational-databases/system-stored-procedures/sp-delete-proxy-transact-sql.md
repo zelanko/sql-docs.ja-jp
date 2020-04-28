@@ -19,10 +19,10 @@ ms.assetid: 44a1db13-b7f2-4dab-a1b5-b8dafb41737c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fd717f645b9e53d08f6dabbfc1ea5779c373056e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72305110"
 ---
 # <a name="sp_delete_proxy-transact-sql"></a>sp_delete_proxy (Transact-sql)
@@ -48,9 +48,9 @@ sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ None  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ** \@Proxy_name**または** \@proxy_id**のいずれかを指定する必要があります。 両方の引数を指定する場合は、両方とも同じプロキシを参照する必要があります。異なるプロキシを参照する場合、ストアド プロシージャは失敗します。  
   
  指定されたプロキシをジョブステップが参照している場合、プロキシを削除することはできず、ストアドプロシージャは失敗します。  
@@ -58,7 +58,7 @@ sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'
 ## <a name="permissions"></a>アクセス許可  
  既定では、 **sp_delete_proxy**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、 `Catalog application proxy`プロキシを削除します。  
   
 ```  

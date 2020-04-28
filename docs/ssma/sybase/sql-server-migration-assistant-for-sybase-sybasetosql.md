@@ -11,10 +11,10 @@ author: Jtoland
 ms.author: Jtoland
 manager: murato
 ms.openlocfilehash: 3913ae22155ca5e560db7fee946df0f8062a23b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72252156"
 ---
 # <a name="sql-server-migration-assistant-for-sybase-sybasetosql"></a>Sybase の SQL Server Migration Assistant (SybaseToSQL)
@@ -25,7 +25,7 @@ ms.locfileid: "72252156"
   
 ## <a name="contents"></a>内容  
   
-|Section|[説明]|
+|Section|説明|
 |-----------|---------------|
 |[SSMA for Sybase &#40;SybaseToSQL&#41;の新機能](../../ssma/sybase/what-s-new-in-ssma-for-sybase-sybasetosql.md)|SSMA リリースに対する変更の一覧を示します。|  
 |[SSMA for Sybase &#40;SybaseToSQL&#41;のインストール](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)|SSMA for Sybase クライアントおよび必要なコンポーネントを、インスタンスを実行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]しているコンピューターにインストールするための前提条件と手順を説明した記事が含まれています。|  

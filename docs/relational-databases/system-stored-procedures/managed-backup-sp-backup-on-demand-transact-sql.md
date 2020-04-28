@@ -21,10 +21,10 @@ ms.assetid: 638f809f-27fa-4c44-a549-9cf37ecc920c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e34cf20585ea7dcd3690d80ee415fc274bf852ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70155399"
 ---
 # <a name="managed_backupsp_backup_on_demand-transact-sql"></a>managed_backup。 sp_backup_on_demand (Transact-sql)
@@ -48,7 +48,7 @@ EXEC managed_backup.sp_backup_on_demand
   
 ```  
   
-##  <a name="Arguments"></a>数値  
+##  <a name="arguments"></a><a name="Arguments"></a>数値  
  @database_name  
  バックアップを実行するデータベースの名前を指定します。 @database_nameは**SYSNAME**です。  
   
@@ -63,7 +63,7 @@ EXEC managed_backup.sp_backup_on_demand
 ### <a name="permissions"></a>アクセス許可  
  **Db_backupoperator**データベースロールのメンバーシップ、 **ALTER ANY CREDENTIAL**権限、および**Sp_delete_backuphistory**ストアドプロシージャに対する**EXECUTE**権限が必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、データベース ' TestDB ' のデータベースバックアップ要求を作成します。 このデータベースは[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]有効になっています。  
   
 ```  

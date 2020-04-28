@@ -16,10 +16,10 @@ ms.assetid: 5a862f1a-2be1-4758-9954-4cdc8c77d149
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 02ffdd0facfedd1b9eb6d8eee083f819566d818d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72006094"
 ---
 # <a name="sp_validatemergepublication-transact-sql"></a>sp_validatemergepublication (Transact-SQL)
@@ -43,16 +43,16 @@ sp_validatemergepublication [@publication=] 'publication'
   
 `[ @level = ] level`実行する検証の種類を示します。 *レベル*は**tinyint**,、既定値はありません。 レベルには次のいずれかの値を指定できます。  
   
-|レベルの値|[説明]|  
+|レベルの値|説明|  
 |-----------------|-----------------|  
 |**1**|行数のみの検証。|  
 |**2**|行数とチェックサムの検証。 サブスクライバー [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]の場合、これは自動的に**3**に設定されます。|  
-|**番**|これは推奨値です。|  
+|**3**|これは推奨値です。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_validatemergepublication**は、マージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  

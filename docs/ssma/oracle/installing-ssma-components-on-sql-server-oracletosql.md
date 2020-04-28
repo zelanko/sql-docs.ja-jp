@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 1f0cea859e9465eebefebc061ee51107dc7844aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71713312"
 ---
 # <a name="installing-ssma-components-on-sql-server-oracletosql"></a>SQL Server での SSMA コンポーネントのインストール (OracleToSQL)
@@ -62,8 +62,7 @@ SSMA for Oracle サーバーコンポーネントをに[!INCLUDE[ssNoVersion](..
   
 3. [ **Ssma For Oracle Extension Pack] をダブルクリックします。*n*。.Exe をインストールします**。  
   
-4. 
-  **[ようこそ]** ページで **[次へ]** をクリックします。  
+4. **[ようこそ]** ページで **[次へ]** をクリックします。  
   
 5. [使用許諾**契約書**] ページで、使用許諾契約書を読みます。 同意する場合は、[**使用許諾契約書に同意し**ます] チェックボックスをオンにし、[**次へ**] を選択します。  
   
@@ -110,7 +109,7 @@ SSMA for Oracle サーバーコンポーネントをに[!INCLUDE[ssNoVersion](..
 
 にデータを移行するたび[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に、ssma に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]よってエージェントジョブが作成されます。 これらのジョブには**ssma_oracle データ移行パッケージ {GUID}** という名前が付け[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]られ、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [ジョブ] フォルダーのの [エージェント] ノードに表示されます。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [SSMA for Oracle Client &#40;OracleToSQL&#41;のインストール](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  
 [Oracle データベースの SQL Server &#40;OracleToSQL&#41;への移行](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  

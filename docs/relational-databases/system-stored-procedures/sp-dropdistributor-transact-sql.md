@@ -16,10 +16,10 @@ ms.assetid: 0644032f-5ff0-4718-8dde-321bc9967a03
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a82a3bedf78eb69dfc4a1736e212164341077601
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72304978"
 ---
 # <a name="sp_dropdistributor-transact-sql"></a>sp_dropdistributor (Transact-SQL)
@@ -53,7 +53,7 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_dropdistributor**は、すべての種類のレプリケーションで使用されます。  
   
  他のパブリッシャーまたは配布オブジェクトがサーバーに存在する場合、 ** \@no_checks**が**1**に設定されていないと**sp_dropdistributor**は失敗します。  
@@ -71,6 +71,6 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
  [sp_adddistributor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
  [sp_changedistributor_property &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   
  [sp_helpdistributor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
- [レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

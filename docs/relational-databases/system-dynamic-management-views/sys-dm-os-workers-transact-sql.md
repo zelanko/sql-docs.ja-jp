@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 87cc5d8dc07c0c4c927b7214bca01bfec09555e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72289351"
 ---
 # <a name="sysdm_os_workers-transact-sql"></a>dm_os_workers (Transact-sql)
@@ -35,7 +35,7 @@ ms.locfileid: "72289351"
 > [!NOTE]  
 >  またはから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]これを[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼び出すには、 **dm_pdw_nodes_os_workers**という名前を使用します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |worker_address|**varbinary (8)**|ワーカーのメモリアドレス。|  
 |status|**int**|内部使用のみです。|  
@@ -58,11 +58,11 @@ ms.locfileid: "72289351"
 |exception_severity|**int**|ワーカーで前回発生した例外の重大度。|  
 |exception_address|**varbinary (8)**|例外をスローしたコード アドレス。|  
 |affinity|**bigint**|ワーカーのスレッド関係。 [Dm_os_threads &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md)のスレッドの関係と一致します。|  
-|state|**nvarchar (60)**|ワーカーの状態。 次のいずれかの値を指定できます。<br /><br /> INIT = Worker は現在初期化中です。<br /><br /> RUNNING = ワーカーは、現在非プリエンプティブまたはプリエンプティブのいずれかで実行中です。<br /><br /> RUNNABLE = ワーカーは、スケジューラ上で実行できる状態です。<br /><br /> SUSPENDED = ワーカーは現在中断されています。イベントによるシグナル送信を待機中です。|  
+|state|**nvarchar(60)**|ワーカーの状態。 値は、次のいずれかです。<br /><br /> INIT = Worker は現在初期化中です。<br /><br /> RUNNING = ワーカーは、現在非プリエンプティブまたはプリエンプティブのいずれかで実行中です。<br /><br /> RUNNABLE = ワーカーは、スケジューラ上で実行できる状態です。<br /><br /> SUSPENDED = ワーカーは現在中断されています。イベントによるシグナル送信を待機中です。|  
 |start_quantum|**bigint**|ワーカーの現在の実行が開始された時間 (ミリ秒単位)。|  
 |end_quantum|**bigint**|このワーカーの現在の実行が終了するまでの時間 (ミリ秒単位)。|  
-|last_wait_type|**nvarchar (60)**|最後の待機の種類。 待機の種類の一覧については、「 [sys. dm_os_wait_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)」を参照してください。|  
-|return_code|**int**|前回の待機からの戻り値。 次のいずれかの値を指定できます。<br /><br /> 0 =SUCCESS<br /><br /> 3 = デッドロック<br /><br /> 4 = PREMATURE_WAKEUP<br /><br /> 258 = TIMEOUT|  
+|last_wait_type|**nvarchar(60)**|最後の待機の種類。 待機の種類の一覧については、「 [sys. dm_os_wait_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)」を参照してください。|  
+|return_code|**int**|前回の待機からの戻り値。 値は、次のいずれかです。<br /><br /> 0 =SUCCESS<br /><br /> 3 = デッドロック<br /><br /> 4 = PREMATURE_WAKEUP<br /><br /> 258 = TIMEOUT|  
 |quantum_used|**bigint**|内部使用のみです。|  
 |max_quantum|**bigint**|内部使用のみです。|  
 |boost_count|**int**|内部使用のみです。|  
@@ -76,17 +76,16 @@ ms.locfileid: "72289351"
 |processor_group|**smallint**|このスレッドに割り当てられているプロセッサ グループ ID が格納されます。|  
 |pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ワーカーの状態が RUNNING で、非プリエンプティブに実行されている場合、そのワーカーのアドレスは、sys.dm_os_schedulers 内の active_worker_address と一致します。  
   
- イベントで待機中のワーカーがシグナルを受け取ると、そのワーカーは実行可能キューの先頭に置かれます。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でこれが 1,000 回続けて発生すると、ワーカーはキューの末尾に置かれます。 ワーカーがキューの末尾に移動すると、パフォーマンスに影響が生じる場合があります。  
+ イベントで待機中のワーカーがシグナルを受け取ると、そのワーカーは実行可能キューの先頭に置かれます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でこれが 1,000 回続けて発生すると、ワーカーはキューの末尾に置かれます。 ワーカーがキューの末尾に移動すると、パフォーマンスに影響が生じる場合があります。  
   
 ## <a name="permissions"></a>アクセス許可
 で[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]は、 `VIEW SERVER STATE`権限が必要です。   
 Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、データベース`VIEW DATABASE STATE`の権限が必要です。 Standard [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルと Basic レベルでは、 `Server Admin`ロールのメンバーシップ、また`Azure Active Directory admin`はアカウントが必要です。   
 
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次のクエリを使用すると、SUSPENDED または RUNNABLE 状態でのワーカーの実行時間を調べることができます。  
   
 ```sql
@@ -138,5 +137,5 @@ SELECT
   
 ## <a name="see-also"></a>参照  
 [SQL Server オペレーティングシステム関連の動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
-[クエリ処理アーキテクチャ ガイド](../../relational-databases/query-processing-architecture-guide.md#DOP)       
+[クエリ処理のアーキテクチャガイド](../../relational-databases/query-processing-architecture-guide.md#DOP)       
 [スレッドおよびタスクのアーキテクチャ ガイド](../../relational-databases/thread-and-task-architecture-guide.md)    

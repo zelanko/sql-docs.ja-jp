@@ -17,10 +17,10 @@ ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fa5834c14bfb1fafe3123c28a60359d64d059dfc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71342517"
 ---
 # <a name="sysdm_os_enumerate_fixed_drives-transact-sql"></a>dm_os_enumerate_fixed_drives (Transact-sql)
@@ -31,7 +31,7 @@ SQL Server 2019 で導入されました。
 
 など`C:\`のドライブ文字にマウントされているボリュームを列挙します。
 
-|列名|データ型|[説明]|
+|列名|データ型|説明|
 |-----------------|---------------|-----------------|  
 |`fixed_drive_path`|`nvarchar(512)`|ボリュームへのパス (など`C:\`)。|  
 |`drive_type`|`int`|ドライブの種類のコード。 「 [ `GetDriveTypeW`関数](/windows/win32/api/fileapi/nf-fileapi-getdrivetypew)」を参照してください。|
@@ -44,5 +44,5 @@ SQL Server 2019 で導入されました。
 
 ## <a name="see-also"></a>参照  
 
- [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [I/o 関連の動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)  

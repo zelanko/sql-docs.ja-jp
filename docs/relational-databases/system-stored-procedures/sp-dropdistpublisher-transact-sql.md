@@ -16,10 +16,10 @@ ms.assetid: c0bdd3de-3be0-455c-898a-98d4660e7ce3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a15162774d3814e574735d8e1d5fd5e6b769327f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72278128"
 ---
 # <a name="sp_dropdistpublisher-transact-sql"></a>sp_dropdistpublisher (Transact-sql)
@@ -56,7 +56,7 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_dropdistpublisher**は、すべての種類のレプリケーションで使用されます。  
   
  Oracle パブリッシャーを削除できない場合は、パブリッシャーを削除できないと**sp_dropdistpublisher**によってエラーが返され、パブリッシャーのディストリビューターオブジェクトが削除されます。  
@@ -72,6 +72,6 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
  [sp_adddistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_changedistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
  [sp_helpdistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
- [レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

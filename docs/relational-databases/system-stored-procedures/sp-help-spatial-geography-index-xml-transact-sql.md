@@ -18,10 +18,10 @@ ms.assetid: 821d4127-3ce5-4474-8561-043404a20d81
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: c2503e5d3b94b5bc73d9bf2427e0162ba2eda2fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72304904"
 ---
 # <a name="sp_help_spatial_geography_index_xml-transact-sql"></a>sp_help_spatial_geography_index_xml (Transact-sql)
@@ -53,7 +53,7 @@ sp_help_spatial_geography_index_xml [ @tabname =] 'tabname'
 ## <a name="permissions"></a>アクセス許可  
  プロシージャにアクセスするには、ユーザーに PUBLIC ロールが割り当てられている必要があります。 サーバーとオブジェクトに対する読み取りアクセス権限が必要です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  NULL 値を含むプロパティは、返されるセットに含まれません。  
   
 ## <a name="example"></a>例  
@@ -73,7 +73,7 @@ select @x.value('(/Primary_Filter_Efficiency/text())[1]', 'float');
   
  **Geography**の境界ボックスは、地球全体です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 ## <a name="see-also"></a>参照  
  [空間インデックスストアドプロシージャ](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   

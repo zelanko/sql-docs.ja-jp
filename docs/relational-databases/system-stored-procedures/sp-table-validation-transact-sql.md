@@ -16,10 +16,10 @@ ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 736b4f00e8d33a6bd1e095addc5219fe305ae26a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72173552"
 ---
 # <a name="sp_table_validation-transact-sql"></a>sp_table_validation (Transact-sql)
@@ -63,7 +63,7 @@ sp_table_validation [ @table = ] 'table'
   
 `[ @full_or_fast = ] full_or_fast`行数を計算するために使用されるメソッドです。 *full_or_fast*は**tinyint**,、既定値は**2**,、これらの値のいずれかを指定することができます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**0**|COUNT(*) を使用してフル カウントします。|  
 |**1**|Sysindexes から高速にカウントさ**れ**ます。 **Sysindexes**での行のカウントは、実際のテーブルの行をカウントするよりもはるかに高速です。 ただし、 **sysindexes**は遅延更新されるため、行数が正確でない場合があります。|  
@@ -80,7 +80,7 @@ sp_table_validation [ @table = ] 'table'
   
  行数の検証を実行し、予想される行数がテーブルの数と等しい場合、 **sp_table_validation**はテーブルが行数の検証に合格したというメッセージを返します。 それ以外の場合は、テーブルが同期されていない可能性があるというメッセージを返し、予想される行数と実際の行数との差を報告します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_table_validation**は、すべての種類のレプリケーションで使用されます。 **sp_table_validation**は、Oracle パブリッシャーではサポートされていません。  
   
  Checksum は、ページ上の行イメージ全体で32ビット巡回冗長検査 (CRC) を計算します。 チェックサムは、列を選択して検査するわけではなく、テーブルのビューや列方向のパーティションで動作できません。 また、チェックサムでは、 **text**列と**image**列の内容がスキップされます (仕様)。  
@@ -94,9 +94,9 @@ sp_table_validation [ @table = ] 'table'
   
 ## <a name="see-also"></a>参照  
  [チェックサム &#40;Transact-sql&#41;](../../t-sql/functions/checksum-transact-sql.md)   
- [@@ROWCOUNT &#40;transact-sql&#41;](../../t-sql/functions/rowcount-transact-sql.md)   
+ [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)   
  [sp_article_validation &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
  [sp_publication_validation &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

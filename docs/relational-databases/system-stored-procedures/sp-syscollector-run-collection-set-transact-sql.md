@@ -19,10 +19,10 @@ ms.assetid: 7bbaee48-dfc7-45c0-b11f-c636b6a7e720
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3807a53921572bbe20b4c459bff34958cbb42001
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72304996"
 ---
 # <a name="sp_syscollector_run_collection_set-transact-sql"></a>sp_syscollector_run_collection_set (Transact-SQL)
@@ -53,7 +53,7 @@ sp_syscollector_run_collection_set [[ @collection_set_id = ] collection_set_id ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  *Collection_set_id*または*名前*には値を指定する必要があります。どちらも NULL にすることはできません。  
   
  この手順では、コレクションを開始し、指定されたコレクションセットのジョブをアップロードします。また、コレクションセットの** \@collection_mode**が非キャッシュ (1) に設定されている場合は、直ちにコレクションエージェントジョブを開始します。 詳細については、「 [sp_syscollector_create_collection_set &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)」を参照してください。  

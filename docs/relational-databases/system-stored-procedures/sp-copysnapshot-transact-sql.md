@@ -16,10 +16,10 @@ ms.assetid: a012a32f-6f26-45bf-8046-b51cd7fec455
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d8b34915371b164a4167058729d2720d9e60cdcd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154606"
 ---
 # <a name="sp_copysnapshot-transact-sql"></a>sp_copysnapshot (Transact-SQL)
@@ -50,7 +50,7 @@ sp_copysnapshot [ @publication = ] 'publication', [ @destination_folder = ] 'des
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_copysnapshot**は、すべての種類のレプリケーションで使用されます。 バージョン 7.0 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以前を実行しているサブスクライバーでは、代替スナップショットの場所を使用できません。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -58,6 +58,6 @@ sp_copysnapshot [ @publication = ] 'publication', [ @destination_folder = ] 'des
   
 ## <a name="see-also"></a>参照  
  [代替スナップショットフォルダーの場所](../../relational-databases/replication/snapshot-options.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

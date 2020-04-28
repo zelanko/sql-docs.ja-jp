@@ -11,10 +11,10 @@ author: Jtoland
 ms.author: Jtoland
 manager: murato
 ms.openlocfilehash: 62b4910d6073da7ec845cc5e754a4e005f5d1461
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72252167"
 ---
 # <a name="sql-server-migration-assistant-for-db2-db2tosql"></a>DB2 の SQL Server Migration Assistant (DB2ToSQL)
@@ -24,7 +24,7 @@ ms.locfileid: "72252167"
   
 ## <a name="contents"></a>内容  
   
-|Section|[説明]|  
+|Section|説明|  
 |-----------|---------------|
 |[SSMA for DB2 の新機能](https://msdn.microsoft.com/1cc38f85-3caa-42d0-8c76-a380c1d15c67)|このバージョンの SSMA for DB2 の新機能|  
 |[SSMA for DB2 クライアント &#40;DB2ToSQL&#41;のインストール](../../ssma/db2/installing-ssma-for-db2-client-db2tosql.md)|SSMA for DB2 クライアントおよび必要なコンポーネントを、を実行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]しているコンピューターにインストールするための前提条件と手順を説明した記事が含まれています。|  

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66f898dbe10a9a7e17c1908a5bf25e86f5a57c7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782847"
 ---
 # <a name="use-alwayson-policies-to-view-the-health-of-an-availability-group-sql-server"></a>AlwaysOn ポリシーを使用した可用性グループの正常性の確認 (SQL Server)
@@ -27,32 +27,29 @@ ms.locfileid: "72782847"
   
 
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  CONNECT、VIEW SERVER STATE、および VIEW ANY DEFINITION 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a>AlwaysOn ダッシュボードの使用  
+##  <a name="using-the-alwayson-dashboard"></a><a name="SSMSProcedure"></a>AlwaysOn ダッシュボードの使用  
  **AlwaysOn ダッシュボードを開くには**  
   
 1.  オブジェクト エクスプローラーで、可用性レプリカの 1 つをホストするサーバー インスタンスに接続します。 可用性グループ内のすべての可用性レプリカについての情報を表示するには、プライマリ レプリカをホストするサーバー インスタンスを使用してください。  
   
 2.  サーバー名をクリックし、サーバー ツリーを展開します。  
   
-3.  
-  **[AlwaysOn 高可用性]** ノードを展開します。  
+3.  **[AlwaysOn 高可用性]** ノードを展開します。  
   
-     
-  **[可用性グループ]** ノードを右クリックするか、このノードを展開し、特定の可用性グループを右クリックします。  
+     **[可用性グループ]** ノードを右クリックするか、このノードを展開し、特定の可用性グループを右クリックします。  
   
-4.  
-  **[ダッシュボードの表示]** をクリックします。  
+4.  **[ダッシュボードの表示]** をクリックします。  
   
  AlwaysOn ダッシュボードの使用方法の詳細については、「[AlwaysOn ダッシュボードの使用 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)」を参照してください。  
   
-##  <a name="PowerShellProcedure"></a>PowerShell の使用  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell の使用  
  **AlwaysOn ポリシーを使用して可用性グループの正常性を表示する**  
   
 1.  可用性レプリカの 1 つをホストするサーバー インスタンスを既定の操作対象に設定 (`cd`) します。 可用性グループ内のすべての可用性レプリカについての情報を表示するには、プライマリ レプリカをホストするサーバー インスタンスを使用してください。  
@@ -91,7 +88,7 @@ ms.locfileid: "72782847"
   
      これらのコマンドレットでは、次のオプションを使用できます。  
   
-    |オプション|[説明]|  
+    |オプション|説明|  
     |------------|-----------------|  
     |`AllowUserPolicies`|AlwaysOn ポリシーのカテゴリにあるユーザー ポリシーを実行します。|  
     |`InputObject`|可用性グループ、可用性レプリカ、または可用性データベースの状態 (使用するコマンドレットに応じて異なります) を表すオブジェクトのコレクションです。 コマンドレットを実行すると、指定されたオブジェクトの正常性が計算されます。|  
@@ -106,15 +103,15 @@ ms.locfileid: "72782847"
     ```  
   
     > [!NOTE]  
-    >  コマンドレットの構文を表示するには、`Get-Help` PowerShell 環境で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
+    >  コマンドレットの構文を表示するには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境で `Get-Help` コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
   
  **SQL Server PowerShell プロバイダーを設定して使用するには**  
   
--   [SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell プロバイダー](../../../powershell/sql-server-powershell-provider.md)  
   
 -   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
-##  <a name="RelatedContent"></a> 関連コンテンツ  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 関連コンテンツ  
  **AlwaysOn チームのブログの SQL Server: PowerShell を使用した AlwaysOn 正常性状態の監視:**  
   
 -   [パート 1: 基本的なコマンドレットの概要](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)  
@@ -123,7 +120,7 @@ ms.locfileid: "72782847"
   
 -   [パート 3: 単純な監視アプリケーション](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)  
   
--   [パート 4: SQL Server エージェントとの統合](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)  
+-   [パート 4: SQL Server エージェントの統合](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)  
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループ &#40;SQL Server の概要&#41;](overview-of-always-on-availability-groups-sql-server.md)   

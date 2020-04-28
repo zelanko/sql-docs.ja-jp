@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bf57adb31330f5b0c0f18fbcccd4d71f47d3c933
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70176019"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>SQL Server のクラウド アダプター
@@ -26,11 +26,9 @@ ms.locfileid: "70176019"
  クラウド アダプターは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の内部設置型インスタンスからメッセージを受信するステートレスな同期サービスです。 クラウド アダプター サービスが停止すると、リモート アクセス クラウド アダプターが停止され、SSL 証明書のバインドが解除され、Windows ファイアウォールのルールが無効になります。  
   
 ## <a name="cloud-adapter-requirements"></a>クラウド アダプターの要件  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に対してクラウド アダプターをインストールして有効にし、実行するには、次の要件が必要です。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に対してクラウド アダプターをインストールして有効にし、実行するには、次の要件が必要です。  
   
--   クラウド アダプターは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012 以降でサポートされます。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012 では、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のクラウド アダプターは [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012 に対応する SQL 管理オブジェクトを必要とします。  
+-   クラウド アダプターは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012 以降でサポートされます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012 では、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のクラウド アダプターは [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012 に対応する SQL 管理オブジェクトを必要とします。  
   
 -   クラウド アダプター Web サービスは **ローカル システム** アカウントとして実行され、タスクを実行する前にクライアントの資格情報を確認します。 クライアントによって指定された資格情報は、リモートコンピューターのローカル**管理者**グループのメンバーである使用アカウントに属している必要があります。  
   
@@ -49,7 +47,7 @@ ms.locfileid: "70176019"
   
 -   **構成ファイルのパラメーター** -  
   
-    -   \<構成>  
+    -   \<configuration>  
   
         -   \<appSettings>  
   
@@ -76,12 +74,11 @@ ms.locfileid: "70176019"
 |設定|値|Default|説明|  
 |-------------|------------|-------------|--------------|  
 |WebServicePort|1-65535|11435|指定しない場合、11435 が使用されます。|  
-|WebServiceCertificate|Thumbprint|Empty|空の場合、新しい自己署名証明書が生成されます。|  
+|WebServiceCertificate|Thumbprint|空|空の場合、新しい自己署名証明書が生成されます。|  
 |ExposeExceptionDetails|True または False|False||  
   
 ## <a name="cloud-adapter-troubleshooting"></a>クラウド アダプターのトラブルシューティング  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のクラウド アダプターのトラブルシューティングを行うには、次の情報を使用します。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のクラウド アダプターのトラブルシューティングを行うには、次の情報を使用します。  
   
 -   **エラー処理とログ記録**-エラーと状態メッセージがアプリケーションイベントログに書き込まれます。  
   
@@ -89,7 +86,7 @@ ms.locfileid: "70176019"
   
 -   **コントロール、構成**: C:\Program の SQL server にある構成ファイルを使用し\\ます。  
   
-|エラー|エラー ID|原因|解決方法|  
+|Error|エラー ID|原因|解像度|  
 |-----------|--------------|-----------|----------------|  
 |証明書ストアに証明書を追加中に例外が発生しました。 {例外テキスト}。|45560|コンピューター証明書ストアのアクセス許可|クラウドアダプターサービスに、コンピューター証明書ストアに証明書を追加するためのアクセス許可があることを確認します。|  
 |ポート {ポート番号} と証明書 {サムプリント} の SSL バインドを構成しようとして例外が発生しました。 {例外}。|45561|他のアプリケーションが既にポートを使用しているか、証明書をバインドされています。|既存のバインドを削除するか、または構成ファイルのクラウド アダプターのポートを変更します。|  

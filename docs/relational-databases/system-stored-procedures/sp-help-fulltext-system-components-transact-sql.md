@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 98e360887d63db59e1e61bf5c52928e9626b0f39
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72304886"
 ---
 # <a name="sp_help_fulltext_system_components-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
@@ -49,9 +49,9 @@ sp_help_fulltext_system_components
   
 -   **wordbreaker**  
   
--   **フィルター**  
+-   **filter**  
   
--   **protocol handler**  
+-   **プロトコルハンドラー**  
   
 -   **fullpath**  
   
@@ -65,18 +65,18 @@ sp_help_fulltext_system_components
 ## <a name="result-sets"></a>結果セット  
  システム コンポーネントについて、次の結果セットが返されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**componenttype**|**sysname**|コンポーネントの種類。 次のいずれか:<br /><br /> filter<br /><br /> protocol handler<br /><br /> wordbreaker|  
-|**componentname**|**sysname**|コンポーネントの名前。|  
-|**clsid**|**UNIQUEIDENTIFIER**|コンポーネントのクラス ID。|  
+|**componentname**|**sysname**|コンポーネント名。|  
+|**clsid**|**uniqueidentifier**|コンポーネントのクラス ID。|  
 |**fullpath**|**nvarchar(256)**|コンポーネントの場所へのパス。<br /><br /> NULL = 呼び出し元は、 **serveradmin**固定サーバーロールのメンバーではありません。|  
-|**バージョン**|**nvarchar (30)**|コンポーネントのバージョン。|  
+|**version**|**nvarchar(30)**|コンポーネントのバージョン。|  
 |**manufacturer**|**sysname**|コンポーネントの製造元の名前。|  
   
  *Component_type*を使用するフルテキストカタログが1つ以上存在する場合にのみ、次の結果セットが返されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**dbid**|**int**|データベースの ID です。|  
 |**ftcatid**|**int**|フルテキストカタログの ID。|  
@@ -84,7 +84,7 @@ sp_help_fulltext_system_components
 ## <a name="permissions"></a>アクセス許可  
  **Public**ロールのメンバーシップが必要です。ただし、ユーザーは、VIEW DEFINITION 権限を持つフルテキストカタログに関する情報のみを表示できます。 **Serveradmin**固定サーバーロールのメンバーだけが、 **fullpath**列の値を参照できます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この方法は、アップグレードを準備するときに特に重要です。 特定のデータベース内でストアドプロシージャを実行し、その出力を使用して、アップグレードによって特定のカタログが影響を受けるかどうかを判断します。  
   
 ## <a name="examples"></a>例  

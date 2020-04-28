@@ -18,10 +18,10 @@ ms.assetid: e9ef4c99-abde-4038-b6a3-a25dcbaf0958
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 66b353c7fc79b49cb9cd3fb9fe228075f3a0d473
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72305093"
 ---
 # <a name="sp_delete_jobsteplog-transact-sql"></a>sp_delete_jobsteplog (Transact-sql)
@@ -63,9 +63,9 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ None  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_delete_jobsteplog**は**msdb**データベースにあります。  
   
  ** \@Job_id**または** \@job_name**以外の引数が指定されていない場合は、指定されたジョブのすべてのジョブステップログが削除されます。  

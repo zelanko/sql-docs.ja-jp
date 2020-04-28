@@ -13,14 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 111e44275922149949cd7e252e112d95cef65076
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952029"
 ---
 # <a name="restore-encryption-key-ssrs-native-mode"></a>暗号化キーを復元する (SSRS ネイティブ モード)
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、暗号化キーを使用して、レポート サーバー データベースに格納されている機密データのセキュリティを保護します。 暗号化されたデータに継続してアクセスできるようにするには、サービス アカウントの変更のために後で暗号化キーを復元する必要がある場合に備えて、または計画的な移行の一環として、暗号化キーのバックアップを作成することが重要です。 このトピックでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用してキーを復元する方法の概要を示します。  
   
  [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ネイティブモード。  
@@ -41,15 +40,14 @@ ms.locfileid: "71952029"
  対称キーのコピーを含むパスワードで保護されたファイルを選択します。 既定のファイル拡張子は .snk です。  
   
  **パスワード**  
- ファイルのロックを解除するパスワードを入力します。 パスワードを知っているユーザーのみがキーを復元できます。 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、強力なパスワード ポリシーが適用されます。 パスワードは 8 文字以上で、大文字と小文字、英数字、および 1 つ以上の記号文字の組み合わせにする必要があります。  
+ ファイルのロックを解除するパスワードを入力します。 パスワードを知っているユーザーのみがキーを復元できます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、強力なパスワード ポリシーが適用されます。 パスワードは 8 文字以上で、大文字と小文字、英数字、および 1 つ以上の記号文字の組み合わせにする必要があります。  
   
 ## <a name="see-also"></a>参照  
  [Reporting Services Configuration Manager F1 ヘルプトピック &#40;SSRS ネイティブモード&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
- [Reporting Services の暗号化キーのバックアップと復元](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
- [暗号化キーの削除と再作成  &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
- [SSRS Configuration Manager を &#40;してレポートサーバーを初期化する&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
- [暗号化されたレポートサーバーデータ &#40;SSRS Configuration Manager に格納&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [暗号化キーのバックアップと復元 Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
+ [SSRS Configuration Manager&#41;&#40;暗号化キーを削除して再作成します](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
+ [レポート サーバーの初期化 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
+ [暗号化されたレポート サーバー データの格納 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [SSRS ネイティブモードの暗号化キー &#40;&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)  
   
   

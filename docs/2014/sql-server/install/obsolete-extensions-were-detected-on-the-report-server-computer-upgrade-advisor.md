@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 18f90bd6c551a6240a49eed9a0ec39723851bce1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952076"
 ---
 # <a name="obsolete-extensions-were-detected-on-the-report-server-computer-upgrade-advisor"></a>互換性のために残されている拡張機能がレポート サーバー コンピューターで検出された (アップグレード アドバイザー)
@@ -24,12 +24,12 @@ ms.locfileid: "71952076"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ネイティブモード &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード。|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード|  
   
 ## <a name="component"></a>コンポーネント  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-## <a name="description"></a>[説明]  
+## <a name="description"></a>説明  
  このリリースで提供が中止されている拡張機能を 1 つ以上使用するようにレポート サーバーが構成されています。 廃止された拡張機能は次のとおりです。  
   
 -   HTML OWC 表示拡張機能  
@@ -41,8 +41,7 @@ ms.locfileid: "71952076"
  これらの拡張機能が必要な場合は、これらの要件に対する代替ソリューションが見つかるまで、アップグレードしないでください。 同一または同様の機能を提供するカスタム表示拡張機能を取得またはビルドする必要が生じることがあります。  
   
 ## <a name="corrective-action"></a>修正措置  
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に現在含まれている一連の機能を評価して、サポートされている機能がユーザーの要件を満たすかどうかを判断します。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に現在含まれている一連の機能を評価して、サポートされている機能がユーザーの要件を満たすかどうかを判断します。  
   
 ## <a name="see-also"></a>参照  
  [アップグレードに関する問題を Reporting Services &#40;アップグレードアドバイザー&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  

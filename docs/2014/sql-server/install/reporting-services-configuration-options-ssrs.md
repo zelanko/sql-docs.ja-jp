@@ -17,16 +17,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 1b54661c47ff40af595be55d444f6c0ffb4bc2cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952124"
 ---
 # <a name="reporting-services-configuration-options-ssrs"></a>Reporting Services 構成オプション (SSRS)
-  
-  **
-  ** インストール ウィザードの [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ページを使用すると、レポート サーバーのインストール方法および構成方法を指定できます。 インストール オプションを使用できるかどうかは、これより前に **[機能の選択]** ページで選択したオプションや、レポート サーバーのインストール時に [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のローカル インスタンスを一緒にインストールするかどうかによって決まります。  
+  **** インストール ウィザードの [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ページを使用すると、レポート サーバーのインストール方法および構成方法を指定できます。 インストール オプションを使用できるかどうかは、これより前に **[機能の選択]** ページで選択したオプションや、レポート サーバーのインストール時に [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のローカル インスタンスを一緒にインストールするかどうかによって決まります。  
   
  SSL (Secure Sockets Layer) 証明書がコンピューターにインストールされ、強いワイルドカードにバインドされている場合は、HTTPS プレフィックスを使用して Reporting Services の URL がセットアップで作成されます。 証明書を Reporting Services url にマップする方法の詳細については、「 [Secure Sockets Layer (SSL) 接続用のレポートサーバーの構成](https://go.microsoft.com/fwlink/?LinkId=199089)(https://go.microsoft.com/fwlink/?LinkId=199089) SQL Server オンラインブック)」を参照してください。  
   
@@ -64,16 +62,13 @@ ms.locfileid: "71952124"
 -   [Reporting Services レポートサーバー (SSRS)](https://go.microsoft.com/fwlink/?LinkID=207244) (https://go.microsoft.com/fwlink/?LinkID=207244)。  
   
 ## <a name="installing-the-reporting-services-add-in-for-sharepoint-technologies"></a>SharePoint テクノロジ用 Reporting Services アドインのインストール  
- 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] リリースから、アドインは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードの機能の選択ページで SQL Server インストールの一部としてインストールすることができるようになりました。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] リリースから、アドインは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードの機能の選択ページで SQL Server インストールの一部としてインストールすることができるようになりました。  
   
  ただし、SharePoint 2010 用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインは、次のいずれかの方法を使用してインストールできます。  
   
 -   SharePoint 2010 製品準備ツールの **PreRequisiteInstaller.exe**を実行する。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール メディアからインストールします。 
-  **セットアップの終了後、** インストール メディアの Setup フォルダーにある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rsSharePoint.msi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ファイルをクリックします。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール メディアからインストールします。 **セットアップの終了後、** インストール メディアの Setup フォルダーにある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rsSharePoint.msi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ファイルをクリックします。  
   
 -   アドインをダウンロードし、インストールします。 詳細については、「 [SharePoint 製品用 Reporting Services アドインの検索場所](https://go.microsoft.com/fwlink/?LinkID=208634)」 (https://go.microsoft.com/fwlink/?LinkID=208634)を参照してください。  
   

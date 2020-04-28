@@ -18,10 +18,10 @@ ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 848f3cffb3c05f16b339233c89892396b5443e4f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71174262"
 ---
 # <a name="sp_add_alert-transact-sql"></a>sp_add_alert (Transact-sql)
@@ -60,7 +60,7 @@ sp_add_alert [ @name = ] 'name'
 > [!NOTE]  
 >  Microsoft Windows アプリケーションログに書き込まれた**sysmessages**エラーのみが、アラートを送信する可能性があります。  
   
-`[ @severity = ] severity`警告を定義する重大度レベル ( **1** ~ **25**)。 Sysmessages [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブルに格納さ**** れているすべての[!INCLUDE[msCoName](../../includes/msconame-md.md)]メッセージが、指定された重大度で Windows アプリケーションログに送信されると、アラートが送信されます。 *重大度*は**int**,、既定値は0です。 警告を定義するために*message_id*を使用する場合は、*重大度*を**0**にする必要があります。  
+`[ @severity = ] severity`警告を定義する重大度レベル ( **1** ~ **25**)。 Sysmessages [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブルに格納さ**sysmessages**れているすべての[!INCLUDE[msCoName](../../includes/msconame-md.md)]メッセージが、指定された重大度で Windows アプリケーションログに送信されると、アラートが送信されます。 *重大度*は**int**,、既定値は0です。 警告を定義するために*message_id*を使用する場合は、*重大度*を**0**にする必要があります。  
   
 `[ @enabled = ] enabled`警告の現在の状態を示します。 *有効*になっているは**tinyint**,、既定値は 1 (有効) です。 **0**の場合、警告は無効になり、起動されません。  
   
@@ -79,9 +79,9 @@ sp_add_alert [ @name = ] 'name'
 > [!IMPORTANT]
 >  ポケットベルと**net send**のオプションは、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将来の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョンでエージェントから削除される予定です。 新しい開発作業では、これらの機能の使用を避け、現在これらの機能を使用しているアプリケーションは修正するようにしてください。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|**0**|なし|  
+|**0**|None|  
 |**1**|電子メール|  
 |**2**|ポケットベル|  
 |**4**|**net send**|  
@@ -101,11 +101,11 @@ sp_add_alert [ @name = ] 'name'
   
 `[ @performance_condition = ] 'performance_condition'`は、'*itemcomparatorvalue*' という形式で表された値です。 *performance_condition*は**nvarchar (512)** で、既定値は NULL です。これらの要素で構成されます。  
   
-|要素の書式設定|[説明]|  
+|要素の書式設定|説明|  
 |--------------------|-----------------|  
-|*アイテム*|パフォーマンス オブジェクト、パフォーマンス カウンター、またはカウンターの名前付きインスタンス。|  
+|*項目*|パフォーマンス オブジェクト、パフォーマンス カウンター、またはカウンターの名前付きインスタンス。|  
 |*演算子*|>、<、または = のいずれかの演算子|  
-|*Value*|カウンターの数値|  
+|*[値]*|カウンターの数値|  
   
 `[ @category_name = ] 'category'`警告カテゴリの名前。 *category*は**sysname**,、既定値は NULL です。  
   
@@ -117,9 +117,9 @@ sp_add_alert [ @name = ] 'name'
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ None  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_add_alert**は、 **msdb**データベースから実行する必要があります。  
   
  次の状況では、および[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]アプリケーションによって生成されたエラーやメッセージが Windows アプリケーションログに送信されるため、アラートが発生する可能性があります。  
@@ -132,8 +132,7 @@ sp_add_alert [ @name = ] 'name'
   
 -   **Xp_logevent**を使用してログに記録されたイベント  
   
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、警告システム全体を簡単に管理できるグラフィカルなツールです。警告の基本構成を設定するには、SQL Server Management Studio を使用することをお勧めします。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、警告システム全体を簡単に管理できるグラフィカルなツールです。警告の基本構成を設定するには、SQL Server Management Studio を使用することをお勧めします。  
   
  警告が正常に動作しないときは、次のことを確認してください。  
   
@@ -143,13 +142,12 @@ sp_add_alert [ @name = ] 'name'
   
 -   アラートが有効になっています。  
   
--   
-  **xp_logevent** で生成されたイベントは master データベースで発生します。 このため、**xp_logevent** では、警告の **\@database_name** が **'master'** または NULL になっていないと、警告はトリガーされません。  
+-   **xp_logevent** で生成されたイベントは master データベースで発生します。 そのため、 **xp_logevent**は、警告の** \@database_name**が **' master '** または NULL の場合を除き、アラートをトリガーしません。  
   
 ## <a name="permissions"></a>アクセス許可  
  既定では、 **sp_add_alert** を実行できるのは、 **sysadmin**固定サーバー ロールのメンバーだけです。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、警告発生時にジョブ `Back up the AdventureWorks2012 Database` を実行する Test Alert という警告を追加します。  
   
 > [!NOTE]  
@@ -175,6 +173,6 @@ GO
  [sp_help_alert &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
  [sp_update_alert &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
  [sysperfinfo &#40;Transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-sysperfinfo-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

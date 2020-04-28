@@ -18,10 +18,10 @@ ms.assetid: b85db6e4-623c-41f1-9643-07e5ea38db09
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fc733ca2b56ef9fa96be5ab2adf6486419e0e250
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72306268"
 ---
 # <a name="sp_delete_job-transact-sql"></a>sp_delete_job (Transact-SQL)
@@ -61,15 +61,14 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ None  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ** \@Originating_server**引数は、内部使用のために予約されています。  
   
  ** \@Delete_unused_schedule**引数は、どのジョブにもアタッチされていないスケジュールを自動的に削除することによって、以前のバージョンの SQL Server との下位互換性を提供します。 このパラメーターでは、既定で互換動作が設定されることに注意してください。 ジョブにアタッチされていないスケジュールを保持するには、 ** \@delete_unused_schedule**引数として値**0**を指定する必要があります。  
   
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、ジョブを簡単に管理できるグラフィカルなツールです。ジョブのインフラストラクチャを作成し、管理するには、このツールを使用することをお勧めします。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、ジョブを簡単に管理できるグラフィカルなツールです。ジョブのインフラストラクチャを作成し、管理するには、このツールを使用することをお勧めします。  
   
  このストアド プロシージャでは、メンテナンス プランやメンテナンス プランの一部であるジョブを削除できません。 代わりに [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、メンテナンス プランを削除します。  
   
@@ -84,11 +83,9 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
  これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
- 
-  **sp_delete_job** を実行して任意のジョブを削除できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 
-  **sysadmin** 固定サーバー ロールのメンバーでないユーザーは、自分が所有するジョブのみを削除できます。  
+ **sp_delete_job** を実行して任意のジョブを削除できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 **sysadmin** 固定サーバー ロールのメンバーでないユーザーは、自分が所有するジョブのみを削除できます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、ジョブ `NightlyBackups` を削除します。  
   
 ```  
@@ -104,6 +101,6 @@ GO
  [sp_add_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
  [sp_help_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
  [sp_update_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

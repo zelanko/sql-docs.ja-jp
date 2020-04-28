@@ -16,10 +16,10 @@ ms.assetid: 7d9abe49-ce92-47f3-82c9-aea749518c91
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6f9021ec9b71694fc6567db5edf79965e09fd3c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72304917"
 ---
 # <a name="sp_reinitpullsubscription-transact-sql"></a>sp_reinitpullsubscription (Transact-SQL)
@@ -48,7 +48,7 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_reinitpullsubscription**は、トランザクションレプリケーションで使用します。  
   
  **sp_reinitpullsubscription**は、ピアツーピアトランザクションレプリケーションではサポートされていません。  
@@ -68,6 +68,6 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
 ## <a name="see-also"></a>参照  
  [サブスクリプションの再初期化](../../relational-databases/replication/reinitialize-a-subscription.md)   
  [サブスクリプションの再初期化](../../relational-databases/replication/reinitialize-subscriptions.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

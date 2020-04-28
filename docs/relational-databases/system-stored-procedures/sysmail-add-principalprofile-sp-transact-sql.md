@@ -18,10 +18,10 @@ ms.assetid: b2a0b313-abb9-4c23-8511-db77ca8172b3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fedc7e0dd7fe71feb0b0da1f00f2a7f996c6129c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72305053"
 ---
 # <a name="sysmail_add_principalprofile_sp-transact-sql"></a>sysmail_add_principalprofile_sp (Transact-SQL)
@@ -54,7 +54,7 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  プロファイルを公開するには、 ** \@principal_id**を**0**または**public**の** \@principal_name**として指定します。 パブリックプロファイルは、 **msdb**データベース内のすべてのユーザーが使用できます。ただし、ユーザーは**sp_send_dbmail**を実行するために、 **databasemailuserrole**のメンバーでもある必要があります。  
   
  データベースユーザーは、既定のプロファイルを1つだけ持つことができます。 ** \@Is_default**が '**1**' で、ユーザーが既に1つ以上のプロファイルに関連付けられている場合、指定されたプロファイルがユーザーの既定のプロファイルになります。 それまで既定のプロファイルであったプロファイルは、引き続きこのユーザーに関連付けられますが、既定のプロファイルではなくなります。  
@@ -66,7 +66,7 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャの実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  **A. 関連付けを作成し、既定のプロファイルを設定する**  
   
  次の例では、という名前`AdventureWorks Administrator Profile`のプロファイルと**msdb**データベースユーザー `ApplicationUser`の間の関連付けを作成します。 プロファイルは、ユーザーの既定のプロファイルです。  

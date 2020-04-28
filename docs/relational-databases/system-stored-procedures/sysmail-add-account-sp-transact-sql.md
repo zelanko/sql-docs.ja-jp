@@ -18,10 +18,10 @@ ms.assetid: 65e15e2e-107c-49c3-b12c-f4edf0eb1617
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d382d8ee7a871244213467b7a46bdc5b864c55cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72381898"
 ---
 # <a name="sysmail_add_account_sp-transact-sql"></a>sysmail_add_account_sp (Transact-SQL)
@@ -80,7 +80,7 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  データベースメールには、 ** \@email_address**、 ** \@display_name**、および** \@replyto_address**に個別のパラメーターが用意されています。 Email_address パラメーターは、メッセージの送信元のアドレスです。 ** \@** Display_name パラメーターは、電子メールメッセージの [**差出人**] フィールドに表示される名前です。 ** \@** Replyto_address パラメーターは、電子メールメッセージへの返信が送信されるアドレスです。 ** \@** たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで使用するアカウントでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントでのみ使用される電子メール アドレスから電子メール メッセージを送信できます。 そのアドレスからのメッセージにはフレンドリ名が表示されるので、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]受信者はエージェントがメッセージを送信したことを簡単に判断できます。 受信者がメッセージに返信した場合、その返信は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで使用されるアドレスではなくデータベース管理者に送られます。 このシナリオでは、アカウントは**SqlAgent@Adventure-Works.com**電子メールアドレスとしてを使用します。 表示名は**SQL Server エージェント自動メーラ**に設定されます。 このアカウントは**danw@Adventure-Works.com** 、アドレスの返信としてを使用するので、このアカウントから送信されたメッセージへの返信は[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、エージェントの電子メールアドレスではなく、データベース管理者に送られます。 これら3つのパラメーターに個別の設定を指定することにより、データベースメールによって、必要に応じてメッセージを構成できます。  
   
  ** \@Mailserver_type**パラメーターでは、値 **' SMTP '** がサポートされています。  
@@ -92,7 +92,7 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャの実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、と`AdventureWorks Administrator`いう名前のアカウントを作成します。 アカウントは電子メールアドレス`dba@Adventure-Works.com`を使用し、SMTP メールサーバー `smtp.Adventure-Works.com`にメールを送信します。 このアカウントから送信された`AdventureWorks Automated Mailer`電子メールメッセージは、メッセージの [**差出人**] 行に表示されます。 メッセージへの返信は `danw@Adventure-Works.com` に転送されます。  
   
 ```  

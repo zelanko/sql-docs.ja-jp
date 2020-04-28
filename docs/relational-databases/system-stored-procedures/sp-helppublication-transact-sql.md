@@ -16,10 +16,10 @@ ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1f7f75d37762f5e6df971f3139eea118c6a3fdf2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72689046"
 ---
 # <a name="sp_helppublication-transact-sql"></a>sp_helppublication (Transact-sql)
@@ -46,11 +46,11 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 `[ @publisher = ] 'publisher'`以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーを指定します。 *publisher*は sysname で、既定値は NULL です。  
   
 > [!NOTE]  
->  ** パブリッシャーからパブリケーション情報を要求するときに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーを指定することはできません。  
+>  *publisher*パブリッシャーからパブリケーション情報を要求するときに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーを指定することはできません。  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |pubid|**int**|パブリケーションの ID。|  
 |name|**sysname**|パブリケーションの名前。|  
@@ -69,7 +69,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |immediate_sync_ready|**bit**|スナップショット エージェントが、新しいサブスクリプションでそのまま使用できるスナップショットを作成するかどうかを示します。 このパラメーターは、パブリケーションが、新規または再初期化されたサブスクリプションで常にスナップショットを使用できるように設定されている場合にのみ定義されます。|  
 |allow_sync_tran|**bit**|パブリケーションで即時更新サブスクリプションが許可されているかどうか。|  
 |autogen_sync_procs|**bit**|サブスクリプションの即時更新をサポートするストアド プロシージャを自動的に生成するかどうかを示します。|  
-|snapshot_jobid|**バイナリ (16)**|スケジュールされたタスク ID。|  
+|snapshot_jobid|**binary(16)**|スケジュールされたタスク ID。|  
 |retention|**int**|指定されたパブリケーションに対して保存する変更の量 (時間単位)。|  
 |has subscription|**bit**|パブリケーションにアクティブなサブスクリプションがあるかどうかを示します。 **1**はパブリケーションにアクティブなサブスクリプションがあることを示し、 **0**はパブリケーションにサブスクリプションがないことを示します。|  
 |allow_queued_tran|**bit**|パブリッシャーで適用できるようになるまで、サブスクライバーでの変更のキューを無効にするかどうかを指定します。 **0**の場合、サブスクライバーでの変更はキューに登録されません。|  
@@ -86,9 +86,9 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |allow_subscription_copy|**bit**|このパブリケーションをサブスクライブするサブスクリプションデータベースをコピーする機能が有効になっているかどうかを指定します。 **0**は、コピーが許可されていないことを示します。|  
 |centralized_conflicts|**bit**|競合レコードがパブリッシャーに格納されるかどうかを示します。<br /><br /> **0** = 競合レコードは、競合の原因となったパブリッシャーとサブスクライバーの両方に格納されます。<br /><br /> **1** = 競合レコードはパブリッシャーに格納されます。|  
 |conflict_retention|**int**|競合の保有期間を日数で指定します。|  
-|conflict_policy|**int**|キュー更新サブスクライバーオプションを使用する場合の競合解決ポリシーを指定します。 次のいずれかの値を指定できます。<br /><br /> **1** = パブリッシャー優先。<br /><br /> **2** = サブスクライバー優先。<br /><br /> **3** = サブスクリプションは再初期化されます。|  
-|queue_type||使用されるキューの種類。 次のいずれかの値を指定できます。<br /><br /> **msmq** = メッセージ[!INCLUDE[msCoName](../../includes/msconame-md.md)]キューを使用してトランザクションを格納します。<br /><br /> **sql** = トランザクション[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の格納に使用します。<br /><br /> 注: メッセージキューのサポートは廃止されました。|  
-|backward_comp_level||データベースの互換性レベルは、次のいずれかになります。<br /><br /> **** =  90[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **** =  100[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+|conflict_policy|**int**|キュー更新サブスクライバーオプションを使用する場合の競合解決ポリシーを指定します。 次のいずれかの値を指定します。<br /><br /> **1** = パブリッシャー優先。<br /><br /> **2** = サブスクライバー優先。<br /><br /> **3** = サブスクリプションは再初期化されます。|  
+|queue_type||使用されるキューの種類。 次のいずれかの値を指定します。<br /><br /> **msmq** = メッセージ[!INCLUDE[msCoName](../../includes/msconame-md.md)]キューを使用してトランザクションを格納します。<br /><br /> **sql** = トランザクション[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の格納に使用します。<br /><br /> 注: メッセージキューのサポートは廃止されました。|  
+|backward_comp_level||データベースの互換性レベルは、次のいずれかになります。<br /><br /> **90** =  90[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100** =  100[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_AD|**bit**|パブリケーションが[!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory でパブリッシュされるかどうかを指定します。 値**1**は公開されていることを示し、値**0**は発行されていないことを示します。|  
 |allow_initialize_from_backup|**bit**|サブスクライバーでは、最初のスナップショットではなくバックアップから、このパブリケーションへのサブスクリプションを初期化できるかどうかを示します。 **1**は、サブスクリプションをバックアップから初期化できることを意味します。 **0**は、サブスクリプションが使用できないことを意味します。 詳細については、「スナップショットを使用しない[トランザクションサブスクリプションの初期化](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)スナップショットを使用しないトランザクションサブスクライバー」を参照してください。|  
 |replicate_ddl|**int**|パブリケーションでスキーマレプリケーションがサポートされているかどうかを示します。 **1**は、パブリッシャーで実行されるデータ定義言語 (DDL) ステートメントがレプリケートされることを示し、 **0**は ddl ステートメントがレプリケートされないことを示します。 詳細については、「[パブリケーション データベースでのスキーマの変更](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)」を参照してください。|  
@@ -104,7 +104,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  sp_helppublication は、スナップショットおよびトランザクション レプリケーションで使用します。  
   
  sp_helppublication では、このプロシージャを実行するユーザーが所有しているすべてのパブリケーションに関する情報が返されます。  
@@ -118,10 +118,10 @@ sp_helppublication [ [ @publication = ] 'publication' ]
  以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーの場合は、ディストリビューターの sysadmin 固定サーバーロールのメンバー、またはディストリビューションデータベースの db_owner 固定データベースロールのメンバー、または PAL のユーザーだけが sp_helppublication を実行できます。  
   
 ## <a name="see-also"></a>参照  
- [パブリケーションのプロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
+ [パブリケーション プロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [sp_addpublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
  [sp_droppublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
- [レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

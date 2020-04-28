@@ -20,10 +20,10 @@ ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 96fb5c880346c534c3b956e577f15622e598d48c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72305212"
 ---
 # <a name="sp_fulltext_load_thesaurus_file-transact-sql"></a>sp_fulltext_load_thesaurus_file (Transact-SQL)
@@ -47,18 +47,18 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
  **\@loadonlyifnotloaded** = *アクション*  
  類義語辞典ファイルが既に読み込まれている場合でも、内部の類義語辞典テーブルに類義語辞典ファイルを読み込むかどうかを指定します。 *アクション*は次のいずれかです。  
   
-|Value|定義|  
+|値|定義|  
 |-----------|----------------|  
 |**0**|既に読み込まれているかどうかにかかわらず、類義語辞典ファイルを読み込みます。 これは**sp_fulltext_load_thesaurus_file**の既定の動作です。|  
-|1 で保護されたプロセスとして起動されました|類義語辞典ファイルがまだ読み込まれていない場合にのみ、類義語辞典ファイルを読み込みます。|  
+|1|類義語辞典ファイルがまだ読み込まれていない場合にのみ、類義語辞典ファイルを読み込みます。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- なし  
+ None  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ None  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  類義語辞典ファイルは、類義語辞典を使用するフルテキスト クエリによって自動的に読み込まれます。 フルテキストクエリのパフォーマンスへの影響を初めて回避するには、 **sp_fulltext_load_thesaurus_file**を実行することをお勧めします。  
   
  フルテキスト検索に登録されている言語の一覧を更新するには、 [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)'**update_languages**' を使用します。  
@@ -86,6 +86,6 @@ EXEC sys.sp_fulltext_load_thesaurus_file 1025, @loadOnlyIfNotLoaded = 1;
 
 ## <a name="see-also"></a>参照
 
-[FULLTEXTSERVICEPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)  
-[システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+[FULLTEXTSERVICEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)  
+[システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
 [フルテキスト検索に使用する類義語辞典ファイルの構成と管理](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)

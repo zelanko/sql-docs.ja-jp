@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4973ea427cea99d6e3c4527e8686e322a97efe48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72313612"
 ---
 # <a name="advanced-data-mining-query-editor"></a>詳細データ マイニング クエリ エディター
@@ -68,7 +68,7 @@ ms.locfileid: "72313612"
  **[モデル列]**  
  選択したマイニング モデル内の列を一覧表示します。 列名の横に表示されるひし形のマークは、その列が予測可能列であることを表します。  
   
- **入力列**  
+ **[入力列]**  
  入力として追加された外部データ ソースの列を一覧表示します。  
   
 ## <a name="see-also"></a>参照  

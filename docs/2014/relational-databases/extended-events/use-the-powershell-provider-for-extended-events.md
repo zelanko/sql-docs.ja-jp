@@ -15,20 +15,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ea4432b07007ce1bbc4ec5b944594b204a7ad808
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782907"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>拡張イベントへの PowerShell プロバイダーの使用
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell プロバイダーを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張イベントを管理できます。 XEvent サブフォルダーは、SQLSERVER ドライブで利用可能です。 このフォルダーには、次のいずれかの方法でアクセスできます。  
   
--   コマンドプロンプトで「」と`sqlps`入力し、enter キーを押します。 「`cd xevent`」と入力して Enter キーを押します。 そこから、 **cd**と`dir`コマンド **(または** **get-childitem**コマンドレット) を使用して、サーバー名とインスタンス名に移動できます。  
+-   コマンドプロンプトで「」と`sqlps`入力し、enter キーを押します。 「`cd xevent`」と入力し、Enter キーを押します。 そこから、 **cd**と`dir`コマンド **(または** **get-childitem**コマンドレット) を使用して、サーバー名とインスタンス名に移動できます。  
   
 -   オブジェクト エクスプローラーで、インスタンス名、 **[管理]** の順に展開し、 **[拡張イベント]** を右クリックして、 **[PowerShell の起動]** をクリックします。 これにより、次のパスで PowerShell が起動します。  
   
-     PS SQLSERVER:\XEvent\\*ServerName*\\*InstanceName*>  
+     PS SQLSERVER: \ XEvent\\*ServerName*\\*InstanceName*>  
   
     > [!NOTE]  
     >  PowerShell は、 **[拡張イベント]** の下の任意のノードから起動できます。 たとえば、 **[Sessions]** を右クリックし、 **[PowerShell の起動]** をクリックできます。 これにより、1 レベル深い Sessions フォルダーで PowerShell が起動します。  
@@ -39,7 +39,7 @@ ms.locfileid: "72782907"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell プロバイダーは、拡張イベント セッションの作成、変更、および管理に使用できる強力なツールです。 次のセクションでは、拡張イベントに PowerShell スクリプトを使用する基本的な例をいくつか紹介します。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  以下の例では、次の点に注意してください。  
   
 -   スクリプトは、PS SQLSERVER:\\> prompt (コマンドプロンプトで「」と入力`sqlps`すると使用できます) から実行する必要があります。  
@@ -106,10 +106,10 @@ $event.SetPredicate($predicate)
 $session.Create()  
 ```  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
  拡張イベント セッションを作成、変更、または削除するには、ALTER ANY EVENT SESSION 権限が必要です。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server PowerShell](../../powershell/sql-server-powershell.md)   
- [system_health セッションの使用](use-the-ssms-xe-profiler.md)   
+ [System_health セッションを使用する](use-the-ssms-xe-profiler.md)   
  [拡張イベントのツール](extended-events-tools.md)  

@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 75c3bda5d15e3930fcdeba9ca73d70128fd90336
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952057"
 ---
 # <a name="reporting-services-upgrade-issues-upgrade-advisor"></a>Reporting Services のアップグレードに関するその他の問題 (アップグレード アドバイザー)
@@ -34,9 +34,7 @@ ms.locfileid: "71952057"
  次に示すトピックでは、アップグレード アドバイザーによって報告される既知の問題、および既存インストールを修正してアップグレードを可能にする方法について説明します。  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のインスタンスを分析するには、アップグレード アドバイザーをレポート サーバーにインストールしておく必要があります。 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] はリモート分析をサポートしません。  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のインスタンスを分析するには、アップグレード アドバイザーをレポート サーバーにインストールしておく必要があります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] はリモート分析をサポートしません。  
 >   
 >  詳細については、「 [Upgrade Advisor のインストール](../../../2014/sql-server/install/installing-upgrade-advisor.md)」を参照してください。  
   

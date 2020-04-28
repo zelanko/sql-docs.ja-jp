@@ -11,10 +11,10 @@ author: Jtoland
 ms.author: Jtoland
 manager: murato
 ms.openlocfilehash: d3b9dca69afecc78a680459caf03d085ef17857e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72251332"
 ---
 # <a name="sql-server-migration-assistant-for-oracle-oracletosql"></a>Oracle の SQL Server Migration Assistant (OracleToSQL)
@@ -24,7 +24,7 @@ ms.locfileid: "72251332"
   
 ## <a name="contents"></a>内容  
   
-|Section|[説明]|
+|Section|説明|
 |-----------|---------------|
 |[SSMA for Oracle の新機能](https://msdn.microsoft.com/f305ebb6-7393-4a43-abb3-6332b739d690)|このバージョンの SSMA for Oracle の新機能|  
 |[SSMA for Oracle &#40;OracleToSQL のインストール&#41;](../../ssma/oracle/installing-ssma-for-oracle-oracletosql.md)|SSMA for Oracle クライアントおよび必須コンポーネントをを実行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]しているコンピューターにインストールするための前提条件と手順を説明する記事が含まれています。|  

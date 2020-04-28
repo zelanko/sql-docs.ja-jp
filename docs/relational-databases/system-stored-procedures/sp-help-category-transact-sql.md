@@ -18,10 +18,10 @@ ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1b44f5962e8241afa95b9e68cf75d493dff01ad5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72304804"
 ---
 # <a name="sp_help_category-transact-sql"></a>sp_help_category (Transact-SQL)
@@ -44,7 +44,7 @@ sp_help_category [ [ @class = ] 'class' ]
 ## <a name="arguments"></a>引数  
 `[ @class = ] 'class'`要求する情報に関するクラス。 *クラス*は**varchar (8)**,、既定値は**JOB**です。 *クラス*には、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**補足**|ジョブカテゴリに関する情報を提供します。|  
 |**アラート**|アラートカテゴリに関する情報を提供します。|  
@@ -52,7 +52,7 @@ sp_help_category [ [ @class = ] 'class' ]
   
 `[ @type = ] 'type'`情報を要求するカテゴリの種類。 *型*は**varchar (12)**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**地元の**|ローカルジョブカテゴリ。|  
 |**MULTI -SERVER**|マルチサーバージョブカテゴリ。|  
@@ -68,7 +68,7 @@ sp_help_category [ [ @class = ] 'class' ]
 ## <a name="result-sets"></a>結果セット  
  ** \@サフィックス**が**0**の場合、 **sp_help_category**は次の結果セットを返します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|カテゴリ ID。|  
 |**category_type**|**tinyint**|カテゴリの種類:<br /><br /> **1** = ローカル<br /><br /> **2** = マルチサーバー<br /><br /> **3** = なし|  
@@ -76,13 +76,13 @@ sp_help_category [ [ @class = ] 'class' ]
   
  ** \@サフィックス**が**1**の場合、 **sp_help_category**は次の結果セットを返します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|カテゴリ ID。|  
 |**category_type**|**sysname**|カテゴリの種類。 **LOCAL**、 **MULTI SERVER**、または**NONE**のいずれか|  
 |**name**|**sysname**|カテゴリ名|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_help_category**は、 **msdb**データベースから実行する必要があります。  
   
  パラメーターを指定しない場合、結果セットではすべてのジョブ カテゴリに関する情報が提供されます。  
@@ -129,6 +129,6 @@ GO
  [sp_add_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
  [sp_delete_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
  [sp_update_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

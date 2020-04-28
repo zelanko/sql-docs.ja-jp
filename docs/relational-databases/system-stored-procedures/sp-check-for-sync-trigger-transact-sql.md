@@ -16,10 +16,10 @@ ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fe8cf327ff3db175c57382201ca3918a86770433
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72251244"
 ---
 # <a name="sp_check_for_sync_trigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-sql)
@@ -45,7 +45,7 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
  [**@trigger_op =** ]'*trigger_output_parameters*' 出力  
  出力パラメーターが呼び出し元のトリガーの種類を返すかどうかを指定します。 *trigger_output_parameters*は**char (10)** で、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**アドイン**|INSERT トリガーです。|  
 |**Upd**|UPDATE トリガーです。|  
@@ -57,7 +57,7 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 ## <a name="return-code-values"></a>リターン コードの値  
  0は、ストアドプロシージャが即時更新トリガーのコンテキスト内で呼び出されていないことを示します。 1は、即時更新トリガーのコンテキスト内で呼び出されており、 * \@trigger_op*で返されるトリガーの種類であることを示します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_check_for_sync_trigger**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
  **sp_check_for_sync_trigger**は、レプリケーションとユーザー定義トリガーを調整するために使用されます。 このストアド プロシージャは、レプリケーション トリガーのコンテキスト内で呼び出されているかどうかを判別します。 たとえば、ユーザー定義トリガーの本文でプロシージャ**sp_check_for_sync_trigger**を呼び出すことができます。 **Sp_check_for_sync_trigger**が**0**を返した場合、ユーザー定義トリガーは処理を続行します。 **Sp_check_for_sync_trigger**が**1**を返した場合、ユーザー定義のトリガーは終了します。 これにより、レプリケーショントリガーによってテーブルが更新されたときに、ユーザー定義のトリガーが起動しなくなります。  
@@ -89,6 +89,6 @@ RETURN
  **sp_check_for_sync_trigger**ストアドプロシージャは、 [sys. objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)システムビューで SELECT 権限を持つ任意のユーザーが実行できます。  
   
 ## <a name="see-also"></a>参照  
- [トランザクションレプリケーションの更新可能なサブスクリプション](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
+ [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

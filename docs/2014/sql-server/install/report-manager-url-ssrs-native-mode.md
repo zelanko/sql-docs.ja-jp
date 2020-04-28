@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: dd4ff661a10eca71781aee9d1886e80936f6246d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952409"
 ---
 # <a name="report-manager-url-ssrs-native-mode"></a>レポート マネージャー URL (SSRS ネイティブ モード)
@@ -35,14 +35,14 @@ ms.locfileid: "71952409"
  **仮想ディレクトリ**  
  レポート マネージャーの仮想ディレクトリ名を指定します。 仮想ディレクトリ名は、同じコンピューター上のレポート マネージャー インスタンスごとに 1 つだけ指定できます。  
   
- **ハイパーリンク**  
+ **URL**  
  現在のレポート マネージャー インスタンスに対して定義されている URL が表示されます。  
   
  **詳細設定**  
  現在のレポート マネージャー インスタンスに対して URL を追加します。  
   
 ## <a name="see-also"></a>参照  
- [URL の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [SSRS Configuration Manager の URL &#40;構成&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [構成ファイルの Url &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)   
  [レポート サーバー URL の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   

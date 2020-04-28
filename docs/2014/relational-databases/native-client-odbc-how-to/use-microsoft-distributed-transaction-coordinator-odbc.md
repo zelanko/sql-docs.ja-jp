@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 425f9fc0b7637aab1869130a2830c2f3c134fe7d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72688696"
 ---
 # <a name="use-microsoft-distributed-transaction-coordinator-odbc"></a>Microsoft 分散トランザクション コーディネーターの使用 (ODBC)
@@ -29,7 +29,7 @@ ms.locfileid: "72688696"
   
 3.  MS DTC の OLE ITransactionDispenser::BeginTransaction 関数を呼び出して、MS DTC トランザクションを開始し、トランザクションを表すトランザクション オブジェクトを取得します。  
   
-4.  MS DTC トランザクションに参加させる ODBC 接続ごとに、[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) を 1 回以上呼び出します。 [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md)の2番目のパラメーターは SQL_ATTR_ENLIST_IN_DTC である必要があり、3番目のパラメーターは (手順 3. で取得した) トランザクションオブジェクトである必要があります。  
+4.  MS DTC トランザクションに参加させる ODBC 接続ごとに、[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) を 1 回以上呼び出します。 [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) の 2 番目のパラメーターは SQL_ATTR_ENLIST_IN_DTC、3 番目のパラメーターは (手順 3. で取得した) トランザクション オブジェクトである必要があります。  
   
 5.  更新する SQL Server ごとに 1 回ずつ [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) を呼び出します。  
   

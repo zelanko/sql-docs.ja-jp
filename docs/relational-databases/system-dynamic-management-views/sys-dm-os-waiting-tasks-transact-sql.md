@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c0a89a48fa960812ee955cd3b7ecb30069161f61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72260379"
 ---
 # <a name="sysdm_os_waiting_tasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
@@ -35,13 +35,13 @@ ms.locfileid: "72260379"
 > [!NOTE]  
 >  またはから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]これを[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼び出すには、 **dm_pdw_nodes_os_waiting_tasks**という名前を使用します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**waiting_task_address**|**varbinary (8)**|待機中のタスクのアドレス。|  
 |**session_id**|**smallint**|タスクに関連付けられているセッションの ID。|  
 |**exec_context_id**|**int**|タスクに関連付けられている実行コンテキストの ID。|  
 |**wait_duration_ms**|**bigint**|この待機の種類の合計待機時間 (ミリ秒単位)。 この時間には**signal_wait_time**が含まれます。|  
-|**wait_type**|**nvarchar (60)**|待機の種類の名前。|  
+|**wait_type**|**nvarchar(60)**|待機の種類の名前。|  
 |**resource_address**|**varbinary (8)**|タスクが待機しているリソースのアドレス。|  
 |**blocking_task_address**|**varbinary (8)**|このリソースを現在保持しているタスク|  
 |**blocking_session_id**|**smallint**|要求をブロックしているセッションの ID。 この列が NULL の場合は、要求がブロックされていないか、ブロックしているセッションのセッション情報が使用または識別できません。<br /><br /> -2 = ブロックしているリソースは、孤立した分散トランザクションが所有しています。<br /><br /> -3 = ブロックしているリソースは、遅延復旧トランザクションが所有しています。<br /><br /> -4 = 内部ラッチの状態遷移のため、ブロックしているラッチの所有者のセッション ID を特定できませんでした。|  

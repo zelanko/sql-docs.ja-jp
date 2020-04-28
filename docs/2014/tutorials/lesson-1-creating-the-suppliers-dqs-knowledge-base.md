@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 26759a68274cfbc520e5e176d0dd3e1fab07e720
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154964"
 ---
 # <a name="lesson-1-creating-the-suppliers-dqs-knowledge-base"></a>レッスン 1: Suppliers DQS ナレッジ ベースを作成する
@@ -42,7 +42,7 @@ ms.locfileid: "70154964"
   
 -   ナレッジ ベースをクレンジングおよび照合アクティビティで使用できるように、ナレッジ ベースをパブリッシュします。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
  [タスク 1: ナレッジ ベースとドメインを作成する](../../2014/tutorials/task-1-creating-a-knowledge-base-and-domains.md)  
   
   

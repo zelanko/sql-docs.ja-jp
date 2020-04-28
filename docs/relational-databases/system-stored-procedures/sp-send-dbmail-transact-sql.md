@@ -19,10 +19,10 @@ ms.assetid: f1d7a795-a3fd-4043-ac4b-c781e76dab47
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 42c763b37f5c721a259fbe87eca804e22f5c27b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71974374"
 ---
 # <a name="sp_send_dbmail-transact-sql"></a>sp_send_dbmail (Transact-SQL)
@@ -81,7 +81,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
 `[ @body_format = ] 'body_format'`メッセージ本文の形式を指定します。 パラメーターの型は**varchar (20)**,、既定値は NULL です。 指定した場合、送信メッセージのヘッダーには、メッセージの本文が指定の形式であることを示す文字列が設定されます。 パラメーターには、次のいずれかの値を含めることができます。  
   
--   TEXT  
+-   [TEXT]  
   
 -   HTML  
   
@@ -103,7 +103,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
 -   Personal  
   
--   Kirkland  
+-   Private  
   
 -   機密  
   
@@ -161,7 +161,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
 ## <a name="result-sets"></a>結果セット  
  成功すると、"メールがキューに登録されました。" というメッセージが返されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  使用する前に、データベースメール構成ウィザードまたは**sp_configure**を使用してデータベースメールを有効にする必要があります。  
   
  **sysmail_stop_sp**は、外部プログラムが使用する Service Broker オブジェクトを停止することによってデータベースメールを停止します。 **sysmail_stop_sp**を使用してデータベースメールを停止しても、 **sp_send_dbmail**は引き続きメールを受け取ります。 データベースメールを開始するには、 **sysmail_start_sp**を使用します。  
@@ -249,6 +249,6 @@ EXEC msdb.dbo.sp_send_dbmail @recipients='yourfriend@Adventure-Works.com',
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
  [データベースメール構成オブジェクト](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースメール](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)   
- [sp_addrolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)  
+ [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)  
   
   

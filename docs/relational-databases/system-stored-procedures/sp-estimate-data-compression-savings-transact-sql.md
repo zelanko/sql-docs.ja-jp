@@ -19,10 +19,10 @@ ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2ecc9f44e28296b79cc5e1dc9a9c70caa93bd94f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71682139"
 ---
 # <a name="sp_estimate_data_compression_savings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-sql)
@@ -59,7 +59,7 @@ sp_estimate_data_compression_savings
  テーブルまたはインデックス付きビューを含んでいるデータベース スキーマの名前です。 *schema_name*は**sysname**です。 *Schema_name*が NULL の場合は、現在のユーザーの既定のスキーマが使用されます。  
   
  [ @object_name= ]'*object_name*'  
- インデックスがあるテーブルまたはインデックス付きビューの名前を指定します。 *object_name*は**sysname**です。  
+ インデックスがあるテーブルまたはインデックス付きビューの名前を指定します。 *object_name* は **sysname** です。  
   
  [ @index_id= ]*index_id*  
  インデックスの ID です。 *index_id*は**int**で、次のいずれかの値を指定できます。インデックスの id 番号、NULL、または、 *object_id*がヒープの場合は0です。 ベーステーブルまたはビューのすべてのインデックスに関する情報を返すには、NULL を指定します。 NULL を指定する場合は、 *partition_number*に null も指定する必要があります。  
@@ -78,7 +78,7 @@ sp_estimate_data_compression_savings
 ## <a name="result-sets"></a>結果セット  
  テーブル、インデックス、またはパーティションの現在のサイズと推定サイズを指定するために、次の結果セットが返されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |object_name|**sysname**|テーブルまたはインデックス付きビューの名前。|  
 |schema_name|**sysname**|テーブルまたはインデックス付きビューのスキーマ。|  
@@ -89,11 +89,10 @@ sp_estimate_data_compression_savings
 |sample_size_with_current_compression_setting (KB)|**bigint**|現在の圧縮設定を使用したサンプルのサイズ。 この列には、断片化も含まれます。|  
 |sample_size_with_requested_compression_setting (KB)|**bigint**|要求された圧縮設定を使用して作成されるサンプルのサイズ。また、該当する場合は、既存の FILL FACTOR と断片化はありません。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  を`sp_estimate_data_compression_savings`使用すると、行、ページ、列ストア、または列ストアアーカイブの圧縮に対してテーブルまたはパーティションを有効にした場合に発生する節約量を見積もることができます。 たとえば、行の平均サイズを40% 削減できる場合は、オブジェクトのサイズを40% 小さくすることができます。 これは FILL FACTOR と行サイズに左右されるため、領域を削減できない場合もあります。 たとえば、8000バイトの長さの行があり、そのサイズを40% 削減した場合でも、データページには1つの行だけを収めることができます。 領域は削減されません。  
   
- 
-  `sp_estimate_data_compression_savings` を実行してテーブルが増大するという結果が示される場合は、テーブルの多くの行でデータ型の有効桁数がほとんど使用されており、圧縮された形式に必要なわずかなオーバーヘッドが積み重なって、圧縮による削減量を上回ることを意味しています。 このようなまれなケースでは、圧縮を使用しないでください。  
+ `sp_estimate_data_compression_savings` を実行してテーブルが増大するという結果が示される場合は、テーブルの多くの行でデータ型の有効桁数がほとんど使用されており、圧縮された形式に必要なわずかなオーバーヘッドが積み重なって、圧縮による削減量を上回ることを意味しています。 このようなまれなケースでは、圧縮を使用しないでください。  
   
  テーブルで圧縮が有効になっている場合は、`sp_estimate_data_compression_savings` を使用して、テーブルが圧縮されていない場合の平均行サイズを推定します。  
   
@@ -124,7 +123,7 @@ sp_estimate_data_compression_savings
  |クラスター化列ストア インデックス|クラスター化列ストア インデックス|
 
 > [!NOTE]  
-> 行ストアのソースオブジェクト (クラスター化インデックス、非クラスター化インデックス、またはヒープ) から列ストア圧縮を推定するときに、列ストアインデックスでサポートされていないデータ型を持つ列がソースオブジェクトに存在する場合は、sp_estimate_compression_savingsはエラーで失敗します。
+> 行ストアのソースオブジェクト (クラスター化インデックス、非クラスター化インデックス、またはヒープ) から列ストア圧縮を推定するときに、列ストアインデックスでサポートされていないデータ型を持つ列がソースオブジェクトに存在する場合、sp_estimate_compression_savings はエラーで失敗します。
 
  同様に`@data_compression` 、パラメーターが`NONE`、 `ROW`、または`PAGE`に設定され、ソースオブジェクトが列ストアインデックスの場合、使用される参照オブジェクトの概要を次の表に示します。
 
@@ -136,7 +135,7 @@ sp_estimate_data_compression_savings
 > [!NOTE]  
 > 列ストアソースオブジェクトから行ストア圧縮 (NONE、ROW、または PAGE) を推定するときに、ソースインデックスに32列を超える列が含まれていないことを確認してください。これは、行ストア (非クラスター化) インデックスでサポートされる制限です。
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、`Production.WorkOrderRouting` 圧縮を使用して `ROW` テーブルを圧縮した場合のサイズを推定します。  
   
 ```sql  
@@ -147,7 +146,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [CREATE TABLE &#40;Transact-sql&#41;](../../t-sql/statements/create-table-transact-sql.md)   
+ [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [SQL&#41;&#40;Transact-sql のパーティション分割](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   

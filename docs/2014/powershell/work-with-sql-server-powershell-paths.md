@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5ca7d915b940296e6de6689e666401b0c3534c9d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782729"
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>SQL Server PowerShell パスの操作
@@ -22,11 +22,10 @@ ms.locfileid: "72782729"
   
 1.  [はじめに](#BeforeYouBegin)  
   
-2.  **パスノードで作業するには:** メソッドとプロパティの[一覧](#ListPropMeth)表示、[メソッドとプロパティの使用](#UsePropMeth)    
+2.  **パス ノードに関する作業:**  [メソッドとプロパティの一覧表示](#ListPropMeth)、 [メソッドとプロパティの使用](#UsePropMeth)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
- 
-  [!INCLUDE[ssDE](../includes/ssde-md.md)] プロバイダーのパスでノードに移動した後、2 種類の操作を実行できます。  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
+ [!INCLUDE[ssDE](../includes/ssde-md.md)] プロバイダーのパスでノードに移動した後、2 種類の操作を実行できます。  
   
 -   **Rename-Item**など、ノードを操作する Windows PowerShell コマンドレットを実行できます。  
   
@@ -34,7 +33,7 @@ ms.locfileid: "72782729"
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロバイダーは、 [!INCLUDE[ssDE](../includes/ssde-md.md)]のインスタンスのオブジェクトを管理するために使用されます。 データベース内のデータの処理には使用されません。 テーブルまたはビューに移動した場合に、プロバイダーを使用してデータの選択、挿入、更新、または削除を行うことはできません。 テーブルおよびビューのデータを Windows PowerShell 環境からクエリまたは変更するには、 **Invoke-Sqlcmd** コマンドレットを使用します。 詳細については、「 [Invoke-Sqlcmd コマンドレット](../database-engine/invoke-sqlcmd-cmdlet.md)」を参照してください。  
   
-##  <a name="ListPropMeth"></a> メソッドとプロパティの一覧表示
+##  <a name="listing-methods-and-properties"></a><a name="ListPropMeth"></a>メソッドとプロパティの一覧表示
   
  特定のオブジェクトまたはオブジェクト クラスで使用できるメソッドとプロパティを表示するには、 **Get-Member** コマンドレットを使用します。  
   
@@ -63,7 +62,7 @@ Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012
 Get-Item . | Get-Member -Type Properties  
 ```  
   
-##  <a name="UsePropMeth"></a>SMO のメソッドとプロパティの使用  
+##  <a name="using-smo-methods-and-properties"></a><a name="UsePropMeth"></a>SMO のメソッドとプロパティの使用  
   
  [!INCLUDE[ssDE](../includes/ssde-md.md)] プロバイダー パスからオブジェクトの操作を実行するには、SMO メソッドとプロパティを使用します。  
   
@@ -97,7 +96,7 @@ $MyDBVar.State
 ## <a name="see-also"></a>参照  
  [SQL Server PowerShell プロバイダー](sql-server-powershell-provider.md)   
  [SQL Server PowerShell パスの移動](navigate-sql-server-powershell-paths.md)   
- [URN から SQL Server プロバイダー パスへの変換](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
+ [Urn を SQL Server プロバイダーのパスに変換する](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: a828e55c-633a-41cf-9769-a0698b446e6c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a4bd7f90688d61f9ecee487d553393e38bed82e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70211277"
 ---
 # <a name="sysmail_add_profile_sp-transact-sql"></a>sysmail_add_profile_sp (Transact-SQL)
@@ -53,7 +53,7 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  データベースメールプロファイルには、任意の数のデータベースメールアカウントが保持されます。 データベース メールのストアド プロシージャでは、このプロシージャで生成されたプロファイル名またはプロファイル ID によって、プロファイルを参照できます。 アカウントをプロファイルに追加する方法の詳細については、「 [sysmail_add_profileaccount_sp &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)」を参照してください。  
   
  プロファイルの名前と説明はストアドプロシージャ**sysmail_update_profile_sp**で変更できますが、プロファイル id はプロファイルの有効期間中は一定のままです。  
@@ -65,7 +65,7 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャの実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  **A. 新しいプロファイルを作成する**  
   
  次の例では、`AdventureWorks Administrator` という新しいデータベース メール プロファイルを作成します。  

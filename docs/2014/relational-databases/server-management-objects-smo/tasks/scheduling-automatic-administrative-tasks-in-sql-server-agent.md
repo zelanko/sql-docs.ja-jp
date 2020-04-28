@@ -15,31 +15,26 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 715a60d4a6f4a138a71e7de6095234a9e0d2a461
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782209"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>SQL Server エージェントでの自動管理タスクのスケジュール設定
   SMO では、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントは次のオブジェクトで表現されます。  
   
--   
-  <xref:Microsoft.SqlServer.Management.Smo.Agent.JobServer> オブジェクトには、ジョブ、警告、オペレーターの 3 つのコレクションがあります。  
+-   <xref:Microsoft.SqlServer.Management.Smo.Agent.JobServer> オブジェクトには、ジョブ、警告、オペレーターの 3 つのコレクションがあります。  
   
--   
-  <xref:Microsoft.SqlServer.Management.Smo.Agent.OperatorCollection> オブジェクトは、Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントによって自動的にイベントの通知を行える、ポケットベル、電子メール アドレス、およびネット送信オペレーターのリストを表します。  
+-   <xref:Microsoft.SqlServer.Management.Smo.Agent.OperatorCollection> オブジェクトは、Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントによって自動的にイベントの通知を行える、ポケットベル、電子メール アドレス、およびネット送信オペレーターのリストを表します。  
   
--   
-  <xref:Microsoft.SqlServer.Management.Smo.Agent.AlertCollection> オブジェクトは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] によって監視される、システム イベントやパフォーマンス条件などの状況のリストを表します。  
+-   <xref:Microsoft.SqlServer.Management.Smo.Agent.AlertCollection> オブジェクトは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] によって監視される、システム イベントやパフォーマンス条件などの状況のリストを表します。  
   
--   
-  <xref:Microsoft.SqlServer.Management.Smo.Agent.JobCollection> オブジェクトは、やや複雑です。 このオブジェクトは、指定されたスケジュールで実行されるマルチステップ タスクのリストを表します。 ステップおよびスケジュール情報は、<xref:Microsoft.SqlServer.Management.Smo.Agent.JobStep> オブジェクトおよび <xref:Microsoft.SqlServer.Management.Smo.Agent.JobSchedule> オブジェクトに格納されます。  
+-   <xref:Microsoft.SqlServer.Management.Smo.Agent.JobCollection> オブジェクトは、やや複雑です。 このオブジェクトは、指定されたスケジュールで実行されるマルチステップ タスクのリストを表します。 ステップおよびスケジュール情報は、<xref:Microsoft.SqlServer.Management.Smo.Agent.JobStep> オブジェクトおよび <xref:Microsoft.SqlServer.Management.Smo.Agent.JobSchedule> オブジェクトに格納されます。  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント オブジェクトは、<xref:Microsoft.SqlServer.Management.Smo.Agent> 名前空間にあります。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント オブジェクトは、<xref:Microsoft.SqlServer.Management.Smo.Agent> 名前空間にあります。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual studio .net で VISUAL BASIC SMO プロジェクトを作成する](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)」または「visual [Studio .Net で VISUAL C&#35; Smo プロジェクトを作成](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)する」を参照してください。  
   
 1.  プログラムで [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントを使用する場合、エージェント名前空間を修飾する `Imports` ステートメントを含める必要があります。 アプリケーションの宣言の前、かつ他の `Imports` ステートメントの後に、次のようにステートメントを挿入します。  
@@ -173,8 +168,7 @@ $jbsch.Create();
   
  **ObjectName |CounterName |Instance |ComparisionOp |CompValue**  
   
- 警告の通知にはオペレーターが必要です。 
-  <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> は Visual Basic キーワードであるため、`operator` 型には角かっこが必要です。  
+ 警告の通知にはオペレーターが必要です。 `operator` は Visual Basic キーワードであるため、<xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 型には角かっこが必要です。  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBAgent3](SMO How to#SMO_VBAgent3)]  -->  
   
@@ -183,8 +177,7 @@ $jbsch.Create();
   
  **ObjectName |CounterName |Instance |ComparisionOp |CompValue**  
   
- 警告の通知にはオペレーターが必要です。 
-  <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> は `operator` キーワードであるため、[!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 型には角かっこが必要です。  
+ 警告の通知にはオペレーターが必要です。 `operator` は [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] キーワードであるため、<xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 型には角かっこが必要です。  
   
 ```csharp
 {  
@@ -217,8 +210,7 @@ $jbsch.Create();
   
  **ObjectName |CounterName |Instance |ComparisionOp |CompValue**  
   
- 警告の通知にはオペレーターが必要です。 
-  <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> は `operator` キーワードであるため、[!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 型には角かっこが必要です。  
+ 警告の通知にはオペレーターが必要です。 `operator` は [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] キーワードであるため、<xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 型には角かっこが必要です。  
   
 ```powershell
 #Get a server object which corresponds to the default instance  

@@ -11,10 +11,10 @@ author: Jtoland
 ms.author: Jtoland
 manager: murato
 ms.openlocfilehash: dfa640787f42d06ed65b713c9fea415dc9560a2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72252205"
 ---
 # <a name="sql-server-migration-assistant-for-access-accesstosql"></a>アクセスのための SQL Server Migration Assistant (アクセス可能な Sql)
@@ -25,7 +25,7 @@ ms.locfileid: "72252205"
   
 ## <a name="contents"></a>内容  
   
-|Section|[説明]|
+|Section|説明|
 |-----------|---------------|
 |[SSMA for Access の新機能](https://msdn.microsoft.com/a24d3fc0-6911-4bfa-828a-197abf222e02)|SSMA リリースに対する変更の一覧を示します。|  
 |[アクセスのための SQL Server Migration Assistant のインストール](installing-sql-server-migration-assistant-for-access-accesstosql.md)|SSMA をインストールするための前提条件、SSMA をインストールおよびライセンスする手順、および最新バージョンへのリンクを示します。|  

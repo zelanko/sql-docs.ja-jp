@@ -13,15 +13,14 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 09/03/2019
 ms.openlocfilehash: 39a43adeb82b154a076fc7bfc24cc56b54cc8640
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71199326"
 ---
 # <a name="query-options-execution-advanced-page"></a>[クエリ オプション] の [実行] ([詳細設定] ページ)
 
-  
   **SET** ステートメントを使用する際には、さまざまなオプションを指定できます。 このページを使用して Microsoft SQL Server クエリを実行する**SET**オプションを指定します。 各オプションの詳細については、SQL Server オンライン ブックを参照してください。
   
 **SET NOCOUNT**結果セットのメッセージとして、行数のカウントを返しません。 既定では、このオプションはオフになっています。
@@ -30,9 +29,9 @@ ms.locfileid: "71199326"
 
 **SET PARSEONLY**各クエリの構文をチェックしますが、クエリは実行しません。 既定では、このオプションはオフになっています。  
 
-**CONCAT_NULL_YIELDS_NULL の設定**このチェックボックスをオンにすると、既存の値`NULL`とを連結するクエリは、 `NULL`常にを結果として返します。 このチェック ボックスがオフの場合、既存の値と `NULL` を連結するクエリは、既存の値を返します。 既定では、このオプションはオンになっています。
+**CONCAT_NULL_YIELDS_NULL の設定**このチェックボックスをオンにすると、既存の値`NULL`とを連結するクエリは、 `NULL`常にを結果として返します。 このチェック ボックスがオフの場合、既存の値と `NULL` を連結するクエリは、既存の値を返します。 既定では、このオプションはオンです。
 
-**ARITHABORT の設定**このチェックボックスがオンの場合、式`INSERT`の`DELETE`評価`UPDATE`中に、、またはステートメントで算術エラー (オーバーフロー、0による除算、またはドメインエラー) が発生すると、クエリまたはバッチは終了します。 このチェック ボックスがオフの場合、可能であればその値に対して  `NULL` が与えられ、クエリが続行されます。さらに、結果にメッセージが含められます。 この動作の詳細については、オンライン ブックを参照してください。 既定では、このオプションはオンになっています。
+**ARITHABORT の設定**このチェックボックスがオンの場合、式`INSERT`の`DELETE`評価`UPDATE`中に、、またはステートメントで算術エラー (オーバーフロー、0による除算、またはドメインエラー) が発生すると、クエリまたはバッチは終了します。 このチェック ボックスがオフの場合、可能であればその値に対して  `NULL` が与えられ、クエリが続行されます。さらに、結果にメッセージが含められます。 この動作の詳細については、オンライン ブックを参照してください。 既定では、このオプションはオンです。
   
 **SHOWPLAN_TEXT の設定**このチェックボックスをオンにすると、クエリごとにクエリプランがテキスト形式で返されます。 既定では、このオプションはオフになっています。
   
@@ -67,4 +66,4 @@ ms.locfileid: "71199326"
 
 詳細については、「 [Always Encrypted with secure enclaves](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sqlallproducts-allversions) And [Secure エンクレーブ構成証明](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sqlallproducts-allversions#secure-enclave-attestation)書」を参照してください。
 
-**既定値にリセット**このページのすべての値を元の既定値にリセットします。
+**[既定値にリセット]** このページ上のすべての値を元の既定値にリセットします。

@@ -16,10 +16,10 @@ ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bfe3cd91150d1990acc410cb4a61af9485c61f4b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72304942"
 ---
 # <a name="sp_changemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
@@ -55,15 +55,15 @@ sp_changemergefilter [ @publication= ] 'publication'
   
  次の表では、アーティクルのプロパティとそれらのプロパティの値について説明します。  
   
-|プロパティ|値|[説明]|  
+|プロパティ|値|説明|  
 |--------------|-----------|-----------------|  
 |**filter_type**|**1**|結合フィルター。<br /><br /> このオプションは、サブスクライバーを[!INCLUDE[ssEW](../../includes/ssew-md.md)]サポートするために必要です。|  
 ||**2**|論理レコードリレーションシップ。|  
-||**番**|結合フィルターは論理レコードリレーションシップでもあります。|  
+||**3**|結合フィルターは論理レコードリレーションシップでもあります。|  
 |**filtername**||フィルターの名前。|  
 |**join_articlename**||結合アーティクルの名前。|  
 |**join_filterclause**||フィルター句。|  
-|**join_unique_key**|**本来**|結合は、一意なキーに基づいて行われます。|  
+|**join_unique_key**|**true**|結合は、一意なキーに基づいて行われます。|  
 ||**false**|結合が一意のキーではありません。|  
   
 `[ @force_invalidate_snapshot = ] force_invalidate_snapshot`このストアドプロシージャによって実行される操作によって既存のスナップショットが無効になる可能性があることを確認します。 *force_invalidate_snapshot*は**ビット**であり、既定値は**0**です。  
@@ -81,7 +81,7 @@ sp_changemergefilter [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_changemergefilter**は、マージレプリケーションで使用します。  
   
  マージアーティクルのフィルターを変更するには、スナップショットが存在する場合は再作成する必要があります。 これを行うには、 ** \@force_invalidate_snapshot**を**1**に設定します。 また、この記事へのサブスクリプションがある場合は、サブスクリプションを再初期化する必要があります。 これを行うには、 ** \@force_reinit_subscription**を**1**に設定します。  
@@ -96,6 +96,6 @@ sp_changemergefilter [ @publication= ] 'publication'
  [sp_addmergefilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
  [sp_dropmergefilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
  [sp_helpmergefilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

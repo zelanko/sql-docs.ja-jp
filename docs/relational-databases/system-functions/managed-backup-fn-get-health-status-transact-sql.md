@@ -21,10 +21,10 @@ ms.assetid: b376711d-444a-4b5e-b483-8df323b4e31f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bc2bfdbd8714bf4211373e921c1b054ed224feb3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70155813"
 ---
 # <a name="managed_backupfn_get_health_status-transact-sql"></a>managed_backup。 fn_get_health_status (Transact-sql)
@@ -43,7 +43,7 @@ ms.locfileid: "70155813"
 managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 'time_2')  
 ```  
   
-##  <a name="Arguments"></a>数値  
+##  <a name="arguments"></a><a name="Arguments"></a>数値  
  [@begin_time]  
  エラーの集計数を計算する期間の開始時刻。  @begin_timeパラメーターは DATETIME です。 既定値は NULL です。 値が NULL の場合、この関数は現在の時刻の 30 分前に報告されたイベントから処理します。  
   
@@ -52,17 +52,17 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|number_of_storage_connectivity_errors|INT|プログラムが Azure ストレージアカウントに接続するときの接続エラーの数。|  
-|number_of_sql_errors|INT|プログラムが SQL Server エンジンに接続したときに返されたエラーの数。|  
-|number_of_invalid_credential_errors|INT|プログラムが SQL 資格情報を使用して認証しようとしたときに返されたエラーの数。|  
-|number_of_other_errors|INT|接続、SQL、資格情報以外のカテゴリに関するエラーの数。|  
-|number_of_corrupted_or_deleted_backups|INT|削除または破損したバックアップファイルの数。|  
-|number_of_backup_loops|INT|で[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]構成されたすべてのデータベースをバックアップエージェントがスキャンする回数。|  
-|number_of_retention_loops|INT|保有期間を評価するためにデータベースがスキャンされた回数。|  
+|number_of_storage_connectivity_errors|int|プログラムが Azure ストレージアカウントに接続するときの接続エラーの数。|  
+|number_of_sql_errors|int|プログラムが SQL Server エンジンに接続したときに返されたエラーの数。|  
+|number_of_invalid_credential_errors|int|プログラムが SQL 資格情報を使用して認証しようとしたときに返されたエラーの数。|  
+|number_of_other_errors|int|接続、SQL、資格情報以外のカテゴリに関するエラーの数。|  
+|number_of_corrupted_or_deleted_backups|int|削除または破損したバックアップファイルの数。|  
+|number_of_backup_loops|int|で[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]構成されたすべてのデータベースをバックアップエージェントがスキャンする回数。|  
+|number_of_retention_loops|int|保有期間を評価するためにデータベースがスキャンされた回数。|  
   
-## <a name="best-practices"></a>ベスト プラクティス  
+## <a name="best-practices"></a>推奨する運用方法  
  これらの集計数は、システムの正常性を監視するために使用できます。 たとえば、number_ of_retention_loops 列が30分間0の場合、リテンション期間の管理に時間がかかったり、正常に機能しなくなったりする可能性があります。 0以外のエラー列は問題を示している可能性があり、拡張イベントログをチェックして問題の詳細を確認する必要があります。 または、ストアドプロシージャ**managed_backup. sp_get_backup_diagnostics**を使用して、拡張イベントの一覧を取得し、エラーの詳細を確認します。  
   
 ## <a name="security"></a>Security  
@@ -70,7 +70,7 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
 ### <a name="permissions"></a>アクセス許可  
  関数に対する**SELECT**権限が必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
   
 -   次の例では、関数を実行した時点の 30 分前から集計されたエラー数が返されます。  
   

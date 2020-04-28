@@ -19,10 +19,10 @@ ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ec7758ad2f9443ad29f0da799e3f286612f95cab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72278183"
 ---
 # <a name="sp_detach_db-transact-sql"></a>sp_detach_db (Transact-sql)
@@ -60,9 +60,9 @@ sp_detach_db [ @dbname= ] 'database_name'
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ None  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  データベースをデタッチすると、そのすべてのメタデータが削除されます。 データベースが任意のログインアカウントの既定のデータベースであった場合、 **master**が既定のデータベースになります。  
   
 > [!NOTE]  
@@ -78,8 +78,7 @@ sp_detach_db [ @dbname= ] 'database_name'
      データベースをデタッチする前に、 [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)を実行してパブリッシングを無効にする必要があります。  
   
     > [!NOTE]  
-    >  
-  **sp_replicationdboption**を使用できない場合、 [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)を実行してレプリケーションを削除できます。  
+    >  **sp_replicationdboption**を使用できない場合、 [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)を実行してレプリケーションを削除できます。  
   
 -   データベースに、データベース スナップショットが存在する。  
   
@@ -113,7 +112,7 @@ GO
 ```  
   
 > [!NOTE]  
->  現在のユーザーをデータベースから直ちに、または指定された秒数内に強制的に戻すには、ROLLBACK オプションを使用します。 ALTER DATABASE *database_name* SET SINGLE_USER WITH rollback *rollback_option*です。 詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。  
+>  現在のユーザーをデータベースから直ちに、または指定された秒数内に強制的に戻すには、ROLLBACK オプションを使用します。 ALTER DATABASE *database_name* SET SINGLE_USER WITH rollback *rollback_option*です。 詳細については、「 [ALTER DATABASE &#40;transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。  
   
 ## <a name="reattaching-a-database"></a>データベースの再アタッチ  
  デタッチされたファイルはそのまま残り、CREATE DATABASE (FOR ATTACH または FOR ATTACH_REBUILD_LOG オプション) を使用して再アタッチできます。 ファイルを別のサーバーに移動し、そこにアタッチすることもできます。  
@@ -121,7 +120,7 @@ GO
 ## <a name="permissions"></a>アクセス許可  
  **Sysadmin**固定サーバーロールのメンバーシップ、またはデータベースの**db_owner**ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 、 *skipchecks チェック*を true に設定してデータベースをデタッチします。  
   
 ```  
@@ -136,9 +135,9 @@ exec sp_detach_db @dbname='AdventureWorks2012'
 ```  
   
 ## <a name="see-also"></a>参照  
- [ALTER DATABASE &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [データベースのデタッチとアタッチ &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [CREATE DATABASE &#40;SQL Server Transact-sql&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [データベースのデタッチ](../../relational-databases/databases/detach-a-database.md)  
   
   

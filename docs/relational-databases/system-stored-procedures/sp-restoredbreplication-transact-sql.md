@@ -16,10 +16,10 @@ ms.assetid: a2c5ee32-e6d9-46e9-8031-8ff13c20acf7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 92d0b6390e630e3dea33c603bab11e8649444ab1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70160716"
 ---
 # <a name="sp_restoredbreplication-transact-sql"></a>sp_restoredbreplication (Transact-SQL)
@@ -55,13 +55,13 @@ sp_restoredbreplication [ @srv_orig = ] 'original_server_name'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_restoredbreplication**は、すべての種類のレプリケーションで使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_restoredbreplication**を実行できるのは、 **sysadmin**または**dbcreator**固定サーバーロールまたは**dbo**データベーススキーマのメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
- [レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

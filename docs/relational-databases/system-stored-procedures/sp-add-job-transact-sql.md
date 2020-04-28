@@ -18,10 +18,10 @@ ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7752b8fcb453f545c357c529774d570e41201ed1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72381910"
 ---
 # <a name="sp_add_job-transact-sql"></a>sp_add_job (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "72381910"
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
  > [!IMPORTANT]  
- > [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
+ > [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)では、ほとんどの SQL Server エージェント機能は現在サポートされていません。 詳細については[、「Azure SQL Database Managed Instance t-sql の相違 SQL Server 点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
  
 ## <a name="syntax"></a>構文  
   
@@ -73,12 +73,12 @@ sp_add_job [ @job_name = ] 'job_name'
   
 `[ @notify_level_eventlog = ] eventlog_level`このジョブの Microsoft Windows アプリケーションログにエントリを配置するタイミングを示す値。 *eventlog_level*は**int**,、これらの値のいずれかを指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|**0**|Never|  
+|**0**|なし|  
 |**1**|成功時|  
 |**2** (既定値)|失敗時|  
-|**番**|Always (常に)|  
+|**3**|Always (常に)|  
   
 `[ @notify_level_email = ] email_level`このジョブの完了時に電子メールを送信するタイミングを示す値。 *email_level*は**int**,、既定値は**0**,、しないことを示します。 *email_level*は*eventlog_level*と同じ値を使用します。  
   
@@ -103,17 +103,16 @@ sp_add_job [ @job_name = ] 'job_name'
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ None  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  originating_server は sp_add_job に存在しますが **、** [引数] の下には表示されません。 ** \@** originating_server は、内部使用のために予約されています。 ** \@**  
   
  **Sp_add_job**を実行してジョブを追加した後、 **sp_add_jobstep**を使用して、ジョブのアクティビティを実行するステップを追加できます。 **sp_add_jobschedule**を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントサービスがジョブを実行するために使用するスケジュールを作成できます。 **Sp_add_jobserver**を使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、ジョブを実行するインスタンスを設定し、 **sp_delete_jobserver**して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスからジョブを削除します。  
   
  マルチサーバー環境の1つ以上の対象サーバーでジョブを実行する場合は、 **sp_apply_job_to_targets**を使用して、ジョブの対象サーバーまたは対象サーバーグループを設定します。 対象サーバーまたは対象サーバーグループからジョブを削除するには、 **sp_remove_job_from_targets**を使用します。  
   
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、ジョブを簡単に管理できるグラフィカルなツールです。ジョブのインフラストラクチャを作成し、管理するには、このツールを使用することをお勧めします。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、ジョブを簡単に管理できるグラフィカルなツールです。ジョブのインフラストラクチャを作成し、管理するには、このツールを使用することをお勧めします。  
   
 ## <a name="permissions"></a>アクセス許可  
  このストアドプロシージャを実行するには、 **sysadmin**固定サーバーロールのメンバーであるか、 **msdb**データベースに格納され[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ている次のいずれかのエージェント固定データベースロールが与えられている必要があります。  
@@ -179,6 +178,6 @@ GO
  [sp_help_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
  [sp_help_jobstep &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
  [sp_update_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: 9668ae6d-9ed5-418e-bb9a-9e7b66f7dd16
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 9e7eb2e007191088a0259360924b2f5f931dec0a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72304900"
 ---
 # <a name="sp_help_spatial_geometry_index_xml-transact-sql"></a>sp_help_spatial_geometry_index_xml (Transact-SQL)
@@ -53,7 +53,7 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
 ## <a name="permissions"></a>アクセス許可  
  ユーザーは、 **public**ロールのメンバーである必要があります。 サーバーとオブジェクトに対する読み取りアクセス権限が必要です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  NULL 値を含むプロパティは、XML の戻り値のセットに含まれません。  
   
 ## <a name="example"></a>例  
@@ -71,7 +71,7 @@ SELECT @x.value('(/Primary_Filter_Efficiency/text())[1]', 'float');
   
  [Sp_help_spatial_geometry_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)と同様に、このストアドプロシージャを使用すると、空間インデックスのプロパティにプログラムで簡単にアクセスして、XML 形式で結果セットを報告できます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 ## <a name="see-also"></a>参照  
  [空間インデックスストアドプロシージャの引数とプロパティ](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)   

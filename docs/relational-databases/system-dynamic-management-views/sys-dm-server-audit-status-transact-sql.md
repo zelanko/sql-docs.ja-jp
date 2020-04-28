@@ -19,10 +19,10 @@ ms.assetid: 4aa32d54-2ae1-437e-bbaa-7f1df1404b44
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c30cbd012bb1ccc7d379eadcfd29fee87a96dd85
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72313685"
 ---
 # <a name="sysdm_server_audit_status-transact-sql"></a>dm_server_audit_status (Transact-sql)
@@ -30,11 +30,11 @@ ms.locfileid: "72313685"
 
   監査の現在の状態を示す、サーバー監査ごとに1行の値を返します。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**audit_id**|**int**|監査の ID。 は、**システム**カタログビューの**audit_id**フィールドにマップされます。|  
 |**name**|**sysname**|監査の名前。 **Server_audits**カタログビューの**name**フィールドと同じです。|  
-|**オンライン**|**smallint**|サーバー監査の状態を表す数値。<br /><br /> 0 = 未開始<br /><br /> 1 =<br />        開始済み<br /><br /> 2 =<br />      実行時エラー<br /><br /> 3 = ターゲットの作成失敗<br /><br /> 4 = シャットダウン中|  
+|**status**|**smallint**|サーバー監査の状態を表す数値。<br /><br /> 0 = 未開始<br /><br /> 1 =<br />        Started<br /><br /> 2 =<br />      実行時エラー<br /><br /> 3 = ターゲットの作成失敗<br /><br /> 4 = シャットダウン中|  
 |**status_desc**|**nvarchar(256)**|サーバー監査の状態を示す文字列。<br /><br /> NOT_STARTED<br /><br /> STARTED<br /><br /> RUNTIME_FAIL<br /><br /> TARGET_CREATION_FAILED<br /><br /> SHUTTING_DOWN|  
 |**status_time**|**datetime2**|監査の最後の状態変更の UTC のタイムスタンプ。|  
 |**event_session_address**|**varbinary (8)**|監査に関連付けられている拡張イベントセッションのアドレス。 **Dm_xe_sessions**カタログビューに関連付けられています。|  
@@ -44,7 +44,7 @@ ms.locfileid: "72313685"
 ## <a name="permissions"></a>アクセス許可  
  プリンシパルには、 **VIEW SERVER STATE**と**SELECT**権限が必要です。  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [CREATE SERVER AUDIT &#40;Transact-sql&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   

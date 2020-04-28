@@ -19,10 +19,10 @@ ms.assetid: 864fd0e6-9d61-4f07-92ef-145318d2f881
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: ec6c40abd080c86722565762fab3b4f9d30bd0c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72305307"
 ---
 # <a name="sp_update_proxy-transact-sql"></a>sp_update_proxy (Transact-sql)
@@ -64,7 +64,7 @@ sp_update_proxy
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ** \@Proxy_name**または** \@proxy_id**のいずれかを指定する必要があります。 両方の引数を指定する場合は、両方とも同じプロキシを参照する必要があります。異なるプロキシを参照する場合、ストアド プロシージャは失敗します。  
   
  プロキシの資格情報を変更するには、 ** \@credential_name**または** \@credential_id**のいずれかを指定する必要があります。 両方の引数を指定する場合は、両方とも同じ資格情報を参照する必要があります。異なる資格情報を参照する場合、ストアド プロシージャは失敗します。  
@@ -74,7 +74,7 @@ sp_update_proxy
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャを実行できるのは、 **sysadmin**固定セキュリティロールのメンバーだけです。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、プロキシ `Catalog application proxy` の enabled の値を `0` に設定します。  
   
 ```  

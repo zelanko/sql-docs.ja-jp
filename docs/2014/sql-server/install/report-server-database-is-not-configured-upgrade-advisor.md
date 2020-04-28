@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: bb5dd5968930319532a29ff7c3909c36af99b3a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952109"
 ---
 # <a name="report-server-database-is-not-configured-upgrade-advisor"></a>レポート サーバー データベースが構成されていない (アップグレード アドバイザー)
@@ -24,14 +24,13 @@ ms.locfileid: "71952109"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ネイティブモード &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード。|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード|  
   
 ## <a name="component"></a>コンポーネント  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-## <a name="description"></a>[説明]  
- セットアップでアップグレードできるのは、完全に構成されているレポート サーバー インスタンスだけです。 続行するには、レポートサーバーデータベースを構成するか、Microsoft Windows の**コントロールパネル**を使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インストールからレポートサーバー機能を削除する必要があります。 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を削除すると、その他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントをアップグレードできるようになります。  
+## <a name="description"></a>説明  
+ セットアップでアップグレードできるのは、完全に構成されているレポート サーバー インスタンスだけです。 続行するには、レポートサーバーデータベースを構成するか、Microsoft Windows の**コントロールパネル**を使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インストールからレポートサーバー機能を削除する必要があります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を削除すると、その他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントをアップグレードできるようになります。  
   
 ## <a name="corrective-action"></a>修正措置  
  レポート サーバー データベースを構成していない場合、レポート サーバーは使用できないので、アップグレード前に削除する必要があります。  

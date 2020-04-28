@@ -14,20 +14,19 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e4d994eb6d345ab98e6cd51a44c7c90a74bafd3a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70874602"
 ---
 # <a name="large-backup-or-restore-history-tables-make-upgrade-appear-to-not-respond"></a>バックアップまたは復元のサイズの大きい履歴テーブルではアップグレードが応答を停止したように見える
-  
   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] では、バックアップと復元の履歴テーブルの一部に新しい列が追加されました。 これらのテーブルをアップグレードするには、新しい列を追加するためにテーブルを変更する必要があります。 これらのテーブルのうちの 1 つ以上のテーブルに大量の行が含まれている場合、アップグレードの際に、テーブルに列を追加する ALTER TABLE ステートメントで非常に時間がかかります。  
   
 ## <a name="component"></a>コンポーネント  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>[説明]  
+## <a name="description"></a>説明  
  次のいずれかのバックアップまたは復元履歴テーブルに多数の行が含まれていると、アップグレードが応答を停止する可能性があります。  
   
 -   **backupfile**  

@@ -18,10 +18,10 @@ ms.assetid: c9613858-9512-43a9-aa53-7ee8064f064c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 517d9359085f7cb4bc4c94eb941981a09ca06eef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72304788"
 ---
 # <a name="syssubscriptions-system-view-transact-sql"></a>syssubscriptions (システム ビュー) (Transact-SQL)
@@ -29,16 +29,16 @@ ms.locfileid: "72304788"
 
   **Syssubscriptions**ビューは、サブスクリプション情報を公開します。 このビューは、ディストリビューション データベースに格納されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**artid**|**int**|サブスクライブされるアーティクルの一意な ID。|  
 |**srvid**|**smallint**|サブスクライバーのサーバー ID。|  
 |**dest_db**|**sysname**|サブスクリプションデータベースの名前。|  
-|**オンライン**|**tinyint**|サブスクリプションの状態。<br /><br /> **0** = 非アクティブ。<br /><br /> **1** = サブスクライブ済み。<br /><br /> **2** = アクティブ。|  
+|**status**|**tinyint**|サブスクリプションの状態。<br /><br /> **0** = 非アクティブ。<br /><br /> **1** = サブスクライブ済み。<br /><br /> **2** = アクティブ。|  
 |**sync_type**|**tinyint**|初期同期の種類。<br /><br /> **1** = 自動。<br /><br /> **2** = なし。|  
 |**login_name**|**sysname**|パブリッシャーに接続してサブスクリプションを追加するときに使用されるログイン名です。|  
 |**subscription_type**|**int**|サブスクリプションの種類。<br /><br /> **0** = プッシュ-ディストリビューションエージェントはディストリビューターで実行されます。<br /><br /> **1** = プル-ディストリビューションエージェントはサブスクライバーで実行されます。|  
-|**distribution_jobid**|**バイナリ (16)**|サブスクリプションの同期で使用されるディストリビューション エージェント ジョブの識別子。|  
+|**distribution_jobid**|**binary(16)**|サブスクリプションの同期で使用されるディストリビューション エージェント ジョブの識別子。|  
 |**timestmap**|**timestamp**|サブスクリプションを作成した日付と時刻。|  
 |**update_mode**|**tinyint**|更新モード:<br /><br /> **0** = 読み取り専用。<br /><br /> **1** = 即時更新。|  
 |**loopback_detection**|**bit**|双方向トランザクションレプリケーショントポロジの一部であるサブスクリプションに適用されます。 ディストリビューション エージェントが、サブスクライバーで発生したトランザクションをサブスクライバーに戻すかどうかを示します。<br /><br /> **0** = 返送します。<br /><br /> **1** = を返しません。|  
@@ -49,6 +49,6 @@ ms.locfileid: "72304788"
 ## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [syssubscriptions &#40;Transact-sql&#41;](../../relational-databases/system-tables/syssubscriptions-transact-sql.md)  
+ [syssubscriptions &#40;Transact-SQL&#41;](../../relational-databases/system-tables/syssubscriptions-transact-sql.md)  
   
   

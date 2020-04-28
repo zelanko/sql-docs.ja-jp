@@ -18,10 +18,10 @@ ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b64c1d0d6032ce5032a92c840635fdf0c087e571
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72251949"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
@@ -47,10 +47,10 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
  *\@オプション*  
  パスのサーバーコンポーネントをどのように書式設定するかを定義する整数[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 オプションには、次のいずれかの値を指定できます。 * \@* 既定値は 0 です。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |0|サーバー名を BIOS 形式に変換して返します (例: `\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`)。|  
-|1 で保護されたプロセスとして起動されました|次の例のように、変換せずにサーバー名を返します。`\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
+|1|次の例のように、変換せずにサーバー名を返します。`\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
 |2|完全なサーバーパスを返します。次に例を示します。`\\ServerName.MyDomain.com\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
   
  *use_replica_computer_name*  
@@ -60,11 +60,11 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  データベースが Always On 可用性グループに属している場合、 *use_replica_computer_name*の値は**PathName**関数の出力に次のように影響します。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |指定されていません。|関数は、パス内の仮想ネットワーク名 (VNN) を返します。|  
 |0|関数は、パス内の仮想ネットワーク名 (VNN) を返します。|  
-|1 で保護されたプロセスとして起動されました|関数は、パス内のコンピューター名を返します。|  
+|1|関数は、パス内のコンピューター名を返します。|  
   
 ## <a name="return-type"></a>戻り値の型  
  **nvarchar(max)**  
@@ -72,7 +72,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 ## <a name="return-value"></a>戻り値  
  返される値は、BLOB の完全修飾論理パスまたは NETBIOS パスです。 PathName は IP アドレスを返しません。 FILESTREAM BLOB が作成されていない場合は、NULL が返されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ROWGUID 列は、PathName を呼び出すすべてのクエリに表示される必要があります。  
   
  FILESTREAM BLOB は、[!INCLUDE[tsql](../../includes/tsql-md.md)] でのみ作成できます。  
