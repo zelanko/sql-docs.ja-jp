@@ -1,5 +1,5 @@
 ---
-title: レポートデザインとレポートの配置を計画する (レポート サービス 2014) |マイクロソフトドキュメント
+title: レポートのデザインとレポートの配置を計画する (Reporting Services 2014) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d3047dba3e54d384f2f52733e8cf49308b793190
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80380823"
 ---
 # <a name="plan-for-report-design-and-report-deployment-reporting-services-2014"></a>レポート デザインとレポート配置の計画 (Reporting Services 2014)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]には、レポートの作成と配置に関するいくつかの方法が用意されています。 このトピックは、使用するレポート作成環境とレポート サーバーの組み合わせを計画するために役立ちます。 このトピックでは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のコンポーネントでサポートされているレポート定義の概要を示します。 レポート定義は、レポート定義言語 (RDL : Report Definition Language) またはクライアント向けレポート定義言語 (RDLC : Report Definition Language for Clients) で記述された XML ファイルです。 どちらのレポート定義も、そのファイルの冒頭に指定された特定のスキーマ バージョンに準拠しています。  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]には、レポートを作成および配置するためのいくつかの方法があります。 このトピックは、使用するレポート作成環境とレポート サーバーの組み合わせを計画するために役立ちます。 このトピックでは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のコンポーネントでサポートされているレポート定義の概要を示します。 レポート定義は、レポート定義言語 (RDL : Report Definition Language) またはクライアント向けレポート定義言語 (RDLC : Report Definition Language for Clients) で記述された XML ファイルです。 どちらのレポート定義も、そのファイルの冒頭に指定された特定のスキーマ バージョンに準拠しています。  
   
  RDL ファイルは [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] のレポート デザイナー、またはレポート ビルダー 3.0 で作成します。 RDLC ファイルは、 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]に搭載されている ReportViewer コントロールを使用して作成します。  
   
@@ -26,11 +26,11 @@ ms.locfileid: "80380823"
   
 -   [RDL スキーマのバージョン](#bkmk_rdl_schema_versions)  
   
--   [レポート サーバーと RDL スキーマのサポート](#bkmk_report_server_rdl_schema_support)  
+-   [レポートサーバーと RDL スキーマのサポート](#bkmk_report_server_rdl_schema_support)  
   
--   [レポート作成と展開のサポート](#bkmk_report_authoring_and_deployment)  
+-   [レポートの作成と配置のサポート](#bkmk_report_authoring_and_deployment)  
   
--   [レポートビューアー コントロール](#bkmk_reportviewer)  
+-   [ReportViewer コントロール](#bkmk_reportviewer)  
   
 ##  <a name="rdl-schema-versions"></a><a name="bkmk_rdl_schema_versions"></a> RDL スキーマのバージョン  
  次の表は、利用できるスキーマ バージョンとその省略形の対応表です。このトピックの説明には、以降、これらの省略形を使用します。  
@@ -88,19 +88,19 @@ ms.locfileid: "80380823"
   
 |作成環境|作成される RDL バージョン|配置用の RDL バージョン|配置先レポート サーバーのバージョン|  
 |---------------------------|--------------------------|------------------------|--------------------------------------|  
-|SQL Server 2014 Data Tools のレポート デザイナー - Business Intelligence for Microsoft Visual Studio 2012 (Microsoft ダウンロード センターから入手)<br /><br /> または<br /><br /> SQL Server 2012 Data Tools のレポート デザイナー - Business Intelligence for Microsoft Visual Studio 2012 (Microsoft ダウンロード センターから入手)<br /><br /> または<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Data Tools のレポート デザイナーは [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]に含まれています。|著者 2010 RDL. 既存の RDL を開いたとき:<br /><br /> 2000 RDL、2010 RDL にアップグレード<br /><br /> 2005 RDL、2010 RDL にアップグレード<br /><br /> 2008 RDL、2010 RDL にアップグレード|2008 RDL<br /><br /> 2010 RDL|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
-|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] Business Intelligence Development Studio のレポート デザイナー|著者 2010 RDL. 既存の RDL を開いたとき:<br /><br /> 2000 RDL、2010 RDL にアップグレード<br /><br /> 2005 RDL、2010 RDL にアップグレード<br /><br /> 2008 RDL、2010 RDL にアップグレード|2008 RDL<br /><br /> 2010 RDL|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
-|[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] Business Intelligence Development Studio のレポート デザイナー|著者 2008 RDL. 既存の RDL を開いたとき:<br /><br /> 2000 RDL、2008 RDL にアップグレード<br /><br /> 2005 RDL、2008 RDL にアップグレード|2008 RDL|[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|  
-|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] レポート ビルダー|著者 2010 RDL. 既存の RDL を開いたとき:<br /><br /> 2000 RDL、2010 RDL にアップグレード<br /><br /> 2005 RDL、2010 RDL にアップグレード<br /><br /> 2008 RDL、2010 RDL にアップグレード|2010 RDL|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|  
-|Visual Studio の RDLC レポート デザイナー|2005 RDLC|該当なし|該当なし|  
+|SQL Server 2014 Data Tools のレポート デザイナー - Business Intelligence for Microsoft Visual Studio 2012 (Microsoft ダウンロード センターから入手)<br /><br /> または<br /><br /> SQL Server 2012 Data Tools のレポート デザイナー - Business Intelligence for Microsoft Visual Studio 2012 (Microsoft ダウンロード センターから入手)<br /><br /> または<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Data Tools のレポート デザイナーは [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]に含まれています。|作成者 2010 RDL。 既存の RDL を開いたとき:<br /><br /> 2000 RDL、2010 RDL にアップグレード<br /><br /> 2005 RDL、2010 RDL にアップグレード<br /><br /> 2008 RDL、2010 RDL にアップグレード|2008 RDL<br /><br /> 2010 RDL|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] Business Intelligence Development Studio のレポート デザイナー|作成者 2010 RDL。 既存の RDL を開いたとき:<br /><br /> 2000 RDL、2010 RDL にアップグレード<br /><br /> 2005 RDL、2010 RDL にアップグレード<br /><br /> 2008 RDL、2010 RDL にアップグレード|2008 RDL<br /><br /> 2010 RDL|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] Business Intelligence Development Studio のレポート デザイナー|作成者 2008 RDL。 既存の RDL を開いたとき:<br /><br /> 2000 RDL、2008 RDL にアップグレード<br /><br /> 2005 RDL、2008 RDL にアップグレード|2008 RDL|[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|  
+|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] レポート ビルダー|作成者 2010 RDL。 既存の RDL を開いたとき:<br /><br /> 2000 RDL、2010 RDL にアップグレード<br /><br /> 2005 RDL、2010 RDL にアップグレード<br /><br /> 2008 RDL、2010 RDL にアップグレード|2010 RDL|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|  
+|Visual Studio の RDLC レポート デザイナー|2005 RDLC|なし|なし|  
   
  [!INCLUDE[ss_dtbi_vs2013](../includes/ss-dtbi-vs2013-md.md)]の詳細については、次のトピックを参照してください。  
   
 -   [SQL Server データ ツールの配置およびバージョン サポート (SSRS)](tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
   
--   [SQL Server データ ツール - ビジネス インテリジェンスの 2012 年の](https://www.microsoft.com/download/details.aspx?id=36843)ビジネス インテリジェンス 。  
+-   [Microsoft SQL Server Data Tools-Visual Studio 2012 用のビジネスインテリジェンス](https://www.microsoft.com/download/details.aspx?id=36843)。  
   
-##  <a name="reportviewer-controls"></a><a name="bkmk_reportviewer"></a>レポートビューアー コントロール  
+##  <a name="reportviewer-controls"></a><a name="bkmk_reportviewer"></a>ReportViewer コントロール  
  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の ReportViewer コントロールは、ローカル プレビュー モードまたはリモート モードで .rdlc レポートを表示できるほか、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート サーバーでホストされている .rdl ファイルを表示できます。 次の表は、ローカル処理 (.rdlc) 用の ReportViewer コントロールでサポートされている RDL バージョンの一覧です。 サーバー側の RDL のサポートについて、 [レポート サーバーと RDL スキーマのサポート](#bkmk_report_server_rdl_schema_support)にまとめられています。  
   
 |製品の ReportViewer コントロール|ローカル プレビュー用の RDL のバージョン|  
@@ -116,9 +116,9 @@ ms.locfileid: "80380823"
   
 -   [ReportViewer コントロールの追加と構成](https://msdn.microsoft.com/library/ms252104.aspx)  
   
-## <a name="see-also"></a>関連項目  
- [レポート ビルダーおよび SSRS&#41;&#40;レポート、レポート パーツ、およびレポート定義](report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
- [レポート サービス ツール](tools/reporting-services-tools.md)   
+## <a name="see-also"></a>参照  
+ [レポート、レポートパーツ、およびレポート定義 &#40;レポートビルダーと SSRS&#41;](report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
+ [Reporting Services ツール](tools/reporting-services-tools.md)   
  [レポート定義言語 &#40;SSRS&#41;](reports/report-definition-language-ssrs.md)  
   
   

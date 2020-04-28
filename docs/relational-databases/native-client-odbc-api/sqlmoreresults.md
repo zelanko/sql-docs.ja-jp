@@ -1,5 +1,5 @@
 ---
-title: 結果 |マイクロソフトドキュメント
+title: SQLMoreResults |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,25 +15,25 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f22112f57bbb38873956f17189169a4d66efe019
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81289222"
 ---
 # <a name="sqlmoreresults"></a>SQLMoreResults
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  **SQLMoreResults**を使用すると、アプリケーションは複数の結果行のセットを取得できます。 COMPUTE 句を含む [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメント、または ODBC ステートメントや [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの送信済みのバッチによって、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは複数の結果セットを生成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、どの場合もサーバー カーソルを作成して結果を処理することはできません。 したがって、開発者は ODBC ステートメントがブロックされていることを確認する必要があります。 また、同じ接続で他のアクティブなステートメントからのデータを処理する前に、返されたデータをすべて処理するか ODBC ステートメントを取り消す必要があります。  
+  **Sqlmoreresults**を使用すると、アプリケーションは複数の結果行セットを取得できます。 COMPUTE 句を含む [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメント、または ODBC ステートメントや [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの送信済みのバッチによって、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは複数の結果セットを生成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、どの場合もサーバー カーソルを作成して結果を処理することはできません。 したがって、開発者は ODBC ステートメントがブロックされていることを確認する必要があります。 また、同じ接続で他のアクティブなステートメントからのデータを処理する前に、返されたデータをすべて処理するか ODBC ステートメントを取り消す必要があります。  
   
 > [!NOTE]  
 >  COMPUTE 句を含む [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントは、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] より前のサーバー バージョンの接続している場合にのみサポートされます。  
   
- 開発者は、[!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントの COMPUTE 句で生成される結果セットの列と行のプロパティを確認できます。 詳細については、「 [SQLCol 属性](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)」を参照してください。  
+ 開発者は、[!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントの COMPUTE 句で生成される結果セットの列と行のプロパティを確認できます。 詳細については、「 [Sqlcolattribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)」を参照してください。  
   
- 結果セット内のフェッチされていないデータ行を使用して**SQLMoreResults**が呼び出されると、それらの行は失われ、次の結果行セットの行データが使用可能になります。  
+ 結果セットでフェッチされていないデータ行を使用して**Sqlmoreresults**が呼び出されると、その行は失われ、次の結果行セットの行データが使用可能になります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ```  
 void GetComputedRows  
@@ -163,7 +163,7 @@ EXIT:
 ```  
   
 ## <a name="see-also"></a>参照  
- [関数](https://go.microsoft.com/fwlink/?LinkId=59357)   
+ [SQLMoreResults 関数](https://go.microsoft.com/fwlink/?LinkId=59357)   
  [ODBC API 実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

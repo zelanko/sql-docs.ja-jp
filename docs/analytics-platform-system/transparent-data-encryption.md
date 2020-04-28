@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: e75230ed175c6fbf1b0a2492265bbe12067060ca
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289750"
 ---
 # <a name="transparent-data-encryption"></a>透過的なデータ暗号化
@@ -37,7 +37,7 @@ ms.locfileid: "79289750"
   
 ![階層を表示します。](media/tde-architecture.png "TDE_Architecture")  
   
-## <a name="using-tde"></a>Transparent Data Encryption の使用  
+## <a name="using-transparent-data-encryption"></a><a name="using-tde"></a>Transparent Data Encryption の使用  
 TDE を使用するには、次の手順を実行します。 最初の3つの手順は、TDE をサポートする SQL Server PDW を準備するときに1回だけ実行されます。  
   
 1.  マスターキーを master データベースに作成します。  
@@ -120,9 +120,9 @@ TDE の証明書を次に示すステートメントで処理できるように�
   
 |コマンドまたは関数|目的|  
 |-----------------------|-----------|  
-|[データベース暗号化キーの作成](../t-sql/statements/create-database-encryption-key-transact-sql.md)|データベースの暗号化に使用されるキーを作成します。|  
-|[データベース暗号化キーの変更](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|データベースの暗号化に使用されるキーを変更します。|  
-|[データベース暗号化キーの削除](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|データベースの暗号化に使用されたキーを削除します。|  
+|[CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)|データベースの暗号化に使用されるキーを作成します。|  
+|[ALTER DATABASE ENCRYPTION KEY](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|データベースの暗号化に使用されるキーを変更します。|  
+|[DROP DATABASE ENCRYPTION KEY](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|データベースの暗号化に使用されたキーを削除します。|  
 |[ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)|TDE を有効にするために使用される **ALTER DATABASE** オプションについて説明します。|  
   
 ## <a name="catalog-views-and-dynamic-management-views"></a>カタログ ビューと動的管理ビュー  
@@ -279,8 +279,8 @@ TDE のパフォーマンスへの影響は、使用しているデータの種�
   
 ## <a name="see-also"></a>参照  
 [ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)  
-[マスターキーの作成](../t-sql/statements/create-master-key-transact-sql.md)  
-[データベース暗号化キーの作成](../t-sql/statements/create-database-encryption-key-transact-sql.md)  
+[CREATE MASTER KEY](../t-sql/statements/create-master-key-transact-sql.md)  
+[CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)  
 [BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)  
 [sp_pdw_database_encryption](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)  
 [sp_pdw_database_encryption_regenerate_system_keys](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)  

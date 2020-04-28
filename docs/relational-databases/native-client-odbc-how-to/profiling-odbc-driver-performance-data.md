@@ -1,5 +1,5 @@
 ---
-title: プロファイル ドライバ パフォーマンス データ (ODBC) |マイクロソフトドキュメント
+title: プロファイルドライバーのパフォーマンスデータ (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b9fa6612f7a9cf0a3e4f26ae4aa42623ec56b268
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81282056"
 ---
 # <a name="profiling-odbc-driver-performance-data"></a>ODBC ドライバーのパフォーマンスのプロファイル
@@ -30,42 +30,42 @@ ms.locfileid: "81282056"
   
 ### <a name="to-log-driver-performance-data-using-odbc-administrator"></a>ODBC アドミニストレーターを使用してドライバーのパフォーマンス データをログに記録するには  
   
-1.  **コントロール パネル**で、[**管理ツール**] をダブルクリックし、[**データ ソース (ODBC)]** をダブルクリックします。 または、odbcad32.exe を呼び出すことができます。  
+1.  **コントロールパネル**で、[**管理ツール**] をダブルクリックし、[**データソース (ODBC)**] をダブルクリックします。 または、odbcad32.exe を呼び出すことができます。  
   
-2.  [**ユーザー DSN]、**[**システム DSN]**、または **[ファイル DSN]** タブをクリックします。  
+2.  [**ユーザー dsn**]、[**システム dsn**]、または [**ファイル dsn** ] タブをクリックします。  
   
 3.  パフォーマンスのログを記録するデータ ソースをクリックします。  
   
 4.  **[構成]** をクリックします。  
   
-5.  DSN の構成ウィザードで、ログ ファイルに ODBC**ドライバの統計情報を記録するページに**移動します。  
+5.  Microsoft SQL Server DSN の構成ウィザードで、ログ**ファイルに ODBC ドライバーの統計情報が記録**されたページに移動します。  
   
-6.  [ODBC**ドライバの統計情報をログ ファイルに記録する]** チェック ボックスをオンにします。 ボックスに、統計をログに記録するファイルの名前を入力します。 必要に応じて、[**参照]** をクリックして、統計情報ログのファイル システムを参照します。  
+6.  [ **ODBC ドライバーの統計情報をログファイルに記録する**] を選択します。 ボックスに、統計をログに記録するファイルの名前を入力します。 必要に応じて、[**参照**] をクリックして、ファイルシステムで統計ログを参照します。  
   
 ### <a name="to-log-driver-performance-data-programmatically"></a>ドライバーのパフォーマンス データをプログラムを使用してログに記録するには  
   
-1.  SQL_COPT_SS_PERF_DATA_LOG、パフォーマンス データ ログ ファイルの完全パスとファイル名を指定して[、SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)を呼び出します。 次に例を示します。  
+1.  SQL_COPT_SS_PERF_DATA_LOG と、パフォーマンスデータログファイルの完全なパスとファイル名を使用して[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)を呼び出します。 次に例を示します。  
   
     ```  
     "C:\\Odbcperf.log"  
     ```  
   
-2.  パフォーマンス データの記録を開始するには、SQL_COPT_SS_PERF_DATAとSQL_PERF_STARTを指定して[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)を呼び出します。  
+2.  SQL_COPT_SS_PERF_DATA と SQL_PERF_START を使用して[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)を呼び出し、パフォーマンスデータのログ記録を開始します。  
   
-3.  必要に応じて、SQL_COPT_SS_LOG_NOW と NULL を指定して[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)を呼び出して、パフォーマンス データのタブ区切りレコードをパフォーマンス データ ログ ファイルに書き込みます。 これは、アプリケーションの実行時に複数回実行できます。  
+3.  必要に応じて、SQL_COPT_SS_LOG_NOW および NULL を使用して[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)を呼び出し、パフォーマンスデータのタブ区切りのレコードをパフォーマンスデータログファイルに書き込みます。 これは、アプリケーションの実行時に複数回実行できます。  
   
-4.  パフォーマンス データのログ記録を停止するには、SQL_COPT_SS_PERF_DATAとSQL_PERF_STOPを指定して[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)を呼び出します。  
+4.  SQL_COPT_SS_PERF_DATA と SQL_PERF_STOP を使用して[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)を呼び出し、パフォーマンスデータのログ記録を停止します。  
   
 ### <a name="to-pull-driver-performance-data-into-an-application"></a>ドライバーのパフォーマンス データをアプリケーションにプルするには  
   
-1.  SQL_COPT_SS_PERF_DATAとSQL_PERF_STARTを指定して[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)を呼び出して、パフォーマンス データのプロファイリングを開始します。  
+1.  SQL_COPT_SS_PERF_DATA と SQL_PERF_START を使用して[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)を呼び出し、パフォーマンスデータのプロファイルを開始します。  
   
-2.  SQL_COPT_SS_PERF_DATAと SQLPERF 構造体へのポインターのアドレスを指定して[、SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)を呼び出します。 最初の呼び出しでは、現在のパフォーマンス データを含む有効な SQLPERF 構造体のアドレスを指すポインターが設定されます。 ドライバーは、パフォーマンス構造体内のデータを継続的に更新しません。 アプリケーションは、より最新のパフォーマンス データを使用して構造体を更新する必要がある場合は、常に[SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)への呼び出しを繰り返す必要があります。  
+2.  SQL_COPT_SS_PERF_DATA と SQLPERF 構造体へのポインターのアドレスを使用して、 [Sqlgetconnectattr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)を呼び出します。 最初の呼び出しでは、現在のパフォーマンス データを含む有効な SQLPERF 構造体のアドレスを指すポインターが設定されます。 ドライバーは、パフォーマンス構造体内のデータを継続的に更新しません。 アプリケーションでは、現在のパフォーマンスデータを使用して構造を更新する必要があるときはいつでも、 [Sqlgetconnectattr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)への呼び出しを繰り返す必要があります。  
   
-3.  パフォーマンス データのログ記録を停止するには、SQL_COPT_SS_PERF_DATAとSQL_PERF_STOPを指定して[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)を呼び出します。  
+3.  SQL_COPT_SS_PERF_DATA と SQL_PERF_STOP を使用して[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)を呼び出し、パフォーマンスデータのログ記録を停止します。  
   
 ## <a name="example"></a>例  
- AdventureWorks と呼ばれる ODBC データ ソース (既定のデータベースは AdventureWorks サンプル データベース) が必要です  (アドベンチャーワークスサンプルデータベースは[、Microsoft SQL Server サンプルおよびコミュニティプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホームページからダウンロードできます)。このデータ ソースは、オペレーティング システムによって提供される ODBC ドライバに基づいている必要があります (ドライバ名は "SQL Server" です)。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
+ AdventureWorks と呼ばれる ODBC データ ソース (既定のデータベースは AdventureWorks サンプル データベース) が必要です  (AdventureWorks サンプルデータベースは、 [Microsoft SQL Server のサンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホームページからダウンロードできます)。このデータソースは、オペレーティングシステムによって提供される ODBC ドライバーに基づいている必要があります (ドライバー名は "SQL Server")。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
   
  このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
   
@@ -241,7 +241,7 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>参照  
- [ODBC ドライバーのパフォーマンスに関するトピック&#40;ODBC&#41;のプロファイリング](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)   
+ [Odbc&#41;&#40;ODBC ドライバーのパフォーマンスのプロファイル方法に関するトピック](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)   
  [ODBC ドライバーのパフォーマンスのプロファイル](../../relational-databases/native-client/odbc/profiling-odbc-driver-performance.md)  
   
   

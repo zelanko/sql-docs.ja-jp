@@ -1,1 +1,1 @@
-**このトピックは、次のトピックに適用されます:** ![はい](media/yes-icon.png "可")、SQL Server \(\)![は](media/no-icon.png "Ｘ")2008 年から始まる Azure SQL データベース![なし](media/no-icon.png "Ｘ")Azure SQL データ ウェアハウス![なし](media/no-icon.png "Ｘ")並列データ ウェアハウス
+**適用対象:** ![yes](media/yes-icon.png "必須") \(SQL Server 2008\) ![×](media/no-icon.png "×") ![Azure SQL Database no](media/no-icon.png "×") ![Azure SQL Data Warehouse Parallel](media/no-icon.png "×")Data Warehouse

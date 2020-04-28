@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 464e82ea23aa724d84af25c69a7168f95d09afe1
-ms.sourcegitcommit: 39d8d2d504d0ab70bac5ae3e981657e15dfb7bee
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78964367"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>モデル管理者を作成する (マスター データ サービス)
@@ -28,29 +28,23 @@ ms.locfileid: "78964367"
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
--   
-  **[ユーザー/グループの権限]** 機能領域にアクセスするための権限が必要です。  
+-   **[ユーザー/グループの権限]** 機能領域にアクセスするための権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 (マスター データ サービス)](administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](administrators-master-data-services.md)」を参照してください。  
   
 ### <a name="to-create-a-model-administrator"></a>モデル管理者を作成するには  
   
-1.  
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[ユーザー/グループの権限]** をクリックします。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[ユーザー/グループの権限]** をクリックします。  
   
-2.  
-  **[ユーザー]** または **[グループ]** ページで、編集するユーザーまたはグループの行を選択します。  
+2.  **[ユーザー]** または **[グループ]** ページで、編集するユーザーまたはグループの行を選択します。  
   
-3.  
-  **[選択したユーザーの編集]** をクリックします。  
+3.  **[選択したユーザーの編集]** をクリックします。  
   
-4.  
-  **[モデル]** タブをクリックします。  
+4.  **[モデル]** タブをクリックします。  
   
-5.  
-  **[モデル]** ボックスの一覧からモデルを選択します (オプション)。  
+5.  **[モデル]** ボックスの一覧からモデルを選択します (オプション)。  
   
-6.  [**編集**] をクリックします。  
+6.  **[編集]** をクリックします。  
   
 7.  権限を与えるモデルをクリックします。  
   
@@ -58,9 +52,9 @@ ms.locfileid: "78964367"
   
 9. グループまたはユーザーを管理者にする各モデルについて、手順 7 と 8 を実行します。  
   
-10. **[保存]** をクリックします。  
+10. **[Save]** (保存) をクリックします。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  モデル オブジェクトまたは階層メンバーに他の権限を割り当てないでください。 この場合、ユーザーは管理者ではなくなり、[**エクスプローラー**] 以外の機能領域でモデルを表示することはできません。  
   
  例外が1つあります。ユーザーが [**階層メンバー** ] タブで階層の**ルート**に割り当てられた**更新**権限を持っている場合、そのユーザーは引き続きモデル管理者と見なされます。  
@@ -70,6 +64,6 @@ ms.locfileid: "78964367"
  [モデルオブジェクト権限の割り当て &#40;マスターデータサービス&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)   
  [階層メンバーの権限を割り当てる &#40;マスターデータサービス&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
  [モデルオブジェクト権限 &#40;マスターデータサービス&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
- [階層メンバーの権限 &#40;マスターデータサービス&#41;](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)  
+ [階層メンバーの権限 (マスター データ サービス)](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)  
   
   

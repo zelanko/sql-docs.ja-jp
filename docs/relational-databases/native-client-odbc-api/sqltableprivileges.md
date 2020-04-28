@@ -1,5 +1,5 @@
 ---
-title: SQL テーブル特典 |マイクロソフトドキュメント
+title: SQLTablePrivileges |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,21 +15,21 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d7a77eb5ea151c3a85f2235f48bb03d0e98dd9ce
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81291912"
 ---
 # <a name="sqltableprivileges"></a>SQLTablePrivileges
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  **静的カーソルに**対して実行できます。 更新可能な (キーセットドリブンまたは動的) に対して**SQLTablePrivileges**を実行しようとすると、カーソルの種類が変更されたことを示すSQL_SUCCESS_WITH_INFOが返されます。  
+  **Sqltableprivileges**は、静的カーソルで実行できます。 更新可能な (キーセットドリブンまたは動的) に対して**Sqltableprivileges**を実行しようとすると、カーソルの種類が変更されたことを示す SQL_SUCCESS_WITH_INFO が返されます。  
   
- ネイティブ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアント ODBC ドライバは *、CatalogName* Linked_Server_Name パラメータの 2 つの部分から構成される名前を受け取ることによって、リンク サーバー上のテーブルのレポート情報*をサポートCatalog_Name。*  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC ドライバーでは、 *CatalogName*パラメーターに2つの部分で構成される名前を使用して、リンクサーバー上のテーブルに関する情報のレポートをサポートしています。 *Linked_Server_Name Catalog_Name*。  
   
 ## <a name="see-also"></a>参照  
- [関数](https://go.microsoft.com/fwlink/?LinkId=59373\)   
+ [SQLTablePrivileges 関数](https://go.microsoft.com/fwlink/?LinkId=59373\)   
  [ODBC API 実装の詳細](~/relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

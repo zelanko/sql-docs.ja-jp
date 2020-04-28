@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||= azure-sqldw-latest
 ms.openlocfilehash: a463fea7a70b5e01c26a6ff5e93c1c8c1dab32ea
-ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78288948"
 ---
 # <a name="sysdatabase_scoped_configurations-transact-sql"></a>database_scoped_configurations (Transact-sql)
@@ -31,20 +31,20 @@ ms.locfileid: "78288948"
 
 構成ごとに1行の値を格納します。 
 
-|列名|データ型|[説明]|
+|列名|データ型|説明|
 |-----------------|---------------|-----------------|
 |**configuration_id**|**int**|構成オプションの ID。|
-|**name**|**nvarchar (60)**|構成オプションの名前。 使用可能な構成の詳細については、「 [ALTER DATABASE スコープ構成 &#40;transact-sql&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)」を参照してください。|
+|**name**|**nvarchar(60)**|構成オプションの名前。 使用可能な構成の詳細については、「 [ALTER DATABASE スコープ構成 &#40;transact-sql&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)」を参照してください。|
 |**value**|**sqlvariant**|プライマリレプリカのこの構成オプションに設定された値。|
 |**value_for_secondary**|**sqlvariant**|セカンダリレプリカのこの構成オプションに設定された値。|
 |**is_value_default**|**bit** |値が既定値に設定されているかどうかを指定します。|
 |**dw_compatibility_level**|**int**|データベースの互換性レベル (プレビュー)。  既定値 = 0 (自動)|
 
-## <a name="Permissions"></a> Permissions
+## <a name="permissions"></a><a name="Permissions"></a> Permissions
 
-**Public**ロールのメンバーシップが必要です。
+ロール **public** のメンバーシップが必要です。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 **Value_for_secondary**の値として NULL が返された場合、セカンダリがプライマリに設定されていることを意味します。
  

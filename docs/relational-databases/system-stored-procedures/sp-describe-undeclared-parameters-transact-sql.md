@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: efa15bffc3b00dfce2c1c5d11bc3705f2b6f677e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78180127"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
@@ -60,7 +60,7 @@ sp_describe_undeclared_parameters
 ## <a name="result-sets"></a>結果セット  
  **sp_describe_undeclared_parameters**は、次の結果セットを返します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int NOT NULL**|結果セット内のパラメーターの位置を表す序数を格納します。 最初のパラメーターの位置は 1 で指定されます。|  
 |**name**|**sysname NOT NULL**|パラメーターの名前を格納します。|  
@@ -84,10 +84,10 @@ sp_describe_undeclared_parameters
 |**suggested_is_input**|**bit NOT NULL**|パラメーターが代入の左辺以外の場所で使用されている場合は1を返します。 それ以外の場合は 0 を返します。|  
 |**suggested_is_output**|**bit NOT NULL**|パラメーターが代入の左辺で使用されているか、ストアドプロシージャの出力パラメーターに渡された場合、1を返します。 それ以外の場合は 0 を返します。|  
 |**formal_parameter_name**|**sysname NULL**|パラメーターがストアド プロシージャまたはユーザー定義関数の引数の場合は、対応する仮パラメーターの名前を返します。 それ以外の場合は NULL を返します。|  
-|**suggested_tds_type_id**|**int NOT NULL**|内部使用のみ。|  
-|**suggested_tds_length**|**int NOT NULL**|内部使用のみ。|  
+|**suggested_tds_type_id**|**int NOT NULL**|内部使用です。|  
+|**suggested_tds_length**|**int NOT NULL**|内部使用です。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_describe_undeclared_parameters**は常に0の戻り値の状態を返します。  
   
  最も一般的な使用方法は、パラメーターを含み、それらのパラメーターを任意の方法で処理する必要がある [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントがアプリケーションで指定される場合です。 たとえば、ユーザーが ODBC パラメーターの構文に基づくクエリを提供するユーザー インターフェイス (ODBCTest または RowsetViewer など) があります。 アプリケーションは、パラメーターの数を動的に検出し、各パラメーターの入力をユーザーに求める必要があります。  
@@ -111,7 +111,7 @@ sp_describe_undeclared_parameters
 ## <a name="parameter-selection-algorithm"></a>パラメーター選択アルゴリズム  
  宣言されていないパラメーターを持つクエリの場合、宣言されていないパラメーターのデータ型の推論は、3つの手順で行われます。  
   
- **手順1**  
+ **ステップ 1**  
   
  宣言されていないパラメーターを持つクエリのデータ型の推論の最初の手順は、宣言されていないパラメーターに依存しないデータ型を持つすべてのサブ式のデータ型を見つけることです。 型は、次の式に対して決定できます。  
   
@@ -137,7 +137,7 @@ SELECT * FROM t1 WHERE @p1 = SUBSTRING(@p2, 2, 3)
 SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)  
 ```
   
- **手順2**  
+ **ステップ 2**  
   
  宣言されてい\@ないパラメーター p の場合、型推論アルゴリズムでは、\@p を含む\@最も内側の式 E (p) が検索され、次のいずれかになります。  
   
@@ -163,7 +163,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
  P \@が手順2の先頭に示されている式に含まれていない場合、型推論アルゴリズムは\@、e (p) が p を含む\@最大のスカラー式であると判断し、型推論アルゴリズムは e (\@\@p) のターゲットデータ型 TT (p) を計算しません。 たとえば、 `@p + 2`クエリが SELECT の場合、E (\@p) = \@p + 2、TT (\@p) はありません。  
   
- **手順 3.**  
+ **ステップ 3**  
   
  E (\@p) と TT (\@p) が識別されたので、型推論アルゴリズムは、次\@の2つの方法のいずれかで p のデータ型を推測します。  
   
@@ -223,9 +223,9 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
     SELECT * FROM t WHERE Col_Int = Col_Int + @p  
     ```  
   
-     \@この場合、E (p) は Col_Int + \@p であり、TT\@(p) は**Int**です。**** 暗黙的な変換が\@生成されないため、p には int が選択されています。 その他の任意のデータ型では、少なくとも1つの暗黙的な変換が生成されます。  
+     \@この場合、E (p) は Col_Int + \@p であり、TT\@(p) は**Int**です。**int**暗黙的な変換が\@生成されないため、p には int が選択されています。 その他の任意のデータ型では、少なくとも1つの暗黙的な変換が生成されます。  
   
-2.  変換の最小数に対して複数のデータ型が関連付けられている場合は、優先順位の高いデータ型が使用されます。 次に例を示します。  
+2.  変換の最小数に対して複数のデータ型が関連付けられている場合は、優先順位の高いデータ型が使用されます。 例  
   
     ```sql
     SELECT * FROM t WHERE Col_Int = Col_smallint + @p  
@@ -254,7 +254,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
 ## <a name="permissions"></a>アクセス許可  
  \@Tsql 引数を実行する権限が必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例は、宣言されていない `@id` パラメーターおよび `@name` パラメーターに対して予期されるデータ型などの情報を返します。  
   
 ```sql
@@ -265,8 +265,7 @@ WHERE object_id = @id OR name = @name'
   
 ```  
   
- 
-  `@id` パラメーターが `@params` 参照として指定された場合は、`@id` パラメーターは結果セットから省略され、`@name` パラメーターのみが記述されます。  
+ `@id` パラメーターが `@params` 参照として指定された場合は、`@id` パラメーターは結果セットから省略され、`@name` パラメーターのみが記述されます。  
   
 ```sql
 sp_describe_undeclared_parameters @tsql =   

@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 499ac56d8a462f62dac92b97654a9ace12bd356e
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289690"
 ---
 # <a name="managing-permissions-in-parallel-data-warehouse"></a>並列データウェアハウスでのアクセス許可の管理
 この記事では、SQL Server PDW のデータベース権限を管理するための要件とオプションについて説明します。
 
-## <a name="BackupRestoreBasics"></a>データベースエンジンアクセス許可の基本
+## <a name="database-engine-permission-basics"></a><a name="BackupRestoreBasics"></a>データベースエンジンアクセス許可の基本
 SQL Server PDW に対するデータベースエンジン権限は、ログインを通じてサーバーレベルで管理されます。データベースレベルでは、データベースユーザーとユーザー定義データベースロールによって管理されます。
 
 **ログイン**ログインは、SQL Server PDW にログオンするための個々のユーザーアカウントです。 SQL Server PDW では、Windows 認証と SQL Server 認証を使用したログインがサポートされます。  Windows 認証ログインは、SQL Server PDW によって信頼されている任意のドメインの Windows ユーザーまたは Windows グループにすることができます。 SQL Server 認証ログインは SQL Server PDW によって定義および認証されるため、パスワードを指定して作成する必要があります。
@@ -52,7 +52,7 @@ SQL Server PDW に対するデータベースエンジン権限は、ログイ�
 
 ユーザーおよびデータベースロールはデータベースレベルのオブジェクトであり、 [database_principals](../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)を表示することによって一覧表示できます。 データベースプリンシパルに対して許可できるのは、データベースレベルの権限のみです。
 
-## <a name="BackupTypes"></a>既定の権限
+## <a name="default-permissions"></a><a name="BackupTypes"></a>既定の権限
 次に、既定のアクセス許可について説明します。
 
 -   Using **CREATE login**ステートメントによってログインが作成されると、ログインは**connect SQL**権限を受け取り、そのログインが SQL Server PDW に接続できるようになります。
@@ -69,8 +69,7 @@ SQL Server PDW に対するデータベースエンジン権限は、ログイ�
 
 -   トランザクションにはアクセス許可は必要ありません。 すべてのプリンシパルは、 **BEGIN TRANSACTION**、 **COMMIT**、および**ROLLBACK** TRANSACTION コマンドを実行できます。 ただし、プリンシパルは、トランザクション内で各ステートメントを実行するための適切な権限を持っている必要があります。
 
--   
-  **USE** ステートメントでは、権限は必要ありません。 すべてのプリンシパルは、任意のデータベースで**use**ステートメントを実行できます。ただし、データベースにアクセスするには、データベースにユーザープリンシパルが必要であるか、ゲストユーザーが有効になっている必要があります。
+-   **USE** ステートメントでは、権限は必要ありません。 すべてのプリンシパルは、任意のデータベースで**use**ステートメントを実行できます。ただし、データベースにアクセスするには、データベースにユーザープリンシパルが必要であるか、ゲストユーザーが有効になっている必要があります。
 
 ### <a name="the-public-role"></a>パブリックロール
 すべての新しいアプライアンスログインは、自動的に PUBLIC ロールに属します。 パブリックサーバーロールには、次の特性があります。
@@ -81,12 +80,11 @@ SQL Server PDW に対するデータベースエンジン権限は、ログイ�
 
 -   PUBLIC サーバーロールは、暗黙的な権限を継承できません。 PUBLIC ロールに与えられた権限は、明示的に付与する必要があります。
 
-## <a name="BackupProc"></a>アクセス許可の決定
+## <a name="determining-permissions"></a><a name="BackupProc"></a>アクセス許可の決定
 ログインが特定のアクションを実行する権限を持っているかどうかは、ユーザーがメンバーであるログイン、ユーザー、およびロールに対して許可または拒否された権限によって異なります。 サーバーレベルの権限 ( **CREATE LOGIN**や**VIEW server STATE**など) は、サーバーレベルのプリンシパル (ログイン) で使用できます。 データベースレベルの権限 (テーブルからの**選択**やプロシージャの**実行**など) は、データベースレベルのプリンシパル (ユーザーおよびデータベースロール) で使用できます。
 
 ### <a name="implicit-and-explicit-permissions"></a>暗黙的および明示的なアクセス許可
-
-  *明示的なアクセス許可*は、**GRANT** または **DENY** ステートメントによってプリンシパルに付与される **GRANT** または **DENY** アクセス許可です。 データベースレベルの権限は、 [database_permissions](../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)ビューに表示されます。 サーバーレベルの権限は、 [server_permissions](../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)ビューに表示されます。
+*明示的なアクセス許可*は、**GRANT** または **DENY** ステートメントによってプリンシパルに付与される **GRANT** または **DENY** アクセス許可です。 データベースレベルの権限は、 [database_permissions](../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)ビューに表示されます。 サーバーレベルの権限は、 [server_permissions](../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)ビューに表示されます。
 
 *暗黙の権限*は、プリンシパル (ログインまたはサーバーロール) によって継承された**GRANT**権限または**DENY**権限です。 アクセス許可は、次の方法で継承できます。
 
@@ -167,7 +165,7 @@ SQL Server PDW に対するデータベースエンジン権限は、ログイ�
         ON DP.grantee_principal_id = DPUsers.principal_id;
     ```
 
-## <a name="RestoreProc"></a>データベースアクセス許可のベストプラクティス
+## <a name="database-permissions-best-practices"></a><a name="RestoreProc"></a>データベースアクセス許可のベストプラクティス
 
 -   実用的な最も細かいレベルでアクセス許可を付与します。 テーブルまたはビューレベルの権限で権限を許可すると、管理不能になる可能性があります。 ただし、データベースレベルで権限を許可すると、制限が緩くなる可能性があります。 データベースが、作業の境界を定義するスキーマを使用して設計されている場合、スキーマに対する権限の許可が、テーブルレベルとデータベースレベルの間で適切なセキュリティ侵害を行う可能性があります。
 
@@ -216,9 +214,7 @@ SQL Server には、サーバーに対する権限の管理に役立つ、事前
 固定サーバーロールは、SQL Server によって自動的に作成されます。 SQL Server PDW には SQL Server 固定サーバーロールの限定的な実装があります。 **Sysadmin**と**public**にのみ、メンバーとしてユーザーログインがあります。 **Setupadmin**ロールと**dbcreator**ロールは、SQL Server PDW によって内部的に使用されます。 他のメンバーを追加したり、ロールから削除したりすることはできません。
 
 ### <a name="sysadmin-fixed-server-role"></a>sysadmin 固定サーバーロール
-
-  **sysadmin** 固定サーバー ロールのメンバーは、サーバーに対するすべての操作を実行できます。 **Sa**ログインは、 **sysadmin**固定サーバーロールの唯一のメンバーです。 追加のログインを**sysadmin**固定サーバーロールに追加することはできません。 
-  **CONTROL SERVER** アクセス許可を付与すると、**sysadmin** 固定サーバー ロールのメンバーシップが概算されます。 次の例では、 **CONTROL SERVER**権限を fay という名前のログインに許可します。
+**Sysadmin**固定サーバーロールのメンバーは、サーバーで任意の操作を実行できます。 **Sa**ログインは、 **sysadmin**固定サーバーロールの唯一のメンバーです。 追加のログインを**sysadmin**固定サーバーロールに追加することはできません。 **CONTROL SERVER** アクセス許可を付与すると、**sysadmin** 固定サーバー ロールのメンバーシップが概算されます。 次の例では、 **CONTROL SERVER**権限を fay という名前のログインに許可します。
 
 ```sql
 USE master;
@@ -240,7 +236,7 @@ SQL Server PDW に接続できるすべてのログインは、 **public**サー
 
 ## <a name="related-topics"></a>関連トピック
 
-- [アクセス許可の付与](grant-permissions.md)
+- [アクセス許可を付与する](grant-permissions.md)
 
 <!-- MISSING LINKS
 ## See Also

@@ -1,5 +1,5 @@
 ---
-title: SQL ステートメントの作成 (ODBC) |マイクロソフトドキュメント
+title: SQL ステートメントの構築 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eab0db859bbecea43d19b012a56b2e491b4ecfcf
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81291483"
 ---
 # <a name="constructing-an-sql-statement-odbc"></a>SQL ステートメントの構築 (ODBC)
@@ -35,7 +35,7 @@ ms.locfileid: "81291483"
   
      実行時に構築される SQL ステートメントで、これによりユーザーは SELECT、WHERE、ORDER BY などの一般的な句を使用してステートメントを調整できます。 これには、ユーザーが入力したアドホック クエリも含まれます。  
   
- クライアント[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ODBC ドライバーは、ODBC および ISO 構文の SQL ステートメント[!INCLUDE[ssDE](../../includes/ssde-md.md)]を解析します[!INCLUDE[tsql](../../includes/tsql-md.md)]が、 ドライバーが に変換される が直接サポートされていません。 その他すべての SQL 構文は、変更されずに[!INCLUDE[ssDE](../../includes/ssde-md.md)]に渡されます。ここでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が有効な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] かどうかが判断されます。 この方法には、次の 2 つの利点があります。  
+ クライアント[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] odbc ドライバーは、によって直接サポートされていない ODBC および ISO [!INCLUDE[ssDE](../../includes/ssde-md.md)]構文に対してのみ SQL [!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントを解析します。この構文は、ドライバーによってに変換されます。 その他すべての SQL 構文は、変更されずに[!INCLUDE[ssDE](../../includes/ssde-md.md)]に渡されます。ここでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が有効な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] かどうかが判断されます。 この方法には、次の 2 つの利点があります。  
   
 -   オーバーヘッドの削減  
   
@@ -43,7 +43,7 @@ ms.locfileid: "81291483"
   
 -   柔軟性  
   
-     プログラマは、アプリケーションの移植性を調整できます。 複数のデータベースに対する移植性を強化するには、主に ODBC 構文および ISO 構文を使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固有の強力な機能を使用するには、対応する [!INCLUDE[tsql](../../includes/tsql-md.md)] 構文を使用します。 ネイティブ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアント ODBC ドライバは[!INCLUDE[tsql](../../includes/tsql-md.md)]完全な構文をサポートしているので、ODBC ベースのアプリケーションは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべての機能を利用できます。  
+     プログラマは、アプリケーションの移植性を調整できます。 複数のデータベースに対する移植性を強化するには、主に ODBC 構文および ISO 構文を使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固有の強力な機能を使用するには、対応する [!INCLUDE[tsql](../../includes/tsql-md.md)] 構文を使用します。 Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client odbc ドライバーは、odbc ベース[!INCLUDE[tsql](../../includes/tsql-md.md)]のアプリケーションがのすべての機能を利用できるように、完全[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]な構文をサポートしています。  
   
  SELECT ステートメント内の列リストには、現在のタスクを実行するのに必要な列だけを含める必要があります。 これにより、ネットワーク経由で送信されるデータ量が少なくなるだけでなく、アプリケーションに対するデータベース変更の影響も少なくなります。 アプリケーションでテーブルの列を参照していなければ、アプリケーションは、その列に行われる変更の影響を受けません。  
   

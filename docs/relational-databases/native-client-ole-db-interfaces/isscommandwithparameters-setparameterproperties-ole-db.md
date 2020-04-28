@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 80cf43e4abc1be19b1a6033174c980aa6d7cd378
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81290188"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties (OLE DB)
@@ -46,12 +46,12 @@ HRESULT SetParameterProperties(
 ## <a name="return-code-values"></a>リターン コードの値  
  **ISSCommandWithParameters::SetParameterProperties** メソッドでは、主要な OLE DB **ICommandProperties::SetProperties** メソッドと同じエラー コードを返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  このメソッドを使用したパラメーター プロパティの設定は、各パラメーターに対して序数順に行うか、プロパティ配列から SSPARAMPROPS が構築されるたびに **ISSCommandWithParameters::SetParameterProperties** を 1 回呼び出すことによって行うことができます。  
   
  **ISSCommandWithParameters::SetParameterProperties** メソッドを呼び出す前に、**SetParameterInfo** メソッドを呼び出す必要があります。 `SetParameterProperties(0, NULL)` を呼び出すと、指定したパラメーター プロパティがすべて消去されます。また、`SetParameterInfo(0,NULL,NULL)` を呼び出すと、パラメーターに関連付けられているすべてのプロパティを含めて、パラメーターに関するすべての情報が消去されます。  
   
- **isSCommandWithParameters::SetParameterプロパティ**を呼び出して、DBTYPE_XML型でないパラメーターまたはDBTYPE_UDTのプロパティを指定するには、DB_E_ERRORSOCCURREDまたはDB_S_ERRORSOCCURREDを返し、そのパラメーターの SSPARAMPROPS に含まれるすべての DBP の*dwStatus*フィールドにDBPROPSTATUS_NOTSETを付けてマークします。 DB_E_ERRORSOCCURRED または DB_S_ERRORSOCCURRED が指しているパラメーターを検出するには、SSPARAMPROPS に含まれている各 DBPROPSET の DBPROP 配列をすべて調べる必要があります。  
+ **Isscommandwithparameters:: SetParameterProperties**を呼び出して、DBTYPE_XML 型または型ではないパラメーターのプロパティを指定します。また、DBTYPE_UDT は DB_E_ERRORSOCCURRED または DB_S_ERRORSOCCURRED を返し、そのパラメーターの SSTAMPROPS に含まれるすべての dbprops の*dwstatus*フィールドを DBPROPSTATUS_NOTSET でマークします。 DB_E_ERRORSOCCURRED または DB_S_ERRORSOCCURRED が指しているパラメーターを検出するには、SSPARAMPROPS に含まれている各 DBPROPSET の DBPROP 配列をすべて調べる必要があります。  
   
  **ISSCommandWithParameters::SetParameterProperties** を呼び出すときに、**SetParameterInfo** によって情報が設定されていないパラメーターのプロパティを指定すると、プロバイダーは次のエラー メッセージと共に E_UNEXPECTED を返します。  
   

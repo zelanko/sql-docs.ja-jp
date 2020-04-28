@@ -1,5 +1,5 @@
 ---
-title: 複数インスタンスのレポート サーバー展開の URL 予約 (SSRS 構成マネージャー) |マイクロソフトドキュメント
+title: レポートサーバーの複数インスタンス配置における URL 予約 (SSRS Configuration Manager) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c91db169984bbb2969a8339ed20e8e6bc5b804b6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80380693"
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments--ssrs-configuration-manager"></a>レポート サーバーの複数インスタンス配置における URL 予約 (SSRS 構成マネージャー)
@@ -47,8 +47,8 @@ ms.locfileid: "80380693"
 ## <a name="uniqueness-requirements"></a>一意性の要件  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の基になるテクノロジには、一意の名前に関する要件があります。 HTTP.SYS のリポジトリ内の URL はすべて一意にする必要があります。 URL は、ポート、ホスト名、または仮想ディレクトリ名を変えることで一意にできます。 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] では、同一プロセス内の各アプリケーション ID が一意である必要があります。 この要件は、仮想ディレクトリ名に影響します。 この要件では、同一レポート サーバー インスタンス内では重複する仮想ディレクトリ名を使用できないことが規定されています。  
   
-## <a name="see-also"></a>関連項目  
- [SSRS 構成マネージャー&#41;&#40;レポート サーバー URL を構成する](configure-report-server-urls-ssrs-configuration-manager.md)   
+## <a name="see-also"></a>参照  
+ [レポート サーバー URL の構成 &#40;SSRS 構成マネージャー&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
  [URL の構成 &#40;SSRS 構成マネージャー&#41;](configure-a-url-ssrs-configuration-manager.md)  
   
   

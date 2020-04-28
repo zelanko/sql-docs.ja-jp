@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5acd507be99d7ff36245e723d20aebc36f42a917
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289330"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Kerberos 接続用のサービス プリンシパル名の登録
@@ -42,7 +42,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 > [!TIP]  
 >  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と Kerberos に関する接続性の問題のトラブルシューティングに役立つ診断ツールです。 Kerberos 認証の詳細については、「 [Microsoft® Kerberos Configuration Manager for SQL Server®](https://www.microsoft.com/download/details.aspx?id=39046)」をご覧ください。  
   
-##  <a name="Role"></a> 認証での SPN の役割  
+##  <a name="the-role-of-the-spn-in-authentication"></a><a name="Role"></a> 認証での SPN の役割  
  アプリケーションが接続されて Windows 認証を使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client が、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンピューター名、インスタンス名、およびオプションで SPN を渡します。 接続の際に SPN が渡される場合、変更せずに使用されます。  
   
  接続の際に SPN が渡されない場合、使用されたプロトコル、サーバー名、およびインスタンス名に基づいて既定の SPN が構築されます。  
@@ -56,7 +56,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  Windows 認証は、SQL Server を認証する場合にお勧めする方法です。 Windows 認証を使用するクライアントは、NTLM または Kerberos のどちらかを使用して認証されます。 Active Directory 環境では、常に Kerberos 認証が最初に試みられます。 Kerberos 認証は、名前付きパイプを使用する [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] クライアントには使用できません。  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] サービスが起動すると、サービス プリンシパル名 (SPN) の登録が試みられます。 SQL Server を開始しているアカウントに、Active Directory Domain Services に SPN を登録する権限がない場合は、この呼び出しは失敗し、アプリケーション イベント ログと SQL Server エラー ログに警告メッセージが記録されます。 SPN を登録するには、ビルトイン アカウント (ローカル システム (非推奨) や NETWORK SERVICE など) または SPN を登録する権限を持つアカウント (ドメイン管理者アカウントなど) で [!INCLUDE[ssDE](../../includes/ssde-md.md)] が実行されている必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が  [!INCLUDE[win7](../../includes/win7-md.md)] または  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] オペレーティング システムで実行されている場合は、仮想アカウントまたは管理されたサービス アカウント (MSA) を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行できます。 仮想アカウントと MSA の両方で SPN を登録できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がこのいずれかのアカウントで実行されていない場合、SPN は起動時には登録されず、ドメイン管理者が SPN を手動で登録する必要があります。  
   
 > [!NOTE]  
@@ -66,12 +66,12 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  その他の情報については、「 [SQL Server 2008 で Kerberos の制約付き委任を実装する方法](https://technet.microsoft.com/library/ee191523.aspx)」を参照してください。  
   
-##  <a name="Formats"></a> SPN の形式  
+##  <a name="spn-formats"></a><a name="Formats"></a> SPN の形式  
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以降では、TCP/IP、名前付きパイプ、および共有メモリで Kerberos 認証をサポートするために、SPN の形式が変更されています。 名前付きインスタンスおよび既定のインスタンスでサポートされている SPN の形式は次のとおりです。  
   
  **[名前付きインスタンス]**  
   
--   *MSSQLSvc/FQDN*: [_port_**|**_instancename_]。次のようになります。  
+-   *MSSQLSvc/FQDN*:[_port_**|**_instancename_]。各要素の説明は次のとおりです。  
   
     -   *MSSQLSvc* は、登録されるサービスです。  
   
@@ -81,7 +81,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
     -   *instancename*は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスの名前です。  
   
- **[既定のインスタンス]**  
+ **既定のインスタンス**  
   
 -   *MSSQLSvc/fqdn*:_port_**|**_MSSQLSvc/fqdn_。ここで、次のようになります。  
   
@@ -99,17 +99,17 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 |||  
 |-|-|  
 |MSSQLSvc/*fqdn: port*|TCP が使用される場合にプロバイダーが生成する既定の SPN。 *port* は、TCP ポート番号です。|  
-|MSSQLSvc/*fqdn*|TCP 以外のプロトコルが使用される場合に、既定のインスタンスに対してプロバイダーが生成する既定の SPN。 *fqdn* は、完全修飾ドメイン名です。|  
+|MSSQLSvc/*fqdn*|TCP 以外のプロトコルが使用される場合に、既定のインスタンスに対してプロバイダーが生成する既定の SPN。 *fqdn*は完全修飾ドメイン名です。|  
 |MSSQLSvc/*fqdn: InstanceName*|TCP 以外のプロトコルが使用される場合に、名前付きインスタンスに対してプロバイダーが生成する既定の SPN。 *InstanceName*は、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスの名前です。|  
   
-##  <a name="Auto"></a> SPN の自動登録  
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスが開始すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスに対する SPN の登録を試みます。 インスタンスが停止すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は SPN の登録解除を試みます。 TCP/IP 接続の場合、SPN は *MSSQLSvc/\<FQDN>* : *\<tcpport>* という形式で登録されます。名前付きインスタンスと既定のインスタンスは、どちらも *MSSQLSvc* として登録され、インスタンスの区別は *\<tcpport>* の値で行われます。  
+##  <a name="automatic-spn-registration"></a><a name="Auto"></a> SPN の自動登録  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスが開始すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスに対する SPN の登録を試みます。 インスタンスが停止すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は SPN の登録解除を試みます。 Tcp/ip 接続の場合、SPN は*MSSQLSvc/FQDN>\< *:*\<>tcpport*という形式で登録されます。名前付きインスタンスと既定のインスタンスは、どちらも*MSSQLSvc*として登録され、インスタンスを区別するために* \<tcpport>* 値に依存します。  
   
  Kerberos をサポートするその他の接続の場合、SPN は名前付きインスタンスの*MSSQLSvc/\<FQDN>*:*\<instancename>* の形式で登録されます。 既定のインスタンスを登録する場合の形式は、*MSSQLSvc/\<FQDN>* です。  
   
  SPN の登録または登録解除に必要な権限がサービス アカウントにない場合は、これらのアクションを手動で実行することが必要になる場合があります。  
   
-##  <a name="Manual"></a> SPN の手動登録  
+##  <a name="manual-spn-registration"></a><a name="Manual"></a> SPN の手動登録  
  SPN を手動で登録するには、管理者は Microsoft [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] サポート ツールに付属する Setspn.exe ツールを使用する必要があります。 詳細については、サポート技術情報の資料「 [Windows Server 2003 Service Pack 1 のサポート ツール](https://support.microsoft.com/kb/892777) 」を参照してください。  
   
  Setspn.exe は、サービス プリンシパル名 (SPN) ディレクトリ プロパティの読み取り、変更、および削除を実行できるようにするコマンド ライン ツールです。 このツールを使用すると、現在の SPN の表示、アカウントの既定の SPN の再設定、および補足 SPN の追加または削除も実行できます。  
@@ -120,7 +120,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 setspn -A MSSQLSvc/myhost.redmond.microsoft.com:1433 accountname  
 ```  
   
- **メモ**SPN が既に存在する場合は、再登録する前に削除する必要があります。 削除するには、 `setspn` スイッチを指定して `-D` コマンドを使用します。 次の例は、新しいインスタンス ベースの SPN を手動で登録する方法を示しています。 既定のインスタンスの場合は、次の構文を使用します。  
+ **注** SPN が既に存在する場合は、再登録する前に削除する必要があります。 削除するには、 `setspn` スイッチを指定して `-D` コマンドを使用します。 次の例は、新しいインスタンス ベースの SPN を手動で登録する方法を示しています。 既定のインスタンスの場合は、次の構文を使用します。  
   
 ```  
 setspn -A MSSQLSvc/myhost.redmond.microsoft.com accountname  
@@ -132,8 +132,8 @@ setspn -A MSSQLSvc/myhost.redmond.microsoft.com accountname
 setspn -A MSSQLSvc/myhost.redmond.microsoft.com:instancename accountname  
 ```  
   
-##  <a name="Client"></a> クライアント接続  
- クライアント ドライバーでは、ユーザー指定の SPN がサポートされています。 ただし、SPN を指定しない場合は、クライアント接続の種類に基づいて SPN が自動的に生成されます。 TCP 接続の場合は、名前付きインスタンスと既定のインスタンスの両方で、 *MSSQLSvc*/*FQDN*:[*port*] という形式の SPN が使用されます。  
+##  <a name="client-connections"></a><a name="Client"></a>クライアント接続  
+ クライアント ドライバーでは、ユーザー指定の SPN がサポートされています。 ただし、SPN を指定しない場合は、クライアント接続の種類に基づいて SPN が自動的に生成されます。 TCP 接続の場合、名前付きインスタンスと既定のインスタンスの両方に対して、 *MSSQLSvc*/*FQDN*: [*port*] という形式の SPN が使用されます。  
   
  名前付きパイプおよび共有メモリ接続の場合、名前付きインスタンスには*MSSQLSvc*/*fqdn*:*instancename*という形式の SPN が使用され、 *MSSQLSvc*/*fqdn*は既定のインスタンスに使用されます。  
   
@@ -141,7 +141,7 @@ setspn -A MSSQLSvc/myhost.redmond.microsoft.com:instancename accountname
   
  サービス アカウントを SPN として使用できます。 サービス アカウントは、Kerberos 認証の接続属性を使用して次の形式で指定します。  
   
--   **username@domain** または **domain\username** (ドメイン ユーザー アカウントの場合)  
+-   **username@domain**ドメインユーザーアカウントの場合は**domain\username**  
   
 -   **machine$@domain** または **host\FQDN** (ローカル システムや NETWORK SERVICES などのコンピューター ドメイン アカウントの場合)  
   
@@ -153,7 +153,7 @@ FROM sys.dm_exec_connections
 WHERE session_id = @@SPID;  
 ```  
   
-##  <a name="Defaults"></a> 認証の既定  
+##  <a name="authentication-defaults"></a><a name="Defaults"></a> 認証の既定  
  次の表では、SPN の登録シナリオに基づいて使用される認証の既定について説明します。  
   
 |シナリオ|認証方法|  
@@ -163,7 +163,7 @@ WHERE session_id = @@SPID;
 |SPN が正しくないドメイン アカウント、仮想アカウント、MSA、またはビルトイン アカウントにマップされている場合|認証は失敗します。|  
 |SPN 参照が失敗したか、正しいドメイン アカウント、仮想アカウント、MSA、またはビルトイン アカウントにマップされていないか、正しいドメイン アカウント、仮想アカウント、MSA、またはビルトイン アカウントではない場合|ローカル接続とリモート接続で NTLM が使用されます。|  
   
-##  <a name="Comments"></a> コメント  
+##  <a name="comments"></a><a name="Comments"></a>Comments  
  専用管理者接続 (DAC) では、インスタンス名ベースの SPN が使用されます。 その SPN が正常に登録されると、Kerberos 認証を DAC で使用できるようになります。 また、ユーザーがアカウント名を SPN として指定することもできます。  
   
  起動中に SPN の登録が失敗した場合は、この失敗が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエラー ログに記録されて、起動が続行されます。  
@@ -171,10 +171,10 @@ WHERE session_id = @@SPID;
  シャットダウン中に SPN の登録解除が失敗した場合は、この失敗が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエラー ログに記録されて、シャットダウンが続行されます。  
   
 ## <a name="see-also"></a>参照  
- [クライアント接続でのサービス プリンシパル名 &#40;SPN&#41; のサポート](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)   
- [クライアント接続 &#40;OLE DB&#41; でのサービス プリンシパル名 &#40;SPNs&#41;](../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)   
- [クライアント接続 &#40;ODBC&#41; でのサービス プリンシパル名 &#40;SPNs&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)   
- [SQL Server Native Client の機能](../../relational-databases/native-client/features/sql-server-native-client-features.md)   
+ [クライアント接続での SPN&#41; サポート &#40;サービスプリンシパル名](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)   
+ [クライアント接続 &#40;OLE DB のサービスプリンシパル名 &#40;Spn&#41;&#41;](../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)   
+ [クライアント接続 &#40;のサービスプリンシパル名 &#40;Spn&#41; ODBC&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)   
+ [SQL Server Native Client 機能](../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [Reporting Services 環境における Kerberos 認証の問題の管理](https://technet.microsoft.com/library/ff679930.aspx)  
   
   

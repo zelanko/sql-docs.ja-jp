@@ -1,5 +1,5 @@
 ---
-title: 日付、時刻、およびタイムスタンプのエスケープ シーケンス |マイクロソフトドキュメント
+title: 日付、時刻、およびタイムスタンプエスケープシーケンス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,14 +16,14 @@ ms.assetid: 67b7dee0-e5b1-4469-a626-0c7767852b80
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: e6cbcdac00b4cd7497f53c9f3a13f4f7303b5154
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81284344"
 ---
 # <a name="date-time-and-timestamp-escape-sequences"></a>日付、時刻、およびタイムスタンプ エスケープ シーケンス
-ODBC は、日付、時刻、およびタイム・スタンプ・リテラルのエスケープ・シーケンスを定義します。 これらのエスケープシーケンスの構文は次のとおりです。  
+ODBC では、日付、時刻、およびタイムスタンプリテラルのエスケープシーケンスを定義します。 これらのエスケープシーケンスの構文は次のとおりです。  
   
 ```  
   
@@ -32,7 +32,7 @@ ODBC は、日付、時刻、およびタイム・スタンプ・リテラルの
 {ts 'value'}  
 ```  
   
- BNF 表記では、構文は次のとおりです。  
+ BNF 表記では、構文は次のようになります。  
   
 ```  
   
@@ -52,5 +52,5 @@ timestamp-separator ::=
      (The blank character)years-value ::= digit digit digit digitmonths-value ::= digit digitdays-value ::= digit digithours-value ::= digit digitminutes-value ::= digit digitseconds-value ::= digit digit[.digit...]  
 ```  
   
-## <a name="remarks"></a>解説  
- 日付、時刻、およびタイム・スタンプのリテラル・エスケープ・シーケンスは、データ・ソースで日付、時刻、およびタイム・スタンプのデータ・タイプがサポートされている場合にサポートされます。 アプリケーションは、これらのデータ型がサポートされているかどうかを判断するのに**は SQLGetTypeInfo**を呼び出す必要があります。
+## <a name="remarks"></a>Remarks  
+ 日付、時刻、およびタイムスタンプのリテラルエスケープシーケンスは、日付、時刻、およびタイムスタンプデータ型がデータソースでサポートされている場合にサポートされます。 アプリケーションは、これらのデータ型がサポートされているかどうかを判断するために**SQLGetTypeInfo**を呼び出す必要があります。

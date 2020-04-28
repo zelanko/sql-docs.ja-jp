@@ -1,5 +1,5 @@
 ---
-title: その他のアクセスドライバプログラミングの詳細 |マイクロソフトドキュメント
+title: その他の Access ドライバーのプログラミングの詳細 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ ms.assetid: cbd46df1-cc6d-4fd4-b401-c68ca85e15c6
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 1cb186d262114e46a98a2ad72f9707e682b7b5bf
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81291092"
 ---
 # <a name="other-access-driver-programming-details"></a>その他の Access ドライバーのプログラミングの詳細
 > [!NOTE]  
->  このセクションでは、ODBC 関数およびその他のプログラミングの詳細に関するアクセス ドライバー固有の情報を提供します。 関数の一般情報については[、ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)の該当するトピックを参照してください。  
+>  このセクションでは、ODBC 関数およびその他のプログラミングの詳細について、ドライバー固有の情報にアクセスします。 関数に関する一般的な情報については、「 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)」の該当するトピックを参照してください。  
   
  このセクションでは、次のトピックを扱います。  
   

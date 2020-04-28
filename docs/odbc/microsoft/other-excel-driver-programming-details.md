@@ -1,5 +1,5 @@
 ---
-title: その他の Excel ドライバ プログラミングの詳細 |マイクロソフトドキュメント
+title: その他の Excel ドライバーのプログラミングの詳細 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ ms.assetid: 92453ef5-86d6-4d13-bdd6-a4f5cf9c453f
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: d7a932d99ba30e84de0ccd4cfbcce1516cd2fad9
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81291002"
 ---
 # <a name="other-excel-driver-programming-details"></a>その他の Excel ドライバーのプログラミングの詳細
 > [!NOTE]  
->  このセクションでは、ODBC 関数およびその他のプログラミングの詳細に関する Excel ドライバー固有の情報を提供します。 関数の一般情報については[、ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)の該当するトピックを参照してください。  
+>  このセクションでは、ODBC 関数とその他のプログラミングの詳細について、Excel ドライバー固有の情報を提供します。 関数に関する一般的な情報については、「 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)」の該当するトピックを参照してください。  
   
  このセクションでは、次のトピックを扱います。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "81291002"
   
 -   [SQLColumns (Excel ドライバー)](../../odbc/microsoft/sqlcolumns-excel-driver.md)  
   
--   [データ ソース (Excel ドライバー)](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)  
+-   [SQLConfigDataSource (Excel ドライバー)](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)  
   
 -   [SQLDriverConnect (Excel ドライバー)](../../odbc/microsoft/sqldriverconnect-excel-driver.md)  
   

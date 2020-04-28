@@ -1,6 +1,6 @@
 ---
-title: T-SQL 権限の付与
-description: 並列データ ウェアハウスでのデータベース操作に対する T-SQL アクセス許可を付与します。
+title: Grant T-sql 権限
+description: 並列データウェアハウスのデータベース操作に T-sql 権限を付与します。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -10,19 +10,19 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6bbe78979c393490a52e1051fe158ae138f93dcc
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289700"
 ---
-# <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>並列データ ウェアハウスに対する T-SQL アクセス許可の付与
-並列データ ウェアハウスでのデータベース操作に対する T-SQL アクセス許可を付与します。
+# <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>Parallel Data Warehouse の T-sql 権限を許可する
+並列データウェアハウスのデータベース操作に T-sql 権限を付与します。
 
-## <a name="grant-permissions-to-submit-database-queries"></a>データベース クエリを送信する権限を付与する
-このセクションでは、SQL Server PDW アプライアンス上のデータを照会するデータベース ロールとユーザーにアクセス許可を付与する方法について説明します。  
+## <a name="grant-permissions-to-submit-database-queries"></a>データベースクエリを送信するためのアクセス許可を付与する
+このセクションでは、データベースロールとユーザーにアクセス許可を付与して SQL Server PDW アプライアンス上のデータを照会する方法について説明します。  
   
-データを照会するアクセス許可を付与するために使用されるステートメントは、必要なアクセスの範囲によって異なります。 次の SQL ステートメントは、アプライアンスにアクセスできる KimAbercrombie という名前のログインを作成し **、AdventureWorksPDW2012**データベースに KimAbercrombie という名前のデータベース ユーザーを作成し、PDWQueryData という名前のデータベース ロールを作成し、その後、オブジェクト、データベース レベル、またはデータベース レベルでアクセスが許可されるかどうかに基づいて、そのユーザーに対してクエリ アクセスを許可するためのオプションを表示します。  
+データのクエリを実行する権限を許可するために使用されるステートメントは、必要なアクセスの範囲によって異なります。 次の SQL ステートメントでは、アプライアンスにアクセスできる KimAbercrombie という名前のログインを作成し、 **AdventureWorksPDW2012**データベースに KimAbercrombie という名前のデータベースユーザーを作成し、PDWQueryData という名前のデータベースロールを作成して、そのアクセス許可をオブジェクトまたはデータベースレベルのどちらに付与するかに基づいて、クエリアクセス権を付与するオプションを表示します。  
   
 ```sql  
 USE master;  
@@ -59,11 +59,11 @@ GO
 ```  
   
 ## <a name="grant-permissions-to-use-the-admin-console"></a>管理コンソールを使用するためのアクセス許可を付与する
-このセクションでは、管理コンソールを使用するためのログインにアクセス権を付与する方法について説明します。  
+このセクションでは、ログインに管理コンソールを使用するためのアクセス許可を付与する方法について説明します。  
   
 **管理コンソールを使用する**  
   
-管理コンソールを使用するには、ログインにサーバーレベルの**VIEW SERVER STATE**権限が必要です。 次の SQL ステートメント**VIEW SERVER STATE**は、管理者コンソールを使用して`KimAbercrombie`SQL Server PDW アプライアンスを監視できるように、ログインに VIEW SERVER STATE 権限を付与します。  
+管理コンソールを使用するには、ログインにサーバーレベルの**VIEW SERVER STATE**権限が必要です。 次の SQL ステートメントでは、Kim が管理コンソールを使用`KimAbercrombie`して SQL Server PDW アプライアンスを監視できるように、 **VIEW SERVER STATE**権限をログインに付与します。  
   
 ```sql  
 USE master;  
@@ -72,18 +72,18 @@ GRANT VIEW SERVER STATE TO KimAbercrombie;
 GO  
 ```  
   
-**キルセッション**  
+**セッションの強制終了**  
   
-セッションを強制終了する権限をログインに付与するには、次のように**ALTER ANY CONNECTION**権限を付与します。  
+セッションを強制終了する権限をログインに付与するには、 **ALTER ANY CONNECTION**権限を次のように与えます。  
   
 ```sql  
 GRANT ALTER ANY CONNECTION TO KimAbercrombie;  
 ```  
   
 ## <a name="grant-permissions-to-load-data"></a>データを読み込むためのアクセス許可を付与する
-ここでは、SQL Server PDW アプライアンスにデータを読み込むためのデータベース ロールとデータベース ユーザーに権限を付与する方法について説明します。  
+このセクションでは、SQL Server PDWappliance にデータを読み込むための権限をデータベースロールとデータベースユーザーに付与する方法について説明します。  
   
-次のスクリプトは、各読み込みオプションに必要なアクセス許可を示しています。 特定のニーズに合わせて変更できます。  
+次のスクリプトは、各読み込みオプションに必要なアクセス許可を示しています。 これは、特定のニーズに合わせて変更できます。  
   
 ```sql  
 -- Create server login for the examples that follow.  
@@ -123,17 +123,17 @@ EXEC sp_addrolemember 'db_datareader','BI_ETLUser';
 EXEC sp_addrolemember 'db_datawriter','BI_ETLUser';  
 ```  
   
-## <a name="grant-permissions-to-copy-data-off-the-appliance"></a>アプライアンスからデータをコピーするアクセス許可を付与する
-このセクションでは、SQL Server PDW アプライアンスからデータをコピーする権限をユーザーロールまたはデータベース ロールに付与する方法について説明します。  
+## <a name="grant-permissions-to-copy-data-off-the-appliance"></a>アプライアンスからデータコピーするためのアクセス許可を付与する
+このセクションでは、SQL Server PDW アプライアンスからデータをコピーするためのアクセス許可をユーザーまたはデータベースロールに付与する方法について説明します。  
   
-データを別の場所に移動するには、移動するデータを含むテーブルに対する**SELECT**権限が必要です。  
+データを別の場所に移動するには、移動するデータが含まれているテーブルに対する**SELECT**権限が必要です。  
   
-データの変換先が別の SQL Server PDW の場合、ユーザーは、変換先で**の CREATE TABLE**権限と、テーブルを含むスキーマに対する ALTER **SCHEMA**権限を持っている必要があります。  
+データの変換先が別の SQL Server PDW である場合、ユーザーは、そのテーブルを格納するスキーマに対する**CREATE TABLE**の権限と、そのテーブルを含むスキーマに対する**ALTER schema**権限を持っている必要があります。  
   
-## <a name="grant-permissions-to-manage-databases"></a>データベースを管理するためのアクセス許可を付与する
-このセクションでは、SQL Server PDW アプライアンス上のデータベースを管理するためのデータベース ユーザーにアクセス許可を付与する方法について説明します。  
+## <a name="grant-permissions-to-manage-databases"></a>データベースを管理する権限を付与する
+このセクションでは、SQL Server PDW アプライアンス上のデータベースを管理する権限をデータベースユーザーに付与する方法について説明します。  
   
-状況によっては、会社がデータベースの管理者を割り当てる場合があります。 マネージャは、データベースに対する他のログインのアクセス権、およびデータベース内のデータとオブジェクトのアクセスを制御します。 データベース内のすべてのオブジェクト、ロール、およびユーザーを管理するには、データベースに対する**CONTROL**権限をユーザーに与えます。 次のステートメントは **、AdventureWorksPDW2012**データベースに対する**CONTROL** `KimAbercrombie`権限をユーザーに付与します。  
+場合によっては、会社がデータベースのマネージャーを割り当てます。 マネージャーは、他のログインがデータベースに対して持つアクセス権、およびデータベース内のデータとオブジェクトを制御します。 データベース内のすべてのオブジェクト、ロール、およびユーザーを管理するには、データベースに対する**CONTROL**権限をユーザーに付与します。 次のステートメントは、 **AdventureWorksPDW2012**データベースに対する`KimAbercrombie` **CONTROL**権限をユーザーに許可します。  
   
 ```sql
 USE AdventureWorksPDW2012;  
@@ -141,17 +141,17 @@ GO
 GRANT CONTROL ON DATABASE:: AdventureWorksPDW2012 TO KimAbercrombie;  
 ```  
   
-アプライアンス上のすべてのデータベースを制御する権限を誰かに付与するには、master データベースで**ALTER ANY DATABASE**権限を付与します。  
+アプライアンス上のすべてのデータベースを制御するアクセス許可を他のユーザーに付与するには、 **ALTER ANY database**権限を master データベースに付与します。  
   
-## <a name="grant-permissions-to-manage-logins-users-and-database-roles"></a>ログイン、ユーザー、およびデータベース ロールを管理する権限を付与する
-このセクションでは、ログイン、データベース ユーザー、およびデータベース ロールを管理する権限を付与する方法について説明します。  
+## <a name="grant-permissions-to-manage-logins-users-and-database-roles"></a>ログイン、ユーザー、およびデータベースロールを管理するためのアクセス許可を付与する
+ここでは、ログイン、データベースユーザー、およびデータベースロールを管理する権限を付与する方法について説明します。  
   
-### <a name="grant-permissions-to-manage-logins"></a><a name="PermsAdminConsole"></a>ログインを管理するアクセス許可を付与する  
+### <a name="grant-permissions-to-manage-logins"></a><a name="PermsAdminConsole"></a>ログインを管理するためのアクセス許可を付与する  
 **ログインの追加または管理**  
   
-次の SQL ステートメントは[、CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)ステートメントを使用して新しいログインを作成し[、ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md)ステートメントを使用して既存のログインを変更できる、KimAbercrombie という名前のログインを作成します。  
+次の SQL ステートメントは、 [CREATE login](../t-sql/statements/create-login-transact-sql.md)ステートメントを使用して新しいログインを作成したり、 [alter login](../t-sql/statements/alter-login-transact-sql.md)ステートメントを使用して既存のログインを変更したりできる、KimAbercrombie という名前のログインを作成します。  
   
-**ALTER ANY LOGIN**権限は、新しいログインを作成し、エキサシティングを削除する権限を付与します。 ログインが存在すると、ALTER **ANY ログイン**権限またはそのログインに対する**ALTER**権限を持つログインによって、ログインを管理できます。 ログインは、パスワードとデフォルトデータベースを変更して、そのログインを行うことができます。  
+**ALTER ANY LOGIN**権限では、新しいログインを作成したり、既存のログインを削除したりすることができます。 ログインが存在する場合、 **ALTER ANY login**権限を持つログイン、またはそのログインに対する**alter**権限を持つログインで、ログインを管理できます。 ログインを使用すると、ログインのパスワードおよび既定のデータベースを変更できます。  
   
 ```sql 
 CREATE LOGIN KimAbercrombie   
@@ -163,8 +163,8 @@ GO
 GRANT ALTER ANY LOGIN TO KimAbercrombie;  
 ```  
   
-### <a name="grant-permissions-to-manage-login-sessions"></a>ログイン セッションを管理するアクセス許可を付与する  
-サーバー上のすべてのセッションを表示するには **、VIEW サーバー状態**権限が必要です。 他のログインのセッションを終了する機能には **、ALTER ANY CONNECTION**権限が必要です。 次の例では、`KimAbercrombie`前に作成したログインを使用します。  
+### <a name="grant-permissions-to-manage-login-sessions"></a>ログインセッションを管理するためのアクセス許可を付与する  
+サーバー上のすべてのセッションを表示できるようにするには、 **VIEW SERVER STATE**権限が必要です。 他のログインのセッションを終了する機能を利用するには、 **ALTER ANY CONNECTION**権限が必要です。 次の例では`KimAbercrombie` 、前に作成したログインを使用します。  
   
 ```sql  
 -- Grant permissions to view sessions and queries  
@@ -174,8 +174,8 @@ GRANT VIEW SERVER STATE TO KimAbercrombie;
 GRANT ALTER ANY CONNECTION TO KimAbercrombie;  
 ```  
   
-### <a name="grant-permission-to-manage-database-users"></a>データベース ユーザーを管理する権限を付与する  
-データベース・ユーザーの作成と削除には **、ALTER ANY ユーザー**権限が必要です。 既存のユーザーを管理するには、**そのユーザー**に対する ALTER ANY ユーザー権限または**ALTER**権限が必要です。 次の例では、`KimAbercrombie`前に作成したログインを使用します。  
+### <a name="grant-permission-to-manage-database-users"></a>データベースユーザーを管理する権限を付与する  
+データベースユーザーを作成および削除するには、 **ALTER ANY USER**権限が必要です。 既存のユーザーを管理するには、 **ALTER ANY user**権限、またはそのユーザーに対する**alter**権限が必要です。 次の例では`KimAbercrombie` 、前に作成したログインを使用します。  
   
 ```sql  
 -- Create a user  
@@ -187,8 +187,8 @@ CREATE USER KimAbercrombie;
 GRANT ALTER ANY USER TO KimAbercrombie;  
 ```  
   
-### <a name="grant-permisson-to-manage-database-roles"></a>データベース ロールを管理するアクセス許可を付与する  
-ユーザー定義のデータベース ロールを作成および削除するには **、ALTER ANY ROLE**権限が必要です。 次の例では、`KimAbercrombie`以前に作成したログインと使用を使用します。  
+### <a name="grant-permisson-to-manage-database-roles"></a>アクセスを許可してデータベースロールを管理する  
+ユーザー定義のデータベースロールを作成および削除するには、 **ALTER ANY ROLE**権限が必要です。 次の例では`KimAbercrombie` 、前に作成したログインと使用を使用します。  
   
 ```sql  
 USE AdventureWorksPDW2012;  
@@ -198,7 +198,7 @@ GRANT ALTER ANY ROLE TO KimAbercrombie;
 ```  
   
 ### <a name="login-user-and-role-permission-charts"></a>ログイン、ユーザー、およびロール権限のグラフ  
-次のグラフは混乱を招く可能性がありますが、より高いレベルのレバーのアクセス許可 (CONTROL など) に、個別に付与できるより細かいアクセス許可 (ALTER など) が含まれていることがわかります。 必要なタスクを完了するために、常に最小限のアクセス許可を付与することをお勧めします。 そのためには、最上位レベルのアクセス許可ではなく、より具体的なアクセス許可を付与します。  
+次のグラフでは混乱が生じる可能性がありますが、より高度なレベルのアクセス許可 (コントロールなど) に、個別に付与できるより詳細なアクセス許可 (ALTER など) が含まれていることがわかります。 ベストプラクティスとしては、必要なタスクを完了するための最小限のアクセス許可を常に付与することをお勧めします。 これを行うには、最上位レベルのアクセス許可ではなく、より具体的なアクセス許可を付与します。  
   
 **ログイン権限:**  
   
@@ -217,11 +217,11 @@ For a list of all permissions, see [Permissions: GRANT, DENY, REVOKE &#40;SQL Se
   
 -->
 
-## <a name="grant-permissions-to-monitor-the-appliance"></a>アプライアンスを監視するためのアクセス許可を付与する
-SQL Server PDW アプライアンスは、管理コンソールまたは SQL Server PDW システム ビューを使用して監視できます。 ログインには、アプライアンスを監視するためのサーバー・レベル**の VIEW SERVER STATE**権限が必要です。 ログインには、管理コンソールまたは**KILL**コマンドを使用して接続を終了するために **、ALTER ANY CONNECTION**権限が必要です。 管理コンソールを使用するために必要なアクセス許可については、「 [SQL Server PDW&#41;&#40;管理コンソールを使用するためのアクセス許可の付与](#grant-permissions-to-use-the-admin-console)」を参照してください。  
+## <a name="grant-permissions-to-monitor-the-appliance"></a>アプライアンスを監視するアクセス許可を付与する
+SQL Server PDW アプライアンスは、管理コンソールまたは SQL Server PDW システムビューのいずれかを使用して監視できます。 ログインには、アプライアンスを監視するためのサーバーレベルの**VIEW SERVER STATE**権限が必要です。 ログインでは、管理コンソールまたは**KILL**コマンドを使用して接続を終了するために、 **ALTER ANY CONNECTION**アクセス許可が必要です。 管理コンソールの使用に必要なアクセス許可の詳細については、「[管理コンソールを使用するためのアクセス許可を付与する &#40;SQL Server PDW&#41;](#grant-permissions-to-use-the-admin-console)」を参照してください。  
   
-### <a name="grant-permission-to-monitor-the-appliance-by-using-system-views"></a><a name="PermsAdminConsole"></a>システム ビューを使用してアプライアンスを監視するアクセス許可を付与する  
-次の SQL ステートメントは、`monitor_login`名前の付いたログインを作成し、`monitor_login`そのログインに VIEW SERVER **STATE**権限を付与します。  
+### <a name="grant-permission-to-monitor-the-appliance-by-using-system-views"></a><a name="PermsAdminConsole"></a>システムビューを使用してアプライアンスを監視するアクセス許可を付与する  
+次の SQL ステートメントでは、と`monitor_login`いう名前のログインを作成し、その`monitor_login`ログインに**VIEW SERVER STATE**権限を与えます。  
   
 ```sql  
 USE master;  
@@ -231,8 +231,8 @@ GRANT VIEW SERVER STATE TO monitor_login;
 GO  
 ```  
   
-### <a name="grant-permission-to-monitor-the-appliance-by-using-system-views-and-to-terminate-connections"></a>システム ビューを使用してアプライアンスを監視し、接続を終了するアクセス許可を付与する  
-次の SQL ステートメントは、`monitor_and_terminate_login`名前の付いたログインを作成し **、VIEW SERVER** `monitor_and_terminate_login` STATE と**任意の接続の変更**権限をログインに付与します。  
+### <a name="grant-permission-to-monitor-the-appliance-by-using-system-views-and-to-terminate-connections"></a>システムビューを使用してアプライアンスを監視し、接続を終了するアクセス許可を付与します。  
+次の SQL ステートメントは、という`monitor_and_terminate_login`名前のログインを作成し、 **VIEW SERVER STATE**と**ALTER ANY CONNECTION**権限を`monitor_and_terminate_login`ログインに付与します。  
   
 ```sql  
 USE master;  
@@ -243,10 +243,10 @@ GRANT ALTER ANY CONNECTION TO monitor_and_terminate_login;
 GO  
 ```  
   
-管理者ログインを作成するには、「[固定サーバー ロール](pdw-permissions.md#fixed-server-roles)」を参照してください。  
+管理者ログインを作成するには、「[固定サーバーロール](pdw-permissions.md#fixed-server-roles)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
-[ログインの作成](../t-sql/statements/create-login-transact-sql.md)  
+[CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)  
 [CREATE USER](../t-sql/statements/create-user-transact-sql.md)  
 [CREATE ROLE](../t-sql/statements/create-role-transact-sql.md)  
 [読み込み](load-overview.md)  

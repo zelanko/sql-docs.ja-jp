@@ -16,10 +16,10 @@ ms.author: shkale
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2b0934562f2f0ff1a2dd3ec8df1ed15f10d955ee
-ms.sourcegitcommit: 6e7696a169876eb914f79706d022451a1213eb6b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79428153"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>SQL Server と Azure SQL Database でのグラフ処理
@@ -28,7 +28,7 @@ ms.locfileid: "79428153"
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]には、多対多リレーションシップをモデル化するためのグラフデータベース機能が用意されています。 グラフのリレーションシップはに[!INCLUDE[tsql-md](../../includes/tsql-md.md)]統合されており、を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]基盤とするデータベース管理システムとしてを使用する利点があります。
 
 
-## <a name="what-is-a-graph-database"></a>グラフデータベースとは  
+## <a name="what-is-a-graph-database"></a>グラフ データベースとは  
 グラフ データベースは、ノード (または頂点) とエッジ (またはリレーションシップ) のコレクションです。 ノードはエンティティ (たとえば、個人や組織) を表し、エッジは接続されている 2 つのノード間のリレーションシップ (たとえば、お気に入りや友人) を表します。 ノードとエッジの両方に、プロパティが関連付けられている場合があります。 グラフ データベースを特徴付けるいくつかの特性を次に示します。  
 -    エッジ (リレーションシップ) は、グラフ データベース内のファースト クラスのエンティティであり、属性またはプロパティを関連付けることができます。 
 -    1 つのエッジは、グラフ データベース内の複数のノードを柔軟に接続できます。

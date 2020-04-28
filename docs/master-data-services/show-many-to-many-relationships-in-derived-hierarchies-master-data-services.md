@@ -11,10 +11,10 @@ ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a0300b7f613610403970862fe9e5aad594372b27
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289890"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>派生階層 (Master Data Services) の多対多リレーションシップを表示する
@@ -102,7 +102,7 @@ Customer サンプル モデルや、 [!INCLUDE[ssMDSshort_md](../includes/ssmds
 ## <a name="collections"></a>コレクション  
  コレクションと明示的階層は非推奨とされます。 変換ストアド プロシージャ (udpConvertCollectionAndConsolidatedMembersToLeaf) は、コレクション メンバーをリーフ メンバーに変換し、多対多の派生階層を作成し、コレクション メンバー情報をキャプチャします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [派生階層 (マスター データ サービス)](../master-data-services/derived-hierarchies-master-data-services.md)  
   
   

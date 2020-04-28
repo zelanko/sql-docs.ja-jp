@@ -17,27 +17,27 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bbdef1bda50ae2d5ace31b56f003e48f8b4bc86b
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81290199"
 ---
 # <a name="isscommandwithparameters-ole-db"></a>ISSCommandWithParameters (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  **XML および**ユーザー定義型 (UDT) の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サポートを公開します。 これは、コア OLE DB インターフェイス**ICommandWithParameters**から継承する省略可能なインターフェイスです。 から継承された 3 つのメソッドに加えて **、****パラメーター情報**、**割り当てパラメーター名**、および**パラメーターの値を設定**します。**ISSCommandWithParameters は**、サーバー固有のデータ型を処理するために使用される 2 つの新しいメソッドを提供します。  
+  **Isscommandwithparameters**は、XML [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]およびユーザー定義型 (UDT) のサポートを公開します。 これは、コア OLE DB インターフェイス**ICommandWithParameters**から継承する省略可能なインターフェイスです。 **ICommandWithParameters**から継承された3つのメソッドに加えて、**Getparameterinfo**、 **Mapparameternames**、および**setparameterinfo**;**Isscommandwithparameters**には、サーバー固有のデータ型を処理するために使用される2つの新しいメソッドが用意されています。  
   
 > [!NOTE]  
->  **ISSCommandWithParameters**インターフェイスは、サービス コンポーネントを使用する場合に使用できますが、サービス コンポーネント自体はこのインターフェイスを使用しません。  
+>  **Isscommandwithparameters**インターフェイスは、サービスコンポーネントが使用されている場合に使用できますが、サービスコンポーネント自体はこのインターフェイスを使用しません。  
   
-|Method|説明|  
+|メソッド|説明|  
 |------------|-----------------|  
 |[ISSCommandWithParameters::GetParameterProperties &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md)|コマンドに渡された各 UDT パラメーターまたは XML パラメーターごとに、1 つの **SSPARAMPROPS** プロパティ セット構造体を返します。他の型のパラメーターの場合、戻り値はありません。|  
-|[ISSCommandWithParameters::SetParameterProperties &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md)|序数によってパラメータごとにパラメータプロパティを設定するか **、SSPARAMPROPS**構造体の配列を指定してバルクパラメータプロパティを設定します。|  
+|[ISSCommandWithParameters::SetParameterProperties &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md)|序数に基づいてパラメーターごとにパラメーターのプロパティを設定するか、または**Ssparc Amprops**構造体の配列を指定して一括パラメータープロパティを設定します。|  
   
 ## <a name="see-also"></a>参照  
- [OLE DB&#41;&#40;インターフェイス](https://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)   
+ [インターフェイス &#40;OLE DB&#41;](https://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)   
  [XML データ型の使用](../../relational-databases/native-client/features/using-xml-data-types.md)   
  [ユーザー定義型の使用](../../relational-databases/native-client/features/using-user-defined-types.md)  
   

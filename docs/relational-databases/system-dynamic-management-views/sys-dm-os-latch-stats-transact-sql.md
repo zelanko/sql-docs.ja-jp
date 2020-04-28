@@ -19,10 +19,10 @@ ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f1a8480b7e512c697f3645006d453866963b81aa
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289910"
 ---
 # <a name="sysdm_os_latch_stats-transact-sql"></a>dm_os_latch_stats (Transact-sql)
@@ -33,9 +33,9 @@ ms.locfileid: "79289910"
 > [!NOTE]  
 > またはから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]これを[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼び出すには、 **dm_pdw_nodes_os_latch_stats**という名前を使用します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|latch_class|**nvarchar (120)**|ラッチクラスの名前。|  
+|latch_class|**nvarchar(120)**|ラッチクラスの名前。|  
 |waiting_requests_count|**bigint**|このクラスのラッチでの待機の数。 このカウンターは、ラッチ待機の開始時にインクリメントされます。|  
 |wait_time_ms|**bigint**|クラス内のラッチに対する合計待機時間 (ミリ秒単位)。<br /><br /> **注:** この列は、ラッチ待機中、およびラッチ待機の終了時に5分ごとに更新されます。|  
 |max_wait_time_ms|**bigint**|メモリ オブジェクトがラッチを待機した最大時間。 この値が著しく大きい場合、内部デッドロックを示している可能性があります。|  
@@ -45,7 +45,7 @@ ms.locfileid: "79289910"
 で[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]は、 `VIEW SERVER STATE`権限が必要です。   
 Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、データベース`VIEW DATABASE STATE`の権限が必要です。 Standard [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  sys.dm_os_latch_stats を使用すると、別のラッチ クラスの待機数や待機時間を相対的に確認することにより、ラッチの競合の発生源を特定できます。 場合によっては、ラッチの競合を解決または減らすことができます。 ただし、場合によっては、カスタマーサポートサービスに問い合わせる[!INCLUDE[msCoName](../../includes/msconame-md.md)]必要があります。  
   
 次のように `DBCC SQLPERF` を使用すると、sys.dm_os_latch_stats の内容をリセットできます。  
@@ -60,7 +60,7 @@ GO
 > [!NOTE]  
 >  これらの統計は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が再起動されると保存されません。 すべてのデータは、統計が最後にリセット[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]された後、またはが開始されてから累積されます。  
   
-## <a name="latches"></a>両側  
+## <a name="latches"></a><a name="latches"></a>両側  
  ラッチは、さまざまな[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンポーネントによって使用される、ロックに似た内部軽量同期オブジェクトです。 ラッチは主に、バッファーやファイルアクセスなどの操作中にデータベースページを同期するために使用されます。 各ラッチは、1 つのアロケーション ユニットに関連付けられています。 
   
  ラッチが別のスレッドによって、競合するモードで保持されており、ラッチ要求がすぐに許可されない場合は、ラッチ待機が発生します。 ロックとは異なり、ラッチは、書き込み操作であっても、操作の直後に解放されます。  
@@ -74,8 +74,7 @@ GO
   
 |ラッチクラス|説明|  
 |-----------------|-----------------|  
-|ALLOC_CREATE_RINGBUF|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部で使用され、割り当てリング バッファーの作成の同期を初期化します。|  
+|ALLOC_CREATE_RINGBUF|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部で使用され、割り当てリング バッファーの作成の同期を初期化します。|  
 |ALLOC_CREATE_FREESPACE_CACHE|ヒープの内部空き領域キャッシュの同期を初期化するために使用されます。|  
 |ALLOC_CACHE_MANAGER|内部一貫性テストの同期に使用されます。|  
 |ALLOC_FREESPACE_CACHE|ヒープおよびバイナリラージオブジェクト (Blob) で使用可能な領域があるページのキャッシュへのアクセスを同期するために使用されます。 複数の接続がヒープまたは BLOB に同時に行を挿入しようとすると、このクラスのラッチの競合が発生する可能性があります。 このような競合を少なくするには、オブジェクトをパーティション分割します。 各パーティションには独自のラッチがあります。 パーティション分割では、複数のラッチに挿入が分散されます。|  

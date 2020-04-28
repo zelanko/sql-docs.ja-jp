@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 80fc899400be167badaae9d617d43a61e0d346b5
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289740"
 ---
 # <a name="appliance-configuration-checklists-for-analytics-platform-system"></a>Analytics Platform System のアプライアンス構成チェックリスト
@@ -22,7 +22,7 @@ ms.locfileid: "79289740"
 > [!WARNING]  
 > ツールで使用可能なタスクを実行するには、Analytics Platform System**Configuration Manager**を使用することをお勧めします。また、サポートされている唯一の方法です。  
   
-## <a name="BeforeTasks"></a>はじめに  
+## <a name="before-you-begin"></a><a name="BeforeTasks"></a>開始する前に  
   
 ### <a name="prerequisites"></a>前提条件  
   
@@ -44,7 +44,7 @@ ms.locfileid: "79289740"
   
     2.  PDW コントロールノードの [**スタート**] メニューから**Configuration Manager**を起動します。 Configuration Manager の最初の画面には、IHV によって作成されたアプライアンストポロジが表示されます。 アプライアンスの一部として SQL Server PDW ソフトウェアによって認識されるハードウェアノードの一覧です。 アプライアンスのトポロジ画面で設定を変更する必要はありません。  
   
-## <a name="CMTasks"></a>Configuration Manager タスクを実行する  
+## <a name="perform-configuration-manager-tasks"></a><a name="CMTasks"></a>Configuration Manager タスクを実行する  
 SQL Server PDW**Configuration Manager** (pdwcm) はアプライアンス管理 SQL Server PDW ツールで、システム管理者はアプライアンスレベルの操作を実行したり、アプライアンスレベルの設定を変更したりするために使用します。 たとえば、PDWCM を使用してパスワードをリセットし、タイムゾーンを設定し、IP アドレスを変更し、SSL 証明書を構成し、ファイアウォール経由でリモートアクセスを有効にする、アプライアンスを開始または停止する、ファイルの瞬時初期化を設定するなどの方法があります。  
   
 **Configuration Manager**を使用して、次の構成タスクを実行します。  
@@ -64,7 +64,7 @@ SQL Server PDW**Configuration Manager** (pdwcm) はアプライアンス管理 S
 |[**特権**] ダイアログボックスを使用してファイルの瞬時初期化オプションを確認する|ファイルの瞬時初期化は、データファイル操作をより迅速に実行できるようにする SQL Server の機能です。 ネットワークサービスアカウントに SE_MANAGE_VOLUME_NAME 特権が付与されている場合にのみ、SQL Server PDW で有効になります。 既定ではオフになっています。<br /><br />詳細については、「[ファイルの瞬時初期化構成 &#40;Analytics Platform System&#41;](instant-file-initialization-configuration.md)」を参照してください。|  
 |バックアップから master データベースを復元する|現在の**master**データベースを削除し、バックアップで置き換えます。 詳細については、「 [Restore The Master Database &#40;Analytics Platform System&#41;](restore-the-master-database.md)」を参照してください。|  
   
-## <a name="AddTasks"></a>追加の構成タスクを実行する  
+## <a name="perform-additional-configuration-tasks"></a><a name="AddTasks"></a>追加の構成タスクを実行する  
 **Configuration Manager**タスクを実行した後、次の追加の構成タスクを実行します。 これらのタスクの一部は省略可能です。  
   
 |構成タスク|説明|  

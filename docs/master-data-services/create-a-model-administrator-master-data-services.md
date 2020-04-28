@@ -13,17 +13,16 @@ ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: eacd28629c8e4fdeb9de17147a315b172aa3bbd3
-ms.sourcegitcommit: fc99fdd586eabc2d60f33056123398f263d5913d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78937693"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>モデル管理者を作成する (マスター データ サービス)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、1 つ以上のモデルに含まれるすべてのオブジェクトに対するすべての権限をグループまたはユーザーに与える場合にモデル管理者を作成します。  
   
 > [!TIP]  
@@ -32,29 +31,23 @@ ms.locfileid: "78937693"
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
--   
-  **[ユーザー/グループの権限]** 機能領域にアクセスするための権限が必要です。  
+-   **[ユーザー/グループの権限]** 機能領域にアクセスするための権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 ### <a name="to-create-a-model-administrator"></a>モデル管理者を作成するには  
   
-1.  
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[ユーザー/グループの権限]** をクリックします。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[ユーザー/グループの権限]** をクリックします。  
   
-2.  
-  **[ユーザー]** または **[グループ]** ページで、編集するユーザーまたはグループの行を選択します。  
+2.  **[ユーザー]** または **[グループ]** ページで、編集するユーザーまたはグループの行を選択します。  
   
-3.  
-  **[選択したユーザーの編集]** をクリックします。  
+3.  **[選択したユーザーの編集]** をクリックします。  
   
-4.  
-  **[モデル]** タブをクリックします。  
+4.  **[モデル]** タブをクリックします。  
   
-5.  
-  **[モデル]** ボックスの一覧からモデルを選択します (オプション)。  
+5.  **[モデル]** ボックスの一覧からモデルを選択します (オプション)。  
   
-6.  [**編集**] をクリックします。  
+6.  **[編集]** をクリックします。  
   
 7.  権限を与えるモデルをクリックします。  
   
@@ -62,13 +55,13 @@ ms.locfileid: "78937693"
   
 9. グループまたはユーザーを管理者にする各モデルについて、手順 7 と 8 を実行します。  
   
-10. **[保存]** をクリックします。  
+10. **[Save]** (保存) をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)   
  [モデルオブジェクト権限の割り当て &#40;マスターデータサービス&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
  [階層メンバーの権限を割り当てる &#40;マスターデータサービス&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
  [モデルオブジェクト権限 &#40;マスターデータサービス&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
- [階層メンバーの権限 &#40;マスターデータサービス&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)  
+ [階層メンバーの権限 (マスター データ サービス)](../master-data-services/hierarchy-member-permissions-master-data-services.md)  
   
   

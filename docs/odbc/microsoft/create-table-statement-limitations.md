@@ -1,5 +1,5 @@
 ---
-title: テーブル ステートメントの制限 |マイクロソフトドキュメント
+title: CREATE TABLE ステートメントの制限事項 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ ms.assetid: c5067855-20c9-456f-8d63-f375b4297f2e
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: a83acb061cf8192dff1c6adede349f49a0b0bbdb
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81280873"
 ---
 # <a name="create-table-statement-limitations"></a>CREATE TABLE ステートメントの制限事項
-Access、Excel、または Paradox ドライバを使用し、テキストまたはバイナリ列の長さが指定されていない (または 0 として指定されている) 場合、列の長さは 255 に設定されます。  
+Microsoft Access、Microsoft Excel、または Paradoxdriver が使用されていて、テキストまたはバイナリ列の長さが指定されていない (または0として指定されている) 場合、列の長さは255に設定されます。  
   
- dBASE ドライバーを使用し、テキストまたはバイナリ列の長さが指定されていない (または 0 として指定されている) 場合、列の長さは 254 に設定されます。  
+ DBASE ドライバーが使用されていて、text 列または binary 列の長さが指定されていない場合 (または0として指定されている場合)、列の長さは254に設定されます。  
   
- 最大 255 列がサポートされています。  
+ 最大255列がサポートされています。  
   
- Microsoft Excel ドライバが MicrosoftExcel 5.0、7.0、または 97 のデータ ソースで使用されている場合、以前に削除されたワークシートと同じ名前のワークシートを作成することはできません。 Microsoft Excel ドライバを使用してバージョン 5.0、7.0、または 97 のワークシートにアクセスする場合、DROP TABLE ステートメントを使用するとワークシートは消去されますが、ワークシート名は削除されません。  
+ Microsoft Excel driver を MicrosoftExcel 5.0、7.0、または97データソースで使用する場合、以前に削除されたワークシートと同じ名前でワークシートを作成することはできません。 Microsoft Excel driver を使用してバージョン5.0、7.0、または97ワークシートにアクセスすると、DROP TABLE ステートメントによってワークシートがクリアされますが、ワークシート名は削除されません。  
   
- Paradox ドライバを使用する場合、テーブルにインデックスを定義した後は列を追加できません。 CREATE TABLE ステートメントの引数リストの最初の列が索引を作成する場合、2 番目の列を引数リストに含めることはできません。
+ Paradox ドライバーを使用する場合、テーブルでインデックスが定義された後に列を追加することはできません。 CREATE TABLE ステートメントの引数リストの最初の列でインデックスが作成された場合、2番目の列を引数リストに含めることはできません。

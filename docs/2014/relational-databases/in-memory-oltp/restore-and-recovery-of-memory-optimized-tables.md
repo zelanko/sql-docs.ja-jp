@@ -11,17 +11,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8ce2cc85f936f49e6769bf3a855f903e5064b4be
-ms.sourcegitcommit: 554ddf3b9518f5659cdfff693bfa5a348854faac
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78259488"
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>メモリ最適化テーブルの復元と復旧
   メモリ最適化テーブルを含むデータベースを回復または復元する基本的なメカニズムは、ディスク ベース テーブルのみを含むデータベースのメカニズムに似ています。 ただし、ディスク ベース テーブルとは異なり、メモリ最適化テーブルは、データベースがユーザー アクセスに使用できるようになる前にメモリに読み込まれる必要があります。 データベース復旧の新しい手順が追加されます。 データベース復旧の手順は次のように変更されます:
 
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が再起動すると、各データベースは次の 3 つのフェーズで構成される復旧フェーズを経由します:
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が再起動すると、各データベースは次の 3 つのフェーズで構成される復旧フェーズを経由します:
 
 1.  分析フェーズ。 このフェーズでは、コミットされたトランザクションとコミットされていないトランザクションを検出するために、アクティブなトランザクション ログにパスが行われます。 インメモリ OLTP エンジンは読み込むチェックポイントを識別し、システム テーブルのログ エントリを再度読み込みます。 また、ファイル割り当てログ レコードの一部を処理します。
 

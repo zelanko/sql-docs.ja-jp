@@ -24,10 +24,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 58abfde651fb59bc69207db810324eb4c74b8c26
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112067"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>SQL Server への Access アプリケーションのリンク-Azure SQL DB (アクセス許可 Sql)
@@ -146,7 +146,7 @@ Recordset.LastModified
 ### <a name="hyperlink-functionality-is-lost-after-migrating-data"></a>データの移行後にハイパーリンク機能が失われる  
 **原因:** データを移行すると、列内のハイパーリンクの機能が失われ、単純な**nvarchar (max)** 列になります。  
   
-**解決策:** 存在.  
+**解決策:** なし。  
   
 ### <a name="some-sql-server-data-types-are-not-supported-by-access"></a>一部の SQL Server データ型はアクセスでサポートされていません  
 **原因:** Access でサポートされ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ていないデータ型を含むテーブルまたは SQL Azure テーブルを後で更新する場合は、access でテーブルを開くことはできません。  

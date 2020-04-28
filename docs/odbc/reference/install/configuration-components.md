@@ -1,5 +1,5 @@
 ---
-title: 構成コンポーネント |マイクロソフトドキュメント
+title: 構成コンポーネント |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,17 +13,17 @@ ms.assetid: 0b68ff48-12e4-41aa-b9e2-b39ed5023ea7
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 37c2518c3b18423c804631780ee4a18bff29d88b
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81289013"
 ---
 # <a name="configuration-components"></a>構成コンポーネント
 > [!NOTE]  
->  WINDOWS XP および Windows Server 2003 以降では、ODBC が Windows のオペレーション システムに含まれています。 ODBC は、以前のバージョンの Windows にのみ明示的にインストールしてください。  
+>  Windows XP および windows Server 2003 以降では、ODBC は Windows オペレーティングシステムに含まれています。 ODBC は、以前のバージョンの Windows にのみ明示的にインストールする必要があります。  
   
- データ ソースはインストーラー DLL によって構成され、必要に応じてドライバー セットアップ DLL とトランスレータ セットアップ DLL が呼び出されます。 インストーラー DLL は、コントロール パネルから直接呼び出されるか、または*管理プログラム*と呼ばれる別のプログラムによって読み込まれ、呼び出されます。 次の図は、構成コンポーネント間の関係を示しています。  
+ データソースは、インストーラーの DLL によって構成されます。この DLL は、必要に応じてドライバーのセットアップ Dll と translator セットアップ Dll を呼び出します。 インストーラー DLL は、コントロールパネルから直接呼び出されるか、または*管理プログラム*と呼ばれる別のプログラムによって読み込まれて呼び出されます。 構成コンポーネント間の関係を次の図に示します。  
   
  ![構成コンポーネント間の関係](../../../odbc/reference/install/media/pr30.gif "pr30")  
   

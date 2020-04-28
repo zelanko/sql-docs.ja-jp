@@ -18,16 +18,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e4ec6125d3c8fe2469f599b3f11c1888383de6e5
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81290477"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>データ ソースへの接続の確立
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  ネイティブ クライアント[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]OLE DB プロバイダーにアクセスするには、コンシューマーは、**まず、CoCreateInstance**メソッドを呼び出すことによってデータ ソース オブジェクトのインスタンスを作成する必要があります。 一意のクラス ID (CLSID) で、各 OLE DB プロバイダーが識別されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアント OLE DB プロバイダーの場合、クラス識別子はCLSID_SQLNCLI10。 参照する sqlncli.h で使用される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアント OLE DB プロバイダーに解決されるシンボル SQLNCLI_CLSIDを使用することもできます。  
+  コンシューマーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーにアクセスするために、まず**CoCreateInstance**メソッドを呼び出すことによって、データソースオブジェクトのインスタンスを作成する必要があります。 一意のクラス ID (CLSID) で、各 OLE DB プロバイダーが識別されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの場合、クラス識別子は CLSID_SQLNCLI10 です。 参照する SQLNCLI に使用されている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーに解決されるシンボル SQLNCLI_CLSID を使用することもできます。  
   
  データ ソース オブジェクトは、**IDBProperties** インターフェイスを公開します。コンシューマーは、このインターフェイスを使用して、サーバー名、データベース名、ユーザー ID、パスワードなどの基本的な認証情報を提供します。 **IDBProperties::SetProperties** メソッドが呼び出されて、これらのプロパティが設定されます。  
   
@@ -43,7 +43,7 @@ CoCreateInstance(CLSID_SQLNCLI10,
                  (void **) &pIDBInitialize)  
 ```  
   
- **この CoCreateInstance**の呼び出しは、CLSID_SQLNCLI10に関連付けられたクラスの単一のオブジェクトを作成します (オブジェクトの作成に使用されるデータとコードに関連付けられた CSLID)。 IID_IDBInitialize は、オブジェクトとの通信に使われるインターフェイス (**IDBInitialize**) の ID への参照です。  
+ この**CoCreateInstance**への呼び出しによって、CLSID_SQLNCLI10 (オブジェクトの作成に使用されるデータとコードに関連付けられた CSLID) に関連付けられたクラスの1つのオブジェクトが作成されます。 IID_IDBInitialize は、オブジェクトとの通信に使われるインターフェイス (**IDBInitialize**) の ID への参照です。  
   
  次に、データ ソースへの接続を初期化し、確立する関数の例を示します。  
   

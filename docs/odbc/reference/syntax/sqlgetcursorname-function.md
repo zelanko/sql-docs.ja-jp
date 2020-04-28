@@ -1,5 +1,5 @@
 ---
-title: 関数を取得する |マイクロソフトドキュメント
+title: Sqlgetカーソル名関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ ms.assetid: e6e92199-7bb6-447c-8987-049a4c6ce05d
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: d3ac65dc07897ddc789ee03b06b1bc1f71d37c3c
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81285550"
 ---
 # <a name="sqlgetcursorname-function"></a>SQLGetCursorName 関数
-**適合 性**  
- バージョン導入: ODBC 1.0 規格準拠: ISO 92  
+**互換性**  
+ 導入されたバージョン: ODBC 1.0 標準準拠: ISO 92  
   
  **まとめ**  
- **指定**したステートメントに関連付けられたカーソル名を返します。  
+ **Sqlgetcursor name**は、指定したステートメントに関連付けられているカーソル名を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,57 +45,57 @@ SQLRETURN SQLGetCursorName(
 ```  
   
 ## <a name="arguments"></a>引数  
- *ステートメントハンドル*  
- [入力]ステートメント ハンドル。  
+ *StatementHandle*  
+ 代入ステートメントハンドル。  
   
  *カーソル名*  
- [出力]カーソル名を返すバッファーへのポインター。  
+ Outputカーソル名を返すバッファーへのポインター。  
   
- *カーソル名*が NULL の場合 *、NameLengthPtr*は*CursorName*が指すバッファーで返される文字の合計数 (文字データの NULL 終端文字を除く) を返します。  
+ *カーソル名*が NULL の場合、 *NameLengthPtr*は、*カーソル名*が指すバッファー内で返すことができる文字の合計数 (文字データの null 終端文字を除く) を返します。  
   
  *BufferLength*  
- [入力]\**カーソル名*の長さ (文字数)。 *\*カーソル名*の値が Unicode 文字列の場合 **(SQLGetCursorNameW**を呼び出すとき)、BufferLength 引数は偶数でなければなりません。 *BufferLength*  
+ 代入\**カーソル名*の長さ (文字数)。 * \*カーソル名*の値が Unicode 文字列の場合 ( **sqlgetカーソル namew**を呼び出すとき)、 *bufferlength*引数は偶数である必要があります。  
   
- *名前の長さプター*  
- [出力]\* *CursorName*で返される文字の合計数 (NULL 終端文字を除く) を返すメモリへのポインター。 戻り値の文字数が*BufferLength*以上の場合、\**カーソル名*のカーソル名は*BufferLength*から NULL 終端文字の長さを引いた値に切り捨てられます。  
+ *NameLengthPtr*  
+ Output\**カーソル名*で返すことができる文字の合計数 (null 終端文字を除く) を返すメモリへのポインター。 戻り値として使用できる文字数が*bufferlength*以上の場合は、 \* *cursor name のカーソル名が* *bufferlength*に切り捨てられ、null 終端文字の長さを引いた値になります。  
   
 ## <a name="returns"></a>戻り値  
- SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、またはSQL_INVALID_HANDLE。  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、または SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>診断  
- **SQLGetCursorName が**SQL_ERRORまたはSQL_SUCCESS_WITH_INFOを返す場合は、SQL_HANDLE_STMTの*ハンドル型*と*ステートメント ハンドル*ハンドルを指定して**SQLGetDiagRec**を呼び出すことによって、関連付けられた SQLSTATE*値を取得*できます。 次の表は **、SQLGetCursorName**によって一般的に返される SQLSTATE 値を示し、この関数のコンテキストで各値を説明します。「(DM)」という表記は、ドライバ マネージャによって返される SQLSTATEs の説明の前に記述されます。 特に注記がない限り、各 SQLSTATE 値に関連付けられた戻りコードはSQL_ERROR。  
+ **Sqlgetcursorname**が SQL_ERROR または SQL_SUCCESS_WITH_INFO のいずれかを返す場合、関連付けられた SQLSTATE 値を取得するには、 *handletype*が SQL_HANDLE_STMT で、*ハンドル*が*StatementHandle*である**SQLGetDiagRec**を呼び出します。 次の表に、 **Sqlgetカーソル名**によって一般的に返される SQLSTATE 値の一覧を示します。この関数のコンテキストでは、それぞれについて説明します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
   
 |SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
-|01000|一般的な警告|ドライバー固有の情報メッセージ。 (関数はSQL_SUCCESS_WITH_INFOを返します。|  
-|01004|文字列データ(右切り捨て)|カーソル名\*全体を返すほど大きなバッファ*CursorName*がなかったので、カーソル名が切り捨てられました。 切り捨てられていないカーソル名の長さは、 **NameLengthPtr*に返されます。 (関数はSQL_SUCCESS_WITH_INFOを返します。|  
-|HY000|一般的なエラー|特定の SQLSTATE がなく、実装固有の SQLSTATE が定義されていないエラーが発生しました。 メッセージ テキスト バッファー内の**SQLGetDiagRec**によって返されるエラー メッセージは、エラーとその原因を記述します。 * \**|  
-|HY001|メモリ割り当てエラー|ドライバは、関数の実行または完了をサポートするために必要なメモリを割り当てることができませんでした。|  
-|HY010|関数シーケンス エラー|(DM)*ステートメント ハンドル*に関連付けられている接続ハンドルに対して非同期に実行される関数が呼び出されました。 この非同期関数は、**関数**が呼び出されたときに実行されていました。<br /><br /> (DM)*ステートメント ハンドル*に対して SQL**実行****、SQLExecDirect、** または**SQLMoreResults**が呼び出され、SQL_PARAM_DATA_AVAILABLE返されました。 この関数は、ストリームされたすべてのパラメーターに対してデータが取得される前に呼び出されました。<br /><br /> (DM) 非同期に実行される関数が呼び出されました、 *StatementHandle、* この関数が呼び出されたときに実行されています。<br /><br /> (DM)**ステートメント***ハンドル*に対**して**呼び**出され**、SQL_NEED_DATA返されました。 **SQLBulkOperations** この関数は、実行時のすべてのデータ パラメーターまたは列に対してデータが送信される前に呼び出されました。|  
-|HY013|メモリ管理エラー|メモリ不足の状態が原因で、基になるメモリ オブジェクトにアクセスできなかったため、関数呼び出しを処理できませんでした。|  
-|HY015|カーソル名がありません|(DM) ドライバは ODBC 2 *.x*ドライバで、ステートメントにカーソルが開かれていたり **、SQLSetCursorName**でカーソル名が設定されていなかったりしました。|  
-|HY090|無効な文字列またはバッファ長|(DM) 引数*BufferLength*で指定された値が 0 未満でした。|  
-|HY117|不明なトランザクション状態のため、接続が中断されました。 切断と読み取り専用の機能のみが許可されます。|(DM) 中断状態の詳細については[、SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。|  
-|ヒュットー1|接続のタイムアウトが期限切れになりました|データ ソースが要求に応答する前に、接続タイムアウト期間が切れました。 接続タイムアウト期間は **、SQL_ATTR_CONNECTION_TIMEOUT SQLSetConnectAttr**を使用して設定されます。|  
-|IM001|ドライバはこの機能をサポートしていません|(DM)*ステートメント ハンドル*に関連付けられているドライバーは、関数をサポートしていません。|  
+|01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
+|01004|文字列データ、右側が切り捨てられました|\**バッファーカーソル*名がカーソル名全体を返すのに十分な大きさではないため、カーソル名が切り詰められました。 切り捨てられていないカーソル名の長さは **NameLengthPtr*で返されます。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
+|HY000|一般的なエラー|特定の SQLSTATE がなく、実装固有の SQLSTATE が定義されていないエラーが発生しました。 Messagetext バッファーの**SQLGetDiagRec**によって返されるエラーメッセージには、エラーとその原因が記述されています。 * \**|  
+|HY001|メモリ割り当てエラー|ドライバーは、関数の実行または完了をサポートするために必要なメモリを割り当てることができませんでした。|  
+|HY010|関数のシーケンスエラー|(DM) 非同期的に実行する関数が、 *StatementHandle*に関連付けられている接続ハンドルに対して呼び出されました。 この非同期関数は、 **Sqlgetカーソル名**関数が呼び出されたときにまだ実行されていました。<br /><br /> (DM) **Sqlexecute**、 **SQLExecDirect**、または**Sqlmoreresults**が*StatementHandle*に対して呼び出され、SQL_PARAM_DATA_AVAILABLE が返されました。 この関数は、ストリーミングされたすべてのパラメーターのデータが取得される前に呼び出されました。<br /><br /> (DM) 非同期的に実行する関数が*StatementHandle*に対して呼び出されましたが、この関数が呼び出されたときにまだ実行されていました。<br /><br /> (DM) **Sqlexecute**、 **SQLExecDirect**、 **Sqlbulkoperations**、 **SQLSetPos**が*StatementHandle*に対して呼び出され、SQL_NEED_DATA が返されました。 この関数は、実行時データのすべてのパラメーターまたは列に対してデータが送信される前に呼び出されました。|  
+|HY013|メモリ管理エラー|基になるメモリオブジェクトにアクセスできなかったため、関数呼び出しを処理できませんでした。メモリ不足の状態が原因である可能性があります。|  
+|HY015|使用可能なカーソル名がありません|(DM) ドライバーは ODBC*2.x ドライバーでし*たが、ステートメントに開いているカーソルがなかったため、 **SQLSetCursorName**でカーソル名が設定されていませんでした。|  
+|HY090|文字列またはバッファーの長さが無効です|(DM) 引数*Bufferlength*に指定された値が0未満でした。|  
+|HY117|トランザクションの状態が不明なため、接続が中断されました。 切断と読み取り専用の機能のみが許可されます。|(DM) 中断状態の詳細については、「 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)」を参照してください。|  
+|HYT01|接続タイムアウトの期限が切れました|データソースが要求に応答する前に、接続のタイムアウト期間が経過しました。 接続タイムアウト期間は、 **SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT によって設定されます。|  
+|IM001|ドライバーはこの機能をサポートしていません|(DM) *StatementHandle*に関連付けられているドライバーでは、関数はサポートされていません。|  
   
 ## <a name="comments"></a>説明  
- カーソル名は、位置指定更新および削除ステートメント (たとえば **、UPDATE** _table-name_ .**カーソル名の現在**_の_場所 。 詳細については、「[位置指定更新ステートメントとステートメントの削除](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md)」を参照してください。 アプリケーションがカーソル名を定義するために**SQLSetCursorName**を呼び出さない場合、ドライバーは名前を生成します。 この名前は、SQL_CUR文字で始まります。  
+ カーソル名は、位置指定の update および delete ステートメントでのみ使用されます (例:**更新**_テーブル名_..._カーソル名_**の現在の場所**)。 詳細については、「配置された[Update ステートメントと Delete ステートメント](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md)」を参照してください。 アプリケーションがカーソル名を定義するために**SQLSetCursorName**を呼び出さない場合は、ドライバーによって名前が生成されます。 この名前は SQL_CUR 文字で始まります。  
   
 > [!NOTE]
->  ODBC 2 *.x*では、オープン・カーソルがなく、 **SQLSetCursorName**の呼び出しによって名前が設定されていなかった場合、 **SQLGetCursorName**の呼び出しは SQLSTATE HY015 を返しました (カーソル名は使用できません)。 ODBC 3 *.x*では、これはもはや当てはまりません。**SQLGetCursorName**が呼び出されたときに、ドライバーは、カーソル名を返します。  
+>  ODBC 2.x で*は、開い*ているカーソルがなく、 **SQLSetCursorName**の呼び出しによって名前が設定されていない場合、 **sqlgetcursor NAME**を呼び出すと SQLSTATE HY015 が返されます (カーソル名は使用できません)。 ODBC 3 *. x*では、これは無効です。**Sqlgetcursor name**が呼び出されるタイミングに関係なく、ドライバーはカーソル名を返します。  
   
- **SQLGetCursorName は**、名前が明示的に作成されたか暗黙的に作成されたか否かにかかわらず、カーソルの名前を返します。 カーソル名は **、SQLSetCursorName**が呼び出されない場合に暗黙的に生成されます。 **SQLSetCursorName**は、カーソルが割り振りまたは準備された状態である限り、ステートメント上のカーソルの名前を変更するために呼び出すことができます。  
+ **Sqlgetcursor name**は、明示的または暗黙的に作成された名前であるかどうかにかかわらず、カーソルの名前を返します。 **SQLSetCursorName**が呼び出されない場合、カーソル名は暗黙的に生成されます。 **SQLSetCursorName**は、カーソルが割り当てられた状態または準備済みの状態である限り、ステートメントのカーソルの名前を変更するために呼び出すことができます。  
   
- 明示的または暗黙的に設定されたカーソル名は、関連付けられている*ステートメント ハンドル*が削除されるまで、SQL_HANDLE_STMTの*HandleType*を指定した**SQLFreeHandle**を使用して設定されたままになります。  
+ 明示的または暗黙的に設定されたカーソル名は、関連付けられている*StatementHandle*が削除されるまで、設定されたままになります。これは、SQL_HANDLE_STMT の*Handletype*で**sqlfreehandle**を使用します。  
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|参照先|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |SQL ステートメントの実行|[SQLExecDirect 関数](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
 |準備された SQL ステートメントの実行|[SQLExecute 関数](../../../odbc/reference/syntax/sqlexecute-function.md)|  
-|実行のためのステートメントの準備|[SQLPrepare 関数](../../../odbc/reference/syntax/sqlprepare-function.md)|  
+|実行するステートメントの準備|[SQLPrepare 関数](../../../odbc/reference/syntax/sqlprepare-function.md)|  
 |カーソル名の設定|[SQLSetCursorName 関数](../../../odbc/reference/syntax/sqlsetcursorname-function.md)|  
   
 ## <a name="see-also"></a>参照  

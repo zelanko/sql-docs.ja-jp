@@ -14,26 +14,26 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d3c2f5f0be09e9a60997308efd72c360348efc60
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289210"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>データベース メールを使用するように SQL Server エージェント メールを構成する
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の通知と警告をデータベース メールを使用して送信するように [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]エージェントを構成する方法について説明します。  
   
--   **作業を開始する前に、次の操作を行います。**  
+-   **作業を開始する準備:**  
   
--   [前提条件](#Prerequisites)  
+-   [必要条件](#Prerequisites)  
   
--   [セキュリティ](#Security)  
+-   [Security](#Security)  
   
 -   [SQL Server Management Studio でデータベース メールを使用するように SQL Server エージェントを構成するには](#SSMSProcedure)  
   
 -   [フォローアップタスク](#Follow_Up)  
   
-##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>始める前に  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
   
@@ -45,12 +45,12 @@ ms.locfileid: "79289210"
   
 -   作成したプロファイルを **msdb** データベースの既定のプロファイルに設定します。  
   
-###  <a name="security"></a><a name="Security"></a>セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="permissions"></a><a name="Permissions"></a> アクセス許可  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  プロファイル アカウントを作成し、ストアド プロシージャを実行するユーザーは、sysadmin 固定サーバー ロールのメンバーである必要があります。  
   
-##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>SQL サーバー管理スタジオの使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  **データベース メールを使用するように SQL Server エージェントを構成するには**  
   
 -   オブジェクト エクスプローラーで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを展開します。  

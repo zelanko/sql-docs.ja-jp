@@ -1,5 +1,5 @@
 ---
-title: テーブルの作成と開き (テキスト ファイル ドライバ) |マイクロソフトドキュメント
+title: テーブルの作成とオープン (テキストファイルドライバー) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,11 +13,11 @@ ms.assetid: e6a07dda-a665-4f5b-a8d6-9ff479700513
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: ae13312299f131d1957557db28bbe4db0bf7b4c7
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81280922"
 ---
 # <a name="creating-and-opening-tables-text-file-driver"></a>テーブルを作成して開く (テキスト ファイル ドライバー)
-テキスト ドライバーを使用すると、新しいテーブルが作成されます Odbcinst.ini で指定された形式を使用します。 指定しない場合、テーブルは CSVDELIMITED 形式で作成されます。 デフォルトでは、INTEGER カラムは 11 文字、FLOAT カラムはデフォルトで 22 文字です。 DATE 列は YYYY-MM-DD 形式を使用します。 CHAR 列と LONGCHAR 列は、CREATE ステートメントで指定された幅です。
+テキストドライバーが使用されている場合は、Odbcinst に指定された形式を使用して、新しいテーブルが作成されます。 指定しない場合、テーブルは CSVDELIMITED 形式で作成されます。 既定では、整数型の列の既定値は11文字で、FLOAT 型の列の既定値は22文字です。 日付列では、yyyy-mm-dd 形式が使用されます。 CHAR および LONGCHAR 列は、CREATE ステートメントで指定された幅です。

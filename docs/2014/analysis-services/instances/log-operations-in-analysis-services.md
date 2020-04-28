@@ -11,15 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74f81deb2d9f5e4fcb770217a228a8b081098d89
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289140"
 ---
 # <a name="log-operations-in-analysis-services"></a>Analysis Services でのログ操作
-  Analysis Services インスタンスは、サーバーの通知、エラー、および警告を msmdsrv.exe ファイルに記録します。インストールするインスタンスごとに1つです。 管理者は、ルーチンのイベントと異常なイベントのどちらの情報を得る場合でも、このログを参照します。 最近のリリースにおいては、ログ記録が機能拡張され、さらに多くの情報が含まれるようになりました。 ログ レコードには、製品のバージョンおよびエディション情報だけでなく、プロセッサ、メモリ、接続、およびブロック イベントも含まれるようになりました。 
-  [ログ記録の機能強化](https://support.microsoft.com/kb/2965035)に関するページで、全体的な変更の一覧を確認できます。  
+  Analysis Services インスタンスは、サーバーの通知、エラー、および警告を msmdsrv.exe ファイルに記録します。インストールするインスタンスごとに1つです。 管理者は、ルーチンのイベントと異常なイベントのどちらの情報を得る場合でも、このログを参照します。 最近のリリースにおいては、ログ記録が機能拡張され、さらに多くの情報が含まれるようになりました。 ログ レコードには、製品のバージョンおよびエディション情報だけでなく、プロセッサ、メモリ、接続、およびブロック イベントも含まれるようになりました。 [ログ記録の機能強化](https://support.microsoft.com/kb/2965035)に関するページで、全体的な変更の一覧を確認できます。  
   
  組み込みのログ記録機能以外にも、多くの管理者および開発者が、Analysis Services コミュニティが提供する **ASTrace**などのツールを使用して、サーバー操作に関するデータを収集しています。 ダウンロードのリンクについては、「 [Microsoft SQL Server Community Samples: Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/) 」 (Microsoft SQL Server コミュニティ サンプル: Analysis Services) を参照してください。  
   
@@ -29,9 +28,9 @@ ms.locfileid: "79289140"
   
 -   [ログファイルの構成設定に関する一般的な情報](#bkmk_general)  
   
--   [MSMDSRV.EXE サービスログファイル](#bkmk_msmdsrv)  
+-   [MSMDSRV サービス ログ ファイル](#bkmk_msmdsrv)  
   
--   [ログを照会する](#bkmk_querylog)  
+-   [クエリログ](#bkmk_querylog)  
   
 -   [ミニダンプ (mdmp) ファイル](#bkmk_mdmp)  
   
@@ -40,7 +39,7 @@ ms.locfileid: "79289140"
 > [!NOTE]  
 >  ログ記録の情報をお探しの場合、処理およびクエリの実行パスを示す操作のトレースに関心を持たれるかもしれません。 アドホックかつ持続的なトレース(キューブ アクセスの監査など) のためのトレース オブジェクト、および Flight Recorder、SQL Server Profiler、および xEvents を最適に使用する方法に関する推奨事項は、このページ (「 [Analysis Services インスタンスの監視](monitor-an-analysis-services-instance.md)」) のリンクから確認できます。  
   
-##  <a name="bkmk_location"></a>ログの場所と種類  
+##  <a name="location-and-types-of-logs"></a><a name="bkmk_location"></a>ログの場所と種類  
  Analysis Services では、次に示すログが提供されています。  
   
 |ファイルの名前または場所|Type|使用目的|オン (既定)|  
@@ -51,23 +50,21 @@ ms.locfileid: "79289140"
   
  このトピックで説明されていない追加の情報リソースについては、 [マイクロソフト サポートからの初期データ コレクションに関するヒントのページ](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)を参照することをお勧めします。  
   
-##  <a name="bkmk_general"></a>ログファイルの構成設定に関する一般的な情報  
+##  <a name="general-information-on-log-file-configuration-settings"></a><a name="bkmk_general"></a> ログ ファイルの構成設定に関する一般情報  
  各ログのセクションは msmdsrv.ini サーバー構成ファイル内にあります。このファイルは \Program Files\Microsoft SQL Server\MSAS12.MSSQLSERVER\OLAP\Config フォルダーにあります。 ファイルを編集する手順については、「 [Analysis Services でのサーバープロパティの構成](../server-properties/server-properties-in-analysis-services.md)」を参照してください。  
   
  可能であれば、Management Studio の [サーバーのプロパティ] ページにあるログ記録のプロパティを設定することをお勧めします。 ただし、場合によっては、管理ツールに表示されていない設定を構成するため、msmdsrv.ini ファイルを直接編集する必要があります。  
   
  ![ログ設定を示した構成ファイルのセクション](../media/ssas-logfilesettings.png "ログ設定を示した構成ファイルのセクション")  
   
-##  <a name="bkmk_msmdsrv"></a>MSMDSRV.EXE サービスログファイル  
+##  <a name="msmdsrv-service-log-file"></a><a name="bkmk_msmdsrv"></a>MSMDSRV.EXE サービスログファイル  
  Analysis Services は、サーバーの操作のログを msmdsrv.log ファイルにインスタンスごとに記録します。このログ ファイルの場所は \program files\Microsoft SQL Server\\<instance\>\Olap\Log です。  
   
  このログ ファイルは、サービスを再起動するたびに空になります。 以前のリリースでは、ログ ファイルが使用できなくなるほど肥大化する事態を避けるためだけに、管理者がサービスを再起動してログ ファイルをフラッシュするということも行われていました。 これはもう不要です。 SQL Server 2012 SP2 以降で導入された構成設定では、ログ ファイルとその履歴のサイズを制御できます。  
   
--   
-  `MaxFileSizeMB` は、ログ ファイルの最大サイズを MB 単位で指定します。 既定値は 256 です。 置き換える有効な値は正の整数である必要があります。 Analysis Services は、`MaxFileSizeMB` に達すると、現在のファイルの名前を msmdsrv{現在のタイムスタンプ}.log ファイルに変更し、新しい msmdsrv.log ファイルの使用を開始します。  
+-   `MaxFileSizeMB` は、ログ ファイルの最大サイズを MB 単位で指定します。 既定値は 256 です。 置き換える有効な値は正の整数である必要があります。 Analysis Services は、`MaxFileSizeMB` に達すると、現在のファイルの名前を msmdsrv{現在のタイムスタンプ}.log ファイルに変更し、新しい msmdsrv.log ファイルの使用を開始します。  
   
--   
-  `MaxNumberFiles` は、古いログ ファイルの保有期間を指定します。 既定値は 0 (無効) です。 ログ ファイルのバージョンを維持するには、正の整数に変更します。 Analysis Services は、`MaxNumberFiles` に達すると、名前のタイムスタンプが最も古いものからファイルを削除します。  
+-   `MaxNumberFiles` は、古いログ ファイルの保有期間を指定します。 既定値は 0 (無効) です。 ログ ファイルのバージョンを維持するには、正の整数に変更します。 Analysis Services は、`MaxNumberFiles` に達すると、名前のタイムスタンプが最も古いものからファイルを削除します。  
   
  これらの設定を使用するには、以下を実行します。  
   
@@ -99,7 +96,7 @@ ms.locfileid: "79289140"
   
 6.  サービスを再起動します。  
   
-##  <a name="bkmk_querylog"></a>クエリログ  
+##  <a name="query-logs"></a><a name="bkmk_querylog"></a> クエリ ログ  
  クエリ ログの名称には若干誤りがあります。というのは、クエリ ログではユーザーの MDX クエリや DAX クエリの操作をログに記録しないためです。 代わりに、クエリ ログでは、Analysis Services によって生成されるクエリに関するデータを収集します。その後、このデータが [使用法に基づく最適化] ウィザードのデータ入力として使用されます。 クエリ ログに収集されたデータは直接分析するためのものではありません。 具体的には、データセットは、データセットのパスがクエリに含まれることを示す 0 または 1 のビット配列で記述されます。 ここでも、このデータはウィザード向けのものです。  
   
  クエリの監視とトラブルシューティングのため、多くの開発者および管理者は、クエリを監視するためにコミュニティ ツール **ASTrace**を使用します。 また、SQL Server Profiler、xEvents、または Analysis Services トレースも使用できます。 トレース関連のリンクについては、「 [Analysis Services インスタンスの監視](monitor-an-analysis-services-instance.md) 」を参照してください。  
@@ -128,7 +125,7 @@ ms.locfileid: "79289140"
   
  クエリ ログの構成については、「 [Analysis Services クエリ ログの構成](https://technet.microsoft.com/library/Cc917676) 」を参照してください。 記事は非常に古いものですが、クエリ ログの構成は最近のリリースでは変更されておらず、含まれている情報は引き続き適用されます。  
   
-##  <a name="bkmk_mdmp"></a>ミニダンプ (mdmp) ファイル  
+##  <a name="mini-dump-mdmp-files"></a><a name="bkmk_mdmp"></a> ミニ ダンプ (.mdmp) ファイル  
  ダンプ ファイルでは、異例なイベントを分析するために使用されるデータをキャプチャします。 Analysis Services は、サーバーのクラッシュ、例外、およびいくつかの構成エラーに対応してミニ ダンプ (.mdmp) を自動的に生成します。 機能が有効であっても、クラッシュ レポートは自動的に送信されません。  
   
  クラッシュ レポートは、Msmdsrv.ini ファイルの「Exception (例外)」セクションで構成します。 これらの設定は、メモリ ダンプ ファイルの生成を制御します。 次のスニペットは、既定値を示しています。  
@@ -149,33 +146,31 @@ ms.locfileid: "79289140"
 </Exception>  
 ```  
   
- **クラッシュレポートの構成**  
+ **クラッシュ レポートの構成**  
   
  特に Microsoft サポートから指示がない限り、ほとんどの管理者は既定の設定を使用します。 このサポート技術情報「 [メモリ ダンプ ファイルを生成するように Analysis Services を構成する方法](https://support.microsoft.com/kb/919711)」は古いものですが、ダンプ ファイルの構成手順として今も使用されています。  
   
  最も変更される可能性が高い構成設定は、メモリ ダンプ ファイルを生成するかどうかの指定に使用する `CreateAndSendCrashReports` の設定です。  
   
-|Value|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |0|メモリ ダンプ ファイルをオフにします。 「Exception (例外)」セクションの他のすべての設定は無視されます。|  
-|1 で保護されたプロセスとして起動されました|(既定) メモリ ダンプ ファイルを有効にしますが送信しません。|  
+|1|(既定) メモリ ダンプ ファイルを有効にしますが送信しません。|  
 |2|有効にするとともに、エラー レポートを Microsoft に自動的に送信します。|  
   
- 
-  `CrashReportsFolder` はダンプ ファイルの場所です。 既定では、.mdmp ファイルと関連付けられているログ レコードは \Olap\Log フォルダー内にあります。  
+ `CrashReportsFolder` はダンプ ファイルの場所です。 既定では、.mdmp ファイルと関連付けられているログ レコードは \Olap\Log フォルダー内にあります。  
   
- 
-  `SQLDumperFlagsOn` は完全ダンプの生成に使用されます。 既定では、完全ダンプは無効です。 このプロパティは `0x34` に設定します。  
+ `SQLDumperFlagsOn` は完全ダンプの生成に使用されます。 既定では、完全ダンプは無効です。 このプロパティは `0x34` に設定します。  
   
  次のリンクに詳しい背景情報があります。  
   
--   [ミニダンプを使用した SQL Server について詳しく調べる](https://blogs.msdn.com/b/sqlcat/archive/2009/09/11/looking-deeper-into-sql-server-using-minidumps.aspx)  
+-   [ミニダンプを使用する SQL Server について詳しく知る](https://blogs.msdn.com/b/sqlcat/archive/2009/09/11/looking-deeper-into-sql-server-using-minidumps.aspx)  
   
--   [ユーザーモードのダンプファイルを作成する方法](https://support.microsoft.com/kb/931673)  
+-   [ユーザー モードのダンプ ファイルを作成する方法](https://support.microsoft.com/kb/931673)  
   
--   [SQL Server でダンプファイルを生成するために、printbrm.exe ユーティリティを使用する方法](https://support.microsoft.com/kb/917825)  
+-   [Sqldumper.exe ユーティリティを使用して SQL Server にダンプ ファイルを生成する方法](https://support.microsoft.com/kb/917825)  
   
-##  <a name="bkmk_tips"></a>ヒントとベストプラクティス  
+##  <a name="tips-and-best-practices"></a><a name="bkmk_tips"></a>ヒントとベストプラクティス  
  このセクションは、この記事全体で説明したヒントの要約です。  
   
 -   msmdsrv log ファイルのサイズと数を制御するには、msmdsrv.log ファイルを構成します。 既定では設定が無効になっているため、必ずインストール後の手順として設定を追加してください。 このトピックの [MSMDSRV サービス ログ ファイル](#bkmk_msmdsrv) を参照してください。  

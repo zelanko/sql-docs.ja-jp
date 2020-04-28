@@ -12,10 +12,10 @@ ms.assetid: 06f89721-8478-4abc-8ada-e9c73b08bf51
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: abf7cff6bfcd1640f2115c2a7f097ba4fccb499d
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112412"
 ---
 # <a name="use-of-sql-server-features-and-capabilities"></a>SQL Server の機能の使用
@@ -44,7 +44,7 @@ WideWorldImporters は、SQL Server 2016 で導入された最新機能を含む
 |インデックス保存された計算列|SupplierTransactions および顧客トランザクションで使用されるインデックス付きの保存済みの計算列。|
 |CHECK 制約|比較的複雑な check 制約が`Sales.SpecialDeals`あります。 これにより、DiscountAmount、Discountamount、および UnitPrice の1つだけが構成されます。|
 |UNIQUE 制約|に対して多対多の構築 (および unique 制約) が`Warehouse.StockItemStockGroups`設定されています。|
-|テーブルのパーティション分割|(完全バージョンのデータベース)テーブルと`Sales.CustomerTransactions` `Purchasing.SupplierTransactions`テーブルは両方とも、パーティション関数`PF_TransactionDate`とパーティション構成`PS_TransactionDate`を使用して年でパーティション分割されます。 パーティション分割は、大規模なテーブルの管理を向上させるために使用されます。|
+|テーブル パーティション|(完全バージョンのデータベース)テーブルと`Sales.CustomerTransactions` `Purchasing.SupplierTransactions`テーブルは両方とも、パーティション関数`PF_TransactionDate`とパーティション構成`PS_TransactionDate`を使用して年でパーティション分割されます。 パーティション分割は、大規模なテーブルの管理を向上させるために使用されます。|
 |リスト処理|テーブル型`Website.OrderIDList`の例が用意されています。 これは、例のプロシージャ`Website.InvoiceCustomerOrders`で使用されます。 この手順では、共通テーブル式 (Cte)、TRY/CATCH、JSON_MODIFY、XACT_ABORT、NOCOUNT、THROW、および XACT_STATE を使用して、アプリケーションからデータベースエンジンへのラウンドトリップを最小限に抑えるために、単一の注文ではなく注文の一覧を処理する機能を示します。|
 |GZip 圧縮|`Warehouse.VehicleTemperature`ビューでは、テーブルは全センサーデータを保持します。 しかし、このデータが数か月を超える場合は、領域を節約するために圧縮されます。 COMPRESS 関数は GZip 圧縮を使用します。<br/><br/>ビュー `Website.VehicleTemperatures`では、以前に圧縮されたデータを取得するときに、圧縮解除機能を使用します。|
 |クエリ ストア|データベースでクエリストアが有効になっています。 いくつかのクエリを実行した後、次の手順を実行します。<br/><br/>1. Management Studio でデータベースを開きます。<br/>2. データベースの下にあるノードクエリストアを開きます。<br/>3. [リソースを*消費するクエリの上位*] レポートを開きます。 クエリの実行を確認し、実行したばかりのクエリのプランを確認します。|

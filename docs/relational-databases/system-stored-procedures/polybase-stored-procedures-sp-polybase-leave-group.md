@@ -15,10 +15,10 @@ ms.assetid: ef87a8f1-5407-47b5-b8bf-bd7d08c0f0fe
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 3fd28f5a3cecb6da28603ae6f8a88d751081e80c
-ms.sourcegitcommit: df21fd156cc833f107d22413c76991b67f3715c8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80216502"
 ---
 # <a name="sp_polybase_leave_group-transact-sql"></a>sp_polybase_leave_group (Transact-sql)
@@ -44,7 +44,7 @@ sp_polybase_leave_group;
 ## <a name="permissions"></a>アクセス許可  
  CONTROL SERVER 権限が必要です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  コンピューティングノードはグループからのみ削除できます。  
   
  ストアドプロシージャを実行した後、コンピューターで PolyBase エンジンと PolyBase Data Movement サービスを再起動します。 検証するには、ヘッドノードで次の DMV を実行します: **dm_exec_compute_nodes**。  
@@ -58,6 +58,6 @@ EXEC sp_polybase_leave_group ;
   
 ## <a name="see-also"></a>参照  
  [PolyBase を使ってみる](../../relational-databases/polybase/get-started-with-polybase.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

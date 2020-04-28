@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bf324f4e24337503c97e10734f38713ae0f172e6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80380733"
 ---
 # <a name="create-a-link-attribute-master-data-services"></a>リンク属性を作成する (マスター データ サービス)
@@ -29,9 +29,9 @@ ms.locfileid: "80380733"
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
--   **システム管理**機能領域にアクセスする権限が必要です。  
+-   [**システム管理**] 機能領域にアクセスするためのアクセス許可が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「[管理者&#40;マスター データ サービス&#41;](administrators-master-data-services.md)」を参照してください。  
+-   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](administrators-master-data-services.md)」を参照してください。  
   
 -   属性を作成するエンティティが存在する必要があります。 詳細については、「[エンティティを作成する (マスター データ サービス)](../../2014/master-data-services/create-an-entity-master-data-services.md)」を参照してください。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "80380733"
   
 7.  **[属性の追加]** ページで **[自由形式]** オプションを選択します。  
   
-8.  **[名前]** ボックスに属性の名前を入力します。 属性名として使用しない単語の一覧については、「[マスター データ サービス &#40;予約語&#41;](../../2014/master-data-services/reserved-words-master-data-services.md)」を参照してください。  
+8.  **[名前]** ボックスに属性の名前を入力します。 属性名として使用しない単語の一覧については、「[予約語 &#40;マスターデータサービス&#41;](../../2014/master-data-services/reserved-words-master-data-services.md)」を参照してください。  
   
 9. **[ピクセル幅の表示]** ボックスに、 **[エクスプローラー]** グリッドに表示する属性列の幅を入力します。  
   
@@ -71,10 +71,10 @@ ms.locfileid: "80380733"
   
 14. **[エンティティのメンテナンス]** ページで **[エンティティの保存]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
- [マスター データ サービス&#41;&#40;属性](../../2014/master-data-services/attributes-master-data-services.md)   
- [マスター データ サービス&#41;&#40;属性名を変更する](change-an-attribute-name-and-data-type-master-data-services.md)   
- [マスター データ サービス&#41;&#40;ドメイン ベースの属性を作成する](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)   
+## <a name="see-also"></a>参照  
+ [属性 &#40;マスターデータサービス&#41;](../../2014/master-data-services/attributes-master-data-services.md)   
+ [属性名を変更する &#40;マスターデータサービス&#41;](change-an-attribute-name-and-data-type-master-data-services.md)   
+ [ドメインベースの属性 &#40;マスターデータサービスを作成&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)   
  [ファイル属性を作成する (マスター データ サービス)](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)  
   
   

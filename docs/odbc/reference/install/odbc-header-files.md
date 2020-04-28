@@ -1,5 +1,5 @@
 ---
-title: ODBC ヘッダー ファイル |マイクロソフトドキュメント
+title: ODBC ヘッダーファイル |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,30 +15,30 @@ ms.assetid: 96f97ba3-7e73-4196-abfb-036c5f6d1903
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 0e3a4b550660b0f669b0b7dd790ab2fbb5fbdd33
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81288932"
 ---
 # <a name="odbc-header-files"></a>ODBC ヘッダー ファイル
 > [!NOTE]  
->  ODBC ヘッダー ファイルの再配布は必要ありません。 どれも「コア」と見なされません。  
+>  ODBC ヘッダーファイルの再配布は必要ありません。 "Core" とは見なされません。  
   
- **ヘッダー ファイル**  
+ **ヘッダーファイル**  
   
- Odbcinst.h  
+ Odbcinst. h  
   
- Sql.h  
+ Sql .h  
   
- を使用します。  
+ Sqlext. h  
   
- Sqltypes.h  
+ Sqltypes  
   
- をクリックします。  
+ Sqlucode .h  
   
- ムダsql.h  
+ Msdasql  
   
- ムダドック.h  
+ Msdadc  
   
- Sqlspi.h (ドライバー開発に使用される)、Windows 8 SDK で利用可能な[ODBC サービス プロバイダー インターフェイス (SPI) のリファレンス](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)を参照してください。
+ Sqlspi. h (ドライバーの開発に使用されます。詳細については、「 [ODBC サービスプロバイダーインターフェイス (SPI) リファレンス](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)」を参照してください)、WINDOWS 8 SDK から入手できます。

@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0d6bea885a03d09da28d5f49ada36cf17375a507
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79217149"
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>多次元モデルのデータ アクセス (Analysis Services - 多次元データ)
@@ -38,7 +38,7 @@ ms.locfileid: "79217149"
   
  [プログラムインターフェイス](#bkmk_api)  
   
-##  <a name="bkmk_clientapps"></a>クライアントアプリケーション  
+##  <a name="client-applications"></a><a name="bkmk_clientapps"></a>クライアントアプリケーション  
  Analysis Services は、多次元データベースをプログラムから構築または統合できるインターフェイスを備えていますが、実際には、Analysis Services のデータにアクセスするための機能が組み込まれた既存のクライアント アプリケーションが Microsoft やその他のソフトウェア ベンダーから提供されているため、そちらを利用する方が一般的です。  
   
  次の Microsoft アプリケーションでは、多次元データへのネイティブ接続がサポートされます。  
@@ -60,7 +60,7 @@ ms.locfileid: "79217149"
 ### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  データベース管理者にとって SQL Server Management Studio は、多次元データベースや Analysis Services のインスタンスを含む、SQL Server のインスタンスを管理するための統合環境です。 詳細については、「 [SQL Server Management Studio](../../../ssms/sql-server-management-studio-ssms.md) 」と「 [Analysis Services への接続](../../instances/connect-to-analysis-services.md)」を参照してください。  
   
-##  <a name="bkmk_querylang"></a>クエリ言語  
+##  <a name="query-languages"></a><a name="bkmk_querylang"></a>クエリ言語  
  MDX は、OLAP データベースからデータを取得するための業界標準のクエリ/計算言語です。 Analysis Services において、MDX は、データを取得するためのクエリ言語であると共に、データの定義とデータの操作にも対応しています。 SQL Server Management Studio、Reporting Services、および SQL Server データ ツールには MDX エディターが組み込まれています。 使用頻度の高いデータ操作については、MDX エディターを使用して、アドホック クエリや再利用可能なスクリプトを作成することができます。  
   
  Excel をはじめとする一部のツールやアプリケーションでは、Analysis Services データ ソースをクエリする際に MDX の構文が内部的に使用されています。 XMLA の Execute 要求に MDX ステートメントを含めることによって、プログラムから MDX を使用することもできます。  
@@ -69,13 +69,13 @@ ms.locfileid: "79217149"
   
  [MDX による多次元データのクエリ](querying-multidimensional-data-with-mdx.md)  
   
- [MDX &#40;Analysis Services の主な概念&#41;](../key-concepts-in-mdx-analysis-services.md)  
+ [MDX の主な概念 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)  
   
  [MDX クエリの基礎 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
  [MDX スクリプティングの基礎 &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
   
-##  <a name="bkmk_api"></a>プログラムインターフェイス  
+##  <a name="programmatic-interfaces"></a><a name="bkmk_api"></a> プログラミング インターフェイス  
  多次元データを使用したカスタム アプリケーションを構築する場合のデータへのアクセス手段は、そのほとんどが、次のいずれかのカテゴリに該当します。  
   
 -   **XMLA**。 広範なオペレーティング システムおよびプロトコルとの互換性を確保する必要がある場合は XMLA を使用します。 柔軟性の点では XMLA に勝る手段はありませんが、その分、パフォーマンスの高さとプログラミングのしやすさが損なわれる場合があります。  
@@ -86,7 +86,7 @@ ms.locfileid: "79217149"
   
  Analysis Services をカスタム アプリケーションに接続するためのクライアント ライブラリについて、より詳しい情報とリンクを次の表に示します。  
   
-|インターフェイス|説明|  
+|Interface|説明|  
 |---------------|-----------------|  
 |Analysis Services 管理オブジェクト (AMO)|AMO は、Analysis Services のインスタンスと多次元データベースをコードで管理するための主要なオブジェクト モデルです。 たとえば、SQL Server Management Studio では、サーバーとデータベースの管理をサポートするために AMO が使用されています。 詳細については、「[分析管理オブジェクト (AMO) による開発](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)」を参照してください。|  
 |ADOMD.NET|ADOMD.NET は、カスタム アプリケーションから多次元データを作成し、利用するための主要なオブジェクト モデルです。 マネージド クライアント アプリケーションでは ADOMD.NET を使用して、共通の Microsoft .NET Framework データ アクセス インターフェイスを経由して [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 情報を取得できます。 詳細については、「 [ADOMD.NET での開発](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net) 」と「 [ADOMD.NET クライアント プログラミング](https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-client/adomd-net-client-programming)」を参照してください。|  

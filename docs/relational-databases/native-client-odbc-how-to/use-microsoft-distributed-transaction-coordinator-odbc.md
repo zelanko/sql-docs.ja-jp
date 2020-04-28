@@ -1,5 +1,5 @@
 ---
-title: 分散トランザクション コーディネータ (ODBC)
+title: 分散トランザクションコーディネーター (ODBC)
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f55ac4fcea40f2ad8226e66626c6fb613f81e488
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81281662"
 ---
 # <a name="use-microsoft-distributed-transaction-coordinator-odbc"></a>Microsoft 分散トランザクション コーディネーターの使用 (ODBC)
@@ -28,7 +28,7 @@ ms.locfileid: "81281662"
   
 1.  MS DTC の OLE DtcGetTransactionManager 関数を使用して、MS DTC に接続します。 MS DTC の詳細については、Microsoft 分散トランザクション コーディネーターを参照してください。  
   
-2.  確立する SQL Server 接続ごとに 1 回呼び出します。  
+2.  確立する SQL Server 接続ごとに1回、SQL DriverConnect を呼び出します。  
   
 3.  MS DTC の OLE ITransactionDispenser::BeginTransaction 関数を呼び出して、MS DTC トランザクションを開始し、トランザクションを表すトランザクション オブジェクトを取得します。  
   
@@ -48,6 +48,6 @@ ms.locfileid: "81281662"
 >  手順 4. と手順 5. で示した呼び出し方法の代わりに、SQL Server ごとに [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) と [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) を続けて呼び出すこともできます。  
   
 ## <a name="see-also"></a>参照  
- [ODBC&#41;&#40;トランザクションの実行](https://msdn.microsoft.com/library/f431191a-5762-4f0b-85bb-ac99aff29724)  
+ [ODBC&#41;&#40;のトランザクションの実行](https://msdn.microsoft.com/library/f431191a-5762-4f0b-85bb-ac99aff29724)  
   
   

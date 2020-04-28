@@ -34,10 +34,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 71aba1741b777a593f951300a975df4736525211
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112191"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>XML アップデートグラムを使用した、データの挿入 (SQLXML 4.0)
@@ -70,22 +70,18 @@ ms.locfileid: "79112191"
 ## <a name="after-block"></a>\<> ブロックの後  
  ** \<After>** ブロックに1つ以上のレコードを指定できます。  
   
- After>ブロックが特定の列の値を提供しない場合、アップデートグラムは注釈付きスキーマで指定された既定値を使用します (スキーマが指定されている場合)。 ** \<** スキーマで列の既定値が指定されていない場合、アップデートグラムではこの列に明示的な値が指定され[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ず、代わりに、この列に既定値 (指定されている場合) が割り当てられます。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定値がなく、列で NULL 値が許容される場合、アップデートグラムでは列値に NULL が設定されます。 列に既定値がなく NULL 値が許容されない場合、コマンドは失敗し、アップデートグラムではエラーが返されます。 
-  `updg:returnid` 属性は省略可能です。この属性は、IDENTITY 型の列があるテーブルにレコードを追加するときに、システムによって生成される ID 値を返す場合に使用します。  
+ After>ブロックが特定の列の値を提供しない場合、アップデートグラムは注釈付きスキーマで指定された既定値を使用します (スキーマが指定されている場合)。 ** \<** スキーマで列の既定値が指定されていない場合、アップデートグラムではこの列に明示的な値が指定され[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ず、代わりに、この列に既定値 (指定されている場合) が割り当てられます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定値がなく、列で NULL 値が許容される場合、アップデートグラムでは列値に NULL が設定されます。 列に既定値がなく NULL 値が許容されない場合、コマンドは失敗し、アップデートグラムではエラーが返されます。 `updg:returnid` 属性は省略可能です。この属性は、IDENTITY 型の列があるテーブルにレコードを追加するときに、システムによって生成される ID 値を返す場合に使用します。  
   
 ## <a name="updgid-attribute"></a>updg:id 属性  
  アップデートグラムでレコードのみを挿入する場合、アップデートグラムに `updg:id` 属性を指定する必要はありません。 の詳細につい`updg:id`ては、「 [XML アップデートグラムを使用したデータの更新 &#40;SQLXML 4.0&#41;](updating-data-using-xml-updategrams-sqlxml-4-0.md)」を参照してください。  
   
 ## <a name="updgat-identity-attribute"></a>updg:at-identity 属性  
- アップデートグラムで、IDENTITY 型列があるテーブルにレコードを挿入するときには、省略可能な `updg:at-identity` 属性を使用して、システムにより割り当てられた値をキャプチャできます。 キャプチャした値は、後続のアップデートグラム操作で使用できます。 
-  `updg:returnid` 属性を指定してアップデートグラムを実行すると、生成される ID 値を返すことができます。  
+ アップデートグラムで、IDENTITY 型列があるテーブルにレコードを挿入するときには、省略可能な `updg:at-identity` 属性を使用して、システムにより割り当てられた値をキャプチャできます。 キャプチャした値は、後続のアップデートグラム操作で使用できます。 `updg:returnid` 属性を指定してアップデートグラムを実行すると、生成される ID 値を返すことができます。  
   
 ## <a name="updgguid-attribute"></a>updg:guid 属性  
- 
-  `updg:guid` 属性は省略可能です。この属性では、グローバル一意識別子が生成されます。 この値は、指定されている** \<同期>** ブロック全体のスコープ内に残ります。 この値は、 ** \<同期>** ブロックの任意の場所で使用できます。 属性は、関数`NEWGUID()` [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を呼び出して、一意の識別子を生成します。  
+ `updg:guid` 属性は省略可能です。この属性では、グローバル一意識別子が生成されます。 この値は、指定されている** \<同期>** ブロック全体のスコープ内に残ります。 この値は、 ** \<同期>** ブロックの任意の場所で使用できます。 属性は、関数`NEWGUID()` [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を呼び出して、一意の識別子を生成します。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例を使用して実際のサンプルを作成するには、 [SQLXML の例を実行するための要件](../../sqlxml/requirements-for-running-sqlxml-examples.md)を満たす必要があります。  
   
  アップデートグラムの例を使用する前に、次の点に注意してください。  
@@ -212,8 +208,7 @@ ms.locfileid: "79112191"
 ```  
   
 ### <a name="c-working-with-valid-sql-server-characters-that-are-not-valid-in-xml"></a>C. SQL Server で有効で、XML では有効でない文字を処理する  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、テーブル名は、Northwind データベースの Order Details テーブルのようにスペースを含めて指定できます。 ただし、有効な[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]識別子である xml 文字では有効ではありませんが、有効な xml 識別子は\_\_エンコード値として ' __xHHHH ' を使用してエンコードできます。ここで、HHHH は、最上位ビットから順に、文字の4桁の16進数の UCS 2 コードを表します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、テーブル名は、Northwind データベースの Order Details テーブルのようにスペースを含めて指定できます。 ただし、有効な[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]識別子である xml 文字では有効ではありませんが、有効な xml 識別子は\_\_エンコード値として ' __xHHHH ' を使用してエンコードできます。ここで、HHHH は、最上位ビットから順に、文字の4桁の16進数の UCS 2 コードを表します。  
   
 > [!NOTE]  
 >  この例では Northwind データベースを使用します。 この[Microsoft Web サイト](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs)からダウンロードできる SQL スクリプトを使用して、Northwind データベースをインストールできます。  
@@ -238,8 +233,7 @@ ms.locfileid: "79112191"
 </ROOT>  
 ```  
   
- Order Details テーブル内の UnitPrice 列は `money` 型です。 
-  `string` 型から `money` 型へ、適切な型変換を行うには、ドル記号 ($) を値の一部に追加する必要があります。 アップデートグラムでマッピング スキーマが指定されていない場合は、`string` 値の最初の文字が評価されます。 最初の文字がドル記号 ($) の場合、適切な変換が行われます。  
+ Order Details テーブル内の UnitPrice 列は `money` 型です。 `string` 型から `money` 型へ、適切な型変換を行うには、ドル記号 ($) を値の一部に追加する必要があります。 アップデートグラムでマッピング スキーマが指定されていない場合は、`string` 値の最初の文字が評価されます。 最初の文字がドル記号 ($) の場合、適切な変換が行われます。  
   
  アップデートグラムで指定したマッピング スキーマで、列が `dt:type="fixed.14.4"` または `sql:datatype="money"` として適切にマークされている場合は、ドル記号 ($) は必要なく、マッピングによって変換が処理されます。 適切な型変換が行われるようにするには、この方法が推奨されます。  
   
@@ -291,8 +285,7 @@ ms.locfileid: "79112191"
 </ROOT>  
 ```  
   
- 
-  `updg:at-identity` 属性により生成される ID 値を返す場合は、`updg:returnid` 属性を使用できます。 次のアップデートグラムは、この ID 値を返すように変更されたものです。 例を少し複雑にするため、ここでは 2 つの注文レコードと 2 つの注文詳細レコードを追加します。  
+ `updg:at-identity` 属性により生成される ID 値を返す場合は、`updg:returnid` 属性を使用できます。 次のアップデートグラムは、この ID 値を返すように変更されたものです。 例を少し複雑にするため、ここでは 2 つの注文レコードと 2 つの注文詳細レコードを追加します。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -617,14 +610,11 @@ CustOrder(OrderID, EmployeeID, OrderType)
      詳細については、「ADO を使用した[SQLXML 4.0 クエリの実行](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
 ### <a name="i-inserting-data-into-an-xml-data-type-column"></a>I. XML データ型列にデータを挿入する  
- 
-  `xml` データ型は、[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] で導入されました。 アップデートグラムを使用して、`xml` データ型の列にデータを挿入したり、この列に格納されているデータを更新することができます。これには次の条件があります。  
+ `xml` データ型は、[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] で導入されました。 アップデートグラムを使用して、`xml` データ型の列にデータを挿入したり、この列に格納されているデータを更新することができます。これには次の条件があります。  
   
--   
-  `xml` 列は、既存の行の識別に使用できません。 したがって、アップデートグラムの `updg:before` セクションに含めることはできません。  
+-   `xml` 列は、既存の行の識別に使用できません。 したがって、アップデートグラムの `updg:before` セクションに含めることはできません。  
   
--   
-  `xml` 列に挿入される XML フラグメントのスコープにある名前空間は保持されます。挿入されたフラグメントの最上位要素には、その名前空間宣言が追加されます。  
+-   `xml` 列に挿入される XML フラグメントのスコープにある名前空間は保持されます。挿入されたフラグメントの最上位要素には、その名前空間宣言が追加されます。  
   
  たとえば、次のアップデートグラム (sampleupdategram .xml) では、 ** \<Desc>** 要素によって、 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]サンプルデータベースの Production>productdescription テーブルの productdescription 列が更新されます。 このアップデートグラムの結果として、productdescription 列の xml コンテンツが** \<Desc>** 要素の xml コンテンツに更新されます。  
   

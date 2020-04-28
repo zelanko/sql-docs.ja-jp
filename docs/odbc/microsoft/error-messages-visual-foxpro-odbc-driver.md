@@ -1,5 +1,5 @@
 ---
-title: エラー メッセージ (ビジュアル フォックスプロ ODBC ドライバー) |マイクロソフトドキュメント
+title: エラーメッセージ (Visual FoxPro ODBC ドライバー) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,41 +16,41 @@ ms.assetid: 58ea9734-4edf-44da-ba80-938aa7b340e4
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 31f894e58da93fe6091dba306f8b765d14bac2cb
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81286402"
 ---
 # <a name="error-messages-visual-foxpro-odbc-driver"></a>エラー メッセージ (Visual FoxPro ODBC ドライバー)
-エラーが発生すると、Visual FoxPro ドライバーは、次の情報を返します。  
+エラーが発生すると、Visual FoxPro ドライバーは次の情報を返します。  
   
--   ネイティブエラー番号とエラー メッセージ テキスト  
+-   ネイティブエラー番号とエラーメッセージのテキスト  
   
--   SQLSTATE (ODBC エラー・コード) およびエラー・メッセージ・テキスト  
+-   SQLSTATE (ODBC エラーコード) とエラーメッセージテキスト  
   
- このエラー情報にアクセスする場合[は、 SQLError](../../odbc/microsoft/sqlerror-visual-foxpro-odbc-driver.md)を呼び出します。  
+ このエラー情報にアクセスするには、 [SQLError](../../odbc/microsoft/sqlerror-visual-foxpro-odbc-driver.md)を呼び出します。  
   
-## <a name="native-errors"></a>ネイティブ エラー  
- データ ソースで発生したエラーの場合、Visual FoxPro ドライバーは、ネイティブエラー番号とエラー メッセージ テキストを返します。 ネイティブ エラー番号の一覧については、「 [Visual FoxPro ODBC ドライバー ネイティブ エラー メッセージ](../../odbc/microsoft/visual-foxpro-odbc-driver-native-error-messages.md)」を参照してください。  
+## <a name="native-errors"></a>ネイティブエラー  
+ データソースで発生したエラーの場合、Visual FoxPro ドライバーはネイティブのエラー番号とエラーメッセージのテキストを返します。 ネイティブエラー番号の一覧については、「 [Visual FOXPRO ODBC ドライバーのネイティブエラーメッセージ](../../odbc/microsoft/visual-foxpro-odbc-driver-native-error-messages.md)」を参照してください。  
   
 ## <a name="sqlstate-odbc-error-codes"></a>SQLSTATE (ODBC エラー コード)  
- Visual FoxPro ドライバーによって検出され、返されるエラーの場合、ドライバーは、返されたネイティブ エラー番号を適切な SQLSTATE にマップします。 ネイティブ エラー番号に対応付ける ODBC エラー コードがない場合、Visual FoxPro ドライバは SQLSTATE S1000 (一般エラー) を返します。  
+ Visual FoxPro ドライバーによって検出されて返されるエラーの場合、ドライバーは返されたネイティブエラー番号を適切な SQLSTATE にマップします。 ネイティブエラー番号にマップする ODBC エラーコードがない場合、Visual FoxPro ドライバーは SQLSTATE S1000 (一般的なエラー) を返します。  
   
- 対応するビジュアル FoxPro エラーに対してビジュアル フォックスプロ ODBC ドライバーによって生成される SQLSTATE 値の一覧については[、ODBC エラー コード](../../odbc/microsoft/odbc-error-codes-visual-foxpro-odbc-driver.md)を参照してください。  
+ Visual foxpro ODBC ドライバーによって生成される、対応する Visual FoxPro エラーの SQLSTATE 値の一覧については、「 [Odbc エラーコード](../../odbc/microsoft/odbc-error-codes-visual-foxpro-odbc-driver.md)」を参照してください。  
   
 ## <a name="syntax"></a>構文  
- エラー メッセージの形式は次のとおりです。  
+ エラーメッセージの形式は次のとおりです。  
   
- **[** *仕入先* **] [** *ODBC_component* **]** *error_message*  
+ **[** *vendor* **] [** *ODBC_component* **]** *error_message*  
   
- 角かっこ ([]) 内のプレフィックスは、次の表で定義されているエラーの原因を示します。  
+ 次の表で定義されているように、角かっこ ([]) で囲まれたプレフィックスによってエラーの原因が特定されます。  
   
-|データ ソース|Prefix|[値]|  
+|データ ソース|Prefix|値|  
 |-----------------|------------|-----------|  
-|ドライバー マネージャー|[ベンダー]<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[ODBC ドライバー マネージャー]<br />該当なし|  
-|ビジュアルフォックスプロドライバー|ベンダー]<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[ODBC ビジュアル フォックスプロ ドライバー]<br />該当なし|  
+|ドライバー マネージャー|業者<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[ODBC ドライバーマネージャー]<br />なし|  
+|Visual FoxPro ドライバー|業者<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[ODBC Visual FoxPro ドライバー]<br />なし|  
   
- たとえば、ファイルの employee.dbf を見つけることができなかった場合、次のエラー メッセージが返される可能性があります。  
+ たとえば、Visual FoxPro ODBC ドライバーがファイルの .dbf を見つけられなかった場合、次のエラーメッセージが返されることがあります。  
   
- "[*マイクロソフト**][ODBCビジュアルフォックスプロドライバ*]ファイル 'employee.dbf'が存在しません」
+ "[*Microsoft*] [*ODBC Visual FoxPro Driver*] ファイル ' employee .dbf ' は存在しません"

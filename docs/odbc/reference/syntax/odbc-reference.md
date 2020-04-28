@@ -1,5 +1,5 @@
 ---
-title: ODBC リファレンス |マイクロソフトドキュメント
+title: ODBC リファレンス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: 1ba0f6cc-dfa7-4fe8-8bc2-f862b386156d
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: cb7296920987683c97cdd37bb9cb6742ffec9361
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81290532"
 ---
 # <a name="odbc-reference"></a>ODBC リファレンス
-次のトピックでは、すべての ODBC 関数の構文とセマンティック情報について説明します。  
+次のトピックには、すべての ODBC 関数の構文とセマンティック情報が含まれています。  
   
 -   [関数の概要](../../../odbc/reference/syntax/function-summary.md)  
   
@@ -31,6 +31,6 @@ ms.locfileid: "81290532"
   
 -   [インストーラー DLL API リファレンス](../../../odbc/reference/syntax/installer-dll-api-reference-function.md)  
   
--   [翻訳 DLL 関数リファレンス](../../../odbc/reference/syntax/translation-dll-api-reference.md)  
+-   [Translation DLL 関数リファレンス](../../../odbc/reference/syntax/translation-dll-api-reference.md)  
   
 -   [ODBC サービス プロバイダー インターフェイス (SPI) リファレンス](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)

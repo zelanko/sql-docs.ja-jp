@@ -1,5 +1,5 @@
 ---
-title: ネイティブエラー番号 |マイクロソフトドキュメント
+title: ネイティブエラー番号 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0b5572ee784f47b0444e1d825de1b6dd53db8066
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81291609"
 ---
 # <a name="native-error-numbers"></a>ネイティブ エラー番号
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  データ ソースで発生したエラー ( によって[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) の場合、ネイティブ クライアント ODBC ドライバ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、そのデータ ソースに返されたネイティブ エラー番号を返します。 ドライバによって検出されたエラーの場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアント ODBC ドライバはネイティブ エラー番号 0 を返します。 ネイティブ エラー番号の一覧の詳細については、**の master**データベースの**sysmessages**システム テーブルの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラー列を参照してください。  
+  データソースで発生したエラー (によって[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返される) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の場合、native Client ODBC ドライバーは、によっ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]て返されたネイティブエラー番号を返します。 ドライバーによって検出された[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラーの場合、NATIVE Client ODBC ドライバーは、ネイティブエラー番号0を返します。 ネイティブエラー番号の一覧の詳細については、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **master**データベースにある**sysmessages**システムテーブルの error 列を参照してください。  
   
- 状態エラー コードについては[、SQLSTATE &#40;ODBC エラー コード&#41;](../../relational-databases/native-client-odbc-error-messages/sqlstate-odbc-error-codes.md)を参照してください。 Net-Library から返されたエラーについては、ネイティブ エラー番号は基になるネットワーク ソフトウェアから返されます。  
+ 状態エラーコードの詳細については、「 [SQLSTATE &#40;ODBC エラーコード&#41;](../../relational-databases/native-client-odbc-error-messages/sqlstate-odbc-error-codes.md)」を参照してください。 Net-Library から返されたエラーについては、ネイティブ エラー番号は基になるネットワーク ソフトウェアから返されます。  
   
 ## <a name="see-also"></a>参照  
  [エラーとメッセージの処理](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  

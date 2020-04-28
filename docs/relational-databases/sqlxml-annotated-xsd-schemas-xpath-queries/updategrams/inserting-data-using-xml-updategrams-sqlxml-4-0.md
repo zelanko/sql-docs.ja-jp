@@ -35,10 +35,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 671dc9c8a0091a2fb14a4aa1c42ea8246b376c7a
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112261"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>XML アップデートグラムを使用した、データの挿入 (SQLXML 4.0)
@@ -72,8 +72,7 @@ ms.locfileid: "79112261"
 ## <a name="after-block"></a>\<> ブロックの後  
  ** \<After>** ブロックに1つ以上のレコードを指定できます。  
   
- After>ブロックが特定の列の値を提供しない場合、アップデートグラムは注釈付きスキーマで指定された既定値を使用します (スキーマが指定されている場合)。 ** \<** スキーマで列の既定値が指定されていない場合、アップデートグラムではこの列に明示的な値が指定され[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ず、代わりに、この列に既定値 (指定されている場合) が割り当てられます。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定値がなく、列で NULL 値が許容される場合、アップデートグラムでは列値に NULL が設定されます。 列に既定値がなく NULL 値が許容されない場合、コマンドは失敗し、アップデートグラムではエラーが返されます。 省略可能な**updg: returnid**属性を使用して、id 型の列を含むテーブルにレコードが追加されたときにシステムによって生成される id 値を返します。  
+ After>ブロックが特定の列の値を提供しない場合、アップデートグラムは注釈付きスキーマで指定された既定値を使用します (スキーマが指定されている場合)。 ** \<** スキーマで列の既定値が指定されていない場合、アップデートグラムではこの列に明示的な値が指定され[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ず、代わりに、この列に既定値 (指定されている場合) が割り当てられます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定値がなく、列で NULL 値が許容される場合、アップデートグラムでは列値に NULL が設定されます。 列に既定値がなく NULL 値が許容されない場合、コマンドは失敗し、アップデートグラムではエラーが返されます。 省略可能な**updg: returnid**属性を使用して、id 型の列を含むテーブルにレコードが追加されたときにシステムによって生成される id 値を返します。  
   
 ## <a name="updgid-attribute"></a>updg:id 属性  
  アップデートグラムでレコードのみを挿入する場合、アップデートグラムで**updg: id**属性は必要ありません。 **Updg: id**の詳細については、「 [XML アップデートグラムを使用したデータの更新 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/updating-data-using-xml-updategrams-sqlxml-4-0.md)」を参照してください。  
@@ -84,7 +83,7 @@ ms.locfileid: "79112261"
 ## <a name="updgguid-attribute"></a>updg:guid 属性  
  **Updg: guid**属性は、グローバル一意識別子を生成する省略可能な属性です。 この値は、指定されている** \<同期>** ブロック全体のスコープ内に残ります。 この値は、 ** \<同期>** ブロックの任意の場所で使用できます。 属性は、一意の識別子を生成するために**newguid ()** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]関数を呼び出します。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例を使用して実際のサンプルを作成するには、 [SQLXML の例を実行するための要件](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)を満たす必要があります。  
   
  アップデートグラムの例を使用する前に、次の点に注意してください。  
@@ -211,8 +210,7 @@ ms.locfileid: "79112261"
 ```  
   
 ### <a name="c-working-with-valid-sql-server-characters-that-are-not-valid-in-xml"></a>C. SQL Server で有効で、XML では有効でない文字を処理する  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、テーブル名は、Northwind データベースの Order Details テーブルのようにスペースを含めて指定できます。 ただし、有効な[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]識別子である xml 文字では有効ではありませんが、有効な xml 識別子は\_\_エンコード値として ' __xHHHH ' を使用してエンコードできます。ここで、HHHH は、最上位ビットから順に、文字の4桁の16進数の UCS 2 コードを表します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、テーブル名は、Northwind データベースの Order Details テーブルのようにスペースを含めて指定できます。 ただし、有効な[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]識別子である xml 文字では有効ではありませんが、有効な xml 識別子は\_\_エンコード値として ' __xHHHH ' を使用してエンコードできます。ここで、HHHH は、最上位ビットから順に、文字の4桁の16進数の UCS 2 コードを表します。  
   
 > [!NOTE]  
 >  この例では Northwind データベースを使用します。 この[Microsoft Web サイト](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs)からダウンロードできる SQL スクリプトを使用して、Northwind データベースをインストールできます。  

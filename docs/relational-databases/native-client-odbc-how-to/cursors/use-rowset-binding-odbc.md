@@ -1,5 +1,5 @@
 ---
-title: 行セット バインド (ODBC) を使用する |マイクロソフトドキュメント
+title: 行セットのバインドの使用 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 05277e548dab36b22c023fe674e404d8b9014c7c
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81284592"
 ---
 # <a name="use-rowset-binding-odbc"></a>行セットのバインドの使用 (ODBC)
@@ -34,7 +34,7 @@ ms.locfileid: "81284592"
   
     -   [SQLBindCol](../../../relational-databases/native-client-odbc-api/sqlbindcol.md)を呼び出して、列のデータ値とデータ長の配列を行セットの列にバインドします。  
   
-2.  次の属性を設定するには[、SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)を呼び出します。  
+2.  [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)を呼び出して、次の属性を設定します。  
   
     -   SQL_ATTR_ROW_ARRAY_SIZE を、行セットの行の数 (R) に設定します。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "81284592"
   
 3.  ステートメントを実行します。  
   
-4.  SQLFetch または[SQLFetchScroll](https://go.microsoft.com/fwlink/?LinkId=58401)の呼び出しごとに R 行を取得し、バインドされた列にデータを転送します。 [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)  
+4.  [Sqlfetch](https://go.microsoft.com/fwlink/?LinkId=58401)または[sqlfetchscroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)を呼び出すたびに R 行が取得され、データがバインドされた列に転送されます。  
 
 ### <a name="to-use-row-wise-binding"></a>行方向のバインドを使用するには  
   
@@ -56,7 +56,7 @@ ms.locfileid: "81284592"
   
     -   2 つ目の部分は、列状態インジケーターを格納する SQLINTEGER 変数です。  
   
-2.  次の属性を設定するには[、SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)を呼び出します。  
+2.  [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)を呼び出して、次の属性を設定します。  
   
     -   SQL_ATTR_ROW_ARRAY_SIZE を、行セットの行の数 (R) に設定します。  
   
@@ -66,15 +66,15 @@ ms.locfileid: "81284592"
   
     -   SQL_ATTR_PARAMS_STATUS_PTR を、行状態インジケーターを格納する SQLUSSMALLINT 変数の配列 [R] を指すように設定します。  
   
-3.  結果セット内の各列について[、SQLBindCol](../../../relational-databases/native-client-odbc-api/sqlbindcol.md)を呼び出して、ステップ 1 で割り当てられた構造体の配列の最初の要素の変数に、列のデータ値とデータ長ポインタをポイントします。  
+3.  結果セットの各列に対して、 [SQLBindCol](../../../relational-databases/native-client-odbc-api/sqlbindcol.md)を呼び出して、列のデータ値とデータ長のポインターが、手順 1. で割り当てられた構造体の配列の最初の要素にある変数を指すようにします。  
   
 4.  ステートメントを実行します。  
   
-5.  SQLFetch または[SQLFetchScroll](https://go.microsoft.com/fwlink/?LinkId=58401)の呼び出しごとに R 行を取得し、バインドされた列にデータを転送します。 [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)  
+5.  [Sqlfetch](https://go.microsoft.com/fwlink/?LinkId=58401)または[sqlfetchscroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)を呼び出すたびに R 行が取得され、データがバインドされた列に転送されます。  
   
 ## <a name="see-also"></a>参照  
- [ODBC&#41;&#40;カーソルの使用方法に関するトピックの使用](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)   
+ [カーソルの使用方法に関するトピック &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)   
  [カーソルの実装方法](../../../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)   
- [ODBC&#41;&#40;カーソルを使用する](../../../relational-databases/native-client-odbc-how-to/cursors/use-cursors-odbc.md)  
+ [ODBC &#40;カーソルの使用&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-cursors-odbc.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 文字列パラメータを受け入れる関数 |マイクロソフトドキュメント
+title: 文字列パラメーターを受け入れる関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,42 +17,42 @@ ms.assetid: 869b8421-f71e-4dfd-adce-691bd3012b16
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 01d0f143c72f57e946f7fe2bf52a50910d4e56aa
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81286302"
 ---
 # <a name="functions-accepting-string-parameters"></a>文字列パラメーターを受け入れる関数
-文字列パラメータを受け取る関数はすべて、Unicode に変換されます。 (関数の "W" 形式がエクスポートされます。バイト数は、該当する ODBC API の文字数に変換されます。 これは、以下の機能に適用されます。  
+文字列パラメーターを受け取るすべての関数は、Unicode に変換されます。 (関数の "W" 形式がエクスポートされます)。バイト数は、該当する ODBC Api の文字数に変換されます。 これは、次の関数に適用されます。  
   
 -   **SQLConnect**  
   
 -   **SQLDriverConnect**  
   
--   **属性**  
+-   **SQLColAttributes**  
   
 -   **SQLDescribeCol**  
   
--   **SQL エラー** (置換**されたフィールド**)  
+-   **SQLError** ( **SQLGetDiagField**に置き換えられました)  
   
 -   **SQLExecDirect**  
   
 -   **SQLGetCursorName**  
   
--   **カーソルを設定します。**  
+-   **SQLSetCursorName**  
   
 -   **SQLGetStmtAttr**  
   
 -   **SQLGetInfo**  
   
--   **オプション**を指定します **。**  
+-   **SQLGetStmtOption** ( **SQLGetStmtAttr**になります)  
   
--   **オプションを**設定します **。**  
+-   **SQLSetStmtOption** ( **SQLSetStmtAttr**になります)  
   
--   **オプションを指定します。**  
+-   **SQLGetConnectOption**  
   
--   **オプションを指定します。**  
+-   **SQLSetConnectOption**  
   
 -   **SQLGetTypeInfo**  
   
@@ -60,10 +60,10 @@ ms.locfileid: "81286302"
   
 -   **SQLTables**  
   
--   **を実行します。**  
+-   **SQLNativeSQL**  
   
 -   **SQLSpecialColumns**  
   
--   **コンフィデックス**  
+-   **ConfigDSNEx**  
   
--   **構成DSN**
+-   **ConfigDSN**

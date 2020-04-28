@@ -1,5 +1,5 @@
 ---
-title: インデックス ステートメントの作成 |マイクロソフトドキュメント
+title: CREATE INDEX ステートメント |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,21 +14,21 @@ ms.assetid: 69438247-eef3-44c5-bef2-acef4e146f41
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: c6aa512ff789fcbd00f45f84fb194d4ab3f5da07
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81280972"
 ---
 # <a name="create-index-statement"></a>CREATE INDEX ステートメント
 CREATE INDEX ステートメントの構文は次のとおりです。  
   
- *テーブル名*に [UNIQUE] インデックス*名*を作成します (*列識別子*[ASC][DESC],*列識別子*[ASC][DESC.]]WITH \<*インデックスオプションリスト*>  
+ CREATE [UNIQUE] インデックス*インデックス-名前*に*テーブル名*(*列識別子*[asc] [desc] [,*列識別子*[asc] [desc]...])\<*インデックスオプションリスト*付き>  
   
- \<*インデックス オプション リスト*>できる場所: プライマリ &#124; DISALLOW NULL &#124; IGNORE NULL  
+ ここ\<で、*インデックスオプションリスト*> にできます。 PRIMARY &#124; null を許可しない &#124; null を無視する  
   
- DISALLOW NULL と IGNORE NULL インデックス オプションを使用するのは、Access ドライバーだけです。 dBASE と Paradox ドライバーは構文を受け入れますが、どちらのオプションも無視します。  
+ [NULL を許可しない] および [NULL インデックスを無視する] オプションは、Microsoft Access ドライバーでのみ使用されます。 DBASE および Paradox ドライバーは構文を受け入れますが、どちらのオプションも存在しません。  
   
- Paradox ドライバを使用すると、CREATE INDEX ステートメントによって、Paradox プライマリ キー ファイルとセカンダリ ファイルが作成されます。  
+ Paradox ドライバーを使用すると、CREATE INDEX ステートメントによって、Paradox のプライマリキーファイルとセカンダリファイルが作成されます。  
   
- このステートメントは、Excel またはテキスト ドライバーではサポートされていません。
+ このステートメントは、Microsoft Excel またはテキストドライバーではサポートされていません。
