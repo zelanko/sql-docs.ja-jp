@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 53ab22f96020080e28a92975c4d78d6ca3215d57
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74095964"
 ---
 # <a name="how-to-create-a-visual-c-smo-project-in-visual-studio-net"></a>Visual Studio .NET で Visual C# SMO プロジェクトを作成する方法
@@ -31,8 +31,7 @@ ms.locfileid: "74095964"
   
 1. Visual Studio を起動する
   
-2. [**ファイル**] メニューの [**新規作成**] をポイントし、[**プロジェクト**] をクリックします。  
-  **[新しいプロジェクト]** ダイアログ ボックスが表示されます。   
+2. [**ファイル**] メニューの [**新規作成**] をポイントし、[**プロジェクト**] をクリックします。  **[新しいプロジェクト]** ダイアログ ボックスが表示されます。   
   
 3. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **インストール済み**] ウィンドウで、[**テンプレート**\\] [**Visual C#**\\] [**Windows** ] の順に移動し、[**コンソールアプリケーション**] を選択します。  
   
@@ -42,8 +41,7 @@ ms.locfileid: "74095964"
 
 6. [SMO のインストール](installing-smo.md)に関する手順に従って、参照するプロジェクトのパッケージをインストールします。
   
-7. 
-  **[表示]** メニューの **[コード]** をクリックします。
+7. **[表示]** メニューの **[コード]** をクリックします。
     
 8. コードの namespace ステートメントの前に、次の using ステートメントを入力し**て**、SMO 名前空間の型を修飾します。
   

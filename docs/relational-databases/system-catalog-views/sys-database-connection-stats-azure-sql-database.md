@@ -21,10 +21,10 @@ ms.author: sstein
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 7eb05640fbc702d5c9b01081d462e2c9f0204457
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73844470"
 ---
 # <a name="sysdatabase_connection_stats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL データベース)
@@ -33,9 +33,9 @@ ms.locfileid: "73844470"
 
   データベース接続の[!INCLUDE[ssSDS](../../includes/sssds-md.md)]成功と失敗の概要を提供する、データベース**接続イベントの**統計が含まれます。 接続イベントの詳細については、「 [event_log &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)」の「イベントの種類」を参照してください。  
   
-|統計|種類|[説明]|  
+|統計|Type|説明|  
 |---------------|----------|-----------------|  
-|**database_name**|**sysname**|データベースの名前。|  
+|**database_name**|**sysname**|データベースの名前です。|  
 |**start_time**|**datetime2**|集計間隔の開始時刻を示す UTC 日時。 この時刻は常に 5 分の倍数です。 次に例を示します。<br /><br /> ' 2011-09-28 16:00:00 '<br />' 2011-09-28 16:05:00 '<br />' 2011-09-28 16:10:00 '|  
 |**end_time**|**datetime2**|集計間隔の終了時刻を示す UTC 日時。 **End_time**は、同じ行の対応する**start_time**よりも常に5分後になります。|  
 |**success_count**|**int**|成功した接続の数。|  
@@ -44,7 +44,7 @@ ms.locfileid: "73844470"
 |**terminated_connection_count**|**int**|**_V11 に[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]のみ適用されます。_**<br /><br /> 終了した接続の数。|  
 |**throttled_connection_count**|**int**|**_V11 に[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]のみ適用されます。_**<br /><br /> スロットルされた接続の数。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ### <a name="event-aggregation"></a>イベント集計
 
@@ -58,7 +58,7 @@ ms.locfileid: "73844470"
   
 ### <a name="interval-start_time-and-end_time"></a>間隔の start_time と end_time
 
- イベントが集計間隔に含まれるのは、イベントが** **start_time**の_後_、またはその後に発生してから、その間隔の**end_time** _前_です。 たとえば、`2012-10-30 19:25:00.0000000` に発生したイベントは、下に示す例では 2 つ目の間隔にのみ含まれます。  
+ イベントが集計間隔に含まれるのは、イベントが*on* **start_time**の_後_、またはその後に発生してから、その間隔の**end_time** _前_です。 たとえば、`2012-10-30 19:25:00.0000000` に発生したイベントは、下に示す例では 2 つ目の間隔にのみ含まれます。  
   
 ```  
   
@@ -101,6 +101,6 @@ WHERE start_time>='2011-09-25:12:00:00' and end_time<='2011-09-28 12:00:00';
 
 ## <a name="see-also"></a>参照
 
- [Azure SQL Database への接続に関する問題のトラブルシューティング](/azure/sql-database/sql-database-troubleshoot-common-connection-issues)  
+ [Azure SQL Database との接続に関する一般的な問題のトラブルシューティング](/azure/sql-database/sql-database-troubleshoot-common-connection-issues)  
   
   

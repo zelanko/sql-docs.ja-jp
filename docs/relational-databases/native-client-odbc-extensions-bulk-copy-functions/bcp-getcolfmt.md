@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8c32df055ea1330fb0d1bdd32b2a3860519d2575
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73782716"
 ---
 # <a name="bcp_getcolfmt"></a>bcp_getcolfmt
@@ -50,7 +50,7 @@ RETCODE bcp_getcolfmt (
  *分野*  
  プロパティを取得する列番号です。  
   
- *"*  
+ *property*  
  プロパティ定数のいずれかを指定します。  
   
  *pValue*  
@@ -65,7 +65,7 @@ RETCODE bcp_getcolfmt (
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  列形式のプロパティ値については、 [bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md)のトピックを参照してください。 列形式のプロパティ値は**bcp_setcolfmt**関数を呼び出すことによって設定され、 **bcp_getcolfmt**関数は列形式のプロパティ値を検索するために使用されます。  
   
  以前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のバージョンと比較して、( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]またはそれ以降の) サーバーコンピューターに接続するときに、動作の変更が検出される場合があります。 詳細については、「[メタデータの検出](../../relational-databases/native-client/features/metadata-discovery.md)」を参照してください。  

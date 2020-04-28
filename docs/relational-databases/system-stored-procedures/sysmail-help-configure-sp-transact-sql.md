@@ -18,10 +18,10 @@ ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3d07f77c468bb14b28cd003f599bebd636d6f862
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056157"
 ---
 # <a name="sysmail_help_configure_sp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
@@ -49,12 +49,12 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
   
 ||||  
 |-|-|-|  
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |**paramname**|**nvarchar(256)**|構成パラメーターの名前。|  
 |**paramvalue**|**nvarchar(256)**|構成パラメーターの値|  
 |**記述**|**nvarchar(256)**|構成パラメーターの説明|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ストアドプロシージャ**sysmail_help_configure_sp**には、インスタンスの現在のデータベースメール構成設定が一覧表示されます。  
   
  Parameter_name が指定されていても、 ** \@parameter_value**の出力パラメーターが指定されていない場合、このストアドプロシージャは出力を生成しません。 ** \@**  
@@ -64,7 +64,7 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャの実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスのデータベースメール構成設定を一覧表示します。  
   
 ```  

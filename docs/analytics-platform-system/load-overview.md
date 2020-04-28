@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: fd161820fd53d45642848697bce9589a98dec4ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401047"
 ---
 # <a name="loading-data-into-parallel-data-warehouse"></a>並列データウェアハウスへのデータの読み込み
@@ -25,7 +25,7 @@ Integration Services、 [Bcp ユーティリティ](../tools/bcp-utility.md)、 
 ## <a name="load-with-dwloader"></a>Dwloader を使用した読み込み  
 データを PDW に読み込む最速の方法は、 [Dwloader コマンドラインローダー](dwloader.md)を使用することです。  
   
-![処理の読み込み](media/loading-process.png "処理の読み込み")  
+![読み込みプロセス](media/loading-process.png "処理の読み込み")  
   
 dwloader は、コントロールノードを介してデータを渡さずに、コンピューティングノードにデータを直接読み込みます。 データを読み込むには、dwloader はまずコントロールノードと通信して、コンピューティングノードの連絡先情報を取得します。 dwloader は、各コンピューティングノードとの通信チャネルを設定し、256 KB のデータチャンクをラウンドロビン方式でコンピューティングノードに送信します。  
   
@@ -43,7 +43,7 @@ For more information, see [Prepared statements](prepared-statements.md).
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|タスク|[説明]|  
+|タスク|説明|  
 |--------|---------------|  
 |ステージングデータベースを作成します。|[ステージングデータベースの作成](staging-database.md)|  
 |Integration Services で読み込みます。|[Integration Services での読み込み](load-with-ssis.md)|  

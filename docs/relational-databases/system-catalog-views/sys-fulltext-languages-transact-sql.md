@@ -22,10 +22,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e5af224150508f048d91345cba595517209f824d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73981777"
 ---
 # <a name="sysfulltext_languages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "73981777"
 
   このカタログビューには、ワードブレーカーがに登録されて[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]いる言語ごとに1つの行が含まれています。 各行には、言語の LCID と名前が表示されます。 言語のワードブレーカーが登録されている場合、その他の言語リソース (ステミング機能、ノイズワード (ストップワード)、および類義語辞典ファイル) は、フルテキストインデックス作成またはクエリ操作で使用できるようになります。 **名前**または**lcid**の値は、フルテキストクエリとフルテキストインデックス[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントで指定できます。  
    
-|列|データ型|[説明]|  
+|列|データ型|説明|  
 |------------|---------------|-----------------|  
 |**lcid**|**int**|言語の [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ロケール識別子 (LCID) です。|  
 |**name**|**sysname**|**Lcid**の値に対応する[sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)のエイリアスの値か、または数値の lcid の文字列表現です。|  
@@ -47,7 +47,7 @@ ms.locfileid: "73981777"
 |ベンガル語 (インド)|1093|  
 |英語 (U.K.)|2057|  
 |ブルガリア語|1026|  
-|カタルニア語|1027|  
+|カタロニア語|1027|  
 |中国語 (中華人民共和国香港特別行政区)|3076|  
 |中国語 (中華人民共和国マカオ特別行政区)|5124|  
 |中国語 (シンガポール)|4100|  
@@ -81,7 +81,7 @@ ms.locfileid: "73981777"
 |パンジャーブ語|1094|  
 |ルーマニア語|1048|  
 |ロシア語|1049|  
-|セルビア語 (キリル文字)|3098|  
+|セルビア語 (キリル)|3098|  
 |セルビア語 (ラテン)|2074|  
 |簡体中国語|2052|  
 |スロバキア語|1051|  
@@ -94,10 +94,10 @@ ms.locfileid: "73981777"
 |繁体字中国語|1028|  
 |**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> トルコ語|1055|  
 |ウクライナ語|1058|  
-|ウルドゥー語|1056|  
+|ウルドゥ語|1056|  
 |ベトナム語|1066|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  フルテキスト検索に登録されている言語の一覧を更新するには、 [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)'**update_languages**' を使用します。  
   
 ## <a name="permissions"></a>アクセス許可  

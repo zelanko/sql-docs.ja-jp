@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cd30a6c07bccde04bb38189fab00f688dd763356
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74165498"
 ---
 # <a name="sysdm_exec_query_profiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
@@ -35,12 +35,12 @@ ms.locfileid: "74165498"
 ## <a name="table-returned"></a>返されるテーブル  
 返されるカウンターは、スレッドごとの演算子ごとになります。 結果は動的であり、クエリの終了時にのみ出力を作成`SET STATISTICS XML ON`するなど、既存のオプションの結果とは一致しません。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|このクエリが実行されるセッションを識別します。 dm_exec_sessions.session_id を参照します。|  
 |request_id|**int**|ターゲット要求を識別します。 Dm_exec_sessions を参照しています。 request_id。|  
-|sql_handle|**varbinary (64)**|クエリが含まれているバッチまたはストアドプロシージャを一意に識別するトークンです。 Dm_exec_query_stats を参照しています。 sql_handle。|  
-|plan_handle|**varbinary (64)**|は、実行され、そのプランがプランキャッシュに存在するか、現在実行中のバッチのクエリ実行プランを一意に識別するトークンです。 Dm_exec_query_stats を参照しています。 plan_handle。|  
+|sql_handle|**varbinary(64)**|クエリが含まれているバッチまたはストアドプロシージャを一意に識別するトークンです。 Dm_exec_query_stats を参照しています。 sql_handle。|  
+|plan_handle|**varbinary(64)**|は、実行され、そのプランがプランキャッシュに存在するか、現在実行中のバッチのクエリ実行プランを一意に識別するトークンです。 Dm_exec_query_stats を参照しています。 plan_handle。|  
 |physical_operator_name|**nvarchar(256)**|物理操作名。|  
 |node_id|**int**|クエリ ツリー内の演算子ノードを識別します。|  
 |thread_id|**int**|同じクエリ演算子ノードに属している (並列クエリの) スレッドを識別します。|  
@@ -92,7 +92,7 @@ ms.locfileid: "74165498"
 および[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]マネージインスタンスでは、 `VIEW DATABASE STATE` `db_owner`データベースロールの権限とメンバーシップが必要です。   
 Premium [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]レベルでは、データベース`VIEW DATABASE STATE`の権限が必要です。 Standard [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
    
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  手順 1: によって分析されるクエリの実行を計画して`sys.dm_exec_query_profiles`いるセッションにログインします。 プロファイル`SET STATISTICS PROFILE ON`用のクエリを構成するには 同じセッションでクエリを実行します。  
   
 ```sql  
@@ -124,6 +124,6 @@ ORDER BY node_id;
 ```  
   
 ## <a name="see-also"></a>参照  
- [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [実行関連の動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [実行関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
  

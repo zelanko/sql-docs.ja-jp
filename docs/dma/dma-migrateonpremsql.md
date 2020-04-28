@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: fc78354e3b422342e376bd7ebe75233dcd3ffaee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056532"
 ---
 # <a name="upgrade-sql-server-using-the-data-migration-assistant"></a>Data Migration Assistant を使用した SQL Server のアップグレード
@@ -33,7 +33,7 @@ Data Migration Assistant は、オンプレミスの SQL Server と、それ以�
 
 2. オンプレミスの SQL Server をオンプレミスの SQL Server の新しいバージョンにアップグレードする場合は、ソースとターゲットのサーバーの種類を**SQL Server**に設定します。
 
-3. **作成** を選択します。
+3. **［作成］** を選択します
 
    ![移行プロジェクトの作成](../dma/media/NewCreate.png)
 
@@ -41,7 +41,7 @@ Data Migration Assistant は、オンプレミスの SQL Server と、それ以�
 
 1. [ソース] で、[**ソースサーバーの詳細**] セクションの [**サーバー名**] フィールドに SQL Server インスタンス名を入力します。 
 
-2. ソース SQL Server インスタンスでサポートされている**認証の種類**を選択します。
+2. ソース SQL Server インスタンスによってサポートされる **[認証の種類]** を選択します。
 
 3. ターゲットの場合は、[**対象サーバーの詳細**] セクションの [**サーバー名**] フィールドに SQL Server インスタンス名を入力します。 
 
@@ -53,7 +53,7 @@ Data Migration Assistant は、オンプレミスの SQL Server と、それ以�
 
    ![[ソースとターゲットの指定] ページ](../dma/media/SourceTarget.png)
 
-## <a name="add-databases"></a>データベースの追加
+## <a name="add-databases"></a>[データベースの追加]
 
 1. [**データベースの追加**] ページの左ペインで、これらのデータベースを選択するだけで、移行する特定のデータベースを選択します。
 
@@ -64,7 +64,7 @@ Data Migration Assistant は、オンプレミスの SQL Server と、それ以�
    > [!NOTE]
    > 移行するすべてのデータベースに移行設定を適用するには、左側のウィンドウでサーバーを選択します。 左側のウィンドウでデータベースを選択して、特定の設定で個々のデータベースを構成することもできます。
 
-    a. **バックアップ操作のためにソースとターゲットの SQL server がアクセスできる共有場所**を指定します。 ソース SQL Server インスタンスを実行しているサービスアカウントが、共有の場所に対する書き込み権限を持っていて、ターゲットサービスアカウントに共有場所に対する読み取り権限があることを確認します。
+    a。 **バックアップ操作のためにソースとターゲットの SQL server がアクセスできる共有場所**を指定します。 ソース SQL Server インスタンスを実行しているサービスアカウントが、共有の場所に対する書き込み権限を持っていて、ターゲットサービスアカウントに共有場所に対する読み取り権限があることを確認します。
 
     b. 対象サーバー上のデータファイルとトランザクションログファイルを復元する場所を指定します。
 
@@ -91,8 +91,7 @@ Data Migration Assistant は、バックアップフォルダー、データ、�
 
    既定では、移行の対象となるすべての SQL Server および Windows ログインが、移行の対象として選択されます。
 
-2. 
-  **[移行の開始]** を選択します。
+2. **[移行の開始]** を選択します。
 
    ![ログインを選択して移行を開始します](../dma/media/SelectLogins.png)
 
@@ -108,7 +107,7 @@ Data Migration Assistant は、バックアップフォルダー、データ、�
 
 2. ログインの移行の詳細については、保存したファイルを確認してから、変更を確認してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [Data Migration Assistant (DMA)](../dma/dma-overview.md)
 - [Data Migration Assistant: 構成設定](../dma/dma-configurationsettings.md)

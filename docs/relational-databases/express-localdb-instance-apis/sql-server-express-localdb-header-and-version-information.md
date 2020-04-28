@@ -13,10 +13,10 @@ author: CarlRabeler
 ms.author: carlrab
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f5aeb8a5eda8e4e49e478cbc53cd0ad90e3cc890
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74095478"
 ---
 # <a name="sql-server-express-localdb-header-and-version-information"></a>SQL Server Express LocalDB ヘッダーとバージョン情報
@@ -26,7 +26,7 @@ ms.locfileid: "74095478"
 ## <a name="localdb-versioning"></a>LocalDB のバージョン管理  
  LocalDB インストールでは、主要な SQL Server バージョンごとの単一のバイナリ セットを使用します。 これらの LocalDB バージョンは維持され、個別にパッチが適用されます。 つまり、ユーザーはどの LocalDB ベースライン リリース (主要な SQL Server バージョン) を使用するのかを指定する必要があるということです。 バージョンは **、.NET Framework バージョン**クラスで定義されている標準バージョン形式で指定されます。  
   
- *major. minor [. build [. revision]]*  
+ *major.minor[.build[.revision]]*  
   
  バージョン文字列の最初の2つの数値 (*major*および*minor*) は必須です。 バージョン文字列の最後の2つの数値 (*build*と*revision*) は省略可能で、ユーザーがそのままにした場合の既定値は0です。これは、ユーザーが LocalDB バージョン番号として "12.2" だけを指定した場合、ユーザーが "12.2.0.0" を指定したかのように処理されることを意味します。  
   
@@ -54,7 +54,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL13E.LOCALDB\ MSS
 "InstanceAPIPath"="C:\\Program Files\\Microsoft SQL Server\\130\\LocalDB\\Binn\\SqlUserInstance.dll"]  
 ```  
   
- クライアントプロバイダーは、インストールされているすべてのバージョンの最新バージョン**** を検索し、関連付け`InstanceAPIPath`られている値から sqluserinstance.dll DLL ファイルを読み込みます。  
+ クライアントプロバイダーは、インストールされているすべてのバージョンの最新バージョン**SQLUserInstance**を検索し、関連付け`InstanceAPIPath`られている値から sqluserinstance.dll DLL ファイルを読み込みます。  
   
 ### <a name="wow64-mode-on-64-bit-windows"></a>64 ビット版 Windows 上の WOW64 モード  
  LocalDB の 64 ビット インストールには、追加のレジストリ キー セットがあるため、Windows-32-on-Windows-64 (WOW64) モードで実行される 32 ビット版アプリケーションで LocalDB を使用することができます。 具体的には、64 ビット版 Windows では、LocalDB MSI が次のレジストリ キーを作成します。  

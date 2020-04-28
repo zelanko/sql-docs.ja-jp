@@ -11,20 +11,19 @@ ms.assetid: fc829d25-b3e8-4801-8a94-4df19a7a5971
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 6c434e2cdc64616b5abbdf07ca4df428fce2edca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728860"
 ---
 # <a name="validation-statuses-master-data-services"></a>検証状態 (マスター データ サービス)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  
   **[バージョンの検証]** ページの **[バージョン管理]** 機能領域に表示される状態は次のとおりです。  
   
-|Status|[説明]|  
+|Status|説明|  
 |------------|-----------------|  
 |検証を待機しています|検証を待機している新しく作成されたすべてのメンバー|  
 |再検証を待機しています|検証を待機している既存のメンバー|  
@@ -34,6 +33,6 @@ ms.locfileid: "73728860"
   
 ## <a name="see-also"></a>参照  
  [ビジネスルールに対してバージョンを検証する &#40;マスターデータサービス&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
- [バージョン &#40;マスターデータサービス&#41;](../master-data-services/versions-master-data-services.md)  
+ [バージョン (マスター データ サービス)](../master-data-services/versions-master-data-services.md)  
   
   

@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 ms.openlocfilehash: fc280fa541e2a6b5ea984086d694ffdd3f7c39a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056542"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Data Migration Assistant の設定を構成する
@@ -41,7 +41,7 @@ Data Migration Assistant の特定の動作を微調整するには、machine.co
 
 Data Migration Assistant は、複数のデータベースを並行して評価します。 評価時に、データベーススキーマを理解するためにデータ層アプリケーション (dacpac) を抽出 Data Migration Assistant ます。同じサーバー上の複数のデータベースが同時に評価されると、この操作はタイムアウトすることがあります。 
 
-Data Migration Assistant v2.0 以降では、parallelDatabases 構成値を設定することによってこれを制御できます。 既定値は8です。
+Data Migration Assistant v2.0 以降では、parallelDatabases 構成値を設定することによってこれを制御できます。 既定値は 8 です。
 
 ```
 <advisorGroup>
@@ -152,6 +152,6 @@ Data Migration Assistant v2.0 以降では、recommendedNumberOfRows 構成値�
 </workflowSettings>
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [Data Migration Assistant のダウンロード](https://www.microsoft.com/download/details.aspx?id=53595)

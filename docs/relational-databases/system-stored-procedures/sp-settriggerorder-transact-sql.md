@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e258badbcf304fddbaf7575269194bd409ec8645
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982231"
 ---
 # <a name="sp_settriggerorder-transact-sql"></a>sp_settriggerorder (Transact-sql)
@@ -50,7 +50,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 > [!IMPORTANT]  
 >  **最初**のトリガーと**最後**のトリガーは、2つの異なるトリガーである必要があります。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**まずは**|トリガーは最初に起動されます。|  
 |**前の**|最後にトリガーが起動されます。|  
@@ -70,7 +70,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) と 1 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="dml-triggers"></a>DML トリガー  
  1つのテーブルに対して、ステートメントごとに1つの**最初**と**最後**のトリガーを1つだけ指定できます。  
@@ -118,7 +118,7 @@ sp_settriggerorder @triggername= 'Sales.uSalesOrderHeader', @order='First', @stm
 ```  
   
 ### <a name="b-setting-the-firing-order-for-a-ddl-trigger"></a>B. DDL トリガーの起動順序を設定する  
- 次の例では、トリガー `ddlDatabaseTriggerLog` が、`ALTER_TABLE` データベースで [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] イベントの発生後、最初に起動されるトリガーとなるよう指定します。  
+ 次の例では、トリガー `ddlDatabaseTriggerLog` が、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースで `ALTER_TABLE` イベントの発生後、最初に起動されるトリガーとなるよう指定します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -129,6 +129,6 @@ sp_settriggerorder @triggername= 'ddlDatabaseTriggerLog', @order='First', @stmtt
 ## <a name="see-also"></a>参照  
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [ALTER TRIGGER &#40;Transact-sql&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)  
+ [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)  
   
   

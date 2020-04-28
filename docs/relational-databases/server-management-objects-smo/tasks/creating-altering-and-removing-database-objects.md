@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0229ca7a79db5f502b603df2194843eb8a5fac7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74096049"
 ---
 # <a name="creating-altering-and-removing-database-objects"></a>データベース オブジェクトの作成、変更、および削除
@@ -38,8 +38,7 @@ ms.locfileid: "74096049"
 
  Smo オブジェクトのインスタンスは、SMO アプリケーションで作成された場合、 **Create**メソッドが発行さ[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]れるまで、のインスタンスには存在しません。 ただし、個別のオブジェクトごとに**Create**メソッドを発行する必要はありません。 オブジェクトに子オブジェクトのセットがある場合、 **Create**メソッドを実行するには親オブジェクトのみが必要です。 たとえば、テーブルの定義には、テーブルに含まれている列が 1 つ以上必要になります。 一方、テーブルがなくては列が独立して存在することはできません。 テーブルとテーブルの列の間には共存関係があります。  
   
- 
-  <xref:Microsoft.SqlServer.Management.Dmf.Policy.Alter%2A> メソッドを使用すると、オブジェクトへの変更を行うことができます。 オブジェクト コレクションの 1 つへの子オブジェクトの追加や、プロパティ値の変更など、1 つのオブジェクトに対する複数の変更は、バッチ化されて 1 つの変更として実行されます。 **Alter**メソッドを行うと、ネットワークトラフィックが減少し、全体的なパフォーマンスが向上します。  
+ <xref:Microsoft.SqlServer.Management.Dmf.Policy.Alter%2A> メソッドを使用すると、オブジェクトへの変更を行うことができます。 オブジェクト コレクションの 1 つへの子オブジェクトの追加や、プロパティ値の変更など、1 つのオブジェクトに対する複数の変更は、バッチ化されて 1 つの変更として実行されます。 **Alter**メソッドを行うと、ネットワークトラフィックが減少し、全体的なパフォーマンスが向上します。  
   
  **Drop**ステートメントを使用して、オブジェクトと、オブジェクトを最初に作成するために必要だったすべての共存子オブジェクトを削除します。  
   

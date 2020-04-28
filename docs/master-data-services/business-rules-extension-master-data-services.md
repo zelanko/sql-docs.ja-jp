@@ -11,17 +11,16 @@ ms.assetid: 4c18be5f-a3fa-45a8-9be6-0f45f58bbc9e
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 24df0fcbece66a86786550e81f3e385d6454f4b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728677"
 ---
 # <a name="business-rules-extension-master-data-services"></a>ビジネス ルールの拡張機能 (マスター データ サービス)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、ユーザー定義の SQL スクリプトを、事前に定義された条件とアクションの拡張機能として適用できます。  
   
 > [!NOTE]  
@@ -66,7 +65,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
 |||  
 |-|-|  
-|**スキーマ**|**アクセス許可**|  
+|**Schema**|**アクセス許可**|  
 |mdm|SELECT|  
 |stg|SELECT、UPDATE、DELETE、EXECUTE、INSERT|  
 |ユーザー|FULL|  
@@ -76,7 +75,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
 -   [システム管理] 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [Administrators &#40;マスターデータサービス](../master-data-services/administrators-master-data-services.md)」を参照してください&#41;  
+-   モデル管理者である必要があります。 詳細については、「[管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 -   ユーザー定義のスクリプトが [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースに追加されている必要があります。  
   
@@ -86,44 +85,37 @@ CREATE PROCEDURE [usr].[YourAction]
   
 2.  メニュー バーの **[管理]** をポイントし、 **[ビジネス ルール]** をクリックします。  
   
-3.  
-  **[ビジネス ルール]** ページで、 **[モデル]** ドロップダウン リストからモデルを選択します。  
+3.  **[ビジネス ルール]** ページで、 **[モデル]** ドロップダウン リストからモデルを選択します。  
   
-4.  
-  **[エンティティ]** ドロップダウン リストから、エンティティを選択します。  
+4.  **[エンティティ]** ドロップダウン リストから、エンティティを選択します。  
   
-5.  
-  **[メンバーの種類]** ドロップダウン リストから、適用するビジネス ルールのメンバーの種類を選択します。  
+5.  **[メンバーの種類]** ドロップダウン リストから、適用するビジネス ルールのメンバーの種類を選択します。  
   
 6.  **[追加]** をクリックします。  
   
 7.  ユーザー定義のスクリプトを条件として作成するには、次の操作を行います。  
   
-    1.  
-  **If** ブロックの下で、 **[追加]** ボタンをクリックします。 パネルが表示されます。  
+    1.  **If** ブロックの下で、 **[追加]** ボタンをクリックします。 パネルが表示されます。  
   
-    2.  
-  **[演算子]** ドロップダウン リストで、 **[ユーザー定義スクリプト]** の下にある目的のユーザー定義関数を選択します。  
+    2.  **[演算子]** ドロップダウン リストで、 **[ユーザー定義スクリプト]** の下にある目的のユーザー定義関数を選択します。  
   
     3.  このユーザー定義関数のすべてのパラメーターが表示されます。  
   
     4.  各パラメーターに値を割り当てます。  
   
-    5.  **[保存]** をクリックします。  
+    5.  **[Save]** (保存) をクリックします。  
   
 8.  ユーザー定義のスクリプトをアクションとして作成するには、次の操作を行います。  
   
-    1.  
-  **Then** ブロックの下で、 **[追加]** ボタンをクリックします。 パネルが表示されます。  
+    1.  **Then** ブロックの下で、 **[追加]** ボタンをクリックします。 パネルが表示されます。  
   
-    2.  
-  **[演算子]** ドロップダウン リストで、 **[ユーザー定義スクリプト]** の下にある目的のユーザー定義関数を選択します。  
+    2.  **[演算子]** ドロップダウン リストで、 **[ユーザー定義スクリプト]** の下にある目的のユーザー定義関数を選択します。  
   
-    3.  **[保存]** をクリックします。  
+    3.  **[Save]** (保存) をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [ビジネスルール &#40;マスターデータサービス&#41;](../master-data-services/business-rules-master-data-services.md)   
  [ビジネスルール条件 &#40;マスターデータサービス&#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
- [ビジネスルールアクション &#40;マスターデータサービス&#41;](../master-data-services/business-rule-actions-master-data-services.md)  
+ [ビジネス ルール アクション (マスター データ サービス)](../master-data-services/business-rule-actions-master-data-services.md)  
   
   

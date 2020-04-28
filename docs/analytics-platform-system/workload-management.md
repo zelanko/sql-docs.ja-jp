@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: d14714cb23a9f6b0d6cc63ddca5049cb6741017c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74399446"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>Analytics Platform System のワークロード管理
@@ -28,7 +28,7 @@ SQL Server PDW のワークロード管理機能を使用すると、ユーザ�
   
 -   実行速度の遅いハッシュ結合のトラブルシューティングを行って、より多くのメモリが必要かどうかを確認してから、より多くのメモリを確保します。  
   
-## <a name="Basics"></a>ワークロード管理の基礎  
+## <a name="workload-management-basics"></a><a name="Basics"></a>ワークロード管理の基礎  
   
 ### <a name="key-terms"></a>主な用語  
 ワークロード管理  
@@ -55,13 +55,13 @@ For examples, see [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../s
 ALTER SERVER ROLE largerc ADD MEMBER Anna;  
 ```  
   
-## <a name="RC"></a>リソースクラスの説明  
+## <a name="resource-class-descriptions"></a><a name="RC"></a>リソースクラスの説明  
 次の表では、リソースクラスとそのシステムリソースの割り当てについて説明します。  
   
-|リソース クラス|要求の重要度|最大メモリ使用量 *|同時実行スロット (最大 = 32)|[説明]|  
+|リソース クラス|要求の重要度|最大メモリ使用量 *|同時実行スロット (最大 = 32)|説明|  
 |------------------|----------------------|--------------------------|---------------------------------------|---------------|  
-|既定値 (default)|中|400 MB|1 で保護されたプロセスとして起動されました|既定では、各ログインには、少量のメモリと、その要求に対する同時実行リソースが許可されます。<br /><br />リソースクラスにログインを追加すると、新しいクラスが優先されます。 ログインがすべてのリソースクラスから削除されると、ログインは既定のリソース割り当てに戻ります。|  
-|MediumRC|中|1200 MB|3|中規模リソースクラスを必要とする可能性のある要求の例を次に示します。<br /><br />大きなハッシュ結合を持つ CTAS 操作。<br /><br />ディスクへのキャッシュを回避するために、より多くのメモリを必要とする操作を選択します。<br /><br />クラスター化列ストアインデックスへのデータの読み込み。<br /><br />10-15 列を含む小さいテーブルのクラスター化列ストアインデックスを構築、再構築、再編成します。|  
+|default|中間|400 MB|1|既定では、各ログインには、少量のメモリと、その要求に対する同時実行リソースが許可されます。<br /><br />リソースクラスにログインを追加すると、新しいクラスが優先されます。 ログインがすべてのリソースクラスから削除されると、ログインは既定のリソース割り当てに戻ります。|  
+|MediumRC|中間|1200 MB|3|中規模リソースクラスを必要とする可能性のある要求の例を次に示します。<br /><br />大きなハッシュ結合を持つ CTAS 操作。<br /><br />ディスクへのキャッシュを回避するために、より多くのメモリを必要とする操作を選択します。<br /><br />クラスター化列ストアインデックスへのデータの読み込み。<br /><br />10-15 列を含む小さいテーブルのクラスター化列ストアインデックスを構築、再構築、再編成します。|  
 |Largerc|高|2.8 GB|7|大きなリソースクラスを必要とする可能性のある要求の例を次に示します。<br /><br />大量のハッシュ結合を持つか、大きな集計 (large ORDER BY 句や GROUP BY 句など) を含む非常に大きな CTAS 操作。<br /><br />ハッシュ結合などの操作に非常に大量のメモリを必要とする操作、または ORDER BY 句や GROUP BY 句などの集計を選択します。<br /><br />クラスター化列ストアインデックスへのデータの読み込み。<br /><br />10-15 列を含む小さいテーブルのクラスター化列ストアインデックスを構築、再構築、再編成します。|  
 |xlargerc|高|8.4 GB|22|特大のリソースクラスは、実行時に追加の大規模なリソース消費が必要になる可能性のある要求に使用されます。|  
   
@@ -98,7 +98,7 @@ ALTER SERVER ROLE largerc ADD MEMBER Anna;
   
 各リソースクラス内では、要求が先入れ先出し (FIFO) の順序で実行されます。  
   
-## <a name="GeneralRemarks"></a>全般的な解説  
+## <a name="general-remarks"></a><a name="GeneralRemarks"></a>全般的な解説  
 ログインが複数のリソースクラスのメンバーである場合は、最も多くのリソースを持つクラスが優先されます。  
   
 リソースクラスに対してログインが追加または削除されると、その変更は、今後のすべての要求に対して直ちに有効になります。実行中または待機中の現在の要求は影響を受けません。 このログインは、変更を行うために切断して再接続する必要はありません。  
@@ -137,10 +137,10 @@ SQL Server PDW は、ステートメントを実行する前に、要求に必�
   
 -   選択 (DMV のみのクエリを除く)  
   
-## <a name="Limits"></a>制限事項と制約事項  
+## <a name="limitations-and-restrictions"></a><a name="Limits"></a>制限事項と制約事項  
 リソースクラスは、メモリと同時実行の割り当てを制御します。  入力/出力操作は制御されません。  
   
-## <a name="Metadata"></a>Metadata  
+## <a name="metadata"></a><a name="Metadata"></a>Metadata  
 リソースクラスおよびリソースクラスのメンバーに関する情報を含む Dmv。  
   
 -   [sys.server_role_members](../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)  
@@ -177,7 +177,7 @@ SQL Server PDW は、ステートメントを実行する前に、要求に必�
   
 -   sys.dm_pdw_nodes_exec_cached_plans  
   
-## <a name="RelatedTasks"></a>Related Tasks  
+## <a name="related-tasks"></a><a name="RelatedTasks"></a>Related Tasks  
 [ワークロード管理タスク](workload-management-tasks.md)  
   
 <!-- MISSING LINKS

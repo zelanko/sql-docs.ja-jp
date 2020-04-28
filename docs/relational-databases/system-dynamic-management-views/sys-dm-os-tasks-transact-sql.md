@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 086065aa79ca6fba7ad84e5b7e7f99f6f462f7dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74164898"
 ---
 # <a name="sysdm_os_tasks-transact-sql"></a>dm_os_tasks (Transact-sql)
@@ -35,10 +35,10 @@ ms.locfileid: "74164898"
 > [!NOTE]  
 > またはから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]これを[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼び出すには、 **dm_pdw_nodes_os_tasks**という名前を使用します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**task_address**|**varbinary (8)**|オブジェクトのメモリアドレス。|  
-|**task_state**|**nvarchar (60)**|タスクの状態です。 これは次のいずれかです。<br /><br /> PENDING: ワーカー スレッドを待機しています。<br /><br /> RUNNABLE: 実行可能ですが、クォンタムの受信を待機しています。<br /><br /> 実行中: 現在スケジューラ上で実行されています。<br /><br /> [中断]: ワーカーがありますが、イベントを待機しています。<br /><br /> 完了: 完了しました。<br /><br /> SPINLOOP: スピンロックで停止しています。|  
+|**task_state**|**nvarchar(60)**|タスクの状態です。 これは次のいずれかです。<br /><br /> PENDING: ワーカー スレッドを待機しています。<br /><br /> RUNNABLE: 実行可能ですが、クォンタムの受信を待機しています。<br /><br /> 実行中: 現在スケジューラ上で実行されています。<br /><br /> [中断]: ワーカーがありますが、イベントを待機しています。<br /><br /> 完了: 完了しました。<br /><br /> SPINLOOP: スピンロックで停止しています。|  
 |**context_switches_count**|**int**|このタスクが完了したスケジューラコンテキストスイッチの数。|  
 |**pending_io_count**|**int**|このタスクによって実行される物理 i/o の数。|  
 |**pending_io_byte_count**|**bigint**|このタスクによって実行される i/o の合計バイト数。|  

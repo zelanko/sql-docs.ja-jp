@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0807a034f05d723ae19c86e8b00d08309176551c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74095152"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>WMI プロバイダーを使用したサービスの管理とネットワーク設定
@@ -28,8 +28,7 @@ ms.locfileid: "74095152"
 
   WMI プロバイダーは、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] のサービスおよびネットワーク プロトコルを管理するために、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理コンソール (MMC) によって使用される、公開されたインターフェイスです。 SMO では、<xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> オブジェクトは WMI プロバイダーを表します。  
   
- 
-  <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> オブジェクトは、<xref:Microsoft.SqlServer.Management.Smo.Server> オブジェクトと [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスで確立されている接続から独立して動作し、Windows 資格情報を使用して WMI サービスに接続します。  
+ <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> オブジェクトは、<xref:Microsoft.SqlServer.Management.Smo.Server> オブジェクトと [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスで確立されている接続から独立して動作し、Windows 資格情報を使用して WMI サービスに接続します。  
   
 ## <a name="example"></a>例  
 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual Studio .net で Visual C&#35; SMO プロジェクトを作成する](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)」を参照してください。  

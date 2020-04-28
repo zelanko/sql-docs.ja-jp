@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 923d137b4b884300b2fb31cbacf2ee7dff1a6621
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73912802"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>レプリケーションのセキュリティ設定の表示および変更
@@ -32,7 +32,7 @@ ms.locfileid: "73912802"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **レプリケーションのセキュリティ設定を表示および変更するために使用するもの:**  
   
@@ -42,38 +42,33 @@ ms.locfileid: "73912802"
   
      [レプリケーション管理オブジェクト (RMO)](#RMOProcedure)  
   
--   **補足情報:**  [レプリケーションのセキュリティ設定を変更した後](#FollowUp)  
+-   **補足情報:** [レプリケーションのセキュリティ設定を変更した後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   使用するストアド プロシージャは、エージェントの種類およびサーバー接続の種類によって異なります。  
   
 -   使用する RMO のクラスとプロパティは、エージェントの種類およびサーバー接続の種類によって異なります。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
  セキュリティ上の理由から、レプリケーション ストアド プロシージャによって返される結果セットでは、パスワードの実際の値はマスクされます。  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  次のダイアログ ボックスでセキュリティ設定を表示および変更します。  
   
-1.  
-  **[レプリケーション パスワードの更新]** ダイアログ ボックス。このダイアログ ボックスは、 **の** [レプリケーション] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]フォルダーから利用できます。 レプリケーション トポロジのサーバーで [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] アカウントまたは Windows アカウントのパスワードを変更する場合は、そのアカウントを使用する各エージェントのパスワードを更新するよりも、このダイアログ ボックスを使用してください。 複数のサーバー上のエージェントが同じアカウントを使用している場合は、それぞれのサーバーに接続してパスワードを変更する必要があります。 パスワードは、レプリケーションで使用されるすべての場所で更新されます。 パスワードは、リンク サーバーなど、その他の場所では更新されません。  
+1.  **[レプリケーション パスワードの更新]** ダイアログ ボックス。このダイアログ ボックスは、 **の** [レプリケーション] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]フォルダーから利用できます。 レプリケーション トポロジのサーバーで [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] アカウントまたは Windows アカウントのパスワードを変更する場合は、そのアカウントを使用する各エージェントのパスワードを更新するよりも、このダイアログ ボックスを使用してください。 複数のサーバー上のエージェントが同じアカウントを使用している場合は、それぞれのサーバーに接続してパスワードを変更する必要があります。 パスワードは、レプリケーションで使用されるすべての場所で更新されます。 パスワードは、リンク サーバーなど、その他の場所では更新されません。  
   
-2.  
-  **[パブリケーションのプロパティ - **Publication>]** ダイアログ ボックスの \<[エージェント セキュリティ]** ページ。 このダイアログ ボックスへのアクセス方法の詳細については、「[パブリケーション プロパティの表示および変更](../publish/view-and-modify-publication-properties.md)」を参照してください。  
+2.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[エージェント セキュリティ]** ページ。 このダイアログ ボックスへのアクセス方法の詳細については、「[パブリケーション プロパティの表示および変更](../publish/view-and-modify-publication-properties.md)」を参照してください。  
   
-3.  
-  **[サブスクリプションのプロパティ - \<Subscription>]** ダイアログ ボックス。 このダイアログ ボックスへのアクセスの詳細については、「 [プッシュ サブスクリプションのプロパティの表示または変更](../view-and-modify-push-subscription-properties.md) 」および「 [プル サブスクリプションのプロパティの表示または変更](../view-and-modify-pull-subscription-properties.md)」を参照してください。  
+3.  **[サブスクリプションのプロパティ - \<Subscription>]** ダイアログ ボックス。 このダイアログ ボックスへのアクセスの詳細については、「 [View and Modify Push Subscription Properties](../view-and-modify-push-subscription-properties.md) 」および「 [View and Modify Pull Subscription Properties](../view-and-modify-pull-subscription-properties.md)」を参照してください。  
   
-4.  
-  **[ディストリビューターのプロパティ - \<Distributor>]** ダイアログ ボックスと **[ディストリビューション データベースのプロパティ - \<Database>]** ダイアログ ボックス。 これらのダイアログ ボックスへのアクセスの詳細については、「 [ディストリビューターとパブリッシャーのプロパティの表示および変更](../view-and-modify-distributor-and-publisher-properties.md)」を参照してください。  
+4.  **[ディストリビューターのプロパティ - \<Distributor>]** ダイアログ ボックスと **[ディストリビューション データベースのプロパティ - \<Database>]** ダイアログ ボックス。 これらのダイアログ ボックスへのアクセスの詳細については、「 [View and Modify Distributor and Publisher Properties](../view-and-modify-distributor-and-publisher-properties.md)」を参照してください。  
   
-5.  
-  **[パブリッシャーのプロパティ - \<Publisher>]** ダイアログ ボックス。 このダイアログ ボックスへのアクセスの詳細については、「 [ディストリビューターとパブリッシャーのプロパティの表示および変更](../view-and-modify-distributor-and-publisher-properties.md)」を参照してください。  
+5.  **[パブリッシャーのプロパティ - \<Publisher>]** ダイアログ ボックス。 このダイアログ ボックスへのアクセスの詳細については、「 [View and Modify Distributor and Publisher Properties](../view-and-modify-distributor-and-publisher-properties.md)」を参照してください。  
   
 #### <a name="to-change-the-password-for-an-account-used-by-one-or-more-agents"></a>1 つ以上のエージェントによって使用されるアカウントのパスワードを変更するには  
   
@@ -82,39 +77,29 @@ ms.locfileid: "73912802"
     > [!NOTE]  
     >  レプリケーション パスワードを変更したら、そのパスワードを使用する各エージェントを停止して再起動し、エージェントに対して変更を反映させる必要があります。  
   
-2.  
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]でサーバーに接続して、サーバー ノードを展開します。  
+2.  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]でサーバーに接続して、サーバー ノードを展開します。  
   
-3.  
-  **[レプリケーション]** フォルダーを右クリックし、 **[レプリケーション パスワードの更新]** をクリックします。  
+3.  **[レプリケーション]** フォルダーを右クリックし、 **[レプリケーション パスワードの更新]** をクリックします。  
   
-4.  
-  **[レプリケーション パスワードの更新]** ダイアログ ボックスで、アカウントと新しいパスワードを指定します。  
+4.  **[レプリケーション パスワードの更新]** ダイアログ ボックスで、アカウントと新しいパスワードを指定します。  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 #### <a name="to-change-security-settings-for-the-snapshot-agent"></a>スナップショット エージェントのセキュリティ設定を変更するには  
   
-1.  
-  **[パブリケーションのプロパティ - **Publication>]** ダイアログ ボックスの \<[エージェント セキュリティ]** ページで、**[スナップショット エージェント]** テキスト ボックスの横にある **[セキュリティ設定]** ボタンをクリックします。  
+1.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[エージェント セキュリティ]** ページで、 **[スナップショット エージェント]** テキスト ボックスの横にある **[セキュリティ設定]** ボタンをクリックします。  
   
-2.  
-  **[スナップショット エージェントのセキュリティ]** ダイアログ ボックスで、エージェントを実行するアカウントを指定します。  
+2.  **[スナップショット エージェントのセキュリティ]** ダイアログ ボックスで、エージェントを実行するアカウントを指定します。  
   
-    -   
-  **[プロセス アカウント]** テキスト ボックスに新しい Windows アカウントを入力します。  
+    -   **[プロセス アカウント]** テキスト ボックスに新しい Windows アカウントを入力します。  
   
-    -   
-  **[パスワード]** テキスト ボックスと **[パスワードの確認入力]** テキスト ボックスに、新しい複雑なパスワードを入力します。  
+    -   **[パスワード]** テキスト ボックスと **[パスワードの確認入力]** テキスト ボックスに、新しい複雑なパスワードを入力します。  
   
-3.  エージェントがディストリビューターからパブリッシャーに接続するときのコンテキストを指定します。 
-  **[次の SQL Server ログインを使用する]** を選択する場合は、ログインも指定する必要があります。  
+3.  エージェントがディストリビューターからパブリッシャーに接続するときのコンテキストを指定します。 **[次の SQL Server ログインを使用する]** を選択する場合は、ログインも指定する必要があります。  
   
-    -   
-  **[ログイン]** テキスト ボックスにログインを入力します。  
+    -   **[ログイン]** テキスト ボックスにログインを入力します。  
   
-    -   
-  **[パスワード]** テキスト ボックスと **[パスワードの確認入力]** テキスト ボックスに、新しい複雑なパスワードを入力します。  
+    -   **[パスワード]** テキスト ボックスと **[パスワードの確認入力]** テキスト ボックスに、新しい複雑なパスワードを入力します。  
   
     > [!NOTE]  
     >  パブリッシャーが Oracle パブリッシャーの場合は、接続のコンテキストを **[ディストリビューターのプロパティ - \<Distributor>]** ダイアログ ボックスで指定します。 コンテキストを変更する手順については、以下を参照してください。  
@@ -123,25 +108,19 @@ ms.locfileid: "73912802"
   
 #### <a name="to-change-security-settings-for-the-log-reader-agent"></a>ログ リーダー エージェントのセキュリティ設定を変更するには  
   
-1.  
-  **[パブリケーションのプロパティ - **Publication>]** ダイアログ ボックスの \<[エージェント セキュリティ]** ページで、**[ログ リーダー エージェント]** テキスト ボックスの横にある **[セキュリティ設定]** ボタンをクリックします。  
+1.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[エージェント セキュリティ]** ページで、 **[ログ リーダー エージェント]** テキスト ボックスの横にある **[セキュリティ設定]** ボタンをクリックします。  
   
-2.  
-  **[ログ リーダー エージェントのセキュリティ]** ダイアログ ボックスで、エージェントを実行するアカウントを指定します。  
+2.  **[ログ リーダー エージェントのセキュリティ]** ダイアログ ボックスで、エージェントを実行するアカウントを指定します。  
   
-    -   [**エージェントアカウント**] テキストボックスに新しい Windows アカウントを入力します。  
+    -   **[プロセス アカウント]** テキスト ボックスに新しい Windows アカウントを入力します。  
   
-    -   
-  **[パスワード]** テキスト ボックスと **[パスワードの確認入力]** テキスト ボックスに、新しい複雑なパスワードを入力します。  
+    -   **[パスワード]** テキスト ボックスと **[パスワードの確認入力]** テキスト ボックスに、新しい複雑なパスワードを入力します。  
   
-3.  エージェントがディストリビューターからパブリッシャーに接続するときのコンテキストを指定します。 
-  **[次の SQL Server ログインを使用する]** を選択する場合は、ログインも指定する必要があります。  
+3.  エージェントがディストリビューターからパブリッシャーに接続するときのコンテキストを指定します。 **[次の SQL Server ログインを使用する]** を選択する場合は、ログインも指定する必要があります。  
   
-    -   
-  **[ログイン]** テキスト ボックスにログインを入力します。  
+    -   **[ログイン]** テキスト ボックスにログインを入力します。  
   
-    -   
-  **[パスワード]** テキスト ボックスと **[パスワードの確認入力]** テキスト ボックスに、新しい複雑なパスワードを入力します。  
+    -   **[パスワード]** テキスト ボックスと **[パスワードの確認入力]** テキスト ボックスに、新しい複雑なパスワードを入力します。  
   
     > [!NOTE]  
     >  パブリッシャーが Oracle パブリッシャーの場合は、接続のコンテキストを **[ディストリビューターのプロパティ - \<Distributor>]** ダイアログ ボックスで指定します。 次の手順を使用して、コンテキストを変更します。  
@@ -153,11 +132,9 @@ ms.locfileid: "73912802"
   
 #### <a name="to-change-the-context-under-which-the-snapshot-agent-and-log-reader-agent-for-an-oracle-publication-make-connections-to-the-publisher"></a>Oracle パブリケーションのスナップショット エージェントおよびログ リーダー エージェントがパブリッシャーに接続するときのコンテキストを変更するには  
   
-1.  
-  **[ディストリビューターのプロパティ - **Distributor>]** ダイアログ ボックスの \<[パブリッシャー]** ページで、パブリッシャーの横にあるプロパティ ボタン (**...**) をクリックします。  
+1.  **[ディストリビューターのプロパティ - \<Distributor>]** ダイアログ ボックスの **[パブリッシャー]** ページで、パブリッシャーの横にあるプロパティ ボタン ( **...** ) をクリックします。  
   
-2.  
-  **[パブリッシャーへのエージェント接続]** セクションで、構成したレプリケーション管理ユーザー スキーマによって使用されるログインとパスワードを指定します。 詳細については、「[Configure an Oracle Publisher](../non-sql/configure-an-oracle-publisher.md)」(Oracle パブリッシャーの構成) をご覧ください。  
+2.  **[パブリッシャーへのエージェント接続]** セクションで、構成したレプリケーション管理ユーザー スキーマによって使用されるログインとパスワードを指定します。 詳細については、「[Oracle パブリッシャーの構成](../non-sql/configure-an-oracle-publisher.md)」をご覧ください。  
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -165,11 +142,9 @@ ms.locfileid: "73912802"
   
 1.  パブリッシャーの **[サブスクリプションのプロパティ - \<Subscription>]** ダイアログ ボックスでは、次の変更を加えることができます。  
   
-    -   ディストリビューションエージェントを実行してディストリビューターに接続するときに使用するアカウントを変更するには、[**エージェントプロセスアカウント**] 行をクリックし、行のプロパティボタン ([**..**.]) をクリックします。 
-  **[ディストリビューション エージェント セキュリティ]** ダイアログ ボックスで、アカウントとパスワードを指定します。  
+    -   ディストリビューション エージェントを実行してディストリビューターへ接続するアカウントを変更するには、 **[エージェント プロセス アカウント]** 行をクリックしてから、その行のプロパティ ボタン ( **[...]** ) をクリックします。 **[ディストリビューション エージェント セキュリティ]** ダイアログ ボックスで、アカウントとパスワードを指定します。  
   
-    -   ディストリビューションエージェントがサブスクライバーに接続するときのコンテキストを変更するには、[**サブスクライバー接続**] 行をクリックしてから、その行のプロパティボタン ([**..**.]) をクリックします。 
-  **[接続情報の入力]** ダイアログ ボックスでコンテキストを指定します。  
+    -   ディストリビューション エージェントがサブスクライバーに接続するときのコンテキストを変更するには、 **[サブスクライバー接続]** 行をクリックしてから、その行のプロパティ ボタン ( **[...]** ) をクリックします。 **[接続情報の入力]** ダイアログ ボックスでコンテキストを指定します。  
   
          キュー更新サブスクリプションを使用する場合、ここで指定したコンテキストは、サブスクライバーに接続するためにキュー リーダー エージェントでも使用されます。  
   
@@ -179,13 +154,11 @@ ms.locfileid: "73912802"
   
 1.  サブスクライバーの **[サブスクリプションのプロパティ - \<Subscription>]** ダイアログ ボックスでは、次の変更を加えることができます。  
   
-    -   ディストリビューションエージェントを実行してサブスクライバーへの接続を作成するアカウントを変更するには、[**エージェントプロセスアカウント**] 行をクリックしてから、その行のプロパティボタン ([**..**.]) をクリックします。 
-  **[ディストリビューション エージェント セキュリティ]** ダイアログ ボックスで、アカウントとパスワードを指定します。  
+    -   ディストリビューション エージェントを実行してサブスクライバーへ接続するアカウントを変更するには、 **[エージェント プロセス アカウント]** 行をクリックしてから、その行のプロパティ ボタン ( **[...]** ) をクリックします。 **[ディストリビューション エージェント セキュリティ]** ダイアログ ボックスで、アカウントとパスワードを指定します。  
   
          キュー更新サブスクリプションを使用する場合、ここで指定したコンテキストは、サブスクライバーに接続するためにキュー リーダー エージェントでも使用されます。  
   
-    -   ディストリビューションエージェントがディストリビューターに接続するときのコンテキストを変更するには、[**ディストリビューター接続**] 行をクリックしてから、その行のプロパティボタン ([**..**.]) をクリックします。 
-  **[接続情報の入力]** ダイアログ ボックスでコンテキストを指定します。  
+    -   ディストリビューション エージェントがディストリビューターに接続するときのコンテキストを変更するには、 **[ディストリビューター接続]** 行をクリックしてから、その行のプロパティ ボタン ( **[...]** ) をクリックします。 **[接続情報の入力]** ダイアログ ボックスでコンテキストを指定します。  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -193,11 +166,9 @@ ms.locfileid: "73912802"
   
 1.  パブリッシャーの **[サブスクリプションのプロパティ - \<Subscription>]** ダイアログ ボックスでは、次の変更を加えることができます。  
   
-    -   マージエージェントを実行してパブリッシャーおよびディストリビューターへの接続に使用するアカウントを変更するには、[**エージェントプロセスアカウント**] 行をクリックし、行のプロパティボタン ([**..**.]) をクリックします。 
-  **[マージ エージェント セキュリティ]** ダイアログ ボックスで、アカウントとパスワードを指定します。  
+    -   マージ エージェントを実行してパブリッシャーおよびディストリビューターへ接続するアカウントを変更するには、 **[エージェント プロセス アカウント]** 行をクリックしてから、その行のプロパティ ボタン ( **[...]** ) をクリックします。 **[マージ エージェント セキュリティ]** ダイアログ ボックスで、アカウントとパスワードを指定します。  
   
-    -   マージエージェントがサブスクライバーに接続するときのコンテキストを変更するには、[**サブスクライバー接続**] 行をクリックしてから、その行のプロパティボタン ([**..**.]) をクリックします。 
-  **[接続情報の入力]** ダイアログ ボックスでコンテキストを指定します。  
+    -   マージ エージェントがサブスクライバーに接続するときのコンテキストを変更するには、 **[サブスクライバー接続]** 行をクリックしてから、その行のプロパティ ボタン ( **[...]** ) をクリックします。 **[接続情報の入力]** ダイアログ ボックスでコンテキストを指定します。  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -205,29 +176,23 @@ ms.locfileid: "73912802"
   
 1.  サブスクライバーの **[サブスクリプションのプロパティ - \<Subscription>]** ダイアログ ボックスでは、次の変更を加えることができます。  
   
-    -   マージエージェントを実行してサブスクライバーへの接続を作成するアカウントを変更するには、[**エージェントプロセスアカウント**] 行をクリックしてから、その行のプロパティボタン ([**..**.]) をクリックします。 
-  **[マージ エージェント セキュリティ]** ダイアログ ボックスで、アカウントとパスワードを指定します。  
+    -   マージ エージェントを実行してサブスクライバーへ接続するアカウントを変更するには、 **[エージェント プロセス アカウント]** 行をクリックしてから、その行のプロパティ ボタン ( **[...]** ) をクリックします。 **[マージ エージェント セキュリティ]** ダイアログ ボックスで、アカウントとパスワードを指定します。  
   
-    -   マージエージェントがパブリッシャーおよびディストリビューターに接続するときのコンテキストを変更するには、[**パブリッシャー接続**] 行をクリックしてから、その行のプロパティボタン ([**..**.]) をクリックします。 
-  **[接続情報の入力]** ダイアログ ボックスでコンテキストを指定します。  
+    -   マージ エージェントがパブリッシャーおよびディストリビューターに接続するときのコンテキストを変更するには、 **[パブリッシャー接続]** 行をクリックしてから、その行のプロパティ ボタン ( **[...]** ) をクリックします。 **[接続情報の入力]** ダイアログ ボックスでコンテキストを指定します。  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 #### <a name="to-change-the-account-under-which-the-queue-reader-agent-runs"></a>キュー リーダー エージェントを実行するアカウントを変更するには  
   
-1.  [**ディストリビューターのプロパティ- \<ディストリビューター>** ] ダイアログボックスの **[全般**] ページで、ディストリビューションデータベースの横にあるプロパティボタン ([.**..**]) をクリックします。  
+1.  **[ディストリビューターのプロパティ - \<Distributor>]** ダイアログ ボックスの **[全般]** ページで、ディストリビューション データベースの横にあるプロパティ ボタン ( **[...]** ) をクリックします。  
   
-2.  
-  **[ディストリビューション データベースのプロパティ - \<Database>]** ダイアログ ボックスで、**[エージェント プロセス アカウント]** テキスト ボックスの横にある **[セキュリティ設定]** ボタンをクリックします。  
+2.  **[ディストリビューション データベースのプロパティ - \<Database>]** ダイアログ ボックスで、 **[エージェント プロセス アカウント]** テキスト ボックスの横にある **[セキュリティ設定]** ボタンをクリックします。  
   
-3.  
-  **[キュー リーダー エージェントのセキュリティ]** ダイアログ ボックスで、エージェントを実行してディストリビューターへ接続するアカウントを指定します。  
+3.  **[キュー リーダー エージェントのセキュリティ]** ダイアログ ボックスで、エージェントを実行してディストリビューターへ接続するアカウントを指定します。  
   
-    -   
-  **[プロセス アカウント]** テキスト ボックスに新しい Windows アカウントを入力します。  
+    -   **[プロセス アカウント]** テキスト ボックスに新しい Windows アカウントを入力します。  
   
-    -   
-  **[パスワード]** テキスト ボックスと **[パスワードの確認入力]** テキスト ボックスに、新しい複雑なパスワードを入力します。  
+    -   **[パスワード]** テキスト ボックスと **[パスワードの確認入力]** テキスト ボックスに、新しい複雑なパスワードを入力します。  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -236,12 +201,9 @@ ms.locfileid: "73912802"
   
 #### <a name="to-change-the-context-under-which-the-queue-reader-agent-makes-connections-to-the-publisher"></a>キュー リーダー エージェントがパブリッシャーに接続するときのコンテキストを変更するには  
   
-1.  
-  **[ディストリビューターのプロパティ - **Distributor>]** ダイアログ ボックスの \<[パブリッシャー]** ページで、パブリッシャーの横にあるプロパティ ボタン (**...**) をクリックします。  
+1.  **[ディストリビューターのプロパティ - \<Distributor>]** ダイアログ ボックスの **[パブリッシャー]** ページで、パブリッシャーの横にあるプロパティ ボタン ( **...** ) をクリックします。  
   
-2.  
-  **[パブリッシャーへのエージェント接続]** セクションで、 **[エージェント接続モード]** オプションの **[エージェント プロセス アカウントを借用する]** または **[SQL Server 認証]** の値を指定します。 
-  **[SQL Server 認証]** を指定する場合は、 **[ログイン]** および **[パスワード]** の値も入力します。  
+2.  **[パブリッシャーへのエージェント接続]** セクションで、 **[エージェント接続モード]** オプションの **[エージェント プロセス アカウントを借用する]** または **[SQL Server 認証]** の値を指定します。 **[SQL Server 認証]** を指定する場合は、 **[ログイン]** および **[パスワード]** の値も入力します。  
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -256,13 +218,11 @@ ms.locfileid: "73912802"
   
 1.  サブスクライバーの [**サブスクリプションの\<プロパティ-サブスクリプションの>** ] ダイアログボックスで、[**パブリッシャー接続**] 行をクリックし、行のプロパティボタン ([**...**]) をクリックします。  
   
-2.  
-  **[接続情報の入力]** ダイアログ ボックスで、次のオプションのいずれかを選択します。  
+2.  **[接続情報の入力]** ダイアログ ボックスで、次のオプションのいずれかを選択します。  
   
-    -   **リンクサーバーまたはリモートサーバーからのログインを使用**します。 
-  [sp_addserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addserver-transact-sql)、[sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)、[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、または他の方法を使用してサブスクライバ―とパブリッシャーの間にリモート サーバーまたはリンクされたサーバーを定義した場合は、このオプションを選択します。  
+    -   **[リンク サーバーまたはリモート サーバーからのログインを使用します]** 。 [sp_addserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addserver-transact-sql)、[sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)、[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、または他の方法を使用してサブスクライバ―とパブリッシャーの間にリモート サーバーまたはリンクされたサーバーを定義した場合は、このオプションを選択します。  
   
-    -   **次のログインとパスワードで SQL Server 認証を使用**します。 サブスクライバーとパブリッシャーの間でリモート サーバーまたはリンク サーバーを定義していない場合は、このオプションを選択します。 レプリケーションによってリンク サーバーが作成されます。 指定するアカウントは、パブリッシャーに既に存在している必要があります。  
+    -   **[次のログインとパスワードによる SQL Server 認証を使用する]** 。 サブスクライバーとパブリッシャーの間でリモート サーバーまたはリンク サーバーを定義していない場合は、このオプションを選択します。 レプリケーションによってリンク サーバーが作成されます。 指定するアカウントは、パブリッシャーに既に存在している必要があります。  
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -273,17 +233,15 @@ ms.locfileid: "73912802"
   
 #### <a name="to-change-the-password-for-the-administrative-connection-from-the-publisher-to-the-distributor"></a>パブリッシャーからディストリビューターへの管理接続に使用されているパスワードを変更するには  
   
-1.  
-  **[ディストリビューターのプロパティ - **Distributor>]** ダイアログ ボックスの \<[パブリッシャー]** ページで、**[パスワード]** テキスト ボックスと **[パスワードの確認入力]** テキスト ボックスに複雑なパスワードを入力します。  
+1.  **[ディストリビューターのプロパティ - \<Distributor>]** ダイアログ ボックスの **[パブリッシャー]** ページで、 **[パスワード]** テキスト ボックスと **[パスワードの確認入力]** テキスト ボックスに複雑なパスワードを入力します。  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-3.  
-  **[パブリッシャーのプロパティ - **Publisher>]** ダイアログ ボックスの \<[全般]** ページで、**[パスワード]** テキスト ボックスと **[パスワードの確認入力]** テキスト ボックスに複雑なパスワードを入力します。  
+3.  **[パブリッシャーのプロパティ - \<Publisher>]** ダイアログ ボックスの **[全般]** ページで、 **[パスワード]** テキスト ボックスと **[パスワードの確認入力]** テキスト ボックスに複雑なパスワードを入力します。  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 > [!IMPORTANT]  
 >  可能な限り、次のすべての手順で、実行時にセキュリティ資格情報を入力するように求めるメッセージをユーザーに表示します。 スクリプト ファイルに資格情報を格納する場合は、不正アクセスを防ぐために、そのファイルをセキュリティで保護する必要があります。  
@@ -313,7 +271,7 @@ ms.locfileid: "73912802"
     -   パブリッシャーへの接続時に使用されるセキュリティモードを**1**から**0**に変更する場合[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 、またはこの接続に使用するログインを変更する場合は、 ** \@publisher_login**と** \@publisher_password**を指定します。  
   
     > [!IMPORTANT]  
-    >  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベースエンジン &#40;SQL Server 構成マネージャー&#41;への暗号化接続の有効化](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
+    >  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
   
 #### <a name="to-change-security-settings-for-the-log-reader-agent"></a>ログ リーダー エージェントのセキュリティ設定を変更するには  
   
@@ -331,7 +289,7 @@ ms.locfileid: "73912802"
     >  エージェントのログインまたはパスワードを変更した後、変更を有効にするには、エージェントを停止して再起動する必要があります。  
   
     > [!IMPORTANT]  
-    >  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベースエンジン &#40;SQL Server 構成マネージャー&#41;への暗号化接続の有効化](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
+    >  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-push-subscription"></a>プッシュ サブスクリプションに対するディストリビューション エージェントのセキュリティ設定を変更するには  
   
@@ -351,7 +309,7 @@ ms.locfileid: "73912802"
     >  エージェントのログインまたはパスワードを変更した後、変更を有効にするには、エージェントを停止して再起動する必要があります。  
   
     > [!IMPORTANT]  
-    >  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 **distrib_job_login** および **distrib_job_password**を含むすべてのプロパティに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベースエンジン &#40;SQL Server 構成マネージャー&#41;への暗号化接続の有効化](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
+    >  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 **distrib_job_login** および **distrib_job_password**を含むすべてのプロパティに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-pull-subscription"></a>プル サブスクリプションに対するディストリビューション エージェントのセキュリティ設定を変更するには  
   
@@ -392,7 +350,7 @@ ms.locfileid: "73912802"
     >  エージェントのログインまたはパスワードを変更した後、変更を有効にするには、エージェントを停止して再起動する必要があります。  
   
     > [!IMPORTANT]  
-    >  リモート ディストリビューターを使用してパブリッシャーを構成する場合、 **merge_job_login** および **merge_job_password**を含むすべてのプロパティに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベースエンジン &#40;SQL Server 構成マネージャー&#41;への暗号化接続の有効化](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
+    >  リモート ディストリビューターを使用してパブリッシャーを構成する場合、 **merge_job_login** および **merge_job_password**を含むすべてのプロパティに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-pull-subscription"></a>プル サブスクリプションに対するマージ エージェントのセキュリティ設定を変更するには  
   
@@ -422,7 +380,7 @@ ms.locfileid: "73912802"
 2.  パブリッシャーで、 [sp_changedynamicsnapshot_job](/sql/relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql)を実行します** \@。パブリケーション**を指定し、手順 1. で取得した** \@dynamic_snapshot_jobname**の値を指定します。また、エージェントを実行する Windows アカウントの** \@job_password**またはログインとパスワードの新しいパスワードを** \@job_login**および** \@job_password**に対して実行します。  
   
     > [!IMPORTANT]  
-    >  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベースエンジン &#40;SQL Server 構成マネージャー&#41;への暗号化接続の有効化](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
+    >  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
   
 #### <a name="to-change-security-settings-for-the-queue-reader-agent"></a>キュー リーダー エージェントのセキュリティ設定を変更するには  
   
@@ -439,45 +397,42 @@ ms.locfileid: "73912802"
   
 1.  サブスクライバー側のサブスクリプション データベースに対して、 [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql)を実行します。 ** \@パブリッシャー**、 ** \@パブリケーション**、 ** \@publisher_db**にパブリケーションデータベースの名前、 ** \@security_mode**に次のいずれかの値を指定します。  
   
-    -   **0** : パブリッシャーで更新を行うときに SQL Server 認証を使用します。 このオプションでは、 ** \@ログイン**と** \@パスワード**に対して、パブリッシャーで有効なログインを指定する必要があります。  
+    -   **0** - パブリッシャーで更新を作成する場合に SQL Server  認証を使用します。 このオプションでは、 ** \@ログイン**と** \@パスワード**に対して、パブリッシャーで有効なログインを指定する必要があります。  
   
-    -   **1**は、パブリッシャーへの接続時にサブスクライバーで変更を行うユーザーのセキュリティコンテキストを使用します。 このセキュリティ モードに関連する制限の詳細については、 [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) のトピックを参照してください。  
+    -   **1** - パブリッシャーへの接続時にサブスクライバーで変更するユーザーのセキュリティ コンテキストを使用します。 このセキュリティ モードに関連する制限の詳細については、 [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) のトピックを参照してください。  
   
-    -   **2** [sp_addlinkedserver &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)を使用して作成された、既存のユーザー定義のリンクサーバーログインを使用します。  
+    -   **2** - [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql) を使って作成された既存のユーザー定義リンク サーバー ログインを使用します。  
   
 #### <a name="to-change-the-password-for-a-remote-distributor"></a>リモート ディストリビューターのパスワードを変更するには  
   
 1.  ディストリビューター側のディストリビューションデータベースに対して[sp_changedistributor_password](/sql/relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql)を実行し、このログインに** \@パスワード**の新しいパスワードを指定します。  
   
     > [!IMPORTANT]  
-    >  
-  **distributor_admin** のパスワードを直接変更しないでください。  
+    >  **distributor_admin** のパスワードを直接変更しないでください。  
   
 2.  このリモートディストリビューターを使用するすべてのパブリッシャーで[sp_changedistributor_password](/sql/relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql)を実行し、 ** \@パスワード**に手順 1. のパスワードを指定します。  
   
-##  <a name="RMOProcedure"></a>レプリケーション管理オブジェクト (RMO) の使用  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
   
 > [!IMPORTANT]  
 >  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、 [Windows .NET&#xA0;Framework に用意されている](https://go.microsoft.com/fwlink/?LinkId=34733) 暗号化サービス [!INCLUDE[msCoName](../../../includes/msconame-md.md)] を使用します。  
   
 #### <a name="to-change-all-instances-of-a-password-stored-on-a-replication-server"></a>レプリケーション サーバーに格納されているパスワードのインスタンスをすべて変更するには  
   
-1.  
-  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> クラスを使用して、レプリケーション サーバーに対する接続を作成します。  
+1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> クラスを使用して、レプリケーション サーバーに対する接続を作成します。  
   
 2.  手順 1. で作成した接続を使用して、 <xref:Microsoft.SqlServer.Replication.ReplicationServer> クラスのインスタンスを作成します。  
   
-3.  
-  <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeReplicationServerPasswords%2A> メソッドを呼び出します。 次のパラメーターを指定します。  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeReplicationServerPasswords%2A> メソッドを呼び出します。 次のパラメーターを指定します。  
   
-    -   *security_mode* -パスワード<xref:Microsoft.SqlServer.Replication.ReplicationSecurityMode>のすべてのインスタンスを変更する際に使用する認証の種類を指定する値です。  
+    -   *security_mode* - <xref:Microsoft.SqlServer.Replication.ReplicationSecurityMode> 値。パスワードのすべてのインスタンスを変更するために使用する認証の種類を指定します。  
   
-    -   *login* -パスワードのすべてのインスタンスを変更するためのログイン。  
+    -   *login* - パスワードのすべてのインスタンスを変更するために使用するログイン。  
   
-    -   *password* -新しいパスワードの値。  
+    -   *password* - 新しいパスワード値。  
   
         > [!IMPORTANT]  
-        >  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、Windows .NET Framework によって提供される[暗号化サービス](https://go.microsoft.com/fwlink/?LinkId=34733)を使用します。  
+        >  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、Windows .NET Framework に用意されている [暗号化サービス](https://go.microsoft.com/fwlink/?LinkId=34733) を使用します。  
   
         > [!NOTE]  
         >  固定サーバー ロール `sysadmin` のメンバー以外、このメソッドを呼び出すことはできません。  
@@ -486,19 +441,15 @@ ms.locfileid: "73912802"
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-push-subscription-to-a-transactional-publication"></a>ディストリビューション エージェントのセキュリティ設定をプッシュ サブスクリプション用からトランザクション パブリケーション用に変更するには  
   
-1.  
-  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> クラスを使用して、パブリッシャーへの接続を作成します。  
+1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> クラスを使用して、パブリッシャーへの接続を作成します。  
   
-2.  
-  <xref:Microsoft.SqlServer.Replication.TransSubscription> クラスのインスタンスを作成します。  
+2.  <xref:Microsoft.SqlServer.Replication.TransSubscription> クラスのインスタンスを作成します。  
   
 3.  サブスクリプションの <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>、 <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>、 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>、 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> の各プロパティを設定し、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに対し、手順 1. で作成した接続を設定します。  
   
-4.  
-  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドから `false` が返された場合、手順 3. で指定したサブスクリプションのプロパティが正しく定義されていないか、サブスクリプションが存在していません。  
+4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドから `false` が返された場合、手順 3. で指定したサブスクリプションのプロパティが正しく定義されていないか、サブスクリプションが存在していません。  
   
-5.  
-  <xref:Microsoft.SqlServer.Replication.TransSubscription>のインスタンスに対し、次のいずれかまたは複数のセキュリティ プロパティを設定します。  
+5.  <xref:Microsoft.SqlServer.Replication.TransSubscription>のインスタンスに対し、次のいずれかまたは複数のセキュリティ プロパティを設定します。  
   
     -   エージェントの実行に使用する Windows アカウントの資格情報を変更するには、 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> の <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> フィールドおよび <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>フィールドを設定します。  
   
@@ -509,24 +460,19 @@ ms.locfileid: "73912802"
         > [!NOTE]  
         >  ディストリビューターに対するエージェント接続は、常に、 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>によって指定された Windows 資格情報を使用して確立されます。 このアカウントは、Windows 認証を使ってリモート接続を確立する際にも使用されます。  
   
-6.  (省略可) `true` に <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> を指定した場合、<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> メソッドを呼び出してサーバーに変更をコミットします。 
-  `false` に <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (既定値) を指定した場合、変更は直ちにサーバーに送られます。  
+6.  (省略可) <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> に `true` を指定した場合、<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> メソッドを呼び出してサーバーに変更をコミットします。 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> に `false` (既定値) を指定した場合、変更は直ちにサーバーに送られます。  
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-pull-subscription-to-a-transactional-publication"></a>ディストリビューション エージェントのセキュリティ設定をプル サブスクリプション用からトランザクション パブリケーション用に変更するには  
   
-1.  
-  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> クラスを使用して、サブスクライバーへの接続を作成します。  
+1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> クラスを使用して、サブスクライバーへの接続を作成します。  
   
-2.  
-  <xref:Microsoft.SqlServer.Replication.TransPullSubscription> クラスのインスタンスを作成します。  
+2.  <xref:Microsoft.SqlServer.Replication.TransPullSubscription> クラスのインスタンスを作成します。  
   
 3.  サブスクリプションの <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>、 <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>、 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>、 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> の各プロパティを設定し、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに対し、手順 1. で作成した接続を設定します。  
   
-4.  
-  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドから `false` が返された場合、手順 3. で指定したサブスクリプションのプロパティが正しく定義されていないか、サブスクリプションが存在していません。  
+4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドから `false` が返された場合、手順 3. で指定したサブスクリプションのプロパティが正しく定義されていないか、サブスクリプションが存在していません。  
   
-5.  
-  <xref:Microsoft.SqlServer.Replication.TransPullSubscription>のインスタンスに対し、次のいずれかまたは複数のセキュリティ プロパティを設定します。  
+5.  <xref:Microsoft.SqlServer.Replication.TransPullSubscription>のインスタンスに対し、次のいずれかまたは複数のセキュリティ プロパティを設定します。  
   
     -   エージェントの実行に使用する Windows アカウントの資格情報を変更するには、 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> の <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> フィールドおよび <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>フィールドを設定します。  
   
@@ -537,24 +483,19 @@ ms.locfileid: "73912802"
         > [!NOTE]  
         >  サブスクライバーに対するエージェント接続は、常に、 <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>によって指定された Windows 資格情報を使用して確立されます。 このアカウントは、Windows 認証を使ってリモート接続を確立する際にも使用されます。  
   
-6.  (省略可) `true` に <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> を指定した場合、<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> メソッドを呼び出してサーバーに変更をコミットします。 
-  `false` に <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (既定値) を指定した場合、変更は直ちにサーバーに送られます。  
+6.  (省略可) <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> に `true` を指定した場合、<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> メソッドを呼び出してサーバーに変更をコミットします。 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> に `false` (既定値) を指定した場合、変更は直ちにサーバーに送られます。  
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-pull-subscription-to-a-merge-publication"></a>マージ エージェントのセキュリティ設定をプル サブスクリプション用からマージ パブリケーション用に変更するには  
   
-1.  
-  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> クラスを使用して、サブスクライバーへの接続を作成します。  
+1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> クラスを使用して、サブスクライバーへの接続を作成します。  
   
-2.  
-  <xref:Microsoft.SqlServer.Replication.MergePullSubscription> クラスのインスタンスを作成します。  
+2.  <xref:Microsoft.SqlServer.Replication.MergePullSubscription> クラスのインスタンスを作成します。  
   
 3.  サブスクリプションの <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>、 <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>、 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>、 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> の各プロパティを設定し、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに対し、手順 1. で作成した接続を設定します。  
   
-4.  
-  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドから `false` が返された場合、手順 3. で指定したサブスクリプションのプロパティが正しく定義されていないか、サブスクリプションが存在していません。  
+4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドから `false` が返された場合、手順 3. で指定したサブスクリプションのプロパティが正しく定義されていないか、サブスクリプションが存在していません。  
   
-5.  
-  <xref:Microsoft.SqlServer.Replication.MergePullSubscription>のインスタンスに対し、次のいずれかまたは複数のセキュリティ プロパティを設定します。  
+5.  <xref:Microsoft.SqlServer.Replication.MergePullSubscription>のインスタンスに対し、次のいずれかまたは複数のセキュリティ プロパティを設定します。  
   
     -   エージェントの実行に使用する Windows アカウントの資格情報を変更するには、 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> の <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> フィールドおよび <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>フィールドを設定します。  
   
@@ -569,24 +510,19 @@ ms.locfileid: "73912802"
         > [!NOTE]  
         >  サブスクライバーに対するエージェント接続は、常に、 <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>によって指定された Windows 資格情報を使用して確立されます。 このアカウントは、Windows 認証を使ってリモート接続を確立する際にも使用されます。  
   
-6.  (省略可) `true` に <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> を指定した場合、<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> メソッドを呼び出してサーバーに変更をコミットします。 
-  `false` に <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (既定値) を指定した場合、変更は直ちにサーバーに送られます。  
+6.  (省略可) <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> に `true` を指定した場合、<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> メソッドを呼び出してサーバーに変更をコミットします。 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> に `false` (既定値) を指定した場合、変更は直ちにサーバーに送られます。  
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-push-subscription-to-a-merge-publication"></a>マージ エージェントのセキュリティ設定をプッシュ サブスクリプション用からマージ パブリケーション用に変更するには  
   
-1.  
-  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> クラスを使用して、パブリッシャーへの接続を作成します。  
+1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> クラスを使用して、パブリッシャーへの接続を作成します。  
   
-2.  
-  <xref:Microsoft.SqlServer.Replication.MergeSubscription> クラスのインスタンスを作成します。  
+2.  <xref:Microsoft.SqlServer.Replication.MergeSubscription> クラスのインスタンスを作成します。  
   
 3.  サブスクリプションの <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>、 <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>、 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>、 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> の各プロパティを設定し、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに対し、手順 1. で作成した接続を設定します。  
   
-4.  
-  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドから `false` が返された場合、手順 3. で指定したサブスクリプションのプロパティが正しく定義されていないか、サブスクリプションが存在していません。  
+4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドから `false` が返された場合、手順 3. で指定したサブスクリプションのプロパティが正しく定義されていないか、サブスクリプションが存在していません。  
   
-5.  
-  <xref:Microsoft.SqlServer.Replication.MergeSubscription>のインスタンスに対し、次のいずれかまたは複数のセキュリティ プロパティを設定します。  
+5.  <xref:Microsoft.SqlServer.Replication.MergeSubscription>のインスタンスに対し、次のいずれかまたは複数のセキュリティ プロパティを設定します。  
   
     -   エージェントの実行に使用する Windows アカウントの資格情報を変更するには、 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> の <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> フィールドおよび <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>フィールドを設定します。  
   
@@ -601,50 +537,45 @@ ms.locfileid: "73912802"
         > [!NOTE]  
         >  ディストリビューターに対するエージェント接続は、常に、 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>によって指定された Windows 資格情報を使用して確立されます。 このアカウントは、Windows 認証を使ってリモート接続を確立する際にも使用されます。  
   
-6.  (省略可) `true` に <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> を指定した場合、<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> メソッドを呼び出してサーバーに変更をコミットします。 
-  `false` に <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (既定値) を指定した場合、変更は直ちにサーバーに送られます。  
+6.  (省略可) <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> に `true` を指定した場合、<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> メソッドを呼び出してサーバーに変更をコミットします。 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> に `false` (既定値) を指定した場合、変更は直ちにサーバーに送られます。  
   
 #### <a name="to-change-the-login-information-used-by-an-immediate-updating-subscriber-when-it-connects-to-the-transactional-publisher"></a>即時更新サブスクライバーがトランザクション パブリッシャーへの接続時に使用するログイン情報を変更するには  
   
-1.  
-  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> クラスを使用して、サブスクライバーへの接続を作成します。  
+1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> クラスを使用して、サブスクライバーへの接続を作成します。  
   
-2.  サブスクリプション データベースの <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> クラスのインスタンスを作成します。 
-  <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.Name%2A> を指定し、 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> に手順 1. の <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>を指定します。  
+2.  サブスクリプション データベースの <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> クラスのインスタンスを作成します。 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.Name%2A> を指定し、 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> に手順 1. の <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>を指定します。  
   
-3.  
-  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドから `false` が返された場合、手順 2. で指定したデータベースのプロパティが正しく定義されていないか、サブスクリプション データベースが存在していません。  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドから `false` が返された場合、手順 2. で指定したデータベースのプロパティが正しく定義されていないか、サブスクリプション データベースが存在していません。  
   
-4.  
-  <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LinkPublicationForUpdateableSubscription%2A> メソッドに次のパラメーターを指定して呼び出します。  
+4.  <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LinkPublicationForUpdateableSubscription%2A> メソッドに次のパラメーターを指定して呼び出します。  
   
-    -   *発行元*-パブリッシャーの名前。  
+    -   *Publisher* - パブリッシャーの名前。  
   
-    -   *PublisherDB* -パブリケーションデータベースの名前。  
+    -   *PublisherDB* - パブリケーション データベースの名前。  
   
-    -   *パブリケーション*-即時更新サブスクライバーがサブスクライブされているパブリケーションの名前。  
+    -   *Publication* - 即時更新サブスクライバーでサブスクライブしているパブリケーションの名前。  
   
-    -   *ディストリビューター* -ディストリビューターの名前。  
+    -   *Distributor* - ディストリビューターの名前。  
   
-    -   *PublisherSecurity* -パブリッシャー <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext>への接続時に即時更新サブスクライバーによって使用されるセキュリティモードの種類と、接続のログイン資格情報を指定するオブジェクトです。  
+    -   *PublisherSecurity* - A <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext> オブジェクト。即時更新サブスクライバーがパブリッシャーに接続するときのセキュリティ モードと、その接続に必要なログイン資格情報を指定します。  
   
-###  <a name="PShellExample"></a>例 (RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a> 例 (RMO)  
  次の例では、指定されたログイン値をチェックし、該当する Windows ログイン、または、サーバー上のレプリケーションによって格納された SQL Server ログインを対象にすべてのパスワードを変更します。  
   
  [!code-csharp[HowTo#rmo_ChangeServerPasswords](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_changeserverpasswords)]  
   
  [!code-vb[HowTo#rmo_vb_ChangeServerPasswords](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changeserverpasswords)]  
   
-##  <a name="FollowUp"></a>補足情報: レプリケーションのセキュリティ設定を変更した後  
+##  <a name="follow-up-after-you-modify-replication-security-settings"></a><a name="FollowUp"></a>補足情報: レプリケーションのセキュリティ設定を変更した後  
  エージェントのログインまたはパスワードを変更した後、変更を有効にするには、エージェントを停止して再起動する必要があります。  
   
 ## <a name="see-also"></a>参照  
- [レプリケーション管理オブジェクトの概念](../concepts/replication-management-objects-concepts.md)   
- [レプリケーションスクリプトのアップグレード &#40;レプリケーション Transact-sql プログラミング&#41;](../administration/upgrade-replication-scripts-replication-transact-sql-programming.md)   
+ [Replication Management Objects Concepts](../concepts/replication-management-objects-concepts.md)   
+ [レプリケーション スクリプトのアップグレード &#40;レプリケーション Transact-SQL プログラミング&#41;](../administration/upgrade-replication-scripts-replication-transact-sql-programming.md)   
  [レプリケーションでのログインとパスワードの管理](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
- [レプリケーションエージェントのセキュリティモデル](replication-agent-security-model.md)   
- [レプリケーションのセキュリティに関するベストプラクティス](replication-security-best-practices.md)   
+ [レプリケーション エージェントのセキュリティ モデル](replication-agent-security-model.md)   
+ [Replication Security Best Practices](replication-security-best-practices.md)   
  [SQL Server レプリケーションのセキュリティ](view-and-modify-replication-security-settings.md)   
- [レプリケーションシステムストアドプロシージャの概念](../concepts/replication-system-stored-procedures-concepts.md)  
+ [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)  
   
   

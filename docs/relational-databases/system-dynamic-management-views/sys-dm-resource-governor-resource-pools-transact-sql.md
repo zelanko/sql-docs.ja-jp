@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c39c32a907cecd8f670875fffba9f21995f2ccee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982306"
 ---
 # <a name="sysdm_resource_governor_resource_pools-transact-sql"></a>dm_resource_governor_resource_pools (Transact-sql)
@@ -35,11 +35,11 @@ ms.locfileid: "73982306"
 > [!NOTE]  
 >  またはから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]これを[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼び出すには、 **dm_pdw_nodes_resource_governor_resource_pools**という名前を使用します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |pool_id|**int**|リソースプールの ID。 NULL 値は許可されません。|  
 |name|**sysname**|共有リソースの名前。 NULL 値は許可されません。|  
-|statistics_start_time|**DATETIME**|このプールの統計がリセットされた時刻。 NULL 値は許可されません。|  
+|statistics_start_time|**datetime**|このプールの統計がリセットされた時刻。 NULL 値は許可されません。|  
 |total_cpu_usage_ms|**bigint**|リソースガバナー統計がリセットされた後の累積 CPU 使用率 (ミリ秒単位)。 NULL 値は許可されません。|  
 |cache_memory_kb|**bigint**|現在の合計キャッシュ メモリ使用量 (KB 単位)。 NULL 値は許可されません。|  
 |compile_memory_kb|**bigint**|現在の合計メモリ流用量 (KB 単位)。 この量の大半はコンパイルと最適化に使用されますが、他のメモリ ユーザーに使用されている可能性もあります。 NULL 値は許可されません。|  
@@ -78,7 +78,7 @@ ms.locfileid: "73982306"
 |io_issue_delay_total_ms|**bigint**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。<br /><br /> スケジュールされた問題と IO の実際の問題との間の合計時間 (ミリ秒単位)。 NULL 値が許可されます。 リソースプールに IO が適用されていない場合は Null です。 つまり、リソースプールの MIN_IOPS_PER_VOLUME と MAX_IOPS_PER_VOLUME の設定は0です。|  
 |pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  Resource Governor ワークロードグループと Resource Governor リソースプールには、多対一のマッピングがあります。 このため、多くのリソース プール統計が、ワークロード グループ統計から派生しています。  
   
  この動的管理ビューには、メモリ内の構成が表示されます。 格納されている構成メタデータを表示するには、resource_governor_resource_pools カタログビューを使用します。  
@@ -87,7 +87,7 @@ ms.locfileid: "73982306"
  VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="see-also"></a>参照  
- [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [dm_resource_governor_workload_groups &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
  [resource_governor_resource_pools &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  

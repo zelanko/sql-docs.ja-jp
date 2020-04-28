@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f0abc089809e6b811f0ff64684bdaeed742ebcae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74190350"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
@@ -35,9 +35,9 @@ ms.locfileid: "74190350"
 > [!NOTE] 
 > ** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]** からこれを呼び出すには、 **dm_pdw_nodes_os_wait_stats**という名前を使用します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|wait_type|**nvarchar (60)**|待機の種類の名前。 詳細については、このトピックの「[待機の種類](#WaitTypes)」を参照してください。|  
+|wait_type|**nvarchar(60)**|待機の種類の名前。 詳細については、このトピックの「[待機の種類](#WaitTypes)」を参照してください。|  
 |waiting_tasks_count|**bigint**|この待機の種類における待機の数。 このカウンターは、待機が開始するたび増加します。|  
 |wait_time_ms|**bigint**|この待機の種類における総待機時間 (ミリ秒単位)。 この時間には signal_wait_time_ms が含まれます。|  
 |max_wait_time_ms|**bigint**|この待機の種類における最大待機時間。|  
@@ -49,7 +49,7 @@ ms.locfileid: "74190350"
 で[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]は、 `VIEW SERVER STATE`権限が必要です。   
 Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、データベース`VIEW DATABASE STATE`の権限が必要です。 Standard [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
 
-##  <a name="WaitTypes"></a>待機の種類  
+##  <a name="types-of-waits"></a><a name="WaitTypes"></a>待機の種類  
  **リソース待機**リソース待機は、ワーカーが、リソースが他のワーカーによって使用されているか、まだ使用できないために利用できないリソースへのアクセスを要求したときに発生します。 リソース待機の例としては、ロック、ラッチ、ネットワークおよびディクス I/O 待機があります。 ロックおよびラッチ待機は同期オブジェクトで待機します  
   
 **キュー待機**  
@@ -88,7 +88,7 @@ GO
   
  次の表は、タスクで発生する待機の種類の一覧です。  
 
-|型 |[説明]| 
+|type |説明| 
 |-------------------------- |--------------------------| 
 |ABR |単に情報を示すためだけに特定されます。 サポートされていません。 将来の互換性は保証されません。| | 
 |AM_INDBUILD_ALLOCATION |内部使用のみです。 <br />**適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
@@ -474,8 +474,8 @@ GO
 |MEMORY_GRANT_UPDATE |内部使用のみです。 <br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降。| 
 |METADATA_LAZYCACHE_RWLOCK |内部使用のみです。 <br /> **適用対象**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)]のみ。 |  
 |MIGRATIONBUFFER |内部使用のみです。 <br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降。| 
-|MISCELLANEOUS |単に情報を示すためだけに特定されます。 サポートされていません。 将来の互換性は保証されません。| 
-|MISCELLANEOUS |単に情報を示すためだけに特定されます。 サポートされていません。 将来の互換性は保証されません。| 
+|その他 |単に情報を示すためだけに特定されます。 サポートされていません。 将来の互換性は保証されません。| 
+|その他 |単に情報を示すためだけに特定されます。 サポートされていません。 将来の互換性は保証されません。| 
 |MSQL_DQ |タスクが分散クエリ操作の終了を待機しているときに発生します。 これは、複数のアクティブな結果セット (MARS) アプリケーションにデッドロックの可能性があるかどうかを検出するために使用されます。 分散クエリ呼び出しが終了すると、待機は終了します。| 
 |MSQL_XACT_MGR_MUTEX |タスクが、セッション レベル トランザクション操作を実行するために、セッション トランザクション マネージャーの所有権の取得を待機しているときに発生します。| 
 |MSQL_XACT_MUTEX |トランザクション使用の同期中に発生します。 要求でトランザクションを使用するには、まずミューテックスを取得する必要があります。| 
@@ -510,8 +510,7 @@ GO
 |PHYSICAL_SEEDING_DMV |内部使用のみです。 <br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
 |POOL_LOG_RATE_GOVERNOR |内部使用のみです。 <br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 以降。| 
 |PREEMPTIVE_ABR |単に情報を示すためだけに特定されます。 サポートされていません。 将来の互換性は保証されません。| 
-|PREEMPTIVE_AUDIT_ACCESS_EVENTLOG |
-  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] オペレーティング システム (SQLOS) スケジューラが、監査イベントを Windows イベント ログに書き込むためにプリエンプティブ モードに切り替えたときに発生します。 <br /> **適用対象**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)]のみ。 |  
+|PREEMPTIVE_AUDIT_ACCESS_EVENTLOG |[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] オペレーティング システム (SQLOS) スケジューラが、監査イベントを Windows イベント ログに書き込むためにプリエンプティブ モードに切り替えたときに発生します。 <br /> **適用対象**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)]のみ。 |  
 |PREEMPTIVE_AUDIT_ACCESS_SECLOG |SQLOS スケジューラが、監査イベントを Windows セキュリティ ログに書き込むためにプリエンプティブ モードに切り替えたときに発生します。 <br /> **適用対象**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)]のみ。 |  
 |PREEMPTIVE_CLOSEBACKUPMEDIA |SQLOS スケジューラが、バックアップ メディアを閉じるためにプリエンプティブ モードに切り替えたときに発生します。| 
 |PREEMPTIVE_CLOSEBACKUPTAPE |SQLOS スケジューラが、テープ バックアップ デバイスを閉じるためにプリエンプティブ モードに切り替えたときに発生します。| 
@@ -669,7 +668,7 @@ GO
 |PREEMPTIVE_OS_SETFILEVALIDDATA |内部使用のみです。| 
 |PREEMPTIVE_OS_SETNAMEDSECURITYINFO |内部使用のみです。| 
 |PREEMPTIVE_OS_SQLCLROPS |内部使用のみです。| 
-|PREEMPTIVE_OS_SQMLAUNCH |内部使用のみです。 <br /> **適用対象**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)]から[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]。 |  
+|PREEMPTIVE_OS_SQMLAUNCH |内部使用のみです。 <br /> **適用対象**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] から [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] |  
 |PREEMPTIVE_OS_VERIFYSIGNATURE |内部使用のみです。| 
 |PREEMPTIVE_OS_VERIFYTRUST |内部使用のみです。 <br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 以降。| 
 |PREEMPTIVE_OS_VSSOPS |内部使用のみです。| 
@@ -863,8 +862,7 @@ GO
 |SOCKETDUPLICATEQUEUE_CLEANUP |内部使用のみです。 <br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 以降。| 
 |SOS_CALLBACK_REMOVAL |コールバックを削除するために、コールバックの一覧で同期を実行しているときに発生します。 サーバーの初期化が完了した後、通常この待機カウンターが変更されることはありません。| 
 |SOS_DISPATCHER_MUTEX |ディスパッチャー プールの内部初期化中に発生します。 これには、プールの調整中も含まれます。| 
-|SOS_LOCALALLOCATORLIST |
-  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] メモリ マネージャー内での内部同期中に発生します。 <br /> **適用対象**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)]のみ。 |  
+|SOS_LOCALALLOCATORLIST |[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] メモリ マネージャー内での内部同期中に発生します。 <br /> **適用対象**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)]のみ。 |  
 |SOS_MEMORY_TOPLEVELBLOCKALLOCATOR |内部使用のみです。 <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
 |SOS_MEMORY_USAGE_ADJUSTMENT |プール間でメモリ使用量が調整されている場合に発生します。| 
 |SOS_OBJECT_STORE_DESTROY_MUTEX |メモリ プールからオブジェクトを破棄するときに、メモリ プール内での内部同期中に発生します。| 
@@ -937,7 +935,7 @@ GO
 |VIA_ACCEPT |起動中に仮想インターフェイス アダプター (VIA) プロバイダー接続が完了すると発生します。| 
 |VIEW_DEFINITION_MUTEX |キャッシュされたビュー定義へのアクセスの同期中に発生します。| 
 |WAIT_FOR_RESULTS |クエリ通知が行われるのを待機しているときに発生します。| 
-|WAIT_ON_SYNC_STATISTICS_REFRESH |クエリのコンパイルと実行を再開する前に、同期統計の更新が完了するのを待機しているときに発生します。<br /> **適用対象**: 以降[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|
+|WAIT_ON_SYNC_STATISTICS_REFRESH |クエリのコンパイルと実行を再開する前に、同期統計の更新が完了するのを待機しているときに発生します。<br /> **適用対象**:[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降|
 |WAIT_SCRIPTDEPLOYMENT_REQUEST |内部使用のみです。 <br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
 |WAIT_SCRIPTDEPLOYMENT_WORKER |内部使用のみです。 <br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
 |WAIT_XLOGREAD_SIGNAL |内部使用のみです。 <br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降。| 
@@ -1027,7 +1025,7 @@ GO
   
  ロックの互換性マトリックスについては、「 [sys. dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
     
  [SQL Server オペレーティングシステム関連の動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [dm_exec_session_wait_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   

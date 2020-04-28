@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: erikre
 ms.openlocfilehash: e6e2247cd3648e78df0349ec8de2b63f29e52e94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729347"
 ---
 # <a name="deprecated-master-data-services-features"></a>非推奨のマスター データ サービス機能
@@ -33,9 +33,7 @@ ms.locfileid: "73729347"
   
 -   エクスプローラーの派生階層ページに、割り当てられていない (未使用) メンバーが階層レベルごとに表示されます。 また、未使用ノードが、階層レベルごとにグループ化されています。 未使用ノードとルート ノードの間のメンバーの移動は、ドラッグ アンド ドロップまたは切り取りと貼り付けで行うことができます。  
   
-     [システム管理] の **[プレビュー]** ウィンドウには、未使用ノードが表示されます。 未使用ノードは、[セキュリティ] の **[階層メンバーの権限]** ウィンドウにも表示されます。 
-  **ルート** ノード、 **未使用** ノードにかかわらず、すべてのメンバーにアクセス許可を割り当てることができます。 
-  **ルート**、 **未使用**、および **未使用** 疑似メンバーにも、アクセス許可を割り当てることができます。  
+     [システム管理] の **[プレビュー]** ウィンドウには、未使用ノードが表示されます。 未使用ノードは、[セキュリティ] の **[階層メンバーの権限]** ウィンドウにも表示されます。 **ルート** ノード、 **未使用** ノードにかかわらず、すべてのメンバーにアクセス許可を割り当てることができます。 **ルート**、 **未使用**、および **未使用** 疑似メンバーにも、アクセス許可を割り当てることができます。  
   
 -   ストアド プロシージャである mdm.udpConvertCollectionAndConsolidatedMembersToLeaf は、明示的階層を再帰型派生階層に、統合メンバーとコレクション メンバーをリーフ メンバーに変換します。  
   
@@ -43,21 +41,21 @@ ms.locfileid: "73729347"
   
  明示的階層、コレクション、および統合メンバーについては、次のトピックを参照してください。  
   
--   [明示的階層 &#40;マスターデータサービス&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)  
+-   [明示的階層 (マスター データ サービス)](../master-data-services/explicit-hierarchies-master-data-services.md)  
   
--   [コレクション &#40;マスターデータサービス&#41;](../master-data-services/collections-master-data-services.md)  
+-   [コレクション (マスター データ サービス)](../master-data-services/collections-master-data-services.md)  
   
--   [メンバー &#40;マスターデータサービス&#41;](../master-data-services/members-master-data-services.md)  
+-   [メンバー (マスター データ サービス)](../master-data-services/members-master-data-services.md)  
   
 ## <a name="attribute-entity-transaction-log-type"></a>属性のエンティティのトランザクション ログの種類  
 エンティティのトランザクション ログの種類 "属性" 非推奨とされました。"メンバー" というエンティティのトランザクション ログの種類に移行してください。 エンティティのトランザクション ログの種類については、次のトピックを参照してください。
-* [エンティティのトランザクションログの種類の変更 (マスターデータサービス)](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)
+* [エンティティのトランザクション ログの種類の変更 (マスター データ サービス)](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)
 * [メンバー リビジョン履歴](../master-data-services/member-revision-history-master-data-services.md)
   
 ## <a name="external-resources"></a>外部リソース  
  msdn.com のブログ投稿「 [Deprecated: Explicit Hierarchies and Collections (非推奨: 明示的階層とコレクション)](https://go.microsoft.com/fwlink/p/?LinkId=615373)」  
   
 ## <a name="see-also"></a>参照  
- [廃止されたマスターデータサービスの機能](../master-data-services/discontinued-master-data-services-features.md)  
+ [提供が中止されたマスター データ サービス機能](../master-data-services/discontinued-master-data-services-features.md)  
   
   

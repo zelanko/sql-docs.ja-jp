@@ -21,10 +21,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 26d6ca64dfbca8bc63a81989d7c3c34a841e4f5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74095344"
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>データベースおよびトランザクション ログのバックアップと復元
@@ -34,10 +34,9 @@ ms.locfileid: "74095344"
   
  データの損失や破損が発生した場合、バックアップを完全に、または部分的に復元する必要があります。 部分的な復元では、復元するデータを分割するために <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection> コレクションが使用されます。 トランザクション ログのバックアップの場合、<xref:Microsoft.SqlServer.Management.Smo.Restore.ToPointInTime%2A> オブジェクトの <xref:Microsoft.SqlServer.Management.Smo.Restore> プロパティを使用して、データが特定の時点まで復元されます。 データは、<xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A> メソッドを使用して検証することができます。 推奨されるバックアップ手順は、復元操作とデータベース内のデータのチェックを定期的に実行することによってバックアップの整合性をチェックすることです。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Backup>オブジェクトと同様に、 <xref:Microsoft.SqlServer.Management.Smo.Restore>オブジェクトは、の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンス上のオブジェクトを表すものではないため、 **Create**メソッドを使用して作成する必要はありません。 
-  <xref:Microsoft.SqlServer.Management.Smo.Restore> オブジェクトは、データベースの復元に使用されるプロパティとメソッドのセットです。  
+ <xref:Microsoft.SqlServer.Management.Smo.Backup>オブジェクトと同様に、 <xref:Microsoft.SqlServer.Management.Smo.Restore>オブジェクトは、の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンス上のオブジェクトを表すものではないため、 **Create**メソッドを使用して作成する必要はありません。 <xref:Microsoft.SqlServer.Management.Smo.Restore> オブジェクトは、データベースの復元に使用されるプロパティとメソッドのセットです。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual Studio .net で Visual C&#35; SMO プロジェクトを作成する](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)」を参照してください。  
   
 ## <a name="backing-up-databases-and-transaction-logs-in-visual-basic"></a>Visual Basic でのデータベースおよびトランザクション ログのバックアップ  
@@ -451,12 +450,10 @@ del "C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\Test
 ```  
   
 ## <a name="running-database-integrity-checks-in-visual-basic"></a>Visual Basic でのデータベースの整合性確認の実行  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、データ整合性の確認手段が提供されています。 このコード例では、指定されたデータベースに対してデータベース整合性の型チェックを実行します。 この例では、<xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A> が使用されていますが、<xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>、<xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A>、および <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A> も同様に使用することができます。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、データ整合性の確認手段が提供されています。 このコード例では、指定されたデータベースに対してデータベース整合性の型チェックを実行します。 この例では、<xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A> が使用されていますが、<xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>、<xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A>、および <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A> も同様に使用することができます。  
   
 > [!NOTE]  
->  
-  <xref:System.Collections.Specialized.StringCollection> オブジェクトの場合は、`imports System.Collections.Specialized` ステートメントの使用による名前空間への参照が必要になります。  
+>  <xref:System.Collections.Specialized.StringCollection> オブジェクトの場合は、`imports System.Collections.Specialized` ステートメントの使用による名前空間への参照が必要になります。  
   
 ```  
 Imports Microsoft.SqlServer.Management.Smo  
@@ -483,12 +480,10 @@ End Module
 ```  
   
 ## <a name="running-database-integrity-checks-in-visual-c"></a>Visual C# でのデータベースの整合性確認の実行  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、データ整合性の確認手段が提供されています。 このコード例では、指定されたデータベースに対してデータベース整合性の型チェックを実行します。 この例では、<xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A> が使用されていますが、<xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>、<xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A>、および <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A> も同様に使用することができます。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、データ整合性の確認手段が提供されています。 このコード例では、指定されたデータベースに対してデータベース整合性の型チェックを実行します。 この例では、<xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A> が使用されていますが、<xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>、<xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A>、および <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A> も同様に使用することができます。  
   
 > [!NOTE]  
->  
-  <xref:System.Collections.Specialized.StringCollection> オブジェクトの場合は、`imports System.Collections.Specialized` ステートメントの使用による名前空間への参照が必要になります。  
+>  <xref:System.Collections.Specialized.StringCollection> オブジェクトの場合は、`imports System.Collections.Specialized` ステートメントの使用による名前空間への参照が必要になります。  
   
 ```  
 using Microsoft.SqlServer.Management.Common;  
@@ -517,12 +512,10 @@ class A {
 ```  
   
 ## <a name="running-database-integrity-checks-in-powershell"></a>PowerShell でのデータベースの整合性確認の実行  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、データ整合性の確認手段が提供されています。 このコード例では、指定されたデータベースに対してデータベース整合性の型チェックを実行します。 この例では、<xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A> が使用されていますが、<xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>、<xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A>、および <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A> も同様に使用することができます。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、データ整合性の確認手段が提供されています。 このコード例では、指定されたデータベースに対してデータベース整合性の型チェックを実行します。 この例では、<xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A> が使用されていますが、<xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>、<xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A>、および <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A> も同様に使用することができます。  
   
 > [!NOTE]  
->  
-  <xref:System.Collections.Specialized.StringCollection> オブジェクトの場合は、`imports System.Collections.Specialized` ステートメントの使用による名前空間への参照が必要になります。  
+>  <xref:System.Collections.Specialized.StringCollection> オブジェクトの場合は、`imports System.Collections.Specialized` ステートメントの使用による名前空間への参照が必要になります。  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  

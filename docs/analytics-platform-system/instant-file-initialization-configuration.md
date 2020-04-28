@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 83ed373fd4fdd38ae5ddd391678b74e3d2e168c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401113"
 ---
 # <a name="instant-file-initialization-configuration"></a>ファイルの瞬時初期化の構成
@@ -33,11 +33,9 @@ ms.locfileid: "74401113"
   
 3.  右側のペインで、 **[ボリュームの保守タスクを実行]** をダブルクリックします。  
   
-4.  
-  **[ユーザーまたはグループの追加]** をクリックし、バックアップに使用される任意のユーザー アカウントを追加します。  
+4.  **[ユーザーまたはグループの追加]** をクリックし、バックアップに使用される任意のユーザー アカウントを追加します。  
   
-5.  
-  **[適用]** をクリックし、 **[ローカル セキュリティ ポリシー]** ダイアログ ボックスをすべて閉じます。  
+5.  **[適用]** をクリックし、 **[ローカル セキュリティ ポリシー]** ダイアログ ボックスをすべて閉じます。  
   
 ## <a name="to-turn-instant-file-initialization-on-or-off"></a>ファイルの瞬時初期化を有効または無効にするには  
   
@@ -50,7 +48,7 @@ ms.locfileid: "74401113"
     > [!WARNING]  
     > ファイルの瞬時初期化を無効にすると、ファイルの瞬時初期化が有効になっている間に、上記の機能について説明したセキュリティの考慮事項が、削除されたファイルに引き続き適用される場合があります。  
   
-4.  **[Apply]** をクリックします。 この変更は、次にアプライアンスサービスが再起動されたときに SQL Server PDW の SQL Server インスタンスに反映されます。 ここでアプライアンスサービスを再起動するには、「 [PDW サービスの状態 &#40;Analytics Platform System&#41;](pdw-services-status.md)」を参照してください。  
+4.  **[適用]** をクリックします。 この変更は、次にアプライアンスサービスが再起動されたときに SQL Server PDW の SQL Server インスタンスに反映されます。 ここでアプライアンスサービスを再起動するには、「 [PDW サービスの状態 &#40;Analytics Platform System&#41;](pdw-services-status.md)」を参照してください。  
   
 5.  **ボリュームの保守タスクを実行**するアクセス許可を削除するには、前述の手順を**バックアップアカウントの追加アクセス許可**として繰り返すことをお勧めします。  
   

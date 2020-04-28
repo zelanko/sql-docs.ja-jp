@@ -16,10 +16,10 @@ ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0fdd70480a63e334aa3e178d19287b30937e2f53
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056793"
 ---
 # <a name="sp_helpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-sql)
@@ -41,14 +41,14 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**jobnumber**|**int**|Oracle ジョブ番号。|  
 |**lastdate**|**varchar (22)**|ジョブが最後に実行された日付。|  
 |**この日付**|**varchar (22)**|変更時刻です。|  
 |**nextdate**|**varchar (22)**|ジョブが実行される次の日。|  
 |**分解**|**varchar (1)**|ジョブが中断されたかどうかを示すフラグです。|  
-|**定期的**|**varchar (200)**|ジョブの間隔。|  
+|**interval**|**varchar (200)**|ジョブの間隔。|  
 |**回**|**int**|ジョブの失敗の回数です。|  
 |**xactsetjobwhat**|**varchar (200)**|ジョブによって実行されるプロシージャの名前。|  
 |**xactsetjob**|**varchar (1)**|ジョブの状態。次のいずれかを指定できます。<br /><br /> **1** -ジョブが有効になっています。<br /><br /> **0** -ジョブは無効です。|  
@@ -60,7 +60,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_helpxactsetjob**は、Oracle パブリッシャーのスナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
  **sp_helpxactsetjob**は、常にパブリッシャーで Xactset ジョブ (HREPL_XactSetJob) の現在の設定を返します。 Xactset ジョブが現在ジョブキューにある場合は、Oracle パブリッシャーの管理者アカウントで作成された USER_JOB データディクショナリビューから、さらにジョブの属性が返されます。  

@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2565eb2be68c1e964b82d46d9aa8fc9f39a01f70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74165026"
 ---
 # <a name="execute-scripts-during-synchronization-replication-transact-sql-programming"></a>同期中のスクリプトの実行 (レプリケーション Transact-SQL プログラミング)
@@ -34,9 +34,9 @@ ms.locfileid: "74165026"
   
 3.  パブリッシャー側のパブリケーション データベースに対して、[sp_addscriptexec &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql) を実行します。 [ ** \@パブリケーション**] を指定し、 ** \@scriptfile**に手順 2. で作成した完全な UNC パスを含むスクリプトファイルの名前と、 ** \@skiperror**に次の値のいずれかを指定します。  
   
-    -   **0** -エラーが発生した場合、エージェントはスクリプトの実行を停止します。  
+    -   **0** - エラーが発生した場合、エージェントがスクリプトの実行を停止します。  
   
-    -   **1** -エージェントはエラーをログに記録し、エラーが発生した場合はスクリプトの実行を続行します。  
+    -   **1** - エラーが発生した場合、エージェントによってエラー ログが記録され、スクリプトの実行が継続されます。  
   
 4.  指定したスクリプトは、エージェントが次にサブスクリプションを同期するときに、各サブスクライバーで実行されます。  
   

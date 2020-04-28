@@ -19,16 +19,15 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0bb4e1011448ef4ea98179c3de49c43e66b811e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73783012"
 ---
 # <a name="bcp_colptr"></a>bcp_colptr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への現在のコピー操作に関するプログラム変数のデータ アドレスを設定します。  
   
 ## <a name="syntax"></a>構文  
@@ -58,7 +57,7 @@ RETCODE bcp_colptr (
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Bcp_colptr**関数を使用すると[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)で SQL Server にデータをコピーするときに、特定の列のソースデータのアドレスを変更できます。  
   
  初期状態では、ユーザーデータへのポインターは**bcp_bind**を呼び出すことによって設定されます。 **Bcp_sendrow**の呼び出しの間でプログラム変数のデータアドレスが変更された場合は、 **bcp_colptr**を呼び出して、データへのポインターをリセットできます。 次に**bcp_sendrow**を呼び出すと、 **bcp_colptr**への呼び出しによってアドレス指定されたデータが送信されます。  

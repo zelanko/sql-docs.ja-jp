@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 97805251e309132892fb94db63a308b10657daff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73983097"
 ---
 # <a name="sysdm_os_memory_clerks-transact-sql"></a>sys.dm_os_memory_clerks (Transact-SQL)
@@ -35,15 +35,15 @@ ms.locfileid: "73983097"
 > [!NOTE]  
 >  またはから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]これを[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼び出すには、 **dm_pdw_nodes_os_memory_clerks**という名前を使用します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**memory_clerk_address**|**varbinary (8)**|メモリ クラークの一意のメモリ アドレスを指定します。 これは主キー列です。 NULL 値は許可されません。|  
-|**type**|**nvarchar (60)**|メモリクラークの種類を指定します。 各クラークには、CLR Clerks MEMORYCLERK_SQLCLR などの特定の種類があります。 NULL 値は許可されません。|  
+|**type**|**nvarchar(60)**|メモリクラークの種類を指定します。 各クラークには、CLR Clerks MEMORYCLERK_SQLCLR などの特定の種類があります。 NULL 値は許可されません。|  
 |**name**|**nvarchar(256)**|このメモリ クラークに内部的に割り当てられた名前を指定します。 コンポーネントは、特定の種類の複数のメモリクラークを持つことができます。 同じ種類のメモリ クラークを識別するために、コンポーネントで特定の名前を選択して使用することもできます。 NULL 値は許可されません。|  
 |**memory_node_id**|**smallint**|メモリノードの ID を指定します。 Null 値は許容されません。|  
-|**single_pages_kb**|**bigint**|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]から[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]。|  
+|**single_pages_kb**|**bigint**|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|  
 |**pages_kb**|**bigint**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> このメモリクラークに割り当てられたページメモリの量をキロバイト (KB) 単位で指定します。 NULL 値は許可されません。|  
-|**multi_pages_kb**|**bigint**|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]から[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]。<br /><br /> 割り当てられた複数ページメモリの量 (KB 単位)。 これは、メモリノードの複数ページアロケーターを使用して割り当てられたメモリの量です。 このメモリは、バッファー プール外に割り当てられ、メモリ ノードの仮想アロケーターを利用します。 NULL 値は許可されません。|  
+|**multi_pages_kb**|**bigint**|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]<br /><br /> 割り当てられた複数ページメモリの量 (KB 単位)。 これは、メモリノードの複数ページアロケーターを使用して割り当てられたメモリの量です。 このメモリは、バッファー プール外に割り当てられ、メモリ ノードの仮想アロケーターを利用します。 NULL 値は許可されません。|  
 |**virtual_memory_reserved_kb**|**bigint**|メモリクラークによって予約されている仮想メモリの量を指定します。 NULL 値は許可されません。|  
 |**virtual_memory_committed_kb**|**bigint**|メモリクラークによってコミットされる仮想メモリの量を指定します。 コミット済みのメモリ量は、予約済みのメモリ量よりも常に少ない状態である必要があります。 NULL 値は許可されません。|  
 |**awe_allocated_kb**|**bigint**|オペレーティングシステムによってページングされていない物理メモリ内のメモリの量をキロバイト (KB) 単位で指定します。 NULL 値は許可されません。|  
@@ -59,11 +59,10 @@ ms.locfileid: "73983097"
 で[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]は、 `VIEW SERVER STATE`権限が必要です。   
 Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、データベース`VIEW DATABASE STATE`の権限が必要です。 Standard [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  メモリ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]マネージャーは、3層階層で構成されます。 階層の最下部には、メモリノードがあります。 中間レベルは、メモリクラーク、メモリキャッシュ、およびメモリプールで構成されます。 最上位の階層はメモリ オブジェクトから成ります。 これらのオブジェクトは、一般的に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスでメモリを割り当てる場合に使用されます。  
   
- メモリノードは、低レベルのアロケーターのインターフェイスと実装を提供します。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部では、メモリ クラークのみがメモリ ノードにアクセスできます。 メモリクラークはメモリノードインターフェイスにアクセスしてメモリを割り当てます。 また、メモリノードは、診断の clerk を使用して割り当てられたメモリを追跡します。 大量のメモリを割り当てるすべてのコンポーネントは、独自のメモリクラークを作成し、clerk インターフェイスを使用してすべてのメモリを割り当てる必要があります。 通常、コンポーネントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動時に、それぞれに対応したクラークを作成します。  
+ メモリノードは、低レベルのアロケーターのインターフェイスと実装を提供します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部では、メモリ クラークのみがメモリ ノードにアクセスできます。 メモリクラークはメモリノードインターフェイスにアクセスしてメモリを割り当てます。 また、メモリノードは、診断の clerk を使用して割り当てられたメモリを追跡します。 大量のメモリを割り当てるすべてのコンポーネントは、独自のメモリクラークを作成し、clerk インターフェイスを使用してすべてのメモリを割り当てる必要があります。 通常、コンポーネントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動時に、それぞれに対応したクラークを作成します。  
   
 ## <a name="see-also"></a>参照  
 

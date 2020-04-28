@@ -20,10 +20,10 @@ ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7e3504b4f04b1b9842f786eeef3ecf1f105563f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74200511"
 ---
 # <a name="primary-expressions-xquery"></a>原始式 (XQuery)
@@ -45,10 +45,9 @@ ms.locfileid: "74200511"
  文字列リテラルには、10進数または16進数のコードポイントによって識別される、Unicode 文字への XML スタイルの参照である文字参照を含めることもできます。 たとえば、"&\#8364;" という文字参照では、ユーロ記号を表すことができます。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、XML Version 1.0 が解析の基準として使用されます。  
+>  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、XML Version 1.0 が解析の基準として使用されます。  
   
-### <a name="examples"></a>例  
+### <a name="examples"></a>使用例  
  次の例では、リテラルと、エンティティと文字の参照の使用方法を示します。  
   
  '`<'` 文字、および `'>`' 文字には特別な意味があるため、このコードはエラーを返します。  

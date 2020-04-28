@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 523891f2f0005c7f6e6752e5d16d3680f680fdfa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73882333"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>既存のパブリケーションでのアーティクルの追加および削除
@@ -33,11 +33,11 @@ ms.locfileid: "73882333"
  アーティクルを追加するには、アーティクルへのパブリケーションの追加、パブリケーションの新しいスナップショットの作成、サブスクリプションの同期による新しいアーティクルのスキーマとデータの適用を行います。  
   
 > [!NOTE]
->  マージパブリケーションにアーティクルを追加し、その新しいアーティクルに既存のアーティクルが依存している場合は、 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)と[sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)の** \@processing_order**パラメーターを使用して、両方のアーティクルの処理順序を指定する必要があります。 たとえば、テーブルをパブリッシュし、テーブルが参照している関数はパブリッシュしない場合を考えます。 この関数をパブリッシュしないと、サブスクライバー側でテーブルを作成できないとします。 この場合は、この関数をパブリケーションに追加するときに、**sp_addmergearticle** の **\@processing_order** パラメーターに値 **1** を指定し、**sp_changemergearticle** の **\@processing_order** パラメーターに値 **2** を指定します。パラメーター **\@article** にはテーブル名を指定します。 この処理順序により、サブスクライバー側で関数に依存するテーブルを作成する前に、関数の作成が求められるようになります。 各アーティクルに使用する値は、関数の値がテーブルの値より小さければ、別の値でもかまいません。  
+>  マージパブリケーションにアーティクルを追加し、その新しいアーティクルに既存のアーティクルが依存している場合は、 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)と[sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)の** \@processing_order**パラメーターを使用して、両方のアーティクルの処理順序を指定する必要があります。 たとえば、テーブルをパブリッシュし、テーブルが参照している関数はパブリッシュしない場合を考えます。 この関数をパブリッシュしないと、サブスクライバー側でテーブルを作成できないとします。 関数をパブリケーションに追加する場合: **sp_addmergearticle**の** \@processing_order**パラメーターに値**1**を指定します。**sp_changemergearticle**の** \@processing_order**パラメーターに値**2**を指定し、パラメーター ** \@アーティクル**にテーブル名を指定します。 この処理順序により、サブスクライバー側で関数に依存するテーブルを作成する前に、関数の作成が求められるようになります。 各アーティクルに使用する値は、関数の値がテーブルの値より小さければ、別の値でもかまいません。  
   
 1.  次のいずれかの方法を使用して、1 つ以上のアーティクルを追加します。  
   
-    -   [パブリケーション &#40;SQL Server Management Studio にアーティクルを追加したり、アーティクルをドロップしたり&#41;](add-articles-to-and-drop-articles-from-a-publication.md)  
+    -   [パブリケーションでのアーティクルの追加または削除 &#40;SQL Server Management Studio&#41;](add-articles-to-and-drop-articles-from-a-publication.md)  
   
     -   [アーティクルの定義](define-an-article.md)  
   
@@ -66,7 +66,7 @@ ms.locfileid: "73882333"
   
 -   互換性レベルが 90RTM 未満のマージ パブリケーションの場合、アーティクルは特別な注意をせずに、サブスクリプションの初期同期の前に削除できます。 1 つ以上のサブスクリプションが同期された後にアーティクルが削除された場合、サブスクリプションの削除、再作成、および同期が必要です。  
   
--   スナップショット パブリケーションまたはトランザクション パブリケーションの場合、アーティクルはサブスクリプションを作成する前に、特別な事項を考慮せずに削除できます。 1 つ以上のサブスクリプションが作成された後にアーティクルが削除された場合、サブスクリプションの削除、再作成、および同期が必要です。 サブスクリプションの削除の詳細については、「[パブリケーションのサブスクライブ](../subscribe-to-publications.md)」と「[sp_dropsubscription (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql)」を参照してください。 **sp_dropsubscription**を使用すると、サブスクリプション全体ではなく、サブスクリプションから1つのアーティクルを削除できます。  
+-   スナップショット パブリケーションまたはトランザクション パブリケーションの場合、アーティクルはサブスクリプションを作成する前に、特別な事項を考慮せずに削除できます。 1 つ以上のサブスクリプションが作成された後にアーティクルが削除された場合、サブスクリプションの削除、再作成、および同期が必要です。 サブスクリプションの削除の詳細については、「[パブリケーションのサブスクライブ](../subscribe-to-publications.md)」と「[sp_dropsubscription (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql)」を参照してください。 **sp_dropsubscription** を使用すると、サブスクリプション全体ではなく、サブスクリプションの 1 つのアーティクルを削除できます。  
   
 1.  パブリケーションからアーティクルを削除するには、アーティクルを削除し、パブリケーションの新しいスナップショットを作成します。 アーティクルを削除すると、現在のスナップショットは無効になります。したがって新しいスナップショットを作成する必要があります。  
   
@@ -83,6 +83,6 @@ ms.locfileid: "73882333"
 ## <a name="see-also"></a>参照  
  [データとデータベースオブジェクトのパブリッシュ](publish-data-and-database-objects.md)   
  [サブスクリプションの再初期化](../reinitialize-subscriptions.md)   
- [パブリケーションデータベースでスキーマ変更を行う](make-schema-changes-on-publication-databases.md)  
+ [パブリケーション データベースでのスキーマの変更](make-schema-changes-on-publication-databases.md)  
   
   

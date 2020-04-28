@@ -19,22 +19,21 @@ ms.assetid: dd32be6b-10d1-4059-b4fd-0bf817f40d54
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 737de971ca39cdf8c164787ff7703b87c38e92e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73983120"
 ---
 # <a name="sysdm_os_memory_cache_entries-transact-sql"></a>dm_os_memory_cache_entries (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、キャッシュ内のすべてのエントリに関する情報を返します。 このビューを使用して、関連付けられているオブジェクトに対するキャッシュエントリをトレースします。 このビューを使用して、キャッシュエントリの統計情報を取得することもできます。  
   
 > [!NOTE]  
 >  またはから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]これを[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼び出すには、 **dm_pdw_nodes_os_memory_cache_entries**という名前を使用します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**cache_address**|**varbinary (8)**|キャッシュのアドレス。 NULL 値は許可されません。|  
 |**name**|**nvarchar(256)**|キャッシュの名前。 NULL 値は許可されません。|  
@@ -48,9 +47,9 @@ ms.locfileid: "73983120"
 |**original_cost**|**int**|エントリの元のコスト。 この値は、発生した i/o の数、CPU 命令のコスト、およびエントリによって消費されるメモリの量を概算したものです。 コストが大きいほど、アイテムがキャッシュから削除される可能性は低くなります。 NULL 値は許可されません。|  
 |**current_cost**|**int**|キャッシュエントリの現在のコスト。 この値はエントリの削除プロセス中に更新されます。 現在のコストは、エントリの再利用時に元の値にリセットされます。 NULL 値は許可されません。|  
 |**memory_object_address**|**varbinary (8)**|関連付けられているメモリオブジェクトのアドレス。 NULL 値が許可されます。|  
-|**pages_allocated_count**|**bigint**|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]から[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]。<br /><br /> キャッシュ エントリを格納する 8 KB ページの数。 NULL 値は許可されません。|  
+|**pages_allocated_count**|**bigint**|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]<br /><br /> キャッシュ エントリを格納する 8 KB ページの数。 NULL 値は許可されません。|  
 |**pages_kb**|**bigint**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> このキャッシュエントリで使用されるメモリの量 (KB 単位)。  NULL 値は許可されません。|  
-|**entry_data**|**nvarchar (2048)**|キャッシュされたエントリのシリアル化された表現。 この情報は、キャッシュストアに依存します。 NULL 値が許可されます。|  
+|**entry_data**|**nvarchar(2048)**|キャッシュされたエントリのシリアル化された表現。 この情報は、キャッシュストアに依存します。 NULL 値が許可されます。|  
 |**pool_id**|**int**|**適用対象**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 以降。<br /><br /> エントリに関連付けられているリソースプール id。 NULL 値が許可されます。<br /><br /> katmai|  
 |**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   

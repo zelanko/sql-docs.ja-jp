@@ -16,10 +16,10 @@ ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bdfe70e3df86f792d250cd7abcc3ef3013e9df19
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056235"
 ---
 # <a name="sp_publication_validation-transact-sql"></a>sp_publication_validation (Transact-SQL)
@@ -45,7 +45,7 @@ sp_publication_validation [ @publication = ] 'publication'
   
 `[ @rowcount_only = ] 'rowcount_only'`テーブルの行数のみを返すかどうかを指定します。 *rowcount_only*は**smallint**であり、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**0**|互換性の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ある7.0 のチェックサムを実行します。<br /><br /> 注: アーティクルが行方向にフィルター選択されている場合、チェックサム操作ではなく rowcount 操作が実行されます。|  
 |**1** (既定値)|行数チェックのみを実行します。|  
@@ -53,7 +53,7 @@ sp_publication_validation [ @publication = ] 'publication'
   
 `[ @full_or_fast = ] 'full_or_fast'`行数を計算するために使用されるメソッドです。 *full_or_fast*は**tinyint**で、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**0**|COUNT(*) を使用してフル カウントします。|  
 |**1**|Sysindexes から高速にカウントさ**れ**ます。 [Sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md)内の行のカウントは、実際のテーブルの行をカウントするよりもはるかに高速です。 ただし、 [sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md)は遅延更新されるため、行数が正確でない場合があります。|  
@@ -64,12 +64,12 @@ sp_publication_validation [ @publication = ] 'publication'
 `[ @publisher = ] 'publisher'`以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーを指定します。 *publisher*は**sysname**で、既定値は NULL です。  
   
 > [!NOTE]  
->  ** パブリッシャーの検証を要求するときは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーを使用しないでください。  
+>  *publisher*パブリッシャーの検証を要求するときは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーを使用しないでください。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_publication_validation**は、トランザクションレプリケーションで使用します。  
   
  **sp_publication_validation**は、パブリケーションに関連付けられているアーティクルがアクティブ化された後でいつでも呼び出すことができます。 この手順は、データを検証する定期的にスケジュールされたジョブの一部として、手動で (1 回) または実行することができます。  
@@ -80,9 +80,9 @@ sp_publication_validation [ @publication = ] 'publication'
  **Sp_publication_validation**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
- [サブスクライバーでのデータの検証](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
+ [サブスクライバーでデータを検証する](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
  [sp_article_validation &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
  [sp_table_validation &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

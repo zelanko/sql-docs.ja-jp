@@ -19,17 +19,16 @@ ms.reviewer: ''
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 601a584a315eba7013c086dc59c9fb5bfeff8693
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73783218"
 ---
 # <a name="bcp_bind"></a>bcp_bind
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に一括コピーするために、プログラム変数からテーブル列にデータをバインドします。  
 
 ## <a name="syntax"></a>構文
@@ -113,8 +112,7 @@ bcp_bind(hdbc, szName, 0,
    sizeof(WCHAR), SQLNCHAR, 2)  
 ```  
   
- バインド[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]された列がワイド文字の場合、 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)に対して変換は実行されません。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列が MBCS 文字型の場合、データが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に送信されるときに、ワイド文字がマルチバイト文字に変換されます。  
+ バインド[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]された列がワイド文字の場合、 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)に対して変換は実行されません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列が MBCS 文字型の場合、データが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に送信されるときに、ワイド文字がマルチバイト文字に変換されます。  
   
  *cbTerm*  
  プログラム変数にターミネータがある場合は、そのターミネータを構成するバイト数です。 変数にターミネータがない場合は、 *Cbterm*を0に設定します。  
@@ -145,7 +143,7 @@ bcp_bind(hdbc, szName, 0,
 |SQLBITN|char|  
 |SQLINT1|char|  
 |SQLINT2|short int|  
-|SQLINT4|INT|  
+|SQLINT4|int|  
 |SQLINT8|_int64|  
 |SQLINTN|*cbIndicator*<br /> 1: SQLINT1<br /> 2: SQLINT2<br /> 4: SQLINT4<br /> 8: SQLINT8|  
 |SQLFLT4|float|  
@@ -166,8 +164,8 @@ bcp_bind(hdbc, szName, 0,
 |SQLIMAGE|unsigned char *|  
 |SQLUDT|unsigned char *|  
 |SQLUNIQUEID|SQLGUID|  
-|SQLVARIANT|*次を除く任意のデータ型:*<br />-   text<br />-   ntext<br />-   image<br />-   varchar(max)<br />-   varbinary(max)<br />-   nvarchar(max)<br />-   xml<br />-   timestamp|  
-|SQLXML|*サポートされている C データ型:*<br />-   char*<br />-   wchar_t *<br />-   unsigned char *|  
+|SQLVARIANT|*以下を除く任意のデータ型:*<br />-   text<br />-   ntext<br />-   image<br />-   varchar(max)<br />-   varbinary(max)<br />-   nvarchar(max)<br />-   xml<br />-   timestamp|  
+|SQLXML|*サポートされる C のデータ型*<br />-   char*<br />-   wchar_t *<br />-   unsigned char *|  
 
 *Idxservercol*データがコピーされるデータベーステーブル内の列の序数位置です。 テーブル内の最初の列は列 1 です。 列の序数位置は[Sqlcolumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md)によって報告されます。  
   
@@ -175,13 +173,13 @@ bcp_bind(hdbc, szName, 0,
 
  SUCCEED または FAIL。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
-プログラム**** 変数からの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブルにデータをコピーする高速で効率的な方法には、bcp_bind を使用します。  
+プログラム**bcp_bind**変数からの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブルにデータをコピーする高速で効率的な方法には、bcp_bind を使用します。  
 
 このまたはその他の一括コピー関数を呼び出す前に[bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)を呼び出してください。 **Bcp_init**を呼び出す[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と、一括コピーの対象テーブルが設定されます。 **Bcp_bind**と[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)で使用するために**bcp_init**を呼び出すと、データファイルを示す**BCP_INIT**の_szdatafile_ファイルパラメーターが NULL に設定されます。**bcp_init**_edirection_パラメーターが DB_IN に設定されています。  
 
-コピー先の**** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブル内のすべての列に対して、個別の bcp_bind 呼び出しを作成します。 必要な**bcp_bind**の呼び出しが行われたら、 **bcp_sendrow**を呼び出して、プログラム変数からに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ行を送信します。 列の再バインドはサポートされていません。
+コピー先の**bcp_bind** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブル内のすべての列に対して、個別の bcp_bind 呼び出しを作成します。 必要な**bcp_bind**の呼び出しが行われたら、 **bcp_sendrow**を呼び出して、プログラム変数からに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ行を送信します。 列の再バインドはサポートされていません。
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]既に受信した行をコミットする場合は常に、 [bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)を呼び出します。 たとえば、1000行が挿入されるたびに、またはその他の間隔で1回**bcp_batch**を呼び出します。  
 

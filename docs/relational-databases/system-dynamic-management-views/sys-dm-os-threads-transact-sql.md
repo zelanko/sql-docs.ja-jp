@@ -21,29 +21,28 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ef8eeeaaf59934d6c3307641b6c93f110ab5738f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982537"
 ---
 # <a name="sysdm_os_threads-transact-sql"></a>dm_os_threads (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスで実行されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オペレーティング システム スレッドの一覧を返します。  
   
 > [!NOTE]  
 >  またはから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]これを[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼び出すには、 **dm_pdw_nodes_os_threads**という名前を使用します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |thread_address|**varbinary (8)**|スレッドのメモリアドレス (主キー)。|  
 |started_by_sqlservr|**bit**|スレッドの開始側を示します。<br /><br /> 1 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってスレッドが開始されました。<br /><br /> 0 = 別のコンポーネントがスレッドを開始しました。たとえば、内[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]から拡張ストアドプロシージャを起動します。|  
 |os_thread_id|**int**|オペレーティングシステムによって割り当てられたスレッドの ID。|  
 |status|**int**|内部状態フラグ。|  
 |instruction_address|**varbinary (8)**|現在実行されている命令のアドレス。|  
-|creation_time|**DATETIME**|このスレッドが作成された時刻。|  
+|creation_time|**datetime**|このスレッドが作成された時刻。|  
 |kernel_time|**bigint**|このスレッドで使用されるカーネル時間の量。|  
 |usermode_time|**bigint**|スレッドで使用されたユーザー時間。|  
 |stack_base_address|**varbinary (8)**|このスレッドの最大スタックアドレスのメモリアドレス。|  
@@ -51,7 +50,7 @@ ms.locfileid: "73982537"
 |stack_bytes_committed|**int**|スタックでコミットされたバイト数。|  
 |stack_bytes_used|**int**|スレッドでアクティブに使用されているバイト数。|  
 |affinity|**bigint**|このスレッドが実行されている CPU マスク。 これは、 **ALTER SERVER CONFIGURATION SET PROCESS AFFINITY**ステートメントで構成された値によって異なります。 ソフト アフィニティの場合は、スケジューラと異なることがあります。|  
-|優先度|**int**|このスレッドの優先度の値。|  
+|Priority|**int**|このスレッドの優先度の値。|  
 |Locale|**int**|スレッドのキャッシュされたロケール LCID。|  
 |トークン|**varbinary (8)**|スレッドのキャッシュされた偽装トークンハンドル。|  
 |is_impersonating|**int**|スレッドで Win32 権限借用が使用されているかどうかを示します。<br /><br /> 1 = スレッドではプロセスの既定値と異なるセキュリティ資格情報が使用されています。 これは、スレッドが、プロセスを作成したエンティティ以外のエンティティを偽装していることを示します。|  
@@ -75,7 +74,7 @@ Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、デー
 
 Linux での SQL エンジンの動作によって、この情報の一部が Linux 診断データと一致しません。 たとえば、 `os_thread_id`は、、procfs (/proc/ `ps``top` `pid`) などのツールの結果と一致しません。  これは、プラットフォームアブストラクションレイヤー (SQLPAL)、SQL Server コンポーネントとオペレーティングシステムの間のレイヤーです。
 
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  スタートアップ時に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、スレッドを開始し、ワーカーをそれらのスレッドに関連付けます。 ただし、拡張ストアドプロシージャなどの外部コンポーネントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロセスでスレッドを開始できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、これらのスレッドを制御できません。 dm_os_threads では、プロセス内のリソースを消費する、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]悪意のあるスレッドに関する情報を提供できます。  
   
  次のクエリは、によって[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]開始されていないスレッドを実行しているワーカーと、実行に使用された時間を検索するために使用されます。  

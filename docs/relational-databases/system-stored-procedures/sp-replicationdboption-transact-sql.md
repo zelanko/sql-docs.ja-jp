@@ -16,10 +16,10 @@ ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4c0837db9666ab6b49aee30b81b5585cbf5d5ee0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056771"
 ---
 # <a name="sp_replicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
@@ -45,11 +45,11 @@ sp_replicationdboption [ @dbname= ] 'db_name'
   
 `[ @optname = ] 'optname'`有効または無効にするレプリケーションデータベースオプションを指定します。 *optname*は**sysname**で、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**merge publish**|データベースは、マージ パブリケーションで使用できます。|  
 |**投稿**|データベースは、他の種類のパブリケーションで使用できます。|  
-|**web**|データベースはサブスクリプションデータベースです。|  
+|**subscribe**|データベースはサブスクリプションデータベースです。|  
 |**バックアップとの同期**|データベースは、連携バックアップに対して有効になっています。 詳細については、「[トランザクションレプリケーションの連携バックアップの有効化 &#40;レプリケーション Transact-sql プログラミング&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md)」を参照してください。|  
   
 `[ @value = ] 'value'`指定したレプリケーションデータベースオプションを有効にするか無効にするかを指定します。 *値*は**sysname**で、 **true**または**false**を指定できます。 この値が**false**で、 *optname*が**merge publish**の場合、マージパブリッシュされたデータベースに対するサブスクリプションも削除されます。  
@@ -61,7 +61,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_replicationdboption**は、スナップショットレプリケーション、トランザクションレプリケーション、およびマージレプリケーションで使用します。  
   
  このプロシージャでは、指定したオプションに従って、特定のレプリケーション システム テーブル、セキュリティ アカウントなどが作成または削除されます。 対応する**is_published** (transacational またはスナップショットレプリケーション)、 **is_merge_published** (マージレプリケーション)、または**is_distributor**ビットを**master データベース**テーブルに設定し、必要なシステムテーブルを作成します。  
@@ -73,10 +73,10 @@ sp_replicationdboption [ @dbname= ] 'db_name'
   
 ## <a name="see-also"></a>参照  
  [パブリッシングおよびディストリビューションの構成](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [パブリケーションを作成する](../../relational-databases/replication/publish/create-a-publication.md)   
+ [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [パブリケーションを削除する](../../relational-databases/replication/publish/delete-a-publication.md)   
  [パブリッシングおよびディストリビューションを無効にする](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [データベース &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
+ [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

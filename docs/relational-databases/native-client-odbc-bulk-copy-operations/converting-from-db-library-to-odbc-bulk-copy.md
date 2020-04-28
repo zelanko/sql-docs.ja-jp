@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b7e14018ea62edb5dd262b87ddbea467d1872132
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73785189"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>DB-Library から ODBC への一括コピーの変換
@@ -46,7 +46,7 @@ ms.locfileid: "73785189"
     |-------------------------|--------------------------------|-------------------------|  
     |NULL 値が指定された場合|0|-1 (SQL_NULL_DATA)|  
     |可変長のデータが指定された場合|-1|-10 (SQL_VARLEN_DATA)|  
-    |長さが 0 の文字列またはバイナリ文字列の場合|NA|0|  
+    |長さが 0 の文字列またはバイナリ文字列の場合|N/A|0|  
   
      DB-LIBRARY では、 *varlen*値-1 は、可変長データが指定されていることを示します。これは、ODBC *CBDATA*で、NULL 値のみが指定されていることを意味します。 DB-LIBRARY のすべての*varlen*仕様 (-1) を SQL_VARLEN_DATA に、および0のすべての*varlen*仕様を SQL_NULL_DATA に変更します。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "73785189"
   
     -   DB-LIBRARY **dbconvert**関数でサポートされている任意の形式の**datetime**文字列および**smalldatetime**文字列。  
   
-    -   クライアントネットワークユーティリティの [DB-LIBRARY オプション] タブで [**インターナショナル設定を使用する**] チェックボックスをオンにすると、db-library 一括コピー関数は、クライアントコンピューターのレジストリのロケール設定に定義されている地域の日付形式の日付も受け入れます。 **** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+    -   クライアントネットワークユーティリティの [DB-LIBRARY オプション] タブで [**インターナショナル設定を使用する**] チェックボックスをオンにすると、db-library 一括コピー関数は、クライアントコンピューターのレジストリのロケール設定に定義されている地域の日付形式の日付も受け入れます。 **Options** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
      DB-LIBRARY 一括コピー関数では、ODBC **datetime**および**smalldatetime**形式は使用できません。  
   

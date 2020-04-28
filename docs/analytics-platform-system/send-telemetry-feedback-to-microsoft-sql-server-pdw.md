@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 639eb4e9e5c531e154b9eb7f91165af365bc519f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400360"
 ---
 # <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>分析プラットフォームシステムのテレメトリフィードバックを Microsoft に送信する
@@ -22,10 +22,10 @@ Analytics Platform System には、管理コンソールのデータを Microsof
 > [!NOTE]  
 > このリリースでは、Microsoft はテレメトリデータを積極的に監視していません。 分析の目的でのみデータが収集されています。  
   
-## <a name="privacy"></a>プライバシー  
+## <a name="privacy"></a><a name="privacy"></a>プライバシー  
 最大限のプライバシー保護を提供するために、テレメトリを有効にせずに APS が付属しています。 この機能を有効にする前に、まず[Microsoft Analytics Platform System プライバシー](https://go.microsoft.com/fwlink/?LinkId=400902)に関する声明を確認してください。 オプトインするには、以下で説明する PowerShell スクリプトを実行します。  
   
-## <a name="enable"></a>テレメトリを有効にする  
+## <a name="enable-telemetry"></a><a name="enable"></a>テレメトリを有効にする  
 **DNS 転送:** テレメトリデータを Microsoft に送信するには、Analytics Platform System が DNS フォワーダーを介してインターネットに接続する必要があります。 この機能を有効にするには、すべてのホストとワークロード Vm で DNS 転送を有効にする必要があります。 DNS 転送`Enable-RemoteMonitoring`を適切に`SetupDnsForwarder`構成し、テレメトリを有効にするオプションを指定してコマンドを呼び出します。 DNS 転送`Enable-RemoteMonitoring`が既に`SetupDnsForwarder`構成されていて、ハートビート監視のみを有効にする場合は、オプションを指定せずにコマンドを呼び出します。  
   
 > [!IMPORTANT]  
@@ -42,7 +42,7 @@ Analytics Platform System には、管理コンソールのデータを Microsof
     > [!NOTE]  
     > インポートするには、コマンドで2つのピリオドを使用する必要があります。  
   
-    **よう**  
+    **例:**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> . .\Configure-RemoteMonitoring.ps1  
@@ -75,7 +75,7 @@ Analytics Platform System には、管理コンソールのデータを Microsof
   
 `Enable-RemoteMonitoring`コマンドを複数回実行しても害はありません。 DNS フォワーダーが既に設定されている場合は、そのことを示す警告メッセージが表示されます。  
   
-## <a name="disable"></a>テレメトリを無効にする  
+## <a name="disable-telemetry"></a><a name="disable"></a>テレメトリを無効にする  
 テレメトリを無効にすると、アプライアンスの状態に関する情報をクラウド内の AP 監視サービスに伝えるすべての操作が停止されます。  
   
 > [!IMPORTANT]  
@@ -92,7 +92,7 @@ Analytics Platform System には、管理コンソールのデータを Microsof
     > [!NOTE]  
     > インポートするには、コマンドで2つのピリオドを使用する必要があります。  
   
-    **よう**  
+    **例:**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> . .\Configure-RemoteMonitoring.ps1  
@@ -100,7 +100,7 @@ Analytics Platform System には、管理コンソールのデータを Microsof
   
 4.  パラメーターを`Disable-RemoteMonitoring`指定せずにコマンドを呼び出します。 このコマンドは、フィードバックの送信を停止します。 (これはローカル監視には影響しません)。ただし、このコマンドでは、DNS フォワーダーを無効にしたり、インターネット接続を無効にしたりすることはできません。 この操作は、フィードバックを正常に無効にした後に手動で行う必要があります。  
   
-    **よう**  
+    **例:**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> Disable-RemoteMonitoring  

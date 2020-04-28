@@ -14,10 +14,10 @@ ms.author: lle
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: b4bb1a89e997486e88b6d4ca48a9a550d1c552b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729021"
 ---
 # <a name="host-an-mds-database-on-a-managed-instance"></a>マネージインスタンスで MDS データベースをホストする
@@ -65,9 +65,9 @@ ms.locfileid: "73729021"
      - 要求の監視
      - パフォーマンス
      - 静的なコンテンツの圧縮
-     - Security
+     - セキュリティ
      - 要求フィルター
-     - [Windows 認証]
+     - Windows 認証
        > [!NOTE]
        > WebDAV 発行をインストールしない
 
@@ -94,8 +94,7 @@ SQL Server セットアップインストールウィザードまたはコマン
 
 1. を`Setup.exe`開き、インストールウィザードの手順に従います。
 
-2. 
-  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] [機能の選択] **ページで、** [共有機能] **の [**] を選択します。
+2. [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] [機能の選択] **ページで、** [共有機能] **の [**] を選択します。
 この操作は次のようにインストールされます。
    - [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]
    - アセンブリ
@@ -125,8 +124,7 @@ SQL Server セットアップインストールウィザードまたはコマン
 
    ![SQLServer2019-MI-CreateDBConnect](../master-data-services/media/mds-sqlserver2019-config-mi-createdbconnect.png "SQLServer2019-Config-MI_CreateDBConnect")  
 
-1. 
-  **[データベース名]** フィールドに名前を入力します。 必要に応じて、Windows 照合順序を選択するには、[**既定の照合順序を SQL Server**する] チェックボックスをオフにし、使用可能なオプションを1つ以上選択します。 たとえば、**大文字と小文字を区別**します。 **[次へ]** を選択します。
+1. **[データベース名]** フィールドに名前を入力します。 必要に応じて、Windows 照合順序を選択するには、[**既定の照合順序を SQL Server**する] チェックボックスをオフにし、使用可能なオプションを1つ以上選択します。 たとえば、**大文字と小文字を区別**します。 **[次へ]** を選択します。
 
    ![SQLServer2019---//](../master-data-services/media/mds-sqlserver2019-config-mi-createddbname.png "SQLServer2019-Config-MI_CreatedDBName")
 
@@ -172,7 +170,7 @@ SQL Server セットアップインストールウィザードまたはコマン
 
    ![mds-SQLServer2019-WebConfigSelectDB](../master-data-services/media/mds-sqlserver2019-config-mi-webconfigselectdb.png "SQLServer2019-Config-MI_WebConfigSelectDB")
 
-1. [**適用**] を選択します。 **構成が完了**したことを確認するメッセージが表示されます。 メッセージボックスで [ **OK]** を選択して、web アプリケーションを起動します。 Web サイトのアドレス`http://server name/web application/`はです。
+1. **[適用]** を選択します。 **構成が完了**したことを確認するメッセージが表示されます。 メッセージボックスで [ **OK]** を選択して、web アプリケーションを起動します。 Web サイトのアドレス`http://server name/web application/`はです。
 
 ## <a name="configure-authentication"></a>認証を構成する。
 
@@ -200,9 +198,9 @@ MDS では、次の接続文字列の例に示すように、Active Directory �
    <add name="MDS1" connectionString="Data Source=*****.*****.database.windows.net;Initial Catalog=MasterDataServices;Integrated Security=False;Connect Timeout=60;User ID=UserName;Password=MyPassword!;" />
    ```
 
-## <a name="upgrade-includessmdsshort_mdincludesssmdsshort-mdmd-and-sql-database-version"></a>アップグレード[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]と SQL Database バージョン
+## <a name="upgrade-ssmdsshort_md-and-sql-database-version"></a>アップグレード[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]と SQL Database バージョン
 
-### <a name="upgrade-includessmdsshort_mdincludesssmdsshort-mdmd"></a>増設[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
+### <a name="upgrade-ssmdsshort_md"></a>増設[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
 
 **SQL Server 2019 の累積的な更新プログラム**をインストールします。 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]自動的に更新されます。
 
@@ -231,9 +229,9 @@ MDS では、次の接続文字列の例に示すように、Active Directory �
 
 1. すべてのタスクが完了したら、[**完了**] を選択します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [マスター データ サービス データベース](../master-data-services/master-data-services-database.md)
 - [マスター データ マネージャー Web アプリケーション](../master-data-services/master-data-manager-web-application.md)
-- [[データベースの構成] ページ &#40;マスターデータサービス構成マネージャー&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)
-- [マスターデータサービス &#40;MDS&#41;の新機能](../master-data-services/what-s-new-in-master-data-services-mds.md)
+- [[データベース構成] ページ (マスター データ サービス構成マネージャー)](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)
+- [マスター データ サービス &#40;MDS&#41; の新機能](../master-data-services/what-s-new-in-master-data-services-mds.md)

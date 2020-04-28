@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: a7e6a0bda01de76787033607fbf35a0ca123ef95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74399805"
 ---
 # <a name="system-views-for-analytics-platform-system-parallel-data-warehouse"></a>Analytics Platform System Parallel Data Warehouse のシステムビュー
@@ -61,8 +61,8 @@ ms.locfileid: "74399805"
 次の Dmv は並列データウェアハウスに適用できますが、 **master**データベースに接続することによって実行する必要があります。
 
 * [sys.database_service_objectives](../relational-databases/system-catalog-views/sys-database-service-objectives-azure-sql-database.md)
-* [dm_operation_status](../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)
-* [fn_helpcollations ()](../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)
+* [sys.dm_operation_status](../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)
+* [sys.fn_helpcollations()](../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)
 
 ## <a name="sql-server-catalog-views"></a>SQL Server カタログ ビュー
 * [sys.all_columns](https://msdn.microsoft.com/library/ms177522.aspx)

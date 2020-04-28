@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 73da0ee5a47cf5b1c7443729e2a9b71dc01d18a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982290"
 ---
 # <a name="sysdm_resource_governor_workload_groups-transact-sql"></a>sys.dm_resource_governor_workload_groups (Transact-SQL)
@@ -35,13 +35,13 @@ ms.locfileid: "73982290"
 > [!NOTE]  
 >  またはから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]これを[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼び出すには、 **dm_pdw_nodes_resource_governor_workload_groups**という名前を使用します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |group_id|**int**|ワークロードグループの ID。 NULL 値は許可されません。|  
 |name|**sysname**|ワークロードグループの名前。 NULL 値は許可されません。|  
 |pool_id|**int**|リソースプールの ID。 NULL 値は許可されません。|  
 |external_pool_id|**int**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降。<br /><br /> 外部リソースプールの ID。 NULL 値は許可されません。|  
-|statistics_start_time|**DATETIME**|ワークロードグループの統計コレクションがリセットされた時刻。 NULL 値は許可されません。|  
+|statistics_start_time|**datetime**|ワークロードグループの統計コレクションがリセットされた時刻。 NULL 値は許可されません。|  
 |total_request_count|**bigint**|ワークロードグループ内の完了した要求の累積数。 NULL 値は許可されません。|  
 |total_queued_request_count|**bigint**|GROUP_MAX_REQUESTS の制限に達した後にキューに登録された要求の累積数。 NULL 値は許可されません。|  
 |active_request_count|**int**|現在の要求数。 NULL 値は許可されません。|  
@@ -65,16 +65,16 @@ ms.locfileid: "73982290"
 |max_dop|**int**|ワークロード グループの並列処理の最大限度。 既定値は0で、グローバル設定が使用されます。 NULL 値は許可されません。|  
 |pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この動的管理ビューには、メモリ内の構成が表示されます。 格納されている構成メタデータを表示するには、sys.resource_governor_workload_groups カタログ ビューを使用します。  
   
- ALTER RESOURCE GOVERNOR RESET STATISTICS が正常に実行されると、次のカウンターがリセットされます: statistics_start_time、total_request_count、total_queued_request_count、total_cpu_limit_violation_count、total_cpu_usage_ms、max_request_cpu_time_ms、total_lock_wait_count、total_lock_wait_time_ms、total_query_optimization_count、total_suboptimal_plan_generation_count、total_reduced_memgrant_count、および max_request_grant_memory_kb。 statistics_start_time が現在のシステム日付と時刻に設定されている場合、その他のカウンターはゼロ (0) に設定されます。  
+ ALTER RESOURCE GOVERNOR RESET STATISTICS が正常に実行されると、statistics_start_time、total_request_count、total_queued_request_count、total_cpu_limit_violation_count、total_cpu_usage_ms、max_request_cpu_time_ms、total_lock_wait_count、total_lock_wait_time_ms、total_query_optimization_count、total_suboptimal_plan_generation_count、total_reduced_memgrant_count、max_request_grant_memory_kb の各カウンターがリセットされます。 statistics_start_time が現在のシステム日付と時刻に設定されている場合、その他のカウンターはゼロ (0) に設定されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="see-also"></a>参照  
- [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [dm_resource_governor_resource_pools &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)   
  [resource_governor_workload_groups &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  

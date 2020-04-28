@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 ms.openlocfilehash: 3fbf2429a384ad64b1b416e3920a193d92a6c387
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056625"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>コマンドラインから Data Migration Assistant を実行する
@@ -40,7 +40,7 @@ DmaCmd.exe /AssessmentName="string"
 /AssessmentResultJson="file"|/AssessmentResultCsv="file"
 ```
 
-|引数  |[説明]  | 必須 (Y/N)
+|引数  |説明  | 必須 (Y/N)
 |---------|---------|---------------|
 | `/help or /?`     | Dmacmd のヘルプテキストを使用する方法        | N
 |`/AssessmentName`     |   評価プロジェクトの名前   | Y
@@ -248,7 +248,7 @@ DmaCmd.exe /Action=AssessTargetReadiness
 /SkuRecommendationPreventPriceRefresh=true 
 ```
 
-|引数  |[説明]  | 必須 (Y/N)
+|引数  |説明  | 必須 (Y/N)
 |---------|---------|---------------|
 |`/Action=SkuRecommendation` | DMA コマンドラインを使用して SKU 評価を実行する | Y
 |`/SkuRecommendationInputDataFilePath` | データベースをホストしているコンピューターから収集されたパフォーマンスカウンターファイルの完全パス | Y
@@ -259,7 +259,7 @@ DmaCmd.exe /Action=AssessTargetReadiness
 |`/SkuRecommendationCurrencyCode` | 価格を表示する通貨 (例: "USD") | Y <br> (最新の価格の場合)
 |`/SkuRecommendationOfferName` | プラン名 (例: "MS-AZR-0003P")。 詳細については、 [Microsoft Azure プランの詳細](https://azure.microsoft.com/support/legal/offer-details/)に関するページを参照してください。 | Y <br> (最新の価格の場合)
 |`/SkuRecommendationRegionName` | リージョン名 (例: "WestUS") | Y <br> (最新の価格の場合)
-|`/SkuRecommendationSubscriptionId` | サブスクリプション ID。 | Y <br> (最新の価格の場合)
+|`/SkuRecommendationSubscriptionId` | サブスクリプション ID です。 | Y <br> (最新の価格の場合)
 |`/SkuRecommendationDatabasesToRecommend` | 推奨するデータベースのスペース区切りの一覧 (例: "Database1" "Database2" "Database3")。 名前は大文字と小文字が区別され、二重引用符で囲む必要があります。 省略した場合、すべてのデータベースの推奨事項が表示されます。 | N
 |`/AzureAuthenticationTenantId` | 認証テナント。 | Y <br> (最新の価格の場合)
 |`/AzureAuthenticationClientId` | 認証に使用される AAD アプリのクライアント ID。 | Y <br> (最新の価格の場合)
@@ -337,6 +337,6 @@ DmaCmd.exe /Action=AssessTargetReadiness
 /SkuRecommendationPreventPriceRefresh=true  
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 - [Data Migration Assistant](https://aka.ms/get-dma)ダウンロードします。
 - この記事では、[オンプレミスデータベースの適切な AZURE SQL DATABASE SKU を特定](https://aka.ms/dma-sku-recommend-sqldb)します。

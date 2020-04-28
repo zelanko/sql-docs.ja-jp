@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2c72d07873e2e07ee7f6f095f677625a18cdb5a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982265"
 ---
 # <a name="sp_tableoption-transact-sql"></a>sp_tableoption (Transact-SQL)
@@ -52,10 +52,10 @@ sp_tableoption [ @TableNamePattern = ] 'table'
  [ @OptionName = ]'*option_name*'  
  テーブル オプション名を指定します。 *option_name*は**varchar (35)**,、既定値は NULL です。 *option_name* 、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |table lock on bulk load|無効である場合 (既定)、ユーザー定義テーブル上で行ロックを取得するための一括読み込み処理が行われます。 有効である場合、ユーザー定義テーブル上で一括更新ロックを取得するための一括読み込み処理が行われます。|  
-|insert row lock|サポートされなくなりました。<br /><br /> このオプションは、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ロック動作には影響しません。また、既存のスクリプトおよびプロシージャとの互換性のためだけに含まれています。|  
+|insert row lock|サポート対象から除外されました。<br /><br /> このオプションは、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ロック動作には影響しません。また、既存のスクリプトおよびプロシージャとの互換性のためだけに含まれています。|  
 |text in row|OFF または 0 (無効、つまり既定値) である場合は、現在の動作を変更せず、行内 BLOB はありません。<br /><br /> @OptionValue指定した場合、が ON (有効) または 24 ~ 7000 の整数値の場合、新しい**text**、 **ntext**、または**image**文字列は、データ行に直接格納されます。 すべての既存の BLOB (バイナリラージオブジェクト: **text**、 **ntext**、または**IMAGE**データ) は、blob 値が更新されると、text in row 形式に変更されます。 詳細については、「解説」を参照してください。|  
 |large value types out of row|1 = **varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、 **xml** 、および大きなユーザー定義型 (UDT) の列は、ルートへの16バイトのポインターと共に、行外に格納されます。<br /><br /> 0 = **varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、 **xml** 、および大きな UDT 値は、データ行に直接格納されます。ただし、値がレコードに収まりきらない限り、8000バイトの制限があります。 値がレコードに収まらない場合には、ポインターが行内に格納され、残りは行外の LOB ストレージ領域に格納されます。 0 が既定値です。<br /><br /> 大きなユーザー定義型 (UDT) は[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 、以降に適用されます。 <br /><br /> [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)の TEXTIMAGE_ON オプションを使用して、大きなデータ型を格納する場所を指定します。 |  
 |vardecimal storage format|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。<br /><br /> TRUE、ON、または 1 の場合、指定されたテーブルでは vardecimal ストレージ形式が有効です。 FALSE、OFF、または0の場合、テーブルは vardecimal ストレージ形式に対して有効ではありません。 Vardecimal ストレージ形式は、データベースで[sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)を使用して vardecimal ストレージ形式が有効になっている場合にのみ有効にすることができます。 以降[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]では、 **vardecimal**ストレージ形式は非推奨とされます。 代わりに行の圧縮を使用してください。 詳細については、「 [Data Compression](../../relational-databases/data-compression/data-compression.md)」を参照してください。 0 が既定値です。|  
@@ -68,7 +68,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) またはエラー番号 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  sp_tableoption は、ユーザー定義テーブルのオプション値を設定するためにのみ使用できます。 テーブルのプロパティを表示するには、OBJECTPROPERTY またはクエリのテーブルを使用します。  
   
  sp_tableoption の text in row オプションを有効または無効にできるのは、テーブルにテキスト列が含まれている場合だけです。 テーブルにテキスト列がない場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラーが発生します。  
@@ -109,7 +109,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
 ## <a name="examples"></a>例  
   
 ### <a name="a-storing-xml-data-out-of-the-row"></a>A. XML データの行外への格納  
- 次の例では、 **** `HumanResources.JobCandidate`テーブル内の xml データを行外に格納するように指定しています。  
+ 次の例では、 **xml** `HumanResources.JobCandidate`テーブル内の xml データを行外に格納するように指定しています。  
   
 ```sql  
 USE AdventureWorks2012;  

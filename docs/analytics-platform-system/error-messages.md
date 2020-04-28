@@ -10,24 +10,24 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 2d89e80a89df53e85ef8d2bf53c369d9e4dc0d49
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401163"
 ---
 # <a name="error-messages-in-parallel-data-warehouse"></a>並列データウェアハウスのエラーメッセージ
 
 並列データウェアハウス (PDW) のエラーメッセージは、PDW コンポーネントによって発生したエラーと問題を報告します。また、PDW によって表示される SQL Server エラーを含めることもできます。 これらのエラーメッセージは、一貫した構文を使用して情報を提示します。 この構文を理解することで、SQL Server PDW に関する問題を特定し、修正することができます。  
   
-## <a name="Basics"></a>エラーメッセージの基本  
+## <a name="error-message-basics"></a><a name="Basics"></a>エラーメッセージの基本  
 返されるエラーメッセージは、同じ構文に従います。  
   
 `Error_Indicator [SQL_State_Code] [Driver_Details] [QueryID] Message_String`  
   
 各フィールドに指定できる値は次のとおりです。  
   
-|フィールド|[説明]|例|  
+|フィールド|説明|例|  
 |---------|---------------|-----------|  
 |*Error_Indicator*|"エラー" またはその他のテキストは、ユーザーに問題を警告します。|ERROR|  
 |*SQL_State_Code*|ODBC 仕様に準拠した SQL 状態コード。 ドライバーは、アプリケーションにメッセージを返すたびに、適切な SQL 状態コードを生成します。 "Microsoft" というテキストは、エラーの原因を示します。|42000|  

@@ -19,10 +19,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
 ms.openlocfilehash: 9318a34b4853937983b107491c9210de80e5506c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056399"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-sql)
@@ -85,7 +85,7 @@ STRING_AGG 関数は、式と区切り記号を入力として受け取り、文
 ### <a name="last_value"></a>LAST_VALUE
 走査されたパスの最後のノードから属性を射影するために、LAST_VALUE 集計関数を使用できます。 この関数への入力としてエッジテーブルの別名を指定するとエラーになります。使用できるのは、ノードのテーブル名または別名だけです。
 
-**最後のノード**: 最後のノードは、一致述語の矢印の方向に関係なく、走査されたパスの最後に表示されるノードを参照します。 (例: `MATCH(SHORTEST_PATH(n(-(e)->p)+) )`)。 ここで、パスの最後のノードが最後にアクセスした P ノードになります。 
+**最後のノード**: 最後のノードは、一致述語の矢印の方向に関係なく、走査されたパスの最後に表示されるノードを参照します。 たとえば、 `MATCH(SHORTEST_PATH(n(-(e)->p)+) )`と指定します。 ここで、パスの最後のノードが最後にアクセスした P ノードになります。 
 
 一方、最後のノードは、このパターンの出力グラフパスの最後の n 番目のノードです。`MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
 
@@ -107,14 +107,14 @@ STRING_AGG 関数は、式と区切り記号を入力として受け取り、文
 ### <a name="max"></a>[MAX]
 指定されたノード/エッジ属性値、またはスキャンされたパスに出現する式から最大値を返します。
 
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
 shortest_path 関数は、MATCH 内でのみ使用できます。     
 LAST_NODE は shortest_path 内でのみサポートされます。     
 重み付けされた最短パス、すべてのパス、またはすべての最短パスを検索することはできません。         
 場合によっては、ホップ数が多いクエリに対して不適切なプランが生成され、クエリの実行時間が長くなります。 ハッシュ結合ヒントを使用すると役立つ場合があります。    
 
 
-## <a name="examples"></a>例 
+## <a name="examples"></a>使用例 
 ここに示したクエリの例では、 [SQL Graph サンプル](./sql-graph-sample.md)で作成したノードテーブルとエッジテーブルを使用します。
 
 ### <a name="a--find-shortest-path-between-2-people"></a>A.  2つのメンバーの間の最短パスを検索する
@@ -212,5 +212,5 @@ WHERE Q.levels = 2
  [MATCH (SQL グラフ)](../../t-sql/queries/match-sql-graph.md)    
  [CREATE TABLE &#40;SQL Graph&#41;](../../t-sql/statements/create-table-sql-graph.md)   
  [INSERT (SQL グラフ)](../../t-sql/statements/insert-sql-graph.md)]  
- [SQL Server 2017 を使用したグラフの処理](../../relational-databases/graphs/sql-graph-overview.md)     
+ [SQL Server 2017 でのグラフ処理](../../relational-databases/graphs/sql-graph-overview.md)     
  

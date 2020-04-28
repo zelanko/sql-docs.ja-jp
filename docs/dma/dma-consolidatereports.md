@@ -15,10 +15,10 @@ author: HJToland3
 ms.author: rajpo
 ms.custom: seo-lt-2019
 ms.openlocfilehash: ec8ededac012ccb2b3d4b62fc40d84132a6fb882
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056648"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>DMA で企業を評価し評価レポートを統合する
@@ -28,7 +28,7 @@ ms.locfileid: "74056648"
 ## <a name="prerequisites"></a>前提条件
 
 - DMA を開始するネットワーク上のツールコンピューターを指定します。 このコンピューターが SQL Server ターゲットに接続されていることを確認します。
-- ダウンロードしてインストールする:
+- 次をダウンロードし、インストールします。
   - [Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595) v 3.6 以降。
   - [PowerShell](https://aka.ms/wmf5download) v1.0 以降。
   - [.NET Framework](https://www.microsoft.com/download/details.aspx?id=30653) version 4.5 以降。
@@ -64,7 +64,7 @@ Powershell モジュールを PowerShell modules ディレクトリに保存す�
 
     PowerShell では、新しい PowerShell セッションが開始されたときに、これらのモジュールを自動的に読み込む必要があります。
 
-## <a name="create-inventory"></a>SQL Server のインベントリを作成する
+## <a name="create-an-inventory-of-sql-servers"></a><a name="create-inventory"></a>SQL Server のインベントリを作成する
 
 PowerShell スクリプトを実行して SQL Server を評価する前に、評価する SQL server のインベントリを作成する必要があります。
 
@@ -113,11 +113,11 @@ PowerShell モジュールを modules ディレクトリに読み込んでイン
 
 次の表では、dmaDataCollector 関数に関連付けられているパラメーターについて説明します。
 
-|パラメーター  |[説明] |
+|パラメーター  |説明 |
 |---------|---------|
 |**getServerListFrom** | インベントリ。 指定できる値は、 **SqlServer**と**CSV**です。<br/>詳細については、「 [SQL server のインベントリを作成](#create-inventory)する」を参照してください。 |
 |**csvPath** | CSV インベントリファイルへのパスです。  **GetServerListFrom**が**CSV**に設定されている場合にのみ使用されます。 |
-|**serverName** | **GetServerListFrom**パラメーターで**SqlServer**を使用する場合の、インベントリの SQL Server インスタンス名。 |
+|**Server** | **GetServerListFrom**パラメーターで**SqlServer**を使用する場合の、インベントリの SQL Server インスタンス名。 |
 |**databaseName** | インベントリテーブルをホストしているデータベース。 |
 |**AssessmentName** | DMA 評価の名前。 |
 |**TargetPlatform** | 実行する評価ターゲットの種類。  指定できる値は、 **AzureSQLDatabase**、 **SQLServer2012**、 **SQLServer2014**、 **Sqlserver2016-ssei-expr**、 **SQLServerLinux2017**、 **SQLServerWindows2017**、および**managedsqlserver**です。 |
@@ -136,14 +136,14 @@ PowerShell モジュールを modules ディレクトリに読み込んでイン
 
 次の表では、dmaProcessor 関数に関連付けられているパラメーターについて説明します。
 
-|パラメーター  |[説明] |
+|パラメーター  |説明 |
 |---------|---------|
 |**processTo** | JSON ファイルが処理される場所。 指定できる値は、 **SQLServer**と**AzureSQLDatabase**です。 |
-|**serverName** | データが処理される SQL Server インスタンス。  **Processto**パラメーターに**AzureSQLDatabase**を指定する場合は、SQL Server 名のみを含めます (. database.windows.net を含めないでください)。 Azure SQL Database を対象とする場合、2つのログインの入力を求められます。1つ目は Azure テナントの資格情報ですが、2つ目は Azure SQL Server の管理者ログインです。 |
+|**Server** | データが処理される SQL Server インスタンス。  **Processto**パラメーターに**AzureSQLDatabase**を指定する場合は、SQL Server 名のみを含めます (. database.windows.net を含めないでください)。 Azure SQL Database を対象とする場合、2つのログインの入力を求められます。1つ目は Azure テナントの資格情報ですが、2つ目は Azure SQL Server の管理者ログインです。 |
 |**作成した Mareporting** | JSON ファイルを処理するために作成するステージングデータベース。  指定したデータベースが既に存在し、このパラメーターを1に設定した場合、オブジェクトは作成されません。  このパラメーターは、削除された1つのオブジェクトを再作成する場合に便利です。 |
 |**CreateDataWarehouse** | Power BI レポートによって使用されるデータウェアハウスを作成します。 |
 |**databaseName** | DMAReporting データベースの名前。 |
-|**warehouseName** | データウェアハウスデータベースの名前。 |
+|**warehouseName** | データ ウェアハウス データベースの名前。 |
 |**jsonDirectory** | JSON 評価ファイルが格納されているディレクトリ。  ディレクトリに複数の JSON ファイルがある場合は、1つずつ処理されます。 |
 
 DmaProcessor 関数は、1つのファイルを処理するのに数秒かかる必要があります。

@@ -22,10 +22,10 @@ ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
 ms.openlocfilehash: dfe41ee68412414df24bc7f0bd583bbb0109b3db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74055088"
 ---
 # <a name="sp_set_database_firewall_rule-azure-sql-database"></a>sp_set_database_firewall_rule (Azure SQL データベース)
@@ -55,15 +55,15 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
 > [!NOTE]  
 >  Azure の接続試行は、このフィールドと*start_ip_address*フィールドの両方が`0.0.0.0`と等しい場合に許可されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  データベースに対するデータベースレベルのファイアウォール設定の名前は一意である必要があります。 ストアド プロシージャに提供されるデータベース レベルのファイアウォール設定の名前がデータベース レベルのファイアウォール設定のテーブルに既に存在する場合は、開始 IP アドレスと終了 IP アドレスが更新されます。 それ以外の場合、新しいデータベースレベルのファイアウォール設定が作成されます。  
   
  開始 IP アドレスと終了 IP アドレスがに`0.0.0.0`等しいデータベースレベルのファイアウォール設定を追加すると、任意の Azure リソースから[!INCLUDE[ssSDS](../../includes/sssds-md.md)]サーバー内のデータベースにアクセスできるようになります。 *名前*パラメーターに値を指定すると、ファイアウォール設定の内容を覚えやすくなります。  
   
 ## <a name="permissions"></a>アクセス許可  
- データベースに対する**CONTROL**権限が必要です。  
+ データベースに対する **CONTROL** 権限が必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次のコードでは、Azure からデータベースへのアクセスを有効にする、`Allow Azure` という名前のデータベースレベルのファイアウォール設定を作成します。  
   
 ```  

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ee70338b5a46ec60d808e489d982fd80692c5d1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400622"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>分析プラットフォームシステムでアプライアンスの電源をオンまたはオフにする
@@ -25,9 +25,9 @@ ms.locfileid: "74400622"
   
 SQL Server PDW ノードへの接続は、ノードに割り当てられた IP アドレスを使用するか、**フェールオーバークラスターマネージャー** (**cluadmin.msc**) または**hyper-v Manager** (**Virtmgmt**) アプリケーションを使用して**HST01**コンピューターから作成するか、ノード名を右クリックします。  
   
-## <a name="PowerOff"></a>アプライアンスの電源をオフにする  
+## <a name="power-off-the-appliance"></a><a name="PowerOff"></a>アプライアンスの電源をオフにする  
   
-### <a name="before-you-begin"></a>開始する前に  
+### <a name="before-you-begin"></a>始める前に  
 アプライアンスの電源をオフにする前に、アプライアンスのすべてのアクティビティを終了する必要があります。 すべてのアクティビティを終了するには:  
   
 -   管理コンソールの [**セッション**] ページを使用して、現在のユーザーを識別します。 それらのユーザーに連絡し、ログオフするように依頼してください。  
@@ -61,7 +61,7 @@ SQL Server PDW ノードへの接続は、ノードに割り当てられた IP �
   
 9. 配電ユニット (Pdu) をシャットダウンします。  
   
-## <a name="PowerOn"></a>アプライアンスの電源をオンにする  
+## <a name="power-on-the-appliance"></a><a name="PowerOn"></a>アプライアンスの電源をオンにする  
   
 ### <a name="to-power-on-the-appliance"></a>アプライアンスの電源をオンにするには  
   

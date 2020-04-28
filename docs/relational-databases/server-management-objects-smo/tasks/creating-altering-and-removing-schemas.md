@@ -13,18 +13,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 36141c426bb0d8906e5b2d2d7bb4d21aadace6f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74095914"
 ---
 # <a name="creating-altering-and-removing-schemas"></a>スキーマの作成、変更、および削除
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  
-  <xref:Microsoft.SqlServer.Management.Smo.Schema> オブジェクトは、データベース オブジェクトの所有権コンテキストを表現します。 
-  <xref:Microsoft.SqlServer.Management.Smo.Database.Schemas%2A> オブジェクトの <xref:Microsoft.SqlServer.Management.Smo.Database> プロパティは、<xref:Microsoft.SqlServer.Management.Smo.Schema> オブジェクトのコレクションを表現します。  
+  <xref:Microsoft.SqlServer.Management.Smo.Schema> オブジェクトは、データベース オブジェクトの所有権コンテキストを表現します。 <xref:Microsoft.SqlServer.Management.Smo.Database.Schemas%2A> オブジェクトの <xref:Microsoft.SqlServer.Management.Smo.Database> プロパティは、<xref:Microsoft.SqlServer.Management.Smo.Schema> オブジェクトのコレクションを表現します。  
   
 ## <a name="example"></a>例  
  提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual Studio .net で Visual C&#35; SMO プロジェクトを作成する](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)」を参照してください。  

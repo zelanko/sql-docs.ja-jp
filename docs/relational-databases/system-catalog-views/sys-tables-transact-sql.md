@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d1a6d6be7a51cf03442bb5576556b10c5c099ab0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73983307"
 ---
 # <a name="systables-transact-sql"></a>sys. tables (Transact-sql)
@@ -32,7 +32,7 @@ ms.locfileid: "73983307"
 
   の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザーテーブルごとに1行の値を返します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |\<継承された列>||このビューが継承する列の一覧については、「 [sys. objects &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)」を参照してください。|  
 |lob_data_space_id|**int**|0 以外の値は、このテーブルのラージ オブジェクト バイナリ (LOB) データを格納するデータ領域 (ファイル グループまたはパーティション構成) の ID です。 LOB データ型の例としては、 **varbinary (max)**、 **varchar (max)**、 **geography**、 **xml**などがあります。<br /><br /> 0 = テーブルは LOB データではありません。|  
@@ -49,26 +49,26 @@ ms.locfileid: "73983307"
 |large_value_types_out_of_row|**bit**|1 = 大きな値の型は、行外に格納されます。 詳細については、「[sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)」を参照してください。|  
 |is_tracked_by_cdc|**bit**|1 = テーブルで変更データ キャプチャが有効になっています。 詳細については、「 [sys. sp_cdc_enable_table &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)」を参照してください。|  
 |lock_escalation|**tinyint**|テーブルの LOCK_ESCALATION オプションの値。<br /><br /> 0 = TABLE<br /><br /> 1 = 無効<br /><br /> 2 = 自動|  
-|lock_escalation_desc|**nvarchar (60)**|テーブルの lock_escalation オプションについての説明テキストです。 有効値は、TABLE、AUTO、および DISABLE です。|  
-|is_filetable|**bit**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]以降、および[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 1 = テーブルは FileTable です。<br /><br /> FileTables について詳しくは、「[FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)」をご覧ください。|  
-|durability|**tinyint**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]以降、および[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 返される値は次のとおりです。<br /><br /> 0 = SCHEMA_AND_DATA<br /><br /> 1 = SCHEMA_ONLY<br /><br /> 既定値は0です。|  
-|durability_desc|**nvarchar (60)**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]以降、および[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 使用できる値を次に示します。<br /><br /> SCHEMA_ONLY<br /><br /> SCHEMA_AND_DATA<br /><br /> SCHEMA_AND_DATA の値は、テーブルが持続性のあるインメモリテーブルであることを示します。 メモリ最適化テーブルの既定値は SCHEMA_AND_DATA です。 値 SCHEMA_ONLY は、メモリ最適化オブジェクトでは、データベースを再起動した場合にテーブル データの更新内容が保存されないことを示します。|  
-|is_memory_optimized|**bit**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]以降、および[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 使用できる値を次に示します。<br /><br /> 0 = メモリ最適化ではありません。<br /><br /> 1 = メモリ最適化です。<br /><br /> 値 0 が既定の値です。<br /><br /> メモリ最適化テーブルは、メモリ内のユーザーテーブルです。スキーマは、他のユーザーテーブルと同様にディスクに保存されます。 メモリ最適化テーブルには、ネイティブコンパイルストアドプロシージャからアクセスできます。|  
-|temporal_type|**tinyint**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降、および[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> テーブルの種類を表す数値。<br /><br /> 0 = NON_TEMPORAL_TABLE<br /><br /> 1 = HISTORY_TABLE<br /><br /> 2 = SYSTEM_VERSIONED_TEMPORAL_TABLE|  
-|temporal_type_desc|**nvarchar (60)**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降、および[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> テーブルの種類の説明テキスト。<br /><br /> NON_TEMPORAL_TABLE<br /><br /> HISTORY_TABLE<br /><br /> SYSTEM_VERSIONED_TEMPORAL_TABLE|  
-|history_table_id|**int**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降、および[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> (2, 4) で temporal_type ときに、履歴データを保持するテーブルの object_id を返します。それ以外の場合は、NULL を返します。|  
+|lock_escalation_desc|**nvarchar(60)**|テーブルの lock_escalation オプションについての説明テキストです。 有効値は、TABLE、AUTO、および DISABLE です。|  
+|is_filetable|**bit**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降と [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 1 = テーブルは FileTable です。<br /><br /> FileTables について詳しくは、「[FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)」をご覧ください。|  
+|durability|**tinyint**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降と [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 返される値は次のとおりです。<br /><br /> 0 = SCHEMA_AND_DATA<br /><br /> 1 = SCHEMA_ONLY<br /><br /> 既定値は0です。|  
+|durability_desc|**nvarchar(60)**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降と [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 使用できる値を次に示します。<br /><br /> SCHEMA_ONLY<br /><br /> SCHEMA_AND_DATA<br /><br /> SCHEMA_AND_DATA の値は、テーブルが持続性のあるインメモリテーブルであることを示します。 メモリ最適化テーブルの既定値は SCHEMA_AND_DATA です。 値 SCHEMA_ONLY は、メモリ最適化オブジェクトでは、データベースを再起動した場合にテーブル データの更新内容が保存されないことを示します。|  
+|is_memory_optimized|**bit**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降と [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 使用できる値を次に示します。<br /><br /> 0 = メモリ最適化ではありません。<br /><br /> 1 = メモリ最適化です。<br /><br /> 値 0 が既定の値です。<br /><br /> メモリ最適化テーブルは、メモリ内のユーザーテーブルです。スキーマは、他のユーザーテーブルと同様にディスクに保存されます。 メモリ最適化テーブルには、ネイティブコンパイルストアドプロシージャからアクセスできます。|  
+|temporal_type|**tinyint**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降と [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> テーブルの種類を表す数値。<br /><br /> 0 = NON_TEMPORAL_TABLE<br /><br /> 1 = HISTORY_TABLE<br /><br /> 2 = SYSTEM_VERSIONED_TEMPORAL_TABLE|  
+|temporal_type_desc|**nvarchar(60)**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降と [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> テーブルの種類の説明テキスト。<br /><br /> NON_TEMPORAL_TABLE<br /><br /> HISTORY_TABLE<br /><br /> SYSTEM_VERSIONED_TEMPORAL_TABLE|  
+|history_table_id|**int**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降と [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> (2, 4) で temporal_type ときに、履歴データを保持するテーブルの object_id を返します。それ以外の場合は、NULL を返します。|  
 |is_remote_data_archive_enabled|**bit**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降および[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> テーブルで Stretch が有効になっているかどうかを示します。<br /><br /> 0 = テーブルは Stretch が有効になっていません。<br /><br /> 1 = テーブルは Stretch が有効です。<br /><br /> 詳細については、「 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)」を参照してください。|  
 |is_external|**bit**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降、 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]、および[!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)]。<br /><br /> テーブルが外部テーブルであることを示します。<br /><br /> 0 = テーブルは、外部テーブルではありません。<br /><br /> 1 = テーブルは外部テーブルです。| 
-|history_retention_period|**int**|**適用対象**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。 <br/><br/>History_retention_period_unit で指定された単位で表した、テンポラル履歴の保有期間を表す数値。 |  
-|history_retention_period_unit|**int**|**適用対象**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。 <br/><br/>テンポラル履歴の保有期間の単位の種類を表す数値。 <br /><br />-1: 無制限 <br /><br />3: 日 <br /><br />4: 週 <br /><br />5: 月 <br /><br />6: 年 |  
-|history_retention_period_unit_desc|**nvarchar (10)**|**適用対象**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。 <br/><br/>テンポラル履歴保有期間の単位の種類の説明テキスト。 <br /><br />INFINITE <br /><br />DAY <br /><br />[WEEK] <br /><br />MONTH <br /><br />YEAR |  
-|is_node|**bit**|**適用対象**: [!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)]および[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。 <br/><br/>1 = これはグラフノードテーブルです。 <br /><br />0 = これはグラフノードテーブルではありません。 |  
-|is_edge|**bit**|**適用対象**: [!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)]および[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。 <br/><br/>1 = これはグラフのエッジテーブルです。 <br /><br />0 = これは、グラフのエッジテーブルではありません。 |  
+|history_retention_period|**int**|**適用対象**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] <br/><br/>History_retention_period_unit で指定された単位で表した、テンポラル履歴の保有期間を表す数値。 |  
+|history_retention_period_unit|**int**|**適用対象**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] <br/><br/>テンポラル履歴の保有期間の単位の種類を表す数値。 <br /><br />-1: 無制限 <br /><br />3: 日 <br /><br />4: 週 <br /><br />5: 月 <br /><br />6: 年 |  
+|history_retention_period_unit_desc|**nvarchar (10)**|**適用対象**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] <br/><br/>テンポラル履歴保有期間の単位の種類の説明テキスト。 <br /><br />INFINITE <br /><br />DAY <br /><br />[WEEK] <br /><br />MONTH <br /><br />YEAR |  
+|is_node|**bit**|**適用対象**: [!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)] および [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。 <br/><br/>1 = これはグラフノードテーブルです。 <br /><br />0 = これはグラフノードテーブルではありません。 |  
+|is_edge|**bit**|**適用対象**: [!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)] および [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。 <br/><br/>1 = これはグラフのエッジテーブルです。 <br /><br />0 = これは、グラフのエッジテーブルではありません。 |  
 
 ## <a name="permissions"></a>アクセス許可  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例は、主キーを持たないすべてのユーザー テーブルを返します。  
   
 ```  
@@ -83,7 +83,7 @@ GO
   
 次の例は、関連するテンポラルデータを公開する方法を示しています。  
    
-**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降、および[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。
+**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降と [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。
   
 ```  
 SELECT T1.object_id, T1.name as TemporalTableName, SCHEMA_NAME(T1.schema_id) AS TemporalTableSchema,  
@@ -97,7 +97,7 @@ ORDER BY T1.temporal_type desc
 
 次の例は、テンポラル履歴のリテンション期間に関する情報を公開する方法を示しています。  
 
-**適用対象**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。  
+**適用対象**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]  
   
 ```  
 SELECT DB.is_temporal_history_retention_enabled, SCHEMA_NAME(T1.schema_id) AS TemporalTableSchema, 
@@ -111,7 +111,7 @@ ON T1.history_table_id = T2.object_id WHERE T1.temporal_type = 2
   
 ## <a name="see-also"></a>参照  
  [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [DBCC CHECKDB &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)   
  [DBCC CHECKTABLE &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)   
  [SQL Server システムカタログに対するクエリについてよく寄せられる質問](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   

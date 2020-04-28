@@ -15,10 +15,10 @@ author: HJToland3
 ms.author: jtoland
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 368372ab7324b11e9f7fdaa6af94d5ba2c0534ad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056479"
 ---
 # <a name="migrate-sql-server-logins-with-data-migration-assistant"></a>Data Migration Assistant を使用して SQL Server ログインを移行する
@@ -52,7 +52,7 @@ ms.locfileid: "74056479"
 
 - 移行の結果を確認して、ログインの移行の全体的な状態と、推奨される移行後の操作について理解することをお勧めします。
 
-## <a name="resources"></a>リソース
+## <a name="resources"></a>参照情報
 
 [Data Migration Assistant (DMA)](../dma/dma-overview.md)
 

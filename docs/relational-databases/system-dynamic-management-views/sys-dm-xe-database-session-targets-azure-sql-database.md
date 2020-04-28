@@ -12,10 +12,10 @@ ms.author: genemi
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 860faaa6c9e574feda8d5c28be17a265707fd72e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73844434"
 ---
 # <a name="sysdm_xe_database_session_targets-azure-sql-database"></a>sys.dm_xe_database_session_targets (Azure SQL Database)
@@ -27,11 +27,11 @@ ms.locfileid: "73844434"
 |-|  
 |**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 および将来のすべてのバージョン。|  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |event_session_address|**varbinary (8)**|イベントセッションのメモリアドレス。 には、dm_xe_database_sessions との多対一のリレーションシップがあります。 NULL 値は許可されません。|  
-|target_name|**nvarchar (60)**|セッション内のターゲットの名前。 NULL 値は許可されません。|  
-|target_package_guid|**UNIQUEIDENTIFIER**|ターゲットを含むパッケージの GUID。 NULL 値は許可されません。|  
+|target_name|**nvarchar(60)**|セッション内のターゲットの名前。 NULL 値は許可されません。|  
+|target_package_guid|**uniqueidentifier**|ターゲットを含むパッケージの GUID。 NULL 値は許可されません。|  
 |execution_count|**bigint**|セッションに対してターゲットが実行された回数。 NULL 値は許可されません。|  
 |execution_duration_ms|**bigint**|ターゲットが実行された時間の合計 (ミリ秒単位)。 NULL 値は許可されません。|  
 |target_data|**nvarchar(max)**|イベント集計情報など、ターゲットが保持するデータ。 NULL 値が許可されます。|  
@@ -41,7 +41,7 @@ ms.locfileid: "73844434"
   
 ### <a name="relationship-cardinalities"></a>リレーションシップ基数  
   
-|移行元|To|リレーションシップ|  
+|ソース|終了|リレーションシップ|  
 |----------|--------|------------------|  
 |dm_xe_database_session_targets。 event_session_address|dm_xe_database_sessions. アドレス|多対一|  
   

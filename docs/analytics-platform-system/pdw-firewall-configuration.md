@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4ed739ce12170aa6d0ab79b996de0075cd6723ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400883"
 ---
 # <a name="parallel-data-warehouse-firewall-configuration-in-analytics-platform-system"></a>Analytics Platform System の並列データウェアハウスファイアウォール構成
@@ -35,7 +35,7 @@ SQL Server PDW Configuration Manager の [**ファイアウォール**] ペー�
 ## <a name="external-ports"></a>外部ポート  
 次のポートは、PDW の外部からのクライアント接続用に開かれています。  
   
-|目的|ポート#|Nodes|  
+|目的|ポート#|ノード|  
 |-----------|-----------|---------|  
 |PDW 用 SQL クライアントアクセス (TDS)|17001|CTL|  
 |ローダークライアントアクセス (dwloader & SSIS)|8001|CTL|  
@@ -51,7 +51,7 @@ SQL Server PDW Configuration Manager の [**ファイアウォール**] ペー�
 ## <a name="internal-ports"></a>内部ポート  
 次のポートは、PDW が内部通信に使用しますが、PDW アプライアンスの外部からの接続に対しては開かれません。  
   
-|目的|ポート#|Nodes|  
+|目的|ポート#|ノード|  
 |-----------|-----------|---------|  
 |DMS 制御チャネルトラフィック|16450|CTL、CMP|  
 |DMS データチャネルトラフィック|16550|CTL、CMP|  

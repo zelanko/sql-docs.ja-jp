@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f435b0ba0d7474867af20aea1d59bd6118035623
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73783234"
 ---
 # <a name="bcp_batch"></a>bcp_batch
@@ -45,7 +45,7 @@ DBINT bcp_batch (HDBC
 ## <a name="returns"></a>戻り値  
  **Bcp_batch**を最後に呼び出した後に保存された行の数。エラーが発生した場合は-1。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  一括コピーのバッチではトランザクションを定義します。 アプリケーションで[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)を使用し、プログラム変数から SQL Server テーブルに行を一括コピーする**bcp_sendrow** 、プログラムが**bcp_batch**または[bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md)を呼び出した場合にのみ、行がコミットされます。  
   
  **Bcp_batch**は、 *n*行ごとに、または (テレメトリアプリケーションと同様に) 受信データになどがあるときに1回呼び出すことができます。 アプリケーションがを呼び出さない場合**bcp_batch** **bcp_done**が呼び出されたときにのみ、一括コピーされた行がコミットされます。  

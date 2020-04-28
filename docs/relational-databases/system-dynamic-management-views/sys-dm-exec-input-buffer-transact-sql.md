@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4e18f635b7bbdd8fa96a565fef6aef5be5bde87f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74097873"
 ---
 # <a name="sysdm_exec_input_buffer-transact-sql"></a>dm_exec_input_buffer (Transact-sql)
@@ -51,10 +51,10 @@ sys.dm_exec_input_buffer ( session_id , request_id )
 
 ## <a name="table-returned"></a>返されるテーブル
 
-|列名|データ型|[説明]|
+|列名|データ型|説明|
 |-----------------|---------------|-----------------|
 |**event_type**|**nvarchar(256)**|指定された spid の入力バッファー内のイベントの種類。|
-|**パラメータ**|**smallint**|ステートメントに対して指定されたすべてのパラメーター。|
+|**parameters**|**smallint**|ステートメントに対して指定されたすべてのパラメーター。|
 |**event_info**|**nvarchar(max)**|指定された spid の入力バッファー内のステートメントのテキスト。|
 
 ## <a name="permissions"></a>アクセス許可
@@ -69,7 +69,7 @@ sys.dm_exec_input_buffer ( session_id , request_id )
 > [!IMPORTANT]
 > 所有者権限を持たない Azure SQL Database (トリガー、ストアドプロシージャ、関数など) に対してこの DMV を SQL Server Management Studio 以外で実行すると、master データベースで権限エラーがスローされます。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 この動的管理関数は、**クロス適用**を行うことによって、dm_exec_sessions または sys. dm_exec_requests と組み合わせて使用できます。
 
@@ -98,7 +98,7 @@ GO
 
 ## <a name="see-also"></a>参照
 
-- [実行関連の動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)
-- [dm_exec_sessions &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)
-- [dm_exec_requests &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)
-- [DBCC INPUTBUFFER &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)
+- [実行関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)
+- [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)
+- [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)
+- [DBCC INPUTBUFFER &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)
