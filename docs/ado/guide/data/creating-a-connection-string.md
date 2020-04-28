@@ -14,10 +14,10 @@ ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3c9d81ef7be98f3c65167de24b3ff59ac6f05df5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925760"
 ---
 # <a name="creating-a-connection-string"></a>接続文字列の作成
@@ -31,10 +31,10 @@ ms.locfileid: "67925760"
   
  ADO は、接続文字列の次の5つの引数を認識します。  
   
-|引数|[説明]|  
+|引数|説明|  
 |--------------|-----------------|  
 |*プロバイダー*|接続に使用するプロバイダーの名前を指定します。|  
-|*ファイル名*|事前設定された接続情報を含むプロバイダー固有のファイル (永続化されたデータソースオブジェクトなど) の名前を指定します。|  
+|*[ファイル名]*|事前設定された接続情報を含むプロバイダー固有のファイル (永続化されたデータソースオブジェクトなど) の名前を指定します。|  
 |*URL*|ファイルやディレクトリなど、リソースを識別する絶対 URL として接続文字列を指定します。|  
 |*リモートプロバイダー*|クライアント側接続を開くときに使用するプロバイダーの名前を指定します。 (リモートデータサービスのみ)。|  
 |*リモートサーバー*|クライアント側接続を開くときに使用するサーバーのパス名を指定します。 (リモートデータサービスのみ)。|  

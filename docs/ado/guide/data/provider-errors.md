@@ -17,10 +17,10 @@ ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 85d4a7607fae1df7dfb6ec62b8a3bfae8f58001b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924546"
 ---
 # <a name="provider-errors"></a>プロバイダー エラー
@@ -64,12 +64,12 @@ End Function
 ## <a name="the-error-object"></a>Error オブジェクト  
  **エラーオブジェクトを**調べることによって、発生したエラーと、そのエラーの原因となったアプリケーションまたはオブジェクトを特定できます。 **Error**オブジェクトには、次のプロパティがあります。  
   
-|プロパティ名|[説明]|  
+|プロパティ名|説明|  
 |-------------------|-----------------|  
 |**説明**|発生したエラーの説明テキスト。|  
 |**HelpContext、HelpFile**|発生したエラーの説明を含むヘルプトピックおよびヘルプファイルを参照します。|  
 |**NativeError**|プロバイダー固有のエラー番号。|  
-|**少数**|発生したエラーの数値 ( **Errorvalueenum**に示されている) を表す長整数。|  
+|**数値**|発生したエラーの数値 ( **Errorvalueenum**に示されている) を表す長整数。|  
 |**ソース**|エラーを生成したオブジェクトまたはアプリケーションの名前を示します。|  
 |**SQLState**|SQL ステートメントの処理中にプロバイダーが返す5文字のエラーコード。|  
   

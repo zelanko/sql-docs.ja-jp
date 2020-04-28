@@ -18,10 +18,10 @@ ms.assetid: 6a0109a0-f2d9-4f7c-8e1e-42763f9acaea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f18884c7a1aabe138408cca7eb529f4f21120330
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67919916"
 ---
 # <a name="collections-ado-for-visual-c-syntax"></a>Collections (Visual C++ 構文用の ADO)
@@ -35,7 +35,7 @@ Delete(VARIANT Index);
 Refresh(void);  
 ```  
   
- 詳細については、このトピックの後半の「  
+ 詳細については、「  
   
 -   [Append メソッド (ADO)](../../../ado/reference/ado-api/append-method-ado.md)  
   
@@ -50,7 +50,7 @@ get_Count(long *c);
 get_Item(VARIANT Index, _ADOParameter **ppvObject);  
 ```  
   
- 詳細については、このトピックの後半の「  
+ 詳細については、「  
   
 -   [Count プロパティ (ADO)](../../../ado/reference/ado-api/count-property-ado.md)  
   
@@ -66,7 +66,7 @@ Delete(VARIANT Index);
 Refresh(void);  
 ```  
   
- 詳細については、このトピックの後半の「  
+ 詳細については、「  
   
 -   [Append メソッド (ADO)](../../../ado/reference/ado-api/append-method-ado.md)  
   
@@ -81,7 +81,7 @@ get_Count(long *c);
 get_Item(VARIANT Index, ADOField **ppvObject);  
 ```  
   
- 詳細については、このトピックの後半の「  
+ 詳細については、「  
   
 -   [Count プロパティ (ADO)](../../../ado/reference/ado-api/count-property-ado.md)  
   
@@ -96,7 +96,7 @@ Clear(void);
 Refresh(void);  
 ```  
   
- 詳細については、このトピックの後半の「  
+ 詳細については、「  
   
 -   [Clear メソッド (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)  
   
@@ -109,7 +109,7 @@ get_Count(long *c);
 get_Item(VARIANT Index, ADOError **ppvObject);  
 ```  
   
- 詳細については、このトピックの後半の「  
+ 詳細については、「  
   
 -   [Count プロパティ (ADO)](../../../ado/reference/ado-api/count-property-ado.md)  
   
@@ -123,7 +123,7 @@ get_Item(VARIANT Index, ADOError **ppvObject);
 Refresh(void);  
 ```  
   
- 詳細については、このトピックの後半の「  
+ 詳細については、「  
   
 -   [Refresh メソッド (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
@@ -134,7 +134,7 @@ get_Count(long *c);
 get_Item(VARIANT Index, ADOProperty **ppvObject);  
 ```  
   
- 詳細については、このトピックの後半の「  
+ 詳細については、「  
   
 -   [Count プロパティ (ADO)](../../../ado/reference/ado-api/count-property-ado.md)  
   

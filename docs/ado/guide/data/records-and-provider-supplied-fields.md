@@ -14,10 +14,10 @@ ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 54d55926d2bec89b0764b751bf165586e8d3c6c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924514"
 ---
 # <a name="records-and-provider-supplied-fields"></a>レコードとプロバイダーが指定したフィールド
@@ -55,7 +55,7 @@ ms.locfileid: "67924514"
 ## <a name="resource-recordset-columns"></a>リソースレコードセットの列  
  *リソースレコードセット*は、次の列で構成されます。  
   
-|列名|種類|[説明]|  
+|列名|Type|説明|  
 |-----------------|----------|-----------------|  
 |RESOURCE_PARSENAME|AdVarWChar|読み取り専用です。 リソースの URL を示します。|  
 |RESOURCE_PARENTNAME|AdVarWChar|読み取り専用です。 親レコードの絶対 URL を示します。|  
@@ -72,7 +72,7 @@ ms.locfileid: "67924514"
 |RESOURCE_ISCOLLECTION|AdBoolean|読み取り専用です。 リソースがディレクトリなどのコレクションである場合は True。 リソースが単純なファイルの場合は False。|  
 |RESOURCE_ISSTRUCTUREDDOCUMENT|AdBoolean|リソースが構造化ドキュメントである場合は True。 リソースが構造化ドキュメントでない場合は False。 コレクションまたは単純なファイルを指定できます。|  
 |DEFAULT_DOCUMENT|AdVarWChar|読み取り専用です。 このリソースに、フォルダーまたは構造化ドキュメントの既定の単純ドキュメントへの URL が含まれていることを示します。 リソースから既定のストリームが要求されるときに使用されます。 単純なファイルの場合、このプロパティは空白になります。|  
-|CHAPTERED_CHILDREN|AdChapter|読み取り専用です。 省略可能。 リソースの子を含む行セットのチャプターを示します。 (*インターネット発行用の OLE DB プロバイダー*では、この列は使用されません)。|  
+|CHAPTERED_CHILDREN|AdChapter|読み取り専用です。 任意。 リソースの子を含む行セットのチャプターを示します。 (*インターネット発行用の OLE DB プロバイダー*では、この列は使用されません)。|  
 |RESOURCE_DISPLAYNAME|AdVarWChar|読み取り専用です。 リソースの表示名を示します。|  
 |RESOURCE_ISROOT|AdBoolean|読み取り専用です。 リソースがコレクションまたは構造化ドキュメントのルートである場合は True。|  
   

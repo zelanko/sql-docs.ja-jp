@@ -18,10 +18,10 @@ ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4932d3349c2d4e2948ddd28d9df3a30424064dcb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920388"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF、EOF プロパティ (ADO)
@@ -32,7 +32,7 @@ ms.locfileid: "67920388"
 ## <a name="return-value"></a>戻り値  
  **BOF**プロパティと**EOF**プロパティは、**ブール**値を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Recordset**オブジェクトにレコードが含まれているかどうか、またはレコード間の移動時にレコード**セット**オブジェクトの制限を超えていないかどうかを判断するには、 **BOF**プロパティと**EOF**プロパティを使用します。  
   
  **BOF**プロパティは、現在のレコード位置が最初のレコードの前にある場合は**True** (-1) を返し、現在のレコード位置が最初のレコードの前後にある場合は**False** (0) を返します。  

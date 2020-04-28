@@ -17,10 +17,10 @@ ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6ec1601749b6537484cead17c50492de131932ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931172"
 ---
 # <a name="save-method"></a>Save メソッド
@@ -34,13 +34,13 @@ recordset.Save Destination, PersistFormat
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *宛先*  
- 省略可能。 **レコードセット**を保存するファイルの完全なパス名、または**ストリーム**オブジェクトへの参照を表す**バリアント**。  
+ *Destination (宛先)*  
+ 任意。 **レコードセット**を保存するファイルの完全なパス名、または**ストリーム**オブジェクトへの参照を表す**バリアント**。  
   
  *PersistFormat*  
- 省略可能。 **レコードセット**を保存する形式を指定する[persistformatenum](../../../ado/reference/ado-api/persistformatenum.md)値 (XML または ADTG)。 既定値は**adPersistADTG**です。  
+ 任意。 **レコードセット**を保存する形式を指定する[persistformatenum](../../../ado/reference/ado-api/persistformatenum.md)値 (XML または ADTG)。 既定値は**adPersistADTG**です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  [Save メソッド](../../../ado/reference/ado-api/save-method.md)メソッドは、開いている**レコードセット**でのみ呼び出すことができます。 [Open メソッド (ADO recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッドを使用して、後で*変換先*から**レコードセット**を復元します。  
   
  [フィルタープロパティ](../../../ado/reference/ado-api/filter-property.md)プロパティが**レコードセット**に対して有効になっている場合は、フィルターでアクセスできる行だけが保存されます。 **レコードセット**が階層化されている場合、現在の子**レコードセット**とその子が保存されます (親**レコード**セットを含む)。 子**レコードセット**の Save メソッドが呼び出されると、子とそのすべての子が保存されますが、親は保存されません。  

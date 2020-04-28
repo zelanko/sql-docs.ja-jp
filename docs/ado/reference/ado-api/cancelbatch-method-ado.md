@@ -17,10 +17,10 @@ ms.assetid: dbdc2574-e44e-4d95-b03d-4a5d9e9adf3c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f1c6a9f57d30b47641b9280e25a97336c28b0496
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920169"
 ---
 # <a name="cancelbatch-method-ado"></a>CancelBatch メソッド (ADO)
@@ -34,10 +34,10 @@ recordset.CancelBatchAffectRecords
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *影響のあるレコード*  
- 省略可能。 **CancelBatch**メソッドが影響するレコードの数を示す[AffectEnum](../../../ado/reference/ado-api/affectenum.md)値。  
+ *AffectRecords*  
+ 任意。 **CancelBatch**メソッドが影響するレコードの数を示す[AffectEnum](../../../ado/reference/ado-api/affectenum.md)値。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  バッチ更新モードで[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)内の保留中の更新を取り消すには、 **CancelBatch**メソッドを使用します。 **レコードセット**が即時更新モードである場合、 **AdCancelBatch**が**current**を指定せずにを呼び出すと、エラーが生成されます。  
   
  現在のレコードを編集している場合、または**CancelBatch**を呼び出したときに新しいレコードを追加している場合、ADO は最初に[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)メソッドを呼び出して、キャッシュされた変更を取り消します。 その後、**レコードセット**内のすべての保留中の変更が取り消されます。  

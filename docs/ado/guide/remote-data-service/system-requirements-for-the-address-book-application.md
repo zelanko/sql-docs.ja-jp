@@ -14,10 +14,10 @@ ms.assetid: da385405-1c9a-478b-9bf6-fba70015324c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2450cc97229a6629d4c2895f3960e3033d129789
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922036"
 ---
 # <a name="system-requirements-for-the-address-book-application"></a>アドレス帳アプリケーションのシステム要件
@@ -26,7 +26,7 @@ ms.locfileid: "67922036"
 > [!IMPORTANT]
 >  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
-## <a name="software-requirements"></a>ソフトウェアの要件  
+## <a name="software-requirements"></a>ソフトウェア要件  
  この Web アプリケーションを実行するためのサーバーコンピューターソフトウェアの要件は次のとおりです。  
   
 -   Microsoft Windows NT® Server 4.0、Service Pack 3 以降、または Microsoft Windows® 2000 Server。  

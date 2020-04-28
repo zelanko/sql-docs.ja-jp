@@ -18,10 +18,10 @@ ms.assetid: 808661eb-0d7c-4e6d-8e40-9dc3bef3d77a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bc5b2e2bce410309656bad5591a3df90781cc8bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932225"
 ---
 # <a name="mode-property-ado"></a>Mode プロパティ (ADO)
@@ -30,7 +30,7 @@ ms.locfileid: "67932225"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  [Connectmodeenum](../../../ado/reference/ado-api/connectmodeenum.md)値を設定または返します。 **接続**の既定値は**admodeunknown**です。 **レコード**オブジェクトの既定値は**adModeRead**です。 基になるソースに関連付けられている**ストリーム**の既定値 (ソースとして URL を使用して開かれるか、**レコード**の既定の**ストリーム**として開かれる) は、 **adModeRead**です。 基になるソース (メモリ内でインスタンス化) に関連付けられていない**ストリーム**の既定値は**admodeunknown**です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Mode**プロパティを使用して、現在の接続でプロバイダーによって使用されているアクセス許可を設定または取得します。 **Mode**プロパティを設定できるのは、**接続**オブジェクトが閉じている場合のみです。  
   
  **ストリーム**オブジェクトの場合、アクセスモードが指定されていない場合は、**ストリーム**オブジェクトを開くために使用されるソースから継承されます。 たとえば、**レコード**オブジェクトから**ストリーム**が開かれている場合、既定では、**レコード**と同じモードで開かれます。  

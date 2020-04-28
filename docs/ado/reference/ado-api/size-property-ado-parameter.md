@@ -16,10 +16,10 @@ ms.assetid: e6bad449-ebdb-4dd3-886a-9e6f1e7ee5d2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3796f772dedb961ec34eb0639034350989f99142
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931054"
 ---
 # <a name="size-property-ado-parameter"></a>Size プロパティ (ADO Parameter)
@@ -28,7 +28,7 @@ ms.locfileid: "67931054"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  **パラメーター**オブジェクトの値の最大サイズをバイトまたは文字単位で示す**Long 型**の値を設定または返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Size**プロパティを使用して、**パラメーター**オブジェクトの[Value](../../../ado/reference/ado-api/value-property-ado.md)プロパティに対して書き込みまたは読み取りを行う値の最大サイズを決定します。  
   
  **パラメーター**オブジェクトに可変長データ型 (たとえば、 **adVarChar**などの任意の**文字列**型) を指定する場合は、[パラメーター](../../../ado/reference/ado-api/parameters-collection-ado.md)コレクションに追加する前に、オブジェクトの**Size**プロパティを設定する必要があります。それ以外の場合は、エラーが発生します。  

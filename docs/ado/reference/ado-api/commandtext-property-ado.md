@@ -16,10 +16,10 @@ ms.assetid: 4dd7e82a-8da5-4a4e-b439-11a29286fa0e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c0288dde74d2a172c9b0f8bdb865f4467fb0f637
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67919727"
 ---
 # <a name="commandtext-property-ado"></a>CommandText プロパティ (ADO)
@@ -28,7 +28,7 @@ ms.locfileid: "67919727"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  SQL ステートメント、テーブル名、相対 URL、またはストアドプロシージャの呼び出しなど、プロバイダーコマンドを含む**文字列**値を取得します。値の設定もできます。 既定値は空の文字列 ("") です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **CommandText**プロパティを使用して、 [command](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトによって表されるコマンドのテキストを設定または取得します。 通常、これは SQL ステートメントですが、ストアドプロシージャの呼び出しなど、プロバイダーによって認識される他の種類のコマンドステートメントにすることもできます。 SQL ステートメントは、プロバイダーのクエリプロセッサでサポートされている特定の言語またはバージョンである必要があります。  
   
  **Command**オブジェクトの[準備](../../../ado/reference/ado-api/prepared-property-ado.md)されたプロパティが**True**に設定されていて、 **CommandText**プロパティを設定するときに**command**オブジェクトが開いている接続にバインドされている場合、ADO は[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)メソッドまたは[open](../../../ado/reference/ado-api/open-method-ado-connection.md)メソッドを呼び出すと、クエリ (つまり、プロバイダーによって格納されるクエリのコンパイル済みの形式) を準備します。  

@@ -13,10 +13,10 @@ ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 61f3e34af2a9331118b41657cf958021b972b04a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923131"
 ---
 # <a name="working-with-multidimensional-data"></a>多次元データの操作
@@ -30,7 +30,7 @@ ms.locfileid: "67923131"
   
  たとえば、キューブには次の6つのディメンションがあります (このキューブスキーマは、 [「多次元スキーマとデータの概要](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)」で説明した例と若干異なることに注意してください)。  
   
--   売上高  
+-   営業担当者  
   
 -   Geography (自然階層)-大陸、国、州など  
   
@@ -40,7 +40,7 @@ ms.locfileid: "67923131"
   
 -   メジャー-Sales、PercentChange、BudgetedSales  
   
--   成果物  
+-   製品  
   
  次のセルセットは、すべての製品の1991の売上を表します。  
   

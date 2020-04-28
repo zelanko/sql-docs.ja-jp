@@ -16,10 +16,10 @@ ms.assetid: 722803d0-cef5-4d4c-b79d-3f2f58052229
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6d405113044d10244d8c4fc3483c6220bf630dc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921426"
 ---
 # <a name="actualsize-property-ado"></a>ActualSize プロパティ (ADO)
@@ -28,7 +28,7 @@ ms.locfileid: "67921426"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  **Long 型**の値を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **ActualSize**プロパティを使用して、[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクトの値の実際の長さを返します。 すべてのフィールドに対して、 **ActualSize**プロパティは読み取り専用です。 ADO が**フィールド**オブジェクトの値の長さを判断できない場合、 **ActualSize**プロパティは**adunknown**を返します。  
   
  次の例に示すように、 **ActualSize**プロパティと[未定義サイズ](../../../ado/reference/ado-api/definedsize-property.md)プロパティは異なります。 **AdVarChar**の型が宣言され、最大長が50文字の**フィールド**オブジェクトは、定義済みの**size**プロパティ値50を返しますが、返される**ActualSize**プロパティ値は、現在のレコードのフィールドに格納されているデータの長さです。 255**バイトを超える値が**指定された**フィールド**は、可変長列として扱われます。  

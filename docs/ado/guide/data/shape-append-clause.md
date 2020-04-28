@@ -15,10 +15,10 @@ ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e09113b42f655a3b94ab3877ff81f2553a363931
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924180"
 ---
 # <a name="shape-append-clause"></a>Shape の APPEND 句
@@ -30,7 +30,7 @@ Shape コマンド APPEND 句は、1つまたは複数の列を**レコードセ
 SHAPE [parent-command [[AS] parent-alias]] APPEND column-list  
 ```  
   
-## <a name="description"></a>[説明]  
+## <a name="description"></a>説明  
  この句の部分は次のとおりです。  
   
  *親-コマンド*  
@@ -64,7 +64,7 @@ SHAPE [parent-command [[AS] parent-alias]]
    [, ... ]  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  *子レコードセット*  
  -   **レコードセット**オブジェクトを返す、中かっこ{}("") で囲まれたプロバイダーコマンド。 コマンドは基になるデータプロバイダーに対して発行され、その構文はそのプロバイダーの要件によって異なります。 これは通常 SQL 言語ですが、ADO では特定のクエリ言語を必要としません。  
   
@@ -95,7 +95,7 @@ SHAPE [parent-command [[AS] parent-alias]]
 > [!NOTE]
 >  APPEND キーワードの後の句は実際にはリストです。各句はコンマで区切り、親に追加する別の列を定義します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  SHAPE コマンドの一部としてユーザー入力からプロバイダーコマンドを構築すると、SHAPE はユーザーが指定したプロバイダーコマンドを不透明な文字列として扱い、そのコマンドをプロバイダーに忠実に渡します。 たとえば、次の SHAPE コマンドでは、  
   
 ```  

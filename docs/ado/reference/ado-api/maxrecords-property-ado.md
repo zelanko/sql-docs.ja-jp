@@ -16,10 +16,10 @@ ms.assetid: 20c76571-8c9a-482c-a99e-726ab1d93f8b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5acd8997af6993a49ac4cbcca6e3b4c8bd26acfd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932232"
 ---
 # <a name="maxrecords-property-ado"></a>MaxRecords プロパティ (ADO)
@@ -28,7 +28,7 @@ ms.locfileid: "67932232"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  返されるレコードの最大数を示す**Long 型**の値を設定または返します。 既定値はゼロ (**0**) です。これは制限がないことを意味します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  データソースからプロバイダーが返すレコードの数を制限するには、 **MaxRecords**プロパティを使用します。 このプロパティの既定の設定は0です。これは、プロバイダーが要求されたすべてのレコードを返すことを意味します。  
   
  レコードセットが開いている場合は、**レコードセット**が閉じられ、読み取り専用になっている場合、 **MaxRecords**プロパティは読み取り/書き込み可能です。  

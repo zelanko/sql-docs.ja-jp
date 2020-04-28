@@ -15,10 +15,10 @@ ms.assetid: 1152893e-b617-40f1-88b6-81e82e2234f1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b2c21f18d403817acb536367df97c8b555a4c8b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921198"
 ---
 # <a name="ado-code-examples-in-visual-basic"></a>Visual Basic での ADO のコード例
@@ -158,4 +158,4 @@ ms.locfileid: "67921198"
 ## <a name="see-also"></a>参照  
  [ADO コード例 VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
  [Visual C++ の ADO コード例](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
- [付録 D: ADO の使用例](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
+ [付録 D: ADO のサンプル](../../../ado/guide/appendixes/appendix-d-ado-samples.md)

@@ -16,27 +16,27 @@ ms.assetid: ebfd4cda-4017-4873-9d28-38b1c7db12a8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8883679a85d1e134b1759c90cde524bb97995130
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932862"
 ---
 # <a name="eventstatusenum"></a>EventStatusEnum
 イベントの実行の現在の状態を指定します。  
   
-|常時|値|[説明]|  
+|Constant|値|説明|  
 |--------------|-----------|-----------------|  
 |**adStatusCancel**|4|イベントの発生原因となった操作のキャンセルを要求します。|  
 |**adStatusCantDeny**|3|操作が保留中の操作の取り消しを要求できないことを示します。|  
 |**Adstatuserrorの Curred**|2|イベントの原因となった操作がエラーまたはエラーのために失敗したことを示します。|  
-|**adStatusOK**|1 で保護されたプロセスとして起動されました|イベントの原因となった操作が成功したことを示します。|  
+|**adStatusOK**|1|イベントの原因となった操作が成功したことを示します。|  
 |**adStatusUnwantedEvent**|5|イベントメソッドの実行が完了する前に、後続の通知を実行しないようにします。|  
   
 ## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
  パッケージ: **com. ms. wfc. データ**  
   
-|常時|  
+|Constant|  
 |--------------|  
 |AdoEnums (キャンセル)|  
 |AdoEnums. CANTDENY|  

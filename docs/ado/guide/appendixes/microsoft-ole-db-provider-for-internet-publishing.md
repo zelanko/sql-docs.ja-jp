@@ -15,10 +15,10 @@ ms.assetid: 66a208d9-b580-4655-a41e-1d36e5b5bfca
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 19d719ddb4e5a2f7851a1d12dc4abe69069a354f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926753"
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Microsoft OLE DB Provider for Internet Publishing の概要
@@ -40,7 +40,7 @@ MSDAIPP.DSO
 "Provider=MSDAIPP.DSO;Data Source=ResourceURL;User ID=MyUserID;Password=MyPassword;"
 ```
 
- または
+ \- または -
 
 ```vb
 "URL=ResourceURL;User ID=MyUserID;Password=MyPassword;"
@@ -48,11 +48,11 @@ MSDAIPP.DSO
 
  文字列は、次のキーワードで構成されています。
 
-|Keyword|[説明]|
+|キーワード|説明|
 |-------------|-----------------|
 |**プロバイダー**|インターネット発行用の OLE DB プロバイダーを指定します。|
 |**データソース**または- **URL**|Web フォルダーに発行されたファイルまたはディレクトリの URL を指定します。|
-|**User ID**|ユーザー名を指定します。|
+|**[ユーザー ID]**|ユーザー名を指定します。|
 |**パスワード**|ユーザーのパスワードを指定します。|
 
 > [!NOTE]

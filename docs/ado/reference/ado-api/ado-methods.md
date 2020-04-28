@@ -14,10 +14,10 @@ ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8df204daeda82f809cf50246590141729e3608e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920923"
 ---
 # <a name="ado-methods"></a>ADO メソッド
@@ -32,8 +32,8 @@ ms.locfileid: "67920923"
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|保留中のバッチ更新をキャンセルします。|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|**Update**メソッドを呼び出す前に、**レコードセット**オブジェクトの現在または新しい行、または**レコード**オブジェクトの**Fields**コレクションに対して行われたすべての変更を取り消します。|  
 |[クリア](../../../ado/reference/ado-api/clear-method-ado.md)|**エラーコレクションから**すべての**エラー**オブジェクトを削除します。|  
-|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|既存の**レコード**セットオブジェクトから、重複する**レコードセット**オブジェクトを作成します。 必要に応じて、複製が読み取り専用であることを指定します。|  
-|[Ok](../../../ado/reference/ado-api/close-method-ado.md)|開いているオブジェクトとすべての依存オブジェクトを閉じます。|  
+|[複製](../../../ado/reference/ado-api/clone-method-ado.md)|既存の**レコード**セットオブジェクトから、重複する**レコードセット**オブジェクトを作成します。 必要に応じて、複製が読み取り専用であることを指定します。|  
+|[閉じる](../../../ado/reference/ado-api/close-method-ado.md)|開いているオブジェクトとすべての依存オブジェクトを閉じます。|  
 |[CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)|2つのブックマークを比較し、それらの相対値を示す値を返します。|  
 |[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)|ファイルまたはディレクトリ、およびその内容を別の場所にコピーします。|  
 |[CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md)|**ストリーム**内の指定した文字数またはバイト数 (**型**によって異なる) を別の**ストリーム**オブジェクトにコピーします。|  
@@ -53,7 +53,7 @@ ms.locfileid: "67920923"
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|**レコードセット**オブジェクトの複数のレコードを配列に取得します。|  
 |[GetString](../../../ado/reference/ado-api/getstring-method-ado.md)|**レコードセット**を文字列として返します。|  
 |[LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md)|既存のファイルの内容を**ストリーム**に読み込みます。|  
-|[[詳細ビュー]](../../../ado/reference/ado-api/move-method-ado.md)|**レコードセット**オブジェクト内の現在のレコードの位置を移動します。|  
+|[合わせ](../../../ado/reference/ado-api/move-method-ado.md)|**レコードセット**オブジェクト内の現在のレコードの位置を移動します。|  
 |[MoveFirst、MoveLast、MoveNext、および MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|指定したレコード**セット**オブジェクト内の最初、最後、次、または前のレコードに移動し、そのレコードを現在のレコードにします。|  
 |[MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md)|ファイルまたはディレクトリとその内容を別の場所に移動します。|  
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|一連のコマンドを進めて、現在の**レコードセット**オブジェクトをクリアし、次の**レコードセット**を返します。|  
@@ -63,21 +63,21 @@ ms.locfileid: "67920923"
 |[Open (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)|**ストリーム**オブジェクトを開き、バイナリデータまたはテキストデータのストリームを操作します。|  
 |[OpenSchema](../../../ado/reference/ado-api/openschema-method.md)|プロバイダーからデータベーススキーマ情報を取得します。|  
 |[put_OLEDBCommand メソッド](../../../ado/reference/ado-api/put-oledbcommand-method.md)|このメソッドは操作を実行しません。常に S_OK を返します。|  
-|[Read](../../../ado/reference/ado-api/read-method.md)|**ストリーム**オブジェクトから指定されたバイト数を読み取ります。|  
+|[読み取り](../../../ado/reference/ado-api/read-method.md)|**ストリーム**オブジェクトから指定されたバイト数を読み取ります。|  
 |[ReadText](../../../ado/reference/ado-api/readtext-method.md)|テキスト**ストリーム**オブジェクトから指定された数の文字を読み取ります。|  
-|[[更新]](../../../ado/reference/ado-api/refresh-method-ado.md)|プロバイダーによって使用可能なオブジェクトを反映するように、コレクション内のオブジェクトを更新します。|  
+|[更新](../../../ado/reference/ado-api/refresh-method-ado.md)|プロバイダーによって使用可能なオブジェクトを反映するように、コレクション内のオブジェクトを更新します。|  
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|オブジェクトの基になっているクエリを再実行することによって、**レコードセット**オブジェクトのデータを更新します。|  
-|[[再同期]](../../../ado/reference/ado-api/resync-method.md)|基になるデータベースから、現在の**レコードセット**オブジェクトまたは**レコード**オブジェクトの**Fields**コレクションのデータを更新します。|  
-|[保存](../../../ado/reference/ado-api/save-method.md)|ファイルまたは**ストリーム**オブジェクトに**レコードセット**を保存します。|  
+|[再同期](../../../ado/reference/ado-api/resync-method.md)|基になるデータベースから、現在の**レコードセット**オブジェクトまたは**レコード**オブジェクトの**Fields**コレクションのデータを更新します。|  
+|[および](../../../ado/reference/ado-api/save-method.md)|ファイルまたは**ストリーム**オブジェクトに**レコードセット**を保存します。|  
 |[SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)|**ストリーム**のバイナリコンテンツをファイルに保存します。|  
-|[弁護士](../../../ado/reference/ado-api/seek-method.md)|**レコードセット**のインデックスを検索して、指定した値と一致する行をすばやく検索し、現在の行の位置をその行に変更します。|  
+|[Seek](../../../ado/reference/ado-api/seek-method.md)|**レコードセット**のインデックスを検索して、指定した値と一致する行をすばやく検索し、現在の行の位置をその行に変更します。|  
 |[SetEOS](../../../ado/reference/ado-api/seteos-method.md)|ストリームの末尾である位置を設定します。|  
 |[SkipLine](../../../ado/reference/ado-api/skipline-method.md)|テキストストリームを読み取るときに、1行全体をスキップします。|  
 |[統計](../../../ado/reference/ado-api/stat-method.md)|開いているストリームに関する統計情報を取得します。|  
 |[サポート](../../../ado/reference/ado-api/supports-method.md)|指定した**レコードセット**オブジェクトが特定の種類の機能をサポートするかどうかを判断します。|  
 |[Update](../../../ado/reference/ado-api/update-method.md)|レコード**セット**オブジェクトの現在の行、または**レコード**オブジェクトの**Fields**コレクションに対して行ったすべての変更を保存します。|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|すべての保留中のバッチ更新をディスクに書き込みます。|  
-|[Write](../../../ado/reference/ado-api/write-method.md)|バイナリデータを**ストリーム**オブジェクトに書き込みます。|  
+|[書き込み](../../../ado/reference/ado-api/write-method.md)|バイナリデータを**ストリーム**オブジェクトに書き込みます。|  
 |[WriteText](../../../ado/reference/ado-api/writetext-method.md)|指定したテキスト文字列を**ストリーム**オブジェクトに書き込みます。|  
   
 ## <a name="see-also"></a>参照  

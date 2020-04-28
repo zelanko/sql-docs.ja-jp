@@ -16,10 +16,10 @@ ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 70a6dd02722a34159b345a83b32897aa8c38d0ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920786"
 ---
 # <a name="adostreamconstruction-interface"></a>ADOStreamConstruction インターフェイス
@@ -32,12 +32,12 @@ ms.locfileid: "67920786"
 |[Stream プロパティ](../../../ado/reference/ado-api/stream-property.md)|読み取り/書き込み。 OLE DB**ストリーム**オブジェクトを取得/設定します。|  
   
 ## <a name="methods"></a>メソッド  
- [なし] :  
+ なし。  
   
-## <a name="events"></a>events  
- [なし] :  
+## <a name="events"></a>イベント  
+ なし。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  OLE DB **IStream**オブジェクト (`pStream`) を指定した場合、ADO **Stream**オブジェクト (`adoStr`) の構造は、次の3つの基本的な操作になります。  
   
 1.  ADO**ストリーム**オブジェクトを作成します。  
@@ -55,7 +55,7 @@ ms.locfileid: "67920786"
                          (void**)&adoStrConstruct);  
     ```  
   
- プロパティメソッドを呼び出して、ADO **Stream**オブジェクトの OLE DB IStream オブジェクトを設定します。 **** `IADOStreamConstruction::get_Stream`  
+ プロパティメソッドを呼び出して、ADO **Stream**オブジェクトの OLE DB IStream オブジェクトを設定します。 **IStream** `IADOStreamConstruction::get_Stream`  
   
 ```  
 IUnknown *pUnk=NULL;  
@@ -65,7 +65,7 @@ adoStrConstruct->put_Stream(pUnk);
   
  結果`adoStr`のオブジェクトは、OLE DB **IStream**オブジェクトから構築された ADO**ストリーム**オブジェクトを表します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **バージョン:** ADO 2.0 以降のバージョン  
   
  **ライブラリ:** msado15.dll  

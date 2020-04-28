@@ -15,10 +15,10 @@ ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bd28ece0e82c4551409920c876d54fbd7dc501ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926612"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Microsoft OLE DB Provider for SQL Server の概要
@@ -47,7 +47,7 @@ User ID=MyUserID;Password=MyPassword;"
 
  文字列は、次のキーワードで構成されています。
 
-|Keyword|[説明]|
+|キーワード|説明|
 |-------------|-----------------|
 |**プロバイダー**|SQL Server の OLE DB プロバイダーを指定します。|
 |**データソース**または**サーバー**|サーバーの名前を指定します。|
@@ -151,7 +151,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |列の定義|DBPROP_COLUMNDEFINITION|
 |Connect Timeout|DBPROP_INIT_TIMEOUT|
 |現在のカタログ|DBPROP_CURRENTCATALOG|
-|Data Source|DBPROP_INIT_DATASOURCE|
+|データ ソース|DBPROP_INIT_DATASOURCE|
 |データ ソース名|DBPROP_DATASOURCENAME|
 |データソースオブジェクトのスレッドモデル|DBPROP_DSOTHREADMODEL|
 |DBMS 名|DBPROP_DBMSNAME|
@@ -180,13 +180,13 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |Select リスト内の列の並べ替え|DBPROP_ORDERBYCOLUMNSINSELECT|
 |出力パラメーターの可用性|DBPROP_OUTPUTPARAMETERAVAILABILITY|
 |Ref アクセサーで渡す|DBPROP_BYREFACCESSORS|
-|Password|DBPROP_AUTH_PASSWORD|
+|パスワード|DBPROP_AUTH_PASSWORD|
 |Persist Security Info|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|
 |永続的な ID の種類|DBPROP_PERSISTENTIDTYPE|
 |中止動作の準備|DBPROP_PREPAREABORTBEHAVIOR|
 |コミット動作の準備|DBPROP_PREPARECOMMITBEHAVIOR|
 |プロシージャ用語|DBPROP_PROCEDURETERM|
-|ダイアログを表示する|DBPROP_INIT_PROMPT|
+|Prompt|DBPROP_INIT_PROMPT|
 |プロバイダーのフレンドリ名|DBPROP_PROVIDERFRIENDLYNAME|
 |プロバイダー名|DBPROP_PROVIDERFILENAME|
 |プロバイダーのバージョン|DBPROP_PROVIDERVER|
@@ -200,8 +200,8 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |テーブル用語|DBPROP_TABLETERM|
 |トランザクション DDL|DBPROP_SUPPORTEDTXNDDL|
 |User ID|DBPROP_AUTH_USERID|
-|ユーザー名|DBPROP_USERNAME|
-|ウィンドウハンドル|DBPROP_INIT_HWND|
+|[ユーザー名]|DBPROP_USERNAME|
+|ウィンドウ ハンドル|DBPROP_INIT_HWND|
 
 ## <a name="recordset-dynamic-properties"></a>レコードセットの動的プロパティ
  次のプロパティが、**レコードセット**オブジェクトの**properties**コレクションに追加されます。

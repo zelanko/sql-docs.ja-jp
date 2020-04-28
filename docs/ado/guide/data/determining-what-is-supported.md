@@ -14,10 +14,10 @@ ms.assetid: 65090cba-6d46-4775-8d61-f6838e7752a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dc42e9128ccc1ccb43996f554ffe280916884307
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925525"
 ---
 # <a name="determining-what-is-supported"></a>サポートされている機能を特定する
@@ -28,7 +28,7 @@ ms.locfileid: "67925525"
 boolean = recordset.Supports(CursorOptions )  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **サポート**メソッドは、プロバイダーがカーソルオプション引数によって識別されるすべての機能をサポートしているかどうかを示すブール値を返します。 **サポート**メソッドを使用して、**レコードセット**オブジェクトがサポートする機能の種類を決定できます。 対応する定数が*カーソルオプション*に含まれる機能を**レコードセット**オブジェクトがサポートしている場合、 **supports**メソッドは**True**を返します。 それ以外の場合は**False**を返します。  
   
  **Supports**メソッドを使用して、**レコードセット**オブジェクトが新しいレコードの追加、ブックマークの使用、**検索**メソッドの使用、スクロールの使用、**インデックス**プロパティの使用、およびバッチ更新の実行を行うことができるかどうかを確認できます。 定数とその意味の完全な一覧については、「[カーソルオプション列挙型](../../../ado/reference/ado-api/cursoroptionenum.md)」を参照してください。  

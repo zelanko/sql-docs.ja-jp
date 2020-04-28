@@ -15,10 +15,10 @@ ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f15c5890300687a2d587a58a586d00bf2c8d0fd8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926360"
 ---
 # <a name="absolute-and-relative-urls"></a>絶対 URL と相対 URL
@@ -38,10 +38,10 @@ URL は、ローカルまたはネットワーク上のコンピューターに�
  *server*  
  *リソース*が配置されているコンピューターの名前を指定します。  
   
- *道*  
+ *path*  
  ターゲットにつながる一連のディレクトリを指定します。 *リソース*を省略した場合、ターゲットは*path*の最後のディレクトリになります。  
   
- *センター*  
+ *resource*  
  含まれている場合、*リソース*はターゲットであり、通常はファイルの名前です。 これは、1つのバイナリストリーム (バイト) を含む*単純なファイル*であるか、または1つ以上のストレージとバイトのバイナリストリームを含む*構造化ドキュメント*である可能性があります。  
   
 ## <a name="url-scheme-registration"></a>URL スキームの登録  

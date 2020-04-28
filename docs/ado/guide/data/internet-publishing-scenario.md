@@ -15,10 +15,10 @@ ms.assetid: 2f551969-0fd9-41ee-b81d-100975a4bdc2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 00f470bef5026a6f91c43478b3d745446130d081
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924968"
 ---
 # <a name="internet-publishing-scenario"></a>インターネットへの発行のシナリオ
@@ -26,13 +26,13 @@ ms.locfileid: "67924968"
   
  このシナリオを作成するには、次の手順を実行する必要があります。  
   
--   [手順 1: Visual Basic プロジェクトを設定する](../../../ado/guide/data/step-1-set-up-the-visual-basic-project.md)  
+-   [手順 1:Visual Basic プロジェクトを設定する](../../../ado/guide/data/step-1-set-up-the-visual-basic-project.md)  
   
--   [手順 2: Main リスト ボックスを初期化する](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)  
+-   [手順 2:Main リスト ボックスを初期化する](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)  
   
--   [手順 3: Fields リスト ボックスに値を設定する](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)  
+-   [手順 3:Fields リスト ボックスに値を設定する](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)  
   
--   [手順 4: Details テキスト ボックスに値を設定する](../../../ado/guide/data/step-4-populate-the-details-text-box.md)  
+-   [手順 4:Details テキスト ボックスに値を設定する](../../../ado/guide/data/step-4-populate-the-details-text-box.md)  
   
 ## <a name="see-also"></a>参照  
  [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)   

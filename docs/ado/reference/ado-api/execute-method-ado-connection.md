@@ -17,10 +17,10 @@ ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4999b1e21ec145713cadae28ff7ee8a64dd460b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932892"
 ---
 # <a name="execute-method-ado-connection"></a>Execute メソッド (ADO Connection)
@@ -42,10 +42,10 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
  実行する SQL ステートメント、ストアドプロシージャ、URL、またはプロバイダー固有のテキストを含む**文字列**値です。 **必要に応じ**て、プロバイダーが SQL 対応である場合にのみ、テーブル名を使用できます。 たとえば、"Customers" という名前のテーブルが使用されている場合、ADO は自動的に標準の SQL Select 構文を先頭に付加し、" [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT * FROM Customers" をステートメントとしてプロバイダーに渡します。  
   
  *RecordsAffected*  
- 省略可能。 操作によって影響を受けたレコードの数をプロバイダーが返す**長い**変数。  
+ 任意。 操作によって影響を受けたレコードの数をプロバイダーが返す**長い**変数。  
   
- *オプション*  
- 省略可能。 プロバイダーが CommandText 引数を評価する方法を示す**Long**値。 1つ以上の[Commandtypeenum](../../../ado/reference/ado-api/commandtypeenum.md)値または[executeoptionenum](../../../ado/reference/ado-api/executeoptionenum.md)値のビットマスクを指定できます。  
+ *[オプション]*  
+ 任意。 プロバイダーが CommandText 引数を評価する方法を示す**Long**値。 1つ以上の[Commandtypeenum](../../../ado/reference/ado-api/commandtypeenum.md)値または[executeoptionenum](../../../ado/reference/ado-api/executeoptionenum.md)値のビットマスクを指定できます。  
   
  **メモ****Executeoptionenum**値**adExecuteNoRecords**を使用すると、内部処理を最小限に抑え、Visual Basic 6.0 から移植するアプリケーションに対して、パフォーマンスを向上させることができます。  
   
@@ -53,7 +53,7 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
   
  Execute を使用して adCmdFile または adCmdTableDirect の CommandTypeEnum 値を使用しないでください。 これらの値は、**レコードセット**の[OPEN メソッド (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)および[Requery メソッド](../../../ado/reference/ado-api/requery-method.md)メソッドを使用したオプションとしてのみ使用できます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトに対して**Execute**メソッドを使用すると、指定された接続の CommandText 引数でメソッドに渡す任意のクエリが実行されます。 CommandText 引数で行を返すクエリが指定されている場合、実行によって生成される結果は、新しい**レコードセット**オブジェクトに格納されます。 コマンドが結果を返すことを意図していない場合 (SQL UPDATE クエリなど)、オプション**adExecuteNoRecords**が指定されていれば、プロバイダーは**何も**返しません。それ以外の場合は、終了した**レコードセット**が返されます。  
   
  返される**レコードセット**オブジェクトは、常に読み取り専用の順方向専用カーソルです。 より多くの機能を持つ**レコードセット**オブジェクトが必要な場合は、まず、必要なプロパティ設定を使用して**レコードセット**オブジェクトを作成し、次に**レコードセット**オブジェクトの[Open メソッド (ADO recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッドを使用してクエリを実行し、目的のカーソルの種類を返します。  

@@ -16,10 +16,10 @@ ms.assetid: f78f61b6-87e0-48dc-961e-83d0e20da58e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 23ec65380bfea16d38f02cab0a070ab69f85d525
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67919746"
 ---
 # <a name="commandstream-property-ado"></a>CommandStream プロパティ (ADO)
@@ -28,7 +28,7 @@ ms.locfileid: "67919746"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  **Command**オブジェクトの入力として使用されるストリームを設定または返します。 このストリームの形式はプロバイダー固有です。詳細については、プロバイダーのドキュメントを参照してください。 このプロパティは、**コマンド**の入力の文字列を指定するために使用される[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)プロパティに似ています。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Commandstream**と**CommandText**は相互に排他的です。 ユーザーが**Commandstream**プロパティを設定すると、 **CommandText**プロパティが空の文字列 ("") に設定されます。 ユーザーが**CommandText**プロパティを設定した場合、 **Commandstream**プロパティは**Nothing**に設定されます。  
   
  コマンドの動作。**パラメーターの更新**とコマンドの**Prepare**メソッドは、プロバイダーによって定義されます。 ストリーム内のパラメーターの値は更新できません。  

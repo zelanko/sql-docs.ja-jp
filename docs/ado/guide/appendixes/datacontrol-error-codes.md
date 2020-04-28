@@ -14,16 +14,16 @@ ms.assetid: 293df9d5-e1a2-406d-9107-07bf7cdc6f96
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b59f0f98122d37447e2e702304a31c44073bacfa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926845"
 ---
 # <a name="datacontrol-object-error-codes"></a>DataControl オブジェクトのエラーコード
 次の表に、RDS の一覧を示し[ます。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクトのエラーコード。 小さい2バイトの正の10進変換、完全なエラーコードの負の10進変換、および16進数の値が表示されます。
 
-|RDS.DataControl エラーコード|番号|[説明]|
+|RDS.DataControl エラーコード|数値|説明|
 |---------------------------------|------------|-----------------|
 |**IDS_AsyncPending**|4107-2146824175 0x800A1011|非同期操作が保留中であるため、操作を実行できません。|
 |**IDS_BadInlineTablegram**|4105-2146824183 0x800A1009|インライン tablegram が正しくありません。|

@@ -16,10 +16,10 @@ ms.assetid: 49dc9a49-af7b-433b-be36-7a14ca984fb7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c6b33ef7eb4bae796fa2b2da59a7b1dc805d739e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920330"
 ---
 # <a name="cachesize-property-ado"></a>CacheSize プロパティ (ADO)
@@ -28,7 +28,7 @@ ms.locfileid: "67920330"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  0より大きくなければならない**Long 型**の値を設定または返します。 既定値は 1 です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  プロバイダーからローカルメモリに一度に取得するレコードの数を制御するには、 **CacheSize**プロパティを使用します。 たとえば、 **CacheSize**が10の場合、最初に**レコードセット**オブジェクトを開いた後、プロバイダーは最初の10個のレコードをローカルメモリに取得します。 **レコードセット**オブジェクト内を移動すると、プロバイダーはローカルメモリバッファーからデータを返します。 キャッシュ内の最後のレコードを越えて移動すると、プロバイダーは、次の10個のレコードをデータソースからキャッシュに取得します。  
   
 > [!NOTE]

@@ -14,10 +14,10 @@ ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e666f479d95e3915703dc539ba2731e95175488b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925139"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: 単純な ADO アプリケーション
@@ -42,19 +42,19 @@ ms.locfileid: "67925139"
   
  ![HelloData VB アプリケーションの Form1](../../../ado/guide/data/media/hellodata.gif "HelloData")  
   
-|コントロールの種類|プロパティ|Value|  
+|コントロール型|プロパティ|値|  
 |------------------|--------------|-----------|  
-|フォーム|Name|修飾子|  
-||高さ|6500|  
+|フォーム|名前|Form1|  
+||[高さ]|6500|  
 ||幅|6500|  
-|MS DataGrid|Name|grdDisplay1|  
-|TextBox|Name|txtDisplay1|  
+|MS DataGrid|名前|grdDisplay1|  
+|TextBox|名前|txtDisplay1|  
 ||Multiline|true|  
-|コマンドボタン|Name|cmdGetData|  
-||Caption|データの取得|  
-|コマンドボタン|Name|cmdExamineData|  
+|コマンドボタン|名前|cmdGetData|  
+||Caption|Get Data|  
+|コマンドボタン|名前|cmdExamineData|  
 ||Caption|データの調査|  
-|コマンドボタン|Name|cmdEditData|  
-||Caption|データの編集|  
-|コマンドボタン|Name|cmdUpdateData|  
+|コマンドボタン|名前|cmdEditData|  
+||Caption| データの編集|  
+|コマンドボタン|名前|cmdUpdateData|  
 ||Caption|更新データ|

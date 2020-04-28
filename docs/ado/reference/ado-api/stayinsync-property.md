@@ -20,10 +20,10 @@ ms.assetid: 502d69b5-dc9a-455d-b115-a03bd39a552b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 18d17e0a761fe03053ba90b8ff1ef87f3067df76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67930747"
 ---
 # <a name="stayinsync-property"></a>StayInSync プロパティ
@@ -32,7 +32,7 @@ ms.locfileid: "67930747"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  **ブール**値を設定または返します。 既定値は **True** です。 **True**の場合、親の**Recordset**オブジェクトが行の位置を変更すると、チャプターが更新されます。**False**の場合、親の**Recordset**オブジェクトが行の位置を変更した場合でも、チャプターは前の章のデータを参照し続けます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  このプロパティは、 [OLE DB 用の Microsoft データ整形サービス](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)によってサポートされるレコードセットなどの階層的なレコードセットに適用されます。子**レコード**セットを取得する前に、親**レコード**セットに設定する必要があります。 このプロパティは、階層的なレコードセットの移動を簡略化します。  
   
 ## <a name="applies-to"></a>適用対象  

@@ -18,10 +18,10 @@ ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8dabf974e36b1f6beaff36f3a4888c128d7dfe1b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921514"
 ---
 # <a name="activeconnection-property-ado"></a>ActiveConnection プロパティ (ADO)
@@ -30,17 +30,17 @@ ms.locfileid: "67921514"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  接続が閉じられている場合は接続の定義を含む**文字列**値、または接続が開いている場合は現在の**接続**オブジェクトを含む**バリアント**を設定または返します。 既定値は null オブジェクト参照です。 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティを参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **ActiveConnection**プロパティを使用して、指定した**コマンド**オブジェクトを実行する**接続**オブジェクトを決定します。指定した**レコードセット**が開かれます。  
   
-## <a name="command"></a>command  
+## <a name="command"></a>コマンド  
  **Command**オブジェクトの場合、 **ActiveConnection**プロパティは読み取り/書き込み可能です。  
   
  このプロパティを開いている**接続**オブジェクトまたは有効な接続文字列に設定する前に**Command**オブジェクトで[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)メソッドを呼び出そうとすると、エラーが発生します。  
   
  **接続**オブジェクトが**ActiveConnection**プロパティに割り当てられている場合は、オブジェクトを開く必要があります。 閉じた接続オブジェクトを割り当てると、エラーが発生します。  
   
-### <a name="note"></a>注意  
+### <a name="note"></a>メモ  
  **Microsoft Visual Basic****ActiveConnection**プロパティを*Nothing*に設定すると、現在の**接続**から**コマンド**オブジェクトの関連付けが解除され、プロバイダーによって、データソースに関連付けられているすべてのリソースが解放されます。 その後、**コマンド**オブジェクトを同じまたは別の**接続**オブジェクトに関連付けることができます。 プロバイダーによっては、プロパティを最初に*Nothing*に設定しなくても、プロパティ設定をある接続から別の**接続**に変更することができます。  
   
  **コマンド**オブジェクトの[parameters](../../../ado/reference/ado-api/parameters-collection-ado.md)コレクションにプロバイダーによって提供されるパラメーターが含まれている場合、 **ActiveConnection**プロパティを*Nothing*または別の**接続**オブジェクトに設定すると、コレクションはクリアされます。 [パラメーター](../../../ado/reference/ado-api/parameter-object.md)オブジェクトを手動で作成し、それを使用して**Command**オブジェクトの**Parameters**コレクションを設定する場合は、 **ActiveConnection**プロパティを*Nothing*または別の**接続**オブジェクトに設定しても、**パラメーター**コレクションはそのまま残ります。  

@@ -16,10 +16,10 @@ ms.assetid: daa8319a-49aa-4c1c-9af6-0b01e9ab2f9d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dba8636f07b88f1c05d465b844376c6ef3e61240
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931654"
 ---
 # <a name="position-property-ado"></a>Position プロパティ (ADO)
@@ -28,7 +28,7 @@ ms.locfileid: "67931654"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  ストリームの先頭からの現在位置のオフセットをバイト数で指定する**Long 型**の値を設定または返します。 既定値は0で、ストリームの最初のバイトを表します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  現在の位置は、ストリームの末尾の後の点に移動できます。 ストリームの末尾を越えて現在位置を指定すると、**ストリーム**オブジェクトの[サイズ](../../../ado/reference/ado-api/size-property-ado-stream.md)がそれに応じて大きくなります。 この方法で追加された新しいバイトは null になります。  
   
 > [!NOTE]

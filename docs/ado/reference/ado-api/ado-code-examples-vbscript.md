@@ -16,10 +16,10 @@ ms.assetid: 78bb9a95-7ac4-44b6-818b-d1787f952ed7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bd4bef039b082d281f2426cc9c7695d8115fad05
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921174"
 ---
 # <a name="ado-code-examples-vbscript"></a>VBScript での ADO のコード例
@@ -47,4 +47,4 @@ Microsoft® Visual Basic® Scripting Edition (VBScript) で記述するときに
 ## <a name="see-also"></a>参照  
  [Visual Basic の ADO コード例](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
  [Visual C++ の ADO コード例](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
- [付録 D: ADO の使用例](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
+ [付録 D: ADO のサンプル](../../../ado/guide/appendixes/appendix-d-ado-samples.md)

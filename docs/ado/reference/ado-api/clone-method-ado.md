@@ -17,10 +17,10 @@ ms.assetid: ad49265f-1c05-4271-9bbf-7c00010ac18c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7439f9a4a04582f4cf4c4878892ed0f4f33e228c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920014"
 ---
 # <a name="clone-method-ado"></a>Clone メソッド (ADO)
@@ -44,9 +44,9 @@ Set rstDuplicate = rstOriginal.Clone (LockType)
  複製する**レコードセット**オブジェクトを識別するオブジェクト変数です。  
   
  *LockType*  
- 省略可能。 元の**レコードセット**のロックの種類または読み取り専用の**レコードセット**を指定する[locktypeenum](../../../ado/reference/ado-api/locktypeenum.md)値。 有効な値は、 **Adlockunspecified**または**adlockunspecified**です。  
+ 任意。 元の**レコードセット**のロックの種類または読み取り専用の**レコードセット**を指定する[locktypeenum](../../../ado/reference/ado-api/locktypeenum.md)値。 有効な値は、 **Adlockunspecified**または**adlockunspecified**です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  複数の重複したレコード**セット**オブジェクトを作成するには、 **Clone**メソッドを使用します。特に、特定のレコードのセットに複数の現在のレコードを保持する場合に使用します。 **Clone**メソッドを使用する方が、元のと同じ定義を使用する新しい**レコードセット**オブジェクトを作成して開くよりも効率的です。  
   
  元の**レコードセット**(存在する場合) の[Filter](../../../ado/reference/ado-api/filter-property.md)プロパティは、複製には適用されません。 新しい**レコードセット**の**filter**プロパティを設定して、結果をフィルター処理します。 既存の**フィルター**値をコピーする最も簡単な方法は、次のように、それを直接割り当てることです。  
@@ -67,7 +67,7 @@ rsNew.Filter = rsOriginal.Filter
   
  次の表に、すべての**レコードセット**イベントの完全な一覧を示します。 **Clone**メソッドを使用して生成されたレコードセット複製に対して有効でトリガーされるかどうかを示します。  
   
-|イベント|複製でトリガーされますか?|  
+|event|複製でトリガーされますか?|  
 |-----------|--------------------------|  
 |[EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|いいえ|  
 |[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|いいえ|  

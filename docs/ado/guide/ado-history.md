@@ -13,10 +13,10 @@ ms.assetid: 667673f2-3151-432b-894a-3fc60b704ea4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a84ccbb97c26ea92f31212933aac79bde2784b72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67927165"
 ---
 # <a name="ado-features-for-each-release"></a>各リリースの ADO 機能
@@ -32,7 +32,7 @@ ms.locfileid: "67927165"
  ADO 2.8 は、Microsoft Data Access Components (MDAC) 2.8 の一部として、Windows XP および Windows Server 2003 に含まれていました。 また、MDAC 2.8 の再頒布可能バージョンも利用できます。この再頒布可能バージョンは、Windows 2000 にのみインストールする必要があることに注意してください。 ADO 2.8 では、いくつかのセキュリティ関連の問題に対処しています。
 
  *ハードドライブへのアクセスは、信頼済みゾーンの外部では許可されていません。*
-信頼できないサイトを含むクロスドメインスクリプトでは、次の操作が無効になっています: **** **LoadFromFile** **、Stream、** および**recordset. Open**。 **Adcmdfile**フラグまたは Microsoft OLE DB 永続化プロバイダー (mspersist) と組み合わせて使用します。
+信頼できないサイトを含むクロスドメインスクリプトでは、次の操作が無効になっています: **Recordset.Save** **LoadFromFile** **、Stream、** および**recordset. Open**。 **Adcmdfile**フラグまたは Microsoft OLE DB 永続化プロバイダー (mspersist) と組み合わせて使用します。
 
  **Recordset. Open** _、_**recordset. Save** _、LoadFromFile_**、** _および_**stream**は、_物理ファイルに対してのみ動作_します。        
 これらのメソッドは、ファイルハンドルが物理ファイルのみを指していることを確認するようになりました。

@@ -17,10 +17,10 @@ ms.assetid: 1fa38e78-6b5b-414d-ba0a-3dd26b29b766
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 26da0367e494bd74253b904393a2dad62308a608
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931638"
 ---
 # <a name="precision-property-ado"></a>Precision プロパティ (ADO)
@@ -29,7 +29,7 @@ ms.locfileid: "67931638"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  値を表すために使用される最大桁数を示す**バイト**値を設定または返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  数値**パラメーター**または**フィールド**オブジェクトの値を表すために使用される最大桁数を決定するには、 **Precision**プロパティを使用します。  
   
  値は、**パラメーター**オブジェクトの読み取り/書き込みです。  

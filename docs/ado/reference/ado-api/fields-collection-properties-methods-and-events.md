@@ -13,10 +13,10 @@ ms.assetid: 8cc13e41-7ed8-40df-9a74-5bf846c14c06
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0bd304bd86631ae143070f8bbf109fd9b9df8056
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932678"
 ---
 # <a name="fields-collection-properties-methods-and-events"></a>Fields コレクションのプロパティ、メソッド、およびイベント
@@ -38,7 +38,7 @@ ms.locfileid: "67932678"
   
  [Update メソッド](../../../ado/reference/ado-api/update-method.md)  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="see-also"></a>参照  

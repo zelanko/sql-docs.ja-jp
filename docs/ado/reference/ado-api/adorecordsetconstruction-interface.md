@@ -16,10 +16,10 @@ ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1e1d14255acd4cc7f18abea1c494353ef970903c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920790"
 ---
 # <a name="adorecordsetconstruction-interface"></a>ADORecordsetConstruction インターフェイス
@@ -36,12 +36,12 @@ ms.locfileid: "67920790"
 |[[行セット]](../../../ado/reference/ado-api/rowset-property-ado.md)|読み取り/書き込み。<br />この ADO**レコードセット**オブジェクトの/から OLE DB**行**セットオブジェクトを取得/設定します。|  
   
 ## <a name="methods"></a>メソッド  
- [なし] :  
+ なし。  
   
-## <a name="events"></a>events  
- [なし] :  
+## <a name="events"></a>イベント  
+ なし。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  OLE DB の**行**セットオブジェクト (`pRowset`) がある場合、ADO**レコードセット**オブジェクト (`adoRs`) の構造は、次の3つの基本的な操作になります。  
   
 1.  ADO**レコードセット**オブジェクトを作成します。  
@@ -71,7 +71,7 @@ ms.locfileid: "67920790"
   
  また、OLE DB**チャプター**または**ROWPOSITION**オブジェクトから ADO**レコードセット**オブジェクトを構築することもできます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **バージョン:** ADO 2.0 以降  
   
  **ライブラリ:** msado15.dll  

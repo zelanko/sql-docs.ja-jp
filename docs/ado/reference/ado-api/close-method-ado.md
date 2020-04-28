@@ -18,10 +18,10 @@ ms.assetid: 3cdf27d1-a180-4cff-8e42-95dec5fb1b55
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8a1d153d1433a377bb488366111b75a986365132
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67919932"
 ---
 # <a name="close-method-ado"></a>Close メソッド (ADO)
@@ -34,10 +34,10 @@ ms.locfileid: "67919932"
 object.Close  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Close**メソッドを使用して、[接続](../../../ado/reference/ado-api/connection-object-ado.md)、[レコード](../../../ado/reference/ado-api/record-object-ado.md)、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)、または[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトを閉じて、関連付けられているシステムリソースを解放します。 オブジェクトを閉じると、メモリから削除されません。プロパティの設定を変更し、後でもう一度開くことができます。 オブジェクトをメモリから完全に削除するには、オブジェクトを閉じて、オブジェクト変数を*Nothing* (Visual Basic) に設定します。  
   
-## <a name="connection"></a>接続  
+## <a name="connection"></a>Connection  
  **Close**メソッドを使用して**connection**オブジェクトを閉じると、接続に関連付けられているアクティブな**レコードセット**オブジェクトも閉じられます。 閉じようとしている**接続**オブジェクトに関連付けられている[Command](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトは永続化されますが、**接続**オブジェクトに関連付けられなくなります。つまり、 [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)プロパティは**Nothing**に設定されます。 また、**コマンド**オブジェクトの[parameters](../../../ado/reference/ado-api/parameters-collection-ado.md)コレクションは、プロバイダーによって定義されたパラメーターに対して消去されます。  
   
  後で[Open](../../../ado/reference/ado-api/open-method-ado-connection.md)メソッドを呼び出して、同じまたは別のデータソースへの接続を再確立することができます。 **接続**オブジェクトが閉じられている間に、データソースへの接続を開いているメソッドを呼び出すと、エラーが生成されます。  

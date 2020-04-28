@@ -16,10 +16,10 @@ ms.assetid: e57930a6-46c4-4a17-a3b6-f79e94d5c9c7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1db01010fea79d2badaf81588296391d7e2149f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931765"
 ---
 # <a name="pagesize-property-ado"></a>PageSize プロパティ (ADO)
@@ -28,7 +28,7 @@ ms.locfileid: "67931765"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  ページ上のレコード数を示す**Long 型**の値を設定または返します。 既定値は**10**です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  データの論理ページを構成するレコードの数を確認するには、 **PageSize**プロパティを使用します。 ページサイズを設定すると、 [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)プロパティを使用して、特定のページの最初のレコードに移動できます。 これは、ユーザーがデータをページごとに表示し、一度に特定の数のレコードを表示できるようにする場合に、Web サーバーのシナリオで役立ちます。  
   
  このプロパティはいつでも設定でき、その値は特定のページの最初のレコードの位置を計算するために使用されます。  

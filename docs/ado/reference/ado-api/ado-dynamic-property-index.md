@@ -12,10 +12,10 @@ ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9eb88905f56abf9c1c702f5fd73cbe61a1bcde3d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921083"
 ---
 # <a name="ado-dynamic-property-index"></a>ADO Dynamic プロパティ インデックス
@@ -38,7 +38,7 @@ ms.locfileid: "67921083"
 |列の定義|DBPROP_COLUMNDEFINITION|  
 |Connect Timeout|DBPROP_INIT_TIMEOUT|  
 |現在のカタログ|DBPROP_CURRENTCATALOG|  
-|Data Source|DBPROP_INIT_DATASOURCE|  
+|データ ソース|DBPROP_INIT_DATASOURCE|  
 |データ ソース名|DBPROP_DATASOURCENAME|  
 |データソースオブジェクトのスレッドモデル|DBPROP_DSOTHREADMODEL|  
 |DBMS 名|DBPROP_DBMSNAME|  
@@ -51,7 +51,7 @@ ms.locfileid: "67921083"
 |分離レベル|DBPROP_SUPPORTEDTXNISOLEVELS|  
 |分離の保持|DBPROP_SUPPORTEDTXNISORETAIN|  
 |[Locale Identifier]|DBPROP_INIT_LCID|  
-|Location|DBPROP_INIT_LOCATION|  
+|インストール先|DBPROP_INIT_LOCATION|  
 |インデックスの最大サイズ|DBPROP_MAXINDEXSIZE|  
 |行の最大サイズ|DBPROP_MAXROWSIZE|  
 |行の最大サイズに BLOB が含まれる|DBPROP_MAXROWSIZEINCLUDESBLOB|  
@@ -70,13 +70,13 @@ ms.locfileid: "67921083"
 |Select リスト内の列の並べ替え|DBPROP_ORDERBYCOLUMNSINSELECT|  
 |出力パラメーターの可用性|DBPROP_OUTPUTPARAMETERAVAILABILITY|  
 |Ref アクセサーで渡す|DBPROP_BYREFACCESSORS|  
-|Password|DBPROP_AUTH_PASSWORD|  
+|パスワード|DBPROP_AUTH_PASSWORD|  
 |Persist Security Info|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|  
 |永続的な ID の種類|DBPROP_PERSISTENTIDTYPE|  
 |中止動作の準備|DBPROP_PREPAREABORTBEHAVIOR|  
 |コミット動作の準備|DBPROP_PREPARECOMMITBEHAVIOR|  
 |プロシージャ用語|DBPROP_PROCEDURETERM|  
-|ダイアログを表示する|DBPROP_INIT_PROMPT|  
+|Prompt|DBPROP_INIT_PROMPT|  
 |プロバイダーのフレンドリ名|DBPROP_PROVIDERFRIENDLYNAME|  
 |プロバイダー名|DBPROP_PROVIDERFILENAME|  
 |プロバイダーのバージョン|DBPROP_PROVIDERVER|  
@@ -90,8 +90,8 @@ ms.locfileid: "67921083"
 |テーブル用語|DBPROP_TABLETERM|  
 |トランザクション DDL|DBPROP_SUPPORTEDTXNDDL|  
 |User ID|DBPROP_AUTH_USERID|  
-|ユーザー名|DBPROP_USERNAME|  
-|ウィンドウハンドル|DBPROP_INIT_HWND|  
+|[ユーザー名]|DBPROP_USERNAME|  
+|ウィンドウ ハンドル|DBPROP_INIT_HWND|  
   
 ## <a name="recordset-dynamic-properties"></a>レコードセットの動的プロパティ  
  **レコードセットオブジェクトの****動的プロパティ**は、**レコードセット**が閉じられたときにスコープ外になることに注意してください。  

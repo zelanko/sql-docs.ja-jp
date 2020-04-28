@@ -14,10 +14,10 @@ ms.assetid: 523009ce-e01b-4e2d-a7df-816d7688aff0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ddef2feab633627c9549b73787faa1d104d69c5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926818"
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>OLE DB 用の Microsoft データ整形サービスの概要
@@ -36,7 +36,7 @@ ms.locfileid: "67926818"
 ## <a name="dynamic-properties"></a>動的プロパティ
  このサービスプロバイダーが呼び出されると、次の動的プロパティが[Connection](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの[properties](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションに追加されます。
 
-|動的プロパティ名|[説明]|
+|動的プロパティ名|説明|
 |---------------------------|-----------------|
 |**一意のリシェイプ名**|**リシェイプ名**プロパティの値が重複している**レコードセット**オブジェクトを使用できるかどうかを示します。 この動的プロパティが**True**で、既存の**レコードセット**と同じユーザー指定のリシェイプ名で新しい**レコードセット**が作成された場合、**新しいレコードセットオブジェクトの**リシェイプ名が変更され、一意になります。 このプロパティが**False**で、既存の**レコードセット**と同じユーザー指定のリシェイプ名で新しい**レコードセット**が作成された場合、両方の**レコードセット**オブジェクトのリシェイプ名は同じになります。 したがって、両方のレコードセットが存在する限り、どちらの**レコードセット**もリシェイプできません。<br /><br /> プロパティの既定値は**False**です。|
 |**Data Provider**|整形する行を提供するプロバイダーの名前を示します。 プロバイダーが行の提供に使用されない場合、この値は NONE になります。|

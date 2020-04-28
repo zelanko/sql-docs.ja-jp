@@ -14,10 +14,10 @@ ms.assetid: 4c7e010d-08cd-4e22-9b32-23c36f02f88c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22e63bad49586bbbc1a5616114055779cd3ea041
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925548"
 ---
 # <a name="determining-edit-mode"></a>編集モードの決定
@@ -25,7 +25,7 @@ ADO は、現在のレコードに関連付けられている編集バッファ�
   
  **EditMode**は、次の表に示すいずれかの**editmodeenum**定数を返します。  
   
-|常時|[説明]|  
+|Constant|説明|  
 |--------------|-----------------|  
 |**adEditNone**|編集操作が実行中でないことを示します。|  
 |**adEditInProgress**|現在のレコードのデータが変更されていても保存されていないことを示します。|  

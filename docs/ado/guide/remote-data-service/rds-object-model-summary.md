@@ -14,17 +14,17 @@ ms.assetid: 909f9af7-31db-4eec-ad52-650ce74dac2f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6c455d816b3ba5a9606d09e3b05e54583e11ca41
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922530"
 ---
 # <a name="rds-object-model-summary"></a>RDS オブジェクト モデルの概要
 > [!IMPORTANT]
 >  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
-|Object|[説明]|  
+|Object|説明|  
 |------------|-----------------|  
 |[RDS.DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)|このオブジェクトには、サーバープロキシを取得するメソッドが含まれています。 既定のプロキシまたはカスタムサーバープログラム (ビジネスオブジェクト) を指定できます。 サーバープログラムは、インターネット、イントラネット、ローカルエリアネットワーク、またはローカルダイナミックリンクライブラリで呼び出すことができます。<br /><br /> オブジェクト**スペース**オブジェクトは、スクリプト作成には安全です。|  
 |[RDSServer DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|このオブジェクトは、既定のサーバープログラムを表します。 RDS のデータの取得と更新の既定の動作を実行します。<br /><br /> **DataFactory**オブジェクトは、スクリプト作成には安全ではありません。|  

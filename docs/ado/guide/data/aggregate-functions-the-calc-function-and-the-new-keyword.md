@@ -16,10 +16,10 @@ ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5a7ed836b9b57ddd690dd85dd94cc12cb967c472
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926008"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>集計関数、CALC 関数、NEW キーワード
@@ -27,7 +27,7 @@ ms.locfileid: "67926008"
   
  チャプターエイリアスは完全修飾することができます。各チャプター列名は、*列名*を含む章に至るまで、ピリオドで区切られています。 たとえば、親章 chap1 に、amount 列を含む chap2 という子のチャプターが含まれている場合、修飾名は chap1 になります。  
   
-|集計関数|[説明]|  
+|集計関数|説明|  
 |-------------------------|-----------------|  
 |SUM (*チャプターエイリアス*。*列名*)|指定された列のすべての値の合計を計算します。|  
 |AVG (*チャプターエイリアス*。*列名*)|指定された列のすべての値の平均を計算します。|  
@@ -37,11 +37,11 @@ ms.locfileid: "67926008"
 |STDEV (*チャプターエイリアス*。*列名*)|指定された列の標準偏差を計算します。|  
 |任意 (*チャプターエイリアス*。*列名*)|指定された列の値。 では、列の値がチャプター内のすべての行で同じ場合にのみ、予測可能な値が使用されます。<br /><br /> **メモ**列に、チャプター内のすべての行に対して同じ値が含まれていない場合、SHAPE コマンドは任意の値を ANY 関数の値として返します。|  
   
-|計算式|[説明]|  
+|計算式|説明|  
 |---------------------------|-----------------|  
 |CALC (*式*)|任意の式を計算しますが、CALC 関数を含む**レコードセット**の行のみを計算します。 これらの[Visual Basic for Applications (VBA) 関数](../../../ado/guide/data/visual-basic-for-applications-functions.md)を使用する式はすべて許可されます。|  
   
-|NEW キーワード|[説明]|  
+|NEW キーワード|説明|  
 |-----------------|-----------------|  
 |新しい*フィールドの種類*[(*width* &#124; *scale* &#124; *precision* &#124; *error* [, *scale* &#124; *error*])]|指定した型の空の列を**レコードセット**に追加します。|  
   

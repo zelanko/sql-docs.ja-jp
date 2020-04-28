@@ -14,10 +14,10 @@ ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bce9917f144e8c63160f571a986263d8d7e97b21
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925564"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>競合の検出および解決
@@ -25,12 +25,12 @@ ms.locfileid: "67925564"
   
  どのような場合でも、ADO では Field オブジェクトの UnderlyingValue プロパティと OriginalValue プロパティを使用して、これらの種類の競合を処理します。 これらのプロパティは、レコードセットの Resync メソッドおよび Filter プロパティと組み合わせて使用します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ADO でバッチ更新中に競合が発生すると、エラーコレクションに警告が追加されます。 そのため、BatchUpdate を呼び出した直後にエラーを確認し、問題が見つかった場合は、競合が発生したと仮定してテストを開始する必要があります。 最初の手順では、レコードセットの Filter プロパティを Adfilter衝突 Tingrecords に設定します。 これにより、レコードセットのビューが競合しているレコードのみに制限されます。 この手順の後に RecordCount プロパティが0に等しい場合は、競合以外の方法でエラーが発生したことがわかります。  
   
  BatchUpdate を呼び出すと、ADO およびプロバイダーが、データソースに対する更新を実行する SQL ステートメントを生成しています。 特定のデータソースでは、WHERE 句で使用できる列の型に制限があることに注意してください。  
   
- 次に、レコードセットの再同期メソッドを呼び出します。この引数は、ResyncValues 引数を adResyncUnderlyingValues に等しい値に設定します。 再同期メソッドは、基になるデータベースから現在のレコードセットオブジェクトのデータを更新します。 Adを使用すると、現在のフィルター設定で表示できるレコード (競合するレコードのみ) がデータベースと再同期されるようにすることができます。 これにより、大きなレコードセットを扱う場合に、パフォーマンスが大幅に変わる可能性があります。 再同期を呼び出すときに ResyncValues 引数を adResyncUnderlyingValues に設定すると、UnderlyingValue プロパティにデータベースからの (競合する) 値が格納され、Value プロパティがユーザーによって入力された値を保持するようになります。OriginalValue プロパティは、フィールドの元の値 (最後に成功した UpdateBatch 呼び出しが行われる前の値) を保持することを指定します。 これらの値を使用して、プログラムによって競合を解決したり、使用する値をユーザーが選択するように要求したりすることができます。  
+ 次に、レコードセットの再同期メソッドを呼び出します。この引数は、ResyncValues 引数を adResyncUnderlyingValues に等しい値に設定します。 再同期メソッドは、基になるデータベースから現在のレコードセットオブジェクトのデータを更新します。 Adを使用すると、現在のフィルター設定で表示できるレコード (競合するレコードのみ) がデータベースと再同期されるようにすることができます。 これにより、大きなレコードセットを扱う場合に、パフォーマンスが大幅に変わる可能性があります。 再同期を呼び出すときに ResyncValues 引数を adResyncUnderlyingValues に設定すると、UnderlyingValue プロパティにデータベースからの (競合している) 値が格納され、ユーザーが入力した値が Value プロパティに保持されます。また、OriginalValue プロパティは、フィールドの元の値 (最後に成功した UpdateBatch 呼び出しが行われてからの値) を保持します これらの値を使用して、プログラムによって競合を解決したり、使用する値をユーザーが選択するように要求したりすることができます。  
   
  この手法を次のコード例に示します。 この例では、別のレコードセットを使用して競合を作成し、UpdateBatch が呼び出される前に基になるテーブルの値を変更しています。  
   

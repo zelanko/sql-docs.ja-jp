@@ -16,10 +16,10 @@ ms.assetid: 481dcc93-487b-490e-ac58-a1e9b2ebfd43
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 48b1c90b59b220841aa45f618fdfda5ff2db82da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920346"
 ---
 # <a name="bookmark-property-ado"></a>Bookmark プロパティ (ADO)
@@ -28,7 +28,7 @@ ms.locfileid: "67920346"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  有効なブックマークに評価される**バリアント**式を設定または返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Bookmark**プロパティを使用して、現在のレコードの位置を保存し、いつでもそのレコードに戻るようにします。 ブックマークは、ブックマーク機能をサポートする**レコードセット**オブジェクトでのみ使用できます。  
   
  レコード**セット**オブジェクトを開くと、各レコードに一意のブックマークが作成されます。 現在のレコードのブックマークを保存するには、 **bookmark**プロパティの値を変数に割り当てます。 別のレコードに移動した後、いつでもそのレコードにすばやく戻るには、**レコードセット**オブジェクトの**Bookmark**プロパティをその変数の値に設定します。  

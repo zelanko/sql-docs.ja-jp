@@ -14,10 +14,10 @@ ms.assetid: 2fad33fb-c858-4dcb-98dc-3dfd0e555055
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 79ba71c38f6ccff4e5a55471839df09252344c68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67927024"
 ---
 # <a name="ado-programming-task-table"></a>ADO プログラミングタスクテーブル
@@ -38,7 +38,7 @@ ms.locfileid: "67927024"
 |データソースへの変更の送信|[データの更新](../../ado/guide/data/updating-data.md)|
 |トランザクションの開始、コミット、およびロールバック|[トランザクション処理](../../ado/guide/data/transaction-processing.md)|
 |ファイルへのレコードの保存 (XML またはバイナリ)|[データの保持](../../ado/guide/data/persisting-data.md)|
-|エラーを処理する|[ADO エラー](../../ado/guide/data/ado-errors.md)|
+|エラーの処理|[ADO エラー](../../ado/guide/data/ado-errors.md)|
 |イベントの処理, 非同期プログラミング|[ADO イベント ハンドラーの概要](../../ado/guide/data/ado-event-handler-summary.md)|
 |カーソルの位置と種類の選択|[カーソルの種類](../../ado/guide/data/types-of-cursors-ado.md)|
 |ロックの種類の選択|[ロックの種類](../../ado/guide/data/types-of-locks.md)|

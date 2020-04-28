@@ -15,10 +15,10 @@ ms.assetid: a14bbc36-87ec-409d-97b3-393b66b1b8e3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9441e956c51accf2af55624b311f28a18d39ed20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920815"
 ---
 # <a name="ado---wfc-syntax-index"></a>ADO - WFC 構文のインデックス
@@ -42,7 +42,7 @@ ADO 言語リファレンスでは、ADO メソッドとプロパティ構文を
   
 -   [Recordset オブジェクト](../../../ado/reference/ado-api/recordset-ado-wfc-syntax.md)  
   
-## <a name="remote-data-service"></a>リモートデータサービス  
+## <a name="remote-data-service"></a>Remote Data Service  
   
 -   [DataSpace](../../../ado/reference/ado-api/dataspace-ado-wfc-syntax.md)  
   

@@ -20,10 +20,10 @@ ms.assetid: e0db4e15-6787-41e2-8f13-9e9b524d620a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: db369b32737c0e2dae4603a4a5a6c26cdd3a7142
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920239"
 ---
 # <a name="cancel-method-ado"></a>Cancel メソッド (ADO)
@@ -36,18 +36,18 @@ ms.locfileid: "67920239"
 object.Cancel  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Cancel**メソッドを使用して、非同期メソッド呼び出しの実行を終了します。つまり、 **adasyncconnect**、 **adasyncconnect**、または**adasyncconnect**オプションを使用して呼び出されたメソッドです。  
   
  次の表は、特定の種類のオブジェクトに対して**Cancel**メソッドを使用した場合に終了するタスクを示しています。  
   
 |*オブジェクト*がである場合|このメソッドへの最後の非同期呼び出しが終了しました|  
 |----------------------|-------------------------------------------------------------|  
-|[command](../../../ado/reference/ado-api/command-object-ado.md)|[おい](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
+|[コマンド](../../../ado/reference/ado-api/command-object-ado.md)|[おい](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
 |[接続](../../../ado/reference/ado-api/connection-object-ado.md)|[実行](../../../ado/reference/ado-api/execute-method-ado-connection.md)または[開く](../../../ado/reference/ado-api/open-method-ado-connection.md)|  
-|[Record](../../../ado/reference/ado-api/record-object-ado.md)|[Copyrecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)、 [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md)、 [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md)、または[Open](../../../ado/reference/ado-api/open-method-ado-record.md)|  
-|[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)|[開き](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  
-|[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)|[開き](../../../ado/reference/ado-api/open-method-ado-stream.md)|  
+|[録音](../../../ado/reference/ado-api/record-object-ado.md)|[Copyrecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)、 [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md)、 [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md)、または[Open](../../../ado/reference/ado-api/open-method-ado-record.md)|  
+|[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)|[開く](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  
+|[Stream](../../../ado/reference/ado-api/stream-object-ado.md)|[開く](../../../ado/reference/ado-api/open-method-ado-stream.md)|  
   
 ## <a name="applies-to"></a>適用対象  
   

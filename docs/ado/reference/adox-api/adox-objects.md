@@ -14,26 +14,26 @@ ms.assetid: 3f5287e9-f62c-40c4-bb59-985102be956e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 16ff3c926b1c0457f0f0dda382881aad45fb4efd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67928500"
 ---
 # <a name="adox-objects"></a>ADOX オブジェクト
 ## <a name="adox-object-summary"></a>ADOX オブジェクトの概要  
   
-|Object|[説明]|  
+|Object|説明|  
 |------------|-----------------|  
 |[Catalog](../../../ado/reference/adox-api/catalog-object-adox.md)|データソースのスキーマカタログを記述するコレクションが含まれます。|  
 |[列](../../../ado/reference/adox-api/column-object-adox.md)|テーブル、インデックス、またはキーからの列を表します。|  
 |[グループ](../../../ado/reference/adox-api/group-object-adox.md)|セキュリティで保護されたデータベース内でアクセス許可を持つグループアカウントを表します。|  
 |[化](../../../ado/reference/adox-api/index-object-adox.md)|データベーステーブルのインデックスを表します。|  
-|[[キー]](../../../ado/reference/adox-api/key-object-adox.md)|データベーステーブルの主キー、外部キー、または一意キーフィールドを表します。|  
+|[キー](../../../ado/reference/adox-api/key-object-adox.md)|データベーステーブルの主キー、外部キー、または一意キーフィールドを表します。|  
 |[作業](../../../ado/reference/adox-api/procedure-object-adox.md)|ストアドプロシージャを表します。|  
-|[Table](../../../ado/reference/adox-api/table-object-adox.md)|列、インデックス、およびキーを含むデータベーステーブルを表します。|  
-|[User](../../../ado/reference/adox-api/user-object-adox.md)|セキュリティで保護されたデータベース内でアクセス許可を持つユーザーアカウントを表します。|  
-|[モード](../../../ado/reference/adox-api/view-object-adox.md)|フィルター処理されたレコードセットまたは仮想テーブルを表します。|  
+|[一覧](../../../ado/reference/adox-api/table-object-adox.md)|列、インデックス、およびキーを含むデータベーステーブルを表します。|  
+|[ユーザー](../../../ado/reference/adox-api/user-object-adox.md)|セキュリティで保護されたデータベース内でアクセス許可を持つユーザーアカウントを表します。|  
+|[表示](../../../ado/reference/adox-api/view-object-adox.md)|フィルター処理されたレコードセットまたは仮想テーブルを表します。|  
   
  これらのオブジェクト間のリレーションシップは、 [ADOX オブジェクトモデル](../../../ado/reference/adox-api/adox-object-model.md)で示されています。  
   

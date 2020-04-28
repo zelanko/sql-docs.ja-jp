@@ -16,10 +16,10 @@ ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1890d554367b2a21bcd46a6d2ebddf00013957e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926423"
 ---
 # <a name="visual-c-ado-programming"></a>Visual C++ での ADO プログラミング
@@ -37,7 +37,7 @@ ADO API リファレンスでは、Microsoft Visual Basic と同様の構文を�
 ## <a name="using-the-import-compiler-directive"></a>#Import コンパイラディレクティブの使用  
  **#Import** Visual C++ コンパイラディレクティブを使用すると、ADO のメソッドとプロパティを簡単に操作できます。 ディレクティブは、ADO .dll (Msado15.dll) などのタイプライブラリを含むファイルの名前を受け取り、typedef 宣言、インターフェイスのスマートポインター、および列挙定数を含むヘッダーファイルを生成します。 各インターフェイスは、クラスにカプセル化またはラップされます。  
   
- クラス内の各操作 (つまり、メソッドまたはプロパティの呼び出し) に対して、操作を直接呼び出す宣言 (つまり、操作の "未加工" の形式) と、生の操作を呼び出す宣言があります。操作が失敗して succ を実行できない場合は、COM エラーがスローされます。essfully。 操作がプロパティの場合、通常は、Visual Basic のような構文を持つ操作の代替構文を作成するコンパイラディレクティブがあります。  
+ クラス内の各操作 (つまり、メソッドまたはプロパティの呼び出し) に対して、操作を直接呼び出す宣言 (つまり、操作の "未加工" の形式) と、操作が正常に実行されなかった場合に COM エラーをスローする宣言があります。 操作がプロパティの場合、通常は、Visual Basic のような構文を持つ操作の代替構文を作成するコンパイラディレクティブがあります。  
   
  プロパティの値を取得する操作には、 **Get**_プロパティ_という形式の名前があります。 プロパティの値を設定する操作には、 **Put**_プロパティ_という形式の名前があります。 ADO オブジェクトへのポインターを使用してプロパティの値を設定する操作には、 **PutRef**_プロパティ_という形式の名前が付けられます。  
   
@@ -222,7 +222,7 @@ Dim rst As ADODB.Recordset
 Dim rst As New ADODB.Recordset  
 ```
   
- または  
+ \- または -  
   
 ```vb
 Dim rst As ADODB.Recordset  
@@ -241,14 +241,14 @@ _RecordsetPtr  rs;
 _RecordsetPtr  rs("ADODB.Recordset");  
 ```
   
- または  
+ \- または -  
   
 ```cpp
 _RecordsetPtr  rs;  
 rs.CreateInstance("ADODB.Recordset");  
 ```
   
- または  
+ \- または -  
   
 ```cpp
 _RecordsetPtr  rs;  

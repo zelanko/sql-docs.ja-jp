@@ -16,16 +16,16 @@ ms.assetid: a02c22fb-542d-465e-a629-30fd59dcbebf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bbce299e2e9f67b705f940480913c7d8ac367d0d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67919794"
 ---
 # <a name="command-object-ado"></a>Command オブジェクト (ADO)
 データソースに対して実行する特定のコマンドを定義します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **コマンド**オブジェクトを使用して、データベースに対してクエリを実行し、レコード[セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトのレコードを返します。また、一括操作を実行したり、データベースの構造を操作したりします。 プロバイダーの機能によっては、**コマンド**のコレクション、メソッド、またはプロパティによっては、参照時にエラーが発生することがあります。  
   
  **Command**オブジェクトのコレクション、メソッド、およびプロパティを使用して、次の操作を実行できます。  

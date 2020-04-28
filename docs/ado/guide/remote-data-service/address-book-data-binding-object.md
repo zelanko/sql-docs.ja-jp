@@ -14,10 +14,10 @@ ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 43623bc100fdfe071fcd00926117400a3c96eebe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922972"
 ---
 # <a name="address-book-data-binding-object"></a>アドレス帳のデータ バインディング オブジェクト
@@ -50,19 +50,19 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
 ## <a name="generic-object-tag-parameters"></a>汎用オブジェクトタグパラメーター  
  次の表では、オブジェクトタグに関連付けられているパラメーターについて説明します。  
   
-|パラメーター|[説明]|  
+|パラメーター|説明|  
 |---------------|-----------------|  
 |***CLASSID***|システムに埋め込まれたオブジェクトの型を識別する、128ビットの一意の数値。 この識別子は、ローカルコンピューターのシステムレジストリに保持されます。 (RDS のクラス Id の場合) **。DataControl**オブジェクト、「RDS」を参照してください[。DataControl オブジェクト](../../../ado/reference/rds-api/datacontrol-object-rds.md)。)|  
-|***id***|コード内で識別するために使用される埋め込みオブジェクトのドキュメント全体の識別子を定義します。|  
+|***ID***|コード内で識別するために使用される埋め込みオブジェクトのドキュメント全体の識別子を定義します。|  
   
 ## <a name="rdsdatacontrol-tag-parameters"></a>RDS.DataControl タグパラメーター  
- 次の表では、RDS に固有のパラメーターについて説明し**ます。DataControl**オブジェクト。 (RDS の完全な一覧については、 **** オブジェクトのパラメーターを DataControl し、実装するタイミングについては、「RDS」を参照してください[。DataControl オブジェクト](../../../ado/reference/rds-api/datacontrol-object-rds.md)。)  
+ 次の表では、RDS に固有のパラメーターについて説明し**ます。DataControl**オブジェクト。 (RDS の完全な一覧については、 **RDS.DataControl**オブジェクトのパラメーターを DataControl し、実装するタイミングについては、「RDS」を参照してください[。DataControl オブジェクト](../../../ado/reference/rds-api/datacontrol-object-rds.md)。)  
   
-|パラメーター|[説明]|  
+|パラメーター|説明|  
 |---------------|-----------------|  
 |[SERVER](../../../ado/reference/rds-api/server-property-rds.md)|HTTP を使用している場合、値は、の前に`https://`あるサーバーコンピューターの名前になります。|  
 |[関連付け](../../../ado/reference/rds-api/connect-property-rds.md)|RDS に必要な接続情報を提供し**ます。** SQL Server に接続するための DataControl。|  
-|[SERVER](../../../ado/reference/rds-api/sql-property.md)|[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を取得するために使用するクエリ文字列を設定または返します。|  
+|[SQL](../../../ado/reference/rds-api/sql-property.md)|[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を取得するために使用するクエリ文字列を設定または返します。|  
   
 ## <a name="see-also"></a>参照  
  [アドレス帳のコマンド ボタン](../../../ado/guide/remote-data-service/address-book-command-buttons.md)

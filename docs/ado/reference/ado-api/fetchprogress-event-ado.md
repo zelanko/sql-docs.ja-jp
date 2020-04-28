@@ -17,10 +17,10 @@ ms.assetid: 301716fd-81fc-40eb-8a04-221ef7ab410e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ab93d8117a5fb3d2bbc95ea33bbacdc7fba3f151
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932829"
 ---
 # <a name="fetchprogress-event-ado"></a>FetchProgress イベント (ADO)
@@ -46,7 +46,7 @@ FetchProgress Progress, MaxProgress, adStatus, pRecordset
  *pRecordset*  
  レコードを取得する対象のオブジェクトである**レコードセット**オブジェクト。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  子**レコードセット**で**fetchprogress**を使用する場合は、 *Progress*および*maxprogress*パラメーターの値が基になる[Cursor Service](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)行セットから派生することに注意してください。 返される値は、現在のチャプター内のレコード数だけでなく、基になる行セット内のレコードの合計数を表します。  
   
 > [!NOTE]

@@ -17,10 +17,10 @@ ms.assetid: 29a02992-64be-4fcd-be13-445cba205893
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 38d283e8fedb90ed5a99143090bc6a077efa8512
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932103"
 ---
 # <a name="numericscale-property-ado"></a>NumericScale プロパティ (ADO)
@@ -29,7 +29,7 @@ ms.locfileid: "67932103"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  数値が解決される小数点以下の桁数を示す**バイト**値を設定または返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  数値**パラメーター**または**フィールド**オブジェクトの値を表すために使用される、小数点の右側の桁数を決定するには、 **numericscale**プロパティを使用します。  
   
  **パラメーター**オブジェクトの場合、 **numericscale**プロパティは読み取り/書き込み可能です。  

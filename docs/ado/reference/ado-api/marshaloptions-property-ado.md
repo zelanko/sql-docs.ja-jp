@@ -16,10 +16,10 @@ ms.assetid: 390c8abf-133e-40da-8b99-8f748a983e4f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0212f3b4cb663bd56adaa1bdbc3ab6675c3ce888
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932268"
 ---
 # <a name="marshaloptions-property-ado"></a>MarshalOptions プロパティ (ADO)
@@ -28,7 +28,7 @@ ms.locfileid: "67932268"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  [Marshaloptionsenum](../../../ado/reference/ado-api/marshaloptionsenum.md)値を設定または返します。 既定値は**Admarshalall**です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  クライアント側の[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を使用すると、クライアントで変更されたレコードが、スレッドまたはプロセスの境界を越えてパッケージ化および送信するプロセスであるマーシャリングと呼ばれる手法によって、中間層または Web サーバーに書き戻されます。 変更したリモートデータを中間層または Web サーバーに戻すためにマーシャリングする場合、 **Marshaloptions**プロパティを設定するとパフォーマンスが向上します。  
   
 > [!NOTE]

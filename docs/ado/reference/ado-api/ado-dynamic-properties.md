@@ -14,10 +14,10 @@ ms.assetid: d7b06d72-f792-4328-93a2-5006b9e2c581
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 71396a071a42d7dd40a6537a2834541aab2b6bad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921092"
 ---
 # <a name="ado-dynamic-properties"></a>ADO の動的プロパティ
@@ -30,7 +30,7 @@ ms.locfileid: "67921092"
 |||  
 |-|-|  
 |[最適化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|このフィールドにインデックスを作成するかどうかを指定します。|  
-|[プロンプト](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)|OLE DB プロバイダーがユーザーに初期化情報の入力を求めるかどうかを指定します。|  
+|[Prompt](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)|OLE DB プロバイダーがユーザーに初期化情報の入力を求めるかどうかを指定します。|  
 |[名前のリシェイプ](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|**レコードセット**オブジェクトの名前を指定します。|  
 |[再同期コマンド](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|**一意のテーブル**動的プロパティに指定されたテーブル内のデータを更新するために再**同期**メソッドによって発行される、ユーザーが指定したコマンド文字列を指定します。|  
 |[一意のテーブル、一意のスキーマ、一意のカタログ](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|**一意のテーブル**更新、挿入、および削除が許可されるベーステーブルの名前を指定します。<br /><br /> **一意のスキーマ**スキーマ、またはテーブルの所有者の名前を指定します。<br /><br /> **一意のカタログ**カタログ、またはテーブルを含むデータベースの名前を指定します。|  

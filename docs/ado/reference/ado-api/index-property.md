@@ -16,10 +16,10 @@ ms.assetid: 1c79e271-21ec-41a8-8163-c5e89f0001a7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ba871d6d0e84b8068cb36a3ed2516a2665db28d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932435"
 ---
 # <a name="index-property"></a>Index プロパティ
@@ -28,7 +28,7 @@ ms.locfileid: "67932435"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  インデックスの名前を設定するか、**文字列**値を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Index**プロパティによって指定されたインデックスは、**レコードセット**オブジェクトの基になるベーステーブルで既に宣言されている必要があります。 つまり、インデックスは、ADOX [index](../../../ado/reference/adox-api/index-object-adox.md)オブジェクトとして、またはベーステーブルが作成されたときに、プログラムによって宣言されている必要があります。  
   
  インデックスを設定できない場合は、実行時エラーが発生します。 **Index**プロパティは、次の条件下では設定できません。  

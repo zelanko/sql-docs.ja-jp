@@ -13,10 +13,10 @@ ms.assetid: 86b83a38-efdf-4831-a6d5-7e470d517d1c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f638f6e48dccccd91849f02c65331d9212f9bbb7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67927033"
 ---
 # <a name="ado-security-design-features"></a>ADO のセキュリティデザイン機能
@@ -82,7 +82,7 @@ Website, click OK, otherwise click Cancel.
 |現在のユーザー名とパスワードで自動的にログオンする|接続の許可|接続の許可|接続の許可|
 |ユーザー名とパスワードを入力してログオンする|接続の許可|接続の失敗|接続の失敗|
 |イントラネット ゾーンでのみ自動的にログオンする|接続の許可|ユーザーにセキュリティ警告を表示する|ユーザーにセキュリティ警告を表示する|
-|匿名ログオン|接続の許可|接続の失敗|接続の失敗|
+|匿名でログオンする|接続の許可|接続の失敗|接続の失敗|
 
  セキュリティの警告が表示された場合は、メッセージボックスにユーザーに通知します。
 
@@ -93,7 +93,7 @@ This Website is using your identity to access a data source. If you trust this W
  上記のメッセージを使用すると、ユーザーはより詳細な情報を確認し、それに従って処理を進めることができます。
 
 > [!NOTE]
->  信頼されていないサイト (つまり、[信頼済みサイト] ゾーン一覧に表示されていないサイト) の場合、プロバイダーが信頼できない場合 (このセクションで既に説明したように)、行に2つのセキュリティ警告が表示され、unsafe プロバイダーに関する警告と、id を使用します。 ユーザーが最初の警告に対して [OK] をクリックすると、前の表で説明されている Internet Explorer の設定と応答動作のコードが実行されます。
+>  信頼されていないサイト (つまり、[信頼済みサイト] ゾーンリストに一覧表示されていないサイト) の場合、プロバイダーが信頼できない場合 (このセクションで既に説明したように)、ユーザーには、1行に2つのセキュリティ警告が表示され、unsafe プロバイダーに関する警告が表示されます。 ユーザーが最初の警告に対して [OK] をクリックすると、前の表で説明されている Internet Explorer の設定と応答動作のコードが実行されます。
 
 ## <a name="controlling-whether-password-text-is-returned-in-ado-connection-strings"></a>ADO 接続文字列でパスワードテキストを返すかどうかを制御する
  ADO **Connection**オブジェクトの[ConnectionString](../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティの値を取得しようとすると、次のイベントが発生します。

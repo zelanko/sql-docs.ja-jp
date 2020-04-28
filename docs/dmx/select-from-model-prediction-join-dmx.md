@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b592aef0ba3831c5513e039ee4552d826468e819
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67928328"
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>モデル&gt;予測&lt;結合 (DMX) からの選択
@@ -33,7 +33,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
 ## <a name="arguments"></a>引数  
  *n*  
- 省略可能。 返す行数を指定する整数値です。  
+ 任意。 返す行数を指定する整数値です。  
   
  *式リストの選択*  
  マイニング モデルから派生する、列の識別子と式のコンマ区切りのリストです。  
@@ -48,15 +48,15 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  ソース クエリです。  
   
  *結合マッピングの一覧*  
- 省略可能。 モデルの列をソースクエリの列と比較する論理式。  
+ 任意。 モデルの列をソースクエリの列と比較する論理式。  
   
  *条件式*  
- 省略可能。 列リストから返される値を制限する条件。  
+ 任意。 列リストから返される値を制限する条件。  
   
- *条件*  
- 省略可能。 スカラー値を返す式。  
+ *式 (expression)*  
+ 任意。 スカラー値を返す式。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ON 句は、ソースクエリの列とマイニングモデルの列との間のマッピングを定義します。 このマッピングは、列を入力として使用して予測を作成できるように、ソースクエリの列をマイニングモデルの列に転送するために使用されます。 \<次の例に示すように、*結合マッピングリスト*> の列は、等号 (=) を使用して関連付けられています。  
   
 ```  
@@ -189,6 +189,6 @@ NATURAL PREDICTION JOIN
  [DMX&#41;を選択 &#40;](../dmx/select-dmx.md)   
  [DMX&#41; データ定義ステートメント &#40;のデータマイニング拡張機能](../dmx/dmx-statements-data-definition.md)   
  [DMX&#41; データ操作ステートメントを &#40;データマイニング拡張機能](../dmx/dmx-statements-data-manipulation.md)   
- [DMX&#41; ステートメントリファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-statements.md)  
+ [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

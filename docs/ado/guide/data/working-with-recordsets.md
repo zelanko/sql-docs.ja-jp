@@ -13,10 +13,10 @@ ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a3025140929d7a7cf281f72c035bf79e0a5883b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923413"
 ---
 # <a name="working-with-recordsets"></a>レコードセットの操作
@@ -48,7 +48,7 @@ ms.locfileid: "67923413"
   
  **Find**メソッドを使用すると、検索対象が1つのフィールドの内容に限定されます。 **Seek**メソッドでは、インデックスがあり、他にも制限があることが必要です。 インデックスのベースになっていない複数のフィールドを検索する必要がある場合、またはプロバイダーがインデックスをサポートしていない場合は、**レコードセット**オブジェクトの**Filter**プロパティを使用して結果を制限できます。  
   
-### <a name="find"></a>［検索］  
+### <a name="find"></a>Find  
  **Find**メソッドは、指定された条件を満たす行の**レコードセット**を検索します。 必要に応じて、開始行からの検索、開始行、およびオフセットの方向を指定することもできます。 条件が満たされている場合は、見つかったレコードに現在の行の位置が設定されます。それ以外の場合は、検索の方向に応じて、**レコードセット**の最後 (または先頭) に位置が設定されます。  
   
  条件には、単一列の名前のみを指定できます。 言い換えると、このメソッドは複数列の検索をサポートしていません。  
@@ -111,7 +111,7 @@ ms.locfileid: "67923413"
 ### <a name="filtering-with-a-constant"></a>定数を使用したフィルター処理  
  **レコードセット**をフィルター処理するには、次の定数を使用できます。  
   
-|常時|[説明]|  
+|Constant|説明|  
 |--------------|-----------------|  
 |**adFilterAffectedRecords**|最後の**Delete**、 **Resync**、 **UpdateBatch**、または**CancelBatch**呼び出しの影響を受けたレコードのみを表示するためのフィルター。|  
 |**Adfilter衝突レコード**|前回のバッチ更新に失敗したレコードを表示するためのフィルター。|  

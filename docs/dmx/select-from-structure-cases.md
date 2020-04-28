@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 041d6ade2363b4a33528bd44438a2fcb440d61ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67928295"
 ---
 # <a name="select-from-ltstructuregtcases"></a>[構造&lt;&gt;から] を選択します。場合
@@ -39,23 +39,23 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
   
 ## <a name="arguments"></a>引数  
  *n*  
- 省略可能。 返す行数を指定する整数値です。  
+ 任意。 返す行数を指定する整数値です。  
   
  *式の一覧*  
  式のコンマ区切りのリストです。  
   
  式には、列識別子、ユーザー定義関数、および VBA 関数を含めることができます。  
   
- *データ*  
+ *structure*  
  構造体の名前。  
   
  *条件式*  
  列リストから返される値を制限する条件。  
   
- *条件*  
- 省略可能。 スカラー値を返す式。  
+ *式 (expression)*  
+ 任意。 スカラー値を返す式。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  モデルと構造の両方でドリルスルーが有効になっている場合、マイニング構造およびモデルに対するドリルスルー権限を持つロールのメンバーは、モデルに含まれていない構造列を返すことができます。そのためには、次の構文を使用します。  
   
 ```  
@@ -64,7 +64,7 @@ SELECT StructureColumn('<column name>') FROM <model>.CASES
   
  したがって、機密データや個人情報を保護するには、個人情報をマスクするデータソースビューを構築し、マイニング構造またはマイニングモデルに対して**Allowdrillthrough スルー**権限を必要な場合にのみ許可する必要があります。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例は、マイニング構造、 [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]データベースに基づく対象メーリング、および関連するマイニングモデルに基づいています。 詳細については、「[基本的なデータマイニングチュートリアル](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)」を参照してください。  
   
 ### <a name="example-1-drill-through-to-structure-cases"></a>例 1: 構造ケースにドリルスルーする  
@@ -92,6 +92,6 @@ WHERE IsTestCase();
  [DMX&#41;を選択 &#40;](../dmx/select-dmx.md)   
  [DMX&#41; データ定義ステートメント &#40;のデータマイニング拡張機能](../dmx/dmx-statements-data-definition.md)   
  [DMX&#41; データ操作ステートメントを &#40;データマイニング拡張機能](../dmx/dmx-statements-data-manipulation.md)   
- [DMX&#41; ステートメントリファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-statements.md)  
+ [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

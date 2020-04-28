@@ -20,10 +20,10 @@ ms.assetid: 9d068fed-39bf-4842-afc3-686a2af2145d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a333a2be2728f3c0b412246b0a793dae64096ae5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931227"
 ---
 # <a name="rowposition-property-ado"></a>RowPosition プロパティ (ADO)
@@ -48,7 +48,7 @@ HRESULT put_RowPosition([in] IUnknown* pRowPos);
 ## <a name="return-values"></a>戻り値  
  このプロパティメソッドは、S_OK および E_FAIL を含む標準の HRESULT 値を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  このプロパティが設定されている場合、 **Rowposition**オブジェクトの**Rowset**オブジェクトが**Recordset**オブジェクトの**rowset**オブジェクトと異なる場合、前者は後者よりも優先されます。 同じ動作が、 **Rowposition**の現在の**チャプター**にも適用されます。  
   
 ## <a name="applies-to"></a>適用対象  

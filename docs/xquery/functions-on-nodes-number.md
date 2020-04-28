@@ -16,10 +16,10 @@ ms.assetid: dff6d19b-765c-4df9-afff-9a0e7be9b91b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 31a52f86692d5769fe22f4cf0b5a04ad324c3ac0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67930115"
 ---
 # <a name="functions-on-nodes---number"></a>ノードの関数 - number
@@ -39,7 +39,7 @@ fn:number($arg as node()?) as xs:double?
  *$arg*  
  値が数値として返されるノード。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  *$Arg*が指定されていない場合、double に変換されたコンテキストノードの数値が返されます。 SQL Server では、引数のない**fn: number ()** は、コンテキストに依存する述語のコンテキストでのみ使用できます。 具体的には、角かっこ ([]) 内でのみ使用できます。 たとえば、次の式は、<`ROOT`> 要素を返します。  
   
 ```  
@@ -50,7 +50,7 @@ select @x.query('/ROOT[number()=111]')
   
  ノードの値が、 **XML スキーマパート 2: データ型、W3C 勧告**で定義されているように、数値単純型の有効な字句表現でない場合、関数は空のシーケンスを返します。 NaN はサポートされません。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
 ### <a name="a-using-the-number-xquery-function-to-retrieve-the-numeric-value-of-an-attribute"></a>A. Number () XQuery 関数を使用して属性の数値を取得する  

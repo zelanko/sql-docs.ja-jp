@@ -14,10 +14,10 @@ ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1de3710590cf49de30ff8e79a6ff829b124c42dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922804"
 ---
 # <a name="customization-file-connect-section"></a>カスタマイズ ファイルの Connect セクション
@@ -51,13 +51,13 @@ connectionString
   
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
-|要素|[説明]|  
+|要素|説明|  
 |----------|-----------------|  
-|**接続する**|これが接続文字列エントリであることを示すリテラル文字列。|  
-|**_文字列_**|クライアント接続文字列全体を置き換える文字列。|  
-|**アクセス**|これがアクセスエントリであることを示すリテラル文字列。|  
+|**のインスタンスに接続するときには、**|これが接続文字列エントリであることを示すリテラル文字列。|  
+|**_connectionString_**|クライアント接続文字列全体を置き換える文字列。|  
+|**Access (アクセス)**|これがアクセスエントリであることを示すリテラル文字列。|  
 |**_accessRight_**|次のいずれかのアクセス権。<br /><br /> -   **NoAccess** -ユーザーはデータソースにアクセスできません。<br />-   **ReadOnly** -ユーザーはデータソースを読み取ることができます。<br />-   **ReadWrite** -ユーザーは、データソースに対して読み取りまたは書き込みを行うことができます。|  
   
  任意の接続を許可する (実質的に既定のハンドラー動作を無効にする) 場合は、[**既定の接続**] セクション`Access=ReadWrite`のアクセスエントリをに設定し、他の [**接続** _id_ ] セクションを削除またはコメントアウトします。  

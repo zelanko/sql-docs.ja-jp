@@ -18,10 +18,10 @@ ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 26caf2b54b4f0affbbe7cdc58fa2bf742f0d4101
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925367"
 ---
 # <a name="event-parameters"></a>イベント パラメーター
@@ -43,7 +43,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
 ## <a name="status-parameter"></a>状態パラメーター  
  イベントハンドラールーチンが呼び出されると、 *Status*パラメーターは次のいずれかの値に設定されます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**adStatusOK**|両方に渡され、イベントが完了します。 この値は、イベントの原因となった操作が正常に完了したことを示します。|  
 |**Adstatuserrorの Curred**|完全なイベントにのみ渡されます。 この値は、イベントの原因となった操作が失敗したことを意味します。または、イベントによって操作が取り消されます。 詳細については、*エラー*パラメーターを確認してください。|  
@@ -53,7 +53,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
   
  イベントを処理する必要がなくなった場合は、 *Status*を**adStatusUnwantedEvent**に設定すると、アプリケーションはそのイベントの通知を受信しなくなります。 ただし、一部のイベントは複数の理由で発生する可能性があることに注意してください。 その場合は、考えられる理由ごとに**adStatusUnwantedEvent**を指定する必要があります。 たとえば、保留中の**Recordchange**イベントの通知の受信を停止するには、 **Adrsnaddnew**、 **adrsnaddnew**、 **adrsnaddnew**、 **AdRsnUndoUpdate**、 **adRsnUndoAddNew**、 **adRsnUndoDelete**、および**Adrsnfirstchange**が発生したときに、 *Status*パラメーターを**adStatusUnwantedEvent**に設定する必要があります。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**adStatusUnwantedEvent**|このイベントハンドラーがこれ以上通知を受信しないことを要求します。|  
 |**adStatusCancel**|発生しようとしている操作のキャンセルを要求します。|  

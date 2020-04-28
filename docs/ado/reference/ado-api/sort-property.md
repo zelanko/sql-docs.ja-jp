@@ -22,10 +22,10 @@ ms.assetid: 3683ffa0-6f93-4906-9533-ef6942f24f39
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 946314f7be9f6c39d47a3f26b577e10834064dab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67930946"
 ---
 # <a name="sort-property"></a>Sort プロパティ
@@ -34,7 +34,7 @@ ms.locfileid: "67930946"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  並べ替えの対象となる**レコードセット**内のフィールド名を示す**文字列**値を設定または返します。 各名前はコンマで区切られます。オプションで、空白とキーワード**ASC**を使用します。この場合、フィールドは昇順に並べ替えられ、 **DESC**はフィールドが降順に並べ替えられます。 既定では、キーワードが指定されていない場合、フィールドは昇順に並べ替えられます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  このプロパティでは、[カーソル位置](../../../ado/reference/ado-api/cursorlocation-property-ado.md)プロパティを**adUseClient**に設定する必要があります。 インデックスがまだ存在しない場合は、 **Sort**プロパティで指定された各フィールドに対して一時インデックスが作成されます。  
   
  データは物理的には再配置されませんが、単純にインデックスで指定された順序でアクセスされるため、並べ替え操作は効率的です。  

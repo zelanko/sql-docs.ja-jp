@@ -16,10 +16,10 @@ ms.assetid: 0b993bac-2653-40b1-bcbb-5b57b6aae2bf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c45b9331ddd538cdf23a57eaf39b6efb71bccc4a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67930854"
 ---
 # <a name="state-property-ado"></a>State プロパティ (ADO)
@@ -28,7 +28,7 @@ ms.locfileid: "67930854"
 ## <a name="return-value"></a>戻り値  
  [ObjectStateEnum](../../../ado/reference/ado-api/objectstateenum.md)値を指定できる**Long 型**の値を返します。 既定値は**adStateClosed**です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **State**プロパティを使用して、特定のオブジェクトの現在の状態をいつでも確認できます。  
   
  オブジェクトの**State**プロパティは、値の組み合わせを持つことができます。 たとえば、ステートメントが実行されている場合、このプロパティには**Adstateopen**と**adstateopen**の合計値が設定されます。  

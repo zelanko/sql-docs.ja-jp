@@ -15,10 +15,10 @@ ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 69d88aebe25f6cfa5490cce736c05780b87eee6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926644"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Microsoft OLE DB Provider for Microsoft Jet の概要
@@ -42,11 +42,11 @@ Microsoft.Jet.OLEDB.4.0
 
  文字列は、次のキーワードで構成されています。
 
-|Keyword|[説明]|
+|キーワード|説明|
 |-------------|-----------------|
 |**プロバイダー**|Microsoft Jet の OLE DB プロバイダーを指定します。|
-|**Data Source**|データベースパスとファイル名 (など`c:\Northwind.mdb`) を指定します。|
-|**User ID**|ユーザー名を指定します。 このキーワードが指定されていない場合、`admin`既定では "" という文字列が使用されます。|
+|**データ ソース**|データベースパスとファイル名 (など`c:\Northwind.mdb`) を指定します。|
+|**[ユーザー ID]**|ユーザー名を指定します。 このキーワードが指定されていない場合、`admin`既定では "" という文字列が使用されます。|
 |**パスワード**|ユーザーのパスワードを指定します。 このキーワードが指定されていない場合、既定では空の文字列 ("") が使用されます。|
 
 > [!NOTE]
@@ -91,7 +91,7 @@ Microsoft.Jet.OLEDB.4.0
 ## <a name="provider-specific-recordset-and-command-properties"></a>プロバイダー固有のレコードセットとコマンドのプロパティ
  Jet プロバイダーでは、いくつかのプロバイダー固有の**レコードセット**と**コマンド**プロパティもサポートされています。 これらのプロパティにアクセスして設定するには、**レコードセット**または**コマンド**オブジェクトの**properties**コレクションを使用します。 このテーブルには、ADO プロパティ名とそれに対応する OLE DB プロパティ名がかっこで囲まれて表示されます。
 
-|プロパティ名|[説明]|
+|プロパティ名|説明|
 |-------------------|-----------------|
 |Jet OLEDB: 一括トランザクション (DBPROP_JETOLEDB_BULKNOTRANSACTIONS)|SQL 一括操作がトランザクション処理されるかどうかを示します。 大量の一括操作は、リソースの遅延のため、トランザクション処理時に失敗する可能性があります。|
 |Jet OLEDB: Fat カーソルを有効にする (DBPROP_JETOLEDB_ENABLEFATCURSOR)|リモート行ソースのレコードセットを作成するときに Jet が複数の行をキャッシュするかどうかを示します。|
@@ -131,7 +131,7 @@ Microsoft.Jet.OLEDB.4.0
 |カタログ用語|DBPROP_CATALOGTERM|
 |列の定義|DBPROP_COLUMNDEFINITION|
 |現在のカタログ|DBPROP_CURRENTCATALOG|
-|Data Source|DBPROP_INIT_DATASOURCE|
+|データ ソース|DBPROP_INIT_DATASOURCE|
 |データ ソース名|DBPROP_DATASOURCENAME|
 |データソースオブジェクトのスレッドモデル|DBPROP_DSOTHREADMODEL|
 |DBMS 名|DBPROP_DBMSNAME|
@@ -159,12 +159,12 @@ Microsoft.Jet.OLEDB.4.0
 |Select リスト内の列の並べ替え|DBPROP_ORDERBYCOLUMNSINSELECT|
 |出力パラメーターの可用性|DBPROP_OUTPUTPARAMETERAVAILABILITY|
 |Ref アクセサーで渡す|DBPROP_BYREFACCESSORS|
-|Password|DBPROP_AUTH_PASSWORD|
+|パスワード|DBPROP_AUTH_PASSWORD|
 |永続的な ID の種類|DBPROP_PERSISTENTIDTYPE|
 |中止動作の準備|DBPROP_PREPAREABORTBEHAVIOR|
 |コミット動作の準備|DBPROP_PREPARECOMMITBEHAVIOR|
 |プロシージャ用語|DBPROP_PROCEDURETERM|
-|ダイアログを表示する|DBPROP_INIT_PROMPT|
+|Prompt|DBPROP_INIT_PROMPT|
 |プロバイダーのフレンドリ名|DBPROP_PROVIDERFRIENDLYNAME|
 |プロバイダー名|DBPROP_PROVIDERFILENAME|
 |プロバイダーのバージョン|DBPROP_PROVIDERVER|
@@ -178,8 +178,8 @@ Microsoft.Jet.OLEDB.4.0
 |テーブル用語|DBPROP_TABLETERM|
 |トランザクション DDL|DBPROP_SUPPORTEDTXNDDL|
 |User ID|DBPROP_AUTH_USERID|
-|ユーザー名|DBPROP_USERNAME|
-|ウィンドウハンドル|DBPROP_INIT_HWND|
+|[ユーザー名]|DBPROP_USERNAME|
+|ウィンドウ ハンドル|DBPROP_INIT_HWND|
 
 ## <a name="recordset-dynamic-properties"></a>レコードセットの動的プロパティ
  次のプロパティが、**レコードセット**オブジェクトの**properties**コレクションに追加されます。

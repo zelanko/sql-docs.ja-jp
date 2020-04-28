@@ -16,10 +16,10 @@ ms.assetid: 79f8ee5e-fc70-46d8-8c29-ebf943c66592
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5b9795f962d0ead59a8d4f993e799a0ae4e2b750
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921692"
 ---
 # <a name="absoluteposition-property-ado"></a>AbsolutePosition プロパティ (ADO)
@@ -30,7 +30,7 @@ ms.locfileid: "67921692"
   
  64ビットコードの場合は、64ビット値を格納するためにに用意されているデータ型を使用します。 たとえば、Long または DBORDINAL などの64ビット長の別の値を使用することができます。 **Positionenum**値は、32ビットの長さに制限されているため、使用しないでください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ADO では、 **AbsolutePosition**プロパティを設定するために、使用している OLE DB プロバイダーが[IRowsetLocate: IRowset](https://msdn.microsoft.com/library/windows/desktop/ms721190.aspx)インターフェイスを実装する必要があります。  
   
  順方向専用カーソルまたは動的カーソルで開かれた**レコードセット**の**AbsolutePosition**プロパティにアクセスすると、エラー **adErrFeatureNotAvailable**が発生します。 その他の種類のカーソルでは、OLE DB プロバイダーが**IRowsetScroll: IRowsetLocate**インターフェイスをサポートしている限り、正しい位置が返されます。 プロバイダーで**IRowsetScroll**インターフェイスがサポートされていない場合、プロパティは**adposunknown**に設定されます。 **IRowsetScroll**がサポートされているかどうかを判断するには、プロバイダーのドキュメントを参照してください。  

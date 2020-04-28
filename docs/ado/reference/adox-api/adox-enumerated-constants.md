@@ -13,10 +13,10 @@ ms.assetid: 9d91f511-d46f-44ef-97ef-77bf93836186
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8ff18386cb9da4edbeaa8930d138ba9951965ee0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67928550"
 ---
 # <a name="adox-enumerated-constants"></a>ADOX の列挙定数
@@ -24,7 +24,7 @@ ms.locfileid: "67928550"
   
  次の列挙定数が定義されています。  
   
-|Enumeration|[説明]|  
+|Enumeration|説明|  
 |-----------------|-----------------|  
 |[ActionEnum](../../../ado/reference/adox-api/actionenum.md)|**SetPermissions**が呼び出されたときに実行されるアクションの種類を指定します。|  
 |[AllowNullsEnum](../../../ado/reference/adox-api/allownullsenum.md)|Null 値を持つレコードのインデックスを作成するかどうかを指定します。|  

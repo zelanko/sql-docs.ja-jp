@@ -18,10 +18,10 @@ ms.assetid: 8cd1f7f4-0a3a-4f07-b8ba-6582e70140ad
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d90eff53ef998a009aecd4d82fc3b502a487c01d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67930834"
 ---
 # <a name="status-property-ado-field"></a>Status プロパティ (ADO Field)
@@ -30,7 +30,7 @@ ms.locfileid: "67930834"
 ## <a name="return-value"></a>戻り値  
  [Fieldstatusenum](../../../ado/reference/ado-api/fieldstatusenum.md)値を返します。 既定値は**adFieldOK**です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="record-field-status"></a>レコードフィールドの状態  
  [Record](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトの Fields コレクション内の**Field**オブジェクトの値に対する変更は、オブジェクトの[Update](../../../ado/reference/ado-api/update-method.md)メソッドが呼び出されるまでキャッシュされます。 その時点で、フィールドの値の変更によってエラーが発生した場合、OLE DB によってエラー **DB_E_ERRORSOCCURRED** (2147749409) が発生します。 エラーの原因となった**フィールド**コレクション内のいずれかの**フィールド**オブジェクトの Status プロパティには、問題の原因を説明する[fieldstatusenum](../../../ado/reference/ado-api/fieldstatusenum.md)の値が含まれます。  

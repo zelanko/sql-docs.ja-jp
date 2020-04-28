@@ -14,10 +14,10 @@ ms.assetid: b34f4472-5e04-4a2c-ab64-38d6eca31a69
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d4fef63ff610ad85e353c2ef1dc0f8e5987c74ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926198"
 ---
 # <a name="ado-connection-and-recordset-events"></a>ADO 接続およびレコードセットイベント
@@ -29,14 +29,14 @@ ms.locfileid: "67926198"
 
  次の表は、イベントとその説明をまとめたものです。
 
-|ConnectionEvent|[説明]|
+|ConnectionEvent|説明|
 |---------------------|-----------------|
 |[BeginTransComplete、CommitTransComplete、RollbackTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|**トランザクション管理**-接続の現在のトランザクションが開始、コミット、またはロールバックされたことを通知します。|
 |[接続](../../../ado/reference/ado-api/willconnect-event-ado.md)、 [Connectcomplete、切断](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|**接続管理**-現在の接続が開始されるか、開始されたか、または終了したことを通知します。|
 |[ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)を[実行](../../../ado/reference/ado-api/willexecute-event-ado.md)します。|**コマンド実行管理**-接続での現在のコマンドの実行が開始されるか、終了することを通知します。|
 |[InfoMessage](../../../ado/reference/ado-api/infomessage-event-ado.md)|**情報**-現在の操作に関する追加情報があることを通知します。|
 
-|RecordsetEvent|[説明]|
+|RecordsetEvent|説明|
 |--------------------|-----------------|
 |[Fetchprogress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)、 [fetchprogress](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|[**取得ステータス**]-データ取得操作の進行状況の通知、または取得操作が完了したことを示す通知。 これらのイベントは、**レコードセット**がクライアント側カーソルを使用して開かれた場合にのみ使用できます。|
 |[FieldChangeComplete、Changefield、](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|**フィールド変更管理**-現在のフィールドの値が変更されるか、または変更されたことを通知します。|

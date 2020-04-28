@@ -16,16 +16,16 @@ ms.assetid: e010e794-7f0f-4026-8b5b-37328e437d63
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 15df27e3dc48decf743a78dd4d147a22dc7cf276
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931661"
 ---
 # <a name="parameter-object"></a>Parameter オブジェクト
 パラメーター化クエリまたはストアドプロシージャに基づいて[Command](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトに関連付けられたパラメーターまたは引数を表します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  多くのプロバイダーがパラメーター化コマンドをサポートしています。 これらのコマンドは、必要なアクションが1回定義されていますが、変数 (またはパラメーター) を使用してコマンドの詳細を変更します。 たとえば、SQL の SELECT ステートメントでは、パラメーターを使用して WHERE 句の一致条件を定義し、別のステートメントを使用して SORT by 句の列名を定義することができます。  
   
  **パラメーター**オブジェクトは、パラメーター化クエリに関連付けられているパラメーター、またはストアドプロシージャの in/out 引数と戻り値を表します。 プロバイダーの機能によっては、**パラメーター**オブジェクトの一部のコレクション、メソッド、またはプロパティが使用できないことがあります。  

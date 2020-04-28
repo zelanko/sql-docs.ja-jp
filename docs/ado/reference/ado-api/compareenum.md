@@ -16,18 +16,18 @@ ms.assetid: bc8f710d-0621-4673-8d8e-0361e44abed0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c109f90fc023b6fbfeda01c8b4404c42a822c40a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67919557"
 ---
 # <a name="compareenum"></a>CompareEnum
 ブックマークによって表される2つのレコードの相対位置を指定します。  
   
-|常時|値|[説明]|  
+|Constant|値|説明|  
 |--------------|-----------|-----------------|  
-|**adCompareEqual**|1 で保護されたプロセスとして起動されました|ブックマークが等しいことを示します。|  
+|**adCompareEqual**|1|ブックマークが等しいことを示します。|  
 |**adCompareGreaterThan**|2|最初のブックマークが2番目のブックマークの後にあることを示します。|  
 |**adCompareLessThan**|0|最初のブックマークが2番目のブックマークよりも前にあることを示します。|  
 |**adCompareNotComparable**|4|ブックマークを比較できないことを示します。|  
@@ -36,7 +36,7 @@ ms.locfileid: "67919557"
 ## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
  パッケージ: **com. ms. wfc. データ**  
   
-|常時|  
+|Constant|  
 |--------------|  
 |AdoEnums|  
 |AdoEnums. GREATERTHAN|  
