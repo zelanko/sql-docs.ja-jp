@@ -19,10 +19,10 @@ ms.assetid: 208a1413-ce7f-4521-b765-d74723627302
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 47931e56759191e8386a6890ec683adf0d5f69c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68056275"
 ---
 # <a name="extended-events-tables---trace_xe_action_map"></a>拡張イベント テーブル - trace_xe_action_map
@@ -31,13 +31,13 @@ ms.locfileid: "68056275"
   SQL トレース列 ID に割り当てられている拡張イベントのアクションごとに 1 行のデータを格納します。 このテーブルは、sys スキーマの master データベースに格納されます。  
   
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |trace_column_id|**smallint**|マップされる SQL トレース列の ID。|  
-|package_name|**nvarchar (60)**|マップされたアクションがある拡張イベント パッケージの名前です。|  
-|xe_action_name|**nvarchar (60)**|SQL トレース列にマップされる拡張イベントアクションの名前です。|  
+|package_name|**nvarchar(60)**|マップされたアクションがある拡張イベント パッケージの名前です。|  
+|xe_action_name|**nvarchar(60)**|SQL トレース列にマップされる拡張イベントアクションの名前です。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  次のクエリを使用して、SQL トレース列に相当する拡張イベントアクションを特定できます。  
   
 ```  

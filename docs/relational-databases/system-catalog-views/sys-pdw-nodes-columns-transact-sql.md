@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 201af9001703bb8f1dfbdaf2c41151697b945df3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68059403"
 ---
 # <a name="syspdw_nodes_columns-transact-sql"></a>pdw_nodes_columns (Transact-sql)
@@ -24,7 +24,7 @@ ms.locfileid: "68059403"
 
   ユーザー定義テーブルとユーザー定義ビューの列を表示します。  
   
-|列名|データ型|[説明]|Range|  
+|列名|データ型|説明|範囲|  
 |-----------------|---------------|-----------------|-----------|  
 |object_id|**int**|この列が所属するオブジェクトの ID。||  
 |name|**sysname**|列の名前です。 オブジェクト内で一意です。||  
@@ -57,7 +57,7 @@ ms.locfileid: "68059403"
  CONTROL SERVER 権限が必要です。  
   
 ## <a name="see-also"></a>参照  
- [SQL Data Warehouse および並列データウェアハウスのカタログビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+ [SQL Data Warehouse and Parallel Data Warehouse Catalog Views (SQL Data Warehouse および Parallel Data Warehouse のカタログ ビュー)](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [all_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)  
   
   

@@ -20,21 +20,20 @@ ms.assetid: e244a6a5-54c2-47a6-8039-dd1852b0ae59
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3ea2b3196e159b19a1baaa032c622a4cf9132402
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68097602"
 ---
 # <a name="dbosysjobs-transact-sql"></a>sysjobs (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによる実行が予定されているジョブに関する情報を格納します。 このテーブルは、 **msdb**データベースに格納されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**job_id**|**UNIQUEIDENTIFIER**|ジョブの一意の ID。|  
+|**job_id**|**uniqueidentifier**|ジョブの一意の ID。|  
 |**originating_server_id**|**int**|ジョブの送信元のサーバーの ID。|  
 |**name**|**sysname**|ジョブの名前。|  
 |**enabled**|**tinyint**|ジョブの実行が有効かどうかを示します。|  
@@ -50,8 +49,8 @@ ms.locfileid: "68097602"
 |**notify_netsend_operator_id**|**int**|ネットワークメッセージを送信するときに使用されるコンピューターまたはユーザーの ID。|  
 |**notify_page_operator_id**|**int**|ページの送信時に使用されるコンピューターまたはユーザーの ID。|  
 |**delete_level**|**int**|どのような場合に、ジョブの完了時にジョブを削除する必要があるかを示す**ビットマスク**。<br /><br /> **0** = なし<br /><br /> **1** = ジョブが成功したとき<br /><br /> **2** = ジョブが失敗したとき<br /><br /> **3** = ジョブが完了するたびに (ジョブの結果に関係なく)|  
-|**date_created**|**DATETIME**|ジョブが作成された日付。|  
-|**date_modified**|**DATETIME**|ジョブが最後に変更された日付。|  
+|**date_created**|**datetime**|ジョブが作成された日付。|  
+|**date_modified**|**datetime**|ジョブが最後に変更された日付。|  
 |**version_number**|**int**|ジョブのバージョン。|  
   
   

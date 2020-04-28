@@ -19,10 +19,10 @@ ms.assetid: 41782719-f54d-4e11-941a-c050c7576e23
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7f31bc59e918a2a2ca4f0cf9e3833571028e85a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090798"
 ---
 # <a name="sysdm_server_memory_dumps-transact-sql"></a>sys.dm_server_memory_dumps (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68090798"
 
   によって生成されたメモリダンプファイルごと[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]に1行の値を返します。 この動的管理ビューを使用して、潜在的な問題のトラブルシューティングを行います。  
  
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**/db**|**nvarchar(256)**|メモリダンプファイルのパスと名前。 null にすることはできません。|  
 |**creation_time**|**datetimeoffset(7)**|ファイルが作成された日付と時刻。 null にすることはできません。|  
@@ -39,7 +39,7 @@ ms.locfileid: "68090798"
 ## <a name="general-remarks"></a>全般的な解説  
  ダンプの種類として、ミニダンプ、すべてのスレッドのダンプ、または完全なダンプを使用できます。 ファイルの拡張子は mdmp です。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
  ダンプ ファイルには機密情報が含まれている場合があります。 機密情報を保護するには、アクセス制御リスト (ACL) を使用してこのファイルへのアクセスを制限するか、アクセスが制限されたフォルダーにファイルをコピーすることができます。 たとえば、デバッグファイルを Microsoft サポートサービスに送信する前に、機密情報または機密情報をすべて削除することをお勧めします。  
   
 ### <a name="permissions"></a>アクセス許可  

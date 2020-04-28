@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d04238e0f476f39b0158fad4aa3350875d471ecc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68097941"
 ---
 # <a name="sysdm_db_xtp_table_memory_stats-transact-sql"></a>dm_db_xtp_table_memory_stats (Transact-sql)
@@ -35,7 +35,7 @@ ms.locfileid: "68097941"
   
  詳細については、「[インメモリ OLTP &#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)」を参照してください。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|テーブルのオブジェクト ID です。 インメモリ OLTP システム テーブルの場合は NULL です。|  
 |memory_allocated_for_table_kb|**bigint**|このテーブルに割り当てられているメモリです。|  
@@ -50,7 +50,7 @@ ms.locfileid: "68097941"
   
  システム テーブルは、VIEW DATABASE STATE 権限を持つユーザーにのみ返されます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の DMV に対してクエリを実行して、データベース内のテーブルとインデックスに割り当てられたメモリを取得できます。  
   
 ```  
@@ -213,6 +213,6 @@ used_memory_mb       target_memory_mb
 ```  
   
 ## <a name="see-also"></a>参照  
- [メモリ最適化テーブルの動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [メモリ最適化テーブルの動的管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

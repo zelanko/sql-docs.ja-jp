@@ -18,10 +18,10 @@ ms.assetid: e78464ac-2370-4c4e-9cc0-06aebc07cec5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 13ef625d778fe20aa5d33b2958c90aa8cd5a2a8e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68088470"
 ---
 # <a name="sp_droptype-transact-sql"></a>sp_droptype (Transact-sql)
@@ -45,9 +45,9 @@ sp_droptype [ @typename = ] 'type'
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ None  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  テーブルまたは他のデータベースオブジェクトが参照している場合、**型**の別名データ型を削除することはできません。  
   
 > [!NOTE]  
@@ -56,7 +56,7 @@ sp_droptype [ @typename = ] 'type'
 ## <a name="permissions"></a>アクセス許可  
  **Db_owner**固定データベースロールまたは**db_ddladmin**固定データベースロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、別名データ`birthday`型を削除します。  
   
 > [!NOTE]  
@@ -72,7 +72,7 @@ GO
 ## <a name="see-also"></a>参照  
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sp_addtype &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md)   
- [sp_rename &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

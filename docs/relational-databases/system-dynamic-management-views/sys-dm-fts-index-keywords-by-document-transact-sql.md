@@ -23,10 +23,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 86ab3a31f53f480713ae27a70bfe59d3817af017
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68078559"
 ---
 # <a name="sysdm_fts_index_keywords_by_document-transact-sql"></a>sys.dm_fts_index_keywords_by_document (Transact-SQL)
@@ -38,11 +38,11 @@ ms.locfileid: "68078559"
   
  **上位レベルのフルテキスト インデックス情報を表示するには**  
   
--   [dm_fts_index_keywords &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)  
+-   [sys.dm_fts_index_keywords &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)  
   
  **ドキュメントプロパティに関連するプロパティレベルのコンテンツに関する情報を表示するには**  
   
--   [dm_fts_index_keywords_by_property &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)  
+-   [sys.dm_fts_index_keywords_by_property &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -63,15 +63,15 @@ sys.dm_fts_index_keywords_by_document
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列|データ型|[説明]|  
+|列|データ型|説明|  
 |------------|---------------|-----------------|  
-|キーワード (keyword)|**nvarchar(4000)**|フルテキスト インデックスに格納されているキーワードの 16 進数表記です。<br /><br /> 注: 0 Xff は、ファイルまたはデータセットの末尾を示す特殊文字を表します。|  
-|display_term|**nvarchar(4000)**|キーワードの人間が判読できる形式。 この形式は、フルテキストインデックスに格納されている内部形式から派生します。<br /><br /> 注: 0 Xff は、ファイルまたはデータセットの末尾を示す特殊文字を表します。|  
+|キーワード (keyword)|**nvarchar (4000)**|フルテキスト インデックスに格納されているキーワードの 16 進数表記です。<br /><br /> 注: 0 Xff は、ファイルまたはデータセットの末尾を示す特殊文字を表します。|  
+|display_term|**nvarchar (4000)**|キーワードの人間が判読できる形式。 この形式は、フルテキストインデックスに格納されている内部形式から派生します。<br /><br /> 注: 0 Xff は、ファイルまたはデータセットの末尾を示す特殊文字を表します。|  
 |column_id|**int**|現在のキーワードがフルテキストインデックスを作成した列の ID。|  
 |document_id|**int**|現在の用語のフルテキストインデックスが作成されたドキュメントまたは行の ID。 この ID は、そのドキュメントまたは行のフルテキストキー値に対応します。|  
 |occurrence_count|**int**|**Document_id**によって示されるドキュメントまたは行の現在のキーワードが出現する回数。 '*Search_property_name*' が指定されている場合、occurrence_count は、ドキュメントまたは行内の指定された検索プロパティにおける現在のキーワードの出現回数のみを表示します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  sys.dm_fts_index_keywords_by_document から返される情報は、特に次の項目を確認するのに役立ちます。  
   
 -   フルテキストインデックスに含まれているキーワードの合計数。  

@@ -18,10 +18,10 @@ ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7d698932bb7ef7e0fd37a0ced8ab536eeb0d5d68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096031"
 ---
 # <a name="sp_trace_create-transact-sql"></a>sp_trace_create (Transact-SQL)
@@ -30,8 +30,7 @@ ms.locfileid: "68096031"
   トレース定義を作成します。 新しいトレースは停止状態になります。  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに拡張イベントを使用します。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに拡張イベントを使用します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,7 +53,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
  次の表に、オプション、説明、およびそれらの値を示します。  
   
-|オプション名|オプション値|[説明]|  
+|オプション名|オプション値|説明|  
 |-----------------|------------------|-----------------|  
 |TRACE_FILE_ROLLOVER|**2**|*Max_file_size*に達すると、現在のトレースファイルが閉じられ、新しいファイルが作成されることを指定します。 新しいレコードはすべて新しいファイルに書き込まれます。 新しいファイルは前のファイルと同じ名前になりますが、シーケンスを示すために整数が追加されます。 たとえば、元のトレース ファイルの名前が filename.trc の場合、次のトレース ファイルの名前は順に filename_1.trc、filename_2.trc となります。<br /><br /> ロールオーバートレースファイルがさらに作成されると、ファイル名に付加された整数値が順番に増加します。<br /><br /> *Max_file_size*の値を指定せずにこのオプションを指定した場合、SQL Server は*MAX_FILE_SIZE* (5 MB) の既定値を使用します。|  
 |SHUTDOWN_ON_ERROR|**4**|なんらかの理由によりトレースをファイルに書き込めない場合、SQL Server はシャットダウンします。 このオプションは、セキュリティ監査トレースを実行するときに役立ちます。|  
@@ -92,17 +91,17 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 ## <a name="return-code-values"></a>リターン コードの値  
  次の表は、このストアド プロシージャの完了時に返されるコード値を示しています。  
   
-|リターンコード|[説明]|  
+|リターン コード|説明|  
 |-----------------|-----------------|  
 |0|エラーなし。|  
-|1 で保護されたプロセスとして起動されました|不明なエラー。|  
+|1|不明なエラー。|  
 |10|オプションが無効です。 指定したオプションが一致しない場合に返されます。|  
 |12|ファイルが作成されていない。|  
 |13|メモリ不足。 指定されたアクションを実行するのに十分なメモリがない場合に返されます。|  
 |14|停止時刻が無効です。 指定された停止時刻が既に発生した場合に返されます。|  
 |15|パラメーターが無効。 ユーザーが互換性のないパラメーターを指定した場合に返されます。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_trace_create**は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以前のバージョンの SQL Server で使用できる拡張ストアドプロシージャ**xp_trace_\* **によって以前に実行された操作の多くを実行するストアドプロシージャです。 ではなく**sp_trace_create**を使用します。  
   
 -   **xp_trace_addnewqueue**  

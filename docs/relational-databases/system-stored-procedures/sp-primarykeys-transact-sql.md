@@ -18,10 +18,10 @@ ms.assetid: 0f76dd31-5b7b-4209-9e2e-b9ed5cac164d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ccae0385ef8c9305f4972ff6dcbd7a7960200370
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68056310"
 ---
 # <a name="sp_primarykeys-transact-sql"></a>sp_primarykeys (Transact-sql)
@@ -46,17 +46,16 @@ sp_primarykeys [ @table_server = ] 'table_server'
   
 `[ @table_name = ] 'table_name'`主キー情報を提供するテーブルの名前を指定します。 *table_name*は**sysname**,、既定値は NULL です。  
   
-`[ @table_schema = ] 'table_schema'`テーブルスキーマを示します。 *table_schema*は**sysname**,、既定値は NULL です。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境では、これはテーブル所有者に相当します。  
+`[ @table_schema = ] 'table_schema'`テーブルスキーマを示します。 *table_schema*は**sysname**,、既定値は NULL です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境では、これはテーブル所有者に相当します。  
   
 `[ @table_catalog = ] 'table_catalog'`指定した*table_name*が存在するカタログの名前を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]環境では、これはデータベース名に対応しています。 *table_catalog*は**sysname**,、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- なし  
+ None  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CAT**|**sysname**|テーブルカタログ。|  
 |**TABLE_SCHEM**|**sysname**|テーブル スキーマ。|  
@@ -65,7 +64,7 @@ sp_primarykeys [ @table_server = ] 'table_server'
 |**KEY_SEQ**|**int**|複数列の主キーの列のシーケンス番号。|  
 |**PK_NAME**|**sysname**|主キー識別子。 データソースに該当しない場合は NULL を返します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_primarykeys**は、 *table_server*に対応する OLE DB プロバイダーの**IDBSchemaRowset**インターフェイスの PRIMARY_KEYS 行セットを照会することによって実行されます。 返される行を制限するために、 *table_name*、 *table_schema*、 *table_catalog*、および*列*の各パラメーターがこのインターフェイスに渡されます。  
   
  指定されたリンクサーバーの OLE DB プロバイダーが**IDBSchemaRowset**インターフェイスの PRIMARY_KEYS 行セットをサポートしていない場合、 **sp_primarykeys**は空の結果セットを返します。  
@@ -73,7 +72,7 @@ sp_primarykeys [ @table_server = ] 'table_server'
 ## <a name="permissions"></a>アクセス許可  
  スキーマに対する SELECT 権限が必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、 `LONDON1` `HumanResources.JobCandidate` [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース内のテーブルの主キー列をサーバーから返します。  
   
 ```  
@@ -92,6 +91,6 @@ EXEC sp_primarykeys @table_server = N'LONDON1',
  [sp_linkedservers &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
  [sp_tables_ex &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
  [sp_table_privileges &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

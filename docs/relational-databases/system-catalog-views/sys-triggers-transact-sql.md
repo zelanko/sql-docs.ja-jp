@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 33eb5a1c4176041d64ba60a3a684b75bc4816350
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68091929"
 ---
 # <a name="systriggers-transact-sql"></a>sys.triggers (Transact-SQL)
@@ -34,24 +34,24 @@ ms.locfileid: "68091929"
   
  **Parent_class**列と**name**列は、データベース内のトリガーを一意に識別します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|トリガー名。 DML トリガー名はスキーマ スコープです。 DDL トリガーの名前は、親エンティティに対してスコープが設定されます。|  
 |**object_id**|**int**|オブジェクト ID 番号。 データベース内で一意です。|  
 |**parent_class**|**tinyint**|トリガーの親のクラス。<br /><br /> 0 = DDL トリガー用のデータベース<br /><br /> 1 = DML トリガー用のオブジェクトまたは列|  
-|**parent_class_desc**|**nvarchar (60)**|トリガーの親クラスの説明です。<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN|  
+|**parent_class_desc**|**nvarchar(60)**|トリガーの親クラスの説明です。<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN|  
 |**parent_id**|**int**|トリガーの親の ID。次に例を示します。<br /><br /> 0 = データベースが親となっているトリガー<br /><br /> DML トリガーの場合、これは DML トリガーが定義されているテーブルまたはビューの**object_id**です。|  
-|**type**|**char (2)**|オブジェクトの種類:<br /><br /> TA = アセンブリ (CLR) トリガー<br /><br /> TR = SQL トリガー|  
-|**type_desc**|**nvarchar (60)**|オブジェクトの種類の説明。<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
-|**create_date**|**DATETIME**|トリガーが作成された日付。|  
-|**modify_date**|**DATETIME**|ALTER ステートメントを使用してオブジェクトが最後に変更された日付。|  
+|**type**|**char(2)**|オブジェクトの種類:<br /><br /> TA = アセンブリ (CLR) トリガー<br /><br /> TR = SQL トリガー|  
+|**type_desc**|**nvarchar(60)**|オブジェクトの種類の説明。<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
+|**create_date**|**datetime**|トリガーが作成された日付。|  
+|**modify_date**|**datetime**|ALTER ステートメントを使用してオブジェクトが最後に変更された日付。|  
 |**is_ms_shipped**|**bit**|内部[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンポーネントによってユーザーの代理として作成されたトリガー。|  
 |**is_disabled**|**bit**|トリガーは無効です。|  
 |**is_not_for_replication**|**bit**|トリガーは NOT FOR REPLICATION として作成されました。|  
 |**is_instead_of_trigger**|**bit**|1 = INSTEAD OF トリガー<br /><br /> 0 = AFTER トリガー|  
   
 ## <a name="permissions"></a>アクセス許可  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [セキュリティカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   

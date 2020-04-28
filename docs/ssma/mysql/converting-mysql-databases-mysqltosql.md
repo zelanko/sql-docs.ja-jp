@@ -10,10 +10,10 @@ ms.assetid: ac21850b-fb32-4704-9985-5759b7c688c7
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 1ad4cbbdf80422f87c850c44e47f82899de4c82a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68103050"
 ---
 # <a name="converting-mysql-databases-mysqltosql"></a>MySQL データベースの変換 (MySQLToSQL)
@@ -35,7 +35,7 @@ MySQL への接続、または SQL Azure へ[!INCLUDE[ssNoVersion](../../include
 |**MySQL オブジェクト**|**結果の SQL Server オブジェクト**|  
 |インデックスなどの依存オブジェクトを含むテーブル|SSMA は、依存オブジェクトを含むテーブルを作成します。 テーブルは、すべてのインデックスと制約に変換されます。 インデックスは、個別[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のオブジェクトに変換されます。<br /><br />**空間データ型のマッピング**は、テーブルノードレベルでのみ実行できます。<br /><br />テーブル変換の設定の詳細については、「[変換の設定](conversion-settings-mysqltosql.md)」を参照してください。|  
 |関数|関数を Transact-sql に直接変換できる場合は、SSMA によって関数が作成されます。 場合によっては、関数をストアドプロシージャに変換する必要があります。 これは、プロジェクト設定の**関数変換**を使用して行うことができます。 この場合、SSMA はストアドプロシージャを作成し、ストアドプロシージャを呼び出す関数を作成します。<br /><br />**指定された選択肢:**<br /><br />プロジェクト設定に従って変換する<br /><br />関数に変換<br /><br />ストアドプロシージャへの変換<br /><br />関数の変換設定の詳細については、「[変換の設定](conversion-settings-mysqltosql.md)」を参照してください。|  
-|手順|プロシージャを Transact-sql に直接変換できる場合は、SSMA によってストアドプロシージャが作成されます。 場合によっては、独立したトランザクションでストアドプロシージャを呼び出す必要があります。 この場合、SSMA は、プロシージャを実装するストアドプロシージャと、実装するストアドプロシージャを呼び出すために使用する2つのストアドプロシージャを作成します。|  
+|プロシージャ|プロシージャを Transact-sql に直接変換できる場合は、SSMA によってストアドプロシージャが作成されます。 場合によっては、独立したトランザクションでストアドプロシージャを呼び出す必要があります。 この場合、SSMA は、プロシージャを実装するストアドプロシージャと、実装するストアドプロシージャを呼び出すために使用する2つのストアドプロシージャを作成します。|  
 |データベースの変換|MySQL オブジェクトとしてのデータベースは、SSMA for MySQL によって直接変換されるわけではありません。 MySQL データベースはスキーマ名と同様に処理され、すべての物理パラメーターは変換時に失われます。 SSMA for MySQL は[、mysql データベースを SQL Server スキーマ &#40;MySQLToSQL&#41;にマッピング](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)して、mysql データベースから適切な SQL Server データベース/スキーマのペアにオブジェクトをマップします。|  
 |トリガーの変換|**SSMA は、次の規則に基づいてトリガーを作成します。**<br /><br />T-sql トリガーではなくトリガーがに変換される前<br /><br />AFTER トリガーは、行ごとにイテレーションがあるか、または指定されていない場合に、に変換されます。|  
 |変換の表示|SSMA により、依存オブジェクトを含むビューが作成されます。|  
@@ -105,7 +105,7 @@ MySQL データベースオブジェクトを変換するには、まず変換�
   
 -   オブジェクトを移行から除外することができます。 また[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は SQL Azure メタデータエクスプローラーおよび Mysql メタデータエクスプローラーで、項目の横のチェックボックスをオフにし[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]てから、mysql からのオブジェクトの読み込みやデータの SQL Azure と移行を行います。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 移行プロセスの次のステップでは、変換された[データベースオブジェクトを SQL Server &#40;MySQLToSQL に読み込み&#41;](../../ssma/mysql/loading-converted-database-objects-into-sql-server-mysqltosql.md)  
   
 ## <a name="see-also"></a>参照  

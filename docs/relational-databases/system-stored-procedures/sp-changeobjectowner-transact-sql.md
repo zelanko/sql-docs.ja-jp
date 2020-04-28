@@ -18,10 +18,10 @@ ms.assetid: 45b3dc1c-1cde-45b7-a248-5195c12973e9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 6f00b788ecf6b6e4c02d4b8343ba14fa2c345e6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68056582"
 ---
 # <a name="sp_changeobjectowner-transact-sql"></a>sp_changeobjectowner (Transact-sql)
@@ -52,7 +52,7 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_changeobjectowner**オブジェクトから既存のすべてのアクセス許可を削除します。 **Sp_changeobjectowner**を実行した後も、保持するアクセス許可を再適用する必要があります。 そのため、 **sp_changeobjectowner**を実行する前に、既存のアクセス許可のスクリプトを作成することをお勧めします。 オブジェクトの所有権が変更された後、スクリプトを使用してアクセス許可を再適用できます。 権限スクリプトを実行する前に、そのスクリプトでオブジェクトの所有者を変更する必要があります。  
   
  セキュリティ保護可能なオブジェクトの所有者を変更するには、ALTER AUTHORIZATION を使用します。 スキーマを変更するには、ALTER SCHEMA を使用します。  
@@ -60,7 +60,7 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
 ## <a name="permissions"></a>アクセス許可  
  **Db_owner**固定データベースロールのメンバーシップ、または**db_ddladmin**固定データベースロールと**db_securityadmin**固定データベースロールのメンバーシップ、およびオブジェクトに対する CONTROL 権限が必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、`authors` テーブルの所有者を `Corporate\GeorgeW` に変更します。  
   
 ```  
@@ -70,9 +70,9 @@ GO
   
 ## <a name="see-also"></a>参照  
  [ALTER SCHEMA &#40;Transact-sql&#41;](../../t-sql/statements/alter-schema-transact-sql.md)   
- [ALTER DATABASE &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [ALTER AUTHORIZATION &#40;Transact-sql&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
  [sp_changedbowner &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

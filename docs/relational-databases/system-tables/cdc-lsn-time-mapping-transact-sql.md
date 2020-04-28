@@ -18,10 +18,10 @@ ms.assetid: 1cb7aedc-48a4-486e-9b91-d30c4bd4084e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1e89e67b49498320e4500b99332fc5584d5f38d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68066669"
 ---
 # <a name="cdclsn_time_mapping-transact-sql"></a>cdc. lsn_time_mapping (Transact-sql)
@@ -31,15 +31,15 @@ ms.locfileid: "68066669"
   
  システムテーブルに対して直接クエリを実行しないことをお勧めします。 代わりに、transact-sql &#40;システム関数を[&#41;transact-sql&#41;fn_cdc_map_time_to_lsn](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)および &#40;を実行して、 [fn_cdc_map_lsn_to_time](../../relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql.md)を実行します。  
     
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**start_lsn**|**binary (10)**|コミットされたトランザクションの LSN。|  
-|**tran_begin_time**|**DATETIME**|LSN に関連付けられているトランザクションが開始された時刻。|  
-|**tran_end_time**|**DATETIME**|トランザクションが終了した時刻。|  
+|**start_lsn**|**binary(10)**|コミットされたトランザクションの LSN。|  
+|**tran_begin_time**|**datetime**|LSN に関連付けられているトランザクションが開始された時刻。|  
+|**tran_end_time**|**datetime**|トランザクションが終了した時刻。|  
 |**tran_id**|**varbinary (10)**|トランザクションの ID。|  
   
 ## <a name="see-also"></a>参照  
- [トランザクションログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
+ [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
  [cdc. &#60;capture_instance&#62;_CT &#40;Transact-sql&#41;](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)  
   
   

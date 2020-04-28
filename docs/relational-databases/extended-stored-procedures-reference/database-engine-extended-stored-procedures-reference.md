@@ -13,18 +13,17 @@ ms.assetid: 4e9d0374-0927-4f17-bab9-2215b1b8fea8
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 013ca0abae914b511a564ee4d67bd01d398f8bb5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68064204"
 ---
 # <a name="database-engine-extended-stored-procedures---reference"></a>データベース エンジン拡張ストアド プロシージャ - リファレンス
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
   
  拡張[!INCLUDE[msCoName](../../includes/msconame-md.md)]ストアドプロシージャ api は、既に Open Data Services に含まれており、機能を拡張[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]するためのサーバーベースのアプリケーションプログラミングインターフェイス (API) を提供します。 この API は、アプリケーションの構築に使用する C および C++ の関数とマクロで構成されています。  
   

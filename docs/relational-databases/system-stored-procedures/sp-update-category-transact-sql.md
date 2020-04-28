@@ -18,10 +18,10 @@ ms.assetid: 098b926a-b078-4122-a5e1-3ef54b979dd4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3ebee467890e26aa58171690f5fdabaef3607ee1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084923"
 ---
 # <a name="sp_update_category-transact-sql"></a>sp_update_category (Transact-sql)
@@ -44,7 +44,7 @@ sp_update_category
 ## <a name="arguments"></a>引数  
 `[ @class = ] 'class'`更新するカテゴリのクラス。 *クラス*は**varchar (8)**,、既定値はありませんが、これらの値のいずれかを指定することができます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**アラート**|アラートカテゴリを更新します。|  
 |**補足**|ジョブ カテゴリを更新します。|  
@@ -57,13 +57,13 @@ sp_update_category
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_update_category**は、 **msdb**データベースから実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  このストアドプロシージャを実行するには、 **sysadmin**固定サーバーロールがユーザーに付与されている必要があります。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、ジョブ カテゴリの名前を `AdminJobs` から `Administrative Jobs` に変更します。  
   
 ```  
@@ -81,6 +81,6 @@ GO
  [sp_add_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
  [sp_delete_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
  [sp_help_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

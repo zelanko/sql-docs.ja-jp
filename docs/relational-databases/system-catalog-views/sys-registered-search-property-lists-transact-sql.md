@@ -22,10 +22,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 87af4645a052001ddfc2d0540b6b40e75e3dbb20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68067851"
 ---
 # <a name="sysregistered_search_property_lists-transact-sql"></a>sys.registered_search_property_lists (Transact-SQL)
@@ -33,15 +33,15 @@ ms.locfileid: "68067851"
 
   現在のデータベースの検索プロパティ リストごとに 1 行のデータを格納します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**property_list_id**|**int**|プロパティ リストの ID。|  
 |**name**|**sysname**|プロパティ リストの名前。|  
-|**create_date**|**DATETIME**|プロパティ リストが作成された日付。|  
-|**modify_date**|**DATETIME**|ALTER ステートメントによってプロパティリストが最後に変更された日付。|  
+|**create_date**|**datetime**|プロパティ リストが作成された日付。|  
+|**modify_date**|**datetime**|ALTER ステートメントによってプロパティリストが最後に変更された日付。|  
 |**principal_id**|**int**|プロパティ リストの所有者。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  詳細については、「 [検索プロパティ リストを使用したドキュメント プロパティの検索](../../relational-databases/search/search-document-properties-with-search-property-lists.md)」を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -50,7 +50,7 @@ ms.locfileid: "68067851"
 > [!NOTE]  
 >  検索プロパティリストの所有者は、一覧に対する参照または制御権限を許可できます。 CONTROL 権限を持つユーザーは、他のユーザーに REFERENCE 権限を与えることができます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース内の検索プロパティリストの ID と名前を表示します。  
   
 ```  
@@ -62,6 +62,6 @@ GO
   
 ## <a name="see-also"></a>参照  
  [Transact-sql&#41;&#40;のフルテキストインデックスの変更](../../t-sql/statements/alter-fulltext-index-transact-sql.md)   
- [fulltext_indexes &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)  
+ [sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)  
   
   

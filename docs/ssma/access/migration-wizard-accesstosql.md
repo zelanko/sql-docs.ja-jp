@@ -19,10 +19,10 @@ ms.assetid: 5bab5914-b2ae-4795-8cf5-83e42d64bef2
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 658487186924fe5547edee70425524b2b4e3be6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68083591"
 ---
 # <a name="migration-wizard-accesstosql"></a>移行ウィザード (移動用 Sql)
@@ -43,7 +43,7 @@ ms.locfileid: "68083591"
 [新しいプロジェクトの作成] ページには、プロジェクトのファイル名、場所と移行プロジェクトの種類 (移行に使用するターゲット SQL Server のバージョン) を入力します。 詳細については、「[新しいプロジェクト (SSMA)](https://msdn.microsoft.com/ca294f6d-eeb5-42ca-9306-156281a3f0f3) 」を参照してください。  
   
 ## <a name="add-access-databases-page"></a>[Access データベースの追加] ページ  
-[Access データベースの追加] ページでは、プロジェクトに1つ以上の Access データベースを追加します。 個々のデータベースを追加するには、[**データベースの追加**] をクリックし、[**開く**] ウィンドウからデータベースを選択します。 または、[**データベースの検索**] ボタンを使用してデータベースを検索することもできます。 詳細については、次のトピックを参照してください。  
+[Access データベースの追加] ページでは、プロジェクトに1つ以上の Access データベースを追加します。 個々のデータベースを追加するには、[**データベースの追加**] をクリックし、[**開く**] ウィンドウからデータベースを選択します。 または、[**データベースの検索**] ボタンを使用してデータベースを検索することもできます。 詳細については、以下のトピックを参照してください。  
   
 -   [Access データベースファイルの追加と削除](adding-and-removing-access-database-files-accesstosql.md)  
   
@@ -60,7 +60,7 @@ ms.locfileid: "68083591"
   
 1.  [**アクセス-メタベース**] を展開し、[**データベース**] を展開します。  
   
-2.  以下のいずれかの操作を行います。  
+2.  次のうち1 つ以上を行います。  
   
     -   すべてのデータベースを変換するには、[**データベース**] の横にあるチェックボックスをオンにします。  
   

@@ -20,10 +20,10 @@ ms.assetid: ee1b2ebd-03cb-4b91-a5d2-98d4d38f82ec
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ee6aba8417570c9d75f683efdbfcf10c54b82792
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68095875"
 ---
 # <a name="dbosystargetservergroupmembers-transact-sql"></a>systargetservergroupmembers (Transact-sql)
@@ -31,7 +31,7 @@ ms.locfileid: "68095875"
 
   マルチサーバー グループに現在参加しているターゲット サーバーを記録します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**servergroup_id**|**int**|サーバーグループ ID|  
 |**server_id**|**int**|サーバー ID|  

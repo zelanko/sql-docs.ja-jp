@@ -18,10 +18,10 @@ ms.assetid: 57971787-f9f5-4199-9f64-c2b61a308906
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6a1a2ce1208dcf359bb0586c3de1fe294644e3a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68054882"
 ---
 # <a name="sp_help_jobserver-transact-sql"></a>sp_help_jobserver (Transact-sql)
@@ -56,21 +56,21 @@ sp_help_jobserver
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|対象サーバーの識別番号。|  
-|**server_name**|**nvarchar (30)**|対象サーバーのコンピューター名。|  
-|**enlist_date**|**DATETIME**|対象サーバーをマスターサーバーに参加させた日付。|  
-|**last_poll_date**|**DATETIME**|対象サーバーが最後にマスターサーバーをポーリングした日付。|  
+|**server_name**|**nvarchar(30)**|対象サーバーのコンピューター名。|  
+|**enlist_date**|**datetime**|対象サーバーをマスターサーバーに参加させた日付。|  
+|**last_poll_date**|**datetime**|対象サーバーが最後にマスターサーバーをポーリングした日付。|  
   
  *Show_last_run_details*を**1**に設定して**sp_help_jobserver**を実行した場合、結果セットにはこれらの列が追加されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**last_run_date**|**int**|ターゲット サーバーでジョブの実行を最後に開始した日付。|  
 |**last_run_time**|**int**|このサーバーでジョブの実行を最後に開始した時刻。|  
 |**last_run_duration**|**int**|対象サーバーで最後に実行されたジョブの期間 (秒単位)。|  
-|**last_outcome_message**|**nvarchar (1024)**|ジョブの最終結果を説明します。|  
+|**last_outcome_message**|**nvarchar(1024)**|ジョブの最終結果を説明します。|  
 |**last_run_outcome**|**int**|このサーバーで最後に実行されたときのジョブの結果:<br /><br /> **0** = 失敗<br /><br /> **1** = 成功<br /><br /> **3** = キャンセル<br /><br /> **5** = 不明|  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -86,7 +86,7 @@ sp_help_jobserver
   
  **SQLAgentUserRole**のメンバーは、自分が所有しているジョブの情報のみを表示できます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、 `NightlyBackups`ジョブに関する情報 (最終実行情報を含む) が返されます。  
   
 ```  
@@ -102,6 +102,6 @@ GO
 ## <a name="see-also"></a>参照  
  [sp_add_jobserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
  [sp_delete_jobserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

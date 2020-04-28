@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5a833e5d1c3c67e61c4d81b4b575ab90b23f75fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68097703"
 ---
 # <a name="sysdm_exec_query_memory_grants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
@@ -32,20 +32,19 @@ ms.locfileid: "68097703"
 
   メモリ許可を待機しているか、メモリ許可が与えられている、要求されたすべてのクエリに関する情報を返します。 メモリ許可を必要としないクエリは、このビューに表示されません。 たとえば、並べ替えとハッシュ結合の操作には、クエリの実行にメモリ許可がありますが、 **ORDER by**句を使用しないクエリにはメモリ許可がありません。  
   
- 
-  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、動的管理ビューは、データベースの包含に影響する情報を公開することも、ユーザーがアクセスできる他のデータベースに関する情報を公開することもできません。 この情報を公開しないように、接続されたテナントに属していないデータを含むすべての行がフィルターで除外されます。また、列**scheduler_id**、 **wait_order**、 **pool_id**、 **group_id**の値がフィルター処理されます。列の値が NULL に設定されています。  
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、動的管理ビューは、データベースの包含に影響する情報を公開することも、ユーザーがアクセスできる他のデータベースに関する情報を公開することもできません。 この情報を公開しないように、接続されたテナントに属していないデータを含むすべての行がフィルターで除外されます。また、列**scheduler_id**、 **wait_order**、 **pool_id**、 **group_id**の値がフィルター処理されます。列の値が NULL に設定されています。  
   
 > [!NOTE]  
 > またはから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]これを[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼び出すには、 **dm_pdw_nodes_exec_query_memory_grants**という名前を使用します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**smallint**|このクエリを実行中のセッションの ID (SPID)。|  
 |**request_id**|**int**|要求の ID。 セッションのコンテキスト内で一意です。|  
 |**scheduler_id**|**int**|このクエリのスケジュールを設定しているスケジューラの ID。|  
 |**dop**|**smallint**|このクエリの並行処理の程度。|  
-|**request_time**|**DATETIME**|このクエリがメモリ許可を要求した日付と時刻。|  
-|**grant_time**|**DATETIME**|このクエリにメモリが許可された日付と時刻。 メモリがまだ許可されていない場合は NULL です。|  
+|**request_time**|**datetime**|このクエリがメモリ許可を要求した日付と時刻。|  
+|**grant_time**|**datetime**|このクエリにメモリが許可された日付と時刻。 メモリがまだ許可されていない場合は NULL です。|  
 |**requested_memory_kb**|**bigint**|メモリの要求量の合計 (KB 単位)。|  
 |**granted_memory_kb**|**bigint**|実際に許可されたメモリの総量 (KB 単位)。 メモリがまだ許可されていない場合、NULL になることがあります。 一般的な状況では、この値は **requested_memory_kb** と同じになります。 インデックス作成では、最初に許可されたメモリ量を超えて、追加のオンデマンド メモリが許可される場合があります。|  
 |**required_memory_kb**|**bigint**|このクエリを実行するために必要な最小メモリ (kb 単位)。 **requested_memory_kb**がこの値と同じか、それより大きいです。|  
@@ -58,8 +57,8 @@ ms.locfileid: "68097703"
 |**wait_order**|**int**|指定した **queue_id** 内の待機キューの順番。 この値は、他のクエリがメモリ許可を取得したり、タイムアウトしたりした場合に、特定のクエリで変更される可能性があります。メモリが既に許可されている場合は NULL です。|  
 |**is_next_candidate**|**bit**|次のメモリ許可の候補。<br /><br /> 1 = はい<br /><br /> 0 = いいえ<br /><br /> NULL = メモリが既に許可されている|  
 |**wait_time_ms**|**bigint**|待機時間 (ミリ秒単位)。 メモリが既に許可されている場合は NULL です。|  
-|**plan_handle**|**varbinary (64)**|このクエリ プランの識別子。 実際の XML プランを抽出するには、**sys.dm_exec_query_plan** を使用します。|  
-|**sql_handle**|**varbinary (64)**|このクエリの [!INCLUDE[tsql](../../includes/tsql-md.md)] テキストの識別子。 実際の [!INCLUDE[tsql](../../includes/tsql-md.md)] テキストを取得するには、**sys.dm_exec_sql_text** を使用します。|  
+|**plan_handle**|**varbinary(64)**|このクエリ プランの識別子。 実際の XML プランを抽出するには、**sys.dm_exec_query_plan** を使用します。|  
+|**sql_handle**|**varbinary(64)**|このクエリの [!INCLUDE[tsql](../../includes/tsql-md.md)] テキストの識別子。 実際の [!INCLUDE[tsql](../../includes/tsql-md.md)] テキストを取得するには、**sys.dm_exec_sql_text** を使用します。|  
 |**group_id**|**int**|このクエリが実行されているワークロード グループの ID。|  
 |**pool_id**|**int**|このワークロード グループが属するリソース プールの ID。|  
 |**is_small**|**tinyint**|1 に設定すると、この許可で小さなリソース セマフォが使用されます。 0 に設定すると、通常のセマフォが使用されます。|  
@@ -69,17 +68,14 @@ ms.locfileid: "68097703"
 ## <a name="permissions"></a>アクセス許可  
 
 で[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]は、 `VIEW SERVER STATE`権限が必要です。   
-
-  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 上では、データベース内の `VIEW DATABASE STATE` アクセス許可が必要です。   
+[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 上では、データベース内の `VIEW DATABASE STATE` アクセス許可が必要です。   
    
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  クエリ タイムアウトの一般的なデバッグ方法は、次のようになります。  
   
--   
-  [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)、[sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)、およびさまざまなパフォーマンス カウンターを使用して、全体的なシステム メモリ状態を調べます。  
+-   [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)、[sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)、およびさまざまなパフォーマンス カウンターを使用して、全体的なシステム メモリ状態を調べます。  
   
--   
-  **sys.dm_os_memory_clerks** で、`type = 'MEMORYCLERK_SQLQERESERVATIONS'` であるクエリ実行メモリ予約を調べます。  
+-   **sys.dm_os_memory_clerks** で、`type = 'MEMORYCLERK_SQLQERESERVATIONS'` であるクエリ実行メモリ予約を調べます。  
   
 -   **Sys. dm_exec_query_memory_grants**を使用した許可について<sup>1</sup>を待機しているクエリを確認します。  
   
@@ -88,7 +84,7 @@ ms.locfileid: "68097703"
     SELECT * FROM sys.dm_exec_query_memory_grants where grant_time is null  
     ```  
     
-    <sup>1</sup>このシナリオでは、通常、待機の種類は RESOURCE_SEMAPHORE です。 詳細については、「[sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)」を参照してください。 
+    <sup>1</sup> このシナリオの場合、待機の種類は一般的に RESOURCE_SEMAPHORE になります。 詳細については、「[sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)」を参照してください。 
   
 -   Dm_exec_cached_plans を使用してメモリ許可を持つクエリのキャッシュを検索し[ます。 transact-sql dm_exec_query_plan&#41;&#40;transact-sql](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) [&#40;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
   
@@ -100,8 +96,7 @@ ms.locfileid: "68097703"
     GO  
     ```  
   
--   
-  [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) を使用して、メモリを集中的に使用するクエリをさらに調べます。  
+-   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) を使用して、メモリを集中的に使用するクエリをさらに調べます。  
   
     ```sql  
     --Find top 5 queries by average CPU time  
@@ -122,6 +117,6 @@ ms.locfileid: "68097703"
 ## <a name="see-also"></a>参照  
  [dm_exec_query_resource_semaphores &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)     
  [dm_os_wait_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
- [実行関連の動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [実行関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

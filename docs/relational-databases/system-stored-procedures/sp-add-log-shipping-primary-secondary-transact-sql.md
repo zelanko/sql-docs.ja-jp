@@ -18,10 +18,10 @@ ms.assetid: 23b3e100-5318-410e-b8f3-51c89b2dd777
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1b3ea170f07eaea32306e0453d492e510062c9b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68046271"
 ---
 # <a name="sp_add_log_shipping_primary_secondary-transact-sql"></a>sp_add_log_shipping_primary_secondary (Transact-sql)
@@ -52,15 +52,15 @@ sp_add_log_shipping_primary_secondary
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ None  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_add_log_shipping_primary_secondary**は、プライマリサーバーの**master**データベースから実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャを実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  この例では、 **sp_add_log_shipping_primary_secondary**を使用してセカンダリデータベース**LogShipAdventureWorks**のエントリをセカンダリサーバーに追加しています。  
   
 ```  
@@ -73,6 +73,6 @@ GO
   
 ## <a name="see-also"></a>参照  
  [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

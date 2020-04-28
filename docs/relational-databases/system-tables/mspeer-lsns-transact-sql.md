@@ -18,10 +18,10 @@ ms.assetid: 0ba33907-601b-4c3d-8099-2663f680a161
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c0d31de11ed7d41ecca409589f3daa25c85f1146
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68085773"
 ---
 # <a name="mspeer_lsns-transact-sql"></a>MSpeer_lsns (Transact-SQL)
@@ -31,10 +31,10 @@ ms.locfileid: "68085773"
   
 ## <a name="definition"></a>定義  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**番号**|**int**|ピアツーピア LSN を識別します。|  
-|**last_updated**|**DATETIME**|最後の行の更新が行われた**日時**。|  
+|**id**|**int**|ピアツーピア LSN を識別します。|  
+|**last_updated**|**datetime**|最後の行の更新が行われた**日時**。|  
 |**送信者**|**sysname**|トランザクションを開始したパブリッシャーの名前。|  
 |**originator_db**|**sysname**|トランザクションが発生したデータベースの名前。|  
 |**originator_publication**|**sysname**|トランザクションが発生したパブリケーションの名前。|  
@@ -46,6 +46,6 @@ ms.locfileid: "68085773"
   
 ## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -20,10 +20,10 @@ ms.assetid: 40e967d5-2e8d-45af-bf5e-5251493cf7cb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f3b2172e48ec787c37fd9b3daab6cafb5c49f88f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68078634"
 ---
 # <a name="sysspatial_indexes-transact-sql"></a>sys.spatial_indexes (Transact-SQL)
@@ -31,11 +31,11 @@ ms.locfileid: "68078634"
 
   空間インデックスの主インデックス情報を表します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |\<継承された列>||は[、列を継承](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)します。|  
 |spatial_index_type|**tinyint**|空間インデックスの種類です。<br /><br /> 1 = 幾何学的空間インデックス<br /><br /> 2 = 地理的空間インデックス|  
-|spatial_index_type_desc|**nvarchar (60)**|空間インデックスの説明を入力します。<br /><br /> GEOMETRY = 幾何学的空間インデックス<br /><br /> GEOGRAPHY = 地理的空間インデックス|  
+|spatial_index_type_desc|**nvarchar(60)**|空間インデックスの説明を入力します。<br /><br /> GEOMETRY = 幾何学的空間インデックス<br /><br /> GEOGRAPHY = 地理的空間インデックス|  
 |tessellation_scheme|**sysname**|テセレーション スキームの名前です。<br /><br /> GEOMETRY_GRID、GEOMETRY_AUTO_GRID、<br /><br /> GEOGRAPHY_GRID、GEOGRAPHY_AUTO_GRID<br /><br /> 注: テセレーションスキームの詳細については、「[空間インデックスの概要](../../relational-databases/spatial/spatial-indexes-overview.md)」を参照してください。|  
 |\<継承された列>||は[、列を継承](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)します。<br /><br /> 継承された列 has_filter および filter_definition は、空間インデックスに固有の列の後に表示されます。|  
   

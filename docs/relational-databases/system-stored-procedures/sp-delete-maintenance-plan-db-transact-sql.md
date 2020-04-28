@@ -21,10 +21,10 @@ ms.assetid: d1e8afb5-12ee-492b-a770-ba708ed7c8a4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4843eb9de8badced7e446f20a997a530478c2756
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68056521"
 ---
 # <a name="sp_delete_maintenance_plan_db-transact-sql"></a>sp_delete_maintenance_plan_db (Transact-SQL)
@@ -50,12 +50,12 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ## <a name="arguments"></a>引数  
 `[ @plan_id = ] 'plan\_id'`メンテナンスプランの ID を指定します。 *plan_id*は**uniqueidentifier**です。  
   
-`[ @db_name = ] 'database\_name'`メンテナンスプランから削除するデータベース名を指定します。 *database_name*は**sysname**です。  
+`[ @db_name = ] 'database\_name'`メンテナンスプランから削除するデータベース名を指定します。 *database_name* は **sysname** です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_delete_maintenance_plan_db**は、 **msdb**データベースから実行する必要があります。  
   
  **Sp_delete_maintenance_plan_db**ストアドプロシージャは、メンテナンスプランと指定されたデータベースとの間の関連付けを削除します。データベースを削除したり、破棄したりすることはありません。  
@@ -65,7 +65,7 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ## <a name="permissions"></a>アクセス許可  
  **Sp_delete_maintenance_plan_db**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  以前に**sp_add_maintenance_plan_db**を使用して追加した、 **AdventureWorks2012**データベースのメンテナンスプランを削除します。  
   
 ```  

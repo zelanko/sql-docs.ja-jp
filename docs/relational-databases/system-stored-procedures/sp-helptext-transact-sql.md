@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 160d52c8c145828f6a63c104aecb17e04867cee8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68048289"
 ---
 # <a name="sp_helptext-transact-sql"></a>sp_helptext (Transact-sql)
@@ -49,15 +49,15 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**Text**|**nvarchar(255)**|オブジェクトの定義|  
+|**[テキスト]**|**nvarchar(255)**|オブジェクトの定義|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  sp_helptext は、複数の行でオブジェクトを作成するために使用される定義を表示します。 各行には、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 255 文字の定義が含まれています。 定義は、 [sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)カタログビューの**定義**列に存在します。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Public**ロールのメンバーシップが必要です。 システム オブジェクトの定義は、公開されます。 ユーザー オブジェクトの定義は、オブジェクトの所有者、または ALTER、CONTROL、TAKE OWNERSHIP、VIEW DEFINITION のいずれかの権限を許可された人が表示できます。  
+ ロール **public** のメンバーシップが必要です。 システム オブジェクトの定義は、公開されます。 ユーザー オブジェクトの定義は、オブジェクトの所有者、または ALTER、CONTROL、TAKE OWNERSHIP、VIEW DEFINITION のいずれかの権限を許可された人が表示できます。  
   
 ## <a name="examples"></a>例  
   
@@ -92,8 +92,8 @@ GO
 ## <a name="see-also"></a>参照  
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [OBJECT_DEFINITION &#40;Transact-sql&#41;](../../t-sql/functions/object-definition-transact-sql.md)   
- [sp_help &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
- [sql_modules &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
+ [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 0e1bd5fa1ba4d4ff8b97436ac6e44b901f578187
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68074838"
 ---
 # <a name="expressions-dmx"></a>式 (DMX)
@@ -22,7 +22,7 @@ ms.locfileid: "68074838"
   
  DMX 式には、簡単なものも複雑なものもあります。 単純式には、次のいずれかを指定できます。  
   
- 常時  
+ Constant  
  定数は 1 つの特定の値を表す記号です。 定数には、文字列、または数値または日付の値を指定できます。 文字定数および日付定数を区切るには、単一引用符 (') を使用する必要があります。  
   
  スカラー関数  

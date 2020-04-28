@@ -19,10 +19,10 @@ ms.assetid: 5a8c1421-c56b-44b5-96e5-4f01782a0c7c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 44ee5c5ff44928c2f2b9e775eae41aea77fed87a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68086226"
 ---
 # <a name="sysdm_cryptographic_provider_keys-transact-sql"></a>dm_cryptographic_provider_keys (Transact-sql)
@@ -45,14 +45,14 @@ dm_cryptographic_provider_keys ( provider_id )
   
 ## <a name="tables-returned"></a>返されるテーブル  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**key_id**|**int**|プロバイダーのキーの識別番号。|  
 |**key_name**|**nvarchar(512)**|プロバイダーのキーの名前。|  
-|**key_thumbprint**|**varbinary (32)**|キーのプロバイダーからの拇印。|  
+|**key_thumbprint**|**varbinary(32)**|キーのプロバイダーからの拇印。|  
 |**algorithm_id**|**int**|プロバイダーのアルゴリズムの識別番号。|  
 |**algorithm_tag**|**int**|プロバイダーのアルゴリズムのタグ|  
-|**key_type**|**nchar (256)**|プロバイダーのキーの型。|  
+|**key_type**|**nchar(256)**|プロバイダーのキーの型。|  
 |**key_length**|**int**|プロバイダーのキーの長さ|  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -60,7 +60,7 @@ dm_cryptographic_provider_keys ( provider_id )
   
  ユーザーが EKM プロバイダーで認証できない場合、キー情報は返されません。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例は、の`1234567`識別番号を持つプロバイダーのキープロパティを示しています。  
   
 ```  

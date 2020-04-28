@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b0f075d32e366765e9491c8d03649fe54be7fdc4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096297"
 ---
 # <a name="sysdm_db_missing_index_groups-transact-sql"></a>dm_db_missing_index_groups (Transact-sql)
@@ -33,18 +33,15 @@ ms.locfileid: "68096297"
 
   この DMV は、空間インデックスを除く、特定のインデックスグループに欠落しているインデックスに関する情報を返します。 
   
- 
-  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、動的管理ビューは、データベースの包含に影響する情報を公開することも、ユーザーがアクセスできる他のデータベースに関する情報を公開することもできません。 この情報を公開しないように、接続されたテナントに属していないデータを含むすべての行がフィルターで除外されます。  
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、動的管理ビューは、データベースの包含に影響する情報を公開することも、ユーザーがアクセスできる他のデータベースに関する情報を公開することもできません。 この情報を公開しないように、接続されたテナントに属していないデータを含むすべての行がフィルターで除外されます。  
    
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**index_group_handle**|**int**|欠落インデックス グループの識別子|  
-|**index_handle**|**int**|
-  **index_group_handle** で示されたグループに属する、欠落インデックスの識別子<br /><br /> インデックス グループには、インデックスが 1 つだけ含まれます。|  
+|**index_handle**|**int**|**index_group_handle** で示されたグループに属する、欠落インデックスの識別子<br /><br /> インデックス グループには、インデックスが 1 つだけ含まれます。|  
   
-## <a name="remarks"></a>解説  
- 
-  **sys.dm_db_missing_index_groups** によって返される情報は、クエリ オプティマイザーでクエリが最適化されるときに更新されますが、保存されません。 欠落インデックスの情報が保持されるのは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の再起動までです。 欠落インデックスの情報を、サーバーの再利用後も保持する場合は、データベース管理者が情報のバックアップ コピーを定期的に作成する必要があります。  
+## <a name="remarks"></a>Remarks  
+ **sys.dm_db_missing_index_groups** によって返される情報は、クエリ オプティマイザーでクエリが最適化されるときに更新されますが、保存されません。 欠落インデックスの情報が保持されるのは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の再起動までです。 欠落インデックスの情報を、サーバーの再利用後も保持する場合は、データベース管理者が情報のバックアップ コピーを定期的に作成する必要があります。  
   
  出力結果セットの列はどちらもキーではありませんが、組み合わせるとインデックス キーになります。  
 

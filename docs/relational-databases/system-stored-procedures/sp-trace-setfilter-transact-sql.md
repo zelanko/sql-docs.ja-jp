@@ -18,10 +18,10 @@ ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0f48f7e8dd6e7d8fa57868994f9bcabb66777e90
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68095937"
 ---
 # <a name="sp_trace_setfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
@@ -30,8 +30,7 @@ ms.locfileid: "68095937"
   トレースにフィルターを適用します。 **sp_trace_setfilter**は、停止している既存のトレースに対してのみ実行できます (*状態*は**0**)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]このストアドプロシージャが存在しないトレースに対して実行されるか、*状態*が**0**ではない場合、はエラーを返します。  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに拡張イベントを使用します。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに拡張イベントを使用します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,14 +54,14 @@ sp_trace_setfilter [ @traceid = ] trace_id
   
 `[ @comparison_operator = ] comparison_operator`実行する比較の種類を指定します。 *comparison_operator*は**int**,、既定値はありません。 このテーブルには、比較演算子とその代表的な値が含まれています。  
   
-|Value|[比較演算子]|  
+|値|比較演算子|  
 |-----------|-------------------------|  
 |**0**|= (等しい)|  
 |**1**|<>  (等しくない)|  
 |**2**|> (より大きい)|  
-|**番**|< (より小さい)|  
+|**3**|< (より小さい)|  
 |**4**|>= (以上)|  
-|**5/5**|<= (以下)|  
+|**5**|<= (以下)|  
 |**6**|LIKE|  
 |**7**|パターンに一致しない|  
   
@@ -79,10 +78,10 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ## <a name="return-code-values"></a>リターン コードの値  
  次の表は、このストアド プロシージャの完了時に返されるコード値を示しています。  
   
-|リターンコード|[説明]|  
+|リターン コード|説明|  
 |-----------------|-----------------|  
 |0|エラーなし。|  
-|1 で保護されたプロセスとして起動されました|不明なエラー。|  
+|1|不明なエラー。|  
 |2|トレースは現在実行中です。 この時点でトレースを変更すると、エラーが発生します。|  
 |4|指定された列は無効です。|  
 |5|指定した列にはフィルターを適用できません。 この値は**sp_trace_setfilter**からのみ返されます。|  
@@ -92,7 +91,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |13|メモリ不足。 指定されたアクションを実行するのに十分なメモリがない場合に返されます。|  
 |16|関数は、このトレースに対して無効です。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_trace_setfilter**は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以前のバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で使用できる拡張ストアドプロシージャによって以前に実行された操作の多くを実行するストアドプロシージャです。 トレースのフィルターを作成、適用、削除、または操作するには、 **\*xp_trace_set フィルター**拡張ストアドプロシージャの代わりに**sp_trace_setfilter**を使用します。 詳細については、「[トレースのフィルター処理](../../relational-databases/sql-trace/filter-a-trace.md)」を参照してください。  
   
  **Sp_trace_setfilter**の1回の実行で、特定の列のすべてのフィルターを同時に有効にする必要があります。 たとえば、ユーザーが [アプリケーション名] 列に2つのフィルターを適用し、[ユーザー名] 列に1つのフィルターを適用する場合、ユーザーはアプリケーション名に対して順番にフィルターを指定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザーが1つのストアドプロシージャ呼び出しでアプリケーション名に対してフィルターを指定し、その後にユーザー名のフィルターを指定した後、アプリケーション名に対して別のフィルターを指定しようとすると、エラーが返されます。  
@@ -102,7 +101,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ## <a name="permissions"></a>アクセス許可  
  ユーザーは ALTER TRACE 権限を持っている必要があります。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、トレース`1`に対して3つのフィルターを設定します。 フィルター処理`N'SQLT%'`と`N'MS%'`操作は、"`AppName` `10``LIKE`" 比較演算子を使用して1つの列 (、値) に対して行われます。 フィルター `N'joe'` は、"`UserName`" 比較演算子を使用して別の列 (`11`、値 `EQUAL`) に適用されます。  
   
 ```  

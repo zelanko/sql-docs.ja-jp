@@ -18,10 +18,10 @@ ms.assetid: db80f152-e8af-4303-95b6-3a3a7b664374
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 00ba2f254d2ff676eab7c93bb6d0cca7c4ae0901
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053183"
 ---
 # <a name="sp_denylogin-transact-sql"></a>sp_denylogin (Transact-sql)
@@ -47,16 +47,15 @@ sp_denylogin [ @loginame = ] 'login'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  指定した Windows ユーザーまたは Windows グループにマップされているサーバーレベルのプリンシパルに対する CONNECT SQL 権限を拒否**sp_denylogin**ます。 サーバープリンシパルが存在しない場合は、作成されます。 新しいプリンシパルは、 [server_principals &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)カタログビューに表示されます。  
   
  **sp_denylogin**は、ユーザー定義のトランザクション内では実行できません。  
   
 ## <a name="permissions"></a>アクセス許可  
- 
-  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
+ **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、 **sp_denylogin**を使用して、 `CORPORATE\GeorgeV` Windows ユーザーがサーバーに接続できないようにする方法を示します。  
   
 ```  
@@ -66,7 +65,7 @@ EXEC sp_denylogin 'CORPORATE\GeorgeV';
 ## <a name="see-also"></a>参照  
  [sp_grantlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [ALTER LOGIN &#40;Transact-sql&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

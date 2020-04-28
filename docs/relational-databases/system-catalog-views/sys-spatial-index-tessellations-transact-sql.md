@@ -20,10 +20,10 @@ ms.assetid: 8b17a9a4-b57f-4220-8138-fc73581b1670
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c4f2f4b8ea0184d063a6423f27fdf2cf9c450a05
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68078649"
 ---
 # <a name="sysspatial_index_tessellations-transact-sql"></a>sys.spatial_index_tessellations (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68078649"
 >  テセレーションについて詳しくは、「[空間インデックスの概要](../../relational-databases/spatial/spatial-indexes-overview.md)」をご覧ください。  
   
 
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|インデックスが定義されているオブジェクトの ID。 各 (object_id、index_id) ペアには、 [sys. spatial_indexes](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)に対応するエントリがあります。|  
 |index_id|**int**|インデックス付き列が定義されている空間インデックスの ID|  
@@ -45,13 +45,13 @@ ms.locfileid: "68078649"
 |bounding_box_xmax|**float (53)**|境界ボックスの右上隅の X 座標 (次のいずれか): NULL = 特定のテセレーションスキームには適用されません (GEOGRAPHY_GRID など) *n* = tessellation_scheme が GEOMETRY_GRID 場合、x 座標の最大値|  
 |bounding_box_ymax|**float (53)**|境界ボックスの右上隅の Y 座標 (次のいずれか): NULL = 特定のテセレーションスキームには適用されません (GEOGRAPHY_GRID など) *n* = tessellation_scheme が GEOMETRY_GRID 場合、y 座標の最大値|  
 |level_1_grid|**smallint**|最上位レベルのグリッドのグリッド密度です。 Tessellation_scheme が GEOMETRY_GRID または GEOGRAPHY_GRID の場合は、次のいずれかになります:16 = 4 ×4グリッド (低) 64 = 8 ×8グリッド (中) 256 = 16 x 16 グリッド (HIGH) NULL = 特定の空間インデックスの種類またはテセレーションスキームに適用されません。  新しい SQL Server 11 テセレーションが使用されると、NULL が返されます。|  
-|level_1_grid_desc|**nvarchar (60)**|最上位レベルのグリッドのグリッド密度: 低中高 NULL = 特定の空間インデックスの種類またはテセレーションスキームには適用されません。  新しい SQL Server 11 テセレーションが使用されると、NULL が返されます。|  
+|level_1_grid_desc|**nvarchar(60)**|最上位レベルのグリッドのグリッド密度: 低中高 NULL = 特定の空間インデックスの種類またはテセレーションスキームには適用されません。  新しい SQL Server 11 テセレーションが使用されると、NULL が返されます。|  
 |level_2_grid|**smallint**|第2レベルのグリッドのグリッド密度。 Tessellation_scheme が GEOMETRY_GRID または GEOGRAPHY_GRID の場合は、次のいずれかになります:16 = 4 ×4グリッド (低) 64 = 8 ×8グリッド (中) 256 = 16 x 16 グリッド (HIGH) NULL = 特定の空間インデックスの種類またはテセレーションスキームに適用されません。  新しい SQL Server 11 テセレーションが使用されると、NULL が返されます。|  
-|level_2_grid_desc|**nvarchar (60)**|第2レベルのグリッドのグリッド密度: 低中高 NULL = 特定の空間インデックスの種類またはテセレーションスキームには適用されません。  新しい SQL Server 11 テセレーションが使用されると、NULL が返されます。|  
+|level_2_grid_desc|**nvarchar(60)**|第2レベルのグリッドのグリッド密度: 低中高 NULL = 特定の空間インデックスの種類またはテセレーションスキームには適用されません。  新しい SQL Server 11 テセレーションが使用されると、NULL が返されます。|  
 |level_3_grid|**smallint**|第3レベルのグリッドのグリッド密度。   Tessellation_scheme が GEOMETRY_GRID または GEOGRAPHY_GRID の場合は、次のいずれかになります:16 = 4 ×4グリッド (低) 64 = 8 ×8グリッド (中) 256 = 16 x 16 グリッド (HIGH) NULL = 特定の空間インデックスの種類またはテセレーションスキームに適用されません。  新しい SQL Server 11 テセレーションが使用されると、NULL が返されます。|  
-|level_3_grid_desc|**nvarchar (60)**|第3レベルのグリッドのグリッド密度: 低中高 NULL = 特定の空間インデックスの種類またはテセレーションスキームには適用されません。  新しい SQL Server 11 テセレーションが使用されると、NULL が返されます。|  
+|level_3_grid_desc|**nvarchar(60)**|第3レベルのグリッドのグリッド密度: 低中高 NULL = 特定の空間インデックスの種類またはテセレーションスキームには適用されません。  新しい SQL Server 11 テセレーションが使用されると、NULL が返されます。|  
 |level_4_grid|**smallint**|第 4 レベルのグリッドのグリッド密度です。 Tessellation_scheme が GEOMETRY_GRID または GEOGRAPHY_GRID の場合、次のいずれかになります:16 = 4 ×4グリッド (LOW) 64 = 8 ×8グリッド (中) 256 = 16 ×16グリッド (HIGH) NULL = 特定の空間インデックスの種類またはテセレーションスキームに適用されません。  新しい SQL Server 11 テセレーションが使用されると、NULL が返されます。|  
-|level_4_grid_desc|**nvarchar (60)**|第4レベルのグリッドのグリッド密度: < 低 MEDIUM 高 NULL = 特定の空間インデックスの種類またはテセレーションスキームには適用されません。  新しい SQL Server 11 テセレーションが使用されると、NULL が返されます。|  
+|level_4_grid_desc|**nvarchar(60)**|第4レベルのグリッドのグリッド密度: < 低 MEDIUM 高 NULL = 特定の空間インデックスの種類またはテセレーションスキームには適用されません。  新しい SQL Server 11 テセレーションが使用されると、NULL が返されます。|  
 |cells_per_object|**int**|空間オブジェクトごとのセル数。次のうちのどれかです: tessellation_scheme が GEOMETRY_GRID または GEOGRAPHY_GRID の場合、 *n* = オブジェクトあたりのセル数 NULL = 特定の空間インデックスの種類またはテセレーションスキームには適用できません|  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -63,6 +63,6 @@ ms.locfileid: "68078649"
  [sys &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [spatial_indexes &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)   
  [SQL&#41;&#40;Transact-sql のインデックス](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
- [index_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
+ [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
   
   

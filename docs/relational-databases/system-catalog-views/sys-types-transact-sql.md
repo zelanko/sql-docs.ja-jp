@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ff4cd58fcd7d11679cf410c9f379b101d42ce4bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68095572"
 ---
 # <a name="systypes-transact-sql"></a>sys.types (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68095572"
 
   システム型とユーザー定義の型ごとに 1 行のデータを格納します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|型の名前。 スキーマ内で一意です。|  
 |**system_type_id**|**tinyint**|型の内部システム型の ID。|  
@@ -41,7 +41,7 @@ ms.locfileid: "68095572"
 |**schema_id**|**int**|型が属するスキーマの ID。|  
 |**principal_id**|**int**|スキーマの所有者と異なる場合は、個々の所有者の ID。 既定では、スキーマに含まれるオブジェクトはスキーマの所有者によって所有されます。 ただし、ALTER AUTHORIZATION ステートメントを使用して所有権を変更することによって、代替所有者を指定できます。<br /><br /> 別の所有者がいない場合は NULL になります。|  
 |**max_length**|**smallint**|型の最大長 (バイト単位)。<br /><br /> -1 = 列のデータ型は**varchar (max)**,、 **nvarchar (max)**,、 **varbinary (max)**,、または**xml**です。<br /><br /> **テキスト**列の場合、 **max_length**値は16になります。|  
-|**精度**|**tinyint**|数値ベースの場合の型の最大有効桁数。それ以外の場合は0です。|  
+|**有効桁数 (precision)**|**tinyint**|数値ベースの場合の型の最大有効桁数。それ以外の場合は0です。|  
 |**scale**|**tinyint**|数値ベースの場合の型の最大小数点以下桁数それ以外の場合は0です。|  
 |**collation_name**|**sysname**|文字ベースの場合は、型の照合順序の名前。それ以外の場合は NULL です。|  
 |**is_nullable**|**bit**|型は nullable です。|  
@@ -52,10 +52,10 @@ ms.locfileid: "68095572"
 |**is_table_type**|**bit**|型がテーブルであることを示します。|  
   
 ## <a name="permissions"></a>アクセス許可  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Transact-sql&#41;&#40;スカラー型のカタログビュー](../../relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md)   
  [ALTER AUTHORIZATION &#40;Transact-sql&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
  [OBJECTPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   

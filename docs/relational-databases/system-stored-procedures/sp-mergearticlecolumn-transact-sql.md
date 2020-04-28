@@ -16,10 +16,10 @@ ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ff669af64b6aed312481264127d69eee1ad674e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68078160"
 ---
 # <a name="sp_mergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
@@ -71,7 +71,7 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_mergearticlecolumn**は、マージレプリケーションで使用します。  
   
  自動 ID 範囲管理が使用されている場合、アーティクルから ID 列を削除することはできません。 詳細については、「[Replicate Identity Columns](../../relational-databases/replication/publish/replicate-identity-columns.md)」 (ID 列のレプリケート) を参照してください。  
@@ -88,8 +88,8 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>参照  
  [マージアーティクル間の結合フィルターを定義および変更する](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
- [マージアーティクルのパラメーター化された行フィルターを定義および変更する](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
+ [マージ アーティクルのパラメーター化された行フィルターの定義および変更](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
  [パブリッシュされたデータのフィルター処理](../../relational-databases/replication/publish/filter-published-data.md)   
- [レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

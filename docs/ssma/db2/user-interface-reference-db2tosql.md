@@ -10,10 +10,10 @@ ms.assetid: 98ecc4ff-9416-48a2-af0f-86852cf69dab
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: c0332efca72c216ac6ecbb2f5f397fbf57e8b7cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68059958"
 ---
 # <a name="user-interface-reference-db2tosql"></a>ユーザーインターフェイスリファレンス (DB2ToSQL)
@@ -24,7 +24,7 @@ ms.locfileid: "68059958"
   
 |||  
 |-|-|  
-|トピック|[説明]|  
+|トピック|説明|  
 |[DB2ToSQL&#41;&#40;の高度なオブジェクトの選択](../../ssma/db2/advanced-object-selection-db2tosql.md)|[**オブジェクト選択の詳細設定**] ダイアログボックスを使用すると、フィルター条件を使用してデータベースオブジェクトを検索し、それらのオブジェクトをオンまたはオフにできます。|  
 |[評価レポート &#40;DB2ToSQL&#41;](../../ssma/db2/assessment-report-db2tosql.md)|評価レポートを使用すると、DB2 オブジェクトを構文に[!INCLUDE[tsql](../../includes/tsql-md.md)]変換した結果を表示し、へ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の移行の時間と複雑さを見積もることができます。|  
 |[DB2 データベースへの接続 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)|[ **Db2 への接続**] ダイアログボックスを使用して、移行する db2 データベースに接続します。|  
@@ -39,8 +39,8 @@ ms.locfileid: "68059958"
 |[新しいプロジェクト &#40;DB2ToSQL&#41;](../../ssma/db2/new-project-db2tosql.md)|新しい SSMA for DB2 プロジェクトを作成するには、[**新しいプロジェクト**] ダイアログボックスを使用します。|  
 |[プロジェクト設定 &#40;変換&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-conversion-db2tosql.md)|SSMA for DB2 が関数とグローバル変数を変換する方法を指定するには、の [**プロジェクトの設定**] ダイアログボックスの [変換] ページを使用します。|  
 |[プロジェクト設定 &#40;GUI&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-gui-db2tosql.md)|[**プロジェクトの設定**] ダイアログボックスの [GUI] ページを使用すると、[**データ**] タブに表示されるデータの量を指定できます。|  
-|[プロジェクト設定 &#40;移行&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-migration-db2tosql.md)|SSMA for DB2 が DB2 **** からに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データを移行する方法をカスタマイズするには、[プロジェクトの設定] ダイアログボックスの [移行] ページを使用します。|  
-|[プロジェクト設定&#40;同期&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-synchronization-db2tosql.md)|SSMA for DB2 がで**** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移行されたデータベースオブジェクトを作成または変更する方法をカスタマイズするには、[プロジェクトの設定] ダイアログボックスの [同期] ページを使用します。|  
+|[プロジェクト設定 &#40;移行&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-migration-db2tosql.md)|SSMA for DB2 が DB2 **Project Settings**からに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データを移行する方法をカスタマイズするには、[プロジェクトの設定] ダイアログボックスの [移行] ページを使用します。|  
+|[プロジェクト設定&#40;同期&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-synchronization-db2tosql.md)|SSMA for DB2 がで**Project Settings** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移行されたデータベースオブジェクトを作成または変更する方法をカスタマイズするには、[プロジェクトの設定] ダイアログボックスの [同期] ページを使用します。|  
 |[DB2ToSQL&#41;&#41; &#40;のシステムオブジェクトの読み込み&#40;プロジェクト設定](../../ssma/db2/project-settings-loading-system-objects-db2tosql.md)|[**プロジェクトの設定**] ダイアログボックスの [システムオブジェクトの読み込み] ページを使用すると、ssma に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]よって変換および読み込まれる DB2 システムオブジェクトを指定できます。|  
 |[プロジェクト設定 &#40;型マッピング&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md)|SSMA for DB2 プロジェクトのすべてのデータベースとデータベースオブジェクトの既定の型マッピングを指定するには、の [**プロジェクトの設定**] ダイアログボックスの [型マッピング] ページを使用します。|  
 |[データベース &#40;DB2ToSQL からの更新&#41;](../../ssma/db2/refresh-from-database-db2tosql.md)|DB2 データベースから更新するオブジェクトを選択するには、[**データベースから更新**] ダイアログボックスを使用します。|  

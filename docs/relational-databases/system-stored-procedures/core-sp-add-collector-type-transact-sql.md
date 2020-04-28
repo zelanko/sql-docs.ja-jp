@@ -21,10 +21,10 @@ ms.assetid: 1d981037-2147-464e-a456-7d8e479bce89
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3e0f91b88a9f58ed290183ae48676572204ac98b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68078211"
 ---
 # <a name="coresp_add_collector_type-transact-sql"></a>sp_add_collector_type (Transact-sql)
@@ -51,7 +51,7 @@ core.sp_add_collector_type [ @collector_type_uid = ] 'collector_type_uid'
 ## <a name="permissions"></a>アクセス許可  
  **Mdw_admin** (EXECUTE 権限を持つ) 固定データベースロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、core.supported_collector_types ビューにジェネリック T-SQL Query コレクター型を追加します。 既定では、ジェネリック T-sql Query コレクター型は既に存在します。 このため、既定のインストールでこのコードを実行すると、コレクター型が既に存在することを示すメッセージが表示されます。  
   
  sp_remove_collector_type ストアド プロシージャを使用してジェネリック T-SQL Query コレクター型を削除してから、管理データ ウェアハウスにデータをアップロードできる登録済みのコレクター型としてジェネリック T-SQL Query コレクター型を再度追加すると、このコードは正常に動作します。  

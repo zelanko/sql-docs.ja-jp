@@ -18,10 +18,10 @@ ms.assetid: 864c3966-cb61-4f2b-8939-ccda112de853
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e2a80729738986d69f2eb78b16d119072d6e9e11
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68094755"
 ---
 # <a name="systranschemas-transact-sql"></a>systranschemas (Transact-SQL)
@@ -29,14 +29,14 @@ ms.locfileid: "68094755"
 
   **Systranschemas**テーブルは、トランザクションパブリケーションおよびスナップショットパブリケーションでパブリッシュされたアーティクルのスキーマ変更を追跡するために使用されます。 このテーブルは、publication データベースと subscription データベースの両方に保存されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**tabid**|**int**|スキーマ変更が発生したテーブルアーティクルを識別します。|  
-|**startlsn**|**binary**|スキーマ変更開始時の LSN 値です。|  
-|**endlsn**|**binary**|スキーマ変更の最後にある LSN 値。|  
+|**startlsn**|**[バイナリ]**|スキーマ変更開始時の LSN 値です。|  
+|**endlsn**|**[バイナリ]**|スキーマ変更の最後にある LSN 値。|  
 |**typeid**|**int**|スキーマ変更のタイプです。|  
   
 ## <a name="see-also"></a>参照  
- [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
+ [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

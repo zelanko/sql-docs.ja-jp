@@ -12,10 +12,10 @@ ms.assetid: 337cbd26-67b7-4c88-9deb-d0a69a3d7714
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 285f5c58c94db0f5506f84d19c992dfcdbbd00d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68083483"
 ---
 # <a name="command-line-options-in-ssma-console-sybasetosql"></a>SSMA コンソールのコマンド ライン オプション (SybaseToSQL)
@@ -163,7 +163,7 @@ SSMA コンソールオプションの構文の概要が表示されます。
   
 SSMA コンソールのコマンドラインオプションの表形式の表示については、[付録-1 &#40;SybaseToSQL&#41;](../../ssma/sybase/appendix-1-sybasetosql.md)を参照してください。  
   
-### <a name="next-step"></a>次のステップ  
+### <a name="next-step"></a>次の手順  
 次の手順は、プロジェクトの要件によって異なります。  
   
 -   パスワードを指定する、またはパスワードをエクスポート/インポートする方法については、「パスワードの[管理 &#40;SybaseToSQL&#41;](../../ssma/sybase/managing-passwords-sybasetosql.md)」を参照してください。  

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 241ab17847a040e33c1fdb5e116e39fbc535d16d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68073090"
 ---
 # <a name="---comment-dmx-summary"></a>--(コメント) (DMX) の概要
@@ -31,7 +31,7 @@ ms.locfileid: "68073090"
  *Comment_Text*  
  コメントのテキストを含む文字列です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この演算子は、単一行または入れ子になったコメントに使用します。 --を使用して挿入されたコメントは、改行文字で区切られます。  
   
  コメントの長さには制限がありません。  

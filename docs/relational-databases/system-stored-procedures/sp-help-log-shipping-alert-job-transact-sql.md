@@ -18,10 +18,10 @@ ms.assetid: 4d4b4577-c393-4961-b2d3-b56e980b787b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f97139337b117f1f84f41df56114ca7a35b61fc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090029"
 ---
 # <a name="sp_help_log_shipping_alert_job-transact-sql"></a>sp_help_log_shipping_alert_job (Transact-SQL)
@@ -40,7 +40,7 @@ sp_help_log_shipping_alert_job
 ```  
   
 ## <a name="arguments"></a>引数  
- なし  
+ None  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -48,7 +48,7 @@ sp_help_log_shipping_alert_job
 ## <a name="result-sets"></a>結果セット  
  このストアドプロシージャは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログ配布警告ジョブのエージェントジョブ ID を返します。 ログ配布の警告ジョブが存在しない場合は、空の結果セットが返されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_help_log_shipping_alert_job**は、監視サーバーの**master**データベースから実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -56,6 +56,6 @@ sp_help_log_shipping_alert_job
   
 ## <a name="see-also"></a>参照  
  [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

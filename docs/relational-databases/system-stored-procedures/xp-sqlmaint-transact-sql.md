@@ -18,10 +18,10 @@ ms.assetid: bda66e1b-6bbd-49be-b86e-37efc920e912
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9948767ca0eca5721207079f978987142653e9c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68091907"
 ---
 # <a name="xp_sqlmaint-transact-sql"></a>xp_sqlmaint (Transact-sql)
@@ -48,16 +48,15 @@ xp_sqlmaint 'switch_string'
  **-?** スイッチは**xp_sqlmaint**に対して無効です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- [なし] : **Sqlmaint**ユーティリティが失敗した場合は、エラーが返されます。  
+ なし。 **Sqlmaint**ユーティリティが失敗した場合は、エラーが返されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  SQL Server 認証を使用してログオンしたユーザーがこのプロシージャを呼び出すと、 **-U "***login_id***"** および **-P "***password***"** スイッチが、実行前に*switch_string*に付加されます。 ユーザーが Windows 認証でログオンしている場合、 *switch_string*は**sqlmaint**に変更されることなく渡されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- 
-  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
+ **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では`xp_sqlmaint` 、 `sqlmaint`を呼び出して整合性チェックを実行し、レポートファイルを`msdb.dbo.sysdbmaintplan_history`作成して、を更新します。  
   
 ```  
@@ -73,6 +72,6 @@ The command(s) executed successfully.
   
 ## <a name="see-also"></a>参照  
  [sqlmaint ユーティリティ](../../tools/sqlmaint-utility.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -21,10 +21,10 @@ ms.assetid: 9997ffed-a4c1-428f-8bac-3b9e4b16d7cf
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 396d2e1c2d0387e716123ce6f87ea5cef4ecbbe8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090644"
 ---
 # <a name="sysdm_tcp_listener_states-transact-sql"></a>sys.dm_tcp_listener_states (Transact-SQL)
@@ -35,17 +35,17 @@ ms.locfileid: "68090644"
 > [!NOTE]
 > 可用性グループ リスナーは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのリスナーと同じポートでリッスンしている場合があります。 この場合、リスナーは、Service Broker リスナーの場合と同じように、個別に一覧表示されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**listener_id**|**int**|リスナーの内部 ID。 NULL 値は許可されません。<br /><br /> 主キー|  
 |**ip_address**|**nvarchar (48)**|オンラインであり、現在リッスンしているリスナーの IP アドレス。 IPv4 と IPv6 のどちらかを使用できます。 リスナーが両方の種類のアドレスを所有している場合は、個別に一覧表示されます。 IPv4 のワイルドカードは、"0.0.0.0" と表示されます。 IPv6 ワイルドカードは、"::" として表示されます。<br /><br /> NULL 値は許可されません。|  
 |**is_ipv4**|**bit**|IP アドレスの種類<br /><br /> 1 = IPv4<br /><br /> 0 = IPv6|  
-|**ポート**|**int**|リスナーがリッスンしているポート番号。 NULL 値は許可されません。|  
+|**port**|**int**|リスナーがリッスンしているポート番号。 NULL 値は許可されません。|  
 |**type**|**tinyint**|リスナーの種類。次のいずれかになります。<br /><br /> 0 =[!INCLUDE[tsql](../../includes/tsql-md.md)]<br /><br /> 1 = Service Broker<br /><br /> 2 = データベースミラーリング<br /><br /> NULL 値は許可されません。|  
 |**type_desc**|**nvarchar (20)**|**型**の説明。次のいずれかになります。<br /><br /> TSQL<br /><br /> SERVICE_BROKER<br /><br /> DATABASE_MIRRORING<br /><br /> NULL 値は許可されません。|  
-|**状態**|**tinyint**|可用性グループのリスナーの状態。次のいずれかになります。<br /><br /> 1 = オンライン。 リスナーが要求のリスニングおよび処理中です。<br /><br /> 2 = 再起動の保留中。 リスナーはオフラインであり、再起動が保留されています。<br /><br /> 可用性グループリスナーがサーバーインスタンスと同じポートをリッスンしている場合、これら2つのリスナーは常に同じ状態になります。<br /><br /> NULL 値は許可されません。<br /><br /> 注: この列の値は、TSD_listener オブジェクトから取得されます。 TDS_listener がオフラインの場合は状態をクエリできないため、この列ではオフライン状態はサポートされていません。|  
+|**state**|**tinyint**|可用性グループのリスナーの状態。次のいずれかになります。<br /><br /> 1 = オンライン。 リスナーが要求のリスニングおよび処理中です。<br /><br /> 2 = 再起動の保留中。 リスナーはオフラインであり、再起動が保留されています。<br /><br /> 可用性グループリスナーがサーバーインスタンスと同じポートをリッスンしている場合、これら2つのリスナーは常に同じ状態になります。<br /><br /> NULL 値は許可されません。<br /><br /> 注: この列の値は、TSD_listener オブジェクトから取得されます。 TDS_listener がオフラインの場合は状態をクエリできないため、この列ではオフライン状態はサポートされていません。|  
 |**state_desc**|**nvarchar (16)**|**状態**の説明。次のいずれかになります。<br /><br /> ONLINE<br /><br /> PENDING_RESTART<br /><br /> NULL 値は許可されません。|  
-|**start_time**|**DATETIME**|リスナーが開始された日時を示すタイムスタンプ。 NULL 値は許可されません。|  
+|**start_time**|**datetime**|リスナーが開始された日時を示すタイムスタンプ。 NULL 値は許可されません。|  
   
 ## <a name="security"></a>Security  
   
@@ -55,6 +55,6 @@ ms.locfileid: "68090644"
 ## <a name="see-also"></a>参照  
  [SQL Server システムカタログに対するクエリについてよく寄せられる質問](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [Always On 可用性グループのカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
- [Always On 可用性グループの動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)  
+ [AlwaysOn 可用性グループの動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)  
   
   

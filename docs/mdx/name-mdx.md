@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8fd8aa240a72dacc67e7cd09cb058192cddee282
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68088379"
 ---
 # <a name="name-mdx"></a>名前 (MDX)
@@ -50,10 +50,10 @@ Member_Expression.Name
  *Member_Expression*  
  メンバーを 1 つ返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Name**関数は、一意の名前ではなく、オブジェクトの名前を返します。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
   
 ### <a name="dimension-hierarchy-and-level-expression-example"></a>ディメンション式、階層式、レベル式の例  
  次の例では、Date ディメンションのディメンション名と、July 2001 メンバーの階層名とレベル名を返します。  
@@ -81,6 +81,6 @@ from [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

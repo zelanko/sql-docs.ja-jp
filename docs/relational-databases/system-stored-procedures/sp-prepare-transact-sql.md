@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: acadb311dac786d9f1c5dbcc86fac9b2609fb959
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68085804"
 ---
 # <a name="sp_prepare-transact-sql"></a>sp_prepare (Transact SQL)
@@ -48,10 +48,10 @@ sp_prepare handle OUTPUT, params, stmt, options
  *stmt*  
  カーソル結果セットを定義します。 *Stmt*パラメーターは必須であり、 **ntext**、 **nchar**、または**nvarchar**の入力値に対してを呼び出します。  
   
- *オプション*  
+ *options*  
  カーソル結果セット列の説明を返す省略可能なパラメーターです。 *オプション*には、次の int 入力値が必要です。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
@@ -107,6 +107,6 @@ GO
 ```
   
 ## <a name="see-also"></a>参照  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
 

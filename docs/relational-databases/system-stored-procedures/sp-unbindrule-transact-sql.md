@@ -18,10 +18,10 @@ ms.assetid: f54ee155-c3c9-4f1a-952e-632a8339f0cc
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b409b76d3a7c07ac03173346059f38ac616f5a87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68095857"
 ---
 # <a name="sp_unbindrule-transact-sql"></a>sp_unbindrule (Transact-sql)
@@ -43,8 +43,7 @@ sp_unbindrule [ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @objname = ] 'object_name'`ルールのバインドを解除するテーブルと列、または別名データ型の名前を指定します。 *object_name*は**nvarchar (776)**,、既定値はありません。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、最初に列名に対して、次に別名データ型に対して、2 つの要素で構成される識別子の解決が試行されます。 別名データ型からルールをバインド解除すると、同じルールを持つデータ型のすべての列もバインド解除されます。 ただし、同じデータ型でも、ルールが直接バインドされている列には影響はありません。  
+`[ @objname = ] 'object_name'`ルールのバインドを解除するテーブルと列、または別名データ型の名前を指定します。 *object_name*は**nvarchar (776)**,、既定値はありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、最初に列名に対して、次に別名データ型に対して、2 つの要素で構成される識別子の解決が試行されます。 別名データ型からルールをバインド解除すると、同じルールを持つデータ型のすべての列もバインド解除されます。 ただし、同じデータ型でも、ルールが直接バインドされている列には影響はありません。  
   
 > [!NOTE]  
 >  *object_name*には、区切られた識別子の文字として角かっこ **[]** を含めることができます。 詳細については、「[データベース識別子](../../relational-databases/databases/database-identifiers.md)」を参照してください。  
@@ -54,7 +53,7 @@ sp_unbindrule [ @objname = ] 'object_name'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ルールのテキストを表示するには、ルール名をパラメーターに使用して **sp_helptext** を実行します。  
   
  ルールがバインド解除されると、ルールが列にバインドされている場合は、そのバインドに関する情報が**sys**テーブルから削除されます。また、ルールが別名データ型にバインドされている場合は、 **.sys**テーブルからも削除されます。  
@@ -106,10 +105,10 @@ EXEC sp_unbindrule '[t.4].c1';
 ## <a name="see-also"></a>参照  
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [CREATE RULE &#40;Transact-sql&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
+ [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
  [DROP RULE &#40;Transact-sql&#41;](../../t-sql/statements/drop-rule-transact-sql.md)   
  [sp_bindrule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
- [sp_helptext &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

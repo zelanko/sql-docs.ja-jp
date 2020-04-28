@@ -18,10 +18,10 @@ ms.assetid: a3ac20a6-73f6-4fdc-ad5f-5f72746c9871
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4e5d98606d14e660b0dcbad43eecf97ce6446767
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079178"
 ---
 # <a name="msrepl_originators-transact-sql"></a>MSrepl_originators (Transact-SQL)
@@ -29,9 +29,9 @@ ms.locfileid: "68079178"
 
   **MSrepl_originators**テーブルには、トランザクションが発生した更新可能なサブスクライバーごとに1つの行が含まれています。 このテーブルは、ディストリビューションデータベースに格納されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**番号**|**int**|更新サブスクライバーを識別します。|  
+|**id**|**int**|更新サブスクライバーを識別します。|  
 |**publisher_database_id**|**int**|パブリケーションデータベースを識別します。|  
 |**srvname**|**sysname**|更新サーバーの名前。|  
 |**dbname**|**sysname**|更新するデータベースの名前。|  
@@ -40,6 +40,6 @@ ms.locfileid: "68079178"
   
 ## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

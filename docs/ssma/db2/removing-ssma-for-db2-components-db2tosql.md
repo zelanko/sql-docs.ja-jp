@@ -10,10 +10,10 @@ ms.assetid: 4ee0d698-6246-48eb-b963-d62be81cab6a
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 25c8222009c2ea9358c0bab2ad5ae077588fb3cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060092"
 ---
 # <a name="removing-ssma-for-db2-components-db2tosql"></a>SSMA for DB2 コンポーネントの削除 (DB2ToSQL)
@@ -24,7 +24,7 @@ SSMA をアンインストールするには、[**プログラムの追加と削
   
 **SSMA をアンインストールするには**  
   
-1.  [コントロール パネル] で **[プログラムの追加と削除]** を開きます。  
+1.  [コントロール] パネルで **[プログラムの追加と削除]** を開きます。  
   
 2.  ** [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DB2 の Migration Assistant**を選択し、[**削除**] をクリックします。  
   

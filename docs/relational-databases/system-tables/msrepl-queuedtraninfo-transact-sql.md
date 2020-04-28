@@ -18,10 +18,10 @@ ms.assetid: af7a5baf-32ea-475f-b6b9-68c557b4980c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a94163e2fe4a1ed5be77dd4ae99f43d03cc35121
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079181"
 ---
 # <a name="msrepl_queuedtraninfo-transact-sql"></a>MSrepl_queuedtraninfo (Transact-sql)
@@ -29,7 +29,7 @@ ms.locfileid: "68079181"
 
   **MSreplication_queuedtraninfo**テーブルは、SQL ベースのキュー更新を使用しているすべてのキュー更新サブスクリプションによって発行されたキューに登録されたコマンドに関する情報を格納するために、レプリケーションプロセスによって使用されます。 このテーブルは、サブスクリプションデータベースに格納されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**文書**|**sysname**|パブリッシャーの名前です。|  
 |**publisher_db**|**sysname**|パブリケーションデータベースの名前です。|  
@@ -40,6 +40,6 @@ ms.locfileid: "68079181"
   
 ## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 45daf970f69322cad36bbe5419bf1dc8cc8009b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68088341"
 ---
 # <a name="nonempty-mdx"></a>NonEmpty (MDX)
@@ -34,7 +34,7 @@ NONEMPTY(set_expression1 [,set_expression2])
  *set_expression2*  
  セットを返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この関数は、2番目のセット内の組全体で評価されるときに、空でない最初の指定されたセット内の組を返します。 **空**でない関数は計算を考慮し、重複する組を保持します。 2番目のセットが指定されていない場合、式は、属性階層のメンバーの現在の座標とキューブ内のメジャーのコンテキストで評価されます。  
   
 > [!NOTE]  
@@ -43,7 +43,7 @@ NONEMPTY(set_expression1 [,set_expression2])
 > [!IMPORTANT]  
 >  空以外は、組自体ではなく、組によって参照されるセルの特性です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次のクエリは、**空**でないの簡単な例を示しています。この例では、2001年7月1日に Internet Sales Amount の null 以外の値を持つすべての顧客が返されます。  
   
  `SELECT [Measures].[Internet Sales Amount] ON 0,`  

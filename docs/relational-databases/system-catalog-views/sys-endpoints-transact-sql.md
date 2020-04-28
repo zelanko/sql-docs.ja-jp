@@ -20,10 +20,10 @@ ms.assetid: e6dafa4e-e47e-43ec-acfc-88c0af53c1a1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b814f8cb0013a202f88aba76b99cf52c49dd1c1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68061409"
 ---
 # <a name="sysendpoints-transact-sql"></a>sys.endpoints (Transact-SQL)
@@ -31,21 +31,21 @@ ms.locfileid: "68061409"
 
   システム内に作成されるエンドポイントごとに1行のレコードを格納します。 システムエンドポイントは常に1つだけ存在します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|エンドポイントの名前。 はサーバー内で一意です。 NULL 値は許可されません。|  
 |**endpoint_id**|**int**|エンドポイントの ID。 はサーバー内で一意です。 65536 より小さい ID のエンドポイントは、システム エンドポイントです。 NULL 値は許可されません。|  
 |**principal_id**|**int**|このエンドポイントを作成して所有しているサーバープリンシパルの ID。 NULL 値が許可されます。|  
-|**プロトコール**|**tinyint**|エンドポイントプロトコル。<br /><br /> 1 = HTTP<br /><br /> 2 = TCP<br /><br /> 3 = 名前付きパイプ<br /><br /> 4 = 共有メモリ<br /><br /> 5 = 仮想インターフェイスアダプター (VIA)<br /><br /> NULL 値は許可されません。|  
-|**protocol_desc**|**nvarchar (60)**|エンドポイントプロトコルの説明。 NULLABLE. 次のいずれかの値:<br /><br /> **HTTP**<br /><br /> **TCP**<br /><br /> **NAMED_PIPES**<br /><br /> **SHARED_MEMORY**<br /><br /> **VIA**注: VIA プロトコルは非推奨とされます。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
+|**protocol**|**tinyint**|エンドポイントプロトコル。<br /><br /> 1 = HTTP<br /><br /> 2 = TCP<br /><br /> 3 = 名前付きパイプ<br /><br /> 4 = 共有メモリ<br /><br /> 5 = 仮想インターフェイスアダプター (VIA)<br /><br /> NULL 値は許可されません。|  
+|**protocol_desc**|**nvarchar(60)**|エンドポイントプロトコルの説明。 NULLABLE. 次のいずれかの値です。<br /><br /> **HTTP**<br /><br /> **TCP**<br /><br /> **NAMED_PIPES**<br /><br /> **SHARED_MEMORY**<br /><br /> **VIA**注: VIA プロトコルは非推奨とされます。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |**type**|**tinyint**|エンドポイントのペイロードの種類。<br /><br /> 1 = SOAP<br /><br /> 2 = TSQL<br /><br /> 3 = SERVICE_BROKER<br /><br /> 4 = DATABASE_MIRRORING<br /><br /> NULL 値は許可されません。|  
-|**type_desc**|**nvarchar (60)**|エンドポイントのペイロードの種類の説明。 NULL 値が許可されます。 次のいずれかの値:<br /><br /> **SOAP**<br /><br /> **TSQL**<br /><br /> **SERVICE_BROKER**<br /><br /> **DATABASE_MIRRORING**|  
-|**状態**|**tinyint**|エンドポイントの状態。<br /><br /> 0 = 要求を開始し、リッスンし、処理します。<br /><br /> 1 = 要求を停止、リッスン、処理していません。<br /><br /> 2 = 無効、リッスンしていません。<br /><br /> 既定の状態は1です。 NULL 値が許可されます。|  
-|**state_desc**|**nvarchar (60)**|エンドポイントの状態の説明。<br /><br /> 開始 = 要求をリッスンして処理しています。<br /><br /> STOPPED = 要求のリスニング中で、処理は行っていません。<br /><br /> DISABLED = リッスンしていません。<br /><br /> 既定の状態は STOPPED です。<br /><br /> NULL 値が許可されます。|  
+|**type_desc**|**nvarchar(60)**|エンドポイントのペイロードの種類の説明。 NULL 値が許可されます。 次のいずれかの値です。<br /><br /> **SOAP**<br /><br /> **TSQL**<br /><br /> **SERVICE_BROKER**<br /><br /> **DATABASE_MIRRORING**|  
+|**state**|**tinyint**|エンドポイントの状態。<br /><br /> 0 = 要求を開始し、リッスンし、処理します。<br /><br /> 1 = 要求を停止、リッスン、処理していません。<br /><br /> 2 = 無効、リッスンしていません。<br /><br /> 既定の状態は1です。 NULL 値が許可されます。|  
+|**state_desc**|**nvarchar(60)**|エンドポイントの状態の説明。<br /><br /> 開始 = 要求をリッスンして処理しています。<br /><br /> STOPPED = 要求のリスニング中で、処理は行っていません。<br /><br /> DISABLED = リッスンしていません。<br /><br /> 既定の状態は STOPPED です。<br /><br /> NULL 値が許可されます。|  
 |**is_admin_endpoint**|**bit**|エンドポイントが管理用であるかどうかを示します。<br /><br /> 0 = 管理者用以外のエンドポイント。<br /><br /> 1 = エンドポイントは管理エンドポイントです。<br /><br /> NULL 値は許可されません。|  
   
 ## <a name="permissions"></a>アクセス許可  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [エンドポイントのカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   

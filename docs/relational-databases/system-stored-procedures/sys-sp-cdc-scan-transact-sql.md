@@ -20,10 +20,10 @@ ms.assetid: 46e4294c-97b8-47d6-9ed9-b436a9929353
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a064b49df3f45d9cbc4b148b8d78c3661f9a2bcc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68066734"
 ---
 # <a name="syssp_cdc_scan-transact-sql"></a>sys.sp_cdc_scan (Transact-SQL)
@@ -56,11 +56,10 @@ sys.sp_cdc_scan [ [ @maxtrans = ] max_trans ]
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ None  
   
-## <a name="remarks"></a>解説  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのキャプチャ ジョブが変更データ キャプチャによって使用されている場合、sys.sp_cdc_scan は sys.sp_MScdc_capture_job によって内部的に呼び出されます。 変更データ キャプチャのログ スキャン操作が既にアクティブである場合、またはデータベースのトランザクション レプリケーションが有効になっている場合は、プロシージャは明示的に実行できません。 このストアドプロシージャは、自動的に構成されるキャプチャジョブの動作をカスタマイズする管理者が使用する必要があります。  
+## <a name="remarks"></a>Remarks  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのキャプチャ ジョブが変更データ キャプチャによって使用されている場合、sys.sp_cdc_scan は sys.sp_MScdc_capture_job によって内部的に呼び出されます。 変更データ キャプチャのログ スキャン操作が既にアクティブである場合、またはデータベースのトランザクション レプリケーションが有効になっている場合は、プロシージャは明示的に実行できません。 このストアドプロシージャは、自動的に構成されるキャプチャジョブの動作をカスタマイズする管理者が使用する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  db_owner 固定データベース ロールのメンバーシップが必要です。  

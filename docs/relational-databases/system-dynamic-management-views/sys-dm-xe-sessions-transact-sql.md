@@ -20,10 +20,10 @@ ms.assetid: defd6efb-9507-4247-a91f-dc6ff5841e17
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9b42a6808d9cab6a3431a68bff9e29e83354a2af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090219"
 ---
 # <a name="sysdm_xe_sessions-transact-sql"></a>sys.dm_xe_sessions (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68090219"
 
   アクティブな拡張イベントセッションに関する情報を返します。 このセッションは、イベント、アクション、およびターゲットのコレクションです。  
     
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |address|**varbinary (8)**|セッションのメモリアドレス。 アドレスはローカルシステム全体で一意です。 NULL 値は許可されません。|  
 |name|**nvarchar(256)**|セッションの名前。 名前はローカルシステム全体で一意です。 NULL 値は許可されません。|  
@@ -48,14 +48,14 @@ ms.locfileid: "68090219"
 |dropped_event_count|**int**|バッファーがいっぱいになったときに削除されたイベントの数。 バッファーポリシーが [Drop full buffer] または [Do not drop events] の場合、この値は**0**です。 NULL 値は許可されません。|  
 |dropped_buffer_count|**int**|バッファーがいっぱいのときに削除されたバッファーの数。 バッファーポリシーが "Drop event" に設定されている場合、または "Do not drop events" に設定されている場合、この値は**0**になります。 NULL 値は許可されません。|  
 |blocked_event_fire_time|**int**|バッファーがいっぱいになったときにイベントの実行がブロックされた時間の長さ。 バッファーポリシーが [Drop full buffer] または [Drop event] の場合、この値は**0**になります。 NULL 値は許可されません。|  
-|create_time|**DATETIME**|セッションが作成された時刻。 NULL 値は許可されません。|  
+|create_time|**datetime**|セッションが作成された時刻。 NULL 値は許可されません。|  
 |largest_event_dropped_size|**int**|セッション バッファーに収まらなかった最大のイベントのサイズ。 NULL 値は許可されません。|  
   
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="see-also"></a>参照  
- [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
+ [動的管理ビューおよび関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   
 

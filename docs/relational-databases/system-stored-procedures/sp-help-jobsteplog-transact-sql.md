@@ -18,10 +18,10 @@ ms.assetid: 1a0be7b1-8f31-4b4c-aadb-586c0e00ed04
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e3af6ff05b971e6b9a0dedc1ec2e14f4ba87e00c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090044"
 ---
 # <a name="sp_help_jobsteplog-transact-sql"></a>sp_help_jobsteplog (Transact-sql)
@@ -58,19 +58,19 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**job_id**|**UNIQUEIDENTIFIER**|ジョブの一意識別子。|  
+|**job_id**|**uniqueidentifier**|ジョブの一意識別子。|  
 |**job_name**|**sysname**|ジョブの名前。|  
 |**step_id**|**int**|ジョブ内のステップの識別子。 たとえば、ステップがジョブの最初のステップである場合、その*step_id*は1になります。|  
 |**step_name**|**sysname**|ジョブのステップの名前。|  
-|**step_uid**|**UNIQUEIDENTIFIER**|ジョブ内のステップ (システムによって生成される) の一意の識別子。|  
-|**date_created**|**DATETIME**|ステップが作成された日付。|  
-|**date_modified**|**DATETIME**|ステップが最後に変更された日付。|  
+|**step_uid**|**uniqueidentifier**|ジョブ内のステップ (システムによって生成される) の一意の識別子。|  
+|**date_created**|**datetime**|ステップが作成された日付。|  
+|**date_modified**|**datetime**|ステップが最後に変更された日付。|  
 |**log_size**|**float**|ジョブ ステップ ログのサイズ (MB 単位)。|  
 |**出力**|**nvarchar(max)**|ジョブステップのログ出力。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_help_jobsteplog**は**msdb**データベースにあります。  
   
 ## <a name="permissions"></a>アクセス許可  

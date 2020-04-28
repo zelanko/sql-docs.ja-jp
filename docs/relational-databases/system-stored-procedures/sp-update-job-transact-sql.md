@@ -18,10 +18,10 @@ ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5428ae9130646db662c6c960f777c6a7dfe25000
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084892"
 ---
 # <a name="sp_update_job-transact-sql"></a>sp_update_job (Transact-SQL)
@@ -76,12 +76,12 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
   
 `[ @notify_level_eventlog = ] eventlog_level`このジョブの Microsoft Windows アプリケーションログにエントリを配置するタイミングを指定します。 *eventlog_level*は**int**,、これらの値のいずれかを指定できます。  
   
-|Value|説明 (アクション)|  
+|値|説明 (アクション)|  
 |-----------|----------------------------|  
-|**0**|Never|  
+|**0**|なし|  
 |**1**|成功時|  
 |**2**|失敗時|  
-|**番**|Always (常に)|  
+|**3**|Always (常に)|  
   
 `[ @notify_level_email = ] email_level`このジョブの完了時に電子メールを送信するタイミングを指定します。 *email_level*は**int**です。*email_level*は*eventlog_level*と同じ値を使用します。  
   
@@ -102,7 +102,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_update_job**は、 **msdb**データベースから実行する必要があります。  
   
  **sp_update_job**は、パラメーター値が指定されている設定のみを変更します。 パラメーターを省略した場合は、現在の設定が保持されます。  
@@ -120,7 +120,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
   
  **Sysadmin**のメンバーだけが、このストアドプロシージャを使用して、他のユーザーが所有するジョブの属性を編集できます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、ジョブ`NightlyBackups`の名前、説明、および有効な状態を変更します。  
   
 ```  
@@ -139,6 +139,6 @@ GO
  [sp_add_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
  [sp_delete_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
  [sp_help_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

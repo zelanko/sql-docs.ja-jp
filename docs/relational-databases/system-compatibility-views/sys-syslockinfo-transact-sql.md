@@ -21,10 +21,10 @@ ms.assetid: d8cae434-807a-473e-b94f-f7a0e1b2daf0
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0c56aa86c20867cfe2cf1da520922d1c74f9c01c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053343"
 ---
 # <a name="syssyslockinfo-transact-sql"></a>sys.syslockinfo (Transact-SQL)
@@ -38,11 +38,11 @@ ms.locfileid: "68053343"
 > [!IMPORTANT]  
 >  この機能は、以前のバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]から変更されています。 詳細については、「 [SQL Server 2016 のデータベースエンジン機能における重大な変更](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)」を参照してください。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**rsc_text**|**nchar (32)**|ロックリソースの説明テキスト。 リソース名の一部が含まれています。|  
-|**rsc_bin**|**バイナリ (16)**|バイナリロックリソース。 ロック マネージャーに格納されている実際のロック リソースが含まれます。 この列は、独自に書式設定されたロックリソースを生成するためのロックリソース形式を認識するツールや、 **syslockinfo**での自己結合を実行するために用意されています。|  
-|**rsc_valblk**|**バイナリ (16)**|ロック値ブロック。 リソースの種類によっては、ロック マネージャーによってハッシュされず、特定のロック リソースの所有権が判断されないロック リソース内の追加データが含まれることがあります。 たとえば、ページ ロックは特定のオブジェクト ID で所有されません。 ロックのエスカレーションなどの目的があるためです。 ただし、ロック値ブロックにページ ロックのオブジェクト ID が含まれることがあります。|  
+|**rsc_text**|**nchar(32)**|ロックリソースの説明テキスト。 リソース名の一部が含まれています。|  
+|**rsc_bin**|**binary(16)**|バイナリロックリソース。 ロック マネージャーに格納されている実際のロック リソースが含まれます。 この列は、独自に書式設定されたロックリソースを生成するためのロックリソース形式を認識するツールや、 **syslockinfo**での自己結合を実行するために用意されています。|  
+|**rsc_valblk**|**binary(16)**|ロック値ブロック。 リソースの種類によっては、ロック マネージャーによってハッシュされず、特定のロック リソースの所有権が判断されないロック リソース内の追加データが含まれることがあります。 たとえば、ページ ロックは特定のオブジェクト ID で所有されません。 ロックのエスカレーションなどの目的があるためです。 ただし、ロック値ブロックにページ ロックのオブジェクト ID が含まれることがあります。|  
 |**rsc_dbid**|**smallint**|リソースに関連付けられているデータベース ID。|  
 |**rsc_indid**|**smallint**|該当する場合、リソースに関連付けられているインデックス ID。|  
 |**rsc_objid**|**int**|リソースに関連付けられているオブジェクト ID (該当する場合)。|  
@@ -57,13 +57,13 @@ ms.locfileid: "68053343"
 |**req_ecid**|**int**|実行コンテキスト ID (関連する d)。 並列操作内のどのスレッドが特定のロックを所有しているかを示すために使用されます。|  
 |**req_ownertype**|**smallint**|ロックに関連付けられているオブジェクトの種類。<br /><br /> 1 = トランザクション<br /><br /> 2 = カーソル<br /><br /> 3 = セッション<br /><br /> 4 = 前回のセッション<br /><br /> 3 と 4 は、特殊なセッション ロックで、それぞれデータベースとファイル グループのロックを追跡します。|  
 |**req_transactionID**|**bigint**|**Syslockinfo**および profiler イベントで使用される一意のトランザクション ID|  
-|**req_transactionUOW**|**UNIQUEIDENTIFIER**|DTC トランザクションの作業単位 ID (UOW) を識別します。 MS DTC 以外のトランザクションの場合、UOW は 0 に設定されます。|  
+|**req_transactionUOW**|**uniqueidentifier**|DTC トランザクションの作業単位 ID (UOW) を識別します。 MS DTC 以外のトランザクションの場合、UOW は 0 に設定されます。|  
   
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="see-also"></a>参照  
  [システムビューへのシステムテーブルのマッピング &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [互換性ビュー &#40;Transact-sql&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [互換性ビュー &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

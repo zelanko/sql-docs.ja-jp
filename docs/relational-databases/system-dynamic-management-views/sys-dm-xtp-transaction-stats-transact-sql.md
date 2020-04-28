@@ -19,10 +19,10 @@ ms.assetid: 9389f48d-0de5-47bd-9821-4db8f04504e4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 755b5f836b833512a122ad92e5cedbd7e938a4e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090071"
 ---
 # <a name="sysdm_xtp_transaction_stats-transact-sql"></a>sys.dm_xtp_transaction_stats (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68090071"
   
  詳細については、「[インメモリ OLTP &#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)」を参照してください。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |total_count|**bigint**|インメモリ OLTP データベースエンジンで実行されたトランザクションの合計数。|  
 |read_only_count|**bigint**|読み取り専用トランザクションの数。|  
@@ -69,6 +69,6 @@ ms.locfileid: "68090071"
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="see-also"></a>参照  
- [メモリ最適化テーブルの動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [メモリ最適化テーブルの動的管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

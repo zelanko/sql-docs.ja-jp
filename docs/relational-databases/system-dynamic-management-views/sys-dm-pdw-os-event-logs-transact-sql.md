@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 819b38bce871bd1a43b3d259d23b2c95fb6dfdd3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68086210"
 ---
 # <a name="sysdm_pdw_os_event_logs-transact-sql"></a>dm_pdw_os_event_logs (Transact-sql)
@@ -24,16 +24,16 @@ ms.locfileid: "68086210"
 
   異なるノード上のさまざまな Windows イベントログに関する情報を保持します。  
   
-|列名|データ型|[説明]|Range|  
+|列名|データ型|説明|範囲|  
 |-----------------|---------------|-----------------|-----------|  
 |pdw_node_id|**int**|このログの基になっているアプライアンスノード。<br /><br /> このビューのキーは pdw_node_id と log_name によって形成されます。||  
 |log_name|**nvarchar(255)**|Windows イベントログの名前。<br /><br /> このビューのキーは pdw_node_id と log_name によって形成されます。||  
 |log_source|**nvarchar(255)**|Windows イベントログのソース名。||  
 |event_id|**int**|イベントの ID。 一意ではありません。||  
 |event_type|**nvarchar(255)**|重大度を識別するイベントの種類。|' Information '、' Warning '、' Error '|  
-|event_message|**nvarchar(4000)**|イベントの詳細。||  
-|generate_time|**DATETIME**|イベントが作成された時刻。||  
-|write_time|**DATETIME**|イベントが実際にログに書き込まれた時刻。||  
+|event_message|**nvarchar (4000)**|イベントの詳細。||  
+|generate_time|**datetime**|イベントが作成された時刻。||  
+|write_time|**datetime**|イベントが実際にログに書き込まれた時刻。||  
   
  このビューで保持される最大行数の詳細については、「[容量制限](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata)」トピックの「メタデータ」セクションを参照してください。 
   

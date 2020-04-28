@@ -23,10 +23,10 @@ ms.assetid: 8d9c57e5-7f39-4315-b466-92748231140a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 206c9b1c250cb95a6ad49ccf20f8badf11f870ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68046537"
 ---
 # <a name="sysavailability_databases_cluster-transact-sql"></a>availability_databases_cluster (Transact-sql)
@@ -37,10 +37,10 @@ ms.locfileid: "68046537"
 > [!NOTE]  
 >  データベースを可用性グループに追加すると、プライマリ データベースは自動的にそのグループに参加します。 セカンダリ データベースを可用性グループに参加させるには、各セカンダリ レプリカでそのデータベースを準備する必要があります。   
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**group_id**|**UNIQUEIDENTIFIER**|可用性グループが存在する場合、データベースが参加している可用性グループの一意識別子。<br /><br /> NULL = データベースは可用性グループの可用性レプリカの一部ではありません。|  
-|**group_database_id**|**UNIQUEIDENTIFIER**|データベースが参加している可用性グループ内のデータベースの一意の識別子 (存在する場合)。 **group_database_id**は、プライマリレプリカのこのデータベースと、データベースが可用性グループに参加しているすべてのセカンダリレプリカで同じです。<br /><br /> NULL = データベースは、どの可用性グループの可用性レプリカの一部でもありません。|  
+|**group_id**|**uniqueidentifier**|可用性グループが存在する場合、データベースが参加している可用性グループの一意識別子。<br /><br /> NULL = データベースは可用性グループの可用性レプリカの一部ではありません。|  
+|**group_database_id**|**uniqueidentifier**|データベースが参加している可用性グループ内のデータベースの一意の識別子 (存在する場合)。 **group_database_id**は、プライマリレプリカのこのデータベースと、データベースが可用性グループに参加しているすべてのセカンダリレプリカで同じです。<br /><br /> NULL = データベースは、どの可用性グループの可用性レプリカの一部でもありません。|  
 |**database_name**|**sysname**|可用性グループに追加されたデータベースの名前。|  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -48,7 +48,7 @@ ms.locfileid: "68046537"
   
 ## <a name="see-also"></a>参照  
  [availability_groups &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
- [データベース &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
+ [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [dm_hadr_database_replica_states &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)   
  [dm_hadr_database_replica_cluster_states &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md)   
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  

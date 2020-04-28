@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 71aaa9e52cfca8435501695a4ebf60b2a6aa6ee4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096052"
 ---
 # <a name="sp_tables-transact-sql"></a>sp_tables (Transact-SQL)
@@ -64,19 +64,19 @@ sp_tables [ [ @table_name = ] 'name' ]
 `[ @fUsePattern = ] 'fUsePattern'`アンダースコア (_)、パーセント (%)、および角かっこ ([または]) の各文字がワイルドカード文字として解釈されるかどうかを決定します。 有効な値は 0 (パターン一致がオフ) および 1 (パターン一致がオン) です。 *Fusepattern*は**ビット**,、既定値は1です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- なし  
+ None  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**TABLE_QUALIFIER**|**sysname**|テーブル修飾子の名前。 で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、この列はデータベース名を表します。 このフィールドは NULL にすることができます。|  
 |**TABLE_OWNER**|**sysname**|テーブル所有者の名前。 で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、この列は、テーブルを作成したデータベースユーザーの名前を表します。 このフィールドは常に値を返します。|  
 |**TABLE_NAME**|**sysname**|テーブル名。 このフィールドは常に値を返します。|  
 |**TABLE_TYPE**|**varchar(32)**|テーブル、システムテーブル、またはビュー。|  
-|**」**|**varchar (254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]はこの列の値を返しません。|  
+|**備考**|**varchar (254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]はこの列の値を返しません。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  相互運用性を最大にするために、ゲートウェイクライアントは SQL-92-標準の SQL パターン照合 (% と _ ワイルドカード文字) のみを想定する必要があります。  
   
  現在のユーザーの特定のテーブルに対する読み取りまたは書き込みアクセスに関する特権情報は、常にチェックされません。 そのため、アクセスは保証されません。 この結果セットには、テーブルとビューだけでなく、これらの型をサポートする DBMS 製品へのゲートウェイのシノニムと別名も含まれています。 **Sp_server_info**の結果セットで server 属性**ACCESSIBLE_TABLES**が Y の場合は、現在のユーザーがアクセスできるテーブルだけが返されます。  
@@ -96,7 +96,7 @@ EXEC sp_tables ;
 ```  
   
 ### <a name="b-returning-information-about-the-tables-in-a-specified-schema"></a>B. 指定されたスキーマ内のテーブルに関する情報を返す  
- 次の例では、`Person` データベース内の [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] スキーマに属するテーブルに関する情報が返されます。  
+ 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `Person` スキーマに属するテーブルに関する情報が返されます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -107,7 +107,7 @@ EXEC sp_tables
    @table_qualifier = 'AdventureWorks2012';  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-returning-a-list-of-objects-that-can-be-queried-in-the-current-environment"></a>C. 現在の環境でクエリされるオブジェクトの一覧を返す  
  次の例では、現在の環境でクエリを実行できるオブジェクトの一覧を返します。  
@@ -130,7 +130,7 @@ EXEC sp_tables
   
 ## <a name="see-also"></a>参照  
  [Transact-sql &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-synonyms-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
 

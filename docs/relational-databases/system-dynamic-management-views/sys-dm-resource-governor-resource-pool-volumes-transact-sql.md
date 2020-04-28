@@ -20,10 +20,10 @@ ms.assetid: fa692e56-c561-4533-97c5-bc12c600553f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 801997509242bae7af2d2ae438dfdb952be9e1fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090811"
 ---
 # <a name="sysdm_resource_governor_resource_pool_volumes-transact-sql"></a>dm_resource_governor_resource_pool_volumes (Transact-sql)
@@ -32,7 +32,7 @@ ms.locfileid: "68090811"
   各ディスクボリュームの現在のリソースプール IO 統計に関する情報を返します。 この情報は、 [sys. dm_resource_governor_resource_pools &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)のリソースプールレベルでも使用できます。 transact-sql&#41;を参照してください。  
   
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |pool_id|**int**|リソースプールの ID。 NULL 値は許可されません。|  
 |volume_name|**sysname**|ディスクの名前。 NULL 値は許可されません。|  
@@ -56,8 +56,8 @@ ms.locfileid: "68090811"
 ## <a name="permissions"></a>アクセス許可  
  VIEW SERVER STATE 権限が必要です。  
   
-## <a name="see-also"></a>参照  
- [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+## <a name="see-also"></a>関連項目  
+ [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [dm_resource_governor_workload_groups &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
  [resource_governor_resource_pools &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  

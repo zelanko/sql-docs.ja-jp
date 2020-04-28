@@ -18,10 +18,10 @@ ms.assetid: e63ca7d4-47d6-455e-9aac-421f9683dadc
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6aadde09a22d766033704dffe0ecc8b4247954c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096041"
 ---
 # <a name="sp_testlinkedserver-transact-sql"></a>sp_testlinkedserver (Transact-SQL)
@@ -42,12 +42,12 @@ sp_testlinkedserver [ @servername ] = servername
 `[ @servername = ]servername`リンクサーバーの名前を指定します。 *servername*は**sysname**,、既定値はありません。  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ None  
   
 ## <a name="permissions"></a>アクセス許可  
  アクセス許可はチェックされません。ただし、呼び出し元には適切なログインマッピングが必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、という`SEATTLESales`名前のリンクサーバーを作成し、接続をテストします。  
   
 ```  
@@ -63,6 +63,6 @@ GO
   
 ## <a name="see-also"></a>参照  
  [sp_addlinkedserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_addlinkedsrvlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)  
+ [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)  
   
   

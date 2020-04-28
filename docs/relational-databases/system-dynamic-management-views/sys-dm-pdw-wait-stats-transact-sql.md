@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 2d5815783528b89716cc8bfb426ea7c1b274802e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68088717"
 ---
 # <a name="sysdm_pdw_wait_stats-transact-sql"></a>dm_pdw_wait_stats (Transact-sql)
@@ -24,7 +24,7 @@ ms.locfileid: "68088717"
 
   異なるノードで実行さ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]れているインスタンスに関連する OS の状態に関連する情報を保持します。 待機の種類とその説明の一覧については、「 [dm_os_wait_stats](https://msdn.microsoft.com/library/ms179984\(v=sql.120\).aspx)」を参照してください。  
   
-|列名|データ型|[説明]|Range|  
+|列名|データ型|説明|範囲|  
 |-----------------|---------------|-----------------|-----------|  
 |**pdw_node_id**|**int**|このエントリが参照するノードの ID。||  
 |**wait_name**|**nvarchar(255)**|待機の種類の名前。||  

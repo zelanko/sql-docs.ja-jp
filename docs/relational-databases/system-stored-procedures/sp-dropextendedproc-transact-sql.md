@@ -18,10 +18,10 @@ ms.assetid: dd93af2c-1b7d-4e39-af23-2d21d270a381
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b12ebcfb662db9740efdf918f0857b94144e0ceb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68054299"
 ---
 # <a name="sp_dropextendedproc-transact-sql"></a>sp_dropextendedproc (Transact-SQL)
@@ -48,9 +48,9 @@ sp_dropextendedproc [ @functname = ] 'procedure'
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ None  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Sp_dropextendedproc**を実行すると、ユーザー定義の拡張ストアドプロシージャ名[が、](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) extended_procedures カタログビューから削除され、そのエントリが削除されます[。](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) このストアドプロシージャは、 **master**データベースでのみ実行できます。  
   
 **sp_dropextendedproc**では、システム拡張ストアドプロシージャは削除されません。 代わりに、システム管理者は、拡張ストアドプロシージャに対する EXECUTE 権限を**public**ロールに対して拒否する必要があります。  
@@ -60,7 +60,7 @@ sp_dropextendedproc [ @functname = ] 'procedure'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_dropextendedproc**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では`xp_hello` 、拡張ストアドプロシージャを削除します。  
   
 > [!NOTE]  
@@ -75,6 +75,6 @@ EXEC sp_dropextendedproc 'xp_hello';
 ## <a name="see-also"></a>参照  
  [sp_addextendedproc &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)   
  [sp_helpextendedproc &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

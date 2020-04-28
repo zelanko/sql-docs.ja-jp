@@ -18,10 +18,10 @@ ms.assetid: 80c80eaf-cf23-4ed8-b8dd-65fe59830dd1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f85095941311459da2fdc757a11895795ebb418e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68046165"
 ---
 # <a name="sp_attach_schedule-transact-sql"></a>sp_attach_schedule (Transact-SQL)
@@ -56,7 +56,7 @@ sp_attach_schedule
 > [!NOTE]  
 >  *Schedule_id*または*schedule_name*のいずれかを指定する必要がありますが、両方を指定することはできません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  スケジュールとジョブの所有者は同じである必要があります。  
   
  スケジュールは複数のジョブに対して設定できます。 ジョブは、複数のスケジュールで実行できます。  
@@ -76,10 +76,9 @@ sp_attach_schedule
   
  これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、ユーザーがジョブとスケジュールの両方を所有しているかどうかを確認します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、ユーザーがジョブとスケジュールの両方を所有しているかどうかを確認します。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、と`NightlyJobs`いう名前のスケジュールを作成します。 このスケジュールを使用するジョブは、毎日、サーバーの時間が `01:00` になると実行されます。 この例では、スケジュールをジョブ`BackupDatabase`とジョブ`RunReports`にアタッチします。  
   
 > [!NOTE]  

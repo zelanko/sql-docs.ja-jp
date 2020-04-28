@@ -18,10 +18,10 @@ ms.assetid: 4b315c70-7265-4acd-b35b-a4dbb7881d98
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6bf9b02afe0312a2be1a057ee19a594c9c488675
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68095850"
 ---
 # <a name="log_shipping_primary_secondaries-transact-sql"></a>log_shipping_primary_secondaries (Transact-sql)
@@ -30,9 +30,9 @@ ms.locfileid: "68095850"
   各プライマリデータベースをセカンダリデータベースにマップします。 このテーブルは、 **msdb**データベースに格納されます。  
 
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**primary_id**|**UNIQUEIDENTIFIER**|ログ配布構成のプライマリデータベースの ID。|  
+|**primary_id**|**uniqueidentifier**|ログ配布構成のプライマリデータベースの ID。|  
 |**secondary_server**|**sysname**|ログ配布構成[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]におけるのセカンダリインスタンスの名前です。|  
 |**secondary_database**|**sysname**|ログ配布構成のセカンダリデータベースの名前。|  
   
@@ -41,6 +41,6 @@ ms.locfileid: "68095850"
  [sp_add_log_shipping_primary_secondary &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql.md)   
  [sp_delete_log_shipping_primary_secondary &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-secondary-transact-sql.md)   
  [sp_help_log_shipping_primary_secondary &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-primary-secondary-transact-sql.md)   
- [システムテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [システム テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

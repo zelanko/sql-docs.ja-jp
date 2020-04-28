@@ -22,10 +22,10 @@ ms.assetid: fa41e052-a79a-4194-9b1a-2885f7828500
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 82f433d18ff0940c9283f93cfa5e3f87179d31ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68078551"
 ---
 # <a name="sysdm_fts_index_keywords_by_property-transact-sql"></a>sys.dm_fts_index_keywords_by_property (Transact-SQL)
@@ -37,11 +37,11 @@ ms.locfileid: "68078551"
   
  **すべてのドキュメント レベルのコンテンツ (プロパティに関連するコンテンツを含む) を表示するには**  
   
--   [dm_fts_index_keywords_by_document &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)  
+-   [sys.dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)  
   
  **上位レベルのフルテキスト インデックス情報を表示するには**  
   
--   [dm_fts_index_keywords &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)  
+-   [sys.dm_fts_index_keywords &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)  
   
 > [!NOTE]  
 >  検索プロパティリストの詳細については、「検索[プロパティリストを使用したドキュメントプロパティの検索](../../relational-databases/search/search-document-properties-with-search-property-lists.md)」を参照してください。  
@@ -66,15 +66,15 @@ OBJECT_ID('table_name')
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列|データ型|[説明]|  
+|列|データ型|説明|  
 |------------|---------------|-----------------|  
-|キーワード (keyword)|**nvarchar(4000)**|フルテキスト インデックスに格納されているキーワードの 16 進数表記です。<br /><br /> 注: 0 Xff は、ファイルまたはデータセットの末尾を示す特殊文字を表します。|  
-|display_term|**nvarchar(4000)**|キーワードの人間が判読できる形式。 この形式は、フルテキストインデックスに格納されている内部形式から派生します。<br /><br /> 注: 0 Xff は、ファイルまたはデータセットの末尾を示す特殊文字を表します。|  
+|キーワード (keyword)|**nvarchar (4000)**|フルテキスト インデックスに格納されているキーワードの 16 進数表記です。<br /><br /> 注: 0 Xff は、ファイルまたはデータセットの末尾を示す特殊文字を表します。|  
+|display_term|**nvarchar (4000)**|キーワードの人間が判読できる形式。 この形式は、フルテキストインデックスに格納されている内部形式から派生します。<br /><br /> 注: 0 Xff は、ファイルまたはデータセットの末尾を示す特殊文字を表します。|  
 |column_id|**int**|現在のキーワードがフルテキストインデックスを作成した列の ID。|  
 |document_id|**int**|現在の用語のフルテキストインデックスが作成されたドキュメントまたは行の ID。 この ID は、そのドキュメントまたは行のフルテキストキー値に対応します。|  
-|property_id|**int**|OBJECT_ID ('*table_name*') パラメーターで指定したテーブルのフルテキストインデックス内の検索プロパティの内部プロパティ ID。<br /><br /> 特定のプロパティが検索プロパティ リストに追加されると、Full-Text Engine はプロパティを登録し、このプロパティ リストに固有の内部プロパティ ID を、そのプロパティに割り当てます。 内部プロパティ ID (整数) は、特定の検索プロパティリストに対して一意です。 特定のプロパティを複数の検索プロパティ リストに登録した場合、検索プロパティ リストごとに異なる内部プロパティ ID が割り当てられる可能性があります。<br /><br /> 注: 内部プロパティ ID は、プロパティを検索プロパティリストに追加するときに指定されるプロパティ整数識別子とは異なります。 詳細については、「 [検索プロパティ リストを使用したドキュメント プロパティの検索](../../relational-databases/search/search-document-properties-with-search-property-lists.md)」を参照してください。<br /><br /> Property_id とプロパティ名の間の関連付けを表示するには、次のようにします。<br />                    [registered_search_properties &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)|  
+|property_id|**int**|OBJECT_ID ('*table_name*') パラメーターで指定したテーブルのフルテキストインデックス内の検索プロパティの内部プロパティ ID。<br /><br /> 特定のプロパティが検索プロパティ リストに追加されると、Full-Text Engine はプロパティを登録し、このプロパティ リストに固有の内部プロパティ ID を、そのプロパティに割り当てます。 内部プロパティ ID (整数) は、特定の検索プロパティリストに対して一意です。 特定のプロパティを複数の検索プロパティ リストに登録した場合、検索プロパティ リストごとに異なる内部プロパティ ID が割り当てられる可能性があります。<br /><br /> 注: 内部プロパティ ID は、プロパティを検索プロパティリストに追加するときに指定されるプロパティ整数識別子とは異なります。 詳細については、「 [検索プロパティ リストを使用したドキュメント プロパティの検索](../../relational-databases/search/search-document-properties-with-search-property-lists.md)」を参照してください。<br /><br /> Property_id とプロパティ名の間の関連付けを表示するには、次のようにします。<br />                    [sys.registered_search_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この動的管理ビューでは、次のような質問に答えることができます。  
   
 -   指定された DocID の特定のプロパティにどのようなコンテンツが格納されますか。  
@@ -108,7 +108,7 @@ GO
 ## <a name="permissions"></a>アクセス許可  
  フルテキスト インデックスに含まれる列に対する SELECT 権限と、CREATE FULL TEXT CATALOG 権限が必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、`Author` サンプル データベースの `Production.Document` テーブルのフルテキスト インデックスにある `AdventureWorks` プロパティからキーワードが返されます。 この例では、 `KWBPOP` **dm_fts_index_keywords_by_property**によって返されるテーブルの別名を使用します。 この例では、内部結合を使用して、 [registered_search_properties](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)と[sys. fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)の列を結合します。  
   
 ```  

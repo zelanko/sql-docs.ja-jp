@@ -21,10 +21,10 @@ ms.assetid: 7c755d8a-64dd-44b2-be5e-735d30758900
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a23f8eb64ae99b999cdf6b16f1c888383a88c147
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68067778"
 ---
 # <a name="managed_backupfn_backup_db_config-transact-sql"></a>managed_backup。 fn_backup_db_config (Transact-sql)
@@ -42,13 +42,13 @@ ms.locfileid: "68067778"
 managed_backup.fn_backup_db_config ('database_name' | '' | NULL)  
 ```  
   
-##  <a name="Arguments"></a>数値  
+##  <a name="arguments"></a><a name="Arguments"></a>数値  
  @db_name  
  データベースの名前。 @db_nameパラメーターは**SYSNAME**です。 このパラメーターに空の文字列または NULL 値が渡されると、SQL Server のインスタンス上にあるすべてのデータベースに関する情報が返されます。  
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |db_name|SYSNAME|データベース名。|  
 |db_guid|一意|データベースを一意に識別する識別子。|  
@@ -67,7 +67,7 @@ managed_backup.fn_backup_db_config ('database_name' | '' | NULL)
 ### <a name="permissions"></a>アクセス許可  
  **ALTER ANY CREDENTIAL**権限を持つ**db_backupoperator**データベースロールのメンバーシップが必要です。 ユーザーは、 **VIEW ANY DEFINITION**権限を拒否することはできません。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 、' TestDB ' の構成を返します。  
   
  各コードでは、言語属性フィールドで "tsql" を選択します。  

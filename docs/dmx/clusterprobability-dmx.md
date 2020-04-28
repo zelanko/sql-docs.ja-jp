@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 9beac713ec9a8b5a549602809d3612e4e29e67c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68071951"
 ---
 # <a name="clusterprobability-dmx"></a>ClusterProbability (DMX)
@@ -33,7 +33,7 @@ ClusterProbability([<Node_Caption>])
 ## <a name="return-type"></a>戻り値の型  
  スカラー値。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  次の構文では、マイニングモデルコンテンツスキーマ行セットを使用して、マイニングモデルに存在するノードのキャプションを返します。  
   
 ```  
@@ -44,7 +44,7 @@ SELECT NODE_CAPTION FROM <model>.CONTENT
   
  \<ノードのキャプション> が指定されていない場合、関数は、入力ケースが最も可能性の高いクラスターに属する確率を返します。 **クラスター**関数を使用して、最も可能性の高いクラスターを返します。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例は、指定したケースが Cluster 2 というラベルが付けられたクラスターに存在する確率を返します。  
   
 ```  

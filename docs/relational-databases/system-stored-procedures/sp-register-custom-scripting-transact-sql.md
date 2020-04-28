@@ -16,10 +16,10 @@ ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c10451148c6f9b2fda231691b770bca3928517f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68075755"
 ---
 # <a name="sp_register_custom_scripting-transact-sql"></a>sp_register_custom_scripting (Transact-SQL)
@@ -42,11 +42,11 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ## <a name="arguments"></a>引数  
 `[ @type = ] 'type'`登録するカスタムストアドプロシージャまたはスクリプトの種類を設定します。 *型*は**varchar (16)**,、既定値はありません、次の値のいずれかを指定することができます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**insert**|登録されたカスタムストアドプロシージャは、INSERT ステートメントがレプリケートされるときに実行されます。|  
 |**update**|登録したカスタム ストアド プロシージャを、UPDATE ステートメントがレプリケートされるときに実行。|  
-|**デリート**|登録したカスタム ストアド プロシージャを、DELETE ステートメントがレプリケートされるときに実行。|  
+|**delete**|登録したカスタム ストアド プロシージャを、DELETE ステートメントがレプリケートされるときに実行。|  
 |**custom_script**|スクリプトは、データ定義言語 (DDL) トリガーの最後に実行されます。|  
   
 `[ @value = ] 'value'`ストアドプロシージャの名前、または登録する[!INCLUDE[tsql](../../includes/tsql-md.md)]スクリプトファイルの完全修飾パス名。 *値*は**nvarchar (1024)**,、既定値はありません。  
@@ -63,7 +63,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_register_custom_scripting**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
  レプリケートされたテーブルにスキーマを変更する前に、このストアドプロシージャを実行する必要があります。 このストアドプロシージャの使用方法の詳細については、「[カスタムトランザクションプロシージャの再生成によるスキーマ変更の反映](../../relational-databases/replication/transactional/transactional-articles-regenerate-to-reflect-schema-changes.md)」を参照してください。  

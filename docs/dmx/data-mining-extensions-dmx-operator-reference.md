@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 4e0dfafb74e6e86185872ea8e736b95dce7d4058
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070911"
 ---
 # <a name="data-mining-extensions-dmx-operator-reference"></a>データマイニング拡張機能 (DMX) 演算子リファレンス
@@ -20,7 +20,7 @@ ms.locfileid: "68070911"
 
   のデータマイニング拡張機能 (DMX) 言語[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]では、算術演算子、代入演算子、比較演算子、論理演算子、および単項演算子がサポートされています。 次の表に、DMX でサポートされる演算子を示します。  
   
-|演算子|[説明]|  
+|演算子|説明|  
 |--------------|-----------------|  
 |[+ &#40;&#41; &#40;DMX&#41;を追加する](../dmx/add-dmx.md)|2つの数値を加算する算術演算子。|  
 |[-&#40;&#41; &#40;DMX&#41;を減算する](../dmx/subtract-dmx.md)|ある数値を別の数値から減算する算術演算子。|  

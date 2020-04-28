@@ -18,10 +18,10 @@ ms.assetid: 6eaa54af-7ba4-4fce-bf6c-6ac67cc1ac94
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1dffb53a2b6436725a2b7dc19dfb209a58b1134e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053114"
 ---
 # <a name="sp_describe_cursor_columns-transact-sql"></a>sp_describe_cursor_columns (Transact-SQL)
@@ -65,14 +65,14 @@ sp_describe_cursor_columns
  開いているカーソルに関連付けられたカーソル変数の名前です。 *input_cursor_variable*は**nvarchar (128)** です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- なし  
+ None  
   
 ## <a name="cursors-returned"></a>返されるカーソル  
  sp_describe_cursor_columns は、そのレポートを[!INCLUDE[tsql](../../includes/tsql-md.md)] 、**カーソル**出力パラメーターとしてカプセル化します。 これに[!INCLUDE[tsql](../../includes/tsql-md.md)]より、バッチ、ストアドプロシージャ、およびトリガーは、一度に1行ずつ出力を処理できます。 これはまた、データベース API 関数からプロシージャを直接呼び出すことができないことを意味します。 **Cursor**出力パラメーターはプログラム変数にバインドする必要がありますが、データベース api では、**カーソル**パラメーターまたは変数のバインドがサポートされていません。  
   
  次の表に、sp_describe_cursor_columns が返すカーソルの形式を示します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |column_name|**sysname** (null 値を許容)|結果セット列に割り当てられた名前です。 列が、付随する AS 句なしで指定されている場合、この列は NULL になります。|  
 |ordinal_position|**int**|結果セットで左端の列を基準とする列の相対位置です。 最初の列は0の位置にあります。|  
@@ -89,13 +89,13 @@ sp_describe_cursor_columns
 |dbid|**int**|列の値を提供するベース テーブルを含むデータベースの ID です。 結果セット列が式で構成されている場合、dbid は -1 です。|  
 |dbname|**sysname**<br /><br /> nullable|列を提供しているベーステーブルを含むデータベースの名前。 結果セット列が式で構成されている場合、dbname は NULL です。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  sp_describe_cursor_columns は、各カーソルの名前やデータ型など、サーバー カーソルの結果セットにある列の属性を示します。 サーバー カーソルにグローバルな属性の説明が必要な場合は、sp_describe_cursor を使用します。 カーソルが参照するベース テーブルのレポートが必要な場合は、sp_describe_cursor_tables を使用します。 接続時に可視になる [!INCLUDE[tsql](../../includes/tsql-md.md)] Server カーソルのレポートが必要な場合は、sp_cursor_list を使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
  public ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、グローバル カーソルをオープンし、カーソルで使用されている列を `sp_describe_cursor_columns` を使用してレポートします。  
   
 ```  
@@ -142,6 +142,6 @@ GO
  [sp_describe_cursor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-transact-sql.md)   
  [sp_cursor_list &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
  [sp_describe_cursor_tables &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

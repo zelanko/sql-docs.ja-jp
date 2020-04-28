@@ -18,10 +18,10 @@ ms.assetid: 036aaf61-df3e-40f7-aa4e-62983c5a37bd
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 640d292dfbef7adae9fc99b53cb3b450f698b651
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68085119"
 ---
 # <a name="sp_help_spatial_geometry_histogram-transact-sql"></a>sp_help_spatial_geometry_histogram (Transact-SQL)
@@ -65,7 +65,7 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  テーブル値が返されます。 次のグリッドでは、テーブルの列の内容について説明します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**cellid**|**int**|各セルの一意の ID を表します。カウントは1から始まります。|  
 |**cell**|**geometry**|それぞれのセルを表す四角形です。 セルの形は、空間インデックス作成用に使用されたセルの形と同じです。|  
@@ -74,12 +74,12 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 ## <a name="permissions"></a>アクセス許可  
  ユーザーは、 **public**ロールのメンバーである必要があります。 サーバーとオブジェクトに対する読み取りアクセス権限が必要です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  SSMS 空間タブでは、結果がグラフィカルに表示されます。 空間ウィンドウに対して結果にクエリを実行すると、結果項目の概数を取得できます。 テーブル内のオブジェクトは複数のセルに対応している場合があるため、セルの合計が実際のオブジェクトの数よりも大きくなる可能性があります。  
   
  境界ボックスの外部にあるオブジェクトまたは境界ボックスの境界に接しているオブジェクトの数を格納する追加の行が結果セットに追加される場合があります。 この行の**cellid**は0で、この行の**セル**には、境界ボックスを表す**LineString**が含まれています。 この行は、境界ボックス外の領域全体を表します。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、サンプルテーブルを作成し、テーブルに対して**sp_help_spatial_geometry_histogram**を呼び出します。  
   
  `USE AdventureWorksDW2012`  

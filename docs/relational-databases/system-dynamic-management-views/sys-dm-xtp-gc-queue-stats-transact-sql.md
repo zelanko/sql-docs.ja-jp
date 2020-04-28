@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: c56fe40ec6864ac48a991e155d06ce7c505ed593
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090197"
 ---
 # <a name="sysdm_xtp_gc_queue_stats-transact-sql"></a>dm_xtp_gc_queue_stats (Transact-sql)
@@ -39,7 +39,7 @@ ms.locfileid: "68090197"
  詳細については、「[インメモリ OLTP &#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)」を参照してください。  
   
 
-|列名|種類|[説明]|  
+|列名|Type|説明|  
 |-----------------|----------|-----------------|  
 |queue_id|**int**|キューの一意識別子。|  
 |total_enqueues|**bigint**|サーバーが起動してからこのキューにエンキューされたガベージコレクション作業項目の総数。|  
@@ -66,6 +66,6 @@ queue_id total_enqueues total_dequeues current_queue_depth  maximum_queue_depth 
 ```  
   
 ## <a name="see-also"></a>参照  
- [メモリ最適化テーブルの動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [メモリ最適化テーブルの動的管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

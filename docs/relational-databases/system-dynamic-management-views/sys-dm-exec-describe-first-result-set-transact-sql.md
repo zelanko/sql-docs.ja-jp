@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 523a94718f123fab9d501de9497ca5ecc2b09c95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68097812"
 ---
 # <a name="sysdm_exec_describe_first_result_set-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
@@ -57,7 +57,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 ## <a name="table-returned"></a>返されるテーブル  
  この共通メタデータが結果セットとして返されます。 結果のメタデータの各列に対して、列の種類と NULL 許可属性が次の表に示す形式で 1 行に記述されます。 各コントロールのパスに最初のステートメントが存在しない場合は、0 行の結果セットが返されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**bit**|この列が、参照および情報提供の目的で追加された余分な列で、実際に結果セットには表示されないかどうかを示します。|  
 |**column_ordinal**|**int**|結果セット内の列の位置を示す序数を格納します。 最初の列の位置は 1 で指定されます。|  
@@ -66,14 +66,14 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |**system_type_id**|**int**|に指定されている列のデータ型の system_type_id が含まれています。型です。 CLR 型の場合は、system_type_name 列が NULL を返しても、この列は値 240 を返します。|  
 |**system_type_name**|**nvarchar(256)**|列のデータ型に指定されている名前と引数 (長さ、有効桁数、小数点以下桁数など) を格納します。<br /><br /> データ型がユーザー定義の別名型の場合は、基になるシステム型がここで指定されます。<br /><br /> データ型が CLR ユーザー定義型の場合は、この列には NULL が返されます。|  
 |**max_length**|**smallint**|列の最大長 (バイト単位) です。<br /><br /> -1 = 列のデータ型は**varchar (max)**,、 **nvarchar (max)**,、 **varbinary (max)**,、または**xml**です。<br /><br /> **テキスト**列の場合、 **max_length**値は16か**sp_tableoption ' text in row '** によって設定された値になります。|  
-|**精度**|**tinyint**|数値ベースの場合は、列の有効桁数です。 それ以外の場合は 0 を返します。|  
+|**有効桁数 (precision)**|**tinyint**|数値ベースの場合は、列の有効桁数です。 それ以外の場合は 0 を返します。|  
 |**scale**|**tinyint**|数値ベースの場合は、列の小数点以下桁数です。 それ以外の場合は 0 を返します。|  
 |**collation_name**|**sysname**|文字ベースの場合は、列の照合順序の名前です。 それ以外の場合は NULL を返します。|  
 |**user_type_id**|**int**|CLR 型と別名型の場合、sys.types で指定された列のデータ型の user_type_id を格納します。 それ以外の場合は NULL です。|  
 |**user_type_database**|**sysname**|CLR 型と別名型の場合、その型が定義されたデータベースの名前を格納します。 それ以外の場合は NULL です。|  
 |**user_type_schema**|**sysname**|CLR 型と別名型の場合、その型が定義されたスキーマの名前を格納します。 それ以外の場合は NULL です。|  
 |**user_type_name**|**sysname**|CLR 型と別名型の場合、その型の名前を格納します。 それ以外の場合は NULL です。|  
-|**assembly_qualified_type_name**|**nvarchar(4000)**|CLR 型の場合、その型を定義するアセンブリの名前とクラスを返します。 それ以外の場合は NULL です。|  
+|**assembly_qualified_type_name**|**nvarchar (4000)**|CLR 型の場合、その型を定義するアセンブリの名前とクラスを返します。 それ以外の場合は NULL です。|  
 |**xml_collection_id**|**int**|sys.columns で指定された列のデータ型の xml_collection_id を格納します。 この列は、返される型が XML スキーマ コレクションに関連付けられていない場合は NULL を返します。|  
 |**xml_collection_database**|**sysname**|この型に関連付けられている XML スキーマ コレクションが定義されているデータベースを格納します。 この列は、返される型が XML スキーマ コレクションに関連付けられていない場合は NULL を返します。|  
 |**xml_collection_schema**|**sysname**|この型に関連付けられている XML スキーマ コレクションが定義されているスキーマを格納します。 この列は、返される型が XML スキーマ コレクションに関連付けられていない場合は NULL を返します。|  
@@ -99,17 +99,17 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |**error_state**|**int**|状態メッセージを格納します。 関数によって返されます。 エラーが発生しなかった場合は、NULL が格納されます。|  
 |**error_message**|**nvarchar (4,096)**|関数によって返されるメッセージが格納されます。 エラーが発生しなかった場合は、NULL が格納されます。|  
 |**error_type**|**int**|返されるエラーを表す整数が格納されます。 error_type_desc にマップされます。 解説の下の一覧を参照してください。|  
-|**error_type_desc**|**nvarchar (60)**|返されるエラーを表す短い大文字の文字列が格納されます。 error_type にマップされます。 解説の下の一覧を参照してください。|  
+|**error_type_desc**|**nvarchar(60)**|返されるエラーを表す短い大文字の文字列が格納されます。 error_type にマップされます。 解説の下の一覧を参照してください。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この関数は、**sp_describe_first_result_set** と同じアルゴリズムを使用します。 詳細については、[sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) を参照してください。  
   
  次の表に、エラーの種類とその説明を示します。  
   
-|error_type|error_type|[説明]|  
+|error_type|error_type|説明|  
 |-----------------|-----------------|-----------------|  
-|1 で保護されたプロセスとして起動されました|MISC|他の項目に記載されていないすべてのエラー。|  
-|2|構文|バッチ内で構文エラーが発生しました。|  
+|1|MISC|他の項目に記載されていないすべてのエラー。|  
+|2|SYNTAX|バッチ内で構文エラーが発生しました。|  
 |3|CONFLICTING_RESULTS|2 つの有効な最初のステートメント間に競合があるため、結果を特定できませんでした。|  
 |4|DYNAMIC_SQL|動的 SQL が最初の結果を返す可能性があるため、結果を特定できませんでした。|  
 |5|CLR_PROCEDURE|CLR ストアド プロシージャが最初の結果を返す可能性があるため、結果を特定できませんでした。|  
@@ -125,7 +125,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 ## <a name="permissions"></a>アクセス許可  
  \@Tsql 引数を実行する権限が必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  トピックのその他の例については[sp_describe_first_result_set 「transact-sql&#41;&#40;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)使用して、 **dm_exec_describe_first_result_set**を使用するように調整することもできます。  
   
 ### <a name="a-returning-information-about-a-single-transact-sql-statement"></a>A. 1つの Transact-sql ステートメントに関する情報を返す  

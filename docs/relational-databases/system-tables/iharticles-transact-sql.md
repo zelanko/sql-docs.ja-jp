@@ -18,10 +18,10 @@ ms.assetid: 773ef9b7-c993-4629-9516-70c47b9dcf65
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 45278a6d9501b75b624e11bbeb11d24d10e482c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68056213"
 ---
 # <a name="iharticles-transact-sql"></a>IHarticles (Transact-sql)
@@ -31,7 +31,7 @@ ms.locfileid: "68056213"
   
 ## <a name="definition"></a>定義  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**article_id**|**int**|アーティクルの一意な ID 番号を示す ID 列です。|  
 |**name**|**sysname**|アーティクルに関連付けられた名前です。パブリケーション内で一意です。|  
@@ -40,11 +40,11 @@ ms.locfileid: "68056213"
 |**publisher_id**|**smallint**|SQL&#xA0;Server 以外のパブリッシャーの ID です。|  
 |**creation_script**|**nvarchar(255)**|アーティクルのスキーマスクリプトです。|  
 |**del_cmd**|**nvarchar(255)**|テーブル アーティクルの削除をレプリケートするときに使用されるレプリケーション コマンドの種類です。 詳細については、「[トランザクション アーティクルに変更を反映する方法の指定](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)」を参照してください。|  
-|**フィルター**|**int**|この列は使用されず、SQL Server アーティクル ([sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)) に使用される[Sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) view と**IHarticles**テーブルの[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)ビューとの互換性を確保するためだけに含まれています。|  
+|**filter**|**int**|この列は使用されず、SQL Server アーティクル ([sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)) に使用される[Sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) view と**IHarticles**テーブルの[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)ビューとの互換性を確保するためだけに含まれています。|  
 |**filter_clause**|**ntext**|アーティクルの WHERE 句は、行方向のフィルター選択に使用され、SQL 以外のパブリッシャーによって解釈できる標準の Transact-sql で記述されます。|  
 |**ins_cmd**|**nvarchar(255)**|Insert をテーブルアーティクルと共にレプリケートするときに使用されるレプリケーションコマンドの種類です。 詳細については、「[トランザクション アーティクルに変更を反映する方法の指定](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)」を参照してください。|  
 |**pre_creation_cmd**|**tinyint**|同じ名前のオブジェクトがサブスクライバーに既に存在する場合に、初期スナップショットが適用される前に実行するコマンドです。<br /><br /> **0** = なし-コマンドは実行されません。<br /><br /> **1** = ドロップダウンテーブルを削除します。<br /><br /> **2** = 削除-変換先テーブルからデータを削除します。<br /><br /> **3** = 切り捨て-変換先テーブルを切り捨てます。|  
-|**オンライン**|**tinyint**|アーティクルのオプションと状態のビットマスク。これらの値の1つ以上のビットごとの論理和演算を実行できます。<br /><br /> **0** = 追加のプロパティはありません。<br /><br /> **1** = アクティブ。<br /><br /> **8** = INSERT ステートメントに列名を含めます。<br /><br /> **16** = パラメーター化されたステートメントを使用します。<br /><br /> たとえば、パラメーター化されたステートメントを使用するアクティブなアーティクルの場合、この列の値は17になります。 値0は、アーティクルが非アクティブであり、追加のプロパティが定義されていないことを示します。|  
+|**status**|**tinyint**|アーティクルのオプションと状態のビットマスク。これらの値の1つ以上のビットごとの論理和演算を実行できます。<br /><br /> **0** = 追加のプロパティはありません。<br /><br /> **1** = アクティブ。<br /><br /> **8** = INSERT ステートメントに列名を含めます。<br /><br /> **16** = パラメーター化されたステートメントを使用します。<br /><br /> たとえば、パラメーター化されたステートメントを使用するアクティブなアーティクルの場合、この列の値は17になります。 値0は、アーティクルが非アクティブであり、追加のプロパティが定義されていないことを示します。|  
 |**type**|**tinyint**|アーティクルのタイプです。<br /><br /> **1** = ログベースのアーティクル。|  
 |**upd_cmd**|**nvarchar(255)**|テーブルアーティクルで更新をレプリケートするときに使用されるレプリケーションコマンドの種類です。 詳細については、「[トランザクション アーティクルに変更を反映する方法の指定](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)」を参照してください。|  
 |**schema_option**|**binary (8)**|指定されたアーティクルに対するスキーマ生成オプションのビットマップです。次に示す 1 つ以上の値のビットごとの論理和演算をとります。<br /><br /> **0x00** = スナップショットエージェントによるスクリプト作成を無効にし、提供されたスクリプトを使用します。<br /><br /> **0x01** = オブジェクトの作成 (CREATE TABLE、CREATE PROCEDURE など) を生成します。<br /><br /> **0x10** = 対応するクラスター化インデックスを生成します。<br /><br /> **0x40** = 対応する非クラスター化インデックスを生成します。<br /><br /> **0x80** = 宣言された参照整合性を主キーに含めます。<br /><br /> **0x1000** = 列レベルの照合順序をレプリケートします。 注: このオプションは、大文字と小文字を区別する比較を有効にするために、Oracle パブリッシャーに対して既定で設定されます。<br /><br /> **0x4000** = テーブルアーティクルで定義されている場合は、一意キーをレプリケートします。<br /><br /> **0x8000** = ALTER table ステートメントを使用して、テーブルアーティクル上の主キーと一意キーを制約としてレプリケートします。|  
@@ -70,6 +70,6 @@ ms.locfileid: "68056213"
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addarticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [sp_changearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)  
+ [sp_changearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)  
   
   

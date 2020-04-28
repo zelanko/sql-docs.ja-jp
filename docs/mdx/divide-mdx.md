@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 6184aa9d932355cd935a9131848ec27895faea5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68049298"
 ---
 # <a name="divide-mdx"></a>除算 (MDX)
@@ -28,19 +28,19 @@ Divide (<numerator>, <denominator> [,<alternateresult>])
 ```  
   
 ## <a name="arguments"></a>引数  
- *numerator*  
- 除算する被除数または数値。  
+ *分子*  
+ 被除数 (割られる数)。  
   
- *denominator*  
- 除算する除数または数値。  
+ *分母*  
+ 除数 (割る数)。  
   
  *alternateresult*  
- (省略可能) 0 による除算でエラーが発生したときに返される値です。 指定しない場合、既定値は空白 () になります。  
+ (省略可能) 0 による除算でエラーが発生したときに返される値です。 指定しない場合、既定値は BLANK() です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  0 による除算の別の結果は定数である必要があります。  
   
 ## <a name="see-also"></a>参照  
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

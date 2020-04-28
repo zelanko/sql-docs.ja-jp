@@ -16,10 +16,10 @@ ms.assetid: 249a4048-e885-48e0-a92a-6577f59de751
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 27c10f9d5fa04ae449bdcca84891f0f28376eeb6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68075699"
 ---
 # <a name="sp_reinitmergesubscription-transact-sql"></a>sp_reinitmergesubscription (Transact-sql)
@@ -51,7 +51,7 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_reinitmergesubscription**は、マージレプリケーションで使用します。  
   
  **sp_reinitmergesubscription**は、マージサブスクリプションを再初期化するためにパブリッシャーから呼び出すことができます。 スナップショットエージェントも再実行することをお勧めします。  
@@ -69,6 +69,6 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>参照  
  [サブスクリプションの再初期化](../../relational-databases/replication/reinitialize-subscriptions.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -12,10 +12,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 18798dece1c801ad0cc4854b7fccc15529a56d5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68056452"
 ---
 # <a name="sp_pdw_log_user_data_masking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking (SQL Data Warehouse)
@@ -49,7 +49,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
   
  パラメーターを指定せずに**sp_pdw_ log_user_data_masking**を実行すると、アプライアンス上の tde ログユーザーデータマスクの現在の状態がスカラー結果セットとして返されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ユーザーデータのマスキング[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]アクティビティログでは、ユーザーデータを含めることができる**SELECT**ステートメントと DML ステートメントで、定義済みの定数値を持つリテラルを置換できます。 *Masking_mode*を1に設定しても、列名やテーブル名などのメタデータはマスクされません。 *Masking_mode*を2に設定すると、列名やテーブル名などのメタデータを含むステートメントが削除されます。  
   
  アクティビティログでの[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]ユーザーデータのマスキングは、次のように実装されます。  
@@ -60,7 +60,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
   
 -   TDE を無効にしても、アクティビティ[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]ログでのユーザーデータのマスキングには影響しません。  
   
--   Sp_pdw_log_user_data_masking の手順を使用して、 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]アクティビティログでユーザーデータ**** のマスキングを明示的に有効にすることができます。  
+-   Sp_pdw_log_user_data_masking の手順を使用して、 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]アクティビティログでユーザーデータ**sp_pdw_log_user_data_masking**のマスキングを明示的に有効にすることができます。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sysadmin**固定データベースロールまたは**CONTROL SERVER**権限のメンバーシップが必要です。  

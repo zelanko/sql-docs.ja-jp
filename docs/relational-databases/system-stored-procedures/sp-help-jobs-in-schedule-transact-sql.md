@@ -18,10 +18,10 @@ ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1713974a8ba90474393ff9bb65f6b98a5c74b601
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68054899"
 ---
 # <a name="sp_help_jobs_in_schedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-sql)
@@ -51,17 +51,17 @@ sp_help_jobs_in_schedule
 ## <a name="result-sets"></a>結果セット  
  次の結果セットを返します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**job_id**|**UNIQUEIDENTIFIER**|ジョブの一意の ID。|  
-|**originating_server**|**nvarchar (30)**|ジョブの送信元のサーバーの名前。|  
+|**job_id**|**uniqueidentifier**|ジョブの一意の ID。|  
+|**originating_server**|**nvarchar(30)**|ジョブの送信元のサーバーの名前。|  
 |**name**|**sysname**|ジョブの名前。|  
 |**enabled**|**tinyint**|ジョブの実行が有効かどうかを示します。|  
 |**記述**|**nvarchar(512)**|ジョブの説明。|  
 |**start_step_id**|**int**|実行を開始するジョブのステップの ID。|  
-|**別**|**sysname**|ジョブ カテゴリ。|  
+|**category**|**sysname**|ジョブ カテゴリ。|  
 |**責任**|**sysname**|ジョブ所有者。|  
-|**notify_level_eventlog**|**int**|どのような場合に、通知イベントを Microsoft Windows アプリケーションログに記録するかを示すビットマスク。 次のいずれかの値を指定できます。<br /><br /> **0** = なし<br /><br /> **1** = ジョブが成功した場合<br /><br /> **2** = ジョブが失敗したとき<br /><br /> **3** = ジョブが完了するたびに (ジョブの結果に関係なく)|  
+|**notify_level_eventlog**|**int**|どのような場合に、通知イベントを Microsoft Windows アプリケーションログに記録するかを示すビットマスク。 次のいずれかの値を指定します。<br /><br /> **0** = なし<br /><br /> **1** = ジョブが成功した場合<br /><br /> **2** = ジョブが失敗したとき<br /><br /> **3** = ジョブが完了するたびに (ジョブの結果に関係なく)|  
 |**notify_level_email**|**int**|どのような場合に、ジョブの完了時に通知電子メールを送信するのかを示すビットマスク。 指定できる値は、 **notify_level_eventlog**の場合と同じです。|  
 |**notify_level_netsend**|**int**|どのような場合に、ジョブの完了時にネットワーク メッセージを送信するのかを示すビットマスク。 指定できる値は、 **notify_level_eventlog**の場合と同じです。|  
 |**notify_level_page**|**int**|どのような場合に、ジョブの完了時にページを送信するのかを示すビットマスク。 指定できる値は、 **notify_level_eventlog**の場合と同じです。|  
@@ -69,8 +69,8 @@ sp_help_jobs_in_schedule
 |**notify_netsend_operator**|**sysname**|ネットワークメッセージを送信するときに使用するコンピューターまたはユーザーの名前。|  
 |**notify_page_operator**|**sysname**|ページを送信するときに使用するコンピューターまたはユーザーの名前。|  
 |**delete_level**|**int**|どのような場合に、ジョブの完了時にジョブを削除するかを示すビットマスク。 指定できる値は、 **notify_level_eventlog**の場合と同じです。|  
-|**date_created**|**DATETIME**|ジョブが作成された日付。|  
-|**date_modified**|**DATETIME**|ジョブが最後に変更された日付。|  
+|**date_created**|**datetime**|ジョブが作成された日付。|  
+|**date_modified**|**datetime**|ジョブが最後に変更された日付。|  
 |**version_number**|**int**|ジョブのバージョン (ジョブを変更するたびに自動的に更新されます)。|  
 |**last_run_date**|**int**|ジョブの実行を最後に開始した日付。|  
 |**last_run_time**|**int**|ジョブの実行を最後に開始した時刻。|  
@@ -86,7 +86,7 @@ sp_help_jobs_in_schedule
 |**has_target**|**int**|ジョブのターゲット サーバー数。|  
 |**type**|**int**|ジョブの種類:<br /><br /> **1** = ローカルジョブ。<br /><br /> **2** = マルチサーバージョブ。<br /><br /> **0** = ジョブに対象サーバーがありません。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この手順では、指定したスケジュールに関連付けられているジョブに関する情報を一覧表示します。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -102,7 +102,7 @@ sp_help_jobs_in_schedule
   
  **SQLAgentUserRole**のメンバーは、自分が所有しているジョブの状態のみを表示できます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、`NightlyJobs` スケジュールにアタッチされたジョブを一覧表示します。  
   
 ```  

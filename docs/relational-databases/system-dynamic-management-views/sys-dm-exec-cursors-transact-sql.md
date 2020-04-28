@@ -19,10 +19,10 @@ ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1ebffa740abe55a176c8577f754cf1a18db65022
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68097837"
 ---
 # <a name="sysdm_exec_cursors-transact-sql"></a>dm_exec_cursors (Transact-sql)
@@ -45,17 +45,17 @@ dm_exec_cursors (session_id | 0 )
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|このカーソルを保持するセッションの ID。|  
 |**cursor_id**|**int**|カーソルオブジェクトの ID。|  
 |**name**|**nvarchar(256)**|ユーザーによって定義されたカーソルの名前。|  
-|**属性**|**nvarchar(256)**|カーソルのプロパティ。 次のプロパティの値が連結され、この列の値が形成されます。<br />宣言インターフェイス<br />カーソルの種類 <br />カーソルの同時実行<br />カーソルのスコープ<br />カーソルの入れ子レベル<br /><br /> たとえば、この列で返される値は、"TSQL &#124; Dynamic &#124; オプティミスティック &#124; Global (0)" のようになります。|  
-|**sql_handle**|**varbinary (64)**|カーソルを宣言したバッチのテキストを処理します。|  
+|**properties**|**nvarchar(256)**|カーソルのプロパティ。 次のプロパティの値が連結され、この列の値が形成されます。<br />宣言インターフェイス<br />カーソルの種類 <br />カーソルの同時実行<br />カーソルのスコープ<br />カーソルの入れ子レベル<br /><br /> たとえば、この列で返される値は、"TSQL &#124; Dynamic &#124; オプティミスティック &#124; Global (0)" のようになります。|  
+|**sql_handle**|**varbinary(64)**|カーソルを宣言したバッチのテキストを処理します。|  
 |**statement_start_offset**|**int**|現在実行中のバッチまたはストアド プロシージャに含まれる、現在実行中のステートメントが開始されるまでの文字数。 **Sql_handle**、 **statement_end_offset**、および[dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)の動的管理関数と共に使用して、要求に対して現在実行中のステートメントを取得できます。|  
 |**statement_end_offset**|**int**|現在実行中のバッチまたはストアドプロシージャ内で現在実行中のステートメントが終了するまでの文字数。 **Sql_handle**、 **statement_start_offset**、および**dm_exec_sql_text**の動的管理関数と共に使用して、要求に対して現在実行中のステートメントを取得できます。|  
 |**plan_generation_num**|**bigint**|再コンパイル後にプランのインスタンスを区別するために使用できるシーケンス番号。|  
-|**creation_time**|**DATETIME**|カーソルが作成されたタイムスタンプ。|  
+|**creation_time**|**datetime**|カーソルが作成されたタイムスタンプ。|  
 |**is_open**|**bit**|カーソルが開いているかどうかを示します。|  
 |**is_async_population**|**bit**|バックグラウンドスレッドがキーセットまたは静的カーソルに非同期的に設定するかどうかを指定します。|  
 |**is_close_on_commit**|**bit**|カーソルが CURSOR_CLOSE_ON_COMMIT を使用して宣言されたかどうかを指定します。<br /><br /> 1 = カーソルはトランザクションが終了したときに閉じられます。|  
@@ -71,7 +71,7 @@ dm_exec_cursors (session_id | 0 )
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  次の表では、cursor 宣言インターフェイスについて説明し、properties 列に使用できる値を示します。  
   
 |プロパティ|[説明]|  
@@ -81,7 +81,7 @@ dm_exec_cursors (session_id | 0 )
   
  次の表は、カーソルの種類に関する説明と、プロパティ列に返される値です。  
   
-|種類|[説明]|  
+|Type|説明|  
 |----------|-----------------|  
 |Keyset|カーソルはキーセットとして宣言されています。|  
 |動的|カーソルは動的として宣言されました。|  
@@ -90,15 +90,15 @@ dm_exec_cursors (session_id | 0 )
   
  次の表は、カーソルのコンカレンシーに関する説明と、プロパティ列に返される値です。  
   
-|コンカレンシー|[説明]|  
+|コンカレンシー|説明|  
 |-----------------|-----------------|  
-|読み取り専用|カーソルは読み取り専用として宣言されました。|  
+|[読み取り専用]|カーソルは読み取り専用として宣言されました。|  
 |Scroll Locks|カーソルはスクロールロックを使用します。|  
 |Optimistic|カーソルはオプティミスティック同時実行制御を使用します。|  
   
  次の表に、カーソルのスコープについて説明し、[プロパティ] 列に使用できる値を示します。  
   
-|スコープ|[説明]|  
+|Scope|説明|  
 |-----------|-----------------|  
 |ローカル|カーソルのスコープは、カーソルが作成されたバッチ、ストアド プロシージャ、またはトリガーに対してローカルです。|  
 |グローバル|カーソルのスコープは、接続に対してグローバルです。|  
@@ -117,9 +117,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [実行関連の動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [dm_exec_sessions &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)  
+ [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)  
   
   
 

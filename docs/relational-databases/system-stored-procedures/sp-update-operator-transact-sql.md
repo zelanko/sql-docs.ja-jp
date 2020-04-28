@@ -18,10 +18,10 @@ ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2a766ad74f42336612859c63cf42df654846ff96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084839"
 ---
 # <a name="sp_update_operator-transact-sql"></a>sp_update_operator (Transact-SQL)
@@ -89,7 +89,7 @@ sp_update_operator
  [ @pager_days=]*pager_days*  
  オペレーターがページの受信に使用できる曜日を指定します (指定した開始/終了時刻に従います)。 *pager_days*は**tinyint**,、既定値は NULL の場合、 **0** ~ **127**の値である必要があります。 *pager_days*は、必要な日数の個々の値を加算することによって計算されます。 たとえば、月曜日から金曜日の場合は、 **2**+**4**+**8**+**16**+**32** = **64**になります。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|土曜日|  
 |**2**|月曜日|  
@@ -108,13 +108,13 @@ sp_update_operator
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  sp_update_operator は、msdb データベースから実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャの実行権限は、既定では sysadmin 固定サーバー ロールのメンバーに与えられています。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、無効であったオペレーターの状態を有効に更新し、ポケットベルを受信できる曜日 (月曜～金曜日、 午前 8 時～午後 5 時) を設定します。  
   
 ```  
@@ -136,6 +136,6 @@ GO
  [sp_add_operator &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [sp_delete_operator &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
  [sp_help_operator &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

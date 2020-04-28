@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4332159765791addfdfcc32a9d19d29836f2460c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053545"
 ---
 # <a name="syssyscharsets-transact-sql"></a>sys.syscharsets (Transact-SQL)
@@ -33,19 +33,19 @@ ms.locfileid: "68053545"
 
   で使用するために定義された文字セットと並べ替え順序ごと[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]に1行の値を格納します。 並べ替え順序の1つは、 **sysconfigures**で既定の並べ替え順序としてマークされています。 実際はこの並べ替え順だけが使用されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**type**|**smallint**|この行で表されるエンティティの種類。<br /><br /> 1001 = 文字セット。<br /><br /> 2001 = 並べ替え順|  
-|**番号**|**tinyint**|文字セットまたは並べ替え順を表す一意な ID。 注並べ替え順序と文字セットで同じ ID 番号を共有することはできません。 1 ～ 240 の ID は、[!INCLUDE[ssDE](../../includes/ssde-md.md)]が使用するために予約されています。|  
+|**id**|**tinyint**|文字セットまたは並べ替え順を表す一意な ID。 注並べ替え順序と文字セットで同じ ID 番号を共有することはできません。 1 ～ 240 の ID は、[!INCLUDE[ssDE](../../includes/ssde-md.md)]が使用するために予約されています。|  
 |**csid**|**tinyint**|文字セットを表す行の場合、このフィールドは使用されません。 並べ替え順を表す行の場合は、その並べ替え順が適用される文字セットの ID になります。 このテーブルには、この ID を持つ文字セットの行が存在すると見なされます。|  
-|**オンライン**|**smallint**|内部システム状態の情報ビット。|  
+|**status**|**smallint**|内部システム状態の情報ビット。|  
 |**name**|**sysname**|文字セットまたは並べ替え順序の一意の名前。 このフィールドには、A ~ Z または a ~ z の文字、数字 0-9、およびアンダースコア (_) のみを含める必要があります。また、先頭にはアルファベットを使用する必要があります。|  
 |**記述**|**nvarchar(255)**|文字セットまたは並べ替え順序の機能について説明します (省略可能)。|  
 |**binarydefinition**|**varbinary (6000)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**カスタム**|**絵**|文字セットまたは並べ替え順序の内部定義。 このフィールド内のデータの構造は、型によって異なります。|  
+|**カスタム**|**image**|文字セットまたは並べ替え順序の内部定義。 このフィールド内のデータの構造は、型によって異なります。|  
   
 ## <a name="see-also"></a>参照  
  [システムビューへのシステムテーブルのマッピング &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [互換性ビュー &#40;Transact-sql&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [互換性ビュー &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

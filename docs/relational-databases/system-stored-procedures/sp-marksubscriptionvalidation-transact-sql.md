@@ -16,10 +16,10 @@ ms.assetid: e68fe0b9-5993-4880-917a-b0f661f8459b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bb8c38d24fbf6c96c61a7b2e83874d15218797c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68092673"
 ---
 # <a name="sp_marksubscriptionvalidation-transact-sql"></a>sp_marksubscriptionvalidation (Transact-SQL)
@@ -54,7 +54,7 @@ sp_marksubscriptionvalidation [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_marksubscriptionvalidation**は、トランザクションレプリケーションで使用します。  
   
  **sp_marksubscriptionvalidation**は、以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーをサポートしていません。  

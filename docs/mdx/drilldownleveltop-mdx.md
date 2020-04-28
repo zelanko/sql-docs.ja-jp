@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 461c91d7261b42b5828e2c515a89e8203f40e357
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68049267"
 ---
 # <a name="drilldownleveltop-mdx"></a>DrilldownLevelTop (MDX)
@@ -32,7 +32,7 @@ DrilldownLevelTop(<Set_Expression>, <Count> [,[<Level_Expression>] [,[<Numeric_E
  *Set_Expression*  
  セットを返す有効な多次元式 (MDX) 式です。  
   
- *数*  
+ *Count*  
  返す組の数を指定する有効な数値式です。  
   
  *Level_Expression*  
@@ -44,7 +44,7 @@ DrilldownLevelTop(<Set_Expression>, <Count> [,[<Level_Expression>] [,[<Numeric_E
  *Include_Calc_Members*  
  ドリルダウン結果に計算されるメンバーを追加するためのキーワードです。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  数値式が指定されている場合、 **DrilldownLevelTop**関数は、指定されたセット内の各メンバーの子を、子メンバーのセットに対して評価される数値式の値に基づいて降順で並べ替えます。 数値式が指定されていない場合、指定されたセット内の各メンバーの子を、クエリ コンテキストから判別した子メンバーのセットが表すセルの値に基づいて、降順で並べ替えます。  
   
  並べ替えの後、 **DrilldownLevelTop**関数は、親メンバーと、 *Count*で指定した子メンバーの数のうち、最大値を含むセットを返します。  
@@ -53,7 +53,7 @@ DrilldownLevelTop(<Set_Expression>, <Count> [,[<Level_Expression>] [,[<Numeric_E
   
  XMLA プロパティ MdpropMdxDrillFunctions に対してクエリを実行すると、ドリル機能に対してサーバーが提供するサポートのレベルを確認できます。詳細については、「[サポートされる Xmla プロパティ &#40;xmla&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 」を参照してください。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、既定のメジャーに基づいて、製品カテゴリレベルの上位3つの子が返されます。 Adventure Works のサンプルキューブでは、アクセサリの上位3つの子が自転車ラック、自転車のスタンド、瓶とケージです。 Management Studio では、[MDX クエリ] ウィンドウで [製品] に移動します。製品カテゴリ |Members |すべての製品 |[アクセサリ] を参照して、完全な一覧を表示します。 Count 引数を増やすと、さらに多くのメンバーを返すことができます。  
   
 ```  
@@ -84,6 +84,6 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>参照  
  [MDX&#41;&#40;ドリルダウンレベル](../mdx/drilldownlevel-mdx.md)   
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

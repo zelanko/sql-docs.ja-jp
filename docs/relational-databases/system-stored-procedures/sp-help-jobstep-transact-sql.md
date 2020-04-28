@@ -18,10 +18,10 @@ ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c65498b25bfbe0a5eee38a43ea212e29edc26295
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090052"
 ---
 # <a name="sp_help_jobstep-transact-sql"></a>sp_help_jobstep (Transact-sql)
@@ -60,23 +60,21 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**step_id**|**int**|ステップの一意識別子。|  
 |**step_name**|**sysname**|ジョブのステップの名前。|  
-|**サブ**|**nvarchar (40)**|ステップ コマンドを実行するサブシステム。|  
+|**サブ**|**nvarchar(40)**|ステップ コマンドを実行するサブシステム。|  
 |**メニュー**|**nvarchar(max)**|コマンドを実行します。|  
-|**示す**|**int**|ステップの動作を制御する値のビットマスク。|  
+|**flags**|**int**|ステップの動作を制御する値のビットマスク。|  
 |**cmdexec_success_code**|**int**|**CmdExec**ステップの場合、これは成功したコマンドのプロセス終了コードです。|  
 |**on_success_action**|**tinyint**|ステップが成功した場合に実行するアクション:<br /><br /> **1** = 成功を報告するジョブを終了します。<br /><br /> **2** = エラーを報告するジョブを終了します。<br /><br /> **3** = 次の手順に進みます。<br /><br /> **4** = ステップに進みます。|  
 |**on_success_step_id**|**int**|**On_success_action**が4の場合は、次に実行する手順を示します。|  
 |**on_fail_action**|**tinyint**|ステップが失敗した場合の対処方法。 値は**on_success_action**と同じです。|  
 |**on_fail_step_id**|**int**|**On_fail_action**が4の場合は、次に実行する手順を示します。|  
 |**server**|**sysname**|予約済み。|  
-|**database_name**|**sysname**|
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] ステップの場合は、コマンドを実行するデータベース。|  
-|**database_user_name**|**sysname**|
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] ステップの場合は、コマンドを実行するデータベース ユーザー コンテキスト。|  
+|**database_name**|**sysname**|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステップの場合は、コマンドを実行するデータベース。|  
+|**database_user_name**|**sysname**|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステップの場合は、コマンドを実行するデータベース ユーザー コンテキスト。|  
 |**retry_attempts**|**int**|正常に実行できない場合にコマンドを再試行する最大回数。|  
 |**retry_interval**|**int**|再試行の間隔 (分)。|  
 |**os_run_priority**|**int**|予約済み。|  
@@ -88,7 +86,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**last_run_time**|**int**|ステップの実行を最後に開始した時刻。|  
 |**proxy_id**|**int**|ジョブステップのプロキシ。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_help_jobstep**は**msdb**データベースにあります。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -136,6 +134,6 @@ GO
  [sp_delete_jobstep &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
  [sp_help_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
  [sp_update_jobstep &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

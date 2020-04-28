@@ -13,10 +13,10 @@ ms.assetid: a4372d0b-50ca-4e58-80f6-2ed3cb52a84a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7d6d87ee8b2aa05c3156acb2db9c6604380db887
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68082683"
 ---
 # <a name="change-data-capture-tables-transact-sql"></a>変更データキャプチャテーブル (Transact-sql)
@@ -48,6 +48,6 @@ ms.locfileid: "68082683"
   
 ## <a name="see-also"></a>参照  
  [変更データキャプチャのストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
- [変更データキャプチャ関数 &#40;Transact-sql&#41;](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)  
+ [変更データ キャプチャの関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)  
   
   

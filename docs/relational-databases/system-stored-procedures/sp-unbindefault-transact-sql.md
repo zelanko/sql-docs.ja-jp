@@ -18,10 +18,10 @@ ms.assetid: c96a6c5e-f3ca-4c1e-b64b-0d8ef6986af8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7616401e8dcc9461d5eb3c7d67aedccf3a8c7af9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68095880"
 ---
 # <a name="sp_unbindefault-transact-sql"></a>sp_unbindefault (Transact-sql)
@@ -43,8 +43,7 @@ sp_unbindefault [ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @objname = ] 'object_name'`既定値のバインドを解除するテーブルと列、または別名データ型の名前を指定します。 *object_name*は**nvarchar (776)**,、既定値はありません。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、最初に列名に対して、次に別名データ型に対して、2 つの要素で構成される識別子の解決が試行されます。  
+`[ @objname = ] 'object_name'`既定値のバインドを解除するテーブルと列、または別名データ型の名前を指定します。 *object_name*は**nvarchar (776)**,、既定値はありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、最初に列名に対して、次に別名データ型に対して、2 つの要素で構成される識別子の解決が試行されます。  
   
  別名データ型から既定値をバインド解除すると、同じ既定値を持つそのデータ型の列もバインド解除されます。 ただし、同じデータ型でも、デフォルトが直接バインドされている列は影響を受けません。  
   
@@ -56,7 +55,7 @@ sp_unbindefault [ @objname = ] 'object_name'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  既定のテキストを表示するには、パラメーターとして既定の名前を使用して**sp_helptext**を実行します。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -103,10 +102,10 @@ EXEC sp_unbindefault '[t.3].c1';
 ## <a name="see-also"></a>参照  
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [CREATE DEFAULT &#40;Transact-sql&#41;](../../t-sql/statements/create-default-transact-sql.md)   
+ [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
  [DROP DEFAULT &#40;Transact-sql&#41;](../../t-sql/statements/drop-default-transact-sql.md)   
  [sp_bindefault &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
- [sp_helptext &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

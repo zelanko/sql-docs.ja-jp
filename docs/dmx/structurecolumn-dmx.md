@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7b6b436527aa36fb8f048a3b3c8fc55b970ef284
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68065395"
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (DMX)
@@ -36,7 +36,7 @@ StructureColumn('structure column name')
   
  参照されるマイニング構造列が入れ子になったテーブルの場合、関数はテーブル値を返します。 返されるテーブル値は、サブ SELECT ステートメントの FROM 句で使用できます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この関数はポリモーフィックであり、SELECT 式リスト、WHERE 条件式、および ORDER BY 式など、式を使用できるステートメント内の任意の場所で使用できます。  
   
  マイニング構造内の列の名前は文字列値であるため、単一引用符で囲む必要があります (たとえば、 `StructureColumn('`**列 1**`')`)。 同じ名前を持つ列が複数ある場合、名前は SELECT ステートメントが含まれるコンテキスト内で解決されます。  
@@ -54,9 +54,8 @@ StructureColumn('structure column name')
   
  '% {Structure/column-name/} ' マイニング構造列が、現在のコンテキスト (行% {line/}、列% {column/}) の '% {structure/} ' 親マイニング構造に見つかりませんでした。  
   
-## <a name="examples"></a>例  
- これらの例では、次のマイニング構造を使用します。 マイニング構造には、 `Products`とと`Hobbies`いう2つの入れ子になったテーブル列が含まれることに注意してください。 
-  `Hobbies` 列の入れ子になったテーブルには、入れ子になったテーブルのキーとして使用される単一列があります。 `Products`列の入れ子になったテーブルは、キー列と入力に使用されるその他の列の両方を含む、複雑な入れ子になったテーブルです。 次の例は、モデルですべての列を使用しない場合でも、さまざまな列を含めるようにデータマイニング構造を設計する方法を示しています。 これらの列の一部は、モデル レベルでパターンの汎用化に役立たない可能性がありますが、ドリルスルーには非常に有効です。  
+## <a name="examples"></a>使用例  
+ これらの例では、次のマイニング構造を使用します。 マイニング構造には、 `Products`とと`Hobbies`いう2つの入れ子になったテーブル列が含まれることに注意してください。 `Hobbies` 列の入れ子になったテーブルには、入れ子になったテーブルのキーとして使用される単一列があります。 `Products`列の入れ子になったテーブルは、キー列と入力に使用されるその他の列の両方を含む、複雑な入れ子になったテーブルです。 次の例は、モデルですべての列を使用しない場合でも、さまざまな列を含めるようにデータマイニング構造を設計する方法を示しています。 これらの列の一部は、モデル レベルでパターンの汎用化に役立たない可能性がありますが、ドリルスルーには非常に有効です。  
   
 ```  
 CREATE MINING STRUCTURE [MyStructure]   

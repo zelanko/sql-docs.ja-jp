@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c1c75a6ff18b26bee65365acbc068de87678a9c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070762"
 ---
 # <a name="delete-dmx"></a>削除 (DMX)
@@ -32,10 +32,10 @@ DELETE FROM [MINING STRUCTURE] <structure>[.CONTENT]|[.CASES]
  *model*  
  モデル識別子。  
   
- *データ*  
+ *structure*  
  構造体識別子。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **マイニングモデル**または**マイニング構造**を指定しない場合[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 、は名前に基づいてオブジェクトの種類を検索し、正しいオブジェクトを処理します。 サーバーに同じ名前のマイニング構造とマイニングモデルが含まれている場合は、エラーが返されます。  
   
  次の表は、異なる形式の構文を使用した場合の結果について示しています。  
@@ -48,7 +48,7 @@ DELETE FROM [MINING STRUCTURE] <structure>[.CONTENT]|[.CASES]
   
  処理の種類の詳細については、「 [Type 要素 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla)」を参照してください。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、NB_Sample モデルからすべてのコンテンツを削除します。  
   
 ```  
@@ -58,6 +58,6 @@ DELETE FROM NB_Sample.CONTENT
 ## <a name="see-also"></a>参照  
  [DMX&#41; データ定義ステートメント &#40;のデータマイニング拡張機能](../dmx/dmx-statements-data-definition.md)   
  [DMX&#41; データ操作ステートメントを &#40;データマイニング拡張機能](../dmx/dmx-statements-data-manipulation.md)   
- [DMX&#41; ステートメントリファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-statements.md)  
+ [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 904a694d73613bb1c40c671b18ca33e5d9b5d0e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68085285"
 ---
 # <a name="sp_help_proxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
@@ -51,18 +51,18 @@ sp_help_proxy
   
  次の表に、各サブシステムの値を示します。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |ActiveScripting| ActiveX スクリプト|  
 |CmdExec|オペレーティング システム (CmdExec)|  
 |スナップショット|レプリケーション スナップショット エージェント|  
 |LogReader|レプリケーション ログ リーダー エージェント|  
 |Distribution|レプリケーションディストリビューションエージェント|  
-|Merge|レプリケーション マージ エージェント|  
+|Merge|Replication Merge Agent|  
 |QueueReader|Replication Queue Reader Agent|  
 |ANALYSISQUERY|Analysis Services コマンド|  
 |ANALYSISCOMMAND|Analysis Services クエリ|  
-|Dts|SSIS パッケージの実行|  
+|Dts|SSIS パッケージ実行|  
 |PowerShell|PowerShell スクリプト|  
   
 `[ @name = ] 'name'`プロキシを一覧表示[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]するログインの名前を指定します。 名前は**nvarchar (256)**,、既定値は NULL です。 *Name*を指定する場合は、 *subsystem_name*も指定する必要があります。  
@@ -72,18 +72,18 @@ sp_help_proxy
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|プロキシの識別番号。|  
 |**name**|**sysname**|プロキシの名前。|  
 |**credential_identity**|**sysname**|プロキシに関連付けられている資格情報の Microsoft Windows ドメイン名とユーザー名。|  
 |**enabled**|**tinyint**|プロキシが有効かどうか  { **0** = 無効、 **1** = 有効}|  
-|**記述**|**nvarchar (1024)**|このプロキシの説明。|  
+|**記述**|**nvarchar(1024)**|このプロキシの説明。|  
 |**user_sid**|**varbinary (85)**|プロキシに関する Windows ユーザーの Windows セキュリティ ID|  
 |**credential_id**|**int**|このプロキシに関連付けられている資格情報の識別子。|  
 |**credential_identity_exists**|**int**|credential_identity が存在するかどうか  {0 = 存在しない、1 = 存在する}|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  パラメーターを指定しない場合、 **sp_help_proxy**インスタンス内のすべてのプロキシに関する情報が一覧表示されます。  
   
  特定のサブシステムに対してログインが使用できるプロキシを特定するには、*名前*と*subsystem_name*を指定します。 これらの引数を指定すると、 **sp_help_proxy**指定されたログインがアクセスする可能性があり、指定したサブシステムに使用できるプロキシが一覧表示されます。  

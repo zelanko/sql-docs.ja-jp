@@ -10,10 +10,10 @@ ms.assetid: 524f95ef-10bd-497c-84ca-c06a0ae794fb
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 6cb2f4196737cceec2f60684de1b7409f5e383a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68083392"
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>Sybase への接続 (SybaseToSQL)
@@ -38,7 +38,7 @@ ASE への接続に既定以外のポートを使用している場合は、ポ�
 ASE への接続に使用するユーザー名を入力します。 これは標準モードオプションです。  
   
 **パスワード**  
-入力されたユーザー名のパスワードを入力します。 これは標準モードオプションです。  
+ユーザー名に対応するパスワードを入力します。 これは標準モードオプションです。  
   
 **接続文字列**  
 ASE への接続に使用する完全な接続文字列を入力します。  
@@ -51,7 +51,7 @@ ASE への接続に使用する完全な接続文字列を入力します。
   
     |設定|Sybase 12.5 パラメーター|Sybase 15 パラメーター|  
     |-----------|-------------------------|-----------------------|  
-    |サーバー名|サーバー名|サーバー|  
+    |サーバー名|サーバー名|Server (サーバー)|  
     |Port|サーバーポートアドレス|Port|  
     |ユーザー名|User ID|User ID|  
     |Password|Password|Password|  
@@ -69,10 +69,10 @@ ASE への接続に使用する完全な接続文字列を入力します。
   
     |設定|Sybase 12.5/15 パラメーター|  
     |-----------|-----------------------------|  
-    |ドライバー名|ドライバー●どらいば○|  
-    |サーバー名|サーバー|  
-    |ユーザー名|Uid|  
-    |Password|Pwd|  
+    |ドライバ名|ドライバー|  
+    |サーバー名|Server (サーバー)|  
+    |[ユーザー名]|Uid|  
+    |パスワード|Pwd|  
     |ポート番号|Port|  
   
     Sybase ASE 12.5 または15の場合、接続文字列の例は次のようになります。  
@@ -83,9 +83,9 @@ ASE への接続に使用する完全な接続文字列を入力します。
   
     |設定|Sybase 12.5/15 パラメーター|  
     |-----------|-----------------------------|  
-    |サーバー名|サーバー|  
-    |ユーザー名|Uid|  
-    |Password|Pwd|  
+    |サーバー名|Server (サーバー)|  
+    |[ユーザー名]|Uid|  
+    |パスワード|Pwd|  
     |ポート番号|Port|  
   
     ADO.NET Provider の接続文字列の例を次に示します。  

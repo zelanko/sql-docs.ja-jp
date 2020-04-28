@@ -19,10 +19,10 @@ ms.assetid: 5576376d-6364-417a-8475-aa770e060845
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 87f471a91aad067dd1662f243cdbafd73d335979
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68099152"
 ---
 # <a name="sysdm_broker_forwarded_messages-transact-sql"></a>sys.dm_broker_forwarded_messages (Transact-SQL)
@@ -31,9 +31,9 @@ ms.locfileid: "68099152"
   の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスが転送処理中であることを Service Broker メッセージごとに1行の値を返します。  
   
 
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**conversation_id**|**UNIQUEIDENTIFIER**|このメッセージが属しているメッセージ交換の ID。 NULLABLE.|  
+|**conversation_id**|**uniqueidentifier**|このメッセージが属しているメッセージ交換の ID。 NULLABLE.|  
 |**is_initiator**|**bit**|メッセージがメッセージ交換の発信側から送信されたものかどうかを示します。  NULLABLE.<br /><br /> 0 = イニシエーターからのものではない<br /><br /> 1 = 発信側から|  
 |**to_service_name**|**nvarchar(512)**|このメッセージが送信されるサービスの名前。 NULLABLE.|  
 |**to_broker_instance**|**nvarchar(512)**|このメッセージが送信されるサービスをホストするブローカーの識別子。 NULLABLE.|  
@@ -45,14 +45,14 @@ ms.locfileid: "68099152"
 |**hops_remaining**|**tinyint**|メッセージが最終送信先に届くまでに再転送される回数。 メッセージが転送されるたび、この数は 1 ずつ減少します。 NULLABLE.|  
 |**time_to_live**|**int**|メッセージがアクティブなままになる最長時間。 この値が 0 に達すると、メッセージは破棄されます。 NULLABLE.|  
 |**time_consumed**|**int**|メッセージが既にアクティブになっている時刻。 メッセージが転送されるたびに、メッセージの転送にかかる時間によって、この数が増加します。 NULL 値は許容されません。|  
-|**message_id**|**UNIQUEIDENTIFIER**|メッセージの ID。 NULLABLE.|  
+|**message_id**|**uniqueidentifier**|メッセージの ID。 NULLABLE.|  
   
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="see-also"></a>参照  
- [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Service Broker 関連する動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
+ [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Service Broker 関連の動的管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   
   
 

@@ -18,30 +18,29 @@ ms.assetid: d2d52cc4-3463-431a-b779-6fbfdeee1dfc
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e8cec14e22779391d954b2a666782e8783f50f3a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084746"
 ---
 # <a name="data-tier-application-tables---sysdac_instances_internal"></a>データ層アプリケーション テーブル - sysdac_instances_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  
   [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに配置されたデータ層アプリケーション (DAC) インスタンスごとに 1 行を表示します。 このテーブルは、msdb データベースの dbo スキーマに格納されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|instance_id|**UNIQUEIDENTIFIER**|DAC インスタンスの識別子。|  
+|instance_id|**uniqueidentifier**|DAC インスタンスの識別子。|  
 |instance_name|**sysname**|インスタンスの配置時に指定された DAC インスタンスの名前。|  
 |type_name|**sysname**|DAC パッケージの作成時に指定された DAC の名前。|  
 |type_version|**nvarchar (64)**|DAC パッケージの作成時に指定された DAC のバージョン。|  
-|description|**nvarchar(4000)**|DAC パッケージの作成時に指定された DAC の説明。|  
+|description|**nvarchar (4000)**|DAC パッケージの作成時に指定された DAC の説明。|  
 |type_stream|**varbinary(max)**|DAC に含まれるテーブルやビューなどの論理オブジェクトのエンコードされた表現を格納しているビットストリーム。|  
-|date_created|**DATETIME**|DAC インスタンスが作成された日付と時刻。|  
+|date_created|**datetime**|DAC インスタンスが作成された日付と時刻。|  
 |created_by|**sysname**|DAC インスタンスを作成したログイン。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  このビューへの読み取り専用アクセスは、master データベースに接続する権限を持つすべてのユーザーが使用できます。  
   
 ## <a name="permissions"></a>アクセス許可  

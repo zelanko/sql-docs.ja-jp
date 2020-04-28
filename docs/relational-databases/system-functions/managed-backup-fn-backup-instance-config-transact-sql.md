@@ -21,10 +21,10 @@ ms.assetid: 2382a547-c0c9-4e1d-87c9-d8526192eb5a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 41c689d03ebae3afe16dc51d8a47c54e923d3a82
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68067761"
 ---
 # <a name="managed_backupfn_backup_instance_config-transact-sql"></a>managed_backup。 fn_backup_instance_config (Transact-sql)
@@ -43,12 +43,12 @@ ms.locfileid: "68067761"
 managed_backup.fn_backup_db_config ()  
 ```  
   
-##  <a name="Arguments"></a>数値  
- なし  
+##  <a name="arguments"></a><a name="Arguments"></a>数値  
+ None  
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |is_smart_backup_enabled|INT|が有効に[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]なっている場合は 1 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 、が無効になっている場合は0が表示されます。|  
 |credential_name|SYSNAME|ストレージへの認証に使用される既定の SQL 資格情報。|  
@@ -63,7 +63,7 @@ managed_backup.fn_backup_db_config ()
 ### <a name="permissions"></a>アクセス許可  
  **ALTER ANY CREDENTIAL**権限を持つ**db_backupoperator**データベースロールのメンバーシップが必要です。 ユーザーは、 **VIEW ANY DEFINITION**権限を拒否することはできません。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 、実行されるインスタンスの既定の構成設定が返されます。  
   
 ```  

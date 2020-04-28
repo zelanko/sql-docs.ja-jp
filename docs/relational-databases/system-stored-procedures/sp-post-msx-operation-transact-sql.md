@@ -18,10 +18,10 @@ ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 93e9c574346ad57a6947645552616cd8db46fe85
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68056369"
 ---
 # <a name="sp_post_msx_operation-transact-sql"></a>sp_post_msx_operation (Transact-sql)
@@ -59,7 +59,7 @@ sp_post_msx_operation
   
 `[ @specific_target_server = ] 'target_server'`指定された操作を適用する対象サーバーの名前。 *Job_id*が指定されていても*target_server*が指定されていない場合、操作はジョブのすべてのジョブサーバーに対して通知されます。 *target_server*は**nvarchar (30)**,、既定値は NULL です。  
   
-`[ @value = ] value`ポーリング間隔 (秒単位)。 *値*は**int**,、既定値は NULL です。 このパラメーターは、*操作*が "**設定-ポーリング**" の場合にのみ指定します。  
+`[ @value = ] value`ポーリング間隔 (秒単位)。 *value* のデータ型は **int**で、既定値は NULL です。 このパラメーターは、*操作*が "**設定-ポーリング**" の場合にのみ指定します。  
   
 `[ @schedule_uid = ] schedule_uid`操作が適用されるスケジュールの一意の識別子。 *schedule_uid*は**uniqueidentifier**,、既定値はありません。  
   
@@ -67,9 +67,9 @@ sp_post_msx_operation
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ None  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_post_msx_operation**は、 **msdb**データベースから実行する必要があります。  
   
  **sp_post_msx_operation**は、現在のサーバーがマルチサーバー Microsoft SQL Server エージェントであるかどうかを最初に確認し、存在する場合は、*オブジェクト*がマルチサーバージョブであるかどうかを判断するため、常に安全に呼び出すことができます。  
@@ -91,6 +91,6 @@ sp_post_msx_operation
  [sp_stop_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md)   
  [sp_update_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [sp_update_operator &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

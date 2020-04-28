@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e2380f72fe8a5faf9dc5504e56941f724b1bd159
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68098397"
 ---
 # <a name="mdx-data-definition---create-kpi"></a>MDX データ操作 - CREATE KPI
@@ -41,18 +41,18 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
  *Property_Value*  
  KPI のプロパティの値を定義する有効なスカラー式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  現在接続されているキューブ以外のキューブを指定すると、エラーが発生します。 したがって、現在のキューブを示すには、キューブ名の代わりに CURRENTCUBE を使用する必要があります。  
   
 ## <a name="kpi-properties"></a>KPI のプロパティ  
  次の表に、すべての KPI プロパティを示します。 これらのプロパティには既定値がありません。 したがって、KPI のプロパティに特定の値が割り当てられるまで、そのプロパティに対してクエリを実行すると NULL 値が返されます。  
   
-|プロパティの識別子|意味|  
+|プロパティの識別子|説明|  
 |-------------------------|-------------|  
 |所得|数値を返す有効な MDX 式です。|  
 |状態|数値を返す有効な MDX 式です。|  
 |STATUS_GRAPHIC|クライアント アプリケーションが使用するグラフィック イメージのセットを定義する文字列です。|  
-|加算|数値を返す有効な MDX 式です。|  
+|傾向|数値を返す有効な MDX 式です。|  
 |TREND_GRAPHIC|クライアント アプリケーションが使用するグラフィック イメージのセットを定義する文字列です。|  
 |WEIGHT|数値を返す有効な MDX 式です。|  
 |CURRENT_TIME_MEMBER|時間ディメンションのメンバーを返す有効な MDX 式です。 CURRENT_TIME_MEMBER は、すべての相対時間関数の参照ポイントを設定します。|  
@@ -76,20 +76,19 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
 > [!NOTE]  
 >  反転ゲージや反転状態の矢印など、一部のグラフィックでは、範囲が反転されます。 つまり、-1 が良い評価、1 が悪い評価になります。  
   
- 
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] では、KPI グラフィックの名前によって、そのグラフィックの状態が 3 つであるか 5 つであるかを判断できます。 次の表に、KPI グラフィックスと関連付けられている[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]使用法、名前、および状態の数を示します。  
+ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] では、KPI グラフィックの名前によって、そのグラフィックの状態が 3 つであるか 5 つであるかを判断できます。 次の表に、KPI グラフィックスと関連付けられている[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]使用法、名前、および状態の数を示します。  
   
 |グラフィックの使用法|KPI グラフィックの名前|状態の数|  
 |--------------------|-------------------------|----------------------|  
-|Status|図形|3|  
-|Status|信号機|3|  
-|Status|道路の署名|3|  
-|Status|ゲージ|3|  
-|Status|反転ゲージ|5|  
-|Status|温度計|3|  
-|Status|[円柱]|3|  
-|Status|顔|3|  
-|Status|変位の矢印|3|  
+|状態|図形|3|  
+|状態|信号機|3|  
+|状態|道路の署名|3|  
+|状態|ゲージ|3|  
+|状態|反転ゲージ|5|  
+|状態|温度計|3|  
+|状態|[円柱]|3|  
+|状態|顔|3|  
+|状態|変位の矢印|3|  
 |傾向|標準の矢印|3|  
 |傾向|状態の矢印|3|  
 |傾向|反転した状態の矢印|5|  

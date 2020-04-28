@@ -18,10 +18,10 @@ ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7914e3b56dd02d96c02835bf6b4dcc5eb90e8f4b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084885"
 ---
 # <a name="sp_update_jobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
@@ -79,22 +79,22 @@ sp_update_jobstep
   
 `[ @on_success_action = ] success_action`ステップが成功した場合に実行するアクション。*success_action*は**tinyint**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|Value|説明 (アクション)|  
+|値|説明 (アクション)|  
 |-----------|----------------------------|  
 |**1**|正常に終了します。|  
 |**2**|失敗した状態で終了|  
-|**番**|次のステップに進む|  
+|**3**|次のステップに進む|  
 |**4**|手順 success_step_id に進み*ます。*|  
   
 `[ @on_success_step_id = ] success_step_id`ステップが成功し*success_action*が**4**の場合に実行する、このジョブのステップの識別番号を指定します。 *success_step_id*は**int**,、既定値は NULL です。  
   
 `[ @on_fail_action = ] fail_action`ステップが失敗した場合に実行するアクション。 *fail_action*は**tinyint**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|Value|説明 (アクション)|  
+|値|説明 (アクション)|  
 |-----------|----------------------------|  
 |**1**|正常に終了します。|  
 |**2**|失敗した状態で終了|  
-|**番**|次のステップに進む|  
+|**3**|次のステップに進む|  
 |**4**|手順*fail_step_id * * に進みます。*|  
   
 `[ @on_fail_step_id = ] fail_step_id`ステップが失敗し、 *fail_action*が**4**の場合に実行する、このジョブのステップの識別番号を指定します。 *fail_step_id*は**int**,、既定値は NULL です。  
@@ -119,7 +119,7 @@ sp_update_jobstep
   
 `[ @flags = ] flags`動作を制御するオプション。 *フラグ*は**int**,、これらの値のいずれかを指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**0** (既定値)|出力ファイルを上書きします。|  
 |**2**|出力ファイルに追加|  
@@ -134,7 +134,7 @@ sp_update_jobstep
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_update_jobstep**は、 **msdb**データベースから実行する必要があります。  
   
  ジョブ ステップを更新すると、ジョブのバージョン番号が増えます。  
@@ -154,7 +154,7 @@ sp_update_jobstep
   
  ジョブステップがプロキシへのアクセスを必要とする場合、ジョブステップの作成者は、そのジョブステップのプロキシへのアクセス権を持っている必要があります。 Transact-SQL を除くすべてのサブシステムでは、プロキシ アカウントが必要です。 **Sysadmin**のメンバーは、すべてのプロキシにアクセスでき、プロキシ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にエージェントサービスアカウントを使用できます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、 `Weekly Sales Data Backup`ジョブの最初のステップの再試行回数を変更します。 この例を実行すると、再試行回数は `10` 回になります。  
   
 ```  
@@ -172,6 +172,6 @@ GO
  [ジョブの表示または変更](../../ssms/agent/view-or-modify-jobs.md)   
  [sp_delete_jobstep &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
  [sp_help_jobstep &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 799c45755d9d3866a1cbe3b61b8582787331123c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070344"
 ---
 # <a name="sp_columns_ex-transact-sql"></a>sp_columns_ex (Transact-SQL)
@@ -57,15 +57,14 @@ sp_columns_ex [ @table_server = ] 'table_server'
 `[ @ODBCVer = ] 'ODBCVer'`使用されている ODBC のバージョンを示します。 *Odbcver*は**int**,、既定値は2です。 これは、ODBC バージョン2を示します。 有効な値は2または3です。 バージョン 2 と 3 の動作の相違については、ODBC の SQLColumns 仕様を参照してください。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- なし  
+ None  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CAT**|**sysname**|テーブルまたはビュー修飾子の名前。 さまざまな DBMS 製品では、3つの要素で構成するテーブル (_修飾子_) がサポート**しています。**_所有者_**。**_名前_)。 この[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]列のは、データベース名を表します。 一部の製品では、テーブルのデータベース環境のサーバー名を表します。 このフィールドは NULL にすることができます。|  
-|**TABLE_SCHEM**|**sysname**|テーブルまたはビュー所有者の名前。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、この列は、テーブルを作成したデータベース ユーザーの名前を表します。 このフィールドは常に値を返します。|  
+|**TABLE_SCHEM**|**sysname**|テーブルまたはビュー所有者の名前。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、この列は、テーブルを作成したデータベース ユーザーの名前を表します。 このフィールドは常に値を返します。|  
 |**TABLE_NAME**|**sysname**|テーブルまたはビューの名前。 このフィールドは常に値を返します。|  
 |**COLUMN_NAME**|**sysname**|返される**TABLE_NAME**の各列の列名。 このフィールドは常に値を返します。|  
 |**DATA_TYPE**|**smallint**|ODBC のデータ型を表す整数値。 ODBC のデータ型にマップできないデータ型の場合、この値は NULL になります。 ネイティブデータ型の名前が**TYPE_NAME**列に返されます。|  
@@ -75,7 +74,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
 |**DECIMAL_DIGITS**|**smallint**|小数点の右側の桁数。|  
 |**NUM_PREC_RADIX**|**smallint**|数値型の基数。|  
 |**NULLABLE**|**smallint**|Null 値の許容属性を指定します。<br /><br /> 1 = NULL 値を許容します。<br /><br /> 0 = NULL 値を許容しません。|  
-|**」**|**varchar (** 254 **)**|このフィールドは常に NULL を返します。|  
+|**備考**|**varchar (** 254 **)**|このフィールドは常に NULL を返します。|  
 |**COLUMN_DEF**|**varchar (** 254 **)**|列の既定値です。|  
 |**SQL_DATA_TYPE**|**smallint**|記述子の TYPE フィールドでの SQL データ型の値です。 この列は、 **datetime**および SQL-92 **interval**データ型を除き、 **DATA_TYPE**列と同じです。 この列は常に値が返されます。|  
 |**SQL_DATETIME_SUB**|**smallint**|**Datetime**および SQL-92 **interval**データ型のサブタイプコード。 他のデータ型の場合、この列は NULL を返します。|  
@@ -86,7 +85,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
   
  1 詳細については、Microsoft ODBC のドキュメントを参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_columns_ex**は、 *table_server*に対応する OLE DB プロバイダーの**IDBSchemaRowset**インターフェイスの columns 行セットを照会することによって実行されます。 返される行を制限するために、 *table_name*、 *table_schema*、 *table_catalog*、および*列*の各パラメーターがこのインターフェイスに渡されます。  
   
  指定されたリンクサーバーの OLE DB プロバイダーが**IDBSchemaRowset**インターフェイスの columns 行セットをサポートしていない場合、 **sp_columns_ex**は空の結果セットを返します。  
@@ -94,11 +93,11 @@ sp_columns_ex [ @table_server = ] 'table_server'
 ## <a name="permissions"></a>アクセス許可  
  スキーマに対する SELECT 権限が必要です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_columns_ex**は、区切られた識別子の要件に従います。 詳細については、「[データベース識別子](../../relational-databases/databases/database-identifiers.md)」を参照してください。  
   
-## <a name="examples"></a>例  
- 次の例では、リンク サーバー `JobTitle` 上の `HumanResources.Employee` データベースにある、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] テーブルの `Seattle1` 列のデータ型を返します。  
+## <a name="examples"></a>使用例  
+ 次の例では、リンク サーバー `JobTitle` 上の [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースにある、`HumanResources.Employee` テーブルの `Seattle1` 列のデータ型を返します。  
   
 ```  
 EXEC sp_columns_ex 'Seattle1',   
@@ -116,6 +115,6 @@ EXEC sp_columns_ex 'Seattle1',
  [sp_primarykeys &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
  [sp_tables_ex &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
  [sp_table_privileges &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

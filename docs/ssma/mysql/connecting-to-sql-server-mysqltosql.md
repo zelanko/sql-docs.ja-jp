@@ -13,10 +13,10 @@ ms.assetid: 08233267-693e-46e6-9ca3-3a3dfd3d2be7
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 0ec33e462f1b68d70a86a0fbf4f7cf0214d25770
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68103128"
 ---
 # <a name="connecting-to-sql-server-mysqltosql"></a>SQL Server への接続 (MySQLToSQL)
@@ -79,10 +79,10 @@ MySQL データベースオブジェクトを SQL Server 構文に変換する�
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-|**プロジェクトの種類 Vs ターゲットサーバーのバージョン**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005<br /> (バージョン: 1.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008<br /> (バージョン:10 .x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012<br />(バージョン: 2.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014<br />(バージョン: 2.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016<br />(バージョン:13. x)|SQL Azure|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005|はい|はい|はい|はい|はい||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008||はい|はい|はい|はい||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012|||はい|はい|はい||  
+|**プロジェクトの種類 Vs ターゲットサーバーのバージョン**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005<br /> (バージョン: 1.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008<br /> (バージョン:10 .x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012<br />(バージョン: 2.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014<br />(バージョン: 2.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016<br />(バージョン:13. x)|SQL Azure|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|はい|はい|はい|はい|はい||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||はい|はい|はい|はい||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||はい|はい|はい||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||||はい|はい||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016|||||はい||  
 |SQL Azure||||||はい|  
@@ -103,7 +103,7 @@ SQL Server データベースに関するメタデータは自動的に更新さ
   
 3.  [データベース]、または個々のデータベースまたはデータベーススキーマを右クリックし、[**データベースとの同期**] を選択します。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 移行の次のステップは、プロジェクトのニーズによって異なります。  
   
 -   MySQL スキーマと SQL Server データベースおよびスキーマ間のマッピングをカスタマイズするには、「 [Mysql データベースを SQL Server スキーマ &#40;MySQLToSQL にマッピング](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)する」を参照してください&#41;  

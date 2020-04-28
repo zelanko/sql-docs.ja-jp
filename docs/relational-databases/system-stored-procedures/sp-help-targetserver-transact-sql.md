@@ -18,10 +18,10 @@ ms.assetid: f841d3bd-901a-4980-ad0b-1c6eeba3f717
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1eb9a4d1a19f54f9e57e988b350594ce6031b243
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68085083"
 ---
 # <a name="sp_help_targetserver-transact-sql"></a>sp_help_targetserver (Transact-SQL)
@@ -48,17 +48,17 @@ sp_help_targetserver
 ## <a name="result-sets"></a>結果セット  
  *Server_name*が指定されていない場合、 **sp_help_targetserver**はこの結果セットを返します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|サーバーの識別番号。|  
-|**server_name**|**nvarchar (30)**|サーバー名。|  
-|**設置**|**nvarchar(200)**|指定されたサーバーの場所です。|  
+|**server_name**|**nvarchar(30)**|サーバー名。|  
+|**location**|**nvarchar(200)**|指定されたサーバーの場所です。|  
 |**time_zone_adjustment**|**int**|グリニッジ標準時 (GMT) からのタイムゾーンの調整 (時間単位)。|  
-|**enlist_date**|**DATETIME**|指定したサーバーの参加日。|  
-|**last_poll_date**|**DATETIME**|ジョブに対してサーバーが最後にポーリングされた日付。|  
-|**オンライン**|**int**|指定されたサーバーの状態。|  
+|**enlist_date**|**datetime**|指定したサーバーの参加日。|  
+|**last_poll_date**|**datetime**|ジョブに対してサーバーが最後にポーリングされた日付。|  
+|**status**|**int**|指定されたサーバーの状態。|  
 |**unread_instructions**|**int**|サーバーに未読の指示があるかどうか。 すべての行がダウンロードされている場合、この列は**0**になります。|  
-|**local_time**|**DATETIME**|対象サーバーのローカルの日付と時刻。これは、マスターサーバーの最後のポーリング時点での対象サーバーのローカル時刻に基づいています。|  
+|**local_time**|**datetime**|対象サーバーのローカルの日付と時刻。これは、マスターサーバーの最後のポーリング時点での対象サーバーのローカル時刻に基づいています。|  
 |**enlisted_by_nt_user**|**nvarchar (100)**|ターゲット サーバーに参加した Microsoft Windows のユーザー。|  
 |**poll_interval**|**int**|ジョブをダウンロードしてジョブの状態をアップロードするために、対象サーバーがマスター SQLServerAgent サービスをポーリングする間隔 (秒単位)。|  
   
@@ -95,6 +95,6 @@ GO
  [sp_delete_targetservergroup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
  [sp_update_targetservergroup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)   
  [sysdownloadlist &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysdownloadlist-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

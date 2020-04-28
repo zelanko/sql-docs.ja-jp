@@ -21,10 +21,10 @@ ms.assetid: 41544236-1c46-4501-be88-18c06963b6e8
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: acbf543abeb8e35adb506e1fb381d2fa2018f113
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053452"
 ---
 # <a name="syssysforeignkeys-transact-sql"></a>sysforeignkeys (Transact-sql)
@@ -35,17 +35,17 @@ ms.locfileid: "68053452"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|外部キー制約の ID。|  
-|**fkeyid id**|**int**|FOREIGN KEY 制約を持つテーブルのオブジェクト ID。|  
-|**rkeyid id**|**int**|FOREIGN KEY 制約で参照されているテーブルのオブジェクト ID。|  
+|**constid**|**int**|外部キー制約の ID。|  
+|**fkeyid**|**int**|FOREIGN KEY 制約を持つテーブルのオブジェクト ID。|  
+|**rkeyid**|**int**|FOREIGN KEY 制約で参照されているテーブルのオブジェクト ID。|  
 |**fkey**|**smallint**|参照している列の ID。|  
 |**rkey**|**smallint**|参照されている列の ID。|  
 |**keyno**|**smallint**|参照列リスト内の列の位置。|  
   
 ## <a name="see-also"></a>参照  
  [システムビューへのシステムテーブルのマッピング &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [互換性ビュー &#40;Transact-sql&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [互換性ビュー &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

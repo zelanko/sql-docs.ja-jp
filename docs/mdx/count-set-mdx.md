@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: aac2f72cc8cd91e1964fd7734b858be8215cfdd8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68047296"
 ---
 # <a name="count-set-mdx"></a>Count (セット) (MDX)
@@ -35,7 +35,7 @@ Set_Expression.Count
  *Set_Expression*  
  セットを返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Count (セット)** 関数は、使用する構文に応じて、空のセルを含めたり除外したりします。 標準構文を使用する場合は、 **Excludeempty**または**includeempty**フラグを使用して、空のセルを除外または含めることができます。 代替構文を使用する場合、関数には常に空のセルが含まれます。  
   
  セットの数に含まれる空のセルを除外するには、標準の構文とオプションの**Excludeempty**フラグを使用します。  
@@ -43,7 +43,7 @@ Set_Expression.Count
 > [!NOTE]  
 >  **Count (セット)** 関数は、既定では空のセルをカウントします。 これに対して、セットをカウントする OLE DB の**Count**関数は、既定では空のセルを除外します。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、Product ディメンションのモデル名属性階層の子で構成されるメンバーのセットに含まれるセルの数をカウントします。  
   
 ```  
@@ -101,6 +101,6 @@ WHERE ([Geography].[State-Province].x,
  [MDX&#41;の集計 &#40;](../mdx/aggregate-mdx.md)   
  [MDX&#41;のフィルター処理 &#40;](../mdx/filter-mdx.md)   
  [PrevMember &#40;MDX&#41;](../mdx/prevmember-mdx.md)   
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

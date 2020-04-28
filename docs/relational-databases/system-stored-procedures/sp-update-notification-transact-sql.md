@@ -18,10 +18,10 @@ ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 35cfa3aeda8e296cd1a85a0e8a098aaddac90954
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084865"
 ---
 # <a name="sp_update_notification-transact-sql"></a>sp_update_notification (Transact-sql)
@@ -49,7 +49,7 @@ sp_update_notification
   
 `[ @notification_method = ] notification`オペレーターに通知する方法。 *通知*は**tinyint**,、既定値はありませんが、これらの値の1つ以上を指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|電子メール|  
 |**2**|ポケットベル|  
@@ -59,7 +59,7 @@ sp_update_notification
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_update_notification**は、 **msdb**データベースから実行する必要があります。  
   
  指定された*notification_method*を使用して、必要なアドレス情報を持たないオペレーターの通知を更新できます。 電子メールメッセージまたはポケットベルによる通知の送信時にエラーが発生した場合は、Microsoft SQL Server エージェントのエラーログにエラーが報告されます。  
@@ -67,7 +67,7 @@ sp_update_notification
 ## <a name="permissions"></a>アクセス許可  
  このストアドプロシージャを実行するには、 **sysadmin**固定サーバーロールがユーザーに付与されている必要があります。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、アラート`François Ajenstat` `Test Alert`のに送信される通知の通知方法を変更します。  
   
 ```  
@@ -85,6 +85,6 @@ GO
  [sp_add_notification &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
  [sp_delete_notification &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
  [sp_help_notification &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

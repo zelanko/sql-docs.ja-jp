@@ -10,10 +10,10 @@ ms.assetid: f325a606-97ac-48bc-b344-b55f5e086a48
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d384433e5a2653291fac4d990bb3660b31c13855
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060032"
 ---
 # <a name="setting-project-options-db2tosql"></a>プロジェクトオプションの設定 (DB2ToSQL)
@@ -40,7 +40,7 @@ SSMA には、次の5つのプロジェクト設定があります。
   
 -   Optimistic  
   
--   完全  
+-   [完全]  
   
 -   Custom  
   
@@ -73,8 +73,7 @@ SSMA では、すべてのプロジェクトの既定の設定を構成できま
   
     -   カスタム設定を指定するには、新しい設定または値を選択または入力します。  
   
-3.  
-  **[OK]** をクリックして設定を保存します。  
+3.  **[OK]** をクリックして設定を保存します。  
   
 また、現在のプロジェクトの設定をカスタマイズすることもできます。 これらの設定は、現在のプロジェクトファイルに保存されます。  
   
@@ -88,10 +87,9 @@ SSMA では、すべてのプロジェクトの既定の設定を構成できま
   
     -   カスタムモードを指定するには、[**モード**] ボックスで [**カスタム**] を選択し、適切なプロジェクト設定を選択します。  
   
-3.  
-  **[OK]** をクリックして設定を保存します。  
+3.  **[OK]** をクリックして設定を保存します。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>次のステップ  
 移行の次のステップは、プロジェクトのニーズによって異なります。  
   
 -   ソースとターゲットのデータ型のマッピングをカスタマイズするには、「 [DB2 と SQL Server のデータ型 &#40;DB2ToSQL&#41;にマッピング](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)する」を参照してください。  

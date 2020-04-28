@@ -21,16 +21,15 @@ ms.assetid: 85bc086d-8a4e-4949-a23b-bf53044b925c
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 074e114f81db6615a04240f10447a3f711a51cf7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68083751"
 ---
 # <a name="syssp_cdc_generate_wrapper_function-transact-sql"></a>sp_cdc_generate_wrapper_function (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用可能な変更データ キャプチャのクエリ関数に必要なラッパー関数を作成するためのスクリプトを生成します。 生成されたラッパーでサポートされる API を使用すると、クエリ範囲を日時間隔として指定できます。 これによって関数は多くのウェアハウジング アプリケーション (変更データ キャプチャ テクノロジを使用して増分読み込みを確認している [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ デザイナーが開発したアプリケーションなど) で使用しやすくなります。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -68,15 +67,15 @@ sys.sp_cdc_generate_wrapper_function
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|列の型|[説明]|  
+|列名|列の型|説明|  
 |-----------------|-----------------|-----------------|  
 |**function_name**|**nvarchar (145)**|生成された関数の名前。|  
 |**create_script**|**nvarchar(max)**|は、キャプチャインスタンスのラッパー関数を作成するスクリプトです。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  キャプチャインスタンスのすべての変更クエリをラップする関数を作成するスクリプトは、常に生成されます。 キャプチャインスタンスで差分変更クエリがサポートされている場合、このクエリのラッパーを生成するスクリプトは generatedl でもあります。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、`sys.sp_cdc_generate_wrapper_function` を使用して、すべての変更データ キャプチャ関数に対してラッパーを作成します。  
   
 ```  

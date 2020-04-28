@@ -16,10 +16,10 @@ ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8771d7c821a82733b0664f09c5dadf2128baf877
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090847"
 ---
 # <a name="sp_changemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-sql)
@@ -51,7 +51,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
   
 `[ @value = ] 'value'`指定したプロパティの新しい値を指定します。 *値*は**nvarchar (255)**,、テーブル内の値のいずれかを指定することができます。  
   
-|プロパティ|値|[説明]|  
+|プロパティ|値|説明|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||場所が既定の場所に加えてまたは以外の場合に、スナップショットフォルダーが格納される場所。|  
 |**記述**||このマージ プル サブスクリプションの説明です。|  
@@ -65,7 +65,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**ftp_login**||旧バージョンとの互換性のためにのみ使用できます。 FTP サービスへの接続に使用するユーザー名です。|  
 |**ftp_password**||旧バージョンとの互換性のためにのみ使用できます。 FTP サービスに接続するときに使用するユーザー パスワードです。|  
 |**ftp_port**||旧バージョンとの互換性のためにのみ使用できます。 ディストリビューター用の FTP サービスのポート番号です。|  
-|**名**||結合フィルターまたは論理レコードリレーションシップの WHERE 句でこの関数を使用する場合の HOST_NAME () の値を指定します。|  
+|**hostname**||結合フィルターまたは論理レコードリレーションシップの WHERE 句でこの関数を使用する場合の HOST_NAME () の値を指定します。|  
 |**internet_login**||基本認証を使用して Web 同期をホストしている Web サーバーに接続するときにマージエージェントが使用するログインです。|  
 |**internet_password**||基本認証を使用して Web 同期をホストしている Web サーバーに接続するときにマージエージェントが使用するログインのパスワード。|  
 |**internet_security_mode**|**1**|Web 同期をホストしている Web サーバーに接続するときに Windows 認証を使用します。|  
@@ -81,12 +81,12 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ||**1**|パブリッシャーに接続するときに Windows 認証を使用。|  
 ||**2**|同期トリガーは、静的な**sysservers**エントリを使用してリモートプロシージャコール (RPC) を実行します。また、パブリッシャーは、 **sysservers**テーブルのリモートサーバーまたはリンクサーバーとして定義されている必要があります。|  
 |**sync_type**|**自動**|パブリッシュされたテーブルのスキーマと初期データは、最初にサブスクライバーに転送されます。|  
-||**存在**|サブスクライバーには、パブリッシュされたテーブルのスキーマと初期データが既にあります。システムテーブルとデータは常に転送されます。|  
-|**use_ftp**|**本来**|一般的なプロトコルの代わりに FTP を使用してスナップショットを取得します。|  
+||"**なし**"|サブスクライバーには、パブリッシュされたテーブルのスキーマと初期データが既にあります。システムテーブルとデータは常に転送されます。|  
+|**use_ftp**|**true**|一般的なプロトコルの代わりに FTP を使用してスナップショットを取得します。|  
 ||**false**|スナップショットを取得するには、一般的なプロトコルを使用します。|  
-|**use_web_sync**|**本来**|サブスクリプションは HTTP 経由で同期できます。|  
+|**use_web_sync**|**true**|サブスクリプションは HTTP 経由で同期できます。|  
 ||**false**|サブスクリプションは HTTP 上で同期できません。|  
-|**use_interactive_resolver**|**本来**|調整時にインタラクティブ競合回避モジュールを使用します。|  
+|**use_interactive_resolver**|**true**|調整時にインタラクティブ競合回避モジュールを使用します。|  
 ||**false**|インタラクティブ競合回避モジュールは使用されません。|  
 |**working_directory**||オプションが指定されている場合に、FTP を使用してスナップショットファイルが転送されるディレクトリへの完全修飾パスです。|  
 |NULL (既定値)||*プロパティ*に対してサポートされている値の一覧を返します。|  
@@ -94,7 +94,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_changemergepullsubscription**は、マージレプリケーションで使用します。  
   
  現在のサーバーがサブスクライバー、現在のデータベースがサブスクライバー データベースであると解釈されます。  
@@ -109,6 +109,6 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
  [sp_addmergepullsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
  [sp_dropmergepullsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
  [sp_helpmergepullsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

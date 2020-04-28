@@ -22,10 +22,10 @@ ms.assetid: d9e680be-ab9b-4e0c-b63a-90658f241df8
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: cf7c7ff03ec1318b1fe2fca8454f8ff39cd336a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68083738"
 ---
 # <a name="syssp_cdc_get_captured_columns-transact-sql"></a>sp_cdc_get_captured_columns (Transact-sql)
@@ -54,7 +54,7 @@ sys.sp_cdc_get_captured_columns
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |source_schema|**sysname**|ソース テーブルのスキーマ名です。|  
 |source_table|**sysname**|ソーステーブルの名前。|  
@@ -69,7 +69,7 @@ sys.sp_cdc_get_captured_columns
 |numeric_scale|**int**|数値ベースの場合は、列の小数点以下桁数です。それ以外の場合は、NULL です。|  
 |datetime_precision|**smallint**|Datetime ベースの場合は、列の有効桁数です。それ以外の場合は NULL。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  Sp_cdc_get_captured_columns を使用して、キャプチャされた列に関する列情報を取得します。キャプチャインスタンスのクエリ関数[cdc. fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)または fn_cdc_get_net_changes_<capture_instance>[します。 ](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md) 列名、Id、および位置は、キャプチャインスタンスの有効期間中は一定のままです。 追跡対象テーブルの基になるソース列のデータ型が変更された場合にのみ、列のデータ型が変化します。 ソーステーブルに対して追加または削除された列は、既存のキャプチャインスタンスのキャプチャ対象列には影響しません。  
   
  ソーステーブルに適用されるデータ定義言語 (DDL) ステートメントに関する情報を取得するには、 [sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)を使用します。 DDL の変更によって追跡対象ソース列の構造が変更された場合、そのような DDL の変更がすべて結果セットとして返されます。  
@@ -77,7 +77,7 @@ sys.sp_cdc_get_captured_columns
 ## <a name="permissions"></a>アクセス許可  
  db_owner 固定データベース ロールのメンバーシップが必要です。 他のすべてのユーザーに対して、ソーステーブルのすべてのキャプチャ対象列に対する SELECT 権限が必要です。また、キャプチャインスタンスのゲートロールが定義されている場合は、そのデータベースロールのメンバーシップが必要です。 呼び出し元にソースデータを表示するアクセス許可がない場合、関数はエラー 22981 (オブジェクトが存在しないか、アクセスが拒否されました。) を返します。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例は、`HumanResources_Employee` キャプチャ インスタンスに存在するキャプチャ対象列の情報を返します。  
   
 ```  

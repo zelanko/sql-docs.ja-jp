@@ -20,10 +20,10 @@ ms.assetid: 114b3d55-1ad6-4777-b868-8ef0c86ba596
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3f06182f06e92ff581dd02c072b63fc10962921a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68069085"
 ---
 # <a name="dbosyssubsystems-transact-sql"></a>dbo. syssubsystems システム (Transact-sql)
@@ -31,24 +31,24 @@ ms.locfileid: "68069085"
 
   使用可能なすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのプロキシ サブシステムに関する情報を格納します。 **Syssubsystems システム**テーブルは、 **msdb**データベースに格納されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**subsystem_id**|**int**|サブシステムの ID。|  
-|**サブ**|**nvarchar (40)**|サブシステムの名前。|  
+|**サブ**|**nvarchar(40)**|サブシステムの名前。|  
 |**description_id**|**int**|サブシステムの説明を含む、 **sys. messages**カタログビュー内の行のメッセージ ID。|  
 |**subsystem_dll**|**nvarchar(255)**|サブシステム DLL の場所。|  
 |**agent_exe**|**nvarchar(255)**|サブシステムを使用する実行可能ファイルへの完全パスです。|  
-|**start_entry_point**|**nvarchar (30)**|サブシステムが初期化されるときに呼び出される関数。|  
-|**event_entry_point**|**nvarchar (30)**|サブシステムステップが実行されるときに呼び出される関数です。|  
-|**stop_entry_point**|**nvarchar (30)**|サブシステムが実行を終了するときに呼び出される関数。|  
+|**start_entry_point**|**nvarchar(30)**|サブシステムが初期化されるときに呼び出される関数。|  
+|**event_entry_point**|**nvarchar(30)**|サブシステムステップが実行されるときに呼び出される関数です。|  
+|**stop_entry_point**|**nvarchar(30)**|サブシステムが実行を終了するときに呼び出される関数。|  
 |**max_worker_threads**|**int**|サブシステムの同時ステップの最大数。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  このテーブルにアクセスできるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [dbo. sysproxysubsystem &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysproxysubsystem-transact-sql.md)   
  [dbo .SQL プロキシ &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)   
- [Transact-sql&#41;&#40;のメッセージ](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)  
+ [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)  
   
   

@@ -20,10 +20,10 @@ ms.assetid: cf443a67-7705-4799-9f39-0e3a6a8a0708
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 5f38224cdd1f2ade609d5b10ba2a6b46f913639d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68066713"
 ---
 # <a name="syssp_cdc_start_job-transact-sql"></a>sp_cdc_start_job (Transact-sql)
@@ -47,9 +47,9 @@ sys.sp_cdc_start_job [ [ @job_type = ] 'job_type' ]
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ None  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  管理者は sys.sp_cdc_start_job を使用してキャプチャ ジョブまたはクリーンアップ ジョブのいずれかを明示的に開始できます。  
   
 ## <a name="permissions"></a>アクセス許可  

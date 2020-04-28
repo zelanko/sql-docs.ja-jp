@@ -20,10 +20,10 @@ ms.assetid: 6d7713f5-1253-4a19-b1fb-635c377c95c1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f3a140a4cf1c82deda3b9d6a15b419b33b411974
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68097017"
 ---
 # <a name="dbosysproxysubsystem-transact-sql"></a>dbo. sysproxysubsystem (Transact-sql)
@@ -31,12 +31,12 @@ ms.locfileid: "68097017"
 
   各プロキシ アカウントで、どの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのサブシステムが使用されているかを記録します。 このテーブルは、 **msdb**データベースに格納されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**subsystem_id**|**int**|サブシステムの ID。 この値は、 **syssubsystems システム**テーブルの**subsystem_id**列に対応しています。|  
 |**proxy_id**|**int**|プロキシアカウントの ID。 この値は、 **sysproxies**テーブルの**proxy_id**列に対応しています。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  このテーブルにアクセスできるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
 ## <a name="see-also"></a>参照  

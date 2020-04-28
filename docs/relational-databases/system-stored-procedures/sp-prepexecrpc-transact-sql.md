@@ -18,10 +18,10 @@ ms.assetid: 35d686f2-ef31-4eaa-baa9-9cef5d6c87c2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6fea210183ae67179dcc6f686e25f939cd00713b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68056333"
 ---
 # <a name="sp_prepexecrpc-transact-sql"></a>sp_prepexecrpc (Transact-SQL)
@@ -41,8 +41,7 @@ sp_prepexecrpc handle OUTPUT, RPCCall
   
 ## <a name="arguments"></a>引数  
  *扱え*  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって生成される準備済みハンドル識別子です。 *handle*は、 **int**戻り値を持つ必須パラメーターです。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって生成される準備済みハンドル識別子です。 *handle*は、 **int**戻り値を持つ必須パラメーターです。  
   
  *RPCCall*  
  ODBC 標準構文を使用してストアド プロシージャ呼び出しを定義します。 *Rpccall*は、 **ntext**文字列入力値を呼び出す必須のパラメーターです。  
@@ -51,6 +50,6 @@ sp_prepexecrpc handle OUTPUT, RPCCall
  追加パラメーターをオプションで使用することを示します。 *bound_param*は、使用する追加パラメーターを指定するために、任意のデータ型の入力値を呼び出します。  
   
 ## <a name="see-also"></a>参照  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

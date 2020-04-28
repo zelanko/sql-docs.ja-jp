@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fba09255204b796a5134e8b8098e650430b7de63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68048408"
 ---
 # <a name="sp_helpstats-transact-sql"></a>sp_helpstats (Transact-sql)
@@ -54,19 +54,19 @@ sp_helpstats[ @objname = ] 'object_name'
 ## <a name="result-sets"></a>結果セット  
  次の表では、結果セットの列について説明します。  
   
-|列名|[説明]|  
+|列名|説明|  
 |-----------------|-----------------|  
 |**statistics_name**|統計の名前。 **Sysname**を返します。 null にすることはできません。|  
 |**statistics_keys**|統計の基になるキー。 **Nvarchar (2078)** を返します。 null にすることはできません。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  DBCC SHOW_STATISTICS を使用すると、特定のインデックスまたは統計に関する詳細な統計情報を表示できます。 詳細については、「 [DBCC SHOW_STATISTICS &#40;transact-sql&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) 」と「 [transact-sql &#40;の sp_helpindex ](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)」を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Public**ロールのメンバーシップが必要です。  
+ ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>例  
- 次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] を実行し、`sp_createstats` データベース内のすべてのユーザー テーブルを対象にして、条件を満たすすべての列に関する統計を 1 列ずつ作成します。 次に`sp_helpstats` 、を実行して、 `Customer`テーブルに作成された結果の統計情報を検索します。  
+ 次の例では、`sp_createstats` を実行し、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベース内のすべてのユーザー テーブルを対象にして、条件を満たすすべての列に関する統計を 1 列ずつ作成します。 次に`sp_helpstats` 、を実行して、 `Customer`テーブルに作成された結果の統計情報を検索します。  
   
 ```  
 USE AdventureWorks2012;  

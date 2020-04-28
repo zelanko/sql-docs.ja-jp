@@ -18,10 +18,10 @@ ms.assetid: 96d236a9-1d0e-4f83-a4d3-f825b7381e46
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7470baabb9a35a923995d8306b314f9272de0b5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070370"
 ---
 # <a name="sp_cleanup_log_shipping_history-transact-sql"></a>sp_cleanup_log_shipping_history (Transact-sql)
@@ -49,9 +49,9 @@ sp_cleanup_log_shipping_history
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- [なし] :  
+ なし。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_cleanup_log_shipping_history**は、すべてのログ配布サーバーの**master**データベースから実行する必要があります。 このストアドプロシージャは、履歴の保有期間に基づいて**log_shipping_monitor_history_detail**および**log_shipping_monitor_error_detail**のローカルコピーとリモートコピーをクリーンアップします。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -59,6 +59,6 @@ sp_cleanup_log_shipping_history
   
 ## <a name="see-also"></a>参照  
  [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

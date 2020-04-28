@@ -21,10 +21,10 @@ author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ea116b0d4a70b647c6c3a719443f8e35f177169b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68102381"
 ---
 # <a name="sysmemory_optimized_tables_internal_attributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes (Transact-SQL)
@@ -32,16 +32,16 @@ ms.locfileid: "68102381"
 
 ユーザー メモリ最適化テーブルを格納するために使用される各内部メモリ最適化テーブルの行が含まれます。 各ユーザー テーブルは、1 つ以上の内部テーブルに対応します。 1 つのテーブルは、コア データ ストレージで使用されます。 その他の内部テーブルは、メモリ最適化テーブルの一時的な列ストア インデックスおよび行外 (LOB) ストレージなどの機能をサポートするために使用されます。
  
-| 列名  | データ型  | [説明] |
+| 列名  | データ型  | 説明 |
 | :------ |:----------| :-----|
 |object_id  |**int**|       ユーザー テーブルの ID。 ユーザー テーブル (hk/列ストアの組み合わせの場合は行外ストレージまたは削除行など) をサポートするために存在する内部メモリ最適化テーブルは、その親と同じ object_id を持ちます。 |
 |xtp_object_id  |**bigint**|    ユーザー テーブルをサポートするために使用される内部メモリ最適化テーブルに対応するインメモリ OLTP オブジェクト ID。 データベース内では一意であり、オブジェクトの有効期間中に変わる可能性があります。 
-|型|  **int** |   内部テーブルの種類。<br/><br/> 0 => DELETED_ROWS_TABLE <br/> 1 => USER_TABLE <br/> 2 => DICTIONARIES_TABLE<br/>3 => SEGMENTS_TABLE<br/>4 => ROW_GROUPS_INFO_TABLE<br/>5 => INTERNAL OFF-ROW DATA TABLE<br/>252 => INTERNAL_TEMPORAL_HISTORY_TABLE | 
-|type_desc| **nvarchar (60)**|   種類の説明<br/><br/>DELETED_ROWS_TABLE -> 列ストア インデックスの削除行を追跡する内部テーブル<br/>USER_TABLE -> 行内ユーザー データを含むテーブル<br/>DICTIONARIES_TABLE -> 列ストア インデックスの辞書<br/>SEGMENTS_TABLE -> 列ストア インデックスの圧縮セグメント<br/>ROW_GROUPS_INFO_TABLE -> 列ストア インデックスの圧縮行グループに関するメタデータ<br/>INTERNAL OFF-ROW DATA TABLE -> 行外列のストレージに使用される内部テーブル。 この場合、minor_id には column_id が反映されます。<br/>INTERNAL_TEMPORAL_HISTORY_TABLE -> ディスク ベース履歴テーブルの末尾。 履歴に挿入された行は、最初にこの内部メモリ最適化テーブルに挿入されます。 この内部テーブルからディスク ベースの履歴テーブルに行を非同期的に移動するバックグラウンド タスクがあります。 |
+|type|  **int** |   内部テーブルの種類。<br/><br/> 0 => DELETED_ROWS_TABLE <br/> 1 => USER_TABLE <br/> 2 => DICTIONARIES_TABLE<br/>3 => SEGMENTS_TABLE<br/>4 => ROW_GROUPS_INFO_TABLE<br/>5 => INTERNAL OFF-ROW DATA TABLE<br/>252 => INTERNAL_TEMPORAL_HISTORY_TABLE | 
+|type_desc| **nvarchar(60)**|   種類の説明<br/><br/>DELETED_ROWS_TABLE -> 列ストア インデックスの削除行を追跡する内部テーブル<br/>USER_TABLE -> 行内ユーザー データを含むテーブル<br/>DICTIONARIES_TABLE -> 列ストア インデックスの辞書<br/>SEGMENTS_TABLE -> 列ストア インデックスの圧縮セグメント<br/>ROW_GROUPS_INFO_TABLE -> 列ストア インデックスの圧縮行グループに関するメタデータ<br/>INTERNAL OFF-ROW DATA TABLE -> 行外列のストレージに使用される内部テーブル。 この場合、minor_id には column_id が反映されます。<br/>INTERNAL_TEMPORAL_HISTORY_TABLE -> ディスク ベース履歴テーブルの末尾。 履歴に挿入された行は、最初にこの内部メモリ最適化テーブルに挿入されます。 この内部テーブルからディスク ベースの履歴テーブルに行を非同期的に移動するバックグラウンド タスクがあります。 |
 |minor_id|  **int**|    0 は、ユーザー テーブルまたは内部テーブルを示します。<br/><br/>0 以外は、行外に格納されている列の ID を示します。 sys.columns で column_id と結合されます。<br/><br/>このシステム ビューには行外に格納されている各列に対応する行があります。|
 
 ## <a name="permissions"></a>アクセス許可  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="examples"></a>例  
   

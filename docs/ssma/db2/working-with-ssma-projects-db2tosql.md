@@ -10,10 +10,10 @@ ms.assetid: 07abef8a-28e8-4a66-927c-c9a5b8c938ef
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d2c585764e5bb7fffa55624054aecc7a4c589bbe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68086180"
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>SSMA プロジェクトの使用 (DB2ToSQL)
@@ -59,10 +59,9 @@ DB2 データベースからに[!INCLUDE[ssNoVersion](../../includes/ssnoversion
   
 **プロジェクトを作成するには**  
   
-1.  [**ファイル**] メニューの [**新しいプロジェクト**] をクリックします。  
+1.  **[ファイル]** メニューの **[新しいプロジェクト]** をクリックします。  
   
-    
-  **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
+    **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
   
 2.  [**名前**] ボックスに、プロジェクトの名前を入力します。  
   
@@ -70,11 +69,11 @@ DB2 データベースからに[!INCLUDE[ssNoVersion](../../includes/ssnoversion
   
 4.  [**移行先**] ドロップダウンで、移行に使用する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ターゲットのバージョンを選択します。 次の方法を使用できます。  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
     -   Azure SQL DB  
   
@@ -96,7 +95,7 @@ DB2 データベースからに[!INCLUDE[ssNoVersion](../../includes/ssnoversion
   
         メタデータの保存には数分かかる場合があります。 メタデータをまだ保存しない場合は、チェックボックスをオンにしないでください。  
   
-    2.  [**保存**] ボタンをクリックします。  
+    2.  **[保存]** ボタンをクリックします。  
   
         SSMA は DB2 スキーマを解析し、メタデータをプロジェクトファイルに保存します。  
   
@@ -115,7 +114,7 @@ DB2 データベースからに[!INCLUDE[ssNoVersion](../../includes/ssnoversion
   
 3.  に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]再接続するには、[**ファイル**] メニューの [**再接続**] をクリックして SQL Server します。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 移行プロセスの次の手順は、 [DB2 データベースに接続](https://msdn.microsoft.com/5eb5801d-f0c3-4127-97c0-0b1ef49f4844)することです。  
   
 ## <a name="see-also"></a>参照  

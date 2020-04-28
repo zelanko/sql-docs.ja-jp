@@ -16,10 +16,10 @@ ms.assetid: e37d0c3b-19bf-4719-9535-96ba361372b3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2b9bdabcc11c900ae0a1cbe71280b64efb6ccdaf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096211"
 ---
 # <a name="sp_addsynctriggers-transact-sql"></a>sp_addsynctriggers (Transact-sql)
@@ -96,7 +96,7 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_addsynctriggers**は、サブスクリプションの初期化の一部としてディストリビューションエージェントによって使用されます。 このストアドプロシージャは、一般にユーザーによって実行されるのではなく、ユーザーが同期なしのサブスクリプションを手動で設定する必要がある場合に便利です。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -105,6 +105,6 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
 ## <a name="see-also"></a>参照  
  [トランザクションレプリケーションの更新可能なサブスクリプション](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
  [sp_script_synctran_commands &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

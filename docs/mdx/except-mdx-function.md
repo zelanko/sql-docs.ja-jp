@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d53a88ce78eb5a1b106cefb0832ca1023f67c000
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68077247"
 ---
 # <a name="except-mdx-function"></a>Except (MDX) 関数
@@ -34,10 +34,10 @@ Except(Set_Expression1, Set_Expression2 [, ALL ] )
  *Set_Expression2*  
  セットを返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **ALL**を指定した場合、関数は、1番目のセットで見つかった重複部分を保持します。2番目のセットで見つかった重複部分は削除されます。 メンバーは、最初のセットに出現する順序で返されます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  この関数の使用例を次に示します。  
   
 ```  
@@ -58,6 +58,6 @@ WHERE
   
 ## <a name="see-also"></a>参照  
  [-&#41; &#40;MDX&#41;を除く &#40;](../mdx/except-mdx-operator.md)   
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

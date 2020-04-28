@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 17d24c6924b03e4ed0415e73bfefc0d372ca45bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070849"
 ---
 # <a name="data-mining-extensions-dmx-syntax-elements"></a>データマイニング拡張機能 (DMX) 構文要素
@@ -24,12 +24,11 @@ ms.locfileid: "68070849"
  [DMX&#41;&#40;識別子](../dmx/identifiers-dmx.md)  
  マイニング モデル、マイニング構造、および列などのオブジェクトの名前を識別します。  
   
- [DMX&#41;&#40;データ型](../dmx/data-types-dmx.md)  
+ [データ型 (DMX)](../dmx/data-types-dmx.md)  
  マイニング モデル列に含まれるデータ型を定義します。  
   
  [DMX&#41;&#40;式](../dmx/expressions-dmx.md)  
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] が単一値やスカラー値、オブジェクト、またはテーブル値を導くことができる構文の単位です。  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] が単一値やスカラー値、オブジェクト、またはテーブル値を導くことができる構文の単位です。  
   
  [DMX&#41;&#40;オペレーター](../dmx/operators-dmx.md)  
  より複雑な DMX 式を作るために、1 つ以上の簡単な DMX 式と共に使用されます。  
@@ -43,16 +42,16 @@ ms.locfileid: "68070849"
  [DMX&#41;&#40;の予約済みキーワード](../dmx/reserved-keywords-dmx.md)  
  DMX での使用に予約されており、データベース内のオブジェクトの名前付けに使用できない単語です。  
   
- [DMX&#41;&#40;コンテンツの種類](../dmx/content-types-dmx.md)  
+ [コンテンツの種類 (DMX)](../dmx/content-types-dmx.md)  
  マイニング構造列に含まれるコンテンツを定義します。  
   
- [DMX&#41;&#40;ディストリビューション](../dmx/distributions-dmx.md)  
+ [分布 &#40;DMX&#41;](../dmx/distributions-dmx.md)  
  列内でのデータの分布を定義します。  
   
  [DMX&#41;の使用状況 &#40;](../dmx/usage-dmx.md)  
  マイニングモデルに含まれる列をマイニングモデルでどのように使用するかを定義します。  
   
- [DMX&#41;&#40;のモデリングフラグ](../dmx/modeling-flags-dmx.md)  
+ [モデリング フラグ (DMX)](../dmx/modeling-flags-dmx.md)  
  アルゴリズムがマイニングモデルの処理に使用できる追加のヒントを定義します。  
   
 ## <a name="see-also"></a>参照  

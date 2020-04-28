@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 165d03b886ad8e9beeb09bf5a835c879cc23a2a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68055585"
 ---
 # <a name="predict-mdx"></a>Predict (MDX)
@@ -40,7 +40,7 @@ Predict(Mining_Model_Name,String_Expression)
  *String_Expression*  
  指定されたマイニングモデルの有効な DMX 式に評価される有効な文字列式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Predict**関数は、指定されたマイニングモデルのコンテキスト内で指定された文字列式を評価します。  
   
  データマイニングの構文と関数については、「データマイニング式 (DMX) リファレンス」を参照してください。  
@@ -59,6 +59,6 @@ WHERE([Customer].[Customer Geography].[Customer].&[12012])
 ```  
   
 ## <a name="see-also"></a>参照  
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

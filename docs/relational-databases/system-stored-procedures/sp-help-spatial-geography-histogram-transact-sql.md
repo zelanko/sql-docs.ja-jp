@@ -18,10 +18,10 @@ ms.assetid: 5c5bd319-055d-4cd6-8c5a-06354cc056cc
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 3c2b94b4c76054fb1e9ce6e078f3490ad263a52c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68085188"
 ---
 # <a name="sp_help_spatial_geography_histogram-transact-sql"></a>sp_help_spatial_geography_histogram (Transact-sql)
@@ -53,7 +53,7 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  テーブル値が返されます。 次のグリッドでは、テーブルの列の内容について説明します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**cellid**|**int**|各セルの一意の ID を表します。開始カウントは1です。|  
 |**cell**|**geography**|それぞれのセルを表す四角形です。 セルの形は、空間インデックス作成用に使用されたセルの形と同じです。|  
@@ -62,7 +62,7 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
 ## <a name="permissions"></a>アクセス許可  
  ユーザーは、 **public**ロールのメンバーである必要があります。 サーバーとオブジェクトに対する読み取りアクセス権限が必要です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  SSMS 空間タブでは、結果がグラフィカルに表示されます。 空間ウィンドウに対して結果にクエリを実行すると、結果項目の概数を取得できます。  
   
 > [!NOTE]  
@@ -70,7 +70,7 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
   
  **Geography**型の境界ボックスは、地球全体です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース`Person.Address`のテーブルで**sp_help_spatial_geography_histogram**を呼び出します。  
   
 ```  

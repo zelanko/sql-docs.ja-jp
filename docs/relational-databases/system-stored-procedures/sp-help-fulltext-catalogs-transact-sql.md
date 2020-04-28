@@ -18,10 +18,10 @@ ms.assetid: 1b94f280-e095-423f-88bc-988c9349d44c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 33c32949d57784d1579a3641c1b65e36e97fbf29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68055133"
 ---
 # <a name="sp_help_fulltext_catalogs-transact-sql"></a>sp_help_fulltext_catalogs (Transact-SQL)
@@ -50,19 +50,18 @@ sp_help_fulltext_catalogs [ @fulltext_catalog_name = ] 'fulltext_catalog_name'
 ## <a name="result-sets"></a>結果セット  
  次の表は、結果セットを示しています。これは**ftcatid**によって並べ替えられています。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**fulltext_catalog_id**|**smallint**|フルテキスト カタログ識別子。|  
-|**指定**|**sysname**|フルテキストカタログの名前。|  
-|**道**|**nvarchar (260)**|
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、この句は無効です。|  
-|**オンライン**|**int**|カタログのフルテキストインデックスの作成ステータス:<br /><br /> 0 = アイドル状態<br /><br /> 1 = カタログ全体を作成中<br /><br /> 2 = 一時停止<br /><br /> 3 = 絞込み<br /><br /> 4 = 復旧<br /><br /> 5 = シャットダウン<br /><br /> 6 = 増分作成中<br /><br /> 7 = インデックス作成<br /><br /> 8 = ディスク容量不足、 一時停止<br /><br /> 9 = 変更の追跡<br /><br /> NULL = ユーザーがフルテキスト カタログに対する VIEW 権限を持っていない、データベースでフルテキストが有効になっていない。またはフルテキスト コンポーネントがインストールされていない|  
+|**名前**|**sysname**|フルテキストカタログの名前。|  
+|**道**|**nvarchar(260)**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、この句は無効です。|  
+|**状態**|**int**|カタログのフルテキストインデックスの作成ステータス:<br /><br /> 0 = アイドル状態<br /><br /> 1 = カタログ全体を作成中<br /><br /> 2 = 一時停止<br /><br /> 3 = 絞込み<br /><br /> 4 = 復旧<br /><br /> 5 = シャットダウン<br /><br /> 6 = 増分作成中<br /><br /> 7 = インデックス作成<br /><br /> 8 = ディスク容量不足、 一時停止<br /><br /> 9 = 変更の追跡<br /><br /> NULL = ユーザーがフルテキスト カタログに対する VIEW 権限を持っていない、データベースでフルテキストが有効になっていない。またはフルテキスト コンポーネントがインストールされていない|  
 |**NUMBER_FULLTEXT_TABLES**|**int**|カタログに関連付けられているフルテキストインデックス付きテーブルの数。|  
   
 ## <a name="permissions"></a>アクセス許可  
  実行権限は、既定では**public**ロールのメンバーに与えています。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、フルテキスト カタログ `Cat_Desc` に関する情報を返します。  
   
 ```  
@@ -76,6 +75,6 @@ GO
  [FULLTEXTCATALOGPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
  [sp_fulltext_catalog &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-catalog-transact-sql.md)   
  [sp_help_fulltext_catalogs_cursor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

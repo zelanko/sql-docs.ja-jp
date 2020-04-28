@@ -18,10 +18,10 @@ ms.assetid: b58d4a07-5c40-4f17-b66e-6d6b17188dda
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b40f7233bb3c50203a68c0b01cfcbdaf631e0098
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096169"
 ---
 # <a name="sp_table_privileges_ex-transact-sql"></a>sp_table_privileges_ex (Transact-sql)
@@ -54,27 +54,27 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
 `[ @fUsePattern = ] 'fUsePattern'`文字 ' _ '、'% '、' ['、および '] ' がワイルドカード文字として解釈されるかどうかを判断します。 有効な値は 0 (パターン一致がオフ) および 1 (パターン一致がオン) です。 *Fusepattern*は**ビット**,、既定値は1です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- なし  
+ None  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CAT**|**sysname**|テーブル修飾子の名前。 さまざまな DBMS 製品では、3つの要素で構成するテーブル (_修飾子_) がサポート**しています。**_所有者_**。**_名前_)。 で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、この列はデータベース名を表します。 一部の製品では、テーブルのデータベース環境のサーバー名を表します。 このフィールドは NULL にすることができます。|  
 |**TABLE_SCHEM**|**sysname**|テーブル所有者の名前。 で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、この列は、テーブルを作成したデータベースユーザーの名前を表します。 このフィールドは常に値を返します。|  
 |**TABLE_NAME**|**sysname**|テーブル名。 このフィールドは常に値を返します。|  
-|**権限**|**sysname**|**一覧表示された**権限付与対象ユーザーに対し、この**TABLE_NAME**に対する権限を許可したデータベースユーザー名です。 で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、この列は常に**TABLE_OWNER**と同じです。 このフィールドは常に値を返します。 また、権限の許可者の列は、データベース所有者 (**TABLE_OWNER**) か、grant ステートメントで WITH GRANT OPTION 句を使用してデータベース所有者が権限を許可したユーザーのいずれかである可能性があります。|  
+|**GRANTOR**|**sysname**|**一覧表示された**権限付与対象ユーザーに対し、この**TABLE_NAME**に対する権限を許可したデータベースユーザー名です。 で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、この列は常に**TABLE_OWNER**と同じです。 このフィールドは常に値を返します。 また、権限の許可者の列は、データベース所有者 (**TABLE_OWNER**) か、grant ステートメントで WITH GRANT OPTION 句を使用してデータベース所有者が権限を許可したユーザーのいずれかである可能性があります。|  
 |**GRANTEE**|**sysname**|**一覧表示された**権限付与者によって、この**TABLE_NAME**に対する権限が許可されたデータベースユーザー名です。 このフィールドは常に値を返します。|  
 |**持っ**|**varchar (** 32 **)**|使用可能なテーブル権限の 1 つ。 テーブル権限は、次の値のいずれか、または実装が定義されている場合にデータソースでサポートされるその他の値のいずれかになります。<br /><br /> SELECT = 権限付与対象ユーザーは、1つまたは複数の列のデータを取得**できます。**<br /><br /> INSERT = 権限付与対象ユーザーは、1つまたは複数の列に新しい行のデータを提供**できます。**<br /><br /> UPDATE = 権限付与対象ユーザーは、1つまたは複数の列の既存のデータを変更**できます。**<br /><br /> DELETE = 権限付与対象ユーザーは、テーブルから**行を削除**できます。<br /><br /> REFERENCES = 権限付与対象ユーザーは、主キー/外部キーのリレーションシップで外部テーブルの列を参照**できます。** で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、主キー/外部キーのリレーションシップはテーブル制約を使用して定義されます。<br /><br /> 特定**のテーブル特権によって**権限付与対象ユーザーに与えられるアクションのスコープは、データソースによって異なります。 たとえば、更新権限が**与えられている場合**、権限付与対象ユーザーは、1つのデータソース上のテーブル内のすべての列を更新できます。また、権限付与対象ユーザーが別のデータソースに対する update 権限**を持って**いる列だけを更新することもできます。|  
 |**IS_GRANTABLE**|**varchar (** 3 **)**|権限付与対象**ユーザーに対し、他**のユーザーに権限を許可することを許可するかどうかを示します。 これは、"許可の許可" 権限と呼ばれることがあります。 YES、NO、または NULL を指定できます。 不明、つまり NULL の場合は、"許可の許可" が適用されないデータ ソースを示します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  返される結果は、 **TABLE_QUALIFIER**、 **TABLE_OWNER**、 **TABLE_NAME**、および**特権**によって並べ替えられます。  
   
 ## <a name="permissions"></a>アクセス許可  
  スキーマに対する SELECT 権限が必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、指定したリンクサーバー `Product` [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] `Seattle1`から、データベースので始まる名前のテーブルに関する特権情報を返します。 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]はリンクサーバーと見なされます)。  
   
 ```  

@@ -15,10 +15,10 @@ ms.assetid: 615e9440-32a3-4ec4-94c6-94547e10ebda
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c51f22a66344c0ae72daf7ca662285e1fdde5b5b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090880"
 ---
 # <a name="database-related-dynamic-management-views-transact-sql"></a>データベース関連の動的管理ビュー (Transact-SQL)
@@ -40,12 +40,12 @@ DMV は SQL Database または SQL Data Warehouse に固有です。
 
 | | | 
 |-|-|  
-|[dm_db_wait_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)|[dm_database_copies &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)|  
+|[dm_db_wait_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)|[sys.dm_database_copies &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)|  
 |[dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)|[dm_db_objects_impacted_on_version_change &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-objects-impacted-on-version-change-azure-sql-database.md)|  
 |[dm_operation_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) | |
   
 ## <a name="see-also"></a>参照  
- [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
+ [動的管理ビューおよび関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
    
   
 

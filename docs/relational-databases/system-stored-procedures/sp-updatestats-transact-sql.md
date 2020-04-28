@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c00bdd453bc4d1bf467b37aca3639eb43f55e022
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68085791"
 ---
 # <a name="sp_updatestats-transact-sql"></a>sp_updatestats (Transact-SQL)
@@ -46,7 +46,7 @@ sp_updatestats [ [ @resample = ] 'resample']
 ## <a name="arguments"></a>引数  
 `[ @resample = ] 'resample'`**Sp_updatestats**で、 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md)ステートメントのリサンプリングオプションを使用することを指定します。 **' リサンプリング '** が指定されていない場合、 **sp_updatestats**は既定のサンプリングを使用して統計を更新します。 **リサンプリング**は**varchar (8)** で、既定値は NO です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_updatestats**は`UPDATE STATISTICS`、 `ALL`キーワードを指定することによって、データベース内のすべてのユーザー定義テーブルと内部テーブルに対して実行します。 sp_updatestats の進行状況を示すメッセージが表示されます。 更新が完了すると、すべてのテーブルの統計が更新されたことが報告されます。  
   
 無効な非クラスター化インデックスの統計を更新し、無効になっているクラスター化インデックスの統計を更新しません。 sp_updatestats。  
@@ -60,7 +60,7 @@ sp_updatestats [ [ @resample = ] 'resample']
 ## <a name="permissions"></a>アクセス許可  
  **Sysadmin**固定サーバーロールのメンバーシップ、またはデータベースの所有権 (**dbo**) が必要です。  
 
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
 次の例では、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース内のテーブルの統計を更新します。  
   
 ```sql  
@@ -70,11 +70,10 @@ EXEC sp_updatestats;
 ```  
 
 ## <a name="automatic-index-and-statistics-management"></a>インデックスと統計の自動管理
-
-  [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) のようなソリューションを活用し、1 つまたは複数のデータベースに対するインデックスの最適化と統計更新を自動管理します。 このプロシージャでは、断片化レベルやその他のパラメーターに基づいてインデックスを再構築または再構成するか、線形しきい値で統計を更新するかが自動的に選択されます。
+[Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) のようなソリューションを活用し、1 つまたは複数のデータベースに対するインデックスの最適化と統計更新を自動管理します。 このプロシージャでは、断片化レベルやその他のパラメーターに基づいてインデックスを再構築または再構成するか、線形しきい値で統計を更新するかが自動的に選択されます。
 
 ## <a name="see-also"></a>参照  
- [ALTER DATABASE SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [Transact-sql&#41;&#40;の ALTER DATABASE SET オプション](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [Transact-sql&#41;&#40;の統計の作成](../../t-sql/statements/create-statistics-transact-sql.md)   
  [DBCC SHOW_STATISTICS &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
  [DROP STATISTICS &#40;Transact-sql&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   

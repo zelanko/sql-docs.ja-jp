@@ -18,10 +18,10 @@ ms.assetid: 7205855c-964f-4f55-bf75-39a55f6fe7bd
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ba27f90c8d2fc4c7e174333080815d56f90e48c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68091918"
 ---
 # <a name="sp_add_maintenance_plan_job-transact-sql"></a>sp_add_maintenance_plan_job (Transact-sql)
@@ -51,13 +51,13 @@ sp_add_maintenance_plan_job [ @plan_id = ] 'plan_id' , [ @job_id = ] 'job_id'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_add_maintenance_plan_job**は、 **msdb**データベースから実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_add_maintenance_plan_job**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  この例では、 **sp_add_maintenance_plan_job**を使用して作成されたメンテナンスプランにジョブ "B8FCECB1-E22C-11D2-AA64-00C04F688EAE" を追加します。  
   
 ```  

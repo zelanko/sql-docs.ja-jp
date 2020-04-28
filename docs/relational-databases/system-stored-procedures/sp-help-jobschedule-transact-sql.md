@@ -18,10 +18,10 @@ ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 72e321b74f3e949030a6d599c082acf36db12687
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68054910"
 ---
 # <a name="sp_help_jobschedule-transact-sql"></a>sp_help_jobschedule (Transact-sql)
@@ -61,7 +61,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|スケジュールの識別子番号。|  
 |**schedule_name**|**sysname**|スケジュールの名前。|  
@@ -76,21 +76,20 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**active_end_date**|**int**|スケジュールの終了日。|  
 |**active_start_time**|**int**|スケジュールの開始時刻。|  
 |**active_end_time**|**int**|スケジュールを終了する時刻。|  
-|**date_created**|**DATETIME**|スケジュールが作成された日付。|  
-|**schedule_description**|**nvarchar(4000)**|**Msdb スケジュール**の値から取得された、スケジュールの英語の説明。 *Include_description*が**0**の場合、この列には説明が要求されていないことを示すテキストが含まれます。|  
+|**date_created**|**datetime**|スケジュールが作成された日付。|  
+|**schedule_description**|**nvarchar (4000)**|**Msdb スケジュール**の値から取得された、スケジュールの英語の説明。 *Include_description*が**0**の場合、この列には説明が要求されていないことを示すテキストが含まれます。|  
 |**next_run_date**|**int**|スケジュールによってジョブが次に実行される日付。|  
 |**next_run_time**|**int**|スケジュールによってジョブが次に実行される時刻。|  
-|**schedule_uid**|**UNIQUEIDENTIFIER**|スケジュールの識別子。|  
+|**schedule_uid**|**uniqueidentifier**|スケジュールの識別子。|  
 |**job_count**|**int**|返されたジョブの数。|  
   
 > **注: sp_help_jobschedule**では、 **msdb**内の**dbo. sysjobschedules**と**dbo. sysスケジュール**システムテーブルから値が返されます。 **sysjobschedules** 20 分ごとに更新をスケジュールします。 これは、このストアドプロシージャによって返される値に影響を与える可能性があります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Sp_help_jobschedule**のパラメーターは、特定の組み合わせでのみ使用できます。 *Schedule_id*が指定されている場合、 *job_id*も*job_name*も指定できません。 それ以外の場合は、 *job_id*パラメーターまたは*job_name*パラメーターを*schedule_name*と共に使用できます。  
   
 ## <a name="permissions"></a>アクセス許可  
- 
-  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
+ **sysadmin** 固定サーバー ロールのメンバーシップが必要です。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
   
@@ -147,4 +146,4 @@ GO
  [sp_add_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [sp_delete_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
  [sp_update_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

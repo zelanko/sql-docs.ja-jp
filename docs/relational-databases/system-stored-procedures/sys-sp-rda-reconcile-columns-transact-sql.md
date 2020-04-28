@@ -17,10 +17,10 @@ ms.assetid: 60d9cc4e-1828-450b-9d88-5b8485800d73
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 7ad2fd6c51f5b5463e4e4c10745b2ff245bd691d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68083675"
 ---
 # <a name="syssp_rda_reconcile_columns-transact-sql"></a>sp_rda_reconcile_columns (Transact-sql)
@@ -53,7 +53,7 @@ sp_rda_reconcile_columns @objname = '@objname'
 ## <a name="permissions"></a>アクセス許可  
  Db_owner のアクセス許可が必要です。  
    
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  Stretch 対応の SQL Server テーブルに存在しなくなったリモートの Azure テーブルに列が存在している場合、これらの余分な列が Stretch Database の正常な動作を妨げることはありません。 必要に応じて余分の列を手動で削除できます。  
   
 ## <a name="example"></a>例  

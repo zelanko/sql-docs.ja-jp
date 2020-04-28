@@ -18,10 +18,10 @@ ms.assetid: 26054e76-53b7-4004-8d48-92ba3435e9d7
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8a9bbd9039e20fad5cf4c22b71e9a85662bf5912
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68055097"
 ---
 # <a name="sp_help_fulltext_columns_cursor-transact-sql"></a>sp_help_fulltext_columns_cursor (Transact-sql)
@@ -55,7 +55,7 @@ sp_help_fulltext_columns_cursor [ @cursor_return = ] @cursor_variable OUTPUT
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**TABLE_OWNER**|**sysname**|テーブル所有者 これは、テーブルを作成したデータベースユーザーの名前です。|  
 |**TABLE_ID**|**int**|テーブルの ID。|  
@@ -69,7 +69,7 @@ sp_help_fulltext_columns_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 ## <a name="permissions"></a>アクセス許可  
  実行権限は、既定では**public**ロールのメンバーに与えています。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、データベース内のすべてのテーブルでフルテキストインデックスが指定されている列に関する情報を返します。  
   
 ```  
@@ -91,6 +91,6 @@ GO
  [COLUMNPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/columnproperty-transact-sql.md)   
  [sp_fulltext_column &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-column-transact-sql.md)   
  [sp_help_fulltext_columns &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

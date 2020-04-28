@@ -18,10 +18,10 @@ ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9ee6b9df37e61dcb4eed45bc11431d49b160cf87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053104"
 ---
 # <a name="sp_depends-transact-sql"></a>sp_depends (Transact-sql)
@@ -65,23 +65,23 @@ sp_depends [ @objname = ] '<object>'
   
  次の結果セットは、 * \<オブジェクト>* が依存するオブジェクトを示しています。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar (257** **)**|依存関係が存在するアイテムの名前。|  
 |**type**|**nvarchar (16)**|項目の種類。|  
 |**まし**|**nvarchar (7)**|項目が更新されているかどうか。|  
-|**オフ**|**nvarchar (8)**|項目が SELECT ステートメントで使用されているかどうか。|  
-|**column**|**sysname**|従属性が存在する列またはパラメーター。|  
+|**オン**|**nvarchar(8)**|項目が SELECT ステートメントで使用されているかどうか。|  
+|**項目**|**sysname**|従属性が存在する列またはパラメーター。|  
   
  次の結果セットは、 * \<オブジェクト>* に依存するオブジェクトを示しています。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar (257** **)**|依存関係が存在するアイテムの名前。|  
 |**type**|**nvarchar (16)**|項目の種類。|  
   
 ## <a name="permissions"></a>アクセス許可  
- **Public**ロールのメンバーシップが必要です。  
+ ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>例  
   
@@ -103,8 +103,8 @@ EXEC sp_depends @objname = N'AdventureWorks2012.Production.iWorkOrder' ;
   
 ## <a name="see-also"></a>参照  
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;の実行 &#40;](../../t-sql/language-elements/execute-transact-sql.md)   
- [sp_help &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
+ [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
+ [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sql_dependencies &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)  
   

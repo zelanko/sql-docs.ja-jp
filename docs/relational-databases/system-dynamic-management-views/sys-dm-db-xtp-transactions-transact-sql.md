@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cc5f12e50c1e7a7d639acdbf9a244406ce9366c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68097933"
 ---
 # <a name="sysdm_db_xtp_transactions-transact-sql"></a>sys.dm_db_xtp_transactions (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68097933"
   
  詳細については、「[インメモリ OLTP &#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)」を参照してください。  
     
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |xtp_transaction_id|**bigint**|XTP トランザクションマネージャーでのこのトランザクションの内部 ID。|  
 |transaction_id|**bigint**|トランザクション ID。 他のトランザクション関連の DMV (sys.dm_tran_active_transactions など) にあるトランザクション ID と結合されます。<br /><br /> ネイティブ コンパイル ストアド プロシージャによって開始されたトランザクションなど、XTP のみのトランザクションの場合は 0 です。|  
@@ -43,7 +43,7 @@ ms.locfileid: "68097933"
 |end_tsn|**bigint**|トランザクションの終了トランザクションのシリアル番号。|  
 |state|**int**|トランザクションの状態。<br /><br /> 0=ACTIVE<br /><br /> 1=COMMITTED<br /><br /> 2=ABORTED<br /><br /> 3=VALIDATING|  
 |state_desc|**nvarchar**|トランザクションの状態の説明。|  
-|result|**int**|このトランザクションの結果。 有効な値を次に示します。<br /><br /> 0 - IN PROGRESS<br /><br /> 1-成功<br /><br /> 2-エラー<br /><br /> 3 - COMMIT DEPENDENCY<br /><br /> 4 - VALIDATION FAILED (RR)<br /><br /> 5-検証に失敗しました (SR)<br /><br /> 6-ロールバック|  
+|結果|**int**|このトランザクションの結果。 有効な値を次に示します。<br /><br /> 0 - IN PROGRESS<br /><br /> 1-成功<br /><br /> 2-エラー<br /><br /> 3 - COMMIT DEPENDENCY<br /><br /> 4 - VALIDATION FAILED (RR)<br /><br /> 5-検証に失敗しました (SR)<br /><br /> 6-ロールバック|  
 |result_desc|**nvarchar**|このトランザクションの結果。 有効な値を次に示します。<br /><br /> IN PROGRESS<br /><br /> SUCCESS<br /><br /> ERROR<br /><br /> コミットの依存関係<br /><br /> 検証に失敗しました (RR)<br /><br /> VALIDATION FAILED (SR)<br /><br /> ROLLBACK|  
 |last_error|**int**|内部でのみ使用されます|  
 |is_speculative|**bit**|内部でのみ使用されます|  
@@ -78,6 +78,6 @@ ms.locfileid: "68097933"
  サーバーに対する VIEW DATABASE STATE 権限が必要です。  
   
 ## <a name="see-also"></a>参照  
- [メモリ最適化テーブルの動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [メモリ最適化テーブルの動的管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

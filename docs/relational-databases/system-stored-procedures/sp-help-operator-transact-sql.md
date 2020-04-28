@@ -18,10 +18,10 @@ ms.assetid: caedc43d-44b8-415a-897e-92923f6de3b8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e6568b15a12949180ca0e2df41063c100abc3290
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68085299"
 ---
 # <a name="sp_help_operator-transact-sql"></a>sp_help_operator (Transact-sql)
@@ -54,9 +54,9 @@ sp_help_operator
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**番号**|**int**|オペレーター識別番号。|  
+|**id**|**int**|オペレーター識別番号。|  
 |**name**|**sysname**|オペレーター名。|  
 |**enabled**|**tinyint**|オペレーターが通知を受け取ることが可能かどうか。<br /><br /> **1** = はい<br /><br /> **0** = いいえ|  
 |**email_address**|**nvarchar (100)**|オペレーターの電子メールアドレス。|  
@@ -77,7 +77,7 @@ sp_help_operator
 |**last_netsend_time**|**int**|オペレーターが前回、ネットワーク ポップアップによる通知を受け取った時刻。|  
 |**category_name**|**sysname**|このオペレーターが所属するオペレーター カテゴリの名前。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_help_operator**は、 **msdb**データベースから実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -91,7 +91,7 @@ sp_help_operator
   
  これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、オペレーター `François Ajenstat` についての情報をレポートします。  
   
 ```  
@@ -103,10 +103,10 @@ EXEC dbo.sp_help_operator
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_add_operator &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [sp_delete_operator &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
  [sp_update_operator &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

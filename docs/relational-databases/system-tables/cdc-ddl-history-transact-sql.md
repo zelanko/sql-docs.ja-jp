@@ -18,10 +18,10 @@ ms.assetid: cb97ea71-da2f-441a-bbd2-db1f5f48ab49
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1855120dde6e6f4e9037a6f14832cd24f310d77b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079225"
 ---
 # <a name="cdcddl_history-transact-sql"></a>cdc. ddl_history (Transact-sql)
@@ -31,14 +31,14 @@ ms.locfileid: "68079225"
   
  システムテーブルに対して直接クエリを実行しないことをお勧めします。 代わりに、 [sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)ストアドプロシージャを実行します。  
    
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**source_object_id**|**int**|DDL の変更が適用されたソーステーブルの ID。|  
 |**object_id**|**int**|ソーステーブルのキャプチャインスタンスに関連付けられている変更テーブルの ID。|  
 |**required_column_update**|**bit**|ソース テーブルのキャプチャ対象列のデータ型が変更されたことを示します。 この変更により、変更テーブルの列が変更されています。|  
 |**ddl_command**|**nvarchar(max)**|ソーステーブルに適用される DDL ステートメントです。|  
-|**ddl_lsn**|**binary (10)**|DDL 変更のコミットメントに関連付けられているログシーケンス番号 (LSN)。|  
-|**ddl_time**|**DATETIME**|DDL の変更がソーステーブルに対して行われた日付と時刻。|  
+|**ddl_lsn**|**binary(10)**|DDL 変更のコミットメントに関連付けられているログシーケンス番号 (LSN)。|  
+|**ddl_time**|**datetime**|DDL の変更がソーステーブルに対して行われた日付と時刻。|  
   
 ## <a name="see-also"></a>参照  
  [sp_cdc_help_change_data_capture &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   

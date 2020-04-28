@@ -21,17 +21,16 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9e5a79a4ab38fd1cb7d118624fd170219aa90a94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096252"
 ---
 # <a name="sysdm_db_stats_histogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-現在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のデータベース内の指定されたデータベースオブジェクト (テーブルまたはインデックス付きビュー) の統計ヒストグラムを返します。 
-  `DBCC SHOW_STATISTICS WITH HISTOGRAM` に似ています。
+現在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のデータベース内の指定されたデータベースオブジェクト (テーブルまたはインデックス付きビュー) の統計ヒストグラムを返します。 `DBCC SHOW_STATISTICS WITH HISTOGRAM` に似ています。
 
 > [!NOTE] 
 > この DMF は、 [!INCLUDE[ssSQL15](../../includes/ssSQL15-md.md)] SP1 CU2 以降で使用できます。
@@ -47,22 +46,22 @@ sys.dm_db_stats_histogram (object_id, stats_id)
  統計のプロパティが要求された、現在のデータベース内にあるオブジェクトの ID です。 *object_id*は**int**です。  
   
  *stats_id*  
- 指定された *object_id*の統計情報の ID です。 統計 ID は、 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 動的管理ビューから取得できます。 *stats_id*は**int**です。  
+ 指定された *object_id*の統計情報の ID です。 統計 ID は、 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 動的管理ビューから取得できます。 *stats_id* は **int**です。  
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |object_id |**int**|統計オブジェクトのプロパティを返す対象のオブジェクト (テーブルまたはインデックス付きビュー) の ID。|  
 |stats_id |**int**|統計オブジェクトの ID。 テーブルまたはインデックス付きビュー内で一意です。 詳細については、「[sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)」を参照してください。|  
 |step_number |**int** |ヒストグラムのステップ数。 |
 |range_high_key |**sql_variant** |ヒストグラム区間の上限の列値。 この列値はキー値とも呼ばれます。|
-|range_rows |**本当の** |ヒストグラム区間内 (上限は除く) に列値がある行の予測数。 |
-|equal_rows |**本当の** |ヒストグラム区間の上限と列値が等しい行の予測数。 |
+|range_rows |**real** |ヒストグラム区間内 (上限は除く) に列値がある行の予測数。 |
+|equal_rows |**real** |ヒストグラム区間の上限と列値が等しい行の予測数。 |
 |distinct_range_rows |**bigint** |ヒストグラム区間内 (上限は除く) にある個別の列値を持つ行の予測数。 |
-|average_range_rows |**本当の** |上限を除く、ヒストグラムのステップ内で重複する列値を持つ行の平均`RANGE_ROWS / DISTINCT_RANGE_ROWS`数`DISTINCT_RANGE_ROWS > 0`(の場合)。 |
+|average_range_rows |**real** |上限を除く、ヒストグラムのステップ内で重複する列値を持つ行の平均`RANGE_ROWS / DISTINCT_RANGE_ROWS`数`DISTINCT_RANGE_ROWS > 0`(の場合)。 |
   
- ## <a name="remarks"></a>解説  
+ ## <a name="remarks"></a>Remarks  
  
  の`sys.dm_db_stats_histogram` resultset は`DBCC SHOW_STATISTICS WITH HISTOGRAM` 、と同様の情報を返し`object_id`ます`stats_id`。また`step_number`、、、およびも含まれます。
 
@@ -82,8 +81,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
 -   太線は、上限境界値 (*range_high_key*) およびその出現回数 (*equal_rows*) を表します。  
   
--   
-  *range_high_key* の左にある領域は、列値の範囲、およびそれぞれの列値の平均出現回数 (*average_range_rows*) を表します。 最初のヒストグラム区間の *average_range_rows* は常に 0 です。  
+-   *range_high_key* の左にある領域は、列値の範囲、およびそれぞれの列値の平均出現回数 (*average_range_rows*) を表します。 最初のヒストグラム区間の *average_range_rows* は常に 0 です。  
   
 -   点線は、範囲内の個別の値の合計数 (*distinct_range_rows*) と範囲内の値の合計数 (*range_rows*) を推定するために使用される、サンプリングされた値を表します。 クエリ オプティマイザーでは、*range_rows* および *distinct_range_rows* を使用して *average_range_rows* を計算します。サンプリングされた値は格納されません。  
   
@@ -149,4 +147,4 @@ WHERE ss.[object_id] = OBJECT_ID('Country')
 ## <a name="see-also"></a>参照  
 [DBCC SHOW_STATISTICS (Transact-sql)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
 [オブジェクト関連の動的管理ビューおよび関数 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)  
-[dm_db_stats_properties (Transact-sql)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  
+[sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  

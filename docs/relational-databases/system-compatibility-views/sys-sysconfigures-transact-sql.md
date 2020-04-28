@@ -21,10 +21,10 @@ ms.assetid: 146bf10a-c898-4676-a2a1-673fb1cee7a2
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c785ee1c4d3c5382aa42adf48ad9880f00297137
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68089204"
 ---
 # <a name="syssysconfigures-transact-sql"></a>sys.sysconfigures (Transact-SQL)
@@ -35,15 +35,15 @@ ms.locfileid: "68089204"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**数値**|**int**|ユーザーが変更可能な変数の値。 再構成が実行さ[!INCLUDE[ssDE](../../includes/ssde-md.md)]れている場合にのみ、によって使用されます。|  
+|**value**|**int**|ユーザーが変更可能な変数の値。 再構成が実行さ[!INCLUDE[ssDE](../../includes/ssde-md.md)]れている場合にのみ、によって使用されます。|  
 |**.config**|**int**|構成変数番号。|  
 |**関する**|**nvarchar(255)**|構成オプションの説明。|  
-|**オンライン**|**smallint**|オプションの状態を示すビットマップ。 次の値があります。<br /><br /> 0 = 静的。 設定は、サーバーの再起動時に有効になります。<br /><br /> 1 = 動的。 変数は、再構成ステートメントが実行されたときに有効になります。<br /><br /> 2 = 詳細。 変数は、 **[詳細の表示] オプション**が設定されている場合にのみ表示されます。 設定は、サーバーの再起動時に有効になります。<br /><br /> 3 = 動的および詳細。|  
+|**status**|**smallint**|オプションの状態を示すビットマップ。 次の値があります。<br /><br /> 0 = 静的。 設定は、サーバーの再起動時に有効になります。<br /><br /> 1 = 動的。 変数は、再構成ステートメントが実行されたときに有効になります。<br /><br /> 2 = 詳細。 変数は、 **[詳細の表示] オプション**が設定されている場合にのみ表示されます。 設定は、サーバーの再起動時に有効になります。<br /><br /> 3 = 動的および詳細。|  
   
 ## <a name="see-also"></a>参照  
  [システムビューへのシステムテーブルのマッピング &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [互換性ビュー &#40;Transact-sql&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [互換性ビュー &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

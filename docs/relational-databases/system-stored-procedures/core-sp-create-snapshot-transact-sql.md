@@ -21,10 +21,10 @@ ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ef2bce1ff84172d01b1304a416f84865f1cb36bb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68078220"
 ---
 # <a name="coresp_create_snapshot-transact-sql"></a>sp_create_snapshot (Transact-sql)
@@ -68,7 +68,7 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  アップロード パッケージが管理データ ウェアハウスへのデータのアップロードを開始するごとに、データ コレクターの実行時コンポーネントが core.sp_create_snapshot を呼び出します。  
   
  このプロシージャでは、次の条件がチェックされます。  
@@ -82,7 +82,7 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
 ## <a name="permissions"></a>アクセス許可  
  **Mdw_writer** (EXECUTE 権限を持つ) 固定データベースロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、ディスク使用量コレクション セットのスナップショットを作成し、それを管理データ ウェアハウスに追加して、スナップショット識別子を返します。 この例では、既定のインスタンスが使用されています。  
   
 ```  

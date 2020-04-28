@@ -18,10 +18,10 @@ ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 42a98fe7af16c4e8aab22d6ace02f359dfe02c54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096199"
 ---
 # <a name="sp_help_maintenance_plan-transact-sql"></a>sp_help_maintenance_plan (Transact-sql)
@@ -47,46 +47,46 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 `[ @plan_id = ] 'plan\_id'`メンテナンスプランのプラン ID を指定します。 *plan_id*は**UNIQUEIDENTIFIER**です。 既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- なし  
+ None  
   
 ## <a name="result-sets"></a>結果セット  
  *Plan_id*が指定されている場合、 **sp_help_maintenance_plan**は Plan、Database、Job という3つのテーブルを返します。  
   
 ### <a name="plan-table"></a>プランテーブル  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**plan_id**|**UNIQUEIDENTIFIER**|メンテナンスプラン ID。|  
+|**plan_id**|**uniqueidentifier**|メンテナンスプラン ID。|  
 |**plan_name**|**sysname**|メンテナンスプランの名前。|  
-|**date_created**|**DATETIME**|メンテナンスプランが作成された日付。|  
+|**date_created**|**datetime**|メンテナンスプランが作成された日付。|  
 |**責任**|**sysname**|メンテナンスプランの所有者。|  
 |**max_history_rows**|**int**|システムテーブルのメンテナンスプランの履歴を記録するために割り当てられる行の最大数。|  
 |**remote_history_server**|**int**|履歴レポートが書き込まれるリモートサーバーの名前。|  
 |**max_remote_history_rows**|**int**|履歴レポートを書き込むことができるリモートサーバー上のシステムテーブルに割り当てられた行の最大数。|  
 |**user_defined_1**|**int**|既定値は NULL です。|  
 |**user_defined_2**|**nvarchar (100)**|既定値は NULL です。|  
-|**user_defined_3**|**DATETIME**|既定値は NULL です。|  
-|**user_defined_4**|**UNIQUEIDENTIFIER**|既定値は NULL です。|  
+|**user_defined_3**|**datetime**|既定値は NULL です。|  
+|**user_defined_4**|**uniqueidentifier**|既定値は NULL です。|  
   
 ### <a name="database-table"></a>データベース テーブル  
   
-|列名|[説明]|  
+|列名|説明|  
 |-----------------|-----------------|  
-|**database_name**|メンテナンスプランに関連付けられているすべてのデータベースの名前。 *database_name*は**sysname**です。|  
+|**database_name**|メンテナンスプランに関連付けられているすべてのデータベースの名前。 *database_name* は **sysname** です。|  
   
 ### <a name="job-table"></a>ジョブテーブル  
   
-|列名|[説明]|  
+|列名|説明|  
 |-----------------|-----------------|  
 |**job_id**|メンテナンスプランに関連付けられているすべてのジョブの ID。 *job_id*は**uniqueidentifier**です。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_help_maintenance_plan**は**msdb**データベースにあります。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_help_maintenance_plan**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  この例では、メンテナンスプランの FAD6F2AB-3571-11D3-9D4A-00C04FB925FC について説明します。  
   
 ```  

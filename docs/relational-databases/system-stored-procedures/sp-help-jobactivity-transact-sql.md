@@ -18,16 +18,15 @@ ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 95283eee1a38dbafd9824986188df565103de06c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68054977"
 ---
 # <a name="sp_help_jobactivity-transact-sql"></a>sp_help_jobactivity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブのランタイム状態に関する情報を一覧表示します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -56,27 +55,27 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ## <a name="result-sets"></a>結果セット  
  次の結果セットを返します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|エージェントセッションの識別番号。|  
-|**job_id**|**UNIQUEIDENTIFIER**|ジョブの識別子。|  
+|**job_id**|**uniqueidentifier**|ジョブの識別子。|  
 |**job_name**|**sysname**|ジョブの名前。|  
-|**run_requested_date**|**DATETIME**|ジョブの実行が要求された日付。|  
+|**run_requested_date**|**datetime**|ジョブの実行が要求された日付。|  
 |**run_requested_source**|**sysname**|ジョブを実行する要求のソース。 つぎのいずれかです。<br /><br /> **1** = スケジュールに基づいて実行<br /><br /> **2** = 警告に応答して実行する<br /><br /> **3** = スタートアップ時に実行<br /><br /> **4** = ユーザーによる実行<br /><br /> **6** = CPU のアイドルスケジュールに基づいて実行|  
-|**queued_date**|**DATETIME**|要求がキューに登録された日付。 ジョブが直接実行された場合は NULL になります。|  
-|**start_execution_date**|**DATETIME**|ジョブが実行可能なスレッドに割り当てられた日時。|  
+|**queued_date**|**datetime**|要求がキューに登録された日付。 ジョブが直接実行された場合は NULL になります。|  
+|**start_execution_date**|**datetime**|ジョブが実行可能なスレッドに割り当てられた日時。|  
 |**last_executed_step_id**|**int**|最後に実行されたジョブステップのステップ ID です。|  
-|**last_exectued_step_date**|**DATETIME**|最後にジョブ ステップを開始した日付。|  
-|**stop_execution_date**|**DATETIME**|ジョブが停止した日付。|  
-|**next_scheduled_run_date**|**DATETIME**|ジョブが次に実行されるようにスケジュールされている場合。|  
+|**last_exectued_step_date**|**datetime**|最後にジョブ ステップを開始した日付。|  
+|**stop_execution_date**|**datetime**|ジョブが停止した日付。|  
+|**next_scheduled_run_date**|**datetime**|ジョブが次に実行されるようにスケジュールされている場合。|  
 |**job_history_id**|**int**|ジョブ履歴テーブル内のジョブ履歴の識別子。|  
-|**メッセージ**|**nvarchar (1024)**|ジョブの前回の実行中に生成されたメッセージ。|  
+|**message**|**nvarchar(1024)**|ジョブの前回の実行中に生成されたメッセージ。|  
 |**run_status**|**int**|ジョブの最後の実行から返された状態:<br /><br /> **0** = エラー失敗<br /><br /> **1** = 成功<br /><br /> **3** = キャンセル<br /><br /> **5** = 不明な状態|  
 |**operator_id_emailed**|**int**|ジョブの完了時に電子メールの通知を受けたオペレーターの ID 番号。|  
 |**operator_id_netsent**|**int**|ジョブの完了時に**net send**によって通知されたオペレーターの ID 番号。|  
 |**operator_id_paged**|**int**|ジョブの完了時に、ポケットベルの通知を受けたオペレーターの ID 番号。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  このプロシージャでは、ジョブに関する現在の状態のスナップショットが生成されます。 返される結果は、要求が処理された時点の情報を表します。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントサービスが開始されるたびに、エージェントによってセッション id が作成されます。 セッション id は、テーブル**msdb セッション**に格納されます。  
@@ -98,7 +97,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
  他のユーザーが所有するジョブのアクティビティを表示できるのは、 **sysadmin**のメンバーだけです。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、現在のユーザーが表示する権限を持っているすべてのジョブのアクティビティを一覧表示します。  
   
 ```  

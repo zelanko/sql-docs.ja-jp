@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 0bc6c97f4d41023b822f42a6bbe4c5b193d42e45
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68088751"
 ---
 # <a name="sysdm_pdw_sys_info-transact-sql"></a>dm_pdw_sys_info (Transact-sql)
@@ -24,7 +24,7 @@ ms.locfileid: "68088751"
 
   アプライアンスの全体的なアクティビティを反映するアプライアンスレベルのカウンターのセットを提供します。  
   
-|列名|データ型|[説明]|Range|  
+|列名|データ型|説明|範囲|  
 |-----------------|---------------|-----------------|-----------|  
 |total_sessions|**int**|現在システム内にあるセッションの数。|0を max_active_sessions (下記参照)。|  
 |idle_sessions|**int**|現在アイドル状態のセッションの数。||  

@@ -21,10 +21,10 @@ ms.assetid: fe924c17-9cad-4b2b-8124-1e0fd82931e3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d7c8b97a04e8b9898a9d49a412c5c6e5a2aa910c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68076532"
 ---
 # <a name="syssysoledbusers-transact-sql"></a>sys.sysoledbusers (Transact-SQL)
@@ -36,17 +36,17 @@ ms.locfileid: "68076532"
   
  指定したリンク サーバーのユーザーとパスワードのマッピングごとに 1 行のデータを格納します。 **sysoledbusers**は、 **master**データベースに格納されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**rmtsrvid**|**smallint**|サーバーのセキュリティ id 番号 (SID)。|  
 |**rmtloginame**|**nvarchar (** 128 **)**|リンクされた**rmtservid**の**loginsid**がマップされるリモートログインの名前。|  
 |**rmtpassword**|**nvarchar (** 128 **)**|NULL を返します。|  
-|**loginsid**|**varbinary (** 85 **)**|マップされるローカルログインの SID。|  
-|**オンライン**|**smallint**|1の場合、マッピングはユーザーの資格情報を使用する必要があります。|  
-|**changedate**|**DATETIME**|マッピング情報が最後に変更された日付。|  
+|**loginsid**|**varbinary(** 85 **)**|マップされるローカルログインの SID。|  
+|**status**|**smallint**|1の場合、マッピングはユーザーの資格情報を使用する必要があります。|  
+|**changedate**|**datetime**|マッピング情報が最後に変更された日付。|  
   
 ## <a name="see-also"></a>参照  
- [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [互換性ビュー &#40;Transact-sql&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [互換性ビュー &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

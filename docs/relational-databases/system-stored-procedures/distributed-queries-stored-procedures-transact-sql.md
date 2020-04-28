@@ -16,10 +16,10 @@ ms.assetid: 0fbf2846-885e-4de2-b552-f6453c3ca136
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: a6cf13ee2f083a26d871272f5197b550cdf3dd49
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68078182"
 ---
 # <a name="distributed-queries-stored-procedures-transact-sql"></a>分散クエリのストアドプロシージャ (Transact-sql)
@@ -35,10 +35,10 @@ ms.locfileid: "68078182"
 |[sp_column_privileges_ex](../../relational-databases/system-stored-procedures/sp-column-privileges-ex-transact-sql.md)|[sp_serveroption](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)|  
 |[sp_columns_ex](../../relational-databases/system-stored-procedures/sp-columns-ex-transact-sql.md)|[sp_table_privileges_ex](../../relational-databases/system-stored-procedures/sp-table-privileges-ex-transact-sql.md)|  
 |[sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)|[sp_tables_ex](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)|  
-|[sp_dropserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)|[sp_testlinkedserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-testlinkedserver-transact-sql.md)|  
+|[sp_dropserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)|[sp_testlinkedserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-testlinkedserver-transact-sql.md)|  
 |[sp_foreignkeys](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)||  
   
 ## <a name="see-also"></a>参照  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

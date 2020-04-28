@@ -18,10 +18,10 @@ ms.assetid: aa9eab66-c4f7-4ec7-9f0d-5d24d16da654
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ead1a768a89e9b43c02d7e80619dbf52165d2a38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68097612"
 ---
 # <a name="sp_oastop-transact-sql"></a>sp_OAStop (Transact-SQL)
@@ -43,13 +43,13 @@ sp_OAStop
   
  HRESULT のリターンコードの詳細については、「 [OLE オートメーションのリターンコードとエラー情報](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  1つの実行環境は、OLE オートメーションストアドプロシージャを使用するすべてのクライアントによって共有されます。 1つのクライアントがを呼び出すと**sp_OAStop**すべてのクライアントに対して共有実行環境が停止します。 実行環境が停止した後、 **sp_OACreate**を呼び出すと、実行環境が再起動されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sysadmin**固定サーバーロールのメンバーシップ、またはこのストアドプロシージャに対して直接実行権限が必要です。 `Ole Automation Procedures`OLE オートメーションに関連するシステムプロシージャを使用するには、構成を**有効**にする必要があります。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、共有 OLE オートメーション実行環境を停止します。  
   
 ```  

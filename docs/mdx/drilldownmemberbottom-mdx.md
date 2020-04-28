@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 79bea49705c4f2fb66b8c9866be335433cbb783f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68049259"
 ---
 # <a name="drilldownmemberbottom-mdx"></a>DrilldownMemberBottom (MDX)
@@ -34,7 +34,7 @@ DrillDownMemberBottom(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_
  *Set_Expression2*  
  セットを返す有効な多次元式 (MDX) 式です。  
   
- *数*  
+ *Count*  
  返す組の数を指定する有効な数値式です。  
   
  *Numeric_Expression*  
@@ -49,7 +49,7 @@ DrillDownMemberBottom(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_
  *Include_Calc_Members*  
  計算されるメンバーがドリルダウン結果に含まれるようにするキーワード。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  数値式を指定する**と、子**メンバーのセットに対して評価された数値式の値に従って、1番目のセット内の各メンバーの子を昇順で並べ替えます。 数値式が指定されていない場合、関数は、クエリコンテキストによって決定される子メンバーのセットによって表されるセルの値に基づいて、最初のセット内の各メンバーの子を昇順で並べ替えます。 この動作は、並べ替えを行わずに、一連のメンバーを自然な順序で返す、下端のカウントおよび末尾 (MDX) 関数に似ています。  
   
  並べ替えの後、**ドリルダウン Memberbottom**関数は、親メンバーと子メンバーの*数を含む*セットを返します。これには、最小値が設定され、両方のセットに含まれています。  
@@ -63,6 +63,6 @@ DrillDownMemberBottom(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_
  XMLA プロパティ MdpropMdxDrillFunctions に対してクエリを実行すると、ドリル機能に対してサーバーが提供するサポートのレベルを確認できます。詳細については、「[サポートされる Xmla プロパティ &#40;xmla&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

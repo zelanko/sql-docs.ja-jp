@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ad4bc2bf41caacbafb5bf36b5e95263ab2f85d22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68098535"
 ---
 # <a name="max-mdx"></a>Max (MDX)
@@ -34,12 +34,11 @@ Max( Set_Expression [ , Numeric_Expression ] )
  *Numeric_Expression*  
  有効な数値式です。通常は、数値を返すセル座標の多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  数値式を指定した場合、この数値式がセットに対して評価されてから、その評価で得られる最大値が返されます。 数値式を指定しなかった場合、指定したセットがそのセットのメンバーの現在のコンテキストで評価されてから、その評価で得られる最大値が返されます。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、数値セットの最大値が計算される際、NULL 値は無視されます。  
+>  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、数値セットの最大値が計算される際、NULL 値は無視されます。  
   
 ## <a name="example"></a>例  
  次の例では、Adventure Works キューブ内の四半期、サブカテゴリ、および国ごとに毎月の売上高の最大値を返します。  
@@ -59,6 +58,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

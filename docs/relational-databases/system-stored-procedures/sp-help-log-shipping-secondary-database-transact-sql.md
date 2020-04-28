@@ -18,10 +18,10 @@ ms.assetid: 11ce42ca-d3f1-44c8-9cac-214ca8896b9a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 65c4cd3f6ca07f2c3cb35dc7dcbaad373930ecc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68066809"
 ---
 # <a name="sp_help_log_shipping_secondary_database-transact-sql"></a>sp_help_log_shipping_secondary_database (Transact-SQL)
@@ -52,7 +52,7 @@ sp_help_log_shipping_secondary_database
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|[説明]|  
+|列名|説明|  
 |-----------------|-----------------|  
 |**secondary_id**|ログ配布構成におけるセカンダリ サーバーの ID。|  
 |**primary_server**|ログ配布構成における [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のプライマリ インスタンスの名前。|  
@@ -84,7 +84,7 @@ sp_help_log_shipping_secondary_database
 |**history_retention_period**|指定されたセカンダリデータベースのログ配布履歴レコードが保持されてから削除されるまでの時間 (分単位)。|  
 |**last_restored_latency**|ログバックアップがプライマリで作成されてからセカンダリに復元されるまでの経過時間 (分単位)。<br /><br /> 初期値が NULL です。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  *Secondary_database*パラメーターを指定した場合、結果セットにはそのセカンダリデータベースに関する情報が含まれます。*secondary_id*パラメーターを指定した場合、結果セットには、そのセカンダリ id に関連付けられているすべてのセカンダリデータベースに関する情報が含まれます。  
   
  **sp_help_log_shipping_secondary_database**は、セカンダリサーバーの**master**データベースから実行する必要があります。  
@@ -95,6 +95,6 @@ sp_help_log_shipping_secondary_database
 ## <a name="see-also"></a>参照  
  [sp_help_log_shipping_secondary_primary &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)   
  [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

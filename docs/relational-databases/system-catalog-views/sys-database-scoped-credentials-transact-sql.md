@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 03687ea50b04c96aa4dbafab9d02d2bbc33a14b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079422"
 ---
 # <a name="sysdatabase_scoped_credentials-transact-sql"></a>database_scoped_credentials (Transact-sql)
@@ -30,14 +30,14 @@ ms.locfileid: "68079422"
 
   データベース内のデータベーススコープ資格情報ごとに1行のデータを返します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |name|**sysname**|データベーススコープの資格情報の名前。 データベース内で一意です。|  
 |credential_id|**int**|データベーススコープ資格情報の ID。 データベース内で一意です。|  
 |principal_id|**int**|キーを所有するデータベースプリンシパルの ID。|  
-|credential_identity|**nvarchar(4000)**|使用する識別情報の名前。 通常、これは Windows ユーザーです。 一意である必要はありません。|  
-|create_date|**DATETIME**|データベーススコープの資格情報が作成された時刻。|  
-|modify_date|**DATETIME**|データベーススコープの資格情報が最後に変更された時刻。|  
+|credential_identity|**nvarchar (4000)**|使用する識別情報の名前。 通常、これは Windows ユーザーです。 一意である必要はありません。|  
+|create_date|**datetime**|データベーススコープの資格情報が作成された時刻。|  
+|modify_date|**datetime**|データベーススコープの資格情報が最後に変更された時刻。|  
 |target_type|**nvarchar (100)**|データベーススコープ資格情報の種類。 データベース`NULL`スコープの資格情報に対してを返します。|  
 |target_id|**int**|データベーススコープの資格情報のマップ先のオブジェクトの ID。 データベーススコープの資格情報の場合は0を返します|  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68079422"
  [Transact-sql&#41;&#40;データベーススコープの資格情報を作成する](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)   
  [Transact-sql&#41;&#40;データベーススコープの資格情報の変更](../../t-sql/statements/alter-database-scoped-credential-transact-sql.md)   
  [Transact-sql&#41;&#40;データベーススコープの資格情報を削除します。](../../t-sql/statements/drop-database-scoped-credential-transact-sql.md)   
- [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
+ [Transact-sql&#41;&#40;の資格情報の作成](../../t-sql/statements/create-credential-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
   
   

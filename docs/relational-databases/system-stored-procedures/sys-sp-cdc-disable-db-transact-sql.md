@@ -22,10 +22,10 @@ ms.assetid: 420fb99e-e60f-445b-b568-da96471f1e8f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f8d85103b48b04284966e77595d0cfa927cd6338
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68083764"
 ---
 # <a name="syssp_cdc_disable_db-transact-sql"></a>sp_cdc_disable_db (Transact-sql)
@@ -47,19 +47,18 @@ sys.sp_cdc_disable_db
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ None  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_cdc_disable_db**は、現在有効になっているデータベース内のすべてのテーブルについて、変更データキャプチャを無効にします。 変更テーブル、ジョブ、ストアドプロシージャ、関数など、変更データキャプチャに関連するすべてのシステムオブジェクトが削除されます。 データベースエントリの**is_cdc_enabled**列、[データベースカタログビュー](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)は0に設定されています。  
   
 > [!NOTE]  
 >  変更データ キャプチャが無効なときにデータベースに対して多数のキャプチャ インスタンスが定義されている場合、実行時間の長いトランザクションがあると sys.sp_cdc_disable_db が実行できなくなる場合があります。 sys.sp_cdc_disable_db を実行する前に sys.sp_cdc_disable_table を使用して個々のキャプチャ インスタンスを無効にすれば、この問題を防ぐことができます。  
   
 ## <a name="permissions"></a>アクセス許可  
- 
-  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
+ **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、`AdventureWorks2012` データベースで変更データ キャプチャを無効にします。  
   
 ```sql  

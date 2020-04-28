@@ -16,10 +16,10 @@ ms.assetid: 033a9c6b-0d7f-4f8a-ab60-33cd6fee0d33
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 5263215c8ccac3d9337f415fe9c279bb3f3ad3ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68091209"
 ---
 # <a name="localdbgetversions-function"></a>LocalDBGetVersions 関数
@@ -58,7 +58,7 @@ ms.locfileid: "68091209"
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
  予期しないエラーが発生しました。 詳細をイベント ログで確認してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  LocalDB API を使用するコードサンプルについては、 [Localdb リファレンスの SQL Server Express](../../relational-databases/sql-server-express-localdb-reference.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  

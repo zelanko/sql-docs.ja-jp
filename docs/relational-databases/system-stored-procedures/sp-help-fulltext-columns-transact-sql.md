@@ -18,10 +18,10 @@ ms.assetid: 92c8656b-f7fd-4904-9796-acc9ffed4106
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8009c9d2aa5f4b8f8be873633420bd1b088ece16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68055093"
 ---
 # <a name="sp_help_fulltext_columns-transact-sql"></a>sp_help_fulltext_columns (Transact-sql)
@@ -52,7 +52,7 @@ sp_help_fulltext_columns [ [ @table_name = ] 'table_name' ] ]
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**TABLE_OWNER**|**sysname**|テーブル所有者 これは、テーブルを作成したデータベースユーザーの名前です。|  
 |**TABLE_ID**|**int**|テーブルの ID。|  
@@ -66,7 +66,7 @@ sp_help_fulltext_columns [ [ @table_name = ] 'table_name' ] ]
 ## <a name="permissions"></a>アクセス許可  
  実行権限は、既定では**public**ロールのメンバーに与えています。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、`Document` テーブルでフルテキスト インデックス作成用に指定された列に関する情報を返します。  
   
 ```  
@@ -80,6 +80,6 @@ GO
  [COLUMNPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/columnproperty-transact-sql.md)   
  [sp_fulltext_column &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-column-transact-sql.md)   
  [sp_help_fulltext_columns_cursor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-cursor-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

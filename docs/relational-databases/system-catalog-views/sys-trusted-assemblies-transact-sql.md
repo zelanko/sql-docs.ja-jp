@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9682535c82f8a579259993e82560dfe6bc930f93
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68061363"
 ---
 # <a name="systrusted_assemblies-transact-sql"></a>sys.trusted_assemblies (Transact-SQL)  
@@ -33,7 +33,7 @@ ms.locfileid: "68061363"
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 
-|列名 |データ型 |[説明] |
+|列名 |データ型 |説明 |
 |--- |--- |--- |
 |hash |varbinary(8000) |アセンブリコンテンツの SHA2_512 ハッシュ。 |
 |description |nvarchar(4000) |アセンブリに関するオプションのユーザー定義の説明。 信頼するアセンブリの簡易名、バージョン番号、カルチャ、公開キー、およびアーキテクチャをエンコードする正規名を使用することをお勧めします。 この値は、共通言語ランタイム (CLR) 側でアセンブリを一意に識別するものであり、sys. アセンブリの clr_name 値と同じです。 |
@@ -42,7 +42,7 @@ ms.locfileid: "68061363"
 | | | |
 
 
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
 
 を使用して**sp_add_trusted_assembly を追加**し、 **sys を追加する必要**があります`sys.trusted_assemblies`。また、からアセンブリを追加または削除 trusted_assemblies。
 

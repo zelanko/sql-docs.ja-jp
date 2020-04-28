@@ -18,10 +18,10 @@ ms.assetid: 9ce1d07c-ee66-4a83-8c73-cd2cc104dd08
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3b8c1b95d8d04e2b11982af14971e43e83db146f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68075772"
 ---
 # <a name="sp_refreshview-transact-sql"></a>sp_refreshview (Transact-sql)
@@ -44,7 +44,7 @@ sp_refreshview [ @viewname = ] 'viewname'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または0以外の数値 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ビューが schemabinding で作成されていない場合は、ビューの定義に影響を与えるビューの基になるオブジェクトに対して変更が行われたときに**sp_refreshview**を実行する必要があります。 それ以外の場合は、ビューのクエリ時に、予期しない結果が生成される可能性があります。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -77,7 +77,7 @@ WHERE so.type = 'V' AND sed.referenced_id = OBJECT_ID('Person.Person');
 ## <a name="see-also"></a>参照  
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sql_expression_dependencies &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
+ [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
  [sp_refreshsqlmodule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-refreshsqlmodule-transact-sql.md)  
   
   

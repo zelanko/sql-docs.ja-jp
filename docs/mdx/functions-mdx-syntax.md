@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 126cfdf6ef690a48d0b9ff17a6963ba37d3ade82
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084129"
 ---
 # <a name="functions-mdx-syntax"></a>関数 (MDX 構文)
@@ -23,7 +23,7 @@ ms.locfileid: "68084129"
 > [!NOTE]  
 >  個々の関数の詳細については、「mdx[関数リファレンス &#40;mdx&#41;](../mdx/mdx-function-reference-mdx.md)」を参照してください。  
   
-|関数のカテゴリ|[説明]|  
+|関数のカテゴリ|説明|  
 |-----------------------|-----------------|  
 |配列関数|ストアド プロシージャで使用する配列を提供します。<br /><br /> 詳細については、「 [MDX&#41;&#40;のストアドプロシージャの使用](../mdx/using-stored-procedures-mdx.md)」を参照してください。|  
 |ディメンション関数|階層、レベル、またはメンバーからディメンションへの参照を返します。<br /><br /> 詳細については、「[ディメンション、階層、およびレベル関数の使用](../mdx/using-dimension-hierarchy-and-level-functions.md)」を参照してください。|  
@@ -40,6 +40,6 @@ ms.locfileid: "68084129"
  関数は、任意の MDX 式に使用することも、含めることもできます。 関数は入れ子にすることもできます。入れ子とは、関数の内部にさらに関数を使用することです。  
   
 ## <a name="see-also"></a>参照  
- [Mdx 構文要素 &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [MDX 構文の要素 &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   
