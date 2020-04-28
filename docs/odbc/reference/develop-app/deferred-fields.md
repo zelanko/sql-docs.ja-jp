@@ -1,5 +1,5 @@
 ---
-title: 繰延フィールド |マイクロソフトドキュメント
+title: 遅延フィールド |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,31 +14,31 @@ ms.assetid: 5abeb9cc-4070-4f43-a80d-ad6a2004e5f3
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 094aba353e10ed568e1959b1d655109296507dee
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305973"
 ---
 # <a name="deferred-fields"></a>遅延フィールド
-*遅延フィールド*の値は、設定時には使用されませんが、ドライバーは、遅延効果の変数のアドレスを保存します。 アプリケーション パラメーター記述子の場合、ドライバーは**SQLExecDirect**または**SQLExecute**の呼び出し時に変数の内容を使用します。 アプリケーション行記述子の場合、ドライバーはフェッチ時に変数の内容を使用します。  
+*遅延フィールド*の値は、設定されているときは使用されませんが、遅延効果のために変数のアドレスが保存されます。 アプリケーションパラメーター記述子の場合、ドライバーは、 **SQLExecDirect**または**sqlexecute**の呼び出し時に変数の内容を使用します。 アプリケーションの行記述子の場合、ドライバーは、フェッチ時に変数の内容を使用します。  
   
- 以下は、遅延フィールドです。  
+ 遅延フィールドは次のとおりです。  
   
--   記述子レコードのSQL_DESC_DATA_PTRフィールドとSQL_DESC_INDICATOR_PTRフィールド。  
+-   記述子レコードの SQL_DESC_DATA_PTR および SQL_DESC_INDICATOR_PTR フィールド。  
   
--   アプリケーション記述子レコードのSQL_DESC_OCTET_LENGTH_PTRフィールド。  
+-   アプリケーション記述子レコードの SQL_DESC_OCTET_LENGTH_PTR フィールド。  
   
--   複数行フェッチの場合、記述子ヘッダーのSQL_DESC_ARRAY_STATUS_PTRフィールドとSQL_DESC_ROWS_PROCESSED_PTRフィールド。  
+-   複数行フェッチの場合、記述子ヘッダーの SQL_DESC_ARRAY_STATUS_PTR および SQL_DESC_ROWS_PROCESSED_PTR フィールドです。  
   
- 記述子が割り振られている場合、各記述子レコードの据え置きフィールドには、最初に NULL 値が入ります。 NULL 値の意味は次のとおりです。  
+ 記述子が割り当てられると、各記述子レコードの遅延フィールドには、最初に null 値が設定されます。 Null 値の意味は次のとおりです。  
   
--   SQL_DESC_ARRAY_STATUS_PTRに null 値が設定されている場合、複数行フェッチは、行ごとの診断情報のこのコンポーネントを返しません。  
+-   SQL_DESC_ARRAY_STATUS_PTR に null 値が含まれている場合、複数行のフェッチでは、行ごとの診断情報のこのコンポーネントを返すことができません。  
   
--   SQL_DESC_DATA_PTRに null 値が設定されている場合、レコードはバインド解除されます。  
+-   SQL_DESC_DATA_PTR に null 値が含まれる場合、レコードはバインド解除されます。  
   
--   ARD のSQL_DESC_OCTET_LENGTH_PTRフィールドに null 値がある場合、ドライバーはその列の長さ情報を返しません。  
+-   の SQL_DESC_OCTET_LENGTH_PTR フィールドに null 値が含まれている場合、ドライバーはその列の長さの情報を返しません。  
   
--   APD のSQL_DESC_OCTET_LENGTH_PTRフィールドに null 値があり、パラメーターが文字列である場合、ドライバーは文字列が null で終わるものと見なします。 出力動的パラメーターの場合、このフィールドに null 値を指定すると、ドライバーが長さ情報を返すことを防ぎます。 SQL_DESC_TYPEフィールドが文字ストリング・パラメーターを示さない場合、SQL_DESC_OCTET_LENGTH_PTRフィールドは無視されます。  
+-   APD の SQL_DESC_OCTET_LENGTH_PTR フィールドに null 値が含まれていて、パラメーターが文字列の場合、ドライバーはその文字列が null で終わることを前提としています。 出力動的パラメーターの場合、このフィールドに null 値を指定すると、ドライバーは長さの情報を返すことができません。 (SQL_DESC_TYPE フィールドに文字文字列パラメーターが指定されていない場合、SQL_DESC_OCTET_LENGTH_PTR フィールドは無視されます)。  
   
- アプリケーションは、遅延フィールドに使用される変数を、フィールドに関連付けてから、ドライバーが読み取りまたは書き込みを行うまでの間に、その変数を解放または破棄してはなりません。
+ アプリケーションでは、遅延フィールドに使用される変数を、フィールドと関連付けられた時刻と、ドライバーが読み書きする時間の間で、割り当てを解除したり破棄したりすることはできません。

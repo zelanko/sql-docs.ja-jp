@@ -1,5 +1,5 @@
 ---
-title: ODBC アプリケーションの基本手順 |マイクロソフトドキュメント
+title: 基本的な ODBC アプリケーションの手順 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: a92d1f78-c669-47ad-88c4-0b1a93503dfc
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 29abb0ec5bbfa9b423290e3354d9455b639f8f59
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306053"
 ---
 # <a name="basic-odbc-application-steps"></a>基本的な ODBC アプリケーションのステップ
-このセクションでは、ODBC アプリケーションの一般的なフローについて説明します。 これらの関数をすべて正確にこの順序で呼び出すアプリケーションは、おそらくありません。 ただし、ほとんどのアプリケーションでは、これらの手順の一部のバリエーションを使用します。 基本的なアプリケーションの手順を次の図に示します。  
+ここでは、ODBC アプリケーションの一般的な流れについて説明します。 すべてのアプリケーションがこれらの関数を厳密にこの順序で呼び出すことはほとんどありません。 ただし、ほとんどのアプリケーションでは、これらの手順の一部を使用します。 基本的なアプリケーションの手順を次の図に示します。  
   
  ![ODBC アプリケーションの基本手順](../../../odbc/reference/develop-app/media/pr10.gif "pr10")  
   

@@ -1,5 +1,5 @@
 ---
-title: レジストリ エントリ (ビジュアル フォックスプロ ODBC ドライバー) |マイクロソフトドキュメント
+title: レジストリエントリ (Visual FoxPro ODBC ドライバー) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,44 +16,44 @@ ms.assetid: 1a63d92d-ca3a-46ae-911f-6788292c801e
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: bd2d419a94c45a872789e095b014159b41d7c217
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304839"
 ---
 # <a name="registry-entries-visual-foxpro-odbc-driver"></a>レジストリ エントリ (Visual FoxPro ODBC ドライバー)
-Visual FoxPro ODBC ドライバーをインストールすると、インストール プログラムはレジストリ キー HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCInst.ini のレジストリ キーでシステムのレジストリを更新し、Microsoft Visual FoxPro ドライバーと呼ばれる新しいキーを追加します。 このキーの下に、次の表に示す値が追加されます。  
+Visual FoxPro ODBC ドライバーをインストールすると、インストールプログラムによって、システムのレジストリがレジストリキー HKEY_LOCAL_MACHINE \SOFTWARE\ODBC\ODBCInst.ini に更新され、Microsoft Visual FoxPro Driver という名前の新しいキーが追加されます。 そのキーの下に、次の表で説明する値が追加されます。  
   
-|値の名前|値の型|[値]|  
+|値の名前|値の型|値|  
 |----------------|----------------|-----------|  
-|アピレレベル|REG_SZ|"1"|  
-|関数を接続する|REG_SZ|「YYN」|  
-|Driver|REG_SZ|vfpodbc.dll ファイルへのシステム パス|  
+|APILevel|REG_SZ|"1"|  
+|ConnectFunctions|REG_SZ|"YYN"|  
+|ドライバー|REG_SZ|Vfpodbc ファイルへのシステムパス|  
 |DriverODBCVer|REG_SZ|"02.50"|  
-|ファイルの拡張|REG_SZ|"*.dbf,\*.cdx,\*.fpt"|  
-|ファイルの使用法|REG_SZ|"1"|  
-|セットアップ|REG_SZ|vfpodbc.dll ファイルへのシステム パス|  
-|SQL レベル|REG_SZ|"0"|  
+|FileExtns|REG_SZ|"* .dbf,\*. cdx,\*. fpt"|  
+|FileUsage|REG_SZ|"1"|  
+|セットアップ|REG_SZ|Vfpodbc ファイルへのシステムパス|  
+|SQLLevel|REG_SZ|"0"|  
   
- インストール プログラムでは、既定の Visual FoxPro ドライバーを表すキー "Visual FoxPro ファイル" もシステムの HKEY_CURRENT_USER\SOFTWARE\ODBC\ODBC.ini キーに追加されます。 このキーの下に、インストール プログラムは次の表に示す値を追加します。  
+ また、インストールプログラムは、既定の Visual FoxPro ドライバーを表す "Visual FoxPro ファイル" キーをシステムの HKEY_CURRENT_USER \SOFTWARE\ODBC\Odbc.ini キーに追加します。 このキーの下で、インストールプログラムによって、次の表に示す値が追加されます。  
   
-|値の名前|値の型|[値]|  
+|値の名前|値の型|値|  
 |----------------|----------------|-----------|  
-|Driver|REG_SZ|vfpodbc.dll ファイルへのシステム パス|  
+|ドライバー|REG_SZ|Vfpodbc ファイルへのシステムパス|  
   
- VISUAL FoxPro ODBC データ ソースを ODBC 構成に追加するたびに、そのデータ ソース名に新しいキーが追加されます。 データ ソースの値は、次の表に示すように **、ODBC Visual FoxPro の [セットアップ**] ダイアログ ボックスで設定した値に対応します。  
+ ODBC 構成に Visual FoxPro ODBC データソースを追加するたびに、そのデータソース名に新しいキーが追加されます。 データソースの値は、次の表に示すように、[ **ODBC Visual FoxPro セットアップ**] ダイアログボックスで設定した値に対応しています。  
   
-|値名 (キーワード)|値の型|[値]|  
+|値の名前 (キーワード)|値の種類|値|  
 |----------------------------|----------------|-----------|  
 |[部単位で印刷]|REG_SQ|サポートされている照合順序|  
-|説明|REG_SZ|データ ソースのユーザー説明|  
-|Driver||vfpodbc.dll ファイルへのシステム パス|  
+|説明|REG_SZ|データソースのユーザーの説明|  
+|ドライバー||Vfpodbc ファイルへのシステムパス|  
 |排他的||はい、いいえ|  
-|バックグラウンドフェッチ||はい、いいえ|  
-|SourceDB|REG_SZ|へのパス 。DBC ファイル|  
+|BackgroundFetch||はい、いいえ|  
+|SourceDB|REG_SZ|へのパス。DBC ファイル|  
 |SourceType|REG_SZ|"DBC" または "DBF"|  
   
- この情報に直接アクセスしないでください。データ ソースを追加、変更、または削除すると、レジストリの管理は ODBC アドミニストレータによって処理されます。  
+ この情報に直接アクセスすることはできません。レジストリの管理は、データソースを追加、変更、または削除するときに、ODBC 管理者によって処理されます。  
   
- これらのキーワードと値の一部を[、SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md) ODBC API 関数のパラメーターとして使用できます。
+ [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md) ODBC API 関数では、これらのキーワードと値の一部をパラメーターとして使用できます。

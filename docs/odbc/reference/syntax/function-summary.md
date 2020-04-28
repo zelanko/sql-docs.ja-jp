@@ -1,5 +1,5 @@
 ---
-title: 関数の概要 |マイクロソフトドキュメント
+title: 関数の概要 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: e7fc96e3-3f16-4799-b70f-49febed53a44
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: b14480c2621a77472da78382082ec6d7a89c2f67
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306023"
 ---
 # <a name="function-summary"></a>関数の概要
-以下のセクションでは、ODBC 対応アプリケーションおよび関連ソフトウェアで使用される機能について概説します。  
+次のセクションでは、ODBC 対応のアプリケーションおよび関連するソフトウェアで使用される関数の概要を示します。  
   
 -   [ODBC 関数の概要](../../../odbc/reference/syntax/odbc-function-summary.md)  
   

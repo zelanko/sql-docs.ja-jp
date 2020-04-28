@@ -1,5 +1,5 @@
 ---
-title: マッピング |マイクロソフトドキュメント
+title: SQLSetStmtOption Mapping |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,45 +14,45 @@ ms.assetid: 6a9921aa-8a53-4668-9b13-87164062f1e5
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 91264cee0dfceeb7195e2bad40d1638a88e1e01a
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304903"
 ---
 # <a name="sqlsetstmtoption-mapping"></a>SQLSetStmtOption のマッピング
-アプリケーションが ODBC *3.x*ドライバを使用して**SQLSetStmtOption**を呼び出すと、次の  
+アプリケーションが ODBC *3. x*ドライバーを介して**SQLSetStmtOption**を呼び出すとき、  
   
 ```  
 SQLSetStmtOption(StatementHandle, fOption, vParam)  
 ```  
   
- 次のように結果が返されます。  
+ 次のようになります。  
   
--   *fOption*が文字列である ODBC 定義のステートメント属性を示す場合、ドライバー マネージャーは、文字列  
+-   *Foption*が文字列である ODBC 定義のステートメント属性を示す場合、ドライバーマネージャーはを呼び出します。  
   
     ```  
     SQLSetStmtAttr(StatementHandle, fOption, ValuePtr, SQL_NTS)  
     ```  
   
--   *fOption*が 32 ビット整数値を返す ODBC 定義のステートメント属性を示す場合、ドライバー マネージャーは、32 ビットの整数値を呼び出します。  
+-   *Foption*が32ビットの整数値を返す ODBC 定義のステートメント属性を示す場合、ドライバーマネージャーはを呼び出します。  
   
     ```  
     SQLSetStmtAttr(StatementHandle, fOption, ValuePtr, 0)  
     ```  
   
--   *fOption*がドライバ定義のステートメント属性を示す場合、ドライバー マネージャーは  
+-   *Foption*がドライバー定義のステートメント属性を示す場合、ドライバーマネージャーはを呼び出します。  
   
     ```  
     SQLSetStmtAttr(StatementHandle, fOption, ValuePtr, BufferLength)  
     ```  
   
- 前の 3 つのケースでは、**引数引数**が*hstmt*の値に設定され、 *Attribute*引数は*fOption*の値に設定され *、ValuePtr*引数は*vParam*として値に設定されます。  
+ 上記の3つのケースでは、 **StatementHandle**引数は*hstmt*の値に設定され、*属性*引数は*foption*の値に設定され、 *valueptr*引数は*vparam*として値に設定されます。  
   
- ドライバー マネージャーは、ドライバー定義ステートメント属性が文字列または 32 ビット整数値を必要とするかどうかを知らないので **、SQLSetStmtAttr**の*StringLength*引数に有効な値を渡す必要があります。 ドライバーが定義した、ドライバー定義ステートメント属性の特別なセマンティクスを定義し **、SQLSetStmtOption**を使用して呼び出す必要がある場合は **、SQLSetStmtOption**をサポートする必要があります。  
+ ドライバーマネージャーは、ドライバー定義のステートメント属性に文字列または32ビットの整数値が必要かどうかを認識しないため、 **SQLSetStmtAttr**の*stringlength*引数に有効な値を渡す必要があります。 ドライバーがドライバー定義のステートメント属性に対して特殊なセマンティクスを定義しており、 **SQLSetStmtOption**を使用して呼び出す必要がある場合は、 **SQLSetStmtOption**をサポートする必要があります。  
   
- アプリケーションが**SQLSetStmtOption**を呼び出して ODBC *3.x*ドライバーでドライバー固有のステートメント オプションを設定し、ODBC *2.x*バージョンのドライバーでオプションが定義されている場合は、ODBC *3.x*ドライバーのオプションに新しいマニフェスト定数を定義する必要があります。 古いマニフェスト定数が**SQLSetStmtOption**の呼び出しで使用されている場合、ドライバー マネージャーは *、文字列長の*引数を 0 に設定して**SQLSetStmtAttr**を呼び出します。  
+ アプリケーションが**SQLSetStmtOption**を呼び出して odbc *3. x*ドライバーでドライバー固有のステートメントオプションを設定し、オプションが odbc *2.x バージョンの*ドライバーで定義されている場合は、odbc *2.x ドライバーの*オプションに新しいマニフェスト定数を定義する必要があります。 **SQLSetStmtOption**の呼び出しで古いマニフェスト定数が使用されている場合、ドライバーマネージャーは*stringlength*引数を0に設定して**SQLSetStmtAttr**を呼び出します。  
   
- アプリケーションが**SQLSetStmtAttr**を呼び出して、ODBC *3.x*ドライバーでSQL_ATTR_USE_BOOKMARKSをSQL_UB_ONに設定すると、SQL_ATTR_USE_BOOKMARKSステートメント属性がSQL_UB_FIXEDに設定されます。 SQL_UB_FIXEDと同じ定数SQL_UB_ON。 ドライバー マネージャーは、ドライバーにSQL_UB_FIXEDを渡します。 ODBC *3.x*ではSQL_UB_FIXEDは非推奨でしたが、ODBC *3.x*ドライバは、固定長ブックマークを使用する ODBC *2.x*アプリケーションで動作するように実装する必要があります。  
+ アプリケーションが**SQLSetStmtAttr**を呼び出して、ODBC *3. x*ドライバーで SQL_UB_ON に SQL_ATTR_USE_BOOKMARKS を設定すると、SQL_ATTR_USE_BOOKMARKS statement 属性が SQL_UB_FIXED に設定されます。 SQL_UB_ON は SQL_UB_FIXED と同じ定数です。 ドライバーマネージャーは SQL_UB_FIXED をドライバーに渡します。 SQL_UB_FIXED*は odbc 3.x*では非推奨とされましたが、odbc 3.x ドライバーは、固定長のブックマークを使用*する odbc 2.x*アプリケーションを操作するためにそれを実装する必要が*あります。*  
   
- ODBC *3.x*ドライバの場合、ドライバ マネージャは、*オプション*がSQL_STMT_OPT_MINとSQL_STMT_OPT_MAXの間にあるか、またはSQL_CONNECT_OPT_DRVR_STARTより大きいかどうかをチェックしなくなりました。
+ ODBC 3.x ドライバーの場合、ドライバーマネージャーは、*オプション*が SQL_STMT_OPT_MIN と SQL_STMT_OPT_MAX の間にあるかどうか、または SQL_CONNECT_OPT_DRVR_START より大きいかどうかを確認しなく*なります。*

@@ -1,5 +1,5 @@
 ---
-title: LIKE エスケープ シーケンス |マイクロソフトドキュメント
+title: LIKE エスケープシーケンス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,30 +15,30 @@ ms.assetid: 798d75ea-be9d-4bef-b297-318bc327f1ca
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 517c21f7b64fa7ceb662af9839a9fed1a1e6eff6
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304923"
 ---
 # <a name="like-escape-sequence"></a>LIKE エスケープ シーケンス
-ODBC は LIKE 句にエスケープ シーケンスを使用します。 このエスケープシーケンスの構文は次のとおりです。  
+ODBC では、LIKE 句にエスケープシーケンスを使用します。 このエスケープシーケンスの構文は次のとおりです。  
   
 ```  
 {'escape-character'}  
 ```  
   
-## <a name="remarks"></a>解説  
- BNF 表記では、構文は次のとおりです。  
+## <a name="remarks"></a>Remarks  
+ BNF 表記では、構文は次のようになります。  
   
- *ODBC に似るエスケープ*::=  
+ *ODBC のような-escape* :: =  
   
- *ODBC-esc-イニシエータ*エスケープ '*エスケープ文字*' *ODBC-esc-終端文字*  
+ *Odbc-esc-開始側*エスケープ '*エスケープ文字*' *odbc-esc-ターミネータ*  
   
- *エスケープ文字*::=*文字*  
+ *エスケープ文字*:: =*文字*  
   
- *ODBC-esc-イニシエーター* ::= {  
+ *ODBC-esc-イニシエーター* :: = {  
   
- *ODBC-esc 終止符*::= }  
+ *ODBC-esc-ターミネータ*:: =}  
   
- ドライバーが LIKE エスケープ シーケンスをサポートしているかどうかを判断するには、アプリケーションは、SQL_LIKE_ESCAPE_CLAUSE情報の種類を使用して**SQLGetInfo**を呼び出すことができます。
+ ドライバーで LIKE エスケープシーケンスがサポートされているかどうかを判断するために、アプリケーションは SQL_LIKE_ESCAPE_CLAUSE 情報の種類を使用して**SQLGetInfo**を呼び出すことができます。

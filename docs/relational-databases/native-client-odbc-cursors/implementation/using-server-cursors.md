@@ -1,5 +1,5 @@
 ---
-title: サーバー カーソルの使用 |マイクロソフトドキュメント
+title: サーバーカーソルを使用する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,16 +17,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ede31d9d59ef7d01dfd7e7b610edae273cbc5d64
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305390"
 ---
 # <a name="using-server-cursors"></a>サーバー カーソルの使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  ODBC アプリケーションが ODBC カーソル属性のいずれかをデフォルト以外に設定すると、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ネイティブ クライアント ODBC ドライバーは、同じ種類の API サーバー カーソルを実装するようにサーバーに要求します。 API サーバー カーソルを使用すると、クライアント側のメモリを解放でき、クライアントとサーバー間のネットワーク トラフィックを大幅に削減できます。  
+  ODBC アプリケーションで、ODBC カーソルの属性が既定値以外に設定されている場合[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 、NATIVE Client ODBC ドライバーは、同じ種類の API サーバーカーソルを実装するようにサーバーに要求します。 API サーバー カーソルを使用すると、クライアント側のメモリを解放でき、クライアントとサーバー間のネットワーク トラフィックを大幅に削減できます。  
   
  API サーバー カーソルの潜在的な欠点は、現時点では、すべての SQL ステートメントをサポートしているわけではないことです。 次の機能は、API サーバー カーソルでは実行できません。  
   

@@ -1,5 +1,5 @@
 ---
-title: ストアド プロシージャの実行 |マイクロソフトドキュメント
+title: ストアドプロシージャの実行 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0b69a9177f98c8ee1096c18f368af12b11d6b325
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304553"
 ---
 # <a name="running-stored-procedures"></a>ストアド プロシージャの実行
@@ -38,7 +38,7 @@ ms.locfileid: "81304553"
   
  ステートメントの実行時、データ ソースに対して (クライアント アプリケーション内でステートメントを直接実行または準備せずに) ストアド プロシージャを呼び出すと、次のような利点があります。  
   
--   高いパフォーマンス  
+-   高パフォーマンス  
   
      SQL ステートメントは、プロシージャが作成される時点で、解析およびコンパイルされます。 プロシージャの実行時には、これらの作業は必要ありません。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "81304553"
   
      複雑なクエリをネットワーク経由で送信するのではなく、プロシージャを実行することで、ネットワーク トラフィックを削減できます。 ODBC アプリケーションが ODBC { CALL } 構文を使用してストアド プロシージャを実行すると、ODBC ドライバーがさらに最適化を行い、パラメーター データの変換が不要になります。  
   
--   より大きな一貫性  
+-   整合性の向上  
   
      組織の規則がストアド プロシージャなどの 1 つのリソースに集約して実装されると、コーディング、テスト、デバッグを一度で行えます。 各プログラマが独自の実装を開発するのではなく、テスト済みの共通のストアド プロシージャを使用できます。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "81304553"
   
      拡張ストアド プロシージャは、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは使用できない C や C++ の機能を使用できます。  
   
-     ストアド プロシージャを呼び出す方法の例については、「 [ODBC&#41;&#40;戻りコードと出力パラメーターの処理](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)」を参照してください。  
+     ストアドプロシージャを呼び出す方法の例については、「 [&#40;ODBC&#41;のリターンコードと出力パラメーターの処理](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
@@ -69,7 +69,7 @@ ms.locfileid: "81304553"
 -   [ストアド プロシージャの結果の処理](../../relational-databases/native-client-odbc-stored-procedures/processing-stored-procedure-results.md)  
   
 ## <a name="see-also"></a>参照  
- [ODBC&#41;&#40;SQL Server ネイティブ クライアント](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [ODBC&#41;&#40;ストアド プロシージャの操作方法のトピックを実行する](https://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)  
+ [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [ストアドプロシージャの実行方法に関するトピック &#40;ODBC&#41;](https://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)  
   
   

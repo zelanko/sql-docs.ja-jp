@@ -1,5 +1,5 @@
 ---
-title: ODBC 関数とカーソル ライブラリ |マイクロソフトドキュメント
+title: ODBC 関数とカーソルライブラリ |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ ms.assetid: c609d0fb-787a-4b39-9673-332d411b3d63
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: d8293e9bc952fc1dffc5a8f796f5a066b91ae811
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304343"
 ---
 # <a name="odbc-functions-and-the-cursor-library"></a>ODBC 関数およびカーソル ライブラリ
 > [!IMPORTANT]  
->  この機能は、今後のバージョンの Windows で削除される予定です。 新しい開発作業でこの機能を使用することは避け、現在この機能を使用しているアプリケーションを変更する予定です。 マイクロソフトでは、ドライバーのカーソル機能を使用することをお勧めします。  
+>  この機能は、今後のバージョンの Windows では削除される予定です。 新しい開発作業ではこの機能の使用を避け、現在この機能を使用しているアプリケーションの変更を検討してください。 Microsoft では、ドライバーのカーソル機能を使用することをお勧めします。  
   
- ODBC カーソル ライブラリが接続に対して有効になっている場合、ドライバー マネージャーは、ドライバーではなく、カーソル ライブラリ内の関数を呼び出します。 カーソル ライブラリは、関数を実行するか、指定されたドライバーで呼び出します。  
+ ODBC カーソルライブラリが接続に対して有効になっている場合、ドライバーマネージャーは、ドライバーではなくカーソルライブラリの関数を呼び出します。 カーソルライブラリによって、関数が実行されるか、指定されたドライバーで呼び出されます。  
   
  このセクションでは、次のトピックを扱います。  
   
@@ -33,9 +33,9 @@ ms.locfileid: "81304343"
   
 -   [SQLBindParameter (カーソル ライブラリ)](../../../odbc/reference/appendixes/sqlbindparameter-cursor-library.md)  
   
--   [操作 (カーソル ライブラリ)](../../../odbc/reference/appendixes/sqlbulkoperations-and-the-cursor-library.md)  
+-   [SQLBulkOperations (カーソルライブラリ)](../../../odbc/reference/appendixes/sqlbulkoperations-and-the-cursor-library.md)  
   
--   [カーソルを閉じる (カーソル ライブラリ)](../../../odbc/reference/appendixes/sqlclosecursor-odbc.md)  
+-   [Sqlclo(カーソルライブラリ)](../../../odbc/reference/appendixes/sqlclosecursor-odbc.md)  
   
 -   [SQLEndTran (カーソル ライブラリ)](../../../odbc/reference/appendixes/sqlendtran-cursor-library.md)  
   
@@ -67,7 +67,7 @@ ms.locfileid: "81304343"
   
 -   [SQLSetDescField および SQLSetDescRec (カーソル ライブラリ)](../../../odbc/reference/appendixes/sqlsetdescfield-and-sqlsetdescrec-cursor-library.md)  
   
--   [SQL セットエンバトル (カーソル ライブラリ)](../../../odbc/reference/appendixes/sqlsetenvattr-and-the-cursor-library.md)  
+-   [SQLSetEnvAttr (カーソルライブラリ)](../../../odbc/reference/appendixes/sqlsetenvattr-and-the-cursor-library.md)  
   
 -   [SQLSetPos (カーソル ライブラリ)](../../../odbc/reference/appendixes/sqlsetpos-cursor-library.md)  
   

@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5db24ee3b68d1a8989200479a3ce4018e63a5177
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304517"
 ---
 # <a name="command-parameters"></a>コマンド パラメーター
@@ -33,7 +33,7 @@ ms.locfileid: "81304517"
 {call SalesByCategory('Produce', ?)}  
 ```  
   
- ネットワーク トラフィックを減らすことによってパフォーマンスを向上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]させるために、ネイティブ クライアント OLE DB プロバイダーは、コマンドを実行する前に**ICommandWithParameters:::GetParameterInfo**または**ICommandPrepare::Prepare**が呼び出されない限り、パラメーター情報を自動的に派生しません。 つまり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアント OLE DB プロバイダは自動的には使用されません。  
+ ネットワークトラフィックを減らすことによってパフォーマンス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を向上させるために、Native Client OLE DB プロバイダーは、コマンドの実行前に**ICommandWithParameters:: Getparameterinfo**または**ICommandPrepare::P repare**が呼び出されない限り、パラメーター情報を自動的には派生しません。 これは、Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーが自動的に実行しないことを意味します。  
   
 -   **ICommandWithParameters::SetParameterInfo** で指定されたデータ型の正当性を確認すること。  
   
@@ -52,14 +52,14 @@ ms.locfileid: "81304517"
 > [!NOTE]  
 >  SQL Native Client OLE DB プロバイダーでは、FROM 句が含まれている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UPDATE ステートメントや DELETE ステートメント、パラメーターを含むサブクエリに依存する SQL ステートメント、比較の両方の式、LIKE 述部、および定量化された述語内にパラメーター マーカーを含む SQL ステートメント、またはパラメーターのいずれかが、関数に対するパラメーターになっているクエリの場合は、**ICommandWithParameters::GetParameterInfo** を呼び出すことはできません。 また、SQL ステートメントをバッチ処理する場合、バッチ内の最初のステートメントの後にあるステートメント内のパラメーター マーカーに対して、**ICommandWithParameters::GetParameterInfo** を呼び出すことはできません。 [!INCLUDE[tsql](../../includes/tsql-md.md)] コマンド内ではコメント (/* \*/) を使用できません。  
   
- ネイティブ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアント OLE DB プロバイダーは、SQL ステートメント コマンドで入力パラメーターをサポートします。 プロシージャ呼び出しコマンドでは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、ネイティブ クライアント OLE DB プロバイダーは、入力、出力、および入出力の各パラメーターをサポートします。 出力パラメーターの値は、実行時 (行セットが返されない場合のみ)、または返されたすべての行セットがアプリケーションによって使用されたときにアプリケーションに返されます。 返される値が有効であることを保証するには、**IMultipleResults** を使用して行セットを強制的に使用します。  
+ Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、SQL ステートメントコマンドで入力パラメーターをサポートしています。 プロシージャ呼び出しコマンドでは、Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、入力、出力、入出力のパラメーターをサポートしています。 出力パラメーターの値は、実行時 (行セットが返されない場合のみ)、または返されたすべての行セットがアプリケーションによって使用されたときにアプリケーションに返されます。 返される値が有効であることを保証するには、**IMultipleResults** を使用して行セットを強制的に使用します。  
   
- ストアド プロシージャ パラメーターの名前を DBPARAMBINDINFO 構造体で指定する必要はありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *pwszName*メンバーの値に NULL を使用して、ネイティブ クライアント OLE DB プロバイダーがパラメーター名を無視し **、ICommandWithParameters::SetParameterInfo**の*rgParamOrdinals*メンバーで指定された序数のみを使用することを示します。 コマンド テキストに名前付きのパラメーターと名前のないパラメーターの両方が含まれている場合、どの名前付きパラメーターよりも前に、名前のないパラメーターをすべて指定する必要があります。  
+ ストアド プロシージャ パラメーターの名前を DBPARAMBINDINFO 構造体で指定する必要はありません。 *PwszName*メンバーの値には NULL を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーがパラメーター名を無視し、 **ICommandWithParameters:: setparameterinfo**の*rgParamOrdinals*メンバーに指定されている序数のみを使用するように指定します。 コマンド テキストに名前付きのパラメーターと名前のないパラメーターの両方が含まれている場合、どの名前付きパラメーターよりも前に、名前のないパラメーターをすべて指定する必要があります。  
   
- ストアド プロシージャ パラメータの名前を指定すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアント OLE DB プロバイダは名前をチェックして、その名前が有効かどうかを確認します。 ネイティブ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアント OLE DB プロバイダーは、コンシューマーからエラー のパラメーター名を受け取るとエラーを返します。  
+ ストアドプロシージャパラメーターの名前が指定されている場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、Native Client OLE DB プロバイダーは、その名前が有効であることを確認します。 Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、コンシューマーから間違ったパラメーター名を受け取ったときにエラーを返します。  
   
 > [!NOTE]  
->  XML およびユーザー[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]定義型 (UDT) のサポートを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]公開するために、ネイティブ クライアント OLE DB プロバイダーは、新しい[ISSCommandWithParameters](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)インターフェイスを実装します。  
+>  XML およびユーザー定義[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型 (UDT) のサポートを公開するために[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、Native Client OLE DB プロバイダーは新しい[isscommandwithparameters](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)インターフェイスを実装しています。  
   
 ## <a name="see-also"></a>参照  
  [コマンド](../../relational-databases/native-client-ole-db-commands/commands.md)  

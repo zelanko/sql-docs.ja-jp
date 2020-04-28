@@ -1,5 +1,5 @@
 ---
-title: 既定のデータ ソース |マイクロソフトドキュメント
+title: 既定のデータソース |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -22,17 +22,17 @@ ms.assetid: dd473cc6-f051-4aa0-ab14-3dd1b37fe99e
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 978362b7dfe92d1333f83be684f6326cf25dd69b
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305993"
 ---
 # <a name="default-data-source"></a>既定のデータ ソース
-ドライバーは、アプリケーションが明示的に指定しない場合には、既定のデータ ソースと呼ばれるデータ ソースを選択できます。  
+ドライバーは、既定のデータソースと呼ばれるデータソースを選択することがあります。ただし、アプリケーションで明示的に指定されていない場合があります。  
   
--   *引数が*長さ 0 の文字列、null ポインタ、またはデフォルトである**SQLConnect**の呼び出しで。  
+-   **SQLConnect**の呼び出しで、 *ServerName*引数が長さ0の文字列、null ポインター、または DEFAULT です。  
   
--   **SQLDriverConnect**の呼び出しでは *、InConnectionString*は**DSN**=DEFAULT を指定するか、DSN**キーワードで**システム情報に含まれていないデータ ソースを指定します。  
+-   **SQLDriverConnect**の呼び出しで、 *inconnectionstring*は**dsn**= DEFAULT を指定するか、 **dsn**キーワードにシステム情報に含まれていないデータソースを指定します。  
   
- 既定のデータ ソースの指定方法は、ドライバーで定義されます。 これには管理上の操作が含まれる場合があり、ユーザーによって異なる場合があります。
+ 既定のデータソースを指定する方法はドライバーで定義されています。 これには管理操作が含まれる場合があり、ユーザーによって異なる場合があります。

@@ -1,5 +1,5 @@
 ---
-title: コンフィグトランスレータ機能 |マイクロソフトドキュメント
+title: ConfigTranslator 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ ms.assetid: 7c22f07e-36de-425b-aa67-e32a84afae92
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: fb2f26f87854d74a217885010014633963472787
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306033"
 ---
 # <a name="configtranslator-function"></a>ConfigTranslator 関数
-**適合 性**  
- バージョン導入: ODBC 2.0  
+**互換性**  
+ 導入されたバージョン: ODBC 2.0  
   
  **まとめ**  
- **トランスレータの**デフォルトの変換オプションを返します。 トランスレータ DLL または別のセットアップ DLL に含めることができます。  
+ **Configtranslator**は、翻訳者の既定の翻訳オプションを返します。 トランスレーター DLL または別のセットアップ DLL に配置できます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,30 +44,30 @@ BOOL ConfigTranslator(
   
 ## <a name="arguments"></a>引数  
  *hwndParent*  
- [入力]親ウィンドウ ハンドル。 ハンドルが null の場合、この関数はダイアログ ボックスを表示しません。  
+ 代入親ウィンドウハンドル。 ハンドルが null の場合、この関数はダイアログボックスを表示しません。  
   
- *オプション*  
- [出力]32 ビット変換オプション。  
+ *pvOption*  
+ Output32ビット変換オプション。  
   
 ## <a name="returns"></a>戻り値  
- 関数は成功した場合は TRUE を返し、失敗した場合は FALSE を返します。  
+ 関数は、成功した場合は TRUE、失敗した場合は FALSE を返します。  
   
 ## <a name="diagnostics"></a>診断  
- **コントランスレータが**FALSE を返すと、関連付けられた*\*pfErrorCode*値が**SQLPostInstallerErrorError**の呼び出しによってインストーラー エラー バッファにポストされ **、SQLInstallerError**を呼び出すことによって取得できます。 次の表は **、SQLInstallerError***\** によって返される可能性のある pfErrorCode 値の一覧であり、この関数のコンテキストでそれぞれについて説明します。  
+ **Configtranslator**から FALSE が返された場合、関連* \*する pferrorcode*値は、 **sqlpostインストーラエラー**の呼び出しによってインストーラーエラーバッファーにポストされ、 **sqlインストーラエラー**を呼び出すことによって取得できます。 次の表は、 **sqlインストーラエラー**によって返される可能性がある* \*pferrorcode*値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
   
-|*\*エラーコード*|エラー|説明|  
+|*\*pfErrorCode*|エラー|説明|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_INVALID_HWND|無効なウィンドウ ハンドル|*引数 hwndParent*が無効であるか、NULL でした。|  
-|ODBC_ERROR_DRIVER_SPECIFIC|ドライバまたはトランスレータ固有のエラー|定義された ODBC インストーラー エラーがないドライバー固有のエラー。 関数の呼び出しで*SzError*引数には、ドライバー固有のエラー メッセージが含まれている必要があります。 **SQLPostInstallerError**|  
-|ODBC_ERROR_INVALID_OPTION|無効な変換オプション|*pvOption*引数に無効な値が含まれています。|  
+|ODBC_ERROR_INVALID_HWND|ウィンドウハンドルが無効です|*HwndParent*引数が無効であるか、NULL でした。|  
+|ODBC_ERROR_DRIVER_SPECIFIC|ドライバーまたはトランスレーター固有のエラー|ODBC インストーラーエラーが定義されていないドライバー固有のエラー。 **Sqlpostインストーラ error**関数の呼び出しの*szerror*引数には、ドライバー固有のエラーメッセージが含まれている必要があります。|  
+|ODBC_ERROR_INVALID_OPTION|無効な変換オプション|*Pvoption*引数に無効な値が含まれています。|  
   
 ## <a name="comments"></a>説明  
- トランスレータが 1 つの変換オプションのみをサポートしている場合 **、True が**返され *、pvOption*が 32 ビット オプションに設定されます。 それ以外の場合は、使用する既定の変換オプションが決定されます。 **ユーザー**がデフォルトの翻訳オプションを選択するダイアログボックスを表示できます。  
+ 変換ツールで1つの翻訳オプションのみがサポートされている場合、 **Configtranslator**は TRUE を返し、 *pvoption*を32ビットオプションに設定します。 それ以外の場合は、使用する既定の翻訳オプションを決定します。 **Configtranslator**では、ユーザーが既定の翻訳オプションを選択するダイアログボックスを表示できます。  
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|参照先|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
-|翻訳オプションの取得|[SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
-|翻訳者の選択|[トランスレータを取得します。](../../../odbc/reference/syntax/sqlgettranslator-function.md)|  
+|翻訳オプションを取得する|[SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
+|トランスレーターの選択|[SQLGetTranslator](../../../odbc/reference/syntax/sqlgettranslator-function.md)|  
 |翻訳オプションの設定|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|

@@ -17,16 +17,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 501e73cd5db2fbf79cd84c0184161f0c6ec6a341
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304445"
 ---
 # <a name="data-types-ole-db"></a>データ型 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアント[!INCLUDE[tsql](../../includes/tsql-md.md)]OLE DB プロバイダを使用してステートメントを実行し、結果を処理するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアント OLE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DB プロバイダが行セットのパラメータまたは列をバインドするとき、および**ITableDefinition**インターフェイスを使用して テーブルを作成する際に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、データ型を OLE DB データ型にマップする方法を知っている必要があります。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client OLE DB プロバイダー [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用してステートメントを実行し、結果を処理するには、行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セット内のパラメーターまた[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は列をバインドするとき、および**itabledefinition**インターフェイスを使用してで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブルを作成するときに、native client OLE DB プロバイダーがデータ型を OLE DB データ型にマップする方法を把握しておく必要があります。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

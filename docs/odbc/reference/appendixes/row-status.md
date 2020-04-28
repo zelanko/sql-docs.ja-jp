@@ -1,5 +1,5 @@
 ---
-title: 行の状態 |マイクロソフトドキュメント
+title: 行の状態 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,22 +16,22 @@ ms.assetid: 0f0b1fb6-f697-4ced-811c-2908e210bc71
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: d4ae4169dc3f2a491663f4a86c564cfee5c2f4d6
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305101"
 ---
 # <a name="row-status"></a>行の状態
 > [!IMPORTANT]  
->  この機能は、今後のバージョンの Windows で削除される予定です。 新しい開発作業でこの機能を使用することは避け、現在この機能を使用しているアプリケーションを変更する予定です。 マイクロソフトでは、ドライバーのカーソル機能を使用することをお勧めします。  
+>  この機能は、今後のバージョンの Windows では削除される予定です。 新しい開発作業ではこの機能の使用を避け、現在この機能を使用しているアプリケーションの変更を検討してください。 Microsoft では、ドライバーのカーソル機能を使用することをお勧めします。  
   
- カーソル ライブラリは、行の状態のバッファーをキャッシュに作成します。 カーソル ライブラリは、このバッファーから行状態配列 (SQL_ATTR_ROW_STATUS_PTR ステートメント属性で指定) の値を取得します。 カーソル ライブラリは、行ごとにこのバッファを次の値に設定します。  
+ カーソルライブラリによって、行の状態のバッファーがキャッシュに作成されます。 カーソルライブラリは、このバッファーから行ステータス配列 (SQL_ATTR_ROW_STATUS_PTR statement 属性で指定) の値を取得します。 カーソルライブラリは、各行に対して、このバッファーを次のように設定します。  
   
--   SQL_ROW_DELETED行に位置指定された削除ステートメントを実行するとき。  
+-   行に位置指定 delete ステートメントを実行するときに SQL_ROW_DELETED します。  
   
--   **SQL_ROW_ERROR SQLFetch**を使用してデータ ソースから行を取得中にエラーが発生したときに発生します。  
+-   **Sqlfetch**を使用してデータソースから行を取得中にエラーが発生したときに SQL_ROW_ERROR します。  
   
--   **sqlFetch**を使用してデータ ソースから行を正常にフェッチした場合にSQL_ROW_SUCCESSします。  
+-   データソースから**Sqlfetch**を使用して行が正常にフェッチされたときに SQL_ROW_SUCCESS します。  
   
--   SQL_ROW_UPDATED行に位置指定された update ステートメントを実行するときに使用します。
+-   行に対して位置指定更新ステートメントを実行するときに SQL_ROW_UPDATED します。

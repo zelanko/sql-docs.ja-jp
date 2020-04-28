@@ -1,5 +1,5 @@
 ---
-title: 影響を受ける行の数を決定する |マイクロソフトドキュメント
+title: 影響を受ける行の数を確認する |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ ms.assetid: 1e56297d-a786-415e-b66d-b42d1b2a8d45
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 156a5fe41d2c9b57a33bbc2bdb4540d1f5b00340
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305893"
 ---
 # <a name="determining-the-number-of-affected-rows"></a>影響を受ける行数の決定
-アプリケーションが行を更新、削除、または挿入した後 **、SQLRowCount**を呼び出して、影響を受けた行数を判断できます。 **SQLRowCount**は **、UPDATE** **、DELETE、** または**INSERT**ステートメントを実行するか、位置指定された更新または削除ステートメントを実行するか **、SQLSetPos**を呼び出すことによって、行が更新、削除、または挿入されたかどうかに関係なく、この値を返します。  
+アプリケーションによって行の更新、削除、または挿入が行われた後、 **SQLRowCount**を呼び出して、影響を受けた行数を調べることができます。 **SQLRowCount**は、 **update**、 **delete**、または**INSERT**ステートメントの実行、位置指定の update または delete ステートメントの実行、または**SQLSetPos**を呼び出すことによって、行が更新、削除、または挿入されたかどうかにかかわらず、この値を返します。  
   
- SQL ステートメントのバッチが実行される場合、影響を受ける行のカウントは、バッチ内のすべてのステートメントの合計カウント、またはバッチ内の各ステートメントの個別のカウントになります。 詳細については、「 [SQL ステートメントのバッチ](../../../odbc/reference/develop-app/batches-of-sql-statements.md)と[複数の結果](../../../odbc/reference/develop-app/multiple-results.md)」を参照してください。  
+ SQL ステートメントのバッチが実行されると、影響を受ける行の数は、バッチ内のすべてのステートメントまたはバッチ内の各ステートメントの個別のカウントの合計数になります。 詳細については、「SQL ステートメントと[複数の結果](../../../odbc/reference/develop-app/multiple-results.md)[のバッチ](../../../odbc/reference/develop-app/batches-of-sql-statements.md)」を参照してください。  
   
- 影響を受ける行の数は、ステートメント ハンドルに関連付けられた診断領域のSQL_DIAG_ROW_COUNT診断ヘッダー フィールドにも返されます。 ただし、このフィールドのデータは、同じステートメント ハンドルでの各関数呼び出し後にリセットされますが **、SQLRowCount**によって返される値は **、SQLBulkOperations** **、SQLExecute、SQLExecDirect、SQLPrepare**、または**SQLSetPos**の呼び出しまでは変わりません。 **SQLExecDirect** **SQLPrepare**
+ 影響を受ける行の数は、ステートメントハンドルに関連付けられている診断領域の SQL_DIAG_ROW_COUNT 診断ヘッダーフィールドにも返されます。 ただし、このフィールドのデータは、同じステートメントハンドルのすべての関数呼び出しの後にリセットされます。一方、 **SQLRowCount**によって返される値は、 **sqlbulkoperations**、 **sqlexecute**、 **SQLExecDirect**、 **SQLPrepare**、または**SQLSetPos**の呼び出しまで同じままです。

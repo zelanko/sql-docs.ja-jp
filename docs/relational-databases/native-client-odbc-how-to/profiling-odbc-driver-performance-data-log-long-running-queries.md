@@ -1,5 +1,5 @@
 ---
-title: 長時間実行クエリのログ記録 (ODBC) |マイクロソフトドキュメント
+title: 実行時間の長いクエリのログ記録 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d1e931a24462711a742b8008eb04538e0e518d55
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305372"
 ---
 # <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>ODBC ドライバー パフォーマンス データのプロファイル - 長時間実行クエリのログ
@@ -30,36 +30,36 @@ ms.locfileid: "81305372"
   
 ### <a name="to-log-long-running-queries-using-odbc-administrator"></a>ODBC アドミニストレーターを使用して実行時間の長いクエリをログに記録するには  
   
-1.  **コントロール パネル**で、[**管理ツール**] をダブルクリックし、[**データ ソース (ODBC)]** をダブルクリックします。 (または、コマンド プロンプトから odbcad32.exe を実行することもできます)。  
+1.  **コントロールパネル**で、[**管理ツール**] をダブルクリックし、[**データソース (ODBC)**] をダブルクリックします。 (または、コマンドプロンプトから odbcad32.exe を実行することもできます)。  
   
-2.  [**ユーザー DSN]、**[**システム DSN]**、または **[ファイル DSN]** タブをクリックします。  
+2.  [**ユーザー dsn**]、[**システム dsn**]、または [**ファイル dsn** ] タブをクリックします。  
   
 3.  実行時間の長いクエリのログを記録するデータ ソースをクリックします。  
   
 4.  **[構成]** をクリックします。  
   
-5.  MICROSOFT SQL Server DSN の構成ウィザードで、[**実行時間の長いクエリをログ ファイルに保存する]** ページに移動します。  
+5.  Microsoft SQL Server DSN の構成ウィザードで、[**実行時間の長いクエリをログファイルに保存する**] ページに移動します。  
   
-6.  [**実行時間の長いクエリをログ ファイルに保存する] チェック ボックスをオンに**します。 ボックスに、実行時間の長いクエリのログを記録するファイルの名前を入力します。 必要に応じて、[**参照]** をクリックして、クエリ ログのファイル システムを参照します。  
+6.  [**実行時間の長いクエリをログファイルに保存する**] を選択します。 ボックスに、実行時間の長いクエリのログを記録するファイルの名前を入力します。 必要に応じて、[**参照**] をクリックして、ファイルシステムでクエリログを参照します。  
   
-7.  [長いクエリ時間 (ミリ秒)] ボックスに、クエリのタイムアウト間隔を**ミリ秒単位**で設定します。  
+7.  [**長いクエリ時間 (ミリ秒)** ] ボックスで、クエリのタイムアウト間隔をミリ秒単位で設定します。  
 
 ### <a name="to-log-long-running-queries-data-programmatically"></a>実行時間の長いクエリをプログラムでログに記録するには  
   
-1.  SQL_COPT_SS_PERF_QUERY_LOG、実行時間の長いクエリ ログ ファイルの完全なパスとファイル名を指定して[、SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)を呼び出します。 次に例を示します。  
+1.  SQL_COPT_SS_PERF_QUERY_LOG と、実行時間の長いクエリログファイルの完全なパスとファイル名を使用して、 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)を呼び出します。 次に例を示します。  
   
     ```  
     C:\\Odbcqry.log  
     ```  
   
-2.  SQL_COPT_SS_PERF_QUERY_INTERVALを指定して[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)を呼び出し、タイムアウト間隔 (ミリ秒単位) に設定します。  
+2.  SQL_COPT_SS_PERF_QUERY_INTERVAL を使用して[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)を呼び出し、タイムアウト間隔をミリ秒単位で設定します。  
   
-3.  SQL_COPT_SS_PERF_QUERYとSQL_PERF_STARTを指定して[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)を呼び出して、実行時間の長いクエリのログ記録を開始します。  
+3.  SQL_COPT_SS_PERF_QUERY と SQL_PERF_START を使用して[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)を呼び出し、実行時間の長いクエリのログ記録を開始します。  
   
-4.  SQL_COPT_SS_PERF_QUERYとSQL_PERF_STOPを指定して[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)を呼び出して、実行時間の長いクエリのログ記録を停止します。  
+4.  SQL_COPT_SS_PERF_QUERY と SQL_PERF_STOP を使用して[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)を呼び出し、実行時間の長いクエリのログ記録を停止します。  
   
 ## <a name="example"></a>例  
- AdventureWorks と呼ばれる ODBC データ ソース (既定のデータベースは AdventureWorks サンプル データベース) が必要です  (アドベンチャーワークスサンプルデータベースは[、Microsoft SQL Server サンプルおよびコミュニティプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホームページからダウンロードできます)。このデータ ソースは、オペレーティング システムによって提供される ODBC ドライバに基づいている必要があります (ドライバ名は "SQL Server" です)。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
+ AdventureWorks と呼ばれる ODBC データ ソース (既定のデータベースは AdventureWorks サンプル データベース) が必要です  (AdventureWorks サンプルデータベースは、 [Microsoft SQL Server のサンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホームページからダウンロードできます)。このデータソースは、オペレーティングシステムによって提供される ODBC ドライバーに基づいている必要があります (ドライバー名は "SQL Server")。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
   
  このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
   
@@ -219,6 +219,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>参照  
- [ODBC ドライバーのパフォーマンスに関するトピック&#40;ODBC&#41;のプロファイリング](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
+ [Odbc&#41;&#40;ODBC ドライバーのパフォーマンスのプロファイル方法に関するトピック](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
   

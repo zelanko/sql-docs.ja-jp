@@ -16,10 +16,10 @@ ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 01fdd3727c25df2985009936c742bc20265f8f74
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304408"
 ---
 # <a name="conversions-ole-db"></a>変換 (OLE DB)
@@ -31,7 +31,7 @@ ms.locfileid: "81304408"
   
 -   **datetime** および **datetimeoffset** 文字列の形式は次のとおりです。  
   
-     *yyyy*-*mm*-*dd*[ *hh*:*mm*:*ss*[.*9999999*[± ± *hh:**mm]]*  
+     *yyyy*-*mm*mm-*dd*[ *hh*:*mm*:*ss*[.*9999999*] [± *hh*:*mm*]]  
   
 -   **time** 型の文字列の形式は次のとおりです。  
   
@@ -39,12 +39,12 @@ ms.locfileid: "81304408"
   
 -   **date** 文字列の形式は次のとおりです。  
   
-     *イイ・*-*ミリ*-*・ドッド*  
+     *yyyy*-*mm*mm-*dd*  
   
 > [!NOTE]  
 >  以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client および SQLOLEDB では、標準の変換が失敗した場合に備えて OLE 変換が実装されていました。 このため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 以降によって実行された変換には、OLE DB 仕様と異なるものがあります。  
   
- 文字列からの変換では、空白文字やフィールドの幅を柔軟に処理できます。 詳細については[、「OLE DB の日付と時刻の向上のためのデータ型のサポート](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)」の「データ形式: 文字列とリテラル」を参照してください。  
+ 文字列からの変換では、空白文字やフィールドの幅を柔軟に処理できます。 詳細については、「データ型のサポート」の「データ形式: 文字列とリテラル」を参照してください。 [OLE DB の日付と時刻の機能強化に関するセクションを](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)参照してください。  
   
  一般的な変換規則を次に示します。  
   

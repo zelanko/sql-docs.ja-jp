@@ -1,5 +1,5 @@
 ---
-title: マッピング |マイクロソフトドキュメント
+title: SQLAllocConnect マッピング |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,21 +14,21 @@ ms.assetid: ac89dd1f-c565-47cc-8fa3-6fa5f80b5d63
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 25e72cd3830cea8504983f4348f6c200261490f4
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305523"
 ---
 # <a name="sqlallocconnect-mapping"></a>SQLAllocConnect のマッピング
-アプリケーションが ODBC 3 を介して**SQLAllocConnect**を呼び出すとき。*x*ドライバー **、SQLAllocConnect**(*henv*, *phdbc*) への呼び出しは、次のように**SQLAllocHandle**にマップされます。  
+アプリケーションが ODBC 3 を介して**Sqlallocconnect**を呼び出すとき。*x*ドライバー: **sqlallocconnect**(*henv*, *phdbc*) の呼び出しは、次のように**SQLAllocHandle**にマップされます。  
   
-1.  ドライバー マネージャーは、接続を割り当て、アプリケーションに返します。  
+1.  ドライバーマネージャーによって接続が割り当てられ、アプリケーションに返されます。  
   
-2.  アプリケーションが接続を確立すると、ドライバー マネージャーは  
+2.  アプリケーションが接続を確立すると、ドライバーマネージャーはを呼び出します。  
   
     ```  
     SQLAllocHandle(SQL_HANDLE_DBC, InputHandle, OutputHandlePtr)  
     ```  
   
-     *InputHandle*が*henv*に設定され *、OutputHandlePtr*が*phdbc*に設定されているドライバーで。
+     *InputHandle*が*henv*に設定されているドライバーで、 *OutputHandlePtr*を*phdbc*に設定します。

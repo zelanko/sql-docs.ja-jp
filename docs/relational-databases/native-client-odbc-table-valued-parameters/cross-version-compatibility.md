@@ -1,5 +1,5 @@
 ---
-title: クロスバージョンの互換性 |マイクロソフトドキュメント
+title: バージョン間の互換性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7990072ac539addf733720fd8c1eaba0652f5d70
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304514"
 ---
 # <a name="cross-version-compatibility"></a>複数バージョン間の互換性
@@ -25,13 +25,13 @@ ms.locfileid: "81304514"
 
   バージョン間の競合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] のクライアント インスタンスまたはサーバー インスタンスでテーブル値パラメーターを処理する必要がある場合に発生することがあります。  
   
- 一般に、テーブル値パラメーターの機能を使用できるのは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (以降) のサーバーに接続されている [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のクライアント (SQL Server Native Client 10.0 を使用) だけです。 カタログ関数の結果セットの新しい列は[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、(またはそれ以降の) サーバーに接続されている場合にのみ表示されます。  
+ 一般に、テーブル値パラメーターの機能を使用できるのは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (以降) のサーバーに接続されている [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のクライアント (SQL Server Native Client 10.0 を使用) だけです。 カタログ関数の結果セットの新しい列は、以降の[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]サーバーに接続されている場合にのみ存在します。  
   
  以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client でコンパイルされたクライアント アプリケーションで、テーブル値パラメーターが必要なステートメントを実行すると、サーバーではデータ変換エラーからこの状態が検出され、ODBC によって、これが "データ型の属性に関する制限に違反しました" というメッセージの SQLSTATE 07006 として返されます。  
   
- ネイティブ クライアント 10.0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以降でコンパイルされたクライアント アプリケーションが、以前のサーバー インスタンスに接続したときにテーブル値パラメーターを使用しようとすると[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアントはこれを検出し、SQLBindCol、SQLBindParameter、SQLSetDescRec の呼び出しは SQLSTATE 07006 で失敗し、メッセージ "制限されたデータ型属性違反 (この接続の SQL Server のバージョンはテーブル値をサポートしていません" パラメーター)  
+ Native client 10.0 以降で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンパイルされたクライアントアプリケーションが、より[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]前のサーバーインスタンスに接続したときにテーブル値パラメーターを使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]しようとした場合、native client はこれを検出し、SQLBindCol、SQLBindParameter、SQLSetDescFields、SQLSetDescRec の呼び出しは SQLSTATE 07006 で失敗し、メッセージ "制限付き SQL Server のデータ型属性違反 (この接続のバージョンはテーブル値パラメーターを  
   
 ## <a name="see-also"></a>参照  
- [ODBC&#41;&#40;テーブル値パラメーター](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+ [テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

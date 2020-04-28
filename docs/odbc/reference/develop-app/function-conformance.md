@@ -1,5 +1,5 @@
 ---
-title: 関数の適合性 |マイクロソフトドキュメント
+title: 関数の準拠 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,40 +16,40 @@ ms.assetid: bb5d68cf-d238-481e-babc-2e9401b4700e
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 33cd0ad4269ed59e31c8ab343ddbb01806afce04
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305593"
 ---
 # <a name="function-conformance"></a>関数の適合性
-次の表は、各 ODBC 関数の準拠レベルを示しています。  
+次の表は、各 ODBC 関数が適切に定義されている場合の準拠レベルを示しています。  
   
-|機能|一致レベル|  
+|関数|一致レベル|  
 |--------------|-----------------------|  
-|**ハンドル**|コア|  
+|**SQLAllocHandle**|コア|  
 |**SQLBindCol**|コア|  
-|**SQLBindParameter**|コア[1]|  
+|**SQLBindParameter**|コア [1]|  
 |**SQLBrowseConnect**|[レベル 1]|  
-|**オペレーション**|[レベル 1]|  
-|**SQLCancel**|コア[1]|  
+|**SQLBulkOperations**|[レベル 1]|  
+|**SQLCancel**|コア [1]|  
 |**SQLCloseCursor**|コア|  
-|**SQLColAttribute**|コア[1]|  
+|**SQLColAttribute**|コア [1]|  
 |**SQLColumnPrivileges**|[レベル 2]|  
 |**SQLColumns**|コア|  
 |**SQLConnect**|コア|  
-|**を使用する**|コア|  
-|**データベースソース**|コア|  
-|**SQLDescribeCol**|コア[1]|  
+|**SQLCopyDesc**|コア|  
+|**SQLDataSources**|コア|  
+|**SQLDescribeCol**|コア [1]|  
 |**SQLDescribeParam**|[レベル 2]|  
-|**接続解除**|コア|  
+|**SQLDisconnect**|コア|  
 |**SQLDriverConnect**|コア|  
 |**SQLDrivers**|コア|  
-|**SQLEndTran**|コア[1]|  
+|**SQLEndTran**|コア [1]|  
 |**SQLExecDirect**|コア|  
 |**SQLExecute**|コア|  
 |**SQLFetch**|コア|  
-|**SQLFetchScroll**|コア[1]|  
+|**SQLFetchScroll**|コア [1]|  
 |**SQLForeignKeys**|[レベル 2]|  
 |**SQLFreeHandle**|コア|  
 |**SQLFreeStmt**|コア|  
@@ -60,7 +60,7 @@ ms.locfileid: "81305593"
 |**SQLGetDescRec**|コア|  
 |**SQLGetDiagField**|コア|  
 |**SQLGetDiagRec**|コア|  
-|**アズ・ビジトル**|コア|  
+|**SQLGetEnvAttr**|コア|  
 |**SQLGetFunctions**|コア|  
 |**SQLGetInfo**|コア|  
 |**SQLGetStmtAttr**|コア|  
@@ -76,18 +76,18 @@ ms.locfileid: "81305593"
 |**SQLProcedures**|[レベル 1]|  
 |**SQLPutData**|コア|  
 |**SQLRowCount**|コア|  
-|**SQLSetConnectAttr**|コア[2]|  
-|**カーソルを設定します。**|コア|  
-|**SQLSetDescField**|コア[1]|  
+|**SQLSetConnectAttr**|コア [2]|  
+|**SQLSetCursorName**|コア|  
+|**SQLSetDescField**|コア [1]|  
 |**SQLSetDescRec**|コア|  
-|**SQLSetEnvAttr**|コア[2]|  
-|**SQLSetPos**|レベル 1[1]|  
-|**SQLSetStmtAttr**|コア[2]|  
-|**SQLSpecialColumns**|コア[1]|  
+|**SQLSetEnvAttr**|コア [2]|  
+|**SQLSetPos**|レベル 1 [1]|  
+|**SQLSetStmtAttr**|コア [2]|  
+|**SQLSpecialColumns**|コア [1]|  
 |**SQLStatistics**|コア|  
 |**SQLTablePrivileges**|[レベル 2]|  
 |**SQLTables**|コア|  
   
- [1] この関数の重要な機能は、より高い準拠レベルでのみ利用可能です。  
+ [1] この関数の重要な機能は、より高い準拠レベルでのみ使用できます。  
   
- [2] 特定の属性をデフォルト以外の値に設定するかどうかは、適合レベルによって異なります。 詳細については、次のセクション「[属性の準拠](../../../odbc/reference/develop-app/attribute-conformance.md)」を参照してください。
+ [2] 特定の属性を既定値以外の値に設定することは、準拠レベルによって異なります。 詳細については、次のセクション「[属性の準拠](../../../odbc/reference/develop-app/attribute-conformance.md)」を参照してください。
