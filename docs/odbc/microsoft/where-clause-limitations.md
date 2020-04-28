@@ -1,5 +1,5 @@
 ---
-title: WHERE 句の制限 |マイクロソフトドキュメント
+title: WHERE 句の制限 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,13 +14,13 @@ ms.assetid: 46b54f74-e4a3-4318-87cf-8a97c38a2718
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 1699397db81d6fe702f60f6953fe7a0ae3726fe3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307563"
 ---
 # <a name="where-clause-limitations"></a>WHERE 句の制限事項
-WHERE 句の句の最大数は 40 です。  
+WHERE 句の句の最大数は40です。  
   
- LONGVARBINARY 列および LONGVARCHAR 列は、最大 255 文字の長さのリテラルと比較できますが、パラメーターを使用して比較することはできません。
+ LONGVARBINARY 列と LONGVARBINARY 列の長さは、最大255文字のリテラルと比較できますが、パラメーターを使用して比較することはできません。

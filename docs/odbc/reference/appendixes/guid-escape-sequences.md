@@ -1,5 +1,5 @@
 ---
-title: GUID エスケープ シーケンス |マイクロソフトドキュメント
+title: GUID エスケープシーケンス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,43 +15,43 @@ ms.assetid: 71d43ef9-4a31-493e-b9e0-f864e9ef3ce6
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 44907bfbd884bf361ce5f2ab8b3f6d8a247aba44
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306973"
 ---
 # <a name="guid-escape-sequences"></a>GUID エスケープ シーケンス
-ODBC は、GUID リテラルにエスケープ シーケンスを使用します。 このエスケープシーケンスの構文は次のとおりです。  
+ODBC では、GUID リテラルにエスケープシーケンスを使用します。 このエスケープシーケンスの構文は次のとおりです。  
   
 ```  
 {guid 'nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn'}  
 ```  
   
-## <a name="remarks"></a>解説  
- BNF 表記では、構文は次のとおりです。  
+## <a name="remarks"></a>Remarks  
+ BNF 表記では、構文は次のようになります。  
   
- *ODBC GUID エスケープ*::=  
-     *ODBC-esc-イニシエーターの GUID*'*GUID 値*' ODBC *esc-終端文字*  
+ *ODBC-guid-escape* :: =  
+     *ODBC-esc-イニシエーター guid*'*guid-値*' *ODBC-esc-ターミネータ*  
   
- *ODBC-esc-イニシエーター* ::= {  
+ *ODBC-esc-イニシエーター* :: = {  
   
- *ODBC-esc 終止符*::= }  
+ *ODBC-esc-ターミネータ*:: =}  
   
- *guid-value* ::=*クロック低値の GUID 区切り記号クロック -ミドル値の GUID 区切り記号クロック -高値の GUID 区切り記号クロック-セパレーター ノード値*  
+ *guid-値*:: = *clock-低値 guid-区切り時計-中間値 guid-区切り時計-高値 guid* -区切り時計-シーケンス値 guid-区切りノード-値  
   
- *GUID 区切り記号*::= -  
+ *guid-separator* :: =-  
   
- *クロック低値*::= hex_digit *hex_digithex_digithex_digithex_digithex_digit hex_digit hex_digithex_digithex_digit*  
+ *clock-低値*:: = *hex_digit hex_digit hex_digit hex_digit hex_digit* hex_digit hex_digit hex_digit  
   
- *クロック中間値*::= *hex_digithex_digithex_digithex_digit*  
+ *時計中央値*:: = *hex_digit hex_digit hex_digit hex_digit*  
   
- *クロック高値*::= *hex_digithex_digithex_digithex_digit*  
+ *clock-高値-value* :: = *hex_digit hex_digit hex_digit hex_digit*  
   
- *クロック・セク値*::= *hex_digithex_digithex_digit hex_digithex_digit*  
+ *clock-seq-value* :: = *hex_digit hex_digit hex_digit hex_digit*  
   
- *クロックノード値*::hex_digit hex_digit hex_digit hex_digit hex_digit *hex_digit hex_digit=* hex_digithex_digitのhex_digithex_digitをhex_digithex_digithex_digithex_digithex_digithex_digitをhex_digithex_digithex_digit  
+ *clock-node-value* :: = *hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit* hex_digit hex_digit hex_digit  
   
- *hex_digit* ::= 0 &#124; 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 9 &#124; A &#124; B &#124; &#124; C &#124; D &#124; D &#124; E &#124; F &#124; 7  
+ *hex_digit* :: = 0 &#124; 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; &#124; B &#124; C &#124; D &#124; E &#124; F  
   
- GUID リテラルエスケープ シーケンスは、GUID データ型がデータ ソースでサポートされている場合にサポートされます。 アプリケーションは、このデータ型がサポートされているかどうかを判断するのに**は SQLGetTypeInfo**を呼び出す必要があります。
+ Guid リテラルのエスケープシーケンスは、GUID データ型がデータソースでサポートされている場合にサポートされます。 アプリケーションは、このデータ型がサポートされているかどうかを判断するために、 **SQLGetTypeInfo**を呼び出す必要があります。

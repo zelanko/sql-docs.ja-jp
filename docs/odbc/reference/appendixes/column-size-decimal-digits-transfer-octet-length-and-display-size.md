@@ -1,5 +1,5 @@
 ---
-title: 列サイズ、10 進数、転送オクテットの長さ、表示サイズ |マイクロソフトドキュメント
+title: 列サイズ、10進数字、転送オクテット長、表示サイズ |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -22,30 +22,30 @@ ms.assetid: 723107a1-be08-4ea3-a8c0-b2c45d38d1aa
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 55b8e9dd305764a89601e9ffd5a337e42a8d8db3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306573"
 ---
-# <a name="column-size-decimal-digits-transfer-octet-length-and-display-size---odbc"></a>列サイズ、10 進数、転送オクテットの長さ、および表示サイズ - ODBC
-データ型は、列 (またはパラメーター) のサイズ、10 進数、長さ、および表示サイズによって特徴付けられます。 次の ODBC 関数は、SQL ステートメント内のパラメーター、またはデータ ソースの SQL データ型に対してこれらの属性を返します。 各 ODBC 関数は、次のように、これらの属性の異なるセットを返します。  
+# <a name="column-size-decimal-digits-transfer-octet-length-and-display-size---odbc"></a>列サイズ、10進数、転送オクテット長、および表示サイズ-ODBC
+データ型は、列 (またはパラメーター) のサイズ、10進数、長さ、および表示サイズによって特徴付けられます。 次の ODBC 関数は、SQL ステートメントのパラメーターまたはデータソースの SQL データ型に対してこれらの属性を返します。 各 ODBC 関数は、次のように、これらの属性の異なるセットを返します。  
   
--   **SQLDescribeCol は**、列のサイズと、それが記述する列の 10 進数を返します。  
+-   **SQLDescribeCol**は、列のサイズと、それが記述する列の10進数を返します。  
   
--   **SQLDescribeパラムは**、それが記述するパラメータのパラメータサイズと10進数を返します。 **SQLBindParameter SQL**ステートメント内のパラメーターのパラメーターのサイズと 10 進数を設定します。  
+-   **SQLDescribeParam**は、記述されているパラメーターのサイズと小数点以下桁数を返します。 **SQLBindParameter**は、SQL ステートメントのパラメーターのサイズと小数点以下桁数を設定します。  
   
--   カタログ関数**SQLColumns** **、SQLProcedureColumns**、および**SQLGetTypeInfo**は、テーブル、結果セット、またはプロシージャ パラメーターとデータ ソース内のデータ型のカタログ属性の列の属性を返します。 **SQLColumns は**、指定されたテーブル (ベース テーブル、ビュー、システム テーブルなど) の列のサイズ、10 進数、および列の長さを返します。 **プロシージャ**内の列のサイズ、10 進数、および長さを返します。 **SQLGetTypeInfo は**、データ ソースの SQL データ型の最大列サイズと最小および最大 10 進数を返します。  
+-   カタログ関数**Sqlcolumns**、 **SQLProcedureColumns**、および**SQLGetTypeInfo**は、テーブル内の列、結果セット、またはプロシージャパラメーターとデータソース内のデータ型のカタログ属性の属性を返します。 **Sqlcolumns**は、列のサイズ、10進数、および指定されたテーブル内の列の長さ (ベーステーブル、ビュー、システムテーブルなど) を返します。 **SQLProcedureColumns**は、プロシージャ内の列のサイズ、10進数、および長さを返します。 **SQLGetTypeInfo**は、列の最大サイズと、データソースの SQL データ型の最小および最大の小数点以下桁数を返します。  
   
- 列またはパラメーターのサイズに対してこれらの関数によって返される値は、ODBC 2 で定義されている "精度" に対応しています。*x .* ただし、値は、SQL_DESC_PRECISIONまたは他の記述子フィールドで返される値に必ずしも一致しません。 ODBC 2 で定義されている "スケール" に対応する 10 進数の数字についても同じことが言えます。*x .* これは、SQL_DESC_SCALEまたは他の記述子フィールドで返される値に必ずしも対応するわけではありませんが、データ型に応じて異なる記述子フィールドから取得されます。 詳細については、[列サイズ](../../../odbc/reference/appendixes/column-size.md)および[10 進数を参照してください](../../../odbc/reference/appendixes/decimal-digits.md)。  
+ これらの関数によって列またはパラメーターのサイズに対して返される値は、ODBC 2 で定義されている "有効桁数" に対応します。*x*。 ただし、値は必ずしも SQL_DESC_PRECISION またはその他の1つの記述子フィールドで返される値に対応しているわけではありません。 これは、ODBC 2 で定義されている "scale" に対応する10進数字にも当てはまります。*x*。 SQL_DESC_SCALE またはその他の1つの記述子フィールドで返される値に必ずしも対応しているわけではありませんが、データ型に応じて異なる記述子フィールドから取得されます。 詳細については、「[列のサイズ](../../../odbc/reference/appendixes/column-size.md)と[小数点以下桁数](../../../odbc/reference/appendixes/decimal-digits.md)」を参照してください。  
   
- 同様に、転送オクテット長の値はSQL_DESC_LENGTHから来るものではありません。 これらは、すべての文字型とバイナリ型の記述子のフィールドのSQL_DESC_OCTET_LENGTHから取得されます。 他の型のこの情報を保持する記述子フィールドはありません。  
+ 同様に、転送オクテット長の値は SQL_DESC_LENGTH からは取得されません。 これらは、すべての文字型およびバイナリ型の記述子のフィールドの SQL_DESC_OCTET_LENGTH から取得されます。 他の型については、この情報を保持する記述子フィールドはありません。  
   
- すべてのデータ型の表示サイズ値は、SQL_DESC_DISPLAY_SIZE単一の記述子フィールドの値に対応します。  
+ すべてのデータ型の表示サイズ値は、1つの記述子フィールドの値 SQL_DESC_DISPLAY_SIZE に対応します。  
   
- 記述子フィールドは、結果セットの特性を記述します。 記述子フィールドには、ステートメント実行前のデータに関する有効な値が含まれていません。 **一方、SQLColumns 、SQLProcedureColumns**、および**SQLGetTypeInfo**によって返される列サイズ、10 進数、および表示サイズの値は、データ ソースのカタログに存在するテーブル列やデータ型などのデータベース オブジェクトの特性を返します。 **SQLProcedureColumns** 同様に、結果セットでは **、SQLColAttribute は**列サイズ、10 進数、およびデータ ソースでの列の転送オクテットの長さを返します。これらの値は、SQL_DESC_PRECISION、SQL_DESC_SCALE、およびSQL_DESC_OCTET_LENGTH記述子フィールドの値と必ずしも同じではありません。  
+ 記述子フィールドは、結果セットの特性を記述します。 記述子フィールドには、ステートメントを実行する前のデータに関する有効な値が含まれていません。 一方、 **Sqlcolumns**、 **SQLProcedureColumns**、および**SQLGetTypeInfo**によって返される列サイズ、10進数字、および表示サイズの値は、データソースのカタログに存在するテーブル列やデータ型などのデータベースオブジェクトの特性を返します。 同様に、結果セットでは、 **Sqlcolattribute**によって、列のサイズ、10進数、およびデータソースの列の転送オクテット長が返されます。これらの値は、必ずしも SQL_DESC_PRECISION、SQL_DESC_SCALE、および SQL_DESC_OCTET_LENGTH 記述子フィールドの値と同じではありません。  
   
- これらの記述子フィールドの詳細については、 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)を参照してください。  
+ これらの記述子フィールドの詳細については、「 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)」を参照してください。  
   
  関連トピック:  
   

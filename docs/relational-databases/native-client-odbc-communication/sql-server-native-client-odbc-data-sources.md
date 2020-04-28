@@ -20,10 +20,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c1abed1c564a2d9c2587592f9eb34d02e35fae9f
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81387402"
 ---
 # <a name="sql-server-native-client-odbc-data-sources"></a>SQL Server Native Client ODBC データ ソース
@@ -31,9 +31,9 @@ ms.locfileid: "81387402"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ ソース名 (DSN) によって ODBC データ ソースが特定されます。ODBC データ ソースには、特定のサーバー上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに接続するために ODBC アプリケーションで必要となるすべての情報が含まれています。 ODBC データ ソース名を定義するには次の 2 つの方法があります。  
   
--   クライアント コンピュータで、[コントロール パネル] の [管理ツール] を開き、[**データ ソース (ODBC)]** をダブルクリックします。 ODBC データ ソース アドミニストレーターが起動します。これを使用して DSN を作成できます。  
+-   クライアントコンピューターで、コントロールパネルの [管理ツール] を開き、[**データソース (ODBC)**] をダブルクリックします。 ODBC データ ソース アドミニストレーターが起動します。これを使用して DSN を作成できます。  
   
--   ODBC アプリケーションで[、SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md)を呼び出します。  
+-   ODBC アプリケーションで、 [Sqlconfigdatasource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md)を呼び出します。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ ソースには次の情報が含まれます。  
   

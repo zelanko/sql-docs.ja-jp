@@ -20,23 +20,23 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6df931b1d79d930aa7900e8fbc6980aec58b9171
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81387752"
 ---
 # <a name="sql-server-native-client-ole-db"></a>SQL Server Native Client (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ネイティブ クライアント OLE DB プロバイダー (SQLNCLI) は、データへのアクセスに使用される低レベルの COM API です。 高いパフォーマンスが必要なツール、ユーティリティ、または低レベルのコンポーネントを開発する場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの使用をお勧めします。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の表形式のデータ ストリーム (TDS) プロトコルに直接アクセスするパフォーマンスの高いネイティブ プロバイダーです。  
+Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client OLE DB PROVIDER (SQLNCLI) は、データへのアクセスに使用される低レベルの COM API です。 高いパフォーマンスが必要なツール、ユーティリティ、または低レベルのコンポーネントを開発する場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの使用をお勧めします。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の表形式のデータ ストリーム (TDS) プロトコルに直接アクセスするパフォーマンスの高いネイティブ プロバイダーです。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に接続するアプリケーションに OLE DB サポートを提供します。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ネイティブ クライアント OLE DB プロバイダーは、OLE DB バージョン 2.0 準拠のプロバイダーです。  
+ Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、OLE DB バージョン2.0 に準拠しているプロバイダーです。  
  
 > [!IMPORTANT]
-> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ネイティブ クライアント OLE DB (SQLNCLI) は非推奨のままであり、新しい開発作業に使用することはお勧めしません。 代わりに、新しい [Microsoft OLE DB Driver for SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) を使用します。これは、最新のサーバー機能で更新されます。
+> Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client OLE DB (SQLNCLI) は非推奨とされます。新しい開発作業には使用しないことをお勧めします。 代わりに、新しい [Microsoft OLE DB Driver for SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) を使用します。これは、最新のサーバー機能で更新されます。
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
@@ -48,7 +48,7 @@ ms.locfileid: "81387752"
   
 -   [行セット](../../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
   
--   [ストアド プロシージャ](../../../relational-databases/native-client/ole-db/stored-procedures.md)  
+-   [ストアドプロシージャ](../../../relational-databases/native-client/ole-db/stored-procedures.md)  
   
 -   [BLOB と OLE オブジェクト](../../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "81387752"
   
 -   [大きな CLR ユーザー定義型 &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md)  
   
--   [OLE DB&#41;&#40;ファイルストリームサポート](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)  
+-   [FILESTREAM サポート &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)  
   
 -   [トランザクション](../../../relational-databases/native-client-ole-db-transactions/transactions.md)  
   
@@ -74,9 +74,9 @@ ms.locfileid: "81387752"
   
 -   [スパース列のサポート &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sparse-columns-support-ole-db.md)  
   
--   [OLE DB&#41; リファレンスを&#40;する SQL Server ネイティブ クライアント](../../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
+-   [SQL Server Native Client &#40;OLE DB&#41; 参照](../../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
   
--   [OLE DB の使用法に関するトピック](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+-   [OLE DB 方法に関するトピック](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Native Client プログラミング](../../../relational-databases/native-client/sql-server-native-client-programming.md)  

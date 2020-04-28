@@ -1,5 +1,5 @@
 ---
-title: カーソルライブラリで実行されない ODBC 関数 |マイクロソフトドキュメント
+title: カーソルライブラリによって実行されない ODBC 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,21 +16,21 @@ ms.assetid: f2941522-75eb-4db9-9468-4800b884dac2
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: ff9d685cf4a509b84142d91f76d41eb7ca3508ee
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81308043"
 ---
 # <a name="odbc-functions-not-executed-by-the-cursor-library"></a>カーソル ライブラリによって実行されない ODBC 関数
 > [!IMPORTANT]  
->  この機能は、今後のバージョンの Windows で削除される予定です。 新しい開発作業でこの機能を使用することは避け、現在この機能を使用しているアプリケーションを変更する予定です。 マイクロソフトでは、ドライバーのカーソル機能を使用することをお勧めします。  
+>  この機能は、今後のバージョンの Windows では削除される予定です。 新しい開発作業ではこの機能の使用を避け、現在この機能を使用しているアプリケーションの変更を検討してください。 Microsoft では、ドライバーのカーソル機能を使用することをお勧めします。  
   
- カーソル ライブラリは、次の関数を実行しません。 アプリケーションがこれらの関数のいずれかを呼び出すと、ドライバー マネージャーは、ドライバーを呼び出す、カーソル ライブラリではありません。  
+ カーソルライブラリでは、次の関数は実行されません。 アプリケーションがこれらの関数のいずれかを呼び出すと、ドライバーマネージャーはカーソルライブラリではなくドライバーを呼び出します。  
   
 |||  
 |-|-|  
-|**SQLFetch**|**アズ・ビジトル**|  
+|**SQLFetch**|**SQLGetEnvAttr**|  
 |**SQLGetConnectAttr**|**SQLSetDescRec**|  
 |**SQLGetDiagField**|**SQLSetEnvAttr**|  
 |**SQLGetDiagRec**||

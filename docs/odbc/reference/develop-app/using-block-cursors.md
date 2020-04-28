@@ -1,5 +1,5 @@
 ---
-title: ブロック カーソルを使用する |マイクロソフトドキュメント
+title: ブロックカーソルの使用 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ ms.assetid: 2aad7d6b-216e-47e7-b3cb-f95ad096f21a
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: f5c487bd8b60a83c709399cb9673dc0b015bd79d
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306793"
 ---
 # <a name="using-block-cursors"></a>ブロック カーソルの使用
-ブロック カーソルのサポートは ODBC 3 に組み込まれています。*x .* **SQLFetch**は、ODBC 3 で呼び出された場合、複数行のフェッチに対してのみ使用できます。*x;* ODBC 2 の場合。*x*アプリケーションは**SQLFetch**を呼び出し、単一行の前方のみのカーソルのみを開きます。 ODBC 3 のとき。*x*アプリケーションは、ODBC 2 で**SQLFetch**を呼び出します。*x*ドライバーは、ドライバーが**SQLExtendedFetch**をサポートしていない限り、1 つの行を返します。 詳細については、「付録 G: 下位互換性のためのドライバガイドライン」の[「ブロック カーソル、スクロール可能なカーソル、および後方互換性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)」を参照してください。  
+ブロックカーソルのサポートは ODBC 3 に組み込まれています。*x*。 **Sqlfetch**は、ODBC 3 で呼び出された場合に複数行フェッチに対してのみ使用できます。*x*;ODBC 2 の場合。*x*アプリケーションは**sqlfetch**を呼び出します。これは、単一行の順方向専用カーソルだけを開きます。 ODBC 3 の場合。*x*アプリケーションは ODBC 2 で**sqlfetch**を呼び出します。*x*ドライバーは、ドライバーが**SQLExtendedFetch**をサポートしていない限り、1つの行を返します。 詳細については、「付録 G: 旧バージョンとの互換性のためのドライバーガイドライン」の「[ブロックカーソル、スクロール可能なカーソル、および旧バージョンとの互換性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)」を参照してください。  
   
- ブロック カーソルを使用するには、アプリケーションは行セットのサイズを設定し、行セット バッファーをバインド (前のセクションで説明したように) 、オプションでSQL_ATTR_ROWS_FETCHED_PTRとSQL_ATTR_ROW_STATUS_PTRステートメント属性を設定し **、SQLFetch**または**SQLFetchScroll**を呼び出して行ブロックをフェッチします。 アプリケーションは、行セットのサイズを変更し、行がフェッチされた後でも **(SQLBindCol**を呼び出すか、バインド オフセットを指定することによって) 新しい行セット バッファーをバインドできます。  
+ ブロックカーソルを使用するには、アプリケーションは行セットのサイズを設定し、前のセクションで説明したように行セットバッファーをバインドします。オプションで SQL_ATTR_ROWS_FETCHED_PTR および SQL_ATTR_ROW_STATUS_PTR ステートメントの属性を設定し、 **sqlfetch**または**sqlfetchscroll**を呼び出して行のブロックをフェッチします。 行がフェッチされた後でも、アプリケーションは行セットのサイズを変更し、新しい行セットバッファーをバインドします ( **SQLBindCol**を呼び出すか、バインドオフセットを指定します)。  
   
  このセクションでは、次のトピックを扱います。  
   
@@ -32,4 +32,4 @@ ms.locfileid: "81306793"
   
 -   [フェッチされた行の数と状態](../../../odbc/reference/develop-app/number-of-rows-fetched-and-status.md)  
   
--   [カーソルをブロックします。ブロック・カーソ](../../../odbc/reference/develop-app/sqlgetdata-and-block-cursors.md)
+-   [SQLGetData カーソルとブロックカーソルブロック curso](../../../odbc/reference/develop-app/sqlgetdata-and-block-cursors.md)

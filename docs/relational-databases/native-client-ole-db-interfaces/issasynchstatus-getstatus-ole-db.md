@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 90ddf4e4617e1182e50979f051fa6ee2657166ba
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306728"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
@@ -67,16 +67,16 @@ HRESULT GetStatus(
   
  DBASYNCHPHASE_POPULATION - オブジェクトは作成フェーズにあります。 行セットは完全に初期化されていて、オブジェクトのすべてのインターフェイスを使用できますが、まだ行セットに追加されていない行が存在する場合があります。 *pulProgress* と *pulProgressMax* は、設定した行数に基づくこともできますが、通常は、行セットの設定に必要な時間または作業に基づきます。 そのため、呼び出し元では最終的な行数ではなく、処理にかかる時間の大まかな推定値としてこの情報を使用する必要があります。 このフェーズが返されるのは、行セットの設定中のみです。データ ソース オブジェクトの初期化中や、行を更新、削除、または挿入するコマンドの実行により返されることはありません。  
   
- DBASYNCHPHASE_COMPLETE - オブジェクトのすべての非同期処理が完了しました。 **操作の結果**を示す HRESULT を返します。 通常、この HRESULT は、同期をとって操作を呼び出した場合に返される HRESULT です。 行を更新、削除、または挿入するコマンドに対して **ICommand::Execute** を呼び出すことにより非同期操作が実行された場合、*pulProgress* と *pulProgressMax* は、そのコマンドで処理された行の合計数と等しくなります。 *cParamSets* が 1 より大きい場合、この値は、コマンドの実行で指定したすべてのパラメーター セットによって処理された行の合計数になります。 *peAsynchPhase* に NULL ポインターを指定すると、状態コードは返されません。  
+ DBASYNCHPHASE_COMPLETE - オブジェクトのすべての非同期処理が完了しました。 **ISSAsynchStatus:: GetStatus**は、操作の結果を示す HRESULT を返します。 通常、この HRESULT は、同期をとって操作を呼び出した場合に返される HRESULT です。 行を更新、削除、または挿入するコマンドに対して **ICommand::Execute** を呼び出すことにより非同期操作が実行された場合、*pulProgress* と *pulProgressMax* は、そのコマンドで処理された行の合計数と等しくなります。 *cParamSets* が 1 より大きい場合、この値は、コマンドの実行で指定したすべてのパラメーター セットによって処理された行の合計数になります。 *peAsynchPhase* に NULL ポインターを指定すると、状態コードは返されません。  
   
- DBASYNCHPHASE_CANCELED - オブジェクトの非同期処理が中止されました。 **ステータス::GetStatus は**DB_E_CANCELEDを返します。 行を更新、削除、または挿入するコマンドに対して **ICommand::Execute** を呼び出すことにより非同期操作が実行された場合、*pulProgress* は、そのコマンドに指定したすべてのパラメーター セットによってキャンセル前に処理された行の合計数と等しくなります。  
+ DBASYNCHPHASE_CANCELED - オブジェクトの非同期処理が中止されました。 **ISSAsynchStatus:: GetStatus は**DB_E_CANCELED を返します。 行を更新、削除、または挿入するコマンドに対して **ICommand::Execute** を呼び出すことにより非同期操作が実行された場合、*pulProgress* は、そのコマンドに指定したすべてのパラメーター セットによってキャンセル前に処理された行の合計数と等しくなります。  
   
  *ppwszStatusText*[in/out]  
  操作に関する詳細情報を保持するメモリへのポインター。 プロバイダーは、この値を使用して操作の異なる要素 (アクセス中のさまざまなリソースなど) を区別できます。 この文字列は、データ ソース オブジェクトの DBPROP_INIT_LCID プロパティに従ってローカライズされます。  
   
  *ppwszStatusText* の入力値が NULL 以外の場合、プロバイダーは *ppwszStatusText* で識別される特定の要素に関連する状態を返します。 *ppwszStatusText* が *eOperation* の要素を示していない場合、*pulProgress* と *pulProgressMax* に同じ値を設定して S_OK を返します。 プロバイダーでテキスト識別子に基づいて要素を区別しない場合、*ppwszStatusText* に NULL を設定し、操作全体に関する情報を返します。要素を区別する場合、*ppwszStatusText* の入力値が NULL 以外であると、プロバイダーでは *ppwszStatusText* が処理されなくなります。  
   
- *ppwszStatusText が*入力時に null の場合、プロバイダーは*ppwszStatusText*を操作に関する詳細情報を示す値に設定するか、そのような情報が利用できない場合、または**ISSAsynchStatus::GetStatus が**エラーを返す場合は NULL に設定します。 *ppwszStatusText* の入力値が NULL の場合、状態文字列用のメモリを割り当て、そのメモリのアドレスを返します。 コンシューマーでは、この文字列が不要になった時点で、**IMalloc::Free** を使用してこのメモリを解放します。  
+ 入力時に*ppwszStatusText*が null の場合、プロバイダーは*ppwszStatusText*を、操作に関する詳細情報を示す値に設定します。このような情報が使用できない場合、または**ISSAsynchStatus:: GetStatus**がエラーを返す場合は null に設定します。 *ppwszStatusText* の入力値が NULL の場合、状態文字列用のメモリを割り当て、そのメモリのアドレスを返します。 コンシューマーでは、この文字列が不要になった時点で、**IMalloc::Free** を使用してこのメモリを解放します。  
   
  *ppwszStatusText* の入力値が NULL の場合、状態文字列は返されず、操作の要素に関する情報か、操作の概要情報が返されます。  
   
@@ -99,16 +99,16 @@ HRESULT GetStatus(
  *hChapter* パラメーターが正しくありません。  
   
  E_UNEXPECTED  
- データ ソース オブジェクトに対して**ISSAsynchStatus::GetStatus**が呼び出され **、IDBInitialize::初期化**がデータ ソース オブジェクトで呼び出されていません。  
+ データソースオブジェクトに対して**ISSAsynchStatus:: GetStatus**が呼び出されましたが、 **IDBInitialize:: Initialize**はデータソースオブジェクトで呼び出されていません。  
   
- **ISSAsynchStatus::GetStatus**は行セットで呼び出されました, **ITransaction::コミット**または**ITransaction::Abort**が呼び出され、オブジェクトはゾンビ状態です。  
+ **ISSAsynchStatus:: GetStatus**が行セットで呼び出されました。 **Itransaction:: Commit**または**itransaction:: Abort**が呼び出されましたが、オブジェクトはゾンビ状態です。  
   
- **初期化**フェーズで非同期にキャンセルされた行セットで呼び出されました。 行セットはゾンビ状態になります。  
+ 初期化フェーズで非同期に取り消された行セットで**ISSAsynchStatus:: GetStatus**が呼び出されました。 行セットはゾンビ状態になります。  
   
  E_FAIL  
  プロバイダー固有のエラーが発生しました。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **ISSAsynchStatus::GetStatus** メソッドの動作は、**IDBAsynchStatus::GetStatus** メソッドとまったく同じです。ただし、データ ソース オブジェクトの初期化が中止された場合は、DB_E_CANCELED ではなく E_UNEXPECTED が返されます ([ISSAsynchStatus::WaitForAsynchCompletion](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) の場合は DB_E_CANCELED が返されます)。 これは、初期化の中止後、追加の初期化操作が試行される場合に備えて、データ ソース オブジェクトの状態が通常のゾンビ状態のままにならないためです。  
   
  行セットを初期化またはデータ設定する非同期操作では、このメソッドをサポートする必要があります。  
@@ -121,7 +121,7 @@ HRESULT GetStatus(
   
  プロバイダーは、より正確な値を保証することが義務付けられているわけではありませんが、可能な場合は妥当な推定完了率を返すように設定されています。 この関数の主な目的は、ユーザーへの進行状況のフィードバックを提供することなので、このような動作によりユーザー インターフェイスの品質が向上します。 非表示で行われる、実行時間が長いタスクに対するフィードバックの品質を向上することで、ユーザーの満足度も向上します。  
   
- 初期化されたデータ ソース オブジェクトまたはデータが設定された行セットに対して **ISSAsynchStatus::GetStatus** を呼び出すか、*eOperation* に DBASYNCHOP_OPEN 以外の値を渡すと、*pulProgress* と *pulProgressMax* に同じ値が設定され、S_OK が返されます。 行を更新、削除、または挿入するコマンドの実行から作成されたオブジェクトに対して**ISSAsynchStatus::GetStatus**が呼び出された場合 *、pulProgress*と*pulProgressMax*の両方が、コマンドの影響を受ける行の合計数を示します。  
+ 初期化されたデータ ソース オブジェクトまたはデータが設定された行セットに対して **ISSAsynchStatus::GetStatus** を呼び出すか、*eOperation* に DBASYNCHOP_OPEN 以外の値を渡すと、*pulProgress* と *pulProgressMax* に同じ値が設定され、S_OK が返されます。 行を更新、削除、または挿入するコマンドの実行によって作成されたオブジェクトに対して**ISSAsynchStatus:: GetStatus**が呼び出された場合 *、両方と*も、すべてのコマンドの影響を受ける行の総数*を示します*。  
   
 ## <a name="see-also"></a>参照  
  [非同期操作の実行](../../relational-databases/native-client/features/performing-asynchronous-operations.md)   

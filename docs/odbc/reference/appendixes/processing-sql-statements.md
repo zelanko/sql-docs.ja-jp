@@ -1,5 +1,5 @@
 ---
-title: SQL ステートメントの処理 |マイクロソフトドキュメント
+title: SQL ステートメントの処理 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,25 +15,25 @@ ms.assetid: 54dad6a3-e86c-477b-ba7c-4e95e0385ec1
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: eda640f6e810eeccbfa17ea2b6ba7c1b19b28e08
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81308003"
 ---
 # <a name="processing-sql-statements"></a>SQL ステートメントの処理
 > [!IMPORTANT]  
->  この機能は、今後のバージョンの Windows で削除される予定です。 新しい開発作業でこの機能を使用することは避け、現在この機能を使用しているアプリケーションを変更する予定です。 マイクロソフトでは、ドライバーのカーソル機能を使用することをお勧めします。  
+>  この機能は、今後のバージョンの Windows では削除される予定です。 新しい開発作業ではこの機能の使用を避け、現在この機能を使用しているアプリケーションの変更を検討してください。 Microsoft では、ドライバーのカーソル機能を使用することをお勧めします。  
   
- ODBC カーソル ライブラリは、次の点を除くすべての SQL ステートメントをドライバーに直接渡します。  
+ ODBC カーソルライブラリは、次の点を除いて、すべての SQL ステートメントを直接ドライバーに渡します。  
   
--   位置指定更新および削除ステートメント  
+-   位置指定の update および delete ステートメント  
   
--   **更新ステートメントの選択**  
+-   **SELECT FOR UPDATE**ステートメント  
   
 -   バッチ処理された SQL ステートメント  
   
- 位置指定更新ステートメントおよび削除ステートメントを実行し、その行の**SQLGetData**を呼び出すためにカーソルを行に配置するために、カーソル ライブラリは、その行を識別する検索ステートメントを構築します。  
+ 位置指定の update および delete ステートメントを実行し、その行の**SQLGetData**を呼び出すためにカーソルを行に配置するには、カーソルライブラリによって、その行を識別する検索ステートメントが作成されます。  
   
  このセクションでは、次のトピックを扱います。  
   

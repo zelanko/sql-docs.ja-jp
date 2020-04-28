@@ -1,5 +1,5 @@
 ---
-title: XQuery での文字列検索 |マイクロソフトドキュメント
+title: XQuery での文字列検索 |Microsoft Docs
 description: XQuery での文字列検索の例を参照して、XML ドキュメント内のテキストを検索する方法について説明します。
 ms.custom: ''
 ms.date: 03/04/2017
@@ -19,10 +19,10 @@ ms.assetid: edc62024-4c4c-4970-b5fa-2e54a5aca631
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 33f68a55cb627099150ec14941fe5de81de53fc8
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388053"
 ---
 # <a name="string-search-in-xquery"></a>XQuery での文字列検索
@@ -32,7 +32,7 @@ ms.locfileid: "81388053"
   
 ## <a name="examples"></a>例  
   
-### <a name="a-find-feature-descriptions-that-contain-the-word-maintenance-in-the-product-catalog"></a>A. 製品カタログに「メンテナンス」という単語が含まれている機能の説明を検索する  
+### <a name="a-find-feature-descriptions-that-contain-the-word-maintenance-in-the-product-catalog"></a>A. 製品カタログに "maintenance" という単語が含まれている機能の説明を検索します。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -45,7 +45,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- 前の照会では、FLOWR 式の 中の 式`where`は`for`式の結果をフィルターし、 **contains()** 条件を満たすエレメントのみを戻します。  
+ 前のクエリでは、 `where` flowr 式のは`for`式の結果をフィルター処理し、 **contains ()** 条件を満たす要素のみを返します。  
   
  結果を次に示します。  
   

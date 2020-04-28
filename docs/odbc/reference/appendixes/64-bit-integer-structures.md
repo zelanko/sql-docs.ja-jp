@@ -1,5 +1,5 @@
 ---
-title: 64 ビット整数構造 |マイクロソフトドキュメント
+title: 64ビット整数構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: ac80c798-d9b2-4430-85ed-bd2461db0ac7
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 1ecbe4dae4c1bd21ac3d542ee0d9b18169df0116
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307513"
 ---
 # <a name="64-bit-integer-structures"></a>64 ビットの整数の構造
-Microsoft C コンパイラのSQL_C_SBIGINTおよびSQL_C_UBIGINTデータ型識別子の C 型は_int64。 Microsoft® C コンパイラ以外のコンパイラを使用する場合、C 型が異なる場合があります。 コンパイラがネイティブで 64 ビット整数をサポートする場合、ドライバーまたはアプリケーションは、ネイティブ 64 ビット整数型に ODBCINT64 を定義する必要があります。 コンパイラがネイティブで 64 ビット整数をサポートしていない場合、アプリケーションまたはドライバーは、このデータにアクセスできることを確認する次の構造体を定義できます。  
+Microsoft C コンパイラでの SQL_C_SBIGINT および SQL_C_UBIGINT データ型識別子の C 型は _int64 です。 Microsoft® C コンパイラ以外のコンパイラを使用する場合、C 型は異なる場合があります。 コンパイラが64ビット整数をネイティブでサポートしている場合は、ドライバーまたはアプリケーションで ODBCINT64 を定義して、ネイティブの64ビット整数型にする必要があります。 コンパイラが64ビット整数をネイティブでサポートしていない場合、アプリケーションまたはドライバーは次の構造を定義して、このデータにアクセスできるようにすることができます。  
   
 ```  
 typedef struct{  
@@ -36,4 +36,4 @@ SQLINTEGER sdwHighWord;
 } SQLBIGINT  
 ```  
   
- 64 ビット整数は 8 バイト境界に揃えられるため、これらの構造体は 8 バイト境界に揃える必要があります。
+ 64ビットの整数は8バイトの境界に配置されるため、これらの構造は8バイトの境界に合わせて配置する必要があります。

@@ -1,5 +1,5 @@
 ---
-title: SQL Server BI 機能をインストールする ( PowerPivot およびレポート サービス ) |マイクロソフトドキュメント
+title: SharePoint を使用した SQL Server BI 機能のインストール (PowerPivot および Reporting Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: cd1dae56cf2ea571ca9ab16de178764b807260db
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388088"
 ---
 # <a name="install-sql-server-bi-features-with-sharepoint-powerpivot-and-reporting-services"></a>SharePoint を使用した SQL Server の BI 機能のインストール (PowerPivot と Reporting Services)
@@ -24,11 +24,11 @@ ms.locfileid: "81388088"
 
 ||
 |-|
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** Sharepoint 2013 &#124; sharepoint 2010|
 
- ![注](../../../2014/reporting-services/media/rs-fyinote.png "note")現在のリリース ノートについては、「 [SQL Server 2014 リリース ノート](https://go.microsoft.com/fwlink/?LinkID=296445)」を参照してください。
+ ![メモ](../../../2014/reporting-services/media/rs-fyinote.png "注意")最新のリリースノートについては、「 [SQL server 2014 リリースノート](https://go.microsoft.com/fwlink/?LinkID=296445)」を参照してください。
 
-##  <a name="in-this-topic"></a><a name="bkmk_top"></a>このトピックでは、
+##  <a name="in-this-topic"></a><a name="bkmk_top"></a>このトピックの内容
 
 -   [SQL Server BI シナリオと SharePoint 2013](#bkmk_bi_scenarios)
 
@@ -43,7 +43,7 @@ ms.locfileid: "81388088"
 
  [SharePoint を使用した BI 機能のインストール用チェック リスト](../../../2014/sql-server/install/checklists-for-installing-bi-features-with-sharepoint.md)
 
- [レポート サービス SharePoint 2010 および SharePoint 2013&#41;&#40;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)
+ [Sharepoint モードのインストール Reporting Services sharepoint 2010 および SharePoint 2013&#41;&#40;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)
 
  [PowerPivot for SharePoint 2013 のインストール](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)
 
@@ -60,13 +60,13 @@ ms.locfileid: "81388088"
 |-|-----------|--------------|--------------------------|
 |1|SharePoint のみ|Excel Services のネイティブ機能|SharePoint Server 2013 に含まれる Excel Services やその他のサービス。|
 |**2**|SharePoint モードの Analysis Services が統合された SharePoint|ブラウザー内での対話型の PowerPivot ブック|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を SharePoint モードでインストールします。<br /><br /> Excel Services で Analysis Services サーバーを登録します。|
-|**3**|SharePoint モードの Reporting Services が統合された SharePoint|Power View|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を SharePoint モードでインストールします。<br /><br /> アドイン[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **(rsSharePoint.msi) を**インストールします。 詳細については[、「SharePoint &#40;SharePoint 2010 および SharePoint 2013 のレポート サービス アドインをインストールまたはアンインストールする」&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)|
-|**4**|PowerPivot のすべての機能|ファームの外部からのデータ ソースとしてのブックへのアクセス。<br /><br /> 定期データ更新。<br /><br /> PowerPivot ギャラリー。<br /><br /> 管理ダッシュボード。<br /><br /> BISM リンク ファイルのコンテンツの種類。|SharePoint 2013 アドインの**PowerPivot**を展開します。 詳細については、「<br /><br /> [SharePoint アドイン &#40;PowerPivot をインストールまたはアンインストール&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)<br /><br /> **spPowerPivot.msi**のダウンロード方法の詳細については、 [SQL Server 2014 PowerPivot for SharePoint のダウンロード ページ](https://go.microsoft.com/fwlink/?LinkID=296473)を参照してください。|
+|**3**|SharePoint モードの Reporting Services が統合された SharePoint|Power View|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を SharePoint モードでインストールします。<br /><br /> SharePoint [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]用のアドイン **(rssharepoint .msi)** をインストールします。 詳細については、「sharepoint [2010 および sharepoint 2013 の Reporting Services アドインのインストールまたはアンインストール &#40;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md) 」を参照してください&#41;|
+|**4**|PowerPivot のすべての機能|ファームの外部からのデータ ソースとしてのブックへのアクセス。<br /><br /> 定期データ更新。<br /><br /> PowerPivot ギャラリー。<br /><br /> 管理ダッシュボード。<br /><br /> BISM リンク ファイルのコンテンツの種類。|PowerPivot for SharePoint 2013 アドイン **(Sppowerpivot .msi)** をデプロイします。 詳細については、「<br /><br /> [SharePoint 2013 &#40;PowerPivot for SharePoint アドインをインストールまたはアンインストール&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)<br /><br /> **spPowerPivot.msi**のダウンロード方法の詳細については、 [SQL Server 2014 PowerPivot for SharePoint のダウンロード ページ](https://go.microsoft.com/fwlink/?LinkID=296473)を参照してください。|
 
- 機能の有効化[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の詳細については[、「SharePoint 2013 の SQL Server BI ライトアップ ストーリー](https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx) 」を参照してください。https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx)
+ 機能の有効化[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の詳細については、「 [SharePoint 2013 の SQL Server BI のライトアップストーリー](https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx) (https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx))」を参照してください。
 
 ##  <a name="overview-of-installation"></a><a name="bkmk_install_sharepoint2013_overview"></a>インストールの概要
- [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] と [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の両方を使用する場合は、SQL Server インストール ウィザードを 2 回実行します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]SQL [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Server セットアップ ウィザードの **[セットアップロール**] ページでは、別の選択肢です。
+ [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] と [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の両方を使用する場合は、SQL Server インストール ウィザードを 2 回実行します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]と[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]は、SQL Server セットアップウィザードの [**セットアップロール**] ページで個別に選択できます。
 
  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] は SharePoint 2010 と SharePoint 2013 の両方をサポートしますが、使用されるアーキテクチャとインストール プロセスは SharePoint のバージョンに応じて異なります。
 
@@ -94,7 +94,7 @@ ms.locfileid: "81388088"
 
      ![2 つの PowerPivot 構成ツール](../../analysis-services/media/as-powerpivot-configtools-bothicons.gif "2 つの PowerPivot 構成ツール")
 
-5.  SharePoint Server 2013 で、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスを使用するように Excel Services を構成します。 詳細については[、「SharePoint 2013 インストールの PowerPivot](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)の基本的な分析サービス SharePoint 統合の構成」セクションと[Excel サービス データ モデル設定の管理 (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx) (https://technet.microsoft.com/library/jj219780.aspx)を参照してください。
+5.  SharePoint Server 2013 で、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスを使用するように Excel Services を構成します。 詳細については、「 [PowerPivot for SharePoint 2013 のインストール](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)」の「基本的な Analysis Services SharePoint 統合の構成」、および「 [Excel Services のデータモデル設定の管理 (sharepoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx) 」 (https://technet.microsoft.com/library/jj219780.aspx)) を参照してください。
 
 6.  詳しくは、「 [PowerPivot for SharePoint 2013 Installation](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)」をご覧ください。
 
@@ -114,7 +114,7 @@ ms.locfileid: "81388088"
 
 3.  詳しくは、「 [PowerPivot for SharePoint 2010 Installation](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)」をご覧ください。
 
- **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** SharePoint 2010 および 2013 用
+ **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** for SharePoint 2010 および2013
 
 1.  SharePoint モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のインストールは、以前のリリースから変更されていません。
 
@@ -128,17 +128,17 @@ ms.locfileid: "81388088"
 
         -   SharePoint 製品のバージョン。
 
-         [サポートされている SharePoint サーバーとレポート サービス サーバーとアドインの組み合わせ &#40;SQL Server 2014&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)
+         [サポートされている SharePoint と Reporting Services Server およびアドイン &#40;SQL Server 2014 の組み合わせ&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)
 
     -   SharePoint 2010 の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には SharePoint 2010 Service Pack 2 (SP2) が必要です。
 
-    1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を SharePoint モードでインストールします。 [レポート サービス SharePoint 2010 と SharePoint 2013 &#40;sharePoint 2010 の&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)および[SharePoint 2010 のレポート サービス SharePoint モードのインストール](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)を行います。
+    1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を SharePoint モードでインストールします。 Sharepoint[モードのインストールを sharepoint 2010 および sharepoint 2013&#41;&#40;Reporting Services](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)し、sharepoint [2010 用 Reporting Services Sharepoint モードをインストール](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)します。
 
-    2.  SharePoint 製品用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドイン (rsSharePoint.msi) をインストールします。 [「sharePoint &#40;SharePoint 2010 および SharePoint 2013&#41;のレポート サービス アドインをインストールまたはアンインストール](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)する」を参照してください。 SharePoint 用アドインの[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]現在のバージョンについては、「 [SharePoint 製品用のレポート サービス アドインを検索する場所](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)」を参照してください。
+    2.  SharePoint 製品用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドイン (rsSharePoint.msi) をインストールします。 「Sharepoint [&#40;sharepoint 2010 および sharepoint 2013&#41;の Reporting Services アドインのインストールまたはアンインストール](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)」を参照してください。 SharePoint 用[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]アドインの現在のバージョンについては、「 [sharepoint 製品用の Reporting Services アドインの検索場所](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)」を参照してください。
 
-    3.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint サービスと 1 つ以上の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションを構成します。 詳細については[、「SharePoint 2013](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md)用のレポート サービス SharePoint モードのインストール」の「レポート サービス サービス アプリケーションの作成」を参照してください。
+    3.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint サービスと 1 つ以上の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションを構成します。 詳細については、「 [sharepoint 2013 用 Reporting Services Sharepoint モードのインストール](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md)」の「Reporting Services サービスアプリケーションの作成」セクションを参照してください。
 
-##  <a name="overview-of-database-attach-upgrade-and-sharepoint-2013"></a><a name="bkm_database_attach"></a>データベース接続アップグレードと SharePoint 2013 の概要
+##  <a name="overview-of-database-attach-upgrade-and-sharepoint-2013"></a><a name="bkm_database_attach"></a>データベースアタッチアップグレードと SharePoint 2013 の概要
  SharePoint 2013 では、インプレース アップグレードはサポートされていません。 ただし、 **データベース アタッチ アップグレードはサポートされています**。
 
  SharePoint 2010 と統合された PowerPivot の既存のインストールを使用している場合は、SharePoint サーバーのインプレース アップグレードを行うことはできません。  ただし、SharePoint のデータベース アタッチ アップグレードの一環として以下の手順を実行できます。
@@ -167,6 +167,6 @@ ms.locfileid: "81388088"
 -   [SharePoint 2010 から SharePoint 2013 にデータベースをアップグレードする](https://go.microsoft.com/fwlink/p/?LinkId=256690)。
 
 ## <a name="see-also"></a>参照
- [SharePoint 製品のレポート サービス アドインを参照するには](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)[、SharePoint サービス サーバーとレポート サービス サーバーとアドインの組み合わせがサポートされている SQL Server 2014 &#40;の&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md) [SharePoint &#40;SharePoint server 2013 および SharePoint 2013 のレポート サービス アドインをインストールまたはアンインストールする&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)
+ Sharepoint[製品用 Reporting Services アドインの検索場所](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)sharepoint[と Reporting Services Server およびアドインのサポートされている組み合わせ &#40;SQL Server 2014&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md) sharepoint[用 Reporting Services アドインのインストールまたはアンインストール &#40;sharepoint 2010 および sharepoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: を呼び出す |マイクロソフトドキュメント
+title: Sqlcloの呼び出し |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,11 +17,11 @@ ms.assetid: ef448c39-a9ad-4f07-8ef3-65bd4cef672a
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 2feab58de28e39747a1d9c819f9f15426b156151
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306275"
 ---
 # <a name="calling-sqlclosecursor"></a>SQLCloseCursor の呼び出し
-**SQLCloseCursor**は、SQL_CLOSEを持つ**SQLFreeStmt**とほぼ同じであるため、ドライバー マネージャーはこの関数をマップしません。 置換関数は、既存の ODBC *2.x*アプリケーションが新しい関数を使用して ODBC *3.x*に簡単に移動できるようにマップされます。 このような移行により、このようなアプリケーションは、条件付きコード内での新しい ODBC *3.x*機能をモジュラー方式で使用し始めるのが容易になります。 **SQLCloseCursor は**、新しい機能を表していません。 アプリケーションは、SQL_CLOSEを使用して**SQLFreeStmt**から**SQLCloseCursor**に移動しても利点を得ません。
+**SqlcloSQLFreeStmt**は SQL_CLOSE とほぼ同じである**SQLFreeStmt**ため、ドライバーマネージャーはこの機能をマップしません。 置換関数は、既存の ODBC 2.x*アプリケーションが*新しい関数を使用して簡単に odbc *3. x*に移動できるようにマップされます。 このような移動により、このようなアプリケーションでは、モジュール方式で条件付きコード内で新しい ODBC *3. x*機能を使い始めることが容易になります。 **Sqlcloセキュリティー**は、新しい機能を表していません。 アプリケーションでは、SQL_CLOSE を使用して**SQLFreeStmt**から**sqlcloに**移行しても利点は得られません。

@@ -1,5 +1,5 @@
 ---
-title: 予約キーワード |マイクロソフトドキュメント
+title: 予約済みキーワード |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: ed8056d6c9645a211f1413a1b280426925dd538e
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307993"
 ---
 # <a name="reserved-keywords"></a>予約済みキーワード
-次の文字列は、ODBC 関数呼び出し用に予約されています。 これらの単語は、SQL 文法の最小を制限しません。ただし、コア SQL 文法をサポートするドライバーとの互換性を確保するために、アプリケーションはこれらのキーワードのいずれも使用しないようにする必要があります。 #**定義**値SQL_ODBC_KEYWORDSには、これらのキーワードのコンマ区切りリストが含まれます。  
+次の文字列は、ODBC 関数呼び出し用に予約されています。 これらの単語は、最低限の SQL 文法を制限しません。ただし、主要な SQL 文法をサポートするドライバーとの互換性を確保するために、アプリケーションではこれらのキーワードを使用しないようにする必要があります。 #**Define**値 SQL_ODBC_KEYWORDS には、これらのキーワードのコンマ区切りリストが含まれています。  
   
 |||  
 |-|-|  

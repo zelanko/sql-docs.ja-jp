@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a32000dbe2cd4a01b544bd11f6c5b282933dc013
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307425"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
@@ -42,7 +42,7 @@ HRESULT BCPColFmt(
       DBORDINAL idxServerCol);  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **BCPColFmt** メソッドは、BCP データ ファイルのフィールドと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列のバインドを作成するために使用します。 このメソッドは、列の長さ、型、ターミネータ、およびプレフィックス長をパラメーターとして受け取り、個々のフィールドの対応するプロパティに設定します。  
   
  ユーザーが対話モードを選択すると、このメソッドが 2 回呼び出されます。1 回は既定値 (サーバーの列の型によって異なります) に応じて列形式を設定するために呼び出され、もう 1 回はクライアントが対話モードで選択した列の型に応じて各列の形式を設定するために呼び出されます。  
@@ -77,7 +77,7 @@ HRESULT BCPColFmt(
  ユーザー データ ファイル内のフィールドのインデックス。  
   
  *eUserDataType*[in]  
- ユーザー データ ファイル内のフィールドのデータ型。 使用可能なデータ型は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアント ヘッダー ファイル (sqlncli.h) に一覧表示され、BCP_TYPE_XXX形式 (BCP_TYPE_SQLINT4など) が表示されます。 BCP_TYPE_DEFAULT 値を指定すると、プロバイダーはテーブルやビューの列と同じ型を使用します。 **eUserDataType** 引数に BCP_TYPE_SQLDECIMAL または BCP_TYPE_SQLNUMERIC を指定し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からファイルへの一括コピー操作を行う場合の動作を次に示します。  
+ ユーザー データ ファイル内のフィールドのデータ型。 使用できるデータ型は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ヘッダーファイル (sqlncli) に、BCP_TYPE_SQLINT4 などの BCP_TYPE_XXX 形式で一覧表示されます。 BCP_TYPE_DEFAULT 値を指定すると、プロバイダーはテーブルやビューの列と同じ型を使用します。 **eUserDataType** 引数に BCP_TYPE_SQLDECIMAL または BCP_TYPE_SQLNUMERIC を指定し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からファイルへの一括コピー操作を行う場合の動作を次に示します。  
   
 -   コピー元の列が decimal 型または numeric 型以外の場合は、既定の有効桁数と小数点以下桁数が使用されます。  
   
@@ -117,7 +117,7 @@ HRESULT BCPColFmt(
  メソッドが成功しました。  
   
  E_FAIL  
- 詳細については、プロバイダー[固有のエラー](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)が発生しました。  
+ プロバイダー固有のエラーが発生しました。詳細については、 [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)インターフェイスを使用してください。  
   
  E_UNEXPECTED  
  メソッドの呼び出しが予期されませんでした。 たとえば、このメソッドが呼び出される前に、[IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) メソッドが呼び出されなかった場合などです。  
@@ -129,7 +129,7 @@ HRESULT BCPColFmt(
  メモリ不足エラー。  
   
 ## <a name="see-also"></a>参照  
- [OLE DB&#41;&#40;IBCP セッション](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
+ [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [一括コピー操作の実行](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
   
   

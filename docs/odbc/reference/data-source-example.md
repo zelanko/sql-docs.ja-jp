@@ -1,5 +1,5 @@
 ---
-title: データ ソースの例 |マイクロソフトドキュメント
+title: データソースの例 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,16 +13,16 @@ ms.assetid: cbf15f32-0550-4c74-8088-8f7ac3855469
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 48c87f0d9f0a48b7d216151178c15bb019c0cbaa
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306523"
 ---
 # <a name="data-source-example"></a>データ ソースの例
-Microsoft を実行しているコンピュータでは®Windows NT ® サーバー/Windows 2000 サーバー、ワークステーション/Windows 2000 プロフェッショナル、または Windows® 95/98 を実行しているコンピュータでは、コンピュータのデータ ソース情報がレジストリに格納されます。 情報が格納されるレジストリ キーに応じて、データ ソースは*ユーザー データ ソース*またはシステム*データ*ソースと呼ばれます。 ユーザー データ ソースは、HKEY_CURRENT_USER キーの下に格納され、現在のユーザーだけが使用できます。 システム データ ソースは、HKEY_LOCAL_MACHINE キーの下に格納され、1 台のコンピューター上の複数のユーザーが使用できます。 また、システム全体のサービスで使用することも可能で、ユーザーがマシンにログオンしていなくてもデータ ソースにアクセスできます。 ユーザーおよびシステム データ ソースの詳細については、「 [SQLManageDataSources](../../odbc/reference/syntax/sqlmanagedatasources.md)」を参照してください。  
+Microsoft® Windows NT® Server/Windows 2000 Server、Microsoft Windows NT Workstation/Windows 2000 Professional、または Microsoft Windows®95/98 が実行されているコンピューターでは、コンピューターのデータソース情報はレジストリに格納されます。 情報が格納されているレジストリキーに応じて、データソースは*ユーザーデータ*ソースまたは*システムデータソース*と呼ばれます。 ユーザーデータソースは HKEY_CURRENT_USER キーの下に格納され、現在のユーザーのみが使用できます。 システムデータソースは HKEY_LOCAL_MACHINE キーの下に格納され、1台のコンピューター上の複数のユーザーが使用できます。 また、ユーザーがコンピューターにログオンしていない場合でもデータソースにアクセスできる、システム全体のサービスで使用することもできます。 ユーザーデータソースとシステムデータソースの詳細については、「 [Sqlmanagedatasources](../../odbc/reference/syntax/sqlmanagedatasources.md)」を参照してください。  
   
- ユーザーが 3 つのユーザー データ ソースを持っているとします: 人事とインベントリ、Oracle DBMS を使用します。および、マイクロソフトの SQL Server DBMS を使用する給与計算。 データ ソースのレジストリ値は次のようになります。  
+ たとえば、ユーザーが3つのユーザーデータソースを持っているとします。これは、Oracle DBMS を使用する担当者と在庫です。また、Microsoft SQL Server DBMS を使用する給与支払いです。 データソースのレジストリ値は次のようになります。  
   
 ```  
 HKEY_CURRENT_USER  
@@ -35,7 +35,7 @@ SOFTWARE
                     Payroll : REG_SZ : SQL Server  
 ```  
   
- また、給与データ ソースのレジストリ値は次のようになります。  
+ また、給与データソースのレジストリ値は次のようになります。  
   
 ```  
 HKEY_CURRENT_USER  

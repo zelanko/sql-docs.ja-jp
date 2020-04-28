@@ -1,5 +1,5 @@
 ---
-title: LIKE 述語エスケープ文字 |マイクロソフトドキュメント
+title: LIKE 述語エスケープ文字 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,22 +14,22 @@ ms.assetid: 185d6109-48cf-4981-bc40-ec2a4a90cafc
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 2e4f04b12911145eede3354532736cb92f1ae413
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306153"
 ---
 # <a name="like-predicate-escape-character"></a>LIKE 述語のエスケープ文字
-**LIKE**述語では、パーセント記号 (%)は 0 個以上の文字に一致し、アンダースコア (_) は任意の 1 文字に一致します。 **LIKE**述部の実際のパーセント記号またはアンダースコアを照合するには、パーセント記号またはアンダースコアの前にエスケープ文字を指定する必要があります。 **LIKE**述部エスケープ文字を定義するエスケープ・シーケンスは、次のとおりです。  
+**LIKE**述語では、パーセント記号 (%)0個以上の任意の文字と一致し、アンダースコア (_) は任意の1文字と一致します。 **LIKE**述語の実際のパーセント記号またはアンダースコアを一致させるには、パーセント記号またはアンダースコアの前にエスケープ文字を指定する必要があります。 **LIKE**述語エスケープ文字を定義するエスケープシーケンスは次のとおりです。  
   
- **{エスケープ '** *エスケープ文字* **'}**  
+ **{escape '** *エスケープ文字* **'}**  
   
- *エスケープ文字*は、データ ソースでサポートされる任意の文字です。  
+ ここで、*エスケープ文字*はデータソースでサポートされている任意の文字です。  
   
- LIKE エスケープ シーケンスの詳細については、「付録 C: SQL 文法」の[LIKE エスケープ シーケンス](../../../odbc/reference/appendixes/like-escape-sequence.md)を参照してください。  
+ LIKE エスケープシーケンスの詳細については、「付録 C: SQL 文法」の「[エスケープシーケンス](../../../odbc/reference/appendixes/like-escape-sequence.md)」を参照してください。  
   
- たとえば、次の SQL ステートメントは、"%AAA" という文字で始まる同じ顧客名の結果セットを作成します。 最初のステートメントでは、エスケープ シーケンス構文を使用します。 2 番目のステートメントは、Access のネイティブ構文®使用します。 各**LIKE**述部の 2 番目のパーセント文字は、0 個以上の文字に一致するワイルドカード文字であることに注意してください。  
+ たとえば、次の SQL ステートメントでは、文字 "% AAA" で始まる顧客名と同じ結果セットが作成されます。 最初のステートメントでは、エスケープシーケンス構文を使用します。 2番目のステートメントでは Microsoft® Access のネイティブ構文を使用し、相互運用することはできません。 各述語の2番目のパーセント文字は、0個以上の任意の文字と一致するワイルドカード文字であることに注意し**てください。**  
   
 ```  
 SELECT Name FROM Customers WHERE Name LIKE '\%AAA%' {escape '\'}  
@@ -37,4 +37,4 @@ SELECT Name FROM Customers WHERE Name LIKE '\%AAA%' {escape '\'}
 SELECT Name FROM Customers WHERE Name LIKE '[%]AAA%'  
 ```  
   
- **LIKE**述部エスケープ文字がデータ ソースでサポートされているかどうかを確認するために、アプリケーションは SQL_LIKE_ESCAPE_CLAUSE オプションを指定して**SQLGetInfo**を呼び出します。
+ データソースで**LIKE**述語エスケープ文字がサポートされているかどうかを判断するために、アプリケーションは SQL_LIKE_ESCAPE_CLAUSE オプションを指定して**SQLGetInfo**を呼び出します。
