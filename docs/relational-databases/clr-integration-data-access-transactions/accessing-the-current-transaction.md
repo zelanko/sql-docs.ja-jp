@@ -1,6 +1,6 @@
 ---
-title: 現在のトランザクションにアクセスする |マイクロソフトドキュメント
-description: SQL Server CLR 統合では、System.Transactions.Transaction クラスの現在のプロパティを使用して、現在のトランザクションにアクセスできます。
+title: 現在のトランザクションへのアクセス |Microsoft Docs
+description: SQL Server CLR 統合では、現在のプロパティである system.string クラスを使用して、現在のトランザクションにアクセスできます。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ ms.assetid: 1a4e2ce5-f627-4c81-8960-6a9968cefda2
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: ad8c499355ada4ab84c0f7e2016bbb363c71e779
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487488"
 ---
 # <a name="accessing-the-current-transaction"></a>現在のトランザクションへのアクセス
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  トランザクションが、実行されている共通言語ランタイム (CLR) コードが入力された時点で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]アクティブな場合、トランザクションは**System.Transactions.Transaction**クラスを通じて公開されます。 **プロパティ**は、現在のトランザクションにアクセスするために使用されます。 ほとんどの場合、トランザクションに明示的にアクセスする必要はありません。 データベース接続の場合、ADO.NETは**Connection.Open**メソッドが呼び出されたときに自動的に**Transaction.Current**をチェックし、そのトランザクションに透過的に接続を参加させます (接続文字列で**Enlist**キーワードが false に設定されている場合を除く)。  
+  で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]実行される共通言語ランタイム (CLR) コードが入力された時点でトランザクションがアクティブである場合、トランザクション**は、system.object クラスを**介して公開されます。 現在のトランザクションにアクセスするには、 **transaction. current**プロパティを使用します。 ほとんどの場合、トランザクションに明示的にアクセスする必要はありません。 データベース接続の場合、ADO.NET は、 **Open**メソッドが呼び出されたときに**トランザクション**を自動的に確認します。また、接続文字列で**参加**キーワードが false に設定されていない限り、そのトランザクションに透過的に接続を参加させます。  
   
- 次のシナリオでは、**トランザクション**オブジェクトを直接使用できます。  
+ 次のシナリオでは、**トランザクション**オブジェクトを直接使用することができます。  
   
 -   自動参加が行われないリソースや、何かの理由で初期化中に参加しなかったリソースを参加させる場合。  
   
@@ -42,13 +42,13 @@ ms.locfileid: "81487488"
 ## <a name="canceling-an-external-transaction"></a>外部トランザクションのキャンセル  
  外部トランザクションは、次の方法でマネージド プロシージャまたは関数からキャンセルできます。  
   
--   マネージド プロシージャまたは関数は、出力パラメーターを使用して値を返すことができます。 呼び[!INCLUDE[tsql](../../includes/tsql-md.md)]出しプロシージャは戻り値をチェックし、必要に応じて**ROLLBACK TRANSACTION**を実行できます。  
+-   マネージド プロシージャまたは関数は、出力パラメーターを使用して値を返すことができます。 呼び出し元[!INCLUDE[tsql](../../includes/tsql-md.md)]のプロシージャは、返された値を確認し、必要に応じて**ROLLBACK TRANSACTION**を実行できます。  
   
--   マネージド プロシージャまたは関数は、カスタムの例外をスローできます。 呼び[!INCLUDE[tsql](../../includes/tsql-md.md)]出しプロシージャは、try/catch ブロック内のマネージ プロシージャまたは関数によってスローされた例外をキャッチし **、ROLLBACK TRANSACTION**を実行できます。  
+-   マネージド プロシージャまたは関数は、カスタムの例外をスローできます。 呼び出し元[!INCLUDE[tsql](../../includes/tsql-md.md)]のプロシージャは、try/catch ブロックでマネージプロシージャまたは関数によってスローされた例外をキャッチし、 **ROLLBACK TRANSACTION**を実行できます。  
   
--   マネージ プロシージャまたは関数は、特定の条件が満たされた場合に**Transaction.Rollback**メソッドを呼び出すことによって、現在のトランザクションをキャンセルできます。  
+-   マネージプロシージャまたは関数は、特定の条件が満たされた場合に、Rollback メソッドを呼び出すことにより、現在のトランザクションを取り消すことができます **。**  
   
- マネージ プロシージャまたは関数内で呼び出されると **、Transaction.Rollback**メソッドはあいまいなエラー メッセージを含む例外をスローし、try/catch ブロックにラップできます。 表示されるエラー メッセージは、たとえば次のようになります。  
+ マネージプロシージャまたは関数内で呼び出された場合、**トランザクションロールバック**メソッドは、あいまいなエラーメッセージで例外をスローし、try/catch ブロックでラップできます。 表示されるエラー メッセージは、たとえば次のようになります。  
   
 ```  
 Msg 3994, Level 16, State 1, Procedure uspRollbackFromProc, Line 0  
@@ -65,7 +65,7 @@ The context transaction which was active before entering user defined routine, t
  この例外も想定されるもので、実行を継続するには、トリガーを起動するアクションを実行する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでの try/catch ブロックが必要です。 この 2 つの例外がスローされますが、トランザクションはロールバックされ、変更はコミットされません。  
   
 ### <a name="example"></a>例  
- 次に示す例は **、Transaction.Rollback**メソッドを使用して、マネージ プロシージャからロールバックされるトランザクションの例です。 マネージ コードで **、Transaction.Rollback**メソッドの前後の try/catch ブロックに注意してください。 [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトは、アセンブリおよびマネージド ストアド プロシージャを作成します。 **EXEC uspRollbackFromProc**ステートメントは try/catch ブロックにラップされるため、マネージ プロシージャの実行が完了したときにスローされる例外がキャッチされます。  
+ 次に示すのは、 **Transaction ロール**バックメソッドを使用してマネージプロシージャからロールバックされるトランザクションの例です。 マネージコードの**Rollback**メソッドの前後の try/catch ブロックに注意してください。 [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトは、アセンブリおよびマネージド ストアド プロシージャを作成します。 **EXEC uspRollbackFromProc**ステートメントが try/catch ブロックにラップされていることに注意してください。これにより、マネージプロシージャの実行が終了したときにスローされる例外がキャッチされます。  
   
 ```csharp  
 using System;  

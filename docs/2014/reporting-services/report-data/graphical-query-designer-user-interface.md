@@ -20,14 +20,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ce63eeebcee247f5bccb3c68bce24d325c44fe2d
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388545"
 ---
 # <a name="graphical-query-designer-user-interface"></a>グラフィカル クエリ デザイナーのユーザー インターフェイス
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] にはグラフィカル クエリ デザイナーとテキスト ベースのクエリ デザイナーが用意されており、レポート デザイナーでレポート データセットのリレーショナル データベースからデータを取得するクエリの作成に使用できます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、Oracle、OLE DB、ODBC の各データ ソースの種類に対して、対話形式でクエリを作成して結果を表示するには、グラフィカル クエリ デザイナーを使用します。 テキスト ベースのクエリ デザイナーは、複数の [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメント、複雑なクエリやコマンド構文、式ベースのクエリを指定する場合に使用します。 詳細については、「 [テキストベースのクエリ デザイナーのユーザー インターフェイス](../text-based-query-designer-user-interface.md)」を参照してください。 特定のデータ ソースの種類の操作の詳細については、「[レポート ビルダーおよび SSRS&#41;&#40;レポートにデータを追加する](report-datasets-ssrs.md)」を参照してください。
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] にはグラフィカル クエリ デザイナーとテキスト ベースのクエリ デザイナーが用意されており、レポート デザイナーでレポート データセットのリレーショナル データベースからデータを取得するクエリの作成に使用できます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、Oracle、OLE DB、ODBC の各データ ソースの種類に対して、対話形式でクエリを作成して結果を表示するには、グラフィカル クエリ デザイナーを使用します。 テキスト ベースのクエリ デザイナーは、複数の [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメント、複雑なクエリやコマンド構文、式ベースのクエリを指定する場合に使用します。 詳細については、「 [テキストベースのクエリ デザイナーのユーザー インターフェイス](../text-based-query-designer-user-interface.md)」を参照してください。 特定の種類のデータソースを操作する方法の詳細については、「[レポート &#40;レポートビルダーおよび SSRS&#41;にデータを追加する](report-datasets-ssrs.md)」を参照してください。
 
  。
 
@@ -144,6 +144,6 @@ EXEC uspGetEmployeeManagers '1';
  `uspGetEmployeeManagers '1';`
 
 ## <a name="see-also"></a>参照
- [レポート デザイナーの SQL Server データ ツール&#40;SSRS&#41;](query-design-tools-ssrs.md)レポート &#40;レポート[ビルダーおよび SSRS&#41;](report-datasets-ssrs.md) SQL Server 接続タイプにデータを追加するクエリ デザイン&#41;ツールレポート &#40;レポート ビルダーおよび[SSRS 接続タイプ&#40;SSRS&#41;](sql-server-connection-type-ssrs.md) [OLE DB 接続の種類&#40;SSRS](ole-db-connection-type-ssrs.md)&#41;レポート &#40;レポート[ビルダーおよび SSRS&#41;](report-datasets-ssrs.md) Oracle[接続タイプ&#40;SSRS&#41;RSDesigner](oracle-connection-type-ssrs.md) [構成ファイル](../report-server/rsreportdesigner-configuration-file.md)[のデザイン クエリおよびビューの &#40;方法](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)
+ [レポートデザイナー &#40;SQL Server Data Tools のクエリデザインツール](query-design-tools-ssrs.md)[レポートにデータを追加&#41;レポート &#40;レポートビルダーと Ssrs&#41;](report-datasets-ssrs.md) SQL Server[接続の種類](sql-server-connection-type-ssrs.md)&#40;ssrs&#41;OLE DB[接続](ole-db-connection-type-ssrs.md)の種類 &#40;ssrs&#41;[データをレポートに追加](report-datasets-ssrs.md) [&#40;Ssrs](oracle-connection-type-ssrs.md)レポートビルダー [Rsreportdesigner 構成ファイル](../report-server/rsreportdesigner-configuration-file.md)の[デザインクエリおよびビュー&#41;Visual Database ツール &#40;方法に関するトピック](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)
 
 

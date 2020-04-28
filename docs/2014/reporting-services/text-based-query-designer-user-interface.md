@@ -1,5 +1,5 @@
 ---
-title: テキストベースのクエリ デザイナのユーザー インターフェイス |マイクロソフトドキュメント
+title: テキストベースのクエリデザイナーのユーザーインターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 340040a0806a87d55582356d085ab924e25b6a48
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388676"
 ---
 # <a name="text-based-query-designer-user-interface"></a>テキストベースのクエリ デザイナーのユーザー インターフェイス
@@ -28,7 +28,7 @@ ms.locfileid: "81388676"
 
  テキスト ベースのクエリ デザイナーでは、ツール バーと次の 2 つのペインが表示されます。
 
--   **クエリ**クエリ テキスト、テーブル名、またはストアド プロシージャ名が表示されます。
+-   **クエリ**クエリテキスト、テーブル名、またはストアドプロシージャ名が表示されます。
 
 -   **[結果]** デザイン時にクエリの実行結果が表示されます。
 
@@ -39,8 +39,8 @@ ms.locfileid: "81388676"
 |------------|-----------------|
 |**[テキストとして編集]**|テキスト ベースのクエリ デザイナーと、グラフィカル クエリ デザイナー間で切り替えます。 すべての種類のデータ ソースでグラフィカル クエリ デザイナーがサポートされているとは限りません。|
 |[**インポート**]|ファイルまたはレポートから既存のクエリをインポートします。 サポートされているファイルの種類は sql と rdl だけです。 詳細については、「 [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)と呼ばれます。|
-|![クエリの実行](../analysis-services/media/rsqdicon-run.gif "クエリの実行")|クエリを実行し、その結果セットを結果ペインに表示します。|
-|**[コマンドの種類]**|**[Text]**、 **[StoredProcedure]**、または **[TableDirect]** を選択します。 パラメーターを受け取るストアド プロシージャの場合、ツール バーの **[実行]** をクリックすると、 **[クエリ パラメーターの定義]** ダイアログ ボックスが表示され、必要な値を入力できます。 ストアド プロシージャが複数の結果セットを返す場合、データセットの設定には最初の結果セットのみが使用されます。<br /><br /> サポートされるコマンドの種類は、データ ソースの種類によって異なります。 たとえば、 **[TableDirect]** がサポートされるのは、OLE DB と ODBC だけです。|
+|![クエリを実行する](../analysis-services/media/rsqdicon-run.gif "クエリの実行")|クエリを実行し、その結果セットを結果ペインに表示します。|
+|**[コマンドの種類]**|**[Text]**、 **[StoredProcedure]**、または **[TableDirect]** を選択します。 パラメーターを受け取るストアド プロシージャの場合、ツール バーの **[実行]** をクリックすると、 **[クエリ パラメーターの定義]** ダイアログ ボックスが表示され、必要な値を入力できます。 ストアドプロシージャから複数の結果セットが返された場合は、最初の結果セットのみを使用してデータセットが設定されることに注意してください。<br /><br /> サポートされるコマンドの種類は、データ ソースの種類によって異なります。 たとえば、 **[TableDirect]** がサポートされるのは、OLE DB と ODBC だけです。|
 
 ### <a name="command-type-text"></a>コマンドの種類 (Text)
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データセットを作成するとき、レポート デザイナーには既定によりグラフィカル クエリ デザイナーが表示されます。 テキスト ベースのクエリ デザイナーに切り替えるには、ツール バーの **[テキストとして編集]** 切り替えボタンをクリックします。 テキスト ベースのクエリ デザイナーは、クエリ ペインと結果ペインの 2 つのペインで構成されています。 次の図に各ペインの名称を示します。
@@ -87,9 +87,9 @@ uspGetEmployeeManagers;
 
  `Sales.Customer`
 
- テーブル名 Sales.Customer を入力すると、[!INCLUDE[tsql](../includes/tsql-md.md)]ステートメント`SELECT * FROM Sales.Customer;`を作成するのと同じになります。
+ テーブル名として「Sales. Customer」と入力すると、 [!INCLUDE[tsql](../includes/tsql-md.md)]ステートメント`SELECT * FROM Sales.Customer;`の作成に相当します。
 
 ## <a name="see-also"></a>参照
- [レポート デザイナの SQL Server データ ツールのクエリ デザイン ツール &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md) [レポート 埋め込みデータセットと共有データセット&#40;レポート ビルダーおよび SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) SQL Server[接続タイプ&#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md) OLE DB[接続タイプ&#40;SSRS&#41;](report-data/ole-db-connection-type-ssrs.md) ODBC 接続タイプ&#40;レポート ビルダーおよび&#41;[SSRS &#40;レポート ビルダーおよび SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) [RSReportDesigner 構成ファイル](report-server/rsreportdesigner-configuration-file.md)&#40;[ODBC Connection Type &#40;SSRS&#41;](report-data/odbc-connection-type-ssrs.md)
+ [レポートデザイナー &#40;SQL Server Data Tools のクエリデザインツール ssrs&#41;](report-data/query-design-tools-ssrs.md) [レポート埋め込みデータセットと共有データセット &#40;レポートビルダーと Ssrs&#41;SQL Server 接続の](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)[種類](report-data/sql-server-connection-type-ssrs.md)&#40;ssrs&#41;[OLE DB 接続](report-data/ole-db-connection-type-ssrs.md)の[種類 &#40;Ssrs](report-data/odbc-connection-type-ssrs.md) [の&#41;レポート埋め込みデータセットと共有データセット &#40;&#41;と ssrs &#40;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) [rsreportdesigner 構成ファイル](report-server/rsreportdesigner-configuration-file.md)
 
 

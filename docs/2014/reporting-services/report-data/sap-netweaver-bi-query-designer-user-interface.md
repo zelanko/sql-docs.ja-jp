@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f26fb42531635fd6e5791fbad0cba94f980f23e
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388332"
 ---
 # <a name="sap-netweaver-bi-query-designer-user-interface"></a>SAP NetWeaver BI Query Designer のユーザー インターフェイス
@@ -104,6 +104,6 @@ ms.locfileid: "81388332"
 -   **削除** (![削除](../../analysis-services/media/rsqdicon-delete.gif "削除"))
 
 ## <a name="see-also"></a>参照
- [レポート ビルダーおよび SSRS &#40;RSReportDesigner 構成ファイル&#41;共有データセットまたは埋め込みデータセットを作成](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)[する](../report-server/rsreportdesigner-configuration-file.md)
+ [共有データセットまたは埋め込みデータセット &#40;レポートビルダーと SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) [Rsreportdesigner 構成ファイル](../report-server/rsreportdesigner-configuration-file.md)を作成する
 
 

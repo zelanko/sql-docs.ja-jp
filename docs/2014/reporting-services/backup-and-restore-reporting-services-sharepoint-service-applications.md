@@ -1,5 +1,5 @@
 ---
-title: レポート サービスのバックアップと復元の SharePoint サービス アプリケーション |マイクロソフトドキュメント
+title: SharePoint サービスアプリケーション Reporting Services のバックアップと復元 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 59e0de9e8ee6882b19939ef116ef4ac8023782ed
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487551"
 ---
 # <a name="backup-and-restore-reporting-services-sharepoint-service-applications"></a>Reporting Services SharePoint サービス アプリケーションのバックアップと復元
@@ -22,7 +22,7 @@ ms.locfileid: "81487551"
   
 -   [制限事項と制約事項](#bkmk_Restrictions)  
   
--   [サービス アプリケーションのバックアップ](#bkmk_backup)  
+-   [サービスアプリケーションのバックアップ](#bkmk_backup)  
   
 -   [サービス アプリケーションの復元](#bkmk_restore)  
   
@@ -51,9 +51,9 @@ ms.locfileid: "81487551"
 3.  サービス アプリケーションがデータベースへのアクセス用に UEA または Windows 認証を使用しているかどうかを確認します。 使用している場合は、復元後にサービス アプリケーションを正しく構成できるよう、必要な資格情報をメモします。  
   
 ### <a name="backup-the-encryption-keys-using-central-administration"></a>サーバーの全体管理を使用して暗号化キーをバックアップする  
- 暗号化キーのバックアップについては[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]、「レポート[サービスの SharePoint サービス アプリケーションの管理](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)」の「暗号化キー」セクションを参照してください。  
+ 暗号化キーの[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]バックアップの詳細については、「 [Manage a Reporting Services SharePoint Service Application](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)」の「暗号化キー」セクションを参照してください。  
   
-###  <a name="backup-the-service-application-using-sharepoint-central-administration"></a><a name="bkmk_centraladmin"></a>サーバーの全体管理を使用したサービス アプリケーションのバックアップ  
+###  <a name="backup-the-service-application-using-sharepoint-central-administration"></a><a name="bkmk_centraladmin"></a>SharePoint サーバーの全体管理を使用してサービスアプリケーションをバックアップする  
  サービス アプリケーションをバックアップするには、次の手順を実行します。  
   
 1.  SharePoint サーバーの全体管理で、 **[バックアップおよび復元]** グループの **[バックアップの実行]** をクリックします。  
@@ -75,9 +75,9 @@ ms.locfileid: "81487551"
 ### <a name="verify-execution-account-and-database-authentication"></a>実行アカウントとデータベース認証の確認  
  **実行アカウント** : サービス アプリケーションが実行アカウントを使用しているかどうかを確認するには、次の手順を実行します。  
   
-1.  SharePoint サーバーの全体管理で、[**アプリケーション構成の管理**] グループの [**サービス アプリケーションの管理**] をクリックします。  
+1.  SharePoint サーバーの全体管理で、[**アプリケーション管理**] グループの [**サービスアプリケーションの管理**] をクリックします。  
   
-2.  サービス アプリケーションの名前をクリックし、SharePoint リボンの [**管理**] をクリックします。  
+2.  サービスアプリケーションの名前をクリックし、SharePoint リボンの [**管理**] をクリックします。  
   
 3.  **[実行アカウント]** をクリックします。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "81487551"
   
  **データベース認証** : サービス アプリケーションがデータベース認証用に Windows 認証を使用しているかどうかを確認するには、次の手順を実行します。  
   
-1.  SharePoint サーバーの全体管理で、[**アプリケーション構成の管理**] グループの [**サービス アプリケーションの管理**] をクリックします。  
+1.  SharePoint サーバーの全体管理で、[**アプリケーション管理**] グループの [**サービスアプリケーションの管理**] をクリックします。  
   
 2.  サービス アプリケーションの名前をクリックし、SharePoint リボンで **[プロパティ]** をクリックします。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "81487551"
   
 4.  Windows 認証が構成されている場合は、サービス アプリケーションを復元後に構成する際、資格情報が必要になります。 必ず、正しい資格情報を確認してからバックアップおよび復元の手順に進んでください。  
   
-##  <a name="restore-the-service-application"></a><a name="bkmk_restore"></a>サービス アプリケーションを復元する  
+##  <a name="restore-the-service-application"></a><a name="bkmk_restore"></a>サービスアプリケーションを復元する  
  次の手順を実行します。  
   
 1.  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーションを復元します。  
@@ -125,14 +125,14 @@ ms.locfileid: "81487551"
  [サービス アプリケーションを復元する (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428305.aspx)。  
   
 ### <a name="restore-the-encryption-keys-using-central-administration"></a>サーバーの全体管理を使用して暗号化キーを復元する  
- 暗号化キーの復元については[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]、「[レポート サービスの SharePoint サービス アプリケーションの管理](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)」の「暗号化キー」セクションを参照してください。  
+ 暗号化キーの[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]復元の詳細については、「 [Reporting Services SharePoint サービスアプリケーションの管理](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)」の「暗号化キー」セクションを参照してください。  
   
 ### <a name="configure-the-execution-account-and-database-authentication"></a>実行アカウントとデータベース認証の構成  
  **実行アカウント** : サービス アプリケーションが実行アカウントを使用していた場合は、次の手順を実行して実行アカウントを構成します。  
   
-1.  SharePoint サーバーの全体管理で、[**アプリケーション構成の管理**] グループの [**サービス アプリケーションの管理**] をクリックします。  
+1.  SharePoint サーバーの全体管理で、[**アプリケーション管理**] グループの [**サービスアプリケーションの管理**] をクリックします。  
   
-2.  サービス アプリケーションの名前をクリックし、SharePoint リボンの [**管理**] をクリックします。  
+2.  サービスアプリケーションの名前をクリックし、SharePoint リボンの [**管理**] をクリックします。  
   
 3.  **[実行アカウント]** をクリックします。  
   
@@ -142,7 +142,7 @@ ms.locfileid: "81487551"
   
  **データベース認証** : サービス アプリケーションがデータベース認証用に Windows 認証を使用していた場合は、次の手順を実行します。  
   
-1.  SharePoint サーバーの全体管理で、[**アプリケーション構成の管理**] グループの **[サービス アプリケーションの管理**] をクリックします。  
+1.  SharePoint サーバーの全体管理で、[**アプリケーション管理**] グループの [**サービスアプリケーションの管理**] をクリックします。  
   
 2.  サービス アプリケーションの名前をクリックし、SharePoint リボンで **[プロパティ]** をクリックします。  
   

@@ -1,5 +1,5 @@
 ---
-title: For ループ コンテナを設定する |マイクロソフトドキュメント
+title: For ループコンテナーを構成する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 766a82c975b607687f79a696ce587422b93322bf
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487000"
 ---
 # <a name="configure-a-for-loop-container"></a>For ループ コンテナーを構成する
@@ -43,8 +43,8 @@ ms.locfileid: "81487000"
 7.  **[OK]** をクリックし、 **[For ループ エディター]** を閉じます。  
   
 ## <a name="see-also"></a>参照  
- [フォーループコンテナ](control-flow/for-loop-container.md)   
- [SSIS&#41;式&#40;統合サービス](expressions/integration-services-ssis-expressions.md)   
+ [For ループコンテナー](control-flow/for-loop-container.md)   
+ [SSIS&#41; 式の Integration Services &#40;](expressions/integration-services-ssis-expressions.md)   
  [パッケージでプロパティ式を使用する](expressions/use-property-expressions-in-packages.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: CommandStream プロパティを使用してテンプレート ファイルを実行する
-description: SQL または XPath クエリで構成されるテンプレート ファイルを実行する方法について説明します。
+title: CommandStream プロパティを使用してテンプレートファイルを実行する
+description: SqlXmlCommand オブジェクトの CommandStream プロパティを使用して、SQL クエリまたは XPath クエリで構成されるテンプレートファイルを実行する方法について説明します。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,17 +18,17 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a3b7922921c64c9afb7ef37be57db23a32470eaf
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388365"
 ---
 # <a name="executing-template-files-by-using-the-commandstream-property"></a>CommandStream プロパティを使用した、テンプレート ファイルの実行
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  この例では、SQL クエリまたは XPath クエリで構成されるテンプレート ファイルを、SqlXmlCommand オブジェクトの CommandStream プロパティを使用して指定する方法を示します。 このアプリケーションでは、コマンド ファイルに対して FileStream オブジェクトが開かれ、ファイル ストリームが実行される CommandStream として割り当てられます。  
+  この例は、SqlXmlCommand オブジェクトの CommandStream プロパティを使用して、SQL クエリまたは XPath クエリで構成されるテンプレートファイルを指定する方法を示しています。 このアプリケーションでは、コマンドファイルの FileStreamobject が開かれ、実行される CommandStream としてファイルストリームが割り当てられます。  
   
- 次の例では、プロパティは 、(テンプレート ファイルとしてではなく) として指定されています。  
+ 次の例では、CommandType プロパティが (TemplateFile としてではなく) SqlXmlCommandType. Template として指定されています。  
   
  次はサンプル XML テンプレートです。  
   
@@ -85,7 +85,7 @@ class Test
   
 1.  この例で提供される XML テンプレート (TemplateFile.xml) をフォルダーに保存します。  
   
-2.  この例で提供されている C# コード (DocSample.cs) を、スキーマが格納されているフォルダーと同じフォルダーに保存します。 ファイルを別のフォルダーに保存する場合は、コードを編集して、マッピング スキーマに対する適切なディレクトリ パスを指定する必要があります。  
+2.  この例で提供されている C# コード (DocSample.cs) を、スキーマが格納されているのと同じフォルダーに保存します。 ファイルを別のフォルダーに保存する場合は、コードを編集して、マッピング スキーマに対する適切なディレクトリ パスを指定する必要があります。  
   
 3.  コードをコンパイルします。 コマンド プロンプトでコードをコンパイルするには、次を使用します。  
   

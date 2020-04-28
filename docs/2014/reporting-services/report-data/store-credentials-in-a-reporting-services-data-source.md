@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 74380cde599c965b64c0389f51df4dc51b54bdbf
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388286"
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>Store Credentials in a Reporting Services Data Source
@@ -31,18 +31,18 @@ ms.locfileid: "81388286"
 
  **このトピックの内容:**
 
--   [レポート固有のデータ ソースの保存された資格情報を構成する (ネイティブ モード)](#bkmk_stored_credentials_data_source_native)
+-   [レポート固有のデータソース用の保存された資格情報を構成する (ネイティブモード)](#bkmk_stored_credentials_data_source_native)
 
--   [レポート固有のデータ ソースの保存された資格情報を構成する (SharePoint モード)](#bkmk_stored_credentials_data_source_sharepoint)
+-   [レポート固有のデータソース用の保存された資格情報の構成 (SharePoint モード)](#bkmk_stored_credentials_data_source_sharepoint)
 
--   [共有データ ソースの保存された資格情報を構成する (ネイティブ モード)](#bkmk_stored_credentials_shared_data_source_native)
+-   [共有データソース用の保存された資格情報を構成する (ネイティブモード)](#bkmk_stored_credentials_shared_data_source_native)
 
 -   [共有データ ソース用の保存された資格情報を構成する (SharePoint モード)](#bkmk_stored_credentials_shared_data_source_sharepoint)
 
 ##  <a name="security-policy-requirements-for-stored-credentials"></a><a name="bkmk_top"></a> 保存された資格情報のセキュリティ ポリシー要件
  ![as_powerpivot_refresh_sss_set_key](../../analysis-services/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key") 保存された資格情報に使用するアカウントを、レポート サーバー上で、次のいずれかのセキュリティ ポリシー用に構成する必要があります。 環境に必要な最小レベルの権限を持つポリシーを選択することをお勧めします。
 
-1.  **ローカル ログオンを許可する**: 詳細については、「 [ローカル ログオンを許可する](https://technet.microsoft.com/library/cc756809\(v=WS.10\).aspx)」を参照してください。
+1.  **ローカルログオンを許可**します。 詳細については、「 [ローカル ログオンを許可する](https://technet.microsoft.com/library/cc756809\(v=WS.10\).aspx)」を参照してください。
 
 2.  **バッチ ジョブとしてログオン**。 詳細については、「 [バッチ ジョブとしてログオン](https://technet.microsoft.com/library/cc755659\(v=ws.10\).aspx)」を参照してください。
 
@@ -50,7 +50,7 @@ ms.locfileid: "81388286"
 
 ##  <a name="configure-stored-credentials-for-a-report-specific-data-source-native-mode"></a><a name="bkmk_stored_credentials_data_source_native"></a> レポート固有のデータ ソース用の保存された資格情報を構成する (ネイティブ モード)
 
-1.  ネイティブ モードのレポート マネージャーで、レポートが含まれているフォルダーに移動します。 レポート マネージャの![ssrs アイテムのコンテキスト メニューを](../media/ssrs-report-manager-item-context-menu.png "レポート マネージャーの、SSRS アイテム用のコンテキスト メニュー")クリックします。
+1.  ネイティブ モードのレポート マネージャーで、レポートが含まれているフォルダーに移動します。 ![Ssrs 項目については、レポートマネージャーで項目の](../media/ssrs-report-manager-item-context-menu.png "レポート マネージャーの、SSRS アイテム用のコンテキスト メニュー")コンテキストメニューのコンテキストメニューをクリックします。
 
 2.  **[管理]** をクリックして、 **[データ ソース]** をクリックします。
 
@@ -58,7 +58,7 @@ ms.locfileid: "81388286"
 
 4.  **[データ ソースの種類]** の一覧で、データ ソースから取得したデータの処理に使用するデータ処理拡張機能を選択します。
 
-5.  [**接続文字列**] ボックスに、レポート サーバーがデータ ソースへの接続に使用する接続文字列を指定します。 次の例は、データベースへの接続に使用される接続文字列を[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]示しています。
+5.  [**接続文字列**] には、レポートサーバーがデータソースへの接続に使用する接続文字列を指定します。 次の例は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]データベースへの接続に使用される接続文字列を示しています。
 
     ```
     data source=<servername>;initial catalog=AdventureWorks2012
@@ -68,11 +68,11 @@ ms.locfileid: "81388286"
 
 7.  ユーザー名とパスワードを入力します。
 
-    -   アカウントが Windows ドメイン ユーザー アカウントの場合は\<、<\\ \>>次の形式で指定します**Use as Windows credentials when connecting to the data source.**。
+    -   アカウントが\<Windows ドメインユーザーアカウントの場合は、ドメイン>\\<アカウント\>の形式で指定し、[**データソースへの接続時に Windows 資格情報として使用**する] を選択します。
 
     -   ユーザー名とパスワードがデータベースの資格情報である場合は、 **[データ ソースへの接続時に Windows 資格情報として使用する]** を選択しないでください。 データベース サーバーが権限の借用または委譲をサポートしている場合は、 **[データ ソースへの接続が確立した後に、認証されているユーザーの権限を借用する]** を選択できます。
 
-8.  **[Apply]** をクリックします。
+8.  **[適用]** をクリックします。
 
      ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [保存された資格情報のセキュリティ ポリシーの要件](#bkmk_top)
 
@@ -86,7 +86,7 @@ ms.locfileid: "81388286"
 
 4.  **[データ ソースの種類]** の一覧で、データ ソースから取得したデータの処理に使用するデータ処理拡張機能を選択します。
 
-5.  [**接続文字列**] ボックスに、レポート サーバーがデータ ソースへの接続に使用する接続文字列を指定します。 次の例は、データベースへの接続に使用される接続文字列を[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]示しています。
+5.  [**接続文字列**] には、レポートサーバーがデータソースへの接続に使用する接続文字列を指定します。 次の例は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]データベースへの接続に使用される接続文字列を示しています。
 
     ```
     data source=<servername>;initial catalog=AdventureWorks2012
@@ -96,9 +96,9 @@ ms.locfileid: "81388286"
 
 7.  **ユーザー名**と**パスワード**を入力します。
 
-    -   アカウントが Windows ドメイン ユーザー アカウントの場合は\<、<\\ \>>次の形式で指定します**Use as Windows credentials when connecting to the data source.**。
+    -   アカウントが\<Windows ドメインユーザーアカウントの場合は、ドメイン>\\<アカウント\>の形式で指定し、[**データソースへの接続時に Windows 資格情報として使用**する] を選択します。
 
-    -   ユーザー名とパスワードがデータベースの資格情報である場合は、 **[Windows 資格情報として使用する]** を選択しないでください。 データベース サーバーが偽装または委任をサポートしている場合は、[**このアカウントに実行コンテキストを設定する**] を選択できます。
+    -   ユーザー名とパスワードがデータベースの資格情報である場合は、 **[Windows 資格情報として使用する]** を選択しないでください。 データベースサーバーで権限借用または委任がサポートされている場合は、[**実行コンテキストをこのアカウントに設定**する] を選択できます。
 
 8.  **[OK]** をクリックします。
 
@@ -108,13 +108,13 @@ ms.locfileid: "81388286"
 
 1.  ネイティブ モードのレポート マネージャーで、共有データ ソース アイテムに移動します。 ![共有データ ソースのアイコン](../media/hlp-16datasource.png "共有データ ソースのアイコン")
 
-2.  ![ssrs アイテムのレポート マネージャでコンテキスト メニューのコンテキスト メニューを](../media/ssrs-report-manager-item-context-menu.png "レポート マネージャーの、SSRS アイテム用のコンテキスト メニュー")クリックし、[**管理**] をクリックします。
+2.  ![レポートマネージャーの ssrs 項目について](../media/ssrs-report-manager-item-context-menu.png "レポート マネージャーの、SSRS アイテム用のコンテキスト メニュー")、コンテキストメニューのコンテキストメニューをクリックし、[**管理**] をクリックします。
 
-3.  [**データ ソースの種類]** ボックスの一覧で、データ ソースからのデータを処理するために使用するデータ処理拡張機能を指定します。
+3.  [**データソースの種類**] ボックスの一覧で、データソースからのデータを処理するために使用するデータ処理拡張機能を指定します。
 
-4.  [**接続文字列**] ボックスに、レポート サーバーがデータ ソースへの接続に使用する接続文字列を指定します。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] では、接続文字列に資格情報を指定しないことをお勧めします。
+4.  [**接続文字列**] には、レポートサーバーがデータソースへの接続に使用する接続文字列を指定します。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] では、接続文字列に資格情報を指定しないことをお勧めします。
 
-     次の例は、ローカル[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]データベースへの接続に使用される接続文字列を示しています。
+     次の例は、ローカル[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]データベースへの接続に使用される接続文字列を示しています。
 
     ```
     data source=<localservername>; initial catalog=AdventureWorks2012
@@ -122,15 +122,15 @@ ms.locfileid: "81388286"
 
 5.  ユーザー名とパスワードを入力します。
 
-    -   アカウントが Windows ドメイン ユーザー アカウントの場合は\<、<\\ \>>次の形式で指定します**Use as Windows credentials when connecting to the data source.**。
+    -   アカウントが\<Windows ドメインユーザーアカウントの場合は、ドメイン>\\<アカウント\>の形式で指定し、[**データソースへの接続時に Windows 資格情報として使用**する] を選択します。
 
     -   ユーザー名とパスワードがデータベースの資格情報である場合は、 **[データ ソースへの接続時に Windows 資格情報として使用する]** を選択しないでください。 データベース サーバーが権限の借用または委譲をサポートしている場合は、 **[データ ソースへの接続が確立した後に、認証されているユーザーの権限を借用する]** を選択できます。
 
-6.  **[Apply]** をクリックします。
+6.  **[適用]** をクリックします。
 
      ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [保存された資格情報のセキュリティ ポリシーの要件](#bkmk_top)
 
-##  <a name="configure-stored-credentials-for-a-shared-data-source-sharepoint-mode"></a><a name="bkmk_stored_credentials_shared_data_source_sharepoint"></a>共有データ ソースの保存された資格情報を構成する (SharePoint モード)
+##  <a name="configure-stored-credentials-for-a-shared-data-source-sharepoint-mode"></a><a name="bkmk_stored_credentials_shared_data_source_sharepoint"></a>共有データソース用の保存された資格情報の構成 (SharePoint モード)
 
 1.  ドキュメント ライブラリで、共有データ ソース項目を参照します。![共有データ ソースのアイコン](../media/hlp-16datasource.png "共有データ ソースのアイコン")
 
@@ -138,11 +138,11 @@ ms.locfileid: "81388286"
 
 3.  **[データ ソース定義の編集]** をクリックします。
 
-4.  [**データ ソースの種類]** ボックスの一覧で、データ ソースからのデータを処理するために使用するデータ処理拡張機能を指定します。
+4.  [**データソースの種類**] ボックスの一覧で、データソースからのデータを処理するために使用するデータ処理拡張機能を指定します。
 
-5.  [**接続文字列**] ボックスに、レポート サーバーがデータ ソースへの接続に使用する接続文字列を指定します。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] では、接続文字列に資格情報を指定しないことをお勧めします。
+5.  [**接続文字列**] には、レポートサーバーがデータソースへの接続に使用する接続文字列を指定します。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] では、接続文字列に資格情報を指定しないことをお勧めします。
 
-     次の例は、ローカル[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]データベースへの接続に使用される接続文字列を示しています。
+     次の例は、ローカル[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]データベースへの接続に使用される接続文字列を示しています。
 
     ```
     data source=<localservername>; initial catalog=AdventureWorks2012
@@ -150,7 +150,7 @@ ms.locfileid: "81388286"
 
 6.  ユーザー名とパスワードを入力します。
 
-    -   アカウントが Windows ドメイン ユーザー アカウントの場合は\<、<\\ \>>次の形式で指定します**Use as Windows credentials.**。
+    -   アカウントが Windows ドメインユーザーアカウントの\<場合は、ドメイン>\\<アカウント\>の形式で指定し、[ **Windows 資格情報として使用する**] を選択します。
 
     -   ユーザー名とパスワードがデータベースの資格情報である場合は、 **[Windows 資格情報として使用する]** を選択しないでください。 データベース サーバーが権限の借用または委譲をサポートしている場合は、 **[実行コンテキストをこのアカウントに設定する]** を選択できます。
 
@@ -159,6 +159,6 @@ ms.locfileid: "81388286"
      ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [保存された資格情報のセキュリティ ポリシーの要件](#bkmk_top)
 
 ## <a name="see-also"></a>参照
- [レポート データ ソースの資格情報と接続情報を指定](../../integration-services/connection-manager/data-sources.md)する[レポート マネージャーのレポート &#40;のデータ &#40;ソース プロパティを構成する&#41;](configure-data-source-properties-for-a-report-report-manager.md)レポート マネージャー&#41;データ ソース[のプロパティ ページ &#40;&#41;](../data-sources-properties-page-report-manager.md)レポート[マネージャー&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)レポート マネージャー&#41;[新しいデータ ソース ページ&#40;レポート マネージャ&#41;](../new-data-source-page-report-manager.md)
+ [レポートデータソースの資格情報と接続情報を指定する](../../integration-services/connection-manager/data-sources.md)[レポートのデータソースのプロパティを構成する &#40;レポートマネージャー&#41;](configure-data-source-properties-for-a-report-report-manager.md) [共有データソースを作成、削除、または変更する &#40;レポートマネージャー](../create-delete-or-modify-a-shared-data-source-report-manager.md)&#41;データソース][プロパティページ](../data-sources-properties-page-report-manager.md)&#40;レポートマネージャー [[新しいデータソース] ページ](../new-data-source-page-report-manager.md)&#41;&#40;レポートマネージャー
 
 

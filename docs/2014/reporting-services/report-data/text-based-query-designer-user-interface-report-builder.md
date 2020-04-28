@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e500d746f3ef0cdfc2d48037467f2ab6ce376d3f
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388324"
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>テキストベースのクエリ デザイナーのユーザー インターフェイス (レポート ビルダー)
@@ -56,7 +56,7 @@ ms.locfileid: "81388324"
 |結果|クエリの結果を表示します。 クエリを実行するには、任意のペインで右クリックして、 **[実行]** をクリックするか、ツール バーの **[実行]** ボタンをクリックします。|
 
 #### <a name="example"></a>例
- 次のクエリは、スキーマの[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]**2008**データベース`ContactType`テーブルから姓の`Person`リストを返します。
+ 次の[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]クエリは、 `Person`スキーマの**2008**データベース`ContactType`テーブルから姓の一覧を返します。
 
 ```
 SELECT Name FROM Person.ContactType
@@ -79,7 +79,7 @@ SELECT Name FROM Person.ContactType
 |結果|クエリの結果を表示します。 クエリを実行するには、任意のペインで右クリックして、 **[実行]** をクリックするか、ツール バーの **[実行]** ボタンをクリックします。|
 
 #### <a name="example"></a>例
- 次のクエリは[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]**、2008**ストアド`uspGetWhereUsedProductID`プロシージャを呼び出します。 クエリを実行する場合は、製品 ID 番号パラメーターの値を入力する必要があります。
+ 次のクエリは、 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008**ストアドプロシージャ`uspGetWhereUsedProductID`を呼び出します。 クエリを実行する場合は、製品 ID 番号パラメーターの値を入力する必要があります。
 
 ```
 uspGetWhereUsedProductID
@@ -98,13 +98,13 @@ uspGetWhereUsedProductID
  **[コマンドの種類] で [TableDirect]** を選択した場合、テキスト ベースのクエリ デザイナーには、クエリ ペインと結果ペインの 2 つのペインが表示されます。 テーブルを入力し、 **[実行]** ボタンをクリックすると、そのテーブルのすべての列が返されます。
 
 #### <a name="example"></a>例
- データ ソースの種類が OLE DB の場合、次のデータセット クエリは[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]**、2008**データベース内のすべての接触タイプの結果セットを返します。
+ データソースの種類が OLE DB の場合、次のデータセットクエリでは、 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008**データベースのすべての種類の連絡先について結果セットが返されます。
 
  `Person.ContactType`
 
  テーブル名 Person.ContactType を入力した場合、これは [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントの `SELECT * FROM Person.ContactType`を作成することに相当します。
 
 ## <a name="see-also"></a>参照
- [レポート ビルダー&#40;レポート ビルダー&#41;&#40;](relational-query-designer-user-interface-report-builder.md)[レポート ビルダー&#41;](../query-designers-report-builder.md)のユーザー インターフェイス
+ [リレーショナルクエリデザイナーのユーザーインターフェイス &#40;レポートビルダー&#41;](relational-query-designer-user-interface-report-builder.md) [クエリデザイナー &#40;レポートビルダー&#41;](../query-designers-report-builder.md)
 
 

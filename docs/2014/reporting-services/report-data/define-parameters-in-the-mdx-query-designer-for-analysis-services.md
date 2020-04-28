@@ -1,5 +1,5 @@
 ---
-title: 分析サービス用 MDX クエリ デザイナーでのパラメーターの定義 (レポート ビルダーおよび SSRS) |マイクロソフトドキュメント
+title: Analysis Services の MDX クエリデザイナーでのパラメーターの定義 (レポートビルダーおよび SSRS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 39f94bc7fd247a1608385f009fcb8d117b8c628f
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388533"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services-report-builder-and-ssrs"></a>Analysis Services の MDX クエリ デザイナーでのパラメーターの定義 (レポート ビルダーおよび SSRS)
@@ -82,6 +82,6 @@ ms.locfileid: "81388533"
      レポート パラメーターで使用可能な値を示すデータセットを確認するには、レポート データ ペインの空白部分を右クリックし、 **[非表示のデータセットの表示]** をクリックします。 レポート データ ペインに、レポート内のすべてのデータセットが表示されます。
 
 ## <a name="see-also"></a>参照
- [MDX &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)[分析サービス MDX クエリ デザイナー ユーザー インターフェイス](analysis-services-mdx-query-designer-user-interface.md)の分析サービス接続の種類
+ Mdx [&#40;SSRS&#41;の Analysis Services の接続の種類](analysis-services-connection-type-for-mdx-ssrs.md) [Analysis Services mdx クエリデザイナーのユーザーインターフェイス](analysis-services-mdx-query-designer-user-interface.md)
 
 

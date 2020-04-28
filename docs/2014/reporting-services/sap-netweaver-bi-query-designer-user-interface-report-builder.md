@@ -1,5 +1,5 @@
 ---
-title: SAP NetWeaver BI クエリデザイナユーザーインタフェース (レポートビルダー) |マイクロソフトドキュメント
+title: SAP NetWeaver BI クエリデザイナーのユーザーインターフェイス (レポートビルダー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d3dc9e21a9bea5c188b32ccc01b7d1fa6d15fa98
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388645"
 ---
 # <a name="sap-netweaver-bi-query-designer-user-interface-report-builder"></a>SAP NetWeaver BI Query Designer のユーザー インターフェイス (レポート ビルダー)
@@ -58,7 +58,7 @@ ms.locfileid: "81388645"
 |![クエリの自動実行](../analysis-services/media/rsqdicon-autoexecute.gif "クエリの自動実行")|データ ペインで列を削除するなど、変更のたびに自動的にクエリを実行して結果を表示します。 結果はデータ ペインに表示されます。|
 |![削除](../analysis-services/media/rsqdicon-delete.gif "削除")|データ ペインで選択した列をクエリから削除します。|
 |![[クエリ パラメーター] ダイアログ ボックスのアイコン](../analysis-services/media/iconqueryparameter.gif "[クエリ パラメーター] ダイアログ ボックスのアイコン")|**[変数]** ダイアログ ボックスを表示します。 このボタンは、クエリ キューブが選択されている場合にのみ有効になります (変数はクエリ キューブでのみサポートされるため)。 変数に既定値を割り当てた場合、対応するレポート パラメーターが作成されます。|
-|![クエリの実行](../analysis-services/media/rsqdicon-run.gif "クエリの実行")|クエリを実行し、結果をデータ ペインに表示します。|
+|![クエリを実行する](../analysis-services/media/rsqdicon-run.gif "クエリの実行")|クエリを実行し、結果をデータ ペインに表示します。|
 |![クエリの取り消し](../analysis-services/media/rsqdicon-cancel.gif "クエリの取り消し")|クエリを取り消します。|
 |![デザイン モードに切り替える](../analysis-services/media/rsqdicon-designmode.gif "デザイン モードに切り替える")|デザイン モードとクエリ モードを切り替えます。|
 

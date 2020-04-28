@@ -1,6 +1,6 @@
 ---
-title: オブジェクト |マイクロソフトドキュメント
-description: ユーザー接続で SQL Server のマネージ コードを呼び出すと、呼び出し元のコンテキストへのアクセスは SqlContext オブジェクトで抽象化されます。
+title: SqlContext オブジェクト |Microsoft Docs
+description: ユーザー接続の SQL Server でマネージコードを呼び出すと、呼び出し元のコンテキストへのアクセスが SqlContext オブジェクトで抽象化されます。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,37 +16,37 @@ ms.assetid: 67437853-8a55-44d9-9337-90689ebba730
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: cd6d3091b155ae829e368bdd182b3da8286c7194
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487541"
 ---
 # <a name="sqlcontext-object"></a>SqlContext オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   プロシージャや関数の呼び出し時、CLR (共通言語ランタイム) ユーザー定義型のメソッドの呼び出し時、または任意の [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 言語で定義されたトリガーの起動時には、サーバーのマネージド コードを呼び出します。 このコードの実行はユーザー接続の一環として要求されるので、サーバーで実行しているコードから呼び出し元のコンテキストにアクセスできる必要があります。 また、特定のデータ アクセス操作には、コードが呼び出し元のコンテキストで実行されている場合にしか有効にならないものもあります。 たとえば、トリガー操作で使用される inserted 擬似テーブルや deleted 擬似テーブルにアクセスするには、コードが呼び出し元のコンテキストで実行されている必要があります。  
   
- 呼び出し元のコンテキストは **、SqlContext**オブジェクトで抽象化されます。 **メソッドと**プロパティの詳細については、SDK**のクラス**リファレンス ドキュメントを[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]参照してください。  
+ 呼び出し元のコンテキストは、 **Sqlcontext**オブジェクトで抽象化されています。 **Sqltriggercontext**のメソッドとプロパティの詳細については、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK の「 **Microsoft. SqlServer. sqltriggercontext**クラスのリファレンスドキュメント」を参照してください。  
   
- **SqlContext は**、次のコンポーネントへのアクセスを提供します。  
+ **Sqlcontext**は、次のコンポーネントへのアクセスを提供します。  
   
--   **SqlPipe**: **SqlPipe**オブジェクトは、結果がクライアントに流れる "パイプ" を表します。 **オブジェクト**の詳細については、「 [SqlPipe オブジェクト](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlpipe-object.md)」を参照してください。  
+-   **SqlPipe**: **SqlPipe**オブジェクトは、結果がクライアントに流れる "パイプ" を表します。 **SqlPipe**オブジェクトの詳細については、「 [SqlPipe オブジェクト](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlpipe-object.md)」を参照してください。  
   
--   **SQL トリガー コンテキスト**: CLR**トリガー**内からのみ取得できます。 このオブジェクトでは、トリガーを起動した操作や、更新された列のマップについての情報を提供します。 オブジェクトの詳細については **、「SqlTriggerContext**オブジェクト」を参照[してください](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqltriggercontext-object.md)。  
+-   **Sqltriggercontext**: **sqltriggercontext**オブジェクトは、CLR トリガー内からのみ取得できます。 このオブジェクトでは、トリガーを起動した操作や、更新された列のマップについての情報を提供します。 **Sqltriggercontext**オブジェクトの詳細については、「 [sqltriggercontext オブジェクト](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqltriggercontext-object.md)」を参照してください。  
   
--   **IsAvailable**: **IsAvailable**プロパティは、コンテキストの可用性を判断するために使用されます。  
+-   **IsAvailable**: **IsAvailable**プロパティは、コンテキストの可用性を決定するために使用されます。  
   
--   **WindowsId**: **WindowsId**プロパティは、呼び出し元の Windows ID を取得するために使用されます。  
+-   **WindowsIdentity**: **WindowsIdentity**プロパティは、呼び出し元の Windows id を取得するために使用されます。  
   
 ## <a name="determining-context-availability"></a>コンテキスト可用性の判断  
- 現在実行中のコードがインプロセスで実行されているかどうかを調めるには **、SqlContext**クラスを照会します。 これを行うには **、SqlContext**オブジェクトの**IsAvailable**プロパティを確認します。 **IsAvailable**プロパティは読み取り専用で**True**、呼び出し元のコード[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が内部で実行されている場合、および他の**SqlContext**メンバーにアクセスできる場合は True を返します。 **プロパティ**が**False を**返す場合、他のすべての**SqlContext**メンバーは**無効なオペレーション例外**をスローします。 **IsAvailable が** **False**を返す場合、接続文字列に "コンテキスト接続=true" が含まれる接続オブジェクトを開こうとすると、そのオブジェクトを開こうとすると、エラーが発生します。  
+ **Sqlcontext**クラスに対してクエリを実行し、現在実行中のコードがインプロセスで実行されているかどうかを確認します。 これを行うには、 **Sqlcontext**オブジェクトの**IsAvailable**プロパティを確認します。 **IsAvailable**プロパティは読み取り専用であり、呼び出し元のコードが内[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で実行されていて、他の**sqlcontext**メンバーにアクセスできる場合は**True**を返します。 **IsAvailable**プロパティが**False**を返した場合は、他のすべての**sqlcontext**メンバーが**InvalidOperationException**をスローします (使用されている場合)。 **IsAvailable**から**False**が返された場合、接続文字列で "context connection = true" を持つ接続オブジェクトを開こうとすると失敗します。  
   
 ## <a name="retrieving-windows-identity"></a>Windows ID の取得  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内で実行されている CLR コードは、常に、プロセス アカウントのコンテキストで呼び出されます。 コードがプロセス ID ではなく、呼び出し元のユーザーの ID[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用して特定のアクションを実行する必要がある場合は、偽装トークンを取得する必要があります、 **SqlContext**オブジェクトの**WindowsIdentity**プロパティです。 **WindowsIdentity**プロパティは、呼び出し元の[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows ID を表す**WindowsId**インスタンスを返[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 このプロパティには **、EXTERNAL_ACCESS**または**UNSAFE**アクセス許可が設定されているアセンブリのみがアクセスできます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内で実行されている CLR コードは、常に、プロセス アカウントのコンテキストで呼び出されます。 コードで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロセス id ではなく、呼び出し元ユーザーの id を使用して特定のアクションを実行する必要がある場合は、 **Sqlcontext**オブジェクトの**WindowsIdentity**プロパティを使用して権限借用トークンを取得する必要があります。 **WindowsIdentity**プロパティは、呼び出し**WindowsIdentity**元の[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows id を表す WindowsIdentity インスタンスを返します。または、クライアントが認証[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用して認証された場合は null を返します。 このプロパティにアクセスできるのは、 **EXTERNAL_ACCESS**または**UNSAFE**アクセス許可でマークされたアセンブリだけです。  
   
- **WindowsIdentity**オブジェクトを取得した後、呼び出し元はクライアント アカウントを偽装し、クライアントアカウントに代わってアクションを実行できます。  
+ **WindowsIdentity**オブジェクトを取得した後、呼び出し元はクライアントアカウントの権限を借用し、ユーザーに代わってアクションを実行できます。  
   
- 呼び出し元の ID は、Windows 認証を使用してサーバーに接続されたストアド プロシージャまたは関数の実行を開始したクライアントの場合にのみ **、SqlContext.WindowsIdentity**を介して使用できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証が使用されている場合、このプロパティは NULL になり、コードでは呼び出し元ユーザーの権限を借用することはできません。  
+ ストアドプロシージャまたは関数の実行を開始したクライアントが Windows 認証を使用してサーバーに接続している場合、呼び出し元の id は Sqlcontext を通じてのみ使用でき**ます。** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証が使用されている場合、このプロパティは NULL になり、コードでは呼び出し元ユーザーの権限を借用することはできません。  
   
 ### <a name="example"></a>例  
  次の例では、呼び出し元であるクライアントの Windows ID を取得し、クライアントの権限を借用する方法を示します。  
@@ -130,8 +130,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [オブジェクト](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlpipe-object.md)   
- [オブジェクト](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqltriggercontext-object.md)   
+ [SqlPipe オブジェクト](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlpipe-object.md)   
+ [SqlTriggerContext オブジェクト](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqltriggercontext-object.md)   
  [CLR トリガー](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)   
  [ADO.NET に対する SQL Server インプロセス固有の拡張機能](../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Hyperion Essbase クエリ デザイナーのユーザー インターフェイス (レポート ビルダー) |マイクロソフトドキュメント
+title: Hyperion Essbase クエリデザイナーのユーザーインターフェイス (レポートビルダー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7b0b620ec15bc160ddbbbd18a75c56737960745d
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388500"
 ---
 # <a name="hyperion-essbase-query-designer-user-interface-report-builder"></a>Hyperion Essbase クエリ デザイナーのユーザー インターフェイス (レポート ビルダー)
@@ -61,7 +61,7 @@ ms.locfileid: "81388500"
 |![空のセルの表示/非表示の切り替え](../analysis-services/media/rsqdicon-showemptycells.gif "空のセルの表示/非表示の切り替え")|データ ペインに空のセルを表示するかどうかを切り替えます。 これは、MDX で NON EMPTY 句を使用することに相当します。|
 |![クエリの自動実行](../analysis-services/media/rsqdicon-autoexecute.gif "クエリの自動実行")|データ ペインで列を削除するなど、変更のたびに自動的にクエリを実行して結果を表示します。 結果はデータ ペインに表示されます。|
 |![削除](../analysis-services/media/rsqdicon-delete.gif "削除")|選択されているアイテムをクエリから削除します。 このボタンを使用すると、フィルター ペインで選択された行を削除できます。|
-|![クエリの実行](../analysis-services/media/rsqdicon-run.gif "クエリの実行")|クエリを実行し、結果をデータ ペインに表示します。|
+|![クエリを実行する](../analysis-services/media/rsqdicon-run.gif "クエリの実行")|クエリを実行し、結果をデータ ペインに表示します。|
 |![クエリの取り消し](../analysis-services/media/rsqdicon-cancel.gif "クエリの取り消し")|クエリを取り消します。|
 |![デザイン モードに切り替える](../analysis-services/media/rsqdicon-designmode.gif "デザイン モードに切り替える")|デザイン モードとクエリ モードを切り替えます。|
 

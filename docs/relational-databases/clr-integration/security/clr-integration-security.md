@@ -1,6 +1,6 @@
 ---
-title: CLR 統合セキュリティ |マイクロソフトドキュメント
-description: SQL Server と .NET Framework CLR セキュリティとの統合により、オブジェクト間のアクセスが管理されます。 オブジェクトに対して実行されるセキュリティ チェックは、関連する呼び出しによって異なります。
+title: CLR 統合のセキュリティ |Microsoft Docs
+description: SQL Server .NET Framework CLR セキュリティとの統合により、オブジェクト間のアクセスが管理されます。 オブジェクトに対して実行されるセキュリティチェックは、関連する呼び出しによって異なります。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 561ba77b01af31c30341c5af7fa22b68ede413f6
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487124"
 ---
 # <a name="clr-integration-security"></a>CLR 統合のセキュリティ
@@ -39,7 +39,7 @@ ms.locfileid: "81487124"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のユーザーベースのセキュリティ モデルと CLR のコード アクセスベースのセキュリティ モデルが統合されました。 このセクションでは、このようにセキュリティ モデルを組み合わせたアプローチによるメリットの一部を紹介します。  
   
- 次の表は、このセクションのトピックの一覧です。  
+ 次の表に、このセクションの各トピックの一覧を示します。  
   
  [CLR 統合のコード アクセス セキュリティ](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)  
  マネージド コードのコード アクセス セキュリティ (CAS) モデルについて説明します。  

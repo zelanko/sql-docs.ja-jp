@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a31c451b89ca226d207862c375943f6ffcfbb5e8
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388703"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface"></a>Analysis Services の MDX クエリ デザイナーのユーザー インターフェイス
@@ -75,7 +75,7 @@ ms.locfileid: "81388703"
 |![削除](../../analysis-services/media/rsqdicon-delete.gif "削除")|データ ペインで選択した列をクエリから削除します。|
 |![[クエリ パラメーター] ダイアログ ボックスのアイコン](../../analysis-services/media/iconqueryparameter.gif "[クエリ パラメーター] ダイアログ ボックスのアイコン")|**[クエリ パラメーター]** ダイアログ ボックスを表示します。 クエリ パラメーターの値を指定する場合、同じ名前のレポート パラメーターが自動的に作成されます。 クエリ パラメーターの値は、このレポート パラメーターを参照する式に設定されます。|
 |![[クエリの準備] ボタン](../../analysis-services/media/rsqdicon-preparequery.gif "[クエリの準備] ボタン")|クエリを準備します。|
-|![クエリの実行](../../analysis-services/media/rsqdicon-run.gif "クエリの実行")|クエリを実行し、結果をデータ ペインに表示します。|
+|![クエリを実行する](../../analysis-services/media/rsqdicon-run.gif "クエリの実行")|クエリを実行し、結果をデータ ペインに表示します。|
 |![クエリの取り消し](../../analysis-services/media/rsqdicon-cancel.gif "クエリの取り消し")|クエリを取り消します。|
 |![デザイン モードに切り替える](../../analysis-services/media/rsqdicon-designmode.gif "デザイン モードに切り替える")|デザイン モードとクエリ モードを切り替えます。|
 
@@ -115,6 +115,6 @@ ms.locfileid: "81388703"
 -   **集計の表示** (![[集計の表示] ボタン](../../analysis-services/media/rsqdicon-showaggregations.gif "[集計の表示] ボタン"))
 
 ## <a name="see-also"></a>参照
- [レポート ビルダーおよび SSRS &#40;分析サービス用の MDX クエリ デザイナーでパラメーターを定義&#41;、](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)[レポート ビルダーおよび SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)[分析サービスの接続の種類&#40;、Mdx &#40;SSRS&#41;の DMX &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md) [RSReportDesigner 構成ファイル](../report-server/rsreportdesigner-configuration-file.md)[分析サービスの接続タイプを](analysis-services-connection-type-for-mdx-ssrs.md)作成します。
+ [Analysis Services レポートビルダー &#40;の MDX クエリデザイナーでのパラメーターの定義&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md) [共有データセットまたは埋め込みデータセットの作成 &#40;レポートビルダーと ssrs](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)&#41;Analysis Services[の接続の種類 DMX &#40;Ssrs&#41;](analysis-services-connection-type-for-dmx-ssrs.md) [rsreportdesigner 構成ファイル](../report-server/rsreportdesigner-configuration-file.md) [Analysis Services MDX &#40;の接続の種類](analysis-services-connection-type-for-mdx-ssrs.md)&#41;
 
 

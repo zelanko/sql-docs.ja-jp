@@ -17,18 +17,18 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 31fff0767ecbbbf41349b3f0dd431eb440fa7d77
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388524"
 ---
 # <a name="sql-server-native-client-ole-db-interfaces"></a>SQL Server Native Client (OLE DB) インターフェイス
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  ネイティブ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアント OLE DB プロバイダは、 を実行している 1 台以上のコンピュータ上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のデータにアクセスするコンシューマにインターフェイスを公開します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアント OLE DB プロバイダーは、OLE DB バージョン 2.0 準拠のプロバイダーです。  
+  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、を実行している[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]1 台以上のコンピューター上のデータにアクセスするために、コンシューマーへのインターフェイスを公開します。 Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、OLE DB バージョン2.0 に準拠しているプロバイダーです。  
   
- この[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアント OLE DB プロバイダープログラミング リファレンスでは、すべての OLE DB インターフェイスとメソッドは文書化されず、ネイティブ クライアント OLE DB[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロバイダーを使用する場合にプロバイダー固有の動作を示すインターフェイスとメソッドのみが文書化されています。  
+ この[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client OLE DB プロバイダープログラミングリファレンスでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブクライアント OLE DB プロバイダーを使用する場合に、プロバイダー固有の動作を示すインターフェイスとメソッドだけでなく、OLE DB のインターフェイスとメソッドについては説明しません。  
   
  OLE DB の中核となるインターフェイスやメソッドの完全な説明については、[OLE DB のプログラマー リファレンス](https://go.microsoft.com/fwlink/?LinkId=45232)に関するページをご覧ください。  
   

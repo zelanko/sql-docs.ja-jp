@@ -1,5 +1,5 @@
 ---
-title: 高可用性、リカバリ
+title: 高可用性、復旧
 ms.custom: ''
 ms.date: 04/04/2018
 ms.prod: sql
@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f940302db497dd02b3fc5ef89056aef29a6b64a7
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388432"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>SQL Server Native Client の HADR サポート
@@ -30,9 +30,9 @@ ms.locfileid: "81388432"
 >  接続タイムアウト値を大きくし、接続再試行ロジックを実装することにより、アプリケーションが可用性グループに接続する確立が高まります。 また、可用性グループのフェールオーバーにより接続が失敗する可能性があるため、接続再試行ロジックを実装して、再接続されるまで、失敗した接続の再接続を試行する必要があります。  
   
 ## <a name="connecting-with-multisubnetfailover"></a>MultiSubnetFailover を使用した接続  
- SQL Server 2012 可用性グループ リスナーまたは SQL Server 2012 フェールオーバー クラスター インスタンスに接続する際には、必ず **MultiSubnetFailover=Yes** を指定してください。 **MultiSubnetFailover**は、SQL Server 2012 のすべての可用性グループとフェールオーバー クラスター インスタンスの高速フェールオーバーを可能にし、単一サブネットおよびマルチサブネット Always On トポロジのフェールオーバー時間を大幅に短縮します。 マルチサブネット フェールオーバーの際には、クライアントは複数の接続を並列で試行します。 サブネット フェールオーバーの際には、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client は積極的に TCP 接続を再試行します。  
+ SQL Server 2012 可用性グループ リスナーまたは SQL Server 2012 フェールオーバー クラスター インスタンスに接続する際には、必ず **MultiSubnetFailover=Yes** を指定してください。 **MultiSubnetFailover**を使用すると SQL Server 2012 のすべての可用性グループとフェールオーバークラスターインスタンスの高速フェールオーバーが可能になり、シングルサブネット Always On トポロジのフェールオーバー時間が大幅に短縮されます。 マルチサブネット フェールオーバーの際には、クライアントは複数の接続を並列で試行します。 サブネット フェールオーバーの際には、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client は積極的に TCP 接続を再試行します。  
   
- **MultiSubnetFailover** 接続プロパティを指定すると、アプリケーションが可用性グループまたはフェールオーバー クラスター インスタンスに配置され、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client がすべての IP アドレスに対して接続を試行することでプライマリ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス上のデータベースに接続を試みます。 接続に対して **MultiSubnetFailover=Yes** を指定した場合、オペレーティング システムの既定の TCP 再送信間隔より短い間隔で、クライアントにより TCP 接続が再試行されます。 これにより、Always On 可用性グループまたは Always On フェールオーバー クラスター インスタンスのフェールオーバー後の再接続が高速化され、単一サブネットとマルチサブネットの可用性グループとフェールオーバー クラスター インスタンスの両方に適用できます。  
+ **MultiSubnetFailover** 接続プロパティを指定すると、アプリケーションが可用性グループまたはフェールオーバー クラスター インスタンスに配置され、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client がすべての IP アドレスに対して接続を試行することでプライマリ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス上のデータベースに接続を試みます。 接続に対して **MultiSubnetFailover=Yes** を指定した場合、オペレーティング システムの既定の TCP 再送信間隔より短い間隔で、クライアントにより TCP 接続が再試行されます。 これにより、Always On 可用性グループまたは Always On フェールオーバークラスターインスタンスのフェールオーバー後の再接続が高速化され、シングルサブネットとマルチサブネットの両方の可用性グループとフェールオーバークラスターインスタンスの両方に適用できます。  
   
  接続文字列キーワードの詳細については、「[SQL Server Native Client での接続文字列キーワードの使用](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)」を参照してください。  
   
@@ -40,13 +40,13 @@ ms.locfileid: "81388432"
   
  可用性グループまたはフェールオーバー クラスター インスタンス内のサーバーに接続する際には、次のガイドラインに従います。  
   
--   単一のサブネットまたは**マルチ**サブネットに接続する場合は、接続プロパティを使用します。両方のパフォーマンスが向上します。  
+-   単一のサブネットまたはマルチサブネットに接続する場合は、 **MultiSubnetFailover**接続プロパティを使用します。これにより、両方のパフォーマンスが向上します。  
   
 -   可用性グループに接続するには、接続文字列でサーバーとして、可用性グループの可用性グループ リスナーを指定します。  
   
 -   64 個を超える数の IP アドレスが構成された [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに接続すると、接続エラーが発生します。  
   
--   **MultiSubnetFailover**接続プロパティを使用するアプリケーションの動作は、認証の種類に基づいて影響を[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]受けません: 認証、Kerberos 認証、または Windows 認証。  
+-   **MultiSubnetFailover**接続プロパティを使用するアプリケーションの動作は、認証の種類 ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]認証、Kerberos 認証、または Windows 認証) によっては影響を受けません。  
   
 -   **loginTimeout** の値を増やすことで、フェールオーバー時間に対応し、アプリケーションの接続試行回数を減らすことができます。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "81388432"
   
 1.  セカンダリ レプリカの場所が、接続を許可するように構成されていない。  
   
-2.  アプリケーションが**ApplicationIntent=ReadWrite** (後述) を使用し、セカンダリ レプリカの場所が読み取り専用アクセス用に構成されている場合。  
+2.  アプリケーションが**Applicationintent = ReadWrite** (後述) を使用していて、セカンダリレプリカの場所が読み取り専用アクセス用に構成されている場合。  
   
  プライマリ レプリカが読み取り専用ワークロードを拒否するように構成されているとき、接続文字列に **ApplicationIntent=ReadOnly** が含まれていると、接続は失敗します。  
   
@@ -74,9 +74,9 @@ ms.locfileid: "81388432"
 ## <a name="odbc"></a>ODBC  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] をサポートするために、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client には、次の 2 つの ODBC 接続文字列キーワードが追加されています。  
   
--   **アプリケーションインテント**  
+-   **ApplicationIntent**  
   
--   **マルチサブネットフェールオーバー**  
+-   **MultiSubnetFailover**  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client の ODBC 接続文字列キーワードの詳細については、「[SQL Server Native Client での接続文字列キーワードの使用](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)」を参照してください。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "81388432"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC アプリケーションは、次に示した 3 つの関数のいずれかを使用して、接続を行うことができます。  
   
-|機能|説明|  
+|関数|説明|  
 |--------------|-----------------|  
 |[SQLBrowseConnect](../../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)|**SQLBrowseConnect** から返されるサーバーの一覧に VNN は含まれません。 確認できるのはサーバーの一覧だけです。スタンドアロン サーバーであるのか、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が有効な 2 つ以上の [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] インスタンスが含まれる Windows Server フェールオーバー クラスタリング (WSFC) クラスターのうちのプライマリ サーバーまたはセカンダリ サーバーであるのかは示されません。 サーバーへの接続時にエラーが返された場合、接続先のサーバーの構成に **ApplicationIntent** 設定との互換性がないことが原因として考えられます。<br /><br /> **SQLBrowseConnect** は、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] が有効な 2 つ以上の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスが含まれる Windows Server フェールオーバー クラスタリング (WSFC) クラスター内のサーバーを認識しません。このため、**MultiSubnetFailover** 接続文字列キーワードは、**SQLBrowseConnect** では無視されます。|  
 |[SQLConnect](../../../relational-databases/native-client-odbc-api/sqlconnect.md)|**SQLConnect** は、データ ソース名 (DSN) または接続プロパティを介して **ApplicationIntent** と **MultiSubnetFailover** の両方をサポートしています。|  
@@ -105,7 +105,7 @@ ms.locfileid: "81388432"
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] をサポートするため、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client には、次の OLE DB 接続文字列キーワードが追加されています。  
   
--   **アプリケーションの目的**  
+-   **Application Intent**  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client の接続文字列キーワードの詳細については、「[SQL Server Native Client での接続文字列キーワードの使用](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)」を参照してください。  
   
@@ -134,7 +134,7 @@ ms.locfileid: "81388432"
  暗黙的な接続が確立された場合、その接続には、親の接続のアプリケーション インテント設定が使用されます。 同様に、同じデータ ソースから作成されたセッションはいずれも、そのデータ ソースのアプリケーション インテント設定を継承します。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server ネイティブ クライアントの機能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
+ [SQL Server Native Client 機能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [SQL Server Native Client での接続文字列キーワードの使用](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: id 関数 (XQuery) |マイクロソフトドキュメント
-description: XQuery id 関数を使用して、指定された xs:IDREF 値を使用して、XML インスタンス内の要素のシーケンスをドキュメント順に返す方法について説明します。
+title: id 関数 (XQuery) |Microsoft Docs
+description: 'XQuery id 関数を使用して、指定された xs: IDREF 値を使用して、ドキュメント順で XML インスタンス内の要素のシーケンスを返す方法について説明します。'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,16 +17,16 @@ ms.assetid: de99fc60-d0ad-4117-a17d-02bdde6512b4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 45b7f9f7ee9fa301b10c29fafb663c3a307509d7
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388515"
 ---
 # <a name="functions-on-sequences---id"></a>シーケンスの関数 - id
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  *$arg*で提供される xs:IDREF 値の 1 つ以上の値と一致する xs:ID 値を持つ要素ノードのシーケンスを返します。  
+  *$Arg*で指定された1つ以上の XS: IDREF 値の値と一致する XS: ID 値を持つ要素ノードのシーケンスを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,28 +37,28 @@ fn:id($arg as xs:IDREF*) as element()*
   
 ## <a name="arguments"></a>引数  
  *$arg*  
- 1 つ以上の xs:IDREF 値。  
+ 1つ以上の xs: IDREF 値。  
   
-## <a name="remarks"></a>解説  
- 関数の結果は、XML インスタンス内の一連の要素であり、ドキュメント順に、xs:ID 値が、候補 xs:IDREFs のリスト内の 1 つ以上の xs:IDREFs に等しい。  
+## <a name="remarks"></a>Remarks  
+ 関数の結果は、ドキュメント順に XML インスタンス内の要素のシーケンスであり、xs: ID 値が、候補 xs: IDREFs のリスト内の1つ以上の xs: IDREFs と同じになります。  
   
  xs:IDREF 値がどの要素とも一致しない場合は、空のシーケンスを返します。  
   
-## <a name="examples"></a>例  
- このトピックでは、データベース内のさまざまな**xml**型列に格納されている XML インスタンスに[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]対する XQuery の例を示します。  
+## <a name="examples"></a>使用例  
+ このトピックでは、 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
-### <a name="a-retrieving-elements-based-on-the-idref-attribute-value"></a>A. IDREF 属性値に基づく要素の取得  
- 次の例では、idref マネージャー属性に`employee`基づいて、fn:id を使用して、<>要素を取得します。 この例では、マネージャー属性は IDREF 型の属性で、eid 属性は ID 型の属性です。  
+### <a name="a-retrieving-elements-based-on-the-idref-attribute-value"></a>A. IDREF 属性値に基づいて要素を取得する  
+ 次の例では、fn: id を使用`employee`して、IDREF マネージャー属性に基づいて <> 要素を取得します。 この例では、マネージャー属性は IDREF 型の属性で、eid 属性は ID 型の属性です。  
   
- 特定のマネージャー属性値の**場合、id()** 関数は、ID タイプ属性値が入力 IDREF 値と一致する <`employee`> 要素を検索します。 つまり、特定の従業員に対して**は、id()** 関数は従業員マネージャを返します。  
+ **Id ()** 関数は、特定のマネージャー属性値に対して、 `employee` id 型の属性値が入力 IDREF 値と一致する <> 要素を検索します。 つまり、 **id ()** 関数は、特定の従業員の従業員マネージャーを返します。  
   
  この例では次のことが行われます。  
   
--   XML スキーマ コレクションが作成されます。  
+-   XML スキーマコレクションが作成されます。  
   
--   型指定された**xml**変数は、XML スキーマ コレクションを使用して作成されます。  
+-   型指定された**xml**変数は、xml スキーマコレクションを使用して作成されます。  
   
--   クエリは、<`employee`>要素の**マネージャー** IDREF 属性によって参照される ID 属性値を持つ要素を取得します。  
+-   クエリは、<`employee`> 要素の**manager** IDREF 属性によって参照される ID 属性値を持つ要素を取得します。  
   
 ```  
 -- If exists, drop the XML schema collection (SC).  
@@ -96,12 +96,12 @@ select @x.value(' declare namespace e="emp";
 Go  
 ```  
   
- クエリは値として "Dave" を返します。 これは、Dave が Joe のマネージャーであることを示します。  
+ このクエリでは、値として "Dave" が返されます。 これは、Dave が Joe のマネージャーであることを示します。  
   
 ### <a name="b-retrieving-elements-based-on-the-orderlist-idrefs-attribute-value"></a>B. OrderList IDREFS 属性値に基づいて要素を取得する  
- 次の例では、<>`Customer`要素の OrderList 属性は IDREFS 型属性です。 この例では特定の顧客に対応する注文 ID がリストされます。 各注文 ID に対して、<の下に`Order`<>`Customer`要素子>、注文値を提供します。  
+ 次の例では、<`Customer`> 要素の orderlist 属性は IDREFS 型の属性です。 この例では特定の顧客に対応する注文 ID がリストされます。 注文 id ごとに、order 値を指定`Order`> <`Customer`の下に子要素> <が存在します。  
   
- クエリ式 `data(CustOrders:Customers/Customer[1]/@OrderList)[1]` では、最初の顧客の最初の値が IDRES 一覧から取得されます。 この値は **、id()** 関数に渡されます。 次に、この関数は`Order`、orderID 属性値が**id()** 関数への入力と一致する<>要素を検索します。  
+ クエリ式 `data(CustOrders:Customers/Customer[1]/@OrderList)[1]` では、最初の顧客の最初の値が IDRES 一覧から取得されます。 この値は、 **id ()** 関数に渡されます。 次に、関数は、 `Order` OrderID 属性値が**id ()** 関数への入力と一致する <> 要素を検索します。  
   
 ```  
 drop xml schema collection SC  
@@ -177,11 +177,11 @@ select @x.query('declare namespace CustOrders="Customers";
 ### <a name="implementation-limitations"></a>実装の制限事項  
  制限事項は次のとおりです。  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]**は、2**つの引数のバージョンの id() をサポートしていません。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]では、2つの引数を持つバージョンの**id ()** はサポートされません。  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]**は、id()** の引数タイプが xs:IDREF* のサブタイプである必要があります。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]では、 **id ()** の引数の型が XS: IDREF * のサブタイプである必要があります。  
   
 ## <a name="see-also"></a>参照  
- [シーケンス上の関数](https://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)  
+ [シーケンスの関数](https://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)  
   
   

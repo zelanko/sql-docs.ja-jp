@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6a4610a5f0963cbe94c82c33a63f08490cec36d9
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487014"
 ---
 # <a name="raw-file-destination"></a>RAW ファイル変換先 (Raw File destination)
@@ -113,7 +113,7 @@ ms.locfileid: "81487014"
   
 1.  WriteOption プロパティを **CreateOnce** または **CreateAlways**に設定し、ループの繰り返しを 1 回実行します。 ファイルが作成されます。 これにより、追加するデータのメタデータとファイルが必ず一致するようになります。  
   
-2.  プロパティを **"追加"** にリセットし、"外部メタデータの検証`False`" プロパティを に設定します。  
+2.  WriteOption プロパティ**をにリセットし、** ValidateExternalMetadata プロパティをに`False`設定します。  
   
  **Append** オプションの代わりに **TruncateAppend** オプションを使用すると、以前の実行で追加された行が切り捨てられ、新しい行が追加されます。 また **TruncateAppend** オプションを使用するには、データがファイル形式に一致している必要があります。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "81487014"
  sqlservercentral.com のブログ「 [RAW ファイルは最高](https://www.sqlservercentral.com/blogs/31-days-of-ssis-%e2%80%93-raw-files-are-awesome-131)」  
   
 ## <a name="see-also"></a>参照  
- [生ファイルソース](raw-file-source.md)   
- [Data Flow](data-flow.md)  
+ [Raw ファイルソース](raw-file-source.md)   
+ [データ フロー](data-flow.md)  
   
   

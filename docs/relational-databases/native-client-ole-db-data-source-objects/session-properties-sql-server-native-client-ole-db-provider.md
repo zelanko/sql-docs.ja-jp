@@ -1,5 +1,5 @@
 ---
-title: セッション プロパティ OLE DB
+title: セッションのプロパティ OLE DB
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,23 +15,23 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 799d007dea8063486e836f47032fc3177c890168
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388594"
 ---
 # <a name="session-properties---sql-server-native-client-ole-db-provider"></a>セッション プロパティ - SQL Server Native Client OLE DB プロバイダー
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  ネイティブ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアント OLE DB プロバイダーは、次のように OLE DB セッションのプロパティを解釈します。  
+  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、OLE DB セッションプロパティを次のように解釈します。  
   
 |プロパティ ID|説明|  
 |-----------------|-----------------|  
-|DBPROP_SESS_AUTOCOMMITISOLEVELS|ネイティブ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアント OLE DB プロバイダは、混乱レベルのDBPROPVAL_TI_CHAOSを除き、すべての自動コミット トランザクション分離レベルをサポートします。|  
+|DBPROP_SESS_AUTOCOMMITISOLEVELS|Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、混乱レベルの DBPROPVAL_TI_CHAOS を除き、すべての自動コミットトランザクション分離レベルをサポートします。|  
 |||
 
- プロバイダ固有のプロパティ セット DBPROPSET_SQLSERVERSESSIONでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアント OLE DB プロバイダは、次の追加セッション プロパティを定義します。  
+ プロバイダー固有のプロパティセット DBPROPSET_SQLSERVERSESSION では、Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーによって、次の追加のセッションプロパティが定義されます。  
   
 |プロパティ ID|説明|  
 |-----------------|-----------------|  

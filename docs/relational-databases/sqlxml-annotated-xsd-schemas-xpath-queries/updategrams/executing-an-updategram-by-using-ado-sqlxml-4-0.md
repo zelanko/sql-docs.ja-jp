@@ -1,6 +1,6 @@
 ---
-title: ADO を使用した更新プログラムの実行 (SQLXML)
-description: Sql Server のインスタンスへの接続を確立し、ADO (SQLXML 4.0) を使用してupdategram.byを実行する方法について説明します。
+title: ADO を使用したアップデートグラムの実行 (SQLXML)
+description: Microsoft SQL Server のインスタンスへの接続を確立し、ADO を使用して updategram.by を実行する方法 (SQLXML 4.0) について説明します。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,10 +17,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7392ec41759116b350047302cfe770da006e6c66
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388736"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>ADO を使用した、アップデートグラムの実行 (SQLXML 4.0)
@@ -29,15 +29,15 @@ ms.locfileid: "81388736"
   
  サンプル アプリケーションの処理は次のとおりです。  
   
--   **コーン**オブジェクト **(ADODB.接続**) は、特定のサーバー コンピューター上[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の 実行中のインスタンスへの接続を確立します。  
+-   **Conn**オブジェクト (**ADODB接続**) 特定のサーバーコンピューター上にある実行[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中のインスタンスへの接続を確立します。  
   
--   **cmd**オブジェクト (**ADODB.Command**) は、確立された接続で実行されます。  
+-   **Cmd**オブジェクト (**ADODB**) は、確立された接続で実行されます。  
   
 -   コマンド言語が DBGUID_MSSQLXML に設定されます。  
   
--   アップデートグラムはコマンドストリーム (**strmIn**) にコピーされます。  
+-   アップデートグラムはコマンドストリーム (**Strmin**) にコピーされます。  
   
--   コマンドの出力ストリームは **、StrmOut**オブジェクト **(ADODB) に設定されます。Stream**) を使用して、返されたデータを受け取ります。  
+-   コマンドの出力ストリームは、 **Strmout**オブジェクト (ADODB) に設定され**ます。ストリーム**) が返されます。  
   
 -   最後にコマンド (アップデートグラム) が実行されます。  
   
@@ -185,7 +185,7 @@ End Sub
 ```  
   
 ## <a name="passing-parameters"></a>パラメーターの引き渡し  
- 上の Visual Basic アプリケーションでは、パラメーターを渡しません。 このアプリケーションでは **、ContactID**値と**ミドルネーム**値がパラメータ化された入力としてアップデートグラムに渡されます。  
+ 上の Visual Basic アプリケーションでは、パラメーターを渡しません。 このアプリケーションでは、 **ContactID**と**MiddleName**の値がパラメーター化された入力としてアップデートグラムに渡されます。  
   
 ```vb  
 Private Sub Form_Load()  
