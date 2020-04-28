@@ -10,10 +10,10 @@ ms.assetid: 81623d27-25af-444f-9779-1edb8c6fb470
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 12da1aa42f468b92e1833410e635183aabf3a384
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68103242"
 ---
 # <a name="connect-to-azure-sql-db-mysqltosql"></a>Azure SQL DB への接続 (MySQLToSQL)
@@ -39,9 +39,9 @@ SSMA が SQL Azure データベースへの接続に使用するユーザー名�
   
 **パスワード**  
   
-入力されたユーザー名のパスワードを入力します。  
+ユーザー名に対応するパスワードを入力します。  
   
-**暗号化**  
+**Encrypt**  
   
 SSMA では、SQL Azure への暗号化接続を推奨しています。  
   

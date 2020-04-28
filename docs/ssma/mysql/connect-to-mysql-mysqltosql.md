@@ -10,10 +10,10 @@ ms.assetid: 94099d01-ab19-4d58-a172-340c86b4a0f3
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3fe4b59a5131838357d7f58e5333e0ba6b9c80f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68103232"
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>MySQL への接続 (MySQLToSQL)
@@ -44,13 +44,13 @@ MySQL データベースへの接続に SSMA が使用するユーザー名を�
   
 **パスワード**  
   
-入力されたユーザー名のパスワードを入力します。  
+ユーザー名に対応するパスワードを入力します。  
   
 **SSL**  
   
 MySQL に安全に接続する場合は、 **ssl**チェックボックスをオンにして Ssl (Secure Socket Layer) を使用します。  
   
-**[構成]**  
+**構成**  
   
 Secure Socket Layer (SSL) を介した MySQL への接続を構成するためのオプションが用意されています。  
   

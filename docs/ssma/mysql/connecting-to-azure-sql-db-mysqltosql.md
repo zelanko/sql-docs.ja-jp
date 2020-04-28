@@ -13,10 +13,10 @@ ms.assetid: d0b6f16a-1880-459d-a0c7-28b7ef15c56a
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 7fb6740681c08cb915755b3362352f139e078c4c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68103189"
 ---
 # <a name="connecting-to-azure-sql-db-mysqltosql"></a>Azure SQL DB への接続 (MySQLToSQL)
@@ -57,8 +57,7 @@ MySQL データベースオブジェクトを SQL Azure 構文に変換する前
   
 6.  SSMA では、SQL Azure への暗号化接続を推奨しています。  
   
-7.  
-  **[接続]** をクリックします。  
+7.  **[Connect]** をクリックします。  
   
 > [!IMPORTANT]  
 > SSMA for MySQL は、SQL Azure の**master**データベースへの接続をサポートしていません。  
@@ -76,7 +75,7 @@ SQL Azure データベースに関するメタデータは自動的に更新さ�
   
 3.  [データベース]、または個々のデータベースまたはデータベーススキーマを右クリックし、[**データベースとの同期**] を選択します。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 移行の次のステップは、プロジェクトのニーズによって異なります。  
   
 -   MySQL スキーマと SQL Azure データベースおよびスキーマ間のマッピングをカスタマイズするには、「 [Mysql データベースを SQL Server スキーマ &#40;MySQLToSQL にマッピング](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)する」を参照してください&#41;  

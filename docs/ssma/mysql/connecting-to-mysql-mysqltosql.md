@@ -13,10 +13,10 @@ ms.assetid: 084c7020-f729-4f91-90e0-143f85fa68d1
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 6cb47c0f06d7133b8c7454a4fa538937a0e78e19
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68103169"
 ---
 # <a name="connecting-to-mysql-mysqltosql"></a>MySQL への接続 (MySQLToSQL)
@@ -110,7 +110,7 @@ MySQL データベースに関するメタデータは自動的に更新され�
   
 5.  **[OK]** をクリックします。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 移行プロセスの次のステップは[SQL Server &#40;MySQLToSQL に接続](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)して&#41;  
   
 ## <a name="see-also"></a>参照  
