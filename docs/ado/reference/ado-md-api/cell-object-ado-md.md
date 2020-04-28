@@ -16,16 +16,16 @@ ms.assetid: dcc2f044-b785-4a29-9bc5-b673f66eedf9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bbf97a4095f2295b8851f87ba20ab083938e70ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67947742"
 ---
 # <a name="cell-object-ado-md"></a>Cell オブジェクト (ADO MD)
 セルセットに含まれる軸の座標の交差部分にあるデータを表します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  セルオブジェクトは、**セル**[セット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)オブジェクトの[Item](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)プロパティによって返されます。  
   
  **Cell**オブジェクトのコレクションとプロパティを使用して、次の操作を実行できます。  
@@ -42,12 +42,12 @@ ms.locfileid: "67947742"
   
  **Properties**コレクションには、プロバイダーが提供するプロパティが含まれています。 次の表に、使用可能なプロパティを示します。 実際のプロパティリストは、プロバイダーの実装によって異なる場合があります。 使用できるプロパティの詳細な一覧については、プロバイダーのドキュメントを参照してください。  
   
-|Name|[説明]|  
+|名前|説明|  
 |----------|-----------------|  
 |色|セルを表示するときに使用する背景色。|  
 |FontFlags|フォントに対する影響の詳細を示すビットマスク。|  
 |FontName|セル値を表示するために使用されるフォントです。|  
-|FontSize|セル値を表示するために使用されるフォントサイズ。|  
+|フォントサイズ|セル値を表示するために使用されるフォントサイズ。|  
 |前景色|セルを表示するときに使用する前景色。|  
 |FormatString|書式設定された文字列の値。|  
   

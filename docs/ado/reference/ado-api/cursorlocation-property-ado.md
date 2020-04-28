@@ -17,10 +17,10 @@ ms.assetid: 39c8d86e-7ee9-4182-be5e-aad5ce952f84
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: afee71d4f37e2b3a27247fbeacf51dab66cc1e23
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933284"
 ---
 # <a name="cursorlocation-property-ado"></a>CursorLocation プロパティ (ADO)
@@ -29,7 +29,7 @@ ms.locfileid: "67933284"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  カーソルのいずれかの[列挙](../../../ado/reference/ado-api/cursorlocationenum.md)値に設定できる**Long 型**の値を設定または返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  このプロパティを使用すると、プロバイダーにアクセスできるさまざまなカーソルライブラリを選択できます。 通常は、クライアント側のカーソルライブラリを使用するか、サーバー上に配置するかを選択できます。  
   
  このプロパティ設定は、プロパティが設定された後にのみ確立される接続に影響します。 **カーソル位置**プロパティを変更しても、既存の接続には影響しません。  

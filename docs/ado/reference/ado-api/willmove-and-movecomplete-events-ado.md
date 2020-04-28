@@ -20,10 +20,10 @@ ms.assetid: 1a3d1042-4f30-4526-a0c7-853c242496db
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c91f3166b493ac1e2fada3e759cb107e34c7ca81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67945913"
 ---
 # <a name="willmove-and-movecomplete-events-ado"></a>WillMove および MoveComplete イベント (ADO)
@@ -58,7 +58,7 @@ MoveComplete adReason, pError, adStatus, pRecordset
  *pRecordset*  
  [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトです。 このイベントが発生した**レコードセット**。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)、 [Move](../../../ado/reference/ado-api/move-method-ado.md)、 [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)、および[Requery](../../../ado/reference/ado-api/requery-method.md)の各**レコードセット**操作によって、 **MoveComplete**イベントが**発生する可能性**があります。 これらのイベントは、 [Filter](../../../ado/reference/ado-api/filter-property.md)、 [Index](../../../ado/reference/ado-api/index-property.md)、 [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)、 [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)、および[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)の各プロパティによって発生することがあります。 これらのイベントは、子**レコード**セットに**レコードセット**イベントが関連付けられていて、親**レコードセット**が移動された場合にも発生します。  
   
  *AdReason*パラメーターを含むイベントのイベント通知を完全に停止するには、使用可能な*adReason*値ごとに*adstatus*パラメーターを**adStatusUnwantedEvent**に設定する必要があります。  

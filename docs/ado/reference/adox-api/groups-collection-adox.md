@@ -18,23 +18,23 @@ ms.assetid: 09aa7b0a-69d5-4564-80a7-20ad8189670f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e39be3cf32f04a60e554928f66cdc6123322f19c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67966182"
 ---
 # <a name="groups-collection-adox"></a>Groups コレクション (ADOX)
 カタログまたはユーザーの格納されているすべての[グループ](../../../ado/reference/adox-api/group-object-adox.md)オブジェクトが含まれます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  [カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)の**Groups**コレクションは、すべてのカタログのグループアカウントを表します。 [ユーザー](../../../ado/reference/adox-api/user-object-adox.md)の**Groups**コレクションは、ユーザーが属しているグループのみを表します。  
   
- **Groups**コレクションの[Append](../../../ado/reference/adox-api/append-method-adox-groups.md)メソッドは、ADOX で一意です。 次のようにすることができます。  
+ **Groups**コレクションの[Append](../../../ado/reference/adox-api/append-method-adox-groups.md)メソッドは、ADOX で一意です。 次の操作を行うことができます。  
   
 -   **追加**メソッドを使用して、新しいセキュリティグループをコレクションに追加します。  
   
- その他のプロパティとメソッドは、ADO コレクションの標準です。 次のようにすることができます。  
+ その他のプロパティとメソッドは、ADO コレクションの標準です。 次の操作を行うことができます。  
   
 -   [項目](../../../ado/reference/ado-api/item-property-ado.md)プロパティを使用して、コレクション内のグループにアクセスします。  
   

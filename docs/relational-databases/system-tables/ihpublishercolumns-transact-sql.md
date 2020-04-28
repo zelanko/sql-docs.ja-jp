@@ -18,10 +18,10 @@ ms.assetid: a5347750-224c-40d9-ae12-57e7213b7db9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a5e2f64294652586a87fcd25fda3c29517dc295d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67990269"
 ---
 # <a name="ihpublishercolumns-transact-sql"></a>IHpublishercolumns (Transact-SQL)
@@ -31,15 +31,15 @@ ms.locfileid: "67990269"
   
 ## <a name="definition"></a>定義  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**publishercolumn_id**|**int**|パブリッシュされた列を識別します。|  
 |**table_id**|**int**|列が属している[IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md)からソーステーブルを識別します。|  
 |**publisher_id**|**smallint**|列がパブリッシュされる SQL Server 以外のパブリッシャーを指定します。|  
 |**name**|**sysname**|パブリッシュされた列の名前。|  
 |**column_ordinal**|**int**|順序に基づいた列の識別子。|  
-|**type**|**varchar (255)**|パブリッシャーのソース列の列のデータ型です。|  
-|**数**|**bigint**|パブリッシャーのソース列の長さ。|  
+|**type**|**varchar(255)**|パブリッシャーのソース列の列のデータ型です。|  
+|**length**|**bigint**|パブリッシャーのソース列の長さ。|  
 |**prec**|**int**|パブリッシャーのソース列の有効桁数です。|  
 |**scale**|**int**|パブリッシャーのソース列の小数点以下桁数です。|  
 |**isnullable**|**bit**|列で NULL 値を許容するかどうかを示します。 **1**は null 値が許容されることを示します。|  

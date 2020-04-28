@@ -16,10 +16,10 @@ ms.assetid: 3ee27314-a305-4fbc-8433-9ee9a909afd6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4bfb0db701801f1853009594b9d6d24aeb41c629
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933212"
 ---
 # <a name="definedsize-property"></a>DefinedSize プロパティ
@@ -36,7 +36,7 @@ ms.locfileid: "67933212"
   
 4.  長さが指定されていないデータ型の場合、これは ~ 0 (ビットごとの、値が0ではなく、すべてのビットが1に設定されます) に設定されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  フィールドオブジェクトのデータ容量を確認するには、 **"** 定義済み**サイズ**" プロパティを使用します。  
   
  [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)プロパティの値**は、それぞれ異なります。** たとえば、 **adVarChar**という宣言された型を持つ**Field**オブジェクトと、1つの文字を含む定義済みの**size**プロパティ値50を考えてみます。 返される**ActualSize**プロパティ値は、1文字の長さ (バイト単位) です。  

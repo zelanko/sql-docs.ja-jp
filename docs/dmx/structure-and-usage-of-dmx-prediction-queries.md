@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 99d8ef98ad4e86bce0e1beff819a8d140662aaf7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67938068"
 ---
 # <a name="structure-and-usage-of-dmx-prediction-queries"></a>構造と DMX 予測クエリの使用
@@ -44,7 +44,7 @@ ms.locfileid: "67938068"
   
 -   **TOP**  
   
--   *****\<モデル>***予測結合**から      
+-   **FROM***\<モデル>***予測結合**から      
   
 -   **ON**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "67938068"
   
 -   データ列を返す関数。  
   
- **** *FROM \<model>* **予測結合**要素は、予測の作成に使用するソースデータを定義します。 単一クエリの場合、これは列に割り当てられる一連の値です。 空の予測結合の場合は、空のままとなります。  
+ **FROM** *FROM \<model>* **予測結合**要素は、予測の作成に使用するソースデータを定義します。 単一クエリの場合、これは列に割り当てられる一連の値です。 空の予測結合の場合は、空のままとなります。  
   
  **ON**要素は、マイニングモデルで定義されている列を外部データセットの列にマップします。 空の予測結合クエリまたは自然予測結合を作成する場合は、この要素を含める必要はありません。  
   

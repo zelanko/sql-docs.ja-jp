@@ -20,10 +20,10 @@ ms.assetid: 8ca2f1fd-eb1e-490c-a28b-67eda92e0fc7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e72c93cf7f2126e26d5ed09d3cff246319e0495a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965042"
 ---
 # <a name="type-property-key-adox"></a>Type プロパティ (キー) (ADOX)
@@ -32,7 +32,7 @@ ms.locfileid: "67965042"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  [Keytypeenum](../../../ado/reference/adox-api/keytypeenum.md)定数のいずれかを指定できる**Long 型**の値を設定または返します。 既定値は**adKeyPrimary**です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  このプロパティは、既にコレクションに追加されている[キー](../../../ado/reference/adox-api/key-object-adox.md)オブジェクトに対しては読み取り専用です。  
   
 ## <a name="applies-to"></a>適用対象  

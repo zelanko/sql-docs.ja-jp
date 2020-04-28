@@ -14,10 +14,10 @@ ms.assetid: 5be75bc7-1171-4440-a37e-c8cc6b5cd865
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8a2a3d22f30a865687e38aedfaf6e688e677efae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963590"
 ---
 # <a name="readystate-property-rds"></a>ReadyState プロパティ (RDS)
@@ -29,7 +29,7 @@ ms.locfileid: "67963590"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  次のいずれかの値を設定または返します。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**adcReadyStateLoaded**|現在のクエリは実行中で、行はフェッチされていません。 **DataControl**オブジェクトの**レコードセット**は使用できません。|  
 |**adcReadyStateInteractive**|現在のクエリによって取得された行の初期セットは、 **DataControl**オブジェクトの**レコードセット**に格納されており、使用することができます。 残りの行はまだフェッチされています。|  
@@ -38,7 +38,7 @@ ms.locfileid: "67963590"
 > [!NOTE]
 >  これらの定数を使用するクライアント側の実行可能ファイルは、それぞれの宣言を提供する必要があります。 RDS ライブラリの既定のインストールフォルダーにある Adcvbs. inc. ファイルから、必要な定数宣言を切り取って貼り付けることができます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  非同期クエリ操作中に**ReadyState**プロパティの変更を監視するには、 [onReadyStateChange](../../../ado/reference/rds-api/onreadystatechange-event-rds.md)イベントを使用します。 これは、プロパティの値を定期的にチェックするよりも効率的です。  
   
  非同期操作中にエラーが発生した場合、 **ReadyState**プロパティは**adcReadyStateComplete**に変更され、 [State](../../../ado/reference/ado-api/state-property-ado.md)プロパティは**adstateexecuting**から**adStateClosed**に変更され、**レコードセット**オブジェクトの[値](../../../ado/reference/ado-api/value-property-ado.md)プロパティは*何も*保持されません。  

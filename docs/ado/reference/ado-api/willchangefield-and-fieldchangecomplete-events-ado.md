@@ -20,10 +20,10 @@ ms.assetid: 3e49fb89-c45b-4d39-823e-3cc887c59b37
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7484e2a57925cc22c83456c244dc67aded5cefd2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67945880"
 ---
 # <a name="willchangefield-and-fieldchangecomplete-events-ado"></a>WillChangeField および FieldChangeComplete イベント (ADO)
@@ -41,7 +41,7 @@ FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset
  *cFields*  
  *フィールド*内の**フィールド**オブジェクトの数を示す**Long**です。  
   
- *Fields*  
+ *フィールド*  
  が**Changefield**の場合、 *Fields*パラメーターは、元の値を持つ**Field**オブジェクトを含む**variant**の配列です。 **FieldChangeComplete**の場合、 *Fields*パラメーターは、値が変更された**フィールド**オブジェクトを含む**variant**の配列です。  
   
  *pError*  
@@ -61,8 +61,8 @@ FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset
  *pRecordset*  
  **レコードセット**オブジェクトです。 このイベントが発生した**レコードセット**。  
   
-## <a name="remarks"></a>解説  
- [Value](../../../ado/reference/ado-api/value-property-ado.md)プロパティを設定し**** 、フィールドと値の配列パラメーターを使用して[Update](../../../ado/reference/ado-api/update-method.md)メソッドを呼び出す**と、が**発生する可能性があります。  
+## <a name="remarks"></a>Remarks  
+ [Value](../../../ado/reference/ado-api/value-property-ado.md)プロパティを設定し**FieldChangeComplete** 、フィールドと値の配列パラメーターを使用して[Update](../../../ado/reference/ado-api/update-method.md)メソッドを呼び出す**と、が**発生する可能性があります。  
   
 ## <a name="see-also"></a>参照  
  [ADO Events モデルの例 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   

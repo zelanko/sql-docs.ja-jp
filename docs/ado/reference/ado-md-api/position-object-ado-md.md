@@ -16,16 +16,16 @@ ms.assetid: 91eab784-3ce9-41d6-a840-9b0939ca0608
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 299df229489a9000c1dc2e97f7d7c489c490aed4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67949251"
 ---
 # <a name="position-object-ado-md"></a>Position オブジェクト (ADO MD)
 軸に沿って点を定義する、異なる次元の1つ以上のメンバーのセットを表します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Position**オブジェクトのプロパティとコレクションを使用すると、次の操作を実行できます。  
   
 -   **序数**プロパティを使用して、[軸](../../../ado/reference/ado-md-api/axis-object-ado-md.md)に沿った**位置**の位置を表す序数を返します。  

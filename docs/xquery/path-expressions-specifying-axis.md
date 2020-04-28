@@ -22,10 +22,10 @@ ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 07058816406ef6ac0d5a3356423e231a10ce6165
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946481"
 ---
 # <a name="path-expressions---specifying-axis"></a>パス式 - 軸の指定
@@ -41,23 +41,22 @@ ms.locfileid: "67946481"
   
  詳細については、「[パス式 &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)」を参照してください。  
   
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の XQuery 実装では、次の軸ステップがサポートされています。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の XQuery 実装では、次の軸ステップがサポートされています。  
   
-|軸|[説明]|  
+|軸|説明|  
 |----------|-----------------|  
-|**子供**|コンテキストノードの子を返します。|  
-|**子孫**|コンテキスト ノードのすべての子孫を返します。|  
-|**所属**|コンテキスト ノードの親を返します。|  
+|**child**|コンテキストノードの子を返します。|  
+|**descendant**|コンテキスト ノードのすべての子孫を返します。|  
+|**parent**|コンテキスト ノードの親を返します。|  
 |**属性**|コンテキストノードの属性を返します。|  
 |**自身**|コンテキスト ノード自身を返します。|  
-|**子孫または自己**|コンテキスト ノード自身とその子孫をすべて返します。|  
+|**descendant-or-self**|コンテキスト ノード自身とその子孫をすべて返します。|  
   
  これらのすべての軸 (**親**軸を除く) は、前方軸です。 **親**軸は、ドキュメント階層内を後方に検索するので、逆軸です。 たとえば、相対パス式 `child::ProductDescription/child::Summary` には 2 つのステップがあり、各ステップが `child` 軸を指定します。 最初のステップでは\<、productdescription> コンテキストノードの子要素を取得します。 2番\<目のステップでは、productdescription> 要素ノード\<ごとに、子の概要> 要素ノードを取得します。  
   
  相対パス式`child::root/child::Location/attribute::LocationID`では、3つのステップがあります。 最初の2つの手順で`child`は、それぞれ軸を指定し、 `attribute` 3 番目の手順で軸を指定します。 製品版の**ProductModel**テーブルにある製造手順の XML ドキュメントに対して実行した場合`LocationID` 、式は\<、 \<ルート> 要素の> 要素ノードの子である場所の属性を返します。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  このトピックのクエリ例は、 **AdventureWorks**データベースの**xml**型の列に対して指定されています。  
   
 ### <a name="a-specifying-a-child-axis"></a>A. 子軸の指定  
@@ -73,7 +72,7 @@ WHERE ProductModelID=19
   
  上のクエリに関して、次の点に注意してください。  
   
--   Xml `query()`データ型の**** メソッドでは、パス式を指定します。  
+-   Xml `query()`データ型の**xml**メソッドでは、パス式を指定します。  
   
 -   パス式の両方のステップが、`child` 軸およびノード名 (`ProductDescription`、`Features`) をノード テストとして指定しています。 ノードテストの詳細については、「[パス式のステップでのノードテストの指定](../xquery/path-expressions-specifying-node-test.md)」を参照してください。  
   

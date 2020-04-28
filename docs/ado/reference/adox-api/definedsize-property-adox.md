@@ -20,10 +20,10 @@ ms.assetid: 762b8937-c31c-4e90-bb85-506d991e8280
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4f2777eeb23e7a78a1df757a9054a04c7f6f9df2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67966442"
 ---
 # <a name="definedsize-property-adox"></a>DefinedSize プロパティ (ADOX)
@@ -32,8 +32,8 @@ ms.locfileid: "67966442"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  データ値の最大文字数である**Long 型**の値を設定して返します。  
   
-## <a name="remarks"></a>解説  
- 既定値はゼロ (0) です。  
+## <a name="remarks"></a>Remarks  
+ 既定値は 0 です。  
   
  このプロパティは、既にコレクションに追加されている[列](../../../ado/reference/adox-api/column-object-adox.md)オブジェクトに対しては読み取り専用です。  
   

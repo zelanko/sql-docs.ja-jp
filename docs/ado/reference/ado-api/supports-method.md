@@ -17,10 +17,10 @@ ms.assetid: 298fc41c-0b55-42fc-b373-c5133b4da6a5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cce5ab3b735d3c641da4a6234e860d0528f107c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67936702"
 ---
 # <a name="supports-method"></a>Supports メソッド
@@ -37,10 +37,10 @@ boolean = recordset.Supports(CursorOptions )
  *カーソルオプション*引数によって識別されるすべての機能がプロバイダーによってサポートされているかどうかを示す**ブール**値を返します。  
   
 #### <a name="parameters"></a>パラメーター  
- *カーソルオプション*  
+ *CursorOptions*  
  1つ以上の[カーソルオプションの列挙](../../../ado/reference/ado-api/cursoroptionenum.md)値で構成される**Long**式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **サポート**メソッドを使用して、**レコードセット**オブジェクトがサポートする機能の種類を決定します。 対応する定数が*カーソルオプション*に含まれる機能を**レコードセット**オブジェクトがサポートしている場合、 **supports**メソッドは**True**を返します。 それ以外の場合は**False**を返します。  
   
 > [!NOTE]

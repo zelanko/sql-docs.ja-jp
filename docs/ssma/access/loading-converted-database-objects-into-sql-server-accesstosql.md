@@ -30,10 +30,10 @@ ms.assetid: 4e854eee-b10c-4f0b-9d9e-d92416e6f2ba
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 7effaa973b7a39df6fc0b9385a5cfde4fdad18d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67986313"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-accesstosql"></a>SQL Server への変換されたデータベースオブジェクトの読み込み (データへの変換)
@@ -83,7 +83,7 @@ SSMA を使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]デ
   
 1.  メタ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データエクスプローラーで、最上位ノード (サーバー名) を展開し、[**データベース**] を展開します。  
   
-2.  以下のいずれかの操作を行います。  
+2.  次のうち1 つ以上を行います。  
   
     -   データベース全体のスクリプトを作成するには、データベース名の横にあるチェックボックスをオンにします。  
   
@@ -106,8 +106,7 @@ SSMA を使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]デ
   
 **スクリプトを変更するには**  
   
-1.  
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **[ファイル]** メニューの **[開く]** をポイントし、 **[ファイル]** をクリックします。  
+1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **[ファイル]** メニューの **[開く]** をポイントし、 **[ファイル]** をクリックします。  
   
 2.  [**開く**] ダイアログボックスで、スクリプトファイルを探して選択し、[ **OK**] をクリックします。  
   
@@ -137,7 +136,7 @@ SSMA を使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]デ
 ## <a name="securing-objects-in-sql-server"></a>SQL Server でのオブジェクトのセキュリティ保護  
 変換されたデータベースオブジェクトをに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]読み込むと、それらのオブジェクトに対する権限を許可および拒否できます。 これは、データをに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移行する前に行うことをお勧めします。 で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オブジェクトをセキュリティで保護する方法の詳細については、オンラインブックの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 「データベースおよびデータベースアプリケーションのセキュリティに関する考慮事項」を参照してください。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 移行プロセスの次の手順では、 [SQL Server にデータを移行](migrating-access-data-into-sql-server-azure-sql-db-accesstosql.md)します。  
   
 ## <a name="see-also"></a>参照  

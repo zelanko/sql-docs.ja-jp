@@ -16,10 +16,10 @@ ms.assetid: 6695769f-275b-4b70-81bd-1a5f7d74926c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ef30faf0fef05c4e86ffb4d2c21781592094c198
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67967304"
 ---
 # <a name="append-method-adox-indexes"></a>Append メソッド (ADOX Indexes)
@@ -37,9 +37,9 @@ Indexes.Append Index [,Columns]
  追加する**インデックス**オブジェクト、または作成および追加するインデックスの名前。  
   
  *[列]*  
- 省略可能。 インデックスを作成する列の名前を指定する**バリアント**値です (複数可)。 *Columns*パラメーターは、[列](../../../ado/reference/adox-api/column-object-adox.md)オブジェクトまたはオブジェクトの[Name](../../../ado/reference/adox-api/name-property-adox.md)プロパティの値に対応します。  
+ 任意。 インデックスを作成する列の名前を指定する**バリアント**値です (複数可)。 *Columns*パラメーターは、[列](../../../ado/reference/adox-api/column-object-adox.md)オブジェクトまたはオブジェクトの[Name](../../../ado/reference/adox-api/name-property-adox.md)プロパティの値に対応します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  *Columns*パラメーターには、列名または列名の配列のいずれかを指定できます。  
   
  プロバイダーがインデックスの作成をサポートしていない場合、エラーが発生します。  

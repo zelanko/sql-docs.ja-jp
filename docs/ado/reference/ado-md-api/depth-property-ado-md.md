@@ -17,10 +17,10 @@ ms.assetid: e41f2644-617d-4c09-80a4-feb5cf736186
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 249ab4a4a4f82e5fd6eebfd326c71971f401bcc7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67952197"
 ---
 # <a name="depth-property-ado-md"></a>Depth プロパティ (ADO MD)
@@ -29,7 +29,7 @@ ms.locfileid: "67952197"
 ## <a name="return-values"></a>戻り値  
  は整数を返し、は読み取り専用です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  階層のルートにある**レベル**の**深さ**の値がゼロ (0) です。  
   
 ## <a name="applies-to"></a>適用対象  

@@ -14,10 +14,10 @@ ms.assetid: 7af42866-7db2-4174-8251-388a2cf741f2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e280e5f8c9eda472c6448b199ffa94ac18c13751
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963264"
 ---
 # <a name="synchronize-method-rds"></a>Synchronize メソッド (RDS)
@@ -37,7 +37,7 @@ object.Synchronize(ConnectionString As String, HandlerString As String, lSynchro
  *文字列*  
  要求が送信される OLE DB プロバイダーに接続するために使用される文字列。 ハンドラーが使用されている場合、ハンドラーは接続文字列を編集または置換できます。  
   
- *ハンドラ文字列*  
+ *HandlerString*  
  文字列は、この実行で使用されるハンドラーを識別します。 文字列には2つの部分が含まれています。 最初の部分には、使用するハンドラーの名前 (ProgID) が含まれています。 文字列の2番目の部分には、ハンドラーに渡される引数が含まれています。 引数文字列の解釈方法は、ハンドラー固有です。 2つの部分は、文字列内のコンマの最初のインスタンスによって区切られます (ただし、引数の文字列には追加のコンマが含まれる場合があります)。 引数は省略可能です。  
   
  *lSynchronizeOptions*  
@@ -63,7 +63,7 @@ object.Synchronize(ConnectionString As String, HandlerString As String, lSynchro
  *pInformation*  
  **Execute**によって返された情報エラーへのポインター。 NULL の場合、エラー情報は返されません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  *ハンドラー文字列*パラメーターは null にすることができます。 この場合の動作は、RDS サーバーがどのように構成されているかによって異なります。 "MSDFMAP. handler" というハンドラー文字列は、Microsoft 提供のハンドラー (Msdfmap .dll) を使用する必要があることを示します。 "" のハンドラー文字列 "は、" "のハンドラー文字列" は、Msdfmap .dll ハンドラーを使用する必要があり、引数 "sample .ini" をハンドラーに渡す必要があることを示します。 次に、msdfmap .dll は、この引数を、サンプルの .ini を使用して接続とクエリ文字列を確認するための方向として解釈します。  
   
 ## <a name="applies-to"></a>適用対象  

@@ -16,16 +16,16 @@ ms.assetid: 66adbbd2-23a3-4c19-a91b-84c31309aa1b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f7a13ad87d56f5e7855070d8fe577bb408d6ce9e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67938539"
 ---
 # <a name="dimension-object-ado-md"></a>Dimension オブジェクト (ADO MD)
 メンバーの1つ以上の階層を含む多次元キューブのディメンションの1つを表します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **ディメンション**オブジェクトのコレクションとプロパティを使用して、次の操作を実行できます。  
   
 -   [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md)プロパティと[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)プロパティを使用して、**ディメンション**を識別します。  
@@ -38,12 +38,12 @@ ms.locfileid: "67938539"
   
  **Properties**コレクションには、プロバイダーが提供するプロパティが含まれています。 次の表に、使用可能なプロパティを示します。 実際のプロパティリストは、プロバイダーの実装によって異なる場合があります。 使用できるプロパティの詳細な一覧については、プロバイダーのドキュメントを参照してください。  
   
-|Name|[説明]|  
+|名前|説明|  
 |----------|-----------------|  
 |CatalogName|このキューブが所属するカタログの名前。|  
 |CubeName|キューブの名前。|  
 |DefaultHierarchy|既定の階層の一意の名前。|  
-|[説明]|キューブについてのわかりやすい説明。|  
+|説明|キューブについてのわかりやすい説明。|  
 |DimensionCaption|ディメンションに関連付けられているラベルまたはキャプション。|  
 |DimensionCardinality|ディメンション内のメンバーの数。|  
 |DimensionGUID|ディメンションの GUID。|  

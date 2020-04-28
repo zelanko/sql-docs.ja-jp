@@ -14,10 +14,10 @@ ms.assetid: 20f2480f-3758-405d-a379-05a0dce74796
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f646d5ebee63981c882f5e1ece147be0ff1677e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963824"
 ---
 # <a name="query-method-rds"></a>Query メソッド (RDS)
@@ -46,7 +46,7 @@ Set Recordset = DataFactory.Query(Connection, Query)
  *クエリ*  
  SQL クエリを含む**文字列**。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  クエリでは、データベースサーバーの SQL 言語を使用する必要があります。 実行されたクエリにエラーがある場合は、結果の状態が返されます。 クエリ**メソッドで**は、**クエリ**文字列に対する構文チェックは実行されません。  
   
 ## <a name="applies-to"></a>適用対象  

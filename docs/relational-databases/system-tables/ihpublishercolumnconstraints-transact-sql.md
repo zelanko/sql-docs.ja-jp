@@ -18,10 +18,10 @@ ms.assetid: d7a41da6-e067-430a-8da2-3f6745b8a4f3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 58ef9c5e68e7d209262ebf43891ba5c1bcc4174f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67990286"
 ---
 # <a name="ihpublishercolumnconstraints-transact-sql"></a>IHpublishercolumnconstraints (Transact-sql)
@@ -31,7 +31,7 @@ ms.locfileid: "67990286"
   
 ## <a name="definition"></a>定義  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**publishercolumn_id**|**int**|制約が関連付けられている[IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md)から列を識別します。|  
 |**publisherconstraint_id**|**int**|列に関連付けられている[IHpublisherconstraints](../../relational-databases/system-tables/ihpublisherconstraints-transact-sql.md)から制約を識別します。|  
@@ -40,6 +40,6 @@ ms.locfileid: "67990286"
 ## <a name="see-also"></a>参照  
  [異種データベースレプリケーション](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

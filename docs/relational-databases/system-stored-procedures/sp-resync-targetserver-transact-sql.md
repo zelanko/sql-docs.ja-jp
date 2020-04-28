@@ -18,10 +18,10 @@ ms.assetid: 40e44df7-d3e3-44ee-b149-08aba629a21f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 20eab8076d88941080898a21cb0d82cc1c667359
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67995487"
 ---
 # <a name="sp_resync_targetserver-transact-sql"></a>sp_resync_targetserver (Transact-sql)
@@ -40,7 +40,7 @@ sp_resync_targetserver
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @server_name = ] 'server'`再同期するサーバーの名前。 *サーバー*は**sysname**,、既定値はありません。 **All**を指定した場合、すべての対象サーバーが再同期されます。  
+`[ @server_name = ] 'server'`再同期するサーバーの名前。 *server* のデータ型は **sysname**で、既定値はありません。 **All**を指定した場合、すべての対象サーバーが再同期されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -48,13 +48,13 @@ sp_resync_targetserver
 ## <a name="result-sets"></a>結果セット  
  **Sp_post_msx_operation**アクションの結果を報告します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_resync_targetserver**対象サーバーの現在の命令セットを削除し、ダウンロードする対象サーバーの新しいセットを投稿します。 新しいセットは、すべてのマルチサーバージョブを削除する命令で構成され、その後、サーバーで現在対象となっている各ジョブの挿入が行われます。  
   
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャの実行権限は、既定では **sysadmin** 固定サーバー ロールのメンバーに与えられています。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、`SEATTLE1` ターゲット サーバーを再同期します。  
   
 ```  
@@ -69,6 +69,6 @@ GO
 ## <a name="see-also"></a>参照  
  [sp_help_downloadlist &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-downloadlist-transact-sql.md)   
  [sp_post_msx_operation &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

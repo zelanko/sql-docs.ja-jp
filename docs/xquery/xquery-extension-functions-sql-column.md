@@ -16,10 +16,10 @@ ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: df46abb8efdd5761797a599cf5a8cdebe02e5158
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946018"
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>XQuery 拡張関数 - sql:column()
@@ -38,7 +38,7 @@ ms.locfileid: "67946018"
 sql:column("columnName")  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  XQuery 内の**sql: column ()** 関数で指定された列への参照は、処理される行の列を参照することに注意してください。  
   
  で[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]は、xml インスタンスを参照できるのは **、xml DML** insert ステートメントのソース式のコンテキストだけです。それ以外の場合、 **xml**型または CLR ユーザー定義型の列を参照することはできません。  
@@ -131,10 +131,10 @@ select @x
   
 ## <a name="see-also"></a>参照  
  [XQuery 拡張関数の SQL Server](https://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
- [型指定された XML と型指定のない XML の比較](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
+ [型指定された XML と型指定されていない XML の比較](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML データ &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [XML データのインスタンスの作成](../relational-databases/xml/create-instances-of-xml-data.md)   
  [xml データ型のメソッド](../t-sql/xml/xml-data-type-methods.md)   
- [Xml DML&#41;&#40;XML データ変更言語](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+ [XML データ変更言語 &#40;XML DML&#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

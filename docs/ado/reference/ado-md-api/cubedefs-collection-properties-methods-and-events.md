@@ -13,10 +13,10 @@ ms.assetid: bf2d1108-ba3c-4830-9c49-78e833ff37b1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e80c7ae85b32bde70f863181b808256f91302917
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67938590"
 ---
 # <a name="cubedefs-collection-properties-methods-and-events"></a>CubeDefs コレクションのプロパティ、メソッド、およびイベント
@@ -28,7 +28,7 @@ ms.locfileid: "67938590"
 ## <a name="methods"></a>メソッド  
  [Refresh メソッド](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="see-also"></a>参照  

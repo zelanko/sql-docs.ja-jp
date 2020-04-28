@@ -14,10 +14,10 @@ ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d1a5fa5c9002d4a27490dfc98fb79f482539f042
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964318"
 ---
 # <a name="execute-method-rds"></a>Execute メソッド (RDS)
@@ -37,11 +37,11 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  *文字列*  
  要求が実行のために送信される OLE DB プロバイダーに接続するために使用される文字列。 ハンドラーが*ハンドラ文字列*を使用して指定されている場合は、接続文字列を編集または置換できます。  
   
- *ハンドラ文字列*  
+ *HandlerString*  
  この実行で使用されるハンドラーを識別する2つの部分から構成される文字列。 文字列には2つの部分が含まれています。 最初の部分には、使用するハンドラーの名前 (ProgID) が含まれています。 2番目の部分には、ハンドラーに渡される引数が含まれています。 引数文字列の解釈方法の詳細は、各ハンドラーに固有です。 2つの部分は、文字列内のコンマの最初のインスタンスによって区切られます。 Arguments 文字列には、追加のコンマを含めることができます。 引数は省略可能です。  
   
  *クエリ*  
- 接続文字列で指定された OLE DB プロバイダーによってサポートされるコマンド言語のコマンドです。 SQL ベースのプロバイダーの場合** 、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]クエリ文字列に transact-sql コマンドステートメントが含まれている可能性がありますが、非 SQL プロバイダー (たとえば、MSDataShape) の場合、これはクエリステートメントではない可能性があります。  
+ 接続文字列で指定された OLE DB プロバイダーによってサポートされるコマンド言語のコマンドです。 SQL ベースのプロバイダーの場合*QueryString* 、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]クエリ文字列に transact-sql コマンドステートメントが含まれている可能性がありますが、非 SQL プロバイダー (たとえば、MSDataShape) の場合、これはクエリステートメントではない可能性があります。  
   
  ハンドラーが使用されている場合、ハンドラーはここで指定された値を変更または置換できます。 たとえば、ハンドラーは通常、 *QueryString*を .ini ファイルのクエリ文字列に置き換えます。 既定では、Msdfmap .ini ファイルが使用されます。  
   
@@ -77,7 +77,7 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  *pInformation*  
  Execute によって返された情報エラーへのポインター。 NULL の場合、エラー情報は返されません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  *ハンドラー文字列*パラメーターは null にすることができます。 この場合の動作は、RDS サーバーがどのように構成されているかによって異なります。 "MSDFMAP. handler" というハンドラー文字列は、Microsoft 提供のハンドラー (Msdfmap .dll) を使用する必要があることを示します。 "" のハンドラー文字列 "は、" "のハンドラー文字列" は、Msdfmap .dll ハンドラーを使用する必要があり、引数 "sample .ini" をハンドラーに渡す必要があることを示します。 MSDFMAP .dll は、この引数を、サンプルの .ini を使用して接続とクエリ文字列を確認するための方向として解釈します。  
   
 ## <a name="applies-to"></a>適用対象  

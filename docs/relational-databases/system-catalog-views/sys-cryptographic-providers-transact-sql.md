@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 27a8f2ddee2e0ff0839317cf1652bcf353c0b66b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67940298"
 ---
 # <a name="syscryptographic_providers-transact-sql"></a>sys.cryptographic_providers (Transact-SQL)
@@ -32,20 +32,20 @@ ms.locfileid: "67940298"
 
   登録されている暗号プロバイダーごとに 1 行を返します。  
     
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**provider_id**|**int**|暗号化サービスプロバイダーの識別番号。|  
 |**name**|**sysname**|暗号化サービスプロバイダーの名前。|  
-|**guid**|**UNIQUEIDENTIFIER**|一意のプロバイダー GUID。|  
-|**バージョン**|**nvarchar(50)**|プロバイダーのバージョンを '*aa.bb.cccc.dd*' の形式で指定します。|  
+|**guid**|**uniqueidentifier**|一意のプロバイダー GUID。|  
+|**version**|**nvarchar (50)**|プロバイダーのバージョンを '*aa.bb.cccc.dd*' の形式で指定します。|  
 |**dll_path**|**nvarchar(512)**|拡張キー管理 (EKM) アプリケーションプログラムインターフェイス (API) を実装する DLL へのパス。|  
 |**is_enabled**|**bit**|サーバーでプロバイダーが有効になっているかどうか。<br /><br /> 0 = 無効 (既定値)<br /><br /> 1 = 有効|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Cryptographic_providers**ビューはパブリックに表示されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [セキュリティカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   

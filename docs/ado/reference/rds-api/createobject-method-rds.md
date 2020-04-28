@@ -14,10 +14,10 @@ ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c6b50714cdff536418e759828d972c16abd7d7a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964543"
 ---
 # <a name="createobject-method-rds"></a>CreateObject メソッド (RDS)
@@ -49,7 +49,7 @@ ms.locfileid: "67964543"
  *awebsrvr*または*computername*  
  サーバービジネスオブジェクトのインスタンスが作成されるインターネットインフォメーションサービス (IIS) Web サーバーを識別する URL を表す**文字列**値です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  *HTTP プロトコル*は標準の Web プロトコルです。*HTTPS*はセキュリティで保護された Web プロトコルです。 HTTP を使用せずにローカルエリアネットワークを実行する場合は、 *DCOM プロトコル*を使用します。 *インプロセス*プロトコルは、ローカルダイナミックリンクライブラリ (DLL) です。ネットワークを使用しません。  
   
 ## <a name="applies-to"></a>適用対象  

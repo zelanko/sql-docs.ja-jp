@@ -14,10 +14,10 @@ ms.assetid: 8c56b233-1be8-442c-8d0e-a4c96465bc99
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c88b8029ee5d96986cf9b366bd8faee53ca1393b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963224"
 ---
 # <a name="url-property-rds"></a>URL プロパティ (RDS)
@@ -43,7 +43,7 @@ Run time: DataControl.URL="Server"
  *DataControl*  
  **DataControl**オブジェクトを表すオブジェクト変数です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  通常、URL は、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を生成して返すことができる Active Server ページ (.asp) ファイルを識別します。 そのため、ユーザーは、サーバー側の[DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)オブジェクトを呼び出さなくても**レコードセット**を取得できます。また、カスタムビジネスオブジェクトをプログラムすることもできます。  
   
  **Url**プロパティが設定されている場合、 [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md)は url で指定された場所に変更を送信します。  

@@ -20,10 +20,10 @@ ms.assetid: f4e21060-40cb-4790-8611-4086a092dda2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 37fd7f3f9cd69dd3702a19bd390ee6601a75dd44
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965009"
 ---
 # <a name="updaterule-property-adox"></a>UpdateRule プロパティ (ADOX)
@@ -32,7 +32,7 @@ ms.locfileid: "67965009"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  [Ruleenum](../../../ado/reference/adox-api/ruleenum.md)定数のいずれかを指定できる**Long 型**の値を設定して返します。 既定値は**adRINone**です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  このプロパティは、既にコレクションに追加されている[キー](../../../ado/reference/adox-api/key-object-adox.md)オブジェクトに対しては読み取り専用です。  
   
 ## <a name="applies-to"></a>適用対象  

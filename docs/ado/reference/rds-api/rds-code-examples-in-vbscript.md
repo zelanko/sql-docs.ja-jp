@@ -16,10 +16,10 @@ ms.assetid: 22f23c30-7c21-4fe3-8e76-36cea6448819
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 27ece72a3d9db6398dd8120941f95de2b8276b9c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963796"
 ---
 # <a name="rds-code-examples-in-vbscript"></a>VBScript での RDS のコード例
@@ -31,7 +31,7 @@ ms.locfileid: "67963796"
 > [!NOTE]
 >  コード例全体をコードエディターに貼り付けます。 部分例が使用されている場合や段落の書式設定が失われた場合、この例は正常に実行されない可能性があります。  
   
-## <a name="objects"></a>Objects  
+## <a name="objects"></a>オブジェクト  
   
 -   [DataControl オブジェクトの例](../../../ado/reference/rds-api/datacontrol-object-example-vbscript.md)  
   

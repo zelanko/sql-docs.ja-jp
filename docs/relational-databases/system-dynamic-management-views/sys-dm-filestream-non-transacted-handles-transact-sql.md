@@ -19,10 +19,10 @@ ms.assetid: 507ec125-67dc-450a-9081-94cde5444a92
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4dda607ace977be539dbed096a3d83ac5f220ea0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67950988"
 ---
 # <a name="sysdm_filestream_non_transacted_handles-transact-sql"></a>dm_filestream_non_transacted_handles (Transact-sql)
@@ -36,17 +36,17 @@ ms.locfileid: "67950988"
   
 |**列**|**Type**|**説明**|  
 |----------------|--------------|---------------------|  
-|database_id|INT|ハンドルに関連付けられているデータベースの ID。|  
-|object_id|INT|ハンドルが関連付けられている FileTable のオブジェクト ID。|  
-|handle_id|INT|一意のハンドルコンテキスト識別子。 [Sp_kill_filestream_non_transacted_handles &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md)ストアドプロシージャが特定のハンドルを強制終了するために使用します。|  
-|file_object_type|INT|ハンドルの型。 ハンドルを開くときの対象だった階層のレベル (つまりデータベースまたはアイテム) を示します。|  
+|database_id|int|ハンドルに関連付けられているデータベースの ID。|  
+|object_id|int|ハンドルが関連付けられている FileTable のオブジェクト ID。|  
+|handle_id|int|一意のハンドルコンテキスト識別子。 [Sp_kill_filestream_non_transacted_handles &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md)ストアドプロシージャが特定のハンドルを強制終了するために使用します。|  
+|file_object_type|int|ハンドルの型。 ハンドルを開くときの対象だった階層のレベル (つまりデータベースまたはアイテム) を示します。|  
 |file_object_type_desc|nvarchar(120)|"UNDEFINED"、<br />"SERVER_ROOT"、<br />"DATABASE_ROOT"、<br />"TABLE_ROOT"、<br />"TABLE_ITEM"|  
 |correlation_process_id|varbinary (8)|要求を発信したプロセスの一意の識別子を格納します。|  
 |correlation_thread_id|varbinary (8)|要求を生成したスレッドの一意な識別子を格納します。|  
 |file_context|varbinary (8)|このハンドルで使用されるファイル オブジェクトへのポインター。|  
-|state|INT|ハンドルの現在の状態。 アクティブ、終了、強制終了のいずれかになります。|  
+|state|int|ハンドルの現在の状態。 アクティブ、終了、強制終了のいずれかになります。|  
 |state_desc|nvarchar(120)|"ACTIVE"、<br />"CLOSED"、<br />キル|  
-|current_workitem_type|INT|このハンドルが現在処理されている状態。|  
+|current_workitem_type|int|このハンドルが現在処理されている状態。|  
 |current_workitem_type_desc|nvarchar(120)|"NoSetWorkItemType"、<br />"FFtPreCreateWorkitem",<br />"FFtGetPhysicalFileNameWorkitem",<br />"FFtPostCreateWorkitem"、<br />"FFtPreCleanupWorkitem",<br />"FFtPostCleanupWorkitem"、<br />"FFtPreCloseWorkitem"、<br />"FFtQueryDirectoryWorkItem"、<br />"FFtQueryInfoWorkItem"、<br />"FFtQueryVolumeInfoWorkItem",<br />"FFtSetInfoWorkitem"、<br />FFtWriteCompletionWorkitem|  
 |fcb_id|bigint|FileTable ファイル制御ブロック ID。|  
 |item_id|varbinary (892)|ファイルまたはディレクトリのアイテム ID。 通常、サーバーのルートのハンドルは NULL です。|  
@@ -57,8 +57,8 @@ ms.locfileid: "67950988"
 |table_directory_name|nvarchar(512)|opened_file_name の一部で、テーブルのディレクトリ名を表す部分。|  
 |remaining_file_name|nvarchar(512)|opened_file_name の一部で、残りのディレクトリ名を表す部分。|  
 |open_time|DATETIME|ハンドルが開かれた時刻。|  
-|flags|INT|ShareFlagsUpdatedToFcb = 0x1、<br />DeleteOnClose = 0x2、<br />NewFile = 0x4、<br />PostCreateDoneForNewFile = 0x8、<br />StreamFileOverwritten = 0x10、<br />RequestCancelled = 0x20、<br />NewFileCreationRolledBack = 0x40|  
-|login_id|INT|ハンドルを開いたプリンシパルの ID。|  
+|flags|int|ShareFlagsUpdatedToFcb = 0x1、<br />DeleteOnClose = 0x2、<br />NewFile = 0x4、<br />PostCreateDoneForNewFile = 0x8、<br />StreamFileOverwritten = 0x10、<br />RequestCancelled = 0x20、<br />NewFileCreationRolledBack = 0x40|  
+|login_id|int|ハンドルを開いたプリンシパルの ID。|  
 |login_name|nvarchar(512)|ハンドルを開いたプリンシパルの名前。|  
 |login_sid|varbinary(85)|ハンドルを開いたプリンシパルの SID。|  
 |read_access|bit|読み取りアクセス用に開かれました。|  

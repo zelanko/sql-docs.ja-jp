@@ -22,10 +22,10 @@ ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 51c1898ddaee1ecf878944a3b43c3d8adbb38590
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946177"
 ---
 # <a name="xml-construction-xquery"></a>XML の構築 (XQuery)
@@ -300,7 +300,7 @@ where ProductModelID=7;
     SELECT @x.query( '<a attr="Item {/x}"/>' )   
     ```  
   
-     この場合、次のオプションがあります。  
+     その場合は、次のいずれかの方法で対処します。  
   
     -   2つのアトミック値の連結によって属性値を形成します。 この 2 つのアトミック値は、間に空白が挿入されて 1 つの属性値へとシリアル化されます。  
   
@@ -585,7 +585,7 @@ where ProductModelID=7;
 ## <a name="using-computed-constructors"></a>計算コンストラクターの使用  
  . このコンストラクターを使用する場合は、構築するノードの種類を特定するキーワードを指定します。 次のキーワードのみがサポートされています。  
   
--   element  
+-   要素  
   
 -   属性 (attribute)  
   
@@ -632,8 +632,7 @@ text{"Some text "},
                } ')  
 ```  
   
- XQuery 仕様で定義されているように、計算される要素と属性のコンストラクターによって、ノード名を計算できることに注意してください。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で直接コンストラクターを使用している場合は、element や attribute などのノード名を定数リテラルとして指定する必要があります。 したがって、直接コンストラクターと、要素と属性の計算されるコンストラクターに違いはありません。  
+ XQuery 仕様で定義されているように、計算される要素と属性のコンストラクターによって、ノード名を計算できることに注意してください。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で直接コンストラクターを使用している場合は、element や attribute などのノード名を定数リテラルとして指定する必要があります。 したがって、直接コンストラクターと、要素と属性の計算されるコンストラクターに違いはありません。  
   
  次の例では、構築されたノードのコンテンツは、ProductModel テーブルの**xml**データ型の命令列に格納されている xml 製造手順から取得されます。  
   

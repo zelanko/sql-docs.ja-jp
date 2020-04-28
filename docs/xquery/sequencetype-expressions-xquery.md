@@ -18,10 +18,10 @@ ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e7c3cdf33b0765ba50e5553f3bc31fd5c69312e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946283"
 ---
 # <a name="sequencetype-expressions-xquery"></a>SequenceType 式 (XQuery)
@@ -109,7 +109,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- 詳しくは、「型指定された[xml と型指定](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)されていない Xml の比較」をご覧ください。  
+ 詳細については、「 [型指定された XML と型指定されていない XML の比較](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)」を参照してください。  
   
  次のクエリでは、 `instance of`ブール式を使うことで、locationid 属性が xs: integer 型であるかどうかを判断します。  
   
@@ -138,8 +138,7 @@ where ProductModelID=19
  このクエリは True を返します。  
   
 ### <a name="example-c"></a>例 C  
- 
-  `instance of` の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 式は共用体型を使用する場合に制限があります。具体的には、要素または属性の型が共用体型の場合、`instance of` で正確な型が判断されません。 したがって、SequenceType で使用されているアトミック型が、simpleType 階層内にある式の実際の型の最上位の親でない限り、クエリから False が返されます。 つまり、SequenceType で指定されたアトミック型は、anySimpleType の直接の子である必要があります。 型階層の詳細については、「 [XQuery での型キャストの規則](../xquery/type-casting-rules-in-xquery.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の `instance of` 式は共用体型を使用する場合に制限があります。具体的には、要素または属性の型が共用体型の場合、`instance of` で正確な型が判断されません。 したがって、SequenceType で使用されているアトミック型が、simpleType 階層内にある式の実際の型の最上位の親でない限り、クエリから False が返されます。 つまり、SequenceType で指定されたアトミック型は、anySimpleType の直接の子である必要があります。 型階層の詳細については、「 [XQuery での型キャストの規則](../xquery/type-casting-rules-in-xquery.md)」を参照してください。  
   
  次のクエリの例では、次の処理を実行します。  
   
@@ -315,8 +314,7 @@ select @x.query(' declare namespace CustOrders="Customers";
   
 -   などの型名`element(ElementName, TypeName)`を指定する**要素 ()** シーケンス型の形式を使用する場合、型は疑問符 (?) で修飾する必要があります。 たとえば、`element(Title, xs:string?)` は要素が NULL であることを示します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]では、を使用`instance of`した**xsi: nil**プロパティの実行時検出はサポートされていません。  
   
--   
-  `Expression` の値が共用体型として型指定された要素または属性の値である場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、派生された型ではなく、値の型の派生元のプリミティブ型しか識別できません。 たとえば、静的な`e1`型 (xs: integer | xs: string) を持つように <> が定義されている場合、次のコードは False を返します。  
+-   `Expression` の値が共用体型として型指定された要素または属性の値である場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、派生された型ではなく、値の型の派生元のプリミティブ型しか識別できません。 たとえば、静的な`e1`型 (xs: integer | xs: string) を持つように <> が定義されている場合、次のコードは False を返します。  
   
     ```  
     data(<e1>123</e1>) instance of xs:integer  

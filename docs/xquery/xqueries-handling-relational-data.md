@@ -16,10 +16,10 @@ ms.assetid: 9812b71a-52ec-48a0-92f3-016a93660229
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: ed4583b30ed1e4538a36079f9f7794704b819cda
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946169"
 ---
 # <a name="xqueries-handling-relational-data"></a>リレーショナル データを処理する XQuery
@@ -29,9 +29,9 @@ ms.locfileid: "67946169"
   
  XQuery の実行によって生成される XML には、他の Transact-SQL 変数や行セット列から取得される値を含めることができます。 XML 以外のリレーショナルデータを結果の XML にバインドするために、SQL Server には XQuery 拡張として次の擬似関数が用意されています。  
   
--   **sql: column ()** 関数  
+-   **sql:column()** function  
   
--   **sql: variable ()** 関数  
+-   **sql:variable()** function  
   
  **Xml**データ型の**query ()** メソッドで xquery を指定するときに、これらの xquery 拡張機能を使用できます。 その結果、 **query ()** メソッドは、**xml データ型と xml 以外**のデータ型のデータを結合する xml を生成できます。  
   

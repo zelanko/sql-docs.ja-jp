@@ -18,16 +18,15 @@ ms.assetid: d599c791-200d-46f8-b758-97e761a1a5c0
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 5ad42a174f558202544650fb1580574f290d4466
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946083"
 ---
 # <a name="xquery-and-static-typing"></a>XQuery と静的な型指定
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の XQuery は静的型指定の言語です。 つまり、特定の関数または演算子で受け入れられない型またはカーディナリティを持つ値が式から返された場合、クエリのコンパイル中に型エラーが発生します。 また、静的な型チェックでは、型指定された XML ドキュメントのパス式の入力ミスが間違いであるかどうかを検出することもできます。 XQuery コンパイラは、アトミック化などの暗黙的な操作を加える正規化を適用してから、静的な型の推定および確認を行います。  
   
 ## <a name="static-type-inference"></a>静的な型の推定  
@@ -87,8 +86,7 @@ ms.locfileid: "67946083"
  XQuery のコンテキストでは、"average" `fn:avg (//r)`関数は静的エラーを返します。これは、xquery コンパイラが、 **fn: avg ()** の引数に含まれる <`r`> 要素に対して異なる型 (**xs: int**、 **xs: float** 、または**xs: double**) の値を追加できないためです。 これを解決するには、関数の呼び出し部分を「`fn:avg(for $r in //r return $r cast as xs:double ?)`」と書き換えます。  
   
 ### <a name="example-operator-over-union-type"></a>例: Union 型に対する演算子  
- 加算演算 (' + ') には、オペランドの正確な型が必要です。 その結果、式`(//r)[1] + 1`は、前に説明した要素 <`r`> の型定義を持つ静的エラーを返します。 解決策の 1 つは、「`(//r)[1] cast as xs:int? +1`」("?" は 0 回または 1 回の出現を示す) に書き換える方法です。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、すべてのキャストは実行時エラーの結果として空のシーケンスになる可能性があるので、"cast as" に "?" を付ける必要があります。  
+ 加算演算 (' + ') には、オペランドの正確な型が必要です。 その結果、式`(//r)[1] + 1`は、前に説明した要素 <`r`> の型定義を持つ静的エラーを返します。 解決策の 1 つは、「`(//r)[1] cast as xs:int? +1`」("?" は 0 回または 1 回の出現を示す) に書き換える方法です。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、すべてのキャストは実行時エラーの結果として空のシーケンスになる可能性があるので、"cast as" に "?" を付ける必要があります。  
   
 ## <a name="see-also"></a>参照  
  [XQuery 言語リファレンス &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  

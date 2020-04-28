@@ -12,16 +12,16 @@ ms.assetid: 509cb65d-2f54-427a-83d7-37919cc4e3e3
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 507ac2a61043260435a18c90fb473130988e7f35
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67948511"
 ---
 # <a name="converting-sap-ase-database-objects-sybasetosql"></a>SAP ASE データベースオブジェクトの変換 (SybaseToSQL)
 SAP Adaptive Server Enterprise (ASE) に接続した後、または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] azure sql に接続し、プロジェクトとデータのマッピングオプションを設定した後、Sap Adaptive server ENTERPRISE (ase [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) データベースオブジェクトをまたは azure sql database オブジェクトに変換できます。  
   
-## <a name="the-conversion-process"></a>変換処理  
+## <a name="the-conversion-process"></a>変換プロセス  
 データベースオブジェクトを変換すると、ASE からオブジェクトの定義が取得[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]され、類似オブジェクトまたは SQL Azure オブジェクトに変換され、この情報が ssma メタデータに読み込まれます。 この情報は、または Azure SQL の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに読み込まれません。 その後、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL メタデータエクスプローラーを使用して、オブジェクトとそのプロパティを表示できます。
   
 変換中に SSMA は出力メッセージを出力ウィンドウに出力し、エラーメッセージを**エラー一覧**ウィンドウに出力します。 出力とエラーの情報を使用して、必要な変換結果を取得するために ASE データベースまたは変換プロセスを変更する必要があるかどうかを判断します。  
@@ -122,9 +122,9 @@ SSMA for SAP ASE では、オンプレミス SQL Server への変換中に次の
   
 -   オブジェクトを移行から除外することができます。 また[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は Azure Sql metadata Explorer と Sybase メタデータエクスプローラーで、オブジェクトをまたは azure sql に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]読み込む前に項目の横のチェックボックスをオフにし、SAP ASE からデータを移行します。  
   
-## <a name="next-steps"></a>次のステップ  
+## <a name="next-steps"></a>次の手順  
 移行プロセスの次のステップでは、変換された[データベースオブジェクトを SQL Server/SQL Azure (SybaseToSQL) に読み込み](https://msdn.microsoft.com/4c59256f-99a8-4351-9559-a455813dbd06)ます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [SAP ASE データベースの SQL Server Azure SQL Database &#40;SybaseToSQL&#41;への移行](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

@@ -16,23 +16,23 @@ ms.assetid: 300a702a-3544-48c5-b759-83b511fe97e0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fd677e29631e53eeb71c43e8174baff553defc85
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933248"
 ---
 # <a name="datasource-property-ado"></a>DataSource プロパティ (ADO)
 [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトとして表されるデータを格納するオブジェクトを示します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  このプロパティは、データ環境を使用してデータバインドコントロールを作成するために使用されます。 データ環境では、**レコードセット**オブジェクトとして表される名前付きオブジェクト (データメンバー) を含むデータ (データソース) のコレクションを保持します。  
   
  [DataMember](../../../ado/reference/ado-api/datamember-property.md)プロパティと**DataSource**プロパティは、組み合わせて使用する必要があります。  
   
  参照されるオブジェクトは、 **IDataSource**インターフェイスを実装する必要があり、 **IRowset**インターフェイスを含んでいる必要があります。  
   
-## <a name="usage"></a>使用法  
+## <a name="usage"></a>使用方法  
   
 ```  
 Dim rs as New ADODB.Recordset  

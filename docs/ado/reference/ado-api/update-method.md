@@ -16,10 +16,10 @@ ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6ce247905afd6ed34366424f5f905d57b42d988f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67938842"
 ---
 # <a name="update-method"></a>Update メソッド
@@ -34,13 +34,13 @@ record.Fields.Update
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *Fields*  
- 省略可能。 1つの名前、または変更するフィールドの名前または序数を表す**バリアント**配列を**表すバリアント配列**。  
+ *フィールド*  
+ 任意。 1つの名前、または変更するフィールドの名前または序数を表す**バリアント**配列を**表すバリアント配列**。  
   
  *値*  
- 省略可能。 単一の値を表す**バリアント**、または新しいレコードのフィールドの値を表す**バリアント**配列。  
+ 任意。 単一の値を表す**バリアント**、または新しいレコードのフィールドの値を表す**バリアント**配列。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="recordset"></a>レコードセット  
  [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)メソッドを呼び出した後、または既存のレコードのフィールド値を変更した後に、**レコードセット**オブジェクトの現在のレコードに対して行った変更を保存するには、 **Update**メソッドを使用します。 **レコードセット**オブジェクトは更新をサポートしている必要があります。  

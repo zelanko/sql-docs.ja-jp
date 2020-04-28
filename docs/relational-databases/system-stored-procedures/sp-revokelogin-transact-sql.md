@@ -18,10 +18,10 @@ ms.assetid: cb1ab102-1ae0-4811-9144-9a8121ef2d7e
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 95598885a80b1f697f5e1287e22c1048e737ba6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67944721"
 ---
 # <a name="sp_revokelogin-transact-sql"></a>sp_revokelogin (Transact-sql)
@@ -47,7 +47,7 @@ sp_revokelogin [ @loginame= ] 'login'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_revokelogin**は、 *login*パラメーターで指定されたアカウントを使用した接続を無効にします。 ただし、Windows グループのメンバーシップによってのインスタンスへ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のアクセスが許可されている windows ユーザーは、個別のアクセスが取り消された後もグループとして接続できます。 同様に、 *login*パラメーターで Windows グループの名前を指定した場合、そのグループのメンバーはのインスタンスへの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]アクセスが個別に許可されていても接続できます。  
   
  たとえば、Windows ユーザー **ADVWORKS\john**が windows グループ**ADVWORKS\Admins**のメンバーである場合、 **sp_revokelogin**は次の`ADVWORKS\john`アクセス権を取り消します。  
@@ -65,7 +65,7 @@ sp_revokelogin [ADVWORKS\john]
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する ALTER ANY LOGIN 権限が必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、Windows ユーザー `Corporate\MollyA`のログインエントリを削除します。  
   
 ```  
@@ -84,6 +84,6 @@ EXEC sp_revokelogin [Corporate\MollyA];
  [sp_denylogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
  [sp_droplogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
  [sp_grantlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

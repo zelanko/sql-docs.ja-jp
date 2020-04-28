@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8be3fe8cbf30121ec2895f59306c925a422d5c39
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67938125"
 ---
 # <a name="ltsource-data-querygt---openrowset"></a>&lt;ソースデータクエリ&gt; -OPENROWSET
@@ -37,10 +37,10 @@ OPENROWSET(provider_name,provider_string,query_syntax)
  *query_syntax*  
  行セットを返すクエリ構文です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  データマイニングプロバイダーは、 *provider_name*と*provider_string*を使用してデータソースオブジェクトへの接続を確立し、 *query_syntax*で指定されたクエリを実行して、ソースデータから行セットを取得します。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例は、予測結合ステートメント内で、 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] [!INCLUDE[tsql](../includes/tsql-md.md)] SELECT ステートメントを使用してデータベースからデータを取得するために使用できます。  
   
 ```  
@@ -55,6 +55,6 @@ OPENROWSET
 ## <a name="see-also"></a>参照  
  [&#60;ソースデータクエリ&#62;](../dmx/source-data-query.md)   
  [DMX&#41; データ操作ステートメントを &#40;データマイニング拡張機能](../dmx/dmx-statements-data-manipulation.md)   
- [DMX&#41; ステートメントリファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-statements.md)  
+ [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: 0c38a625-60d2-4ee2-bcf3-2ba367914220
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5e441e5165262a4455e34cb9a0adb55b9679578f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67990056"
 ---
 # <a name="log_shipping_monitor_error_detail-transact-sql"></a>log_shipping_monitor_error_detail (Transact-SQL)
@@ -31,20 +31,20 @@ ms.locfileid: "67990056"
   
  履歴と監視に関連するテーブルは、プライマリサーバーとセカンダリサーバーでも使用されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**agent_id**|**UNIQUEIDENTIFIER**|バックアップ用のプライマリ ID、またはコピーまたは復元用のセカンダリ ID。|  
+|**agent_id**|**uniqueidentifier**|バックアップ用のプライマリ ID、またはコピーまたは復元用のセカンダリ ID。|  
 |**agent_type**|**tinyint**|ログ配布ジョブの種類です。<br /><br /> 0 = バックアップ。<br /><br /> 1 = コピー。<br /><br /> 2 = 復元します。|  
 |**session_id**|**int**|バックアップ/コピー/復元/ジョブのセッション ID。|  
 |**database_name**|**sysname**|このエラーレコードに関連付けられているデータベースの名前。 バックアップ用のプライマリデータベース、復元用のセカンダリデータベース、またはコピー用に空。|  
 |**sequence_number**|**int**|複数のレコードにまたがるエラーの正しい順序を示す増分番号。|  
-|**log_time**|**DATETIME**|レコードが作成された日時。|  
-|**log_time_utc**|**DATETIME**|レコードが作成された日付と時刻。協定世界時で表されます。|  
-|**メッセージ**|**nvarchar**|メッセージ テキスト。|  
+|**log_time**|**datetime**|レコードが作成された日時。|  
+|**log_time_utc**|**datetime**|レコードが作成された日付と時刻。協定世界時で表されます。|  
+|**message**|**nvarchar**|メッセージ テキスト。|  
 |**電源**|**nvarchar**|エラー メッセージまたはイベントのソース。|  
 |**help_url**|**nvarchar**|URL (使用可能な場合)。エラーに関する詳細情報が表示されます。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  このテーブルには、ログ配布エージェントに関するエラーの詳細が格納されます。 各エラーは一連の例外として記録され、 エージェントセッションごとに複数のエラー (シーケンス) が存在する場合があります。  
   
  リモート監視サーバーに格納されているだけでなく、プライマリサーバーに関連する情報が**log_shipping_monitor_error_detail**テーブルのプライマリサーバーに格納されます。また、セカンダリサーバーに関連する情報は、セカンダリサーバーの**log_shipping_monitor_error_detail**テーブルにも格納されます。  
@@ -58,6 +58,6 @@ ms.locfileid: "67990056"
  [sp_delete_log_shipping_primary_database &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)   
  [sp_delete_log_shipping_secondary_database &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)   
  [sp_refresh_log_shipping_monitor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   
- [システムテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [システム テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

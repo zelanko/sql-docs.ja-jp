@@ -19,10 +19,10 @@ ms.assetid: b7f925d7-b05c-4376-bb49-f8d2c17b8b24
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 50a609d0cebe70ea5127ed448e57a70881e35097
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965228"
 ---
 # <a name="setpermissions-method-adox"></a>SetPermissions メソッド (ADOX)
@@ -42,19 +42,19 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
  *ObjectType*  
  [Objecttypeenum](../../../ado/reference/adox-api/objecttypeenum.md)定数の1つであり、アクセス許可を取得するオブジェクトの型を指定する**Long 型**の値です。  
   
- *アクション*  
+ *動作*  
  **Long**値。権限を設定するときに実行するアクションの種類を指定する[actionenum](../../../ado/reference/adox-api/actionenum.md)定数の1つです。  
   
  *権限*  
  設定する権限を示す1つ以上の[右 Senum](../../../ado/reference/adox-api/rightsenum.md)定数のビットマスクとして使用できる**Long 型**の値。  
   
  *識別子*  
- 省略可能。 オブジェクトがこれらのアクセス許可を継承する方法を指定する、 [Inherittypeenum](../../../ado/reference/adox-api/inherittypeenum.md)定数の1つである**Long**値。 既定値は**Adinheritnone**です。  
+ 任意。 オブジェクトがこれらのアクセス許可を継承する方法を指定する、 [Inherittypeenum](../../../ado/reference/adox-api/inherittypeenum.md)定数の1つである**Long**値。 既定値は**Adinheritnone**です。  
   
  *ObjectTypeId*  
- 省略可能。 OLE DB 仕様で定義されていないプロバイダーオブジェクト型の GUID を示す**バリアント**値です。 *ObjectType*が**Adpermobjproviderspecific**に設定されている場合、このパラメーターは必須です。それ以外の場合は使用されません。  
+ 任意。 OLE DB 仕様で定義されていないプロバイダーオブジェクト型の GUID を示す**バリアント**値です。 *ObjectType*が**Adpermobjproviderspecific**に設定されている場合、このパラメーターは必須です。それ以外の場合は使用されません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  プロバイダーがグループまたはユーザーのアクセス権の設定をサポートしていない場合、エラーが発生します。  
   
 > [!NOTE]

@@ -17,21 +17,21 @@ ms.assetid: cdb31c76-e559-475c-b33a-aac24f73e70e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a84932192fc7f51f21a7fd65c06c7417ef02da92
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965844"
 ---
 # <a name="keys-collection-adox"></a>Keys コレクション (ADOX)
 [テーブル](../../../ado/reference/adox-api/table-object-adox.md)のすべての[キー](../../../ado/reference/adox-api/key-object-adox.md)オブジェクトを格納します。  
   
-## <a name="remarks"></a>解説  
- [キーコレクション](../../../ado/reference/adox-api/keys-collection-adox.md)の[Append](../../../ado/reference/adox-api/append-method-adox-keys.md)メソッドは、ADOX で一意です。 次のようにすることができます。  
+## <a name="remarks"></a>Remarks  
+ [キーコレクション](../../../ado/reference/adox-api/keys-collection-adox.md)の[Append](../../../ado/reference/adox-api/append-method-adox-keys.md)メソッドは、ADOX で一意です。 次の操作を行うことができます。  
   
 -   [追加](../../../ado/reference/adox-api/append-method-adox-keys.md)メソッドを使用して、新しいキーをコレクションに追加します。  
   
- その他のプロパティとメソッドは、ADO コレクションの標準です。 次のようにすることができます。  
+ その他のプロパティとメソッドは、ADO コレクションの標準です。 次の操作を行うことができます。  
   
 -   [項目](../../../ado/reference/ado-api/item-property-ado.md)プロパティを使用して、コレクション内のキーにアクセスします。  
   

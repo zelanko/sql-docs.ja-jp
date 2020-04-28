@@ -17,10 +17,10 @@ ms.assetid: a87d8080-a238-45e5-bc80-9a8625b3810f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 089fad427989c26ed1ed22ec3e9267297a29b820
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67949389"
 ---
 # <a name="open-method-ado-md"></a>Open メソッド (ADO MD)
@@ -35,12 +35,12 @@ Cellset.Open Source, ActiveConnection
   
 #### <a name="parameters"></a>パラメーター  
  *ソース*  
- 省略可能。 多次元式 (MDX) クエリなど、有効な多次元クエリに評価される**バリアント**です。 *Source*引数は、 [source](../../../ado/reference/ado-md-api/source-property-ado-md.md)プロパティに対応しています。 MDX の詳細については、Microsoft Data Access Components SDK の[オンライン分析処理 (OLAP) の OLE DB](https://msdn.microsoft.com/8a7673c6-3ca1-4411-9f1e-adf1e47df4f3)に関するドキュメントを参照してください。  
+ 任意。 多次元式 (MDX) クエリなど、有効な多次元クエリに評価される**バリアント**です。 *Source*引数は、 [source](../../../ado/reference/ado-md-api/source-property-ado-md.md)プロパティに対応しています。 MDX の詳細については、Microsoft Data Access Components SDK の[オンライン分析処理 (OLAP) の OLE DB](https://msdn.microsoft.com/8a7673c6-3ca1-4411-9f1e-adf1e47df4f3)に関するドキュメントを参照してください。  
   
  *ActiveConnection*  
- 省略可能。 有効な ADO[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト変数名または接続の定義のいずれかを指定する文字列に評価される**バリアント**。 *ActiveConnection*引数は、[セルセット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)オブジェクトを開くための接続を指定します。 この引数に対して接続定義を渡すと、指定されたパラメーターを使用して新しい接続が開かれます。 *ActiveConnection*引数は、 [ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)プロパティに対応しています。  
+ 任意。 有効な ADO[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト変数名または接続の定義のいずれかを指定する文字列に評価される**バリアント**。 *ActiveConnection*引数は、[セルセット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)オブジェクトを開くための接続を指定します。 この引数に対して接続定義を渡すと、指定されたパラメーターを使用して新しい接続が開かれます。 *ActiveConnection*引数は、 [ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)プロパティに対応しています。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Open**メソッドは、パラメーターのいずれかが省略されていて、それに対応するプロパティ値が**セル**セットを開こうとする前に設定されていない場合に、エラーを生成します。  
   
 ## <a name="applies-to"></a>適用対象  

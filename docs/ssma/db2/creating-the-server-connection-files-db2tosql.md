@@ -10,10 +10,10 @@ ms.assetid: 685419f6-8606-462c-be12-8bace45bede6
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 484b9e12d53d22160358d873ddb2a3dc60d0977e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989813"
 ---
 # <a name="creating-the-server-connection-files-db2tosql"></a>サーバー接続ファイルの作成 (DB2ToSQL)
@@ -73,7 +73,7 @@ ms.locfileid: "67989813"
 </sql-server>  
 ```  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 コンソールを操作する次の手順では、 [SSMA コンソール &#40;DB2ToSQL を実行](../../ssma/db2/executing-the-ssma-console-db2tosql.md)して&#41;  
   
 ## <a name="see-also"></a>参照  

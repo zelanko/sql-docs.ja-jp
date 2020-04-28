@@ -16,16 +16,16 @@ ms.assetid: a175d453-fa55-4f49-9ede-a26d83177919
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5018dc921267663d64037024ef21c82ac6e3f7c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932963"
 ---
 # <a name="error-object"></a>Error オブジェクト
 プロバイダーに関連する1つの操作に関連するデータアクセスエラーの詳細が含まれています。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ADO オブジェクトに関連する操作では、1つ以上のプロバイダーエラーが発生することがあります。 各エラーが発生すると、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの[エラー](../../../ado/reference/ado-api/errors-collection-ado.md)コレクションに1つまたは複数の**エラー**オブジェクトが配置されます。 別の ADO 操作によっ**てエラーが**生成されると、 **errors**コレクションがクリアされ、エラーオブジェクトの新しいセットが**errors**コレクションに配置されます。  
   
 > [!NOTE]

@@ -18,10 +18,10 @@ ms.assetid: 7a0b3457-7265-4f24-a255-7f055d908f20
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: de4970e82155454b3d05d6200bc7413baca97aef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67939010"
 ---
 # <a name="mspublications-transact-sql"></a>MSpublications (Transact-SQL)
@@ -29,14 +29,14 @@ ms.locfileid: "67939010"
 
   **MSpublications**テーブルには、パブリッシャーによってレプリケートされるパブリケーションごとに1行のレコードが格納されます。 このテーブルは、ディストリビューションデータベースに格納されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|パブリッシャーの ID。|  
 |**publisher_db**|**sysname**|パブリッシャーデータベースの名前。|  
 |**レプリケーション**|**sysname**|パブリケーションの名前を指定します。|  
 |**publication_id**|**int**|パブリケーションの ID です。|  
 |**publication_type**|**int**|パブリケーションの種類です。<br /><br /> **0** = トランザクション。<br /><br /> **1** = スナップショット。<br /><br /> **2** = Merge。|  
-|**thirdparty_flag**|**bit**|パブリケーションがデータベースで[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]あるかどうかを示します。<br /><br /> **** = 0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。<br /><br /> **1** = 以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のデータソース。|  
+|**thirdparty_flag**|**bit**|パブリケーションがデータベースで[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]あるかどうかを示します。<br /><br /> **0** = 0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。<br /><br /> **1** = 以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のデータソース。|  
 |**independent_agent**|**bit**|このパブリケーションに対してスタンドアロンのディストリビューションエージェントがあるかどうかを示します。|  
 |**immediate_sync**|**bit**|スナップショットエージェントが実行されるたびに同期ファイルが作成または再作成されるかどうかを示します。|  
 |**allow_push**|**bit**|指定されたパブリケーションに対してプッシュサブスクリプションを作成できるかどうかを示します。|  
@@ -49,10 +49,10 @@ ms.locfileid: "67939010"
 |**allow_subscription_copy**|**bit**|このパブリケーションをサブスクライブするサブスクリプションデータベースをコピーする機能を有効または無効にします。 **0**は、コピーが無効であることを示します。 **1**は、コピーが有効になっていることを示します。|  
 |**thirdparty_options**|**int**|の[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]レプリケーションフォルダー内のパブリケーションの表示を抑制するかどうかを指定します。<br /><br /> **0** = の[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]レプリケーションフォルダーに異種パブリケーションを表示します。<br /><br /> **1** = のレプリケーションフォルダーに異種パブリケーションを表示しないよう[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]にします。|  
 |**allow_queued_tran**|**bit**|パブリケーションがキュー更新を許可するかどうかを指定します。<br /><br /> **0 =** パブリケーションはキューに登録されていません。<br /><br /> **1** = パブリケーションはキューに登録されています。|  
-|**オプション**|**int**|このリリースに関する情報はありません。|  
+|**options**|**int**|このリリースに関する情報はありません。|  
   
 ## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -18,23 +18,23 @@ ms.assetid: 0a30fa74-6f10-4410-bd70-882e7c43cd46
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2a6146a942e572e28692ceaafd77d6958cdab9dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964950"
 ---
 # <a name="users-collection-adox"></a>Users コレクション (ADOX)
 [カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)または[グループ](../../../ado/reference/adox-api/group-object-adox.md)の格納されているすべての[ユーザー](../../../ado/reference/adox-api/user-object-adox.md)オブジェクトが含まれます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  [カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)の**ユーザー**コレクションは、すべてのカタログのユーザーを表します。 [グループ](../../../ado/reference/adox-api/group-object-adox.md)の**ユーザー**コレクションは、特定のグループのメンバーシップを持つユーザーのみを表します。  
   
- **ユーザー**コレクションの[Append](../../../ado/reference/adox-api/append-method-adox-users.md)メソッドは、ADOX で一意です。 次のようにすることができます。  
+ **ユーザー**コレクションの[Append](../../../ado/reference/adox-api/append-method-adox-users.md)メソッドは、ADOX で一意です。 次の操作を行うことができます。  
   
 -   **Append**メソッドを使用して、新しいユーザーをコレクションに追加します。  
   
- その他のプロパティとメソッドは、ADO コレクションの標準です。 次のようにすることができます。  
+ その他のプロパティとメソッドは、ADO コレクションの標準です。 次の操作を行うことができます。  
   
 -   [項目](../../../ado/reference/ado-api/item-property-ado.md)プロパティを使用して、コレクション内のユーザーにアクセスします。  
   

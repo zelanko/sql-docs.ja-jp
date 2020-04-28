@@ -16,10 +16,10 @@ ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9d196a60986734c5717be9711af1fa28accee414
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963472"
 ---
 # <a name="server-property-rds"></a>Server プロパティ (RDS)
@@ -54,7 +54,7 @@ awebsrvr:port
   
 ```  
   
- **SSL**  
+ **HTTPS**  
   
  デザイン時の構文  
   
@@ -70,7 +70,7 @@ awebsrvr:port
 DataControl.Server="https://awebsrvr:port"  
 ```  
   
- **COM**  
+ **DCOM**  
   
  デザイン時の構文  
   
@@ -110,13 +110,13 @@ DataControl.Server=""
  *awebsrvr*または*computername*  
  サーバーがリモートコンピューター上にある場合は、インターネットまたはイントラネットのパス、またはコンピューター名を含む**文字列**値。または、サーバーがローカルコンピューター上にある場合は、空の文字列です。  
   
- *ポート*  
- 省略可能。 IIS を実行しているサーバーに接続するために使用されるポート。 ポート番号は Internet Explorer で設定されます ([**表示**] メニューの [**オプション**] をクリックし、[**接続**] タブを選択します)。または、IIS で設定します。  
+ *port*  
+ 任意。 IIS を実行しているサーバーに接続するために使用されるポート。 ポート番号は Internet Explorer で設定されます ([**表示**] メニューの [**オプション**] をクリックし、[**接続**] タブを選択します)。または、IIS で設定します。  
   
  *DataControl*  
  RDS を表すオブジェクト変数です **。DataControl**オブジェクト。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  サーバーは、RDS が配置されている場所です **。DataControl**要求 (つまり、クエリまたは更新) が処理されます。 既定では、すべての要求は、 [RDSServer DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)オブジェクトである Msdfmap によって処理され[ます。ハンドラー](../../../ado/guide/remote-data-service/datafactory-customization.md)コンポーネントと[Msdfmap。](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)指定されたサーバー上の INI ファイル。 以前と新しい Msdfmap の設定を調整するようにサーバーを変更する場合は注意してください **。INI**ファイル。 非互換性があると、あるサーバーで成功した要求が別のサーバーで失敗する可能性があります。 サーバープロパティが空の文字列 "" に設定されている場合、これらのオブジェクトはローカルコンピューターで使用されます。  
   
 ## <a name="applies-to"></a>適用対象  

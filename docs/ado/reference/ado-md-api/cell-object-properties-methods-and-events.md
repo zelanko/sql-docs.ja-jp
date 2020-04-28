@@ -13,10 +13,10 @@ ms.assetid: c45d795b-3272-4df4-a54c-7cd4fcb187fd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7f76a24c4db4d6a5144188be2ee0fa00ca5679f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67947970"
 ---
 # <a name="cell-object-properties-methods-and-events"></a>Cell オブジェクトのプロパティ、メソッド、およびイベント
@@ -32,9 +32,9 @@ ms.locfileid: "67947970"
  [Value プロパティ](../../../ado/reference/ado-md-api/value-property-ado-md.md)  
   
 ## <a name="methods"></a>メソッド  
- [なし] :  
+ なし。  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="see-also"></a>参照  

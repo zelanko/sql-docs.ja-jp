@@ -16,16 +16,16 @@ ms.assetid: 4e10cda7-ce81-4466-94c2-844d38191cf1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1d5cc44950754c4b63e644d2d9210edcc94bd9ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933265"
 ---
 # <a name="cursoroptionenum"></a>CursorOptionEnum
 [サポート](../../../ado/reference/ado-api/supports-method.md)メソッドがテストする必要がある機能を指定します。  
   
-|常時|値|[説明]|  
+|Constant|値|説明|  
 |--------------|-----------|-----------------|  
 |**adAddNew**|0x1000400|では、 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)メソッドをサポートして、新しいレコードを追加します。|  
 |**adApproxPosition**|0x4000|では、 [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)プロパティと[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)プロパティがサポートされています。|  
@@ -44,7 +44,7 @@ ms.locfileid: "67933265"
 ## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
  パッケージ: **com. ms. wfc. データ**  
   
-|常時|  
+|Constant|  
 |--------------|  
 |AdoEnums を指定します。|  
 |AdoEnums. APPROXPOSITION|  

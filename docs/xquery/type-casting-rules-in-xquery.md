@@ -20,10 +20,10 @@ ms.assetid: f2e91306-2b1b-4e1c-b6d8-a34fb9980057
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a8372e5079b79cc694ccf51f1b6f7cddcf0fed43
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946216"
 ---
 # <a name="type-casting-rules-in-xquery"></a>XQuery での型キャストの規則
@@ -178,7 +178,7 @@ min(xs:integer("1"), xs:double("1.1"))
 ##### <a name="casting-a-value-to-a-numeric-type"></a>数値型への値のキャスト  
  ある数値型の値を別の数値型の値にキャストすると、文字列のシリアル化を行わずに値が1つの値空間から別の値にマップされます。 値が対象の型の制約を満たしていない場合は、次の規則が適用されます。  
   
--   ソース値が既に数値で、対象の型が xs: float または-INF または INF 値を許可するサブタイプである場合、値が正の値または-INF (値がの場合) の場合は、値が INF にマップされます。 低下. 対象の型で INF または-INF が許可されておらず、オーバーフローが発生した場合、キャストは失敗し、このリリースの SQL Server の結果は空のシーケンスになります。  
+-   ソース値が既に数値で、対象の型が xs: float または-INF または INF 値を許可するサブタイプである場合、値が正の値または-INF (値が負の場合) の場合、値は INF にマップされます。 対象の型で INF または-INF が許可されておらず、オーバーフローが発生した場合、キャストは失敗し、このリリースの SQL Server の結果は空のシーケンスになります。  
   
 -   元の値が既に数値型で、キャスト先の型が 0、-0e0、または 0e0 を許容する数値型の場合に、元の数値がキャスト後オーバーフローするようなときは、値が次のようにマップされます。  
   

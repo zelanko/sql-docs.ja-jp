@@ -14,10 +14,10 @@ ms.assetid: e0dabf23-a159-4fe5-a962-3df544a21f5c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f70eba6b5f53be7068708fdd8b139f0add10be90
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963349"
 ---
 # <a name="sql-property"></a>SQL プロパティ
@@ -43,7 +43,7 @@ Run time: DataControl.SQL = "QueryString"
  *DataControl*  
  RDS を表すオブジェクト変数です **。DataControl**オブジェクト。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  一般に、これは (データベースサーバーの言語を使用した) SQL ステートメントです`"Select * from NewTitles"`。 レコードが正確に一致して更新されるように、更新可能なクエリには、長いバイナリフィールドまたは計算フィールド以外のフィールドを含める必要があります。  
   
  カスタムのサーバー側ビジネスオブジェクトがクライアントのデータを取得する場合、 **SQL**プロパティは省略可能です。  

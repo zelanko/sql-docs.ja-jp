@@ -18,10 +18,10 @@ ms.assetid: 7b6e14bb-fb69-4d74-aaca-f5d380f4d887
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e1cab50c2aa784c77fbd4a51bc3d72daf115620c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965013"
 ---
 # <a name="type-property-table-adox"></a>Type プロパティ (テーブル) (ADOX)
@@ -30,7 +30,7 @@ ms.locfileid: "67965013"
 ## <a name="return-values"></a>戻り値  
  テーブルの種類を指定する**文字列**値を返します。たとえば、"TABLE"、"SYSTEM TABLE"、"GLOBAL TEMPORARY" などです。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  このプロパティは読み取り専用です。  
   
 ## <a name="applies-to"></a>適用対象  

@@ -17,10 +17,10 @@ ms.assetid: a362ed51-314c-4783-9598-538dbf755f3d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8c16ac4d18806b670c8b3e27dc09c9019d7ecdeb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67967248"
 ---
 # <a name="append-method-adox-tables"></a>Append メソッド (ADOX Tables)
@@ -34,10 +34,10 @@ Tables.Append Table
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *Table*  
+ *一覧*  
  追加する**テーブル**への参照、または作成および追加するテーブルの名前を含む**バリアント**値です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  プロバイダーがテーブルの作成をサポートしていない場合は、エラーが発生します。  
   
 ## <a name="applies-to"></a>適用対象  

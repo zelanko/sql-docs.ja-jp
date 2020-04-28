@@ -20,10 +20,10 @@ ms.assetid: 128c25db-0b71-449d-bfb2-38b8abcf24a0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fec1b43f3e129a752e79024f3800d6f4fb3fb60a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67984928"
 ---
 # <a name="dbosysjobstepslogs-transact-sql"></a>dbo.sysjobstepslogs (Transact-SQL)
@@ -31,14 +31,14 @@ ms.locfileid: "67984928"
 
   ジョブステップの出力をテーブルに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]書き込むように構成されているすべてのエージェントジョブステップのジョブステップログを格納します。 このテーブルは、 **msdb**データベースに格納されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**log_id**|**int**|ジョブ ステップ ログの ID。|  
 |**出力**|**nvarchar(max)**|ジョブステップのログの内容。|  
-|**date_created**|**DATETIME**|ジョブ ステップ ログが作成された日時。|  
-|**date_modified**|**DATETIME**|ジョブ ステップ ログが最後に変更された日時。|  
+|**date_created**|**datetime**|ジョブ ステップ ログが作成された日時。|  
+|**date_modified**|**datetime**|ジョブ ステップ ログが最後に変更された日時。|  
 |**log_size**|**int**|ジョブステップのログのサイズ (バイト単位)。|  
-|**step_uid**|**UNIQUEIDENTIFIER**|ジョブステップの一意識別子。|  
+|**step_uid**|**uniqueidentifier**|ジョブステップの一意識別子。|  
   
 ## <a name="see-also"></a>参照  
  [sp_help_jobsteplog &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-jobsteplog-transact-sql.md)   

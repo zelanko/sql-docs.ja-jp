@@ -21,10 +21,10 @@ ms.assetid: 88ceba25-e41a-405f-a416-bb68918a0024
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9c2b3bf93abd6acfad699f47344f05ddbc34e85a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67942475"
 ---
 # <a name="coresp_remove_collector_type-transact-sql"></a>core.sp_remove_collector_type (Transact-SQL)
@@ -53,7 +53,7 @@ core.sp_remove_collector_type [ @collector_type_uid = ] 'collector_type_uid'
 ## <a name="permissions"></a>アクセス許可  
  **Mdw_admin** (EXECUTE 権限を持つ) 固定データベースロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、core.supported_collector_types ビューからジェネリック T-SQL Query コレクター型を削除します。  
   
 ```  

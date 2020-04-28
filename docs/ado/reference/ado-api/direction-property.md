@@ -16,10 +16,10 @@ ms.assetid: d5732578-3434-4dcd-a9f7-db1abd1b3b94
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6135650d3b5cb015fad21d1eac7b350827965ca1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933074"
 ---
 # <a name="direction-property"></a>Direction プロパティ
@@ -28,7 +28,7 @@ ms.locfileid: "67933074"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  [Parameterdirection 列挙](../../../ado/reference/ado-api/parameterdirectionenum.md)値を設定または返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Direction**プロパティを使用して、プロシージャとの間でパラメーターがどのように渡されるかを指定します。 **Direction**プロパティは読み取り/書き込み可能です。これにより、この情報を返さないプロバイダーを使用したり、パラメーター情報を取得するために ADO によってプロバイダーの呼び出しを追加する必要がない場合に、この情報を設定したりできます。  
   
  プロバイダーによっては、ストアドプロシージャ内のパラメーターの方向を特定できないことがあります。 このような場合は、クエリを実行する前に**Direction**プロパティを設定する必要があります。  

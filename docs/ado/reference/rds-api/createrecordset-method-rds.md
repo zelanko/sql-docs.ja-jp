@@ -20,10 +20,10 @@ ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3c65f7d415864b169b683e0c9ab858506d31783b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964512"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset メソッド (RDS)
@@ -43,20 +43,20 @@ object.CreateRecordset(ColumnInfos)
  *Object*  
  [RDSServer DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)または RDS を表すオブジェクト変数です[。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクト。  
   
- *コラムの info*  
+ *ColumnsInfos*  
  作成された**レコードセット**内の各列を定義する属性の**Variant**配列。 各列定義には、4つの必須属性と1つの省略可能な属性の配列が含まれています。  
   
-|Attribute|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
-|Name|列ヘッダーの名前。|  
-|種類|データ型の整数。|  
-|Size|データ型に関係なく、文字単位の幅の整数。|  
+|名前|列ヘッダーの名前。|  
+|Type|データ型の整数。|  
+|サイズ|データ型に関係なく、文字単位の幅の整数。|  
 |NULL 値の許容|ブール値。|  
 |Scale (省略可能)|この省略可能な属性は、数値フィールドの小数点以下桁数を定義します。 この値が指定されていない場合、数値は3桁に切り捨てられます。 有効桁数は影響を受けませんが、小数点の後の桁数は3桁に切り捨てられます。|  
   
  次に、一連の列配列が配列にグループ化されて、**レコードセット**が定義されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  サーバー側ビジネスオブジェクトは、結果の**レコードセット**に、株価を含むオペレーティングシステムファイルなど、OLE DB 以外のデータプロバイダーからのデータを設定できます。  
   
  次の表に、 **CreateRecordset**メソッドでサポートされる[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)の値を示します。 表示される数値は、フィールドを定義するために使用される参照番号です。  
@@ -65,7 +65,7 @@ object.CreateRecordset(ColumnInfos)
   
  変数のデータ型によっては、代入列に示されている型に型を強制的に変換することができます。 **レコードセット**が作成され、いっぱいになるまで、置換は表示されません。 その後、必要に応じて、実際のデータ型を確認できます。  
   
-|Length|常時|番号|代替|  
+|長さ|Constant|数値|Substitution|  
 |------------|--------------|------------|------------------|  
 |固定|**adTinyInt**|16||  
 |固定|**adSmallInt**|2||  
@@ -76,7 +76,7 @@ object.CreateRecordset(ColumnInfos)
 |固定|**adUnsignedInt**|19||  
 |固定|**adUnsignedBigInt**|21||  
 |固定|**adSingle**|4||  
-|固定|**追加**|5||  
+|固定|**adDouble**|5||  
 |固定|**adCurrency**|6||  
 |固定|**adDecimal**|14||  
 |固定|**adNumeric**|131||  

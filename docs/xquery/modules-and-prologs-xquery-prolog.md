@@ -18,10 +18,10 @@ ms.assetid: 03924684-c5fd-44dc-8d73-c6ab90f5e069
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 84f4093fe9c4693c50d6ae89c7b2ba111191db9d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946605"
 ---
 # <a name="modules-and-prologs---xquery-prolog"></a>モジュールとプロローグ - XQuery プロローグ
@@ -29,7 +29,7 @@ ms.locfileid: "67946605"
 
   XQuery クエリは、プロローグ (序文) と本文で構成されます。 XQuery プロローグは、クエリ処理に必要な環境を作成する一連の宣言と定義です。 SQL Server では、XQuery プロローグに名前空間の宣言を含めることができます。 XQuery 本文は、目的のクエリ結果を指定する一連の式で構成されます。  
   
- たとえば、次の XQuery は、製造手順を XML として格納する**xml**型の命令列に対して指定されています。 このクエリでは、ワーク センターの場所 `10` に関する製造手順が取得されます。 Xml `query()`データ型の**** メソッドは、XQuery を指定するために使用されます。  
+ たとえば、次の XQuery は、製造手順を XML として格納する**xml**型の命令列に対して指定されています。 このクエリでは、ワーク センターの場所 `10` に関する製造手順が取得されます。 Xml `query()`データ型の**xml**メソッドは、XQuery を指定するために使用されます。  
   
 ```  
 SELECT Instructions.query('declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";           
@@ -43,11 +43,9 @@ WHERE ProductModelID=7
   
 -   XQuery プロローグには、 `(namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";`名前空間プレフィックス (awmi) の宣言が含まれています。  
   
--   
-  `declare namespace` キーワードは、クエリ本文で後から使用される名前空間プレフィックスを定義します。  
+-   `declare namespace` キーワードは、クエリ本文で後から使用される名前空間プレフィックスを定義します。  
   
--   
-  `/AWMI:root/AWMI:Location[@LocationID="10"]` がクエリの本文です。  
+-   `/AWMI:root/AWMI:Location[@LocationID="10"]` がクエリの本文です。  
   
 ## <a name="namespace-declarations"></a>名前空間の宣言  
  次のクエリで示すように、名前空間の宣言でプレフィックスを定義し、名前空間 URI に関連付けます。 クエリでは、 `CatalogDescription`は**xml**型の列です。  

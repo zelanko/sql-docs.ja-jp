@@ -16,10 +16,10 @@ ms.assetid: 8904a403-1383-4b4b-b53d-5c01d6f5deac
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 03d3de2c4aabaf4ad8cbc45d9900b33883ff9a48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933465"
 ---
 # <a name="connectiontimeout-property-ado"></a>ConnectionTimeout プロパティ (ADO)
@@ -28,7 +28,7 @@ ms.locfileid: "67933465"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  接続を開くまでの待機時間を秒単位で示す**Long 型**の値を設定または返します。 既定値は 15 です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ネットワークトラフィックまたはサーバーが過負荷になっている場合[は、接続オブジェクトの](../../../ado/reference/ado-api/connection-object-ado.md) **ConnectionTimeout**プロパティを使用して、接続試行を破棄する必要があります。 接続を開始する前に**ConnectionTimeout**プロパティの設定から経過した時間が経過すると、エラーが発生し、ADO は試行をキャンセルします。 このプロパティを0に設定した場合、ADO は接続が開かれるまで無制限に待機します。 コードを記述しているプロバイダーで、 **ConnectionTimeout**機能がサポートされていることを確認します。  
   
  **ConnectionTimeout**プロパティは、接続が閉じられている場合は読み取り/書き込みが、開いている場合は読み取り専用になります。  

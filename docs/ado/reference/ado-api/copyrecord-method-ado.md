@@ -17,10 +17,10 @@ ms.assetid: b9bcf272-3c74-479f-95dd-0229a32e98fc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: aaabb32234cefe2e3c3727ce5a18dd2d98549a77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933417"
 ---
 # <a name="copyrecord-method-ado"></a>CopyRecord メソッド (ADO)
@@ -35,27 +35,27 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
   
 #### <a name="parameters"></a>パラメーター  
  *ソース*  
- 省略可能。 コピーするエンティティ (ファイルやディレクトリなど) を指定する URL を含む**文字列**値です。 *Source*を省略した場合、または空の文字列を指定した場合は、現在の[レコード](../../../ado/reference/ado-api/record-object-ado.md)によって表されるファイルまたはディレクトリがコピーされます。  
+ 任意。 コピーするエンティティ (ファイルやディレクトリなど) を指定する URL を含む**文字列**値です。 *Source*を省略した場合、または空の文字列を指定した場合は、現在の[レコード](../../../ado/reference/ado-api/record-object-ado.md)によって表されるファイルまたはディレクトリがコピーされます。  
   
- *宛先*  
- 省略可能。 *Source*をコピーする場所を指定する URL を含む**文字列**値です。  
+ *Destination (宛先)*  
+ 任意。 *Source*をコピーする場所を指定する URL を含む**文字列**値です。  
   
  *ユーザー名*  
- 省略可能。 必要に応じて、*宛先*へのアクセスを承認するユーザー ID を表す**文字列**値です。  
+ 任意。 必要に応じて、*宛先*へのアクセスを承認するユーザー ID を表す**文字列**値です。  
   
  *パスワード*  
- 省略可能。 必要に応じて*ユーザー名*を確認するパスワードを含む**文字列**値です。  
+ 任意。 必要に応じて*ユーザー名*を確認するパスワードを含む**文字列**値です。  
   
- *オプション*  
- 省略可能。 **Adcopyunspecified**の既定値を持つ[CopyRecordOptionsEnum](../../../ado/reference/ado-api/copyrecordoptionsenum.md)値。 このメソッドの動作を指定します。  
+ *[オプション]*  
+ 任意。 **Adcopyunspecified**の既定値を持つ[CopyRecordOptionsEnum](../../../ado/reference/ado-api/copyrecordoptionsenum.md)値。 このメソッドの動作を指定します。  
   
  *Io*  
- 省略可能。 **ブール**値。 **True**の場合、この操作は非同期であることを指定します。  
+ 任意。 **ブール**値。 **True**の場合、この操作は非同期であることを指定します。  
   
 ## <a name="return-value"></a>戻り値  
  通常、*変換先*の値を返す**文字列**値。 ただし、返される正確な値はプロバイダーに依存します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  *Source*と*Destination*の値を同じにすることはできません。それ以外の場合は、実行時エラーが発生します。 少なくとも1つのサーバー、パス、またはリソース名が異なる必要があります。  
   
  **AdCopyNonRecursive**が指定されていない場合、*ソース*のすべての子 (サブディレクトリなど) が再帰的にコピーされます。 再帰演算では、 *Destination*を*Source*のサブディレクトリにすることはできません。それ以外の場合、操作は完了しません。  

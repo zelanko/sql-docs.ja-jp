@@ -14,10 +14,10 @@ ms.assetid: 8a3bb608-66d7-4128-a3ef-84cb0556de0d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ed0e3ad8027c31a351ddb4506d3b420aa3a1124d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67938804"
 ---
 # <a name="update-resync-property-dynamic-ado"></a>Update Resync プロパティ - 動的 (ADO)
@@ -26,7 +26,7 @@ ms.locfileid: "67938804"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  1つ以上の[ADCPROP_UPDATERESYNC_ENUM](../../../ado/reference/ado-api/adcprop-updateresync-enum.md)値を設定または返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ADCPROP_UPDATERESYNC_ENUM の値は、他の値の組み合わせを既に表している adResyncAll を除き、組み合わせて使用できます。  
   
  定数**adResyncConflicts**は、再同期値を基になる値として格納しますが、保留中の変更はオーバーライドしません。  

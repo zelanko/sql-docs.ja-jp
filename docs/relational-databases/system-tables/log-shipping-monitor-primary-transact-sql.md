@@ -18,10 +18,10 @@ ms.assetid: 5f629a29-1a62-40e6-ae33-6f6b7dd09a36
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d39ea859f1fd2cc3064d8d8c71c91ba6324f162c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989977"
 ---
 # <a name="log_shipping_monitor_primary-transact-sql"></a>log_shipping_monitor_primary (Transact-sql)
@@ -31,20 +31,20 @@ ms.locfileid: "67989977"
   
  履歴と監視に関連するテーブルは、プライマリサーバーとセカンダリサーバーでも使用されます。   
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**primary_id**|**UNIQUEIDENTIFIER**|ログ配布構成のプライマリデータベースの ID。|  
+|**primary_id**|**uniqueidentifier**|ログ配布構成のプライマリデータベースの ID。|  
 |**primary_server**|**sysname**|ログ配布構成における [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のプライマリ インスタンスの名前。|  
 |**primary_database**|**sysname**|ログ配布構成のプライマリデータベースの名前。|  
 |**backup_threshold**|**int**|バックアップ操作の間に、アラートが生成されるまでの経過時間 (分) です。|  
 |**threshold_alert**|**int**|バックアップのしきい値を超えたときに発生するアラート。|  
 |**threshold_alert_enabled**|**bit**|バックアップしきい値アラートを有効にするかどうかを決定します。 1 = 有効。<br /><br /> 0 = 無効です。|  
 |**last_backup_file**|**nvarchar (500)**|最新のトランザクションログバックアップの絶対パス。|  
-|**last_backup_date**|**DATETIME**|プライマリデータベースでの最後のトランザクションログバックアップ操作の日時。|  
-|**last_backup_date_utc**|**DATETIME**|プライマリデータベースでの最後のトランザクションログバックアップ操作の日時。協定世界時で表されます。|  
+|**last_backup_date**|**datetime**|プライマリデータベースでの最後のトランザクションログバックアップ操作の日時。|  
+|**last_backup_date_utc**|**datetime**|プライマリデータベースでの最後のトランザクションログバックアップ操作の日時。協定世界時で表されます。|  
 |**history_retention_period**|**int**|指定したプライマリ データベースでログ配布履歴レコードが保持される時間 (分単位)。この時間を過ぎるとレコードは削除されます。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  リモート監視サーバーに格納されているだけでなく、プライマリサーバーに関連する情報は、プライマリサーバーの**log_shipping_monitor_primary**テーブルに格納されます。  
   
 ## <a name="see-also"></a>参照  
@@ -56,6 +56,6 @@ ms.locfileid: "67989977"
  [sp_refresh_log_shipping_monitor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   
  [sp_help_log_shipping_monitor_primary &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-primary-transact-sql.md)   
  [sp_delete_log_shipping_alert_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-alert-job-transact-sql.md)   
- [システムテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [システム テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

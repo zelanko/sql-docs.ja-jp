@@ -16,19 +16,19 @@ ms.assetid: 738fd3ff-3daf-483d-a0b9-88bef1be54c1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 87c61baa93cb1dbca58bbe86ffc254a92d2b9d5b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965245"
 ---
 # <a name="ruleenum"></a>RuleEnum
 [キー](../../../ado/reference/adox-api/key-object-adox.md)が削除されたときに従うルールを指定します。  
   
-|常時|値|[説明]|  
+|Constant|値|説明|  
 |--------------|-----------|-----------------|  
-|**adRICascade**|1 で保護されたプロセスとして起動されました|カスケード変更。|  
-|**adRINone**|0|既定。 アクションは実行されません。|  
+|**adRICascade**|1|カスケード変更。|  
+|**adRINone**|0|既定値。 アクションは実行されません。|  
 |**adRISetDefault**|3|外部キーの値が既定値に設定されています。|  
 |**adRISetNull**|2|外部キーの値が null に設定されています。|  
   

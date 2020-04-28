@@ -17,21 +17,21 @@ ms.assetid: 184cf536-455c-42be-bf1c-a5c25bade961
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2e84f49d5ad2d88ebb88417ae01046c0bcfd8006
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67966048"
 ---
 # <a name="indexes-collection-adox"></a>Indexes コレクション (ADOX)
 テーブルのすべての[Index](../../../ado/reference/adox-api/index-object-adox.md)オブジェクトを格納します。  
   
-## <a name="remarks"></a>解説  
- **Indexes**コレクションの[Append](../../../ado/reference/adox-api/append-method-adox-indexes.md)メソッドは、ADOX で一意です。 次のようにすることができます。  
+## <a name="remarks"></a>Remarks  
+ **Indexes**コレクションの[Append](../../../ado/reference/adox-api/append-method-adox-indexes.md)メソッドは、ADOX で一意です。 次の操作を行うことができます。  
   
 -   **追加**メソッドを使用して、新しいインデックスをコレクションに追加します。  
   
- その他のプロパティとメソッドは、ADO コレクションの標準です。 次のようにすることができます。  
+ その他のプロパティとメソッドは、ADO コレクションの標準です。 次の操作を行うことができます。  
   
 -   [Item](../../../ado/reference/ado-api/item-property-ado.md)プロパティを使用して、コレクション内のインデックスにアクセスします。  
   

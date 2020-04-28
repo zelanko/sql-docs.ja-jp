@@ -18,10 +18,10 @@ ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 56468767e60d49d0fc92864cd613a4f36e84132a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67950524"
 ---
 # <a name="sp_xml_preparedocument-transact-sql"></a>sp_xml_preparedocument (Transact-sql)
@@ -66,7 +66,7 @@ OUTPUT
  元の XML ドキュメントを指定します。 MSXML パーサーは、この XML ドキュメントを解析します。 *xmltext*は、 **char**、 **nchar**、 **varchar**、 **nvarchar**、 **text**、 **ntext** 、または**xml**のテキストパラメーターです。 既定値は NULL です。この場合、空の XML ドキュメントの内部表現が作成されます。  
   
 > [!NOTE]  
->  **sp_xml_preparedocument**は、テキストまたは型指定されていない xml のみを処理できます。 入力値として使用するインスタンス値が既に型指定された XML である場合は、まずその値を、型指定されない新しい XML インスタンスまたは文字列にキャストし、その後入力値として渡します。 詳しくは、「型指定された[xml と型指定](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)されていない Xml の比較」をご覧ください。  
+>  **sp_xml_preparedocument**は、テキストまたは型指定されていない xml のみを処理できます。 入力値として使用するインスタンス値が既に型指定された XML である場合は、まずその値を、型指定されない新しい XML インスタンスまたは文字列にキャストし、その後入力値として渡します。 詳細については、「 [型指定された XML と型指定されていない XML の比較](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)」を参照してください。  
   
  [ *xpath_namespaces* ]  
  OPENXML の行と列の XPath 式で使用される名前空間宣言を指定します。 *xpath_namespaces*は、 **char**、 **nchar**、 **varchar**、 **nvarchar**、 **text**、 **ntext** 、または**xml**のテキストパラメーターです。  
@@ -77,13 +77,12 @@ OUTPUT
  0 (成功) または >0 (失敗)  
   
 ## <a name="permissions"></a>アクセス許可  
- **Public**ロールのメンバーシップが必要です。  
+ ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>例  
   
 ### <a name="a-preparing-an-internal-representation-for-a-well-formed-xml-document"></a>A. 整形式の XML ドキュメントの内部表現を準備する  
- 次の例では、入力として指定された XML ドキュメントの、新しく作成された内部表現へのハンドルを返します。 
-  `sp_xml_preparedocument` の呼び出しでは、既定の名前空間プレフィックス マッピングを使用します。  
+ 次の例では、入力として指定された XML ドキュメントの、新しく作成された内部表現へのハンドルを返します。 `sp_xml_preparedocument` の呼び出しでは、既定の名前空間プレフィックス マッピングを使用します。  
   
 ```  
 DECLARE @hdoc int;  
@@ -109,8 +108,7 @@ exec sp_xml_removedocument @hdoc;
 ```  
   
 ### <a name="b-preparing-an-internal-representation-for-a-well-formed-xml-document-with-a-dtd"></a>B. ウェルフォームド XML ドキュメントの内部表現を DTD を使用して準備する  
- 次の例では、入力として指定された XML ドキュメントの、新しく作成された内部表現へのハンドルを返します。 このストアドプロシージャは、ドキュメントに含まれている DTD に対して読み込まれたドキュメントを検証します。 
-  `sp_xml_preparedocument` の呼び出しでは、既定の名前空間プレフィックス マッピングを使用します。  
+ 次の例では、入力として指定された XML ドキュメントの、新しく作成された内部表現へのハンドルを返します。 このストアドプロシージャは、ドキュメントに含まれている DTD に対して読み込まれたドキュメントを検証します。 `sp_xml_preparedocument` の呼び出しでは、既定の名前空間プレフィックス マッピングを使用します。  
   
 ```  
 DECLARE @hdoc int;  

@@ -17,10 +17,10 @@ ms.assetid: 64f5c21c-b581-42d8-bdc7-c4f1bebaf105
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: aafcab3ad379dc25a2681a5d4f0d3f5e8d6eab5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67966676"
 ---
 # <a name="create-method-adox"></a>Create メソッド (ADOX)
@@ -37,7 +37,7 @@ Catalog.Create ConnectString
  *ConnectString*  
  データソースへの接続に使用する**文字列**値。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Create**メソッドは、 *connectstring*に指定されたデータソースへの新しい ADO[接続](../../../ado/reference/ado-api/connection-object-ado.md)を作成して開きます。 成功した場合は、新しい**接続**オブジェクトが[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)プロパティに割り当てられます。  
   
  プロバイダーが新しいカタログの作成をサポートしていない場合は、エラーが発生します。  

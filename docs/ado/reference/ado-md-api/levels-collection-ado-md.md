@@ -17,16 +17,16 @@ ms.assetid: fed8684a-b428-4ee4-8f8d-928abe4ad9ad
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 68b0f56de12ade676024933c3cfdbfd834f5cc46
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67949573"
 ---
 # <a name="levels-collection-ado-md"></a>Levels コレクション (ADO MD)
 階層を構成する[レベル](../../../ado/reference/ado-md-api/level-object-ado-md.md)オブジェクトを格納します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **レベル**は、標準の ADO コレクションです。 コレクションのプロパティとメソッドを使用すると、次の操作を実行できます。  
   
 -   [Count](../../../ado/reference/ado-api/count-property-ado.md)プロパティを使用して、コレクション内のオブジェクトの数を取得します。  

@@ -13,10 +13,10 @@ ms.assetid: e9566718-9122-490d-8a8e-da8f605246f2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 92cf4704858268eb52bd0219d2e6b78afddfc42d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67939920"
 ---
 # <a name="catalog-object-properties-methods-and-events-ado-md"></a>Catalog オブジェクトのプロパティ、メソッド、およびイベント (ADO MD)
@@ -28,9 +28,9 @@ ms.locfileid: "67939920"
  [Name プロパティ](../../../ado/reference/ado-md-api/name-property-ado-md.md)  
   
 ## <a name="methods"></a>メソッド  
- [なし] :  
+ なし。  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="see-also"></a>参照  

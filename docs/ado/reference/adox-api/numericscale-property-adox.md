@@ -20,10 +20,10 @@ ms.assetid: 573ee5d1-57c7-4a27-be79-a0e12944ad9b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 16fdefcb06d2b1b90dfc3da39aaf6b1c9659debc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965748"
 ---
 # <a name="numericscale-property-adox"></a>NumericScale プロパティ (ADOX)
@@ -32,8 +32,8 @@ ms.locfileid: "67965748"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  [Type](../../../ado/reference/adox-api/type-property-column-adox.md)プロパティが**Adnumeric**または**adDecimal**の場合に、列のデータ値の小数点以下桁数を示す**バイト**値を設定して返します。 他のすべてのデータ型では、 **Numericscale**は無視されます。  
   
-## <a name="remarks"></a>解説  
- 既定値はゼロ (0) です。  
+## <a name="remarks"></a>Remarks  
+ 既定値は 0 です。  
   
  既にコレクションに追加されている[列](../../../ado/reference/adox-api/column-object-adox.md)オブジェクトの**numericscale**は読み取り専用です。  
   

@@ -16,16 +16,16 @@ ms.assetid: 653421ce-7b94-43d0-9bc6-4900f8f2af45
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6bc26e8d59c29bd7b1b0fbdd0a3a4fdb39f8fee1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964846"
 ---
 # <a name="view-object-adox"></a>View オブジェクト (ADOX)
 フィルター処理されたレコードセットまたは仮想テーブルを表します。 ADO[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトと組み合わせて使用すると、ビュー**オブジェクトを使用して**、ビューの追加、削除、または変更を行うことができます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ビューは、他のデータベーステーブルまたはビューから作成された仮想テーブルです。 **ビュー**オブジェクトを使用すると、プロバイダーの "create View" 構文を知らない場合や使用しなくても、ビューを作成できます。  
   
  **View**オブジェクトのプロパティを使用すると、次のことができます。  

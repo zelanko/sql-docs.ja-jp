@@ -14,10 +14,10 @@ ms.assetid: 62a4fd88-afc3-4f1f-b978-40710a30c4e9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2ae55ec1fccbd491854fb8bff2daa215d38b20ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964185"
 ---
 # <a name="executeoptions-property-rds"></a>ExecuteOptions プロパティ (RDS)
@@ -29,15 +29,15 @@ ms.locfileid: "67964185"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  次のいずれかの値を設定または返します。  
   
-|常時|[説明]|  
+|Constant|説明|  
 |--------------|-----------------|  
 |**adcExecSync**|[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)の次の更新を同期的に実行します。|  
-|**adcExecAsync**|既定。 **レコードセット**の次の更新を非同期的に実行します。|  
+|**adcExecAsync**|既定値。 **レコードセット**の次の更新を非同期的に実行します。|  
   
 > [!NOTE]
 >  これらの定数を使用する実行可能ファイルはそれぞれ、それぞれの宣言を提供する必要があります。 RDS ライブラリの既定のインストールフォルダーにある Adcvbs. inc. ファイルから、必要な定数宣言を切り取って貼り付けることができます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Executeoptions**が**Adcexecasync**に設定されている場合、RDS で次の**更新**呼び出しが非同期に実行され[ます。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクトの**レコードセット**。  
   
  RDS を変更する可能性のある別の非同期操作中に[Reset](../../../ado/reference/rds-api/reset-method-rds.md)、 [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md)、 [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md)、 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)、または[レコードセット](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)を呼び出そうとした場合[。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクトの**レコードセット**が実行中であるため、エラーが発生します。  

@@ -16,10 +16,10 @@ ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 28ac10e211d57fc9e118f47ccb9d506d6cb846e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946431"
 ---
 # <a name="path-expressions---specifying-node-test"></a>パス式 - ノード テストの指定
@@ -92,7 +92,7 @@ select @x.query('declare namespace ns="ns1"; /ns:*')
 ## <a name="node-type-as-node-test"></a>ノード テストとしてのノード型  
  要素ノード以外のノード型を照会するには、ノード型のテストを使用します。 次の表に示すように、4つのノードタイプのテストを使用できます。  
   
-|ノードの種類|戻り値|例|  
+|ノード型|戻り値|例|  
 |---------------|-------------|-------------|  
 |`comment()`|コメント ノードの場合 True です。|`following::comment()`コンテキストノードの後に表示されるすべてのコメントノードを選択します。|  
 |`node()`|任意の種類のノードの場合は True。|`preceding::node()`コンテキストノードの前に表示されるすべてのノードを選択します。|  
@@ -107,7 +107,7 @@ child::comment()
   
  同様に`/child::ProductDescription/child::Features/child::comment()` 、 \<productdescription> 要素ノード\<の子要素ノード> フィーチャーの子コメントノードを取得します。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、ノード名とノードの種類を比較します。  
   
 ### <a name="a-results-of-specifying-the-node-name-and-the-node-type-as-node-tests-in-a-path-expression"></a>A. ノード名とノード型をノードテストとしてパス式に指定した結果  

@@ -16,16 +16,16 @@ ms.assetid: 37815869-ed30-45fd-9aea-0a986c1b305c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4a44060ae4ffd9399c34d4cd8133f5ad7404ed5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67949603"
 ---
 # <a name="level-object-ado-md"></a>Level オブジェクト (ADO MD)
 にはメンバーのセットが含まれており、各メンバーは階層内で同じランクを持ちます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Level**オブジェクトのコレクションとプロパティを使用して、次の操作を実行できます。  
   
 -   [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md)プロパティと[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)プロパティを使用して、**レベル**を識別します。  
@@ -42,11 +42,11 @@ ms.locfileid: "67949603"
   
  **Properties**コレクションには、プロバイダーが提供するプロパティが含まれています。 次の表に、使用可能なプロパティを示します。 実際のプロパティリストは、プロバイダーの実装によって異なる場合があります。 使用できるプロパティの詳細な一覧については、プロバイダーのドキュメントを参照してください。  
   
-|Name|[説明]|  
+|名前|説明|  
 |----------|-----------------|  
 |CatalogName|このキューブが所属するカタログの名前。|  
 |CubeName|キューブの名前。|  
-|[説明]|レベルのわかりやすい説明。|  
+|説明|レベルのわかりやすい説明。|  
 |DimensionUniqueName|[ディメンション](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)の明確な名前です。|  
 |HierarchyUniqueName|階層の明確な名前。|  
 |LevelCaption|レベルに関連付けられているラベルまたはキャプション。|  

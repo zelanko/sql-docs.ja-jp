@@ -17,10 +17,10 @@ ms.assetid: 8a4c079f-9f4f-4545-801d-85983b8db71e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0ee1058299becb4a7a4234debc097516cb02dd41
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67937864"
 ---
 # <a name="type-property-ado"></a>Type プロパティ (ADO)
@@ -29,7 +29,7 @@ ms.locfileid: "67937864"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)値を設定または返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Parameter**オブジェクトの場合、 **Type**プロパティは読み取り/書き込み可能です。 [レコード](../../../ado/reference/ado-api/record-object-ado.md)の[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)コレクションに追加された新しい**フィールド**オブジェクトの場合は、**フィールド**の [[値](../../../ado/reference/ado-api/value-property-ado.md)] プロパティが指定され、データプロバイダーが**フィールド**コレクションの[Update](../../../ado/reference/ado-api/update-method.md)メソッドを呼び出して新しい**フィールド**を正常に追加した後にのみ、「読み取り/書き込み専用」と**入力**します。  
   
  他のすべてのオブジェクトについては、 **Type**プロパティは読み取り専用です。  

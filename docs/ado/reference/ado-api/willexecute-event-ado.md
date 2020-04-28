@@ -17,10 +17,10 @@ ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e0e7c29be102e9c5c7709816895a6647c95337c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67936614"
 ---
 # <a name="willexecute-event-ado"></a>WillExecute イベント (ADO)
@@ -43,7 +43,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  *LockType*  
  開かれる**レコードセット**のロックの種類を格納する[locktypeenum](../../../ado/reference/ado-api/locktypeenum.md) 。 このパラメーターを使用すると、 **RecordsetOpen**操作中に任意の型にロックを変更できます。 他の操作では、 *LockType*は無視されます。  
   
- *オプション*  
+ *[オプション]*  
  コマンドを実行したり、**レコードセット**を開いたりするために使用できるオプションを示す**Long 型**の値です。  
   
  *adStatus*  
@@ -58,7 +58,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  *pConnection*  
  このイベント通知を適用する[接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  接続によっ**てイベントが発生する可能性**があります。  [Execute メソッド (Ado Connection)](../../../ado/reference/ado-api/execute-method-ado-connection.md)、 [EXECUTE メソッド (ado Command)](../../../ado/reference/ado-api/execute-method-ado-command.md)、または[Open method (Ado Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッド。 *Pconnection*パラメーターには、常に**接続**オブジェクトへの有効な参照を含める必要があります。 イベントが接続によって発生した場合、 *Precordset*および*Precordset*パラメーターは**Nothing**に設定され**ます**。 イベントが**レコードセット**によって発生した場合、 *Precordset*パラメーターは**レコードセット**オブジェクトを参照し、 *precordset*パラメーターは**Nothing**に設定されます。 イベントが**コマンドの実行**によって発生した場合、 *Pcommand*パラメーターは**コマンド**オブジェクトを参照し、 *pcommand*パラメーターは**Nothing**に設定されます。  
   
  を**実行**すると、保留中の実行パラメーターを確認および変更できます。 このイベントは、保留中のコマンドがキャンセルされたことを示す要求を返す場合があります。  

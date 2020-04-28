@@ -17,10 +17,10 @@ ms.assetid: 8df0877d-a03f-4ca9-b84e-908c4bb42b5e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e885b537fbc86f3b70a8142c5513dbf16cb1c158
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67945993"
 ---
 # <a name="xquery-functions-against-the-xml-data-type"></a>xml データ型に対する XQuery 関数
@@ -38,28 +38,28 @@ ms.locfileid: "67945993"
 ||[階数](../xquery/numeric-values-functions-floor.md)|  
 ||[誤差](../xquery/numeric-values-functions-round.md)|  
 |[文字列値に使用する XQuery 関数](https://msdn.microsoft.com/library/2dccefef-5d90-4f56-bda7-4c1954d8a730)|[concat](../xquery/functions-on-string-values-concat.md)|  
-||[は](../xquery/functions-on-string-values-contains.md)|  
-||[出現](../xquery/functions-on-string-values-substring.md)|  
+||[contains](../xquery/functions-on-string-values-contains.md)|  
+||[substring](../xquery/functions-on-string-values-substring.md)|  
 ||[XQuery&#41;&#40;小文字関数](../xquery/functions-on-string-values-lower-case.md)|  
 ||[文字列-長さ](../xquery/functions-on-string-values-string-length.md)|  
 ||[&#40;XQuery&#41;の大文字関数](../xquery/functions-on-string-values-upper-case.md)|  
-|ブール値に対する関数|[じゃない](../xquery/functions-on-boolean-values-not-function.md)|  
+|ブール値に対する関数|[not](../xquery/functions-on-boolean-values-not-function.md)|  
 |[ノードの関数](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)|[number](../xquery/functions-on-nodes-number.md)|  
 ||[ローカル名関数 (XQuery)](../xquery/functions-on-nodes-local-name.md)|  
 ||[名前空間 uri 関数 (XQuery)](../xquery/functions-on-nodes-namespace-uri.md)|  
-|[コンテキスト関数](https://msdn.microsoft.com/library/f7d8af33-9de9-450c-a667-23dee3129b5f)|[前の](../xquery/context-functions-last-xquery.md)|  
+|[コンテキスト関数](https://msdn.microsoft.com/library/f7d8af33-9de9-450c-a667-23dee3129b5f)|[last](../xquery/context-functions-last-xquery.md)|  
 ||[移動](../xquery/context-functions-position-xquery.md)|  
-|[シーケンスの関数](https://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)|[指定](../xquery/functions-on-sequences-empty.md)|  
+|[シーケンスの関数](https://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)|[empty](../xquery/functions-on-sequences-empty.md)|  
 ||[distinct-values](../xquery/functions-on-sequences-distinct-values.md)|  
 ||[id 関数 (XQuery)](../xquery/functions-on-sequences-id.md)|  
 |[XQuery&#41;&#40;集計関数](https://msdn.microsoft.com/library/be647ef1-291e-4a5d-ab18-07c759efe176)|[count](../xquery/aggregate-functions-count.md)|  
 ||[avg](../xquery/aggregate-functions-avg.md)|  
-||[」](../xquery/aggregate-functions-min.md)|  
-||[制限](../xquery/aggregate-functions-max.md)|  
+||[min](../xquery/aggregate-functions-min.md)|  
+||[max](../xquery/aggregate-functions-max.md)|  
 ||[求め](../xquery/aggregate-functions-sum.md)|  
 |[コンストラクター関数 &#40;XQuery&#41;](../xquery/constructor-functions-xquery.md)|[コンストラクター関数](../xquery/constructor-functions-xquery.md)|  
-|[データ アクセサー関数](../xquery/data-accessor-functions.md)|[文字列](../xquery/data-accessor-functions-string-xquery.md)|  
-||[data](../xquery/data-accessor-functions-data-xquery.md)|  
+|[データ アクセサー関数](../xquery/data-accessor-functions.md)|[string](../xquery/data-accessor-functions-string-xquery.md)|  
+||[データ](../xquery/data-accessor-functions-data-xquery.md)|  
 |[ブール型コンストラクター関数 &#40;XQuery&#41;](https://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)|[true 関数 (XQuery)](../xquery/boolean-constructor-functions-true-xquery.md)|  
 ||[false 関数 (XQuery)](../xquery/boolean-constructor-functions-false-xquery.md)|  
 |[QNames &#40;XQuery&#41;に関連する関数](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)|[展開-QName (XQuery)](../xquery/functions-related-to-qnames-expanded-qname.md)|  

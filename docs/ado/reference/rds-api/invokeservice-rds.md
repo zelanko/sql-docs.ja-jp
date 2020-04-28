@@ -14,10 +14,10 @@ ms.assetid: ad45c676-ec7e-4a3a-9a6b-a54f75eb3012
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 86ebb27ebdc5de5a045304afe45cd8653e491827
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963863"
 ---
 # <a name="invokeservice-rds"></a>InvokeService (RDS)
@@ -49,7 +49,7 @@ object.InvokeService(REFID riid, IUknown* punkNotSoFunctionalInterface, IUknown*
 ## <a name="return-value"></a>戻り値  
  **InvokeService**メソッドの呼び出しが成功したかどうかを示す HRESULT 値。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  RDS カーソルエンジンの**InvokeService**の実装では、入力行セット (または複数の結果オブジェクト) を取得し、入力行セットからカーソルエンジンを設定してから、ポインターをそれ自体に返します。  
   
 ## <a name="applies-to"></a>適用対象  

@@ -18,10 +18,10 @@ ms.assetid: 4851865a-86ca-4823-991a-182dd1934075
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 560cecf8b6cc0aff5b503602c521e503e7cc7fcf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67934010"
 ---
 # <a name="sp_dropextendedproperty-transact-sql"></a>sp_dropextendedproperty (Transact-SQL)
@@ -79,7 +79,7 @@ sp_dropextendedproperty
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  拡張プロパティを指定するために、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース内のオブジェクトは、0、1、および2の3つのレベルに分類されます。 レベル0は最上位レベルで、データベーススコープに含まれるオブジェクトとして定義されます。 レベル 1 のオブジェクトはスキーマ スコープまたはユーザー スコープに含まれ、レベル 2 のオブジェクトはレベル 1 のオブジェクトに含まれます。 これら、どのレベルのオブジェクトに対しても、拡張プロパティを定義できます。 あるレベルのオブジェクトを参照する場合は、その上位レベルにあるすべてのオブジェクトの種類と名前で修飾する必要があります。  
   
  有効な*property_name*が指定されている場合、すべてのオブジェクトの種類と名前が null で、プロパティが現在のデータベースに存在すると、そのプロパティは削除されます。 このトピックの例 B を参照してください。  

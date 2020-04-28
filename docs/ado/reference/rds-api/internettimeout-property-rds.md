@@ -14,10 +14,10 @@ ms.assetid: 4d1c8892-4bbc-4e71-bf4b-ba52c0ea9549
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: eaaa72c302c9218810ce653ea59fe5ff29a54ef0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963874"
 ---
 # <a name="internettimeout-property-rds"></a>InternetTimeout プロパティ (RDS)
@@ -29,7 +29,7 @@ ms.locfileid: "67963874"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  要求がタイムアウトするまでのミリ秒数を表す**Long 型**の値を設定または返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  このプロパティは、HTTP または HTTPS プロトコルを使用して送信された要求にのみ適用されます。  
   
  3層環境での要求の実行には数分かかる場合があります。 このプロパティを使用して、長時間実行される要求に追加の時間を指定します。  

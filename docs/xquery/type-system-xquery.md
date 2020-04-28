@@ -24,10 +24,10 @@ ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0736bc39ceaa6d9a0aa541d2af3b2b784614322b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946202"
 ---
 # <a name="type-system-xquery"></a>型システム (XQuery)
@@ -149,7 +149,7 @@ WHERE ProductModelID=7
 >  この例での**data ()** 関数の明示的な使用は、例示のみを目的としています。 指定されていない場合、 **sum ()** は、ノードの型指定された値を抽出するために**data ()** 関数を暗黙的に適用します。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server プロファイラーのテンプレートと権限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [SQL Server プロファイラーテンプレートとアクセス許可](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [XQuery の基礎](../xquery/xquery-basics.md)  
   
   

@@ -10,10 +10,10 @@ ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 7a16a28a163acece321cc2229e9988cf7ab01f9e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989865"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>DB2 スキーマの変換 (DB2ToSQL)
@@ -66,14 +66,14 @@ DB2 に接続し、に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]�
 |WHILE ステートメント|がマップされています。|  
 |GET DIAGNOSTICS ステートメント|**SSMA マップでは、次の例外が表示されます。**<br /><br />ROW_COUNT-マップされます。<br /><br />DB2_RETURN_STATUS-マップされます。<br /><br />MESSAGE_TEXT-マップされます。<br /><br />DB2_SQL_NESTING_LEVEL-SQL Server セマンティクスにマップされません<br /><br />DB2_TOKEN_STRING-SQL Server セマンティクスにマップされません|  
 |カーソル|**SSMA では、カーソルは次の例外でマップされます。**<br /><br />ALLOCATE CURSOR ステートメント-SQL Server セマンティクスにマップされません<br /><br />関連するロケーターステートメント-SQL Server セマンティクスにマップされません<br /><br />DECLARE CURSOR ステートメント-Returnability 句は SQL server セマンティクスにマップされていません<br /><br />FETCH ステートメント-部分マッピング。 ターゲットとしての変数はサポートされています。 SQLDA 記述子が SQL server セマンティクスにマップされていません|  
-|変数:|マップされます。|  
+|変数|マップされます。|  
 |例外、ハンドラー、および条件|**SSMA は、"例外処理" を次の例外と共にマップします。**<br /><br />終了ハンドラー-マップされます。<br /><br />元に戻すハンドラー-マップされます。<br /><br />CONTINUE ハンドラー-マップされていません。<br /><br />条件-SQL server のセマンティクスにはマップされません。|  
 |動的 SQL|マップされていません。|  
 |エイリアス|マップされます。|  
 |ニックネーム|部分マッピング。 基になるオブジェクトには手動処理が必要です|  
 |シノニム|マップされます。|  
 |DB2 の標準関数|SSMA maps DB2 standard 関数は、SQL Server で同等の関数を使用できる場合に使用できます。|  
-|Authorization|マップされていません。|  
+|承認|マップされていません。|  
 |述語|マップされます。|  
 |SELECT INTO ステートメント|マップされていません。|  
 |値 INTO ステートメント|マップされていません。|  
@@ -145,7 +145,7 @@ DB2 データベースオブジェクトを変換するには、まず変換す�
   
 -   オブジェクトを移行から除外することができます。 メタ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データエクスプローラーおよび Db2 メタデータエクスプローラーで、オブジェクト[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を db2 に読み込んでデータを移行する前に、項目の横のチェックボックスをオフにします。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 移行プロセスの次の手順では、[変換されたオブジェクトを SQL Server に読み込み](https://msdn.microsoft.com/f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3)ます。  
   
 ## <a name="see-also"></a>参照  

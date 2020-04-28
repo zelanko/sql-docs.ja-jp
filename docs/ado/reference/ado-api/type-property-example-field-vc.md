@@ -15,10 +15,10 @@ ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8e166b4c7517a6901bb383629821daebe56984a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67936658"
 ---
 # <a name="type-property-example-field-vc"></a>Type プロパティの例 (Field) (VC++)
@@ -154,7 +154,7 @@ void PrintComError(_com_error &e) {
 ```  
   
  **Employee テーブルのフィールド:**  
- **名前: emp_id**  
+ **Name: emp_id**  
  **種類: adChar**  
  **名前: fname**  
  **型: adVarChar**  
@@ -163,9 +163,9 @@ void PrintComError(_com_error &e) {
  **名前: lname**  
  **型: adVarChar**  
  **名前: job_id**  
- **型: adSmallInt**  
+ **Type: adSmallInt**  
  **名前: job_lvl**  
- **型: adUnsignedTinyInt**  
+ **Type: adUnsignedTinyInt**  
  **名前: pub_id**  
  **種類: adChar**  
  **名前: hire_date**  

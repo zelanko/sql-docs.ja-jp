@@ -17,21 +17,21 @@ ms.assetid: a55d380c-2b7b-4b57-af74-8ba0b3de0db9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0cec2462f8726e7c580a7d6755394c6c3f07c85b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964777"
 ---
 # <a name="views-collection-adox"></a>Views コレクション (ADOX)
 カタログのすべての[ビュー](../../../ado/reference/adox-api/view-object-adox.md)オブジェクトが含まれます。  
   
-## <a name="remarks"></a>解説  
- **Views**コレクションの[Append](../../../ado/reference/adox-api/append-method-adox-views.md)メソッドは、ADOX で一意です。 次のようにすることができます。  
+## <a name="remarks"></a>Remarks  
+ **Views**コレクションの[Append](../../../ado/reference/adox-api/append-method-adox-views.md)メソッドは、ADOX で一意です。 次の操作を行うことができます。  
   
 -   新しいビューをコレクションに追加するには、 **Append**メソッドを使用します。  
   
- その他のプロパティとメソッドは、ADO コレクションの標準です。 次のようにすることができます。  
+ その他のプロパティとメソッドは、ADO コレクションの標準です。 次の操作を行うことができます。  
   
 -   [項目](../../../ado/reference/ado-api/item-property-ado.md)プロパティを使用して、コレクション内のビューにアクセスします。  
   

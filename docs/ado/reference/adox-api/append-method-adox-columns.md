@@ -17,10 +17,10 @@ ms.assetid: 7a46d23c-efef-4ec7-815d-cd3ac86787dd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6493157c00e5a71c7c2f085191231bb33bb5279a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67967328"
 ---
 # <a name="append-method-adox-columns"></a>Append メソッド (ADOX Columns)
@@ -38,10 +38,10 @@ Columns.Append Column [,Type] [,DefinedSize]
  追加する**列**オブジェクト、または作成して追加する列の名前。  
   
  *Type*  
- 省略可能。 列のデータ型を指定する**Long**型の値です。 *Type*パラメーターは、 **Column**オブジェクトの[type](../../../ado/reference/adox-api/type-property-column-adox.md)プロパティに対応しています。  
+ 任意。 列のデータ型を指定する**Long**型の値です。 *Type*パラメーターは、 **Column**オブジェクトの[type](../../../ado/reference/adox-api/type-property-column-adox.md)プロパティに対応しています。  
   
  *DefinedSize*  
- 省略可能。 列のサイズを指定する**Long 型**の値です。 指定された*サイズ*のパラメーターは、 **Column**オブジェクトの "指定された[サイズ](../../../ado/reference/adox-api/definedsize-property-adox.md)" プロパティに対応します。  
+ 任意。 列のサイズを指定する**Long 型**の値です。 指定された*サイズ*のパラメーターは、 **Column**オブジェクトの "指定された[サイズ](../../../ado/reference/adox-api/definedsize-property-adox.md)" プロパティに対応します。  
   
 > [!NOTE]
 >  [テーブル](../../../ado/reference/adox-api/tables-collection-adox.md)コレクションに既に追加されている[テーブル](../../../ado/reference/adox-api/table-object-adox.md)**に列が**存在しない場合、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)の**Columns**コレクションに**列**を追加すると、エラーが発生します。  

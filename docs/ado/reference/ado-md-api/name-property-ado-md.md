@@ -23,10 +23,10 @@ ms.assetid: 4a04380b-51dc-4aaf-8d25-123cdd589641
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c248139abfd136d5c79658592e0e49d5e10444aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67949395"
 ---
 # <a name="name-property-ado-md"></a>Name プロパティ (ADO MD)
@@ -35,7 +35,7 @@ ms.locfileid: "67949395"
 ## <a name="return-values"></a>戻り値  
  は**文字列**を返し、読み取り専用です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  オブジェクトの**name**プロパティは、序数参照によって取得できます。その後、オブジェクトを名前で直接参照できます。 たとえば、によっ`cdf.CubeDefs(0).Name`て "Bobs ビデオストア" が生成された場合、この`cdf.CubeDefs("Bobs Video Store")` [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)をと呼び出すことができます。  
   
 ## <a name="applies-to"></a>適用対象  
