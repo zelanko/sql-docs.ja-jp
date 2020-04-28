@@ -1,5 +1,5 @@
 ---
-title: SQL 特殊列 (デスクトップ データベース ドライバ) |マイクロソフトドキュメント
+title: Sql特殊列 (デスクトップデータベースドライバー) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,15 +13,15 @@ ms.assetid: 3de66fdf-053b-4354-979d-e76a5a5e975f
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 5f8cd4ed0912f9f1e71d64b32449b5d46f9ef1a3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299392"
 ---
 # <a name="sqlspecialcolumns-desktop-database-drivers"></a>SQLSpecialColumns (デスクトップ データベース ドライバー)
-*fColType*のSQL_BEST_ROWID フラグに対して一意のインデックスが存在する場合は、そのインデックスが返されます。 SQL_ROWVER フラグの結果セットは返されません。  
+*Fcoltype*の SQL_BEST_ROWID フラグに対して、一意のインデックス (存在する場合) が返されます。 SQL_ROWVER フラグに対して結果セットが返されません。  
   
- すべての行 ID には、SQL_SCOPE_CURROWのスコープがあります。  
+ すべての行 Id のスコープは SQL_SCOPE_CURROW です。  
   
- パターン マッチングは *、szTable 修飾子*または*szTableName*引数のどちらにもサポートされていません。
+ パターンマッチングは、 *Sztablequalifier*または*sztablename*引数ではサポートされていません。

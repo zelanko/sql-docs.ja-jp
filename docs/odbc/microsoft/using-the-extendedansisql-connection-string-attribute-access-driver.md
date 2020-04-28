@@ -1,5 +1,5 @@
 ---
-title: 拡張 AnsiSQL 接続文字列属性を使用する |マイクロソフトドキュメント
+title: ExtendedAnsiSQL 接続文字列属性を使用する |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: 92675c30-9100-43ae-aa35-041f3006a54f
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 718df701282e530fa72574e024a9daf2675cf044
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81292712"
 ---
 # <a name="using-the-extendedansisql-connection-string-attribute-access-driver"></a>ExtendedAnsiSQL 接続文字列属性の使用 (Access ドライバー)
-Jet 4.0 には、ODBC デスクトップ データベース ドライバ バージョン 4.0 では既定では有効になっていない新機能がいくつかあります。 これらの新機能を利用するには、アプリケーションで新しい接続属性を設定するか、接続文字列に新しい属性を追加するか、DSN で属性を設定する必要があります。 この属性は ExtendedAnsiSQL と呼ばれ、Microsoft ODBC デスクトップ データベース ドライバー 4.0 以降にのみ関連します。  
+Jet 4.0 には、ODBC Desktop Database driver version 4.0 で既定で有効になっていない新機能がいくつかあります。 これらの新機能を利用するには、アプリケーションで新しい接続属性を設定するか、接続文字列に新しい属性を追加するか、または DSN で属性を設定する必要があります。 属性は ExtendedAnsiSQL と呼ばれ、Microsoft ODBC Desktop Database driver 4.0 以降にのみ関連します。  
   
  このセクションでは、次のトピックを扱います。  
   
@@ -32,6 +32,6 @@ Jet 4.0 には、ODBC デスクトップ データベース ドライバ バー�
   
 -   [ExtendedAnsiSQL を使用したビューとプロシージャの作成と削除](../../odbc/microsoft/creating-and-dropping-views-and-procedures-using-extendedansisql.md)  
   
--   [拡張 AnsiSQL を使用して有効になっているデータの切り捨て検出](../../odbc/microsoft/data-truncation-detection-enabled-using-extendedansisql.md)  
+-   [ExtendedAnsiSQL を使用したデータ Trunctation 検出の有効化](../../odbc/microsoft/data-truncation-detection-enabled-using-extendedansisql.md)  
   
--   [Jet 4.0 は、拡張 AnsiSQL セット時に SQL-92 予約語リストを使用します。](../../odbc/microsoft/jet-4-0-uses-sql-92-reserved-words-list-when-extendedansisql-set.md)
+-   [Jet 4.0 で ExtendedAnsiSQL が設定されている場合、SQL-92 の予約語の一覧が使用される](../../odbc/microsoft/jet-4-0-uses-sql-92-reserved-words-list-when-extendedansisql-set.md)

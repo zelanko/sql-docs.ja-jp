@@ -1,5 +1,5 @@
 ---
-title: ビジュアル フォックスプロ ODBC ドライバーを使用する |マイクロソフトドキュメント
+title: Visual FoxPro ODBC ドライバー | を使用するMicrosoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: c50371a0-b1b2-406c-a4e5-d5191d519f5b
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 2ce3cb5e16aca2587a7dc892763f194f54e085ad
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81292552"
 ---
 # <a name="using-the-visual-foxpro-odbc-driver"></a>Visual FoxPro ODBC ドライバーの使用
-このセクションでは、次のトピックでは、® マイクロソフトの Visual FoxPro® ODBC ドライバーを使用する方法について説明します。  
+このセクションでは、次のトピックでは、Microsoft® Visual FoxPro® ODBC ドライバーの使用方法について説明します。  
   
 -   [Visual FoxPro データ ソースの追加](../../odbc/microsoft/adding-a-visual-foxpro-data-source.md)  
   
@@ -33,8 +33,8 @@ ms.locfileid: "81292552"
   
 -   [接続文字列の使用](../../odbc/microsoft/using-connection-strings.md)  
   
--   [ビジュアル 基本アプリケーションでのビジュアル フォックスプロ ODBC ドライバーの使用](../../odbc/microsoft/using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application.md)  
+-   [Visual Basic アプリケーションでの Visual FoxPro ODBC ドライバーの使用](../../odbc/microsoft/using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application.md)  
   
--   [C または C++ アプリケーションでのビジュアル フォックスプロ ODBC ドライバーの使用](../../odbc/microsoft/using-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application.md)  
+-   [C または C++ アプリケーションでの Visual FoxPro ODBC ドライバーの使用](../../odbc/microsoft/using-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application.md)  
   
 -   [Microsoft Office から Visual FoxPro データへのアクセス](../../odbc/microsoft/accessing-visual-foxpro-data-from-microsoft-office.md)

@@ -1,5 +1,5 @@
 ---
-title: エラーとバッチ |マイクロソフトドキュメント
+title: エラーとバッチ |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,21 +17,21 @@ ms.assetid: 6debd41d-9f4c-4f4c-a44b-2993da5306f0
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 36a402686a695a08748df24a7b40a228d7a2ca7f
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300432"
 ---
 # <a name="errors-and-batches"></a>エラーおよびバッチ
-SQL ステートメントのバッチの実行中にエラーが発生した場合、次の 4 つの結果のいずれかが可能です。 (考えられる結果はデータ ソース固有であり、バッチに含まれるステートメントに依存する可能性もあります)。  
+SQL ステートメントのバッチの実行中にエラーが発生すると、次の4つのいずれかの結果が得られます。 (考えられる各結果はデータソース固有であり、バッチに含まれるステートメントにも依存する可能性があります)。  
   
 -   バッチ内のステートメントは実行されません。  
   
 -   バッチ内のステートメントは実行されず、トランザクションはロールバックされます。  
   
--   エラーステートメントの前のすべてのステートメントが実行されます。  
+-   Error ステートメントの前にあるすべてのステートメントが実行されます。  
   
--   エラーステートメント以外のすべてのステートメントが実行されます。  
+-   Error ステートメントを除くすべてのステートメントが実行されます。  
   
- 最初の 2 つのケースでは **、SQL 実行**と**SQLExecDirect** SQL_ERROR返します。 後者の 2 つのケースでは、実装に応じて、SQL_SUCCESS_WITH_INFOまたはSQL_SUCCESSが返されることがあります。 いずれの場合も、さらにエラー情報を取得するには、 **SQLGetDiagField**、 **SQLGetDiagRec**、または**SQLError**を使用します。 ただし、この情報の性質と深さはデータ ソースに固有のものです。 さらに、この情報が、誤ったステートメントを正確に識別する可能性は低くなります。
+ 最初の2つのケースでは、 **Sqlexecute**と**SQLExecDirect**は SQL_ERROR を返します。 後者の2つのケースでは、実装によっては SQL_SUCCESS_WITH_INFO または SQL_SUCCESS が返されることがあります。 どのような場合でも、 **SQLGetDiagField**、 **SQLGetDiagRec**、または**SQLError**を使用してさらにエラー情報を取得できます。 ただし、この情報の性質と深さは、データソース固有のものです。 また、この情報は、エラーのステートメントを正確に特定することはほとんどありません。

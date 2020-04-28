@@ -1,5 +1,5 @@
 ---
-title: スクロールオプション ( ビジュアル フォックスプロ ODBC ドライバー ) |マイクロソフトドキュメント
+title: SQLSetScrollOptions (Visual FoxPro ODBC ドライバー) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,22 +13,22 @@ ms.assetid: 693e6e28-a845-41b1-9622-5058b0d87229
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 19051fc83466bc40d72c029089cfe6ec45c20a08
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299422"
 ---
 # <a name="sqlsetscrolloptions-visual-foxpro-odbc-driver"></a>SQLSetScrollOptions (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
->  このトピックには、ビジュアル フォックス プロ ODBC ドライバー固有の情報が含まれています。 この関数の一般的な情報については[、ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)の該当するトピックを参照してください。  
+>  このトピックには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の一般的な情報については、「 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)」の該当するトピックを参照してください。  
   
- サポート: 部分  
+ サポート: 部分的  
   
- ODBC API 準拠: レベル 2  
+ ODBC API の準拠: レベル2  
   
- ステートメント ハンドル*hstmt*に関連付けられたカーソルの動作を制御するオプションを設定します。  
+ ステートメントハンドルの*hstmt*に関連付けられているカーソルの動作を制御するオプションを設定します。  
   
- ビジュアル フォックスプロ ODBC ドライバーはSQL_CONCUR_READ_ONLYのみをサポートします。*f同時実行*値SQL_CONCUR_ROWVERはサポートしていません。 ドライバーは、警告ODBC_01S02をSQL_SCROLL_STATICにSQL_KEYSET_SIZE、SQL_CURSOR_DYNAMIC、およびSQL_CURSOR_KEYSET_DRIVENを変換します。  
+ Visual FoxPro ODBC ドライバーでは、SQL_CONCUR_READ_ONLY のみがサポートされます。*Fconcurrency*値 SQL_CONCUR_ROWVER はサポートされていません。 ドライバーは、SQL_KEYSET_SIZE、SQL_CURSOR_DYNAMIC、および SQL_CURSOR_KEYSET_DRIVEN を警告 ODBC_01S02 と共に SQL_SCROLL_STATIC に変換します。  
   
- 詳細については *、ODBC プログラマ リファレンス*の「 [SQLSetScrollOptions」](../../odbc/reference/syntax/sqlsetscrolloptions-function.md)を参照してください。
+ 詳細については、 *ODBC プログラマーリファレンス*の「 [SQLSetScrollOptions](../../odbc/reference/syntax/sqlsetscrolloptions-function.md) 」を参照してください。

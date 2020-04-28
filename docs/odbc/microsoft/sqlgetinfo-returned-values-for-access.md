@@ -1,5 +1,5 @@
 ---
-title: アクセス用に返される値を返す |マイクロソフトドキュメント
+title: SQLGetInfo が Access の値を返しました |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,19 +17,19 @@ ms.assetid: c551e07f-30c4-41a2-8991-6010a3511d76
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 9119a87fa1f4cca25369d4dfb59a1987334c03cd
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298562"
 ---
 # <a name="sqlgetinfo-returned-values-for-access"></a>SQLGetInfo で Access に返される値
-次の表は *、fInfoType*引数の C 言語#definesと **、SQLGetInfo**によって返される対応する値を示しています。 この情報は *、fInfoType*引数で、リストされている C 言語#definesを**SQLGetInfo**に渡すことによって取得できます。 **SQLGetInfo**によって返される値の詳細については *、ODBC プログラマ リファレンスを参照してください*。  
+次の表に、 *Fin$ type*引数の C 言語 #defines と**SQLGetInfo**によって返される対応する値の一覧を示します。 この情報を取得するに*は、一覧*表示されている C 言語の #defines を**SQLGetInfo**に渡します。 **SQLGetInfo**によって返される値の詳細については、 *ODBC プログラマーズリファレンス*を参照してください。  
   
 > [!NOTE]  
->  **SQLGetInfo が**32 ビット ビットマスクを返す場合、縦棒 (&#124;) はビットごとの OR を表します。  
+>  **SQLGetInfo**が32ビットのビットマスクを返す場合、縦棒 (&#124;) はビットごとの or を表します。  
   
-|Infotype|戻り値|  
+|InfoType|戻り値|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"Y"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
@@ -44,7 +44,7 @@ ms.locfileid: "81298562"
 |SQL_CATALOG_LOCATION|SQL_QL_START|  
 |SQL_CATALOG_NAME|"Y"|  
 |SQL_CATALOG_NAME_SEPARATOR|"."|  
-|SQL_CATALOG_TERM|"データベース"|  
+|SQL_CATALOG_TERM|データベース|  
 |SQL_CATALOG_USAGE|[複数の値]|  
 |SQL_COLLATION_SEQ|""|  
 |SQL_COLUMN_ALIAS|"Y"|  
@@ -81,22 +81,22 @@ ms.locfileid: "81298562"
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|ODBC.ini からの DSN、またはドライバ キーワードが Odbc.ini で使用されている場合は ""|  
+|SQL_DATA_SOURCE_NAME|Odbc .ini の DSN または "" if DRIVER キーワードが Odbc .ini で使用されている場合|  
 |SQL_DATA_SOURCE_READ_ONLY|"N"|  
-|SQL_DATABASE_NAME|ファイル名|  
+|SQL_DATABASE_NAME|［ファイル名］|  
 |SQL_DATETIME_LITERALS|0|  
-|SQL_DBMS_NAME|「アクセス」|  
+|SQL_DBMS_NAME|ACCESS|  
 |SQL_DBMS_VER|[複数の値]|  
 |SQL_DDL_INDEX|[複数の値]|  
 |SQL_DEFAULT_TXN_ISOLATION|SQL_TXN_READ_COMMITTED|  
 |SQL_DESCRIBE_PARAMETER|0|  
-|SQL_DRIVER_HDBC|ドライバー マネージャーによって処理されます。|  
-|SQL_DRIVER_HENV|ドライバー マネージャーによって処理されます。|  
-|SQL_DRIVER_HLIB|ドライバー マネージャーによって処理されます。|  
-|SQL_DRIVER_HSTMT|ドライバー マネージャーによって処理されます。|  
-|SQL_DRIVER_NAME|"OdbcJt32.dll"|  
+|SQL_DRIVER_HDBC|ドライバーマネージャーによって処理されます。|  
+|SQL_DRIVER_HENV|ドライバーマネージャーによって処理されます。|  
+|SQL_DRIVER_HLIB|ドライバーマネージャーによって処理されます。|  
+|SQL_DRIVER_HSTMT|ドライバーマネージャーによって処理されます。|  
+|SQL_DRIVER_NAME|"OdbcJt32"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
-|SQL_DRIVER_VER|"4.00.*nnnn*" (*nnnn*はビルドの日付を指定します )|  
+|SQL_DRIVER_VER|"4.00" (*nnnn*はビルド日付を指定*します)*|  
 |SQL_DROP_ASSERTION|0|  
 |SQL_DROP_CHARACTER_SET|0|  
 |SQL_DROP_COLLATION|0|  
@@ -141,13 +141,13 @@ ms.locfileid: "81298562"
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|[複数の値]|  
-|SQL_ODBC_SAG_CLI_適合性|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SAG_CLI_ の準拠|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
-|SQL_ODBC_VER|ドライバ マネージャから|  
+|SQL_ODBC_VER|ドライバーマネージャーから|  
 |SQL_OJ_CAPABILITIES|[複数の値]|  
 |SQL_ORDER_BY_COLUMNS_IN_SELECT|"N"|  
 |SQL_OUTER_JOINS|"Y"|  
-|SQL_PROCEDURE_TERM|"クエリ"|  
+|SQL_PROCEDURE_TERM|照会|  
 |SQL_PROCEDURES|"Y"|  
 |SQL_QUOTED_IDENTIFIER_CASE|SQL_IC_MIXED|  
 |SQL_ROW_UPDATES|"N"|  
@@ -155,16 +155,16 @@ ms.locfileid: "81298562"
 |SQL_SCHEMA_USAGE|0|  
 |SQL_SCROLL_OPTIONS|[複数の値]|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
-|SQL_SERVER_NAME|「アクセス」|  
-|SQL_SPECIAL_CHARACTERS|\`@#$%^&\*"~\\\'}{" ;:?/><,.!\_-+=\'[]&#124;"|  
+|SQL_SERVER_NAME|ACCESS|  
+|SQL_SPECIAL_CHARACTERS|"\`@#$%^&\*~\_} {"\';:?/><,.!-+=\\\'[] &#124; "|  
 |SQL_STRING_FUNCTIONS|[複数の値]|  
 |SQL_SUBQUERIES|[複数の値]|  
 |SQL_SYSTEM_FUNCTIONS|0|  
-|SQL_TABLE_TERM|「テーブル」|  
+|SQL_TABLE_TERM|一覧|  
 |SQL_TIMEDATE_ADD_INTERVALS|0|  
 |SQL_TIMEDATE_DIFF_INTERVALS|0|  
 |SQL_TIMEDATE_FUNCTIONS|[複数の値]|  
 |SQL_TXN_CAPABLE|SQL_TC_ALL|  
 |SQL_TXN_ISOLATION_OPTION|SQL_TXN_READ_COMMITTED|  
 |SQL_UNION|[複数の値]|  
-|SQL_USER_NAME|"管理者"|
+|SQL_USER_NAME|管理者|

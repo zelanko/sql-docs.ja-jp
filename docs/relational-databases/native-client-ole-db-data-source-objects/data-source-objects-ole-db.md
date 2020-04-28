@@ -20,24 +20,24 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d8bb984c789f759eb764ad580f971ab71c9fc946
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81297690"
 ---
 # <a name="data-source-objects-ole-db"></a>データ ソース オブジェクト (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアントは、 などの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ ストアへのリンクを確立するために使用される OLE DB インターフェイスのセットに対して、データ ソースという用語を使用します。 プロバイダーのデータ ソース オブジェクトのインスタンスを作成することは、ネイティブ クライアント[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンシューマーの最初のタスクです。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client では、などのデータストアへのリンクを確立するために使用される一連の OLE DB インターフェイスに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]対して、データソースという用語を使用します。 プロバイダーのデータソースオブジェクトのインスタンスを作成することは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブクライアントコンシューマーの最初のタスクです。  
   
- すべての OLE DB プロバイダーは、そのプロバイダー自体のクラス ID (CLSID) を宣言します。 ネイティブ クライアント OLE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DB プロバイダーの CLSID は、C/C++ GUID CLSID_SQLNCLI10です (シンボルSQLNCLI_CLSID参照する sqlncli.h ファイル内の適切な progid に解決されます)。 コンシューマーは、CLSID を指定して OLE **CoCreateInstance** 関数を使用し、データ ソース オブジェクトのインスタンスを作成します。  
+ すべての OLE DB プロバイダーは、そのプロバイダー自体のクラス ID (CLSID) を宣言します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの CLSID は、C/c + + GUID CLSID_SQLNCLI10 です (シンボル SQLNCLI_CLSID は、参照する SQLNCLI ファイルの正しい progid に解決されます)。 コンシューマーは、CLSID を指定して OLE **CoCreateInstance** 関数を使用し、データ ソース オブジェクトのインスタンスを作成します。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアントはインプロセス サーバーです。 ネイティブ クライアント[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]OLE DB プロバイダー オブジェクトのインスタンスは、実行可能なコンテキストを示すためにCLSCTX_INPROC_SERVER マクロを使用して作成されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client は、インプロセスサーバーです。 Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB プロバイダーオブジェクトのインスタンスは、実行可能なコンテキストを示すために、CLSCTX_INPROC_SERVER マクロを使用して作成されます。  
   
- ネイティブ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアント OLE DB プロバイダーのデータ ソース オブジェクトは、コンシューマーが既存[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のデータベースに接続できるようにする OLE DB 初期化インターフェイスを公開します。  
+ Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーのデータソースオブジェクトは、コンシューマーが既存[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のデータベースに接続できるようにする OLE DB 初期化インターフェイスを公開します。  
   
- ネイティブ クライアント OLE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DB プロバイダを介して行われるすべての接続は、次のオプションを自動的に設定します。  
+ Native Client OLE DB プロバイダーを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]介して行われるすべての接続では、次のオプションが自動的に設定されます。  
   
 -   SET ANSI_WARNINGS ON  
   
@@ -51,7 +51,7 @@ ms.locfileid: "81297690"
   
 -   SET CONCAT_OF_NULL_YIELDS_NULL ON  
   
- この例では、クラス識別子マクロを使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアント OLE DB プロバイダーのデータ ソース オブジェクトを作成し、**その IDBInitialize**インターフェイスへの参照を取得します。  
+ この例では、クラス識別子マクロを使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]して、Native Client OLE DB プロバイダーのデータソースオブジェクトを作成し、 **IDBInitialize**インターフェイスへの参照を取得します。  
   
 ```  
 IDBInitialize*   pIDBInitialize;  
@@ -72,9 +72,9 @@ else
 }  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアント OLE DB プロバイダーのデータ ソース オブジェクトのインスタンスが正常に作成されると、コンシューマー アプリケーションは、データ ソースを初期化し、セッションを作成して続行できます。 OLE DB セッションは、データへのアクセスや操作を可能にするインターフェイスを提供します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのデータソースオブジェクトのインスタンスを正常に作成すると、データソースを初期化し、セッションを作成することによって、コンシューマーアプリケーションを続行できます。 OLE DB セッションは、データへのアクセスや操作を可能にするインターフェイスを提供します。  
   
- ネイティブ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアント OLE DB プロバイダは、データ ソースの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]初期化が正常に行なうため、 の指定されたインスタンスに最初に接続します。 いずれかのデータ ソース初期化インターフェイスで参照が保持されている間、または **IDBInitialize::Uninitialize** メソッドが呼び出されるまで、その最初の接続が維持されます。  
+ Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、データソースの初期化の一環と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]して、の指定されたインスタンスへの最初の接続を行います。 いずれかのデータ ソース初期化インターフェイスで参照が保持されている間、または **IDBInitialize::Uninitialize** メソッドが呼び出されるまで、その最初の接続が維持されます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

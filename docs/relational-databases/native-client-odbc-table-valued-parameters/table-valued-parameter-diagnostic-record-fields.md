@@ -1,5 +1,5 @@
 ---
-title: テーブル値パラメーター診断レコード フィールド |マイクロソフトドキュメント
+title: テーブル値パラメーターの診断レコードのフィールド |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1ad2261dcf016fd484fb52151f043b3646df2450
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81297782"
 ---
 # <a name="table-valued-parameter-diagnostic-record-fields"></a>テーブル値パラメーターの診断レコードのフィールド
@@ -26,6 +26,6 @@ ms.locfileid: "81297782"
   SQL_DIAG_SS_TABLE_COLUMN_NUMBER および SQL_DIAG_SS_TABLE_ROW_NUMBER という 2 つの新しい診断フィールドが、診断レコードに追加されました。 これらのフィールドは、エラーと警告に関連するテーブル値パラメーターの列の値を特定するのに役立ちます。  
   
 ## <a name="see-also"></a>参照  
- [ODBC&#41;&#40;テーブル値パラメーター](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+ [テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

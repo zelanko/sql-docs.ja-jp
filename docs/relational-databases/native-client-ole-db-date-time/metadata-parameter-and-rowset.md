@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e272f7c545130ac5a0f6d66ec6991037123ed8c2
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301024"
 ---
 # <a name="metadata---parameter-and-rowset"></a>メタデータ - パラメーターと行セット
@@ -41,11 +41,11 @@ ms.locfileid: "81301024"
 |パラメーターの型|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
 |date|DBTYPE_DBDATE|6|10|0|Clear|  
-|time|DBTYPE_DBTIME2|10|8、10..16|0..7|オン|  
+|時間|DBTYPE_DBTIME2|10|8、10..16|0..7|オン|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
-|datetime2|DBTYPE_DBTIMESTAMP|16|19,21..27|0..7|オン|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26,28..34|0..7|オン|  
+|datetime2|DBTYPE_DBTIMESTAMP|16|19、21.. 27|0..7|オン|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26、28.. 34|0..7|オン|  
   
  場合によっては、値の範囲が連続していないことに注意してください。 有効桁数が 0 より大きい場合は、小数点が追加されるためです。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "81301024"
 ||DBTYPE_DATE|6|無視|  
 |date|DBTYPE_DBDATE|6|無視|  
 ||DBTYPE_DBTIME|10|無視|  
-|time|DBTYPE_DBTIME2|10|0..7|  
+|時間|DBTYPE_DBTIME2|10|0..7|  
 |smalldatetime||16|無視|  
 |DATETIME||16|無視|  
 |datetime2 または DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|16|0..7|  
@@ -67,9 +67,9 @@ ms.locfileid: "81301024"
   
  *bPrecision* パラメーターは無視されます。  
   
- データをサーバーに送信する場合、"DBPARAMFLAGS_SS_ISVARIABLESCALE" は無視されます。 アプリケーションでは、プロバイダー固有の型名 "**datetime**" および "**smalldatetime**" を使用して、従来の表形式のデータ ストリーム (TDS) の型を強制的に使用することができます。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (以降の) サーバーに接続されている場合、"**datetime2**" 形式が使用され、型名が "**datetime2**" または "DBTYPE_DBTIMESTAMP" の場合は、必要に応じて、暗黙的なサーバー変換が発生します。 プロバイダー固有の型名に "**datetime**" または "**smalldatetime**" が使用されている場合は、*bScale* が無視されます。 それ以外の場合は、アプリは *、bScale*が正しく設定されていることを確認する必要があります。 MDAC および[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアントから[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]アップグレードされたアプリケーションは、"DBTYPE_DBTIMESTAMP" を使用すると *、bScale*が正しく設定されていないと失敗します。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] より前のサーバー インスタンスに接続されている場合は、"DBTYPE_DBTIMESTAMP" で 0 または 3 以外に設定された *bScale* の値はエラーになり、E_FAIL が返されます。  
+ データをサーバーに送信する場合、"DBPARAMFLAGS_SS_ISVARIABLESCALE" は無視されます。 アプリケーションでは、プロバイダー固有の型名 "**datetime**" および "**smalldatetime**" を使用して、従来の表形式のデータ ストリーム (TDS) の型を強制的に使用することができます。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (以降の) サーバーに接続されている場合、"**datetime2**" 形式が使用され、型名が "**datetime2**" または "DBTYPE_DBTIMESTAMP" の場合は、必要に応じて、暗黙的なサーバー変換が発生します。 プロバイダー固有の型名に "**datetime**" または "**smalldatetime**" が使用されている場合は、*bScale* が無視されます。 それ以外の場合は、appications、 *Bscale*が正しく設定されていることを確認する必要があります。 "DBTYPE_DBTIMESTAMP" を使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]するから[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] MDAC および Native Client からアップグレードされたアプリケーションは、 *bscale*を正しく設定しないと失敗します。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] より前のサーバー インスタンスに接続されている場合は、"DBTYPE_DBTIMESTAMP" で 0 または 3 以外に設定された *bScale* の値はエラーになり、E_FAIL が返されます。  
   
- ICommandWithParameters::SetParameterInfo が呼び出されない場合、プロバイダーは、次のように IAccessor::CreateAccessor で指定されているバインディングの種類からサーバーの種類をイントインします。  
+ ICommandWithParameters:: SetParameterInfo が呼び出されない場合、プロバイダーは IAccessor:: CreateAccessor に指定されているバインドの種類からサーバーの種類を次のように基します。  
   
 |バインドの種類|*pwszDataSourceType*<br /><br /> (プロバイダー固有)|  
 |------------------|----------------------------------------------------|  
@@ -86,7 +86,7 @@ ms.locfileid: "81301024"
 |列の型|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE、DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS、DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  
 |date|DBTYPE_DBDATE|6|10|0|Clear|  
-|time|DBTYPE_DBTIME2|10|8、10..16|0..7|オン|  
+|時間|DBTYPE_DBTIME2|10|8、10..16|0..7|オン|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19、21..27|0..7|オン|  

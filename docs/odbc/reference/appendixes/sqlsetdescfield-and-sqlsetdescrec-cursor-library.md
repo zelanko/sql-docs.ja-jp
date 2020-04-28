@@ -1,5 +1,5 @@
 ---
-title: SQL セット・デズフィールドと SQL セット・デズレック (カーソル・ライブラリー) |マイクロソフトドキュメント
+title: SQLSetDescField および SQLSetDescRec (カーソルライブラリ) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ ms.assetid: 4ccff067-85cd-4bfa-a6cd-7f28051fb5b9
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: b85eb84cdf48a1c2a441b8994076a9023d254f2d
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300552"
 ---
 # <a name="sqlsetdescfield-and-sqlsetdescrec-cursor-library"></a>SQLSetDescField および SQLSetDescRec (カーソル ライブラリ)
 > [!IMPORTANT]  
->  この機能は、今後のバージョンの Windows で削除される予定です。 新しい開発作業でこの機能を使用することは避け、現在この機能を使用しているアプリケーションを変更する予定です。 マイクロソフトでは、ドライバーのカーソル機能を使用することをお勧めします。  
+>  この機能は、今後のバージョンの Windows では削除される予定です。 新しい開発作業ではこの機能の使用を避け、現在この機能を使用しているアプリケーションの変更を検討してください。 Microsoft では、ドライバーのカーソル機能を使用することをお勧めします。  
   
- このトピックでは、カーソル ライブラリでの**SQLSetDescField**関数と**SQLSetDescRec**関数の使用について説明します。 これらの関数の一般的な情報については、「 [SQLSetDesc フィールド関数](../../../odbc/reference/syntax/sqlsetdescfield-function.md)」および[「 関数の設定 」](../../../odbc/reference/syntax/sqlsetdescrec-function.md)を参照してください。  
+ このトピックでは、カーソルライブラリでの**SQLSetDescField**関数と**SQLSetDescRec**関数の使用について説明します。 これらの関数の一般的な情報については、「 [SQLSetDescField 関数](../../../odbc/reference/syntax/sqlsetdescfield-function.md)と[SQLSetDescRec 関数](../../../odbc/reference/syntax/sqlsetdescrec-function.md)」を参照してください。  
   
- カーソル ライブラリは、ブックマーク列に設定されたフィールドの値を返すために呼び出されたときに**SQLSetDescField**を実行します。  
+ カーソルライブラリは、ブックマーク列に対して設定されたフィールドの値を返すために呼び出されると、 **SQLSetDescField**を実行します。  
   
  SQL_DESC_DATA_PTR  
   
@@ -52,16 +52,16 @@ ms.locfileid: "81300552"
   
  SQL_DESC_NULLABLE  
   
- カーソル ライブラリは、ブックマーク列に対する**SQLSetDescRec**の呼び出しを実行します。  
+ カーソルライブラリは、ブックマーク列に対して**SQLSetDescRec**への呼び出しを実行します。  
   
- ODBC *2.x*ドライバーを使用する場合、カーソル ライブラリは **、SQLSetDescField**または**SQLSetDescRec**が呼び出されたときに SQLSTATE HY090 (無効な文字列またはバッファーの長さ) を返し、ARD のブックマーク レコードのSQL_DESC_OCTET_LENGTHフィールドを 4 と等しくない値に設定します。 ODBC *3.x*ドライバを使用する場合、カーソル ライブラリはバッファを任意のサイズにできます。  
+ ODBC 2.x ドライバーを使用する場合、カーソルライブラリは SQLSTATE HY090 (無効な文字列またはバッファー長) を返します。 **SQLSetDescField**または**SQLSetDescRec**を呼び出すと、のブックマークレコードの SQL_DESC_OCTET_LENGTH フィールドが4に等しくない値に設定さ*れます。* ODBC 3.x ドライバーを使用する場合、カーソルライブラリを使用すると、バッファーを任意のサイズにすることができ*ます。*  
   
- カーソル ライブラリは、SQL_DESC_BIND_OFFSET_PTR、SQL_DESC_BIND_TYPE、SQL_DESC_ROW_ARRAY_SIZE、またはSQL_DESC_ROW_STATUS_PTRフィールドの値を返すために呼び出されたときに**SQLSetDescField**を実行します。 これらのフィールドは、ブックマーク行だけでなく、任意の行に対して返すことができます。  
+ カーソルライブラリは、SQL_DESC_BIND_OFFSET_PTR、SQL_DESC_BIND_TYPE、SQL_DESC_ROW_ARRAY_SIZE、または SQL_DESC_ROW_STATUS_PTR の各フィールドの値を返すために呼び出されると、 **SQLSetDescField**を実行します。 これらのフィールドは、ブックマーク行だけでなく、任意の行に対して返すことができます。  
   
- カーソル ライブラリは **、SQLSetDescField**を実行して、前述のフィールド以外の記述子フィールドを変更しません。 アプリケーションが**SQLSetDescField**を呼び出して、カーソル ライブラリが読み込まれている間に他のフィールドを設定すると、呼び出しがドライバーに渡されます。  
+ カーソルライブラリは、前に説明したフィールド以外の記述子フィールドを変更するために**SQLSetDescField**を実行しません。 カーソルライブラリの読み込み中に、アプリケーションが**SQLSetDescField**を呼び出して他のフィールドを設定すると、その呼び出しはドライバーに渡されます。  
   
- カーソル ライブラリでは、アプリケーション行記述子の任意の行のSQL_DESC_DATA_PTR、SQL_DESC_INDICATOR_PTR、およびSQL_DESC_OCTET_LENGTH_PTRフィールドを動的に変更できます **(SQLExtendedFetch** **、SQLFetch、** または**SQLFetchScroll**を呼び出した後)。 SQL_DESC_OCTET_LENGTH_PTRフィールドは、列の長さバッファーをバインド解除する場合にのみ、ヌル・ポインターに変更できます。  
+ カーソルライブラリでは、アプリケーションの行記述子の任意の行の SQL_DESC_DATA_PTR、SQL_DESC_INDICATOR_PTR、および SQL_DESC_OCTET_LENGTH_PTR フィールドを動的に変更できます ( **SQLExtendedFetch**、 **sqlfetch**、または**sqlfetchscroll**を呼び出した後)。 SQL_DESC_OCTET_LENGTH_PTR フィールドは、列の長さバッファーのバインドを解除するためにのみ null ポインターに変更できます。  
   
- カーソル ライブラリは、カーソルがオープンされているときに APD または ARD のSQL_DESC_BIND_TYPE フィールドの変更をサポートしていません。 SQL_DESC_BIND_TYPEフィールドは、カーソルがクローズされた後、新しいカーソルがオープンされる前にのみ変更できます。 カーソルがオープンしているときにカーソルライブラリが変更をサポートする記述子フィールドは、SQL_DESC_ARRAY_STATUS_PTR、SQL_DESC_BIND_OFFSET_PTR、SQL_DESC_DATA_PTR、SQL_DESC_INDICATOR_PTR、SQL_DESC_OCTET_LENGTH_PTR、およびSQL_DESC_ROWS_PROCESSED_PTRだけです。  
+ カーソルライブラリでは、カーソルが開いているときに APD 内の SQL_DESC_BIND_TYPE フィールドを変更することはサポートされていません。 SQL_DESC_BIND_TYPE フィールドは、カーソルが閉じられてから新しいカーソルが開かれるまでの間のみ変更できます。 カーソルが開いているときにカーソルライブラリが変更できる記述子フィールドは、SQL_DESC_ARRAY_STATUS_PTR、SQL_DESC_BIND_OFFSET_PTR、SQL_DESC_DATA_PTR、SQL_DESC_INDICATOR_PTR、SQL_DESC_OCTET_LENGTH_PTR、および SQL_DESC_ROWS_PROCESSED_PTR だけです。  
   
- カーソル ライブラリでは **、SQLExtendedFetch**または**SQLFetchScroll**が呼び出された後、およびカーソルが閉じられる前に、ARD のSQL_DESC_COUNT フィールドの変更はサポートされていません。
+ カーソルライブラリでは、 **SQLExtendedFetch**または**sqlfetchscroll**が呼び出された後、カーソルが閉じられる前に、そのフィールドの SQL_DESC_COUNT 変更がサポートされていません。

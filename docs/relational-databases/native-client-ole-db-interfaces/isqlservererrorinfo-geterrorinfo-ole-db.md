@@ -17,16 +17,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 69ba76725f5a5d3b21224495554cc2a419265f7e
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299922"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  エラーの詳細を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]含むネイティブ クライアント OLE DB プロバイダー SSERRORINFO 構造体へのポインターを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返します。  
+  エラーの詳細を格納[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]している[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client OLE DB プロバイダー SSERRORINFO 構造体へのポインターを返します。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、 **ISQLServerErrorInfo** エラー インターフェイスを定義します。 このインターフェイスは、重大度や状態など、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラーの詳細情報を返します。  
 
@@ -55,10 +55,10 @@ HRESULT GetErrorInfo(
  *ppSSErrorInfo* または *ppErrorStrings* 引数のいずれかが NULL でした。  
   
  E_OUTOFMEMORY  
- ネイティブ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアント OLE DB プロバイダは、要求を完了するために十分なメモリを割り当てることができませんでした。  
+ Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、要求を完了するために必要なメモリを割り当てることができませんでした。  
   
-## <a name="remarks"></a>解説  
- ネイティブ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアント OLE DB プロバイダーは、コンシューマーによって渡されるポインターを通じて返される SSERRORINFO および OLECHAR 文字列のメモリを割り当てます。 コンシューマーはエラー データにアクセスする必要がなくなった時点で、**IMalloc::Free** メソッドを使用してこのメモリの割り当てを解除する必要があります。  
+## <a name="remarks"></a>Remarks  
+ Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、コンシューマーによって渡されたポインターによって返される SSERRORINFO および OLECHAR 文字列にメモリを割り当てます。 コンシューマーはエラー データにアクセスする必要がなくなった時点で、**IMalloc::Free** メソッドを使用してこのメモリの割り当てを解除する必要があります。  
   
  SSERRORINFO 構造体は、次のように定義されています。  
   
@@ -89,7 +89,7 @@ SSERRORINFO;
  構造体内のポインターは、*ppErrorStrings* 引数に返される文字列内のアドレスを指します。  
   
 ## <a name="see-also"></a>参照  
- [OLE DB&#41;&#40;エラー情報](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)   
+ [ISQLServerErrorInfo &#40;OLE DB&#41;](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: CALL ステートメントの制限 |マイクロソフトドキュメント
+title: CALL ステートメントの制限事項 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,13 +14,13 @@ ms.assetid: 5802891f-27f6-48b3-aeeb-aaef400b318c
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 5093e73c04e065985827517241366e8ed088cd11
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301453"
 ---
 # <a name="call-statement-limitations"></a>CALL ステートメントの制限事項
-(この制限は、Microsoft アクセス ドライバーにのみ適用されます。  
+(この制限は、Microsoft Access ドライバーにのみ適用されます)。  
   
- 呼び出されたプロシージャのパラメータとして式はサポートされていません。
+ 式は、呼び出されたプロシージャのパラメーターとしてはサポートされていません。

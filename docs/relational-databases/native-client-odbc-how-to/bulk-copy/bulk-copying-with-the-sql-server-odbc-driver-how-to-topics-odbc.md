@@ -1,5 +1,5 @@
 ---
-title: 一括コピー, SQL Server ODBC ドライバ
+title: 一括コピー、SQL Server ODBC ドライバー
 ms.custom: ''
 ms.date: 12/18/2019
 ms.prod: sql
@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 76bc7c1f39fe0cca0badcf0b768b5a65dbe6d02f
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298327"
 ---
 # <a name="bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc"></a>SQL Server ODBC ドライバーで一括コピーを行う方法に関するトピック (ODBC)
@@ -26,19 +26,19 @@ ms.locfileid: "81298327"
 
   Microsoft® SQL Server™ 2005 で SQL Server ODBC ドライバーを使用する場合は、DB-Library API でサポートされている一括コピー関数を使用できます。  
   
- の最初の一括コピーでの互換性に影響する変更については、「 [ODBC&#41;&#40;一括コピー操作の実行](../../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)」を参照してください。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]  
+ での[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]一括コピーの重大な変更の詳細については、「 [ODBC&#41;&#40;の一括コピー操作の実行](../../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [ODBC&#41;&#40;フォーマット ファイルを使用しない一括コピー](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copy-without-a-format-file-odbc.md)  
+-   [フォーマットファイルを使用しない一括コピー &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copy-without-a-format-file-odbc.md)  
   
--   [ODBC&#41;&#40;SELECT 結果セットの一括コピー](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copy-a-select-result-set-odbc.md)  
+-   [SELECT 結果セットの一括コピー &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copy-a-select-result-set-odbc.md)  
   
--   [ODBC&#41;&#40;一括コピー形式ファイルを作成する](../../../relational-databases/native-client-odbc-how-to/bulk-copy/create-a-bulk-copy-format-file-odbc.md)  
+-   [&#40;ODBC&#41;の一括コピーフォーマットファイルを作成する](../../../relational-databases/native-client-odbc-how-to/bulk-copy/create-a-bulk-copy-format-file-odbc.md)  
   
--   [ODBC&#41;のフォーマット ファイル&#40;使用による一括コピー](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copy-by-using-a-format-file-odbc.md)  
+-   [フォーマットファイルを使用した一括コピー &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copy-by-using-a-format-file-odbc.md)  
   
--   [ODBC&#41;&#40;プログラム変数からのデータの一括コピー](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copy-data-from-program-variables-odbc.md)  
+-   [プログラム変数からの一括データコピー &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copy-data-from-program-variables-odbc.md)  
   
 ## <a name="see-also"></a>参照  
  [ODBC の使用法に関するトピック](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  

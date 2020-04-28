@@ -1,5 +1,5 @@
 ---
-title: ステートメントの準備と実行 (ODBC) |マイクロソフトドキュメント
+title: ステートメントの準備と実行 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eaf7e3518f369639ba3d2eb854a103ff839276c7
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81294124"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>ステートメントの準備と実行 (ODBC)
@@ -27,13 +27,13 @@ ms.locfileid: "81294124"
     
 ### <a name="to-prepare-a-statement-once-and-then-execute-it-multiple-times"></a>ステートメントを 1 回だけ準備して複数回実行するには  
   
-1.  [SQLPrepare 関数を](https://go.microsoft.com/fwlink/?LinkId=59360)呼び出して、ステートメントを準備します。  
+1.  [SQLPrepare 関数](https://go.microsoft.com/fwlink/?LinkId=59360)を呼び出して、ステートメントを準備します。  
   
-2.  オプションで[、SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404)を呼び出して、準備されたステートメント内のパラメーターの数を決定します。  
+2.  必要に応じて、 [Sqlnumparams](https://go.microsoft.com/fwlink/?LinkId=58404)を呼び出して、準備されたステートメント内のパラメーターの数を確認します。  
   
 3.  必要に応じて、準備されたステートメント内の各パラメーターに対して次の操作を行います。  
   
-    -   パラメータ情報を取得するには[、SQLDescribe パラム](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md)を呼び出します。  
+    -   [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md)を呼び出して、パラメーター情報を取得します。  
   
     -   [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md)を使用して、各パラメーターをプログラム変数にバインドします。 実行時データ パラメーターをセットアップします。  
   
@@ -41,13 +41,13 @@ ms.locfileid: "81294124"
   
     -   ステートメントにパラメーター マーカーがある場合は、バインドされたパラメーター バッファーにデータ値を格納します。  
   
-    -   [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400)を呼び出して、準備されたステートメントを実行します。  
+    -   [Sqlexecute](https://go.microsoft.com/fwlink/?LinkId=58400)を呼び出して、準備されたステートメントを実行します。  
   
-    -   実行時のデータ入力パラメーターが使用されている場合[、SQLExecute は](https://go.microsoft.com/fwlink/?LinkId=58400)SQL_NEED_DATAを返します。 データをチャンクで送信する場合は[、SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405)と[SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)を使用します。  
+    -   実行時データ入力パラメーターが使用されている場合、 [Sqlexecute](https://go.microsoft.com/fwlink/?LinkId=58400)は SQL_NEED_DATA を返します。 [Sqlparamdata](https://go.microsoft.com/fwlink/?LinkId=58405)と[sqlparamdata](../../../relational-databases/native-client-odbc-api/sqlputdata.md)を使用して、データをチャンク単位で送信します。  
   
 ### <a name="to-prepare-a-statement-with-column-wise-parameter-binding"></a>列方向のパラメーターのバインドを使用してステートメントを準備するには  
   
-1.  次の属性を設定するには[、SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)を呼び出します。  
+1.  [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)を呼び出して、次の属性を設定します。  
   
     -   SQL_ATTR_PARAMSET_SIZE に、パラメーターのセット数 (S) を設定します。  
   
@@ -57,11 +57,11 @@ ms.locfileid: "81294124"
   
     -   SQL_ATTR_PARAMS_STATUS_PTR を、パラメーターの状態インジケーターを格納する SQLUSSMALLINT 変数の配列[S] を指すように設定します。  
   
-2.  SQLPrepare を呼び出してステートメントを準備します。  
+2.  SQLPrepare を呼び出して、ステートメントを準備します。  
   
-3.  オプションで[、SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404)を呼び出して、準備されたステートメント内のパラメーターの数を決定します。  
+3.  必要に応じて、 [Sqlnumparams](https://go.microsoft.com/fwlink/?LinkId=58404)を呼び出して、準備されたステートメント内のパラメーターの数を確認します。  
   
-4.  必要に応じて、準備されたステートメントの各パラメーターに対して、SQLDescribeParam を呼び出してパラメーター情報を取得します。  
+4.  必要に応じて、準備されたステートメントの各パラメーターに対して SQLDescribeParam を呼び出して、パラメーター情報を取得します。  
   
 5.  各パラメーター マーカーについて、次の操作を行います。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "81294124"
   
     -   データの長さを格納する S パラメーター バッファーの配列を割り当てます。  
   
-    -   SQLBindParameter を呼び出して、パラメーターのデータ値とデータ長の配列をステートメント パラメーターにバインドします。  
+    -   SQLBindParameter を呼び出して、パラメーターのデータ値とデータ長の配列をステートメントパラメーターにバインドします。  
   
     -   パラメーターが実行時データの text または image パラメーターである場合は、それをセットアップします。  
   
@@ -77,11 +77,11 @@ ms.locfileid: "81294124"
   
 6.  準備されたステートメントの各実行に対して次の操作を行います。  
   
-    -   S データ値と S データ長をバインドされたパラメーター配列に入れます。  
+    -   S データ値と S データ長をバインドされたパラメーター配列に格納します。  
   
     -   SQLExecute を呼び出して、準備されたステートメントを実行します。  
   
-    -   実行時データ入力パラメーターが使用されている場合、SQLExecute は SQL_NEED_DATA を返します。 データをチャンクで送信する場合は、SQLParamData と SQLPutData を使用します。  
+    -   実行時データ入力パラメーターが使用されている場合、SQLExecute は SQL_NEED_DATA を返します。 SQLParamData と Sqlparamdata を使用して、データをチャンク単位で送信します。  
   
 ### <a name="to-prepare-a-statement-with-row-wise-bound-parameters"></a>行方向にバインドされたパラメーターを使用してステートメントを準備するには  
   
@@ -91,7 +91,7 @@ ms.locfileid: "81294124"
   
     -   2 つ目の部分は、状態インジケーターを格納する SQLINTEGER 変数です。  
   
-2.  次の属性を設定するには[、SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)を呼び出します。  
+2.  [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)を呼び出して、次の属性を設定します。  
   
     -   SQL_ATTR_PARAMSET_SIZE に、パラメーターのセット数 (S) を設定します。  
   
@@ -101,9 +101,9 @@ ms.locfileid: "81294124"
   
     -   SQL_ATTR_PARAMS_STATUS_PTR を、パラメーターの状態インジケーターを格納する SQLUSSMALLINT 変数の配列[S] を指すように設定します。  
   
-3.  SQLPrepare を呼び出してステートメントを準備します。  
+3.  SQLPrepare を呼び出して、ステートメントを準備します。  
   
-4.  各パラメーター・マーカーについて、SQLBindParameter を呼び出して、ステップ 1 で割り振った構造体の配列の最初のエレメント内の変数をパラメーター・データ値およびデータ長ポインターに指定します。 パラメーターが実行時データ パラメーターである場合は、そのパラメーターをセットアップします。  
+4.  各パラメーターマーカーについて、SQLBindParameter を呼び出して、手順 1. で割り当てた構造体の配列の最初の要素にあるパラメーターのデータ値とデータ長ポインターをポイントします。 パラメーターが実行時データ パラメーターである場合は、そのパラメーターをセットアップします。  
   
 5.  準備されたステートメントの各実行に対して次の操作を行います。  
   
@@ -111,9 +111,9 @@ ms.locfileid: "81294124"
   
     -   SQLExecute を呼び出して、準備されたステートメントを実行します。 ドライバーによって、S 回 (パラメーターのセットごとに 1 回) SQL ステートメントが効率よく実行されます。  
   
-    -   実行時データ入力パラメーターが使用されている場合、SQLExecute は SQL_NEED_DATA を返します。 データをチャンクで送信する場合は、SQLParamData と SQLPutData を使用します。  
+    -   実行時データ入力パラメーターが使用されている場合、SQLExecute は SQL_NEED_DATA を返します。 SQLParamData と Sqlparamdata を使用して、データをチャンク単位で送信します。  
   
 ## <a name="see-also"></a>参照  
- [ODBC&#41;のクエリハウツートピック&#40;実行](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+ [クエリの実行方法に関するトピック &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   

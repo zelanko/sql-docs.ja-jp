@@ -1,5 +1,5 @@
 ---
-title: パラドックスの値を返す SQLGetInfo |マイクロソフトドキュメント
+title: SQLGetInfo 戻り値の Paradox |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,19 +17,19 @@ ms.assetid: 543526fb-7c54-42f7-9371-926730ca5483
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 8d53d912941079865328ab97fae0f0f814a76114
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298532"
 ---
 # <a name="sqlgetinfo-returned-values-for-paradox"></a>SQLGetInfo で Paradox に返される値
-次の表は *、fInfoType*引数の C 言語#definesと **、SQLGetInfo**によって返される対応する値を示しています。 この情報は *、fInfoType*引数で、リストされている C 言語#definesを**SQLGetInfo**に渡すことによって取得できます。 **SQLGetInfo**によって返される値の詳細については *、ODBC プログラマ リファレンスを参照してください*。  
+次の表に、 *Fin$ type*引数の C 言語 #defines と**SQLGetInfo**によって返される対応する値の一覧を示します。 この情報を取得するに*は、一覧*表示されている C 言語の #defines を**SQLGetInfo**に渡します。 **SQLGetInfo**によって返される値の詳細については、 *ODBC プログラマーズリファレンス*を参照してください。  
   
 > [!NOTE]  
->  **SQLGetInfo が**32 ビット ビットマスクを返す場合、縦棒 (&#124;) はビットごとの OR を表します。  
+>  **SQLGetInfo**が32ビットのビットマスクを返す場合、縦棒 (&#124;) はビットごとの or を表します。  
   
-|Infotype|戻り値|  
+|InfoType|戻り値|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"N"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
@@ -44,7 +44,7 @@ ms.locfileid: "81298532"
 |SQL_CATALOG_LOCATION|SQL_QL_START|  
 |SQL_CATALOG_NAME|"Y"|  
 |SQL_CATALOG_NAME_SEPARATOR|"\\"|  
-|SQL_CATALOG_TERM|"ディレクトリ"|  
+|SQL_CATALOG_TERM|名簿|  
 |SQL_CATALOG_USAGE|[複数の値]|  
 |SQL_COLLATION_SEQ|""|  
 |SQL_COLUMN_ALIAS|"Y"|  
@@ -81,22 +81,22 @@ ms.locfileid: "81298532"
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|ODBC.ini からの DSN、またはドライバ キーワードが Odbc.ini で使用されている場合は ""|  
-|SQL_DATA_SOURCE_READ_ONLY|"N" (これはデータ ソースによって異なります。|  
-|SQL_DATABASE_NAME|現在のデータベース ディレクトリ|  
+|SQL_DATA_SOURCE_NAME|Odbc .ini の DSN または "" if DRIVER キーワードが Odbc .ini で使用されている場合|  
+|SQL_DATA_SOURCE_READ_ONLY|"N" (これはデータソースによって異なります。)|  
+|SQL_DATABASE_NAME|現在のデータベースディレクトリ|  
 |SQL_DATETIME_LITERALS|0|  
-|SQL_DBMS_NAME|「パラドックス」|  
+|SQL_DBMS_NAME|PARADOX|  
 |SQL_DBMS_VER|[複数の値]|  
 |SQL_DDL_INDEX|[複数の値]|  
 |SQL_DEFAULT_TXN_ISOLATION|0|  
 |SQL_DESCRIBE_PARAMETER|0|  
-|SQL_DRIVER_HDBC|ドライバー マネージャーによって処理されます。|  
-|SQL_DRIVER_HENV|ドライバー マネージャーによって処理されます。|  
-|SQL_DRIVER_HLIB|ドライバー マネージャーによって処理されます。|  
-|SQL_DRIVER_HSTMT|ドライバー マネージャーによって処理されます。|  
-|SQL_DRIVER_NAME|"OdbcJt32.dll"|  
+|SQL_DRIVER_HDBC|ドライバーマネージャーによって処理されます。|  
+|SQL_DRIVER_HENV|ドライバーマネージャーによって処理されます。|  
+|SQL_DRIVER_HLIB|ドライバーマネージャーによって処理されます。|  
+|SQL_DRIVER_HSTMT|ドライバーマネージャーによって処理されます。|  
+|SQL_DRIVER_NAME|"OdbcJt32"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
-|SQL_DRIVER_VER|"4.00.*nnnn*" (*nnnn*はビルドの日付を指定します )|  
+|SQL_DRIVER_VER|"4.00" (*nnnn*はビルド日付を指定*します)*|  
 |SQL_DROP_ASSERTION|0|  
 |SQL_DROP_CHARACTER_SET|0|  
 |SQL_DROP_COLLATION|0|  
@@ -119,7 +119,7 @@ ms.locfileid: "81298532"
 |SQL_MAX_CHAR_LITERAL_LEN|255|  
 |SQL_MAX_COLUMN_NAME_LEN|25|  
 |SQL_MAX_COLUMNS_IN_GROUP_BY|10|  
-|SQL_MAX_COLUMNS_IN_INDEX|0 (制限不明または適用されない)|  
+|SQL_MAX_COLUMNS_IN_INDEX|0 (不明または該当なしの制限)|  
 |SQL_MAX_COLUMNS_IN_ORDER_BY|10|  
 |SQL_MAX_COLUMNS_IN_SELECT|255|  
 |SQL_MAX_COLUMNS_IN_TABLE|255|  
@@ -141,9 +141,9 @@ ms.locfileid: "81298532"
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|[複数の値]|  
-|SQL_ODBC_SAG_CLI_適合性|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SAG_CLI_ の準拠|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
-|SQL_ODBC_VER|ドライバ マネージャから|  
+|SQL_ODBC_VER|ドライバーマネージャーから|  
 |SQL_OJ_CAPABILITIES|[複数の値]|  
 |SQL_ORDER_BY_COLUMNS_IN_SELECT|"N"|  
 |SQL_OUTER_JOINS|"Y"|  
@@ -155,12 +155,12 @@ ms.locfileid: "81298532"
 |SQL_SCHEMA_USAGE|0|  
 |SQL_SCROLL_OPTIONS|[複数の値]|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
-|SQL_SERVER_NAME|「パラドックス」|  
-|SQL_SPECIAL_CHARACTERS|"~@@#$%^\`&*_-+=\\}{'''''';?/><,.!'[]&#124;"|  
+|SQL_SERVER_NAME|PARADOX|  
+|SQL_SPECIAL_CHARACTERS|"~\`@ # $% ^& * _-+ =\\} {" ';:?/><,.! '[] &#124; "|  
 |SQL_STRING_FUNCTIONS|[複数の値]|  
 |SQL_SUBQUERIES|[複数の値]|  
 |SQL_SYSTEM_FUNCTIONS|0|  
-|SQL_TABLE_TERM|「テーブル」|  
+|SQL_TABLE_TERM|一覧|  
 |SQL_TIMEDATE_ADD_INTERVALS|0|  
 |SQL_TIMEDATE_DIFF_INTERVALS|0|  
 |SQL_TIMEDATE_FUNCTIONS|[複数の値]|  

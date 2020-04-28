@@ -1,5 +1,5 @@
 ---
-title: テーブル値パラメーター (ODBC) |マイクロソフトドキュメント
+title: テーブル値パラメーター (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c303a1b3b8a9a42792feb6802e9f09fabc1e3ca3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81297756"
 ---
 # <a name="table-valued-parameters-odbc"></a>テーブル値パラメーター (ODBC)
@@ -26,13 +26,13 @@ ms.locfileid: "81297756"
 
   ODBC のテーブル値パラメーターのサポートにより、クライアント アプリケーションは、1 回の呼び出しで複数の行をサーバーに送信することで、パラメーター化されたデータをサーバーに効率的に送信できます。  
   
- サーバー上のテーブル値パラメーターの詳細については、「 データベース[エンジン&#41;&#40;テーブル値パラメーターを使用](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)する 」を参照してください。  
+ サーバー上のテーブル値パラメーターの詳細については、「[テーブル値パラメーターの使用 &#40;データベースエンジン&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)」を参照してください。  
   
  ODBC でテーブル値パラメーターをサーバーに送信するには、次の 2 つの方法があります。  
   
--   テーブル値パラメーターのすべてのデータは、SQLExecDirect または SQLExecute が呼び出された時点でメモリ内に入れることができます。 テーブル値に複数の行がある場合、このデータを配列に格納します。  
+-   SQLExecDirect または SQLExecute が呼び出されたときに、すべてのテーブル値パラメーターデータをメモリ内に配置できます。 テーブル値に複数の行がある場合、このデータを配列に格納します。  
   
--   アプリケーションは、SQLExecDirect または SQLExecute が呼び出されたときに、テーブル値パラメーターの実行時データを指定できます。 この場合、テーブル値のデータの行をバッチ内で指定するか、必要なメモリ量を減らすために 1 つずつ指定することができます。  
+-   アプリケーションでは、SQLExecDirect または SQLExecute が呼び出されたときに、テーブル値パラメーターの実行時データを指定できます。 この場合、テーブル値のデータの行をバッチ内で指定するか、必要なメモリ量を減らすために 1 つずつ指定することができます。  
   
  1 つ目の方法では、より多くのビジネス ロジックをストアド プロシージャにカプセル化できます。 たとえば、発注品目をテーブル値パラメーターとして渡す場合、注文入力のトランザクション全体を 1 つのストアド プロシージャにカプセル化することができます。 サーバーとのやり取りが 1 回で済むため、この方法は非常に効率的です。 また、異なるプロシージャを使用して、注文ヘッダーと発注品目を個別に処理することもできます。この場合、必要なコードが多くなり、クライアントとサーバー間のコントラクトが複雑になります。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "81297756"
  アプリケーションから、準備されたプロシージャ呼び出しのメタデータを取得する方法について説明します。  
   
  [テーブル値パラメーターの追加メタデータ](../../relational-databases/native-client-odbc-table-valued-parameters/additional-table-valued-parameter-metadata.md)  
- テーブル値パラメーターのメタデータを取得する SQLProcedureColumns、SQLTables、および SQLColumns を使用する方法について説明します。  
+ SQLProcedureColumns、SQLTables、および Sqltables を使用して、テーブル値パラメーターのメタデータを取得する方法について説明します。  
   
  [テーブル値パラメーターのデータ変換およびその他のエラーと警告](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameter-data-conversion-and-other-errors-and-warnings.md)  
  テーブル値パラメーターの列値に関するエラーを処理する方法について説明します。  
@@ -81,7 +81,7 @@ ms.locfileid: "81297756"
  一般的なタスクの実行方法について説明します。  
   
 ## <a name="see-also"></a>参照  
- [ODBC&#41;&#40;SQL Server ネイティブ クライアント](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [SQL Server ネイティブ クライアント&#41;&#40;テーブル値パラメーター](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)  
+ [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [テーブル値パラメーター &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)  
   
   

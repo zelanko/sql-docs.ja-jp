@@ -1,5 +1,5 @@
 ---
-title: 日付時刻 データ型変換 (ODBC) |マイクロソフトドキュメント
+title: datetime データ型変換 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eba3d21b1f063c5f8a989d6d387538a4d15c8412
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301733"
 ---
 # <a name="datetime-data-type-conversions-odbc"></a>datetime データ型変換 (ODBC)
@@ -33,7 +33,7 @@ ms.locfileid: "81301733"
   
 -   date 型の文字列の形式は 'yyyy-mm-dd' です。  
   
- 文字列からの変換では、空白文字やフィールドの幅を柔軟に処理できます。 詳細については[、「ODBC 日付と時刻の向上のためのデータ型サポート](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)」の「データ形式: 文字列とリテラル」を参照してください。  
+ 文字列からの変換では、空白文字やフィールドの幅を柔軟に処理できます。 詳細については、「 [ODBC の日付と時刻の機能強化のためのデータ型のサポート](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)」の「データ形式: 文字列とリテラル」を参照してください。  
   
  一般的な変換規則を次に示します。  
   
@@ -45,9 +45,9 @@ ms.locfileid: "81301733"
   
 -   サーバーの型にタイム ゾーンが存在しなくても、クライアントの型にタイム ゾーンがある場合、時刻は UTC に変換されてからサーバーに格納されます。  
   
--   時刻が存在するが、受信側が時刻を格納できない場合、時刻コンポーネントは無視されます。  
+-   時刻が存在するが、受信側が時刻を格納できない場合、時刻部分は無視されます。  
   
--   日付が存在するが、受信者が日付を保存できない場合、日付コンポーネントは無視されます。  
+-   日付が存在するが、受信側が日付を格納できない場合、日付部分は無視されます。  
   
 -   C データ型から SQL データ型に変換する際に秒または秒の小数部の切り捨てが発生すると、"Datetime フィールド オーバーフロー" というメッセージで SQLSTATE 22008 の診断レコードが生成されます。  
   
@@ -61,6 +61,6 @@ ms.locfileid: "81301733"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の日付型または時刻型から C 型に変換する際に考慮する問題を示します。  
   
 ## <a name="see-also"></a>参照  
- [日付と時刻 ODBC&#41;&#40;改善](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [ODBC&#41;&#40;の日付と時刻の改善](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: カラムワイズバインディング |マイクロソフトドキュメント
+title: 列方向のバインド |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,20 +15,20 @@ ms.assetid: 86d37637-3a25-455d-9c82-a0d7bff8d70d
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 538f225de2e08adcd7fea8a27edea35dc4b4e17f
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299152"
 ---
 # <a name="column-wise-binding"></a>列方向のバインド
-列方向のバインドを使用する場合、アプリケーションは、データが返される各列に 1 つまたは 2 つの配列をバインドします。 最初の配列はデータ値を保持し、2 番目の配列は長さ/インジケーター バッファーを保持します。 標識と長さの値は、SQL_DESC_INDICATOR_PTRとSQL_DESC_OCTET_LENGTH_PTR記述子フィールドを異なる値に設定することによって、別々のバッファーに保管できます。これが行われた場合、3 番目の配列がバインドされます。 各配列には、行セットに含まれる行と同じ数の要素が含まれます。  
+列方向のバインドを使用する場合、アプリケーションは、データが返される各列に1つまたは2つ (場合によっては3つの配列) をバインドします。 最初の配列はデータ値を保持し、2番目の配列は長さ/インジケーターバッファーを保持します。 SQL_DESC_INDICATOR_PTR と SQL_DESC_OCTET_LENGTH_PTR の記述子フィールドを異なる値に設定することにより、インジケーターと長さの値を別々のバッファーに格納できます。これを実行すると、3番目の配列がバインドされます。 各配列には、行セット内の行と同じ数の要素が含まれています。  
   
- アプリケーションは、SQL_ATTR_ROW_BIND_TYPE ステートメント属性を使用して列方向のバインドを使用していることを宣言します。 ドライバーは、各配列の連続した要素の各行のデータを返します。 次の図は、列方向のバインドのしくみを示しています。  
+ アプリケーションは、パラメーターセットバッファーではなく、行セットバッファーのバインドの種類を決定する SQL_ATTR_ROW_BIND_TYPE statement 属性と共に列方向のバインディングを使用していることを宣言します。 ドライバーは、各行のデータを各配列の連続する要素に返します。 次の図は、列方向のバインドのしくみを示しています。  
   
- ![列&#45;3 つの列の賢明なバインド](../../../odbc/reference/develop-app/media/pr21.gif "pr21")  
+ ![列&#45;3 つの列の一方向のバインド](../../../odbc/reference/develop-app/media/pr21.gif "pr21")  
   
- たとえば、次のコードは、10 要素の配列を OrderID、SalesPerson、および Status 列にバインドします。  
+ たとえば、次のコードは、10要素の配列を OrderID、販売員、および状態の各列にバインドします。  
   
 ```  
 #define ROW_ARRAY_SIZE 10  

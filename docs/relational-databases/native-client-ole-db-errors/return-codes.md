@@ -24,10 +24,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 09056c9d4964ad10b2b25f63ef5991a1a7742cab
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301030"
 ---
 # <a name="return-codes"></a>リターン コード
@@ -37,15 +37,15 @@ ms.locfileid: "81301030"
   
  OLE DB のリターン コードの詳細については、「[リターン コード (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=101631)」を参照してください。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアント OLE DB プロバイダーのメンバー関数がS_OK返すとき、関数は成功しました。  
+ Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB プロバイダーのメンバー関数が S_OK を返すと、関数は成功します。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアント OLE DB プロバイダーのメンバー関数がS_OKを返さない場合、OLE/COM HRESULT アンパック失敗およびIS_ERROR マクロは、関数の全体的な成功または失敗を決定できます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのメンバー関数が S_OK を返さない場合、OLE/COM HRESULT 展開に失敗し、IS_ERROR マクロは関数の全体的な成功または失敗を判断できます。  
   
- FAILED またはIS_ERRORが TRUE[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を返した場合、ネイティブ クライアント OLE DB プロバイダー コンシューマーは、メンバー関数の実行が失敗したことを保証します。 失敗またはIS_ERRORが FALSE を返し、HRESULT がS_OK[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と等しくない場合、ネイティブ クライアント OLE DB プロバイダー コンシューマーは、関数が何らかの意味で成功したことを保証します。 コンシューマは、ネイティブ クライアントの OLE DB プロバイダ エラー[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インターフェイスから、この "成功した情報" の返しに関する詳細情報を取得できます。 また、関数が明確に失敗した場合 (FAILED マクロが TRUE を返す)、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]拡張エラー情報はネイティブ クライアント OLE DB プロバイダーのエラー インターフェイスから取得できます。  
+ 失敗した場合、または IS_ERROR [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が TRUE を返した場合、Native Client OLE DB プロバイダーのコンシューマーは、メンバー関数の実行が失敗したことを保証します。 失敗した場合、または IS_ERROR が FALSE を返し、HRESULT が[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] S_OK と一致しない場合、Native Client OLE DB プロバイダーコンシューマーは、何らかの意味で関数が成功したことを保証します。 コンシューマーは、Native Client OLE DB プロバイダーのエラーインターフェイスから、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]この "情報で成功" を返す詳細情報を取得できます。 また、関数が明確に失敗した場合 (失敗したマクロが TRUE を返した場合) は、Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーのエラーインターフェイスから拡張エラー情報を取得できます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアント OLE DB プロバイダー コンシューマーは、一般的に"情報を使用して成功" HRESULT を返すDB_S_ERRORSOCCURREDに遭遇します。 通常、DB_S_ERRORSOCCURRED を返すメンバー関数では、コンシューマーに状態値を提供するパラメーターが 1 つ以上定義されています。 コンシューマーは状態値パラメーターに返される情報以外のエラー情報を取得できない場合があるので、状態値が提供された場合にこの値を取得できるアプリケーション ロジックを実装することをお勧めします。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーのコンシューマーは、通常、"情報による成功" という HRESULT を返す DB_S_ERRORSOCCURRED に遭遇します。 通常、DB_S_ERRORSOCCURRED を返すメンバー関数では、コンシューマーに状態値を提供するパラメーターが 1 つ以上定義されています。 コンシューマーは状態値パラメーターに返される情報以外のエラー情報を取得できない場合があるので、状態値が提供された場合にこの値を取得できるアプリケーション ロジックを実装することをお勧めします。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアント OLE DB プロバイダーのメンバー関数は、S_FALSE成功コードを返しません。 ネイティブ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアント OLE DB プロバイダーのメンバー関数はすべて、常に成功を示すS_OK返します。  
+ Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーのメンバー関数は、成功コード S_FALSE を返しません。 すべて[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の Native Client OLE DB プロバイダーのメンバー関数は、成功を示すために常に S_OK を返します。  
   
 ## <a name="see-also"></a>参照  
  [エラー](../../relational-databases/native-client-ole-db-errors/errors.md)  

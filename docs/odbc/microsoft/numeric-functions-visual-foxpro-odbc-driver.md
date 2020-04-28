@@ -1,5 +1,5 @@
 ---
-title: 数値関数 (ビジュアル フォックスプロ ODBC ドライバ) |マイクロソフトドキュメント
+title: 数値関数 (Visual FoxPro ODBC ドライバー) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,42 +16,42 @@ ms.assetid: 7caab48e-cbb5-4bbc-a09b-5cf902e5bc45
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: d3993a9a1b2412cb15229f2763c7c3b38f6b7862
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298162"
 ---
 # <a name="numeric-functions-visual-foxpro-odbc-driver"></a>数値関数 (Visual FoxPro ODBC ドライバー)
-次の表は、ビジュアル フォックスプロ ODBC ドライバーでサポートされている ODBC 数値関数を示しています。同じ関数の Visual FoxPro 文法が ODBC 構文と異なる場合は、対応するビジュアル FoxPro が一覧表示されます。  
+次の表では、Visual FoxPro ODBC ドライバーでサポートされている ODBC 数値関数について説明します。同じ関数の Visual FoxPro 文法が ODBC 構文と異なる場合は、Visual FoxPro と同等のものが表示されます。  
   
-|ODBC 文法|ビジュアルフォックスプロ文法|  
+|ODBC 文法|Visual FoxPro の文法|  
 |------------------|---------------------------|  
 |ABS *(numeric_exp)*||  
-|アコス *(float_exp)*||  
-|アシン *(float_exp)*||  
-|アタン *(float_exp)*||  
-|ATAN2 *(float_exp1、 float_exp2)*|ATN2 (*float_exp1, float_exp2*)|  
+|ACOS *(float_exp)*||  
+|アークサイン *(float_exp)*||  
+|ATAN *(float_exp)*||  
+|ATAN2 *(float_exp1、float_exp2)*|ATN2 (*float_exp1、float_exp2*)|  
 |天井 *(numeric_exp)*||  
-|コス *(float_exp)*||  
+|COS *(float_exp)*||  
 |COT *(float_exp)*||  
 |度 *(numeric_exp)*|RTOD *(numeric_exp)*|  
 |EXP *(float_exp)*||  
-|フロア *(numeric_exp)*||  
+|FLOOR *(numeric_exp)*||  
 |ログ *(float_exp)*||  
-|ログ10 *(float_exp)*||  
+|LOG10 *(float_exp)*||  
 |MOD *(integer_exp1、integer_exp2)*||  
-|PI *( )*||  
+|PI *()*||  
 |ラジアン *(numeric_exp)*|DTOR *(numeric_exp)*|  
-|ランド *([integer_exp])*||  
-|ラウンド *(numeric_exp、integer_exp)*||  
-|記号 *(numeric_exp)*||  
-|罪 *(float_exp)*||  
+|RAND *([integer_exp])*||  
+|ROUND *(numeric_exp、integer_exp)*||  
+|SIGN *(numeric_exp)*||  
+|SIN *(float_exp)*||  
 |SQRT *(float_exp)*||  
-|タン *(float_exp)*||  
+|TAN *(float_exp)*||  
   
  次の数値関数はサポートされていません。  
   
- パワー *(numeric_exp、integer_exp)*  
+ 電源 *(numeric_exp、integer_exp)*  
   
- 切り捨て *(numeric_exp、integer_exp)*
+ TRUNCATE *(numeric_exp、integer_exp)*

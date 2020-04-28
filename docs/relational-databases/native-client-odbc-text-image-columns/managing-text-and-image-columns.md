@@ -1,5 +1,5 @@
 ---
-title: テキスト列と画像列の管理 |マイクロソフトドキュメント
+title: Text 列と Image 列の管理 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,18 +22,18 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d3ac58e59f66dd107a9523a42f5647c90b4fb737
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81297719"
 ---
 # <a name="managing-text-and-image-columns"></a>text 列と image 列の管理
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**text**、 **ntext**、および**image**データ (long データとも呼ばれる) は、文字型またはバイナリ文字列データ型で、**文字** **、varchar**、**バイナリ**、または**varbinary**の各列に収まるには大きすぎるデータ値を保持できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**テキスト**データ型は ODBC SQL_LONGVARCHAR データ型にマップされます。**ntext**はSQL_WLONGVARCHARにマップされます。SQL_LONGVARBINARYに**画像**マップを作成します。 長いドキュメントや大きなビットマップなど、データ アイテムの中には大きすぎて適切にメモリに読み込むことができないものもあります。 ネイティブ クライアント ODBC[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ドライバーは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]連続した部分から長いデータを取得する、アプリケーションは[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)を呼び出します。 長いデータを順次に送信するために、アプリケーションは[SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md)を呼び出すことができます。 実行時にデータ送信に使われるパラメーターを、実行時データ パラメーターと呼びます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**text**、 **ntext**、および**image**データ (長いデータとも呼ばれます) は、 **char**、 **varchar**、 **binary**、または**varbinary**型の列に格納するデータ値が大きすぎる可能性がある文字またはバイナリ文字列データ型です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Text**データ型は、ODBC の SQL_LONGVARCHAR データ型にマップされます。**ntext**は SQL_WLONGVARCHAR にマップされるおよび**イメージ**は SQL_LONGVARBINARY にマップされます。 長いドキュメントや大きなビットマップなど、データ アイテムの中には大きすぎて適切にメモリに読み込むことができないものもあります。 シーケンシャルな部分から[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]長いデータを取得するため[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に、Native Client ODBC ドライバーを使用すると、アプリケーションは[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)を呼び出すことができます。 長いデータをシーケンシャルな部分に送信するために、アプリケーションは[Sqlputdata](../../relational-databases/native-client-odbc-api/sqlputdata.md)を呼び出すことができます。 実行時にデータ送信に使われるパラメーターを、実行時データ パラメーターと呼びます。  
   
- アプリケーションは **、SQLPutData**または**SQLGetData**を使用して、実際には任意の種類のデータ (長いデータだけでなく) を書き込みまたは取得できますが、**文字**データと**バイナリ**データのみを部分的に送信または取得できます。 ただし、データが 1 つのバッファーに収まるほど小さい場合は、通常 **、SQLPutData**または**SQLGetData**を使用する理由はありません。 バッファーをパラメーターまたは列にバインドする方がはるかに簡単です。  
+ アプリケーションでは、 **Sqlputdata**または**SQLGetData**を使用して (長いデータだけでなく) 任意の種類のデータを実際に書き込んだり、取得したりできます。ただし、部分では、**文字**と**バイナリ**データだけを送信または取得できます。 ただし、データが1つのバッファーに収まらない場合は、通常、 **Sqlputdata**または**SQLGetData**を使用する必要はありません。 バッファーをパラメーターまたは列にバインドする方がはるかに簡単です。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

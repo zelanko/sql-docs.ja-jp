@@ -1,5 +1,5 @@
 ---
-title: 関数 |マイクロソフトドキュメント
+title: SQLAllocConnect 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,21 +20,21 @@ ms.assetid: ca119958-ff72-42d4-b0ac-b1ca3212c705
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: b9da06f4fe7f7f3e69a0e3a52c17c38e639caf80
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298762"
 ---
 # <a name="sqlallocconnect-function"></a>SQLAllocConnect 関数
-**適合 性**  
- バージョン導入: ODBC 1.0 標準準拠: 非推奨  
+**互換性**  
+ 導入されたバージョン: ODBC 1.0 標準準拠: 非推奨  
   
  **まとめ**  
- ODBC 3 で。*x*、ODBC 2 を指定します。*x*関数**SQLAllocConnect**が**SQLAllocHandle**に置き換えられました。 詳細については、「 [SQLAllocHandle 関数](../../../odbc/reference/syntax/sqlallochandle-function.md)」を参照してください。  
+ ODBC 3 の場合。*x*、ODBC 2。*x*関数**sqlallocconnect**は**SQLAllocHandle**に置き換えられました。 詳細については、「 [SQLAllocHandle 関数](../../../odbc/reference/syntax/sqlallochandle-function.md)」を参照してください。  
   
 > [!NOTE]  
->  ドライバー マネージャーは、ODBC 2 のときにこの関数をマップする方法の詳細について。*x*アプリケーションは ODBC 3 で動作しています。*x*ドライバーについては、「付録 G: 下位互換性のためのドライバーのガイドライン」の[「非推奨関数のマッピング](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)」を参照してください。  
+>  ドライバーマネージャーが ODBC 2 の場合にこの関数をマップする方法の詳細については、「」を参照してください。*x*アプリケーションは ODBC 3 を使用して動作しています。*x*ドライバー、「付録 G: 旧バージョンとの互換性のためのドライバーガイドライン」の「[非推奨の関数のマッピング](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)   

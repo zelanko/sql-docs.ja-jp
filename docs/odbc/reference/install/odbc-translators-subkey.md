@@ -1,5 +1,5 @@
 ---
-title: ODBC トランスレータ サブキー |マイクロソフトドキュメント
+title: ODBC トランスレーターサブキー |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,22 +15,22 @@ ms.assetid: 6b170f1f-e263-4aac-9d49-8d0ca0470ca2
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 617416adfcddfbf041c48acbf83cb9589e34ae27
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81296222"
 ---
 # <a name="odbc-translators-subkey"></a>ODBC トランスレーターのサブキー
-ODBC トランスレータ サブキーの下の値には、インストールされているトランスレータが一覧表示されます。 これらの値の形式を次の表に示します。  
+[ODBC トランスレーター] サブキーの下の値には、インストールされている翻訳者が一覧表示されます。 これらの値の形式を次の表に示します。  
   
-|名前|データ型|Data|  
+|名前|データの種類|データ|  
 |----------|---------------|----------|  
-|*翻訳者-desc*|REG_SZ|**インストール済み**|  
+|*変換プログラム-desc*|REG_SZ|**インストール済み**|  
   
- *トランスレータ-desc*名は、トランスレータ開発者によって定義されます。  
+ *翻訳者 desc*の名前は、translator 開発者によって定義されます。  
   
- たとえば、あるユーザーが Microsoft ® コード ページトランスレータとカスタム ASCII を EBCDIC トランスレータにインストールしたとします。 ODBC トランスレータ サブキーの下の値は次のようになります。  
+ たとえば、ユーザーが Microsoft®コードページ変換プログラムをインストールしているとします。また、カスタム ASCII to EBCDIC translator がインストールされているとします。 ODBC トランスレーターサブキーの下の値は、次のようになります。  
   
 ```  
 MS Code Page Translator: REG_SZ : Installed  

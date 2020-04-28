@@ -1,5 +1,5 @@
 ---
-title: ステートメント パラメータを使用する |マイクロソフトドキュメント
+title: ステートメントのパラメーターを使用する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,10 +20,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 74cd70bcd9107d68551dc3f82eb1e01f76a549b4
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81297903"
 ---
 # <a name="using-statement-parameters"></a>ステートメント パラメーターの使用
@@ -35,9 +35,9 @@ ms.locfileid: "81297903"
   
 -   クエリ条件を作成する際のユーザーとの対話を強化する。  
   
--   **テキスト** **、ntext**、**およびイメージ**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データと -固有の C データ型を管理します。  
+-   **Text**、 **ntext**、および**Image**データおよび[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]特定の C データ型を管理します。  
   
- たとえば、**パーツ**テーブルには **、PartID**、**説明**、価格 という名前の列**があります**。 パラメーターを使用しないで部品を追加するには、次のような SQL ステートメントを構築する必要があります。  
+ たとえば、 **Parts**テーブルには、 **PartID**、 **Description**、および**Price**という名前の列があります。 パラメーターを使用しないで部品を追加するには、次のような SQL ステートメントを構築する必要があります。  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (2100, 'Drive shaft', 50.00)  

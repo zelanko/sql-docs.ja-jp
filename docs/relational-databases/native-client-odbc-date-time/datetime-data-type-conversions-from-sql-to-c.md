@@ -1,5 +1,5 @@
 ---
-title: SQL から C への変換 |マイクロソフトドキュメント
+title: SQL から C への変換 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 83e4a72ba995d4fff796cdf8ec081a9ef9828936
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301759"
 ---
 # <a name="datetime-data-type-conversions-from-sql-to-c"></a>datetime データ型の SQL から C への変換
@@ -30,12 +30,12 @@ ms.locfileid: "81301759"
 ||||||||||  
 |-|-|-|-|-|-|-|-|-|  
 ||SQL_C_DATE|SQL_C_TIME|SQL_C_TIMESTAMP|SQL_C_SS_TIME2|SQL_C_SS_TIMESTAMPOFFSET|SQL_C_BINARY|SQL_C_CHAR|SQL_C_WCHAR|  
-|SQL_CHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|1|1|1|  
-|SQL_WCHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|1|1|1|  
-|SQL_TYPE_DATE|[OK]|12|13|12|13,23|14|16|16|  
-|SQL_SS_TIME2|12|8|15|[OK]|10,23|17|16|16|  
-|SQL_TYPE_TIMESTAMP|18|7,8|[OK]|7|23|19|16|16|  
-|SQL_SS_TIMESTAMPOFFSET|18,22|7,8,20|20|7,20|[OK]|21|16|16|  
+|SQL_CHAR|2、3、4、5|2、3、6、7、8|2、3、9、10、11|2、3、6、7|2、3、9、10、11|1|1|1|  
+|SQL_WCHAR|2、3、4、5|2、3、6、7、8|2、3、9、10、11|2、3、6、7|2、3、9、10、11|1|1|1|  
+|SQL_TYPE_DATE|[OK]|12|13|12|13、23|14|16|16|  
+|SQL_SS_TIME2|12|8|15|[OK]|10、23|17|16|16|  
+|SQL_TYPE_TIMESTAMP|18|7、8|[OK]|7|23|19|16|16|  
+|SQL_SS_TIMESTAMPOFFSET|18、22|7、8、20|20|7、20|[OK]|21|16|16|  
   
 ## <a name="key-to-symbols"></a>記号の説明  
   
@@ -44,7 +44,7 @@ ms.locfileid: "81301759"
 |[OK]|変換の問題は発生しません。|  
 |1|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] より前の規則が適用されます。|  
 |2|先頭および末尾にあるスペースは無視されます。|  
-|3|文字列が日付、時刻、タイム ゾーン、またはタイム ゾーン オフセットに解析され、秒の小数部は 9 桁まで許容されます。 タイム ゾーン オフセットが解析されると、時刻はクライアントのタイム ゾーンに変換されます。 この変換中にエラーが発生すると、診断レコードが生成され、SQLSTATE 22018 とメッセージ 「日時フィールドオーバーフロー」が出されます。|  
+|3|文字列が日付、時刻、タイム ゾーン、またはタイム ゾーン オフセットに解析され、秒の小数部は 9 桁まで許容されます。 タイム ゾーン オフセットが解析されると、時刻はクライアントのタイム ゾーンに変換されます。 この変換中にエラーが発生した場合、"Datetime field overflow" というメッセージで SQLSTATE 22018 の診断レコードが生成されます。|  
 |4|値が日付、タイムスタンプ、またはタイムスタンプ オフセットの有効な値ではない場合、"キャストした文字コードが正しくありません" というメッセージで SQLSTATE 22018 の診断レコードが生成されます。|  
 |5|時刻が 0 以外の場合、"分数が切り捨てられました" というメッセージで SQLSTATE 01S07 の診断レコードが生成されます。|  
 |6|値が時刻、タイムスタンプ、またはタイムスタンプ オフセットの有効な値ではない場合、"キャストした文字コードが正しくありません" というメッセージで SQLSTATE 22018 の診断レコードが生成されます。|  
@@ -65,9 +65,9 @@ ms.locfileid: "81301759"
 |21|SQL_SS_TIMESTAMPOFFSET_STRUCT を格納するのにバッファーの大きさが十分である場合、値は SQL_SS_TIMESTAMPOFFSET_STRUCT として返されます。 それ以外の場合は、"数値が範囲を超えています" というメッセージで SQLSTATE 22003 の診断レコードが生成されます。|  
 |22|値がクライアントのタイム ゾーンに変換されてから、日付が抽出されます。 これにより、タイムスタンプ オフセットの種類によるその他の変換との一貫性が提供されます。 この変換中にエラーが発生すると、"Datetime フィールド オーバーフロー" というメッセージで SQLSTATE 22008 の診断レコードが生成されます。 これにより、単純な切り捨てによって取得された値とは異なる日付になることもあります。|  
   
- このトピックの表では、クライアントに返される型とバインドの型との間の変換について説明しています。 出力パラメーターの場合、SQLBindParameter で指定されたサーバーの種類がサーバー上の実際の型と一致しない場合、暗黙的な変換がサーバーによって実行され、クライアントに返される型は SQLBindParameter で指定された型と一致します。 この結果、サーバーの変換ルールが上記の表に示した規則と異なる場合に、予期しない変換結果が生じる可能性があります。 たとえば、既定の日付を指定する必要がある場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では現在の日付ではなく 1900-1-1 が使用されます。  
+ このトピックの表では、クライアントに返される型とバインドの型との間の変換について説明しています。 出力パラメーターの場合、SQLBindParameter で指定されたサーバーの型がサーバー上の実際の型と一致しないと、サーバーによって暗黙的な変換が実行され、クライアントに返される型は SQLBindParameter によって指定された型と一致します。 これにより、サーバーの変換規則が前の表に記載されているものと異なる場合に、予期しない変換結果が発生する可能性があります。 たとえば、既定の日付を指定する必要がある場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では現在の日付ではなく 1900-1-1 が使用されます。  
   
 ## <a name="see-also"></a>参照  
- [日付と時刻 ODBC&#41;&#40;改善](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [ODBC&#41;&#40;の日付と時刻の改善](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

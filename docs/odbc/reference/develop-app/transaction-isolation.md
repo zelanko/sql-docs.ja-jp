@@ -1,5 +1,5 @@
 ---
-title: トランザクション分離 |マイクロソフトドキュメント
+title: トランザクション分離 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: 351bfe5c-3b26-4010-9b9c-22e796135f3b
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 11ece337b06632df82d81dbbc058ff120f25adb4
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298024"
 ---
 # <a name="transaction-isolation"></a>トランザクション分離
-*トランザクション分離*とは、複数の同時トランザクション間の対話の程度を指します。 これが重要な理由を確認するには、まず、シリアル化の考え方を見る必要があります。  
+*トランザクションの分離*とは、複数の同時実行トランザクション間の相互作用の程度を指します。 これが重要な理由を確認するには、まず、直列化の概念を確認する必要があります。  
   
  このセクションでは、次のトピックを扱います。  
   

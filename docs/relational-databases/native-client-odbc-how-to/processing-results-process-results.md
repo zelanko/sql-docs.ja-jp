@@ -1,5 +1,5 @@
 ---
-title: プロセス結果 (ODBC) |マイクロソフトドキュメント
+title: 結果の処理 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -14,16 +14,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: de9adbcc2d89895a4162b5c7f7b2921f024d03e7
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300404"
 ---
 # <a name="processing-results---process-results"></a>結果の処理 - 処理結果
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-ODBC アプリケーションでの結果の処理には、まず結果セットの特性を判別し、次に[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)または[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)を使用してデータをプログラム変数に取得します。  
+ODBC アプリケーションでの結果の処理では、最初に結果セットの特性を判断し、次に[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)または[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)のいずれかを使用してプログラム変数にデータを取得します。  
   
 ### <a name="to-process-results"></a>結果を処理するには  
   
@@ -62,6 +62,6 @@ ODBC アプリケーションでの結果の処理には、まず結果セット
 >  [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) によって SQL_NO_DATA が返される前に結果セットの処理を取り消すには、[SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md) を呼び出します。  
   
 ## <a name="see-also"></a>参照  
-[ODBC&#41;&#40;結果セット情報を取得する](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
+[ODBC&#41;&#40;結果セットの情報を取得します。](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
   
   

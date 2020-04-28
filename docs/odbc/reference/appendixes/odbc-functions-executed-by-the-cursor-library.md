@@ -1,5 +1,5 @@
 ---
-title: カーソルライブラリによって実行される ODBC 関数 |マイクロソフトドキュメント
+title: カーソルライブラリによって実行される ODBC 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,32 +16,32 @@ ms.assetid: 2f1d3386-7e59-4d55-a5b4-3440b61343a3
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 70fb48a8764a913ea4c2376c1a44bcd8712e7d29
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298232"
 ---
 # <a name="odbc-functions-executed-by-the-cursor-library"></a>カーソル ライブラリによって実行される ODBC 関数
 > [!IMPORTANT]  
->  この機能は、今後のバージョンの Windows で削除される予定です。 新しい開発作業でこの機能を使用することは避け、現在この機能を使用しているアプリケーションを変更する予定です。 マイクロソフトでは、ドライバーのカーソル機能を使用することをお勧めします。  
+>  この機能は、今後のバージョンの Windows では削除される予定です。 新しい開発作業ではこの機能の使用を避け、現在この機能を使用しているアプリケーションの変更を検討してください。 Microsoft では、ドライバーのカーソル機能を使用することをお勧めします。  
   
- カーソルライブラリは、次の機能を実行します。 アプリケーションがこの一覧の関数を呼び出すと、ドライバー マネージャーは、ドライバーではなく、カーソル ライブラリを呼び出します。 カーソル ライブラリは、関数の実行時にドライバーを呼び出す場合があることに注意してください。  
+ カーソルライブラリでは、次の機能が実行されます。 アプリケーションがこの一覧の関数を呼び出すと、ドライバーマネージャーはドライバーではなくカーソルライブラリを呼び出します。 カーソルライブラリは、関数の実行時にドライバーを呼び出すことができることに注意してください。  
   
 |||  
 |-|-|  
-|**SQLBindCol**|**オプションを指定します。**|  
-|**パラム**|**SQLNativeSql**|  
+|**SQLBindCol**|**SQLGetStmtOption**|  
+|**SQLBindParam**|**SQLNativeSql**|  
 |**SQLBindParameter**|**SQLNumParams**|  
-|**SQLCloseCursor**|**オプション**|  
+|**SQLCloseCursor**|**SQLParamOptions**|  
 |**SQLEndTran**|**SQLRowCount**|  
-|**フェッチ**|**SQLSetConnectAttr**|  
-|**SQLFetchScroll**|**オプションを指定します。**|  
+|**SQLExtendedFetch**|**SQLSetConnectAttr**|  
+|**SQLFetchScroll**|**SQLSetConnectOption**|  
 |**SQLFreeHandle**|**SQLSetDescField**|  
 |**SQLFreeStmt**|**SQLSetDescRec**|  
 |**SQLGetData**|**SQLSetPos**|  
-|**SQLGetDescField**|**スクロールオプション**|  
+|**SQLGetDescField**|**SQLSetScrollOptions**|  
 |**SQLGetDescRec**|**SQLSetStmtAttr**|  
-|**SQLGetFunctions**|**オプションを設定します。**|  
-|**SQLGetInfo**|**トランスアクト**|  
+|**SQLGetFunctions**|**SQLSetStmtOption**|  
+|**SQLGetInfo**|**SQLTransact**|  
 |**SQLGetStmtAttr**||

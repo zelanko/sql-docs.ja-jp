@@ -1,5 +1,5 @@
 ---
-title: ステートメントオプション |マイクロソフトドキュメント
+title: ステートメントのオプション |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,26 +15,26 @@ ms.assetid: cd73b769-c8b5-43e0-9f80-b3011b7a6162
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: ca40765dff98e9102fbe36e88c7e79535f311d97
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299212"
 ---
 # <a name="statement-options"></a>ステートメントのオプション
 > [!IMPORTANT]  
->  この機能は、今後のバージョンの Windows で削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、Oracle によって提供される ODBC ドライバーを使用します。  
+>  この機能は、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、Oracle によって提供される ODBC ドライバーを使用してください。  
   
- これらのオプションを使用すると、アプリケーション内で特定の実行ステートメントをカスタマイズできます。  
+ これらのオプションを使用すると、アプリケーション内の特定の実行ステートメントをカスタマイズできます。  
   
-|ステートメントオプション|Notes|  
+|Statement オプション|メモ|  
 |----------------------|-----------|  
-|SQL_BIND_TYPE|2,147,483,647 バイトまたは使用可能なメモリを超えることはできません。|  
-|SQL_CONCURRENCY|許容値については、「カーソルの[種類」および「同時実行の組み合わせ](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md)」を参照してください。|  
-|SQL_CURSOR_TYPE|ドライバはSQL_CURSOR_DYNAMICを許可しません。 詳細については[、「SQL セットスクロール オプション](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md)」を参照してください。 許容値については、「カーソルの[種類」および「同時実行の組み合わせ](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md)」を参照してください。|  
-|SQL_GET_BOOKMARK|現在のレコード番号のブックマークである 32 ビット整数値を返します。 取得のみ。設定できません。|  
-|SQL_KEYSET_SIZE|0 に設定できます。|  
-|SQL_MAX_ROWS|結果セットから返される最大行数。|  
-|SQL_ROW_NUMBER|結果セット内の現在の行の位置を指定する 32 ビットの整数を返します。 取得のみ。設定できません。|  
-|SQL_ROWSET_SIZE|4,294,967,296 行を超えることはできません。ただし、要求を処理するためには、コンピュータに十分な仮想メモリが必要です。|  
-|SQL_USE_BOOKMARKS|SQL_USE_BOOKMARKSをSQL_UB_ONに設定し、固定長のブックマークを公開します。|
+|SQL_BIND_TYPE|2147483647バイトまたは使用可能なメモリを超えることはできません。|  
+|SQL_CONCURRENCY|使用できる値については、「[カーソルの種類と同時実行の組み合わせ](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md)」を参照してください。|  
+|SQL_CURSOR_TYPE|ドライバーで SQL_CURSOR_DYNAMIC が許可されていません。 詳細については、「 [SQLSetScrollOptions](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md) 」を参照してください。 使用できる値については、「[カーソルの種類と同時実行の組み合わせ](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md)」を参照してください。|  
+|SQL_GET_BOOKMARK|現在のレコード番号のブックマークである32ビット整数値を返します。 Get のみ。を設定できません。|  
+|SQL_KEYSET_SIZE|0のみに設定できます。|  
+|SQL_MAX_ROWS|結果セットから返される行の最大数。|  
+|SQL_ROW_NUMBER|結果セット内の現在の行の位置を指定する32ビット整数を返します。 Get のみ。を設定できません。|  
+|SQL_ROWSET_SIZE|4294967296行を超えることはできません。ただし、要求を処理するには、コンピューターに十分な仮想メモリが必要です。|  
+|SQL_USE_BOOKMARKS|SQL_UB_ON に SQL_USE_BOOKMARKS を設定し、固定長のブックマークを公開することをサポートしています。|

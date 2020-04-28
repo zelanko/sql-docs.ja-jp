@@ -1,5 +1,5 @@
 ---
-title: ODBC エラーの処理 (ODBC) |マイクロソフトドキュメント
+title: ODBC エラーの処理 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 52c744a096ea55a98aa00a1471f816a93f59c6b0
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300412"
 ---
 # <a name="process-odbc-errors-odbc"></a>ODBC エラーの処理 (ODBC)
@@ -37,15 +37,15 @@ ms.locfileid: "81300412"
 > [!IMPORTANT]  
 >  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
   
- AdventureWorks と呼ばれる ODBC データ ソース (既定のデータベースは AdventureWorks サンプル データベース) が必要です  (アドベンチャーワークスサンプルデータベースは[、Microsoft SQL Server サンプルおよびコミュニティプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホームページからダウンロードできます)。このデータ ソースは、オペレーティング システムによって提供される ODBC ドライバに基づいている必要があります (ドライバ名は "SQL Server" です)。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
+ AdventureWorks と呼ばれる ODBC データ ソース (既定のデータベースは AdventureWorks サンプル データベース) が必要です  (AdventureWorks サンプルデータベースは、 [Microsoft SQL Server のサンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホームページからダウンロードできます)。このデータソースは、オペレーティングシステムによって提供される ODBC ドライバーに基づいている必要があります (ドライバー名は "SQL Server")。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
   
  このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
   
- このサンプルで使用[!INCLUDE[tsql](../../includes/tsql-md.md)]するストアド プロシージャを作成するには、最初の ( ) コードの一覧を実行します。  
+ 最初の ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) コードリストを実行して、このサンプルで使用するストアドプロシージャを作成します。  
   
  odbc32.lib を使用して 2 つ目の (C++) コード リストをコンパイルします。 次に、プログラムを実行します。  
   
- このサンプルで使用[!INCLUDE[tsql](../../includes/tsql-md.md)]するストアド プロシージャを削除するには、3 番目の ( ) コードの一覧を実行します。  
+ 3番目の[!INCLUDE[tsql](../../includes/tsql-md.md)]() コードリストを実行して、このサンプルで使用するストアドプロシージャを削除します。  
   
 ### <a name="code"></a>コード  
   

@@ -14,24 +14,24 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b07341dbf3beba66ee7ad6e7cc4861142792fa0c
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81297832"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>実行時データを使用したテーブル値パラメーターとしてのデータの送信 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  これは[、All in Memory](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md)プロシージャに似ていますが、テーブル値パラメーターには実行時データを使用します。  
+  これは、「[すべてのメモリ内」](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md)の手順に似ていますが、テーブル値パラメーターの実行時データを使用します。  
   
- テーブル値パラメーターを示す別のサンプルについては、「 [ODBC&#41;のテーブル値パラメーター&#40;使用](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)」を参照してください。  
+ テーブル値パラメーターを示す別のサンプルについては、「[テーブル値パラメーターの使用 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)」を参照してください。  
   
- この例では、SQL 実行または SQLExecDirect が呼び出されると、ドライバーはSQL_NEED_DATAを返します。 その後、アプリケーションは、ドライバーがSQL_NEED_DATA以外の値を返すまで、SQLParamData を繰り返し呼び出します。 ドライバーは、データを要求しているパラメーターをアプリケーションに通知する*ParameterValuePtr*を返します。 アプリケーションは、次の呼び出しの前にパラメーター データを指定する SQLPutData を呼び出します。 テーブル値パラメーターの場合、SQLPutData の呼び出しは、ドライバーに対して準備した行数 (この例では常に 1) を示します。 テーブル値のすべての行がドライバに渡されると、SQLPutData が呼び出されて、0 行が使用可能であることを示します。  
+ この例では、SQLExecute または SQLExecDirect が呼び出されると、ドライバーは SQL_NEED_DATA を返します。 次に、アプリケーションは、ドライバーが SQL_NEED_DATA 以外の値を返すまで SQLParamData を繰り返し呼び出します。 ドライバーは、 *Parametervalueptr*を返して、データを要求しているパラメーターをアプリケーションに通知します。 アプリケーションは SQLPutData を呼び出して、Sqlputdata の次の呼び出しの前にパラメーターデータを指定します。 テーブル値パラメーターの場合、SQLPutData の呼び出しは、ドライバーに対して準備された行数を示します (この例では、常に 1)。 テーブル値のすべての行がドライバーに渡されると、SQLPutData が呼び出され、0行が使用可能であることが示されます。  
   
- テーブル値の行内では、実行時データの値を使用できます。 SQLParamData によって返される値は、ドライバーが必要とする値をアプリケーションに通知します。 通常のパラメーター値と同様に、SQLPutData は、文字またはバイナリー表値の列値に対して 1 回以上呼び出すことができます。 これにより、アプリケーションでは大きな値を個別に渡すことができます。  
+ テーブル値の行内では、実行時データの値を使用できます。 SQLParamData によって返される値は、ドライバーが必要とする値をアプリケーションに通知します。 通常のパラメーター値と同様に、SQLPutData は、文字またはバイナリテーブル値列の値に対して1回以上呼び出すことができます。 これにより、アプリケーションでは大きな値を個別に渡すことができます。  
   
- テーブル値に対して SQLPutData が呼び出されると、使用可能な行数 (この例では常に 1) に*DataPtr*が使用されます。 *StrLen_or_IndPtr*は常に 0 である必要があります。 テーブル値のすべての行が渡されると *、DataPtr*値 0 を指定して SQLPutData が呼び出されます。  
+ SQLPutData がテーブル値に対して呼び出されると、使用可能な行数 (この例では常に 1) に対して*DataPtr*が使用されます。 *StrLen_or_IndPtr*は常に0である必要があります。 テーブル値のすべての行が渡されると、SQLPutData は*DataPtr*値0で呼び出されます。  
   
 ## <a name="prerequisite"></a>前提条件  
  この手順では、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] がサーバーで実行されていることを前提としています。  
@@ -70,7 +70,7 @@ from @Items
     SQLPOINTER ParamId;  
     ```  
   
-2.  パラメーターをバインドします。 *ColumnSize*は 1 で、一度に 1 行が渡されることを意味します。  
+2.  パラメーターをバインドします。 *Columnsize*は1で、一度に1つの行だけが渡されることを意味します。  
   
     ```sql
     // Bind parameters for call to TVPOrderEntryByRow.  
@@ -125,14 +125,14 @@ from @Items
     strcpy_s((char *) CustCode ,sizeof(CustCode), "CUST1"); cbCustCode = SQL_NTS;  
     ```  
   
-5.  プロシージャを呼び出します。 テーブル値パラメーターは実行時のデータ パラメーターであるため、SQLExecDirect はSQL_NEED_DATAを返します。  
+5.  プロシージャを呼び出します。 SQLExecDirect は SQL_NEED_DATA を返します。これは、テーブル値パラメーターが実行時データパラメーターであるためです。  
   
     ```cpp
     // Call the procedure  
     r = SQLExecDirect(hstmt, (SQLCHAR *) "{call TVPOrderEntry(?, ?, ?, ?)}",SQL_NTS);  
     ```  
   
-6.  実行時データ パラメーターのデータを指定します。 SQLParamData がテーブル値パラメーターの*ParameterValuePtr*を返す場合、アプリケーションは、テーブル値の次の行に列を準備する必要があります。 次に、アプリケーションは、使用可能な行数 (この例では 1) に設定された*DataPtr*を使用して SQLPutData を呼び出し *、StrLen_or_IndPtr* 0 に設定します。  
+6.  実行時データ パラメーターのデータを指定します。 SQLParamData がテーブル値パラメーターの*Parametervalueptr*を返す場合、アプリケーションはテーブル値の次の行または行の列を準備する必要があります。 次に、アプリケーションは、 *DataPtr*を使用可能な行数 (この例では 1) に設定し、を0に設定*StrLen_or_IndPtr*して sqlputdata を呼び出します。  
   
     ```cpp
     // Check if parameter data is required, and get the first parameter ID token  
@@ -187,7 +187,7 @@ from @Items
 ## <a name="example"></a>例  
   
 ### <a name="description"></a>説明  
- このサンプルでは、BCP.exe を使用してデータベースにデータを読み込む場合と同様に、SQLPutData の呼び出しごとに 1 行の行で行を使用できることを示します。  
+ このサンプルでは、BCP を使用してデータベースにデータを読み込む場合と同様に、ODBC TVP で、SQLPutData の呼び出しごとに1行の行ストリーミングを使用できることを示します。  
   
  サンプルをビルドする前に、接続文字列のサーバー名を変更してください。  
   
@@ -375,7 +375,7 @@ EXIT:
 ## <a name="example"></a>例  
   
 ### <a name="description"></a>説明  
- このサンプルでは、行ストリーミングを使用でき、SQLPutData の呼び出しごとに複数の行を ODBC TVP で使用できることを示します。  
+ このサンプルでは、BCP を使用してデータベースにデータを読み込む場合と同様に、ODBC TVP を使用して、SQLPutData の呼び出しごとに複数の行を使用できることを示します。  
   
  サンプルをビルドする前に、接続文字列のサーバー名を変更してください。  
   

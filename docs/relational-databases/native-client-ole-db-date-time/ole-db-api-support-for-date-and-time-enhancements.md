@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1ab4d4956f4a5c54807afd316242cd95ddf6ee7e
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300999"
 ---
 # <a name="ole-db-api-support-for-date-and-time-enhancements"></a>OLE DB API による機能強化された日付と時刻のサポート
@@ -23,10 +23,10 @@ ms.locfileid: "81300999"
 
   機能強化された日付や時刻をサポートする OLE DB API を次に示します。  
   
-|機能|説明|  
+|関数|説明|  
 |--------------|-----------------|  
 |IAccessor::CreateAccessor|アプリケーションで **datetime**、**datetime2**、**smalldatetime** 値を区別できるように、DBBINDING 構造体にフラグが追加されます。 詳細については、「[パラメーターと行セットのメタデータ](../../relational-databases/native-client-ole-db-date-time/metadata-parameter-and-rowset.md)」を参照してください。|  
-|IBCPSession::BCPColFmt|詳細については、「 [OLE DB および ODBC&#41;&#40;拡張された日付と時刻の種類に関する一括コピーの変更](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)」を参照してください。|  
+|IBCPSession::BCPColFmt|詳細については、「 [&#40;OLE DB および ODBC&#41;の拡張された日付/時刻型に対する一括コピーの変更](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)」を参照してください。|  
 |ICommandWithParameters::GetParameterInfo|詳細については、「[パラメーターと行セットのメタデータ](../../relational-databases/native-client-ole-db-date-time/metadata-parameter-and-rowset.md)」を参照してください。|  
 |ICommandWithParameters::SetParameterinfo|詳細については、「[パラメーターと行セットのメタデータ](../../relational-databases/native-client-ole-db-date-time/metadata-parameter-and-rowset.md)」を参照してください。|  
 |IColumnsRowset::GetColumnsRowset|詳細については、「[パラメーターと行セットのメタデータ](../../relational-databases/native-client-ole-db-date-time/metadata-parameter-and-rowset.md)」を参照してください。|  

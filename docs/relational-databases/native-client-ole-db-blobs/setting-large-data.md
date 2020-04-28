@@ -18,16 +18,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fde7a3fd5dadb59895c2edc643d7d482b89370ab
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81297691"
 ---
 # <a name="setting-large-data"></a>大きなデータの設定
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアント OLE DB プロバイダーを使用すると、コンシューマーストレージ オブジェクトへのポインターを渡すことによって BLOB データを設定できます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでは、コンシューマーストレージオブジェクトへのポインターを渡すことによって BLOB データを設定できます。  
   
  コンシューマーは、データを保持するストレージ オブジェクトを作成し、このストレージ オブジェクトへのポインターをプロバイダーに渡します。 次に、プロバイダーがコンシューマー ストレージ オブジェクトからデータを読み取り、BLOB 列に書き込みます。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "81297691"
 ## <a name="how-to-set-large-data"></a>大きなデータを設定する方法  
  コンシューマーは、独自のストレージ オブジェクトへのポインターを渡すために、BLOB 列の値をバインドするアクセサーを作成します。次に、**IRowsetChange::SetData** メソッドまたは **IRowsetChange::InsertRow** メソッドを呼び出します。 BLOB データを設定するには、次の手順を実行します。  
   
-1.  BLOB 列へのアクセス方法を説明する DBOBJECT 構造体を作成します。 DBOBJECT 構造体の*dwFlag*要素をSTGM_READに設定し *、iid*要素をIID_ISequentialStream (公開するインターフェイス) に設定します。  
+1.  BLOB 列へのアクセス方法を説明する DBOBJECT 構造体を作成します。 DBOBJECT 構造体の*Dwflag*要素を STGM_READ に設定し、 *iid*要素を IID_ISequentialStream (公開するインターフェイス) に設定します。  
   
 2.  行セットが更新可能になるように、DBPROPSET_ROWSET プロパティ グループのプロパティを設定します。  
   
@@ -721,7 +721,7 @@ Exit:
 ```  
   
 ## <a name="see-also"></a>参照  
- [BLOB と OLE オブジェクト](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
+ [Blob と OLE オブジェクト](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
  [大きな値をとるデータ型の使用](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

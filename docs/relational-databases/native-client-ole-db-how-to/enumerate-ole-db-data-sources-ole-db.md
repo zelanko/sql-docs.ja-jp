@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2f15092bd515ed16a470c854168b228d5445e3d6
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300952"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>OLE DB データ ソースの列挙 (OLE DB)
@@ -25,7 +25,7 @@ ms.locfileid: "81300952"
 
   このサンプルでは、列挙子オブジェクトを使用して、使用可能なデータ ソースを一覧表示する方法を示します。  
   
- SQLOLEDB 列挙子から参照できるデータ ソースを一覧表示するには、コンシューマーは[ISourcesRowset::GetSourcesRowset](https://go.microsoft.com/fwlink/?LinkId=120312)メソッドを呼び出します。 このメソッドは、現在表示されているデータ ソースに関する情報の行セットを返します。  
+ SQLOLEDB 列挙子に表示されるデータソースを一覧表示するために、コンシューマーは[isourcesrowset を:: GetSourcesRowset](https://go.microsoft.com/fwlink/?LinkId=120312)メソッドを呼び出します。 このメソッドは、現在表示されているデータ ソースに関する情報の行セットを返します。  
   
  使用しているネットワーク ライブラリに応じて、適切なドメインでデータ ソースが検索されます。 名前付きパイプの場合は、クライアントがログオンしたドメインになります。 AppleTalk の場合は、既定のゾーンになります。 SPX/IPX の場合は、バインダリ内にある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールの一覧になります。 Banyan VINES の場合は、ローカル ネットワークにある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールになります。 マルチプロトコルと TCP/IP ソケットはサポートされません。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "81300952"
 6.  **IRowset::GetData** を呼び出して、行の行セットのコピーからデータを取得し、そのデータを処理します。  
   
 ## <a name="example"></a>例  
- ole32.lib を使用して次の C++ コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数に sqlncli.h を含むディレクトリが含まれていることを確認します。  
+ ole32.lib を使用して次の C++ コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
   
 ```  
 // compile with: ole32.lib  

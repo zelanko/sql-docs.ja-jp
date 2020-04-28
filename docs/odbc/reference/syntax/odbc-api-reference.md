@@ -1,5 +1,5 @@
 ---
-title: ODBC API リファレンス |マイクロソフトドキュメント
+title: ODBC API リファレンス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,18 +12,18 @@ ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 6065db0ea99efaec11190902ec9268db63a6d255
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298936"
 ---
 # <a name="odbc-api-reference"></a>ODBC API リファレンス
-このセクションのトピックでは、各 ODBC 関数をアルファベット順に説明します。 各関数は、C プログラミング言語関数として定義されます。 説明には、次の内容が含まれます。  
+このセクションのトピックでは、各 ODBC 関数についてアルファベット順に説明します。 各関数は、C プログラミング言語の関数として定義されています。 説明には次のものがあります。  
   
 -   目的  
   
--   ODBC バージョン  
+-   ODBC のバージョン  
   
 -   標準 CLI 準拠レベル  
   
@@ -35,20 +35,20 @@ ms.locfileid: "81298936"
   
 -   診断  
   
--   使用および実装に関するコメント  
+-   使用法と実装に関するコメント  
   
--   コードの例  
+-   コード例  
   
 -   関連する関数への参照  
   
- 標準 CLI 準拠レベルは、ISO 92、オープングループ、ODBC、または非推奨のいずれかです。 オープングループは ISO 92 の純粋なスーパーセットであるため、ISO 92 準拠としてタグ付けされた関数は、オープングループバージョン 1 にも表示されます。 グループに準拠したオープンとしてタグ付けされた関数は、ODBC 3 にも表示されます。*x*、ODBC 3 を理由にします。*x*はオープングループバージョン1の純粋なスーパーセットです。 ODBC 準拠としてタグ付けされた関数は、どちらの標準にも表示されません。 非推奨としてタグ付けされた関数は、ODBC 3 では非推奨になりました。*x .*  
+ 標準 CLI 準拠レベルは、次のいずれかになります。 ISO 92、Open Group、ODBC、または非推奨です。 Open Group は ISO 92 の純粋なスーパーセットであるため、ISO 92-準拠としてタグ付けされた関数は、オープングループバージョン1でも表示されます。 Open Group 準拠としてタグ付けされた関数は、ODBC 3 にも表示されます。*x*(ODBC 3)。*x*は、オープングループバージョン1の純粋スーパーセットです。 ODBC 準拠としてタグ付けされた関数は、標準ではありません。 非推奨としてタグ付けされた関数は、ODBC 3 では非推奨となりました。*x*。  
   
- 診断情報の処理については[、SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)関数の説明を参照してください。 SQLSTATE 値に関連付けられたテキストは、条件の説明を提供するために含まれますが、特定のテキストを規定するものではありません。  
+ 診断情報の処理については、 [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)関数の説明を参照してください。 SQLSTATE 値に関連付けられたテキストは、条件の説明を提供するために含まれていますが、特定のテキストを指定するためのものではありません。  
   
 > [!NOTE]  
->  ODBC 関数に関するドライバー固有の情報については、ドライバーのセクションを参照してください。  
+>  ODBC 関数に関するドライバー固有の情報については、ドライバーの「」セクションを参照してください。  
   
- このセクションでは、以下の機能に関するトピックを示します。  
+ このセクションには、次の関数に関するトピックが含まれています。  
   
 -   [SQLAllocConnect 関数](../../../odbc/reference/syntax/sqlallocconnect-function.md)  
   

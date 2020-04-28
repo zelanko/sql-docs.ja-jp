@@ -14,16 +14,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 042dd929e2000000042618d84dc0195ec57a3e9c
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81297803"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>すべての値がメモリ内にある場合にテーブル値パラメーターとしてデータを送信 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  このトピックでは、すべての値がメモリ内にある場合に、データをテーブル値パラメーターとしてストアド プロシージャに送信する方法について説明します。 テーブル値パラメーターを示す別のサンプルについては、「 [ODBC&#41;のテーブル値パラメーター&#40;使用](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)」を参照してください。  
+  このトピックでは、すべての値がメモリ内にある場合に、データをテーブル値パラメーターとしてストアド プロシージャに送信する方法について説明します。 テーブル値パラメーターを示す別のサンプルについては、「[テーブル値パラメーターの使用 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)」を参照してください。  
   
 ## <a name="prerequisite"></a>前提条件  
  この手順では、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] がサーバーで実行されていることを前提としています。  
@@ -89,7 +89,7 @@ from @Items
        sizeof(OrdDate), &cbOrdDate);  
     ```  
   
-3.  第 2 段階として、テーブル値パラメーターの列をバインドします。 最初、テーブル値パラメーターの序数にフォーカスが設定されます。 その後、テーブル値の列は、ストアド プロシージャのパラメーターである場合と同じ方法で SQLBindParameter を使用してバインドされますが、パラメーター数値の列序数を使用します。 テーブル値パラメーターがまだある場合は、順番にフォーカスを設定し、その列をバインドします。 最後に、パラメーターのフォーカスが 0 にリセットされます。  
+3.  第 2 段階として、テーブル値パラメーターの列をバインドします。 最初、テーブル値パラメーターの序数にフォーカスが設定されます。 次に、テーブル値の列は、ストアドプロシージャのパラメーターである場合と同じように、SQLBindParameter を使用してバインドされます。ただし、ParameterNumber には列序数が使用されます。 テーブル値パラメーターがまだある場合は、順番にフォーカスを設定し、その列をバインドします。 最後に、パラメーターのフォーカスが 0 にリセットされます。  
   
     ```cpp
     // Bind columns for the table-valued parameter (param 2).  

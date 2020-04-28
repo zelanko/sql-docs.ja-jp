@@ -1,5 +1,5 @@
 ---
-title: ODBC ビジュアル フォックスプロ セットアップ ダイアログ ボックス |マイクロソフトドキュメント
+title: '[ODBC Visual FoxPro セットアップ] ダイアログボックス |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,51 +15,51 @@ ms.assetid: de020197-7f53-4643-9cbf-b7887ba88de9
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: ef7ac702a69342833c6dfffa0ffc9cdd0ac2857e
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298082"
 ---
 # <a name="odbc-visual-foxpro-setup-dialog-box"></a>ODBC Visual FoxPro セットアップ ダイアログ ボックス
-**ODBC ビジュアル フォックス プロのセットアップ**ダイアログ ボックスを追加またはビジュアル フォックスプロデータ ソースを変更することができます。  
+[ **ODBC Visual Foxpro セットアップ**] ダイアログボックスを使用すると、visual foxpro データソースを追加または変更できます。  
   
- ドライバをダウンロードするには、[ビジュアル フォックスプロ ODBC ドライバのダウンロード サイト](https://go.microsoft.com/fwlink/?LinkId=121318)を参照してください。  
+ ドライバーをダウンロードするには、 [Visual FOXPRO ODBC ドライバーのダウンロードサイト](https://go.microsoft.com/fwlink/?LinkId=121318)を参照してください。  
   
 ## <a name="dialog-box-options"></a>ダイアログ ボックス オプション  
- **データ ソース名**  
- データ ソースに使用する名前を入力します。  
+ **データソース名**  
+ データソースに使用する名前を入力します。  
   
  **説明**  
- データ ソースの説明を入力します。  
+ データソースの説明を入力します。  
   
  **データベースの種類**  
- データ ソースの接続先となるデータベースの種類を選択できます。  
+ データソースを接続するデータベースの種類を選択できます。  
   
- **ビジュアルフォックスプロデータベース (.DBC)**  
- データ ソースが Visual FoxPro データベース (.dbc ファイル) と[、データベース](../../odbc/microsoft/visual-foxpro-terminology.md)内のすべてのテーブルとローカル ビューに接続することを指定します。  
+ **Visual FoxPro データベース (。DBC**  
+ データソースが Visual FoxPro[データベース](../../odbc/microsoft/visual-foxpro-terminology.md)(dbc ファイル) と、データベース内のすべてのテーブルおよびローカルビューに接続することを指定します。  
   
  **フリーテーブルディレクトリ**  
- データ ソースが[空きテーブル](../../odbc/microsoft/visual-foxpro-terminology.md)のディレクトリに接続することを指定します。 同じディレクトリ内の[データベース](../../odbc/microsoft/visual-foxpro-terminology.md)テーブルは[、SQLColumns](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md)や[SQLTables](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md)などの ODBC カタログ関数によって無視されます。 データベース テーブルにアクセスするには、 SQL 実行および[SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md)を介して送信される[SQL](../../odbc/microsoft/sqlexecute-visual-foxpro-odbc-driver.md) SELECT ステートメントを使用します。  
+ データソースが[フリーテーブル](../../odbc/microsoft/visual-foxpro-terminology.md)のディレクトリに接続することを指定します。 [Sqlcolumns](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md)や[SQLCOLUMNS](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md)などの ODBC カタログ関数では、同じディレクトリ内のすべての[データベース](../../odbc/microsoft/visual-foxpro-terminology.md)テーブルが無視されます。 データベーステーブルには、 [Sqlexecute](../../odbc/microsoft/sqlexecute-visual-foxpro-odbc-driver.md)と[SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md)を通じて送信される SQL SELECT ステートメントを使用してアクセスできます。  
   
  **パス**  
- データ ソースが接続する空きテーブルのデータベースまたはディレクトリのパスと名前を表示します。  
+ データソースが接続するデータベースまたはフリーテーブルのディレクトリのパスと名前が表示されます。  
   
  **参照**  
- データ ソースに接続するデータベースまたはディレクトリをシステムおよびネットワークで検索できます。  
+ データソースを接続するデータベースまたはディレクトリのシステムとネットワークを検索できます。  
   
  **[オプション]**  
- ダイアログ ボックスを展開して、Visual FoxPro ODBC ドライバーのオプションを設定できるようにします。  
+ ダイアログボックスを展開して、Visual FoxPro ODBC ドライバーのオプションを設定できるようにします。  
   
-## <a name="driver"></a>Driver  
+## <a name="driver"></a>ドライバー  
  **照合順序**  
- フィールドが並べ替えられる順序。 デフォルトのシーケンスは、オペレーティング・システムの言語バージョンでサポートされているシーケンスを反映しています。 サポートされる照合シーケンスのリストについては[、SET COLLATE](../../odbc/microsoft/set-collate-command.md)を参照してください。  
+ フィールドの並べ替え順序。 既定のシーケンスは、使用しているオペレーティングシステムの言語バージョンでサポートされているシーケンスを反映しています。 サポートされている照合シーケンスの一覧については、「 [COLLATE の設定](../../odbc/microsoft/set-collate-command.md)」を参照してください。  
   
  **[Exclusive]**  
- このチェック ボックスをオンにすると、データ ソースを使用してデータにアクセスするときに、ドライバーは Visual FoxPro データベースを排他的に開きます。 データベースを排他的に開いている間は、他のユーザーはデータベースまたはデータベース内のテーブルにアクセスできません。 排他的に開かれたデータベース内のテーブルは SHARED として開かれます。 テーブルを排他的に開くには[、SET EXCLUSIVE](../../odbc/microsoft/set-exclusive-command.md)コマンドを使用します。 このチェック ボックスは、[**データベースの種類]** が **[テーブルの空きディレクトリ**] に設定されている場合は無効になります。  
+ このチェックボックスをオンにすると、データソースを使用してデータにアクセスしたときに、ドライバーによって Visual FoxPro データベースのみが開かれます。 データベースが排他的に開かれている間、他のユーザーがデータベースまたはデータベース内のテーブルにアクセスすることはできません。 排他的に開かれているデータベース内のテーブルは、共有として開かれます。 テーブルを排他的に開くには、 [SET EXCLUSIVE](../../odbc/microsoft/set-exclusive-command.md)コマンドを使用します。 このチェックボックスは、[**データベースの種類**] が [**フリーテーブルディレクトリ**] に設定されている場合は無効になります。  
   
- **Null**  
- ALTER TABLE および CREATE TABLE で作成された列で NULL 値を許可するかどうかを決定します。 NULL を設定すると、INSERT - SQL は、INSERT - SQL.値節。 NULL が OFF の場合はブランクが挿入されます。 渡された接続文字列を使用して、次のコードのようにこのオプションを制御することもできます。  
+ **[Null]**  
+ ALTER TABLE と CREATE TABLE で作成された列が null 値を許容するかどうかを決定します。 Null をに設定すると、INSERT-SQL によって挿入されていない任意の列に null 値が挿入されます。VALUE 句。 Null が OFF の場合は、空白が挿入されます。 このオプションは、次のコードのように、渡された接続文字列を使用して制御することもできます。  
   
 ```  
 strCon = "DRIVER=MICROSOFT VISUAL FOXPRO DRIVER;  
@@ -67,7 +67,7 @@ SOURCETYPE=DBC;SOURCEDB=D:\Testdata.dbc;BACKGROUNDFETCH=NO;NULL=NO"
 ```  
   
  **Deleted**  
- 削除済みとしてマークされた行を返すかどうかを指定します。 渡された接続文字列を使用して、次のコードのようにこのオプションを制御することもできます。  
+ 削除済みとしてマークされた行が返されるかどうかを判断します。 このオプションは、次のコードのように、渡された接続文字列を使用して制御することもできます。  
   
 ```  
 strCon = "DRIVER=MICROSOFT VISUAL FOXPRO DRIVER;  
@@ -75,5 +75,5 @@ SOURCETYPE=DBC;SOURCEDB=D:\Testdata.dbc;BACKGROUNDFETCH=NO;
 DELETED=YES"  
 ```  
   
- **バックグラウンドでのデータのフェッチ**  
- レコードをバックグラウンドでフェッチするか (プログレッシブフェッチ)、またはアプリケーションが結果セット内のすべてのレコードがフェッチされるまで待機するかを決定します。
+ **バックグラウンドでデータをフェッチする**  
+ レコードがバックグラウンドでフェッチされるか (プログレッシブフェッチ)、結果セット内のすべてのレコードがフェッチされるまでアプリケーションが待機するかを決定します。

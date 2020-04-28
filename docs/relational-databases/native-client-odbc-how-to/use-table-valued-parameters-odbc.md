@@ -1,5 +1,5 @@
 ---
-title: テーブル値パラメーターの使用 (ODBC) |マイクロソフトドキュメント
+title: テーブル値パラメーターの使用 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1572330ee537976f32e4cca082f46d9e451189d4
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298042"
 ---
 # <a name="use-table-valued-parameters-odbc"></a>テーブル値パラメーターの使用 (ODBC)
@@ -23,7 +23,7 @@ ms.locfileid: "81298042"
 
   このサンプルでは、テーブル値パラメーターを使用して、サーバーへの 1 度の呼び出しで複数の行を複数の列と共に挿入する方法を示します。  
   
- テーブル値パラメーターの詳細については、「 [ODBC&#41;&#40;テーブル値パラメーター ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)」を参照してください。 テーブル値パラメーターを使用するその他のサンプルについては[、「ODBC テーブル値パラメーターのプログラミング例](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)」を参照してください。  
+ テーブル値パラメーターの詳細については、「[テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)」を参照してください。 テーブル値パラメーターを使用したその他のサンプルについては、「 [ODBC テーブル値パラメーターのプログラミング例](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)」を参照してください。  
   
 ## <a name="example"></a>例  
  TVPDemo という名前の ODBC データ ソースが必要です。 TVPDemo 用の既定のデータベースには、コンピューター上にある任意のテスト データベースを使用できます。 このデータ ソースには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 用の ODBC ドライバーが使用されている必要があります。  
@@ -32,7 +32,7 @@ ms.locfileid: "81298042"
   
  このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
   
- odbc32.lib と user32.lib を使用して (C++) コード リストをコンパイルします。 INCLUDE 環境変数に sqlncli.h を含むディレクトリが含まれていることを確認します。  
+ odbc32.lib と user32.lib を使用して (C++) コード リストをコンパイルします。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
   
 ```  
 // compile with: odbc32.lib user32.lib  

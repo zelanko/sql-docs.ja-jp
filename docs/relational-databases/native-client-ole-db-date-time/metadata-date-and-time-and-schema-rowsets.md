@@ -1,5 +1,5 @@
 ---
-title: 日付と時刻とスキーマ行セット
+title: 日付と時刻およびスキーマ行セット
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -14,10 +14,10 @@ ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 66aad8634cdb4d71ba765da94e1e395fc1583226
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301077"
 ---
 # <a name="metadata---date-and-time-and-schema-rowsets"></a>メタデータ - 日付、時刻、スキーマ行セット
@@ -31,7 +31,7 @@ ms.locfileid: "81301077"
 |列の型|DATA_TYPE|COLUMN_FLAGS、DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
 |date|DBTYPE_DBDATE|Clear|0|  
-|time|DBTYPE_DBTIME2|オン|0..7|  
+|時間|DBTYPE_DBTIME2|オン|0..7|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|Clear|0|  
 |DATETIME|DBTYPE_DBTIMESTAMP|Clear|3|  
 |datetime2|DBTYPE_DBTIMESTAMP|オン|0..7|  

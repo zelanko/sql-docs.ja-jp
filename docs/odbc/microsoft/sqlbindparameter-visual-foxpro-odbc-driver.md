@@ -1,5 +1,5 @@
 ---
-title: SQL バインドパラメーター (ビジュアル フォックスプロ ODBC ドライバー) |マイクロソフトドキュメント
+title: SQLBindParameter (Visual FoxPro ODBC ドライバー) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ ms.assetid: 8a69fda2-8903-451a-b030-851bf05aa074
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: b87fb79b71f28963b8cda2c774b302200781cc69
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300622"
 ---
 # <a name="sqlbindparameter-visual-foxpro-odbc-driver"></a>SQLBindParameter (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
->  このトピックには、ビジュアル フォックス プロ ODBC ドライバー固有の情報が含まれています。 この関数の一般的な情報については[、ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)の該当するトピックを参照してください。  
+>  このトピックには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の一般的な情報については、「 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)」の該当するトピックを参照してください。  
   
- サポート: フル  
+ サポート: 完全  
   
- ODBC API 準拠: レベル 1  
+ ODBC API の準拠: レベル1  
   
- SQL ステートメント内のパラメーター・マーカーにバッファーを関連付けます。 ビジュアル フォックスプロ ODBC ドライバーは *、fParamType*引数で指定された入力パラメーターをサポートします。  
+ SQL ステートメントのパラメーターマーカーにバッファーを関連付けます。 Visual FoxPro ODBC ドライバーは、 *Fparamtype*引数で指定された入力パラメーターをサポートしています。  
   
- 詳細については *、ODBC プログラマ リファレンス*の[SQLBind パラメータ](../../odbc/reference/syntax/sqlbindparameter-function.md)を参照してください。
+ 詳細については、 *ODBC プログラマーリファレンス*の「 [SQLBindParameter](../../odbc/reference/syntax/sqlbindparameter-function.md) 」を参照してください。

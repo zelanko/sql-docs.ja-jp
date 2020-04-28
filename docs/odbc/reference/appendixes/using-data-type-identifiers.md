@@ -1,5 +1,5 @@
 ---
-title: データ型識別子の使用 |マイクロソフトドキュメント
+title: データ型識別子の使用 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,25 +14,25 @@ ms.assetid: 467e0c0c-a818-4737-8a24-3d8e15c7e162
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 8be8eef0441d48ed03ea6ccf8f656627c1dd9b63
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301423"
 ---
 # <a name="using-data-type-identifiers"></a>データ型識別子の使用
-アプリケーションでは、データ型識別子を使用する 2 つの方法: ドライバーにバッファーを記述し、ドライバーから結果セットに関するメタデータを取得して、データの格納に使用する C バッファーの種類を決定できるようにします。 アプリケーションは、次の関数を呼び出してこれらのタスクを実行します。  
+アプリケーションでは、2つの方法でデータ型識別子を使用します。ドライバーにバッファーを記述し、その結果セットに関するメタデータをドライバーから取得して、データの格納に使用する C バッファーの種類を決定できるようにします。 アプリケーションは、次の関数を呼び出してこれらのタスクを実行します。  
   
--   アプリケーション バッファーの C データ型を記述する**SQLBindParameter** **、SQLBindCol**、および**SQLGetData。**  
+-   **SQLBindParameter**、 **SQLBindCol**、および**SQLGetData** -アプリケーションバッファーの C データ型について説明します。  
   
--   **SQLBindパラメータ -** 動的パラメータのSQLデータ型を記述します。  
+-   **SQLBindParameter** -動的パラメーターの SQL データ型について説明します。  
   
--   **SQLCol 属性**と**SQLDescribeCol** - 結果セット列の SQL データ型を取得します。  
+-   **Sqlcolattribute**と**SQLDescribeCol** -結果セット列の SQL データ型を取得します。  
   
--   **パラメーターの**SQL データ型を取得します。  
+-   **SQLDescribeParameter** -パラメーターの SQL データ型を取得します。  
   
--   **SQLColumns** **、SQL プロシージャカラム**、および**SQL 特殊列**- さまざまなスキーマ情報の SQL データ型を取得します。  
+-   **Sqlcolumns**、 **SQLProcedureColumns**、および**sqlcolumns な列**-さまざまなスキーマ情報の SQL データ型を取得します。  
   
--   **サポート**されているデータ型の一覧を取得します。  
+-   **SQLGetTypeInfo** -サポートされているデータ型の一覧を取得するには  
   
- データ型識別子は、記述子のSQL_DESC_CONCISE_TYPE フィールドに格納されます。 記述子関数**SQLSetDescField**と**SQLSetDescRec**は、前のリストに示したタスクを実行するのに適切な型と共に使用できます。 詳細については、「 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)」を参照してください。
+ データ型識別子は、記述子の SQL_DESC_CONCISE_TYPE フィールドに格納されます。 記述子関数**SQLSetDescField**と**SQLSetDescRec**を適切な型と共に使用して、前の一覧に一覧表示されているタスクを実行できます。 詳細については、「 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)」を参照してください。

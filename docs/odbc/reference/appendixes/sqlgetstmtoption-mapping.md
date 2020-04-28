@@ -1,5 +1,5 @@
 ---
-title: マッピング |マイクロソフトドキュメント
+title: SQLGetStmtOption Mapping |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,43 +14,43 @@ ms.assetid: fa599517-3f3e-4dad-a65a-b8596ae3f330
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 68819269d41407f2ce9dee172c889f7d7f286793
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300602"
 ---
 # <a name="sqlgetstmtoption-mapping"></a>SQLGetStmtOption のマッピング
-アプリケーションが**SQLGetStmtOption**をサポートしない ODBC *3.x*ドライバーを呼び出すと、呼び出し  
+アプリケーションが**SQLGetStmtOption**をサポートしてい*ない ODBC 3.x*ドライバーへの呼び出しを行う場合、  
   
 ```  
 SQLGetStmtOption(hstmt, fOption, pvParam)  
 ```  
   
- 次のように結果が返されます。  
+ 次のようになります。  
   
--   *fOption*が文字列を返す ODBC 定義のステートメント オプションを示す場合、ドライバー マネージャーは、呼び出し  
+-   *Foption*が文字列を返す ODBC 定義のステートメントオプションを示す場合、ドライバーマネージャーはを呼び出します。  
   
     ```  
     SQLGetStmtAttr(StatementHandle, Attribute, ValuePtr, BufferLength, NULL)  
     ```  
   
--   *fOption*が 32 ビット整数値を返す ODBC 定義のステートメント オプションを示す場合、ドライバー マネージャーは、32 ビットの整数値を呼び出します。  
+-   *Foption*が32ビットの整数値を返す ODBC 定義のステートメントオプションを示す場合、ドライバーマネージャーはを呼び出します。  
   
     ```  
     SQLGetStmtAttr(StatementHandle, Attribute, ValuePtr, 0, NULL)  
     ```  
   
--   *fOption*がドライバ定義のステートメント オプションを示す場合、ドライバー マネージャーは  
+-   *Foption*がドライバーで定義されたステートメントオプションを示す場合、ドライバーマネージャーはを呼び出します。  
   
     ```  
     SQLGetStmtAttr(StatementHandle, Attribute, ValuePtr, BufferLength, NULL)  
     ```  
   
- 前の 3 つのケースでは、*引数引数*が*hstmt*の値に設定され、 *Attribute*引数は*fOption*の値に設定され *、ValuePtr*引数は*pvParam*と同じ値に設定されます。  
+ 上記の3つのケースでは、 *StatementHandle*引数が*hstmt*の値に設定され、*属性*引数が*foption*の値に設定され、 *valueptr*引数が*pvparam*と同じ値に設定されています。  
   
- ODBC 定義の文字列の接続文字列オプションの場合、ドライバー マネージャーは **、SQLGetConnectAttr**の呼び出しで*BufferLength*引数を定義済みの最大長 (SQL_MAX_OPTION_STRING_LENGTH) に設定します。文字列以外の接続文字列オプションの場合 *、BufferLength*は 0 に設定されます。  
+ ODBC で定義された文字列接続オプションの場合、ドライバーマネージャーは、 **Sqlgetconnectattr**への呼び出しで*bufferlength*引数を事前に定義された最大長 (SQL_MAX_OPTION_STRING_LENGTH) に設定します。文字列以外の接続オプションでは、 *Bufferlength*は0に設定されます。  
   
- ODBC *3.x*ではSQL_GET_BOOKMARKステートメント オプションは使用されなくなりました。 ODBC *3.x*ドライバが、SQL_GET_BOOKMARKを使用する ODBC *2.x*アプリケーションで動作するには、SQL_GET_BOOKMARKをサポートする必要があります。 ODBC *2.x*アプリケーションで動作する ODBC *3.x*ドライバーは、SQL_UB_ONにSQL_USE_BOOKMARKSをサポートする必要があり、固定長のブックマークを公開する必要があります。 ODBC *3.x*ドライバが可変長ブックマークのみをサポートし、固定長ブックマークをサポートしていない場合、ODBC 2.x アプリケーションがSQL_UB_ONに設定SQL_USE_BOOKMARKSを試みた場合、ODBC *3.x*ドライバは SQLSTATE HYC00 (オプション機能は実装されていません) を返す必要があります。  
+ SQL_GET_BOOKMARK statement オプションは *、ODBC 3.x*では非推奨とされました。 ODBC 3.x ドライバーが SQL_GET_BOOKMARK を使用*する odbc 2.x*アプリケーション*を*操作するには、SQL_GET_BOOKMARK をサポートしている必要があります。 *Odbc 2.x ドライバーが*odbc 2.x アプリケーションを操作するには、SQL_USE_BOOKMARKS を SQL_UB_ON に設定し、固定長のブックマークを公開する必要が*あります。* ODBC 2.x ドライバーが、固定長のブックマークではなく可変長のブックマークのみをサポートしている場合は、ODBC *2.x アプリケーションが*SQL_USE_BOOKMARKS を SQL_UB_ON に設定しようとすると、SQLSTATE HYC00 (省略可能な機能は実装されていません) を返す必要が*あります。*  
   
- ODBC *3.x*ドライバの場合、ドライバ マネージャは *、オプション*がSQL_STMT_OPT_MINとSQL_STMT_OPT_MAXの間にあるか、またはSQL_CONNECT_OPT_DRVR_STARTより大きいかどうかをチェックしなくなりました。 ドライバーはこれをチェックする必要があります。
+ ODBC 3.x ドライバーの場合、ドライバーマネージャーは、*オプション*が SQL_STMT_OPT_MIN と SQL_STMT_OPT_MAX の間にあるかどうか、または SQL_CONNECT_OPT_DRVR_START より大きいかどうかを確認しなく*なります。* ドライバーはこれを確認する必要があります。

@@ -1,5 +1,5 @@
 ---
-title: ODBC 64 ビット情報 |マイクロソフトドキュメント
+title: ODBC 64 ビット情報 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,27 +11,27 @@ ms.assetid: ed9851ce-44ee-4c8e-b626-1d0b52da30fe
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: b9cb8e3fc42d0ad71ac83f1432c165f243f39012
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298302"
 ---
 # <a name="odbc-64-bit-information"></a>ODBC 64 ビットの情報
-Windows Server 2003 以降、マイクロソフトのオペレーティング システムは 64 ビット ODBC ライブラリをサポートしてきました。 最初に MDAC 2.7 SDK に付属する ODBC ヘッダーとライブラリには、新しい 64 ビット プラットフォーム用のコードをプログラマが簡単に記述できるように変更が含まれています。 コードで以下に示す ODBC 定義型を使用することで **、_WIN64**マクロまたは**WIN32**マクロに基づいて、64 ビットプラットフォームと 32 ビット プラットフォームの両方で同じソース コードをコンパイルできます。  
+Windows Server 2003 以降、Microsoft オペレーティングシステムでは、64ビットの ODBC ライブラリがサポートされています。 MDAC 2.7 SDK に最初に付属する ODBC ヘッダーおよびライブラリには、プログラマが新しい64ビットプラットフォームのコードを簡単に記述できるようにするための変更が含まれています。 コードで次に示す ODBC 定義型を使用することにより、 **_WIN64**または**WIN32**マクロに基づいて、64ビットプラットフォームと32ビットプラットフォームの両方で同じソースコードをコンパイルできます。  
   
- 64 ビット プロセッサのプログラミングでは、次の点に注意してください。  
+ 64ビットプロセッサのプログラミングでは、次の点に注意する必要があります。  
   
--   ポインターのサイズは 4 バイトから 8 バイトに変更されましたが、整数と long は依然として 4 バイトの値です。 タイプ**INT64**および**UINT64**は、8 バイト整数に対して定義されています。 新しい ODBC タイプ**SQLLEN**および**SQLULEN**は **、_WIN64**が定義されている場合、ODBC ヘッダー ファイルで**INT64**および**UINT64**として定義されます。  
+-   ポインターのサイズは4バイトから8バイトに変更されていますが、整数と整数は引き続き4バイト値になります。 **INT64**および**UINT64**型は、8バイトの整数に対して定義されています。 新しい ODBC 型**Sqllen**と**sqlulen**は、 **_WIN64**が定義されている場合に、 **INT64**および**UINT64**として odbc ヘッダーファイルで定義されます。  
   
--   ODBC のいくつかの関数は、ポインター パラメーターを受け取るように宣言されています。 32 ビット ODBC では、呼び出しのコンテキストに応じて、整数値またはバッファーへのポインターを渡すために、ポインターとして定義されたパラメーターが頻繁に使用されていました。 もちろん、ポインタと整数のサイズが同じであるため、これは可能でした。 64 ビット Windows では、これは当てはまりません。  
+-   ODBC のいくつかの関数は、ポインターパラメーターの取得として宣言されています。 32ビット ODBC では、ポインターとして定義されたパラメーターは、呼び出しのコンテキストに応じて、整数値またはバッファーへのポインターを渡すために頻繁に使用されていました。 これはもちろん、ポインターと整数のサイズが同じであることが原因です。 64ビットの Windows では、これは当てはまりません。  
   
--   SQLINTEGER および**SQLUINTEGER**パラメーターを**SQLUINTEGER**使用して定義済みの ODBC 関数の一部は、新しい**SQLLEN**および**SQLULEN**の型定義を使用するように変更されています。 これらの変更は、次のセクション「関数宣言の変更」に記載されています。  
+-   以前に**SQLINTEGER**および**SQLUINTEGER**パラメーターで定義されていた ODBC 関数の中には、新しい**Sqllen**と**sqlulen** typedef を使用する適切な場所に変更されたものがあります。 これらの変更については、次のセクション「関数宣言の変更」を参照してください。  
   
--   さまざまな**SQLSet**関数と**SQLGet**関数を使用して設定できる記述子フィールドの一部は、64 ビット値に対応するように変更されていますが、他の記述子フィールドは 32 ビット値です。 これらのフィールドを設定および取得するときは、適切なサイズの変数を使用してください。 変更された記述子フィールドの詳細は、関数宣言の変更の下にリストされます。  
+-   さまざまな**Sqlset**および**sqlset**関数を通じて設定できる記述子フィールドの一部は、64ビット値に対応するように変更されていますが、それ以外の値は32ビット値のままです。 これらのフィールドを設定および取得するときは、適切なサイズの変数を使用するようにしてください。 変更された記述子フィールドの詳細については、「関数宣言の変更」に記載されています。  
   
 ## <a name="function-declaration-changes"></a>関数宣言の変更  
- 64 ビット プログラミングでは、次の関数シグネチャが変更されました。 太字のテキストの項目は、異なる特定のパラメーターです。  
+ 64ビットプログラミングでは、次の関数シグネチャが変更されました。 太字で表示される項目は、特定のパラメーターとは異なります。  
   
 ```cpp
 SQLBindCol (SQLHSTMT StatementHandle, SQLUSMALLINT ColumnNumber,  
@@ -111,8 +111,8 @@ SQLSetStmtOption (SQLHSTMT StatementHandle, SQLUSMALLINT Option,
    SQLULEN Value);  
 ```  
   
-## <a name="changes-in-sql-data-types"></a>SQL データ型の変更点  
- 次の 4 つの SQL タイプは、32 ビットでのみサポートされています。これらは 64 ビット コンパイラには定義されていません。 これらの型は、MDAC 2.7 のパラメータには使用されなくなりました。これらの型を使用すると、64 ビット プラットフォームでコンパイラエラーが発生します。  
+## <a name="changes-in-sql-data-types"></a>SQL データ型の変更  
+ 次の4つの SQL 型は、32ビットのみでサポートされています。64ビットコンパイラには定義されていません。 これらの型は、MDAC 2.7 のパラメーターには使用されなくなりました。これらの型を使用すると、64ビットプラットフォームでコンパイラエラーが発生します。  
   
 ```cpp
 #ifdef WIN32   
@@ -123,7 +123,7 @@ typedef SQLLEN SQLROWOFFSET;
 #endif  
 ```  
   
- SQLSETPOSIROW の定義は、32 ビットと 64 ビットの両方のコンパイラで変更されました。  
+ SQLSETPOSIROW の定義は、32ビットと64ビットの両方のコンパイラで変更されています。  
   
 ```cpp
 #ifdef _WIN64   
@@ -133,7 +133,7 @@ typedef UINT64 SQLSETPOSIROW;
 #endif  
 ```  
   
- SQLLEN および SQLULEN の定義は、64 ビット・コンパイラーで変更されました。  
+ 64ビットコンパイラでは、SQLLEN と SQLULEN の定義が変更されています。  
   
 ```cpp
 #ifdef _WIN64   
@@ -145,7 +145,7 @@ typedef UINT64 SQLULEN;
 #endif  
 ```  
   
- odbc 3.0 では SQL_C_BOOKMARKは非推奨ですが、2.0 クライアントの 64 ビット コンパイラでは、この値が変更されています。  
+ SQL_C_BOOKMARK は ODBC 3.0 では非推奨とされていますが、2.0 クライアントの64ビットコンパイラでは、この値は次のように変更されています。  
   
 ```cpp
 #ifdef _WIN64   
@@ -155,18 +155,18 @@ typedef UINT64 SQLULEN;
 #endif  
 ```  
   
- BOOKMARK タイプは、新しいヘッダーで異なる定義をします。  
+ ブックマークの種類は、新しいヘッダーでは異なる方法で定義されます。  
   
 ```cpp
 typedef SQLULEN BOOKMARK;  
 ```  
   
-## <a name="values-returned-from-odbc-api-calls-through-pointers"></a>ODBC API から返された値ポインターを介して呼び出す  
- 次の ODBC 関数呼び出しは、入力パラメーターとして、ドライバーからデータが返されるバッファーへのポインターを受け取ります。 返されるデータのコンテキストと意味は、関数の他の入力パラメーターによって決定されます。 場合によっては、これらのメソッドは、通常の 32 ビット (4 バイト) の整数値ではなく、64 ビット (8 バイト整数値) の値を返す場合があります。 これらのケースは次のとおりです。  
+## <a name="values-returned-from-odbc-api-calls-through-pointers"></a>ODBC API からポインターを介して返される値  
+ 次の ODBC 関数呼び出しは、ドライバーからデータが返されるバッファーへのポインターを入力パラメーターとして受け取ります。 返されるデータのコンテキストと意味は、関数の他の入力パラメーターによって決まります。 場合によっては、これらのメソッドが、通常の32ビット (4 バイト) の整数値ではなく、64ビット (8 バイトの整数) 値を返すことがあります。 このような場合は、次のようになります。  
   
  **SQLColAttribute**  
   
- *FieldIdentifier*パラメーターに次のいずれかの値が含まれる場合は、 **NumericAttribute*に 64 ビット値が返されます。  
+ *FieldIdentifier*パラメーターに次のいずれかの値が含まれている場合、**numericattribute*で64ビット値が返されます。  
   
  SQL_DESC_AUTO_UNIQUE_VALUE  
   
@@ -202,9 +202,9 @@ typedef SQLULEN BOOKMARK;
   
  SQL_DESC_UPDATABLE  
   
- **属性**  
+ **SQLColAttributes**  
   
- *fDescType*パラメータに次のいずれかの値が指定されている場合、64 ビット値が **pfDesc*に返されます。  
+ *FDescType*パラメーターに次のいずれかの値が含まれている場合は、**pfdesc*で64ビット値が返されます。  
   
  SQL_COLUMN_COUNT  
   
@@ -228,7 +228,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLGetConnectAttr**  
   
- *Attribute*パラメーターに次のいずれかの値が含まれる場合は *、64*ビットの値が Value に返されます。  
+ *属性*パラメーターに次の値のいずれかが含まれている場合は、*値*に64ビット値が返されます。  
   
  SQL_ATTR_ASYNC_ENABLE  
   
@@ -238,15 +238,15 @@ typedef SQLULEN BOOKMARK;
   
  SQL_ATTR_QUIET_MODE  
   
- **オプションを指定します。**  
+ **SQLGetConnectOption**  
   
- *Attribute*パラメーターに次のいずれかの値が含まれる場合は *、64*ビットの値が Value に返されます。  
+ *属性*パラメーターに次の値のいずれかが含まれている場合は、*値*に64ビット値が返されます。  
   
  SQL_ATTR_QUIET_MODE  
   
  **SQLGetDescField**  
   
- *FieldIdentifier*パラメーターに次のいずれかの値が含まれる場合は、 **ValuePtr*に 64 ビット値が返されます。  
+ *FieldIdentifier*パラメーターに次の値のいずれかが含まれている場合、**valueptr*に64ビット値が返されます。  
   
  SQL_DESC_ARRAY_SIZE  
   
@@ -270,7 +270,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLGetDiagField**  
   
- *DiagIdentifier*パラメーターに次のいずれかの値が指定されている場合は、 **DiagInfoPtr*に 64 ビット値が返されます。  
+ *DiagIdentifier*パラメーターに次の値のいずれかが含まれている場合、**DiagInfoPtr*に64ビット値が返されます。  
   
  SQL_DIAG_CURSOR_ROW_COUNT  
   
@@ -280,7 +280,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLGetInfo**  
   
- *InfoType*パラメーターに次のいずれかの値が含まれる場合は、 **InfoValuePtr*に 64 ビット値が返されます。  
+ *InfoType*パラメーターに次のいずれかの値が含まれている場合は、64ビットの値が **infovalueptr*に返されます。  
   
  SQL_DRIVER_HDBC  
   
@@ -288,7 +288,7 @@ typedef SQLULEN BOOKMARK;
   
  SQL_DRIVER_HLIB  
   
- *インフォタイプ*に次の 2 つの値のいずれかが含まれる場合 **InfoValuePtr*は入力と出力の両方で 64 ビットです。  
+ *InfoType*に次の2つの値のいずれかが含まれている場合、入力と出力の両方で、*infovalueptr*は64ビットです。  
   
  SQL_DRIVER_HDESC  
   
@@ -296,7 +296,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLGetStmtAttr**  
   
- *Attribute*パラメーターに次のいずれかの値が含まれる場合は、 **ValuePtr*に 64 ビット値が返されます。  
+ *属性*パラメーターに次の値のいずれかが指定されている場合、**valueptr*に64ビット値が返されます。  
   
  SQL_ATTR_APP_PARAM_DESC  
   
@@ -362,9 +362,9 @@ typedef SQLULEN BOOKMARK;
   
  SQL_ATTR_USE_BOOKMARKS  
   
- **オプションを指定します。**  
+ **SQLGetStmtOption**  
   
- *Option*パラメーターに次のいずれかの値が指定されている場合は、**Value*に 64 ビット値が返されます。  
+ *Option*パラメーターに次のいずれかの値が設定されている場合、**値*に64ビット値が返されます。  
   
  SQL_KEYSET_SIZE  
   
@@ -376,7 +376,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLSetConnectAttr**  
   
- *Attribute*パラメーターに次のいずれかの値が指定されている場合は *、64*ビットの値が Value に渡されます。  
+ *属性*パラメーターに次の値のいずれかが含まれている場合は、64ビットの値が*値*として渡されます。  
   
  SQL_ATTR_ASYNC_ENABLE  
   
@@ -386,15 +386,15 @@ typedef SQLULEN BOOKMARK;
   
  SQL_ATTR_QUIET_MODE  
   
- **オプションを指定します。**  
+ **SQLSetConnectOption**  
   
- *Attribute*パラメーターに次のいずれかの値が指定されている場合は *、64*ビットの値が Value に渡されます。  
+ *属性*パラメーターに次の値のいずれかが含まれている場合は、64ビットの値が*値*として渡されます。  
   
  SQL_ATTR_QUIET_MODE  
   
  **SQLSetDescField**  
   
- *FieldIdentifier*パラメーターに次のいずれかの値が指定されている場合、64 ビットの値が*ValuePtr*に渡されます。  
+ *FieldIdentifier*パラメーターに次のいずれかの値が含まれている場合は、64ビットの値が*valueptr*に渡されます。  
   
  SQL_DESC_ARRAY_SIZE  
   
@@ -418,7 +418,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLSetStmtAttr**  
   
- *Attribute*パラメーターに次のいずれかの値が指定されている場合、64 ビットの値が*ValuePtr*に渡されます。  
+ *属性*パラメーターに次の値のいずれかが含まれている場合は、 *valueptr*に64ビット値が渡されます。  
   
  SQL_ATTR_APP_PARAM_DESC  
   
@@ -484,9 +484,9 @@ typedef SQLULEN BOOKMARK;
   
  SQL_ATTR_USE_BOOKMARKS  
   
- **オプションを設定します。**  
+ **SQLSetStmtOption**  
   
- *Option*パラメーターに次のいずれかの値が指定されている場合は *、64*ビットの値が Value に渡されます。  
+ *Option*パラメーターに次の値のいずれかが含まれている場合は、64ビットの値が*値*として渡されます。  
   
  SQL_KEYSET_SIZE  
   

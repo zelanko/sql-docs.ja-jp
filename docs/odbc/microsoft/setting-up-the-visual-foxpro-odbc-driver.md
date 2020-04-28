@@ -1,5 +1,5 @@
 ---
-title: ビジュアルフォックスプロ ODBC ドライバのセットアップ |マイクロソフトドキュメント
+title: Visual FoxPro ODBC ドライバーの設定 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,23 +15,23 @@ ms.assetid: d0aedaa1-ed24-4aa6-92c8-83b0fa8c86fb
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 26c73cb42e9adb9d46218983ade143450ff5d73a
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300732"
 ---
 # <a name="setting-up-the-visual-foxpro-odbc-driver"></a>Visual FoxPro ODBC ドライバーの設定
-ダウンロードとインストールの詳細については、ダウンロードして、MSDN のダウンロードで[ビジュアル フォックスプロ ODBC ドライバー](https://go.microsoft.com/fwlink/?LinkId=121318)を参照してください。  
+Visual FoxPro ODBC ドライバーのダウンロードとインストールの詳細については、MSDN ダウンロードの「 [Visual FOXPRO Odbc ドライバー](https://go.microsoft.com/fwlink/?LinkId=121318) 」を参照してください。  
   
- 次の操作を行うには、マイクロソフトビジュアル フォックスプロ ODBC ドライバー セットアップ プログラムを使用します。  
+ Microsoft Visual FoxPro ODBC ドライバーセットアッププログラムを使用して、次の操作を行います。  
   
 -   新しいコンポーネントを追加します。  
   
 -   インストールされているコンポーネントを削除します。  
   
--   見つからないファイルと設定を復元するには、再インストールします。  
+-   を再インストールして、不足しているファイルと設定を復元します。  
   
--   以前にインストールしたコンポーネントをすべて削除します。  
+-   以前にインストールされたすべてのコンポーネントを削除します。  
   
- システムにドライバをインストールすると、セットアップ プログラムはインストールされているドライバ コンポーネントを認識し、ドライバの構成を変更するための追加のダイアログ ボックスを表示します。
+ システムにドライバーをインストールすると、セットアッププログラムはインストールされているドライバーコンポーネントを認識し、ドライバーの構成を変更するための追加のダイアログボックスを表示します。

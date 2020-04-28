@@ -1,5 +1,5 @@
 ---
-title: 相互 Kerberos 認証を取得する |マイクロソフトドキュメント
+title: 相互 Kerberos 認証を取得する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5d222f54b3c19d0deaeab4a370ded226856f2246
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301132"
 ---
 # <a name="get-mutual-kerberos-authentication"></a>Kerberos 相互認証の取得
@@ -25,7 +25,7 @@ ms.locfileid: "81301132"
   
  このサンプルは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] では動作しません。  
   
- 詳細については、「[クライアント接続でのサービス プリンシパル名&#40;SPN&#41;のサポート](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)」を参照してください。  
+ 詳細については、「[クライアント接続でのサービスプリンシパル名 &#40;SPN&#41; サポート](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
@@ -36,7 +36,7 @@ ms.locfileid: "81301132"
   
  また、顧客から提供された SPN を指定する必要があります。 " CP_SPN " の部分を顧客から提供された SPN に変更してください。  
   
- /EHsc、/D "_UNICODE"、/D "UNICODE"、および odbc32.lib を使用してコンパイルします。 INCLUDE 環境変数に sqlncli.h を含むディレクトリが含まれていることを確認します。  
+ /EHsc、/D "_UNICODE"、/D "UNICODE"、および odbc32.lib を使用してコンパイルします。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
   
 ```  
 // compile with: /EHsc /D "_UNICODE" /D "UNICODE" odbc32.lib  

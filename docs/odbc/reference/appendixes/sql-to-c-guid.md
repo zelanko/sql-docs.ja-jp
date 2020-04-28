@@ -1,5 +1,5 @@
 ---
-title: 'C への SQL: GUID |マイクロソフトドキュメント'
+title: 'SQL から C: GUID |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,29 +15,29 @@ ms.assetid: cf56c684-c261-4b89-994a-db14ab2241d6
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: f0f247bc4cb411d535050d7c78e0ea42cc144b0e
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81296462"
 ---
 # <a name="sql-to-c-guid"></a>SQL から C へ: GUID
-ODBC SQL データ型の識別子は次のとおりです。  
+GUID ODBC SQL データ型の識別子は次のとおりです。  
   
  SQL_GUID  
   
- 次の表は、GUID SQL データの変換先となる ODBC C データ型を示しています。 表の列と用語の説明については[、SQL から C データ型へのデータの変換を参照してください](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)。  
+ 次の表は、GUID SQL データが変換される可能性がある ODBC C データ型を示しています。 テーブル内の列と用語の詳細については、「 [SQL から C データ型へのデータの変換](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)」を参照してください。  
   
-|C 型識別子|テスト|**ターゲット値Ptr*|**StrLen_or_IndPtr*|SQLSTATE|  
+|C 型識別子|テスト|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|*バッファー長>* 文字バイト長|Data|36|該当なし|  
-||*バッファ長<* 37|未定義。|未定義。|22003|  
-|SQL_C_WCHAR|*バッファ長>* 文字長|Data|36|該当なし|  
-||*バッファ長<* 37|未定義。|未定義。|22003|  
-|SQL_C_BINARY|データ\<= バッファ長のバイト*長*|Data|データの長さ (バイト単位)|該当なし|  
-||データのバイト長 >*バッファ長*|未定義。|未定義。|22003|  
-|SQL_C_GUID|なし[a]|Data|16[b]|該当なし|  
+|SQL_C_CHAR|*Bufferlength* > 文字のバイト長|データ|36|該当なし|  
+||*Bufferlength* < 37|未定義。|未定義。|22003|  
+|SQL_C_WCHAR|*Bufferlength* > 文字長|データ|36|該当なし|  
+||*Bufferlength* < 37|未定義。|未定義。|22003|  
+|SQL_C_BINARY|データ\< = *バッファー長*のバイト長|データ|データの長さ (バイト単位)|該当なし|  
+||データ > *bufferlength*のバイト長|未定義。|未定義。|22003|  
+|SQL_C_GUID|なし [a]|データ|16 [b]|該当なし|  
   
- [a] この変換では *、BufferLength*の値は無視されます。 ドライバーは、**ターゲット値Ptr*のサイズは、Cデータ型のサイズであると仮定します。  
+ [a] この変換では、 *Bufferlength*の値は無視されます。 ドライバーは、**Targetvalueptr*のサイズが C データ型のサイズであることを前提としています。  
   
  [b] これは、対応する C データ型のサイズです。

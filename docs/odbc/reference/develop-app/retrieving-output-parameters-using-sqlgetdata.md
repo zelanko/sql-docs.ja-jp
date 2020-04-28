@@ -1,5 +1,5 @@
 ---
-title: SQLGetData を使用して出力パラメータを取得する |マイクロソフトドキュメント
+title: SQLGetData | を使用した出力パラメーターの取得Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,73 +15,73 @@ ms.assetid: 7a8c298a-2160-491d-a300-d36f45568d9c
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 8c96a3f9fc81d081ce16fe8e75746aafe8962fd0
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81294592"
 ---
 # <a name="retrieving-output-parameters-using-sqlgetdata"></a>SQLGetData を使用した出力パラメーターの取得
-ODBC 3.8 より前のアプリケーションは、バインドされた出力バッファーを持つクエリの出力パラメーターのみを取得でいました。 ただし、パラメーター値のサイズが非常に大きい場合 (大きなイメージなど) 非常に大きなバッファーを割り当てるのが困難です。 ODBC 3.8 では、出力パラメータをパーツで取得する新しい方法が導入されています。 アプリケーションは、大きなパラメーター値を取得するために、小さなバッファーを使用して**SQLGetData**を複数回呼び出すことができます。 これは、大きな列データを取得する場合と似ています。  
+ODBC 3.8 より前のアプリケーションでは、バインドされた出力バッファーを持つクエリの出力パラメーターのみを取得できました。 ただし、パラメーター値のサイズが非常に大きい場合 (たとえば、大きなイメージ)、非常に大きなバッファーを割り当てることは困難です。 ODBC 3.8 では、部分的に出力パラメーターを取得する新しい方法が導入されています。 アプリケーションでは、小さなバッファーを使用して**SQLGetData**を複数回呼び出して、大きなパラメーター値を取得できるようになりました。 これは、大きな列データを取得する場合と似ています。  
   
- 部分で取得する出力パラメーターまたは入出力パラメーターをバインドするには、SQL_PARAM_OUTPUT_STREAMまたはSQL_PARAM_INPUT_OUTPUT_STREAMに設定された*InputOutputType*引数を指定して**SQLBindParameter**を呼び出します。 SQL_PARAM_INPUT_OUTPUT_STREAMを使用すると、アプリケーションは**SQLPutData**を使用してパラメーターにデータを入力し **、SQLGetData**を使用して出力パラメーターを取得できます。 入力データは、事前割り当てバッファーにバインドするのではなく **、SQLPutData**を使用して、実行時データ (DAE) 形式にする必要があります。  
+ 出力パラメーターまたは入力/出力パラメーターをバインドしてパーツで取得するには、 *Inputoutputtype*引数を SQL_PARAM_OUTPUT_STREAM または SQL_PARAM_INPUT_OUTPUT_STREAM に設定して**SQLBindParameter**を呼び出します。 SQL_PARAM_INPUT_OUTPUT_STREAM では、アプリケーションは**Sqlputdata**を使用してパラメーターにデータを入力し、 **SQLGetData**を使用して出力パラメーターを取得できます。 入力データは、事前に割り当てられたバッファーにバインドするのではなく、 **Sqlputdata**を使用して、実行時データ (DAE) 形式である必要があります。  
   
- この機能は、ODBC 3.8 アプリケーションまたは再コンパイルされた ODBC 3.x および ODBC 2.x アプリケーションで使用でき、これらのアプリケーションには **、SQLGetData**および ODBC 3.8 ドライバー マネージャーを使用して出力パラメーターを取得できる ODBC 3.8 ドライバーが必要です。 古いアプリケーションで新しい ODBC 機能を使用できるようにする方法については、「[互換性マトリックス](../../../odbc/reference/develop-app/compatibility-matrix.md)」を参照してください。  
+ この機能は、odbc 3.8 アプリケーションで使用することも、odbc 3.x および ODBC 2.x アプリケーションを再コンパイルすることもできます。また、これらのアプリケーションには、 **SQLGetData**および Odbc 3.8 driver Manager を使用した出力パラメーターの取得をサポートする odbc 3.8 ドライバーが必要です。 古いアプリケーションで新しい ODBC 機能を使用できるようにする方法については、「[互換性マトリックス](../../../odbc/reference/develop-app/compatibility-matrix.md)」を参照してください。  
   
 ## <a name="usage-example"></a>使用例  
- たとえば、両方のパラメータがSQL_PARAM_OUTPUT_STREAMとしてバインドされ、ストアド プロシージャが結果セットを返さないストアド プロシージャ **{CALL sp_f(?,?)} を**実行することを検討してください (このトピックの後半で、より複雑なシナリオが見つかるでしょう)。  
+ たとえば、ストアドプロシージャ **{CALL sp_f (?,?)}** を実行すると、両方のパラメーターが SQL_PARAM_OUTPUT_STREAM としてバインドされ、ストアドプロシージャから結果セットが返されなくなります (このトピックの後半では、より複雑なシナリオについて説明します)。  
   
-1.  各パラメーターに対 SQL_PARAM_OUTPUT_STREAMして、パラメーター番号、データへのポインター、またはアプリケーションが入力パラメーターをバインドするために使用する構造体へのポインターなど、トークン*に設定された* *InputOutputType*を指定して**SQLBindParameter**を呼び出します。 この例では、パラメーター序数をトークンとして使用します。  
+1.  各パラメーターに対して、 *Inputoutputtype*を SQL_PARAM_OUTPUT_STREAM に設定し、 *parametervalueptr*をトークンに設定して、パラメーター番号、データへのポインター、またはアプリケーションが入力パラメーターをバインドするために使用する構造体へのポインターなどを指定して、 **SQLBindParameter**を呼び出します。 この例では、パラメーター序数をトークンとして使用します。  
   
-2.  **クエリを実行**するには、次の操作を**行います**。 SQL_PARAM_DATA_AVAILABLE返され、ストリーム出力パラメーターが取得可能であることを示します。  
+2.  **SQLExecDirect**または**sqlexecute**を使用してクエリを実行します。 SQL_PARAM_DATA_AVAILABLE が返されます。これは、取得できるストリーム出力パラメーターがあることを示します。  
   
-3.  **SQLParamData**を呼び出して、取得可能なパラメーターを取得します。 **SQLParamData**は、**最初**に使用可能なパラメーターのトークンを持つSQL_PARAM_DATA_AVAILABLEを返します。 トークンは *、ValuePtrPtr*が指すバッファーに返されます。  
+3.  **Sqlparamdata**を呼び出して、取得に使用できるパラメーターを取得します。 **Sqlparamdata**は、 **SQLBindParameter** (ステップ 1) で設定されている最初の使用可能なパラメーターのトークンを使用して SQL_PARAM_DATA_AVAILABLE を返します。 このトークンは、 *Valueptrptr*が指すバッファーで返されます。  
   
-4.  引数*Col*_or\_を使用して**SQLGetData**を呼び出*Param_Num*パラメーター序数に設定され、最初に使用可能なパラメーターのデータを取得します。 **SQLGetData**が SQL_SUCCESS_WITH_INFOおよび SQLState 01004 (データの切り捨て) を返し、クライアントとサーバーの両方で型が可変長である場合、最初に使用可能なパラメーターから取得するデータが増えます。 SQL_SUCCESSを返すか、別の**SQLState**でSQL_SUCCESS_WITH_INFOするまで **、SQLGetData**を呼び出し続けることができます。  
+4.  引数*Col*_or\_を指定して**SQLGetData**を呼び出し、使用可能な最初のパラメーターのデータを取得するためにパラメーター序数に設定*Param_Num*ます。 **SQLGetData**が SQL_SUCCESS_WITH_INFO と SQLState 01004 (データが切り捨てられました) を返し、型がクライアントとサーバーの両方で可変長の場合は、使用可能な最初のパラメーターからより多くのデータを取得します。 SQL_SUCCESS が返されるまで、または別の**SQLState**で SQL_SUCCESS_WITH_INFO **SQLGetData**を呼び出すことができます。  
   
-5.  ステップ 3 とステップ 4 を繰り返して、現在のパラメーターを取得します。  
+5.  現在のパラメーターを取得するには、手順 3. と手順 4. を繰り返します。  
   
-6.  もう一度呼び出**します**。 SQL_PARAM_DATA_AVAILABLE以外の何かを返す場合、取得するストリームパラメータデータはもうありません。  
+6.  **Sqlparamdata**を再度呼び出します。 SQL_PARAM_DATA_AVAILABLE 以外のものが返された場合は、取得するストリームパラメーターデータがなく、リターンコードは次に実行されるステートメントのリターンコードになります。  
   
-7.  **SQLMoreResults**を呼び出して、SQL_NO_DATAを返すまで次のパラメーター セットを処理します。 ステートメント属性 SQL_ATTR_PARAMSET_SIZEが 1 に設定されている場合 **、SQLMoreResults**は、この例ではSQL_NO_DATAを返します。 それ以外の場合 **、SQLMoreResults**はSQL_PARAM_DATA_AVAILABLEを返し、次のパラメーター セットで取得できるストリーム出力パラメーターがあることを示します。  
+7.  **Sqlmoreresults**を呼び出して、SQL_NO_DATA が返されるまで、次の一連のパラメーターを処理します。 ステートメント属性 SQL_ATTR_PARAMSET_SIZE が1に設定されている場合、 **Sqlmoreresults**はこの例の SQL_NO_DATA を返します。 それ以外の場合は、 **Sqlmoreresults**は SQL_PARAM_DATA_AVAILABLE を返して、取得するパラメーターの次のセットに対して使用できるストリーム出力パラメーターがあることを示します。  
   
- DAE 入力パラメーターと同様に **、SQLBindParameter**の引数*ParameterValuePtr*で使用されるトークン (手順 1) は、必要に応じて、パラメーターの序数とアプリケーション固有の情報を含むアプリケーション データ構造体を指すポインターにすることができます。  
+ DAE 入力パラメーターと同様に、 **SQLBindParameter** (ステップ 1) の引数*parametervalueptr*で使用されるトークンは、アプリケーションのデータ構造を指すポインターにすることができます。これには、パラメーターの序数と、必要に応じてアプリケーション固有の情報が含まれます。  
   
- ストリーム出力または入力/出力パラメーターが返される順序は、ドライバー固有であり、常にクエリで指定された順序と同じではない可能性があります。  
+ 返されたストリーム出力または入出力パラメーターの順序はドライバーに固有であり、クエリで指定された順序と常に同じであるとは限りません。  
   
- アプリケーションが手順 4 で**SQLGetData**を呼び出さない場合、パラメーター値は破棄されます。 同様に、すべてのパラメーター値が SQLGetData によって読み取られる前にアプリケーションが**SQLParamData**を呼び出した場合、値の残りの部分は破棄され、アプリケーションは次のパラメーターを処理できます。 **SQLGetData**  
+ 手順 4. でアプリケーションが**SQLGetData**を呼び出さない場合、パラメーター値は破棄されます。 同様に、すべてのパラメーター値が**SQLGetData**に読み取られる前にアプリケーションが**sqlparamdata**を呼び出すと、値の残りの部分は破棄され、アプリケーションは次のパラメーターを処理できます。  
   
- ストリーム出力パラメーターがすべて処理される前にアプリケーションが**SQLMoreResults**を呼び出した場合 **(SQLParamData**は引き続きSQL_PARAM_DATA_AVAILABLEを返します)、残りのパラメーターはすべて破棄されます。 同様に、すべてのパラメーター値が**SQLGetData**によって読み取られる前にアプリケーションが**SQLMoreResults**を呼び出した場合、残りの値と残りのすべてのパラメーターは破棄され、アプリケーションは次のパラメーター・セットの処理を続行できます。  
+ すべてのストリーム出力パラメーターが処理される前にアプリケーションが**Sqlmoreresults**を呼び出す場合 (**sqlparamdata**は引き続き SQL_PARAM_DATA_AVAILABLE を返します)、残りのすべてのパラメーターは破棄されます。 同様に、すべてのパラメーター値が**SQLGetData**によって読み取られる前にアプリケーションが**Sqlmoreresults**を呼び出すと、残りの値と残りのすべてのパラメーターが破棄され、アプリケーションは次のパラメーターセットの処理を続行できます。  
   
- アプリケーションでは **、SQLBindParameter**と**SQLGetData**の両方で C データ型を指定できることに注意してください。 **SQLGetData**で指定された C データ型は **、SQLGetData**で指定された C データ型がSQL_APD_TYPEしない限り **、SQLBindParameter**で指定された C データ型をオーバーライドします。  
+ アプリケーションでは、 **SQLBindParameter**と**SQLGetData**の両方で C データ型を指定できます。 **SQLGetData**で指定された c データ型は、 **SQLGetData**に指定された c データ型が SQL_APD_TYPE でない限り、 **SQLBindParameter**で指定された c データ型よりも優先されます。  
   
- 出力パラメーターのデータ型が BLOB の場合は、ストリーム出力パラメーターの方が便利ですが、この機能は任意のデータ型でも使用できます。 ストリーム出力パラメーターでサポートされるデータ型は、ドライバーで指定されます。  
+ ストリーム出力パラメーターは、出力パラメーターのデータ型が BLOB の場合に便利ですが、この機能は任意のデータ型でも使用できます。 ストリーム出力パラメーターでサポートされるデータ型は、ドライバーで指定されます。  
   
- 処理するパラメーターSQL_PARAM_INPUT_OUTPUT_STREAMがある場合は、**最初**にSQL_NEED_DATA返**されます。** アプリケーションは、DAE パラメーター・データを送信するために**SQLParamData**および**SQLPutData**を呼び出すことができます。 すべての DAE 入力パラメーターが処理されると **、SQLParamData**はSQL_PARAM_DATA_AVAILABLEを返して、ストリーム出力パラメーターが使用可能であることを示します。  
+ 処理する SQL_PARAM_INPUT_OUTPUT_STREAM パラメーターがある場合は、 **Sqlexecute**または**SQLExecDirect**が最初に SQL_NEED_DATA を返します。 アプリケーションでは、 **Sqlparamdata**と**sqlparamdata**を呼び出して、DAE パラメーターデータを送信できます。 すべての DAE 入力パラメーターが処理されると、 **Sqlparamdata**は、ストリーミングされた出力パラメーターが使用可能であることを示す SQL_PARAM_DATA_AVAILABLE を返します。  
   
- ストリーム出力パラメーターとバインドされた出力パラメーターを処理する場合、ドライバーは、出力パラメーターを処理する順序を決定します。 したがって、出力パラメーターがバッファーにバインドされている場合 **(SQLBindParameter**パラメーター *InputOutputType*がSQL_PARAM_INPUT_OUTPUT またはSQL_PARAM_OUTPUTに設定されている場合)、SQLParamData がSQL_SUCCESSまたはSQL_SUCCESS_WITH_INFOを返すまで、バッファーにデータが設定されないことがあります。 **SQLParamData** アプリケーションは、すべてのストリーム出力パラメーターが処理された後に **、SQLParamData**がSQL_SUCCESSまたはSQL_SUCCESS_WITH_INFOを返した後にのみ、バインドバッファーを読み取る必要があります。  
+ ストリーム出力パラメーターとバインドされた出力パラメーターが処理されると、ドライバーは出力パラメーターの処理順序を決定します。 したがって、出力パラメーターがバッファーにバインドされている場合 ( **SQLBindParameter**パラメーター *inputoutputtype*が SQL_PARAM_INPUT_OUTPUT または SQL_PARAM_OUTPUT に設定されている場合)、 **sqlparamdata**が SQL_SUCCESS または SQL_SUCCESS_WITH_INFO を返すまで、バッファーが設定されない可能性があります。 アプリケーションは、 **Sqlparamdata**が SQL_SUCCESS を返すか、すべてのストリーム出力パラメーターが処理された後である SQL_SUCCESS_WITH_INFO した後にのみ、バインドされたバッファーを読み取る必要があります。  
   
- データ ソースは、ストリーム出力パラメーターに加えて、警告と結果セットを返すことができます。 一般に、警告と結果セットは **、 SQLMoreResults**を呼び出すことによってストリーム出力パラメーターとは別に処理されます。 ストリーム出力パラメータを処理する前に、警告と結果セットを処理します。  
+ データソースは、ストリーミングされた出力パラメーターに加えて、警告と結果セットを返すことができます。 一般に、警告と結果セットは、 **Sqlmoreresults**を呼び出すことによって、ストリーミングされた出力パラメーターとは別に処理されます。 ストリーミングされた出力パラメーターを処理する前に、警告と結果セットを処理します。  
   
- 次の表では、サーバーに送信される 1 つのコマンドのさまざまなシナリオと、アプリケーションの動作について説明します。  
+ 次の表では、サーバーに送信される1つのコマンドのさまざまなシナリオと、アプリケーションの動作について説明します。  
   
-|シナリオ|SQL 実行または SQLExecDirect からの戻り値|次の作業|  
+|シナリオ|SQLExecute または SQLExecDirect からの戻り値|次の作業|  
 |--------------|---------------------------------------------------|---------------------|  
-|データにはストリーム出力パラメーターのみが含まれます。|SQL_PARAM_DATA_AVAILABLE|ストリーミング出力パラメーターを取得するには **、SQLParamData**と**SQLGetData**を使用します。|  
-|データには結果セットとストリーム出力パラメータが含まれます。|SQL_SUCCESS|**SQL バインドと SQLGet**データを使用して結果セットを取得**します**。<br /><br /> ストリーム出力パラメーターの処理を開始するには **、SQLMoreResults**を呼び出します。 SQL_PARAM_DATA_AVAILABLE返すはずです。<br /><br /> ストリーミング出力パラメーターを取得するには **、SQLParamData**と**SQLGetData**を使用します。|  
-|データには警告メッセージとストリーム出力パラメータが含まれています|SQL_SUCCESS_WITH_INFO|警告メッセージを処理するには **、SQLGetDiagRec**と**SQLGetDiagField**を使用します。<br /><br /> ストリーム出力パラメーターの処理を開始するには **、SQLMoreResults**を呼び出します。 SQL_PARAM_DATA_AVAILABLE返すはずです。<br /><br /> ストリーミング出力パラメーターを取得するには **、SQLParamData**と**SQLGetData**を使用します。|  
-|データには警告メッセージ、結果セット、ストリーム出力パラメータが含まれます。|SQL_SUCCESS_WITH_INFO|警告メッセージを処理するには **、SQLGetDiagRec**と**SQLGetDiagField**を使用します。 次に **、SQLMoreResults**を呼び出して、結果セットの処理を開始します。<br /><br /> **SQL バインドと SQLGet**データを使用して結果セットを取得**します**。<br /><br /> ストリーム出力パラメーターの処理を開始するには **、SQLMoreResults**を呼び出します。 **結果は**SQL_PARAM_DATA_AVAILABLE返す必要があります。<br /><br /> ストリーミング出力パラメーターを取得するには **、SQLParamData**と**SQLGetData**を使用します。|  
-|DAE 入力パラメーターを使用した照会 (例えば、ストリーム入出力 (DAE) パラメーター|SQL NEED_DATA|DAE 入力パラメーター データを送信するには **、SQLParamData**と**SQLPutData**を呼び出します。<br /><br /> すべての DAE 入力パラメーターが処理された後 **、SQLParamData**は **、SQL 実行**および**SQLExecDirect**が返すことができる任意の戻りコードを返すことができます。 このテーブルのケースを適用できます。<br /><br /> 戻りコードがSQL_PARAM_DATA_AVAILABLE場合は、ストリーム出力パラメーターを使用できます。 アプリケーションは、この表の最初の行で説明されているように、ストリーミング出力パラメーターのトークンを取得するために **、SQLParamData**を再度呼び出す必要があります。<br /><br /> 戻りコードがSQL_SUCCESS場合は、処理する結果セットがあるか、処理が完了します。<br /><br /> 戻りコードがSQL_SUCCESS_WITH_INFO場合は、処理する警告メッセージが表示されます。|  
+|データにはストリーム出力パラメーターのみが含まれます|SQL_PARAM_DATA_AVAILABLE|**Sqlparamdata**と**SQLGetData**を使用して、ストリーム出力パラメーターを取得します。|  
+|データには、結果セットとストリーム出力パラメーターが含まれます。|SQL_SUCCESS|**SQLBindCol**と**SQLGetData**を使用して結果セットを取得します。<br /><br /> **Sqlmoreresults**を呼び出して、ストリーミングされた出力パラメーターの処理を開始します。 SQL_PARAM_DATA_AVAILABLE が返されます。<br /><br /> **Sqlparamdata**と**SQLGetData**を使用して、ストリーム出力パラメーターを取得します。|  
+|データには、警告メッセージとストリーム出力パラメーターが含まれます。|SQL_SUCCESS_WITH_INFO|警告メッセージを処理するには、 **SQLGetDiagRec**と**SQLGetDiagField**を使用します。<br /><br /> **Sqlmoreresults**を呼び出して、ストリーミングされた出力パラメーターの処理を開始します。 SQL_PARAM_DATA_AVAILABLE が返されます。<br /><br /> **Sqlparamdata**と**SQLGetData**を使用して、ストリーム出力パラメーターを取得します。|  
+|データには、警告メッセージ、結果セット、およびストリーム出力パラメーターが含まれます。|SQL_SUCCESS_WITH_INFO|警告メッセージを処理するには、 **SQLGetDiagRec**と**SQLGetDiagField**を使用します。 次に、 **Sqlmoreresults**を呼び出して、結果セットの処理を開始します。<br /><br /> **SQLBindCol**と**SQLGetData**を使用して結果セットを取得します。<br /><br /> **Sqlmoreresults**を呼び出して、ストリーミングされた出力パラメーターの処理を開始します。 **Sqlmoreresults**は SQL_PARAM_DATA_AVAILABLE を返す必要があります。<br /><br /> **Sqlparamdata**と**SQLGetData**を使用して、ストリーム出力パラメーターを取得します。|  
+|DAE 入力パラメーターを使用したクエリ (ストリーム入力/出力 (DAE) パラメーターなど)|SQL NEED_DATA|**Sqlparamdata**と**sqlparamdata**を呼び出して、DAE の入力パラメーターデータを送信します。<br /><br /> すべての DAE 入力パラメーターが処理された後、 **Sqlparamdata**は、 **Sqlexecute**および**SQLExecDirect**が返すことができるリターンコードを返すことができます。 その後、このテーブル内のケースを適用できます。<br /><br /> リターンコードが SQL_PARAM_DATA_AVAILABLE 場合は、ストリーミングされた出力パラメーターを使用できます。 アプリケーションは、この表の最初の行で説明されているように、ストリーム出力パラメーターのトークンを取得するために、 **Sqlparamdata**を再度呼び出す必要があります。<br /><br /> リターンコードが SQL_SUCCESS 場合は、処理する結果セットがあるか、処理が完了しています。<br /><br /> リターンコードが SQL_SUCCESS_WITH_INFO 場合は、警告メッセージが処理されます。|  
   
- アプリケーション**が**次の**SQLExecDirect**リストにない関数を呼び出すと、SQL_PARAM_DATA_AVAILABLE**が返**されます。  
+ **Sqlexecute**、 **SQLExecDirect**、または**sqlmoreresults**によって SQL_PARAM_DATA_AVAILABLE が返された後、アプリケーションが次の一覧にない関数を呼び出すと、関数シーケンスエラーが発生します。  
   
--   **SQLAlloc ハンドル** / **SQLAllocHandleStd**  
+-   **SQLAllocHandle** / **SQLAllocHandleStd**  
   
--   **SQLDataSources** / **SQL データ**ソースの SQL ドライバー  
+-   **Sqldatasources ソース** / **sqldatasources**  
   
--   **SQLGetInfo** / **関数を取得します。**  
+-   **SQLGetInfo** / **sqlgetfunctions**  
   
--   **SQLGetConnectAttr** / **SQL 接続を行** / **SQLGetDescField** / **SQLGetDescRec**う  
+-   **Sqlgetconnectattr** / **SQLGetEnvAttr** / **SQLGetDescField** / **sqlgetdescrec**  
   
 -   **SQLNumParams**  
   
@@ -93,26 +93,26 @@ ODBC 3.8 より前のアプリケーションは、バインドされた出力�
   
 -   **SQLMoreResults**  
   
--   **SQLGetDiagField**フィールドを**取得します。**  /   
+-   **SQLGetDiagField** / **SQLGetDiagRec**  
   
 -   **SQLCancel**  
   
--   **(** ステートメント ハンドルを持つ) ハンドルを処理します。  
+-   **Sqlcancelhandle** (ステートメントハンドルを含む)  
   
--   **SQLFreeStmt** (オプション = SQL_CLOSE、SQL_DROP、またはSQL_UNBINDを使用)  
+-   **SQLFreeStmt** (オプション = SQL_CLOSE、SQL_DROP または SQL_UNBIND)  
   
 -   **SQLCloseCursor**  
   
--   **接続解除**  
+-   **SQLDisconnect**  
   
--   **SQL フリーハンドル**(ハンドルタイプ = SQL_HANDLE_STMTを持つ)  
+-   **Sqlfreehandle** (handletype = SQL_HANDLE_STMT)  
   
 -   **SQLGetStmtAttr**  
   
- アプリケーションは、引き続き**SQLSetDescField**または**SQLSetDescRec**を使用してバインディング情報を設定できます。 フィールド マッピングは変更されません。 ただし、記述子の内部のフィールドは、新しい値を返す場合があります。 たとえば、SQL_DESC_PARAMETER_TYPEはSQL_PARAM_INPUT_OUTPUT_STREAMまたはSQL_PARAM_OUTPUT_STREAMを返す場合があります。  
+ アプリケーションは引き続き**SQLSetDescField**または**SQLSetDescRec**を使用して、バインド情報を設定できます。 フィールドマッピングは変更されません。 ただし、記述子内のフィールドは、新しい値を返す場合があります。 たとえば、SQL_DESC_PARAMETER_TYPE は SQL_PARAM_INPUT_OUTPUT_STREAM または SQL_PARAM_OUTPUT_STREAM を返す場合があります。  
   
-## <a name="usage-scenario-retrieve-an-image-in-parts-from-a-result-set"></a>使用シナリオ: 結果セットから部品内のイメージを取得する  
- **SQLGetData**を使用すると、イメージに関する 1 行のメタデータを含む結果セットがストアド プロシージャから返され、大きな出力パラメータでイメージが返された場合に、データを一部に取得できます。  
+## <a name="usage-scenario-retrieve-an-image-in-parts-from-a-result-set"></a>使用シナリオ: 結果セットからパーツ内のイメージを取得する  
+ **SQLGetData**を使用すると、ストアドプロシージャから、イメージに関する1行のメタデータを含む結果セットが返され、そのイメージが大きな出力パラメーターで返された場合に、データを部分的に取得できます。  
   
 ```  
 // CREATE PROCEDURE SP_TestOutputPara  
@@ -193,8 +193,8 @@ BOOL displayPicture(SQLUINTEGER idOfPicture, SQLHSTMT hstmt) {
 }  
 ```  
   
-## <a name="usage-scenario-send-and-receive-a-large-object-as-a-streamed-inputoutput-parameter"></a>使用シナリオ: ストリーム入出力パラメーターとしてラージ・オブジェクトを送信および受信する  
- **SQLGetData**を使用すると、ストアド プロシージャが大きなオブジェクトを入力/出力パラメータとして渡し、データベースとの間で値をストリーミングするときに、データを一部で取得および送信できます。 メモリ内のすべてのデータを格納する必要はありません。  
+## <a name="usage-scenario-send-and-receive-a-large-object-as-a-streamed-inputoutput-parameter"></a>使用シナリオ: ストリーム入力/出力パラメーターとしてラージオブジェクトを送信および受信する  
+ **SQLGetData**を使用すると、ストアドプロシージャが大きなオブジェクトを入力/出力パラメーターとして渡し、データベースとの間で値をストリーミングするときに、パーツのデータを取得して送信することができます。 すべてのデータをメモリに保存する必要はありません。  
   
 ```  
 // CREATE PROCEDURE SP_TestInOut  

@@ -15,27 +15,27 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f00744ce2f0363e7fcf38820b20e2b631df7adc6
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301080"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>OLE DB の日付/時刻の強化に対するデータ型のサポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  このトピックでは、日付/時刻型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をサポート[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]する OLE DB ( ネイティブ クライアント ) 型について説明します。  
+  このトピックでは、日付/ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時刻データ型をサポート[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]する OLE DB (Native Client) 型について説明します。  
   
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>行セットとパラメーターでのデータ型マッピング  
  OLE DB には、新しいサーバーの種類をサポートする 2 つの新しいデータ型 (DBTYPE_DBTIME2 と DBTYPE_DBTIMESTAMPOFFSET) が用意されています。 次の表に、完全なサーバーの型マッピングを示します。  
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型|OLE DB データ型|[値]|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型|OLE DB データ型|値|  
 |-----------------------------------------|----------------------|-----------|  
 |DATETIME|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |date|DBTYPE_DBDATE|133 (oledb.h)|  
-|time|DBTYPE_DBTIME2|145 (sqlncli.h)|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146 (sqlncli.h)|  
+|時間|DBTYPE_DBTIME2|145 (sqlncli)|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146 (sqlncli)|  
 |datetime2|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
   
 ## <a name="data-formats-strings-and-literals"></a>データ形式 : 文字列とリテラル  
@@ -45,7 +45,7 @@ ms.locfileid: "81301080"
 |DATETIME|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、datetime における秒の小数部の桁数を 3 桁までサポートします。|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss'<br /><br /> このデータ型の精度は 1 分です。 秒の部分は、出力時には 0 になり、入力時にはサーバーによって丸められます。|  
 |date|DBTYPE_DBDATE|'yyyy-mm-dd'|  
-|time|DBTYPE_DBTIME2|'hh:mm:ss[.9999999]'<br /><br /> 秒の小数部には、必要に応じて最大 7 桁まで指定できます。|  
+|時間|DBTYPE_DBTIME2|'hh:mm:ss[.9999999]'<br /><br /> 秒の小数部には、必要に応じて最大 7 桁まで指定できます。|  
 |datetime2|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss[.fffffff]'<br /><br /> 秒の小数部には、必要に応じて最大 7 桁まで指定できます。|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|'yyyy-mm-dd hh:mm:ss[.fffffff] +/-hh:mm'<br /><br /> 秒の小数部には、必要に応じて最大 7 桁まで指定できます。|  
   
@@ -159,7 +159,7 @@ enum SQLVARENUM {
 };  
 ```  
   
- sql_variant**を使用し**、**日時**の制限された精度に依存する Native Client に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移行するアプリケーションは、基になるスキーマが**datetime**ではなく**datetime2**を使用するように更新された場合に更新する必要があります。  
+ **Sql_variant**を使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]し、 **datetime**の制限付き精度に依存するネイティブクライアントに移行するアプリケーションは、基になるスキーマが**datetime**ではなく**datetime2**を使用するように更新された場合に更新する必要があります。  
   
  また、SSVARIANT へのアクセス マクロが拡張され、次の部分が追加されました。  
   
@@ -173,14 +173,14 @@ enum SQLVARENUM {
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>ITableDefinition::CreateTable でのデータ型マッピング  
  次の型マッピングは、ITableDefinition::CreateTable で使用される DBCOLUMNDESC 構造体で使用されます。  
   
-|OLE DB データ型 (*wType*)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型|Notes|  
+|OLE DB データ型 (*wType*)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型|メモ|  
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|date||  
-|DBTYPE_DBTIMESTAMP|**datetime2**(p)|ネイティブ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアント OLE DB プロバイダーは、秒の小数部の精度を決定するために DBCOLUMDESC *bScale*メンバーを検査します。|  
-|DBTYPE_DBTIME2|**time**(p)|ネイティブ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアント OLE DB プロバイダーは、秒の小数部の精度を決定するために DBCOLUMDESC *bScale*メンバーを検査します。|  
-|DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|ネイティブ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアント OLE DB プロバイダーは、秒の小数部の精度を決定するために DBCOLUMDESC *bScale*メンバーを検査します。|  
+|DBTYPE_DBTIMESTAMP|**datetime2**(p)|Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、秒の小数部の有効桁数を決定するために、 *Dbbfile desc bscale*メンバーを検査します。|  
+|DBTYPE_DBTIME2|**time**(p)|Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、秒の小数部の有効桁数を決定するために、 *Dbbfile desc bscale*メンバーを検査します。|  
+|DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、秒の小数部の有効桁数を決定するために、 *Dbbfile desc bscale*メンバーを検査します。|  
   
- アプリケーションで *wType* に DBTYPE_DBTIMESTAMP を指定した場合、*pwszTypeName* に型名を指定することで、**datetime2** へのマッピングをオーバーライドします。 **datetime** を指定する場合、*bScale* は 3 にする必要があります。 **smalldatetime** を指定する場合、*bScale* は 0 にする必要があります。 *bScale*が wType および*pwszTypeName*と一致しない場合、DB_E_BADSCALEが返されます。 *wType*  
+ アプリケーションで *wType* に DBTYPE_DBTIMESTAMP を指定した場合、*pwszTypeName* に型名を指定することで、**datetime2** へのマッピングをオーバーライドします。 **datetime** を指定する場合、*bScale* は 3 にする必要があります。 **smalldatetime** を指定する場合、*bScale* は 0 にする必要があります。 *Bscale*が*Wtype*および*pwszTypeName*と一致しない場合、DB_E_BADSCALE が返されます。  
   
 ## <a name="see-also"></a>参照  
  [日付と時刻の強化機能 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  

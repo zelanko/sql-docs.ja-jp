@@ -1,5 +1,5 @@
 ---
-title: ODBC 付録 |マイクロソフトドキュメント
+title: ODBC の付録 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.assetid: 3331aa89-24d0-4c0e-b377-c720c1107ad5
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 555dccd513c78c490eb647ea8227ed3843e8a4be
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299842"
 ---
 # <a name="odbc-appendixes"></a>ODBC の付録
-Microsoft ODBC インターフェイスに関する技術的な詳細については、次の付録に記載されています。  
+Microsoft ODBC インターフェイスに関する技術的な詳細は、次の付録に含まれています。  
   
 -   [付録 A: ODBC エラー コード](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 接続する接続を接続する |マイクロソフトドキュメント
+title: SQLDriverConnect | を使用した接続Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,20 +21,20 @@ ms.assetid: e46e959f-d3c5-4ddb-810a-107bfcb83fd2
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 6cd95364d8a5316a50d9f55616236a8677bf99e4
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299072"
 ---
 # <a name="connecting-with-sqldriverconnect"></a>SQLDriverConnect による接続
-**接続文字列**を使用してデータ ソースに接続するために使用されます。 次**の**理由により **、SQLConnect**の代わりに接続が使用されます。  
+**SQLDriverConnect**は、接続文字列を使用してデータソースに接続するために使用されます。 次の理由により、 **SQLConnect**の代わりに**SQLDriverConnect**が使用されます。  
   
--   アプリケーションでドライバ固有の接続情報を使用できるようにする。  
+-   アプリケーションでドライバー固有の接続情報を使用できるようにする場合は。  
   
 -   ドライバーがユーザーに対して接続情報を要求する場合  
   
--   データ ソースを指定せずに接続すること。  
+-   データソースを指定せずに接続する場合。  
   
  このセクションでは、次のトピックを扱います。  
   

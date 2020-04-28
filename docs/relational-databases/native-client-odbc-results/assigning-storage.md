@@ -1,5 +1,5 @@
 ---
-title: ストレージの割り当て |マイクロソフトドキュメント
+title: ストレージの割り当て |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -23,10 +23,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 067abcfc8aa5bfd781e6656e3ced9f9e1e573e5f
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81297872"
 ---
 # <a name="assigning-storage"></a>ストレージの割り当て
@@ -34,7 +34,7 @@ ms.locfileid: "81297872"
 
   アプリケーションでは、SQL ステートメントの実行前後に、結果用のストレージを割り当てることができます。 アプリケーションで最初に SQL ステートメントを準備または実行すると、結果のストレージを割り当てる前に、結果セットに関する情報を取得できます。 たとえば、結果セットが不明であれば、アプリケーションでは、列にストレージを割り当てる前に、列数を取得する必要があります。  
   
- データ列のストレージを関連付けるには、アプリケーションが[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)を呼び出して渡します。  
+ データの列にストレージを関連付けるために、アプリケーションは[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)を呼び出し、それを渡します。  
   
 -   データの変換先のデータ型。  
   
@@ -48,15 +48,15 @@ ms.locfileid: "81297872"
   
 -   使用できるデータのバイト数を返すストレージ バッファーのアドレス。  
   
- また、アプリケーションは、結果セットの列をプログラム変数の配列にバインドして、結果セットの行をブロック単位でフェッチする機能をサポートすることもできます。 配列のバインドには、次の 2 つの異なる型があります。  
+ また、アプリケーションは、結果セットの列をプログラム変数の配列にバインドして、結果セットの行をブロック単位でフェッチする機能をサポートすることもできます。 配列バインディングには、次の2種類があります。  
   
 -   列方向のバインドは、各列を変数の独自の配列にバインドすると終了します。  
   
-     列方向のバインディングは、*属性*を SQL_ATTR_ROW_BIND_TYPE に設定し *、ValuePtr*を SQL_BIND_BY_COLUMN に設定して[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)を呼び出すことによって指定します。 すべての配列には、同じ数の要素を保持する必要があります。  
+     列方向のバインドは、*属性*を SQL_ATTR_ROW_BIND_TYPE に設定し、 *valueptr*を SQL_BIND_BY_COLUMN に設定して、 [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)を呼び出すことによって指定します。 すべての配列には、同じ数の要素を保持する必要があります。  
   
 -   行方向のバインドは、SQL ステートメント内のすべてのパラメーターを 1 単位として、パラメーターの各変数を保持する構造体の配列にバインドすると終了します。  
   
-     行方向のバインドは、*属性*を SQL_ATTR_ROW_BIND_TYPE に**設定し***、ValuePtr*を呼び出して、結果セット列を受け取る変数を保持する構造体のサイズに設定することによって指定されます。  
+     行**方向のバインド**を指定するには、*属性*を SQL_ATTR_ROW_BIND_TYPE に設定し、 *valueptr*に結果セットの列を受け取る変数を保持する構造体のサイズを設定します。  
   
  また、アプリケーションでは、SQL_ATTR_ROW_ARRAY_SIZE を列または行の配列内の要素数に設定し、SQL_ATTR_ROW_STATUS_PTR と SQL_ATTR_ROWS_FETCHED_PTR も設定します。  
   

@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 37be3d529c1d219318af2743d854a6d1b67f0cee
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300979"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>IRowsetFastLoad を使用したデータの一括コピー (OLE DB)
@@ -30,7 +30,7 @@ ms.locfileid: "81300979"
   
  コンシューマーは、SQLOLEDB プロバイダー固有のプロパティ SSPROP_ENABLEFASTLOAD を VARIANT_TRUE に設定することにより、一括コピーを実行する必要があることを SQLOLEDB に通知します。 コンシューマーはデータ ソースのプロパティ セットを使用して、SQLOLEDB セッションを作成します。 この新しいセッションによって、コンシューマーから **IRowsetFastLoad** にアクセスできるようになります。  
   
- **IRowsetFastLoad** を使用してレコードをテーブルに一括コピーする方法を示す完全なサンプル コードが用意されています。 このサンプルでは、テーブル **IRFLTable** に 10 個のレコードを追加します。 データベースにテーブル**IRFLTable**を作成する必要があります。  
+ **IRowsetFastLoad** を使用してレコードをテーブルに一括コピーする方法を示す完全なサンプル コードが用意されています。 このサンプルでは、テーブル **IRFLTable** に 10 個のレコードを追加します。 データベースにテーブル**Irfltable**を作成する必要があります。  
   
  このサンプルには AdventureWorks サンプル データベースが必要です。このサンプル データベースは、[Microsoft SQL Server サンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホーム ページからダウンロードできます。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "81300979"
   
  1 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストを実行して、アプリケーションで使用するテーブルを作成します。  
   
- ole32.lib と oleaut32.lib を使用して次の C++ コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数に sqlncli.h を含むディレクトリが含まれていることを確認します。  
+ ole32.lib と oleaut32.lib を使用して次の C++ コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
   
  3 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストを実行して、アプリケーションで使用したテーブルを削除します。  
   

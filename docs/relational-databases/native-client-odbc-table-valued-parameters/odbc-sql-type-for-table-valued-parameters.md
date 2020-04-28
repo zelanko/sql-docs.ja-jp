@@ -1,5 +1,5 @@
 ---
-title: テーブル値パラメーターの ODBC SQL 型 |マイクロソフトドキュメント
+title: テーブル値パラメーターの ODBC SQL 型 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6aae522544f4d9532dbc2d71db1b3d55ebee3da5
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81297842"
 ---
 # <a name="odbc-sql-type-for-table-valued-parameters"></a>テーブル値パラメーター用の ODBC SQL 型
@@ -25,24 +25,24 @@ ms.locfileid: "81297842"
 
   テーブル値パラメーターは、新しい ODBC SQL 型である SQL_SS_TABLE でサポートされます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  SQL_SS_TABLE は、他の ODBC データ型または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型に変換できません。  
   
- SQL_SS_TABLEが SQLBindParameter の*ValueType*パラメーターで C データ型として使用される場合、またはアプリケーション・パラメーター記述子 (APD) レコードのSQL_DESC_TYPEを SQL_SS_TABLE に設定しようとした場合、SQL_ERRORが戻され、SQLSTATE=HY003「無効なアプリケーション・バッファー・タイプ」で診断レコードが生成されます。  
+ SQL_SS_TABLE が SQLBindParameter の*ValueType*パラメーターで C データ型として使用されている場合、またはアプリケーションパラメーター記述子 (APD) レコードの SQL_DESC_TYPE を SQL_SS_TABLE に設定しようとした場合、SQL_ERROR が返され、"アプリケーションバッファーの種類が無効です" という内容の診断レコードが生成されます。  
   
- IPD レコードで SQL_DESC_TYPE を SQL_SS_TABLE に設定し、対応するアプリケーション パラメーター記述子レコードが SQL_C_DEFAULT ではない場合、SQL_ERROR が返され、"アプリケーションのバッファー型が無効です" というメッセージで SQLSTATE=HY003 の診断レコードが生成されます。 これは、SQL セットデスフィールド、SQL セットデスクレル、または SQLBind パラメーターの*パラメーターの型*で発生する可能性があります。  
+ IPD レコードで SQL_DESC_TYPE を SQL_SS_TABLE に設定し、対応するアプリケーション パラメーター記述子レコードが SQL_C_DEFAULT ではない場合、SQL_ERROR が返され、"アプリケーションのバッファー型が無効です" というメッセージで SQLSTATE=HY003 の診断レコードが生成されます。 これは、SQLSetDescField、SQLSetDescRec、または SQLBindParameter の*ParameterType*で発生する可能性があります。  
   
- SQLGetData を呼び出すときに*TargetType*パラメーターがSQL_SS_TABLE場合、SQL_ERRORが返され、SQLSTATE=HY003「無効なアプリケーション・バッファー・タイプ」を使用して診断レコードが生成されます。  
+ SQLGetData を呼び出すときに*TargetType*パラメーターが SQL_SS_TABLE 場合、SQL_ERROR が返され、"アプリケーションバッファーの種類が無効です" という SQLSTATE = HY003 の診断レコードが生成されます。  
   
- テーブル値パラメーターの列は、SQL_SS_TABLE 型としてバインドできません。 *パラメーター・タイプ*を SQL_SS_TABLE に設定して**SQLBindParameter**が呼び出されると、SQL_ERRORが戻され、SQLSTATE=HY004「無効な SQL データ・タイプ」を使用して診断レコードが生成されます。 これは、SQL セットデスフィールドと SQL セットデスクレを使用しても発生する可能性があります。  
+ テーブル値パラメーターの列は、SQL_SS_TABLE 型としてバインドできません。 **SQLBindParameter**が SQL_SS_TABLE に設定された*ParameterType*で呼び出された場合は、SQL_ERROR が返され、"無効な SQL データ型" で SQLSTATE = HY004 の診断レコードが生成されます。 これは、SQLSetDescField および SQLSetDescRec でも発生する可能性があります。  
   
  テーブル値パラメーターの列の値には、パラメーターおよび結果列と同じデータ変換オプションが設定されています。  
   
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降では、テーブル値パラメーターは入力パラメーターのみに使用できます。 SQLBindParameter または SQLSetDescField を使用してSQL_DESC_PARAMETER_TYPEをSQL_PARAM_INPUT以外の値に設定しようとすると、SQL_ERRORが返され、SQLSTATE=HY105 とメッセージ "無効なパラメーターの型" のステートメントに診断レコードが追加されます。  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降では、テーブル値パラメーターは入力パラメーターのみに使用できます。 SQLBindParameter または SQLSetDescField を介して SQL_PARAM_INPUT 以外の値に SQL_DESC_PARAMETER_TYPE を設定しようとすると、SQL_ERROR が返され、SQLSTATE = HY105 のステートメントに診断レコードが追加され、"パラメーターの型が無効です" というメッセージが表示されます。  
   
- テーブル値パラメーターの列は *、 StrLen_or_IndPtr*でSQL_DEFAULT_PARAMを使用できません。 代わりに、アプリケーションで列の属性 SQL_CA_SS_COL_HAS_DEFAULT_VALUE を 1 に設定できます。 つまり、この列にすべての行の既定値が含まれます。 *StrLen_or_IndPtrが*SQL_DEFAULT_PARAMに設定されている場合、SQLExecute または SQLExecDirect はSQL_ERRORを返し、SQLSTATE=HY090 とメッセージ "無効な文字列またはバッファー長" を持つステートメントに診断レコードが追加されます。  
+ テーブル値パラメーターでは、行ごとの既定値はサポートされていないので、テーブル値パラメーターの列は*StrLen_or_IndPtr*で SQL_DEFAULT_PARAM を使用できません。 代わりに、アプリケーションで列の属性 SQL_CA_SS_COL_HAS_DEFAULT_VALUE を 1 に設定できます。 つまり、この列にすべての行の既定値が含まれます。 *StrLen_or_IndPtr*が SQL_DEFAULT_PARAM に設定されている場合、sqlexecute または SQLExecDirect は SQL_ERROR を返し、メッセージ "文字列またはバッファーの長さが無効です" というメッセージで SQLSTATE = HY090 のステートメントに診断レコードが追加されます。  
   
 ## <a name="see-also"></a>参照  
- [ODBC&#41;&#40;テーブル値パラメーター](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+ [テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

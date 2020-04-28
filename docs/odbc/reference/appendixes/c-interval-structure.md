@@ -1,5 +1,5 @@
 ---
-title: C 間隔構造 |マイクロソフトドキュメント
+title: C Interval 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ ms.assetid: 52b42b56-50aa-4ce6-8d79-0963c7a71437
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 02c86ebe24a0e12531e355f95185b01f3089a31b
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81292154"
 ---
 # <a name="c-interval-structure"></a>C Interval 構造体
-「C データ・タイプ」セクションにリストされている各 C インターバル[・データ・タイプ](../../../odbc/reference/appendixes/c-data-types.md)は、同じ構造を使用して間隔データを格納します。 **SQLFetch** **、SQLFetchScroll、** または**SQLGetData**が呼び出されると、ドライバーはSQL_INTERVAL_STRUCT構造体にデータを返し、アプリケーションで指定された値を使用して C データ型 **(SQLBindCol、SQLGetData、** または**SQLBindParameter**の呼び出し) を使用して、SQL_INTERVAL_STRUCTの内容を解釈し、構造体の*interval_type*フィールドに C 型に対応する*列挙*型の値を設定します。 **SQLGetData** ドライバーは、間隔の種類を決定する*interval_type*フィールドを読み取りません。SQL_DESC_CONCISE_TYPE記述子フィールドの値を取得します。 構造体をパラメーター データに使用する場合、ドライバーは、アプリケーションが別の値*にinterval_type*フィールドの値を設定する場合でも、SQL_INTERVAL_STRUCTの内容を解釈するのに、APD のSQL_DESC_CONCISE_TYPEフィールドでアプリケーションによって指定された値を使用します。  
+「 [C データ型](../../../odbc/reference/appendixes/c-data-types.md)」セクションに記載されている各 c interval データ型は、同じ構造を使用して間隔データを格納します。 **Sqlfetch**、 **sqlfetchscroll**、または**SQLGetData**が呼び出されると、ドライバーはデータを SQL_INTERVAL_STRUCT 構造に返し、c データ型に対してアプリケーションによって指定された値 ( **SQLBindCol**、 **SQLGetData**、または**SQLBindParameter**の呼び出し) を使用して SQL_INTERVAL_STRUCT の内容を解釈し、構造体の*interval_type*フィールドに c 型に対応する*列挙*値を設定します。 ドライバーは、間隔の種類を決定するために*interval_type*フィールドを読み取っていないことに注意してください。SQL_DESC_CONCISE_TYPE 記述子フィールドの値を取得します。 パラメーターデータに構造体が使用されている場合、ドライバーは、アプリケーションが*interval_type*フィールドの値を別の値に設定した場合でも、APD の SQL_DESC_CONCISE_TYPE フィールドにあるアプリケーションで指定された値を使用して SQL_INTERVAL_STRUCT の内容を解釈します。  
   
- この構造体は、次のように定義されます。  
+ この構造体は次のように定義されています。  
   
 ```  
 typedef struct tagSQL_INTERVAL_STRUCT  
@@ -69,4 +69,4 @@ typedef struct tagSQL_DAY_SECOND
 } SQL_DAY_SECOND_STRUCT;  
 ```  
   
- SQL_INTERVAL_STRUCTの*interval_type*フィールドは、共用体に保持されている構造と、その構造体のメンバーが関連付けされているかをアプリケーションに示します。 *interval_sign*フィールドは、間隔の先行フィールドが符号なしの場合にSQL_FALSE値を持ちます。SQL_TRUE場合、先頭フィールドは負の値になります。 先行フィールド自体の値は *、interval_sign*の値に関係なく、常に符号なしです。 *interval_sign*フィールドは符号ビットとして機能します。
+ SQL_INTERVAL_STRUCT の [ *interval_type* ] フィールドは、共用体に保持されている構造と、その構造のどのメンバーが関連しているかをアプリケーションに示します。 間隔の先頭フィールドが符号なしの場合、 *interval_sign*フィールドには SQL_FALSE 値があります。SQL_TRUE の場合、先頭のフィールドは負の値になります。 先頭フィールド自体の値は、 *interval_sign*の値に関係なく、常に符号なしです。 *Interval_sign*フィールドは、符号ビットとして機能します。

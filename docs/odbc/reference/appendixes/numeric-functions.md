@@ -1,5 +1,5 @@
 ---
-title: 数値関数 |マイクロソフトドキュメント
+title: 数値関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,48 +14,48 @@ ms.assetid: 4fa548dc-e8b0-4179-92ff-81d6a79d10c3
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 03da5b6644e0f7df3dc4e5e16a211cb503023bad
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299872"
 ---
 # <a name="numeric-functions"></a>数値関数
-次の表は、ODBC スカラー関数セットに含まれる数値関数を示しています。 *情報型*SQL_NUMERIC_FUNCTIONSで**SQLGetInfo**を呼び出すことで、アプリケーションは、ドライバーでサポートされている数値関数を決定できます。  
+次の表では、ODBC スカラー関数セットに含まれる数値関数について説明します。 SQL_NUMERIC_FUNCTIONS の*情報の種類*を使用して**SQLGetInfo**を呼び出すことによって、ドライバーでサポートされている数値関数をアプリケーションで特定できます。  
   
- すべての数値関数は、入力パラメーターと同じデータ型の値を返す ABS、ROUND、TRUNCATE、符号、FLOOR、および CEILING を除き、データ型の値をSQL_FLOAT返します。  
+ すべての数値関数は、データ型 SQL_FLOAT の値を返します。ただし、ABS、ROUND、TRUNCATE、SIGN、FLOOR、および切り上げは、入力パラメーターと同じデータ型の値を返します。  
   
- *numeric_exp*として示される引数は、列の名前、別のスカラー関数の結果、または基になるデータ型をSQL_NUMERIC、SQL_DECIMAL、SQL_TINYINT、SQL_SMALLINT、SQL_INTEGER、SQL_BIGINT、SQL_FLOAT、SQL_REAL、またはSQL_DOUBLEとして表すことができる*数値の l*です。  
+ *Numeric_exp*として指定される引数には、列の名前、別のスカラー関数の結果、また*は、基*になるデータ型を SQL_NUMERIC、SQL_DECIMAL、SQL_TINYINT、SQL_SMALLINT、SQL_INTEGER、SQL_BIGINT、SQL_FLOAT、SQL_REAL、SQL_DOUBLE として表すことができます。  
   
- *float_exp*として示される引数は、列の名前、別のスカラー関数の結果、または基になるデータ型をSQL_FLOATとして表すことができる*数値リテラル*です。  
+ *Float_exp*として指定される引数には、列の名前、別のスカラー関数の結果、または、基になるデータ型を SQL_FLOAT として表すことができる*数値リテラル*を指定できます。  
   
- *integer_exp*として示される引数は、列の名前、別のスカラー関数の結果、または基になるデータ型をSQL_TINYINT、SQL_SMALLINT、SQL_INTEGER、またはSQL_BIGINTとして表すことができる*数値リテラル*です。  
+ *Integer_exp*として示される引数には、列の名前、別のスカラー関数の結果、または、基になるデータ型を SQL_TINYINT、SQL_SMALLINT、SQL_INTEGER、または SQL_BIGINT として表すことができる*数値リテラル*を指定できます。  
   
- CURRENT_DATE、CURRENT_TIME、CURRENT_TIMESTAMPスカラー関数が ODBC 3.0 で追加され、SQL-92 に合わせて調整されました。  
+ CURRENT_DATE、CURRENT_TIME、および CURRENT_TIMESTAMP スカラー関数が、SQL-92 に合わせて ODBC 3.0 に追加されました。  
   
-|機能|説明|  
+|関数|説明|  
 |--------------|-----------------|  
-|**ABS(** _numeric_exp_ **)** (ODBC 1.0)|*numeric_exp*の絶対値を返します。|  
-|**ACOS(** _float_exp_ **)** (ODBC 1.0)|float_expのアークコサインを、ラジアンで表した*角度で返*します。|  
-|**ASIN(** _float_exp_ **)** (ODBC 1.0)|float_expのアークシンをラジアンで表した*角度で返*します。|  
-|**ATAN(** _float_exp_ **)** (ODBC 1.0)|*float_exp*のアークタンジェントを、ラジアンで表した角度で返します。|  
-|**ATAN2(** _float_exp1_, _float_exp2_**)** (ODBC 2.0)|*float_exp1*と*float_exp2*で指定された*x*座標と*y*座標のアークタンジェントを、それぞれ角度としてラジアンで返します。|  
-|**天井(** _numeric_exp_ **)** (ODBC 1.0)|*numeric_exp*以上の最小整数を返します。 戻り値は入力パラメーターと同じデータ型です。|  
-|**COS(** _float_exp_ **)** (ODBC 1.0)|float_expのコ*サインを返*します*float_exp。*|  
-|**COT(** _float_exp_ **)** (ODBC 1.0)|*float_exp*のコタンジェントを返します( *float_exp*はラジアンで表される角度です)。|  
-|**度(** _numeric_exp_ **)** (ODBC 2.0)|numeric_expラジアンから変換された度数*を*返します。|  
-|**EXP(** _float_exp_ **)** (ODBC 1.0)|*float_exp*の指数値を返します。|  
-|**フロア(** _numeric_exp_ **)** (ODBC 1.0)|*numeric_exp*以下の最大の整数を返します。 戻り値は入力パラメーターと同じデータ型です。|  
-|**ログ(** _float_exp_ **)** (ODBC 1.0)|*float_exp*の自然対数を返します。|  
-|**LOG10(** _float_exp_ **)** (ODBC 2.0)|*float_exp*の底数 10 の対数を返します。|  
-|**MOD(** _integer_exp1_, _integer_exp2_**)** (ODBC 1.0)|*integer_exp1*の剰余を*integer_exp2*で除算した剰余 (モジュラス) を返します。|  
-|**PI( )** (ODBC 1.0)|pi の定数値を浮動小数点値として返します。|  
-|**電源(** _numeric_exp_, _integer_exp_**)** (ODBC 2.0)|*numeric_exp*の値を integer_exp の累乗に戻*します*。|  
-|**ラジアン(** _numeric_exp_ **)** (ODBC 2.0)|numeric_exp度から変換されたラジアンの数*を*返します。|  
-|**ランド(**[*integer_exp*]**)** (ODBC 1.0)|オプションのシード値として*integer_exp*を使用して、ランダムな浮動小数点値を返します。|  
-|**ROUND(** _numeric_exp_, _integer_exp_**)** (ODBC 2.0)|小数点*numeric_exp**右integer_exp四*捨五入して戻します。 *integer_exp*が負の場合 *、numeric_exp*小数点の左側の&#124;&#124;*integer_exp&#124;* に丸められます。|  
-|**符号 (** _numeric_exp_ **)** (ODBC 1.0)|*numeric_exp*の符号を示すインジケーターを返します。 *numeric_exp*が 0 未満の場合は、-1 が返されます。 *numeric_exp*がゼロに等しい場合は、0 が返されます。 *numeric_exp*がゼロより大きい場合は、1 が返されます。|  
-|**シン(** _float_exp_ **)** (ODBC 1.0)|float_expのを返します*float_exp**float_exp。*|  
-|**SQRT(** _float_exp_ **)** (ODBC 1.0)|*float_exp*の平方根を返します。|  
-|**タン(** _float_exp_ **)** (ODBC 1.0)|*float_exp*のタンジェントを返します*float_exp。*|  
-|**切り捨て (** _numeric_exp_, _integer_exp_**)** (ODBC 2.0)|小数点*numeric_exp**右integer_exp切*り捨てられた値を返します。 *integer_exp*が負の場合 *、numeric_exp*小数点 &#124;の左側にある*integer_exp&#124;* の桁数に切り捨てられます。|
+|**ABS (** _numeric_exp_ **)** (ODBC 1.0)|*Numeric_exp*の絶対値を返します。|  
+|**ACOS (** _float_exp_ **)** (ODBC 1.0)|*Float_exp*のアークコサインをラジアンで表した角度として返します。|  
+|**アークサイン (** _float_exp_ **)** (ODBC 1.0)|ラジアンで表された角度として*float_exp*のアークサインを返します。|  
+|**ATAN (** _float_exp_ **)** (ODBC 1.0)|ラジアンで表された角度として*float_exp*のアークタンジェントを返します。|  
+|**ATAN2 (** _float_exp1_、 _float_exp2_**)** (ODBC 2.0)|*Float_exp1*と*float_exp2*によって指定された*x*座標と*y*座標のアークタンジェントをラジアンで表した角度として返します。|  
+|**切り上げ (** _numeric_exp_ **)** (ODBC 1.0)|*Numeric_exp*以上の最小の整数を返します。 戻り値は、入力パラメーターと同じデータ型です。|  
+|**COS (** _float_exp_ **)** (ODBC 1.0)|*Float_exp*のコサインを返します。 *float_exp*はラジアンで表された角度です。|  
+|**COT (** _float_exp_ **)** (ODBC 1.0)|*Float_exp*のコタンジェントを返します。 *float_exp*はラジアンで表された角度です。|  
+|**度 (** _numeric_exp_ **)** (ODBC 2.0)|*Numeric_exp*ラジアンから変換された角度の数を返します。|  
+|**EXP (** _float_exp_ **)** (ODBC 1.0)|*Float_exp*の指数値を返します。|  
+|**FLOOR (** _numeric_exp_ **)** (ODBC 1.0)|*Numeric_exp*以下の最大の整数を返します。 戻り値は、入力パラメーターと同じデータ型です。|  
+|**ログ (** _float_exp_ **)** (ODBC 1.0)|*Float_exp*の自然対数を返します。|  
+|**LOG10 (** _float_exp_ **)** (ODBC 2.0)|*Float_exp*の10を底とする対数を返します。|  
+|**MOD (** _integer_exp1_、 _integer_exp2_**)** (ODBC 1.0)|*Integer_exp2*で割った*integer_exp1*の剰余 (剰余) を返します。|  
+|**PI ()** (ODBC 1.0)|浮動小数点値として pi の定数値を返します。|  
+|**POWER (** _numeric_exp_、 _integer_exp_**)** (ODBC 2.0)|*Integer_exp*の*numeric_exp*の値を返します。|  
+|**ラジアン (** _numeric_exp_ **)** (ODBC 2.0)|*Numeric_exp*度から変換されたラジアン数を返します。|  
+|**RAND (**[*integer_exp*]**)** (ODBC 1.0)|*Integer_exp*を省略可能なシード値として使用して、ランダムな浮動小数点値を返します。|  
+|**ROUND (** _numeric_exp_、 _integer_exp_**)** (ODBC 2.0)|小数点の右側の*integer_exp*の位置に丸められた*numeric_exp*を返します。 *Integer_exp*が負の値の場合、 *numeric_exp*は、小数点の左側に &#124;*integer_exp*&#124; に丸められます。|  
+|**SIGN (** _numeric_exp_ **)** (ODBC 1.0)|*Numeric_exp*の符号を示すインジケーターを返します。 *Numeric_exp*が0未満の場合は、-1 が返されます。 *Numeric_exp*が0の場合は、0が返されます。 *Numeric_exp*が0より大きい場合は、1が返されます。|  
+|**SIN (** _float_exp_ **)** (ODBC 1.0)|*Float_exp*のサインを返します。 *float_exp*はラジアンで表された角度です。|  
+|**SQRT (** _float_exp_ **)** (ODBC 1.0)|*Float_exp*の平方根を返します。|  
+|**TAN (** _float_exp_ **)** (ODBC 1.0)|*Float_exp*のタンジェントを返します。 *float_exp*はラジアンで表された角度です。|  
+|**TRUNCATE (** _numeric_exp_、 _integer_exp_**)** (ODBC 2.0)|小数点の右側の*integer_exp*の位置に切り捨てられた*numeric_exp*を返します。 *Integer_exp*が負の値の場合、 *numeric_exp*は小数点の左側の&#124; *integer_exp* &#124;に切り捨てられます。|

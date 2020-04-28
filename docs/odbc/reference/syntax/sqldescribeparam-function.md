@@ -1,5 +1,5 @@
 ---
-title: 関数の説明 |マイクロソフトドキュメント
+title: SQLDescribeParam 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
 ms.prod: sql
@@ -21,18 +21,18 @@ ms.assetid: 1f5b63c4-2f3e-44da-b155-876405302281
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: be6d076ca121923a4b6769c7dad5269c3fd642ca
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301162"
 ---
 # <a name="sqldescribeparam-function"></a>SQLDescribeParam 関数
-**適合 性**  
- バージョン導入: ODBC 1.0 標準準拠: ODBC  
+**互換性**  
+ 導入されたバージョン: ODBC 1.0 標準準拠: ODBC  
   
  **まとめ**  
- **準備**された SQL ステートメントに関連付けられたパラメーター・マーカーの記述を戻します。 この情報は、IPD のフィールドでも使用できます。  
+ **SQLDescribeParam**は、準備された SQL ステートメントに関連付けられているパラメーターマーカーの説明を返します。 この情報は、IPD のフィールドでも使用できます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -48,68 +48,68 @@ SQLRETURN SQLDescribeParam(
 ```  
   
 ## <a name="argument"></a>引数  
- *ステートメントハンドル*  
- [入力]ステートメント ハンドル。  
+ *StatementHandle*  
+ 代入ステートメントハンドル。  
   
- *パラメータ番号*  
- [入力]パラメータマーカー番号は、1から始まる増加パラメータ順に順番に並べ替えられます。  
+ *ParameterNumber*  
+ 代入パラメーターの順序を昇順に並べ替え、1から始まるパラメーターマーカー番号。  
   
- *データ型Ptr*  
- [出力]パラメーターの SQL データ・タイプを戻すバッファーへのポインター。 この値は、IPD のSQL_DESC_CONCISE_TYPEレコード・フィールドから読み取られます。 これは、「付録 D:[データ型」の「SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)」セクションの値の 1 つ、またはドライバー固有の SQL データ型です。  
+ *DataTypePtr*  
+ Outputパラメーターの SQL データ型を返すバッファーへのポインター。 この値は、IPD の SQL_DESC_CONCISE_TYPE レコードフィールドから読み取られます。 これは、「付録 D: データ型」の「 [Sql データ型](../../../odbc/reference/appendixes/sql-data-types.md)」またはドライバー固有の sql データ型のいずれかの値になります。  
   
- ODBC 3 で。*x*、SQL_TYPE_DATE、SQL_TYPE_TIME、またはSQL_TYPE_TIMESTAMPは、それぞれ日付、時刻、またはタイムスタンプのデータの*\*DataTypePtr*に返されます。ODBC 2 で使用します。*x*、SQL_DATE、SQL_TIME、またはSQL_TIMESTAMPが返されます。 ドライバー マネージャーは、ODBC 2 の場合に必要なマッピングを実行します。*x*アプリケーションは ODBC 3 で動作しています。*x*ドライバまたは ODBC 3 の場合。*x*アプリケーションは ODBC 2 で動作しています。*x*ドライバ。  
+ ODBC 3 の場合。DATE、TIME、または TIMESTAMP データの* \*DataTypePtr*では、 *x*、SQL_TYPE_DATE、SQL_TYPE_TIME、または SQL_TYPE_TIMESTAMP がそれぞれ返されます。ODBC 2 の場合。*x*、SQL_DATE、SQL_TIME、または SQL_TIMESTAMP が返されます。 ODBC 2 では、ドライバーマネージャーが必要なマッピングを実行します。*x*アプリケーションは ODBC 3 を使用して動作しています。*x*ドライバーまたは ODBC 3 の場合。*x*アプリケーションは ODBC 2 で動作しています。*x*ドライバー。  
   
- *ColumnNumber*が 0 (ブックマーク列の場合) の場合、可変長ブックマークの場合は*\*DataTypePtr*にSQL_BINARYが返されます。 (ODBC 3 でブックマークが使用されている場合は、SQL_INTEGERが返されます。*x*アプリケーションは ODBC 2 で動作します。*x*ドライバまたは ODBC 2 を使用します。*x*アプリケーションは ODBC 3 で動作します。*x*ドライバ。  
+ *Columnnumber*が 0 (ブックマーク列) の場合、 * \*DataTypePtr*では可変長のブックマークに対して SQL_BINARY が返されます。 (SQL_INTEGER は、ブックマークが ODBC 3 で使用されている場合に返されます。*x*アプリケーションが ODBC 2 で動作する。*x*ドライバーまたは ODBC 2。*x*アプリケーションが ODBC 3 を使用して動作している。*x*ドライバー。)  
   
- 詳細については、「付録 D:[データ型](../../../odbc/reference/appendixes/sql-data-types.md)」の SQL データ型を参照してください。 ドライバー固有の SQL データ型については、ドライバーのドキュメントを参照してください。  
+ 詳細については、「付録 D: データ型」の「 [SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)」を参照してください。 ドライバー固有の SQL データ型の詳細については、ドライバーのドキュメントを参照してください。  
   
- *パラメーターサイズプラー*  
- [出力]データ ソースで定義されている、対応するパラメーター マーカーの列または式のサイズを文字で返すバッファーへのポインター。 列サイズの詳細については、「[列サイズ、10 進数、オクテット長の転送、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)」を参照してください。  
+ *ParameterSizePtr*  
+ Outputデータソースによって定義されている、対応するパラメーターマーカーの列または式のサイズを文字数で返すバッファーへのポインター。 列のサイズの詳細については、「[列のサイズ、10進数、転送オクテットの長さ、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)」を参照してください。  
   
- *10 進数の桁数Ptr*  
- [出力]データ ソースで定義されている、対応するパラメーターの列または式の 10 進数の桁数を返すバッファーへのポインター。 10 進数の詳細については、「[列サイズ、10 進数、オクテット長の転送、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)」を参照してください。  
+ *DecimalDigitsPtr*  
+ Outputデータソースによって定義された、対応するパラメーターの列または式の小数点以下桁数を返すバッファーへのポインター。 10進数の詳細については、「[列のサイズ、10進数、転送オクテットの長さ、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)」を参照してください。  
   
- *Null 可能なPtr*  
- [出力]パラメーターが NULL 値を許可するかどうかを示す値を返すバッファーへのポインター。 この値は IPD のSQL_DESC_NULLABLEフィールドから読み取られます。 次のいずれか:  
+ *NullablePtr*  
+ Outputパラメーターが NULL 値を許容するかどうかを示す値を返すバッファーへのポインター。 この値は、IPD の SQL_DESC_NULLABLE フィールドから読み取られます。 次のいずれか:  
   
--   SQL_NO_NULLS: パラメーターは NULL 値を許可しません (これはデフォルト値です)。  
+-   SQL_NO_NULLS: パラメーターでは NULL 値が許可されません (これは既定値です)。  
   
--   SQL_NULLABLE: パラメーターは NULL 値を許可します。  
+-   SQL_NULLABLE: パラメーターでは NULL 値が許可されます。  
   
--   SQL_NULLABLE_UNKNOWN: パラメーターが NULL 値を許可するかどうかを判断できません。  
+-   SQL_NULLABLE_UNKNOWN: ドライバーは、パラメーターで NULL 値が許可されているかどうかを判断できません。  
   
 ## <a name="returns"></a>戻り値  
- SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR、またはSQL_INVALID_HANDLE。  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR、または SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>診断  
- **SQLDescribeParam**がSQL_ERRORまたはSQL_SUCCESS_WITH_INFOを返すときは、SQL_HANDLE_STMTの*ハンドル型*と*ステートメント ハンドル*ハンドルを指定して**SQLGetDiagRec**を呼び出すことによって、関連付けられた SQLSTATE*値を取得*できます。 次の表は、通常**SQLDescribe パラム**によって返される SQLSTATE 値を示し、この関数のコンテキストで各値を説明します。「(DM)」という表記は、ドライバ マネージャによって返される SQLSTATEs の説明の前に記述されます。 特に注記がない限り、各 SQLSTATE 値に関連付けられた戻りコードはSQL_ERROR。  
+ **SQLDescribeParam**が SQL_ERROR または SQL_SUCCESS_WITH_INFO を返す場合、関連付けられた SQLSTATE 値を取得するには、 *Handletype* SQL_HANDLE_STMT と*StatementHandle*の*ハンドル*を指定して**SQLGetDiagRec**を呼び出します。 次の表に、 **SQLDescribeParam**によって通常返される SQLSTATE 値と、この関数のコンテキストでのそれぞれについて説明します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
   
 |SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
-|01000|一般的な警告|ドライバー固有の情報メッセージ。 (関数はSQL_SUCCESS_WITH_INFOを返します。|  
-|07009|記述子インデックスが無効です|(DM)*引数パラメータ数*に指定された値が 1 未満です。<br /><br /> *引数 ParameterNumber*に指定された値が、関連する SQL ステートメントのパラメーター数より大きかった。<br /><br /> パラメーター・マーカーは、非 DML ステートメントの一部でした。<br /><br /> パラメータ マーカーは**SELECT**リストの一部でした。|  
-|08S01|通信リンクの障害|ドライバとドライバが接続されているデータ ソースとの間の通信リンクが、関数の処理を完了する前に失敗しました。|  
-|21S01|値リストが列リストと一致しません|**INSERT**ステートメントのパラメーター数が、ステートメントで指定された表の列数と一致しませんでした。|  
-|HY000|一般的なエラー|特定の SQLSTATE がなく、実装固有の SQLSTATE が定義されていないエラーが発生しました。 メッセージ テキスト バッファー内の**SQLGetDiagRec**によって返されるエラー メッセージは、エラーとその原因を記述します。 * \**|  
-|HY001|メモリ割り当てエラー|ドライバは、関数の実行または完了をサポートするために必要なメモリを割り当てることができませんでした。|  
-|HY008|操作がキャンセルされました|*ステートメント ハンドル*に対して非同期処理が有効になりました。 関数が呼び出され、実行が完了する前に、*ステートメント ハンドル*で**SQL キャンセル**または SQL**キャンセル ハンドル**が呼び出されました。 その後、関数は*ステートメント ハンドル*で再度呼び出されました。<br /><br /> 関数が呼び出され、実行が完了する前に **、SQLCancel**または**SQLCancelHandle**がマルチスレッド アプリケーションの別のスレッドから*ステートメント ハンドル*で呼び出されました。|  
-|HY010|関数シーケンス エラー|(DM) 関数は、*ステートメント ハンドル*の**SQLPrepare**または**SQLExecDirect**を呼び出す前に呼び出されました。<br /><br /> (DM)*ステートメント ハンドル*に関連付けられている接続ハンドルに対して非同期に実行される関数が呼び出されました。 この非同期関数は **、SQLDescribeParam**関数が呼び出されたときに実行されていました。<br /><br /> (DM)*ステートメント ハンドル*に対して非同期に実行される関数 (この関数ではない) が呼び出され、この関数が呼び出されたときにまだ実行されていました。<br /><br /> (DM)**ステートメント***ハンドル*に対**して**呼び**出され**、SQL_NEED_DATA返されました。 **SQLBulkOperations** この関数は、実行時のすべてのデータ パラメーターまたは列に対してデータが送信される前に呼び出されました。|  
-|HY013|メモリ管理エラー|メモリ不足の状態が原因で、基になるメモリ オブジェクトにアクセスできなかったため、関数呼び出しを処理できませんでした。|  
-|HY117|不明なトランザクション状態のため、接続が中断されました。 切断と読み取り専用の機能のみが許可されます。|(DM) 中断状態の詳細については[、SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。|  
-|ヒュットー1|接続のタイムアウトが期限切れになりました|データ ソースが要求に応答する前に、接続タイムアウト期間が切れました。 接続タイムアウト期間は **、SQL_ATTR_CONNECTION_TIMEOUT SQLSetConnectAttr**を使用して設定されます。|  
-|IM001|ドライバはこの機能をサポートしていません|(DM)*ステートメント ハンドル*に関連付けられているドライバーは、関数をサポートしていません。|  
-|IM017|非同期通知モードではポーリングが無効になっています|通知モデルを使用すると、ポーリングは無効になります。|  
-|IM018|**SQLCompleteAsync**このハンドルに対する前の非同期操作を完了するために呼び出されていません。|ハンドルの前の関数呼び出しがSQL_STILL_EXECUTINGを返し、通知モードが有効な場合、後処理を実行して操作を完了するために、ハンドルで**SQLCompleteAsync**を呼び出す必要があります。|  
+|01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
+|07009|無効な記述子のインデックス|(DM) 引数*Parameternumber*に指定された値が1未満です。<br /><br /> 引数*Parameternumber*に指定された値が、関連付けられている SQL ステートメントのパラメーターの数を超えています。<br /><br /> パラメーターマーカーは、DML 以外のステートメントの一部でした。<br /><br /> パラメーターマーカーは**選択**リストの一部でした。|  
+|08S01|通信リンクの失敗|関数が処理を完了する前に、ドライバーと、ドライバーが接続されていたデータソースとの間の通信リンクが失敗しました。|  
+|21S01|挿入する値の一覧が列の一覧と一致しません|**INSERT**ステートメント内のパラメーターの数が、ステートメントで指定されたテーブル内の列の数と一致しませんでした。|  
+|HY000|一般的なエラー|特定の SQLSTATE がなく、実装固有の SQLSTATE が定義されていないエラーが発生しました。 Messagetext バッファーの**SQLGetDiagRec**によって返されるエラーメッセージには、エラーとその原因が記述されています。 * \**|  
+|HY001|メモリ割り当てエラー|ドライバーは、関数の実行または完了をサポートするために必要なメモリを割り当てることができませんでした。|  
+|HY008|操作が取り消されました|*StatementHandle*に対して非同期処理が有効になりました。 関数が呼び出され、実行が完了する前に、 **SQLCancel**または**Sqlcancelhandle**が*StatementHandle*で呼び出されました。 次に、 *StatementHandle*で関数が再度呼び出されました。<br /><br /> 関数が呼び出され、実行が完了する前に、マルチスレッドアプリケーションの別のスレッドの*StatementHandle*で**SQLCancel**または**sqlcancelhandle**が呼び出されました。|  
+|HY010|関数のシーケンスエラー|(DM) *StatementHandle*の**SQLPrepare**または**SQLExecDirect**を呼び出す前に、関数が呼び出されました。<br /><br /> (DM) 非同期的に実行する関数が、 *StatementHandle*に関連付けられている接続ハンドルに対して呼び出されました。 この非同期関数は、 **SQLDescribeParam**関数が呼び出されたときにまだ実行されていました。<br /><br /> (DM) 非同期的に実行されている関数 (この1つではない) が*StatementHandle*に対して呼び出され、この関数が呼び出されたときにまだ実行されています。<br /><br /> (DM) **Sqlexecute**、 **SQLExecDirect**、 **Sqlbulkoperations**、 **SQLSetPos**が*StatementHandle*に対して呼び出され、SQL_NEED_DATA が返されました。 この関数は、実行時データのすべてのパラメーターまたは列に対してデータが送信される前に呼び出されました。|  
+|HY013|メモリ管理エラー|基になるメモリオブジェクトにアクセスできなかったため、関数呼び出しを処理できませんでした。メモリ不足の状態が原因である可能性があります。|  
+|HY117|トランザクションの状態が不明なため、接続が中断されました。 切断と読み取り専用の機能のみが許可されます。|(DM) 中断状態の詳細については、「 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)」を参照してください。|  
+|HYT01|接続タイムアウトの期限が切れました|データソースが要求に応答する前に、接続のタイムアウト期間が経過しました。 接続タイムアウト期間は、 **SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT によって設定されます。|  
+|IM001|ドライバーはこの機能をサポートしていません|(DM) *StatementHandle*に関連付けられているドライバーでは、関数はサポートされていません。|  
+|IM017|非同期通知モードでは、ポーリングは無効になっています|通知モデルが使用されるたびに、ポーリングは無効になります。|  
+|IM018|**Sqlcompleteasync**は、このハンドルで前の非同期操作を完了するために呼び出されていません。|ハンドルに対する前の関数呼び出しが SQL_STILL_EXECUTING を返し、通知モードが有効になっている場合は、処理を完了するために、ハンドルに対して**Sqlcompleteasync**を呼び出す必要があります。|  
   
 ## <a name="comments"></a>説明  
- パラメーター・マーカーは、SQL ステートメントに出現する順に、1 から始まる増加パラメーター順で番号付けされます。  
+ パラメーターマーカーには、SQL ステートメントに表示される順序で、パラメーターの順序が1から始まる昇順で番号が付けられています。  
   
- **SQLDescribe パラム**は、SQL ステートメント内のパラメーターの型 (入力、入出力、または出力) を返しません。 プロシージャーの呼び出しを除き、SQL ステートメント内のすべてのパラメーターは入力パラメーターです。 プロシージャの呼び出しで各パラメーターの型を確認するには、アプリケーションは**SQLProcedureColumns を**呼び出します。  
+ **SQLDescribeParam**は、SQL ステートメント内のパラメーターの型 (入力、入出力、出力) を返しません。 プロシージャの呼び出しを除き、SQL ステートメントのすべてのパラメーターは入力パラメーターです。 プロシージャの呼び出しで各パラメーターの型を特定するには、アプリケーションが**SQLProcedureColumns**を呼び出します。  
   
- 詳細については、「[パラメータの記述」](../../../odbc/reference/develop-app/describing-parameters.md)を参照してください。  
+ 詳細については、「[パラメーターの説明](../../../odbc/reference/develop-app/describing-parameters.md)」を参照してください。  
   
 ## <a name="code-example"></a>コード例  
- 次の例では、SQL ステートメントの入力を求めるメッセージを表示し、そのステートメントを準備します。 次に **、SQLNumParams**を呼び出して、ステートメントにパラメーターが含まれているかどうかを判断します。 ステートメントにパラメーターが含まれている場合は **、SQLDescribe パラム**を呼び出してそれらのパラメーターを記述し、それらをバインドする**SQLBindParameter**を呼び出します。 最後に、パラメーターの値をユーザーに求めるプロンプトを表示し、ステートメントを実行します。  
+ 次の例では、SQL ステートメントの入力をユーザーに求め、そのステートメントを準備します。 次に、 **Sqlnumparams**を呼び出して、ステートメントにパラメーターが含まれているかどうかを確認します。 ステートメントにパラメーターが含まれている場合は、 **SQLDescribeParam**を呼び出してそれらのパラメーターを記述し、 **SQLBindParameter**をバインドします。 最後に、任意のパラメーターの値をユーザーに要求し、ステートメントを実行します。  
   
 ```cpp  
 SQLCHAR       Statement[100];  
@@ -171,12 +171,12 @@ free(LenOrIndArray);
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|参照先|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |バッファーをパラメーターにバインドする|[SQLBindParameter 関数](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  
-|ステートメント処理のキャンセル|[SQLCancel 関数](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|ステートメント処理の取り消し|[SQLCancel 関数](../../../odbc/reference/syntax/sqlcancel-function.md)|  
 |準備された SQL ステートメントの実行|[SQLExecute 関数](../../../odbc/reference/syntax/sqlexecute-function.md)|  
-|実行のためのステートメントの準備|[SQLPrepare 関数](../../../odbc/reference/syntax/sqlprepare-function.md)|  
+|実行するステートメントの準備|[SQLPrepare 関数](../../../odbc/reference/syntax/sqlprepare-function.md)|  
   
 ## <a name="see-also"></a>参照  
  [ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)   

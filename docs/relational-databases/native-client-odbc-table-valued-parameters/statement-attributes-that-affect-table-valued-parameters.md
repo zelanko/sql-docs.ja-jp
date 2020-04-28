@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3344b0738b0b831240405fad50c4d055f0f9a9d5
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81297775"
 ---
 # <a name="statement-attributes-that-affect-table-valued-parameters"></a>テーブル値パラメーターに影響を与えるステートメント属性
@@ -28,11 +28,11 @@ ms.locfileid: "81297775"
   
 |属性名|Type|説明|  
 |--------------------|----------|-----------------|  
-|SQL_SOPT_SS_PARAM_FOCUS|SQLUINTEGER|SQL_SS_PARAM_FOCUSの詳細については、「 [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)」を参照してください。|  
-|SQL_SOPT_SS_NAME_SCOPE|SQLUINTEGER|SQL_SS_NAME_SCOPEの詳細については、「 [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)」を参照してください。|  
+|SQL_SOPT_SS_PARAM_FOCUS|SQLUINTEGER|SQL_SS_PARAM_FOCUS の詳細については、「 [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)」を参照してください。|  
+|SQL_SOPT_SS_NAME_SCOPE|SQLUINTEGER|SQL_SS_NAME_SCOPE の詳細については、「 [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)」を参照してください。|  
 ||||
 
 ## <a name="see-also"></a>参照  
- [ODBC&#41;&#40;テーブル値パラメーター](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+ [テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   
