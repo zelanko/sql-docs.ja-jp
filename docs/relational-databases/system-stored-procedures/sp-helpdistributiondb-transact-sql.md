@@ -16,10 +16,10 @@ ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 90dee1076743ae54201248c808b04c6197d42198
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68770930"
 ---
 # <a name="sp_helpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-sql)
@@ -41,7 +41,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|ディストリビューションデータベースの名前。|  
 |**min_distretention**|**int**|トランザクションが削除されるまでの最小保有期間 (時間単位)。|  
@@ -49,7 +49,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 |**history retention**|**int**|履歴を保持する時間数。|  
 |**history_cleanup_agent**|**sysname**|履歴クリーンアップエージェントの名前。|  
 |**distribution_cleanup_agent**|**sysname**|ディストリビューションクリーンアップエージェントの名前。|  
-|**オンライン**|**int**|内部使用のみです。|  
+|**status**|**int**|内部使用のみです。|  
 |**data_folder**|**nvarchar(255)**|データベース ファイルを格納するときに使用するディレクトリの名前。|  
 |**data_file**|**nvarchar(255)**|データベースファイルの名前。|  
 |**data_file_size**|**int**|データ ファイルの初期サイズ (MB 単位)。|  
@@ -60,7 +60,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_helpdistributiondb**は、すべての種類のレプリケーションで使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -71,6 +71,6 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
  [sp_adddistributiondb &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
  [sp_changedistributiondb &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
  [sp_dropdistributiondb &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

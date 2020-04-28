@@ -20,10 +20,10 @@ ms.assetid: b9edbc83-c6bc-4753-9bb5-a454cfe7d6bf
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cf8e1700f51f808811a1f5a61f86777547c9cb65
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265852"
 ---
 # <a name="sysdm_os_dispatcher_pools-transact-sql"></a>sys.dm_os_dispatcher_pools (Transact-SQL)
@@ -34,10 +34,10 @@ ms.locfileid: "68265852"
 > [!NOTE]  
 >  またはから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]これを[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼び出すには、 **dm_pdw_nodes_os_dispatcher_pools**という名前を使用します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |dispatcher_pool_address|**varbinary (8)**|ディスパッチャープールのアドレス。 dispatcher_pool_address は一意です。 NULL 値は許可されません。|  
-|型|**nvarchar(256)**|ディスパッチャープールの種類。 NULL 値は許可されません。 ディスパッチャープールには、次の2種類があります。<br /><br /> DISP_POOL_XE_ENGINE<br /><br /> DISP_POOL_XE_SESSION<br /><br /> DMV で完全な一覧を照会する|  
+|type|**nvarchar(256)**|ディスパッチャープールの種類。 NULL 値は許可されません。 ディスパッチャープールには、次の2種類があります。<br /><br /> DISP_POOL_XE_ENGINE<br /><br /> DISP_POOL_XE_SESSION<br /><br /> DMV で完全な一覧を照会する|  
 |name|**nvarchar(256)**|ディスパッチャー プールの名前。 NULL 値は許可されません。|  
 |dispatcher_count|**int**|アクティブなディスパッチャースレッドの数。 NULL 値は許可されません。|  
 |dispatcher_ideal_count|**int**|ディスパッチャープールが使用できるようになるディスパッチャースレッドの数。 NULL 値は許可されません。|  

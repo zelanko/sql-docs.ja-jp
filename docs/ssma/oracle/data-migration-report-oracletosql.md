@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 0d58f07f4e9d43f78c9c8990d174030cce484781
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264250"
 ---
 # <a name="data-migration-report--oracletosql"></a>データ移行レポート (OracleToSQL)
@@ -24,10 +24,10 @@ ms.locfileid: "68264250"
 **状態**  
 転送元データベースから転送先データベースへのデータ移行の状態が表示されます。  
   
-**差出人**  
+**From**  
 ソーステーブルです。  
   
-**宛先**  
+**To**  
 対象のテーブル。  
   
 **行の合計数**  
@@ -42,6 +42,6 @@ ms.locfileid: "68264250"
 **詳細**  
 データの移行に失敗した場合は、クリックすると、レポート内の選択した行の移行の詳細が表示されます。 SSMA には、エラーの理由が表示されます。  
   
-**レポートの保存**  
+**[レポートの保存]**  
 レポートをに保存します。CSV (コンマ区切り値) ファイル。 Microsoft Excel を使用して調べることができます。  
   

@@ -18,10 +18,10 @@ ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 554b9317d6b474b23e9dbbc10dea03156ccc6287
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68702782"
 ---
 # <a name="sp_stored_procedures-transact-sql"></a>sp_stored_procedures (Transact-sql)
@@ -47,8 +47,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 `[ @sp_owner = ] 'schema'`プロシージャが属しているスキーマの名前を指定します。 *スキーマ*は**nvarchar (384)**,、既定値は NULL です。 ワイルドカードパターンマッチングがサポートされています。 *Owner*が指定されていない場合、基になる DBMS の既定のプロシージャ可視性ルールが適用されます。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、指定した名前のプロシージャが現在のスキーマに含まれている場合、そのプロシージャが返されます。 修飾名なしでストアド プロシージャを指定した場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では次の順序でプロシージャが検索されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、指定した名前のプロシージャが現在のスキーマに含まれている場合、そのプロシージャが返されます。 修飾名なしでストアド プロシージャを指定した場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では次の順序でプロシージャが検索されます。  
   
 -   現在のデータベースの **sys** スキーマ。  
   
@@ -65,23 +64,22 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
  **1** = パターンマッチングはオンです。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- なし  
+ None  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**PROCEDURE_QUALIFIER**|**sysname**|プロシージャ修飾子の名前。 この列は NULL にすることができます。|  
 |**PROCEDURE_OWNER**|**sysname**|プロシージャ所有者の名前。 この列は常に値が返されます。|  
 |**PROCEDURE_NAME**|**nvarchar (134)**|プロシージャ名。 この列は常に値が返されます。|  
-|**NUM_INPUT_PARAMS**|**int**|将来使用するために予約されています。|  
-|**NUM_OUTPUT_PARAMS**|**int**|将来使用するために予約されています。|  
-|**NUM_RESULT_SETS**|**int**|将来使用するために予約されています。|  
-|**」**|**varchar (254)**|プロシージャの説明。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]はこの列の値を返しません。|  
-|**PROCEDURE_TYPE**|**smallint**|プロシージャの種類。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は常に 2.0 を返します。 この値は、次のいずれかです。<br /><br /> 0 = SQL_PT_UNKNOWN<br /><br /> 1 = SQL_PT_PROCEDURE<br /><br /> 2 = SQL_PT_FUNCTION|  
+|**NUM_INPUT_PARAMS**|**int**|将来利用するために予約されています。|  
+|**NUM_OUTPUT_PARAMS**|**int**|将来利用するために予約されています。|  
+|**NUM_RESULT_SETS**|**int**|将来利用するために予約されています。|  
+|**備考**|**varchar (254)**|プロシージャの説明。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]はこの列の値を返しません。|  
+|**PROCEDURE_TYPE**|**smallint**|プロシージャの種類。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は常に 2.0 を返します。 この値は、次のいずれかです。<br /><br /> 0 = SQL_PT_UNKNOWN<br /><br /> 1 = SQL_PT_PROCEDURE<br /><br /> 2 = SQL_PT_FUNCTION|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  相互運用性を最大限に高めるために、ゲートウェイのクライアントでは、SQL 標準のパターン照合 (パーセント (%) とアンダースコア (_) ワイルドカード文字) のみを前提としています。  
   
  現在のユーザーに対する特定のストアドプロシージャへの実行アクセスに関する権限情報は必ずしもチェックされません。そのため、アクセスは保証されません。 3部構成の名前付けのみが使用されていることに注意してください。 これは、リモートストアドプロシージャ (4 つの部分で構成される名前を必要とする) ではなく、ローカルストアドプロシージャ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]だけが返されることを意味します。 **Sp_server_info**の結果セットで server 属性 ACCESSIBLE_SPROC が Y の場合は、現在のユーザーが実行できるストアドプロシージャのみが返されます。  
@@ -113,6 +111,6 @@ sp_stored_procedures N'uspLogError', N'dbo', N'AdventureWorks2012', 1;
   
 ## <a name="see-also"></a>参照  
  [Transact-sql&#41;&#40;のカタログストアドプロシージャ](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

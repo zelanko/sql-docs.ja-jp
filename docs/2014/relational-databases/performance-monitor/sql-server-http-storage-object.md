@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f104f7a6395442484be15f1e72c849edbf11e74f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70152679"
 ---
 # <a name="sql-server-http_storage_object"></a>SQL Server:HTTP_STORAGE_OBJECT
@@ -22,22 +22,22 @@ ms.locfileid: "70152679"
   
 |カウンター名|説明|  
 |------------------|-----------------|  
-|**読み取りバイト数/秒**|読み取り操作中に HTTP ストレージから転送されている 1 秒あたりのデータ量。|  
-|**書き込みバイト数/秒**|書き込み操作中に HTTP ストレージから転送されている 1 秒あたりのデータ量。|  
-|**合計バイト数/秒**|読み取りまたは書き込み操作中に HTTP ストレージから転送されている 1 秒あたりのデータ量。|  
-|**読み取り数/秒**|HTTP ストレージでの 1 秒あたりの読み取り数。|  
-|**書き込み数/秒**|HTTP ストレージでの 1 秒あたりの書き込み数。|  
-|**1秒あたりの転送数**|HTTP ストレージでの 1 秒あたりの読み取りおよび書き込み操作数。|  
+|**Read Bytes/sec**|読み取り操作中に HTTP ストレージから転送されている 1 秒あたりのデータ量。|  
+|**Write Bytes/sec**|書き込み操作中に HTTP ストレージから転送されている 1 秒あたりのデータ量。|  
+|**Total Bytes/sec**|読み取りまたは書き込み操作中に HTTP ストレージから転送されている 1 秒あたりのデータ量。|  
+|**Reads/sec**|HTTP ストレージでの 1 秒あたりの読み取り数。|  
+|**Writes/sec**|HTTP ストレージでの 1 秒あたりの書き込み数。|  
+|**Transfers/sec**|HTTP ストレージでの 1 秒あたりの読み取りおよび書き込み操作数。|  
 |**平均バイト数/読み取り**|読み取りごとに HTTP ストレージから転送された平均バイト数。|  
 |**Avg. Bytes/Write**|書き込みごとに HTTP ストレージから転送された平均バイト数。|  
 |**平均バイト数/転送**|読み取りまたは書き込み操作中に HTTP ストレージから転送された平均バイト数。|  
-|**1秒あたりの平均マイクロ秒数**|HTTP ストレージからの読み取りごとに要する平均マイクロ秒数。|  
-|**1秒あたりの平均マイクロ秒数**|HTTP ストレージへの書き込みごとに要する平均マイクロ秒数。|  
-|**平均マイクロ秒/転送**|HTTP ストレージへの転送ごとに要する平均マイクロ秒数。|  
-|**未処理の HTTP ストレージ i/o**|HTTP ストレージに対する未処理 I/O の合計数。|  
-|**HTTP ストレージの i/o 再試行数/秒**|HTTP ストレージに送信された 1 秒あたりの再試行要求数。|  
+|**Avg. microsec/Read**|HTTP ストレージからの読み取りごとに要する平均マイクロ秒数。|  
+|**Avg. microsec/Write**|HTTP ストレージへの書き込みごとに要する平均マイクロ秒数。|  
+|**Avg. microsec/Transfer**|HTTP ストレージへの転送ごとに要する平均マイクロ秒数。|  
+|**Outstanding HTTP Storage I/O**|HTTP ストレージに対する未処理 I/O の合計数。|  
+|**HTTP Storage I/O Retry/sec**|HTTP ストレージに送信された 1 秒あたりの再試行要求数。|  
   
 ## <a name="see-also"></a>参照  
- [リソース使用状況の監視 &#40;システムモニタ&#41;](monitor-resource-usage-system-monitor.md)  
+ [リソースの利用状況の監視 &#40;システム モニター&#41;](monitor-resource-usage-system-monitor.md)  
   
   

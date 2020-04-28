@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 25cd6eb9c811548e6300c944c65c5530185d46e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264503"
 ---
 # <a name="getting-started-with-ssma--for-oracle-console-oracletosql"></a>SSMA for Oracle コンソール入門 (OracleToSQL)
@@ -56,7 +56,7 @@ SSMA スクリプトコマンドとオプションを実行すると、コンソ
   
 次の表に示すコンソール出力の色の解釈:  
   
-|Color|[説明]|  
+|Color|説明|  
 |---------|---------------|  
 |[赤]|実行中に致命的なエラーが発生した|  
 |グレー|日付と時刻のタイムスタンプ、ユーザーへのメッセージ|  

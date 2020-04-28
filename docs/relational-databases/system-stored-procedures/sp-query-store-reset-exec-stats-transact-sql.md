@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f20c4740868e0256ceb88c604b5a3eb021d367e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68418927"
 ---
 # <a name="sp_query_store_reset_exec_stats-transact-sql"></a>sp_query_store_reset_exec_stats (Transact-sql)
@@ -48,12 +48,12 @@ sp_query_store_reset_exec_stats [ @plan_id = ] plan_id [;]
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="permissions"></a>アクセス許可  
  データベースに対する**ALTER**権限が必要です。 
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、クエリストア内のクエリに関する情報を返します。  
   
 ```  

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 83369736ee18c36b3967bbbd129e0fd64574a2ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265988"
 ---
 # <a name="sysdm_column_store_object_pool-transact-sql"></a>dm_column_store_object_pool (Transact-sql)
@@ -25,7 +25,7 @@ ms.locfileid: "68265988"
 
  列ストアインデックスオブジェクトのさまざまな種類のオブジェクトメモリプール使用率のカウントを返します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |`database_id`|`int`|データベースの ID です。 これは、SQL Server データベースまたは Azure SQL データベースサーバーのインスタンス内で一意です。 |  
 |`object_id`|`int`|オブジェクトの ID。 オブジェクトは object_types の1つです。 | 

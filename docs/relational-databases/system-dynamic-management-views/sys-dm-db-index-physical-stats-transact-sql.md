@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d7fe788192aac7f7bd3e4723b615391c5d8c6e86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811522"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>dm_db_index_physical_stats (Transact-sql)
@@ -58,8 +58,7 @@ sys.dm_db_index_physical_stats (
  *database_id* |NULL |0 |標準  
  データベースの ID を示します。 *database_id*は**smallint**です。 有効な入力値は、データベースの ID 番号、NULL、0、または DEFAULT です。 既定値は 0 です。 このコンテキストでは、NULL、0、および DEFAULT は同じ値になります。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのすべてのデータベースに関する情報を返すには NULL を指定します。 *Database_id*に null を指定した場合は、 *object_id*、 *index_id*、および*partition_number*にも null を指定する必要があります。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのすべてのデータベースに関する情報を返すには NULL を指定します。 *Database_id*に null を指定した場合は、 *object_id*、 *index_id*、および*partition_number*にも null を指定する必要があります。  
   
  組み込み関数 [DB_ID](../../t-sql/functions/db-id-transact-sql.md) を指定できます。 データベース名を指定しないで DB_ID を使用する場合、現在のデータベースの互換性レベルが 90 以上である必要があります。  
   
@@ -71,7 +70,7 @@ sys.dm_db_index_physical_stats (
  NULL を指定すると、指定されたデータベース内にあるすべてのテーブルとビューに関する情報が返されます。 *Object_id*に null を指定する場合は、 *index_id*と*partition_number*にも null を指定する必要があります。  
   
  *index_id* |0 |NULL |-1 |標準  
- インデックスの ID です。 *index_id*は**int**です。有効な入力値は、インデックスの ID 番号です。 *object_id*がヒープ、NULL、-1、または DEFAULT である場合は0になります。 既定値は-1 です。 このコンテキストでは、NULL、-1、および DEFAULT は同じ値です。  
+ インデックスの ID です。 *index_id*は**int**です。有効な入力値は、インデックスの ID 番号です。 *object_id*がヒープ、NULL、-1、または DEFAULT である場合は0になります。 既定値は -1 です。 このコンテキストでは、NULL、-1、および DEFAULT は同じ値です。  
   
  NULL を指定すると、ベース テーブルまたはビューのすべてのインデックスに関する情報が返されます。 *Index_id*に null を指定する場合は、 *partition_number*に null を指定する必要もあります。  
   
@@ -87,15 +86,15 @@ sys.dm_db_index_physical_stats (
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |database_id|**smallint**|テーブルまたはビューのデータベース ID。|  
 |object_id|**int**|インデックスがあるテーブルまたはビューのオブジェクト ID。|  
 |index_id|**int**|インデックスのインデックス ID。<br /><br /> 0 = ヒープ。|  
 |partition_number|**int**|所有するオブジェクト (テーブル、ビュー、インデックス) 内の 1 から始まるパーティション番号。<br /><br /> 1 = パーティション分割されていないインデックスまたはヒープ。|  
-|index_type_desc|**nvarchar (60)**|インデックスの種類の説明。<br /><br /> HEAP<br /><br /> CLUSTERED INDEX<br /><br /> NONCLUSTERED INDEX<br /><br /> PRIMARY XML INDEX<br /><br /> EXTENDED INDEX<br /><br /> XML INDEX<br /><br /> 列ストアマッピングインデックス (内部)<br /><br /> 列ストア DELETEBUFFER インデックス (内部)<br /><br /> 列ストア DELETEBITMAP インデックス (内部)|  
+|index_type_desc|**nvarchar(60)**|インデックスの種類の説明。<br /><br /> HEAP<br /><br /> CLUSTERED INDEX<br /><br /> NONCLUSTERED INDEX<br /><br /> PRIMARY XML INDEX<br /><br /> EXTENDED INDEX<br /><br /> XML INDEX<br /><br /> 列ストアマッピングインデックス (内部)<br /><br /> 列ストア DELETEBUFFER インデックス (内部)<br /><br /> 列ストア DELETEBITMAP インデックス (内部)|  
 |hobt_id|**bigint**|インデックスまたはパーティションのヒープまたは B-tree ID。<br /><br /> これは、ユーザー定義インデックスの hobt_id を返すだけでなく、内部列ストアインデックスの hobt_id も返します。|  
-|alloc_unit_type_desc|**nvarchar (60)**|アロケーション ユニットの種類の説明。<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> LOB_DATA アロケーションユニットには、 **text**、 **ntext**、 **image**、 **varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、および**xml**型の列に格納されているデータが含まれています。 詳細については、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」を参照してください。<br /><br /> ROW_OVERFLOW_DATA アロケーションユニットには、行外に移動された**varchar (n)**、 **nvarchar (n)**、 **varbinary (n)**、および**sql_variant**型の列に格納されているデータが含まれます。|  
+|alloc_unit_type_desc|**nvarchar(60)**|アロケーション ユニットの種類の説明。<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> LOB_DATA アロケーションユニットには、 **text**、 **ntext**、 **image**、 **varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、および**xml**型の列に格納されているデータが含まれています。 詳細については、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」を参照してください。<br /><br /> ROW_OVERFLOW_DATA アロケーションユニットには、行外に移動された**varchar (n)**、 **nvarchar (n)**、 **varbinary (n)**、および**sql_variant**型の列に格納されているデータが含まれます。|  
 |index_depth|**tinyint**|インデックス レベルの数です。<br /><br /> 1 = ヒープ、LOB_DATA アロケーション ユニット、または ROW_OVERFLOW_DATA アロケーション ユニット。|  
 |index_level|**tinyint**|インデックスの現在のレベル。<br /><br /> インデックスのリーフ レベル、ヒープ、LOB_DATA または ROW_OVERFLOW_DATA アロケーション ユニットでは 0 になります。<br /><br /> 非リーフインデックスレベルの場合は0より大きい。 *index_level*は、インデックスのルートレベルで最大になります。<br /><br /> インデックスの非リーフレベルは、 *mode* = DETAILED の場合にのみ処理されます。|  
 |avg_fragmentation_in_percent|**float**|インデックスの論理的な断片化、または IN_ROW_DATA アロケーション ユニットでのヒープのエクステントの断片化。<br /><br /> 値はパーセンテージ (%) で表され、複数のファイルが考慮されます。 論理的な断片化とエクステントの断片化の定義については、「解説」を参照してください。<br /><br /> LOB_DATA および ROW_OVERFLOW_DATA アロケーション ユニットでは 0 になります。<br /><br /> *Mode* = サンプリングされた場合のヒープの場合は NULL です。|  
@@ -115,7 +114,7 @@ sys.dm_db_index_physical_stats (
 |column_store_delete_buffer_state|tinyint|**に適用さ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]れ[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]ます: (を通じ[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]て[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658))、です。<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN <br /><br /> 2 = ドレイン中<br /><br /> 3 = フラッシュ<br /><br /> 4 = インベントリからの削除<br /><br /> 5 = 準備完了|  
 |column_store_delete_buff_state_desc||**に適用さ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]れ[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]ます: (を通じ[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]て[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658))、です。<br /><br /> 無効-親インデックスが列ストアインデックスではありません。<br /><br /> OPEN-deleters とスキャナーはこれを使用します。<br /><br /> ドレイン中-deleters はドレインされますが、スキャナーでは引き続き使用されます。<br /><br /> フラッシュ-バッファーが閉じられ、バッファー内の行が削除ビットマップに書き込まれています。<br /><br /> 削除-閉じた削除バッファーの行が delete ビットマップに書き込まれましたが、スキャナーがまだ使用しているため、バッファーが切り捨てられていません。 開いているバッファーが十分であるため、新しいスキャナーでは、インベントリから削除するバッファーを使用する必要はありません。<br /><br /> READY-この削除バッファーは使用する準備ができています。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  sys.dm_db_index_physical_stats 動的管理関数は、DBCC SHOWCONTIG ステートメントの代わりに使用できます。  
   
 ## <a name="scanning-modes"></a>スキャン モード  
@@ -195,7 +194,7 @@ GO
   
 -   DBCC INDEXDEFRAG の代わりの ALTER INDEX REORGANIZE を使用して、インデックスのリーフ レベル ページを論理順序の順に並べ替える。 これはオンライン操作のため、ステートメントの実行中もインデックスを使用できます。 操作を中断しても、それまでに完了した作業は失われません。 この方法の短所は、インデックスの再構築操作ほど、データの再構成が適切に行われず、統計も更新されないことです。  
   
--   DBCC DBREINDEX の代わりの ALTER INDEX REBUILD を使用して、オンラインまたはオフラインでインデックスを再構築する。 詳細については、「 [ALTER INDEX &#40;transact-sql&#41;](../../t-sql/statements/alter-index-transact-sql.md)」を参照してください。  
+-   DBCC DBREINDEX の代わりの ALTER INDEX REBUILD を使用して、オンラインまたはオフラインでインデックスを再構築する。 詳細については、「[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)」を参照してください。  
   
  断片化だけでは、インデックスを再構成または再構築する十分な理由にはなりません。 断片化の影響は主に、インデックスのスキャン中にページの先行読み取りのスループットが減速することです。 これは、応答時間の遅れの原因となります。 断片化したテーブルまたはインデックスでのクエリのワークロードにスキャンが関係していない場合、ワークロードは主に単一参照のため、断片化を解消しても効果はありません。
   
@@ -266,7 +265,7 @@ GO
 ```  
   
 ### <a name="b-returning-information-about-a-heap"></a>B. ヒープに関する情報を返す  
- 次の例では、`dbo.DatabaseLog` データベースのヒープ [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] に関するすべての統計を返します。 テーブルには LOB データが含まれているため、ヒープのデータ ページを格納している `LOB_DATA` アロケーション ユニットの行だけではなく、`IN_ROW_ALLOCATION_UNIT` アロケーション ユニットの行も返されます。 このクエリを実行するには、少なくとも `dbo.DatabaseLog` テーブルに対する CONTROL 権限が必要です。  
+ 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースのヒープ `dbo.DatabaseLog` に関するすべての統計を返します。 テーブルには LOB データが含まれているため、ヒープのデータ ページを格納している `LOB_DATA` アロケーション ユニットの行だけではなく、`IN_ROW_ALLOCATION_UNIT` アロケーション ユニットの行も返されます。 このクエリを実行するには、少なくとも `dbo.DatabaseLog` テーブルに対する CONTROL 権限が必要です。  
   
 ```  
 DECLARE @db_id SMALLINT;  
@@ -286,7 +285,7 @@ GO
 ```  
   
 ### <a name="c-returning-information-for-all-databases"></a>C. すべてのデータベースに関する情報を返す  
- 次の例では、すべてのパラメーターにワイルドカード [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を指定して、`NULL` インスタンス内のすべてのテーブルとインデックスに関する統計を返します。 このクエリを実行するには、VIEW SERVER STATE 権限が必要です。  
+ 次の例では、すべてのパラメーターにワイルドカード `NULL` を指定して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内のすべてのテーブルとインデックスに関する統計を返します。 このクエリを実行するには、VIEW SERVER STATE 権限が必要です。  
   
 ```  
 SELECT * FROM sys.dm_db_index_physical_stats (NULL, NULL, NULL, NULL, NULL);  
@@ -411,7 +410,7 @@ FROM sys.dm_db_index_physical_stats (db_id(),
   
 ||  
 |-|  
-|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]から[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
+|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
   
  次の例では、サーバーブローカーキューの断片化をクエリする方法を示します。  
   
@@ -425,7 +424,7 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
 ```  
   
 ## <a name="see-also"></a>参照  
- [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Transact-sql&#41;&#40;インデックス関連の動的管理ビューおよび関数](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [dm_db_index_operational_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
  [dm_db_index_usage_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   

@@ -18,16 +18,15 @@ ms.assetid: c9a7309b-eab7-4192-a414-e282581af4e5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 93e65bb7d72b15dcb29763a1c02845b6ff5faa01
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68215932"
 ---
 # <a name="sp_remoteoption-transact-sql"></a>sp_remoteoption (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているローカル サーバーで定義されているリモート ログインのオプションを表示または変更します。  
   
 > [!NOTE]  
@@ -46,12 +45,12 @@ sp_remoteoption [ [ @remoteserver = ] 'remoteserver' ]
      [ , [ @optvalue = ] 'optvalue' ]  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  このストアドプロシージャは、次のエラーメッセージを返します。  
   
  `The trusted option in remote login mapping is no longer supported.`  
   
 ## <a name="see-also"></a>参照  
- [リンクサーバー &#40;データベースエンジン&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)  
+ [リンク サーバー &#40;データベース エンジン&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)  
   
   

@@ -16,10 +16,10 @@ ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8073d51fb4376acbdc19724422f6ef7543e3c403
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68894040"
 ---
 # <a name="sp_addpushsubscription_agent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68894040"
   トランザクション パブリケーションに対してプッシュ サブスクリプションを同期するために使用する、新たにスケジュールされたエージェント ジョブを追加します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
 > [!IMPORTANT]  
->  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベースエンジン &#40;SQL Server 構成マネージャー&#41;への暗号化接続の有効化](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
+>  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -98,13 +98,13 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 `[ @frequency_type = ] frequency_type`ディストリビューションエージェントをスケジュールする頻度を指定します。 *frequency_type*は**int**,、値は次のいずれかを指定することができます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|1 回|  
 |**2**|オン デマンド|  
 |**4**|毎日|  
 |**8**|週単位|  
-|**まで**|月単位|  
+|**まで**|月 1 回|  
 |**32**|月単位の相対|  
 |**64** (既定値)|自動開始|  
 |**128**|繰り返し|  
@@ -116,7 +116,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`ディストリビューションエージェントの日付を指定します。 このパラメーターは、 *frequency_type*が**32** (月単位) に設定されている場合に使用されます。 *frequency_relative_interval*は**int**,、値は次のいずれかを指定することができます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**1** (既定値)|First (先頭へ)|  
 |**2**|秒|  
@@ -128,7 +128,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 `[ @frequency_subday = ] frequency_subday`定義した期間中に再スケジュールする頻度を指定します。 *frequency_subday*は**int**,、値は次のいずれかを指定することができます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|1 度|  
 |**2**|秒|  
@@ -173,7 +173,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_addpushsubscription_agent**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
 ## <a name="example"></a>例  
@@ -185,7 +185,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 ## <a name="see-also"></a>参照  
  [プッシュサブスクリプションを作成する](../../relational-databases/replication/create-a-push-subscription.md)   
  [SQL Server 以外のサブスクライバーのサブスクリプションを作成する](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
- [パブリケーションをサブスクライブする](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [sp_addsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
  [sp_changesubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)   

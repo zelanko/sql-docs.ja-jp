@@ -21,27 +21,26 @@ author: Minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cdd9e34e57694efc1234a2f0245833596644cb73
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68889184"
 ---
 # <a name="upgrade-analysis-services"></a>Analysis Services のアップグレード
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をアップグレードします。 SharePoint モードでのアップグレード[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の詳細については、「 [Upgrade PowerPivot for SharePoint](upgrade-power-pivot-for-sharepoint.md)」を参照してください。 既存の SQL Server インスタンスのアップグレードの詳細については、[インストールウィザードを使用した SQL Server 2014 へのアップグレード &#40;のセットアップ&#41;を](upgrade-sql-server-using-the-installation-wizard-setup.md)参照してください。  
   
 ## <a name="known-upgrade-issues"></a>アップグレードに関する既知の問題  
  に[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]アップグレードする前に、次の内容を確認してください。  
   
--   [SQL Server 2014 リリースノート](https://go.microsoft.com/fwlink/?LinkID=296445)。  
+-   [SQL Server 2014 リリース ノート](https://go.microsoft.com/fwlink/?LinkID=296445).  
   
 -   廃止、非[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]推奨、または変更された機能の詳細については、「 [Analysis Services 旧バージョン](https://docs.microsoft.com/analysis-services/analysis-services-backward-compatibility)との互換性」を参照してください。  
   
 ## <a name="pre-upgrade-checklist"></a>アップグレード前のチェック リスト  
  アップグレードの前に、次の情報を確認してください。  
   
--   [サポートされるバージョンとエディションのアップグレード](supported-version-and-edition-upgrades.md)  
+-   [サポートされているバージョンとエディションのアップグレード](supported-version-and-edition-upgrades.md)  
   
 -   [SQL Server 2014 のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   

@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 97c34beb0cbe27e8d3c88b922690dc369fb7103b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262989"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-oracletosql"></a>SQL Server への変換されたデータベース オブジェクトの読み込み (OracleToSQL)
@@ -76,8 +76,7 @@ SQL Server オブジェクトの定義を1つ以上のスクリプトとして�
   
 **スクリプトを変更するには**  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **[ファイル]** メニューの **[開く]** をポイントし、 **[ファイル]** をクリックします。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **[ファイル]** メニューの **[開く]** をポイントし、 **[ファイル]** をクリックします。  
   
 2.  [**開く**] ダイアログボックスで、スクリプトファイルを選択し、[OK] をクリックします。
   
@@ -92,8 +91,7 @@ SQL Server オブジェクトの定義を1つ以上のスクリプトとして�
   
 **スクリプトを実行するには**  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **[ファイル]** メニューの **[開く]** をポイントし、 **[ファイル]** をクリックします。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **[ファイル]** メニューの **[開く]** をポイントし、 **[ファイル]** をクリックします。  
   
 2.  [**開く**] ダイアログボックスで、スクリプトファイルを選択し、[OK] をクリックします。  
   
@@ -108,7 +106,7 @@ SQL Server オブジェクトの定義を1つ以上のスクリプトとして�
 ## <a name="securing-objects-in-sql-server"></a>SQL Server でのオブジェクトのセキュリティ保護  
 変換されたデータベースオブジェクトを SQL Server に読み込むと、それらのオブジェクトに対する権限を許可したり拒否したりできます。 SQL Server にデータを移行する前に、これを行うことをお勧めします。 SQL Server でオブジェクトをセキュリティで保護する方法の詳細については、「SQL Server オンラインブック」の「データベースとデータベースアプリケーションのセキュリティに関する考慮事項」を参照してください。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 移行プロセスの次の手順では、 [SQL Server にデータを移行](migrating-oracle-data-into-sql-server-oracletosql.md)します。  
   
 ## <a name="see-also"></a>参照  

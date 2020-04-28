@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c11561ac71aa72469a809ea25297d62133aa93da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68891219"
 ---
 # <a name="identifiers-mdx"></a>識別子 (MDX)
@@ -109,8 +109,7 @@ ms.locfileid: "68891219"
   
  `[Total Profit [Domestic]]]`  
   
- 
-  `Domestic` の前の左角かっこを変更せずに、区切られた識別子を作成できることに注意してください。 しかし、`Domestic` の後の右角かっこは、2 つの右角かっこに置き換える必要があります。  
+ `Domestic` の前の左角かっこを変更せずに、区切られた識別子を作成できることに注意してください。 しかし、`Domestic` の後の右角かっこは、2 つの右角かっこに置き換える必要があります。  
   
 ### <a name="delimiting-identifiers-with-multiple-parts"></a>複数の部分で識別子を区切る  
  修飾されたオブジェクト名を使用する場合、オブジェクト名を構成する識別子の1つ以上を区切る必要があります。 たとえば、次のコードのフロントブレーキ識別子には、区切り記号を使用する必要があります。  
@@ -126,6 +125,6 @@ ms.locfileid: "68891219"
 ## <a name="see-also"></a>参照  
  [Mdx 言語リファレンス &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
  [MDX クエリの基礎 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)   
- [Mdx 構文要素 &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [MDX 構文の要素 &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

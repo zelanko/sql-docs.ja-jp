@@ -16,10 +16,10 @@ ms.assetid: cd1aed60-e056-4ff3-86ee-62b19433d890
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a9c489a08291aea3d1c50a6418dc8e1e853dce12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771074"
 ---
 # <a name="sp_helparticledts-transact-sql"></a>sp_helparticledts (Transact-sql)
@@ -43,7 +43,7 @@ sp_helparticledts [ @publication = ] 'publication', [ @article = ] 'article'
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**pre_script_ignore_error_task_name**|**sysname**|スナップショットデータがコピーされる前に発生するプログラミングタスクのタスク名。 スクリプト エラーが発生しても、プログラムはそのまま実行されます。|  
 |**pre_script_task_name**|**sysname**|スナップショットデータがコピーされる前に発生するプログラミングタスクのタスク名。 プログラムの実行はエラー発生時に停止します。|  
@@ -54,7 +54,7 @@ sp_helparticledts [ @publication = ] 'publication', [ @article = ] 'article'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_helparticledts**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
  レプリケーション データ変換サービス (DTS) プログラム内のタスクに名前を付ける場合は、レプリケーション エージェントで要求される名前付け規則に従う必要があります。 SQL 実行タスクなどのカスタムタスクの場合、名前は、アーティクル名、プレフィックス、および省略可能な部分で構成される連結文字列になります。 コードを記述するときに、タスク名がわからない場合、結果セットには使用する必要があるタスク名が示されます。  

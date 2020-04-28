@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4ff5a1f816d0ade76ed6e39db3e8cfc3048ba632
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68742900"
 ---
 # <a name="sysdm_exec_procedure_stats-transact-sql"></a>dm_exec_procedure_stats (Transact-sql)
@@ -32,24 +32,23 @@ ms.locfileid: "68742900"
 
   キャッシュされたストアド プロシージャの集計パフォーマンス統計を返します。 ビューは、キャッシュされたストアド プロシージャのプランごとに 1 行を返します。その行の有効期間はストアド プロシージャがキャッシュに残っている間になります。 つまり、ストアド プロシージャがキャッシュから削除されると、対応する行もこのビューから削除されます。 その時点で、**sys.dm_exec_query_stats** と同様にパフォーマンス統計 SQL トレース イベントが発生します。  
   
- 
-  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、動的管理ビューは、データベースの包含に影響する情報を公開することも、ユーザーがアクセスできる他のデータベースに関する情報を公開することもできません。 この情報を公開しないように、接続されたテナントに属していないデータを含むすべての行がフィルターで除外されます。  
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、動的管理ビューは、データベースの包含に影響する情報を公開することも、ユーザーがアクセスできる他のデータベースに関する情報を公開することもできません。 この情報を公開しないように、接続されたテナントに属していないデータを含むすべての行がフィルターで除外されます。  
   
 > [!NOTE]
 > データには完了したクエリだけが反映され、まだ処理中ではないため、dm_exec_procedure_stats の結果は実行ごとに異なる場合があります **。**
 > またはから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]これを[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼び出すには、 **dm_pdw_nodes_exec_procedure_stats**という名前を使用します。 
 
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------| 
 |**database_id**|**int**|ストアド プロシージャが存在するデータベースの ID。|  
 |**object_id**|**int**|ストアド プロシージャのオブジェクト ID 番号。|  
-|**type**|**char (2)**|次のいずれかのオブジェクトの種類。<br /><br /> P = SQL ストアド プロシージャ<br /><br /> PC = アセンブリ (CLR) ストアド プロシージャ<br /><br /> X = 拡張ストアド プロシージャ|  
-|**type_desc**|**nvarchar (60)**|オブジェクトの種類の説明。<br /><br /> SQL_STORED_PROCEDURE<br /><br /> CLR_STORED_PROCEDURE<br /><br /> EXTENDED_STORED_PROCEDURE|  
-|**sql_handle**|**varbinary (64)**|これを使用すると、このストアドプロシージャ内から実行された**dm_exec_query_stats**のクエリと相関させることができます。|  
-|**plan_handle**|**varbinary (64)**|インメモリ プランの識別子。 この識別子は一時的なもので、プランがキャッシュに残っている間だけ一定の値になります。 この値は、 **dm_exec_cached_plans**動的管理ビューで使用できます。<br /><br /> ネイティブ コンパイル ストアド プロシージャがメモリ最適化テーブルに対してクエリを実行するときは、常に 0x000 になります。|  
-|**cached_time**|**DATETIME**|ストアド プロシージャがキャッシュに追加された時刻。|  
-|**last_execution_time**|**DATETIME**|前回ストアド プロシージャが実行された時刻。|  
+|**type**|**char(2)**|次のいずれかのオブジェクトの種類。<br /><br /> P = SQL ストアド プロシージャ<br /><br /> PC = アセンブリ (CLR) ストアド プロシージャ<br /><br /> X = 拡張ストアド プロシージャ|  
+|**type_desc**|**nvarchar(60)**|オブジェクトの種類の説明。<br /><br /> SQL_STORED_PROCEDURE<br /><br /> CLR_STORED_PROCEDURE<br /><br /> EXTENDED_STORED_PROCEDURE|  
+|**sql_handle**|**varbinary(64)**|これを使用すると、このストアドプロシージャ内から実行された**dm_exec_query_stats**のクエリと相関させることができます。|  
+|**plan_handle**|**varbinary(64)**|インメモリ プランの識別子。 この識別子は一時的なもので、プランがキャッシュに残っている間だけ一定の値になります。 この値は、 **dm_exec_cached_plans**動的管理ビューで使用できます。<br /><br /> ネイティブ コンパイル ストアド プロシージャがメモリ最適化テーブルに対してクエリを実行するときは、常に 0x000 になります。|  
+|**cached_time**|**datetime**|ストアド プロシージャがキャッシュに追加された時刻。|  
+|**last_execution_time**|**datetime**|前回ストアド プロシージャが実行された時刻。|  
 |**execution_count**|**bigint**|ストアドプロシージャが最後にコンパイルされてから実行された回数。|  
 |**total_worker_time**|**bigint**|コンパイル後にこのストアドプロシージャの実行で消費された CPU 時間の合計 (マイクロ秒単位)。<br /><br /> ネイティブ コンパイル ストアド プロシージャに関して、多くの実行が 1 ミリ秒未満である場合は、 **total_worker_time** は精度が高くない可能性があります。|  
 |**last_worker_time**|**bigint**|ストアド プロシージャを前回実行したときに使用された CPU 時間 (マイクロ秒単位)。 <sup>1</sup>|  
@@ -88,10 +87,10 @@ ms.locfileid: "68742900"
 で[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]は、 `VIEW SERVER STATE`権限が必要です。   
 Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、データベース`VIEW DATABASE STATE`の権限が必要です。 Standard [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
    
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ビュー内の統計は、ストアド プロシージャの実行が完了したときに更新されます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、平均経過時間で識別される上位 10 個のストアド プロシージャに関する情報を返します。  
   
 ```sql  
@@ -109,7 +108,7 @@ ORDER BY [total_worker_time] DESC;
 [dm_exec_query_plan &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
 [dm_exec_query_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)    
 [dm_exec_trigger_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)    
-[dm_exec_cached_plans &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)    
+[sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)    
   
   
 

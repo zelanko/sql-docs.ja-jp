@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a1549a3760ce8576b86b07048aef5a60b25fccbd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68263804"
 ---
 # <a name="sysdm_exec_connections-transact-sql"></a>dm_exec_connections (Transact-sql)
@@ -35,33 +35,30 @@ ms.locfileid: "68263804"
 > [!NOTE]
 > またはから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]これを[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼び出すには、 [dm_pdw_exec_connections &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-connections-transact-sql.md)を使用します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |session_id|**int**|この接続に関連付けられたセッションの識別子。 NULL 値が許可されます。|  
 |most_recent_session_id|**int**|この接続に関連付けられた最新の要求のセッション ID。 (SOAP 接続は別のセッションで再利用できます。)Null 値は許容されます。|  
-|connect_time|**DATETIME**|接続が確立されたタイムスタンプ。 NULL 値は許可されません。|  
-|net_transport|**nvarchar (40)**|接続で複数のアクティブな結果セット (MARS) が有効になっている場合は、常に**セッション**を返します。<br /><br /> **注:** この接続で使用される物理トランスポートプロトコルについて説明します。 NULL 値は許可されません。|  
-|protocol_type|**nvarchar (40)**|ペイロードのプロトコルの種類。 現在、これによって TDS (TSQL) と SOAP が区別されています。 NULL 値が許可されます。|  
+|connect_time|**datetime**|接続が確立されたタイムスタンプ。 NULL 値は許可されません。|  
+|net_transport|**nvarchar(40)**|接続で複数のアクティブな結果セット (MARS) が有効になっている場合は、常に**セッション**を返します。<br /><br /> **注:** この接続で使用される物理トランスポートプロトコルについて説明します。 NULL 値は許可されません。|  
+|protocol_type|**nvarchar(40)**|ペイロードのプロトコルの種類。 現在、これによって TDS (TSQL) と SOAP が区別されています。 NULL 値が許可されます。|  
 |protocol_version|**int**|この接続に関連付けられているデータアクセスプロトコルのバージョン。 NULL 値が許可されます。|  
 |endpoint_id|**int**|この接続の種類を表す識別子。 この endpoint_id は sys.endpoints ビューのクエリに使用できます。 NULL 値が許可されます。|  
-|encrypt_option|**nvarchar (40)**|この接続で暗号化が有効かどうかを表すブール値。 NULL 値は許可されません。|  
-|auth_scheme|**nvarchar (40)**|この[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続で使用される/Windows 認証スキームを指定します。 NULL 値は許可されません。|  
+|encrypt_option|**nvarchar(40)**|この接続で暗号化が有効かどうかを表すブール値。 NULL 値は許可されません。|  
+|auth_scheme|**nvarchar(40)**|この[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続で使用される/Windows 認証スキームを指定します。 NULL 値は許可されません。|  
 |node_affinity|**smallint**|この接続が関係しているメモリ ノード。 NULL 値は許可されません。|  
 |num_reads|**int**|この接続で発生したバイト読み取りの数。 NULL 値が許可されます。|  
 |num_writes|**int**|この接続で発生したバイトの書き込みの数。 NULL 値が許可されます。|  
-|last_read|**DATETIME**|この接続で最後に読み取られたときのタイムスタンプ。 NULL 値が許可されます。|  
-|last_write|**DATETIME**|この接続で最後に書き込みが行われたときのタイムスタンプ。 NULL 値は許可されません。|  
+|last_read|**datetime**|この接続で最後に読み取られたときのタイムスタンプ。 NULL 値が許可されます。|  
+|last_write|**datetime**|この接続で最後に書き込みが行われたときのタイムスタンプ。 NULL 値は許可されません。|  
 |net_packet_size|**int**|情報とデータの転送に使用されたネットワーク パケット サイズ。 NULL 値が許可されます。|  
-|client_net_address|**varchar (48)**|このサーバーに接続するクライアントのホスト アドレス。 NULL 値が許可されます。<br /><br /> V12 より前の[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]では、この列は常に NULL を返します。|  
-|client_tcp_port|**int**|この接続に関連付けられたクライアント コンピューターのポート番号。 NULL 値が許可されます。<br /><br /> 
-  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]の場合、この列は常に NULL を返します。|  
-|local_net_address|**varchar (48)**|この接続の対象となったサーバーの IP アドレス。 TCP トランスポート プロバイダーを使用する接続の場合にのみ該当します。 NULL 値が許可されます。<br /><br /> 
-  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]の場合、この列は常に NULL を返します。|  
-|local_tcp_port|**int**|接続で TCP トランスポートを使用した場合に、この接続の対象となったサーバー TCP ポート。 NULL 値が許可されます。<br /><br /> 
-  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]の場合、この列は常に NULL を返します。|  
-|connection_id|**UNIQUEIDENTIFIER**|各接続の一意識別子。 NULL 値は許可されません。|  
-|parent_connection_id|**UNIQUEIDENTIFIER**|MARS セッションが使用しているプライマリ接続を識別します。 NULL 値が許可されます。|  
-|most_recent_sql_handle|**varbinary (64)**|この接続で実行された最新の要求の SQL ハンドル。 most_recent_sql_handle 列は、常に most_recent_session_id 列と同期されます。 NULL 値が許可されます。|  
+|client_net_address|**varchar(48)**|このサーバーに接続するクライアントのホスト アドレス。 NULL 値が許可されます。<br /><br /> V12 より前の[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]では、この列は常に NULL を返します。|  
+|client_tcp_port|**int**|この接続に関連付けられたクライアント コンピューターのポート番号。 NULL 値が許可されます。<br /><br /> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]の場合、この列は常に NULL を返します。|  
+|local_net_address|**varchar(48)**|この接続の対象となったサーバーの IP アドレス。 TCP トランスポート プロバイダーを使用する接続の場合にのみ該当します。 NULL 値が許可されます。<br /><br /> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]の場合、この列は常に NULL を返します。|  
+|local_tcp_port|**int**|接続で TCP トランスポートを使用した場合に、この接続の対象となったサーバー TCP ポート。 NULL 値が許可されます。<br /><br /> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]の場合、この列は常に NULL を返します。|  
+|connection_id|**uniqueidentifier**|各接続の一意識別子。 NULL 値は許可されません。|  
+|parent_connection_id|**uniqueidentifier**|MARS セッションが使用しているプライマリ接続を識別します。 NULL 値が許可されます。|  
+|most_recent_sql_handle|**varbinary(64)**|この接続で実行された最新の要求の SQL ハンドル。 most_recent_sql_handle 列は、常に most_recent_session_id 列と同期されます。 NULL 値が許可されます。|  
 |pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
 ## <a name="permissions"></a>アクセス許可
@@ -80,7 +77,7 @@ Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、デー
 |dm_exec_requests.connection_id|dm_exec_connections.connection_id|多対一|  
 |dm_broker_connections.connection_id|dm_exec_connections.connection_id|1対1|  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  クエリ所有の接続に関する情報を収集するための一般的なクエリ。  
   
 ```sql  
@@ -98,7 +95,7 @@ WHERE c.session_id = @@SPID;
   
 ## <a name="see-also"></a>参照  
 
- [実行関連の動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [実行関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

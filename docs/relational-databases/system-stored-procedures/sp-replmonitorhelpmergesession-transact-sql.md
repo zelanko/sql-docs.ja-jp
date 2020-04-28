@@ -16,10 +16,10 @@ ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1781e22e97870e7b9c26e7de397d77600ecbe1ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771236"
 ---
 # <a name="sp_replmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-sql)
@@ -46,7 +46,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
   
 `[ @hours = ] hours`履歴エージェントセッション情報を返す時間の範囲を時間単位で指定します。 *時間*は**int**で、次のいずれかの範囲を指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |< **0**|過去のエージェント実行に関する情報を返します。最大で100の実行が実行されます。|  
 |**0** (既定値)|過去のすべてのエージェント実行に関する情報を返します。|  
@@ -54,7 +54,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
   
 `[ @session_type = ] session_type`セッションの終了結果に基づいて結果セットをフィルター処理します。 *session_type*は**int**,、これらの値のいずれかを指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**1** (既定値)|再試行されたか成功したエージェント セッション。|  
 |**0**|障害が発生したエージェントセッション。|  
@@ -67,12 +67,12 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**Session_id**|**int**|エージェント ジョブ セッションの ID。|  
 |**状態**|**int**|エージェントの実行状態:<br /><br /> **1** = 開始<br /><br /> **2** = 成功<br /><br /> **3** = 実行中<br /><br /> **4** = アイドル<br /><br /> **5** = 再試行<br /><br /> **6** = 失敗|  
-|**StartTime**|**DATETIME**|エージェントジョブセッションが開始した時刻。|  
-|**EndTime**|**DATETIME**|エージェントジョブセッションが完了しました。|  
+|**StartTime**|**datetime**|エージェントジョブセッションが開始した時刻。|  
+|**EndTime**|**datetime**|エージェントジョブセッションが完了しました。|  
 |**Duration**|**int**|このジョブセッションの累積時間 (秒単位)。|  
 |**UploadedCommands**|**int**|エージェントセッション中にアップロードされたコマンドの数。|  
 |**ダウンロードコマンド**|**int**|エージェントセッション中にダウンロードされたコマンドの数。|  
@@ -86,7 +86,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_replmonitorhelpmergesession**は、マージレプリケーションの監視に使用されます。  
   
  サブスクライバーで実行された場合、 **sp_replmonitorhelpmergesession**は、最後の5つのマージエージェントセッションに関する情報のみを返します。  

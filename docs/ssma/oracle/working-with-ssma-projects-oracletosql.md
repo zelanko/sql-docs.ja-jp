@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: b96aba990231225516a7ba8ccf1523b91cb56c86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266361"
 ---
 # <a name="working-with-ssma-projects-oracletosql"></a>SSMA プロジェクトの操作 (OracleToSQL)
@@ -62,10 +62,9 @@ Oracle データベースからに[!INCLUDE[ssNoVersion](../../includes/ssnovers
   
 **プロジェクトを作成するには**  
   
-1.  [**ファイル**] メニューの [**新しいプロジェクト**] をクリックします。  
+1.  **[ファイル]** メニューの **[新しいプロジェクト]** をクリックします。  
   
-    
-  **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
+    **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
   
 2.  [**名前**] ボックスに、プロジェクトの名前を入力します。  
   
@@ -73,13 +72,13 @@ Oracle データベースからに[!INCLUDE[ssNoVersion](../../includes/ssnovers
   
 4.  [**移行先**] ドロップダウンで、移行に使用する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ターゲットのバージョンを選択します。 次の方法を使用できます。  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
     -   Azure SQL DB  
   
@@ -101,7 +100,7 @@ Oracle データベースからに[!INCLUDE[ssNoVersion](../../includes/ssnovers
   
         メタデータの保存には数分かかる場合があります。 メタデータをまだ保存しない場合は、チェックボックスをオンにしないでください。  
   
-    2.  [**保存**] ボタンをクリックします。  
+    2.  **[保存]** ボタンをクリックします。  
   
         SSMA は Oracle スキーマを解析し、メタデータをプロジェクトファイルに保存します。  
   
@@ -120,7 +119,7 @@ Oracle データベースからに[!INCLUDE[ssNoVersion](../../includes/ssnovers
   
 3.  に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]再接続するには、[**ファイル**] メニューの [**再接続**] をクリックして SQL Server します。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 移行プロセスの次の手順では、 [Oracle Database (OracleToSQL) に接続](https://msdn.microsoft.com/e276cdbf-3ebc-4ba8-b40d-a7a42befa2b6)します。  
   
 ## <a name="see-also"></a>参照  

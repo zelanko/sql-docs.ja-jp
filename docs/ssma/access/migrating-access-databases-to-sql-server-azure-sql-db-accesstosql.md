@@ -17,10 +17,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 959af9bcb1879dc19d2bfb99253b4c40d637fd1e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68260242"
 ---
 # <a name="migrating-access-databases-to-sql-server---azure-sql-db-accesstosql"></a>SQL Server への Access データベースの移行-Azure SQL DB (アクセス許可 Sql)
@@ -58,6 +58,6 @@ ms.locfileid: "68260242"
   
 また、移行ウィザードを使用して、このプロセスを進めることもできます。 詳細については、「[移行ウィザード](migration-wizard-accesstosql.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [SQL Server Migration Assistant にアクセスするためのはじめに](getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
 [Access データベースの移行の準備](preparing-access-databases-for-migration-accesstosql.md)

@@ -21,10 +21,10 @@ ms.assetid: 525cfcfc-f317-478d-ba84-72e62285f160
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3c1510260a5b381b91a399984121834ca4ce30b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771314"
 ---
 # <a name="sp_check_subset_filter-transact-sql"></a>sp_check_subset_filter (Transact-SQL)
@@ -52,7 +52,7 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**can_use_partition_groups**|**bit**|パブリケーションが事前計算済みパーティションを使用するように修飾されているかどうかを示します。**1**は事前計算済みパーティションを使用できることを示し、 **0**は使用できないことを示します。|  
 |**has_dynamic_filters**|**bit**|指定したフィルター句にパラメーター化された行フィルターが少なくとも1つ含まれているかどうかを示します。**1**は、パラメーター化された行フィルターが使用されることを示します。 **0**は、このような関数が使用されないことを示します。|  
@@ -63,7 +63,7 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_check_subset_filter**は、マージレプリケーションで使用します。  
   
  テーブルがパブリッシュされていない場合でも、任意のテーブルに対して**sp_check_subset_filter**を実行できます。 フィルター選択されたアーティクルを定義する前に、このストアドプロシージャを使用してフィルター句を検証することができます。  

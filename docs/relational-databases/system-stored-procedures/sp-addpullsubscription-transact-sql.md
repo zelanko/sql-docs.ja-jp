@@ -16,10 +16,10 @@ ms.assetid: 0f4bbedc-0c1c-414a-b82a-6fd47f0a6a7f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7f65d868f7560f1e413b8c28308afac495233102
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769081"
 ---
 # <a name="sp_addpullsubscription-transact-sql"></a>sp_addpullsubscription (Transact-SQL)
@@ -58,7 +58,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
   
 `[ @update_mode = ] 'update_mode'`更新の種類を示します。 *update_mode*は**nvarchar (30)** で、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**読み取り専用**(既定値)|サブスクリプションは読み取り専用です。 サブスクライバーでの変更は、パブリッシャーに送り返されません。 サブスクライバーで更新が行われない場合は、を使用する必要があります。|  
 |**synctran**|即時更新サブスクリプションのサポートを有効にします。|  
@@ -71,7 +71,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_addpullsubscription**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
 > [!IMPORTANT]  
@@ -86,13 +86,13 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
  **Sp_addpullsubscription**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
- [プルサブスクリプションを作成する](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [トランザクションパブリケーションに対する更新可能なサブスクリプションを作成](../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)[するパブリケーションをサブスクライブ](../../relational-databases/replication/subscribe-to-publications.md)する   
  [sp_addpullsubscription_agent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)   
  [sp_change_subscription_properties &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
  [sp_droppullsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
  [sp_helppullsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
  [sp_helpsubscription_properties &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -16,10 +16,10 @@ ms.assetid: 929b2fa7-1267-41d0-8b69-e9ab26a62c0f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bf2a18543f6f5db30e36965c9e399968402292e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68768883"
 ---
 # <a name="sp_changelogreader_agent-transact-sql"></a>sp_changelogreader_agent (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68768883"
   ログ リーダー エージェントのセキュリティ プロパティを変更します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
 > [!IMPORTANT]  
->  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベースエンジン &#40;SQL Server 構成マネージャー&#41;への暗号化接続の有効化](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
+>  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -67,7 +67,7 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_changelogreader_agent**は、トランザクションレプリケーションで使用します。  
   
  **sp_changelogreader_agent**は、ログリーダーエージェントを実行する Windows アカウントを変更するために使用します。 既存の Windows ログインのパスワードを変更することも、新しい Windows ログインとパスワードを指定することもできます。  
@@ -80,6 +80,6 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
 ## <a name="see-also"></a>参照  
  [レプリケーションのセキュリティ設定を表示および変更する](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [sp_helplogreader_agent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md)   
- [sp_addlogreader_agent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)  
+ [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)  
   
   

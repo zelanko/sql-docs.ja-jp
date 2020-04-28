@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4d958fa21380272aa770a9880e294a86fede29de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493986"
 ---
 # <a name="browsing-the-deployed-cube"></a>配置したキューブの表示
@@ -24,8 +24,7 @@ ms.locfileid: "69493986"
   
 1.  のキューブデザイナー [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]に切り替えるには、ソリューションエクスプローラーの [**キューブ**] フォルダーにある [ ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]チュートリアル**] キューブをダブルクリックします。  
   
-2.  
-  **[ブラウザー]** タブを開き、キューブ デザイナーのツール バーにある **[再接続]** ボタンをクリックします。  
+2.  **[ブラウザー]** タブを開き、キューブ デザイナーのツール バーにある **[再接続]** ボタンをクリックします。  
   
 3.  Excel アイコンをクリックして Excel を起動し、データ ソースとしてワークスペース データベースを使用します。 接続を有効にするように求めるメッセージが表示されたら、 **[有効]** をクリックします。  
   
@@ -33,8 +32,7 @@ ms.locfileid: "69493986"
   
 5.  ピボットテーブル フィールド リストで **Product**を展開します。  
   
-6.  
-  **Product Model Lines** ユーザー階層を **[列]** 領域にドラッグします。  
+6.  **Product Model Lines** ユーザー階層を **[列]** 領域にドラッグします。  
   
 7.  ピボットテーブル フィールド リストで **[Customer]** を展開し、 **[Location]** を展開します。次に、Customer ディメンション内の [Location] 表示フォルダーにある **[Customer Geography]** 階層を **[行]** 領域にドラッグします。  
   
@@ -47,6 +45,6 @@ ms.locfileid: "69493986"
      ![地域および製品ラインごとのインターネット販売](../../2014/tutorials/media/l3-cube-browser-finish.gif "地域および製品ラインごとのインターネット販売")  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 4 : 高度な属性およびディメンションのプロパティの定義](lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
+ [レッスン 4:高度な属性およびディメンションのプロパティの定義](lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
   
   

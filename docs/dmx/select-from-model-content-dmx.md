@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 61cbacee45147b7b6203e9cb2164c02cdc2c7453
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892831"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>[モデル&lt;&gt;から] を選択します。コンテンツ (DMX)
@@ -31,7 +31,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
   
 ## <a name="arguments"></a>引数  
  *n*  
- 省略可能。 返す行数を指定する整数値です。  
+ 任意。 返す行数を指定する整数値です。  
   
  *式の一覧*  
  コンテンツスキーマ行セットから派生した列のコンマ区切りのリスト。  
@@ -40,12 +40,12 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  モデル識別子。  
   
  *条件式*  
- 省略可能。 列リストから返される値を制限する条件。  
+ 任意。 列リストから返される値を制限する条件。  
   
- *条件*  
- 省略可能。 スカラー値を返す式。  
+ *式 (expression)*  
+ 任意。 スカラー値を返す式。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **SELECT FROM** _ \<model>_ **。CONTENT**ステートメントでは、各アルゴリズムに固有のコンテンツが返されます。 たとえば、カスタムアプリケーションでのアソシエーションルールモデルのすべてのルールの説明を使用することができます。 **[モデルから\<選択]> を使用できます。** モデルの NODE_RULE 列の値を返すコンテンツステートメント。  
   
  次の表に、マイニングモデルコンテンツに含まれる列を示します。  
@@ -53,7 +53,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
 > [!NOTE]  
 >  アルゴリズムでは、コンテンツを正しく表現するために、列の解釈が異なる場合があります。 各アルゴリズムのマイニングモデルコンテンツの説明、および各種類のモデルのマイニングモデルコンテンツの解釈とクエリの方法に関するヒントについては、「[マイニングモデルコンテンツ &#40;Analysis Services-データマイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)」を参照してください。  
   
-|コンテンツ行セット列|[説明]|  
+|コンテンツ行セット列|説明|  
 |---------------------------|-----------------|  
 |MODEL_CATALOG|カタログ名です。 プロバイダーがカタログをサポートしない場合は NULL です。|  
 |MODEL_SCHEMA|非修飾スキーマ名。 プロバイダーがスキーマをサポートしない場合は NULL です。|  
@@ -74,7 +74,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
 |NODE_DISTRIBUTION|ノード内の値の分布を表す統計を含むテーブル。|  
 |NODE_SUPPORT|このノードがサポートされているケースの数。|  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次のコードは、対象メーリングマイニング構造に追加されたデシジョンツリーモデルの親ノードの ID を返します。  
   
 ```  
@@ -120,9 +120,9 @@ WHERE NODE_TYPE = 26
   
 |MODEL_NAME|NODE_DISTRIBUTION.ATTRIBUTE_NAME|NODE_DISTRIBUTION。ATTRIBUTE_VALUE|NODE_DISTRIBUTION.SUPPORT|NODE_DISTRIBUTION。確率|NODE_DISTRIBUTION.VARIANCE|NODE_DISTRIBUTION.VALUETYPE|  
 |-----------------|----------------------------------------|-----------------------------------------|--------------------------------|------------------------------------|---------------------------------|----------------------------------|  
-|TM_NaiveBayes|Bike Buyer|Missing|0|0|0|1 で保護されたプロセスとして起動されました|  
+|TM_NaiveBayes|Bike Buyer|Missing|0|0|0|1|  
 |TM_NaiveBayes|Bike Buyer|0|6556|0.506685215240745|0||  
-|TM_NaiveBayes|Bike Buyer|1 で保護されたプロセスとして起動されました|6383|0.493314784759255|0||  
+|TM_NaiveBayes|Bike Buyer|1|6383|0.493314784759255|0||  
   
  次の例は、下位選択ステートメントを使用して、入れ子になったテーブルから一部の列のみを返す方法を示しています。 表示を簡略化するには、入れ子になったテーブルのテーブル名を別名で示します。  
   
@@ -140,11 +140,11 @@ WHERE NODE_TYPE = 26
 |-----------------|-----------------------|------------------------|---------------|  
 |TM_NaiveBayes|Bike Buyer|Missing|0|  
 |TM_NaiveBayes|Bike Buyer|0|6556|  
-|TM_NaiveBayes|Bike Buyer|1 で保護されたプロセスとして起動されました|6383|  
+|TM_NaiveBayes|Bike Buyer|1|6383|  
   
 ## <a name="see-also"></a>参照  
  [DMX&#41;を選択 &#40;](../dmx/select-dmx.md)   
  [DMX&#41; データ操作ステートメントを &#40;データマイニング拡張機能](../dmx/dmx-statements-data-manipulation.md)   
- [DMX&#41; ステートメントリファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-statements.md)  
+ [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

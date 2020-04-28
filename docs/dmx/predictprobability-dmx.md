@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: bd8365b2d3aac82c184af549ef21952fd4c8e649
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893904"
 ---
 # <a name="predictprobability-dmx"></a>PredictProbability (DMX)
@@ -33,13 +33,13 @@ PredictProbability(<scalar column reference>, [<predicted state>])
 ## <a name="return-type"></a>戻り値の型  
  スカラー値。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  予測された状態が省略されている場合、省略した状態バケットを除いて、確率が最も高い状態が使用されます。 欠落状態のバケットを含めるには、 \<予測された状態の> を**INCLUDE_NULL**に設定します。 欠落状態の確率を返すには、予測さ\<れた状態> を NULL に設定します。  
   
 > [!NOTE]  
 >  一部のマイニングモデルには確率値が指定されていないため、この関数を使用することはできません。 また、特定のターゲット値の確率値は異なる方法で計算されます。また、クエリを実行するモデルの種類によっては、解釈が異なる場合があります。 特定の種類のモデルに対する確率の計算方法の詳細については、「[マイニングモデルコンテンツ &#40;Analysis Services-データマイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)」の個々のアルゴリズムに関するトピックを参照してください。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、自然予測結合を使用して、個人が TM デシジョンツリーマイニングモデルに基づいた自転車購入者である可能性があるかどうかを判断し、予測の確率も決定します。 この例では、可能な値ごとに1つずつ、PredictProbability 関数が2つあります。 この引数を省略した場合、関数は最も可能性の高い値の確率を返します。  
   
 ```  
@@ -60,7 +60,7 @@ NATURAL PREDICTION JOIN
   
 |Bike Buyer|Bike Buyer = Yes|Bike Buyer = No|  
 |----------------|-----------------------|----------------------|  
-|1 で保護されたプロセスとして起動されました|0.867074195848097|0.132755556974282|  
+|1|0.867074195848097|0.132755556974282|  
   
 ## <a name="see-also"></a>参照  
  [DMX&#41; 関数リファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-function-reference.md)   

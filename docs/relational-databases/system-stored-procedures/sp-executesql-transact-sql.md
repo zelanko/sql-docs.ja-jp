@@ -20,17 +20,16 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a548597b42bacdf5afaf7a2dc024156bd4ec3ad3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68290352"
 ---
 # <a name="sp_executesql-transact-sql"></a>sp_executesql (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  何回も再利用可能な、または動的に作成した [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントやバッチを実行します。 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントやバッチには、埋め込みパラメーターを含めることができます。  
+  何回も再利用可能な、または動的に作成した [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントやバッチを実行します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントやバッチには、埋め込みパラメーターを含めることができます。  
   
 > [!IMPORTANT]  
 >  実行時にコンパイル[!INCLUDE[tsql](../../includes/tsql-md.md)]されたステートメントは、アプリケーションを悪意のある攻撃にさらす可能性があります。  
@@ -76,13 +75,12 @@ sp_executesql [ @stmt = ] statement
 ## <a name="result-sets"></a>結果セット  
  SQL 文字列に組み込まれているすべての SQL ステートメントからの結果セットを返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  sp_executesql パラメーターは、このトピックの「構文」セクションで説明されているように、特定の順序で入力する必要があります。 パラメーターが順序どおりに入力されていない場合は、エラーメッセージが表示されます。  
   
  sp_executesql は、バッチ、名前の有効範囲、およびデータベース コンテキストに関して、EXECUTE と同じように動作します。 Sp_executesql [!INCLUDE[tsql](../../includes/tsql-md.md)] \@stmt パラメーターのステートメントまたはバッチは、sp_executesql ステートメントが実行されるまでコンパイルされません。 次に、 \@stmt の内容をコンパイルして、sp_executesql を呼び出したバッチの実行プランとは別の実行プランとして実行します。 sp_executesql バッチから、sp_executesql を呼び出すバッチ内で宣言されている変数は参照できません。 sp_executesql バッチ内のローカル カーソルまたはローカル変数は、sp_executesql を呼び出すバッチでは認識されません。 データベース コンテキストの変更は、sp_executesql ステートメント終了時まで有効です。  
   
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのパラメーター値だけが変わる場合は、ストアド プロシージャの代わりに sp_executesql を使用して、ステートメントを何回でも実行できます。 この場合、パラメーター値が変わるだけで [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントそのものは変わらないため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ オプティマイザーではステートメントを最初に実行したときに生成した実行プランを再使用できます。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのパラメーター値だけが変わる場合は、ストアド プロシージャの代わりに sp_executesql を使用して、ステートメントを何回でも実行できます。 この場合、パラメーター値が変わるだけで [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントそのものは変わらないため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ オプティマイザーではステートメントを最初に実行したときに生成した実行プランを再使用できます。  
   
 > [!NOTE]  
 >  パフォーマンスを向上させるには、ステートメント文字列で完全修飾オブジェクト名を使用します。  
@@ -236,7 +234,7 @@ FROM Sales.SalesOrderHeader
 WHERE SalesOrderNumber = @SalesOrderNumber;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-executing-a-simple-select-statement"></a>D. 簡単な SELECT ステートメントを実行する  
  次の例では、という`SELECT`名前`@level`の埋め込みパラメーターを含む単純なステートメントを作成して実行します。  
@@ -252,7 +250,7 @@ EXECUTE sp_executesql
 ```  
   
 ## <a name="see-also"></a>参照  
- [Transact-sql&#41;の実行 &#40;](../../t-sql/language-elements/execute-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

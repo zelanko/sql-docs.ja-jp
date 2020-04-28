@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6b29a31acb4e3dad83c760c27a9591cac026e0ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530899"
 ---
 # <a name="understanding-microsoft-olap-architecture"></a>Microsoft OLAP アーキテクチャについて
@@ -39,9 +39,9 @@ ms.locfileid: "69530899"
  [もっとその。。。](understanding-microsoft-olap-physical-architecture.md)  
   
  ![小さいファイルフォルダーアイコン](../../../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")の**プログラミングアーキテクチャ**  
- [分析管理オブジェクト &#40;AMO&#41;を使用した開発](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
+ [分析管理オブジェクト &#40;AMO&#41; による開発](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
   
- [Analysis Services スクリプト言語 &#40;ASSL&#41;を使用した開発](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [Analysis Services スクリプト言語 (ASSL) での開発](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   
  [ADOMD.NET での開発](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
   

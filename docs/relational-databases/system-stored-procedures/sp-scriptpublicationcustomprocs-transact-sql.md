@@ -16,10 +16,10 @@ ms.assetid: b06102d5-4284-4834-b126-bc0baea49be5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8436616ced84892dc7e484a5d83f3f0c3779f244
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771579"
 ---
 # <a name="sp_scriptpublicationcustomprocs-transact-sql"></a>sp_scriptpublicationcustomprocs (Transact-SQL)
@@ -45,7 +45,7 @@ sp_scriptpublicationcustomprocs [ @publication = ] 'publication_name'
 ## <a name="result-sets"></a>結果セット  
  1つの**nvarchar (4000)** 列で構成される結果セットを返します。 この結果セットは、カスタム ストアド プロシージャの作成に必要な、完全な CREATE PROCEDURE ステートメントを構成します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  カスタムプロシージャは、自動生成カスタムプロシージャ (0x2) スキーマオプションを指定しないと、アーティクルに対してスクリプト化されません。  
   
  次の手順は、 **sp_scriptpublicationcustomprocs**がサブスクライバーのプロシージャを作成するために使用します。このプロシージャを直接実行することはできません。  
@@ -78,6 +78,6 @@ sp_scriptpublicationcustomprocs [ @publication = ] 'publication_name'
  実行権限が**public**に付与されます。このストアドプロシージャ内で手続き型のセキュリティチェックが実行され、 **sysadmin**固定サーバーロールのメンバーと、現在のデータベースの固定データベースロール**db_owner**のメンバーへのアクセスが制限されます。  
   
 ## <a name="see-also"></a>参照  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

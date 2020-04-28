@@ -21,10 +21,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 31dd240f15d9d778cbab43f6b4b1bfda2e4e1857
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265974"
 ---
 # <a name="sysdm_fts_active_catalogs-transact-sql"></a>dm_fts_active_catalogs (Transact-sql)
@@ -36,17 +36,17 @@ ms.locfileid: "68265974"
 >  次の列は、の将来の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョンで削除される予定です: is_paused、previous_status、previous_status_description、row_count_in_thousands、状態、status_description、および worker_count。 新しい開発作業ではこれらの列を使用しないようにし、現在これらの列を使用しているアプリケーションの変更を検討してください。  
   
  
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|アクティブなフルテキストカタログを含むデータベースの ID。|  
 |**catalog_id**|**int**|アクティブなフルテキストカタログの ID。|  
 |**memory_address**|**varbinary (8)**|このフルテキストカタログに関連する作成アクティビティに割り当てられたメモリバッファーのアドレス。|  
-|**name**|**nvarchar(128**|アクティブなフルテキスト カタログの名前。|  
+|**name**|**nvarchar(128)**|アクティブなフルテキスト カタログの名前。|  
 |**is_paused**|**bit**|アクティブなフルテキストカタログの作成が一時停止されているかどうかを示します。|  
-|**オンライン**|**int**|フルテキストカタログの現在の状態です。 次のいずれか:<br /><br /> 0 = 初期化中<br /><br /> 1 = 準備完了<br /><br /> 2 = 一時停止<br /><br /> 3 = 一時エラー<br /><br /> 4 = 再マウントが必要<br /><br /> 5 = シャットダウン<br /><br /> 6 = バックアップ用に休止<br /><br /> 7 = カタログを使用してバックアップを実行する<br /><br /> 8 = カタログが破損しています|  
-|**status_description**|**nvarchar (120)**|アクティブなフルテキスト カタログの現在の状態に関する説明。|  
+|**status**|**int**|フルテキストカタログの現在の状態です。 次のいずれか:<br /><br /> 0 = 初期化中<br /><br /> 1 = 準備完了<br /><br /> 2 = 一時停止<br /><br /> 3 = 一時エラー<br /><br /> 4 = 再マウントが必要<br /><br /> 5 = シャットダウン<br /><br /> 6 = バックアップ用に休止<br /><br /> 7 = カタログを使用してバックアップを実行する<br /><br /> 8 = カタログが破損しています|  
+|**status_description**|**nvarchar(120)**|アクティブなフルテキスト カタログの現在の状態に関する説明。|  
 |**previous_status**|**int**|フルテキストカタログの以前の状態。 次のいずれか:<br /><br /> 0 = 初期化中<br /><br /> 1 = 準備完了<br /><br /> 2 = 一時停止<br /><br /> 3 = 一時エラー<br /><br /> 4 = 再マウントが必要<br /><br /> 5 = シャットダウン<br /><br /> 6 = バックアップ用に休止<br /><br /> 7 = カタログを使用してバックアップを実行する<br /><br /> 8 = カタログが破損しています|  
-|**previous_status_description**|**nvarchar (120)**|アクティブなフルテキストカタログの以前の状態の説明です。|  
+|**previous_status_description**|**nvarchar(120)**|アクティブなフルテキストカタログの以前の状態の説明です。|  
 |**worker_count**|**int**|このフルテキストカタログを現在処理しているスレッドの数。|  
 |**active_fts_index_count**|**int**|設定されているフルテキストインデックスの数。|  
 |**auto_population_count**|**int**|このフルテキストカタログに対して自動作成が進行中のテーブルの数。|  
@@ -55,7 +55,7 @@ ms.locfileid: "68265974"
 |**row_count_in_thousands**|**int**|フルテキストカタログ内のすべてのフルテキストインデックスの推定行数 (1000 単位)。|  
 |**is_importing**|**bit**|フルテキストカタログがインポートされているかどうかを示します。<br /><br /> 1 = カタログがインポートされています。<br /><br /> 2 = カタログがインポートされていません。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  Is_importing 列はで[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]新しく追加されました。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -68,12 +68,12 @@ Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、デー
   
 ## <a name="relationship-cardinalities"></a>リレーションシップ基数  
   
-|移行元|To|リレーションシップ|  
+|ソース|終了|リレーションシップ|  
 |----------|--------|------------------|  
 |dm_fts_active_catalogs。 database_id|dm_fts_index_population。 database_id|一対一|  
 |dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|一対一|  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、現在のデータベースのアクティブなフルテキストカタログに関する情報を返します。  
   
 ```  

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 63de71ae82e60b8ec7d8a39e18f89e6bd2393f2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892946"
 ---
 # <a name="crossjoin-mdx"></a>Crossjoin (MDX)
@@ -38,7 +38,7 @@ Set_Expression1 * Set_Expression2 [* ...n]
  *Set_Expression2*  
  セットを返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Crossjoin**関数は、2つ以上の指定されたセットのクロス積を返します。 結果セット内の組の順序は、結合されるセットの順序とメンバーの順序によって異なります。 たとえば、最初のセットが {x1, x2,..., x*n*} で構成され、2番目のセットが {y1, y2,..., y*n*} で構成されている場合、これらのセットのクロス積は次のようになります。  
   
  {(x1, y1)、(x1, y2),..., (x1, y*n*)、(x2, y1)、(x2, y2),...,  
@@ -48,7 +48,7 @@ Set_Expression1 * Set_Expression2 [* ...n]
 > [!IMPORTANT]  
 >  クロス結合内のセットが同一ディメンションの異なる属性階層の組から構成されている場合、この関数は実際に存在する組のみを返します。 詳細については、「 [MDX &#40;Analysis Services&#41;の主要概念](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)」を参照してください。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次のクエリは、クエリの Columns 軸と Rows 軸で Crossjoin 関数を使用する簡単な例を示しています。  
   
  `SELECT`  
@@ -128,6 +128,6 @@ WHERE (Measures.[Internet Sales Amount],
 ```  
   
 ## <a name="see-also"></a>参照  
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

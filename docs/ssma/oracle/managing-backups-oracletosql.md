@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: a11948b901e0f687b1daf537faa7b836c4618206
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262968"
 ---
 # <a name="managing-backups-oracletosql"></a>バックアップの管理 (OracleToSQL)
@@ -36,7 +36,7 @@ Oracle バックアップ管理を使用すると、テストの実行前また�
   
 -   [**キャンセル**] ボタンをクリックして、ダイアログを閉じます。  
   
-### <a name="restore"></a>[復元]  
+### <a name="restore"></a>復元  
 [復元] ダイアログを開くには、[テスト担当者] メニューの [Oracle バックアップ管理] をポイントし、[復元...] をクリックします。ここには、バックアップで使用可能なテーブルを含むツリーが表示されます。 データを復元する1つ以上のテーブルを選択します。  
   
 ダイアログでは、次のボタンを使用できます。  
@@ -72,7 +72,7 @@ SQL Server バックアップ管理を使用すると、テストの実行前ま
   
 -   [**キャンセル**] ボタンをクリックして、ダイアログを閉じます。  
   
-### <a name="restore"></a>[復元]  
+### <a name="restore"></a>復元  
 [復元] ダイアログを開くには、[テスト担当者] メニューの [SQL Server バックアップの管理] をポイントし、[復元...] をクリックします。ここには、バックアップで使用可能なテーブルを含むツリーが表示されます。 データを復元するテーブルを1つ以上選択します。  
   
 ダイアログでは、次のボタンを使用できます。  

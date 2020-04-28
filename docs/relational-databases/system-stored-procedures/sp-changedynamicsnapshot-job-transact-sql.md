@@ -16,10 +16,10 @@ ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4db6a29d92fe093e9704f88fcc528c9fa687ccff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68768946"
 ---
 # <a name="sp_changedynamicsnapshot_job-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
@@ -59,13 +59,13 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
   
 `[ @frequency_type = ] frequency_type`エージェントをスケジュールする頻度を指定します。 *frequency_type*は**int**,、値は次のいずれかを指定することができます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|1 回|  
 |**2**|オン デマンド|  
 |**4**|毎日|  
 |**8**|週単位|  
-|**まで**|月単位|  
+|**まで**|月 1 回|  
 |**32**|月単位の相対|  
 |**64**|自動開始|  
 |**128**|繰り返し|  
@@ -73,23 +73,23 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
   
 `[ @frequency_interval = ] frequency_interval`エージェントを実行する曜日。 *frequency_interval*は**int**,、値は次のいずれかを指定することができます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|土曜日|  
 |**2**|月曜日|  
-|**番**|Tuesday|  
+|**3**|Tuesday|  
 |**4**|水曜日|  
-|**5/5**|Thursday|  
+|**5**|Thursday|  
 |**6**|金曜日|  
 |**7**|土曜日|  
 |**8**|日|  
-|**9**|平日の日中|  
-|**種類**|週末|  
+|**9**|平日|  
+|**10**|週末|  
 |NULL (既定値)||  
   
 `[ @frequency_subday = ] frequency_subday`定義した期間中に再スケジュールする頻度を指定します。 *frequency_subday*は**int**,、値は次のいずれかを指定することができます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|1 度|  
 |**2**|秒|  
@@ -101,7 +101,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`マージエージェントが実行される日付を指定します。 このパラメーターは、 *frequency_type*が**32** (月単位) に設定されている場合に使用されます。 *frequency_relative_interval*は**int**,、値は次のいずれかを指定することができます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|First (先頭へ)|  
 |**2**|秒|  
@@ -130,7 +130,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_changedynamicsnapshot_job**は、パラメーター化された行フィルターを使用したパブリケーションのマージレプリケーションで使用されます。  
   
  エージェントのログインまたはパスワードを変更した後、変更を有効にするには、エージェントを停止して再起動する必要があります。  
@@ -140,6 +140,6 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>参照  
  [レプリケーションのセキュリティ設定を表示および変更する](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
- [パラメーター化されたフィルターを使用したマージパブリケーションのスナップショット](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
+ [パラメーター化されたフィルターを使用したマージ パブリケーションのスナップショット](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
   
   

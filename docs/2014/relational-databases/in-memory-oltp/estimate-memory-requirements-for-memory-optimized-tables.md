@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: cbd8a79bf9d881d2d4c9055531bac2e290f202a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811010"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>メモリ最適化テーブルのメモリ必要量の推定
@@ -24,19 +24,19 @@ ms.locfileid: "68811010"
   
 ## <a name="sections-in-this-topic"></a>このトピックのセクション  
   
--   [メモリ最適化テーブルの例](#bkmk_ExampleTable)  
+-   [サンプルのメモリ最適化テーブル](#bkmk_ExampleTable)  
   
--   [テーブルのメモリ](#bkmk_MemoryForTable)  
+-   [テーブルに対応するメモリ](#bkmk_MemoryForTable)  
   
--   [インデックスのメモリ](#bkmk_IndexMeemory)  
+-   [インデックスに対応するメモリ](#bkmk_IndexMeemory)  
   
--   [行のバージョン管理のためのメモリ](#bkmk_MemoryForRowVersions)  
+-   [行のバージョン管理に対応するメモリ](#bkmk_MemoryForRowVersions)  
   
--   [テーブル変数のメモリ](#bkmk_TableVariables)  
+-   [テーブル変数に対応するメモリ](#bkmk_TableVariables)  
   
--   [増加に対応するメモリ](#bkmk_MemoryForGrowth)  
+-   [成長に対応するメモリ](#bkmk_MemoryForGrowth)  
   
-##  <a name="bkmk_ExampleTable"></a>メモリ最適化テーブルの例  
+##  <a name="example-memory-optimized-table"></a><a name="bkmk_ExampleTable"></a>メモリ最適化テーブルの例  
  次のメモリ最適化テーブルのスキーマを考えてみます。  
   
 ```sql  
@@ -61,7 +61,7 @@ GO
   
  このスキーマを使用して、このメモリ最適化テーブルで必要とされる最小メモリを決定します。  
   
-##  <a name="bkmk_MemoryForTable"></a>テーブルのメモリ  
+##  <a name="memory-for-the-table"></a><a name="bkmk_MemoryForTable"></a>テーブルのメモリ  
  メモリ最適化テーブルの行は、次の 3 つの部分から形成されています。  
   
 -   **もし**   
@@ -79,7 +79,7 @@ GO
   
  上記の計算結果から、メモリ最適化テーブル内にある各行のサイズは 24 + 32 + 200、つまり 256 バイトです。  500 万の行があるため、テーブルは 5,000,000 * 256 バイト、つまり 1,280,000,000 バイト、約 1.28 GB を使用します。  
   
-##  <a name="bkmk_IndexMeemory"></a>インデックスのメモリ  
+##  <a name="memory-for-indexes"></a><a name="bkmk_IndexMeemory"></a>インデックスのメモリ  
  **各ハッシュ インデックスに対応するメモリ**  
   
  各ハッシュ インデックスは、8 バイトのアドレス ポインターから成るハッシュの配列です。  配列のサイズは、そのインデックスの一意のインデックス値の数に基づいて適切に決定できます。たとえば、一意の Col2 の値の数を、t1c2_index の配列サイズを求めるための適切な出発点として使用することができます。 大きすぎるハッシュ配列は、メモリを浪費します。  小さすぎるハッシュ配列を使用する場合は、パフォーマンスが低下します。同じインデックスへとハッシュされるインデックス値が多くなり、非常に多くの競合が発生するためです。  
@@ -113,8 +113,7 @@ SELECT COUNT(DISTINCT [Col2])
   
  新しいテーブルを作成する場合は、配列のサイズを推測するか、配置を実行する前にテストからデータを収集する必要があります。  
   
- 
-  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] メモリ最適化テーブル内でのハッシュ インデックスの動作方法の詳細については、「 [Hash Indexes](../../database-engine/hash-indexes.md)」(ハッシュ インデックス) を参照してください。  
+ [!INCLUDE[hek_2](../../includes/hek-2-md.md)] メモリ最適化テーブル内でのハッシュ インデックスの動作方法の詳細については、「 [Hash Indexes](../../database-engine/hash-indexes.md)」(ハッシュ インデックス) を参照してください。  
   
  **注:** ハッシュインデックスの配列サイズを即座に変更することはできません。 ハッシュ インデックスの配列サイズを変更するには、テーブルを削除して bucket_count の値を変更し、そのテーブルを再作成する必要があります。  
   
@@ -128,7 +127,7 @@ SELECT COUNT(DISTINCT [Col2])
   
  3 つのハッシュ インデックスが存在するため、ハッシュ インデックスで必要とされるメモリは 3 * 64MB = 192MB です。  
   
- **非クラスター化インデックスに対応するメモリ**  
+ **非クラスター化インデックスのメモリ**  
   
  非クラスター化インデックスは BTree として実装されており、内部ノードはインデックス値と、後続のノードを指すポインターを保持しています。  リーフ ノードは、インデックス値と、メモリ内にあるテーブルの行を指すポインターを保持しています。  
   
@@ -151,7 +150,7 @@ SELECT * FROM t_hk
    WHERE c2 > 5  
 ```  
   
-##  <a name="bkmk_MemoryForRowVersions"></a>行のバージョン管理のためのメモリ  
+##  <a name="memory-for-row-versioning"></a><a name="bkmk_MemoryForRowVersions"></a>行のバージョン管理のためのメモリ  
  ロックを回避するために、インメモリ OLTP は行を更新または削除するときに、オプティミスティック コンカレンシーを使用します。 これは、行を更新するときに、行の追加バージョンが作成されることを意味します。 以前のバージョンを使用する可能性のあるすべてのトランザクションが実行を完了するまでは、システムは以前のバージョンを使用可能な状態に保ちます。 行を削除する場合も、システムは更新の場合に似た方法で動作し、以前のバージョンが不要になるまでは、以前のバージョンを使用可能な状態に保ちます。 読み取りと挿入を実行する場合は、行の追加バージョンは作成されません。  
   
  メモリ内にはいつでも多数の追加行が存在している可能性があり、それらの行は自らのメモリを解放するガベージ コレクション サイクルを待機しているため、これらの追加の行を収容するために十分なメモリを用意する必要があります。  
@@ -166,12 +165,12 @@ SELECT * FROM t_hk
   
  `memoryForRowVersions = rowVersions * rowSize`  
   
-##  <a name="bkmk_TableVariables"></a>テーブル変数のメモリ  
+##  <a name="memory-for-table-variables"></a><a name="bkmk_TableVariables"></a>テーブル変数のメモリ  
  テーブル変数に対応するメモリは、テーブル変数がスコープ外になる場合にのみ解放されます。 テーブル変数から削除された行 (更新の一部として削除された行を含む) には、ガベージ コレクションは適用されません。 テーブル変数がスコープを終了するまでメモリは解放されません。  
   
  プロシージャ スコープとは対照的に、多くのトランザクションで使用される大きな SQL バッチで定義されるテーブル変数は、多くのメモリを消費することがあります。 ガベージ コレクションの対象ではないため、テーブル変数内にある削除された行は多くのメモリを使用し、パフォーマンスが低下することがあります。読み取り操作では、削除されたこれらの行をスキャンで通過させる必要があるためです。  
   
-##  <a name="bkmk_MemoryForGrowth"></a>増加に対応するメモリ  
+##  <a name="memory-for-growth"></a><a name="bkmk_MemoryForGrowth"></a>増加に対応するメモリ  
  上記の各計算では、現在存在しているテーブルに対応するメモリ必要量を推定しています。 このメモリに加えて、テーブルが成長することを推定し、その成長を収容するために十分なメモリを用意する必要があります。  たとえば、10% の成長を予測している場合は、上記の結果に 1.1 を掛けて、テーブルで必要とされる合計メモリを得ることができます。  
   
 ## <a name="see-also"></a>参照  

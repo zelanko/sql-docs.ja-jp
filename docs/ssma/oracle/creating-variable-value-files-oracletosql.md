@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 87db0ebd006e2ca87ddc4744a4bbcd396a827712
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266122"
 ---
 # <a name="creating-variable-value-files-oracletosql"></a>変数値ファイルの作成 (OracleToSQL)
@@ -87,7 +87,7 @@ ms.locfileid: "68266122"
 </variables>  
 ```  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 コンソールを操作する次の手順では、[サーバー接続ファイル &#40;OracleToSQL&#41;作成し](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)ます。  
   
 ## <a name="see-also"></a>参照  

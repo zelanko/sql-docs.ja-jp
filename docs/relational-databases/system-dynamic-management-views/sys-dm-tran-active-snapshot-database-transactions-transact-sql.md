@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a17fb16130aea073c7a878334ac78b0347267b6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262700"
 ---
 # <a name="sysdm_tran_active_snapshot_database_transactions-transact-sql"></a>dm_tran_active_snapshot_database_transactions (Transact-sql)
@@ -58,7 +58,7 @@ sys.dm_tran_active_snapshot_database_transactions
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**transaction_id**|**bigint**|トランザクションに割り当てられている一意な識別番号。 トランザクション ID は主に、ロック操作でトランザクションを識別するために使用されます。|  
 |**transaction_sequence_num**|**bigint**|トランザクションのシーケンス番号。 これは、トランザクションが開始されるときに、トランザクションに割り当てられる一意のシーケンス番号です。 バージョン レコードを生成せず、スナップショット スキャンを行わないトランザクションには、トランザクション シーケンス番号は割り当てられません。|  
@@ -67,7 +67,7 @@ sys.dm_tran_active_snapshot_database_transactions
 |**session_id**|**int**|トランザクションを開始したセッションの ID。|  
 |**first_snapshot_sequence_num**|**bigint**|スナップショット取得時にアクティブだったトランザクションの最小トランザクションシーケンス番号。 実行時には、スナップショットトランザクションは、その時点でアクティブなすべてのトランザクションのスナップショットを取得します。 スナップショット以外のトランザクションの場合、この列には0が表示されます。|  
 |**max_version_chain_traversed**|**int**|トランザクション全体で一貫性のあるバージョンを検索するためにスキャンされるバージョン チェーンの最大長。|  
-|**average_version_chain_traversed**|**本当の**|走査されるバージョンチェーン内の行バージョンの平均数。|  
+|**average_version_chain_traversed**|**real**|走査されるバージョンチェーン内の行バージョンの平均数。|  
 |**elapsed_time_seconds**|**bigint**|トランザクションがトランザクションシーケンス番号を取得してから経過した時間。|  
 |**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
@@ -76,7 +76,7 @@ sys.dm_tran_active_snapshot_database_transactions
 で[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]は、 `VIEW SERVER STATE`権限が必要です。   
 Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、データベース`VIEW DATABASE STATE`の権限が必要です。 Standard [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
 
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  dm_tran_active_snapshot_database_transactions は、トランザクションシーケンス番号 (XSN) が割り当てられているトランザクションを報告し**ます。** XSN は、トランザクションが最初にバージョンストアにアクセスしたときに割り当てられます。 行のバージョン管理を使用するスナップショット分離または READ COMMITTED 分離が有効なデータベースにおいて、XSN がトランザクションに割り当てられるときの例を次に示します。  
   
 -   トランザクションが serializable 分離レベルで実行されている場合、更新操作などのステートメントをトランザクションが最初に実行するときに XSN が割り当てられ、行バージョンが作成されます。  
@@ -85,7 +85,7 @@ Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、デー
   
  トランザクション シーケンス番号は、[!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスでトランザクションが開始されるたびに増分されます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、4 つの同時実行トランザクションが存在するテスト シナリオを使用します。これらのトランザクションはそれぞれトランザクション シーケンス番号 (XSN) で識別され、ALLOW_SNAPSHOT_ISOLATION オプションと READ_COMMITTED_SNAPSHOT オプションが ON に設定されているデータベース内で実行されます。 実行されるトランザクションは次のとおりです。  
   
 -   XSN-57。SERIALIZABLE 分離での更新操作です。  
@@ -155,8 +155,8 @@ elapsed_time_seconds
   
 ## <a name="see-also"></a>参照  
  [Transact-sql&#41;&#40;トランザクション分離レベルを設定する](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
- [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [トランザクション関連の動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [トランザクション関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

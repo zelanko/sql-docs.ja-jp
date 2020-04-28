@@ -16,10 +16,10 @@ ms.assetid: f207c22d-8fb2-4756-8a9d-6c51d6cd3470
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a47a81b2b19ceccf76a031e298ab60cf4a6f8c9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68770951"
 ---
 # <a name="sp_helpdistpublisher-transact-sql"></a>sp_helpdistpublisher (Transact-SQL)
@@ -44,26 +44,25 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|発行元の名前。|  
 |**distribution_db**|**sysname**|指定されたパブリッシャーのディストリビューションデータベースです。|  
-|**security_mode**|**int**|キュー更新サブスクリプションのパブリッシャー、または以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーに接続するために、レプリケーションエージェントによって使用されるセキュリティモード。<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証<br /><br /> **1** = Windows 認証|  
+|**security_mode**|**int**|キュー更新サブスクリプションのパブリッシャー、または以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーに接続するために、レプリケーションエージェントによって使用されるセキュリティモード。<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証<br /><br /> **1** = Windows 認証|  
 |**ログイン**|**sysname**|キュー更新サブスクリプションのパブリッシャーへの接続、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のパブリッシャーとの接続のため、レプリケーション エージェントで使用されるログイン名です。|  
-|**入力**|**nvarchar (524)**|単純な暗号化形式で返されるパスワードです。 **Sysadmin**以外のユーザーのパスワードは NULL です。|  
-|**能動的**|**bit**|リモートパブリッシャーがローカルサーバーをディストリビューターとして使用しているかどうか。<br /><br /> **0** = いいえ<br /><br /> **1** = はい|  
+|**password**|**nvarchar (524)**|単純な暗号化形式で返されるパスワードです。 **Sysadmin**以外のユーザーのパスワードは NULL です。|  
+|**active**|**bit**|リモートパブリッシャーがローカルサーバーをディストリビューターとして使用しているかどうか。<br /><br /> **0** = いいえ<br /><br /> **1** = はい|  
 |**working_directory**|**nvarchar(255)**|作業ディレクトリの名前。|  
 |**テッド**|**bit**|パブリッシャーがディストリビューターに接続するときにパスワードが必要かどうかを示します。 以降[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]のバージョンでは、これは常に**0**を返す必要があります。これは、パスワードが必要であることを意味します。|  
-|**thirdparty_flag**|**bit**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] またはサード パーティのアプリケーションによってパブリケーションが有効にされるかどうかを示します。<br /><br /> **** = 0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、oracle、または oracle ゲートウェイパブリッシャー。<br /><br /> **1** = サードパーティのアプリケーションを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用して、パブリッシャーはと統合されています。|  
-|**publisher_type**|**sysname**|パブリッシャーの種類です。次のいずれかを指定できます。<br /><br /> **MS**<br /><br /> **ORACLE11I**<br /><br /> **ORACLE GATEWAY **|  
-|**publisher_data_source**|**nvarchar(4000)**|パブリッシャーでの OLE DB データ ソースの名前です。|  
-|**storage_connection_string**|**nvarchar(4000)**|ディストリビューターまたはパブリッシャーが Azure SQL Database にある場合の作業ディレクトリのストレージアクセスキー。|  
+|**thirdparty_flag**|**bit**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] またはサード パーティのアプリケーションによってパブリケーションが有効にされるかどうかを示します。<br /><br /> **0** = 0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、oracle、または oracle ゲートウェイパブリッシャー。<br /><br /> **1** = サードパーティのアプリケーションを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用して、パブリッシャーはと統合されています。|  
+|**publisher_type**|**sysname**|パブリッシャーの種類です。次のいずれかを指定できます。<br /><br /> **MSSQLSERVER**<br /><br /> **ORACLE11I**<br /><br /> **ORACLE GATEWAY **|  
+|**publisher_data_source**|**nvarchar (4000)**|パブリッシャーでの OLE DB データ ソースの名前です。|  
+|**storage_connection_string**|**nvarchar (4000)**|ディストリビューターまたはパブリッシャーが Azure SQL Database にある場合の作業ディレクトリのストレージアクセスキー。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_helpdistpublisher**は、すべての種類のレプリケーションで使用されます。  
   
  **sp_helpdistpublisher**では、**sysadmin**以外のログインの結果セットには、パブリッシャーのログインまたはパスワードは表示されません。  
@@ -75,6 +74,6 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
  [ディストリビューターとパブリッシャーのプロパティの表示および変更](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_changedistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
- [sp_dropdistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)  
+ [sp_dropdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)  
   
   

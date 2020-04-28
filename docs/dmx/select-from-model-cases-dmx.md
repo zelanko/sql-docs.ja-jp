@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5f0334c37eeedafee7066f01d61745fcb82d1629
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892843"
 ---
 # <a name="select-from-ltmodelgtcases-dmx"></a>[モデル&lt;&gt;から] を選択します。ケース (DMX)
@@ -37,7 +37,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
   
 ## <a name="arguments"></a>引数  
  *n*  
- 省略可能。 返す行数を指定する整数値です。  
+ 任意。 返す行数を指定する整数値です。  
   
  *式の一覧*  
  式のコンマ区切りのリストです。 式には、列識別子、ユーザー定義関数、Udf、および VBA 関数などを含めることができます。  
@@ -50,17 +50,17 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
  *条件式*  
  列リストから返される値を制限する条件。  
   
- *条件*  
- 省略可能。 スカラー値を返す式。  
+ *式 (expression)*  
+ 任意。 スカラー値を返す式。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  マイニングモデルとマイニング構造の両方でドリルスルーが有効になっている場合、モデルおよび構造に対するドリルスルー権限を持つロールのメンバーであるユーザーは、マイニングモデルに含まれていないマイニング構造の列にアクセスできます。 したがって、機密データや個人情報を保護するには、個人情報をマスクするデータソースビューを作成し、必要な場合にのみ、マイニング構造に対する**Allowdrillthrough スルー**権限を付与する必要があります。  
   
  [Lag &#40;DMX&#41;](../dmx/lag-dmx.md)関数をタイムシリーズモデルと共に使用して、各ケースと初期時間の間のタイムラグを返したりフィルター処理したりできます。  
   
  **WHERE**句で[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)関数を使用すると、スキーマ行セットの NODE_UNIQUE_NAME 列によって指定されたノードに関連付けられているケースのみが返されます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例は、 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]データベースとそれに関連付けられているマイニングモデルに基づいた、マイニング構造を対象としたメーリングに基づいています。 詳細については、「[基本的なデータマイニングチュートリアル](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)」を参照してください。  
   
 ### <a name="example-1-drillthrough-to-model-cases-and-structure-columns"></a>例 1: モデルケースおよび構造列へのドリルスルー  
@@ -90,6 +90,6 @@ AND IsInNode('002')
  [DMX&#41;を選択 &#40;](../dmx/select-dmx.md)   
  [DMX&#41; データ定義ステートメント &#40;のデータマイニング拡張機能](../dmx/dmx-statements-data-definition.md)   
  [DMX&#41; データ操作ステートメントを &#40;データマイニング拡張機能](../dmx/dmx-statements-data-manipulation.md)   
- [DMX&#41; ステートメントリファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-statements.md)  
+ [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

@@ -16,10 +16,10 @@ ms.assetid: 45117cb2-3247-433f-ba3d-7fa19514b1c3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8a8cc9930ddf85dea60999e3b63dbcebaaf42d8f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68215941"
 ---
 # <a name="sp_configure_peerconflictdetection-transact-sql"></a>sp_configure_peerconflictdetection (Transact-SQL)
@@ -50,7 +50,7 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
  [ @action= ]'*action*'  
  パブリケーションの競合検出を有効にするか無効にするかを指定します。 *アクション*は**nvarchar (5)**,、値は次のいずれかを指定することができます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**を**|パブリケーションの競合検出を有効にします。|  
 |**切り替える**|パブリケーションの競合検出を無効にします。|  
@@ -77,15 +77,15 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  sp_configure_peerconflictdetection は、ピア ツー ピア トランザクション レプリケーションで使用されます。 競合検出を使用するには、すべての[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]ノードが以降のバージョンを実行している必要があります。すべてのノードに対して検出を有効にする必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  Sysadmin 固定サーバーロールまたは db_owner 固定データベースロールのメンバーシップが必要です。  
   
 ## <a name="see-also"></a>参照  
- [ピア ツー ピア レプリケーションにおける競合検出](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   
+ [ピアツーピアレプリケーションでの競合の検出](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   
  [ピアツーピアトランザクションレプリケーション](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
- [レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

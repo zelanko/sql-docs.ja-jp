@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8218ff5c92613b0f152c699a81314cb6a3530885
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68263789"
 ---
 # <a name="sysdm_db_missing_index_details-transact-sql"></a>dm_db_missing_index_details (Transact-sql)
@@ -33,23 +33,21 @@ ms.locfileid: "68263789"
 
   空間インデックスを除く、欠落インデックスに関する詳細情報を返します。  
   
- 
-  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、動的管理ビューは、データベースの包含に影響する情報を公開することも、ユーザーがアクセスできる他のデータベースに関する情報を公開することもできません。 この情報を公開しないように、接続されたテナントに属していないデータを含むすべての行がフィルターで除外されます。  
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、動的管理ビューは、データベースの包含に影響する情報を公開することも、ユーザーがアクセスできる他のデータベースに関する情報を公開することもできません。 この情報を公開しないように、接続されたテナントに属していないデータを含むすべての行がフィルターで除外されます。  
 
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**index_handle**|**int**|特定の欠落インデックスの識別子。 識別子はサーバー全体で一意です。 **index_handle**は、このテーブルのキーです。|  
 |**database_id**|**smallint**|欠落インデックスを含むテーブルがあるデータベースの識別子。|  
 |**object_id**|**int**|インデックスが欠落しているテーブルの識別子。|  
-|**equality_columns**|**nvarchar(4000)**|次の形式の等値述語に使用できる列のコンマ区切り一覧。<br /><br /> *テーブル. 列* =*constant_value*|  
-|**inequality_columns**|**nvarchar(4000)**|次の形式のような不等値述語に使用できる列のコンマ区切り一覧。<br /><br /> *テーブル. 列* > *constant_value*<br /><br /> "=" 以外の比較演算子はすべて、不等値を表します。|  
-|**included_columns**|**nvarchar(4000)**|クエリの包括列として必要な列のコンマ区切り一覧。 カバリング列または付加列の詳細については、「[付加列を使用したインデックスの作成](../../relational-databases/indexes/create-indexes-with-included-columns.md)」を参照してください。<br /><br /> メモリ最適化インデックス (ハッシュとメモリ最適化された非クラスター化) の場合は、 **included_columns**を無視します。 すべてのメモリ最適化インデックスには、テーブルのすべての列が含まれています。|  
-|**諸表**|**nvarchar(4000)**|インデックスが欠落しているテーブルの名前。|  
+|**equality_columns**|**nvarchar (4000)**|次の形式の等値述語に使用できる列のコンマ区切り一覧。<br /><br /> *テーブル. 列* =*constant_value*|  
+|**inequality_columns**|**nvarchar (4000)**|次の形式のような不等値述語に使用できる列のコンマ区切り一覧。<br /><br /> *テーブル. 列* > *constant_value*<br /><br /> "=" 以外の比較演算子はすべて、不等値を表します。|  
+|**included_columns**|**nvarchar (4000)**|クエリの包括列として必要な列のコンマ区切り一覧。 カバリング列または付加列の詳細については、「[付加列を使用したインデックスの作成](../../relational-databases/indexes/create-indexes-with-included-columns.md)」を参照してください。<br /><br /> メモリ最適化インデックス (ハッシュとメモリ最適化された非クラスター化) の場合は、 **included_columns**を無視します。 すべてのメモリ最適化インデックスには、テーブルのすべての列が含まれています。|  
+|**諸表**|**nvarchar (4000)**|インデックスが欠落しているテーブルの名前。|  
   
-## <a name="remarks"></a>解説  
- 
-  **sys.dm_db_missing_index_details** によって返される情報は、クエリ オプティマイザーでクエリが最適化されるときに更新されますが、保存されません。 欠落インデックスの情報が保持されるのは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の再起動までです。 欠落インデックスの情報を、サーバーの再利用後も保持する場合は、データベース管理者が情報のバックアップ コピーを定期的に作成する必要があります。  
+## <a name="remarks"></a>Remarks  
+ **sys.dm_db_missing_index_details** によって返される情報は、クエリ オプティマイザーでクエリが最適化されるときに更新されますが、保存されません。 欠落インデックスの情報が保持されるのは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の再起動までです。 欠落インデックスの情報を、サーバーの再利用後も保持する場合は、データベース管理者が情報のバックアップ コピーを定期的に作成する必要があります。  
   
  特定の欠落インデックスが属する欠落インデックス グループを特定するには、**sys.dm_db_missing_index_groups** 動的管理ビューをクエリできます。これには、**index_handle** 列を基準に、このビューを **sys.dm_db_missing_index_details** と等結合します。  
 

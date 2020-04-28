@@ -21,30 +21,29 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7395d52b7c91678f11a37a4da32877f31e5780bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265865"
 ---
 # <a name="sysdm_os_buffer_descriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  現在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バッファープールにあるすべてのデータページに関する情報を返します。 このビューの出力を使用すると、データベース、オブジェクト、または型に応じて、バッファープール内のデータベースページの分布を確認できます。 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、この動的管理ビューは、バッファー プール拡張ファイルのデータ ページに関する情報も返します。 詳細については、「[バッファープール拡張](../../database-engine/configure-windows/buffer-pool-extension.md)」を参照してください。  
+  現在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バッファープールにあるすべてのデータページに関する情報を返します。 このビューの出力を使用すると、データベース、オブジェクト、または型に応じて、バッファープール内のデータベースページの分布を確認できます。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、この動的管理ビューは、バッファー プール拡張ファイルのデータ ページに関する情報も返します。 詳細については、「[バッファープール拡張](../../database-engine/configure-windows/buffer-pool-extension.md)」を参照してください。  
   
  ディスクから読み込まれたデータ ページは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバッファー プールにコピーされ、再使用に備えてキャッシュされます。 キャッシュされた各データページには、1つのバッファー記述子があります。 このバッファー記述子により、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに現在キャッシュされている各データ ページが一意に識別されます。 dm_os_buffer_descriptors は、すべてのユーザーデータベースおよびシステムデータベースのキャッシュされたページを返します。 これには、リソースデータベースに関連付けられているページも含まれます。  
   
 > **注:** またはから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]これを[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼び出すには、 **dm_pdw_nodes_os_buffer_descriptors**という名前を使用します。  
 
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|バッファープール内のページに関連付けられているデータベースの ID。 NULL 値が許可されます。|  
 |file_id|**int**|ページの永続化されたイメージを格納するファイルの ID。 NULL 値が許可されます。|  
 |page_id|**int**|ファイル内のページの ID。 NULL 値が許可されます。|  
 |page_level|**int**|ページのインデックス レベル。 NULL 値が許可されます。|  
 |allocation_unit_id|**bigint**|ページのアロケーションユニットの ID。 この値は sys.allocation_units の結合に使用できます。 NULL 値が許可されます。|  
-|page_type|**nvarchar (60)**|ページの種類。たとえば、データページやインデックスページなどです。 NULL 値が許可されます。|  
+|page_type|**nvarchar(60)**|ページの種類。たとえば、データページやインデックスページなどです。 NULL 値が許可されます。|  
 |row_count|**int**|ページ上の行の数。 NULL 値が許可されます。|  
 |free_space_in_bytes|**int**|ページの使用可能な空き領域のサイズ (バイト単位)。 NULL 値が許可されます。|  
 |is_modified|**bit**|1 = ディスクからの読み取り後にページが変更されました。 NULL 値が許可されます。|  
@@ -58,10 +57,10 @@ ms.locfileid: "68265865"
 で[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]は、 `VIEW SERVER STATE`権限が必要です。   
 Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、データベース`VIEW DATABASE STATE`の権限が必要です。 Standard [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
    
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  dm_os_buffer_descriptors によって、リソースデータベースによって使用されているページが返されます。 dm_os_buffer_descriptors では、無料または盗難にあったページ、または読み取り時にエラーが発生したページに関する情報は返されません。  
   
-|移行元|To|反対に、|リレーションシップ|  
+|ソース|終了|On|リレーションシップ|  
 |----------|--------|--------|------------------|  
 |sys.dm_os_buffer_descriptors|sys.databases|database_id|多対一|  
 |sys.dm_os_buffer_descriptors|\<userdb> allocation_units|allocation_unit_id|多対一|  
@@ -114,11 +113,11 @@ ORDER BY cached_pages_count DESC;
 ```  
   
 ## <a name="see-also"></a>参照  
- [allocation_units &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  
  [SQL Server オペレーティングシステム関連の動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [リソースデータベース](../../relational-databases/databases/resource-database.md)   
- [dm_os_buffer_pool_extension_configuration &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
+ [sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
   
   
 

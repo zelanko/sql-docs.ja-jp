@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 701d8fb43b468f6bbd33fbff9ff7cfc8deb386f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893837"
 ---
 # <a name="predictsupport-dmx"></a>PredictSupport (DMX)
@@ -33,7 +33,7 @@ PredictSupport(<scalar column reference>, [<predicted state>])
 ## <a name="return-type"></a>戻り値の型  
  スカラー列参照*\<**>* によって指定された型のスカラー値。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  予測された状態が省略されている場合、省略した状態バケットを除いて、最も予測可能性が高い状態が使用されます。 欠落状態のバケットを含めるには、 \<予測された状態の> を**INCLUDE_NULL**に設定します。  
   
  欠落状態のサポートを返すには、予測さ\<れた状態> を NULL に設定します。  
@@ -41,7 +41,7 @@ PredictSupport(<scalar column reference>, [<predicted state>])
 > [!NOTE]  
 >  サポートされている値の計算方法は異なります。つまり、クエリの対象となるモデルに応じてこの値の解釈は異なる場合があります。 特定の種類のモデルのサポートを計算する方法の詳細については、「[マイニングモデルコンテンツ &#40;Analysis Services-データマイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)」の個々のアルゴリズムの種類を参照してください。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、単一クエリを使用して、個人が自転車購入者であるかどうかを予測します。また、TM デシジョンツリーマイニングモデルに基づく予測のサポートも決定します。  
   
 ```  

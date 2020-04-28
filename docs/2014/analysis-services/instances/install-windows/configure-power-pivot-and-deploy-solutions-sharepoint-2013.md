@@ -11,15 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d835269f77e563b94c89c3a68c5c82844edc773
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493971"
 ---
 # <a name="configure-powerpivot-and-deploy-solutions-sharepoint-2013"></a>PowerPivot の構成とソリューションの配置 (SharePoint 2013)
-  このトピックでは、PowerPivot ギャラリー、定期データ更新、管理ダッシュボード、データ プロバイダーなどの [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] の PowerPivot 機能への中間層機能強化の展開および構成について説明します。 
-  **PowerPivot for SharePoint 2013 の構成** ツールを実行して、以下を完了します。  
+  このトピックでは、PowerPivot ギャラリー、定期データ更新、管理ダッシュボード、データ プロバイダーなどの [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] の PowerPivot 機能への中間層機能強化の展開および構成について説明します。 **PowerPivot for SharePoint 2013 の構成** ツールを実行して、以下を完了します。  
   
 -   SharePoint ソリューション ファイルを配置する。  
   
@@ -37,10 +36,10 @@ ms.locfileid: "69493971"
   
  [問題のトラブルシューティング](#bkmk_troubleshoot_issues)  
   
-##  <a name="bkmk_run_configuration_tool"></a>PowerPivot for SharePoint 2013 構成の実行  
- **注:** セットアップ[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]ウィザードでは、用に2つ[!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]の異なる構成ツールがインストールされます。 これらのツールはそれぞれ異なるバージョンの SharePoint をサポートします。  
+##  <a name="run-powerpivot-for-sharepoint-2013-configuration"></a><a name="bkmk_run_configuration_tool"></a>PowerPivot for SharePoint 2013 構成の実行  
+ **注:**[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] セットアップ ウィザードでは、 [!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]の 2 種類の構成ツールがインストールされます。 これらのツールはそれぞれ異なるバージョンの SharePoint をサポートします。  
   
-|Name|[説明]|  
+|名前|説明|  
 |----------|-----------------|  
 |PowerPivot for SharePoint 2013 の構成|SharePoint 2013|  
 |PowerPivot 構成ツール|SharePoint 2010 Service Pack 1 (SP1)|  
@@ -51,67 +50,56 @@ ms.locfileid: "69493971"
   
  SharePoint のインストール時に使用したアカウントでログインするか、SharePoint サーバーの全体管理サイトのプライマリ管理者としてセットアップ アカウントを構成します。  
   
-1.  
-  **[スタート]** メニューの **[すべてのプログラム]** をクリックし、[ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]] をクリックします。次に、 **[構成ツール]** をクリックし、 **[PowerPivot For SharePoint 2013 の構成]** をクリックします。 ツールは、PowerPivot for SharePoint がローカル サーバーにインストールされている場合にのみ表示されます。  
+1.  **[スタート]** メニューの **[すべてのプログラム]** をクリックし、[ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]] をクリックします。次に、 **[構成ツール]** をクリックし、 **[PowerPivot For SharePoint 2013 の構成]** をクリックします。 ツールは、PowerPivot for SharePoint がローカル サーバーにインストールされている場合にのみ表示されます。  
   
-2.  
-  **[PowerPivot for SharePoint の構成または修復]** をクリックし、 **[OK]** をクリックします。  
+2.  **[PowerPivot for SharePoint の構成または修復]** をクリックし、 **[OK]** をクリックします。  
   
-3.  このツールでは、PowerPivot の現在の状態と構成を完了するために必要な手順を確認するための検証が実行されます。 ウィンドウを最大化します。 ウィンドウの下部に **[検証]** 、 **[実行]** 、および **[終了]** の各コマンドを含むボタン バーが表示されます。  
+3.  このツールでは、PowerPivot の現在の状態と構成を完了するために必要な手順を確認するための検証が実行されます。 ウィンドウを最大化します。 ウィンドウの下部に **[検証]**、 **[実行]**、および **[終了]** の各コマンドを含むボタン バーが表示されます。  
   
-4.  
-  **[パラメーター]** タブで、次の操作を行います。  
+4.  **[パラメーター]** タブで、次の操作を行います。  
   
-    1.  [**既定のアカウントユーザー名**]: 既定のアカウントのドメインユーザーアカウントを入力します。 このアカウントは、PowerPivot サービス アプリケーション プールなどのサービスを準備する際に使用します。 Network Service や Local System などのビルトイン アカウントは指定しないでください。 ビルトイン アカウントを指定する構成はブロックされます。  
+    1.  **[既定のアカウント ユーザー名]:** 既定のアカウントのドメイン ユーザー アカウントを入力します。 このアカウントは、PowerPivot サービス アプリケーション プールなどのサービスを準備する際に使用します。 Network Service や Local System などのビルトイン アカウントは指定しないでください。 ビルトイン アカウントを指定する構成はブロックされます。  
   
-    2.  **データベースサーバー**: SharePoint ファームでサポートされている SQL Server データベースエンジンを使用できます。  
+    2.  **[データベース サーバー]:** SharePoint ファームでサポートされている SQL Server データベース エンジンを使用できます。  
   
-    3.  **パスフレーズ**: パスフレーズを入力します。 新しい SharePoint ファームを作成する場合、SharePoint ファームにサーバーまたはアプリケーションを追加するたびにこのパスフレーズが使用されます。 ファームが既に存在する場合、ファームにサーバー アプリケーションを追加するためのパスフレーズを入力してください。  
+    3.  **[パスフレーズ]:** パスフレーズを入力します。 新しい SharePoint ファームを作成する場合、SharePoint ファームにサーバーまたはアプリケーションを追加するたびにこのパスフレーズが使用されます。 ファームが既に存在する場合、ファームにサーバー アプリケーションを追加するためのパスフレーズを入力してください。  
   
-    4.  **Excel Services 用 PowerPivot サーバー**: [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] SharePoint モードサーバーの名前を入力します。 シングル サーバー配置では、データベース サーバーと同じサーバーです。 `[ServerName]\powerpivot`  
+    4.  **[Excel Services 用 PowerPivot サーバー]:** SharePoint モードの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーの名前を入力します。 シングル サーバー配置では、データベース サーバーと同じサーバーです。 `[ServerName]\powerpivot`  
   
-    5.  左側のウィンドウで **[サイト コレクションの作成]** をクリックします。 
-  **[サイトの URL]** をメモしておくと、この後の手順で参照できます。 SharePoint サーバーがまだ構成されていない場合、構成ウィザードでは Web アプリケーションとサイト コレクション URL のルートは既定で `http://[ServerName]`になります。 既定値を変更するには、左側のウィンドウの **[既定の Web アプリケーションの作成]** ページおよび **[Web アプリケーション ソリューションの配置]** ページを確認します。  
+    5.  左側のウィンドウで **[サイト コレクションの作成]** をクリックします。 **[サイトの URL]** をメモしておくと、この後の手順で参照できます。 SharePoint サーバーがまだ構成されていない場合、構成ウィザードでは Web アプリケーションとサイト コレクション URL のルートは既定で `http://[ServerName]`になります。 既定値を変更するには、左側のウィンドウの **[既定の Web アプリケーションの作成]** ページおよび **[Web アプリケーション ソリューションの配置]** ページを確認します。  
   
 5.  必要に応じて、各アクションを完了するために使用された残りの入力値を確認します。 左側のウィンドウで各アクションをクリックして、アクションの詳細を確認します。 それぞれの詳細については、このトピックの「 [&#41;&#40;PowerPivot 構成ツールの構成または修復 2010 PowerPivot for SharePoint](../../configure-repair-powerpivot-sharepoint-2010.md)でのサーバーの構成に使用する入力値」を参照してください。  
   
 6.  必要に応じて、今回は処理しないすべてのアクションを削除します。 たとえば、Secure Store Service を後で構成する場合は、 **[Secure Store Service の構成]** をクリックし、 **[この操作をタスク一覧に含めます]** チェック ボックスをオフにします。  
   
-7.  
-  **[検証]** をクリックして、一覧のアクションを処理するための十分な情報があるかどうかを確認します。 検証エラーがある場合は、左ペインで警告をクリックして検証エラーの詳細を確認します。 検証エラーを修正し、もう一度 **[検証]** をクリックします。  
+7.  **[検証]** をクリックして、一覧のアクションを処理するための十分な情報があるかどうかを確認します。 検証エラーがある場合は、左ペインで警告をクリックして検証エラーの詳細を確認します。 検証エラーを修正し、もう一度 **[検証]** をクリックします。  
   
-8.  
-  **[実行]** をクリックして、タスクの一覧にあるすべてのアクションを処理します。 
-  **[実行]** は、アクションの検証後に有効になります。 
-  **[実行]** が有効になっていない場合は、まず **[検証]** をクリックしてください。  
+8.  **[実行]** をクリックして、タスクの一覧にあるすべてのアクションを処理します。 **[実行]** は、アクションの検証後に有効になります。 **[実行]** が有効になっていない場合は、まず **[検証]** をクリックしてください。  
   
  詳細については、「 [PowerPivot for SharePoint 2010 &#40;PowerPivot 構成ツールの構成または修復](../../configure-repair-powerpivot-sharepoint-2010.md)」を参照してください&#41;  
   
-##  <a name="bkmk_verify_powerpivot"></a>PowerPivot の構成の確認  
+##  <a name="verify-powerpivot-configuration"></a><a name="bkmk_verify_powerpivot"></a>PowerPivot の構成の確認  
  **サーヴィス**  
   
 1.  サーバーの全体管理で、[システム設定] の [**サーバーのサービスの管理**] をクリックします。  
   
-2.  
-  **SQL Server Analysis Services** と **SQL Server PowerPivot System サービス** が開始されていることを確認します。  
+2.  **SQL Server Analysis Services** と **SQL Server PowerPivot System サービス** が開始されていることを確認します。  
   
- **ファームの機能:**  
+ **ファーム機能**  
   
 1.  サーバーの全体管理で、[システム設定] の **[ファーム機能の管理]** をクリックします。  
   
-2.  
-  **[PowerPivot 統合機能]** が **[アクティブ]** になっていることを確認します。  
+2.  **[PowerPivot 統合機能]** が **[アクティブ]** になっていることを確認します。  
   
- **サイトコレクション機能:**  
+ **サイト コレクション機能**  
   
 1.  構成ツールによって作成されたサイトの URL を参照します。  
   
      [**設定**] [![SharePoint の設定](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint の設定")] の順にクリックし、[**サイトの設定**] をクリックします。  
   
-     [**サイトコレクションの機能**] をクリックします。  
+     **[サイト コレクションの機能]** をクリックします。  
   
-2.  
-  **[サイト コレクションの PowerPivot 機能の統合]** が **[アクティブ]** になっていることを確認します。  
+2.  **[サイト コレクションの PowerPivot 機能の統合]** が **[アクティブ]** になっていることを確認します。  
   
  **PowerPivot サービスアプリケーション:**  
   
@@ -123,13 +111,12 @@ ms.locfileid: "69493971"
   
  詳細については、「 [Verify a PowerPivot for SharePoint Installation](https://docs.microsoft.com/analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation)」を参照してください。  
   
-##  <a name="bkmk_troubleshoot_issues"></a>問題のトラブルシューティング  
+##  <a name="troubleshoot-issues"></a><a name="bkmk_troubleshoot_issues"></a>問題のトラブルシューティング  
  問題のトラブルシューティングに役立てるために、診断ログを有効にすることをお勧めします。  
   
 1.  SharePoint サーバーの全体管理で、 **[監視]** をクリックし、 **[使用状況と正常性のデータ収集の構成]** をクリックします。  
   
-2.  
-  **[使用状況データ収集を有効にする]** チェック ボックスがオンになっていることを確認します。  
+2.  **[使用状況データ収集を有効にする]** チェック ボックスがオンになっていることを確認します。  
   
 3.  次のイベントが選択されていることを確認します。  
   
@@ -143,8 +130,7 @@ ms.locfileid: "69493971"
   
     -   PowerPivot アンロード データの使用状況  
   
-4.  
-  **[正常性データの収集を有効にする]** が選択されていることを確認します。  
+4.  **[正常性データの収集を有効にする]** が選択されていることを確認します。  
   
 5.  **[OK]** をクリックします。  
   

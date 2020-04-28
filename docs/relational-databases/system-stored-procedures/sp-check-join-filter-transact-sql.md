@@ -22,10 +22,10 @@ ms.assetid: e9699d59-c8c9-45f6-a561-f7f95084a540
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 28589be83c62f705457e990b328be98e88905568
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771271"
 ---
 # <a name="sp_check_join_filter-transact-sql"></a>sp_check_join_filter (Transact-sql)
@@ -53,7 +53,7 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**can_use_partition_groups**|**bit**|パブリケーションが事前計算済みパーティションに対して限定される場合はです。**1**はたパーティションを使用できることを示し、 **0**は使用できないことを示します。|  
 |**has_dynamic_filters**|**bit**|指定したフィルター句にパラメーター化されたフィルター関数が少なくとも1つ含まれているかどうかを示します。**1**は、パラメーター化されたフィルター関数が使用されることを示します。 **0**は、このような関数が使用されないことを示します。|  
@@ -64,7 +64,7 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_check_join_filter**は、マージレプリケーションで使用します。  
   
  **sp_check_join_filter**は、パブリッシュされていない場合でも、関連するテーブルに対して実行できます。 このストアド プロシージャは、2 つのアーティクル間の結合フィルターを定義する前に、結合フィルター句を検証するときに使用できます。  
@@ -73,6 +73,6 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
  **Sp_check_join_filter**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
- [レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

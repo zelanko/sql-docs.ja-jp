@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 374a38d07c3174e799d01199e20e822f85deed13
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892923"
 ---
 # <a name="currentmember-mdx"></a>CurrentMember (MDX)
@@ -31,13 +31,13 @@ Hierarchy_Expression.CurrentMember
  *Hierarchy_Expression*  
  階層を返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  階層メンバーのセットに対する反復処理の間、反復の各ステップにおいては、処理対象のメンバーが現在のメンバーになります。 **Currentmember**関数は、そのメンバーを返します。  
   
 > [!IMPORTANT]  
 >  表示可能な階層がディメンション内に 1 つしかない場合は、ディメンション名がその 1 つしかない階層に解決されるため、その階層はディメンション名でも階層名でも参照できます。 たとえば、は`Measures.CurrentMember` 、Measures ディメンション内の唯一の階層に解決されるため、有効な MDX 式です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次のクエリでは、 **Currentmember**を使用して、列、行、およびスライス軸の階層から現在のメンバーを検索する方法を示しています。  
   
  `WITH MEMBER MEASURES.CURRENTDATE AS`  
@@ -117,6 +117,6 @@ WHERE {[Date].[Calendar Year].[Calendar Year].&[2003]}
 ```  
   
 ## <a name="see-also"></a>参照  
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

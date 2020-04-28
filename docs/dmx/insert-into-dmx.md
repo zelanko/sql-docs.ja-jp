@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 210ab8c5750fdcb38bcbca324d77eecd926042d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892720"
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
@@ -34,7 +34,7 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
  *model*  
  モデル識別子。  
   
- *データ*  
+ *structure*  
  構造体識別子。  
   
  *マップされたモデル列*  
@@ -43,7 +43,7 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
  *source data query*  
  プロバイダー定義形式のソースクエリ。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **マイニングモデル**または**マイニング構造**を指定しない場合[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 、は名前に基づいてオブジェクトの種類を検索し、正しいオブジェクトを処理します。 サーバーに同じ名前のマイニング構造とマイニングモデルが含まれている場合は、エラーが返されます。  
   
  2番目の構文形式を使用して、INSERT INTO*\<object>* します。COLUMN_VALUES、モデルをトレーニングしなくても、モデル列にデータを直接挿入できます。 この方法では、階層または順序付けられた列を含むデータセットを操作する場合に便利な簡潔な順序で列データをモデルに提供します。  
@@ -122,6 +122,6 @@ AS [Models]
 ## <a name="see-also"></a>参照  
  [DMX&#41; データ定義ステートメント &#40;のデータマイニング拡張機能](../dmx/dmx-statements-data-definition.md)   
  [DMX&#41; データ操作ステートメントを &#40;データマイニング拡張機能](../dmx/dmx-statements-data-manipulation.md)   
- [DMX&#41; ステートメントリファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-statements.md)  
+ [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

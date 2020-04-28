@@ -16,10 +16,10 @@ ms.assetid: fbabe1ec-57cf-425c-bae7-af7f5d3198fd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 38b653dcb51f428692401fb87609187a82449393
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771486"
 ---
 # <a name="sp_helpsubscriberinfo-transact-sql"></a>sp_helpsubscriberinfo (Transact-sql)
@@ -47,15 +47,13 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**文書**|**sysname**|パブリッシャーの名前。|  
 |**サブスクライバ**|**sysname**|サブスクライバーの名前。|  
-|**type**|**tinyint**|サブスクライバーの種類:<br /><br /> **** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)]データベース 1 = ODBC データソース**** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|**ログイン**|**sysname**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のログイン ID。|  
-|**入力**|**sysname**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のパスワード。|  
+|**type**|**tinyint**|サブスクライバーの種類:<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)]データベース 1 = ODBC データソース**1** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|**ログイン**|**sysname**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のログイン ID。|  
+|**password**|**sysname**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のパスワード。|  
 |**commit_batch_size**|**int**|サポートされていません。|  
 |**status_batch_size**|**int**|サポートされていません。|  
 |**flush_frequency**|**int**|サポートされていません。|  
@@ -72,7 +70,7 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 |**retryattempt**|**int**|サポートされていません。|  
 |**retrydelay**|**int**|サポートされていません。|  
 |**記述**|**nvarchar(255)**|サブスクライバーのテキストによる説明。|  
-|**security_mode**|**int**|実装されたセキュリティモード:<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証<br /><br /> **** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認証|  
+|**security_mode**|**int**|実装されたセキュリティモード:<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証<br /><br /> **1** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認証|  
 |**frequency_type2**|**int**|マージ エージェントを実行する頻度。<br /><br /> **1** = 1 回<br /><br /> **2** = 要求時<br /><br /> **4** = 日単位<br /><br /> **8** = 週単位<br /><br /> **16** = 月単位<br /><br /> **32** = 毎月の相対<br /><br /> **64** = 自動開始<br /><br /> **128** = 定期的|  
 |**frequency_interval2**|**int**|*Frequency_type*によって設定された頻度に適用される値。|  
 |**frequency_relative_interval2**|**int**|*Frequency_type*が 32 (月単位) に設定されている場合に使用マージエージェントの日付:<br /><br /> **1** = 最初<br /><br /> **2** = 秒<br /><br /> **4** = 3 番目<br /><br /> **8** = 4 番目<br /><br /> **16** = 最後|  
@@ -87,7 +85,7 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_helpsubscriberinfo**は、スナップショットレプリケーション、トランザクションレプリケーション、およびマージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -100,6 +98,6 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
  [sp_dropsubscriber &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
  [sp_helpdistributor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
  [sp_helpserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

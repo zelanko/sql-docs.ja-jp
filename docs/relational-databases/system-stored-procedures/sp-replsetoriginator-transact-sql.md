@@ -16,10 +16,10 @@ ms.assetid: 030e5226-0585-439f-b8cd-36f48367d86d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5ca3487a22989261f0d6039f065ae0c102e534a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68770872"
 ---
 # <a name="sp_replsetoriginator-transact-sql"></a>sp_replsetoriginator (Transact-SQL)
@@ -45,13 +45,13 @@ sp_replsetoriginator [ @server_name= ] 'server_name'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_replsetoriginator**は、レプリケーションによって適用されたトランザクションのソースを記録するためにディストリビューションエージェントによって実行されます。 この情報は、ループバック プロパティ セットを持つ双方向のトランザクション サブスクリプションに対するループバックの検出を開始するために使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_replsetoriginator**を実行できるのは、パブリッシャー側の**sysadmin**固定サーバーロールのメンバー、パブリケーションデータベースの固定データベースロール**db_owner**のメンバー、またはパブリケーションアクセスリスト (PAL) のユーザーだけです。  
   
 ## <a name="see-also"></a>参照  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

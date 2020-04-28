@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 903ea22a3895f142f10ff9026a919067b8e60c95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70148575"
 ---
 # <a name="smo-programming-languages"></a>SMO プログラミング言語
@@ -30,11 +30,10 @@ ms.locfileid: "70148575"
 
   このセクションでは、Visual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] C# .net で[!INCLUDE[msCoName](../../includes/msconame-md.md)]管理オブジェクト (SMO) をプログラミングする方法について説明します。
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[Visual C&#35; .NET でのはじめに](../../relational-databases/server-management-objects-smo/smo-programming-getting-started-in-visual-csharp-net.md)|Visual C#&#xA0;.NET で SMO プログラムの作成を開始する方法を示します。|  
   
- SMO は .NET アセンブリです。 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework を使用してプログラムするには、共通言語ランタイムにサポートされている言語を選択する必要があります。 SMO リファレンスでは、Visual C# .NET などのマネージ言語の構文が用意されています。  
+ SMO は .NET アセンブリです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework を使用してプログラムするには、共通言語ランタイムにサポートされている言語を選択する必要があります。 SMO リファレンスでは、Visual C# .NET などのマネージ言語の構文が用意されています。  
   
   

@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 026c13a461d6b4efe7244a08a9f3cdbe117deee9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68255284"
 ---
 # <a name="sysdm_exec_query_resource_semaphores-transact-sql"></a>dm_exec_query_resource_semaphores (Transact-sql)
@@ -39,7 +39,7 @@ ms.locfileid: "68255284"
 > [!NOTE]  
 >  またはから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]これを[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼び出すには、 **dm_pdw_nodes_exec_query_resource_semaphores**という名前を使用します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**resource_semaphore_id**|**smallint**|リソースセマフォの一意でない ID。 通常のリソースセマフォの場合は0、小さいクエリのリソースセマフォの場合は1。|  
 |**target_memory_kb**|**bigint**|使用状況のターゲットをキロバイト単位で付与します。|  
@@ -60,17 +60,16 @@ ms.locfileid: "68255284"
 で[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]は、 `VIEW SERVER STATE`権限が必要です。   
 Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、データベース`VIEW DATABASE STATE`の権限が必要です。 Standard [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ORDER BY または集計を含む動的管理ビューを使用するクエリでは、メモリ使用量が増加し、トラブルシューティングの問題に寄与する可能性があります。  
   
  トラブルシューティングには**dm_exec_query_resource_semaphores**を使用しますが、今後のバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用するアプリケーションには含めないでください。  
   
- データベース管理者は、リソース ガバナー機能を使用することで、サーバー リソースを最大 64 個までのリソース プールに分散できます。 
-  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、各プールが小規模の独立したサーバー インスタンスのように動作し、2 つのセマフォを必要とします。  
+ データベース管理者は、リソース ガバナー機能を使用することで、サーバー リソースを最大 64 個までのリソース プールに分散できます。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、各プールが小規模の独立したサーバー インスタンスのように動作し、2 つのセマフォを必要とします。  
   
 ## <a name="see-also"></a>参照  
  [実行関連の動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [dm_exec_query_memory_grants &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
+ [sys.dm_exec_query_memory_grants &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
   
   
 

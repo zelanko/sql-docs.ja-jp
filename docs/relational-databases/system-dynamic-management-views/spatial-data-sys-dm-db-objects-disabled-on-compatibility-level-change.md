@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 30c3a5d7358e49c1e1762fbb9851066bdaf30871
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68809905"
 ---
 # <a name="spatial-data---sysdm_db_objects_disabled_on_compatibility_level_change"></a>空間データ-sys. dm_db_objects_disabled_on_compatibility_level_change
@@ -40,19 +40,19 @@ ms.locfileid: "68809905"
 sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )   
 ```  
   
-##  <a name="Arguments"></a>数値  
+##  <a name="arguments"></a><a name="Arguments"></a>数値  
  *compatibility_level*  
  設定を計画している互換性レベルを識別する**int** 。  
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**講義**|**int**|1 = 制約<br /><br /> 7 = インデックスとヒープ|  
-|**class_desc**|**nvarchar (60)**|制約の場合は OBJECT または COLUMN<br /><br /> インデックスとヒープのインデックス|  
+|**class**|**int**|1 = 制約<br /><br /> 7 = インデックスとヒープ|  
+|**class_desc**|**nvarchar(60)**|制約の場合は OBJECT または COLUMN<br /><br /> インデックスとヒープのインデックス|  
 |**major_id**|**int**|制約の OBJECT ID <br /><br /> インデックスとヒープを含むテーブルのオブジェクト ID|  
 |**minor_id**|**int**|制約の場合は NULL<br /><br /> インデックスおよびヒープの場合は Index_id|  
-|**関係**|**nvarchar (60)**|制約またはインデックスが無効になる原因となっている依存関係の説明。 アップグレード中に発生した警告にも同じ値が使用されます。 次のような例があります。<br /><br /> 組み込み用の "space"<br /><br /> システム UDT の場合は "geometry"<br /><br /> システム UDT のメソッドの場合は "geography::Parse"|  
+|**関係**|**nvarchar(60)**|制約またはインデックスが無効になる原因となっている依存関係の説明。 アップグレード中に発生した警告にも同じ値が使用されます。 具体的には次のものがあります。<br /><br /> 組み込み用の "space"<br /><br /> システム UDT の場合は "geometry"<br /><br /> システム UDT のメソッドの場合は "geography::Parse"|  
   
 ## <a name="general-remarks"></a>全般的な解説  
  互換性レベルを変更すると、一部の組み込み関数を使用している保存される計算列が無効になります。 データベースをアップグレードすると、Geometry メソッドまたは Geography メソッドを使用している保存される計算列も無効になります。  

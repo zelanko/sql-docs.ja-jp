@@ -16,10 +16,10 @@ ms.assetid: 5c246a33-2c21-4a77-9c2a-a2c9f0c5dda1
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 24a900409ae5979c13bdbff0d67d9d2670059208
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68770854"
 ---
 # <a name="sp_add_agent_profile-transact-sql"></a>sp_add_agent_profile (Transact-SQL)
@@ -48,11 +48,11 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
   
 `[ @agent_type = ] 'agent_type'`レプリケーションエージェントの種類を示します。 *agent_type*は**int**,、既定値はありませんが、これらの値のいずれかを指定することができます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|スナップショット エージェント|  
 |**2**|ログ リーダー エージェント (Log Reader Agent)|  
-|**番**|ディストリビューション エージェント|  
+|**3**|ディストリビューション エージェント|  
 |**4**|[マージ エージェント]|  
 |**9**|キュー リーダー エージェント (Queue Reader Agent)|  
   
@@ -62,12 +62,12 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
   
 `[ @description = ] 'description'`プロファイルの説明を示します。 *説明*は**nvarchar (3000)**,、既定値はありません。  
   
-`[ @default = ] default`プロファイルが*agent_type * ** の既定のプロファイルかどうかを示します。 *既定値*は**bit**,、既定値は**0**です。 **1**は、追加されるプロファイルが、 *agent_type*によって指定されたエージェントの新しい既定のプロファイルになることを示します。  
+`[ @default = ] default`*Agent_type* **の既定のプロファイルであるかどうかを示します。 *既定値*は**bit**,、既定値は**0**です。 **1**は、追加されるプロファイルが、 *agent_type*によって指定されたエージェントの新しい既定のプロファイルになることを示します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_add_agent_profile**は、スナップショットレプリケーション、トランザクションレプリケーション、およびマージレプリケーションで使用します。  
   
  カスタム エージェント プロファイルは、既定のエージェント パラメーター値を使用して追加されます。 [Sp_change_agent_parameter &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md)を使用してこれらの既定値を変更するか、 [transact-sql &#40;を sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)してパラメーターを追加します。  

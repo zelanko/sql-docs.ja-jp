@@ -21,10 +21,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fed15fbcfa685bde5d408e799bb605a40380ab5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265924"
 ---
 # <a name="sysdm_fts_memory_buffers-transact-sql"></a>dm_fts_memory_buffers (Transact-sql)
@@ -36,11 +36,11 @@ ms.locfileid: "68265924"
 > 次の列は、の今後の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]リリースで削除される予定です: **row_count**。 新しい開発作業ではこの列の使用を避け、現在この列を使用しているアプリケーションの変更を検討してください。  
 
   
-|列|データ型|[説明]|  
+|列|データ型|説明|  
 |------------|---------------|-----------------|  
 |**pool_id**|**int**|割り当てられたメモリプールの ID。<br /><br /> 0 = 小さいバッファー<br /><br /> 1 = 大きいバッファー|  
 |**memory_address**|**varbinary (8)**|割り当てられたメモリバッファーのアドレス。|  
-|**name**|**nvarchar(4000)**|この割り当てが行われた共有メモリバッファーの名前。|  
+|**name**|**nvarchar (4000)**|この割り当てが行われた共有メモリバッファーの名前。|  
 |**is_free**|**bit**|メモリバッファーの現在の状態。<br /><br /> 0 = 空き<br /><br /> 1 = ビジー状態|  
 |**row_count**|**int**|このバッファーが現在処理している行の数。|  
 |**bytes_used**|**int**|バッファーで使用されているメモリ サイズ (バイト単位)。|  
@@ -56,12 +56,12 @@ Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、デー
   
 ## <a name="relationship-cardinalities"></a>リレーションシップ基数  
   
-|移行元|To|リレーションシップ|  
+|ソース|終了|リレーションシップ|  
 |----------|--------|------------------|  
 |dm_fts_memory_buffers。 pool_id|dm_fts_memory_pools.pool_id|多対一|  
   
 ## <a name="see-also"></a>参照  
- [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Transact-sql&#41;&#40;のフルテキスト検索とセマンティック検索の動的管理ビューおよび関数](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
   
   

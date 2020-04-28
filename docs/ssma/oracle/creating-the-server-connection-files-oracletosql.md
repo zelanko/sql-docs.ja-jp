@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: d7316721cedc7a3546439fe27048126ad2805582
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266110"
 ---
 # <a name="creating-the-server-connection-files-oracletosql"></a>サーバー接続ファイルの作成 (OracleToSQL)
@@ -102,7 +102,7 @@ ms.locfileid: "68266110"
 </sql-server>  
 ```  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 コンソールを操作する次の手順では、 [SSMA コンソール &#40;OracleToSQL を実行](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)して&#41;  
   
 ## <a name="see-also"></a>参照  

@@ -11,13 +11,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 61a25d1f4e86204d05b3be6bf2a5dbc8cd0474b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70153830"
 ---
-# <a name="lesson-3-create-a-sql-server-credential"></a>レッスン 3: SQL Server 資格情報の作成
+# <a name="lesson-3-create-a-sql-server-credential"></a>レッスン 3:SQL Server 資格情報の作成
   このレッスンでは、Azure ストレージアカウントへのアクセスに使用するセキュリティ情報を格納するための資格情報を作成します。  
   
  SQL Server 資格情報は、SQL Server の外部にあるリソースへの接続に必要な認証情報を保存するために使用されるオブジェクトです。 資格情報には、ストレージ コンテナーの URI パスと Shared Access Signature キー値が格納されます。 データ ファイルまたはログ ファイルによって使用されるストレージ コンテナーごとに、名前がコンテナーのパスに一致する SQL Server 資格情報を作成する必要があります。  
@@ -59,6 +59,6 @@ ms.locfileid: "70153830"
   
  **次のレッスン:**  
   
- [レッスン 4: Azure Storage にデータベースを作成する](lesson-3-database-backup-to-url.md)  
+ [レッスン 4:Azure Storage にデータベースを作成する](lesson-3-database-backup-to-url.md)  
   
   

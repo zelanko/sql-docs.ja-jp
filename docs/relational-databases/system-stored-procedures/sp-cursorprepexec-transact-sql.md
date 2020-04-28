@@ -18,10 +18,10 @@ ms.assetid: 8094fa90-35b5-4cf4-8012-0570cb2ba1e6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 660a75f1e6fea9b5a825372501c2e65f2dd3874b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69652436"
 ---
 # <a name="sp_cursorprepexec-transact-sql"></a>sp_cursorprepexec (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "69652436"
 
   送信されたカーソルステートメントまたはバッチのプランをコンパイルし、カーソルを作成して設定します。 sp_cursorprepexec sp_cursorprepare と sp_cursorexecute の機能を組み合わせたものです。 このプロシージャは、ID = 5 を指定した場合に表形式のデータストリーム (TDS) パケットで呼び出されます。  
   
- ![リンクアイコン](../../database-engine/configure-windows/media/topic-link.gif "[リンク] アイコン") [Transact-sql 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "[リンク] アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,7 +44,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
  *準備済みハンドル*  
  は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]生成される準備済み*ハンドル*識別子です。 *準備*されたハンドルが必要です。 **int**を返します。  
   
- *g*  
+ *cursor*  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]生成されたカーソル識別子です。 *cursor*は必須のパラメーターであり、このカーソルに対して操作する後続のすべてのプロシージャ (sp_cursorfetch など) で指定する必要があります。  
   
  *params*  
@@ -59,17 +59,17 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 > [!NOTE]  
 >  Stmt 値を指定するためのルールは、sp_cursoropen の場合と同じですが、 *stmt* string データ型は**ntext**である必要があります。  
   
- *オプション*  
+ *options*  
  カーソル結果セット列の説明を返す省略可能なパラメーターです。 * オプションには、次の**int**入力値が必要です。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
  *scrollopt*  
  スクロールオプション。 *scrollopt*は省略可能なパラメーターで、次のいずれかの**int**入力値を必要とします。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -91,7 +91,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
  *ccopt*  
  同時実行制御オプション。 *ccopt*は省略可能なパラメーターで、次のいずれかの**int**入力値を必要とします。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (以前の LOCKCC)|  
@@ -124,4 +124,4 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
  [sp_cursorexecute &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
  [sp_cursorprepare &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursorprepare-transact-sql.md)   
  [sp_cursorfetch &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 11d566c029491378a5e0e091e0803cdf5616e637
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493996"
 ---
-# <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>レッスン 4 : 高度な属性およびディメンションのプロパティの定義
+# <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>レッスン 4:高度な属性およびディメンションのプロパティの定義
   このレッスンでは、属性、属性階層、およびディメンションの高度なプロパティをいくつか取り上げ、その使用方法を学習します。  
   
 > [!NOTE]  
@@ -32,7 +32,7 @@ ms.locfileid: "69493996"
  ここでは、親子ディメンションのレベル名を定義し、親メンバーに関連付けられているデータの表示、または非表示を指定します。 詳細については、「親子階層の親子[階層](multidimensional-models/parent-child-dimension.md)と[属性](multidimensional-models/parent-child-dimension-attributes.md)」を参照してください。  
   
  [属性メンバーの自動的なグループ化](lesson-4-3-automatically-grouping-attribute-members.md)  
- ここでは、属性階層内のメンバーの配置に基づいて、属性メンバーのグループを自動的に作成します。 詳細については、「[グループ属性メンバー &#40;分離&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)」を参照してください。  
+ ここでは、属性階層内のメンバーの配置に基づいて、属性メンバーのグループを自動的に作成します。 詳細については、[「属性メンバーのグループ化 (分離)](multidimensional-models/attribute-properties-group-attribute-members.md)」を参照してください。  
   
  [属性階層の非表示化と無効化](lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
  ここでは、属性階層を無効にし、非表示にする方法と、そのタイミングについて学習します。  
@@ -47,7 +47,7 @@ ms.locfileid: "69493996"
  この実習では、UnknownMember プロパティと UnknownMemberName プロパティを構成し、null ディメンション メンバーによって発生するエラー状況を処理します。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 5 : ディメンションおよびメジャー グループ間のリレーションシップの定義](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+ [レッスン 5: ディメンションおよびメジャー グループ間のリレーションシップの定義](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
 ## <a name="see-also"></a>参照  
  [Analysis Services チュートリアルのシナリオ](analysis-services-tutorial-scenario.md)   

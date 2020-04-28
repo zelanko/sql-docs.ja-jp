@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8f287c548a7ebb71b1ebf3e1bce30e43b412c755
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265718"
 ---
 # <a name="sysdm_os_stacks-transact-sql"></a>sys.dm_os_stacks (Transact-SQL)
@@ -36,13 +36,13 @@ ms.locfileid: "68265718"
   
 -   コンポーネントが特定の呼び出しが行われ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]たと想定している場所のコンポーネントによって使用されるロジックを想定または検証します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**stack_address**|**varbinary (8)**|このスタック割り当ての一意のアドレス。 NULL 値は許可されません。|  
 |**frame_index**|**int**|各行は、特定の**stack_address**に対してフレームインデックスによって昇順に並べ替えられた場合に、完全な呼び出し履歴を返す関数呼び出しを表します。 NULL 値は許可されません。|  
 |**frame_address**|**varbinary (8)**|関数呼び出しのアドレス。 NULL 値は許可されません。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **dm_os_stacks**には、サーバーとその他のコンポーネントのシンボルが、情報を正しく表示するためにサーバー上に存在している必要があります。  
   
 ## <a name="permissions"></a>アクセス許可

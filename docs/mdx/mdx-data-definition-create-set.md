@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 6f8d522f7832a280aa8b280bbe912640b566974a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893740"
 ---
 # <a name="mdx-data-definition---create-set"></a>MDX データ操作 - CREATE SET
@@ -46,7 +46,7 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
  *Property_Value*  
  セットのプロパティの値を定義する有効なスカラー式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  名前付きセットとは、再度使用するために作成するディメンションメンバー (またはセットを定義する式) のセットです。 たとえば、売上高上位 10 ストアのセットで構成されるディメンション メンバーのセットを名前付きセットとして定義するとします。 このセットは、静的に定義することも、 [TopCount](../mdx/topcount-mdx.md)のような関数を使用して定義することもできます。 この名前付きセットは、上位10個のストアのセットが必要な場所であればいつでも使用できます。  
   
  CREATE SET ステートメントは、セッション全体で使用できる名前付きセットを作成します。したがって、セッションの複数のクエリで使用できます。 詳細については、「 [MDX&#41;&#40;セッションスコープの計算されるメンバーを作成する](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members)」を参照してください。  
@@ -94,7 +94,7 @@ SELECT [Core Products] ON 0
 ## <a name="standard-properties"></a>標準のプロパティ  
  セットには、それぞれ既定のプロパティのセットがあります。 クライアントアプリケーションがに[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]接続されている場合、管理者が選択すると、既定のプロパティがサポートされるか、サポートされるようになります。  
   
-|プロパティの識別子|意味|  
+|プロパティの識別子|説明|  
 |-------------------------|-------------|  
 |キャプション|クライアントアプリケーションがセットのキャプションとして使用する文字列。|  
 |DISPLAY_FOLDER|セットを表示するためにクライアント アプリケーションが使用する、表示フォルダーのパスを識別する文字列です。 フォルダー レベルの区切り記号は、クライアント アプリケーションによって定義されます。 によって[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]提供されるツールとクライアントでは\\、円記号 () がレベルの区切り記号です。 定義されたセットで複数の表示フォルダーを指定するには、セミコロン (;) を使用してフォルダーを区切ります。|  

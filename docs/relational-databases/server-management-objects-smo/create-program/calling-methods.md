@@ -1,5 +1,5 @@
 ---
-title: メソッドの呼び出し |マイクロソフトドキュメント
+title: メソッドの呼び出し |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -17,23 +17,23 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 471549e5a42f8d08a62da37c4e98e66bc9b67413
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70148759"
 ---
 # <a name="calling-methods"></a>メソッドの呼び出し
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  メソッドは、データベースに**対するチェックポイント**の発行や、 のインスタンスに対するログオンの列挙リストの要求など、オブジェクトに関連する[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]特定のタスクを実行します。  
+  メソッドは、データベースでの**チェックポイント**の発行や、の[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスに対するログオンの列挙リストの要求など、オブジェクトに関連する特定のタスクを実行します。  
   
  メソッドはオブジェクトに対する操作を実行します。 メソッドはパラメーターを受け取ることができ、多くの場合は戻り値があります。 戻り値には、単純なデータ型、複雑なオブジェクト、複数のメンバーを含んでいる構造のいずれを使用することもできます。  
   
  メソッドが正常に実行されたかどうかを検出するには、例外処理を使用します。 詳しくは、「 [Handling SMO Exceptions](../../../relational-databases/server-management-objects-smo/create-program/handling-smo-exceptions.md)」をご覧ください。  
   
-## <a name="examples"></a>例  
-提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual C&#35; SMO プロジェクトを作成](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)する 」を参照してください。  
+## <a name="examples"></a>使用例  
+提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual Studio .net で Visual C&#35; SMO プロジェクトを作成する](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)」を参照してください。  
  
   
 ## <a name="using-a-simple-smo-method-in-visual-basic"></a>Visual Basic での簡単な SMO メソッドの使用  

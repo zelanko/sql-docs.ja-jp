@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 9d8b1665c6e6978af7dc673f7dd51a363da5c48d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892877"
 ---
 # <a name="bottompercent-dmx"></a>BottomPercent (DMX)
@@ -40,10 +40,10 @@ BottomPercent(<table expression>, <rank expression>, <percent>)
 ## <a name="result-type"></a>結果の種類  
  テーブルです。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  Bottom **percent**関数は、順位の昇順で一番下の行を返します。 ランクは、各行の順位式> 引数の\<評価値に基づいています。これにより、 \<順位付け式> 値の合計が、 \<パーセント> 引数で指定されている指定の割合以上になります。 下の**パーセント**は、指定された割合の値を維持しながら、可能な限り最小の要素数を返します。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、「[基本的なデータマイニングチュートリアル](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)」で作成したアソシエーションモデルに対して予測クエリを作成します。  
   
  下位パーセントの動作を理解するには、入れ子になったテーブルのみを返す予測クエリを最初に実行すると便利な場合があります。  

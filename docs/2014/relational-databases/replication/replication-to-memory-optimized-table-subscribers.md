@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b9f58e472b0b6e6d164e45c2d1136c81bc4a46d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811229"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>メモリ最適化テーブル サブスクライバーへのレプリケーション
@@ -27,8 +27,7 @@ ms.locfileid: "68811229"
   
 1.  パブリケーションの作成。  
   
-2.  パブリケーションにアーティクルを追加します。 
-  `@upd_cmd` パラメーターには、SCALL または SQL 規約を使用します。  
+2.  パブリケーションにアーティクルを追加します。 `@upd_cmd` パラメーターには、SCALL または SQL 規約を使用します。  
   
     ```  
     EXEC sp_addarticle  
@@ -87,8 +86,7 @@ ms.locfileid: "68811229"
     GO  
     ```  
   
-4.  
-  `@upd_cmd` パラメーターに SCALL 規約を使用するときは、スキーマ (.SCH) ファイルに移動し、`create procedure [sp_MSupd_<SCHEMA><TABLE_NAME>]` でテーブル更新ステートメントを変更して、主キー列を削除します。  
+4.  `@upd_cmd` パラメーターに SCALL 規約を使用するときは、スキーマ (.SCH) ファイルに移動し、`create procedure [sp_MSupd_<SCHEMA><TABLE_NAME>]` でテーブル更新ステートメントを変更して、主キー列を削除します。  
   
      主キーの更新をサポートするには、次のように、カスタムの更新ストアド プロシージャを使用して主キーの更新ステートメントを置き換えます。  
   
@@ -305,7 +303,7 @@ GO
   
 -   外部キー、UNIQUE 制約、トリガー、スキーマの変更、ROWGUIDCOL、計算列、データ圧縮、別名データ型、バージョン管理、ロックは、メモリ最適化テーブルではサポートされていません。 詳細については、「 [Transact-SQL Constructs Not Supported by In-Memory OLTP](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) 」を参照してください。  
   
-##  <a name="Schema"></a>スキーマファイルの変更  
+##  <a name="modifying-a-schema-file"></a><a name="Schema"></a>スキーマファイルの変更  
   
 -   クラスター化インデックスはサポートされていません。 クラスター化インデックスを非クラスター化インデックスに変更します。  
   
@@ -315,10 +313,10 @@ GO
   
 -   ANSI_PADDING は ON にする必要があります。  
   
-##  <a name="PrimaryKey"></a>主キーへの変更のレプリケート  
+##  <a name="replicating-changes-to-a-primary-key"></a><a name="PrimaryKey"></a>主キーへの変更のレプリケート  
  メモリ最適化テーブルの主キーを更新することはできません。 サブスクライバーの主キーの更新をレプリケートするには、DELETE/INSERT ペアとして更新を渡すように更新ストアド プロシージャを変更します。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server レプリケーション](sql-server-replication.md)  
+ [SQL Server のレプリケーション](sql-server-replication.md)  
   
   

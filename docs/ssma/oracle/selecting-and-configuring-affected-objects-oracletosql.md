@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: c06fb621cab581e934ba4655ed6507149d109c60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266503"
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>影響を受けるオブジェクトの選択と構成 (OracleToSQL)
@@ -47,7 +47,7 @@ SSMA Tester がこれらのオブジェクトのいずれかを確認できな�
   
 -   Nullable  
   
-## <a name="sql"></a>SQL  
+## <a name="sql"></a>Sql  
 [SQL] タブには、選択したテーブルの "Create table" SQL が含まれています。  
   
 ## <a name="data"></a>データ  
@@ -106,7 +106,7 @@ SSMA Tester によって生成された SELECT ステートメントは、 **SQL
   
 これらの SELECT ステートメントを編集して、カスタム検証を行うことができます。 Oracle および SQL Server ステートメントで変更を保存するには、ソースとターゲットの SQL の下にある [**適用**] ボタンを使用します。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 [呼び出し順序のカスタマイズ &#40;OracleToSQL&#41;](../../ssma/oracle/customizing-calls-order-oracletosql.md)  
   
 ## <a name="see-also"></a>参照  

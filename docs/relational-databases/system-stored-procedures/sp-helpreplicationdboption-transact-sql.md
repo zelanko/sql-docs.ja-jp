@@ -16,10 +16,10 @@ ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7aa68b2ee2e592f264f5a64c4c675103253da495
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771530"
 ---
 # <a name="sp_helpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-sql)
@@ -43,7 +43,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
   
 `[ @type = ] 'type'`指定されたレプリケーションオプションの*種類*の値が有効になっているデータベースのみが含まれるように結果セットを制限します。 *種類*は**sysname**で、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**投稿**|トランザクションレプリケーションを許可します。|  
 |**merge publish**|マージレプリケーションが許可されています。|  
@@ -53,10 +53,10 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|データベースの名前。|  
-|**番号**|**int**|データベース識別子。|  
+|**name**|**sysname**|データベースの名前です。|  
+|**id**|**int**|データベース識別子。|  
 |**transpublish**|**bit**|データベースでスナップショットまたはトランザクションパブリッシングが有効になっている場合は、値が**1**の場合は、スナップショットパブリケーションまたはトランザクションパブリッシングが有効であることを示します。|  
 |**mergepublish**|**bit**|データベースでマージパブリッシングが有効になっている場合は、値が**1**の場合は、マージパブリッシングが有効であることを示します。|  
 |**dbowner**|**bit**|ユーザーが**db_owner**固定データベースロールのメンバーである場合は、値が**1**の場合は、ユーザーがこのロールのメンバーであることを示します。|  
@@ -67,7 +67,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_helpreplicationdboption**は、スナップショットレプリケーション、トランザクションレプリケーション、およびマージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -75,6 +75,6 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
   
 ## <a name="see-also"></a>参照  
  [sp_replicationdboption &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

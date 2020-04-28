@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7a7d7e7dd9bf7e6d5ad6dfa5776d76892f96ad05
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70148667"
 ---
 # <a name="files-and-version-numbers"></a>ファイルとバージョン番号
@@ -34,12 +34,10 @@ ms.locfileid: "70148667"
 > > 
 > > このため、これらのバージョンのアセンブリをグローバルアセンブリキャッシュ (GAC) にインストール**しない**でください。 これにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio などの他のアプリケーションが中断する可能性があります。 
   
-|ファイル|[説明]|  
+|ファイル|説明|  
 |-----------|-----------------|  
-|Microsoft.SqlServer.ConnectionInfo.dll|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへの接続のサポートが含まれています。|  
-|Microsoft.SqlServer.ServiceBrokerEnum.dll|
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Service Broker のプログラミングのサポートが含まれています。 Service Broker にアクセスするプログラムにのみ必要です。|  
+|Microsoft.SqlServer.ConnectionInfo.dll|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへの接続のサポートが含まれています。|  
+|Microsoft.SqlServer.ServiceBrokerEnum.dll|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Service Broker のプログラミングのサポートが含まれています。 Service Broker にアクセスするプログラムにのみ必要です。|  
 |Microsoft.SqlServer.Smo.dll|SMO クラスの大部分が含まれます。|  
 |Microsoft.SqlServer.SmoExtended.dll<br /><br /> Microsoft.SqlServer.Management.Sdk.Sfc.dll<br /><br /> Microsoft.SqlServer.SqlEnum.dll|SMO クラスのサポートが含まれています。|  
 |Microsoft.SqlServer.WmiEnum.dll|Windows Management Instrumentation (WMI) プロバイダー クラスが含まれています。 WMI プロバイダー クラスを使用するプログラムにのみ必要です。|  

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 0197417dfef604f3cb90b5fa032dae892de272c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68889050"
 ---
 # <a name="exists-dmx"></a>存在 (DMX)
@@ -34,12 +34,12 @@ EXISTS(<subquery>)
 ## <a name="result-type"></a>結果の種類  
  サブクエリによって返される結果セットに少なくとも1つの行が含まれている場合に**true**を返します。それ以外の場合は**false**を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  EXISTS の前に NOT キーワードを使用できます。たとえば`WHERE NOT EXISTS (<subquery>)`、のようになります。  
   
  EXISTS のサブクエリ引数に追加する列の一覧は、関係ありません。関数は、条件を満たす行が存在するかどうかのみをチェックします。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  EXISTS と NOT EXISTS を使用して、入れ子になったテーブルの条件を確認することができます。 これは、データマイニングモデルのトレーニングまたはテストに使用されるデータを制御するフィルターを作成する場合に便利です。 詳細については、「[マイニング モデルのフィルター選択 (Analysis Services - データ マイニング)](https://docs.microsoft.com/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining)」を参照してください。  
   
  次の例は、「 `[Association]` [基本的なデータマイニングチュートリアル](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)」で作成したマイニング構造とマイニングモデルに基づいています。 このクエリでは、顧客が少なくとも1つの patch kit を購入したケースのみが返されます。  
@@ -57,6 +57,6 @@ WHERE [[Model] = 'Patch kit'
   
 ## <a name="see-also"></a>参照  
  [DMX&#41;&#40;関数](../dmx/functions-dmx.md)   
- [モデルフィルターの構文と例 &#40;Analysis Services データマイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining)  
+ [モデル フィルターの構文と例 (Analysis Services - データ マイニング)](https://docs.microsoft.com/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining)  
   
   

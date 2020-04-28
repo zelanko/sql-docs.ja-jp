@@ -16,10 +16,10 @@ ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e1e71d3795b233ec335cf01848fa3b226a6ebde0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771097"
 ---
 # <a name="sp_helparticle-transact-sql"></a>sp_helparticle (Transact-sql)
@@ -50,13 +50,13 @@ sp_helparticle [ @publication = ] 'publication'
 `[ @publisher = ] 'publisher'`以外[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のパブリッシャーを指定します。 *publisher*は**sysname**で、既定値は NULL です。  
   
 > [!NOTE]  
->  ** パブリッシャーによってパブリッシュされたアーティクルに関する情報を要求[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]するときに、パブリッシャーを指定することはできません。  
+>  *publisher*パブリッシャーによってパブリッシュされたアーティクルに関する情報を要求[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]するときに、パブリッシャーを指定することはできません。  
   
 `[ @found = ] found OUTPUT`内部でのみ使用します。  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**アーティクル id**|**int**|アーティクルの ID。|  
 |**アーティクル名**|**sysname**|アーティクルの名前。|  
@@ -64,8 +64,8 @@ sp_helparticle [ @publication = ] 'publication'
 |**対象オブジェクト**|**sysname**|宛先 (サブスクリプション) テーブルの名前。|  
 |**synchronization object**|**nvarchar (257)**|パブリッシュされたアーティクルを定義するビューの名前。|  
 |**type**|**smallint**|アーティクルのタイプです。<br /><br /> **1** = ログベース。<br /><br /> **3** = 手動フィルターを使用したログベース。<br /><br /> **5** = ログベースの手動ビュー。<br /><br /> **7** = 手動フィルターと手動ビューを使用したログベース。<br /><br /> **8** = ストアドプロシージャの実行。<br /><br /> **24** = シリアル化可能なストアドプロシージャの実行。<br /><br /> **32** = ストアドプロシージャ (スキーマのみ)。<br /><br /> **64** = ビュー (スキーマのみ)。<br /><br /> **96** = 集計関数 (スキーマのみ)。<br /><br /> **128** = 関数 (スキーマのみ)。<br /><br /> **257** = ログベースのインデックス付きビュー。<br /><br /> **259** = 手動フィルターを使用したログベースのインデックス付きビュー。<br /><br /> **261** = 手動ビューを使用したログベースのインデックス付きビュー。<br /><br /> **263** = 手動フィルターと手動ビューを使用するログベースのインデックス付きビュー。<br /><br /> **320** = インデックス付きビュー (スキーマのみ)。<br /><br />|  
-|**オンライン**|**tinyint**|1つ以上のアーティクルプロパティの[& (ビットごとの and)](../../t-sql/language-elements/bitwise-and-transact-sql.md)の結果にすることができます。<br /><br /> **0x00** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **0x01** = アーティクルはアクティブです。<br /><br /> **0x08** = insert ステートメントに列名を含めます。<br /><br /> **0x16** = パラメーター化されたステートメントを使用します。<br /><br /> **0x32** = パラメーター化されたステートメントを使用し、insert ステートメントに列名を含めます。|  
-|**フィルター**|**nvarchar (257)**|テーブルを行方向にフィルター選択するために使用されるストアドプロシージャです。 このストアドプロシージャは、FOR REPLICATION 句を使用して作成されている必要があります。|  
+|**status**|**tinyint**|1つ以上のアーティクルプロパティの[& (ビットごとの and)](../../t-sql/language-elements/bitwise-and-transact-sql.md)の結果にすることができます。<br /><br /> **0x00** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **0x01** = アーティクルはアクティブです。<br /><br /> **0x08** = insert ステートメントに列名を含めます。<br /><br /> **0x16** = パラメーター化されたステートメントを使用します。<br /><br /> **0x32** = パラメーター化されたステートメントを使用し、insert ステートメントに列名を含めます。|  
+|**filter**|**nvarchar (257)**|テーブルを行方向にフィルター選択するために使用されるストアドプロシージャです。 このストアドプロシージャは、FOR REPLICATION 句を使用して作成されている必要があります。|  
 |**記述**|**nvarchar(255)**|記事の内容を示すエントリ。|  
 |**insert_command**|**nvarchar(255)**|Insert をテーブルアーティクルと共にレプリケートするときに使用されるレプリケーションコマンドの種類です。 詳細については、「[トランザクション アーティクルに変更を反映する方法の指定](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)」を参照してください。|  
 |**update_command**|**nvarchar(255)**|テーブルアーティクルで更新をレプリケートするときに使用されるレプリケーションコマンドの種類です。 詳細については、「[トランザクション アーティクルに変更を反映する方法の指定](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)」を参照してください。|  
@@ -92,7 +92,7 @@ sp_helparticle [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_helparticle**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -107,6 +107,6 @@ sp_helparticle [ @publication = ] 'publication'
  [sp_articlecolumn &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sp_changearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
  [sp_droparticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
- [レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

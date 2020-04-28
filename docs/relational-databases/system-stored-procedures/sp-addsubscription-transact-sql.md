@@ -16,10 +16,10 @@ ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c57822529290a6ae4c3e1b5c96f712dbd626d04d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769034"
 ---
 # <a name="sp_addsubscription-transact-sql"></a>sp_addsubscription (Transact-sql)
@@ -90,14 +90,13 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @sync_type=]'*sync_type*'  
  サブスクリプションの同期の種類を示します。 *sync_type*は**nvarchar (255)** で、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |なし|サブスクライバーには、パブリッシュされたテーブルのスキーマと初期データが既に存在します。<br /><br /> 注: このオプションは非推奨とされます。 代わりに replication support only を使用してください。|  
 |automatic (既定値)|パブリッシュされたテーブルのスキーマと初期データは、最初にサブスクライバーに転送されます。|  
 |replication support only|更新サブスクリプションをサポートするアーティクルのカスタム ストアド プロシージャとトリガーがサブスクライバー側で必要に応じて自動的に生成されます。 サブスクライバーがパブリッシュされたテーブルのスキーマと初期データを既に持っていることを前提としています。 ピアツーピアトランザクションレプリケーショントポロジを構成する場合は、トポロジ内のすべてのノードのデータが同一であることを確認します。 詳細については、「[ピア ツー ピア トランザクション レプリケーション](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)」を参照してください。<br /><br /> *SQL Server 以外のパブリケーションへのサブスクリプションではサポートされません。*|  
 |バックアップを使用した初期化|パブリッシュされたテーブルのスキーマと初期データは、パブリケーション データベースのバックアップから取得されます。 サブスクライバーがパブリケーションデータベースのバックアップにアクセスできることを前提としています。 バックアップの場所とメディアの種類は、 *backupdevicename*と*backupdevicetype*によって指定されます。 このオプションを使用する場合、ピアツーピアトランザクションレプリケーショントポロジは、構成中に停止する必要はありません。<br /><br /> *SQL Server 以外のパブリケーションへのサブスクリプションではサポートされません。*|  
-|lsn から初期化する|ピア ツー ピア トランザクション レプリケーション トポロジにノードを追加するときに使用します。 
-  @subscriptionlsn と共に使用すると、関連するトランザクションのすべてが、新しいノードに確実にレプリケートされます。 サブスクライバーがパブリッシュされたテーブルのスキーマと初期データを既に持っていることを前提としています。 詳細については、「[ピア ツー ピア トランザクション レプリケーション](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)」を参照してください。|  
+|lsn から初期化する|ピア ツー ピア トランザクション レプリケーション トポロジにノードを追加するときに使用します。 @subscriptionlsn と共に使用すると、関連するトランザクションのすべてが、新しいノードに確実にレプリケートされます。 サブスクライバーがパブリッシュされたテーブルのスキーマと初期データを既に持っていることを前提としています。 詳細については、「[ピア ツー ピア トランザクション レプリケーション](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)」を参照してください。|  
   
 > [!NOTE]  
 >  システム テーブルとデータは常に転送されます。  
@@ -105,13 +104,13 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @status=]'*status*'  
  はサブスクリプションの状態です。 *status*の部分は**sysname**で、既定値は NULL です。 このパラメーターが明示的に設定されていない場合、レプリケーションによって、次のいずれかの値に自動的に設定されます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |active|サブスクリプションが初期化され、変更を受け入れる準備ができました。 このオプションは、 *sync_type*の値が none、initialize with backup、または replication support only の場合に設定されます。|  
 |subscribed|サブスクリプションを初期化する必要があります。 このオプションは、 *sync_type*の値が automatic の場合に設定されます。|  
   
  [ @subscription_type=]'*subscription_type*'  
- サブスクリプションの種類を示します。 *subscription_type*は**nvarchar (4)**,、既定値は push です。 push または pull に設定できます。 push サブスクリプションのディストリビューション エージェントはディストリビューター側にあり、pull サブスクリプションのディストリビューション エージェントはサブスクライバー側にあります。 *subscription_type*をプルして、パブリッシャーに知られている名前付きプルサブスクリプションを作成できます。 詳細については、「[パブリケーションのサブスクライブ](../../relational-databases/replication/subscribe-to-publications.md)」を参照してください。  
+ サブスクリプションの種類を示します。 *subscription_type*は**nvarchar (4)**,、既定値は push です。 push または pull に設定できます。 push サブスクリプションのディストリビューション エージェントはディストリビューター側にあり、pull サブスクリプションのディストリビューション エージェントはサブスクライバー側にあります。 *subscription_type*をプルして、パブリッシャーに知られている名前付きプルサブスクリプションを作成できます。 詳細については、「[パブリケーションのサブスクライブ](../../relational-databases/replication/subscribe-to-publications.md)」をご覧ください。  
   
 > [!NOTE]  
 >  匿名サブスクリプションでは、このストアドプロシージャを使用する必要はありません。  
@@ -119,12 +118,12 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @update_mode=]'*update_mode*'  
  更新の種類を示します。*update_mode*は**nvarchar (30)** で、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |read only (既定値)|サブスクリプションは読み取り専用です。 サブスクライバーでの変更は、パブリッシャーに送信されません。|  
 |sync tran|即時更新サブスクリプションのサポートを有効にします。 Oracle パブリッシャーではサポートされていません。|  
 |キューに登録されたトランザクション|サブスクリプションのキュー更新を有効にします。 サブスクライバーでデータ変更を行い、キューに格納して、パブリッシャーに反映することができます。 Oracle パブリッシャーではサポートされていません。|  
-|[フェールオーバー]|キュー更新をフェールオーバーとするサブスクリプションの即時更新を有効にします。 サブスクライバーでデータを変更し、それを直ちにパブリッシャーに配信することができます。 パブリッシャーとサブスクライバーが接続されていない場合は、更新モードを変更することにより、サブスクライバーで加えられたデータの変更を、サブスクライバーとパブリッシャーが接続されるまで、キューに格納することができます。 Oracle パブリッシャーではサポートされていません。|  
+|failover|キュー更新をフェールオーバーとするサブスクリプションの即時更新を有効にします。 サブスクライバーでデータを変更し、それを直ちにパブリッシャーに配信することができます。 パブリッシャーとサブスクライバーが接続されていない場合は、更新モードを変更することにより、サブスクライバーで加えられたデータの変更を、サブスクライバーとパブリッシャーが接続されるまで、キューに格納することができます。 Oracle パブリッシャーではサポートされていません。|  
 |キューに置かれたフェールオーバー|即時更新モードへの変更が可能なキュー更新サブスクリプションとしてサブスクリプションを有効にします。 サブスクライバーでデータを変更し、サブスクライバーとパブリッシャーの間に接続が確立されるまで、キューに格納することができます。 連続接続が確立されると、更新モードを即時更新に変更できます。 Oracle パブリッシャーではサポートされていません。|  
   
  サブスクライブされるパブリケーションで DTS が許可されている場合、値 synctran および queued tran は使用できません。  
@@ -132,23 +131,22 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @loopback_detection=]'*loopback_detection*'  
  ディストリビューションエージェントがサブスクライバーに送信されたトランザクションをサブスクライバーに戻すかどうかを指定します。 *loopback_detection*は**nvarchar (5)** で、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |true|ディストリビューションエージェントは、サブスクライバーで発生したトランザクションをサブスクライバーに送り返しません。 双方向トランザクション レプリケーションで使用されます。 詳細については、「 [Bidirectional Transactional Replication](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md)」を参照してください。|  
 |false|ディストリビューション エージェントは、サブスクライバーで発生したトランザクションをサブスクライバーに戻します。|  
-|NULL (既定値)|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブスクライバーの場合は true、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーの場合は false に自動設定されます。|  
+|NULL (既定値)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブスクライバーの場合は true、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーの場合は false に自動設定されます。|  
   
  [ @frequency_type=]*frequency_type*  
  ディストリビューションタスクをスケジュールする頻度を指定します。 *frequency_type*は int,、これらの値のいずれかを指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|1 で保護されたプロセスとして起動されました|1 回|  
+|1|1 回|  
 |2|オン デマンド|  
 |4|毎日|  
 |8|週単位|  
-|16|月単位|  
+|16|月 1 回|  
 |32|月単位の相対|  
 |64 (既定値)|自動開始|  
 |128|繰り返し|  
@@ -159,9 +157,9 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @frequency_relative_interval=]*frequency_relative_interval*  
  ディストリビューションエージェントの日付を指定します。 このパラメーターは、 *frequency_type*が 32 (月単位) に設定されている場合に使用されます。 *frequency_relative_interval*は**int**,、これらの値のいずれかを指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|1 で保護されたプロセスとして起動されました|First (先頭へ)|  
+|1|First (先頭へ)|  
 |2|秒|  
 |4|第 3 週|  
 |8|4 番目|  
@@ -174,9 +172,9 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @frequency_subday=]*frequency_subday*  
  定義した期間にスケジュールを組み直す頻度を分単位で指定します。 *frequency_subday*は**int**,、これらの値のいずれかを指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|1 で保護されたプロセスとして起動されました|1 度|  
+|1|1 度|  
 |2|秒|  
 |4|分|  
 |8|時|  
@@ -239,7 +237,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @backupdevicetype= ]'*backupdevicetype*'  
  バックアップからサブスクライバーを初期化する際に使用するバックアップ デバイスの種類を指定します。 *backupdevicetype*は**nvarchar (20)**,、次の値のいずれかを指定することができます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |logical (既定値)|バックアップデバイスは論理デバイスです。|  
 |disk|バックアップデバイスはディスクドライブです。|  
@@ -277,12 +275,11 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @subscriber_type=]*subscriber_type*  
  サブスクライバーの種類を示します。 *subscriber_type*は**tinyint**で、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |0 (既定値)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバ|  
-|1 で保護されたプロセスとして起動されました|ODBC データソースサーバー|  
-|2|
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet データベース|  
+|1|ODBC データソースサーバー|  
+|2|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet データベース|  
 |3|OLE DB プロバイダー|  
   
  [ @memory_optimized=]*memory_optimized*  
@@ -291,10 +288,10 @@ sp_addsubscription [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  sp_addsubscription は、スナップショット レプリケーションおよびトランザクション レプリケーションで使用します。  
   
- sp_addsubscription が固定サーバー ロール sysadmin のメンバーによってプッシュ サブスクリプションを作成するために実行されると、ディストリビューション エージェントのジョブが暗黙的に作成され、SQL Server エージェント サービス アカウントで実行されます。 @job_loginと@job_passwordには[sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)を実行し、エージェント固有の別の Windows アカウントの資格情報を指定することをお勧めします。 詳細については、「[レプリケーションエージェントのセキュリティモデル](../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  
+ sp_addsubscription が固定サーバー ロール sysadmin のメンバーによってプッシュ サブスクリプションを作成するために実行されると、ディストリビューション エージェントのジョブが暗黙的に作成され、SQL Server エージェント サービス アカウントで実行されます。 @job_loginと@job_passwordには[sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)を実行し、エージェント固有の別の Windows アカウントの資格情報を指定することをお勧めします。 詳細については、「 [レプリケーション エージェント セキュリティ モデル](../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  
   
  sp_addsubscription によって、ODBC および OLE DB サブスクライバーが次のパブリケーションにアクセスできなくなります。  
   
@@ -310,9 +307,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
  サブスクリプションが DTS パッケージを使用していない場合、 *allow_transformable_subscriptions*に設定されているパブリケーションをサブスクライブすることはできません。 パブリケーションのテーブルを DTS サブスクリプションと非 DTS サブスクリプションの両方にレプリケートする必要がある場合は、サブスクリプションの種類ごとに1つずつ、2つの個別のパブリケーションを作成する必要があります。  
   
- 
-  **sync_type** オプション *replication support only*、 *initialize with backup*、または *initialize from lsn*を選択した場合、 **sp_addsubscription**の実行後にログ リーダー エージェントを実行して、スクリプトの設定がディストリビューション データベースに書き込まれるようにする必要があります。 ログ リーダー エージェントが、 **sysadmin** 固定サーバー ロールのメンバーであるアカウントで実行されている必要があります。 
-  **sync_type** オプションが *Automatic*に設定されている場合、特別なログ リーダー エージェントの操作は必要ありません。  
+ **sync_type** オプション *replication support only*、 *initialize with backup*、または *initialize from lsn*を選択した場合、 **sp_addsubscription**の実行後にログ リーダー エージェントを実行して、スクリプトの設定がディストリビューション データベースに書き込まれるようにする必要があります。 ログ リーダー エージェントが、 **sysadmin** 固定サーバー ロールのメンバーであるアカウントで実行されている必要があります。 **sync_type** オプションが *Automatic*に設定されている場合、特別なログ リーダー エージェントの操作は必要ありません。  
   
 ## <a name="permissions"></a>アクセス許可  
  sp_addsubscription を実行できるのは、固定サーバー ロール sysadmin または固定データベース ロール db_owner のメンバーだけです。 プル サブスクリプションの場合、パブリケーションのアクセス リストにログインのあるユーザーは sp_addsubscription を実行できます。  
@@ -323,11 +318,11 @@ sp_addsubscription [ @publication = ] 'publication'
 ## <a name="see-also"></a>参照  
  [プッシュサブスクリプションを作成する](../../relational-databases/replication/create-a-push-subscription.md)   
  [SQL Server 以外のサブスクライバーのサブスクリプションを作成する](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
- [パブリケーションをサブスクライブする](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addpushsubscription_agent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
  [sp_changesubstatus &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
  [sp_dropsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
  [sp_helpsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -16,10 +16,10 @@ ms.assetid: a6225033-5c3b-452f-ae52-79890a3590ed
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7baa7419620fd25be06a731894432862bfba2b96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769053"
 ---
 # <a name="sp_addsubscriber_schedule-transact-sql"></a>sp_addsubscriber_schedule (Transact-SQL)
@@ -53,20 +53,20 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
   
 `[ @agent_type = ] agent_type`エージェントの種類を示します。 *agent_type*は**smallint**,、これらの値のいずれかを指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**0** (既定値)|ディストリビューション エージェント|  
 |**1**|[マージ エージェント]|  
   
 `[ @frequency_type = ] frequency_type`ディストリビューションエージェントをスケジュールする頻度を指定します。 *frequency_type*は**int**,、これらの値のいずれかを指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|1 回|  
 |**2**|オン デマンド|  
 |**4**|毎日|  
 |**8**|週単位|  
-|**まで**|月単位|  
+|**まで**|月 1 回|  
 |**32**|月単位の相対|  
 |**64** (既定値)|自動開始|  
 |**128**|繰り返し|  
@@ -75,7 +75,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`ディストリビューションエージェントの日付を指定します。 このパラメーターは、 *frequency_type*が**32** (月単位) に設定されている場合に使用されます。 *frequency_relative_interval*は**int**,、これらの値のいずれかを指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**1** (既定値)|First (先頭へ)|  
 |**2**|秒|  
@@ -87,7 +87,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
   
 `[ @frequency_subday = ] frequency_subday`定義した期間中に再スケジュールする頻度を指定します。 *frequency_subday*は**int**,、これらの値のいずれかを指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|1 度|  
 |**2**|秒|  
@@ -112,7 +112,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_addsubscriber_schedule**は、スナップショットレプリケーション、トランザクションレプリケーション、およびマージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -120,6 +120,6 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
   
 ## <a name="see-also"></a>参照  
  [sp_changesubscriber_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-schedule-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

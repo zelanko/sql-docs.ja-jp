@@ -18,10 +18,10 @@ ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2856f89264994b9f1812653450d94e2cb2e2b0c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69890843"
 ---
 # <a name="sp_update_alert-transact-sql"></a>sp_update_alert (Transact-SQL)
@@ -78,9 +78,9 @@ sp_update_alert
   
 `[ @include_event_description_in = ] include_event_description_in`Windows アプリケーションログからの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラーの説明を通知メッセージに含めるかどうかを指定します。 *include_event_description_in*は**tinyint**,、既定値は NULL の場合、これらの値の1つ以上を指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|**0**|なし|  
+|**0**|None|  
 |**1**|電子メール|  
 |**2**|ポケットベル|  
 |**4**|**net send**|  
@@ -112,11 +112,11 @@ sp_update_alert
   
 `[ @performance_condition = ] 'performance_condition'`**'**_Itemcomparatorvalue_**'** という形式で表された値。 *performance_condition*は**nvarchar (512)**,、既定値は NULL の場合、これらの要素で構成されます。  
   
-|要素の書式設定|[説明]|  
+|要素の書式設定|説明|  
 |--------------------|-----------------|  
-|*アイテム*|パフォーマンス オブジェクト、パフォーマンス カウンター、またはカウンターの名前付きインスタンス。|  
+|*項目*|パフォーマンス オブジェクト、パフォーマンス カウンター、またはカウンターの名前付きインスタンス。|  
 |*演算子*|次のいずれかの**>** 演算子**<**:、、**=**|  
-|*Value*|カウンターの数値|  
+|*[値]*|カウンターの数値|  
   
 `[ @category_name = ] 'category'`警告カテゴリの名前。 *category*は**sysname**で、既定値は NULL です。  
   
@@ -127,15 +127,15 @@ sp_update_alert
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
- Windows アプリケーションログに書き込まれた sysmessages のみが、アラートを発生させることができます。 **** [!INCLUDE[msCoName](../../includes/msconame-md.md)]  
+## <a name="remarks"></a>Remarks  
+ Windows アプリケーションログに書き込まれた sysmessages のみが、アラートを発生させることができます。 **sysmessages** [!INCLUDE[msCoName](../../includes/msconame-md.md)]  
   
  **sp_update_alert**は、パラメーター値が指定されている警告設定のみを変更します。 パラメーターを省略した場合は、現在の設定が保持されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  このストアドプロシージャを実行するには、 **sysadmin**固定サーバーロールのメンバーである必要があります。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、警告が有効になっている `Test Alert` の設定を `0` (無効) に変更します。  
   
 ```  
@@ -151,6 +151,6 @@ GO
 ## <a name="see-also"></a>参照  
  [sp_add_alert &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
  [sp_help_alert &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

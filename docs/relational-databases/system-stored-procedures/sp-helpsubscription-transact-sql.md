@@ -16,10 +16,10 @@ ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bf7712ceb55fc368d493be9999cd0b8d4d9f474c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771566"
 ---
 # <a name="sp_helpsubscription-transact-sql"></a>sp_helpsubscription (Transact-sql)
@@ -63,7 +63,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**サブスクライバ**|**sysname**|サブスクライバーの名前。|  
 |**レプリケーション**|**sysname**|パブリケーションの名前。|  
@@ -75,7 +75,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**full subscription**|**bit**|サブスクリプションがパブリケーション内のすべてのアーティクルを対象としているかどうかを示します。<br /><br /> **0** = いいえ<br /><br /> **1** = はい|  
 |**サブスクリプション名**|**nvarchar(255)**|サブスクリプションの名前。|  
 |**更新モード**|**int**|**0** = 読み取り専用<br /><br /> **1** = 即時更新サブスクリプション|  
-|**distribution job id**|**バイナリ (16)**|ディストリビューション エージェントのジョブ ID。|  
+|**distribution job id**|**binary(16)**|ディストリビューション エージェントのジョブ ID。|  
 |**loopback_detection**|**bit**|ディストリビューション エージェントが、サブスクライバーで発生したトランザクションをサブスクライバーに戻すかどうかを示します。<br /><br /> **0** = 返送します。<br /><br /> **1** = を返しません。<br /><br /> 双方向トランザクション レプリケーションで使用されます。 詳細については、「 [Bidirectional Transactional Replication](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md)」を参照してください。|  
 |**offload_enabled**|**bit**|レプリケーションエージェントのオフロード実行がサブスクライバーで実行されるように設定されているかどうかを指定します。<br /><br /> **0**の場合、エージェントはパブリッシャーで実行されます。<br /><br /> **1**の場合、エージェントはサブスクライバーで実行されます。|  
 |**offload_server**|**sysname**|リモートエージェントのアクティブ化が有効になっているサーバーの名前。 NULL の場合は、 [MSdistribution_agents](../../relational-databases/system-tables/msdistribution-agents-transact-sql.md)テーブルに一覧表示されている現在の offload_server が使用されます。|  
@@ -89,15 +89,15 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**distrib_agent_name**|**nvarchar (100)**|サブスクリプションを同期するエージェントジョブの名前。|  
 |**subscriber_type**|**tinyint**|サブスクライバーの種類。次のいずれかを指定できます。<br /><br /> **0** = SQL Server サブスクライバー<br /><br /> **1** = ODBC データソースサーバー<br /><br /> **2** = Microsoft JET データベース (非推奨)<br /><br /> **3** = OLE DB プロバイダー|  
 |**subscriber_provider**|**sysname**|SQL Server 以外のデータソースの OLE DB プロバイダーが登録されている一意のプログラム識別子 (PROGID)。|  
-|**subscriber_datasource**|**nvarchar(4000)**|OLE DB プロバイダーで認識されるデータ ソースの名前。|  
-|**subscriber_providerstring**|**nvarchar(4000)**|データソースを識別する OLE DB プロバイダー固有の接続文字列。|  
-|**subscriber_location**|**nvarchar(4000)**|OLE DB プロバイダーによって認識されるデータベースの場所|  
+|**subscriber_datasource**|**nvarchar (4000)**|OLE DB プロバイダーで認識されるデータ ソースの名前。|  
+|**subscriber_providerstring**|**nvarchar (4000)**|データソースを識別する OLE DB プロバイダー固有の接続文字列。|  
+|**subscriber_location**|**nvarchar (4000)**|OLE DB プロバイダーによって認識されるデータベースの場所|  
 |**subscriber_catalog**|**sysname**|OLE DB プロバイダーに接続するときに使用するカタログ。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_helpsubscription**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -107,6 +107,6 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
  [sp_addsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
  [sp_changesubstatus &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
  [sp_dropsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

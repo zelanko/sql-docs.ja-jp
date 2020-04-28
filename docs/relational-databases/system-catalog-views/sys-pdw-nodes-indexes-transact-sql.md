@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: bb20ecd4fe212f4004061a6c39ad33c3ffc8ac8e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68809928"
 ---
 # <a name="syspdw_nodes_indexes-transact-sql"></a>pdw_nodes_indexes (Transact-sql)
@@ -24,13 +24,13 @@ ms.locfileid: "68809928"
 
   の[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]インデックスを返します。  
   
-|列名|データ型|[説明]|Range|  
+|列名|データ型|説明|範囲|  
 |-----------------|---------------|-----------------|-----------|  
 |object_id|**int**|このインデックスが所属するオブジェクトの id。||  
-|name|**sysname**|インデックスの名前。 Name は、オブジェクト内でのみ一意です。 NULL = ヒープ||  
+|name|**sysname**|インデックス名。 Name は、オブジェクト内でのみ一意です。 NULL = ヒープ||  
 |index_id|**int**|インデックスの id。 index_id は、オブジェクト内でのみ一意です。<br /><br /> 0 = ヒープ<br /><br /> 1 = クラスター化インデックス<br /><br /> > 1 = 非クラスター化インデックス||  
-|型|**tinyint**|インデックスの種類:<br /><br /> 0 = ヒープ<br /><br /> 1 = クラスター化<br /><br /> 2 = 非クラスター化<br /><br /> 5 = クラスター化 xVelocity メモリ最適化列ストアインデックス|  
-|type_desc|**nvarchar (60)**|インデックスの種類の説明:<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> クラスター化列ストア||  
+|type|**tinyint**|インデックスの種類:<br /><br /> 0 = ヒープ<br /><br /> 1 = クラスター化<br /><br /> 2 = 非クラスター化<br /><br /> 5 = クラスター化 xVelocity メモリ最適化列ストアインデックス|  
+|type_desc|**nvarchar(60)**|インデックスの種類の説明:<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> クラスター化列ストア||  
 |is_unique|**bit**|0 = インデックスは一意ではありません。|常に 0 です。|  
 |data_space_id|**int**|このインデックスのデータ領域の id。 データ領域は、ファイル グループまたはパーティション構成です。<br /><br /> 0 = object_id はテーブル値関数です。||  
 |ignore_dup_key|**bit**|0 = IGNORE_DUP_KEY はオフです。|常に 0 です。|  
@@ -50,6 +50,6 @@ ms.locfileid: "68809928"
  CONTROL SERVER 権限が必要です。  
   
 ## <a name="see-also"></a>参照  
- [SQL Data Warehouse および並列データウェアハウスのカタログビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [SQL Data Warehouse and Parallel Data Warehouse Catalog Views (SQL Data Warehouse および Parallel Data Warehouse のカタログ ビュー)](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

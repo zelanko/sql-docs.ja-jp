@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a0b5039ae62eac25d698442d4aeb92ad3c4ebc3a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892900"
 ---
 # <a name="defaultmember-mdx"></a>DefaultMember (MDX)
@@ -31,7 +31,7 @@ Hierarchy_Expression.DefaultMember
  *Hierarchy_Expression*  
  階層を返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  属性がクエリに含まれていない場合は、属性上の既定のメンバーが式の評価に使用されます。  
   
 ## <a name="example"></a>例  

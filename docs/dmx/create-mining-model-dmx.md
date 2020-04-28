@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e7215f50705b593130a69cfe076f0878b0ac03d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68889078"
 ---
 # <a name="create-mining-model-dmx"></a>マイニングモデル (DMX) の作成
@@ -50,7 +50,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 >  現在のプロバイダーでサポートされているアルゴリズムの一覧は[DMSCHEMA_MINING_SERVICES 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset)を使用して取得できます。 の現在のインスタンスでサポートされている[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]アルゴリズムを表示するには、「[データマイニングのプロパティ](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties)」を参照してください。  
   
  *パラメーターリスト*  
- 省略可能。 アルゴリズムに対してプロバイダーが定義したパラメーターのコンマ区切りのリスト。  
+ 任意。 アルゴリズムに対してプロバイダーが定義したパラメーターのコンマ区切りのリスト。  
   
  *XML 文字列*  
  (高度な用途の場合のみ)。XML エンコードモデル (PMML)。 文字列は単一引用符 (') で囲む必要があります。  
@@ -94,13 +94,13 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  列の定義に使用できるデータ型、コンテンツの種類、列の分布、およびモデリングフラグの一覧については、次のトピックを参照してください。  
   
--   [データマイニング&#41;&#40;データ型](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
+-   [データ型 (データ マイニング)](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
   
--   [コンテンツの種類 &#40;データマイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
+-   [コンテンツの種類 (データ マイニング)](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
   
--   [列の分布 &#40;データマイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
+-   [列の分布 (データ マイニング)](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
   
--   [データマイニング&#41;&#40;のモデリングフラグ](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
+-   [モデリング フラグ (データ マイニング)](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
   
  ステートメントに句を追加して、2つの列間のリレーションシップを記述できます。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]では、次\<の列リレーションシップ> 句の使用がサポートされています。  
   
@@ -109,7 +109,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  予測列の使用方法を説明するには、予測句を使用します。 次の表では、使用可能な2つの句について説明します。  
   
-|\<予測> 句|[説明]|  
+|\<予測> 句|説明|  
 |---------------------------|-----------------|  
 |**PREDICT**|この列は、モデルによって予測できます。また、入力ケースで指定して、その他の予測可能列の値を予測することもできます。|  
 |**PREDICT_ONLY**|この列はモデルによって予測できますが、その値を入力ケースで使用して他の予測可能列の値を予測することはできません。|  
@@ -123,7 +123,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  各アルゴリズムに関連付けられているパラメーターの一覧については、「データマイニング[アルゴリズム &#40;Analysis Services データマイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)」を参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  組み込みのテストデータセットを含むモデルを作成する場合は、ステートメント CREATE マイニング STRUCTURE の後に ALTER マイニング STRUCTURE を使用する必要があります。 ただし、すべての種類のモデルで予約データセットがサポートされるわけではありません。 詳細については、「[CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md)」を参照してください。  
   
  CREATEMODEL ステートメントを使用してマイニングモデルを作成する方法のチュートリアルについては、「[タイムシリーズ予測 DMX のチュートリアル](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)」を参照してください。  
@@ -189,6 +189,6 @@ USING Microsoft_Time_Series (PERIODICITY_HINT = '{12}', FORECAST_METHOD = 'ARTXP
 ## <a name="see-also"></a>参照  
  [DMX&#41; データ定義ステートメント &#40;のデータマイニング拡張機能](../dmx/dmx-statements-data-definition.md)   
  [DMX&#41; データ操作ステートメントを &#40;データマイニング拡張機能](../dmx/dmx-statements-data-manipulation.md)   
- [DMX&#41; ステートメントリファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-statements.md)  
+ [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

@@ -16,10 +16,10 @@ ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c32ea67eef368a17b129989e3f05c29ab0533d72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769110"
 ---
 # <a name="sp_addpublication_snapshot-transact-sql"></a>sp_addpublication_snapshot (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68769110"
   指定されたパブリケーションのスナップショット エージェントを作成します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
 > [!IMPORTANT]  
->  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベースエンジン &#40;SQL Server 構成マネージャー&#41;への暗号化接続の有効化](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
+>  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,7 +61,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
   
 `[ @frequency_type = ] frequency_type`スナップショットエージェントを実行する頻度を指定します。 *frequency_type*は**int**,、値は次のいずれかを指定することができます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|1 回のみ|  
 |**4** (既定値)|毎日|  
@@ -85,7 +85,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
   
 `[ @frequency_subday = ] frequency_subday`*Freq_subday_interval*の単位です。 *frequency_subday*は**int**,、これらの値のいずれかを指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|1 度|  
 |**2**|秒|  
@@ -130,12 +130,12 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 `[ @publisher = ] 'publisher'`以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーを指定します。 *publisher*は**sysname**で、既定値は NULL です。  
   
 > [!NOTE]  
->  ** パブリッシャーで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]スナップショットエージェントを作成する場合は、パブリッシャーを使用しないでください。  
+>  *publisher*パブリッシャーで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]スナップショットエージェントを作成する場合は、パブリッシャーを使用しないでください。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_addpublication_snapshot**は、スナップショットレプリケーション、トランザクションレプリケーション、およびマージレプリケーションで使用します。  
   
 ## <a name="example"></a>例  
@@ -145,11 +145,11 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
  **Sp_addpublication_snapshot**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
- [パブリケーションを作成する](../../relational-databases/replication/publish/create-a-publication.md)   
+ [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [スナップショットを作成して適用する](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   
  [sp_addpublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication_snapshot &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)   
  [sp_startpublication_snapshot &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md)   
- [レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

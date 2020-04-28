@@ -22,10 +22,10 @@ ms.assetid: d6dfdf26-f874-495f-a8a6-8780699646d7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 55d7ad0dfd941102cfeb6661e65980f980fa8b2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68770985"
 ---
 # <a name="sp_helpdynamicsnapshot_job-transact-sql"></a>sp_helpdynamicsnapshot_job (Transact-sql)
@@ -57,11 +57,11 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**番号**|**int**|フィルター選択されたデータスナップショットジョブを識別します。|  
+|**id**|**int**|フィルター選択されたデータスナップショットジョブを識別します。|  
 |**job_name**|**sysname**|フィルター選択されたデータスナップショットジョブの名前。|  
-|**job_id**|**UNIQUEIDENTIFIER**|ディストリビューター側[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のエージェントジョブを識別します。|  
+|**job_id**|**uniqueidentifier**|ディストリビューター側[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のエージェントジョブを識別します。|  
 |**dynamic_filter_login**|**sysname**|パブリケーションに対して定義されたパラメーター化された行フィルターの[SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md)関数を評価するために使用される値。|  
 |**dynamic_filter_hostname**|**sysname**|パブリケーションに対して定義されたパラメーター化された行フィルターの[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)関数を評価するために使用される値。|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|パラメーター化された行フィルターが使用されている場合に、スナップショットファイルの読み取り元フォルダーへのパス。|  
@@ -79,7 +79,7 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_helpdynamicsnapshot_job**は、マージレプリケーションで使用します。  
   
  すべての既定のパラメーター値が使用されている場合は、パブリケーションデータベース全体について、パーティション分割されたすべてのデータスナップショットジョブに関する情報が返されます。  
@@ -88,6 +88,6 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
  **Sp_helpdynamicsnapshot_job**を実行できるのは、 **sysadmin**固定サーバーロール、 **db_owner**固定データベースロール、およびパブリケーションのパブリケーションアクセスリストのメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

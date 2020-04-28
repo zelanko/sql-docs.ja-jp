@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b2b6f88e857ab7fc6300698174914126fb0881f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265733"
 ---
 # <a name="sysdm_os_nodes-transact-sql"></a>sys.dm_os_nodes (Transact-SQL)
@@ -40,7 +40,7 @@ SQLOS という内部コンポーネントは、ハードウェア プロセッ�
 > [!NOTE]
 > またはから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]この DMV を[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼び出すには、 **dm_pdw_nodes_os_nodes**という名前を使用します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |node_id|**smallint**|ノードの ID。|  
 |node_state_desc|**nvarchar(256)**|ノードの状態の説明。 相互排他的な値から先に表示され、続けて、組み合わせ可能な値が表示されます。 次に例を示します。<br /> Online、Thread Resources Low、Lazy Preemptive<br /><br />相互に排他的な4つの node_state_desc 値があります。 これらの説明については、以下に説明します。<br /><ul><li>オンライン: ノードはオンラインです<li>OFFLINE: ノードがオフラインです<li>IDLE: ノードには保留中の作業要求がなく、アイドル状態になりました。<li>IDLE_READY: ノードには保留中の作業要求がなく、アイドル状態に入る準備ができています。</li></ul><br />Node_state_desc 値には3つの組み合わせがあります。以下にその説明を示します。<br /><ul><li>DAC: このノードは[専用管理接続](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)用に予約されています。<li>THREAD_RESOURCES_LOW: メモリ不足の状態により、このノードに新しいスレッドを作成することはできません。<li>ホット追加: ホットアド CPU イベントへの応答としてノードが追加されたことを示します。</li></ul>|  

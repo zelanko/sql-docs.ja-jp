@@ -16,10 +16,10 @@ ms.assetid: 64fc085f-f81b-493b-b59a-ee6192d9736d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a091df0cbbeb2883ff9905d7c5b3718d50efa86b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68762548"
 ---
 # <a name="sp_changesubscriptiondtsinfo-transact-sql"></a>sp_changesubscriptiondtsinfo (Transact-SQL)
@@ -54,13 +54,13 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_changesubscriptiondtsinfo**は、プッシュサブスクリプションのみのスナップショットレプリケーションおよびトランザクションレプリケーションに使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_changesubscriptiondtsinfo**を実行できるのは、 **sysadmin**固定サーバーロールのメンバー、 **db_owner**固定データベースロールのメンバー、またはサブスクリプションの作成者だけです。  
   
 ## <a name="see-also"></a>参照  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

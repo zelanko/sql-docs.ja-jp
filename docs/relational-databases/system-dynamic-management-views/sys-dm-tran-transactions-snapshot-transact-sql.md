@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b91ac554186c37b2e074dd3faded49a01259222e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262686"
 ---
 # <a name="sysdm_tran_transactions_snapshot-transact-sql"></a>dm_tran_transactions_snapshot (Transact-sql)
@@ -52,9 +52,7 @@ transaction_sequence_num snapshot_id snapshot_sequence_num
 60                       3           60  
 ```  
   
- 
-  `transaction_sequence_num` 列は、現在のスナップショット トランザクションのトランザクション シーケンス番号 (XSN) です。 出力には、 `59`と`60`の2つが示されています。 
-  `snapshot_sequence_num` 列は、各スナップショット トランザクションの開始時にアクティブ状態にあったトランザクションのトランザクション シーケンス番号です。  
+ `transaction_sequence_num` 列は、現在のスナップショット トランザクションのトランザクション シーケンス番号 (XSN) です。 出力には、 `59`と`60`の2つが示されています。 `snapshot_sequence_num` 列は、各スナップショット トランザクションの開始時にアクティブ状態にあったトランザクションのトランザクション シーケンス番号です。  
   
  出力には、2つのアクティブなトランザクション (XSN-57 と XSN-58) が実行されている間にスナップショットトランザクション XSN-59 が開始されることが示されています。 XSN-57 または XSN-58 によってデータが変更された場合、XSN-59 では変更が無視され、行のバージョン管理を使用してデータベースのトランザクション上の一貫性のあるビューが維持されます。  
   
@@ -69,7 +67,7 @@ dm_tran_transactions_snapshot
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**transaction_sequence_num**|**bigint**|スナップショットトランザクションのトランザクションシーケンス番号 (XSN)。|  
 |**snapshot_id**|**int**|各[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントのスナップショット ID は、行のバージョン管理を使用して read committed で開始されます。 この値は、行のバージョン管理を使用して read committed で実行されている各クエリをサポートする、トランザクション上一貫性のあるデータベースのビューを生成するために使用されます。|  
@@ -80,14 +78,14 @@ dm_tran_transactions_snapshot
 で[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]は、 `VIEW SERVER STATE`権限が必要です。   
 Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、データベース`VIEW DATABASE STATE`の権限が必要です。 Standard [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  スナップショットトランザクションが開始されると[!INCLUDE[ssDE](../../includes/ssde-md.md)] 、その時点でアクティブになっているすべてのトランザクションがによって記録されます。 dm_tran_transactions_snapshot は、現在アクティブなすべてのスナップショットトランザクションについて、この情報を報告し**ます。**  
   
  各トランザクションは、トランザクションの開始時に割り当てられたトランザクションシーケンス番号によって識別されます。 トランザクションは、BEGIN TRANSACTION または BEGIN WORK ステートメントが実行されたときに開始されますが、 トランザクション シーケンス番号は、BEGIN TRANSACTION または BEGIN WORK ステートメントの後、最初にデータにアクセスする [!INCLUDE[ssDE](../../includes/ssde-md.md)] ステートメントが実行されたときに[!INCLUDE[tsql](../../includes/tsql-md.md)]によって割り当てられます。 トランザクション シーケンス番号は 1 ずつ増加します。  
   
 ## <a name="see-also"></a>参照  
- [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [トランザクション関連の動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [トランザクション関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

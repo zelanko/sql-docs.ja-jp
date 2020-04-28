@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbc9ad315792fc4198988a53713f978ff119d2ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493822"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>ドリルスルー アクションの定義と使用
@@ -24,18 +24,15 @@ ms.locfileid: "69493822"
   
 ## <a name="defining-the-drillthrough-action-properties"></a>ドリルスルー アクション プロパティの定義  
   
-1.  
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブのキューブ デザイナーを開いて、 **[アクション]** タブをクリックします。  
+1.  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブのキューブ デザイナーを開いて、 **[アクション]** タブをクリックします。  
   
-     
-  **[アクション]** タブにはいくつかのペインがあります。 このタブの左側には **[アクション オーガナイザー]** ペインと **[計算ツール]** ペインがあります。 これら 2 つのペインの右側には **[表示]** ペインがあり、 **[アクション オーガナイザー]** ペインで選択したアクションの詳細が表示されます。  
+     **[アクション]** タブにはいくつかのペインがあります。 このタブの左側には **[アクション オーガナイザー]** ペインと **[計算ツール]** ペインがあります。 これら 2 つのペインの右側には **[表示]** ペインがあり、 **[アクション オーガナイザー]** ペインで選択したアクションの詳細が表示されます。  
   
      次の図はキューブ デザイナーの **[アクション]** タブを示しています。  
   
      ![キューブ デザイナーの [アクション] タブ](../../2014/tutorials/media/l8-action1.gif "キューブ デザイナーの [アクション] タブ")  
   
-2.  
-  **[アクション]** タブのツール バーで **[新しいドリルスルー アクション]** ボタンをクリックします。  
+2.  **[アクション]** タブのツール バーで **[新しいドリルスルー アクション]** ボタンをクリックします。  
   
      表示ペインに、空のアクション テンプレートが表示されます。  
   
@@ -43,14 +40,11 @@ ms.locfileid: "69493822"
   
 3.  [**名前**] ボックスで、このアクションの名前をに`Internet Sales Details Drillthrough Action`変更します。  
   
-4.  
-  **[メジャー グループのメンバー]** リストで **[Internet Sales]** をクリックします。  
+4.  **[メジャー グループのメンバー]** リストで **[Internet Sales]** をクリックします。  
   
-5.  
-  **[ドリルスルー列]** で、 **[ディメンション]** リストから **[Internet Sales Order Details]** を選択します。  
+5.  **[ドリルスルー列]** で、 **[ディメンション]** リストから **[Internet Sales Order Details]** を選択します。  
   
-6.  
-  **[返される列]** リストで、 **[Item Description]** と **[Order Number]** チェック ボックスをオンにして、 **[OK]** をクリックします。 次の図は、ここまでの手順を実行した場合に表示されるアクション テンプレートを示しています。  
+6.  **[返される列]** リストで、 **[Item Description]** と **[Order Number]** チェック ボックスをオンにして、 **[OK]** をクリックします。 次の図は、ここまでの手順を実行した場合に表示されるアクション テンプレートを示しています。  
   
      ![[ドリルスルー列] ボックス](../../2014/tutorials/media/l8-action3.gif "[ドリルスルー列] ボックス")  
   
@@ -68,21 +62,17 @@ ms.locfileid: "69493822"
   
 ## <a name="using-the-drillthrough-action"></a>ドリルスルー アクションの使用  
   
-1.  
-  **[ビルド]** メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
+1.  **[ビルド]** メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
   
 2.  配置が正常に完了したら、 **Tutorial キューブのキューブ デザイナーで** [ブラウザー] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] タブをクリックし、 **[再接続]** ボタンをクリックします。  
   
 3.  Excel を起動します。  
   
-4.  
-  **Internet Sales-Sales Amount** メジャーを値領域に追加します。  
+4.  **Internet Sales-Sales Amount** メジャーを値領域に追加します。  
   
-5.  
-  **Customer** ディメンションの **Location** フォルダーの **Customer Geography** ユーザー定義階層を **[レポート フィルター]** 領域に追加します。  
+5.  **Customer** ディメンションの **Location** フォルダーの **Customer Geography** ユーザー定義階層を **[レポート フィルター]** 領域に追加します。  
   
-6.  ピボットテーブルの **Customer Geography**で、1 人の顧客を選択するフィルターを追加します。 
-  **[All Customers]**、 **[Australia]**、 **[Queensland]**、 **[Brisbane]**、 **[4000]** の順に展開し、 **Adam Powell**のチェック ボックスをオンにして **[OK]** をクリックします。  
+6.  ピボットテーブルの **Customer Geography**で、1 人の顧客を選択するフィルターを追加します。 **[All Customers]**、 **[Australia]**、 **[Queensland]**、 **[Brisbane]**、 **[4000]** の順に展開し、 **Adam Powell**のチェック ボックスをオンにして **[OK]** をクリックします。  
   
      Adam Powell に対する [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 社製品の売上合計がデータ領域に表示されます。  
   
@@ -96,20 +86,15 @@ ms.locfileid: "69493822"
   
 ## <a name="modifying-the-drillthrough-action"></a>ドリルスルー アクションの変更  
   
-1.  
-  **Internet Sales Order Details** ディメンションのディメンション デザイナーを開きます。  
+1.  **Internet Sales Order Details** ディメンションのディメンション デザイナーを開きます。  
   
      このディメンションには 3 つの属性しか定義されていません。  
   
-2.  
-  **[データ ソース ビュー]** ペインで、何もない領域を右クリックし、 **[すべてのテーブルを表示]** をクリックします。  
+2.  **[データ ソース ビュー]** ペインで、何もない領域を右クリックし、 **[すべてのテーブルを表示]** をクリックします。  
   
-3.  
-  **[書式]** メニューの **[自動レイアウト]** をポイントし、 **[ダイアグラム]** をクリックします。  
+3.  **[書式]** メニューの **[自動レイアウト]** をポイントし、 **[ダイアグラム]** をクリックします。  
   
-4.  
-  **InternetSales (dbo.FactInternetSales)** テーブルを検索します。検索するには、 **[データ ソース ビュー]** ペインの空いている領域を右クリックし、 
-  **[テーブルの検索]** 、 **[InternetSales]** 、 **[OK]** の順にクリックします。  
+4.  **InternetSales (dbo.FactInternetSales)** テーブルを検索します。検索するには、 **[データ ソース ビュー]** ペインの空いている領域を右クリックし、 **[テーブルの検索]** 、 **[InternetSales]** 、 **[OK]** の順にクリックします。  
   
 5.  以下の列を基にして、新しい属性を作成します。  
   
@@ -125,11 +110,9 @@ ms.locfileid: "69493822"
   
 8.  **Ship Date Key**属性の`Ship Date` **name**プロパティをに変更し、この属性の**Name Column**プロパティを**date. simpledate (WChar)** に変更します。  
   
-9. 
-  **Tutorial キューブのキューブ デザイナーを開き、** [アクション] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] タブに切り替えます。  
+9. **Tutorial キューブのキューブ デザイナーを開き、** [アクション] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] タブに切り替えます。  
   
-10. 
-  **[ドリルスルー列]** ボックスで、チェック ボックスをオンにして以下の列を **[返される列]** リストに追加し、 **[OK]** をクリックします。  
+10. **[ドリルスルー列]** ボックスで、チェック ボックスをオンにして以下の列を **[返される列]** リストに追加し、 **[OK]** をクリックします。  
   
     -   Order Date  
   
@@ -143,8 +126,7 @@ ms.locfileid: "69493822"
   
 ## <a name="reviewing-the-modified-drillthrough-action"></a>変更されたドリルスルー アクションの確認  
   
-1.  
-  **[ビルド]** メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
+1.  **[ビルド]** メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
   
 2.  配置が正常に完了したら、 **Tutorial キューブのキューブ デザイナーで** [ブラウザー] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] タブに切り替え、 **[再接続]** ボタンをクリックします。  
   
@@ -152,18 +134,16 @@ ms.locfileid: "69493822"
   
 4.  値領域の **Internet Sales-Sales Amount** とレポート フィルターの **Customer Geography** を使用してピボットテーブルを再作成します。  
   
-     
-  **All Customers**、 **Australia**、 **Queensland**、 **Brisbane**、 **4000**、 **Adam Powell**から選択するフィルターを追加します。  
+     **All Customers**、 **Australia**、 **Queensland**、 **Brisbane**、 **4000**、 **Adam Powell**から選択するフィルターを追加します。  
   
-5.  
-  **Internet Sales-Sales Amount** データ セルをクリックし、 **[追加アクション]** をポイントして、 **[Drillthrough to Order Details]** をクリックします。  
+5.  **Internet Sales-Sales Amount** データ セルをクリックし、 **[追加アクション]** をポイントして、 **[Drillthrough to Order Details]** をクリックします。  
   
      Adam Powell に発送された注文の詳細が一時ワークシートに表示されます。 表示される情報には、次の図に示すように、アイテムの説明、注文番号、受注日、期日、出荷日が含まれます。  
   
      ![Adam Powell 氏に出荷された注文](../../2014/tutorials/media/l8-action8.gif "Adam Powell 氏に出荷された注文")  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 9 : パースペクティブと翻訳の定義](lesson-9-defining-perspectives-and-translations.md)  
+ [レッスン 9: パースペクティブと翻訳の定義](lesson-9-defining-perspectives-and-translations.md)  
   
 ## <a name="see-also"></a>参照  
  [アクション &#40;Analysis Services-多次元データ&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   

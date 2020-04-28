@@ -16,10 +16,10 @@ ms.assetid: 7352d94a-f8f2-42ea-aaf1-d08c3b5a0e76
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f4ad522c13987f7617def29d5ff112a5a26db8b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771453"
 ---
 # <a name="sp_droppullsubscription-transact-sql"></a>sp_droppullsubscription (Transact-sql)
@@ -51,7 +51,7 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_droppullsubscription**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
  **sp_droppullsubscription**によって、 [MSreplication_subscriptions &#40;transact-sql&#41;](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md)テーブルの対応する行と、サブスクライバー側の対応するディストリビューターエージェントが削除されます。 [Transact-sql&#41;&#40;MSreplication_subscriptions](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md)に行が残されていない場合は、テーブルが削除されます。  

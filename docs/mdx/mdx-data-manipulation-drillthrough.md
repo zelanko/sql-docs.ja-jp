@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ee90d2c367fa289e8255a84e4eb6da19b37933e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68891203"
 ---
 # <a name="mdx-data-manipulation---drillthrough"></a>MDX データ操作 - DRILLTHROUGH
@@ -41,7 +41,7 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
  *Set_of_Attributes_and_Measures*  
  ディメンションの属性とメジャーのコンマ区切りの一覧です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ドリルスルーとは、エンドユーザーがキューブから1つのセルを選択し、より詳細な情報を取得するためにそのセルのソースデータから結果セットを取得する操作です。 既定では、ドリルスルーの結果セットは、選択したキューブ セルの値を計算するために評価されたテーブル行から導き出されます。 エンドユーザーがドリルスルーを行うには、クライアントアプリケーションがこの機能をサポートしている必要があります。 で[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]は、ROLAP パーティションまたはディメンションに対してクエリを実行しない限り、結果は MOLAP ストレージから直接取得されます。  
   
 > [!IMPORTANT]  

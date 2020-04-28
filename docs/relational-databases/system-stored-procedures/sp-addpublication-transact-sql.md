@@ -16,10 +16,10 @@ ms.assetid: c7167ed1-2b7e-4824-b82b-65f4667c4407
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5e6e7232d718d5cf6cb1791783f105f31dc2f4ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769096"
 ---
 # <a name="sp_addpublication-transact-sql"></a>sp_addpublication (Transact-sql)
@@ -83,7 +83,7 @@ sp_addpublication [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ \@publication = ] 'publication'`作成するパブリケーションの名前を指定します。 *publication*は**sysname**,、既定値はありません。 名前はデータベース内で一意である必要があります。  
+`[ \@publication = ] 'publication'`作成するパブリケーションの名前を指定します。 *publication*は**sysname**,、既定値はありません。 名前は、データベース内で一意である必要があります。  
   
 `[ \@taskid = ] taskid`旧バージョンとの互換性のためにのみサポートされています。[sp_addpublication_snapshot &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)を使用します。  
   
@@ -91,19 +91,19 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@sync_method = ] _'sync_method'`は同期モードです。 *sync_method*は**nvarchar (13)** で、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|**な**|すべてのテーブルのネイティブモードの一括コピープログラム出力を生成します。 *Oracle パブリッシャーではサポートされていません*。|  
+|**native**|すべてのテーブルのネイティブモードの一括コピープログラム出力を生成します。 *Oracle パブリッシャーではサポートされていません*。|  
 |**記号**|すべてのテーブルのキャラクターモードの一括コピープログラム出力を生成します。 _Oracle パブリッシャーの場合、_ **文字**_はスナップショットレプリケーションでのみ有効_です。|  
 |**同時**|すべてのテーブルのネイティブモードの一括コピープログラム出力を生成しますが、スナップショット中はテーブルをロックしません。 トランザクションパブリケーションでのみサポートされます。 *Oracle パブリッシャーではサポートされていません*。|  
 |**concurrent_c**|すべてのテーブルのキャラクターモードの一括コピープログラム出力を生成しますが、スナップショット中はテーブルをロックしません。 トランザクションパブリケーションでのみサポートされます。|  
 |**データベーススナップショット**|データベース スナップショットから、すべてのテーブルのネイティブ モードの一括コピー プログラム出力を作成します。 データベーススナップショットは、のすべての[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。|  
 |**database snapshot character**|データベーススナップショットから、すべてのテーブルのキャラクターモードの一括コピープログラム出力を生成します。 データベーススナップショットは、のすべての[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。|  
-|NULL (既定値)|パブリッシャーの**** [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]既定値は native です。 以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーの場合、 *repl_freq*の値が**Snapshot**に設定されている場合は**文字**が既定値になり、それ以外の場合は**concurrent_c**になります。|  
+|NULL (既定値)|パブリッシャーの**native** [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]既定値は native です。 以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーの場合、 *repl_freq*の値が**Snapshot**に設定されている場合は**文字**が既定値になり、それ以外の場合は**concurrent_c**になります。|  
   
 `[ \@repl_freq = ] 'repl_freq'`レプリケーションの頻度の種類を指定します。 *repl_freq*は**nvarchar (10)** で、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**continuous** (既定値)|すべてのログベースのトランザクションの出力をパブリッシュする。 以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーの場合は、 *sync_method*を**concurrent_c**に設定する必要があります。|  
 |**ショット**|スケジュールされた同期イベントのみをパブリッシュする。 以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーの場合は、 *sync_method*を**character**に設定する必要があります。|  
@@ -112,9 +112,9 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@status = ] 'status'`パブリケーションデータを使用できるかどうかを指定します。 *状態*は**nvarchar (8)**,、値は次のいずれかを指定することができます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|**能動的**|サブスクライバーでパブリケーション データを直ちに使用できる。|  
+|**active**|サブスクライバーでパブリケーション データを直ちに使用できる。|  
 |**非アクティブ**(既定)|パブリケーションが最初に作成されたときは、パブリケーションデータを使用できません (サブスクライブすることはできますが、サブスクリプションは処理されません)。|  
   
  *Oracle パブリッシャーではサポートされていません*。  
@@ -131,13 +131,13 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@allow_anonymous = ] 'allow_anonymous'`指定されたパブリケーションに対して匿名サブスクリプションを作成できるかどうかを指定します。 *allow_anonymous*は**nvarchar (5)**,、既定値は FALSE です。 **True**の場合、 *immediate_synchronization*も**true**に設定する必要があります。 **False**の場合、パブリケーションに対して匿名サブスクリプションは許可されません。  
   
-`[ \@allow_sync_tran = ] 'allow_sync_tran'`パブリケーションで即時更新サブスクリプションを許可するかどうかを指定します。 *allow_sync_tran*は**nvarchar (5)**,、既定値は FALSE です。 **** *Oracle パブリッシャーでは、true はサポートされていません*。  
+`[ \@allow_sync_tran = ] 'allow_sync_tran'`パブリケーションで即時更新サブスクリプションを許可するかどうかを指定します。 *allow_sync_tran*は**nvarchar (5)**,、既定値は FALSE です。 **true** *Oracle パブリッシャーでは、true はサポートされていません*。  
   
 `[ \@autogen_sync_procs = ] 'autogen_sync_procs'`更新サブスクリプションの同期ストアドプロシージャがパブリッシャーで生成されるかどうかを指定します。 *autogen_sync_procs*は**nvarchar (5)** で、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|**本来**|更新サブスクリプションが有効になっている場合に自動的に設定します。|  
+|**true**|更新サブスクリプションが有効になっている場合に自動的に設定します。|  
 |**false**|更新サブスクリプションが無効の場合、または Oracle パブリッシャーの場合、自動的に生成される。|  
 |NULL (既定値)|更新サブスクリプションが有効になっている場合の既定値は**true**で、更新サブスクリプションが有効になっていない場合は**false**になります。|  
   
@@ -146,7 +146,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@retention = ] retention`サブスクリプションアクティビティの保有期間を時間単位で示します。 *リテンション期間*は**int**,、既定値は336時間です。 サブスクリプションは、保有期間内に非アクティブになると、期限切れとなって削除されます。 値は、パブリッシャーによって使用されるディストリビューションデータベースの最大保有期間よりも長くすることができます。 **0**の場合、パブリケーションに対する既知のサブスクリプションは有効期限が切れず、有効期限が切れたサブスクリプションクリーンアップエージェントによって削除されます。  
   
-`[ \@allow_queued_tran = ] 'allow_queued_updating'`パブリッシャーで適用できるようになるまで、サブスクライバーでの変更のキュー登録を有効または無効にします。 *allow_queued_updating*は**nvarchar (5)** で、既定値は FALSE です。 **False**の場合、サブスクライバーでの変更はキューに登録されません。 **** *Oracle パブリッシャーでは、true はサポートされていません*。  
+`[ \@allow_queued_tran = ] 'allow_queued_updating'`パブリッシャーで適用できるようになるまで、サブスクライバーでの変更のキュー登録を有効または無効にします。 *allow_queued_updating*は**nvarchar (5)** で、既定値は FALSE です。 **False**の場合、サブスクライバーでの変更はキューに登録されません。 **true** *Oracle パブリッシャーでは、true はサポートされていません*。  
   
 `[ \@snapshot_in_defaultfolder = ] 'snapshot_in_default_folder'`スナップショットファイルを既定のフォルダーに格納するかどうかを指定します。 *snapshot_in_default_folder*は**nvarchar (5)** で、既定値は TRUE です。 **True**の場合、スナップショットファイルは既定のフォルダーにあります。 **False**の場合、スナップショットファイルは*alternate_snapshot_folder*によって指定された別の場所に格納されています。 別のサーバー、ネットワークドライブ、またはリムーバブルメディア (CD-ROM やリムーバブルディスクなど) に別の場所を配置することもできます。 スナップショット ファイルを FTP サイトに保存し、後でサブスクライバーで取得することもできます。 このパラメーターは true であることがありますが、 ** \@alt_snapshot_folder**パラメーターに場所があることに注意してください。 この組み合わせでは、スナップショットファイルが既定の場所と代替の場所の両方に格納されることを指定します。  
   
@@ -170,13 +170,13 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@allow_dts = ] 'allow_dts'`パブリケーションがデータ変換を許可することを指定します。 サブスクリプションを作成するときに DTS パッケージを指定できます。 *allow_transformable_subscriptions*は**nvarchar (5)** で、既定値は FALSE です。この場合、DTS 変換は許可されません。 *Allow_dts*が true の場合、 *sync_method*を**文字**または**concurrent_c**に設定する必要があります。  
   
- **** *Oracle パブリッシャーでは、true はサポートされていません*。  
+ **true** *Oracle パブリッシャーでは、true はサポートされていません*。  
   
 `[ \@allow_subscription_copy = ] 'allow_subscription_copy'`このパブリケーションをサブスクライブするサブスクリプションデータベースをコピーする機能を有効または無効にします。 *allow_subscription_copy*は**nvarchar (5)**,、既定値は FALSE です。  
   
 `[ \@conflict_policy = ] 'conflict_policy'`キュー更新サブスクライバーオプションを使用する場合の競合解決ポリシーを指定します。 *conflict_policy*は**nvarchar (100)** で、既定値は NULL です。次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**pub wins**|パブリッシャーを優先。|  
 |**サブ reinit**|サブスクライバーを再初期化。|  
@@ -191,14 +191,13 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@queue_type = ] 'queue_type'`使用するキューの種類を指定します。 *queue_type*は**nvarchar (10)**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|**sql**|トランザクション[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を格納するために使用します。|  
+|**server**|トランザクション[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を格納するために使用します。|  
 |NULL (既定値)|既定値は**sql**です。これは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、を使用してトランザクションを格納することを指定します。|  
   
 > [!NOTE]  
->  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing (MSMQ) の使用は現在サポートされていません。 **Msmq**の値を指定すると、警告が表示され、レプリケーションによって値が自動的に**sql**に設定されます。  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing (MSMQ) の使用は現在サポートされていません。 **Msmq**の値を指定すると、警告が表示され、レプリケーションによって値が自動的に**sql**に設定されます。  
   
  *Oracle パブリッシャーではサポートされていません*。  
   
@@ -215,18 +214,18 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@allow_initialize_from_backup = ] 'allow_initialize_from_backup'`サブスクライバーが、初期スナップショットではなくバックアップから、このパブリケーションに対するサブスクリプションを初期化できるかどうかを示します。 *allow_initialize_from_backup*は**nvarchar (5)** で、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|**本来**|バックアップからの初期化を有効にする。|  
+|**true**|バックアップからの初期化を有効にする。|  
 |**false**|バックアップからの初期化を無効にします。|  
 |NULL (既定値)|ピアツーピアレプリケーショントポロジのパブリケーションでは、既定値は**true**になり、他のすべてのパブリケーションでは**false**になります。|  
   
- 詳細については、「 [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。  
+ 詳細については、「 [スナップショットを使用しないトランザクション サブスクリプションの初期化](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。  
   
 > [!WARNING]  
 >  サブスクライバー データの欠落を回避するために、 **sp_addpublication** で `@allow_initialize_from_backup = N'true'`を使用する場合は、常に `@immediate_sync = N'true'`を使用します。  
   
-`[ \@replicate_ddl = ] replicate_ddl`パブリケーションでスキーマレプリケーションがサポートされているかどうかを示します。 *replicate_ddl*は**int**,、パブリッシャーの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]既定値は**1** 、 **** 以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーの場合は0です。 **1**は、パブリッシャーで実行されるデータ定義言語 (DDL) ステートメントがレプリケートされることを示し、 **0**は ddl ステートメントがレプリケートされないことを示します。 *スキーマのレプリケーションは、Oracle パブリッシャーに対してはサポートされていません。* 詳細については、「[パブリケーション データベースでのスキーマの変更](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)」を参照してください。  
+`[ \@replicate_ddl = ] replicate_ddl`パブリケーションでスキーマレプリケーションがサポートされているかどうかを示します。 *replicate_ddl*は**int**,、パブリッシャーの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]既定値は**1** 、 **0**以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーの場合は0です。 **1**は、パブリッシャーで実行されるデータ定義言語 (DDL) ステートメントがレプリケートされることを示し、 **0**は ddl ステートメントがレプリケートされないことを示します。 *スキーマのレプリケーションは、Oracle パブリッシャーに対してはサポートされていません。* 詳細については、「[パブリケーション データベースでのスキーマの変更](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)」を参照してください。  
   
  * \@Replicate_ddl*パラメーターは、ddl ステートメントによって列が追加されるときに受け入れられます。 Ddl ステートメントが列を変更または削除するときに、次の理由により、 * \@replicate_ddl*パラメーターは無視されます。  
   
@@ -317,7 +316,7 @@ sp_addpublication [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_addpublication**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
  同じデータベースオブジェクトをパブリッシュする複数のパブリケーションが存在する場合は、 *replicate_ddl*値が**1**のパブリケーションだけが ALTER TABLE、ALTER VIEW、ALTER PROCEDURE、ALTER FUNCTION、および alter TRIGGER ddl ステートメントをレプリケートします。 ただし、ALTER TABLE DROP COLUMN DDL ステートメントは、削除された列をパブリッシュしているすべてのパブリケーションによってレプリケートされます。  
@@ -338,6 +337,6 @@ sp_addpublication [ @publication = ] 'publication'
  [sp_helppublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
  [sp_replicationdboption &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   
  [データとデータベースオブジェクトのパブリッシュ](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

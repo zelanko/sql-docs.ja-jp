@@ -21,10 +21,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d45436070618e446921c610a9e82b0cc35271c8d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265913"
 ---
 # <a name="sysdm_fts_memory_pools-transact-sql"></a>dm_fts_memory_pools (Transact-sql)
@@ -32,7 +32,7 @@ ms.locfileid: "68265913"
 
   フルテキストクロールまたはフルテキストクロールの範囲でフルテキスト Gatherer コンポーネントで使用できる共有メモリプールに関する情報を返します。  
    
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**pool_id**|**int**|割り当てられたメモリプールの ID。<br /><br /> 0 = 小さいバッファー<br /><br /> 1 = 大きいバッファー|  
 |**buffer_size**|**int**|メモリ プール内に割り当てられた各バッファーのサイズ。|  
@@ -50,11 +50,11 @@ Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、デー
   
 ## <a name="relationship-cardinalities"></a>リレーションシップ基数  
   
-|移行元|To|リレーションシップ|  
+|ソース|終了|リレーションシップ|  
 |----------|--------|------------------|  
 |dm_fts_memory_buffers。 pool_id|dm_fts_memory_pools.pool_id|多対一|  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、[!INCLUDE[msCoName](../../includes/msconame-md.md)] プロセスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フルテキスト Gatherer コンポーネントが所有する共有メモリの合計を返します。  
   
 ```  

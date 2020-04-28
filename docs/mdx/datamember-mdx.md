@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 4395f0ff113c8549ec2250d5fa87d37090627b3c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892910"
 ---
 # <a name="datamember-mdx"></a>DataMember (MDX)
@@ -31,7 +31,7 @@ Member_Expression.DataMember
  *Member_Expression*  
  メンバーを 1 つ返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この関数は、任意の階層の非リーフメンバーに対して動作し、 [UPDATE CUBE ステートメント (MDX)](../mdx/mdx-data-manipulation-update-cube.md)コマンドで使用して、リーフメンバーの子孫ではなく、非リーフメンバーに直接データを書き戻すことができます。  
   
 > [!NOTE]  
@@ -51,6 +51,6 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>参照  
  [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
- [MDX &#40;Analysis Services の主な概念&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)  
+ [MDX の主な概念 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)  
   
   

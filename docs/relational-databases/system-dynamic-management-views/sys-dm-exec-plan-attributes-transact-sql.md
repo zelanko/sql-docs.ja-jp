@@ -19,10 +19,10 @@ ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4b6e5b28612efccafa9e2de0606eef821e341081
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68255600"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
@@ -44,7 +44,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |属性 (attribute)|**varchar(128)**|このプランに関連付けられている属性の名前。 このテーブルのすぐ下の表は、使用可能な属性とそのデータ型とその説明を示しています。|  
 |value|**sql_variant**|このプランに関連付けられている属性の値。|  
@@ -52,7 +52,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 
 上記の表では、**属性**の値は次のようになります。
 
-|Attribute|データ型|[説明]|  
+|属性|データ型|説明|  
 |---------------|---------------|-----------------|  
 |set_options|**int**|プランをコンパイルしたオプションの値を示します。|  
 |objectid|**int**|キャッシュ内のオブジェクトを検索するために使用される主キーの1つ。 これは、データベースオブジェクト (プロシージャ、ビュー、トリガーなど) のために、 [sys. オブジェクト](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)に格納されているオブジェクト ID です。 "アドホック プラン" または "準備されたプラン" では、バッチ テキストの内部ハッシュです。|  
@@ -64,8 +64,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |date_first|**tinyint**|日付の最初の値。 詳しくは、「[SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md)」をご覧ください。|  
 |status|**int**|キャッシュ参照キーの一部である内部ステータス ビットです。|  
 |required_cursor_options|**int**|カーソルの種類など、ユーザーによって指定されたカーソルオプション。|  
-|acceptable_cursor_options|**int**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がステートメントの実行をサポートするために暗黙的に変換できるカーソル オプションです。 たとえば、ユーザーは動的カーソルを指定することができますが、クエリオプティマイザーでは、このカーソルの種類を静的カーソルに変換することが許可されています。|  
+|acceptable_cursor_options|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がステートメントの実行をサポートするために暗黙的に変換できるカーソル オプションです。 たとえば、ユーザーは動的カーソルを指定することができますが、クエリオプティマイザーでは、このカーソルの種類を静的カーソルに変換することが許可されています。|  
 |inuse_exec_context|**int**|クエリプランを使用している現在実行中のバッチの数。|  
 |free_exec_context|**int**|現在使用されていないクエリプランのキャッシュされた実行コンテキストの数。|  
 |hits_exec_context|**int**|実行コンテキストがプランキャッシュから取得され再利用された回数。これにより、SQL ステートメントを再コンパイルするオーバーヘッドが削減されます。 この値は、これまでのすべてのバッチ実行の集計です。|  
@@ -84,7 +83,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 で[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]は、 `VIEW SERVER STATE`権限が必要です。   
 Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、データベース`VIEW DATABASE STATE`の権限が必要です。 Standard [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
 
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="set-options"></a>SET オプション  
  同じコンパイル済みプランのコピーは、 **set_options**列の値によってのみ異なる場合があります。 これは、異なる接続が同じクエリに対して異なる SET オプションセットを使用していることを示します。 通常、異なるオプション セットを使用することは望ましくありません。異なるオプション セットを使用すると、余分なコンパイルが発生し、プランの再利用が減少して、キャッシュ内にプランの複数のコピーが存在することが原因でプラン キャッシュが増加します。  
@@ -92,9 +91,9 @@ Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、デー
 ### <a name="evaluating-set-options"></a>Set オプションの評価  
  **Set_options**に返された値を、プランをコンパイルしたオプションに変換するには、 **set_options**値から値を減算します。値の最大値は、可能な限り多く、0に達するまで続きます。 減算する各値は、クエリ プランに使用されたオプションに対応しています。 たとえば、 **set_options**の値が251の場合、プランをコンパイルしたオプションは ANSI_NULL_DFLT_ON (128)、QUOTED_IDENTIFIER (64)、ANSI_NULLS (32)、ANSI_WARNINGS (16)、CONCAT_NULL_YIELDS_NULL (8)、並列プラン (2)、および ANSI_PADDING (1) になります。  
   
-|オプション|Value|  
+|オプション|値|  
 |------------|-----------|  
-|ANSI_PADDING|1 で保護されたプロセスとして起動されました|  
+|ANSI_PADDING|1|  
 |Parallel Plan|2|  
 |FORCEPLAN|4|  
 |CONCAT_NULL_YIELDS_NULL|8|  
@@ -120,10 +119,10 @@ Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、デー
 ### <a name="evaluating-cursor-options"></a>カーソルオプションの評価  
  **Acceptable_cursor_options** **required_cursor_options**に返された値を、プランをコンパイルしたオプションに変換するには、列の値から、可能な最大値から順に、0に達するまで値を減算します。 減算する各値は、クエリ プランに使用されたカーソル オプションに対応しています。  
   
-|オプション|Value|  
+|オプション|値|  
 |------------|-----------|  
-|なし|0|  
-|INSENSITIVE|1 で保護されたプロセスとして起動されました|  
+|None|0|  
+|INSENSITIVE|1|  
 |SCROLL|2|  
 |READ ONLY|4|  
 |FOR UPDATE|8|  
@@ -168,11 +167,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [実行関連の動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [dm_exec_cached_plans &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
- [データベース &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
+ [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   
   
 

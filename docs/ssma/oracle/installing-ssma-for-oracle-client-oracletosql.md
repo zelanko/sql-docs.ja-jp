@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: fc295e108357040617bf6bdaa1af61fada2c97ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68259678"
 ---
 # <a name="installing-ssma-for-oracle-client-oracletosql"></a>SSMA for Oracle クライアントのインストール (OracleToSQL)
@@ -24,8 +24,7 @@ SSMA クライアントは、次のタスクを実行するプログラムファ
   
 -   Oracle データベースに接続します。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続する。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続する。  
   
 -   Oracle データベースオブジェクトを構文[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に変換します。  
   
@@ -71,8 +70,7 @@ SSMA は Web からダウンロードできます。 最新バージョンをダ
   
 4.  [セットアップの種類の選択] ページで、[**標準**] をクリックします。  
   
-5.  
-  **[インストール]** をクリックします。  
+5.  **[インストール]** をクリックします。  
   
 > [!IMPORTANT]  
 > 1.  新しいバージョンをインストールする前に、SSMA for Oracle の以前のバージョンをすべてアンインストールしてください。  

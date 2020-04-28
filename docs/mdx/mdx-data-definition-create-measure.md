@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 02c6d29bbebcc794e72f4ca960e3d9259de7205b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892142"
 ---
 # <a name="mdx-data-definition---create-measure"></a>MDX データ操作 - CREATE MEASURE
@@ -39,7 +39,7 @@ CREATE MEASURE Table_Name[Measure_Name] = DAX_Expression
  *DAX_Expression*  
  1つのスカラー値を返す有効な DAX 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  *Measure_Name*は、角かっこで囲む必要があります。  
   
  CREATE MEASURE ステートメントは、MDX スクリプト定義内でのみ使用できます。「 [MdxScript 要素 &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/mdxscript-element-assl)」を参照してください。  

@@ -16,10 +16,10 @@ ms.assetid: 09fec594-53f4-48a5-8edb-c50731c7adb2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 882c57c552d9666ec3ef308f63a6c5058c21e8e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68768931"
 ---
 # <a name="sp_droparticle-transact-sql"></a>sp_droparticle (Transact-SQL)
@@ -57,14 +57,14 @@ sp_droparticle [ @publication= ] 'publication'
 `[ @publisher = ] 'publisher'`以外[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のパブリッシャーを指定します。 *publisher*は**sysname**で、既定値は NULL です。  
   
 > [!NOTE]  
->  ** パブリッシャーでアーティクルの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロパティを変更する場合は、パブリッシャーを使用しないでください。  
+>  *publisher*パブリッシャーでアーティクルの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロパティを変更する場合は、パブリッシャーを使用しないでください。  
   
 `[ @from_drop_publication = ] from_drop_publication` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_droparticle**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
  行方向にフィルター選択されたアーティクルの場合、 **sp_droparticle** [&#40;transact-sql&#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md)テーブルのアーティクルの**type**列をチェックして、ビューまたはフィルターも削除する必要があるかどうかを判断します。 ビューまたはフィルターが自動生成された場合は、アーティクルによって削除されます。 手動で作成された場合は、削除されません。  
@@ -84,6 +84,6 @@ sp_droparticle [ @publication= ] 'publication'
  [sp_changearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
  [sp_helparticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
  [sp_helparticlecolumns &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)   
- [レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

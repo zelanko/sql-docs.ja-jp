@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d722d3b54c2f0b6d73660e2195aed4039e1eda2c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771085"
 ---
 # <a name="sp_helpconstraint-transact-sql"></a>sp_helpconstraint (Transact-SQL)
@@ -51,11 +51,11 @@ sp_helpconstraint [ @objname = ] 'table'
 ## <a name="result-sets"></a>結果セット  
  **sp_helpconstraint**は、主キーに参加している場合は、降順のインデックス列を表示します。 降順のインデックス付き列は、名前の後にマイナス記号 (-) を付けて結果セットに一覧表示されます。 既定の昇順のインデックス付き列は、名前だけで一覧表示されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Sp_help**_テーブル_を実行すると、指定したテーブルに関するすべての情報が報告されます。 制約情報のみを表示するには、 **sp_helpconstraint**を使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Public**ロールのメンバーシップが必要です。  
+ ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>例  
  この例では、`Product` テーブルの制約をすべて表示します。  
@@ -68,9 +68,9 @@ EXEC sp_helpconstraint 'Production.Product';
   
 ## <a name="see-also"></a>参照  
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [ALTER TABLE &#40;Transact-sql&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [CREATE TABLE &#40;Transact-sql&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [sp_help &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
+ [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
+ [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
+ [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [key_constraints &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)   
  [check_constraints &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)   

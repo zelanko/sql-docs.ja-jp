@@ -16,10 +16,10 @@ ms.assetid: 738e2322-335b-44fa-820e-f31c02743978
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 40477973efebac9a484e89e7627f0996285b430b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68770861"
 ---
 # <a name="sp_repltrans-transact-sql"></a>sp_repltrans (Transact-sql)
@@ -39,7 +39,7 @@ sp_repltrans
 ## <a name="result-sets"></a>結果セット  
  **sp_repltrans**は、実行元のパブリケーションデータベースに関する情報を返します。これにより、現在ディストリビュートされていないトランザクション (つまり、ディストリビューターにまだ送信されていないトランザクションログに残っているトランザクション) を表示できます。 結果セットは、各トランザクションの最初と最後のレコードのログ シーケンス番号を表示します。 **sp_repltrans**は[sp_replcmds &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)に似ていますが、トランザクションのコマンドは返されません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_repltrans**は、トランザクションレプリケーションで使用します。  
   
  **sp_repltrans**は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外のパブリッシャーではサポートされていません。  
@@ -50,6 +50,6 @@ sp_repltrans
 ## <a name="see-also"></a>参照  
  [sp_repldone &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
  [sp_replflush &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

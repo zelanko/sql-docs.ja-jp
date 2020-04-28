@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 523c57811ca29956edc3c18b8143844732c163b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892390"
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance (DMX)
@@ -33,7 +33,7 @@ ClusterDistance([<ClusterID expression>])
 ## <a name="return-type"></a>戻り値の型  
  スカラー値。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Clusterdistance**関数は、入力したケースと、その入力ケースの確率が最も高いクラスターとの距離を返します。  
   
  K がクラスター化されている場合、いずれのケースも1つのクラスターに属することができますが、メンバーシップの重みは1.0 であるため、クラスターの距離は常に0になります。 ただし、K-Means では、各クラスターに重心があると想定されています。 階層の値を取得するには、マイニングモデルコンテンツ内の入れ子になったテーブル NODE_DISTRIBUTION を照会または参照します。 詳細については、「 [クラスター モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)」を参照してください。  
@@ -42,7 +42,7 @@ ClusterDistance([<ClusterID expression>])
   
  ClusterDistance (N) = 1-(メンバーシップの重み (N))  
   
- または   
+ または:  
   
  ClusterDistance (N) = 1-Clusterdistance (N))  
   
@@ -75,7 +75,7 @@ NATURAL PREDICTION JOIN
   
  結果の例:  
   
-|式|  
+|正規表現|  
 |----------------|  
 |0.0477390930705145|  
   
@@ -128,6 +128,6 @@ NATURAL PREDICTION JOIN
  [DMX&#41;のクラスター &#40;](../dmx/cluster-dmx.md)   
  [DMX&#41; 関数リファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [DMX&#41;&#40;関数](../dmx/functions-dmx.md)   
- [クラスターモデルのマイニングモデルコンテンツ &#40;Analysis Services データマイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)  
+ [クラスター モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)  
   
   

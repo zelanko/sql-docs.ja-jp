@@ -27,10 +27,10 @@ ms.assetid: dd7760db-a3a5-460f-bd97-b8d436015e19
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 82b333095adfaf50220e5d2392114e3ab74bf822
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771287"
 ---
 # <a name="sp_check_dynamic_filters-transact-sql"></a>sp_check_dynamic_filters (Transact-SQL)
@@ -52,7 +52,7 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**can_use_partition_groups**|**bit**|パブリケーションが事前計算済みパーティションを使用するように修飾されているかどうかを示します。**1**は事前計算済みパーティションを使用できることを示し、 **0**は使用できないことを示します。|  
 |**has_dynamic_filters**|**bit**|1つ以上のパラメーター化された行フィルターがパブリケーションで定義されているかどうかを示します。**1**は、1つまたは複数のパラメーター化された行フィルターが存在することを示し、 **0**は動的フィルターが存在しないことを示します。|  
@@ -64,7 +64,7 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_check_dynamic_filters**は、マージレプリケーションで使用します。  
   
  事前計算済みパーティションを使用するようにパブリケーションが定義されている場合、 **sp_check_dynamic_filters**は、事前計算済みパーティションの制限に違反していないかどうかを確認します。 見つかった場合は、エラーが返されます。 詳細については、「[事前計算済みパーティションによるパラメーター化されたフィルターのパフォーマンス最適化](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)」を参照してください。  

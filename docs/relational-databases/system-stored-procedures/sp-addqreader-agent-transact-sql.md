@@ -16,10 +16,10 @@ ms.assetid: dc9f591a-e67e-4ba8-bf47-defd5eda0822
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a02082715dfc77384ebfde58d4c29f94cd3dd44c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769071"
 ---
 # <a name="sp_addqreader_agent-transact-sql"></a>sp_addqreader_agent (Transact-SQL)
@@ -54,7 +54,7 @@ sp_addqreader_agent [ @job_login = ] 'job_login'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_addqreader_agent**は、トランザクションレプリケーションで使用します。  
   
  **sp_addqreader_agent**は、 [sp_adddistributiondb](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)後のキュー更新をサポートするディストリビューターで少なくと[sp_addpublication](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)も1回実行する必要があります。  

@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ade6ffc213d570fcb7da965cf73f43e2db335d17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69561127"
 ---
 # <a name="syssql_expression_dependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
@@ -46,15 +46,15 @@ ms.locfileid: "69561127"
   
 -   サーバーレベルの DDL トリガーは、master データベースのコンテキストで発生します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |referencing_id|**int**|参照元エンティティの ID。 NULL 値は許可されません。|  
 |referencing_minor_id|**int**|参照元エンティティが列の場合は列 ID。それ以外の場合は 0。 NULL 値は許可されません。|  
 |referencing_class|**tinyint**|参照元エンティティのクラス。<br /><br /> 1 = オブジェクトまたは列<br /><br /> 12 = データベース DDL トリガー<br /><br /> 13 = サーバー DDL トリガー<br /><br /> NULL 値は許可されません。|  
-|referencing_class_desc|**nvarchar (60)**|参照元エンティティのクラスの説明。<br /><br /> OBJECT_OR_COLUMN<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER<br /><br /> NULL 値は許可されません。|  
+|referencing_class_desc|**nvarchar(60)**|参照元エンティティのクラスの説明。<br /><br /> OBJECT_OR_COLUMN<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER<br /><br /> NULL 値は許可されません。|  
 |is_schema_bound_reference|**bit**|1 = 参照先エンティティはスキーマにバインドされています。<br /><br /> 0 = 参照先エンティティは非スキーマバインドです。<br /><br /> NULL 値は許可されません。|  
 |referenced_class|**tinyint**|参照先エンティティのクラス。<br /><br /> 1 = オブジェクトまたは列<br /><br /> 6 = 型<br /><br /> 10 = XML スキーマ コレクション<br /><br /> 21 = パーティション関数<br /><br /> NULL 値は許可されません。|  
-|referenced_class_desc|**nvarchar (60)**|参照先エンティティのクラスの説明です。<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION<br /><br /> NULL 値は許可されません。|  
+|referenced_class_desc|**nvarchar(60)**|参照先エンティティのクラスの説明です。<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION<br /><br /> NULL 値は許可されません。|  
 |referenced_server_name|**sysname**|参照先エンティティのサーバー名。<br /><br /> この列には、有効な4部構成の名前を指定することによって実行されるサーバー間の依存関係が設定されます。 マルチパート名の詳細については、「transact-sql[構文表記規則 &#40;transact-sql&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)」を参照してください。<br /><br /> 4 部構成の名前を指定せずにエンティティが参照される非スキーマ バインド エンティティの場合は NULL。<br /><br /> スキーマバインドエンティティの場合は NULL。同じデータベース内に存在する必要があるため、2つの部分 (*schema. object*) 名を使用してのみ定義できます。|  
 |referenced_database_name|**sysname**|参照先エンティティのデータベース名。<br /><br /> 有効な 3 部構成または 4 部構成の名前を指定することによって作成された複数データベースまたは複数サーバーにまたがる参照については、この列に値が格納されます。<br /><br /> 1部構成または2部構成の名前を使用して指定した場合、非スキーマバインド参照の場合は NULL になります。<br /><br /> スキーマバインドエンティティの場合は NULL。同じデータベース内に存在する必要があるため、2つの部分 (*schema. object*) 名を使用してのみ定義できます。|  
 |referenced_schema_name|**sysname**|参照先エンティティが属しているスキーマ。<br /><br /> スキーマ名を指定せずにエンティティが参照される非スキーマ バインド参照の場合は NULL。<br /><br /> スキーマ バインド エンティティは 2 つの部分で構成される名前を使用して定義および参照する必要があるので、スキーマ バインド参照の場合、NULL にすることはできません。|  
@@ -62,10 +62,9 @@ ms.locfileid: "69561127"
 |referenced_id|**int**|参照先エンティティの ID。 スキーマバインド参照の場合、この列の値は NULL になりません。 サーバー間およびデータベース間の参照の場合、この列の値は常に NULL になります。<br /><br /> ID を特定できない場合は、データベース内の参照に対して NULL が使用されます。 非スキーマバインド参照の場合、次の場合に ID を解決することはできません。<br /><br /> 参照先エンティティがデータベースに存在しません。<br /><br /> 参照先エンティティのスキーマが呼び出し元に依存し、実行時に解決される。 この場合、is_caller_dependent は 1 に設定されます。|  
 |referenced_minor_id|**int**|参照元エンティティが列の場合は参照される列の ID。それ以外の場合は 0。 NULL 値は許可されません。<br /><br /> 参照元エンティティの中で列が名前で指定されていた場合、または SELECT * ステートメントの中で親エンティティが使用されていた場合、参照先エンティティは列になります。|  
 |is_caller_dependent|**bit**|参照先エンティティのスキーマ バインドが実行時に行われるため、エンティティ ID の解決が呼び出し元のスキーマに依存することを示します。 このエラーは、参照先エンティティがストアドプロシージャ、拡張ストアドプロシージャ、または EXECUTE ステートメントで呼び出された非スキーマバインドユーザー定義関数である場合に発生します。<br /><br /> 1 = 参照先エンティティは呼び出し元に依存し、実行時に解決されます。 この場合、referenced_id は NULL です。<br /><br /> 0 = 参照先エンティティ ID は、呼び出し元に依存しません。<br /><br /> スキーマ バインド参照のほか、スキーマ名を明示的に指定するデータベース間参照やサーバー間参照の場合は常に 0 になります。 たとえば、`EXEC MyDatabase.MySchema.MyProc` 形式のエンティティ参照は呼び出し元に依存しません。 ただし、形式`EXEC MyDatabase..MyProc`の参照は呼び出し元に依存します。|  
-|is_ambiguous|**bit**|参照があいまいであり、実行時にユーザー定義関数、ユーザー定義型 (UDT)、または**xml**型の列への xquery 参照に解決できることを示します。<br /><br /> たとえば、ストアドプロシージャでステートメント`SELECT Sales.GetOrder() FROM Sales.MySales`が定義されているとします。 
-  `Sales.GetOrder()` が `Sales` スキーマ内のユーザー定義関数なのか、`Sales` という名前のメソッドを持つ UDT 型の `GetOrder()` という名前の列なのかは、ストアド プロシージャが実行されるまで不明です。<br /><br /> 1 = 参照があいまいです。<br /><br /> 0 = 参照は明確です。または、ビューが呼び出されたときにエンティティを正常にバインドできます。<br /><br /> スキーマバインド参照の場合は常に0です。|  
+|is_ambiguous|**bit**|参照があいまいであり、実行時にユーザー定義関数、ユーザー定義型 (UDT)、または**xml**型の列への xquery 参照に解決できることを示します。<br /><br /> たとえば、ストアドプロシージャでステートメント`SELECT Sales.GetOrder() FROM Sales.MySales`が定義されているとします。 `Sales.GetOrder()` が `Sales` スキーマ内のユーザー定義関数なのか、`Sales` という名前のメソッドを持つ UDT 型の `GetOrder()` という名前の列なのかは、ストアド プロシージャが実行されるまで不明です。<br /><br /> 1 = 参照があいまいです。<br /><br /> 0 = 参照は明確です。または、ビューが呼び出されたときにエンティティを正常にバインドできます。<br /><br /> スキーマバインド参照の場合は常に0です。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  次の表に、依存関係情報が作成および管理されるエンティティの種類を示します。 依存関係情報は、ルール、既定値、一時テーブル、一時ストアドプロシージャ、またはシステムオブジェクトに対して作成または管理されません。  
 
 > [!NOTE]
@@ -77,16 +76,14 @@ ms.locfileid: "69561127"
 |表示|はい|はい|  
 |フィルター選択されたインデックス|可**|いいえ|  
 |フィルター選択された統計情報|可**|いいえ|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)]ストアドプロシージャ * * *|はい|はい|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャ***|はい|はい|  
 |CLR ストアド プロシージャ (CLR stored procedure)|いいえ|はい|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)]ユーザー定義関数|はい|はい|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] ユーザー定義関数|はい|はい|  
 |CLR ユーザー定義関数|いいえ|はい|  
 |CLR トリガー (DML および DDL)|いいえ|いいえ|  
-|
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] DML トリガー|はい|いいえ|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML トリガー|はい|いいえ|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)]データベースレベルの DDL トリガー|はい|いいえ|  
-|
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] サーバー レベルの DDL トリガー|はい|いいえ|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] サーバー レベルの DDL トリガー|はい|いいえ|  
 |拡張ストアド プロシージャ|いいえ|はい|  
 |キュー|いいえ|はい|  
 |シノニム|いいえ|はい|  
@@ -127,8 +124,7 @@ GO
 ```  
   
 ### <a name="b-returning-entities-that-reference-another-entity"></a>B. 別のエンティティを参照するエンティティを取得する  
- 次の例では、テーブル `Production.Product` を参照するエンティティを取得します。 
-  `referencing_entity_name` 列に返されるエンティティは、`Product` テーブルに依存します。  
+ 次の例では、テーブル `Production.Product` を参照するエンティティを取得します。 `referencing_entity_name` 列に返されるエンティティは、`Product` テーブルに依存します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -176,7 +172,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [dm_sql_referenced_entities &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
- [dm_sql_referencing_entities &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)  
+ [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
+ [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)  
   
   

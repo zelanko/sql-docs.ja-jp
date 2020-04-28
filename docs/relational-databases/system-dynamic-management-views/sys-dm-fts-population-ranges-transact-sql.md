@@ -21,10 +21,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f00de77ef3435bf998f9019fc8b60458594fb0f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265903"
 ---
 # <a name="sysdm_fts_population_ranges-transact-sql"></a>dm_fts_population_ranges (Transact-sql)
@@ -32,7 +32,7 @@ ms.locfileid: "68265903"
 
   現在実行中のフルテキストインデックスの作成に関連する特定の範囲に関する情報を返します。  
    
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**memory_address**|**varbinary (8)**|フルテキストインデックスの作成のこの部分範囲に関連するアクティビティに割り当てられたメモリバッファーのアドレス。|  
 |**parent_memory_address**|**varbinary (8)**|フルテキスト インデックス設定に関連するすべての範囲の親オブジェクトを表すメモリ バッファーのアドレス。|  
@@ -51,7 +51,7 @@ Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、デー
   
 ## <a name="relationship-cardinalities"></a>リレーションシップ基数  
   
-|移行元|To|リレーションシップ|  
+|ソース|終了|リレーションシップ|  
 |----------|--------|------------------|  
 |dm_fts_population_ranges。 parent_memory_address|dm_fts_index_population.memory_address|多対一|  
   

@@ -16,10 +16,10 @@ ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 79bca732108776b66a2e5750015a27e5931b617a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69028953"
 ---
 # <a name="sp_addpullsubscription_agent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
@@ -130,13 +130,13 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @frequency_type = ] frequency_type`ディストリビューションエージェントをスケジュールする頻度を指定します。 *frequency_type*は**int**,、値は次のいずれかを指定することができます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|1 回|  
 |**2** (既定値)|オン デマンド|  
 |**4**|毎日|  
 |**8**|週単位|  
-|**まで**|月単位|  
+|**まで**|月 1 回|  
 |**32**|月単位の相対|  
 |**64**|自動開始|  
 |**128**|繰り返し|  
@@ -148,7 +148,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`ディストリビューションエージェントの日付を指定します。 このパラメーターは、 *frequency_type*が**32** (月単位) に設定されている場合に使用されます。 *frequency_relative_interval*は**int**,、値は次のいずれかを指定することができます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**1** (既定値)|First (先頭へ)|  
 |**2**|秒|  
@@ -160,7 +160,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @frequency_subday = ] frequency_subday`定義した期間中に再スケジュールする頻度を指定します。 *frequency_subday*は**int**,、値は次のいずれかを指定することができます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**1** (既定値)|1 度|  
 |**2**|秒|  
@@ -230,7 +230,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_addpullsubscription_agent**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
 ## <a name="example"></a>例  
@@ -240,12 +240,12 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
  **Sp_addpullsubscription_agent**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
- [プルサブスクリプションを作成する](../../relational-databases/replication/create-a-pull-subscription.md)   
- [パブリケーションをサブスクライブする](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addpullsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
  [sp_change_subscription_properties &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
  [sp_droppullsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
  [sp_helppullsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
- [sp_helpsubscription_properties &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
+ [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

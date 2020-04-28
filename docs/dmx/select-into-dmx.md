@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a2e9fb0dfd3607adc1773d4a43561f32ba650ee5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68887680"
 ---
 # <a name="select-into-dmx"></a>SELECT INTO (DMX)
@@ -37,15 +37,15 @@ FROM <existing model>
  プロバイダーによって定義された、データ マイニング アルゴリズムの名前です。  
   
  *パラメーターリスト*  
- 省略可能。 アルゴリズムに対してプロバイダーが定義したパラメーターのコンマ区切りのリスト。  
+ 任意。 アルゴリズムに対してプロバイダーが定義したパラメーターのコンマ区切りのリスト。  
   
- *条件*  
+ *式 (expression)*  
  トレーニングデータの有効なフィルター条件に評価される式。 フィルターとして使用できる式の詳細については、「 [Analysis Services データマイニング&#41;&#40;マイニングモデルのフィルター ](https://docs.microsoft.com/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining)」を参照してください。  
   
  *既存のモデル*  
  コピーする既存のモデルの名前。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  既存のモデルがトレーニングされている場合は、このステートメントの実行時に新しいモデルが自動的に処理されます。 学習済みではない場合、新しいモデルは処理されないままとなります。  
   
  **SELECT INTO**ステートメントは、既存のモデルの構造が新しいモデルのアルゴリズムと互換性がある場合にのみ機能します。 このため、このステートメントは、同じアルゴリズムに基づくモデルを迅速に作成およびテストする場合に最も役立ちます。 アルゴリズムの種類を変更する場合、新しいアルゴリズムでは、既存のモデル内の各列のデータ型をサポートする必要があります。または、モデルの処理時にエラーが発生する可能性があります。  
@@ -76,6 +76,6 @@ FROM [TM Clustering]
 ## <a name="see-also"></a>参照  
  [DMX&#41; データ定義ステートメント &#40;のデータマイニング拡張機能](../dmx/dmx-statements-data-definition.md)   
  [DMX&#41; データ操作ステートメントを &#40;データマイニング拡張機能](../dmx/dmx-statements-data-manipulation.md)   
- [DMX&#41; ステートメントリファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-statements.md)  
+ [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

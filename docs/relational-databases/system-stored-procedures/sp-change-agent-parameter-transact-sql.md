@@ -16,10 +16,10 @@ ms.assetid: f1fbecc7-e64f-405c-8067-6b38c1f3c0a0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cd737be5a1e71e46750f6c80fd68ad254cb6436f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68768944"
 ---
 # <a name="sp_change_agent_parameter-transact-sql"></a>sp_change_agent_parameter (Transact-SQL)
@@ -58,7 +58,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **MaxNetworkOptimization**  
   
--   **Output**  
+-   **出力**  
   
 -   **OutputVerboseLevel**  
   
@@ -78,7 +78,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **MessageInterval**  
   
--   **Output**  
+-   **出力**  
   
 -   **OutputVerboseLevel**  
   
@@ -114,7 +114,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **MessageInterval**  
   
--   **Output**  
+-   **出力**  
   
 -   **OutputVerboseLevel**  
   
@@ -178,7 +178,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **NumDeadlockRetries**  
   
--   **Output**  
+-   **出力**  
   
 -   **OutputMessageFile**  
   
@@ -216,7 +216,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **UseInprocLoader**  
   
--   **検証**  
+-   **妥当性**  
   
 -   **ValidateInterval**  
   
@@ -226,7 +226,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **LoginTimeout**  
   
--   **Output**  
+-   **出力**  
   
 -   **OutputVerboseLevel**  
   
@@ -245,7 +245,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_change_agent_parameter**は、すべての種類のレプリケーションで使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -261,6 +261,6 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
  [sp_add_agent_parameter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
  [sp_drop_agent_parameter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   
  [sp_help_agent_parameter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

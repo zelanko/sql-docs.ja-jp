@@ -18,10 +18,10 @@ ms.assetid: f9141850-a62b-43bf-8e46-b2f92b75ca56
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 670b64cb107610fe8b5506654b9e655b0da5fb16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68794716"
 ---
 # <a name="sp_prepexec-transact-sql"></a>sp_prepexec (Transact-sql)
@@ -52,7 +52,7 @@ sp_prepexec handle OUTPUT, params , stmt
  *bound_param*  
  追加パラメーターをオプションで使用することを示します。 *bound_param*は、使用する追加パラメーターを指定するために、任意のデータ型の入力値を呼び出します。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、単純なステートメントを準備して実行します。  
   
 ```  
@@ -66,8 +66,8 @@ EXEC sp_prepexec @Out output,
 EXEC sp_unprepare @Out;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_prepare &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
  [sp_execute &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-execute-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

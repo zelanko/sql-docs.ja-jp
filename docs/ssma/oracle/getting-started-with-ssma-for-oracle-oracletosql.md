@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: ef71a9355bc11c4d377f00a44b2b8cd2958f8656
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264455"
 ---
 # <a name="getting-started-with-ssma-for-oracle-oracletosql"></a>SSMA for Oracle 入門 (OracleToSQL)
@@ -84,24 +84,24 @@ SSMA には、[プロジェクト] ツールバーと [移行] ツールバー�
 #### <a name="migration-toolbar"></a>移行ツールバー  
 次の表は、移行ツールバーのコマンドを示しています。  
   
-|ボタン|Function|  
+|Button|関数|  
 |------|--------|  
 |**レポートの作成**|選択した Oracle オブジェクトを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]構文に変換し、変換が成功したかどうかを示すレポートを作成します。<br /><br />このコマンドは、Oracle メタデータエクスプローラーでオブジェクトが選択されていない限り、無効になっています。|  
 |**スキーマの変換**|選択した Oracle オブジェクトを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オブジェクトに変換します。<br /><br />このコマンドは、Oracle メタデータエクスプローラーでオブジェクトが選択されていない限り、無効になっています。|  
 |**データの移行**|Oracle データベースのデータをに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移行します。 このコマンドを実行する前に、Oracle スキーマをスキーマに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]変換し、オブジェクトをに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]読み込む必要があります。<br /><br />このコマンドは、Oracle メタデータエクスプローラーでオブジェクトが選択されていない限り、無効になっています。|  
-|**停止**|現在のプロセスを停止します。|  
+|**Stop**|現在のプロセスを停止します。|  
   
 ### <a name="menus"></a>メニュー  
 SSMA メニューを次の表に示します。  
   
-|メニュー|[説明]|  
+|メニュー|説明|  
 |----|-----------|  
-|**拡張子**|プロジェクトを操作したり、Oracle に接続したり、に接続[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]したりするためのコマンドが含まれています。|  
+|**[最近使ったファイル]**|プロジェクトを操作したり、Oracle に接続したり、に接続[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]したりするためのコマンドが含まれています。|  
 |**[編集]**|[SQL の詳細] ペインからコピー [!INCLUDE[tsql](../../includes/tsql-md.md)]するなど、詳細ページ内のテキストを検索して操作するためのコマンドが含まれています。 には、[**ブックマークの管理**] オプションも含まれています。このオプションを使用すると、既存のブックマークの一覧を表示できます。 ダイアログの右側にあるボタンを使用して、ブックマークを管理できます。|  
-|**モード**|**メタデータエクスプローラーの同期**コマンドを含みます。 これにより、Oracle メタデータエクスプローラーと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータエクスプローラーの間でオブジェクトが同期されます。 には、**出力**ペインおよび**エラー一覧**ウィンドウの表示と非表示を切り替えるコマンドと、レイアウトを管理するためのオプション**レイアウト**も含まれています。|  
+|**表示**|**メタデータエクスプローラーの同期**コマンドを含みます。 これにより、Oracle メタデータエクスプローラーと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータエクスプローラーの間でオブジェクトが同期されます。 には、**出力**ペインおよび**エラー一覧**ウィンドウの表示と非表示を切り替えるコマンドと、レイアウトを管理するためのオプション**レイアウト**も含まれています。|  
 |**ツール**|レポートを作成し、オブジェクトとデータを移行するためのコマンドが含まれています。 [**グローバル設定**] および [プロジェクトの**設定**] ダイアログボックスへのアクセスも提供します。|  
 |**テスト担当者**|テストケース、リポジトリ、およびバックアップ管理システムを作成および操作するためのコマンドが含まれています。|  
-|**Help**|SSMA ヘルプおよび [**バージョン情報**] ダイアログボックスへのアクセスを提供します。|  
+|**ヘルプ**|SSMA ヘルプおよび [**バージョン情報**] ダイアログボックスへのアクセスを提供します。|  
   
 ### <a name="output-pane-and-error-list-pane"></a>出力ウィンドウとエラー一覧ペイン  
 [**表示**] メニューには、[出力] ウィンドウと [エラー一覧] ウィンドウの表示を切り替えるためのコマンドが用意されています。  

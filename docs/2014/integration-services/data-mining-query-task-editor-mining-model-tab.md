@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e31e64226d826db1ac41d3411a542d4eac281ad1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68890773"
 ---
 # <a name="data-mining-query-task-editor-mining-model-tab"></a>[データ マイニング クエリ タスク エディター] ([マイニング モデル] タブ)
-  
   **[データ マイニング クエリ タスク]** ダイアログ ボックスの **[マイニング モデル]** タブを使用すると、使用するマイニング構造とマイニング モデルを指定できます。  
   
  パッケージでのデータ マイニングの実装の詳細については、「 [データ マイニング クエリ タスク](control-flow/data-mining-query-task.md) 」および「 [データ マイニング ソリューション](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)」を参照してください。  
@@ -41,17 +40,17 @@ ms.locfileid: "68890773"
  **接続**  
  既存の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続マネージャーを作成します。  
   
- **関連トピック:**  [Analysis Services 接続マネージャー](connection-manager/analysis-services-connection-manager.md)  
+ **関連トピック:**  [Analysis Services 接続マネージャーの追加](connection-manager/analysis-services-connection-manager.md)  
   
- **[新規作成]**  
+ **新しい**  
  新しい [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 接続マネージャーを作成します。  
   
- **関連トピック:** [[Analysis Services 接続マネージャーの追加] ダイアログボックスの UI リファレンス](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **関連トピック:** [[Analysis Services 接続マネージャーの追加] ダイアログ ボックスの UI リファレンス](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **マイニング構造**  
  一覧からマイニング構造を選択します。  
   
- **マイニングモデル**  
+ **[マイニング モデル]**  
  選択したマイニング構造に基づいて構築されるマイニング モデルを選択します。  
   
 ## <a name="see-also"></a>参照  

@@ -16,10 +16,10 @@ ms.assetid: b6dd1846-2259-4d29-93af-a70a5d25a0c5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 960da4d98ea33ceb3ecdb48e36d565854484feb9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68768856"
 ---
 # <a name="sp_dropdistributiondb-transact-sql"></a>sp_dropdistributiondb (Transact-SQL)
@@ -42,7 +42,7 @@ sp_dropdistributiondb [ @database= ] 'database'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_dropdistributiondb**は、すべての種類のレプリケーションで使用されます。  
   
  **Sp_dropdistributor**を実行してディストリビューターを削除する前に、このストアドプロシージャを実行する必要があります。  
@@ -62,6 +62,6 @@ sp_dropdistributiondb [ @database= ] 'database'
  [sp_adddistributiondb &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
  [sp_changedistributiondb &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
  [sp_helpdistributiondb &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
- [レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

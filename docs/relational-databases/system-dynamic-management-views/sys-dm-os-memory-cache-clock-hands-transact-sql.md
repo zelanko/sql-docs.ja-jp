@@ -19,10 +19,10 @@ ms.assetid: 0660eddc-691c-425f-9d43-71151d644de7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 783f985810b44673c6a6566caa6e89ff655670e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265789"
 ---
 # <a name="sysdm_os_memory_cache_clock_hands-transact-sql"></a>sys.dm_os_memory_cache_clock_hands (Transact-SQL)
@@ -33,13 +33,13 @@ ms.locfileid: "68265789"
 > [!NOTE]  
 >  またはから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]これを[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼び出すには、 **dm_pdw_nodes_os_memory_cache_clock_hands**という名前を使用します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**cache_address**|**varbinary (8)**|クロックに関連付けられたキャッシュのアドレス。 NULL 値は許可されません。|  
 |**name**|**nvarchar(256)**|キャッシュの名前。 NULL 値は許可されません。|  
-|**type**|**nvarchar (60)**|キャッシュストアの種類。 同じ種類のキャッシュが複数存在することが可能です。 NULL 値は許可されません。|  
-|**clock_hand**|**nvarchar (60)**|手の種類。 これは、次のいずれかになります。<br /><br /> 外部<br /><br /> 内部<br /><br /> NULL 値は許可されません。|  
-|**clock_status**|**nvarchar (60)**|クロックの状態。 これは、次のいずれかになります。<br /><br /> Suspended<br /><br /> 実行中<br /><br /> NULL 値は許可されません。|  
+|**type**|**nvarchar(60)**|キャッシュストアの種類。 同じ種類のキャッシュが複数存在することが可能です。 NULL 値は許可されません。|  
+|**clock_hand**|**nvarchar(60)**|手の種類。 これは、次のいずれかになります。<br /><br /> 外部<br /><br /> 内部<br /><br /> NULL 値は許可されません。|  
+|**clock_status**|**nvarchar(60)**|クロックの状態。 これは、次のいずれかになります。<br /><br /> Suspended<br /><br /> 実行中<br /><br /> NULL 値は許可されません。|  
 |**rounds_count**|**bigint**|エントリを削除するため、キャッシュ経由で行われたスイープの数。 NULL 値は許可されません。|  
 |**removed_all_rounds_count**|**bigint**|すべてのスイープで削除されたエントリの数。 NULL 値は許可されません。|  
 |**updated_last_round_count**|**bigint**|前回のスイープ中に更新されたエントリの数。 NULL 値は許可されません。|  
@@ -54,7 +54,7 @@ ms.locfileid: "68265789"
 で[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]は、 `VIEW SERVER STATE`権限が必要です。   
 Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、データベース`VIEW DATABASE STATE`の権限が必要です。 Standard [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メモリキャッシュと呼ばれる構造体のメモリに情報を格納します。 キャッシュには、データ、インデックス エントリ、コンパイル済みプロシージャ プランなど、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に関するさまざまな種類の情報が格納されます。 情報を再作成しないようにするために、メモリキャッシュは可能な限り長く保持され、通常はキャッシュから削除されます。これは、時間がかかりすぎている場合や、新しい情報のためにメモリ領域が必要な場合に、キャッシュから削除されます。 古い情報を削除するプロセスは、メモリスイープと呼ばれます。 メモリスイープは頻繁に発生するアクティビティですが、連続していません。 メモリ キャッシュのスイープはクロック アルゴリズムによって制御され、 各クロックは、両手と呼ばれる複数のメモリスイープを制御できます。 メモリキャッシュクロックハンドは、メモリスイープの1つの針の現在の場所です。  
 
 ## <a name="see-also"></a>参照  

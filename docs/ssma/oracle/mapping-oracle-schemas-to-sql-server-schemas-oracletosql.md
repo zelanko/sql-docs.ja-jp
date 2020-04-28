@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: e375c07ceddc995b599930c14f00710af040d6c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262910"
 ---
 # <a name="mapping-oracle-schemas-to-sql-server-schemas-oracletosql"></a>SQL Server スキーマへの Oracle スキーマのマッピング (OracleToSQL)
@@ -59,7 +59,7 @@ Oracle スキーマと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]�
   
 1.  [スキーママッピング] タブで、任意の行を選択し、[既定**値にリセット**] をクリックして既定のデータベースとスキーマに戻します。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>次のステップ  
 Oracle オブジェクトからオブジェクトへ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の変換を分析する場合は、[変換レポートを作成](assessing-oracle-schemas-for-conversion-oracletosql.md)できます。 それ以外の場合は[、Oracle データベースオブジェクト定義](converting-oracle-schemas-oracletosql.md)をオブジェクト定義に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]変換できます。  
   
 ## <a name="see-also"></a>参照  

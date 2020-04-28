@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 14eff405fd4eb1b96f4f5e5b50624d2c1251d546
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70148755"
 ---
 # <a name="connecting-to-an-instance-of-sql-server"></a>SQL Server のインスタンスへの接続
@@ -28,29 +28,22 @@ ms.locfileid: "70148755"
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]管理オブジェクト (SMO) アプリケーションの最初のプログラミング手順では、 <xref:Microsoft.SqlServer.Management.Smo.Server>オブジェクトのインスタンスを作成し、のインスタンスへの[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]接続を確立します。  
   
- 
-  <xref:Microsoft.SqlServer.Management.Smo.Server> オブジェクトのインスタンスを作成し、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスへの接続を確立するには、3 つの方法があります。 1 つは、<xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクト変数を使用して接続情報を提供する方法です。 2 つ目は、<xref:Microsoft.SqlServer.Management.Smo.Server> オブジェクト プロパティを明示的に設定することで接続情報を提供する方法です。 3 つ目は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オブジェクト コンストラクターに <xref:Microsoft.SqlServer.Management.Smo.Server> インスタンスの名前を渡す方法です。 
+ <xref:Microsoft.SqlServer.Management.Smo.Server> オブジェクトのインスタンスを作成し、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスへの接続を確立するには、3 つの方法があります。 1 つは、<xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクト変数を使用して接続情報を提供する方法です。 2 つ目は、<xref:Microsoft.SqlServer.Management.Smo.Server> オブジェクト プロパティを明示的に設定することで接続情報を提供する方法です。 3 つ目は、<xref:Microsoft.SqlServer.Management.Smo.Server> オブジェクト コンストラクターに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの名前を渡す方法です。 
   
  **ServerConnection オブジェクトの使用**  
   
- 
-  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクト変数を使用することの利点は、接続情報を再利用できることです。 まず、<xref:Microsoft.SqlServer.Management.Smo.Server> オブジェクト変数を宣言します。 次に、<xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクトを宣言し、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスの名前などの接続情報を持つプロパティ、および認証モードを設定します。 そして、パラメーターとして <xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクト変数を <xref:Microsoft.SqlServer.Management.Smo.Server> オブジェクト コンストラクターに渡します。 異なるサーバー オブジェクト間で同時に接続を共有することはお勧めできません。 
-  <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> メソッドを使用して、既存の接続設定のコピーを取得してください。  
+ <xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクト変数を使用することの利点は、接続情報を再利用できることです。 まず、<xref:Microsoft.SqlServer.Management.Smo.Server> オブジェクト変数を宣言します。 次に、<xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクトを宣言し、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスの名前などの接続情報を持つプロパティ、および認証モードを設定します。 そして、パラメーターとして <xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクト変数を <xref:Microsoft.SqlServer.Management.Smo.Server> オブジェクト コンストラクターに渡します。 異なるサーバー オブジェクト間で同時に接続を共有することはお勧めできません。 <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> メソッドを使用して、既存の接続設定のコピーを取得してください。  
   
  **サーバー オブジェクト プロパティの明示的な設定**  
   
- 別の方法として、<xref:Microsoft.SqlServer.Management.Smo.Server> オブジェクト変数を宣言して、既定のコンストラクターを呼び出すこともできます。 
-  <xref:Microsoft.SqlServer.Management.Smo.Server> オブジェクトは、すべての既定の接続設定で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定インスタンスに接続しようとします。  
+ 別の方法として、<xref:Microsoft.SqlServer.Management.Smo.Server> オブジェクト変数を宣言して、既定のコンストラクターを呼び出すこともできます。 <xref:Microsoft.SqlServer.Management.Smo.Server> オブジェクトは、すべての既定の接続設定で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定インスタンスに接続しようとします。  
   
  **Server オブジェクト コンストラクターへの SQL&amp;#xA0;Server インスタンス名の提供**  
   
- 
-  <xref:Microsoft.SqlServer.Management.Smo.Server> オブジェクト変数を宣言し、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス名を文字列パラメーターとしてコンストラクターに渡します。 
-  <xref:Microsoft.SqlServer.Management.Smo.Server> オブジェクトは、既定の接続設定で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスとの接続を確立します。  
+ <xref:Microsoft.SqlServer.Management.Smo.Server> オブジェクト変数を宣言し、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス名を文字列パラメーターとしてコンストラクターに渡します。 <xref:Microsoft.SqlServer.Management.Smo.Server> オブジェクトは、既定の接続設定で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスとの接続を確立します。  
   
-## <a name="connection-pooling"></a>接続のプール  
- 通常、<xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A> オブジェクトの <xref:Microsoft.SqlServer.Management.Common.ServerConnection> メソッドを呼び出す必要はありません。 SMO は、必要な場合には自動的に接続を確立し、実行中の操作が完了した後で接続プールに接続を解放します。 
-  <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A> メソッドが呼び出された場合、接続はプールに解放されません。 接続をプールに解放するには、<xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Disconnect%2A> メソッドへの明示的な呼び出しが必要です。 また、<xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.NonPooledConnection%2A> オブジェクトの <xref:Microsoft.SqlServer.Management.Common.ServerConnection> プロパティを設定することによって、プールされていない接続を要求することもできます。  
+## <a name="connection-pooling"></a>接続プール  
+ 通常、<xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A> オブジェクトの <xref:Microsoft.SqlServer.Management.Common.ServerConnection> メソッドを呼び出す必要はありません。 SMO は、必要な場合には自動的に接続を確立し、実行中の操作が完了した後で接続プールに接続を解放します。 <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A> メソッドが呼び出された場合、接続はプールに解放されません。 接続をプールに解放するには、<xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Disconnect%2A> メソッドへの明示的な呼び出しが必要です。 また、<xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.NonPooledConnection%2A> オブジェクトの <xref:Microsoft.SqlServer.Management.Common.ServerConnection> プロパティを設定することによって、プールされていない接続を要求することもできます。  
   
 ## <a name="multithreaded-applications"></a>マルチスレッド アプリケーション  
  マルチスレッド化されたアプリケーションの場合、各スレッドで別々の <xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクトを使用します。  
@@ -62,23 +55,19 @@ ms.locfileid: "70148755"
   
 -   接続のプロパティはすべて、<xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクトに対して定義します。  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスへの各接続には、独自の <xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクトが必要です。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスへの各接続には、独自の <xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクトが必要です。  
   
 -   接続を作成し、サーバーに正常にログオンするための認証情報はすべて <xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクトで指定されます。  
   
--   既定では、接続は Microsoft Windows 認証を使用して作成します。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用するには、<xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.LoginSecure%2A> を False に設定し、<xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.Login%2A> および <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.Password%2A> に、有効な [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログオンおよびパスワードを設定しておく必要があります。 セキュリティの資格情報は、常に安全に格納および処理し、いつでも可能であれば実行時に提供する必要があります。  
+-   既定では、接続は Microsoft Windows 認証を使用して作成します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用するには、<xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.LoginSecure%2A> を False に設定し、<xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.Login%2A> および <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.Password%2A> に、有効な [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログオンおよびパスワードを設定しておく必要があります。 セキュリティの資格情報は、常に安全に格納および処理し、いつでも可能であれば実行時に提供する必要があります。  
   
--   
-  <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A> メソッドは、RMO プログラミング オブジェクトに接続を渡す前に呼び出す必要があります。  
+-   <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A> メソッドは、RMO プログラミング オブジェクトに接続を渡す前に呼び出す必要があります。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual Studio .net で Visual C&#35; SMO プロジェクトを作成する](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)」を参照してください。  
   
 ## <a name="connecting-to-the-local-instance-of-sql-server-by-using-windows-authentication-in-visual-basic"></a>Visual Basic で Windows 認証を使用して SQL Server のローカル インスタンスに接続する  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のローカル インスタンスへの接続に必要なコードは多くありません。 ただし、認証方法とサーバーの既定の設定によってコードが異なります。 接続は、データの取得を必要とする操作が初めて発生する際に作成します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のローカル インスタンスへの接続に必要なコードは多くありません。 ただし、認証方法とサーバーの既定の設定によってコードが異なります。 接続は、データの取得を必要とする操作が初めて発生する際に作成します。  
  
 この例は、Windows 認証を使用して SQL Server のローカルインスタンスに接続する .NET コード Visual Basic ます。 
 
@@ -92,8 +81,7 @@ Console.WriteLine(srv.Information.Version)
 ```
   
 ## <a name="connecting-to-the-local-instance-of-sql-server-by-using-windows-authentication-in-visual-c"></a>Visual C# で Windows 認証を使用して SQL Server のローカル インスタンスに接続する  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のローカル インスタンスへの接続に必要なコードは多くありません。 ただし、認証方法とサーバーの既定の設定によってコードが異なります。 接続は、データの取得を必要とする操作が初めて発生する際に作成します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のローカル インスタンスへの接続に必要なコードは多くありません。 ただし、認証方法とサーバーの既定の設定によってコードが異なります。 接続は、データの取得を必要とする操作が初めて発生する際に作成します。  
   
  この例は、Windows 認証を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のローカル インスタンスに接続する Visual C# .NET コードです。  
   
@@ -141,8 +129,7 @@ Console.WriteLine(srv.Information.Version);
 ```  
   
 ## <a name="connecting-to-an-instance-of-sql-server-by-using-sql-server-authentication-in-visual-basic"></a>Visual Basic で SQL Server 認証を使用して SQL Server のインスタンスに接続する  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに接続する場合、認証の種類を指定する必要があります。 この例では、もう 1 つの方法として、<xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクト変数を宣言する方法を示します。この方法では、接続情報の再利用が可能になります。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに接続する場合、認証の種類を指定する必要があります。 この例では、もう 1 つの方法として、<xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクト変数を宣言する方法を示します。この方法では、接続情報の再利用が可能になります。  
   
  この例は[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 、リモートの接続方法と、ログオンとパスワードを格納する*vpassword*を示す .net コードです。  
   
@@ -190,8 +177,7 @@ End Class
 ```  
   
 ## <a name="connecting-to-an-instance-of-sql-server-by-using-sql-server-authentication-in-visual-c"></a>Visual C# で SQL Server 認証を使用して SQL Server のインスタンスに接続する  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに接続する場合、認証の種類を指定する必要があります。 この例では、もう 1 つの方法として、<xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクト変数を宣言する方法を示します。この方法では、接続情報の再利用が可能になります。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに接続する場合、認証の種類を指定する必要があります。 この例では、もう 1 つの方法として、<xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクト変数を宣言する方法を示します。この方法では、接続情報の再利用が可能になります。  
   
  この例は、リモートと*Vpassword*に接続してログオンとパスワードを格納する方法を示す Visual C# .net コードです。  
   

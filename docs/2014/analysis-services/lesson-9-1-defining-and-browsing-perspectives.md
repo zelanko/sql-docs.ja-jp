@@ -1,5 +1,5 @@
 ---
-title: パースペクティブの定義と参照 |マイクロソフトドキュメント
+title: パースペクティブの定義と参照 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7889bb81d9bb1f1e3fefa229c0a6a0ee0dc1f1dd
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493770"
 ---
 # <a name="defining-and-browsing-perspectives"></a>パースペクティブの定義と表示
@@ -41,7 +41,7 @@ ms.locfileid: "69493770"
   
      ![[パースペクティブ名] 列の新しいパースペクティブ](../../2014/tutorials/media/l9-perspectives-2.gif "[パースペクティブ名] 列の新しいパースペクティブ")  
   
-3.  パースペクティブ`Internet Sales`名を に変更します。  
+3.  パースペクティブ名をに`Internet Sales`変更します。  
   
 4.  次の行で、DefaultMeasure を **[Internet Sales-Sales Amount]** に設定します。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "69493770"
   
 5.  次のオブジェクトのチェック ボックスをオフにします。  
   
-    -   `Reseller Sales`メジャー グループ  
+    -   `Reseller Sales`メジャーグループ  
   
     -   **Sales Quotas** メジャー グループ  
   
@@ -93,7 +93,7 @@ ms.locfileid: "69493770"
   
 1.  **[パースペクティブ]** タブのツール バーの **[新しいパースペクティブ]** ボタンをクリックします。  
   
-2.  新しいパースペクティブの`Reseller Sales`名前を に変更します。  
+2.  新しいパースペクティブの名前をに`Reseller Sales`変更します。  
   
 3.  既定のメジャーとして **[Reseller Sales-Sales Amount]** を設定します。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "69493770"
   
 4.  次のオブジェクトのチェック ボックスをオフにします。  
   
-    -   `Internet Sales`メジャー グループ  
+    -   `Internet Sales`メジャーグループ  
   
     -   **Internet Sales Reason** メジャー グループ  
   
@@ -131,16 +131,16 @@ ms.locfileid: "69493770"
   
 1.  **[パースペクティブ]** タブのツール バーの **[新しいパースペクティブ]** ボタンをクリックします。  
   
-2.  新しいパースペクティブの`Sales Summary`名前を に変更します。  
+2.  新しいパースペクティブの名前をに`Sales Summary`変更します。  
   
     > [!NOTE]  
     >  計算されるメジャーを既定のメジャーとして指定することはできません。  
   
 3.  次のオブジェクトのチェック ボックスをオフにします。  
   
-    -   `Internet Sales`メジャー グループ  
+    -   `Internet Sales`メジャーグループ  
   
-    -   `Reseller Sales`メジャー グループ  
+    -   `Reseller Sales`メジャーグループ  
   
     -   **Internet Sales Reason** メジャー グループ  
   
@@ -176,13 +176,13 @@ ms.locfileid: "69493770"
   
      ![Excel でのデータ接続ウィザード](../../2014/tutorials/media/l9-perspectives-3b.gif "Excel でのデータ接続ウィザード")  
   
-6.  `Internet Sales` **[パースペクティブ**] リストで選択し、メタデータ ペインでメジャーとディメンションを確認します。  
+6.  [ `Internet Sales` **パースペクティブ**] ボックスの一覧でを選択し、[メタデータ] ペインでメジャーとディメンションを確認します。  
   
      Internet Sales パースペクティブ用に指定されたオブジェクトだけが表示されます。  
   
 7.  メタデータ ペインで、 **[Measures]** を展開します。  
   
-     メジャー グループのみが表示され、**インターネット GPM**と**すべての製品に対するインターネット販売率**が計算されたメンバに表示されます。 `Internet Sales`  
+     メジャーグループのみが表示され、**インターネット GPM**と、計算される**すべての製品の internet Sales 比率**が計算されるメンバーになります。 `Internet Sales`  
   
 8.  モデルで再度 Excel を選択します。 [`Sales Summary`] を選択します。  
   
@@ -194,7 +194,7 @@ ms.locfileid: "69493770"
  [翻訳の定義と表示](lesson-9-2-defining-and-browsing-translations.md)  
   
 ## <a name="see-also"></a>参照  
- [視点](multidimensional-models-olap-logical-cube-objects/perspectives.md)   
+ [ビジョン](multidimensional-models-olap-logical-cube-objects/perspectives.md)   
  [多次元モデルのパースペクティブ](multidimensional-models/perspectives-in-multidimensional-models.md)  
   
   

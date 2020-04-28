@@ -11,14 +11,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: baa337d33173f292145d92b60d6192af2a716c5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154336"
 ---
 # <a name="lesson-2-create-a-sql-server-credential"></a>レッスン 2: SQL Server 資格情報の作成
-  **資格情報:**[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]資格情報は、SQL Server の外部にあるリソースに接続するために必要な認証情報を格納するために使用されるオブジェクトです。  ここで[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]は、バックアップと復元のプロセスで、Azure Blob ストレージサービスに対する認証に資格情報を使用します。 資格情報には、ストレージ アカウントの名前とその **アクセス キー** 値が格納されます。 作成した資格情報は、BACKUP/RESTORE ステートメントの実行時に WITH CREDENTIAL オプションで指定する必要があります。 ストレージアカウントの**アクセスキー**を表示、コピー、または再生成する方法の詳細については、「[ストレージアカウントのアクセスキー](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx)」を参照してください。  
+  **資格情報:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資格情報は、SQL Server の外部にあるリソースへの接続に必要な認証情報を保存するために使用されるオブジェクトです。  ここで[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]は、バックアップと復元のプロセスで、Azure Blob ストレージサービスに対する認証に資格情報を使用します。 資格情報には、ストレージ アカウントの名前とその **アクセス キー** 値が格納されます。 作成した資格情報は、BACKUP/RESTORE ステートメントの実行時に WITH CREDENTIAL オプションで指定する必要があります。 ストレージアカウントの**アクセスキー**を表示、コピー、または再生成する方法の詳細については、「[ストレージアカウントのアクセスキー](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx)」を参照してください。  
   
  資格情報に関する一般情報については、「[資格](../relational-databases/security/authentication-access/credentials-database-engine.md)情報」を参照してください。  
   
@@ -34,8 +34,7 @@ ms.locfileid: "70154336"
   
 2.  オブジェクト エクスプローラーで、AdventureWorks2012 データベースがインストールされているデータベース エンジンのインスタンスに接続するか、このチュートリアルに使用する独自のデータベースを使用します。  
   
-3.  
-  **[標準]** ツール バーの **[新しいクエリ]** をクリックします。  
+3.  **[標準]** ツール バーの **[新しいクエリ]** をクリックします。  
   
 4.  次の例をコピーしてクエリ ウィンドウに貼り付け、必要に応じて変更します。  
   

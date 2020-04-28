@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 021db5a2283eb6ec68ea80302e938f08e7ba1a5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154343"
 ---
 # <a name="configure-managed-backup-sql-server-management-studio"></a>マネージド バックアップの構成 (SQL Server Management Studio)
@@ -29,7 +29,7 @@ ms.locfileid: "70154343"
   
 ## <a name="task-list"></a>タスク一覧  
   
-## <a name="includess_smartbackupincludesss-smartbackup-mdmd-functions-using-managed-backup-interface-in-sql-server-management-studio"></a>SQL Server Management Studio のマネージド バックアップ インターフェイスを使用する [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] の機能  
+## <a name="ss_smartbackup-functions-using-managed-backup-interface-in-sql-server-management-studio"></a>SQL Server Management Studio のマネージド バックアップ インターフェイスを使用する [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] の機能  
  このリリースでは、**管理バックアップ**インターフェイスを使用してインスタンスレベルの既定の設定のみを構成できます。 データベースに対する [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] を構成することはできず、[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 操作を一時停止 (または再開) したり、電子メール通知を設定したりすることもできません。 **マネージバックアップ**インターフェイスで現在サポートされていない操作を実行する方法の詳細については、「 [Azure へのマネージバックアップの SQL Server](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)」を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -43,26 +43,22 @@ ms.locfileid: "70154343"
   
 -   `VIEW ANY DEFINITION`  
   
--   `EXECUTE`on `smart_admin.fn_is_master_switch_on`。  
+-   `EXECUTE` に対する `smart_admin.fn_is_master_switch_on`。  
   
--   `SELECT`on `smart_admin.fn_backup_instance_config`。  
+-   `SELECT` に対する `smart_admin.fn_backup_instance_config`。  
   
  **マネージバックアップを構成するに**は[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] : SQL Server Management Studio でを構成するには、システム管理者であるか、次のアクセス許可を持っている必要があります。  
   
- 
-  `db_backupoperator` データベース ロールのメンバーシップ、`ALTER ANY CREDENTIAL` 権限、`EXECUTE` ストアド プロシージャに対する `sp_delete_backuphistory` 権限。  
+ `db_backupoperator` データベース ロールのメンバーシップ、`ALTER ANY CREDENTIAL` 権限、`sp_delete_backuphistory` ストアド プロシージャに対する `EXECUTE` 権限。  
   
- 
-  `SELECT` 関数に対する `smart_admin.fn_get_current_xevent_settings` 権限。  
+ `smart_admin.fn_get_current_xevent_settings` 関数に対する `SELECT` 権限。  
   
  `EXECUTE``smart_admin.sp_get_backup_diagnostics`ストアドプロシージャに対する権限。 さらに、`VIEW SERVER STATE` 権限も必要です (この権限を必要とする他のシステム オブジェクトを内部的に呼び出すため)。  
   
- 
-  `EXECUTE` および `smart_admin.sp_set_instance_backup` に対する `smart_admin.sp_backup_master_switch` 権限。  
+ `smart_admin.sp_set_instance_backup` および `smart_admin.sp_backup_master_switch` に対する `EXECUTE` 権限。  
   
-## <a name="configure-includess_smartbackupincludesss-smartbackup-mdmd-using-sql-server-management-studio"></a>SQL Server Management Studio [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]を使用して構成する  
- **オブジェクトエクスプローラー**で、[**管理**] ノードを展開し、[**マネージバックアップ**] を右クリックします。 [**構成**] を選択します。 
-  **[マネージド バックアップ]** ダイアログ ボックスが開きます。  
+## <a name="configure-ss_smartbackup-using-sql-server-management-studio"></a>SQL Server Management Studio [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]を使用して構成する  
+ **オブジェクトエクスプローラー**で、[**管理**] ノードを展開し、[**マネージバックアップ**] を右クリックします。 **[構成]** をクリックします。 **[マネージド バックアップ]** ダイアログ ボックスが開きます。  
   
  [**マネージバックアップを有効にする**] オプションをオンにして、構成値を指定します。  
   
@@ -85,6 +81,6 @@ ms.locfileid: "70154343"
  が[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]を使用して一時`smart_admin.sp_backup_master_switch`停止されている場合、"管理されたバックアップは無効になり、現在の構成は有効になりません..." という警告メッセージが表示されます。構成を完了しようとしたとき。 格納さ`smart_admin.sp_backup_master_switch`れているを@new_state使用し、= 1 を設定します。 これで [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] サービスが再開され、構成設定が有効になります。 ストアドプロシージャの詳細については、「 [smart_admin sp_ backup_master_switch &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-master-switch-transact-sql)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Azure への SQL Server マネージド バックアップ: 相互運用性と共存](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)  
+ [Azure への SQL Server マネージド バックアップ:相互運用性と共存](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)  
   
   

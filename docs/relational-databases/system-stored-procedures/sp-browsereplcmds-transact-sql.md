@@ -16,10 +16,10 @@ ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d049a5e96d9c7212467595aa70cd44db727bdf6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68768998"
 ---
 # <a name="sp_browsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-sql)
@@ -65,7 +65,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**xact_seqno**|**varbinary(16)**|コマンドのシーケンス番号。|  
 |**originator_srvname**|**sysname**|トランザクションが発生したサーバー。|  
@@ -77,12 +77,12 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 |**originator_publication_id**|**int**|トランザクションが発生したパブリケーションの ID。|  
 |**originator_db_version**|**int**|トランザクションが発生したデータベースのバージョン。|  
 |**originator_lsn**|**varbinary(16)**|元のパブリケーションのコマンドのログシーケンス番号 (LSN) を識別します。 ピアツーピアトランザクションレプリケーションで使用されます。|  
-|**メニュー**|**nvarchar (1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)]メニュー.|  
+|**メニュー**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)]メニュー.|  
 |**command_id**|**int**|[MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md)内のコマンドの ID。|  
   
  長いコマンドは、結果セット内の複数の行に分割できます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_browsereplcmds**は、トランザクションレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -91,6 +91,6 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 ## <a name="see-also"></a>参照  
  [sp_replcmds &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
  [sp_replshowcmds &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

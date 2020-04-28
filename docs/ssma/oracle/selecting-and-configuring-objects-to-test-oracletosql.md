@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: e0a8e7650534d50c5e5d7c3b02f2857764d9c2ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264641"
 ---
 # <a name="selecting-and-configuring-objects-to-test-oracletosql"></a>テストするオブジェクトの選択と構成 (OracleToSQL)
@@ -79,7 +79,7 @@ SSMA Tester がテスト用に選択されたオブジェクトのいずれか�
 ## <a name="specify-input-values-for-procedures-and-functions-call-values"></a>プロシージャと関数の入力値を指定する (呼び出し値)  
 [**呼び出しの値**] ページで入力パラメーターの値を指定できます。 [**呼び出しの追加**] ボタンをクリックすると、空のパラメーター値を持つ新しい呼び出しが追加されます。 [**呼び出しの削除**] ボタンをクリックすると、現在の呼び出しが削除されます。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 [影響を受けるオブジェクトの選択と構成 &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
   
 ## <a name="see-also"></a>参照  

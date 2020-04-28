@@ -16,10 +16,10 @@ ms.assetid: 97b4a7ae-40a5-4328-88f1-ff5d105bbb34
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d8909396e7a7da39ed2ae27c475a154c58bad090
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771502"
 ---
 # <a name="sp_helppublication_snapshot-transact-sql"></a>sp_helppublication_snapshot (Transact-SQL)
@@ -43,18 +43,18 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
 `[ @publisher = ] 'publisher'`以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーを指定します。 *publisher*は**sysname**で、既定値は NULL です。  
   
 > [!NOTE]  
->  ** パブリッシャーにアーティクルを追加する場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーを使用しないでください。  
+>  *publisher*パブリッシャーにアーティクルを追加する場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーを使用しないでください。  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**番号**|**int**|スナップショットエージェントの ID。|  
+|**id**|**int**|スナップショットエージェントの ID。|  
 |**name**|**nvarchar (100)**|スナップショットエージェントの名前。|  
-|**publisher_security_mode**|**smallint**|パブリッシャーに接続するときにエージェントによって使用されるセキュリティモード。次のいずれかになります。<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証<br /><br /> **1** = Windows 認証。|  
+|**publisher_security_mode**|**smallint**|パブリッシャーに接続するときにエージェントによって使用されるセキュリティモード。次のいずれかになります。<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証<br /><br /> **1** = Windows 認証。|  
 |**publisher_login**|**sysname**|パブリッシャーに接続するときに使用されるログインです。|  
 |**publisher_password**|**nvarchar (524)**|セキュリティ上の理由から、 ** \* \* \* \* \* \* \*の\*値は常に返されます。 \* **|  
-|**job_id**|**UNIQUEIDENTIFIER**|エージェントジョブの一意の ID。|  
+|**job_id**|**uniqueidentifier**|エージェントジョブの一意の ID。|  
 |**job_login**|**nvarchar(512)**|スナップショットエージェントを実行する Windows アカウントを指定します。このアカウントは、"*ドメイン*\\*ユーザー名*" の形式で返されます。|  
 |**job_password**|**sysname**|セキュリティ上の理由から、 ** \* \* \* \* \* \* \*の\*値は常に返されます。 \* **|  
 |**schedule_name**|**sysname**|このエージェントジョブに使用するスケジュールの名前。|  
@@ -72,14 +72,14 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_help_publication_snapshot**は、すべての種類のレプリケーションで使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_help_publication_snapshot**を実行できるのは、パブリッシャー側の**sysadmin**固定サーバーロールのメンバー、またはパブリケーションデータベースの**db_owner**固定データベースロールのメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
- [パブリケーションのプロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
+ [パブリケーション プロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [sp_addpublication_snapshot &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)   
  [sp_changepublication_snapshot &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)   
  [sp_dropmergepublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   

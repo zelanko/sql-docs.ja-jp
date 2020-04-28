@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 622f575541d1a111e5cda6a28617ad400a977292
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892804"
 ---
 # <a name="export-dmx"></a>エクスポート (DMX)
@@ -32,12 +32,12 @@ EXPORT <object type> <object name>[, <object name>] [<object type> <object name>
  省略可能。エクスポートするオブジェクトの種類です (マイニングモデルまたはマイニング構造のいずれか)。  
   
  *オブジェクト名*  
- 省略可能。 エクスポートするオブジェクトの名前。  
+ 任意。 エクスポートするオブジェクトの名前。  
   
  */db*  
  文字列としてエクスポートするファイルの名前と場所です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ステートメントがマイニング モデルを指定する場合、結果ファイルは関連するマイニング構造も含みます。 ステートメントで**依存関係が**指定されている場合は、オブジェクトを処理するために必要なすべてのオブジェクト (たとえば、データソースとデータソースビュー) が abf ファイルに含まれます。  
   
  データベースから[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]オブジェクトをエクスポートまたはインポートするには、データベースまたはサーバーの管理者である必要があります。  

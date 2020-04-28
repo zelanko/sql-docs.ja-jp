@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9d79ef7ae57894470f58701fd51a1d9ddd1b7126
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68891985"
 ---
 # <a name="ole-db-connection-type-ssrs"></a>OLE DB の接続の種類 (SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "68891985"
   
  OLE DB は、クライアントがさまざまなデータ プロバイダーに接続できるようにするデータ アクセス テクノロジです。 データ ソースの種類に OLE DB を選択したら、特定のデータ プロバイダーを選択する必要があります。 パラメーターや資格情報などの機能のサポートは、選択したデータ プロバイダーによって異なります。  
   
- このトピックの情報を使用して、データ ソースを構築してください。 詳細な手順については、「[データ接続の追加と確認」または「データ ソース&#40;レポート ビルダーおよび SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)」 を参照してください。  
+ このトピックの情報を使用して、データ ソースを構築してください。 詳細な手順については、「[データ接続またはデータソース &#40;レポートビルダーと SSRS&#41;の追加と検証](add-and-verify-a-data-connection-report-builder-and-ssrs.md)」を参照してください。  
   
 ##  <a name="connection-string"></a><a name="Connection"></a> 接続文字列  
  OLE DB データ処理拡張機能の接続文字列は、使用するデータ プロバイダーに依存します。 一般的な接続文字列は、データ プロバイダーでサポートされる名前と値のペアで構成されます。 たとえば、次の接続文字列は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client の OLE DB プロバイダーおよび AdventureWorks データベースを指定しています。  
@@ -42,7 +42,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
   
  レポートをパブリッシュした後、レポートをレポート サーバーで実行するときに、データを取得するための権限が有効な状態になるように、データ ソースの資格情報を変更する必要が生じる場合があります。  
   
- 詳細については、「[レポート サービスでのデータ接続、データ ソース、および接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)」または[「 レポート ビルダーで資格情報を指定する](../specify-credentials-in-report-builder.md)」を参照してください。  
+ 詳細については、「 [Reporting Services のデータ接続、データソース、および接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)」または「[レポートビルダーで資格情報を指定する](../specify-credentials-in-report-builder.md)」を参照してください。  
   
 ###### <a name="special-characters-in-a-password"></a>パスワードの特殊文字  
  OLE DB データ ソースの構成時に、パスワードが要求されるように設定したり、接続文字列にパスワードを含めた場合、ユーザーによって入力されたパスワードに句読点などの特殊文字が含まれていると、基になるデータ ソースのドライバーによってはその特殊文字を検証することができません。 レポートを処理する際に、この問題によって、"パスワードが無効です" というメッセージが表示される場合があります。  
@@ -72,10 +72,10 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
   
   
   
-##  <a name="how-to-topics"></a><a name="HowTo"></a>方法のトピック  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>操作方法に関するトピック  
  データ接続、データ ソース、およびデータセットを操作する手順について説明します。  
   
- [レポート ビルダーおよび SSRS&#41;&#40;データ接続またはデータ ソースを追加および確認する](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [データ接続またはデータソース &#40;レポートビルダーと SSRS&#41;に追加して検証する](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [共有データセットまたは埋め込みデータセットの作成 (レポート ビルダーおよび SSRS)](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
@@ -86,16 +86,16 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
 ##  <a name="related-sections"></a><a name="Related"></a> 関連セクション  
  次に示すセクションでは、レポート データの概念が詳細に説明されているほか、データに関連するレポートのパーツを定義し、カスタマイズし、使用する方法が説明されています。  
   
- [レポート ビルダーおよび SSRS&#41;&#40;レポートにデータを追加する](report-datasets-ssrs.md)  
+ [レポート &#40;レポートビルダーおよび SSRS&#41;にデータを追加する](report-datasets-ssrs.md)  
  レポートのデータへのアクセスの概要について説明します。  
   
  [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  
  データ接続とデータ ソースについて説明します。  
   
- [レポート ビルダーおよび SSRS&#41;&#40;レポート埋め込みデータセットと共有データセット](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [レポート埋め込みデータセットと共有データセット &#40;レポートビルダーと SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
  埋め込みデータセットと共有データセットについて説明します。  
   
- [データセット フィールド コレクション (レポート ビルダーおよび SSRS)](dataset-fields-collection-report-builder-and-ssrs.md)  
+ [データセット フィールド コレクション &#40;レポート ビルダーおよび SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  クエリによって生成されるデータセット フィールド コレクションについて説明します。  
   
  [Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンライン ブックの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ドキュメント](https://go.microsoft.com/fwlink/?linkid=121312))。  
@@ -104,8 +104,8 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
  
   
 ## <a name="see-also"></a>参照  
- [レポート ビルダーおよびレポート デザイナー&#40;&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)   
- [レポート ビルダーおよび SSRS&#41;&#40;データのフィルタ、グループ化、および並べ替え](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [レポートパラメーター &#40;レポートビルダーとレポートデザイナー&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)   
+ [データのフィルター処理、グループ化、並べ替え &#40;レポートビルダーと SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [式 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)  
   
   

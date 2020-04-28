@@ -23,10 +23,10 @@ ms.author: pamela
 ms.reviewer: maghan
 manager: amitban
 ms.openlocfilehash: eae0057441fe6bc356c7cea6c1e6ded829bbb9e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265686"
 ---
 # <a name="sysdm_os_spinlock_stats-transact-sql"></a>dm_os_spinlock_stats (Transact-sql)
@@ -36,12 +36,12 @@ ms.locfileid: "68265686"
 型別に分類されたすべてのスピンロック待機に関する情報を返します。  
   
 
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |name|**nvarchar(256)**|スピンロックの種類の名前。|  
 |発生|**bigint**|現在、別のスレッドがスピンロックを保持しているために、スレッドがスピンロックを取得しようとしてブロックされた回数。|  
 |スピン|**bigint**|スピンロックを取得しようとしているときに、スレッドがループを実行する回数。|  
-|spins_per_collision|**本当の**|競合ごとのスピンの比率。|  
+|spins_per_collision|**real**|競合ごとのスピンの比率。|  
 |sleep_time|**bigint**|バックオフが発生した場合にスレッドがスリープに費やした時間 (ミリ秒単位)。|  
 |バックオフだけ|**int**|"スピンしている" スレッドがスピンロックの取得に失敗し、スケジューラが生成される回数。|  
 
@@ -50,7 +50,7 @@ ms.locfileid: "68265686"
 で[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]は、 `VIEW SERVER STATE`権限が必要です。   
 Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、データベース`VIEW DATABASE STATE`の権限が必要です。 Standard [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。    
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  
  スピンロックの競合の原因を特定するには、dm_os_spinlock_stats を使用できます。 場合によっては、スピンロックの競合を解決または減少させることができます。 ただし、場合によっては、カスタマーサポートサービスに問い合わせる[!INCLUDE[msCoName](../../includes/msconame-md.md)]必要があります。  
   
@@ -67,11 +67,11 @@ GO
 >  これらの統計は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が再起動されると保存されません。 すべてのデータは、統計が最後にリセット[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]された後、またはが開始されてから累積されます。  
   
 ## <a name="spinlocks"></a>スピンロック  
- スピンロックは、通常は短時間保持されるデータ構造へのアクセスをシリアル化するために使用される軽量の同期オブジェクトです。 あるスレッドが、別のスレッドによって保持されているスピンロックによって保護されているリソースにアクセスしようとすると、そのスレッドは、ラッチやその他のリソースと同様にスケジューラを直ちに開始するのではなく、ループを実行したり、"スピン" してリソースへのアクセスを再試行します。待機. スレッドは、リソースが使用可能になるかループが完了するまでスピンし続け、その時点でスレッドがスケジューラを生成して実行可能キューに戻ります。 これにより、スレッドコンテキストの過度の切り替えを減らすことができますが、スピンロックの競合が高くなると、CPU 使用率が著しく低下する可能性があります。
+ スピンロックは、通常は短時間保持されるデータ構造へのアクセスをシリアル化するために使用される軽量の同期オブジェクトです。 あるスレッドが、別のスレッドによって保持されているスピンロックによって保護されているリソースにアクセスしようとすると、そのスレッドは、ラッチやその他のリソース待機と同様にスケジューラを直ちに開始するのではなく、ループを実行し、"スピン" してリソースへのアクセスを再試行します。 スレッドは、リソースが使用可能になるかループが完了するまでスピンし続け、その時点でスレッドがスケジューラを生成して実行可能キューに戻ります。 これにより、スレッドコンテキストの過度の切り替えを減らすことができますが、スピンロックの競合が高くなると、CPU 使用率が著しく低下する可能性があります。
    
  次の表に、最も一般的なスピンロックの種類の簡単な説明を示します。  
   
-|スピンロックの種類|[説明]|  
+|スピンロックの種類|説明|  
 |-----------------|-----------------|  
 |ABR|内部使用のみです。|
 |ADB_CACHE|内部使用のみです。|
@@ -177,7 +177,7 @@ GO
 |HTTP|内部使用のみです。|
 |HTTP_CONNCACHE|内部使用のみです。|
 |HTTP_ENDPOINT|内部使用のみです。|
-|ID|内部使用のみです。|
+|IDENTITY|内部使用のみです。|
 |INDEX_CREATE|内部使用のみです。|
 |IO_DISPENSER_PAUSE|内部使用のみです。|
 |IO_RG_VOLUME_HASHTABLE|内部使用のみです。|
@@ -406,7 +406,7 @@ GO
   
 ## <a name="see-also"></a>参照  
  
- [DBCC SQLPERF &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
+ [DBCC SQLPERF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
  
  [SQL Server オペレーティングシステム関連の動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
 

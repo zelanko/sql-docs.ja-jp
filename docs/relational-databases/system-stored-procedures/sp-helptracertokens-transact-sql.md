@@ -16,10 +16,10 @@ ms.assetid: 61f27234-531d-4b37-8fa3-fe4c32e6f521
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9b4df50d1cf43ba1b0f4eb8b8f313634b4d11d18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771538"
 ---
 # <a name="sp_helptracertokens-transact-sql"></a>sp_helptracertokens (Transact-SQL)
@@ -50,15 +50,15 @@ sp_helptracertokens [ @publication = ] 'publication'
   
 ## <a name="result-set"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**tracer_id**|**int**|トレーサートークンレコードを識別します。|  
-|**publisher_commit**|**DATETIME**|パブリッシャーでパブリケーション データベースにトークン レコードがコミットされた日付と時刻です。|  
+|**publisher_commit**|**datetime**|パブリッシャーでパブリケーション データベースにトークン レコードがコミットされた日付と時刻です。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_helptracertokens**は、トランザクションレプリケーションで使用します。  
   
  **sp_helptracertokens**は[、transact-sql&#41;&#40;sp_helptracertokenhistory](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)実行するときにトレーサートークン id を取得するために使用されます。  

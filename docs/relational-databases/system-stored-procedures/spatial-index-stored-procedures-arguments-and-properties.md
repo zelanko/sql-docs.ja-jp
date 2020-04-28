@@ -15,10 +15,10 @@ ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 82b906be4568b15a18c55247532bf35b6cd939a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69028904"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>空間インデックスストアドプロシージャ-引数とプロパティ
@@ -124,7 +124,7 @@ ms.locfileid: "69028904"
  オブジェクトごとのセル数 (インデックスプロパティ)。 値は**int**です。  
   
  **Total_Primary_Index_Rows**  
- インデックス内の行の数。 値は**bigint**です。  
+ インデックス内の行数。 値は**bigint**です。  
   
  **Total_Primary_Index_Pages**  
  インデックス内のページ数。 値は**bigint**です。  
@@ -300,10 +300,10 @@ ms.locfileid: "69028904"
 ## <a name="permissions"></a>アクセス許可  
  ユーザーは、 **public**ロールのメンバーである必要があります。 サーバーとオブジェクトに対する読み取りアクセス権限が必要です。 これは、すべての空間インデックスストアドプロシージャに適用されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  NULL 値を含むプロパティは、返されるセットに含まれません。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  例については、次のトピックを参照してください。  
   
 -   [sp_help_spatial_geometry_index &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
@@ -314,7 +314,7 @@ ms.locfileid: "69028904"
   
 -   [sp_help_spatial_geography_index_xml &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 ## <a name="see-also"></a>参照  
  [空間インデックスストアドプロシージャ &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   

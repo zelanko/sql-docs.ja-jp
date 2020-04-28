@@ -16,10 +16,10 @@ ms.assetid: 9ea55df3-2e99-4683-88ad-bde718288bc7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e87e542395c00797ce50b220ad8a6c981f43605a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771091"
 ---
 # <a name="sp_helparticlecolumns-transact-sql"></a>sp_helparticlecolumns (Transact-SQL)
@@ -46,22 +46,22 @@ sp_helparticlecolumns [ @publication = ] 'publication'
 `[ @publisher = ] 'publisher'`以外[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のパブリッシャーを指定します。 *publisher*は**sysname**で、既定値は NULL です。  
   
 > [!NOTE]  
->  ** 要求されたアーティクルが[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーによってパブリッシュされている場合、パブリッシャーを指定することはできません。  
+>  *publisher*要求されたアーティクルが[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーによってパブリッシュされている場合、パブリッシャーを指定することはできません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (パブリッシュされていない列) または**1** (パブリッシュされた列)  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**列 id**|**int**|列の識別子です。|  
-|**column**|**sysname**|列の名前です。|  
+|**項目**|**sysname**|列の名前です。|  
 |**投稿**|**bit**|列をパブリッシュしたかどうかを示します。<br /><br /> **0** = いいえ<br /><br /> **1** = はい|  
 |**パブリッシャーの種類**|**sysname**|パブリッシャー側の列のデータ型。|  
 |**サブスクライバーの種類**|**sysname**|サブスクライバー側の列のデータ型。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_helparticlecolumns**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
  **sp_helparticlecolumns**は、列方向のパーティションをチェックする場合に便利です。  
@@ -76,6 +76,6 @@ sp_helparticlecolumns [ @publication = ] 'publication'
  [sp_changearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
  [sp_droparticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
  [sp_droppublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

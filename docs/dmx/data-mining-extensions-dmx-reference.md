@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c47514f551ec07a8c8837533cb38c0e6283645cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892883"
 ---
 # <a name="data-mining-extensions-dmx-reference"></a>データ マイニング拡張機能 (DMX) リファレンス
@@ -33,7 +33,7 @@ ms.locfileid: "68892883"
   
  **詳細については、「** [マイニング構造 &#40;Analysis Services-データマイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-structures-analysis-services-data-mining) 」を参照してください。  
   
-##  <a name="BKMK_DMXStatements"></a>DMX ステートメント  
+##  <a name="dmx-statements"></a><a name="BKMK_DMXStatements"></a>DMX ステートメント  
  DMX ステートメントを使用して、データマイニングモデルの作成、処理、削除、コピー、参照、および予測を行うことができます。 DMX にはデータ定義ステートメントおよびデータ操作ステートメントの 2 種類のステートメントがあります。 それぞれの種類のステートメントを使用して、さまざまな種類のタスクを実行できます。  
   
  以下のセクションでは、DMX ステートメントの使用に関する詳細について説明します。  
@@ -44,7 +44,7 @@ ms.locfileid: "68892883"
   
 -   [クエリの基礎](#BKMK_Queries)  
   
-###  <a name="BKMK_DDL"></a>データ定義ステートメント  
+###  <a name="data-definition-statements"></a><a name="BKMK_DDL"></a>データ定義ステートメント  
  DMX のデータ定義ステートメントを使用して、新しいマイニング構造およびマイニングモデルの作成と定義、マイニングモデルとマイニング構造のインポートとエクスポート、およびデータベースからの既存のモデルの削除を行うことができます。 DMX のデータ定義ステートメントは、データ定義言語 (DDL) の一部です。  
   
  DMX のデータ定義ステートメントを使用して、次のタスクを実行できます。  
@@ -63,7 +63,7 @@ ms.locfileid: "68892883"
   
  [DMX ステートメントに戻る](#BKMK_DMXStatements)  
   
-###  <a name="BKMK_DML"></a>データ操作ステートメント  
+###  <a name="data-manipulation-statements"></a><a name="BKMK_DML"></a>データ操作ステートメント  
  DMX のデータ操作ステートメントを使用して、既存のマイニングモデルを操作し、モデルを参照し、それらに対して予測を作成します。 DMX のデータ操作ステートメントは、データ操作言語 (DML) の一部です。  
   
  DMX のデータ操作ステートメントを使用して、次のタスクを実行できます。  
@@ -90,7 +90,7 @@ ms.locfileid: "68892883"
   
  [DMX ステートメントに戻る](#BKMK_DMXStatements)  
   
-###  <a name="BKMK_Queries"></a>DMX クエリの基礎  
+###  <a name="dmx-query-fundamentals"></a><a name="BKMK_Queries"></a>DMX クエリの基礎  
  SELECT ステートメントは、ほとんどの DMX クエリの基礎となります。 このようなステートメントで使用する句に応じて、マイニングモデルに対して参照、コピー、または予測を行うことができます。 予測クエリでは、SELECT の形式を使用して、既存のマイニングモデルに基づいて予測を作成します。 関数を使用することで、データ マイニング モデルの固有の機能では行えないマイニング モデルの参照およびクエリを行うことができます。  
   
  DMX 関数を使用すると、モデルの学習中に検出された情報の取得および新しい情報の計算を行うことができます。 これらの関数は、基になるデータまたは予測の精度を示す統計を返す、または予測の拡張された説明を返すなど、さまざまな目的で使用できます。  

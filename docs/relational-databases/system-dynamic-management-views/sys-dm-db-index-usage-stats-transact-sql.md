@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 491ec37d96cf6bdb2b074efb42a54406beb1fd20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264402"
 ---
 # <a name="sysdm_db_index_usage_stats-transact-sql"></a>dm_db_index_usage_stats (Transact-sql)
@@ -32,8 +32,7 @@ ms.locfileid: "68264402"
 
   さまざまな種類のインデックス操作の数と、各種の操作が前回実行された時刻を返します。  
   
- 
-  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、動的管理ビューは、データベースの包含に影響する情報を公開することも、ユーザーがアクセスできる他のデータベースに関する情報を公開することもできません。 この情報を公開しないように、接続されたテナントに属していないデータを含むすべての行がフィルターで除外されます。  
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、動的管理ビューは、データベースの包含に影響する情報を公開することも、ユーザーがアクセスできる他のデータベースに関する情報を公開することもできません。 この情報を公開しないように、接続されたテナントに属していないデータを含むすべての行がフィルターで除外されます。  
   
 > [!NOTE]  
 >  **dm_db_index_usage_stats**は、メモリ最適化インデックスに関する情報を返しません。 メモリ最適化インデックスの使用の詳細については、「 [dm_db_xtp_index_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md)」を参照してください。  
@@ -41,7 +40,7 @@ ms.locfileid: "68264402"
 > [!NOTE]  
 >  またはから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]このビューを[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼び出すには、 **dm_pdw_nodes_db_index_usage_stats**を使用します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**smallint**|テーブルまたはビューが定義されているデータベースの ID。|  
 |**object_id**|**int**|インデックスが定義されているテーブルまたはビューの ID。|  
@@ -50,25 +49,24 @@ ms.locfileid: "68264402"
 |**user_scans**|**bigint**|' Seek ' 述語を使用していないユーザークエリによるスキャン数。|  
 |**user_lookups**|**bigint**|ユーザー クエリによるブックマーク参照数。|  
 |**user_updates**|**bigint**|ユーザー クエリによる更新数。 これには、影響を受けた実際の行ではなく、実行された操作の数を表す挿入、削除、および更新が含まれます。 たとえば、1つのステートメントで1000行を削除した場合、このカウントは1ずつ増加します。|  
-|**last_user_seek**|**DATETIME**|前回のユーザー シークの時刻。|  
-|**last_user_scan**|**DATETIME**|前回のユーザー スキャンの時刻。|  
-|**last_user_lookup**|**DATETIME**|前回のユーザー参照の時刻。|  
-|**last_user_update**|**DATETIME**|前回のユーザー更新の時刻。|  
+|**last_user_seek**|**datetime**|前回のユーザー シークの時刻。|  
+|**last_user_scan**|**datetime**|前回のユーザー スキャンの時刻。|  
+|**last_user_lookup**|**datetime**|前回のユーザー参照の時刻。|  
+|**last_user_update**|**datetime**|前回のユーザー更新の時刻。|  
 |**system_seeks**|**bigint**|システム クエリによるシーク数。|  
 |**system_scans**|**bigint**|システム クエリによるスキャン数。|  
 |**system_lookups**|**bigint**|システム クエリによる参照数。|  
 |**system_updates**|**bigint**|システム クエリによる更新数。|  
-|**last_system_seek**|**DATETIME**|前回のシステム シークの時刻。|  
-|**last_system_scan**|**DATETIME**|前回のシステム スキャンの時刻。|  
-|**last_system_lookup**|**DATETIME**|前回のシステム参照の時刻。|  
-|**last_system_update**|**DATETIME**|前回のシステム更新の時刻。|  
+|**last_system_seek**|**datetime**|前回のシステム シークの時刻。|  
+|**last_system_scan**|**datetime**|前回のシステム スキャンの時刻。|  
+|**last_system_lookup**|**datetime**|前回のシステム参照の時刻。|  
+|**last_system_update**|**datetime**|前回のシステム更新の時刻。|  
 |pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  指定したインデックスに対し、1 回のクエリ実行でシーク、スキャン、参照、または更新が行われるたび、その操作はインデックスの使用としてカウントされ、このビュー内の対応するカウンターが 1 増えます。 情報は、ユーザーが送信したクエリによる操作と、統計収集のスキャンなど内部生成されたクエリによる操作の両方についてレポートされます。  
   
- 
-  **user_updates** カウンターでは、基になるテーブルまたはビューで行われた挿入、更新、または削除操作に基づく、インデックスのメンテナンスのレベルが示されます。 このビューを使用して、アプリケーションであまり使用されないインデックスを特定できます。 また、メンテナンスのオーバーヘッドの原因になっているインデックスも特定できます。 メンテナンスのオーバーヘッドの原因になっており、クエリでほとんどまたはまったく使用されないインデックスが特定できれば、インデックスの削除を検討することもできます。  
+ **user_updates** カウンターでは、基になるテーブルまたはビューで行われた挿入、更新、または削除操作に基づく、インデックスのメンテナンスのレベルが示されます。 このビューを使用して、アプリケーションであまり使用されないインデックスを特定できます。 また、メンテナンスのオーバーヘッドの原因になっているインデックスも特定できます。 メンテナンスのオーバーヘッドの原因になっており、クエリでほとんどまたはまったく使用されないインデックスが特定できれば、インデックスの削除を検討することもできます。  
   
  カウンターは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER) サービスが開始されるたびに空に初期化されます。 また、AUTO_CLOSE が ON に設定されているなどの理由によりデータベースがデタッチまたはシャットダウンされるときに、そのデータベースに関連付けられたすべての行が削除されます。  
   

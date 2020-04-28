@@ -16,10 +16,10 @@ ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3d60de0f459ec1224f6023e8ee848227fdc17ece
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771007"
 ---
 # <a name="sp_replcmds-transact-sql"></a>sp_replcmds (Transact-sql)
@@ -44,12 +44,12 @@ sp_replcmds [ @maxtrans = ] maxtrans
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**アーティクル id**|**int**|アーティクルの ID です。|  
 |**partial_command**|**bit**|これが部分コマンドであるかどうかを示します。|  
 |**メニュー**|**varbinary (1024)**|コマンドの値。|  
-|**xactid**|**binary (10)**|トランザクション ID。|  
+|**xactid**|**binary(10)**|トランザクション ID。|  
 |**xact_seqno**|**varbinary(16)**|トランザクションのシーケンス番号。|  
 |**publication_id**|**int**|パブリケーションの ID です。|  
 |**command_id**|**int**|[MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md)内のコマンドの ID。|  
@@ -61,7 +61,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |**originator_db_version**|**int**|トランザクションが発生したデータベースのバージョン。|  
 |**originator_lsn**|**varbinary(16)**|元のパブリケーションのコマンドのログシーケンス番号 (LSN) を識別します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_replcmds**は、トランザクションレプリケーションのログリーダープロセスによって使用されます。  
   
  レプリケーションでは、指定されたデータベース内の**sp_replcmds**を実行する最初のクライアントがログリーダーとして扱われます。  
@@ -83,6 +83,6 @@ sp_replcmds [ @maxtrans = ] maxtrans
  [sp_repldone &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
  [sp_replflush &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
  [sp_repltrans &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

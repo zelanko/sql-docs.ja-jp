@@ -21,16 +21,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fcbab4d5dc1bbc86fe9083e9c3407749040a0023
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265701"
 ---
 # <a name="sysdm_os_process_memory-transact-sql"></a>dm_os_process_memory (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセス空間から生じる大半のメモリ割り当ては、こうした割り当ての追跡と管理を可能にするインターフェイスを通じて制御されます。 ただし、メモリ割り当てが、内部のメモリ管理ルーチンをバイパスする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アドレス空間で実行される場合もあります。 値は、ベースとなるオペレーティング システムを通じて取得されます。 これらのメソッドは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、ロックされたページまたは大きいページ割り当てを調整する場合を除き、内部のメソッドによって操作されることはありません。  
   
  メモリサイズを示すすべての戻り値は、キロバイト (KB) 単位で表示されます。 列**total_virtual_address_space_reserved_kb**は、 **sys. dm_os_sys_info**からの**virtual_memory_in_bytes**と重複しています。  
@@ -40,7 +39,7 @@ ms.locfileid: "68265701"
 > [!NOTE]  
 >  またはから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]これを[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼び出すには、 **dm_pdw_nodes_os_process_memory**という名前を使用します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**physical_memory_in_use_kb**|**bigint**|オペレーティング システムから報告されたプロセス ワーキング セットに、ラージ ページ API を使用して追跡された割り当てを加えた値 (KB 単位) を示します。 Null 値は許容されません。|  
 |**large_page_allocations_kb**|**bigint**|ラージページ Api を使用して割り当てられた物理メモリを指定します。 Null 値は許容されません。|  
@@ -49,8 +48,7 @@ ms.locfileid: "68265701"
 |**virtual_address_space_reserved_kb**|**bigint**|プロセスによって予約されている仮想アドレス空間の合計サイズを示します。 Null 値は許容されません。|  
 |**virtual_address_space_committed_kb**|**bigint**|コミットまたは物理ページにマップされた予約済みの仮想アドレス空間の量を示します。 Null 値は許容されません。|  
 |**virtual_address_space_available_kb**|**bigint**|現在利用可能な仮想アドレス空間の量を示します。 Null 値は許容されません。<br /><br /> **注:** 割り当ての粒度よりも小さい空き領域が存在する可能性があります。 これらの領域は割り当てに利用できません。|  
-|**page_fault_count**|**bigint**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のプロセスに起因するページ違反の数を示します。 Null 値は許容されません。|  
+|**page_fault_count**|**bigint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のプロセスに起因するページ違反の数を示します。 Null 値は許容されません。|  
 |**memory_utilization_percentage**|**int**|ワーキングセット内のコミット済みメモリの割合を指定します。 Null 値は許容されません。|  
 |**available_commit_limit_kb**|**bigint**|プロセスによってコミット可能なメモリの量を示します。 Null 値は許容されません。|  
 |**process_physical_memory_low**|**bit**|プロセスが物理メモリの不足の通知に応答していることを示します。 Null 値は許容されません。|  
@@ -64,7 +62,7 @@ ms.locfileid: "68265701"
 Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、データベース`VIEW DATABASE STATE`の権限が必要です。 Standard [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
   
 ## <a name="see-also"></a>参照  
- [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [SQL Server オペレーティングシステム関連の動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   

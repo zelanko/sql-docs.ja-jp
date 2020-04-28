@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 48b656283cbe251b0c8ecb4e7c7b41681cddc7ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893883"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
@@ -67,7 +67,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ## <a name="return-type"></a>戻り値の型  
  \<*テーブル式*>。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  タイム[!INCLUDE[msCoName](../includes/msconame-md.md)]シリーズアルゴリズムでは、予測結合ステートメントを使用して新しいデータを追加した場合、履歴予測はサポートされません。  
   
  予測結合では、予測プロセスは常に、元のトレーニングシリーズの最後の直後の時間ステップで開始されます。 これは、新しいデータを追加した場合でも当てはまります。 したがって、 *n*パラメーターと*n 開始*パラメーターの値には、0より大きい整数を指定する必要があります。  
@@ -75,7 +75,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 > [!NOTE]  
 >  新しいデータの長さは、予測の開始位置には影響しません。 そのため、新しいデータを追加して新しい予測を作成する場合は、予測の開始位置を新しいデータの長さより大きい値に設定するか、予測の終了位置を新しいデータの長さだけ拡張するようにします。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、既存のタイムシリーズモデルに対して予測を行う方法を示します。  
   
 -   最初の例は、現在のモデルに基づいて、指定された数の予測を作成する方法を示しています。  
@@ -254,6 +254,6 @@ OR [Model Region] = 'M200 North America'
 ## <a name="see-also"></a>参照  
  [DMX&#41; 関数リファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [タイムシリーズモデルのクエリ例](https://docs.microsoft.com/analysis-services/data-mining/time-series-model-query-examples)   
- [DMX&#41;の予測 &#40;](../dmx/predict-dmx.md)  
+ [Predict &#40;DMX&#41;](../dmx/predict-dmx.md)  
   
   

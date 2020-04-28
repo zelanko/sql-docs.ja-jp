@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 59220dd32388eed75ed725e7a8b5956394ae575d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68890367"
 ---
 # <a name="analysis-services-processing-task-editor-analysis-services-page"></a>[Analysis Services 処理タスク エディター] ([Analysis Services] ページ)
-  
   **[Analysis Services 処理タスク エディター]** ダイアログ ボックスの **[Analysis Services]** ページを使用すると、Analysis Services 接続マネージャーの指定、処理する分析オブジェクトの選択、処理およびエラー処理オプションの設定を行うことができます。  
   
  テーブル モデルを処理する場合は、次の点に注意してください。  
@@ -41,44 +40,43 @@ ms.locfileid: "68890367"
  **Analysis Services 接続マネージャー**  
  既存の Analysis Services 接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続マネージャーを作成します。  
   
- **[新規作成]**  
+ **新しい**  
  新しい Analysis Services 接続マネージャーを作成します。  
   
- **関連トピック:** [Analysis Services 接続マネージャー](connection-manager/analysis-services-connection-manager.md)、[ [Analysis Services 接続マネージャーの追加] ダイアログボックスの UI リファレンス](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **関連トピック:** [Analysis Services Connection Manager](connection-manager/analysis-services-connection-manager.md)、 [[Analysis Services 接続マネージャーの追加] ダイアログ ボックスの UI リファレンス](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **オブジェクトの一覧**  
- |プロパティ|[説明]|  
+ |プロパティ|説明|  
 |--------------|-----------------|  
 |**[オブジェクト名]**|指定されたオブジェクト名を表示します。|  
 |**Type**|指定されたオブジェクトの種類を表示します。|  
-|**処理オプション**|一覧から処理オプションを選択します。<br /><br /> **関連トピック**:[多次元モデルオブジェクトの処理](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
+|**[処理オプション]**|一覧から処理オプションを選択します。<br /><br /> **関連トピック**:[多次元モデルオブジェクトの処理](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
 |**設定**|指定されたオブジェクトの処理設定を表示します。|  
   
  **追加**  
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] オブジェクトを一覧に追加します。  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] オブジェクトを一覧に追加します。  
   
  **Remove**  
  オブジェクトを選択し、 **[削除]** をクリックします。  
   
- **影響分析**  
+ **[影響分析]**  
  選択したオブジェクトに対して影響分析を実行します。  
   
- **関連トピック:** [[影響分析] ダイアログボックス &#40;Analysis Services-多次元データ&#41;](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
+ **関連トピック:** [[影響分析] ダイアログ ボックス (Analysis Services - 多次元データ)](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
   
- **バッチ設定の概要**  
- |プロパティ|[説明]|  
+ **[バッチ設定の概要]**  
+ |プロパティ|説明|  
 |--------------|-----------------|  
-|**処理の順序**|オブジェクトを順番に処理するか、一括して処理するかを指定します。並行処理を行う場合は、同時に処理するオブジェクトの数を指定します。|  
-|**トランザクションモード**|順次処理のトランザクション モードを指定します。|  
-|**ディメンションエラー**|エラーが発生したときのタスクの動作を指定します。|  
-|**ディメンションキーのエラーログのパス**|エラーを記録するファイルのパスを指定します。|  
+|**処理順序**|オブジェクトを順番に処理するか、一括して処理するかを指定します。並行処理を行う場合は、同時に処理するオブジェクトの数を指定します。|  
+|**[トランザクション モード]**|順次処理のトランザクション モードを指定します。|  
+|**[ディメンション エラー]**|エラーが発生したときのタスクの動作を指定します。|  
+|**[ディメンション キーのエラー ログのパス]**|エラーを記録するファイルのパスを指定します。|  
 |**影響を受けるオブジェクトの処理**|依存オブジェクトまたは影響を受けたオブジェクトも処理するかどうかを示します。|  
   
  **設定の変更**  
  処理オプションおよびディメンション キー内のエラー処理を変更します。  
   
- **関連トピック:** [[設定の変更] ダイアログボックス &#40;Analysis Services-多次元データ&#41;](../../2014/analysis-services/change-settings-dialog-box-analysis-services-multidimensional-data.md)  
+ **関連トピック:** [[設定の変更] ダイアログ ボックス (Analysis Services - 多次元データ)](../../2014/analysis-services/change-settings-dialog-box-analysis-services-multidimensional-data.md)  
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   

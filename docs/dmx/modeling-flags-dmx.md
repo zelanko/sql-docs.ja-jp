@@ -9,25 +9,23 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a610f3aed7f520163dc4e2b30651d8b0397ef644
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893931"
 ---
 # <a name="modeling-flags-dmx"></a>モデリング フラグ (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]
-   のモデリング フラグを使用すると、ケース テーブルで定義されているデータに関する追加情報をデータ マイニング アルゴリズムに提供できます。 アルゴリズムは、この情報を使用して、より正確なデータ マイニング モデルを作成することができます。 モデリングフラグは、マイニング構造列とマイニングモデル列の両方に定義できます。  
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のモデリング フラグを使用すると、ケース テーブルで定義されているデータに関する追加情報をデータ マイニング アルゴリズムに提供できます。 アルゴリズムは、この情報を使用して、より正確なデータ マイニング モデルを作成することができます。 モデリングフラグは、マイニング構造列とマイニングモデル列の両方に定義できます。  
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]では、次のモデリングフラグがサポートされています。  
   
  **NULL 以外**  
  属性列の値に null 値を含めることはできません。 モデルの学習プロセス中に、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] がこの属性列に NULL 値を検出した場合、エラーが発生します。 このフラグは、マイニング構造列に対して定義されています。  
   
- **REGRESSOR**  
+ **リグレッサー**  
  アルゴリズムが、指定した列を回帰アルゴリズムの回帰式に使用できることを示します。 このフラグは、[!INCLUDE[msCoName](../includes/msconame-md.md)] Linear Regression および [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees アルゴリズムによってサポートされており、マイニング モデル列で定義されます。  
   
  **MODEL_EXISTENCE_ONLY**  

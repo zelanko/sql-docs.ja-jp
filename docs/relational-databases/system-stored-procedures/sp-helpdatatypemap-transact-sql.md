@@ -16,10 +16,10 @@ ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0b9666c13a2e4d8183d19fade64bf49b13377b9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771060"
 ---
 # <a name="sp_helpdatatypemap-transact-sql"></a>sp_helpdatatypemap (Transact-sql)
@@ -45,9 +45,9 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 ## <a name="arguments"></a>引数  
 `[ @source_dbms = ] 'source_dbms'`データ型のマップ元となる DBMS の名前を指定します。 *source_dbms*は**sysname**で、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|**MS**|ソースは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースです。|  
+|**MSSQLSERVER**|ソースは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースです。|  
 |**ORACLE11I**|マップ元は Oracle データベース。|  
   
 `[ @source_version = ] 'source_version'`は、ソース DBMS の製品バージョンです。 *source_version*は**varchar (10)** です。指定されていない場合は、すべてのバージョンのソース DBMS のデータ型マッピングが返されます。 値を指定した場合は、マップ元 DBMS のバージョンによって結果セットがフィルター選択されます。  
@@ -56,9 +56,9 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
   
 `[ @destination_dbms = ] 'destination_dbms'`マップ先 DBMS の名前を指定します。 *destination_dbms*は**sysname**で、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|**MS**|マップ先は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース。|  
+|**MSSQLSERVER**|マップ先は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース。|  
 |**ORACLE11I**|変換先は、Oracle データベースです。|  
 |**DB2**|マップ先は IBM DB2 データベース。|  
 |**SYBASE**|コピー先は Sybase データベースです。|  
@@ -71,7 +71,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|[説明]|  
+|列名|説明|  
 |-----------------|-----------------|  
 |**mapping_id**|データ型マッピングを識別します。|  
 |**source_dbms**|ソース DBMS の名前とバージョン番号を指定します。|  
@@ -83,7 +83,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_helpdatatypemap**は、SQL Server 以外のパブリッシャーおよびパブリッシャーから[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーへのデータ型マッピングを定義します。  
   
  指定した変換元と変換先の DBMS の組み合わせがサポートされていない場合、 **sp_helpdatatypemap**は空の結果セットを返します。  

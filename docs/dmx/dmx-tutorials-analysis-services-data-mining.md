@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 553ae5c425b08dc0b53f101d028fdea1557bf63c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892786"
 ---
 # <a name="dmx-tutorials-analysis-services---data-mining"></a>DMX のチュートリアル (Analysis Services - データ マイニング)
@@ -32,7 +32,7 @@ ms.locfileid: "68892786"
 ## <a name="reference"></a>リファレンス  
  [DMX&#41; の構文要素を &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-syntax-elements.md)  
   
- [DMX&#41; データ定義ステートメント &#40;のデータマイニング拡張機能](../dmx/dmx-statements-data-definition.md)  
+ [データ マイニング拡張機能 (DMX) データ定義ステートメント](../dmx/dmx-statements-data-definition.md)  
   
  [DMX&#41; データ操作ステートメントを &#40;データマイニング拡張機能](../dmx/dmx-statements-data-manipulation.md)  
   

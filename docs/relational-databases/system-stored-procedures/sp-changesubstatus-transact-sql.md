@@ -16,10 +16,10 @@ ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5c10e05098a611e51583b2b1132f811d36b0f20a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771328"
 ---
 # <a name="sp_changesubstatus-transact-sql"></a>sp_changesubstatus (Transact-sql)
@@ -72,9 +72,9 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 `[ @status = ] 'status'`**Syssubscriptions**テーブルのサブスクリプションの状態を示します。 *status*の部分は**sysname**で、既定値はありません。これらの値のいずれかを指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|**能動的**|サブスクライバーが同期され、データを受信しています。|  
+|**active**|サブスクライバーが同期され、データを受信しています。|  
 |**稼動**|サブスクライブはしていませんが、サブスクライバーのエントリが存在します。|  
 |**subscribed**|サブスクライバーはデータを要求していますが、まだ同期はとられていません。|  
   
@@ -88,7 +88,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`ディストリビューションタスクの日付を指定します。 このパラメーターは、 *frequency_type*が 32 (月単位) に設定されている場合に使用されます。 *frequency_relative_interval*は**int**,、これらの値のいずれかを指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|First (先頭へ)|  
 |**2**|秒|  
@@ -101,7 +101,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 `[ @frequency_subday = ] frequency_subday`定義した期間にスケジュールを再設定する頻度を分単位で指定します。 *frequency_subday*は**int**,、これらの値のいずれかを指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|1 度|  
 |**2**|秒|  
@@ -151,12 +151,12 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 `[ @publisher = ] 'publisher'`以外[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のパブリッシャーを指定します。 *publisher*は**sysname**で、既定値は NULL です。  
   
 > [!NOTE]  
->  ** パブリッシャーでアーティクルの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロパティを変更する場合は、パブリッシャーを使用しないでください。  
+>  *publisher*パブリッシャーでアーティクルの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロパティを変更する場合は、パブリッシャーを使用しないでください。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_changesubstatus**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
  **sp_changesubstatus**によって、 **syssubscriptions**テーブル内のサブスクライバーの状態が変更され、状態が変更されます。 必要に応じて、 **sysarticles**テーブル内のアーティクルの状態を更新して、アクティブまたは非アクティブであることを示します。 必要に応じて、レプリケートされたテーブルの**sysobjects**テーブルでレプリケーションフラグをオンまたはオフに設定します。  
@@ -169,6 +169,6 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  [sp_dropsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
  [sp_helpdistributor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
  [sp_helpsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

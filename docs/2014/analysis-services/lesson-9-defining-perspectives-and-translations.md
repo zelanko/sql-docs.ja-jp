@@ -11,17 +11,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d7e9edcba3a9645f1b327e698af2336b838915bb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530832"
 ---
-# <a name="lesson-9-defining-perspectives-and-translations"></a>レッスン 9 : パースペクティブと翻訳の定義
+# <a name="lesson-9-defining-perspectives-and-translations"></a>レッスン 9: パースペクティブと翻訳の定義
   このレッスンでは、パースペクティブと翻訳を定義する方法について学習します。 パースペクティブを定義すると、キューブの表示上の複雑さを軽減できます。翻訳を定義すると、ユーザーは希望する言語でキューブ メタデータを表示できます。  
   
 > [!NOTE]  
->  このチュートリアルの各レッスンの操作内容が反映されたプロジェクトを、オンラインで入手できます。 途中のレッスンから開始する場合は、前のレッスンの操作内容が反映されたプロジェクトを作業の開始点として使用できます。 このチュートリアルで使用するサンプルプロジェクトをダウンロードするには、[ここをクリックし](https://go.microsoft.com/fwlink/?LinkID=221866)てください。  
+>  このチュートリアルの各レッスンの操作内容が反映されたプロジェクトを、オンラインで入手できます。 途中のレッスンから開始する場合は、前のレッスンの操作内容が反映されたプロジェクトを作業の開始点として使用できます。 このチュートリアルのサンプル プロジェクトをダウンロードするには、[ここ](https://go.microsoft.com/fwlink/?LinkID=221866) をクリックしてください。  
   
  このレッスンの内容は次のとおりです。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "69530832"
  この作業では、特定のメタデータの特定言語への翻訳を定義して表示します。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 10 : 管理ロールの定義](lesson-10-defining-administrative-roles.md)  
+ [レッスン 10: 管理ロールの定義](lesson-10-defining-administrative-roles.md)  
   
 ## <a name="see-also"></a>参照  
  [Analysis Services チュートリアルのシナリオ](analysis-services-tutorial-scenario.md)   

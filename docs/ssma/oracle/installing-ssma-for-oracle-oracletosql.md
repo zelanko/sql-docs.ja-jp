@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 0b146c1585bdcddcf2d45c6b9efbd24f7e90d718
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68263016"
 ---
 # <a name="installing-ssma--for-oracle-oracletosql"></a>SSMA for Oracle のインストール (OracleToSQL)
@@ -27,7 +27,7 @@ SSMA for Oracle の新しいバージョンにアップグレードする場合�
   
 ## <a name="contents"></a>内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |---------|---------------|  
 |[SSMA for Oracle Client &#40;OracleToSQL&#41;のインストール](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)|SSMA クライアントをインストールするための情報と手順について説明します。|  
 |[SQL Server &#40;OracleToSQL&#41;での SSMA コンポーネントのインストール](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)|の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに拡張機能パックをインストールするための情報と手順について説明します。|  

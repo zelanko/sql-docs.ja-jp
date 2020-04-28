@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 2141a4f8ccc6e34ec3010ad3ce8e8e3789d09132
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892754"
 ---
 # <a name="import-dmx"></a>IMPORT (DMX)
@@ -31,7 +31,7 @@ IMPORT FROM <filename>
  */db*  
  インポートするファイルの名前と場所を表す文字列。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  オブジェクトが指定されていない場合は、.dmb ファイルの内容全体が読み込まれます。 .dmb ファイルに、サーバー上に存在しないデータベースが含まれている場合、そのデータベースが作成されます。  
   
  オブジェクトをエクスポートまたはインポートするには、データベースまたはサーバーの管理者である必要があります。  

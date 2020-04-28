@@ -16,10 +16,10 @@ ms.assetid: 9ae1be14-0d2f-40b1-9d6e-22d79726abf4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cf591964e5dfef0536c79b0b35e5918d4f46d972
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771141"
 ---
 # <a name="sp_deletetracertokenhistory-transact-sql"></a>sp_deletetracertokenhistory (Transact-SQL)
@@ -49,10 +49,10 @@ sp_deletetracertokenhistory [ @publication = ] 'publication'
 削除するトレーサートークンの ID を示します。 データ型は**int**です。既定値は*null*です。 *Null*の場合、パブリケーションに属するすべてのトレーサートークンが削除されます。
 
 `[ @cutoff_date= ] cutoff_date`  
-この日付が削除される前に、パブリケーションに挿入されたトレーサートークン。 データ型は**datetime**です。 既定値は*null*です。
+この日付が削除される前に、パブリケーションに挿入されたトレーサートークン。 データ型は**datetime**です。 既定値は *null* です。
 
 `[ @publisher= ] 'publisher'`  
-パブリッシャーの名前です。 データ型は**sysname**です。 既定値は*null*です。
+パブリッシャーの名前です。 データ型は**sysname**です。 既定値は *null* です。
 
 > [!NOTE]
 > このパラメーターは、以外[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のパブリッシャー、またはディストリビューターからストアドプロシージャを実行する場合にのみ指定する必要があります。
@@ -67,7 +67,7 @@ sp_deletetracertokenhistory [ @publication = ] 'publication'
 
 **0** (成功) または**1** (失敗)
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 **sp_deletetracertokenhistory**は、トランザクションレプリケーションで使用します。  
 
@@ -88,6 +88,6 @@ sp_deletetracertokenhistory [ @publication = ] 'publication'
 
 ## <a name="see-also"></a>参照
 
-[トランザクションレプリケーションの待機時間を計測して接続を検証する](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)
+[トランザクション レプリケーションの待機時間の計測および接続の検証](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)
 
 [sp_helptracertokenhistory &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)

@@ -16,10 +16,10 @@ ms.assetid: 4c3fee32-a43f-4757-a029-30aef4696afb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d90cd0ba957da820ce5a937ae687e39ca0302025
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769057"
 ---
 # <a name="sp_articlefilter-transact-sql"></a>sp_articlefilter (Transact-SQL)
@@ -71,7 +71,7 @@ sp_articlefilter [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_articlefilter**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
  既存のサブスクリプションを持つアーティクルに対して**sp_articlefilter**を実行するには、それらのサブスクリプションを再初期化する必要があります。  
@@ -96,6 +96,6 @@ sp_articlefilter [ @publication = ] 'publication'
  [sp_changearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
  [sp_droparticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
  [sp_helparticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
- [レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

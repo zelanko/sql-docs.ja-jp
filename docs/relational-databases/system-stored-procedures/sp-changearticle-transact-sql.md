@@ -16,10 +16,10 @@ ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8fe752b17af683f59078bd7c37eb702a9408a530
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771400"
 ---
 # <a name="sp_changearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
@@ -53,7 +53,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  次の表では、アーティクルのプロパティとそれらのプロパティの値について説明します。  
   
-|プロパティ|値|[説明]|  
+|プロパティ|値|説明|  
 |--------------|------------|-----------------|  
 |**creation_script**||ターゲットテーブルを作成するために使用されるアーティクルスキーマスクリプトのパスと名前です。 既定値は NULL です。|  
 |**del_cmd**||実行する DELETE ステートメントです。指定しないと、ログから作成されます。|  
@@ -61,21 +61,21 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**dest_object**||これは旧バージョンとの互換性のために用意されています。 **Dest_table**を使用します。|  
 |**dest_table**||新しい変換先テーブル。|  
 |**destination_owner**||対象オブジェクトの所有者の名前。|  
-|**フィルター**||テーブルをフィルターによって選択 (行方向のフィルター選択) するために使用される新しいストアド プロシージャです。 既定値は NULL です。 ピアツーピアレプリケーションのパブリケーションの場合、を変更することはできません。|  
-|**fire_triggers_on_snapshot**|**本来**|レプリケートされたユーザートリガーは、初期スナップショットが適用されるときに実行されます。<br /><br /> 注意: トリガーをレプリケートするには、 *schema_option*のビットマスク値に**0x100**という値を含める必要があります。|  
+|**filter**||テーブルをフィルターによって選択 (行方向のフィルター選択) するために使用される新しいストアド プロシージャです。 既定値は NULL です。 ピアツーピアレプリケーションのパブリケーションの場合、を変更することはできません。|  
+|**fire_triggers_on_snapshot**|**true**|レプリケートされたユーザートリガーは、初期スナップショットが適用されるときに実行されます。<br /><br /> 注意: トリガーをレプリケートするには、 *schema_option*のビットマスク値に**0x100**という値を含める必要があります。|  
 ||**false**|初期スナップショットが適用されたときに、レプリケートされたユーザー トリガーが実行されません。|  
 |**identity_range**||サブスクライバーで割り当てられた、割り当て済みの ID 範囲のサイズを管理します。 ピア ツー ピア レプリケーションではサポートされません。|  
 |**ins_cmd**||実行する INSERT ステートメントです。それ以外の場合は、ログから作成されます。|  
 |**pre_creation_cmd**||同期が適用される前に、レプリケーション先のテーブルを削除したり、切り捨てたりできる作成準備コマンドです。|  
-||**存在**|コマンドを使用しません。|  
+||"**なし**"|コマンドを使用しません。|  
 ||**」**|変換先テーブルを削除します。|  
-||**デリート**|変換先テーブルを削除します。|  
+||**delete**|変換先テーブルを削除します。|  
 ||**切捨て**|変換先テーブルを切り捨てます。|  
 |**pub_identity_range**||サブスクライバーで割り当てられた、割り当て済みの ID 範囲のサイズを管理します。 ピア ツー ピア レプリケーションではサポートされません。|  
 |**schema_option**||指定されたアーティクルのスキーマ生成オプションのビットマップを指定します。 *schema_option*は**binary (8)** です。 詳細については、このトピックで後述する「解説」を参照してください。|  
 ||**0x00**|スナップショット エージェントによるスクリプト作成を無効にします。|  
 ||**0x01**|オブジェクトの作成 (CREATE TABLE、CREATE PROCEDURE など) を生成します。|  
-||**0x02**|定義されている場合、アーティクルの変更を反映するストアド プロシージャを生成します。|  
+||**除く**|定義されている場合、アーティクルの変更を反映するストアド プロシージャを生成します。|  
 ||**0x04**|Id 列は、IDENTITY プロパティを使用してスクリプト化されます。|  
 ||**0x08**|**タイムスタンプ**列をレプリケートします。 設定しない場合、**タイムスタンプ**列は**バイナリ**としてレプリケートされます。|  
 ||**0x10**|対応するクラスター化インデックスを生成します。|  
@@ -118,13 +118,13 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x20000000000**|列のスパース属性をレプリケートします。 この属性の詳細については、「[スパース列の使用](../../relational-databases/tables/use-sparse-columns.md)」を参照してください。|  
 ||**0x40000000000**|サブスクライバーにメモリ最適化テーブルを作成するには、スナップショットエージェントによるスクリプト作成を有効にします。|  
 ||**0x80000000000**|メモリ最適化アーティクルのクラスター化インデックスを非クラスター化インデックスに変換します。|  
-|**オンライン**||プロパティの新しいステータスを指定します。|  
+|**status**||プロパティの新しいステータスを指定します。|  
 ||**dts 行分割**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 ||**include column names**|列名が、レプリケートされる INSERT ステートメントに含まれます。|  
 ||**列名がありません**|列名は、レプリケートされる INSERT ステートメントに含まれません。|  
 ||**dts 行分割がありません**|アーティクルの行方向のパーティション分割は、変換可能なサブスクリプションによって定義されません。|  
-||**存在**|[Sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)テーブルのすべての状態オプションをクリアし、アーティクルを非アクティブとしてマークします。|  
-||**パラメータ**|パラメーター化コマンドを使用して、変更がサブスクライバーに反映されます。 これは新しいアーティクルに対する既定値です。|  
+||"**なし**"|[Sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)テーブルのすべての状態オプションをクリアし、アーティクルを非アクティブとしてマークします。|  
+||**parameters**|パラメーター化コマンドを使用して、変更がサブスクライバーに反映されます。 これは新しいアーティクルに対する既定値です。|  
 ||**文字列リテラル**|変更は、文字列リテラル値を使用してサブスクライバーに反映されます。|  
 |**sync_object**||同期出力ファイルを生成するために使用されるテーブルまたはビューの名前。 既定値は NULL です。 Oracle パブリッシャーではサポートされていません。|  
 |**テーブルスペース**||Oracle データベースからパブリッシュされたアーティクルのログ テーブルによって使用されたテーブルスペースを識別します。 詳細については、「[Manage Oracle Tablespaces](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md)」 (Oracle テーブルスペースの管理) を参照してください。|  
@@ -160,12 +160,12 @@ sp_changearticle [ [@publication= ] 'publication' ]
 `[ @publisher = ] 'publisher'`以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーを指定します。 *publisher*は**sysname**で、既定値は NULL です。  
   
 > [!NOTE]  
->  ** パブリッシャーでアーティクルの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロパティを変更する場合は、パブリッシャーを使用しないでください。  
+>  *publisher*パブリッシャーでアーティクルの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロパティを変更する場合は、パブリッシャーを使用しないでください。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_changearticle**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
  ピアツーピアトランザクションレプリケーションをサポートするパブリケーションにアーティクルが属している場合、**説明**、 **ins_cmd**、 **upd_cmd**、および**del_cmd**プロパティのみを変更できます。  
@@ -194,11 +194,11 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
 -   **destination_owner**  
   
--   **フィルター**  
+-   **filter**  
   
 -   **ins_cmd**  
   
--   **オンライン**  
+-   **status**  
   
 -   **upd_cmd**  
   
@@ -228,7 +228,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**インデックス付きビュースキーマのみ**|**0x01**、 **0x010**、 **0x020**、 **0x010**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x100000**、 **0x200000**、 **0x400000**、 **0x800000**、 **0x200000**、 **0x800000**、 **0x40000000**、および**0x80000000**|**0x01**、 **0x010**、 **0x020**、 **0x010**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x100000**、 **0x200000**、 **0x400000**、 **0x800000**、 **0x200000**、 **0x800000**、 **0x40000000**、および**0x80000000**|  
   
 > [!NOTE]
->  キュー更新パブリケーションの場合は、 *schema_option*値**0x80**を有効にする必要があります。 サポートさ** れていない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリケーションの schema_option 値は、 **0x01**、 **0x02**、 **0x10**、 **0x40**、 **0x80**、 **0x1000** 、 **0x4000**です。  
+>  キュー更新パブリケーションの場合は、 *schema_option*値**0x80**を有効にする必要があります。 サポートさ*schema_option*れていない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリケーションの schema_option 値は、 **0x01**、 **0x02**、 **0x10**、 **0x40**、 **0x80**、 **0x1000** 、 **0x4000**です。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_changetranarticle](../../relational-databases/replication/codesnippet/tsql/sp-changearticle-transac_1.sql)]  

@@ -16,10 +16,10 @@ ms.assetid: e73acf8d-0be8-4197-ba11-fe798d0e2820
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c49a710b25bad0cf36115afadc439cbe793981c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68768921"
 ---
 # <a name="sp_change_agent_profile-transact-sql"></a>sp_change_agent_profile (Transact-SQL)
@@ -47,14 +47,14 @@ sp_change_agent_profile [ @profile_id = ] profile_id
   
  次の表では、変更可能なプロファイルプロパティについて説明します。  
   
-|プロパティ|[説明]|  
+|プロパティ|説明|  
 |--------------|-----------------|  
-|**記述**|プロファイルの説明。|  
+|**description**|プロファイルの説明。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_change_agent_profile**は、すべての種類のレプリケーションで使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -64,6 +64,6 @@ sp_change_agent_profile [ @profile_id = ] profile_id
  [sp_add_agent_profile &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
  [sp_drop_agent_profile &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)   
  [sp_help_agent_profile &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

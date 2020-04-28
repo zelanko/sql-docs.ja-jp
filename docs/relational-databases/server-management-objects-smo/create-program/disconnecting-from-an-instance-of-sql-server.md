@@ -17,19 +17,18 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: de53acd4ef3d9feb6ed1a5026d8890f83e88d557
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70148737"
 ---
 # <a name="disconnecting-from-an-instance-of-sql-server"></a>SQL Server のインスタンスからの切断
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) オブジェクトを手動で閉じたり切断する処理は必要ありません。 接続を開いたり閉じたりする操作は、必要に応じて行われます。  
   
-## <a name="connection-pooling"></a>接続のプール  
+## <a name="connection-pooling"></a>接続プール  
  [Connect](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionmanager.connect)メソッドを呼び出すと、接続は自動的には解放されません。 接続プールへの接続を解放するには、 [Disconnect](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionmanager.disconnect)メソッドを明示的に呼び出す必要があります。 また、プールされていない接続を要求することもできます。 これを行うには、 [Serverconnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx)オブジェクトを参照する<xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A>プロパティの[nonpooledconnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionsettings.nonpooledconnection)プロパティを設定します。  
   
 ## <a name="disconnecting-from-an-instance-of-sql-server-for-rmo"></a>RMO の SQL Server のインスタンスからの切断  

@@ -16,10 +16,10 @@ ms.assetid: d56ae218-6128-4ff9-b06c-749914505c7b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: eaeeaa5009cb119b40dcde9b8f9baa170d8f7bef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68762529"
 ---
 # <a name="sp_reinitsubscription-transact-sql"></a>sp_reinitsubscription (Transact-sql)
@@ -66,12 +66,12 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_reinitsubscription**は、トランザクションレプリケーションで使用します。  
   
  **sp_reinitsubscription**は、ピアツーピアトランザクションレプリケーションではサポートされていません。  
   
- 初期スナップショットが自動的に適用され、パブリケーションで更新可能なサブスクリプションが許可されていないサブスクリプションでは、このストアドプロシージャの実行後にスナップショットエージェントを実行して、スキーマおよび一括コピープログラムファイルを準備する必要があります。ディストリビューションエージェントは、サブスクリプションを再同期できます。  
+ 初期スナップショットが自動的に適用され、パブリケーションで更新可能なサブスクリプションが許可されていないサブスクリプションの場合、このストアドプロシージャの実行後にスナップショットエージェントを実行して、スキーマおよび一括コピープログラムファイルを準備し、ディストリビューションエージェントがサブスクリプションを再同期できるようにする必要があります。  
   
  初期スナップショットが自動的に適用され、パブリケーションで更新可能なサブスクリプションが許可される場合のサブスクリプションについては、ディストリビューション エージェントでサブスクリプションを再同期化するときに、スナップショット エージェントによって以前に作成された最新のスキーマおよび一括コピー プログラム ファイルが使用されます。 ディストリビューションエージェントは、ユーザーが**sp_reinitsubscription**実行された直後に、ディストリビューションエージェントがビジーでない場合に、サブスクリプションを再同期します。それ以外の場合は、メッセージの間隔 (ディストリビューションエージェントコマンドプロンプトパラメーター: **MessageInterval**) の後に同期が実行されます。  
   
@@ -94,6 +94,6 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
 ## <a name="see-also"></a>参照  
  [サブスクリプションの再初期化](../../relational-databases/replication/reinitialize-a-subscription.md)   
  [サブスクリプションの再初期化](../../relational-databases/replication/reinitialize-subscriptions.md)   
- [レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

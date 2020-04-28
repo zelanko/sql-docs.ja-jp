@@ -1,5 +1,5 @@
 ---
-title: 高度な時系列予測 (中間データ マイニング チュートリアル) |マイクロソフトドキュメント
+title: 高度な時系列予測 (中級者向けデータマイニングチュートリアル) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ca144d1d473f7df49f73d5ed170052c61ce6107d
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893689"
 ---
 # <a name="advanced-time-series-predictions-intermediate-data-mining-tutorial"></a>高度な時系列予測 (中級者向けデータ マイニング チュートリアル)
@@ -40,10 +40,10 @@ ms.locfileid: "68893689"
   
 7.  [新しい予測を検討する](../../2014/tutorials/comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial.md)  
   
-##  <a name="creating-the-new-extended-sales-data"></a><a name="bkmk_newExtendData"></a>新しい拡張販売データの作成  
+##  <a name="creating-the-new-extended-sales-data"></a><a name="bkmk_newExtendData"></a>新しい拡張売上データの作成  
  売上データを更新するには、最新の売上の数値を取得する必要があります。 特に関心があるのは太平洋地域のデータです。この地域では、地域の販売促進を開始して、新しい店への関心を引きつけ、製品の認知度を高めています。  
   
- このシナリオでは、いくつかの地域の新しいデータがわずか 3 か月含まれている Excel ブックからデータがインポートされたと仮定します。 Transact-SQL スクリプトを使用してデータのテーブルを作成し、予測に使用するデータ ソース ビューを定義します。  
+ このシナリオでは、2つのリージョンについて、3か月分の新しいデータを含む Excel ブックからデータがインポートされていることを前提としています。 Transact-sql スクリプトを使用してデータのテーブルを作成し、予測に使用するデータソースビューを定義します。  
   
 #### <a name="create-the-table-with-new-sales-data"></a>新しい売上データでのテーブルの作成  
   
@@ -93,19 +93,19 @@ ms.locfileid: "68893689"
     >   
     >  サンプル データベースで使用されている日付は、このリリース用に更新されています。 AdventureWorks の以前のエディションを使用している場合は、それに合わせて、挿入する日付を調整しなければならない場合があります。  
   
-###  <a name="create-a-data-source-view-using-the-new-sales-data"></a><a name="bkmk_newReplaceData"></a>新しい売上データを使用してデータ ソース ビューを作成する  
+###  <a name="create-a-data-source-view-using-the-new-sales-data"></a><a name="bkmk_newReplaceData"></a>新しい売上データを使用してデータソースビューを作成する  
   
-1.  **ソリューション エクスプローラ**で、[データ**ソース ビュー**] を右クリックし、[**新しいデータ ソース ビュー**] を選択します。  
+1.  **ソリューションエクスプローラー**で、[**データソースビュー**] を右クリックし、[**新しいデータソースビュー**] をクリックします。  
   
 2.  データ ソース ビュー ウィザードで、以下の選択を行います。  
   
-     **データ ソース**:[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
+     **データソース**:[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
   
-     **テーブルとビューの選択**: 作成したテーブルを選択します。  
+     **[テーブルとビューの選択**]: 先ほど作成したテーブル NewSalesData を選択します。  
   
 3.  **[完了]** をクリックします。  
   
-4.  データ ソース ビューのデザイン画面で、[NewSalesData] を右クリックし、[**データの探索**] を選択してデータを検証します。  
+4.  データソースビューのデザイン画面で、[NewSalesData] を右クリックし、[**データの探索**] を選択してデータを確認します。  
   
 > [!WARNING]  
 >  このデータは予測だけに使用するので、データが不完全でもかまいません。  
@@ -117,19 +117,19 @@ ms.locfileid: "68893689"
   
 #### <a name="to-create-the-model-data-using-a-custom-data-source-view"></a>カスタム データ ソース ビューを使用してモデル データを作成するには  
   
-1.  **ソリューション エクスプローラ**で、[データ**ソース ビュー**] を右クリックし、[**新しいデータ ソース ビュー**] を選択します。  
+1.  **ソリューションエクスプローラー**で、[**データソースビュー**] を右クリックし、[**新しいデータソースビュー**] をクリックします。  
   
 2.  ウィザードの [ようこそ] ページで、 **[次へ]** をクリックします。  
   
 3.  **[データ ソースの選択]** ページで [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]を選択し、 **[次へ]** をクリックします。  
   
-4.  [**テーブルとビューの選択**] ページで、テーブルを追加しない [**次へ**] をクリックします。  
+4.  [テーブル**とビューの選択**] ページで、テーブルを追加せずに、[**次へ**] をクリックします。  
   
-5.  [**ウィザードの完了**] ページで、`AllRegions`の名前を入力し、 [**完了**] をクリックします。  
+5.  [] ページで、**ウィザードを完了**し、名前`AllRegions`を入力して、[**完了**] をクリックします。  
   
-6.  次に、空白のデータ ソース ビューのデザイン画面を右クリックし、選択した**名前付きクエリの新規作成**します。  
+6.  次に、空のデータソースビューデザイン画面を右クリックし、[**新しい名前付きクエリ**] を選択します。  
   
-7.  [**名前付きクエリの作成**] ダイアログ`AllRegions`ボックスで、[**名前**] と入力し、[**説明**] に **「 すべてのモデルと地域の売上の合計と平均**」と入力します。  
+7.  [名前**付きクエリの作成**] ダイアログボックス**Name**の [名前`AllRegions`] に「」と入力し、[**説明**] に「**すべてのモデルと地域の売上の合計と平均**」と入力します。  
   
 8.  SQL テキスト ペインに、以下のステートメントを入力して [OK] をクリックします。  
   
@@ -142,15 +142,15 @@ ms.locfileid: "68893689"
     GROUP BY ReportingDate  
     ```  
   
-9. テーブルを右クリック`AllRegions`し、[**データの探索**] を選択します。  
+9. `AllRegions`テーブルを右クリックし、[データの**探索**] を選択します。  
   
-###  <a name="to-create-the-series-data-for-cross-prediction"></a><a name="bkmk_CrossData"></a>クロス予測の系列データを作成するには  
+###  <a name="to-create-the-series-data-for-cross-prediction"></a><a name="bkmk_CrossData"></a>クロス予測用の系列データを作成するには  
   
-1.  **ソリューション エクスプローラ**で、[データ**ソース ビュー**] を右クリックし、[**新しいデータ ソース ビュー**] を選択します。  
+1.  **ソリューションエクスプローラー**で、[**データソースビュー**] を右クリックし、[**新しいデータソースビュー**] をクリックします。  
   
 2.  データ ソース ビュー ウィザードで、以下の選択を行います。  
   
-     **データ ソース**:[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
+     **データソース**:[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
   
      **[テーブルとビューの選択]**: テーブルを選択しない  
   
@@ -158,13 +158,13 @@ ms.locfileid: "68893689"
   
 3.  **[完了]** をクリックします。  
   
-4.  **[T1000 Pacific Region.dsv]** の空のデザインサーフェイスを右クリックし、[**新しい名前付きクエリ**] を選択します。  
+4.  **T1000 太平洋地域の dsv**の空のデザインサーフェイスを右クリックし、[**新しい名前付きクエリ**] を選択します。  
   
      **[名前付きクエリの作成]** ダイアログ ボックスが表示されます。 名前を再入力し、以下の説明を追加します。  
   
      **名前**:`T1000 Pacific Region`  
   
-     **説明**:**地域とモデルによるフィルタ`vTimeSeries`**  
+     **説明**:**地域`vTimeSeries`とモデルによるフィルター処理**  
   
 5.  テキスト ペインに、以下のクエリを入力して [OK] をクリックします。  
   
@@ -177,16 +177,16 @@ ms.locfileid: "68893689"
     > [!NOTE]  
     >  各系列で個別に予測を作成する必要があるので、クエリ テキストをコピーしてテキスト ファイルに保存し、他のデータ系列で再利用できます。  
   
-6.  データ ソース ビューのデザイン画面で、[T1000 Pacific] を右クリックし、[**データの探索**] を選択してデータが正しくフィルターされていることを確認します。  
+6.  データソースビューのデザイン画面で、[T1000 太平洋] を右クリックし、[**データの探索**] を選択して、データが正しくフィルター処理されていることを確認します。  
   
      クロス予測クエリを作成するときは、このデータをモデルへの入力として使用します。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [更新されたデータ&#40;中間データ マイニング チュートリアルを使用した時系列予測&#41;](../../2014/tutorials/time-series-predictions-using-updated-data-intermediate-data-mining-tutorial.md)  
+ [更新されたデータを使用した時系列予測 &#40;中級者向けデータマイニングチュートリアル&#41;](../../2014/tutorials/time-series-predictions-using-updated-data-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>参照  
- [マイクロソフト時系列アルゴリズム](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   
- [マイクロソフト時系列アルゴリズムテクニカル リファレンス](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
+ [Microsoft タイムシリーズアルゴリズム](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   
+ [Microsoft タイムシリーズアルゴリズムテクニカルリファレンス](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
  [多次元モデル内のデータ ソース ビュー](https://docs.microsoft.com/analysis-services/multidimensional-models/data-source-views-in-multidimensional-models)  
   
   

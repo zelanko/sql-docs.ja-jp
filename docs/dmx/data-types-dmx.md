@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 3f1c43ad454f499429a151dc23177e380f4eac88
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892862"
 ---
 # <a name="data-types-dmx"></a>データ型 (DMX)
@@ -22,15 +22,15 @@ ms.locfileid: "68892862"
   
  データ型はアルゴリズムによって異なります。 各アルゴリズムでは、サポートされるデータ型とその使用方法が決定されます。 Microsoft アルゴリズムでは、次のデータ型がサポートされています。  
   
--   Text  
+-   テキスト  
   
 -   Long  
   
--   Boolean  
+-   ブール型  
   
--   DOUBLE  
+-   Double  
   
--   Date  
+-   日付  
   
  でサポートされる[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]データ型の詳細については、「データ[マイニング&#41;&#40;データ型](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)」を参照してください。  
   

@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 638c16de8312456410c14e38fa632085e504913e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266154"
 ---
 # <a name="converting-oracle-schemas-oracletosql"></a>Oracle スキーマの変換 (OracleToSQL)
@@ -37,12 +37,12 @@ Oracle に接続し、に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
 |-|-|  
 |Oracle オブジェクト|結果の SQL Server オブジェクト|  
 |関数|関数をに[!INCLUDE[tsql](../../includes/tsql-md.md)]直接変換できる場合、ssma は関数を作成します。<br /><br />場合によっては、関数をストアドプロシージャに変換する必要があります。 この場合、SSMA はストアドプロシージャを作成し、ストアドプロシージャを呼び出す関数を作成します。|  
-|手順|プロシージャをに[!INCLUDE[tsql](../../includes/tsql-md.md)]直接変換できる場合は、ssma によってストアドプロシージャが作成されます。<br /><br />場合によっては、独立したトランザクションでストアドプロシージャを呼び出す必要があります。 この場合、SSMA は、プロシージャを実装するストアドプロシージャと、実装するストアドプロシージャを呼び出すために使用する2つのストアドプロシージャを作成します。|  
+|プロシージャ|プロシージャをに[!INCLUDE[tsql](../../includes/tsql-md.md)]直接変換できる場合は、ssma によってストアドプロシージャが作成されます。<br /><br />場合によっては、独立したトランザクションでストアドプロシージャを呼び出す必要があります。 この場合、SSMA は、プロシージャを実装するストアドプロシージャと、実装するストアドプロシージャを呼び出すために使用する2つのストアドプロシージャを作成します。|  
 |パッケージ|SSMA は、類似したオブジェクト名によって統合される一連のストアドプロシージャと関数を作成します。|  
 |シーケンス|SSMA は、シーケンスオブジェクト (SQL Server 2012 または SQL Server 2014) を作成するか、Oracle シーケンスをエミュレートします。|  
 |インデックスやトリガーなどの依存オブジェクトを含むテーブル|SSMA は、依存オブジェクトを含むテーブルを作成します。|  
 |トリガーなどの依存オブジェクトを含むビュー|SSMA は、依存オブジェクトを含むビューを作成します。|  
-|具体化したビュー|**SSMA では、いくつかの例外を除き、SQL server 上にインデックス付きビューを作成します。具体化されたビューに次の構造体が1つ以上含まれている場合、変換は失敗します。**<br /><br />ユーザー定義関数<br /><br />SELECT、WHERE、GROUP BY 句での非決定的フィールド/関数/式<br /><br />SELECT *、WHERE、または GROUP BY 句での Float 型列の使用 (以前の問題の特別なケース)<br /><br />カスタムデータ型 (入れ子になったテーブルを含む)<br /><br />COUNT (個別&lt;の&gt;フィールド)<br /><br />FETCH<br /><br />外部結合 (LEFT、RIGHT、または FULL)<br /><br />サブクエリ、その他のビュー<br /><br />オーバー、順位、潜在顧客、ログ<br /><br />MIN、MAX<br /><br />UNION、マイナス、INTERSECT<br /><br />HAVING|  
+|具体化されたビュー|**SSMA では、いくつかの例外を除き、SQL server 上にインデックス付きビューを作成します。具体化されたビューに次の構造体が1つ以上含まれている場合、変換は失敗します。**<br /><br />ユーザー定義関数<br /><br />SELECT、WHERE、GROUP BY 句での非決定的フィールド/関数/式<br /><br />SELECT *、WHERE、または GROUP BY 句での Float 型列の使用 (以前の問題の特別なケース)<br /><br />カスタムデータ型 (入れ子になったテーブルを含む)<br /><br />COUNT (個別&lt;の&gt;フィールド)<br /><br />FETCH<br /><br />外部結合 (LEFT、RIGHT、または FULL)<br /><br />サブクエリ、その他のビュー<br /><br />オーバー、順位、潜在顧客、ログ<br /><br />MIN、MAX<br /><br />UNION、マイナス、INTERSECT<br /><br />HAVING|  
 |トリガー|**SSMA は、次の規則に基づいてトリガーを作成します。**<br /><br />BEFORE トリガーは INSTEAD OF トリガーに変換されます。<br /><br />AFTER トリガーは AFTER トリガーに変換されます。<br /><br />INSTEAD of トリガーは INSTEAD OF トリガーに変換されます。 同じ操作で複数の INSTEAD OF トリガーが定義されている場合は、1つのトリガーに結合されます。<br /><br />行レベルのトリガーは、カーソルを使用してエミュレートされます。<br /><br />連鎖トリガーは複数の個別のトリガーに変換されます。|  
 |シノニム|**シノニムは、次のオブジェクトの種類に対して作成されます。**<br /><br />テーブルとオブジェクトテーブル<br /><br />ビューとオブジェクトビュー<br /><br />ストアド プロシージャ<br /><br />関数<br /><br />**次のオブジェクトのシノニムが解決され、直接オブジェクト参照に置き換えられます。**<br /><br />シーケンス<br /><br />パッケージ<br /><br />Java クラススキーマオブジェクト<br /><br />ユーザー定義オブジェクト型<br /><br />別のシノニムのシノニムを移行して、エラーとしてマークすることはできません。<br /><br />具体化されたビューに対してシノニムは作成されません。|  
 |ユーザー定義型|**SSMA では、ユーザー定義型の変換はサポートされていません。PL/SQL プログラムでの使用を含め、ユーザー定義型には、次の規則に従った特殊な変換エラーがマークされます。**<br /><br />ユーザー定義型のテーブル列は、VARCHAR (8000) に変換されます。<br /><br />ストアドプロシージャまたは関数に対するユーザー定義型の引数は、VARCHAR (8000) に変換されます。<br /><br />PL/SQL ブロック内のユーザー定義型の変数は、VARCHAR (8000) に変換されます。<br /><br />オブジェクトテーブルは標準テーブルに変換されます。<br /><br />オブジェクトビューは標準ビューに変換されます。|  
@@ -113,7 +113,7 @@ Oracle データベースオブジェクトを変換するには、まず変換�
   
 -   オブジェクトを移行から除外することができます。 メタ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データエクスプローラーと Oracle メタデータエクスプローラーで、項目の横にあるチェックボックスをオフにし[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]てから、oracle からオブジェクトを読み込み、データを移行します。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 移行プロセスの次の手順では、[変換されたオブジェクトを SQL Server に読み込み](loading-converted-database-objects-into-sql-server-oracletosql.md)ます。  
   
 ## <a name="see-also"></a>参照  

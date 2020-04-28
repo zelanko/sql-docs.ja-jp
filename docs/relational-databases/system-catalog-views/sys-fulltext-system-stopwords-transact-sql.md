@@ -24,10 +24,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ebc1eaee0e34451a7f0bada85deafa90ff4f5d3a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68220334"
 ---
 # <a name="sysfulltext_system_stopwords-transact-sql"></a>sys.fulltext_system_stopwords (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68220334"
 
   システムストップリストへのアクセスを提供します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**ストップワード**|**nvarchar (64)**|ストップワードの一致と見なされる用語。|  
 |**language_id**|**int**|言語のロケール識別子 (LCID) です。 この LCID は単語区切りに使用されます。|  
@@ -44,7 +44,7 @@ ms.locfileid: "68220334"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="see-also"></a>参照  
- [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [fulltext_stoplists &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)   
  [fulltext_stopwords &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql.md)   

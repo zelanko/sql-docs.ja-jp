@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5aebada2f962e2b90f96a9822dbbe76e796f23e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811048"
 ---
 # <a name="understanding-the-database-schemas"></a>データベース スキーマの理解
@@ -43,7 +43,7 @@ ms.locfileid: "68811048"
 ## <a name="dimension-tables"></a>ディメンション テーブル  
  各ディメンションに対して、スキーマ生成ウィザードによって、サブジェクト領域データベースに含まれるディメンション テーブルが生成されます。 ディメンション テーブルの構造は、基になるディメンションをデザイン中に行った選択によって異なります。  
   
- [列]  
+ 列  
  このウィザードでは、各属性の `KeyColumns`、`NameColumn`、`ValueColumn`、`CustomRollupColumn`、`CustomRollupPropertiesColumn`、および `UnaryOperatorColumn` プロパティのバインドなど、ディメンション テーブルの基になるディメンション内の各属性に関連付けられたバインド用に 1 つの列が生成されます。  
   
  リレーションシップ  
@@ -63,7 +63,7 @@ ms.locfileid: "68811048"
 ## <a name="fact-tables"></a>ファクト テーブル  
  キューブ内の各メジャー グループに対して、スキーマ生成ウィザードによって、サブジェクト領域データベースに含まれるファクト テーブルが生成されます。 ファクト テーブルの構造は、基になるメジャー グループのデザイン中に行われた選択と、メジャー グループと含まれるディメンションの間のリレーションシップによって異なります。  
   
- [列]  
+ 列  
  このウィザードでは、`Count` 集計関数を使用するメジャー以外の各メジャーに 1 つずつ列が生成されます。 これらのメジャーは、ファクト テーブルに対応する列を必要としません。  
   
  さらに、必要に応じて、メジャー グループ上の標準のディメンション リレーションシップごとの各粒度属性列に 1 つの列が生成され、このテーブルの基になるメジャー グループへのファクト ディメンション リレーションシップがあるディメンションの各属性に関連付けられたバインドに 1 つまたは複数の列が生成されます。  
@@ -82,8 +82,7 @@ ms.locfileid: "68811048"
  このウィザードでは、翻訳列を必要とするメジャー グループのすべてのプロパティの翻訳済みの値を格納する個別のテーブルが生成されます。 また、必要な言語ごとに個別の列が作成されます。  
   
 ## <a name="data-type-conversion-and-default-lengths"></a>データ型変換と既定の長さ  
- スキーマ生成ウィザードでは、データ型を使用する列を除き、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar`すべての場合にデータ型が無視されます。 
-  `wchar` データ サイズは、`nvarchar` データ型に直接変換されます。 ただし、`wchar` サイズを使用している列の指定された長さが 4,000 バイトより長い場合には、スキーマ生成ウィザードではエラーが発生します。  
+ スキーマ生成ウィザードでは、データ型を使用する列を除き、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar`すべての場合にデータ型が無視されます。 `wchar` データ サイズは、`nvarchar` データ型に直接変換されます。 ただし、`wchar` サイズを使用している列の指定された長さが 4,000 バイトより長い場合には、スキーマ生成ウィザードではエラーが発生します。  
   
  属性のバインドなどのデータ アイテムに長さが指定されていない場合、次の表に示す既定の長さが列に使用されます。  
   
@@ -93,7 +92,7 @@ ms.locfileid: "68811048"
 |NameColumn|50|  
 |CustomRollupColumn|3000|  
 |CustomRollupPropertiesColumn|500|  
-|UnaryOperatorColumn|1 で保護されたプロセスとして起動されました|  
+|UnaryOperatorColumn|1|  
   
 ## <a name="see-also"></a>参照  
  [増分生成の理解](understanding-incremental-generation.md)   

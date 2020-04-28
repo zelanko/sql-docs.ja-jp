@@ -16,10 +16,10 @@ ms.assetid: 518a4618-3592-4edc-8425-cbc33cdff891
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8d7252f0335e2fc83c5b8e5e27f5e41535fdc7bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68762263"
 ---
 # <a name="sp_changepublication_snapshot-transact-sql"></a>sp_changepublication_snapshot (Transact-sql)
@@ -28,7 +28,7 @@ ms.locfileid: "68762263"
   指定されたパブリケーションのスナップショットエージェントのプロパティを変更します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
 > [!IMPORTANT]  
->  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベースエンジン &#40;SQL Server 構成マネージャー&#41;への暗号化接続の有効化](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
+>  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,13 +61,13 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
   
 `[ @frequency_type = ] frequency_type`エージェントをスケジュールする頻度を指定します。 *frequency_type*は**int**,、値は次のいずれかを指定することができます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|1 回|  
 |**2**|オン デマンド|  
 |**4**|毎日|  
 |**8**|週単位|  
-|**まで**|月単位|  
+|**まで**|月 1 回|  
 |**32**|月単位の相対|  
 |**64**|自動開始|  
 |**128**|繰り返し|  
@@ -75,23 +75,23 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
   
 `[ @frequency_interval = ] frequency_interval`エージェントを実行する日を指定します。 *frequency_interval*は**int**,、値は次のいずれかを指定することができます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|土曜日|  
 |**2**|月曜日|  
-|**番**|Tuesday|  
+|**3**|Tuesday|  
 |**4**|水曜日|  
-|**5/5**|Thursday|  
+|**5**|Thursday|  
 |**6**|金曜日|  
 |**7**|土曜日|  
 |**8**|日|  
-|**9**|平日の日中|  
-|**種類**|週末|  
+|**9**|平日|  
+|**10**|週末|  
 |NULL (既定値)||  
   
 `[ @frequency_subday = ] frequency_subday`*Freq_subday_interval*の単位です。 *frequency_subday*は**int**,、これらの値のいずれかを指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|1 度|  
 |**2**|秒|  
@@ -137,21 +137,21 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 `[ @publisher = ] 'publisher'`以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーを指定します。 *publisher*は**sysname**で、既定値は NULL です。  
   
 > [!NOTE]  
->  ** パブリッシャーで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]スナップショットエージェントを作成する場合は、パブリッシャーを使用しないでください。  
+>  *publisher*パブリッシャーで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]スナップショットエージェントを作成する場合は、パブリッシャーを使用しないでください。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_changepublication_snapshot**は、スナップショットレプリケーション、トランザクションレプリケーション、およびマージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_changepublication_snapshot**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
- [パブリケーションのプロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
+ [パブリケーション プロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [パブリケーションとアーティクルのプロパティの変更](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addpublication_snapshot &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

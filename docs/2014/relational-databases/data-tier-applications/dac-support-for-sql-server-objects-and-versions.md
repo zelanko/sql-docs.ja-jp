@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b528a7a9efb91bb99cb7c2b0a32c71dc0de7785b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811270"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>SQL Server オブジェクトとバージョンの DAC サポート
@@ -25,17 +25,16 @@ ms.locfileid: "68811270"
   
  **このトピックの内容**  
   
--   [サポートされている SQL Server オブジェクト](#SupportedObjects)  
+-   [サポート対象の SQL Server オブジェクト](#SupportedObjects)  
   
--   [SQL Server のバージョンでのデータ層アプリケーションのサポート](#SupportByVersion)  
+-   [SQL Server の各バージョンでのデータ層アプリケーション サポート](#SupportByVersion)  
   
--   [データ配置の制限事項](#DeploymentLimitations)  
+-   [データ配置の制限](#DeploymentLimitations)  
   
 -   [配置操作に関するその他の考慮事項](#Considerations)  
   
-##  <a name="SupportedObjects"></a>サポートされている SQL Server オブジェクト  
- 作成時または編集時にデータ層アプリケーションで指定できるのは、サポート対象オブジェクトのみです。 DAC でサポートされていないオブジェクトを含む既存のデータベースから DAC の抽出、登録、およびインポートを行うことはできません。 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、DAC の以下のオブジェクトがサポートされています。  
+##  <a name="supported-sql-server-objects"></a><a name="SupportedObjects"></a>サポートされている SQL Server オブジェクト  
+ 作成時または編集時にデータ層アプリケーションで指定できるのは、サポート対象オブジェクトのみです。 DAC でサポートされていないオブジェクトを含む既存のデータベースから DAC の抽出、登録、およびインポートを行うことはできません。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、DAC の以下のオブジェクトがサポートされています。  
   
 |||  
 |-|-|  
@@ -55,31 +54,24 @@ ms.locfileid: "68811270"
 |TYPE: ユーザー定義テーブル型|User|  
 |VIEW||  
   
-##  <a name="SupportByVersion"></a>SQL Server のバージョンでのデータ層アプリケーションのサポート  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンによって、DAC 操作に対するサポート レベルが異なります。 特定のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされるすべての DAC 操作は、そのバージョンのすべてのエディションでサポートされます。  
+##  <a name="data-tier-application-support-by-the-versions-of-sql-server"></a><a name="SupportByVersion"></a>SQL Server のバージョンでのデータ層アプリケーションのサポート  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンによって、DAC 操作に対するサポート レベルが異なります。 特定のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされるすべての DAC 操作は、そのバージョンのすべてのエディションでサポートされます。  
   
- 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスでは、次の DAC 操作がサポートされています。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスでは、次の DAC 操作がサポートされています。  
   
 -   サポートされているすべてのバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で、エクスポートと抽出がサポートされています。  
   
--   
-  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、および [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]のすべてのバージョンで、すべての操作がサポートされています。  
+-   [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、および [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]のすべてのバージョンで、すべての操作がサポートされています。  
   
--   
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Service Pack 2 (SP2) 以降と [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 以降で、すべての操作がサポートされています。  
+-   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Service Pack 2 (SP2) 以降と [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 以降で、すべての操作がサポートされています。  
   
  DAC Framework は、DAC パッケージとエクスポート ファイルのビルドおよび処理用のクライアント側ツールで構成されています。 以下の製品には、DAC Framework が含まれています。  
   
--   
-  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] および [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] には DAC Framework 3.0 が含まれており、これによってすべての DAC 操作がサポートされます。  
+-   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] および [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] には DAC Framework 3.0 が含まれており、これによってすべての DAC 操作がサポートされます。  
   
--   
-  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP1 と Visual Studio 2010 SP1 には DAC Framework 1.1 が含まれており、これによって、エクスポートとインポートを除くすべての DAC 操作がサポートされます。  
+-   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP1 と Visual Studio 2010 SP1 には DAC Framework 1.1 が含まれており、これによって、エクスポートとインポートを除くすべての DAC 操作がサポートされます。  
   
--   
-  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] と Visual Studio 2010 には DAC Framework 1.0 が含まれており、これによって、エクスポート、インポート、およびインプレース アップグレードを除くすべての DAC 操作がサポートされます。  
+-   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] と Visual Studio 2010 には DAC Framework 1.0 が含まれており、これによって、エクスポート、インポート、およびインプレース アップグレードを除くすべての DAC 操作がサポートされます。  
   
 -   SQL Server または Visual Studio の以前のバージョンのクライアント ツールでは、DAC 操作はサポートされていません。  
   
@@ -87,7 +79,7 @@ ms.locfileid: "68811270"
   
  あるバージョンの DAC Framework でビルドされた DAC パッケージまたはエクスポート ファイルは、それ以降の任意のバージョンの DAC Framework で処理できます。 たとえば、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] クライアント ツールを使用して抽出された DAC パッケージは、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP1 以降のクライアント ツールを使用して配置できます。  
   
-##  <a name="DeploymentLimitations"></a>データ配置の制限事項  
+##  <a name="data-deployment-limitations"></a><a name="DeploymentLimitations"></a>データ配置の制限事項  
  SQL Server 2012 SP1 の DAC Framework データ配置エンジンには、忠実性に関してここで述べるような制限があることに注意してください。 制限が適用される DAC Framework 操作は、.dacpac ファイルの展開またはパブリッシュ、および .bacpac ファイルのインポートです。  
   
 1.  sql_variant 列内の特定の条件と基本データ型によるメタデータの消失。 影響を受ける場合は、  **"DAC Framework によって配置される場合、sql_variant 列内で使用される特定のデータ型の特定のプロパティは保持されません。"** という警告メッセージが表示されます。  
@@ -112,12 +104,12 @@ ms.locfileid: "68811270"
   
     -   DECIMAL、NUMERIC の各基本データ型: 値の有効桁数が 28 を超える場合。  
   
-##  <a name="Considerations"></a>配置操作に関するその他の考慮事項  
+##  <a name="additional-considerations-for-deployment-actions"></a><a name="Considerations"></a> 配置操作に関するその他の注意点  
  DAC Framework のデータ配置操作に関して次の点に注意してください。  
   
 -   データベースからパッケージを作成するために DAC Framework を使用する**抽出/エクスポート**アクション。たとえば、.dacpac ファイルを抽出し、bacpac ファイルをエクスポートします。これらの制限は適用されません。 パッケージのデータは、ソース データベースのデータを完全に忠実に再現しています。 ここで述べた条件のいずれかがパッケージに存在する場合、抽出およびエクスポート ログに、上で述べたメッセージによって問題の概要が記録されます。 これは、作成したパッケージが潜在的なデータ配置の問題を抱えていることをユーザーに警告するためです。 ログには、  **"これらの制限は、DAC Framework によって作成された DAC パッケージに格納されたデータ型および値の忠実性には影響しません。DAC パッケージをデータベースに配置した結果のデータ型および値に対してのみ適用されます。" という概要メッセージも記録されます。影響を受けるデータおよび、この制限の対処方法の詳細については、** [こちらのトピック](https://go.microsoft.com/fwlink/?LinkId=267086)をご覧ください。  
   
--   ファイルの配置やパブリッシュ、.dacpac ファイルのインポートなど、DAC Framework を使用してパッケージをデータベースに配置する**配置/発行/インポート**アクション。このような制限が適用されます。 対象データベースに作成されるデータが、パッケージのデータを完全に忠実に再現していない可能性があります。 配置およびインポートのログには、問題が発生したすべてのインスタンスに関して、上記のメッセージが記録されます。 操作はエラーによってブロックされます (上記の分類 3 を参照)。しかし、他の警告では続行されます。  
+-   **配置、パブリッシュ、インポート** - DAC Framework を使用してパッケージをデータベースに配置する操作 (たとえば、.dacpac ファイルの配置またはパブリッシュ、.bacpac ファイルのインポート) では、ここで述べた制限が適用されます。 対象データベースに作成されるデータが、パッケージのデータを完全に忠実に再現していない可能性があります。 配置およびインポートのログには、問題が発生したすべてのインスタンスに関して、上記のメッセージが記録されます。 操作はエラーによってブロックされます (上記の分類 3 を参照)。しかし、他の警告では続行されます。  
   
      この場合に影響を受けるデータおよび、配置、パブリッシュ、インポートの各操作時におけるこの制限の対処方法の詳細については、 [こちらのトピック](https://go.microsoft.com/fwlink/?LinkId=267087)を参照してください。  
   

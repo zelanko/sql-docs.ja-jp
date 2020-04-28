@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e523d33da502a971b950e33ec0bd935149ed26f7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892341"
 ---
 # <a name="ltsource-data-querygt"></a>&lt;source data query&gt;
@@ -20,7 +20,7 @@ ms.locfileid: "68892341"
 
   データマイニングモデルをトレーニングし、マイニングモデルから予測を作成するには、データベースの[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]外部にあるデータにアクセスする必要があります。 この外部データ\<を定義するには、データマイニング拡張機能 (DMX) でソースデータクエリ> 句を使用します。 [Dmx&#41;&#40;への挿入](../dmx/insert-into-dmx.md)、 [&#60;&#62; モデルからの選択、dmx &#40;の選択](../dmx/select-from-model-prediction-join-dmx.md)、および [[自然予測 join ステートメントからの選択](../dmx/select-from-model-prediction-join-dmx.md)] では、すべて** \<ソースデータクエリ&#41;** が使用されます。  
   
-## <a name="query-types"></a>クエリの種類  
+## <a name="query-types"></a>クエリ型  
  ソース データの指定には、最も一般的な次の 3 つの方法があります。  
   
  [OPENQUERY &#40;DMX&#41;](../dmx/source-data-query-openquery.md)  

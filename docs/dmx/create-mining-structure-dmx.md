@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 87b27f9e1c5927392b4ea221dcb6b7468a42ff9c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892822"
 ---
 # <a name="create-mining-structure-dmx"></a>マイニング構造の作成 (DMX)
@@ -34,7 +34,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 ```  
   
 ## <a name="arguments"></a>引数  
- *データ*  
+ *structure*  
  構造の一意の名前です。  
   
  *列定義の一覧*  
@@ -61,7 +61,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  既定値 : REPEATABLE(0)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  マイニング構造を定義するには、列リストを指定し、必要に応じて列間の階層リレーションシップを指定して、さらに必要に応じてマイニング構造をトレーニング データセットとテスト データセットにパーティション分割します。  
   
  オプションの SESSION キーワードは、その構造が、現在のセッションの間しか使用できない一時的な構造であることを示します。 セッションが終了すると、構造と、その構造に基づくすべてのモデルが削除されます。 一時的なマイニング構造およびモデルを作成するには、まずデータベースプロパティ AllowSessionMiningModels を設定する必要があります。 詳細については、「 [データ マイニング プロパティ](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties)」を参照してください。  
@@ -95,13 +95,13 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  構造列の定義に使用できるデータ型、コンテンツの種類、列の分布、およびモデリングフラグの一覧については、次のトピックを参照してください。  
   
--   [データマイニング&#41;&#40;データ型](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
+-   [データ型 (データ マイニング)](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
   
--   [コンテンツの種類 &#40;データマイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
+-   [コンテンツの種類 (データ マイニング)](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
   
--   [列の分布 &#40;データマイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
+-   [列の分布 (データ マイニング)](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
   
--   [データマイニング&#41;&#40;のモデリングフラグ](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
+-   [モデリング フラグ (データ マイニング)](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
   
  列には複数のモデリング フラグ値を定義できます。 ただし、1つの列に対して使用できるコンテンツの種類は1つとデータ型は1つだけです。  
   
@@ -133,7 +133,7 @@ WITH HOLDOUT (2000 CASES OR 20 PERCENT)
 > [!NOTE]  
 >  パーティション情報はトレーニングデータと共にキャッシュされるため、提示を使用するには、マイニング構造の**Cachemode**プロパティが**KeepTrainingData**に設定されていることを確認する必要があります。 これは、の新しいマイニング[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]構造の既定の設定です。 提示されたパーティションを含む既存のマイニング構造で**Cachemode**プロパティを**ClearTrainingCases**に変更しても、処理されたマイニングモデルには影響しません。 ただし、が<xref:Microsoft.AnalysisServices.MiningStructureCacheMode> **KeepTrainingData**に設定されていない場合、提示されたパラメーターは無効になります。 これは、すべてのソースデータがトレーニングに使用され、テストセットは使用できなくなることを意味します。 パーティションの定義は、構造体を使用してキャッシュされます。トレーニングケースのキャッシュをクリアすると、テストデータのキャッシュと提示されたセットの定義もクリアされます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、DMX を使用して、提示されたマイニング構造を作成する方法を示します。  
   
 ### <a name="example-1-adding-a-structure-with-no-training-set"></a>例 1 : トレーニング セットを含まない構造を追加する  
@@ -180,6 +180,6 @@ WITH HOLDOUT(25 PERCENT OR 2000 CASES) REPEATABLE(0)
 ## <a name="see-also"></a>参照  
  [DMX&#41; データ定義ステートメント &#40;のデータマイニング拡張機能](../dmx/dmx-statements-data-definition.md)   
  [DMX&#41; データ操作ステートメントを &#40;データマイニング拡張機能](../dmx/dmx-statements-data-manipulation.md)   
- [DMX&#41; ステートメントリファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-statements.md)  
+ [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

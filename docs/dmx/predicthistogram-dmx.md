@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: fdc63d1c93d1290c701233cb94f71f157c771182
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893850"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (DMX)
@@ -33,7 +33,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
 ## <a name="return-type"></a>戻り値の型  
  テーブルです。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ヒストグラムでは、統計列が生成されます。 返されるヒストグラムの列構造は、 **PredictHistogram**関数で使用される列参照の型によって異なります。  
   
 ## <a name="scalar-columns"></a>スカラー列  
@@ -58,7 +58,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
      **$AdjustedProbability**列は、データ[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]マイニング仕様の[!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB の拡張機能です。  
   
 ## <a name="cluster-columns"></a>クラスター列  
- クラスター列参照> に対して PredictHistogram 関数が返すヒストグラムは、次の列で構成されます。 **** \<  
+ クラスター列参照> に対して PredictHistogram 関数が返すヒストグラムは、次の列で構成されます。 **PredictHistogram** \<  
   
 -   **$Cluster** (クラスター名を表します)  
   
@@ -66,7 +66,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
   
 -   **$Probability**  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、単一クエリの自転車の購入者列の予測された状態を返します。 このクエリでは、 **PredictHistogram**関数を使用して取得された調整済みの確率に基づいて、自転車購入者属性の上位2つの最も可能性の高い状態が返されます。  
   
 ```  

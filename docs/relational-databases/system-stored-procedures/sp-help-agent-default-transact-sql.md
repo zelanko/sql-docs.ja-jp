@@ -16,10 +16,10 @@ ms.assetid: 7ba55e39-05dd-43c7-b5da-b268ed8426dd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c0797b8fe4a2ba496b28f0c347eb5349e77e91e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68762760"
 ---
 # <a name="sp_help_agent_default-transact-sql"></a>sp_help_agent_default (Transact-sql)
@@ -42,24 +42,24 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
   
 `[ @agent_type = ] 'agent_type'`エージェントの種類を示します。 *agent_type*は**int**,、既定値はありませんが、これらの値のいずれかを指定することができます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|スナップショット エージェント。|  
 |**2**|ログ リーダー エージェント。|  
-|**番**|ディストリビューション エージェント。|  
+|**3**|ディストリビューション エージェント。|  
 |**4**|マージ エージェント。|  
 |**9**|キュー リーダー エージェント (Queue Reader Agent)|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_help_agent_default**は、すべての種類のレプリケーションで使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_help_agent_default**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**replmonitor**のメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

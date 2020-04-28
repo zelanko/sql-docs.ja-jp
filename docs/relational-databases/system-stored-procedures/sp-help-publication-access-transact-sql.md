@@ -16,10 +16,10 @@ ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7c562c039b65f99f1d3d9915f0dd00b93dc95860
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68770991"
 ---
 # <a name="sp_help_publication_access-transact-sql"></a>sp_help_publication_access (Transact-SQL)
@@ -54,7 +54,7 @@ sp_help_publication_access [ @publication = ] 'publication'
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**ログイン**|**nvarchar(256)**|実際のログイン名。|  
 |**Isntname**|**int**|**0** = ログインは Windows ユーザーではありません。<br /><br /> **1** = ログインは Windows ユーザーです。|  
@@ -63,7 +63,7 @@ sp_help_publication_access [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_help_publication_access**は、すべての種類のレプリケーションで使用されます。  
   
  結果セットの**Isntname**と**Isntgroup**の両方が**0**の場合は、ログインが[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインであると見なされます。  
@@ -74,6 +74,6 @@ sp_help_publication_access [ @publication = ] 'publication'
 ## <a name="see-also"></a>参照  
  [sp_grant_publication_access &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   
  [sp_revoke_publication_access &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

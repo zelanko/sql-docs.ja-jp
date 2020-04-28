@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: acd35dc68c4f42231aa6f71d6cc2a150ff027811
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893062"
 ---
 # <a name="toppercent-dmx"></a>TopPercent (DMX)
@@ -33,10 +33,10 @@ TopPercent(<table expression>, <rank expression>, <percent>)
 ## <a name="return-type"></a>戻り値の型  
  \<テーブル式の>  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **TopPercent**関数は、各行の rank 式> 引数の\<評価値に基づいて、順位の降順で最上位行を返します。これは、 \<順位付け式> 値の合計が、 \<パーセント> 引数で指定されているパーセント以上になるようにします。 **TopPercent**は、指定された割合の値を維持しながら、可能な限り最小の要素数を返します。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、「[基本的なデータマイニングチュートリアル](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)」を使用して作成したアソシエーションモデルに対して予測クエリを作成します。  
   
  TopPercent の動作を理解するために、入れ子になったテーブルのみを返す予測クエリを最初に実行すると便利な場合があります。  

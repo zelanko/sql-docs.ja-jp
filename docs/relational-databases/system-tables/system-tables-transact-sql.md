@@ -23,10 +23,10 @@ ms.assetid: 56b8ad51-930c-4e5c-8d99-8c939d5b70ac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 292b6cdce6b2f13445e50f79c956f07eb8d33de7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69903603"
 ---
 # <a name="system-tables-transact-sql"></a>システム テーブル (Transact-SQL)
@@ -42,8 +42,7 @@ ms.locfileid: "69903603"
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントと関数  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO)  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO)  
   
 -   レプリケーション管理オブジェクト (RMO)  
   
@@ -56,8 +55,8 @@ ms.locfileid: "69903603"
   
 |||  
 |-|-|  
-|[Transact-sql&#41;&#40;のテーブルのバックアップと復元](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)|[ログ配布テーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/log-shipping-tables-transact-sql.md)|  
-|[変更データキャプチャテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/change-data-capture-tables-transact-sql.md)|[レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)|  
+|[Transact-sql&#41;&#40;のテーブルのバックアップと復元](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)|[ログ配布テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-tables-transact-sql.md)|  
+|[変更データ キャプチャのテーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/change-data-capture-tables-transact-sql.md)|[レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)|  
 |[データベースメンテナンスプランテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/database-maintenance-plan-tables-transact-sql.md)|[SQL Server エージェントテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)|  
 |[SQL Server 拡張イベント テーブル &#40;Transact-SQL&#41;](../../relational-databases/extended-events/xevents-references-system-objects.md#system-tables)|[sysoledbusers &#40;Transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-sysoledbusers-transact-sql.md)|  
 |[Integration Services テーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/integration-services-tables-transact-sql.md)|[systranschemas &#40;Transact-sql&#41;](../../relational-databases/system-views/systranschemas-transact-sql.md)|  

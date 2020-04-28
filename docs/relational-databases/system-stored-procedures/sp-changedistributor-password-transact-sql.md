@@ -16,10 +16,10 @@ ms.assetid: 4a496e60-414a-4026-ba7a-3e89391d39b7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3715bfacd1a94f588992d7e6832814f50c076d1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68768902"
 ---
 # <a name="sp_changedistributor_password-transact-sql"></a>sp_changedistributor_password (Transact-SQL)
@@ -42,7 +42,7 @@ sp_changedistributor_password [ @password= ] 'password'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_changedistributor_password**は、すべての種類のレプリケーションで使用されます。  
   
 ## <a name="example"></a>例  
@@ -53,8 +53,8 @@ sp_changedistributor_password [ @password= ] 'password'
   
 ## <a name="see-also"></a>参照  
  [レプリケーションのセキュリティ設定を表示および変更する](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
- [ディストリビューターをセキュリティで保護する](../../relational-databases/replication/security/secure-the-distributor.md)   
+ [ディストリビューターのセキュリティ保護](../../relational-databases/replication/security/secure-the-distributor.md)   
  [sp_adddistributor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
- [レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

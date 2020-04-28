@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: de7fb2d398979bb1f3ced1319f068b70bff54c63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68889768"
 ---
 # <a name="bottomsum-dmx"></a>BottomSum (DMX)
@@ -33,10 +33,10 @@ BottomSum(<table expression>, <rank expression>, <sum>)
 ## <a name="return-type"></a>戻り値の型  
  \<テーブル式の>  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **BottomSum**関数は、順位の昇順で一番下の行を返します。 ランクは、各行の順位式> 引数の\<評価値に基づいています。これは、> 値の\<順位付け式の合計が、 \<sum> 引数で指定されている指定された合計以上であることを示します。 **BottomSum**は、指定された合計値を維持しながら、可能な限り最小の要素数を返します。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、「[基本的なデータマイニングチュートリアル](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)」を使用して作成したアソシエーションモデルに対して予測クエリを作成します。  
   
  BottomSum の動作を理解するために、入れ子になったテーブルのみを返す予測クエリを最初に実行すると便利な場合があります。  

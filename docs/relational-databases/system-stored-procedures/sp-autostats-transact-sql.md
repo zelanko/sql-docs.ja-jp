@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e3fdb095ed869ba2e8f060bdba7a3dc9db81a405
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70026248"
 ---
 # <a name="sp_autostats-transact-sql"></a>sp_autostats (Transact-sql)
@@ -66,15 +66,15 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
  *Stats_flag*が指定されていない場合、 **sp_autostats**は次の結果セットを返します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**インデックス名**|**varchar(60)**|インデックスまたは統計の名前。|  
 |**AUTOSTATS**|**varchar (3)**|AUTO_UPDATE_STATISTICS オプションの現在の値。|  
-|**最終更新日時**|**DATETIME**|統計の最終更新日。|  
+|**最終更新日時**|**datetime**|統計の最終更新日。|  
   
  テーブルまたはインデックス付きビューの結果セットには、インデックスに対して作成された統計、AUTO_CREATE_STATISTICS オプションで生成された単一列統計、 [CREATE statistics](../../t-sql/statements/create-statistics-transact-sql.md)ステートメントで作成された統計が含まれます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  指定したインデックスが無効な場合、または指定したテーブルに無効なクラスター化インデックスがある場合は、エラー メッセージが表示されます。  
   
  AUTO_UPDATE_STATISTICS はメモリ最適化テーブルでは常に OFF です。  
@@ -116,13 +116,13 @@ GO
   
 ## <a name="see-also"></a>参照  
  [値](../../relational-databases/statistics/statistics.md)   
- [ALTER DATABASE SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [Transact-sql&#41;&#40;の ALTER DATABASE SET オプション](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;&#40;の統計の作成](../../t-sql/statements/create-statistics-transact-sql.md)   
  [DBCC SHOW_STATISTICS &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
  [DROP STATISTICS &#40;Transact-sql&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
  [sp_createstats &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)   
  [UPDATE STATISTICS &#40;Transact-sql&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 6947a51b731b22b28ffbaa509f7cd38be5e7ebc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266528"
 ---
 # <a name="setting-project-options-oracletosql"></a>プロジェクト オプションの設定 (OracleToSQL)
@@ -43,7 +43,7 @@ SSMA には、次の5つのプロジェクト設定があります。
   
 -   Optimistic  
   
--   完全  
+-   [完全]  
   
 -   Custom  
   
@@ -76,8 +76,7 @@ SSMA では、すべてのプロジェクトの既定の設定を構成できま
   
     -   カスタム設定を指定するには、新しい設定または値を選択または入力します。  
   
-3.  
-  **[OK]** をクリックして設定を保存します。  
+3.  **[OK]** をクリックして設定を保存します。  
   
 また、現在のプロジェクトの設定をカスタマイズすることもできます。 これらの設定は、現在のプロジェクトファイルに保存されます。  
   
@@ -91,10 +90,9 @@ SSMA では、すべてのプロジェクトの既定の設定を構成できま
   
     -   カスタムモードを指定するには、[**モード**] ボックスで [**カスタム**] を選択し、適切なプロジェクト設定を選択します。  
   
-3.  
-  **[OK]** をクリックして設定を保存します。  
+3.  **[OK]** をクリックして設定を保存します。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>次のステップ  
 移行の次のステップは、プロジェクトのニーズによって異なります。  
   
 -   ソースとターゲットのデータ型のマッピングをカスタマイズする方法については、「 [OracleToSQL&#41;&#40;Oracle SQL Server とデータ型のマッピング](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)」を参照してください。  

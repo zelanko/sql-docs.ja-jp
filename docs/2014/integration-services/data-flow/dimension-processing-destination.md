@@ -18,14 +18,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3f4aaaef619e0f8ae5810e70e9a6707c6213268d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68890564"
 ---
 # <a name="dimension-processing-destination"></a>ディメンション処理変換先
-  ディメンション処理変換先は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ディメンションを読み込んで処理します。 ディメンションの詳細については、「[ディメンション (Analysis Services - 多次元データ)](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data)」を参照してください。  
+  ディメンション処理変換先では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のディメンションが読み込まれ処理されます。 ディメンションの詳細については、「[ディメンション (Analysis Services - 多次元データ)](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data)」を参照してください。  
   
  ディメンション処理変換先には、次の機能が含まれます。  
   
@@ -35,8 +35,7 @@ ms.locfileid: "68890564"
   
 -   ディメンション テーブルの列への入力列のマッピング  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトの処理に関する詳細については、「[処理オプションと設定 (Analysis Services)](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services)」を参照してください。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトの処理に関する詳細については、「[処理オプションと設定 (Analysis Services)](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services)」を参照してください。  
   
 ## <a name="configuration-of-the-dimension-processing-destination"></a>ディメンション処理変換先の構成  
  ディメンション処理変換先は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 接続マネージャーを接続して、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクト、または、変換先が処理するディメンションを含む [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスに接続します。 詳しくは、「 [Analysis Services 接続マネージャー](../connection-manager/analysis-services-connection-manager.md)」をご覧ください。  
@@ -45,18 +44,15 @@ ms.locfileid: "68890564"
   
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- 
-  **[ディメンション処理変換先エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ **[ディメンション処理変換先エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [[ディメンション処理変換先エディター] &#40;[接続マネージャー] ページ&#41;](../dimension-processing-destination-editor-connection-manager-page.md)  
+-   [ディメンション処理変換先エディター ([接続マネージャー] ページ)](../dimension-processing-destination-editor-connection-manager-page.md)  
   
--   [ディメンション処理変換先エディター &#40;マッピングページ&#41;](../dimension-processing-destination-editor-mappings-page.md)  
+-   [ディメンション処理変換先エディター ([マッピング] ページ)](../dimension-processing-destination-editor-mappings-page.md)  
   
--   [ディメンション処理変換先エディター &#40;詳細設定ページ&#41;](../dimension-processing-destination-editor-advanced-page.md)  
+-   [ディメンション処理変換先エディター &#40;[詳細設定] ページ&#41;](../dimension-processing-destination-editor-advanced-page.md)  
   
- 
-  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 
-  **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
 -   [共通プロパティ](../common-properties.md)  
   

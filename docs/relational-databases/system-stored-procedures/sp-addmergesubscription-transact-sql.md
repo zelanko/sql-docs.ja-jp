@@ -16,10 +16,10 @@ ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b501a2c06a6d9e8e3573ef5d5814c3318c4e623b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769135"
 ---
 # <a name="sp_addmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-sql)
@@ -74,10 +74,10 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @subscriber_type = ] 'subscriber_type'`サブスクライバーの種類を示します。 *subscriber_type*は**nvarchar (15)** で、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**local** (既定値)|パブリッシャーだけが認識しているサブスクライバー。|  
-|**全体**|すべてのサーバーが認識しているサブスクライバー。|  
+|**global**|すべてのサーバーが認識しているサブスクライバー。|  
   
  以降[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]のバージョンでは、ローカルサブスクリプションはクライアントサブスクリプションと呼ばれ、グローバルサブスクリプションはサーバーサブスクリプションと呼ばれます。  
   
@@ -90,36 +90,35 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @frequency_type = ] frequency_type`マージエージェントがいつ実行されるかを示す値です。 *frequency_type*は**int**,、値は次のいずれかを指定することができます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|1 度|  
 |**4**|毎日|  
 |**8**|週単位|  
-|**種類**|月単位|  
+|**10**|月 1 回|  
 |**20@@**|frequency_interval を基準とした月単位|  
-|**40**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの起動時|  
+|**40**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの起動時|  
 |NULL (既定値)||  
   
 `[ @frequency_interval = ] frequency_interval`マージエージェントが実行される日または日。 *frequency_interval*は**int**,、値は次のいずれかを指定することができます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|土曜日|  
 |**2**|月曜日|  
-|**番**|Tuesday|  
+|**3**|Tuesday|  
 |**4**|水曜日|  
-|**5/5**|Thursday|  
+|**5**|Thursday|  
 |**6**|金曜日|  
 |**7**|土曜日|  
 |**8**|日|  
-|**9**|平日の日中|  
-|**種類**|週末|  
+|**9**|平日|  
+|**10**|週末|  
 |NULL (既定値)||  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`スケジュールされたマージの実行間隔を月単位で指定します。 *frequency_relative_interval*は**int**,、これらの値のいずれかを指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|First (先頭へ)|  
 |**2**|秒|  
@@ -132,7 +131,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @frequency_subday = ] frequency_subday`*Frequency_subday_interval*の単位です。 *frequency_subday*は**int**,、値は次のいずれかを指定することができます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|1 度|  
 |**2**|秒|  
@@ -175,10 +174,10 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_addmergesubscription**は、マージレプリケーションで使用します。  
   
- プッシュサブスクリプションを作成するために**sysadmin**固定サーバーロールのメンバーによって**sp_addmergesubscription**が実行されると、マージエージェントジョブが暗黙的に作成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]され、エージェントサービスアカウントで実行されます。 [Sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)を実行し、 ** \@job_login**と** \@job_password**のために、エージェント固有の別の Windows アカウントの資格情報を指定することをお勧めします。 詳細については、「[レプリケーションエージェントのセキュリティモデル](../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  
+ プッシュサブスクリプションを作成するために**sysadmin**固定サーバーロールのメンバーによって**sp_addmergesubscription**が実行されると、マージエージェントジョブが暗黙的に作成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]され、エージェントサービスアカウントで実行されます。 [Sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)を実行し、 ** \@job_login**と** \@job_password**のために、エージェント固有の別の Windows アカウントの資格情報を指定することをお勧めします。 詳細については、「 [レプリケーション エージェント セキュリティ モデル](../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergesubscription-_1.sql)]  
@@ -188,9 +187,9 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 ## <a name="see-also"></a>参照  
  [プッシュサブスクリプションを作成する](../../relational-databases/replication/create-a-push-subscription.md)   
- [プルサブスクリプションを作成する](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [インタラクティブな競合解決](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)   
- [パブリケーションをサブスクライブする](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_changemergesubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
  [sp_dropmergesubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
  [sp_helpmergesubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  

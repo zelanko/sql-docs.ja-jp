@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e6e5c8f9d87fe511964d5657c57c70fe4379225e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70148569"
 ---
 # <a name="smo-syntax-conventions"></a>SMO 構文表記規則
@@ -30,8 +30,7 @@ ms.locfileid: "70148569"
   
 |表記|使用目的|  
 |----------------|--------------|  
-|UPPERCASE|
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、マクロ名、オペレーティング システム レベルで使用される用語、あるいはテキスト内でのファイル名。|  
+|UPPERCASE|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、マクロ名、オペレーティング システム レベルで使用される用語、あるいはテキスト内でのファイル名。|  
 |`monospace`|サンプルのコマンド ラインおよびプログラム コード。|  
 |*斜体*|テキストに記述されている変数、数式、または定義されている用語。 構文では、斜体文字はユーザーが指定する情報のプレースホルダーを示しています。|  
 |**太字**|SMO のオブジェクト、イベント、メソッド、プロパティなど。テキストに記述されているプログラミング用語。|  

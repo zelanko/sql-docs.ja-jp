@@ -11,17 +11,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 98c6db6e3c7af6f66f4d7a1496bf955a65dd5bb1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530874"
 ---
-# <a name="lesson-10-defining-administrative-roles"></a>レッスン 10 : 管理ロールの定義
+# <a name="lesson-10-defining-administrative-roles"></a>レッスン 10: 管理ロールの定義
   このレッスンでは、管理タスク用のセキュリティ ロールを定義する方法について学習します。  
   
 > [!NOTE]  
->  このチュートリアルの各レッスンの操作内容が反映されたプロジェクトを、オンラインで入手できます。 途中のレッスンから開始する場合は、前のレッスンの操作内容が反映されたプロジェクトを作業の開始点として使用できます。 このチュートリアルで使用するサンプルプロジェクトをダウンロードするには、[ここをクリックし](https://go.microsoft.com/fwlink/?LinkID=221866)てください。  
+>  このチュートリアルの各レッスンの操作内容が反映されたプロジェクトを、オンラインで入手できます。 途中のレッスンから開始する場合は、前のレッスンの操作内容が反映されたプロジェクトを作業の開始点として使用できます。 このチュートリアルのサンプル プロジェクトをダウンロードするには、[ここ](https://go.microsoft.com/fwlink/?LinkID=221866) をクリックしてください。  
   
  このレッスンの内容は次のとおりです。  
   
@@ -30,6 +30,6 @@ ms.locfileid: "69530874"
   
 ## <a name="see-also"></a>参照  
  [Analysis Services チュートリアルのシナリオ](analysis-services-tutorial-scenario.md)   
- [Adventure Works チュートリアル &#40;の多次元モデリング&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
+ [多次元モデリング (Adventure Works チュートリアル)](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

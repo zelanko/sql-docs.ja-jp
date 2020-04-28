@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d993cd06d555a9d4136274b35242477df1b304e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262605"
 ---
 # <a name="sysdm_tran_version_store-transact-sql"></a>sys.dm_tran_version_store (Transact-SQL)
@@ -45,25 +45,25 @@ sys.dm_tran_version_store
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**transaction_sequence_num**|**bigint**|レコードのバージョンを生成するトランザクションのシーケンス番号。|  
 |**version_sequence_num**|**bigint**|バージョン レコードのシーケンス番号。 この値は、バージョン生成トランザクション内で一意です。|  
 |**database_id**|**int**|バージョン管理されたレコードのデータベース ID。|  
 |**rowset_id**|**bigint**|レコードの行セット ID。|  
-|**オンライン**|**tinyint**|バージョン付きのレコードが2つのレコードに分割されているかどうかを示します。 値が 0 の場合、レコードは 1 ページに格納されています。 値が1の場合、レコードは2つの異なるページに格納されている2つのレコードに分割されます。|  
+|**status**|**tinyint**|バージョン付きのレコードが2つのレコードに分割されているかどうかを示します。 値が 0 の場合、レコードは 1 ページに格納されています。 値が1の場合、レコードは2つの異なるページに格納されている2つのレコードに分割されます。|  
 |**min_length_in_bytes**|**smallint**|レコードの最小長 (バイト単位)。|  
 |**record_length_first_part_in_bytes**|**smallint**|バージョン レコードの最初の部分の長さ (バイト単位)。|  
-|**record_image_first_part**|**varbinary (8000)**|バージョンレコードの最初の部分のバイナリイメージ。|  
+|**record_image_first_part**|**varbinary(8000)**|バージョンレコードの最初の部分のバイナリイメージ。|  
 |**record_length_second_part_in_bytes**|**smallint**|バージョンレコードの2番目の部分の長さ (バイト単位)。|  
-|**record_image_second_part**|**varbinary (8000)**|バージョンレコードの2番目の部分のバイナリイメージ。|  
+|**record_image_second_part**|**varbinary(8000)**|バージョンレコードの2番目の部分のバイナリイメージ。|  
   
 ## <a name="permissions"></a>アクセス許可
 
 で[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]は、 `VIEW SERVER STATE`権限が必要です。   
 Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、データベース`VIEW DATABASE STATE`の権限が必要です。 Standard [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、4 つの同時実行トランザクションが存在するテスト シナリオを使用します。これらのトランザクションはそれぞれトランザクション シーケンス番号 (XSN) で識別され、ALLOW_SNAPSHOT_ISOLATION オプションと READ_COMMITTED_SNAPSHOT オプションが ON に設定されているデータベース内で実行されます。 実行されるトランザクションは次のとおりです。  
   
 -   XSN-57。SERIALIZABLE 分離での更新操作です。  
@@ -132,7 +132,7 @@ record_length_second_part_in_bytes record_image_second_part
  この出力は、XSN-57 で 1 つのテーブルから 3 つの行バージョンが作成され、XSN-58 で他のテーブルから 1 つの行バージョンが作成されたことを示しています。  
   
 ## <a name="see-also"></a>参照  
- [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [トランザクション関連の動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [トランザクション関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

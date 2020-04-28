@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 0302af7f2241f3e158e8fa95691544c6fdf2dfac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893926"
 ---
 # <a name="predictcaselikelihood-dmx"></a>PredictCaseLikelihood 度 (DMX)
@@ -40,7 +40,7 @@ PredictCaseLikelihood([NORMALIZED|NONNORMALIZED])
 ## <a name="return-type"></a>戻り値の型  
  0から1までの倍精度浮動小数点数。 1に近い数値は、このモデルでケースが発生する確率が高いことを示します。 値が 0 に近いほど、このモデルでケースが発生する確率が低くなります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  既定では、 **Predictcaselikelihood**関数の結果は正規化されます。 通常、正規化された値は、ケース内の属性の数が増え、任意の 2 つのケースの未加工の確率の差が小さくなるほど、有用性が増します。  
   
  次の式は、x と y を指定して正規化された値を計算するために使用します。  
@@ -53,7 +53,7 @@ PredictCaseLikelihood([NORMALIZED|NONNORMALIZED])
   
  正規化 = (z/(1 + z))  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW データベースに基づくクラスターモデル内で、指定したケースが発生する確率を返します。  
   
 ```  
