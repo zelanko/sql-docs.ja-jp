@@ -15,10 +15,10 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5ce830c3fcd5661a01ecc0ad3ad84bed420be2e0
-ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "82107990"
 ---
 # <a name="automatic-tuning"></a>自動チューニング
@@ -90,7 +90,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 
 で[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]は、クエリストアシステムビューを使用して、プラン選択の回帰を見つけることができます。 で[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]は、 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]によって、プランの選択による回帰が検出され、 [dm_db_tuning_recommendations &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)ビューで適用される推奨の操作が示されます。 ビューには、問題に関する情報、問題の重要度、および特定されたクエリ、低下したプランの ID、比較の基準として使用されたプランの ID、および問題を解決[!INCLUDE[tsql_md](../../includes/tsql-md.md)]するために実行できるステートメントなどの詳細が表示されます。
 
-| type | description | datetime | score | details | ... |
+| type | description | DATETIME | score | details | ... |
 | --- | --- | --- | --- | --- | --- |
 | `FORCE_LAST_GOOD_PLAN` | CPU 時間が4ミリ秒から14ミリ秒に変更されました | 3/17/2017 | 83 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
 | `FORCE_LAST_GOOD_PLAN` | CPU 時間が37ミリ秒から84ミリ秒に変更されました | 3/16/2017 | 26 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |

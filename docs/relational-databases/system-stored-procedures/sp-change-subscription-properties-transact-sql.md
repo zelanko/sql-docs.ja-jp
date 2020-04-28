@@ -1,5 +1,5 @@
 ---
-title: sp_change_subscription_properties (トランザクション-SQL) |マイクロソフトドキュメント
+title: sp_change_subscription_properties (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e033e446fc771ad87542474edb1e90caf08faebd
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81528788"
 ---
-# <a name="sp_change_subscription_properties-transact-sql"></a>sp_change_subscription_properties (トランザクション-SQL)
+# <a name="sp_change_subscription_properties-transact-sql"></a>sp_change_subscription_properties (Transact-sql)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  プル サブスクリプションの情報を更新します。 このストアド プロシージャは、サブスクリプション データベースのサブスクライバで実行されます。  
+  プル サブスクリプションの情報を更新します。 このストアドプロシージャは、サブスクライバー側のサブスクリプションデータベースで実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,82 +42,82 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publisher = ] 'publisher'`パブリッシャーの名前です。 *発行元*は**sysname**で、デフォルトはありません。  
+`[ @publisher = ] 'publisher'`パブリッシャーの名前を指定します。 *publisher*は**sysname**で、既定値はありません。  
   
-`[ @publisher_db = ] 'publisher_db'`パブリッシャー データベースの名前です。 *publisher_db*は**sysname**で、デフォルトはありません。  
+`[ @publisher_db = ] 'publisher_db'`パブリッシャーデータベースの名前を指定します。 *publisher_db*は**sysname**であり、既定値はありません。  
   
-`[ @publication = ] 'publication'`パブリケーションの名前です。 *パブリケーション*は**sysname**で、デフォルトはありません。  
+`[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *publication*は**sysname**,、既定値はありません。  
   
-`[ @property = ] 'property'`変更するプロパティです。 *プロパティ*は**sysname です**。  
+`[ @property = ] 'property'`変更するプロパティを指定します。 *プロパティ*は**sysname**です。  
   
-`[ @value = ] 'value'`プロパティの新しい値です。 *値*は**nvarchar(1000) で**、デフォルトはありません。  
+`[ @value = ] 'value'`は、プロパティの新しい値です。 *値*は**nvarchar (1000)**,、既定値はありません。  
   
-`[ @publication_type = ] publication_type`パブリケーションのレプリケーションの種類を指定します。 *publication_type*は**int**であり、これらの値のいずれかになります。  
+`[ @publication_type = ] publication_type`パブリケーションのレプリケーションの種類を指定します。 *publication_type*は**int**,、これらの値のいずれかを指定できます。  
   
 |値|パブリケーションの種類|  
 |-----------|----------------------|  
 |**0**|トランザクション|  
 |**1**|スナップショット|  
 |**2**|Merge|  
-|NULL (デフォルト)|レプリケーションによってパブリケーションの種類が決定されます。 このストアド プロシージャでは複数のテーブルを検索する必要があるため、このオプションを指定すると、パブリケーションの種類を直接指定したときに比べて動作が遅くなります。|  
+|NULL (既定値)|レプリケーションでは、パブリケーションの種類を決定します。 このストアド プロシージャでは複数のテーブルを検索する必要があるため、このオプションを指定すると、パブリケーションの種類を直接指定したときに比べて動作が遅くなります。|  
   
- 次の表に、アーティクルのプロパティとそれらのプロパティの値を示します。  
+ 次の表では、アーティクルのプロパティとそれらのプロパティの値について説明します。  
   
 |プロパティ|値|説明|  
 |--------------|-----------|-----------------|  
-|**alt_snapshot_folder**||スナップショットの代替フォルダーの場所を指定します。 NULL に設定すると、スナップショット ファイルは、パブリッシャーによって指定された既定の場所から選択されます。|  
+|**alt_snapshot_folder**||スナップショットの代替フォルダーの場所を指定します。 NULL に設定した場合、スナップショットファイルはパブリッシャーによって指定された既定の場所から取得されます。|  
 |**distrib_job_login**||エージェントを実行する [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントのログイン。|  
-|**distrib_job_password**||エージェントが実行される Windows アカウントのパスワード。|  
-|**distributor_login**||ディストリビュータ ログイン。|  
+|**distrib_job_password**||エージェントを実行する Windows アカウントのパスワード。|  
+|**distributor_login**||ディストリビューターログイン。|  
 |**distributor_password**||ディストリビューター パスワード。|  
-|**distributor_security_mode**|**1**|ディストリビュータに接続するときに Windows 認証を使用します。|  
-||**0**|ディス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]トリビュータに接続する際は認証を使用します。|  
-|**dts_package_name**||SQL Server 2000 データ変換サービス (DTS) パッケージの名前。 この値は、パブリケーションがトランザクションまたはスナップショットである場合にのみ指定できます。|  
-|**dts_package_password**||パッケージのパスワードを指定します。 *dts_package_password*は、デフォルトの NULL の**sysname**で、パスワード・プロパティーを変更せずに残すことを指定します。<br /><br /> 注意 : DTS パッケージにはパスワードが必要です。<br /><br /> この値は、パブリケーションがトランザクションまたはスナップショットである場合にのみ指定できます。|  
-|**dts_package_location**||DTS パッケージが格納される場所。 この値は、パブリケーションがトランザクションまたはスナップショットである場合にのみ指定できます。|  
-|**dynamic_snapshot_location**||スナップショット ファイルが保存されるフォルダへのパスを指定します。 この値は、パブリケーションがマージ パブリケーションの場合にのみ指定できます。|  
+|**distributor_security_mode**|**1**|ディストリビューターへの接続時に Windows 認証を使用します。|  
+||**0**|ディストリビューター [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]への接続時に認証を使用します。|  
+|**dts_package_name**||SQL Server 2000 データ変換サービス (DTS) パッケージの名前。 この値は、パブリケーションがトランザクションまたはスナップショットの場合にのみ指定できます。|  
+|**dts_package_password**||パッケージのパスワードを指定します。 *dts_package_password*は**sysname**で、既定値は NULL です。これは、password プロパティを変更せずに残すことを指定します。<br /><br /> 注: DTS パッケージにはパスワードが必要です。<br /><br /> この値は、パブリケーションがトランザクションまたはスナップショットの場合にのみ指定できます。|  
+|**dts_package_location**||DTS パッケージが格納されている場所。 この値は、パブリケーションがトランザクションまたはスナップショットの場合にのみ指定できます。|  
+|**dynamic_snapshot_location**||スナップショットファイルを保存するフォルダーへのパスを指定します。 この値は、パブリケーションがマージパブリケーションである場合にのみ指定できます。|  
 |**ftp_address**||これは旧バージョンとの互換性のためにだけ用意されています。|  
 |**ftp_login**||これは旧バージョンとの互換性のためにだけ用意されています。|  
 |**ftp_password**||これは旧バージョンとの互換性のためにだけ用意されています。|  
 |**ftp_port**||これは旧バージョンとの互換性のためにだけ用意されています。|  
-|**ホスト**||パブリッシャに接続するときに使用するホスト名。|  
-|**internet_login**||基本認証を使用して Web 同期をホストしている Web サーバーに接続するときにマージ エージェントが使用するログイン。|  
-|**internet_password**||基本認証を使用して Web 同期をホストしている Web サーバーに接続するときにマージ エージェントが使用するパスワード。|  
-|**internet_security_mode**|**1**|Web 同期に Windows 統合認証を使用します。 Web 同期では基本認証を使用することをお勧めします。 詳しくは、「 [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)」をご覧ください。|  
-||**0**|Web 同期に基本認証を使用。<br /><br /> 注意 : Web 同期では、Web サーバーへの TLS 接続が必要です。|  
-|**internet_timeout**||Web 同期要求の有効期限が切れるまでの時間 (秒単位)。|  
-|**internet_url**||Web 同期のレプリケーション リスナーの場所を表す URL。|  
-|**merge_job_login**||エージェントが実行される Windows アカウントのログイン。|  
-|**merge_job_password**||エージェントが実行される Windows アカウントのパスワード。|  
-|**publisher_login**||パブリッシャーログイン。 *publisher_login*の変更は、マージ パブリケーションのサブスクリプションでのみサポートされます。|  
-|**publisher_password**||発行者のパスワード。 *publisher_password*の変更は、マージ パブリケーションのサブスクリプションでのみサポートされます。|  
-|**publisher_security_mode**|**1**|パブリッシャーに接続するときに Windows 認証を使用。 *publisher_security_mode*の変更は、マージ パブリケーションのサブスクリプションでのみサポートされます。|  
-||**0**|パブリッシャー[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続する際に認証を使用します。|  
-|**use_ftp**|**true**|スナップショットを取得するには、通常のプロトコルではなく FTP を使用します。|  
+|**hostname**||パブリッシャーに接続するときに使用されるホスト名。|  
+|**internet_login**||基本認証を使用して Web 同期をホストしている Web サーバーに接続するときにマージエージェントが使用するログインです。|  
+|**internet_password**||基本認証を使用して Web 同期をホストしている Web サーバーに接続するときにマージエージェントが使用するパスワード。|  
+|**internet_security_mode**|**1**|Web 同期に Windows 統合認証を使用します。 Web 同期で基本認証を使用することをお勧めします。 詳しくは、「 [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)」をご覧ください。|  
+||**0**|Web 同期に基本認証を使用。<br /><br /> 注: Web 同期には、Web サーバーへの TLS 接続が必要です。|  
+|**internet_timeout**||Web 同期要求が期限切れになるまでの時間の長さ (秒単位)。|  
+|**internet_url**||Web 同期用のレプリケーションリスナーの場所を表す URL。|  
+|**merge_job_login**||エージェントを実行する Windows アカウントのログイン。|  
+|**merge_job_password**||エージェントを実行する Windows アカウントのパスワード。|  
+|**publisher_login**||パブリッシャーログイン。 *Publisher_login*の変更は、マージパブリケーションへのサブスクリプションでのみサポートされています。|  
+|**publisher_password**||パブリッシャーのパスワード。 *Publisher_password*の変更は、マージパブリケーションへのサブスクリプションでのみサポートされています。|  
+|**publisher_security_mode**|**1**|パブリッシャーに接続するときに Windows 認証を使用。 *Publisher_security_mode*の変更は、マージパブリケーションへのサブスクリプションでのみサポートされています。|  
+||**0**|パブリッシャー [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続するときに認証を使用します。|  
+|**use_ftp**|**true**|スナップショットを取得するには、通常のプロトコルの代わりに FTP を使用します。|  
 ||**false**|標準のプロトコルを使用してスナップショットを取得。|  
 |**use_web_sync**|**true**|Web 同期を有効にします。|  
 ||**false**|Web 同期を無効にします。|  
-|**working_directory**||スナップショット ファイルの転送にファイル転送プロトコル (FTP) を使用する場合に、パブリケーションのデータ ファイルとスキーマ ファイルを一時的に格納するために使用される作業ディレクトリの名前。|  
+|**working_directory**||ファイル転送プロトコル (FTP) を使用してスナップショットファイルを転送するときに、パブリケーションのデータとスキーマファイルを一時的に格納するために使用する作業ディレクトリの名前。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
- **sp_change_subscription_properties**は、すべてのタイプのレプリケーションで使用されます。  
+## <a name="remarks"></a>Remarks  
+ **sp_change_subscription_properties**は、すべての種類のレプリケーションで使用されます。  
   
- **sp_change_subscription_properties**はプル サブスクリプションに使用されます。  
+ プルサブスクリプションには**sp_change_subscription_properties**が使用されます。  
   
- Oracle パブリッシャーの場合、oracle では、サーバーのインスタンスごとに 1 つのデータベースしか許可しないため *、publisher_db*の値は無視されます。  
+ Oracle パブリッシャーの場合、Oracle ではサーバーのインスタンスごとに1つのデータベースのみが許可されるため、 *publisher_db*の値は無視されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- sp_change_subscription_properties実行できるのは、固定サーバー ロールまたは固定データベース ロール**db_owner** **sysadmin**のメンバ**だけです。**  
+ **Sp_change_subscription_properties**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
- [プル サブスクリプションのプロパティの表示と変更](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
- [sp_addmergepullsubscription &#40;のトランザクション SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
- [sp_addmergepullsubscription_agent &#40;のトランザクション SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)   
- [sp_addpullsubscription&#40;のトランザクション SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
- [sp_addpullsubscription_agent&#40;のトランザクション SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)   
+ [プル サブスクリプションのプロパティの表示または変更](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
+ [sp_addmergepullsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
+ [sp_addmergepullsubscription_agent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)   
+ [sp_addpullsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
+ [sp_addpullsubscription_agent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

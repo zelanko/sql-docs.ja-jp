@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3f736d03a573f61ed31e0cb95c1768907f8a9560
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "82087162"
 ---
 # <a name="excel-destination"></a>Excel 変換先
@@ -48,9 +48,9 @@ ms.locfileid: "82087162"
   
      単一引用符が含まれることを回避する方法については、msdn.com のブログ投稿「 [Single quote is appended to all strings when data is transformed to excel when using Excel destination data flow component in SSIS package (SSIS パッケージで Excel 変換先データ フロー コンポーネントを使用すると、データが Excel に変換されるときに、すべての文字列に単一引用符が追加される)](https://go.microsoft.com/fwlink/?LinkId=400876)」を参照してください。  
   
--   **メモ (ntext) データの保存**。 255 文字を超える文字列を Excel 列に正常に保存するには、変換先の列のデータ型を **文字列型** ではなく **メモ型**としてドライバーが認識する必要があります。 変換先のテーブルに既にデータ行が含まれている場合、ドライバーによってサンプリングされた先頭の数行のメモ列に、255 文字を超える値のインスタンスが 1 つ以上含まれている必要があります。 パッケージのデザイン時または実行時に変換先テーブルが作成される場合、CREATE TABLE ステートメントは、メモ列のデータ型として LONGTEXT (またはそのシノニムの 1 つ) を使用する必要があります。  
+-   **メモ (ntext) データの保存**。 255 文字を超える文字列を Excel 列に正常に保存するには、変換先の列のデータ型を **文字列型** ではなく **メモ型**としてドライバーが認識する必要があります。 変換先のテーブルに既にデータ行が含まれている場合、ドライバーによってサンプリングされた先頭の数行のメモ列に、255 文字を超える値のインスタンスが 1 つ以上含まれている必要があります。 コピー先のテーブルがパッケージの設計時または実行時に作成される場合、CREATE TABLE ステートメントでは、メモ列のデータ型として LONGTEXT (またはそのいずれかのシノニム) を使用する必要があります。  
   
--   **データ型**: Excel ドライバーでは、データ型の限定されたセットのみを認識します。 たとえば、すべての数値列は倍精度浮動小数点型 (DT_R8) として解釈され、すべての文字列の列 (メモ列以外) は 255 文字の Unicode 文字列 (DT_WSTR) として解釈されます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、Excel データ型を次のようにマップします。  
+-   **データ型**。 Excel ドライバーでは、データ型の限定されたセットのみを認識します。 たとえば、すべての数値列は倍精度浮動小数点型 (DT_R8) として解釈され、すべての文字列の列 (メモ列以外) は 255 文字の Unicode 文字列 (DT_WSTR) として解釈されます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、Excel データ型を次のようにマップします。  
   
     -   Numeric – 倍精度浮動小数点数 (DT_R8)  
   
@@ -58,7 +58,7 @@ ms.locfileid: "82087162"
   
     -   Boolean – ブール (DT_BOOL)  
   
-    -   日時`datetime`(DT_DATE)  
+    -   日付/時刻`datetime` (DT_DATE)  
   
     -   String – Unicode 文字列、長さ 255 (DT_WSTR)  
   
@@ -104,9 +104,9 @@ ms.locfileid: "82087162"
 -   [データ フロー コンポーネントのプロパティを設定する](set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="see-also"></a>参照  
- [エクセルソース](excel-source.md)   
- [SSIS&#41;変数&#40;統合サービス](../integration-services-ssis-variables.md)   
- [データ フロー](data-flow.md)   
+ [Excel ソース](excel-source.md)   
+ [SSIS&#41; 変数の Integration Services &#40;](../integration-services-ssis-variables.md)   
+ [データフロー](data-flow.md)   
  [スクリプト タスクを使用した Excel ファイルの操作](../extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
   
   

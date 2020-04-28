@@ -1,6 +1,6 @@
 ---
-title: CLR 統合の概要 |マイクロソフトドキュメント
-description: CLR をホストする SQL サーバーは、CLR 統合と呼ばれます。 マネージ コードでの作成は、パフォーマンスを向上させることができます。 SQL Server は CAS を使用して、マネージ コードのセキュリティを確保します。
+title: CLR 統合の概要 |Microsoft Docs
+description: CLR をホストする Microsoft SQL Server は、CLR 統合と呼ばれます。 マネージコードで作成すると、パフォーマンスが向上します。 SQL Server は、CAS を使用してマネージコードを保護します。
 ms.custom: ''
 ms.date: 04/19/2017
 ms.prod: sql
@@ -19,10 +19,10 @@ ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 64c30629cf7608a7816ec16c458f55f4dfad1e75
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81488109"
 ---
 # <a name="clr-integration---overview"></a>CLR 統合 - 概要
@@ -41,7 +41,7 @@ ms.locfileid: "81488109"
  計算や複雑な実行ロジックには、[!INCLUDE[tsql](../../includes/tsql-md.md)] よりもマネージド コードが適しています。また、マネージド コードでは、文字列処理や正規表現など、多数の複雑なタスクが幅広くサポートされています。 .NET Framework ライブラリの機能を使用すると、数千もの事前にビルドされたクラスやルーチンにアクセスすることができます。 このようなクラスやルーチンには、任意のストアド プロシージャ、トリガー、またはユーザー定義関数から簡単にアクセスできます。 BCL (基本クラス ライブラリ) には、文字列操作、高度な算術演算、ファイル アクセス、暗号化などの機能を提供するクラスがあります。  
   
 > [!NOTE]  
->  これらのクラスの多くは、SQL Server の CLR コード内から使用できますが、サーバー側での使用が適していないクラス (ウィンドウ関連のクラスなど) にはアクセスできません。 詳細については、「[サポートされる .NET Framework ライブラリ](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)」を参照してください。  
+>  これらのクラスの多くは、SQL Server の CLR コード内から使用できますが、サーバー側での使用が適していないクラス (ウィンドウ関連のクラスなど) にはアクセスできません。 詳細については、「[サポートされている .NET Framework ライブラリ](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)」を参照してください。  
   
  マネージド コードの利点の 1 つはタイプ セーフであることです。つまり、コードから各データ型へのアクセスは、正しく定義された許容される方法に限られます。 CLR は、マネージド コードが実行される前に、そのコードが安全であることを確認します。 たとえば、事前に書き込まれていないメモリからの読み取りが行われないように、コードがチェックされます。 また、CLR は、コードからアンマネージ メモリの操作が行われないようにする際にも役立ちます。  
   
@@ -57,12 +57,12 @@ ms.locfileid: "81488109"
  [!INCLUDE[tsql](../../includes/tsql-md.md)] とマネージド コードのどちらを使用するかを判断する際には、コードをサーバー コンピューターで実行するか、またはクライアント コンピューターで実行するかを判断する必要があります。 [!INCLUDE[tsql](../../includes/tsql-md.md)] とマネージド コードは、どちらもサーバー側で実行することができます。 サーバー側でコードを実行すると、コードとデータが近くにあるため、サーバーの処理能力を活用できます。 逆に、データベース サーバーでプロセッサを集中的に使用するタスクを実行することが好ましくない場合もあります。 現在、多くのクライアント コンピューターは高性能なので、できるだけ多くのコードをクライアント側で実行して、この処理能力を活用することもできます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] はクライアント側で実行することはできませんが、マネージド コードはクライアント側で実行することができます。  
   
 ## <a name="choosing-between-extended-stored-procedures-and-managed-code"></a>拡張ストアド プロシージャとマネージド コードの選択  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャでは実行不可能な機能を実行するために、拡張ストアド プロシージャを構築できます。 ただし、拡張ストアド プロシージャでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスの整合性を侵害する可能性があります。一方、マネージド コードは、タイプ セーフなので、SQL Server プロセスの整合性を侵害することはありません。 さらに、CLR のマネージド コードと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の間では、メモリ管理、スレッドやファイバーのスケジュール設定、同期サービスが、より密接に統合されます。 CLR 統合を使用すると、拡張ストアド プロシージャを使用するよりも安全に、[!INCLUDE[tsql](../../includes/tsql-md.md)] では記述できないタスクを実行するのに必要なストアド プロシージャを記述することができます。 CLR 統合と拡張ストアド プロシージャの詳細については、「 [CLR 統合のパフォーマンス](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)」を参照してください。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャでは実行不可能な機能を実行するために、拡張ストアド プロシージャを構築できます。 ただし、拡張ストアド プロシージャでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスの整合性を侵害する可能性があります。一方、マネージド コードは、タイプ セーフなので、SQL Server プロセスの整合性を侵害することはありません。 さらに、CLR のマネージド コードと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の間では、メモリ管理、スレッドやファイバーのスケジュール設定、同期サービスが、より密接に統合されます。 CLR 統合を使用すると、拡張ストアド プロシージャを使用するよりも安全に、[!INCLUDE[tsql](../../includes/tsql-md.md)] では記述できないタスクを実行するのに必要なストアド プロシージャを記述することができます。 CLR 統合と拡張ストアドプロシージャの詳細については、「 [Clr 統合のパフォーマンス](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [.NET フレームワークのインストール](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
+ [.NET Framework のインストール](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
  [CLR 統合のアーキテクチャ](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)   
- [CLR データベース オブジェクトからのデータ アクセス](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)   
+ [CLR データベースオブジェクトからのデータアクセス](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)   
  [CLR 統合の概要](../../relational-databases/clr-integration/database-objects/getting-started-with-clr-integration.md)  
   
   

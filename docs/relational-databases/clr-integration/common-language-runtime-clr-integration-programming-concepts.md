@@ -1,6 +1,6 @@
 ---
 title: 共通言語ランタイム (CLR) プログラミング
-description: この記事では、任意の .NET Framework 言語を使用してサーバー側のモジュールを記述できる SQL Server と CLR 統合を使用するためのリソースを提供します。
+description: この記事では、SQL Server との CLR 統合を使用するためのリソースを提供します。これにより、任意の .NET Framework 言語を使用してサーバー側のモジュールを作成できます。
 ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ ms.assetid: 951bf851-3e6e-4361-ae6a-2bcd5b837ebd
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c44e777e78e9d2a6ded97e5bff2ec61e4c7f8391
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81488143"
 ---
 # <a name="common-language-runtime-clr-integration-programming-concepts"></a>CLR (共通言語ランタイム) 統合のプログラミング概念
@@ -30,20 +30,20 @@ ms.locfileid: "81488143"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] における CLR プログラミングのためのコア機能は、Microsoft.SqlServer.Server 名前空間に存在します。 ただし、Microsoft.SqlServer.Server 名前空間については、.NET Framework SDK ドキュメントをご覧ください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックには、このドキュメントが含まれていません。  
   
 > [!IMPORTANT]  
->  既定では、.NET Framework は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と共にインストールされますが、.NET Framework SDK はインストールされません。 SDK がコンピューターにインストールされていない場合やオンライン ブックに含まれていない場合は、このセクションにある SDK のコンテンツへのリンクが機能しません。 .NET Framework SDK をインストールしてください。 インストールしたら、オンライン ブックのコレクションと目次に SDK を追加する方法については[、「.NET Framework SDK のインストール](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)」の手順に従います。  
+>  既定では、.NET Framework は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と共にインストールされますが、.NET Framework SDK はインストールされません。 SDK がコンピューターにインストールされていない場合やオンライン ブックに含まれていない場合は、このセクションにある SDK のコンテンツへのリンクが機能しません。 .NET Framework SDK をインストールしてください。 インストールが完了したら、「 [.NET FRAMEWORK sdk のインストール](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)」の手順に従って、Sdk をオンラインブックコレクションと目次に追加します。  
   
 > [!NOTE]  
->  CLR ユーザー関数などの CLR 機能は、Azure SQL データベースではサポート*されていません*。  
+>  Clr ユーザー関数などの CLR 機能は、Azure SQL Database ではサポートされて*いません*。  
   
- 次の表は、このセクションのトピックの一覧です。  
+ 次の表に、このセクションの各トピックの一覧を示します。  
   
- [共通言語ランタイム&#40;CLR&#41;統合の概要](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
+ [CLR&#41; 統合の概要 &#40;共通言語ランタイム](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
  CLR の概要を簡単に紹介し、このテクノロジが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用される方法と理由について説明します。 CLR を使用してデータベース オブジェクトを作成する利点についても説明します。  
   
  [アセンブリ &#40;データベース エンジン&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではなく、[!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework CLR (共通言語ランタイム) がサポートするマネージド コード言語の 1 つを使用して作成された関数、ストアド プロシージャ、トリガー、ユーザー定義集計、ユーザー定義型の配置に、[!INCLUDE[tsql](../../includes/tsql-md.md)] でアセンブリがどのように使用されるかについて説明します。  
   
- [共通言語ランタイムを使用したデータベース オブジェクトの構築&#40;CLR&#41;統合](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)  
+ [CLR&#41; 統合 &#40;共通言語ランタイムを使用したデータベースオブジェクトの構築](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)  
  CLR を使用して作成できるオブジェクトの種類について説明し、CLR データベース オブジェクトの作成要件を確認します。  
   
  [CLR データベース オブジェクトからのデータ アクセス](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)  
@@ -68,7 +68,7 @@ ms.locfileid: "81488143"
  CLR オブジェクトを使用する使用シナリオとコード サンプルについて説明します。  
   
 ## <a name="see-also"></a>参照  
- [データベース エンジン&#40;&#41;アセンブリ](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+ [アセンブリ &#40;データベースエンジン&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [.NET Framework SDK のインストール](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)  
   
   

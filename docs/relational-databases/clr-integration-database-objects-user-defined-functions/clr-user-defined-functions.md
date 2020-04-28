@@ -1,6 +1,6 @@
 ---
-title: CLR ユーザー定義関数 |マイクロソフトドキュメント
-description: SQL Server CLR 統合を使用すると、ユーザー定義のスカラー値、テーブル値、および集計関数を任意の .NET Framework プログラミング言語で作成できます。
+title: CLR ユーザー定義関数 |Microsoft Docs
+description: SQL Server CLR 統合を使用すると、ユーザー定義のスカラー値関数、テーブル値関数、および集計関数を任意の .NET Framework プログラミング言語で作成できます。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ ms.assetid: 6f7491f1-9a46-4146-ae09-056248634de2
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0da524de3a21a97daf6e3b2d2e0277631a4467c0
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81488273"
 ---
 # <a name="clr-user-defined-functions"></a>CLR ユーザー定義関数
@@ -29,7 +29,7 @@ ms.locfileid: "81488273"
   
  関数には、1 つの値を返すスカラー関数と行セットを返すテーブル値関数の 2 種類があります。  
   
- 次の表は、このセクションのトピックの一覧です。  
+ 次の表に、このセクションの各トピックの一覧を示します。  
   
  [CLR スカラー値関数](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-scalar-valued-functions.md)  
  実装の要件とスカラー値関数の例について説明します。  

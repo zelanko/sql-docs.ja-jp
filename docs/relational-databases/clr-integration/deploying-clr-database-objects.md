@@ -1,6 +1,6 @@
 ---
-title: CLR データベース オブジェクトの配置 |マイクロソフトドキュメント
-description: Microsoft Visual Studio を使用すると、SQL Server 用の CLR データベース オブジェクトを開発し、テスト サーバーに配置し、運用サーバーに配布できます。
+title: CLR データベースオブジェクトの配置 |Microsoft Docs
+description: Microsoft Visual Studio を使用すると、SQL Server 用の CLR データベースオブジェクトを開発し、テストサーバーに配置して、実稼働サーバーに配布できます。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 26253e3a19b31dce94249a09dcf7cee71fbffeeb
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81488211"
 ---
 # <a name="deploying-clr-database-objects"></a>CLR データベース オブジェクトの配置
@@ -36,15 +36,15 @@ ms.locfileid: "81488211"
  すべてのコンパイラ エラーおよび警告が解決されていることを確認してください。 これで、Visual Studio または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ステートメントを使用して、CLR ルーチンを含むアセンブリを [!INCLUDE[tsql](../../includes/tsql-md.md)] データベースに登録できます。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Visual Studio を使用してリモートで開発およびデバッグを行うには、[!INCLUDE[msCoName](../../includes/msconame-md.md)] インスタンスで TCP/IP ネットワーク プロトコルを有効にする必要があります。 サーバーで TCP/IP プロトコルを有効にする方法の詳細については、「[クライアント プロトコルの構成](../../database-engine/configure-windows/configure-client-protocols.md)」を参照してください。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Visual Studio を使用してリモートで開発およびデバッグを行うには、[!INCLUDE[msCoName](../../includes/msconame-md.md)] インスタンスで TCP/IP ネットワーク プロトコルを有効にする必要があります。 サーバーで TCP/IP プロトコルを有効にする方法の詳細については、「[クライアントプロトコルを構成する](../../database-engine/configure-windows/configure-client-protocols.md)」を参照してください。  
   
 #### <a name="to-deploy-the-assembly-using-visual-studio"></a>Visual Studio を使用してアセンブリを配置するには  
   
-1.  [ビルド] メニューの [プロジェクト名の**ビルド**\<]>を選択して、プロジェクトを**ビルド**します。  
+1.  **[ビルド] メニュー**の [プロジェクト名の> の**ビルド** \<] を選択して、プロジェクトをビルドします。  
   
 2.  アセンブリをテスト サーバーに配置する前に、すべてのビルド エラーおよび警告を解決します。  
   
-3.  [ビルド] メニューから [**配置**]**を**選択します。 これで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロジェクトを最初に Visual Studio で作成したときに指定したデータベース内にアセンブリが登録されます。  
+3.  [**ビルド**] メニューの [**配置**] をクリックします。 これで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロジェクトを最初に Visual Studio で作成したときに指定したデータベース内にアセンブリが登録されます。  
 
 #### <a name="to-deploy-the-assembly-using-transact-sql"></a>Transact-SQL を使用してアセンブリを配置するには  
   
@@ -58,7 +58,7 @@ ms.locfileid: "81488211"
   
  `vbc /target:library C:\helloworld.vb`  
   
- これらのコマンドは **、/target**オプションを使用してライブラリ DLL のビルドを指定して Visual C# または Visual Basic コンパイラを起動します。  
+ これらのコマンドは、 **/target**オプションを使用してライブラリ DLL のビルドを指定し、Visual C# または Visual Basic コンパイラを起動します。  
   
 1.  アセンブリをテスト サーバーに配置する前に、すべてのビルド エラーおよび警告を解決します。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "81488211"
   
  `CREATE ASSEMBLY HelloWorld from 'c:\helloworld.dll' WITH PERMISSION_SET = SAFE;`  
   
-1.  次に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに、プロシージャ、関数、集計、ユーザー定義型、またはトリガーを作成する必要があります。 プロシージャ**クラスに**HelloWorld という名前のメソッドが[!INCLUDE[tsql](../../includes/tsql-md.md)]**HelloWorld**アセンブリに含まれている場合は、次のメソッドをクエリに追加して **、hello**という[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロシージャを作成できます。 **HelloWorld**  
+1.  次に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに、プロシージャ、関数、集計、ユーザー定義型、またはトリガーを作成する必要があります。 **Helloworld**アセンブリに**helloworld**という名前のメソッドが**Procedures**クラスに含まれて[!INCLUDE[tsql](../../includes/tsql-md.md)]いる場合は、クエリに次のを追加して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **hello** in というプロシージャを作成できます。  
   
  `CREATE PROCEDURE hello`  
   
@@ -76,10 +76,10 @@ ms.locfileid: "81488211"
   
  `EXTERNAL NAME HelloWorld.Procedures.HelloWorld`  
   
- でマネージ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース オブジェクトのさまざまな種類を作成する方法の詳細については、「 CLR[ユーザー定義関数](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md) [、CLR ユーザー定義集計](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)関数[、CLR ユーザー定義型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) [、CLR ストアド プロシージャ](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)、および CLR[トリガー](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)」を参照してください。  
+ で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のさまざまな種類の管理されたデータベースオブジェクトの作成の詳細については、「 [Clr ユーザー定義関数](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)」、「clr[ユーザー定義集計](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)」、「clr ユーザー定義[型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)」、「Clr[ストアドプロシージャ](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)」、および「 [clr トリガー](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)」を参照してください。  
   
 ## <a name="deploying-the-assembly-to-production-servers"></a>実稼働サーバーへのアセンブリの配置  
- CLR データベース オブジェクトをテスト サーバーでテストおよび検証した後は、実稼働サーバーに配布できます。 マネージ データベース オブジェクトのデバッグの詳細については、「 [CLR データベース オブジェクトのデバッグ](../../relational-databases/clr-integration/debugging-clr-database-objects.md)」を参照してください。  
+ CLR データベース オブジェクトをテスト サーバーでテストおよび検証した後は、実稼働サーバーに配布できます。 マネージデータベースオブジェクトのデバッグの詳細については、「 [CLR データベースオブジェクトのデバッグ](../../relational-databases/clr-integration/debugging-clr-database-objects.md)」を参照してください。  
   
  マネージド データベース オブジェクトの配置は、通常のデータベース オブジェクト (テーブル、[!INCLUDE[tsql](../../includes/tsql-md.md)] ルーチンなど) の配置と似ています。 CLR データベース オブジェクトを含むアセンブリは、配置スクリプトを使用して別のサーバーに配置できます。 配置スクリプトは、[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の "スクリプトの生成" 機能を使用して作成できます。 配置スクリプトは、手動で作成することも、また、"スクリプトの生成" を使用して作成した後に手動で変更することもできます。 配置スクリプトの作成後は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の別のインスタンスでこれを実行し、マネージド データベース オブジェクトを配置することができます。  
   
@@ -87,22 +87,22 @@ ms.locfileid: "81488211"
   
 1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を開き、配置するマネージド アセンブリまたはデータベース オブジェクトを登録する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。  
   
-2.  オブジェクト**エクスプローラー**で**\<、>サーバー名**とデータベース ツリー**を**展開します。 管理データベース オブジェクトが登録されているデータベースを右クリックし、[**タスク**] を選択して、[**スクリプトの生成**] を選択します。 スクリプト作成ウィザードが開きます。  
+2.  [**オブジェクトエクスプローラー**で、[ ** \<サーバー名>** および**データベース**] ツリーを展開します。 マネージデータベースオブジェクトが登録されているデータベースを右クリックし、[**タスク**]、[**スクリプトの生成**] の順に選択します。 スクリプト作成ウィザードが開きます。  
   
-3.  リスト ボックスからデータベースを選択し、[**次へ**] をクリックします。  
+3.  リストボックスからデータベースを選択し、[**次へ**] をクリックします。  
   
-4.  [**スクリプト オプションの選択**] ウィンドウで、[**次へ**] をクリックするか、オプションを変更して [**次へ**] をクリックします。  
+4.  [**スクリプトオプションの選択**] ウィンドウで [**次へ**] をクリックするか、オプションを変更して [**次へ**] をクリックします。  
   
-5.  [**オブジェクトの種類の選択**] ペインで、配置するデータベース オブジェクトの種類を選択します。 **[次へ]** をクリックします。  
+5.  [**オブジェクトの種類の選択**] ペインで、配置するデータベースオブジェクトの種類を選択します。 **[次へ]** をクリックします。  
   
-6.  **[オブジェクト**タイプの選択] ペインで選択したすべてのオブジェクトタイプに対**して、[タイプ>の\<選択**] ペインが表示されます。 このペインでは、指定したデータベースに登録されているデータベース オブジェクトの種類のすべてのインスタンスから、いずれかのオブジェクトを選択できます。 1 つまたは複数のオブジェクトを選択し、[**次へ**] をクリックします。  
+6.  [**オブジェクトの種類の選択**] ペインで選択したオブジェクトの種類ごとに、 **[種類の選択\<** ] ペインが表示され>ます。 このペインでは、指定したデータベースに登録されているデータベース オブジェクトの種類のすべてのインスタンスから、いずれかのオブジェクトを選択できます。 1つまたは複数のオブジェクトを選択し、[**次へ**] をクリックします。  
   
-7.  [**出力オプション]** ウィンドウは、必要なデータベース オブジェクトの種類がすべて選択されているときに表示されます。 [**スクリプトをファイルにする]** を選択し、スクリプトのファイル パスを指定します。 **[次へ]** を選択します。 選択内容を確認し、[**完了 ]** をクリックします。 配置スクリプトが指定したファイル パスに保存されます。  
+7.  必要なデータベースオブジェクトの種類がすべて選択されると、[**出力オプション**] ウィンドウが表示されます。 [**スクリプトをファイルに**作成] を選択し、スクリプトのファイルパスを指定します。 **[次へ]** を選択します。 選択内容を確認し、[**完了**] をクリックします。 配置スクリプトが指定したファイル パスに保存されます。  
   
 ## <a name="post-deployment-scripts"></a>配置後スクリプト  
  配置後スクリプトの実行が可能です。  
   
- 配置後スクリプトを追加するには、Visual Studio のプロジェクト ディレクトリに postdeployscript.sql というファイルを追加します。 たとえば、**ソリューション エクスプローラ**でプロジェクトを右クリックし、[**既存項目の追加**] を選択します。 ファイルは、Test Scripts フォルダーではなく、プロジェクトのルートに追加してください。  
+ 配置後スクリプトを追加するには、Visual Studio のプロジェクト ディレクトリに postdeployscript.sql というファイルを追加します。 たとえば、**ソリューションエクスプローラー**でプロジェクトを右クリックし、[**既存項目の追加**] を選択します。 ファイルは、Test Scripts フォルダーではなく、プロジェクトのルートに追加してください。  
   
  [配置] をクリックすると、プロジェクトの配置後に、このスクリプトが Visual Studio によって実行されます。  
   

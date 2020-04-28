@@ -1,5 +1,5 @@
 ---
-title: sysmail_help_account_sp (トランザクション-SQL) |マイクロソフトドキュメント
+title: sysmail_help_account_sp (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,10 +18,10 @@ ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ccb5cfd245148c97288a34b1857955f48f3efc73
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81528416"
 ---
 # <a name="sysmail_help_account_sp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
@@ -39,44 +39,44 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @account_id = ] account_id`情報を一覧表示するアカウントのアカウント ID。 *account_id*は**int**で、デフォルトは NULL です。  
+`[ @account_id = ] account_id`情報を一覧表示するアカウントのアカウント ID。 *account_id*は**int**,、既定値は NULL です。  
   
-`[ @account_name = ] 'account_name'`情報を一覧表示するアカウントの名前。 *account_name*は**sysname**で、デフォルトは NULL です。  
+`[ @account_name = ] 'account_name'`情報を一覧表示するアカウントの名前。 *account_name*は**sysname**,、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- 以下にリストされている列を含む結果セットを返します。  
+ 次に示す列を含む結果セットを返します。  
   
 ||||  
 |-|-|-|  
 |列名|データ型|説明|  
 |**account_id**|**int**|アカウントの ID。|  
 |**name**|**sysname**|アカウントの名前。|  
-|**説明**|**nvarchar(256)**|アカウントの説明。|  
-|**email_address**|**nvarchar(128)**|メッセージの送信先の電子メール アドレス。|  
+|**記述**|**nvarchar(256)**|アカウントの説明。|  
+|**email_address**|**nvarchar(128)**|メッセージの送信元の電子メールアドレス。|  
 |**display_name**|**nvarchar(128)**|アカウントの表示名。|  
 |**replyto_address**|**nvarchar(128)**|このアカウントからのメッセージに対する返信アドレス。|  
-|**サーバーの種類**|**sysname**|アカウントの電子メール サーバーの種類。|  
-|**Servername**|**sysname**|アカウントの電子メール サーバーの名前。|  
-|**ポート**|**int**|電子メール サーバーが使用するポート番号。|  
-|**username**|**nvarchar(128)**|電子メール サーバーが認証を使用する場合に、電子メール サーバーへのサインインに使用するユーザー名。 **ユーザー名**が NULL の場合、データベース メールはこのアカウントの認証を使用しません。|  
-|**use_default_credentials**|**bit**|の資格情報を使用して SMTP サーバーにメールを送信するかどうかを指定します[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。 **use_default_credentials**ビットで、デフォルトはありません。 このパラメーターが 1 の場合、データベース メールはサービス[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]の資格情報を使用します。 このパラメータが 0 の場合、データベース メールは SMTP サーバーでの認証に**\@ユーザー名**と**\@パスワード**を使用します。 **\@ユーザー名**と**\@パスワード**が NULL の場合、データベース メールは匿名認証を使用します。 このパラメータを指定する前に、SMTP 管理者に相談してください。|  
-|**enable_ssl**|**bit**|以前はセキュア ソケット レイヤ (SSL) と呼ばれていたトランスポート層セキュリティ (TLS) を使用して、データベース メールが通信を暗号化するかどうかを指定します。 SMTP サーバーで TLS が必要な場合は、このオプションを使用します。 **enable_ssl**はビットで、デフォルトはありません。 1 は、データベース メールが TLS を使用して通信を暗号化する場合を示します。 0 は、データベース メールが TLS 暗号化なしでメールを送信したことを示します。|  
+|**servertype**|**sysname**|アカウントの電子メールサーバーの種類。|  
+|**server**|**sysname**|アカウントの電子メールサーバーの名前。|  
+|**port**|**int**|電子メールサーバーが使用するポート番号。|  
+|**username**|**nvarchar(128)**|電子メールサーバーが認証を使用する場合は、電子メールサーバーへのサインインに使用するユーザー名。 **Username**が NULL の場合、データベースメールはこのアカウントに対して認証を使用しません。|  
+|**use_default_credentials**|**bit**|の資格情報を使用して SMTP サーバーにメールを送信するか[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]どうかを指定します。 **use_default_credentials**はビット,、既定値はありません。 このパラメーターが1の場合、データベースメールは[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]サービスの資格情報を使用します。 このパラメーターが0の場合、データベースメールは、SMTP サーバーの認証に** \@ユーザー名**と** \@パスワード**を使用します。 ** \@ユーザー名**と** \@パスワード**が NULL の場合、データベースメールは匿名認証を使用します。 このパラメーターを指定する前に、SMTP 管理者に問い合わせてください。|  
+|**enable_ssl**|**bit**|データベースメールトランスポート層セキュリティ (TLS) を使用して通信を暗号化するかどうかを指定します。これは、以前 Secure Sockets Layer (SSL) と呼ばれていました。 このオプションは、SMTP サーバーで TLS が必要な場合に使用します。 **enable_ssl**はビット,、既定値はありません。 1データベースメール TLS を使用して通信を暗号化することを示します。 0は、データベースメールが TLS 暗号化を使用せずにメールを送信することを示します。|  
   
-## <a name="remarks"></a>解説  
- *account_id*または*account_name*が提供されていない場合 **、sysmail_help_account**は、Microsoft SQL Server インスタンス内のすべてのデータベース メール アカウントに関する情報を一覧表示します。  
+## <a name="remarks"></a>Remarks  
+ *Account_id*または*account_name*が指定されていない場合、 **sysmail_help_account**は、Microsoft SQL Server インスタンス内のすべてのデータベースメールアカウントに関する情報を一覧表示します。  
   
- ストアド プロシージャ**sysmail_help_account_sp**は**msdb**データベースにあり **、dbo**スキーマによって所有されます。 現在のデータベースが**msdb**でない場合、プロシージャは 3 部構成の名前で実行する必要があります。  
+ ストアドプロシージャ**sysmail_help_account_sp**は**msdb**データベースにあり、 **dbo**スキーマが所有しています。 現在のデータベースが**msdb**でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- この手順の実行アクセス許可は、既定で**sysadmin**固定サーバー ロールのメンバに設定されます。  
+ このプロシージャの実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  **A. すべてのアカウントの情報を一覧表示する**  
   
- 次の例は、インスタンス内のすべてのアカウントのアカウント情報を一覧表示します。  
+ 次の例では、インスタンス内のすべてのアカウントのアカウント情報を一覧表示します。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_help_account_sp ;  
@@ -110,7 +110,7 @@ account_id  name                         description                            
   
 ## <a name="see-also"></a>参照  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
- [データベース メール アカウントの作成](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [データベース メール ストアド プロシージャ&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [データベースメールアカウントを作成する](../../relational-databases/database-mail/create-a-database-mail-account.md)   
+ [Transact-sql&#41;&#40;のストアドプロシージャのデータベースメール](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

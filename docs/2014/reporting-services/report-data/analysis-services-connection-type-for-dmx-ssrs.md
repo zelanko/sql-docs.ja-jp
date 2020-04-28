@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2c6d2c689689cde5c6c5ef4ffa8ab5c0e8737078
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "82086968"
 ---
 # <a name="analysis-services-connection-type-for-dmx-ssrs"></a>DMX のための Analysis Services の接続の種類 (SSRS)
@@ -48,7 +48,7 @@ ms.locfileid: "82086968"
   
 ## <a name="see-also"></a>参照  
  [データ マイニング ソリューション](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)   
- [レポート デザイナー SQL Server データ ツールのクエリ デザイン ツール &#40;SSRS&#41;](query-design-tools-ssrs.md)   
+ [レポートデザイナー SQL Server Data Tools のクエリデザインツール &#40;SSRS&#41;](query-design-tools-ssrs.md)   
  [Reporting Services でのデータ接続、データ ソース、および接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
   
   

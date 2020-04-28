@@ -1,5 +1,5 @@
 ---
-title: マスター データ マネージャー Web アプリケーションの作成
+title: マスターデータマネージャー web アプリケーションの作成
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -11,13 +11,13 @@ ms.assetid: 241d46d7-8008-47f6-bebd-0dfff1cc856a
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 5617adb01ffc566319905942376ecaa9b78065bb
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81728507"
 ---
-# <a name="create-a-master-data-manager-web-application-master-data-services"></a>マスター データ マネージャー Web アプリケーションの作成 (マスター データ サービス)
+# <a name="create-a-master-data-manager-web-application-master-data-services"></a>マスターデータマネージャー web アプリケーションを作成する (マスターデータサービス)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -74,11 +74,11 @@ ms.locfileid: "81728507"
   
 6.  **[OK]** をクリックします。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>次のステップ  
   
 -   Web アプリケーションを [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースに関連付けます。 詳細については、「 [Master Data Services データベースと Web アプリケーションの関連付け](../../master-data-services/install-windows/associate-a-master-data-services-database-and-web-application.md)」を参照してください。  
   
--   必要に応じて、以前はセキュア[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]ソケット レイヤー (SSL) と呼ばれていたトランスポート層セキュリティ (TLS) を使用してコンテンツを暗号化する場合は、Web アプリケーションをホストする Web サイトで HTTPS バインドを使用するように構成します。 Web サーバーのサーバー証明書を構成し、サイトの HTTPS バインディングと TLS 設定を構成するには、IIS マネージャーなどのインターネット インフォメーション サービス (IIS) ツールを使用する必要があります。 詳細については、「 [マスター データ マネージャー Web アプリケーションのセキュリティ保護](../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md)」を参照してください。  
+-   または、トランスポート層セキュリティ (TLS [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] ) を使用してコンテンツを暗号化する場合は、web アプリケーションをホストする web サイトを構成します (これは SECURE SOCKETS LAYER (SSL) と呼ばれます)。 Web サーバーのサーバー証明書を構成し、サイトの HTTPS バインドと TLS 設定を構成するには、IIS マネージャーなどのインターネットインフォメーションサービス (IIS) ツールを使用する必要があります。 詳細については、「 [マスター データ マネージャー Web アプリケーションのセキュリティ保護](../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [マスター データ サービスのインストール](../../master-data-services/install-windows/install-master-data-services.md)  

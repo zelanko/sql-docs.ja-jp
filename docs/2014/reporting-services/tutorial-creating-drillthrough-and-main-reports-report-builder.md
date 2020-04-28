@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cb77d8abdc0b4a8ca67996433e5399740c7bdc0c
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "82086887"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>チュートリアル: 詳細レポートとメイン レポートの作成 (レポート ビルダー)
@@ -22,7 +22,7 @@ ms.locfileid: "82086887"
   
  ![rs_DrillthroughCubeTutorial](../../2014/tutorials/media/rs-drillthroughcubetutorial.gif "rs_DrillthroughCubeTutorial")  
   
- 次の図は、メイン レポートのフィールド値である [ゲーム] と [おもちゃ] がドリルスルー レポートのタイトルにどのように表示されるのかを示しています。 この詳細レポートには、Games and Toys 製品カテゴリに関連するデータが含まれています。  
+ 次の図は、メインレポートのフィールド値 [Games] と [Toys] が詳細レポートのタイトルにどのように表示されるかを示しています。 この詳細レポートには、Games and Toys 製品カテゴリに関連するデータが含まれています。  
   
  ![rs_DrillthroughCubeTutorialParmExpr](../../2014/tutorials/media/rs-drillthroughcubetutorialparmexpr.gif "rs_DrillthroughCubeTutorialParmExpr")  
   
@@ -43,7 +43,7 @@ ms.locfileid: "82086887"
   
 2.  [データに通貨の書式を設定する](#DFormat)  
   
-3.  [[スパークラインに売上高を表示する] に列を追加する](#DSparkline)  
+3.  [売上の値をスパークラインで表示する列を追加する](#DSparkline)  
   
 4.  [製品カテゴリ名を含むレポート タイトルを追加する](#DReportTitle)  
   
@@ -73,7 +73,7 @@ ms.locfileid: "82086887"
   
 5.  [パラメーターのプロパティを更新する](#MParameter)  
   
-6.  [レポート タイトルの追加](#MTitle)  
+6.  [レポートタイトルを追加する](#MTitle)  
   
 7.  [レポートを SharePoint ライブラリに保存する](#MSave)  
   
@@ -81,23 +81,23 @@ ms.locfileid: "82086887"
   
  このチュートリアルの推定所要時間: 30 分。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  このチュートリアルでは、Contoso Sales キューブにアクセスする必要があります。 この必要条件は、詳細レポートとメイン レポートの両方に適用されます。 要件に関する詳細については、「[チュートリアルの前提条件 (レポート ビルダー)](../reporting-services/report-builder-tutorials.md)」を参照してください。  
   
-##  <a name="1-create-a-drillthrough-report-from-the-table-or-matrix-wizard"></a><a name="DMatrixAndDataset"></a>1. テーブルまたはマトリックス ウィザードからドリルスルー レポートを作成する  
+##  <a name="1-create-a-drillthrough-report-from-the-table-or-matrix-wizard"></a><a name="DMatrixAndDataset"></a>1. テーブルまたはマトリックスウィザードから詳細レポートを作成する  
  [作業の開始] ダイアログ ボックスから、 **テーブルまたはマトリックス ウィザード**を使用してマトリックス レポートを作成します。 このウィザードには、レポート デザイン モードと共有データセット デザイン モードの 2 つのモードがあります。 このチュートリアルでは、レポート デザイン モードを使用します。  
   
 #### <a name="to-create-a-new-report"></a>新しいレポートを作成するには  
   
-1.  [**スタート] ボタン**をクリックし、[[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]**Report Builder****プログラム**] をポイントします **。**  
+1.  [**スタート**] をクリックし、[**プログラム**]、[ [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **レポートビルダー**] の順にポイントし、[**レポートビルダー**] をクリックします。  
   
-     **[作業の開始]** ダイアログ ボックスが開きます。 表示されない場合は、[ レポート**ビルダー ]** ボタンの [**新規**] をクリックします。  
+     **[作業の開始]** ダイアログ ボックスが開きます。 表示されない場合は、[**レポートビルダー** ] ボタンの [**新規**] をクリックします。  
   
 2.  左ペインで、 **[新しいレポート]** が選択されていることを確認します。  
   
 3.  右ペインで、 **[テーブルまたはマトリックス ウィザード]** が選択されていることを確認します。  
   
-##  <a name="1a-specify-a-data-connection"></a><a name="DConnection"></a>1a. データ接続を指定する  
+##  <a name="1a-specify-a-data-connection"></a><a name="DConnection"></a>sr-1. データ接続を指定する  
  データ接続には、Analysis Services キューブや [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースなどの外部データ ソースに接続するときに必要な情報が含まれます。 データ接続を指定するには、レポート サーバーの共有データ ソースを使用するか、このレポートでのみ使用する埋め込みデータ ソースを作成します。 このチュートリアルでは、埋め込みデータ ソースを使用します。 共有データ ソースの使用方法の詳細については、「[別の方法でデータ接続を取得する (レポート ビルダー)](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)」を参照してください。  
   
 #### <a name="to-create-an-embedded-data-source"></a>埋め込みデータ ソースを作成するには  
@@ -137,18 +137,18 @@ ms.locfileid: "82086887"
   
 12. データ ソースに接続できることを確認するために、 **[接続テスト]** をクリックします。  
   
-     「**作成された接続」** というメッセージが表示されます。  
+     **正常に作成されたメッセージ接続**が表示されます。  
   
 13. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 14. **[次へ]** をクリックします。  
   
-##  <a name="1b-create-an-mdx-query"></a><a name="DMDXQuery"></a>1b. MDX クエリを作成する  
+##  <a name="1b-create-an-mdx-query"></a><a name="DMDXQuery"></a>ドル. MDX クエリを作成する  
  レポートでは、クエリが事前に定義された共有データセットを使用するか、そのレポートでのみ使用する埋め込みデータセットを作成できます。 このチュートリアルでは、埋め込みデータセットを作成します。  
   
 #### <a name="to-create-query-filters"></a>クエリ フィルターを作成するには  
   
-1.  [**クエリのデザイン]** ページの [メタデータ] ペインで、ボタン **(..)** をクリックします。  
+1.  [**クエリのデザイン**] ページのメタデータペインで、[ **...**] ボタンをクリックします。  
   
 2.  **[キューブの選択]** ダイアログ ボックスで、Sales をクリックし、 **[OK]** をクリックします。  
   
@@ -208,7 +208,7 @@ ms.locfileid: "82086887"
   
 5.  Sales Amount メジャーをデータ ペインにドラッグして、Product Subcategory Name の右側に配置します。  
   
-6.  クエリ デザイナーのツール バーで、[実行] **(!)** をクリックします。  
+6.  クエリデザイナーのツールバーで、[**実行] (!)** をクリックします。  
   
 7.  **[次へ]** をクリックします。  
   
@@ -238,23 +238,23 @@ ms.locfileid: "82086887"
   
 6.  **[次へ]** をクリックします。  
   
-##  <a name="1d-add-subtotals-and-totals"></a><a name="DTotals"></a>1d. 小計と合計を追加する  
+##  <a name="1d-add-subtotals-and-totals"></a><a name="DTotals"></a>引か. 小計と合計を追加する  
  グループを作成したら、フィールドの集計値を表示する行を追加して書式を設定できます。 すべてのデータを表示するか、グループ化されたデータの展開と折りたたみをユーザーが対話的に行えるようにするかも選択できます。  
   
 #### <a name="to-add-subtotals-and-totals"></a>小計と合計を追加するには  
   
-1.  [**レイアウトの選択**] ページの **[オプション]** で、[**小計と総計を表示する]** が選択されていることを確認します。  
+1.  [**レイアウトの選択**] ページの [**オプション**] で、[**小計と総計を表示**する] が選択されていることを確認します。  
   
      ウィザードのプレビュー ペインに、4 行を含むマトリックスが表示されます。  
   
 2.  **[次へ]** をクリックします。  
   
-##  <a name="1e-choose-a-style"></a><a name="DStyle"></a>1e。 スタイルを選択する  
+##  <a name="1e-choose-a-style"></a><a name="DStyle"></a>1e. スタイルを選択する  
  スタイルは、フォント スタイル、色、および罫線のスタイルを指定します。  
   
 #### <a name="to-specify-a-style"></a>スタイルを指定するには  
   
-1.  [**スタイルの選択**] ページの [スタイル] ウィンドウで、[スレート] を選択します。  
+1.  [**スタイルの選択**] ページのスタイルペインで、[スレート] を選択します。  
   
 2.  **[完了]** をクリックします。  
   
@@ -262,7 +262,7 @@ ms.locfileid: "82086887"
   
 3.  レポートをプレビューするには、 **[実行 (!)]** をクリックします。  
   
-##  <a name="2-format-data-as-currency"></a><a name="DFormat"></a>2. データを通貨としてフォーマットする  
+##  <a name="2-format-data-as-currency"></a><a name="DFormat"></a>2. データを通貨として書式設定する  
  詳細レポートの売上高のフィールドに通貨の書式設定を適用します。  
   
 #### <a name="to-format-data-as-currency"></a>データに通貨の書式を設定するには  
@@ -273,7 +273,7 @@ ms.locfileid: "82086887"
   
 3.  **[ホーム]** タブの **[数値]** グループで、 **[通貨]** をクリックします。  
   
-##  <a name="3-add-columns-to-show-sales-values-in-sparklines"></a><a name="DSparkline"></a>3. スパークラインで売上値を表示する列を追加する  
+##  <a name="3-add-columns-to-show-sales-values-in-sparklines"></a><a name="DSparkline"></a>3. 売上の値をスパークラインで表示する列を追加する  
  このレポートでは、売上と売上返品を、通貨値ではなくスパークラインで表示します。  
   
 #### <a name="to-add-sparklines-to-columns"></a>列にスパークラインを追加するには  
@@ -306,7 +306,7 @@ ms.locfileid: "82086887"
   
 13. レポートをプレビューするには、 **[実行]** をクリックします。  
   
-##  <a name="4-add-report-title-with-product-category-name"></a><a name="DReportTitle"></a>4. 製品カテゴリ名を含むレポートタイトルの追加  
+##  <a name="4-add-report-title-with-product-category-name"></a><a name="DReportTitle"></a>4. 製品カテゴリ名を含むレポートタイトルを追加する  
  レポート タイトルは、レポートの最上部に表示されます。 レポート ヘッダーがあれば、そこにレポート タイトルを配置します。レポート ヘッダーを使用しない場合は、レポート本文の一番上のテキスト ボックスに配置します。 このチュートリアルでは、自動的にレポート本文の一番上に配置されるテキスト ボックスを使用します。  
   
 #### <a name="to-add-a-report-title"></a>レポート タイトルを追加するには  
@@ -333,14 +333,14 @@ ms.locfileid: "82086887"
   
  レポート タイトルに含まれるのは、最初の製品カテゴリの名前です。 この後の手順でこのレポートを詳細レポートとして実行すると、メイン レポートでクリックした製品カテゴリの名前を反映して製品カテゴリの名前が動的に変化します。  
   
-##  <a name="5-update-parameter-properties"></a><a name="DParameter"></a>5. パラメータプロパティの更新  
+##  <a name="5-update-parameter-properties"></a><a name="DParameter"></a>5. パラメーターのプロパティを更新する  
  既定ではパラメーターが表示されますが、この設定は、このレポートには適していません。 したがって、詳細レポートのパラメーターのプロパティを更新します。  
   
 #### <a name="to-hide-a-parameter"></a>パラメーターを非表示にするには  
   
 1.  レポート データ ペインで **[パラメーター]** を展開します。  
   
-2.  [製品製品\@カテゴリ名] を右クリックし、[**パラメーターのプロパティ**] をクリックします。  
+2.  [Productproductcategoryname を右クリック\@し、[**パラメーターのプロパティ**] をクリックします。  
   
     > [!NOTE]  
     >  名前の横の \@ 文字は、これがパラメーターであることを示しています。  
@@ -376,7 +376,7 @@ ms.locfileid: "82086887"
     Http://<ServerName>/<Sites>/  
     ```  
   
-4.  [**保存**] をクリックします。  
+4.  **[Save]** (保存) をクリックします。  
   
      **[最近使ったサイトとサーバー]** に、SharePoint サイトのライブラリの一覧が表示されます。  
   
@@ -387,18 +387,18 @@ ms.locfileid: "82086887"
     > [!NOTE]  
     >  メイン レポートも同じ場所に保存します。 メイン レポートと詳細レポートをそれぞれ異なるサイトまたはライブラリに保存する場合は、メイン レポートの **[レポートに移動する]** アクションのパスを更新する必要があります。  
   
-7.  [**保存**] をクリックします。  
+7.  **[Save]** (保存) をクリックします。  
   
-##  <a name="1-create-a-new-report-from-the-table-or-matrix-wizard"></a><a name="MMatrixAndDataset"></a>1. テーブルまたはマトリックス ウィザードから新しいレポートを作成する  
+##  <a name="1-create-a-new-report-from-the-table-or-matrix-wizard"></a><a name="MMatrixAndDataset"></a>1. テーブルまたはマトリックスウィザードから新しいレポートを作成する  
  **[作業の開始]** ダイアログ ボックスから、 **テーブルまたはマトリックス ウィザード**を使用してマトリックス レポートを作成します。  
   
 #### <a name="to-create-a-new-report"></a>新しいレポートを作成するには  
   
-1.  [**スタート] ボタン**をクリックし、[[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]**Report Builder****プログラム**] をポイントします **。**  
+1.  [**スタート**] をクリックし、[**プログラム**]、[ [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **レポートビルダー**] の順にポイントし、[**レポートビルダー**] をクリックします。  
   
 2.  **[作業の開始]** ダイアログ ボックスで、 **[新しいレポート]** が選択されていることを確認し、 **[テーブルまたはマトリックス ウィザード]** をクリックします。  
   
-##  <a name="1a-specify-a-data-connection"></a><a name="MConnection"></a>1a. データ接続を指定する  
+##  <a name="1a-specify-a-data-connection"></a><a name="MConnection"></a>sr-1. データ接続を指定する  
  メイン レポートに埋め込みデータ ソースを追加します。  
   
 #### <a name="to-create-an-embedded-data-source"></a>埋め込みデータ ソースを作成するには  
@@ -413,7 +413,7 @@ ms.locfileid: "82086887"
   
 5.  **[データ ソース]** で、データ ソースが **[Microsoft SQL Server Analysis Services (AdomdClient)]** になっていることを確認します。  
   
-6.  [**サーバー名**] ボックスに、 のインスタンス[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]がインストールされているサーバーの名前を入力します。  
+6.  [**サーバー名**] に、の[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンスがインストールされているサーバーの名前を入力します。  
   
 7.  **[データベース名の選択または入力]** で、Contoso キューブを選択します。  
   
@@ -437,12 +437,12 @@ ms.locfileid: "82086887"
   
 14. **[次へ]** をクリックします。  
   
-##  <a name="1b-create-an-mdx-query"></a><a name="MMDXQuery"></a>1b. MDX クエリを作成する  
+##  <a name="1b-create-an-mdx-query"></a><a name="MMDXQuery"></a>ドル. MDX クエリを作成する  
  次に、埋め込みデータセットを作成します。 これを行うには、クエリ デザイナーを使用して、フィルター、パラメーター、および計算されるメンバーと、データセット自体を作成します。  
   
 #### <a name="to-create-query-filters"></a>クエリ フィルターを作成するには  
   
-1.  [**クエリのデザイン]** ページの [メタデータ] ウィンドウの [キューブ] セクションで、省略記号 **(.)** をクリックします。  
+1.  [**クエリのデザイン**] ページのメタデータペインの [キューブ] セクションで、省略記号ボタン **([..**.]) をクリックします。  
   
 2.  **[キューブの選択]** ダイアログ ボックスで、Sales をクリックし、 **[OK]** をクリックします。  
   
@@ -463,7 +463,7 @@ ms.locfileid: "82086887"
   
      Channel を Online と Reseller のみに制限するフィルターがクエリに追加されます。  
   
-6.  [営業担当地域] ディメンションを展開し、[営業担当地域グループ] を **[階層**] 列の [**チャネル名**] の下にドラッグします。  
+6.  販売区域ディメンションを展開し、Sales 区域グループを [**階層**] 列の [ **Channel Name**] の下にドラッグします。  
   
 7.  **[フィルター式]** の一覧を開き、 **[All Sales Territory]** を展開して **[North America]** をクリックし、 **[OK]** をクリックします。  
   
@@ -491,7 +491,7 @@ ms.locfileid: "82086887"
   
 1.  計算されるメンバー ペインの中にカーソルを置き、右クリックして **[新しい計算されるメンバー]** をクリックします。  
   
-2.  [メタデータ] ウィンドウで、[**メジャー] を**展開し、[Sales] を展開します。  
+2.  メタデータペインで、[**メジャー** ]、[Sales] の順に展開します。  
   
 3.  Sales Quantity メジャーを **[式]** ボックスにドラッグし、マイナス記号 (-) を入力します。次に、Sales Return Quantity メジャーを **[式]** ボックスにドラッグして、マイナス記号の後に配置します。  
   
@@ -529,7 +529,7 @@ ms.locfileid: "82086887"
   
 4.  [計算されるメンバー] から Net Sales をデータ ペインにドラッグして、 `Net QTY`の右側に配置します。  
   
-5.  クエリ デザイナーのツール バーで、[実行] **(!)** をクリックします。  
+5.  クエリデザイナーのツールバーで、[**実行] (!)** をクリックします。  
   
      クエリの結果セットを確認します。  
   
@@ -554,29 +554,29 @@ ms.locfileid: "82086887"
   
      手順 3. および 4. で、マトリックスに表示するデータが指定されます。  
   
-##  <a name="1d-add-subtotals-and-totals"></a><a name="MTotals"></a>1d. 小計と合計を追加する  
+##  <a name="1d-add-subtotals-and-totals"></a><a name="MTotals"></a>引か. 小計と合計を追加する  
  レポートには小計と総計を表示できます。 メイン レポートのデータはインジケーターとして表示されるため、ウィザードの完了後に総計を削除します。  
   
 #### <a name="to-add-subtotals-and-grand-totals"></a>小計と総計を追加するには  
   
-1.  [**レイアウトの選択**] ページの **[オプション]** で、[**小計と総計を表示する]** が選択されていることを確認します。  
+1.  [**レイアウトの選択**] ページの [**オプション**] で、[**小計と総計を表示**する] が選択されていることを確認します。  
   
      ウィザードのプレビュー ペインに、4 行を含むマトリックスが表示されます。  レポートを実行すると、最初の行が列グループになり、2 行目に列見出し、3 行目に製品カテゴリのデータ (`[Sum(Net_ QTY)]` と `[Sum(Net_Sales)]`)、4 行目に合計が含まれます。  
   
 2.  **[次へ]** をクリックします。  
   
-##  <a name="1e-choose-a-style"></a><a name="MStyle"></a>1e。 スタイルを選択する  
+##  <a name="1e-choose-a-style"></a><a name="MStyle"></a>1e. スタイルを選択する  
  レポートに "スレート" スタイルを適用します。 これは、詳細レポートで使用されているのと同じスタイルです。  
   
 #### <a name="to-specify-a-style"></a>スタイルを指定するには  
   
-1.  [**スタイルの選択**] ページの [スタイル] ウィンドウで、[スレート] を選択します。  
+1.  [**スタイルの選択**] ページのスタイルペインで、[スレート] を選択します。  
   
 2.  **[完了]** をクリックします。  
   
 3.  レポートをプレビューするには、 **[実行]** をクリックします。  
   
-##  <a name="2-remove-the-grand-total-row"></a><a name="MGrandTotal"></a>2. 総計行の削除  
+##  <a name="2-remove-the-grand-total-row"></a><a name="MGrandTotal"></a>2. 総計行を削除する  
  データ値は、列グループの合計も含め、インジケーターの状態として表示されます。 したがって、総計を表示する行を削除します。  
   
 #### <a name="to-remove-the-grand-total-row"></a>総計行を削除するには  
@@ -587,7 +587,7 @@ ms.locfileid: "82086887"
   
 3.  レポートをプレビューするには、 **[実行]** をクリックします。  
   
-##  <a name="3-configure-text-box-action-for-drillthrough"></a><a name="MDrillthrough"></a>3. ドリルスルーのテキスト ボックス アクションを設定する  
+##  <a name="3-configure-text-box-action-for-drillthrough"></a><a name="MDrillthrough"></a>3. ドリルスルーのテキストボックスアクションを構成する  
  ドリルスルーを有効にするために、メイン レポートのテキスト ボックスでアクションを指定します。  
   
 #### <a name="to-enable-an-action"></a>アクションを有効にするには  
@@ -598,7 +598,7 @@ ms.locfileid: "82086887"
   
 3.  [**操作**] タブをクリックします。  
   
-4.  [**レポートに移動] を選択します。**  
+4.  [**レポートにジャンプ**] を選択します。  
   
 5.  **[レポートの指定]** で、 **[参照]** をクリックして、ResellerVSOnlineDrillthrough という名前の詳細レポートを指定します。  
   
@@ -631,7 +631,7 @@ ms.locfileid: "82086887"
   
  製品カテゴリ名が、一般的なリンクの書式 (下線付きの青い文字) になります。  
   
-##  <a name="4-replace-numeric-values-with-indicators"></a><a name="MIndicators"></a>4. 数値を指標に置き換える  
+##  <a name="4-replace-numeric-values-with-indicators"></a><a name="MIndicators"></a>4. 数値をインジケーターに置き換える  
  販売ルート Online および Reseller の数量と売上の状態をインジケーターで表示します。  
   
 #### <a name="to-add-an-indicator-for-net-qty-values"></a>Net QTY 値のインジケーターを追加するには  
@@ -644,7 +644,7 @@ ms.locfileid: "82086887"
   
 4.  **[3 つの図形]** をクリックし、 **[OK]** をクリックします。  
   
-5.  インジケーターを右クリックし、ゲージ データ ペインで、 **[(未指定)]** の横にある下矢印をクリックします。 `Net_QTY` を選択します。  
+5.  インジケーターを右クリックし、ゲージ データ ペインで、 **[(未指定)]** の横にある下矢印をクリックします。 [`Net_QTY`] を選択します。  
   
 6.  `[Sum(Net QTY)]` [合計] `[Product_Category_Name]` の **行グループにある**セルに対して、手順 2. ～ 5. を繰り返します。  
   
@@ -656,13 +656,13 @@ ms.locfileid: "82086887"
   
 3.  **[3 つの図形]** をクリックし、 **[OK]** をクリックします。  
   
-4.  インジケーターを右クリックし、ゲージ データ ペインで、 **[(未指定)]** の横にある下矢印をクリックします。 `Net_Sales` を選択します。  
+4.  インジケーターを右クリックし、ゲージ データ ペインで、 **[(未指定)]** の横にある下矢印をクリックします。 [`Net_Sales`] を選択します。  
   
 5.  `[Sum(Net_Sales)]` [合計] `[Product_Category_Name]` の **行グループにある**セルに対して、手順 1. ～ 4. を繰り返します。  
   
 6.  レポートをプレビューするには、 **[実行]** をクリックします。  
   
-##  <a name="5-update-parameter-properties"></a><a name="MParameter"></a>5. パラメータプロパティの更新  
+##  <a name="5-update-parameter-properties"></a><a name="MParameter"></a>5. パラメーターのプロパティを更新する  
  既定ではパラメーターが表示されますが、この設定は、このレポートには適していません。 パラメーターのプロパティを更新して、パラメーターを内部パラメーターにします。  
   
 #### <a name="to-make-the-parameter-internal"></a>パラメーターを内部パラメーターにするには  
@@ -677,7 +677,7 @@ ms.locfileid: "82086887"
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="6-add-a-report-title"></a><a name="MTitle"></a>6. レポートタイトルの追加  
+##  <a name="6-add-a-report-title"></a><a name="MTitle"></a>6. レポートタイトルを追加する  
  メイン レポートにタイトルを追加します。  
   
 #### <a name="to-add-a-report-title"></a>レポート タイトルを追加するには  
@@ -692,7 +692,7 @@ ms.locfileid: "82086887"
   
 5.  レポートをプレビューするには、 **[実行]** をクリックします。  
   
-##  <a name="7-save-the-main-report-to-a-sharepoint-library"></a><a name="MSave"></a>7. メイン レポートを SharePoint ライブラリに保存する  
+##  <a name="7-save-the-main-report-to-a-sharepoint-library"></a><a name="MSave"></a>7. メインレポートを SharePoint ライブラリに保存する  
  メイン レポートを SharePoint ライブラリに保存します。  
   
 #### <a name="to-save-the-report"></a>レポートを保存するには  
@@ -716,9 +716,9 @@ ms.locfileid: "82086887"
     > [!IMPORTANT]  
     >  メイン レポートは、詳細レポートを保存した場所と同じ場所に保存します。 メイン レポートと詳細レポートをそれぞれ異なるサイトまたはライブラリに保存する場合は、メイン レポートの **[レポートに移動する]** アクションで指定されている詳細レポートの場所が正しいことを確認してください。  
   
-7.  [**保存**] をクリックします。  
+7.  **[Save]** (保存) をクリックします。  
   
-##  <a name="8-run-the-main-and-drillthrough-reports"></a><a name="MRunReports"></a>8. メイン レポートとドリルスルー レポートの実行  
+##  <a name="8-run-the-main-and-drillthrough-reports"></a><a name="MRunReports"></a>8. メインレポートと詳細レポートを実行する  
  メイン レポートを実行し、製品カテゴリの列の値をクリックして詳細レポートを実行します。  
   
 #### <a name="to-run-the-reports"></a>レポートを実行するには  
@@ -738,6 +738,6 @@ ms.locfileid: "82086887"
 5.  必要に応じて、他の製品カテゴリの名前をクリックして動作を確認します。  
   
 ## <a name="see-also"></a>参照  
- [レポート ビルダー&#40;&#41;のチュートリアル](report-builder-tutorials.md)  
+ [チュートリアル &#40;レポートビルダー&#41;](report-builder-tutorials.md)  
   
   

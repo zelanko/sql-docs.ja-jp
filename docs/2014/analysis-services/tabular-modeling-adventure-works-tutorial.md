@@ -1,5 +1,5 @@
 ---
-title: 表形式モデリング(アドベンチャーワークスチュートリアル) |マイクロソフトドキュメント
+title: テーブルモデリング (Adventure Works チュートリアル) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 27ac17469a96213bdd39cbf2bee5a343d117e6f0
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487631"
 ---
 # <a name="tabular-modeling-adventure-works-tutorial"></a>テーブル モデリング (Adventure Works チュートリアル)
@@ -58,7 +58,7 @@ ms.locfileid: "81487631"
   
 -   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
--   AdventureWorksDW サンプル データベース このサンプル データベースには、このチュートリアルを完了するのに必要なデータが含まれています。 サンプル データベースをダウンロードするには、「」を参照してください[https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks)。  
+-   AdventureWorksDW サンプル データベース このサンプル データベースには、このチュートリアルを完了するのに必要なデータが含まれています。 サンプルデータベースをダウンロードするには[https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks)、「」を参照してください。  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 2003 以降 (レッスン 11 で "Excel で分析" 機能を使用するため)  
   
@@ -90,7 +90,7 @@ ms.locfileid: "81487631"
 |レッスン|推定所要時間|  
 |------------|--------------------------------|  
 |[行フィルターを使用した動的なセキュリティの実装](../tutorials/implement-dynamic-security-by-using-row-filters.md)|30 分|  
-|[Power View レポートのレポート プロパティを構成する](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)Power View レポートのレポート プロパティを構成する|30 分|  
+|[Power View レポートのレポートプロパティの構成](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)Power View レポートのレポートプロパティの構成|30 分|  
   
 ## <a name="next-step"></a>次の手順  
  チュートリアルを開始するには、 [「レッスン 1: 新しいテーブル モデル プロジェクトの作成」](lesson-1-create-a-new-tabular-model-project.md)に進みます。  

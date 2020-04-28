@@ -1,6 +1,6 @@
 ---
-title: アセンブリの設計 |マイクロソフトドキュメント
-description: この資料では、パッケージ化、管理、およびアセンブリの制限など、SQL Server でホストするアセンブリを設計する際に考慮する必要がある要素について説明します。
+title: アセンブリのデザイン |Microsoft Docs
+description: この記事では、アセンブリのパッケージ化、管理、制限など、SQL Server でホストするアセンブリを設計するときに考慮する必要がある要素について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,10 +14,10 @@ ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 65dbc1a4fdabbf234f4676d75011522a8f3481d8
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81488057"
 ---
 # <a name="assemblies---designing"></a>アセンブリ - デザイン
@@ -26,16 +26,16 @@ ms.locfileid: "81488057"
   
 -   アセンブリのパッケージ化  
   
--   アセンブリ セキュリティの管理  
+-   アセンブリセキュリティの管理  
   
--   アセンブリの制限  
+-   アセンブリに関する制限事項  
   
 ## <a name="packaging-assemblies"></a>アセンブリのパッケージ化  
  アセンブリのクラスやメソッドには、複数の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ルーチンまたは型の機能を含めることができます。 ほとんどの場合、関連する機能を実行するルーチンの機能を 1 つのアセンブリ内にパッケージ化することが適切です。これは特に、このようなルーチンで、メソッドが相互に呼び出しを行うクラスが共有される場合に当てはまります。 たとえば、CLR (共通言語ランタイム) トリガーと CLR ストアド プロシージャのデータ エントリ管理タスクを実行するクラスを 1 つのアセンブリにパッケージ化することがあります。 これは、これらのクラスのメソッドは、関連性の低いタスクを実行するクラスのメソッドよりも相互に呼び出しを行う可能性が高いためです。  
   
  コードをアセンブリにパッケージ化しているときは、次のことを考慮する必要があります。  
   
--   CLR ユーザー定義関数に依存する CLR ユーザー定義型とインデックスにより、アセンブリに依存する持続データがデータベースに格納される可能性があります。 多くの場合、アセンブリに依存する持続データがデータベースに存在すると、アセンブリのコードを変更することが複雑になることがあります。 そのため、一般に、持続データの依存関係があるコード (ユーザー定義関数を使用するユーザー定義型やインデックスなど) とそのような持続データの依存関係がないコードは切り離した方が適切です。 詳細については、「 [Transact-SQL&#41;&#40;](../../t-sql/statements/alter-assembly-transact-sql.md)アセンブリと ALTER アセンブリの[実装](../../relational-databases/clr-integration/assemblies-implementing.md)」を参照してください。  
+-   CLR ユーザー定義関数に依存する CLR ユーザー定義型とインデックスにより、アセンブリに依存する持続データがデータベースに格納される可能性があります。 多くの場合、アセンブリに依存する持続データがデータベースに存在すると、アセンブリのコードを変更することが複雑になることがあります。 そのため、一般に、持続データの依存関係があるコード (ユーザー定義関数を使用するユーザー定義型やインデックスなど) とそのような持続データの依存関係がないコードは切り離した方が適切です。 詳細については、「[アセンブリの実装](../../relational-databases/clr-integration/assemblies-implementing.md)」および「 [transact-sql&#41;&#40;の ALTER ASSEMBLY ](../../t-sql/statements/alter-assembly-transact-sql.md)」を参照してください。  
   
 -   マネージド コードの一部分で上位の権限が必要な場合、そのコードは、上位の権限を必要としないコードとは別のアセンブリにパッケージ化することをお勧めします。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "81488057"
 ### <a name="unsafe"></a>UNSAFE  
  UNSAFE を使用すると、アセンブリでは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の内外を問わずどちらのリソースにも無制限にアクセスできます。 UNSAFE アセンブリの内部で実行されているコードで、アンマネージ コードを呼び出すことができます。  
   
- また、UNSAFE を指定すると、CLR 検証機能によってタイプ セーフではないと見なされる操作をアセンブリのコードで実行できます。 これらの操作により、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセス空間のメモリ バッファーに制御なしにアクセスされる可能性があります。 UNSAFE アセンブリでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または共通言語ランタイムのいずれかのセキュリティ システムが妨害されるおそれもあります。 UNSAFE 権限は、経験豊かな開発者や管理者によって信頼性の高いアセンブリにのみ与えるようにする必要があります。 安全でないアセンブリを作成できるのは **、sysadmin**固定サーバー ロールのメンバーだけです。  
+ また、UNSAFE を指定すると、CLR 検証機能によってタイプ セーフではないと見なされる操作をアセンブリのコードで実行できます。 これらの操作により、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセス空間のメモリ バッファーに制御なしにアクセスされる可能性があります。 UNSAFE アセンブリでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または共通言語ランタイムのいずれかのセキュリティ システムが妨害されるおそれもあります。 UNSAFE 権限は、経験豊かな開発者や管理者によって信頼性の高いアセンブリにのみ与えるようにする必要があります。 UNSAFE アセンブリを作成できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
 ## <a name="restrictions-on-assemblies"></a>アセンブリに関する制限事項  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、アセンブリのマネージド コードに特定の制限を設けて、これらのコードを信頼性および拡張性の高い方法で実行できるようにしています。 つまり、SAFE アセンブリと EXTERNAL_ACCESS アセンブリでは、サーバーの堅牢性を侵害する可能性のある操作を実行できません。  
@@ -84,7 +84,7 @@ System.Security.UnverifiableCodeAttribute
 ```  
   
 ### <a name="disallowed-net-framework-apis"></a>禁止されている .NET Framework API  
- 許可[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]されていない**ホスト保護属性**の 1 つでアセト化された API は、SAFE アセンブリおよびEXTERNAL_ACCESS アセンブリから呼び出すことはできません。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]許可されていない**hostprotectionattributes**のいずれかで注釈が付けられている API は、SAFE および EXTERNAL_ACCESS アセンブリからは呼び出せません。  
   
 ```  
 eSelfAffectingProcessMgmt  
@@ -118,7 +118,7 @@ System.Configuration
 ```  
   
 ## <a name="see-also"></a>参照  
- [データベース エンジン&#40;&#41;アセンブリ](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+ [アセンブリ &#40;データベースエンジン&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [CLR 統合のセキュリティ](../../relational-databases/clr-integration/security/clr-integration-security.md)  
   
   

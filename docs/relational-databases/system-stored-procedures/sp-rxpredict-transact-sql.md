@@ -1,5 +1,5 @@
 ---
-title: sp_rxPredict |マイクロソフトドキュメント
+title: sp_rxPredict |Microsoft Docs
 ms.date: 03/31/2020
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,20 +17,20 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 9663b4cd51a7aca9e9e30ccafcdcb0652ec4229a
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81488543"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly.md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server データベースにバイナリ形式で格納された機械学習モデルから成る特定の入力の予測値を生成します。
+SQL Server データベースにバイナリ形式で格納されている機械学習モデルで構成される、指定された入力の予測値を生成します。
 
-R と Python の機械学習モデルでほぼリアルタイムでスコアリングを提供します。 `sp_rxPredict``rxPredict`は[、RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)および[MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)の R 関数のラッパーとして提供されるストアド プロシージャであり、[リボスケータ](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package)と[microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)の Python 関数[rx_predict。](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) C++ で記述され、スコアリング操作専用に最適化されています。
+R と Python の機械学習モデルのスコア付けをほぼリアルタイムで提供します。 `sp_rxPredict`は`rxPredict` 、 [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)および[microsoft ml](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)の R 関数のラッパーとして提供されているストアドプロシージャ、および[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package)と[microsoft ml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)の[rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) Python 関数のためのものです。 これは C++ で記述され、スコアリング操作専用に最適化されています。
 
-モデルは R または Python を使用して作成する必要がありますが、いったんシリアル化され、ターゲット データベース エンジン インスタンスのバイナリ形式で格納されると、R または Python 統合がインストールされていない場合でも、そのデータベース エンジン インスタンスから使用できます。 詳細については、「 [sp_rxPredict を使用したリアルタイム スコアリング](https://docs.microsoft.com/sql/machine-learning/real-time-scoring)」を参照してください。
+モデルは R または Python を使用して作成する必要がありますが、シリアル化され、ターゲットデータベースエンジンインスタンスでバイナリ形式で格納されると、R または Python の統合がインストールされていない場合でも、そのデータベースエンジンのインスタンスから使用できます。 詳細については、「 [sp_rxPredict を使用したリアルタイムのスコアリング](https://docs.microsoft.com/sql/machine-learning/real-time-scoring)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -40,9 +40,9 @@ sp_rxPredict  ( @model, @input )
 
 ### <a name="arguments"></a>引数
 
-**モデル**
+**model**
 
-サポートされている形式での事前トレーニング済みモデル。 
+サポートされている形式の事前トレーニング済みモデル。 
 
 **input**
 
@@ -50,40 +50,40 @@ sp_rxPredict  ( @model, @input )
 
 ### <a name="return-values"></a>戻り値
 
-スコア列と、入力データ ソースからのパススルー列が返されます。
-アルゴリズムがこのような値の生成をサポートしている場合は、信頼区間などの追加のスコア列を返すことができます。
+スコア列、および入力データソースのすべてのパススルー列が返されます。
+アルゴリズムがそのような値の生成をサポートしている場合は、信頼区間などの追加のスコア列を返すことができます。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
-ストアド プロシージャの使用を有効にするには、インスタンスで SQLCLR を有効にする必要があります。
+ストアドプロシージャを使用できるようにするには、インスタンスで SQLCLR が有効になっている必要があります。
 
 > [!NOTE]
-> このオプションを使用すると、セキュリティに影響があります。 サーバーで SQLCLR を有効にできない場合は[、Transact-SQL PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql?view=sql-server-2017)関数などの代替実装を使用します。
+> このオプションの enabing には、セキュリティ上の影響があります。 サーバーで SQLCLR が有効になっていない場合は、 [TRANSACT-SQL PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql?view=sql-server-2017)関数などの代替の実装を使用します。
 
-ユーザーはデータベース`EXECUTE`に対する権限を必要とします。
+ユーザーは、 `EXECUTE`データベースに対する権限が必要です。
 
 ### <a name="supported-algorithms"></a>サポートされているアルゴリズム
 
-モデルを作成してトレーニングするには[、SQL Server の機械学習サービス (R または Python)](https://docs.microsoft.com/sql/machine-learning/sql-server-machine-learning-services) [、SQL Server 2016 R サービス 、SQL Server](https://docs.microsoft.com/sql/machine-learning/r/sql-server-r-services)[の機械学習サーバー (スタンドアロン) (R または Python)](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone)、または[SQL Server 2016 R Server (スタンドアロン)](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone?view=sql-server-2016)で提供される、R または Python でサポートされているアルゴリズムのいずれかを使用します。
+モデルを作成してトレーニングするには、R または Python に対してサポートされているアルゴリズムのいずれかを使用します。 [SQL Server Machine Learning Services (r または python)](https://docs.microsoft.com/sql/machine-learning/sql-server-machine-learning-services)、 [SQL Server 2016 R Services](https://docs.microsoft.com/sql/machine-learning/r/sql-server-r-services)、 [SQL Server Machine Learning Server (スタンドアロン)](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone)、または[SQL Server 2016 R Server (スタンドアロン)](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone?view=sql-server-2016)によって提供されます。
 
-#### <a name="r-revoscaler-models"></a>R: レボスケールモデル
+#### <a name="r-revoscaler-models"></a>R: RevoScaleR モデル
 
-  + [rxリンモッド](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)
+  + [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)
   + [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit)
-  + [をクリックします。](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees)
-  + [rxDツリー](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree)
-  + [rxdフォレスト](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest)
+  + [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees)
+  + [rxDtree](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree)
+  + [rxdForest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest)
 
-#### <a name="r-microsoftml-models"></a>R: マイクロソフトML モデル
+#### <a name="r-microsoftml-models"></a>R: Microsoft Ml モデル
 
   + [rxFastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
-  + [をクリックします。](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest)
+  + [rxFastForest](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest)
   + [rxLogisticRegression](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxlogisticregression)
   + [rxOneClassSvm](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxoneclasssvm)
   + [rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet)
   + [rxFastLinear](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastlinear)
 
-#### <a name="r-transformations-supplied-by-microsoftml"></a>R: マイクロソフト ML によって提供される変換
+#### <a name="r-transformations-supplied-by-microsoftml"></a>R: Microsoft Ml によって提供される変換
 
   + [featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
   + [concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat)
@@ -91,7 +91,7 @@ sp_rxPredict  ( @model, @input )
   + [categoricalHash](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categoricalHash)
   + [selectFeatures](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectFeatures)
 
-#### <a name="python-revoscalepy-models"></a>Python:レボスケーラックモデル
+#### <a name="python-revoscalepy-models"></a>Python: revoscalepy モデル
 
   + [rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod)
   + [rx_logit](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-logit)
@@ -100,7 +100,7 @@ sp_rxPredict  ( @model, @input )
   + [rx_dforest](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dforest)
 
 
-#### <a name="python-microsoftml-models"></a>パイソン: マイクロソフトモデル
+#### <a name="python-microsoftml-models"></a>Python: microsoft ml モデル
 
   + [rx_fast_trees](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-trees)
   + [rx_fast_forest](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-forest)
@@ -109,7 +109,7 @@ sp_rxPredict  ( @model, @input )
   + [rx_neural_network](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-neural-network)
   + [rx_fast_linear](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-linear)
 
-#### <a name="python-transformations-supplied-by-microsoftml"></a>Python: microsoftml によって提供される変換
+#### <a name="python-transformations-supplied-by-microsoftml"></a>Python: microsoft ml によって提供される変換
 
   + [featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-trees)
   + [concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat)
@@ -118,13 +118,13 @@ sp_rxPredict  ( @model, @input )
   
 ### <a name="unsupported-model-types"></a>サポートされていないモデルの種類
 
-次のモデルタイプはサポートされていません。
+次の種類のモデルはサポートされていません。
 
-+ RevoScaleR`rxNaiveBayes`でまたは`rxGlm`アルゴリズムを使用するモデル
++ RevoScaleR のアルゴリズム`rxGlm`また`rxNaiveBayes`はアルゴリズムを使用するモデル
 + R の PMML モデル
 + 他のサードパーティライブラリを使用して作成されたモデル 
 
-## <a name="examples"></a>例
+## <a name="examples"></a>使用例
 
 ```sql
 DECLARE @model = SELECT @model 
@@ -135,9 +135,9 @@ EXEC sp_rxPredict @model = @model,
 @inputData = N'SELECT * FROM data';
 ```
 
-有効な SQL クエリに加えて*\@、inputData*の入力データには、格納されたモデルの列と互換性のある列が含まれている必要があります。
+Inputdata の入力データには、有効な SQL クエリに加えて、格納されているモデルの列と互換性のある列が含まれている必要があります。 * \@*
 
-`sp_rxPredict`サポートされているのは、double、浮動小数点、短い、ushort、long、ulong、および文字列の .NET 列型だけです。 リアルタイム スコアリングに使用する前に、入力データ内のサポートされていない型をフィルター処理する必要がある場合があります。 
+`sp_rxPredict`でサポートされている .NET 列の型は、double、float、short、ushort、long、ulong、および string のみです。 リアルタイムスコアリングに使用する前に、入力データでサポートされていない型を除外することが必要になる場合があります。 
 
   対応する SQL 型の詳細については、「[SQL と CLR 型のマッピング](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping)」または「[CLR パラメーター データのマッピング](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)」を参照してください。
 

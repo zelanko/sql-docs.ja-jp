@@ -1,6 +1,6 @@
 ---
-title: アセンブリ (データベース エンジン) |マイクロソフトドキュメント
-description: SQL Server インスタンスは、CLR 言語で記述された関数、プロシージャ、トリガー、およびユーザー定義の集計と型を配置するアセンブリをホストできます。
+title: アセンブリ (データベースエンジン) |Microsoft Docs
+description: SQL Server インスタンスは、CLR 言語で記述された関数、プロシージャ、トリガー、ユーザー定義集計、および型を配置するアセンブリをホストできます。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,27 +15,27 @@ ms.assetid: 4b146437-3061-47f6-9e8c-26eeea10b54e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 386e1980ae19ba4f98222b51a4955b024f815083
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81488081"
 ---
 # <a name="assemblies-database-engine"></a>アセンブリ (データベース エンジン)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このセクションのトピックでは、アセンブリの理解、設計、および実装に役立つ情報について説明します。  
   
- アセンブリは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の代わりに、 でではなく、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]共通言語ランタイム (CLR) によってホストされるマネージ コード言語のいずれかで記述された関数、ストアド プロシージャ、トリガー、ユーザー定義集計、およびユーザー定義型を配置するためにインスタンスで使用される[!INCLUDE[tsql](../../includes/tsql-md.md)]DLL ファイルです。  
+ アセンブリは、関数、ストアドプロシージャ、トリガー [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、ユーザー定義集計、およびユーザー定義型を配置するために、のインスタンスで使用される DLL ファイルです。で[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]はなく、共通言語ランタイム (CLR) によってホストされるマネージコード言語のいずれかで記述されます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のアセンブリは、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 共通言語ランタイムで作成されたマネージド アプリケーション モジュール (.dll ファイル) を参照するオブジェクトです。 アセンブリには、クラス メタデータとマネージド コードが含まれています。 SQL Server のインスタンスにアセンブリをアップロードすることが、次のいずれかのデータベース オブジェクトを作成するための最初の手順になります。  
   
 -   CLR 関数。 詳細については、「 [CLR 関数の作成](../../relational-databases/user-defined-functions/create-clr-functions.md)」を参照してください。  
   
--   CLR ストアド プロシージャ。 詳細については、「 [CLR ストアド プロシージャ](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)」を参照してください。  
+-   CLR ストアド プロシージャ。 詳細については、「 [CLR ストアドプロシージャ](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)」を参照してください。  
   
 -   CLR トリガー。 詳細については、「 [CLR トリガーの作成](../../relational-databases/triggers/create-clr-triggers.md)」を参照してください。  
   
--   ユーザー定義集計関数。 詳細については、「[ユーザー定義集計の作成](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)」を参照してください。  
+-   ユーザー定義集計関数。 詳細については、「[ユーザー定義集計を作成する](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)」を参照してください。  
   
 -   ユーザー定義型。 詳細については、「[ユーザー定義型の使用](../../relational-databases/native-client/features/using-user-defined-types.md)」を参照してください。  
   

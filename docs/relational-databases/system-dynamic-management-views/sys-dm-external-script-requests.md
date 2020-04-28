@@ -1,5 +1,5 @@
 ---
-title: sys.dm_external_script_requests |マイクロソフトドキュメント
+title: sys. dm_external_script_requests |Microsoft Docs
 ms.custom: ''
 ms.date: 10/28/2018
 ms.prod: sql
@@ -19,10 +19,10 @@ ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 70f1024f73ff955facaa2b6a2af2b9f5f4ccf247
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81488201"
 ---
 # <a name="sysdm_external_script_requests"></a>sys.dm_external_script_requests
@@ -32,11 +32,11 @@ ms.locfileid: "81488201"
   
 > [!NOTE] 
 >  
-> この動的管理ビュー (DMV) は、外部スクリプトの実行をサポートする機能をインストールして有効にしている場合にのみ使用できます。 詳細については[、SQL Server 2016 の R サービスと、SQL Server 2017](../../machine-learning/r/sql-server-r-services.md) [以降の機械学習サービス (R、Python) を](../../machine-learning/sql-server-machine-learning-services.md)参照してください。  
+> この動的管理ビュー (DMV) は、外部スクリプトの実行をサポートする機能をインストールして有効にした場合にのみ使用できます。 詳細については、SQL Server 2017 以降の「 [SQL Server 2016 の R Services](../../machine-learning/r/sql-server-r-services.md) 」および「 [Machine Learning Services (r、Python)](../../machine-learning/sql-server-machine-learning-services.md)」を参照してください。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|external_script_request_id|**一意の識別子**|外部スクリプト要求を送信したプロセスの ID です。 これは、受信したプロセス ID に対応します。[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
+|external_script_request_id|**一意識別子**|外部スクリプト要求を送信したプロセスの ID です。 これは、によって受信されたプロセス ID に対応します。[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
 |language|**nvarchar**|サポートされているスクリプト言語を表すキーワードです。 |  
 |degree_of_parallelism|**int**|作成された並列処理の数を示す数値です。 この値は、要求された並列処理の数と異なる場合があります。|  
 |external_user_name|**nvarchar**|スクリプトが実行されたときの Windows ワーカー アカウント。|  
@@ -48,17 +48,17 @@ ms.locfileid: "81488201"
 >   
 >  外部スクリプトを実行するユーザーはさらに EXECUTE ANY EXTERNAL SCRIPT 権限も持っている必要がありますが、管理者はこの権限がなくてもこの DMV を使用できます。 
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
 
 このビューは、スクリプト言語の識別子を使用してフィルター処理することができます。
 
-このビューはまた、スクリプトが実行されているワーカー アカウントも返します。 外部スクリプトで使用されるワーカー アカウントの詳細については、「 [SQL Server の機械学習サービスの機能拡張フレームワークのセキュリティの概要](../../machine-learning/concepts/security.md#sqlrusergroup)」の「処理で使用される ID (SQLRUserGroup)」を参照してください。
+このビューはまた、スクリプトが実行されているワーカー アカウントも返します。 外部スクリプトによって使用されるワーカーアカウントの詳細については、 [SQL Server Machine Learning Services の機能拡張フレームワークのセキュリティの概要](../../machine-learning/concepts/security.md#sqlrusergroup)に関するトピックの「処理に使用される id」セクションを参照してください。
 
 **external_script_request_id** フィールドに返される GUID はまた、一時ファイルが格納されている、セキュリティで保護されたディレクトリのファイル名も表します。 MSSQLSERVER01 などの各ワーカー アカウントは、単一の SQL ログインまたは Windows ユーザーを表します。複数のスクリプト要求を実行するために使用される場合があります。 既定では、これらの一時ファイルは、要求したスクリプトが完了するとクリーンアップされます。
  
 この DMV は、アクティブなプロセスを監視するだけであり、既に完了しているスクリプトをレポートすることはできません。 スクリプトの期間を追跡する必要がある場合は、スクリプト内にタイミング情報を追加し、スクリプトの実行の一部としてキャプチャすることをお勧めします。
 
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
   
 ### <a name="viewing-the-currently-active-r-scripts-for-a-particular-process"></a>特定のプロセスで現在アクティブな R スクリプトを表示する 
  次の例では、現在のインスタンスで実行されている外部スクリプト実行の数を表示します。  
@@ -81,9 +81,9 @@ external_script_request_id  |language  |degree_of_parallelism  |external_user_na
 
   
 ## <a name="see-also"></a>参照  
- [Transact-SQL&#41;&#40;動的管理ビューと関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [実行関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
-[sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)
+[dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)
 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)  
   
 

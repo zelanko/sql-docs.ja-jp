@@ -13,10 +13,10 @@ ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a98dd5e9ac6c3f343e0d91edbb3137e5d1c01c5c
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487877"
 ---
 # <a name="learn-sql-server-master-data-services"></a>SQL Server マスター データ サービスについて
@@ -26,8 +26,8 @@ ms.locfileid: "81487877"
   
   
 ## <a name="training"></a>トレーニング  
-* で紹介[!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)][!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]されている新機能を確認するには、[セルフペースのラボ](https://www.microsoft.com/handsonlabs/selfpacedlabs)を試してみてください (Microsoft アカウントでサインインする必要があります)。  
-* 地理データの[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]マスタ リストを格納および管理するソリューションを開発するには、Excel 用アドイン と[!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)]を使用して、 を使用して[、自己ペースのラボ](https://www.microsoft.com/handsonlabs/selfpacedlabs)を試します。 エンティティと階層を作成し、 [!INCLUDE[ssIS_md](../includes/ssis-md.md)] を使用してディメンション テーブルに入力します。  
+* で[!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]導入された新機能については、自習形式の[ラボ](https://www.microsoft.com/handsonlabs/selfpacedlabs)をお試しください (Microsoft アカウントでサインインする必要があります)。  
+* Excel [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)]用の[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]アドインとを使用して地理データのマスターリストを格納および管理するソリューションを開発するには、自習形式の[ラボ](https://www.microsoft.com/handsonlabs/selfpacedlabs)を試してみてください。 エンティティと階層を作成し、 [!INCLUDE[ssIS_md](../includes/ssis-md.md)] を使用してディメンション テーブルに入力します。  
   
 ## <a name="videos"></a>ビデオ  
 * [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] リリースの [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]の新しい機能の詳細についてはは、 [**こちらのビデオを視聴**](https://www.youtube.com/watch?v=cKA72FpOVxI)してください。  

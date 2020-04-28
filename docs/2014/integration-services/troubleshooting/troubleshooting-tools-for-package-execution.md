@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8293e8bb7cfcc941c952ddaed25907ef2eec7371
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "82087062"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>パッケージ実行のトラブルシューティング ツール
@@ -52,11 +52,11 @@ ms.locfileid: "82087062"
   
 -   **関連情報をエラー出力に追加する**。 エラー出力から提供される 2 列の数値識別子だけでなく、説明的な情報を追加すると、エラー出力の分析が容易になります。  
   
-     **エラーの説明を追加**します。 スクリプト コンポーネントを使用することで、エラーの説明を容易に参照できます。 詳細については、「[スクリプト コンポーネントのエラー出力の拡張](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)」を参照してください。  
+     **エラーの説明を追加**します。 スクリプト コンポーネントを使用することで、エラーの説明を容易に参照できます。 詳細については、「[スクリプトコンポーネントのエラー出力の拡張](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)」を参照してください。  
   
      **エラー列の名前を追加**します。 エラー出力に保存されている列 ID に対応する列名は、スクリプト コンポーネントでは容易に参照できず、追加手順が必要です。 データ フロー内の各列の ID は、データ フロー タスク内では一意で、パッケージのデザイン時に保存されます。 列名をエラー出力に追加する 1 つの方法として、次のような方法があります。 
   
-    1.  **列名の参照テーブルを作成**する : [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] API を使用する別のアプリケーションを作成します。保存される各パッケージ、パッケージ内の各データ フロー、データ フロー内の各オブジェクト、データ フロー オブジェクト内の各入出力で、このアプリケーションを繰り返し実行します。 アプリケーションでは、列 ID と参照テーブルでの各列の名前を、親データ フロー タスクとパッケージ ID と共に保存します。  
+    1.  **列名のルックアップテーブルを作成**します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] API を使用する別のアプリケーションを作成します。保存される各パッケージ、パッケージ内の各データ フロー、データ フロー内の各オブジェクト、データ フロー オブジェクト内の各入出力で、このアプリケーションを繰り返し実行します。 アプリケーションでは、列 ID と参照テーブルでの各列の名前を、親データ フロー タスクとパッケージ ID と共に保存します。  
   
     2.  **出力に列名を追加**します。 前の手順で作成した参照テーブルの列名を参照する出力に、参照変換を追加します。 参照では、エラー出力の列 ID、パッケージ ID (システム変数 System::PackageID で使用できます)、データ フロー タスクの ID (システム変数 System::TaskID で使用できます) を使用できます。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "82087062"
  詳細については、「 [パッケージ実行のレポートのトラブルシューティング](troubleshooting-reports-for-package-execution.md)」を参照してください。  
   
 ## <a name="troubleshoot-package-execution-by-using-ssisdb-views"></a>SSISDB ビューを使ったパッケージ実行のトラブルシューティング  
- クエリを実行してパッケージ実行や操作に関するその他の情報を監視するための複数の SSISDB データベース ビューが用意されています。 詳細については、「[パッケージの実行とその他の操作の監視](../performance/monitor-running-packages-and-other-operations.md)」を参照してください。  
+ クエリを実行してパッケージ実行や操作に関するその他の情報を監視するための複数の SSISDB データベース ビューが用意されています。 詳細については、「[パッケージ実行とその他の操作の監視](../performance/monitor-running-packages-and-other-operations.md)」を参照してください。  
   
 ## <a name="troubleshoot-package-execution-by-using-logging"></a>ログ記録を使ったパッケージ実行のトラブルシューティング  
  ログ記録を有効にすることで、実行中のパッケージで発生する多くの現象を追跡できます。 ログ プロバイダーは、後で分析するために特定のイベントに関する情報をキャプチャし、その情報をデータベース テーブル、フラット ファイル、XML ファイルなどのサポートされている出力形式で保存します。  
