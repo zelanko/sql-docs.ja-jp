@@ -1,7 +1,7 @@
 ---
 title: INSERT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 04/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -32,12 +32,12 @@ ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 327992369ca07d77eb349cb83fb74c4ecd4e622e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3a5b98bf8e99d55217fadfd2c1811cb484c3ee3b
+ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982224"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82107989"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "73982224"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
 
 [ WITH <common_table_expression> [ ,...n ] ]  
@@ -90,7 +90,7 @@ INSERT
         [ OPTION ( <query_hint> [ ,...n ] ) ]  
 ```  
   
-```  
+```syntaxsql
 -- External tool only syntax  
 
 INSERT   
@@ -119,7 +119,7 @@ INSERT
     [ ( precision [ , scale ] | max ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
 
 INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | table_name }
@@ -303,37 +303,43 @@ SQL グラフ テーブルへのデータの挿入に固有の情報について
   
 ### <a name="best-practices-for-bulk-importing-data"></a>データの一括インポートに関するベスト プラクティス  
   
-#### <a name="using-insert-intoselect-to-bulk-import-data-with-minimal-logging"></a>INSERT INTO...SELECT を使用したデータ一括インポート時の最小ログ記録  
- `INSERT INTO <target_table> SELECT <columns> FROM <source_table>` を使用すると、最小ログ記録を行って、1 つのテーブル (ステージング テーブルなど) から別のテーブルに多数の行を効率的に転送できます。 最小ログ記録を行うと、ステートメントのパフォーマンスが向上します。また、トランザクションの実行中に、使用可能なトランザクション ログ領域がこの操作でいっぱいになる可能性を低減します。  
+#### <a name="using-insert-intoselect-to-bulk-import-data-with-minimal-logging-and-parallelism"></a>INSERT INTO...SELECT を使用したデータ一括インポート時の最小ログ記録と並列処理 
+`INSERT INTO <target_table> SELECT <columns> FROM <source_table>` を使用すると、最小ログ記録を行って、1 つのテーブル (ステージング テーブルなど) から別のテーブルに多数の行を効率的に転送できます。 最小ログ記録を行うと、ステートメントのパフォーマンスが向上します。また、トランザクションの実行中に、使用可能なトランザクション ログ領域がこの操作でいっぱいになる可能性を低減します。  
   
- このステートメントの最小ログ記録には、次の要件があります。  
-  
+このステートメントの最小ログ記録には、次の要件があります。  
 -   データベース復旧モデルが単純復旧モデルまたは一括ログ復旧モデルに設定されている。  
-  
 -   対象テーブルが、空のヒープか、空でないヒープである。  
-  
 -   対象テーブルがレプリケーションで使用されない。  
-  
--   対象テーブルに TABLOCK ヒントが指定されている。  
+-   対象テーブルに対して `TABLOCK` のヒントが指定されている。  
   
 MERGE ステートメントでの挿入操作の結果としてヒープに挿入される行についても、最小ログ記録が行われる場合があります。  
   
- より制限の少ない一括更新ロックを保持する BULK INSERT ステートメントとは異なり、TABLOCK ヒントが指定された INSERT INTO...SELECT は、テーブルに対する排他的な (X) ロックを保持します。 したがって、並列挿入操作を使用して行を挿入することはできません。  
+制限の緩い一括更新 (BU) ロックを保持する `BULK INSERT` ステートメントとは異なり、`TABLOCK` ヒントが指定された `INSERT INTO … SELECT` を使用すると、テーブルに対する排他 (X) ロックが保持されます。 つまり、複数の挿入操作を同時に実行して行を挿入することはできません。 
+
+ただし、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] およびデータベース互換性レベル 130 以降、ヒープまたはクラスター化列ストア インデックス (CCI) に挿入するときに、1 つの `INSERT INTO … SELECT` ステートメントを並列実行できるようになりました。 `TABLOCK` ヒントを使用すると、並列挿入を行うことができます。  
+
+上記のステートメントの並列処理には、最小ログ記録の要件と同様の次の要件があります。  
+-   対象テーブルが、空のヒープか、空でないヒープである。  
+-   対象テーブルにクラスター化列ストア インデックス (CCI) はあるが非クラスター化インデックスはない。  
+-   対象テーブルに IDENTITY_INSERT が OFF に設定された ID 列がない。  
+-   対象テーブルに対して `TABLOCK` のヒントが指定されている。
+
+最小ログ記録と並列挿入の要件が満たされているシナリオでは、両方の機能強化が連携し、データ ロード操作の最大スループットが確保されます。
+
+> [!NOTE]
+> ローカル一時テーブル (# プレフィックスで識別されます) とグローバル一時テーブル (## プレフィックスで識別されます) への挿入は、TABLOCK ヒントを使用した並列処理にも有効です。
   
 #### <a name="using-openrowset-and-bulk-to-bulk-import-data"></a>OPENROWSET および BULK によるデータの一括インポート  
  OPENROWSET 関数では次のテーブル ヒントを使用できます。これらのテーブル ヒントにより、一括読み込みの最適化を INSERT ステートメントで利用できます。  
   
--   TABLOCK ヒントを使用すると、挿入操作のログ レコード数を最小化できます。 データベース復旧モデルが単純復旧モデルまたは一括ログ復旧モデルに設定されている必要があります。また、対象テーブルはレプリケーションで使用できません。 詳細については、「[一括インポートで最小ログ記録を行うための前提条件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)」次を参照してください。  
+-   `TABLOCK` ヒントを使用すると、挿入操作のログ レコード数を最小化できます。 データベース復旧モデルが単純復旧モデルまたは一括ログ復旧モデルに設定されている必要があります。また、対象テーブルはレプリケーションで使用できません。 詳細については、「[一括インポートで最小ログ記録を行うための前提条件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)」次を参照してください。  
+-   `TABLOCK` ヒントを使用すると、並列挿入操作を行うことができます。 対象テーブルは、非クラスター化インデックスのないヒープまたはクラスター化列ストア インデックス (CCI) であり、対象テーブルに ID 列を指定することはできません。  
+-   `IGNORE_CONSTRAINTS` ヒントを使用すると、FOREIGN KEY および CHECK 制約チェックを一時的に無効にすることができます。  
+-   `IGNORE_TRIGGERS` ヒントを使用すると、トリガーの実行を一時的に無効にすることができます。  
+-   `KEEPDEFAULTS` ヒントを使用すると、データ レコードにテーブルの列値が含まれていない場合に、NULL の代わりにテーブル列の既定値を挿入できます。  
+-   `KEEPIDENTITY` ヒントを使用すると、インポートしたデータ ファイルの ID 値を対象テーブルの ID 列に使用できます。  
   
--   IGNORE_CONSTRAINTS ヒントを使用すると、FOREIGN KEY および CHECK の制約チェックを一時的に無効にできます。  
-  
--   IGNORE_TRIGGERS ヒントを使用すると、トリガーの実行を一時的に無効にできます。  
-  
--   KEEPDEFAULTS ヒントを使用すると、データ レコードにテーブルの列値が含まれていない場合に、NULL の代わりにテーブル列の既定値を挿入できます。  
-  
--   KEEPIDENTITY ヒントを使用すると、インポートしたデータ ファイルの ID 値を対象テーブルの ID 列に使用できます。  
-  
-これらは、BULK INSERT コマンドで使用可能な最適化と似ています。 詳細については、「[テーブル ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)」を参照してください。  
+これらの最適化は、`BULK INSERT` コマンドで使用できるものと似ています。 詳細については、「[テーブル ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)」を参照してください。  
   
 ## <a name="data-types"></a>データ型  
  行の挿入時には、次のデータ型の動作を考慮してください。  
@@ -352,7 +358,7 @@ MERGE ステートメントでの挿入操作の結果としてヒープに挿�
   
 -   **text** 型列または **image** 型列に NULL 値を挿入した場合、有効なテキスト ポインターは作成されず、また、8 KB のテキスト ページもあらかじめ割り当てられません。  
   
--   **uniqueidentifier** 型で作成される列は、特別にフォーマットされた 16 バイトのバイナリ値を格納します。 ID 列の場合とは異なり、[!INCLUDE[ssDE](../../includes/ssde-md.md)]は、**uniqueidentifier** 型の列に対して自動的に値を生成しません。 挿入操作の際、**uniqueidentifier** 列には、*uniqueidentifier* 型の変数と、*xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx* (ハイフンを含む 36 文字で、**x** は 0 ～ 9 または a ～ f の範囲の 16 進数値) という形式の文字列定数を使用できます。 たとえば、**uniqueidentifier** 変数または列には、6F9619FF-8B86-D011-B42D-00C04FC964FF という値を指定できます。 GUID を取得するには、[NEWID()](../../t-sql/functions/newid-transact-sql.md) 関数を使用します。  
+-   **uniqueidentifier** 型で作成される列は、特別にフォーマットされた 16 バイトのバイナリ値を格納します。 ID 列の場合とは異なり、[!INCLUDE[ssDE](../../includes/ssde-md.md)]は、**uniqueidentifier** 型の列に対して自動的に値を生成しません。 挿入操作の際、**uniqueidentifier** 列には、**uniqueidentifier** 型の変数と、*xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx* (ハイフンを含む 36 文字で、*x* は 0 ～ 9 または a ～ f の範囲の 16 進数値) という形式の文字列定数を使用できます。 たとえば、**uniqueidentifier** 変数または列には、6F9619FF-8B86-D011-B42D-00C04FC964FF という値を指定できます。 GUID を取得するには、[NEWID()](../../t-sql/functions/newid-transact-sql.md) 関数を使用します。  
   
 ### <a name="inserting-values-into-user-defined-type-columns"></a>ユーザー定義型の列への値の挿入  
  ユーザー定義型の列に値を挿入するには、次のようにします。  
@@ -385,7 +391,7 @@ MERGE ステートメントでの挿入操作の結果としてヒープに挿�
  INSERT ステートメントの中で、式の評価中に算術エラー (オーバーフロー、0 による除算、またはドメイン エラー) が発生すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では、SET ARITHABORT が ON に設定されている場合と同様に、これらのエラーが処理されます。 バッチは停止し、エラー メッセージが返されます。 SET ARITHABORT と SET ANSI_WARNINGS を OFF に設定して式を評価中に、INSERT、DELETE、または UPDATE ステートメントで算術演算エラー、オーバーフロー、0 除算、またはドメイン エラーが検出されると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では NULL 値が挿入または更新されます。 出力先の列で NULL 値が許容されない場合は、挿入または更新処理は失敗し、エラーが返されます。  
   
 ## <a name="interoperability"></a>相互運用性  
- テーブルやビューを対象とする INSERT 操作で INSTEAD OF トリガーが定義されている場合は、INSERT ステートメントの代わりにトリガーが実行されます。 INSTEAD OF トリガーの詳細については、「[CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)」を参照してください。  
+ テーブルやビューを対象とする INSERT 操作で `INSTEAD OF` トリガーが定義されている場合は、INSERT ステートメントの代わりにトリガーが実行されます。 `INSTEAD OF` トリガーの詳細については、「[CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)」を参照してください。  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
  リモート テーブルに値を挿入するとき、すべての列のすべての値が指定されている場合を除いて、指定された値をどの列に挿入するかをユーザーが指定する必要があります。  
@@ -407,9 +413,9 @@ Parallel Data Warehouse では、ORDER BY 句は、TOP も一緒に指定しな�
 ### <a name="permissions"></a>アクセス許可  
  対象のテーブルに対する INSERT 権限が必要です。  
   
- INSERT 権限は、既定では **sysadmin** 固定サーバー ロール、**db_owner** 固定データベース ロール、および **db_datawriter** 固定データベース ロールのメンバーと、テーブル所有者に与えられています。 **sysadmin**、**db_owner**、および **db_securityadmin** ロールのメンバー、およびテーブル所有者は、他のユーザーに権限を譲渡できます。  
+ INSERT 権限は、既定では `sysadmin` 固定サーバー ロール、`db_owner` および `db_datawriter` 固定データベース ロールのメンバー、およびテーブル所有者に与えられています。 `sysadmin`、`db_owner`、`db_securityadmin` ロールのメンバーと、テーブル所有者は、他のユーザーに権限を譲渡できます。  
   
- OPENROWSET 関数の BULK オプションで INSERT を実行するには、**sysadmin** 固定サーバー ロールまたは **bulkadmin** 固定サーバー ロールのメンバーであることが必要です。  
+ OPENROWSET 関数の BULK オプションで INSERT を実行するには、`sysadmin` 固定サーバー ロールまたは `bulkadmin` 固定サーバー ロールのメンバーであることが必要です。  
   
 ##  <a name="examples"></a><a name="InsertExamples"></a> 使用例  
   
@@ -428,7 +434,7 @@ Parallel Data Warehouse では、ORDER BY 句は、TOP も一緒に指定しな�
  このセクションの例では、最低限必要な構文を使用して INSERT ステートメントの基本機能を示します。  
   
 #### <a name="a-inserting-a-single-row-of-data"></a>A. 1 行のデータを挿入する  
- 次の例では、`Production.UnitMeasure` データベースの [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] テーブルに 1 行を挿入します。 このテーブルの列は、`UnitMeasureCode`、`Name`、および `ModifiedDate` です。 すべての列の値が指定され、テーブルの列と同じ順序で並んでいるため、列名を列リストで指定する必要はありません *。*  
+ 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `Production.UnitMeasure` テーブルに 1 行を挿入します。 このテーブルの列は、`UnitMeasureCode`、`Name`、および `ModifiedDate` です。 すべての列の値が指定され、テーブルの列と同じ順序で並んでいるため、列名を列リストで指定する必要はありません *。*  
   
 ```sql
 INSERT INTO Production.UnitMeasure  
@@ -436,7 +442,7 @@ VALUES (N'FT', N'Feet', '20080414');
 ```  
   
 #### <a name="b-inserting-multiple-rows-of-data"></a>B. 複数行のデータを挿入する  
- 次の例では、単一の INSERT ステートメントで[テーブル値コンストラクター](../../t-sql/queries/table-value-constructor-transact-sql.md)を使用して、`Production.UnitMeasure` データベースの [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] テーブルに 3 行を挿入します。 すべての列の値が指定され、テーブルの列と同じ順序で並んでいるため、列名を列リストで指定する必要はありません。  
+ 次の例では、単一の INSERT ステートメントで[テーブル値コンストラクター](../../t-sql/queries/table-value-constructor-transact-sql.md)を使用して、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `Production.UnitMeasure` テーブルに 3 行を挿入します。 すべての列の値が指定され、テーブルの列と同じ順序で並んでいるため、列名を列リストで指定する必要はありません。  
   
 ```sql
 INSERT INTO Production.UnitMeasure  
@@ -445,7 +451,7 @@ VALUES (N'FT2', N'Square Feet ', '20080923'), (N'Y', N'Yards', '20080923')
 ```  
   
 #### <a name="c-inserting-data-that-is-not-in-the-same-order-as-the-table-columns"></a>C. テーブルの列と順序が異なるデータを挿入する  
- 次の例では、列リストを使用して、各列に挿入する値を明示的に指定します。 `Production.UnitMeasure` データベースの [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] テーブルの列の順序は、`UnitMeasureCode`、`Name`、`ModifiedDate` です。ただし、*column_list* では列がその順序で並んでいません。  
+ 次の例では、列リストを使用して、各列に挿入する値を明示的に指定します。 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `Production.UnitMeasure` テーブルの列の順序は、`UnitMeasureCode`、`Name`、`ModifiedDate` です。ただし、*column_list* では列がその順序で並んでいません。  
   
 ```sql
 INSERT INTO Production.UnitMeasure (Name, UnitMeasureCode,  
@@ -517,11 +523,10 @@ INSERT INTO T1 DEFAULT VALUES;
 GO  
 SELECT column_1, column_2  
 FROM dbo.T1;  
-  
 ```  
   
 #### <a name="g-inserting-data-into-user-defined-type-columns"></a>G. ユーザー定義型の列にデータを挿入する  
- 次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、`PointValue` テーブルの `Points` 列に 3 行を挿入します。 この列は、[CLR ユーザー定義型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) (UDT) を使用しています。 `Point` データ型は、UDT のプロパティとして公開されている整数値 X と Y で構成されます。 コンマ区切りの X と Y の値を `Point` 型にキャストするには、CAST 関数または CONVERT 関数のいずれかを使用する必要があります。 最初の 2 つのステートメントでは、CONVERT 関数を使用し、3 つ目のステートメントでは CAST 関数を使用して、文字列値を `Point` 型に変換しています。 詳しくは、「[UDT データの操作](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-manipulating-udt-data.md)」をご覧ください。  
+ 次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、`Points` テーブルの `PointValue` 列に 3 行を挿入します。 この列は、[CLR ユーザー定義型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) (UDT) を使用しています。 `Point` データ型は、UDT のプロパティとして公開されている整数値 X と Y で構成されます。 コンマ区切りの X と Y の値を `Point` 型にキャストするには、CAST 関数または CONVERT 関数のいずれかを使用する必要があります。 最初の 2 つのステートメントでは、CONVERT 関数を使用し、3 つ目のステートメントでは CAST 関数を使用して、文字列値を `Point` 型に変換しています。 詳しくは、「[UDT データの操作](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-manipulating-udt-data.md)」をご覧ください。  
   
 ```sql
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '3,4'));  
@@ -535,7 +540,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));
 #### <a name="h-using-the-select-and-execute-options-to-insert-data-from-other-tables"></a>H. SELECT および EXECUTE オプションを使用して他のテーブルのデータを挿入する  
  次の例では、INSERT...SELECT または INSERT...EXECUTE を使用して、あるテーブルのデータを別のテーブルに挿入する方法を示します。 各方法は、列リストに式とリテラル値を含む複数のテーブルを参照する SELECT ステートメントに基づきます。  
   
- 1 番目の INSERT ステートメントでは、SELECT ステートメントを使用して `Employee` データベースのソース テーブル (`SalesPerson`、`Person`、および [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]) からデータを取得し、その結果セットを `EmployeeSales` テーブルに格納します。 2 番目の INSERT ステートメントは、EXECUTE 句を使用して SELECT ステートメントを含むストアド プロシージャを呼び出します。3 番目の INSERT ステートメントは、EXECUTE 句を使用して SELECT ステートメントをリテラル文字列として参照します。  
+ 1 番目の INSERT ステートメントでは、SELECT ステートメントを使用して [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースのソース テーブル (`Employee`、`SalesPerson`、および `Person`) からデータを取得し、その結果セットを `EmployeeSales` テーブルに格納します。 2 番目の INSERT ステートメントは、EXECUTE 句を使用して SELECT ステートメントを含むストアド プロシージャを呼び出します。3 番目の INSERT ステートメントは、EXECUTE 句を使用して SELECT ステートメントをリテラル文字列として参照します。  
   
 ```sql
 CREATE TABLE dbo.EmployeeSales  
@@ -588,7 +593,7 @@ FROM dbo.EmployeeSales;
 ```  
   
 #### <a name="i-using-with-common-table-expression-to-define-the-data-inserted"></a>I. WITH 共通テーブル式を使用して挿入するデータを定義する  
- 次の例では、`NewEmployee` データベースに [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] テーブルを作成します。 共通テーブル式 (`EmployeeTemp`) で、`NewEmployee` テーブルに挿入する 1 つ以上のテーブルの行を定義します。 INSERT ステートメントは、共通テーブル式の列を参照します。  
+ 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースに `NewEmployee` テーブルを作成します。 共通テーブル式 (`EmployeeTemp`) で、`NewEmployee` テーブルに挿入する 1 つ以上のテーブルの行を定義します。 INSERT ステートメントは、共通テーブル式の列を参照します。  
   
 ```sql
 CREATE TABLE HumanResources.NewEmployee  
@@ -631,7 +636,7 @@ GO
 ```  
   
 #### <a name="j-using-top-to-limit-the-data-inserted-from-the-source-table"></a>J. TOP を使用してソース テーブルから挿入されるデータを制限する  
- 次の例では、`EmployeeSales` テーブルを作成し、ランダムに選ばれた上位 5 人の従業員の名前と年度累計売り上げデータを `HumanResources.Employee` データベースの [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] テーブルから挿入します。 INSERT ステートメントにより、`SELECT` ステートメントで返された任意の 5 行が選択されます。 OUTPUT 句は、`EmployeeSales` テーブルに挿入される行を表示します。 上位 5 人の従業員を特定するために SELECT ステートメントの ORDER BY 句を使用することはありません。  
+ 次の例では、`EmployeeSales` テーブルを作成し、ランダムに選ばれた上位 5 人の従業員の名前と年度累計売り上げデータを [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `HumanResources.Employee` テーブルから挿入します。 INSERT ステートメントにより、`SELECT` ステートメントで返された任意の 5 行が選択されます。 OUTPUT 句は、`EmployeeSales` テーブルに挿入される行を表示します。 上位 5 人の従業員を特定するために SELECT ステートメントの ORDER BY 句を使用することはありません。  
   
 ```sql
 CREATE TABLE dbo.EmployeeSales  
@@ -716,7 +721,7 @@ GO
  このセクションの例では、[リンク サーバー](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)または[行セット関数](../../t-sql/functions/rowset-functions-transact-sql.md)を使用してリモート テーブルを参照し、リモートの対象テーブルに行を挿入する方法を示します。  
   
 #### <a name="m-inserting-data-into-a-remote-table-by-using-a-linked-server"></a>M. リンク サーバーを使用してリモート テーブルにデータを挿入する  
- 次の例では、リモート テーブルに行を挿入します。 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) を使用してリモート データ ソースへのリンクを作成した後、 `MyLinkServer`server.catalog.schema.object*という形式の、4 つの要素で構成されたオブジェクト名の一部として、リンク サーバー名* を指定します。  
+ 次の例では、リモート テーブルに行を挿入します。 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) を使用してリモート データ ソースへのリンクを作成した後、 *server.catalog.schema.object* という形式の、4 つの要素で構成されたオブジェクト名の一部として、リンク サーバー名 `MyLinkServer` を指定します。  
   
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
@@ -884,7 +889,7 @@ VALUES ( N'Final Inventory', 15.00, 80.00);
 ###  <a name="capturing-the-results-of-the-insert-statement"></a><a name="CaptureResults"></a> INSERT ステートメントの結果をキャプチャする  
  このセクションの例では、[OUTPUT 句](../../t-sql/queries/output-clause-transact-sql.md)を使用して、INSERT ステートメントの影響を受ける各行の情報や、それらに基づく式を返す方法を示します。 これらの結果は処理アプリケーションに返され、確認メッセージの表示、アーカイブ化、その他のアプリケーション要件で使用することができます。  
   
-#### <a name="t-using-output-with-an-insert-statement"></a>T. OUTPUT を INSERT ステートメントで使用する  
+#### <a name="t-using-output-with-an-insert-statement"></a>T.  OUTPUT を INSERT ステートメントで使用する  
  次の例では、`ScrapReason` テーブルに 1 行を挿入し、`OUTPUT` 句を使用してステートメントの結果を `@MyTableVar` テーブル変数に返します。 `ScrapReasonID` 列が `IDENTITY` プロパティで定義されているため、`INSERT` ステートメントではこの列の値を指定していません。 ただし、[!INCLUDE[ssDE](../../includes/ssde-md.md)]によってこの列用に生成された値が、`OUTPUT` 句で `INSERTED.ScrapReasonID` 列に返されます。  
   
 ```sql
@@ -903,7 +908,7 @@ SELECT ScrapReasonID, Name, ModifiedDate
 FROM Production.ScrapReason;  
 ```  
   
-#### <a name="u-using-output-with-identity-and-computed-columns"></a>U. ID 列と計算列で OUTPUT を使用する  
+#### <a name="u-using-output-with-identity-and-computed-columns"></a>U.  ID 列と計算列で OUTPUT を使用する  
  次の例では、`EmployeeSales` テーブルを作成し、INSERT ステートメントを使用してこのテーブルに複数行を挿入します。基になるテーブルからデータを取得するため、SELECT ステートメントも使用します。 `EmployeeSales` テーブルには、ID 列 (`EmployeeID`) および計算列 (`ProjectedSales`) があります。 これらの値は[!INCLUDE[ssDE](../../includes/ssde-md.md)]によって挿入操作中に生成されるため、いずれの列も `@MyTableVar` で定義できません。  
   
 ```sql
@@ -941,7 +946,7 @@ FROM dbo.EmployeeSales;
 ```  
   
 #### <a name="v-inserting-data-returned-from-an-output-clause"></a>V. OUTPUT 句から返されたデータを挿入する  
- 次の例では、MERGE ステートメントの OUTPUT 句から返されたデータをキャプチャし、そのデータを別のテーブルに挿入します。 MERGE ステートメントは、`Quantity` データベースの `ProductInventory` テーブル内で処理される注文に基づいて、`SalesOrderDetail` テーブルの [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 列を毎日更新します。 また、在庫が 0 になった製品の行を削除します。 この例では、削除された行をキャプチャし、在庫がない製品を追跡する別のテーブル `ZeroInventory` に挿入します。  
+ 次の例では、MERGE ステートメントの OUTPUT 句から返されたデータをキャプチャし、そのデータを別のテーブルに挿入します。 MERGE ステートメントは、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `SalesOrderDetail` テーブル内で処理される注文に基づいて、`ProductInventory` テーブルの `Quantity` 列を毎日更新します。 また、在庫が 0 になった製品の行を削除します。 この例では、削除された行をキャプチャし、在庫がない製品を追跡する別のテーブル `ZeroInventory` に挿入します。  
   
 ```sql
 --Create ZeroInventory table.  

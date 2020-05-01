@@ -2,7 +2,7 @@
 title: COPY INTO (Transact-SQL) (プレビュー)
 titleSuffix: (SQL Data Warehouse) - SQL Server
 description: Azure SQL Data Warehouse で COPY ステートメントを使用して、外部ストレージ アカウントからの読み込みを行います。
-ms.date: 12/13/2019
+ms.date: 04/24/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: jrasnick
@@ -18,18 +18,28 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: f28fced64212c9b7e76989d29fa837d4983cebe2
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: de9d629622c8f568383083c69dedf1224c85a8dc
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631975"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82153238"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (プレビュー)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-この記事では、Azure SQL Data Warehouse で COPY ステートメントを使用して、外部ストレージ アカウントからの読み込みを行う方法について説明します。 COPY ステートメントを使用すると、SQL Data Warehouse への高スループットのデータ インジェストで最大の柔軟性が確保されます。
+この記事では、Azure SQL Data Warehouse で COPY ステートメントを使用して、外部ストレージ アカウントからの読み込みを行う方法について説明します。 COPY ステートメントを使用すると、SQL Data Warehouse への高スループットのデータ インジェストで最大の柔軟性が確保されます。 次の機能に COPY を使用します。
+
+- データ ウェアハウスに対する厳格な CONTROL アクセス許可を使用せずに、低い特権のユーザーを使用して読み込むことができます。
+- 追加のデータベース オブジェクトを作成することなく、1 つの T-SQL ステートメントを実行できます。
+- **区切り記号** (文字列、フィールド、行) **が** **文字列で区切られた列内でエスケープされている** CSV ファイルを適切に解析して読み込むことができます。
+- Shared Access Signature (SAS) を使用してストレージ アカウント キーを公開しなくても、より洗練されたアクセス許可モデルを指定できます。
+- ERRORFILE の場所 (REJECTED_ROW_LOCATION) として異なるストレージ アカウントを使用できます。
+- ターゲット列ごとに既定値をカスタマイズし、特定のターゲット列に読み込むソース データ フィールドを指定できます。
+- CSV ファイルのカスタム行ターミネータを指定できます。
+- CSV ファイルで SQL Server の日付形式を活用できます。
+- 保存場所のパスにワイルドカードや複数のファイルを指定できます。
 
 > [!NOTE]  
 > COPY ステートメントは、現在、パブリック プレビュー段階にあります。
@@ -152,7 +162,7 @@ AAD またはパブリック ストレージ アカウントを使用して認�
 *ERRORFILE = Directory Location*</br>
 *ERRORFILE* は CSV にのみ適用されます。 COPY ステートメント内でディレクトリを指定します。拒否された行と該当するエラー ファイルがそこに書き込まれます。 ストレージ アカウントからの完全なパスを指定することも、コンテナーを基準とした相対パスを指定することもできます。 指定したパスが存在しない場合は、自動的に作成されます。 "_rejectedrows" という名前で子ディレクトリが作成されます。"_ " 文字があることで、場所パラメーターで明示的に指定されない限り、他のデータ処理ではこのディレクトリがエスケープされます。 
 
-このディレクトリ内には、YearMonthDay -HourMinuteSecond (例: 20180330-173205) のロード サブミッション時間に基づいて作成されたフォルダーがあります。 このフォルダーには、理由 (エラー) ファイルとデータ (行) ファイルの 2 種類のファイルが書き込まれ、それぞれ queryID、distributionID、ファイル GUID が事前に追加されています。 データと理由が別々のファイル内にあり、対応するファイルはプレフィックスが一致しています。
+このディレクトリ内には、YearMonthDay -HourMinuteSecond (例:  20180330-173205) のロード サブミッション時間に基づいて作成されたフォルダーがあります。 このフォルダーには、理由 (エラー) ファイルとデータ (行) ファイルの 2 種類のファイルが書き込まれ、それぞれ queryID、distributionID、ファイル GUID が事前に追加されています。 データと理由が別々のファイル内にあり、対応するファイルはプレフィックスが一致しています。
 
 ERRORFILE でストレージ アカウントの完全なパスが定義されている場合、そのストレージへの接続には ERRORFILE_CREDENTIAL が使用されます。 それ以外の場合は、CREDENTIAL に指定された値が使用されます。
 
@@ -208,21 +218,20 @@ ERRORFILE でストレージ アカウントの完全なパスが定義されて
 - .deflate - **DefaultCodec** (Parquet および ORC のみ)
 
  *FIELDQUOTE = 'field_quote'*</br>
-*FIELDQUOTE* は CSV に適用され、CSV ファイルで引用符文字 (文字列の区切り記号) として使用される 1 バイト文字を指定します。 指定されていない場合は、RFC 4180 標準の定義に従って引用符文字 (") が引用符文字として使用されます。 拡張 ASCII 文字は、FIELDQUOTE の UTF-8 ではサポートされていません。
+*FIELDQUOTE* は CSV に適用され、CSV ファイルで引用符文字 (文字列の区切り記号) として使用される 1 バイト文字を指定します。 指定されていない場合は、RFC 4180 標準の定義に従って引用符文字 (") が引用符文字として使用されます。 FIELDQUOTE の UTF-8 では、拡張 ASCII およびマルチバイト文字はサポートされていません。
 
 > [!NOTE]  
 > FIELDQUOTE 文字は、2 バイト FIELDQUOTE (区切り記号) が存在する文字列型の列ではエスケープされます。 
 
 *FIELDTERMINATOR = 'field_terminator’*</br>
-*FIELDTERMINATOR* は CSV にのみ適用されます。 CSV ファイルで使用されるフィールド ターミネータを指定します。 フィールド ターミネータは、16 進数表記を使用して指定できます。 フィールド ターミネータにはマルチ文字を使用できます。 既定のフィールド ターミネータは (,) です。
-詳細については、「[フィールド ターミネータと行ターミネータの指定 (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md?view=sql-server-2017)」を参照してください。
+*FIELDTERMINATOR* は CSV にのみ適用されます。 CSV ファイルで使用されるフィールド ターミネータを指定します。 フィールド ターミネータは、16 進数表記を使用して指定できます。 フィールド ターミネータにはマルチ文字を使用できます。 既定のフィールド ターミネータは (,) です。 FIELDTERMINATOR の UTF-8 では、拡張 ASCII およびマルチバイト文字はサポートされていません。
 
 ROW TERMINATOR = 'row_terminator'</br>
 *ROW TERMINATOR* は CSV にのみ適用されます。 CSV ファイルで使用される行ターミネータを指定します。 行ターミネータは、16 進数表記を使用して指定できます。 行ターミネータにはマルチ文字を使用できます。 既定では、行ターミネータは \r\n です。 
 
 COPY コマンドでは、\n (改行) を指定すると、その前に \r 文字が付けられ、\r\n になります。 \n 文字のみを指定するには、16 進数表記 (0x0A) を使用します。 マルチ文字の行ターミネータを 16 進数で指定する場合は、各文字の間で 0x を指定しないでください。
 
-行ターミネータの指定に関する追加のガイダンスについては、次の[ドキュメント](https://docs.microsoft.com/sql/relational-databases/import-export/specify-field-and-row-terminators-sql-server?view=sql-server-2017#using-row-terminators)を参照してください。
+ROW TERMINATOR の UTF-8 では、拡張 ASCII およびマルチバイト文字はサポートされていません。
 
 *FIRSTROW  = First_row_int*</br>
 *FIRSTROW* は CSV に適用され、COPY コマンドに対して、すべてのファイルで最初に読み取られる行番号を指定します。 値は 1 から始まり、これが既定値です。 2 に設定すると、データが読み込まれるときに、すべてのファイルの最初の行 (ヘッダー行) がスキップされます。 行は、行ターミネータの存在に基づいてスキップされます。
@@ -361,10 +370,10 @@ WITH (
 ## <a name="faq"></a>よく寄せられる質問
 
 ### <a name="what-is-the-performance-of-the-copy-command-compared-to-polybase"></a>PolyBase と比較した場合の COPY コマンドのパフォーマンスについて教えてください。
-COPY コマンドを使用すると、機能が一般公開される時点までにはパフォーマンスが向上します。 パブリック プレビュー中に最適な読み込みパフォーマンスを得るには、CSV の読み込み時に複数のファイルに入力を分割することを検討してください。 現在、INSERT SELECT を使用する場合のパフォーマンスは、PolyBase と同等です。 
+ワークロードによっては、COPY コマンドのパフォーマンスが向上します。 パブリック プレビュー中に最適な読み込みパフォーマンスを得るには、CSV の読み込み時に複数のファイルに入力を分割することを検討してください。 プレビュー期間中にパフォーマンスの結果をチームと共有してください。 [https://github.com/mysqljs/mysql/](sqldwcopypreview@service.microsoft.com)
 
 ### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-csv-files"></a>CSV ファイルを読み込む COPY コマンドに関するファイルの分割ガイダンスについて教えてください。
-ファイル数に関するガイダンスを、次の表で説明します。 推奨されるファイル数に到達すると、大きいファイル程パフォーマンスが向上します。 
+ファイル数に関するガイダンスを、次の表で説明します。 推奨されるファイル数に到達すると、大きいファイル程パフォーマンスが向上します。 単純なファイル分割エクスペリエンスについては、次の[ドキュメント](https://techcommunity.microsoft.com/t5/azure-synapse-analytics/how-to-maximize-copy-load-throughput-with-file-splits/ba-p/1314474)を参照してください。 
 
 | **DWU** | **#Files** |
 | :-----: | :--------: |

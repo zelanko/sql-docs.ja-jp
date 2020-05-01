@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan, sstein
 ms.custom: seodec18
 ms.date: 03/18/2020
-ms.openlocfilehash: 7a510500d16c29971d1a5263c5138ad1981c9401
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5a6bd8792cd42d34796b36fb18a4d8c551d684f5
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80215481"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087332"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio のリリース ノート
 
@@ -87,7 +87,7 @@ ms.locfileid: "80215481"
 | Change | 詳細 |
 | :----- | :------ |
 | 現在アクティブな接続のみを一覧表示するように Notebooks の [attach to connection]\(接続にアタッチ\) ドロップダウンを変更しました | [#8129](https://github.com/microsoft/azuredatastudio/issues/8129) |
-| BDC に接続するとき、SSL 検証エラーを無視することを許可する目的で bigdatacluster.ignoreSslVerification 設定を追加しました | [#8582](https://github.com/microsoft/azuredatastudio/pull/8582) |
+| BDC に接続するとき、TLS/SSL 検証エラーを無視することを許可する目的で bigdatacluster.ignoreSslVerification 設定を追加しました | [#8582](https://github.com/microsoft/azuredatastudio/pull/8582) |
 | オフライン クエリ エディターの既定の言語フレーバーを変更することを許可 | [#8419](https://github.com/microsoft/azuredatastudio/pull/8419) |
 | ビッグ データ クラスター/SQL 2019 機能の GA ステータス | [#8269](https://github.com/microsoft/azuredatastudio/issues/8269) |
 | バグと問題が解決されました | 修正の完全な一覧については、[GitHubの「バグと問題」](https://github.com/microsoft/azuredatastudio/milestone/44?closed=1)を参照してください。 |
@@ -495,7 +495,7 @@ _0.32.8 には、0.32.7 で検出されたいくつかの回帰の修正が含�
 - 修正: [問題 #1836](https://github.com/Microsoft/azuredatastudio/issues/1836): .sql ファイルが SQL Operations Studio に関連付けられない。
 - 修正: [問題 #1850](https://github.com/Microsoft/azuredatastudio/issues/1850):N'' と入力すると、オートコンプリートで N''' になる。
 - 修正: [問題 #1985](https://github.com/Microsoft/azuredatastudio/issues/1985):クエリ結果グリッドからのコピーが 1 列ずれる。
-- 修正: [問題 #1998](htpts://github.com/Microsoft/azuredatastudio/pull/1998):[バージョン情報] ダイアログに VS Code のバージョンを追加する。
+- 修正: [問題 #1998](https://github.com/Microsoft/azuredatastudio/pull/1998):[バージョン情報] ダイアログに VS Code のバージョンを追加する。
 - 修正: [問題 #2042](https://github.com/Microsoft/azuredatastudio/pull/2042):エージェント:[有効] ボタンを使用して、sql ファイルからクエリをインポートする。
 - 修正: [問題 #2091](https://github.com/Microsoft/azuredatastudio/issues/2091):Ctrl + C キーを使用して、結果ペインから結果をコピーすることができない。
 - 修正: [問題 #2099](https://github.com/Microsoft/azuredatastudio/pull/2099):SaveAsCsv オプションが追加された。
