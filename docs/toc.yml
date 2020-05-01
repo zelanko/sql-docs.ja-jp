@@ -145,7 +145,7 @@
             - name: HDFS データ
               items:
                 - name: CSV データを仮想化する
-                  href: relational-databases/polybase/data-virtualization-csv.md
+                  href: big-data-cluster/data-virtualization-csv.md
                 - name: HDFS データのクエリ
                   href: big-data-cluster/tutorial-query-hdfs-storage-pool.md
                 - name: HDFS の階層
@@ -6759,7 +6759,7 @@
               href: relational-databases/partitions/modify-a-partition-function.md
             - name: スキームの変更
               href: relational-databases/partitions/modify-a-partition-scheme.md
-            - name: パーティションの管理ウィザードの F1 ヘルプ
+            - name: パーティションの管理ウィザード
               href: relational-databases/partitions/manage-partition-wizard-f1-help.md
         - name: プラン ガイド
           href: relational-databases/performance/plan-guides.md
