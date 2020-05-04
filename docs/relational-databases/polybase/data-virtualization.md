@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.metadata: seo-lt-2019
-ms.openlocfilehash: f4bd7eec24be747fe6c0933d31467410bfecf2a9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3b45ec31788814df7c472dbb81e3b47e0e42abeb
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75227512"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588094"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>リレーショナル データ ソースで外部テーブル ウィザードを使用する
 
@@ -64,7 +64,7 @@ SQL Server 2019 の主なシナリオの 1 つは、データを仮想化する�
 
 次のページで、外部ビューを作成するテーブルを選択します。 親データベースを選択すると、子テーブルも含まれます。 テーブルを選択すると、右側にマッピング テーブルが表示されます。 ここで、型を変更することができます。 また、選択した外部テーブル自体の名前を変更することもできます。
 
-![外部データ ソースの資格情報](media/data-virtualization/data-table-mapping.png)
+![外部データ ソースの資格情報](media/data-virtualization/data-table-map.png)
 
 > [!NOTE]
 >マッピング ビューを変更するには、別の選択したテーブルをダブルクリックします。
