@@ -18,12 +18,12 @@ ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e070cfc4b02ae52ab755306a29eb90c6afc912cf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 242ae654ede8a827b89e630369965faee4505840
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68075498"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220697"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>inserted テーブルと deleted テーブルの使用
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "68075498"
  トリガーの条件を設定するときには、トリガーを起動した操作に合わせて inserted テーブルと deleted テーブルを使用します。 INSERT ステートメントをテストするときに deleted テーブルを参照したり、DELETE ステートメントをテストするときに inserted テーブルを参照してもエラーは発生しませんが、このような場合は、これらのトリガー テスト用テーブルには行が含まれていません。  
   
 > [!NOTE]  
->  トリガーの動作が、データ変更の影響のある行の数に依存する場合、複数行データ変更 (SELECT ステートメントに基づく INSERT、DELETE、または UPDATE) に @@ROWCOUNT の検査などのテストを使用し、適切な動作を実行する必要があります。  
+>  トリガーの動作が、データ変更の影響のある行の数に依存する場合、複数行データ変更 (SELECT ステートメントに基づく INSERT、DELETE、または UPDATE) に @@ROWCOUNT の検査などのテストを使用し、適切な動作を実行する必要があります。 詳細については、「 [複数行のデータを処理するための DML トリガーの作成](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md)」を参照してください。
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、AFTER トリガー用の inserted テーブルおよび deleted テーブル内で **text**列、 **ntext**列、または **image** 列を参照することを禁止しています。 これらのデータ型は旧バージョンとの互換性のためだけに用意されているものです。 大きなデータを格納するには、 **varchar(max)** 、 **nvarchar(max)** 、および **varbinary(max)** データ型を使用することをお勧めします。 AFTER トリガーと INSTEAD OF トリガーでは両方とも、inserted テーブルおよび deleted テーブルで **varchar(max)** 、 **nvarchar(max)** 、および **varbinary(max)** 型のデータがサポートされます。 詳細については、「[CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)」を参照してください。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "68075498"
   
  CHECK 制約で参照できるのは、列レベルまたはテーブル レベルの制約が定義されている列のみであるため、テーブル間にまたがる制約 (ここでは、ビジネス ルール) はすべてトリガーとして定義する必要があります。  
   
- 次の例では、DML トリガーを作成します。 このトリガーでは、 `PurchaseOrderHeader` テーブルに新しい発注を挿入しようとしたときに、ベンダーの信用格付けが良好であるかどうかがチェックされます。 挿入した発注に対応するベンダーの信用格付けを取得するには、 `Vendor` テーブルを参照し、inserted テーブルと結合する必要があります。 信用格付けが低い場合は、メッセージが表示され、挿入は実行されません。 この例では、複数行のデータの変更を許可していません。 詳細については、「 [複数行のデータを処理するための DML トリガーの作成](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md)」を参照してください。  
+ 次の例では、DML トリガーを作成します。 このトリガーでは、 `PurchaseOrderHeader` テーブルに新しい発注を挿入しようとしたときに、ベンダーの信用格付けが良好であるかどうかがチェックされます。 挿入した発注に対応するベンダーの信用格付けを取得するには、 `Vendor` テーブルを参照し、inserted テーブルと結合する必要があります。 信用格付けが低い場合は、メッセージが表示され、挿入は実行されません。
   
  [!code-sql[TriggerDDL#CreateTrigger3](../../relational-databases/triggers/codesnippet/tsql/use-the-inserted-and-del_1.sql)]  
   

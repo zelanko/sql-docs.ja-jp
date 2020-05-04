@@ -1,5 +1,5 @@
 ---
-title: パーティションの管理ウィザードの F1 ヘルプ | Microsoft Docs
+title: パーティションの管理ウィザード
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,14 +23,14 @@ helpviewer_keywords:
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: dc76237530ba47a513aba164260061ec6b20e7c3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d779af4f450fe444181df995a8dab26b102c3038
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68892409"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220427"
 ---
-# <a name="manage-partition-wizard-f1-help"></a>パーティションの管理ウィザードの F1 ヘルプ
+# <a name="manage-partition-wizard"></a>パーティションの管理ウィザード 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **パーティションの管理ウィザード** を使用すると、パーティションの切り替えやスライディング ウィンドウ シナリオの実装によって、既存のパーティション テーブルを管理および変更することができます。 このウィザードによって、パーティションの管理が容易になり、テーブル内外へのデータの通常の移行が簡単になります。  
   
@@ -176,10 +176,10 @@ ms.locfileid: "68892409"
 ##  <a name="new-job-schedule-page"></a><a name="NewJob"></a> [新しいジョブ スケジュール] ページ  
  **[新しいジョブ スケジュール]** ページを使用すると、スケジュールのプロパティを表示したり、変更したりできます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブに必要なスケジュールの種類を選択します。  
   
- **Name**  
+ **名前**  
  スケジュールの新しい名前を入力します。  
   
  **[スケジュール済みのジョブ]**  
@@ -268,7 +268,7 @@ ms.locfileid: "68892409"
 ##  <a name="progress-page"></a><a name="Progress"></a> [進行状況] ページ  
  **[進行状況]** ページを使用すると、 **パーティションの管理ウィザード**のアクションに関する状態情報を監視できます。 ウィザードで選択したオプションに応じて、 **[進行状況]** ページに 1 つまたは複数のアクションが含まれる可能性があります。 上部のボックスには、ウィザードの全体的な状態と受信した状態メッセージ、エラー メッセージ、および警告メッセージの数が表示されます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **詳細**  
  アクション、状態、およびウィザードで実行したアクションから返されたメッセージが提供されます。  
   

@@ -2,7 +2,7 @@
 title: COPY INTO (Transact-SQL) (プレビュー)
 titleSuffix: (SQL Data Warehouse) - SQL Server
 description: Azure SQL Data Warehouse で COPY ステートメントを使用して、外部ストレージ アカウントからの読み込みを行います。
-ms.date: 04/24/2020
+ms.date: 04/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: jrasnick
@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: de9d629622c8f568383083c69dedf1224c85a8dc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cfd9d2b00d1ba7aa1c56b967deb872d3d9bc0190
+ms.sourcegitcommit: d3e7c06fe989135f70d97f5ec6613fad4d62b145
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82153238"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82619655"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (プレビュー)
 
@@ -140,24 +140,32 @@ WITH
 
 AAD またはパブリック ストレージ アカウントを使用して認証する場合は、CREDENTIAL を指定する必要はありません。 
 
-- Shared Access Signatures (SAS) を使用した認証 *IDENTITY:* "Shared Access Signature" の値が含まれている定数 
-  *SECRET:* [*Shared Access Signature*](/azure/storage/common/storage-sas-overview) "*を使用すると、ストレージ アカウント内のリソースへの委任アクセスが可能になります。* "
-  最低限必要な権限: READ および LIST
-
+- Shared Access Signatures (SAS) を使用した認証
+  
+  - *IDENTITY:* "Shared Access Signature" の値が含まれている定数
+  - *SECRET:*  [*Shared Access Signature*](/azure/storage/common/storage-sas-overview) "*を使用すると、ストレージ アカウント内のリソースへの委任アクセスが可能になります。* "
+  -  最低限必要な権限: READ および LIST
+  
 - [*サービス プリンシパル*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)を使用した認証
 
-  *IDENTITY: <ClientID>@<OAuth_2.0_Token_EndPoint>* 
-   *SECRET:* AAD アプリケーション サービス プリンシパルキー。最低限必要な RBAC ロール: ストレージ BLOB データ共同作成者、ストレージ BLOB データ所有者、またはストレージ BLOB データ閲覧者
+  - *IDENTITY: <ClientID>@<OAuth_2.0_Token_EndPoint>*
+  - *SECRET:* AAD サービス プリンシパル アプリケーション キー
+  -  最低限必要な RBAC ロール: ストレージ BLOB データ共同作成者、ストレージ BLOB データ所有者、またはストレージ BLOB データ閲覧者
 
-  > [!NOTE]  
-  > OAuth 2.0 トークン エンドポイント **V1** を使用してください
-
-- ストレージ アカウント キーを使用した認証 *IDENTITY:* "ストレージ アカウント キー" の値が含まれている定数 
-  *SECRET:* ストレージ アカウント キー
+- ストレージ アカウント キーを使用した認証
   
-- [マネージド ID ](/azure/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase#authenticate-using-managed-identities-to-load-optional) (VNet サービス エンドポイント) を使用した認証 *IDENTITY:* "マネージド ID" の値が含まれている定数。最低限必要な RBAC ロール: AAD 登録済み SQL Database サーバーに対するストレージ BLOB データ共同作成者、ストレージ BLOB データ所有者、またはストレージ BLOB データ閲覧者 
+  - *IDENTITY:* "ストレージ アカウント キー" の値が含まれている定数
+  - *SECRET:* ストレージ アカウント キー
   
-- AAD ユーザーを使用した認証 *CREDENTIAL は必須ではありません*。最低限必要な RBAC ロール: AAD ユーザーに対するストレージ BLOB データ共同作成者、ストレージ BLOB データ所有者、またはストレージ BLOB データ閲覧者
+- [マネージド ID](/azure/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase#authenticate-using-managed-identities-to-load-optional) (VNet サービス エンドポイント) を使用した認証
+  
+  - *IDENTITY:* "マネージド ID" の値が含まれている定数
+  - 最低限必要な RBAC ロール: AAD 登録済み SQL Database サーバーに対するストレージ BLOB データ共同作成者またはストレージ BLOB データ所有者
+  
+- AAD ユーザーを使用した認証
+  
+  - *CREDENTIAL は必須ではありません*
+  - 最低限必要な RBAC ロール: AAD ユーザーに対するストレージ BLOB データ共同作成者またはストレージ BLOB データ所有者
 
 *ERRORFILE = Directory Location*</br>
 *ERRORFILE* は CSV にのみ適用されます。 COPY ステートメント内でディレクトリを指定します。拒否された行と該当するエラー ファイルがそこに書き込まれます。 ストレージ アカウントからの完全なパスを指定することも、コンテナーを基準とした相対パスを指定することもできます。 指定したパスが存在しない場合は、自動的に作成されます。 "_rejectedrows" という名前で子ディレクトリが作成されます。"_ " 文字があることで、場所パラメーターで明示的に指定されない限り、他のデータ処理ではこのディレクトリがエスケープされます。 
