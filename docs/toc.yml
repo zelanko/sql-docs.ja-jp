@@ -222,6 +222,8 @@
               href: big-data-cluster/troubleshoot-active-directory.md
             - name: Active Directory DNS
               href: big-data-cluster/troubleshoot-ad-reverse-lookup-zone.md
+            - name: Active Directory ログインに失敗する
+              href: big-data-cluster/troubleshoot-ad-login-failed-untrusted-domain.md
             - name: HDFS 管理者権限
               href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
     - name: リファレンス
@@ -2688,7 +2690,7 @@
               href: relational-databases/native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md
             - name: Properties
               href: relational-databases/native-client-ole-db-provider/about-ole-db-properties.md
-            - name: 接続の確立
+            - name: 接続を確立する
               href: relational-databases/native-client-ole-db-provider/establishing-a-connection-to-a-data-source.md
             - name: コマンドの実行
               href: relational-databases/native-client-ole-db-provider/executing-a-command.md
