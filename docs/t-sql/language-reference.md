@@ -1,7 +1,7 @@
 ---
 title: Transact-SQL リファレンス (データベース エンジン) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/03/2017
+ms.date: 04/29/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -15,20 +15,22 @@ ms.assetid: dbba47d7-e08e-4435-b876-35dced1f325d
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 46ce5f22f38b9854be8161aa3d104a60e41886ab
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6020e1907f6d8b161a8e9dddb14f9e7befb7641a
+ms.sourcegitcommit: 69f93dd1afc0df76c3b4d9203adae0ad7dbd7bb2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73844348"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82598658"
 ---
 # <a name="transact-sql-reference-database-engine"></a>Transact-SQL リファレンス (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
-このトピックでは、Microsoft Transact-SQL (T-SQL) のリファレンス トピックを見つけて使用する方法の基本事項を説明します。 T-SQL は、Microsoft SQL の製品やサービスを使用するときの中心となる機能です。 SQL データベースと通信するツールやアプリケーションはすべて、T-SQL のコマンドを送信するという方法で通信します。  
+このトピックでは、Microsoft [!INCLUDE[tsql](../includes/tsql-md.md)] (T-SQL) のリファレンス トピックを見つけて使用する方法の基本事項を説明します。 T-SQL は、Microsoft SQL の製品やサービスを使用するときの中心となる機能です。 SQL データベースと通信するツールやアプリケーションはすべて、T-SQL のコマンドを送信するという方法で通信します。  
+
+## <a name="t-sql-compliance-to-sql-standard"></a>SQL 標準に準拠した T-SQL
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] での特定の標準の実装方法に関する詳細な技術ドキュメントについては、[Microsoft SQL Server 標準のサポート ドキュメント](https://docs.microsoft.com/openspecs/sql_standards/ms-sqlstandlp/89fb00b1-4b9e-4296-92ce-a2b3f7ca01d2)を参照してください。
 
 ## <a name="tools-that-use-t-sql"></a>T-SQL を使用するツール
-
 Microsoft のツールのうち、T-SQL のコマンドを発行する主なものは次のとおりです。
 
 - [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
@@ -36,14 +38,10 @@ Microsoft のツールのうち、T-SQL のコマンドを発行する主なも�
 - [sqlcmd](../tools/sqlcmd-utility.md)
 - [Azure Data Studio](../azure-data-studio/what-is.md)
   
- 
 ## <a name="locate-the-transact-sql-reference-topics"></a>Transact-SQL のリファレンス トピックを見つける  
-  
 T-SQL のトピックを見つけるには、このページの右上にある検索ボックスを使用するか、ページの左側にある目次を使用します。 また、T-SQL のキーワードを Management Studio のクエリ エディター ウィンドウで入力して F1 キーを押すという方法もあります。 
   
-
 ## <a name="find-system-views"></a>システム ビューを見つける
-
 システム テーブル、ビュー、関数、プロシージャを見つけるには、下記のリンクを参照してください。これらは、SQL のドキュメントの[リレーショナル データベースの使用](../relational-databases/database-features.md)のセクションにあります。
 
 - [システム カタログ ビュー](../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
@@ -54,7 +52,6 @@ T-SQL のトピックを見つけるには、このページの右上にある�
 - [システム ストアド プロシージャ](../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
 - [システム テーブル](../relational-databases/system-tables/system-tables-transact-sql.md)
 
- 
 ## <a name="applies-to-references"></a>"適用されます" リファレンス  
  T-SQL のリファレンス トピックは、SQL Server 2008 以降の複数のバージョンを対象としており、その他に Azure SQL のサービスも対象としています。 各トピックの先頭近くにあるセクションで、どの製品やサービスがそのトピックの説明対象をサポートしているかを示しています。 
 
@@ -66,15 +63,12 @@ T-SQL のトピックを見つけるには、このページの右上にある�
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  
 場合によっては、トピックがある製品またはサービスで使用されていても、引数のすべてがサポートされているわけではないこともあります。 この場合は、別の "**適用されます**" セクションが、そのトピック本文中の該当する引数の説明の中に挿入されます。  
  
 ## <a name="get-help-from-the-msdn-forum"></a>MSDN フォーラムで支援を受ける  
-  
-オンラインで支援を受けるには、[MSDN Transact-SQL フォーラム](https://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql)を参照してください。  
+オンラインで支援を受けるには、[MSDN Transact-SQL フォーラム](https://social.msdn.microsoft.com/Forums/home)を参照してください。  
  
 ## <a name="see-other-language-references"></a>その他の言語リファレンス
-
 SQL のドキュメントには、他にも次のような言語リファレンスが含まれています。
   
 - [XQuery 言語リファレンス](../xquery/xquery-language-reference-sql-server.md)
@@ -82,12 +76,10 @@ SQL のドキュメントには、他にも次のような言語リファレン�
 - [レプリケーション言語リファレンス](../relational-databases/replication/replication-language-reference.md)
 - [Analysis Services 言語リファレンス](../mdx/analysis-services-language-reference.md)  
 
-
 ## <a name="next-steps"></a>次のステップ
-
 T-SQL のリファレンス トピックを見つける方法を理解したので、次のことができるようになりました。
 
-- T-SQL を書く方法を短いチュートリアルで学習します。「[チュートリアル: Transact-SQL ステートメントの作成](../t-sql/tutorial-writing-transact-sql-statements.md)」を参照してください。 
+- T-SQL を記述する方法を短いチュートリアルで学習します。「[チュートリアル: Transact-SQL ステートメントの作成](../t-sql/tutorial-writing-transact-sql-statements.md)」を参照してください。 
 - 「[Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)」を参照します。  
 
   

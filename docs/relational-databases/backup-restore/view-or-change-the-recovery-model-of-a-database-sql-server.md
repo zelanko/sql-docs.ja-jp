@@ -1,5 +1,6 @@
 ---
 title: データベースの復旧モデルの設定
+description: SQL Server Management Studio または Transact-SQL を使用して、SQL Server データベースをある復旧モデルから別の復旧モデルに切り替える方法について説明します。
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4af4e8b1d0dacb5e08cdd117a14691b909050b09
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c6a9f1d7c4397a93b6df3b235f715627e7be320e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75254055"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179673"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>データベースの復旧モデルの表示または変更 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "75254055"
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめる前に  
   
 
--   [完全復旧モデルまたは一括ログ復旧モデル](back-up-a-transaction-log-sql-server.md)から切り替える**前**に、[トランザクション ログをバックアップしてください](recovery-models-sql-server.md)。  
+-   [完全復旧モデルまたは一括ログ復旧モデル](recovery-models-sql-server.md)から切り替える**前**に、[トランザクション ログをバックアップしてください](back-up-a-transaction-log-sql-server.md)。  
   
 -   一括ログ復旧モデルでは特定の時点に復旧できません。 一括ログ復旧モデルでトランザクション ログの復元を必要とするトランザクションを実行すると、データが失われる可能性があります。 障害復旧シナリオでデータをより確実に復旧するには、次の条件下でのみ一括ログ復旧モデルに切り替えることをお勧めします。  
   
@@ -102,7 +103,7 @@ USE [master] ;
 ALTER DATABASE [model] SET RECOVERY FULL ;  
 ```  
   
-##  <a name="recommendations-after-you-change-the-recovery-model"></a><a name="FollowUp"></a> 推奨事項: 復旧モデルを変更した後  
+##  <a name="recommendations-after-you-change-the-recovery-model"></a><a name="FollowUp"></a> 推奨事項:復旧モデルを変更した後  
   
 -   **完全復旧モデルと一括ログ復旧モデルの切り替え後の処理**  
   

@@ -1,5 +1,6 @@
 ---
-title: '方法: SQL Server 認証を使用して接続する | Microsoft Docs'
+title: 方法:SQL Server 認証を使用して接続する
+description: SQL Server 認証を使用してデータベースに接続するときの重要な考慮事項について説明します。
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 8d298830-3186-47e7-aef6-586b457901c1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 10028beb86526f553a959376804d855513f0336c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 55f87063904a0201b9aa1a98cdb296d27c821083
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916448"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728332"
 ---
-# <a name="how-to-connect-using-sql-server-authentication"></a>方法: SQL Server 認証を使用して接続する
+# <a name="how-to-connect-using-sql-server-authentication"></a>方法:SQL Server 認証を使用して接続する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] は、SQL Server への接続時に SQL Server 認証をサポートしています。  
   
-SQL Server 認証は、Windows 認証が使用できない場合にのみ使用します。 Windows 認証を使用した接続の詳細については、「 [How to: Connect Using Windows Authentication](../../connect/php/how-to-connect-using-windows-authentication.md)」を参照してください。  
+SQL Server 認証は、Windows 認証が使用できない場合にのみ使用します。 Windows 認証を使用した接続の詳細については、「[方法:Windows 認証を使用した接続](../../connect/php/how-to-connect-using-windows-authentication.md)」をご覧ください。  
   
 SQL Server 認証を使用して SQL Server に接続する場合は、次の点を考慮する必要があります。  
   
@@ -138,9 +139,9 @@ sqlsrv_close( $conn);
 
 [SUSER_SNAME (Transact-SQL)](../../t-sql/functions/suser-sname-transact-sql.md)
 
-[SQL Server ログインを作成する方法](../../relational-databases/security/authentication-access/create-a-login.md)
+[方法: SQL Server ログインの作成](../../relational-databases/security/authentication-access/create-a-login.md)
 
-[データベース ユーザーを作成する方法](../../relational-databases/security/authentication-access/create-a-database-user.md)
+[方法: データベース ユーザーの作成](../../relational-databases/security/authentication-access/create-a-database-user.md)
 
 [ユーザー、ロール、およびログインの管理](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
 

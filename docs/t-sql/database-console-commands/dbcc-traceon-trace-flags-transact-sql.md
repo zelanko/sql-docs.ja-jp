@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 98aea4830dcbf299e4f8e54e893f60e55d7e3520
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: 4cf63cf0f1939a47a95ef0c66934ebd910f2201a
+ms.sourcegitcommit: ed5f063d02a019becf866c4cb4900e5f39b8db18
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82086831"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82643327"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - トレース フラグ (Transact-SQL)
 
@@ -101,7 +101,7 @@ ms.locfileid: "82086831"
 |**1802**|データベースのアタッチまたはデタッチの操作中の、ACL の変更および偽装アクセスの検証を無効にします。 これは、データベースをアタッチするときに、エラー 5120 などのアクセス権限エラーが発生する場合に役立ちます。<br /><br />**スコープ**: グローバルのみ| 
 |**2301**|高度な意思決定支援の最適化を有効にします。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/920093)をご覧ください。<br /><br />**スコープ**: グローバル、セッション、クエリ (QUERYTRACEON) |
 |**2312**|データベースの互換性レベルに応じて、クエリ オプティマイザーのカーディナリティ推定モデルを [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降のバージョンに設定します。<br /><br />**注:** データベースの互換性レベルが 120 未満の場合、トレース フラグ 2312 を有効にすることにより [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (120) のカーディナリティ推定モデルが使用されます。 詳しくは、[Microsoft サポート技術情報](https://support.microsoft.com/kb/2801413)をご覧ください。<br /><br />[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降、クエリ レベルでこれを行うには、このトレース フラグの代わりに、USE HINT 'FORCE_DEFAULT_CARDINALITY_ESTIMATION' [クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md)を追加します。<br /><br />**スコープ**: グローバル、セッション、クエリ (QUERYTRACEON)| 
-|**2335**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がクエリ最適化中に固定量のメモリがあるものと想定するようになります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がクエリ実行に許可するメモリを制限することはありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用に構成されたメモリは、やはり、データ キャッシュ、クエリ実行、その他のコンシューマーによって使われます。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/2413549)をご覧ください。<br /><br />**注:** このオプションは、運用環境に展開する前に十分にテストしてください。<br /><br />**スコープ**: グローバル、セッション、クエリ (QUERYTRACEON)|
+|**2335**|[max server memory サーバー構成](../../database-engine/configure-windows/server-memory-server-configuration-options.md)が非常に高く設定されていて、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で特定のクエリに対して非効率なプランが生成されるようなシナリオでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がクエリ最適化中に固定量のメモリがあるものと想定するようになります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がクエリ実行に許可するメモリを制限することはありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用に構成されたメモリは、やはり、データ キャッシュ、クエリ実行、その他のコンシューマーによって使われます。<br /><br />**注:** このオプションは、運用環境に展開する前に十分にテストしてください。<br /><br />**スコープ**: グローバル、セッション、クエリ (QUERYTRACEON)|
 |**2340**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、クエリ プランを生成するときに、最適化された入れ子になったループ結合に対して並べ替え操作 (バッチ ソート) を使わなくなります。 既定では、並べ替えが必要とされる可能性が低い一方で、カーディナリティまたはコストの見積もりが正しくない場合には可能性があるとクエリ オプティマイザーによって判断された場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、フル スキャンまたは Sort を明示的に指定したネステッド ループ結合ではなく、最適化されたネステッド ループ結合を使用できます。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/2009160)をご覧ください。<br /><br />[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降、クエリ レベルでこれを行うには、このトレース フラグの代わりに、USE HINT 'DISABLE_OPTIMIZED_NESTED_LOOP' [クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md)を追加します。<br /><br />**注:** このオプションは、運用環境に展開する前に十分にテストしてください。<br /><br />**スコープ**: グローバル、セッション、クエリ (QUERYTRACEON)|
 |**2371**|固定の統計の更新しきい値を、線形の統計の更新しきい値に変更します。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/2754171)をご覧ください。<br /><br />**注:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、および[データベース互換性レベル](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130 以上では、この動作はエンジンによって制御されるようになり、トレース フラグ 2371 に効力はありません。<br /><br />**スコープ**: グローバルのみ|
 |**2389**|昇順キー (ヒストグラム修正) に対して、自動生成されたクイック統計情報を有効にします。 トレース フラグ 2389 を設定し、先頭の統計情報列を昇順としてマークすると、カーディナリティの推定に使われるヒストグラムがクエリのコンパイル時に調整されます。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/2801413)をご覧ください。<br /><br />**注:** このオプションは、運用環境に展開する前に十分にテストしてください。<br /><br />**注:** このトレース フラグは CE バージョン 120 以上には適用されません。 トレース フラグ 4139 を代わりに使ってください。<br /><br />**スコープ**: グローバル、セッション、クエリ (QUERYTRACEON)|

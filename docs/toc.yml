@@ -10051,6 +10051,8 @@
       href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
 - name: リソース
   items:
+    - name: オフライン SQL Server のドキュメント
+      href: sql-server/sql-server-offline-documentation.md
     - name: 学習する
       items:
         - name: 学習用リソース
@@ -10101,13 +10103,8 @@
           href: sql-server/partner-management-sql-server.md
         - name: 開発
           href: sql-server/partner-dev-sql-server.md
-    - name: オフライン SQL Server のドキュメント
-      href: sql-server/sql-server-offline-documentation.md
 - name: リファレンス
   items:
-    - name: アーカイブ コンテンツ (SQL 2005 から 2012) >
-      displayName: '2005, 2008, 2008 r2, 2012, previous-versions'
-      href: 'https://docs.microsoft.com/previous-versions/sql/'
     - name: データベースのサンプル
       items:
         - name: サンプルの概要

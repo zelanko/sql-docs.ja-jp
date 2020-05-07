@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 64c25012-7068-476f-afa2-0b4f3adde9a4
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: eeb3d08f0a14434fa5d071d88a3d26ec6fcaf6c9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 226100ce85527276f2f1f2b67f9ebb5f43a336d8
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72903913"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262112"
 ---
 # <a name="resource-governor-classifier-function"></a>リソース ガバナーの分類子関数
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "72903913"
   
 1.  ログイン認証  
   
-2.  LOGON トリガー実行  
+2.  LOGON トリガーの実行 (インスタンス内にログオン トリガーがある場合のみ発生します)。
   
 3.  分類  
 

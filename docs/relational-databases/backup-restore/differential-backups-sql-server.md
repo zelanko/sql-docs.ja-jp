@@ -1,5 +1,6 @@
 ---
 title: 差分バックアップ (SQL Server) | Microsoft Docs
+description: SQL Server の差分バックアップでは、差分バックアップのベースである前回の完全バックアップ以降に変更されたデータのみがキャプチャされます。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 123bb7af-1367-4bde-bfcb-76d36799b905
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: be0ff34acb9d7743ae096f8ecd2b0ad3ed8a4e28
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cf10fdcdee4d3fcca3cf3e119bf18bb341352edb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68089845"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179193"
 ---
 # <a name="differential-backups-sql-server"></a>差分バックアップ (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

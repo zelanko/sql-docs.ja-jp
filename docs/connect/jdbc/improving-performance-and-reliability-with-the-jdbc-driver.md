@@ -1,5 +1,6 @@
 ---
-title: JDBC ドライバーによるパフォーマンスと信頼性の強化 | Microsoft Docs
+title: JDBC ドライバーによるパフォーマンスと信頼性の強化
+description: Microsoft JDBC driver for SQL Server を使用する際の、アプリケーションのパフォーマンスと信頼性を強化するさまざまな方法について説明します。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e1592499-b87b-45ee-bab8-beaba8fde841
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b82c2758dbc796ec29dd7304ee821a1a018af0a8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4d8dc1105443222ece454b4da5c434f688131d16
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920736"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728476"
 ---
 # <a name="improving-performance-and-reliability-with-the-jdbc-driver"></a>JDBC ドライバーによるパフォーマンスと信頼性の強化
 
@@ -37,7 +38,7 @@ ms.locfileid: "80920736"
 |[JDBC ドライバーの準備されたステートメント メタデータ キャッシュ](../../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md)|準備されたステートメント クエリを使用してパフォーマンスを向上させる方法について説明します。|
 |[バッチ挿入操作に一括コピー API を使用する](../../connect/jdbc/use-bulk-copy-api-batch-insert-operation.md)|バッチ挿入操作に対して一括コピー API を有効にする方法とその利点について説明します。|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [JDBC ドライバーの概要](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   

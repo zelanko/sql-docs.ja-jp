@@ -9,12 +9,12 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a94a3aea418a4c404b568fe6df7af701bc46de34
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: afce689bffe69de78970006aea51ddd49481e614
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81490751"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220657"
 ---
 # <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>SQL Server Machine Learning Services とは (Python と R)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ Machine Learning Services で Python および R スクリプトを実行する�
 
 ## <a name="python-and-r-versions"></a>Python および R のバージョン
 
-Machine Learning Services に含まれる Python および R のバージョンは、使用する SQL Server のバージョンによって異なります。 
+以下では、SQL Server の各バージョンと Machine Learning Services に含まれる Python および R のバージョンの一覧を示します。
 
 | SQL Server のバージョン | Python バージョン | R バージョン |
 |-|-|-|

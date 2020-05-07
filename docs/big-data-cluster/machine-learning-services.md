@@ -4,16 +4,16 @@ titleSuffix: SQL Server Big Data Clusters
 description: Machine Learning Services を使用して SQL Server ビッグ データ クラスターのマスター インスタンスで Python や R のスクリプトを実行する方法について説明します。
 author: dphansen
 ms.author: davidph
-ms.date: 11/04/2019
+ms.date: 04/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
-ms.openlocfilehash: dd8e1b948d259b4c233aebcb3614dea5b3e72129
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: d105db3da8a6732c2884af7e42a71441eef6f077
+ms.sourcegitcommit: ed5f063d02a019becf866c4cb4900e5f39b8db18
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664131"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82643338"
 ---
 # <a name="run-python-and-r-scripts-with-machine-learning-services-on-sql-server-big-data-clusters"></a>SQL Server ビッグ データ クラスターで Machine Learning Services を使用して Python および R のスクリプトを実行する
 
@@ -36,39 +36,68 @@ RECONFIGURE WITH OVERRIDE
 GO
 ```
 
-## <a name="enable-always-on-availability-groups"></a>AlwaysOn 可用性グループを有効にする
+ビッグ データ クラスターのマスター インスタンスで、Python および R のスクリプトを実行する準備ができました。 初めてスクリプトを実行する場合は、「[次のステップ](#next-steps)」の下のクイックスタートを参照してください。
 
-[Always On 可用性グループ](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)で SQL Server ビッグ データ クラスターを使用している場合は、Machine Learning Services を有効にするための追加の手順をいくつか実行する必要があります。
+>[!NOTE]
+>可用性グループ リスナー接続で構成設定を設定することはできません。 ビッグ データ クラスターが高可用性で展開されている場合は、レプリカごとに `external scripts enabled` を設定します。 「[クラスターで高可用性を有効にする](#enable-on-cluster-with-high-availability)」を参照してください。
 
-1. マスター インスタンスに接続し、次のステートメントを実行します。
+## <a name="enable-on-cluster-with-high-availability"></a>クラスターで高可用性を有効にする
 
-    ```sql
-    SELECT @@SERVERNAME
-    ```
+[高可用性で SQL Server ビッグ データ クラスターを展開する](deployment-high-availability.md)と、その展開によってマスター インスタンスの可用性グループが作成されます。 Machine Learning Services を有効にするには、可用性グループの各インスタンスに `external scripts enabled` を設定します。 ビッグ データ クラスターの場合は、SQL Server マスター インスタンスの各レプリカで `sp_configure` を実行する必要があります。
 
-    サーバー名を記録しておきます。 この例では、マスター インスタンスのサーバー名は **master-2** です。
+次のセクションでは、各インスタンスで外部スクリプトを有効にする方法について説明します。
 
-1. ビッグ データ クラスターの Always On 可用性グループの各レプリカ上で、次の `kubectl` コマンドを実行します。
+### <a name="create-an-external-load-balancer-for-each-instance"></a>各インスタンスに対して外部ロード バランサーを作成する
 
-    ```
-    kubectl -n bdc expose pod master-0 --port=1533 --name=mymaster-0 --type=LoadBalancer
+可用性グループの各レプリカに対して、インスタンスへの接続を許可するロード バランサーを作成します。 
 
-    kubectl -n bdc expose pod master-1 --port=1533 --name=mymaster-1 --type=LoadBalancer
+`kubectl expose pod <pod-name> --port=<connection port number> --name=<load-balancer-name> --type=LoadBalancer -n <kubernetes namespace>`
 
-    kubectl -n bdc expose pod master-2 --port=1533 --name=mymaster-2 --type=LoadBalancer
-    ```
+この記事の例では、次の値を使用します。
 
-    次のような出力が表示されます。
-    
-    ```
-    service/mymaster-0 exposed
+- `<pod-name>`: `master-#`
+- `<connection port number>`: `1533`
+- `<load-balancer-name>`: `mymaster-#`
+- `<kubernetes namespace>`: `mssql-cluster`
 
-    service/mymaster-1 exposed
+ご利用の環境に合わせて次のスクリプトを更新して、コマンドを実行します。
 
-    service/mymaster-2 exposed
-    ```
+```bash
+kubectl expose pod master-0 --port=1533 --name=mymaster-0 --type=LoadBalancer -n mssql-cluster 
+kubectl expose pod master-1 --port=1533 --name=mymaster-1 --type=LoadBalancer -n mssql-cluster
+kubectl expose pod master-2 --port=1533 --name=mymaster-2 --type=LoadBalancer -n mssql-cluster 
+```
 
-1. 各マスター レプリカ エンドポイントに接続し、スクリプトの実行を有効にします。
+`kubectl` によって次の出力が返されます。
+
+```bash
+service/mymaster-0 exposed
+service/mymaster-1 exposed
+service/mymaster-2 exposed
+```
+
+各ロード バランサーは、マスター レプリカのエンドポイントです。
+
+### <a name="enable-script-execution-on-each-replica"></a>各レプリカでスクリプトの実行を有効にする
+
+1. マスター レプリカ エンドポイントの IP アドレスを取得します。
+
+   次のコマンドは、レプリカ エンドポイントの外部 IP アドレスを返します。 
+
+   `kubectl get services <load-balancer-name> -n <kubernetes namespace>`
+
+   このシナリオで各レプリカの外部 IP アドレスを取得するには、次のコマンドを実行します。
+
+   ```bash
+   kubectl get services mymaster-0 -n mssql-cluster
+   kubectl get services mymaster-1 -n mssql-cluster
+   kubectl get services mymaster-2 -n mssql-cluster
+   ```
+
+   >[!NOTE]
+   > 外部 IP アドレスが使用可能になるまでに少し時間がかかることがあります。 各エンドポイントが外部 IP アドレスを返すまで、上記のスクリプトを定期的に実行します。
+
+1. マスター レプリカ エンドポイントに接続し、スクリプトの実行を有効にします。
 
     次のステートメントを実行します。
 
@@ -78,7 +107,37 @@ GO
     GO
     ```
 
-ビッグ データ クラスターのマスター インスタンスで、Python および R のスクリプトを実行する準備ができました。 初めてスクリプトを実行する場合は、以下のクイックスタートをご覧ください。
+   たとえば、`sqlcmd` を使用して上記のコマンドを実行できます。 次の例では、マスター レプリカ エンドポイントに接続し、スクリプトの実行を有効にします。 スクリプトの値を実際の環境に合わせて更新します。
+
+   ```bash
+   sqlcmd -S <IP address>,1533 -U <user name> -P <password> -Q "EXEC sp_configure 'external scripts enabled', 1; RECONFIGURE WITH OVERRIDE;"
+   ```
+
+   レプリカごとにこのステップを繰り返します。
+
+### <a name="demonstration"></a>デモンストレーション
+
+次の図は、このプロセスを示しています。
+
+[![](media/machine-learning-services/example-kube-enable-scripts.png "Demonstrate enable feature on Kubernetes")](media/machine-learning-services/example-kube-enable-scripts.png#lightbox)
+
+ビッグ データ クラスターのマスター インスタンスで、Python および R のスクリプトを実行する準備ができました。 初めてスクリプトを実行する場合は、「[次のステップ](#next-steps)」の下のクイックスタートを参照してください。
+
+### <a name="delete-the-master-replica-endpoints"></a>マスター レプリカ エンドポイントを削除する
+
+Kubernetes クラスターで、各レプリカのエンドポイントを削除します。 エンドポイントは、負荷分散サービスとして Kubernetes で公開されます。
+
+次のコマンドを実行すると、負荷分散サービスが削除されます。
+
+`kubectl delete svc <load-balancer-name> -n mssql-cluster`
+
+この記事の例では、次のコマンドを実行します。
+
+```bash
+kubectl delete svc mymaster-0 -n mssql-cluster
+kubectl delete svc mymaster-1 -n mssql-cluster
+kubectl delete svc mymaster-2 -n mssql-cluster
+```
 
 ## <a name="next-steps"></a>次のステップ
 

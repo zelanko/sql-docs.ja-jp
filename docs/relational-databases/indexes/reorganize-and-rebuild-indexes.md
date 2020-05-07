@@ -32,12 +32,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: faf62599a54c4c1a58b33066e69cf3b2e8698b70
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: 4fee0e8af2e4d556e388fc72086286d4a21184a8
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138147"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220717"
 ---
 # <a name="resolve-index-fragmentation-by-reorganizing-or-rebuilding-indexes"></a>インデックスを再構成または再構築することでインデックス断片化を解決する
 
@@ -57,6 +57,9 @@ ms.locfileid: "82138147"
 
 使用するインデックス最適化方法を決める最初のステップは、断片化の程度を判断するためにインデックスを分析することです。 行ストア インデックスと列ストア インデックスの断片化を異なる方法で検出します。
 
+> [!NOTE]
+> 大量のデータを削除した後は、インデックスまたはヒープの断片化を確認することが特に重要です。 ヒープについては、更新が頻繁に行われる場合、転送レコードの急増を回避するために断片化を確認することが必要になる場合もあります。 ヒープの詳細については、「[ヒープ (クラスター化インデックスなしのテーブル)](../../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures)」を参照してください。 
+
 ### <a name="detecting-fragmentation-of-rowstore-indexes"></a>行ストア インデックスの断片化を検出する
 
 [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) を使用して、特定のインデックス、テーブルやインデックス付きビュー上のすべてのインデックス、データベース内のすべてのインデックス、またはすべてのデータベース内のすべてのインデックスの断片化を検出できます。 パーティション インデックスの場合は、 **sys.dm_db_index_physical_stats** でもパーティションごとの断片化情報が提供されます。
@@ -73,18 +76,22 @@ ms.locfileid: "82138147"
 
 |**avg_fragmentation_in_percent** 値|断片化解消ステートメント|
 |-----------------------------------------------|--------------------------|
-|5 ～ 30%|ALTER INDEX REORGANIZE|
-|> 30%|ALTER INDEX REBUILD WITH (ONLINE = ON) <sup>1</sup>|
+|5 から 30%<sup>1</sup>|ALTER INDEX REORGANIZE|
+|> 30% <sup>1</sup>|ALTER INDEX REBUILD WITH (ONLINE = ON) <sup>2</sup>|
 
-<sup>1</sup> インデックスの再構築はオンラインでもオフラインでも実行できます。 インデックスの再構成は、常にオンラインで実行されます。 再構成オプションと同様の可用性を実現するには、インデックスをオンラインで再構築してください。 詳しくは、[インデックス](#rebuild-an-index)に関するページと「[オンラインでのインデックス操作の実行](../../relational-databases/indexes/perform-index-operations-online.md)」をご覧ください。
+<sup>1</sup> これらの値は、`ALTER INDEX REORGANIZE` と `ALTER INDEX REBUILD` を切り替える必要があるタイミングを決定するための大まかなガイドラインを提供します。 ただし、実際の値は状況によって変わります。 それぞれの環境で実際に試して最適なしきい値を特定することが重要です。      
 
-これらの値は、`ALTER INDEX REORGANIZE` と `ALTER INDEX REBUILD` の使い分けの大まかな目安となります。 ただし、実際の値は状況によって変わります。 それぞれの環境で実際に試して最適なしきい値を特定することが重要です。 たとえば、特定のインデックスが主にスキャン操作に使用されている場合、断片化を解消すると、これらの操作のパフォーマンスが向上します。 主にシーク操作に使用されるインデックスについては、パフォーマンス上の利点は小さくなります。 同様に、ヒープ (クラスター化インデックスのないテーブル) 内の断片化の解消は、非クラスター化インデックスのスキャン操作では特に便利ですが、参照操作にはほとんど影響しません。
+> [!TIP] 
+> たとえば、特定のインデックスが主にスキャン操作に使用されている場合、断片化を解消すると、これらの操作のパフォーマンスが向上します。 主にシーク操作に使用されるインデックスについては、パフォーマンスのメリットがそれほど顕著ではない場合があります。    
+同様に、ヒープ (クラスター化インデックスのないテーブル) 内の断片化の解消は、非クラスター化インデックスのスキャン操作では特に便利ですが、参照操作にはほとんど影響しません。
 
-断片化が 5% 未満のインデックスはデフラグする必要がありません。インデックスの再構成や再構築には、ほとんどの場合、そのようなわずかな断片化を解消するには見合わない CPU コストがかかります。 また、小さな行ストア インデックスを再構築または再構成しても、一般的に、断片化が実際に解消することはありません。 小さなインデックスのページは、混合エクステントに格納される場合もあります。 混合エクステントは最大 8 つのオブジェクトで共有されるため、小さなインデックスを再構成または再構築しても、その断片化は解消されない場合があります。 「[行ストア インデックスの再構築に固有の注意点](#considerations-specific-to-rebuilding-rowstore-indexes)」を参照してください。
+<sup>2</sup> インデックスの再構築はオンラインでもオフラインでも実行できます。 インデックスの再構成は、常にオンラインで実行されます。 再構成オプションと同様の可用性を実現するには、インデックスをオンラインで再構築してください。 詳しくは、[インデックス](#rebuild-an-index)に関するページと「[オンラインでのインデックス操作の実行](../../relational-databases/indexes/perform-index-operations-online.md)」をご覧ください。
+
+断片化が 5% 未満のインデックスはデフラグする必要がありません。インデックスの再構成や再構築には、ほとんどの場合、そのようなわずかな断片化を解消するには見合わない CPU コストがかかります。 また、小さな行ストア インデックスを再構築または再構成しても、一般的に、断片化が実際に解消することはありません。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]までは、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]では、混合エクステントを使用して領域が割り当てられます。 このため、小さいインデックスのページは、混合エクステントに格納される場合があります。 混合エクステントは最大 8 つのオブジェクトで共有されるため、小さなインデックスを再構成または再構築しても、その断片化は解消されない場合があります。 「[行ストア インデックスの再構築に固有の注意点](#considerations-specific-to-rebuilding-rowstore-indexes)」を参照してください。 エクステントの詳細については、「[ページとエクステントのアーキテクチャ ガイド](../../relational-databases/pages-and-extents-architecture-guide.md#extents)」を参照してください。
 
 ### <a name="detecting-fragmentation-of-columnstore-indexes"></a>列ストア インデックスの断片化を検出する
 
-[sys.dm_db_column_store_row_group_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md) を使用することで、インデックスで削除された行の割合を確認できます。これは、列ストア インデックスの行グループの断片化に対する適切なメジャーです。 この情報を使用して、特定のインデックス、テーブルのすべてのインデックス、データベース内のすべてのインデックス、またはすべてのデータベース内のすべてのインデックスの断片化を計算します。
+[sys.dm_db_column_store_row_group_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md) を使用することで、インデックスで削除された行の割合を確認できます。これは、列ストア インデックスの行グループの断片化に対する妥当なメジャーです。 この情報を使用して、特定のインデックス、テーブルのすべてのインデックス、データベース内のすべてのインデックス、またはすべてのデータベース内のすべてのインデックスの断片化を計算します。
 
 **sys.dm_db_column_store_row_group_physical_stats** から返される結果セットに含まれる列を次に示します。
 

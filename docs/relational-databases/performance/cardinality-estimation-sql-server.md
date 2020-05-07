@@ -15,12 +15,12 @@ ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f9e7ef2d1503088cba081b931e09f1fb3536b56
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2c72de4a0070595b9e1a371d5309d4e1d3e43853
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67946994"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588248"
 ---
 # <a name="cardinality-estimation-sql-server"></a>カーディナリティ推定 (SQL Server)
 
@@ -48,12 +48,7 @@ ms.locfileid: "67946994"
 
 この記事では、ご利用のシステムに最適な CE 構成を評価して選択する方法を示しています。 最も正確なので、ほとんどのシステムで最新の CE のメリットを享受できます。 CE はクエリが返す可能性のある行の数を予測します。 クエリ オプティマイザーではカーディナリティ予測を使用して、最適なクエリ プランを生成します。 推定が正確であるほど、通常はクエリ オプティマイザーでより最適なクエリ プランを生成できます。  
   
-アプリケーション システムには、新しい CE が原因で低速のプランに変更された重要なクエリが含まれている可能性があります。 そのようなクエリは、次のいずれかのようになります。  
-  
-- OLTP (オンライン トランザクション処理) クエリ。頻繁に実行され、その複数のインスタンスがしばしば同時に実行されます。  
-- SELECT。OLTP 営業時間中に実行される大量の集計と一緒に実行されます。  
-  
-新規の CE で低速で実行するクエリを識別するための手法があります。 そして、パフォーマンスの問題に対処する方法のオプションもあります。
+アプリケーション システムには、バージョン全体の CE の変更が原因で低速のプランに変更された重要なクエリが含まれている可能性があります。 CE の問題によって低速で実行するクエリを識別するための手法とツールがあります。 また、その後のパフォーマンスの問題に対処する方法のオプションもあります。
   
 ## <a name="versions-of-the-ce"></a>CE のバージョン
 
@@ -68,10 +63,10 @@ ms.locfileid: "67946994"
 
 以降の更新プログラムは [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以上 (互換性レベルが 120 以上) に含まれています。 レベル 120 以上の CE 更新プログラムには、最新のデータ ウェアハウスおよび OLTP ワークロードで適切に機能する更新された前提条件とアルゴリズムが組み込まれています。 CE 120 以降では、CE 70 の前提条件から次のモデル前提条件が変更されました。
 
--  **非依存性**が**相関関係**になります: 異なる列の値の組み合わせは必ずしも独立していません。 これはより実際のデータ クエリと似ている可能性があります。
--  **簡単なコンテインメント**は**ベース コンテインメント**になります: ユーザーは存在しないデータをクエリする可能性があります。 たとえば、2 つのテーブル間の等価結合では、ベース テーブル ヒストグラムを使用して結合の選択度を推定した後、述語選択度を考慮します。
+-  **非依存性**が**相関関係**になります:異なる列の値の組み合わせは必ずしも独立していません。 これはより実際のデータ クエリと似ている可能性があります。
+-  **単純なコンテインメント**は**ベース コンテインメント**になります:ユーザーは存在しないデータをクエリする可能性があります。 たとえば、2 つのテーブル間の等価結合では、ベース テーブル ヒストグラムを使用して結合の選択度を推定した後、述語選択度を考慮します。
   
-**互換性レベル:** [!INCLUDE[tsql](../../includes/tsql-md.md)]COMPATIBILITY_LEVEL[ に次の ](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) コードを使用して、データベースが特定のレベルであることを確認します。  
+**互換性レベル:** [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) に次の [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを使用して、データベースが特定のレベルであることを確認します。  
 
 ```sql  
 SELECT ServerProperty('ProductVersion');  
@@ -129,7 +124,10 @@ SET QUERY_STORE CLEAR;
 ```  
   
 > [!TIP] 
-> 最新リリースの [Management Studio](https://msdn.microsoft.com/library/mt238290.aspx) をインストールし、頻繁に更新することをお勧めします。  
+> 最新リリースの [Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) をインストールし、頻繁に更新することをお勧めします。  
+
+> [!IMPORTANT] 
+> クエリ ストアがデータベースとワークロードに対して正しく構成されていることを確認します。 詳細については、「[クエリ ストアを使用するときの推奨事項](../../relational-databases/performance/best-practice-with-the-query-store.md)」を参照してください。 
   
 カーディナリティ推定処理を追跡するための別のオプションは、**query_optimizer_estimate_cardinality** という名前の拡張イベントを使用することです。 次の [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で実行します。 これは `C:\Temp\` に .xel ファイルを書き込みます (ただし、パスを変更することができます)。 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] で .xel ファイルを開くと、ユーザーにわかりやすい方法で詳細情報が表示されます。  
   
@@ -176,7 +174,7 @@ GO
   
     3.  データベースの `LEGACY_CARDINALITY_ESTIMATION` 構成が OFF になっていることを確認します。  
   
-    4.  クエリ ストアをクリアします。 もちろん、クエリ ストアが ON であることを確認します。  
+    4.  クエリ ストアをクリアします。 クエリストアが ON になっていることを確認します。  
   
     5.  `SET NOCOUNT OFF;` ステートメントを実行します。  
   
@@ -256,7 +254,7 @@ CE 120 以降で効果の低いクエリ プランが、クエリで生成され
   
 ### <a name="example-a-ce-understands-maximum-value-might-be-higher-than-when-statistics-were-last-gathered"></a>例 A。CE は、統計が最後に収集されたときよりも、最大値が高くなる可能性があることを理解しています  
   
-統計は `OrderTable` に `2016-04-30` について最後に収集され、最大 `OrderAddedDate` は `2016-04-30` であったものとします。 CE 120 (およびより高いレベル) は、"`OrderTable`昇順 *" データを持つ*  の列が、統計によって記録された最大値よりも大きい値を持つ可能性があることを理解しています。 これを理解すると、次のような [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントのクエリ プランの機能を改善できます。  
+統計は `2016-04-30` に `OrderTable` について最後に収集され、最大 `OrderAddedDate` は `2016-04-30` であったものとします。 CE 120 (およびより高いレベル) は、"*昇順*" データを持つ `OrderTable` の列が、統計によって記録された最大値よりも大きい値を持つ可能性があることを理解しています。 これを理解すると、次のような [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントのクエリ プランの機能を改善できます。  
   
 ```sql  
 SELECT CustomerId, OrderAddedDate  
@@ -282,8 +280,8 @@ WHERE Model = 'Xbox' AND
   
 ```sql  
 SELECT s.ticket, s.customer, r.store  
-FROM dbo.Sales    AS s  
-CROSS JOIN dbo.Returns  AS r  
+FROM dbo.Sales AS s  
+CROSS JOIN dbo.Returns AS r  
 WHERE s.ticket = r.ticket AND  
       s.type = 'toy' AND  
       r.date = '2016-05-11';  

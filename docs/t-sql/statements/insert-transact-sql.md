@@ -32,12 +32,12 @@ ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a5b98bf8e99d55217fadfd2c1811cb484c3ee3b
-ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
+ms.openlocfilehash: 0ad386f4137b43746eed82665715e2fef5957a79
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82107989"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82181101"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -199,7 +199,7 @@ ID 列に値を明示的に挿入するときは *column_list* を使用する�
 OUTPUT 句  
  挿入操作の一部として、挿入された行を返します。 処理中のアプリケーションに結果を返すことも、テーブルまたはテーブル変数に結果を挿入して処理を続行することもできます。  
   
- [OUTPUT 句](../../t-sql/queries/output-clause-transact-sql.md)は、ローカル パーティション ビュー、分散パーティション ビュー、リモート テーブルのいずれかを参照する DML ステートメントではサポートされていません。また、*execute_statement* が含まれる INSERT ステートメントでもサポートされていません。 OUTPUT INTO 句は、\<dml_table_source> 句を含む INSERT ステートメントではサポートされません。 
+ OUTPUT 句は、ローカル パーティション ビュー、分散パーティション ビュー、またはリモート テーブルのいずれかを参照する DML ステートメントではサポートされていません。また、*execute_statement* が含まれる INSERT ステートメントでもサポートされていません。 OUTPUT INTO 句は、\<dml_table_source> 句を含む INSERT ステートメントではサポートされません。 この句の引数と動作について詳しくは、「[OUTPUT 句 &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)」をご覧ください。
   
  VALUES  
  追加するデータ値のリストを 1 つ以上指定します。 *column_list* (指定されている場合) またはテーブル内の各列ごとに 1 つのデータ値が必要です。 値リストは、かっこで囲む必要があります。  

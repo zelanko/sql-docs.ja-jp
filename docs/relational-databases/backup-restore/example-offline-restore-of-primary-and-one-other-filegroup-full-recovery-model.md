@@ -1,5 +1,6 @@
 ---
 title: 'オフライン復元: プライマリ ファイル グループと 1 つのファイルグループ'
+description: この例では、複数のファイル グループを含む完全復旧モデルを使用して、プライマリ ファイル グループと他の 1 つのファイル グループを復元する SQL Server でのオフライン復元を示します。
 ms.description: Full recovery model
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7d6c50eb-dc84-4d66-855a-0b5f1bd89737
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8d98eefac2e015aa1648f1afaa56a5676805cf10
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cecd3a4bdf237b8ba0c1794489ccb624d3641fbb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75245246"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179152"
 ---
 # <a name="example-offline-restore-of-primary-and-1-other-filegroup-full-recovery-model"></a>例:プライマリ ファイル グループと他の 1 つのファイル グループをオフラインで復元する (完全復旧モデル)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

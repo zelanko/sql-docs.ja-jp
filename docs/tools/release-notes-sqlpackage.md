@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: f0c3fe15a46333fad43b72ba3c8040153b9b51a2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0b034a0c0d449bd85afbfd46fa407e34921b8cf2
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80386191"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262130"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>SqlPackage.exe のリリース ノート
 
@@ -34,6 +34,45 @@ Or, if there is no relationship, remove 'DacFx' from the metadata 'title:'.
 I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
+## <a name="185-sqlpackage"></a>18.5 sqlpackage
+
+|プラットフォーム|ダウンロード|リリース日|Version|Build
+|:---|:---|:---|:---|:---|
+|Windows|[MSI インストーラー](https://go.microsoft.com/fwlink/?linkid=2128142)|2020 年 4 月 28 日|18.5|15.0.4769.1|
+|macOS .NET Core |[zip ファイル](https://go.microsoft.com/fwlink/?linkid=2128145)|2020 年 4 月 28 日| 18.5|15.0.4769.1|
+|Linux .NET Core |[zip ファイル](https://go.microsoft.com/fwlink/?linkid=2128144)|2020 年 4 月 28 日| 18.5|15.0.4769.1|
+|Windows .NET Core |[zip ファイル](https://go.microsoft.com/fwlink/?linkid=2128143)|2020 年 4 月 28 日| 18.5|15.0.4769.1|
+
+### <a name="features"></a>特徴
+| 機能 | 詳細 |
+| :------ | :------ |
+| デプロイ | SQL Server 2008 以降、Azure SQL Database、Azure SQL Data Warehouse でデータの秘密度の分類がサポートされるようになりました。 |
+| デプロイ | Azure SQL Data Warehouse でのテーブル制約のサポートを追加しました。 |
+| デプロイ | Azure SQL Data Warehouse での順序付けされたクラスター化列ストア インデックスのサポートを追加しました。 |
+| デプロイ | 外部データ ソース (Oracle、Teradata、MongoDB/CosmosDB、ODBC、ビッグ データ クラスター用) と SQL Server 2019 ビッグ データ クラスター用の外部テーブルのサポートを追加しました。 |
+| デプロイ | サポートされるエディションとして SQL Database Edge インスタンスを追加しました。 |
+| デプロイ | '\<server>.\<dnszone>.database.windows.net' 形式の Managed Instance サーバー名をサポートします。 |
+| デプロイ | Azure SQL Data Warehouse でのコピー コマンドのサポートを追加しました。 |
+| デプロイ | Azure SQL Data Warehouse のテーブルのパーティション関数に変更がある場合にテーブルの再作成を回避するために、公開時のデプロイ オプション 'IgnoreTablePartitionOptions' を追加しました。 |
+| .NET Core | sqlpackage の .NET Core バージョンでの Microsoft.Data.SqlClient のサポートを追加しました。 |
+| &nbsp; | &nbsp; |
+
+### <a name="fixes"></a>修正
+| Fix | 詳細 |
+| :-- | :------ |
+| デプロイ | "オブジェクト参照がオブジェクトのインスタンスに設定されていません。" エラーをスローするために使用された、外部ユーザーを含むデータベースの dacpac の公開を修正しました。 |
+| デプロイ | JSON パスの式としての解析を修正しました。 |
+| デプロイ | AlterAnyDatabaseScopedConfiguration および AlterAnySensitivityClassification 権限の GRANT ステートメントの生成を修正しました。 |
+| デプロイ | 認識されない External Script 権限を修正しました。 |
+| デプロイ | インライン プロパティの修正 - プロパティの暗黙的な追加では、違いを示す必要はありませんが、明示的な言及ではスクリプトを通じて示す必要があります。 |
+| デプロイ | 具体化されたビュー (MV) によって参照されるテーブルを変更すると、Azure SQL Data Warehouse の MV でサポートされていない ALTER VIEW ステートメントが生成される問題を解決しました。 |
+| デプロイ | Azure SQL Data Warehouse のデータを含むテーブルに列を追加したときの公開の失敗を修正しました。 |
+| デプロイ | Azure SQL Data Warehouse のディストリビューション列の種類を変更した場合に更新スクリプトでデータを新しいテーブルに移動する必要がある問題を修正しました。 |
+| ScriptDom | インライン インデックスの後に定義されたインライン制約を認識できない ScriptDom のバグを修正しました。 |
+| ScriptDom | ScriptDom で、バッチ ステートメントで SYSTEM_TIME の終わりかっこがない ScriptDom のバグを修正しました。 |
+| Always Encrypted | 接続が無効になったときに一時テーブルがなくなるため、sqlpackage を再接続したときに一時テーブルが既にない場合、#tmpErrors テーブルを削除できない問題を修正しました。 |
+| &nbsp; | &nbsp; |
+
 ## <a name="1841-sqlpackage"></a>18.4.1 sqlpackage
 
 |プラットフォーム|ダウンロード|リリース日|Version|Build

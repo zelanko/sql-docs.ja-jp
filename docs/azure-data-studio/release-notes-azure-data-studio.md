@@ -8,17 +8,46 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan, sstein
 ms.custom: seodec18
-ms.date: 03/18/2020
-ms.openlocfilehash: 5a6bd8792cd42d34796b36fb18a4d8c551d684f5
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.date: 04/30/2020
+ms.openlocfilehash: d7c54fbbb959085206cb993d4b9e9087ac8c3a50
+ms.sourcegitcommit: d3e7c06fe989135f70d97f5ec6613fad4d62b145
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087332"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82619675"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio のリリース ノート
 
 **[最新リリースのダウンロードとインストール](download.md)**
+
+## <a name="april-2020-hotfix"></a>2020 年 4 月 (修正プログラム)
+
+2020 年 4 月 30 日 &nbsp; / &nbsp; バージョン:1.17.1
+
+&nbsp;
+
+| Change | 詳細 |
+| :----- | :------ |
+| MFA 経由で接続できないバグ #10197 の修正 | [#10197](https://github.com/microsoft/azuredatastudio/issues/10197)  |
+| &nbsp; | &nbsp; |
+
+## <a name="april-2020"></a>2020 年 4 月
+
+2020 年 4 月 27 日 &nbsp; / &nbsp; バージョン:1.17.0
+
+&nbsp;
+
+| Change | 詳細 |
+| :----- | :------ |
+| ウェルカム ページの改善 | 一般的なアクションや拡張機能の強調表示を見やすくするため、ウェルカム ページの UI が更新されました。 |
+| ノートブックの新機能 | &bull; &nbsp; Markdown での記述を支援するため、テキスト セルを編集するときに Markdown ツールバーが追加されました <br/> &bull; &nbsp; Jupyter Books viewlet が刷新され、Jupyter Books とノートブックを一緒に管理できる Notebooks viewlet になりました <br/>&bull; &nbsp; ノートブックを保存するときのグラフの保持に関するサポートが追加されました <br/> &bull; &nbsp; Python ノートブックでの KQL マジックのサポートが追加されました|
+| ダッシュボードの強化 | Azure Data Studio 全体のダッシュボードが、アクション ツールバーなどの最新の設計パターンで更新されました。 これは、多くの拡張機能にも適用されます。 |
+| Azure ビューに Cloud Shell 統合の追加 | |
+| Always Encrypted とセキュリティで保護されたエンクレーブが設定された Always Encrypted のサポート | |
+| バグと問題が解決されました | 修正の完全な一覧については、[GitHubの「バグと問題」](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22April+2020+Release%22)を参照してください。 |
+| &nbsp; | &nbsp; |
+| バグと問題が解決されました | 修正の完全な一覧については、[GitHubの「バグと問題」](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22April+2020+Release%22)を参照してください。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="march-2020"></a>2020 年 3 月
 
@@ -50,7 +79,7 @@ ms.locfileid: "82087332"
 
 ## <a name="february-2020"></a>2020 年 2 月
 
-2020 年 2 月 13 日 &nbsp; / &nbsp; バージョン:1.15.0 
+2020 年 2 月 13 日 &nbsp; / &nbsp; バージョン:1.15.0
 
 &nbsp;
 
@@ -247,7 +276,7 @@ ms.locfileid: "82087332"
 - ノートブック
     - [5838](https://github.com/microsoft/azuredatastudio/issues/5838) ユーザーがノートブック用にシステム Python を使用できるようにする
 - スキーマ比較
-    - [5804](https://github.com/microsoft/azuredatastudio/issues/5804) スキーマ比較タスクで、既定のキャンセル コンテキスト メニューが表示されるが、何も実行されない
+    - [5804](https://github.com/microsoft/azuredatastudio/issues/5804) Schema Compare タスクで、既定のキャンセル コンテキスト メニューが表示されるが、何も実行されない
 
 ## <a name="may-2019"></a>2019 年 5 月
 

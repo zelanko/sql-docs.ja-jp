@@ -1,5 +1,6 @@
 ---
 title: JDBC ドライバーの展開
+description: 使用するアプリケーションと共に Microsoft JDBC Driver for SQL Server を再配布して展開する方法と、必要なファイルについて説明します。
 ms.custom: ''
 ms.date: 03/13/2020
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 36eb8896a18a6dd87e9b75818f6e4aae2c336905
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7c99a7e4f491f2c00dc860ed85c453415f993593
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922439"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728360"
 ---
 # <a name="deploying-the-jdbc-driver"></a>JDBC ドライバーの展開
 
@@ -56,4 +57,4 @@ JDBC Driver バージョン 4.x は、旧バージョンです。 4\.x のサポ
 
 ## <a name="see-also"></a>関連項目
 
-[JDBC ドライバーの概要](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+[JDBC ドライバーの概要](overview-of-the-jdbc-driver.md)  

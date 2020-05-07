@@ -1,6 +1,6 @@
 ---
-title: SQL Server ノートブックの管理
-description: Azure Data Studio でノートブックを管理する方法について学習します。 これには、ノートブックを開く、ノートブックの保存、ビッグ データ クラスター接続の変更などが含まれます。
+title: ノートブックを管理する方法
+description: Azure Data Studio でノートブックを管理する方法について学習します。 これには、ノートブックを開く、ノートブックの保存、SQL 接続または Python カーネルの変更などが含まれます。
 author: markingmyname
 ms.author: maghan
 ms.reviewer: achatter, alayu, mikeray
@@ -9,19 +9,19 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.custom: ''
-ms.date: 03/30/2020
-ms.openlocfilehash: 9b071a9d1b9e770e1443e5df539208baa4399a30
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.date: 04/27/2020
+ms.openlocfilehash: 435290bd45e79c835ba134bb732f1672dc31c2cf
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531595"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82178701"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>Azure Data Studio でノートブックを管理する方法
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-この記事では、SQL Server を使用して Azure Data Studio でノートブック ファイルを開いて保存する方法について示します。 また、SQL Server への接続を変更する方法も示します。
+この記事では、Azure Data Studio でノートブック ファイルを開いて保存する方法について示します。 また、SQL Server への接続または Python カーネルを変更する方法も示します。
 
 ## <a name="open-a-notebook"></a>ノートブックを開く
 
@@ -57,9 +57,9 @@ ms.locfileid: "80531595"
 > - [ファイル] メニューの **[ファイルの保存]** 、 **[名前を付けて保存]** 、 **[すべてのファイルを保存]** コマンド。
 > - コマンド パレットに入力した「**File: Save**」コマンド。
 
-## <a name="change-the-connection"></a>接続の変更
+## <a name="change-the-sql-connection"></a>SQL 接続を変更する
 
-ノートブックの接続を変更するには:
+ノートブックの SQL 接続を変更するには、次のようにします。
 
 1. ノートブック ツール バーから **[アタッチ先]** メニューを選択し、 **[接続の変更]** を選択します。
 
@@ -69,6 +69,31 @@ ms.locfileid: "80531595"
 
    ![[アタッチ先] メニューからサーバーを選択する](./media/notebooks-manage-sql-server/select-attach-to-2.png)
 
+## <a name="change-the-python-kernel"></a>Python カーネルを変更する
+
+Azure Data Studio を初めて開いたとき、 **[ノートブック用 Python の構成]** ページが表示されます。 次のいずれかを選択できます。
+
+- **[新しい Python インストール]** を選択して、Azure Data Studio 用の Python の新しいコピーをインストールする
+- **[既存の Python インストールを使用する]** を選択して、Azure Data Studio で使用する既存の Python インストールのパスを指定する
+
+アクティブな Python カーネルの場所とバージョンを表示するには、コード セルを作成し、次の Python コマンドを実行します。
+
+```python
+import os
+import sys
+print(sys.version_info)
+print(os.path.dirname(sys.executable))
+```
+
+別の Python インストールに変更するには、次のようにします。
+
+1. **[ファイル]** メニューから、 **[基本設定]** を選択し、次に **[設定]** を選択します。
+1. **[拡張機能]** の下にある **[Notebook 構成]** までスクロールします。
+1. **[Use Existing Python]\(既存の Python の使用\)** で、[Local path to a preexisting python installation used by Notebooks]\(Notebooks で使用する既存の Python インストールのローカル パス\) オプションをオフにします。
+1. Azure Data Studio を再起動します。
+
+**[ノートブック用 Python の構成]** ページが表示されたら、新しい Python インストールを作成するか、既存のインストールへのパスを指定するかを選択できます。
+
 ## <a name="next-steps"></a>次のステップ
 
-Azure Data Studio のノードブックの詳細については、「[SQL Server 2019 でノートブックを使用する方法](notebooks-guidance.md)」を参照してください。
+Azure Data Studio の SQL ノードブックの詳細については、「[SQL Server 2019 でノートブックを使用する方法](notebooks-guidance.md)」を参照してください。

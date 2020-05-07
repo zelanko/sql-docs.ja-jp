@@ -1,18 +1,18 @@
 ---
 title: SQL Server Reporting Services のインストール | Microsoft Docs
-ms.date: 10/02/2019
+ms.date: 05/01/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 37ce1267bd4b83943560183e5628839858d9c5de
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 07669b5c0466c725a271f71ed207c332ffdb5a26
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486821"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693800"
 ---
 # <a name="install-sql-server-reporting-services"></a>SQL Server Reporting Services のインストール
 
@@ -32,6 +32,8 @@ Microsoft ダウンロード センターから [SQL Server 2017 Reporting Servi
 
 > [!NOTE]
 > Power BI Report Server が見つからない場合は、 「[Power BI Report Server のインストール](https://powerbi.microsoft.com/documentation/reportserver-install-report-server/)」を参照してください。
+> 
+> SQL Server 2016 以前のバージョンの Reporting Services からのアップグレードまたは移行については、 「[Reporting Services のアップグレードと移行](upgrade-and-migrate-reporting-services.md)」を参照してください。
 
 ## <a name="before-you-begin"></a>開始する前に
 

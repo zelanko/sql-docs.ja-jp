@@ -1,5 +1,6 @@
 ---
 title: '[バックアップ デバイス] ([メディアの内容] ページ) | Microsoft Docs'
+description: '[バックアップ デバイス] ダイアログ ボックスを使用すると、バックアップ情報が表示されます。 ここでは、デバイス、メディア、メディア セット、バックアップ セットの情報が得られます。'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 5fc7bd22-b6d8-4af1-8a58-2e7d0b994d08
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c877ffb5bb15836f21a6a37c7cd8ccb22b27cc10
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 90d6fdb147e6f7b40a9e8072a5c2836bd4e40bcd
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67987763"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220507"
 ---
 # <a name="backup-device-media-contents-page"></a>[バックアップ デバイス] ([メディアの内容] ページ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "67987763"
   
 -   [論理バックアップ デバイスのプロパティと内容の表示 &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  個々のメディア、メディア セット、バックアップ セットに関する情報を表示します。  
   
  **メディア**  
@@ -44,7 +45,7 @@ ms.locfileid: "67987763"
  **[メディア セット]**  
  メディア セットとは、一定の数のバックアップ デバイスを使用し、1 回以上のバックアップ操作で書き込まれたバックアップ メディアを番号順に並べた集合体です。  
   
- **Name**  
+ **名前**  
  メディア セットの名前を表示します (メディア セットが存在する場合)。  
   
  **説明**  
@@ -58,9 +59,9 @@ ms.locfileid: "67987763"
   
 |ヘッダー|値|  
 |------------|------------|  
-|**Name**|バックアップ セットの名前です。|  
-|**Type**|バックアップされるオブジェクト。[データベース]、[ファイル]、 *[\<空白>]* (トランザクション ログ用) のいずれかを指定します。|  
-|**コンポーネント**|実行されたバックアップの種類。[完全]、[差分]、[トランザクション ログ] のいずれかになります。|  
+|**名前**|バックアップ セットの名前です。|  
+|**Type**|バックアップされるオブジェクト: [データベース]、[ファイル]、または *[\<空白>]* (トランザクション ログ用)。|  
+|**コンポーネント**|実行するバックアップの種類: [完全]、[差分]、[トランザクション ログ]。|  
 |**[サーバー]**|バックアップ操作を実行した [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスの名前。|  
 |**[データベース]**|バックアップされたデータベースの名前。|  
 |**Position**|ボリューム内でのバックアップ セットの位置。|  

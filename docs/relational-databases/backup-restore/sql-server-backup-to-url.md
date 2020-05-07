@@ -1,5 +1,6 @@
 ---
 title: SQL Server Backup to URL | Microsoft Docs
+description: バックアップ先として Microsoft Azure BLOB ストレージを使用するために、SQL Server で必要な概念、要件、コンポーネントについて学習します。
 ms.custom: ''
 ms.date: 03/25/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8263000b7a6fb166657e48777cc0d8c4c007ddd2
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: 1de8413f3888c3fe91f7b8557956490a1065c4fd
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087372"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180466"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server Backup to URL
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

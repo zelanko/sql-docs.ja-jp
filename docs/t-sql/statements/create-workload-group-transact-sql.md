@@ -1,7 +1,7 @@
 ---
 title: CREATE WORKLOAD GROUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/14/2020
+ms.date: 04/20/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -20,12 +20,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: b217787d0cba0a1d62ab8393ef7fac76d7665bb0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c61185c660e650a2052a2e5a6df1ad9ac3ad0af4
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77568065"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087466"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 
@@ -49,7 +49,7 @@ ms.locfileid: "77568065"
 
 ## <a name="syntax"></a>構文
 
-```
+```syntaxsql
 CREATE WORKLOAD GROUP group_name
 [ WITH
     ( [ IMPORTANCE = { LOW | MEDIUM | HIGH } ]
@@ -203,7 +203,7 @@ GO
 
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。
 
-```
+```syntaxsql
 CREATE WORKLOAD GROUP group_name
 [ WITH
  (  [ MIN_PERCENTAGE_RESOURCE = value ]
@@ -275,7 +275,7 @@ request_min_resource_grant_percent のガイドラインとして、リソース
 
 `min_percentage_resource`、`cap_percentage_resource`、`request_min_resource_grant_percent`、`request_max_resource_grant_percent` の各パラメーターは、現在のサービス レベルおよびその他のワークロード グループの構成のコンテキストで調整された有効な値が含まれます。
 
-サービス レベルごとにサポートされるコンカレンシーは、リソース クラスを使用してクエリごとにリソースの許可を定義したときと同じになります。したがって、request_min_resource_grant_percent でサポートされる値は、インスタンスに設定されているサービス レベルによって異なります。 最も低いサービス レベル (DW100c) では、要求ごとに最小 25% のリソースが必要です。 DW100c では、構成されたワークロード グループの有効な request_min_resource_grant_percent は、25% 以上にすることができます。 有効値がどのように派生するかの詳細については、以下の表を参照してください。
+サービス レベルに応じてクエリごとに必要最低限のリソースがあるため、`request_min_resource_grant_percent` パラメーターには有効な値が含まれます。  たとえば、最も低いサービス レベル (DW100c) では、要求ごとに最小 25% のリソースが必要です。  ワークロード グループが 3% の `request_min_resource_grant_percent` と `request_max_resource_grant_percent` で構成されている場合、インスタンスが開始されると、両方のパラメーターの有効な値が 25% に調整されます。  インスタンスが DW1000c にスケールアップされる場合、両方のパラメーターに対して構成された有効な値は 3% になります。そのサービス レベルでサポートされている最小値が 3% であるためです。  インスタンスが DW1000c よりも高くスケーリングされた場合、両方のパラメーターに対して構成された有効な値は 3% のままになります。  さまざまなサービス レベルの有効な値の詳細については、以下の表を参照してください。
 
 |サービス レベル|REQUEST_MIN_RESOURCE_GRANT_PERCENT の有効な最小値|同時クエリの最大数|
 |---|---|---|
@@ -297,9 +297,9 @@ request_min_resource_grant_percent のガイドラインとして、リソース
 |DW30000c|0.75%|128|
 ||||
 
-同様に、request_min_resource_grant_percent、min_percentage_resource は、有効な request_min_resource_grant_percent 以上である必要があります。 有効な `min_percentage_resource` 未満に構成された `min_percentage_resource` のワークロード グループには、実行時にゼロに調整される値が含まれています。 この場合、`min_percentage_resource` 用に構成されたリソースは、すべてのワークロード グループとの間で共有できます。 たとえば、DW1000c で実行されている `min_percentage_resource` が 10% であるワークロード グループ `wgAdHoc` には、有効な 10% の `min_percentage_resource` が含まれます (DW1000c でサポートされている最小値は 3.25% です)。 DW100c の `wgAdhoc` には、有効な 0% の min_percentage_resource が含まれます。 `wgAdhoc` 用に構成された 10% は、すべてのワークロード グループとの間で共有されます。
+`min_percentage_resource` パラメーターは有効な `request_min_resource_grant_percent` 以上である必要があります。 `min_percentage_resource` が有効な `min_percentage_resource` 未満に構成されたワークロード グループには、実行時にゼロに調整された値が含まれています。 この場合、`min_percentage_resource` 用に構成されたリソースは、すべてのワークロード グループとの間で共有できます。 たとえば、DW1000c で実行されている `min_percentage_resource` が 10% であるワークロード グループ `wgAdHoc` には、有効な 10% の `min_percentage_resource` が含まれます (DW1000c でサポートされている最小値は 3% です)。 DW100c の `wgAdhoc` には、有効な 0% の min_percentage_resource が含まれます。 `wgAdhoc` 用に構成された 10% は、すべてのワークロード グループとの間で共有されます。
 
-`cap_percentage_resource` にも有効な値があります。 ワークロード グループ `wgAdhoc` が 100% の `cap_percentage_resource` で構成されていて、別のワークロード グループ `wgDashboards` が 25% の `min_percentage_resource` で作成されている場合、`wgAdhoc` の有効な `cap_percentage_resource` は 75% になります。
+`cap_percentage_resource` パラメーターにも有効な値があります。 ワークロード グループ `wgAdhoc` が 100% の `cap_percentage_resource` で構成されていて、別のワークロード グループ `wgDashboards` が 25% の `min_percentage_resource` で作成されている場合、`wgAdhoc` の有効な `cap_percentage_resource` は 75% になります。
 
 ワークロード グループの実行時の値を理解する最も簡単な方法は、システム ビュー [sys.dm_workload_management_workload_groups_stats](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md) に対してクエリを実行することです。
 

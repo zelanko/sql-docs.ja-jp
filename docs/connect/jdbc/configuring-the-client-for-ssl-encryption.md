@@ -1,5 +1,6 @@
 ---
-title: 暗号化のためのクライアントの構成 | Microsoft Docs
+title: 暗号化のためのクライアントの構成
+description: Microsoft JDBC Driver for SQL Server を使用してクライアントのセキュリティを確保するためのクライアント側の暗号化と証明書の信頼について説明します。
 ms.custom: ''
 ms.date: 09/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ae34cd1f-3569-4759-80c7-7c9b33b3e9eb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0327a4321b141f0433cd9c6c9554c5a48f7381fb
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7265bfb8666d99b8676b4bd4ec221b0a55f47a07
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922484"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728488"
 ---
 # <a name="configuring-the-client-for-encryption"></a>暗号化のためのクライアントの構成
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -48,7 +49,7 @@ java -Djavax.net.ssl.trustStore=C:\MyCertificates\storeName
 java -Djavax.net.ssl.trustStorePassword=storePassword  
 ```  
   
- この場合、この JVM 上で実行されるすべてのアプリケーションが既定でこれらの設定を使用します。 アプリケーションでこの既定の設定をオーバーライドするには、接続文字列か、**SQLServerDataSource** クラスの該当する setter メソッドで、接続プロパティの **trustStore** および [trustStorePassword](../../connect/jdbc/reference/sqlserverdatasource-class.md) を設定する必要があります。  
+ この場合、この JVM 上で実行されるすべてのアプリケーションが既定でこれらの設定を使用します。 アプリケーションでこの既定の設定をオーバーライドするには、接続文字列か、[SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) クラスの該当する setter メソッドで、接続プロパティの **trustStore** および **trustStorePassword** を設定する必要があります。  
   
  これ以外に、"\<java-home>/lib/security/jssecacerts" や "\<java-home>/lib/security/cacerts" など、既定のトラスト ストア ファイルを構成および管理することもできます。 そのためには、JRE (Java ランタイム環境) と共にインストールされる JAVA "keytool" ユーティリティを使用します。 "keytool" ユーティリティの詳細については、Sun Microsystems の Web サイトで keytool についてのドキュメントを参照してください。  
   
@@ -65,7 +66,7 @@ keytool -import -v -trustcacerts -alias myServer -file caCert.cer -keystore trus
   
  この例では、"caCert.cer" というファイルが証明書ファイルとして使用されています。 この証明書ファイルをサーバーから入手する必要があります。 次の手順は、サーバー証明書をファイルにエクスポートする方法を示しています。  
   
-1.  [スタート] ボタンをクリックし、[ファイル名を指定して実行] をクリックして「MMC」と入力します (MMC は Microsoft 管理コンソールの略称です)。  
+1.  [スタート] ボタンをクリックし、[ファイル名を指定して実行] をクリックして「MMC」と入力します  (MMC は Microsoft 管理コンソールの略称です)。  
   
 2.  MMC で、[証明書] を開きます。  
   
@@ -83,6 +84,6 @@ keytool -import -v -trustcacerts -alias myServer -file caCert.cer -keystore trus
   
 9. [次へ] をクリックし、[完了] をクリックすると、証明書がエクスポートされます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [暗号化の使用](../../connect/jdbc/using-ssl-encryption.md)   
  [JDBC ドライバー アプリケーションのセキュリティ保護](../../connect/jdbc/securing-jdbc-driver-applications.md)

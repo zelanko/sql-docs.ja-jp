@@ -3,17 +3,17 @@ title: SQL Server 2017 および 2019 用に Linux リポジトリを構成す�
 description: Linux 上の SQL Server 2019 および SQL Server 2017 用にソース リポジトリの確認と構成を行います。 このソース リポジトリは、インストールおよびアップグレード中に適用される SQL Server のバージョンに影響します。
 author: VanMSFT
 ms.author: vanto
-ms.date: 04/10/2020
+ms.date: 04/28/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: 7253fb18ea783a1fb7aeec77aa73b9a899ec6ae9
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: cea6b49e46b5dc1d386f42808f64743e2c7eed8c
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81301703"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262054"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>SQL Server on Linux のインストールとアップグレードを行うためのリポジトリを構成する
 
@@ -181,7 +181,7 @@ SQL Server のインストールとアップグレードのために使用する
 >
 > SQL Server 2017 CU20 以降では、RHEL 8 がサポートされています。
 >
-> RHEL 7 または RHEL 8 を使用している場合は、パスが `/rhel/7` または `/rhel/8` と一致していることを確認してください。
+> RHEL 7 または RHEL 8 を使用している場合は、パスが `/rhel/7` または `/rhel/8` と一致していることを確認してください。 Microsoft のパッケージは、RHEL のマイナー バージョンに依存しません。 これは、RHEL 7.6 を使用している場合、リポジトリを構成するには、パス `/rhel/7` を使用する必要があることを意味します。
 
 | リポジトリ | Version | command |
 |---|---|---|

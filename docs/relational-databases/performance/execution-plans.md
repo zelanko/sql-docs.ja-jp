@@ -16,15 +16,15 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753f
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 81a9f0e52c061ec494143eb4f61158546f5e57f9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 241df9557a141eb45933ced261a7b55f98a6ec8e
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78256934"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087352"
 ---
 # <a name="execution-plans"></a>実行プラン
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 クエリを実行するには、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] はステートメントを分析し、必要なデータにアクセスする最も効率的な方法を判断する必要があります。 この分析は、クエリ オプティマイザーと呼ばれているコンポーネントによって処理されます。 クエリ オプティマイザーへの入力は、クエリ、データベース スキーマ (テーブル定義やインデックスの定義)、およびデータベース統計で構成されます。 クエリ オプティマイザーの出力がクエリ実行プランです。これは、クエリ プランや実行プランと呼ばれることもあります。   
 
@@ -45,9 +45,9 @@ ms.locfileid: "78256934"
 
 > [!NOTE]
 > [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] には、実行プランを表示するための 3 つのオプションがあります。        
-> -  "***[推定実行プラン](../../relational-databases/performance/display-the-estimated-execution-plan.md)***"。これは、見積もりに基づいてクエリ オプティマイザーによって生成された、コンパイル済みプランです。        
-> -  "***[実際の実行プラン](../../relational-databases/performance/display-an-actual-execution-plan.md)***"。これは、コンパイル済みプランにその[実行コンテキスト](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)を加えたものと同じです。 これには、実行が完了した後に利用可能な実際のランタイム情報 (実行に関する警告など)、または実行中に使用された経過時間および CPU 時間 (新しいバージョンの[!INCLUDE[ssde_md](../../includes/ssde_md.md)]の場合) が含まれます。        
-> -  "***[ライブ クエリ統計](../../relational-databases/performance/live-query-statistics.md)***"。これは、コンパイル済みプラン (その実行コンテキストを含む) と同じです。 これには、実行が進行中のランタイム情報が含まれ、1 秒ごとに更新されます。 ランタイム情報には、演算子を通過する実際の行数などが含まれます。       
+> -  "***[推定実行プラン](../../relational-databases/performance/display-the-estimated-execution-plan.md)***" は、見積もりに基づいてクエリ オプティマイザーによって生成された、コンパイル済みプランです。 これは、プラン キャッシュに格納されているクエリ プランです。        
+> -  "***[実際の実行プラン](../../relational-databases/performance/display-an-actual-execution-plan.md)***" は、コンパイル済みプランにその[実行コンテキスト](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)を加えたものです。 これは、**クエリの実行が完了した後に**使用できるようになります。 これには、実際のランタイム情報 (実行に関する警告など)、または実行中に使用された経過時間および CPU 時間 (新しいバージョンの [!INCLUDE[ssde_md](../../includes/ssde_md.md)] の場合) が含まれます。         
+> -  "***[ライブ クエリ統計](../../relational-databases/performance/live-query-statistics.md)***" は、コンパイル済みプランにその実行コンテキストを加えたものです。 これは**使用中のクエリ実行**に対して使用でき、1 秒ごとに更新されます。 これには、[演算子](../../relational-databases/showplan-logical-and-physical-operators-reference.md)を通過する実際の行数、経過時間、およびクエリの推定進行状況などのランタイム情報が含まれます。
 
 > [!TIP]
 > クエリ処理およびクエリ実行プランの詳細については、「クエリ処理アーキテクチャ ガイド」の「[SELECT ステートメントの最適化](../../relational-databases/query-processing-architecture-guide.md#optimizing-select-statements)」と「[実行プランのキャッシュと再利用](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)」のセクションを参照してください。
