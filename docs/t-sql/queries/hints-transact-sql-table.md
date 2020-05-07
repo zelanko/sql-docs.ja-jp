@@ -1,7 +1,7 @@
 ---
 title: テーブル ヒント (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/31/2017
+ms.date: 04/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -36,12 +36,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d5675f7c62ce43a9e41770075cd4a97253ea051e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 225a92fc082a2778a7146923a9d138d0ce86aa7b
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73981761"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087523"
 ---
 # <a name="hints-transact-sql---table"></a>ヒント (Transact-SQL) - Table
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "73981761"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 WITH  ( <table_hint> [ [, ]...n ] )  
   
 <table_hint> ::=   
@@ -127,7 +127,7 @@ WITH **(** \<table_hint> **)** [ **[,]** ...*n* ]
 > [!IMPORTANT]  
 > WITH キーワードを省略することは非推奨とされます。[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-次のテーブル ヒントは、WITH キーワードの有無に関係なく使用できます。NOLOCK、READUNCOMMITTED、UPDLOCK、REPEATABLEREAD、SERIALIZABLE、READCOMMITTED、TABLOCK、TABLOCKX、PAGLOCK、ROWLOCK、NOWAIT、READPAST、XLOCK、SNAPSHOT、NOEXPAND。 これらのテーブル ヒントを WITH キーワードを使用せずに指定するときは、単独で指定してください。 次に例を示します。  
+次のテーブル ヒントは、`WITH` キーワードの有無にかかわらず許可されます: `NOLOCK`、`READUNCOMMITTED`、`UPDLOCK`、`REPEATABLEREAD`、`SERIALIZABLE`、`READCOMMITTED`、`TABLOCK`、`TABLOCKX`、`PAGLOCK`、`ROWLOCK`、`NOWAIT`、`READPAST`、`XLOCK`、`SNAPSHOT`、および `NOEXPAND`。 これらのテーブル ヒントを WITH キーワードを使用せずに指定するときは、単独で指定してください。 次に例を示します。  
   
 ```sql  
 FROM t (TABLOCK)  
@@ -261,7 +261,7 @@ READUNCOMMITTED に相当します。 詳細については、後の「READUNCOM
 > UPDATE ステートメントまたは DELETE ステートメントの場合: [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
 NOWAIT  
-テーブルでロックがかかったらすぐにメッセージを返すように[!INCLUDE[ssDE](../../includes/ssde-md.md)]を設定します。 NOWAIT は、特定のテーブルに SET LOCK_TIMEOUT 0 を指定することに相当します。 NOWAIT ヒントは、TABLOCK ヒントも指定されている場合は機能しません。 TABLOCK ヒントを使用している場合に待機しないでクエリを終了するには、代わりにクエリの前に `SETLOCK_TIMEOUT 0;` を指定します。  
+テーブルでロックがかかったらすぐにメッセージを返すように[!INCLUDE[ssDE](../../includes/ssde-md.md)]を設定します。 NOWAIT は、特定のテーブルに `SET LOCK_TIMEOUT 0` を指定することに相当します。 NOWAIT ヒントは、TABLOCK ヒントも指定されている場合は機能しません。 TABLOCK ヒントを使用している場合に待機しないでクエリを終了するには、代わりにクエリの前に `SETLOCK_TIMEOUT 0;` を指定します。  
   
 PAGLOCK  
 通常使用される行やキーに対する個々のロックまたは単一のテーブル ロックの代わりに、ページ ロックを使用します。 既定では、操作に適したロック モードを使用します。 SNAPSHOT 分離レベルで実行中のトランザクションにおいてこのオプションを指定しても、UPDLOCK や HOLDLOCK など、ロックが必要な他のテーブル ヒントと組み合わせて指定しない限り、ページ ロックは取得されません。  
@@ -339,7 +339,7 @@ geometry オブジェクトや geography オブジェクトのテセレーショ
 TABLOCK  
 取得したロックがテーブル レベルで適用されることを指定します。 取得されるロックの種類は、実行されるステートメントによって異なります。 たとえば、SELECT ステートメントを実行すると、共有ロックが取得されます。 TABLOCK を指定することで、行レベルまたはページ レベルではなくテーブル全体に共有ロックが適用されます。 HOLDLOCK も指定してある場合は、テーブル ロックがトランザクション終了まで保持されます。  
   
-INSERT INTO \<target_table> SELECT \<columns> FROM \<source_table> ステートメントを使用してデータをヒープにインポートするときに、対象テーブルに対して TABLOCK ヒントを指定すると、そのステートメントに対してログ記録とロックの最適化を有効にすることができます。 データベース復旧モデルが単純復旧モデルまたは一括ログ復旧モデルに設定されている必要もあります。 詳細については、「[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)」を参照してください。  
+`INSERT INTO <target_table> SELECT <columns> FROM <source_table>` ステートメントを使用してデータをヒープにインポートするときに、対象テーブルに対して TABLOCK ヒントを指定すると、そのステートメントに対して最小ログ記録と最適化されたロックを有効にすることができます。 データベース復旧モデルが単純復旧モデルまたは一括ログ復旧モデルに設定されている必要もあります。 TABLOCK ヒントでは、ヒープまたはクラスター化列ストア インデックスに対する並列挿入も有効になります。 詳細については、「[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)」を参照してください。  
   
 テーブルにデータをインポートするため、[OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 一括行セット プロバイダーで TABLOCK を使用すると、対象テーブルへのデータ読み込みを、ログ記録とロックを最適化して、複数のクライアントで同時に行うことができます。 詳細については、「[一括インポートで最小ログ記録を行うための前提条件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)」次を参照してください。  
   

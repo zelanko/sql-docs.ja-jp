@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 932995bad218df91e58af7daed01ddf4277a5dc0
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: f46b27019d85084b572dced79e786033b30c2aec
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117185"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719287"
 ---
 # <a name="real-time-scoring-with-sp_rxpredict-in-sql-server-machine-learning"></a>SQL Server 機械学習での sp_rxPredict を使用したリアルタイム スコアリング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "81117185"
 
 ## <a name="how-real-time-scoring-works"></a>リアルタイム スコアリングのしくみ
 
-リアルタイム スコアリングは、[rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)[rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet) などの RevoScaleR または MicrosoftML 関数に基づく特定のモデルの種類でサポートされています。 これは、ネイティブ C++ ライブラリを使用して、特別なバイナリ形式で格納された機械学習モデルに提供されるユーザー入力に基づいてスコアを生成します。
+リアルタイム スコアリングは、[rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) および [rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet) などの RevoScaleR または MicrosoftML 関数に基づく特定のモデルの種類でサポートされています。 これは、ネイティブ C++ ライブラリを使用して、特別なバイナリ形式で格納された機械学習モデルに提供されるユーザー入力に基づいてスコアを生成します。
 
 トレーニング済みのモデルは、外部言語ランタイムを呼び出すことなくスコアリングに使用できるため、複数のプロセスのオーバーヘッドが削減されます。 これにより、運用スコアリング シナリオでの予測パフォーマンスが格段に速くなります。 データが SQL Server から出ることはないため、R と SQL の間でデータを変換する必要なく、結果を生成して新しいテーブルに挿入することができます。
 

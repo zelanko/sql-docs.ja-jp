@@ -1,5 +1,6 @@
 ---
 title: Microsoft Azure への SQL Server マネージド バックアップ | Microsoft Docs
+description: Microsoft Azure への SQL Server マネージド バックアップでは、Microsoft Azure BLOB ストレージへの SQL Server バックアップを管理および自動化します。
 ms.custom: ''
 ms.date: 10/18/2016
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 49016b1b4ff391c1b1f533a2bf716f39a40b4dbe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9038b277c5ef552dcf2bbdc2fdcabef52e269599
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75245432"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180443"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure への SQL Server マネージド バックアップ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "75245432"
 |**Microsoft Azure アカウント**|[購入オプション](https://azure.microsoft.com/pricing/free-trial/) を調べる前に、 [無料評価版](https://azure.microsoft.com/pricing/purchase-options/)で Azure を使用することができます。|  
 |**Azure Storage アカウント**|バックアップは、Azure ストレージ アカウントに関連付けられている Azure BLOB ストレージに格納されます。 ストレージ アカウントの詳しい作成手順については、「 [Azure ストレージ アカウントについて](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)」を参照してください。|  
 |**BLOB コンテナー**|BLOB はコンテナーで構成されます。 バックアップ ファイルに対してターゲット コンテナーを指定します。 [Azure 管理ポータル](https://manage.windowsazure.com/)でコンテナーを作成することができます。または、 **New-AzureStorageContainer**[Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) コマンドを使用します。|  
-|**Shared Access Signature (SAS)**|ターゲット コンテナーへのアクセスは Shared Access Signature (SAS) で制御されます。 SAS の概要については、「 [Shared Access Signature、第 1 部: SAS モデルについて](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)」を参照してください。 SAS トークンは、コードで、または **New-AzureStorageContainerSASToken** PowerShell  コマンドを使用して作成することができます。 このプロセスを簡素化する PowerShell スクリプトについては、「 [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with PowerShell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)」 (PowerShell を使用する Azure ストレージにおける共有アクセス署名 (SAS) トークンでの SQL 資格情報の作成の簡素化) を参照してください。 **で使用するために SAS トークンを** SQL Credential [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]に格納することができます。|  
+|**Shared Access Signature (SAS)**|ターゲット コンテナーへのアクセスは Shared Access Signature (SAS) で制御されます。 SAS の概要については、「[Shared Access Signature、第 1 部:SAS モデル](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)に関するページを参照してください。 SAS トークンは、コードで、または **New-AzureStorageContainerSASToken** PowerShell  コマンドを使用して作成することができます。 このプロセスを簡素化する PowerShell スクリプトについては、「 [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with PowerShell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)」 (PowerShell を使用する Azure ストレージにおける共有アクセス署名 (SAS) トークンでの SQL 資格情報の作成の簡素化) を参照してください。 **で使用するために SAS トークンを** SQL Credential [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]に格納することができます。|  
 |**SQL Server エージェント**|[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を機能させるには、SQL Server エージェントを実行する必要があります。 スタートアップ オプションを自動に設定することを検討してください。|  
   
 ## <a name="components"></a>Components  
@@ -74,7 +75,7 @@ ms.locfileid: "75245432"
  システム ストアド プロシージャ [managed_backup.sp_backup_config_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)」を参照してください。 カスタム スケジュールを指定しない場合は、スケジュールされたバックアップの種類とそのバックアップの頻度は、データベースのワークロードに基づいて決定されます。 保有期間の設定を使用して、バックアップ ファイルをストレージに保持しておく期間と、保有期間内の特定の時点にデータベースを復旧できるかどうかを決定します。  
   
 ### <a name="backup-file-naming-conventions"></a>バックアップ ファイルの名前付け規則  
- [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] は指定されたコンテナーを使用するため、コンテナーの名前を制御できます。 バックアップ ファイルの場合、可用性データベース以外のデータベースの名前は、データベース名の先頭の 40 文字、データベース GUID ('-' を除く)、およびタイムスタンプを使用して作成されます。 各セグメントの間には、区切り記号としてアンダースコア文字が挿入されます。 完全バックアップにはファイル拡張子として **.bak** が使用され、ログ バックアップには **.log** が使用されます。 可用性グループ データベースでは、前のファイル名前付け規則に加え、40 文字のデータベース名の後に可用性グループ データベース GUID が追加されます。 可用性グループ データベース GUID 値は、sys.databases の group_database_id の値です。  
+ [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] は指定されたコンテナーを使用するため、コンテナーの名前を制御できます。 バックアップ ファイルについて、可用性データベース以外のデータベースには次の規則に従って名前が付けられます。名前は、データベース名の先頭 40 文字、データベース GUID ('-' を除く)、およびタイムスタンプを使用して作成されます。 各セグメントの間には、区切り記号としてアンダースコア文字が挿入されます。 完全バックアップにはファイル拡張子として **.bak** が使用され、ログ バックアップには **.log** が使用されます。 可用性グループ データベースでは、前のファイル名前付け規則に加え、40 文字のデータベース名の後に可用性グループ データベース GUID が追加されます。 可用性グループ データベース GUID 値は、sys.databases の group_database_id の値です。  
   
 ### <a name="full-database-backup"></a>データベースの完全バックアップ  
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] エージェントは、次のいずれかが当てはまる場合にデータベースの完全バックアップをスケジュールします。  

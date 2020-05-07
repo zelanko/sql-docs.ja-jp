@@ -46,12 +46,12 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad10e1d576d1751de10e433420fe3df6106c7ee4
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: 82fb30a374ea9ac4cdabf0ab5f7b4d8eefb8f4c4
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138290"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588235"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -257,10 +257,13 @@ PARTITION
  REORGANIZE (**行ストア** インデックスの再構成)  
  行ストア インデックスの場合、REORGANIZE ではインデックス リーフ レベルを再構成するように指定します。 REORGANIZE 操作は次のとおりです。  
   
--   常にオンラインで実行されます。 つまり、ALTER INDEX REORGANIZE トランザクション中は、長期にわたって他をブロックするテーブル ロックは保持されず、基になるテーブルへのクエリまたは更新を続行できます。  
--   無効なインデックスに対しては指定できません。  
--   ALLOW_PAGE_LOCKS が OFF に設定されている場合は指定できません。  
--   トランザクション内で実行されている場合、トランザクションがロールバックされても、REORGANIZE はロールバックされません。  
+-   常にオンラインで実行されます。 つまり、ALTER INDEX REORGANIZE トランザクション中は、長期にわたって他をブロックするテーブル ロックは保持されず、基になるテーブルへのクエリまたは更新を続行できます。
+-   無効なインデックスに対しては指定できません。
+-   ALLOW_PAGE_LOCKS が OFF に設定されている場合は指定できません。
+-   トランザクション内で実行されている場合、トランザクションがロールバックされても、REORGANIZE はロールバックされません。
+
+> [!NOTE]
+> ALTER INDEX REORGANIZE で既定の暗黙のトランザクション モードの代わりに、明示的なトランザクションが使用されている場合 (たとえば、BEGIN TRAN ...COMMIT/ROLLBACK 内の ALTER INDEX)、REORGANIZE のロック動作がより制限の厳しいものになり、ブロッキングが発生する可能性があります。 暗黙のトランザクションの詳細については、「[SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)」を参照してください。
 
 詳細については、「 [インデックスの再編成と再構築](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)」を参照してください。 
 

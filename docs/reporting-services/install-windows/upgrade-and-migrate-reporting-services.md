@@ -10,25 +10,30 @@ helpviewer_keywords:
 author: maggiesMSFT
 ms.author: maggies
 ms.topic: conceptual
-ms.date: 08/17/2017
-ms.openlocfilehash: 0d0484552bc489231c83062ec00aa4e9f73dcb90
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.date: 05/01/2020
+ms.openlocfilehash: ca9ffd01b7553cb343a83565615a786467371891
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487261"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719528"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-  このトピックでは、SQL Server Reporting Services のアップグレードおよび移行オプションの概要を示します。 展開された SQL Server Reporting Services をアップグレードするには、次の 2 つの一般的な方法があります。  
+  このトピックでは、SQL Server Reporting Services のアップグレードおよび移行オプションの概要を示します。 展開された SQL Server Reporting Services をアップグレードするには、次の一般的な方法があります。  
  
--   **アップグレード:** サーバーと現在インストールされているインスタンスで [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コンポーネントをアップグレードします。 これは一般に "インプレース" アップグレードと呼ばれます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サーバーのモード間でのインプレース アップグレードはサポートされていません。 たとえば、ネイティブ モードのレポート サーバーを SharePoint モードのレポート サーバーにアップグレードすることはできません。 レポート アイテムはモード間で移行できます。 詳細については、このドキュメントの「ネイティブ モードから SharePoint モードへの移行のシナリオ」を参照してください。  
+- **Reporting Services 2016 以前のバージョン "*から*" Reporting Services 2016 以前のバージョン "*への*" アップグレード:** サーバーと現在インストールされているインスタンスで [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コンポーネントをアップグレードします。 これは一般に "インプレース" アップグレードと呼ばれます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サーバーのモード間でのインプレース アップグレードはサポートされていません。 たとえば、ネイティブ モードのレポート サーバーを SharePoint モードのレポート サーバーにアップグレードすることはできません。 レポート アイテムはモード間で移行できます。 詳細については、このドキュメントで後述する「[SharePoint モードのアップグレードと移行のシナリオ](#bkmk_sharePoint_scenarios)」セクションを参照してください。  
+
+- **Reporting Services 2016 以前のバージョン "*から*" Reporting Services 2017 以降のバージョン "*への*" アップグレード**は、上記のバージョンと同じアップグレード シナリオではありません。 Reporting Services 2016 以前のバージョン "*に*" アップグレードする場合、SQL Server インストール メディアを使用したインプレース アップグレード プロセスに従うことができます。 新しい Reporting Services はスタンドアロン製品であるため、Reporting Services 2016 以前のバージョン "*から*" Reporting Services 2017 以降のバージョン "*に*" アップグレードする場合は、同じ手順に従うことはできません。 これは SQL Server のインストール メディアには含まれなくなりました。 
+
+    Reporting Services 2016 以前のバージョンから Reporting Services 2017 以降にアップグレードするには、移行先のインスタンスとして Reporting Services 2017 以降を使用して、「[Reporting Services のインストールの移行 (ネイティブ モード)](migrate-a-reporting-services-installation-native-mode.md)」の記事に従います。 
+
+- **Reporting Services 2017 "*から*" 今後のバージョンへのアップグレード**も、製品のインストール GUID が同じであるため、インプレース アップグレード シナリオです。 SQLServerReportingServices.exe インストール ファイルを実行して、Reporting Services が現在インストールされているサーバーでインプレース アップグレードを開始します。
   
--   **移行**:新しい SharePoint 環境をインストールして構成し、レポート アイテムとリソースを新しい環境にコピーして、既存のコンテンツを使用するよう新しい環境を構成します。 下位レベルの移行形式では、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データベース、構成ファイル、および SharePoint コンテンツ データベース (SharePoint モードを使用している場合) をコピーします。  
-    
-> **[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード
+- **移行**:新しい SharePoint 環境をインストールして構成し、レポート アイテムとリソースを新しい環境にコピーして、既存のコンテンツを使用するよう新しい環境を構成します。 下位レベルの移行形式では、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データベース、構成ファイル、および SharePoint コンテンツ データベース (SharePoint モードを使用している場合) をコピーします。  
+
 
 > [!NOTE]
 > SharePoint と Reporting Services の統合は、SQL Server 2016 以降では使用できません。
@@ -37,9 +42,7 @@ ms.locfileid: "81487261"
  アップグレード可能なサポートされるエディションとバージョンの詳細な一覧については、「 [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)」を参照してください。  
   
 > [!TIP]  
->  SQL Server に関する問題の最新情報については、以下を参照してください。  
->   
->  -   [SQL Server 2016 リリース ノート](https://go.microsoft.com/fwlink/?LinkID=398124)をダウンロードする。  
+>  SQL Server に関する問題の最新情報については、「[SQL Server 2016 リリース ノート](https://go.microsoft.com/fwlink/?LinkID=398124)」を参照してください。  
   
   
 ##  <a name="side-by-side-installations"></a><a name="bkmk_side_by_side"></a> サイド バイ サイド インストール  

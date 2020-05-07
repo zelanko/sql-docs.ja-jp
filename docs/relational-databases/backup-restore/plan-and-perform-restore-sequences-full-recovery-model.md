@@ -1,5 +1,6 @@
 ---
 title: 復元シーケンス (完全復旧モデル) | Microsoft Docs
+description: SQL Server データベース (通常は完全復旧モデルを使用) に対して、RESTORE ステートメントで構成される復元シーケンスを計画および実行する方法について説明します。
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9cbefaf8-d2b6-41c9-83fc-b3807a841fe2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 81f8e91f2179fdc0b11747714ab810b801dc5389
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fc9a06ed8df330e6129f28260e5ef21890e98976
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258658"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180218"
 ---
 # <a name="plan-and-perform-restore-sequences-full-recovery-model"></a>復元シーケンスの計画と実行 (完全復旧モデル)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

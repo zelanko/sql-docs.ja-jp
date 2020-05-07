@@ -1,5 +1,6 @@
 ---
 title: Azure へのマネージド バックアップを使用する
+description: Microsoft Azure への SQL Server マネージド バックアップをデータベース レベルおよびインスタンス レベルで有効にする方法と、通知を有効にしてバックアップ アクティビティを監視する方法について説明します。
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.description: Enable SQL Server managed backup to Azure
@@ -11,12 +12,12 @@ ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e59dfd9c79090bc20a517367e0145303822d8079
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3e4729b5576b7c3558c99369cc80a68a236f2cf9
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78280889"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179163"
 ---
 # <a name="enable-sql-server-managed-backup-to-azure"></a>Azure への SQL Server マネージド バックアップを有効にする
 
