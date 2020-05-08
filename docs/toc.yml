@@ -1710,7 +1710,7 @@
               href: relational-databases/tables/disable-foreign-key-constraints-for-replication.md
             - name: INSERT と UPDATE による制約の無効化
               href: relational-databases/tables/disable-foreign-key-constraints-with-insert-and-update-statements.md
-        - name: UNIQUE 制約
+        - name: Unique 制約と check 制約
           href: relational-databases/tables/unique-constraints-and-check-constraints.md
           items:
             - name: 作成
