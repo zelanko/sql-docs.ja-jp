@@ -125,7 +125,7 @@ zookeeper-2       2/2     Running   0          32m
 
 上の例では、ドメイン グループのスコープがドメイン ローカルなので、ドメイン ユーザーのログインが作成されずに展開は失敗します。 ドメイン グローバルまたはドメイン ユニバーサルのスコープを持つグループを使用します。 「[Active Directory モードで [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を展開する](deploy-active-directory.md)」では、AD グループのスコープ要件について説明されています。
 
-## <a name="resolution"></a>解像度
+## <a name="resolution"></a>解決方法
 
 ドメイン グループのスコープ (<`domain-group`>) を確認します。 [get-adgroup](/powershell/module/addsadministration/get-adgroup/) を使用します。
 
@@ -175,7 +175,7 @@ catch {
 $ClusterUsersGroupScope_Result
 ```
 
-## <a name="resolution"></a>解像度
+## <a name="resolution"></a>解決方法
 
 この問題を解決するには、ユニバーサル スコープまたはグローバル スコープで AD グループを作成し、展開を再実行します。
 

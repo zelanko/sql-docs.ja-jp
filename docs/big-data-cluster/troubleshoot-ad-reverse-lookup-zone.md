@@ -114,7 +114,7 @@ YYYY-MM-DD HH:MM:SS.ms | ERROR | Failed to create AD user account 'nginx-mgmtpro
 
 ドメイン コントローラーの DNS エントリにドメイン コントローラーの逆引き参照ゾーン エントリが見つかりません。 
 
-## <a name="resolution"></a>解像度
+## <a name="resolution"></a>解決方法
 
 次の PowerShell スクリプトを実行して、逆引き DNS エントリ (PTR レコード) が構成されているかどうかを確認します。
 
