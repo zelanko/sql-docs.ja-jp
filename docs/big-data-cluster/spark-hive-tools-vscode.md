@@ -91,7 +91,7 @@ Spark & Hive Tools は、Windows、Linux、macOS など、Visual Studio Code で
 
 Visual Studio Code からクラスターにスクリプトを送信するには、SQL Server ビッグ データ クラスターをリンクする必要があります。
 
-1. メニュー バーから **[表示]\(表示\)**  >  **[Command Palette]\(コマンド パレット\)** に移動し、「**Spark / Hive:Link a Cluster**」と入力します。
+1. メニュー バーから **[View]\(表示\)**  >  **[Command Palette]\(コマンド パレット\)** に移動し、「**Spark / Hive:Link a Cluster**」と入力します。
 
    ![クラスターのリンク コマンド](./media/spark-hive-tools-vscode/link-cluster-command.png)
 
@@ -109,7 +109,7 @@ Visual Studio Code からクラスターにスクリプトを送信するには�
 
 ## <a name="list-clusters"></a>クラスターを一覧表示する
 
-1. メニュー バーから **[表示]\(表示\)**  >  **[Command Palette]\(コマンド パレット\)** に移動し、「**Spark / Hive:List Cluster**」と入力します。
+1. メニュー バーから **[View]\(表示\)**  >  **[Command Palette]\(コマンド パレット\)** に移動し、「**Spark / Hive:List Cluster**」と入力します。
 
 2. **[OUTPUT]\(出力\)** ビューを確認します。  このビューには、リンクされたクラスターが表示されます。
 
@@ -249,7 +249,7 @@ Spark & Hive for Visual Studio Code は次の機能をサポートしていま�
 
 ## <a name="unlink-cluster"></a>クラスターのリンク解除
 
-1. メニュー バーから **[表示]\(表示\)**  >  **[Command Palette]\(コマンド パレット\)** に移動し、「**Spark / Hive:Unlink a Cluster**」と入力します。  
+1. メニュー バーから **[View]\(表示\)**  >  **[Command Palette]\(コマンド パレット\)** に移動し、「**Spark / Hive:Unlink a Cluster**」と入力します。  
 
 2. リンクを解除するクラスターを選択します。  
 
