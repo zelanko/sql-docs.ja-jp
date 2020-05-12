@@ -2,7 +2,7 @@
 title: 接続プロパティの設定
 description: Microsoft JDBC Driver for SQL Server 用の接続文字列プロパティは、さまざまな方法で指定できます。
 ms.custom: ''
-ms.date: 03/13/2020
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f1b62700-f046-488d-bd6b-a5cd8fc345b7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fadc79d2d44cbd835fafbf4ecd68247122577c66
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 0fcc9c86bc71846fd43cd1c606b55116c2171ca4
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487081"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922321"
 ---
 # <a name="setting-the-connection-properties"></a>接続プロパティの設定
 
@@ -71,9 +71,9 @@ ms.locfileid: "81487081"
 | INSTANCENAME<br/><br/>String<br/>[&lt;=128 文字]<br/><br/>null | 接続する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス名です。 指定しない場合は、既定のインスタンスへの接続が確立されます。 instanceName と port の両方を指定する場合については、port の注を参照してください。<br/><br/> **Server** 接続プロパティの仮想ネットワーク名を指定した場合は、**instanceName** 接続プロパティを使用できません。 詳細については、「[高可用性、障害回復のための JDBC Driver のサポート](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md)」をご覧ください。 |
 | integratedSecurity<br/><br/>boolean<br/>["true"&#124;"false"]<br/><br/>false | Windows オペレーティング システムの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって Windows 資格情報が使用されていることを示すには、"true" に設定します。 "true" にすると、JDBC ドライバーは、ユーザーがコンピューターまたはネットワークにサインインしたときに提供した資格情報を見つけるために、ローカル コンピューターの資格情報のキャッシュを検索します。<br/><br/> Kerberos 資格情報が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって使用されていることを示すには、(**authenticationscheme=JavaKerberos** で) "true" に設定します。 Kerberos 認証の詳細については、「[Kerberos 統合認証による SQL Server への接続](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)」をご覧ください。 <br/><br/> NTLM 資格情報が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって使用されていることを示すには、(**authenticationscheme=NTLM** で) "true" に設定します。 <br/><br/> "false" の場合は、ユーザー名とパスワードを指定する必要があります。 |
 | jaasConfigurationName<br/><br/>String<br/><br/>SQLJDBCDriver | Microsoft JDBC Driver 6.2 for SQL Server 以降では、SQL Server への各接続で、Kerberos 接続を確立するための独自の JAAS ログイン構成ファイルを持つことができます。 ログイン構成ファイルの名前は、このプロパティを介して渡すことができます。 <br/> 既定では、ドライバーによって、IBM JVM に対してはプロパティが `useDefaultCcache = true` に、他の JVM に対しては `useTicketCache = true` に設定されます。 |
-| keyStoreAuthentication<br/><br/>String<br/><br/>null | Microsoft JDBC Driver 6.0 for SQL Server 以降では、このプロパティによって、Always Encrypted との接続にシームレスに設定するキー ストアが識別され、キー ストアに対する認証に使用される認証メカニズムが決定されます。 Microsoft JDBC Driver 6.0 for SQL Server では、このプロパティを使用した ("**keyStoreAuthentication=JavaKeyStorePassword**" を設定する必要があります)、Java キー ストアのシームレスなセットアップをサポートしています。 このプロパティを使用するには、Java キー ストアに対して **keyStoreLocation** プロパティと **keyStoreSecret** プロパティも設定する必要があることに注意してください。 <br/><br/>詳細については、「[JDBC ドライバーでの Always Encrypted の使用](https://msdn.microsoft.com/library/mt591987%28v=sql.110%29.aspx?f=255&MSPPError=-2147217396)」を参照してください。 |
-| keyStoreLocation<br/><br/>String<br/><br/>null | **keyStoreAuthentication=JavaKeyStorePassword** の場合、**keyStoreLocation** プロパティによって、Always Encrypted データで使用される列マスター キーを格納する Java キーストア ファイルへのパスが識別されます。 パスにはキーストア ファイル名を含める必要があることに注意してください。<br/><br/>詳細については、「[JDBC ドライバーでの Always Encrypted の使用](https://msdn.microsoft.com/library/mt591987%28v=sql.110%29.aspx?f=255&MSPPError=-2147217396)」を参照してください。 |
-| keyStoreSecret<br/><br/>String<br/><br/>null | **keyStoreAuthentication=JavaKeyStorePassword** の場合、**keyStoreSecret** プロパティによって、キーストアとキーの両方に使用するパスワードが識別されます。 Java キー ストアを使用する場合、キーストアとキー パスワードは同じにする必要があることに注意してください。<br/><br/>詳細については、「[JDBC ドライバーでの Always Encrypted の使用](https://msdn.microsoft.com/library/mt591987%28v=sql.110%29.aspx?f=255&MSPPError=-2147217396)」を参照してください。 |
+| keyStoreAuthentication<br/><br/>String<br/><br/>null | Microsoft JDBC Driver 6.0 for SQL Server 以降では、このプロパティによって、Always Encrypted との接続にシームレスに設定するキー ストアが識別され、キー ストアに対する認証に使用される認証メカニズムが決定されます。 Microsoft JDBC Driver 6.0 for SQL Server では、このプロパティを使用した ("**keyStoreAuthentication=JavaKeyStorePassword**" を設定する必要があります)、Java キー ストアのシームレスなセットアップをサポートしています。 このプロパティを使用するには、Java キー ストアに対して **keyStoreLocation** プロパティと **keyStoreSecret** プロパティも設定する必要があることに注意してください。 <br/><br/>詳細については、「[JDBC ドライバーでの Always Encrypted の使用](using-always-encrypted-with-the-jdbc-driver.md)」を参照してください。 |
+| keyStoreLocation<br/><br/>String<br/><br/>null | **keyStoreAuthentication=JavaKeyStorePassword** の場合、**keyStoreLocation** プロパティによって、Always Encrypted データで使用される列マスター キーを格納する Java キーストア ファイルへのパスが識別されます。 パスにはキーストア ファイル名を含める必要があることに注意してください。<br/><br/>詳細については、「[JDBC ドライバーでの Always Encrypted の使用](using-always-encrypted-with-the-jdbc-driver.md)」を参照してください。 |
+| keyStoreSecret<br/><br/>String<br/><br/>null | **keyStoreAuthentication=JavaKeyStorePassword** の場合、**keyStoreSecret** プロパティによって、キーストアとキーの両方に使用するパスワードが識別されます。 Java キー ストアを使用する場合、キーストアとキー パスワードは同じにする必要があることに注意してください。<br/><br/>詳細については、「[JDBC ドライバーでの Always Encrypted の使用](using-always-encrypted-with-the-jdbc-driver.md)」を参照してください。 |
 | lastUpdateCount<br/><br/>boolean<br/>["true" &#124; "false"]<br/><br/>true | 値が "true" の場合、サーバーに渡された SQL ステートメントから最終的な更新数のみを返します。また、SELECT、INSERT、または DELETE ステートメントのいずれか 1 つで使用して、サーバーのトリガーにより追加された更新数を無視することができます。 このプロパティを "false" に設定すると、サーバーのトリガーにより返される更新数を含む、すべての更新数が返されます。<br/><br/> **注:** このプロパティが適用されるのは、[executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md) メソッドと一緒に使用された場合だけです。 その他のすべての execute メソッドは、すべての結果および更新数を返します。 このプロパティは、サーバーのトリガーにより返される更新数にのみ影響します。 トリガーの実行の一部として得られる結果セットまたはエラーには影響しません。 |
 | lockTimeout<br/><br/>INT<br/><br/>-1 | データベースがロック タイムアウトを通知するまでに待機する時間 (ミリ秒) です。既定では、無期限に待機します。 指定されている場合、この値は接続上のすべてのステートメントに対する既定値になります。 特定のステートメントに対するタイムアウトは、**Statement.setQueryTimeout()** を使用して設定できることに注意してください。 この値は、待機しないことを示す 0 に設定できます。 |
 | loginTimeout<br/><br/>INT<br/>[0..65535]<br/><br/>15 | ドライバーがタイムアウトを通知して接続を失敗させるまでに待機する時間 (秒) です。 0 の値は、タイムアウトが既定のシステム タイムアウトであることを示します。既定のシステム タイムアウトは、既定では 15 秒に指定されています。 0 以外の値は、ドライバーがタイムアウトを通知して接続を失敗させるまでに待機する時間 (秒) を示します。<br/><br/> **Server** 接続プロパティの仮想ネットワーク名を指定する場合は、フェールオーバー接続が成功するまで十分な時間がとれるように、3 分以上のタイムアウト値を指定する必要があります。 詳細については、「[高可用性、ディザスター リカバリーのための JDBC Driver のサポート](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md)」をご覧ください。 |
