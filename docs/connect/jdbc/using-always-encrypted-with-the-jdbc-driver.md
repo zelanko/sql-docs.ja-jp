@@ -2,7 +2,7 @@
 title: JDBC ドライバーでの Always Encrypted の使用
 description: Java アプリケーション内で JDBC driver for SQL Server と共に Always Encrypted を使用し、サーバー上の機密データを暗号化する方法について説明します。
 ms.custom: ''
-ms.date: 03/24/2020
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,14 +11,15 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 37250a846a7dbf712a61731c3ee996b1312d3b8c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c63c15ad0a435235f246945d25c732798fb758df
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634857"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886355"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>JDBC ドライバーでの Always Encrypted の使用
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 このページでは、[Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) と Microsoft JDBC Driver 6.0 (以降) for SQL Server を使用して Java アプリケーションを開発する方法について説明します。
@@ -58,7 +59,8 @@ Microsoft JDBC Driver for SQL Server には、次の組み込みの列マスタ�
 これらのすべてのキーストア プロバイダーについては、以降のセクションで詳しく説明します。 Always Encrypted を使用するには、キーストア プロバイダーを 1 つ実装するだけで十分です。
 
 ### <a name="using-azure-key-vault-provider"></a>Azure Key Vault プロバイダーを使用する
-Azure Key Vault は、特にアプリケーションが Azure でホストされている場合、Always Encrypted の列マスター キーの格納と管理に便利なオプションです。 Microsoft JDBC Driver for SQL Server には、Azure Key Vault にキーが格納されているアプリケーション用の組み込みプロバイダー SQLServerColumnEncryptionAzureKeyVaultProvider が含まれています。 このプロバイダーの名前は AZURE_KEY_VAULT です。 Azure Key Vault ストア プロバイダーを使用するには、アプリケーション開発者が Azure Key Vault でコンテナーとキーを作成し、Azure Active Directory でアプリの登録を作成する必要があります。 登録されたアプリケーションには、Always Encrypted で使用するために作成されたキー コンテナーに対して定義されているアクセス ポリシーで、取得、暗号化解除、暗号化、キーのラップを解除、キーのラップ、検証のアクセス許可が付与されている必要があります。 キー コンテナーを設定して列マスター キーを作成する方法の詳細については、「[Azure Key Vault - 手順](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/)」 と「[Azure Key Vault で列マスター キーを作成する](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault)」を参照してください。
+
+Azure Key Vault は、特にアプリケーションが Azure でホストされている場合、Always Encrypted の列マスター キーの格納と管理に便利なオプションです。 Microsoft JDBC Driver for SQL Server には、Azure Key Vault にキーが格納されているアプリケーション用の組み込みプロバイダー SQLServerColumnEncryptionAzureKeyVaultProvider が含まれています。 このプロバイダーの名前は AZURE_KEY_VAULT です。 Azure Key Vault ストア プロバイダーを使用するには、アプリケーション開発者が Azure Key Vault でコンテナーとキーを作成し、Azure Active Directory でアプリの登録を作成する必要があります。 登録されたアプリケーションには、Always Encrypted で使用するために作成されたキー コンテナーに対して定義されているアクセス ポリシーで、取得、暗号化解除、暗号化、キーのラップを解除、キーのラップ、検証のアクセス許可が付与されている必要があります。 キー コンテナーを設定して列マスター キーを作成する方法の詳細については、「[Azure Key Vault - 手順](/archive/blogs/kv/azure-key-vault-step-by-step)」 と「[Azure Key Vault で列マスター キーを作成する](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault)」を参照してください。
 
 Azure Key Vault プロバイダーの使用時、JDBC ドライバーによって、信頼されているエンドポイントの一覧と列のマスター キー パスが照合されます。 ドライバー バージョン 8.2.2 以降、この一覧は構成できます。アプリケーションの作業ディレクトリで "mssql-jdbc.properties" ファイルを作成し、`AKVTrustedEndpoints` プロパティをセミコロン区切りの一覧に設定します。 値がセミコロンで始まる場合、既定のリストが拡張されます。それ以外の場合は、既定のリストが置き換えられます。
 
