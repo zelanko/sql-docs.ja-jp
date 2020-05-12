@@ -4,8 +4,6 @@ description: Data Lake Analytics タスクを使用して、U-SQL ジョブを A
 ms.custom: ''
 ms.date: 06/27/2019
 ms.prod: sql
-ms.prod_service: integration-services
-ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +11,13 @@ f1_keywords:
 - SQL14.DTS.DESIGNER.AFPADLSTASK.F1
 author: yanancai
 ms.author: yanacai
-ms.openlocfilehash: ab9a357e8215310b21fa2e401067f49176aeefd4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.reviewer: maghan
+ms.openlocfilehash: 1f4eaadafa422611c3d24cbefee7a7d982dd88d8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67947356"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763663"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Azure Data Lake Analytics タスク
 
@@ -53,6 +52,7 @@ U-SQL の構成には、**SourceType** と、**SourceType** の値に基づく�
 |**DirectInput (直接入力)**|インライン エディターを使用して U-SQL スクリプトを指定します。 この値を選択すると、動的オプション **[USQLStatement]** が表示されます。|  
 |**[FileConnection]**|U-SQL スクリプトを含むローカルな .usql ファイルを指定します。 この値を選択すると、動的オプション **[FileConnection]** が表示されます。|  
 |**変数**|U-SQL スクリプトを含む SSIS 変数を指定します。 この値を選択すると、動的オプション **[SourceVariable]** が表示されます。|
+| &nbsp; | &nbsp; |
 
 **SourceType 動的オプション**では、U-SQL クエリのスクリプトの内容を指定します。 
 
@@ -61,6 +61,7 @@ U-SQL の構成には、**SourceType** と、**SourceType** の値に基づく�
 |**SourceType = DirectInput**|送信する U-SQL クエリを、オプション ボックスに直接入力します。または、参照ボタン [...] をクリックし、 **[Enter U-SQL Query]\(U-SQL クエリの入力\)** ダイアログ ボックスで U-SQL クエリを入力します。|  
 |**SourceType = FileConnection**|既存のファイル接続マネージャーを選択するか、<**新しい接続…** > を選択して新しいファイル接続を作成します。 関連情報については、「[ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)」と「[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)」をご覧ください。|  
 |**SourceType = Variable**|既存の変数を選択するか、\<**新しい変数...** > を選択して新しい変数を作成します。 関連情報については、「[Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)」と「[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)」をご覧ください。|
+| &nbsp; | &nbsp; |
 
 
 ### <a name="job-configuration"></a>ジョブの構成
@@ -78,6 +79,7 @@ U-SQL の構成には、**SourceType** と、**SourceType** の値に基づく�
   |-----------|-----------------|
   |True|タスクの結果は、U-SQL ジョブの実行結果に基づきます。 ジョブの成功 > タスクの成功。 ジョブの失敗 > タスクの失敗。 タスクの成功または失敗 > タスクの完了。|
   |False|タスクの結果は、U-SQL ジョブの送信と準備の結果に基づきます。 ジョブの送信に成功し、準備フェーズを通過した > タスクの成功。 ジョブの送信に失敗、または準備フェーズでジョブが失敗した > タスクの失敗。 タスクの成功または失敗 > タスクの完了。|
+  | &nbsp; | &nbsp; |
 
 - **TimeOut:** ジョブ実行のタイムアウト時間を秒単位で指定します。 タイムアウトしたジョブはキャンセルされ、失敗としてマークされます。 **Synchronous** が false に設定されている場合、このプロパティは使用できません。
 
@@ -125,6 +127,7 @@ OUTPUT @rs1
 |-------------|--------------|
 |ユーザー: Variable1|\@in|
 |ユーザー: Variable2|\@out| 
+| &nbsp; | &nbsp; |
 
 ## <a name="expression-page-configuration"></a>式ページの構成
 

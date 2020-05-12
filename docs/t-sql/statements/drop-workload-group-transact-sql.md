@@ -17,12 +17,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: f0f50ecd1b6cb74367512822b0257094aa3e3d5b
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: d2bbbee44b7b50e5d25bda3b4d10c6123db6497b
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636404"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001161"
 ---
 # <a name="drop-workload-group-transact-sql"></a>DROP WORKLOAD GROUP (Transact-SQL)
 
@@ -30,78 +30,40 @@ ms.locfileid: "81636404"
 
 次の行から興味がある製品名をクリックしてみてください。 この Web ページでは、クリックした製品に合わせて、異なるコンテンツが表示されます。
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-> |||||
-> |---|---|---|---|
-> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />マネージド インスタンス](drop-workload-group-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](drop-workload-group-transact-sql.md?view=azure-sqldw-latest)|
+||||
+|---|---|---|
+|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />マネージド インスタンス](drop-workload-group-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](drop-workload-group-transact-sql.md?view=azure-sqldw-latest)|
+||||
 
 &nbsp;
 
 ## <a name="sql-server-and-sql-database-managed-instance"></a>SQL Server と SQL Database Managed Instance
 
-既存のユーザー定義の Resource Governor ワークロード グループを削除します。
-
-![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。
-
-## <a name="syntax"></a>構文
-
-```syntaxsql
-DROP WORKLOAD GROUP group_name
-[;]
-```
-
-## <a name="arguments"></a>引数
-
-*group_name*: 既存のユーザー定義のワークロード グループの名前を指定します。
-
-## <a name="remarks"></a>解説
-
-Resource Governor の内部グループや既定のグループに対して、DROP WORKLOAD GROUP ステートメントを使用することはできません。
-
-DDL ステートメントを実行する場合、Resource Governor の状態について詳しく理解しておくことをお勧めします。 詳細については、「[リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)」を参照してください。
-
-アクティブなセッションが含まれているワークロード グループを削除したり別のリソース プールに移動したりした場合、その変更を適用するために ALTER RESOURCE GOVERNOR RECONFIGURE ステートメントを呼び出すと失敗します。 この問題を回避するには、次のいずれかの操作を実行します。
-
-- そのグループからすべてのセッションが切断されるまで待ってから、ALTER RESOURCE GOVERNOR RECONFIGURE ステートメントを再実行します。
-
-- そのグループ内のセッションを KILL コマンドで明示的に停止してから、ALTER RESOURCE GOVERNOR RECONFIGURE ステートメントを再実行します。
-
-- サーバーを再起動します。 再起動プロセスの完了後、削除したグループは作成されず、移動したグループは新しいリソース プール割り当てを使用します。
-
-- DROP WORKLOAD GROUP ステートメントを実行してから、変更適用のためにセッションを明示的に停止するのは不適切であると判断した場合、DROP ステートメントの実行前と同じ名前でグループを再作成し、このグループを元のリソース プールに移動することができます。 変更を適用するには、ALTER RESOURCE GOVERNOR RECONFIGURE ステートメントを実行します。
-
-## <a name="permissions"></a>アクセス許可
-
-CONTROL SERVER 権限が必要です。
-
-## <a name="examples"></a>例
-
-次の例では、`adhoc` という名前のワークロード グループを削除します。
-
-```
-DROP WORKLOAD GROUP adhoc;
-GO
-ALTER RESOURCE GOVERNOR RECONFIGURE;
-GO
-```
-
-## <a name="see-also"></a>参照
-
-- [リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)
-- [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)  
-- [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md)
-- [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)
-- [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md)
-- [DROP RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-resource-pool-transact-sql.md)
-- [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
+[!INCLUDE [DROP WORKLOAD GROUP](../../includes/drop-workload-group.md)]
   
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+
+||||
+|---|---|---|
+|[SQL Server](drop-workload-group-transact-sql.md?view=sql-server-2017)|**_\* SQL Database<br />マネージド インスタンス \*_** &nbsp;|[Azure Synapse<br />Analytics](drop-workload-group-transact-sql.md?view=azure-sqldw-latest)|
+||||
+
+&nbsp;
+
+##  <a name="sql-server-and-sql-database-managed-instance"></a>SQL Server と SQL Database Managed Instance
+
+[!INCLUDE [DROP WORKLOAD GROUP](../../includes/drop-workload-group.md)]
+
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
-> ||||
-> |---|---|---|
-> |[SQL Server](drop-workload-group-transact-sql.md?view=sql-server-2017)||[SQL Database<br />マネージド インスタンス](drop-workload-group-transact-sql.md?view=azuresqldb-mi-current)||**_\* Azure Synapse<br />Analytics \*_** &nbsp;||||
+||||
+|---|---|---|
+|[SQL Server](drop-workload-group-transact-sql.md?view=sql-server-2017)|[SQL Database<br />マネージド インスタンス](drop-workload-group-transact-sql.md?view=azuresqldb-mi-current)| **_\* Azure Synapse<br />Analytics \*_** &nbsp;|
+||||
 
 &nbsp;
 
@@ -113,7 +75,7 @@ GO
 
 ## <a name="syntax"></a>構文
 
-```
+```syntaxsql
 DROP WORKLOAD GROUP group_name  
 ```
 
@@ -143,7 +105,7 @@ SELECT c.name as classifier_name
 
 CONTROL DATABASE アクセス許可が必須です
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)
 
