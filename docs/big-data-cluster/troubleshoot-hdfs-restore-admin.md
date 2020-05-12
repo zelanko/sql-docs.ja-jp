@@ -71,7 +71,7 @@ org.apache.hadoop.security.AccessControlException: Permission denied: user=user1
 
 BDC ユーザーが HDFS ルート フォルダーに再帰的に追加されたことが原因である可能性があります。 これは既定のアクセス許可に影響を与えた可能性があります。
 
-## <a name="resolution"></a>解像度
+## <a name="resolution"></a>解決方法
 
 次のスクリプトを使用してアクセス許可を復元します。管理者権限で `kinit` を使用します。
 

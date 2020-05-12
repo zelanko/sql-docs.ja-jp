@@ -35,7 +35,7 @@ ms.locfileid: "74761211"
   
  アクセスを復旧する 1 つの方法は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再インストールし、すべてのデータベースを新しいインスタンスにアタッチすることです。 この解決方法は時間がかかるうえ、ログインを復旧するには、バックアップから master データベースを復元する必要が生じる場合があります。 master データベースのバックアップが古いと、一部の情報が含まれていない可能性があります。 master データベースのバックアップが新しいと、以前のインスタンスと同じログインが含まれているために管理者がロックアウトされたままになる可能性があります。  
   
-## <a name="resolution"></a>解像度  
+## <a name="resolution"></a>解決方法  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -m **オプションまたは** -f **オプションを使用して、** のインスタンスをシングル ユーザー モードで起動します。 これにより、コンピューターのローカル Administrators グループのメンバーがすべて、固定サーバー ロール sysadmin のメンバーとして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続できるようになります。  
   
 > [!NOTE]  
