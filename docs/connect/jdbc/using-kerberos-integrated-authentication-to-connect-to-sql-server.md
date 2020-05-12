@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cf1372f11b278e555b7f8110e4517fd5fc616683
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4494931e0ee189e785ed057471e5560f4737ecc0
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924010"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922309"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Kerberos 統合認証による SQL Server への接続
 
@@ -73,7 +73,7 @@ Kerberos を構成する場合は、次のガイドラインに従ってくだ�
 
 - [SQL Server で Kerberos 認証を使用する方法](https://support.microsoft.com/kb/319723)
 
-- [SQL Server での Kerberos の使用](https://go.microsoft.com/fwlink/?LinkId=207814)
+- [SQL Server での Kerberos の使用](https://docs.microsoft.com/archive/blogs/sql_protocols/using-kerberos-with-sql-server)
 
 > [!NOTE]  
 > 6\.2 リリースより前の JDBC ドライバーでは、Cross Realm Kerberos を適切に使用するために、**serverSpn** を明示的に設定する必要があります。
