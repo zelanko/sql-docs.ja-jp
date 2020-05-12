@@ -2,7 +2,7 @@
 title: Microsoft ADO.NET
 description: Microsoft ADO.NET for SQL Server は、.NET 言語の主要なデータ アクセス テクノロジです。 SQL Server にアクセスするには、Microsoft.Data.SqlClient 名前空間を使用します。
 ms.custom: ''
-ms.date: 09/30/2019
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,12 +11,12 @@ ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: c89c1c5073e86121e4fbadc3a2901057c0a361a4
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 95a53493949b7c024328a7e94870f509f7e7bd99
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529101"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922222"
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>Microsoft ADO.NET for SQL Server
 
@@ -31,7 +31,7 @@ ADO.NET は、.NET 言語の主要なデータ アクセス テクノロジで�
 * [手順 4:ADO.NET を使用して SQL に弾性的に接続する](step-4-connect-resiliently-sql-ado-net.md)  
   
 ## <a name="documentation"></a>ドキュメント  
-* [ADO.NET の概要](https://msdn.microsoft.com/library/e80y5yhx.aspx)
+* [ADO.NET の概要](/dotnet/framework/data/adonet/)
 * [SqlClient ドライバーの概要](get-started-sqlclient-driver.md)  
 * [SqlClient ドライバーの概要](overview-sqlclient-driver.md)  
 * [SQL Server と ADO.NET](./sql/index.md)
@@ -41,7 +41,7 @@ ADO.NET は、.NET 言語の主要なデータ アクセス テクノロジで�
 * [ADO.NET データセット フォーラム](https://social.msdn.microsoft.com/Forums/adodotnetdataset/threads)  
   
 ## <a name="more-samples"></a>その他のサンプル  
-* [ADO.NET コード例](https://msdn.microsoft.com/library/dw70f090.aspx)  
+* [ADO.NET コード例](/dotnet/framework/data/adonet/ado-net-code-examples)  
 * [Windows での .NET Framework の概要](https://www.microsoft.com/sql-server/developer-get-started/csharp/win/)
 * [macOS での .NET Core の概要](https://www.microsoft.com/sql-server/developer-get-started/csharp/macos/)
 * [Ubuntu での .NET Core の概要](https://www.microsoft.com/sql-server/developer-get-started/csharp/ubuntu/)

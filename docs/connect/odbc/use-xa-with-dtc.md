@@ -2,7 +2,7 @@
 title: Microsoft ODBC Driver で XA を使用する
 description: Microsoft ODBC Driver for SQL Server では、Windows、Linux、および macOS 上での分散トランザクション コーディネーター (DTC) を使用した XA トランザクションがサポートされます。
 ms.custom: ''
-ms.date: 02/04/2019
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 author: karinazhou
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: ba11ff1bee512b0e3ea7b2b641ac6dc64f60adc9
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 3b5b8444058f0078b56ab5e4500b86a4c35a1897
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635551"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886329"
 ---
 # <a name="using-xa-transactions"></a>XA トランザクションの使用
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "81635551"
 
 ## <a name="overview"></a>概要
 
-バージョン 17.3 以降の Microsoft ODBC Driver for SQL Server では、Windows、Linux、および macOS 上での分散トランザクション コーディネーター (DTC) を使用した XA トランザクションがサポートされます。 ドライバー側で XA が実装されると、クライアント アプリケーションから、トランザクション マネージャー (TM) に対してシリアル操作 (トランザクション ブランチの開始、コミット、ロールバックなど) を送信できます。 そして、TM はこれらの操作に従って Resource Manager (RM) と通信します。 XA 仕様と DTC の Microsoft 実装 (MS DTC) の詳細については、「[動作のしくみ:SQL Server DTC (MSDTC および XA トランザクション)](https://blogs.msdn.microsoft.com/bobsql/2018/01/28/how-it-works-sql-server-dtc-msdtc-and-xa-transactions/)」を参照してください。
+バージョン 17.3 以降の Microsoft ODBC Driver for SQL Server では、Windows、Linux、および macOS 上での分散トランザクション コーディネーター (DTC) を使用した XA トランザクションがサポートされます。 ドライバー側で XA が実装されると、クライアント アプリケーションから、トランザクション マネージャー (TM) に対してシリアル操作 (トランザクション ブランチの開始、コミット、ロールバックなど) を送信できます。 そして、TM はこれらの操作に従って Resource Manager (RM) と通信します。 XA 仕様と DTC の Microsoft 実装 (MS DTC) の詳細については、「[動作のしくみ:SQL Server DTC (MSDTC および XA トランザクション)](/archive/blogs/bobsql/how-it-works-sql-server-dtc-msdtc-and-xa-transactions)」を参照してください。
 
 
 
