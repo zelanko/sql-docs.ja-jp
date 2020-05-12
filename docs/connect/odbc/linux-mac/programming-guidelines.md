@@ -2,7 +2,7 @@
 title: プログラミング ガイドライン (ODBC ドライバー)
 description: macOS と Linux 上での Microsoft ODBC Driver for SQL Server のプログラミング機能は、SQL Server Native Client (ODBC) の ODBC に基づいています。
 ms.custom: ''
-ms.date: 01/12/2018
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,39 +10,39 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: v-makouz
 ms.author: v-daenge
-ms.openlocfilehash: ecaa595fa08a4a37c9a5d3146dd03af440aa4453
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 8843bf303f20a7d8aa0baac5be3d9da4e7c54e01
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632792"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886369"
 ---
 # <a name="programming-guidelines"></a>プログラミング ガイドライン
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-macOS と Linux での [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のプログラミング機能は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ([SQL Server Native Client (ODBC)](https://go.microsoft.com/fwlink/?LinkID=134151)) の ODBC に基づいています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client は、Windows Data Access Components の ODBC に基づいています ([ODBC プログラマー リファレンス](https://go.microsoft.com/fwlink/?LinkID=45250))。  
+macOS と Linux での [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のプログラミング機能は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ([SQL Server Native Client (ODBC)](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)) の ODBC に基づいています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client は、Windows Data Access Components の ODBC に基づいています ([ODBC プログラマー リファレンス](../../../odbc/reference/odbc-programmer-s-reference.md))。  
 
 ODBC アプリケーションでは、unixODBC ヘッダー (`sql.h`、`sqlext.h`、`sqltypes.h`、`sqlucode.h`) をインクルードした後に `/usr/local/include/msodbcsql.h` をインクルードすることで、複数のアクティブな結果セット (MARS) やその他の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 固有の機能を使用できます。 次に、Windows ODBC アプリケーションで使用する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 固有の項目に、同じシンボル名を使用します。
 
 ## <a name="available-features"></a>利用可能な機能  
-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC 用 Native Client のドキュメント ([SQL Server Native Client (ODBC)](https://go.microsoft.com/fwlink/?LinkID=134151)) の次のセクションは、macOS と Linux で ODBC ドライバーを使用する場合に有効です。  
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC 用 Native Client のドキュメント ([SQL Server Native Client (ODBC)](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)) の次のセクションは、macOS と Linux で ODBC ドライバーを使用する場合に有効です。  
 
--   [SQL Server との通信 (ODBC)](https://msdn.microsoft.com/library/ms131692.aspx)  
+-   [SQL Server との通信 (ODBC)](../../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
 -   [接続とクエリのタイムアウトのサポート](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
 -   [カーソル](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
--   [日付/時刻の強化 (ODBC)](https://msdn.microsoft.com/library/bb677319.aspx)  
--   [クエリの実行 (ODBC)](https://msdn.microsoft.com/library/ms131677.aspx)  
+-   [日付/時刻の強化 (ODBC)](../../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+-   [クエリの実行 (ODBC)](../../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
 -   [エラーとメッセージの処理](../../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
 -   [Kerberos 認証](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)  
--   [大きな CLR ユーザー定義型 (ODBC)](https://msdn.microsoft.com/library/bb677316.aspx)  
--   [トランザクションの実行 (ODBC) (分散トランザクションを除く)](https://msdn.microsoft.com/library/ms131706.aspx)  
--   [結果の処理 (ODBC)](https://msdn.microsoft.com/library/ms130812.aspx)  
+-   [大きな CLR ユーザー定義型 (ODBC)](../../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)  
+-   [トランザクションの実行 (ODBC) (分散トランザクションを除く)](../../../relational-databases/native-client/odbc/performing-transactions-in-odbc.md)  
+-   [結果の処理 (ODBC)](../../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
 -   [ストアド プロシージャの実行](../../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)
--   [スパース列のサポート (ODBC)](https://msdn.microsoft.com/library/cc280357.aspx)
+-   [スパース列のサポート (ODBC)](../../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)
 -   [検証を伴わない暗号化の使用](../../../relational-databases/native-client/features/using-encryption-without-validation.md)
--   [テーブル値パラメーター](https://docs.microsoft.com/sql/relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc)
--   [コマンドおよびデータ API の UTF-8 および UTF-16](https://msdn.microsoft.com/library/ff878241.aspx)
+-   [テーブル値パラメーター](../../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)
+-   [コマンドおよびデータ API の UTF-8 および UTF-16](../../../relational-databases/native-client/features/utf-16-support-in-sql-server-native-client-11-0.md)
 -   [カタログ関数の使用](../../../relational-databases/native-client/odbc/using-catalog-functions.md)  
 
 ## <a name="unsupported-features"></a>サポートされていない機能
@@ -51,14 +51,14 @@ macOS および Linux 上のこのリリースの ODBC ドライバーでは、�
 
 -   フェールオーバー クラスターの接続
 -   [透過的なネットワーク IP の解決](../using-transparent-network-ip-resolution.md) (ODBC Driver 17 よりも前のバージョン)
--   [高度なドライバー トレース](https://blogs.msdn.microsoft.com/mattn/2012/05/15/enabling-advanced-driver-tracing-for-the-sql-native-client-odbc-drivers/)
+-   [高度なドライバー トレース](/archive/blogs/mattn/enabling-advanced-driver-tracing-for-the-sql-native-client-odbc-drivers)
 
 macOS と Linux でのこのリリースの ODBC ドライバーでは、次の機能は利用できません。 
 
 -   分散トランザクション (SQL_ATTR_ENLIST_IN_DTC 属性はサポートされていません)  
 -   データベース ミラーリング  
 -   FILESTREAM  
--   [SQLSetConnectAttr](https://go.microsoft.com/fwlink/?LinkId=234099) で説明されている ODBC ドライバー パフォーマンスのプロファイリング、および次のパフォーマンス関連接続属性:  
+-   [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) で説明されている ODBC ドライバー パフォーマンスのプロファイリング、および次のパフォーマンス関連接続属性:  
     -   SQL_COPT_SS_PERF_DATA  
     -   SQL_COPT_SS_PERF_DATA_LOG  
     -   SQL_COPT_SS_PERF_DATA_LOG_NOW  
@@ -66,7 +66,7 @@ macOS と Linux でのこのリリースの ODBC ドライバーでは、次の�
     -   SQL_COPT_SS_PERF_QUERY_INTERVAL  
     -   SQL_COPT_SS_PERF_QUERY_LOG  
 -   SQLBrowseConnect (バージョン 17.2 より前)
--   SQL_C_INTERVAL_YEAR_TO_MONTH などの C 時間隔型 (「[Data Type Identifiers and Descriptors](https://msdn.microsoft.com/library/ms716351(VS.85).aspx)」(データ型識別子と記述子) を参照)
+-   SQL_C_INTERVAL_YEAR_TO_MONTH などの C 時間隔型 (「[Data Type Identifiers and Descriptors](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md)」(データ型識別子と記述子) を参照)
 -   SQLSetConnectAttr 関数の SQL_ATTR_ODBC_CURSORS 属性の SQL_CUR_USE_ODBC 値。
 
 ## <a name="character-set-support"></a>文字セットのサポート
@@ -134,7 +134,7 @@ ODBC Driver 13 および 13.1 では、UTF-8 マルチバイト文字または U
 
 ## <a name="additional-notes"></a>追加情報  
 
-1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証と **host,port** を使用して、専用管理者接続 (DAC) を作成できます。 Sysadmin ロールのメンバーはまず、DAC ポートを検出する必要があります。 方法については、「[データベース管理者用の診断接続](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators#dac-port)」を参照してください。 たとえば、DAC ポートが 33000 である場合、次のように `sqlcmd` でそれに接続することができます。  
+1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証と **host,port** を使用して、専用管理者接続 (DAC) を作成できます。 Sysadmin ロールのメンバーはまず、DAC ポートを検出する必要があります。 方法については、「[データベース管理者用の診断接続](../../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md#dac-port)」を参照してください。 たとえば、DAC ポートが 33000 である場合、次のように `sqlcmd` でそれに接続することができます。  
 
     ```
     sqlcmd -U <user> -P <pwd> -S <host>,33000

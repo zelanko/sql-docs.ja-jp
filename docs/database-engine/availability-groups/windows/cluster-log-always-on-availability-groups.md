@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 045444c2141027854e54480483f09ab8eb9a04b6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5e13715681f5b86647662a37b982878b3ad77468
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75244381"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925289"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>Always On 可用性グループ用の CLUSTER.LOG を生成および分析する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "75244381"
 ## <a name="generate-cluster-log"></a>クラスター ログを生成する  
  クラスター ログを生成するには、次の 2 つの方法があります。  
   
-1.  コマンド プロンプトで `cluster /log /g` コマンドを使用します。 このコマンドを実行すると、各 WSFC ノード上の \windows\cluster\reports ディレクトリに出力するクラスター ログが生成されます。 この方法の利点は、`/level` オプションを使用して、生成されるログの詳細レベルを指定できることです。 欠点は、生成されるクラスター ログの出力先ディレクトリを指定できないという点です。 詳細については、「[How to create the cluster.log in Windows Server 2008 Failover Clustering](https://blogs.msdn.com/b/clustering/archive/2008/09/24/8962934.aspx)」 (Windows Server 2008 フェールオーバー クラスタリングで cluster.log を作成する方法) を参照してください。  
+1.  コマンド プロンプトで `cluster /log /g` コマンドを使用します。 このコマンドを実行すると、各 WSFC ノード上の \windows\cluster\reports ディレクトリに出力するクラスター ログが生成されます。 この方法の利点は、`/level` オプションを使用して、生成されるログの詳細レベルを指定できることです。 欠点は、生成されるクラスター ログの出力先ディレクトリを指定できないという点です。 詳細については、「[How to create the cluster.log in Windows Server 2008 Failover Clustering](https://techcommunity.microsoft.com/t5/failover-clustering/how-to-create-the-cluster-log-in-windows-server-2008-failover/ba-p/371283)」 (Windows Server 2008 フェールオーバー クラスタリングで cluster.log を作成する方法) を参照してください。  
   
 2.  [Get-clusterlog](https://technet.microsoft.com/library/ee461045.aspx) PowerShell コマンドレットを使用します。 この方法の利点は、すべてのノードからクラスター ログを生成して、コマンドレットを実行するノード上の 1 つの対象ディレクトリに出力できるということです。 欠点は生成されるログの詳細レベルを指定できないことです。  
   

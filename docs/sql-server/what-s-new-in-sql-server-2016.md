@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: dbf5f8534b19e93d956531df3c43a04776afe1c5
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 0289967cfb3585f6fa7914262e8e280089d4b478
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665376"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886240"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016 の新機能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -35,7 +35,7 @@ ms.locfileid: "80665376"
  **SQL Server 2016 をお試しください。** 
 - **無料**の [**SQL Server 2016 Developer エディション**](https://www.microsoft.com/cloud-platform/sql-server-editions-developers)をダウンロードしてください。
 - 最新バージョンの [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) をダウンロードします。 
-- Azure アカウントをすでにお持ちですか? [SQL Server 2016 がインストール済みの仮想マシン](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016)をすぐにご利用いただけます。
+- Azure アカウントをすでにお持ちですか? [SQL Server 2016 がインストール済みの仮想マシン](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview)をすぐにご利用いただけます。
 
 ## <a name="sql-server-2016-database-engine"></a>SQL Server 2016 データベース エンジン
 - SQL Server のインストールおよびセットアップ時に、**複数の tempDB** データベース ファイルを構成できます。

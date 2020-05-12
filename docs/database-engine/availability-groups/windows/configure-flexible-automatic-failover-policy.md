@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 39e6e14700fe7ad9d9c1c3ba71eca82b3855beb2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 39922c57380772a30a18e27861398397fd77793f
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056684"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925292"
 ---
 # <a name="configure-a-flexible-automatic-failover-policy-for-an-always-on-availability-group"></a>Always On 可用性グループに柔軟な自動フェールオーバー ポリシーを構成する
 
@@ -69,7 +69,7 @@ ms.locfileid: "74056684"
   
 |Level|エラー状態|[!INCLUDE[tsql](../../../includes/tsql-md.md)] の値|PowerShell 値|  
 |-----------|-----------------------|------------------------------|----------------------|  
-|1 つ|サーバーの停止。 次のいずれかが発生した場合に自動フェールオーバーを開始することを指定します。<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスがダウンした。<br /><br /> WSFC クラスターに接続するための可用性グループのリースが、サーバー インスタンスから ACK を受信しないために期限切れになった。 詳細については、「 [動作方法: SQL Server Always On のリース タイムアウト](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx)」を参照してください。<br /><br /> <br /><br /> これは最も制限の緩いレベルです。|1|**OnServerDown**|  
+|1 つ|サーバーの停止。 次のいずれかが発生した場合に自動フェールオーバーを開始することを指定します。<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスがダウンした。<br /><br /> WSFC クラスターに接続するための可用性グループのリースが、サーバー インスタンスから ACK を受信しないために期限切れになった。 詳細については、「 [動作方法: SQL Server Always On のリース タイムアウト](https://techcommunity.microsoft.com/t5/sql-server-support/how-it-works-sql-server-alwayson-lease-timeout/ba-p/317268)」を参照してください。<br /><br /> <br /><br /> これは最も制限の緩いレベルです。|1|**OnServerDown**|  
 |2 つ|サーバーの応答停止。 次のいずれかが発生した場合に自動フェールオーバーを開始することを指定します。<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスがクラスターに接続していず、可用性グループのユーザー指定の正常性チェック タイムアウトしきい値を超えた。<br /><br /> 可用性レプリカがエラー状態である。|2|**OnServerUnresponsive**|  
 |3|重大なサーバー エラー。 孤立したスピンロック、深刻な書き込みアクセス違反、ダンプが多すぎるなどの深刻な [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 内部エラーが発生した場合に自動フェールオーバーを開始することを指定します。<br /><br /> これは既定のレベルです。|3|**OnCriticalServerError**|  
 |4|中程度のサーバー エラー。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 内部リソース プールに永続的なメモリ不足の状態があるなど中程度の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 内部エラーが発生した場合に自動フェールオーバーを開始することを指定します。|4|**OnModerateServerError**|  
@@ -172,7 +172,7 @@ ms.locfileid: "74056684"
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> 関連コンテンツ  
   
--   [動作方法: SQL Server Always On のリース タイムアウト](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx)  
+-   [動作方法: SQL Server Always On のリース タイムアウト](https://techcommunity.microsoft.com/t5/sql-server-support/how-it-works-sql-server-alwayson-lease-timeout/ba-p/317268)  
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

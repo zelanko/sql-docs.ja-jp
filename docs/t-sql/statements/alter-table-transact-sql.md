@@ -59,12 +59,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a1ac8a66c76e7244d36652e4c240d02036f81d98
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: abe671baec987e5fa98528b59671b48f7b0d8180
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632248"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925386"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -652,7 +652,7 @@ COLUMN *column_name*
 - ルールにバインドされます。
 
 > [!NOTE]
-> 列を削除しても、列のディスク領域は回収されません。 テーブルの行サイズが制限に近いか制限を超えている場合は、必要に応じて、削除した列のディスク領域を再要求します。 領域を再確保するには、テーブルにクラスター化インデックスを作成するか、[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) を使用して既存のクラスター化インデックスを再構築します。 LOB データ型の削除による影響の詳細については、この [CSS ブログ エントリ](https://blogs.msdn.com/b/psssql/archive/2012/12/03/how-it-works-gotcha-varchar-max-caused-my-queries-to-be-slower.aspx)を参照してください。
+> 列を削除しても、列のディスク領域は回収されません。 テーブルの行サイズが制限に近いか制限を超えている場合は、必要に応じて、削除した列のディスク領域を再要求します。 領域を再確保するには、テーブルにクラスター化インデックスを作成するか、[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) を使用して既存のクラスター化インデックスを再構築します。 LOB データ型の削除による影響の詳細については、この [CSS ブログ エントリ](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-gotcha-varcharmax-caused-my-queries-to-be-slower)を参照してください。
 
 FOR SYSTEM_TIME の期間  
 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
