@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: 895c33e9c75c725e669cf0a51b5a54f555b80880
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 55bdeab8f54b8aca9aea83cc0e4b1cb2c780da56
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81306480"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760648"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>クイック スタート:Red Hat に SQL Server をインストールし、データベースを作成する
 
@@ -53,7 +53,17 @@ SQL Server の CTP または RC リリースを以前インストールしてい
 ## <a name="install-sql-server"></a><a id="install"></a>SQL Server をインストールする
 
 > [!NOTE]
-> RHEL 8 は、SQL Server 2017 CU20 以降でサポートされています。 SQL Server 2017 の次のコマンドでは、RHEL 8 のリポジトリが参照されています。 RHEL 8 は、SQL Server に必要な python2 と共にプレインストールされていません。 詳細については、python2 のインストールと既定のインタープリターとしての構成に関する次のブログを参照してください: https://www.redhat.com/en/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta 。
+> RHEL 8 は、SQL Server 2017 CU20 以降でサポートされています。 SQL Server 2017 の次のコマンドでは、RHEL 8 のリポジトリが参照されています。 RHEL 8 は、SQL Server に必要な python2 と共にプレインストールされていません。 SQL Server のインストール手順を開始する前に、コマンドを実行し、インタープリターとして python2 が選択されていることを確認します。
+>
+> ```
+> sudo alternatives --config python
+> # If not configured, install python2 and openssl10 using the following commands: 
+> sudo yum install python2
+> sudo yum install compat-openssl10
+> # Configure python2 as the default interpreter using this command: 
+> sudo alternatives --config python
+> ```
+> 詳細については、python2 のインストールと既定のインタープリターとしての構成に関する次のブログを参照してください: https://www.redhat.com/en/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta 。
 >
 > RHEL 7 を使用している場合は、次のパスを `/rhel/8` ではなく `/rhel/7` に変更します。
 
@@ -112,8 +122,18 @@ RHEL 上で SQL Server を構成するには、ターミナルで次のコマン
 ## <a name="install-sql-server"></a><a id="install"></a>SQL Server をインストールする
 
 > [!NOTE]
-> SQL Server 2019 の次のコマンドは、RHEL 8 リポジトリをポイントします。 RHEL 8 は、SQL Server に必要な python2 と共にプレインストールされていません。 詳細については、python2 のインストールと既定のインタープリターとしての構成に関する次のブログを参照してください: https://www.redhat.com/en/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta 。
+> SQL Server 2019 の次のコマンドは、RHEL 8 リポジトリをポイントします。 RHEL 8 は、SQL Server に必要な python2 と共にプレインストールされていません。 SQL Server のインストール手順を開始する前に、コマンドを実行し、インタープリターとして python2 が選択されていることを確認します。 
 >
+> ```
+> sudo alternatives --config python
+> # If not configured, install python2 and openssl10 using the following commands: 
+> sudo yum install python2
+> sudo yum install compat-openssl10
+> # Configure python2 as the default interpreter using this command: 
+> sudo alternatives --config python
+> ``` 
+> これらの手順の詳細については、python2 のインストールと既定のインタープリターとしての構成に関する次のブログを参照してください: https://www.redhat.com/en/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta 。
+> 
 > RHEL 7 を使用している場合は、次のパスを `/rhel/8` ではなく `/rhel/7` に変更します。
 
 RHEL 上で SQL Server を構成するには、ターミナルで次のコマンドを実行して **mssql-server** パッケージをインストールします。

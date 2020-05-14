@@ -1,5 +1,6 @@
 ---
 title: File 要素 (DTA)
+description: dta ユーティリティでは、File 要素により、ワークロード ファイルを指定します。これには、チューニングするデータベースに対して実行する Transact-SQL ステートメントが含まれています。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 8c09dc0d2a4a31f63d0359fa7845dd37ff7e55fc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cf8f9996c9f0dbd2b888abe70299561bd07c870f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307686"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826493"
 ---
 # <a name="file-element-dta"></a>File 要素 (DTA)
 

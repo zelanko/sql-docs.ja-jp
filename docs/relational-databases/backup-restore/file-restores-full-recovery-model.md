@@ -1,5 +1,6 @@
 ---
 title: ファイル復元 (完全復旧モデル) | Microsoft Docs
+description: SQL Server でのファイル復元は、データベース全体を復元することなく、1 つ以上のデータ ファイルをコピーし、ロールフォワードし、復旧する単一の復元シーケンスです。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: c4ca01f461d3013482ceca066a6ce141adf0aaae
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0c5b51b48379d9e421523f1c5f0e5e8c2dd9cbce
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908930"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834529"
 ---
 # <a name="file-restores-full-recovery-model"></a>ファイル復元 (完全復旧モデル)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "72908930"
      オンライン ページおよびファイルの復元に対するサポートの詳細については、「[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」 (SQL Server 2016 の各エディションとサポートされる機能) を参照してください。 オンライン復元の詳細については、「[Online Restore (SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md)」 (オンライン復元 (SQL Server)) を参照してください。
   
     > [!TIP]  
-    >  ファイル復元のためにデータベースをオフラインにする場合は、 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) ステートメントの ALTER DATABASE *database_name* SET OFFLINE を実行することにより、データベースをオフラインにしてから復元シーケンスを開始します。  
+    >  ファイル復元のためにデータベースをオフラインにする場合は、次の [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) ステートメントを実行して復元シーケンスを開始する前に、データベースをオフラインにしてください。ALTER DATABASE *database_name* SET OFFLINE。  
   
   
 ##  <a name="restoring-damaged-files-from-file-backups"></a><a name="Overview"></a> 破損したファイルのファイル バックアップからの復元  

@@ -1,5 +1,6 @@
 ---
 title: 復元と復旧の概要 (SQL Server) | Microsoft Docs
+description: この記事は、一連の SQL Server バックアップを順番に復元することによって、障害から SQL Server データベースを復旧する操作の概要です。
 ms.custom: ''
 ms.date: 04/23/2019
 ms.prod: sql
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 9b034e43f918a0f6c198c29cf2f6618ba38638f8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 143925d3fa6867d656a4f473194608e77f5a960e
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288576"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82924976"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>復元と復旧の概要 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -167,15 +168,15 @@ ms.locfileid: "79288576"
 ##  <a name="database-recovery-advisor-sql-server-management-studio"></a><a name="DRA"></a> データベース復旧アドバイザー (SQL Server Management Studio)  
 データベース復旧アドバイザーにより、最適な復元シーケンスを実装する復元プランを容易に構築できるようになります。 お客様からご要望のあった、データベース復元に関するさまざまな既知の問題の解決や機能強化が実施されました。 データベース復旧アドバイザーによって導入された主な機能強化は次のとおりです。  
   
--   **復元プラン アルゴリズム:**  特に、複雑な復元シナリオの復元プランの構築に使用されるアルゴリズムが大幅に改善されました。 特定の時点への復元時の分岐シナリオなど、多数のエッジ ケースが以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]よりも効率的に処理されます。  
+-   **復元プラン アルゴリズム:** 特に、複雑な復元シナリオの復元プランの構築に使用されるアルゴリズムが大幅に改善されました。 特定の時点への復元時の分岐シナリオなど、多数のエッジ ケースが以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]よりも効率的に処理されます。  
   
--   **特定の時点への復元:**  データベース復旧アドバイザーにより、特定の時点へのデータベースの復元が大幅に簡素化されます。 バックアップの視覚的タイムラインにより、特定の時点への復元のサポートが大幅に強化されています。 この視覚的タイムラインにより、データベースを復元する際の目的の復旧ポイントとして適切な時点を特定できます。 タイムラインにより、分岐した復旧パス (複数の復旧分岐にまたがるパス) をたどることが容易になります。 特定の時点への復元プランには、目的の時点 (日時) への復元に関連するバックアップが自動的に含まれます。 詳細については、「[SQL Server データベースを特定の時点に復元する &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)」を参照してください。  
+-   **特定の時点への復元:** データベース復旧アドバイザーにより、特定の時点へのデータベースの復元が大幅に簡素化されます。 バックアップの視覚的タイムラインにより、特定の時点への復元のサポートが大幅に強化されています。 この視覚的タイムラインにより、データベースを復元する際の目的の復旧ポイントとして適切な時点を特定できます。 タイムラインにより、分岐した復旧パス (複数の復旧分岐にまたがるパス) をたどることが容易になります。 特定の時点への復元プランには、目的の時点 (日時) への復元に関連するバックアップが自動的に含まれます。 詳細については、「[SQL Server データベースを特定の時点に復元する &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)」を参照してください。  
   
 データベース復旧アドバイザーの詳細については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manageability の次のブログを参照してください。  
   
--   [Recovery Advisor: An Introduction](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
+-   [復旧アドバイザー: 概要](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
   
--   [Recovery Advisor: Using SSMS to create/restore split backups](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
+-   [復旧アドバイザー: SSMS を使用して分割バックアップを作成/復元する](https://docs.microsoft.com/archive/blogs/managingsql/recovery-advisor-using-ssms-to-createrestore-split-backups)  
 
 ## <a name="accelerated-database-recovery"></a><a name="adr"></a> 高速データベース復旧
 [高速データベース復旧](/azure/sql-database/sql-database-accelerated-database-recovery/)は [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] で利用できます。 高速データベース復旧では、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の[復旧プロセス](#TlogAndRecovery)の再設計により、データベースの可用性が大幅に向上します (長時間トランザクションが存在する場合は特に)。 高速データベース復旧が有効にされたデータベースでは、フェールオーバーまたは他のクリーンではないシャットダウンの後の復旧プロセスが、非常に速く完了します。 高速データベース復旧を有効にした場合、取り消された長時間トランザクションのロールバックも非常に速く完了します。

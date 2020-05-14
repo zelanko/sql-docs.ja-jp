@@ -1,7 +1,8 @@
 ---
-title: LocalDB のサポート | Microsoft Docs
+title: PHP ドライバーによる LocalDB のサポート
+description: Microsoft SQL Server 用 Drivers for PHP で LocalDB データベース インスタンスへの接続がどのようにサポートされるかについて説明します。
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 05/06/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: connectivity
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d315ad6a-0d50-4093-80c2-2f11217237c2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7d31758d437ad8b175fca86bd5e25b0aff2c9989
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d618706cd05796079904c971cdf7b0c32485c1d4
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80909178"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886289"
 ---
 # <a name="support-for-localdb"></a>LocalDB のサポート
 
@@ -59,7 +60,7 @@ LocalDB のインストール方法や LocalDB インスタンスの構成方法
         . 'AttachDBFileName=c:\\myData.MDF', NULL, NULL);  
     ```
 
-必要に応じて、sqllocaldb.exe を使用して LocalDB インスタンスを作成できます。 また、sqlcmd.exe を使用して、LocalDB インスタンスのデータベースの追加と変更を実行できます。 たとえば、「 `sqlcmd -S (localdb)\v11.0` 」のように入力します。 (IIS で実行する場合、コマンド ラインで実行する場合と同じ結果を得るには、正しいアカウントで実行する必要があります。詳細については、「[完全 IIS での LocalDB の使用、第 2 部: インスタンスの所有権](https://blogs.msdn.com/b/sqlexpress/archive/2011/12/09/using-localdb-with-full-iis-part-2-instance-ownership.aspx)」を参照してください。
+必要に応じて、sqllocaldb.exe を使用して LocalDB インスタンスを作成できます。 また、sqlcmd.exe を使用して、LocalDB インスタンスのデータベースの追加と変更を実行できます。 たとえば、「 `sqlcmd -S (localdb)\v11.0` 」のように入力します。 (IIS で実行する場合、コマンド ラインで実行する場合と同じ結果を得るには、正しいアカウントで実行する必要があります。詳細については、「[完全 IIS での LocalDB の使用、第 2 部: インスタンスの所有権](/archive/blogs/sqlexpress/using-localdb-with-full-iis-part-2-instance-ownership)」を参照してください。
 
 次に示す接続文字列の例では、SQLSRV ドライバーを使用して、myInstance という名前の LocalDB 名前付きインスタンス内のデータベースに接続します。
 

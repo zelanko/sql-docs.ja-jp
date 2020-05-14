@@ -1,5 +1,6 @@
 ---
 title: ページ復元 (SQL Server) | Microsoft Docs
+description: SQL Server Management Studio または Transact-SQL を使用して、SQL Server でページを復元する方法について説明します。 データベース全体を復元することなく、損傷したページを復元します。
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 2bb7f9186ba44c094a54c4e44e7d54b29bc30ed0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8a7c149fbc59691519c1a85afe1ff64cc6da579a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908829"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823679"
 ---
 # <a name="restore-pages-sql-server"></a>ページ復元 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "72908829"
   
      [Recommendations (推奨事項)](#Recommendations)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **ページを復元する方法:**  
   
@@ -64,7 +65,7 @@ ms.locfileid: "72908829"
   
     -   [トランザクション ログ]  
   
-    -   アロケーション ページ。これには、グローバル アロケーション マップ (GAM) ページ、共有グローバル アロケーション マップ (SGAM) ページ、およびページ空き容量 (PFS) ページなどが含まれます。  
+    -   アロケーション ページ:グローバル アロケーション マップ (GAM) ページ、共有グローバル アロケーション マップ (SGAM) ページ、およびページ空き容量 (PFS) ページ。  
   
     -   すべてのデータ ファイルのページ 0 (ファイルのブート ページ)  
   
@@ -134,9 +135,9 @@ ms.locfileid: "72908829"
   
     |ヘッダー|値|  
     |------------|------------|  
-    |**Name**|バックアップ セットの名前です。|  
-    |**コンポーネント**|バックアップされるコンポーネント。 **[データベース]** 、 **[ファイル]** 、または **[\<空白>]** \(トランザクション ログ用) のいずれかを指定します。|  
-    |**Type**|実行するバックアップの種類です。 **[完全]** 、 **[差分]** 、または **[トランザクション ログ]** のいずれかを指定します。|  
+    |**名前**|バックアップ セットの名前です。|  
+    |**コンポーネント**|バックアップされるコンポーネント: **[データベース]** 、 **[ファイル]** 、または **[\<空白>]** (トランザクション ログ用)。|  
+    |**Type**|実行するバックアップの種類: **[完全]** 、 **[差分]** 、 **[トランザクション ログ]** 。|  
     |**[サーバー]**|バックアップ操作を実行した [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスの名前。|  
     |**[データベース]**|バックアップ操作に呼び出されるデータベース名です。|  
     |**Position**|ボリューム内でのバックアップ セットの位置。|  

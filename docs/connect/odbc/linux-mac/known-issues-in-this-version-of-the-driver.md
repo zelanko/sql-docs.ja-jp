@@ -1,7 +1,7 @@
 ---
 title: Linux および macOS での ODBC ドライバーに関する既知の問題
 description: Linux および macOS での Microsoft ODBC Driver for SQL Server に関する既知の問題と、接続に関する問題をトラブルシューティングするための手順について説明します。
-ms.date: 03/05/2020
+ms.date: 05/06/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: connectivity
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - known issues
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f6e39184b8ba565fed48ba501e2502dad19257ce
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 898df9a68fd0e1fd87cab597502d6e0baa17172b
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728415"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886409"
 ---
 # <a name="known-issues-for-the-odbc-driver-on-linux-and-macos"></a>Linux および macOS での ODBC ドライバーに関する既知の問題
 
@@ -25,7 +25,7 @@ ms.locfileid: "81728415"
 
 ## <a name="known-issues"></a>既知の問題
 
-その他の問題は、 [Microsoft ODBC ドライバー チームのブログ](https://blogs.msdn.com/b/sqlnativeclient/)に投稿されます。  
+その他の問題は、[SQL Server ドライバーのブログ](https://techcommunity.microsoft.com/t5/SQL-Server/bg-p/SQLServer/label-name/SQLServerDrivers)に投稿されます。  
 
 - システム ライブラリの制限により、Alpine Linux では、サポートされる文字エンコーディングとロケールが少なくなっています。 たとえば、en_US.UTF-8 は使用できません。 詳細については、[「musl libc」の glibc との機能の違いに関するページ](https://wiki.musl-libc.org/functional-differences-from-glibc.html)を参照してください。
 
@@ -82,7 +82,7 @@ UNICODE Using encoding ASCII 'ISO8859-1' and UNICODE 'UCS-2LE'
   
 - [Connectivity troubleshooting in SQL Server 2008 with the Connectivity Ring Buffer (接続リング バッファーを使用している SQL Server 2008 の接続のトラブルシューティング)](https://techcommunity.microsoft.com/t5/sql-server/connectivity-troubleshooting-in-sql-server-2008-with-the/ba-p/383393)  
   
-- [SQL Server Authentication Troubleshooter (SQL Server 認証のトラブルシューティング)](https://docs.microsoft.com/archive/blogs/sqlsecurity/sql-server-authentication-troubleshooter)  
+- [SQL Server Authentication Troubleshooter (SQL Server 認証のトラブルシューティング)](/archive/blogs/sqlsecurity/sql-server-authentication-troubleshooter)  
 
 ## <a name="next-steps"></a>次のステップ
 

@@ -1,6 +1,6 @@
 ---
 title: FILESTREAM の互換性 | Microsoft Docs
-description: FILESTREAM と SQL Server のその他の機能との互換性
+description: FILESTREAM を使用すると、データはファイル システムに格納されます。 さまざまな SQL Server 機能と共に FILESTREAM を使用する場合に留意すべきガイドライン、制限事項、ヒントをご覧ください。
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c4d32598cfab0cc08ece6721b0ff593c8577394d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4c47e7af592383bee13399c2220fee25fa8ed2c2
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75245395"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82999822"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>FILESTREAM と SQL Server のその他の機能との互換性
 
@@ -69,7 +69,7 @@ ms.locfileid: "75245395"
  `Could not continue scan with NOLOCK due to data movement.`  
   
 ##  <a name="replication"></a><a name="Replication"></a> Replication  
- パブリッシャーで FILESTREAM 属性が有効になっている **varbinary(max)** 列は、FILESTREAM 属性を含めてサブスクライバーにレプリケートすることも、含めずにレプリケートすることもできます。 列をレプリケートする方法を指定するには、 **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスを使用するか、@schema_optionsp_addarticle[ または ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)sp_addmergearticle[ の ](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) パラメーターを使用します。 FILESTREAM 属性を持たない **varbinary(max)** 列にレプリケートされるデータは、このデータ型の制限 (2 GB) を超えないようにする必要があります。この制限を超えると実行時エラーが発生します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]にデータをレプリケートする場合以外は、FILESTREAM 属性をレプリケートすることをお勧めします。 指定するスキーマ オプションに関係なく、FILESTREAM 列を含むテーブルを [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] サブスクライバーにレプリケートすることはサポートされていません。  
+ パブリッシャーで FILESTREAM 属性が有効になっている **varbinary(max)** 列は、FILESTREAM 属性を含めてサブスクライバーにレプリケートすることも、含めずにレプリケートすることもできます。 列をレプリケートする方法を指定するには、 **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスを使用するか、[sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) または [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) の @schema_option パラメーターを使用します。 FILESTREAM 属性を持たない **varbinary(max)** 列にレプリケートされるデータは、このデータ型の制限 (2 GB) を超えないようにする必要があります。この制限を超えると実行時エラーが発生します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]にデータをレプリケートする場合以外は、FILESTREAM 属性をレプリケートすることをお勧めします。 指定するスキーマ オプションに関係なく、FILESTREAM 列を含むテーブルを [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] サブスクライバーにレプリケートすることはサポートされていません。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] から [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] サブスクライバーにレプリケートできるデータ値の大きさは、最大 256 MB に制限されています。 詳細については、「 [最大容量仕様](https://go.microsoft.com/fwlink/?LinkId=103810)」を参照してください。  
@@ -77,7 +77,7 @@ ms.locfileid: "75245395"
 ### <a name="considerations-for-transactional-replication"></a>トランザクション レプリケーションに関する注意点  
  トランザクション レプリケーション用にパブリッシュされるテーブルで FILESTREAM 列を使用する場合は、次のことに注意してください。  
   
--   FILESTREAM 属性を持つ列を含むテーブルがある場合は、*sp_addpublication* の *プロパティに対して値*database snapshot@sync_method および [database snapshot character](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) を使用することはできません。  
+-   FILESTREAM 属性を持つ列を含むテーブルがある場合は、[sp_addpublication](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) の @sync_method プロパティに対して値 *database snapshot* および *database snapshot character* を使用することはできません。  
   
 -   max text repl size オプションは、レプリケーション用にパブリッシュされる列に挿入できるデータの最大サイズを指定します。 このオプションを使用すると、レプリケートされる FILESTREAM データのサイズを制御できます。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "75245395"
   
     -   NEWID() より NEWSEQUENTIALID() の方がパフォーマンスが高いため、マージ レプリケーションでは既定で NEWSEQUENTIALID() が使用されます。 マージ レプリケーション用にパブリッシュされるテーブルに **uniqueidentifier** 列を追加する場合は、NEWSEQUENTIALID() を既定値として指定してください。  
   
--   マージ レプリケーションには、ラージ オブジェクト型のレプリケーションを最適化する機能が含まれています。 この機能は、@stream_blob_columnssp_addmergearticle[ の ](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) パラメーターによって制御されます。 FILESTREAM 属性をレプリケートするスキーマ オプションを設定すると、@stream_blob_columns パラメーターの値が **true** に設定されます。 この値をオーバーライドするには、 [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)を使用します。 このストアド プロシージャを使用すると、@stream_blob_columns を **false** に設定できます。 既にマージ レプリケーション用にパブリッシュされているテーブルに FILESTREAM 列を追加する場合は、sp_changemergearticle を使用してこのオプションを **true** に設定することをお勧めします。  
+-   マージ レプリケーションには、ラージ オブジェクト型のレプリケーションを最適化する機能が含まれています。 この機能は、[sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) の @stream_blob_columns パラメーターによって制御されます。 FILESTREAM 属性をレプリケートするスキーマ オプションを設定すると、@stream_blob_columns パラメーターの値が **true** に設定されます。 この値をオーバーライドするには、 [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)を使用します。 このストアド プロシージャを使用すると、@stream_blob_columns を **false** に設定できます。 既にマージ レプリケーション用にパブリッシュされているテーブルに FILESTREAM 列を追加する場合は、sp_changemergearticle を使用してこのオプションを **true** に設定することをお勧めします。  
   
 -   アーティクルが作成された後に FILESTREAM のスキーマ オプションを有効にすると、FILESTREAM 列のデータが 2 GB を超えていて、レプリケーションの間に競合が発生した場合に、レプリケーションが失敗します。 この状況が発生することが予想される場合は、いったんテーブル アーティクルを削除して、適切な FILESTREAM スキーマ オプションを有効にした状態で再作成することをお勧めします。  
   

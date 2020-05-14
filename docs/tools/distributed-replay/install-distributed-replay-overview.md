@@ -1,6 +1,7 @@
 ---
 title: 分散再生のインストール
 titleSuffix: SQL Server Distributed Replay
+description: この記事では、SQL Server に分散再生機能をインストールするために必要な情報へのリンクを提供します。
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -10,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: e5d1605d9f44cf5e28cd6e49b6a234de44f5c5f7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ba6115e530b0c8f5bd0a2d1ae9c03a3d7f701355
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74992133"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82999446"
 ---
 # <a name="install-distributed-replay---overview"></a>分散再生のインストール - 概要
 
@@ -32,7 +33,6 @@ ms.locfileid: "74992133"
 |[インストール後の手順の実行](../../tools/distributed-replay/complete-the-post-installation-steps.md)|分散再生のインストールを完了する手順に関するトピック。|  
 |[コントローラー サービスとクライアント サービスのアカウントを変更する](../../tools/distributed-replay/modify-the-controller-and-client-services-accounts.md)|分散再生コントローラー サービスと分散再生クライアント サービスを開始および停止する手順、およびサービス アカウントを変更する手順に関するトピック。|  
   
-## <a name="see-also"></a>参照  
- [SQL Server 2016 のインストール](../../database-engine/install-windows/install-sql-server.md)  
-  
-  
+## <a name="see-also"></a>参照
+
+-[SQL Server 2016 のインストール](../../database-engine/install-windows/install-sql-server.md)

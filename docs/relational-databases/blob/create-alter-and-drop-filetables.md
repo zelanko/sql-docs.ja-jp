@@ -1,5 +1,6 @@
 ---
 title: FileTable の作成、変更、および削除 | Microsoft Docs
+description: SQL Server では、ファイルを格納するために、FileTables 機能によってディレクトリ構造が使用されます。 新しい FileTable の作成や、既存の FileTable の変更または削除を行う方法について学習します。
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5483c2b6d344d72eb161b303abf1bf7e56825987
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bb0dd2a0196fbc832b0d0afeb0f02889ac1369a4
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76922890"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000190"
 ---
 # <a name="create-alter-and-drop-filetables"></a>FileTable の作成、変更、および削除
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +36,9 @@ ms.locfileid: "76922890"
   
 -   自動的に作成される 3 つの主キーと一意の制約で使用する名前。  
   
-###  <a name="how-to-create-a-filetable"></a><a name="HowToCreate"></a> 方法: FileTable を作成する  
+###  <a name="how-to-create-a-filetable"></a><a name="HowToCreate"></a> 方法:FileTable を作成する  
  **Transact-SQL を使用して FileTable を作成する**  
- FileTable を作成するには、[AS FileTable](../../t-sql/statements/create-table-transact-sql.md) オプションを指定して **CREATE TABLE &#40;Transact-SQL&#41;** ステートメントを呼び出します。 FileTable には固定スキーマがあるため、列の一覧を指定する必要はありません。 新しい FileTable には次の設定を指定できます。  
+ FileTable を作成するには、**AS FileTable** オプションを指定して [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) ステートメントを呼び出します。 FileTable には固定スキーマがあるため、列の一覧を指定する必要はありません。 新しい FileTable には次の設定を指定できます。  
   
 1.  **FILETABLE_DIRECTORY**。 FileTable に格納されたすべてのファイルおよびディレクトリのルート ディレクトリとなるディレクトリを指定します。 この名前は、データベース内のすべての FileTable ディレクトリ名の中で一意である必要があります。 一意性の比較では、現在の照合順序の設定とは関係なく、大文字と小文字は区別されません。  
   
@@ -107,7 +108,7 @@ GO
   
  ALTER TABLE ステートメントを使用して FileTable 名前空間 (システム定義の制約を含む) を有効または無効にする方法の詳細については、「 [FileTable の管理](../../relational-databases/blob/manage-filetables.md)」を参照してください。  
   
-###  <a name="how-to-change-the-directory-for-a-filetable"></a><a name="HowToChange"></a> 方法: FileTable のディレクトリを変更する  
+###  <a name="how-to-change-the-directory-for-a-filetable"></a><a name="HowToChange"></a> 方法:FileTable のディレクトリを変更する  
  **Transact-SQL を使用して FileTable のディレクトリを変更する**  
  ALTER TABLE ステートメントを呼び出し、有効な新しい値を **FILETABLE_DIRECTORY** SET オプションに指定します。  
   

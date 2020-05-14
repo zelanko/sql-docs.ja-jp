@@ -18,12 +18,12 @@ ms.assetid: 43661b89-8f13-4480-ad53-70306cbb14c5
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5a0385b96c861ae65cae70b332d0117eff97501
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 320dfc27d5582fd46d4ea7d8189e2a6ce4922144
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631842"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925206"
 ---
 # <a name="throw-transact-sql"></a>THROW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -48,7 +48,7 @@ THROW [ { error_number | @local_variable },
  *message*  
  例外を説明する文字列または変数です。 *message* は **nvarchar(2048)** です。  
   
- *state*  
+ *状態*  
  メッセージに関連付けられる状態を示す、0 から 255 の範囲の定数または変数です。 *state* は **tinyint** です。  
   
 ## <a name="remarks"></a>解説  
@@ -67,7 +67,7 @@ THROW [ { error_number | @local_variable },
 |-------------------------|---------------------|  
 |*msg_id* が RAISERROR に渡される場合、ID は sys.messages で定義する必要があります。|*error_number* パラメーターを sys.messages で定義する必要はありません。|  
 |*msg_str* パラメーターには **printf** 書式スタイルを含めることができます。|*message* パラメーターでは **printf** 書式スタイルは受け入れられません。|  
-|*severity* パラメーターでは例外の重大度を指定します。|*severity* パラメーターはありません。 例外の重大度は常に 16 に設定されます。|  
+|*severity* パラメーターでは例外の重大度を指定します。|*severity* パラメーターはありません。 例外を開始するために THROW を使用する場合、重大度は常に 16 に設定されます。 ただし、THROW を使用して既存の例外を再スローする場合、重大度はその例外の重大度レベルに設定されます。|  
   
 ## <a name="examples"></a>例  
   

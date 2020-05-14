@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: cfd9d2b00d1ba7aa1c56b967deb872d3d9bc0190
-ms.sourcegitcommit: d3e7c06fe989135f70d97f5ec6613fad4d62b145
+ms.openlocfilehash: 455e75d13c8b083d37bbab1c6a15916871b1ffba
+ms.sourcegitcommit: c53bab7513f574b81739e5930f374c893fc33ca2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82619655"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82987439"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (プレビュー)
 
@@ -170,7 +170,7 @@ AAD またはパブリック ストレージ アカウントを使用して認�
 *ERRORFILE = Directory Location*</br>
 *ERRORFILE* は CSV にのみ適用されます。 COPY ステートメント内でディレクトリを指定します。拒否された行と該当するエラー ファイルがそこに書き込まれます。 ストレージ アカウントからの完全なパスを指定することも、コンテナーを基準とした相対パスを指定することもできます。 指定したパスが存在しない場合は、自動的に作成されます。 "_rejectedrows" という名前で子ディレクトリが作成されます。"_ " 文字があることで、場所パラメーターで明示的に指定されない限り、他のデータ処理ではこのディレクトリがエスケープされます。 
 
-このディレクトリ内には、YearMonthDay -HourMinuteSecond (例:  20180330-173205) のロード サブミッション時間に基づいて作成されたフォルダーがあります。 このフォルダーには、理由 (エラー) ファイルとデータ (行) ファイルの 2 種類のファイルが書き込まれ、それぞれ queryID、distributionID、ファイル GUID が事前に追加されています。 データと理由が別々のファイル内にあり、対応するファイルはプレフィックスが一致しています。
+このディレクトリ内には、YearMonthDay -HourMinuteSecond (例: 20180330-173205) のロード サブミッション時間に基づいて作成されたフォルダーがあります。 このフォルダーには、理由 (エラー) ファイルとデータ (行) ファイルの 2 種類のファイルが書き込まれ、それぞれ queryID、distributionID、ファイル GUID が事前に追加されています。 データと理由が別々のファイル内にあり、対応するファイルはプレフィックスが一致しています。
 
 ERRORFILE でストレージ アカウントの完全なパスが定義されている場合、そのストレージへの接続には ERRORFILE_CREDENTIAL が使用されます。 それ以外の場合は、CREDENTIAL に指定された値が使用されます。
 
@@ -322,7 +322,7 @@ WITH (
     ENCODING = 'UTF8',
     DATEFORMAT = 'ymd',
     MAXERRORS = 10,
-    ERRORFILE = '/errorsfolder/',--path starting from the storage container
+    ERRORFILE = '/errorsfolder',--path starting from the storage container
     IDENTITY_INSERT = 'ON'
 )
 ```
@@ -372,6 +372,19 @@ WITH (
     FILE_TYPE = 'CSV'
     CREDENTIAL=(IDENTITY= '<client_id>@<OAuth_2.0_Token_EndPoint>',SECRET='<key>'),
     FIELDTERMINATOR = '|'
+)
+```
+
+### <a name="f-load-using-msi-credentials"></a>F. MSI 資格情報を使用して読み込む
+
+```sql
+COPY INTO dbo.myCOPYDemoTable
+FROM 'https://myaccount.blob.core.windows.net/myblobcontainer/folder0/*.txt'
+WITH (
+    FILE_TYPE = 'CSV',
+    CREDENTIAL = (IDENTITY = 'Managed Identity'),
+    FIELDQUOTE = '"',
+    FIELDTERMINATOR=','
 )
 ```
 

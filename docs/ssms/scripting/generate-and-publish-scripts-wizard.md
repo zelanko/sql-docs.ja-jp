@@ -43,14 +43,14 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e19f5ae872c8d37eb639372db54466da7221cc15
-ms.sourcegitcommit: 7ed12a64f7f76d47f5519bf1015d19481dd4b33a
+ms.openlocfilehash: b172457f50ca3d76c830f6ab2c789d28a3490ec8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80873138"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825668"
 ---
-# <a name="generate-and-publish-scripts-wizard"></a>スクリプトの生成とパブリッシュ ウィザード 
+# <a name="generate-and-publish-scripts-wizard"></a>スクリプトの生成とパブリッシュ ウィザード
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
@@ -156,6 +156,8 @@ ms.locfileid: "80873138"
 - **[ANSI Padding]** : **ANSI PADDING ON** をスクリプトに含めます。 既定値は **True**です。
 
 - **[ファイルに追加]** : **True**の場合、 **[スクリプト作成オプションの設定]** ページで指定した既存のスクリプトの末尾に、このスクリプトを追加します。 **False**の場合、以前のスクリプトが新しいスクリプトで上書きされます。 既定値は **False**です。
+
+- **[オブジェクトの有無を確認する]** : **True** の場合、SQL オブジェクトの CREATE ステートメントの生成前に存在確認が追加されます。 例: テーブル、ビュー、関数、またはストアド プロシージャ。 CREATE ステートメントは、IF ステートメントでラップされます。 ターゲットがクリーンであることがわかっている場合、スクリプトはさらにクリーンなものになります。 ターゲットにオブジェクトが存在することを想定していない場合は、エラーとなります。 既定値は **False**です。
 
 - **[エラー発生時にスクリプトを続行]** : **False** の場合、エラーが発生した時点でスクリプトの生成を停止します。 **True** の場合は、スクリプトの生成を続行します。 既定値は **False**です。
 

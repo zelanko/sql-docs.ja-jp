@@ -1,7 +1,8 @@
 ---
-title: 拡張イベント ログの診断情報へのアクセス | Microsoft Docs
+title: 拡張イベント ログの診断情報へのアクセス
+description: Microsoft JDBC Driver for SQL Server からイベントに関連するサーバーの拡張イベントにアクセスする方法について学習します。
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,20 +11,20 @@ ms.topic: conceptual
 ms.assetid: a79e9468-2257-4536-91f1-73b008c376c3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d5f8086c0ccb161bb94e1b878736b55ee306fe4b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 98d2ffca0ca9f8bab6f481ddf654bd388ecba4d7
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920345"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922247"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>拡張イベント ログの診断情報へのアクセス
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] では、トレース ([ドライバー操作のトレース](../../connect/jdbc/tracing-driver-operation.md)) が更新されました。サーバーの接続リング バッファーおよび拡張イベント ログ内のアプリケーション パフォーマンス情報から、接続エラーなどの診断情報にクライアント イベントを関連付けやすくなっています。 拡張イベント ログを表示する方法については、「[イベント セッション データの表示](https://msdn.microsoft.com/library/hh710068(SQL.110).aspx)」を参照してください。  
+  [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] では、トレース ([ドライバー操作のトレース](../../connect/jdbc/tracing-driver-operation.md)) が更新されました。サーバーの接続リング バッファーおよび拡張イベント ログ内のアプリケーション パフォーマンス情報から、接続エラーなどの診断情報にクライアント イベントを関連付けやすくなっています。 拡張イベント ログの読み取りの詳細については、[拡張イベント](../../relational-databases/extended-events/extended-events.md)に関するページを参照してください。  
   
 ## <a name="details"></a>詳細  
- 接続操作では、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] によってクライアント接続 ID が送信されます。 接続に失敗した場合は、接続リング バッファー ([接続リング バッファーによる SQL Server 2008 での接続トラブルシューティング](https://go.microsoft.com/fwlink/?LinkId=207752)) にアクセスし、**ClientConnectionID** フィールドを見つけて、接続エラーに関する診断情報を取得することができます。 クライアント接続 ID は、エラーが発生した場合にのみリング バッファーに記録されます (ログイン前のパケットを送信する前に接続に失敗した場合、クライアント接続 ID は生成されません)。クライアント接続 ID は 16 バイトの GUID です。 また、**client_connection_id** 操作を拡張イベント セッションのイベントに追加すると、拡張イベントのターゲット出力でクライアント接続 ID を検索することもできます。 クライアント ドライバーの詳しい診断サポートが必要な場合は、トレースを有効にして、接続コマンドを再実行し、トレース内の **ClientConnectionID** フィールドを調べます。  
+ 接続操作では、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] によってクライアント接続 ID が送信されます。 接続に失敗した場合は、接続リング バッファー ([接続リング バッファーによる SQL Server 2008 での接続トラブルシューティング](/archive/blogs/sql_protocols/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer)) にアクセスし、**ClientConnectionID** フィールドを見つけて、接続エラーに関する診断情報を取得することができます。 クライアント接続 ID は、エラーが発生した場合にのみリング バッファーに記録されます (ログイン前のパケットを送信する前に接続に失敗した場合、クライアント接続 ID は生成されません)。クライアント接続 ID は 16 バイトの GUID です。 また、**client_connection_id** 操作を拡張イベント セッションのイベントに追加すると、拡張イベントのターゲット出力でクライアント接続 ID を検索することもできます。 クライアント ドライバーの詳しい診断サポートが必要な場合は、トレースを有効にして、接続コマンドを再実行し、トレース内の **ClientConnectionID** フィールドを調べます。  
   
  [ISQLServerConnection インターフェイス](../../connect/jdbc/reference/isqlserverconnection-interface.md)を使用すると、クライアント接続 ID をプログラムで取得できます。 接続 ID は接続関連の例外にも含まれます。  
   
@@ -51,7 +52,6 @@ add event rpc_completed (action (client_connection_id))
 add target ring_buffer with (track_causality=on)  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [JDBC ドライバーに関する問題の診断](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
-  
-  
+## <a name="see-also"></a>関連項目
+
+[JDBC ドライバーに関する問題の診断](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  

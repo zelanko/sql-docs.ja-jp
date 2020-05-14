@@ -38,12 +38,12 @@ ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da4f6e997d3f99e9c64c7623a616fe5d45c283db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 405071c6f4752ab3aebc9f96d23dd2b5734fb39a
+ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82169370"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82872766"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -458,7 +458,7 @@ ID     Value
 ```  
 
 ## <a name="locking-behavior"></a>ロック動作  
- UPDATE ステートメントでは、常に、そのステートメントで変更するテーブルについて排他 (X) ロックを獲得し、トランザクションが完了するまでそのロックを保持します。 排他ロックをかけたトランザクション以外はデータを変更できません。 別のロック手法を指定することにより、UPDATE ステートメントの存続期間におけるこの既定の動作をオーバーライドするためのテーブル ヒントを指定できます。ただし、このヒントは、経験豊富な開発者およびデータベース管理者が最後の手段としてのみ使用することを推奨します。 詳細については、「[テーブル ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)」を参照してください。  
+ UPDATE ステートメントでは、変更するすべての行について排他 (X) ロックが獲得され、トランザクションが完了するまでそのロックが保持されます。 UPDATE ステートメントのクエリ プラン、変更される行の数、およびトランザクション分離レベルによっては、ロックが行レベルではなく、ページ レベルまたはテーブル レベルで取得される場合があります。 これらの上位レベルのロックを回避するには、何千もの行に影響を与える UPDATE ステートメントをバッチに分割し、結合およびフィルター条件がインデックスによってサポートされるようにすることを検討してください。 SQL Server でのロックのメカニズムの詳細については、「[データベース エンジンのロック](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#Lock_Engine)」の記事を参照してください。  
   
 ## <a name="logging-behavior"></a>ログ記録の動作  
  UPDATE ステートメントはログに記録されますが、 **\.WRITE** 句を使用して値の大きなデータ型の一部を更新する場合には、最低限の内容だけがログに記録されます。 詳細については、前のセクション「データ型」の「大きな値のデータ型を更新する」を参照してください。  
@@ -884,7 +884,7 @@ WHERE Title = N'Crank Arm and Tire Maintenance';
 GO  
 ```  
   
-#### <a name="t-using-update-with-openrowset-to-modify-a-varbinarymax-column"></a>T.  UPDATE を OPENROWSET と共に使用し、varbinary(max) 列を変更する  
+#### <a name="t-using-update-with-openrowset-to-modify-a-varbinarymax-column"></a>T. UPDATE を OPENROWSET と共に使用し、varbinary(max) 列を変更する  
  次の例では、**varbinary(max)** 列に格納されている既存のイメージを新しいイメージで置換します。 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 関数を BULK オプションと共に使用し、列にイメージを読み込みます。 この例では、`Tires.jpg` という名前のファイルが指定されたファイル パスに存在することを前提としています。  
   
 ```sql  
@@ -898,7 +898,7 @@ WHERE ProductPhotoID = 1;
 GO  
 ```  
   
-#### <a name="u-using-update-to-modify-filestream-data"></a>U.  UPDATE を使用して FILESTREAM データを変更する  
+#### <a name="u-using-update-to-modify-filestream-data"></a>U. UPDATE を使用して FILESTREAM データを変更する  
  次の例では、UPDATE ステートメントを使用して、ファイル システムのファイルのデータを変更します。 大量のデータをファイルにストリーミングする場合、この方法はお勧めできません。 適切な Win32 インターフェイスを使用してください。 ファイル レコード内の任意のテキストを、 `Xray 1`というテキストに置換する例を次に示します。 詳細については、「[FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)」をご覧ください。  
   
 ```sql  

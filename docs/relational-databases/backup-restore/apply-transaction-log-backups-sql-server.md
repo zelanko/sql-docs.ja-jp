@@ -1,5 +1,6 @@
 ---
 title: トランザクション ログ バックアップの適用 (SQL Server) | Microsoft Docs
+description: この記事では、完全復旧モデルまたは一括ログ復旧モデルでの SQL Server データベースの復元の一環として、トランザクション ログ バックアップを適用する方法について説明します。
 ms.custom: ''
 ms.date: 10/23/2019
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 62d90931cdc1d7748f47edabb31e5f9404b1262d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f70156f5f725b10af712d0d5e898367715e46394
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72916198"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834544"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>トランザクション ログ バックアップの適用 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,9 +35,9 @@ ms.locfileid: "72916198"
   
 -   **復元シーケンスに必要なログ バックアップの保持:** 復元シーケンスを完了できるだけのログ レコードがバックアップされている必要があります。 復元シーケンスを開始する前に、必要なログ バックアップ (必要な場合は [ログ末尾のバックアップ](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) も含む) が用意されている必要があります。  
   
--   **正しい復元順序:**  先に、データベースの前回の完全バックアップまたは差分バックアップを復元する必要があります。 次に、その完全バックアップまたは差分バックアップの後に作成されたすべてのトランザクション ログを日時順に復元する必要があります。 このログ チェーン内のトランザクション ログ バックアップが失われたかまたは損傷している場合は、失われたトランザクション ログよりも前のトランザクション ログのみを復元できます。  
+-   **正しい復元順序:** 先に、データベースの前回の完全バックアップまたは差分バックアップを復元する必要があります。 次に、その完全バックアップまたは差分バックアップの後に作成されたすべてのトランザクション ログを日時順に復元する必要があります。 このログ チェーン内のトランザクション ログ バックアップが失われたかまたは損傷している場合は、失われたトランザクション ログよりも前のトランザクション ログのみを復元できます。  
   
--   **データベースはまだ復旧されていない:**  データベースは、最後のトランザクション ログが適用されるまで復旧できません。 いずれかの中間トランザクション ログ バックアップを復元した後 (ログ チェーンが終わる前) にデータベースを復旧する場合、その時点以降にデータベースを復元するには、データベースの完全バックアップから復元シーケンス全体を再度開始する必要があります。  
+-   **データベースはまだ復旧されていない:** データベースは、最後のトランザクション ログが適用されるまで復旧できません。 いずれかの中間トランザクション ログ バックアップを復元した後 (ログ チェーンが終わる前) にデータベースを復旧する場合、その時点以降にデータベースを復元するには、データベースの完全バックアップから復元シーケンス全体を再度開始する必要があります。  
   
     > [!TIP]
     > ベスト プラクティスとして、すべてのログ バックアップを復元することをお勧めします (`RESTORE LOG *database_name* WITH NORECOVERY`)。 次に、最後のログ バックアップを復元した後、別の操作でデータベースを復旧します (`RESTORE DATABASE *database_name* WITH RECOVERY`)。  
@@ -104,7 +105,7 @@ ms.locfileid: "72916198"
   
 -   [データを復元しないデータベースの復旧 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)     
  [SQL Server トランザクション ログのアーキテクチャと管理ガイド](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)      
   

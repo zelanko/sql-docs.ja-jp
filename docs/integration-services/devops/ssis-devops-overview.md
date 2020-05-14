@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 619fddade48e56c28995b193776e6d13f31918ac
-ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
+ms.openlocfilehash: 0b57ac8ea8462a5c79feb1a91c4f9d205927b953
+ms.sourcegitcommit: c53bab7513f574b81739e5930f374c893fc33ca2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80809719"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82987206"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools-preview"></a>SQL Server Integration Services (SSIS) DevOps ツール (プレビュー)
 
@@ -344,6 +344,14 @@ SSIS カタログ構成のインライン JSON。 このプロパティは、構
 |sensitive|環境変数の値が機微であるかどうか。|有効な入力は次のとおりです。 <br> *true* <br> *false*|
 
 ## <a name="release-notes"></a>リリース ノート
+
+### <a name="version-100"></a>バージョン 1.0.0
+
+リリース日:2020 年 5 月 8 日
+
+- 一般公開 (GA) リリース。
+- エージェントに対する .NET Framework の最小バージョンに制限が追加されました。 現在、.NET Framework の最小バージョンは 4.6.2 です。
+- SSIS Build タスクと SSIS Deploy タスクの説明が改善されました。
 
 ### <a name="version-020-preview"></a>バージョン 0.2.0 プレビュー
 

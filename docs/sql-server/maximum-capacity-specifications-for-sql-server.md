@@ -1,5 +1,6 @@
 ---
 title: SQL Server の最大容量仕様
+description: この記事では、SQL Server コンポーネントで定義される各種オブジェクトの最大サイズと最大数を追加情報と共に示します。
 ms.date: 03/05/2020
 ms.prod: sql
 ms.reviewer: ''
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 36f66c64cb3055aad20dee7a87d429065ca54cc6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 03b4da335fad10135ef592913022e705adc0e9a0
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79510223"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82999449"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server の最大容量仕様
 
@@ -152,6 +153,6 @@ ms.locfileid: "79510223"
 
 <sup>**</sup>ベース テーブルには、パブリケーション データベースで許容される最大数 ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の場合は 1,024) の列を含めることができますが、列数がパブリケーション タイプに対して指定された最大数を超える場合は、アーティクルから列をフィルター選択する必要があります。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [SQL Server ユーティリティの機能とタスク](../relational-databases/manage/sql-server-utility-features-and-tasks.md)

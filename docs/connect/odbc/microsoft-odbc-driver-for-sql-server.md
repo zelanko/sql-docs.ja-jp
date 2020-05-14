@@ -1,8 +1,8 @@
 ---
-title: Microsoft ODBC Driver for SQL Server | Microsoft Docs
+title: Microsoft SQL Server 用 ODBC Driver
 description: Microsoft ODBC Driver for SQL Server を使うと、標準の ODBC API を使用して SQL Server や Azure SQL Database に接続できます。
 ms.custom: ''
-ms.date: 02/05/2019
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8eb3024d231522ce9c96e9a9cacd48a97c0b5869
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 42fce5ed05099227cf134b7bd244b7c93e98d501
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486777"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886340"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft SQL Server 用 ODBC Driver
 
@@ -76,8 +76,7 @@ ODBC ドライバーには、[**sqlcmd**](../../tools/sqlcmd-utility.md) や [**
 - [Windows 上の SQL Server に対する ODBC のリリース ノート](windows/release-notes-odbc-sql-server-windows.md)
 - [システム要件、インストール、およびドライバー ファイル](../../connect/odbc/windows/system-requirements-installation-and-driver-files.md)
 
+## <a name="community"></a>コミュニティ
 
-
-## <a name="community"></a>コミュニティ  
-- [Microsoft ODBC Driver For SQL Server チーム ブログ](https://blogs.msdn.com/sqlnativeclient/default.aspx)  
+- [SQL Server ドライバーのブログ](https://techcommunity.microsoft.com/t5/SQL-Server/bg-p/SQLServer/label-name/SQLServerDrivers)  
 - [SQL Server データ アクセス フォーラム](https://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)  

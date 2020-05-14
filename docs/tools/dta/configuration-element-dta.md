@@ -1,5 +1,6 @@
 ---
 title: Configuration 要素 (DTA)
+description: dta ユーティリティでは、Configuration 要素により、既存の仮想物理設計構造から成るユーザー指定の構成を指定します。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 79073bca20afa853c1b6fbf548ed804f71f074fe
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 265b66ece4d4430f7d26763cbd72f24f528dd959
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307986"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831656"
 ---
 # <a name="configuration-element-dta"></a>Configuration 要素 (DTA)
 

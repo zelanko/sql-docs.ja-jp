@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6e750070f51dc6cba1b035e9426d9814e4fd1b67
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5625c3429a9bae89ae940fb552a3e6d1e58678c9
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558041"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82999430"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>セキュア エンクレーブを使用する Always Encrypted
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
@@ -156,7 +156,7 @@ bacpac ファイルを使ってデータベースを移行するときは、bacp
 - ランダム化された暗号化を使用して暗号化された列での、パターン マッチング (LIKE) および比較演算子。
     > [!NOTE]
     > 上記の操作は、バイナリ 2 並べ替え順序 (BIN2 照合順序) による照合順序を使用する文字列型の列に対してサポートされます。 BIN2 以外の照合順序を使用する文字列型の列は、ランダム化された暗号化およびエンクレーブ対応の列暗号化キーを使用して、暗号化できます。 ただし、このような列に対して有効な唯一の新機能はインプレース暗号化です。
-- ランダム化された暗号化を使用する列での非クラスター化インデックスの作成。
+- ランダム化された暗号化を使用する列での非クラスター化インデックスと統計の作成。
 
 「[機能の詳細](always-encrypted-database-engine.md#feature-details)」に記載されている Always Encrypted に対する他のすべての制限は、セキュリティで保護されたエンクレーブが設定された Always Encrypted にも適用されます。
 
