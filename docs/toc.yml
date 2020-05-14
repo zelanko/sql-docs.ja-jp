@@ -3,7 +3,7 @@
 - name: ドキュメントのナビゲーションに関するヒント
   href: sql-server/sql-docs-navigation-guide.md
 - name: 以前のバージョン 2005-2014
-  href: toc/previous-versions-sql-server.md
+  href: sql-server/previous-versions-sql-server.md
 - name: 概要
   items:
     - name: 新機能
@@ -2451,7 +2451,7 @@
               href: relational-databases/express-localdb-error-messages/localdb-error-wait-timeout.md
             - name: LOCALDB_ERROR_XEVENT_FAILED
               href: relational-databases/express-localdb-error-messages/localdb-error-xevent-failed.md
-        - name: 'インスタンス API: '
+        - name: 'インスタンス API:'
           href: relational-databases/express-localdb-instance-apis/sql-server-express-localdb-reference-instance-apis.md
           items:
             - name: 'コマンド ライン管理ツール: SqlLocalDB.exe'
