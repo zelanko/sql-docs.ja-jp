@@ -39,12 +39,12 @@ ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f8edfa82e611fe10ba3645f16370e7d4b54542a
-ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
+ms.openlocfilehash: 7ccced8b93b5f657d8fd0afe96f95d7b9f8a98a6
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82262094"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "73981711"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY 句 (Transact-SQL)
 
@@ -63,7 +63,7 @@ ms.locfileid: "82262094"
 
 ## <a name="syntax"></a>構文  
   
-```syntaxsql
+```
 -- Syntax for SQL Server and Azure SQL Database  
   
 ORDER BY order_by_expression  
@@ -81,7 +81,7 @@ ORDER BY order_by_expression
 }  
 ```  
   
-```syntaxsql
+```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 [ ORDER BY   
@@ -392,19 +392,20 @@ ORDER BY DepartmentID
 ```  
   
 #### <a name="b-specifying-variables-for-offset-and-fetch-values"></a>B. OFFSET と FETCH の値として変数を指定する  
- 次の例では、変数 `@RowsToSkip` および `@FetchRows` を宣言し、これらの変数を OFFSET および FETCH 句で指定しています。  
+ 次の例では、変数 `@StartingRowNumber` および `@FetchRows` を宣言し、これらの変数を OFFSET および FETCH 句で指定しています。  
   
 ```sql
 USE AdventureWorks2012;  
 GO  
 -- Specifying variables for OFFSET and FETCH values    
-DECLARE @RowsToSkip tinyint = 2
+DECLARE @StartingRowNumber tinyint = 1  
       , @FetchRows tinyint = 8;  
 SELECT DepartmentID, Name, GroupName  
 FROM HumanResources.Department  
 ORDER BY DepartmentID ASC   
-    OFFSET @RowsToSkip ROWS   
+    OFFSET @StartingRowNumber ROWS   
     FETCH NEXT @FetchRows ROWS ONLY;  
+  
 ```  
   
 #### <a name="c-specifying-expressions-for-offset-and-fetch-values"></a>C. OFFSET と FETCH の値として式を指定する  
