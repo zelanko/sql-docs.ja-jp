@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c751992e666151752783e9813efa2f696fcdcb6e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 610f837c5354a72c665da067fcc8fea582ac6de3
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77903776"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152004"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]とは
 
@@ -117,7 +117,7 @@ Kubernetes はオープン ソースのコンテナー オーケストレータ�
 記憶域プールは、SQL Server on Linux、Spark、および HDFS で構成される記憶域プール ポッドで構成されます。 SQL Server ビッグ データ クラスター内のすべての記憶域ノードは、HDFS クラスターのメンバーです。
 
 > [!TIP]
-> ビッグ データ クラスターのアーキテクチャとインストールの詳細については、「[ワークショップ:Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] アーキテクチャ](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)」を参照してください。
+> ビッグ データ クラスターのアーキテクチャとインストールの詳細については、「[ワークショップ:Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] アーキテクチャ](https://github.com/microsoft/sqlworkshops-bdc)」を参照してください。
 
 ## <a name="next-steps"></a>次のステップ
 

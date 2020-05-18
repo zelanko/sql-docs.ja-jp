@@ -14,19 +14,19 @@ ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e85741c2d1f5b3435a0e790a81bc29697ee269ee
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 516a05c1a797278fd5de383acc39284d689ce191
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001123"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151577"
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 リリース ノート
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
   ここでは、SQL Server 2016 リリースでの制限事項と問題について説明します。Service Pack についても説明します。 新機能については、「 [SQL Server 2016 の新機能](https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2016)」をご覧ください。
 
 - [![Evaluation Center からダウンロードする](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** から SQL Server 2016 をダウンロードする
-- [![Azure Virtual Machine のアイコン](../includes/media/azure-vm.png)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016) Azure アカウントをすでにお持ちですか?  **[こちら](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview)** にアクセスして、SQL Server 2016 SP1 がインストール済みの仮想マシンをすぐにご利用いただけます。
+- [![Azure Virtual Machine のアイコン](../includes/media/azure-vm.png)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview) Azure アカウントをすでにお持ちですか?  **[こちら](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview)** にアクセスして、SQL Server 2016 SP1 がインストール済みの仮想マシンをすぐにご利用いただけます。
 - [![SSMS をダウンロードする](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) 最新版の SQL Server Management Studio を入手するには、「 **[SQL Server Management Studio (SSMS) のダウンロード](../ssms/download-sql-server-management-studio-ssms.md)** 」をご覧ください。
 
 ## <a name="sql-server-2016-service-pack-2-sp2"></a><a name="bkmk_2016sp2"></a>SQL Server 2016 Service Pack 2 (SP2)
