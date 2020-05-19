@@ -11,24 +11,24 @@ topic_type:
 helpviewer_keywords:
 - SQLProcedureColumns function
 ms.assetid: 6671e180-0072-4de5-90f5-314306d2ba9c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 21c0a7248f2e8c5313678f503b239cdf44d16ea7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 536d8551b82918aae34fa25723c99e8cfad5f1ad
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046717"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705881"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
-  `SQLProcedureColumns`すべて[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のストアドプロシージャの戻り値の属性を報告する1行を返します。  
+  `SQLProcedureColumns`すべてのストアドプロシージャの戻り値の属性を報告する1行を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
  `SQLProcedureColumns`*CatalogName*、 *SchemaName*、 *ProcName*、または*ColumnName*パラメーターの値が存在するかどうか SQL_SUCCESS を返します。 これらのパラメーターで無効な値が使用されている場合、 **Sqlfetch**は SQL_NO_DATA を返します。  
   
  `SQLProcedureColumns` は静的サーバー カーソルで実行できます。 更新可能なカーソル (動的カーソルまたはキーセット カーソル) で `SQLProcedureColumns` を実行しようとすると、カーソルの種類が変更されていることを示す SQL_SUCCESS_WITH_INFO が返されます。  
   
- 次の表に、結果セットによって返される列と、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC ドライバーを使用して**udt**および**xml**データ型を処理するように拡張された列を示します。  
+ 次の表に、結果セットによって返される列と、Native Client ODBC ドライバーを使用して**udt**および**xml**データ型を処理するように拡張された列を示し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 |列名|説明|  
 |-----------------|-----------------|  

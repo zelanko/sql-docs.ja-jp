@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 0678bfbc-5d3f-44f4-89c0-13e8e52404da
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e53e51a021315c79659e684327e8b7eb784001be
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bf9e3f3e7bf2d170faf0eaab2be18098a24b52cc
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112220"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706969"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>SQL Server 2014 で提供が中止された機能
   このトピックでは、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] にアップグレードした後で使用できなくなる機能について説明します。  
@@ -40,13 +40,13 @@ ms.locfileid: "79112220"
 ## <a name="discontinued-features-in-sql-server-2008"></a>SQL Server 2008 で提供が中止された機能  
   
 ### <a name="discontinued-sql-dmo-from-sql-server-express-installation"></a>SQL Server Express で提供が中止された SQL-DMO  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の SQL-DMO が [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)] から削除されました。 この機能を現在使用しているアプリケーションはできるだけ早く変更することをお勧めします。 Express 用の[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sql-dmo をサポートする必要がある場合は、 [Microsoft ダウンロードセンター](https://www.microsoft.com/download/)から[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 、feature Pack から旧バージョンとの互換性コンポーネントをインストールしてください。 新しい開発作業では、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) を使用してください。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の SQL-DMO が [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)] から削除されました。 この機能を現在使用しているアプリケーションはできるだけ早く変更することをお勧めします。 Express 用の sql-dmo をサポートする必要がある場合は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [Microsoft ダウンロードセンター](https://www.microsoft.com/download/)から、Feature pack から旧バージョンとの互換性コンポーネントをインストールしてください。 新しい開発作業では、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) を使用してください。  
   
 ### <a name="discontinued-option-for-web-assistant"></a>廃止された Web Assistant オプション  
  [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] では、Web Assistant を有効にする `sp_configure` オプションが削除されました。 代わりに [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] を使用することをお勧めします。  
   
 ### <a name="surface-area-configuration-tool"></a>セキュリティ構成ツール  
- で[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]は、セキュリティ構成ツールは廃止されました。 以下の表に、このリリースの設定、オプション、およびコンポーネントの機能を構成する際に使用できる方法を示します。  
+ では、セキュリティ構成ツールは廃止されました [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 。 以下の表に、このリリースの設定、オプション、およびコンポーネントの機能を構成する際に使用できる方法を示します。  
   
 |置換設定とコンポーネントの機能|構成方法|  
 |-------------------------------------------------|----------------------|  
@@ -78,7 +78,7 @@ ms.locfileid: "79112220"
   
  <sup>1</sup>これらのパラメーターは、インストールに対してのみ有効です。  
   
- <sup>2</sup>最初[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]に、/Action = EditionUpgrade を指定して、の既存[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のエディションを別のエディションにアップグレードします。このとき、元のインストールメディアを使用する必要はありません。 サポートされるバージョンとエディションのアップグレードについては、「 [Supported Version and Edition Upgrades](../database-engine/install-windows/supported-version-and-edition-upgrades.md)」を参照してください。  
+ <sup>2</sup>[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]最初に、/Action = EditionUpgrade を指定して、の既存のエディション [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を別のエディションにアップグレードします。このとき、元のインストールメディアを使用する必要はありません。 サポートされるバージョンとエディションのアップグレードについては、「 [Supported Version and Edition Upgrades](../database-engine/install-windows/supported-version-and-edition-upgrades.md)」を参照してください。  
   
  詳細については、「[コマンド プロンプトからの SQL Server 2014 のインストール](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)」を参照してください。  
   

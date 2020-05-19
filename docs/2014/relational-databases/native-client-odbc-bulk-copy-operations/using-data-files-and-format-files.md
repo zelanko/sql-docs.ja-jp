@@ -14,15 +14,15 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 - bulk copy [ODBC], data files
 ms.assetid: c01b7155-3f0a-473d-90b7-87a97bc56ca5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4c49ccb59a8e6ab1b027de02afee37252e8cc482
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 51efa12bcb308c64c8c63a425cdc615dab237e04
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206833"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705801"
 ---
 # <a name="using-data-files-and-format-files"></a>データ ファイルとフォーマット ファイルの使用
   最も単純な一括コピー プログラムでは次の操作を実行します。  
@@ -49,7 +49,7 @@ ms.locfileid: "68206833"
   
  フォーマットファイルで記述されたデータファイルからを一括コピーする場合は、 **bcp_init**の後、 **bcp_exec**する前に[bcp_readfmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md)を呼び出してフォーマットファイルを読み取ります。  
   
- **Bcp_control**関数は、データファイルからへ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の一括コピー時にいくつかのオプションを制御します。 **bcp_control**は、終了前のエラーの最大数、一括コピーを開始するファイル内の行、停止する行、バッチサイズなどのオプションを設定します。  
+ **Bcp_control**関数は、データファイルからへの一括コピー時にいくつかのオプションを制御し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 **bcp_control**は、終了前のエラーの最大数、一括コピーを開始するファイル内の行、停止する行、バッチサイズなどのオプションを設定します。  
   
 ## <a name="see-also"></a>参照  
  [ODBC&#41;&#40;の一括コピー操作の実行](performing-bulk-copy-operations-odbc.md)  

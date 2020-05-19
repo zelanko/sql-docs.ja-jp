@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: xevents
 ms.topic: conceptual
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d44ab9256367ceb9883b55bb9b01ad67e14ded32
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a229b02f60c56b9979d2d31788910b3faa63cb2f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62705518"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706646"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>オブジェクト エクスプローラーでのイベント セッションの管理
   このトピックでは、拡張イベントに影響する **オブジェクト エクスプローラー** で実行できる操作について説明します。  
@@ -36,7 +36,7 @@ ms.locfileid: "62705518"
  拡張イベント セッションの作成の詳細については、「 [拡張イベント セッションの作成](../../database-engine/create-an-extended-events-session.md)」を参照してください。  
   
 ## <a name="starting-or-stopping-an-extended-events-session"></a>拡張イベント セッションの開始または停止  
- 拡張イベントセッションを開始または停止するには、**クエリエディター**で`ALTER EVENT SESSION`ステートメントを使用するか、**オブジェクトエクスプローラー**の [**拡張イベント**] ノードを使用します。  
+ 拡張イベントセッションを開始または停止するには、**クエリエディター**でステートメントを使用する `ALTER EVENT SESSION` か、**オブジェクトエクスプローラー**の [**拡張イベント**] ノードを使用します。  
   
  イベント セッションを停止すると、以後そのセッションは、sys.dm_xe_sessions 動的管理ビュー (DMV) にアクティブなセッションとして表示されません。 ただし、セッションの定義は一切変更されず、セッションを再開することもできます。 セッションの定義を完全に削除するには、セッションを削除する必要があります。  
   
@@ -96,7 +96,7 @@ STATE = STOP
   
 4.  **[テンプレート]** ボックスを展開します。  
   
-5.  [ ** \<ファイルから**] をクリックして >開き、インポートするセッション (XML ファイル) を参照します。  
+5.  [ ** \< ファイルから**] をクリックして >開き、インポートするセッション (XML ファイル) を参照します。  
   
  **[セッション]** ノードにセッションが表示されます。 既定では、セッションは開始されていません。  
   
@@ -128,7 +128,7 @@ STATE = STOP
  イベント セッションを削除すると、すべての構成情報が削除され、以後、セッションの定義は sys.server_event_sessions カタログ ビューに表示されません。  
   
 > [!NOTE]  
->  system_health と AlwaysOn_health は、に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]含まれています。削除しないでください。 system_health は既定で有効です (詳細については、「 [system_health セッションの使用](use-the-ssms-xe-profiler.md)」を参照)。 既定では、AlwaysOn_health はオフになっています。 パフォーマンスの問題を診断する際に役立つデータがこれらのセッションによって収集されます。  
+>  system_health と AlwaysOn_health はに含まれています。削除しないで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ください。 system_health は既定で有効です (詳細については、「 [system_health セッションの使用](use-the-ssms-xe-profiler.md)」を参照)。 既定では、AlwaysOn_health はオフになっています。 パフォーマンスの問題を診断する際に役立つデータがこれらのセッションによって収集されます。  
   
  拡張イベント セッションを削除するには、ALTER ANY EVENT SESSION 権限が必要です。  
   

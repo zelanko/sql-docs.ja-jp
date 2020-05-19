@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: a362ed51-314c-4783-9598-538dbf755f3d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8c16ac4d18806b670c8b3e27dc09c9019d7ecdeb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 19617c65b350527753895ed613f671c3ac0f88e8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67967248"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764013"
 ---
 # <a name="append-method-adox-tables"></a>Append メソッド (ADOX Tables)
 [Tables](../../../ado/reference/adox-api/tables-collection-adox.md)コレクションに新しい[Table](../../../ado/reference/adox-api/table-object-adox.md)オブジェクトを追加します。  
@@ -34,7 +34,7 @@ Tables.Append Table
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *一覧*  
+ *テーブル*  
  追加する**テーブル**への参照、または作成および追加するテーブルの名前を含む**バリアント**値です。  
   
 ## <a name="remarks"></a>Remarks  

@@ -11,24 +11,24 @@ topic_type:
 helpviewer_keywords:
 - IRowsetFastLoad interface
 ms.assetid: d19a7097-48d9-409a-aff9-277891b7aca7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 35cee52e9a85989123bcb10d998d37ce86a28601
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 720ea095343abefb0b56f4f1f47bbd853d72378e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63209814"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707343"
 ---
 # <a name="irowsetfastload-ole-db"></a>IRowsetFastLoad (OLE DB)
-  インターフェイス`IRowsetFastLoad`は、メモリベース[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の一括コピー操作のサポートを公開します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーコンシューマーは、インターフェイスを使用して、既存[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のテーブルにデータを迅速に追加します。  
+  インターフェイスは、 `IRowsetFastLoad` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メモリベースの一括コピー操作のサポートを公開します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーコンシューマーは、インターフェイスを使用して、既存のテーブルにデータを迅速に追加し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
  セッションで SSPROP_ENABLEFASTLOAD を VARIANT_TRUE に設定した場合、その後にそのセッションから返される行セットのデータを読み取ることはできません。 SSPROP_ENABLEFASTLOAD が VARIANT_TRUE に設定されている場合、そのセッションで作成される行セットはすべて IRowsetFastLoad 型になります。 IRowsetFastLoad の行セットは行セットのフェッチをサポートしていないため、これらの行セットのデータを読み取ることはできません。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|Method|説明|  
+|メソッド|説明|  
 |------------|-----------------|  
 |[IRowsetFastLoad::Commit &#40;OLE DB&#41;](irowsetfastload-commit-ole-db.md)|挿入される行のバッチの終わりをマークし、挿入された行を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルに書き込みます。|  
 |[IRowsetFastLoad::InsertRow &#40;OLE DB&#41;](irowsetfastload-insertrow-ole-db.md)|一括コピー行セットに行を追加します。|  

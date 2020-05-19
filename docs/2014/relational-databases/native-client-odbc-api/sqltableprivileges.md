@@ -11,20 +11,20 @@ topic_type:
 helpviewer_keywords:
 - SQLTablePrivileges function
 ms.assetid: 8cce22d5-28b1-4b50-a5bc-1de03e0ffd6b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 51492e55fd3c34c099a5f53187d1b2a9875ce7e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 03c19fecd314bd67949b133e6c1e0ae9e8292d3d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63188636"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705857"
 ---
 # <a name="sqltableprivileges"></a>SQLTablePrivileges
   **Sqltableprivileges**は、静的カーソルで実行できます。 更新可能な (キーセットドリブンまたは動的) に対して**Sqltableprivileges**を実行しようとすると、カーソルの種類が変更されたことを示す SQL_SUCCESS_WITH_INFO が返されます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC ドライバーでは、 *CatalogName*パラメーターに2つの部分で構成される名前を使用して、リンクサーバー上のテーブルに関する情報のレポートをサポートしています。 *Linked_Server_Name Catalog_Name*。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーでは、 *CatalogName*パラメーターに2つの部分で構成される名前を使用して、リンクサーバー上のテーブルに関する情報のレポートをサポートしています。 *Linked_Server_Name Catalog_Name*。  
   
 ## <a name="see-also"></a>参照  
  [SQLTablePrivileges 関数](https://go.microsoft.com/fwlink/?LinkId=59373\)   

@@ -11,20 +11,20 @@ topic_type:
 helpviewer_keywords:
 - SQLGetConnectAttr function
 ms.assetid: 26e4e69a-44fd-45e3-b47a-ae39184f041b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 818c136814062c94491cfa02b84d2fff443a1f0a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9f6f6ee0d881f470f1251c99f17212f1648b85c4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63128665"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706085"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、ドライバー固有の接続属性が定義されます。 一部の属性は`SQLGetConnectAttr`で使用できます。関数は、現在の設定をレポートするために使用されます。 これらの属性について報告される値は、接続が確立されるか、または[SQLSetConnectAttr](sqlsetconnectattr.md)を使用して属性が設定されるまでは保証されません。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、ドライバー固有の接続属性が定義されます。 一部の属性はで使用でき `SQLGetConnectAttr` ます。関数は、現在の設定をレポートするために使用されます。 これらの属性について報告される値は、接続が確立されるか、または[SQLSetConnectAttr](sqlsetconnectattr.md)を使用して属性が設定されるまでは保証されません。  
   
- ここでは、読み取り専用の属性を示します。 Native Client ODBC ドライバー固有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のその他の接続属性の詳細については、「 [SQLSetConnectAttr](sqlsetconnectattr.md)」を参照してください。  
+ ここでは、読み取り専用の属性を示します。 Native Client ODBC ドライバー固有のその他の接続属性の詳細については [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、「 [SQLSetConnectAttr](sqlsetconnectattr.md)」を参照してください。  
   
 ## <a name="sql_copt_ss_connection_dead"></a>SQL_COPT_SS_CONNECTION_DEAD  
  SQL_COPT_SS_CONNECTION_DEAD 属性では、サーバーへの接続状態が報告されます。 ドライバーは、接続の現在の状態をネットワークにクエリします。  
@@ -54,7 +54,7 @@ ms.locfileid: "63128665"
 |SQL_SUCCESS|接続に成功しました。 クライアント接続 ID は出力バッファーで見つかります。|  
   
 ## <a name="sql_copt_ss_perf_data"></a>SQL_COPT_SS_PERF_DATA  
- SQL_COPT_SS_PERF_DATA 属性は、現在のドライバーのパフォーマンス統計情報を保持する SQLPERF 構造体へのポインターを返します。 `SQLGetConnectAttr`パフォーマンスログが有効になっていない場合、は NULL を返します。 SQLPERF 構造体内の統計情報がドライバーで動的に更新されることはありません。 パフォーマンス`SQLGetConnectAttr`統計を更新する必要があるたびに、を呼び出します。  
+ SQL_COPT_SS_PERF_DATA 属性は、現在のドライバーのパフォーマンス統計情報を保持する SQLPERF 構造体へのポインターを返します。 `SQLGetConnectAttr`パフォーマンスログが有効になっていない場合、は NULL を返します。 SQLPERF 構造体内の統計情報がドライバーで動的に更新されることはありません。 `SQLGetConnectAttr`パフォーマンス統計を更新する必要があるたびに、を呼び出します。  
   
 |[値]|説明|  
 |-----------|-----------------|  

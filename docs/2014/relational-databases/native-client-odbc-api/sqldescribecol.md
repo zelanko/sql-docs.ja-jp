@@ -11,18 +11,18 @@ topic_type:
 helpviewer_keywords:
 - SQLDescribeCol function
 ms.assetid: ffbf34c6-8268-434f-829a-82009a6cda59
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 95d367efc0bf3fb3e3a74bd0ba9d48b9d8f25be2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dda7c4c0e2ae187f96883a32cac2528eceb90c74
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067769"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706297"
 ---
 # <a name="sqldescribecol"></a>SQLDescribeCol
-  実行されるステートメントの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]場合、NATIVE Client ODBC ドライバーでは、結果セットの列を説明するためにサーバーに対してクエリを実行する必要はありません。 この場合、 `SQLDescribeCol`はサーバーのラウンドトリップを発生させません。 [Sqlcolattribute](sqlnumresultcols.md)と同様、 `SQLDescribeCol`準備済みで実行されていないステートメントを呼び出すと、サーバーのラウンドトリップが生成されます。  
+  実行されるステートメントの場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC ドライバーでは、結果セットの列を説明するためにサーバーに対してクエリを実行する必要はありません。 この場合、 `SQLDescribeCol` はサーバーのラウンドトリップを発生させません。 [Sqlcolattribute](sqlnumresultcols.md)と同様、 `SQLDescribeCol` 準備済みで実行されていないステートメントを呼び出すと、サーバーのラウンドトリップが生成されます。  
   
  1 つの [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントまたはステートメント バッチから複数の結果行セットが返される場合、別のテーブルの列を序数で参照したり、結果セット内の別の列を参照することができます。 `SQLDescribeCol`各セットに対してを呼び出す必要があります。 結果セットが変更されると、アプリケーションでは、行の結果をフェッチする前に、データ値を再バインドする必要があります。 複数の結果セットを返す処理の詳細については、「 [Sqlmoreresults](sqlmoreresults.md)」を参照してください。  
   
@@ -30,16 +30,16 @@ ms.locfileid: "63067769"
   
  大きな値のデータ型の場合、 *DataTypePtr*で返される値は SQL_VARCHAR、SQL_VARBINARY、または SQL_NVARCHAR です。 *Columnsizeptr*の SQL_SS_LENGTH_UNLIMITED の値は、サイズが "無制限" であることを示します。  
   
- で[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]始まるデータベースエンジンの機能強化により、SQLDescribeCol は、予期される結果についてより正確な説明を取得できます。 これらのより正確な結果は、以前のバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で SQLDescribeCol によって返された値とは異なる場合があります。 詳細については、「[メタデータの検出](../native-client/features/metadata-discovery.md)」を参照してください。  
+ で始まるデータベースエンジンの機能強化により [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 、SQLDescribeCol は、予期される結果についてより正確な説明を取得できます。 これらのより正確な結果は、以前のバージョンので SQLDescribeCol によって返された値とは異なる場合があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 詳細については、「[メタデータの検出](../native-client/features/metadata-discovery.md)」を参照してください。  
   
 ## <a name="sqldescribecol-support-for-enhanced-date-and-time-features"></a>SQLDescribeCol による機能強化された日付と時刻のサポート  
  日付型または時刻型に対して返される値を次に示します。  
   
 ||*DataTypePtr*|*ColumnSizePtr*|*DecimalDigitsPtr*|  
 |-|-------------------|---------------------|------------------------|  
-|datetime|SQL_TYPE_TIMESTAMP|23|3|  
+|DATETIME|SQL_TYPE_TIMESTAMP|23|3|  
 |smalldatetime|SQL_TYPE_TIMESTAMP|16|0|  
-|日付|SQL_TYPE_DATE|10|0|  
+|date|SQL_TYPE_DATE|10|0|  
 |time|SQL_SS_TIME2|8、10..16|0..7|  
 |datetime2|SQL_TYPE_TIMESTAMP|19、21..27|0..7|  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET|26、28..34|0..7|  

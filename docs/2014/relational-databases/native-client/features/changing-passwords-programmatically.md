@@ -18,18 +18,18 @@ helpviewer_keywords:
 - SQL Server Native Client, password expiration
 - modifying passwords
 ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0ec1db8e0f88bea5a02eb54b94a88194882ad9ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: edee56c6d162f92234e235f9369a0ab91457639e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046254"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707320"
 ---
 # <a name="changing-passwords-programmatically"></a>プログラムによるパスワードの変更
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] より前のリリースでは、ユーザーのパスワードの有効期限が切れたとき、そのパスワードをリセットできるのは管理者だけでした。 以降で[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]は[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 、native client は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client OLE DB プロバイダーと[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client ODBC ドライバーの両方を介してプログラムによってパスワードの有効期限を処理し、SQL Server の**ログイン**ダイアログボックスに変更を加えることができます。  
+  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] より前のリリースでは、ユーザーのパスワードの有効期限が切れたとき、そのパスワードをリセットできるのは管理者だけでした。 以降で [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] は、Native client は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client OLE DB プロバイダーと NATIVE client ODBC ドライバーの両方を介してプログラムによってパスワードの有効期限を処理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] し、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **SQL Server のログイン**ダイアログボックスに変更を加えることができます。  
   
 > [!NOTE]  
 >  可能であれば、実行時にユーザーの資格情報を入力し、それらの資格情報を永続的な形式で保存しないように求めるメッセージが表示されます。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。 パスワードの使用に関する詳細については、「[強力なパスワード](../../security/strong-passwords.md)」を参照してください。  
@@ -50,10 +50,10 @@ ms.locfileid: "63046254"
 |18488|ユーザー '%.*ls' はログインできませんでした。 理由: このアカウントのパスワードを変更する必要があります。|  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB プロバイダー  
- Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、ユーザーインターフェイスとプログラムを使ってパスワードの有効期限をサポートします。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、ユーザーインターフェイスとプログラムを使ってパスワードの有効期限をサポートします。  
   
 ### <a name="ole-db-user-interface-password-expiration"></a>OLE DB ユーザー インターフェイスによるパスワード期限切れの処理  
- Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、 **SQL Server ログイン**ダイアログボックスに対して行われた変更によって、パスワードの有効期限をサポートします。 DBPROP_INIT_PROMPT の値を DBPROMPT_NOPROMPT に設定すると、パスワードの有効期限が切れている場合に、最初の接続試行が失敗します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、 **SQL Server ログイン**ダイアログボックスに対して行われた変更によって、パスワードの有効期限をサポートします。 DBPROP_INIT_PROMPT の値を DBPROMPT_NOPROMPT に設定すると、パスワードの有効期限が切れている場合に、最初の接続試行が失敗します。  
   
  DBPROP_INIT_PROMPT を DBPROMPT_NOPROMPT 以外の値に設定している場合は、パスワードの有効期限が切れているかどうかに関係なく、**[SQL Server ログイン]** ダイアログ ボックスが表示されます。 ユーザーは、**[オプション]** をクリックし、**[パスワードの変更]** チェック ボックスをオンにしてパスワードを変更できます。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "63046254"
  リセットの試行が失敗すると、その接続はプールから削除され、エラーが返されます。  
   
 ### <a name="ole-db-programmatic-password-expiration"></a>OLE DB プログラムによるパスワード期限切れの処理  
- Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、DBPROPSET_SQLSERVERDBINIT のプロパティセットに追加された SSPROP_AUTH_OLD_PASSWORD (type VT_BSTR) プロパティを追加することによって、パスワードの有効期限をサポートします。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、DBPROPSET_SQLSERVERDBINIT のプロパティセットに追加された SSPROP_AUTH_OLD_PASSWORD (type VT_BSTR) プロパティを追加することによって、パスワードの有効期限をサポートします。  
   
  既存の "Password" プロパティは DBPROP_AUTH_PASSWORD を参照し、新しいパスワードを保存する場合に使用されます。  
   
@@ -89,16 +89,16 @@ ms.locfileid: "63046254"
  DBPROPSET_SQLSERVERDBINIT プロパティ セットの詳細については、「[初期化プロパティと承認プロパティ](../../native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md)」を参照してください。  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC ドライバー  
- Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、ユーザーインターフェイスとプログラムを使ってパスワードの有効期限をサポートします。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、ユーザーインターフェイスとプログラムを使ってパスワードの有効期限をサポートします。  
   
 ### <a name="odbc-user-interface-password-expiration"></a>ODBC ユーザー インターフェイスによるパスワード期限切れの処理  
- Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client ODBC ドライバーでは、 **SQL Server ログイン**ダイアログボックスに対して行われた変更によって、パスワードの有効期限がサポートされます。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーでは、 **SQL Server ログイン**ダイアログボックスに対して行われた変更によって、パスワードの有効期限がサポートされます。  
   
  [SQLDriverConnect](../../native-client-odbc-api/sqldriverconnect.md)が呼び出され、 **drivercompletion**の値が SQL_DRIVER_NOPROMPT に設定されている場合、パスワードの有効期限が切れていると、最初の接続試行は失敗します。 SQLSTATE 値28000とネイティブエラーコード値18487は、次の**SQLError**または**SQLGetDiagRec**への呼び出しによって返されます。  
   
  **Drivercompletion**がその他の値に設定されている場合、パスワードの有効期限が切れているかどうかにかかわらず、ユーザーには**SQL Server ログイン**ダイアログが表示されます。 ユーザーは、**[オプション]** をクリックし、**[パスワードの変更]** チェック ボックスをオンにしてパスワードを変更できます。  
   
- ユーザーが [OK] をクリックし、パスワードの[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]有効期限が切れている場合は、[ **SQL Server パスワードの変更**] ダイアログボックスを使用して、新しいパスワードの入力と確認を求めるメッセージが表示されます。  
+ ユーザーが [OK] をクリックし、パスワードの有効期限が切れている場合は、[ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **SQL Server パスワードの変更**] ダイアログボックスを使用して、新しいパスワードの入力と確認を求めるメッセージが表示されます。  
   
 #### <a name="odbc-prompt-behavior-and-locked-accounts"></a>ODBC プロンプトの動作とロックされたアカウント  
  アカウントがロックされていることにより、接続に失敗することがあります。 **[SQL Server ログイン]** ダイアログ ボックスが表示された後にこの現象が発生する場合は、サーバー エラー メッセージが表示され、接続試行が中止されます。 また、**[パスワードの変更]** ダイアログ ボックスが表示された後にユーザーが古いパスワードに無効な値を入力すると、この現象が発生することもあります。 この場合も同じエラー メッセージが表示され、接続試行が中止されます。  
@@ -109,11 +109,11 @@ ms.locfileid: "63046254"
  リセットの試行が失敗すると、その接続はプールから削除され、エラーが返されます。  
   
 ### <a name="odbc-programmatic-password-expiration"></a>ODBC プログラムによるパスワードの有効期限  
- Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client ODBC ドライバーでは、 [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md)関数を使用してサーバーに接続する前に設定されている SQL_COPT_SS_OLDPWD 属性を追加することによって、パスワードの有効期限をサポートしています。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーでは、 [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md)関数を使用してサーバーに接続する前に設定されている SQL_COPT_SS_OLDPWD 属性を追加することによって、パスワードの有効期限をサポートしています。  
   
  接続ハンドルの SQL_COPT_SS_OLDPWD 属性は、期限切れのパスワードを表します。 接続文字列の属性は接続プーリングに影響を与えることになるので、この属性に関する接続文字列属性はありません。 ログインに成功すると、この属性はクリアされます。  
   
- Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client ODBC ドライバーは、パスワードの有効期限、パスワードポリシーの競合、アカウントのロックアウト、Windows 認証の使用時に古いパスワードプロパティが設定されている場合に、この機能の4つのケースで SQL_ERROR を返します。 [SQLGetDiagField](../../native-client-odbc-api/sqlgetdiagfield.md)が呼び出されると、ドライバーはユーザーに適切なエラーメッセージを返します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーは、パスワードの有効期限、パスワードポリシーの競合、アカウントのロックアウト、Windows 認証の使用時に古いパスワードプロパティが設定されている場合に、この機能の4つのケースで SQL_ERROR を返します。 [SQLGetDiagField](../../native-client-odbc-api/sqlgetdiagfield.md)が呼び出されると、ドライバーはユーザーに適切なエラーメッセージを返します。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Native Client の機能](sql-server-native-client-features.md)  

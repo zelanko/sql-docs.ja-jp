@@ -10,15 +10,15 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server], SQL Server Native Client
 - SQL Server Native Client [FILESTREAM support]
 ms.assetid: 1ad3400d-7fcd-40c9-87ae-f5afc61e0374
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 33e447048f7058ee81b0b144f0aa94a370f6d670
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab8ca7912db7607acbca716f733184ed57dc681e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046265"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707294"
 ---
 # <a name="filestream-support"></a>FILESTREAM のサポート
   FILESTREAM を使用すると、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を経由するか、Windows ファイル システムに直接アクセスすることで、大きなバイナリ値の格納やアクセスが可能になります。 大きなバイナリ値とは、2 ギガバイト (GB) よりも大きい値です。 強化された FILESTREAM のサポートの詳細については、「[FILESTREAM &#40;SQL Server&#41;](../../blob/filestream-sql-server.md)」を参照してください。  
@@ -40,9 +40,9 @@ ms.locfileid: "63046265"
   
  ODBC の SQLColumns などのカタログ関数では、列が FILESTREAM 列かどうかは報告されません。  
   
- Filestream 列を作成したり、どの既存の列が FILESTREAM 列であるかを`is_filestream`検出したりするには[、[列カタログ]](/sql/relational-databases/system-catalog-views/sys-columns-transact-sql)ビューの列を使用します。  
+ Filestream 列を作成したり、どの既存の列が FILESTREAM 列であるかを検出したりするには、[列 `is_filestream` カタログ] ビューの列を使用します。 [sys.columns](/sql/relational-databases/system-catalog-views/sys-columns-transact-sql)  
   
- 以下に例を示します。  
+ 次に例を示します。  
   
 ```  
 -- Create a table with a FILESTREAM column.  
@@ -56,11 +56,11 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
 ```  
   
 ## <a name="down-level-compatibility"></a>下位互換性  
- クライアント[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]が、に[!INCLUDE[ssVersion2005](../../../includes/sscurrent-md.md)]含まれていたバージョンの Native client を使用し`varbinary(max)`てコンパイルされて[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]いる場合、動作はと互換性があります。 返されるデータの最大サイズが 2 GB に制限されます。 戻り値が 2 GB より大きい場合は切り捨てが行われ、"文字列データの右側が切り捨てられました" という警告が返されます。  
+ クライアントが、に含まれていたバージョンの Native Client を使用してコンパイルされている場合 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssVersion2005](../../../includes/sscurrent-md.md)] 、 `varbinary(max)` 動作はと互換性があり [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ます。 返されるデータの最大サイズが 2 GB に制限されます。 戻り値が 2 GB より大きい場合は切り捨てが行われ、"文字列データの右側が切り捨てられました" という警告が返されます。  
   
  データ型の互換性が 80 に設定されている場合は、クライアントの動作で下位クライアントとの互換性が維持されます。  
   
- SQLOLEDB または[!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)] Native Client より前にリリースされたその他のプロバイダー `varbinary(max)`を使用するクライアントでは、がイメージにマップされます。  
+ SQLOLEDB または Native Client より前にリリースされたその他のプロバイダーを使用するクライアントで [!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)] `varbinary(max)` は、がイメージにマップされます。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Native Client の機能](sql-server-native-client-features.md)  

@@ -10,18 +10,18 @@ helpviewer_keywords:
 - xml data type [SQL Server], variables
 - xml data type [SQL Server], columns
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3fe1414131991a35b316a50da730f42e8b02d462
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a62d8fbafc353e2d71223506b7fb4516d184b494
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62637995"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717100"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>XML データ型の変数と列の作成
-  `xml`データ型は、の組み込みデータ型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で、や`int` `varchar`などの他の組み込み型と似ています。 他の組み込み型と同様に、変数の型、 `xml`パラメーターの型、関数の戻り値の型、または[CAST および CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql)としてテーブルを作成するときに、列の型としてデータ型を使用できます。  
+  `xml`データ型は、の組み込みデータ型で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] やなどの他の組み込み型と似てい `int` `varchar` ます。 他の組み込み型と同様に、変数の型 `xml` 、パラメーターの型、関数の戻り値の型、または[CAST および CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql)としてテーブルを作成するときに、列の型としてデータ型を使用できます。  
   
 ## <a name="creating-columns-and-variables"></a>列と変数の作成  
  テーブルの一部として `xml` 型の列を作成するには、 `CREATE TABLE` ステートメントを使用します。次に例を示します。  
@@ -129,7 +129,7 @@ INSERT INTO T values(1,'<Product />')
 ## <a name="same-or-different-table"></a>同じテーブルと別のテーブル  
  `xml`データ型の列は、他のリレーショナル列を含むテーブル、またはメインテーブルとの外部キーリレーションシップを持つ別のテーブルに作成できます。  
   
- 次の`xml`いずれかの条件に該当する場合は、同じテーブルにデータ型の列を作成します。  
+ `xml`次のいずれかの条件に該当する場合は、同じテーブルにデータ型の列を作成します。  
   
 -   XML 列のデータを取得するが、その列に XML インデックスは不要な場合。  
   

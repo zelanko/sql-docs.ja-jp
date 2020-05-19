@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - processing results [ODBC]
 ms.assetid: 4810fe3f-78ee-4f0d-8bcc-a4659fbcf46f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 21474aed83aac1fe86e2242b1238affa11ae64a0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 060709db7842173f6f30e78a6384a4b9489dfb3d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200318"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82712838"
 ---
 # <a name="process-results-odbc"></a>結果の処理 (ODBC)
     
@@ -33,7 +33,7 @@ ms.locfileid: "63200318"
   
     -   バインドされた列が使用されている場合は、バインドされた列のバッファー内で現在使用可能なデータを使用します。  
   
-    -   バインドされていない列が使用されている場合は、[SQLGetData](../native-client-odbc-api/sqlgetdata.md) を 1 回以上呼び出して、バインドされている最後の列の後に、バインドされていない列のデータを取得します。 の呼び出し`SQLGetData`は、列番号の昇順にする必要があります。  
+    -   バインドされていない列が使用されている場合は、[SQLGetData](../native-client-odbc-api/sqlgetdata.md) を 1 回以上呼び出して、バインドされている最後の列の後に、バインドされていない列のデータを取得します。 の呼び出し `SQLGetData` は、列番号の昇順にする必要があります。  
   
     -   `SQLGetData` を複数回呼び出して、text または image 列からデータを取得します。  
   

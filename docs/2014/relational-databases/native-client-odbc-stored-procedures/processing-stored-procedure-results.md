@@ -11,15 +11,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, stored procedures
 - stored procedures [ODBC], results
 ms.assetid: 788ef2a4-17de-4526-960b-46bf29aafc9f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3e7ffe8b73a7df4cbe2fddcaa0864e338b039f53
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 18ffd4adb4387d8b7bc4209cd8e8532abdd686ac
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68205485"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82709544"
 ---
 # <a name="processing-stored-procedure-results"></a>ストアド プロシージャの結果の処理
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ストアド プロシージャには、データを返す際に使用する次の 4 つのメカニズムがあります。  
@@ -32,7 +32,7 @@ ms.locfileid: "68205485"
   
 -   プロシージャに整数のリターン コードを含めることができる。  
   
- アプリケーションでは、ストアド プロシージャからのこれらすべての出力を処理できる必要があります。 CALL ステートメントや EXECUTE ステートメントには、リターン コードと出力パラメーター用のパラメーター マーカーを含める必要があります。 [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md)を使用してすべてを出力パラメーターとし[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]てバインドすると、Native Client ODBC ドライバーは、バインドされた変数に出力値を転送します。 出力パラメーターとリターンコードは、によって[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアントに返される最後の項目です。[Sqlmoreresults](../native-client-odbc-api/sqlmoreresults.md)が SQL_NO_DATA を返すまで、アプリケーションには返されません。  
+ アプリケーションでは、ストアド プロシージャからのこれらすべての出力を処理できる必要があります。 CALL ステートメントや EXECUTE ステートメントには、リターン コードと出力パラメーター用のパラメーター マーカーを含める必要があります。 [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md)を使用してすべてを出力パラメーターとしてバインドすると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、バインドされた変数に出力値を転送します。 出力パラメーターとリターンコードは、によってクライアントに返される最後の項目であり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Sqlmoreresults](../native-client-odbc-api/sqlmoreresults.md)が SQL_NO_DATA を返すまでアプリケーションに返されません。  
   
  ODBC は、[!INCLUDE[tsql](../../includes/tsql-md.md)] カーソル パラメーターのバインドをサポートしません。 プロシージャの実行前にすべての出力パラメーターをバインドしておく必要があるので、出力カーソル パラメーターを含む [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャを ODBC アプリケーションから呼び出すことはできません。  
   

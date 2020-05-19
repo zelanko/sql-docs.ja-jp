@@ -18,15 +18,15 @@ helpviewer_keywords:
 - SQL Server Books Online, accessibility features
 - customer service [SQL Server]
 ms.assetid: 0f85627e-e9d0-4b17-896a-218c9f31d339
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a653c4b5cd8d6e1bb9b5c826039169a7a5b80278
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8f3786ac7f031510d8985cb97634cbfc92024c4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74683593"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707023"
 ---
 # <a name="accessibility-for-people-with-disabilities"></a>障害がある方のためのユーザー補助機能
   [!INCLUDE[msCoName](../includes/msconame-md.md)] では、すべてのユーザーにとって使いやすい製品とサービスを提供するために努力しています。 このトピックでは、障害がある方に [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows Server ファミリを快適に使用していただくための機能、製品、サービスなどについて説明します。  
@@ -79,10 +79,10 @@ ms.locfileid: "74683593"
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマニュアルはオンラインで入手できます。 詳細については、「 [SQL Server の製品ドキュメントの使用](../2014-toc/index.yml)」を参照してください。  
   
 ## <a name="obtaining-documentation-for-additional-msconame-products"></a>その他の [!INCLUDE[msCoName](../includes/msconame-md.md)] 製品のマニュアルの入手  
- 製品の[!INCLUDE[msCoName](../includes/msconame-md.md)]ユーザー補助ドキュメントは、 [Microsoft アクセシビリティ Web サイト](https://go.microsoft.com/fwlink/?LinkID=67164)から入手できます。  
+ 製品のユーザー補助ドキュメントは [!INCLUDE[msCoName](../includes/msconame-md.md)] 、 [Microsoft アクセシビリティ Web サイト](https://go.microsoft.com/fwlink/?LinkID=67164)から入手できます。  
   
 ### <a name="recording-for-the-blind--dyslexic-inc"></a>Recording for the Blind & Dyslexic, Inc.  
- ブラインド & Dyslexic, [!INCLUDE[msCoName](../includes/msconame-md.md)] Inc. の記録から追加のパブリケーションを取得できます。これらのドキュメントは、カセットテープまたはフロッピーディスク上の配布サービスの登録済みの資格のあるメンバーに配布されます。 同社の発行物には、[!INCLUDE[msCoName](../includes/msconame-md.md)] 製品のマニュアルや [!INCLUDE[msCoName](../includes/msconame-md.md)] プレスの書籍など、8 万以上のタイトルが含まれています。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 製品のマニュアルと [!INCLUDE[msCoName](../includes/msconame-md.md)] プレスの書籍の入手資格と入手方法については、下記までお問い合わせください。  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)]ブラインド & Dyslexic, inc. の記録から追加のパブリケーションを取得できます。これらのドキュメントは、カセットテープまたはフロッピーディスク上の配布サービスの登録済みの資格のあるメンバーに配布されます。 同社の発行物には、[!INCLUDE[msCoName](../includes/msconame-md.md)] 製品のマニュアルや [!INCLUDE[msCoName](../includes/msconame-md.md)] プレスの書籍など、8 万以上のタイトルが含まれています。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 製品のマニュアルと [!INCLUDE[msCoName](../includes/msconame-md.md)] プレスの書籍の入手資格と入手方法については、下記までお問い合わせください。  
   
  ブラインド & Dyslexic、Inc. 20 Roszel 道路 Princeton 08540 の記録  
   
@@ -97,7 +97,7 @@ ms.locfileid: "74683593"
 ## <a name="customer-service-for-people-who-are-deaf-or-hard-of-hearing"></a>聴覚に障碍がある方のためのカスタマー サービス  
  聴覚に障碍がある方は、テキスト電話 (TTY/TDD) サービスをご利用いただくと、 [!INCLUDE[msCoName](../includes/msconame-md.md)] の製品およびカスタマー サービスのすべてにアクセスできます。  
   
-### <a name="customer-service"></a>カスタマー サービス  
+### <a name="customer-service"></a>Customer Service  
  電話では、 [!INCLUDE[msCoName](../includes/msconame-md.md)] (800) 892-5234 から6:30 の午前2時までの間、電話で販売情報センターに連絡することができます。 午後 5 時 30 分までの間 (太平洋標準時)、米国内の技術サポートをテキスト電話で受け付けています。  
   
 ### <a name="technical-help"></a>技術サポート  

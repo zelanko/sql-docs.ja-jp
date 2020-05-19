@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: ac47cb74-5578-417d-bcef-f970d9527705
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dd93707ef139b1751d918af43efed72574d58aa5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 58449d2d7d685eaceb3b3015121cb4f59271a46d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088505"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706860"
 ---
 # <a name="sql-server-backward-compatibility"></a>SQL Server の旧バージョンとの互換性
-  「旧バージョンとの互換性」セクションの[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]トピックでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のバージョン間の動作の変更について説明します。  
+  「旧バージョンとの互換性」セクションのトピックでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のバージョン間の動作の変更について説明し [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ます。  
   
  このトピック領域に含まれる機能には、データ プログラミング、セキュリティ構成ツール、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] セットアップ、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] サービス、およびその他の幅広い機能の変更が含まれます。  
   

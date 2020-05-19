@@ -11,14 +11,14 @@ helpviewer_keywords:
 - properties [ADOX]
 - ADOX, properties
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 32a36388b1be6dc7f5bab6bbb0bd9f97b01aac46
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6aed31fef1f685effc3216d6055de0faf0e22698
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67910608"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764103"
 ---
 # <a name="adox-properties"></a>ADOX のプロパティ
 
@@ -26,7 +26,7 @@ ms.locfileid: "67910608"
 |-|-|  
 |[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)|カタログが属する ADO**接続**オブジェクトを示します。|  
 |[属性](../../../ado/reference/adox-api/attributes-property-adox.md)|列の特性について説明します。|  
-|[非](../../../ado/reference/adox-api/clustered-property-adox.md)|インデックスがクラスター化されているかどうかを示します。|  
+|[クラスター化インデックス](../../../ado/reference/adox-api/clustered-property-adox.md)|インデックスがクラスター化されているかどうかを示します。|  
 |[コマンド](../../../ado/reference/adox-api/command-property-adox.md)|プロシージャを作成または実行するために使用できる ADO**コマンド**オブジェクトを指定します。|  
 |[Count](../../../ado/reference/ado-api/count-property-ado.md)|コレクション内のオブジェクトの数を示します。|  
 |[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)|オブジェクトが作成された日付を示します。|  
@@ -34,7 +34,7 @@ ms.locfileid: "67910608"
 |[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)|列の最大サイズを示します。|  
 |[DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md)|主キーが削除されたときに実行されるアクションを示します。|  
 |[IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md)|インデックスフィールドに null 値を持つレコードのインデックスエントリがあるかどうかを示します。|  
-|[項目](../../../ado/reference/ado-api/item-property-ado.md)|名前または序数を指定して、コレクションの特定のメンバーを示します。|  
+|[Item](../../../ado/reference/ado-api/item-property-ado.md)|名前または序数を指定して、コレクションの特定のメンバーを示します。|  
 |[名前](../../../ado/reference/adox-api/name-property-adox.md)|オブジェクトの名前を示します。|  
 |[NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md)|列の数値の小数点以下桁数を示します。|  
 |[ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)|プロバイダー固有のプロパティへのアクセスを提供する、テーブルまたは列の親カタログを指定します。|  
@@ -46,7 +46,7 @@ ms.locfileid: "67910608"
 |[型 (列)](../../../ado/reference/adox-api/type-property-column-adox.md)|列のデータ型を示します。|  
 |[型 (キー)](../../../ado/reference/adox-api/type-property-key-adox.md)|キーのデータ型を示します。|  
 |[型 (テーブル)](../../../ado/reference/adox-api/type-property-table-adox.md)|テーブルの種類を示します。|  
-|[固有](../../../ado/reference/adox-api/unique-property-adox.md)|インデックスキーが一意である必要があるかどうかを示します。|  
+|[[一意]](../../../ado/reference/adox-api/unique-property-adox.md)|インデックスキーが一意である必要があるかどうかを示します。|  
 |[UpdateRule](../../../ado/reference/adox-api/updaterule-property-adox.md)|主キーが更新されたときに実行されるアクションを示します。|  
   
 ## <a name="see-also"></a>参照  

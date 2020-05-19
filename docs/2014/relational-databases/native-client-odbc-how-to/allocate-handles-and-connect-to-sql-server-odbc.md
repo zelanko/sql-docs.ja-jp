@@ -11,15 +11,15 @@ helpviewer_keywords:
 - handles [ODBC], connection
 - handles [ODBC], about handles
 ms.assetid: 6172cd52-9c9a-467d-992f-def07f3f3bb1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 322120624c612371b56029c2cf29c9ab457c81b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f9237c5a92367769674d585b11f0d930b2d6fbbd
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63225499"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82715032"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>ハンドルの割り当てと SQL Server への接続 (ODBC)
     
@@ -29,21 +29,21 @@ ms.locfileid: "63225499"
   
 2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ドライバー固有のヘッダー ファイル Odbcss.h を含めます。  
   
-3.  を[SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396)使用して`HandleType` SQLAllocHandle を呼び出し SQL_HANDLE_ENV、ODBC を初期化して環境ハンドルを割り当てます。  
+3.  を使用して[SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396)を呼び出し `HandleType` SQL_HANDLE_ENV、ODBC を初期化して環境ハンドルを割り当てます。  
   
-4.  を SQL_ATTR_ODBC_VERSION に`Attribute`設定し、を`ValuePtr` SQL_OV_ODBC3 に設定して、アプリケーションが ODBC 3. x 形式の関数呼び出しを使用することを示すには、[を呼び出します](../native-client-odbc-api/sqlsetenvattr.md)。  
+4.  [SQLSetEnvAttr](../native-client-odbc-api/sqlsetenvattr.md) `Attribute` を SQL_ATTR_ODBC_VERSION に設定し、 `ValuePtr` を SQL_OV_ODBC3 に設定して、アプリケーションが ODBC 3. x 形式の関数呼び出しを使用することを示すには、を呼び出します。  
   
 5.  必要に応じて、 [SQLSetEnvAttr](../native-client-odbc-api/sqlsetenvattr.md)を呼び出して他の環境オプションを設定するか、 [SQLGetEnvAttr](https://go.microsoft.com/fwlink/?LinkId=58403)を呼び出して環境オプションを取得します。  
   
-6.  SQL_HANDLE_DBC [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396)のを使用`HandleType`して SQLAllocHandle を呼び出し、接続ハンドルを割り当てます。  
+6.  SQL_HANDLE_DBC のを使用して[SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396)を呼び出し、 `HandleType` 接続ハンドルを割り当てます。  
   
 7.  必要に応じて、 [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md)を呼び出して接続オプションを設定するか、 [Sqlgetconnectattr](../native-client-odbc-api/sqlgetconnectattr.md)を呼び出して接続オプションを取得します。  
   
-8.  SQLConnect を呼び出して、既存のデータソースを使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]してに接続します。  
+8.  SQLConnect を呼び出して、既存のデータソースを使用してに接続 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。  
   
-     Or  
+     または  
   
-     接続[SQLDriverConnect](../native-client-odbc-api/sqldriverconnect.md)文字列を使用してに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続するには、SQLDriverConnect を呼び出します。  
+     接続文字列を使用してに接続するには、 [SQLDriverConnect](../native-client-odbc-api/sqldriverconnect.md)を呼び出し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
      最小の完全な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続文字列は、次の 2 つの形式のいずれかになります。  
   
@@ -56,15 +56,15 @@ ms.locfileid: "63225499"
   
      \- または  
   
-     反復的な方法で[SQLBrowseConnect](../native-client-odbc-api/sqlbrowseconnect.md)を複数回呼び出して、接続文字列を作成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]し、に接続します。  
+     反復的な方法で[SQLBrowseConnect](../native-client-odbc-api/sqlbrowseconnect.md)を複数回呼び出して、接続文字列を作成し、に接続し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
-9. 必要に応じて、 [SQLGetInfo](../native-client-odbc-api/sqlgetinfo.md)を呼び出して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データソースのドライバー属性と動作を取得します。  
+9. 必要に応じて、 [SQLGetInfo](../native-client-odbc-api/sqlgetinfo.md)を呼び出して、データソースのドライバー属性と動作を取得し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 10. ステートメントを割り当てて使用します。  
   
-11. 切断[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]するには sqldisconnect を呼び出し、接続ハンドルを新しい接続に使用できるようにします。  
+11. 切断するには SQLDisconnect を呼び出し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続ハンドルを新しい接続に使用できるようにします。  
   
-12. SQL_HANDLE_DBC のを`HandleType`使用して[sqlfreehandle](../native-client-odbc-api/sqlfreehandle.md)を呼び出し、接続ハンドルを解放します。  
+12. SQL_HANDLE_DBC のを使用して[Sqlfreehandle](../native-client-odbc-api/sqlfreehandle.md) `HandleType` を呼び出し、接続ハンドルを解放します。  
   
 13. `SQLFreeHandle` を SQL_HANDLE_ENV として `HandleType` を呼び出し、環境ハンドルを解放します。  
   

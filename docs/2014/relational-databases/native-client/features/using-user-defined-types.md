@@ -18,15 +18,15 @@ helpviewer_keywords:
 - data access [SQL Server Native Client], user-defined types
 - ISSCommandWithParameters interface
 ms.assetid: e15d8169-3517-4323-9c9e-0f5c34aff7df
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f2adbf40b3fe0b0e079198087a47f525d464a41b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa78cc2d4d27fdfb1db6333f21685263d22dd97e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206612"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707174"
 ---
 # <a name="using-user-defined-types"></a>ユーザー定義型の使用
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] では、ユーザー定義型 (UDT) が導入されました。 これにより、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースにオブジェクトやカスタム データ構造を格納できるようになり、SQL の型システムが拡張されます。 UDT は複数のデータ型を持つことができ、動作を定義できます。この点は、1 つの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] システム データ型から構成される従来の別名データ型と異なります。 UDT は、検証可能なコードを生成する .NET 共通言語ランタイム (CLR) でサポートされる任意の言語を使用して定義されます。 これには Microsoft Visual<sup>C# が</sup>含まれますか? Visual Basic<sup>?</sup> Net. データは、.NET のクラスまたは構造体のフィールドやプロパティとして公開され、動作はクラスまたは構造体のメソッドによって定義されます。  
@@ -34,13 +34,13 @@ ms.locfileid: "68206612"
  UDT は、テーブルの列定義、[!INCLUDE[tsql](../../../includes/tsql-md.md)] バッチの変数、または [!INCLUDE[tsql](../../../includes/tsql-md.md)] 関数やストアド プロシージャの引数として使用することができます。  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB プロバイダー  
- Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、udt をメタデータ情報と共にバイナリ型としてサポートします。これにより、udt をオブジェクトとして管理できます。 UDT 列は、DBTYPE_UDT 型として公開され、この列のメタデータは主要な OLE DB インターフェイスの **IColumnRowset** と新しいインターフェイスの [ISSCommandWithParameters](../../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) により公開されます。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、udt をメタデータ情報と共にバイナリ型としてサポートします。これにより、udt をオブジェクトとして管理できます。 UDT 列は、DBTYPE_UDT 型として公開され、この列のメタデータは主要な OLE DB インターフェイスの **IColumnRowset** と新しいインターフェイスの [ISSCommandWithParameters](../../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) により公開されます。  
   
 > [!NOTE]  
 >  **IRowsetFind::FindNextRow** メソッドでは、UDT データ型を処理できません。 UDT が検索列の型として使用されると、DB_E_BADCOMPAREOP が返されます。  
   
 ### <a name="data-bindings-and-coercions"></a>データ バインドと強制型変換  
- 次の表に、特定のデータ型を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の UDT と共に使用した場合に行われるバインドおよび強制型変換を示します。 UDT 列は DBTYPE_UDT とし[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]て Native Client OLE DB プロバイダーを介して公開されます。 この列のメタデータは、適切なスキーマ行セットを使用して取得できるので、独自に定義した型をオブジェクトとして管理できます。  
+ 次の表に、特定のデータ型を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の UDT と共に使用した場合に行われるバインドおよび強制型変換を示します。 UDT 列は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] DBTYPE_UDT として Native Client OLE DB プロバイダーを介して公開されます。 この列のメタデータは、適切なスキーマ行セットを使用して取得できるので、独自に定義した型をオブジェクトとして管理できます。  
   
 |データ型|SQL Server の<br /><br /> **UDT**|SQL Server の<br /><br /> **UDT 以外から**|サーバーからの<br /><br /> **UDT**|サーバーからの<br /><br /> **UDT 以外から**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
@@ -51,7 +51,7 @@ ms.locfileid: "68206612"
 |DBTYPE_STR|サポートされている<sup>3、6</sup>|N/A<sup>2</sup>|サポートされている<sup>4、6</sup>|N/A<sup>2</sup>|  
 |DBTYPE_IUNKNOWN|サポートされていません。|N/A<sup>2</sup>|サポートされていません。|N/A<sup>2</sup>|  
 |DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|サポートされている<sup>6</sup>|N/A<sup>2</sup>|サポートされている<sup>4</sup>|N/A<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|サポートされている<sup>3、6</sup>|N/A<sup>2</sup>|なし|N/A<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|サポートされている<sup>3、6</sup>|N/A<sup>2</sup>|N/A|N/A<sup>2</sup>|  
   
  <sup>1</sup>**ICommandWithParameters::SetParameterInfo** で DBTYPE_UDT 以外のサーバーの型が指定され、アクセサーの型が DBTYPE_UDT の場合、ステートメントの実行時にエラー (DB_E_ERRORSOCCURRED) が発生します (パラメーターの状態は DBSTATUS_E_BADACCESSOR になります)。 それ以外の場合、データはサーバーに送信されますが、サーバーからは、UDT からパラメーターのデータ型への暗黙的な変換がないことを示すエラーが返されます。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "68206612"
 |SS_UDT_ASSEMBLY_TYPENAME|DBTYPE_WSTR|型名と、CLR での参照に必要なすべてのアセンブリ ID を含むアセンブリ修飾名。|  
   
 #### <a name="the-sql_assemblies-schema-rowset"></a>SQL_ASSEMBLIES スキーマ行セット  
- Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、登録されている udt を記述する新しいプロバイダー固有のスキーマ行セットを公開します。 ASSEMBLY_SERVER を DBTYPE_WSTR 型として指定することはできますが、行セットには格納されません。 指定しない場合、行セットでは既定で現在のサーバーが使用されます。 次の表に、SQL_ASSEMBLIES スキーマ行セットの定義を示します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、登録されている udt を記述する新しいプロバイダー固有のスキーマ行セットを公開します。 ASSEMBLY_SERVER を DBTYPE_WSTR 型として指定することはできますが、行セットには格納されません。 指定しない場合、行セットでは既定で現在のサーバーが使用されます。 次の表に、SQL_ASSEMBLIES スキーマ行セットの定義を示します。  
   
 |列名|種類|説明|  
 |-----------------|----------|-----------------|  
@@ -135,7 +135,7 @@ ms.locfileid: "68206612"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client では、多くの主要な OLE DB プロパティセットに新しい値または変更が追加されます。  
   
 #### <a name="the-dbpropset_sqlserverparameter-property-set"></a>DBPROPSET_SQLSERVERPARAMETER プロパティ セット  
- OLE DB を通じて Udt をサポートする[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ために、Native Client は、次の値を含む新しい DBPROPSET_SQLSERVERPARAMETER プロパティセットを実装します。  
+ OLE DB を通じて Udt をサポートするために、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client は、次の値を含む新しい DBPROPSET_SQLSERVERPARAMETER プロパティセットを実装します。  
   
 |名前|種類|説明|  
 |----------|----------|-----------------|  
@@ -146,9 +146,9 @@ ms.locfileid: "68206612"
  SSPROP_PARAM_UDT_NAME は必須です。 SSPROP_PARAM_UDT_CATALOGNAME と SSPROP_PARAM_UDT_SCHEMANAME は省略可能です。 いずれかのプロパティが適切に指定されていない場合、DB_E_ERRORSINCOMMAND が返されます。 SSPROP_PARAM_UDT_CATALOGNAME プロパティと SSPROP_PARAM_UDT_SCHEMANAME プロパティがどちらも指定されていない場合、UDT は、テーブルと同じデータベースおよびスキーマ内に定義する必要があります。 UDT の定義が、テーブルと同じデータベース内にあって、同じスキーマ内にない場合、SSPROP_PARAM_UDT_SCHEMANAME プロパティを指定する必要があります。 UDT の定義がテーブルと異なるデータベースにある場合、SSPROP_PARAM_UDT_CATALOGNAME プロパティと SSPROP_PARAM_UDT_SCHEMANAME プロパティの両方を指定する必要があります。  
   
 #### <a name="the-dbpropset_sqlservercolumn-property-set"></a>DBPROPSET_SQLSERVERCOLUMN プロパティ セット  
- **Itabledefinition**インターフェイスでのテーブルの作成をサポートするため[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に、Native Client では、次の3つの新しい列が DBPROPSET_SQLSERVERCOLUMN プロパティセットに追加されます。  
+ **Itabledefinition**インターフェイスでのテーブルの作成をサポートするために、Native Client では、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 次の3つの新しい列が DBPROPSET_SQLSERVERCOLUMN プロパティセットに追加されます。  
   
-|名前|説明|種類|説明|  
+|名前|説明|種類|Description|  
 |----------|-----------------|----------|-----------------|  
 |SSPROP_COL_UDT_CATALOGNAME|UDT_CATALOGNAME|VT_BSTR|DBTYPE_UDT 型の列の場合、このプロパティは、UDT が定義されているカタログ名を指定する文字列です。|  
 |SSPROP_COL_UDT_SCHEMANAME|UDT_SCHEMANAME|VT_BSTR|DBTYPE_UDT 型の列の場合、このプロパティは、UDT が定義されているスキーマ名を指定する文字列です。|  
@@ -171,15 +171,15 @@ ms.locfileid: "68206612"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client では、コア OLE DB インターフェイスの多くに新しい値または変更を追加します。  
   
 #### <a name="the-isscommandwithparameters-interface"></a>ISSCommandWithParameters インターフェイス  
- OLE DB を通じて Udt を[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]サポートするために、Native Client では、 **Isscommandwithparameters**インターフェイスの追加など、多数の変更が実装されています。 この新しいインターフェイスは、主要な OLE DB インターフェイス **ICommandWithParameters** から継承されます。 **ICommandWithParameters**から継承された3つのメソッドに加えて、**Getparameterinfo**、 **Mapparameternames**、および**setparameterinfo**;**Isscommandwithparameters**には、サーバー固有のデータ型を処理するために使用される**getparameterproperties**メソッドと**setparameterproperties**メソッドが用意されています。  
+ OLE DB を通じて Udt をサポートするために、Native Client では、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **Isscommandwithparameters**インターフェイスの追加など、多数の変更が実装されています。 この新しいインターフェイスは、主要な OLE DB インターフェイス **ICommandWithParameters** から継承されます。 **ICommandWithParameters**から継承された3つのメソッドに加えて、**Getparameterinfo**、 **Mapparameternames**、および**setparameterinfo**;**Isscommandwithparameters**には、サーバー固有のデータ型を処理するために使用される**getparameterproperties**メソッドと**setparameterproperties**メソッドが用意されています。  
   
 > [!NOTE]  
 >  **ISSCommandWithParameters** インターフェイスでは、新しい SSPARAMPROPS 構造体も使用されます。  
   
 #### <a name="the-icolumnsrowset-interface"></a>IColumnsRowset インターフェイス  
- Native Client で[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]は、 **Isscommandwithparameters**インターフェイスに加えて、次のような**IColumnsRowset:: getcolumnrowset**メソッドの呼び出しから返される行セットに新しい値が追加されます。  
+ Native Client では、 **Isscommandwithparameters**インターフェイスに加えて、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 次のような**IColumnsRowset:: getcolumnrowset**メソッドの呼び出しから返される行セットに新しい値が追加されます。  
   
-|列名|種類|説明|  
+|列名|種類|Description|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_UDT_CATALOGNAME|DBTYPE_WSTR|UDT カタログ名の識別子。|  
 |DBCOLUMN_SS_UDT_SCHEMANAME|DBTYPE_WSTR|UDT スキーマ名の識別子。|  
@@ -189,7 +189,7 @@ ms.locfileid: "68206612"
  DBCOLUMN_TYPE を DBTYPE_UDT に設定すると、上記の新しく追加された UDT メタデータを参照することにより、サーバーの UDT 列と他のバイナリ型列とを区別することができます。 そのデータが部分的に完成している場合、サーバーのデータ型は UDT になります。 サーバーのデータ型が UDT 以外の場合、これらの列は、常に NULL として返されます。  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC ドライバー  
- Udt をサポートするために、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC ドライバーでいくつかの変更が加えられました。 Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client ODBC ドライバーは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] UDT を SQL_SS_UDT ドライバー固有の SQL データ型識別子にマップします。 UDT 列は SQL_SS_UDT 型としてマップされます。 Udt の**ToString**メソッドまたは**ToXMLString**メソッドを使用して、udt 列を SQL ステートメント内の別の型に明示的にマップする場合、または**CAST/CONVERT**関数を使用して、結果セット内の列の型に、列の変換後の実際の型が反映されます。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Udt をサポートするために、Native CLIENT ODBC ドライバーでいくつかの変更が加えられました。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] UDT を SQL_SS_UDT ドライバー固有の SQL データ型識別子にマップします。 UDT 列は SQL_SS_UDT 型としてマップされます。 Udt の**ToString**メソッドまたは**ToXMLString**メソッドを使用して、udt 列を SQL ステートメント内の別の型に明示的にマップする場合、または**CAST/CONVERT**関数を使用して、結果セット内の列の型に、列の変換後の実際の型が反映されます。  
   
 ### <a name="sqlcolattribute-sqldescribeparam-sqlgetdescfield"></a>SQLColAttribute、SQLDescribeParam、SQLGetDescField  
  新しい4つのドライバー固有の記述子フィールドが追加されました。これにより、結果セットの UDT 列、またはストアドプロシージャやパラメーター化されたクエリの UDT パラメーターの追加情報を、 [Sqlcolattribute](../../native-client-odbc-api/sqlcolattribute.md)、 [SQLDescribeParam](../../native-client-odbc-api/sqldescribeparam.md)、および[SQLGetDescField](../../native-client-odbc-api/sqlgetdescfield.md)関数を使用して取得できます。  
@@ -205,7 +205,7 @@ ms.locfileid: "68206612"
  C データ型から SQL データ型に変換する際、SQL_C_WCHAR、SQL_C_BINARY、および SQL_C_CHAR は、すべて SQL_SS_UDT に変換できます。 ただし、SQL_C_WCHAR および SQL_C_CHAR SQL データ型から変換する場合、バイナリデータは16進数の文字列に変換されます。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server Native Client 機能](sql-server-native-client-features.md)   
+ [SQL Server Native Client の機能](sql-server-native-client-features.md)   
  [ISSCommandWithParameters &#40;OLE DB&#41;](../../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

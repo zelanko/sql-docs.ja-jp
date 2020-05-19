@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: b80bc5d5-78ca-4f75-956b-2ac658029cc7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 99a21cd5dd32af9e84877865cfe7c0fc92f6c087
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c010b291468432544a037d15fbaa790fc3ee789d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67967224"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764023"
 ---
 # <a name="append-method-adox-users"></a>Append メソッド (ADOX Users)
 新しい[ユーザー](../../../ado/reference/adox-api/user-object-adox.md)オブジェクトを[Users](../../../ado/reference/adox-api/users-collection-adox.md)コレクションに追加します。  
@@ -38,7 +38,7 @@ Users.Append User[,Password]
  追加する**ユーザー**オブジェクトまたは作成して追加するユーザーの名前を含む**バリアント**値。  
   
  *パスワード*  
- 任意。 ユーザーのパスワードを含む**文字列**値です。 *Password*パラメーターは、**ユーザー**オブジェクトの[ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)メソッドによって指定された値に対応します。  
+ 省略可能。 ユーザーのパスワードを含む**文字列**値です。 *Password*パラメーターは、**ユーザー**オブジェクトの[ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)メソッドによって指定された値に対応します。  
   
 ## <a name="remarks"></a>Remarks  
  [カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)の**ユーザー**コレクションは、すべてのカタログのユーザーを表します。 [グループ](../../../ado/reference/adox-api/group-object-adox.md)の**ユーザー**コレクションは、特定のグループのメンバーシップを持つユーザーのみを表します。  

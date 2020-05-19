@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ff434efd0a9f4fcb3316143e598e636bff85f487
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6a6b2685c8cfda9217b554e161919c24344b34a2
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63157839"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706474"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>メモリ最適化テーブルの概要
   メモリ最適化テーブルは、[CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql) を使用して作成されるテーブルです。  
@@ -44,7 +44,7 @@ ms.locfileid: "63157839"
 ## <a name="accessing-data-in-memory-optimized-tables"></a>メモリ最適化テーブルのデータへのアクセス  
  メモリ最適化テーブルのデータには、次の 2 つの方法でアクセスできます。  
   
--   (ネイティブ[!INCLUDE[tsql](../../../includes/tsql-md.md)]コンパイルストアドプロシージャの外部で) 解釈されます。 これらの [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントは、解釈されたストアド プロシージャ内にあっても、アドホック [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントであってもかまいません。  
+-   [!INCLUDE[tsql](../../../includes/tsql-md.md)](ネイティブコンパイルストアドプロシージャの外部で) 解釈されます。 これらの [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントは、解釈されたストアド プロシージャ内にあっても、アドホック [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントであってもかまいません。  
   
 -   ネイティブ コンパイル ストアド プロシージャを経由してアクセスできます。  
   
@@ -52,18 +52,18 @@ ms.locfileid: "63157839"
   
  次の表に、さまざまなオブジェクトへのネイティブ アクセスおよび解釈された [!INCLUDE[tsql](../../../includes/tsql-md.md)] アクセスを示します。  
   
-|機能|ネイティブ コンパイル ストアド プロシージャを使用したアクセス|解釈された [!INCLUDE[tsql](../../../includes/tsql-md.md)] アクセス|CLR アクセス|  
+|特徴|ネイティブ コンパイル ストアド プロシージャを使用したアクセス|解釈された [!INCLUDE[tsql](../../../includes/tsql-md.md)] アクセス|CLR アクセス|  
 |-------------|-------------------------------------------------------|-------------------------------------------|----------------|  
-|メモリ最適化テーブル|はい|はい|なし<sup>1</sup>|  
+|メモリ最適化テーブル|はい|はい|いいえ <sup>1</sup>|  
 |[メモリ最適化テーブル変数](../../database-engine/memory-optimized-table-variables.md)|はい|はい|いいえ|  
-|[ネイティブコンパイルストアドプロシージャ](https://msdn.microsoft.com/library/dn133184.aspx)|EXECUTE ステートメントを使用してネイティブ コンパイル ストアド プロシージャからストアド プロシージャを実行することはできません。|はい|なし<sup>1</sup>|  
+|[ネイティブコンパイルストアドプロシージャ](https://msdn.microsoft.com/library/dn133184.aspx)|EXECUTE ステートメントを使用してネイティブ コンパイル ストアド プロシージャからストアド プロシージャを実行することはできません。|はい|いいえ <sup>1</sup>|  
   
- <sup>1</sup>コンテキスト接続 (CLR モジュールを実行するときのから[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の接続) からメモリ最適化テーブルまたはネイティブコンパイルストアドプロシージャにアクセスすることはできません。 ただし、別の接続を作成して開き、そこからメモリ最適化テーブルおよびネイティブ コンパイル ストアド プロシージャにアクセスできます。 詳細については、「[標準接続とコンテキスト接続](../clr-integration/data-access/context-connections-vs-regular-connections.md)」を参照してください。  
+ <sup>1</sup>コンテキスト接続 ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR モジュールを実行するときのからの接続) からメモリ最適化テーブルまたはネイティブコンパイルストアドプロシージャにアクセスすることはできません。 ただし、別の接続を作成して開き、そこからメモリ最適化テーブルおよびネイティブ コンパイル ストアド プロシージャにアクセスできます。 詳細については、「[標準接続とコンテキスト接続](../clr-integration/data-access/context-connections-vs-regular-connections.md)」を参照してください。  
   
 ## <a name="performance-and-scalability"></a>パフォーマンスとスケーラビリティ  
  インメモリ OLTP を使用することで実現できるパフォーマンスの向上には、次の要素が影響します。  
   
- Communication  
+ 通信  
  短いストアド プロシージャに対する多数の呼び出しを実行するアプリケーションは、各ストアド プロシージャにより多くの機能が実装されて呼び出しが少なくて済むアプリケーションと比較した場合、パフォーマンス向上の点で劣る場合があります。  
   
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] の実行  
