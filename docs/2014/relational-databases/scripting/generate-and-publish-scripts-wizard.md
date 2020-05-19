@@ -39,15 +39,15 @@ helpviewer_keywords:
 - databases [SQL Server], generating scripts
 - Publish Database Wizard
 ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 47bf324dd757661a6f49f18b28f810c87ca1419e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b378eb5e4a68f07aee179e52552017578b0b33d4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242108"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703934"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>スクリプトの生成とパブリッシュ ウィザード
   **スクリプトの生成とパブリッシュ ウィザード** を使用すると、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] または [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]のインスタンス間でデータベースを転送するスクリプトを作成できます。 データベース用のスクリプトは、ローカル ネットワーク上のデータベース エンジンのインスタンスまたは [!INCLUDE[ssSDS](../../includes/sssds-md.md)]から生成できます。 生成したスクリプトは、データベース エンジンの別のインスタンスまたは [!INCLUDE[ssSDS](../../includes/sssds-md.md)]で実行できます。 また、ウィザードを使用して、Database Publishing Services を使用して作成された Web サービスに、データベースの内容を直接パブリッシュすることもできます。 スクリプトの作成は、データベース全体または特定のオブジェクトに限定して行うことができます。  
@@ -150,7 +150,7 @@ ms.locfileid: "75242108"
   
  **[全般]** : 次のオプションは、スクリプト全体に適用されます。  
   
--   [ **ANSI Padding** - `ANSI PADDING ON`スクリプトに含まれます。 既定値は **True**です。  
+-   [ **ANSI Padding** - `ANSI PADDING ON` スクリプトに含まれます。 既定値は **True**です。  
   
 -   **[ファイルに追加]** : **True**の場合、 **[スクリプト作成オプションの設定]** ページで指定した既存のスクリプトの末尾に、このスクリプトを追加します。 **False**の場合、以前のスクリプトが新しいスクリプトで上書きされます。 既定値は **False**です。  
   
@@ -188,9 +188,9 @@ ms.locfileid: "75242108"
   
 -   **[オブジェクトレベル権限のスクリプトを作成]** : データベース内のオブジェクトに権限を設定するためのスクリプトを追加します。 既定値は **False**です。  
   
--   [**統計のスクリプト**を作成]: [統計の**スクリプト**を`CREATE STATISTICS`作成] に設定した場合、このオプションには、オブジェクトの統計を再作成するステートメントが含まれます。 **[統計とヒストグラムのスクリプトを作成します]** オプションを選択すると、ヒストグラムの情報も作成されます。 既定では、 **[統計のスクリプトを作成しません]** が設定されています。 詳細については、「[CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql)」を参照してください。  
+-   [**統計のスクリプト**を作成]: [統計の**スクリプト**を作成] に設定した場合、このオプションには、オブジェクトの `CREATE STATISTICS` 統計を再作成するステートメントが含まれます。 **[統計とヒストグラムのスクリプトを作成します]** オプションを選択すると、ヒストグラムの情報も作成されます。 既定では、 **[統計のスクリプトを作成しません]** が設定されています。 詳細については、「[CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql)」を参照してください。  
   
--   [ **USE DATABASE のスクリプト**を`USE DATABASE`作成する-ステートメントをスクリプトに追加します。 データベース オブジェクトが適切なデータベースに作成されるようにするには、`USE DATABASE` ステートメントを含めます。 スクリプトが別のデータベースで使用されることが予想される**False**場合は、False `USE DATABASE`を選択してステートメントを省略します。 既定値は **True**です。 詳細については、「[USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql)」を参照してください。  
+-   [ **USE DATABASE のスクリプト**を作成する- `USE DATABASE` ステートメントをスクリプトに追加します。 データベース オブジェクトが適切なデータベースに作成されるようにするには、`USE DATABASE` ステートメントを含めます。 スクリプトが別のデータベースで使用されることが予想される場合は、 **False**を選択してステートメントを省略し `USE DATABASE` ます。 既定値は **True**です。 詳細については、「[USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql)」を参照してください。  
   
 -   **[スクリプトを作成するデータの種類]** - スクリプトを作成する対象を選択します: **[データのみ]** 、 **[スキーマのみ]** 、またはその両方。 既定値は **[スキーマのみ]** です。  
   
@@ -198,7 +198,7 @@ ms.locfileid: "75242108"
   
 -   **[変更の追跡のスクリプトを作成]** : 変更の追跡が元のデータベースまたは元のデータベースのテーブルで有効になっている場合に、変更の追跡のスクリプトを作成します。 既定値は **False**です。 詳細については、「[変更の追跡について &#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md)」を参照してください。  
   
--   **Check 制約のスクリプト**を`CHECK`作成-スクリプトに制約を追加します。 既定値は **True**です。 `CHECK` 制約を追加すると、指定した条件を満たすデータのみがテーブルに入力されます。 詳細については、「 [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md)」を参照してください。  
+-   **Check 制約のスクリプト**を作成- `CHECK` スクリプトに制約を追加します。 既定値は **True**です。 `CHECK` 制約を追加すると、指定した条件を満たすデータのみがテーブルに入力されます。 詳細については、「 [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md)」を参照してください。  
   
 -   **[データ圧縮オプションのスクリプトを作成]** : データ圧縮オプションが元のデータベースまたは元のデータベースのテーブルで構成されている場合に、データ圧縮オプションのスクリプトを作成します。 詳細については、「 [Data Compression](../data-compression/data-compression.md)」を参照してください。 既定値は **False**です。  
   
@@ -252,9 +252,9 @@ ms.locfileid: "75242108"
   
 7.  **[オブジェクトレベル権限のパブリッシュ]** - データベース内の選択したオブジェクトに対する権限を含めます。 既定値は **False**です。  
   
-8.  [**統計のパブリッシュ**]: [統計の**パブリッシュ**] `CREATE STATISTICS`に設定すると、オブジェクトの統計を再作成するステートメントが追加されます。 **[統計とヒストグラムのパブリッシュ]** オプションを選択すると、ヒストグラムの情報も作成されます。 既定では、 **[統計をパブリッシュしない]** が設定されています。 詳細については、「[CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql)」を参照してください。  
+8.  [**統計のパブリッシュ**]: [統計の**パブリッシュ**] に設定すると、オブジェクトの `CREATE STATISTICS` 統計を再作成するステートメントが追加されます。 **[統計とヒストグラムのパブリッシュ]** オプションを選択すると、ヒストグラムの情報も作成されます。 既定では、 **[統計をパブリッシュしない]** が設定されています。 詳細については、「[CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql)」を参照してください。  
   
-9. [ **Vardecimal オプションのパブリッシュ]** -元のデータベーステーブルで有効になっている場合に、対象のデータベーステーブルで`vardecimal`テーブル形式を有効にします。 既定値は **True**です。  
+9. [ **Vardecimal オプションのパブリッシュ]** - `vardecimal` 元のデータベーステーブルで有効になっている場合に、対象のデータベーステーブルでテーブル形式を有効にします。 既定値は **True**です。  
   
 10. **[オブジェクト名を修飾するスキーマ]** : 作成されるオブジェクトの名前にスキーマ名を含めます。 既定値は **True**です。  
   
@@ -268,7 +268,7 @@ ms.locfileid: "75242108"
   
  **[テーブル/ビュー オプション]** - 次のオプションは、テーブルまたはビューのみに適用されます。  
   
-1.  [ **Check 制約のパブリッシュ**-パブリッシュ処理`CHECK`に制約の作成を含めます。 既定値は **True**です。 `CHECK` 制約を追加すると、指定した条件を満たすデータのみがテーブルに入力されます。 詳細については、「 [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md)」を参照してください。  
+1.  [ **Check 制約のパブリッシュ**-パブリッシュ処理に制約の作成を含め `CHECK` ます。 既定値は **True**です。 `CHECK` 制約を追加すると、指定した条件を満たすデータのみがテーブルに入力されます。 詳細については、「 [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md)」を参照してください。  
   
 2.  **[外部キーのパブリッシュ]** - パブリッシュ処理に外部キーの作成を含めます。 既定値は **True**です。 外部キーは、テーブル間のリレーションシップを示し、そのリレーションシップを適用します。 詳しくは、「 [Primary and Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md)」をご覧ください。  
   

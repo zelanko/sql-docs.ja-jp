@@ -19,15 +19,15 @@ helpviewer_keywords:
 - Query Editor [Database Engine], Features
 - SQL Server Management Studio [SQL Server], Database Engine Query Editor
 ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9ec7e26daa91723e5633a9640b99003ebc844d31
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c7737cf46d3e82eb6aef0e915d1e572ae0fca94
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244943"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703989"
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>データベース エンジン クエリ エディター (SQL Server Management Studio)
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターを使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを含んだスクリプトの作成と実行を行います。 **sqlcmd** コマンドを含んだスクリプトの実行もサポートされます。  
@@ -53,10 +53,10 @@ ms.locfileid: "75244943"
 ## <a name="sql-editor-toolbar"></a>SQL エディター ツール バー  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターが開いているときは、次のボタンを持つ SQL エディター ツール バーが表示されます。  
   
- **のインスタンスに接続するときには、**  
+ **接続する**  
  **[サーバーへの接続]** ダイアログ ボックスを開きます。 このダイアログ ボックスを使用すると、サーバーへの接続を確立できます。  
   
- **切断**  
+ **Disconnect (切断)**  
  現在のクエリ エディターをサーバーから接続解除します。  
   
  **[接続の変更]**  
@@ -71,7 +71,7 @@ ms.locfileid: "75244943"
  **おい**  
  選択されているコードを実行します。コードが選択されていない場合は、クエリ エディター内のコード全体を実行します。  
   
- **デバッグ**  
+ **Debug**  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーを有効にします。 このデバッガーでは、ブレークポイントの設定、変数の監視、コードのステップ実行などのデバッグ操作がサポートされます。  
   
  **[クエリ実行のキャンセル]**  
@@ -130,7 +130,7 @@ ms.locfileid: "75244943"
  **[すべて中断]**  
  中断が生じたときに、デバッガーがアタッチされているすべてのプロセスを中断するようにデバッガーを設定します。  
   
- **[デバッグの停止]**  
+ **デバッグ中に診断ツールを有効にします**  
  選択された [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウのデバッグ モードを解除して、標準の実行モードに戻します。  
   
  **[次のステートメントの表示]**  

@@ -11,20 +11,20 @@ helpviewer_keywords:
 - key ordering rules [SQLXML]
 - relationship annotation
 ms.assetid: 914cb152-09f5-4b08-b35d-71940e4e9986
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 521614f8755261d0348ab95132c527c736c96311
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f5b5359f1ff90fe70605d89f011ffc16cc7b58cd
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013510"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703402"
 ---
 # <a name="sqlrelationship-and-the-key-ordering-rule-sqlxml-40"></a>sql:relationship とキーの順序付け規則 (SQLXML 4.0)
   XML 一括読み込みでは、ノードがスコープ内に入るときにレコードが生成され、ノードがスコープ外に出るときに、これらのレコードが Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に送信されます。したがって、レコードのデータはノードのスコープ内に存在する必要があります。  
   
- 次の XSD スキーマについて考えてみます。このスキーマでは、 ** \<顧客の>** と** \<注文>** の要素 (1 つの顧客が多数の注文を`<sql:relationship>`配置できます) の間の一対多リレーションシップが要素を使用して指定されています。  
+ 次の XSD スキーマについて考えてみます。このスキーマでは、 ** \< 顧客の>** と** \< 注文>** の要素 (1 つの顧客が多数の注文を配置できます) の間の一対多リレーションシップが要素を使用して指定されてい `<sql:relationship>` ます。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"<>   
@@ -58,7 +58,7 @@ ms.locfileid: "66013510"
 </xsd:schema>  
 ```  
   
- ** \<Customer>** 要素ノードがスコープ内に入ると、XML 一括読み込みでは顧客レコードが生成されます。 このレコードは、XML 一括読み込みによって、または** \<顧客>** が読み取られるまで続きます。 Order ** \<>** 要素で**customerid**属性が指定されてい`<sql:relationship>`ないため、XML 一括読み込みでは、 ** \<order>** 要素ノードを処理するときに、 ** \<Customer>** 親要素から custorder テーブルの customerid 外部キー列の値を取得します。 つまり、 ** \<Customer>** 要素を定義する際には、を指定**CustomerID** `<sql:relationship>`する前に、スキーマで CustomerID 属性を指定する必要があります。 このようにしないと、 ** \<Order>** 要素がスコープに入ると、xml 一括読み込みでは custorder テーブルのレコードが生成されます。また、xml 一括読み込みでは、xml [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]一括読み込みが** \</order>** 終了タグに達すると、CustomerID 外部キー列の値なしでレコードがに送信されます。  
+ ** \< Customer>** 要素ノードがスコープ内に入ると、XML 一括読み込みでは顧客レコードが生成されます。 このレコードは、XML 一括読み込みによって、または** \< 顧客>** が読み取られるまで続きます。 Order>要素で Customerid 属性が指定されていないため、XML 一括読み込みでは、 ** \< order>** 要素ノードを処理するときに、 `<sql:relationship>` ** \< Customer>** 親要素から** \< ** custorder テーブルの customerid 外部キー **CustomerID**列の値を取得します。 つまり、 ** \< Customer>** 要素を定義する際には、を指定する前に、スキーマで**CustomerID**属性を指定する必要があり `<sql:relationship>` ます。 このようにしないと、 ** \< Order>** 要素がスコープに入ると、xml 一括読み込みでは custorder テーブルのレコードが生成されます。また、xml 一括読み込みでは、xml 一括読み込みが** \< /order>** 終了タグに達すると、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CustomerID 外部キー列の値なしでレコードがに送信されます。  
   
  この例のスキーマを SampleSchema.xml として保存します。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "66013510"
     set objBL=Nothing  
     ```  
   
-     この結果、XML 一括読み込みでは CustOrder テーブルの CustomerID 外部キー列に NULL 値が挿入されます。 Xml サンプルデータを変更して、 ** \<CustomerID>** 子要素が** \<Order>** 子要素の前にあるようにすると、xml 一括読み込みでは、指定された外部キー値が列に挿入されます。  
+     この結果、XML 一括読み込みでは CustOrder テーブルの CustomerID 外部キー列に NULL 値が挿入されます。 XML サンプルデータを変更して、 ** \< CustomerID>** 子要素が** \< Order>** 子要素の前にあるようにすると、xml 一括読み込みでは、指定された外部キー値が列に挿入されます。  
   
  これは、これと同等の XDR スキーマです。  
   

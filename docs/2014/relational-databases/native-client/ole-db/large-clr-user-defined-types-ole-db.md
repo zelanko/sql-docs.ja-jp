@@ -9,20 +9,20 @@ ms.topic: reference
 helpviewer_keywords:
 - large CLR user-defined types [OLE DB]
 ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1aea946703b9ebe06c32fcc25044a3b68326625e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8fb6c943e237e791ff4febed0ab3273eb9324662
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63199255"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704259"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>大きな CLR ユーザー定義型 (OLE DB)
   このトピックでは、大きな共通言語ランタイム (CLR) ユーザー定義型 (UDT) をサポートするための、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client の OLE DB に対する変更について説明します。  
   
- Native Client で[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の大きな clr udt のサポートの詳細については、「[大きな Clr ユーザー定義型](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)」を参照してください。 サンプルについては、「[大きな CLR UDT の使用 &#40;OLE DB&#41;](../../native-client-ole-db-how-to/use-large-clr-udts-ole-db.md)」を参照してください。  
+ Native Client での大きな CLR Udt のサポートの詳細につい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ては、「[大きな Clr ユーザー定義型](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)」を参照してください。 サンプルについては、「[大きな CLR UDT の使用 &#40;OLE DB&#41;](../../native-client-ole-db-how-to/use-large-clr-udts-ole-db.md)」を参照してください。  
   
 ## <a name="data-format"></a>データ形式  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client では、大きなオブジェクト (LOB) の型についてサイズが無制限である値の長さを表す場合に、~0 が使用されます。 8,000 バイトを超える CLR UDT のサイズも ~0 で表されます。  
@@ -42,7 +42,7 @@ ms.locfileid: "63199255"
  DBPROPSET_SQLSERVERCOLUMN プロパティ セットは、OLE DB を介してテーブルの作成をサポートします。 詳細については、「[ユーザー定義型の使用](../features/using-user-defined-types.md)」を参照してください。  
   
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>ITableDefinition::CreateTable でのデータ型マッピング  
- UDT 列が必要な場合`DBCOLUMNDESC` 、ITableDefinition:: CreateTable で使用される構造体では、次の情報が使用されます。  
+ `DBCOLUMNDESC`UDT 列が必要な場合、ITableDefinition:: CreateTable で使用される構造体では、次の情報が使用されます。  
   
 |OLE DB データ型 (*wType*)|*pwszTypeName*|SQL Server のデータ型|*rgPropertySets*|  
 |----------------------------------|--------------------|--------------------------|----------------------|  
@@ -118,13 +118,13 @@ ms.locfileid: "63199255"
 |Binding データ型|UDT からサーバー|UDT 以外からサーバー|サーバーから UDT|サーバーから UDT 以外|  
 |----------------------|-------------------|------------------------|---------------------|--------------------------|  
 |DBTYPE_UDT|サポート (5)|エラー (1)|サポート (5)|エラー (4)|  
-|DBTYPE_BYTES|サポート (5)|なし|サポート (5)|なし|  
-|DBTYPE_WSTR|サポート (2)、(5)|なし|サポート (3)、(5)、(6)|なし|  
-|DBTYPE_BSTR|サポート (2)、(5)|なし|サポート (3)、(5)|なし|  
-|DBTYPE_STR|サポート (2)、(5)|なし|サポート (3)、(5)|なし|  
-|DBTYPE_IUNKNOWN|サポート (6)|なし|サポート (6)|なし|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|サポート (5)|なし|サポート (3)、(5)|なし|  
-|DBTYPE_VARIANT (VT_BSTR)|サポート (2)、(5)|なし|該当なし|該当なし|  
+|DBTYPE_BYTES|サポート (5)|N/A|サポート (5)|N/A|  
+|DBTYPE_WSTR|サポート (2)、(5)|N/A|サポート (3)、(5)、(6)|N/A|  
+|DBTYPE_BSTR|サポート (2)、(5)|N/A|サポート (3)、(5)|N/A|  
+|DBTYPE_STR|サポート (2)、(5)|N/A|サポート (3)、(5)|N/A|  
+|DBTYPE_IUNKNOWN|サポート (6)|N/A|サポート (6)|N/A|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|サポート (5)|N/A|サポート (3)、(5)|N/A|  
+|DBTYPE_VARIANT (VT_BSTR)|サポート (2)、(5)|N/A|該当なし|該当なし|  
   
 ### <a name="key-to-symbols"></a>記号の説明  
   

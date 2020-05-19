@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - IRow interface
 ms.assetid: a4f79906-da0e-42f2-b0e9-812c29f39e48
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 225a624f22f80b00a848d73f38febad60936b90a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a91faaa534c35e7affcdf11cb5174d8cb9e62fc6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62468498"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704892"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>IRow::GetColumns を使用した列のフェッチ (OLE DB)
   `IRow` インターフェイスでは、結果セット内の単一行の列に直接アクセスできます。 つまり、`IRow` では、1 つの行の結果セットから効率的に列を取得できます。  
@@ -26,7 +26,7 @@ ms.locfileid: "62468498"
   
 -   列のグループを (順番に) フェッチする方法。  
   
--   列に 2 回アクセスする方法。 列の実際の幅の初回取得以降は、この実際の値がアクセスされます。 Dbcolumnaccess 構造体では、 **pData**が NULL で**cbmaxlen**が0の場合、を`IRow` - `>GetColumns()`呼び出すと、実際の列の長さのみが返されます。 この場合、`IRow->GetColumns()` を同じ列に対してもう一度呼び出すと、実際のデータを取得できます。  
+-   列に 2 回アクセスする方法。 列の実際の幅の初回取得以降は、この実際の値がアクセスされます。 Dbcolumnaccess 構造体では、 **pData**が NULL で**cbmaxlen**が0の場合、を呼び出すと、 `IRow` - `>GetColumns()` 実際の列の長さのみが返されます。 この場合、`IRow->GetColumns()` を同じ列に対してもう一度呼び出すと、実際のデータを取得できます。  
   
 > [!IMPORTANT]  
 >  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
@@ -517,6 +517,6 @@ go
 ```  
   
 ## <a name="see-also"></a>参照  
- [OLE DB 方法に関するトピック](ole-db-how-to-topics.md)  
+ [OLE DB の使用法に関するトピック](ole-db-how-to-topics.md)  
   
   

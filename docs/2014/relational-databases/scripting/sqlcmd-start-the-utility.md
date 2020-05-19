@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 00d57437-7a29-4da1-b639-ee990db055fb
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 80f8f63b4ddb3e8641ef503a615d57c63be35164
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 08ba399bd9ebe4a8ba4c064aa2e0bce39b82d533
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243267"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703670"
 ---
 # <a name="start-the-sqlcmd-utility"></a>sqlcmd ユーティリティの起動
   `sqlcmd` を使用するには、最初にユーティリティを起動し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続する必要があります。 既定のインスタンスまたは名前付きインスタンスのいずれにも接続できます。 最初の手順として、`sqlcmd` ユーティリティを起動します。  
@@ -38,17 +38,17 @@ ms.locfileid: "75243267"
   
      これで、コンピューターで実行している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスに、信頼できる接続を確立しました。  
   
-     **1>** 行番号`sqlcmd`を指定するプロンプトです。 Enter キーを押すたびに、この番号が 1 ずつ増えます。  
+     **1>** `sqlcmd` 行番号を指定するプロンプトです。 Enter キーを押すたびに、この番号が 1 ずつ増えます。  
   
-4.  `sqlcmd`セッションを終了するには`EXIT` 、 `sqlcmd`プロンプトで「」と入力します。  
+4.  セッションを終了するには `sqlcmd` 、プロンプトで「」と入力し `EXIT` `sqlcmd` ます。  
   
 ### <a name="to-start-the-sqlcmd-utility-and-connect-to-a-named-instance-of-sql-server"></a>sqlcmd ユーティリティを起動し、SQL サーバーの名前付きインスタンスに接続するには  
   
-1.  コマンドプロンプトウィンドウを開き、「 `sqlcmd -S` *my\ インスタンス*名」と入力します。 *myServer\instanceName* には、コンピューターの実際の名前と、接続先の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを指定してください。  
+1.  コマンドプロンプトウィンドウを開き、「 `sqlcmd -S` *My\ インスタンス*名」と入力します。 *myServer\instanceName* には、コンピューターの実際の名前と、接続先の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを指定してください。  
   
 2.  Enter キーを押します。  
   
-     プロンプト`sqlcmd` (1>) は、指定したの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに接続していることを示します。  
+     `sqlcmd`プロンプト (1>) は、指定したのインスタンスに接続していることを示し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
     > [!NOTE]  
     >  入力した [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントはバッファーに格納されます。 GO コマンドが見つかると、ステートメントがバッチとして実行されます。  

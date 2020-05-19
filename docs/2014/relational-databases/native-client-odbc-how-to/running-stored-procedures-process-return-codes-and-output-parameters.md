@@ -10,15 +10,15 @@ helpviewer_keywords:
 - return codes [ODBC]
 - output parameters [ODBC]
 ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e9b9a581a4f5331479c7dc5ed87fc5d213e8d465
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 38918636fa569b5f9b43e1f93698879863429fb0
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68205579"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705220"
 ---
 # <a name="process-return-codes-and-output-parameters-odbc"></a>リターン コードと出力パラメーターの処理 (ODBC)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のストアド プロシージャでは、整数のリターン コードと出力パラメーターを使用できます。 リターンコードと出力パラメーターはサーバーからの最後のパケットで送信され、 [Sqlmoreresults](../native-client-odbc-api/sqlmoreresults.md)が SQL_NO_DATA を返すまではアプリケーションで使用できません。 ストアドプロシージャからエラーが返された場合は、SQLMoreResults を呼び出して、SQL_NO_DATA が返されるまで次の結果に進みます。  

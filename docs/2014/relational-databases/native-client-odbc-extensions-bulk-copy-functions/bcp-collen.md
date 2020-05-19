@@ -15,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_collen function
 ms.assetid: faaf1f7a-81f2-4852-a178-56602c33673a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a66a88a61a581dff262fb8585b5cf32830f8eeed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e46f3c241d44033194c484b8955389fba972fd22
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62718099"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705322"
 ---
 # <a name="bcp_collen"></a>bcp_collen
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に対する現在の一括コピー用のプログラム変数にデータ長を設定します。  
@@ -58,8 +58,8 @@ idxServerCol
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL。  
   
-## <a name="remarks"></a>Remarks  
- **Bcp_collen**関数を使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [bcp_sendrow](bcp-sendrow.md)でデータをにコピーするときに、特定の列のプログラム変数のデータ長を変更できます。  
+## <a name="remarks"></a>解説  
+ **Bcp_collen**関数を使用すると、bcp_sendrow でデータをにコピーするときに、特定の列のプログラム変数のデータ長を変更でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 [bcp_sendrow](bcp-sendrow.md)  
   
  初期状態では、データの長さは[bcp_bind](bcp-bind.md)が呼び出されるときに決定されます。 **Bcp_sendrow**の呼び出し間でデータ長が変化し、長さのプレフィックスやターミネータが使用されていない場合は、 **bcp_collen**を呼び出して長さをリセットできます。 次に**bcp_sendrow**を呼び出すと、 **bcp_collen**の呼び出しによって設定された長さが使用されます。  
   

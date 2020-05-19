@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 918574b3-c62e-4937-9e5f-37310dedc8f9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b286ba7bde145a9a3676f38f329a8efbd932a4cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60d7224a764cd0ab506d03cb154cb06456a8c408
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62667646"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704212"
 ---
 # <a name="sparse-columns-support-ole-db"></a>スパース列のサポート (OLE DB)
   このトピックでは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB でのスパース列のサポートについて説明します。 スパース列の詳細については、「 [SQL Server Native Client でのスパース列のサポート](../features/sparse-columns-support-in-sql-server-native-client.md)」を参照してください。 サンプルについては、「[スパース列に対する列およびカタログ メタデータの表示 &#40;OLE DB&#41;](../../native-client-ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)」を参照してください。  
@@ -49,11 +49,11 @@ ms.locfileid: "62667646"
   
 |型またはメンバー関数|説明|  
 |-----------------------------|-----------------|  
-|IColumnsInfo::GetColumnsInfo|DwFlags の列に対して DBCOLUMNFLAGS_SS_ISCOLUMNSET 新しい DBCOLUMNFLAGS `column_set`フラグ値*dwFlags*が設定されています。<br /><br /> DBCOLUMNFLAGS_WRITE が `column_set` 列に対して設定されます。|  
+|IColumnsInfo::GetColumnsInfo|DwFlags の列に対して DBCOLUMNFLAGS_SS_ISCOLUMNSET 新しい DBCOLUMNFLAGS フラグ値が設定されてい `column_set` ます。 *dwFlags*<br /><br /> DBCOLUMNFLAGS_WRITE が `column_set` 列に対して設定されます。|  
 |IColumsRowset::GetColumnsRowset|DBCOLUMN_FLAGS で、新しい DBCOLUMNFLAGS フラグ値である DBCOLUMNFLAGS_SS_ISCOLUMNSET が `column_set` 列に対して設定されます。<br /><br /> `column_set` 列に対して DBCOLUMN_COMPUTEMODE が DBCOMPUTEMODE_DYNAMIC に設定されます。|  
 |IDBSchemaRowset::GetSchemaRowset|DBSCHEMA_COLUMNS が、SS_IS_COLUMN_SET と SS_IS_SPARSE という 2 つの新しい列を返します。<br /><br /> DBSCHEMA_COLUMNS は、`column_set` のメンバーでない列のみを返します。<br /><br /> 2 つの新しいスキーマ行セットが追加されています。DBSCHEMA_COLUMNS_EXTENDED は、スパース `column_set` のメンバーシップに関係なくすべての列を返します。 DBSCHEMA_SPARSE_COLUMN_SET は、`column_set` のメンバーである列のみを返します。 これらの新しい行セットの列と制限は DBSCHEMA_COLUMNS と同じです。|  
 |IDBSchemaRowset::GetSchemas|IDBSchemaRowset::GetSchemas の使用可能なスキーマ行セットの一覧に、新しい行セットである DBSCHEMA_COLUMNS_EXTENDED と DBSCHEMA_SPARSE_COLUMN_SET の GUID が含まれます。|  
-|ICommand::Execute|** \* Select from** *table*を使用すると、スパース`column_set`のメンバーではないすべての列と、スパース`column_set`のメンバーであるすべての null 以外の列の値を含む XML 列 (存在する場合) が返されます。|  
+|ICommand::Execute|**Select \* from** *table*を使用すると、スパースのメンバーではないすべての列と、スパースのメンバーである `column_set` すべての null 以外の列の値を含む XML 列 (存在する場合) が返され `column_set` ます。|  
 |IOpenRowset::OpenRowset|同じテーブルに対して **select\*** クエリを使用すると、IOpenRowset::OpenRowset から ICommand::Execute と同じ列を持つ行セットが返されます。|  
 |ITableDefinition|このインターフェイスには、スパース列や `column_set` 列のための変更はありません。 スキーマを変更する必要のあるアプリケーションでは、適切な [!INCLUDE[tsql](../../../includes/tsql-md.md)] を直接実行する必要があります。|  
   

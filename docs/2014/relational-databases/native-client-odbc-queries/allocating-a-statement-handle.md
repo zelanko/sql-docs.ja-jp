@@ -17,15 +17,15 @@ helpviewer_keywords:
 - statement handles [ODBC]
 - SQLAllocHandle function
 ms.assetid: 9ee207f3-2667-45f5-87ca-e6efa1fd7a5c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 68e3d7a53f96216d158ddbdb1d1d0ca59db5f81f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a7cce55becbe02982fcf3f7ffaf6f18954735499
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200256"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705200"
 ---
 # <a name="allocating-a-statement-handle"></a>ステートメント ハンドルの割り当て
   アプリケーションでステートメントを実行する前に、ステートメント ハンドルを割り当てる必要があります。 これを行うには、 *Handletype*パラメーターを SQL_HANDLE_STMT に設定し、 *InputHandle*をポイントするように**SQLAllocHandle**を呼び出します。  
@@ -36,7 +36,7 @@ ms.locfileid: "63200256"
   
  *Foption*を SQL_ATTR_QUERY_TIMEOUT に設定して**SQLSetStmtAttr**を呼び出すと、クエリのタイムアウト間隔が設定され、実行時間の長いクエリからサーバーとユーザーを保護できます。  
   
- *Foption*を SQL_ATTR_MAX_LENGTH に設定して**SQLSetStmtAttr**を呼び出すと、個々のステートメントが取得できる**テキスト**と**画像**データの量が制限されます。 *Foption*を SQL_ATTR_MAX_ROWS に設定して**SQLSetStmtAttr**を呼び出すと、すべてのアプリケーションが必要とする場合に、行セットが最初の*n*行に制限されます。 SQL_ATTR_MAX_ROWS を設定すると、ドライバーがサーバーに対して SET ROWCOUNT ステートメントを実行することになります。 これは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]トリガーや更新プログラムを含むすべてのステートメントに影響します。  
+ *Foption*を SQL_ATTR_MAX_LENGTH に設定して**SQLSetStmtAttr**を呼び出すと、個々のステートメントが取得できる**テキスト**と**画像**データの量が制限されます。 *Foption*を SQL_ATTR_MAX_ROWS に設定して**SQLSetStmtAttr**を呼び出すと、すべてのアプリケーションが必要とする場合に、行セットが最初の*n*行に制限されます。 SQL_ATTR_MAX_ROWS を設定すると、ドライバーがサーバーに対して SET ROWCOUNT ステートメントを実行することになります。 これ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、トリガーや更新プログラムを含むすべてのステートメントに影響します。  
   
  上記のオプションを設定するときは注意が必要です。 SQL_ATTR_MAX_LENGTH と SQL_ATTR_MAX_ROWS の場合、接続ハンドルのすべてのステートメント ハンドルが同じ設定になるようにすることをお勧めします。 ドライバーが、あるステートメント ハンドルから、これらのオプションに異なる値を持つ別のステートメント ハンドルに切り替える場合、適切な SET TEXTSIZE ステートメントと SET ROWCOUNT ステートメントを生成して、設定を変更する必要があります。 ユーザー SQL ステートメントには、バッチ内では先頭に含めなければならないステートメントを含めることができるので、ドライバーはユーザー SQL ステートメントと同じバッチ内にこれらのステートメントを配置することはできません。 ドライバーは SET TEXTSIZE ステートメントと SET ROWCOUNT ステートメントを別のバッチで送信する必要があります。その結果、サーバーに対する追加のラウンドトリップが自動的に生成されます。  
   

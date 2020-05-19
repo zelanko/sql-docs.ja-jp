@@ -19,15 +19,15 @@ helpviewer_keywords:
 - attribute mapping [SQLXML], excluding schema elements
 - table/view mapping [SQLXML], excluding schema elements
 ms.assetid: 7d2649dd-0038-4a2c-b16d-f80f7c306966
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 865a9af892f948e77aa593d3713766e7860349b0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bbf5bad0a8c8e633149e2868047b88833a400849
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013858"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703596"
 ---
 # <a name="excluding-schema-elements-from-the-resulting-xml-document-using-sqlmapped-sqlxml-40"></a>sql:mapped を使用した、結果の XML ドキュメントからのスキーマ要素の除外 (SQLXML 4.0)
   既定のマッピングでは、XSD スキーマのすべての要素と属性が、データベースのテーブルまたはビューと列にマップされます。 XSD スキーマで、データベース テーブル (ビュー) または列にマップせず、XML に表示しない要素を作成する場合は、`sql:mapped` 注釈を指定できます。  
@@ -40,7 +40,7 @@ ms.locfileid: "66013858"
  次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、「 [SQLXML の例を実行するための要件](../sqlxml/requirements-for-running-sqlxml-examples.md)」を参照してください。  
   
 ### <a name="a-specifying-the-sqlmapped-annotation"></a>A. sql:mapped 注釈を指定する  
- 他のソースからの XSD スキーマがあるとします。 この XSD **FirstName**スキーマは**ContactID** **LastName** **HomeAddress** ** \<** 、ContactID、FirstName、LastName、およびホームアドレスの属性を持つ Person>要素で構成されています。  
+ 他のソースからの XSD スキーマがあるとします。 この XSD スキーマは、 **ContactID**、 **FirstName**、 **LastName**、および**ホームアドレス**の属性を持つ Person>要素で構成され** \< ています。**  
   
  この XSD スキーマを AdventureWorks データベースの Person. Contact テーブルにマップする場合、 `sql:mapped` employee テーブルには従業員の自宅の住所が格納されないため、[ホーム**アドレス**] 属性にはが指定されています。 この結果、マッピング スキーマに対して Xpath クエリを指定すると、属性はデータベースにマップされず、結果の XML ドキュメント内に返されません。  
   

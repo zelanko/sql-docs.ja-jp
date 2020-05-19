@@ -14,18 +14,18 @@ helpviewer_keywords:
 - sql:mapped
 - column mapping [SQLXML]
 ms.assetid: 7042741e-ce4d-4912-9c4a-d77194a028fc
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4878ff0bc8e284af1515d5ea0d531c3a7471a113
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0b0fda8000105573a11c1ca6a460e47a100bc885
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013474"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703429"
 ---
 # <a name="sqlmapped-sqlxml-40"></a>sql:mapped (SQLXML 4.0)
-  XML 一括読み込みでは`sql:mapped` 、XSD スキーマの注釈が想定どおりに処理されます。つまり、 `sql:mapped="false"`マッピングスキーマで任意の要素または属性にが指定されている場合、xml 一括読み込みでは、関連付けられたデータは対応する列に格納されません。  
+  XML 一括読み込みで `sql:mapped` は、XSD スキーマの注釈が想定どおりに処理されます。つまり、マッピングスキーマで `sql:mapped="false"` 任意の要素または属性にが指定されている場合、Xml 一括読み込みでは、関連付けられたデータは対応する列に格納されません。  
   
  XML 一括読み込みでは、スキーマに記述されていないか、XSD スキーマで `sql:mapped="false"` 注釈が付けられているためマップされない要素と属性は無視されます。 `sql:overflow-field` を使用してオーバフロー列が指定されている場合、マップされないデータはすべてこの列に格納されます。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66013474"
 </xsd:schema>  
 ```  
   
- **HomePhone**属性ではが`sql:mapped="false"`指定されているため、XML 一括読み込みでは、この属性は対応する列にマップされません。 XSD スキーマでは、XML 一括読み込みでこの未使用データが格納されるオーバーフロー列 (**OverflowColumn**) が識別されます。  
+ **HomePhone**属性ではが指定されているため `sql:mapped="false"` 、XML 一括読み込みでは、この属性は対応する列にマップされません。 XSD スキーマでは、XML 一括読み込みでこの未使用データが格納されるオーバーフロー列 (**OverflowColumn**) が識別されます。  
   
 ### <a name="to-test-a-working-sample"></a>実際のサンプルをテストするには  
   

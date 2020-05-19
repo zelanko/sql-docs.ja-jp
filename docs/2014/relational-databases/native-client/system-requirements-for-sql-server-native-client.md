@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SQL Server Native Client, system requirements
 - SQLNCLI, system requirements
 ms.assetid: 1c8e2f8a-a440-44da-8e3a-af632d34c52c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 85b00f00e2c557f31a7343a99e1f2592741a6b59
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4bc3c47ea6d356279c5502eaf45abc09c307e7cd
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637795"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704131"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>SQL Server Native Client のシステム要件
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ アクセス機能 (MARS など) を使用するには、次のソフトウェアがインストールされている必要があります。  
@@ -35,7 +35,7 @@ ms.locfileid: "73637795"
 >  このソフトウェアは、必ず管理者特権でログオンしてからインストールしてください。  
   
 ## <a name="operating-system-requirements"></a>オペレーティング システムの要件  
- Native Client をサポート[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]するオペレーティングシステムの一覧については、「 [SQL Server Native Client のサポートポリシー](applications/support-policies-for-sql-server-native-client.md)」を参照してください。  
+ Native Client をサポートするオペレーティングシステムの一覧につい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ては、「 [SQL Server Native Client のサポートポリシー](applications/support-policies-for-sql-server-native-client.md)」を参照してください。  
   
 ## <a name="sql-server-requirements"></a>SQL Server の要件  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのデータにアクセスするには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスがインストールされている必要があります。  
@@ -43,7 +43,7 @@ ms.locfileid: "73637795"
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] は、MDAC、Windows Data Access Components、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client のすべてのバージョンからの接続をサポートします。 古いクライアント バージョンで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続する場合、クライアントで認識されないサーバーのデータ型は、クライアント バージョンと互換する型にマップされます。 詳細については、このトピックの「クライアント バージョンのデータ型の互換性」をご覧ください。  
   
 ## <a name="cross-language-requirements"></a>言語間の要件  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client の英語版は、サポートされているオペレーティング システムであれば、そのすべてのローカライズ版でもサポートされます。 ネイティブクライアントの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ローカライズ版は、ローカライズされた[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブクライアントバージョンと同じ言語のローカライズされたオペレーティングシステムでサポートされています。 ローカライズされ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]たバージョンの Native Client は、対応する言語設定がインストールされている限り、サポートされているオペレーティングシステムの英語版でもサポートされています。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client の英語版は、サポートされているオペレーティング システムであれば、そのすべてのローカライズ版でもサポートされます。 ネイティブクライアントのローカライズ版は、ローカライズされ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] たネイティブクライアントバージョンと同じ言語のローカライズされたオペレーティングシステムでサポートされてい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 ローカライズされたバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client は、対応する言語設定がインストールされている限り、サポートされているオペレーティングシステムの英語版でもサポートされています。  
   
  アップグレードの要件を次に示します。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "73637795"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client のローカライズ版は、同じ言語にローカライズされた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client にアップグレードできます。  
   
--   Native Client の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ローカライズ版は、英語版の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client にアップグレードできます。  
+-   Native Client のローカライズ版は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、英語版の Native client にアップグレードでき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client のローカライズ版は、異なる言語にローカライズされた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client にはアップグレードできません。  
   
@@ -62,20 +62,20 @@ ms.locfileid: "73637795"
   
  ODBC 用の `DataTypeCompatibility` コントロールはありません。  
   
- IDBInfo:: GetKeywords は、接続上のサーバーのバージョンに対応するキーワードリストを常に返し、による`DataTypeCompatibility`影響を受けません。  
+ IDBInfo:: GetKeywords は、接続上のサーバーのバージョンに対応するキーワードリストを常に返し、による影響を受けません `DataTypeCompatibility` 。  
   
-|データの種類|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Windows Data Access Components、MDAC、<br /><br /> DataTypeCompatibility=80 が設定された SQL Server Native Client OLE DB アプリケーション|  
+|データ型|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Windows Data Access Components、MDAC、<br /><br /> DataTypeCompatibility=80 が設定された SQL Server Native Client OLE DB アプリケーション|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |CLR UDT (\<= 8Kb)|udt|Udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|Image|  
-|varchar(max)|varchar|varchar|テキスト|  
+|varchar(max)|varchar|varchar|Text|  
 |nvarchar(max)|nvarchar|nvarchar|Ntext|  
 |xml|xml|xml|Ntext|  
 |CLR UDT (> 8 Kb)|udt|varbinary|Image|  
 |date|date|varchar|Varchar|  
 |datetime2|datetime2|varchar|Varchar|  
 |datetimeoffset|datetimeoffset|varchar|Varchar|  
-|時間|時間|varchar|Varchar|  
+|time|time|varchar|Varchar|  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Native Client プログラミング](sql-server-native-client-programming.md)   

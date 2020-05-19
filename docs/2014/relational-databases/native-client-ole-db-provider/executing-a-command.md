@@ -13,22 +13,22 @@ helpviewer_keywords:
 - OLE DB extensions for XML
 - SQL Server Native Client OLE DB provider, command execution
 ms.assetid: bb0b3cbf-fe45-46ba-b2ec-c5a39e3c7081
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5f94cc014a04c3392fefb61f4fa291a8f5a44ad8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 47307455468a20351c3a3cda2a619e6296fb29ad
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62638455"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704732"
 ---
 # <a name="executing-a-command"></a>コマンドの実行
   データ ソースへの接続が確立されたら、コンシューマーは **IDBCreateSession::CreateSession** メソッドを呼び出してセッションを作成します。 セッションは、コマンド、行セット、またはトランザクションのファクトリとして動作します。  
   
  個別のテーブルやインデックスを直接操作するには、`IOpenRowset` インターフェイスを要求します。 `IOpenRowset::OpenRowset` メソッドは、1 つのベース テーブルまたはベース インデックスからのすべての行が含まれる行セットを開いて返します。  
   
- コマンド (SELECT \* FROM Authors など) を実行するために、コンシューマーは`IDBCreateCommand`インターフェイスを要求します。 `IDBCreateCommand::CreateCommand` メソッドを実行してコマンド オブジェクトを作成し、`ICommandText` インターフェイスを要求できます。 実行するコマンドを指定するには、`ICommandText::SetCommandText` メソッドを使用します。  
+ コマンド (SELECT FROM Authors など) を実行するために、 \* コンシューマーはインターフェイスを要求し `IDBCreateCommand` ます。 `IDBCreateCommand::CreateCommand` メソッドを実行してコマンド オブジェクトを作成し、`ICommandText` インターフェイスを要求できます。 実行するコマンドを指定するには、`ICommandText::SetCommandText` メソッドを使用します。  
   
  コマンドを実行するには、`Execute` コマンドを使用します。 コマンドには、任意の SQL ステートメントやプロシージャ名を指定できます。 コマンドを実行しても、必ず結果セット (行セット) オブジェクトが得られるわけではありません。 SELECT * FROM Authors などのコマンドでは、結果セットが得られます。  
   

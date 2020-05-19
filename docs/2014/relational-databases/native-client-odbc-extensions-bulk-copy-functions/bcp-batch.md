@@ -15,18 +15,18 @@ topic_type:
 helpviewer_keywords:
 - bcp_batch function
 ms.assetid: 0bda489e-86bc-4a7e-80f6-96047e03f281
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c41e8d90adc8ff6eb2058feebe3f33c10edbfa92
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a37bafc9bac2601e3914455f431c639bce385f48
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62631386"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705349"
 ---
 # <a name="bcp_batch"></a>bcp_batch
-  プログラム変数から一括コピーされ、 [bcp_sendrow](bcp-sendrow.md)によって[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に送信されたすべての行をコミットします。  
+  プログラム変数から一括コピーされ、bcp_sendrow によってに送信されたすべての行をコミットし [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 [bcp_sendrow](bcp-sendrow.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,7 +45,7 @@ hdbc
 ## <a name="returns"></a>戻り値  
  **Bcp_batch**を最後に呼び出した後に保存された行の数。エラーが発生した場合は-1。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  一括コピーのバッチではトランザクションを定義します。 アプリケーションで[bcp_bind](bcp-bind.md)を使用し、プログラム変数から SQL Server テーブルに行を一括コピーする**bcp_sendrow** 、プログラムが**bcp_batch**または[bcp_done](bcp-done.md)を呼び出した場合にのみ、行がコミットされます。  
   
  **Bcp_batch**は、 *n*行ごとに、または (テレメトリアプリケーションと同様に) 受信データになどがあるときに1回呼び出すことができます。 アプリケーションがを呼び出さない場合**bcp_batch** **bcp_done**が呼び出されたときにのみ、一括コピーされた行がコミットされます。  

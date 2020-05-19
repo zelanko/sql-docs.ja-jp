@@ -12,18 +12,18 @@ helpviewer_keywords:
 - data types [OLE DB]
 - OLE DB, data types
 ms.assetid: 15953706-f0d1-45f5-a2eb-a8bd36e1a5fc
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e9371f053f95754cdcb7107559f9e0bc3eca2e9a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5b29121aa91dc6d237c0d5809d04e557fb766084
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63062142"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705114"
 ---
 # <a name="data-types-ole-db"></a>データ型 (OLE DB)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client OLE DB プロバイダー [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用してステートメントを実行し、結果を処理するには、行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セット内のパラメーターまた[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は列をバインドするとき、および**itabledefinition**インターフェイスを使用してで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブルを作成するときに、native client OLE DB プロバイダーがデータ型を OLE DB データ型にマップする方法を把握しておく必要があります。  
+  [!INCLUDE[tsql](../../includes/tsql-md.md)]Native client OLE DB プロバイダーを使用してステートメントを実行し、結果を処理するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 行セット内のパラメーターまたは列をバインドするとき、および**itabledefinition**インターフェイスを使用してでテーブルを作成するときに、native client OLE DB プロバイダーがデータ型を OLE DB データ型にマップする方法を把握しておく必要があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

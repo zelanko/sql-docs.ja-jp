@@ -11,15 +11,15 @@ helpviewer_keywords:
 - bindings [OLE DB]
 - OLE DB, bindings and conversions
 ms.assetid: c187df58-a8c8-4c74-a76f-663abbc5f0c1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b35583f18cbe590773c6661091186f669e012555
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d920fef68adaa63059970a49c9473d75eeabfd30
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62638209"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705061"
 ---
 # <a name="bindings-and-conversions-ole-db"></a>バインドと変換 (OLE DB)
   ここでは、`datetime` 値と `datetimeoffset` 値との間で変換を行う方法について説明します。 ここで説明する変換は、OLE DB によって既に提供されているか、OLE DB の一貫性がある拡張機能です。  
@@ -28,7 +28,7 @@ ms.locfileid: "62638209"
   
 -   `datetime` 型の文字列と `datetimeoffset` 型の文字列の形式は次のとおりです。  
   
-     *yyyy*-*mm*mm-*dd*[ *hh*:*mm*:*ss*[.*9999999*] [?? *hh*:*mm*]]  
+     *yyyy* -*mm* -*dd*[ *hh*:*mm*:*ss*[.*9999999*] [?? *hh*:*mm*]]  
   
 -   `time` 型の文字列の形式は次のとおりです。  
   

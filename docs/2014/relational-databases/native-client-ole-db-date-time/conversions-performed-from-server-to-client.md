@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], server to client
 ms.assetid: 676fdf24-fb72-4ea0-a8d2-2b197da3c83f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d9e922f5bf8d07e75c976dbfc07b89b8527dbbc8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d248abc5fbfeb22b7ef399945b0116e9be2bda51
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023374"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705092"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>サーバーからクライアントへの変換
   このトピックでは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (以降) と、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB で作成されたクライアント アプリケーションとの間で実行される日付または時刻の変換について説明します。  
@@ -25,27 +25,27 @@ ms.locfileid: "63023374"
 ## <a name="conversions"></a>変換  
  次の表では、クライアントに返される型とバインドの型との間の変換について説明しています。 出力パラメーターでは、ICommandWithParameters::SetParameterInfo が呼び出され、*pwszDataSourceType* で指定された型が実際のサーバーの型と一致しない場合、サーバーによって暗黙的な変換が実行され、クライアントに返された型は ICommandWithParameters::SetParameterInfo を介して指定された型と一致します。 これにより、サーバーの変換規則がこのトピックで説明したものと異なる場合に、予期しない変換結果が発生する可能性があります。 たとえば、既定の日付を指定する必要がある場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では 1899-12-30 ではなく 1900-1-1 が使用されます。  
   
-|To -><br /><br /> ソース|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
+|To -><br /><br /> From|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
-|日付|1、7|[OK]|-|-|1|1、3|1、7|-|[OK] \(VT_BSTR)|[OK]|[OK]|4|4|  
-|Time|5、6、7|-|9|[OK]|6|3、6|5、6|-|[OK] \(VT_BSTR)|[OK]|[OK]|4|4|  
-|Smalldatetime|7|8|9、10|10|[OK]|3|7|-|7 (VT_DATE)|[OK]|[OK]|4|4|  
-|Datetime|5、7|8|9、10|10|[OK]|3|7|-|7 (VT_DATE)|[OK]|[OK]|4|4|  
-|Datetime2|5、7|8|9、10|10|7|3|5、7|-|[OK] \(VT_BSTR)|[OK]|[OK]|4|4|  
-|Datetimeoffset|5、7、11|8、11|9、10、11|10、11|7、11|[OK]|5、7、11|-|[OK] \(VT_BSTR)|[OK]|[OK]|4|4|  
-|Char、Varchar、<br /><br /> Nchar、Nvarchar|7、13|12|12、9|12|12|12|7、13|なし|該当なし|該当なし|該当なし|該当なし|該当なし|  
-|Sql_variant<br /><br /> (datetime)|7|8|9、10|10|[OK]|3|7|-|7 (VT_DATE)|[OK]|[OK]|4|4|  
-|Sql_variant<br /><br /> (smalldatetime)|7|8|9、10|10|[OK]|3|7|-|7 (VT_DATE)|[OK]|[OK]|4|4|  
-|Sql_variant<br /><br /> (date)|1、7|[OK]|2|2|1|1、3|1、7|-|OK (VT_BSTR)|[OK]|[OK]|4|4|  
-|Sql_variant<br /><br /> (time)|5、6、7|2|6|[OK]|6|3、6|5、6|-|OK (VT_BSTR)|[OK]|[OK]|4|4|  
-|Sql_variant<br /><br /> (datetime2)|5、7|8|9、10|10|[OK]|3|5、7|-|OK (VT_BSTR)|[OK]|[OK]|4|4|  
-|Sql_variant<br /><br /> (datetimeoffset)|5、7、11|8、11|9、10、11|10、11|7、11|[OK]|5、7、11|-|OK (VT_BSTR)|[OK]|[OK]|4|4|  
+|Date|1、7|OK|-|-|1|1、3|1、7|-|[OK] \(VT_BSTR)|OK|[OK]|4|4|  
+|Time|5、6、7|-|9|OK|6|3、6|5、6|-|[OK] \(VT_BSTR)|OK|[OK]|4|4|  
+|Smalldatetime|7|8|9、10|10|OK|3|7|-|7 (VT_DATE)|OK|[OK]|4|4|  
+|Datetime|5、7|8|9、10|10|OK|3|7|-|7 (VT_DATE)|OK|[OK]|4|4|  
+|Datetime2|5、7|8|9、10|10|7|3|5、7|-|[OK] \(VT_BSTR)|OK|[OK]|4|4|  
+|Datetimeoffset|5、7、11|8、11|9、10、11|10、11|7、11|OK|5、7、11|-|[OK] \(VT_BSTR)|OK|[OK]|4|4|  
+|Char、Varchar、<br /><br /> Nchar、Nvarchar|7、13|12|12、9|12|12|12|7、13|N/A|該当なし|該当なし|該当なし|該当なし|該当なし|  
+|Sql_variant<br /><br /> (datetime)|7|8|9、10|10|OK|3|7|-|7 (VT_DATE)|OK|[OK]|4|4|  
+|Sql_variant<br /><br /> (smalldatetime)|7|8|9、10|10|OK|3|7|-|7 (VT_DATE)|OK|[OK]|4|4|  
+|Sql_variant<br /><br /> (date)|1、7|OK|2|2|1|1、3|1、7|-|OK (VT_BSTR)|OK|[OK]|4|4|  
+|Sql_variant<br /><br /> (time)|5、6、7|2|6|OK|6|3、6|5、6|-|OK (VT_BSTR)|OK|[OK]|4|4|  
+|Sql_variant<br /><br /> (datetime2)|5、7|8|9、10|10|OK|3|5、7|-|OK (VT_BSTR)|OK|[OK]|4|4|  
+|Sql_variant<br /><br /> (datetimeoffset)|5、7、11|8、11|9、10、11|10、11|7、11|OK|5、7、11|-|OK (VT_BSTR)|OK|[OK]|4|4|  
   
 ## <a name="key-to-symbols"></a>記号の説明  
   
 |Symbol|意味|  
 |------------|-------------|  
-|[OK]|変換は必要ありません。|  
+|OK|変換は必要ありません。|  
 |-|変換はサポートされていません。 IAccessor::CreateAccessor の呼び出し時にバインドが検証される場合、DBBINDSTATUS_UPSUPPORTEDCONVERSION が *rgStatus* で返されます。 アクセサー検証が遅延する場合は、DBSTATUS_E_BADACCESSOR が設定されます。|  
 |1|時刻フィールドに 0 が設定されます。|  
 |2|DBSTATUS_E_CANTCONVERTVALUE が設定されます。|  

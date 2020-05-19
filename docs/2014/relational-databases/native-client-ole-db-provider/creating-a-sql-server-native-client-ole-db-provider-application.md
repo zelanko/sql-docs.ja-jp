@@ -11,18 +11,18 @@ helpviewer_keywords:
 - applications [SQL Server Native Client]
 - OLE DB, creating applications
 ms.assetid: f3ae6815-f32d-4913-a1a2-2ba2f20cfd88
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0e422ac6535900a287ae610a85241dc67172c4f7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 36416967a76631e59d5d122105b74be357e654de
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63209760"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704760"
 ---
 # <a name="creating-a-sql-server-native-client-ole-db-provider-application"></a>SQL Server Native Client OLE DB プロバイダー アプリケーションの作成
-  Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB プロバイダーアプリケーションを作成するには、次の手順を実行します。  
+  Native Client OLE DB プロバイダーアプリケーションを作成するには、次 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の手順を実行します。  
   
 1.  データ ソースへの接続の確立。  
   

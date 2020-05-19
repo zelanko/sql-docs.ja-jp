@@ -10,26 +10,26 @@ helpviewer_keywords:
 - sessions [OLE DB]
 - SQL Server Native Client OLE DB provider, sessions
 ms.assetid: 3a980816-675c-4fba-acc9-429297d85bbd
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f594ace96fc34a77adca244e79c55551f0ddb8d4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae9b5b908e4f4c6104d2639c7d0032a3b1f2087c
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63228973"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705142"
 ---
 # <a name="sessions"></a>セッション
-  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーセッションは、のインスタンスへの1つの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続を表します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーセッションは、のインスタンスへの1つの接続を表し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
- Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーでは、セッションがデータソースのトランザクション領域を区切る必要があります。 特定のセッション オブジェクトから作成されたすべてのコマンド オブジェクトは、そのセッション オブジェクトのローカル トランザクションまたは分散トランザクションに関係します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーでは、セッションがデータソースのトランザクション領域を区切る必要があります。 特定のセッション オブジェクトから作成されたすべてのコマンド オブジェクトは、そのセッション オブジェクトのローカル トランザクションまたは分散トランザクションに関係します。  
   
  初期化されたデータ ソースで最初に作成されるセッション オブジェクトが、初期化時に確立された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続を受け取ります。 そのセッション オブジェクトのインターフェイスのすべての参照が解放されると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへの接続で、データ ソースで作成される別のセッション オブジェクトを使用できるようになります。  
   
  データ ソースで新たに作成されるセッション オブジェクトは、データ ソースでの指定に従って、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへの独自の接続を確立します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへの接続は、そのセッションを作成したオブジェクトに対するすべての参照がアプリケーションによって解放された時点で削除されます。  
   
- 次の例は、Native Client OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロバイダーを使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースに接続する方法を示しています。  
+ 次の例は、Native Client OLE DB プロバイダーを使用してデータベースに接続する方法を示してい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ```  
 int main()  
@@ -178,7 +178,7 @@ EXIT:
 }  
 ```  
   
- Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダセッションオブジェクトをの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに接続すると、セッションオブジェクトを継続的に作成して解放するアプリケーションに対してかなりのオーバーヘッドが発生する可能性があります。 Native Client OLE DB プロバイダセッションオブジェクトを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]効率的に管理することで、オーバーヘッドを最小限に抑えることができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーアプリケーションは、オブジェクト[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の少なくとも1つのインターフェイスで参照を維持することによって、セッションオブジェクトの接続をアクティブな状態に保つことができます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダセッションオブジェクトをのインスタンスに接続する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と、セッションオブジェクトを継続的に作成して解放するアプリケーションに対してかなりのオーバーヘッドが発生する可能性があります。 Native Client OLE DB プロバイダセッションオブジェクトを効率的に管理することで、オーバーヘッドを最小限に抑えることができ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーアプリケーションは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、オブジェクトの少なくとも1つのインターフェイスで参照を維持することによって、セッションオブジェクトの接続をアクティブな状態に保つことができます。  
   
  たとえば、コマンド作成オブジェクト参照のプールを保持することで、プール内にあるセッション オブジェクトのアクティブな接続が維持されます。 セッション オブジェクトが必要になると、プールを保持するコードは、セッションを必要とするアプリケーション メソッドに対して、有効な **IDBCreateCommand** インターフェイス ポインターを渡します。 アプリケーション メソッドでセッションが不要になると、このメソッドは、プールを保持するコードにインターフェイス ポインターを返します。ただし、コマンド作成オブジェクトへのアプリケーションの参照は解放されません。  
   

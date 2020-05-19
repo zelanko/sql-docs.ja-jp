@@ -18,15 +18,15 @@ helpviewer_keywords:
 - data types [SQLXML], mapping data types
 - XSD schemas [SQLXML], mapping data types
 ms.assetid: db192105-e8aa-4392-b812-9d727918c005
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d2c4d515540f144052214627b3d6b08211358bb3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa2b5830ab0579fe0429357fea3275d4e14d1c47
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013954"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703627"
 ---
 # <a name="data-type-coercions-and-the-sqldatatype-annotation-sqlxml-40"></a>データ型の強制型変換と sql:datatype 注釈 (SQLXML 4.0)
   XSD スキーマでは、`xsd:type` 属性を使用して、要素または属性の XSD データ型を指定できます。 XSD スキーマを使用したデータベースからのデータの抽出では、指定されているデータ型を使用して、データが書式設定されます。  
@@ -34,14 +34,14 @@ ms.locfileid: "66013954"
  スキーマでは、XSD 型を指定する他に、`sql:datatype` 注釈を使用して、Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型を指定することもできます。 これらの `xsd:type` および `sql:datatype` 属性では、XSD データ型と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型の間のマッピングが制御されます。  
   
 ## <a name="xsdtype-attribute"></a>xsd:type 属性  
- `xsd:type` 属性を使用すると、列にマップする属性や要素の XML データ型を指定できます。 `xsd:type` はサーバーから返されるドキュメントだけでなく、実行される XPath クエリにも影響します。 `xsd:type` を含むマッピング スキーマに対して XPath クエリを実行すると、XPath でクエリが処理されるときに、指定されたデータ型が使用されます。 XPath の使用`xsd:type`方法の詳細については、「 [&#41;の xpath データ型への XSD データ型のマッピング &#40;SQLXML 4.0 ](../sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md)」を参照してください。  
+ `xsd:type` 属性を使用すると、列にマップする属性や要素の XML データ型を指定できます。 `xsd:type` はサーバーから返されるドキュメントだけでなく、実行される XPath クエリにも影響します。 `xsd:type` を含むマッピング スキーマに対して XPath クエリを実行すると、XPath でクエリが処理されるときに、指定されたデータ型が使用されます。 XPath の使用方法の詳細については `xsd:type` 、「 [&#41;の Xpath データ型への XSD データ型のマッピング &#40;SQLXML 4.0 ](../sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md)」を参照してください。  
   
  返されるドキュメントでは、すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型は文字列表記に変換されます。 また、データ型によっては追加の変換が必要です。 次の表は、さまざまな `xsd:type` 値とそれに対して使用される変換の一覧です。  
   
 |XSD データ型|SQL Server の変換|  
 |-------------------|---------------------------|  
 |ブール型|CONVERT(bit, COLUMN)|  
-|日付|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
+|Date|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
 |decimal|CONVERT(money, COLUMN)|  
 |id/idref/idrefs|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
 |nmtoken/nmtokens|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
@@ -86,9 +86,9 @@ ms.locfileid: "66013954"
 ## <a name="sqldatatype-annotation"></a>sql:datatype 注釈  
  `sql:datatype` 注釈を使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型を指定できます。この注釈は、次の場合に指定する必要があります。  
   
--   `dateTime` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XSD `dateTime`、 `date`、または`time`型の列に一括読み込みを行う場合。 この場合、`sql:datatype="dateTime"` を使って [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列のデータ型を指定する必要があります。 この規則はアップデートグラムにも当てはまります。  
+-   `dateTime` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XSD `dateTime` 、 `date` 、または型の列 `time` に一括読み込みを行う場合。 この場合、`sql:datatype="dateTime"` を使って [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列のデータ型を指定する必要があります。 この規則はアップデートグラムにも当てはまります。  
   
--   型の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `uniqueidentifier`列に一括読み込みを行い、XSD 値は、中かっこ ({および}) を含む GUID です。 `sql:datatype="uniqueidentifier"` を指定すると、値が列に挿入される前に中かっこが削除されます。 `sql:datatype` を指定しないと、値が中かっこ付きのまま送信され、挿入または更新は失敗します。  
+-   型の列に一括読み込みを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `uniqueidentifier` 行い、XSD 値は、中かっこ ({および}) を含む GUID です。 `sql:datatype="uniqueidentifier"` を指定すると、値が列に挿入される前に中かっこが削除されます。 `sql:datatype` を指定しないと、値が中かっこ付きのまま送信され、挿入または更新は失敗します。  
   
 -   XML データ型 `base64Binary` は、さまざまな [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型 (`binary`、`image`、または `varbinary`) にマップされます。 XML データ型 `base64Binary` を特定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型にマップするには、`sql:datatype` 注釈を使用します。 この注釈では、属性のマップ先列の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型を明示的に指定できます。 これは、データをデータベースに格納する場合に便利で、 `sql:datatype` 注釈を指定することにより、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型を明示的に識別できます。  
   
@@ -117,11 +117,11 @@ ms.locfileid: "66013954"
   
  この XSD スキーマには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から日付値を返す 3 つの属性が含まれています。 それぞれの属性は次のとおりです。  
   
--   Orderdate `xsd:type=date`属性に**OrderDate**を指定します。 **orderdate**属性に対してに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]よって返される値の日付部分が表示されます。  
+-   `xsd:type=date` **Orderdate**属性にを指定します。 orderdate 属性に対してによって返される値の日付部分 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が表示されます。 **OrderDate**  
   
--   ShipDate `xsd:type=time`属性で**ShipDate**を指定します。 **ShipDate**属性に対してによって[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返される値の時刻部分が表示されます。  
+-   `xsd:type=time` **ShipDate**属性でを指定します。 ShipDate 属性に対してによって返される値の時刻部分 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が表示されます。 **ShipDate**  
   
--   では、 `xsd:type` **DueDate**属性にが指定されていません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]によって返されるのと同じ値が表示されます。  
+-   では、DueDate 属性にが指定されていません `xsd:type` 。によって返されるのと同じ**DueDate**値 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が表示されます。  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>スキーマに対してサンプル XPath クエリをテストするには  
   

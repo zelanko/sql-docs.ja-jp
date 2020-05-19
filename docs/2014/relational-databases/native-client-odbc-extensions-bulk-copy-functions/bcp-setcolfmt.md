@@ -15,22 +15,22 @@ topic_type:
 helpviewer_keywords:
 - bcp_setcolfmt function
 ms.assetid: afb47987-39e7-4079-ad66-e0abf4d4c72b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2d5d777686bd40fa1b405f20da6173fc2de82640
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 682d5d8cfe8a3c5e1e5de5286e5079d2e9856a11
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63226241"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705291"
 ---
 # <a name="bcp_setcolfmt"></a>bcp_setcolfmt
   **Bcp_setcolfmt**関数は、 [bcp_colfmt](bcp-colfmt.md)よりも優先されます。 列の照合順序を指定する場合は、 **bcp_setcolfmt**関数を使用する必要があります。 [bcp_setbulkmode](bcp-setbulkmode.md)を使用すると、複数の列の形式を指定できます。  
   
  この関数では、一括コピー操作で列の形式を柔軟に指定できます。 個別の列形式属性を設定する場合に、この関数を使用します。 **Bcp_setcolfmt**を呼び出すたびに、1つの列形式属性が設定されます。  
   
- **Bcp_setcolfmt**関数は、ユーザーファイル内のデータのソースまたはターゲットの形式を指定します。 ソース形式として使用する場合、 **bcp_setcolfmt**は、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブルに一括コピーするデータソースとして使用される既存のデータファイルの形式を指定します。 ターゲット形式として使用する場合は、 **bcp_setcolfmt**で指定された列形式を使用してデータファイルが作成されます。  
+ **Bcp_setcolfmt**関数は、ユーザーファイル内のデータのソースまたはターゲットの形式を指定します。 ソース形式として使用する場合、 **bcp_setcolfmt**は、のテーブルに一括コピーするデータソースとして使用される既存のデータファイルの形式を指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 ターゲット形式として使用する場合は、 **bcp_setcolfmt**で指定された列形式を使用してデータファイルが作成されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -62,7 +62,7 @@ cbValue
  *分野*  
  プロパティを設定する列の序数です。  
   
- *property*  
+ *プロパティ*  
  プロパティ定数のいずれかを指定します。 次の表に、プロパティ定数を示します。  
   
 |プロパティ|値|説明|  
@@ -83,7 +83,7 @@ cbValue
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この関数は、 **bcp_colfmt**関数よりも優先されます。 **Bcp_setcolfmt**関数には、 **bcp_colfmt**のすべての機能が用意されています。 さらに、列の照合順序もサポートされます。 列形式属性は、次に示した順番で設定することをお勧めします。  
   
  BCP_FMT_SERVER_COL  
