@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - ActiveCommand property [ADO], JScript example
 ms.assetid: be09e2af-ba31-4168-8ccd-2461bb24e49a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6ad96904c913cadc451bc7d4c67fb5e4f8c59c70
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: baa35cc22db15720f9dd3c06762240844f19def3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921663"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747446"
 ---
 # <a name="activecommand-property-example-jscript"></a>ActiveCommand プロパティの例 (JScript)
 この例では、 [activecommand](../../../ado/reference/ado-api/activecommand-property-ado.md)プロパティを示します。 次のコードを切り取ってメモ帳または別のテキストエディターに貼り付け、 **ActiveCommandJS**として保存します。  

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - installation [SQL Server]
 - installing SQL Server, quick start installations
 ms.assetid: 672afac9-364d-4946-ad5d-8a2d89cf8d81
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8bd173abbb6ee355429d891a49f672bb0ac818d2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4b9007ce0c5f0c05638f88fcb1ac27658b9f91c7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74683611"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706886"
 ---
 # <a name="quick-start-installation-of-sql-server-2014"></a>SQL Server 2014 のクイック スタート インストール
     
@@ -42,13 +42,13 @@ ms.locfileid: "74683611"
   
 -   接続コンポーネント  
   
- 各コンポーネントを個別にインストールするか、上記のコンポーネントを組み合わせて選択できます。 で[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]使用できるエディションとコンポーネントを選択するには、「 [SQL Server 2014 のエディションとコンポーネント](../sql-server/editions-and-components-of-sql-server-2016.md)」を参照してください。  
+ 各コンポーネントを個別にインストールするか、上記のコンポーネントを組み合わせて選択できます。 で使用できるエディションとコンポーネントを選択するには [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 、「 [SQL Server 2014 のエディションとコンポーネント](../sql-server/editions-and-components-of-sql-server-2016.md)」を参照してください。  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] には 32 ビット版と 64 ビット版があります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] セットアップでは、次のインストール方法がサポートされています。  
   
 -   **インストールウィザード**  
   
-     インストールウィザードを使用してをインストールする[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]手順については、「インストール[ウィザードから SQL Server 2014 をインストールする」 &#40;セットアップ&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)を参照してください。  
+     インストールウィザードを使用してをインストールする手順については、「インストール[ウィザードから SQL Server 2014 をインストールする」 &#40;セットアップ&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)を参照してください [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
   
 -   **コマンド プロンプト**  
   
@@ -60,19 +60,19 @@ ms.locfileid: "74683611"
   
 -   **SysPrep**  
   
-     SysPrep を使用したのインストール[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の手順については、「 [Sysprep を使用して SQL Server 2014 をインストール](../database-engine/install-windows/install-sql-server-using-sysprep.md)する」を参照してください。  
+     SysPrep を使用したのインストールの手順については、「 [Sysprep を使用して SQL Server 2014 をインストール](../database-engine/install-windows/install-sql-server-using-sysprep.md)する」を参照してください [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
   
 -   **Server Core インストール**  
   
-     Windows Server Core へののインストール[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の手順については、「 [server core に SQL Server 2014 をインストール](../database-engine/install-windows/install-sql-server-on-server-core.md)する」を参照してください。  
+     Windows Server Core へののインストールの手順については、「 [Server core に SQL Server 2014 をインストール](../database-engine/install-windows/install-sql-server-on-server-core.md)する」を参照してください [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
   
 -   **[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] BI 機能のインストール**  
   
-     Microsoft bi プラットフォームの一部である機能のインストールについては、「 [SQL Server 2014 bi 機能のインストール](../sql-server/install/install-sql-server-business-intelligence-features.md)」 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]を[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]参照[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]し[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]てください。これには、、、、、および分析データの作成または操作に使用されるいくつかのクライアントアプリケーションが含まれます。  
+     Microsoft bi プラットフォームの一部である機能のインストールについては、「 [SQL Server 2014 bi 機能のインストール](../sql-server/install/install-sql-server-business-intelligence-features.md)」を参照してください。これには、、、、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 、および分析データの作成または操作に使用されるいくつかのクライアントアプリケーションが含まれます。  
   
 -   **フェールオーバー クラスター インストール**  
   
-     フェールオーバークラスターへののインストール[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の手順について[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]は、「 [SQL Server フェールオーバークラスターのインストール](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)」を参照してください。  
+     フェールオーバークラスターへののインストールの手順については、「 [SQL Server フェールオーバークラスターのインストール](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)」を参照してください [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
   
  既定では、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のセットアップ時にサンプル データベースとサンプル コードはインストールされません。 Express 以外のエディションの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のサンプル データベースとサンプル コードをインストールするには、[CodePlex Web サイト](https://go.microsoft.com/fwlink/?LinkId=87843)をご覧ください。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のサンプル データベースと [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] のサンプル コードのサポートについては、「[データベースとサンプルの概要](https://go.microsoft.com/fwlink/?LinkId=110391)」をご覧ください。  
   
@@ -91,13 +91,13 @@ ms.locfileid: "74683611"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-###  <a name="planning-a-ssnoversion-installation"></a><a name="BKMK_BeforeYouInstall"></a>インストールの[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]計画  
+###  <a name="planning-a-ssnoversion-installation"></a><a name="BKMK_BeforeYouInstall"></a>インストールの計画 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] をインストールする前に、ハードウェアとソフトウェアの要件、ネットワークとインターネットに関する考慮事項、および [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] をインストールして実行するためのセキュリティ上の考慮事項を確認する必要があります。 詳細については、「 [SQL Server のインストールの計画](../../2014/sql-server/install/planning-a-sql-server-installation.md)」と、次のトピックも参照してください。  
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
 |ハードウェアとソフトウェアの要件、オペレーティング システムのサポート、ネットワークとインターネットに関する考慮事項、および必要なハード ディスク領域について確認します。|[インストールの前提条件](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]インストールのセキュリティに関する考慮事項を確認します。|[セキュリティの考慮事項](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)|  
+|インストールのセキュリティに関する考慮事項を確認し [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ます。|[セキュリティの考慮事項](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)|  
 |[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] のさまざまなエディションでサポートされる機能の詳細を確認します。|[機能とエディション](features-supported-by-the-editions-of-sql-server-2014.md)|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の最適なエディションおよびコンポーネントを決定します。|[SQL Server 2014 のエディションとコンポーネント](../sql-server/editions-and-components-of-sql-server-2016.md)|  
 |ハードウェア構成を確認し、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] フェールオーバー クラスターのインストールの準備について学習します。|[フェールオーバー クラスタリングをインストールする前に](../sql-server/failover-clusters/install/before-installing-failover-clustering.md)|  
@@ -138,7 +138,7 @@ ms.locfileid: "74683611"
 |説明|トピック|  
 |-----------------|-----------|  
 |このトピックでは、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] または PowerPivot for SharePoint へのアクセスを許可するためにファイアウォールのポートのブロックを解除する必要があるかどうかを判断するための情報を提供します。 このトピックで示す手順に従って、ポートとファイアウォールを構成できます。|[Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|  
-|このトピックでは、ファイアウォール構成の概要について説明し、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理者を対象とした情報がまとめられています。|[Configure the Windows Firewall to Allow SQL Server Access](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
+|このトピックでは、ファイアウォール構成の概要について説明し、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理者を対象とした情報がまとめられています。|[SQL Server アクセスを許可するように Windows ファイアウォールを構成する](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
 |このトピックでは、マルチホーム環境内の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスへのネットワーク接続用に [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] とセキュリティが強化された Windows ファイアウォールを構成する方法について説明します。|[SQL Server アクセス用のマルチホーム コンピューターの構成](../../2014/sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|  
   
 ###  <a name="uninstalling-sscurrent"></a><a name="BKMK_Uninstalling"></a>取り外し[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  

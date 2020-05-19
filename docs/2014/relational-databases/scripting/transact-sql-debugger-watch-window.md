@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Watch Window [Transact-SQL]
 ms.assetid: 23f3baa4-14c2-4262-92f7-3f43fcfa0436
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6d6f0d0335b07be83d7b34895c08e8ff01dcd67a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c50a286002d245bf05f24d74653a2697866f1dec
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242991"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718294"
 ---
 # <a name="watch-window"></a>[ウォッチ] ウィンドウ
   **[ウォッチ]** ウィンドウには、選択した式に関する情報が表示されます。 最大で 4 つの [ウォッチ] ウィンドウ ( **[ウォッチ 1]** 、 **[ウォッチ 2]、[ウォッチ 3]** 、および **[ウォッチ 4]** ) を表示できます。 式は、 **[呼び出し履歴]** ウィンドウで選択された現在の呼び出し履歴フレームのスコープ内で評価されます。 変数と式を確認するには、デバッグ モードである必要があります。  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ADO, objects and interfaces
 - objects [ADO]
 ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e5ecc6de67defb2366bf208c38bd2de5bff643e4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fe57e31792755aca1dc51b0af50805e853a5bab4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920908"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747236"
 ---
 # <a name="ado-objects-and-interfaces"></a>ADO のオブジェクトとインターフェイス
 これらのオブジェクト間のリレーションシップは、 [ADO オブジェクトモデル](../../../ado/reference/ado-api/ado-object-model.md)で表現されます。  
@@ -37,7 +37,7 @@ ms.locfileid: "67920908"
 |[エラー](../../../ado/reference/ado-api/error-object.md)|プロバイダーに関連する1つの操作に関連するデータアクセスエラーの詳細が含まれています。<br /><br /> **エラー**オブジェクトは、スクリプト作成には安全ではありません。|  
 |[フィールド](../../../ado/reference/ado-api/field-object.md)|共通のデータ型のデータ列を表します。|  
 |[パラメーター](../../../ado/reference/ado-api/parameter-object.md)|パラメーター化クエリまたはストアドプロシージャに基づいて**Command**オブジェクトに関連付けられたパラメーターまたは引数を表します。<br /><br /> **パラメーター**オブジェクトは、スクリプト作成には安全ではありません。|  
-|[プロパティ](../../../ado/reference/ado-api/property-object-ado.md)|プロバイダーによって定義される ADO オブジェクトの動的特性を表します。|  
+|[Property](../../../ado/reference/ado-api/property-object-ado.md)|プロバイダーによって定義される ADO オブジェクトの動的特性を表します。|  
 |[録音](../../../ado/reference/ado-api/record-object-ado.md)|**レコードセット**の行、またはファイルシステム内のディレクトリまたはファイルを表します。 **レコード**オブジェクトは、スクリプトに対して安全です。|  
 |[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)|ベーステーブルからのレコードのセット、または実行されたコマンドの結果を表します。 **レコードセット**オブジェクトは、常に、セット内の1つのレコードのみを現在のレコードとして参照します。<br /><br /> **レコードセット**オブジェクトは、スクリプトに対して安全です。|  
 |[Stream](../../../ado/reference/ado-api/stream-object-ado.md)|データのバイナリストリームを表します。<br /><br /> **ストリーム**オブジェクトは、スクリプトに対して安全です。|  

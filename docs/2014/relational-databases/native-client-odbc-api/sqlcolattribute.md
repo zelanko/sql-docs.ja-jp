@@ -11,18 +11,18 @@ topic_type:
 helpviewer_keywords:
 - SQLColAttribute function
 ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 706d08eb3c140571460f4ebccb541ac24a71160a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: deb9ddbc59e8ff76c8c459022d73cca7e7de81d3
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067676"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706345"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
-  を使用`SQLColAttribute`すると、準備済みまたは実行済みの ODBC ステートメントの結果セット列の属性を取得できます。 準備`SQLColAttribute`されたステートメントでを呼び[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]出すと、との間にラウンドトリップが発生します。 Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC ドライバーは、ステートメントの実行の一部として結果セットの列`SQLColAttribute`データを受け取ります。そのため、 **sqlexecute**または**SQLExecDirect**の完了後にを呼び出すと、サーバーのやり取りは行われません。  
+  を使用すると、 `SQLColAttribute` 準備済みまたは実行済みの ODBC ステートメントの結果セット列の属性を取得できます。 `SQLColAttribute`準備されたステートメントでを呼び出すと、との間にラウンドトリップが発生 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーは、ステートメントの実行の一部として結果セットの列データを受け取ります。そのため、 `SQLColAttribute` **Sqlexecute**または**SQLExecDirect**の完了後にを呼び出すと、サーバーのやり取りは行われません。  
   
 > [!NOTE]  
 >  すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の結果セットで、ODBC 列の ID 属性は使用できません。  
@@ -39,9 +39,9 @@ ms.locfileid: "63067676"
 |SQL_DESC_TABLE_NAME|サーバー カーソルを生成するステートメントから取得した結果セットで使用できます。または、FOR BROWSE 句を含む実行済みの SELECT ステートメントで使用できます。|  
 |SQL_DESC_UNNAMED|結果セット内にあるすべての列に対する SQL_NAMED が返されます。ただしこれは、式の一部にラベル割り当てが含まれておらず、列がこの式の結果ではない場合に限ります。 SQL_DESC_UNNAMED が SQL_UNNAMED を返すときは、すべての ODBC 列の ID 属性には、その列に対して長さゼロの文字列が含まれます。|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC ドライバーは、SET FMTONLY ステートメントを使用して、 `SQLColAttribute`準備済みの unexecuted ステートメントに対してが呼び出されたときのサーバーオーバーヘッドを減らします。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC ドライバーは、SET FMTONLY ステートメントを使用して、 `SQLColAttribute` 準備済みの unexecuted ステートメントに対してが呼び出されたときのサーバーオーバーヘッドを減らします。  
   
- 大きな値型の場合`SQLColAttribute` 、は次の値を返します。  
+ 大きな値型の場合、 `SQLColAttribute` は次の値を返します。  
   
 |フィールド ID|変更の説明|  
 |----------------------|---------------------------|  
@@ -54,7 +54,7 @@ ms.locfileid: "63067676"
   
  すべてのバージョンで、準備された SQL ステートメントのバッチによって複数の結果セットが生成されるときは、最初の結果セットのみの列属性が報告されます。  
   
- 次の列属性は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC ドライバーによって公開される拡張機能です。 Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC ドライバーは、 *numericattrptr*パラメーター内のすべての値を返します。 WORD 配列へのポインターである SQL_CA_SS_COMPUTE_BYLIST を除き、SDWORD 型 (符号付き long 型) として値が返されます。  
+ 次の列属性は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC ドライバーによって公開される拡張機能です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーは、 *Numericattrptr*パラメーター内のすべての値を返します。 WORD 配列へのポインターである SQL_CA_SS_COMPUTE_BYLIST を除き、SDWORD 型 (符号付き long 型) として値が返されます。  
   
 |フィールド ID|返される値|  
 |----------------------|--------------------|  
@@ -102,7 +102,7 @@ ms.locfileid: "63067676"
  `SQLColAttribute` は、大きな CLR ユーザー定義型 (UDT) をサポートしています。 詳細については、「[大容量の CLR ユーザー定義型 &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)」を参照してください。  
   
 ## <a name="sqlcolattribute-support-for-sparse-columns"></a>SQLColAttribute によるスパース列のサポート  
- SQLColAttribute は、新しい実装行記述子 (IRD) フィールド SQL_CA_SS_IS_COLUMN_SET を照会して、列が`column_set`列かどうかを判断します。  
+ SQLColAttribute は、新しい実装行記述子 (IRD) フィールド SQL_CA_SS_IS_COLUMN_SET を照会して、列が列かどうかを判断し `column_set` ます。  
   
  詳細については、「[スパース列のサポート &#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md)」を参照してください。  
   

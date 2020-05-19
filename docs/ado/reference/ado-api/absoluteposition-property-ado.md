@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - AbsolutePosition property [ADO]
 ms.assetid: 79f8ee5e-fc70-46d8-8c29-ebf943c66592
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5b9795f962d0ead59a8d4f993e799a0ae4e2b750
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 56b21fe8cddf4d855ec1655a83cea306c0a3000c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921692"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747520"
 ---
 # <a name="absoluteposition-property-ado"></a>AbsolutePosition プロパティ (ADO)
 [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの現在のレコードの位置を表す序数を示します。  
@@ -30,7 +30,7 @@ ms.locfileid: "67921692"
   
  64ビットコードの場合は、64ビット値を格納するためにに用意されているデータ型を使用します。 たとえば、Long または DBORDINAL などの64ビット長の別の値を使用することができます。 **Positionenum**値は、32ビットの長さに制限されているため、使用しないでください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ADO では、 **AbsolutePosition**プロパティを設定するために、使用している OLE DB プロバイダーが[IRowsetLocate: IRowset](https://msdn.microsoft.com/library/windows/desktop/ms721190.aspx)インターフェイスを実装する必要があります。  
   
  順方向専用カーソルまたは動的カーソルで開かれた**レコードセット**の**AbsolutePosition**プロパティにアクセスすると、エラー **adErrFeatureNotAvailable**が発生します。 その他の種類のカーソルでは、OLE DB プロバイダーが**IRowsetScroll: IRowsetLocate**インターフェイスをサポートしている限り、正しい位置が返されます。 プロバイダーで**IRowsetScroll**インターフェイスがサポートされていない場合、プロパティは**adposunknown**に設定されます。 **IRowsetScroll**がサポートされているかどうかを判断するには、プロバイダーのドキュメントを参照してください。  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - executing template files [SQLXML]
 - CommandText property
 ms.assetid: f1b1278d-252d-4a06-836e-4ef77f338ef9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f1635358fc136c9faba3ce18b1d278ee1e407411
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65af4c1bce3e09f33771b2729c01c02b9512688b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012509"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718056"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>CommandText プロパティを使用した、テンプレート ファイルの実行
   この例では、SQL または XPath クエリで構成されるテンプレートファイルを CommandTextproperty を使用して指定する方法を示します。 CommandText の値として SQL または XPath クエリを指定する代わりに、ファイル名を値として指定できます。 次の例では、CommandType プロパティが SqlXmlCommandType として指定されています。  
@@ -91,7 +91,7 @@ class Test
   
 5.  コマンド プロンプトで、DocSample.exe を実行します。  
   
- テンプレートにパラメーターを渡す場合、パラメーター名はアットマーク (@) で始める必要があります。たとえば、p.Name = "@ContactID" のように指定します。ここで、p は SqlXmlParameter オブジェクトです。  
+ テンプレートにパラメーターを渡す場合、パラメーター名はアットマーク (@) で始める必要があります。たとえば、p.Name = "" のように指定し @ContactID ます。ここで、p は SqlXmlParameter オブジェクトです。  
   
  次は、1 つのパラメーターをとるように変更したテンプレートです。  
   

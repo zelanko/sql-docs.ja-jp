@@ -13,15 +13,15 @@ helpviewer_keywords:
 - XPath queries [SQLXML], Boolean operators
 - operators [SQLXML]
 ms.assetid: 9928cff5-62ac-42aa-96bf-2e09a1df0bc3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 29404c4a3dc7b4b10106e7a3a8cb170ffe1e7a3e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 45db8a3111173257cad45bea2961b9bb4c72bffc
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010627"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717783"
 ---
 # <a name="specifying-boolean-operators-in-xpath-queries-sqlxml-40"></a>XPath クエリ内での論理演算子の指定 (SQLXML 4.0)
   以下の例では、XPath クエリに論理演算子を指定する方法を示します。 この例の XPath クエリは、SampleSchema1.xml に格納されているマッピング スキーマに対して指定されます。 このサンプルスキーマの詳細については、「 [XPath のサンプルの注釈付き XSD スキーマの例 &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)」を参照してください。  
@@ -29,7 +29,7 @@ ms.locfileid: "66010627"
 ## <a name="examples"></a>例  
   
 ### <a name="a-specify-the-or-boolean-operator"></a>A. OR 論理演算子を指定する  
- この XPath クエリでは、 **CustomerID**属性の値が13または31のコンテキストノードの** \<顧客>** 要素の子が返されます。  
+ この XPath クエリでは、 **CustomerID**属性の値が13または31のコンテキストノードの** \< 顧客>** 要素の子が返されます。  
   
 ```  
 /child::Customer[attribute::CustomerID="13" or attribute::CustomerID="31"]  
@@ -41,7 +41,7 @@ ms.locfileid: "66010627"
 /Customer[@CustomerID="13" or @CustomerID="31"]  
 ```  
   
- 述語では、 `attribute` `CustomerID`は軸で、はノードテストです ( **CustomerID**が** \<属性>** ノードである場合は TRUE になります。これは、 ** \<属性>** ノードが`attribute`軸のプライマリノードであるためです)。 述語は、 ** \<顧客>** 要素をフィルター処理し、述語に指定された条件を満たすものだけを返します。  
+ 述語では、 `attribute` は軸で、は `CustomerID` ノードテストです ( **CustomerID**が** \< 属性>** ノードである場合は TRUE になります。これは、 ** \< 属性>** ノードが軸のプライマリノードであるためです `attribute` )。 述語は、 ** \< 顧客>** 要素をフィルター処理し、述語に指定された条件を満たすものだけを返します。  
   
 ##### <a name="to-test-the-xpath-queries-against-the-mapping-schema"></a>マッピングスキーマに対して XPath クエリをテストするには  
   

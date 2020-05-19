@@ -7,29 +7,29 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: a7380ef0-c9d7-49e4-b6de-fad34752b9f3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: de5f805a9d722974adf7975f713436bc7b1ca4d0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b7ba8c40979873cc2c3f2358b57dc0e491a1795e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63155150"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718839"
 ---
 # <a name="supported-data-types"></a>サポートされるデータ型
   メモリ最適化テーブルとネイティブコンパイルストアドプロシージャでは、次のデータ型がサポートされ**て**います。  
   
- **数値データ型**  
+ **数値のデータ型**  
   
 |データ型|詳細情報|  
 |---------------|--------------------------|  
-|int|[int、bigint、smallint、tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)|  
+|INT|[int、bigint、smallint、tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)|  
 |bigint|[int、bigint、smallint、tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)|  
 |smallint|[int、bigint、smallint、tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)|  
 |tinyint|[int、bigint、smallint、tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)|  
 |decimal|[decimal 型と numeric 型 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/decimal-and-numeric-transact-sql)|  
-|numeric|[decimal 型と numeric 型 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/decimal-and-numeric-transact-sql)|  
+|数値|[decimal 型と numeric 型 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/decimal-and-numeric-transact-sql)|  
 |float|[float と real &#40;Transact-SQL&#41;](/sql/t-sql/data-types/float-and-real-transact-sql)|  
 |real|[float と real &#40;Transact-SQL&#41;](/sql/t-sql/data-types/float-and-real-transact-sql)|  
 |money|[money および smallmoney &#40;Transact-SQL&#41;](/sql/t-sql/data-types/money-and-smallmoney-transact-sql)|  
@@ -53,9 +53,9 @@ ms.locfileid: "63155150"
   
 |データ型|詳細情報|  
 |---------------|--------------------------|  
-|日付|[date &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|  
+|date|[date &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|  
 |time|[time &#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql)|  
-|datetime|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql)|  
+|DATETIME|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql)|  
 |datetime2|[datetime2 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)|  
 |smalldatetime|[smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|  
   

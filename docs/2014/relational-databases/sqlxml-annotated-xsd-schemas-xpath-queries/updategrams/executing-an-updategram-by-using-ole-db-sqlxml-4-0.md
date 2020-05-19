@@ -12,15 +12,15 @@ helpviewer_keywords:
 - OLE DB, SQLXML
 - executing updategrams [SQLXML]
 ms.assetid: 4154c590-1541-49d0-8117-4ddf2ce5ccba
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a61c0386d6e5c5e836a60e5175272d4fdaaa6f15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e58db16e14c0e959ca83dcdd687159f80bbeaf77
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014792"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717506"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>OLE DB を使用した、アップデートグラムの実行 (SQLXML 4.0)
   このトピックでは、Ole DB を使用してアップデートグラムを実行する実際のサンプルについて説明します。  
@@ -58,7 +58,7 @@ ms.locfileid: "66014792"
 </Schema>  
 ```  
   
- このクエリでは、従業員のすべての要素が返されます。 既定のマッピングでは、 ** \<person. contact>** 要素は、AdventureWorks データベースの person テーブルにマップされます。  
+ このクエリでは、従業員のすべての要素が返されます。 既定のマッピングでは、 ** \< Person. contact>** 要素は、AdventureWorks データベースの person テーブルにマップされます。  
   
 ###### <a name="to-set-xml-as-a-command-and-retrieving-result-as-an-xml-document"></a>XML をコマンドとして設定し、結果を XML ドキュメントとして取得するには  
   
@@ -513,7 +513,7 @@ FOR XML AUTO</sql:query>
 </ROOT>  
 ```  
   
- このテンプレートには SQL クエリが含まれており、 クエリでは、パラメーター (@Title) の値が必要です。 パラメーター値が渡されない場合は、既定値 ("Mr.") が使用されます。  
+ このテンプレートには SQL クエリが含まれており、 クエリでは、パラメーター () の値が必要です @Title 。 パラメーター値が渡されない場合は、既定値 ("Mr.") が使用されます。  
   
  テンプレートにパラメーター値を渡すときには、パラメーターの名前と値の両方を指定する必要があります。  
   

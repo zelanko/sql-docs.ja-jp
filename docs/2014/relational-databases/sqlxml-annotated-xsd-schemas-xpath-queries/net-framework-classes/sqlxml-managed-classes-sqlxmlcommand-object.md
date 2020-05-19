@@ -27,15 +27,15 @@ helpviewer_keywords:
 - ClientSideXML property
 - CommandStream property
 ms.assetid: c1f9e0bb-a89d-4d6a-a96e-289ef516a3a6
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d002208a83b58a4c8547bc6ce85db073ced70974
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e7ee45c8d725e233541f4db34796e89327bc11e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010743"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717946"
 ---
 # <a name="sqlxmlcommand-object-sqlxml-managed-classes"></a>SqlXmlCommand オブジェクト (SQLXML マネージド クラス)
   SqlXmlCommand オブジェクトのコンストラクターを次に示します。  
@@ -44,7 +44,7 @@ ms.locfileid: "66010743"
 public SqlXmlCommand(string cnString)  
 ```  
   
- ここ`cnString`で、は、サーバー、データベース、およびログイン情報を識別する ADO または OLEDB の接続文字列です`Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"`(例:)。  
+ ここで、 `cnString` は、サーバー、データベース、およびログイン情報を識別する ADO または OLEDB の接続文字列です (例:) `Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"` 。  
   
  接続文字列では、`Provider` に SQLOLEDB を指定する必要があります。プロバイダーの文字列に `Data Provider` は使用できません。  
   
@@ -86,7 +86,7 @@ public SqlXmlCommand(string cnString)
  XSL ファイルの名前とディレクトリ パスを指定します。 パスは、相対パスまたは絶対パスで指定できます。 パスが相対パスの場合は、ベースパスに指定されているベースパスを使用して相対パスが解決されます。 基本パスが指定されていない場合、相対パスは現在のディレクトリからのパスになります。 実際のサンプルについては、「 [&#40;SQLXML マネージクラス&#41;の XSL 変換の適用](applying-an-xsl-transformation-sqlxml-managed-classes.md)」を参照してください。  
   
  基本パス  
- 基本パス (ディレクトリ パス) を指定します。 このプロパティは、(XslPath プロパティを使用して) XSL ファイルに指定されている相対パス、マッピングスキーマファイル (SchemaPath プロパティを使用)、または XML テンプレート内の外部スキーマ参照 ( `mapping-schema`属性を使用して指定) を解決するのに役立ちます。  
+ 基本パス (ディレクトリ パス) を指定します。 このプロパティは、(XslPath プロパティを使用して) XSL ファイルに指定されている相対パス、マッピングスキーマファイル (SchemaPath プロパティを使用)、または XML テンプレート内の外部スキーマ参照 (属性を使用して指定) を解決するのに役立ち `mapping-schema` ます。  
   
  OutputEncoding  
  コマンドを実行したときに返されるストリームのエンコードを指定します。 このプロパティは、返されるストリームに特定のエンコードを要求する場合に便利です。 一般的に使用されるエンコードには、UTF-8、ANSI、Unicode などがあります。 既定のエンコードは UTF-8 です。  

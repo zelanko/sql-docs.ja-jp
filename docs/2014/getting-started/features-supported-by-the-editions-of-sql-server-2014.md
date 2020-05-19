@@ -7,24 +7,24 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 5da61ff5-12b9-48e6-b3c8-0dacca1751c4
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: caae4212e2182ae6afde29b0fed1aaee4f05645a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 118fe59e76f23089ce56371ea4ba981bb4ab1f7f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289290"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706960"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>SQL Server 2014 の各エディションがサポートする機能
 
 
   このトピックでは、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]のさまざまなエディションでサポートされる機能の詳細について説明します。 
 
- > **注:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]は、180日間の試用期間の評価版で使用できます。 詳細については、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [試用版ソフトウェアの Web サイト](https://go.microsoft.com/fwlink/?LinkId=190955)を参照してください。  
+ > **注:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]は、180日間の試用期間中、評価版でご利用いただけます。 詳細については、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [試用版ソフトウェアの Web サイト](https://go.microsoft.com/fwlink/?LinkId=190955)を参照してください。  
 > 
-> **注:** 評価版と Developer edition でサポートされて[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]いる機能については、Enterprise の機能セットを参照してください。  
+> **注:** 評価版と Developer edition でサポートされている機能については、Enterprise の機能セットを参照してください [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
   
  各 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] テクノロジの表に移動するには、それぞれのリンクをクリックしてください。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "79289290"
   
  [Security](#Enterprise_security)  
   
- [Replication](#Replication)  
+ [レプリケーション](#Replication)  
   
  [管理ツール](#Mgmt_Tools)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "79289290"
   
  [開発ツール](#Dev_tools)  
   
- [ティ](#Programmability)  
+ [プログラミング](#Programmability)  
   
  [統合サービス](#SSIS)  
   
@@ -54,7 +54,7 @@ ms.locfileid: "79289290"
   
  [マスター データ サービス](#MDS)  
   
- [データ ウェアハウス (data warehouse)](#Data_warehouse)  
+ [データウェアハウス](#Data_warehouse)  
   
  [Analysis Services](#SSAS)  
   
@@ -80,14 +80,14 @@ ms.locfileid: "79289290"
   
 |機能名|Enterprise|ビジネス インテリジェンス|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|1つのインスタンスで使用される最大[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]計算容量 (データベースエンジン)<sup>1</sup>|オペレーティング システムの最大容量|4 ソケットまたは 16 コアのいずれか小さいほうに制限|4 ソケットまたは 16 コアのいずれか小さいほうに制限|4 ソケットまたは 16 コアのいずれか小さいほうに制限|1 ソケットまたは 4 コアのいずれか小さいほうに制限|1 ソケットまたは 4 コアのいずれか小さいほうに制限|1 ソケットまたは 4 コアのいずれか小さいほうに制限|  
+|1つのインスタンスで使用される最大計算容量 ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースエンジン)<sup>1</sup>|オペレーティング システムの最大容量|4 ソケットまたは 16 コアのいずれか小さいほうに制限|4 ソケットまたは 16 コアのいずれか小さいほうに制限|4 ソケットまたは 16 コアのいずれか小さいほうに制限|1 ソケットまたは 4 コアのいずれか小さいほうに制限|1 ソケットまたは 4 コアのいずれか小さいほうに制限|1 ソケットまたは 4 コアのいずれか小さいほうに制限|  
 |1つのインスタンスで使用される最大計算容量 (Analysis Services、Reporting Services) <sup>1</sup>|オペレーティング システムの最大容量|オペレーティング システムの最大容量|4 ソケットまたは 16 コアのいずれか小さいほうに制限|4 ソケットまたは 16 コアのいずれか小さいほうに制限|1 ソケットまたは 4 コアのいずれか小さいほうに制限|1 ソケットまたは 4 コアのいずれか小さいほうに制限|1 ソケットまたは 4 コアのいずれか小さいほうに制限|  
 |利用可能な最大メモリ サイズ ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベース エンジンのインスタンスごと)|オペレーティング システムの最大容量|128 GB|128 GB|64 GB|1 GB|1 GB|1 GB|  
-|利用可能な最大メモリ サイズ ( [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のインスタンスごと)|オペレーティング システムの最大容量|オペレーティング システムの最大容量|64 GB|なし|なし|なし|なし|  
-|利用可能な最大メモリ サイズ ( [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]のインスタンスごと)|オペレーティング システムの最大容量|オペレーティング システムの最大容量|64 GB|64 GB|4 GB|なし|なし|  
+|利用可能な最大メモリ サイズ ( [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のインスタンスごと)|オペレーティング システムの最大容量|オペレーティング システムの最大容量|64 GB|N/A|N/A|N/A|N/A|  
+|利用可能な最大メモリ サイズ ( [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]のインスタンスごと)|オペレーティング システムの最大容量|オペレーティング システムの最大容量|64 GB|64 GB|4 GB|N/A|N/A|  
 |リレーショナル データベースの最大サイズ|524 PB|524 PB|524 PB|524 PB|10 GB|10 GB|10 GB|  
   
- <sup>1</sup> Enterprise Edition with Server および Client Access LICENSE (CAL) に基づくライセンス (新しい契約では利用できません) は、インスタンスあたり[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]最大20コアに制限されています。 コアベースのサーバー ライセンス モデルでは、制限はありません。 詳細については、「 [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)」を参照してください。  
+ <sup>1</sup> Enterprise Edition with Server および Client Access LICENSE (CAL) に基づくライセンス (新しい契約では利用できません) は、インスタンスあたり最大20コアに制限されてい [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ます。 コアベースのサーバー ライセンス モデルでは、制限はありません。 詳細については、「 [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)」を参照してください。  
   
 ##  <a name="high-availability"></a><a name="High_availability"></a>高可用性  
   
@@ -111,9 +111,9 @@ ms.locfileid: "79289290"
 |暗号化されたバックアップ|はい|はい|はい|||||  
 |スマート バックアップ|はい|はい|はい|いいえ||||  
   
- <sup>1</sup>Server Core へのの[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]インストールの詳細については、「 [Install SQL Server 2014 on server core](../database-engine/install-windows/install-sql-server-on-server-core.md)」を参照してください。  
+ <sup>1</sup>Server Core へののインストールの詳細につい [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] ては、「 [Install SQL Server 2014 On server core](../database-engine/install-windows/install-sql-server-on-server-core.md)」を参照してください。  
   
- <sup>2</sup>この機能は、64ビット[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のでのみ使用できます。  
+ <sup>2</sup>この機能は、64ビットのでのみ使用でき [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ます。  
   
 ##  <a name="scalability-and-performance"></a><a name="Scalability"></a>スケーラビリティとパフォーマンス  
   
@@ -131,7 +131,7 @@ ms.locfileid: "79289290"
 |インメモリ OLTP <sup>1</sup>|はい|||||||  
 |遅延持続性|はい|はい|はい|はい|はい|はい|はい|  
   
- <sup>1</sup>この機能は64ビット[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のみで使用できます。  
+ <sup>1</sup>この機能は64ビットのみで使用でき [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ます。  
   
 ##  <a name="security"></a><a name="Enterprise_security"></a> セキュリティ  
   
@@ -172,10 +172,10 @@ ms.locfileid: "79289290"
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェント|はい|はい|はい|はい||||  
 |Microsoft System Center Operations Manager 管理パック|はい|はい|はい|はい||||  
 |データベース チューニング アドバイザー (DTA)|はい|はい|○<sup>3</sup>|○<sup>3</sup>||||  
-|Azure VM [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]にデータベースを配置ウィザード|はい|はい|はい|はい|はい|はい|はい|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]AZURE VM にデータベースを配置ウィザード|はい|はい|はい|はい|はい|はい|はい|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Azure のデータファイル|はい|はい|はい|はい|はい|はい|はい|  
   
- <sup>2</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Web、 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]、 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Tools、および[!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services は、Standard edition [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]と[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise edition を使用してプロファイルできます。  
+ <sup>2</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Web、 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 、 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] With Tools、および [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard edition と Enterprise edition を使用してプロファイルでき [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ます。  
   
  <sup>3</sup>チューニングは Standard edition 機能でのみ有効です。  
   
@@ -206,7 +206,7 @@ ms.locfileid: "79289290"
   
  <sup>1</sup> 詳細については、「 [SysPrep を使用した SQL Server のインストールに関する注意点](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)」を参照してください。  
   
- <sup>2</sup>この機能は、64ビット[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のでのみ使用できます。  
+ <sup>2</sup>この機能は、64ビットのでのみ使用でき [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ます。  
   
 ##  <a name="development-tools"></a><a name="Dev_tools"></a>開発ツール  
   
@@ -277,7 +277,7 @@ ms.locfileid: "79289290"
 > [!NOTE]  
 >  -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] は、64 ビット エディションの Business Intelligence と Enterprise でのみ使用できます。  
   
-|機能|Enterprise|ビジネス インテリジェンス|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
+|機能|エンタープライズ|ビジネス インテリジェンス|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |-------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベース|はい|はい||||||  
 |[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーション|はい|はい||||||  
@@ -313,7 +313,7 @@ ms.locfileid: "79289290"
 |階層|はい|はい|はい|||||  
 |KPI|はい|はい|はい|||||  
 |パースペクティブ|はい|はい||||||  
-|操作|はい|はい|はい|||||  
+|Actions|はい|はい|はい|||||  
 |勘定科目インテリジェンス|はい|はい|はい|||||  
 |タイム インテリジェンス|はい|はい|はい|||||  
 |カスタム ロールアップ|はい|はい|はい|||||  
@@ -415,18 +415,18 @@ ms.locfileid: "79289290"
 |データ ドリブン レポート サブスクリプション|はい|はい||||||  
 |スケール アウト配置 (Web ファーム)|はい|はい||||||  
 |警告<sup>2</sup>|はい|はい||||||  
-|[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]<sup>2</sup>|はい|はい||||||  
+|[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] <sup>2</sup>|はい|はい||||||  
   
- <sup>1</sup>で[!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]サポートされるデータソースの詳細については、「 [Reporting Services &#40;SSRS&#41;でサポートされるデータソース](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)」を参照してください。  
+ <sup>1</sup>でサポートされるデータソースの詳細につい [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] ては、「 [REPORTING SERVICES &#40;SSRS&#41;でサポートされるデータソース](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)」を参照してください。  
   
- <sup>2</sup>SharePoint [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]モードのが必要です。 詳細については、「sharepoint [2010 および sharepoint 2013&#41;の Reporting Services Sharepoint モードの &#40;インストール](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)」を参照してください。  
+ <sup>2</sup>[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]SharePoint モードのが必要です。 詳細については、「sharepoint [2010 および sharepoint 2013&#41;の Reporting Services Sharepoint モードの &#40;インストール](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)」を参照してください。  
   
 ### <a name="report-server-database-server-edition-requirements"></a>レポート サーバー データベースのサーバー エディション  
  レポート サーバー データベースを作成するときは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のすべてのエディションでデータベースをホストできるわけではないことに注意してください。 次の表に、 [!INCLUDE[ssDE](../includes/ssde-md.md)] の特定のエディションで使用できる [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]のエディションを示します。  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Reporting Services のエディション|データベースをホストするために使用するデータベース エンジン インスタンスのエディション|  
 |----------------------------------------------------------------------|---------------------------------------------------------------------------|  
-|Enterprise|Standard Edition、Business Intelligence Enterprise Edition (ローカルまたはリモート)|  
+|エンタープライズ|Standard Edition、Business Intelligence Enterprise Edition (ローカルまたはリモート)|  
 |ビジネス インテリジェンス|Standard Edition、Business Intelligence Enterprise Edition (ローカルまたはリモート)|  
 |Standard|Standard Edition、Enterprise Edition (ローカルまたはリモート)|  
 |Web|Web Edition (ローカルのみ)|  

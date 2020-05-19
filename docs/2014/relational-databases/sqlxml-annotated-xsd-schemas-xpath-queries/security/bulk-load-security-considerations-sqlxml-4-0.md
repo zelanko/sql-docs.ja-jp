@@ -12,15 +12,15 @@ helpviewer_keywords:
 - security [SQLXML], XML Bulk Load
 - XML Bulk Load [SQLXML], security
 ms.assetid: 192fc6d4-ecbc-4a4d-a5cb-55e1f64af318
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 559c54c263f685350badc5d7e0232d0d0354443a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b87b81acef728129c38debe56f24859671117d1f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010556"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717722"
 ---
 # <a name="bulk-load-security-considerations-sqlxml-40"></a>一括読み込みのセキュリティに関する注意点 (SQLXML 4.0)
   次に、XML 一括読み込みを使用する場合のセキュリティに関するガイドラインを示します。  

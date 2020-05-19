@@ -7,22 +7,22 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 67084043-6b23-4975-b9db-6e49923d4bab
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 532cdf5466445f08d5d415799b9f4afab347e77f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 68b7f660675c8eca1b090d4ced08e770f1a7d22d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63158173"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719105"
 ---
 # <a name="implementing-an-outer-join"></a>外部結合の実装
   外部結合は、ネイティブ コンパイル ストアド プロシージャではサポートされていません。 次のサンプルは、ネイティブ コンパイル ストアド プロシージャに左外部結合の機能を実装する方法を示しています。  
   
  このサンプルでは、テーブル変数を使用して結合の左側でカーソルをシミュレートし、テーブル変数を使用して単一の結果セットを構築します。これは、データ行のコピーを 1 つ作成するなど、限定された数行分のデータを処理する場合にのみ適しています。  
   
- T1_type 型の@outer変数 () を使用して、t1 から行を反復処理し、while ループを使用してカーソルをシミュレートします。 次に@result 、t1t2_join_type 型の変数を使用して結果セットを作成します。  
+ @outerT1_type 型の変数 () を使用して、t1 から行を反復処理し、while ループを使用してカーソルをシミュレートします。 @result次に、t1t2_join_type 型の変数を使用して結果セットを作成します。  
   
  この回避策のパフォーマンスをテストして、アプリケーションで予想どおりに実行されるかどうかを確認する必要があります。  
   

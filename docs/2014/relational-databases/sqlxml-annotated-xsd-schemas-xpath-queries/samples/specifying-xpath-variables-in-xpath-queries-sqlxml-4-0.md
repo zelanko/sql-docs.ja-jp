@@ -10,15 +10,15 @@ helpviewer_keywords:
 - XPath queries [SQLXML], XPath variables
 - XPath variables [SQLXML]
 ms.assetid: c11ab816-11b8-4131-8b77-c03fe500fa10
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 25e6c96ccbe51ccc0d2d88c4b119c08538d37fcf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 00731efa85b4396fa2086596c992ad50c9ab41b7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010691"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717709"
 ---
 # <a name="specifying-xpath-variables-in-xpath-queries-sqlxml-40"></a>XPath クエリ内での XPath 変数の指定 (SQLXML 4.0)
   次の例では、XPath クエリに XPath 変数を指定する方法を示します。 これらの例では、SampleSchema1.xml に格納されているマッピング スキーマに対して XPath クエリを指定しています。 このサンプルスキーマの詳細については、「 [XPath のサンプルの注釈付き XSD スキーマの例 &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)」を参照してください。  
@@ -26,7 +26,7 @@ ms.locfileid: "66010691"
 ## <a name="examples"></a>例  
   
 ### <a name="a-use-the-xpath-variables"></a>A. XPath 変数を使用する  
- サンプル テンプレートは、2 つの XPath クエリで構成されており、 各 XPath クエリは 1 つのパラメーターをとります。 テンプレートでは、これらのパラメーターの既定値も指定しています。 パラメーター値が指定されない場合は、既定値が使用されます。 既定値を持つ2つのパラメーターは、 ** \<sql: header>** で指定されます。  
+ サンプル テンプレートは、2 つの XPath クエリで構成されており、 各 XPath クエリは 1 つのパラメーターをとります。 テンプレートでは、これらのパラメーターの既定値も指定しています。 パラメーター値が指定されない場合は、既定値が使用されます。 既定値を持つ2つのパラメーターは、 ** \< sql: header>** で指定されます。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

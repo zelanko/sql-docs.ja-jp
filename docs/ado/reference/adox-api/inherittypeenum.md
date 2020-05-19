@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - InheritTypeEnum enumeration [ADOX]
 ms.assetid: c2f6ce79-c4b3-4d40-ac95-21025208f991
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: aef8f768dd991e4e6ed740cc56600a6f1a8020e0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f420d7d49ad24188f5210001af1209427478f3f6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965950"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746680"
 ---
 # <a name="inherittypeenum"></a>InheritTypeEnum
 [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)で設定された権限をオブジェクトが継承する方法を指定します。  
   
-|Constant|値|説明|  
+|定数|[値]|説明|  
 |--------------|-----------|-----------------|  
 |**adInheritBoth**|3|オブジェクトと、プライマリオブジェクトに含まれるその他のコンテナーは両方ともエントリを継承します。|  
 |**adInheritContainers**|2|プライマリオブジェクトに含まれる他のコンテナーは、エントリを継承します。|  

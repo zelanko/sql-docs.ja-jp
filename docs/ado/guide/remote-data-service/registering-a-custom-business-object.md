@@ -12,14 +12,14 @@ helpviewer_keywords:
 - registering custom business objects in RDS [ADO]
 - business objects in RDS [ADO]
 ms.assetid: e9032ad8-d14c-42e3-ba13-cb5f00084a79
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f998463e0f8190aa040b801d2fd29c732bb31dce
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9f110447fbb0f00c037361b00945b228449caf4f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922364"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747720"
 ---
 # <a name="registering-a-custom-business-object"></a>カスタム ビジネス オブジェクトの登録
 Web サーバーを使用してカスタムビジネスオブジェクト (.dll または .exe) を正常に起動するには、この手順で説明されているように、ビジネスオブジェクトの ProgID をレジストリに入力する必要があります。 この RDS 機能は、承認された実行可能ファイルのみを実行することで、Web サーバーのセキュリティを保護します。  

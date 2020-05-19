@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9e70ab55fedcc5053cf82a78c040c850a23824eb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9fb2078ea3b9515af26df0846ee2f5d92bd9349a
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63075198"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706437"
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>テーブルとストアド プロシージャのネイティブ コンパイル
   インメモリ OLTP により、ネイティブ コンパイルという概念が導入されています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はメモリ最適化テーブルにアクセスするストアド プロシージャをネイティブにコンパイルできます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はメモリ最適化テーブルをネイティブにコンパイルすることもできます。 ネイティブ コンパイルは、(従来の) 解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)]よりも高速なデータ アクセスと効率的なクエリ実行を可能にします。 テーブルとストアド プロシージャのネイティブ コンパイルを実行すると DLL が生成されます。  
@@ -115,12 +115,12 @@ go
  テーブルおよびストアド プロシージャのネイティブ コンパイルでは、インメモリ OLTP コンパイラを使用します。 このコンパイラはファイルを生成し、そのファイルがディスクに書き込まれて、メモリに読み込まれます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、これらのファイルへのアクセスを制限するために、次のメカニズムを使用しています。  
   
 ### <a name="native-compiler"></a>ネイティブ コンパイラ  
- コンパイラの実行可能ファイルと、ネイティブ コンパイルに必要なバイナリおよびヘッダー ファイルは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの一部として MSSQL\Binn\Xtp フォルダー内にインストールされます。 そのため、既定のインスタンスが c:\program files の下にインストールされている場合、コンパイラ\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ファイルは c:\program files \MSSQL12. にインストールされます。MSSQLSERVER\MSSQL\Binn\Xtp.  
+ コンパイラの実行可能ファイルと、ネイティブ コンパイルに必要なバイナリおよびヘッダー ファイルは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの一部として MSSQL\Binn\Xtp フォルダー内にインストールされます。 そのため、既定のインスタンスが c:\program files の下にインストールされている場合、コンパイラファイルは c:\program files \MSSQL12. にインストールされます。 \\ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]MSSQLSERVER\MSSQL\Binn\Xtp.  
   
  コンパイラへのアクセスを制限するために、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、バイナリ ファイルへのアクセスを制限するアクセス制御リスト (ACL) が使用されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのバイナリは、変更や改ざんが起こらないよう ACL で保護されています。 ネイティブ コンパイラの ACL では、コンパイラの使用も制限されます。ネイティブ コンパイラ ファイルに対する読み取り権限と実行権限を持っているのは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントとシステム管理者のみです。  
   
 ### <a name="files-generated-by-a-native-compilation"></a>ネイティブ コンパイルによって生成されるファイル  
- テーブルまたはストアド プロシージャのコンパイル時に生成されるファイルには、DLL のほか、.c、.obj、.xml、.pdb などの拡張子を持つ中間ファイルがあります。 生成されたファイルは、既定のデータ フォルダーのサブフォルダーに保存されます。 サブフォルダーは Xtp と呼ばれます。 既定のデータフォルダーを使用して既定のインスタンスをインストールすると、生成され\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]たファイルは C:\Program files \MSSQL12. に配置されます。MSSQLSERVER\MSSQL\DATA\Xtp.  
+ テーブルまたはストアド プロシージャのコンパイル時に生成されるファイルには、DLL のほか、.c、.obj、.xml、.pdb などの拡張子を持つ中間ファイルがあります。 生成されたファイルは、既定のデータ フォルダーのサブフォルダーに保存されます。 サブフォルダーは Xtp と呼ばれます。 既定のデータフォルダーを使用して既定のインスタンスをインストールすると、生成されたファイルは C:\Program files \MSSQL12. に配置されます。 \\ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]MSSQLSERVER\MSSQL\DATA\Xtp.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は 3 とおりの方法で、生成した DLL に対する改ざんを回避します。  
   

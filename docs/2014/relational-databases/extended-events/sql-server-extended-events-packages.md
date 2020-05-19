@@ -10,15 +10,15 @@ helpviewer_keywords:
 - extended events [SQL Server], packages
 - xe
 ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1982a1ed16479ca1f7891a7b81d761ee7a0b1621
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 93691dccde430e7f636f956229b5305b211449f8
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62638745"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719177"
 ---
 # <a name="sql-server-extended-events-packages"></a>SQL Server 拡張イベント パッケージ
   パッケージは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 拡張イベント オブジェクトのコンテナーです。 拡張イベント パッケージには、次の 3 種類があります。  
@@ -38,15 +38,15 @@ ms.locfileid: "62638745"
   
 -   イベント  
   
--   対象サーバー  
+-   ターゲット  
   
 -   Actions  
   
--   型  
+-   種類  
   
 -   述語  
   
--   マップ  
+-   Maps  
   
  1 つのイベント セッションに異なるパッケージのオブジェクトを混在させることもできます。 詳細については、「 [SQL Server 拡張イベント セッション](sql-server-extended-events-sessions.md)」を参照してください。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "62638745"
 |分析|非常に多くの分析イベントが公開されています。 プログラムの動作を説明するもので、主にパフォーマンス調査に用いられます。|  
 |デバッグ|デバッグ イベントは、開発者がデバッグ時に問題を診断する目的でのみ使用されます。<br /><br /> 注: デバッグチャネルのイベントは、実装固有の内部状態データを返します。 スキーマ、およびこのイベントによって返されるデータは、SQL Server の将来のバージョンで変更または無効化される可能性があります。 そのため、デバッグ チャネルのイベントは、SQL Server の将来のバージョンで予告なしに変更または削除されることがあります。|  
   
- **キーワード**  
+ **Keyword**  
   
  キーワードはアプリケーション固有の情報です。キーワードを使用すると、関連するイベントをより詳細に分類でき、セッションで使用するイベントの指定や取得を簡単に行うことができます。 次のクエリを使用すると、キーワード情報を取得できます。  
   
@@ -93,7 +93,7 @@ where name = 'keyword_map'
 > [!NOTE]  
 >  キーワードを使用すると、現在の SQL トレース イベントのグループを緊密に対応付けることができます。  
   
-### <a name="targets"></a>対象サーバー  
+### <a name="targets"></a>ターゲット  
  ターゲットは、イベントのコンシューマーです。 ターゲットは、イベントを開始したスレッド上で同期的に、またはシステムによって提供されたスレッド上で非同期的に、イベントを処理します。 拡張イベントには、複数のターゲットが用意されており、イベント出力を転送する目的で必要に応じて使用できます。 詳細については、「 [SQL Server 拡張イベント ターゲット](../../database-engine/sql-server-extended-events-targets.md)」を参照してください。  
   
 ### <a name="actions"></a>Actions  
@@ -134,7 +134,7 @@ where name = 'keyword_map'
 > [!NOTE]  
 >  二次的に作用する述語は、先行する述語が false と判定された場合、評価されない可能性があります。  
   
-### <a name="types"></a>型  
+### <a name="types"></a>種類  
  データは一連のバイトの集合であるため、そのバイト集合の長さと特性がわからなければ、データを解釈することはできません。 この情報は、Type オブジェクトにカプセル化されています。 パッケージ オブジェクトには、次の型が用意されています。  
   
 -   event  
@@ -151,7 +151,7 @@ where name = 'keyword_map'
   
  詳細については、「[sys.dm_xe_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql)」を参照してください。  
   
-### <a name="maps"></a>マップ  
+### <a name="maps"></a>Maps  
  内部値はマップ テーブルによって文字列に対応付けられます。これにより、ユーザーは、その値が何を表しているのかを知ることができます。 内部値について単に数値を取得できるだけでなく、意味のある説明を取得できます。 次のクエリは、マップ値の取得方法を示しています。  
   
 ```  

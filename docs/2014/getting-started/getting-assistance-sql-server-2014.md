@@ -8,15 +8,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - finding Help topics [SQL Server]
 ms.assetid: 2d43a79f-8f4e-4c98-b921-16035129a15b
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 69127078f72eeab296c754dfce666804dcdda53d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c8509282897c1938d357f347ada98f7f2c3be4b4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62837692"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706953"
 ---
 # <a name="getting-assistance-sql-server-2014"></a>参考資料 (SQL Server 2014)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] に関して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] が提供している主な情報ソースは次の 3 つです。  
@@ -33,7 +33,7 @@ ms.locfileid: "62837692"
  [SQL Server の参考資料の入手](../../2014/getting-started/getting-sql-server-assistance.md)  
  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] の主な情報ソースへのリンクを提供します。 サポート サイトへのリンクも記載されています。  
   
- [障害がある方のためのユーザー補助機能](../../2014/getting-started/accessibility-for-people-with-disabilities.md)  
+ [障碍のある方のためのアクセシビリティ](../../2014/getting-started/accessibility-for-people-with-disabilities.md)  
  障碍のある方が [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] をより容易に使えるようにするための製品、機能、およびサービスについて説明しています。  
   
  [SQL Server 2014 に関するフィードバックの送信](../../2014/getting-started/providing-feedback-for-sql-server-2014.md)  

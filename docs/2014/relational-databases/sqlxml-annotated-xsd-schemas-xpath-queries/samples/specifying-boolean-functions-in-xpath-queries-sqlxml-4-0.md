@@ -13,15 +13,15 @@ helpviewer_keywords:
 - true function
 - Boolean functions
 ms.assetid: c72cd333-9294-4d41-84f2-1748bf20e3eb
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d0960fa50551b3279f97b289892d7b544c5a9e6d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d43cf4449bfb4acbad32d297bc81be48f38244ca
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012392"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717806"
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>XPath クエリ内での論理関数の指定 (SQLXML 4.0)
   以下の例では、XPath クエリに論理関数を指定する方法を示します。 これらの例では、SampleSchema1.xml に格納されているマッピング スキーマに対して XPath クエリを指定しています。 このサンプルスキーマの詳細については、「 [XPath のサンプルの注釈付き XSD スキーマの例 &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)」を参照してください。  
@@ -29,7 +29,7 @@ ms.locfileid: "66012392"
 ## <a name="examples"></a>例  
   
 ## <a name="a-specify-the-not-boolean-function"></a>A. not() 論理関数を指定する  
- このクエリでは、 ** \<** ** \<Order>** 子要素を持たないコンテキストノードのすべての顧客>子要素が返されます。  
+ このクエリでは、 ** \< Order>** 子要素を持たないコンテキストノードのすべての** \< 顧客>** 子要素が返されます。  
   
 ```  
 /child::Customer[not(child::Order)]  
@@ -77,7 +77,7 @@ ms.locfileid: "66012392"
 ```  
   
 ## <a name="b-specify-the-true-and-false-boolean-functions"></a>B. true() 論理関数と false() 論理関数を指定する  
- このクエリでは、 ** \<Order>** 子要素を持たないコンテキストノードのすべて** \<の顧客>** 子要素が返されます。 具体的には、このクエリでは、発注していないすべての顧客が返されます。  
+ このクエリでは、 ** \< Order>** 子要素を持たないコンテキストノードのすべての** \< 顧客>** 子要素が返されます。 具体的には、このクエリでは、発注していないすべての顧客が返されます。  
   
 ```  
 /child::Customer[child::Order=false()]  

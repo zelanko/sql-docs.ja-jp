@@ -8,14 +8,14 @@ ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 2b67292d-6d8e-4016-9063-a97461ffe57a
 author: CarlRabeler
-ms.author: genemi
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7591cff38ac08d9fd36d7b39f180613fbdd12961
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c88969e0b644c4eb0497a37142023fa1430b5770
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63066440"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718967"
 ---
 # <a name="sql-server-management-objects-support-for-in-memory-oltp"></a>インメモリ OLTP に対する SQL Server 管理オブジェクトのサポート
   このトピックでは、インメモリ OLTP 向けの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) の変更について説明します。  

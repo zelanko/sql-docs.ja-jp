@@ -38,15 +38,15 @@ helpviewer_keywords:
 - SQL Server assistance
 - SQL Server Solution Center
 ms.assetid: 619facba-5cf4-4474-9577-9e2d82a851fb
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cfa159a88cfc159e65fe3ec39b334a3f6e8c5c8b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 22eeb621cb9c4ccdf0d853ff9d6d528c156c15a0
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74683603"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706935"
 ---
 # <a name="getting-sql-server-assistance"></a>SQL Server の参考資料の入手
   [!INCLUDE[msCoName](../includes/msconame-md.md)] に関して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] が提供している主な情報ソースは次の 3 つです。  
@@ -60,7 +60,7 @@ ms.locfileid: "74683603"
  探している情報がこれらのソースで見つからない場合は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コミュニティのフォーラムやニュースグループに質問を投稿したり、[!INCLUDE[msCoName](../includes/msconame-md.md)] と協力してサポート ケースを調査したりできます。  
   
 ## <a name="ssnoversion-books-online"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブック  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]オンラインブックでは、を使用[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]するために必要な概念と手順について説明しています。 また、オンライン ブックには、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を使用したデータの格納、取得、報告、および変更を行うための言語やプログラミング インターフェイスについての参考資料も含まれています。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]オンラインブックでは、を使用するために必要な概念と手順について説明して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] います。 また、オンライン ブックには、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を使用したデータの格納、取得、報告、および変更を行うための言語やプログラミング インターフェイスについての参考資料も含まれています。  
   
  オンライン ブックは次の方法で表示できます。  
   

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - UpdateRule property [ADOX], Visual Basic example
 - RelatedColumn property [ADOX], Visual Basic example
 ms.assetid: 13b5b1c3-6af6-439e-bb65-976578ba6bc2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6873b964adfcfc5bffed5d093bed48f4fbd29a20
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 87cae622b8c25a37bb5d2de833ca98e044f36351
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965862"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746630"
 ---
 # <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vb"></a>Keys Append メソッド、Key Type、RelatedColumn、RelatedTable、UpdateRule プロパティの例 (VB)
 次のコードは、 **Customers**と**Orders**という名前の2つの既存のテーブル間に新しい外部キーリレーションシップを作成する方法を示しています。  

@@ -13,32 +13,32 @@ f1_keywords:
 helpviewer_keywords:
 - ADOStreamConstruction interface [ADO]
 ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 70a6dd02722a34159b345a83b32897aa8c38d0ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2c120667a0ce279ea03922adf487f58c1fdc92de
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920786"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747058"
 ---
 # <a name="adostreamconstruction-interface"></a>ADOStreamConstruction インターフェイス
 **ADOStreamConstruction**インターフェイスは、C/c + + アプリケーションの OLE DB **ISTREAM**オブジェクトから ADO**ストリーム**オブジェクトを構築するために使用されます。  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
   
 |||  
 |-|-|  
 |[Stream プロパティ](../../../ado/reference/ado-api/stream-property.md)|読み取り/書き込み。 OLE DB**ストリーム**オブジェクトを取得/設定します。|  
   
 ## <a name="methods"></a>メソッド  
- なし。  
+ [なし] :  
   
 ## <a name="events"></a>イベント  
- なし。  
+ [なし] :  
   
 ## <a name="remarks"></a>Remarks  
- OLE DB **IStream**オブジェクト (`pStream`) を指定した場合、ADO **Stream**オブジェクト (`adoStr`) の構造は、次の3つの基本的な操作になります。  
+ OLE DB **IStream**オブジェクト () を指定した `pStream` 場合、ADO **Stream**オブジェクト () の構造は、 `adoStr` 次の3つの基本的な操作になります。  
   
 1.  ADO**ストリーム**オブジェクトを作成します。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "67920786"
                          (void**)&adoStrConstruct);  
     ```  
   
- プロパティメソッドを呼び出して、ADO **Stream**オブジェクトの OLE DB IStream オブジェクトを設定します。 **IStream** `IADOStreamConstruction::get_Stream`  
+ `IADOStreamConstruction::get_Stream`プロパティメソッドを呼び出して、ADO **Stream**オブジェクトの OLE DB **IStream**オブジェクトを設定します。  
   
 ```  
 IUnknown *pUnk=NULL;  
@@ -63,9 +63,9 @@ pRowset->QueryInterface(IID_IUnknown, (void**)&pUnk);
 adoStrConstruct->put_Stream(pUnk);  
 ```  
   
- 結果`adoStr`のオブジェクトは、OLE DB **IStream**オブジェクトから構築された ADO**ストリーム**オブジェクトを表します。  
+ 結果の `adoStr` オブジェクトは、OLE DB **IStream**オブジェクトから構築された ADO**ストリーム**オブジェクトを表します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **バージョン:** ADO 2.0 以降のバージョン  
   
  **ライブラリ:** msado15.dll  

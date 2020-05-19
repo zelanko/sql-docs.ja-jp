@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Visual C++ code examples [ADO], event model
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1af45d9ac4674af98097083e2da89a217f17a58f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bce894f1e0cce8c8d8800b2633924f9cc5bc6bd9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921015"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747348"
 ---
 # <a name="ado-events-model-example-vc"></a>ADO イベント モデルの例 (VC++)
 「[言語による Ado イベントのインスタンス化](../../../ado/guide/data/ado-event-instantiation-by-language.md)」の Visual C++ セクションでは、ado イベントモデルをインスタンス化する方法について一般的な説明を示します。 次に、 **#import**ディレクティブによって作成された環境内でイベントモデルをインスタンス化する具体的な例を示します。  
@@ -44,7 +44,7 @@ ms.locfileid: "67921015"
   
 -   この例は、コンソールアプリケーションとして記述されています。  
   
--   コメント "`// Do some work`" には、独自のコードを挿入する必要があります。  
+-   コメント "" には、独自のコードを挿入する必要があり `// Do some work` ます。  
   
 -   すべてのイベントハンドラーは、既定で何も実行せず、通知をキャンセルします。 アプリケーションに適切なコードを挿入し、必要に応じて通知を許可する必要があります。  
   

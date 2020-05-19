@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 91c34cb4-dc14-4a2b-86a1-9c950642fb23
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b79bc4a06b7a69b4c19946c08de63f1dbfebf72b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ddc24d5204a6b047540fdeff4a5ddff92acc00f7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80402569"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706942"
 ---
 # <a name="documentation-for-sql-server-2014-tools-and-add-in-components"></a>SQL Server 2014 ツールとアドイン コンポーネントのドキュメント
     
@@ -25,7 +25,7 @@ ms.locfileid: "80402569"
 |||  
 |-|-|  
 |**ツール**|**説明**|  
-|[構成マネージャー](../relational-databases/sql-server-configuration-manager.md)|構成マネージャーは、SQL Server に関連付けられているサービスの管理、SQL Server が使用するネットワーク プロトコルの設定、SQL Server クライアント コンピューターからのネットワーク接続の管理を行うためのツールです。|  
+|[Configuration Manager](../relational-databases/sql-server-configuration-manager.md)|構成マネージャーは、SQL Server に関連付けられているサービスの管理、SQL Server が使用するネットワーク プロトコルの設定、SQL Server クライアント コンピューターからのネットワーク接続の管理を行うためのツールです。|  
 |[SQL Server 2014 アップグレード アドバイザー](../sql-server/install/sql-server-2014-upgrade-advisor.md)|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] アップグレード アドバイザーでは、現在インストールされている [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コンポーネントの構成を分析し、アップグレードを正常に実行できるように対処する必要がある問題を示すレポートを作成します。|  
 |[Office 2013 用 SQL Server データ マイニング アドイン](https://go.microsoft.com/fwlink/?LinkId=299178)|Office 用データ マイニング アドインは、予測、推奨設定、または検索の分析モデルを構築するために Excel のデータを使用できるようにする軽量な一連の予測分析用ツールです。|  
 |[Change Data Capture Designer for Oracle](https://go.microsoft.com/fwlink/?LinkId=299179)|Change Data Capture Designer for Oracle は、Oracle CDC インスタンスの開発および管理に使用します。|  

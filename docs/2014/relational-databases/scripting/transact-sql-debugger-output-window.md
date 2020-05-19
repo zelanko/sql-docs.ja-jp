@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Output Window [Transact-SQL]
 - Output Window [SQL Server Management Studio]
 ms.assetid: 9808e00c-c8f6-45cc-896e-192b8420f747
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8ee3d5bb623de84704de97b798573b769d85ae15
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc15a7f6002675c4e81b3ae8169a78648b210f44
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243059"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718375"
 ---
 # <a name="output-window"></a>[出力ウィンドウ]
   このウィンドウには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のさまざまな機能の状態メッセージが表示されます。 **デバッガー、外部ツール機能、またはデバッガーの** [コマンド] ウィンドウ [!INCLUDE[tsql](../../includes/tsql-md.md)] で実行されるコマンドから、 **[出力]** ウィンドウの特別のペインに出力が表示されます。 .bat ファイルや .com ファイルなど、通常は [コマンド プロンプト] ウィンドウに表示される外部ツールからの出力も参照できます。  

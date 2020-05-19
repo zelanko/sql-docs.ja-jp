@@ -11,15 +11,15 @@ topic_type:
 helpviewer_keywords:
 - SQLNativeSql function
 ms.assetid: 2d999fec-9e22-4514-ad5f-22a64b82f95b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0556d4e3b06c68e70513d68a5c2616bf47fc299c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8329eac48b395467c8c9c7354f28649d44149248
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046737"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705966"
 ---
 # <a name="sqlnativesql"></a>SQLNativeSql
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、サーバーにアクセスせずに **SQLNativeSql** 要求に応じます。 この関数を使用すると、SQL ステートメントの構文を効率的にテストできます。 構文チェックでは、識別子または SQL ステートメント内の式の結果が有効かどうかは判断されないので、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLNativeSql **によって返された** ネイティブ SQL を実行すると失敗することがあります。  

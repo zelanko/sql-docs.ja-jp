@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b4fd1a406848006739b83c1b8a0886d5c2d4bdfa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b875808a5a9379f917b246cb871420a339519f7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63155719"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718804"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャ内でサポートされる構造
   このトピックには、ネイティブコンパイルストアドプロシージャでサポートされている機能の一覧が含まれています ([CREATE PROCEDURE &#40;transact-sql&#41;](/sql/t-sql/statements/create-procedure-transact-sql))。  
@@ -66,7 +66,7 @@ ms.locfileid: "63155719"
 ##  <a name="supported-operators"></a><a name="so"></a>サポートされる演算子  
  サポートされている演算子は次のとおりです。  
   
--   [Transact-sql&#41;&#40;の比較演算子](/sql/t-sql/language-elements/comparison-operators-transact-sql)(たとえば、>、 \<、>=、および <=) は、条件 (IF、WHILE) でサポートされています。  
+-   [Transact-sql&#41;&#40;の比較演算子](/sql/t-sql/language-elements/comparison-operators-transact-sql)(たとえば、>、 \< 、>=、および <=) は、条件 (IF、WHILE) でサポートされています。  
   
 -   単項演算子 (+、-)。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "63155719"
   
 -   フィルター述語 IS [NOT] NULL  
   
--   メモリ\<最適化テーブルから>  
+-   \<メモリ最適化テーブルから>  
   
 -   [GROUP BY &#40;transact-sql&#41;](/sql/t-sql/queries/select-group-by-transact-sql)は、集計関数の AVG、COUNT、COUNT_BIG、MIN、MAX、および SUM と共にサポートされています。 MIN および MAX は、nvarchar、char、varchar、varchar、varbinary、および binary 型ではサポートされていません。 Order by[句 &#40;transact-sql&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql)は group by &#40;でサポートされています。 order by リスト内の式が group by リストにそのまま表示される場合は、 [transact-sql&#41;](/sql/t-sql/queries/select-group-by-transact-sql)を使用します。 たとえば、GROUP BY a + b ORDER BY a + b はサポートされますが、GROUP BY a, b ORDER BY a + b はサポートされません。  
   

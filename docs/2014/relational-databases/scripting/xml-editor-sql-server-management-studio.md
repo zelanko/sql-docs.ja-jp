@@ -14,15 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - XML Designer [SQL Server Management Studio]
 ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c4fc4e1b0f0340d579b1f6ee22db888417089352
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9202a3125b35075e9fe4311a4ebe81103cf6b937
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242940"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718138"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>XML エディター (SQL Server Management Studio)
   XML スキーマ、ADO.NET データセット、および XML ドキュメントを操作するためのビジュアルなツールのセットが用意されています。 XML デザイナーは、WC3 (World Wide Web Consortium) で定義されている XML スキーマ定義 (XSD) 言語をサポートします。 デザイナーは、DTD (文書型定義) や XDR (XML-Data Reduced) などのその他の XML スキーマ言語をサポートしません。  
@@ -95,7 +95,7 @@ ms.locfileid: "75242940"
 -   XML ドキュメントから XML スキーマを生成する。  
   
 ## <a name="xml-view"></a>XML ビュー  
- XML ビューは、生の XML を編集するためのエディターを提供すると共に、IntelliSense および色分け表示機能を提供します。 入力候補機能は、関連スキーマを持つ .xsd ファイルおよび .xml ファイルを操作している場合に使用できます。 「 \< 」と入力してタグを開始すると、その場所で有効な要素の一覧が表示されます。 要素名を入力し、Space キーを押すと、その要素でサポートされる属性の一覧が表示されます。  
+ XML ビューは、生の XML を編集するためのエディターを提供すると共に、IntelliSense および色分け表示機能を提供します。 入力候補機能は、関連スキーマを持つ .xsd ファイルおよび .xml ファイルを操作している場合に使用できます。 「」と入力して \< タグを開始すると、その場所で有効な要素の一覧が表示されます。 要素名を入力し、Space キーを押すと、その要素でサポートされる属性の一覧が表示されます。  
   
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense オプションは、ツール バーからは利用できません。 XML エディターを使用しているときにこれらのオプションにアクセスするには、 **[編集]** メニューの **[IntelliSense]** をクリックします。  

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - table-valued parameters (ODBC), scenarios
 - ODBC, table-valued parameters
 ms.assetid: f1b73932-4570-4a8a-baa0-0f229d9c32ee
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 80eb3fe73754a53d5a947c565ae945029d1cdff6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: adec9c7bfc72c05e3bdd5c5f1c6ea6523fe6ac73
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62625946"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718874"
 ---
 # <a name="uses-of-odbc-table-valued-parameters"></a>ODBC テーブル値パラメーターの使用
   このトピックでは、ODBC でテーブル値パラメーターを使用する主なユーザー シナリオについて説明します。  
@@ -60,7 +60,7 @@ ms.locfileid: "62625946"
  このシナリオのサンプルコードは、「 `demo_variable_TVP_binding` [テーブル値パラメーター &#40;ODBC&#41;に使用する](../native-client-odbc-how-to/use-table-valued-parameters-odbc.md)」のルーチンに含まれています。  
   
 ## <a name="retrieving-table-valued-parameter-metadata-from-the-system-catalog"></a>システム カタログからテーブル値パラメーターのメタデータを取得  
- アプリケーションが SQLProcedureColumns を呼び出して、テーブル値パラメーターのパラメーターを持つプロシージャを呼び出すと、DATA_TYPE が SQL_SS_TABLE として返され、TYPE_NAME はテーブル値パラメーターのテーブル型の名前になります。 SQLProcedureColumns によって返される結果セットには、次の2つの列が追加されます。 SS_TYPE_CATALOG_NAME は、テーブル値パラメーターのテーブル型が定義されているカタログの名前を返し、SS_TYPE_SCHEMA_NAME はテーブル値パラメーターのテーブル型が定義されているスキーマの名前を返します。 ODBC 仕様に準拠して、SS_TYPE_CATALOG_NAME と SS_TYPE_SCHEMA_NAME は、以前のバージョンので追加されたすべての[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ドライバー固有の列の前と、odbc 自体によって指定されたすべての列の前に表示されます。  
+ アプリケーションが SQLProcedureColumns を呼び出して、テーブル値パラメーターのパラメーターを持つプロシージャを呼び出すと、DATA_TYPE が SQL_SS_TABLE として返され、TYPE_NAME はテーブル値パラメーターのテーブル型の名前になります。 SQLProcedureColumns によって返される結果セットには、次の2つの列が追加されます。 SS_TYPE_CATALOG_NAME は、テーブル値パラメーターのテーブル型が定義されているカタログの名前を返し、SS_TYPE_SCHEMA_NAME はテーブル値パラメーターのテーブル型が定義されているスキーマの名前を返します。 ODBC 仕様に準拠して、SS_TYPE_CATALOG_NAME と SS_TYPE_SCHEMA_NAME は、以前のバージョンので追加されたすべてのドライバー固有の列の前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と、odbc 自体によって指定されたすべての列の前に表示されます。  
   
  新しい列は、テーブル値パラメーター用だけでなく、CLR ユーザー定義型パラメーター用にも作成されます。 UDT パラメーターの既存のスキーマ列とカタログ列も依然として作成されますが、共通のスキーマ列とカタログ列を必要とするデータ型にもそれらの列を含めておくと、今後アプリケーション開発が簡単になります  (XML スキーマ コレクションは多少異なり、この変更には含まれていないことに注意してください)。  
   

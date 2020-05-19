@@ -25,15 +25,15 @@ helpviewer_keywords:
 - match whole word [SQL Server]
 - searches [SQL Server Management Studio], replacing
 ms.assetid: 3641c7b3-3e3e-4ddd-af82-c15b50004f94
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 631b6864529e903516857f68ea421365c144afef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 630733cc001e905497ee9145e2879b579ac1b2cf
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243299"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718747"
 ---
 # <a name="search-and-replace"></a>検索と置換
   テキストの検索と置換にはいくつかの方法があります。 **[編集]** メニューの **[検索と置換]** には、 **[クイック検索]** 、 **[クイック置換]** 、 **[フォルダーを指定して検索]** 、 **[フォルダーを指定して置換]** という 4 つのオプションが用意されています。 各オプションを選択すると、各バージョンの **[検索と置換]** ダイアログ ボックスが表示されます。 ダイアログ ボックスを使用しないで、インクリメンタル検索キーボード ショートカット キーによって検索することも可能です。 これらの方法によって、検索と置換の範囲を設定することや、検索一致項目や置換項目を確認する方法を選択することができます。  

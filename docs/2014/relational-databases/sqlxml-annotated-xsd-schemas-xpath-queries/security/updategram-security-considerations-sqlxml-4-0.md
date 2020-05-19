@@ -11,15 +11,15 @@ helpviewer_keywords:
 - security [SQLXML], updategrams
 - updategrams [SQLXML], security
 ms.assetid: 00dc6cf4-a2e8-4cca-bdd6-d5122102a82d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 12354329d51bbe13930fc6edefca1fcf84171e33
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a9ed4aad31f5a4697a268d82e282a135ea85c37c
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66015055"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717578"
 ---
 # <a name="updategram-security-considerations-sqlxml-40"></a>アップデートグラムのセキュリティに関する注意点 (SQLXML 4.0)
   次に、アップデートグラムを使用する場合のセキュリティに関するガイドラインを示します。  

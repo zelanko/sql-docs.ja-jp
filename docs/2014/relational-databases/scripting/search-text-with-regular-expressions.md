@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], regular expression searches
 - searches [SQL Server Management Studio], regular expressions
 ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0d7554953c430ae58ead88aa77cb0865f74f7a12
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 34d97e58469469b929e0b7a2e25d52a9c7c3e3fe
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243322"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718676"
 ---
 # <a name="search-text-with-regular-expressions"></a>正規表現によるテキストの検索
   正規表現は、文字列のパターンの検索や置換のための、正確で柔軟性の高い表記方法です。 **の**[検索と置換][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ダイアログ ボックスの **[検索する文字列]** フィールドでは、特定のセットの正規表現を使用できます。  

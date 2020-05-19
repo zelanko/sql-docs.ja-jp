@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RDS programming model [ADO], details
 ms.assetid: 3e57af8d-519b-4467-a0bd-af468534cefd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7d7251e3a403168e8383e636a8e6b5f712b9f7bf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6bf59580985a4c46fa163a00423bb7dd90ad9463
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922527"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747754"
 ---
 # <a name="rds-programming-model-in-detail"></a>RDS のプログラミング モデルの詳細
 RDS プログラミングモデルの主な要素は次のとおりです。  
@@ -28,7 +28,7 @@ RDS プログラミングモデルの主な要素は次のとおりです。
   
 -   RDS.DataControl  
   
--   event  
+-   イベント  
   
 > [!IMPORTANT]
 >  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  

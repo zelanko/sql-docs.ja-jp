@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Remote Data Service (RDS)
 - RDS
 ms.assetid: 63a5f26b-e7ca-47d9-a004-59eaad6052b4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0faa6f595f4f2001dc3456fde6d01cac0d52355c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3b8df2482c4040c157c962178fdfddd8ead5bb84
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922302"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747648"
 ---
 # <a name="remote-data-service-rds"></a>リモート データ サービス (RDS)
 リモートデータサービス (RDS) は ADO の機能の1つです。この機能を使用すると、サーバーからクライアントアプリケーションまたは Web ページにデータを移動し、クライアント上のデータを操作して、1回のラウンドトリップでサーバーに更新を返すことができます。  

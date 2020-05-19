@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SQLXML Managed Classes, SqlXmlAdapter object
 - Managed Classes [SQLXML], SqlXmlAdapter object
 ms.assetid: 0a16eddf-fc26-4d92-82d4-359b5fb905d5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b339e67b07ddb4168f9922c22e620eb2fa10d85e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 86231096c8eef084b36d6195a1c720bd4f9038a3
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014929"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717956"
 ---
 # <a name="sqlxmladapter-object-sqlxml-managed-classes"></a>SqlXmlAdapter オブジェクト (SQLXML マネージド クラス)
   このオブジェクトでは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework のデータセットとの対話を容易にするためのメソッドが提供されます。 実際のサンプルについては、「 [.Net 環境での SQLXML 機能へのアクセス](accessing-sqlxml-functionality-in-the-net-environment.md)」を参照してください。  

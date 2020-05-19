@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - names [SQL Server], columns with
 ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a57f4b1a56c3a23c9be8957f97fa7b352f9674a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a689c29297703e48a1f759643599dbc93843d9f0
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62638166"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717224"
 ---
 # <a name="columns-with-a-name"></a>名前のある列
   行セット内の名前のある列が、大文字と小文字を区別して結果の XML にマップされる条件を次に示します。  
@@ -33,7 +33,7 @@ ms.locfileid: "62638166"
 -   名前の異なる列がある場合  
   
 ## <a name="column-name-starts-with-an-at-sign-"></a>列名がアット マーク (\@) で始まる場合  
- 列名がアットマーク (\@) で始まり、スラッシュ (/) が含まれていない場合は、対応する列の`row`値を持つ <> 要素の属性が作成されます。 たとえば、次のクエリは 2 列 (\@PmId、Name) の行セットを返します。 結果の XML では、対応する <`row`> 要素に **PmId** 属性が追加され、この属性に ProductModelID の値が設定されます。  
+ 列名がアットマーク () で始まり、 \@ スラッシュ (/) が含まれていない場合は、 `row` 対応する列の値を持つ <> 要素の属性が作成されます。 たとえば、次のクエリは 2 列 (\@PmId、Name) の行セットを返します。 結果の XML では、対応する <`row`> 要素に **PmId** 属性が追加され、この属性に ProductModelID の値が設定されます。  
   
 ```  
   
@@ -66,7 +66,7 @@ go
 ```  
   
 ## <a name="column-name-does-not-start-with-an-at-sign-"></a>列名がアット マーク (\@) で始まらない場合  
- 列名がアットマーク (\@) で始まらず、XPath ノードテストの1つでもなく、スラッシュ (/) も含まない場合は、行 <`row`要素のサブ要素である XML 要素が既定で> 作成されます。  
+ 列名がアットマーク () で始まらず、 \@ XPath ノードテストの1つでもなく、スラッシュ (/) も含まない場合は、行 <要素のサブ要素である XML 要素が `row` 既定で> 作成されます。  
   
  次のクエリでは列名 result が指定されています。 したがって、<`row`> 要素には、<`result`> 子要素が追加されます。  
   
@@ -128,7 +128,7 @@ AND    E.EmployeeID=1
 FOR XML PATH  
 ```  
   
- PATH モードでは、列名は XML を作成する際のパスとして使用されます。 従業員 ID の値を含む列名は、'\@' で始まります。したがって、属性**EmpID**が <`row`> 要素に追加されます。 それ以外のすべての列の列名には、階層を示すスラッシュ ('/') が含まれています。 結果の XML では、<`row`> 要素の下に <`EmpName`> 子要素があり、<`EmpName`> の下に子要素 <`First`>、<`Middle`>、および <`Last`> が生成されます。  
+ PATH モードでは、列名は XML を作成する際のパスとして使用されます。 従業員 ID の値を含む列名は、' ' で始まり \@ ます。したがって、属性**EmpID**が <> 要素に追加され `row` ます。 それ以外のすべての列の列名には、階層を示すスラッシュ ('/') が含まれています。 結果の XML では、<`row`> 要素の下に <`EmpName`> 子要素があり、<`EmpName`> の下に子要素 <`First`>、<`Middle`>、および <`Last`> が生成されます。  
   
 ```  
 <row EmpID="1">  
