@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Execute method [ADO]
 ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d1a5fa5c9002d4a27490dfc98fb79f482539f042
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b4c44e48c46abab1cc15e3fbf90592414fad7c9c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964318"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752674"
 ---
 # <a name="execute-method-rds"></a>Execute メソッド (RDS)
 要求を実行し、ado 2.5 以降で使用する ADO レコードセットを作成します。  
@@ -41,7 +41,7 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  この実行で使用されるハンドラーを識別する2つの部分から構成される文字列。 文字列には2つの部分が含まれています。 最初の部分には、使用するハンドラーの名前 (ProgID) が含まれています。 2番目の部分には、ハンドラーに渡される引数が含まれています。 引数文字列の解釈方法の詳細は、各ハンドラーに固有です。 2つの部分は、文字列内のコンマの最初のインスタンスによって区切られます。 Arguments 文字列には、追加のコンマを含めることができます。 引数は省略可能です。  
   
  *クエリ*  
- 接続文字列で指定された OLE DB プロバイダーによってサポートされるコマンド言語のコマンドです。 SQL ベースのプロバイダーの場合*QueryString* 、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]クエリ文字列に transact-sql コマンドステートメントが含まれている可能性がありますが、非 SQL プロバイダー (たとえば、MSDataShape) の場合、これはクエリステートメントではない可能性があります。  
+ 接続文字列で指定された OLE DB プロバイダーによってサポートされるコマンド言語のコマンドです。 SQL ベースのプロバイダーの場合、クエリ*文字列*に transact-sql コマンドステートメントが含まれている可能性がありますが、非 SQL プロバイダー (たとえば、MSDataShape) の場合、これはクエリステートメントではない可能性があり [!INCLUDE[tsql](../../../includes/tsql-md.md)] ます。  
   
  ハンドラーが使用されている場合、ハンドラーはここで指定された値を変更または置換できます。 たとえば、ハンドラーは通常、 *QueryString*を .ini ファイルのクエリ文字列に置き換えます。 既定では、Msdfmap .ini ファイルが使用されます。  
   

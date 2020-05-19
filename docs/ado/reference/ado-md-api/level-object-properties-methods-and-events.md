@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Level object [ADO MD], members
 ms.assetid: fdff70b0-95d0-447f-9359-97b8d159420d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 52008fa75b70bfb4c4b3ea3d25ef1d6fe6977142
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 27b13f5f3163fa3d39c2e2bb7945a02e312e5f67
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949614"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82753480"
 ---
 # <a name="level-object-properties-methods-and-events"></a>Level オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
@@ -36,7 +36,7 @@ ms.locfileid: "67949614"
  [UniqueName プロパティ](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)  
   
 ## <a name="methods"></a>メソッド  
- なし。  
+ [なし] :  
   
 ## <a name="events"></a>イベント  
  [なし] :  

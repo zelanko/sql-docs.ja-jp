@@ -13,20 +13,20 @@ helpviewer_keywords:
 - DataSpace object [RDS], VBScript example
 - CreateObject method [ADO], VBScript example
 ms.assetid: 12b0e160-5e5c-441f-bed7-ac0bd061e003
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7c9eb9a15094f6c08bacb9e063c707163548875a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 406c0b8d6782352b88ca0712ad6173045228f241
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964334"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752587"
 ---
 # <a name="dataspace-object-and-createobject-method-example-vbscript"></a>DataSpace オブジェクトおよび CreateObject メソッドの例 (VBScript)
 > [!IMPORTANT]
 >  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
- 次の例は、RDS の[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)メソッドの使用方法を示して[います。既定のビジネスオブジェクトを使用し](../../../ado/reference/rds-api/dataspace-object-rds.md)た、 [RDSServer DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)。 この例をテストするには、通常の HTML ドキュメント\<で body> \<と body> タグの間でこのコードを切り取って貼り付け、「 **dataspacevbs. asp**」という名前を付けます。 ASP スクリプトによってサーバーが識別されます。  
+ 次の例は、RDS の[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)メソッドの使用方法を示して[います。既定のビジネスオブジェクトを使用し](../../../ado/reference/rds-api/dataspace-object-rds.md)た、 [RDSServer DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)。 この例をテストするには、通常の HTML ドキュメントで body> と body> タグの間でこのコードを切り取って貼り付け、「 \< \< **Dataspacevbs. asp**」という名前を付けます。 ASP スクリプトによってサーバーが識別されます。  
   
 ```  
 <!-- BeginDataSpaceVBS -->  

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Visual Basic RDS examples [ADO]
 - RDS samples [ADO], Visual Basic
 ms.assetid: d9cb84a1-4ec2-4d41-8f92-dec2e17cde67
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 292f963ef1534cb9eb70e1e5a73d5f86af264181
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 50bc56df92ff8cda0eb3ddcbdc3463c58c4977bd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963775"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751348"
 ---
 # <a name="rds-code-examples-in-visual-basic"></a>Visual Basic での RDS のコード例
 > [!IMPORTANT]
@@ -31,7 +31,7 @@ ms.locfileid: "67963775"
 > [!NOTE]
 >  Sub から End Sub までのコード例全体をコードエディターに貼り付けます。 部分例が使用されている場合や段落の書式設定が失われた場合、この例は正常に実行されない可能性があります。  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
   
 -   [Handler プロパティの例](../../../ado/reference/rds-api/handler-property-example-vb.md)  
   

@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - onReadyStateChange event [ADO]
 ms.assetid: bf2ae3ac-bfe4-4709-b50a-ea7c282c3164
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3558fc1fecd343fff480cca3b45c468860a801f8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 00eb7b7084506de78262f4df2a4606c6756bbacb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963838"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751449"
 ---
 # <a name="onreadystatechange-event-rds"></a>onReadyStateChange イベント (RDS)
 **OnReadyStateChange**イベントは、 [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md)プロパティの値が変更されるたびに呼び出されます。  
@@ -34,7 +34,7 @@ onReadyStateChange
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- なし。  
+ [なし] :  
   
 ## <a name="remarks"></a>Remarks  
  **ReadyState**プロパティは、RDS の進行状況を反映し[ます。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクトは、データ[セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトにデータを非同期的に取得します。 **OnReadyStateChange**イベントは、 **ReadyState**プロパティが発生するたびに、その変更を監視するために使用します。 これは、プロパティの値を定期的にチェックするよりも効率的です。  

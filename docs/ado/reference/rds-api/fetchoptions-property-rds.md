@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - FetchOptions property [ADO]
 ms.assetid: 7b2e254a-9354-4541-bc98-bb185276388f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4e4e0943a675ef7cf3684ccddd2699fba02dac9e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 448dbb4d6c669f136c1d26b3730d16af2f0e8e17
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964120"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752138"
 ---
 # <a name="fetchoptions-property-rds"></a>FetchOptions プロパティ (RDS)
 非同期フェッチの種類を示します。  
@@ -29,7 +29,7 @@ ms.locfileid: "67964120"
 ## <a name="setting-and-return-values"></a>設定と戻り値  
  次のいずれかの値を設定または返します。  
   
-|Constant|説明|  
+|定数|説明|  
 |--------------|-----------------|  
 |**adcFetchUpFront**|[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)のすべてのレコードは、コントロールがアプリケーションに返される前にフェッチされます。 完全な**レコードセット**がフェッチされてから、アプリケーションで何かを実行できるようになります。|  
 |**adcFetchBackground**|コントロールは、レコードの最初のバッチがフェッチされるとすぐにアプリケーションに戻ることができます。 最初のバッチでフェッチされていないレコードにアクセスしようとするレコード**セット**の後続の読み取りは、探索されたレコードが実際にフェッチされるまで遅延され、その時点で制御がアプリケーションに戻ります。|  

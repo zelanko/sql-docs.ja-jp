@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - ExecuteOptions property [ADO], VBScript example
 ms.assetid: 62a4fd88-afc3-4f1f-b978-40710a30c4e9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2ae55ec1fccbd491854fb8bff2daa215d38b20ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 278603db9930458400c4057a3551f485fffe3fcc
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964185"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752542"
 ---
 # <a name="executeoptions-property-rds"></a>ExecuteOptions プロパティ (RDS)
 非同期実行が有効かどうかを示します。  
@@ -29,7 +29,7 @@ ms.locfileid: "67964185"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  次のいずれかの値を設定または返します。  
   
-|Constant|説明|  
+|定数|説明|  
 |--------------|-----------------|  
 |**adcExecSync**|[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)の次の更新を同期的に実行します。|  
 |**adcExecAsync**|既定値。 **レコードセット**の次の更新を非同期的に実行します。|  

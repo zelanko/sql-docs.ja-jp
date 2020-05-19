@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Levels collection [ADO MD], members
 ms.assetid: 7fba3296-5bd0-4f9e-8f63-9565fe1ee15f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 81603a2a8ab558d0f574e08c90992ea68afffc80
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8ab039aaaf03d3121a46eaa9789b72a89693cc59
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949516"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82753268"
 ---
 # <a name="levels-collection-properties-methods-and-events"></a>Levels コレクションのプロパティ、メソッド、およびイベント
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
  [Count プロパティ](../../../ado/reference/ado-api/count-property-ado.md)  
   
  [Item プロパティ](../../../ado/reference/ado-api/item-property-ado.md)  
