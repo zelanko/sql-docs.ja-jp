@@ -11,14 +11,14 @@ helpviewer_keywords:
 - connect section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1de3710590cf49de30ff8e79a6ff829b124c42dd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9dab615fd861252832abe83d4b0ae736e2189180
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922804"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749980"
 ---
 # <a name="customization-file-connect-section"></a>カスタマイズ ファイルの Connect セクション
 ハンドラーの既定の動作では、すべての接続が拒否されます。 **Connect**セクションでは、その動作に対する例外を指定します。 たとえば、すべての**接続**セクションが存在しないか空の場合、既定では接続を確立できませんでした。  
@@ -53,14 +53,14 @@ connectionString
   
 ## <a name="remarks"></a>Remarks  
   
-|要素|説明|  
+|パーツ|説明|  
 |----------|-----------------|  
-|**のインスタンスに接続するときには、**|これが接続文字列エントリであることを示すリテラル文字列。|  
-|**_connectionString_**|クライアント接続文字列全体を置き換える文字列。|  
+|**接続する**|これが接続文字列エントリであることを示すリテラル文字列。|  
+|**_文字列_**|クライアント接続文字列全体を置き換える文字列。|  
 |**Access (アクセス)**|これがアクセスエントリであることを示すリテラル文字列。|  
 |**_accessRight_**|次のいずれかのアクセス権。<br /><br /> -   **NoAccess** -ユーザーはデータソースにアクセスできません。<br />-   **ReadOnly** -ユーザーはデータソースを読み取ることができます。<br />-   **ReadWrite** -ユーザーは、データソースに対して読み取りまたは書き込みを行うことができます。|  
   
- 任意の接続を許可する (実質的に既定のハンドラー動作を無効にする) 場合は、[**既定の接続**] セクション`Access=ReadWrite`のアクセスエントリをに設定し、他の [**接続** _id_ ] セクションを削除またはコメントアウトします。  
+ 任意の接続を許可する (実質的に既定のハンドラー動作を無効にする) 場合は、[**既定の接続**] セクションのアクセスエントリをに設定 `Access=ReadWrite` し、他の [**接続** _id_ ] セクションを削除またはコメントアウトします。  
   
 ## <a name="see-also"></a>参照  
  [カスタマイズファイルログセクション](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   

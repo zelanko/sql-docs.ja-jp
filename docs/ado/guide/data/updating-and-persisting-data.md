@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data updates [ADO]
 - ADO, updating data
 ms.assetid: 8dc27274-4f96-43d1-913c-4ff7d01b9a27
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 26fabdc205018b8e94575cfb5bd5e945a8fb28ca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a77bb6f8f26652a9f435683c56b14d0bc8eb4b65
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923725"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750219"
 ---
 # <a name="updating-and-persisting-data"></a>データの更新と保持
 前の章では、ADO を使用してデータソース内のデータを取得する方法、データ内を移動する方法、およびデータを編集する方法について説明しました。 もちろん、アプリケーションの目的が、ユーザーがデータに変更を加えることができるようにする場合は、それらの変更を保存する方法を理解する必要があります。 保存方法を使用して**レコードセット**の変更をファイルに**保存**するか、 **Update**または**UpdateBatch**メソッドを使用してストレージのデータソースに変更を戻すことができます。  

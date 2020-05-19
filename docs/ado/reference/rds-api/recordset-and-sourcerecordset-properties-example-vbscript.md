@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Source property [ADO], VBScript example
 - Recordset property [ADO], VBScript example
 ms.assetid: 95175316-cd10-4cf7-96ba-2a226fd97701
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 30b5a463c2180a4cc39ac1a0d2333b8b75d02bab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 64f83c8e7d8a281ff8bd9124d693d365cafd9181
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963580"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751105"
 ---
 # <a name="recordset-and-sourcerecordset-properties-example-vbscript"></a>Recordset と SourceRecordset プロパティの例 (VBScript)
 > [!IMPORTANT]
@@ -28,7 +28,7 @@ ms.locfileid: "67963580"
   
  次の例は、実行時に[RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)の既定のビジネスオブジェクトに必要なパラメーターを設定する方法を示しています。  
   
- この例をテストするには、通常の HTML ドキュメント\<で body> \<と body> タグの間でこのコードを切り取って貼り付け、 **RecordsetVBS**という名前を付けます。 ASP スクリプトによってサーバーが識別されます。  
+ この例をテストするには、 \< 通常の HTML ドキュメントで body> と body> タグの間でこのコードを切り取って貼り付け、 \< **RecordsetVBS**という名前を付けます。 ASP スクリプトによってサーバーが識別されます。  
   
 ```  
 <!-- BeginRecordSetVBS -->  

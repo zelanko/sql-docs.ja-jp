@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - SortColumn property [RDS]
 ms.assetid: f6f80f67-f0fb-4e63-a5f5-8fdf312aac63
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b5a9c3f9f50968f3b5e8085052917397bcd90226
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 83975a46087f75d58be304c543f6e6a45b6db7e6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963390"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750837"
 ---
 # <a name="sortcolumn-property-rds"></a>SortColumn プロパティ (RDS)
 レコードを並べ替える列を指定します。  
@@ -40,10 +40,10 @@ DataControl.SortColumn = String
  *String*  
  レコードの並べ替えに使用する列の名前または別名を表す**文字列**値。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **Sortcolumn**、 [sortcolumn](../../../ado/reference/rds-api/sortdirection-property-rds.md)、 [filtervalue](../../../ado/reference/rds-api/filtervalue-property-rds.md)、 [filterfilter、](../../../ado/reference/rds-api/filtercriterion-property-rds.md)および[filtervalue](../../../ado/reference/rds-api/filtercolumn-property-rds.md)プロパティは、クライアント側キャッシュでの並べ替えとフィルター処理の機能を提供します。 並べ替え機能は、1つの列の値でレコードを並べ替えます。 フィルター機能では、検索条件に基づいてレコードのサブセットが表示されますが、完全な[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)はキャッシュに保持されます。 [Reset](../../../ado/reference/rds-api/reset-method-rds.md)メソッドは、条件を実行し、現在の**レコードセット**を更新可能な**レコードセット**に置き換えます。  
   
- **レコードセット**を並べ替えるには、保留中の変更を最初に保存する必要があります。 RDS を使用している場合 **。DataControl**では、 [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md)メソッドを使用できます。 たとえば、RDS の場合など**です。DataControl**の名前は ADC1 で、コードは`ADC1.SubmitChanges`になります。 ADO**レコードセット**を使用している場合は、その[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)メソッドを使用できます。 [CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md)メソッドを使用して作成された**レコードセット**オブジェクトには、 **UpdateBatch**を使用することをお勧めします。 たとえば、コードはまたは`myRS.UpdateBatch` `ADC1.Recordset.UpdateBatch`のようになります。  
+ **レコードセット**を並べ替えるには、保留中の変更を最初に保存する必要があります。 RDS を使用している場合 **。DataControl**では、 [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md)メソッドを使用できます。 たとえば、RDS の場合など**です。DataControl**の名前は ADC1 で、コードはになり `ADC1.SubmitChanges` ます。 ADO**レコードセット**を使用している場合は、その[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)メソッドを使用できます。 [CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md)メソッドを使用して作成された**レコードセット**オブジェクトには、 **UpdateBatch**を使用することをお勧めします。 たとえば、コードはまたはのようになり `myRS.UpdateBatch` `ADC1.Recordset.UpdateBatch` ます。  
   
 ## <a name="applies-to"></a>適用対象  
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

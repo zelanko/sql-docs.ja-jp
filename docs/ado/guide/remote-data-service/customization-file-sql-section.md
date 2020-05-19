@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SQL section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6163a5b5fd0999e17e17961639e0a1fee3e8fa4c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 934b982004bf27e28a8daeed09061101886ce444
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922798"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749877"
 ---
 # <a name="customization-file-sql-section"></a>カスタマイズ ファイルの SQL セクション
 **Sql**セクションには、クライアントのコマンド文字列を置き換える新しい sql 文字列を含めることができます。 セクションに SQL 文字列がない場合、セクションは無視されます。  
@@ -28,7 +28,7 @@ ms.locfileid: "67922798"
   
  新しい SQL 文字列を*パラメーター化*することができます。 つまり、 **sql**セクションの sql 文字列 ('? ' 文字で指定された) のパラメーターは、クライアントのコマンド文字列内の*識別子*内の対応する引数に置き換えることができます (かっこで囲まれたコンマ区切りのリストで指定されます)。 識別子と引数リストは関数呼び出しのように動作します。  
   
- たとえば、クライアントの`"CustomerByID(4)"`コマンド文字列がで、sql section ヘッダーが`[SQL CustomerByID]`で、新しい Sql section 文字列が`"SELECT * FROM Customers WHERE CustomerID = ?".`ハンドラーによって生成`"SELECT * FROM Customers WHERE CustomerID = 4"`され、その文字列を使用してデータソースにクエリを実行するとします。  
+ たとえば、クライアントのコマンド文字列がで、 `"CustomerByID(4)"` sql section ヘッダーがで、 `[SQL CustomerByID]` 新しい sql section 文字列がハンドラーによって生成され、 `"SELECT * FROM Customers WHERE CustomerID = ?".` その文字列を使用してデータソースにクエリを実行するとし `"SELECT * FROM Customers WHERE CustomerID = 4"` ます。  
   
  新しい SQL ステートメントが null 文字列 ("") の場合、セクションは無視されます。  
   
@@ -45,7 +45,7 @@ SQL = " "
  **SQL =**   
  ***sqlString***  
   
-|要素|説明|  
+|パーツ|説明|  
 |----------|-----------------|  
 |**SQL**|これが SQL セクションエントリであることを示すリテラル文字列。|  
 |***sqlString***|クライアント文字列を置き換える SQL 文字列。|  

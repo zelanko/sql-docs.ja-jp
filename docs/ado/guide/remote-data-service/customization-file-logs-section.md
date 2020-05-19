@@ -11,14 +11,14 @@ helpviewer_keywords:
 - logs section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: a368e264-865c-41ee-be00-d9097255c2ea
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 14c5436478444e525c7a9753cf3e4e5cddb92f5d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3be02570fbff1efd9adb091c121d4eb1a8782817
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922783"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749956"
 ---
 # <a name="customization-file-logs-section"></a>カスタマイズ ファイルの Logs セクション
 **Logs**セクションには、 **DataFactory**の操作中にエラーを記録するファイルの名前を指定する、ログファイルのエントリが含まれています。  
@@ -38,7 +38,7 @@ FileName
   
 ## <a name="remarks"></a>Remarks  
   
-|要素|説明|  
+|パーツ|説明|  
 |----------|-----------------|  
 |**警戒**|これがログファイルエントリであることを示すリテラル文字列。|  
 |*FileName*|完全なパスとファイル名。 一般的なファイル名は**c:\msdfmap.log**です。|  
