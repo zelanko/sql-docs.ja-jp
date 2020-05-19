@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - date/time [ODBC], enhanced behavior with earlier SQL Server versions
 ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 44ac9cecce81f7873ca5ef42ba414bd4528e05b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d400faa496740182a1407f89e095ebaccf884b3a
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63140632"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705474"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>以前のバージョンの SQL Server における、強化された日付型と時刻型の動作 (ODBC)
   このトピックでは、強化された日付や時刻の機能を使用するクライアント アプリケーションが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] と通信する場合、および Microsoft Data Access Components、Windows Data Access Components、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Native Client を使用しているクライアント アプリケーションから、機能強化された日付や時刻をサポートするサーバーへコマンドを送信する場合に想定される動作について説明します。  
@@ -29,23 +29,23 @@ ms.locfileid: "63140632"
   
  SQLDescribeCol、SQLDescribeParam、SQGetDescField、SQLColAttribute によって返されるステートメントメタデータは、型名を含め、すべての点でダウンレベルの型と一貫性のあるメタデータを返します。 `nvarchar` は、このような下位型の一例です。  
   
- 日付型または時刻型へのスキーマ変更[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]が行われた (以降の) サーバーに対して下位クライアントアプリケーションを実行する場合、想定される動作は次のようになります。  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]日付型または時刻型へのスキーマ変更が行われた (以降の) サーバーに対して下位クライアントアプリケーションを実行する場合、想定される動作は次のようになります。  
   
 |SQL Server 2005 の型|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降の型|ODBC クライアントの型|結果の変換 (SQL から C へ)|パラメーターの変換 (C から SQL へ)|  
 |--------------------------|----------------------------------------------|----------------------|------------------------------------|---------------------------------------|  
-|Datetime|日付|SQL_C_TYPE_DATE|[OK]|OK (1)|  
+|Datetime|Date|SQL_C_TYPE_DATE|OK|OK (1)|  
 |||SQL_C_TYPE_TIMESTAMP|時刻フィールドは 0 に設定されます。|OK (2)<br /><br /> 時刻フィールドが 0 以外の場合は失敗します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で機能します。|  
-||Time(0)|SQL_C_TYPE_TIME|[OK]|OK (1)|  
+||Time(0)|SQL_C_TYPE_TIME|OK|OK (1)|  
 |||SQL_C_TYPE_TIMESTAMP|日付フィールドは現在の日付に設定されます。|OK (2)<br /><br /> 日付は無視されます。 秒の小数部が0以外の場合に失敗します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で機能します。|  
 ||Time(7)|SQL_C_TIME|失敗しました-時刻リテラルが無効です。|OK (1)|  
 |||SQL_C_TYPE_TIMESTAMP|失敗しました-時刻リテラルが無効です。|OK (1)|  
-||Datetime2 (3)|SQL_C_TYPE_TIMESTAMP|[OK]|OK (1)|  
-||Datetime2 (7)|SQL_C_TYPE_TIMESTAMP|[OK]|クライアントでの変換により、値は 1/300 秒単位に丸められます。|  
-|Smalldatetime|日付|SQL_C_TYPE_DATE|[OK]|[OK]|  
+||Datetime2 (3)|SQL_C_TYPE_TIMESTAMP|OK|OK (1)|  
+||Datetime2 (7)|SQL_C_TYPE_TIMESTAMP|OK|クライアントでの変換により、値は 1/300 秒単位に丸められます。|  
+|Smalldatetime|Date|SQL_C_TYPE_DATE|OK|OK|  
 |||SQL_C_TYPE_TIMESTAMP|時刻フィールドは 0 に設定されます。|OK (2)<br /><br /> 時刻フィールドが 0 以外の場合は失敗します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で機能します。|  
-||Time(0)|SQL_C_TYPE_TIME|[OK]|[OK]|  
+||Time(0)|SQL_C_TYPE_TIME|OK|OK|  
 |||SQL_C_TYPE_TIMESTAMP|日付フィールドは現在の日付に設定されます。|OK (2)<br /><br /> 日付は無視されます。 秒の小数部が 0 以外の場合は失敗します。<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で機能します。|  
-||Datetime2(0)|SQL_C_TYPE_TIMESTAMP|[OK]|[OK]|  
+||Datetime2(0)|SQL_C_TYPE_TIMESTAMP|OK|OK|  
   
 ## <a name="key-to-symbols"></a>記号の説明  
   

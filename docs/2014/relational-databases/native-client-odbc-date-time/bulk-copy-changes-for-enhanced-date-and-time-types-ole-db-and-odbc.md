@@ -10,15 +10,15 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 - bulk copy [ODBC], changes for date/time improvements
 ms.assetid: c29e0f5e-9b3c-42b3-9856-755f4510832f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 855d0baf0b0b890b9343378f8060919979d5f206
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0cf98fadc2f194390f87bca14afcac545ac51df1
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63207107"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705528"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>機能強化された日付型と時刻型向けの一括コピーの変更 (OLE DB および ODBC)
   このトピックでは、一括コピー機能をサポートするための日付と時刻の機能強化について説明します。 このトピックの情報は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client の OLE DB と ODBC の両方に当てはまります。  
@@ -30,7 +30,7 @@ ms.locfileid: "63207107"
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
 |Datetime|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
-|日付|SQLDATE|de|  
+|Date|SQLDATE|de|  
 |Time|SQLTIME|te|  
 |Datetime2|SQLDATETIME2|d2|  
 |Datetimeoffset|SQLDATETIMEOFFSET|do|  
@@ -63,15 +63,15 @@ ms.locfileid: "63207107"
 ## <a name="character-data-files"></a>文字データ ファイル  
  文字データファイルでは、日付と時刻の値は、「odbc の日付と時刻の機能強化のための[データ型のサポート](data-type-support-for-odbc-date-and-time-improvements.md)」の「データ形式: 文字列とリテラル」セクションで説明されているように、または OLE DB の[OLE DB の日付と時刻の機能強化に関するデータ型のサポート](../native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)について説明しています。  
   
- Native data ファイルでは、4つの新しい型の日付と時刻の値は、小数点以下桁数が7の TDS 表現として表現さ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]れます (これは、でサポートされている最大値で、bcp データファイルにはこれらの列の小数点以下桁数が格納されていないため)。 既存`datetime`の`smalldatetime`型、型、または表形式のデータストリーム (TDS) 表現のストレージに変更はありません。  
+ Native data ファイルでは、4つの新しい型の日付と時刻の値は、小数点以下桁数が7の TDS 表現として表現されます (これは、でサポートされている最大値で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bcp データファイルにはこれらの列の小数点以下桁数が格納されていないため)。 既存の `datetime` `smalldatetime` 型、型、または表形式のデータストリーム (TDS) 表現のストレージに変更はありません。  
   
  OLE DB の場合、さまざまなストレージ型のストレージ サイズは次のとおりです。  
   
 |ファイル ストレージ型|ストレージ サイズ (バイト単位)|  
 |-----------------------|---------------------------|  
-|datetime|8|  
+|DATETIME|8|  
 |smalldatetime|4|  
-|日付|3|  
+|date|3|  
 |time|6|  
 |datetime2|9|  
 |datetimeoffset|11|  
@@ -94,7 +94,7 @@ ms.locfileid: "63207107"
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
 |Datetime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  
-|日付|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
+|Date|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
 |Time|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
 |Datetime2|SQLDATETIME2|BCP_TYPE_SQLDATETIME2|0x2a|  
 |Datetimeoffset|SQLDATETIMEOFFSET|BCP_TYPE_SQLDATETIMEOFFSET|0x2b|  
@@ -104,18 +104,18 @@ ms.locfileid: "63207107"
   
  **OLE DB に関するメモ** 次の変換は、IBCPSession によって実行されます。 IRowsetFastLoad では、「[クライアントからサーバーへの変換](../native-client-ole-db-date-time/conversions-performed-from-client-to-server.md)」に定義されているとおり、OLE DB 変換が使用されます。 次に示すクライアントでの変換が実行されると、datetime 値は 1/300 秒単位に丸められ、smalldatetime 値の秒は 0 に設定されます。 datetime の丸め処理は、時間と分に適用されますが、日付には適用されません。  
   
-|To --><br /><br /> ソース|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char|wchar|  
+|To --><br /><br /> From|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
-|日付|1|-|1、6|1、6|1、6|1、5、6|1、3|1、3|  
-|Time|なし|1、10|1、7、10|1、7、10|1、7、10|1、5、7、10|1、3|1、3|  
+|Date|1|-|1、6|1、6|1、6|1、5、6|1、3|1、3|  
+|Time|N/A|1、10|1、7、10|1、7、10|1、7、10|1、5、7、10|1、3|1、3|  
 |Smalldatetime|1、2|1、4、10|1|1|1、10|1、5、10|1、11|1、11|  
 |Datetime|1、2|1、4、10|1、12|1|1、10|1、5、10|1、11|1、11|  
 |Datetime2|1、2|1、4、10|1、10 (ODBC) 1、12 (OLE DB)|1、10|1、10|1、5、10|1、3|1、3|  
 |Datetimeoffset|1、2、8|1、4、8、10|1、8、10|1、8、10|1、8、10|1、10|1、3|1、3|  
-|Char/wchar (date)|9|-|9、6 (ODBC) 9、6、12 (OLE DB)|9、6 (ODBC) 9、6、12 (OLE DB)|9、6|9、5、6|なし|なし|  
-|Char/wchar (time)|-|9、10|9、7、10 (ODBC) 9、7、10、12 (OLE DB)|9、7、10 (ODBC) 9、7、10、12 (OLE DB)|9、7、10|9、5、7、10|なし|なし|  
-|Char/wchar (datetime)|9、2|9、4、10|9、10 (ODBC) 9、10、12 (OLE DB)|9、10 (ODBC) 9、10、12 (OLE DB)|9、10|9、5、10|なし|なし|  
-|Char/wchar (datetimeoffset)|9、2、8|9、4、8、10|9、8、10 (ODBC) 9、8、10、12 (OLE DB)|9、8、10 (ODBC) 9、8、10、12 (OLE DB)|9、8、10|9、10|なし|なし|  
+|Char/wchar (date)|9|-|9、6 (ODBC) 9、6、12 (OLE DB)|9、6 (ODBC) 9、6、12 (OLE DB)|9、6|9、5、6|N/A|N/A|  
+|Char/wchar (time)|-|9、10|9、7、10 (ODBC) 9、7、10、12 (OLE DB)|9、7、10 (ODBC) 9、7、10、12 (OLE DB)|9、7、10|9、5、7、10|N/A|N/A|  
+|Char/wchar (datetime)|9、2|9、4、10|9、10 (ODBC) 9、10、12 (OLE DB)|9、10 (ODBC) 9、10、12 (OLE DB)|9、10|9、5、10|N/A|N/A|  
+|Char/wchar (datetimeoffset)|9、2、8|9、4、8、10|9、8、10 (ODBC) 9、8、10、12 (OLE DB)|9、8、10 (ODBC) 9、8、10、12 (OLE DB)|9、8、10|9、10|N/A|N/A|  
   
 #### <a name="key-to-symbols"></a>記号の説明  
   
@@ -134,7 +134,7 @@ ms.locfileid: "63207107"
 |10|クライアントからサーバーへの変換で、データの損失を伴う切り捨てが行われると、エラーが通知される (OLE DB) か、"Datetime フィールド オーバーフロー" というメッセージで SQLSTATE 22008 の ODBC 診断レコードが生成されます。 サーバーが使用する UTC の範囲で表すことができる範囲の外に値がある場合にも、このエラーが発生します。 サーバーからクライアントへの変換で、秒または秒の小数部の切り捨てが行われた場合は、警告のみが発生します。|  
 |11|データの損失を伴う切り捨てが行われると、診断レコードが生成されます。<br /><br /> サーバーからクライアントへの変換では、これは警告 (ODBC SQLSTATE S1000) です。<br /><br /> クライアントからサーバーへの変換では、これはエラー (ODBC SQLSTATE 22001) です。|  
 |12|秒は 0 に設定され、秒の小数部は破棄されます。 切り捨てエラーは発生しません。|  
-|なし|既存の [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以前のバージョンの動作が維持されます。|  
+|N/A|既存の [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以前のバージョンの動作が維持されます。|  
   
 ## <a name="see-also"></a>参照  
  [ODBC&#41;&#40;の日付と時刻の改善](date-and-time-improvements-odbc.md)   

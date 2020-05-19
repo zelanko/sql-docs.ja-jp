@@ -10,18 +10,18 @@ helpviewer_keywords:
 - date/time [ODBC]
 - ODBC, date/time improvements
 ms.assetid: e31d5ca5-2103-498f-954c-1ee93e217186
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d56689bb045a6540bfdfbb9c7147dc34db110bde
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 521017e07cf2304186ee0238e72f3274bb3f95c9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63207007"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705515"
 ---
 # <a name="date-and-time-improvements-odbc"></a>日付と時刻の強化機能 (ODBC)
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] では、新しい日付と時刻のデータ型が導入されました。 このセクションでは、これらの新しい型がネイティブクライアント[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で拡張として公開されるしくみについて説明します。 Native Client による[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]新しい日付と時刻のデータ型のサポートの概要については、「[日付と時刻の機能強化](../native-client/features/date-and-time-improvements.md)」を参照してください。 ODBC の日付と時刻のサポートを示すサンプルについては、「[日付と時刻の型の使用](../native-client-odbc-how-to/use-date-and-time-types.md)」を参照してください。  
+  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] では、新しい日付と時刻のデータ型が導入されました。 このセクションでは、これらの新しい型がネイティブクライアントで拡張として公開されるしくみについて説明し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client による新しい日付と時刻のデータ型のサポートの概要については、「[日付と時刻の機能強化](../native-client/features/date-and-time-improvements.md)」を参照してください。 ODBC の日付と時刻のサポートを示すサンプルについては、「[日付と時刻の型の使用](../native-client-odbc-how-to/use-date-and-time-types.md)」を参照してください。  
   
  日付と時刻のデータ型に関する一般的な情報については、「[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql)」を参照してください。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63207007"
  一括コピー操作をサポートする日付または時刻の機能強化について説明します。  
   
  [以前の SQL Server バージョン &#40;ODBC&#41;の日付と時刻の型の動作の強化](enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc.md)  
- 機能強化された日付と時刻を使用するクライアントアプリケーションが古いバージョンのと通信する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]場合、および以前のバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client でコンパイルされたクライアントが、機能強化された日付と時刻の機能をサポートするサーバーにコマンドを送信する場合に想定される動作について説明します。  
+ 機能強化された日付と時刻を使用するクライアントアプリケーションが古いバージョンのと通信する場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および以前のバージョンの Native client でコンパイルされたクライアントが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能強化された日付と時刻の機能をサポートするサーバーにコマンドを送信する場合に想定される動作について説明します。  
   
  [ODBC API による機能強化された日付と時刻のサポート](odbc-api-support-for-enhanced-date-and-time-features.md)  
  機能強化された日付と時刻をサポートする ODBC 関数の一覧を示します。  
